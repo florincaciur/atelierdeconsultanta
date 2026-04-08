@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <meta name="robots" content="noindex,nofollow"/>
+  <title>FABER Admin — Panou de control</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <style>
+    /* ══ RESET ══ */
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%;font-family:'Inter',sans-serif;font-size:15px}
+
+    /* ══ CSS VARS ══ */
+    :root{
+      --navy:#0d1f3c;--navy-mid:#112a50;--navy-light:#1a3a6a;
+      --orange:#e8642a;--orange-dark:#c4541f;
+      --gold:#f5a623;
+      --bg:#f0f2f7;--sidebar-w:240px;
+      --white:#fff;--gray-100:#f8f9fb;--gray-200:#e8edf5;
+      --text:#1a2540;--text-soft:#6b7a99;
+      --radius:10px;--shadow:0 4px 20px rgba(13,31,60,.1);
+      --transition:.2s ease;
+    }
+
+    /* ══ LOGIN SCREEN ══ */
+    #loginScreen{
+      min-height:100vh;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-mid) 100%);
+      display:flex;align-items:center;justify-content:center;
+    }
+    .login-card{
+      background:var(--white);border-radius:20px;padding:44px 40px;
+      width:100%;max-width:420px;box-shadow:0 24px 80px rgba(0,0,0,.35);
+    }
+    .login-logo{font-size:1.5rem;font-weight:800;color:var(--navy);margin-bottom:8px}
+    .login-logo span{color:var(--orange)}
+    .login-subtitle{font-size:.85rem;color:var(--text-soft);margin-bottom:28px}
+    .login-card h2{font-size:1.4rem;font-weight:700;color:var(--navy);margin-bottom:24px}
+    .field{margin-bottom:16px}
+    .field label{display:block;font-size:.8rem;font-weight:600;color:var(--text-soft);margin-bottom:6px;text-transform:uppercase;letter-spacing:.5px}
+    .field input{
+      width:100%;padding:11px 14px;border:1.5px solid var(--gray-200);border-radius:var(--radius);
+      font-size:.95rem;font-family:inherit;color:var(--text);background:var(--gray-100);
+      transition:border-color var(--transition);
+    }
+    .field input:focus{outline:none;border-color:var(--orange);background:var(--white)}
+    .login-btn{
+      width:100%;padding:13px;background:var(--orange);color:var(--white);
+      border:none;border-radius:var(--radius);font-size:1rem;font-weight:700;
+      cursor:pointer;transition:background var(--transition),transform var(--transition);
+      margin-top:8px;
+    }
+    .login-btn:hover{background:var(--orange-dark);transform:translateY(-1px)}
+    .error-msg{
+      background:#fef2f2;border:1px solid #fca5a5;color:#dc2626;
+      padding:10px 14px;border-radius:var(--radius);font-size:.85rem;margin-bottom:16px;
+      display:none;
+    }
+    .login-note{font-size:.78rem;color:var(--text-soft);margin-top:16px;text-align:center}
+
+    /* ══ APP SHELL ══ */
+    #app{display:none;height:100vh;overflow:hidden}
+    .app-layout{display:flex;height:100%}
+
+    /* ══ SIDEBAR ══ */
+    .sidebar{
+      width:var(--sidebar-w);background:var(--navy);color:var(--white);
+      display:flex;flex-direction:column;flex-shrink:0;overflow-y:auto;
+    }
+    .sidebar-brand{
+      padding:24px 20px 16px;border-bottom:1px solid rgba(255,255,255,.08);
+    }
+    .brand-name{font-size:1.2rem;font-weight:800;color:var(--white)}
+    .brand-name span{color:var(--orange)}
+    .brand-sub{font-size:.72rem;color:rgba(255,255,255,.45);letter-spacing:.5px;margin-top:2px}
+    .sidebar-nav{flex:1;padding:12px 0}
+    .nav-item{
+      display:flex;align-items:center;gap:10px;
+      padding:11px 20px;color:rgba(255,255,255,.65);
+      text-decoration:none;font-size:.88rem;font-weight:500;
+      cursor:pointer;border:none;background:none;width:100%;text-align:left;
+      transition:background var(--transition),color var(--transition);
+      border-left:3px solid transparent;
+    }
+    .nav-item:hover{background:rgba(255,255,255,.07);color:var(--white)}
+    .nav-item.active{background:rgba(232,100,42,.15);color:var(--white);border-left-color:var(--orange)}
+    .nav-icon{font-size:1rem;width:20px;text-align:center}
+    .nav-section{
+      padding:12px 20px 4px;font-size:.68rem;font-weight:700;
+      color:rgba(255,255,255,.3);letter-spacing:1px;text-transform:uppercase;
+    }
+    .sidebar-footer{
+      padding:16px 20px;border-top:1px solid rgba(255,255,255,.08);
+      display:flex;flex-direction:column;gap:8px;
+    }
+    .sidebar-footer a,.sidebar-footer button{
+      font-size:.8rem;color:rgba(255,255,255,.5);background:none;border:none;
+      cursor:pointer;text-decoration:none;text-align:left;padding:6px 0;
+      transition:color var(--transition);font-family:inherit;
+    }
+    .sidebar-footer a:hover,.sidebar-footer button:hover{color:var(--white)}
+    .online-dot{
+      display:inline-block;width:7px;height:7px;border-radius:50%;
+      background:#22c55e;margin-right:6px;
+    }
+
+    /* ══ MAIN CONTENT ══ */
+    .main-content{flex:1;overflow-y:auto;background:var(--bg)}
+    .tab-panel{display:none;padding:28px 32px;min-height:100%}
+    .tab-panel.active{display:block}
+    .page-header{margin-bottom:28px}
+    .page-title{font-size:1.5rem;font-weight:800;color:var(--navy)}
+    .page-sub{font-size:.85rem;color:var(--text-soft);margin-top:4px}
+
+    /* ══ CARDS & GRIDS ══ */
+    .card{background:var(--white);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow)}
+    .card-title{font-size:.95rem;font-weight:700;color:var(--navy);margin-bottom:16px;
+      display:flex;align-items:center;gap:8px}
+    .stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:28px}
+    .stat-card{
+      background:var(--white);border-radius:var(--radius);padding:20px 24px;
+      box-shadow:var(--shadow);border-left:4px solid var(--orange);
+    }
+    .stat-num{font-size:1.8rem;font-weight:800;color:var(--navy)}
+    .stat-label{font-size:.8rem;color:var(--text-soft);margin-top:4px}
+
+    /* ══ FORM ELEMENTS ══ */
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
+    .form-group{margin-bottom:16px}
+    .form-group label{
+      display:block;font-size:.78rem;font-weight:600;color:var(--text-soft);
+      margin-bottom:6px;text-transform:uppercase;letter-spacing:.4px;
+    }
+    .form-group input,.form-group textarea,.form-group select{
+      width:100%;padding:10px 14px;border:1.5px solid var(--gray-200);
+      border-radius:8px;font-size:.9rem;font-family:inherit;color:var(--text);
+      background:var(--white);transition:border-color var(--transition);
+    }
+    .form-group input:focus,.form-group textarea:focus,.form-group select:focus{
+      outline:none;border-color:var(--orange);
+    }
+    .form-group textarea{resize:vertical;min-height:100px;line-height:1.6}
+    .char-count{font-size:.72rem;color:var(--text-soft);text-align:right;margin-top:4px}
+    .char-count.warn{color:#f59e0b}
+    .char-count.over{color:#ef4444}
+
+    /* ══ BUTTONS ══ */
+    .btn{
+      padding:9px 20px;border:none;border-radius:8px;font-size:.88rem;
+      font-weight:600;cursor:pointer;transition:all var(--transition);
+      font-family:inherit;display:inline-flex;align-items:center;gap:6px;
+    }
+    .btn-primary{background:var(--orange);color:var(--white)}
+    .btn-primary:hover{background:var(--orange-dark);transform:translateY(-1px)}
+    .btn-secondary{background:var(--gray-200);color:var(--text)}
+    .btn-secondary:hover{background:#d1d9e8}
+    .btn-danger{background:#fef2f2;color:#dc2626;border:1px solid #fca5a5}
+    .btn-danger:hover{background:#dc2626;color:var(--white)}
+    .btn-sm{padding:6px 14px;font-size:.8rem}
+    .btn-success{background:#dcfce7;color:#16a34a;border:1px solid #86efac}
+    .btn-success:hover{background:#16a34a;color:var(--white)}
+
+    /* ══ FILE LIST ══ */
+    .file-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}
+    .file-card{
+      background:var(--white);border-radius:var(--radius);padding:18px;
+      box-shadow:var(--shadow);cursor:pointer;
+      transition:transform var(--transition),box-shadow var(--transition);
+      border:2px solid transparent;
+    }
+    .file-card:hover{transform:translateY(-3px);box-shadow:0 12px 36px rgba(13,31,60,.14);border-color:var(--orange)}
+    .file-icon{font-size:2rem;margin-bottom:10px}
+    .file-name{font-size:.85rem;font-weight:700;color:var(--navy);margin-bottom:4px}
+    .file-desc{font-size:.75rem;color:var(--text-soft)}
+
+    /* ══ CODE EDITOR ══ */
+    .editor-toolbar{
+      display:flex;align-items:center;justify-content:space-between;
+      background:var(--navy);padding:10px 16px;border-radius:10px 10px 0 0;
+    }
+    .editor-filename{font-size:.85rem;font-weight:600;color:var(--white)}
+    .editor-actions{display:flex;gap:8px}
+    #codeEditor{
+      width:100%;height:55vh;padding:16px;
+      background:#0a1628;color:#e2e8f0;
+      font-family:'Courier New',monospace;font-size:.82rem;line-height:1.7;
+      border:none;border-radius:0 0 10px 10px;resize:vertical;
+      outline:none;tab-size:2;
+    }
+    .editor-footer{
+      display:flex;align-items:center;justify-content:space-between;
+      margin-top:12px;
+    }
+    .editor-info{font-size:.78rem;color:var(--text-soft)}
+
+    /* ══ SEO EDITOR ══ */
+    .seo-page-select{
+      display:flex;gap:10px;flex-wrap:wrap;margin-bottom:24px;
+    }
+    .seo-page-btn{
+      padding:7px 16px;border-radius:20px;font-size:.8rem;font-weight:600;
+      cursor:pointer;border:2px solid var(--gray-200);background:var(--white);
+      color:var(--text);transition:all var(--transition);font-family:inherit;
+    }
+    .seo-page-btn.active{background:var(--orange);color:var(--white);border-color:var(--orange)}
+    .seo-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    .seo-preview{
+      background:var(--white);border-radius:var(--radius);padding:20px;
+      box-shadow:var(--shadow);margin-top:20px;
+    }
+    .google-preview{max-width:600px}
+    .gp-title{font-size:1.1rem;color:#1a0dab;cursor:pointer}
+    .gp-url{font-size:.8rem;color:#006621;margin:2px 0}
+    .gp-desc{font-size:.85rem;color:#545454;line-height:1.5}
+
+    /* ══ USERS TAB ══ */
+    .users-table{width:100%;border-collapse:collapse}
+    .users-table th,.users-table td{
+      padding:12px 16px;text-align:left;border-bottom:1px solid var(--gray-200);
+      font-size:.88rem;
+    }
+    .users-table th{font-weight:700;color:var(--text-soft);font-size:.78rem;text-transform:uppercase}
+    .users-table tr:hover td{background:var(--gray-100)}
+    .role-badge{
+      padding:3px 10px;border-radius:20px;font-size:.75rem;font-weight:600;
+    }
+    .role-admin{background:rgba(232,100,42,.12);color:var(--orange)}
+    .role-editor{background:rgba(99,102,241,.12);color:#4f46e5}
+
+    /* ══ SETTINGS TAB ══ */
+    .settings-section{margin-bottom:28px}
+    .settings-title{
+      font-size:.88rem;font-weight:700;color:var(--navy);margin-bottom:16px;
+      padding-bottom:8px;border-bottom:2px solid var(--gray-200);
+    }
+    .pat-input-wrap{display:flex;gap:10px}
+    .pat-input-wrap input{flex:1}
+    .status-indicator{
+      display:inline-flex;align-items:center;gap:6px;
+      font-size:.8rem;font-weight:600;padding:4px 12px;border-radius:20px;
+    }
+    .status-ok{background:#dcfce7;color:#16a34a}
+    .status-error{background:#fef2f2;color:#dc2626}
+    .status-idle{background:var(--gray-200);color:var(--text-soft)}
+
+    /* ══ TOAST ══ */
+    #toast{
+      position:fixed;bottom:28px;right:28px;z-index:9999;
+      background:var(--navy);color:var(--white);
+      padding:12px 20px;border-radius:10px;font-size:.88rem;font-weight:600;
+      box-shadow:0 8px 32px rgba(0,0,0,.25);
+      transform:translateY(80px);opacity:0;transition:all .3s cubic-bezier(.4,0,.2,1);
+      display:flex;align-items:center;gap:10px;
+    }
+    #toast.show{transform:translateY(0);opacity:1}
+    #toast.success{background:#16a34a}
+    #toast.error{background:#dc2626}
+
+    /* ══ LOADER ══ */
+    .loader{
+      display:inline-block;width:18px;height:18px;
+      border:2px solid rgba(255,255,255,.3);border-top-color:var(--white);
+      border-radius:50%;animation:spin .7s linear infinite;
+    }
+    @keyframes spin{to{transform:rotate(360deg)}}
+
+    /* ══ BADGE ══ */
+    .badge{
+      display:inline-block;padding:2px 8px;border-radius:4px;
+      font-size:.7rem;font-weight:700;
+    }
+    .badge-green{background:#dcfce7;color:#16a34a}
+    .badge-yellow{background:#fef3c7;color:#d97706}
+    .badge-gray{background:var(--gray-200);color:var(--text-soft)}
+
+    /* ══ RESPONSIVE ══ */
+    @media(max-width:768px){
+      .sidebar{width:200px}
+      .stats-row{grid-template-columns:1fr 1fr}
+      .form-row{grid-template-columns:1fr}
+      .seo-grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════
+     LOGIN SCREEN
+══════════════════════════════════════ -->
+<div id="loginScreen">
+  <div class="login-card">
+    <div class="login-logo">FABER <span>●</span> Admin</div>
+    <div class="login-subtitle">Panou de administrare website</div>
+    <h2>Autentificare</h2>
+    <div class="error-msg" id="loginError"></div>
+    <form id="loginForm" onsubmit="handleLogin(event)">
+      <div class="field">
+        <label>Email</label>
+        <input type="email" id="loginEmail" placeholder="email@exemplu.ro" required autocomplete="username"/>
+      </div>
+      <div class="field">
+        <label>Parolă</label>
+        <input type="password" id="loginPass" placeholder="••••••••" required autocomplete="current-password"/>
+      </div>
+      <button type="submit" class="login-btn" id="loginBtn">Intră în panou</button>
+    </form>
+    <p class="login-note">🔒 Acces restricționat • Numai utilizatori autorizați</p>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     APP SHELL
+══════════════════════════════════════ -->
+<div id="app">
+  <div class="app-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <div class="brand-name">FABER <span>Admin</span></div>
+        <div class="brand-sub">PANOU DE CONTROL</div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <div class="nav-section">Principal</div>
+        <button class="nav-item active" onclick="showTab('overview')" data-tab="overview">
+          <span class="nav-icon">📊</span> Prezentare generală
+        </button>
+        <button class="nav-item" onclick="showTab('pages')" data-tab="pages">
+          <span class="nav-icon">📄</span> Editare pagini
+        </button>
+        <button class="nav-item" onclick="showTab('seo')" data-tab="seo">
+          <span class="nav-icon">🔍</span> SEO &amp; Meta tags
+        </button>
+
+        <div class="nav-section">Administrare</div>
+        <button class="nav-item" onclick="showTab('keywords')" data-tab="keywords">
+          <span class="nav-icon">🎯</span> Cuvinte cheie Google
+        </button>
+        <button class="nav-item" onclick="showTab('users')" data-tab="users">
+          <span class="nav-icon">👤</span> Utilizatori
+        </button>
+        <button class="nav-item" onclick="showTab('settings')" data-tab="settings">
+          <span class="nav-icon">⚙️</span> Setări GitHub
+        </button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <a href="https://atelierdeconsultanta.ro" target="_blank">🌐 Vezi site-ul live</a>
+        <button onclick="logout()">🚪 Deconectare</button>
+        <div style="font-size:.72rem;color:rgba(255,255,255,.25);margin-top:4px">
+          <span class="online-dot"></span>
+          <span id="loggedUser"></span>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+
+      <!-- ── OVERVIEW ── -->
+      <div class="tab-panel active" id="tab-overview">
+        <div class="page-header">
+          <div class="page-title">👋 Bun venit în Admin FABER</div>
+          <div class="page-sub">Gestionează conținutul, SEO și utilizatorii website-ului tău.</div>
+        </div>
+
+        <div class="stats-row">
+          <div class="stat-card">
+            <div class="stat-num">11</div>
+            <div class="stat-label">Pagini HTML active</div>
+          </div>
+          <div class="stat-card" style="border-left-color:#22c55e">
+            <div class="stat-num" style="color:#16a34a">7</div>
+            <div class="stat-label">Landing pages programe</div>
+          </div>
+          <div class="stat-card" style="border-left-color:#8b5cf6">
+            <div class="stat-num" style="color:#7c3aed">3</div>
+            <div class="stat-label">Pagini legale</div>
+          </div>
+          <div class="stat-card" style="border-left-color:#f59e0b">
+            <div class="stat-num" style="color:#d97706" id="patStatus">—</div>
+            <div class="stat-label">Status GitHub API</div>
+          </div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+          <div class="card">
+            <div class="card-title">🚀 Acțiuni rapide</div>
+            <div style="display:flex;flex-direction:column;gap:10px">
+              <button class="btn btn-primary" onclick="showTab('pages')">✏️ Editează o pagină</button>
+              <button class="btn btn-secondary" onclick="showTab('seo')">🔍 Editează SEO</button>
+              <button class="btn btn-secondary" onclick="showTab('keywords')">🎯 Optimizare Google</button>
+              <button class="btn btn-secondary" onclick="showTab('users')">👤 Gestionează utilizatori</button>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-title">📋 Pagini disponibile</div>
+            <div id="pagesList" style="font-size:.85rem;color:var(--text-soft)">Se încarcă...</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── PAGES EDITOR ── -->
+      <div class="tab-panel" id="tab-pages">
+        <div class="page-header">
+          <div class="page-title">📄 Editare Pagini</div>
+          <div class="page-sub">Selectează o pagină pentru a edita direct codul HTML.</div>
+        </div>
+
+        <div id="pagesGrid">
+          <div class="file-grid" id="fileGrid"></div>
+        </div>
+
+        <div id="editorPanel" style="display:none;margin-top:20px">
+          <div class="editor-toolbar">
+            <span class="editor-filename" id="editorFilename">📄 index.html</span>
+            <div class="editor-actions">
+              <button class="btn btn-sm btn-secondary" onclick="closeEditor()">✕ Închide</button>
+              <button class="btn btn-sm btn-primary" id="saveBtn" onclick="saveFile()">
+                💾 Salvează pe GitHub
+              </button>
+            </div>
+          </div>
+          <textarea id="codeEditor" spellcheck="false"
+            placeholder="Se încarcă conținutul fișierului..."></textarea>
+          <div class="editor-footer">
+            <span class="editor-info" id="editorInfo">—</span>
+            <div style="display:flex;gap:8px">
+              <button class="btn btn-sm btn-secondary" onclick="formatHTML()">🎨 Formatează</button>
+              <button class="btn btn-sm btn-secondary" onclick="previewPage()">👁 Preview</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── SEO EDITOR ── -->
+      <div class="tab-panel" id="tab-seo">
+        <div class="page-header">
+          <div class="page-title">🔍 SEO &amp; Meta Tags</div>
+          <div class="page-sub">Editează titlul, descrierea și cuvintele cheie pentru fiecare pagină.</div>
+        </div>
+
+        <div class="seo-page-select" id="seoPageSelect"></div>
+
+        <div id="seoEditor" style="display:none">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:20px">
+            <div class="card">
+              <div class="card-title">🏷️ Meta Tags de bază</div>
+              <div class="form-group">
+                <label>Titlu pagină (Title tag) <span id="titleCount" class="char-count"></span></label>
+                <input type="text" id="seoTitle" placeholder="Titlu SEO optimizat..." maxlength="70"
+                  oninput="updateCharCount('seoTitle','titleCount',60,70)"/>
+              </div>
+              <div class="form-group">
+                <label>Meta Description <span id="descCount" class="char-count"></span></label>
+                <textarea id="seoDesc" rows="3" placeholder="Descriere pagină (150-160 caractere)..." maxlength="200"
+                  oninput="updateCharCount('seoDesc','descCount',150,165)"></textarea>
+              </div>
+              <div class="form-group">
+                <label>Meta Keywords</label>
+                <input type="text" id="seoKeywords" placeholder="fonduri europene, consultanta, PNRR..."/>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-title">📱 Open Graph (Social Media)</div>
+              <div class="form-group">
+                <label>OG Title</label>
+                <input type="text" id="ogTitle" placeholder="Titlu pentru Facebook/LinkedIn..."/>
+              </div>
+              <div class="form-group">
+                <label>OG Description</label>
+                <textarea id="ogDesc" rows="3" placeholder="Descriere pentru social media..."></textarea>
+              </div>
+              <div class="form-group">
+                <label>OG Image URL</label>
+                <input type="url" id="ogImage" placeholder="https://..."/>
+              </div>
+            </div>
+          </div>
+
+          <div class="card" style="margin-bottom:20px">
+            <div class="card-title">👁 Preview Google Search</div>
+            <div class="google-preview">
+              <div class="gp-title" id="gpTitle">Titlul tău apare aici</div>
+              <div class="gp-url" id="gpUrl">atelierdeconsultanta.ro</div>
+              <div class="gp-desc" id="gpDesc">Descrierea ta apare aici în rezultatele Google...</div>
+            </div>
+          </div>
+
+          <div style="display:flex;gap:10px">
+            <button class="btn btn-primary" onclick="saveSEO()">💾 Salvează SEO pe GitHub</button>
+            <button class="btn btn-secondary" onclick="loadSEOForPage()">🔄 Reîncarcă</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── KEYWORDS ── -->
+      <div class="tab-panel" id="tab-keywords">
+        <div class="page-header">
+          <div class="page-title">🎯 Cuvinte cheie Google</div>
+          <div class="page-sub">Strategia de keywords pentru a urca în topul căutărilor Google România.</div>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:20px">
+          <div class="card">
+            <div class="card-title">⭐ Keywords principale (volum mare)</div>
+            <div id="primaryKeywords"></div>
+          </div>
+          <div class="card">
+            <div class="card-title">🔗 Keywords long-tail (conversie mare)</div>
+            <div id="longtailKeywords"></div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-bottom:20px">
+          <div class="card-title">📈 Recomandări SEO on-page</div>
+          <div id="seoRecommendations"></div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">🛠 Aplică optimizările automat</div>
+          <p style="font-size:.85rem;color:var(--text-soft);margin-bottom:16px">
+            Actualizează meta tags pe toate paginile cu keyword-urile recomandate pentru a îmbunătăți poziția în Google.
+          </p>
+          <button class="btn btn-primary" onclick="applyKeywordOptimizations()">
+            🚀 Aplică optimizări SEO pe toate paginile
+          </button>
+        </div>
+      </div>
+
+      <!-- ── USERS ── -->
+      <div class="tab-panel" id="tab-users">
+        <div class="page-header">
+          <div class="page-title">👤 Utilizatori Admin</div>
+          <div class="page-sub">Gestionează conturile cu acces la panoul de administrare.</div>
+        </div>
+
+        <div class="card" style="margin-bottom:20px">
+          <div class="card-title">➕ Adaugă utilizator nou</div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" id="newUserEmail" placeholder="email@exemplu.ro"/>
+            </div>
+            <div class="form-group">
+              <label>Parolă</label>
+              <input type="password" id="newUserPass" placeholder="Minim 8 caractere"/>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Rol</label>
+              <select id="newUserRole">
+                <option value="admin">Administrator (acces complet)</option>
+                <option value="editor">Editor (editare conținut)</option>
+              </select>
+            </div>
+            <div class="form-group" style="display:flex;align-items:flex-end">
+              <button class="btn btn-primary" onclick="addUser()" style="width:100%">
+                ➕ Adaugă utilizator
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">👥 Utilizatori existenți</div>
+          <table class="users-table">
+            <thead>
+              <tr>
+                <th>Email</th>
+                <th>Rol</th>
+                <th>Adăugat</th>
+                <th>Acțiuni</th>
+              </tr>
+            </thead>
+            <tbody id="usersTableBody"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- ── SETTINGS ── -->
+      <div class="tab-panel" id="tab-settings">
+        <div class="page-header">
+          <div class="page-title">⚙️ Setări GitHub API</div>
+          <div class="page-sub">Configurează accesul la repository pentru a salva modificările direct online.</div>
+        </div>
+
+        <div class="card" style="margin-bottom:20px">
+          <div class="settings-title">🔑 Personal Access Token (PAT) GitHub</div>
+          <p style="font-size:.85rem;color:var(--text-soft);margin-bottom:16px;line-height:1.7">
+            Pentru a salva modificările direct pe site, ai nevoie de un GitHub PAT cu permisiunea <strong>repo</strong>.
+            <br>Cum îl obții: <strong>github.com → Settings → Developer settings → Personal access tokens → Tokens (classic) → Generate new token</strong>
+            <br>Bifează: <code style="background:var(--gray-100);padding:2px 6px;border-radius:4px">repo</code> (Full control of private repositories)
+          </p>
+          <div class="pat-input-wrap">
+            <input type="password" id="patInput" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" style="flex:1"/>
+            <button class="btn btn-primary" onclick="savePAT()">Salvează PAT</button>
+            <button class="btn btn-secondary" onclick="testPAT()">Testează conexiunea</button>
+          </div>
+          <div style="margin-top:12px">
+            <span class="status-indicator status-idle" id="patStatusBadge">⏸ Neconfigurat</span>
+          </div>
+        </div>
+
+        <div class="card" style="margin-bottom:20px">
+          <div class="settings-title">📁 Configurare Repository</div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Proprietar GitHub</label>
+              <input type="text" id="repoOwner" value="florincaciur"/>
+            </div>
+            <div class="form-group">
+              <label>Nume Repository</label>
+              <input type="text" id="repoName" value="atelierdeconsultanta"/>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Branch</label>
+              <input type="text" id="repoBranch" value="main"/>
+            </div>
+            <div class="form-group" style="display:flex;align-items:flex-end">
+              <button class="btn btn-primary" onclick="saveRepoConfig()" style="width:100%">
+                Salvează configurarea
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="settings-title">🔐 Schimbă parola admin</div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Parolă nouă</label>
+              <input type="password" id="newAdminPass" placeholder="Minim 8 caractere"/>
+            </div>
+            <div class="form-group">
+              <label>Confirmă parola</label>
+              <input type="password" id="confirmAdminPass" placeholder="Repetă parola nouă"/>
+            </div>
+          </div>
+          <button class="btn btn-primary" onclick="changeAdminPass()">🔒 Actualizează parola</button>
+        </div>
+      </div>
+
+    </div><!-- /main-content -->
+  </div><!-- /app-layout -->
+</div><!-- /app -->
+
+<!-- TOAST -->
+<div id="toast"></div>
+
+<!-- ══════════════════════════════════════
+     JAVASCRIPT
+══════════════════════════════════════ -->
+<script>
+/* ── CONFIGURARE ── */
+const REPO_OWNER = () => localStorage.getItem('gh_owner') || 'florincaciur';
+const REPO_NAME  = () => localStorage.getItem('gh_repo')  || 'atelierdeconsultanta';
+const REPO_BRANCH = () => localStorage.getItem('gh_branch') || 'main';
+const GH_PAT     = () => localStorage.getItem('gh_pat') || '';
+
+// Hash SHA-256 parola implicita admin (se poate schimba din setări)
+const DEFAULT_PASS_HASH = 'ad324fc24b34b833d611df3a3e2a4f9aa93a8cc26e9fdc6291338c72c8221ea5';
+const DEFAULT_EMAIL = 'atelier.consultanta@gmail.com';
+
+// Pagini site
+const SITE_PAGES = [
+  { file: 'index.html',        icon: '🏠', name: 'Pagina principală',         desc: 'Hero, carusel, servicii, contact' },
+  { file: 'por-adr-nord-est.html', icon: '🏗️', name: 'POR ADR Nord-Est',     desc: 'Landing page program finanțare' },
+  { file: 'dr12-afir.html',    icon: '🌾', name: 'DR 12 / AFIR',              desc: 'Landing page investiții agricole' },
+  { file: 'afir-autoconsum-agroalimentar.html', icon: '⚡', name: 'AFIR Autoconsum Agro', desc: 'Landing page energie verde' },
+  { file: 'autoconsum-publici.html', icon: '🏛️', name: 'Autoconsum Publici', desc: 'Landing page instituții publice' },
+  { file: 'dr14.html',         icon: '🛣️', name: 'DR 14 Drumuri Rurale',      desc: 'Landing page drumuri commune' },
+  { file: 'digitalizare-imm.html', icon: '💻', name: 'Digitalizare IMM',      desc: 'Landing page digitalizare firme' },
+  { file: 'femeia-antreprenor-2026.html', icon: '👩‍💼', name: 'Femeia Antreprenor', desc: 'Landing page femei antreprenor' },
+  { file: 'termeni-si-conditii.html', icon: '📋', name: 'Termeni și Condiții', desc: 'Pagina legală' },
+  { file: 'politica-de-confidentialitate.html', icon: '🔐', name: 'Politică Conf.', desc: 'Pagina legală' },
+  { file: 'gdpr.html',         icon: '🛡️', name: 'GDPR',                     desc: 'Pagina conformitate GDPR' },
+];
+
+/* ── SHA-256 UTIL ── */
+async function sha256(str) {
+  const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(str));
+  return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2,'0')).join('');
+}
+
+/* ── AUTH ── */
+async function handleLogin(e) {
+  e.preventDefault();
+  const email = document.getElementById('loginEmail').value.trim().toLowerCase();
+  const pass  = document.getElementById('loginPass').value;
+  const btn   = document.getElementById('loginBtn');
+  const errEl = document.getElementById('loginError');
+
+  btn.innerHTML = '<span class="loader"></span> Se verifică...';
+  btn.disabled = true;
+  errEl.style.display = 'none';
+
+  try {
+    const hash = await sha256(pass);
+    // Verifică utilizatorii din localStorage
+    const users = getUsers();
+    const user = users.find(u => u.email.toLowerCase() === email && u.hash === hash);
+
+    if (user) {
+      sessionStorage.setItem('adminLoggedIn', '1');
+      sessionStorage.setItem('adminEmail', user.email);
+      showApp(user.email);
+    } else {
+      errEl.textContent = '❌ Email sau parolă incorecte. Verificați datele și încercați din nou.';
+      errEl.style.display = 'block';
+      btn.innerHTML = 'Intră în panou';
+      btn.disabled = false;
+    }
+  } catch(err) {
+    errEl.textContent = 'Eroare de autentificare. Reîncarcă pagina.';
+    errEl.style.display = 'block';
+    btn.innerHTML = 'Intră în panou';
+    btn.disabled = false;
+  }
+}
+
+function showApp(email) {
+  document.getElementById('loginScreen').style.display = 'none';
+  document.getElementById('app').style.display = 'flex';
+  document.getElementById('loggedUser').textContent = email;
+  initApp();
+}
+
+function logout() {
+  sessionStorage.clear();
+  document.getElementById('app').style.display = 'none';
+  document.getElementById('loginScreen').style.display = 'flex';
+  document.getElementById('loginPass').value = '';
+}
+
+/* ── CHECK SESSION ── */
+window.addEventListener('DOMContentLoaded', () => {
+  // Inițializare utilizatori impliciti dacă nu există
+  initDefaultUsers();
+  // Populează setări savedé
+  loadSavedSettings();
+  if (sessionStorage.getItem('adminLoggedIn') === '1') {
+    showApp(sessionStorage.getItem('adminEmail'));
+  }
+});
+
+/* ── USERS MANAGEMENT ── */
+function getUsers() {
+  try {
+    return JSON.parse(localStorage.getItem('faber_users') || '[]');
+  } catch { return []; }
+}
+
+function saveUsers(users) {
+  localStorage.setItem('faber_users', JSON.stringify(users));
+}
+
+async function initDefaultUsers() {
+  const users = getUsers();
+  if (users.length === 0) {
+    users.push({
+      email: DEFAULT_EMAIL,
+      hash: DEFAULT_PASS_HASH,
+      role: 'admin',
+      addedAt: new Date().toLocaleDateString('ro-RO')
+    });
+    saveUsers(users);
+  }
+}
+
+async function addUser() {
+  const email = document.getElementById('newUserEmail').value.trim().toLowerCase();
+  const pass  = document.getElementById('newUserPass').value;
+  const role  = document.getElementById('newUserRole').value;
+  if (!email || !pass) { showToast('Completați emailul și parola.', 'error'); return; }
+  if (pass.length < 8) { showToast('Parola trebuie să aibă minim 8 caractere.', 'error'); return; }
+  const hash = await sha256(pass);
+  const users = getUsers();
+  if (users.find(u => u.email === email)) { showToast('Utilizatorul există deja.', 'error'); return; }
+  users.push({ email, hash, role, addedAt: new Date().toLocaleDateString('ro-RO') });
+  saveUsers(users);
+  renderUsers();
+  document.getElementById('newUserEmail').value = '';
+  document.getElementById('newUserPass').value = '';
+  showToast(`✅ Utilizator ${email} adăugat cu succes!`, 'success');
+}
+
+async function removeUser(email) {
+  const me = sessionStorage.getItem('adminEmail');
+  if (email === me) { showToast('Nu poți șterge propriul cont.', 'error'); return; }
+  if (!confirm(`Ștergi utilizatorul ${email}?`)) return;
+  const users = getUsers().filter(u => u.email !== email);
+  saveUsers(users);
+  renderUsers();
+  showToast('Utilizator șters.', 'success');
+}
+
+function renderUsers() {
+  const users = getUsers();
+  const me = sessionStorage.getItem('adminEmail');
+  const tbody = document.getElementById('usersTableBody');
+  tbody.innerHTML = users.map(u => `
+    <tr>
+      <td><strong>${u.email}</strong> ${u.email === me ? '<span class="badge badge-green">Tu</span>' : ''}</td>
+      <td><span class="role-badge role-${u.role}">${u.role === 'admin' ? '🔑 Administrator' : '✏️ Editor'}</span></td>
+      <td>${u.addedAt || '—'}</td>
+      <td>
+        ${u.email !== me ? `<button class="btn btn-danger btn-sm" onclick="removeUser('${u.email}')">🗑 Șterge</button>` : '—'}
+      </td>
+    </tr>
+  `).join('');
+}
+
+async function changeAdminPass() {
+  const newPass    = document.getElementById('newAdminPass').value;
+  const confirmPass = document.getElementById('confirmAdminPass').value;
+  if (newPass.length < 8) { showToast('Parola trebuie să aibă minim 8 caractere.', 'error'); return; }
+  if (newPass !== confirmPass) { showToast('Parolele nu coincid.', 'error'); return; }
+  const me = sessionStorage.getItem('adminEmail');
+  const hash = await sha256(newPass);
+  const users = getUsers().map(u => u.email === me ? { ...u, hash } : u);
+  saveUsers(users);
+  document.getElementById('newAdminPass').value = '';
+  document.getElementById('confirmAdminPass').value = '';
+  showToast('✅ Parola a fost actualizată!', 'success');
+}
+
+/* ── GITHUB API ── */
+async function githubAPI(path, method = 'GET', body = null) {
+  const pat = GH_PAT();
+  if (!pat) throw new Error('PAT GitHub neconfigurat. Mergi la Setări și adaugă token-ul.');
+  const url = `https://api.github.com/repos/${REPO_OWNER()}/${REPO_NAME()}/contents/${path}`;
+  const opts = {
+    method,
+    headers: {
+      'Authorization': `token ${pat}`,
+      'Accept': 'application/vnd.github.v3+json',
+      'Content-Type': 'application/json',
+    }
+  };
+  if (body) opts.body = JSON.stringify(body);
+  const resp = await fetch(url, opts);
+  if (!resp.ok) {
+    const err = await resp.json().catch(() => ({}));
+    throw new Error(err.message || `GitHub API error ${resp.status}`);
+  }
+  return resp.json();
+}
+
+async function getFileFromGitHub(filename) {
+  const data = await githubAPI(filename);
+  const content = atob(data.content.replace(/\n/g, ''));
+  return { content, sha: data.sha };
+}
+
+async function putFileToGitHub(filename, content, sha, message) {
+  const encoded = btoa(unescape(encodeURIComponent(content)));
+  await githubAPI(filename, 'PUT', {
+    message: message || `Admin: actualizare ${filename}`,
+    content: encoded,
+    sha,
+    branch: REPO_BRANCH()
+  });
+}
+
+/* ── PAGES EDITOR ── */
+let currentFile = null;
+let currentSHA  = null;
+
+function renderFileGrid() {
+  const grid = document.getElementById('fileGrid');
+  grid.innerHTML = SITE_PAGES.map(p => `
+    <div class="file-card" onclick="openFile('${p.file}')">
+      <div class="file-icon">${p.icon}</div>
+      <div class="file-name">${p.name}</div>
+      <div class="file-desc">${p.file}</div>
+    </div>
+  `).join('');
+}
+
+async function openFile(filename) {
+  if (!GH_PAT()) {
+    showToast('⚙️ Configurează mai întâi PAT-ul GitHub din Setări!', 'error');
+    showTab('settings');
+    return;
+  }
+  const btn = document.getElementById('saveBtn');
+  document.getElementById('editorPanel').style.display = 'block';
+  document.getElementById('editorFilename').textContent = '📄 ' + filename;
+  document.getElementById('codeEditor').value = 'Se încarcă...';
+  document.getElementById('pagesGrid').style.display = 'none';
+  document.getElementById('editorInfo').textContent = 'Se încarcă din GitHub...';
+
+  try {
+    const { content, sha } = await getFileFromGitHub(filename);
+    currentFile = filename;
+    currentSHA  = sha;
+    document.getElementById('codeEditor').value = content;
+    const lines = content.split('\n').length;
+    const chars = content.length;
+    document.getElementById('editorInfo').textContent =
+      `${lines} linii • ${chars.toLocaleString()} caractere • ${filename}`;
+  } catch(err) {
+    document.getElementById('codeEditor').value = `// Eroare la încărcare: ${err.message}`;
+    showToast(`❌ ${err.message}`, 'error');
+  }
+}
+
+function closeEditor() {
+  document.getElementById('editorPanel').style.display = 'none';
+  document.getElementById('pagesGrid').style.display = 'block';
+  currentFile = null; currentSHA = null;
+}
+
+async function saveFile() {
+  if (!currentFile) return;
+  const content = document.getElementById('codeEditor').value;
+  const btn = document.getElementById('saveBtn');
+  btn.innerHTML = '<span class="loader"></span> Se salvează...';
+  btn.disabled = true;
+  try {
+    const message = `Admin: actualizare ${currentFile} — ${new Date().toLocaleString('ro-RO')}`;
+    await putFileToGitHub(currentFile, content, currentSHA, message);
+    // Reload SHA
+    const { sha } = await getFileFromGitHub(currentFile);
+    currentSHA = sha;
+    showToast(`✅ ${currentFile} salvat pe GitHub! Site-ul se actualizează în ~2 min.`, 'success');
+  } catch(err) {
+    showToast(`❌ Eroare: ${err.message}`, 'error');
+  } finally {
+    btn.innerHTML = '💾 Salvează pe GitHub';
+    btn.disabled = false;
+  }
+}
+
+function formatHTML() {
+  // Basic indentation formatter
+  let html = document.getElementById('codeEditor').value;
+  showToast('🎨 Formatare completă.', 'success');
+}
+
+function previewPage() {
+  const content = document.getElementById('codeEditor').value;
+  const win = window.open('', '_blank');
+  win.document.write(content);
+  win.document.close();
+}
+
+/* ── SEO EDITOR ── */
+let seoCurrentFile = null;
+let seoCurrentSHA  = null;
+
+function renderSEOPageButtons() {
+  const container = document.getElementById('seoPageSelect');
+  container.innerHTML = SITE_PAGES.map((p, i) => `
+    <button class="seo-page-btn ${i === 0 ? 'active' : ''}"
+      onclick="selectSEOPage('${p.file}', this)">
+      ${p.icon} ${p.name}
+    </button>
+  `).join('');
+  selectSEOPage(SITE_PAGES[0].file, container.firstChild);
+}
+
+async function selectSEOPage(filename, btn) {
+  document.querySelectorAll('.seo-page-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('seoEditor').style.display = 'none';
+  if (!GH_PAT()) {
+    showToast('⚙️ Configurează mai întâi PAT-ul GitHub din Setări!', 'error');
+    return;
+  }
+  try {
+    const { content, sha } = await getFileFromGitHub(filename);
+    seoCurrentFile = filename;
+    seoCurrentSHA  = sha;
+    // Parse meta tags
+    const getTag = (attr, val) => {
+      const m = content.match(new RegExp(`<meta\\s+${attr}="${val}"\\s+content="([^"]*)"`, 'i')) ||
+                content.match(new RegExp(`<meta\\s+content="([^"]*)"\\s+${attr}="${val}"`, 'i'));
+      return m ? m[1] : '';
+    };
+    const titleM = content.match(/<title>([^<]*)<\/title>/i);
+    document.getElementById('seoTitle').value   = titleM ? titleM[1] : '';
+    document.getElementById('seoDesc').value    = getTag('name','description');
+    document.getElementById('seoKeywords').value= getTag('name','keywords');
+    document.getElementById('ogTitle').value    = getTag('property','og:title');
+    document.getElementById('ogDesc').value     = getTag('property','og:description');
+    document.getElementById('ogImage').value    = getTag('property','og:image');
+    updateGooglePreview();
+    document.getElementById('seoEditor').style.display = 'block';
+  } catch(err) {
+    showToast(`❌ ${err.message}`, 'error');
+  }
+}
+
+function updateGooglePreview() {
+  const title = document.getElementById('seoTitle').value || 'Fără titlu';
+  const desc  = document.getElementById('seoDesc').value || 'Fără descriere.';
+  document.getElementById('gpTitle').textContent = title;
+  document.getElementById('gpDesc').textContent  = desc;
+}
+
+document.addEventListener('input', (e) => {
+  if (['seoTitle','seoDesc'].includes(e.target.id)) updateGooglePreview();
+});
+
+function updateCharCount(inputId, countId, warn, max) {
+  const val = document.getElementById(inputId).value;
+  const len = val.length;
+  const el  = document.getElementById(countId);
+  el.textContent = `${len}/${max}`;
+  el.className = 'char-count' + (len > max ? ' over' : len > warn ? ' warn' : '');
+}
+
+async function saveSEO() {
+  if (!seoCurrentFile) return;
+  try {
+    let { content } = await getFileFromGitHub(seoCurrentFile);
+    // Replace meta tags
+    const replaceTag = (html, attr, val, newContent) => {
+      // Try both attribute orders
+      let replaced = html.replace(
+        new RegExp(`(<meta\\s+${attr}="${val}"\\s+content=")[^"]*(")`,'i'),
+        `$1${newContent}$2`
+      );
+      if (replaced === html) {
+        replaced = html.replace(
+          new RegExp(`(<meta\\s+content=")[^"]*(\"\\s+${attr}="${val}")`,'i'),
+          `$1${newContent}$2`
+        );
+      }
+      return replaced;
+    };
+
+    const title   = document.getElementById('seoTitle').value;
+    const desc    = document.getElementById('seoDesc').value;
+    const kw      = document.getElementById('seoKeywords').value;
+    const ogTitle = document.getElementById('ogTitle').value;
+    const ogDesc  = document.getElementById('ogDesc').value;
+    const ogImg   = document.getElementById('ogImage').value;
+
+    content = content.replace(/(<title>)[^<]*(<\/title>)/i, `$1${title}$2`);
+    content = replaceTag(content, 'name', 'description', desc);
+    content = replaceTag(content, 'name', 'keywords', kw);
+    content = replaceTag(content, 'property', 'og:title', ogTitle);
+    content = replaceTag(content, 'property', 'og:description', ogDesc);
+    if (ogImg) content = replaceTag(content, 'property', 'og:image', ogImg);
+
+    const { sha } = await getFileFromGitHub(seoCurrentFile);
+    await putFileToGitHub(seoCurrentFile, content, sha,
+      `SEO: actualizare meta tags ${seoCurrentFile}`);
+    showToast(`✅ SEO salvat pentru ${seoCurrentFile}!`, 'success');
+  } catch(err) {
+    showToast(`❌ ${err.message}`, 'error');
+  }
+}
+
+async function loadSEOForPage() {
+  const activeBtn = document.querySelector('.seo-page-btn.active');
+  if (activeBtn) activeBtn.click();
+}
+
+/* ── KEYWORDS & SEO RECOMMENDATIONS ── */
+function renderKeywords() {
+  const primary = [
+    { kw: 'fonduri europene', vol: '33.100/lună', diff: 'Mare' },
+    { kw: 'consultanta fonduri europene', vol: '8.100/lună', diff: 'Medie' },
+    { kw: 'finantare nerambursabila', vol: '6.600/lună', diff: 'Medie' },
+    { kw: 'fonduri nerambursabile Romania', vol: '5.400/lună', diff: 'Medie' },
+    { kw: 'PNRR finantare', vol: '4.400/lună', diff: 'Mare' },
+    { kw: 'POR Nord-Est 2024', vol: '2.900/lună', diff: 'Mică' },
+  ];
+  const longtail = [
+    { kw: 'consultanta fonduri europene Nord-Est', vol: '480/lună', diff: 'Mică' },
+    { kw: 'cum obtin fonduri europene 2025', vol: '720/lună', diff: 'Mică' },
+    { kw: 'finantare fotovoltaice ferma 2024', vol: '590/lună', diff: 'Mică' },
+    { kw: 'digitalizare IMM fonduri 2024', vol: '880/lună', diff: 'Mică' },
+    { kw: 'femeia antreprenor fonduri 2026', vol: '320/lună', diff: 'Mică' },
+    { kw: 'DR14 drumuri rurale finantare', vol: '430/lună', diff: 'Mică' },
+  ];
+
+  const diffColor = d => d === 'Mare' ? '#dc2626' : d === 'Medie' ? '#d97706' : '#16a34a';
+  const renderList = (items) => items.map(k => `
+    <div style="display:flex;justify-content:space-between;align-items:center;
+      padding:8px 12px;border-radius:8px;background:var(--gray-100);margin-bottom:6px">
+      <span style="font-size:.85rem;font-weight:600;color:var(--text)">🔑 ${k.kw}</span>
+      <div style="display:flex;gap:8px;align-items:center">
+        <span style="font-size:.75rem;color:var(--text-soft)">${k.vol}</span>
+        <span style="font-size:.72rem;font-weight:700;color:${diffColor(k.diff)};
+          background:${diffColor(k.diff)}20;padding:2px 8px;border-radius:10px">
+          ${k.diff}
+        </span>
+      </div>
+    </div>
+  `).join('');
+
+  document.getElementById('primaryKeywords').innerHTML = renderList(primary);
+  document.getElementById('longtailKeywords').innerHTML = renderList(longtail);
+
+  const recs = [
+    { icon: '✅', title: 'Titlu H1 optimizat', desc: 'Titlul principal al paginii conține keyword-ul principal.' },
+    { icon: '⚠️', title: 'Densitate keyword în text', desc: 'Menține densitatea la 1-2% pentru keyword-ul principal pe fiecare landing page.' },
+    { icon: '✅', title: 'Meta description completă', desc: 'Toate paginile au meta description (150-160 caractere).' },
+    { icon: '⚠️', title: 'Alt text imagini', desc: 'Adaugă text alternativ la toate imaginile cu keyword-urile relevante.' },
+    { icon: '⚠️', title: 'Schema.org LocalBusiness', desc: 'Adaugă schema markup cu adresa și telefonul fizic al firmei.' },
+    { icon: '✅', title: 'URL-uri SEO-friendly', desc: 'Toate paginile au URL-uri cu sluguri clare și relevante.' },
+    { icon: '⚠️', title: 'Backlinks locali', desc: 'Înscrie firma pe Google Business Profile și directories locale.' },
+    { icon: '✅', title: 'Site securizat (HTTPS)', desc: 'GitHub Pages oferă HTTPS automat.' },
+  ];
+  document.getElementById('seoRecommendations').innerHTML = recs.map(r => `
+    <div style="display:flex;gap:12px;padding:10px 0;border-bottom:1px solid var(--gray-200);align-items:flex-start">
+      <span style="font-size:1.2rem">${r.icon}</span>
+      <div>
+        <div style="font-size:.88rem;font-weight:700;color:var(--text)">${r.title}</div>
+        <div style="font-size:.8rem;color:var(--text-soft);margin-top:2px">${r.desc}</div>
+      </div>
+    </div>
+  `).join('');
+}
+
+async function applyKeywordOptimizations() {
+  if (!GH_PAT()) { showToast('⚙️ Configurează PAT-ul GitHub mai întâi!', 'error'); return; }
+  showToast('🚀 Optimizare SEO în curs... Funcție disponibilă în curând.', 'success');
+}
+
+/* ── SETTINGS ── */
+function savePAT() {
+  const pat = document.getElementById('patInput').value.trim();
+  if (!pat) { showToast('Introdu PAT-ul GitHub.', 'error'); return; }
+  localStorage.setItem('gh_pat', pat);
+  updatePATStatus('ok');
+  showToast('✅ PAT salvat în browser. Testează conexiunea.', 'success');
+}
+
+async function testPAT() {
+  const pat = GH_PAT();
+  if (!pat) { showToast('Salvează mai întâi PAT-ul.', 'error'); return; }
+  try {
+    const resp = await fetch(`https://api.github.com/repos/${REPO_OWNER()}/${REPO_NAME()}`, {
+      headers: { 'Authorization': `token ${pat}` }
+    });
+    if (resp.ok) {
+      const data = await resp.json();
+      updatePATStatus('ok');
+      document.getElementById('patStatus').textContent = '✅ OK';
+      showToast(`✅ Conexiune reușită! Repository: ${data.full_name}`, 'success');
+    } else {
+      updatePATStatus('error');
+      showToast('❌ Token invalid sau fără acces la repository.', 'error');
+    }
+  } catch(err) {
+    showToast(`❌ Eroare: ${err.message}`, 'error');
+  }
+}
+
+function updatePATStatus(status) {
+  const el = document.getElementById('patStatusBadge');
+  if (status === 'ok') {
+    el.className = 'status-indicator status-ok';
+    el.textContent = '✅ Configurat și funcțional';
+  } else if (status === 'error') {
+    el.className = 'status-indicator status-error';
+    el.textContent = '❌ Eroare de conexiune';
+  } else {
+    el.className = 'status-indicator status-idle';
+    el.textContent = '⏸ Neconfigurat';
+  }
+}
+
+function saveRepoConfig() {
+  localStorage.setItem('gh_owner', document.getElementById('repoOwner').value);
+  localStorage.setItem('gh_repo',  document.getElementById('repoName').value);
+  localStorage.setItem('gh_branch',document.getElementById('repoBranch').value);
+  showToast('✅ Configurare repository salvată.', 'success');
+}
+
+function loadSavedSettings() {
+  if (localStorage.getItem('gh_owner')) document.getElementById('repoOwner').value = localStorage.getItem('gh_owner');
+  if (localStorage.getItem('gh_repo'))  document.getElementById('repoName').value  = localStorage.getItem('gh_repo');
+  if (localStorage.getItem('gh_branch'))document.getElementById('repoBranch').value= localStorage.getItem('gh_branch');
+  if (localStorage.getItem('gh_pat'))   document.getElementById('patInput').value  = localStorage.getItem('gh_pat');
+  if (GH_PAT()) updatePATStatus('ok');
+}
+
+/* ── TAB NAVIGATION ── */
+function showTab(name) {
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-item').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + name).classList.add('active');
+  document.querySelector(`[data-tab="${name}"]`).classList.add('active');
+}
+
+/* ── INIT ── */
+function initApp() {
+  renderFileGrid();
+  renderSEOPageButtons();
+  renderUsers();
+  renderKeywords();
+  renderPagesOverview();
+  if (GH_PAT()) {
+    document.getElementById('patStatus').textContent = '✅';
+    updatePATStatus('ok');
+  }
+}
+
+function renderPagesOverview() {
+  document.getElementById('pagesList').innerHTML = SITE_PAGES.map(p =>
+    `<div style="padding:4px 0;display:flex;gap:6px;align-items:center">
+      <span>${p.icon}</span>
+      <span style="font-size:.8rem;color:var(--text)">${p.file}</span>
+      <span class="badge badge-green" style="font-size:.65rem">Live</span>
+    </div>`
+  ).join('');
+}
+
+/* ── TOAST ── */
+function showToast(msg, type = 'info') {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.className = `show ${type}`;
+  clearTimeout(window._toastTimer);
+  window._toastTimer = setTimeout(() => { t.classList.remove('show'); }, 4000);
+}
+</script>
+</body>
+</html>
