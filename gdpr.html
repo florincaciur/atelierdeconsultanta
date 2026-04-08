@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Politica GDPR FABER – Atelier de Consultanță. Drepturile tale conform Regulamentului General privind Protecția Datelor (UE) 2016/679." />
+  <meta name="robots" content="noindex, follow" />
+  <title>Politica GDPR | FABER – Atelier de Consultanță</title>
+  <link rel="canonical" href="https://atelierdeconsultanta.ro/gdpr.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #0d1f3c; --orange: #e8642a; --gold: #f5a623;
+      --white: #ffffff; --gray-100: #f8f9fb; --gray-200: #e8edf5;
+      --text-main: #1a2540; --text-soft: #4a5568;
+      --purple: #7c3aed; --radius-sm: 8px; --radius-md: 16px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: var(--text-main); background: var(--white); line-height: 1.7; }
+    a { color: var(--orange); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .topbar {
+      background: var(--navy); padding: 0 24px; height: 64px;
+      display: flex; align-items: center; justify-content: space-between;
+      position: sticky; top: 0; z-index: 100;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.2);
+    }
+    .topbar-logo { color: white; font-size: 1.2rem; font-weight: 800; }
+    .topbar-logo span { color: var(--orange); }
+    .topbar-back { color: rgba(255,255,255,0.7); font-size: 0.85rem; font-weight: 500; display: flex; align-items: center; gap: 6px; transition: color 0.2s; }
+    .topbar-back:hover { color: white; text-decoration: none; }
+    .page-hero {
+      background: linear-gradient(135deg, #2d1b69 0%, #0d1f3c 100%);
+      padding: 60px 24px; text-align: center;
+    }
+    .page-hero h1 { color: white; font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 900; margin-bottom: 12px; }
+    .page-hero p { color: rgba(255,255,255,0.65); font-size: 1rem; }
+    .update-badge {
+      display: inline-block; background: rgba(124,58,237,0.2); border: 1px solid rgba(124,58,237,0.4);
+      color: #c4b5fd; font-size: 0.78rem; font-weight: 600; padding: 6px 14px;
+      border-radius: 100px; margin-bottom: 20px;
+    }
+    .content-wrapper { max-width: 860px; margin: 0 auto; padding: 60px 24px 80px; }
+    .gdpr-card {
+      background: linear-gradient(135deg, rgba(124,58,237,0.08), rgba(232,100,42,0.05));
+      border: 1px solid rgba(124,58,237,0.2);
+      border-radius: var(--radius-md); padding: 28px 32px; margin-bottom: 40px;
+    }
+    .gdpr-card h2 { font-size: 1.1rem; font-weight: 700; color: var(--purple); margin-bottom: 12px; }
+    .gdpr-card p { color: var(--text-soft); }
+    .legal-section { margin-bottom: 48px; }
+    .legal-section h2 { font-size: 1.3rem; font-weight: 800; color: var(--text-main); margin-bottom: 16px; padding-bottom: 12px; border-bottom: 2px solid var(--gray-200); }
+    .legal-section h3 { font-size: 1.05rem; font-weight: 700; color: var(--text-main); margin: 20px 0 10px; }
+    .legal-section p { color: var(--text-soft); margin-bottom: 14px; }
+    .legal-section ul { padding-left: 20px; color: var(--text-soft); display: flex; flex-direction: column; gap: 8px; margin-bottom: 14px; }
+    .legal-section ul li { list-style: disc; }
+    .highlight-box {
+      background: rgba(124,58,237,0.07); border-left: 4px solid var(--purple);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      padding: 16px 20px; margin: 20px 0;
+    }
+    .highlight-box p { color: var(--text-main); font-weight: 500; margin: 0; }
+    .rights-table {
+      width: 100%; border-collapse: collapse; margin: 20px 0;
+      border-radius: var(--radius-sm); overflow: hidden;
+    }
+    .rights-table th {
+      background: var(--navy); color: white; padding: 12px 16px;
+      text-align: left; font-size: 0.82rem; font-weight: 600; letter-spacing: 0.5px;
+    }
+    .rights-table td {
+      padding: 12px 16px; border-bottom: 1px solid var(--gray-200);
+      font-size: 0.875rem; color: var(--text-soft);
+    }
+    .rights-table tr:last-child td { border-bottom: none; }
+    .rights-table tr:nth-child(even) td { background: var(--gray-100); }
+    .anpc-badges {
+      display: flex; flex-wrap: wrap; gap: 16px; margin: 24px 0;
+    }
+    .anpc-badge-item {
+      display: flex; align-items: center; gap: 12px;
+      background: var(--gray-100); border: 1px solid var(--gray-200);
+      border-radius: var(--radius-sm); padding: 14px 20px; flex: 1; min-width: 200px;
+    }
+    .anpc-badge-item .badge-icon { font-size: 1.8rem; flex-shrink: 0; }
+    .anpc-badge-item .badge-info .badge-name { font-size: 0.9rem; font-weight: 700; color: var(--text-main); }
+    .anpc-badge-item .badge-info .badge-desc { font-size: 0.78rem; color: var(--text-soft); }
+    .page-footer { background: #060f20; padding: 32px 24px; text-align: center; }
+    .page-footer p { color: rgba(255,255,255,0.4); font-size: 0.82rem; }
+    .page-footer a { color: var(--orange); }
+    .step-list { display: flex; flex-direction: column; gap: 16px; margin: 20px 0; }
+    .step-item { display: flex; gap: 16px; align-items: flex-start; }
+    .step-num {
+      width: 32px; height: 32px; border-radius: 50%; flex-shrink: 0;
+      background: var(--purple); color: white;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.85rem; font-weight: 700; margin-top: 2px;
+    }
+    .step-content h4 { font-size: 0.95rem; font-weight: 700; color: var(--text-main); margin-bottom: 4px; }
+    .step-content p { font-size: 0.875rem; color: var(--text-soft); margin: 0; }
+  </style>
+</head>
+<body>
+
+  <nav class="topbar" role="navigation">
+    <a href="index.html" class="topbar-logo"><span>FABER</span> Atelier de Consultanță</a>
+    <a href="index.html" class="topbar-back">← Înapoi la site</a>
+  </nav>
+
+  <header class="page-hero">
+    <div class="update-badge">🔒 GDPR Conform | Ultima actualizare: 1 ianuarie 2025</div>
+    <h1>Politica GDPR</h1>
+    <p>Drepturile tale conform Regulamentului General privind Protecția Datelor (UE) 2016/679</p>
+  </header>
+
+  <main class="content-wrapper">
+
+    <!-- Card introductiv -->
+    <div class="gdpr-card">
+      <h2>🇪🇺 Ce este GDPR?</h2>
+      <p>
+        Regulamentul General privind Protecția Datelor (GDPR) este legislația europeană care protejează datele personale
+        ale cetățenilor din Uniunea Europeană. FABER – Atelier de Consultanță respectă toate prevederile GDPR
+        și îți garantează controlul deplin asupra datelor tale personale.
+      </p>
+    </div>
+
+    <!-- Insigne de conformitate -->
+    <section class="legal-section" id="conformitate">
+      <h2>Certificate și Conformitate</h2>
+      <p>FABER respectă standardele europene de protecție a consumatorilor și a datelor personale:</p>
+      <div class="anpc-badges">
+        <div class="anpc-badge-item">
+          <div class="badge-icon">🛡️</div>
+          <div class="badge-info">
+            <div class="badge-name">ANPC</div>
+            <div class="badge-desc">Autoritatea Națională pentru Protecția Consumatorilor</div>
+          </div>
+        </div>
+        <div class="anpc-badge-item">
+          <div class="badge-icon">⚖️</div>
+          <div class="badge-info">
+            <div class="badge-name">SAL / SOL</div>
+            <div class="badge-desc">Soluționarea Alternativă / Online a Litigiilor — <a href="https://anpc.ro/ce-este-sal" target="_blank" rel="noopener">anpc.ro</a></div>
+          </div>
+        </div>
+        <div class="anpc-badge-item">
+          <div class="badge-icon">🔒</div>
+          <div class="badge-info">
+            <div class="badge-name">GDPR Conform</div>
+            <div class="badge-desc">Regulament UE 2016/679 — Protecția datelor personale</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="legal-section" id="principii">
+      <h2>1. Principiile GDPR pe care le respectăm</h2>
+      <table class="rights-table">
+        <thead>
+          <tr>
+            <th>Principiu</th>
+            <th>Cum îl aplicăm</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Legalitate, echitate, transparență</strong></td>
+            <td>Prelucrăm datele numai cu temei legal și te informăm complet</td>
+          </tr>
+          <tr>
+            <td><strong>Limitarea scopului</strong></td>
+            <td>Datele sunt colectate doar pentru scopuri determinate și legitime</td>
+          </tr>
+          <tr>
+            <td><strong>Minimizarea datelor</strong></td>
+            <td>Colectăm doar ce este necesar pentru scopul declarat</td>
+          </tr>
+          <tr>
+            <td><strong>Exactitate</strong></td>
+            <td>Datele inexacte sunt corectate sau șterse fără întârziere</td>
+          </tr>
+          <tr>
+            <td><strong>Limitarea stocării</strong></td>
+            <td>Nu păstrăm datele mai mult decât este necesar</td>
+          </tr>
+          <tr>
+            <td><strong>Integritate și confidențialitate</strong></td>
+            <td>Aplicăm măsuri tehnice adecvate de securitate</td>
+          </tr>
+          <tr>
+            <td><strong>Responsabilitate</strong></td>
+            <td>Demonstrăm conformitatea și documentăm toate prelucrările</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="legal-section" id="drepturi-gdpr">
+      <h2>2. Drepturile tale conform GDPR</h2>
+      <p>Regulamentul GDPR îți conferă 8 drepturi fundamentale în legătură cu datele tale personale:</p>
+
+      <div class="step-list">
+        <div class="step-item">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <h4>Dreptul de acces (Art. 15)</h4>
+            <p>Ai dreptul să știi ce date personale prelucrăm despre tine și să primești o copie a acestora.</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <h4>Dreptul la rectificare (Art. 16)</h4>
+            <p>Dacă datele tale sunt incorecte sau incomplete, ai dreptul să ceri corectarea lor fără întârziere.</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <h4>Dreptul la ștergere („dreptul de a fi uitat") (Art. 17)</h4>
+            <p>Poți solicita ștergerea datelor personale când nu mai sunt necesare sau când retragi consimțământul.</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">4</div>
+          <div class="step-content">
+            <h4>Dreptul la restricționarea prelucrării (Art. 18)</h4>
+            <p>Poți solicita limitarea prelucrării datelor tale în anumite circumstanțe prevăzute de lege.</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">5</div>
+          <div class="step-content">
+            <h4>Dreptul la portabilitatea datelor (Art. 20)</h4>
+            <p>Ai dreptul să primești datele furnizate de tine într-un format structurat, utilizat în mod curent și lizibil automat.</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">6</div>
+          <div class="step-content">
+            <h4>Dreptul la opoziție (Art. 21)</h4>
+            <p>Te poți opune prelucrării datelor tale în scopuri de marketing direct în orice moment, fără să dai vreo justificare.</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">7</div>
+          <div class="step-content">
+            <h4>Dreptul de a nu fi supus deciziilor automatizate (Art. 22)</h4>
+            <p>Nu ești supus niciunei decizii bazate exclusiv pe prelucrarea automatizată care produce efecte juridice.</p>
+          </div>
+        </div>
+        <div class="step-item">
+          <div class="step-num">8</div>
+          <div class="step-content">
+            <h4>Dreptul de a retrage consimțământul (Art. 7)</h4>
+            <p>Poți retrage consimțământul oricând, fără a afecta legalitatea prelucrărilor efectuate anterior.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="legal-section" id="exercitare">
+      <h2>3. Cum îți exerciți drepturile</h2>
+      <p>Poți trimite orice solicitare legată de datele tale personale prin:</p>
+      <ul>
+        <li><strong>Email:</strong> <a href="mailto:contact@atelierdeconsultanta.ro">contact@atelierdeconsultanta.ro</a> — subiect: „Exercitare drepturi GDPR"</li>
+        <li><strong>Formular de contact:</strong> <a href="index.html#contact">atelierdeconsultanta.ro/#contact</a></li>
+      </ul>
+      <div class="highlight-box">
+        <p>⏱️ Îți răspundem la orice solicitare în maxim <strong>30 de zile calendaristice</strong>. Dacă solicitarea este complexă, termenul poate fi prelungit cu încă 60 de zile, cu notificarea ta prealabilă.</p>
+      </div>
+    </section>
+
+    <section class="legal-section" id="plangeri">
+      <h2>4. Dreptul de a depune o plângere</h2>
+      <p>Dacă considerați că drepturile dvs. nu au fost respectate, aveți dreptul de a depune o plângere la autoritatea de supraveghere:</p>
+      <div class="anpc-badge-item" style="margin: 20px 0;">
+        <div class="badge-icon">🏛️</div>
+        <div class="badge-info">
+          <div class="badge-name">ANSPDCP – Autoritatea Națională de Supraveghere</div>
+          <div class="badge-desc">
+            <a href="https://www.dataprotection.ro" target="_blank" rel="noopener">www.dataprotection.ro</a> |
+            <a href="mailto:anspdcp@dataprotection.ro">anspdcp@dataprotection.ro</a>
+          </div>
+        </div>
+      </div>
+      <p>De asemenea, puteți apela la procedura de soluționare alternativă a litigiilor (SAL) la <a href="https://anpc.ro/ce-este-sal" target="_blank" rel="noopener">anpc.ro/ce-este-sal</a> sau la platforma europeană SOL: <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener">ec.europa.eu/consumers/odr</a>.</p>
+    </section>
+
+    <section class="legal-section" id="incalcari">
+      <h2>5. Notificarea încălcărilor de securitate</h2>
+      <p>În eventualitatea unui incident de securitate care afectează datele tale personale:</p>
+      <ul>
+        <li>FABER va notifica ANSPDCP în maxim 72 de ore de la constatarea încălcării;</li>
+        <li>Persoanele afectate vor fi notificate fără întârzieri nejustificate, dacă există un risc ridicat pentru drepturile și libertățile lor;</li>
+        <li>Notificarea va include natura încălcării, datele afectate și măsurile luate sau planificate.</li>
+      </ul>
+    </section>
+
+    <section class="legal-section" id="contact-gdpr">
+      <h2>6. Contact și actualizări</h2>
+      <p>Pentru orice întrebare despre această politică sau despre prelucrarea datelor tale:</p>
+      <ul>
+        <li><strong>Email:</strong> <a href="mailto:contact@atelierdeconsultanta.ro">contact@atelierdeconsultanta.ro</a></li>
+        <li><strong>Website:</strong> <a href="index.html">atelierdeconsultanta.ro</a></li>
+      </ul>
+      <p>Această politică poate fi actualizată periodic. Te recomandăm să o verifici ori de câte ori folosești serviciile noastre. Data ultimei actualizări este afișată în antetul paginii.</p>
+      <p>Poți consulta și documentele conexe: <a href="politica-de-confidentialitate.html">Politica de confidențialitate</a> | <a href="termeni-si-conditii.html">Termeni și condiții</a>.</p>
+    </section>
+
+  </main>
+
+  <footer class="page-footer">
+    <p>© 2025 FABER – Atelier de Consultanță | <a href="index.html">Acasă</a> | <a href="politica-de-confidentialitate.html">Confidențialitate</a> | <a href="termeni-si-conditii.html">Termeni</a></p>
+  </footer>
+
+</body>
+</html>
