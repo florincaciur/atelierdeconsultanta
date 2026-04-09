@@ -1,4 +1,11 @@
+# robots.txt — FABER Atelier de Consultanta
+# https://atelierdeconsultanta.ro
+
 User-agent: *
 Allow: /
 
+# Nu indexa panoul de administrare
+Disallow: /admin/
+
+# Sitemap
 Sitemap: https://atelierdeconsultanta.ro/sitemap.xml
