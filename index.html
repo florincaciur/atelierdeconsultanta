@@ -23,8 +23,18 @@
   <!-- ✦ Canonical URL pentru SEO ✦ -->
   <link rel="canonical" href="https://atelierdeconsultanta.ro/" />
 
-  <!-- ✦ Favicon ✦ -->
-  <link rel="icon" type="image/png" href="favicon.png" />
+  <!-- ✦ Robots — index complet ✦ -->
+  <meta name="robots" content="index, follow" />
+
+  <!-- ✦ Favicon — toate dispozitivele ✦ -->
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
+
+  <!-- ✦ Twitter Card ✦ -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="FABER – Atelier de Consultanță | Fonduri Europene Nerambursabile" />
+  <meta name="twitter:description" content="Transformăm ideile tale în proiecte finanțate. Consultanță completă pentru accesarea fondurilor europene 2021-2027." />
 
   <!-- ✦ Schema.org structured data pentru Google ✦ -->
   <script type="application/ld+json">
@@ -32,15 +42,46 @@
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "name": "FABER – Atelier de Consultanță",
-    "description": "Consultanță specializată în accesarea fondurilor europene nerambursabile",
+    "alternateName": "Atelier de Consultanta",
+    "description": "Consultanță specializată în accesarea fondurilor europene nerambursabile. Experți în PNRR, POR, AFIR, Digitalizare IMM și alte programe de finanțare 2021-2027.",
     "url": "https://atelierdeconsultanta.ro",
-    "telephone": "+40-XXX-XXX-XXX",
+    "logo": "https://atelierdeconsultanta.ro/favicon-192.png",
+    "image": "https://atelierdeconsultanta.ro/og-image.jpg",
     "address": {
       "@type": "PostalAddress",
       "addressCountry": "RO"
     },
+    "areaServed": {
+      "@type": "Country",
+      "name": "România"
+    },
+    "serviceType": [
+      "Consultanță fonduri europene",
+      "Accesare PNRR",
+      "Consultanță AFIR",
+      "Consultanță POR",
+      "Digitalizare IMM"
+    ],
     "priceRange": "$$",
-    "openingHours": "Mo-Fr 09:00-18:00"
+    "openingHours": "Mo-Fr 09:00-18:00",
+    "sameAs": [
+      "https://atelierdeconsultanta.ro"
+    ]
+  }
+  </script>
+
+  <!-- ✦ Breadcrumb Schema ✦ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "FABER – Atelier de Consultanță",
+    "url": "https://atelierdeconsultanta.ro",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://atelierdeconsultanta.ro/?s={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
   }
   </script>
 
