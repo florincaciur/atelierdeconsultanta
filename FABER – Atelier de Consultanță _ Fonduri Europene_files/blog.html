@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ✦ SEO Meta — populate din blog.json ✦ -->
+  <meta id="meta-description" name="description" content="Articol blog FABER – Atelier de Consultanță. Fonduri europene nerambursabile, PNRR, POR, AFIR." />
+  <meta id="meta-keywords" name="keywords" content="fonduri europene, consultanta fonduri europene, PNRR, finantare nerambursabila" />
+  <meta id="meta-og-title" property="og:title" content="Blog | FABER – Atelier de Consultanță" />
+  <meta id="meta-og-desc" property="og:description" content="Articol blog FABER – Atelier de Consultanță." />
+  <meta id="meta-og-image" property="og:image" content="https://atelierdeconsultanta.ro/og-image.jpg" />
+  <meta property="og:type" content="article" />
+  <meta id="meta-og-url" property="og:url" content="https://atelierdeconsultanta.ro/blog.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <title id="page-title">Blog | FABER – Atelier de Consultanță</title>
+
+  <link rel="canonical" id="canonical" href="https://atelierdeconsultanta.ro/blog.html" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+
+  <!-- ✦ Schema.org Article — completat dinamic ✦ -->
+  <script type="application/ld+json" id="ld-json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+      "@type": "Organization",
+      "name": "FABER – Atelier de Consultanță",
+      "url": "https://atelierdeconsultanta.ro"
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ======= VARIABILE ======= */
+    :root {
+      --navy: #0d1f3c;
+      --navy-mid: #112a50;
+      --orange: #f97316;
+      --orange-dark: #ea580c;
+      --white: #ffffff;
+      --gray-100: #f8f9fb;
+      --gray-200: #e9ecef;
+      --gray-600: #6c757d;
+      --text-main: #1a202c;
+      --text-soft: #4a5568;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,.08), 0 1px 2px rgba(0,0,0,.06);
+      --shadow-md: 0 4px 16px rgba(0,0,0,.12);
+      --shadow-lg: 0 10px 40px rgba(0,0,0,.15);
+      --radius: 16px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--gray-100);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* ======= NAVBAR ======= */
+    .navbar {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(13,31,60,.95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      padding: 0 24px;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 64px;
+    }
+    .navbar-brand {
+      font-size: 1.1rem; font-weight: 800;
+      color: var(--white);
+      display: flex; align-items: center; gap: 8px;
+    }
+    .navbar-brand span { color: var(--orange); }
+    .navbar-back {
+      display: flex; align-items: center; gap: 6px;
+      color: rgba(255,255,255,.7);
+      font-size: 0.875rem; font-weight: 500;
+      transition: color .2s;
+    }
+    .navbar-back:hover { color: var(--orange); }
+
+    /* ======= HERO ARTICOL ======= */
+    .post-hero {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+      padding: 80px 24px 60px;
+      text-align: center;
+    }
+    .post-category {
+      display: inline-block;
+      background: rgba(249,115,22,.15);
+      color: var(--orange);
+      font-size: 0.7rem; font-weight: 700;
+      letter-spacing: 1.5px; text-transform: uppercase;
+      padding: 4px 14px; border-radius: 100px;
+      margin-bottom: 20px;
+    }
+    .post-icon {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+      display: block;
+    }
+    .post-title {
+      font-size: clamp(1.6rem, 4vw, 2.6rem);
+      font-weight: 800; color: var(--white);
+      line-height: 1.25; max-width: 760px;
+      margin: 0 auto 20px;
+    }
+    .post-excerpt {
+      font-size: 1.05rem; color: rgba(255,255,255,.7);
+      max-width: 640px; margin: 0 auto 28px;
+      line-height: 1.7;
+    }
+    .post-meta {
+      display: flex; align-items: center; justify-content: center;
+      gap: 20px; flex-wrap: wrap;
+      font-size: 0.82rem; color: rgba(255,255,255,.55);
+    }
+    .post-meta span { display: flex; align-items: center; gap: 5px; }
+
+    /* ======= CONTINUT ARTICOL ======= */
+    .post-container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 60px 24px 80px;
+    }
+
+    .post-body {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 48px;
+      box-shadow: var(--shadow-md);
+      font-size: 1.05rem;
+      color: var(--text-soft);
+      line-height: 1.85;
+    }
+
+    .post-body p { margin-bottom: 20px; }
+    .post-body p:last-child { margin-bottom: 0; }
+    .post-body h2 { font-size: 1.4rem; font-weight: 700; color: var(--text-main); margin: 32px 0 16px; }
+    .post-body h3 { font-size: 1.15rem; font-weight: 700; color: var(--text-main); margin: 24px 0 12px; }
+    .post-body ul, .post-body ol { margin: 0 0 20px 24px; }
+    .post-body li { margin-bottom: 8px; }
+    .post-body strong { color: var(--text-main); font-weight: 600; }
+    .post-body a { color: var(--orange); text-decoration: underline; }
+    .post-body blockquote {
+      border-left: 3px solid var(--orange);
+      padding: 12px 20px;
+      background: var(--gray-100);
+      border-radius: 0 8px 8px 0;
+      margin: 24px 0;
+      font-style: italic;
+      color: var(--text-soft);
+    }
+
+    /* ======= CTA BOX ======= */
+    .cta-box {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+      border-radius: var(--radius);
+      padding: 40px;
+      text-align: center;
+      margin-top: 32px;
+    }
+    .cta-box h3 {
+      font-size: 1.3rem; font-weight: 700;
+      color: var(--white); margin-bottom: 12px;
+    }
+    .cta-box p {
+      color: rgba(255,255,255,.7);
+      margin-bottom: 24px; font-size: 0.95rem;
+    }
+    .btn-cta {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--orange); color: var(--white);
+      padding: 13px 28px; border-radius: 100px;
+      font-weight: 700; font-size: 0.9rem;
+      transition: background .2s, transform .2s;
+    }
+    .btn-cta:hover { background: var(--orange-dark); transform: translateY(-2px); }
+
+    /* ======= ALTE ARTICOLE ======= */
+    .related-section {
+      background: var(--white);
+      padding: 60px 24px;
+      border-top: 1px solid var(--gray-200);
+    }
+    .related-inner { max-width: 1100px; margin: 0 auto; }
+    .related-title {
+      font-size: 1.2rem; font-weight: 700;
+      color: var(--text-main); margin-bottom: 28px;
+    }
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+    .related-card {
+      border: 1px solid var(--gray-200);
+      border-radius: 12px;
+      padding: 20px;
+      transition: box-shadow .2s, transform .2s;
+      cursor: pointer;
+    }
+    .related-card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
+    .related-card .rc-icon { font-size: 1.8rem; margin-bottom: 10px; }
+    .related-card .rc-cat {
+      font-size: 0.65rem; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; color: var(--orange); margin-bottom: 6px;
+    }
+    .related-card .rc-title {
+      font-size: 0.92rem; font-weight: 700;
+      color: var(--text-main); line-height: 1.4; margin-bottom: 8px;
+    }
+    .related-card .rc-meta {
+      font-size: 0.75rem; color: var(--gray-600);
+    }
+
+    /* ======= LOADING STATE ======= */
+    .post-loading {
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      min-height: 60vh; gap: 16px;
+      color: var(--text-soft);
+    }
+    .spinner {
+      width: 40px; height: 40px;
+      border: 3px solid var(--gray-200);
+      border-top-color: var(--orange);
+      border-radius: 50%;
+      animation: spin .8s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    .post-not-found {
+      text-align: center; padding: 80px 24px;
+    }
+    .post-not-found h2 { font-size: 1.5rem; margin-bottom: 12px; color: var(--text-main); }
+    .post-not-found p { color: var(--text-soft); margin-bottom: 24px; }
+
+    /* ======= FOOTER ======= */
+    .footer {
+      background: var(--navy);
+      color: rgba(255,255,255,.6);
+      text-align: center;
+      padding: 28px 24px;
+      font-size: 0.82rem;
+    }
+    .footer a { color: var(--orange); }
+
+    /* ======= RESPONSIVE ======= */
+    @media (max-width: 600px) {
+      .post-body { padding: 28px 20px; }
+      .cta-box { padding: 28px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ======= NAVBAR ======= -->
+  <nav class="navbar">
+    <a href="/" class="navbar-brand">
+      <span>FABER</span> – Atelier de Consultanță
+    </a>
+    <a href="/#blog" class="navbar-back">← Înapoi la Blog</a>
+  </nav>
+
+  <!-- ======= LOADING ======= -->
+  <div id="loading-state" class="post-loading">
+    <div class="spinner"></div>
+    <p>Se încarcă articolul...</p>
+  </div>
+
+  <!-- ======= CONTINUT PRINCIPAL (hidden until loaded) ======= -->
+  <main id="main-content" style="display:none">
+
+    <!-- Hero articol -->
+    <div class="post-hero">
+      <div class="post-category" id="post-category">Ghid</div>
+      <div class="post-icon" id="post-icon">📰</div>
+      <h1 class="post-title" id="post-title">Titlu articol</h1>
+      <p class="post-excerpt" id="post-excerpt">Rezumat articol</p>
+      <div class="post-meta">
+        <span>📅 <span id="post-date">—</span></span>
+        <span>⏱️ <span id="post-read-time">—</span> min citire</span>
+        <span>✍️ <span id="post-author">FABER Consultanță</span></span>
+      </div>
+    </div>
+
+    <!-- Continut articol -->
+    <div class="post-container">
+      <div class="post-body" id="post-body">
+        <!-- continut incarcat dinamic -->
+      </div>
+
+      <!-- CTA -->
+      <div class="cta-box" style="margin-top:32px">
+        <h3>Vrei să accesezi fonduri europene?</h3>
+        <p>Echipa noastră de experți te ghidează pas cu pas în întregul proces — de la identificarea programului potrivit până la semnarea contractului de finanțare.</p>
+        <a href="/#contact" class="btn-cta">Consultanță gratuită →</a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ======= ARTICOLE SIMILARE ======= -->
+  <section class="related-section" id="related-section" style="display:none">
+    <div class="related-inner">
+      <div class="related-title">Alte articole utile</div>
+      <div class="related-grid" id="related-grid"></div>
+    </div>
+  </section>
+
+  <!-- ======= NOT FOUND ======= -->
+  <div id="not-found-state" class="post-not-found" style="display:none">
+    <h2>Articolul nu a fost găsit</h2>
+    <p>Acest articol nu există sau a fost mutat.</p>
+    <a href="/#blog" class="btn-cta">← Înapoi la blog</a>
+  </div>
+
+  <!-- ======= FOOTER ======= -->
+  <footer class="footer">
+    <p>© 2025 <a href="/">FABER – Atelier de Consultanță</a>. Toate drepturile rezervate.</p>
+  </footer>
+
+  <script>
+    (async function () {
+      // ── 1. Citim parametrul ?post= din URL ──────────────────────────
+      const params = new URLSearchParams(location.search);
+      const postId = params.get('post');
+
+      const loadingEl   = document.getElementById('loading-state');
+      const mainEl      = document.getElementById('main-content');
+      const notFoundEl  = document.getElementById('not-found-state');
+      const relatedEl   = document.getElementById('related-section');
+
+      if (!postId) {
+        loadingEl.style.display = 'none';
+        notFoundEl.style.display = 'block';
+        return;
+      }
+
+      // ── 2. Încărcăm blog.json ────────────────────────────────────────
+      let posts = [];
+      try {
+        const resp = await fetch('/blog.json?t=' + Date.now());
+        if (!resp.ok) throw new Error('fetch failed');
+        const data = await resp.json();
+        posts = data.posts || [];
+      } catch (e) {
+        loadingEl.style.display = 'none';
+        notFoundEl.style.display = 'block';
+        return;
+      }
+
+      // ── 3. Găsim articolul ──────────────────────────────────────────
+      const post = posts.find(p => p.id === postId || p.slug === postId);
+
+      if (!post || !post.published) {
+        loadingEl.style.display = 'none';
+        notFoundEl.style.display = 'block';
+        return;
+      }
+
+      // ── 4. Populăm meta tags SEO ────────────────────────────────────
+      const seo = post.seo || {};
+      const canonicalURL = `https://atelierdeconsultanta.ro/blog.html?post=${post.id}`;
+
+      document.title = seo.metaTitle || (post.title + ' | FABER');
+      document.getElementById('meta-description').setAttribute('content', seo.metaDescription || post.excerpt);
+      document.getElementById('meta-keywords').setAttribute('content', seo.metaKeywords || '');
+      document.getElementById('meta-og-title').setAttribute('content', seo.ogTitle || post.title);
+      document.getElementById('meta-og-desc').setAttribute('content', seo.ogDescription || post.excerpt);
+      document.getElementById('meta-og-url').setAttribute('content', canonicalURL);
+      document.getElementById('canonical').setAttribute('href', canonicalURL);
+      if (seo.ogImage) {
+        document.getElementById('meta-og-image').setAttribute('content', seo.ogImage);
+      }
+
+      // ── 5. Schema.org Article ───────────────────────────────────────
+      const ldJson = {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": post.title,
+        "description": post.excerpt,
+        "datePublished": post.date,
+        "author": { "@type": "Organization", "name": post.author || "FABER – Atelier de Consultanță" },
+        "publisher": {
+          "@type": "Organization",
+          "name": "FABER – Atelier de Consultanță",
+          "url": "https://atelierdeconsultanta.ro"
+        },
+        "url": canonicalURL
+      };
+      if (seo.ogImage) ldJson.image = seo.ogImage;
+      document.getElementById('ld-json').textContent = JSON.stringify(ldJson, null, 2);
+
+      // ── 6. Populăm conținutul ───────────────────────────────────────
+      document.getElementById('post-category').textContent  = post.category || '';
+      document.getElementById('post-icon').textContent      = post.icon || '📰';
+      document.getElementById('post-title').textContent     = post.title;
+      document.getElementById('post-excerpt').textContent   = post.excerpt;
+      document.getElementById('post-date').textContent      = post.dateFormatted || post.date;
+      document.getElementById('post-read-time').textContent = post.readTime || '5';
+      document.getElementById('post-author').textContent    = post.author || 'FABER Consultanță';
+      document.getElementById('post-body').innerHTML        = post.content || '<p>Conținut indisponibil.</p>';
+
+      // ── 7. Articole similare ─────────────────────────────────────────
+      const others = posts.filter(p => p.id !== post.id && p.published);
+      if (others.length) {
+        const grid = document.getElementById('related-grid');
+        others.forEach(op => {
+          const card = document.createElement('div');
+          card.className = 'related-card';
+          card.innerHTML = `
+            <div class="rc-icon">${op.icon || '📰'}</div>
+            <div class="rc-cat">${op.category || ''}</div>
+            <div class="rc-title">${op.title}</div>
+            <div class="rc-meta">📅 ${op.dateFormatted || op.date} &nbsp;·&nbsp; ⏱️ ${op.readTime || '5'} min</div>
+          `;
+          card.onclick = () => { location.href = `blog.html?post=${op.id}`; };
+          grid.appendChild(card);
+        });
+        relatedEl.style.display = 'block';
+      }
+
+      // ── 8. Afișăm conținutul ─────────────────────────────────────────
+      loadingEl.style.display = 'none';
+      mainEl.style.display    = 'block';
+
+    })();
+  </script>
+
+</body>
+</html>

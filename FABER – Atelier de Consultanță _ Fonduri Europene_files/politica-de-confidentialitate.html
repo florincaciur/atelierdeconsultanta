@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Politica de confidențialitate FABER – Atelier de Consultanță. Cum colectăm, utilizăm și protejăm datele tale personale." />
+  <meta name="robots" content="index, follow" />
+  <title>Politica de Confidențialitate | FABER – Atelier de Consultanță</title>
+  <link rel="canonical" href="https://atelierdeconsultanta.ro/politica-de-confidentialitate.html" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #0d1f3c; --orange: #e8642a; --gold: #f5a623;
+      --white: #ffffff; --gray-100: #f8f9fb; --gray-200: #e8edf5;
+      --text-main: #1a2540; --text-soft: #4a5568;
+      --radius-sm: 8px; --radius-md: 16px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: var(--text-main); background: var(--white); line-height: 1.7; }
+    a { color: var(--orange); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .topbar {
+      background: var(--navy); padding: 0 24px; height: 64px;
+      display: flex; align-items: center; justify-content: space-between;
+      position: sticky; top: 0; z-index: 100;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.2);
+    }
+    .topbar-logo { color: white; font-size: 1.2rem; font-weight: 800; }
+    .topbar-logo span { color: var(--orange); }
+    .topbar-back { color: rgba(255,255,255,0.7); font-size: 0.85rem; font-weight: 500; display: flex; align-items: center; gap: 6px; transition: color 0.2s; }
+    .topbar-back:hover { color: white; text-decoration: none; }
+    .page-hero {
+      background: linear-gradient(135deg, #1a3a6a 0%, var(--navy) 100%);
+      padding: 60px 24px; text-align: center;
+    }
+    .page-hero h1 { color: white; font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 900; margin-bottom: 12px; }
+    .page-hero p { color: rgba(255,255,255,0.65); font-size: 1rem; }
+    .update-badge {
+      display: inline-block; background: rgba(232,100,42,0.2); border: 1px solid rgba(232,100,42,0.4);
+      color: var(--gold); font-size: 0.78rem; font-weight: 600; padding: 6px 14px;
+      border-radius: 100px; margin-bottom: 20px;
+    }
+    .content-wrapper { max-width: 860px; margin: 0 auto; padding: 60px 24px 80px; }
+    .toc {
+      background: var(--gray-100); border: 1px solid var(--gray-200);
+      border-radius: var(--radius-md); padding: 28px 32px; margin-bottom: 48px;
+    }
+    .toc h2 { font-size: 1rem; font-weight: 700; margin-bottom: 16px; }
+    .toc ol { padding-left: 20px; display: flex; flex-direction: column; gap: 8px; }
+    .toc ol li a { color: var(--navy); font-size: 0.9rem; font-weight: 500; }
+    .toc ol li a:hover { color: var(--orange); }
+    .legal-section { margin-bottom: 48px; }
+    .legal-section h2 { font-size: 1.3rem; font-weight: 800; color: var(--text-main); margin-bottom: 16px; padding-bottom: 12px; border-bottom: 2px solid var(--gray-200); }
+    .legal-section h3 { font-size: 1.05rem; font-weight: 700; color: var(--text-main); margin: 20px 0 10px; }
+    .legal-section p { color: var(--text-soft); margin-bottom: 14px; }
+    .legal-section ul { padding-left: 20px; color: var(--text-soft); display: flex; flex-direction: column; gap: 8px; margin-bottom: 14px; }
+    .legal-section ul li { list-style: disc; }
+    .highlight-box {
+      background: rgba(232,100,42,0.07); border-left: 4px solid var(--orange);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      padding: 16px 20px; margin: 20px 0;
+    }
+    .highlight-box p { color: var(--text-main); font-weight: 500; margin: 0; }
+    .rights-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin: 20px 0;
+    }
+    .right-item {
+      background: var(--gray-100); border: 1px solid var(--gray-200);
+      border-radius: var(--radius-sm); padding: 16px;
+    }
+    .right-item .right-icon { font-size: 1.4rem; margin-bottom: 8px; }
+    .right-item .right-title { font-size: 0.85rem; font-weight: 700; color: var(--text-main); margin-bottom: 6px; }
+    .right-item .right-desc { font-size: 0.8rem; color: var(--text-soft); }
+    .page-footer { background: #060f20; padding: 32px 24px; text-align: center; }
+    .page-footer p { color: rgba(255,255,255,0.4); font-size: 0.82rem; }
+    .page-footer a { color: var(--orange); }
+  </style>
+</head>
+<body>
+
+  <nav class="topbar" role="navigation">
+    <a href="index.html" class="topbar-logo"><span>FABER</span> Atelier de Consultanță</a>
+    <a href="index.html" class="topbar-back">← Înapoi la site</a>
+  </nav>
+
+  <header class="page-hero">
+    <div class="update-badge">🔒 Ultima actualizare: 1 ianuarie 2025</div>
+    <h1>Politica de Confidențialitate</h1>
+    <p>Cum colectăm, utilizăm și protejăm datele tale personale</p>
+  </header>
+
+  <main class="content-wrapper">
+
+    <div class="highlight-box" style="margin-bottom: 40px;">
+      <p>🛡️ FABER respectă dreptul tău la viață privată și se angajează să protejeze datele tale personale conform Regulamentului (UE) 2016/679 (GDPR) și legislației române în vigoare.</p>
+    </div>
+
+    <nav class="toc" aria-label="Cuprins politică de confidențialitate">
+      <h2>📋 Cuprins</h2>
+      <ol>
+        <li><a href="#operator">Cine este operatorul de date</a></li>
+        <li><a href="#ce-date">Ce date colectăm</a></li>
+        <li><a href="#cum-colectam">Cum colectăm datele</a></li>
+        <li><a href="#scopuri">Scopurile prelucrării</a></li>
+        <li><a href="#temei">Temeiul legal</a></li>
+        <li><a href="#stocare">Durata stocării</a></li>
+        <li><a href="#destinatari">Destinatari și transferuri</a></li>
+        <li><a href="#drepturi">Drepturile tale</a></li>
+        <li><a href="#cookies">Cookies</a></li>
+        <li><a href="#securitate">Securitatea datelor</a></li>
+        <li><a href="#contact-dpo">Contact DPO / Plângeri</a></li>
+      </ol>
+    </nav>
+
+    <section class="legal-section" id="operator">
+      <h2>1. Cine este operatorul de date</h2>
+      <p>Operatorul de date cu caracter personal este <strong>FABER – Atelier de Consultanță</strong>, cu activitate în domeniul consultanței pentru fonduri europene nerambursabile.</p>
+      <p><strong>Contact:</strong> <a href="mailto:contact@atelierdeconsultanta.ro">contact@atelierdeconsultanta.ro</a></p>
+      <p>Website: <a href="https://atelierdeconsultanta.ro">atelierdeconsultanta.ro</a></p>
+    </section>
+
+    <section class="legal-section" id="ce-date">
+      <h2>2. Ce date colectăm</h2>
+      <h3>Date furnizate direct de tine:</h3>
+      <ul>
+        <li>Nume și prenume;</li>
+        <li>Adresă de email;</li>
+        <li>Număr de telefon (opțional);</li>
+        <li>Informații despre proiectul sau afacerea ta (în formularul de contact);</li>
+        <li>Orice alte informații pe care alegi să ni le transmiți voluntar.</li>
+      </ul>
+      <h3>Date colectate automat:</h3>
+      <ul>
+        <li>Adresa IP;</li>
+        <li>Tipul de browser și sistem de operare;</li>
+        <li>Paginile vizitate și durata vizitei (prin cookies analitice);</li>
+        <li>Data și ora accesării website-ului.</li>
+      </ul>
+    </section>
+
+    <section class="legal-section" id="cum-colectam">
+      <h2>3. Cum colectăm datele</h2>
+      <ul>
+        <li>Prin completarea formularului de contact de pe website;</li>
+        <li>Prin corespondență email sau telefonică inițiată de tine;</li>
+        <li>Prin cookies și tehnologii similare (cu consimțământul tău);</li>
+        <li>Prin contractul de prestări servicii semnat cu FABER.</li>
+      </ul>
+    </section>
+
+    <section class="legal-section" id="scopuri">
+      <h2>4. Scopurile prelucrării</h2>
+      <p>Prelucrăm datele tale personale în scopuri clare și legitime:</p>
+      <ul>
+        <li><strong>Răspuns la solicitări</strong> — pentru a-ți răspunde la întrebări și a-ți oferi informațiile solicitate;</li>
+        <li><strong>Prestarea serviciilor contractuale</strong> — pentru elaborarea dosarelor de finanțare și managementul proiectelor;</li>
+        <li><strong>Comunicări de marketing</strong> — trimiterea de newslettere cu noutăți despre fonduri europene (numai cu consimțământul tău explicit);</li>
+        <li><strong>Îmbunătățirea website-ului</strong> — analiza comportamentului de navigare pentru optimizarea experienței utilizatorilor;</li>
+        <li><strong>Îndeplinirea obligațiilor legale</strong> — arhivare, contabilitate, răspuns la cereri ale autorităților.</li>
+      </ul>
+    </section>
+
+    <section class="legal-section" id="temei">
+      <h2>5. Temeiul legal al prelucrării</h2>
+      <ul>
+        <li><strong>Consimțământ</strong> (art. 6 alin. 1 lit. a GDPR) — pentru comunicări de marketing și cookies neeseniale;</li>
+        <li><strong>Executarea contractului</strong> (art. 6 alin. 1 lit. b GDPR) — pentru prestarea serviciilor contractate;</li>
+        <li><strong>Obligație legală</strong> (art. 6 alin. 1 lit. c GDPR) — pentru păstrarea documentelor financiar-contabile;</li>
+        <li><strong>Interes legitim</strong> (art. 6 alin. 1 lit. f GDPR) — pentru securitatea sistemelor și prevenirea fraudei.</li>
+      </ul>
+    </section>
+
+    <section class="legal-section" id="stocare">
+      <h2>6. Durata stocării datelor</h2>
+      <ul>
+        <li><strong>Date din formularul de contact</strong> — păstrate 2 ani de la ultima interacțiune, dacă nu a rezultat un contract;</li>
+        <li><strong>Date contractuale</strong> — păstrate pe durata contractului și 5 ani după finalizare (obligații legale de arhivare);</li>
+        <li><strong>Date de marketing</strong> — până la retragerea consimțământului;</li>
+        <li><strong>Date de navigare (logs)</strong> — maxim 12 luni.</li>
+      </ul>
+    </section>
+
+    <section class="legal-section" id="destinatari">
+      <h2>7. Destinatari și transferuri internaționale</h2>
+      <p>Datele tale pot fi accesate de:</p>
+      <ul>
+        <li>Angajații FABER implicați în prestarea serviciilor contractate;</li>
+        <li>Furnizori de servicii IT (hosting, email, CRM) — în calitate de persoane împuternicite, cu garanții GDPR adecvate;</li>
+        <li>Autorități publice — când există obligația legală de divulgare.</li>
+      </ul>
+      <p>Nu vindem datele tale personale niciunei terțe părți. Transferurile în afara UE/SEE se realizează numai cu garanții adecvate (Clauze Contractuale Standard sau decizii de adecvare ale Comisiei Europene).</p>
+    </section>
+
+    <section class="legal-section" id="drepturi">
+      <h2>8. Drepturile tale</h2>
+      <p>Conform GDPR, ai următoarele drepturi în legătură cu datele tale personale:</p>
+      <div class="rights-grid">
+        <div class="right-item">
+          <div class="right-icon">👁️</div>
+          <div class="right-title">Dreptul la acces</div>
+          <div class="right-desc">Poți solicita o copie a datelor noastre despre tine.</div>
+        </div>
+        <div class="right-item">
+          <div class="right-icon">✏️</div>
+          <div class="right-title">Dreptul la rectificare</div>
+          <div class="right-desc">Poți corecta datele inexacte sau incomplete.</div>
+        </div>
+        <div class="right-item">
+          <div class="right-icon">🗑️</div>
+          <div class="right-title">Dreptul la ștergere</div>
+          <div class="right-desc">Poți solicita ștergerea datelor (cu excepțiile legale).</div>
+        </div>
+        <div class="right-item">
+          <div class="right-icon">⏸️</div>
+          <div class="right-title">Dreptul la restricție</div>
+          <div class="right-desc">Poți limita prelucrarea în anumite circumstanțe.</div>
+        </div>
+        <div class="right-item">
+          <div class="right-icon">📦</div>
+          <div class="right-title">Portabilitatea datelor</div>
+          <div class="right-desc">Poți primi datele furnizate în format electronic structurat.</div>
+        </div>
+        <div class="right-item">
+          <div class="right-icon">🚫</div>
+          <div class="right-title">Dreptul la opoziție</div>
+          <div class="right-desc">Te poți opune prelucrării pe baza interesului legitim.</div>
+        </div>
+      </div>
+      <p>Pentru a-ți exercita orice drept, trimite un email la <a href="mailto:contact@atelierdeconsultanta.ro">contact@atelierdeconsultanta.ro</a> cu subiectul „Exercitare drepturi GDPR". Răspundem în maxim 30 de zile.</p>
+    </section>
+
+    <section class="legal-section" id="cookies">
+      <h2>9. Cookies</h2>
+      <p>Website-ul nostru utilizează cookies. Prin continuarea navigării, ești de acord cu utilizarea cookies esențiale.</p>
+      <ul>
+        <li><strong>Cookies esențiale</strong> — necesare funcționării website-ului; nu pot fi dezactivate;</li>
+        <li><strong>Cookies analitice</strong> — ne ajută să înțelegem cum este utilizat website-ul (ex: Google Analytics); necesită consimțământul tău;</li>
+        <li><strong>Cookies de marketing</strong> — pentru publicitate personalizată; necesită consimțământul tău.</li>
+      </ul>
+      <p>Poți modifica preferințele de cookies din setările browser-ului sau prin banner-ul de cookies de pe website.</p>
+    </section>
+
+    <section class="legal-section" id="securitate">
+      <h2>10. Securitatea datelor</h2>
+      <p>Aplicăm măsuri tehnice și organizatorice adecvate pentru a proteja datele tale personale:</p>
+      <ul>
+        <li>Transmiterea datelor prin conexiuni criptate (HTTPS/TLS);</li>
+        <li>Acces restricționat la datele personale, bazat pe principiul necesității;</li>
+        <li>Proceduri interne de securitate a informației;</li>
+        <li>Parteneri de hosting cu certificări de securitate recunoscute.</li>
+      </ul>
+    </section>
+
+    <section class="legal-section" id="contact-dpo">
+      <h2>11. Contact și dreptul de a depune plângere</h2>
+      <p>Pentru orice întrebare legată de prelucrarea datelor tale personale, ne poți contacta la:</p>
+      <ul>
+        <li><strong>Email:</strong> <a href="mailto:contact@atelierdeconsultanta.ro">contact@atelierdeconsultanta.ro</a></li>
+        <li><strong>Website:</strong> <a href="index.html#contact">Formular de contact</a></li>
+      </ul>
+      <p>Dacă consideri că drepturile tale nu au fost respectate, poți depune o plângere la <strong>Autoritatea Națională de Supraveghere a Prelucrării Datelor cu Caracter Personal (ANSPDCP)</strong>:</p>
+      <ul>
+        <li>Website: <a href="https://www.dataprotection.ro" target="_blank" rel="noopener">www.dataprotection.ro</a></li>
+        <li>Email: <a href="mailto:anspdcp@dataprotection.ro">anspdcp@dataprotection.ro</a></li>
+      </ul>
+      <p>Ne rezervăm dreptul de a actualiza prezenta politică. Modificările semnificative vor fi comunicate prin website sau email.</p>
+    </section>
+
+  </main>
+
+  <footer class="page-footer">
+    <p>© 2025 FABER – Atelier de Consultanță | <a href="index.html">Acasă</a> | <a href="termeni-si-conditii.html">Termeni</a> | <a href="gdpr.html">GDPR</a></p>
+  </footer>
+
+</body>
+</html>
