@@ -1,0 +1,45 @@
+# ════════════════════════════════════════════
+# FABER – Atelier de Consultanță
+# .gitignore — Fișiere excluse din repository
+# ════════════════════════════════════════════
+
+# ── Variabile de mediu — NICIODATĂ în git ──
+.env
+.env.local
+.env.production
+.env.*.local
+
+# ── Date sesiune rate limiting ──
+data/
+/data/
+
+# ── Fișiere sistem ──
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Editor ──
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ── Logs ──
+*.log
+/logs/
+error_log
+
+# ── Backup-uri ──
+*.bak
+*.backup
+*.old
+
+# ── Node (dacă folosești build tools în viitor) ──
+node_modules/
+dist/
+.npm
+
+# ── PHP sesiuni și cache ──
+/sessions/
+*.cache
