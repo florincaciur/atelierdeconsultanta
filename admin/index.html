@@ -426,12 +426,12 @@
 /* ══════════════════════════════════
    CONFIG & STATE
 ══════════════════════════════════ */
-const GH_OWNER  = () => localStorage.getItem('gh_owner')  || 'florincaciur';
-const GH_REPO   = () => localStorage.getItem('gh_repo')   || 'atelierdeconsultanta';
+const GH_OWNER  = () => localStorage.getItem('gh_owner')  || '';
+const GH_REPO   = () => localStorage.getItem('gh_repo')   || '';
 const GH_BRANCH = () => localStorage.getItem('gh_branch') || 'main';
 const GH_PAT    = () => localStorage.getItem('gh_pat')    || '';
-const DEFAULT_HASH = 'ad324fc24b34b833d611df3a3e2a4f9aa93a8cc26e9fdc6291338c72c8221ea5';
-const DEFAULT_EMAIL = 'atelier.consultanta@gmail.com';
+// Credentialele admin sunt gestionate SERVER-SIDE prin admin/auth.php
+// Nu există hash sau email hardcodat în frontend
 
 let previewDoc = null;
 let rawIndexHTML = '';
@@ -505,13 +505,9 @@ const SECTIONS = [
 ];
 
 /* ══════════════════════════════════
-   SHA-256 & AUTH
+   AUTH — Server-side via auth.php
+   Niciun hash sau credențial în frontend!
 ══════════════════════════════════ */
-async function sha256(str){
-  const buf=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(str));
-  return Array.from(new Uint8Array(buf)).map(b=>b.toString(16).padStart(2,'0')).join('');
-}
-
 async function handleLogin(e){
   e.preventDefault();
   const email=document.getElementById('loginEmail').value.trim().toLowerCase();
@@ -519,16 +515,43 @@ async function handleLogin(e){
   const btn=document.getElementById('loginBtn');
   const err=document.getElementById('loginErr');
   btn.innerHTML='<span class="loader"></span>';btn.disabled=true;err.style.display='none';
-  const hash=await sha256(pass);
-  const users=getUsers();
-  const user=users.find(u=>u.email.toLowerCase()===email&&u.hash===hash);
-  if(user){
-    sessionStorage.setItem('adminLoggedIn','1');
-    sessionStorage.setItem('adminEmail',user.email);
-    showApp(user.email);
-  }else{
-    err.textContent='❌ Email sau parolă incorecte.';err.style.display='block';
-    btn.innerHTML='Intră în panou';btn.disabled=false;
+
+  // Sanitizare minimă client-side
+  if(!email||!pass){
+    err.textContent='Completează email și parola.';err.style.display='block';
+    btn.innerHTML='Intră în panou';btn.disabled=false;return;
+  }
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){
+    err.textContent='Format email invalid.';err.style.display='block';
+    btn.innerHTML='Intră în panou';btn.disabled=false;return;
+  }
+  if(pass.length>128){
+    err.textContent='Parolă prea lungă.';err.style.display='block';
+    btn.innerHTML='Intră în panou';btn.disabled=false;return;
+  }
+
+  try{
+    const res=await fetch('auth.php',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      credentials:'same-origin',
+      body:JSON.stringify({action:'login',email,password:pass})
+    });
+    const data=await res.json();
+    if(data.success){
+      showApp(data.email);
+    }else if(res.status===429){
+      const mins=Math.ceil((data.retry_after||900)/60);
+      err.textContent=`❌ Prea multe tentative. Blocaj ${mins} min.`;
+      err.style.display='block';btn.innerHTML='Intră în panou';btn.disabled=false;
+    }else{
+      const rem=data.remaining!=null?` (${data.remaining} încercări rămase)`:'';
+      err.textContent=`❌ Email sau parolă incorecte.${rem}`;
+      err.style.display='block';btn.innerHTML='Intră în panou';btn.disabled=false;
+    }
+  }catch(ex){
+    err.textContent='Eroare de conexiune. Verificați că auth.php există pe server.';
+    err.style.display='block';btn.innerHTML='Intră în panou';btn.disabled=false;
   }
 }
 
@@ -539,12 +562,21 @@ function showApp(email){
   initApp();
 }
 
-function logout(){
-  sessionStorage.clear();
+async function logout(){
+  try{await fetch('auth.php',{method:'POST',headers:{'Content-Type':'application/json'},credentials:'same-origin',body:JSON.stringify({action:'logout'})});}catch(e){}
   document.getElementById('app').style.display='none';
   document.getElementById('loginScreen').style.display='flex';
   document.getElementById('loginPass').value='';
 }
+
+// La încărcarea paginii: verificăm sesiunea PHP activă
+window.addEventListener('load',async()=>{
+  try{
+    const res=await fetch('auth.php',{method:'POST',headers:{'Content-Type':'application/json'},credentials:'same-origin',body:JSON.stringify({action:'check'})});
+    const data=await res.json();
+    if(data.success)showApp(data.email);
+  }catch(e){}
+});
 
 /* ══════════════════════════════════
    GITHUB API
@@ -1010,8 +1042,8 @@ function getUsers(){try{return JSON.parse(localStorage.getItem('faber_users')||'
 function saveUsers(u){localStorage.setItem('faber_users',JSON.stringify(u));}
 
 async function initUsers(){
-  const users=getUsers();
-  if(!users.length){users.push({email:DEFAULT_EMAIL,hash:DEFAULT_HASH,role:'admin',addedAt:new Date().toLocaleDateString('ro-RO')});saveUsers(users);}
+  // Utilizatorii sunt gestionați server-side prin auth.php
+  // Nu mai stocăm hash-uri sau credențiale în browser
 }
 
 function renderUsers(){
