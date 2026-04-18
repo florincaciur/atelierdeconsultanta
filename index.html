@@ -3,6 +3,7 @@
 <head>
   <!-- ✦ Meta & charset — totul pornește de aici ✦ -->
   <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="FABER – Atelier de Consultanță specializat în accesarea fondurilor europene nerambursabile. Experți în PNRR, POR, AFIR, Digitalizare IMM și alte programe de finanțare." />
   <meta name="keywords" content="fonduri europene, consultanta fonduri europene, PNRR, POR, AFIR, finantare nerambursabila, proiecte europene, fonduri nerambursabile Romania, consultanta finantare, absorbtie fonduri europene" />
@@ -577,10 +578,12 @@
     .service-card:hover::before { transform: scaleX(1); }
     .service-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); border-color: transparent; }
     .service-icon {
-      width: 56px; height: 56px; border-radius: var(--radius-sm);
-      background: linear-gradient(135deg, rgba(232,100,42,0.15), rgba(245,166,35,0.1));
+      width: 52px; height: 52px; border-radius: 12px;
+      background: rgba(232,100,42,0.1);
+      border: 1px solid rgba(232,100,42,0.2);
       display: flex; align-items: center; justify-content: center;
-      font-size: 1.6rem; margin-bottom: 20px;
+      color: var(--orange);
+      margin-bottom: 20px;
     }
     .service-title { font-size: 1.1rem; font-weight: 700; color: var(--text-main); margin-bottom: 10px; line-height: 1.3; }
     .service-desc { font-size: 0.9rem; color: var(--text-soft); line-height: 1.7; }
@@ -953,37 +956,37 @@
             <div class="dropdown-header">Programe active de finanțare 2024–2027</div>
 
             <a href="por-adr-nord-est.html" class="dropdown-item" role="menuitem" data-service-id="por-adr-ne">
-              <div class="d-icon">🏗️</div>
+              <div class="d-icon" style="background:rgba(59,130,246,0.2)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.8)" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-4 0v2"/><path d="M8 7V5a2 2 0 0 0-4 0v2"/></svg></div>
               <div class="d-text">POR ADR Nord-Est<div class="d-label">Infrastructură Regională</div></div>
             </a>
 
             <a href="dr12-afir.html" class="dropdown-item" role="menuitem" data-service-id="dr12-afir">
-              <div class="d-icon">🌾</div>
-              <div class="d-text">DR 12 / AFIR<div class="d-label">Agricultură & Rural</div></div>
+              <div class="d-icon" style="background:rgba(34,197,94,0.2)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.8)" stroke-width="2"><path d="M12 2a10 10 0 0 1 10 10c0 5.52-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2z"/><path d="M12 6v6l4 2"/></svg></div>
+              <div class="d-text">DR 12 / AFIR<div class="d-label">Agricultură &amp; Rural</div></div>
             </a>
 
             <a href="afir-autoconsum-agroalimentar.html" class="dropdown-item" role="menuitem" data-service-id="afir-autoconsum">
-              <div class="d-icon">⚡</div>
+              <div class="d-icon" style="background:rgba(234,179,8,0.2)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.8)" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></div>
               <div class="d-text">AFIR Autoconsum Agro<div class="d-label">Energie Verde Sector Agro</div></div>
             </a>
 
             <a href="autoconsum-publici.html" class="dropdown-item" role="menuitem" data-service-id="autoconsum-pub">
-              <div class="d-icon">🏛️</div>
+              <div class="d-icon" style="background:rgba(139,92,246,0.2)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.8)" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
               <div class="d-text">Autoconsum Publici<div class="d-label">Energie Verde Instituții</div></div>
             </a>
 
             <a href="dr14.html" class="dropdown-item" role="menuitem" data-service-id="dr14">
-              <div class="d-icon">🛣️</div>
-              <div class="d-text">DR 14<div class="d-label">Drumuri & Infrastructură Locală</div></div>
+              <div class="d-icon" style="background:rgba(248,113,113,0.2)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.8)" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg></div>
+              <div class="d-text">DR 14<div class="d-label">Drumuri &amp; Infrastructură</div></div>
             </a>
 
             <a href="digitalizare-imm.html" class="dropdown-item" role="menuitem" data-service-id="digitalizare-imm">
-              <div class="d-icon">💻</div>
+              <div class="d-icon" style="background:rgba(14,165,233,0.2)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.8)" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><polyline points="8 21 12 17 16 21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
               <div class="d-text">Digitalizare IMM<div class="d-label">Transformare Digitală</div></div>
             </a>
 
             <a href="femeia-antreprenor-2026.html" class="dropdown-item" role="menuitem" data-service-id="femeia-antreprenor">
-              <div class="d-icon">👩‍💼</div>
+              <div class="d-icon" style="background:rgba(236,72,153,0.2)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.8)" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
               <div class="d-text">Femeia Antreprenor 2026<div class="d-label">Antreprenoriat Feminin</div></div>
             </a>
           </div>
@@ -1007,14 +1010,14 @@
       <a href="#finantare" onclick="closeMobileMenu()">Finanțări</a>
       <a href="#blog"      onclick="closeMobileMenu()">Blog</a>
       <div class="mobile-section-title">Programe de finanțare</div>
-      <a href="por-adr-nord-est.html">🏗️ POR ADR Nord-Est</a>
-      <a href="dr12-afir.html">🌾 DR 12 / AFIR</a>
-      <a href="afir-autoconsum-agroalimentar.html">⚡ AFIR Autoconsum Agroalimentar</a>
-      <a href="autoconsum-publici.html">🏛️ Autoconsum Publici</a>
-      <a href="dr14.html">🛣️ DR 14</a>
-      <a href="digitalizare-imm.html">💻 Digitalizare IMM</a>
-      <a href="femeia-antreprenor-2026.html">👩‍💼 Femeia Antreprenor 2026</a>
-      <a href="#contact" class="mobile-cta" onclick="closeMobileMenu()">🚀 Consultanță Gratuită</a>
+      <a href="por-adr-nord-est.html">POR ADR Nord-Est</a>
+      <a href="dr12-afir.html">DR 12 / AFIR</a>
+      <a href="afir-autoconsum-agroalimentar.html">AFIR Autoconsum Agroalimentar</a>
+      <a href="autoconsum-publici.html">Autoconsum Publici</a>
+      <a href="dr14.html">DR 14</a>
+      <a href="digitalizare-imm.html">Digitalizare IMM</a>
+      <a href="femeia-antreprenor-2026.html">Femeia Antreprenor 2026</a>
+      <a href="#contact" class="mobile-cta" onclick="closeMobileMenu()">Consultanță Gratuită</a>
     </nav>
   </div>
 
@@ -1044,12 +1047,12 @@
         </h1>
 
         <p class="hero-subtitle">
-          Consultanță specializată pentru accesarea fondurilor europene nerambursabile.
-          Ghidăm afacerea ta prin PNRR, POR, AFIR și toate programele 2021–2027.
+          Gestionăm întregul proces de accesare — de la identificarea finanțării potrivite
+          până la ultimul raport de progres. Tu te ocupi de afacere, noi ne ocupăm de dosare.
         </p>
 
         <div class="hero-ctas">
-          <a href="#contact" class="btn-primary">🚀 Consultanță Gratuită</a>
+          <a href="#contact" class="btn-primary">Consultanță Gratuită</a>
           <a href="#finantare" class="btn-secondary">Descoperă programele →</a>
         </div>
 
@@ -1104,16 +1107,16 @@
             <div class="slide-deco"  aria-hidden="true"></div>
             <div class="slide-deco2" aria-hidden="true"></div>
             <div class="slide-content">
-              <div class="slide-tag">🏗️ Infrastructură regională</div>
+              <div class="slide-tag">Infrastructură regională</div>
               <h3 class="slide-title">POR ADR Nord-Est<br>2021–2027</h3>
               <p class="slide-desc">
                 Programul Operațional Regional pentru Regiunea Nord-Est finanțează proiecte
                 de infrastructură, mobilitate urbană, eficiență energetică și dezvoltare economică locală.
               </p>
-              <div class="slide-amount">💰 Finanțare maximă: <strong>până la 10 mil. €/proiect</strong></div>
+              <div class="slide-amount">Finanțare maximă: <strong>până la 10 mil. €/proiect</strong></div>
               <a href="por-adr-nord-est.html" class="slide-cta">Detalii program →</a>
             </div>
-            <div class="slide-visual" aria-hidden="true">🏗️</div>
+            <div class="slide-visual" aria-hidden="true"><svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1" stroke-linecap="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-4 0v2M8 7V5a2 2 0 0 0-4 0v2"/></svg></div>
             <div class="carousel-progress" id="progress-0"></div>
           </article>
 
@@ -1124,16 +1127,16 @@
             <div class="slide-deco"  aria-hidden="true"></div>
             <div class="slide-deco2" aria-hidden="true"></div>
             <div class="slide-content">
-              <div class="slide-tag">🌾 Agricultură & rural</div>
+              <div class="slide-tag">Agricultură &amp; rural</div>
               <h3 class="slide-title">DR 12 / AFIR<br>Investiții Agricole</h3>
               <p class="slide-desc">
                 Sprijin pentru ferme, procesatori agroalimentari și întreprinderi rurale.
                 Modernizarea exploatațiilor agricole și crearea de lanțuri valorice în zonele rurale.
               </p>
-              <div class="slide-amount">💰 Finanțare maximă: <strong>până la 2 mil. €/proiect</strong></div>
+              <div class="slide-amount">Finanțare maximă: <strong>până la 2 mil. €/proiect</strong></div>
               <a href="dr12-afir.html" class="slide-cta">Detalii program →</a>
             </div>
-            <div class="slide-visual" aria-hidden="true">🌾</div>
+            <div class="slide-visual" aria-hidden="true"><svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1" stroke-linecap="round"><path d="M12 2a10 10 0 1 0 0 20A10 10 0 0 0 12 2z"/><path d="M12 6v6l4 2"/></svg></div>
             <div class="carousel-progress" id="progress-1"></div>
           </article>
 
@@ -1144,16 +1147,16 @@
             <div class="slide-deco"  aria-hidden="true"></div>
             <div class="slide-deco2" aria-hidden="true"></div>
             <div class="slide-content">
-              <div class="slide-tag">⚡ Energie verde</div>
+              <div class="slide-tag">Energie verde</div>
               <h3 class="slide-title">AFIR Autoconsum<br>Agroalimentar</h3>
               <p class="slide-desc">
                 Instalarea de sisteme fotovoltaice și de stocare a energiei pentru fermieri
                 și procesatori agroalimentari. Reducerea costurilor energetice, agricultură durabilă.
               </p>
-              <div class="slide-amount">💰 Finanțare: <strong>până la 500.000 €, 90% nerambursabil</strong></div>
+              <div class="slide-amount">Finanțare: <strong>până la 500.000 €, 90% nerambursabil</strong></div>
               <a href="afir-autoconsum-agroalimentar.html" class="slide-cta">Detalii program →</a>
             </div>
-            <div class="slide-visual" aria-hidden="true">⚡</div>
+            <div class="slide-visual" aria-hidden="true"><svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1" stroke-linecap="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg></div>
             <div class="carousel-progress" id="progress-2"></div>
           </article>
 
@@ -1164,16 +1167,16 @@
             <div class="slide-deco"  aria-hidden="true"></div>
             <div class="slide-deco2" aria-hidden="true"></div>
             <div class="slide-content">
-              <div class="slide-tag">🏛️ Instituții publice</div>
+              <div class="slide-tag">Instituții publice</div>
               <h3 class="slide-title">Autoconsum Publici<br>Energie Regenerabilă</h3>
               <p class="slide-desc">
                 Primării, consilii județene, spitale, școli și alte instituții publice pot accesa
                 finanțare pentru panouri fotovoltaice și reducerea facturilor la energie.
               </p>
-              <div class="slide-amount">💰 Finanțare: <strong>100% nerambursabil, fără plafon fix</strong></div>
+              <div class="slide-amount">Finanțare: <strong>100% nerambursabil, fără plafon fix</strong></div>
               <a href="autoconsum-publici.html" class="slide-cta">Detalii program →</a>
             </div>
-            <div class="slide-visual" aria-hidden="true">🏛️</div>
+            <div class="slide-visual" aria-hidden="true"><svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1" stroke-linecap="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
             <div class="carousel-progress" id="progress-3"></div>
           </article>
 
@@ -1184,16 +1187,16 @@
             <div class="slide-deco"  aria-hidden="true"></div>
             <div class="slide-deco2" aria-hidden="true"></div>
             <div class="slide-content">
-              <div class="slide-tag">🛣️ Infrastructură locală</div>
+              <div class="slide-tag">Infrastructură locală</div>
               <h3 class="slide-title">DR 14<br>Drumuri Rurale</h3>
               <p class="slide-desc">
                 Modernizarea drumurilor comunale și județene pentru conectarea comunităților rurale.
                 Program dedicat autorităților locale, 100% nerambursabil.
               </p>
-              <div class="slide-amount">💰 Finanțare: <strong>până la 5 mil. €/comună, 100% nerambursabil</strong></div>
+              <div class="slide-amount">Finanțare: <strong>până la 5 mil. €/comună, 100% nerambursabil</strong></div>
               <a href="dr14.html" class="slide-cta">Detalii program →</a>
             </div>
-            <div class="slide-visual" aria-hidden="true">🛣️</div>
+            <div class="slide-visual" aria-hidden="true"><svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1" stroke-linecap="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg></div>
             <div class="carousel-progress" id="progress-4"></div>
           </article>
 
@@ -1204,16 +1207,16 @@
             <div class="slide-deco"  aria-hidden="true"></div>
             <div class="slide-deco2" aria-hidden="true"></div>
             <div class="slide-content">
-              <div class="slide-tag">💻 Transformare digitală</div>
+              <div class="slide-tag">Transformare digitală</div>
               <h3 class="slide-title">Digitalizare IMM<br>2024–2026</h3>
               <p class="slide-desc">
                 Finanțare pentru software ERP, CRM, automatizare procese, securitate cibernetică
                 și cloud computing pentru IMM-uri din toate sectoarele.
               </p>
-              <div class="slide-amount">💰 Finanțare: <strong>până la 100.000 €, 90% nerambursabil</strong></div>
+              <div class="slide-amount">Finanțare: <strong>până la 100.000 €, 90% nerambursabil</strong></div>
               <a href="digitalizare-imm.html" class="slide-cta">Detalii program →</a>
             </div>
-            <div class="slide-visual" aria-hidden="true">💻</div>
+            <div class="slide-visual" aria-hidden="true"><svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1" stroke-linecap="round"><rect x="2" y="3" width="20" height="14" rx="2"/><polyline points="8 21 12 17 16 21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
             <div class="carousel-progress" id="progress-5"></div>
           </article>
 
@@ -1224,16 +1227,16 @@
             <div class="slide-deco"  aria-hidden="true"></div>
             <div class="slide-deco2" aria-hidden="true"></div>
             <div class="slide-content">
-              <div class="slide-tag">👩‍💼 Antreprenoriat feminin</div>
+              <div class="slide-tag">Antreprenoriat feminin</div>
               <h3 class="slide-title">Femeia Antreprenor<br>2026</h3>
               <p class="slide-desc">
                 Program dedicat femeilor antreprenor care doresc să înființeze sau să dezvolte o afacere.
                 Sprijin financiar nerambursabil pentru start-up-uri și IMM-uri conduse de femei.
               </p>
-              <div class="slide-amount">💰 Finanțare: <strong>până la 200.000 €, 95% nerambursabil</strong></div>
+              <div class="slide-amount">Finanțare: <strong>până la 200.000 €, 95% nerambursabil</strong></div>
               <a href="femeia-antreprenor-2026.html" class="slide-cta">Detalii program →</a>
             </div>
-            <div class="slide-visual" aria-hidden="true">👩‍💼</div>
+            <div class="slide-visual" aria-hidden="true"><svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1" stroke-linecap="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
             <div class="carousel-progress" id="progress-6"></div>
           </article>
 
@@ -1260,56 +1263,62 @@
 
       <div class="services-grid">
         <article class="service-card reveal reveal-delay-1" data-service-id="service-identificare">
-          <div class="service-icon" aria-hidden="true">🔍</div>
+          <div class="service-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </div>
           <h3 class="service-title">Identificare Finanțări</h3>
           <p class="service-desc">
-            Analizăm activitatea ta și identificăm toate programele de finanțare
-            pentru care ești eligibil, atât active cât și viitoare.
+            Analizăm profilul afacerii tale și identificăm programele de finanțare pentru care ești eligibil — active acum sau în deschidere.
           </p>
         </article>
 
         <article class="service-card reveal reveal-delay-2" data-service-id="service-elaborare">
-          <div class="service-icon" aria-hidden="true">📝</div>
+          <div class="service-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </div>
           <h3 class="service-title">Elaborare Dosare</h3>
           <p class="service-desc">
-            Pregătim documentația completă: cerere de finanțare, plan de afaceri,
-            studii de fezabilitate și toate anexele necesare depunerii.
+            Pregătim documentația completă: cerere de finanțare, plan de afaceri, studiu de fezabilitate și toate anexele impuse.
           </p>
         </article>
 
         <article class="service-card reveal reveal-delay-3" data-service-id="service-implementare">
-          <div class="service-icon" aria-hidden="true">⚙️</div>
+          <div class="service-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
+          </div>
           <h3 class="service-title">Implementare Proiecte</h3>
           <p class="service-desc">
-            Asistăm implementarea proiectului: achiziții publice, raportări,
-            management financiar și relația cu autoritatea de management.
+            Asistăm implementarea pas cu pas: achiziții, raportări, management financiar și relația cu autoritatea de management.
           </p>
         </article>
 
         <article class="service-card reveal reveal-delay-1" data-service-id="service-monitorizare">
-          <div class="service-icon" aria-hidden="true">📊</div>
-          <h3 class="service-title">Monitorizare & Raportare</h3>
+          <div class="service-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+          </div>
+          <h3 class="service-title">Monitorizare &amp; Raportare</h3>
           <p class="service-desc">
-            Urmărim indicatorii de performanță și pregătim rapoartele de progres
-            pentru toate autoritățile implicate în finanțare.
+            Urmărim indicatorii de performanță și pregătim rapoartele de progres pentru autoritățile de management implicate.
           </p>
         </article>
 
         <article class="service-card reveal reveal-delay-2" data-service-id="service-audit">
-          <div class="service-icon" aria-hidden="true">✅</div>
-          <h3 class="service-title">Audit & Conformitate</h3>
+          <div class="service-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          </div>
+          <h3 class="service-title">Audit &amp; Conformitate</h3>
           <p class="service-desc">
-            Verificăm conformitatea proiectului cu regulamentele europene și
-            pregătim dosarele pentru eventualele controale ale autorităților.
+            Verificăm conformitatea cu regulamentele europene și pregătim dosarele pentru controalele autorităților.
           </p>
         </article>
 
         <article class="service-card reveal reveal-delay-3" data-service-id="service-training">
-          <div class="service-icon" aria-hidden="true">🎓</div>
-          <h3 class="service-title">Training & Formare</h3>
+          <div class="service-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1 2 3 6 3s6-2 6-3v-5"/></svg>
+          </div>
+          <h3 class="service-title">Training &amp; Formare</h3>
           <p class="service-desc">
-            Sesiuni de formare pentru echipa ta: gestionarea unui proiect european,
-            reglementări esențiale și bune practici în absorbția fondurilor.
+            Sesiuni practice pentru echipa ta: gestionarea proiectelor europene, reglementări esențiale și bune practici în absorbția fondurilor.
           </p>
         </article>
       </div>
@@ -1541,11 +1550,11 @@
         <p class="section-subtitle">Informații actualizate despre fondurile europene disponibile</p>
       </div>
 
-      <!-- ✦ Articolele se încarcă dinamic din blog.json ✦ -->
+      <!-- Articolele se încarcă dinamic din blog.json -->
       <div class="blog-grid" id="blog-grid">
         <!-- Loading skeleton -->
-        <div class="blog-card" style="opacity:.4;pointer-events:none" aria-hidden="true">
-          <div class="blog-image">⏳</div>
+        <div class="blog-card" style="opacity:.3;pointer-events:none" aria-hidden="true">
+          <div class="blog-image" style="font-size:0.8rem;letter-spacing:1px;color:rgba(255,255,255,0.4)">FABER</div>
           <div class="blog-content">
             <div class="blog-category">Se încarcă...</div>
             <h3 class="blog-title">Articol în curs de încărcare</h3>
@@ -1623,15 +1632,22 @@
               </label>
             </div>
 
+            <!-- Honeypot anti-bot (hidden) -->
+            <input type="text" name="website" style="display:none!important" tabindex="-1" autocomplete="off">
+
+            <div id="formError" style="display:none;background:#fef2f2;border:1px solid #fca5a5;color:#dc2626;padding:10px 14px;border-radius:8px;font-size:.9rem;margin-bottom:12px" role="alert"></div>
+
             <button type="submit" class="form-submit">
-              🚀 Solicită consultanța gratuită
+              Trimite solicitarea
             </button>
           </form>
 
           <div class="form-success" id="formSuccess" role="alert" aria-live="polite">
-            <div class="success-icon">✅</div>
-            <p><strong>Mulțumim! Mesajul tău a fost primit.</strong></p>
-            <p>Te vom contacta în maxim 24 ore cu o evaluare personalizată a oportunităților de finanțare disponibile pentru tine.</p>
+            <div class="success-icon">
+            <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="rgba(34,197,94,0.9)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>
+          </div>
+          <p><strong>Mulțumim! Solicitarea ta a fost primită.</strong></p>
+          <p>Te contactăm în maxim 24 de ore cu o evaluare a oportunităților de finanțare disponibile pentru tine.</p>
           </div>
         </div>
       </div>
@@ -1657,7 +1673,7 @@
         <div class="anpc-badges" aria-label="Certificate și conformitate">
           <a href="https://anpc.ro" target="_blank" rel="noopener noreferrer" class="anpc-badge"
              aria-label="ANPC – Autoritatea Națională pentru Protecția Consumatorilor">
-            <div class="anpc-badge-icon anpc-bg">🛡️</div>
+            <div class="anpc-badge-icon anpc-bg"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(0,120,212,0.9)" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
             <div class="anpc-badge-text">
               <strong>ANPC</strong>
               Protecția consumatorilor
@@ -1666,7 +1682,7 @@
 
           <a href="https://anpc.ro/ce-este-sal" target="_blank" rel="noopener noreferrer" class="anpc-badge"
              aria-label="SAL/SOL – Soluționarea Alternativă a Litigiilor">
-            <div class="anpc-badge-icon sal-bg">⚖️</div>
+            <div class="anpc-badge-icon sal-bg"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(34,197,94,0.9)" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
             <div class="anpc-badge-text">
               <strong>SAL / SOL</strong>
               Soluționare litigii
@@ -1674,7 +1690,7 @@
           </a>
 
           <a href="gdpr.html" class="anpc-badge" aria-label="GDPR Conform – Protecția datelor personale">
-            <div class="anpc-badge-icon gdpr-bg">🔒</div>
+            <div class="anpc-badge-icon gdpr-bg"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(139,92,246,0.9)" stroke-width="2" stroke-linecap="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
             <div class="anpc-badge-text">
               <strong>GDPR Conform</strong>
               Protecția datelor
@@ -1949,7 +1965,7 @@
           grid.innerHTML = posts.map(function(p, i){
             var delay = delays[i] || '';
             return '<article class="blog-card reveal ' + delay + '" data-blog-id="' + p.id + '">' +
-              '<div class="blog-image" aria-hidden="true">' + (p.icon||'📰') + '</div>' +
+              '<div class="blog-image" aria-hidden="true" style="font-size:0.7rem;letter-spacing:2px;font-weight:700;color:rgba(255,255,255,0.3)">' + (p.category||'FABER').toUpperCase().substring(0,6) + '</div>' +
               '<div class="blog-content">' +
                 '<div class="blog-category">' + (p.category||'') + '</div>' +
                 '<h3 class="blog-title">' + p.title + '</h3>' +
@@ -1977,29 +1993,81 @@
     /* =====================================================
        ✦ FORMULAR — validare și trimitere ✦
     ===================================================== */
-    function handleSubmit(event) {
+    async function handleSubmit(event) {
       event.preventDefault();
-      var form  = event.target;
-      var name  = form.querySelector('#contact-name').value.trim();
-      var email = form.querySelector('#contact-email').value.trim();
-      var gdpr  = form.querySelector('#gdpr-consent').checked;
+      var form    = event.target;
+      var name    = form.querySelector('#contact-name').value.trim();
+      var email   = form.querySelector('#contact-email').value.trim();
+      var phone   = (form.querySelector('#contact-phone') || {}).value || '';
+      var message = (form.querySelector('#contact-message') || {}).value || '';
+      var gdpr    = form.querySelector('#gdpr-consent').checked;
+      var submitBtn = form.querySelector('[type="submit"]');
 
-      if (!name || !email) {
-        alert('Te rugăm completează cel puțin numele și adresa de email.');
+      // Validare client-side
+      if (!name || name.length < 2) {
+        showFormError('Te rugăm introdu numele tău (minim 2 caractere).');
         return;
       }
-      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-        alert('Te rugăm introdu o adresă de email validă.');
+      if (name.length > 100) {
+        showFormError('Numele este prea lung.');
+        return;
+      }
+      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        showFormError('Te rugăm introdu o adresă de email validă.');
         return;
       }
       if (!gdpr) {
-        alert('Te rugăm acceptă politica GDPR pentru a continua.');
+        showFormError('Te rugăm acceptă politica GDPR pentru a continua.');
+        return;
+      }
+      if (message.length > 2000) {
+        showFormError('Mesajul este prea lung (max. 2000 caractere).');
         return;
       }
 
-      // Ascundem formularul și afișăm mesajul de succes
-      form.style.display = 'none';
-      document.getElementById('formSuccess').classList.add('show');
+      // UI loading
+      if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Se trimite...'; }
+
+      try {
+        var res = await fetch('/contact.php', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name: name, email: email, phone: phone, message: message, gdpr: gdpr ? '1' : '' })
+        });
+
+        var data = {};
+        try { data = await res.json(); } catch(e) {}
+
+        if (res.status === 429) {
+          var mins = data.retry_after ? Math.ceil(data.retry_after / 60) : 15;
+          showFormError('Prea multe cereri. Vă rugăm așteptați ' + mins + ' minute.');
+          if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = 'Trimite mesajul'; }
+          return;
+        }
+
+        if (data.success) {
+          form.style.display = 'none';
+          document.getElementById('formSuccess').classList.add('show');
+        } else {
+          var errMsg = data.error || (data.errors && data.errors.join(' ')) || 'Eroare la trimitere. Vă rugăm reveniți.';
+          showFormError(errMsg);
+          if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = 'Trimite mesajul'; }
+        }
+      } catch (err) {
+        showFormError('Eroare de conexiune. Vă rugăm contactați-ne direct la email.');
+        if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = 'Trimite mesajul'; }
+      }
+    }
+
+    function showFormError(msg) {
+      var errEl = document.getElementById('formError');
+      if (errEl) {
+        errEl.textContent = msg;
+        errEl.style.display = 'block';
+        setTimeout(function(){ errEl.style.display = 'none'; }, 6000);
+      } else {
+        alert(msg);
+      }
     }
 
     /* =====================================================
