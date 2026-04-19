@@ -1690,28 +1690,31 @@
           </div>
         </div>
 
-        <!-- Formular newsletter — Formspree (funcționează pe GitHub Pages fără backend) -->
-        <!-- IMPORTANT: Înlocuiește YOUR_FORM_ID cu ID-ul obținut de la formspree.io -->
-        <form id="newsletterForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST"
-              style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;max-width:520px;margin:0 auto 24px;"
-              onsubmit="handleNewsletterSubmit(event)">
+        <!-- Formular newsletter — Formspree AJAX (funcționează pe GitHub Pages fără backend) -->
+        <!-- Mesaj eroare formular -->
+        <div data-fs-error style="display:none;background:rgba(239,68,68,0.15);border:1px solid rgba(239,68,68,0.3);border-radius:12px;padding:16px 24px;color:#fca5a5;margin:0 auto 16px;max-width:520px;text-align:center;"></div>
+
+        <form id="newsletterForm"
+              style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;max-width:520px;margin:0 auto 24px;">
 
           <input type="text" name="name" placeholder="Numele tău" required
+                 data-fs-field
                  style="flex:1;min-width:160px;padding:15px 18px;border-radius:8px;border:1px solid rgba(255,255,255,0.2);background:rgba(255,255,255,0.08);color:white;font-size:0.95rem;font-family:'Inter',sans-serif;outline:none;transition:border-color 0.3s;"
                  onfocus="this.style.borderColor='#e8642a'" onblur="this.style.borderColor='rgba(255,255,255,0.2)'" />
+          <span data-fs-error="name" style="display:none;color:#fca5a5;font-size:0.8rem;width:100%;text-align:left;padding-left:4px;"></span>
 
           <input type="email" name="email" placeholder="Email-ul tău" required
+                 data-fs-field
                  style="flex:2;min-width:200px;padding:15px 18px;border-radius:8px;border:1px solid rgba(255,255,255,0.2);background:rgba(255,255,255,0.08);color:white;font-size:0.95rem;font-family:'Inter',sans-serif;outline:none;transition:border-color 0.3s;"
                  onfocus="this.style.borderColor='#e8642a'" onblur="this.style.borderColor='rgba(255,255,255,0.2)'" />
+          <span data-fs-error="email" style="display:none;color:#fca5a5;font-size:0.8rem;width:100%;text-align:left;padding-left:4px;"></span>
 
-          <!-- Câmp ascuns pentru categoria de interes -->
-          <select name="interest" style="display:none;">
-            <option value="toate">Toate programele</option>
-          </select>
+          <!-- Câmpuri ascunse pentru context -->
+          <input type="hidden" name="interest" value="Toate programele FABER" />
           <input type="hidden" name="_subject" value="Abonare newsletter FABER – Atelier de Consultanță" />
-          <input type="hidden" name="_next" value="https://atelierdeconsultanta.ro/?subscribed=1" />
 
           <button type="submit"
+                  data-fs-submit-btn
                   style="padding:15px 28px;background:#e8642a;color:white;border:none;border-radius:8px;font-size:0.95rem;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;transition:background 0.3s,transform 0.2s;white-space:nowrap;"
                   onmouseover="this.style.background='#c4541f';this.style.transform='translateY(-2px)'"
                   onmouseout="this.style.background='#e8642a';this.style.transform='translateY(0)'">
@@ -1719,8 +1722,8 @@
           </button>
         </form>
 
-        <!-- Mesaj succes -->
-        <div id="newsletterSuccess" style="display:none;background:rgba(34,197,94,0.15);border:1px solid rgba(34,197,94,0.3);border-radius:12px;padding:20px 32px;color:white;margin-top:16px;">
+        <!-- Mesaj succes — afișat automat de Formspree după trimitere -->
+        <div data-fs-success style="display:none;background:rgba(34,197,94,0.15);border:1px solid rgba(34,197,94,0.3);border-radius:12px;padding:20px 32px;color:white;margin-top:16px;text-align:center;">
           <div style="font-size:1.5rem;margin-bottom:8px;">✅</div>
           <strong>Ești înscris!</strong> Te vom notifica imediat când se lansează un nou program de finanțare.
         </div>
@@ -2299,18 +2302,13 @@
 
     console.log('✦ FABER – Website v2.0 | Încărcat și funcțional ✦');
 
-    // ✦ Newsletter form handler ✦
-    function handleNewsletterSubmit(e) {
-      // Dacă Formspree ID nu e setat, simulăm success local
-      if (document.getElementById('newsletterForm').action.includes('YOUR_FORM_ID')) {
-        e.preventDefault();
-        document.getElementById('newsletterForm').style.display = 'none';
-        document.getElementById('newsletterSuccess').style.display = 'block';
-        return;
-      }
-      // Altfel, Formspree procesează și redirecționează
-    }
+    // ✦ Formspree AJAX — inițializare newsletter ✦
+    window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+    formspree('initForm', { formElement: '#newsletterForm', formId: 'mjgjogwj' });
   </script>
+
+  <!-- Formspree AJAX SDK — gestionează trimitere, erori, mesaj succes fără refresh -->
+  <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 
 </body>
 </html>
