@@ -2,6 +2,7 @@
 <html lang="ro">
 <head>
   <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Politica GDPR FABER – Atelier de Consultanță. Drepturile tale conform Regulamentului General privind Protecția Datelor (UE) 2016/679." />
   <meta name="robots" content="index, follow" />
@@ -28,8 +29,9 @@
       position: sticky; top: 0; z-index: 100;
       box-shadow: 0 2px 16px rgba(0,0,0,0.2);
     }
-    .topbar-logo { color: white; font-size: 1.2rem; font-weight: 800; }
-    .topbar-logo span { color: var(--orange); }
+    /* ✦ TOPBAR LOGO — SVG inline FABER ✦ */
+    .topbar-logo { display: flex; align-items: center; }
+    .topbar-logo svg { height: 40px; width: auto; }
     .topbar-back { color: rgba(255,255,255,0.7); font-size: 0.85rem; font-weight: 500; display: flex; align-items: center; gap: 6px; transition: color 0.2s; }
     .topbar-back:hover { color: white; text-decoration: none; }
     .page-hero {
@@ -106,7 +108,15 @@
 <body>
 
   <nav class="topbar" role="navigation">
-    <a href="index.html" class="topbar-logo"><span>FABER</span> Atelier de Consultanță</a>
+    <!-- ✦ Logo SVG FABER — înlocuiește textul simplu cu marca vizuală completă ✦ -->
+    <a href="index.html" class="topbar-logo" aria-label="FABER – Atelier de Consultanță, acasă">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 218 44" width="218" height="44" aria-hidden="true">
+        <text x="0" y="32" font-family="Georgia,'Times New Roman',serif" font-size="28" font-weight="700" fill="#e8642a" letter-spacing="3">FABER</text>
+        <path d="M94,22 L100,14 L106,22 L100,30 Z" fill="white" opacity="0.95"/>
+        <text x="111" y="18" font-family="'Inter','Helvetica Neue',sans-serif" font-size="10" font-weight="600" fill="white" letter-spacing="2">ATELIER de</text>
+        <text x="111" y="33" font-family="'Inter','Helvetica Neue',sans-serif" font-size="10" font-weight="600" fill="white" letter-spacing="2">CONSULTANȚĂ</text>
+      </svg>
+    </a>
     <a href="index.html" class="topbar-back">← Înapoi la site</a>
   </nav>
 

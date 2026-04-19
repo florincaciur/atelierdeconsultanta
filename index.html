@@ -177,17 +177,13 @@
       display: flex; align-items: center; justify-content: space-between;
       height: 72px;
     }
+    /* ✦ NAV LOGO — SVG inline, identic cu brandul FABER ✦ */
     .nav-logo {
-      display: flex; align-items: center; gap: 10px;
-      font-size: 1.4rem; font-weight: 800; color: var(--white);
-      letter-spacing: -0.5px;
+      display: flex; align-items: center;
+      text-decoration: none;
     }
-    .nav-logo .logo-accent { color: var(--orange); }
-    .nav-logo .logo-sub {
-      font-size: 0.6rem; font-weight: 400; color: rgba(255,255,255,0.55);
-      letter-spacing: 1.5px; text-transform: uppercase;
-      display: block; margin-top: -4px;
-    }
+    .nav-logo svg { height: 44px; width: auto; transition: transform 0.3s ease; }
+    .nav-logo:hover svg { transform: scale(1.04); }
     .nav-links {
       display: flex; align-items: center; gap: 4px;
     }
@@ -804,8 +800,9 @@
       display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px;
       padding-bottom: 48px; border-bottom: 1px solid rgba(255,255,255,0.07);
     }
-    .footer-brand .logo { font-size: 1.4rem; font-weight: 800; color: white; margin-bottom: 12px; }
-    .footer-brand .logo span { color: var(--orange); }
+    /* ✦ FOOTER LOGO — SVG inline FABER ✦ */
+    .footer-brand .logo { display: flex; align-items: center; margin-bottom: 12px; }
+    .footer-brand .logo svg { height: 38px; width: auto; }
     .footer-brand > p { font-size: 0.875rem; color: rgba(255,255,255,0.5); line-height: 1.7; max-width: 280px; }
     .anpc-badges { display: flex; flex-direction: column; gap: 10px; margin-top: 20px; }
     .anpc-badge {
@@ -943,11 +940,14 @@
   <nav id="navbar" role="navigation" aria-label="Navigare principală" data-section-id="navbar">
     <div class="nav-container">
 
-      <a href="/" class="nav-logo" aria-label="FABER Atelier de Consultanță – Acasă">
-        <div>
-          <span class="logo-accent">FABER</span>
-          <span class="logo-sub">Atelier de Consultanță</span>
-        </div>
+      <!-- ✦ Logo SVG FABER — înlocuiește textul cu marca vizuală completă ✦ -->
+      <a href="/" class="nav-logo" aria-label="FABER – Atelier de Consultanță, acasă">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 218 44" width="218" height="44" aria-hidden="true">
+          <text x="0" y="32" font-family="Georgia,'Times New Roman',serif" font-size="28" font-weight="700" fill="#e8642a" letter-spacing="3">FABER</text>
+          <path d="M94,22 L100,14 L106,22 L100,30 Z" fill="white" opacity="0.95"/>
+          <text x="111" y="18" font-family="'Inter','Helvetica Neue',sans-serif" font-size="10" font-weight="600" fill="white" letter-spacing="2">ATELIER de</text>
+          <text x="111" y="33" font-family="'Inter','Helvetica Neue',sans-serif" font-size="10" font-weight="600" fill="white" letter-spacing="2">CONSULTANȚĂ</text>
+        </svg>
       </a>
 
       <div class="nav-links" role="menubar">
@@ -988,9 +988,10 @@
               <div class="d-text">Autoconsum Publici<div class="d-label">Energie Verde Instituții</div></div>
             </a>
 
+            <!-- ✦ DR14 — Investiții în Fermele de Mici Dimensiuni (corectat de la eticheta veche) ✦ -->
             <a href="dr14.html" class="dropdown-item" role="menuitem" data-service-id="dr14">
-              <div class="d-icon" style="background:rgba(248,113,113,0.2)"><i class="ph-duotone ph-road-horizon" style="color:#fca5a5"></i></div>
-              <div class="d-text">DR 14<div class="d-label">Drumuri &amp; Infrastructură</div></div>
+              <div class="d-icon" style="background:rgba(34,197,94,0.2)"><i class="ph-duotone ph-farm" style="color:#86efac"></i></div>
+              <div class="d-text">DR 14 – Ferme Mici<div class="d-label">PAC 2023-2027 | până la 75.000 EUR</div></div>
             </a>
 
             <a href="digitalizare-imm.html" class="dropdown-item" role="menuitem" data-service-id="digitalizare-imm">
@@ -1001,6 +1002,12 @@
             <a href="femeia-antreprenor-2026.html" class="dropdown-item" role="menuitem" data-service-id="femeia-antreprenor">
               <div class="d-icon" style="background:rgba(236,72,153,0.2)"><i class="ph-duotone ph-user-circle" style="color:#f9a8d4"></i></div>
               <div class="d-text">Femeia Antreprenor 2026<div class="d-label">Antreprenoriat Feminin</div></div>
+            </a>
+
+            <!-- ✦ PRO INFRA — pagină nouă adăugată în dropdown ✦ -->
+            <a href="pro-infra.html" class="dropdown-item" role="menuitem" data-service-id="pro-infra">
+              <div class="d-icon" style="background:rgba(251,146,60,0.2)"><i class="ph-duotone ph-factory" style="color:#fdba74"></i></div>
+              <div class="d-text">PRO INFRA<div class="d-label">Materiale Construcții | până la 15M EUR</div></div>
             </a>
           </div>
         </div>
@@ -1664,7 +1671,15 @@
 
       <!-- Coloana 1: Brand + ANPC badges -->
       <div class="footer-brand">
-        <div class="logo"><span>FABER</span> Atelier de Consultanță</div>
+        <!-- ✦ Footer logo SVG FABER ✦ -->
+        <div class="logo">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 218 44" width="218" height="38" aria-label="FABER – Atelier de Consultanță" role="img">
+            <text x="0" y="32" font-family="Georgia,'Times New Roman',serif" font-size="28" font-weight="700" fill="#e8642a" letter-spacing="3">FABER</text>
+            <path d="M94,22 L100,14 L106,22 L100,30 Z" fill="white" opacity="0.85"/>
+            <text x="111" y="18" font-family="'Inter','Helvetica Neue',sans-serif" font-size="10" font-weight="600" fill="rgba(255,255,255,0.7)" letter-spacing="2">ATELIER de</text>
+            <text x="111" y="33" font-family="'Inter','Helvetica Neue',sans-serif" font-size="10" font-weight="600" fill="rgba(255,255,255,0.7)" letter-spacing="2">CONSULTANȚĂ</text>
+          </svg>
+        </div>
         <p>
           Specialiști în accesarea fondurilor europene nerambursabile.
           Transformăm ideile în proiecte finanțate din 2016.

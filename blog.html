@@ -2,6 +2,7 @@
 <html lang="ro">
 <head>
   <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- ✦ SEO Meta — populate din blog.json ✦ -->
@@ -16,6 +17,8 @@
 
   <title id="page-title">Blog | FABER – Atelier de Consultanță</title>
 
+  <!-- ✦ SEO Robots — permite indexarea paginii de blog ✦ -->
+  <meta name="robots" content="index, follow" />
   <link rel="canonical" id="canonical" href="https://atelierdeconsultanta.ro/blog.html" />
   <link rel="icon" type="image/png" href="favicon.png" />
 
@@ -76,12 +79,11 @@
       display: flex; align-items: center; justify-content: space-between;
       height: 64px;
     }
+    /* ✦ NAVBAR BRAND — SVG inline FABER logo ✦ */
     .navbar-brand {
-      font-size: 1.1rem; font-weight: 800;
-      color: var(--white);
-      display: flex; align-items: center; gap: 8px;
+      display: flex; align-items: center;
     }
-    .navbar-brand span { color: var(--orange); }
+    .navbar-brand svg { height: 40px; width: auto; }
     .navbar-back {
       display: flex; align-items: center; gap: 6px;
       color: rgba(255,255,255,.7);
@@ -268,8 +270,14 @@
 
   <!-- ======= NAVBAR ======= -->
   <nav class="navbar">
-    <a href="/" class="navbar-brand">
-      <span>FABER</span> – Atelier de Consultanță
+    <!-- ✦ Logo SVG FABER în navbar blog ✦ -->
+    <a href="/" class="navbar-brand" aria-label="FABER – Atelier de Consultanță, acasă">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 218 44" width="218" height="44" aria-hidden="true">
+        <text x="0" y="32" font-family="Georgia,'Times New Roman',serif" font-size="28" font-weight="700" fill="#e8642a" letter-spacing="3">FABER</text>
+        <path d="M94,22 L100,14 L106,22 L100,30 Z" fill="white" opacity="0.95"/>
+        <text x="111" y="18" font-family="'Inter','Helvetica Neue',sans-serif" font-size="10" font-weight="600" fill="white" letter-spacing="2">ATELIER de</text>
+        <text x="111" y="33" font-family="'Inter','Helvetica Neue',sans-serif" font-size="10" font-weight="600" fill="white" letter-spacing="2">CONSULTANȚĂ</text>
+      </svg>
     </a>
     <a href="/#blog" class="navbar-back">← Înapoi la Blog</a>
   </nav>

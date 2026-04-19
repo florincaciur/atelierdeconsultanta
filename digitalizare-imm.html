@@ -2,6 +2,7 @@
 <html lang="ro">
 <head>
   <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Digitalizare IMM 2024-2026 – până la 100.000 euro, intensitate 90% pentru ERP, CRM, cloud, securitate cibernetică. Aplică cu FABER consultanță." />
   <meta name="keywords" content="digitalizare IMM fonduri europene, ERP finantare, CRM fonduri, cloud computing finantare, securitate cibernetica fonduri" />
@@ -10,6 +11,10 @@
   <meta property="og:type" content="website" />
   <title>Digitalizare IMM 2024–2026 | FABER – Atelier de Consultanță</title>
   <link rel="canonical" href="https://atelierdeconsultanta.ro/digitalizare-imm.html" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <meta name="robots" content="index, follow" />
+  <meta name="twitter:card" content="summary_large_image" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <script type="application/ld+json">
@@ -25,8 +30,9 @@
     @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms!important;transition-duration:0.01ms!important;}}
 
     .topbar{background:rgba(13,31,60,0.96);padding:0 24px;height:68px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,0.08);}
-    .topbar-logo{color:white;font-size:1.2rem;font-weight:800;}
-    .topbar-logo span{color:var(--orange);}
+    /* ✦ TOPBAR LOGO — SVG inline FABER ✦ */
+    .topbar-logo{display:flex;align-items:center;}
+    .topbar-logo svg{height:40px;width:auto;}
     .topbar-nav{display:flex;gap:6px;align-items:center;}
     .topbar-nav a{color:rgba(255,255,255,0.75);font-size:0.85rem;font-weight:500;padding:7px 13px;border-radius:var(--rs);transition:color var(--tr),background var(--tr);}
     .topbar-nav a:hover{color:white;background:rgba(255,255,255,0.08);}
@@ -110,7 +116,15 @@
 <body>
 
 <nav class="topbar" role="navigation">
-  <a href="index.html" class="topbar-logo"><span>FABER</span> Atelier de Consultanță</a>
+  <!-- ✦ Logo SVG FABER — înlocuiește textul simplu cu marca vizuală completă ✦ -->
+  <a href="index.html" class="topbar-logo" aria-label="FABER – Atelier de Consultanță, acasă">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 218 44" width="218" height="44" aria-hidden="true">
+      <text x="0" y="32" font-family="Georgia,'Times New Roman',serif" font-size="28" font-weight="700" fill="#e8642a" letter-spacing="3">FABER</text>
+      <path d="M94,22 L100,14 L106,22 L100,30 Z" fill="white" opacity="0.95"/>
+      <text x="111" y="18" font-family="'Inter','Helvetica Neue',sans-serif" font-size="10" font-weight="600" fill="white" letter-spacing="2">ATELIER de</text>
+      <text x="111" y="33" font-family="'Inter','Helvetica Neue',sans-serif" font-size="10" font-weight="600" fill="white" letter-spacing="2">CONSULTANȚĂ</text>
+    </svg>
+  </a>
   <div class="topbar-nav">
     <a href="index.html">← Acasă</a>
     <a href="index.html#finantare">Toate programele</a>

@@ -2,18 +2,23 @@
 <html lang="ro">
 <head>
   <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="POR ADR Nord-Est 2021-2027 – finanțare până la 10 milioane euro pentru infrastructură și dezvoltare regională. Consultanță FABER." />
-  <meta name="keywords" content="POR ADR Nord-Est, fonduri europene nord-est, FEDR, infrastructura finantare" />
-  <meta property="og:title" content="POR ADR Nord-Est 2021–2027 | FABER" />
-  <meta property="og:description" content="POR ADR Nord-Est 2021-2027 – finanțare până la 10 milioane euro pentru infrastructură și dezvoltare regională. Consultanță FABER." />
+  <meta name="description" content="POR Micro Nord-Est 2021-2027 – grant nerambursabil 100.000-300.000 EUR pentru microîntreprinderi din Bacău, Botoșani, Iași, Neamț, Suceava, Vaslui. Aplică cu FABER." />
+  <meta name="keywords" content="POR micro Nord-Est, investitii microintreprinderi, Programul Regional Nord-Est, grant microintreprinderi, fonduri europene IMM Nord-Est" />
+  <meta property="og:title" content="POR Micro Nord-Est 2021-2027 | FABER" />
+  <meta property="og:description" content="POR Micro Nord-Est 2021-2027 – grant nerambursabil 100.000-300.000 EUR pentru microîntreprinderi din Bacău, Botoșani, Iași, Neamț, Suceava, Vaslui." />
   <meta property="og:type" content="website" />
-  <title>POR ADR Nord-Est 2021–2027 | FABER – Atelier de Consultanță</title>
+  <title>POR Micro Nord-Est – Investiții pentru Modernizarea Microîntreprinderilor 2021-2027</title>
   <link rel="canonical" href="https://atelierdeconsultanta.ro/por-adr-nord-est.html" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <meta name="robots" content="index, follow" />
+  <meta name="twitter:card" content="summary_large_image" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"GovernmentService","name":"POR ADR Nord-Est 2021–2027","description":"POR ADR Nord-Est 2021-2027 – finanțare până la 10 milioane euro pentru infrastructură și dezvoltare regională. Consultanță FABER.","provider":{"@type":"ProfessionalService","name":"FABER – Atelier de Consultanță","url":"https://atelierdeconsultanta.ro"}}
+  {"@context":"https://schema.org","@type":"GovernmentService","name":"POR Micro Nord-Est 2021-2027","description":"POR Micro Nord-Est 2021-2027 – Investiții pentru Modernizarea Microîntreprinderilor. Grant nerambursabil 100.000-300.000 EUR pentru microîntreprinderi din regiunea Nord-Est.","provider":{"@type":"ProfessionalService","name":"FABER – Atelier de Consultanță","url":"https://atelierdeconsultanta.ro"}}
   </script>
   <style>
     :root{--navy:#0d1f3c;--orange:#e8642a;--gold:#f5a623;--white:#ffffff;--gray-100:#f8f9fb;--gray-200:#e8edf5;--text-main:#1a2540;--text-soft:#4a5568;--c1:#0d1f3c;--c2:#1a3a6a;--rs:8px;--rm:16px;--rl:24px;--tr:0.3s cubic-bezier(0.4,0,0.2,1);}
@@ -25,8 +30,8 @@
     @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms!important;transition-duration:0.01ms!important;}}
 
     .topbar{background:rgba(13,31,60,0.96);padding:0 24px;height:68px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,0.08);}
-    .topbar-logo{color:white;font-size:1.2rem;font-weight:800;}
-    .topbar-logo span{color:var(--orange);}
+    .topbar-logo{display:flex;align-items:center;}
+    .topbar-logo svg{width:218px;height:44px;}
     .topbar-nav{display:flex;gap:6px;align-items:center;}
     .topbar-nav a{color:rgba(255,255,255,0.75);font-size:0.85rem;font-weight:500;padding:7px 13px;border-radius:var(--rs);transition:color var(--tr),background var(--tr);}
     .topbar-nav a:hover{color:white;background:rgba(255,255,255,0.08);}
@@ -76,27 +81,32 @@
     .info-card .ic-val{font-size:1.05rem;font-weight:800;color:var(--orange);}
     .info-card .ic-sub{font-size:0.78rem;color:var(--text-soft);margin-top:4px;}
 
-    .elig-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;}
+    .elig-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;}
     .elig-item{display:flex;gap:10px;align-items:flex-start;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:var(--rs);padding:14px 16px;}
     .elig-check{width:22px;height:22px;border-radius:50%;flex-shrink:0;background:rgba(232,100,42,0.25);display:flex;align-items:center;justify-content:center;color:var(--orange);font-size:0.7rem;font-weight:700;}
     .elig-text{color:rgba(255,255,255,0.85);font-size:0.875rem;line-height:1.4;}
 
-    .activ-list{display:flex;flex-direction:column;gap:12px;}
-    .activ-item{display:flex;gap:14px;align-items:flex-start;background:white;border:1px solid var(--gray-200);border-radius:var(--rs);padding:16px 20px;}
-    .activ-num{width:30px;height:30px;border-radius:50%;flex-shrink:0;background:linear-gradient(135deg,var(--orange),var(--gold));display:flex;align-items:center;justify-content:center;color:white;font-size:0.8rem;font-weight:700;}
-    .activ-text{font-size:0.9rem;color:var(--text-soft);line-height:1.5;padding-top:4px;}
+    .invest-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;}
+    .invest-card{background:white;border-radius:var(--rm);padding:28px;border:1px solid var(--gray-200);transition:transform var(--tr),box-shadow var(--tr);}
+    .invest-card:hover{transform:translateY(-4px);box-shadow:0 8px 32px rgba(13,31,60,0.14);}
+    .invest-num{width:50px;height:50px;border-radius:50%;background:linear-gradient(135deg,var(--orange),var(--gold));display:flex;align-items:center;justify-content:center;color:white;font-size:1.4rem;font-weight:900;margin-bottom:16px;}
+    .invest-title{font-size:0.95rem;font-weight:700;color:var(--text-main);margin-bottom:8px;}
+    .invest-text{font-size:0.85rem;color:var(--text-soft);line-height:1.5;}
 
-    .pdf-box{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:var(--rl);padding:40px;text-align:center;margin-top:40px;}
-    .pdf-icon{font-size:3.5rem;margin-bottom:16px;}
-    .pdf-title{color:white;font-size:1.3rem;font-weight:800;margin-bottom:8px;}
-    .pdf-sub{color:rgba(255,255,255,0.6);font-size:0.9rem;margin-bottom:24px;}
-    .pdf-btn-dis{display:inline-flex;align-items:center;gap:10px;background:var(--orange);color:white;padding:14px 28px;border-radius:var(--rs);font-weight:700;font-size:0.9rem;opacity:0.45;cursor:not-allowed;}
-    .pdf-note{font-size:0.78rem;color:rgba(255,255,255,0.4);margin-top:12px;}
+    .details-section{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:var(--rl);padding:32px;margin-top:40px;}
+    .details-title{font-size:1.2rem;font-weight:700;color:white;margin-bottom:16px;}
+    .details-list{display:flex;flex-direction:column;gap:12px;}
+    .details-item{display:flex;gap:12px;align-items:flex-start;font-size:0.9rem;color:rgba(255,255,255,0.85);line-height:1.5;}
+    .details-icon{color:var(--orange);font-weight:700;flex-shrink:0;}
+
+    .cond-list{display:flex;flex-direction:column;gap:16px;}
+    .cond-item{display:flex;gap:14px;align-items:flex-start;background:rgba(232,100,42,0.08);border:1px solid rgba(232,100,42,0.15);padding:16px;border-radius:var(--rs);}
+    .cond-check{color:var(--orange);font-weight:700;font-size:1.2rem;flex-shrink:0;padding-top:2px;}
+    .cond-text{font-size:0.9rem;color:var(--text-soft);line-height:1.5;}
 
     .cta-section{text-align:center;padding:80px 24px;background:linear-gradient(135deg,#0a1628 0%,var(--navy) 100%);}
     .cta-section h2{color:white;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:900;margin-bottom:16px;}
     .cta-section p{color:rgba(255,255,255,0.65);font-size:1rem;margin-bottom:36px;max-width:540px;margin-left:auto;margin-right:auto;}
-
     .page-footer{background:#060f20;padding:32px 24px;text-align:center;}
     .page-footer p{color:rgba(255,255,255,0.35);font-size:0.8rem;}
     .page-footer a{color:var(--orange);}
@@ -104,13 +114,25 @@
     .reveal{opacity:0;transform:translateY(24px);transition:opacity 0.7s cubic-bezier(0.4,0,0.2,1),transform 0.7s cubic-bezier(0.4,0,0.2,1);}
     .reveal.revealed{opacity:1;transform:translateY(0);}
 
-    @media(max-width:768px){.hero-inner{grid-template-columns:1fr;}.hero-visual{display:none;}.topbar-nav a:not(.cta){display:none;}}
+    @media(max-width:768px){
+      .hero-inner{grid-template-columns:1fr;}
+      .hero-visual{display:none;}
+      .topbar-nav a:not(.cta){display:none;}
+      .invest-num{width:45px;height:45px;font-size:1.2rem;}
+    }
   </style>
 </head>
 <body>
 
 <nav class="topbar" role="navigation">
-  <a href="index.html" class="topbar-logo"><span>FABER</span> Atelier de Consultanță</a>
+  <a href="index.html" class="topbar-logo" aria-label="FABER – Atelier de Consultanță, acasă">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 218 44" width="218" height="44" aria-hidden="true">
+      <text x="0" y="32" font-family="Georgia,'Times New Roman',serif" font-size="28" font-weight="700" fill="#e8642a" letter-spacing="3">FABER</text>
+      <path d="M94,22 L100,14 L106,22 L100,30 Z" fill="white" opacity="0.95"/>
+      <text x="111" y="18" font-family="'Inter','Helvetica Neue',sans-serif" font-size="10" font-weight="600" fill="white" letter-spacing="2">ATELIER de</text>
+      <text x="111" y="33" font-family="'Inter','Helvetica Neue',sans-serif" font-size="10" font-weight="600" fill="white" letter-spacing="2">CONSULTANȚĂ</text>
+    </svg>
+  </a>
   <div class="topbar-nav">
     <a href="index.html">← Acasă</a>
     <a href="index.html#finantare">Toate programele</a>
@@ -122,19 +144,19 @@
   <div class="hero-deco" aria-hidden="true"></div>
   <div class="hero-inner">
     <div>
-      <div class="hero-tag">🏗️ Infrastructură regională</div>
-      <h1>POR ADR Nord-Est 2021–2027</h1>
-      <p class="hero-sub">Programul Operațional Regional pentru Regiunea Nord-Est finanțează proiecte de infrastructură, mobilitate urbană, eficiență energetică și dezvoltare economică locală prin fonduri FEDR.</p>
+      <div class="hero-tag">🏭 Programul Regional Nord-Est 2021-2027</div>
+      <h1>POR Micro: Investiții pentru Modernizarea Microîntreprinderilor</h1>
+      <p class="hero-sub">Finanțare nerambursabilă 100.000-300.000 EUR pentru microîntreprinderi din regiunea Nord-Est. Sprijin pe 70%-90% din costurile investiției. Aplică acum și modernizează afacerea ta cu fonduri europene!</p>
       <div class="hero-ctas">
         <a href="index.html#contact" class="btn-orange">🚀 Aplică cu FABER</a>
         <a href="#detalii" class="btn-ghost">Vezi detalii ↓</a>
       </div>
     </div>
-    <div class="hero-visual" aria-hidden="true">🏗️</div>
+    <div class="hero-visual" aria-hidden="true">🏭</div>
   </div>
 </header>
 
-<section class="countdown-section" aria-label="Termen limită" data-section-id="countdown">
+<section class="countdown-section" aria-label="Termen limită estimativ" data-section-id="countdown">
   <div class="countdown-label">⏱️ Termen limită estimativ</div>
   <div class="countdown-title">Timp rămas până la închiderea apelului</div>
   <div class="countdown-boxes">
@@ -143,40 +165,40 @@
     <div class="cd-box"><div class="num" id="cd-m">--</div><div class="unit">Minute</div></div>
     <div class="cd-box"><div class="num" id="cd-s">--</div><div class="unit">Secunde</div></div>
   </div>
-  <p class="cd-deadline">📅 Dată estimativă: <strong>30 septembrie 2025</strong> &nbsp;·&nbsp; <em>Verifică ghidul oficial pentru data exactă</em></p>
+  <p class="cd-deadline">📅 Dată estimativă: <strong>31 decembrie 2026</strong> &nbsp;·&nbsp; <em>Verifică ghidul oficial pentru data exactă</em></p>
 </section>
 
 <section class="section" id="detalii">
   <div class="container">
     <div class="reveal">
       <div class="sec-label">Informații esențiale</div>
-      <h2 class="sec-title">Detalii Program</h2>
-      <p class="sec-sub">Parametrii de finanțare pe care trebuie să îi cunoști înainte de aplicare</p>
+      <h2 class="sec-title">Detalii Program POR Micro Nord-Est</h2>
+      <p class="sec-sub">Parametrii de finanțare pe care trebuie să îi cunoști înainte de a aplica la apelul competitiv</p>
     </div>
     <div class="info-grid">
       <div class="info-card reveal">
         <div class="ic-icon">💰</div>
-        <div class="ic-title">Finanțare Maximă</div>
-        <div class="ic-val">10.000.000 €</div>
-        <div class="ic-sub">Sumă maximă nerambursabilă per proiect</div>
+        <div class="ic-title">Grant Nerambursabil</div>
+        <div class="ic-val">100.000 – 300.000 EUR</div>
+        <div class="ic-sub">Interval de finanțare per proiect</div>
       </div>
       <div class="info-card reveal">
         <div class="ic-icon">📊</div>
-        <div class="ic-title">Intensitate Ajutor</div>
-        <div class="ic-val">Conf. ghidului</div>
-        <div class="ic-sub">Procent nerambursabil din cheltuielile eligibile</div>
+        <div class="ic-title">Intensitate Sprijin Public</div>
+        <div class="ic-val">70% – 90%</div>
+        <div class="ic-sub">Procent din cheltuielile eligibile (minim 10% contribuție proprie)</div>
       </div>
       <div class="info-card reveal">
-        <div class="ic-icon">📅</div>
-        <div class="ic-title">Perioadă</div>
-        <div class="ic-val">2024–2027</div>
-        <div class="ic-sub">Cadrul financiar multianual UE 2021–2027</div>
+        <div class="ic-icon">🎯</div>
+        <div class="ic-title">Tip Apel</div>
+        <div class="ic-val">Competitiv</div>
+        <div class="ic-sub">Prag minim: 70 puncte, finanțare după punctaj</div>
       </div>
       <div class="info-card reveal">
-        <div class="ic-icon">⚡</div>
-        <div class="ic-title">Durată Implementare</div>
-        <div class="ic-val">24–36 luni</div>
-        <div class="ic-sub">Termen estimativ de implementare a proiectului</div>
+        <div class="ic-icon">📍</div>
+        <div class="ic-title">Județe Eligibile</div>
+        <div class="ic-val">6 județe Nord-Est</div>
+        <div class="ic-sub">Bacău, Botoșani, Iași, Neamț, Suceava, Vaslui</div>
       </div>
     </div>
   </div>
@@ -187,16 +209,17 @@
     <div class="reveal">
       <div class="sec-label" style="color:var(--orange)">Cine poate aplica</div>
       <h2 class="sec-title wh">Beneficiari Eligibili</h2>
-      <p class="sec-sub wh">Verifică dacă organizația sau afacerea ta se încadrează în categoriile de mai jos</p>
+      <p class="sec-sub wh">Verifică dacă microîntreprinderea ta îndeplinește condițiile cumulative de eligibilitate</p>
     </div>
     <div class="elig-grid reveal">
-      <div class="elig-item"><div class="elig-check">✓</div><div class="elig-text">Autorități publice locale și județene</div></div>
-      <div class="elig-item"><div class="elig-check">✓</div><div class="elig-text">Unități administrativ-teritoriale (UAT)</div></div>
-      <div class="elig-item"><div class="elig-check">✓</div><div class="elig-text">Parteneriate public-private</div></div>
-      <div class="elig-item"><div class="elig-check">✓</div><div class="elig-text">IMM-uri din Regiunea Nord-Est</div></div>
-      <div class="elig-item"><div class="elig-check">✓</div><div class="elig-text">ONG-uri cu activitate regională</div></div>
-      <div class="elig-item"><div class="elig-check">✓</div><div class="elig-text">Instituții de învățământ și sănătate</div></div>
-
+      <div class="elig-item"><div class="elig-check">✓</div><div class="elig-text">Microîntreprinderi înregistrate conform Legii 31/1990</div></div>
+      <div class="elig-item"><div class="elig-check">✓</div><div class="elig-text">Sediu social în una dintre cele 6 județe din regiunea Nord-Est</div></div>
+      <div class="elig-item"><div class="elig-check">✓</div><div class="elig-text">Cel puțin 1 an fiscal integral de activitate</div></div>
+      <div class="elig-item"><div class="elig-check">✓</div><div class="elig-text">Profit din exploatare în anul fiscal anterior depunerii</div></div>
+      <div class="elig-item"><div class="elig-check">✓</div><div class="elig-text">Nu se află în dificultate sau în situații de excludere</div></div>
+      <div class="elig-item"><div class="elig-check">✓</div><div class="elig-text">Sub plafonul de minimis: max. 300.000 EUR în 3 ani</div></div>
+      <div class="elig-item"><div class="elig-check">✓</div><div class="elig-text">Sub 10 salariați (definiție microîntreprindere)</div></div>
+      <div class="elig-item"><div class="elig-check">✓</div><div class="elig-text">Cifră de afaceri sau active totale: max. 2 milioane EUR</div></div>
     </div>
   </div>
 </section>
@@ -204,43 +227,94 @@
 <section class="section section-alt">
   <div class="container">
     <div class="reveal">
-      <div class="sec-label">Ce se finanțează</div>
-      <h2 class="sec-title">Activități Eligibile</h2>
-      <p class="sec-sub">Tipurile de investiții și cheltuieli care pot fi finanțate prin acest program</p>
+      <div class="sec-label">Tipuri de investiții finanțate</div>
+      <h2 class="sec-title">6 Categorii de Investiții Eligibile</h2>
+      <p class="sec-sub">Acestea sunt tipurile de investiții productive care pot fi finanțate prin Programul Regional Nord-Est</p>
     </div>
-    <div class="activ-list reveal">
-      <div class="activ-item"><div class="activ-num">1</div><div class="activ-text">Modernizarea infrastructurii rutiere și de transport urban</div></div>
-      <div class="activ-item"><div class="activ-num">2</div><div class="activ-text">Eficiența energetică a clădirilor publice și rezidențiale</div></div>
-      <div class="activ-item"><div class="activ-num">3</div><div class="activ-text">Sisteme de mobilitate urbană durabilă (piste ciclabile, parcuri&ride)</div></div>
-      <div class="activ-item"><div class="activ-num">4</div><div class="activ-text">Dezvoltarea zonelor economice și parcurilor industriale</div></div>
-      <div class="activ-item"><div class="activ-num">5</div><div class="activ-text">Digitalizarea serviciilor publice locale</div></div>
-      <div class="activ-item"><div class="activ-num">6</div><div class="activ-text">Reabilitarea siturilor contaminate și infrastructurii de mediu</div></div>
-
+    <div class="invest-grid reveal">
+      <div class="invest-card">
+        <div class="invest-num">1</div>
+        <div class="invest-title">Construire/Extindere/Modernizare Spații</div>
+        <div class="invest-text">Spații productive sau servicii în mediu urban și rural, cu raport ANEVAR</div>
+      </div>
+      <div class="invest-card">
+        <div class="invest-num">2</div>
+        <div class="invest-title">Achiziție Utilaje și Echipamente</div>
+        <div class="invest-text">Echipamente tehnologice și sisteme informatice specifice activității</div>
+      </div>
+      <div class="invest-card">
+        <div class="invest-num">3</div>
+        <div class="invest-title">Automatizare și Digitalizare</div>
+        <div class="invest-text">Sisteme digitale și automatizare procese industriale pentru modernizare</div>
+      </div>
+      <div class="invest-card">
+        <div class="invest-num">4</div>
+        <div class="invest-title">Energie Regenerabilă</div>
+        <div class="invest-text">Sisteme fotovoltaice, pompe de căldură și alte surse energie curată</div>
+      </div>
+      <div class="invest-card">
+        <div class="invest-num">5</div>
+        <div class="invest-title">Active Necorporale</div>
+        <div class="invest-text">Software, licențe, brevete, studii de fezabilitate și inovare</div>
+      </div>
+      <div class="invest-card">
+        <div class="invest-num">6</div>
+        <div class="invest-title">Servicii Marketing și Branding</div>
+        <div class="invest-text">Promovare online, identitate de brand și strategii de marketing digital</div>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="section section-dark" aria-label="Descarcă broșura">
+<section class="section section-dark">
   <div class="container">
-    <div class="pdf-box" data-section-id="pdf-brosura">
-      <div class="pdf-icon">📄</div>
-      <div class="pdf-title">Broșură & Ghid Solicitant</div>
-      <div class="pdf-sub">
-        Descarcă ghidul complet al solicitantului și broșura informativă pentru POR ADR Nord-Est 2021–2027.<br>
-        Documentele vor fi disponibile la lansarea oficială a apelului.
+    <div class="reveal">
+      <div class="sec-label" style="color:var(--orange)">Condiții esențiale</div>
+      <h2 class="sec-title wh">Verificare Eligibilitate Rapidă</h2>
+      <p class="sec-sub wh">Asigură-te că îndeplinești aceste condiții obligatorii înainte de a aplica</p>
+    </div>
+    <div class="details-section reveal">
+      <div class="details-title">Județe eligibile - regiunea Nord-Est:</div>
+      <div class="details-list">
+        <div class="details-item"><div class="details-icon">✓</div><div>Bacău – microîntreprinderi cu sediu în acest județ</div></div>
+        <div class="details-item"><div class="details-icon">✓</div><div>Botoșani – microîntreprinderi cu sediu în acest județ</div></div>
+        <div class="details-item"><div class="details-icon">✓</div><div>Iași – microîntreprinderi cu sediu în acest județ</div></div>
+        <div class="details-item"><div class="details-icon">✓</div><div>Neamț – microîntreprinderi cu sediu în acest județ</div></div>
+        <div class="details-item"><div class="details-icon">✓</div><div>Suceava – microîntreprinderi cu sediu în acest județ</div></div>
+        <div class="details-item"><div class="details-icon">✓</div><div>Vaslui – microîntreprinderi cu sediu în acest județ</div></div>
       </div>
-      <div class="pdf-btn-dis" aria-disabled="true" role="button" tabindex="-1">
-        📥 Descarcă Ghidul Solicitantului (PDF)
+    </div>
+    <div class="cond-list reveal" style="margin-top:32px;">
+      <div class="cond-item"><div class="cond-check">✓</div><div class="cond-text">Profit pozitiv din exploatare în ultimul an fiscal finalizat</div></div>
+      <div class="cond-item"><div class="cond-check">✓</div><div class="cond-text">Minimum 1 an de activitate (12 luni consecutive)</div></div>
+      <div class="cond-item"><div class="cond-check">✓</div><div class="cond-check">✓</div><div class="cond-text">Situația financiară sănătoasă (fără dificultăți)</div></div>
+      <div class="cond-item"><div class="cond-check">✓</div><div class="cond-text">Investiția realizată în mediul urban sau rural din regiunea Nord-Est</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-label">Detalii apel</div>
+      <h2 class="sec-title">Apel Competitiv – Cum Funcționează Finanțarea</h2>
+      <p class="sec-sub">Apelul este competitiv. Ordinea finanțării se stabilește pe baza punctajului obținut la evaluare</p>
+    </div>
+    <div class="details-section reveal" style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.15);">
+      <div class="details-title">Criterii de evaluare și selecție:</div>
+      <div class="details-list">
+        <div class="details-item"><div class="details-icon">📊</div><div><strong>Prag minim de evaluare:</strong> 70 de puncte – dosarele cu punctaj mai mic sunt respinse</div></div>
+        <div class="details-item"><div class="details-icon">📈</div><div><strong>Ordinea finanțării:</strong> Se finanțează în ordine descrescătoare a punctajului obținut</div></div>
+        <div class="details-item"><div class="details-icon">💡</div><div><strong>Criterii de punctare:</strong> Calitatea proiectului, impactul economic, inovare și durabilitate</div></div>
+        <div class="details-item"><div class="details-icon">⏱️</div><div><strong>Buget disponibil:</strong> Finanțarea continuă până la epuizarea bugetului pe regiune</div></div>
       </div>
-      <p class="pdf-note">⚠️ Documentul va fi activat la lansarea oficială a apelului de proiecte</p>
-      <!-- PLACEHOLDER: inlocuieste div-ul de sus cu <a href="ghid-por-adr-nord-est.html.pdf" class="btn-orange">📥 Descarcă (PDF, X MB)</a> -->
     </div>
   </div>
 </section>
 
 <section class="cta-section">
-  <h2>Ești eligibil? Aplică cu FABER!</h2>
-  <p>Echipa noastră analizează gratuit situația ta și îți confirmă în 24 ore dacă te încadrezi în criteriile de eligibilitate.</p>
+  <h2>Pregătit? Aplică cu FABER!</h2>
+  <p>Echipa noastră analizează gratuit proiectul tău și te ajută să obții cel mai bun punctaj la evaluare. Oferim consultanță completă pentru dosarul de aplicare și implementarea proiectului.</p>
   <a href="index.html#contact" class="btn-orange" style="font-size:1.05rem;padding:16px 36px;">🚀 Solicită Consultanța Gratuită</a>
 </section>
 
@@ -249,7 +323,7 @@
 </footer>
 
 <script>
-  var target = new Date('2025-09-30T23:59:00');
+  var target = new Date('2026-12-31T23:59:00');
   function tick() {
     var diff = target - new Date();
     if (diff <= 0) {
@@ -273,5 +347,6 @@
   },{threshold:0.1,rootMargin:'0px 0px -30px 0px'});
   document.querySelectorAll('.reveal').forEach(function(el){ obs.observe(el); });
 </script>
+
 </body>
 </html>

@@ -2,21 +2,27 @@
 <html lang="ro">
 <head>
   <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="AFIR Autoconsum Agroalimentar – până la 500.000 euro, 90% nerambursabil pentru sisteme fotovoltaice la ferme. Consultanță FABER." />
-  <meta name="keywords" content="AFIR autoconsum agroalimentar, panouri fotovoltaice ferme, energie regenerabila agricultura" />
-  <meta property="og:title" content="AFIR Autoconsum Agroalimentar | FABER" />
-  <meta property="og:description" content="AFIR Autoconsum Agroalimentar – până la 500.000 euro, 90% nerambursabil pentru sisteme fotovoltaice la ferme. Consultanță FABER." />
+  <meta name="description" content="Finanțare nerambursabilă 100% pentru panouri fotovoltaice în sectorul agroalimentar. Până la 20 milioane EUR per beneficiar, 150 milioane EUR total. AFIR – Schema RE." />
+  <meta name="keywords" content="panouri fotovoltaice agroalimentar, schema RE AFIR, finantare fotovoltaice agricultura, energie regenerabila ferme, AFIR fotovoltaice" />
+  <meta property="og:title" content="Panouri Fotovoltaice pentru Sectorul Agroalimentar | Schema RE AFIR" />
+  <meta property="og:description" content="Finanțare nerambursabilă 100% pentru panouri fotovoltaice în sectorul agroalimentar. Până la 20 milioane EUR per beneficiar, 150 milioane EUR total. AFIR – Schema RE." />
   <meta property="og:type" content="website" />
-  <title>AFIR Autoconsum Agroalimentar | FABER – Atelier de Consultanță</title>
+  <title>Panouri Fotovoltaice pentru Sectorul Agroalimentar | Schema RE AFIR</title>
   <link rel="canonical" href="https://atelierdeconsultanta.ro/afir-autoconsum-agroalimentar.html" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <meta name="robots" content="index, follow" />
+  <meta name="twitter:card" content="summary_large_image" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"GovernmentService","name":"AFIR Autoconsum Agroalimentar","description":"AFIR Autoconsum Agroalimentar – până la 500.000 euro, 90% nerambursabil pentru sisteme fotovoltaice la ferme. Consultanță FABER.","provider":{"@type":"ProfessionalService","name":"FABER – Atelier de Consultanță","url":"https://atelierdeconsultanta.ro"}}
+  {"@context":"https://schema.org","@type":"GovernmentService","name":"Panouri Fotovoltaice pentru Sectorul Agroalimentar – Schema RE AFIR","description":"Finanțare nerambursabilă 100% pentru panouri fotovoltaice în sectorul agroalimentar. Până la 20 milioane EUR per beneficiar, 150 milioane EUR total.","provider":{"@type":"ProfessionalService","name":"FABER – Atelier de Consultanță","url":"https://atelierdeconsultanta.ro"}}
   </script>
   <style>
-    :root{--navy:#0d1f3c;--orange:#e8642a;--gold:#f5a623;--white:#ffffff;--gray-100:#f8f9fb;--gray-200:#e8edf5;--text-main:#1a2540;--text-soft:#4a5568;--c1:#1a2d3c;--c2:#1a4a5a;--rs:8px;--rm:16px;--rl:24px;--tr:0.3s cubic-bezier(0.4,0,0.2,1);}
+    /* CSS Variables cu tema verde-solar-agricolă */
+    :root{--navy:#0d1f3c;--orange:#e8642a;--gold:#f5a623;--white:#ffffff;--gray-100:#f8f9fb;--gray-200:#e8edf5;--text-main:#1a2540;--text-soft:#4a5568;--c1:#1a2a0a;--c2:#2a4a10;--rs:8px;--rm:16px;--rl:24px;--tr:0.3s cubic-bezier(0.4,0,0.2,1);}
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
     html{scroll-behavior:smooth;}
     body{font-family:'Inter',sans-serif;color:var(--text-main);background:var(--white);line-height:1.6;overflow-x:hidden;}
@@ -24,9 +30,10 @@
     button{cursor:pointer;border:none;background:none;font-family:inherit;}
     @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms!important;transition-duration:0.01ms!important;}}
 
+    /* TOPBAR cu logo SVG */
     .topbar{background:rgba(13,31,60,0.96);padding:0 24px;height:68px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,0.08);}
-    .topbar-logo{color:white;font-size:1.2rem;font-weight:800;}
-    .topbar-logo span{color:var(--orange);}
+    .topbar-logo{display:flex;align-items:center;}
+    .topbar-logo svg{width:auto;height:44px;}
     .topbar-nav{display:flex;gap:6px;align-items:center;}
     .topbar-nav a{color:rgba(255,255,255,0.75);font-size:0.85rem;font-weight:500;padding:7px 13px;border-radius:var(--rs);transition:color var(--tr),background var(--tr);}
     .topbar-nav a:hover{color:white;background:rgba(255,255,255,0.08);}
@@ -109,8 +116,16 @@
 </head>
 <body>
 
-<nav class="topbar" role="navigation">
-  <a href="index.html" class="topbar-logo"><span>FABER</span> Atelier de Consultanță</a>
+<!-- TOPBAR cu logo SVG FABER -->
+<nav class="topbar" role="navigation" aria-label="Navigație principală">
+  <a href="index.html" class="topbar-logo" aria-label="FABER – Atelier de Consultanță, acasă">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 218 44" width="218" height="44" aria-hidden="true">
+      <text x="0" y="32" font-family="Georgia,'Times New Roman',serif" font-size="28" font-weight="700" fill="#e8642a" letter-spacing="3">FABER</text>
+      <path d="M94,22 L100,14 L106,22 L100,30 Z" fill="white" opacity="0.95"/>
+      <text x="111" y="18" font-family="'Inter','Helvetica Neue',sans-serif" font-size="10" font-weight="600" fill="white" letter-spacing="2">ATELIER de</text>
+      <text x="111" y="33" font-family="'Inter','Helvetica Neue',sans-serif" font-size="10" font-weight="600" fill="white" letter-spacing="2">CONSULTANȚĂ</text>
+    </svg>
+  </a>
   <div class="topbar-nav">
     <a href="index.html">← Acasă</a>
     <a href="index.html#finantare">Toate programele</a>
@@ -118,23 +133,25 @@
   </div>
 </nav>
 
+<!-- HERO section cu tema verde-solar-agricolă -->
 <header class="hero">
   <div class="hero-deco" aria-hidden="true"></div>
   <div class="hero-inner">
     <div>
-      <div class="hero-tag">⚡ Energie verde agro</div>
-      <h1>AFIR Autoconsum Agroalimentar</h1>
-      <p class="hero-sub">Instalarea de sisteme fotovoltaice și de stocare a energiei pentru fermieri și procesatori agroalimentari. Reduce costurile energetice și contribuie la o agricultură mai durabilă.</p>
+      <div class="hero-tag">☀️ Schema RE | AFIR – Fondul pentru Modernizare</div>
+      <h1>Panouri Fotovoltaice pentru Sectorul Agroalimentar</h1>
+      <p class="hero-sub">Finanțare nerambursabilă 100% pentru instalarea sistemelor fotovoltaice în agricultură și industria alimentară. Până la 20 milioane EUR per beneficiar cu autoconsum minim 70%.</p>
       <div class="hero-ctas">
         <a href="index.html#contact" class="btn-orange">🚀 Aplică cu FABER</a>
         <a href="#detalii" class="btn-ghost">Vezi detalii ↓</a>
       </div>
     </div>
-    <div class="hero-visual" aria-hidden="true">⚡</div>
+    <div class="hero-visual" aria-hidden="true">☀️</div>
   </div>
 </header>
 
-<section class="countdown-section" aria-label="Termen limită" data-section-id="countdown">
+<!-- COUNTDOWN section -->
+<section class="countdown-section" aria-label="Termen limită apel" data-section-id="countdown">
   <div class="countdown-label">⏱️ Termen limită estimativ</div>
   <div class="countdown-title">Timp rămas până la închiderea apelului</div>
   <div class="countdown-boxes">
@@ -143,104 +160,207 @@
     <div class="cd-box"><div class="num" id="cd-m">--</div><div class="unit">Minute</div></div>
     <div class="cd-box"><div class="num" id="cd-s">--</div><div class="unit">Secunde</div></div>
   </div>
-  <p class="cd-deadline">📅 Dată estimativă: <strong>31 august 2025</strong> &nbsp;·&nbsp; <em>Verifică ghidul oficial pentru data exactă</em></p>
+  <p class="cd-deadline">📅 Dată estimativă: <strong>31 decembrie 2026</strong> &nbsp;·&nbsp; <em>Verifică ghidul oficial pentru data exactă</em></p>
 </section>
 
+<!-- SECTION: Detalii Program cu 5 info-cards -->
 <section class="section" id="detalii">
   <div class="container">
     <div class="reveal">
       <div class="sec-label">Informații esențiale</div>
-      <h2 class="sec-title">Detalii Program</h2>
-      <p class="sec-sub">Parametrii de finanțare pe care trebuie să îi cunoști înainte de aplicare</p>
+      <h2 class="sec-title">Detalii Program – Schema RE AFIR</h2>
+      <p class="sec-sub">Parametrii de finanțare și condiții cheie pentru autoconsum agroalimentar</p>
     </div>
     <div class="info-grid">
       <div class="info-card reveal">
         <div class="ic-icon">💰</div>
         <div class="ic-title">Finanțare Maximă</div>
-        <div class="ic-val">500.000 € / 90% nerambursabil</div>
-        <div class="ic-sub">Sumă maximă nerambursabilă per proiect</div>
+        <div class="ic-val">20.000.000 EUR</div>
+        <div class="ic-sub">Ajutor maxim per beneficiar</div>
       </div>
       <div class="info-card reveal">
         <div class="ic-icon">📊</div>
         <div class="ic-title">Intensitate Ajutor</div>
-        <div class="ic-val">Conf. ghidului</div>
-        <div class="ic-sub">Procent nerambursabil din cheltuielile eligibile</div>
+        <div class="ic-val">Până la 100%</div>
+        <div class="ic-sub">Din cheltuielile eligibile</div>
       </div>
       <div class="info-card reveal">
-        <div class="ic-icon">📅</div>
-        <div class="ic-title">Perioadă</div>
-        <div class="ic-val">2024–2027</div>
-        <div class="ic-sub">Cadrul financiar multianual UE 2021–2027</div>
+        <div class="ic-icon">💵</div>
+        <div class="ic-title">Buget Total</div>
+        <div class="ic-val">150.000.000 EUR</div>
+        <div class="ic-sub">Fond disponibil pentru apel</div>
       </div>
       <div class="info-card reveal">
         <div class="ic-icon">⚡</div>
-        <div class="ic-title">Durată Implementare</div>
-        <div class="ic-val">24–36 luni</div>
-        <div class="ic-sub">Termen estimativ de implementare a proiectului</div>
+        <div class="ic-title">Autoconsum Minim</div>
+        <div class="ic-val">70% din producție</div>
+        <div class="ic-sub">Obligatoriu pentru eligibilitate</div>
+      </div>
+      <div class="info-card reveal">
+        <div class="ic-icon">📅</div>
+        <div class="ic-title">Durata Implementare</div>
+        <div class="ic-val">Maximum 21 luni</div>
+        <div class="ic-sub">De la semnarea contractului</div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- SECTION DARK: Beneficiari Eligibili cu CAEN-uri -->
 <section class="section section-dark">
   <div class="container">
     <div class="reveal">
       <div class="sec-label" style="color:var(--orange)">Cine poate aplica</div>
       <h2 class="sec-title wh">Beneficiari Eligibili</h2>
-      <p class="sec-sub wh">Verifică dacă organizația sau afacerea ta se încadrează în categoriile de mai jos</p>
+      <p class="sec-sub wh">Verifică dacă entitatea ta se încadrează în categoriile de mai jos</p>
     </div>
     <div class="elig-grid reveal">
-      <div class="elig-item"><div class="elig-check">✓</div><div class="elig-text">Ferme vegetale și zootehnice înregistrate</div></div>
-      <div class="elig-item"><div class="elig-check">✓</div><div class="elig-text">Procesatori din industria alimentară</div></div>
-      <div class="elig-item"><div class="elig-check">✓</div><div class="elig-text">Cooperative agricole</div></div>
-      <div class="elig-item"><div class="elig-check">✓</div><div class="elig-text">Grupuri de producători agricoli</div></div>
-      <div class="elig-item"><div class="elig-check">✓</div><div class="elig-text">Micro-întreprinderi din sectorul agro-alimentar</div></div>
-      <div class="elig-item"><div class="elig-check">✓</div><div class="elig-text">Beneficiari existenți AFIR cu proiecte active</div></div>
-
+      <div class="elig-item"><div class="elig-check">✓</div><div class="elig-text">Microîntreprinderi (CAEN 01, 10, 11)</div></div>
+      <div class="elig-item"><div class="elig-check">✓</div><div class="elig-text">IMM-uri din agricultură și alimentar</div></div>
+      <div class="elig-item"><div class="elig-check">✓</div><div class="elig-text">Întreprinderi mari producătoare</div></div>
+      <div class="elig-item"><div class="elig-check">✓</div><div class="elig-text">PFA – Persoane Fizice Autorizate</div></div>
+      <div class="elig-item"><div class="elig-check">✓</div><div class="elig-text">Cooperative agricole înregistrate</div></div>
+      <div class="elig-item"><div class="elig-check">✓</div><div class="elig-text">Ferme și exploatații agricole</div></div>
+    </div>
+    <div style="margin-top:40px;padding:20px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:var(--rl);">
+      <div style="color:rgba(255,255,255,0.85);font-size:0.9rem;line-height:1.6;">
+        <strong style="color:white;">Coduri CAEN eligibile:</strong><br>
+        CAEN 01 – Activități agricole de producție vegetală și animală<br>
+        CAEN 10 – Fabricarea produselor alimentare<br>
+        CAEN 11 – Fabricarea băuturilor
+      </div>
     </div>
   </div>
 </section>
 
+<!-- SECTION: Investiții Eligibile -->
 <section class="section section-alt">
   <div class="container">
     <div class="reveal">
       <div class="sec-label">Ce se finanțează</div>
-      <h2 class="sec-title">Activități Eligibile</h2>
-      <p class="sec-sub">Tipurile de investiții și cheltuieli care pot fi finanțate prin acest program</p>
+      <h2 class="sec-title">Investiții Eligibile</h2>
+      <p class="sec-sub">Tipurile de active și cheltuieli care pot fi finanțate prin Schema RE AFIR</p>
     </div>
     <div class="activ-list reveal">
-      <div class="activ-item"><div class="activ-num">1</div><div class="activ-text">Instalarea de panouri fotovoltaice pe acoperișuri sau pe teren</div></div>
-      <div class="activ-item"><div class="activ-num">2</div><div class="activ-text">Achiziționarea de sisteme de stocare a energiei (baterii)</div></div>
-      <div class="activ-item"><div class="activ-num">3</div><div class="activ-text">Instalarea de invertoare și echipamente de control</div></div>
-      <div class="activ-item"><div class="activ-num">4</div><div class="activ-text">Modernizarea instalațiilor electrice aferente</div></div>
-      <div class="activ-item"><div class="activ-num">5</div><div class="activ-text">Lucrări de construcție/montaj necesare pentru instalarea sistemelor</div></div>
-      <div class="activ-item"><div class="activ-num">6</div><div class="activ-text">Consultanță tehnică și supervizare lucrări</div></div>
-
+      <div class="activ-item"><div class="activ-num">1</div><div class="activ-text">Panouri fotovoltaice noi – capacitate sub 1 MW și peste 1 MW</div></div>
+      <div class="activ-item"><div class="activ-num">2</div><div class="activ-text">Invertoare și echipamente complementare de conversie</div></div>
+      <div class="activ-item"><div class="activ-num">3</div><div class="activ-text">Sisteme de stocare a energiei – baterii și acumulatori</div></div>
+      <div class="activ-item"><div class="activ-num">4</div><div class="activ-text">Construcții și instalații aferente producției de energie solară</div></div>
+      <div class="activ-item"><div class="activ-num">5</div><div class="activ-text">Montaj, conectare și punere în funcțiune a sistemului complet</div></div>
     </div>
   </div>
 </section>
 
-<section class="section section-dark" aria-label="Descarcă broșura">
+<!-- SECTION DARK: Condiții Cheie de Eligibilitate -->
+<section class="section section-dark">
   <div class="container">
-    <div class="pdf-box" data-section-id="pdf-brosura">
-      <div class="pdf-icon">📄</div>
-      <div class="pdf-title">Broșură & Ghid Solicitant</div>
-      <div class="pdf-sub">
-        Descarcă ghidul complet al solicitantului și broșura informativă pentru AFIR Autoconsum Agroalimentar.<br>
-        Documentele vor fi disponibile la lansarea oficială a apelului.
+    <div class="reveal">
+      <div class="sec-label" style="color:var(--orange)">Condiții obligatorii</div>
+      <h2 class="sec-title wh">Condiții Cheie de Eligibilitate</h2>
+      <p class="sec-sub wh">Cerințele pe care trebuie să le îndeplinești pentru a accesa finanțare</p>
+    </div>
+    <div class="activ-list reveal" style="margin-top:32px;">
+      <div class="activ-item" style="background:rgba(255,255,255,0.04);border-color:rgba(255,255,255,0.1);">
+        <div class="activ-num" style="background:linear-gradient(135deg,#e8642a,#f5a623);">1</div>
+        <div class="activ-text" style="color:rgba(255,255,255,0.85);"><strong style="color:white;">Autoconsum minim 70%</strong> – Minimum 70% din energia electrică generată trebuie utilizată pentru propria consumare</div>
       </div>
-      <div class="pdf-btn-dis" aria-disabled="true" role="button" tabindex="-1">
-        📥 Descarcă Ghidul Solicitantului (PDF)
+      <div class="activ-item" style="background:rgba(255,255,255,0.04);border-color:rgba(255,255,255,0.1);">
+        <div class="activ-num" style="background:linear-gradient(135deg,#e8642a,#f5a623);">2</div>
+        <div class="activ-text" style="color:rgba(255,255,255,0.85);"><strong style="color:white;">Perioadă implementare</strong> – Maxim 21 luni de la semnarea contractului de finanțare</div>
       </div>
-      <p class="pdf-note">⚠️ Documentul va fi activat la lansarea oficială a apelului de proiecte</p>
-      <!-- PLACEHOLDER: inlocuieste div-ul de sus cu <a href="ghid-afir-autoconsum-agroalimentar.html.pdf" class="btn-orange">📥 Descarcă (PDF, X MB)</a> -->
+      <div class="activ-item" style="background:rgba(255,255,255,0.04);border-color:rgba(255,255,255,0.1);">
+        <div class="activ-num" style="background:linear-gradient(135deg,#e8642a,#f5a623);">3</div>
+        <div class="activ-text" style="color:rgba(255,255,255,0.85);"><strong style="color:white;">Selecție competitivă</strong> – Selectare prin procedură competitivă (licitație publică)</div>
+      </div>
+      <div class="activ-item" style="background:rgba(255,255,255,0.04);border-color:rgba(255,255,255,0.1);">
+        <div class="activ-num" style="background:linear-gradient(135deg,#e8642a,#f5a623);">4</div>
+        <div class="activ-text" style="color:rgba(255,255,255,0.85);"><strong style="color:white;">Corelație consum</strong> – Capacitate instalată trebuie corelată cu consumul propriu documentat din 12 luni anterioare</div>
+      </div>
     </div>
   </div>
 </section>
 
+<!-- SECTION: Cheltuieli Neeligibile -->
+<section class="section">
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-label">Ce NU se finanțează</div>
+      <h2 class="sec-title">Cheltuieli Neeligibile</h2>
+      <p class="sec-sub">Următoarele categorii de costuri nu vor fi acoperite din finanțare și trebuie suportate din alte surse</p>
+    </div>
+    <div class="activ-list reveal">
+      <div class="activ-item">
+        <div class="activ-num" style="background:#8b5a5a;">✗</div>
+        <div class="activ-text">TVA – indiferent de regimul de deductibilitate al beneficiarului</div>
+      </div>
+      <div class="activ-item">
+        <div class="activ-num" style="background:#8b5a5a;">✗</div>
+        <div class="activ-text">Studii de fezabilitate și documentație proiect preliminară</div>
+      </div>
+      <div class="activ-item">
+        <div class="activ-num" style="background:#8b5a5a;">✗</div>
+        <div class="activ-text">Obținerea autorizațiilor, avizelor și permit de construire</div>
+      </div>
+      <div class="activ-item">
+        <div class="activ-num" style="background:#8b5a5a;">✗</div>
+        <div class="activ-text">Taxe și cheltuieli de racordare la rețeaua electrică publică</div>
+      </div>
+      <div class="activ-item">
+        <div class="activ-num" style="background:#8b5a5a;">✗</div>
+        <div class="activ-text">Contracte de leasing și finanțări în locul achiziției directe</div>
+      </div>
+      <div class="activ-item">
+        <div class="activ-num" style="background:#8b5a5a;">✗</div>
+        <div class="activ-text">Echipamente second-hand sau reutilizate</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION DARK: Procedura de Selecție -->
+<section class="section section-dark">
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-label" style="color:var(--orange)">Cum funcționează selecția</div>
+      <h2 class="sec-title wh">Procedura de Selecție</h2>
+      <p class="sec-sub wh">Etapele și criteriile pentru selectarea beneficiarilor finanțării</p>
+    </div>
+    <div style="margin-top:40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;" class="reveal">
+      <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:var(--rm);padding:28px;text-align:center;">
+        <div style="font-size:2rem;margin-bottom:14px;">📋</div>
+        <div style="color:white;font-weight:700;margin-bottom:8px;">Depunere Dosare</div>
+        <div style="color:rgba(255,255,255,0.65);font-size:0.9rem;">Depunerea cererii cu documentația necesară conform calendarului</div>
+      </div>
+      <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:var(--rm);padding:28px;text-align:center;">
+        <div style="font-size:2rem;margin-bottom:14px;">⚖️</div>
+        <div style="color:white;font-weight:700;margin-bottom:8px;">Evaluare Tehnică</div>
+        <div style="color:rgba(255,255,255,0.65);font-size:0.9rem;">Verificare conformitate cu criteriile de eligibilitate și calitate tehnică</div>
+      </div>
+      <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:var(--rm);padding:28px;text-align:center;">
+        <div style="font-size:2rem;margin-bottom:14px;">🏆</div>
+        <div style="color:white;font-weight:700;margin-bottom:8px;">Clasificare Punctaj</div>
+        <div style="color:rgba(255,255,255,0.65);font-size:0.9rem;">Clasificare după punctaj tehnico-financiar pentru selecție</div>
+      </div>
+      <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:var(--rm);padding:28px;text-align:center;">
+        <div style="font-size:2rem;margin-bottom:14px;">✅</div>
+        <div style="color:white;font-weight:700;margin-bottom:8px;">Semnare Contract</div>
+        <div style="color:rgba(255,255,255,0.65);font-size:0.9rem;">Semnarea contractului de finanțare cu AFIR/MADR</div>
+      </div>
+    </div>
+    <div style="margin-top:32px;padding:20px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:var(--rl);">
+      <div style="color:rgba(255,255,255,0.85);font-size:0.9rem;line-height:1.6;">
+        <strong style="color:white;">Tip procedură:</strong> Competitivă (licitație publică)<br>
+        <strong style="color:white;">Criteriu principal:</strong> Punctaj tehnico-financiar<br>
+        <strong style="color:white;">Element evaluat:</strong> Corelarea capacității cu consumul documentat din 12 luni anterioare
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA SECTION -->
 <section class="cta-section">
   <h2>Ești eligibil? Aplică cu FABER!</h2>
-  <p>Echipa noastră analizează gratuit situația ta și îți confirmă în 24 ore dacă te încadrezi în criteriile de eligibilitate.</p>
+  <p>Echipa noastră de specialiști analizează gratuit situația ta și îți confirmă în 24 ore dacă ferma sau producția ta se încadrează în criteriile de eligibilitate pentru finanțare.</p>
   <a href="index.html#contact" class="btn-orange" style="font-size:1.05rem;padding:16px 36px;">🚀 Solicită Consultanța Gratuită</a>
 </section>
 
@@ -249,29 +369,51 @@
 </footer>
 
 <script>
-  var target = new Date('2025-08-31T23:59:00');
+  /* Countdown Timer – setează termenul la 31 decembrie 2026, 23:59 */
+  var target = new Date('2026-12-31T23:59:00');
+
   function tick() {
     var diff = target - new Date();
     if (diff <= 0) {
-      ['cd-d','cd-h','cd-m','cd-s'].forEach(function(id){ document.getElementById(id).textContent='00'; });
+      // Dacă termenul a expirat, setează toate boxele la 00
+      ['cd-d','cd-h','cd-m','cd-s'].forEach(function(id){
+        document.getElementById(id).textContent='00';
+      });
       return;
     }
+
+    // Calculează zile, ore, minute, secunde
     var d = Math.floor(diff/86400000);
     var h = Math.floor((diff%86400000)/3600000);
     var m = Math.floor((diff%3600000)/60000);
     var s = Math.floor((diff%60000)/1000);
+
+    // Helper pentru padding cu zero
     function p(n){ return String(n).padStart(2,'0'); }
+
+    // Actualizează display-ul
     document.getElementById('cd-d').textContent = p(d);
     document.getElementById('cd-h').textContent = p(h);
     document.getElementById('cd-m').textContent = p(m);
     document.getElementById('cd-s').textContent = p(s);
   }
-  tick(); setInterval(tick, 1000);
 
+  tick();
+  setInterval(tick, 1000);
+
+  /* Intersection Observer – Reveal animations */
   var obs = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('revealed'); obs.unobserve(e.target); } });
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        e.target.classList.add('revealed');
+        obs.unobserve(e.target);
+      }
+    });
   },{threshold:0.1,rootMargin:'0px 0px -30px 0px'});
-  document.querySelectorAll('.reveal').forEach(function(el){ obs.observe(el); });
+
+  document.querySelectorAll('.reveal').forEach(function(el){
+    obs.observe(el);
+  });
 </script>
 </body>
 </html>

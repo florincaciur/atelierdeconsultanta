@@ -2,18 +2,35 @@
 <html lang="ro">
 <head>
   <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="DR 12 AFIR – finanțare până la 2 milioane euro pentru ferme și procesatori agroalimentari. Aplică cu FABER." />
-  <meta name="keywords" content="DR 12 AFIR, fonduri europene agricultura, finantare ferme, AFIR investitii agricole" />
-  <meta property="og:title" content="DR 12 / AFIR – Investiții Agricole | FABER" />
-  <meta property="og:description" content="DR 12 AFIR – finanțare până la 2 milioane euro pentru ferme și procesatori agroalimentari. Aplică cu FABER." />
+  <meta name="description" content="DR 12 AFIR – Instalarea Tinerilor Fermieri. Finanțare nerambursabilă 80% pentru tineri până la 40 ani și 65% pentru fermieri recent instalați până la 45 ani. PAC 2023-2027." />
+  <meta name="keywords" content="DR12 AFIR, instalarea tinerilor fermieri, PAC 2023-2027, finantare ferme tinere, fonduri europene agricultura" />
+  <meta property="og:title" content="DR 12 AFIR – Instalarea Tinerilor Fermieri | FABER" />
+  <meta property="og:description" content="DR 12 AFIR – Instalarea Tinerilor Fermieri. Finanțare nerambursabilă 80% pentru tineri până la 40 ani și 65% pentru fermieri recent instalați până la 45 ani. PAC 2023-2027." />
   <meta property="og:type" content="website" />
-  <title>DR 12 / AFIR – Investiții Agricole | FABER – Atelier de Consultanță</title>
+  <title>DR 12 AFIR – Instalarea Tinerilor Fermieri | FABER – Atelier de Consultanță</title>
   <link rel="canonical" href="https://atelierdeconsultanta.ro/dr12-afir.html" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <meta name="robots" content="index, follow" />
+  <meta name="twitter:card" content="summary_large_image" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"GovernmentService","name":"DR 12 / AFIR – Investiții Agricole","description":"DR 12 AFIR – finanțare până la 2 milioane euro pentru ferme și procesatori agroalimentari. Aplică cu FABER.","provider":{"@type":"ProfessionalService","name":"FABER – Atelier de Consultanță","url":"https://atelierdeconsultanta.ro"}}
+  {
+    "@context": "https://schema.org",
+    "@type": "GovernmentService",
+    "name": "DR 12 AFIR – Instalarea Tinerilor Fermieri",
+    "description": "DR 12 AFIR – Instalarea Tinerilor Fermieri. Finanțare nerambursabilă 80% pentru tineri până la 40 ani și 65% pentru fermieri recent instalați până la 45 ani. PAC 2023-2027.",
+    "provider": {
+      "@type": "ProfessionalService",
+      "name": "FABER – Atelier de Consultanță",
+      "url": "https://atelierdeconsultanta.ro"
+    },
+    "areaServed": "RO",
+    "serviceType": "Government Service - Funding"
+  }
   </script>
   <style>
     :root{--navy:#0d1f3c;--orange:#e8642a;--gold:#f5a623;--white:#ffffff;--gray-100:#f8f9fb;--gray-200:#e8edf5;--text-main:#1a2540;--text-soft:#4a5568;--c1:#1a3a0d;--c2:#2a5a1a;--rs:8px;--rm:16px;--rl:24px;--tr:0.3s cubic-bezier(0.4,0,0.2,1);}
@@ -25,8 +42,9 @@
     @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms!important;transition-duration:0.01ms!important;}}
 
     .topbar{background:rgba(13,31,60,0.96);padding:0 24px;height:68px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,0.08);}
-    .topbar-logo{color:white;font-size:1.2rem;font-weight:800;}
-    .topbar-logo span{color:var(--orange);}
+    .topbar-logo{display:flex;align-items:center;height:44px;width:auto;}
+    .topbar-logo svg{height:44px;width:auto;transition:transform var(--tr);}
+    .topbar-logo:hover svg{transform:scale(1.05);}
     .topbar-nav{display:flex;gap:6px;align-items:center;}
     .topbar-nav a{color:rgba(255,255,255,0.75);font-size:0.85rem;font-weight:500;padding:7px 13px;border-radius:var(--rs);transition:color var(--tr),background var(--tr);}
     .topbar-nav a:hover{color:white;background:rgba(255,255,255,0.08);}
@@ -104,13 +122,33 @@
     .reveal{opacity:0;transform:translateY(24px);transition:opacity 0.7s cubic-bezier(0.4,0,0.2,1),transform 0.7s cubic-bezier(0.4,0,0.2,1);}
     .reveal.revealed{opacity:1;transform:translateY(0);}
 
-    @media(max-width:768px){.hero-inner{grid-template-columns:1fr;}.hero-visual{display:none;}.topbar-nav a:not(.cta){display:none;}}
+    @media(max-width:768px){
+      .hero-inner{grid-template-columns:1fr;}
+      .hero-visual{display:none;}
+      .topbar-nav a:not(.cta){display:none;}
+      .section{padding:60px 24px;}
+      .info-grid{grid-template-columns:1fr;}
+      .elig-grid{grid-template-columns:1fr;}
+      .activ-list{flex-direction:column;}
+      div[style*="grid-template-columns:1fr 1fr"]{grid-template-columns:1fr !important;}
+      .sec-title{font-size:1.8rem;}
+      .hero h1{font-size:1.8rem;}
+    }
   </style>
 </head>
 <body>
 
 <nav class="topbar" role="navigation">
-  <a href="index.html" class="topbar-logo"><span>FABER</span> Atelier de Consultanță</a>
+  <!-- ✦ Logo SVG FABER ✦ -->
+  <a href="index.html" class="topbar-logo" aria-label="FABER – Atelier de Consultanță, acasă">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 218 44" width="218" height="44" aria-hidden="true">
+      <text x="0" y="32" font-family="Georgia,'Times New Roman',serif" font-size="28" font-weight="700" fill="#e8642a" letter-spacing="3">FABER</text>
+      <path d="M94,22 L100,14 L106,22 L100,30 Z" fill="white" opacity="0.95"/>
+      <text x="111" y="18" font-family="'Inter','Helvetica Neue',sans-serif" font-size="10" font-weight="600" fill="white" letter-spacing="2">ATELIER de</text>
+      <text x="111" y="33" font-family="'Inter','Helvetica Neue',sans-serif" font-size="10" font-weight="600" fill="white" letter-spacing="2">CONSULTANȚĂ</text>
+    </svg>
+  </a>
+  <!-- ✦ Navigație principală ✦ -->
   <div class="topbar-nav">
     <a href="index.html">← Acasă</a>
     <a href="index.html#finantare">Toate programele</a>
@@ -118,138 +156,303 @@
   </div>
 </nav>
 
+<!-- ✦ HERO SECTION — DR12 tema verde agricolă ✦ -->
 <header class="hero">
   <div class="hero-deco" aria-hidden="true"></div>
   <div class="hero-inner">
     <div>
-      <div class="hero-tag">🌾 Agricultură & rural</div>
-      <h1>DR 12 / AFIR – Investiții Agricole</h1>
-      <p class="hero-sub">Sprijin nerambursabil pentru ferme, procesatori agroalimentari și întreprinderi din mediul rural. Modernizarea exploatațiilor și crearea de lanțuri valorice în zonele rurale.</p>
+      <div class="hero-tag">🌾 PAC 2023-2027</div>
+      <h1>DR 12 AFIR – Instalarea Tinerilor Fermieri</h1>
+      <p class="hero-sub">Sprijin nerambursabil de până la 80% pentru tinerii fermieri care vor să-și dezvolte sau modernizeze exploatația agricolă. Finanțare în cadrul Planului Strategic PAC 2023-2027.</p>
       <div class="hero-ctas">
         <a href="index.html#contact" class="btn-orange">🚀 Aplică cu FABER</a>
         <a href="#detalii" class="btn-ghost">Vezi detalii ↓</a>
       </div>
     </div>
-    <div class="hero-visual" aria-hidden="true">🌾</div>
+    <div class="hero-visual" aria-hidden="true">🚜</div>
   </div>
 </header>
 
+<!-- ✦ COUNTDOWN SECTION — Termen limită estimativ ✦ -->
 <section class="countdown-section" aria-label="Termen limită" data-section-id="countdown">
   <div class="countdown-label">⏱️ Termen limită estimativ</div>
-  <div class="countdown-title">Timp rămas până la închiderea apelului</div>
+  <div class="countdown-title">Timp rămas până la închiderea apelului DR12 AFIR</div>
   <div class="countdown-boxes">
     <div class="cd-box"><div class="num" id="cd-d">--</div><div class="unit">Zile</div></div>
     <div class="cd-box"><div class="num" id="cd-h">--</div><div class="unit">Ore</div></div>
     <div class="cd-box"><div class="num" id="cd-m">--</div><div class="unit">Minute</div></div>
     <div class="cd-box"><div class="num" id="cd-s">--</div><div class="unit">Secunde</div></div>
   </div>
-  <p class="cd-deadline">📅 Dată estimativă: <strong>15 octombrie 2025</strong> &nbsp;·&nbsp; <em>Verifică ghidul oficial pentru data exactă</em></p>
+  <p class="cd-deadline">📅 Dată estimativă: <strong>31 decembrie 2026</strong> &nbsp;·&nbsp; <em>Verifică ghidul oficial pentru data exactă</em></p>
 </section>
 
+<!-- ✦ SECTION: Detalii Program DR12 ✦ -->
 <section class="section" id="detalii">
   <div class="container">
     <div class="reveal">
       <div class="sec-label">Informații esențiale</div>
-      <h2 class="sec-title">Detalii Program</h2>
-      <p class="sec-sub">Parametrii de finanțare pe care trebuie să îi cunoști înainte de aplicare</p>
+      <h2 class="sec-title">Detalii Program DR12 AFIR</h2>
+      <p class="sec-sub">Parametrii de finanțare și condiții de eligibilitate pe care trebuie să îi cunoști înainte de aplicare</p>
     </div>
+    <!-- ✦ Info-grid cu 4 carduri principale ✦ -->
     <div class="info-grid">
       <div class="info-card reveal">
         <div class="ic-icon">💰</div>
         <div class="ic-title">Finanțare Maximă</div>
-        <div class="ic-val">2.000.000 €</div>
-        <div class="ic-sub">Sumă maximă nerambursabilă per proiect</div>
+        <div class="ic-val">80% sau 65%</div>
+        <div class="ic-sub">Ajutor nerambursabil pentru tineri sau fermieri recent instalați</div>
+      </div>
+      <div class="info-card reveal">
+        <div class="ic-icon">👥</div>
+        <div class="ic-title">Beneficiari</div>
+        <div class="ic-val">3 Categorii</div>
+        <div class="ic-sub">Tineri fermieri, recent instalați, absolvenți sM 6.1</div>
       </div>
       <div class="info-card reveal">
         <div class="ic-icon">📊</div>
-        <div class="ic-title">Intensitate Ajutor</div>
-        <div class="ic-val">Conf. ghidului</div>
-        <div class="ic-sub">Procent nerambursabil din cheltuielile eligibile</div>
+        <div class="ic-title">Dimensiune Fermă</div>
+        <div class="ic-val">Min. 12.000 SO</div>
+        <div class="ic-sub">Standard Output calculat conform SOC 2020</div>
       </div>
       <div class="info-card reveal">
-        <div class="ic-icon">📅</div>
-        <div class="ic-title">Perioadă</div>
-        <div class="ic-val">2024–2027</div>
-        <div class="ic-sub">Cadrul financiar multianual UE 2021–2027</div>
-      </div>
-      <div class="info-card reveal">
-        <div class="ic-icon">⚡</div>
-        <div class="ic-title">Durată Implementare</div>
-        <div class="ic-val">24–36 luni</div>
-        <div class="ic-sub">Termen estimativ de implementare a proiectului</div>
+        <div class="ic-icon">🔄</div>
+        <div class="ic-title">Contribuție Proprie</div>
+        <div class="ic-val">20% sau 35%</div>
+        <div class="ic-sub">Finanțarea beneficiarului din resurse proprii</div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- ✦ SECTION DARK: Beneficiari Eligibili DR12 ✦ -->
 <section class="section section-dark">
   <div class="container">
     <div class="reveal">
       <div class="sec-label" style="color:var(--orange)">Cine poate aplica</div>
       <h2 class="sec-title wh">Beneficiari Eligibili</h2>
-      <p class="sec-sub wh">Verifică dacă organizația sau afacerea ta se încadrează în categoriile de mai jos</p>
+      <p class="sec-sub wh">DR12 AFIR – 3 categorii principale de beneficiari. Forme juridice acceptate: PFA, II, IF, SRL (cu tânărul fermier administrator unic)</p>
     </div>
+    <!-- ✦ 3 Categorii de beneficiari ✦ -->
     <div class="elig-grid reveal">
-      <div class="elig-item"><div class="elig-check">✓</div><div class="elig-text">Fermieri individuali (PFA, II)</div></div>
-      <div class="elig-item"><div class="elig-check">✓</div><div class="elig-text">Exploatații agricole (SRL, SA)</div></div>
-      <div class="elig-item"><div class="elig-check">✓</div><div class="elig-text">Grupuri de producători agricoli</div></div>
-      <div class="elig-item"><div class="elig-check">✓</div><div class="elig-text">Cooperative agricole</div></div>
-      <div class="elig-item"><div class="elig-check">✓</div><div class="elig-text">Procesatori agroalimentari</div></div>
-      <div class="elig-item"><div class="elig-check">✓</div><div class="elig-text">Micro-întreprinderi din mediul rural</div></div>
-
+      <div class="elig-item"><div class="elig-check">1</div><div class="elig-text"><strong>Tinerii Fermieri</strong> – până la 40 ani – Finanțare 80% nerambursabilă</div></div>
+      <div class="elig-item"><div class="elig-check">2</div><div class="elig-text"><strong>Fermieri Recent Instalați</strong> – până la 45 ani – Finanțare 65% nerambursabilă</div></div>
+      <div class="elig-item"><div class="elig-check">3</div><div class="elig-text"><strong>Absolvenți sM 6.1</strong> – indiferent de vârstă – Au finalizat plan de afaceri prin PNDR</div></div>
+      <div class="elig-item"><div class="elig-check">✓</div><div class="elig-text"><strong>PFA</strong> – Persoană Fizică Autorizată</div></div>
+      <div class="elig-item"><div class="elig-check">✓</div><div class="elig-text"><strong>II</strong> – Întreprinzător Individual</div></div>
+      <div class="elig-item"><div class="elig-check">✓</div><div class="elig-text"><strong>IF</strong> – Exploatație Agricolă Individuală</div></div>
+      <div class="elig-item"><div class="elig-check">✓</div><div class="elig-text"><strong>SRL</strong> – Societate cu Răspundere Limitată (tinărul fermier = administrator unic)</div></div>
     </div>
   </div>
 </section>
 
+<!-- ✦ SECTION ALT: 4 Condiții Obligatorii ✦ -->
 <section class="section section-alt">
   <div class="container">
     <div class="reveal">
-      <div class="sec-label">Ce se finanțează</div>
-      <h2 class="sec-title">Activități Eligibile</h2>
-      <p class="sec-sub">Tipurile de investiții și cheltuieli care pot fi finanțate prin acest program</p>
+      <div class="sec-label">Cerințe esențiale</div>
+      <h2 class="sec-title">4 Condiții Obligatorii pentru Finanțare</h2>
+      <p class="sec-sub">Trebuie să îndeplinești TOATE aceste condiții pentru a obține finanțarea DR12 AFIR</p>
     </div>
+    <!-- ✦ 4 Condiții obligatorii ✦ -->
     <div class="activ-list reveal">
-      <div class="activ-item"><div class="activ-num">1</div><div class="activ-text">Construirea sau modernizarea adăposturilor zootehnice</div></div>
-      <div class="activ-item"><div class="activ-num">2</div><div class="activ-text">Achiziționarea de utilaje și echipamente agricole performante</div></div>
-      <div class="activ-item"><div class="activ-num">3</div><div class="activ-text">Instalarea de sisteme de irigații eficiente</div></div>
-      <div class="activ-item"><div class="activ-num">4</div><div class="activ-text">Procesarea și comercializarea produselor agricole</div></div>
-      <div class="activ-item"><div class="activ-num">5</div><div class="activ-text">Implementarea standardelor de calitate și siguranță alimentară</div></div>
-      <div class="activ-item"><div class="activ-num">6</div><div class="activ-text">Investiții în energia regenerabilă pentru exploatații agricole</div></div>
-
+      <div class="activ-item">
+        <div class="activ-num">1</div>
+        <div class="activ-text">
+          <strong>DIMENSIUNEA FERMEI</strong><br>
+          Exploatația trebuie să aibă o valoare economică de cel puțin 12.000 SO (Standard Output), calculată pe baza culturilor și animalelor deținute. Se calculează conform calculatorului SOC 2020.
+        </div>
+      </div>
+      <div class="activ-item">
+        <div class="activ-num">2</div>
+        <div class="activ-text">
+          <strong>PREGĂTIREA PROFESIONALĂ</strong><br>
+          Competențe profesionale pentru zootehnie sau agricultură recunoscute de ANC sau o formă de pregătire profesională dovedită prin diplomă de absolvire.
+        </div>
+      </div>
+      <div class="activ-item">
+        <div class="activ-num">3</div>
+        <div class="activ-text">
+          <strong>MATERIA PRIMĂ</strong><br>
+          Dacă alegi să procesezi produse (ex: faci gem din merele proprii), cel puțin 50% din fructe trebuie să provină din ferma ta.
+        </div>
+      </div>
+      <div class="activ-item">
+        <div class="activ-num">4</div>
+        <div class="activ-text">
+          <strong>CONTROLUL FERMEI</strong><br>
+          Tu, ca beneficiar, trebuie să fii cel care ia deciziile importante în fermă, având calitatea de Șef de exploatație.
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
+<!-- ✦ SECTION DARK: 5 Categorii de Investiții ✦ -->
+<section class="section section-dark">
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-label" style="color:var(--orange)">Ce poți construi sau cumpăra</div>
+      <h2 class="sec-title wh">5 Categorii de Investiții Eligibile</h2>
+      <p class="sec-sub wh">Tipurile de investiții și cheltuieli care pot fi finanțate prin DR12 AFIR</p>
+    </div>
+    <!-- ✦ 5 Categorii de investiții ✦ -->
+    <div class="elig-grid reveal">
+      <div class="elig-item">
+        <div class="elig-check">🚜</div>
+        <div class="elig-text"><strong>UTILAJE ȘI ECHIPAMENTE</strong> – Achiziția unui tractor performant corelat cu suprafața fermei, o combină de recoltat sau sisteme automate de furajare. Utilajele trebuie să fie noi și corelate cu dimensiunea exploatației.</div>
+      </div>
+      <div class="elig-item">
+        <div class="elig-check">📡</div>
+        <div class="elig-text"><strong>AGRICULTURĂ DE PRECIZIE</strong> – Instalarea de sisteme GPS pe utilaje, utilizarea dronelor pentru monitorizarea culturilor sau senzori IoT pentru umiditatea solului (Agricultură 4.0). Permit optimizarea resurselor și creșterea eficienței.</div>
+      </div>
+      <div class="elig-item">
+        <div class="elig-check">🏭</div>
+        <div class="elig-text"><strong>PROCESARE ȘI MARKETING</strong> – Amenajarea unei mici unități de fabricare a brânzeturilor în fermă sau achiziția unei rulote alimentare pentru vânzarea directă a produselor proprii. Atenție: cel puțin 50% din materia primă utilizată trebuie să provină din propria fermă.</div>
+      </div>
+      <div class="elig-item">
+        <div class="elig-check">☀️</div>
+        <div class="elig-text"><strong>ENERGIE ȘI MEDIU</strong> – Panouri fotovoltaice montate pe acoperișul fermei pentru consum propriu sau platforme de gestionare a gunoiului de grajd. Investițiile în energie regenerabilă contribuie la reducerea costurilor operaționale.</div>
+      </div>
+      <div class="elig-item">
+        <div class="elig-check">🏗️</div>
+        <div class="elig-text"><strong>CONSTRUCȚII ȘI MODERNIZĂRI</strong> – Construirea unui grajd modern pentru vaci de lapte, instalarea de solarii profesionale cu structură metalică sau depozite frigorifice pentru fructe. Contribuie la creșterea capacității de producție.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ✦ SECTION ALT: Cheltuieli Eligibile vs Neeligibile ✦ -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-label">Buget și Cheltuieli</div>
+      <h2 class="sec-title">Cheltuieli Eligibile vs Neeligibile</h2>
+      <p class="sec-sub">Cunoaște exact ce cheltuieli pot fi finanțate și care trebuie acoperite de beneficiar</p>
+    </div>
+    <!-- ✦ Two-column layout: Eligible vs Non-eligible ✦ -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:40px;">
+      <div class="reveal">
+        <div style="background:rgba(26,58,13,0.1);border-left:4px solid var(--c1);padding:24px;border-radius:var(--rs);">
+          <h3 style="color:var(--c1);font-weight:700;margin-bottom:16px;font-size:1.1rem;">✓ ELIGIBLE (Finanțate)</h3>
+          <ul style="list-style:none;padding:0;">
+            <li style="padding:8px 0;font-size:0.9rem;color:var(--text-soft);"><strong>Construcții noi și modernizarea</strong> celor existente</li>
+            <li style="padding:8px 0;font-size:0.9rem;color:var(--text-soft);"><strong>Utilaje noi</strong>, inclusiv prin leasing financiar (cu condiția ca bunul să devină proprietatea fermierului la final)</li>
+            <li style="padding:8px 0;font-size:0.9rem;color:var(--text-soft);"><strong>Costuri generale</strong> (proiectare, consultanță, avize): max. 10% din proiecte cu construcții și 3% pentru restul</li>
+            <li style="padding:8px 0;font-size:0.9rem;color:var(--text-soft);"><strong>Software-uri, licențe</strong> și alte aplicații informatice necesare activității fermei</li>
+          </ul>
+        </div>
+      </div>
+      <div class="reveal">
+        <div style="background:rgba(232,100,42,0.1);border-left:4px solid var(--orange);padding:24px;border-radius:var(--rs);">
+          <h3 style="color:var(--orange);font-weight:700;margin-bottom:16px;font-size:1.1rem;">✗ NEELIGIBILE (Plătite de Beneficiar)</h3>
+          <ul style="list-style:none;padding:0;">
+            <li style="padding:8px 0;font-size:0.9rem;color:var(--text-soft);"><strong>Bunuri și utilaje second-hand</strong></li>
+            <li style="padding:8px 0;font-size:0.9rem;color:var(--text-soft);"><strong>Cumpărarea de terenuri</strong> sau clădiri deja construite</li>
+            <li style="padding:8px 0;font-size:0.9rem;color:var(--text-soft);"><strong>Construcția sau renovarea locuinței</strong> proprii</li>
+            <li style="padding:8px 0;font-size:0.9rem;color:var(--text-soft);"><strong>Animale de reproducție</strong> și plante anuale</li>
+            <li style="padding:8px 0;font-size:0.9rem;color:var(--text-soft);"><strong>TVA recuperabil</strong> (trebuie acoperit de beneficiar)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- ✦ Important TVA note ✦ -->
+    <div style="background:rgba(232,100,42,0.08);border:1px solid rgba(232,100,42,0.2);border-radius:var(--rs);padding:20px;margin-top:32px;">
+      <p style="font-size:0.95rem;color:var(--text-main);"><strong>ℹ️ IMPORTANT TVA:</strong> TVA-ul nerecuperabil se include în bugetul eligibil, însă TVA-ul recuperabil este cheltuială neeligibilă și trebuie acoperit integral de beneficiar.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ✦ SECTION DARK: Structura Bugetului ✦ -->
+<section class="section section-dark">
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-label" style="color:var(--orange)">Calcul și Finanțare</div>
+      <h2 class="sec-title wh">Structura Bugetului DR12</h2>
+      <p class="sec-sub wh">Cum se calculează bugetul total al proiectului și cum se distribuie finanțarea</p>
+    </div>
+    <!-- ✦ Budget structure explanation ✦ -->
+    <div class="reveal" style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:var(--rl);padding:32px;margin-top:32px;">
+      <div style="color:rgba(255,255,255,0.85);font-size:0.95rem;line-height:1.8;">
+        <p style="margin-bottom:16px;"><strong style="color:white;">Buget Total Eligibil</strong> = Ajutor nerambursabil (80% sau 65%) + Contribuția proprie (20% sau 35%)</p>
+        <p style="margin-bottom:16px;margin-left:20px;color:rgba(255,255,255,0.7);">Ex: Dacă cheltuielile sunt 100.000 EUR și ești tânăr fermier (80%), atunci:<br>• Ajutor nerambursabil: 80.000 EUR<br>• Contribuția ta: 20.000 EUR</p>
+        <p style="margin-bottom:16px;"><strong style="color:white;">TVA (21%)</strong> se calculează la întregul Buget Total Eligibil</p>
+        <p style="margin-bottom:16px;margin-left:20px;color:rgba(255,255,255,0.7);">Ex: 100.000 EUR x 21% = 21.000 EUR TVA</p>
+        <p style="margin-bottom:16px;"><strong style="color:white;">Buget Total al Proiectului</strong> = Buget Total Eligibil + TVA</p>
+        <p style="margin-left:20px;color:rgba(255,255,255,0.7);">Ex: 100.000 EUR + 21.000 EUR = 121.000 EUR (buget total)</p>
+        <p style="margin-top:20px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.1);"><strong style="color:var(--gold);">⚠️ IMPORTANT:</strong> Pentru achizițiile intracomunitare (din țări membre UE) nu plătiți TVA!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ✦ SECTION ALT: Evitarea Condițiilor Create Artificial ✦ -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-label">Atenție la Eligibilitate</div>
+      <h2 class="sec-title">Evitarea Condițiilor Create Artificial</h2>
+      <p class="sec-sub">Este esențial ca beneficiarii să NU creeze artificial condiții doar pentru a se încadra în program</p>
+    </div>
+    <!-- ✦ 4 carduri cu avertismente ✦ -->
+    <div class="info-grid reveal">
+      <div class="info-card reveal" style="border-left:4px solid var(--orange);">
+        <div class="ic-icon">🎯</div>
+        <div class="ic-title">Eligibilitate Reală</div>
+        <div class="ic-sub">Beneficiarii trebuie să demonstreze o necesitate reală și o intenție legitimă de a opera în agricultură, nu doar o încercare de a bifa cerințe administrative.</div>
+      </div>
+      <div class="info-card reveal" style="border-left:4px solid var(--orange);">
+        <div class="ic-icon">⚠️</div>
+        <div class="ic-title">Risc de Neconformitate</div>
+        <div class="ic-sub">Orice ajustare făcută doar pentru a bifa cerințe poate fi identificată în procesul de evaluare și poate duce la respingere.</div>
+      </div>
+      <div class="info-card reveal" style="border-left:4px solid var(--orange);">
+        <div class="ic-icon">🔍</div>
+        <div class="ic-title">Verificări Suplimentare</div>
+        <div class="ic-sub">Orice suspiciune de încercare de manipulare a criteriilor poate atrage verificări mai aprofundate și chiar respingerea definitivă a finanțării.</div>
+      </div>
+      <div class="info-card reveal" style="border-left:4px solid var(--orange);">
+        <div class="ic-icon">💡</div>
+        <div class="ic-title">Consultanță Previne Erorile</div>
+        <div class="ic-sub">O abordare strategică și transparență în procesul de aplicare este cheia succesului. Consultanța FABER te protejează de aceste pitfalls.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ✦ SECTION DARK: PDF Download / Broșură ✦ -->
 <section class="section section-dark" aria-label="Descarcă broșura">
   <div class="container">
     <div class="pdf-box" data-section-id="pdf-brosura">
       <div class="pdf-icon">📄</div>
-      <div class="pdf-title">Broșură & Ghid Solicitant</div>
+      <div class="pdf-title">Ghid Complet DR12 AFIR</div>
       <div class="pdf-sub">
-        Descarcă ghidul complet al solicitantului și broșura informativă pentru DR 12 / AFIR – Investiții Agricole.<br>
+        Descarcă ghidul complet al solicitantului și broșura informativă pentru DR 12 AFIR – Instalarea Tinerilor Fermieri.<br>
         Documentele vor fi disponibile la lansarea oficială a apelului.
       </div>
       <div class="pdf-btn-dis" aria-disabled="true" role="button" tabindex="-1">
         📥 Descarcă Ghidul Solicitantului (PDF)
       </div>
       <p class="pdf-note">⚠️ Documentul va fi activat la lansarea oficială a apelului de proiecte</p>
-      <!-- PLACEHOLDER: inlocuieste div-ul de sus cu <a href="ghid-dr12-afir.html.pdf" class="btn-orange">📥 Descarcă (PDF, X MB)</a> -->
     </div>
   </div>
 </section>
 
+<!-- ✦ CTA SECTION — Call to Action ✦ -->
 <section class="cta-section">
-  <h2>Ești eligibil? Aplică cu FABER!</h2>
-  <p>Echipa noastră analizează gratuit situația ta și îți confirmă în 24 ore dacă te încadrezi în criteriile de eligibilitate.</p>
+  <h2>Pregătit să aplici la DR12 AFIR?</h2>
+  <p>Echipa FABER analizează gratuit situația ta și îți confirmă în 24 ore dacă te încadrezi în criteriile de eligibilitate. Facem verificarea dimensionii fermei, a pregătirii profesionale și a tuturor condițiilor obligatorii.</p>
   <a href="index.html#contact" class="btn-orange" style="font-size:1.05rem;padding:16px 36px;">🚀 Solicită Consultanța Gratuită</a>
 </section>
 
+<!-- ✦ FOOTER ✦ -->
 <footer class="page-footer">
-  <p>© 2025 FABER – Atelier de Consultanță &nbsp;·&nbsp; <a href="index.html">Acasă</a> &nbsp;·&nbsp; <a href="index.html#finantare">Toate programele</a> &nbsp;·&nbsp; <a href="termeni-si-conditii.html">Termeni</a> &nbsp;·&nbsp; <a href="gdpr.html">GDPR</a></p>
+  <p>© 2026 FABER – Atelier de Consultanță &nbsp;·&nbsp; <a href="index.html">Acasă</a> &nbsp;·&nbsp; <a href="index.html#finantare">Toate programele</a> &nbsp;·&nbsp; <a href="termeni-si-conditii.html">Termeni</a> &nbsp;·&nbsp; <a href="gdpr.html">GDPR</a></p>
+  <p style="margin-top:12px;"><strong>Contact:</strong> Tel. <a href="tel:+40769828338">0769 828 338</a> / <a href="tel:+40753326229">0753 326 229</a> &nbsp;·&nbsp; Email: <a href="mailto:atelier.consultanta@gmail.com">atelier.consultanta@gmail.com</a></p>
 </footer>
 
 <script>
-  var target = new Date('2025-10-15T23:59:00');
+  // ✦ Countdown timer — Calcul timp rămas până la data limită ✦
+  var target = new Date('2026-12-31T23:59:00');
   function tick() {
     var diff = target - new Date();
     if (diff <= 0) {
@@ -268,6 +471,7 @@
   }
   tick(); setInterval(tick, 1000);
 
+  // ✦ Intersection Observer — Reveal animations pentru secțiuni ✦
   var obs = new IntersectionObserver(function(entries){
     entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('revealed'); obs.unobserve(e.target); } });
   },{threshold:0.1,rootMargin:'0px 0px -30px 0px'});

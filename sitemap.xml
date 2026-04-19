@@ -6,7 +6,7 @@
   <!-- ✦ Pagina principală ✦ -->
   <url>
     <loc>https://atelierdeconsultanta.ro/</loc>
-    <lastmod>2026-04-13</lastmod>
+    <lastmod>2026-04-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -14,7 +14,7 @@
   <!-- ✦ Blog ✦ -->
   <url>
     <loc>https://atelierdeconsultanta.ro/blog.html</loc>
-    <lastmod>2026-04-13</lastmod>
+    <lastmod>2026-04-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -22,49 +22,57 @@
   <!-- ✦ Programe de finanțare ✦ -->
   <url>
     <loc>https://atelierdeconsultanta.ro/afir-autoconsum-agroalimentar.html</loc>
-    <lastmod>2026-04-13</lastmod>
+    <lastmod>2026-04-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://atelierdeconsultanta.ro/autoconsum-publici.html</loc>
-    <lastmod>2026-04-13</lastmod>
+    <lastmod>2026-04-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://atelierdeconsultanta.ro/digitalizare-imm.html</loc>
-    <lastmod>2026-04-13</lastmod>
+    <lastmod>2026-04-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://atelierdeconsultanta.ro/dr12-afir.html</loc>
-    <lastmod>2026-04-13</lastmod>
+    <lastmod>2026-04-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://atelierdeconsultanta.ro/dr14.html</loc>
-    <lastmod>2026-04-13</lastmod>
+    <lastmod>2026-04-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://atelierdeconsultanta.ro/femeia-antreprenor-2026.html</loc>
-    <lastmod>2026-04-13</lastmod>
+    <lastmod>2026-04-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://atelierdeconsultanta.ro/por-adr-nord-est.html</loc>
-    <lastmod>2026-04-13</lastmod>
+    <lastmod>2026-04-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- ✦ Programe speciale ✦ -->
+  <url>
+    <loc>https://atelierdeconsultanta.ro/pro-infra.html</loc>
+    <lastmod>2026-04-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -72,21 +80,21 @@
   <!-- ✦ Pagini legale ✦ -->
   <url>
     <loc>https://atelierdeconsultanta.ro/gdpr.html</loc>
-    <lastmod>2026-04-13</lastmod>
+    <lastmod>2026-04-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
   <url>
     <loc>https://atelierdeconsultanta.ro/politica-de-confidentialitate.html</loc>
-    <lastmod>2026-04-13</lastmod>
+    <lastmod>2026-04-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
   <url>
     <loc>https://atelierdeconsultanta.ro/termeni-si-conditii.html</loc>
-    <lastmod>2026-04-13</lastmod>
+    <lastmod>2026-04-19</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>

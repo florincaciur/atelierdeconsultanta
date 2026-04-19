@@ -2,115 +2,694 @@
 <html lang="ro">
 <head>
   <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Autoconsum energie regenerabilă pentru instituții publice – finanțare 100% nerambursabilă pentru panouri fotovoltaice la primării, spitale, școli. FABER." />
-  <meta name="keywords" content="autoconsum institutii publice, panouri fotovoltaice primarii, energie verde institutii publice" />
-  <meta property="og:title" content="Autoconsum Publici – Energie Verde | FABER" />
-  <meta property="og:description" content="Autoconsum energie regenerabilă pentru instituții publice – finanțare 100% nerambursabilă pentru panouri fotovoltaice la primării, spitale, școli. FABER." />
+  <meta name="description" content="Finanțare 100% pentru sisteme fotovoltaice la entități publice. Ajutor maxim 10 milioane EUR, procedură primul venit-primul servit. Consultanță FABER." />
+  <meta name="keywords" content="sisteme fotovoltaice entitati publice, Fondul pentru Modernizare, autoconsum publici, panouri solare institutii publice, finantare 100%" />
+  <meta property="og:title" content="Sisteme Fotovoltaice pentru Entități Publice | Fondul pentru Modernizare" />
+  <meta property="og:description" content="Finanțare 100% pentru sisteme fotovoltaice la entități publice. Ajutor maxim 10 milioane EUR, procedură primul venit-primul servit. Consultanță FABER." />
   <meta property="og:type" content="website" />
-  <title>Autoconsum Publici – Energie Verde | FABER – Atelier de Consultanță</title>
+  <title>Sisteme Fotovoltaice pentru Entități Publice | Fondul pentru Modernizare</title>
   <link rel="canonical" href="https://atelierdeconsultanta.ro/autoconsum-publici.html" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <meta name="robots" content="index, follow" />
+  <meta name="twitter:card" content="summary_large_image" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Schema.org structured data pentru GovernmentService -->
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"GovernmentService","name":"Autoconsum Publici – Energie Verde","description":"Autoconsum energie regenerabilă pentru instituții publice – finanțare 100% nerambursabilă pentru panouri fotovoltaice la primării, spitale, școli. FABER.","provider":{"@type":"ProfessionalService","name":"FABER – Atelier de Consultanță","url":"https://atelierdeconsultanta.ro"}}
+  {
+    "@context":"https://schema.org",
+    "@type":"GovernmentService",
+    "name":"Sisteme Fotovoltaice pentru Entități Publice – Fondul pentru Modernizare",
+    "description":"Ministerul Energiei finanțează prin Fondul pentru Modernizare implementarea de sisteme fotovoltaice pentru asigurarea autoconsumului la entitățile publice. Procedura este primul venit – primul servit.",
+    "provider":{
+      "@type":"ProfessionalService",
+      "name":"FABER – Atelier de Consultanță",
+      "url":"https://atelierdeconsultanta.ro"
+    }
+  }
   </script>
+
   <style>
-    :root{--navy:#0d1f3c;--orange:#e8642a;--gold:#f5a623;--white:#ffffff;--gray-100:#f8f9fb;--gray-200:#e8edf5;--text-main:#1a2540;--text-soft:#4a5568;--c1:#3c1a0d;--c2:#6a2a1a;--rs:8px;--rm:16px;--rl:24px;--tr:0.3s cubic-bezier(0.4,0,0.2,1);}
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-    html{scroll-behavior:smooth;}
-    body{font-family:'Inter',sans-serif;color:var(--text-main);background:var(--white);line-height:1.6;overflow-x:hidden;}
-    a{color:inherit;text-decoration:none;}
-    button{cursor:pointer;border:none;background:none;font-family:inherit;}
-    @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms!important;transition-duration:0.01ms!important;}}
+    /* CSS Variables - design system FABER */
+    :root {
+      --navy: #0d1f3c;
+      --orange: #e8642a;
+      --gold: #f5a623;
+      --white: #ffffff;
+      --gray-100: #f8f9fb;
+      --gray-200: #e8edf5;
+      --text-main: #1a2540;
+      --text-soft: #4a5568;
+      --c1: #0a2218;
+      --c2: #1a3a28;
+      --rs: 8px;
+      --rm: 16px;
+      --rl: 24px;
+      --tr: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
 
-    .topbar{background:rgba(13,31,60,0.96);padding:0 24px;height:68px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,0.08);}
-    .topbar-logo{color:white;font-size:1.2rem;font-weight:800;}
-    .topbar-logo span{color:var(--orange);}
-    .topbar-nav{display:flex;gap:6px;align-items:center;}
-    .topbar-nav a{color:rgba(255,255,255,0.75);font-size:0.85rem;font-weight:500;padding:7px 13px;border-radius:var(--rs);transition:color var(--tr),background var(--tr);}
-    .topbar-nav a:hover{color:white;background:rgba(255,255,255,0.08);}
-    .topbar-nav .cta{background:var(--orange);color:white!important;font-weight:600;padding:8px 18px;}
-    .topbar-nav .cta:hover{background:#c4541f;}
+    /* Reset și bază */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-    .hero{background:linear-gradient(135deg,var(--c1) 0%,var(--c2) 100%);padding:80px 24px 60px;position:relative;overflow:hidden;}
-    .hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,0.04) 1px,transparent 1px);background-size:36px 36px;pointer-events:none;}
-    .hero-deco{position:absolute;right:-100px;top:-100px;width:500px;height:500px;border-radius:50%;background:rgba(255,255,255,0.04);pointer-events:none;}
-    .hero-inner{max-width:1100px;margin:0 auto;position:relative;z-index:2;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center;}
-    .hero-tag{display:inline-block;background:rgba(232,100,42,0.2);border:1px solid rgba(232,100,42,0.4);color:var(--gold);font-size:0.72rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:6px 14px;border-radius:100px;margin-bottom:20px;}
-    .hero h1{font-size:clamp(2rem,4vw,3.2rem);font-weight:900;color:white;line-height:1.15;letter-spacing:-1px;margin-bottom:20px;}
-    .hero-sub{font-size:1.05rem;color:rgba(255,255,255,0.75);line-height:1.7;margin-bottom:32px;max-width:580px;}
-    .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;}
-    .btn-orange{display:inline-flex;align-items:center;gap:8px;background:var(--orange);color:white;padding:14px 28px;border-radius:var(--rs);font-size:0.95rem;font-weight:700;box-shadow:0 8px 24px rgba(232,100,42,0.45);transition:background var(--tr),transform var(--tr);position:relative;overflow:hidden;}
-    .btn-orange::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.2),transparent);transform:translateX(-100%);transition:transform 0.5s;}
-    .btn-orange:hover::after{transform:translateX(100%);}
-    .btn-orange:hover{background:#c4541f;transform:translateY(-2px);}
-    .btn-ghost{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.25);color:white;padding:14px 28px;border-radius:var(--rs);font-size:0.95rem;font-weight:600;backdrop-filter:blur(8px);transition:background var(--tr);}
-    .btn-ghost:hover{background:rgba(255,255,255,0.18);}
-    .hero-visual{width:180px;height:180px;border-radius:50%;flex-shrink:0;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;font-size:5.5rem;}
+    html {
+      scroll-behavior: smooth;
+    }
 
-    .countdown-section{background:var(--navy);padding:40px 24px;text-align:center;}
-    .countdown-label{font-size:0.75rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--orange);margin-bottom:8px;}
-    .countdown-title{color:white;font-size:1.1rem;font-weight:600;margin-bottom:24px;}
-    .countdown-boxes{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
-    .cd-box{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);border-radius:var(--rm);padding:20px 28px;min-width:100px;text-align:center;}
-    .cd-box .num{font-size:2.8rem;font-weight:900;color:var(--gold);line-height:1;font-variant-numeric:tabular-nums;}
-    .cd-box .unit{font-size:0.75rem;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:1px;margin-top:4px;}
-    .cd-deadline{color:rgba(255,255,255,0.5);font-size:0.82rem;margin-top:16px;}
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text-main);
+      background: var(--white);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
 
-    .section{padding:80px 24px;}
-    .section-alt{background:var(--gray-100);}
-    .section-dark{background:linear-gradient(135deg,var(--navy) 0%,#112a50 100%);}
-    .container{max-width:1100px;margin:0 auto;}
-    .sec-label{font-size:0.72rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--orange);margin-bottom:10px;}
-    .sec-title{font-size:clamp(1.7rem,3vw,2.5rem);font-weight:800;color:var(--text-main);letter-spacing:-0.5px;margin-bottom:14px;line-height:1.2;}
-    .sec-title.wh{color:white;}
-    .sec-sub{font-size:1rem;color:var(--text-soft);max-width:580px;margin-bottom:40px;line-height:1.7;}
-    .sec-sub.wh{color:rgba(255,255,255,0.65);}
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
-    .info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;}
-    .info-card{background:white;border-radius:var(--rm);padding:28px;border:1px solid var(--gray-200);transition:transform var(--tr),box-shadow var(--tr);}
-    .info-card:hover{transform:translateY(-4px);box-shadow:0 8px 32px rgba(13,31,60,0.14);}
-    .info-card .ic-icon{font-size:2rem;margin-bottom:14px;}
-    .info-card .ic-title{font-size:0.9rem;font-weight:700;margin-bottom:6px;color:var(--text-soft);}
-    .info-card .ic-val{font-size:1.05rem;font-weight:800;color:var(--orange);}
-    .info-card .ic-sub{font-size:0.78rem;color:var(--text-soft);margin-top:4px;}
+    button {
+      cursor: pointer;
+      border: none;
+      background: none;
+      font-family: inherit;
+    }
 
-    .elig-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;}
-    .elig-item{display:flex;gap:10px;align-items:flex-start;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:var(--rs);padding:14px 16px;}
-    .elig-check{width:22px;height:22px;border-radius:50%;flex-shrink:0;background:rgba(232,100,42,0.25);display:flex;align-items:center;justify-content:center;color:var(--orange);font-size:0.7rem;font-weight:700;}
-    .elig-text{color:rgba(255,255,255,0.85);font-size:0.875rem;line-height:1.4;}
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
 
-    .activ-list{display:flex;flex-direction:column;gap:12px;}
-    .activ-item{display:flex;gap:14px;align-items:flex-start;background:white;border:1px solid var(--gray-200);border-radius:var(--rs);padding:16px 20px;}
-    .activ-num{width:30px;height:30px;border-radius:50%;flex-shrink:0;background:linear-gradient(135deg,var(--orange),var(--gold));display:flex;align-items:center;justify-content:center;color:white;font-size:0.8rem;font-weight:700;}
-    .activ-text{font-size:0.9rem;color:var(--text-soft);line-height:1.5;padding-top:4px;}
+    /* Top Navigation Bar */
+    .topbar {
+      background: rgba(13, 31, 60, 0.96);
+      padding: 0 24px;
+      height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
 
-    .pdf-box{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:var(--rl);padding:40px;text-align:center;margin-top:40px;}
-    .pdf-icon{font-size:3.5rem;margin-bottom:16px;}
-    .pdf-title{color:white;font-size:1.3rem;font-weight:800;margin-bottom:8px;}
-    .pdf-sub{color:rgba(255,255,255,0.6);font-size:0.9rem;margin-bottom:24px;}
-    .pdf-btn-dis{display:inline-flex;align-items:center;gap:10px;background:var(--orange);color:white;padding:14px 28px;border-radius:var(--rs);font-weight:700;font-size:0.9rem;opacity:0.45;cursor:not-allowed;}
-    .pdf-note{font-size:0.78rem;color:rgba(255,255,255,0.4);margin-top:12px;}
+    .topbar-logo {
+      display: flex;
+      align-items: center;
+      color: white;
+      font-size: 1rem;
+      font-weight: 800;
+    }
 
-    .cta-section{text-align:center;padding:80px 24px;background:linear-gradient(135deg,#0a1628 0%,var(--navy) 100%);}
-    .cta-section h2{color:white;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:900;margin-bottom:16px;}
-    .cta-section p{color:rgba(255,255,255,0.65);font-size:1rem;margin-bottom:36px;max-width:540px;margin-left:auto;margin-right:auto;}
+    .topbar-logo svg {
+      height: 44px;
+      width: auto;
+    }
 
-    .page-footer{background:#060f20;padding:32px 24px;text-align:center;}
-    .page-footer p{color:rgba(255,255,255,0.35);font-size:0.8rem;}
-    .page-footer a{color:var(--orange);}
+    .topbar-nav {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+    }
 
-    .reveal{opacity:0;transform:translateY(24px);transition:opacity 0.7s cubic-bezier(0.4,0,0.2,1),transform 0.7s cubic-bezier(0.4,0,0.2,1);}
-    .reveal.revealed{opacity:1;transform:translateY(0);}
+    .topbar-nav a {
+      color: rgba(255, 255, 255, 0.75);
+      font-size: 0.85rem;
+      font-weight: 500;
+      padding: 7px 13px;
+      border-radius: var(--rs);
+      transition: color var(--tr), background var(--tr);
+    }
 
-    @media(max-width:768px){.hero-inner{grid-template-columns:1fr;}.hero-visual{display:none;}.topbar-nav a:not(.cta){display:none;}}
+    .topbar-nav a:hover {
+      color: white;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .topbar-nav .cta {
+      background: var(--orange);
+      color: white !important;
+      font-weight: 600;
+      padding: 8px 18px;
+    }
+
+    .topbar-nav .cta:hover {
+      background: #c4541f;
+    }
+
+    /* Hero Section cu tema verde-solar */
+    .hero {
+      background: linear-gradient(135deg, var(--c1) 0%, var(--c2) 100%);
+      padding: 80px 24px 60px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+      background-size: 36px 36px;
+      pointer-events: none;
+    }
+
+    .hero-deco {
+      position: absolute;
+      right: -100px;
+      top: -100px;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.04);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      background: rgba(232, 100, 42, 0.2);
+      border: 1px solid rgba(232, 100, 42, 0.4);
+      color: var(--gold);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 100px;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 900;
+      color: white;
+      line-height: 1.15;
+      letter-spacing: -1px;
+      margin-bottom: 20px;
+    }
+
+    .hero-sub {
+      font-size: 1.05rem;
+      color: rgba(255, 255, 255, 0.75);
+      line-height: 1.7;
+      margin-bottom: 32px;
+      max-width: 580px;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn-orange {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--orange);
+      color: white;
+      padding: 14px 28px;
+      border-radius: var(--rs);
+      font-size: 0.95rem;
+      font-weight: 700;
+      box-shadow: 0 8px 24px rgba(232, 100, 42, 0.45);
+      transition: background var(--tr), transform var(--tr);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-orange::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transform: translateX(-100%);
+      transition: transform 0.5s;
+    }
+
+    .btn-orange:hover::after {
+      transform: translateX(100%);
+    }
+
+    .btn-orange:hover {
+      background: #c4541f;
+      transform: translateY(-2px);
+    }
+
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      color: white;
+      padding: 14px 28px;
+      border-radius: var(--rs);
+      font-size: 0.95rem;
+      font-weight: 600;
+      backdrop-filter: blur(8px);
+      transition: background var(--tr);
+    }
+
+    .btn-ghost:hover {
+      background: rgba(255, 255, 255, 0.18);
+    }
+
+    .hero-visual {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 5.5rem;
+    }
+
+    /* Info Status Section */
+    .info-status {
+      background: var(--navy);
+      padding: 40px 24px;
+      text-align: center;
+    }
+
+    .status-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 8px;
+    }
+
+    .status-title {
+      color: white;
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    .status-badge {
+      display: inline-block;
+      background: rgba(232, 100, 42, 0.15);
+      border: 1px solid rgba(232, 100, 42, 0.3);
+      color: var(--orange);
+      padding: 8px 16px;
+      border-radius: 100px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .status-desc {
+      color: rgba(255, 255, 255, 0.65);
+      font-size: 0.9rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Sections */
+    .section {
+      padding: 80px 24px;
+    }
+
+    .section-alt {
+      background: var(--gray-100);
+    }
+
+    .section-dark {
+      background: linear-gradient(135deg, var(--navy) 0%, #112a50 100%);
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .sec-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 10px;
+    }
+
+    .sec-title {
+      font-size: clamp(1.7rem, 3vw, 2.5rem);
+      font-weight: 800;
+      color: var(--text-main);
+      letter-spacing: -0.5px;
+      margin-bottom: 14px;
+      line-height: 1.2;
+    }
+
+    .sec-title.wh {
+      color: white;
+    }
+
+    .sec-sub {
+      font-size: 1rem;
+      color: var(--text-soft);
+      max-width: 580px;
+      margin-bottom: 40px;
+      line-height: 1.7;
+    }
+
+    .sec-sub.wh {
+      color: rgba(255, 255, 255, 0.65);
+    }
+
+    /* Info Grid Cards */
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .info-card {
+      background: white;
+      border-radius: var(--rm);
+      padding: 28px;
+      border: 1px solid var(--gray-200);
+      transition: transform var(--tr), box-shadow var(--tr);
+    }
+
+    .info-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 32px rgba(13, 31, 60, 0.14);
+    }
+
+    .info-card .ic-icon {
+      font-size: 2rem;
+      margin-bottom: 14px;
+    }
+
+    .info-card .ic-title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: var(--text-soft);
+    }
+
+    .info-card .ic-val {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--orange);
+    }
+
+    .info-card .ic-sub {
+      font-size: 0.78rem;
+      color: var(--text-soft);
+      margin-top: 4px;
+    }
+
+    /* Beneficiary List (dark section) */
+    .benef-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .benef-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--rs);
+      padding: 14px 16px;
+    }
+
+    .benef-icon {
+      width: 22px;
+      height: 22px;
+      flex-shrink: 0;
+      border-radius: 50%;
+      background: rgba(232, 100, 42, 0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--orange);
+      font-size: 0.7rem;
+      font-weight: 700;
+    }
+
+    .benef-text {
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 0.875rem;
+      line-height: 1.4;
+    }
+
+    /* Activity Items */
+    .activ-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .activ-item {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      background: white;
+      border: 1px solid var(--gray-200);
+      border-radius: var(--rs);
+      padding: 16px 20px;
+    }
+
+    .activ-num {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+
+    .activ-text {
+      font-size: 0.9rem;
+      color: var(--text-soft);
+      line-height: 1.5;
+      padding-top: 4px;
+    }
+
+    /* Eligible/Ineligible Table */
+    .elig-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      border-radius: var(--rm);
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(13, 31, 60, 0.08);
+    }
+
+    .elig-table thead {
+      background: linear-gradient(135deg, var(--orange), var(--gold));
+      color: white;
+    }
+
+    .elig-table th {
+      padding: 14px 16px;
+      text-align: left;
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+
+    .elig-table td {
+      padding: 12px 16px;
+      border-top: 1px solid var(--gray-200);
+      font-size: 0.875rem;
+      color: var(--text-main);
+    }
+
+    .elig-table tr:hover {
+      background: var(--gray-100);
+    }
+
+    .elig-cell-yes {
+      color: #10b981;
+      font-weight: 600;
+    }
+
+    .elig-cell-no {
+      color: #ef4444;
+      font-weight: 600;
+    }
+
+    /* Non-eligible List (dark section) */
+    .nonelig-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .nonelig-item {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(232, 100, 42, 0.2);
+      border-radius: var(--rs);
+      padding: 12px 16px;
+    }
+
+    .nonelig-icon {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      color: var(--orange);
+      font-size: 0.9rem;
+      padding-top: 2px;
+    }
+
+    .nonelig-text {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 0.875rem;
+      line-height: 1.4;
+    }
+
+    /* Calculation Box */
+    .calc-box {
+      background: white;
+      border: 1px solid var(--gray-200);
+      border-radius: var(--rm);
+      padding: 28px;
+      margin-top: 32px;
+    }
+
+    .calc-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 12px;
+    }
+
+    .calc-desc {
+      font-size: 0.9rem;
+      color: var(--text-soft);
+      line-height: 1.6;
+    }
+
+    /* CTA Section */
+    .cta-section {
+      text-align: center;
+      padding: 80px 24px;
+      background: linear-gradient(135deg, #0a1628 0%, var(--navy) 100%);
+    }
+
+    .cta-section h2 {
+      color: white;
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      font-weight: 900;
+      margin-bottom: 16px;
+    }
+
+    .cta-section p {
+      color: rgba(255, 255, 255, 0.65);
+      font-size: 1rem;
+      margin-bottom: 36px;
+      max-width: 540px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Footer */
+    .page-footer {
+      background: #060f20;
+      padding: 32px 24px;
+      text-align: center;
+    }
+
+    .page-footer p {
+      color: rgba(255, 255, 255, 0.35);
+      font-size: 0.8rem;
+    }
+
+    .page-footer a {
+      color: var(--orange);
+    }
+
+    /* Reveal Animation */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1),
+                  transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .reveal.revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      .hero-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-visual {
+        display: none;
+      }
+
+      .topbar-nav a:not(.cta) {
+        display: none;
+      }
+
+      .elig-table {
+        font-size: 0.8rem;
+      }
+
+      .elig-table th,
+      .elig-table td {
+        padding: 10px 12px;
+      }
+    }
   </style>
 </head>
 <body>
 
+<!-- Navigation Bar -->
 <nav class="topbar" role="navigation">
-  <a href="index.html" class="topbar-logo"><span>FABER</span> Atelier de Consultanță</a>
+  <a href="index.html" class="topbar-logo" aria-label="FABER – Atelier de Consultanță, acasă">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 218 44" width="218" height="44" aria-hidden="true">
+      <text x="0" y="32" font-family="Georgia,'Times New Roman',serif" font-size="28" font-weight="700" fill="#e8642a" letter-spacing="3">FABER</text>
+      <path d="M94,22 L100,14 L106,22 L100,30 Z" fill="white" opacity="0.95"/>
+      <text x="111" y="18" font-family="'Inter','Helvetica Neue',sans-serif" font-size="10" font-weight="600" fill="white" letter-spacing="2">ATELIER de</text>
+      <text x="111" y="33" font-family="'Inter','Helvetica Neue',sans-serif" font-size="10" font-weight="600" fill="white" letter-spacing="2">CONSULTANȚĂ</text>
+    </svg>
+  </a>
   <div class="topbar-nav">
     <a href="index.html">← Acasă</a>
     <a href="index.html#finantare">Toate programele</a>
@@ -118,160 +697,407 @@
   </div>
 </nav>
 
+<!-- Hero Section: Tema verde-solar -->
 <header class="hero">
   <div class="hero-deco" aria-hidden="true"></div>
   <div class="hero-inner">
     <div>
-      <div class="hero-tag">🏛️ Instituții publice</div>
-      <h1>Autoconsum Publici – Energie Verde</h1>
-      <p class="hero-sub">Primării, consilii județene, spitale, școli și alte instituții publice pot accesa finanțare 100% nerambursabilă pentru instalarea panourilor fotovoltaice și reducerea facturilor la energie.</p>
+      <div class="hero-tag">☀️ Fondul pentru Modernizare</div>
+      <h1>Sisteme Fotovoltaice pentru Entități Publice</h1>
+      <p class="hero-sub">Finanțare 100% pentru implementarea de sisteme fotovoltaice destinată autoconsumului la instituții publice. Ajutor maxim 10 milioane EUR pe beneficiar. Procedură: Primul venit – primul servit.</p>
       <div class="hero-ctas">
         <a href="index.html#contact" class="btn-orange">🚀 Aplică cu FABER</a>
         <a href="#detalii" class="btn-ghost">Vezi detalii ↓</a>
       </div>
     </div>
-    <div class="hero-visual" aria-hidden="true">🏛️</div>
+    <div class="hero-visual" aria-hidden="true">☀️</div>
   </div>
 </header>
 
-<section class="countdown-section" aria-label="Termen limită" data-section-id="countdown">
-  <div class="countdown-label">⏱️ Termen limită estimativ</div>
-  <div class="countdown-title">Timp rămas până la închiderea apelului</div>
-  <div class="countdown-boxes">
-    <div class="cd-box"><div class="num" id="cd-d">--</div><div class="unit">Zile</div></div>
-    <div class="cd-box"><div class="num" id="cd-h">--</div><div class="unit">Ore</div></div>
-    <div class="cd-box"><div class="num" id="cd-m">--</div><div class="unit">Minute</div></div>
-    <div class="cd-box"><div class="num" id="cd-s">--</div><div class="unit">Secunde</div></div>
-  </div>
-  <p class="cd-deadline">📅 Dată estimativă: <strong>30 noiembrie 2025</strong> &nbsp;·&nbsp; <em>Verifică ghidul oficial pentru data exactă</em></p>
+<!-- Status Section: Primul venit, primul servit -->
+<section class="info-status" aria-label="Status procedură" data-section-id="status">
+  <div class="status-label">⏱️ Procedură activ deschisă</div>
+  <div class="status-title">Fondul pentru Modernizare – Autoconsum Publici</div>
+  <div class="status-badge">🔔 PRIMUL VENIT – PRIMUL SERVIT</div>
+  <div class="status-desc">Sesiunea este deschisă fără termen limită de depunere (până la epuizarea bugetului). Depune proiectul cat mai devreme pentru a asigura finanțarea!</div>
 </section>
 
+<!-- Info Cards Section: 5 parametrii esențiali -->
 <section class="section" id="detalii">
   <div class="container">
     <div class="reveal">
       <div class="sec-label">Informații esențiale</div>
-      <h2 class="sec-title">Detalii Program</h2>
-      <p class="sec-sub">Parametrii de finanțare pe care trebuie să îi cunoști înainte de aplicare</p>
+      <h2 class="sec-title">Parametrii de Finanțare</h2>
+      <p class="sec-sub">Valorile cheie și condițiile programului Autoconsum Publici</p>
     </div>
     <div class="info-grid">
       <div class="info-card reveal">
         <div class="ic-icon">💰</div>
-        <div class="ic-title">Finanțare Maximă</div>
-        <div class="ic-val">100% nerambursabil</div>
-        <div class="ic-sub">Sumă maximă nerambursabilă per proiect</div>
+        <div class="ic-title">Ajutor Maxim</div>
+        <div class="ic-val">10.000.000 EUR</div>
+        <div class="ic-sub">Per beneficiar (cu ajutor de stat)</div>
       </div>
       <div class="info-card reveal">
-        <div class="ic-icon">📊</div>
-        <div class="ic-title">Intensitate Ajutor</div>
-        <div class="ic-val">Conf. ghidului</div>
-        <div class="ic-sub">Procent nerambursabil din cheltuielile eligibile</div>
-      </div>
-      <div class="info-card reveal">
-        <div class="ic-icon">📅</div>
-        <div class="ic-title">Perioadă</div>
-        <div class="ic-val">2024–2027</div>
-        <div class="ic-sub">Cadrul financiar multianual UE 2021–2027</div>
+        <div class="ic-icon">100%</div>
+        <div class="ic-title">Intensitate Sprijin</div>
+        <div class="ic-val">100% din cheltuielile eligibile</div>
+        <div class="ic-sub">Finanțare nerambursabilă integrală</div>
       </div>
       <div class="info-card reveal">
         <div class="ic-icon">⚡</div>
-        <div class="ic-title">Durată Implementare</div>
-        <div class="ic-val">24–36 luni</div>
-        <div class="ic-sub">Termen estimativ de implementare a proiectului</div>
+        <div class="ic-title">Tarif (fără stocare)</div>
+        <div class="ic-val">1.000 EUR/kWp</div>
+        <div class="ic-sub">Sisteme fotovoltaice standard</div>
+      </div>
+      <div class="info-card reveal">
+        <div class="ic-icon">🔋</div>
+        <div class="ic-title">Tarif (cu stocare)</div>
+        <div class="ic-val">1.300 EUR/kWp</div>
+        <div class="ic-sub">Sisteme cu baterii de acumulare</div>
+      </div>
+      <div class="info-card reveal">
+        <div class="ic-icon">🏃</div>
+        <div class="ic-title">Procedură</div>
+        <div class="ic-val">Primul venit, primul servit</div>
+        <div class="ic-sub">Fără deadline fix – până la epuizarea bugetului</div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- Beneficiari Eligibili Section -->
 <section class="section section-dark">
   <div class="container">
     <div class="reveal">
-      <div class="sec-label" style="color:var(--orange)">Cine poate aplica</div>
-      <h2 class="sec-title wh">Beneficiari Eligibili</h2>
-      <p class="sec-sub wh">Verifică dacă organizația sau afacerea ta se încadrează în categoriile de mai jos</p>
+      <div class="sec-label" style="color: var(--orange)">Cine poate aplica</div>
+      <h2 class="sec-title wh">Beneficiari Eligibili – 10 Categorii</h2>
+      <p class="sec-sub wh">Lista completă a entităților publice care pot accesa finanțare</p>
     </div>
-    <div class="elig-grid reveal">
-      <div class="elig-item"><div class="elig-check">✓</div><div class="elig-text">Primării și consilii locale</div></div>
-      <div class="elig-item"><div class="elig-check">✓</div><div class="elig-text">Consilii județene</div></div>
-      <div class="elig-item"><div class="elig-check">✓</div><div class="elig-text">Spitale și unități sanitare publice</div></div>
-      <div class="elig-item"><div class="elig-check">✓</div><div class="elig-text">Școli și licee de stat</div></div>
-      <div class="elig-item"><div class="elig-check">✓</div><div class="elig-text">Universități de stat</div></div>
-      <div class="elig-item"><div class="elig-check">✓</div><div class="elig-text">Instituții publice de cultură și sport</div></div>
-
+    <div class="benef-list reveal">
+      <div class="benef-item">
+        <div class="benef-icon">✓</div>
+        <div class="benef-text">Unitățile administrativ-teritoriale și subdiviziunile acestora</div>
+      </div>
+      <div class="benef-item">
+        <div class="benef-icon">✓</div>
+        <div class="benef-text">Unitățile și subunitățile din sistemul național de apărare, ordine publică și siguranță națională</div>
+      </div>
+      <div class="benef-item">
+        <div class="benef-icon">✓</div>
+        <div class="benef-text">Unitățile din sistemul administrației penitenciare</div>
+      </div>
+      <div class="benef-item">
+        <div class="benef-icon">✓</div>
+        <div class="benef-text">Spitalele finanțate integral din fonduri publice</div>
+      </div>
+      <div class="benef-item">
+        <div class="benef-icon">✓</div>
+        <div class="benef-text">Instituțiile publice definite de Legea nr. 500/2002 privind finanțele publice (entități publice subordonate, exclusiv Regiile autonome și societățile cu capital de stat)</div>
+      </div>
+      <div class="benef-item">
+        <div class="benef-icon">✓</div>
+        <div class="benef-text">Cultele recunoscute oficial în România și unitățile locale ale acestora (Legea nr. 489/2006)</div>
+      </div>
+      <div class="benef-item">
+        <div class="benef-icon">✓</div>
+        <div class="benef-text">Instituțiile de învățământ superior de stat</div>
+      </div>
+      <div class="benef-item">
+        <div class="benef-icon">✓</div>
+        <div class="benef-text">Institutele naționale, institutele, centrele și stațiunile de cercetare-dezvoltare de drept public (O.G. nr. 57/2002)</div>
+      </div>
+      <div class="benef-item">
+        <div class="benef-icon">✓</div>
+        <div class="benef-text">Asociațiile de Dezvoltare Intercomunitară (O.U.G. nr. 57/2019 privind Codul administrativ)</div>
+      </div>
+      <div class="benef-item">
+        <div class="benef-icon">✓</div>
+        <div class="benef-text">Centrele sociale și centrele de îngrijiri paliative finanțate integral din fonduri publice</div>
+      </div>
     </div>
   </div>
 </section>
 
+<!-- Activități Finanțabile Section -->
 <section class="section section-alt">
   <div class="container">
     <div class="reveal">
       <div class="sec-label">Ce se finanțează</div>
-      <h2 class="sec-title">Activități Eligibile</h2>
-      <p class="sec-sub">Tipurile de investiții și cheltuieli care pot fi finanțate prin acest program</p>
+      <h2 class="sec-title">Activități Finanțabile</h2>
+      <p class="sec-sub">Categoriile de cheltuieli eligibile pentru finanțare</p>
     </div>
     <div class="activ-list reveal">
-      <div class="activ-item"><div class="activ-num">1</div><div class="activ-text">Instalarea de sisteme fotovoltaice pe clădirile instituțiilor</div></div>
-      <div class="activ-item"><div class="activ-num">2</div><div class="activ-text">Sisteme de stocare a energiei electrice produse</div></div>
-      <div class="activ-item"><div class="activ-num">3</div><div class="activ-text">Stații de încărcare vehicule electrice pentru flotele instituționale</div></div>
-      <div class="activ-item"><div class="activ-num">4</div><div class="activ-text">Sisteme de monitorizare și management energetic</div></div>
-      <div class="activ-item"><div class="activ-num">5</div><div class="activ-text">Modernizarea instalațiilor electrice de distribuție internă</div></div>
-      <div class="activ-item"><div class="activ-num">6</div><div class="activ-text">Audit energetic și documentație tehnică</div></div>
-
+      <div class="activ-item">
+        <div class="activ-num">a)</div>
+        <div class="activ-text"><strong>Achiziția de instalații/echipamente noi:</strong> Construirea de capacități noi de producție a energiei electrice din surse regenerabile de energie solară, cu sau fără capacități de stocare; Achiziția de pompe de căldură</div>
+      </div>
+      <div class="activ-item">
+        <div class="activ-num">b)</div>
+        <div class="activ-text"><strong>Construcții aferente:</strong> Lucrări de construcție care fac strict obiectul proiectului de producere a energiei electrice din surse regenerabile de energie solară, cu sau fără capacități de stocare</div>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="section section-dark" aria-label="Descarcă broșura">
+<!-- Tabel Cheltuieli Eligibile Section -->
+<section class="section">
   <div class="container">
-    <div class="pdf-box" data-section-id="pdf-brosura">
-      <div class="pdf-icon">📄</div>
-      <div class="pdf-title">Broșură & Ghid Solicitant</div>
-      <div class="pdf-sub">
-        Descarcă ghidul complet al solicitantului și broșura informativă pentru Autoconsum Publici – Energie Verde.<br>
-        Documentele vor fi disponibile la lansarea oficială a apelului.
-      </div>
-      <div class="pdf-btn-dis" aria-disabled="true" role="button" tabindex="-1">
-        📥 Descarcă Ghidul Solicitantului (PDF)
-      </div>
-      <p class="pdf-note">⚠️ Documentul va fi activat la lansarea oficială a apelului de proiecte</p>
-      <!-- PLACEHOLDER: inlocuieste div-ul de sus cu <a href="ghid-autoconsum-publici.html.pdf" class="btn-orange">📥 Descarcă (PDF, X MB)</a> -->
+    <div class="reveal">
+      <div class="sec-label">Detaliu cheltuieli</div>
+      <h2 class="sec-title">Tabel Cheltuieli Eligibile (Anexa 4)</h2>
+      <p class="sec-sub">Categorii indicative de cheltuieli și statutul lor de eligibilitate</p>
+    </div>
+    <div class="reveal" style="overflow-x: auto;">
+      <table class="elig-table">
+        <thead>
+          <tr>
+            <th>Categoria de Cheltuieli</th>
+            <th>Subtipuri</th>
+            <th>Eligibil</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="2"><strong>Cheltuieli pentru obținerea și amenajarea terenului</strong></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>Cheltuieli pentru obținerea terenului</td>
+            <td><span class="elig-cell-no">NU</span></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>Cheltuieli pentru amenajarea terenului</td>
+            <td><span class="elig-cell-yes">DA</span></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>Cheltuieli cu amenajări pentru protecția mediului și aducerea la starea inițială</td>
+            <td><span class="elig-cell-yes">DA</span></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>Cheltuieli pentru relocarea/protecția utilităților</td>
+            <td><span class="elig-cell-yes">DA</span></td>
+          </tr>
+          <tr>
+            <td colspan="2"><strong>Cheltuieli pentru asigurarea utilităților necesare obiectivului</strong></td>
+            <td><span class="elig-cell-yes">DA</span></td>
+          </tr>
+          <tr>
+            <td colspan="2"><strong>Cheltuieli pentru proiectare și asistență tehnică</strong></td>
+            <td><span class="elig-cell-yes">DA (toate)</span></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>Studii de teren, raport impact mediu, alte studii specifice</td>
+            <td><span class="elig-cell-yes">DA</span></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>Documentații-suport, avize, acorduri, autorizații</td>
+            <td><span class="elig-cell-yes">DA</span></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>Expertizare tehnică, certificare performanță energetică</td>
+            <td><span class="elig-cell-yes">DA</span></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>Proiectare (temă, studiu prefezabilitate, SF/DALI, PT, DDE)</td>
+            <td><span class="elig-cell-yes">DA</span></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>Cheltuieli pentru organizarea procedurilor de achiziție</td>
+            <td><span class="elig-cell-yes">DA</span></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>Cheltuieli pentru consultanță</td>
+            <td><span class="elig-cell-yes">DA</span></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>Management de proiect (max 20.000 EUR cu TVA)</td>
+            <td><span class="elig-cell-yes">DA</span></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>Audit financiar, asistență tehnică proiectant, diriginție șantier</td>
+            <td><span class="elig-cell-yes">DA</span></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>Coordonator securitate și sănătate (HG nr. 300/2006)</td>
+            <td><span class="elig-cell-yes">DA</span></td>
+          </tr>
+          <tr>
+            <td colspan="2"><strong>Cheltuieli pentru investiția de bază</strong></td>
+            <td><span class="elig-cell-yes">DA (toate)</span></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>Construcții și instalații, montaj utilaje, utilaje funcționale, dotări, active necorporale</td>
+            <td><span class="elig-cell-yes">DA</span></td>
+          </tr>
+          <tr>
+            <td colspan="2"><strong>Cheltuieli organizare de șantier</strong></td>
+            <td><span class="elig-cell-yes">DA</span></td>
+          </tr>
+          <tr>
+            <td colspan="2"><strong>Alte cheltuieli</strong></td>
+            <td><span class="elig-cell-yes">DA</span></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>Comisioane, cote, taxe, cheltuieli diverse și neprevăzute, informare și publicitate, probe tehnologice</td>
+            <td><span class="elig-cell-yes">DA</span></td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </section>
 
-<section class="cta-section">
-  <h2>Ești eligibil? Aplică cu FABER!</h2>
-  <p>Echipa noastră analizează gratuit situația ta și îți confirmă în 24 ore dacă te încadrezi în criteriile de eligibilitate.</p>
-  <a href="index.html#contact" class="btn-orange" style="font-size:1.05rem;padding:16px 36px;">🚀 Solicită Consultanța Gratuită</a>
+<!-- Cheltuieli NEELIGIBILE Section (dark) -->
+<section class="section section-dark">
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-label" style="color: var(--orange)">Restricții importante</div>
+      <h2 class="sec-title wh">Cheltuieli NEELIGIBILE</h2>
+      <p class="sec-sub wh">Tipurile de cheltuieli care NU pot fi finanțate în cadrul acestui program</p>
+    </div>
+    <div class="nonelig-list reveal">
+      <div class="nonelig-item">
+        <div class="nonelig-icon">✕</div>
+        <div class="nonelig-text">Cheltuieli pentru obținerea terenului</div>
+      </div>
+      <div class="nonelig-item">
+        <div class="nonelig-icon">✕</div>
+        <div class="nonelig-text">Cheltuieli aferente marjei de buget</div>
+      </div>
+      <div class="nonelig-item">
+        <div class="nonelig-icon">✕</div>
+        <div class="nonelig-text">Cheltuieli pentru constituirea rezervei de implementare</div>
+      </div>
+      <div class="nonelig-item">
+        <div class="nonelig-icon">✕</div>
+        <div class="nonelig-text">Cheltuieli aferente contribuției în natură</div>
+      </div>
+      <div class="nonelig-item">
+        <div class="nonelig-icon">✕</div>
+        <div class="nonelig-text">Cheltuieli cu amortizarea</div>
+      </div>
+      <div class="nonelig-item">
+        <div class="nonelig-icon">✕</div>
+        <div class="nonelig-text">Cheltuieli cu obținerea terenurilor</div>
+      </div>
+      <div class="nonelig-item">
+        <div class="nonelig-icon">✕</div>
+        <div class="nonelig-text">Cheltuieli aferente achiziției de bunuri sub forma leasingului</div>
+      </div>
+      <div class="nonelig-item">
+        <div class="nonelig-icon">✕</div>
+        <div class="nonelig-text">Cheltuieli cu închirierea (altele decât cele prevăzute)</div>
+      </div>
+      <div class="nonelig-item">
+        <div class="nonelig-icon">✕</div>
+        <div class="nonelig-text">Cheltuieli cu achiziția de mijloace de transport</div>
+      </div>
+      <div class="nonelig-item">
+        <div class="nonelig-icon">✕</div>
+        <div class="nonelig-text">Cheltuieli generale de administrație</div>
+      </div>
+      <div class="nonelig-item">
+        <div class="nonelig-icon">✕</div>
+        <div class="nonelig-text">Cheltuieli cu achiziția imobilelor deja construite</div>
+      </div>
+      <div class="nonelig-item">
+        <div class="nonelig-icon">✕</div>
+        <div class="nonelig-text">Dobânda debitoare</div>
+      </div>
+      <div class="nonelig-item">
+        <div class="nonelig-icon">✕</div>
+        <div class="nonelig-text">Alte comisioane aferente creditelor</div>
+      </div>
+      <div class="nonelig-item">
+        <div class="nonelig-icon">✕</div>
+        <div class="nonelig-text">TVA deductibilă (recuperabilă)</div>
+      </div>
+      <div class="nonelig-item">
+        <div class="nonelig-icon">✕</div>
+        <div class="nonelig-text">Achiziția de echipamente second-hand</div>
+      </div>
+      <div class="nonelig-item">
+        <div class="nonelig-icon">✕</div>
+        <div class="nonelig-text">Amenzi, penalități, cheltuieli de judecată și arbitraj</div>
+      </div>
+      <div class="nonelig-item">
+        <div class="nonelig-icon">✕</div>
+        <div class="nonelig-text">Costuri pentru operarea obiectivelor de investiții</div>
+      </div>
+      <div class="nonelig-item">
+        <div class="nonelig-icon">✕</div>
+        <div class="nonelig-text">Cheltuieli efectuate în regie proprie</div>
+      </div>
+    </div>
+  </div>
 </section>
 
+<!-- Mod de Calcul Autoconsum Section -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-label">Procedură de calcul</div>
+      <h2 class="sec-title">Calculul Autoconsumului</h2>
+      <p class="sec-sub">Metodologia pentru determinarea necesarului de energie și dimensionarea sistemului</p>
+    </div>
+    <div class="calc-box reveal">
+      <div class="calc-title">📊 Bază de calcul: Facturile de energie din 12 luni</div>
+      <div class="calc-desc">
+        <p>Autoconsumul se calculează pe baza datelor din facturile de energie electrică din ultimele <strong>12 luni</strong> anterioare depunerii proiectului. Aceasta determină:</p>
+        <ul style="margin-top: 12px; margin-left: 24px; color: var(--text-soft);">
+          <li>Consumul mediu lunar de energie</li>
+          <li>Dimensiunea optimă a sistemului fotovoltaic</li>
+          <li>Capacitatea necesară de stocare (dacă este cazul)</li>
+          <li>Valoarea de finanțare pe baza tarifelor stabilite (1.000 EUR/kWp fără stocare, 1.300 EUR/kWp cu stocare)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Final Section -->
+<section class="cta-section">
+  <h2>Ai o instituție publică eligibilă? Aplică cu FABER!</h2>
+  <p>Echipa noastră analizează gratuit dosarul tău și te ajută cu întregul proces de aplicare pentru Fondul pentru Modernizare. Procedura este activ deschisă – depune cât mai devreme!</p>
+  <a href="index.html#contact" class="btn-orange" style="font-size: 1.05rem; padding: 16px 36px;">🚀 Solicită Consultanța Gratuită</a>
+</section>
+
+<!-- Footer -->
 <footer class="page-footer">
   <p>© 2025 FABER – Atelier de Consultanță &nbsp;·&nbsp; <a href="index.html">Acasă</a> &nbsp;·&nbsp; <a href="index.html#finantare">Toate programele</a> &nbsp;·&nbsp; <a href="termeni-si-conditii.html">Termeni</a> &nbsp;·&nbsp; <a href="gdpr.html">GDPR</a></p>
 </footer>
 
+<!-- JavaScript: Intersection Observer pentru reveal animations -->
 <script>
-  var target = new Date('2025-11-30T23:59:00');
-  function tick() {
-    var diff = target - new Date();
-    if (diff <= 0) {
-      ['cd-d','cd-h','cd-m','cd-s'].forEach(function(id){ document.getElementById(id).textContent='00'; });
-      return;
-    }
-    var d = Math.floor(diff/86400000);
-    var h = Math.floor((diff%86400000)/3600000);
-    var m = Math.floor((diff%3600000)/60000);
-    var s = Math.floor((diff%60000)/1000);
-    function p(n){ return String(n).padStart(2,'0'); }
-    document.getElementById('cd-d').textContent = p(d);
-    document.getElementById('cd-h').textContent = p(h);
-    document.getElementById('cd-m').textContent = p(m);
-    document.getElementById('cd-s').textContent = p(s);
-  }
-  tick(); setInterval(tick, 1000);
+  // Intersection Observer: Reveal animation on scroll
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) {
+        e.target.classList.add('revealed');
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
 
-  var obs = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('revealed'); obs.unobserve(e.target); } });
-  },{threshold:0.1,rootMargin:'0px 0px -30px 0px'});
-  document.querySelectorAll('.reveal').forEach(function(el){ obs.observe(el); });
+  document.querySelectorAll('.reveal').forEach(function(el) {
+    obs.observe(el);
+  });
 </script>
+
 </body>
 </html>

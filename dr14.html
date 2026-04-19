@@ -2,21 +2,36 @@
 <html lang="ro">
 <head>
   <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="DR 14 drumuri rurale – finanțare 100% nerambursabilă până la 5 milioane euro per comună pentru modernizarea infrastructurii rutiere. Consultanță FABER." />
-  <meta name="keywords" content="DR 14 drumuri rurale, finantare modernizare drumuri, fonduri europene comune, infrastructura rurala" />
-  <meta property="og:title" content="DR 14 – Drumuri Rurale | FABER" />
-  <meta property="og:description" content="DR 14 drumuri rurale – finanțare 100% nerambursabilă până la 5 milioane euro per comună pentru modernizarea infrastructurii rutiere. Consultanță FABER." />
+  <meta name="description" content="DR-14 PAC 2023-2027 – finanțare nerambursabilă de până la 75.000 EUR pentru fermele mici. Intensitate 85%, buget total 108 milioane EUR. Aplică cu FABER." />
+  <meta name="keywords" content="DR14 PAC 2023-2027, ferme mici dimensiuni, finantare ferme mici, fonduri europene agricole, AFIR DR14" />
+  <meta property="og:title" content="DR-14 PAC 2023-2027 – Fermele Mici | FABER" />
+  <meta property="og:description" content="DR-14 PAC 2023-2027 – finanțare nerambursabilă de până la 75.000 EUR pentru fermele mici. Intensitate 85%, buget total 108 milioane EUR. Aplică cu FABER." />
   <meta property="og:type" content="website" />
-  <title>DR 14 – Drumuri Rurale | FABER – Atelier de Consultanță</title>
+  <title>DR-14 – Investiții în Fermele de Mici Dimensiuni | PAC 2023-2027</title>
   <link rel="canonical" href="https://atelierdeconsultanta.ro/dr14.html" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <meta name="robots" content="index, follow" />
+  <meta name="twitter:card" content="summary_large_image" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"GovernmentService","name":"DR 14 – Drumuri Rurale","description":"DR 14 drumuri rurale – finanțare 100% nerambursabilă până la 5 milioane euro per comună pentru modernizarea infrastructurii rutiere. Consultanță FABER.","provider":{"@type":"ProfessionalService","name":"FABER – Atelier de Consultanță","url":"https://atelierdeconsultanta.ro"}}
+  {
+    "@context":"https://schema.org",
+    "@type":"GovernmentService",
+    "name":"DR-14 – Investiții în Fermele de Mici Dimensiuni",
+    "description":"DR-14 este o intervenție din Planul Strategic PAC 2023-2027, dedicată exclusiv fermelor de mici dimensiuni. Sprijinul vizează diversificarea activităților, modernizarea exploatațiilor și creșterea competitivității micilor fermieri din România.",
+    "provider":{
+      "@type":"ProfessionalService",
+      "name":"FABER – Atelier de Consultanță",
+      "url":"https://atelierdeconsultanta.ro"
+    }
+  }
   </script>
   <style>
-    :root{--navy:#0d1f3c;--orange:#e8642a;--gold:#f5a623;--white:#ffffff;--gray-100:#f8f9fb;--gray-200:#e8edf5;--text-main:#1a2540;--text-soft:#4a5568;--c1:#2d0d3c;--c2:#4a1a6a;--rs:8px;--rm:16px;--rl:24px;--tr:0.3s cubic-bezier(0.4,0,0.2,1);}
+    :root{--navy:#0d1f3c;--orange:#e8642a;--gold:#f5a623;--white:#ffffff;--gray-100:#f8f9fb;--gray-200:#e8edf5;--text-main:#1a2540;--text-soft:#4a5568;--c1:#1a2d0a;--c2:#2a4a1a;--rs:8px;--rm:16px;--rl:24px;--tr:0.3s cubic-bezier(0.4,0,0.2,1);}
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
     html{scroll-behavior:smooth;}
     body{font-family:'Inter',sans-serif;color:var(--text-main);background:var(--white);line-height:1.6;overflow-x:hidden;}
@@ -25,8 +40,10 @@
     @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms!important;transition-duration:0.01ms!important;}}
 
     .topbar{background:rgba(13,31,60,0.96);padding:0 24px;height:68px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,0.08);}
-    .topbar-logo{color:white;font-size:1.2rem;font-weight:800;}
-    .topbar-logo span{color:var(--orange);}
+    /* ✦ TOPBAR LOGO — SVG inline, eliminator atribute de text vechi ✦ */
+    .topbar-logo{display:flex;align-items:center;}
+    .topbar-logo svg{height:44px;width:auto;transition:transform 0.3s ease;}
+    .topbar-logo:hover svg{transform:scale(1.04);}
     .topbar-nav{display:flex;gap:6px;align-items:center;}
     .topbar-nav a{color:rgba(255,255,255,0.75);font-size:0.85rem;font-weight:500;padding:7px 13px;border-radius:var(--rs);transition:color var(--tr),background var(--tr);}
     .topbar-nav a:hover{color:white;background:rgba(255,255,255,0.08);}
@@ -86,6 +103,23 @@
     .activ-num{width:30px;height:30px;border-radius:50%;flex-shrink:0;background:linear-gradient(135deg,var(--orange),var(--gold));display:flex;align-items:center;justify-content:center;color:white;font-size:0.8rem;font-weight:700;}
     .activ-text{font-size:0.9rem;color:var(--text-soft);line-height:1.5;padding-top:4px;}
 
+    .nonelig-list{display:flex;flex-direction:column;gap:10px;}
+    .nonelig-item{display:flex;gap:10px;align-items:flex-start;background:rgba(255,255,255,0.04);border:1px solid rgba(232,100,42,0.2);border-radius:var(--rs);padding:12px 16px;}
+    .nonelig-icon{width:20px;height:20px;flex-shrink:0;color:var(--orange);font-size:0.9rem;padding-top:2px;}
+    .nonelig-text{color:rgba(255,255,255,0.8);font-size:0.875rem;line-height:1.4;}
+
+    .steps-list{display:flex;flex-direction:column;gap:16px;}
+    .step-item{display:flex;gap:16px;align-items:flex-start;background:white;border:1px solid var(--gray-200);border-radius:var(--rs);padding:18px 22px;}
+    .step-number{width:32px;height:32px;border-radius:50%;flex-shrink:0;background:linear-gradient(135deg,var(--c1),var(--c2));display:flex;align-items:center;justify-content:center;color:white;font-size:0.85rem;font-weight:700;}
+    .step-content{flex:1;}
+    .step-title{font-size:0.95rem;font-weight:700;color:var(--text-main);margin-bottom:4px;}
+    .step-desc{font-size:0.85rem;color:var(--text-soft);line-height:1.5;}
+
+    .status-box{background:rgba(232,100,42,0.08);border:2px solid rgba(232,100,42,0.3);border-radius:var(--rl);padding:32px;text-align:center;margin-top:32px;}
+    .status-icon{font-size:2.5rem;margin-bottom:12px;}
+    .status-title{font-size:1.2rem;font-weight:800;color:var(--text-main);margin-bottom:8px;}
+    .status-text{font-size:0.95rem;color:var(--text-soft);line-height:1.6;}
+
     .pdf-box{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:var(--rl);padding:40px;text-align:center;margin-top:40px;}
     .pdf-icon{font-size:3.5rem;margin-bottom:16px;}
     .pdf-title{color:white;font-size:1.3rem;font-weight:800;margin-bottom:8px;}
@@ -104,13 +138,26 @@
     .reveal{opacity:0;transform:translateY(24px);transition:opacity 0.7s cubic-bezier(0.4,0,0.2,1),transform 0.7s cubic-bezier(0.4,0,0.2,1);}
     .reveal.revealed{opacity:1;transform:translateY(0);}
 
-    @media(max-width:768px){.hero-inner{grid-template-columns:1fr;}.hero-visual{display:none;}.topbar-nav a:not(.cta){display:none;}}
+    @media(max-width:768px){
+      .hero-inner{grid-template-columns:1fr;}
+      .hero-visual{display:none;}
+      .topbar-nav a:not(.cta){display:none;}
+      .step-item{flex-direction:column;align-items:center;text-align:center;}
+      .status-box{padding:24px;}
+    }
   </style>
 </head>
 <body>
 
 <nav class="topbar" role="navigation">
-  <a href="index.html" class="topbar-logo"><span>FABER</span> Atelier de Consultanță</a>
+  <a href="index.html" class="topbar-logo" aria-label="FABER – Atelier de Consultanță, acasă">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 218 44" width="218" height="44" aria-hidden="true">
+      <text x="0" y="32" font-family="Georgia,'Times New Roman',serif" font-size="28" font-weight="700" fill="#e8642a" letter-spacing="3">FABER</text>
+      <path d="M94,22 L100,14 L106,22 L100,30 Z" fill="white" opacity="0.95"/>
+      <text x="111" y="18" font-family="'Inter','Helvetica Neue',sans-serif" font-size="10" font-weight="600" fill="white" letter-spacing="2">ATELIER de</text>
+      <text x="111" y="33" font-family="'Inter','Helvetica Neue',sans-serif" font-size="10" font-weight="600" fill="white" letter-spacing="2">CONSULTANȚĂ</text>
+    </svg>
+  </a>
   <div class="topbar-nav">
     <a href="index.html">← Acasă</a>
     <a href="index.html#finantare">Toate programele</a>
@@ -122,15 +169,15 @@
   <div class="hero-deco" aria-hidden="true"></div>
   <div class="hero-inner">
     <div>
-      <div class="hero-tag">🛣️ Infrastructură locală</div>
-      <h1>DR 14 – Drumuri Rurale</h1>
-      <p class="hero-sub">Modernizarea drumurilor comunale și județene pentru conectarea comunităților rurale la rețelele de transport principale. Program 100% nerambursabil, dedicat autorităților locale.</p>
+      <div class="hero-tag">🌱 Ferme Mici | PAC 2023-2027</div>
+      <h1>DR-14 – Investiții în Fermele de Mici Dimensiuni</h1>
+      <p class="hero-sub">Finanțare nerambursabilă de până la 75.000 EUR pentru modernizarea și diversificarea exploatațiilor agricole mici. Intensitate 85%, cu o alocare de 108 milioane EUR. Sprijin dedicat pentru creșterea competitivității micilor fermieri din România.</p>
       <div class="hero-ctas">
         <a href="index.html#contact" class="btn-orange">🚀 Aplică cu FABER</a>
         <a href="#detalii" class="btn-ghost">Vezi detalii ↓</a>
       </div>
     </div>
-    <div class="hero-visual" aria-hidden="true">🛣️</div>
+    <div class="hero-visual" aria-hidden="true">🌾</div>
   </div>
 </header>
 
@@ -143,40 +190,40 @@
     <div class="cd-box"><div class="num" id="cd-m">--</div><div class="unit">Minute</div></div>
     <div class="cd-box"><div class="num" id="cd-s">--</div><div class="unit">Secunde</div></div>
   </div>
-  <p class="cd-deadline">📅 Dată estimativă: <strong>28 februarie 2026</strong> &nbsp;·&nbsp; <em>Verifică ghidul oficial pentru data exactă</em></p>
+  <p class="cd-deadline">📅 Dată estimativă: <strong>01 septembrie 2026</strong> &nbsp;·&nbsp; <em>Verifică ghidul oficial pentru data exactă</em></p>
 </section>
 
 <section class="section" id="detalii">
   <div class="container">
     <div class="reveal">
       <div class="sec-label">Informații esențiale</div>
-      <h2 class="sec-title">Detalii Program</h2>
-      <p class="sec-sub">Parametrii de finanțare pe care trebuie să îi cunoști înainte de aplicare</p>
+      <h2 class="sec-title">Parametrii de Finanțare DR-14</h2>
+      <p class="sec-sub">Valorile cheie și condițiile pe care trebuie să le cunoști înainte de a aplica</p>
     </div>
     <div class="info-grid">
       <div class="info-card reveal">
         <div class="ic-icon">💰</div>
         <div class="ic-title">Finanțare Maximă</div>
-        <div class="ic-val">5.000.000 €/comună</div>
-        <div class="ic-sub">Sumă maximă nerambursabilă per proiect</div>
+        <div class="ic-val">75.000 EUR / proiect</div>
+        <div class="ic-sub">Sumă maximă de sprijin nerambursabil</div>
       </div>
       <div class="info-card reveal">
         <div class="ic-icon">📊</div>
         <div class="ic-title">Intensitate Ajutor</div>
-        <div class="ic-val">Conf. ghidului</div>
-        <div class="ic-sub">Procent nerambursabil din cheltuielile eligibile</div>
+        <div class="ic-val">85% nerambursabil</div>
+        <div class="ic-sub">Contribuție proprie minimă: 15%</div>
       </div>
       <div class="info-card reveal">
-        <div class="ic-icon">📅</div>
-        <div class="ic-title">Perioadă</div>
-        <div class="ic-val">2024–2027</div>
-        <div class="ic-sub">Cadrul financiar multianual UE 2021–2027</div>
+        <div class="ic-icon">💵</div>
+        <div class="ic-title">Buget Total Program</div>
+        <div class="ic-val">108 milioane EUR</div>
+        <div class="ic-sub">Alocare pentru România 2023-2027</div>
       </div>
       <div class="info-card reveal">
-        <div class="ic-icon">⚡</div>
-        <div class="ic-title">Durată Implementare</div>
-        <div class="ic-val">24–36 luni</div>
-        <div class="ic-sub">Termen estimativ de implementare a proiectului</div>
+        <div class="ic-icon">🌾</div>
+        <div class="ic-title">Dimensiune Fermă</div>
+        <div class="ic-val">4.000 – 11.999 SO</div>
+        <div class="ic-sub">Standard Output (culturi de câmp)</div>
       </div>
     </div>
   </div>
@@ -185,18 +232,27 @@
 <section class="section section-dark">
   <div class="container">
     <div class="reveal">
-      <div class="sec-label" style="color:var(--orange)">Cine poate aplica</div>
-      <h2 class="sec-title wh">Beneficiari Eligibili</h2>
-      <p class="sec-sub wh">Verifică dacă organizația sau afacerea ta se încadrează în categoriile de mai jos</p>
+      <div class="sec-label" style="color: var(--orange)">Cine poate aplica</div>
+      <h2 class="sec-title wh">Categorii de Beneficiari Eligibili</h2>
+      <p class="sec-sub wh">Verifică dacă fermei ta se încadrează în pragurile de Standard Output specifice sectorului tău</p>
     </div>
     <div class="elig-grid reveal">
-      <div class="elig-item"><div class="elig-check">✓</div><div class="elig-text">Comune din mediul rural (UAT)</div></div>
-      <div class="elig-item"><div class="elig-check">✓</div><div class="elig-text">Asociații de dezvoltare intercomunitară (ADI)</div></div>
-      <div class="elig-item"><div class="elig-check">✓</div><div class="elig-text">Consilii județene</div></div>
-      <div class="elig-item"><div class="elig-check">✓</div><div class="elig-text">Parteneriate între UAT-uri rurale</div></div>
-      <div class="elig-item"><div class="elig-check">✓</div><div class="elig-text">Comune cu sub 10.000 de locuitori</div></div>
-      <div class="elig-item"><div class="elig-check">✓</div><div class="elig-text">Unități din zone defavorizate</div></div>
-
+      <div class="elig-item">
+        <div class="elig-check">✓</div>
+        <div class="elig-text"><strong>Culturi de Câmp:</strong> Fermă cu 4.000 – 11.999 SO</div>
+      </div>
+      <div class="elig-item">
+        <div class="elig-check">✓</div>
+        <div class="elig-text"><strong>Producție Legumicol:</strong> 2.300 – 11.999 SO (excepție special acordată)</div>
+      </div>
+      <div class="elig-item">
+        <div class="elig-check">✓</div>
+        <div class="elig-text"><strong>Zootehnie & Rase Autohtone:</strong> 2.000 – 11.999 SO (limita inferioară redusă)</div>
+      </div>
+      <div class="elig-item">
+        <div class="elig-check">✓</div>
+        <div class="elig-text"><strong>Calcul SO:</strong> Se calculează pe baza culturilor și animalelor conform coeficienților SOC actualizați</div>
+      </div>
     </div>
   </div>
 </section>
@@ -204,44 +260,184 @@
 <section class="section section-alt">
   <div class="container">
     <div class="reveal">
-      <div class="sec-label">Ce se finanțează</div>
-      <h2 class="sec-title">Activități Eligibile</h2>
-      <p class="sec-sub">Tipurile de investiții și cheltuieli care pot fi finanțate prin acest program</p>
+      <div class="sec-label">Condiții obligatorii</div>
+      <h2 class="sec-title">4 Condiții Esențiale pentru Eligibilitate</h2>
+      <p class="sec-sub">Respectarea acestor criterii este obligatorie pentru ca proiectul tău să fie acceptat</p>
     </div>
     <div class="activ-list reveal">
-      <div class="activ-item"><div class="activ-num">1</div><div class="activ-text">Modernizarea și asfaltarea drumurilor comunale nemodernizate</div></div>
-      <div class="activ-item"><div class="activ-num">2</div><div class="activ-text">Construirea de poduri și podețe pe drumurile comunale</div></div>
-      <div class="activ-item"><div class="activ-num">3</div><div class="activ-text">Instalarea sistemelor de iluminat stradal pe drumuri</div></div>
-      <div class="activ-item"><div class="activ-num">4</div><div class="activ-text">Construirea de trotuare și amenajări pietonale</div></div>
-      <div class="activ-item"><div class="activ-num">5</div><div class="activ-text">Semnalizare rutieră și marcaje orizontale</div></div>
-      <div class="activ-item"><div class="activ-num">6</div><div class="activ-text">Lucrări de drenaj și rigole pentru prevenirea inundațiilor</div></div>
-
+      <div class="activ-item">
+        <div class="activ-num">1</div>
+        <div class="activ-text"><strong>Dimensiunea Fermei:</strong> Exploatația trebuie să se încadreze în pragul SO specific sectorului tău (4.000-11.999 SO pentru culturi de câmp, 2.000-11.999 SO pentru zootehnie)</div>
+      </div>
+      <div class="activ-item">
+        <div class="activ-num">2</div>
+        <div class="activ-text"><strong>Utilaje NOI:</strong> Se achiziționează exclusiv utilaje și echipamente noi — echipamentele second-hand nu sunt eligibile</div>
+      </div>
+      <div class="activ-item">
+        <div class="activ-num">3</div>
+        <div class="activ-text"><strong>Energia Regenerabilă:</strong> Investițiile în RE sunt permise, dar exclusiv ca componentă secundară a proiectului și numai pentru autoconsum (nu pentru vânzare în rețea)</div>
+      </div>
+      <div class="activ-item">
+        <div class="activ-num">4</div>
+        <div class="activ-text"><strong>Contribuție Proprie:</strong> Minim 15% din valoarea totală a proiectului (maxim 85% finanțare)</div>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="section section-dark" aria-label="Descarcă broșura">
+<section class="section">
   <div class="container">
-    <div class="pdf-box" data-section-id="pdf-brosura">
-      <div class="pdf-icon">📄</div>
-      <div class="pdf-title">Broșură & Ghid Solicitant</div>
-      <div class="pdf-sub">
-        Descarcă ghidul complet al solicitantului și broșura informativă pentru DR 14 – Drumuri Rurale.<br>
-        Documentele vor fi disponibile la lansarea oficială a apelului.
+    <div class="reveal">
+      <div class="sec-label">Ce se finanțează</div>
+      <h2 class="sec-title">Tipuri de Investiții Eligibile</h2>
+      <p class="sec-sub">Cheltuielile și activitățile care pot fi finanțate în cadrul DR-14</p>
+    </div>
+    <div class="activ-list reveal">
+      <div class="activ-item">
+        <div class="activ-num">1</div>
+        <div class="activ-text">Construcții și modernizări agricole (adăposturi, depozite, sere, solarii)</div>
       </div>
-      <div class="pdf-btn-dis" aria-disabled="true" role="button" tabindex="-1">
-        📥 Descarcă Ghidul Solicitantului (PDF)
+      <div class="activ-item">
+        <div class="activ-num">2</div>
+        <div class="activ-text">Mașini și echipamente agricole NOI corelate cu dimensiunea fermei</div>
       </div>
-      <p class="pdf-note">⚠️ Documentul va fi activat la lansarea oficială a apelului de proiecte</p>
-      <!-- PLACEHOLDER: inlocuieste div-ul de sus cu <a href="ghid-dr14.html.pdf" class="btn-orange">📥 Descarcă (PDF, X MB)</a> -->
+      <div class="activ-item">
+        <div class="activ-num">3</div>
+        <div class="activ-text">Facilități de stocare, procesare sau condiționare a producției</div>
+      </div>
+      <div class="activ-item">
+        <div class="activ-num">4</div>
+        <div class="activ-text">Sisteme de irigare (doar ca componentă secundară)</div>
+      </div>
+      <div class="activ-item">
+        <div class="activ-num">5</div>
+        <div class="activ-text">Soluții de agricultură digitală (GPS, drone, senzori, IoT)</div>
+      </div>
+      <div class="activ-item">
+        <div class="activ-num">6</div>
+        <div class="activ-text">Acces la utilități în cadrul fermei</div>
+      </div>
+      <div class="activ-item">
+        <div class="activ-num">7</div>
+        <div class="activ-text">Energie regenerabilă pentru autoconsum exclusiv (nu prosumer)</div>
+      </div>
+      <div class="activ-item">
+        <div class="activ-num">8</div>
+        <div class="activ-text">Sisteme de gestionare a gunoiului de grajd / obținere îngrășăminte organice din biomasă</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-dark">
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-label" style="color: var(--orange)">Restricții importante</div>
+      <h2 class="sec-title wh">Investiții NEELIGIBILE</h2>
+      <p class="sec-sub wh">Tipurile de cheltuieli și bunuri care NU pot fi finanțate prin DR-14</p>
+    </div>
+    <div class="nonelig-list reveal">
+      <div class="nonelig-item">
+        <div class="nonelig-icon">✕</div>
+        <div class="nonelig-text">Achiziția de terenuri</div>
+      </div>
+      <div class="nonelig-item">
+        <div class="nonelig-icon">✕</div>
+        <div class="nonelig-text">Animale vii</div>
+      </div>
+      <div class="nonelig-item">
+        <div class="nonelig-icon">✕</div>
+        <div class="nonelig-text">Echipamente second-hand sau la mâna a doua</div>
+      </div>
+      <div class="nonelig-item">
+        <div class="nonelig-icon">✕</div>
+        <div class="nonelig-text">Generare energie pentru vânzare în rețea (activitate prosumer)</div>
+      </div>
+      <div class="nonelig-item">
+        <div class="nonelig-icon">✕</div>
+        <div class="nonelig-text">Cheltuieli de funcționare curentă</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-label">Stadiul procesului</div>
+      <h2 class="sec-title">Status Sesiune și Calendar</h2>
+      <p class="sec-sub">Informații curente despre faza în care se află programul (actualizat la 19 aprilie 2026)</p>
+    </div>
+    <div class="status-box reveal">
+      <div class="status-icon">📋</div>
+      <div class="status-title">Ghidul Solicitantului – ÎN CURS DE PUBLICARE</div>
+      <div class="status-text">
+        <p style="margin-bottom: 12px;"><strong>Termen estimat de publicare: Vara 2026</strong></p>
+        <p style="margin-bottom: 12px;">Sesiunea de depunere se va deschide după perioada de consultare publică (minim 30 zile de la publicarea ghidului).</p>
+        <p><strong>⚠️ Recomandare FABER:</strong> Pregătește dosarul acum! Depune în primele 7-10 zile ale deschiderii sesiunii pentru a maximiza șansele de finanțare.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-label">Ghid pas cu pas</div>
+      <h2 class="sec-title">Pași de Aplicare Recomandat de FABER</h2>
+      <p class="sec-sub">O roadmap structurată pentru a pregăti și depune cu succes dosarul tău</p>
+    </div>
+    <div class="steps-list reveal">
+      <div class="step-item">
+        <div class="step-number">1</div>
+        <div class="step-content">
+          <div class="step-title">Calculează dimensiunea fermei</div>
+          <div class="step-desc">Determină Standard Output-ul (SO) al exploatației tale pe baza culturilor și animalelor conform coeficienților SOC actualizați. Verifică încadrarea în pragul specific sectorului tău (4.000-11.999 SO pentru culturi, 2.000-11.999 SO pentru zootehnie).</div>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-number">2</div>
+        <div class="step-content">
+          <div class="step-title">Verifică încadrarea SO</div>
+          <div class="step-desc">Asigură-te că fermei ta se încadrează în pragul SO specific sectorului tău. Dacă SO este prea mic sau prea mare, probabil nu vei fi eligibil. Contactează un consultant FABER dacă ai dubii.</div>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-number">3</div>
+        <div class="step-content">
+          <div class="step-title">Solicită oferte de la furnizori</div>
+          <div class="step-desc">Identifică și obține oferte de la mai mulți furnizori pentru utilajele noi dorite. Rețineți că sunt eligibile DOAR echipamentele și utilajele NOI (no second-hand).</div>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-number">4</div>
+        <div class="step-content">
+          <div class="step-title">Pregătește cofinanțarea</div>
+          <div class="step-desc">Asigură-te că dispui de minimum 15% din valoarea totală a proiectului. Aceasta va fi contribuția ta proprie (nerambursabilă).</div>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-number">5</div>
+        <div class="step-content">
+          <div class="step-title">Monitorizează publicarea ghidului</div>
+          <div class="step-desc">Ține-te informat cu privire la publicarea ghidului oficial. Verifică site-ul APIA și al Ministerului Agriculturii. Ghiduri anterioare similare sunt deja disponibile.</div>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-number">6</div>
+        <div class="step-content">
+          <div class="step-title">Depune dosarul în primele zile</div>
+          <div class="step-desc">Odată cu deschiderea sesiunii, depune dosarul în primele 7-10 zile. Sesiunile tind să se închidă mai repede decât se estimează, deci nu întârzia!</div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
 <section class="cta-section">
   <h2>Ești eligibil? Aplică cu FABER!</h2>
-  <p>Echipa noastră analizează gratuit situația ta și îți confirmă în 24 ore dacă te încadrezi în criteriile de eligibilitate.</p>
-  <a href="index.html#contact" class="btn-orange" style="font-size:1.05rem;padding:16px 36px;">🚀 Solicită Consultanța Gratuită</a>
+  <p>Echipa noastră analizează gratuit situația fermei tale și îți confirmă în 24 ore dacă te încadrezi în criteriile de eligibilitate DR-14. Suntem aici să te ajutem să obții finanțarea!</p>
+  <a href="index.html#contact" class="btn-orange" style="font-size: 1.05rem; padding: 16px 36px;">🚀 Solicită Consultanța Gratuită</a>
 </section>
 
 <footer class="page-footer">
@@ -249,7 +445,7 @@
 </footer>
 
 <script>
-  var target = new Date('2026-02-28T23:59:00');
+  var target = new Date('2026-09-01T23:59:00');
   function tick() {
     var diff = target - new Date();
     if (diff <= 0) {

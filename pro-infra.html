@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="PRO INFRA – finanțare până la 15 milioane EUR pentru producătorii de materiale de construcții utilizate în infrastructura de transport. Schema ajutor stat, Fondul pentru Modernizare." />
+  <meta name="keywords" content="PRO INFRA schema ajutor stat, materiale constructii infrastructura transport, Fondul pentru Modernizare, finantare producatori materiale constructii, schema stat Romania 2026" />
+  <meta property="og:title" content="PRO INFRA – Schema de Ajutor de Stat pentru Materiale de Construcții | Fondul pentru Modernizare" />
+  <meta property="og:description" content="PRO INFRA – finanțare până la 15 milioane EUR pentru producătorii de materiale de construcții utilizate în infrastructura de transport. Schema ajutor stat, Fondul pentru Modernizare." />
+  <meta property="og:type" content="website" />
+  <title>PRO INFRA – Schema de Ajutor de Stat pentru Materiale de Construcții | Fondul pentru Modernizare</title>
+  <link rel="canonical" href="https://atelierdeconsultanta.ro/pro-infra.html" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <meta name="robots" content="index, follow" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"GovernmentService","name":"PRO INFRA – Schema de Ajutor de Stat pentru Materiale de Construcții","description":"PRO INFRA – finanțare până la 15 milioane EUR pentru producătorii de materiale de construcții utilizate în infrastructura de transport. Schema ajutor stat, Fondul pentru Modernizare.","provider":{"@type":"ProfessionalService","name":"FABER – Atelier de Consultanță","url":"https://atelierdeconsultanta.ro"}}
+  </script>
+  <style>
+    /* Root CSS Variables cu tema naval-industrial */
+    :root{
+      --navy:#0d1f3c;
+      --orange:#e8642a;
+      --gold:#f5a623;
+      --white:#ffffff;
+      --gray-100:#f8f9fb;
+      --gray-200:#e8edf5;
+      --text-main:#1a2540;
+      --text-soft:#4a5568;
+      --c1:#0d1f3c;
+      --c2:#1a3060;
+      --rs:8px;
+      --rm:16px;
+      --rl:24px;
+      --tr:0.3s cubic-bezier(0.4,0,0.2,1);
+    }
+
+    /* Reset și tipografie de bază */
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'Inter',sans-serif;color:var(--text-main);background:var(--white);line-height:1.6;overflow-x:hidden;}
+    a{color:inherit;text-decoration:none;}
+    button{cursor:pointer;border:none;background:none;font-family:inherit;}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms!important;transition-duration:0.01ms!important;}}
+
+    /* TOPBAR cu logo SVG FABER */
+    .topbar{background:rgba(13,31,60,0.96);padding:0 24px;height:68px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,0.08);}
+    .topbar-logo{display:flex;align-items:center;}
+    .topbar-logo svg{width:auto;height:44px;}
+    .topbar-nav{display:flex;gap:6px;align-items:center;}
+    .topbar-nav a{color:rgba(255,255,255,0.75);font-size:0.85rem;font-weight:500;padding:7px 13px;border-radius:var(--rs);transition:color var(--tr),background var(--tr);}
+    .topbar-nav a:hover{color:white;background:rgba(255,255,255,0.08);}
+    .topbar-nav .cta{background:var(--orange);color:white!important;font-weight:600;padding:8px 18px;}
+    .topbar-nav .cta:hover{background:#c4541f;}
+
+    /* HERO section cu tema naval-industrial */
+    .hero{background:linear-gradient(135deg,var(--c1) 0%,var(--c2) 100%);padding:80px 24px 60px;position:relative;overflow:hidden;}
+    .hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,0.04) 1px,transparent 1px);background-size:36px 36px;pointer-events:none;}
+    .hero-deco{position:absolute;right:-100px;top:-100px;width:500px;height:500px;border-radius:50%;background:rgba(255,255,255,0.04);pointer-events:none;}
+    .hero-inner{max-width:1100px;margin:0 auto;position:relative;z-index:2;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center;}
+    .hero-tag{display:inline-block;background:rgba(232,100,42,0.2);border:1px solid rgba(232,100,42,0.4);color:var(--gold);font-size:0.72rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:6px 14px;border-radius:100px;margin-bottom:20px;}
+    .hero h1{font-size:clamp(2rem,4vw,3.2rem);font-weight:900;color:white;line-height:1.15;letter-spacing:-1px;margin-bottom:20px;}
+    .hero-sub{font-size:1.05rem;color:rgba(255,255,255,0.75);line-height:1.7;margin-bottom:32px;max-width:580px;}
+    .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;}
+
+    /* Butoane CTA */
+    .btn-orange{display:inline-flex;align-items:center;gap:8px;background:var(--orange);color:white;padding:14px 28px;border-radius:var(--rs);font-size:0.95rem;font-weight:700;box-shadow:0 8px 24px rgba(232,100,42,0.45);transition:background var(--tr),transform var(--tr);position:relative;overflow:hidden;}
+    .btn-orange::after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.2),transparent);transform:translateX(-100%);transition:transform 0.5s;}
+    .btn-orange:hover::after{transform:translateX(100%);}
+    .btn-orange:hover{background:#c4541f;transform:translateY(-2px);}
+    .btn-ghost{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.25);color:white;padding:14px 28px;border-radius:var(--rs);font-size:0.95rem;font-weight:600;backdrop-filter:blur(8px);transition:background var(--tr);}
+    .btn-ghost:hover{background:rgba(255,255,255,0.18);}
+
+    /* Hero visual emoji circle */
+    .hero-visual{width:180px;height:180px;border-radius:50%;flex-shrink:0;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);display:flex;align-items:center;justify-content:center;font-size:5.5rem;}
+
+    /* COUNTDOWN section */
+    .countdown-section{background:var(--navy);padding:40px 24px;text-align:center;}
+    .countdown-label{font-size:0.75rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--orange);margin-bottom:8px;}
+    .countdown-title{color:white;font-size:1.1rem;font-weight:600;margin-bottom:24px;}
+    .countdown-boxes{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+    .cd-box{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);border-radius:var(--rm);padding:20px 28px;min-width:100px;text-align:center;}
+    .cd-box .num{font-size:2.8rem;font-weight:900;color:var(--gold);line-height:1;font-variant-numeric:tabular-nums;}
+    .cd-box .unit{font-size:0.75rem;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:1px;margin-top:4px;}
+    .cd-deadline{color:rgba(255,255,255,0.5);font-size:0.82rem;margin-top:16px;}
+
+    /* SECTION styles */
+    .section{padding:80px 24px;}
+    .section-alt{background:var(--gray-100);}
+    .section-dark{background:linear-gradient(135deg,var(--navy) 0%,#112a50 100%);}
+    .container{max-width:1100px;margin:0 auto;}
+    .sec-label{font-size:0.72rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--orange);margin-bottom:10px;}
+    .sec-title{font-size:clamp(1.7rem,3vw,2.5rem);font-weight:800;color:var(--text-main);letter-spacing:-0.5px;margin-bottom:14px;line-height:1.2;}
+    .sec-title.wh{color:white;}
+    .sec-sub{font-size:1rem;color:var(--text-soft);max-width:580px;margin-bottom:40px;line-height:1.7;}
+    .sec-sub.wh{color:rgba(255,255,255,0.65);}
+
+    /* INFO CARDS */
+    .info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;}
+    .info-card{background:white;border-radius:var(--rm);padding:28px;border:1px solid var(--gray-200);transition:transform var(--tr),box-shadow var(--tr);}
+    .info-card:hover{transform:translateY(-4px);box-shadow:0 8px 32px rgba(13,31,60,0.14);}
+    .info-card .ic-icon{font-size:2rem;margin-bottom:14px;}
+    .info-card .ic-title{font-size:0.9rem;font-weight:700;margin-bottom:6px;color:var(--text-soft);}
+    .info-card .ic-val{font-size:1.05rem;font-weight:800;color:var(--orange);}
+    .info-card .ic-sub{font-size:0.78rem;color:var(--text-soft);margin-top:4px;}
+
+    /* ELIGIBILITY ITEMS (dark background) */
+    .elig-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;}
+    .elig-item{display:flex;gap:10px;align-items:flex-start;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:var(--rs);padding:14px 16px;}
+    .elig-check{width:22px;height:22px;border-radius:50%;flex-shrink:0;background:rgba(232,100,42,0.25);display:flex;align-items:center;justify-content:center;color:var(--orange);font-size:0.7rem;font-weight:700;}
+    .elig-text{color:rgba(255,255,255,0.85);font-size:0.875rem;line-height:1.4;}
+
+    /* ACTIVITY LIST */
+    .activ-list{display:flex;flex-direction:column;gap:12px;}
+    .activ-item{display:flex;gap:14px;align-items:flex-start;background:white;border:1px solid var(--gray-200);border-radius:var(--rs);padding:16px 20px;}
+    .activ-num{width:30px;height:30px;border-radius:50%;flex-shrink:0;background:linear-gradient(135deg,var(--orange),var(--gold));display:flex;align-items:center;justify-content:center;color:white;font-size:0.8rem;font-weight:700;}
+    .activ-text{font-size:0.9rem;color:var(--text-soft);line-height:1.5;padding-top:4px;}
+
+    /* Two-column for eligible/ineligible costs */
+    .two-col{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:32px;}
+    .col-section h3{color:white;font-size:1.2rem;font-weight:700;margin-bottom:16px;}
+    .col-list{display:flex;flex-direction:column;gap:10px;}
+    .col-item{display:flex;gap:12px;align-items:flex-start;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:var(--rs);padding:12px 14px;}
+    .col-mark{width:22px;height:22px;border-radius:50%;flex-shrink:0;background:rgba(76,175,80,0.3);display:flex;align-items:center;justify-content:center;color:#4caf50;font-size:0.75rem;font-weight:700;}
+    .col-mark.bad{background:rgba(244,67,54,0.3);color:#f44336;}
+    .col-text{color:rgba(255,255,255,0.85);font-size:0.875rem;line-height:1.4;}
+
+    /* CTA SECTION */
+    .cta-section{text-align:center;padding:80px 24px;background:linear-gradient(135deg,#0a1628 0%,var(--navy) 100%);}
+    .cta-section h2{color:white;font-size:clamp(1.8rem,3vw,2.6rem);font-weight:900;margin-bottom:16px;}
+    .cta-section p{color:rgba(255,255,255,0.65);font-size:1rem;margin-bottom:36px;max-width:540px;margin-left:auto;margin-right:auto;}
+
+    /* FOOTER */
+    .page-footer{background:#060f20;padding:32px 24px;text-align:center;}
+    .page-footer p{color:rgba(255,255,255,0.35);font-size:0.8rem;}
+    .page-footer a{color:var(--orange);}
+
+    /* ANIMATIONS */
+    .reveal{opacity:0;transform:translateY(24px);transition:opacity 0.7s cubic-bezier(0.4,0,0.2,1),transform 0.7s cubic-bezier(0.4,0,0.2,1);}
+    .reveal.revealed{opacity:1;transform:translateY(0);}
+
+    /* RESPONSIVE */
+    @media(max-width:768px){
+      .hero-inner{grid-template-columns:1fr;}
+      .hero-visual{display:none;}
+      .topbar-nav a:not(.cta){display:none;}
+    }
+  </style>
+</head>
+<body>
+
+<!-- TOPBAR cu logo SVG FABER -->
+<nav class="topbar" role="navigation" aria-label="Navigație principală">
+  <a href="index.html" class="topbar-logo" aria-label="FABER – Atelier de Consultanță, acasă">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 218 44" width="218" height="44" aria-hidden="true">
+      <text x="0" y="32" font-family="Georgia,'Times New Roman',serif" font-size="28" font-weight="700" fill="#e8642a" letter-spacing="3">FABER</text>
+      <path d="M94,22 L100,14 L106,22 L100,30 Z" fill="white" opacity="0.95"/>
+      <text x="111" y="18" font-family="'Inter','Helvetica Neue',sans-serif" font-size="10" font-weight="600" fill="white" letter-spacing="2">ATELIER de</text>
+      <text x="111" y="33" font-family="'Inter','Helvetica Neue',sans-serif" font-size="10" font-weight="600" fill="white" letter-spacing="2">CONSULTANȚĂ</text>
+    </svg>
+  </a>
+  <div class="topbar-nav">
+    <a href="index.html">← Acasă</a>
+    <a href="index.html#finantare">Toate programele</a>
+    <a href="index.html#contact" class="cta">Consultanță Gratuită</a>
+  </div>
+</nav>
+
+<!-- HERO section cu tema naval-industrial -->
+<header class="hero">
+  <div class="hero-deco" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <div>
+      <div class="hero-tag">🏗️ Schema Ajutor de Stat | Fondul pentru Modernizare</div>
+      <h1>PRO INFRA – Materiale de Construcții pentru Infrastructura de Transport</h1>
+      <p class="hero-sub">Schema de ajutor de stat pentru producătorii de materiale de construcții și materii prime utilizate în proiectele de infrastructură de transport. Finanțare până la 15 milioane EUR per beneficiar.</p>
+      <div class="hero-ctas">
+        <a href="index.html#contact" class="btn-orange">🚀 Aplică cu FABER</a>
+        <a href="#detalii" class="btn-ghost">Vezi detalii ↓</a>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">🏗️</div>
+  </div>
+</header>
+
+<!-- COUNTDOWN section -->
+<section class="countdown-section" aria-label="Termen limită apel" data-section-id="countdown">
+  <div class="countdown-label">⏱️ Termen limită estimativ</div>
+  <div class="countdown-title">Timp rămas până la închiderea apelului</div>
+  <div class="countdown-boxes">
+    <div class="cd-box"><div class="num" id="cd-d">--</div><div class="unit">Zile</div></div>
+    <div class="cd-box"><div class="num" id="cd-h">--</div><div class="unit">Ore</div></div>
+    <div class="cd-box"><div class="num" id="cd-m">--</div><div class="unit">Minute</div></div>
+    <div class="cd-box"><div class="num" id="cd-s">--</div><div class="unit">Secunde</div></div>
+  </div>
+  <p class="cd-deadline">📅 Dată estimativă: <strong>31 decembrie 2026</strong> &nbsp;·&nbsp; <em>Verifică ghidul oficial pentru data exactă</em></p>
+</section>
+
+<!-- SECTION: Detalii Schemă cu 4 info-cards -->
+<section class="section" id="detalii">
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-label">Informații esențiale</div>
+      <h2 class="sec-title">Detalii Schemă PRO INFRA</h2>
+      <p class="sec-sub">Parametrii de finanțare pentru producătorii de materiale de construcții în infrastructura de transport</p>
+    </div>
+    <div class="info-grid">
+      <div class="info-card reveal">
+        <div class="ic-icon">💰</div>
+        <div class="ic-title">Ajutor Maxim</div>
+        <div class="ic-val">15.000.000 EUR</div>
+        <div class="ic-sub">Per beneficiar</div>
+      </div>
+      <div class="info-card reveal">
+        <div class="ic-icon">💵</div>
+        <div class="ic-title">Buget Total</div>
+        <div class="ic-val">200.000.000 EUR</div>
+        <div class="ic-sub">Fond disponibil</div>
+      </div>
+      <div class="info-card reveal">
+        <div class="ic-icon">📊</div>
+        <div class="ic-title">Buget Anual Mediu</div>
+        <div class="ic-val">max. 100.000.000 EUR</div>
+        <div class="ic-sub">Pe an din fonduri disponibile</div>
+      </div>
+      <div class="info-card reveal">
+        <div class="ic-icon">⚖️</div>
+        <div class="ic-title">Procedură</div>
+        <div class="ic-val">Competitivă</div>
+        <div class="ic-sub">Selecție prin licitație publică</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION DARK: Beneficiari și CAEN-uri Eligibile -->
+<section class="section section-dark">
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-label" style="color:var(--orange)">Cine poate aplica</div>
+      <h2 class="sec-title wh">Beneficiari și CAEN-uri Eligibile</h2>
+      <p class="sec-sub wh">Producători de materiale și materii prime pentru infrastructura de transport</p>
+    </div>
+    <div style="margin-top:32px;">
+      <div style="margin-bottom:24px;">
+        <h3 style="color:white;font-size:1.1rem;font-weight:700;margin-bottom:12px;">✓ Forme juridice eligibile:</h3>
+        <div class="elig-grid reveal">
+          <div class="elig-item"><div class="elig-check">✓</div><div class="elig-text">Microîntreprinderi</div></div>
+          <div class="elig-item"><div class="elig-check">✓</div><div class="elig-text">IMM-uri</div></div>
+          <div class="elig-item"><div class="elig-check">✓</div><div class="elig-text">Întreprinderi mari</div></div>
+        </div>
+      </div>
+      <div style="padding:20px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:var(--rl);">
+        <div style="color:rgba(255,255,255,0.85);font-size:0.9rem;line-height:1.7;">
+          <strong style="color:white;display:block;margin-bottom:10px;">🏭 Coduri CAEN eligibile (selectie din 24 coduri):</strong>
+          <strong style="color:#f5a623;">Extractive:</strong> CAEN 0811 (Piață), 0812 (Pietrișuri, nisip)<br>
+          <strong style="color:#f5a623;">Materiale Refractare:</strong> CAEN 2342 (Ceramică refractară)<br>
+          <strong style="color:#f5a623;">Beton și Mortar:</strong> CAEN 2361, 2362, 2363, 2364 (Beton, mortar, var, ipsos)<br>
+          <strong style="color:#f5a623;">Metalurgie:</strong> CAEN 2431–2445 (Metalurgie și prelucrare metale)<br>
+          <strong style="color:#f5a623;">Construcții Metalice:</strong> CAEN 2511 (Structuri metalice), 2594 (Articole filetate)<br>
+          <strong style="color:#f5a623;">Cabluri Electrice:</strong> CAEN 2732 (Cabluri)<br>
+          <em style="color:rgba(255,255,255,0.6);">+ alte coduri din Anexa 2 a schemei oficiale</em>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION: Obiectivele Schemei -->
+<section class="section">
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-label">Scopul finanțării</div>
+      <h2 class="sec-title">Obiectivele Schemei PRO INFRA</h2>
+      <p class="sec-sub">Schema susține investiții strategice pentru producția de materiale de construcții utilizate în infrastructura de transport</p>
+    </div>
+    <div class="activ-list reveal">
+      <div class="activ-item">
+        <div class="activ-num" style="background:linear-gradient(135deg,#e8642a,#f5a623);">1</div>
+        <div class="activ-text"><strong>Tehnologii moderne și eficiente energetic</strong> – Implementarea de soluții avansate în procesele de fabricație</div>
+      </div>
+      <div class="activ-item">
+        <div class="activ-num" style="background:linear-gradient(135deg,#e8642a,#f5a623);">2</div>
+        <div class="activ-text"><strong>Soluții cu emisii reduse de carbon</strong> – Reducerea amprentei ecologice a materialelor de construcții</div>
+      </div>
+      <div class="activ-item">
+        <div class="activ-num" style="background:linear-gradient(135deg,#e8642a,#f5a623);">3</div>
+        <div class="activ-text"><strong>Conformitate cu standardele europene</strong> – Materiale și procese în linie cu cerințele UE</div>
+      </div>
+      <div class="activ-item">
+        <div class="activ-num" style="background:linear-gradient(135deg,#e8642a,#f5a623);">4</div>
+        <div class="activ-text"><strong>Tranziție spre economia neutră din punct de vedere climatic</strong> – Contribuție la obiectivele de sustenabilitate</div>
+      </div>
+      <div class="activ-item">
+        <div class="activ-num" style="background:linear-gradient(135deg,#e8642a,#f5a623);">5</div>
+        <div class="activ-text"><strong>Sisteme fără combustibili fosili sau gaze naturale</strong> – Electrificare și energii regenerabile</div>
+      </div>
+      <div class="activ-item">
+        <div class="activ-num" style="background:linear-gradient(135deg,#e8642a,#f5a623);">6</div>
+        <div class="activ-text"><strong>Sisteme integrate de management energetic</strong> – Monitorizare și optimizare consum energetic</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION DARK: Cheltuieli Eligibile și Neeligibile -->
+<section class="section section-dark">
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-label" style="color:var(--orange)">Ce se finanțează și ce nu</div>
+      <h2 class="sec-title wh">Cheltuieli Eligibile și Neeligibile</h2>
+      <p class="sec-sub wh">Categoriile de costuri acceptate și cele excludente din finanțare</p>
+    </div>
+    <div class="two-col reveal" style="margin-top:40px;">
+      <div class="col-section">
+        <h3>✓ Eligibile</h3>
+        <div class="col-list">
+          <div class="col-item">
+            <div class="col-mark">✓</div>
+            <div class="col-text">Achiziția de instalații și echipamente eficiente energetic</div>
+          </div>
+          <div class="col-item">
+            <div class="col-mark">✓</div>
+            <div class="col-text">Instalarea și punerea în funcțiune a echipamentelor</div>
+          </div>
+          <div class="col-item">
+            <div class="col-mark">✓</div>
+            <div class="col-text">Sisteme de management energetic integrate</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-section">
+        <h3>✗ Neeligibile</h3>
+        <div class="col-list">
+          <div class="col-item">
+            <div class="col-mark bad">✗</div>
+            <div class="col-text">TVA – indiferent de regimul de deductibilitate</div>
+          </div>
+          <div class="col-item">
+            <div class="col-mark bad">✗</div>
+            <div class="col-text">Beneficiarii suportă integral cheltuielile neeligibile</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION: Procedura de Aplicare -->
+<section class="section">
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-label">Cum funcționează</div>
+      <h2 class="sec-title">Procedura de Aplicare</h2>
+      <p class="sec-sub">Etapele pentru depunerea dosarului și obținerea finanțării</p>
+    </div>
+    <div style="margin-top:40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;" class="reveal">
+      <div style="background:var(--gray-100);border:1px solid var(--gray-200);border-radius:var(--rm);padding:28px;text-align:center;">
+        <div style="font-size:2rem;margin-bottom:14px;">📋</div>
+        <div style="color:var(--text-main);font-weight:700;margin-bottom:8px;">Consultare Calendar</div>
+        <div style="color:var(--text-soft);font-size:0.9rem;">Verificare deschidere apel și calendar pe fonduri.mt.ro</div>
+      </div>
+      <div style="background:var(--gray-100);border:1px solid var(--gray-200);border-radius:var(--rm);padding:28px;text-align:center;">
+        <div style="font-size:2rem;margin-bottom:14px;">📝</div>
+        <div style="color:var(--text-main);font-weight:700;margin-bottom:8px;">Pregătire Dosare</div>
+        <div style="color:var(--text-soft);font-size:0.9rem;">Completare documentație conform ghidului solicitantului MTI</div>
+      </div>
+      <div style="background:var(--gray-100);border:1px solid var(--gray-200);border-radius:var(--rm);padding:28px;text-align:center;">
+        <div style="font-size:2rem;margin-bottom:14px;">📤</div>
+        <div style="color:var(--text-main);font-weight:700;margin-bottom:8px;">Depunere Cerere</div>
+        <div style="color:var(--text-soft);font-size:0.9rem;">Transmitere dosarelor conform procedurilor MTI/AFIR</div>
+      </div>
+      <div style="background:var(--gray-100);border:1px solid var(--gray-200);border-radius:var(--rm);padding:28px;text-align:center;">
+        <div style="font-size:2rem;margin-bottom:14px;">✅</div>
+        <div style="color:var(--text-main);font-weight:700;margin-bottom:8px;">Evaluare și Selecție</div>
+        <div style="color:var(--text-soft);font-size:0.9rem;">Analiza eligibilității și clasificare după punctaj tehnico-financiar</div>
+      </div>
+    </div>
+    <div style="margin-top:32px;padding:20px;background:var(--gray-100);border:1px solid var(--gray-200);border-radius:var(--rl);">
+      <div style="color:var(--text-main);font-size:0.9rem;line-height:1.6;">
+        <strong style="color:var(--navy);">📌 Procedură:</strong> Competitivă (licitație publică)<br>
+        <strong style="color:var(--navy);">🔗 Portal de aplicare:</strong> fonduri.mt.ro<br>
+        <strong style="color:var(--navy);">🏛️ Organ responsabil:</strong> Ministerul Transporturilor și Infrastructurii (MTI)
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION DARK: Organul Responsabil -->
+<section class="section section-dark">
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-label" style="color:var(--orange)">Cine gestionează</div>
+      <h2 class="sec-title wh">Organul Responsabil</h2>
+      <p class="sec-sub wh">Instituția care administrează schema și fondurile</p>
+    </div>
+    <div style="margin-top:40px;padding:28px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:var(--rl);">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:32px;">
+        <div>
+          <div style="font-size:1.5rem;margin-bottom:12px;">🏛️</div>
+          <h3 style="color:white;font-weight:700;margin-bottom:8px;">Ministerul Transporturilor și Infrastructurii (MTI)</h3>
+          <p style="color:rgba(255,255,255,0.75);font-size:0.9rem;line-height:1.6;">
+            Organ central de specialitate responsabil cu implementarea schemei de ajutor de stat PRO INFRA.
+          </p>
+        </div>
+        <div>
+          <div style="font-size:1.5rem;margin-bottom:12px;">💰</div>
+          <h3 style="color:white;font-weight:700;margin-bottom:8px;">Fondul pentru Modernizare</h3>
+          <p style="color:rgba(255,255,255,0.75);font-size:0.9rem;line-height:1.6;">
+            <strong style="color:#f5a623;">Programul Cheie 9:</strong> Eficiență energetică în transport<br>
+            Buget alocat: 200 milioane EUR
+          </p>
+        </div>
+      </div>
+      <div style="margin-top:20px;padding:14px;background:rgba(245,166,35,0.1);border-left:3px solid var(--gold);border-radius:4px;">
+        <div style="color:rgba(255,255,255,0.85);font-size:0.85rem;">
+          <strong style="color:white;">📎 Documente și calendare disponibile la:</strong> fonduri.mt.ro
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="cta-section">
+  <h2>Ești producător de materiale de construcții? Aplică cu FABER!</h2>
+  <p>Echipa noastră de specialiști în ajutoare de stat analizează gratuit situația ta și te ghidează prin întreaga procedură de aplicare pentru finanțare PRO INFRA.</p>
+  <a href="index.html#contact" class="btn-orange" style="font-size:1.05rem;padding:16px 36px;">🚀 Solicită Consultanța Gratuită</a>
+</section>
+
+<!-- FOOTER -->
+<footer class="page-footer">
+  <p>© 2025 FABER – Atelier de Consultanță &nbsp;·&nbsp; <a href="index.html">Acasă</a> &nbsp;·&nbsp; <a href="index.html#finantare">Toate programele</a> &nbsp;·&nbsp; <a href="termeni-si-conditii.html">Termeni</a> &nbsp;·&nbsp; <a href="gdpr.html">GDPR</a></p>
+</footer>
+
+<script>
+  /* Countdown Timer – setează termenul la 31 decembrie 2026, 23:59 */
+  var target = new Date('2026-12-31T23:59:00');
+
+  function tick() {
+    var diff = target - new Date();
+    if (diff <= 0) {
+      // Dacă termenul a expirat, setează toate boxele la 00
+      ['cd-d','cd-h','cd-m','cd-s'].forEach(function(id){
+        document.getElementById(id).textContent='00';
+      });
+      return;
+    }
+
+    // Calculează zile, ore, minute, secunde
+    var d = Math.floor(diff/86400000);
+    var h = Math.floor((diff%86400000)/3600000);
+    var m = Math.floor((diff%3600000)/60000);
+    var s = Math.floor((diff%60000)/1000);
+
+    // Helper pentru padding cu zero
+    function p(n){ return String(n).padStart(2,'0'); }
+
+    // Actualizează display-ul
+    document.getElementById('cd-d').textContent = p(d);
+    document.getElementById('cd-h').textContent = p(h);
+    document.getElementById('cd-m').textContent = p(m);
+    document.getElementById('cd-s').textContent = p(s);
+  }
+
+  tick();
+  setInterval(tick, 1000);
+
+  /* Intersection Observer – Reveal animations */
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){
+        e.target.classList.add('revealed');
+        obs.unobserve(e.target);
+      }
+    });
+  },{threshold:0.1,rootMargin:'0px 0px -30px 0px'});
+
+  document.querySelectorAll('.reveal').forEach(function(el){
+    obs.observe(el);
+  });
+</script>
+</body>
+</html>
