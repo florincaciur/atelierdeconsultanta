@@ -1,6 +1,74 @@
-<details>
-<summary>📋 Conținut seo-freshness.yml — click să vezi</summary>
-Deschide fișierul de pe computerul tău la:
-FABER - Website → .github → workflows → seo-freshness.yml
-și copiază tot conținutul în editorul GitHub.
-</details>
+name: SEO Freshness & Sitemap Ping
+
+on:
+  schedule:
+    - cron: '0 8 * * 1'
+  workflow_dispatch:
+
+jobs:
+  update-sitemap-date:
+    name: Actualizează data sitemap și ping Google
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Actualizează lastmod în sitemap.xml
+        run: |
+          TODAY=$(date +%Y-%m-%d)
+          sed -i "s|<lastmod>[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}</lastmod>|<lastmod>$TODAY</lastmod>|g" sitemap.xml
+          echo "Sitemap actualizat: $TODAY"
+
+      - name: Configurează Git
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "FABER SEO Bot"
+
+      - name: Commit actualizare sitemap
+        run: |
+          TODAY=$(date +%Y-%m-%d)
+          git add sitemap.xml
+          git diff --staged --quiet || git commit -m "SEO: Actualizare sitemap lastmod $TODAY [automated]"
+
+      - name: Push modificări
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main
+
+      - name: Ping Google
+        run: |
+          curl -s "https://www.google.com/ping?sitemap=https://atelierdeconsultanta.ro/sitemap.xml" -o /dev/null -w "Google: %{http_code}\n"
+
+      - name: Ping Bing
+        run: |
+          curl -s "https://www.bing.com/ping?sitemap=https://atelierdeconsultanta.ro/sitemap.xml" -o /dev/null -w "Bing: %{http_code}\n"
+
+      - name: Verifică site live
+        run: |
+          STATUS=$(curl -s -o /dev/null -w "%{http_code}" https://atelierdeconsultanta.ro)
+          echo "Status site: $STATUS"
+
+  check-program-deadlines:
+    name: Verifică termene programe finanțare
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Verifică termene
+        run: |
+          TODAY=$(date +%s)
+          DR12_DATE=$(date -d "2026-06-30" +%s)
+          DR12_DIFF=$(( ($DR12_DATE - $TODAY) / 86400 ))
+          echo "DR12 AFIR: $DR12_DIFF zile ramase"
+          DR14_DATE=$(date -d "2026-07-31" +%s)
+          DR14_DIFF=$(( ($DR14_DATE - $TODAY) / 86400 ))
+          echo "DR14 Ferme Mici: $DR14_DIFF zile ramase"
+          POR_DATE=$(date -d "2026-05-31" +%s)
+          POR_DIFF=$(( ($POR_DATE - $TODAY) / 86400 ))
+          echo "POR Micro Nord-Est: $POR_DIFF zile ramase"
