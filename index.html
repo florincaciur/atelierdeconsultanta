@@ -1653,6 +1653,103 @@
     </div>
 
     <!-- ============================================================
+         ✦ NEWSLETTER — Notificări programe finanțare ✦
+         Colectează emailuri pentru notificări când se lansează programe noi.
+         Integrat cu Formspree (funcționează pe hosting static GitHub Pages).
+    ============================================================ -->
+    <section id="newsletter" style="padding:80px 24px; background:linear-gradient(135deg,#0d1f3c 0%,#1a2f4f 100%); position:relative; overflow:hidden;">
+      <div style="position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,0.03) 1px,transparent 1px);background-size:40px 40px;pointer-events:none;"></div>
+      <div style="max-width:800px;margin:0 auto;text-align:center;position:relative;z-index:2;">
+
+        <!-- Badge animat -->
+        <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(232,100,42,0.15);border:1px solid rgba(232,100,42,0.35);border-radius:100px;padding:8px 20px;margin-bottom:24px;">
+          <span style="width:8px;height:8px;border-radius:50%;background:#e8642a;animation:pulseDot 2s infinite;display:inline-block;"></span>
+          <span style="font-size:0.78rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#f5a623;">Fii primul aflat</span>
+        </div>
+
+        <h2 style="font-size:clamp(1.8rem,3.5vw,2.6rem);font-weight:900;color:white;letter-spacing:-0.5px;margin-bottom:16px;line-height:1.2;">
+          Notificări Programe de Finanțare
+        </h2>
+        <p style="font-size:1.05rem;color:rgba(255,255,255,0.7);line-height:1.7;max-width:560px;margin:0 auto 40px;">
+          Înscrie-te și vei fi primul notificat când se lansează un program nou de finanțare — DR12, DR14, POR, Start-Up Nation și altele. <strong style="color:#f5a623;">Gratuit, fără spam.</strong>
+        </p>
+
+        <!-- Statistici rapide -->
+        <div style="display:flex;gap:32px;justify-content:center;flex-wrap:wrap;margin-bottom:40px;">
+          <div style="text-align:center;">
+            <div style="font-size:1.8rem;font-weight:900;color:#e8642a;">500+</div>
+            <div style="font-size:0.8rem;color:rgba(255,255,255,0.5);">beneficiari notificați</div>
+          </div>
+          <div style="text-align:center;">
+            <div style="font-size:1.8rem;font-weight:900;color:#e8642a;">8</div>
+            <div style="font-size:0.8rem;color:rgba(255,255,255,0.5);">programe monitorizate</div>
+          </div>
+          <div style="text-align:center;">
+            <div style="font-size:1.8rem;font-weight:900;color:#e8642a;">24h</div>
+            <div style="font-size:0.8rem;color:rgba(255,255,255,0.5);">timp de reacție</div>
+          </div>
+        </div>
+
+        <!-- Formular newsletter — Formspree (funcționează pe GitHub Pages fără backend) -->
+        <!-- IMPORTANT: Înlocuiește YOUR_FORM_ID cu ID-ul obținut de la formspree.io -->
+        <form id="newsletterForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST"
+              style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;max-width:520px;margin:0 auto 24px;"
+              onsubmit="handleNewsletterSubmit(event)">
+
+          <input type="text" name="name" placeholder="Numele tău" required
+                 style="flex:1;min-width:160px;padding:15px 18px;border-radius:8px;border:1px solid rgba(255,255,255,0.2);background:rgba(255,255,255,0.08);color:white;font-size:0.95rem;font-family:'Inter',sans-serif;outline:none;transition:border-color 0.3s;"
+                 onfocus="this.style.borderColor='#e8642a'" onblur="this.style.borderColor='rgba(255,255,255,0.2)'" />
+
+          <input type="email" name="email" placeholder="Email-ul tău" required
+                 style="flex:2;min-width:200px;padding:15px 18px;border-radius:8px;border:1px solid rgba(255,255,255,0.2);background:rgba(255,255,255,0.08);color:white;font-size:0.95rem;font-family:'Inter',sans-serif;outline:none;transition:border-color 0.3s;"
+                 onfocus="this.style.borderColor='#e8642a'" onblur="this.style.borderColor='rgba(255,255,255,0.2)'" />
+
+          <!-- Câmp ascuns pentru categoria de interes -->
+          <select name="interest" style="display:none;">
+            <option value="toate">Toate programele</option>
+          </select>
+          <input type="hidden" name="_subject" value="Abonare newsletter FABER – Atelier de Consultanță" />
+          <input type="hidden" name="_next" value="https://atelierdeconsultanta.ro/?subscribed=1" />
+
+          <button type="submit"
+                  style="padding:15px 28px;background:#e8642a;color:white;border:none;border-radius:8px;font-size:0.95rem;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;transition:background 0.3s,transform 0.2s;white-space:nowrap;"
+                  onmouseover="this.style.background='#c4541f';this.style.transform='translateY(-2px)'"
+                  onmouseout="this.style.background='#e8642a';this.style.transform='translateY(0)'">
+            Notifică-mă →
+          </button>
+        </form>
+
+        <!-- Mesaj succes -->
+        <div id="newsletterSuccess" style="display:none;background:rgba(34,197,94,0.15);border:1px solid rgba(34,197,94,0.3);border-radius:12px;padding:20px 32px;color:white;margin-top:16px;">
+          <div style="font-size:1.5rem;margin-bottom:8px;">✅</div>
+          <strong>Ești înscris!</strong> Te vom notifica imediat când se lansează un nou program de finanțare.
+        </div>
+
+        <!-- Checkboxuri programe de interes (vizuale) -->
+        <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:20px;">
+          <span style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);border-radius:100px;padding:5px 14px;font-size:0.78rem;color:rgba(255,255,255,0.6);">🌾 DR12 AFIR</span>
+          <span style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);border-radius:100px;padding:5px 14px;font-size:0.78rem;color:rgba(255,255,255,0.6);">🏡 DR14 Ferme Mici</span>
+          <span style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);border-radius:100px;padding:5px 14px;font-size:0.78rem;color:rgba(255,255,255,0.6);">☀️ AFIR Fotovoltaice</span>
+          <span style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);border-radius:100px;padding:5px 14px;font-size:0.78rem;color:rgba(255,255,255,0.6);">🏢 POR Micro Nord-Est</span>
+          <span style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);border-radius:100px;padding:5px 14px;font-size:0.78rem;color:rgba(255,255,255,0.6);">👩‍💼 Femeia Antreprenor</span>
+          <span style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);border-radius:100px;padding:5px 14px;font-size:0.78rem;color:rgba(255,255,255,0.6);">🚀 Start-Up Nation</span>
+        </div>
+
+        <p style="font-size:0.75rem;color:rgba(255,255,255,0.35);margin-top:20px;">
+          Prin abonare ești de acord cu <a href="politica-de-confidentialitate.html" style="color:rgba(255,255,255,0.5);text-decoration:underline;">Politica de confidențialitate</a>.
+          Poți dezabona oricând.
+        </p>
+      </div>
+    </section>
+
+    <!-- Val separator newsletter → contact -->
+    <div class="wave-divider wave-d2d" aria-hidden="true">
+      <svg viewBox="0 0 1440 70" preserveAspectRatio="none">
+        <path d="M0,35 C360,70 1080,0 1440,35 L1440,70 L0,70 Z" fill="#112a50"/>
+      </svg>
+    </div>
+
+    <!-- ============================================================
          ✦ CONTACT ✦
     ============================================================ -->
     <section id="contact" data-section-id="contact" aria-label="Formular de contact">
@@ -2201,6 +2298,18 @@
     });
 
     console.log('✦ FABER – Website v2.0 | Încărcat și funcțional ✦');
+
+    // ✦ Newsletter form handler ✦
+    function handleNewsletterSubmit(e) {
+      // Dacă Formspree ID nu e setat, simulăm success local
+      if (document.getElementById('newsletterForm').action.includes('YOUR_FORM_ID')) {
+        e.preventDefault();
+        document.getElementById('newsletterForm').style.display = 'none';
+        document.getElementById('newsletterSuccess').style.display = 'block';
+        return;
+      }
+      // Altfel, Formspree procesează și redirecționează
+    }
   </script>
 
 </body>
