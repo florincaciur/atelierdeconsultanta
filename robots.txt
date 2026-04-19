@@ -1,11 +1,66 @@
 # robots.txt — FABER Atelier de Consultanta
 # https://atelierdeconsultanta.ro
+# Actualizat: 2026-04-19 — permitere crawlere AI
 
+# Crawlere standard — acces complet
 User-agent: *
 Allow: /
+Disallow: /admin/
 
-# Nu indexa panoul de administrare
+# ✦ OpenAI / ChatGPT
+User-agent: GPTBot
+Allow: /
+
+# ✦ Anthropic / Claude
+User-agent: ClaudeBot
+Allow: /
+User-agent: anthropic-ai
+Allow: /
+User-agent: Claude-Web
+Allow: /
+
+# ✦ Google / Gemini
+User-agent: Googlebot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+
+# ✦ Microsoft Bing / Copilot
+User-agent: Bingbot
+Allow: /
+
+# ✦ Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+
+# ✦ Meta AI
+User-agent: FacebookBot
+Allow: /
+
+# ✦ Apple
+User-agent: Applebot
+Allow: /
+User-agent: Applebot-Extended
+Allow: /
+
+# ✦ Common Crawl (training data pentru multe LLM-uri)
+User-agent: CCBot
+Allow: /
+
+# ✦ Cohere AI
+User-agent: cohere-ai
+Allow: /
+
+# ✦ Deepseek
+User-agent: DeepSeek
+Allow: /
+
+# Panoul de administrare — restricționat pentru toți
+User-agent: *
 Disallow: /admin/
 
 # Sitemap
 Sitemap: https://atelierdeconsultanta.ro/sitemap.xml
+
+# Fișier llms.txt pentru AI
+# https://atelierdeconsultanta.ro/llms.txt
