@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Calculator Standard Output (SO) pentru programele AFIR DR12 și DR14. Calculează dimensiunea economică a fermei și verifică eligibilitatea pentru finanțare." />
+  <meta name="keywords" content="calculator standard output, SO calculator, DR12, DR14, AFIR, dimensiune economică fermă, eligibilitate" />
+  <meta property="og:title" content="Calculator Standard Output (SO) | FABER" />
+  <meta property="og:description" content="Calculator Standard Output interactiv pentru AFIR DR12 și DR14. Verifică dacă ferma ta îndeplinește pragurile de elegibilitate." />
+  <meta property="og:type" content="website" />
+  <title>Calculator Standard Output (SO) | AFIR DR12 DR14 Eligibilitate</title>
+  <link rel="canonical" href="https://atelierdeconsultanta.ro/calculator-soc.html" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  <meta name="robots" content="index, follow" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    :root{--navy:#0d1f3c;--orange:#e8642a;--gold:#f5a623;--white:#ffffff;--gray-100:#f8f9fb;--gray-200:#e8edf5;--text-main:#1a2540;--text-soft:#4a5568;--success:#27ae60;--warning:#f39c12;--danger:#e74c3c;--rs:8px;--rm:16px;--rl:24px;--tr:0.3s cubic-bezier(0.4,0,0.2,1);}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;}
+    body{font-family:'Inter',sans-serif;color:var(--text-main);background:var(--white);line-height:1.6;overflow-x:hidden;}
+    a{color:inherit;text-decoration:none;}
+    button{cursor:pointer;border:none;background:none;font-family:inherit;}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms!important;transition-duration:0.01ms!important;}}
+
+    .topbar{background:rgba(13,31,60,0.96);padding:0 24px;height:68px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,0.08);}
+    .topbar-logo{display:flex;align-items:center;}
+    .topbar-logo svg{width:218px;height:44px;}
+    .topbar-nav{display:flex;gap:6px;align-items:center;}
+    .topbar-nav a{color:rgba(255,255,255,0.75);font-size:0.85rem;font-weight:500;padding:7px 13px;border-radius:var(--rs);transition:color var(--tr),background var(--tr);}
+    .topbar-nav a:hover{color:white;background:rgba(255,255,255,0.08);}
+    .topbar-nav .cta{background:var(--orange);color:white!important;font-weight:600;padding:8px 18px;}
+    .topbar-nav .cta:hover{background:#c4541f;}
+
+    .hero{background:linear-gradient(135deg,#0d1f3c 0%,#1a3a6a 100%);padding:80px 24px 60px;position:relative;overflow:hidden;}
+    .hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,0.04) 1px,transparent 1px);background-size:36px 36px;pointer-events:none;}
+    .hero-deco{position:absolute;right:-100px;top:-100px;width:500px;height:500px;border-radius:50%;background:rgba(255,255,255,0.04);pointer-events:none;}
+    .hero-inner{max-width:1100px;margin:0 auto;position:relative;z-index:2;}
+    .hero-tag{display:inline-block;background:rgba(232,100,42,0.2);border:1px solid rgba(232,100,42,0.4);color:var(--gold);font-size:0.72rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:6px 14px;border-radius:100px;margin-bottom:20px;}
+    .hero h1{font-size:clamp(2rem,4vw,3.2rem);font-weight:900;color:white;line-height:1.15;letter-spacing:-1px;margin-bottom:20px;}
+    .hero-sub{font-size:1.05rem;color:rgba(255,255,255,0.75);line-height:1.7;margin-bottom:32px;max-width:680px;}
+
+    .section{padding:80px 24px;}
+    .section-alt{background:var(--gray-100);}
+    .container{max-width:1100px;margin:0 auto;}
+    .sec-label{font-size:0.72rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--orange);margin-bottom:10px;}
+    .sec-title{font-size:clamp(1.7rem,3vw,2.5rem);font-weight:800;color:var(--text-main);letter-spacing:-0.5px;margin-bottom:14px;line-height:1.2;}
+    .sec-sub{font-size:1rem;color:var(--text-soft);max-width:680px;margin-bottom:40px;line-height:1.7;}
+
+    .calc-wrapper{background:white;border-radius:var(--rm);padding:40px;border:2px solid var(--navy);box-shadow:0 4px 24px rgba(13,31,60,0.12);}
+    .calc-section{margin-bottom:40px;}
+    .calc-section h3{font-size:1.15rem;font-weight:700;color:var(--navy);margin-bottom:20px;padding-bottom:12px;border-bottom:2px solid var(--orange);}
+
+    .calc-table{width:100%;border-collapse:collapse;margin-top:20px;}
+    .calc-table thead{background:var(--navy);}
+    .calc-table th{color:white;padding:14px 12px;text-align:left;font-weight:700;font-size:0.85rem;letter-spacing:0.5px;}
+    .calc-table tbody tr{border-bottom:1px solid var(--gray-200);}
+    .calc-table tbody tr:last-child{border-bottom:none;}
+    .calc-table td{padding:14px 12px;font-size:0.9rem;}
+    .calc-table td:nth-child(2),
+    .calc-table td:nth-child(3),
+    .calc-table td:nth-child(4){text-align:center;}
+    .calc-table select,
+    .calc-table input{width:100%;padding:8px;border:1px solid var(--gray-200);border-radius:var(--rs);font-size:0.9rem;font-family:inherit;}
+    .calc-table input{text-align:center;}
+    .calc-table .so-val{font-weight:600;color:var(--orange);}
+    .calc-remove{background:var(--danger);color:white;padding:6px 12px;border-radius:var(--rs);font-size:0.8rem;font-weight:600;cursor:pointer;transition:background var(--tr);}
+    .calc-remove:hover{background:#c0392b;}
+
+    .calc-buttons{display:flex;gap:12px;margin-top:20px;flex-wrap:wrap;}
+    .btn-add{background:var(--orange);color:white;padding:12px 20px;border-radius:var(--rs);font-size:0.95rem;font-weight:600;cursor:pointer;transition:background var(--tr);}
+    .btn-add:hover{background:#c4541f;}
+    .btn-reset{background:var(--gray-200);color:var(--text-main);padding:12px 20px;border-radius:var(--rs);font-size:0.95rem;font-weight:600;cursor:pointer;transition:background var(--tr);}
+    .btn-reset:hover{background:#d8dfe8;}
+
+    .calc-result{background:linear-gradient(135deg,var(--navy) 0%,#112a50 100%);color:white;padding:32px;border-radius:var(--rm);margin-top:40px;text-align:center;}
+    .result-label{font-size:0.8rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
+    .result-value{font-size:3.5rem;font-weight:900;color:var(--gold);line-height:1;font-variant-numeric:tabular-nums;margin-bottom:16px;}
+    .result-unit{font-size:1rem;color:rgba(255,255,255,0.75);margin-bottom:24px;}
+    .result-status{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin-top:24px;}
+    .status-badge{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:100px;font-weight:600;font-size:0.9rem;backdrop-filter:blur(8px);}
+    .status-green{background:rgba(39,174,96,0.2);color:#27ae60;border:1px solid rgba(39,174,96,0.3);}
+    .status-orange{background:rgba(243,156,18,0.2);color:#f39c12;border:1px solid rgba(243,156,18,0.3);}
+    .status-red{background:rgba(231,76,60,0.2);color:#e74c3c;border:1px solid rgba(231,76,60,0.3);}
+
+    .thresholds-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-top:40px;}
+    .threshold-card{background:white;border-radius:var(--rm);padding:28px;border:2px solid var(--gray-200);transition:transform var(--tr),box-shadow var(--tr);}
+    .threshold-card:hover{transform:translateY(-4px);box-shadow:0 8px 32px rgba(13,31,60,0.14);}
+    .threshold-badge{display:inline-block;background:var(--orange);color:white;padding:6px 12px;border-radius:100px;font-size:0.7rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:12px;}
+    .threshold-title{font-size:1.15rem;font-weight:800;color:var(--text-main);margin-bottom:8px;}
+    .threshold-range{font-size:1.35rem;font-weight:900;color:var(--orange);margin-bottom:12px;}
+    .threshold-desc{font-size:0.9rem;color:var(--text-soft);line-height:1.5;}
+    .threshold-icon{font-size:2rem;margin-bottom:12px;}
+
+    .page-footer{background:#060f20;padding:32px 24px;text-align:center;}
+    .page-footer p{color:rgba(255,255,255,0.35);font-size:0.8rem;}
+    .page-footer a{color:var(--orange);}
+
+    .reveal{opacity:0;transform:translateY(24px);transition:opacity 0.7s cubic-bezier(0.4,0,0.2,1),transform 0.7s cubic-bezier(0.4,0,0.2,1);}
+    .reveal.revealed{opacity:1;transform:translateY(0);}
+
+    @media(max-width:768px){
+      .calc-wrapper{padding:24px;}
+      .calc-table{font-size:0.85rem;}
+      .calc-table th,
+      .calc-table td{padding:10px 8px;}
+      .calc-table select,
+      .calc-table input{font-size:0.8rem;}
+      .result-value{font-size:2.5rem;}
+      .btn-add,
+      .btn-reset{width:100%;}
+      .calc-buttons{flex-direction:column;}
+    }
+  </style>
+</head>
+<body>
+
+<!-- Topbar -->
+<nav class="topbar" role="navigation">
+  <a href="index.html" class="topbar-logo" aria-label="FABER – Atelier de Consultanță, acasă">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 44" width="240" height="44" aria-hidden="true">
+      <text x="0" y="32" font-family="Georgia,'Times New Roman',serif" font-size="28" font-weight="700" fill="#e8642a" letter-spacing="3">FABER</text>
+      <path d="M112,22 L119,13 L126,22 L119,31 Z" fill="white" opacity="0.95"/>
+      <text x="132" y="18" font-family="'Inter','Helvetica Neue',sans-serif" font-size="10" font-weight="600" fill="white" letter-spacing="2">ATELIER de</text>
+      <text x="132" y="33" font-family="'Inter','Helvetica Neue',sans-serif" font-size="10" font-weight="600" fill="white" letter-spacing="2">CONSULTANȚĂ</text>
+    </svg>
+  </a>
+  <div class="topbar-nav">
+    <a href="index.html">← Acasă</a>
+    <a href="index.html#finantare">Programe</a>
+    <a href="blog.html">Blog</a>
+    <a href="calculator-soc.html" style="color:rgba(255,255,255,0.75);font-size:0.82rem;font-weight:600;padding:7px 12px;border-radius:6px;border:1px solid rgba(232,100,42,0.4);transition:all 0.3s;">🧮 Calculator SOC</a>
+    <a href="index.html#contact" class="cta">Consultanță Gratuită</a>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<header class="hero">
+  <div class="hero-deco" aria-hidden="true"></div>
+  <div class="hero-inner">
+    <div class="hero-tag">🌾 Calculator Agricol</div>
+    <h1>Calculator Standard Output (SO)</h1>
+    <p class="hero-sub">Calculează dimensiunea economică a fermei tale și verifică dacă îndeplinești pragurile de eligibilitate pentru programele AFIR DR12 (Tineri Fermieri) și DR14 (Ferme Mici). Instrumente gratuite pentru antreprenorii din agricultură.</p>
+  </div>
+</header>
+
+<!-- Main Calculator Section -->
+<section class="section">
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-label">Informații esențiale</div>
+      <h2 class="sec-title">Ce este Standard Output (SO)?</h2>
+      <p class="sec-sub">Standard Output (SO) reprezintă producția standard pe unitate (hectar pentru culturi, cap de animal pentru zootehnie) exprimată în EUR. Se calculează pe baza datelor PAC 2023-2027 pentru România și determină dimensiunea economică a fermei. Aceasta este esențială pentru eligibilitatea la programele AFIR.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Calculator -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="reveal" style="margin-bottom:40px;">
+      <div class="sec-label">Calculator interactiv</div>
+      <h2 class="sec-title">Calculează SO-ul Fermei Tale</h2>
+      <p class="sec-sub">Selectează culturile și animalele pe care le crești și introdu suprafețele (în hectare) sau numărul de capete. Calculatorul determină SO total și compară cu pragurile de eligibilitate.</p>
+    </div>
+
+    <div class="calc-wrapper">
+      <!-- Culturi de Câmp -->
+      <div class="calc-section">
+        <h3>🌽 Culturi de Câmp (EUR/ha)</h3>
+        <table class="calc-table" id="culturi-table">
+          <thead>
+            <tr>
+              <th>Cultură</th>
+              <th>SO/ha (EUR)</th>
+              <th>Suprafață (ha)</th>
+              <th>SO Total</th>
+              <th>Acțiune</th>
+            </tr>
+          </thead>
+          <tbody id="culturi-body">
+          </tbody>
+        </table>
+        <div class="calc-buttons">
+          <button class="btn-add" onclick="addCulturaRow('culturi')">+ Adaugă Cultură</button>
+        </div>
+      </div>
+
+      <!-- Legume -->
+      <div class="calc-section">
+        <h3>🥬 Legume (EUR/ha)</h3>
+        <table class="calc-table" id="legume-table">
+          <thead>
+            <tr>
+              <th>Legumă</th>
+              <th>SO/ha (EUR)</th>
+              <th>Suprafață (ha)</th>
+              <th>SO Total</th>
+              <th>Acțiune</th>
+            </tr>
+          </thead>
+          <tbody id="legume-body">
+          </tbody>
+        </table>
+        <div class="calc-buttons">
+          <button class="btn-add" onclick="addCulturaRow('legume')">+ Adaugă Legumă</button>
+        </div>
+      </div>
+
+      <!-- Fructe -->
+      <div class="calc-section">
+        <h3>🍎 Fructe și Plantații (EUR/ha)</h3>
+        <table class="calc-table" id="fructe-table">
+          <thead>
+            <tr>
+              <th>Fruct/Plantație</th>
+              <th>SO/ha (EUR)</th>
+              <th>Suprafață (ha)</th>
+              <th>SO Total</th>
+              <th>Acțiune</th>
+            </tr>
+          </thead>
+          <tbody id="fructe-body">
+          </tbody>
+        </table>
+        <div class="calc-buttons">
+          <button class="btn-add" onclick="addCulturaRow('fructe')">+ Adaugă Fruct</button>
+        </div>
+      </div>
+
+      <!-- Animale -->
+      <div class="calc-section">
+        <h3>🐄 Animale (EUR/cap)</h3>
+        <table class="calc-table" id="animale-table">
+          <thead>
+            <tr>
+              <th>Animal</th>
+              <th>SO/cap (EUR)</th>
+              <th>Număr capete</th>
+              <th>SO Total</th>
+              <th>Acțiune</th>
+            </tr>
+          </thead>
+          <tbody id="animale-body">
+          </tbody>
+        </table>
+        <div class="calc-buttons">
+          <button class="btn-add" onclick="addCulturaRow('animale')">+ Adaugă Animal</button>
+        </div>
+      </div>
+
+      <!-- Buttons -->
+      <div style="display:flex;gap:12px;margin-top:40px;flex-wrap:wrap;">
+        <button class="btn-reset" onclick="resetCalculator()">🔄 Șterge Tot</button>
+      </div>
+
+      <!-- Result -->
+      <div class="calc-result">
+        <div class="result-label">Standard Output Total</div>
+        <div class="result-value" id="total-so">0</div>
+        <div class="result-unit">EUR / SO</div>
+        <div class="result-status" id="status-badges"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Thresholds Section -->
+<section class="section">
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-label">Praguri de eligibilitate</div>
+      <h2 class="sec-title">Clasificare Fermă pe Bază SO</h2>
+      <p class="sec-sub">Verifică pe care dintre categoriile de mai jos te-ai încadra în funcție de SO-ul calculat</p>
+    </div>
+
+    <div class="thresholds-grid reveal">
+      <div class="threshold-card">
+        <div class="threshold-icon">🌾</div>
+        <div class="threshold-badge">DR14</div>
+        <h3 class="threshold-title">Ferme Mici</h3>
+        <div class="threshold-range">4.000 – 11.999 SO</div>
+        <p class="threshold-desc">Eligibile pentru Submasura DR14 – Investiții în ferme mici. Eligibilitate: minimum 4.000 SO și maximum 11.999 SO pe o singură cultură/zootehnie sau combinații.</p>
+      </div>
+      <div class="threshold-card">
+        <div class="threshold-icon">👨‍🌾</div>
+        <div class="threshold-badge">DR12</div>
+        <h3 class="threshold-title">DR12 Tineri Fermieri</h3>
+        <div class="threshold-range">12.000 – 100.000 SO</div>
+        <p class="threshold-desc">Eligibili pentru Submasura DR12 – Sprijin pentru tineri fermieri. Cerință: minimum 12.000 SO și maximum 100.000 SO. Vârsta beneficiarului: sub 40 ani.</p>
+      </div>
+      <div class="threshold-card">
+        <div class="threshold-icon">🏭</div>
+        <div class="threshold-badge">Fermă Comercială</div>
+        <h3 class="threshold-title">Ferme Comerciale</h3>
+        <div class="threshold-range">> 100.000 SO</div>
+        <p class="threshold-desc">Ferme cu SO peste 100.000 EUR. Se clasifică ca ferme comerciale mari, cu alte opțiuni de finanțare și obligații specifice diferite de programele AFIR DR12/DR14.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Standard Output Values Table -->
+<section class="section section-alt">
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-label">Valori SO pentru România</div>
+      <h2 class="sec-title">Tabel Complet SO 2023-2027</h2>
+      <p class="sec-sub">Valorile Standard Output pentru România conform Registrului PAC 2023-2027 (EUR pe unitate)</p>
+    </div>
+
+    <div class="reveal" style="margin-top:40px;">
+      <h3 style="font-size:1.15rem;font-weight:700;color:var(--navy);margin-bottom:20px;">Culturi de Câmp</h3>
+      <div style="overflow-x:auto;">
+        <table class="calc-table" style="background:white;margin-top:0;">
+          <thead><tr><th>Cultură</th><th>SO (EUR/ha)</th></tr></thead>
+          <tbody>
+            <tr><td>Grâu de toamnă</td><td>490</td></tr>
+            <tr><td>Grâu de primăvară</td><td>430</td></tr>
+            <tr><td>Orz de toamnă</td><td>390</td></tr>
+            <tr><td>Orz de primăvară</td><td>350</td></tr>
+            <tr><td>Porumb boabe</td><td>710</td></tr>
+            <tr><td>Porumb siloz</td><td>450</td></tr>
+            <tr><td>Floarea soarelui</td><td>590</td></tr>
+            <tr><td>Rapiță</td><td>620</td></tr>
+            <tr><td>Soia</td><td>560</td></tr>
+            <tr><td>Sfeclă de zahăr</td><td>1.840</td></tr>
+            <tr><td>Cartofi</td><td>2.620</td></tr>
+            <tr><td>Mazăre proteică</td><td>290</td></tr>
+            <tr><td>Triticale</td><td>340</td></tr>
+            <tr><td>Ovăz</td><td>280</td></tr>
+            <tr><td>Secară</td><td>310</td></tr>
+            <tr><td>Mei</td><td>250</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 style="font-size:1.15rem;font-weight:700;color:var(--navy);margin-bottom:20px;margin-top:40px;">Legume</h3>
+      <div style="overflow-x:auto;">
+        <table class="calc-table" style="background:white;margin-top:0;">
+          <thead><tr><th>Legumă</th><th>SO (EUR/ha)</th></tr></thead>
+          <tbody>
+            <tr><td>Tomate câmp</td><td>6.500</td></tr>
+            <tr><td>Ardei câmp</td><td>5.200</td></tr>
+            <tr><td>Vinete câmp</td><td>4.800</td></tr>
+            <tr><td>Castraveți câmp</td><td>5.000</td></tr>
+            <tr><td>Varză câmp</td><td>3.200</td></tr>
+            <tr><td>Ceapă câmp</td><td>3.600</td></tr>
+            <tr><td>Morcovi câmp</td><td>3.400</td></tr>
+            <tr><td>Usturoi câmp</td><td>4.200</td></tr>
+            <tr><td>Fasole câmp</td><td>1.800</td></tr>
+            <tr><td>Tomate seră</td><td>25.000</td></tr>
+            <tr><td>Ardei seră</td><td>20.000</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 style="font-size:1.15rem;font-weight:700;color:var(--navy);margin-bottom:20px;margin-top:40px;">Fructe și Plantații</h3>
+      <div style="overflow-x:auto;">
+        <table class="calc-table" style="background:white;margin-top:0;">
+          <thead><tr><th>Fruct/Plantație</th><th>SO (EUR/ha)</th></tr></thead>
+          <tbody>
+            <tr><td>Mere</td><td>5.800</td></tr>
+            <tr><td>Pere</td><td>4.200</td></tr>
+            <tr><td>Vișine</td><td>3.600</td></tr>
+            <tr><td>Cireșe</td><td>5.200</td></tr>
+            <tr><td>Prune</td><td>2.800</td></tr>
+            <tr><td>Căpșuni câmp</td><td>8.500</td></tr>
+            <tr><td>Vie de vin</td><td>3.200</td></tr>
+            <tr><td>Vie de masă</td><td>5.600</td></tr>
+            <tr><td>Nuci</td><td>2.600</td></tr>
+            <tr><td>Afine</td><td>9.500</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 style="font-size:1.15rem;font-weight:700;color:var(--navy);margin-bottom:20px;margin-top:40px;">Animale</h3>
+      <div style="overflow-x:auto;">
+        <table class="calc-table" style="background:white;margin-top:0;">
+          <thead><tr><th>Animal</th><th>SO (EUR/cap)</th></tr></thead>
+          <tbody>
+            <tr><td>Vaci lapte</td><td>2.450</td></tr>
+            <tr><td>Bovine pentru carne (adulte)</td><td>680</td></tr>
+            <tr><td>Tineret bovin</td><td>380</td></tr>
+            <tr><td>Scroafe</td><td>840</td></tr>
+            <tr><td>Porci la îngrășat</td><td>180</td></tr>
+            <tr><td>Ovine (oi mame)</td><td>115</td></tr>
+            <tr><td>Caprine (capre mame)</td><td>140</td></tr>
+            <tr><td>Iepuri (femele reproducție)</td><td>68</td></tr>
+            <tr><td>Găini ouătoare</td><td>24</td></tr>
+            <tr><td>Pui broiler (per loc)</td><td>14</td></tr>
+            <tr><td>Curcani (per loc)</td><td>22</td></tr>
+            <tr><td>Rațe (per loc)</td><td>16</td></tr>
+            <tr><td>Familii de albine (stupi)</td><td>52</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="page-footer">
+  <p>© 2026 FABER – Atelier de Consultanță &nbsp;·&nbsp; <a href="index.html">Acasă</a> &nbsp;·&nbsp; <a href="index.html#finantare">Programe</a> &nbsp;·&nbsp; <a href="termeni-si-conditii.html">Termeni</a> &nbsp;·&nbsp; <a href="gdpr.html">GDPR</a></p>
+</footer>
+
+<script>
+  // SO Values Database
+  const soDatabase = {
+    culturi: {
+      'Grâu de toamnă': 490,
+      'Grâu de primăvară': 430,
+      'Orz de toamnă': 390,
+      'Orz de primăvară': 350,
+      'Porumb boabe': 710,
+      'Porumb siloz': 450,
+      'Floarea soarelui': 590,
+      'Rapiță': 620,
+      'Soia': 560,
+      'Sfeclă de zahăr': 1840,
+      'Cartofi': 2620,
+      'Mazăre proteică': 290,
+      'Triticale': 340,
+      'Ovăz': 280,
+      'Secară': 310,
+      'Mei': 250
+    },
+    legume: {
+      'Tomate câmp': 6500,
+      'Ardei câmp': 5200,
+      'Vinete câmp': 4800,
+      'Castraveți câmp': 5000,
+      'Varză câmp': 3200,
+      'Ceapă câmp': 3600,
+      'Morcovi câmp': 3400,
+      'Usturoi câmp': 4200,
+      'Fasole câmp': 1800,
+      'Tomate seră': 25000,
+      'Ardei seră': 20000
+    },
+    fructe: {
+      'Mere': 5800,
+      'Pere': 4200,
+      'Vișine': 3600,
+      'Cireșe': 5200,
+      'Prune': 2800,
+      'Căpșuni câmp': 8500,
+      'Vie de vin': 3200,
+      'Vie de masă': 5600,
+      'Nuci': 2600,
+      'Afine': 9500
+    },
+    animale: {
+      'Vaci lapte': 2450,
+      'Bovine pentru carne (adulte)': 680,
+      'Tineret bovin': 380,
+      'Scroafe': 840,
+      'Porci la îngrășat': 180,
+      'Ovine (oi mame)': 115,
+      'Caprine (capre mame)': 140,
+      'Iepuri (femele reproducție)': 68,
+      'Găini ouătoare': 24,
+      'Pui broiler (per loc)': 14,
+      'Curcani (per loc)': 22,
+      'Rațe (per loc)': 16,
+      'Familii de albine (stupi)': 52
+    }
+  };
+
+  function addCulturaRow(type) {
+    const tbody = document.getElementById(type + '-body');
+    const rowId = 'row-' + type + '-' + Date.now();
+
+    let culturas = Object.keys(soDatabase[type]);
+    let defaultSelect = culturas[0];
+    let defaultSo = soDatabase[type][defaultSelect];
+
+    const row = document.createElement('tr');
+    row.id = rowId;
+    row.innerHTML = `
+      <td>
+        <select onchange="updateCalculation()" class="cultura-select">
+          ${culturas.map(c => `<option value="${c}" ${c === defaultSelect ? 'selected' : ''}>${c}</option>`).join('')}
+        </select>
+      </td>
+      <td><input type="number" readonly value="${defaultSo}" class="so-input"></td>
+      <td><input type="number" value="1" min="0" step="0.1" onchange="updateCalculation()" class="area-input" placeholder="0"></td>
+      <td class="so-val">0</td>
+      <td><button class="calc-remove" onclick="removeRow('${rowId}')">✕ Șterge</button></td>
+    `;
+
+    tbody.appendChild(row);
+
+    // Add change listener to select
+    row.querySelector('.cultura-select').addEventListener('change', function() {
+      const soVal = soDatabase[type][this.value];
+      row.querySelector('.so-input').value = soVal;
+      updateCalculation();
+    });
+
+    updateCalculation();
+  }
+
+  function removeRow(rowId) {
+    const row = document.getElementById(rowId);
+    if(row) {
+      row.remove();
+      updateCalculation();
+    }
+  }
+
+  function updateCalculation() {
+    let totalSo = 0;
+
+    // Process all rows
+    document.querySelectorAll('tbody tr').forEach(row => {
+      const soInput = row.querySelector('.so-input');
+      const areaInput = row.querySelector('.area-input');
+      const resultCell = row.querySelector('.so-val');
+
+      if(soInput && areaInput) {
+        const so = parseFloat(soInput.value) || 0;
+        const area = parseFloat(areaInput.value) || 0;
+        const rowTotal = so * area;
+        totalSo += rowTotal;
+
+        if(resultCell) {
+          resultCell.textContent = rowTotal.toLocaleString('ro-RO', {maximumFractionDigits: 0});
+        }
+      }
+    });
+
+    // Update result
+    document.getElementById('total-so').textContent = Math.round(totalSo).toLocaleString('ro-RO');
+    updateStatusBadges(totalSo);
+  }
+
+  function updateStatusBadges(so) {
+    let badges = '';
+
+    if(so >= 4000 && so <= 11999) {
+      badges += '<span class="status-badge status-green">✓ DR14 Ferme Mici</span>';
+    }
+    if(so >= 12000 && so <= 100000) {
+      badges += '<span class="status-badge status-green">✓ DR12 Tineri Fermieri</span>';
+    }
+    if(so > 100000) {
+      badges += '<span class="status-badge status-orange">ⓘ Fermă Comercială</span>';
+    }
+    if(so < 4000) {
+      badges += '<span class="status-badge status-red">✕ Sub pragul minim</span>';
+    }
+    if(so === 0) {
+      badges = '<span class="status-badge status-orange">⚠ Adaugă culturi/animale</span>';
+    }
+
+    document.getElementById('status-badges').innerHTML = badges;
+  }
+
+  function resetCalculator() {
+    document.querySelectorAll('tbody').forEach(tbody => {
+      tbody.innerHTML = '';
+    });
+    updateCalculation();
+  }
+
+  // Reveal animations
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('revealed'); obs.unobserve(e.target); } });
+  },{threshold:0.1,rootMargin:'0px 0px -30px 0px'});
+  document.querySelectorAll('.reveal').forEach(function(el){ obs.observe(el); });
+</script>
+
+</body>
+</html>
