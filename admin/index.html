@@ -1,19 +1,22 @@
+<!-- PARTEA 1 / 4: HEAD + CSS -->
 <!DOCTYPE html>
 <html lang="ro">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="noindex,nofollow">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex,nofollow" />
   <title>FABER Admin Panel</title>
+
   <style>
     :root {
       --navy: #0d1f3c;
-      --navy-mid: #1a2f4f;
+      --navy-mid: #112a50;
       --orange: #e8642a;
       --orange-dark: #c4541f;
       --gold: #f5a623;
       --green: #16a34a;
       --red: #dc2626;
+      --blue: #2563eb;
       --gray-50: #f9fafb;
       --gray-100: #f3f4f6;
       --gray-200: #e5e7eb;
@@ -21,1400 +24,3076 @@
       --gray-500: #6b7280;
       --gray-700: #374151;
       --gray-900: #111827;
-      --radius: 10px;
-      --shadow: 0 4px 20px rgba(0,0,0,0.08);
-      --shadow-lg: 0 8px 40px rgba(0,0,0,0.14);
+      --white: #ffffff;
+      --radius: 12px;
+      --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      --shadow-lg: 0 10px 40px rgba(0, 0, 0, 0.14);
     }
-    * { margin:0; padding:0; box-sizing:border-box; }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      min-height: 100vh;
       background: #f0f2f5;
       color: var(--gray-900);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      line-height: 1.5;
+    }
+
+    button,
+    input,
+    textarea,
+    select {
+      font: inherit;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .auth-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 2000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      background: linear-gradient(135deg, var(--navy), #061126);
+    }
+
+    .auth-overlay.hidden {
+      display: none;
+    }
+
+    .auth-box {
+      width: 100%;
+      max-width: 420px;
+      padding: 36px;
+      border-radius: 18px;
+      background: var(--white);
+      box-shadow: 0 30px 90px rgba(0, 0, 0, 0.35);
+    }
+
+    .auth-logo {
+      color: var(--orange);
+      font-size: 30px;
+      font-weight: 900;
+      letter-spacing: 3px;
+      text-align: center;
+    }
+
+    .auth-sub {
+      margin: 4px 0 28px;
+      color: var(--gray-500);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.8px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    .auth-note {
+      margin-bottom: 18px;
+      padding: 12px 14px;
+      border-left: 4px solid var(--gold);
+      border-radius: 8px;
+      background: #fffbeb;
+      color: #78350f;
+      font-size: 12px;
+    }
+
+    .layout {
+      display: flex;
       min-height: 100vh;
     }
 
-    /* ── SIDEBAR ── */
     .sidebar {
-      position: fixed; top:0; left:0; bottom:0; width:240px;
-      background: var(--navy);
-      display: flex; flex-direction: column;
+      position: fixed;
+      inset: 0 auto 0 0;
       z-index: 100;
+      display: flex;
+      width: 260px;
+      flex-direction: column;
+      background: var(--navy);
     }
+
     .sidebar-logo {
-      padding: 24px 20px 20px;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
+      padding: 24px 22px 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     }
-    .sidebar-logo .brand { font-size:22px; font-weight:800; color:var(--orange); letter-spacing:2px; }
-    .sidebar-logo .sub { font-size:10px; color:rgba(255,255,255,0.4); letter-spacing:1.5px; text-transform:uppercase; margin-top:2px; }
-    .sidebar-nav { flex:1; padding:16px 0; overflow-y:auto; }
+
+    .sidebar-logo .brand {
+      color: var(--orange);
+      font-size: 24px;
+      font-weight: 900;
+      letter-spacing: 3px;
+    }
+
+    .sidebar-logo .sub {
+      margin-top: 2px;
+      color: rgba(255, 255, 255, 0.45);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+    }
+
+    .sidebar-nav {
+      flex: 1;
+      padding: 14px 0;
+      overflow-y: auto;
+    }
+
     .nav-item {
-      display:flex; align-items:center; gap:10px;
-      padding:11px 20px; cursor:pointer;
-      color:rgba(255,255,255,0.6); font-size:0.88rem; font-weight:500;
-      transition:all 0.2s; border-left:3px solid transparent;
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      width: 100%;
+      padding: 12px 22px;
+      border: 0;
+      border-left: 3px solid transparent;
+      background: transparent;
+      color: rgba(255, 255, 255, 0.64);
+      font-size: 0.9rem;
+      font-weight: 650;
+      text-align: left;
+      transition: 0.2s;
     }
-    .nav-item:hover { color:white; background:rgba(255,255,255,0.05); }
-    .nav-item.active { color:white; background:rgba(232,100,42,0.15); border-left-color:var(--orange); }
-    .nav-item .icon { font-size:16px; width:20px; text-align:center; }
+
+    .nav-item:hover,
+    .nav-item.active {
+      border-left-color: var(--orange);
+      background: rgba(232, 100, 42, 0.15);
+      color: var(--white);
+    }
+
+    .nav-item .icon {
+      width: 22px;
+      text-align: center;
+    }
+
     .sidebar-footer {
-      padding:16px 20px;
-      border-top:1px solid rgba(255,255,255,0.08);
+      padding: 16px 22px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
     }
-    .sidebar-footer a {
-      display:block; color:rgba(255,255,255,0.5); font-size:0.8rem; text-decoration:none;
-      padding:6px 0; transition:color 0.2s;
-    }
-    .sidebar-footer a:hover { color:white; }
 
-    /* ── MAIN ── */
-    .main { margin-left:240px; min-height:100vh; }
+    .sidebar-footer a,
+    .sidebar-footer button {
+      display: block;
+      width: 100%;
+      padding: 7px 0;
+      border: 0;
+      background: transparent;
+      color: rgba(255, 255, 255, 0.55);
+      font-size: 0.82rem;
+      text-align: left;
+      transition: 0.2s;
+    }
+
+    .sidebar-footer a:hover,
+    .sidebar-footer button:hover {
+      color: var(--white);
+    }
+
+    .main {
+      width: 100%;
+      min-height: 100vh;
+      margin-left: 260px;
+    }
+
     .topbar {
-      background:white; padding:16px 28px;
-      border-bottom:1px solid var(--gray-200);
-      display:flex; align-items:center; justify-content:space-between;
-      position:sticky; top:0; z-index:50;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 16px 28px;
+      border-bottom: 1px solid var(--gray-200);
+      background: var(--white);
     }
-    .topbar-title { font-size:1.1rem; font-weight:700; color:var(--navy); }
-    .topbar-actions { display:flex; gap:10px; align-items:center; }
+
+    .topbar-title {
+      color: var(--navy);
+      font-size: 1.08rem;
+      font-weight: 800;
+    }
+
+    .topbar-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .content {
+      padding: 28px;
+    }
+
+    .panel {
+      display: none;
+    }
+
+    .panel.active {
+      display: block;
+    }
+
     .btn {
-      padding:8px 16px; border:none; border-radius:8px; font-size:13px;
-      font-weight:600; cursor:pointer; transition:all 0.2s; text-decoration:none;
-      display:inline-flex; align-items:center; gap:6px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      padding: 9px 16px;
+      border: 0;
+      border-radius: 9px;
+      font-size: 13px;
+      font-weight: 750;
+      text-decoration: none;
+      transition: 0.2s;
+      white-space: nowrap;
     }
-    .btn-primary { background:var(--orange); color:white; }
-    .btn-primary:hover { background:var(--orange-dark); }
-    .btn-secondary { background:var(--gray-100); color:var(--gray-700); }
-    .btn-secondary:hover { background:var(--gray-200); }
-    .btn-danger { background:#fef2f2; color:var(--red); border:1px solid #fecaca; }
-    .btn-danger:hover { background:#fee2e2; }
-    .btn-success { background:#f0fdf4; color:var(--green); border:1px solid #bbf7d0; }
-    .btn-success:hover { background:#dcfce7; }
-    .btn-sm { padding:5px 10px; font-size:11px; border-radius:6px; }
 
-    .content { padding:28px; }
+    .btn-sm {
+      padding: 6px 11px;
+      border-radius: 7px;
+      font-size: 12px;
+    }
 
-    /* ── PANELS ── */
-    .panel { display:none; }
-    .panel.active { display:block; }
+    .btn-primary {
+      background: var(--orange);
+      color: var(--white);
+    }
 
-    /* ── CARDS ── */
+    .btn-primary:hover {
+      background: var(--orange-dark);
+    }
+
+    .btn-secondary {
+      background: var(--gray-100);
+      color: var(--gray-700);
+    }
+
+    .btn-secondary:hover {
+      background: var(--gray-200);
+    }
+
+    .btn-success {
+      border: 1px solid #bbf7d0;
+      background: #f0fdf4;
+      color: var(--green);
+    }
+
+    .btn-danger {
+      border: 1px solid #fecaca;
+      background: #fef2f2;
+      color: var(--red);
+    }
+
+    .btn:disabled {
+      cursor: not-allowed;
+      opacity: 0.6;
+    }
+
     .card {
-      background:white; border-radius:var(--radius); padding:24px;
-      box-shadow:var(--shadow); margin-bottom:20px;
+      margin-bottom: 22px;
+      padding: 24px;
+      border-radius: var(--radius);
+      background: var(--white);
+      box-shadow: var(--shadow);
     }
+
     .card-title {
-      font-size:1rem; font-weight:700; color:var(--navy); margin-bottom:16px;
-      padding-bottom:12px; border-bottom:1px solid var(--gray-100);
-      display:flex; align-items:center; gap:8px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 18px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--gray-100);
+      color: var(--navy);
+      font-size: 1rem;
+      font-weight: 850;
     }
 
-    /* ── DASHBOARD ── */
-    .stats-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:16px; margin-bottom:24px; }
+    .card-title small {
+      color: var(--gray-500);
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
     .stat-card {
-      background:white; border-radius:var(--radius); padding:20px;
-      box-shadow:var(--shadow); border-left:4px solid var(--orange);
+      padding: 20px;
+      border-left: 4px solid var(--orange);
+      border-radius: var(--radius);
+      background: var(--white);
+      box-shadow: var(--shadow);
     }
-    .stat-value { font-size:2rem; font-weight:900; color:var(--orange); line-height:1; }
-    .stat-label { font-size:0.78rem; color:var(--gray-500); margin-top:4px; font-weight:500; text-transform:uppercase; letter-spacing:0.5px; }
-    .quick-links { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:12px; }
-    .quick-link {
-      background:white; border:1px solid var(--gray-200); border-radius:var(--radius);
-      padding:14px 16px; cursor:pointer; transition:all 0.2s;
-      display:flex; align-items:center; gap:10px; font-size:0.88rem; font-weight:600;
-      color:var(--gray-700); text-decoration:none;
-    }
-    .quick-link:hover { border-color:var(--orange); color:var(--orange); background:#fff7f3; transform:translateY(-1px); box-shadow:var(--shadow); }
 
-    /* ── PROGRAMS GRID ── */
-    .programs-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(340px,1fr)); gap:20px; }
-    .program-card {
-      background:white; border-radius:var(--radius); padding:20px;
-      box-shadow:var(--shadow); transition:all 0.2s;
-      border:1px solid var(--gray-100);
+    .stat-value {
+      color: var(--orange);
+      font-size: 2rem;
+      font-weight: 950;
+      line-height: 1;
     }
-    .program-card:hover { box-shadow:var(--shadow-lg); transform:translateY(-1px); }
-    .program-card-header { display:flex; align-items:flex-start; justify-content:space-between; margin-bottom:12px; }
-    .program-name { font-size:0.95rem; font-weight:700; color:var(--navy); }
-    .program-badge {
-      font-size:10px; font-weight:700; padding:3px 8px; border-radius:100px;
-      text-transform:uppercase; letter-spacing:0.5px;
-    }
-    .badge-active { background:#d1fae5; color:#065f46; }
-    .badge-soon { background:#fef3c7; color:#92400e; }
-    .badge-planning { background:#ede9fe; color:#5b21b6; }
-    .program-file { font-size:11px; color:var(--gray-500); font-family:monospace; margin-bottom:14px; }
 
-    /* Tabs inside program card */
-    .card-tabs { display:flex; gap:4px; margin-bottom:14px; border-bottom:1px solid var(--gray-200); padding-bottom:8px; }
-    .card-tab {
-      font-size:11px; font-weight:600; padding:5px 10px; border-radius:6px;
-      cursor:pointer; color:var(--gray-500); transition:all 0.2s; border:none; background:none;
+    .stat-label {
+      margin-top: 6px;
+      color: var(--gray-500);
+      font-size: 0.76rem;
+      font-weight: 750;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
     }
-    .card-tab.active { background:var(--navy); color:white; }
-    .card-tab-panel { display:none; }
-    .card-tab-panel.active { display:block; }
 
-    /* Image upload */
+    .field-group {
+      margin-bottom: 14px;
+    }
+
+    .field-label {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--gray-500);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+    }
+
+    .field-input,
+    .field-select,
+    .field-textarea {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1.5px solid var(--gray-200);
+      border-radius: 8px;
+      background: var(--white);
+      color: var(--gray-900);
+      font-size: 13px;
+      transition: 0.2s;
+    }
+
+    .field-textarea {
+      min-height: 120px;
+      resize: vertical;
+      font-family: inherit;
+    }
+
+    .field-input:focus,
+    .field-select:focus,
+    .field-textarea:focus {
+      border-color: var(--orange);
+      box-shadow: 0 0 0 3px rgba(232, 100, 42, 0.08);
+      outline: 0;
+    }
+
+    .help-text {
+      margin-top: 5px;
+      color: var(--gray-500);
+      font-size: 12px;
+    }
+
+    .warning-box {
+      margin-bottom: 16px;
+      padding: 13px 15px;
+      border-left: 4px solid var(--gold);
+      border-radius: 8px;
+      background: #fffbeb;
+      color: #78350f;
+      font-size: 12px;
+      line-height: 1.55;
+    }
+
+    .info-box {
+      margin-bottom: 16px;
+      padding: 13px 15px;
+      border-left: 4px solid var(--blue);
+      border-radius: 8px;
+      background: #eff6ff;
+      color: #1e3a8a;
+      font-size: 12px;
+      line-height: 1.55;
+    }
+
+    .status-msg {
+      display: none;
+      margin-top: 10px;
+      padding: 9px 11px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 650;
+    }
+
+    .status-msg.show {
+      display: block;
+    }
+
+    .status-loading {
+      background: #e0f2fe;
+      color: #0369a1;
+    }
+
+    .status-success {
+      background: #f0fdf4;
+      color: var(--green);
+    }
+
+    .status-error {
+      background: #fef2f2;
+      color: var(--red);
+    }
+
+    .tabs {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--gray-200);
+    }
+
+    .tab-btn {
+      padding: 7px 12px;
+      border: 0;
+      border-radius: 8px;
+      background: var(--gray-100);
+      color: var(--gray-700);
+      font-size: 12px;
+      font-weight: 800;
+      transition: 0.2s;
+    }
+
+    .tab-btn.active {
+      background: var(--navy);
+      color: var(--white);
+    }
+
+    .tab-panel {
+      display: none;
+    }
+
+    .tab-panel.active {
+      display: block;
+    }
+
+    .programs-grid,
+    .items-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 18px;
+    }
+
+    .mini-card {
+      padding: 18px;
+      border: 1px solid var(--gray-100);
+      border-radius: var(--radius);
+      background: var(--white);
+      box-shadow: var(--shadow);
+    }
+
+    .mini-card-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+
+    .mini-title {
+      color: var(--navy);
+      font-size: 0.94rem;
+      font-weight: 850;
+    }
+
+    .mini-file {
+      margin-top: 3px;
+      color: var(--gray-500);
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 11px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 8px;
+      border-radius: 999px;
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: 0.4px;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .badge-active {
+      background: #d1fae5;
+      color: #065f46;
+    }
+
+    .badge-planning {
+      background: #ede9fe;
+      color: #5b21b6;
+    }
+
+    .badge-soon {
+      background: #fef3c7;
+      color: #92400e;
+    }
+
+    .badge-draft {
+      background: #e5e7eb;
+      color: #374151;
+    }
+
     .upload-area {
-      border:2px dashed var(--gray-300); border-radius:8px;
-      padding:16px; text-align:center; cursor:pointer; transition:all 0.2s;
+      display: block;
+      padding: 18px;
+      border: 2px dashed var(--gray-300);
+      border-radius: 10px;
+      background: var(--gray-50);
+      text-align: center;
+      transition: 0.2s;
     }
-    .upload-area:hover { border-color:var(--orange); background:#fff7f3; }
-    .upload-area.has-image { border-style:solid; border-color:#bbf7d0; }
-    .upload-input { display:none; }
-    .preview-img { max-width:100%; max-height:140px; border-radius:6px; margin:8px auto; display:none; }
-    .preview-img.show { display:block; }
 
-    /* Text fields */
-    .field-group { margin-bottom:12px; }
-    .field-label { font-size:11px; font-weight:600; color:var(--gray-500); text-transform:uppercase; letter-spacing:0.5px; margin-bottom:4px; display:block; }
-    .field-input {
-      width:100%; padding:9px 12px; border:1.5px solid var(--gray-200);
-      border-radius:7px; font-size:13px; transition:border-color 0.2s;
-      font-family:inherit;
+    .upload-area:hover {
+      border-color: var(--orange);
+      background: #fff7f3;
     }
-    .field-input:focus { outline:none; border-color:var(--orange); box-shadow:0 0 0 3px rgba(232,100,42,0.08); }
-    .field-select { width:100%; padding:9px 12px; border:1.5px solid var(--gray-200); border-radius:7px; font-size:13px; background:white; cursor:pointer; }
-    .field-select:focus { outline:none; border-color:var(--orange); }
 
-    /* Status messages */
-    .status-msg { font-size:12px; padding:8px 10px; border-radius:6px; margin-top:8px; display:none; }
-    .status-msg.show { display:block; }
-    .status-loading { background:#e0f2fe; color:#0369a1; }
-    .status-success { background:#f0fdf4; color:var(--green); }
-    .status-error { background:#fef2f2; color:var(--red); }
+    .upload-input {
+      display: none;
+    }
 
-    /* ── BLOG PANEL ── */
-    .blog-controls { display:flex; gap:10px; margin-bottom:20px; flex-wrap:wrap; }
-    .posts-list { display:flex; flex-direction:column; gap:12px; }
+    .preview-img {
+      display: none;
+      width: 100%;
+      max-height: 160px;
+      object-fit: cover;
+      margin-top: 12px;
+      border-radius: 9px;
+    }
+
+    .preview-img.show {
+      display: block;
+    }
+
     .post-item {
-      background:white; border-radius:var(--radius); padding:16px 20px;
-      box-shadow:var(--shadow); border:1px solid var(--gray-100);
-      display:flex; align-items:center; gap:16px;
-    }
-    .post-info { flex:1; }
-    .post-title-text { font-size:0.9rem; font-weight:700; color:var(--navy); margin-bottom:4px; }
-    .post-meta { font-size:11px; color:var(--gray-500); }
-    .post-actions { display:flex; gap:8px; }
-
-    /* Modal */
-    .modal-overlay {
-      display:none; position:fixed; inset:0;
-      background:rgba(0,0,0,0.5); z-index:500;
-      align-items:center; justify-content:center; padding:20px;
-    }
-    .modal-overlay.show { display:flex; }
-    .modal {
-      background:white; border-radius:14px; padding:32px;
-      max-width:600px; width:100%; max-height:90vh;
-      overflow-y:auto; box-shadow:var(--shadow-lg);
-    }
-    .modal-header { display:flex; align-items:center; justify-content:space-between; margin-bottom:20px; }
-    .modal-title { font-size:1.1rem; font-weight:700; color:var(--navy); }
-    .modal-close { background:none; border:none; font-size:20px; cursor:pointer; color:var(--gray-500); padding:4px; }
-    .modal-footer { display:flex; gap:10px; justify-content:flex-end; margin-top:20px; padding-top:16px; border-top:1px solid var(--gray-100); }
-
-    /* ── SETTINGS ── */
-    .settings-section { margin-bottom:24px; }
-    .settings-title { font-size:0.85rem; font-weight:700; color:var(--gray-500); text-transform:uppercase; letter-spacing:0.5px; margin-bottom:12px; }
-    .token-warning {
-      background:#fef3c7; border-left:4px solid #f59e0b;
-      padding:12px 14px; border-radius:7px; font-size:12px; color:#78350f; margin-bottom:14px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 16px;
+      border: 1px solid var(--gray-100);
+      border-radius: var(--radius);
+      background: var(--white);
+      box-shadow: var(--shadow);
     }
 
-    /* ── AUTH ── */
-    .auth-overlay {
-      position:fixed; inset:0; background:var(--navy);
-      display:flex; align-items:center; justify-content:center; z-index:1000;
+    .post-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      flex: 0 0 48px;
+      border-radius: 12px;
+      background: #fff7f3;
+      font-size: 24px;
     }
-    .auth-overlay.hidden { display:none; }
-    .auth-box {
-      background:white; padding:40px; border-radius:16px;
-      box-shadow:0 30px 80px rgba(0,0,0,0.4);
-      text-align:center; max-width:380px; width:100%;
-    }
-    .auth-logo { font-size:28px; font-weight:800; color:var(--orange); letter-spacing:2px; margin-bottom:4px; }
-    .auth-sub { font-size:11px; color:var(--gray-500); letter-spacing:1.5px; text-transform:uppercase; margin-bottom:24px; }
-    .auth-input {
-      width:100%; padding:14px; font-size:22px; letter-spacing:6px;
-      text-align:center; border:2px solid var(--gray-200);
-      border-radius:10px; margin-bottom:16px; font-weight:700;
-      font-family:'Courier New',monospace; transition:border-color 0.2s;
-    }
-    .auth-input:focus { outline:none; border-color:var(--orange); }
-    .auth-btn {
-      width:100%; padding:13px; background:var(--orange); color:white;
-      border:none; border-radius:10px; font-size:15px; font-weight:700;
-      cursor:pointer; transition:background 0.2s;
-    }
-    .auth-btn:hover { background:var(--orange-dark); }
-    .auth-error { background:#fef2f2; color:var(--red); padding:9px 12px; border-radius:7px; margin-bottom:14px; font-size:13px; display:none; }
-    .auth-error.show { display:block; }
 
-    /* ── NOTIFICATIONS ── */
-    .toast-container { position:fixed; bottom:24px; right:24px; z-index:900; display:flex; flex-direction:column; gap:10px; }
-    .toast {
-      background:white; border-radius:10px; padding:14px 18px;
-      box-shadow:0 8px 32px rgba(0,0,0,0.15); display:flex; align-items:center; gap:10px;
-      font-size:13px; font-weight:600; min-width:280px; max-width:360px;
-      animation:slideIn 0.3s ease; border-left:4px solid var(--green);
+    .post-info {
+      flex: 1;
+      min-width: 0;
     }
-    .toast.error { border-left-color:var(--red); }
-    @keyframes slideIn { from { transform:translateX(100%); opacity:0; } to { transform:translateX(0); opacity:1; } }
 
-    /* ── DEADLINE TRACKER ── */
+    .post-title {
+      overflow: hidden;
+      color: var(--navy);
+      font-size: 0.92rem;
+      font-weight: 850;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .post-meta {
+      margin-top: 4px;
+      color: var(--gray-500);
+      font-size: 11px;
+    }
+
+    .post-actions {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
     .deadline-row {
-      display:flex; align-items:center; gap:12px; padding:12px 0;
-      border-bottom:1px solid var(--gray-100);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--gray-100);
     }
-    .deadline-row:last-child { border-bottom:none; }
-    .deadline-name { flex:1; font-size:0.88rem; font-weight:600; color:var(--navy); }
-    .deadline-date { font-size:0.82rem; color:var(--gray-500); }
-    .deadline-days {
-      font-size:0.82rem; font-weight:700; padding:4px 10px;
-      border-radius:100px;
-    }
-    .days-ok { background:#d1fae5; color:#065f46; }
-    .days-warn { background:#fef3c7; color:#92400e; }
-    .days-urgent { background:#fee2e2; color:var(--red); }
 
-    /* ── RESPONSIVE ── */
-    @media (max-width:768px) {
-      .sidebar { width:200px; }
-      .main { margin-left:200px; }
-      .content { padding:16px; }
-      .programs-grid { grid-template-columns:1fr; }
-      .stats-grid { grid-template-columns:1fr 1fr; }
+    .deadline-row:last-child {
+      border-bottom: 0;
     }
-    @media (max-width:580px) {
-      .sidebar { transform:translateX(-100%); transition:transform 0.3s; }
-      .sidebar.open { transform:translateX(0); }
-      .main { margin-left:0; }
+
+    .deadline-name {
+      flex: 1;
+      color: var(--navy);
+      font-size: 0.9rem;
+      font-weight: 750;
+    }
+
+    .deadline-date {
+      color: var(--gray-500);
+      font-size: 0.82rem;
+    }
+
+    .deadline-days {
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 850;
+    }
+
+    .days-ok {
+      background: #d1fae5;
+      color: #065f46;
+    }
+
+    .days-warn {
+      background: #fef3c7;
+      color: #92400e;
+    }
+
+    .days-urgent {
+      background: #fee2e2;
+      color: var(--red);
+    }
+
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 22px;
+      background: rgba(6, 15, 32, 0.72);
+      backdrop-filter: blur(6px);
+    }
+
+    .modal-overlay.show {
+      display: flex;
+    }
+
+    .modal {
+      width: 100%;
+      max-width: 760px;
+      max-height: 92vh;
+      overflow-y: auto;
+      padding: 28px;
+      border-radius: 16px;
+      background: var(--white);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .modal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      margin-bottom: 18px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--gray-100);
+    }
+
+    .modal-title {
+      color: var(--navy);
+      font-size: 1.1rem;
+      font-weight: 900;
+    }
+
+    .modal-close {
+      width: 34px;
+      height: 34px;
+      border: 0;
+      border-radius: 50%;
+      background: var(--gray-100);
+      color: var(--gray-700);
+      font-size: 18px;
+    }
+
+    .modal-footer {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      margin-top: 20px;
+      padding-top: 16px;
+      border-top: 1px solid var(--gray-100);
+    }
+
+    .toast-container {
+      position: fixed;
+      right: 24px;
+      bottom: 24px;
+      z-index: 2500;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .toast {
+      min-width: 280px;
+      max-width: 390px;
+      padding: 14px 16px;
+      border-left: 4px solid var(--green);
+      border-radius: 11px;
+      background: var(--white);
+      box-shadow: var(--shadow-lg);
+      color: var(--gray-900);
+      font-size: 13px;
+      font-weight: 750;
+      animation: slideIn 0.25s ease;
+    }
+
+    .toast.error {
+      border-left-color: var(--red);
+    }
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateX(80px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @media (max-width: 900px) {
+      .sidebar {
+        width: 220px;
+      }
+
+      .main {
+        margin-left: 220px;
+      }
+
+      .grid-2,
+      .grid-3 {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .sidebar {
+        position: static;
+        width: 100%;
+      }
+
+      .layout {
+        flex-direction: column;
+      }
+
+      .main {
+        margin-left: 0;
+      }
+
+      .topbar {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .content {
+        padding: 16px;
+      }
+
+      .programs-grid,
+      .items-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .post-item {
+        align-items: flex-start;
+        flex-direction: column;
+      }
     }
   </style>
 </head>
+<!-- PARTEA 2 / 4: BODY + STRUCTURĂ ADMIN -->
 <body>
+  <div class="auth-overlay" id="authOverlay">
+    <div class="auth-box">
+      <div class="auth-logo">FABER</div>
+      <div class="auth-sub">Panou de Administrare</div>
 
-<!-- ── AUTH OVERLAY ── -->
-<div class="auth-overlay" id="authOverlay">
-  <div class="auth-box">
-    <div class="auth-logo">FABER</div>
-    <div class="auth-sub">Panou de Administrare</div>
-    <div class="auth-error" id="authError">Email sau parolă incorectă.</div>
-    <div style="margin-bottom:12px;text-align:left;">
-      <label style="font-size:11px;font-weight:700;color:#6b7280;letter-spacing:0.5px;text-transform:uppercase;display:block;margin-bottom:5px;">Email</label>
-      <input type="email" id="loginEmail" class="auth-input"
-             style="letter-spacing:0;font-size:15px;font-family:inherit;"
-             placeholder="adresa@email.ro" autocomplete="email">
-    </div>
-    <div style="margin-bottom:20px;text-align:left;">
-      <label style="font-size:11px;font-weight:700;color:#6b7280;letter-spacing:0.5px;text-transform:uppercase;display:block;margin-bottom:5px;">Parolă</label>
-      <input type="password" id="loginPassword" class="auth-input"
-             style="letter-spacing:2px;font-size:16px;"
-             placeholder="••••••••" autocomplete="current-password">
-    </div>
-    <button class="auth-btn" onclick="verifyLogin()">Accesează panoul →</button>
-  </div>
-</div>
-
-<!-- ── TOAST CONTAINER ── -->
-<div class="toast-container" id="toastContainer"></div>
-
-<!-- ── SIDEBAR ── -->
-<aside class="sidebar" id="sidebar">
-  <div class="sidebar-logo">
-    <div class="brand">FABER</div>
-    <div class="sub">Admin Panel</div>
-  </div>
-  <nav class="sidebar-nav">
-    <div class="nav-item active" data-panel="dashboard" onclick="switchPanel('dashboard',this)">
-      <span class="icon">📊</span> Dashboard
-    </div>
-    <div class="nav-item" data-panel="bannere" onclick="switchPanel('bannere',this)">
-      <span class="icon">🖼️</span> Bannere Carusel
-    </div>
-    <div class="nav-item" data-panel="programe" onclick="switchPanel('programe',this)">
-      <span class="icon">✏️</span> Editare Programe
-    </div>
-    <div class="nav-item" data-panel="termene" onclick="switchPanel('termene',this)">
-      <span class="icon">⏱️</span> Termene Limită
-    </div>
-    <div class="nav-item" data-panel="blog" onclick="switchPanel('blog',this)">
-      <span class="icon">📝</span> Blog Posts
-    </div>
-    <div class="nav-item" data-panel="newsletter" onclick="switchPanel('newsletter',this)">
-      <span class="icon">📧</span> Newsletter
-    </div>
-    <div class="nav-item" data-panel="setari" onclick="switchPanel('setari',this)">
-      <span class="icon">⚙️</span> Setări GitHub
-    </div>
-  </nav>
-  <div class="sidebar-footer">
-    <a href="../" target="_blank">↗ Vizualizează site-ul</a>
-    <a href="javascript:void(0)" onclick="logout()" style="color:#f87171;">⏻ Deconectare</a>
-  </div>
-</aside>
-
-<!-- ── MAIN ── -->
-<div class="main">
-  <!-- Topbar -->
-  <div class="topbar">
-    <div class="topbar-title" id="topbarTitle">Dashboard</div>
-    <div class="topbar-actions">
-      <span style="font-size:12px;color:var(--gray-500);" id="lastSaved"></span>
-      <button class="btn btn-secondary btn-sm" onclick="pingGoogle()">📡 Ping Google</button>
-      <button class="btn btn-primary btn-sm" onclick="refreshGitHubToken()">🔗 Token valid?</button>
-    </div>
-  </div>
-
-  <div class="content">
-
-    <!-- ══════════════════════════════════
-         PANEL: DASHBOARD
-    ══════════════════════════════════ -->
-    <div class="panel active" id="panel-dashboard">
-
-      <div class="stats-grid">
-        <div class="stat-card">
-          <div class="stat-value">8</div>
-          <div class="stat-label">Programe active</div>
-        </div>
-        <div class="stat-card" style="border-left-color:#25d366;">
-          <div class="stat-value" id="stat-days-por">—</div>
-          <div class="stat-label">Zile POR Micro</div>
-        </div>
-        <div class="stat-card" style="border-left-color:var(--gold);">
-          <div class="stat-value" id="stat-days-dr12">—</div>
-          <div class="stat-label">Zile DR12</div>
-        </div>
-        <div class="stat-card" style="border-left-color:#6366f1;">
-          <div class="stat-value" id="stat-days-dr14">—</div>
-          <div class="stat-label">Zile DR14</div>
-        </div>
+      <div class="auth-note">
+        Panoul folosește GitHub API pentru publicare. Token-ul se salvează doar local în browser.
       </div>
 
-      <div class="card">
-        <div class="card-title">⚡ Acces rapid</div>
-        <div class="quick-links">
-          <a class="quick-link" onclick="switchPanel('bannere', document.querySelector('[data-panel=bannere]'))">
-            🖼️ Încarcă banner nou
-          </a>
-          <a class="quick-link" onclick="switchPanel('programe', document.querySelector('[data-panel=programe]'))">
-            ✏️ Editează text program
-          </a>
-          <a class="quick-link" onclick="switchPanel('blog', document.querySelector('[data-panel=blog]'))">
-            📝 Adaugă articol blog
-          </a>
-          <a class="quick-link" onclick="switchPanel('termene', document.querySelector('[data-panel=termene]'))">
-            ⏱️ Verifică termene
-          </a>
-          <a class="quick-link" href="https://formspree.io/dashboard" target="_blank">
-            📧 Abonați newsletter
-          </a>
-          <a class="quick-link" href="https://github.com/florincaciur/atelierdeconsultanta" target="_blank">
-            📦 Repository GitHub
-          </a>
-          <a class="quick-link" href="https://search.google.com/search-console" target="_blank">
-            🔍 Google Search Console
-          </a>
-          <a class="quick-link" onclick="pingGoogle()">
-            📡 Ping Google Sitemap
-          </a>
-        </div>
-      </div>
-
-      <div class="card">
-        <div class="card-title">📋 Status programe</div>
-        <div id="dashboard-status-list">Se încarcă...</div>
-      </div>
-    </div>
-
-    <!-- ══════════════════════════════════
-         PANEL: BANNERE
-    ══════════════════════════════════ -->
-    <div class="panel" id="panel-bannere">
-      <div class="card" style="margin-bottom:20px;">
-        <div class="card-title">ℹ️ Cum funcționează</div>
-        <p style="font-size:13px;color:var(--gray-500);line-height:1.6;">
-          Imaginile sunt încărcate direct în repository-ul GitHub via API. Recomandare: <strong>format JPG/WebP</strong>, dimensiune <strong>1200×630px</strong>, max <strong>500KB</strong>.
-          Site-ul se actualizează automat în <strong>1-2 minute</strong> după publicare.
-        </p>
-      </div>
-      <div class="programs-grid" id="bannereGrid"></div>
-    </div>
-
-    <!-- ══════════════════════════════════
-         PANEL: EDITARE PROGRAME
-    ══════════════════════════════════ -->
-    <div class="panel" id="panel-programe">
-      <div class="card" style="margin-bottom:20px;">
-        <div class="card-title">ℹ️ Editare conținut programe</div>
-        <p style="font-size:13px;color:var(--gray-500);line-height:1.6;">
-          Modificările sunt salvate direct în fișierele HTML via GitHub API și devin publice în <strong>1-2 minute</strong>.
-          Câmpurile editate sunt: sumă maximă, procent nerambursabil, termen limită, status badge și deadline countdown.
-        </p>
-      </div>
-      <div class="programs-grid" id="programeGrid"></div>
-    </div>
-
-    <!-- ══════════════════════════════════
-         PANEL: TERMENE
-    ══════════════════════════════════ -->
-    <div class="panel" id="panel-termene">
-      <div class="card">
-        <div class="card-title">⏱️ Termene limită programe</div>
-        <div id="termeneList">Se calculează...</div>
-      </div>
-
-      <div class="card">
-        <div class="card-title">🔔 Alertă automată</div>
-        <p style="font-size:13px;color:var(--gray-500);margin-bottom:12px;">
-          GitHub Actions verifică termene în fiecare luni la 08:00. Programele cu mai puțin de 30 de zile rămase sunt raportate în log-uri.
-        </p>
-        <a href="https://github.com/florincaciur/atelierdeconsultanta/actions" target="_blank" class="btn btn-secondary">
-          Vizualizează rulări Actions →
-        </a>
-      </div>
-    </div>
-
-    <!-- ══════════════════════════════════
-         PANEL: BLOG
-    ══════════════════════════════════ -->
-    <div class="panel" id="panel-blog">
-      <div class="blog-controls">
-        <button class="btn btn-primary" onclick="openNewPostModal()">+ Articol nou</button>
-        <button class="btn btn-secondary" onclick="loadBlogPosts()">🔄 Reîncarcă</button>
-        <span style="font-size:12px;color:var(--gray-500);align-self:center;" id="blogCountLabel"></span>
-      </div>
-      <div class="posts-list" id="postsList">
-        <div style="text-align:center;padding:40px;color:var(--gray-500);">
-          Se încarcă articolele...
-        </div>
-      </div>
-    </div>
-
-    <!-- ══════════════════════════════════
-         PANEL: NEWSLETTER
-    ══════════════════════════════════ -->
-    <div class="panel" id="panel-newsletter">
-      <div class="card">
-        <div class="card-title">📧 Abonați newsletter — Formspree</div>
-        <p style="font-size:13px;color:var(--gray-500);margin-bottom:16px;">
-          Abonații sunt colectați prin <strong>Formspree (ID: mjgjogwj)</strong> și pot fi vizualizați în dashboard-ul Formspree.
-        </p>
-        <div style="display:flex;gap:10px;flex-wrap:wrap;">
-          <a href="https://formspree.io/dashboard" target="_blank" class="btn btn-primary">
-            📊 Deschide Formspree Dashboard
-          </a>
-          <a href="https://formspree.io/f/mjgjogwj" target="_blank" class="btn btn-secondary">
-            Endpoint form →
-          </a>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-title">📨 Template email notificare</div>
-        <p style="font-size:13px;color:var(--gray-500);margin-bottom:14px;">
-          Copiază și personalizează template-ul de mai jos pentru a notifica manual abonații despre un program nou.
-        </p>
-        <textarea class="field-input" rows="10" id="emailTemplate" style="font-family:monospace;font-size:12px;resize:vertical;">Subiect: [URGENT] Se lansează [PROGRAM] — Fonduri europene [AN]
-
-Bună ziua,
-
-Vă informăm că programul [PROGRAM] a deschis sesiunea de finanțare.
-
-📌 Sumă maximă: [SUMA]
-📌 Intensitate: [PROCENT]% nerambursabil
-📌 Termen depunere: [TERMEN]
-📌 Beneficiari eligibili: [BENEFICIARI]
-
-Vă invităm să contactați echipa FABER pentru o evaluare gratuită:
-📞 +40 769 828 338 / +40 753 326 229
-📧 atelier.consultanta@gmail.com
-🌐 https://atelierdeconsultanta.ro
-
-Cu stimă,
-Echipa FABER – Atelier de Consultanță</textarea>
-        <button class="btn btn-secondary btn-sm" style="margin-top:8px;" onclick="copyTemplate()">📋 Copiază template</button>
-      </div>
-    </div>
-
-    <!-- ══════════════════════════════════
-         PANEL: SETĂRI
-    ══════════════════════════════════ -->
-    <div class="panel" id="panel-setari">
-      <div class="card">
-        <div class="card-title">🔑 Configurare GitHub API</div>
-        <div class="token-warning">
-          ⚠️ Token-ul GitHub este stocat local în browser (localStorage). Nu îl partaja cu nimeni.
-          Generează un <strong>Fine-grained token</strong> din GitHub → Settings → Developer settings → Personal access tokens → Fine-grained tokens.
-          Permisiuni necesare: <strong>Contents: Read & Write</strong>.
-        </div>
-        <div style="display:grid;grid-template-columns:1fr 1fr 2fr;gap:12px;flex-wrap:wrap;" id="githubFormGrid">
-          <div class="field-group">
-            <label class="field-label" for="githubOwner">Owner</label>
-            <input type="text" id="githubOwner" class="field-input" value="florincaciur">
-          </div>
-          <div class="field-group">
-            <label class="field-label" for="githubRepo">Repository</label>
-            <input type="text" id="githubRepo" class="field-input" value="atelierdeconsultanta">
-          </div>
-          <div class="field-group">
-            <label class="field-label" for="githubToken">Personal Access Token</label>
-            <input type="password" id="githubToken" class="field-input" placeholder="github_pat_... sau ghp_...">
-          </div>
-        </div>
-        <div style="display:flex;gap:10px;margin-top:14px;">
-          <button class="btn btn-primary" onclick="saveGitHubToken()">💾 Salvează token</button>
-          <button class="btn btn-secondary" onclick="refreshGitHubToken()">✅ Testează conexiunea</button>
-        </div>
-        <div class="status-msg" id="tokenStatus"></div>
-      </div>
-
-      <div class="card">
-        <div class="card-title">🔐 Schimbă credențialele de acces</div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px;">
-          <div class="field-group">
-            <label class="field-label">Email nou (opțional)</label>
-            <input type="email" id="newEmail" class="field-input" placeholder="adresa@email.ro">
-          </div>
-          <div class="field-group">
-            <label class="field-label">Parolă curentă *</label>
-            <input type="password" id="currentPin" class="field-input" placeholder="Parola curentă">
-          </div>
-          <div class="field-group">
-            <label class="field-label">Parolă nouă (min. 6 caractere)</label>
-            <input type="password" id="newPin" class="field-input" placeholder="Parolă nouă">
-          </div>
-          <div class="field-group">
-            <label class="field-label">Confirmă parola nouă</label>
-            <input type="password" id="confirmPin" class="field-input" placeholder="Confirmă parola">
-          </div>
-        </div>
-        <button class="btn btn-primary" onclick="changePin()">Salvează credențialele</button>
-        <div class="status-msg" id="pinStatus"></div>
-      </div>
-
-      <div class="card">
-        <div class="card-title">📡 SEO & Indexare</div>
-        <div style="display:flex;gap:10px;flex-wrap:wrap;">
-          <button class="btn btn-primary" onclick="pingGoogle()">📡 Ping Google</button>
-          <button class="btn btn-secondary" onclick="pingBing()">📡 Ping Bing</button>
-          <a href="https://search.google.com/search-console" target="_blank" class="btn btn-secondary">
-            Search Console →
-          </a>
-          <a href="https://atelierdeconsultanta.ro/sitemap.xml" target="_blank" class="btn btn-secondary">
-            Vizualizează sitemap →
-          </a>
-        </div>
-        <div class="status-msg" id="seoStatus"></div>
-      </div>
-    </div>
-
-  </div><!-- /content -->
-</div><!-- /main -->
-
-<!-- ══════════════════════════════════
-     MODAL: BLOG POST EDITOR
-══════════════════════════════════ -->
-<div class="modal-overlay" id="postModal">
-  <div class="modal">
-    <div class="modal-header">
-      <div class="modal-title" id="modalTitle">Articol nou</div>
-      <button class="modal-close" onclick="closeModal('postModal')">✕</button>
-    </div>
-
-    <input type="hidden" id="postEditId">
-
-    <div class="field-group">
-      <label class="field-label">Titlu articol *</label>
-      <input type="text" id="postTitle" class="field-input" placeholder="Ex: Ghid complet DR12 AFIR 2026...">
-    </div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
       <div class="field-group">
-        <label class="field-label">Slug URL (fără spații) *</label>
-        <input type="text" id="postSlug" class="field-input" placeholder="ghid-dr12-2026">
+        <label class="field-label" for="loginEmail">Email</label>
+        <input
+          type="email"
+          id="loginEmail"
+          class="field-input"
+          placeholder="atelier.consultanta@gmail.com"
+          autocomplete="email"
+        />
       </div>
+
       <div class="field-group">
-        <label class="field-label">Dată publicare</label>
-        <input type="date" id="postDate" class="field-input">
-      </div>
-    </div>
-    <div class="field-group">
-      <label class="field-label">Rezumat (excerpt) *</label>
-      <textarea id="postExcerpt" class="field-input" rows="3" placeholder="Rezumat scurt afișat în lista blog..."></textarea>
-    </div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
-      <div class="field-group">
-        <label class="field-label">Categorie</label>
-        <select id="postCategory" class="field-select">
-          <option value="AFIR">AFIR</option>
-          <option value="POR">POR</option>
-          <option value="Fonduri Europene">Fonduri Europene</option>
-          <option value="Energie">Energie</option>
-          <option value="Start-Up">Start-Up</option>
-          <option value="Agricultură">Agricultură</option>
-          <option value="Digitalizare">Digitalizare</option>
-        </select>
-      </div>
-      <div class="field-group">
-        <label class="field-label">Timp de citit (min)</label>
-        <input type="number" id="postReadTime" class="field-input" value="5" min="1" max="60">
-      </div>
-    </div>
-    <div class="field-group">
-      <label class="field-label">Conținut complet (HTML sau text)</label>
-      <textarea id="postContent" class="field-input" rows="10" placeholder="Conținut articol..."></textarea>
-    </div>
-    <div class="field-group">
-      <label class="field-label">URL imagine articol (opțional)</label>
-      <input type="url" id="postImage" class="field-input" placeholder="https://...">
-    </div>
-    <div class="field-group">
-      <label class="field-label">Autor</label>
-      <input type="text" id="postAuthor" class="field-input" value="FABER – Atelier de Consultanță">
-    </div>
-    <div class="field-group">
-      <label class="field-label">Status</label>
-      <select id="postPublished" class="field-select">
-        <option value="true">✅ Publicat</option>
-        <option value="false">📝 Draft</option>
-      </select>
-    </div>
-
-    <div class="status-msg" id="postModalStatus"></div>
-
-    <div class="modal-footer">
-      <button class="btn btn-secondary" onclick="closeModal('postModal')">Anulează</button>
-      <button class="btn btn-primary" onclick="savePost()">💾 Salvează articolul</button>
-    </div>
-  </div>
-</div>
-
-<script>
-// ══════════════════════════════════════════════════════════════
-// CONFIG & STATE
-// ══════════════════════════════════════════════════════════════
-const DEFAULT_EMAIL = 'atelier.consultanta@gmail.com';
-const DEFAULT_PASSWORD = 'Bogdan-Poli';
-let blogPosts = [];
-let editingPostIndex = -1;
-
-const PROGRAMS_DATA = [
-  {
-    key: 'por_micro',
-    name: 'POR Micro Nord-Est',
-    htmlFile: 'por-adr-nord-est.html',
-    bannerPath: 'admin/banners/por-micro.jpg',
-    deadline: '2026-05-31',
-    maxAmount: '300.000 EUR',
-    percentage: '70-90%',
-    status: 'active',
-    badgeLabel: 'ACTIV'
-  },
-  {
-    key: 'dr12',
-    name: 'DR12 AFIR — Tineri Fermieri',
-    htmlFile: 'dr12-afir.html',
-    bannerPath: 'admin/banners/dr12.jpg',
-    deadline: '2026-06-30',
-    maxAmount: '200.000 EUR',
-    percentage: '80%',
-    status: 'active',
-    badgeLabel: 'ACTIV'
-  },
-  {
-    key: 'dr14',
-    name: 'DR14 — Ferme Mici',
-    htmlFile: 'dr14.html',
-    bannerPath: 'admin/banners/dr14.jpg',
-    deadline: '2026-07-31',
-    maxAmount: '50.000 EUR',
-    percentage: '85%',
-    status: 'active',
-    badgeLabel: 'ACTIV'
-  },
-  {
-    key: 'afir_autoconsum',
-    name: 'AFIR Autoconsum Agroalimentar',
-    htmlFile: 'afir-autoconsum-agroalimentar.html',
-    bannerPath: 'admin/banners/afir-autoconsum.jpg',
-    deadline: '2026-12-31',
-    maxAmount: '20.000.000 EUR',
-    percentage: '100%',
-    status: 'active',
-    badgeLabel: 'ACTIV'
-  },
-  {
-    key: 'autoconsum_publici',
-    name: 'Autoconsum Entități Publice',
-    htmlFile: 'autoconsum-publici.html',
-    bannerPath: 'admin/banners/autoconsum-publici.jpg',
-    deadline: '2026-12-31',
-    maxAmount: '10.000.000 EUR',
-    percentage: '100%',
-    status: 'active',
-    badgeLabel: 'ACTIV'
-  },
-  {
-    key: 'femeia_antreprenor',
-    name: 'Femeia Antreprenor 2026',
-    htmlFile: 'femeia-antreprenor-2026.html',
-    bannerPath: 'admin/banners/femeia-antreprenor.jpg',
-    deadline: '2026-09-30',
-    maxAmount: '200.000 RON',
-    percentage: '90%',
-    status: 'planning',
-    badgeLabel: 'ÎN PREGĂTIRE'
-  },
-  {
-    key: 'pro_infra',
-    name: 'PRO INFRA',
-    htmlFile: 'pro-infra.html',
-    bannerPath: 'admin/banners/pro-infra.jpg',
-    deadline: '2026-12-31',
-    maxAmount: '15.000.000 EUR',
-    percentage: '—',
-    status: 'active',
-    badgeLabel: 'ACTIV'
-  },
-  {
-    key: 'startup_nation',
-    name: 'Start-Up Nation 2026',
-    htmlFile: 'start-up-nation-2026.html',
-    bannerPath: 'admin/banners/startup-nation.jpg',
-    deadline: '2026-12-31',
-    maxAmount: '250.000 RON',
-    percentage: '90%',
-    status: 'active',
-    badgeLabel: 'ACTIV'
-  }
-];
-
-// ══════════════════════════════════════════════════════════════
-// AUTH
-// ══════════════════════════════════════════════════════════════
-function verifyLogin() {
-  const email = document.getElementById('loginEmail').value.trim().toLowerCase();
-  const password = document.getElementById('loginPassword').value;
-  const errorEl = document.getElementById('authError');
-
-  const correctEmail = (localStorage.getItem('faber_admin_email') || DEFAULT_EMAIL).toLowerCase();
-  const correctPassword = localStorage.getItem('faber_admin_password') || DEFAULT_PASSWORD;
-
-  if (email === correctEmail && password === correctPassword) {
-    sessionStorage.setItem('fabadmin_auth', 'true');
-    document.getElementById('authOverlay').classList.add('hidden');
-    initPanel();
-  } else {
-    errorEl.classList.add('show');
-    document.getElementById('loginPassword').value = '';
-    setTimeout(() => errorEl.classList.remove('show'), 3500);
-  }
-}
-
-function logout() {
-  if (confirm('Ești sigur că vrei să te deconectezi?')) {
-    sessionStorage.removeItem('fabadmin_auth');
-    location.reload();
-  }
-}
-
-function changePin() {
-  const curr = document.getElementById('currentPin').value;
-  const newEmail = document.getElementById('newEmail').value.trim();
-  const newP = document.getElementById('newPin').value;
-  const conf = document.getElementById('confirmPin').value;
-  const correctPassword = localStorage.getItem('faber_admin_password') || DEFAULT_PASSWORD;
-  const statusEl = document.getElementById('pinStatus');
-
-  if (curr !== correctPassword) { showStatus(statusEl, '❌ Parola curentă incorectă.', 'error'); return; }
-  if (newP && newP.length < 6) { showStatus(statusEl, '❌ Parola nouă trebuie să aibă minim 6 caractere.', 'error'); return; }
-  if (newP && newP !== conf) { showStatus(statusEl, '❌ Parolele noi nu coincid.', 'error'); return; }
-
-  if (newEmail) localStorage.setItem('faber_admin_email', newEmail);
-  if (newP) localStorage.setItem('faber_admin_password', newP);
-
-  showStatus(statusEl, '✅ Credențiale actualizate cu succes!', 'success');
-  ['newEmail','currentPin','newPin','confirmPin'].forEach(id => document.getElementById(id).value = '');
-}
-
-document.getElementById('loginEmail').addEventListener('keypress', e => { if (e.key === 'Enter') document.getElementById('loginPassword').focus(); });
-document.getElementById('loginPassword').addEventListener('keypress', e => { if (e.key === 'Enter') verifyLogin(); });
-
-// ══════════════════════════════════════════════════════════════
-// NAVIGATION
-// ══════════════════════════════════════════════════════════════
-const PANEL_TITLES = {
-  dashboard: '📊 Dashboard',
-  bannere: '🖼️ Bannere Carusel',
-  programe: '✏️ Editare Programe',
-  termene: '⏱️ Termene Limită',
-  blog: '📝 Blog Posts',
-  newsletter: '📧 Newsletter',
-  setari: '⚙️ Setări GitHub'
-};
-
-function switchPanel(name, el) {
-  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
-  document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
-  document.getElementById('panel-' + name).classList.add('active');
-  if (el) el.classList.add('active');
-  document.getElementById('topbarTitle').textContent = PANEL_TITLES[name] || name;
-
-  if (name === 'blog') loadBlogPosts();
-  if (name === 'termene') renderTermene();
-  if (name === 'dashboard') renderDashboard();
-}
-
-// ══════════════════════════════════════════════════════════════
-// GITHUB API
-// ══════════════════════════════════════════════════════════════
-function getGHConfig() {
-  return {
-    owner: document.getElementById('githubOwner').value.trim(),
-    repo: document.getElementById('githubRepo').value.trim(),
-    token: document.getElementById('githubToken').value.trim()
-  };
-}
-
-async function ghFetch(path, method = 'GET', body = null) {
-  const { owner, repo, token } = getGHConfig();
-  if (!token) throw new Error('Token GitHub lipsă. Configurează-l în Setări.');
-
-  const opts = {
-    method,
-    headers: {
-      'Authorization': `token ${token}`,
-      'Accept': 'application/vnd.github.v3+json',
-      'Content-Type': 'application/json'
-    }
-  };
-  if (body) opts.body = JSON.stringify(body);
-
-  const res = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${path}`, opts);
-  if (!res.ok && method === 'GET') throw new Error(`HTTP ${res.status}`);
-  return res;
-}
-
-async function getFileSHA(path) {
-  try {
-    const res = await ghFetch(path);
-    if (res.ok) { const d = await res.json(); return d.sha; }
-  } catch (e) {}
-  return null;
-}
-
-async function uploadFile(repoPath, base64Content, commitMsg) {
-  const sha = await getFileSHA(repoPath);
-  const body = { message: commitMsg, content: base64Content };
-  if (sha) body.sha = sha;
-  const res = await ghFetch(repoPath, 'PUT', body);
-  return res.ok;
-}
-
-async function downloadFileContent(repoPath) {
-  const res = await ghFetch(repoPath);
-  if (!res.ok) throw new Error('Fișier negăsit');
-  const d = await res.json();
-  return atob(d.content.replace(/\n/g, ''));
-}
-
-// ══════════════════════════════════════════════════════════════
-// DASHBOARD
-// ══════════════════════════════════════════════════════════════
-function daysUntil(dateStr) {
-  const today = new Date(); today.setHours(0,0,0,0);
-  const target = new Date(dateStr);
-  return Math.round((target - today) / 86400000);
-}
-
-function renderDashboard() {
-  const deadlines = [
-    { key: 'por', program: PROGRAMS_DATA.find(p=>p.key==='por_micro') },
-    { key: 'dr12', program: PROGRAMS_DATA.find(p=>p.key==='dr12') },
-    { key: 'dr14', program: PROGRAMS_DATA.find(p=>p.key==='dr14') }
-  ];
-  deadlines.forEach(({key, program}) => {
-    const el = document.getElementById('stat-days-' + key);
-    if (el && program) el.textContent = daysUntil(program.deadline);
-  });
-
-  // Status list
-  const listEl = document.getElementById('dashboard-status-list');
-  listEl.innerHTML = PROGRAMS_DATA.map(p => {
-    const days = daysUntil(p.deadline);
-    const cls = days < 30 ? 'days-urgent' : days < 60 ? 'days-warn' : 'days-ok';
-    return `<div class="deadline-row">
-      <div class="deadline-name">${p.name}</div>
-      <div class="deadline-date">${p.deadline}</div>
-      <div class="deadline-days ${cls}">${days} zile</div>
-    </div>`;
-  }).join('');
-}
-
-// ══════════════════════════════════════════════════════════════
-// BANNERE GRID
-// ══════════════════════════════════════════════════════════════
-function renderBannere() {
-  const grid = document.getElementById('bannereGrid');
-  grid.innerHTML = PROGRAMS_DATA.map(p => `
-    <div class="program-card">
-      <div class="program-card-header">
-        <div>
-          <div class="program-name">${p.name}</div>
-          <div class="program-file">${p.bannerPath}</div>
-        </div>
-        <span class="program-badge ${p.status === 'active' ? 'badge-active' : p.status === 'planning' ? 'badge-planning' : 'badge-soon'}">${p.badgeLabel}</span>
+        <label class="field-label" for="loginPassword">Parolă locală</label>
+        <input
+          type="password"
+          id="loginPassword"
+          class="field-input"
+          placeholder="Parola panoului"
+          autocomplete="current-password"
+        />
       </div>
 
-      <label class="upload-area ${localStorage.getItem('faber_banner_'+p.key) ? 'has-image' : ''}" for="bUpload-${p.key}">
-        <div style="font-size:24px;margin-bottom:6px;">${localStorage.getItem('faber_banner_'+p.key) ? '✅' : '📁'}</div>
-        <div style="font-size:12px;font-weight:600;color:var(--gray-700);">
-          ${localStorage.getItem('faber_banner_'+p.key) ? 'Banner încărcat — click pentru schimbare' : 'Click sau trage imaginea aici'}
-        </div>
-        <div style="font-size:11px;color:var(--gray-500);margin-top:4px;">JPG / PNG / WebP • max 500KB</div>
-      </label>
-      <input type="file" id="bUpload-${p.key}" class="upload-input" accept="image/*"
-             onchange="onBannerSelect('${p.key}', this)">
+      <div class="status-msg" id="authStatus"></div>
 
-      <img id="bPreview-${p.key}" class="preview-img" alt="Preview">
-
-      <button id="bPublish-${p.key}" class="btn btn-primary" style="width:100%;margin-top:10px;display:none;"
-              onclick="publishBanner('${p.key}')">
-        🚀 Publică banner pe site
+      <button class="btn btn-primary" style="width: 100%;" onclick="verifyLogin()">
+        Accesează panoul →
       </button>
-      <div class="status-msg" id="bStatus-${p.key}"></div>
+
+      <p class="help-text" style="margin-top: 14px; text-align: center;">
+        Prima autentificare folosește parola salvată în browser. O poți schimba din Setări.
+      </p>
     </div>
-  `).join('');
-}
+  </div>
 
-function onBannerSelect(key, input) {
-  const file = input.files[0];
-  if (!file) return;
-  if (!file.type.startsWith('image/')) { toast('Selectează o imagine validă.', true); return; }
+  <div class="toast-container" id="toastContainer"></div>
 
-  const reader = new FileReader();
-  reader.onload = e => {
-    const preview = document.getElementById('bPreview-'+key);
-    const publishBtn = document.getElementById('bPublish-'+key);
-    preview.src = e.target.result;
-    preview.classList.add('show');
-    publishBtn.style.display = 'block';
-    publishBtn.dataset.b64 = e.target.result;
-  };
-  reader.readAsDataURL(file);
-}
-
-async function publishBanner(key) {
-  const btn = document.getElementById('bPublish-'+key);
-  const statusEl = document.getElementById('bStatus-'+key);
-  const program = PROGRAMS_DATA.find(p => p.key === key);
-  const b64full = btn.dataset.b64;
-  const b64 = b64full.split(',')[1]; // strip data URL prefix
-
-  btn.disabled = true;
-  showStatus(statusEl, '⏳ Se publică imaginea...', 'loading');
-
-  try {
-    const ok = await uploadFile(program.bannerPath, b64, `Admin: banner ${program.name}`);
-    if (ok) {
-      showStatus(statusEl, '✅ Publicat! Site-ul se actualizează în ~1 minut.', 'success');
-      localStorage.setItem('faber_banner_'+key, b64full);
-      toast('Banner publicat: ' + program.name);
-    } else { throw new Error('Upload eșuat'); }
-  } catch (err) {
-    showStatus(statusEl, '❌ ' + err.message, 'error');
-  } finally { btn.disabled = false; }
-}
-
-// ══════════════════════════════════════════════════════════════
-// EDITARE PROGRAME
-// ══════════════════════════════════════════════════════════════
-function renderPrograme() {
-  const grid = document.getElementById('programeGrid');
-  grid.innerHTML = PROGRAMS_DATA.map(p => `
-    <div class="program-card">
-      <div class="program-card-header">
-        <div>
-          <div class="program-name">${p.name}</div>
-          <div class="program-file">${p.htmlFile}</div>
-        </div>
-        <span class="program-badge ${p.status === 'active' ? 'badge-active' : p.status === 'planning' ? 'badge-planning' : 'badge-soon'}">${p.badgeLabel}</span>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="sidebar-logo">
+        <div class="brand">FABER</div>
+        <div class="sub">Admin Panel</div>
       </div>
 
-      <div class="card-tabs">
-        <button class="card-tab active" onclick="switchCardTab('${p.key}','info',this)">📋 Info</button>
-        <button class="card-tab" onclick="switchCardTab('${p.key}','deadline',this)">⏱ Deadline</button>
-        <button class="card-tab" onclick="switchCardTab('${p.key}','status',this)">🏷 Status</button>
+      <nav class="sidebar-nav" aria-label="Navigare admin">
+        <button class="nav-item active" data-panel="dashboard" onclick="switchPanel('dashboard', this)">
+          <span class="icon">📊</span>
+          Dashboard
+        </button>
+
+        <button class="nav-item" data-panel="seo" onclick="switchPanel('seo', this)">
+          <span class="icon">🔎</span>
+          SEO pagini
+        </button>
+
+        <button class="nav-item" data-panel="continut" onclick="switchPanel('continut', this)">
+          <span class="icon">✏️</span>
+          Text pagini
+        </button>
+
+        <button class="nav-item" data-panel="carusel" onclick="switchPanel('carusel', this)">
+          <span class="icon">🖼️</span>
+          Bannere carusel
+        </button>
+
+        <button class="nav-item" data-panel="programe" onclick="switchPanel('programe', this)">
+          <span class="icon">💶</span>
+          Programe
+        </button>
+
+        <button class="nav-item" data-panel="blog" onclick="switchPanel('blog', this)">
+          <span class="icon">📝</span>
+          Blog posts
+        </button>
+
+        <button class="nav-item" data-panel="termene" onclick="switchPanel('termene', this)">
+          <span class="icon">⏱️</span>
+          Termene limită
+        </button>
+
+        <button class="nav-item" data-panel="setari" onclick="switchPanel('setari', this)">
+          <span class="icon">⚙️</span>
+          Setări GitHub
+        </button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <a href="../" target="_blank" rel="noopener">↗ Vizualizează site-ul</a>
+        <button onclick="logout()" style="color: #fca5a5;">⏻ Deconectare</button>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div class="topbar-title" id="topbarTitle">📊 Dashboard</div>
+
+        <div class="topbar-actions">
+          <span id="connectionStatus" style="color: var(--gray-500); font-size: 12px;"></span>
+          <button class="btn btn-secondary btn-sm" onclick="pingGoogle()">📡 Ping Google</button>
+          <button class="btn btn-primary btn-sm" onclick="testGitHubConnection()">🔗 Test GitHub</button>
+        </div>
+      </header>
+
+      <div class="content">
+        <section class="panel active" id="panel-dashboard">
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-value" id="statPrograms">—</div>
+              <div class="stat-label">Pagini administrate</div>
+            </div>
+
+            <div class="stat-card" style="border-left-color: var(--green);">
+              <div class="stat-value" id="statBlogPosts">—</div>
+              <div class="stat-label">Articole blog</div>
+            </div>
+
+            <div class="stat-card" style="border-left-color: var(--gold);">
+              <div class="stat-value" id="statCarousel">—</div>
+              <div class="stat-label">Slide-uri carusel</div>
+            </div>
+
+            <div class="stat-card" style="border-left-color: var(--blue);">
+              <div class="stat-value" id="statToken">—</div>
+              <div class="stat-label">GitHub token</div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-title">
+              <span>⚡ Acțiuni rapide</span>
+            </div>
+
+            <div class="items-grid">
+              <button class="btn btn-secondary" onclick="switchPanel('seo', document.querySelector('[data-panel=seo]'))">
+                🔎 Editează SEO
+              </button>
+
+              <button class="btn btn-secondary" onclick="switchPanel('continut', document.querySelector('[data-panel=continut]'))">
+                ✏️ Editează texte pagini
+              </button>
+
+              <button class="btn btn-secondary" onclick="switchPanel('carusel', document.querySelector('[data-panel=carusel]'))">
+                🖼️ Schimbă bannere carusel
+              </button>
+
+              <button class="btn btn-secondary" onclick="switchPanel('blog', document.querySelector('[data-panel=blog]'))">
+                📝 Adaugă articol blog
+              </button>
+
+              <button class="btn btn-secondary" onclick="switchPanel('setari', document.querySelector('[data-panel=setari]'))">
+                ⚙️ Configurează GitHub
+              </button>
+
+              <a class="btn btn-secondary" href="https://search.google.com/search-console" target="_blank" rel="noopener">
+                🔍 Search Console
+              </a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-title">
+              <span>📋 Status termene programe</span>
+            </div>
+            <div id="dashboardDeadlines">Se încarcă...</div>
+          </div>
+        </section>
+
+        <section class="panel" id="panel-seo">
+          <div class="card">
+            <div class="card-title">
+              <span>🔎 Editor SEO pagini</span>
+              <small>title, description, keywords, canonical, OG, Twitter</small>
+            </div>
+
+            <div class="info-box">
+              Acest editor modifică direct fișierele HTML: tag-ul <strong>&lt;title&gt;</strong>, meta description,
+              keywords, canonical, Open Graph și Twitter Card.
+            </div>
+
+            <div class="grid-2">
+              <div class="field-group">
+                <label class="field-label" for="seoPageSelect">Pagina</label>
+                <select id="seoPageSelect" class="field-select"></select>
+              </div>
+
+              <div class="field-group" style="display: flex; align-items: end; gap: 10px;">
+                <button class="btn btn-primary" onclick="loadSeoPage()">Încarcă SEO</button>
+                <button class="btn btn-success" onclick="saveSeoPage()">Salvează SEO</button>
+              </div>
+            </div>
+
+            <div class="grid-2">
+              <div class="field-group">
+                <label class="field-label" for="seoTitle">Title</label>
+                <input id="seoTitle" class="field-input" type="text" />
+              </div>
+
+              <div class="field-group">
+                <label class="field-label" for="seoCanonical">Canonical URL</label>
+                <input id="seoCanonical" class="field-input" type="url" />
+              </div>
+            </div>
+
+            <div class="field-group">
+              <label class="field-label" for="seoDescription">Meta description</label>
+              <textarea id="seoDescription" class="field-textarea" rows="3"></textarea>
+              <div class="help-text" id="seoDescriptionCount">0 caractere</div>
+            </div>
+
+            <div class="field-group">
+              <label class="field-label" for="seoKeywords">Meta keywords</label>
+              <textarea id="seoKeywords" class="field-textarea" rows="2"></textarea>
+            </div>
+
+            <div class="grid-2">
+              <div class="field-group">
+                <label class="field-label" for="seoOgTitle">OG title</label>
+                <input id="seoOgTitle" class="field-input" type="text" />
+              </div>
+
+              <div class="field-group">
+                <label class="field-label" for="seoOgImage">OG image</label>
+                <input id="seoOgImage" class="field-input" type="url" />
+              </div>
+            </div>
+
+            <div class="field-group">
+              <label class="field-label" for="seoOgDescription">OG description</label>
+              <textarea id="seoOgDescription" class="field-textarea" rows="2"></textarea>
+            </div>
+
+            <div class="grid-2">
+              <div class="field-group">
+                <label class="field-label" for="seoTwitterTitle">Twitter title</label>
+                <input id="seoTwitterTitle" class="field-input" type="text" />
+              </div>
+
+              <div class="field-group">
+                <label class="field-label" for="seoTwitterDescription">Twitter description</label>
+                <input id="seoTwitterDescription" class="field-input" type="text" />
+              </div>
+            </div>
+
+            <div class="field-group">
+              <label class="field-label" for="seoJsonLd">JSON-LD principal</label>
+              <textarea id="seoJsonLd" class="field-textarea" rows="10"></textarea>
+              <div class="help-text">Se editează primul script application/ld+json din pagină.</div>
+            </div>
+
+            <div class="status-msg" id="seoStatus"></div>
+          </div>
+        </section>
+
+        <section class="panel" id="panel-continut">
+          <div class="card">
+            <div class="card-title">
+              <span>✏️ Editor texte principale</span>
+              <small>hero, subtitlu, CTA, footer</small>
+            </div>
+
+            <div class="info-box">
+              Editorul caută elementele comune din paginile tale: <strong>.hero h1</strong>,
+              <strong>.hero-sub</strong>, <strong>.hero-tag</strong>, butoane CTA și footer.
+            </div>
+
+            <div class="grid-2">
+              <div class="field-group">
+                <label class="field-label" for="contentPageSelect">Pagina</label>
+                <select id="contentPageSelect" class="field-select"></select>
+              </div>
+
+              <div class="field-group" style="display: flex; align-items: end; gap: 10px;">
+                <button class="btn btn-primary" onclick="loadContentPage()">Încarcă texte</button>
+                <button class="btn btn-success" onclick="saveContentPage()">Salvează texte</button>
+              </div>
+            </div>
+
+            <div class="field-group">
+              <label class="field-label" for="contentHeroTag">Hero tag</label>
+              <input id="contentHeroTag" class="field-input" type="text" />
+            </div>
+
+            <div class="field-group">
+              <label class="field-label" for="contentH1">Titlu H1</label>
+              <textarea id="contentH1" class="field-textarea" rows="2"></textarea>
+            </div>
+
+            <div class="field-group">
+              <label class="field-label" for="contentHeroSub">Subtitlu hero</label>
+              <textarea id="contentHeroSub" class="field-textarea" rows="4"></textarea>
+            </div>
+
+            <div class="grid-2">
+              <div class="field-group">
+                <label class="field-label" for="contentPrimaryCta">Text CTA principal</label>
+                <input id="contentPrimaryCta" class="field-input" type="text" />
+              </div>
+
+              <div class="field-group">
+                <label class="field-label" for="contentPrimaryHref">Link CTA principal</label>
+                <input id="contentPrimaryHref" class="field-input" type="text" />
+              </div>
+            </div>
+
+            <div class="field-group">
+              <label class="field-label" for="contentFooter">Text footer / copyright</label>
+              <textarea id="contentFooter" class="field-textarea" rows="3"></textarea>
+            </div>
+
+            <div class="status-msg" id="contentStatus"></div>
+          </div>
+        </section>
+
+        <section class="panel" id="panel-carusel">
+          <div class="card">
+            <div class="card-title">
+              <span>🖼️ Bannere carusel homepage</span>
+              <small>încarcă imagine și aplică pe slide</small>
+            </div>
+
+            <div class="warning-box">
+              Pentru ca bannerele să fie vizibile, pagina <strong>index.html</strong> va primi un background-image inline pe slide-ul ales.
+              Recomandare imagine: <strong>1200×630 px</strong>, format WebP/JPG, sub 500 KB.
+            </div>
+
+            <div id="carouselGrid" class="programs-grid"></div>
+          </div>
+        </section>
+
+        <section class="panel" id="panel-programe">
+          <div class="card">
+            <div class="card-title">
+              <span>💶 Editor programe</span>
+              <small>sume, procente, deadline countdown</small>
+            </div>
+
+            <div class="info-box">
+              Acest editor modifică deadline-ul afișat și data din countdown. Pentru datele SEO folosește tab-ul „SEO pagini”.
+            </div>
+
+            <div id="programsGrid" class="programs-grid"></div>
+          </div>
+        </section>
+
+        <section class="panel" id="panel-blog">
+          <div class="card">
+            <div class="card-title">
+              <span>📝 Blog posts</span>
+              <small>articole, icon-uri, imagini, conținut HTML</small>
+            </div>
+
+            <div style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 18px;">
+              <button class="btn btn-primary" onclick="openPostModal()">+ Articol nou</button>
+              <button class="btn btn-secondary" onclick="loadBlogPosts()">🔄 Reîncarcă blog.json</button>
+              <button class="btn btn-secondary" onclick="patchIndexBlogRenderer()">🧩 Activează icon-uri în index.html</button>
+            </div>
+
+            <div class="warning-box">
+              Pentru afișarea icon-urilor în homepage, apasă o singură dată pe
+              <strong>„Activează icon-uri în index.html”</strong>. După aceea, câmpul <strong>icon</strong> din blog.json va fi folosit automat.
+            </div>
+
+            <div id="postsList">Se încarcă...</div>
+            <div class="status-msg" id="blogStatus"></div>
+          </div>
+        </section>
+
+        <section class="panel" id="panel-termene">
+          <div class="card">
+            <div class="card-title">
+              <span>⏱️ Termene limită</span>
+              <small>calculate din configurația admin</small>
+            </div>
+
+            <div id="deadlinesList">Se calculează...</div>
+          </div>
+        </section>
+
+        <section class="panel" id="panel-setari">
+          <div class="card">
+            <div class="card-title">
+              <span>⚙️ GitHub API</span>
+              <small>setări salvate local</small>
+            </div>
+
+            <div class="warning-box">
+              Token-ul GitHub rămâne doar în browserul tău. Creează un token cu permisiunea
+              <strong>Contents: Read and Write</strong> pentru repository.
+            </div>
+
+            <div class="grid-3">
+              <div class="field-group">
+                <label class="field-label" for="githubOwner">Owner</label>
+                <input id="githubOwner" class="field-input" type="text" value="florincaciur" />
+              </div>
+
+              <div class="field-group">
+                <label class="field-label" for="githubRepo">Repository</label>
+                <input id="githubRepo" class="field-input" type="text" value="atelierdeconsultanta" />
+              </div>
+
+              <div class="field-group">
+                <label class="field-label" for="githubBranch">Branch</label>
+                <input id="githubBranch" class="field-input" type="text" value="main" />
+              </div>
+            </div>
+
+            <div class="field-group">
+              <label class="field-label" for="githubToken">Personal Access Token</label>
+              <input id="githubToken" class="field-input" type="password" placeholder="github_pat_..." />
+            </div>
+
+            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+              <button class="btn btn-primary" onclick="saveGitHubSettings()">💾 Salvează setări</button>
+              <button class="btn btn-secondary" onclick="testGitHubConnection()">✅ Testează conexiunea</button>
+            </div>
+
+            <div class="status-msg" id="settingsStatus"></div>
+          </div>
+
+          <div class="card">
+            <div class="card-title">
+              <span>🔐 Parolă locală panou</span>
+            </div>
+
+            <div class="grid-2">
+              <div class="field-group">
+                <label class="field-label" for="newAdminEmail">Email admin</label>
+                <input id="newAdminEmail" class="field-input" type="email" />
+              </div>
+
+              <div class="field-group">
+                <label class="field-label" for="currentAdminPassword">Parola curentă</label>
+                <input id="currentAdminPassword" class="field-input" type="password" />
+              </div>
+
+              <div class="field-group">
+                <label class="field-label" for="newAdminPassword">Parolă nouă</label>
+                <input id="newAdminPassword" class="field-input" type="password" />
+              </div>
+
+              <div class="field-group">
+                <label class="field-label" for="confirmAdminPassword">Confirmă parola nouă</label>
+                <input id="confirmAdminPassword" class="field-input" type="password" />
+              </div>
+            </div>
+
+            <button class="btn btn-primary" onclick="changeAdminCredentials()">Salvează credențiale</button>
+            <div class="status-msg" id="credentialsStatus"></div>
+          </div>
+
+          <div class="card">
+            <div class="card-title">
+              <span>📡 SEO & indexare</span>
+            </div>
+
+            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+              <button class="btn btn-primary" onclick="pingGoogle()">📡 Ping Google Sitemap</button>
+              <button class="btn btn-secondary" onclick="pingBing()">📡 Ping Bing Sitemap</button>
+              <a class="btn btn-secondary" href="https://search.google.com/search-console" target="_blank" rel="noopener">
+                Search Console →
+              </a>
+              <a class="btn btn-secondary" href="https://atelierdeconsultanta.ro/sitemap.xml" target="_blank" rel="noopener">
+                Sitemap →
+              </a>
+            </div>
+
+            <div class="status-msg" id="indexingStatus"></div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <div class="modal-overlay" id="postModal">
+    <div class="modal">
+      <div class="modal-header">
+        <div class="modal-title" id="postModalTitle">Articol nou</div>
+        <button class="modal-close" onclick="closeModal('postModal')">×</button>
       </div>
 
-      <!-- INFO TAB -->
-      <div class="card-tab-panel active" id="ctab-${p.key}-info">
+      <input id="postEditIndex" type="hidden" value="-1" />
+
+      <div class="grid-2">
         <div class="field-group">
-          <label class="field-label">Sumă maximă</label>
-          <input type="text" class="field-input" id="pe-${p.key}-amount" value="${p.maxAmount}" placeholder="Ex: 200.000 EUR">
+          <label class="field-label" for="postTitle">Titlu articol *</label>
+          <input id="postTitle" class="field-input" type="text" />
         </div>
+
         <div class="field-group">
-          <label class="field-label">Intensitate (% nerambursabil)</label>
-          <input type="text" class="field-input" id="pe-${p.key}-pct" value="${p.percentage}" placeholder="Ex: 90%">
+          <label class="field-label" for="postSlug">Slug URL *</label>
+          <input id="postSlug" class="field-input" type="text" />
         </div>
       </div>
 
-      <!-- DEADLINE TAB -->
-      <div class="card-tab-panel" id="ctab-${p.key}-deadline">
+      <div class="grid-3">
         <div class="field-group">
-          <label class="field-label">Termen limită</label>
-          <input type="date" class="field-input" id="pe-${p.key}-deadline" value="${p.deadline}">
+          <label class="field-label" for="postDate">Data publicării</label>
+          <input id="postDate" class="field-input" type="date" />
         </div>
-        <p style="font-size:11px;color:var(--gray-500);margin-top:4px;">
-          Actualizează și countdown-ul din pagina programului.
-        </p>
-      </div>
 
-      <!-- STATUS TAB -->
-      <div class="card-tab-panel" id="ctab-${p.key}-status">
         <div class="field-group">
-          <label class="field-label">Status badge</label>
-          <select class="field-select" id="pe-${p.key}-status">
-            <option value="active" ${p.status==='active'?'selected':''}>✅ ACTIV</option>
-            <option value="soon" ${p.status==='soon'?'selected':''}>🔜 ÎN CURÂND</option>
-            <option value="planning" ${p.status==='planning'?'selected':''}>📋 ÎN PREGĂTIRE</option>
-            <option value="closed" ${p.status==='closed'?'selected':''}>🔴 ÎNCHIS</option>
+          <label class="field-label" for="postCategory">Categorie</label>
+          <select id="postCategory" class="field-select">
+            <option value="Fonduri Europene">Fonduri Europene</option>
+            <option value="AFIR">AFIR</option>
+            <option value="POR">POR</option>
+            <option value="Digitalizare">Digitalizare</option>
+            <option value="Start-Up">Start-Up</option>
+            <option value="Energie">Energie</option>
+            <option value="Agricultură">Agricultură</option>
+            <option value="Ajutor de Stat">Ajutor de Stat</option>
           </select>
         </div>
+
         <div class="field-group">
-          <label class="field-label">Text badge personalizat</label>
-          <input type="text" class="field-input" id="pe-${p.key}-badgeLabel" value="${p.badgeLabel}" placeholder="ACTIV">
+          <label class="field-label" for="postReadTime">Timp citire</label>
+          <input id="postReadTime" class="field-input" type="number" min="1" max="60" value="5" />
         </div>
       </div>
 
-      <button class="btn btn-primary" style="width:100%;margin-top:12px;"
-              onclick="saveProgram('${p.key}')">
-        💾 Salvează modificările
-      </button>
-      <div class="status-msg" id="peStatus-${p.key}"></div>
+      <div class="field-group">
+        <label class="field-label" for="postExcerpt">Rezumat *</label>
+        <textarea id="postExcerpt" class="field-textarea" rows="3"></textarea>
+      </div>
+
+      <div class="grid-2">
+        <div class="field-group">
+          <label class="field-label" for="postIcon">Icon blog card</label>
+          <input id="postIcon" class="field-input" type="text" placeholder="Ex: 🌾, 💻, 🚀, 🏗️" />
+          <div class="help-text">Se afișează pe card dacă nu există imagine.</div>
+        </div>
+
+        <div class="field-group">
+          <label class="field-label" for="postImage">URL imagine</label>
+          <input id="postImage" class="field-input" type="url" placeholder="https://..." />
+        </div>
+      </div>
+
+      <div class="field-group">
+        <label class="field-label" for="postContent">Conținut complet HTML</label>
+        <textarea id="postContent" class="field-textarea" rows="12"></textarea>
+      </div>
+
+      <div class="grid-2">
+        <div class="field-group">
+          <label class="field-label" for="postAuthor">Autor</label>
+          <input id="postAuthor" class="field-input" type="text" value="FABER – Atelier de Consultanță" />
+        </div>
+
+        <div class="field-group">
+          <label class="field-label" for="postPublished">Status</label>
+          <select id="postPublished" class="field-select">
+            <option value="true">✅ Publicat</option>
+            <option value="false">📝 Draft</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="status-msg" id="postModalStatus"></div>
+
+      <div class="modal-footer">
+        <button class="btn btn-secondary" onclick="closeModal('postModal')">Anulează</button>
+        <button class="btn btn-primary" onclick="savePost()">💾 Salvează articolul</button>
+      </div>
     </div>
-  `).join('');
-}
+  </div>
+  <!-- PARTEA 3 / 4: JAVASCRIPT — CONFIG, AUTH, GITHUB, SEO, CONȚINUT, CARUSEL -->
+<script>
+  /* ============================================================
+     CONFIG & STATE
+  ============================================================ */
+  const DEFAULT_ADMIN_EMAIL = "atelier.consultanta@gmail.com";
+  const DEFAULT_ADMIN_PASSWORD = "SchimbaParola2026!";
 
-function switchCardTab(key, tab, btnEl) {
-  ['info','deadline','status'].forEach(t => {
-    const panel = document.getElementById(`ctab-${key}-${t}`);
-    if (panel) panel.classList.toggle('active', t === tab);
-  });
-  btnEl.closest('.card-tabs').querySelectorAll('.card-tab').forEach(b => b.classList.remove('active'));
-  btnEl.classList.add('active');
-}
+  const SITE_BASE_URL = "https://atelierdeconsultanta.ro";
 
-async function saveProgram(key) {
-  const program = PROGRAMS_DATA.find(p => p.key === key);
-  const statusEl = document.getElementById('peStatus-'+key);
-
-  const amount = document.getElementById('pe-'+key+'-amount')?.value;
-  const pct = document.getElementById('pe-'+key+'-pct')?.value;
-  const deadline = document.getElementById('pe-'+key+'-deadline')?.value;
-  const status = document.getElementById('pe-'+key+'-status')?.value;
-  const badgeLabel = document.getElementById('pe-'+key+'-badgeLabel')?.value;
-
-  showStatus(statusEl, '⏳ Se aplică modificările în GitHub...', 'loading');
-
-  try {
-    let html = await downloadFileContent(program.htmlFile);
-
-    // Update amount if present
-    if (amount && amount !== program.maxAmount) {
-      html = html.replace(new RegExp(escapeRegex(program.maxAmount), 'g'), amount);
-      program.maxAmount = amount;
+  const PAGE_CONFIG = [
+    {
+      key: "index",
+      label: "Homepage",
+      file: "index.html",
+      url: SITE_BASE_URL + "/"
+    },
+    {
+      key: "dr12",
+      label: "DR 12 AFIR — Tineri Fermieri",
+      file: "dr12-afir.html",
+      url: SITE_BASE_URL + "/dr12-afir.html"
+    },
+    {
+      key: "dr14",
+      label: "DR 14 — Ferme Mici",
+      file: "dr14.html",
+      url: SITE_BASE_URL + "/dr14.html"
+    },
+    {
+      key: "digitalizare",
+      label: "Digitalizare IMM",
+      file: "digitalizare-imm.html",
+      url: SITE_BASE_URL + "/digitalizare-imm.html"
+    },
+    {
+      key: "pro-infra",
+      label: "PRO INFRA",
+      file: "pro-infra.html",
+      url: SITE_BASE_URL + "/pro-infra.html"
+    },
+    {
+      key: "startup",
+      label: "Start-Up Nation 2026",
+      file: "start-up-nation-2026.html",
+      url: SITE_BASE_URL + "/start-up-nation-2026.html"
+    },
+    {
+      key: "femeia",
+      label: "Femeia Antreprenor 2026",
+      file: "femeia-antreprenor-2026.html",
+      url: SITE_BASE_URL + "/femeia-antreprenor-2026.html"
+    },
+    {
+      key: "por-ne",
+      label: "POR ADR Nord-Est",
+      file: "por-adr-nord-est.html",
+      url: SITE_BASE_URL + "/por-adr-nord-est.html"
+    },
+    {
+      key: "afir-autoconsum",
+      label: "AFIR Autoconsum Agroalimentar",
+      file: "afir-autoconsum-agroalimentar.html",
+      url: SITE_BASE_URL + "/afir-autoconsum-agroalimentar.html"
+    },
+    {
+      key: "autoconsum-publici",
+      label: "Autoconsum Publici",
+      file: "autoconsum-publici.html",
+      url: SITE_BASE_URL + "/autoconsum-publici.html"
     }
+  ];
 
-    // Update deadline countdown
-    if (deadline && deadline !== program.deadline) {
-      // Replace date in countdown JS
-      html = html.replace(new RegExp(escapeRegex(program.deadline), 'g'), deadline);
-      program.deadline = deadline;
+  const PROGRAMS_DATA = [
+    {
+      key: "por-ne",
+      name: "POR ADR Nord-Est",
+      file: "por-adr-nord-est.html",
+      deadline: "2026-05-31",
+      maxAmount: "300.000 EUR",
+      percentage: "70–90%",
+      status: "active",
+      badgeLabel: "ACTIV"
+    },
+    {
+      key: "dr12",
+      name: "DR 12 AFIR — Tineri Fermieri",
+      file: "dr12-afir.html",
+      deadline: "2026-06-30",
+      maxAmount: "200.000 EUR",
+      percentage: "80% / 65%",
+      status: "active",
+      badgeLabel: "ACTIV"
+    },
+    {
+      key: "dr14",
+      name: "DR 14 — Ferme Mici",
+      file: "dr14.html",
+      deadline: "2026-07-31",
+      maxAmount: "50.000 EUR",
+      percentage: "85%",
+      status: "active",
+      badgeLabel: "ACTIV"
+    },
+    {
+      key: "digitalizare",
+      name: "Digitalizare IMM",
+      file: "digitalizare-imm.html",
+      deadline: "2026-06-30",
+      maxAmount: "100.000 EUR",
+      percentage: "conform ghidului",
+      status: "planning",
+      badgeLabel: "ÎN PREGĂTIRE"
+    },
+    {
+      key: "femeia",
+      name: "Femeia Antreprenor 2026",
+      file: "femeia-antreprenor-2026.html",
+      deadline: "2026-09-30",
+      maxAmount: "200.000 RON",
+      percentage: "90%",
+      status: "planning",
+      badgeLabel: "ÎN PREGĂTIRE"
+    },
+    {
+      key: "pro-infra",
+      name: "PRO INFRA",
+      file: "pro-infra.html",
+      deadline: "2026-12-31",
+      maxAmount: "15.000.000 EUR",
+      percentage: "conform ghidului",
+      status: "active",
+      badgeLabel: "ACTIV"
+    },
+    {
+      key: "startup",
+      name: "Start-Up Nation 2026",
+      file: "start-up-nation-2026.html",
+      deadline: "2026-12-31",
+      maxAmount: "250.000 RON",
+      percentage: "90%",
+      status: "active",
+      badgeLabel: "ACTIV"
+    },
+    {
+      key: "afir-autoconsum",
+      name: "AFIR Autoconsum Agroalimentar",
+      file: "afir-autoconsum-agroalimentar.html",
+      deadline: "2026-12-31",
+      maxAmount: "20.000.000 EUR",
+      percentage: "100%",
+      status: "active",
+      badgeLabel: "ACTIV"
+    },
+    {
+      key: "autoconsum-publici",
+      name: "Autoconsum Publici",
+      file: "autoconsum-publici.html",
+      deadline: "2026-12-31",
+      maxAmount: "10.000.000 EUR",
+      percentage: "100%",
+      status: "active",
+      badgeLabel: "ACTIV"
     }
+  ];
 
-    const b64 = btoa(unescape(encodeURIComponent(html)));
-    const ok = await uploadFile(program.htmlFile, b64, `Admin: actualizare ${program.name} — ${amount || ''} ${deadline || ''}`);
+  const CAROUSEL_SLIDES = [
+    {
+      index: 0,
+      name: "POR ADR Nord-Est",
+      bannerPath: "admin/banners/slide-por-ne.webp"
+    },
+    {
+      index: 1,
+      name: "DR 12 AFIR",
+      bannerPath: "admin/banners/slide-dr12.webp"
+    },
+    {
+      index: 2,
+      name: "AFIR Autoconsum Agroalimentar",
+      bannerPath: "admin/banners/slide-afir-autoconsum.webp"
+    },
+    {
+      index: 3,
+      name: "Autoconsum Publici",
+      bannerPath: "admin/banners/slide-autoconsum-publici.webp"
+    },
+    {
+      index: 4,
+      name: "DR 14 — Ferme Mici",
+      bannerPath: "admin/banners/slide-dr14.webp"
+    },
+    {
+      index: 5,
+      name: "Digitalizare IMM",
+      bannerPath: "admin/banners/slide-digitalizare.webp"
+    },
+    {
+      index: 6,
+      name: "Femeia Antreprenor 2026",
+      bannerPath: "admin/banners/slide-femeia.webp"
+    }
+  ];
 
-    if (ok) {
-      showStatus(statusEl, '✅ Salvat cu succes! Site-ul se actualizează în ~1 minut.', 'success');
-      if (status) program.status = status;
-      if (badgeLabel) program.badgeLabel = badgeLabel;
-      toast('Program actualizat: ' + program.name);
-    } else { throw new Error('Commit eșuat'); }
+  let blogPosts = [];
+  let currentSeoHtml = "";
+  let currentSeoFile = "";
+  let currentContentHtml = "";
+  let currentContentFile = "";
 
-  } catch(err) {
-    showStatus(statusEl, '❌ ' + err.message, 'error');
+  /* ============================================================
+     UTILITARE GENERALE
+  ============================================================ */
+  function qs(selector) {
+    return document.querySelector(selector);
   }
-}
 
-function escapeRegex(str) {
-  return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-}
+  function qsa(selector) {
+    return Array.from(document.querySelectorAll(selector));
+  }
 
-// ══════════════════════════════════════════════════════════════
-// TERMENE
-// ══════════════════════════════════════════════════════════════
-function renderTermene() {
-  const listEl = document.getElementById('termeneList');
-  const sorted = [...PROGRAMS_DATA].sort((a,b) => new Date(a.deadline) - new Date(b.deadline));
+  function escapeHtml(value) {
+    return String(value || "")
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replaceAll('"', "&quot;")
+      .replaceAll("'", "&#039;");
+  }
 
-  listEl.innerHTML = sorted.map(p => {
-    const days = daysUntil(p.deadline);
-    const cls = days < 0 ? 'days-urgent' : days < 30 ? 'days-urgent' : days < 60 ? 'days-warn' : 'days-ok';
-    const label = days < 0 ? 'EXPIRAT' : days === 0 ? 'AZI' : days + ' zile';
-    return `<div class="deadline-row">
-      <div class="deadline-name">${p.name}</div>
-      <div class="deadline-date">Termen: ${p.deadline}</div>
-      <div class="deadline-days ${cls}">${label}</div>
-    </div>`;
-  }).join('');
-}
+  function escapeAttr(value) {
+    return escapeHtml(value).replaceAll("\n", " ");
+  }
 
-// ══════════════════════════════════════════════════════════════
-// BLOG
-// ══════════════════════════════════════════════════════════════
-async function loadBlogPosts() {
-  const listEl = document.getElementById('postsList');
-  listEl.innerHTML = '<div style="text-align:center;padding:40px;color:var(--gray-500);">⏳ Se încarcă...</div>';
+  function escapeRegex(value) {
+    return String(value || "").replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  }
 
-  try {
-    const jsonStr = await downloadFileContent('blog.json');
-    const data = JSON.parse(jsonStr);
-    blogPosts = data.posts || [];
+  function encodeBase64Utf8(value) {
+    return btoa(unescape(encodeURIComponent(value)));
+  }
 
-    document.getElementById('blogCountLabel').textContent = `${blogPosts.length} articole`;
+  function decodeBase64Utf8(value) {
+    return decodeURIComponent(escape(atob(value.replace(/\n/g, ""))));
+  }
 
-    if (!blogPosts.length) {
-      listEl.innerHTML = '<div style="text-align:center;padding:40px;color:var(--gray-500);">📭 Niciun articol găsit.</div>';
+  function showStatus(el, message, type) {
+    if (!el) return;
+
+    el.textContent = message;
+    el.className =
+      "status-msg show " +
+      (type === "loading"
+        ? "status-loading"
+        : type === "success"
+          ? "status-success"
+          : "status-error");
+  }
+
+  function toast(message, isError = false) {
+    const container = qs("#toastContainer");
+    const toastEl = document.createElement("div");
+
+    toastEl.className = "toast" + (isError ? " error" : "");
+    toastEl.textContent = (isError ? "❌ " : "✅ ") + message;
+
+    container.appendChild(toastEl);
+
+    setTimeout(() => {
+      toastEl.style.opacity = "0";
+      toastEl.style.transition = "opacity 0.35s";
+      setTimeout(() => toastEl.remove(), 360);
+    }, 3600);
+  }
+
+  function closeModal(id) {
+    const modal = document.getElementById(id);
+    if (modal) modal.classList.remove("show");
+  }
+
+  function daysUntil(dateString) {
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    const target = new Date(dateString + "T00:00:00");
+    return Math.round((target - today) / 86400000);
+  }
+
+  function formatDateRo(dateString) {
+    const months = [
+      "ianuarie",
+      "februarie",
+      "martie",
+      "aprilie",
+      "mai",
+      "iunie",
+      "iulie",
+      "august",
+      "septembrie",
+      "octombrie",
+      "noiembrie",
+      "decembrie"
+    ];
+
+    const date = new Date(dateString + "T00:00:00");
+    return `${date.getDate()} ${months[date.getMonth()]} ${date.getFullYear()}`;
+  }
+
+  function getPageByFile(file) {
+    return PAGE_CONFIG.find(page => page.file === file);
+  }
+
+  function getSelectedPage(selectId) {
+    const file = document.getElementById(selectId).value;
+    return PAGE_CONFIG.find(page => page.file === file);
+  }
+
+  /* ============================================================
+     AUTH LOCAL
+  ============================================================ */
+  function verifyLogin() {
+    const email = qs("#loginEmail").value.trim().toLowerCase();
+    const password = qs("#loginPassword").value;
+    const status = qs("#authStatus");
+
+    const savedEmail = (
+      localStorage.getItem("faber_admin_email") || DEFAULT_ADMIN_EMAIL
+    ).toLowerCase();
+
+    const savedPassword =
+      localStorage.getItem("faber_admin_password") || DEFAULT_ADMIN_PASSWORD;
+
+    if (email === savedEmail && password === savedPassword) {
+      sessionStorage.setItem("faber_admin_auth", "true");
+      qs("#authOverlay").classList.add("hidden");
+      initPanel();
       return;
     }
 
-    listEl.innerHTML = blogPosts.map((post, i) => `
-      <div class="post-item">
-        <div style="font-size:28px;">${post.published ? '📗' : '📓'}</div>
-        <div class="post-info">
-          <div class="post-title-text">${post.title}</div>
-          <div class="post-meta">${post.date} • ${post.category || '—'} • ${post.published ? '✅ Publicat' : '📝 Draft'}</div>
-        </div>
-        <div class="post-actions">
-          <button class="btn btn-secondary btn-sm" onclick="editPost(${i})">✏️ Editează</button>
-          <button class="btn btn-danger btn-sm" onclick="deletePost(${i})">🗑</button>
-        </div>
-      </div>
-    `).join('');
-
-  } catch(err) {
-    listEl.innerHTML = `<div style="text-align:center;padding:40px;color:var(--red);">❌ ${err.message}</div>`;
+    showStatus(status, "Email sau parolă incorectă.", "error");
+    qs("#loginPassword").value = "";
   }
-}
 
-function openNewPostModal() {
-  editingPostIndex = -1;
-  document.getElementById('modalTitle').textContent = '📝 Articol nou';
-  document.getElementById('postEditId').value = '';
-  ['postTitle','postSlug','postExcerpt','postContent','postImage'].forEach(id => {
-    document.getElementById(id).value = '';
+  function logout() {
+    sessionStorage.removeItem("faber_admin_auth");
+    location.reload();
+  }
+
+  function changeAdminCredentials() {
+    const currentPassword = qs("#currentAdminPassword").value;
+    const newEmail = qs("#newAdminEmail").value.trim();
+    const newPassword = qs("#newAdminPassword").value;
+    const confirmPassword = qs("#confirmAdminPassword").value;
+    const status = qs("#credentialsStatus");
+
+    const savedPassword =
+      localStorage.getItem("faber_admin_password") || DEFAULT_ADMIN_PASSWORD;
+
+    if (currentPassword !== savedPassword) {
+      showStatus(status, "Parola curentă este incorectă.", "error");
+      return;
+    }
+
+    if (newPassword && newPassword.length < 8) {
+      showStatus(status, "Parola nouă trebuie să aibă minim 8 caractere.", "error");
+      return;
+    }
+
+    if (newPassword && newPassword !== confirmPassword) {
+      showStatus(status, "Parolele noi nu coincid.", "error");
+      return;
+    }
+
+    if (newEmail) localStorage.setItem("faber_admin_email", newEmail);
+    if (newPassword) localStorage.setItem("faber_admin_password", newPassword);
+
+    ["newAdminEmail", "currentAdminPassword", "newAdminPassword", "confirmAdminPassword"].forEach(id => {
+      document.getElementById(id).value = "";
+    });
+
+    showStatus(status, "Credențiale actualizate cu succes.", "success");
+  }
+
+  qs("#loginEmail").addEventListener("keydown", event => {
+    if (event.key === "Enter") qs("#loginPassword").focus();
   });
-  document.getElementById('postDate').value = new Date().toISOString().split('T')[0];
-  document.getElementById('postReadTime').value = '5';
-  document.getElementById('postAuthor').value = 'FABER – Atelier de Consultanță';
-  document.getElementById('postPublished').value = 'true';
-  document.getElementById('postCategory').value = 'Fonduri Europene';
-  document.getElementById('postModalStatus').classList.remove('show');
-  document.getElementById('postModal').classList.add('show');
-}
 
-function editPost(index) {
-  editingPostIndex = index;
-  const post = blogPosts[index];
-  document.getElementById('modalTitle').textContent = '✏️ Editează articol';
-  document.getElementById('postTitle').value = post.title || '';
-  document.getElementById('postSlug').value = post.slug || post.id || '';
-  document.getElementById('postDate').value = post.date || '';
-  document.getElementById('postExcerpt').value = post.excerpt || '';
-  document.getElementById('postCategory').value = post.category || 'Fonduri Europene';
-  document.getElementById('postReadTime').value = post.readTime || '5';
-  document.getElementById('postContent').value = post.content || '';
-  document.getElementById('postImage').value = post.image || '';
-  document.getElementById('postAuthor').value = post.author || 'FABER – Atelier de Consultanță';
-  document.getElementById('postPublished').value = post.published ? 'true' : 'false';
-  document.getElementById('postModalStatus').classList.remove('show');
-  document.getElementById('postModal').classList.add('show');
-}
+  qs("#loginPassword").addEventListener("keydown", event => {
+    if (event.key === "Enter") verifyLogin();
+  });
 
-async function savePost() {
-  const title = document.getElementById('postTitle').value.trim();
-  const slug = document.getElementById('postSlug').value.trim().replace(/\s+/g,'-').toLowerCase();
-  const statusEl = document.getElementById('postModalStatus');
-
-  if (!title || !slug) { showStatus(statusEl, '❌ Titlul și slug-ul sunt obligatorii.', 'error'); return; }
-
-  const postObj = {
-    id: slug,
-    slug,
-    title,
-    date: document.getElementById('postDate').value,
-    excerpt: document.getElementById('postExcerpt').value.trim(),
-    category: document.getElementById('postCategory').value,
-    readTime: parseInt(document.getElementById('postReadTime').value) || 5,
-    content: document.getElementById('postContent').value.trim(),
-    image: document.getElementById('postImage').value.trim() || null,
-    author: document.getElementById('postAuthor').value.trim(),
-    published: document.getElementById('postPublished').value === 'true'
+  /* ============================================================
+     NAVIGAȚIE PANELURI
+  ============================================================ */
+  const PANEL_TITLES = {
+    dashboard: "📊 Dashboard",
+    seo: "🔎 SEO pagini",
+    continut: "✏️ Text pagini",
+    carusel: "🖼️ Bannere carusel",
+    programe: "💶 Programe",
+    blog: "📝 Blog posts",
+    termene: "⏱️ Termene limită",
+    setari: "⚙️ Setări GitHub"
   };
 
-  if (editingPostIndex >= 0) {
-    blogPosts[editingPostIndex] = postObj;
-  } else {
-    blogPosts.unshift(postObj);
+  function switchPanel(name, navEl) {
+    qsa(".panel").forEach(panel => panel.classList.remove("active"));
+    qsa(".nav-item").forEach(item => item.classList.remove("active"));
+
+    const panel = qs("#panel-" + name);
+    if (panel) panel.classList.add("active");
+
+    if (navEl) navEl.classList.add("active");
+
+    qs("#topbarTitle").textContent = PANEL_TITLES[name] || name;
+
+    if (name === "dashboard") renderDashboard();
+    if (name === "seo") renderSeoSelect();
+    if (name === "continut") renderContentSelect();
+    if (name === "carusel") renderCarouselGrid();
+    if (name === "programe") renderProgramsGrid();
+    if (name === "blog") loadBlogPosts();
+    if (name === "termene") renderDeadlines();
   }
 
-  showStatus(statusEl, '⏳ Se salvează în GitHub...', 'loading');
-
-  try {
-    const jsonStr = JSON.stringify({ posts: blogPosts }, null, 2);
-    const b64 = btoa(unescape(encodeURIComponent(jsonStr)));
-    const ok = await uploadFile('blog.json', b64, `Admin: ${editingPostIndex >= 0 ? 'actualizare' : 'articol nou'} — ${title}`);
-
-    if (ok) {
-      showStatus(statusEl, '✅ Salvat cu succes!', 'success');
-      toast(editingPostIndex >= 0 ? 'Articol actualizat!' : 'Articol publicat!');
-      setTimeout(() => { closeModal('postModal'); loadBlogPosts(); }, 1200);
-    } else { throw new Error('Commit eșuat'); }
-
-  } catch(err) {
-    showStatus(statusEl, '❌ ' + err.message, 'error');
-    blogPosts.splice(editingPostIndex >= 0 ? editingPostIndex : 0, editingPostIndex >= 0 ? 1 : 1);
+  /* ============================================================
+     GITHUB API
+  ============================================================ */
+  function getGitHubSettings() {
+    return {
+      owner: qs("#githubOwner").value.trim(),
+      repo: qs("#githubRepo").value.trim(),
+      branch: qs("#githubBranch").value.trim() || "main",
+      token: qs("#githubToken").value.trim()
+    };
   }
-}
 
-async function deletePost(index) {
-  const post = blogPosts[index];
-  if (!confirm(`Ștergi articolul "${post.title}"?`)) return;
+  function saveGitHubSettings() {
+    const settings = getGitHubSettings();
 
-  blogPosts.splice(index, 1);
-  try {
-    const jsonStr = JSON.stringify({ posts: blogPosts }, null, 2);
-    const b64 = btoa(unescape(encodeURIComponent(jsonStr)));
-    await uploadFile('blog.json', b64, `Admin: stergere articol — ${post.title}`);
-    toast('Articol șters.');
-    loadBlogPosts();
-  } catch(err) {
-    blogPosts.splice(index, 0, post); // restore
-    toast('Eroare la ștergere: ' + err.message, true);
+    localStorage.setItem("faber_github_owner", settings.owner);
+    localStorage.setItem("faber_github_repo", settings.repo);
+    localStorage.setItem("faber_github_branch", settings.branch);
+    localStorage.setItem("faber_github_token", settings.token);
+
+    showStatus(qs("#settingsStatus"), "Setări salvate local.", "success");
+    updateDashboardTokenStatus();
   }
-}
 
-// ══════════════════════════════════════════════════════════════
-// SETTINGS
-// ══════════════════════════════════════════════════════════════
-function saveGitHubToken() {
-  const { owner, repo, token } = getGHConfig();
-  if (!token) { toast('Introdu un token.', true); return; }
-  localStorage.setItem('faber_github_token', token);
-  localStorage.setItem('faber_github_owner', owner);
-  localStorage.setItem('faber_github_repo', repo);
-  toast('Token salvat local!');
-}
+  async function ghFetch(path, options = {}) {
+    const settings = getGitHubSettings();
 
-async function refreshGitHubToken() {
-  const { owner, repo, token } = getGHConfig();
-  const statusEl = document.getElementById('tokenStatus');
+    if (!settings.token) {
+      throw new Error("Token GitHub lipsă. Configurează-l în Setări GitHub.");
+    }
 
-  if (!token) { showStatus(statusEl, '❌ Token lipsă.', 'error'); return; }
-  showStatus(statusEl, '⏳ Se testează conexiunea...', 'loading');
+    const url =
+      `https://api.github.com/repos/${settings.owner}/${settings.repo}/contents/${path}` +
+      `?ref=${encodeURIComponent(settings.branch)}`;
 
-  try {
-    const res = await fetch(`https://api.github.com/repos/${owner}/${repo}`, {
-      headers: { 'Authorization': `token ${token}`, 'Accept': 'application/vnd.github.v3+json' }
+    const headers = {
+      Authorization: `Bearer ${settings.token}`,
+      Accept: "application/vnd.github+json",
+      "Content-Type": "application/json",
+      "X-GitHub-Api-Version": "2022-11-28"
+    };
+
+    return fetch(url, {
+      ...options,
+      headers: {
+        ...headers,
+        ...(options.headers || {})
+      }
     });
-    if (res.ok) {
-      showStatus(statusEl, '✅ Token valid! Repository accesibil.', 'success');
-      document.getElementById('lastSaved').textContent = 'GitHub ✅ ' + new Date().toLocaleTimeString('ro');
-    } else { throw new Error(`HTTP ${res.status}`); }
-  } catch(err) {
-    showStatus(statusEl, '❌ Token invalid sau repository inaccesibil: ' + err.message, 'error');
   }
-}
 
-async function pingGoogle() {
-  const statusEl = document.getElementById('seoStatus');
-  if (statusEl) showStatus(statusEl, '⏳ Se trimite ping Google...', 'loading');
-  try {
-    await fetch('https://www.google.com/ping?sitemap=https://atelierdeconsultanta.ro/sitemap.xml', { mode:'no-cors' });
-    if (statusEl) showStatus(statusEl, '✅ Ping Google trimis! (sitemap resubmis)', 'success');
-    toast('Ping Google trimis!');
-  } catch(e) {
-    if (statusEl) showStatus(statusEl, '⚠️ Ping trimis (verifică Search Console).', 'success');
-    toast('Ping Google trimis!');
+  async function getFileInfo(path) {
+    const response = await ghFetch(path);
+
+    if (!response.ok) {
+      throw new Error(`Nu pot citi fișierul ${path}. HTTP ${response.status}`);
+    }
+
+    return response.json();
   }
-}
 
-async function pingBing() {
-  const statusEl = document.getElementById('seoStatus');
-  if (statusEl) showStatus(statusEl, '⏳ Se trimite ping Bing...', 'loading');
-  try {
-    await fetch('https://www.bing.com/ping?sitemap=https://atelierdeconsultanta.ro/sitemap.xml', { mode:'no-cors' });
-    if (statusEl) showStatus(statusEl, '✅ Ping Bing trimis!', 'success');
-    toast('Ping Bing trimis!');
-  } catch(e) {
-    if (statusEl) showStatus(statusEl, '⚠️ Ping trimis.', 'success');
-    toast('Ping Bing trimis!');
+  async function downloadFileContent(path) {
+    const info = await getFileInfo(path);
+    return decodeBase64Utf8(info.content);
   }
-}
 
-function copyTemplate() {
-  const text = document.getElementById('emailTemplate').value;
-  navigator.clipboard.writeText(text).then(() => toast('Template copiat!'));
-}
+  async function uploadFileContent(path, content, message) {
+    const settings = getGitHubSettings();
+    let sha = null;
 
-// ══════════════════════════════════════════════════════════════
-// HELPERS
-// ══════════════════════════════════════════════════════════════
-function showStatus(el, msg, type) {
-  el.textContent = msg;
-  el.className = 'status-msg show ' + (type === 'loading' ? 'status-loading' : type === 'success' ? 'status-success' : 'status-error');
-}
+    try {
+      const info = await getFileInfo(path);
+      sha = info.sha;
+    } catch (error) {
+      sha = null;
+    }
 
-function toast(msg, isError = false) {
-  const container = document.getElementById('toastContainer');
-  const el = document.createElement('div');
-  el.className = 'toast' + (isError ? ' error' : '');
-  el.innerHTML = `<span>${isError ? '❌' : '✅'}</span><span>${msg}</span>`;
-  container.appendChild(el);
-  setTimeout(() => { el.style.opacity='0'; el.style.transition='opacity 0.4s'; setTimeout(()=>el.remove(),400); }, 3500);
-}
+    const body = {
+      message,
+      content: encodeBase64Utf8(content),
+      branch: settings.branch
+    };
 
-function closeModal(id) {
-  document.getElementById(id).classList.remove('show');
-}
+    if (sha) body.sha = sha;
 
-// ══════════════════════════════════════════════════════════════
-// INIT
-// ══════════════════════════════════════════════════════════════
-function initPanel() {
-  // Load saved GitHub credentials
-  const savedToken = localStorage.getItem('faber_github_token');
-  const savedOwner = localStorage.getItem('faber_github_owner');
-  const savedRepo = localStorage.getItem('faber_github_repo');
-  if (savedToken) document.getElementById('githubToken').value = savedToken;
-  if (savedOwner) document.getElementById('githubOwner').value = savedOwner;
-  if (savedRepo) document.getElementById('githubRepo').value = savedRepo;
+    const url = `https://api.github.com/repos/${settings.owner}/${settings.repo}/contents/${path}`;
 
-  renderBannere();
-  renderPrograme();
-  renderDashboard();
-  renderTermene();
-}
+    const response = await fetch(url, {
+      method: "PUT",
+      headers: {
+        Authorization: `Bearer ${settings.token}`,
+        Accept: "application/vnd.github+json",
+        "Content-Type": "application/json",
+        "X-GitHub-Api-Version": "2022-11-28"
+      },
+      body: JSON.stringify(body)
+    });
 
-window.addEventListener('DOMContentLoaded', () => {
-  if (sessionStorage.getItem('fabadmin_auth') === 'true') {
-    document.getElementById('authOverlay').classList.add('hidden');
-    initPanel();
+    if (!response.ok) {
+      const errorText = await response.text();
+      throw new Error(`Commit eșuat pentru ${path}. HTTP ${response.status}: ${errorText}`);
+    }
+
+    return response.json();
   }
-});
+
+  async function uploadBinaryFile(path, dataUrl, message) {
+    const settings = getGitHubSettings();
+    let sha = null;
+
+    try {
+      const info = await getFileInfo(path);
+      sha = info.sha;
+    } catch (error) {
+      sha = null;
+    }
+
+    const base64 = dataUrl.split(",")[1];
+
+    const body = {
+      message,
+      content: base64,
+      branch: settings.branch
+    };
+
+    if (sha) body.sha = sha;
+
+    const url = `https://api.github.com/repos/${settings.owner}/${settings.repo}/contents/${path}`;
+
+    const response = await fetch(url, {
+      method: "PUT",
+      headers: {
+        Authorization: `Bearer ${settings.token}`,
+        Accept: "application/vnd.github+json",
+        "Content-Type": "application/json",
+        "X-GitHub-Api-Version": "2022-11-28"
+      },
+      body: JSON.stringify(body)
+    });
+
+    if (!response.ok) {
+      const errorText = await response.text();
+      throw new Error(`Upload eșuat pentru ${path}. HTTP ${response.status}: ${errorText}`);
+    }
+
+    return response.json();
+  }
+
+  async function testGitHubConnection() {
+    const settings = getGitHubSettings();
+    const status = qs("#settingsStatus") || qs("#connectionStatus");
+
+    if (!settings.token) {
+      showStatus(status, "Token GitHub lipsă.", "error");
+      return;
+    }
+
+    showStatus(status, "Se testează conexiunea GitHub...", "loading");
+
+    try {
+      const response = await fetch(
+        `https://api.github.com/repos/${settings.owner}/${settings.repo}`,
+        {
+          headers: {
+            Authorization: `Bearer ${settings.token}`,
+            Accept: "application/vnd.github+json",
+            "X-GitHub-Api-Version": "2022-11-28"
+          }
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}`);
+      }
+
+      qs("#connectionStatus").textContent = "GitHub conectat ✅";
+      showStatus(status, "Conexiune GitHub validă.", "success");
+      updateDashboardTokenStatus();
+    } catch (error) {
+      qs("#connectionStatus").textContent = "GitHub neconectat";
+      showStatus(status, "Conexiune eșuată: " + error.message, "error");
+    }
+  }
+
+  /* ============================================================
+     SEO EDITOR
+  ============================================================ */
+  function renderSeoSelect() {
+    const select = qs("#seoPageSelect");
+
+    if (!select.options.length) {
+      select.innerHTML = PAGE_CONFIG.map(page => {
+        return `<option value="${page.file}">${escapeHtml(page.label)} — ${page.file}</option>`;
+      }).join("");
+    }
+  }
+
+  function getMetaContent(doc, selector) {
+    const el = doc.querySelector(selector);
+    return el ? el.getAttribute("content") || "" : "";
+  }
+
+  function getLinkHref(doc, selector) {
+    const el = doc.querySelector(selector);
+    return el ? el.getAttribute("href") || "" : "";
+  }
+
+  function getFirstJsonLd(doc) {
+    const el = doc.querySelector('script[type="application/ld+json"]');
+    return el ? el.textContent.trim() : "";
+  }
+
+  async function loadSeoPage() {
+    const page = getSelectedPage("seoPageSelect");
+    const status = qs("#seoStatus");
+
+    if (!page) return;
+
+    showStatus(status, "Se încarcă pagina...", "loading");
+
+    try {
+      currentSeoHtml = await downloadFileContent(page.file);
+      currentSeoFile = page.file;
+
+      const doc = new DOMParser().parseFromString(currentSeoHtml, "text/html");
+
+      qs("#seoTitle").value = doc.querySelector("title")?.textContent || "";
+      qs("#seoCanonical").value = getLinkHref(doc, 'link[rel="canonical"]') || page.url;
+      qs("#seoDescription").value = getMetaContent(doc, 'meta[name="description"]');
+      qs("#seoKeywords").value = getMetaContent(doc, 'meta[name="keywords"]');
+      qs("#seoOgTitle").value = getMetaContent(doc, 'meta[property="og:title"]');
+      qs("#seoOgDescription").value = getMetaContent(doc, 'meta[property="og:description"]');
+      qs("#seoOgImage").value = getMetaContent(doc, 'meta[property="og:image"]');
+      qs("#seoTwitterTitle").value = getMetaContent(doc, 'meta[name="twitter:title"]');
+      qs("#seoTwitterDescription").value = getMetaContent(doc, 'meta[name="twitter:description"]');
+      qs("#seoJsonLd").value = getFirstJsonLd(doc);
+
+      updateSeoDescriptionCount();
+      showStatus(status, "SEO încărcat cu succes.", "success");
+    } catch (error) {
+      showStatus(status, error.message, "error");
+    }
+  }
+
+  function upsertTitle(html, value) {
+    if (/<title>[\s\S]*?<\/title>/i.test(html)) {
+      return html.replace(/<title>[\s\S]*?<\/title>/i, `<title>${escapeHtml(value)}</title>`);
+    }
+
+    return html.replace("</head>", `  <title>${escapeHtml(value)}</title>\n</head>`);
+  }
+
+  function upsertMeta(html, attrName, attrValue, content) {
+    const regex = new RegExp(
+      `<meta\\s+[^>]*${attrName}=["']${escapeRegex(attrValue)}["'][^>]*>`,
+      "i"
+    );
+
+    const tag = `<meta ${attrName}="${attrValue}" content="${escapeAttr(content)}" />`;
+
+    if (regex.test(html)) {
+      return html.replace(regex, tag);
+    }
+
+    return html.replace("</head>", `  ${tag}\n</head>`);
+  }
+
+  function upsertCanonical(html, href) {
+    const tag = `<link rel="canonical" href="${escapeAttr(href)}" />`;
+
+    if (/<link\s+[^>]*rel=["']canonical["'][^>]*>/i.test(html)) {
+      return html.replace(/<link\s+[^>]*rel=["']canonical["'][^>]*>/i, tag);
+    }
+
+    return html.replace("</head>", `  ${tag}\n</head>`);
+  }
+
+  function upsertFirstJsonLd(html, jsonText) {
+    if (!jsonText.trim()) return html;
+
+    let parsed;
+
+    try {
+      parsed = JSON.parse(jsonText);
+    } catch (error) {
+      throw new Error("JSON-LD invalid: " + error.message);
+    }
+
+    const prettyJson = JSON.stringify(parsed, null, 2);
+    const script = `<script type="application/ld+json">\n${prettyJson}\n  <\/script>`;
+
+    if (/<script\s+type=["']application\/ld\+json["'][^>]*>[\s\S]*?<\/script>/i.test(html)) {
+      return html.replace(
+        /<script\s+type=["']application\/ld\+json["'][^>]*>[\s\S]*?<\/script>/i,
+        script
+      );
+    }
+
+    return html.replace("</head>", `  ${script}\n</head>`);
+  }
+
+  async function saveSeoPage() {
+    const page = getSelectedPage("seoPageSelect");
+    const status = qs("#seoStatus");
+
+    if (!page) return;
+
+    if (!currentSeoHtml || currentSeoFile !== page.file) {
+      showStatus(status, "Încarcă mai întâi pagina SEO.", "error");
+      return;
+    }
+
+    showStatus(status, "Se salvează modificările SEO...", "loading");
+
+    try {
+      let html = currentSeoHtml;
+
+      const canonical = qs("#seoCanonical").value.trim() || page.url;
+      const title = qs("#seoTitle").value.trim();
+      const description = qs("#seoDescription").value.trim();
+      const keywords = qs("#seoKeywords").value.trim();
+      const ogTitle = qs("#seoOgTitle").value.trim() || title;
+      const ogDescription = qs("#seoOgDescription").value.trim() || description;
+      const ogImage = qs("#seoOgImage").value.trim() || SITE_BASE_URL + "/og-image.jpg";
+      const twitterTitle = qs("#seoTwitterTitle").value.trim() || title;
+      const twitterDescription = qs("#seoTwitterDescription").value.trim() || description;
+
+      html = upsertTitle(html, title);
+      html = upsertCanonical(html, canonical);
+      html = upsertMeta(html, "name", "description", description);
+      html = upsertMeta(html, "name", "keywords", keywords);
+      html = upsertMeta(html, "property", "og:title", ogTitle);
+      html = upsertMeta(html, "property", "og:description", ogDescription);
+      html = upsertMeta(html, "property", "og:url", canonical);
+      html = upsertMeta(html, "property", "og:image", ogImage);
+      html = upsertMeta(html, "name", "twitter:title", twitterTitle);
+      html = upsertMeta(html, "name", "twitter:description", twitterDescription);
+      html = upsertFirstJsonLd(html, qs("#seoJsonLd").value.trim());
+
+      await uploadFileContent(page.file, html, `Admin SEO: actualizare ${page.label}`);
+
+      currentSeoHtml = html;
+      showStatus(status, "SEO salvat cu succes. Publicarea poate dura 1–2 minute.", "success");
+      toast("SEO actualizat pentru " + page.label);
+    } catch (error) {
+      showStatus(status, error.message, "error");
+    }
+  }
+
+  function updateSeoDescriptionCount() {
+    const count = qs("#seoDescription").value.length;
+    qs("#seoDescriptionCount").textContent = `${count} caractere`;
+  }
+
+  qs("#seoDescription").addEventListener("input", updateSeoDescriptionCount);
+
+  /* ============================================================
+     CONTENT EDITOR
+  ============================================================ */
+  function renderContentSelect() {
+    const select = qs("#contentPageSelect");
+
+    if (!select.options.length) {
+      select.innerHTML = PAGE_CONFIG.map(page => {
+        return `<option value="${page.file}">${escapeHtml(page.label)} — ${page.file}</option>`;
+      }).join("");
+    }
+  }
+
+  function getInner(doc, selector) {
+    const el = doc.querySelector(selector);
+    return el ? el.innerHTML.trim() : "";
+  }
+
+  function getText(doc, selector) {
+    const el = doc.querySelector(selector);
+    return el ? el.textContent.trim() : "";
+  }
+
+  function getAttr(doc, selector, attr) {
+    const el = doc.querySelector(selector);
+    return el ? el.getAttribute(attr) || "" : "";
+  }
+
+  async function loadContentPage() {
+    const page = getSelectedPage("contentPageSelect");
+    const status = qs("#contentStatus");
+
+    if (!page) return;
+
+    showStatus(status, "Se încarcă textele paginii...", "loading");
+
+    try {
+      currentContentHtml = await downloadFileContent(page.file);
+      currentContentFile = page.file;
+
+      const doc = new DOMParser().parseFromString(currentContentHtml, "text/html");
+
+      qs("#contentHeroTag").value = getText(doc, ".hero-tag");
+      qs("#contentH1").value = getInner(doc, ".hero h1") || getInner(doc, "#hero h1");
+      qs("#contentHeroSub").value = getInner(doc, ".hero-sub") || getInner(doc, ".hero-subtitle");
+      qs("#contentPrimaryCta").value = getText(doc, ".btn-orange") || getText(doc, ".btn-primary");
+      qs("#contentPrimaryHref").value =
+        getAttr(doc, ".btn-orange", "href") || getAttr(doc, ".btn-primary", "href");
+      qs("#contentFooter").value = getInner(doc, "footer p");
+
+      showStatus(status, "Texte încărcate cu succes.", "success");
+    } catch (error) {
+      showStatus(status, error.message, "error");
+    }
+  }
+
+  function replaceFirstInnerHtml(html, selectorType, value) {
+    const selectors = {
+      heroTag: /(<div\s+class=["']hero-tag["'][^>]*>)([\s\S]*?)(<\/div>)/i,
+      heroH1: /(<header[\s\S]*?<h1[^>]*>)([\s\S]*?)(<\/h1>)/i,
+      heroSub: /(<p\s+class=["']hero-sub["'][^>]*>)([\s\S]*?)(<\/p>)/i,
+      heroSubtitle: /(<p\s+class=["']hero-subtitle["'][^>]*>)([\s\S]*?)(<\/p>)/i,
+      footerP: /(<footer[\s\S]*?<p[^>]*>)([\s\S]*?)(<\/p>)/i
+    };
+
+    const regex = selectors[selectorType];
+
+    if (!regex || !regex.test(html)) {
+      return html;
+    }
+
+    return html.replace(regex, `$1${value}$3`);
+  }
+
+  function replaceFirstCta(html, text, href) {
+    const ctaRegex = /(<a\s+[^>]*href=["'])([^"']*)(["'][^>]*class=["'][^"']*(?:btn-orange|btn-primary)[^"']*["'][^>]*>)([\s\S]*?)(<\/a>)/i;
+
+    if (!ctaRegex.test(html)) {
+      return html;
+    }
+
+    return html.replace(ctaRegex, `$1${escapeAttr(href)}$3${text}$5`);
+  }
+
+  async function saveContentPage() {
+    const page = getSelectedPage("contentPageSelect");
+    const status = qs("#contentStatus");
+
+    if (!page) return;
+
+    if (!currentContentHtml || currentContentFile !== page.file) {
+      showStatus(status, "Încarcă mai întâi textele paginii.", "error");
+      return;
+    }
+
+    showStatus(status, "Se salvează textele...", "loading");
+
+    try {
+      let html = currentContentHtml;
+
+      html = replaceFirstInnerHtml(html, "heroTag", qs("#contentHeroTag").value.trim());
+      html = replaceFirstInnerHtml(html, "heroH1", qs("#contentH1").value.trim());
+
+      if (/class=["']hero-sub["']/i.test(html)) {
+        html = replaceFirstInnerHtml(html, "heroSub", qs("#contentHeroSub").value.trim());
+      } else {
+        html = replaceFirstInnerHtml(html, "heroSubtitle", qs("#contentHeroSub").value.trim());
+      }
+
+      html = replaceFirstCta(
+        html,
+        qs("#contentPrimaryCta").value.trim(),
+        qs("#contentPrimaryHref").value.trim()
+      );
+
+      html = replaceFirstInnerHtml(html, "footerP", qs("#contentFooter").value.trim());
+
+      await uploadFileContent(page.file, html, `Admin conținut: actualizare ${page.label}`);
+
+      currentContentHtml = html;
+      showStatus(status, "Texte salvate cu succes.", "success");
+      toast("Texte actualizate pentru " + page.label);
+    } catch (error) {
+      showStatus(status, error.message, "error");
+    }
+  }
+
+  /* ============================================================
+     CAROUSEL BANNERS
+  ============================================================ */
+  function renderCarouselGrid() {
+    const grid = qs("#carouselGrid");
+
+    grid.innerHTML = CAROUSEL_SLIDES.map(slide => {
+      return `
+        <article class="mini-card">
+          <div class="mini-card-header">
+            <div>
+              <div class="mini-title">Slide ${slide.index + 1}: ${escapeHtml(slide.name)}</div>
+              <div class="mini-file">${escapeHtml(slide.bannerPath)}</div>
+            </div>
+            <span class="badge badge-active">CARUSEL</span>
+          </div>
+
+          <label class="upload-area" for="carouselUpload-${slide.index}">
+            <div style="font-size: 26px; margin-bottom: 6px;">🖼️</div>
+            <div style="font-size: 13px; font-weight: 750;">Alege banner pentru slide</div>
+            <div class="help-text">WebP / JPG / PNG — recomandat 1200×630 px</div>
+          </label>
+
+          <input
+            type="file"
+            id="carouselUpload-${slide.index}"
+            class="upload-input"
+            accept="image/*"
+            onchange="onCarouselBannerSelect(${slide.index}, this)"
+          />
+
+          <img id="carouselPreview-${slide.index}" class="preview-img" alt="Preview banner ${escapeAttr(slide.name)}" />
+
+          <button
+            id="carouselPublish-${slide.index}"
+            class="btn btn-primary"
+            style="display: none; width: 100%; margin-top: 12px;"
+            onclick="publishCarouselBanner(${slide.index})"
+          >
+            🚀 Publică banner
+          </button>
+
+          <div class="status-msg" id="carouselStatus-${slide.index}"></div>
+        </article>
+      `;
+    }).join("");
+  }
+
+  function onCarouselBannerSelect(index, input) {
+    const file = input.files && input.files[0];
+
+    if (!file) return;
+
+    if (!file.type.startsWith("image/")) {
+      toast("Selectează un fișier imagine valid.", true);
+      return;
+    }
+
+    if (file.size > 900 * 1024) {
+      toast("Imaginea este mare. Recomandat sub 500 KB.", true);
+    }
+
+    const reader = new FileReader();
+
+    reader.onload = event => {
+      const preview = qs("#carouselPreview-" + index);
+      const button = qs("#carouselPublish-" + index);
+
+      preview.src = event.target.result;
+      preview.classList.add("show");
+
+      button.dataset.dataUrl = event.target.result;
+      button.style.display = "inline-flex";
+    };
+
+    reader.readAsDataURL(file);
+  }
+
+  function setCarouselSlideBackground(html, index, imagePath) {
+    const publicUrl = `${SITE_BASE_URL}/${imagePath}`;
+    const articleRegex = new RegExp(
+      `<article(?=[^>]*class=["'][^"']*carousel-slide[^"']*["'])(?=[^>]*data-slide=["']${index}["'])[^>]*>`,
+      "i"
+    );
+
+    const match = html.match(articleRegex);
+
+    if (!match) {
+      throw new Error(`Nu am găsit slide-ul data-slide="${index}" în index.html.`);
+    }
+
+    let tag = match[0];
+
+    const bgValue =
+      `background-image: linear-gradient(rgba(13,31,60,0.58), rgba(13,31,60,0.58)), url('${publicUrl}'); ` +
+      "background-size: cover; background-position: center;";
+
+    if (/style=["'][^"']*["']/i.test(tag)) {
+      tag = tag.replace(/style=["']([^"']*)["']/i, (full, styleValue) => {
+        let cleanStyle = styleValue
+          .replace(/background-image\s*:[^;]+;?/gi, "")
+          .replace(/background-size\s*:[^;]+;?/gi, "")
+          .replace(/background-position\s*:[^;]+;?/gi, "")
+          .trim();
+
+        if (cleanStyle && !cleanStyle.endsWith(";")) cleanStyle += ";";
+
+        return `style="${escapeAttr(cleanStyle + " " + bgValue)}"`;
+      });
+    } else {
+      tag = tag.replace(/>$/, ` style="${escapeAttr(bgValue)}">`);
+    }
+
+    return html.replace(articleRegex, tag);
+  }
+
+  async function publishCarouselBanner(index) {
+    const slide = CAROUSEL_SLIDES.find(item => item.index === index);
+    const button = qs("#carouselPublish-" + index);
+    const status = qs("#carouselStatus-" + index);
+
+    if (!slide || !button.dataset.dataUrl) return;
+
+    showStatus(status, "Se încarcă bannerul în GitHub...", "loading");
+    button.disabled = true;
+
+    try {
+      await uploadBinaryFile(
+        slide.bannerPath,
+        button.dataset.dataUrl,
+        `Admin: banner carusel ${slide.name}`
+      );
+
+      showStatus(status, "Banner încărcat. Se actualizează index.html...", "loading");
+
+      let indexHtml = await downloadFileContent("index.html");
+      indexHtml = setCarouselSlideBackground(indexHtml, index, slide.bannerPath);
+
+      await uploadFileContent(
+        "index.html",
+        indexHtml,
+        `Admin: aplicare banner carusel ${slide.name}`
+      );
+
+      showStatus(status, "Banner publicat cu succes. Site-ul se actualizează în 1–2 minute.", "success");
+      toast("Banner publicat pentru " + slide.name);
+    } catch (error) {
+      showStatus(status, error.message, "error");
+    } finally {
+      button.disabled = false;
+    }
+  }
+  <!-- PARTEA 4 / 4: JAVASCRIPT — PROGRAME, BLOG, INDEXARE, INIT + ÎNCHIDERE HTML -->
+
+  /* ============================================================
+     PROGRAMS EDITOR
+  ============================================================ */
+  function renderProgramsGrid() {
+    const grid = qs("#programsGrid");
+
+    grid.innerHTML = PROGRAMS_DATA.map(program => {
+      const badgeClass =
+        program.status === "active"
+          ? "badge-active"
+          : program.status === "planning"
+            ? "badge-planning"
+            : "badge-soon";
+
+      return `
+        <article class="mini-card">
+          <div class="mini-card-header">
+            <div>
+              <div class="mini-title">${escapeHtml(program.name)}</div>
+              <div class="mini-file">${escapeHtml(program.file)}</div>
+            </div>
+            <span class="badge ${badgeClass}">${escapeHtml(program.badgeLabel)}</span>
+          </div>
+
+          <div class="tabs">
+            <button class="tab-btn active" onclick="switchMiniTab('${program.key}', 'info', this)">Info</button>
+            <button class="tab-btn" onclick="switchMiniTab('${program.key}', 'deadline', this)">Deadline</button>
+            <button class="tab-btn" onclick="switchMiniTab('${program.key}', 'status', this)">Status</button>
+          </div>
+
+          <div class="tab-panel active" id="program-${program.key}-info">
+            <div class="field-group">
+              <label class="field-label">Sumă maximă</label>
+              <input id="program-${program.key}-amount" class="field-input" value="${escapeAttr(program.maxAmount)}" />
+            </div>
+
+            <div class="field-group">
+              <label class="field-label">Intensitate / procent</label>
+              <input id="program-${program.key}-percentage" class="field-input" value="${escapeAttr(program.percentage)}" />
+            </div>
+          </div>
+
+          <div class="tab-panel" id="program-${program.key}-deadline">
+            <div class="field-group">
+              <label class="field-label">Termen limită</label>
+              <input id="program-${program.key}-deadline" class="field-input" type="date" value="${program.deadline}" />
+            </div>
+
+            <div class="help-text">
+              Se actualizează data textuală și data din scriptul countdown.
+            </div>
+          </div>
+
+          <div class="tab-panel" id="program-${program.key}-status">
+            <div class="field-group">
+              <label class="field-label">Status</label>
+              <select id="program-${program.key}-status" class="field-select">
+                <option value="active" ${program.status === "active" ? "selected" : ""}>ACTIV</option>
+                <option value="planning" ${program.status === "planning" ? "selected" : ""}>ÎN PREGĂTIRE</option>
+                <option value="soon" ${program.status === "soon" ? "selected" : ""}>ÎN CURÂND</option>
+                <option value="closed" ${program.status === "closed" ? "selected" : ""}>ÎNCHIS</option>
+              </select>
+            </div>
+
+            <div class="field-group">
+              <label class="field-label">Text badge</label>
+              <input id="program-${program.key}-badge" class="field-input" value="${escapeAttr(program.badgeLabel)}" />
+            </div>
+          </div>
+
+          <button class="btn btn-primary" style="width: 100%; margin-top: 12px;" onclick="saveProgram('${program.key}')">
+            💾 Salvează programul
+          </button>
+
+          <div class="status-msg" id="program-${program.key}-statusMsg"></div>
+        </article>
+      `;
+    }).join("");
+  }
+
+  function switchMiniTab(programKey, tabName, button) {
+    ["info", "deadline", "status"].forEach(name => {
+      const panel = qs(`#program-${programKey}-${name}`);
+      if (panel) panel.classList.toggle("active", name === tabName);
+    });
+
+    button.closest(".tabs").querySelectorAll(".tab-btn").forEach(tab => {
+      tab.classList.remove("active");
+    });
+
+    button.classList.add("active");
+  }
+
+  function replaceDeadlineInHtml(html, oldDeadline, newDeadline) {
+    const oldDateRo = formatDateRo(oldDeadline);
+    const newDateRo = formatDateRo(newDeadline);
+
+    let updated = html;
+
+    updated = updated.replaceAll(oldDeadline, newDeadline);
+    updated = updated.replaceAll(oldDateRo, newDateRo);
+
+    const oldYear = oldDeadline.slice(0, 4);
+    const newYear = newDeadline.slice(0, 4);
+
+    if (oldYear !== newYear) {
+      updated = updated.replaceAll(oldYear, newYear);
+    }
+
+    return updated;
+  }
+
+  async function saveProgram(key) {
+    const program = PROGRAMS_DATA.find(item => item.key === key);
+    const status = qs(`#program-${key}-statusMsg`);
+
+    if (!program) return;
+
+    const amount = qs(`#program-${key}-amount`).value.trim();
+    const percentage = qs(`#program-${key}-percentage`).value.trim();
+    const deadline = qs(`#program-${key}-deadline`).value;
+    const newStatus = qs(`#program-${key}-status`).value;
+    const badgeLabel = qs(`#program-${key}-badge`).value.trim();
+
+    showStatus(status, "Se salvează modificările în pagina programului...", "loading");
+
+    try {
+      let html = await downloadFileContent(program.file);
+
+      if (amount && amount !== program.maxAmount) {
+        html = html.replaceAll(program.maxAmount, amount);
+      }
+
+      if (percentage && percentage !== program.percentage && program.percentage !== "conform ghidului") {
+        html = html.replaceAll(program.percentage, percentage);
+      }
+
+      if (deadline && deadline !== program.deadline) {
+        html = replaceDeadlineInHtml(html, program.deadline, deadline);
+      }
+
+      await uploadFileContent(
+        program.file,
+        html,
+        `Admin program: actualizare ${program.name}`
+      );
+
+      program.maxAmount = amount || program.maxAmount;
+      program.percentage = percentage || program.percentage;
+      program.deadline = deadline || program.deadline;
+      program.status = newStatus || program.status;
+      program.badgeLabel = badgeLabel || program.badgeLabel;
+
+      showStatus(status, "Program actualizat cu succes.", "success");
+      toast("Program actualizat: " + program.name);
+
+      renderDeadlines();
+      renderDashboard();
+    } catch (error) {
+      showStatus(status, error.message, "error");
+    }
+  }
+
+  /* ============================================================
+     BLOG EDITOR
+  ============================================================ */
+  async function loadBlogPosts() {
+    const list = qs("#postsList");
+    const status = qs("#blogStatus");
+
+    list.innerHTML = "Se încarcă articolele...";
+
+    try {
+      const json = await downloadFileContent("blog.json");
+      const data = JSON.parse(json);
+
+      blogPosts = Array.isArray(data.posts) ? data.posts : [];
+
+      renderBlogPosts();
+      updateDashboardStats();
+
+      if (status) showStatus(status, "blog.json încărcat cu succes.", "success");
+    } catch (error) {
+      blogPosts = [];
+      list.innerHTML = `
+        <div class="warning-box">
+          Nu am putut încărca blog.json. Dacă fișierul nu există, poți crea primul articol și se va genera automat.
+        </div>
+      `;
+
+      if (status) showStatus(status, error.message, "error");
+    }
+  }
+
+  function renderBlogPosts() {
+    const list = qs("#postsList");
+
+    if (!blogPosts.length) {
+      list.innerHTML = `
+        <div class="info-box">
+          Nu există articole încă. Apasă „Articol nou” pentru a crea primul blogpost.
+        </div>
+      `;
+      return;
+    }
+
+    list.innerHTML = blogPosts.map((post, index) => {
+      const icon = post.icon || "📝";
+      const badge = post.published ? "Publicat" : "Draft";
+      const badgeClass = post.published ? "badge-active" : "badge-draft";
+
+      return `
+        <article class="post-item">
+          <div class="post-icon">${escapeHtml(icon)}</div>
+
+          <div class="post-info">
+            <div class="post-title">${escapeHtml(post.title || "Fără titlu")}</div>
+            <div class="post-meta">
+              ${escapeHtml(post.date || "fără dată")}
+              • ${escapeHtml(post.category || "fără categorie")}
+              • ${escapeHtml(String(post.readTime || 5))} min
+              • <span class="badge ${badgeClass}">${badge}</span>
+            </div>
+          </div>
+
+          <div class="post-actions">
+            <button class="btn btn-secondary btn-sm" onclick="editPost(${index})">✏️ Editează</button>
+            <button class="btn btn-danger btn-sm" onclick="deletePost(${index})">🗑 Șterge</button>
+          </div>
+        </article>
+      `;
+    }).join("");
+  }
+
+  function openPostModal() {
+    qs("#postModalTitle").textContent = "📝 Articol nou";
+    qs("#postEditIndex").value = "-1";
+
+    qs("#postTitle").value = "";
+    qs("#postSlug").value = "";
+    qs("#postDate").value = new Date().toISOString().slice(0, 10);
+    qs("#postCategory").value = "Fonduri Europene";
+    qs("#postReadTime").value = "5";
+    qs("#postExcerpt").value = "";
+    qs("#postIcon").value = "📝";
+    qs("#postImage").value = "";
+    qs("#postContent").value = "";
+    qs("#postAuthor").value = "FABER – Atelier de Consultanță";
+    qs("#postPublished").value = "true";
+    qs("#postModalStatus").className = "status-msg";
+
+    qs("#postModal").classList.add("show");
+  }
+
+  function editPost(index) {
+    const post = blogPosts[index];
+
+    if (!post) return;
+
+    qs("#postModalTitle").textContent = "✏️ Editează articol";
+    qs("#postEditIndex").value = String(index);
+
+    qs("#postTitle").value = post.title || "";
+    qs("#postSlug").value = post.slug || post.id || "";
+    qs("#postDate").value = post.date || "";
+    qs("#postCategory").value = post.category || "Fonduri Europene";
+    qs("#postReadTime").value = post.readTime || 5;
+    qs("#postExcerpt").value = post.excerpt || "";
+    qs("#postIcon").value = post.icon || "📝";
+    qs("#postImage").value = post.image || "";
+    qs("#postContent").value = post.content || "";
+    qs("#postAuthor").value = post.author || "FABER – Atelier de Consultanță";
+    qs("#postPublished").value = post.published ? "true" : "false";
+    qs("#postModalStatus").className = "status-msg";
+
+    qs("#postModal").classList.add("show");
+  }
+
+  function slugify(value) {
+    return String(value || "")
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .replace(/ă/g, "a")
+      .replace(/â/g, "a")
+      .replace(/î/g, "i")
+      .replace(/ș/g, "s")
+      .replace(/ţ/g, "t")
+      .replace(/ț/g, "t")
+      .replace(/[^a-z0-9]+/g, "-")
+      .replace(/^-+|-+$/g, "");
+  }
+
+  qs("#postTitle").addEventListener("input", () => {
+    const slugField = qs("#postSlug");
+
+    if (!slugField.value.trim()) {
+      slugField.value = slugify(qs("#postTitle").value);
+    }
+  });
+
+  async function savePost() {
+    const status = qs("#postModalStatus");
+    const editIndex = parseInt(qs("#postEditIndex").value, 10);
+
+    const title = qs("#postTitle").value.trim();
+    const slug = slugify(qs("#postSlug").value.trim() || title);
+    const excerpt = qs("#postExcerpt").value.trim();
+
+    if (!title) {
+      showStatus(status, "Titlul este obligatoriu.", "error");
+      return;
+    }
+
+    if (!slug) {
+      showStatus(status, "Slug-ul este obligatoriu.", "error");
+      return;
+    }
+
+    if (!excerpt) {
+      showStatus(status, "Rezumatul este obligatoriu.", "error");
+      return;
+    }
+
+    const post = {
+      id: slug,
+      slug,
+      title,
+      date: qs("#postDate").value || new Date().toISOString().slice(0, 10),
+      dateFormatted: formatDateRo(qs("#postDate").value || new Date().toISOString().slice(0, 10)),
+      excerpt,
+      category: qs("#postCategory").value,
+      readTime: parseInt(qs("#postReadTime").value, 10) || 5,
+      icon: qs("#postIcon").value.trim() || "📝",
+      image: qs("#postImage").value.trim() || null,
+      content: qs("#postContent").value.trim(),
+      author: qs("#postAuthor").value.trim() || "FABER – Atelier de Consultanță",
+      published: qs("#postPublished").value === "true"
+    };
+
+    if (editIndex >= 0) {
+      blogPosts[editIndex] = post;
+    } else {
+      blogPosts.unshift(post);
+    }
+
+    showStatus(status, "Se salvează articolul în blog.json...", "loading");
+
+    try {
+      const json = JSON.stringify({ posts: blogPosts }, null, 2);
+
+      await uploadFileContent(
+        "blog.json",
+        json,
+        `Admin blog: ${editIndex >= 0 ? "actualizare" : "articol nou"} — ${title}`
+      );
+
+      showStatus(status, "Articol salvat cu succes.", "success");
+      toast("Articol salvat: " + title);
+
+      setTimeout(() => {
+        closeModal("postModal");
+        renderBlogPosts();
+        updateDashboardStats();
+      }, 800);
+    } catch (error) {
+      showStatus(status, error.message, "error");
+    }
+  }
+
+  async function deletePost(index) {
+    const post = blogPosts[index];
+
+    if (!post) return;
+
+    const confirmed = confirm(`Ștergi articolul „${post.title}”?`);
+    if (!confirmed) return;
+
+    const removed = blogPosts.splice(index, 1)[0];
+
+    try {
+      const json = JSON.stringify({ posts: blogPosts }, null, 2);
+
+      await uploadFileContent(
+        "blog.json",
+        json,
+        `Admin blog: ștergere — ${removed.title}`
+      );
+
+      renderBlogPosts();
+      updateDashboardStats();
+      toast("Articol șters.");
+    } catch (error) {
+      blogPosts.splice(index, 0, removed);
+      toast("Eroare la ștergere: " + error.message, true);
+    }
+  }
+
+  async function patchIndexBlogRenderer() {
+    const status = qs("#blogStatus");
+
+    showStatus(status, "Se verifică index.html pentru suport icon-uri blog...", "loading");
+
+    try {
+      let html = await downloadFileContent("index.html");
+
+      if (!html.includes(".blog-card-icon")) {
+        const iconCss = `
+    .blog-card-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 76px;
+      height: 76px;
+      border-radius: 50%;
+      background: rgba(232,100,42,0.14);
+      border: 1px solid rgba(232,100,42,0.25);
+      font-size: 2.4rem;
+    }`;
+
+        html = html.replace("</style>", iconCss + "\n  </style>");
+      }
+
+      const imageBlockRegex =
+        /'<div class="blog-image" aria-hidden="true">' \+[\s\S]*?'<\/svg>' \+\s*'<\/div>' \+/;
+
+      const replacement =
+        `(p.image ? '<div class="blog-image" aria-hidden="true" style="background-image:url(' + p.image + ');background-size:cover;background-position:center;"></div>' : '<div class="blog-image" aria-hidden="true"><span class="blog-card-icon">' + (p.icon || '📝') + '</span></div>') +`;
+
+      if (imageBlockRegex.test(html)) {
+        html = html.replace(imageBlockRegex, replacement);
+      } else if (!html.includes("blog-card-icon")) {
+        throw new Error("Nu am găsit blocul blog-image din rendererul index.html.");
+      }
+
+      await uploadFileContent(
+        "index.html",
+        html,
+        "Admin blog: activare icon-uri carduri blog"
+      );
+
+      showStatus(status, "Suportul pentru icon-uri blog a fost activat în index.html.", "success");
+      toast("Icon-uri blog activate în index.html");
+    } catch (error) {
+      showStatus(status, error.message, "error");
+    }
+  }
+
+  /* ============================================================
+     DEADLINES & DASHBOARD
+  ============================================================ */
+  function renderDeadlines() {
+    const list = qs("#deadlinesList");
+    const dashboardList = qs("#dashboardDeadlines");
+
+    const sorted = [...PROGRAMS_DATA].sort((a, b) => {
+      return new Date(a.deadline) - new Date(b.deadline);
+    });
+
+    const html = sorted.map(program => {
+      const days = daysUntil(program.deadline);
+      const cls = days < 30 ? "days-urgent" : days < 60 ? "days-warn" : "days-ok";
+      const label = days < 0 ? "Expirat" : days === 0 ? "Azi" : `${days} zile`;
+
+      return `
+        <div class="deadline-row">
+          <div class="deadline-name">${escapeHtml(program.name)}</div>
+          <div class="deadline-date">${formatDateRo(program.deadline)}</div>
+          <div class="deadline-days ${cls}">${label}</div>
+        </div>
+      `;
+    }).join("");
+
+    if (list) list.innerHTML = html;
+    if (dashboardList) dashboardList.innerHTML = html;
+  }
+
+  function updateDashboardStats() {
+    qs("#statPrograms").textContent = PAGE_CONFIG.length;
+    qs("#statBlogPosts").textContent = blogPosts.length || "0";
+    qs("#statCarousel").textContent = CAROUSEL_SLIDES.length;
+    updateDashboardTokenStatus();
+  }
+
+  function updateDashboardTokenStatus() {
+    const token = localStorage.getItem("faber_github_token");
+    qs("#statToken").textContent = token ? "OK" : "—";
+  }
+
+  function renderDashboard() {
+    renderDeadlines();
+    updateDashboardStats();
+  }
+
+  /* ============================================================
+     INDEXARE
+  ============================================================ */
+  async function pingGoogle() {
+    const status = qs("#indexingStatus") || qs("#settingsStatus");
+
+    if (status) {
+      showStatus(status, "Se trimite ping către Google...", "loading");
+    }
+
+    try {
+      await fetch(
+        "https://www.google.com/ping?sitemap=https://atelierdeconsultanta.ro/sitemap.xml",
+        { mode: "no-cors" }
+      );
+
+      if (status) {
+        showStatus(status, "Ping Google trimis pentru sitemap.", "success");
+      }
+
+      toast("Ping Google trimis.");
+    } catch (error) {
+      if (status) {
+        showStatus(status, "Ping Google inițiat. Verifică Search Console.", "success");
+      }
+
+      toast("Ping Google inițiat.");
+    }
+  }
+
+  async function pingBing() {
+    const status = qs("#indexingStatus") || qs("#settingsStatus");
+
+    if (status) {
+      showStatus(status, "Se trimite ping către Bing...", "loading");
+    }
+
+    try {
+      await fetch(
+        "https://www.bing.com/ping?sitemap=https://atelierdeconsultanta.ro/sitemap.xml",
+        { mode: "no-cors" }
+      );
+
+      if (status) {
+        showStatus(status, "Ping Bing trimis pentru sitemap.", "success");
+      }
+
+      toast("Ping Bing trimis.");
+    } catch (error) {
+      if (status) {
+        showStatus(status, "Ping Bing inițiat.", "success");
+      }
+
+      toast("Ping Bing inițiat.");
+    }
+  }
+
+  /* ============================================================
+     INIT
+  ============================================================ */
+  function hydratePageSelects() {
+    renderSeoSelect();
+    renderContentSelect();
+  }
+
+  function hydrateGitHubSettings() {
+    const owner = localStorage.getItem("faber_github_owner");
+    const repo = localStorage.getItem("faber_github_repo");
+    const branch = localStorage.getItem("faber_github_branch");
+    const token = localStorage.getItem("faber_github_token");
+    const adminEmail = localStorage.getItem("faber_admin_email");
+
+    if (owner) qs("#githubOwner").value = owner;
+    if (repo) qs("#githubRepo").value = repo;
+    if (branch) qs("#githubBranch").value = branch;
+    if (token) qs("#githubToken").value = token;
+    if (adminEmail) qs("#newAdminEmail").value = adminEmail;
+  }
+
+  function initPanel() {
+    hydrateGitHubSettings();
+    hydratePageSelects();
+    renderDashboard();
+    renderCarouselGrid();
+    renderProgramsGrid();
+    renderDeadlines();
+    updateDashboardStats();
+
+    if (localStorage.getItem("faber_github_token")) {
+      qs("#connectionStatus").textContent = "Token salvat local";
+    } else {
+      qs("#connectionStatus").textContent = "Configurează GitHub";
+    }
+  }
+
+  window.addEventListener("DOMContentLoaded", () => {
+    hydrateGitHubSettings();
+
+    if (sessionStorage.getItem("faber_admin_auth") === "true") {
+      qs("#authOverlay").classList.add("hidden");
+      initPanel();
+    }
+  });
+
+  document.addEventListener("keydown", event => {
+    if (event.key === "Escape") {
+      qsa(".modal-overlay").forEach(modal => modal.classList.remove("show"));
+    }
+  });
 </script>
 </body>
 </html>
