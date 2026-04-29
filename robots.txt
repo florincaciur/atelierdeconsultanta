@@ -55,10 +55,6 @@ Allow: /
 User-agent: DeepSeek
 Allow: /
 
-# Panoul de administrare — restricționat pentru toți
-User-agent: *
-Disallow: /admin/
-
 # Sitemap
 Sitemap: https://atelierdeconsultanta.ro/sitemap.xml
 

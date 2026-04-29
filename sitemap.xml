@@ -14,9 +14,17 @@
   <!-- ✦ Blog ✦ -->
   <url>
     <loc>https://atelierdeconsultanta.ro/blog.html</loc>
-    <lastmod>2026-04-19</lastmod>
+    <lastmod>2026-04-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+
+  <!-- ✦ Articole blog ✦ -->
+  <url>
+    <loc>https://atelierdeconsultanta.ro/blog-afir-fotovoltaice-ferme-2026.html</loc>
+    <lastmod>2026-04-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <!-- ✦ Programe de finanțare ✦ -->
