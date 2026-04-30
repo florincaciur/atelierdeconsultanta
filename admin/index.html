@@ -860,7 +860,9 @@
       <div class="auth-sub">Panou de Administrare</div>
 
       <div class="auth-note">
-        Panoul folosește GitHub API pentru publicare. Token-ul se salvează doar local în browser.
+        Credențialele sunt salvate <strong>doar local în browserul tău</strong>.<br/>
+        Prima autentificare folosește valorile implicite dacă nu ai setat altele.<br/>
+        Email implicit: <code style="font-size:11px">atelier.consultanta@gmail.com</code>
       </div>
 
       <div class="field-group">
@@ -891,8 +893,17 @@
         Accesează panoul →
       </button>
 
-      <p class="help-text" style="margin-top: 14px; text-align: center;">
-        Prima autentificare folosește parola salvată în browser. O poți schimba din Setări.
+      <div id="resetHint" style="display:none; margin-top:14px; padding:12px; background:#fef2f2; border:1px solid #fecaca; border-radius:8px; font-size:12px; color:#991b1b;">
+        <strong>Datele locale par corupte sau schimbate.</strong><br/>
+        Dacă ai modificat credențialele în fișierul HTML dar localStorage are valori vechi, acestea au prioritate.<br/>
+        <button
+          onclick="resetLocalAuth()"
+          style="margin-top:8px; padding:6px 12px; background:#dc2626; color:white; border:none; border-radius:6px; cursor:pointer; font-size:12px; font-weight:700;"
+        >🔄 Resetează datele locale de autentificare</button>
+      </div>
+
+      <p class="help-text" style="margin-top: 12px; text-align: center; font-size:11px; color:#6b7280;">
+        Schimbă credențialele oricând din Setări → Credențiale Admin.
       </p>
     </div>
   </div>
@@ -1228,6 +1239,15 @@
               <button class="btn btn-secondary" onclick="patchIndexBlogRenderer()">🧩 Activează icon-uri în index.html</button>
             </div>
 
+            <div class="field-group" style="max-width:260px;margin-bottom:18px;">
+              <label class="field-label" for="postStatusFilter">Filtrează după status</label>
+              <select id="postStatusFilter" class="field-select" onchange="renderBlogPosts()">
+                <option value="all">Toate postările</option>
+                <option value="published">Publicate</option>
+                <option value="draft">Drafturi</option>
+              </select>
+            </div>
+
             <div class="warning-box">
               Pentru afișarea icon-urilor în homepage, apasă o singură dată pe
               <strong>„Activează icon-uri în index.html”</strong>. După aceea, câmpul <strong>icon</strong> din blog.json va fi folosit automat.
@@ -1366,6 +1386,25 @@
         </div>
       </div>
 
+      <div class="grid-2">
+        <div class="field-group">
+          <label class="field-label" for="postMetaTitle">Meta title *</label>
+          <input id="postMetaTitle" class="field-input" type="text" maxlength="70" />
+          <div class="help-text" id="postMetaTitleCount">0 caractere</div>
+        </div>
+
+        <div class="field-group">
+          <label class="field-label" for="postCanonicalUrl">Canonical URL</label>
+          <input id="postCanonicalUrl" class="field-input" type="url" placeholder="https://atelierdeconsultanta.ro/slug.html" />
+        </div>
+      </div>
+
+      <div class="field-group">
+        <label class="field-label" for="postMetaDescription">Meta description *</label>
+        <textarea id="postMetaDescription" class="field-textarea" rows="2" maxlength="180"></textarea>
+        <div class="help-text" id="postMetaDescriptionCount">0 caractere</div>
+      </div>
+
       <div class="grid-3">
         <div class="field-group">
           <label class="field-label" for="postDate">Data publicării</label>
@@ -1399,20 +1438,52 @@
 
       <div class="grid-2">
         <div class="field-group">
+          <label class="field-label" for="postPrimaryKeyword">Keyword principal *</label>
+          <input id="postPrimaryKeyword" class="field-input" type="text" />
+        </div>
+
+        <div class="field-group">
+          <label class="field-label" for="postSecondaryKeywords">Keyworduri secundare</label>
+          <input id="postSecondaryKeywords" class="field-input" type="text" placeholder="separate prin virgulă" />
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="field-group">
           <label class="field-label" for="postIcon">Icon blog card</label>
           <input id="postIcon" class="field-input" type="text" placeholder="Ex: 🌾, 💻, 🚀, 🏗️" />
           <div class="help-text">Se afișează pe card dacă nu există imagine.</div>
         </div>
 
         <div class="field-group">
-          <label class="field-label" for="postImage">URL imagine</label>
-          <input id="postImage" class="field-input" type="url" placeholder="https://..." />
+          <label class="field-label" for="postBannerFile">Banner articol</label>
+          <input id="postBannerFile" class="field-input" type="file" accept="image/webp,image/jpeg,image/png" />
+          <input id="postImage" class="field-input" type="text" placeholder="/assets/blog/banner.webp" style="margin-top:8px;" />
+          <button class="btn btn-secondary btn-sm" type="button" onclick="removePostBanner()" style="margin-top:8px;">Elimină banner</button>
         </div>
+      </div>
+
+      <div class="field-group">
+        <label class="field-label" for="postBannerAlt">Alt text banner</label>
+        <input id="postBannerAlt" class="field-input" type="text" />
+        <div class="help-text">Obligatoriu dacă articolul are banner.</div>
       </div>
 
       <div class="field-group">
         <label class="field-label" for="postContent">Conținut complet HTML</label>
         <textarea id="postContent" class="field-textarea" rows="12"></textarea>
+      </div>
+
+      <div class="grid-2">
+        <div class="field-group">
+          <label class="field-label" for="postInternalLinks">Linkuri interne</label>
+          <textarea id="postInternalLinks" class="field-textarea" rows="4" placeholder="/dr14.html&#10;/contact/"></textarea>
+        </div>
+
+        <div class="field-group">
+          <label class="field-label" for="postFaq">FAQ articol</label>
+          <textarea id="postFaq" class="field-textarea" rows="4" placeholder="Întrebare? | Răspuns"></textarea>
+        </div>
       </div>
 
       <div class="grid-2">
@@ -1424,8 +1495,8 @@
         <div class="field-group">
           <label class="field-label" for="postPublished">Status</label>
           <select id="postPublished" class="field-select">
-            <option value="true">✅ Publicat</option>
-            <option value="false">📝 Draft</option>
+            <option value="draft">Draft</option>
+            <option value="published">Publicat</option>
           </select>
         </div>
       </div>
@@ -1434,7 +1505,9 @@
 
       <div class="modal-footer">
         <button class="btn btn-secondary" onclick="closeModal('postModal')">Anulează</button>
-        <button class="btn btn-primary" onclick="savePost()">💾 Salvează articolul</button>
+        <button class="btn btn-secondary" onclick="previewPost()">Preview</button>
+        <button class="btn btn-secondary" onclick="savePost('draft')">Salvează draft</button>
+        <button class="btn btn-primary" onclick="savePost('published')">Publică</button>
       </div>
     </div>
   </div>
@@ -1444,7 +1517,12 @@
      CONFIG & STATE
   ============================================================ */
   const DEFAULT_ADMIN_EMAIL = "atelier.consultanta@gmail.com";
-  const DEFAULT_ADMIN_PASSWORD = "Bogdan-Poli-1945";
+  const DEFAULT_ADMIN_PASSWORD = "SchimbaParola2026!";
+  const AUTH_KEYS = {
+    email: "faber_admin_email",
+    password: "faber_admin_password",
+    session: "faber_admin_auth"
+  };
 
   const SITE_BASE_URL = "https://atelierdeconsultanta.ro";
 
@@ -1722,31 +1800,92 @@
   /* ============================================================
      AUTH LOCAL
   ============================================================ */
+  let _loginFailCount = 0;
+
+  function getStoredCredentials() {
+    const storedEmail = localStorage.getItem(AUTH_KEYS.email);
+    const storedPassword = localStorage.getItem(AUTH_KEYS.password);
+
+    if ((storedEmail && !storedPassword) || (!storedEmail && storedPassword)) {
+      return { corrupted: true, email: "", password: "" };
+    }
+
+    return {
+      corrupted: false,
+      email: (storedEmail || DEFAULT_ADMIN_EMAIL).toLowerCase(),
+      password: storedPassword || DEFAULT_ADMIN_PASSWORD
+    };
+  }
+
   function verifyLogin() {
-    const email = qs("#loginEmail").value.trim().toLowerCase();
+    const email    = qs("#loginEmail").value.trim().toLowerCase();
     const password = qs("#loginPassword").value;
-    const status = qs("#authStatus");
+    const status   = qs("#authStatus");
 
-    const savedEmail = (
-      localStorage.getItem("faber_admin_email") || DEFAULT_ADMIN_EMAIL
-    ).toLowerCase();
+    if (!email || !password) {
+      showStatus(status, "Completează emailul și parola.", "error");
+      return;
+    }
 
-    const savedPassword =
-      localStorage.getItem("faber_admin_password") || DEFAULT_ADMIN_PASSWORD;
+    const credentials = getStoredCredentials();
 
-    if (email === savedEmail && password === savedPassword) {
-      sessionStorage.setItem("faber_admin_auth", "true");
+    if (credentials.corrupted) {
+      sessionStorage.removeItem(AUTH_KEYS.session);
+      qs("#resetHint").style.display = "block";
+      showStatus(status, "Datele locale par corupte. Resetează datele locale și configurează din nou accesul.", "error");
+      return;
+    }
+
+    if (email === credentials.email && password === credentials.password) {
+      _loginFailCount = 0;
+      sessionStorage.setItem(AUTH_KEYS.session, "true");
       qs("#authOverlay").classList.add("hidden");
       initPanel();
       return;
     }
 
-    showStatus(status, "Email sau parolă incorectă.", "error");
+    _loginFailCount++;
     qs("#loginPassword").value = "";
+
+    if (_loginFailCount >= 2) {
+      const usingStored = !!localStorage.getItem(AUTH_KEYS.email) || !!localStorage.getItem(AUTH_KEYS.password);
+      const hint = usingStored
+        ? "Email sau parolă incorectă. Dacă datele locale par corupte, resetează datele locale și configurează din nou accesul."
+        : "Email sau parolă incorectă.";
+      showStatus(status, hint, "error");
+      qs("#resetHint").style.display = "block";
+    } else {
+      showStatus(status, "Email sau parolă incorectă.", "error");
+    }
+  }
+
+  function resetLocalAuth() {
+    if (!confirm(
+      "Ești sigur că vrei să ștergi credențialele locale?\n\n" +
+      "După reset va trebui să te autentifici cu credențialele implicite din fișier:\n" +
+      "Email: " + DEFAULT_ADMIN_EMAIL + "\n" +
+      "Parolă: (cea din DEFAULT_ADMIN_PASSWORD)"
+    )) return;
+
+    localStorage.removeItem(AUTH_KEYS.email);
+    localStorage.removeItem(AUTH_KEYS.password);
+    sessionStorage.removeItem(AUTH_KEYS.session);
+
+    _loginFailCount = 0;
+    qs("#resetHint").style.display = "none";
+    qs("#loginEmail").value = "";
+    qs("#loginPassword").value = "";
+    qs("#authStatus").textContent = "";
+    qs("#authStatus").className = "status-msg";
+
+    showStatus(qs("#authStatus"),
+      "Datele locale au fost șterse. Autentifică-te acum cu credențialele implicite.",
+      "success"
+    );
   }
 
   function logout() {
-    sessionStorage.removeItem("faber_admin_auth");
+    sessionStorage.removeItem(AUTH_KEYS.session);
     location.reload();
   }
 
@@ -1758,7 +1897,7 @@
     const status = qs("#credentialsStatus");
 
     const savedPassword =
-      localStorage.getItem("faber_admin_password") || DEFAULT_ADMIN_PASSWORD;
+      getStoredCredentials().password;
 
     if (currentPassword !== savedPassword) {
       showStatus(status, "Parola curentă este incorectă.", "error");
@@ -1775,8 +1914,8 @@
       return;
     }
 
-    if (newEmail) localStorage.setItem("faber_admin_email", newEmail);
-    if (newPassword) localStorage.setItem("faber_admin_password", newPassword);
+    if (newEmail) localStorage.setItem(AUTH_KEYS.email, newEmail);
+    if (newPassword) localStorage.setItem(AUTH_KEYS.password, newPassword);
 
     ["newAdminEmail", "currentAdminPassword", "newAdminPassword", "confirmAdminPassword"].forEach(id => {
       document.getElementById(id).value = "";
@@ -2469,7 +2608,7 @@
   function clearBannerImage(id) {
     const banner = carouselBanners.find(b => b.id === id);
     if (!banner) return;
-    if (!confirm("Ștergi imaginea bannerului „" + (banner.title || id).replace("\n", " ") + ""?\nBanner-ul va fi afișat fără imagine de fundal.")) return;
+    if (!confirm("Ștergi imaginea bannerului „" + (banner.title || id).replace("\n", " ") + "”?\nBanner-ul va fi afișat fără imagine de fundal.")) return;
     banner.image = "";
     const preview = qs("#bannerPreview-" + id);
     if (preview) { preview.src = ""; preview.style.display = "none"; }
@@ -2502,7 +2641,7 @@
   function removeBanner(id) {
     const banner = carouselBanners.find(b => b.id === id);
     if (!banner) return;
-    if (!confirm("Ștergi definitiv bannerul „" + (banner.title || id).replace("\n", " ") + ""?\nAcțiunea nu poate fi anulată decât prin Export/Import JSON.")) return;
+    if (!confirm("Ștergi definitiv bannerul „" + (banner.title || id).replace("\n", " ") + "”?\nAcțiunea nu poate fi anulată decât prin Export/Import JSON.")) return;
     carouselBanners = carouselBanners.filter(b => b.id !== id);
     renderCarouselGrid();
     toast("Banner șters. Publică JSON pentru a aplica pe site.");
@@ -2531,7 +2670,7 @@
       uploadBinaryFile(imagePath, event.target.result, "Admin: banner imagine " + id)
         .then(() => {
           if (banner) banner.image = imagePath;
-          showStatus(statusEl, "Imagine încărcată. Apasă „Publică banners.json" pentru a activa.", "success");
+          showStatus(statusEl, "Imagine încărcată. Apasă Publică banners.json pentru a activa.", "success");
           toast("Imagine încărcată pentru " + id);
         })
         .catch(err => {
@@ -2733,6 +2872,8 @@
   /* ============================================================
      BLOG EDITOR
   ============================================================ */
+  let pendingPostBanner = null;
+
   async function loadBlogPosts() {
     const list = qs("#postsList");
     const status = qs("#blogStatus");
@@ -2743,7 +2884,7 @@
       const json = await downloadFileContent("blog.json");
       const data = JSON.parse(json);
 
-      blogPosts = Array.isArray(data.posts) ? data.posts : [];
+      blogPosts = Array.isArray(data.posts) ? data.posts.map(normalizePost) : [];
 
       renderBlogPosts();
       updateDashboardStats();
@@ -2763,20 +2904,23 @@
 
   function renderBlogPosts() {
     const list = qs("#postsList");
+    const filter = qs("#postStatusFilter")?.value || "all";
+    const posts = blogPosts.filter(post => filter === "all" || post.status === filter);
 
-    if (!blogPosts.length) {
+    if (!posts.length) {
       list.innerHTML = `
         <div class="info-box">
-          Nu există articole încă. Apasă „Articol nou” pentru a crea primul blogpost.
+          Nu există articole pentru filtrul selectat.
         </div>
       `;
       return;
     }
 
-    list.innerHTML = blogPosts.map((post, index) => {
+    list.innerHTML = posts.map((post) => {
+      const index = blogPosts.findIndex(item => item.id === post.id);
       const icon = post.icon || "📝";
-      const badge = post.published ? "Publicat" : "Draft";
-      const badgeClass = post.published ? "badge-active" : "badge-draft";
+      const badge = post.status === "published" ? "Publicat" : "Draft";
+      const badgeClass = post.status === "published" ? "badge-active" : "badge-draft";
 
       return `
         <article class="post-item">
@@ -2794,6 +2938,7 @@
 
           <div class="post-actions">
             <button class="btn btn-secondary btn-sm" onclick="editPost(${index})">✏️ Editează</button>
+            <button class="btn btn-secondary btn-sm" onclick="previewExistingPost(${index})">Preview</button>
             <button class="btn btn-danger btn-sm" onclick="deletePost(${index})">🗑 Șterge</button>
           </div>
         </article>
@@ -2807,16 +2952,27 @@
 
     qs("#postTitle").value = "";
     qs("#postSlug").value = "";
+    qs("#postMetaTitle").value = "";
+    qs("#postMetaDescription").value = "";
+    qs("#postCanonicalUrl").value = "";
     qs("#postDate").value = new Date().toISOString().slice(0, 10);
     qs("#postCategory").value = "Fonduri Europene";
     qs("#postReadTime").value = "5";
     qs("#postExcerpt").value = "";
+    qs("#postPrimaryKeyword").value = "";
+    qs("#postSecondaryKeywords").value = "";
     qs("#postIcon").value = "📝";
     qs("#postImage").value = "";
+    qs("#postBannerAlt").value = "";
+    qs("#postBannerFile").value = "";
     qs("#postContent").value = "";
+    qs("#postInternalLinks").value = "";
+    qs("#postFaq").value = "";
     qs("#postAuthor").value = "FABER – Atelier de Consultanță";
-    qs("#postPublished").value = "true";
+    qs("#postPublished").value = "draft";
     qs("#postModalStatus").className = "status-msg";
+    pendingPostBanner = null;
+    updatePostSeoCounters();
 
     qs("#postModal").classList.add("show");
   }
@@ -2831,16 +2987,27 @@
 
     qs("#postTitle").value = post.title || "";
     qs("#postSlug").value = post.slug || post.id || "";
+    qs("#postMetaTitle").value = post.metaTitle || "";
+    qs("#postMetaDescription").value = post.metaDescription || "";
+    qs("#postCanonicalUrl").value = post.canonicalUrl || "";
     qs("#postDate").value = post.date || "";
     qs("#postCategory").value = post.category || "Fonduri Europene";
     qs("#postReadTime").value = post.readTime || 5;
     qs("#postExcerpt").value = post.excerpt || "";
+    qs("#postPrimaryKeyword").value = post.primaryKeyword || "";
+    qs("#postSecondaryKeywords").value = (post.secondaryKeywords || []).join(", ");
     qs("#postIcon").value = post.icon || "📝";
-    qs("#postImage").value = post.image || "";
+    qs("#postImage").value = post.bannerImage || post.image || "";
+    qs("#postBannerAlt").value = post.bannerAlt || "";
+    qs("#postBannerFile").value = "";
     qs("#postContent").value = post.content || "";
+    qs("#postInternalLinks").value = (post.internalLinks || []).join("\n");
+    qs("#postFaq").value = (post.faq || []).map(item => `${item.question || ""} | ${item.answer || ""}`).join("\n");
     qs("#postAuthor").value = post.author || "FABER – Atelier de Consultanță";
-    qs("#postPublished").value = post.published ? "true" : "false";
+    qs("#postPublished").value = post.status || (post.published ? "published" : "draft");
     qs("#postModalStatus").className = "status-msg";
+    pendingPostBanner = null;
+    updatePostSeoCounters();
 
     qs("#postModal").classList.add("show");
   }
@@ -2860,72 +3027,314 @@
       .replace(/^-+|-+$/g, "");
   }
 
+  function normalizePost(post) {
+    const status = post.status || (post.published === false ? "draft" : "published");
+    const slug = slugify(post.slug || post.id || post.title || "");
+    return {
+      id: post.id || slug,
+      title: post.title || "",
+      slug,
+      metaTitle: post.metaTitle || post.seo?.metaTitle || post.title || "",
+      metaDescription: post.metaDescription || post.seo?.metaDescription || post.excerpt || "",
+      excerpt: post.excerpt || "",
+      content: post.content || "",
+      status,
+      published: status === "published",
+      primaryKeyword: post.primaryKeyword || "",
+      secondaryKeywords: Array.isArray(post.secondaryKeywords) ? post.secondaryKeywords : String(post.secondaryKeywords || "").split(",").map(s => s.trim()).filter(Boolean),
+      bannerImage: post.bannerImage || post.image || "",
+      bannerAlt: post.bannerAlt || "",
+      author: post.author || "FABER – Atelier de Consultanță",
+      createdAt: post.createdAt || post.date || new Date().toISOString().slice(0, 10),
+      updatedAt: post.updatedAt || new Date().toISOString().slice(0, 10),
+      publishedAt: post.publishedAt || (status === "published" ? (post.date || new Date().toISOString().slice(0, 10)) : ""),
+      canonicalUrl: post.canonicalUrl || `${SITE_BASE_URL}/${slug}.html`,
+      internalLinks: Array.isArray(post.internalLinks) ? post.internalLinks : [],
+      faq: Array.isArray(post.faq) ? post.faq : [],
+      date: post.date || post.publishedAt || new Date().toISOString().slice(0, 10),
+      dateFormatted: post.dateFormatted || formatDateRo(post.date || new Date().toISOString().slice(0, 10)),
+      category: post.category || "Fonduri Europene",
+      readTime: parseInt(post.readTime, 10) || estimateReadTime(post.content || post.excerpt || ""),
+      icon: post.icon || "📝"
+    };
+  }
+
+  function estimateReadTime(html) {
+    const words = String(html || "").replace(/<[^>]+>/g, " ").trim().split(/\s+/).filter(Boolean).length;
+    return Math.max(1, Math.ceil(words / 220));
+  }
+
+  function parseLines(value) {
+    return String(value || "").split(/\n|,/).map(item => item.trim()).filter(Boolean);
+  }
+
+  function parseFaq(value) {
+    return String(value || "")
+      .split("\n")
+      .map(line => line.trim())
+      .filter(Boolean)
+      .map(line => {
+        const parts = line.split("|");
+        return { question: (parts[0] || "").trim(), answer: parts.slice(1).join("|").trim() };
+      })
+      .filter(item => item.question && item.answer);
+  }
+
+  function updatePostSeoCounters() {
+    const metaTitle = qs("#postMetaTitle");
+    const metaDescription = qs("#postMetaDescription");
+    if (metaTitle && qs("#postMetaTitleCount")) qs("#postMetaTitleCount").textContent = `${metaTitle.value.length} caractere`;
+    if (metaDescription && qs("#postMetaDescriptionCount")) qs("#postMetaDescriptionCount").textContent = `${metaDescription.value.length} caractere`;
+  }
+
   qs("#postTitle").addEventListener("input", () => {
     const slugField = qs("#postSlug");
 
     if (!slugField.value.trim()) {
       slugField.value = slugify(qs("#postTitle").value);
     }
+    if (!qs("#postMetaTitle").value.trim()) {
+      qs("#postMetaTitle").value = qs("#postTitle").value.trim();
+      updatePostSeoCounters();
+    }
   });
 
-  async function savePost() {
-    const status = qs("#postModalStatus");
-    const editIndex = parseInt(qs("#postEditIndex").value, 10);
+  qs("#postMetaTitle").addEventListener("input", updatePostSeoCounters);
+  qs("#postMetaDescription").addEventListener("input", updatePostSeoCounters);
+  qs("#postBannerFile").addEventListener("change", event => {
+    const file = event.target.files && event.target.files[0];
+    pendingPostBanner = file || null;
+    if (file && !qs("#postBannerAlt").value.trim()) {
+      qs("#postBannerAlt").value = qs("#postTitle").value.trim() || file.name.replace(/\.[^.]+$/, "");
+    }
+  });
 
+  function buildPostFromForm(forcedStatus) {
+    const editIndex = parseInt(qs("#postEditIndex").value, 10);
+    const previous = editIndex >= 0 ? normalizePost(blogPosts[editIndex]) : null;
     const title = qs("#postTitle").value.trim();
     const slug = slugify(qs("#postSlug").value.trim() || title);
-    const excerpt = qs("#postExcerpt").value.trim();
+    const date = qs("#postDate").value || new Date().toISOString().slice(0, 10);
+    const status = forcedStatus || qs("#postPublished").value || "draft";
+    const now = new Date().toISOString().slice(0, 10);
 
-    if (!title) {
-      showStatus(status, "Titlul este obligatoriu.", "error");
-      return;
-    }
-
-    if (!slug) {
-      showStatus(status, "Slug-ul este obligatoriu.", "error");
-      return;
-    }
-
-    if (!excerpt) {
-      showStatus(status, "Rezumatul este obligatoriu.", "error");
-      return;
-    }
-
-    const post = {
-      id: slug,
+    return normalizePost({
+      ...(previous || {}),
+      id: previous?.id || slug,
       slug,
       title,
-      date: qs("#postDate").value || new Date().toISOString().slice(0, 10),
-      dateFormatted: formatDateRo(qs("#postDate").value || new Date().toISOString().slice(0, 10)),
-      excerpt,
-      category: qs("#postCategory").value,
-      readTime: parseInt(qs("#postReadTime").value, 10) || 5,
-      icon: qs("#postIcon").value.trim() || "📝",
-      image: qs("#postImage").value.trim() || null,
+      metaTitle: qs("#postMetaTitle").value.trim() || title,
+      metaDescription: qs("#postMetaDescription").value.trim(),
+      excerpt: qs("#postExcerpt").value.trim(),
       content: qs("#postContent").value.trim(),
+      status,
+      published: status === "published",
+      primaryKeyword: qs("#postPrimaryKeyword").value.trim(),
+      secondaryKeywords: qs("#postSecondaryKeywords").value.split(",").map(s => s.trim()).filter(Boolean),
+      bannerImage: qs("#postImage").value.trim(),
+      bannerAlt: qs("#postBannerAlt").value.trim(),
       author: qs("#postAuthor").value.trim() || "FABER – Atelier de Consultanță",
-      published: qs("#postPublished").value === "true"
-    };
+      createdAt: previous?.createdAt || now,
+      updatedAt: now,
+      publishedAt: status === "published" ? (previous?.publishedAt || now) : "",
+      canonicalUrl: qs("#postCanonicalUrl").value.trim() || `${SITE_BASE_URL}/${slug}.html`,
+      internalLinks: parseLines(qs("#postInternalLinks").value),
+      faq: parseFaq(qs("#postFaq").value),
+      date,
+      dateFormatted: formatDateRo(date),
+      category: qs("#postCategory").value,
+      readTime: parseInt(qs("#postReadTime").value, 10) || estimateReadTime(qs("#postContent").value),
+      icon: qs("#postIcon").value.trim() || "📝"
+    });
+  }
 
-    if (editIndex >= 0) {
-      blogPosts[editIndex] = post;
-    } else {
-      blogPosts.unshift(post);
+  function validatePost(post, editIndex, isPublishing) {
+    if (!post.title) return "Titlul este obligatoriu.";
+    if (!post.slug) return "Slug-ul este obligatoriu.";
+    if (blogPosts.some((item, index) => index !== editIndex && slugify(item.slug || item.id) === post.slug)) {
+      return "Slug-ul există deja. Alege un slug unic.";
+    }
+    if (isPublishing && !post.metaTitle) return "Meta title este obligatoriu.";
+    if (post.metaTitle && post.metaTitle.length > 60) return "Meta title trebuie scurtat sub 60 de caractere.";
+    if (isPublishing && !post.metaDescription) return "Meta description este obligatorie.";
+    if (isPublishing && (post.metaDescription.length < 120 || post.metaDescription.length > 170)) {
+      return "Meta description trebuie să aibă aproximativ 140–160 de caractere.";
+    }
+    if (!post.excerpt) return "Rezumatul este obligatoriu.";
+    if (isPublishing && !post.primaryKeyword) return "Keywordul principal este obligatoriu.";
+    if ((post.bannerImage || pendingPostBanner) && !post.bannerAlt) return "Alt text este obligatoriu când există banner.";
+    if (isPublishing && !post.content) return "Conținutul este obligatoriu pentru publicare.";
+    return "";
+  }
+
+  function sanitizeFileName(name) {
+    const clean = String(name || "banner")
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase()
+      .replace(/[^a-z0-9.]+/g, "-")
+      .replace(/-+/g, "-")
+      .replace(/^-+|-+$/g, "");
+    return clean || "banner.webp";
+  }
+
+  function readFileAsDataUrl(file) {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onload = () => resolve(reader.result);
+      reader.onerror = () => reject(reader.error);
+      reader.readAsDataURL(file);
+    });
+  }
+
+  async function uploadPendingPostBanner(post) {
+    if (!pendingPostBanner) return post;
+    const ext = (pendingPostBanner.name.split(".").pop() || "webp").toLowerCase();
+    const safeName = `${post.slug}-${sanitizeFileName(pendingPostBanner.name.replace(/\.[^.]+$/, ""))}.${ext}`;
+    const imagePath = `assets/blog/${safeName}`;
+    const dataUrl = await readFileAsDataUrl(pendingPostBanner);
+    await uploadBinaryFile(imagePath, dataUrl, `Admin blog: banner ${post.title}`);
+    return { ...post, bannerImage: `/${imagePath}` };
+  }
+
+  function removePostBanner() {
+    qs("#postImage").value = "";
+    qs("#postBannerAlt").value = "";
+    qs("#postBannerFile").value = "";
+    pendingPostBanner = null;
+    showStatus(qs("#postModalStatus"), "Bannerul a fost eliminat din articol. Fișierul vechi nu va mai fi referențiat.", "success");
+  }
+
+  function faqSchema(post) {
+    if (!post.faq?.length) return null;
+    return {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": post.faq.map(item => ({
+        "@type": "Question",
+        "name": item.question,
+        "acceptedAnswer": { "@type": "Answer", "text": item.answer }
+      }))
+    };
+  }
+
+  function generateStaticPostHtml(post) {
+    const canonical = post.canonicalUrl || `${SITE_BASE_URL}/${post.slug}.html`;
+    const blogPosting = {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": post.title,
+      "description": post.metaDescription || post.excerpt,
+      "datePublished": post.publishedAt || post.date,
+      "dateModified": post.updatedAt,
+      "author": { "@type": "Organization", "name": post.author },
+      "publisher": { "@type": "Organization", "name": "FABER – Atelier de Consultanță", "url": SITE_BASE_URL },
+      "mainEntityOfPage": { "@type": "WebPage", "@id": canonical }
+    };
+    if (post.bannerImage) blogPosting.image = post.bannerImage.startsWith("http") ? post.bannerImage : SITE_BASE_URL + post.bannerImage;
+    const breadcrumb = {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Acasă", "item": SITE_BASE_URL + "/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": SITE_BASE_URL + "/blog.html" },
+        { "@type": "ListItem", "position": 3, "name": post.title, "item": canonical }
+      ]
+    };
+    const schemas = [blogPosting, faqSchema(post), breadcrumb].filter(Boolean);
+    const faqHtml = post.faq?.length ? `<h2>Întrebări frecvente</h2>${post.faq.map(item => `<div class="faq-item"><p class="faq-q">${escapeHtml(item.question)}</p><p>${escapeHtml(item.answer)}</p></div>`).join("")}` : "";
+    const linksHtml = post.internalLinks?.length ? `<h2>Linkuri utile</h2><ul>${post.internalLinks.map(link => `<li><a href="${escapeAttr(link)}">${escapeHtml(link)}</a></li>`).join("")}</ul>` : "";
+    const bannerHtml = post.bannerImage ? `<figure style="margin:32px 0;"><img src="${escapeAttr(post.bannerImage)}" alt="${escapeAttr(post.bannerAlt || post.title)}" style="width:100%;border-radius:16px;" /></figure>` : "";
+    return `<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>${escapeHtml(post.metaTitle)}</title>
+  <meta name="description" content="${escapeAttr(post.metaDescription)}" />
+  <meta name="robots" content="${post.status === "published" ? "index, follow" : "noindex, nofollow"}" />
+  <link rel="canonical" href="${escapeAttr(canonical)}" />
+  <link rel="stylesheet" href="/assets/blog/article.css" />
+  <script type="application/ld+json">${JSON.stringify(schemas, null, 2)}<\/script>
+</head>
+<body>
+  <nav class="navbar"><a href="/" class="brand">FABER</a><div class="navbar-links"><a href="/blog.html">Blog</a><a href="/contact/" class="nav-cta">Evaluare gratuită</a></div></nav>
+  <div class="breadcrumb"><a href="/">Acasă</a> › <a href="/blog.html">Blog</a> › ${escapeHtml(post.title)}</div>
+  <section class="post-hero"><span class="post-category">${escapeHtml(post.category)}</span><span class="post-icon">${escapeHtml(post.icon)}</span><h1 class="post-title">${escapeHtml(post.title)}</h1><p class="post-excerpt">${escapeHtml(post.excerpt)}</p><div class="post-meta"><span>${escapeHtml(post.dateFormatted || post.date)}</span><span>${escapeHtml(String(post.readTime))} min lectură</span><span>${escapeHtml(post.author)}</span></div></section>
+  <main class="post-container"><article class="post-body">${bannerHtml}${post.content}${linksHtml}<div class="note">Informațiile din articol sunt orientative. Verifică întotdeauna ghidul solicitantului și apelul activ înainte de depunere. Finanțarea nu este garantată.</div>${faqHtml}<div class="cta-box"><h3>Vrei să verificăm proiectul?</h3><p>Trimite-ne detaliile investiției și îți spunem ce trebuie pregătit.</p><a href="/contact/" class="btn-cta">Solicită evaluare gratuită</a></div></article></main>
+</body>
+</html>`;
+  }
+
+  const SITEMAP_STATIC_URLS = [
+    ["/", "1.0"],
+    ["/consultanta-fonduri-europene/", "0.9"],
+    ["/fonduri-europene-nerambursabile-2026/", "0.9"],
+    ["/dr12-afir.html", "0.9"],
+    ["/dr14.html", "0.9"],
+    ["/start-up-nation-2026.html", "0.9"],
+    ["/femeia-antreprenor-2026.html", "0.9"],
+    ["/digitalizare-imm.html", "0.9"],
+    ["/digitalizare-imm-pnrr/", "0.8"],
+    ["/fondul-de-modernizare/", "0.8"],
+    ["/afir-autoconsum-agroalimentar.html", "0.8"],
+    ["/autoconsum-publici.html", "0.8"],
+    ["/por-adr-nord-est.html", "0.8"],
+    ["/pro-infra.html", "0.8"],
+    ["/calculator-soc.html", "0.8"],
+    ["/contact/", "0.7"],
+    ["/blog.html", "0.8"],
+    ["/blog-afir-fotovoltaice-ferme-2026.html", "0.5"],
+    ["/gdpr.html", "0.3"],
+    ["/politica-de-confidentialitate.html", "0.3"],
+    ["/termeni-si-conditii.html", "0.3"]
+  ];
+
+  function buildSitemapXml(posts) {
+    const today = new Date().toISOString().slice(0, 10);
+    const urls = SITEMAP_STATIC_URLS.map(([path, priority]) => ({ loc: SITE_BASE_URL + path, priority }));
+    posts.filter(post => post.status === "published").forEach(post => {
+      urls.push({ loc: post.canonicalUrl || `${SITE_BASE_URL}/${post.slug}.html`, priority: "0.7" });
+    });
+    return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map(url => `  <url>\n    <loc>${url.loc}</loc>\n    <lastmod>${today}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>${url.priority}</priority>\n  </url>`).join("\n")}\n</urlset>\n`;
+  }
+
+  async function savePost(targetStatus) {
+    const status = qs("#postModalStatus");
+    const editIndex = parseInt(qs("#postEditIndex").value, 10);
+    let post = buildPostFromForm(targetStatus);
+    const validationError = validatePost(post, editIndex, post.status === "published");
+    if (validationError) {
+      showStatus(status, validationError, "error");
+      return;
     }
 
-    showStatus(status, "Se salvează articolul în blog.json...", "loading");
+    showStatus(status, post.status === "published" ? "Se publică articolul, pagina HTML și sitemapul..." : "Se salvează draftul în blog.json...", "loading");
 
     try {
+      post = await uploadPendingPostBanner(post);
+
+      if (editIndex >= 0) {
+        blogPosts[editIndex] = post;
+      } else {
+        blogPosts.unshift(post);
+      }
+
       const json = JSON.stringify({ posts: blogPosts }, null, 2);
+
+      if (post.status === "published") {
+        await uploadFileContent(`${post.slug}.html`, generateStaticPostHtml(post), `Admin blog: publicare articol — ${post.title}`);
+        await uploadFileContent("sitemap.xml", buildSitemapXml(blogPosts), "Admin blog: actualizare sitemap");
+      }
 
       await uploadFileContent(
         "blog.json",
         json,
-        `Admin blog: ${editIndex >= 0 ? "actualizare" : "articol nou"} — ${title}`
+        `Admin blog: ${editIndex >= 0 ? "actualizare" : "articol nou"} — ${post.title}`
       );
 
-      showStatus(status, "Articol salvat cu succes.", "success");
-      toast("Articol salvat: " + title);
+      showStatus(status, post.status === "published" ? "Articol publicat cu succes." : "Draft salvat cu succes.", "success");
+      toast((post.status === "published" ? "Articol publicat: " : "Draft salvat: ") + post.title);
 
       setTimeout(() => {
         closeModal("postModal");
@@ -2935,6 +3344,25 @@
     } catch (error) {
       showStatus(status, error.message, "error");
     }
+  }
+
+  function previewPost() {
+    const post = buildPostFromForm(qs("#postPublished").value || "draft");
+    const html = generateStaticPostHtml(post);
+    const blob = new Blob([html], { type: "text/html" });
+    const url = URL.createObjectURL(blob);
+    window.open(url, "_blank", "noopener,noreferrer");
+    setTimeout(() => URL.revokeObjectURL(url), 60000);
+  }
+
+  function previewExistingPost(index) {
+    const post = normalizePost(blogPosts[index]);
+    if (!post) return;
+    const html = generateStaticPostHtml(post);
+    const blob = new Blob([html], { type: "text/html" });
+    const url = URL.createObjectURL(blob);
+    window.open(url, "_blank", "noopener,noreferrer");
+    setTimeout(() => URL.revokeObjectURL(url), 60000);
   }
 
   async function deletePost(index) {
@@ -2955,6 +3383,7 @@
         json,
         `Admin blog: ștergere — ${removed.title}`
       );
+      await uploadFileContent("sitemap.xml", buildSitemapXml(blogPosts), "Admin blog: actualizare sitemap după ștergere");
 
       renderBlogPosts();
       updateDashboardStats();
@@ -3047,7 +3476,7 @@
   function updateDashboardStats() {
     qs("#statPrograms").textContent = PAGE_CONFIG.length;
     qs("#statBlogPosts").textContent = blogPosts.length || "0";
-    qs("#statCarousel").textContent = CAROUSEL_SLIDES.length;
+    qs("#statCarousel").textContent = carouselBanners.length || "0";
     updateDashboardTokenStatus();
   }
 
@@ -3131,7 +3560,7 @@
     const repo = localStorage.getItem("faber_github_repo");
     const branch = localStorage.getItem("faber_github_branch");
     const token = localStorage.getItem("faber_github_token");
-    const adminEmail = localStorage.getItem("faber_admin_email");
+    const adminEmail = localStorage.getItem(AUTH_KEYS.email);
 
     if (owner) qs("#githubOwner").value = owner;
     if (repo) qs("#githubRepo").value = repo;
@@ -3159,7 +3588,14 @@
   window.addEventListener("DOMContentLoaded", () => {
     hydrateGitHubSettings();
 
-    if (sessionStorage.getItem("faber_admin_auth") === "true") {
+    if (getStoredCredentials().corrupted) {
+      sessionStorage.removeItem(AUTH_KEYS.session);
+      qs("#resetHint").style.display = "block";
+      showStatus(qs("#authStatus"), "Datele locale par corupte. Resetează datele locale și configurează din nou accesul.", "error");
+      return;
+    }
+
+    if (sessionStorage.getItem(AUTH_KEYS.session) === "true") {
       qs("#authOverlay").classList.add("hidden");
       initPanel();
     }
