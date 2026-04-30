@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="FABER – Atelier de Consultanță specializat în accesarea fondurilor europene nerambursabile. Experți în PNRR, POR, AFIR, Digitalizare IMM și alte programe de finanțare." />
+  <meta name="description" content="Consultanță pentru fonduri europene nerambursabile: PNRR, POR, AFIR, Digitalizare IMM și programe pentru antreprenori." />
   <meta name="keywords" content="fonduri europene, consultanță fonduri europene, PNRR, POR, AFIR, finanțare nerambursabilă, proiecte europene, fonduri nerambursabile România, consultanță finanțare, absorbție fonduri europene" />
   <meta name="author" content="FABER – Atelier de Consultanță" />
   <meta property="og:title" content="FABER – Atelier de Consultanță | Fonduri Europene Nerambursabile" />
@@ -14,7 +14,7 @@
   <meta property="og:url" content="https://atelierdeconsultanta.ro" />
   <meta property="og:image" content="https://atelierdeconsultanta.ro/og-image.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
-  <title>FABER – Atelier de Consultanță | Fonduri Europene Nerambursabile</title>
+  <title>Consultanță Fonduri Europene Nerambursabile | FABER</title>
 
   <!-- Preconnect pentru fonturi Google -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -776,6 +776,17 @@
       height: 180px;
       background: linear-gradient(135deg, var(--navy), var(--navy-light));
       display: flex; align-items: center; justify-content: center; font-size: 3rem;
+    }
+    .blog-card-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 76px;
+      height: 76px;
+      border-radius: 50%;
+      background: rgba(232,100,42,0.14);
+      border: 1px solid rgba(232,100,42,0.25);
+      font-size: 2.4rem;
     }
     .blog-content { padding: 24px; }
     .blog-category { font-size: 0.7rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--orange); margin-bottom: 8px; }
@@ -2039,15 +2050,14 @@
           var delays = ['reveal-delay-1','reveal-delay-2','reveal-delay-3'];
           grid.innerHTML = posts.map(function(p, i){
             var delay = delays[i] || '';
+            var postHref = p.canonicalUrl || ((p.slug || p.id) + '.html');
+            var imageHtml = p.bannerImage
+              ? '<div class="blog-image" aria-hidden="true" style="background-image:url(' + p.bannerImage + ');background-size:cover;background-position:center;"></div>'
+              : '<div class="blog-image" aria-hidden="true">' +
+                '<span class="blog-card-icon">' + (p.icon || '📝') + '</span>' +
+                '</div>';
             return '<article class="blog-card reveal ' + delay + '" data-blog-id="' + p.id + '">' +
-              '<div class="blog-image" aria-hidden="true">' +
-              '<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="180" viewBox="0 0 400 180">' +
-              '<rect width="400" height="180" fill="#0d1f3c"/>' +
-              '<rect x="150" y="40" width="100" height="100" rx="50" fill="rgba(232,100,42,0.15)" stroke="rgba(232,100,42,0.3)" stroke-width="1"/>' +
-              '<text x="200" y="95" text-anchor="middle" font-family="Georgia,serif" font-size="28" font-weight="700" fill="#e8642a" opacity="0.6">F</text>' +
-              '<text x="200" y="155" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" font-weight="600" fill="rgba(255,255,255,0.25)" letter-spacing="3">FABER CONSULTING</text>' +
-              '</svg>' +
-              '</div>' +
+              imageHtml +
               '<div class="blog-content">' +
                 '<div class="blog-category">' + (p.category||'') + '</div>' +
                 '<h3 class="blog-title">' + p.title + '</h3>' +
@@ -2056,7 +2066,7 @@
                   '<span>📅 ' + (p.dateFormatted||p.date) + '</span>' +
                   '<span>⏱️ ' + (p.readTime||'5') + ' min</span>' +
                 '</div>' +
-                '<a href="blog.html?post=' + p.id + '" class="blog-read-more" aria-label="Citește articolul ' + p.title + '">' +
+                '<a href="' + postHref + '" class="blog-read-more" aria-label="Citește articolul ' + p.title + '">' +
                   'Citește mai mult →' +
                 '</a>' +
               '</div>' +
