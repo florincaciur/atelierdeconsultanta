@@ -1179,14 +1179,23 @@
           <div class="card">
             <div class="card-title">
               <span>🖼️ Bannere carusel homepage</span>
-              <small>încarcă imagine și aplică pe slide</small>
+              <small>editare completă: titlu, descriere, CTA, imagine, ordine, status</small>
             </div>
 
-            <div class="warning-box">
-              Pentru ca bannerele să fie vizibile, pagina <strong>index.html</strong> va primi un background-image inline pe slide-ul ales.
-              Recomandare imagine: <strong>1200×630 px</strong>, format WebP/JPG, sub 500 KB.
+            <div class="info-box">
+              Modificările sunt salvate local în memorie. Apasă <strong>🚀 Publică banners.json</strong> pentru a trimite
+              schimbările live pe site. Slide-urile cu <strong>Status: INACTIV</strong> nu apar în carusel.
+              Dacă toate sunt inactive, secțiunea de carusel este ascunsă automat.
             </div>
 
+            <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px;align-items:center;">
+              <button class="btn btn-primary" onclick="addNewBanner()">+ Banner nou</button>
+              <button class="btn btn-secondary" onclick="loadBannersJson()">🔄 Reîncarcă din GitHub</button>
+              <button class="btn btn-secondary" onclick="exportBannersJson()">⬇️ Export JSON local</button>
+              <button class="btn btn-primary" onclick="publishBannersJson()" style="margin-left:auto;">🚀 Publică banners.json</button>
+            </div>
+
+            <div class="status-msg" id="carouselPublishStatus"></div>
             <div id="carouselGrid" class="programs-grid"></div>
           </div>
         </section>
@@ -1595,43 +1604,7 @@
     }
   ];
 
-  const CAROUSEL_SLIDES = [
-    {
-      index: 0,
-      name: "POR ADR Nord-Est",
-      bannerPath: "admin/banners/slide-por-ne.webp"
-    },
-    {
-      index: 1,
-      name: "DR 12 AFIR",
-      bannerPath: "admin/banners/slide-dr12.webp"
-    },
-    {
-      index: 2,
-      name: "AFIR Autoconsum Agroalimentar",
-      bannerPath: "admin/banners/slide-afir-autoconsum.webp"
-    },
-    {
-      index: 3,
-      name: "Autoconsum Publici",
-      bannerPath: "admin/banners/slide-autoconsum-publici.webp"
-    },
-    {
-      index: 4,
-      name: "DR 14 — Ferme Mici",
-      bannerPath: "admin/banners/slide-dr14.webp"
-    },
-    {
-      index: 5,
-      name: "Digitalizare IMM",
-      bannerPath: "admin/banners/slide-digitalizare.webp"
-    },
-    {
-      index: 6,
-      name: "Femeia Antreprenor 2026",
-      bannerPath: "admin/banners/slide-femeia.webp"
-    }
-  ];
+  let carouselBanners = [];
 
   let blogPosts = [];
   let currentSeoHtml = "";
@@ -1848,7 +1821,7 @@
     if (name === "dashboard") renderDashboard();
     if (name === "seo") renderSeoSelect();
     if (name === "continut") renderContentSelect();
-    if (name === "carusel") renderCarouselGrid();
+    if (name === "carusel") { if (!carouselBanners.length) loadBannersJson(); else renderCarouselGrid(); }
     if (name === "programe") renderProgramsGrid();
     if (name === "blog") loadBlogPosts();
     if (name === "termene") renderDeadlines();
@@ -2338,155 +2311,258 @@
   }
 
   /* ============================================================
-     CAROUSEL BANNERS
+     CAROUSEL BANNERS — administrare completă via banners.json
   ============================================================ */
-  function renderCarouselGrid() {
-    const grid = qs("#carouselGrid");
 
-    grid.innerHTML = CAROUSEL_SLIDES.map(slide => {
-      return `
-        <article class="mini-card">
-          <div class="mini-card-header">
-            <div>
-              <div class="mini-title">Slide ${slide.index + 1}: ${escapeHtml(slide.name)}</div>
-              <div class="mini-file">${escapeHtml(slide.bannerPath)}</div>
-            </div>
-            <span class="badge badge-active">CARUSEL</span>
-          </div>
-
-          <label class="upload-area" for="carouselUpload-${slide.index}">
-            <div style="font-size: 26px; margin-bottom: 6px;">🖼️</div>
-            <div style="font-size: 13px; font-weight: 750;">Alege banner pentru slide</div>
-            <div class="help-text">WebP / JPG / PNG — recomandat 1200×630 px</div>
-          </label>
-
-          <input
-            type="file"
-            id="carouselUpload-${slide.index}"
-            class="upload-input"
-            accept="image/*"
-            onchange="onCarouselBannerSelect(${slide.index}, this)"
-          />
-
-          <img id="carouselPreview-${slide.index}" class="preview-img" alt="Preview banner ${escapeAttr(slide.name)}" />
-
-          <button
-            id="carouselPublish-${slide.index}"
-            class="btn btn-primary"
-            style="display: none; width: 100%; margin-top: 12px;"
-            onclick="publishCarouselBanner(${slide.index})"
-          >
-            🚀 Publică banner
-          </button>
-
-          <div class="status-msg" id="carouselStatus-${slide.index}"></div>
-        </article>
-      `;
-    }).join("");
+  async function loadBannersJson() {
+    const status = qs("#carouselPublishStatus");
+    showStatus(status, "Se încarcă banners.json din GitHub...", "loading");
+    try {
+      const json = await downloadFileContent("banners.json");
+      carouselBanners = JSON.parse(json);
+      renderCarouselGrid();
+      showStatus(status, "Bannere încărcate (" + carouselBanners.length + " înregistrări).", "success");
+    } catch (error) {
+      showStatus(status, "Eroare la încărcare: " + error.message, "error");
+    }
   }
 
-  function onCarouselBannerSelect(index, input) {
+  function renderCarouselGrid() {
+    const grid = qs("#carouselGrid");
+    if (!carouselBanners.length) {
+      grid.innerHTML = '<p style="color:var(--gray-500);font-size:0.9rem;">Nu există bannere. Apasă „+ Banner nou" pentru a adăuga primul.</p>';
+      return;
+    }
+    const sorted = [...carouselBanners].sort((a, b) => (a.order || 0) - (b.order || 0));
+    grid.innerHTML = sorted.map(banner => renderBannerCard(banner)).join("");
+  }
+
+  function renderBannerCard(banner) {
+    const isActive = banner.active !== false;
+    const badgeClass = isActive ? "badge-active" : "badge-draft";
+    const badgeLabel = isActive ? "ACTIV" : "INACTIV";
+    const imgSrc = banner.image ? escapeAttr(banner.image) : "";
+    const imgDisplay = banner.image ? "display:block;" : "display:none;";
+    const titleVal = escapeAttr(banner.title || "");
+    const tagVal = escapeAttr(banner.tag || "");
+    const descVal = escapeAttr(banner.description || "");
+    const amountVal = escapeAttr(banner.amount || "");
+    const ctaTextVal = escapeAttr(banner.ctaText || "");
+    const ctaLinkVal = escapeAttr(banner.ctaLink || "");
+    const altVal = escapeAttr(banner.altText || "");
+    const iconVal = escapeAttr(banner.icon || "");
+    const orderVal = banner.order || 0;
+
+    return `
+      <article class="mini-card" id="card-${escapeAttr(banner.id)}">
+        <div class="mini-card-header">
+          <div>
+            <div class="mini-title">${escapeHtml(banner.title ? banner.title.replace("\n", " — ") : banner.id)}</div>
+            <div class="mini-file">ID: ${escapeHtml(banner.id)}</div>
+          </div>
+          <span class="badge ${badgeClass}" id="badge-${escapeAttr(banner.id)}">${badgeLabel}</span>
+        </div>
+
+        <div class="grid-2">
+          <div class="field-group">
+            <label class="field-label">Titlu <small style="font-weight:400;">(linie nouă = &lt;br&gt;)</small></label>
+            <textarea class="field-textarea" rows="2"
+              onchange="updateBannerField('${escapeAttr(banner.id)}','title',this.value)"
+            >${titleVal}</textarea>
+          </div>
+          <div class="field-group">
+            <label class="field-label">Tag / subtitlu categorie</label>
+            <input class="field-input" type="text" value="${tagVal}"
+              onchange="updateBannerField('${escapeAttr(banner.id)}','tag',this.value)" />
+          </div>
+          <div class="field-group">
+            <label class="field-label">Descriere</label>
+            <textarea class="field-textarea" rows="3"
+              onchange="updateBannerField('${escapeAttr(banner.id)}','description',this.value)"
+            >${descVal}</textarea>
+          </div>
+          <div class="field-group">
+            <label class="field-label">Text finanțare / sumă</label>
+            <input class="field-input" type="text" value="${amountVal}"
+              onchange="updateBannerField('${escapeAttr(banner.id)}','amount',this.value)" />
+          </div>
+          <div class="field-group">
+            <label class="field-label">Text buton CTA</label>
+            <input class="field-input" type="text" value="${ctaTextVal}"
+              onchange="updateBannerField('${escapeAttr(banner.id)}','ctaText',this.value)" />
+          </div>
+          <div class="field-group">
+            <label class="field-label">Link buton CTA</label>
+            <input class="field-input" type="text" value="${ctaLinkVal}"
+              onchange="updateBannerField('${escapeAttr(banner.id)}','ctaLink',this.value)" />
+          </div>
+          <div class="field-group">
+            <label class="field-label">Alt text imagine</label>
+            <input class="field-input" type="text" value="${altVal}"
+              onchange="updateBannerField('${escapeAttr(banner.id)}','altText',this.value)" />
+          </div>
+          <div class="field-group">
+            <label class="field-label">Icon Phosphor <small style="font-weight:400;">(ex: ph-buildings)</small></label>
+            <input class="field-input" type="text" value="${iconVal}"
+              onchange="updateBannerField('${escapeAttr(banner.id)}','icon',this.value)" />
+          </div>
+        </div>
+
+        <div class="field-group" style="margin-top:8px;">
+          <label class="field-label">Ordine afișare</label>
+          <input class="field-input" type="number" min="1" max="99" value="${orderVal}" style="width:90px;"
+            onchange="updateBannerField('${escapeAttr(banner.id)}','order',parseInt(this.value)||1)" />
+        </div>
+
+        <div class="field-group" style="margin-top:14px;">
+          <label class="field-label">Imagine banner</label>
+          <img id="bannerPreview-${escapeAttr(banner.id)}" src="${imgSrc}"
+            alt="${altVal}" style="${imgDisplay}width:100%;max-height:160px;object-fit:cover;border-radius:9px;margin-bottom:8px;" />
+          <label class="upload-area" for="bannerUpload-${escapeAttr(banner.id)}">
+            <div style="font-size:22px;margin-bottom:4px;">🖼️</div>
+            <div style="font-size:13px;font-weight:750;">Alege imagine nouă</div>
+            <div class="help-text">WebP / JPG / PNG — recomandat 1200×630 px, sub 500 KB</div>
+          </label>
+          <input type="file" id="bannerUpload-${escapeAttr(banner.id)}" class="upload-input" accept="image/*"
+            onchange="onBannerImageSelect('${escapeAttr(banner.id)}', this)" />
+          <div id="bannerUploadStatus-${escapeAttr(banner.id)}" class="status-msg" style="margin-top:6px;"></div>
+        </div>
+
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:14px;">
+          <button class="btn btn-secondary" style="font-size:12px;"
+            onclick="toggleBannerActive('${escapeAttr(banner.id)}')">
+            ${isActive ? "⏸️ Dezactivează" : "▶️ Activează"}
+          </button>
+          <button class="btn btn-secondary" style="font-size:12px;"
+            onclick="clearBannerImage('${escapeAttr(banner.id)}')">
+            🗑️ Șterge imagine
+          </button>
+          <button class="btn" style="font-size:12px;background:#fee2e2;color:#991b1b;border:1px solid #fca5a5;"
+            onclick="removeBanner('${escapeAttr(banner.id)}')">
+            ❌ Șterge banner
+          </button>
+        </div>
+      </article>
+    `;
+  }
+
+  function updateBannerField(id, field, value) {
+    const banner = carouselBanners.find(b => b.id === id);
+    if (banner) banner[field] = value;
+  }
+
+  function toggleBannerActive(id) {
+    const banner = carouselBanners.find(b => b.id === id);
+    if (!banner) return;
+    banner.active = banner.active === false ? true : false;
+    const badge = qs("#badge-" + id);
+    const card  = qs("#card-" + id);
+    if (badge) {
+      badge.textContent = banner.active ? "ACTIV" : "INACTIV";
+      badge.className   = "badge " + (banner.active ? "badge-active" : "badge-draft");
+    }
+    const btn = card ? card.querySelector("button[onclick^='toggleBannerActive']") : null;
+    if (btn) btn.textContent = banner.active ? "⏸️ Dezactivează" : "▶️ Activează";
+    toast(banner.active ? "Banner activat." : "Banner dezactivat. Publică JSON pentru a aplica.");
+  }
+
+  function clearBannerImage(id) {
+    const banner = carouselBanners.find(b => b.id === id);
+    if (!banner) return;
+    if (!confirm("Ștergi imaginea bannerului „" + (banner.title || id).replace("\n", " ") + ""?\nBanner-ul va fi afișat fără imagine de fundal.")) return;
+    banner.image = "";
+    const preview = qs("#bannerPreview-" + id);
+    if (preview) { preview.src = ""; preview.style.display = "none"; }
+    toast("Imaginea a fost ștearsă din banner. Publică JSON pentru a aplica.");
+  }
+
+  function addNewBanner() {
+    const newId = "banner-" + Date.now();
+    const maxOrder = carouselBanners.reduce((m, b) => Math.max(m, b.order || 0), 0);
+    carouselBanners.push({
+      id: newId,
+      tag: "Categorie nouă",
+      title: "Titlu banner\nSubtitlu",
+      description: "Descriere program de finanțare.",
+      amount: "Finanțare: până la X EUR",
+      ctaText: "Detalii program →",
+      ctaLink: "#",
+      image: "",
+      altText: "",
+      icon: "ph-star",
+      order: maxOrder + 1,
+      active: false
+    });
+    renderCarouselGrid();
+    const newCard = qs("#card-" + newId);
+    if (newCard) newCard.scrollIntoView({ behavior: "smooth", block: "start" });
+    toast("Banner nou adăugat. Completează câmpurile și publică JSON.");
+  }
+
+  function removeBanner(id) {
+    const banner = carouselBanners.find(b => b.id === id);
+    if (!banner) return;
+    if (!confirm("Ștergi definitiv bannerul „" + (banner.title || id).replace("\n", " ") + ""?\nAcțiunea nu poate fi anulată decât prin Export/Import JSON.")) return;
+    carouselBanners = carouselBanners.filter(b => b.id !== id);
+    renderCarouselGrid();
+    toast("Banner șters. Publică JSON pentru a aplica pe site.");
+  }
+
+  function onBannerImageSelect(id, input) {
     const file = input.files && input.files[0];
-
     if (!file) return;
-
     if (!file.type.startsWith("image/")) {
       toast("Selectează un fișier imagine valid.", true);
       return;
     }
-
     if (file.size > 900 * 1024) {
-      toast("Imaginea este mare. Recomandat sub 500 KB.", true);
+      toast("Imaginea depășește 900 KB. Recomandăm sub 500 KB.", true);
     }
-
     const reader = new FileReader();
-
     reader.onload = event => {
-      const preview = qs("#carouselPreview-" + index);
-      const button = qs("#carouselPublish-" + index);
+      const preview = qs("#bannerPreview-" + id);
+      if (preview) { preview.src = event.target.result; preview.style.display = "block"; }
+      const statusEl = qs("#bannerUploadStatus-" + id);
+      showStatus(statusEl, "Se încarcă imaginea în GitHub...", "loading");
 
-      preview.src = event.target.result;
-      preview.classList.add("show");
+      const banner = carouselBanners.find(b => b.id === id);
+      const imagePath = "admin/banners/" + id + ".webp";
 
-      button.dataset.dataUrl = event.target.result;
-      button.style.display = "inline-flex";
+      uploadBinaryFile(imagePath, event.target.result, "Admin: banner imagine " + id)
+        .then(() => {
+          if (banner) banner.image = imagePath;
+          showStatus(statusEl, "Imagine încărcată. Apasă „Publică banners.json" pentru a activa.", "success");
+          toast("Imagine încărcată pentru " + id);
+        })
+        .catch(err => {
+          showStatus(statusEl, "Upload eșuat: " + err.message, "error");
+        });
     };
-
     reader.readAsDataURL(file);
   }
 
-  function setCarouselSlideBackground(html, index, imagePath) {
-    const publicUrl = `${SITE_BASE_URL}/${imagePath}`;
-    const articleRegex = new RegExp(
-      `<article(?=[^>]*class=["'][^"']*carousel-slide[^"']*["'])(?=[^>]*data-slide=["']${index}["'])[^>]*>`,
-      "i"
-    );
-
-    const match = html.match(articleRegex);
-
-    if (!match) {
-      throw new Error(`Nu am găsit slide-ul data-slide="${index}" în index.html.`);
-    }
-
-    let tag = match[0];
-
-    const bgValue =
-      `background-image: linear-gradient(rgba(13,31,60,0.58), rgba(13,31,60,0.58)), url('${publicUrl}'); ` +
-      "background-size: cover; background-position: center;";
-
-    if (/style=["'][^"']*["']/i.test(tag)) {
-      tag = tag.replace(/style=["']([^"']*)["']/i, (full, styleValue) => {
-        let cleanStyle = styleValue
-          .replace(/background-image\s*:[^;]+;?/gi, "")
-          .replace(/background-size\s*:[^;]+;?/gi, "")
-          .replace(/background-position\s*:[^;]+;?/gi, "")
-          .trim();
-
-        if (cleanStyle && !cleanStyle.endsWith(";")) cleanStyle += ";";
-
-        return `style="${escapeAttr(cleanStyle + " " + bgValue)}"`;
-      });
-    } else {
-      tag = tag.replace(/>$/, ` style="${escapeAttr(bgValue)}">`);
-    }
-
-    return html.replace(articleRegex, tag);
+  function exportBannersJson() {
+    const json = JSON.stringify(carouselBanners, null, 2);
+    const blob = new Blob([json], { type: "application/json" });
+    const url  = URL.createObjectURL(blob);
+    const a    = document.createElement("a");
+    a.href = url;
+    a.download = "banners.json";
+    a.click();
+    URL.revokeObjectURL(url);
+    toast("banners.json descărcat local.");
   }
 
-  async function publishCarouselBanner(index) {
-    const slide = CAROUSEL_SLIDES.find(item => item.index === index);
-    const button = qs("#carouselPublish-" + index);
-    const status = qs("#carouselStatus-" + index);
-
-    if (!slide || !button.dataset.dataUrl) return;
-
-    showStatus(status, "Se încarcă bannerul în GitHub...", "loading");
-    button.disabled = true;
-
+  async function publishBannersJson() {
+    const status = qs("#carouselPublishStatus");
+    showStatus(status, "Se publică banners.json în GitHub...", "loading");
     try {
-      await uploadBinaryFile(
-        slide.bannerPath,
-        button.dataset.dataUrl,
-        `Admin: banner carusel ${slide.name}`
-      );
-
-      showStatus(status, "Banner încărcat. Se actualizează index.html...", "loading");
-
-      let indexHtml = await downloadFileContent("index.html");
-      indexHtml = setCarouselSlideBackground(indexHtml, index, slide.bannerPath);
-
-      await uploadFileContent(
-        "index.html",
-        indexHtml,
-        `Admin: aplicare banner carusel ${slide.name}`
-      );
-
-      showStatus(status, "Banner publicat cu succes. Site-ul se actualizează în 1–2 minute.", "success");
-      toast("Banner publicat pentru " + slide.name);
+      const json = JSON.stringify(carouselBanners, null, 2);
+      await uploadFileContent("banners.json", json, "Admin: actualizare bannere carusel");
+      showStatus(status, "banners.json publicat cu succes. Site-ul se actualizează în 1–2 minute.", "success");
+      toast("banners.json publicat pe GitHub.");
     } catch (error) {
       showStatus(status, error.message, "error");
-    } finally {
-      button.disabled = false;
     }
   }
   <!-- PARTEA 4 / 4: JAVASCRIPT — PROGRAME, BLOG, INDEXARE, INIT + ÎNCHIDERE HTML -->
