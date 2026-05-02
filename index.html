@@ -22,7 +22,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
   <!-- Phosphor Icons — dual-tone infographic icons -->
-  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1" defer></script>
 
   <!-- ✦ Canonical URL pentru SEO ✦ -->
   <link rel="canonical" href="https://atelierdeconsultanta.ro/" />
@@ -564,6 +564,13 @@
       box-shadow: 0 8px 24px rgba(232,100,42,0.4);
     }
     .slide-cta:hover { background: var(--orange-dark); transform: translateY(-2px); }
+    .slide-actions { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+    .slide-guide-cta {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.26);
+      box-shadow: none;
+    }
+    .slide-guide-cta:hover { background: rgba(255,255,255,0.18); }
     .slide-visual {
       position: absolute; right: 60px; top: 50%; transform: translateY(-50%);
       width: 200px; height: 200px;
@@ -723,9 +730,31 @@
     .finantare-link {
       display: inline-flex; align-items: center; gap: 6px;
       font-size: 0.85rem; font-weight: 600; color: var(--orange);
-      margin-top: auto; transition: gap var(--transition);
+      transition: gap var(--transition);
     }
     .finantare-link:hover { gap: 10px; }
+    .finantare-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: auto;
+    }
+    .finantare-guide-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 34px;
+      padding: 8px 11px;
+      border: 1px solid rgba(232,100,42,0.28);
+      border-radius: var(--radius-sm);
+      background: #fff7f3;
+      color: var(--orange);
+      font-size: 0.72rem;
+      font-weight: 850;
+      letter-spacing: 0.2px;
+    }
+    .finantare-guide-link:hover { background: rgba(232,100,42,0.12); }
 
     /* ============================================================
        ✦ TESTIMONIALE ✦
@@ -1169,12 +1198,12 @@
               <div class="d-text">AFIR Autoconsum Agro<div class="d-label">100% nerambursabil</div></div>
             </a>
 
-            <a href="autoconsum-publici.html" class="dropdown-item" role="menuitem" data-service-id="autoconsum-pub">
+            <a href="autoconsum-public-fotovoltaice-institutii-publice.html" class="dropdown-item" role="menuitem" data-service-id="autoconsum-pub">
               <div class="d-icon" style="background:rgba(139,92,246,0.2)"><i class="ph-duotone ph-bank" style="color:#c4b5fd"></i></div>
               <div class="d-text">Autoconsum Publici<div class="d-label">Instituții publice | 100%</div></div>
             </a>
 
-            <a href="dr14.html" class="dropdown-item" role="menuitem" data-service-id="dr14">
+            <a href="dr-14-afir-conditii-eligibilitate-greseli-frecvente.html" class="dropdown-item" role="menuitem" data-service-id="dr14">
               <div class="d-icon" style="background:rgba(34,197,94,0.2)"><i class="ph-duotone ph-tractor" style="color:#86efac"></i></div>
               <div class="d-text">DR 14 – Ferme Mici<div class="d-label">PAC 2023-2027 | până la 50.000 EUR</div></div>
             </a>
@@ -1226,8 +1255,8 @@
       <a href="por-adr-nord-est.html">POR ADR Nord-Est</a>
       <a href="dr12-afir.html">DR 12 / AFIR</a>
       <a href="afir-autoconsum-agroalimentar.html">AFIR Autoconsum Agroalimentar</a>
-      <a href="autoconsum-publici.html">Autoconsum Publici</a>
-      <a href="dr14.html">DR 14 – Ferme Mici</a>
+      <a href="autoconsum-public-fotovoltaice-institutii-publice.html">Autoconsum Publici</a>
+      <a href="dr-14-afir-conditii-eligibilitate-greseli-frecvente.html">DR 14 – Ferme Mici</a>
       <a href="digitalizare-imm.html">Digitalizare IMM</a>
       <a href="femeia-antreprenor-2026.html">Femeia Antreprenor 2026</a>
       <a href="pro-infra.html">PRO INFRA</a>
@@ -1489,7 +1518,10 @@
           <h3 class="finantare-title">POR ADR Nord-Est 2021–2027</h3>
           <p class="finantare-amount">Între <strong>100.000 € și 300.000 €</strong> per proiect</p>
           <p style="font-size:0.85rem;color:var(--text-soft)">Microîntreprinderi din Regiunea Nord-Est, cu intensitate nerambursabilă între 70% și 90%</p>
-          <a href="por-adr-nord-est.html" class="finantare-link">Detalii complete →</a>
+          <div class="finantare-actions">
+            <a href="por-adr-nord-est.html" class="finantare-link">Detalii complete →</a>
+            <a class="finantare-guide-link" data-official-guide-key="por-ne" data-official-guide-label="LINK GHID OFICIAL" hidden>LINK GHID OFICIAL</a>
+          </div>
         </article>
 
         <article class="finantare-card reveal reveal-delay-2" data-service-id="fin-dr12" data-beneficiary="private">
@@ -1498,7 +1530,10 @@
           <h3 class="finantare-title">DR 12 / AFIR – Instalarea Tinerilor Fermieri</h3>
           <p class="finantare-amount">Până la <strong>200.000 €</strong> per proiect</p>
           <p style="font-size:0.85rem;color:var(--text-soft)">80% pentru tineri fermieri și 65% pentru fermieri recent instalați</p>
-          <a href="dr12-afir.html" class="finantare-link">Detalii complete →</a>
+          <div class="finantare-actions">
+            <a href="dr12-afir.html" class="finantare-link">Detalii complete →</a>
+            <a class="finantare-guide-link" data-official-guide-key="dr12" data-official-guide-label="LINK GHID OFICIAL" hidden>LINK GHID OFICIAL</a>
+          </div>
         </article>
 
         <article class="finantare-card reveal reveal-delay-3" data-service-id="fin-afir-autoconsum" data-beneficiary="private">
@@ -1507,7 +1542,10 @@
           <h3 class="finantare-title">AFIR Autoconsum Agroalimentar</h3>
           <p class="finantare-amount"><strong>100% nerambursabil</strong>, până la 650.000 €/MW</p>
           <p style="font-size:0.85rem;color:var(--text-soft)">Sisteme fotovoltaice pentru autoconsum în sectorul agroalimentar</p>
-          <a href="afir-autoconsum-agroalimentar.html" class="finantare-link">Detalii complete →</a>
+          <div class="finantare-actions">
+            <a href="afir-autoconsum-agroalimentar.html" class="finantare-link">Detalii complete →</a>
+            <a class="finantare-guide-link" data-official-guide-key="afir-autoconsum" data-official-guide-label="LINK GHID OFICIAL" hidden>LINK GHID OFICIAL</a>
+          </div>
         </article>
 
         <article class="finantare-card reveal reveal-delay-1" data-service-id="fin-autoconsum-pub" data-beneficiary="public">
@@ -1516,7 +1554,10 @@
           <h3 class="finantare-title">Autoconsum Instituții Publice</h3>
           <p class="finantare-amount"><strong>100% nerambursabil</strong>, până la 10.000.000 €</p>
           <p style="font-size:0.85rem;color:var(--text-soft)">Primării, consilii județene, spitale, școli și alte entități publice</p>
-          <a href="autoconsum-publici.html" class="finantare-link">Detalii complete →</a>
+          <div class="finantare-actions">
+            <a href="autoconsum-public-fotovoltaice-institutii-publice.html" class="finantare-link">Detalii complete →</a>
+            <a class="finantare-guide-link" data-official-guide-key="autoconsum-publici" data-official-guide-label="LINK GHID OFICIAL" hidden>LINK GHID OFICIAL</a>
+          </div>
         </article>
 
         <article class="finantare-card reveal reveal-delay-2" data-service-id="fin-dr14" data-beneficiary="private">
@@ -1525,7 +1566,10 @@
           <h3 class="finantare-title">DR 14 – Ferme de Mici Dimensiuni</h3>
           <p class="finantare-amount">Până la <strong>50.000 €</strong>, intensitate 85%</p>
           <p style="font-size:0.85rem;color:var(--text-soft)">Ferme mici între 4.000 și 11.999 SO, cu buget total de 108 milioane EUR</p>
-          <a href="dr14.html" class="finantare-link">Detalii complete →</a>
+          <div class="finantare-actions">
+            <a href="dr-14-afir-conditii-eligibilitate-greseli-frecvente.html" class="finantare-link">Detalii complete →</a>
+            <a class="finantare-guide-link" data-official-guide-key="dr14" data-official-guide-label="LINK GHID OFICIAL" hidden>LINK GHID OFICIAL</a>
+          </div>
         </article>
 
         <article class="finantare-card reveal reveal-delay-3" data-service-id="fin-digitalizare" data-beneficiary="private">
@@ -1534,7 +1578,10 @@
           <h3 class="finantare-title">Digitalizare IMM 2024–2026</h3>
           <p class="finantare-amount">Până la <strong>100.000 €</strong>, intensitate 90%</p>
           <p style="font-size:0.85rem;color:var(--text-soft)">ERP, CRM, automatizare, securitate cibernetică și cloud</p>
-          <a href="digitalizare-imm.html" class="finantare-link">Detalii complete →</a>
+          <div class="finantare-actions">
+            <a href="digitalizare-imm.html" class="finantare-link">Detalii complete →</a>
+            <a class="finantare-guide-link" data-official-guide-key="digitalizare" data-official-guide-label="LINK GHID OFICIAL" hidden>LINK GHID OFICIAL</a>
+          </div>
         </article>
 
         <article class="finantare-card reveal reveal-delay-1" data-service-id="fin-femeia" data-beneficiary="private">
@@ -1543,7 +1590,10 @@
           <h3 class="finantare-title">Femeia Antreprenor 2026</h3>
           <p class="finantare-amount">Până la <strong>200.000 lei</strong>, intensitate 90%</p>
           <p style="font-size:0.85rem;color:var(--text-soft)">Start-up-uri și IMM-uri cu capital deținut în proporție de minimum 50% de femei</p>
-          <a href="femeia-antreprenor-2026.html" class="finantare-link">Detalii complete →</a>
+          <div class="finantare-actions">
+            <a href="femeia-antreprenor-2026.html" class="finantare-link">Detalii complete →</a>
+            <a class="finantare-guide-link" data-official-guide-key="femeia" data-official-guide-label="LINK GHID OFICIAL" hidden>LINK GHID OFICIAL</a>
+          </div>
         </article>
 
         <article class="finantare-card reveal reveal-delay-2" data-service-id="fin-pro-infra" data-beneficiary="private">
@@ -1552,7 +1602,10 @@
           <h3 class="finantare-title">PRO INFRA – Materiale de Construcții</h3>
           <p class="finantare-amount">Până la <strong>15.000.000 €</strong> per beneficiar</p>
           <p style="font-size:0.85rem;color:var(--text-soft)">Schema de ajutor de stat pentru producători de materiale de construcții utilizate în infrastructura de transport</p>
-          <a href="pro-infra.html" class="finantare-link">Detalii complete →</a>
+          <div class="finantare-actions">
+            <a href="pro-infra.html" class="finantare-link">Detalii complete →</a>
+            <a class="finantare-guide-link" data-official-guide-key="pro-infra" data-official-guide-label="LINK GHID OFICIAL" hidden>LINK GHID OFICIAL</a>
+          </div>
         </article>
 
         <article class="finantare-card reveal reveal-delay-3" data-service-id="fin-startup-nation" data-beneficiary="private">
@@ -1561,7 +1614,10 @@
           <h3 class="finantare-title">Start-Up Nation 2026</h3>
           <p class="finantare-amount">Până la <strong>250.000 RON</strong>, intensitate 90%</p>
           <p style="font-size:0.85rem;color:var(--text-soft)">Finanțare pentru tineri antreprenori și alte grupuri eligibile, cu minimum 2 locuri de muncă</p>
-          <a href="start-up-nation-2026.html" class="finantare-link">Detalii complete →</a>
+          <div class="finantare-actions">
+            <a href="start-up-nation-2026.html" class="finantare-link">Detalii complete →</a>
+            <a class="finantare-guide-link" data-official-guide-key="startup" data-official-guide-label="LINK GHID OFICIAL" hidden>LINK GHID OFICIAL</a>
+          </div>
         </article>
 
         <article class="finantare-card reveal reveal-delay-1" data-service-id="fin-pnrr" data-beneficiary="both">
@@ -1915,8 +1971,8 @@
           <li><a href="por-adr-nord-est.html">POR ADR Nord-Est</a></li>
           <li><a href="dr12-afir.html">DR 12 / AFIR</a></li>
           <li><a href="afir-autoconsum-agroalimentar.html">AFIR Autoconsum</a></li>
-          <li><a href="autoconsum-publici.html">Autoconsum Publici</a></li>
-          <li><a href="dr14.html">DR 14 – Ferme Mici</a></li>
+          <li><a href="autoconsum-public-fotovoltaice-institutii-publice.html">Autoconsum Publici</a></li>
+          <li><a href="dr-14-afir-conditii-eligibilitate-greseli-frecvente.html">DR 14 – Ferme Mici</a></li>
           <li><a href="digitalizare-imm.html">Digitalizare IMM</a></li>
           <li><a href="femeia-antreprenor-2026.html">Femeia Antreprenor</a></li>
           <li><a href="pro-infra.html">PRO INFRA</a></li>
@@ -1965,8 +2021,7 @@
     </div>
   </div>
 
-  <!-- ✦ Chatbot Tidio — înlocuiește YOUR_TIDIO_KEY cu cheia reală ✦ -->
-  <script src="//code.tidio.co/YOUR_TIDIO_KEY.js" async defer></script>
+  <!-- Chatbot Tidio dezactivat până la configurarea unei chei reale. -->
 
   <!-- ============================================================
        ✦ JAVASCRIPT PRINCIPAL ✦
@@ -2041,19 +2096,22 @@
     function buildSlideHtml(banner, idx, total) {
       var titleLines = banner.title.split('\n');
       var titleHtml  = titleLines.map(function(l) { return escH(l); }).join('<br>');
-      var bgStyle    = '';
+      var bgAttr     = '';
       if (banner.image) {
-        bgStyle = ' style="background-image:linear-gradient(rgba(13,31,60,0.58),rgba(13,31,60,0.58)),url(\'' + escH(banner.image) + '\');background-size:cover;background-position:center;"';
+        bgAttr = ' data-bg-image="' + escH(banner.image) + '"';
       }
       var amountParts = banner.amount.split(':');
       var amountHtml  = amountParts.length > 1
         ? escH(amountParts[0]) + ': <strong>' + escH(amountParts.slice(1).join(':').trim()) + '</strong>'
         : escH(banner.amount);
+      var guideHtml = banner.officialGuideKey
+        ? '<a class="slide-cta slide-guide-cta" data-official-guide-key="' + escH(banner.officialGuideKey) + '" data-official-guide-label="LINK GHID OFICIAL" hidden>LINK GHID OFICIAL</a>'
+        : '';
 
       return '<article class="carousel-slide" data-slide="' + idx + '"' +
         ' role="group" aria-roledescription="slide"' +
         ' aria-label="' + (idx+1) + ' din ' + total + ': ' + escH(banner.title.replace('\n',' ')) + '"' +
-        ' data-service-id="' + escH(banner.id) + '"' + bgStyle + '>' +
+        ' data-service-id="' + escH(banner.id) + '"' + bgAttr + '>' +
         '<div class="slide-deco" aria-hidden="true"></div>' +
         '<div class="slide-deco2" aria-hidden="true"></div>' +
         '<div class="slide-content">' +
@@ -2061,7 +2119,10 @@
           '<h3 class="slide-title">' + titleHtml + '</h3>' +
           '<p class="slide-desc">' + escH(banner.description) + '</p>' +
           '<div class="slide-amount">' + amountHtml + '</div>' +
-          '<a href="' + escH(banner.ctaLink) + '" class="slide-cta">' + escH(banner.ctaText) + '</a>' +
+          '<div class="slide-actions">' +
+            '<a href="' + escH(banner.ctaLink) + '" class="slide-cta">' + escH(banner.ctaText) + '</a>' +
+            guideHtml +
+          '</div>' +
         '</div>' +
         (banner.icon ? '<div class="slide-visual" aria-hidden="true"><i class="ph-duotone ' + escH(banner.icon) + '"></i></div>' : '') +
         '<div class="carousel-progress" id="progress-' + idx + '"></div>' +
@@ -2088,8 +2149,25 @@
       }
     }
 
+    function ensureSlideBackground(index) {
+      if (!totalSlides) return;
+      var slideIndex = ((index % totalSlides) + totalSlides) % totalSlides;
+      var slide = document.querySelector('[data-slide="' + slideIndex + '"]');
+      if (!slide || slide.dataset.bgLoaded === 'true') return;
+
+      var image = slide.getAttribute('data-bg-image');
+      if (!image) return;
+
+      slide.style.backgroundImage = "linear-gradient(rgba(13,31,60,0.58),rgba(13,31,60,0.58)),url('" + image.replace(/'/g, "%27") + "')";
+      slide.style.backgroundSize = 'cover';
+      slide.style.backgroundPosition = 'center';
+      slide.dataset.bgLoaded = 'true';
+    }
+
     function goToSlide(index) {
       carouselIndex = ((index % totalSlides) + totalSlides) % totalSlides;
+      ensureSlideBackground(carouselIndex);
+      ensureSlideBackground(carouselIndex + 1);
       carouselTrack.style.transform = 'translateX(-' + (carouselIndex * 100) + '%)';
       document.querySelectorAll('.carousel-dot').forEach(function(dot, i) {
         var active = i === carouselIndex;
@@ -2435,6 +2513,7 @@
     formspree('initForm', { formElement: '#newsletterForm', formId: 'mjgjogwj' });
   </script>
 
+  <script src="/assets/official-guides.js" defer></script>
   <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 
 </body>

@@ -160,6 +160,38 @@ img{max-width:100%;height:auto;display:block}
   margin:28px 0;
   color:var(--text-main);
 }
+.official-guide-box{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  border:1px solid var(--gray-200);
+  border-left:4px solid var(--orange);
+  border-radius:var(--radius-sm);
+  background:var(--gray-100);
+  margin:28px 0;
+  padding:20px 22px;
+}
+.official-guide-box p{margin:4px 0 0;font-size:.92rem;line-height:1.55}
+.official-guide-button{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  flex:0 0 auto;
+  min-height:44px;
+  padding:12px 18px;
+  border-radius:var(--radius-sm);
+  background:var(--orange);
+  color:var(--white)!important;
+  font-size:.82rem;
+  font-weight:900;
+  letter-spacing:.3px;
+  text-decoration:none!important;
+  box-shadow:0 10px 24px rgba(232,100,42,.22);
+  transition:background .2s ease,transform .2s ease;
+}
+.official-guide-button:hover{background:var(--orange-dark);transform:translateY(-2px)}
+[hidden]{display:none!important}
 .faq-item{
   margin-bottom:16px;
   padding:18px 20px;
@@ -209,6 +241,8 @@ img{max-width:100%;height:auto;display:block}
   .post-container{padding:32px 18px 64px}
   .post-body{padding:26px 20px;border-radius:var(--radius-sm)}
   .post-body h2{font-size:1.28rem;margin-top:32px}
+  .official-guide-box{align-items:flex-start;flex-direction:column}
+  .official-guide-button{width:100%}
   .cta-box{padding:28px 20px;border-radius:var(--radius-sm)}
 }
 @media(max-width:430px){

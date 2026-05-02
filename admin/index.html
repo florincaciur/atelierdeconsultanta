@@ -1222,6 +1222,12 @@
               Acest editor modifică deadline-ul afișat și data din countdown. Pentru datele SEO folosește tab-ul „SEO pagini”.
             </div>
 
+            <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px;align-items:center;">
+              <button class="btn btn-secondary" onclick="loadOfficialGuidesJson()">🔄 Reîncarcă linkuri ghid</button>
+              <button class="btn btn-primary" onclick="publishOfficialGuidesJson()" style="margin-left:auto;">🚀 Publică official-guides.json</button>
+            </div>
+
+            <div class="status-msg" id="officialGuidesStatus"></div>
             <div id="programsGrid" class="programs-grid"></div>
           </div>
         </section>
@@ -1477,7 +1483,7 @@
       <div class="grid-2">
         <div class="field-group">
           <label class="field-label" for="postInternalLinks">Linkuri interne</label>
-          <textarea id="postInternalLinks" class="field-textarea" rows="4" placeholder="/dr14.html&#10;/contact/"></textarea>
+          <textarea id="postInternalLinks" class="field-textarea" rows="4" placeholder="/dr-14-afir-conditii-eligibilitate-greseli-frecvente.html&#10;/contact/"></textarea>
         </div>
 
         <div class="field-group">
@@ -1542,8 +1548,8 @@
     {
       key: "dr14",
       label: "DR 14 — Ferme Mici",
-      file: "dr14.html",
-      url: SITE_BASE_URL + "/dr14.html"
+      file: "dr-14-afir-conditii-eligibilitate-greseli-frecvente.html",
+      url: SITE_BASE_URL + "/dr-14-afir-conditii-eligibilitate-greseli-frecvente.html"
     },
     {
       key: "digitalizare",
@@ -1584,8 +1590,8 @@
     {
       key: "autoconsum-publici",
       label: "Autoconsum Publici",
-      file: "autoconsum-publici.html",
-      url: SITE_BASE_URL + "/autoconsum-publici.html"
+      file: "autoconsum-public-fotovoltaice-institutii-publice.html",
+      url: SITE_BASE_URL + "/autoconsum-public-fotovoltaice-institutii-publice.html"
     }
   ];
 
@@ -1613,7 +1619,7 @@
     {
       key: "dr14",
       name: "DR 14 — Ferme Mici",
-      file: "dr14.html",
+      file: "dr-14-afir-conditii-eligibilitate-greseli-frecvente.html",
       deadline: "2026-07-31",
       maxAmount: "50.000 EUR",
       percentage: "85%",
@@ -1624,6 +1630,16 @@
       key: "digitalizare",
       name: "Digitalizare IMM",
       file: "digitalizare-imm.html",
+      deadline: "2026-06-30",
+      maxAmount: "100.000 EUR",
+      percentage: "conform ghidului",
+      status: "planning",
+      badgeLabel: "ÎN PREGĂTIRE"
+    },
+    {
+      key: "digitalizare-pnrr",
+      name: "Digitalizare IMM / PNRR",
+      file: "digitalizare-imm-pnrr/index.html",
       deadline: "2026-06-30",
       maxAmount: "100.000 EUR",
       percentage: "conform ghidului",
@@ -1671,9 +1687,29 @@
       badgeLabel: "ACTIV"
     },
     {
+      key: "fondul-modernizare",
+      name: "Fondul pentru Modernizare",
+      file: "fondul-de-modernizare/index.html",
+      deadline: "2026-12-31",
+      maxAmount: "conform apelului",
+      percentage: "conform ghidului",
+      status: "active",
+      badgeLabel: "ACTIV"
+    },
+    {
+      key: "fonduri-europene",
+      name: "Fonduri europene nerambursabile",
+      file: "fonduri-europene-nerambursabile-2026/index.html",
+      deadline: "2026-12-31",
+      maxAmount: "conform programului",
+      percentage: "conform ghidului",
+      status: "active",
+      badgeLabel: "ACTIV"
+    },
+    {
       key: "autoconsum-publici",
       name: "Autoconsum Publici",
-      file: "autoconsum-publici.html",
+      file: "autoconsum-public-fotovoltaice-institutii-publice.html",
       deadline: "2026-12-31",
       maxAmount: "10.000.000 EUR",
       percentage: "100%",
@@ -1683,6 +1719,7 @@
   ];
 
   let carouselBanners = [];
+  let officialGuides = {};
 
   let blogPosts = [];
   let currentSeoHtml = "";
@@ -1961,7 +1998,10 @@
     if (name === "seo") renderSeoSelect();
     if (name === "continut") renderContentSelect();
     if (name === "carusel") { if (!carouselBanners.length) loadBannersJson(); else renderCarouselGrid(); }
-    if (name === "programe") renderProgramsGrid();
+    if (name === "programe") {
+      if (!Object.keys(officialGuides).length) loadOfficialGuidesJson();
+      else renderProgramsGrid();
+    }
     if (name === "blog") loadBlogPosts();
     if (name === "termene") renderDeadlines();
   }
@@ -2709,6 +2749,87 @@
   /* ============================================================
      PROGRAMS EDITOR
   ============================================================ */
+  function getOfficialGuide(key) {
+    const guide = officialGuides[key];
+    if (!guide) return {};
+    if (typeof guide === "string") return { url: guide };
+    return guide;
+  }
+
+  function normalizeOfficialGuides(data) {
+    const normalized = { ...(data || {}) };
+
+    PROGRAMS_DATA.forEach(program => {
+      const rawGuide = normalized[program.key];
+      const guide = typeof rawGuide === "string" ? { url: rawGuide } : (rawGuide || {});
+      normalized[program.key] = {
+        name: guide.name || program.name,
+        url: String(guide.url || "").trim()
+      };
+    });
+
+    return normalized;
+  }
+
+  async function loadOfficialGuidesJson() {
+    const status = qs("#officialGuidesStatus");
+    if (status) showStatus(status, "Se încarcă official-guides.json...", "loading");
+
+    try {
+      const json = await downloadFileContent("official-guides.json");
+      officialGuides = normalizeOfficialGuides(JSON.parse(json));
+      if (status) showStatus(status, "Linkurile de ghid oficial au fost încărcate.", "success");
+    } catch (error) {
+      officialGuides = normalizeOfficialGuides({});
+      if (status) showStatus(status, "Nu am putut încărca official-guides.json. Poți completa linkurile și publica fișierul.", "error");
+    }
+
+    renderProgramsGrid();
+  }
+
+  function updateOfficialGuideLink(key, value) {
+    const program = PROGRAMS_DATA.find(item => item.key === key);
+    const current = getOfficialGuide(key);
+
+    officialGuides[key] = {
+      name: current.name || program?.name || key,
+      url: String(value || "").trim()
+    };
+  }
+
+  function clearOfficialGuideLink(key) {
+    updateOfficialGuideLink(key, "");
+
+      const input = qs(`#program-${key}-guide-url`);
+    if (input) input.value = "";
+
+    const status = qs(`#program-${key}-statusMsg`);
+    if (status) showStatus(status, "Linkul de ghid oficial a fost golit. Publică official-guides.json pentru aplicare pe site.", "success");
+  }
+
+  function syncOfficialGuideInputs() {
+    PROGRAMS_DATA.forEach(program => {
+      const input = qs(`#program-${program.key}-guide-url`);
+      if (input) updateOfficialGuideLink(program.key, input.value);
+    });
+  }
+
+  async function publishOfficialGuidesJson() {
+    const status = qs("#officialGuidesStatus");
+    syncOfficialGuideInputs();
+
+    showStatus(status, "Se publică official-guides.json în GitHub...", "loading");
+
+    try {
+      const json = JSON.stringify(normalizeOfficialGuides(officialGuides), null, 2) + "\n";
+      await uploadFileContent("official-guides.json", json, "Admin: actualizare linkuri ghid oficial");
+      showStatus(status, "official-guides.json publicat cu succes. Site-ul se actualizează în 1–2 minute.", "success");
+      toast("Linkurile de ghid oficial au fost publicate.");
+    } catch (error) {
+      showStatus(status, error.message, "error");
+    }
+  }
+
   function renderProgramsGrid() {
     const grid = qs("#programsGrid");
 
@@ -2719,6 +2840,8 @@
           : program.status === "planning"
             ? "badge-planning"
             : "badge-soon";
+      const guide = getOfficialGuide(program.key);
+      const guideUrl = String(guide.url || "").trim();
 
       return `
         <article class="mini-card">
@@ -2734,6 +2857,7 @@
             <button class="tab-btn active" onclick="switchMiniTab('${program.key}', 'info', this)">Info</button>
             <button class="tab-btn" onclick="switchMiniTab('${program.key}', 'deadline', this)">Deadline</button>
             <button class="tab-btn" onclick="switchMiniTab('${program.key}', 'status', this)">Status</button>
+            <button class="tab-btn" onclick="switchMiniTab('${program.key}', 'guide', this)">Ghid oficial</button>
           </div>
 
           <div class="tab-panel active" id="program-${program.key}-info">
@@ -2751,7 +2875,7 @@
           <div class="tab-panel" id="program-${program.key}-deadline">
             <div class="field-group">
               <label class="field-label">Termen limită</label>
-              <input id="program-${program.key}-deadline" class="field-input" type="date" value="${program.deadline}" />
+              <input id="program-${program.key}-deadline-date" class="field-input" type="date" value="${program.deadline}" />
             </div>
 
             <div class="help-text">
@@ -2762,7 +2886,7 @@
           <div class="tab-panel" id="program-${program.key}-status">
             <div class="field-group">
               <label class="field-label">Status</label>
-              <select id="program-${program.key}-status" class="field-select">
+              <select id="program-${program.key}-status-select" class="field-select">
                 <option value="active" ${program.status === "active" ? "selected" : ""}>ACTIV</option>
                 <option value="planning" ${program.status === "planning" ? "selected" : ""}>ÎN PREGĂTIRE</option>
                 <option value="soon" ${program.status === "soon" ? "selected" : ""}>ÎN CURÂND</option>
@@ -2773,6 +2897,22 @@
             <div class="field-group">
               <label class="field-label">Text badge</label>
               <input id="program-${program.key}-badge" class="field-input" value="${escapeAttr(program.badgeLabel)}" />
+            </div>
+          </div>
+
+          <div class="tab-panel" id="program-${program.key}-guide">
+            <div class="field-group">
+              <label class="field-label">Link ghid oficial</label>
+              <input id="program-${program.key}-guide-url" class="field-input" type="url" value="${escapeAttr(guideUrl)}" placeholder="https://..." onchange="updateOfficialGuideLink('${program.key}', this.value)" />
+            </div>
+
+            <div class="help-text">
+              Lasă câmpul gol ca butonul „LINK GHID OFICIAL” să fie ascuns pe site. Publicarea se face prin butonul „Publică official-guides.json”.
+            </div>
+
+            <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px;">
+              ${guideUrl ? `<a class="btn btn-secondary" href="${escapeAttr(guideUrl)}" target="_blank" rel="noopener noreferrer">Testează link</a>` : ""}
+              <button class="btn btn-danger" onclick="clearOfficialGuideLink('${program.key}')">Șterge link</button>
             </div>
           </div>
 
@@ -2787,7 +2927,7 @@
   }
 
   function switchMiniTab(programKey, tabName, button) {
-    ["info", "deadline", "status"].forEach(name => {
+    ["info", "deadline", "status", "guide"].forEach(name => {
       const panel = qs(`#program-${programKey}-${name}`);
       if (panel) panel.classList.toggle("active", name === tabName);
     });
@@ -2826,8 +2966,8 @@
 
     const amount = qs(`#program-${key}-amount`).value.trim();
     const percentage = qs(`#program-${key}-percentage`).value.trim();
-    const deadline = qs(`#program-${key}-deadline`).value;
-    const newStatus = qs(`#program-${key}-status`).value;
+    const deadline = qs(`#program-${key}-deadline-date`).value;
+    const newStatus = qs(`#program-${key}-status-select`).value;
     const badgeLabel = qs(`#program-${key}-badge`).value.trim();
 
     showStatus(status, "Se salvează modificările în pagina programului...", "loading");
@@ -3287,14 +3427,14 @@
     ["/consultanta-fonduri-europene/", "0.9"],
     ["/fonduri-europene-nerambursabile-2026/", "0.9"],
     ["/dr12-afir.html", "0.9"],
-    ["/dr14.html", "0.9"],
+    ["/dr-14-afir-conditii-eligibilitate-greseli-frecvente.html", "0.9"],
     ["/start-up-nation-2026.html", "0.9"],
     ["/femeia-antreprenor-2026.html", "0.9"],
     ["/digitalizare-imm.html", "0.9"],
     ["/digitalizare-imm-pnrr/", "0.8"],
     ["/fondul-de-modernizare/", "0.8"],
     ["/afir-autoconsum-agroalimentar.html", "0.8"],
-    ["/autoconsum-publici.html", "0.8"],
+    ["/autoconsum-public-fotovoltaice-institutii-publice.html", "0.8"],
     ["/por-adr-nord-est.html", "0.8"],
     ["/pro-infra.html", "0.8"],
     ["/calculator-soc.html", "0.8"],
@@ -3308,10 +3448,16 @@
 
   function buildSitemapXml(posts) {
     const today = new Date().toISOString().slice(0, 10);
-    const urls = SITEMAP_STATIC_URLS.map(([path, priority]) => ({ loc: SITE_BASE_URL + path, priority }));
-    posts.filter(post => post.status === "published").forEach(post => {
-      urls.push({ loc: post.canonicalUrl || `${SITE_BASE_URL}/${post.slug}.html`, priority: "0.7" });
+    const urlMap = new Map();
+    SITEMAP_STATIC_URLS.forEach(([path, priority]) => {
+      const loc = SITE_BASE_URL + path;
+      urlMap.set(loc, { loc, priority });
     });
+    posts.filter(post => post.status === "published").forEach(post => {
+      const loc = post.canonicalUrl || `${SITE_BASE_URL}/${post.slug}.html`;
+      if (!urlMap.has(loc)) urlMap.set(loc, { loc, priority: "0.7" });
+    });
+    const urls = Array.from(urlMap.values());
     return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map(url => `  <url>\n    <loc>${url.loc}</loc>\n    <lastmod>${today}</lastmod>\n    <changefreq>monthly</changefreq>\n    <priority>${url.priority}</priority>\n  </url>`).join("\n")}\n</urlset>\n`;
   }
 
