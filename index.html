@@ -2227,6 +2227,7 @@
       }, { passive: true });
 
       goToSlide(0);
+      document.dispatchEvent(new Event('official-guides:refresh'));
       startAutoPlay();
     }
 
