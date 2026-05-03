@@ -1,0 +1,15 @@
+[build]
+  publish = "."
+
+# Security headers applied to every response
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Tells browsers: always use HTTPS for this domain for 2 years,
+    # include subdomains, and add to HSTS preload list.
+    # After one HTTPS visit, Chrome/Firefox never attempt HTTP again.
+    Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
