@@ -16,11 +16,6 @@
   <meta name="twitter:card" content="summary_large_image" />
   <title>Atelier de Consultanță | Fonduri Europene și Finanțări Nerambursabile</title>
 
-  <!-- Preconnect pentru fonturi Google -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-
   <!-- ✦ Canonical URL pentru SEO ✦ -->
   <link rel="canonical" href="https://atelierdeconsultanta.ro/" />
 
@@ -164,6 +159,8 @@
       --navy-light:  #1a3a6a;
       --orange:      #e8642a;
       --orange-dark: #c4541f;
+      --orange-contrast: #b84716;
+      --orange-contrast-dark: #9d3a0f;
       --orange-glow: rgba(232, 100, 42, 0.25);
       --gold:        #f5a623;
       --white:       #ffffff;
@@ -209,7 +206,7 @@
     }
     .skip-link:focus {
       left: 16px; top: 16px; width: auto; height: auto; overflow: visible;
-      background: var(--orange); color: white; padding: 8px 16px; border-radius: var(--radius-sm);
+      background: var(--orange-contrast); color: white; padding: 8px 16px; border-radius: var(--radius-sm);
       z-index: 99999;
     }
 
@@ -247,14 +244,15 @@
       display: flex; align-items: center; gap: 4px;
     }
     .nav-links a {
+      display: inline-flex; align-items: center;
       color: rgba(255,255,255,0.82);
       font-size: 0.9rem; font-weight: 500;
-      padding: 8px 14px; border-radius: var(--radius-sm);
+      min-height: 44px; padding: 8px 14px; border-radius: var(--radius-sm);
       transition: color var(--transition), background var(--transition);
     }
     .nav-links a:hover { color: var(--white); background: rgba(255,255,255,0.08); }
     .nav-links .nav-cta {
-      background: var(--orange); color: var(--white);
+      background: var(--orange-contrast); color: var(--white);
       padding: 10px 20px; border-radius: var(--radius-sm);
       font-weight: 600; margin-left: 8px;
       position: relative; overflow: hidden;
@@ -265,13 +263,13 @@
       transform: translateX(-100%); transition: transform 0.5s ease;
     }
     .nav-links .nav-cta:hover::after { transform: translateX(100%); }
-    .nav-links .nav-cta:hover { background: var(--orange-dark); }
+    .nav-links .nav-cta:hover { background: var(--orange-contrast-dark); }
 
     .nav-dropdown { position: relative; }
     .nav-dropdown-btn {
       display: flex; align-items: center; gap: 6px;
       color: rgba(255,255,255,0.82); font-size: 0.9rem; font-weight: 500;
-      padding: 8px 14px; border-radius: var(--radius-sm);
+      min-height: 44px; padding: 8px 14px; border-radius: var(--radius-sm);
       background: none; cursor: pointer;
       transition: color var(--transition), background var(--transition);
     }
@@ -315,7 +313,7 @@
     }
     .dropdown-item {
       display: flex; align-items: center; gap: 10px;
-      padding: 10px 12px; border-radius: var(--radius-sm);
+      min-height: 44px; padding: 10px 12px; border-radius: var(--radius-sm);
       color: rgba(255,255,255,0.8); font-size: 0.82rem; font-weight: 500;
       transition: background var(--transition), color var(--transition);
     }
@@ -327,11 +325,11 @@
       font-size: 1rem; flex-shrink: 0;
     }
     .dropdown-item .d-text { font-size: 0.78rem; line-height: 1.3; }
-    .dropdown-item .d-label { color: rgba(255,255,255,0.5); font-size: 0.68rem; }
+    .dropdown-item .d-label { color: rgba(255,255,255,0.72); font-size: 0.68rem; }
 
     .hamburger {
       display: none; flex-direction: column; gap: 5px;
-      width: 36px; height: 36px; justify-content: center; align-items: center;
+      width: 44px; height: 44px; justify-content: center; align-items: center;
       border-radius: var(--radius-sm); background: rgba(255,255,255,0.08);
     }
     .hamburger span {
@@ -362,7 +360,7 @@
       color: var(--orange); padding: 16px 16px 8px; font-weight: 600;
     }
     .mobile-cta {
-      background: var(--orange) !important; color: var(--white) !important;
+      background: var(--orange-contrast) !important; color: var(--white) !important;
       text-align: center !important; font-weight: 600 !important;
       margin-top: 12px; border-radius: var(--radius-sm) !important;
     }
@@ -414,8 +412,8 @@
       animation: pulseDot 2s infinite;
     }
     @keyframes pulseDot {
-      0%, 100% { box-shadow: 0 0 0 0 rgba(232,100,42,0.6); }
-      50% { box-shadow: 0 0 0 8px rgba(232,100,42,0); }
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.45; transform: scale(1.75); }
     }
     .hero-title {
       font-size: clamp(2.4rem, 5vw, 4rem); font-weight: 900; line-height: 1.1;
@@ -438,7 +436,7 @@
     }
     .btn-primary {
       display: inline-flex; align-items: center; gap: 8px;
-      background: var(--orange); color: var(--white);
+      background: var(--orange-contrast); color: var(--white);
       padding: 15px 32px; border-radius: var(--radius-sm);
       font-size: 1rem; font-weight: 700;
       position: relative; overflow: hidden;
@@ -451,7 +449,7 @@
       transform: translateX(-100%); transition: transform 0.5s ease;
     }
     .btn-primary:hover::after { transform: translateX(100%); }
-    .btn-primary:hover { background: var(--orange-dark); transform: translateY(-2px); box-shadow: 0 14px 40px rgba(232,100,42,0.5); }
+    .btn-primary:hover { background: var(--orange-contrast-dark); transform: translateY(-2px); box-shadow: 0 14px 40px rgba(232,100,42,0.5); }
     .btn-secondary {
       display: inline-flex; align-items: center; gap: 8px;
       background: rgba(255,255,255,0.1); color: var(--white);
@@ -474,7 +472,7 @@
       background: linear-gradient(135deg, var(--orange), var(--gold));
       -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
     }
-    .hero-stat .label { font-size: 0.82rem; color: rgba(255,255,255,0.55); margin-top: 4px; }
+    .hero-stat .label { font-size: 0.82rem; color: rgba(255,255,255,0.74); margin-top: 4px; }
 
     @keyframes fadeInDown {
       from { opacity: 0; transform: translateY(-20px); }
@@ -554,13 +552,13 @@
     .slide-amount strong { color: var(--gold); font-weight: 700; }
     .slide-cta {
       display: inline-flex; align-items: center; gap: 8px;
-      background: var(--orange); color: var(--white);
+      background: var(--orange-contrast); color: var(--white);
       padding: 13px 28px; border-radius: var(--radius-sm);
       font-size: 0.9rem; font-weight: 700;
       transition: background var(--transition), transform var(--transition);
       box-shadow: 0 8px 24px rgba(232,100,42,0.4);
     }
-    .slide-cta:hover { background: var(--orange-dark); transform: translateY(-2px); }
+    .slide-cta:hover { background: var(--orange-contrast-dark); transform: translateY(-2px); }
     .slide-actions { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
     .slide-guide-cta {
       background: rgba(255,255,255,0.1);
@@ -590,14 +588,23 @@
     .carousel-btn.next { right: 20px; }
 
     .carousel-dots {
-      display: flex; justify-content: center; gap: 8px; padding: 24px 0;
+      display: flex; justify-content: center; gap: 4px; padding: 12px 0;
     }
     .carousel-dot {
-      width: 8px; height: 8px; border-radius: 50%;
-      background: rgba(13,31,60,0.25); border: none;
-      cursor: pointer; transition: all var(--transition);
+      width: 44px; height: 44px; border-radius: 50%;
+      background: transparent; border: none;
+      cursor: pointer; transition: transform var(--transition);
+      position: relative;
     }
-    .carousel-dot.active { width: 28px; border-radius: 4px; background: var(--orange); }
+    .carousel-dot::before {
+      content: ''; position: absolute; left: 50%; top: 50%;
+      width: 8px; height: 8px; border-radius: 50%;
+      background: rgba(13,31,60,0.35);
+      transform: translate(-50%, -50%);
+      transition: transform var(--transition);
+    }
+    .carousel-dot.active::before { background: var(--orange); transform: translate(-50%, -50%) scaleX(3.5); }
+    .carousel-dot:focus-visible { outline: 3px solid rgba(232,100,42,0.35); outline-offset: -4px; }
 
     .carousel-progress {
       position: absolute; bottom: 0; left: 0;
@@ -695,7 +702,7 @@
       background: linear-gradient(135deg, var(--orange), var(--gold));
       -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1;
     }
-    .stat-card .stat-label { color: rgba(255,255,255,0.6); font-size: 0.85rem; margin-top: 6px; }
+    .stat-card .stat-label { color: rgba(255,255,255,0.78); font-size: 0.85rem; margin-top: 6px; }
 
     /* ============================================================
        ✦ FINANȚĂRI ✦
@@ -726,6 +733,7 @@
     .finantare-amount strong { color: var(--orange); font-weight: 700; }
     .finantare-link {
       display: inline-flex; align-items: center; gap: 6px;
+      min-height: 44px;
       font-size: 0.85rem; font-weight: 600; color: var(--orange);
       transition: gap var(--transition);
     }
@@ -821,6 +829,7 @@
     .blog-meta { font-size: 0.78rem; color: var(--gray-600); display: flex; gap: 12px; }
     .blog-read-more {
       display: inline-flex; align-items: center; gap: 6px; margin-top: 16px;
+      min-height: 44px;
       font-size: 0.85rem; font-weight: 600; color: var(--orange);
       background: none; border: none; cursor: pointer; padding: 0;
       text-decoration: none;
@@ -900,6 +909,7 @@
       border-radius: 999px;
       background: var(--white);
       color: var(--text-soft);
+      min-height: 44px;
       padding: 9px 16px;
       font-size: 0.82rem;
       font-weight: 800;
@@ -909,7 +919,7 @@
     .beneficiary-toggle.active,
     .beneficiary-toggle:hover {
       border-color: var(--orange);
-      background: var(--orange);
+      background: var(--orange-contrast);
       color: var(--white);
     }
     .beneficiary-chip {
@@ -950,7 +960,7 @@
     }
     .contact-container { max-width: 900px; margin: 0 auto; position: relative; z-index: 2; }
     .contact-container .section-title { color: var(--white); }
-    .contact-container .section-subtitle { color: rgba(255,255,255,0.65); }
+    .contact-container .section-subtitle { color: rgba(255,255,255,0.78); }
     .contact-form {
       background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
       border-radius: var(--radius-lg); padding: 48px; backdrop-filter: blur(12px);
@@ -966,7 +976,7 @@
       transition: border-color var(--transition), background var(--transition);
       outline: none; width: 100%;
     }
-    .form-group input::placeholder, .form-group textarea::placeholder { color: rgba(255,255,255,0.35); }
+    .form-group input::placeholder, .form-group textarea::placeholder { color: rgba(255,255,255,0.66); }
     .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
       border-color: var(--orange); background: rgba(255,255,255,0.12);
     }
@@ -974,16 +984,16 @@
     .form-group textarea { resize: vertical; min-height: 120px; }
     .form-consent { display: flex; gap: 10px; align-items: flex-start; margin: 20px 0; }
     .form-consent input[type="checkbox"] { margin-top: 3px; flex-shrink: 0; width: 16px; height: 16px; }
-    .form-consent label { font-size: 0.82rem; color: rgba(255,255,255,0.6); line-height: 1.5; }
+    .form-consent label { font-size: 0.82rem; color: rgba(255,255,255,0.78); line-height: 1.5; }
     .form-consent a { color: var(--orange); text-decoration: underline; }
     .form-submit {
       width: 100%; padding: 16px; font-size: 1rem; font-weight: 700;
-      background: var(--orange); color: white; border-radius: var(--radius-sm);
+      background: var(--orange-contrast); color: white; border-radius: var(--radius-sm);
       border: none; cursor: pointer; position: relative; overflow: hidden;
       transition: background var(--transition), transform var(--transition);
       box-shadow: 0 8px 30px rgba(232,100,42,0.4);
     }
-    .form-submit:hover { background: var(--orange-dark); transform: translateY(-1px); }
+    .form-submit:hover { background: var(--orange-contrast-dark); transform: translateY(-1px); }
     .form-success { display: none; text-align: center; padding: 32px; color: rgba(255,255,255,0.9); }
     .form-success.show { display: block; }
     .success-icon { font-size: 3rem; margin-bottom: 16px; }
@@ -999,7 +1009,7 @@
     }
     .footer-brand .logo { display: flex; align-items: center; margin-bottom: 12px; }
     .footer-brand .logo svg { height: 38px; width: auto; }
-    .footer-brand > p { font-size: 0.875rem; color: rgba(255,255,255,0.5); line-height: 1.7; max-width: 280px; }
+    .footer-brand > p { font-size: 0.875rem; color: rgba(255,255,255,0.74); line-height: 1.7; max-width: 280px; }
     .anpc-badges { display: flex; flex-direction: column; gap: 10px; margin-top: 20px; }
     .anpc-badge {
       display: flex; align-items: center; gap: 10px;
@@ -1015,22 +1025,30 @@
     .anpc-badge-icon.anpc-bg { background: rgba(0, 120, 212, 0.2); }
     .anpc-badge-icon.sal-bg { background: rgba(34, 197, 94, 0.2); }
     .anpc-badge-icon.gdpr-bg { background: rgba(139, 92, 246, 0.2); }
-    .anpc-badge-text { font-size: 0.72rem; color: rgba(255,255,255,0.6); }
+    .anpc-badge-text { font-size: 0.72rem; color: rgba(255,255,255,0.76); }
     .anpc-badge-text strong { display: block; color: rgba(255,255,255,0.85); font-size: 0.8rem; font-weight: 600; }
-    .footer-col h4 {
+    .footer-heading {
       font-size: 0.8rem; font-weight: 700; letter-spacing: 1.5px;
-      text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 16px;
+      text-transform: uppercase; color: rgba(255,255,255,0.72); margin-bottom: 16px;
     }
-    .footer-col ul { display: flex; flex-direction: column; gap: 10px; }
-    .footer-col ul li a { font-size: 0.875rem; color: rgba(255,255,255,0.6); transition: color var(--transition); }
+    .footer-col ul { display: flex; flex-direction: column; gap: 4px; }
+    .footer-col ul li a {
+      display: inline-flex; align-items: center;
+      min-height: 44px;
+      font-size: 0.875rem; color: rgba(255,255,255,0.78); transition: color var(--transition);
+    }
     .footer-col ul li a:hover { color: var(--orange); }
     .footer-bottom {
       max-width: 1200px; margin: 0 auto; padding: 20px 0;
       display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;
     }
-    .footer-bottom p { font-size: 0.8rem; color: rgba(255,255,255,0.35); }
+    .footer-bottom p { font-size: 0.8rem; color: rgba(255,255,255,0.72); }
     .footer-legal { display: flex; gap: 20px; }
-    .footer-legal a { font-size: 0.8rem; color: rgba(255,255,255,0.4); transition: color var(--transition); }
+    .footer-legal a {
+      display: inline-flex; align-items: center;
+      min-height: 44px;
+      font-size: 0.8rem; color: rgba(255,255,255,0.76); transition: color var(--transition);
+    }
     .footer-legal a:hover { color: var(--orange); }
 
     /* ============================================================
@@ -1076,7 +1094,7 @@
     .modal-title { font-size: 1.4rem; font-weight: 800; color: white; }
     .modal-close {
       position: absolute; top: 20px; right: 20px;
-      width: 36px; height: 36px; border-radius: 50%;
+      width: 44px; height: 44px; border-radius: 50%;
       background: rgba(255,255,255,0.1); color: white; font-size: 1.2rem;
       display: flex; align-items: center; justify-content: center;
       transition: background var(--transition);
@@ -1088,7 +1106,7 @@
     #backToTop {
       position: fixed; bottom: 28px; right: 28px; z-index: 900;
       width: 48px; height: 48px; border-radius: 50%;
-      background: var(--orange); color: white; border: none; font-size: 1.2rem;
+      background: var(--orange-contrast); color: white; border: none; font-size: 1.2rem;
       display: flex; align-items: center; justify-content: center;
       opacity: 0; pointer-events: none;
       transition: opacity var(--transition), transform var(--transition);
@@ -1123,11 +1141,11 @@
       .contact-form { padding: 28px 20px; }
       .despre-stats { grid-template-columns: 1fr 1fr; }
       .card-carousel {
-        grid-template-columns: 42px minmax(0, 1fr) 42px;
+        grid-template-columns: 44px minmax(0, 1fr) 44px;
         gap: 10px;
       }
       .card-carousel-btn {
-        width: 42px;
+        width: 44px;
         height: 58px;
         font-size: 1.1rem;
       }
@@ -1163,64 +1181,65 @@
         </svg>
       </a>
 
-      <div class="nav-links" role="menubar">
-        <a href="#servicii" role="menuitem">Servicii</a>
-        <a href="#despre" role="menuitem">Despre noi</a>
-        <a href="#finantare" role="menuitem">Finanțări</a>
-        <a href="#blog" role="menuitem">Blog</a>
+      <div class="nav-links">
+        <a href="#servicii">Servicii</a>
+        <a href="#despre">Despre noi</a>
+        <a href="#finantare">Finanțări</a>
+        <a href="#blog">Blog</a>
 
         <div class="nav-dropdown" data-section-id="nav-dropdown-programe">
           <button class="nav-dropdown-btn"
+                  type="button"
                   id="dropdownBtn"
                   aria-haspopup="true"
                   aria-expanded="false"
                   aria-controls="dropdownPanel">
             Programe <span class="arrow" aria-hidden="true"></span>
           </button>
-          <div class="nav-dropdown-panel" id="dropdownPanel" role="menu" aria-labelledby="dropdownBtn">
+          <div class="nav-dropdown-panel" id="dropdownPanel" aria-labelledby="dropdownBtn">
             <div class="dropdown-header">Programe de finanțare 2026</div>
 
-            <a href="por-adr-nord-est.html" class="dropdown-item" role="menuitem" data-service-id="por-adr-ne">
+            <a href="por-adr-nord-est.html" class="dropdown-item" data-service-id="por-adr-ne">
               <div class="d-icon" style="background:rgba(59,130,246,0.2)"><i class="ph-duotone ph-buildings" style="color:#93c5fd"></i></div>
               <div class="d-text">POR ADR Nord-Est<div class="d-label">Microîntreprinderi | până la 300.000 EUR</div></div>
             </a>
 
-            <a href="dr12-afir.html" class="dropdown-item" role="menuitem" data-service-id="dr12-afir">
+            <a href="dr12-afir.html" class="dropdown-item" data-service-id="dr12-afir">
               <div class="d-icon" style="background:rgba(34,197,94,0.2)"><i class="ph-duotone ph-plant" style="color:#86efac"></i></div>
               <div class="d-text">DR 12 / AFIR<div class="d-label">Tineri Fermieri | până la 200.000 EUR</div></div>
             </a>
 
-            <a href="afir-autoconsum-agroalimentar.html" class="dropdown-item" role="menuitem" data-service-id="afir-autoconsum">
+            <a href="afir-autoconsum-agroalimentar.html" class="dropdown-item" data-service-id="afir-autoconsum">
               <div class="d-icon" style="background:rgba(234,179,8,0.2)"><i class="ph-duotone ph-sun" style="color:#fde68a"></i></div>
               <div class="d-text">AFIR Autoconsum Agro<div class="d-label">100% nerambursabil</div></div>
             </a>
 
-            <a href="autoconsum-public-fotovoltaice-institutii-publice.html" class="dropdown-item" role="menuitem" data-service-id="autoconsum-pub">
+            <a href="autoconsum-public-fotovoltaice-institutii-publice.html" class="dropdown-item" data-service-id="autoconsum-pub">
               <div class="d-icon" style="background:rgba(139,92,246,0.2)"><i class="ph-duotone ph-bank" style="color:#c4b5fd"></i></div>
               <div class="d-text">Autoconsum Publici<div class="d-label">Instituții publice | 100%</div></div>
             </a>
 
-            <a href="dr-14-afir-conditii-eligibilitate-greseli-frecvente.html" class="dropdown-item" role="menuitem" data-service-id="dr14">
+            <a href="dr-14-afir-conditii-eligibilitate-greseli-frecvente.html" class="dropdown-item" data-service-id="dr14">
               <div class="d-icon" style="background:rgba(34,197,94,0.2)"><i class="ph-duotone ph-tractor" style="color:#86efac"></i></div>
               <div class="d-text">DR 14 – Ferme Mici<div class="d-label">PAC 2023-2027 | până la 50.000 EUR</div></div>
             </a>
 
-            <a href="digitalizare-imm.html" class="dropdown-item" role="menuitem" data-service-id="digitalizare-imm">
+            <a href="digitalizare-imm.html" class="dropdown-item" data-service-id="digitalizare-imm">
               <div class="d-icon" style="background:rgba(14,165,233,0.2)"><i class="ph-duotone ph-desktop" style="color:#7dd3fc"></i></div>
               <div class="d-text">Digitalizare IMM<div class="d-label">Transformare Digitală | 90%</div></div>
             </a>
 
-            <a href="femeia-antreprenor-2026.html" class="dropdown-item" role="menuitem" data-service-id="femeia-antreprenor">
+            <a href="femeia-antreprenor-2026.html" class="dropdown-item" data-service-id="femeia-antreprenor">
               <div class="d-icon" style="background:rgba(236,72,153,0.2)"><i class="ph-duotone ph-user-circle" style="color:#f9a8d4"></i></div>
               <div class="d-text">Femeia Antreprenor 2026<div class="d-label">Antreprenoriat Feminin</div></div>
             </a>
 
-            <a href="pro-infra.html" class="dropdown-item" role="menuitem" data-service-id="pro-infra">
+            <a href="pro-infra.html" class="dropdown-item" data-service-id="pro-infra">
               <div class="d-icon" style="background:rgba(251,146,60,0.2)"><i class="ph-duotone ph-factory" style="color:#fdba74"></i></div>
               <div class="d-text">PRO INFRA<div class="d-label">Materiale Construcții | până la 15M EUR</div></div>
             </a>
 
-            <a href="start-up-nation-2026.html" class="dropdown-item" role="menuitem" data-service-id="startup-nation">
+            <a href="start-up-nation-2026.html" class="dropdown-item" data-service-id="startup-nation">
               <div class="d-icon" style="background:rgba(139,92,246,0.2)"><i class="ph-duotone ph-rocket-launch" style="color:#a78bfa"></i></div>
               <div class="d-text">Start-Up Nation 2026<div class="d-label">Antreprenoriat | 250.000 RON</div></div>
             </a>
@@ -1229,12 +1248,12 @@
 
         <a href="calculator-soc.html" style="color:rgba(255,255,255,0.8);font-size:0.85rem;font-weight:600;padding:8px 14px;border-radius:8px;border:1px solid rgba(232,100,42,0.35);transition:all 0.3s;" onmouseover="this.style.background='rgba(232,100,42,0.15)'" onmouseout="this.style.background='transparent'">🧮 Calculator SOC</a>
 
-        <a href="#contact" role="menuitem" style="color:rgba(255,255,255,0.8);font-size:0.85rem;font-weight:600;padding:8px 14px;border-radius:8px;transition:all 0.3s;" onmouseover="this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.background='transparent'">Contact</a>
+        <a href="#contact" style="color:rgba(255,255,255,0.8);font-size:0.85rem;font-weight:600;padding:8px 14px;border-radius:8px;transition:all 0.3s;" onmouseover="this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.background='transparent'">Contact</a>
 
-        <a href="#contact" class="nav-cta" role="menuitem">Consultanță Gratuită</a>
+        <a href="#contact" class="nav-cta">Consultanță Gratuită</a>
       </div>
 
-      <button class="hamburger" id="hamburgerBtn"
+      <button class="hamburger" id="hamburgerBtn" type="button"
               aria-label="Deschide meniu" aria-expanded="false" aria-controls="mobileMenu">
         <span></span><span></span><span></span>
       </button>
@@ -1242,7 +1261,7 @@
   </nav>
 
   <!-- ✦ Meniu mobil full-screen ✦ -->
-  <div id="mobileMenu" role="dialog" aria-label="Meniu mobil" aria-modal="false">
+  <div id="mobileMenu" aria-label="Meniu mobil">
     <nav class="mobile-links">
       <a href="#servicii" onclick="closeMobileMenu()">Servicii</a>
       <a href="#despre" onclick="closeMobileMenu()">Despre noi</a>
@@ -1345,11 +1364,11 @@
           <!-- Slide-urile sunt injectate dinamic din banners.json -->
         </div>
 
-        <button class="carousel-btn prev" id="carouselPrev" aria-label="Slide anterior" onclick="carouselMove(-1)">&#8592;</button>
-        <button class="carousel-btn next" id="carouselNext" aria-label="Slide următor" onclick="carouselMove(1)">&#8594;</button>
+        <button class="carousel-btn prev" id="carouselPrev" type="button" aria-label="Slide anterior" onclick="carouselMove(-1)">&#8592;</button>
+        <button class="carousel-btn next" id="carouselNext" type="button" aria-label="Slide următor" onclick="carouselMove(1)">&#8594;</button>
       </div>
 
-      <div class="carousel-dots" id="carouselDots" role="tablist" aria-label="Navigare carusel"></div>
+      <div class="carousel-dots" id="carouselDots" aria-label="Navigare carusel"></div>
     </section>
 
     <!-- ============================================================
@@ -1775,9 +1794,9 @@
 
           <button type="submit"
                   data-fs-submit-btn
-                  style="padding:15px 28px;background:#e8642a;color:white;border:none;border-radius:8px;font-size:0.95rem;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;transition:background 0.3s,transform 0.2s;white-space:nowrap;"
-                  onmouseover="this.style.background='#c4541f';this.style.transform='translateY(-2px)'"
-                  onmouseout="this.style.background='#e8642a';this.style.transform='translateY(0)'">
+                  style="padding:15px 28px;background:#b84716;color:white;border:none;border-radius:8px;font-size:0.95rem;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;transition:background 0.3s,transform 0.2s;white-space:nowrap;"
+                  onmouseover="this.style.background='#9d3a0f';this.style.transform='translateY(-2px)'"
+                  onmouseout="this.style.background='#b84716';this.style.transform='translateY(0)'">
             Notifică-mă →
           </button>
         </form>
@@ -1787,8 +1806,8 @@
           <strong>Ești înscris!</strong> Te vom notifica imediat când se lansează un nou program de finanțare.
         </div>
 
-        <p style="font-size:0.75rem;color:rgba(255,255,255,0.35);margin-top:20px;">
-          Prin abonare ești de acord cu <a href="politica-de-confidentialitate.html" style="color:rgba(255,255,255,0.5);text-decoration:underline;">Politica de confidențialitate</a>.
+        <p style="font-size:0.75rem;color:rgba(255,255,255,0.72);margin-top:20px;">
+          Prin abonare ești de acord cu <a href="politica-de-confidentialitate.html" style="color:rgba(255,255,255,0.82);text-decoration:underline;">Politica de confidențialitate</a>.
           Poți dezabona oricând.
         </p>
       </div>
@@ -1952,7 +1971,7 @@
       </div>
 
       <div class="footer-col">
-        <h4>Servicii</h4>
+        <h2 class="footer-heading">Servicii</h2>
         <ul>
           <li><a href="#servicii">Identificare finanțări</a></li>
           <li><a href="#servicii">Elaborare dosare</a></li>
@@ -1965,7 +1984,7 @@
       </div>
 
       <div class="footer-col">
-        <h4>Programe</h4>
+        <h2 class="footer-heading">Programe</h2>
         <ul>
           <li><a href="por-adr-nord-est.html">POR ADR Nord-Est</a></li>
           <li><a href="dr12-afir.html">DR 12 / AFIR</a></li>
@@ -1982,7 +2001,7 @@
       </div>
 
       <div class="footer-col">
-        <h4>Informații</h4>
+        <h2 class="footer-heading">Informații</h2>
         <ul>
           <li><a href="termeni-si-conditii.html">Termeni și condiții</a></li>
           <li><a href="politica-de-confidentialitate.html">Politica de confidențialitate</a></li>
@@ -2009,14 +2028,14 @@
     </div>
   </footer>
 
-  <button id="backToTop" aria-label="Înapoi sus" onclick="scrollToTop()">↑</button>
+  <button id="backToTop" type="button" aria-label="Înapoi sus" onclick="scrollToTop()">↑</button>
 
   <div class="modal-overlay" id="modalOverlay" role="dialog" aria-modal="true"
        aria-labelledby="modalTitle" onclick="closeModal(event)">
     <div class="modal-box">
       <div class="modal-header">
         <h2 class="modal-title" id="modalTitle">Detalii Program</h2>
-        <button class="modal-close" onclick="closeModal()" aria-label="Închide">×</button>
+        <button class="modal-close" type="button" onclick="closeModal()" aria-label="Închide">×</button>
       </div>
       <div class="modal-body" id="modalBody">
         <p>Se încarcă informațiile programului...</p>
@@ -2138,10 +2157,10 @@
       for (var i = 0; i < total; i++) {
         (function(idx) {
           var dot = document.createElement('button');
+          dot.type = 'button';
           dot.className = 'carousel-dot' + (idx === 0 ? ' active' : '');
-          dot.setAttribute('role', 'tab');
           dot.setAttribute('aria-label', 'Slide ' + (idx + 1) + ' din ' + total);
-          dot.setAttribute('aria-selected', idx === 0 ? 'true' : 'false');
+          dot.setAttribute('aria-current', idx === 0 ? 'true' : 'false');
           dot.addEventListener('click', function() {
             clearInterval(carouselTimer);
             goToSlide(idx);
@@ -2175,7 +2194,7 @@
       document.querySelectorAll('.carousel-dot').forEach(function(dot, i) {
         var active = i === carouselIndex;
         dot.classList.toggle('active', active);
-        dot.setAttribute('aria-selected', String(active));
+        dot.setAttribute('aria-current', String(active));
       });
       restartProgressBar();
     }
@@ -2570,15 +2589,21 @@
       }
     }
 
-    window.addEventListener('load', function () {
-      window.setTimeout(function () {
-        var script = document.createElement('script');
-        script.src = 'https://unpkg.com/@phosphor-icons/web@2.1.1';
-        script.async = true;
-        script.crossOrigin = 'anonymous';
-        document.head.appendChild(script);
-      }, 700);
-    });
+    (function () {
+      var iconsLoaded = false;
+      function loadIconStyles() {
+        if (iconsLoaded) return;
+        iconsLoaded = true;
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.href = 'https://unpkg.com/@phosphor-icons/web@2.1.1/src/duotone/style.css';
+        link.crossOrigin = 'anonymous';
+        document.head.appendChild(link);
+      }
+      ['pointerdown', 'mousemove', 'keydown', 'touchstart', 'scroll'].forEach(function (eventName) {
+        window.addEventListener(eventName, loadIconStyles, { once: true, passive: true });
+      });
+    })();
   </script>
 
   <script src="/assets/official-guides.js" defer></script>

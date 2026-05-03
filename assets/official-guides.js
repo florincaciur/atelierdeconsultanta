@@ -61,10 +61,6 @@
   window.addEventListener("load", scheduleApply);
   document.addEventListener("official-guides:refresh", scheduleApply);
 
-  [150, 700, 1600, 3000].forEach(function (delay) {
-    window.setTimeout(scheduleApply, delay);
-  });
-
   fetch("/official-guides.json", { cache: "no-store" })
     .then(function (response) {
       if (!response.ok) throw new Error("Nu se poate incarca official-guides.json");
