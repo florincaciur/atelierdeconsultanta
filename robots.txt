@@ -1,60 +1,56 @@
-# robots.txt - FABER Atelier de Consultanta
+# robots.txt - Atelier de Consultanta
 # https://atelierdeconsultanta.ro
-# Public pages are crawlable. Admin is intentionally blocked and noindex.
+# Public content is crawlable. The admin area is intentionally private/noindex.
 
 User-agent: *
 Allow: /
 Disallow: /admin/
 
-# OpenAI / ChatGPT
-User-agent: GPTBot
-Allow: /
-
-# Anthropic / Claude
-User-agent: ClaudeBot
-Allow: /
-User-agent: anthropic-ai
-Allow: /
-User-agent: Claude-Web
-Allow: /
-
-# Google / Gemini
 User-agent: Googlebot
 Allow: /
-User-agent: Google-Extended
-Allow: /
+Disallow: /admin/
 
-# Microsoft Bing / Copilot
 User-agent: Bingbot
 Allow: /
+Disallow: /admin/
 
-# Perplexity AI
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /admin/
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /admin/
+
+User-agent: GPTBot
+Allow: /
+Disallow: /admin/
+
 User-agent: PerplexityBot
 Allow: /
+Disallow: /admin/
 
-# Meta AI
-User-agent: FacebookBot
+User-agent: ClaudeBot
 Allow: /
+Disallow: /admin/
 
-# Apple
+User-agent: anthropic-ai
+Allow: /
+Disallow: /admin/
+
+User-agent: Claude-Web
+Allow: /
+Disallow: /admin/
+
 User-agent: Applebot
 Allow: /
-User-agent: Applebot-Extended
-Allow: /
+Disallow: /admin/
 
-# Common Crawl
 User-agent: CCBot
 Allow: /
-
-# Cohere AI
-User-agent: cohere-ai
-Allow: /
-
-# DeepSeek
-User-agent: DeepSeek
-Allow: /
+Disallow: /admin/
 
 Sitemap: https://atelierdeconsultanta.ro/sitemap.xml
 
-# llms.txt for AI
+# AI context file:
 # https://atelierdeconsultanta.ro/llms.txt

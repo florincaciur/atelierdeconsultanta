@@ -396,7 +396,7 @@
 
         <h2>Articole despre AFIR, DR12 și DR14</h2>
 
-        <p>Programele agricole administrate prin AFIR — în special <a href="/dr12-afir.html">DR 12</a> pentru tinerii fermieri și <a href="/dr14.html">DR 14</a> pentru fermele mici — sunt printre cele mai accesate finanțări din mediul rural. Cu un sprijin nerambursabil de până la 200.000 EUR (DR 12) respectiv 50.000 EUR (DR 14), aceste programe pot finanța investiții în utilaje, construcții agricole, echipamente sau sisteme de irigații, în funcție de ghidul solicitantului activ la momentul depunerii.</p>
+        <p>Programele agricole administrate prin AFIR — în special <a href="/dr12-afir.html">DR 12</a> pentru tinerii fermieri și <a href="/dr-14-afir-conditii-eligibilitate-greseli-frecvente.html">DR 14</a> pentru fermele mici — sunt printre cele mai accesate finanțări din mediul rural. Cu un sprijin nerambursabil de până la 200.000 EUR (DR 12) respectiv 50.000 EUR (DR 14), aceste programe pot finanța investiții în utilaje, construcții agricole, echipamente sau sisteme de irigații, în funcție de ghidul solicitantului activ la momentul depunerii.</p>
 
         <p>Un element esențial pentru ambele programe este <strong>Standard Output-ul (SO)</strong> — dimensiunea economică a exploatației, calculată pe baza culturilor și a animalelor înregistrate. Dacă nu știi care este SO-ul fermei tale, poți folosi <a href="/calculator-soc.html">Calculatorul SO AFIR</a> disponibil gratuit pe site.</p>
 
@@ -610,7 +610,7 @@
     // Încărcăm blog.json o singură dată
     let posts = [];
     try {
-      const resp = await fetch('/blog.json?t=' + Date.now());
+      const resp = await fetch('/blog.json');
       if (!resp.ok) throw new Error('fetch failed');
       const data = await resp.json();
       posts = (data.posts || []).filter(p => p.published !== false);
@@ -729,7 +729,7 @@
       const postHref = p.canonicalUrl || ((p.slug || p.id) + '.html');
       const imgHtml = p.bannerImage
         ? `<div class="post-card-img" style="background:none; padding:0; height:160px; overflow:hidden;">
-             <img src="${p.bannerImage}" alt="${p.bannerAlt || p.title}" style="width:100%;height:160px;object-fit:cover;" />
+             <img src="${p.bannerImage}" alt="${p.bannerAlt || p.title}" loading="lazy" decoding="async" style="width:100%;height:160px;object-fit:cover;" />
            </div>`
         : `<div class="post-card-img">${p.icon || '📰'}</div>`;
       card.innerHTML = `

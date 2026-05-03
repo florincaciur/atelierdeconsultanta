@@ -5,24 +5,21 @@
   <meta charset="UTF-8" />
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Consultanță pentru fonduri europene nerambursabile: PNRR, POR, AFIR, Digitalizare IMM și programe pentru antreprenori." />
+  <meta name="description" content="Consultanță pentru fonduri europene, AFIR, PNRR, Start-Up Nation și finanțări nerambursabile pentru IMM-uri, antreprenori și proiecte de investiții." />
   <meta name="keywords" content="fonduri europene, consultanță fonduri europene, PNRR, POR, AFIR, finanțare nerambursabilă, proiecte europene, fonduri nerambursabile România, consultanță finanțare, absorbție fonduri europene" />
   <meta name="author" content="FABER – Atelier de Consultanță" />
-  <meta property="og:title" content="FABER – Atelier de Consultanță | Fonduri Europene Nerambursabile" />
-  <meta property="og:description" content="Transformăm ideile tale în proiecte finanțate. Consultanță completă pentru accesarea fondurilor europene 2021-2027." />
+  <meta property="og:title" content="Atelier de Consultanță | Fonduri Europene și Finanțări Nerambursabile" />
+  <meta property="og:description" content="Consultanță pentru fonduri europene, AFIR, PNRR, Start-Up Nation și finanțări nerambursabile pentru IMM-uri și antreprenori." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://atelierdeconsultanta.ro" />
   <meta property="og:image" content="https://atelierdeconsultanta.ro/og-image.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
-  <title>Consultanță Fonduri Europene Nerambursabile | FABER</title>
+  <title>Atelier de Consultanță | Fonduri Europene și Finanțări Nerambursabile</title>
 
   <!-- Preconnect pentru fonturi Google -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-
-  <!-- Phosphor Icons — dual-tone infographic icons -->
-  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1" defer></script>
 
   <!-- ✦ Canonical URL pentru SEO ✦ -->
   <link rel="canonical" href="https://atelierdeconsultanta.ro/" />
@@ -37,8 +34,8 @@
 
   <!-- ✦ Twitter Card ✦ -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="FABER – Atelier de Consultanță | Fonduri Europene Nerambursabile" />
-  <meta name="twitter:description" content="Transformăm ideile tale în proiecte finanțate. Consultanță completă pentru accesarea fondurilor europene 2021-2027." />
+  <meta name="twitter:title" content="Atelier de Consultanță | Fonduri Europene și Finanțări Nerambursabile" />
+  <meta name="twitter:description" content="Consultanță pentru fonduri europene, AFIR, PNRR, Start-Up Nation și finanțări nerambursabile pentru IMM-uri și antreprenori." />
 
   <!-- ✦ Schema.org structured data pentru Google ✦ -->
   <script type="application/ld+json">
@@ -1758,7 +1755,7 @@
 
         <div data-fs-error style="display:none;background:rgba(239,68,68,0.15);border:1px solid rgba(239,68,68,0.3);border-radius:12px;padding:16px 24px;color:#fca5a5;margin:0 auto 16px;max-width:520px;text-align:center;"></div>
 
-        <form id="newsletterForm"
+        <form id="newsletterForm" onsubmit="handleNewsletterSubmit(event)" novalidate
               style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;max-width:520px;margin:0 auto 24px;">
 
           <input type="text" name="name" placeholder="Numele tău" required
@@ -1959,6 +1956,8 @@
         <ul>
           <li><a href="#servicii">Identificare finanțări</a></li>
           <li><a href="#servicii">Elaborare dosare</a></li>
+          <li><a href="/consultanta-fonduri-europene/">Consultanță fonduri europene</a></li>
+          <li><a href="/eligibilitate-fonduri-europene/">Verificare eligibilitate</a></li>
           <li><a href="#servicii">Implementare proiecte</a></li>
           <li><a href="#servicii">Monitorizare & raportare</a></li>
           <li><a href="#servicii">Audit & conformitate</a></li>
@@ -1977,6 +1976,8 @@
           <li><a href="femeia-antreprenor-2026.html">Femeia Antreprenor</a></li>
           <li><a href="pro-infra.html">PRO INFRA</a></li>
           <li><a href="start-up-nation-2026.html">Start-Up Nation 2026</a></li>
+          <li><a href="/pnrr/">PNRR</a></li>
+          <li><a href="/afir/">AFIR</a></li>
         </ul>
       </div>
 
@@ -1986,8 +1987,13 @@
           <li><a href="termeni-si-conditii.html">Termeni și condiții</a></li>
           <li><a href="politica-de-confidentialitate.html">Politica de confidențialitate</a></li>
           <li><a href="gdpr.html">Politica GDPR</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="#blog">Blog</a></li>
+          <li><a href="/fonduri-europene/">Fonduri europene</a></li>
+          <li><a href="/fonduri-nerambursabile/">Fonduri nerambursabile</a></li>
+          <li><a href="/calendar-fonduri-europene/">Calendar fonduri europene</a></li>
+          <li><a href="/ghiduri/">Ghiduri</a></li>
+          <li><a href="/intrebari-frecvente/">Întrebări frecvente</a></li>
+          <li><a href="/contact/">Contact</a></li>
+          <li><a href="/blog.html">Blog</a></li>
           <li><a href="#despre">Despre noi</a></li>
         </ul>
       </div>
@@ -2347,7 +2353,7 @@
       var grid = document.getElementById('blog-grid');
       if (!grid) return;
 
-      fetch('/blog.json?t=' + Date.now())
+      fetch('/blog.json')
         .then(function(r){ return r.json(); })
         .then(function(data){
           var posts = (data.posts || []).filter(function(p){ return p.published; });
@@ -2507,12 +2513,74 @@
 
     console.log('✦ FABER – Website v2.0 | Încărcat și funcțional ✦');
 
-    window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
-    formspree('initForm', { formElement: '#newsletterForm', formId: 'mjgjogwj' });
+    async function handleNewsletterSubmit(event) {
+      event.preventDefault();
+      var form = event.target;
+      var name = (form.querySelector('[name="name"]') || {}).value || '';
+      var email = (form.querySelector('[name="email"]') || {}).value || '';
+      var button = form.querySelector('[type="submit"]');
+      var errorBox = document.querySelector('[data-fs-error]');
+      var successBox = document.querySelector('[data-fs-success]');
+
+      name = name.trim();
+      email = email.trim();
+      if (!name || name.length < 2 || !email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        if (errorBox) {
+          errorBox.textContent = 'Completează numele și o adresă de email validă.';
+          errorBox.style.display = 'block';
+        }
+        return;
+      }
+
+      if (button) {
+        button.disabled = true;
+        button.textContent = 'Se trimite...';
+      }
+      if (errorBox) errorBox.style.display = 'none';
+
+      try {
+        var res = await fetch('https://formsubmit.co/ajax/atelier.consultanta@gmail.com', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({
+            name: name,
+            email: email,
+            interest: 'Newsletter programe de finanțare FABER',
+            _subject: 'Abonare newsletter FABER - ' + name,
+            _template: 'table'
+          })
+        });
+        var data = {};
+        try { data = await res.json(); } catch(e) {}
+        if (res.ok && data.success) {
+          form.style.display = 'none';
+          if (successBox) successBox.style.display = 'block';
+          return;
+        }
+        throw new Error('newsletter submit failed');
+      } catch (err) {
+        if (errorBox) {
+          errorBox.textContent = 'Nu am putut trimite abonarea. Scrie-ne direct la atelier.consultanta@gmail.com.';
+          errorBox.style.display = 'block';
+        }
+        if (button) {
+          button.disabled = false;
+          button.textContent = 'Notifică-mă →';
+        }
+      }
+    }
+
+    window.addEventListener('load', function () {
+      window.setTimeout(function () {
+        var script = document.createElement('script');
+        script.src = 'https://unpkg.com/@phosphor-icons/web@2.1.1';
+        script.async = true;
+        script.crossOrigin = 'anonymous';
+        document.head.appendChild(script);
+      }, 700);
+    });
   </script>
 
   <script src="/assets/official-guides.js" defer></script>
-  <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
-
 </body>
 </html>
