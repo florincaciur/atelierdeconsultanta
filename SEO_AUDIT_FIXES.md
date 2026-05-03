@@ -51,6 +51,10 @@ Configured in `_redirects` for hosts that support 301 redirect rules:
 - `/consultanta-fonduri-europene` -> `/consultanta-fonduri-europene/`
 - `/start-up-nation-2026/` -> `/start-up-nation-2026.html`
 - `/femeia-antreprenor-2026/` -> `/femeia-antreprenor-2026.html`
+- `/fonduri-europene-herambursabile-2026/` -> `/fonduri-europene-nerambursabile-2026/`
+- `/fonduri-europene-herambursabile-2026.html` -> `/fonduri-europene-nerambursabile-2026/`
+- `/fonduri-europene-nerambursabile-2026.html` -> `/fonduri-europene-nerambursabile-2026/`
+- `.html` variants for the SEO hub pages -> their canonical trailing-slash hub URLs
 
 GitHub Pages limitation: these rules are not enforced as HTTP 301 by GitHub Pages. Existing legacy pages include canonical/meta/JavaScript fallback behavior so users and crawlers are sent to the final URL even on this hosting.
 
