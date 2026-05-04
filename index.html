@@ -184,7 +184,6 @@
     .anpc-badge-icon [class*="ph-"] { font-size: 1.1rem; }
     .slide-visual [class*="ph-"] { font-size: 5rem; opacity: 0.18; color: white; display: block; }
     .feature-check [class*="ph-"] { font-size: 0.9rem; color: var(--orange); }
-    .hero-stat [class*="ph-"] { font-size: 1.4rem; color: var(--orange); margin-bottom: 4px; display: block; }
     .footer-col [class*="ph-"] { font-size: 0.9rem; margin-right: 6px; color: var(--orange); }
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -398,7 +397,7 @@
       background-size: 40px 40px; pointer-events: none;
     }
 
-    .hero-content { position: relative; z-index: 2; max-width: 900px; text-align: center; }
+    .hero-content { position: relative; z-index: 2; width: 100%; max-width: 1100px; text-align: center; }
     .hero-badge {
       display: inline-flex; align-items: center; gap: 8px;
       background: rgba(232, 100, 42, 0.15); border: 1px solid rgba(232, 100, 42, 0.35);
@@ -417,13 +416,15 @@
     }
     .hero-title {
       font-size: clamp(2.4rem, 5vw, 4rem); font-weight: 900; line-height: 1.1;
-      color: var(--white); letter-spacing: -1.5px; margin-bottom: 24px;
+      color: var(--white); letter-spacing: 0; margin-bottom: 24px;
       animation: fadeInDown 0.8s 0.1s ease both;
     }
     .hero-title .gradient-text {
+      display: inline-block;
       background: linear-gradient(135deg, var(--orange) 0%, var(--gold) 100%);
       -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
     }
+    .hero-title .mobile-title { display: none; }
     .hero-subtitle {
       font-size: clamp(1rem, 2vw, 1.2rem); color: rgba(255,255,255,0.72);
       font-weight: 400; line-height: 1.7;
@@ -459,20 +460,6 @@
       transition: background var(--transition), transform var(--transition);
     }
     .btn-secondary:hover { background: rgba(255,255,255,0.18); transform: translateY(-2px); }
-
-    .hero-stats {
-      display: flex; gap: 40px; justify-content: center; flex-wrap: wrap;
-      margin-top: 56px; padding-top: 40px;
-      border-top: 1px solid rgba(255,255,255,0.1);
-      animation: fadeInDown 0.8s 0.4s ease both;
-    }
-    .hero-stat { text-align: center; }
-    .hero-stat .number {
-      font-size: 2.2rem; font-weight: 900; color: var(--white); line-height: 1;
-      background: linear-gradient(135deg, var(--orange), var(--gold));
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-    }
-    .hero-stat .label { font-size: 0.82rem; color: rgba(255,255,255,0.74); margin-top: 4px; }
 
     @keyframes fadeInDown {
       from { opacity: 0; transform: translateY(-20px); }
@@ -1132,7 +1119,11 @@
     @media (max-width: 768px) {
       .nav-links { display: none; }
       .hamburger { display: flex; }
-      .hero-stats { gap: 20px; }
+      .hero-title { font-size: 2.1rem; line-height: 1.16; }
+      .hero-title .desktop-title { display: none; }
+      .hero-title .mobile-title { display: block; }
+      .hero-title .gradient-text { display: block; }
+      .hero-subtitle { font-size: 1rem; max-width: 34rem; }
       .carousel-slide { padding: 40px 24px; min-height: 360px; }
       .carousel-btn.prev { left: 8px; }
       .carousel-btn.next { right: 8px; }
@@ -1156,6 +1147,10 @@
       }
     }
     @media (max-width: 480px) {
+      #hero { padding-left: 18px; padding-right: 18px; }
+      .hero-title { font-size: 1.72rem; max-width: 320px; margin-left: auto; margin-right: auto; }
+      .hero-subtitle { font-size: 0.96rem; line-height: 1.6; max-width: 320px; }
+      .hero-badge { font-size: 0.78rem; padding: 7px 14px; }
       .hero-ctas { flex-direction: column; align-items: center; }
       .slide-title { font-size: 1.4rem; }
     }
@@ -1304,7 +1299,9 @@
         </div>
 
         <h1 class="hero-title">
-          Transformăm ideile tale în<br>
+          <span class="desktop-title">Transformăm ideile tale în</span>
+          <span class="mobile-title">Transformăm ideile<br>tale în</span>
+          <br>
           <span class="gradient-text">proiecte finanțate</span>
         </h1>
 
@@ -1318,24 +1315,6 @@
           <a href="#finantare" class="btn-secondary">Descoperă programele →</a>
         </div>
 
-        <div class="hero-stats">
-          <div class="hero-stat">
-            <div class="number">250+</div>
-            <div class="label">Proiecte aprobate</div>
-          </div>
-          <div class="hero-stat">
-            <div class="number">98%</div>
-            <div class="label">Rată de succes</div>
-          </div>
-          <div class="hero-stat">
-            <div class="number">45M€+</div>
-            <div class="label">Euro atrași</div>
-          </div>
-          <div class="hero-stat">
-            <div class="number">10 ani</div>
-            <div class="label">Experiență</div>
-          </div>
-        </div>
       </div>
     </section>
 

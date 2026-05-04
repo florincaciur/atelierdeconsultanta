@@ -971,8 +971,6 @@
 
         <div class="topbar-actions">
           <span id="connectionStatus" style="color: var(--gray-500); font-size: 12px;"></span>
-          <button class="btn btn-secondary btn-sm" onclick="pingGoogle()">📡 Ping Google</button>
-          <button class="btn btn-primary btn-sm" onclick="testGitHubConnection()">🔗 Test GitHub</button>
         </div>
       </header>
 
@@ -1224,7 +1222,7 @@
 
             <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px;align-items:center;">
               <button class="btn btn-secondary" onclick="loadOfficialGuidesJson()">🔄 Reîncarcă linkuri ghid</button>
-              <button class="btn btn-primary" onclick="publishOfficialGuidesJson()" style="margin-left:auto;">🚀 Publică official-guides.json</button>
+              <button class="btn btn-primary" onclick="publishOfficialGuidesJson()" style="margin-left:auto;">🚀 Publică linkuri ghid</button>
             </div>
 
             <div class="status-msg" id="officialGuidesStatus"></div>
@@ -2106,7 +2104,18 @@
 
     if (!response.ok) {
       const errorText = await response.text();
-      throw new Error(`Commit eșuat pentru ${path}. HTTP ${response.status}: ${errorText}`);
+      let details = errorText;
+
+      try {
+        const parsed = JSON.parse(errorText);
+        details = parsed.message || errorText;
+      } catch (_) {}
+
+      if (response.status === 403) {
+        details = `Tokenul GitHub nu are permisiunea Contents: Read and Write pentru acest repository. Detalii GitHub: ${details}`;
+      }
+
+      throw new Error(`Commit eșuat pentru ${path}. HTTP ${response.status}: ${details}`);
     }
 
     return response.json();
@@ -2870,6 +2879,10 @@
               <label class="field-label">Intensitate / procent</label>
               <input id="program-${program.key}-percentage" class="field-input" value="${escapeAttr(program.percentage)}" />
             </div>
+
+            <button class="btn btn-primary" style="width: 100%; margin-top: 12px;" onclick="saveProgram('${program.key}')">
+              💾 Salvează pagina programului
+            </button>
           </div>
 
           <div class="tab-panel" id="program-${program.key}-deadline">
@@ -2881,6 +2894,9 @@
             <div class="help-text">
               Se actualizează data textuală și data din scriptul countdown.
             </div>
+            <button class="btn btn-primary" style="width: 100%; margin-top: 12px;" onclick="saveProgram('${program.key}')">
+              💾 Salvează pagina programului
+            </button>
           </div>
 
           <div class="tab-panel" id="program-${program.key}-status">
@@ -2898,27 +2914,27 @@
               <label class="field-label">Text badge</label>
               <input id="program-${program.key}-badge" class="field-input" value="${escapeAttr(program.badgeLabel)}" />
             </div>
+            <button class="btn btn-primary" style="width: 100%; margin-top: 12px;" onclick="saveProgram('${program.key}')">
+              💾 Salvează pagina programului
+            </button>
           </div>
 
           <div class="tab-panel" id="program-${program.key}-guide">
             <div class="field-group">
               <label class="field-label">Link ghid oficial</label>
-              <input id="program-${program.key}-guide-url" class="field-input" type="url" value="${escapeAttr(guideUrl)}" placeholder="https://..." onchange="updateOfficialGuideLink('${program.key}', this.value)" />
+              <input id="program-${program.key}-guide-url" class="field-input" type="url" value="${escapeAttr(guideUrl)}" placeholder="https://..." oninput="updateOfficialGuideLink('${program.key}', this.value)" />
             </div>
 
             <div class="help-text">
-              Lasă câmpul gol ca butonul „LINK GHID OFICIAL” să fie ascuns pe site. Publicarea se face prin butonul „Publică official-guides.json”.
+              Lasă câmpul gol ca butonul „LINK GHID OFICIAL” să fie ascuns pe site. Acest tab actualizează doar fișierul de linkuri, nu pagina HTML a programului.
             </div>
 
             <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px;">
+              <button class="btn btn-primary" onclick="publishOfficialGuidesJson()">💾 Salvează linkurile de ghid</button>
               ${guideUrl ? `<a class="btn btn-secondary" href="${escapeAttr(guideUrl)}" target="_blank" rel="noopener noreferrer">Testează link</a>` : ""}
               <button class="btn btn-danger" onclick="clearOfficialGuideLink('${program.key}')">Șterge link</button>
             </div>
           </div>
-
-          <button class="btn btn-primary" style="width: 100%; margin-top: 12px;" onclick="saveProgram('${program.key}')">
-            💾 Salvează programul
-          </button>
 
           <div class="status-msg" id="program-${program.key}-statusMsg"></div>
         </article>
