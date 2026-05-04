@@ -11,17 +11,18 @@
   <meta property="og:description" content="DR 12 AFIR 2026 – sprijin nerambursabil de până la 200.000 EUR/proiect, intensitate 80% pentru tineri fermieri și 65% pentru celelalte categorii eligibile. PAC 2023-2027." />
   <meta property="og:type" content="website" />
   <title>DR 12 AFIR – Instalarea Tinerilor Fermieri | FABER</title>
-  <link rel="canonical" href="https://atelierdeconsultanta.ro/dr12-afir.html" />
+  <link rel="canonical" href="https://atelierdeconsultanta.ro/dr12-afir" />
   <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
   <meta name="robots" content="index, follow" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta property="og:url" content="https://atelierdeconsultanta.ro/dr12-afir.html" />
+  <meta property="og:url" content="https://atelierdeconsultanta.ro/dr12-afir" />
   <meta property="og:image" content="https://atelierdeconsultanta.ro/og-image.jpg" />
   <meta name="twitter:title" content="DR 12 AFIR 2026 – Tineri Fermieri și Fermieri până la 45 de ani | FABER" />
   <meta name="twitter:description" content="DR 12 AFIR 2026 – sprijin nerambursabil de până la 200.000 EUR/proiect, intensitate 80% pentru tineri fermieri și 65% pentru celelalte categorii eligibile. PAC 2023-2027." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/program-scoring.css" />
 
   <script type="application/ld+json">
   {
@@ -667,6 +668,127 @@
   </div>
 </section>
 
+<!-- Calculator punctaj DR12 -->
+<section class="section section-alt" id="calculator-punctaj-dr12">
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-label">Autoevaluare rapida</div>
+      <h2 class="sec-title">Calculator punctaj DR 12 AFIR</h2>
+      <p class="sec-sub">Bifeaza criteriile pe care le poti dovedi cu documente si vezi imediat daca proiectul trece de pragul minim. Calculatorul este orientativ; punctajul final este stabilit de AFIR in evaluare.</p>
+    </div>
+
+    <div class="scorecalc reveal" data-score-calculator="dr12">
+      <div class="scorecalc-head">
+        <div class="scorecalc-kicker">DR 12 | prag minim 45p | etapa 1 75p</div>
+        <h3 class="scorecalc-title">Simuleaza grila de selectie inainte sa construiesti dosarul</h3>
+        <p class="scorecalc-subtitle">Ghidul DR 12 foloseste doua componente: sector zootehnic si alte sectoare. Alege componenta potrivita, apoi completeaza criteriile care pot fi demonstrate la depunere.</p>
+      </div>
+
+      <div class="scorecalc-body">
+        <form class="scorecalc-form">
+          <fieldset class="scorecalc-fieldset">
+            <legend>Componenta proiectului</legend>
+            <div class="scorecalc-options">
+              <label class="scorecalc-option">
+                <input type="radio" name="dr12-component" value="zootehnic" checked>
+                <span>Sector zootehnic<small>Include exploatatii cu animale, pasari sau componenta apicola.</small></span>
+              </label>
+              <label class="scorecalc-option">
+                <input type="radio" name="dr12-component" value="alte">
+                <span>Alte sectoare<small>Vegetal, mixt sau investitii care nu se incadreaza pe grila zootehnica.</small></span>
+              </label>
+            </div>
+          </fieldset>
+
+          <div class="scorecalc-grid">
+            <div class="scorecalc-control">
+              <label for="dr12-education">Nivel de calificare</label>
+              <select id="dr12-education" name="dr12-education">
+                <option value="0">Fara punctaj confirmat</option>
+                <option value="10">Liceu agricol / postliceala / curs calificare - 10p</option>
+                <option value="15">Studii superioare in domeniul proiectului - 15p</option>
+              </select>
+              <small>Criteriile de calificare nu sunt cumulative.</small>
+            </div>
+
+            <div class="scorecalc-control">
+              <label for="dr12-association">Apartenenta la structuri asociative</label>
+              <select id="dr12-association" name="dr12-association">
+                <option value="0">Nu exista forma asociativa dovedita</option>
+                <option value="5">Membru cooperator asociat - 5p</option>
+                <option value="10">Cooperativa / grup / organizatie producatori - 10p</option>
+                <option value="15">Cooperativa cu procesare sau abatorizare - 15p</option>
+              </select>
+              <small>Se ia cel mai bun criteriu, nu suma lor.</small>
+            </div>
+
+            <div class="scorecalc-control" data-score-scope="zootehnic">
+              <label class="scorecalc-checkbox">
+                <input type="checkbox" name="dr12-zoo-building">
+                <span><strong>Extindere cladiri zootehnice in proprietate</strong><small>Aplicabil pe componenta zootehnica: 20p daca proiectul include extindere eligibila.</small></span>
+              </label>
+            </div>
+
+            <div class="scorecalc-control">
+              <div class="scorecalc-slider-top">
+                <label for="dr12-terrain">Teren agricol in proprietate</label>
+                <span class="scorecalc-slider-value" data-score-slider-value="dr12-terrain">0%</span>
+              </div>
+              <input id="dr12-terrain" type="range" name="dr12-terrain" min="0" max="100" value="0" data-score-slider>
+              <small>Punctaj proportional: max. 5p pe zootehnic, max. 25p pe alte sectoare.</small>
+            </div>
+
+            <div class="scorecalc-control">
+              <label class="scorecalc-checkbox">
+                <input type="checkbox" name="dr12-precision">
+                <span><strong>Agricultura de precizie / digitalizare</strong><small>Investitii moderne de minimum 10% din valoarea eligibila: 15p.</small></span>
+              </label>
+            </div>
+
+            <div class="scorecalc-control">
+              <div class="scorecalc-slider-top">
+                <label for="dr12-insurance">Asigurare culturi / animale / constructii</label>
+                <span class="scorecalc-slider-value" data-score-slider-value="dr12-insurance">0%</span>
+              </div>
+              <input id="dr12-insurance" type="range" name="dr12-insurance" min="0" max="100" value="0" data-score-slider>
+              <small>Punctaj proportional cu acoperirea asigurata, maximum 10p.</small>
+            </div>
+
+            <div class="scorecalc-control">
+              <label class="scorecalc-checkbox">
+                <input type="checkbox" name="dr12-first-feadr">
+                <span><strong>Prima accesare FEADR pentru investitii agro-alimentare</strong><small>Nu se includ sprijinul forfetar sM 6.1 si DR 30: 20p.</small></span>
+              </label>
+            </div>
+          </div>
+        </form>
+
+        <aside class="scorecalc-result" aria-live="polite">
+          <div class="scorecalc-score"><span data-score-total>0</span><span>/100</span></div>
+          <div class="scorecalc-status is-low" data-score-status>Completeaza criteriile pentru estimare.</div>
+          <p class="scorecalc-note">Prag etapa 1: <strong data-score-first>75p</strong>. Prag minim: <strong data-score-min>45p</strong>.</p>
+          <div class="scorecalc-breakdown" data-score-breakdown></div>
+          <p class="scorecalc-note">Pastreaza dovezile pentru fiecare criteriu bifat. Fara documente suport, punctajul poate scadea la evaluare.</p>
+        </aside>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-label">Surse și verificare</div>
+      <h2 class="sec-title">Informații corelate cu ghidul DR 12</h2>
+      <p class="sec-sub">Reperele de eligibilitate, apicultură și punctaj sunt corelate cu ghidul solicitantului atașat și cu pagina de program indicată. Pentru depunere, forma finală publicată de AFIR rămâne documentul decisiv.</p>
+      <div style="display:grid;gap:10px;margin-top:18px;max-width:760px;">
+        <a href="https://dr-12.ro/" target="_blank" rel="noopener noreferrer" style="background:white;border:1px solid var(--gray-200);border-radius:var(--rs);color:var(--navy);font-weight:800;padding:12px 14px;">dr-12.ro - repere consultate pentru DR 12</a>
+        <a data-official-guide-key="dr12" data-official-guide-label="Ghid oficial AFIR DR 12" hidden style="background:white;border:1px solid var(--gray-200);border-radius:var(--rs);color:var(--navy);font-weight:800;padding:12px 14px;">Ghid oficial AFIR DR 12</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ✦ CTA SECTION — Call to Action ✦ -->
 <section class="cta-section">
   <h2>Pregătit să aplici la DR 12 AFIR?</h2>
@@ -708,5 +830,6 @@
   document.querySelectorAll('.reveal').forEach(function(el){ obs.observe(el); });
 </script>
   <script src="/assets/official-guides.js" defer></script>
+  <script src="/assets/program-scoring.js" defer></script>
 </body>
 </html>

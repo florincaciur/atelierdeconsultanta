@@ -4,28 +4,311 @@
   <meta charset="UTF-8" />
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DR 14 AFIR | Ferme mici si investitii agricole</title>
-  <meta name="description" content="Pagina de program DR 14 AFIR pentru ferme mici: eligibilitate orientativa, prag SO, investitii posibile, documente si pasi de verificare inainte de dosar." />
+  <title>DR 14 AFIR | Ferme mici, apicultura si calculator punctaj</title>
+  <meta name="description" content="DR 14 AFIR pentru ferme mici: eligibilitate, investitii, apicultura, praguri SO si calculator live de punctaj conform ghidului consultativ." />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://atelierdeconsultanta.ro/dr14.html" />
+  <link rel="canonical" href="https://atelierdeconsultanta.ro/dr14" />
   <link rel="icon" type="image/png" href="/favicon.png" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-  <meta property="og:title" content="DR 14 AFIR | Ferme mici si investitii agricole" />
-  <meta property="og:description" content="Pagina de program DR 14 AFIR pentru ferme mici, cu rute clare catre calculator SO, consultanta AFIR, ghid oficial si articolul detaliat." />
-  <meta property="og:url" content="https://atelierdeconsultanta.ro/dr14.html" />
+  <meta property="og:title" content="DR 14 AFIR | Ferme mici, apicultura si calculator punctaj" />
+  <meta property="og:description" content="Pagina de program DR 14 AFIR cu sectiune apicola si calculator live de punctaj pentru ferme mici." />
+  <meta property="og:url" content="https://atelierdeconsultanta.ro/dr14" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://atelierdeconsultanta.ro/og-image.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/assets/seo-hub.css" />
+  <link rel="stylesheet" href="/assets/program-scoring.css" />
+  <style>
+    :root {
+      --navy: #0d1f3c;
+      --navy-mid: #112a50;
+      --green: #1f7a4d;
+      --green-dark: #165a39;
+      --orange: #e8642a;
+      --orange-dark: #c4541f;
+      --gold: #f5a623;
+      --white: #fff;
+      --gray-100: #f8f9fb;
+      --gray-200: #e8edf5;
+      --gray-600: #6b7a99;
+      --text-main: #1a2540;
+      --text-soft: #4a5568;
+      --radius-sm: 8px;
+      --radius-md: 8px;
+      --radius-lg: 8px;
+      --shadow-md: 0 8px 32px rgba(13, 31, 60, 0.14);
+      --shadow-lg: 0 20px 60px rgba(13, 31, 60, 0.18);
+      --transition: 0.25s ease;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body {
+      background: var(--white);
+      color: var(--text-main);
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+    a { color: inherit; text-decoration: none; }
+    ul { padding-left: 20px; }
+    li { margin-bottom: 8px; }
+    .topbar {
+      align-items: center;
+      background: rgba(13, 31, 60, 0.97);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      gap: 20px;
+      height: 68px;
+      justify-content: space-between;
+      padding: 0 24px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .topbar-logo {
+      color: var(--orange);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: 0;
+      white-space: nowrap;
+    }
+    .topbar-nav {
+      align-items: center;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: flex-end;
+    }
+    .topbar-nav a {
+      border-radius: var(--radius-sm);
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 0.86rem;
+      font-weight: 700;
+      padding: 8px 12px;
+      transition: background var(--transition), color var(--transition);
+    }
+    .topbar-nav a:hover { background: rgba(255, 255, 255, 0.08); color: #fff; }
+    .topbar-nav .cta { background: var(--orange); color: #fff; }
+    .topbar-nav .cta:hover { background: var(--orange-dark); }
+    .hero {
+      background:
+        linear-gradient(135deg, rgba(13, 31, 60, 0.94), rgba(31, 122, 77, 0.9)),
+        url("https://images.unsplash.com/photo-1523741543316-beb7fc7023d8?auto=format&fit=crop&w=1800&q=80") center/cover;
+      color: var(--white);
+      padding: 88px 24px 72px;
+      position: relative;
+    }
+    .hero-inner {
+      display: grid;
+      gap: 36px;
+      grid-template-columns: minmax(0, 1fr) 320px;
+      margin: 0 auto;
+      max-width: 1120px;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-tag {
+      background: rgba(232, 100, 42, 0.18);
+      border: 1px solid rgba(232, 100, 42, 0.42);
+      border-radius: var(--radius-sm);
+      color: #ffd28a;
+      display: inline-block;
+      font-size: 0.76rem;
+      font-weight: 900;
+      letter-spacing: 0;
+      margin-bottom: 18px;
+      padding: 6px 14px;
+      text-transform: uppercase;
+    }
+    .hero h1 {
+      font-size: 3.6rem;
+      font-weight: 900;
+      letter-spacing: 0;
+      line-height: 1.08;
+      margin-bottom: 20px;
+      max-width: 760px;
+    }
+    .hero-sub {
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 1.08rem;
+      line-height: 1.75;
+      margin-bottom: 30px;
+      max-width: 760px;
+    }
+    .hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .btn-orange,
+    .btn-ghost {
+      align-items: center;
+      border-radius: var(--radius-sm);
+      display: inline-flex;
+      font-size: 0.94rem;
+      font-weight: 900;
+      justify-content: center;
+      min-height: 46px;
+      padding: 13px 22px;
+    }
+    .btn-orange { background: var(--orange); color: #fff; box-shadow: 0 10px 28px rgba(232, 100, 42, 0.28); }
+    .btn-orange:hover { background: var(--orange-dark); }
+    .btn-ghost { border: 1px solid rgba(255, 255, 255, 0.28); color: #fff; }
+    .btn-ghost:hover { background: rgba(255, 255, 255, 0.1); }
+    .hero-panel {
+      align-self: center;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: var(--radius-lg);
+      backdrop-filter: blur(12px);
+      padding: 24px;
+    }
+    .hero-panel strong {
+      color: #fff;
+      display: block;
+      font-size: 2.2rem;
+      font-weight: 900;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .hero-panel span {
+      color: rgba(255, 255, 255, 0.78);
+      display: block;
+      font-size: 0.9rem;
+      margin-bottom: 18px;
+    }
+    .section { padding: 76px 24px; }
+    .section-alt { background: var(--gray-100); }
+    .section-dark { background: linear-gradient(135deg, #0a1628 0%, var(--navy) 100%); color: var(--white); }
+    .container { margin: 0 auto; max-width: 1120px; }
+    .sec-label {
+      color: var(--orange);
+      font-size: 0.76rem;
+      font-weight: 900;
+      letter-spacing: 0;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+    .sec-title {
+      color: var(--navy);
+      font-size: 2.35rem;
+      font-weight: 900;
+      line-height: 1.18;
+      margin-bottom: 14px;
+    }
+    .section-dark .sec-title { color: #fff; }
+    .sec-sub {
+      color: var(--text-soft);
+      font-size: 1rem;
+      line-height: 1.75;
+      max-width: 780px;
+    }
+    .section-dark .sec-sub { color: rgba(255, 255, 255, 0.72); }
+    .info-grid {
+      display: grid;
+      gap: 18px;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      margin-top: 34px;
+    }
+    .info-card,
+    .soft-card {
+      background: #fff;
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-md);
+      box-shadow: 0 8px 28px rgba(13, 31, 60, 0.08);
+      padding: 22px;
+    }
+    .info-icon { color: var(--orange); font-size: 0.78rem; font-weight: 900; letter-spacing: 0; text-transform: uppercase; }
+    .info-title { color: var(--navy); font-size: 0.92rem; font-weight: 900; margin: 10px 0 6px; }
+    .info-val { color: var(--green-dark); font-size: 1.45rem; font-weight: 900; line-height: 1.15; }
+    .info-sub { color: var(--text-soft); font-size: 0.86rem; line-height: 1.55; margin-top: 8px; }
+    .two-col {
+      display: grid;
+      gap: 28px;
+      grid-template-columns: 1fr 1fr;
+      margin-top: 34px;
+    }
+    .dark-grid {
+      display: grid;
+      gap: 16px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      margin-top: 32px;
+    }
+    .dark-item {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: var(--radius-md);
+      padding: 20px;
+    }
+    .dark-item strong { color: #fff; display: block; margin-bottom: 8px; }
+    .dark-item p { color: rgba(255, 255, 255, 0.72); font-size: 0.9rem; }
+    .note {
+      background: #fff7ed;
+      border-left: 4px solid var(--orange);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      color: var(--text-main);
+      margin-top: 24px;
+      padding: 16px 18px;
+    }
+    .source-list {
+      display: grid;
+      gap: 10px;
+      margin-top: 18px;
+    }
+    .source-list a {
+      background: #fff;
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-sm);
+      color: var(--navy);
+      font-weight: 800;
+      padding: 12px 14px;
+    }
+    .source-list a:hover { color: var(--orange); }
+    .cta-section {
+      background: linear-gradient(135deg, var(--green-dark), var(--navy));
+      color: #fff;
+      padding: 76px 24px;
+      text-align: center;
+    }
+    .cta-section h2 { font-size: 2.25rem; font-weight: 900; margin-bottom: 14px; }
+    .cta-section p { color: rgba(255, 255, 255, 0.75); margin: 0 auto 26px; max-width: 700px; }
+    .page-footer {
+      background: #071326;
+      color: rgba(255, 255, 255, 0.62);
+      font-size: 0.84rem;
+      padding: 28px 24px;
+      text-align: center;
+    }
+    .page-footer a { color: var(--orange); font-weight: 800; }
+    @media (max-width: 920px) {
+      .hero-inner,
+      .two-col { grid-template-columns: 1fr; }
+      .info-grid,
+      .dark-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 640px) {
+      .topbar { align-items: flex-start; flex-direction: column; height: auto; padding: 12px 18px; }
+      .topbar-nav { justify-content: flex-start; width: 100%; }
+      .topbar-nav a { font-size: 0.8rem; padding: 7px 9px; }
+      .hero { padding: 58px 18px 48px; }
+      .hero h1 { font-size: 2.25rem; }
+      .section { padding: 52px 18px; }
+      .sec-title,
+      .cta-section h2 { font-size: 1.85rem; }
+      .info-grid,
+      .dark-grid { grid-template-columns: 1fr; }
+      .hero-panel { padding: 18px; }
+    }
+  </style>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "GovernmentService",
     "name": "DR 14 AFIR - Investitii in fermele de mici dimensiuni",
-    "description": "Pagina de orientare pentru ferme mici interesate de interventia DR 14 AFIR, cu verificare SO, documente, investitii si pasi de pregatire.",
+    "description": "Pagina de orientare pentru ferme mici interesate de DR 14 AFIR, inclusiv apicultura si calculator de punctaj.",
     "provider": {
       "@type": "ProfessionalService",
       "name": "FABER - Atelier de Consultanta",
@@ -37,94 +320,277 @@
   </script>
 </head>
 <body>
-  <nav class="navbar" aria-label="Navigare principala">
-    <a class="brand" href="/" aria-label="Atelier de Consultanta, acasa">FABER</a>
-    <div class="navbar-links">
+  <nav class="topbar" aria-label="Navigare principala">
+    <a href="/" class="topbar-logo" aria-label="FABER - Atelier de Consultanta, acasa">FABER</a>
+    <div class="topbar-nav">
+      <a href="/">Acasa</a>
       <a href="/afir/">AFIR</a>
-      <a href="/dr12-afir.html">DR 12</a>
+      <a href="/dr12-afir">DR 12</a>
       <a href="/calculator-soc.html">Calculator SO</a>
-      <a href="/blog.html">Blog</a>
-      <a class="nav-cta" href="/contact/">Evaluare gratuita</a>
+      <a href="/contact/" class="cta">Evaluare gratuita</a>
     </div>
   </nav>
 
-  <div class="breadcrumb"><a href="/">Acasa</a> / <a href="/afir/">AFIR</a> / DR 14</div>
-
   <header class="hero">
-    <span class="eyebrow">AFIR - PAC 2023-2027</span>
-    <h1>DR 14 AFIR pentru ferme de mici dimensiuni</h1>
-    <p>Pagina de orientare pentru fermieri care vor sa verifice rapid daca exploatatia merita analizata pentru investitii prin DR 14.</p>
-    <div class="hero-actions">
-      <a class="btn btn-primary" href="/contact/">Verifica eligibilitatea</a>
-      <a class="btn btn-secondary" href="/calculator-soc.html">Calculeaza SO</a>
-      <a class="btn btn-secondary" href="/dr-14-afir-conditii-eligibilitate-greseli-frecvente.html">Citeste articolul DR 14</a>
-      <a class="btn btn-secondary" data-official-guide-key="dr14" data-official-guide-label="Ghid oficial AFIR" hidden>Ghid oficial AFIR</a>
+    <div class="hero-inner">
+      <div>
+        <div class="hero-tag">PAC 2023-2027 | Ghid consultativ DR 14</div>
+        <h1>DR 14 AFIR pentru ferme mici care vor sa creasca sanatos</h1>
+        <p class="hero-sub">DR 14 nu este doar o lista de utilaje. Este o verificare serioasa a fermei: dimensiune economica, documente, investitie potrivita si punctaj suficient. Pagina aceasta iti arata rapid unde te afli si ce merita pregatit.</p>
+        <div class="hero-ctas">
+          <a href="#calculator-punctaj-dr14" class="btn-orange">Calculeaza punctajul</a>
+          <a href="#apicultura" class="btn-ghost">Vezi apicultura</a>
+          <a href="/contact/" class="btn-ghost">Vreau evaluare</a>
+          <a class="btn-ghost" data-official-guide-key="dr14" data-official-guide-label="Ghid oficial AFIR" hidden>Ghid oficial AFIR</a>
+        </div>
+      </div>
+      <aside class="hero-panel" aria-label="Repere DR14">
+        <strong>50.000 EUR</strong>
+        <span>sprijin maxim orientativ per proiect</span>
+        <strong>85%</strong>
+        <span>intensitate maxima a sprijinului public</span>
+        <strong>40p</strong>
+        <span>prag minim de calitate in etapa a doua</span>
+      </aside>
     </div>
   </header>
 
-  <main class="container">
-    <article class="panel">
-      <p class="intro">DR 14 este interventia urmarita de fermele mici care vor sa investeasca in modernizare, utilaje, echipamente, irigatii, depozitare sau fluxuri mai eficiente. Verificarea trebuie pornita de la dimensiunea economica, documente si compatibilitatea investitiei cu ghidul apelului activ.</p>
+  <section class="section" id="detalii">
+    <div class="container">
+      <div class="sec-label">Repere esentiale</div>
+      <h2 class="sec-title">Ce trebuie sa stii inainte sa pregatesti DR 14</h2>
+      <p class="sec-sub">Interventia se adreseaza fermelor mici, dar nu orice ferma mica este automat pregatita pentru depunere. Conteaza componenta proiectului, vechimea, forma asociativa, zona, proprietatea asupra terenurilor si documentele care confirma exploatatia.</p>
 
-      <h2>Repere rapide</h2>
-      <div class="grid">
-        <div class="mini-card">
-          <h3>Profil solicitant</h3>
-          <p>Ferme mici cu exploatatie documentata, forma juridica potrivita si activitate agricola care poate sustine investitia propusa.</p>
+      <div class="info-grid">
+        <div class="info-card">
+          <div class="info-icon">Finantare</div>
+          <div class="info-title">Sprijin maxim</div>
+          <div class="info-val">50.000 EUR</div>
+          <div class="info-sub">Plafonul maxim se raporteaza la valoarea eligibila si la intensitatea de sprijin.</div>
         </div>
-        <div class="mini-card">
-          <h3>Dimensiune economica</h3>
-          <p>Verificarea porneste de la Standard Output. Pragurile exacte se confirma in ghidul apelului activ si in anexele AFIR.</p>
+        <div class="info-card">
+          <div class="info-icon">Intensitate</div>
+          <div class="info-title">Sprijin nerambursabil</div>
+          <div class="info-val">85%</div>
+          <div class="info-sub">Beneficiarul trebuie sa sustina cofinantarea, TVA-ul si eventualele cheltuieli neeligibile.</div>
         </div>
-        <div class="mini-card">
-          <h3>Investitii posibile</h3>
-          <p>Utilaje, dotari, spatii, irigatii, echipamente si alte achizitii care au legatura directa cu nevoia reala a fermei.</p>
+        <div class="info-card">
+          <div class="info-icon">Dimensiune</div>
+          <div class="info-title">Ferma mica</div>
+          <div class="info-val">4.000-11.999 SO</div>
+          <div class="info-sub">Exista praguri specifice pentru legumicol si pentru zootehnic cu rase autohtone.</div>
         </div>
-        <div class="mini-card">
-          <h3>Documente critice</h3>
-          <p>APIA, registru agricol, contracte, acte pentru terenuri sau animale, oferte, buget si justificarea tehnica a proiectului.</p>
+        <div class="info-card">
+          <div class="info-icon">Selectie</div>
+          <div class="info-title">Praguri de punctaj</div>
+          <div class="info-val">40-85p</div>
+          <div class="info-sub">Pragul primei etape difera: 60p la legumicol, 85p la celelalte componente.</div>
         </div>
       </div>
 
-      <h2>Verificari inainte de dosar</h2>
-      <ul>
-        <li>Calculeaza SO-ul fermei si compara rezultatul cu pragurile din ghidul oficial.</li>
-        <li>Verifica daca documentele APIA, contractele si registrul agricol spun aceeasi poveste.</li>
-        <li>Leaga fiecare investitie propusa de o nevoie clara din exploatatie.</li>
-        <li>Estimeaza cofinantarea, TVA-ul, cheltuielile neeligibile si cash-flow-ul de implementare.</li>
-        <li>Confirma forma finala a ghidului AFIR inainte de depunere.</li>
-      </ul>
+      <div class="note">Praguri SO din ghidul consultativ: 4.000-11.999 SO in general, 2.000-11.999 SO pentru ferme zootehnice populate cu rase autohtone si 2.300-11.999 SO pentru ferme legumicole. Forma finala a ghidului poate ajusta detaliile.</div>
+    </div>
+  </section>
 
-      <h2>Flux logic pe site</h2>
-      <div class="related-links">
-        <a href="/calculator-soc.html">Calculator SO AFIR</a>
-        <a href="/consultanta-afir/">Consultanta AFIR</a>
-        <a href="/fonduri-pentru-ferme/">Fonduri pentru ferme</a>
-        <a href="/dr-14-afir-conditii-eligibilitate-greseli-frecvente.html">Articol detaliat: conditii si greseli frecvente</a>
+  <section class="section section-dark">
+    <div class="container">
+      <div class="sec-label">Cine poate aplica</div>
+      <h2 class="sec-title">Beneficiari si proiecte potrivite</h2>
+      <p class="sec-sub">DR 14 este pentru fermieri, cu exceptia persoanelor fizice simple. Proiectul trebuie sa plece de la o nevoie reala a fermei si sa poata fi sustinut cu documente la depunere si pe perioada de monitorizare.</p>
+
+      <div class="dark-grid">
+        <div class="dark-item">
+          <strong>Forme eligibile</strong>
+          <p>PFA, II, IF, SRL, SA si alte forme economice acceptate in ghid, cu exploatatia inregistrata pe forma care solicita sprijinul.</p>
+        </div>
+        <div class="dark-item">
+          <strong>Investitii coerente</strong>
+          <p>Utilaje, echipamente, modernizari, spatii protejate, irigatii, depozitare, procesare sau digitalizare, daca sunt legate direct de activitatea fermei.</p>
+        </div>
+        <div class="dark-item">
+          <strong>Documente curate</strong>
+          <p>APIA, ANSVSA, ANZ/DSVSA, acte de proprietate sau folosinta, oferte si justificarea tehnica trebuie sa se potriveasca intre ele.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="apicultura">
+    <div class="container">
+      <div class="sec-label">Sector apicol</div>
+      <h2 class="sec-title">Apicultura in DR 14: o sansa buna, dar cu atentie la suprapuneri</h2>
+      <p class="sec-sub">Apicultorii pot analiza DR 14 daca exploatatia atinge dimensiunea economica necesara si familiile de albine sunt sustinute de documente. Pentru corectitudine, cheltuielile propuse prin DR 14 trebuie separate de interventiile apicole FEGA.</p>
+
+      <div class="two-col">
+        <div class="soft-card">
+          <h3>Ce poate intra intr-un proiect apicol</h3>
+          <ul>
+            <li>echipamente pentru extractie, filtrare, maturare si procesare miere;</li>
+            <li>sisteme de ambalare si etichetare pentru produsele proprii;</li>
+            <li>spatii de depozitare, igiena, flux tehnologic si organizare a productiei;</li>
+            <li>echipamente apicole si dotari corelate cu numarul de familii de albine;</li>
+            <li>investitii complementare pentru valorificarea mierii, polenului, propolisului, cerii sau pasturii.</li>
+          </ul>
+        </div>
+        <div class="soft-card">
+          <h3>Ce verificam inainte de depunere</h3>
+          <ul>
+            <li>dovada vetrei stupinei si inscrierea exploatatiei in evidentele cerute;</li>
+            <li>adeverinta pentru familiile de albine si data inscrierii in Registrul Exploatatiei;</li>
+            <li>calculul SO conform coeficientilor SOC 2020 si pragului aplicabil;</li>
+            <li>lista cheltuielilor finantate sau solicitate prin interventiile apicole FEGA;</li>
+            <li>capacitatea de cofinantare si fluxul realist de implementare.</li>
+          </ul>
+        </div>
       </div>
 
-      <h2>Surse si status</h2>
-      <p>AFIR a publicat pe 24 aprilie 2026 versiunea consultativa a Ghidului solicitantului pentru DR-14, "Investitii in fermele de mici dimensiuni". Conditiile se pot schimba pana la forma finala, asa ca pagina trebuie folosita ca orientare, nu ca substitut pentru ghid.</p>
+      <div class="note">Orientativ, pentru o exploatatie exclusiv apicola, pragul general de 4.000 SO poate insemna aproximativ 58 familii de albine daca se foloseste un coeficient SOC in jur de 69 EUR/familie. Nu trata aceasta cifra ca verdict: calculatorul SO oficial si documentele APIA/ANSVSA/ANZ decid incadrarea.</div>
+    </div>
+  </section>
+
+  <section class="section" id="calculator-punctaj-dr14">
+    <div class="container">
+      <div class="sec-label">Autoevaluare live</div>
+      <h2 class="sec-title">Calculator punctaj DR 14</h2>
+      <p class="sec-sub">Selecteaza componenta proiectului si vezi scorul estimat. Calculatorul urmeaza grilele din ghidul consultativ: zootehnic, legumicol, achizitii simple si alte sectoare.</p>
+
+      <div class="scorecalc" data-score-calculator="dr14">
+        <div class="scorecalc-head">
+          <div class="scorecalc-kicker">DR 14 | prag minim 40p</div>
+          <h3 class="scorecalc-title">Afla daca proiectul are punctaj suficient pentru depunere</h3>
+          <p class="scorecalc-subtitle">Punctajul bun nu salveaza un dosar slab, dar iti arata din timp unde sunt blocajele: zona montana, vechime, asociere, proprietate si tipul investitiei.</p>
+        </div>
+
+        <div class="scorecalc-body">
+          <form class="scorecalc-form">
+            <fieldset class="scorecalc-fieldset">
+              <legend>Componenta proiectului</legend>
+              <div class="scorecalc-options">
+                <label class="scorecalc-option">
+                  <input type="radio" name="dr14-component" value="zootehnic" checked>
+                  <span>Zootehnic<small>Include ferme cu animale si proiecte in zona montana sau cu rase autohtone.</small></span>
+                </label>
+                <label class="scorecalc-option">
+                  <input type="radio" name="dr14-component" value="legumicol">
+                  <span>Legumicol<small>Accent pe extinderea sau modernizarea spatiilor protejate.</small></span>
+                </label>
+                <label class="scorecalc-option">
+                  <input type="radio" name="dr14-component" value="achizitii">
+                  <span>Achizitii simple<small>Investitii fara constructii-montaj, indiferent de sector.</small></span>
+                </label>
+                <label class="scorecalc-option">
+                  <input type="radio" name="dr14-component" value="alte">
+                  <span>Alte sectoare<small>Pomicultura, floricultura si alte investitii vegetale cu C+M.</small></span>
+                </label>
+              </div>
+            </fieldset>
+
+            <div class="scorecalc-grid">
+              <div class="scorecalc-control" data-score-scope="zootehnic achizitii alte">
+                <label class="scorecalc-checkbox">
+                  <input type="checkbox" name="dr14-mountain">
+                  <span><strong>Investitie in zona montana</strong><small>20p pentru zootehnic, 15p pentru achizitii simple si alte sectoare.</small></span>
+                </label>
+              </div>
+
+              <div class="scorecalc-control" data-score-scope="zootehnic">
+                <label class="scorecalc-checkbox">
+                  <input type="checkbox" name="dr14-autochthonous">
+                  <span><strong>Animale din rase autohtone</strong><small>Investitia vizeaza exclusiv cresterea raselor autohtone: 20p.</small></span>
+                </label>
+              </div>
+
+              <div class="scorecalc-control" data-score-scope="legumicol">
+                <label for="dr14-protected">Investitie in spatii protejate</label>
+                <select id="dr14-protected" name="dr14-protected">
+                  <option value="0">Nu se puncteaza</option>
+                  <option value="20">Modernizare spatiu protejat existent - 20p</option>
+                  <option value="30">Extindere spatii protejate - 30p</option>
+                </select>
+              </div>
+
+              <div class="scorecalc-control" data-score-scope="zootehnic">
+                <label for="dr14-age-zoo">Vechime exploatatie</label>
+                <select id="dr14-age-zoo" name="dr14-age-zoo">
+                  <option value="0">Sub 5 ani</option>
+                  <option value="15">Intre 5 si 7 ani - 15p</option>
+                  <option value="20">Peste 7 ani - 20p</option>
+                </select>
+              </div>
+
+              <div class="scorecalc-control" data-score-scope="legumicol">
+                <label for="dr14-age-legume">Vechime exploatatie</label>
+                <select id="dr14-age-legume" name="dr14-age-legume">
+                  <option value="0">Sub 5 ani</option>
+                  <option value="20">Intre 5 si 7 ani - 20p</option>
+                  <option value="30">Peste 7 ani - 30p</option>
+                </select>
+              </div>
+
+              <div class="scorecalc-control" data-score-scope="achizitii alte">
+                <label for="dr14-age-simple">Vechime exploatatie</label>
+                <select id="dr14-age-simple" name="dr14-age-simple">
+                  <option value="0">Sub 5 ani</option>
+                  <option value="25">Intre 5 si 7 ani - 25p</option>
+                  <option value="35">Peste 7 ani - 35p</option>
+                </select>
+              </div>
+
+              <div class="scorecalc-control">
+                <label class="scorecalc-checkbox">
+                  <input type="checkbox" name="dr14-association">
+                  <span><strong>Membru intr-o forma asociativa cu rol economic</strong><small>Cooperativa, grup sau organizatie de producatori: 20p.</small></span>
+                </label>
+              </div>
+
+              <div class="scorecalc-control">
+                <div class="scorecalc-slider-top">
+                  <label for="dr14-terrain">Teren agricol in proprietate</label>
+                  <span class="scorecalc-slider-value" data-score-slider-value="dr14-terrain">0%</span>
+                </div>
+                <input id="dr14-terrain" type="range" name="dr14-terrain" min="0" max="100" value="0" data-score-slider>
+                <small>Punctaj proportional: max. 20p pentru zootehnic/legumicol, max. 30p pentru achizitii simple si alte sectoare.</small>
+              </div>
+            </div>
+          </form>
+
+          <aside class="scorecalc-result" aria-live="polite">
+            <div class="scorecalc-score"><span data-score-total>0</span><span>/100</span></div>
+            <div class="scorecalc-status is-low" data-score-status>Completeaza criteriile pentru estimare.</div>
+            <p class="scorecalc-note">Prag etapa 1: <strong data-score-first>85p</strong>. Prag minim: <strong data-score-min>40p</strong>.</p>
+            <div class="scorecalc-breakdown" data-score-breakdown></div>
+            <p class="scorecalc-note">Grila este orientativa si foloseste varianta consultativa a ghidului DR 14. Verifica forma finala inainte de depunere.</p>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <div class="sec-label">Surse si verificare</div>
+      <h2 class="sec-title">De unde vin informatiile</h2>
+      <p class="sec-sub">Am corelat pagina cu ghidul consultativ DR 14 atasat, cu anuntul AFIR si cu paginile indicate pentru DR 14 si apicultura. Pentru depunere, forma finala AFIR ramane sursa decisiva.</p>
       <div class="source-list">
         <a href="https://www.afir.ro/info-la-zi/versiunea-consultativa-a-ghidului-solicitantului-dr-14/" target="_blank" rel="noopener noreferrer">AFIR - versiunea consultativa a Ghidului solicitantului DR-14</a>
-        <a href="https://www.afir.ro/comunicare/utile/dezbatere-publica/" target="_blank" rel="noopener noreferrer">AFIR - dezbatere publica</a>
-        <a href="https://www.afir.ro/instrumente/sesiuni/sesiuni-primire-proiecte/" target="_blank" rel="noopener noreferrer">AFIR - sesiuni primire proiecte</a>
+        <a href="https://dr-14.ro/" target="_blank" rel="noopener noreferrer">dr-14.ro - pagina de program consultata</a>
+        <a href="https://dr-14.ro/apicultura" target="_blank" rel="noopener noreferrer">dr-14.ro/apicultura - repere apicole consultate</a>
+        <a href="/dr-14-afir-conditii-eligibilitate-greseli-frecvente.html">Articol FABER: conditii si greseli frecvente DR 14</a>
       </div>
+    </div>
+  </section>
 
-      <div class="note">Pentru decizii de depunere, verifica ghidul final, anexele si sesiunea activa. Conditiile publicate in consultare pot fi modificate in forma finala a programului.</div>
-    </article>
+  <section class="cta-section">
+    <h2>Vrei sa stim daca DR 14 merita pregatit pentru ferma ta?</h2>
+    <p>Trimite-ne dimensiunea exploatatiei, sectorul, investitia dorita si ce documente ai deja. Iti spunem rapid ce este solid, ce lipseste si ce risc trebuie corectat.</p>
+    <a href="/contact/" class="btn-orange">Solicita evaluare gratuita</a>
+  </section>
 
-    <section class="cta-box">
-      <h2>Vrei o verificare DR 14?</h2>
-      <p>Trimite datele fermei, investitia dorita si documentele disponibile. Iti spunem ce trebuie clarificat inainte sa construiesti dosarul.</p>
-      <div class="cta-actions">
-        <a class="btn btn-primary" href="/contact/">Solicita evaluare gratuita</a>
-        <a class="btn btn-secondary" href="/afir/">Vezi toate programele AFIR</a>
-      </div>
-    </section>
-  </main>
+  <footer class="page-footer">
+    <p>&copy; 2026 FABER - Atelier de Consultanta &middot; <a href="/">Acasa</a> &middot; <a href="/afir/">AFIR</a> &middot; <a href="/contact/">Contact</a></p>
+  </footer>
 
-  <footer class="footer">&copy; 2026 FABER - Atelier de Consultanta &middot; <a href="/afir/">AFIR</a> &middot; <a href="/contact/">Contact</a></footer>
   <script src="/assets/official-guides.js" defer></script>
+  <script src="/assets/program-scoring.js" defer></script>
 </body>
 </html>

@@ -6,6 +6,17 @@ const ROOT = path.resolve(__dirname, "..");
 const SITE_HOSTS = new Set(["atelierdeconsultanta.ro", "www.atelierdeconsultanta.ro"]);
 const TEXT_EXTENSIONS = new Set([".html", ".json", ".xml", ".txt", ".js"]);
 const SKIP_PREFIXES = ["mailto:", "tel:", "sms:", "javascript:", "data:", "blob:", "whatsapp:"];
+const PROGRAM_ROUTES = [
+  "dr12-afir",
+  "dr14",
+  "por-adr-nord-est",
+  "afir-autoconsum-agroalimentar",
+  "autoconsum-public-fotovoltaice-institutii-publice",
+  "digitalizare-imm",
+  "femeia-antreprenor-2026",
+  "pro-infra",
+  "start-up-nation-2026",
+];
 
 function posixFromFs(file) {
   return file.split(path.sep).join("/");
@@ -153,15 +164,34 @@ for (const link of links) {
   }
 }
 
+const redirects = parseRedirects();
 const redirectIssues = [];
-for (const redirect of parseRedirects()) {
+for (const redirect of redirects) {
   const target = normalizeTarget(redirect.to, "_redirects");
   if (target && !fs.existsSync(path.join(ROOT, target.targetFile))) {
     redirectIssues.push({ ...redirect, targetFile: target.targetFile });
   }
 }
 
-const dr14Redirect = parseRedirects().find((redirect) => redirect.from === "/dr14.html");
+const programRouteIssues = [];
+for (const slug of PROGRAM_ROUTES) {
+  const cleanRoute = `/${slug}`;
+  const fileRoute = `/${slug}.html`;
+  const hasCleanRewrite = redirects.some(
+    (redirect) => redirect.from === cleanRoute && redirect.to === fileRoute && redirect.status.startsWith("200")
+  );
+  const hasHtmlRedirect = redirects.some(
+    (redirect) => redirect.from === fileRoute && redirect.to === cleanRoute && redirect.status.startsWith("301")
+  );
+  if (!hasCleanRewrite) programRouteIssues.push(`${cleanRoute} should rewrite to ${fileRoute}`);
+  if (!hasHtmlRedirect) programRouteIssues.push(`${fileRoute} should redirect to ${cleanRoute}`);
+}
+
+const dr14BadRedirect = redirects.find(
+  (redirect) =>
+    ["/dr14.html", "/dr14-afir.html", "/dr-14-afir.html"].includes(redirect.from) &&
+    redirect.to !== "/dr14"
+);
 
 console.log("Functional link audit");
 console.log(`Files scanned: ${files.length}`);
@@ -169,9 +199,10 @@ console.log(`Local links scanned: ${links.length}`);
 console.log(`Missing local targets: ${missingTargets.length}`);
 console.log(`Missing local anchors: ${missingAnchors.length}`);
 console.log(`Redirect target issues: ${redirectIssues.length}`);
-console.log(`DR14 file redirect present: ${dr14Redirect ? "YES" : "NO"}`);
+console.log(`Program route issues: ${programRouteIssues.length}`);
+console.log(`Bad DR14 redirects: ${dr14BadRedirect ? "YES" : "NO"}`);
 
-if (missingTargets.length || missingAnchors.length || redirectIssues.length || dr14Redirect) {
+if (missingTargets.length || missingAnchors.length || redirectIssues.length || programRouteIssues.length || dr14BadRedirect) {
   if (missingTargets.length) {
     console.log("\nMissing targets:");
     for (const item of missingTargets) console.log(`- ${item.sourceFile}:${item.line} -> ${item.value} (${item.targetFile})`);
@@ -184,6 +215,10 @@ if (missingTargets.length || missingAnchors.length || redirectIssues.length || d
     console.log("\nRedirect issues:");
     for (const item of redirectIssues) console.log(`- _redirects:${item.line} ${item.from} -> ${item.to} (${item.targetFile})`);
   }
-  if (dr14Redirect) console.log(`\nUnexpected DR14 redirect: _redirects:${dr14Redirect.line} ${dr14Redirect.raw}`);
+  if (programRouteIssues.length) {
+    console.log("\nProgram route issues:");
+    for (const item of programRouteIssues) console.log(`- ${item}`);
+  }
+  if (dr14BadRedirect) console.log(`\nBad DR14 redirect: _redirects:${dr14BadRedirect.line} ${dr14BadRedirect.raw}`);
   process.exitCode = 1;
 }
