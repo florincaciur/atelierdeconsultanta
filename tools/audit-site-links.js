@@ -1,0 +1,189 @@
+const fs = require("fs");
+const path = require("path");
+const cp = require("child_process");
+
+const ROOT = path.resolve(__dirname, "..");
+const SITE_HOSTS = new Set(["atelierdeconsultanta.ro", "www.atelierdeconsultanta.ro"]);
+const TEXT_EXTENSIONS = new Set([".html", ".json", ".xml", ".txt", ".js"]);
+const SKIP_PREFIXES = ["mailto:", "tel:", "sms:", "javascript:", "data:", "blob:", "whatsapp:"];
+
+function posixFromFs(file) {
+  return file.split(path.sep).join("/");
+}
+
+function trackedFiles() {
+  try {
+    return cp
+      .execFileSync("git", ["ls-files"], { cwd: ROOT, encoding: "utf8" })
+      .split(/\r?\n/)
+      .filter(Boolean)
+      .filter((file) => TEXT_EXTENSIONS.has(path.extname(file).toLowerCase()));
+  } catch {
+    const result = [];
+    function walk(dir) {
+      for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+        if (entry.name === ".git" || entry.name.endsWith("_files")) continue;
+        const full = path.join(dir, entry.name);
+        if (entry.isDirectory()) walk(full);
+        else if (TEXT_EXTENSIONS.has(path.extname(entry.name).toLowerCase())) result.push(path.relative(ROOT, full));
+      }
+    }
+    walk(ROOT);
+    return result.map(posixFromFs);
+  }
+}
+
+function read(file) {
+  return fs.readFileSync(path.join(ROOT, file), "utf8");
+}
+
+function htmlFileForRoute(route) {
+  const clean = route.replace(/^\/+/, "");
+  if (!clean) return "index.html";
+  if (route.endsWith("/")) return `${clean}index.html`;
+  if (path.posix.extname(clean)) return clean;
+  const dirIndex = `${clean}/index.html`;
+  if (fs.existsSync(path.join(ROOT, dirIndex))) return dirIndex;
+  return `${clean}.html`;
+}
+
+function normalizeTarget(rawValue, sourceFile) {
+  if (!rawValue) return null;
+  const value = rawValue.replace(/&amp;/g, "&").trim();
+  if (!value || value === "#") return null;
+  if (value.includes("${") || value.includes("{{")) return null;
+  if (SKIP_PREFIXES.some((prefix) => value.toLowerCase().startsWith(prefix))) return null;
+
+  let pathname;
+  let hash = "";
+
+  try {
+    if (/^https?:\/\//i.test(value)) {
+      const url = new URL(value);
+      if (!SITE_HOSTS.has(url.hostname)) return null;
+      pathname = url.pathname || "/";
+      hash = url.hash || "";
+    } else {
+      const [withoutHash, rawHash = ""] = value.split("#");
+      hash = rawHash ? `#${rawHash}` : "";
+      if (!withoutHash) {
+        const sourceRoute = sourceFile.endsWith("index.html")
+          ? `/${path.posix.dirname(sourceFile).replace(/^\.$/, "")}/`.replace("//", "/")
+          : `/${sourceFile}`;
+        pathname = sourceRoute;
+      } else if (withoutHash.startsWith("/")) {
+        pathname = withoutHash;
+      } else {
+        pathname = `/${path.posix.normalize(path.posix.join(path.posix.dirname(sourceFile), withoutHash))}`;
+      }
+    }
+  } catch {
+    return null;
+  }
+
+  return {
+    route: pathname,
+    hash,
+    targetFile: htmlFileForRoute(pathname),
+  };
+}
+
+function lineNumber(text, index) {
+  return text.slice(0, index).split(/\r?\n/).length;
+}
+
+function extractLinks(file, text) {
+  const links = [];
+  const patterns = [
+    /\b(?:href|src|action)=["']([^"']+)["']/gi,
+    /"(?:ctaLink|canonicalUrl|url)"\s*:\s*"([^"]+)"/gi,
+    /<loc>\s*(https?:\/\/[^<]+)\s*<\/loc>/gi,
+  ];
+
+  for (const pattern of patterns) {
+    let match;
+    while ((match = pattern.exec(text))) {
+      const target = normalizeTarget(match[1], file);
+      if (target) links.push({ sourceFile: file, line: lineNumber(text, match.index), value: match[1], ...target });
+    }
+  }
+  return links;
+}
+
+function idsFor(file) {
+  const full = path.join(ROOT, file);
+  if (!fs.existsSync(full) || path.extname(file).toLowerCase() !== ".html") return new Set();
+  const text = fs.readFileSync(full, "utf8");
+  const ids = new Set();
+  let match;
+  const idPattern = /\b(?:id|name)=["']([^"']+)["']/gi;
+  while ((match = idPattern.exec(text))) ids.add(match[1]);
+  return ids;
+}
+
+function parseRedirects() {
+  const redirectsPath = path.join(ROOT, "_redirects");
+  if (!fs.existsSync(redirectsPath)) return [];
+  const lines = fs.readFileSync(redirectsPath, "utf8").split(/\r?\n/);
+  return lines
+    .map((line, index) => ({ line: index + 1, raw: line.trim() }))
+    .filter((entry) => entry.raw && !entry.raw.startsWith("#"))
+    .map((entry) => {
+      const [from, to, status = ""] = entry.raw.split(/\s+/);
+      return { ...entry, from, to, status };
+    });
+}
+
+const files = trackedFiles();
+const links = files.flatMap((file) => extractLinks(file, read(file)));
+const missingTargets = [];
+const missingAnchors = [];
+const idCache = new Map();
+
+for (const link of links) {
+  const full = path.join(ROOT, link.targetFile);
+  if (!fs.existsSync(full)) {
+    missingTargets.push(link);
+    continue;
+  }
+  if (link.hash) {
+    const id = decodeURIComponent(link.hash.slice(1));
+    if (!idCache.has(link.targetFile)) idCache.set(link.targetFile, idsFor(link.targetFile));
+    if (!idCache.get(link.targetFile).has(id)) missingAnchors.push({ ...link, id });
+  }
+}
+
+const redirectIssues = [];
+for (const redirect of parseRedirects()) {
+  const target = normalizeTarget(redirect.to, "_redirects");
+  if (target && !fs.existsSync(path.join(ROOT, target.targetFile))) {
+    redirectIssues.push({ ...redirect, targetFile: target.targetFile });
+  }
+}
+
+const dr14Redirect = parseRedirects().find((redirect) => redirect.from === "/dr14.html");
+
+console.log("Functional link audit");
+console.log(`Files scanned: ${files.length}`);
+console.log(`Local links scanned: ${links.length}`);
+console.log(`Missing local targets: ${missingTargets.length}`);
+console.log(`Missing local anchors: ${missingAnchors.length}`);
+console.log(`Redirect target issues: ${redirectIssues.length}`);
+console.log(`DR14 file redirect present: ${dr14Redirect ? "YES" : "NO"}`);
+
+if (missingTargets.length || missingAnchors.length || redirectIssues.length || dr14Redirect) {
+  if (missingTargets.length) {
+    console.log("\nMissing targets:");
+    for (const item of missingTargets) console.log(`- ${item.sourceFile}:${item.line} -> ${item.value} (${item.targetFile})`);
+  }
+  if (missingAnchors.length) {
+    console.log("\nMissing anchors:");
+    for (const item of missingAnchors) console.log(`- ${item.sourceFile}:${item.line} -> ${item.value} (${item.targetFile} #${item.id})`);
+  }
+  if (redirectIssues.length) {
+    console.log("\nRedirect issues:");
+    for (const item of redirectIssues) console.log(`- _redirects:${item.line} ${item.from} -> ${item.to} (${item.targetFile})`);
+  }
+  if (dr14Redirect) console.log(`\nUnexpected DR14 redirect: _redirects:${dr14Redirect.line} ${dr14Redirect.raw}`);
+  process.exitCode = 1;
+}

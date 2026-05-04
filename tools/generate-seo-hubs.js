@@ -71,7 +71,7 @@ const pages = [
     audience: ["tineri fermieri interesați de instalare", "ferme mici care urmăresc investiții prin DR 14", "ferme și procesatori care analizează energie, utilaje sau modernizare"],
     checks: ["Standard Output și încadrarea exploatației", "documentele APIA, ANSVSA, registrul agricol sau alte evidențe cerute", "eligibilitatea investiției față de ghidul programului"],
     steps: ["calculează dimensiunea economică a fermei", "verifică forma juridică și istoricul exploatației", "pregătește planul de investiții și ofertele", "revizuiește riscurile înainte de depunere"],
-    links: [related.consultantaAfir, ["/dr12-afir.html", "DR 12 AFIR"], ["/dr-14-afir-conditii-eligibilitate-greseli-frecvente.html", "DR 14 AFIR"], ["/calculator-soc.html", "Calculator SO AFIR"], related.agricultura],
+    links: [related.consultantaAfir, ["/dr12-afir.html", "DR 12 AFIR"], ["/dr14.html", "DR 14 AFIR"], ["/calculator-soc.html", "Calculator SO AFIR"], related.agricultura],
   },
   {
     slug: "start-up-nation",
@@ -264,7 +264,7 @@ const pages = [
     audience: ["tineri fermieri", "ferme mici și ferme în dezvoltare", "beneficiari care pregătesc utilaje, construcții sau energie"],
     checks: ["SO, suprafețe, animale și forma juridică", "dreptul de folosință și documentele exploatației", "investiția, ofertele și punctajul"],
     steps: ["calculăm dimensiunea exploatației", "verificăm documentele", "alegem programul potrivit", "pregătim pașii pentru dosar"],
-    links: [related.afir, ["/dr12-afir.html", "DR 12 AFIR"], ["/dr-14-afir-conditii-eligibilitate-greseli-frecvente.html", "DR 14 AFIR"], ["/fonduri-pentru-ferme/", "Fonduri pentru ferme"], related.contact],
+    links: [related.afir, ["/dr12-afir.html", "DR 12 AFIR"], ["/dr14.html", "DR 14 AFIR"], ["/fonduri-pentru-ferme/", "Fonduri pentru ferme"], related.contact],
   },
   {
     slug: "fonduri-pentru-ferme",
@@ -570,7 +570,8 @@ const existing = [
   ["/consultanta-fonduri-europene/", "0.9"],
   ["/fonduri-europene-nerambursabile-2026/", "0.9"],
   ["/dr12-afir.html", "0.9"],
-  ["/dr-14-afir-conditii-eligibilitate-greseli-frecvente.html", "0.9"],
+  ["/dr14.html", "0.9"],
+  ["/dr-14-afir-conditii-eligibilitate-greseli-frecvente.html", "0.7"],
   ["/start-up-nation-2026.html", "0.9"],
   ["/femeia-antreprenor-2026.html", "0.9"],
   ["/digitalizare-imm.html", "0.9"],
