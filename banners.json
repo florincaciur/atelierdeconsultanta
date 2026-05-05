@@ -71,7 +71,8 @@
     "altText": "Banner program DR 14 Ferme de Mici Dimensiuni",
     "icon": "ph-tractor",
     "order": 5,
-    "active": true
+    "active": true,
+    "officialGuideKey": "dr14"
   },
   {
     "id": "slide-digitalizare-imm",
