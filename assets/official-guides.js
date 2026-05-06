@@ -4,6 +4,7 @@
   var GUIDE_LABEL = "LINK GHID OFICIAL";
   var guidesData = {};
   var applyQueued = false;
+  var guidesLoaded = false;
 
   function asGuide(entry) {
     if (!entry) return {};
@@ -48,6 +49,7 @@
   }
 
   function scheduleApply() {
+    if (!guidesLoaded) return;
     if (applyQueued) return;
     applyQueued = true;
 
@@ -57,21 +59,41 @@
     });
   }
 
-  document.addEventListener("DOMContentLoaded", scheduleApply);
-  window.addEventListener("load", scheduleApply);
+  function afterFirstPaint(callback) {
+    var runWhenIdle = function () {
+      if ("requestIdleCallback" in window) {
+        window.requestIdleCallback(callback, { timeout: 1500 });
+      } else {
+        window.setTimeout(callback, 400);
+      }
+    };
+
+    if (document.readyState === "complete") {
+      window.requestAnimationFrame(runWhenIdle);
+    } else {
+      window.addEventListener("load", function () {
+        window.requestAnimationFrame(runWhenIdle);
+      }, { once: true });
+    }
+  }
+
   document.addEventListener("official-guides:refresh", scheduleApply);
 
-  fetch("/official-guides.json", { cache: "no-store" })
-    .then(function (response) {
-      if (!response.ok) throw new Error("Nu se poate incarca official-guides.json");
-      return response.json();
-    })
-    .then(function (data) {
-      guidesData = data || {};
-      scheduleApply();
-    })
-    .catch(function () {
-      guidesData = {};
-      scheduleApply();
-    });
+  afterFirstPaint(function () {
+    fetch("/official-guides.json", { cache: "no-store" })
+      .then(function (response) {
+        if (!response.ok) throw new Error("Nu se poate incarca official-guides.json");
+        return response.json();
+      })
+      .then(function (data) {
+        guidesData = data || {};
+        guidesLoaded = true;
+        scheduleApply();
+      })
+      .catch(function () {
+        guidesData = {};
+        guidesLoaded = true;
+        scheduleApply();
+      });
+  });
 })();
