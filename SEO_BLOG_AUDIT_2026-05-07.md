@@ -8,7 +8,8 @@ Fix aplicat in acest audit:
 
 - `/index.html` redirectioneaza 301 catre `/`, reducand cazul "Alternate page with proper canonical tag".
 - URL-urile canonice cu trailing slash sunt servite direct din `/slug/index.html`, fara rewrite `200!` intermediar.
-- Variantele fara slash, `.html` si `index.html` redirectioneaza 301 catre URL-ul canonic.
+- Variantele fara slash si `.html` redirectioneaza 301 catre URL-ul canonic.
+- Variantele `/slug/index.html` sunt lasate sa returneze 200 cu canonical catre `/slug/`; pe Netlify, redirectarea lor explicita poate crea self-loop cand platforma serveste automat directorul.
 - Generatorul fallback-urilor HTML foloseste `noindex, follow` pentru paginile de redirect soft.
 - `sitemap.xml` are `lastmod` actualizat la `2026-05-07`.
 
@@ -142,4 +143,3 @@ Foloseste modelul hub-and-spoke:
    - `https://atelierdeconsultanta.ro/fonduri-nerambursabile/`
 2. Retrimite sitemap-ul: `https://atelierdeconsultanta.ro/sitemap.xml`.
 3. Pentru `http://atelierdeconsultanta.ro/`, nu incerca sa il faci indexabil. Redirectul HTTP -> HTTPS este corect.
-
