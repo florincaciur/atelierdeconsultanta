@@ -8,7 +8,8 @@ Fix aplicat in acest audit:
 
 - `/index.html` redirectioneaza 301 catre `/`, reducand cazul "Alternate page with proper canonical tag".
 - URL-urile canonice cu trailing slash sunt servite direct din `/slug/index.html`, fara rewrite `200!` intermediar.
-- Variantele fara slash si `.html` redirectioneaza 301 catre URL-ul canonic.
+- Variantele `.html` redirectioneaza 301 catre URL-ul canonic.
+- Variantele fara slash folosesc rewrite 200 catre continutul real din `/slug/index.html`, cu canonical catre varianta cu slash; pe Netlify, regulile 301 diferentiate doar prin slash pot fi normalizate si pot crea self-loop.
 - Variantele `/slug/index.html` sunt lasate sa returneze 200 cu canonical catre `/slug/`; pe Netlify, redirectarea lor explicita poate crea self-loop cand platforma serveste automat directorul.
 - Generatorul fallback-urilor HTML foloseste `noindex, follow` pentru paginile de redirect soft.
 - `sitemap.xml` are `lastmod` actualizat la `2026-05-07`.
