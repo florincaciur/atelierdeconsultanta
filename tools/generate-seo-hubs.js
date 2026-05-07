@@ -3,7 +3,7 @@ const path = require("path");
 
 const ROOT = path.resolve(__dirname, "..");
 const SITE = "https://atelierdeconsultanta.ro";
-const TODAY = "2026-05-03";
+const TODAY = "2026-05-07";
 
 const related = {
   contact: ["/contact/", "Solicită evaluare gratuită"],
