@@ -129,6 +129,7 @@ Optiuni:
   --dry-run            scrie outputul in folder temporar, fara blog.json/sitemap.xml
   --no-blog-json        nu actualizeaza blog.json
   --no-sitemap          nu actualizeaza sitemap.xml
+  --submit-indexnow     trimite URL-ul final la IndexNow (foloseste dupa deploy/live)
   --help               afiseaza ajutorul
 
 Scriptul opreste generarea daca nu poate verifica web, surse oficiale si cel putin un SERP Google/Bing.
@@ -141,6 +142,7 @@ function parseArgs(argv) {
     dryRun: false,
     updateBlogJson: true,
     updateSitemap: true,
+    submitIndexNow: false,
   };
 
   for (let i = 2; i < argv.length; i += 1) {
@@ -155,6 +157,8 @@ function parseArgs(argv) {
       args.updateBlogJson = false;
     } else if (arg === "--no-sitemap") {
       args.updateSitemap = false;
+    } else if (arg === "--submit-indexnow") {
+      args.submitIndexNow = true;
     } else {
       throw new Error(`Argument necunoscut: ${arg}`);
     }
@@ -1837,6 +1841,15 @@ function runRepoTests() {
   return results;
 }
 
+function submitIndexNowUrl(url) {
+  return cp.execFileSync(process.execPath, ["tools/submit-indexnow.js", "--url", url], {
+    cwd: ROOT,
+    encoding: "utf8",
+    timeout: 30000,
+    windowsHide: true,
+  });
+}
+
 async function main() {
   const args = parseArgs(process.argv);
   if (args.help || !args.config) {
@@ -1915,6 +1928,11 @@ async function main() {
     process.exit(1);
   }
 
+  let indexNowOutput = "";
+  if (!args.dryRun && args.submitIndexNow) {
+    indexNowOutput = submitIndexNowUrl(absoluteUrl(route)).trim();
+  }
+
   console.log("Articol generat cu succes.");
   console.log(`- Articol: ${path.relative(ROOT, outputFile)}`);
   console.log(`- Rapoarte: ${path.relative(ROOT, reportRoot)}`);
@@ -1922,6 +1940,7 @@ async function main() {
   console.log(`- Cuvinte: ${validation.wordCount}`);
   console.log(`- blog.json actualizat: ${updatedBlogJson ? "da" : args.dryRun || !args.updateBlogJson ? "nu se aplică" : "nu"}`);
   console.log(`- sitemap.xml actualizat: ${updatedSitemap ? "da" : args.dryRun || !args.updateSitemap ? "nu se aplică" : "nu"}`);
+  if (indexNowOutput) console.log(`- ${indexNowOutput.replace(/\r?\n/g, "\n- ")}`);
 }
 
 main().catch((error) => {

@@ -117,3 +117,31 @@ node tools/audit-site-links.js
 ```
 
 Publică prin commit și push doar după ce raportul și checklistul nu au erori.
+
+## IndexNow
+
+Cheia IndexNow este publicată în root:
+
+```text
+https://atelierdeconsultanta.ro/a54d3e71f7854ddd9b9fc4cb91c7d681.txt
+```
+
+După deploy, poți trimite un URL nou către IndexNow:
+
+```bash
+node tools/submit-indexnow.js --url https://atelierdeconsultanta.ro/pagina-noua.html
+```
+
+Sau poți trimite toate URL-urile din `sitemap.xml`:
+
+```bash
+node tools/submit-indexnow.js --sitemap
+```
+
+Generatorul de articole acceptă și:
+
+```bash
+node tools/generate-seo-blog-article.js --config config/articol-nou.json --submit-indexnow
+```
+
+Folosește `--submit-indexnow` doar după ce pagina finală este deja publică/live.
