@@ -1,7 +1,15 @@
 /tools/* /404.html 404!
 /config/* /404.html 404!
 /reports/* /404.html 404!
-/*.md /404.html 404!
+/ADMIN_WORKFLOW.md /404.html 404!
+/CHANGELOG.md /404.html 404!
+/POST_DEPLOY_VERIFICATION.md /404.html 404!
+/PROMPT_TEMPLATE_BLOG_SEO.md /404.html 404!
+/README.md /404.html 404!
+/SEO_AUDIT_FIXES.md /404.html 404!
+/SEO_BLOG_AUDIT_2026-05-07.md /404.html 404!
+/SEO_BLOG_AUTOMATION.md /404.html 404!
+/SEO_NOTES.md /404.html 404!
 
 /index.html / 301!
 
