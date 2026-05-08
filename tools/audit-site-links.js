@@ -5,6 +5,7 @@ const cp = require("child_process");
 const ROOT = path.resolve(__dirname, "..");
 const SITE_HOSTS = new Set(["atelierdeconsultanta.ro", "www.atelierdeconsultanta.ro"]);
 const TEXT_EXTENSIONS = new Set([".html", ".json", ".xml", ".txt", ".js"]);
+const INTERNAL_PATH_PREFIXES = ["tools/", "config/", "reports/"];
 const SKIP_PREFIXES = ["mailto:", "tel:", "sms:", "javascript:", "data:", "blob:", "whatsapp:"];
 const PROGRAM_ROUTES = [
   "dr12-afir",
@@ -22,12 +23,18 @@ function posixFromFs(file) {
   return file.split(path.sep).join("/");
 }
 
+function isPublicAuditFile(file) {
+  const normalized = posixFromFs(file);
+  return !INTERNAL_PATH_PREFIXES.some((prefix) => normalized.startsWith(prefix));
+}
+
 function trackedFiles() {
   try {
     return cp
       .execFileSync("git", ["ls-files"], { cwd: ROOT, encoding: "utf8" })
       .split(/\r?\n/)
       .filter(Boolean)
+      .filter(isPublicAuditFile)
       .filter((file) => TEXT_EXTENSIONS.has(path.extname(file).toLowerCase()));
   } catch {
     const result = [];
@@ -35,6 +42,8 @@ function trackedFiles() {
       for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
         if (entry.name === ".git" || entry.name.endsWith("_files")) continue;
         const full = path.join(dir, entry.name);
+        const relative = posixFromFs(path.relative(ROOT, full));
+        if (!isPublicAuditFile(relative)) continue;
         if (entry.isDirectory()) walk(full);
         else if (TEXT_EXTENSIONS.has(path.extname(entry.name).toLowerCase())) result.push(path.relative(ROOT, full));
       }

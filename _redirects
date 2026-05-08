@@ -1,3 +1,8 @@
+/tools/* /404.html 404!
+/config/* /404.html 404!
+/reports/* /404.html 404!
+/*.md /404.html 404!
+
 /index.html / 301!
 
 # Canonical trailing-slash pages. Let the host serve each /slug/ from /slug/index.html.
