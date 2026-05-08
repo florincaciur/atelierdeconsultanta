@@ -1,0 +1,3 @@
+# Local article generation configs can contain absolute paths from this machine.
+config/articol-*.json
+

@@ -609,6 +609,10 @@ function extractPdfFile(file, buffer = fs.readFileSync(file)) {
   if (python) {
     const code = [
       "import sys",
+      "try:",
+      "    sys.stdout.reconfigure(encoding='utf-8', errors='replace')",
+      "except Exception:",
+      "    pass",
       "path=sys.argv[1]",
       "text=''",
       "mods=[('pypdf','PdfReader'),('PyPDF2','PdfReader')]",
@@ -637,7 +641,12 @@ function extractPdfFile(file, buffer = fs.readFileSync(file)) {
 
 function tryCommand(command, args) {
   try {
-    return cp.execFileSync(command, args, { encoding: "utf8", timeout: 30000, windowsHide: true });
+    return cp.execFileSync(command, args, {
+      encoding: "utf8",
+      timeout: 30000,
+      windowsHide: true,
+      env: { ...process.env, PYTHONIOENCODING: "utf-8", PYTHONUTF8: "1" },
+    });
   } catch {
     return "";
   }
