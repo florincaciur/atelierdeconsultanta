@@ -1,0 +1,7 @@
+{
+  "linkGhidSolicitant": "https://oportunitati-ue.gov.ro/",
+  "numeDocumentOficial": "",
+  "nivelVerificare": "strict",
+
+  "note": "Input minim: pune aici linkul ghidului solicitantului sau numele fișierului PDF/DOCX local. Restul se deduce automat: program, keyworduri, titlu, slug, întrebări, linkuri interne, blog.json și sitemap."
+}
