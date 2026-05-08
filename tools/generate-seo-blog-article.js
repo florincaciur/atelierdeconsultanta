@@ -12,6 +12,14 @@ const SITE = "https://atelierdeconsultanta.ro";
 const REPORT_DIR = path.join(ROOT, "reports");
 const WEB_ERROR =
   "Nu pot genera articol publicabil: lipsește accesul web necesar pentru verificarea surselor oficiale, a SERP-urilor și a semnalelor AI Search.";
+const CLARITY_TRACKING_CODE = `  <!-- Clarity tracking code for https://atelierdeconsultanta.ro/ -->
+  <script>
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wnxxdlfpac");
+  </script>`;
 
 const OFFICIAL_DOMAINS = [
   "afir.ro",
@@ -1323,6 +1331,7 @@ function buildArticle(config, research, sourceText, route, internalLinks) {
   <meta property="og:url" content="${esc(canonical)}" />
   <meta property="og:image" content="${SITE}/og-image.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
+${CLARITY_TRACKING_CODE}
   <link rel="icon" type="image/png" href="/favicon.png" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
