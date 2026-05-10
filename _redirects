@@ -23,7 +23,7 @@
 /fonduri-nerambursabile /fonduri-nerambursabile/index.html 200!
 /pnrr /pnrr/index.html 200!
 /afir /afir/index.html 200!
-/start-up-nation /start-up-nation/index.html 200!
+/start-up-nation /start-up-nation-2026 301!
 /fonduri-europene-imm /fonduri-europene-imm/index.html 200!
 /fonduri-europene-agricultura /fonduri-europene-agricultura/index.html 200!
 /fonduri-europene-digitalizare /fonduri-europene-digitalizare/index.html 200!
@@ -37,7 +37,9 @@
 /start-up-nation-2026-cheltuieli-eligibile /start-up-nation-2026-cheltuieli-eligibile/index.html 200!
 /start-up-nation-2026-idei-afaceri /start-up-nation-2026-idei-afaceri/index.html 200!
 /start-up-nation-2026-plan-de-afaceri /start-up-nation-2026-plan-de-afaceri/index.html 200!
-/consultanta-start-up-nation /consultanta-start-up-nation/index.html 200!
+/cod-caen-start-up-nation-2026 /cod-caen-start-up-nation-2026/index.html 200!
+/consultanta-start-up-nation-2026 /consultanta-start-up-nation-2026/index.html 200!
+/consultanta-start-up-nation /consultanta-start-up-nation-2026/ 301!
 /consultanta-afir /consultanta-afir/index.html 200!
 /fonduri-pentru-ferme /fonduri-pentru-ferme/index.html 200!
 /fonduri-pentru-utilaje-agricole /fonduri-pentru-utilaje-agricole/index.html 200!
@@ -61,7 +63,7 @@
 /fonduri-nerambursabile.html /fonduri-nerambursabile/ 301!
 /pnrr.html /pnrr/ 301!
 /afir.html /afir/ 301!
-/start-up-nation.html /start-up-nation/ 301!
+/start-up-nation.html /start-up-nation-2026 301!
 /fonduri-europene-imm.html /fonduri-europene-imm/ 301!
 /fonduri-europene-agricultura.html /fonduri-europene-agricultura/ 301!
 /fonduri-europene-digitalizare.html /fonduri-europene-digitalizare/ 301!
@@ -75,7 +77,9 @@
 /start-up-nation-2026-cheltuieli-eligibile.html /start-up-nation-2026-cheltuieli-eligibile/ 301!
 /start-up-nation-2026-idei-afaceri.html /start-up-nation-2026-idei-afaceri/ 301!
 /start-up-nation-2026-plan-de-afaceri.html /start-up-nation-2026-plan-de-afaceri/ 301!
-/consultanta-start-up-nation.html /consultanta-start-up-nation/ 301!
+/cod-caen-start-up-nation-2026.html /cod-caen-start-up-nation-2026/ 301!
+/consultanta-start-up-nation-2026.html /consultanta-start-up-nation-2026/ 301!
+/consultanta-start-up-nation.html /consultanta-start-up-nation-2026/ 301!
 /consultanta-afir.html /consultanta-afir/ 301!
 /fonduri-pentru-ferme.html /fonduri-pentru-ferme/ 301!
 /fonduri-pentru-utilaje-agricole.html /fonduri-pentru-utilaje-agricole/ 301!
@@ -98,6 +102,13 @@
 /autoconsum-publici.html /autoconsum-public-fotovoltaice-institutii-publice 301!
 /dr14-afir.html /dr14 301!
 /dr-14-afir.html /dr14 301!
+/start-up-nation/ /start-up-nation-2026 301!
+/consultanta-start-up-nation/ /consultanta-start-up-nation-2026/ 301!
+/start-up-nation-2026-idei-afaceri-plan.html /start-up-nation-2026-idei-afaceri/ 301!
+/idei-afaceri-start-up-nation-2026 /start-up-nation-2026-idei-afaceri/ 301!
+/idei-afaceri-start-up-nation-2026/ /start-up-nation-2026-idei-afaceri/ 301!
+/plan-afaceri-start-up-nation-2026 /start-up-nation-2026-plan-de-afaceri/ 301!
+/plan-afaceri-start-up-nation-2026/ /start-up-nation-2026-plan-de-afaceri/ 301!
 
 # Extensionless program pages backed by root HTML files.
 /dr12-afir /dr12-afir.html 200!
