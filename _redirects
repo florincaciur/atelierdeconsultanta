@@ -16,6 +16,7 @@
 # Canonical trailing-slash pages. Let the host serve each /slug/ from /slug/index.html.
 /contact /contact/index.html 200!
 /consultanta-fonduri-europene /consultanta-fonduri-europene/index.html 200!
+/verificare-eligibilitate-fonduri-europene /verificare-eligibilitate-fonduri-europene/index.html 200!
 /digitalizare-imm-pnrr /digitalizare-imm-pnrr/index.html 200!
 /fondul-de-modernizare /fondul-de-modernizare/index.html 200!
 /fonduri-europene /fonduri-europene/index.html 200!
@@ -53,6 +54,7 @@
 # Legacy .html and explicit index.html variants for trailing-slash pages.
 /contact.html /contact/ 301!
 /consultanta-fonduri-europene.html /consultanta-fonduri-europene/ 301!
+/verificare-eligibilitate-fonduri-europene.html /verificare-eligibilitate-fonduri-europene/ 301!
 /digitalizare-imm-pnrr.html /digitalizare-imm-pnrr/ 301!
 /fondul-de-modernizare.html /fondul-de-modernizare/ 301!
 /fonduri-europene.html /fonduri-europene/ 301!
