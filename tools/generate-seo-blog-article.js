@@ -1179,12 +1179,12 @@ function selectInternalLinks(config) {
     "/blog.html",
   ];
   if (lower.includes("afir") || lower.includes("dr 12") || lower.includes("dr 14") || lower.includes("ferm")) {
-    links.push("/afir/", "/consultanta-afir/", "/calculator-soc.html", "/fonduri-europene-agricultura/");
+    links.push("/afir/", "/consultanta-afir/", "/calculator-soc", "/fonduri-europene-agricultura/");
   }
   if (lower.includes("start")) {
     links.push(
       "/start-up-nation/",
-      "/start-up-nation-2026.html",
+      "/start-up-nation-2026",
       "/start-up-nation-2026-conditii/",
       "/consultanta-start-up-nation/"
     );
@@ -1218,11 +1218,11 @@ function anchorFor(link) {
     "/fonduri-europene-nerambursabile-2026/": "fonduri europene nerambursabile 2026",
     "/afir/": "hubul AFIR",
     "/consultanta-afir/": "consultanță AFIR",
-    "/calculator-soc.html": "Calculatorul SO AFIR",
+    "/calculator-soc": "Calculatorul SO AFIR",
     "/dr-14-afir-conditii-eligibilitate-greseli-frecvente.html": "ghidul DR 14 AFIR",
-    "/dr12-afir.html": "pagina DR 12 AFIR",
+    "/dr12-afir": "pagina DR 12 AFIR",
     "/start-up-nation/": "hubul Start-Up Nation",
-    "/start-up-nation-2026.html": "pagina Start-Up Nation 2026",
+    "/start-up-nation-2026": "pagina Start-Up Nation 2026",
     "/start-up-nation-2026-conditii/": "condiții Start-Up Nation 2026",
     "/consultanta-start-up-nation/": "consultanță Start-Up Nation",
     "/digitalizare-imm-pnrr/": "Digitalizare IMM / PNRR",

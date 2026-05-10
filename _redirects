@@ -62,16 +62,6 @@
 /plan-afaceri-start-up-nation-2026/ /start-up-nation-2026-plan-de-afaceri/ 301
 
 # Legacy program/service file URLs backed by root HTML files.
-/dr12-afir /dr12-afir.html 200
-/dr14 /dr14.html 200
-/por-adr-nord-est /por-adr-nord-est.html 200
-/afir-autoconsum-agroalimentar /afir-autoconsum-agroalimentar.html 200
-/autoconsum-public-fotovoltaice-institutii-publice /autoconsum-public-fotovoltaice-institutii-publice.html 200
-/digitalizare-imm /digitalizare-imm.html 200
-/femeia-antreprenor-2026 /femeia-antreprenor-2026.html 200
-/pro-infra /pro-infra.html 200
-/start-up-nation-2026 /start-up-nation-2026.html 200
-
 /dr12-afir.html /dr12-afir 301
 /dr14.html /dr14 301
 /por-adr-nord-est.html /por-adr-nord-est 301
@@ -81,6 +71,7 @@
 /femeia-antreprenor-2026.html /femeia-antreprenor-2026 301
 /pro-infra.html /pro-infra 301
 /start-up-nation-2026.html /start-up-nation-2026 301
+/calculator-soc.html /calculator-soc 301
 
 # Trailing-slash variants for root HTML canonical pages.
 /dr12-afir/ /dr12-afir 301
@@ -92,3 +83,4 @@
 /femeia-antreprenor-2026/ /femeia-antreprenor-2026 301
 /pro-infra/ /pro-infra 301
 /start-up-nation-2026/ /start-up-nation-2026 301
+/calculator-soc/ /calculator-soc 301

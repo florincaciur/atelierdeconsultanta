@@ -192,7 +192,8 @@ for (const slug of PROGRAM_ROUTES) {
   const hasHtmlRedirect = redirects.some(
     (redirect) => redirect.from === fileRoute && redirect.to === cleanRoute && redirect.status.startsWith("301")
   );
-  if (!hasCleanRewrite) programRouteIssues.push(`${cleanRoute} should rewrite to ${fileRoute}`);
+  const hasHtmlAsset = fs.existsSync(path.join(ROOT, `${slug}.html`));
+  if (!hasCleanRewrite && !hasHtmlAsset) programRouteIssues.push(`${cleanRoute} should be backed by ${fileRoute}`);
   if (!hasHtmlRedirect) programRouteIssues.push(`${fileRoute} should redirect to ${cleanRoute}`);
 }
 

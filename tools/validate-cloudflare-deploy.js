@@ -76,11 +76,24 @@ function assertCleanAssetDirectory(directory) {
 const redirectsPath = path.join(ROOT, "_redirects");
 const { rules, errors } = parseRedirects(redirectsPath);
 const dynamicRules = rules.filter((rule) => rule.dynamic);
+const ruleBySource = new Map(rules.map((rule) => [rule.source, rule]));
 
 if (dynamicRules.length > MAX_DYNAMIC_REDIRECTS) {
   errors.push(
     `${redirectsPath}: ${dynamicRules.length} dynamic redirects; expected fewer than 100`
   );
+}
+
+for (const rule of rules) {
+  if (rule.source === rule.destination) {
+    errors.push(`${redirectsPath}:${rule.lineNumber} redirects ${rule.source} to itself`);
+  }
+  const inverse = ruleBySource.get(rule.destination);
+  if (inverse && inverse.destination === rule.source && rule.lineNumber < inverse.lineNumber) {
+    errors.push(
+      `${redirectsPath}:${rule.lineNumber} and ${redirectsPath}:${inverse.lineNumber} form a redirect cycle: ${rule.source} <-> ${rule.destination}`
+    );
+  }
 }
 
 const config = readWranglerConfig();

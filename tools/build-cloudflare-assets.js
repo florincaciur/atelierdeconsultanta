@@ -53,6 +53,19 @@ const PUBLIC_EXTENSIONS = new Set([
   ".xml",
 ]);
 
+const CANONICAL_ROOT_HTML_ROUTES = new Set([
+  "por-adr-nord-est",
+  "dr12-afir",
+  "afir-autoconsum-agroalimentar",
+  "autoconsum-public-fotovoltaice-institutii-publice",
+  "dr14",
+  "digitalizare-imm",
+  "femeia-antreprenor-2026",
+  "pro-infra",
+  "start-up-nation-2026",
+  "calculator-soc",
+]);
+
 function posixPath(value) {
   return value.split(path.sep).join("/");
 }
@@ -66,6 +79,9 @@ function isPublicFile(relativePath) {
   if (!normalized || normalized.startsWith("../")) return false;
   if (EXCLUDED_DIRS.has(firstSegment(normalized))) return false;
   if (EXCLUDED_FILES.has(normalized)) return false;
+  for (const route of CANONICAL_ROOT_HTML_ROUTES) {
+    if (normalized === `${route}/index.html` && fs.existsSync(path.join(ROOT, `${route}.html`))) return false;
+  }
   if (normalized === "_redirects") return true;
   return PUBLIC_EXTENSIONS.has(path.posix.extname(normalized).toLowerCase());
 }
@@ -104,7 +120,7 @@ if (!OUT_DIR.startsWith(ROOT + path.sep)) {
   throw new Error(`Refusing to clean output outside repository: ${OUT_DIR}`);
 }
 
-fs.rmSync(OUT_DIR, { recursive: true, force: true });
+fs.rmSync(OUT_DIR, { recursive: true, force: true, maxRetries: 5, retryDelay: 100 });
 fs.mkdirSync(OUT_DIR, { recursive: true });
 
 const files = trackedFiles().map(posixPath).filter(isPublicFile).sort();

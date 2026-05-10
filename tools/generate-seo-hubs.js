@@ -71,7 +71,7 @@ const pages = [
     audience: ["tineri fermieri interesați de instalare", "ferme mici care urmăresc investiții prin DR 14", "ferme și procesatori care analizează energie, utilaje sau modernizare"],
     checks: ["Standard Output și încadrarea exploatației", "documentele APIA, ANSVSA, registrul agricol sau alte evidențe cerute", "eligibilitatea investiției față de ghidul programului"],
     steps: ["calculează dimensiunea economică a fermei", "verifică forma juridică și istoricul exploatației", "pregătește planul de investiții și ofertele", "revizuiește riscurile înainte de depunere"],
-    links: [related.consultantaAfir, ["/dr12-afir", "DR 12 AFIR"], ["/dr14", "DR 14 AFIR"], ["/calculator-soc.html", "Calculator SO AFIR"], related.agricultura],
+    links: [related.consultantaAfir, ["/dr12-afir", "DR 12 AFIR"], ["/dr14", "DR 14 AFIR"], ["/calculator-soc", "Calculator SO AFIR"], related.agricultura],
   },
   {
     slug: "start-up-nation",
@@ -107,7 +107,7 @@ const pages = [
     audience: ["tineri fermieri", "ferme mici sau ferme aflate în dezvoltare", "beneficiari care pregătesc utilaje, construcții agricole sau energie pentru fermă"],
     checks: ["Standard Output, suprafețe și efective", "acte de proprietate sau folosință", "încadrarea investiției în ghidul activ"],
     steps: ["calculează SO", "pregătește documentele exploatației", "alege investițiile compatibile", "verifică punctajul și riscurile de eligibilitate"],
-    links: [related.afir, related.consultantaAfir, ["/fonduri-pentru-ferme/", "Fonduri pentru ferme"], ["/fonduri-pentru-utilaje-agricole/", "Fonduri pentru utilaje agricole"], ["/calculator-soc.html", "Calculator SO"]],
+    links: [related.afir, related.consultantaAfir, ["/fonduri-pentru-ferme/", "Fonduri pentru ferme"], ["/fonduri-pentru-utilaje-agricole/", "Fonduri pentru utilaje agricole"], ["/calculator-soc", "Calculator SO"]],
   },
   {
     slug: "fonduri-europene-digitalizare",
@@ -276,7 +276,7 @@ const pages = [
     audience: ["ferme mici", "tineri fermieri", "exploatații care pregătesc investiții în utilaje sau infrastructură"],
     checks: ["dimensiunea economică", "documentele privind terenurile și animalele", "investiția propusă și calendarul de implementare"],
     steps: ["calculează SO", "alege programul potrivit", "pregătește documentele fermei", "verifică investiția și ofertele"],
-    links: [related.afir, related.consultantaAfir, ["/fonduri-pentru-utilaje-agricole/", "Utilaje agricole"], ["/calculator-soc.html", "Calculator SO"], related.contact],
+    links: [related.afir, related.consultantaAfir, ["/fonduri-pentru-utilaje-agricole/", "Utilaje agricole"], ["/calculator-soc", "Calculator SO"], related.contact],
   },
   {
     slug: "fonduri-pentru-utilaje-agricole",
@@ -581,7 +581,7 @@ const existing = [
   ["/autoconsum-public-fotovoltaice-institutii-publice", "0.8"],
   ["/por-adr-nord-est", "0.8"],
   ["/pro-infra", "0.8"],
-  ["/calculator-soc.html", "0.8"],
+  ["/calculator-soc", "0.8"],
   ["/contact/", "0.8"],
   ["/blog.html", "0.8"],
   ["/cum-alegi-programul-potrivit-fonduri-europene-2026.html", "0.7"],
