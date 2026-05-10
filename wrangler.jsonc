@@ -1,0 +1,12 @@
+{
+  "name": "atelierdeconsultanta",
+  "compatibility_date": "2026-05-10",
+  "assets": {
+    "directory": "./dist",
+    "html_handling": "auto-trailing-slash",
+    "not_found_handling": "404-page"
+  },
+  "build": {
+    "command": "node tools/build-cloudflare-assets.js && node tools/validate-cloudflare-deploy.js"
+  }
+}

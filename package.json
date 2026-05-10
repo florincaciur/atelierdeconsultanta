@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "build": "node tools/build-cloudflare-assets.js",
+    "validate:cloudflare": "node tools/validate-cloudflare-deploy.js",
+    "deploy": "npm run build && npm run validate:cloudflare && npx wrangler deploy",
+    "deploy:pages": "npm run build && npm run validate:cloudflare && npx wrangler pages deploy dist"
+  }
+}

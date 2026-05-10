@@ -1,3 +1,6 @@
 # Local article generation configs can contain absolute paths from this machine.
 config/articol-*.json
 
+# Cloudflare Workers static asset build output.
+dist/
+.wrangler/
