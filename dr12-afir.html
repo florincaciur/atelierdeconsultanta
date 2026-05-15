@@ -221,7 +221,7 @@
 <nav class="topbar" role="navigation" aria-label="Navigație principală">
   <!-- ✦ Logo SVG FABER ✦ -->
   <a href="/" class="topbar-logo" aria-label="FABER – Atelier de Consultanță, acasă">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 44" width="240" height="44" aria-hidden="true">
+    <svg xmlns="http:/www.w3.org/2000/svg" viewBox="0 0 240 44" width="240" height="44" aria-hidden="true">
       <text x="0" y="32" font-family="Georgia,'Times New Roman',serif" font-size="28" font-weight="700" fill="#e8642a" letter-spacing="3">FABER</text>
       <path d="M118,22 L125,13 L132,22 L125,31 Z" fill="white" opacity="0.95"/>
       <text x="138" y="18" font-family="'Inter','Helvetica Neue',sans-serif" font-size="10" font-weight="600" fill="white" letter-spacing="2">ATELIER de</text>
@@ -806,12 +806,12 @@
 
 <!-- ✦ FOOTER ✦ -->
 <footer class="page-footer">
-  <p>© 2026 FABER – Atelier de Consultanță &nbsp;·&nbsp; <a href="/">Acasă</a> &nbsp;·&nbsp; <a href="/#finantare">Toate programele</a> &nbsp;·&nbsp; <a href="termeni-si-conditii.html">Termeni</a> &nbsp;·&nbsp; <a href="gdpr.html">GDPR</a></p>
+  <p>© 2026 FABER – Atelier de Consultanță &nbsp;·&nbsp; <a href="/">Acasă</a> &nbsp;·&nbsp; <a href="/#finantare">Toate programele</a> &nbsp;·&nbsp; <a href="/termeni-si-conditii">Termeni</a> &nbsp;·&nbsp; <a href="/gdpr">GDPR</a></p>
   <p style="margin-top:12px;"><strong>Contact:</strong> Tel. <a href="tel:+40769828338">0769 828 338</a> / <a href="tel:+40753326229">0753 326 229</a> &nbsp;·&nbsp; Email: <a href="mailto:atelier.consultanta@gmail.com">atelier.consultanta@gmail.com</a></p>
 </footer>
 
 <script>
-  // ✦ Countdown timer — Calcul timp rămas până la data limită estimativă ✦
+  / ✦ Countdown timer — Calcul timp rămas până la data limită estimativă ✦
   var target = new Date('2026-06-30T23:59:00');
   function tick() {
     var diff = target - new Date();
@@ -831,7 +831,7 @@
   }
   tick(); setInterval(tick, 1000);
 
-  // ✦ Intersection Observer — Reveal animations pentru secțiuni ✦
+  / ✦ Intersection Observer — Reveal animations pentru secțiuni ✦
   var obs = new IntersectionObserver(function(entries){
     entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('revealed'); obs.unobserve(e.target); } });
   },{threshold:0.1,rootMargin:'0px 0px -30px 0px'});

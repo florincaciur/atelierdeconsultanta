@@ -179,7 +179,7 @@
 <!-- Topbar -->
 <nav class="topbar" role="navigation">
   <a href="/" class="topbar-logo" aria-label="FABER – Atelier de Consultanță, acasă">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 44" width="240" height="44" aria-hidden="true">
+    <svg xmlns="http:/www.w3.org/2000/svg" viewBox="0 0 240 44" width="240" height="44" aria-hidden="true">
       <text x="0" y="32" font-family="Georgia,'Times New Roman',serif" font-size="28" font-weight="700" fill="#e8642a" letter-spacing="3">FABER</text>
       <path d="M118,22 L125,13 L132,22 L125,31 Z" fill="white" opacity="0.95"/>
       <text x="138" y="18" font-family="'Inter','Helvetica Neue',sans-serif" font-size="10" font-weight="600" fill="white" letter-spacing="2">ATELIER de</text>
@@ -462,11 +462,11 @@
 
 <!-- Footer -->
 <footer class="page-footer">
-  <p>© 2026 FABER – Atelier de Consultanță &nbsp;·&nbsp; <a href="/">Acasă</a> &nbsp;·&nbsp; <a href="/#finantare">Programe</a> &nbsp;·&nbsp; <a href="termeni-si-conditii.html">Termeni</a> &nbsp;·&nbsp; <a href="gdpr.html">GDPR</a></p>
+  <p>© 2026 FABER – Atelier de Consultanță &nbsp;·&nbsp; <a href="/">Acasă</a> &nbsp;·&nbsp; <a href="/#finantare">Programe</a> &nbsp;·&nbsp; <a href="/termeni-si-conditii">Termeni</a> &nbsp;·&nbsp; <a href="/gdpr">GDPR</a></p>
 </footer>
 
 <script>
-  // SO Values Database
+  / SO Values Database
   const soDatabase = {
     culturi: {
       'Grâu de toamnă': 490,
@@ -552,7 +552,7 @@
 
     tbody.appendChild(row);
 
-    // Add change listener to select
+    / Add change listener to select
     row.querySelector('.cultura-select').addEventListener('change', function() {
       const soVal = soDatabase[type][this.value];
       row.querySelector('.so-input').value = soVal;
@@ -573,7 +573,7 @@
   function updateCalculation() {
     let totalSo = 0;
 
-    // Process all rows
+    / Process all rows
     document.querySelectorAll('tbody tr').forEach(row => {
       const soInput = row.querySelector('.so-input');
       const areaInput = row.querySelector('.area-input');
@@ -591,7 +591,7 @@
       }
     });
 
-    // Update result
+    / Update result
     document.getElementById('total-so').textContent = Math.round(totalSo).toLocaleString('ro-RO');
     updateStatusBadges(totalSo);
   }
@@ -625,7 +625,7 @@
     updateCalculation();
   }
 
-  // Reveal animations
+  / Reveal animations
   var obs = new IntersectionObserver(function(entries){
     entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('revealed'); obs.unobserve(e.target); } });
   },{threshold:0.1,rootMargin:'0px 0px -30px 0px'});

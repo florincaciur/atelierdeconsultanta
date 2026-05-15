@@ -181,7 +181,7 @@
 <!-- TOPBAR cu logo SVG FABER -->
 <nav class="topbar" role="navigation" aria-label="Navigație principală">
   <a href="/" class="topbar-logo" aria-label="FABER – Atelier de Consultanță, acasă">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 44" width="240" height="44" aria-hidden="true">
+    <svg xmlns="http:/www.w3.org/2000/svg" viewBox="0 0 240 44" width="240" height="44" aria-hidden="true">
       <text x="0" y="32" font-family="Georgia,'Times New Roman',serif" font-size="28" font-weight="700" fill="#e8642a" letter-spacing="3">FABER</text>
       <path d="M118,22 L125,13 L132,22 L125,31 Z" fill="white" opacity="0.95"/>
       <text x="138" y="18" font-family="'Inter','Helvetica Neue',sans-serif" font-size="10" font-weight="600" fill="white" letter-spacing="2">ATELIER de</text>
@@ -461,7 +461,7 @@
 
 <!-- FOOTER -->
 <footer class="page-footer">
-  <p>© 2026 FABER – Atelier de Consultanță &nbsp;·&nbsp; <a href="/">Acasă</a> &nbsp;·&nbsp; <a href="/#finantare">Toate programele</a> &nbsp;·&nbsp; <a href="termeni-si-conditii.html">Termeni</a> &nbsp;·&nbsp; <a href="gdpr.html">GDPR</a></p>
+  <p>© 2026 FABER – Atelier de Consultanță &nbsp;·&nbsp; <a href="/">Acasă</a> &nbsp;·&nbsp; <a href="/#finantare">Toate programele</a> &nbsp;·&nbsp; <a href="/termeni-si-conditii">Termeni</a> &nbsp;·&nbsp; <a href="/gdpr">GDPR</a></p>
 </footer>
 
 <script>
@@ -471,23 +471,23 @@
   function tick() {
     var diff = target - new Date();
     if (diff <= 0) {
-      // Dacă termenul a expirat, setează toate boxele la 00
+      / Dacă termenul a expirat, setează toate boxele la 00
       ['cd-d','cd-h','cd-m','cd-s'].forEach(function(id){
         document.getElementById(id).textContent='00';
       });
       return;
     }
 
-    // Calculează zile, ore, minute, secunde
+    / Calculează zile, ore, minute, secunde
     var d = Math.floor(diff/86400000);
     var h = Math.floor((diff%86400000)/3600000);
     var m = Math.floor((diff%3600000)/60000);
     var s = Math.floor((diff%60000)/1000);
 
-    // Helper pentru padding cu zero
+    / Helper pentru padding cu zero
     function p(n){ return String(n).padStart(2,'0'); }
 
-    // Actualizează display-ul
+    / Actualizează display-ul
     document.getElementById('cd-d').textContent = p(d);
     document.getElementById('cd-h').textContent = p(h);
     document.getElementById('cd-m').textContent = p(m);
