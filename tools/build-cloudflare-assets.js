@@ -66,6 +66,45 @@ const CANONICAL_ROOT_HTML_ROUTES = new Set([
   "calculator-soc",
 ]);
 
+const CANONICAL_DIRECTORY_HTML_ROUTES = [
+  "contact",
+  "consultanta-fonduri-europene",
+  "verificare-eligibilitate-fonduri-europene",
+  "digitalizare-imm-pnrr",
+  "fondul-de-modernizare",
+  "fonduri-europene",
+  "fonduri-nerambursabile",
+  "pnrr",
+  "afir",
+  "fonduri-europene-imm",
+  "fonduri-europene-agricultura",
+  "fonduri-europene-digitalizare",
+  "fonduri-europene-femei-antreprenor",
+  "calendar-fonduri-europene",
+  "eligibilitate-fonduri-europene",
+  "ghiduri",
+  "studii-de-caz",
+  "intrebari-frecvente",
+  "start-up-nation-2026-conditii",
+  "start-up-nation-2026-cheltuieli-eligibile",
+  "start-up-nation-2026-idei-afaceri",
+  "start-up-nation-2026-plan-de-afaceri",
+  "cod-caen-start-up-nation-2026",
+  "consultanta-start-up-nation-2026",
+  "consultanta-afir",
+  "fonduri-pentru-ferme",
+  "fonduri-pentru-utilaje-agricole",
+  "granturi-digitalizare-imm",
+  "consultanta-pnrr-digitalizare",
+  "finantari-panouri-fotovoltaice",
+  "cum-alegi-consultant-fonduri-europene",
+  "cat-costa-consultanta-fonduri-europene",
+  "firma-consultanta-fonduri-europene",
+  "consultant-fonduri-europene-imm",
+  "greseli-fonduri-europene",
+  "fonduri-europene-nerambursabile-2026",
+];
+
 function posixPath(value) {
   return value.split(path.sep).join("/");
 }
@@ -125,5 +164,15 @@ fs.mkdirSync(OUT_DIR, { recursive: true });
 
 const files = trackedFiles().map(posixPath).filter(isPublicFile).sort();
 for (const file of files) copyFile(file);
+
+for (const route of CANONICAL_DIRECTORY_HTML_ROUTES) {
+  const indexFile = `${route}/index.html`;
+  const source = path.join(ROOT, indexFile);
+  if (fs.existsSync(source)) {
+    const target = path.join(OUT_DIR, `${route}.html`);
+    fs.mkdirSync(path.dirname(target), { recursive: true });
+    fs.copyFileSync(source, target);
+  }
+}
 
 console.log(`Cloudflare assets built in ${path.relative(ROOT, OUT_DIR)} (${files.length} files).`);

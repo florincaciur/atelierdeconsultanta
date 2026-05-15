@@ -306,28 +306,47 @@ function fitMeta(value) {
 }
 
 function routeFromFinalUrl(urlFinalDorit, slug) {
-  if (!urlFinalDorit) return `/${slug}.html`;
+  if (!urlFinalDorit) return `/${slug}`;
   try {
     if (/^https?:\/\//i.test(urlFinalDorit)) {
       const url = new URL(urlFinalDorit);
-      return url.pathname || `/${slug}.html`;
+      return cleanRoute(url.pathname || `/${slug}`);
     }
   } catch {
     // Use the raw value below.
   }
   const raw = urlFinalDorit.startsWith("/") ? urlFinalDorit : `/${urlFinalDorit}`;
-  return raw.endsWith("/") || path.posix.extname(raw) ? raw : `${raw}.html`;
+  return cleanRoute(raw);
 }
 
 function fileFromRoute(route) {
   const clean = route.replace(/^\/+/, "");
   if (!clean) return "index.html";
   if (route.endsWith("/")) return path.join(clean, "index.html");
-  return clean;
+  if (path.extname(clean)) return clean;
+  return `${clean}.html`;
 }
 
 function absoluteUrl(route) {
   return `${SITE}${route}`;
+}
+
+function cleanRoute(value) {
+  if (!value || value === "/") return "/";
+  const hashIndex = value.indexOf("#");
+  const queryIndex = value.indexOf("?");
+  const suffixIndex = [hashIndex, queryIndex].filter((index) => index >= 0).sort((a, b) => a - b)[0];
+  const pathname = suffixIndex >= 0 ? value.slice(0, suffixIndex) : value;
+  const suffix = suffixIndex >= 0 ? value.slice(suffixIndex) : "";
+  const withoutHtml = pathname.replace(/\.html$/i, "");
+  const withoutSlash = withoutHtml.length > 1 ? withoutHtml.replace(/\/+$/g, "") : withoutHtml;
+  const clean = withoutSlash || "/";
+  const aliases = {
+    "/start-up-nation": "/start-up-nation-2026",
+    "/consultanta-start-up-nation": "/consultanta-start-up-nation-2026",
+    "/start-up-nation-2026-idei-afaceri-plan": "/start-up-nation-2026-idei-afaceri",
+  };
+  return `${aliases[clean] || clean}${suffix}`;
 }
 
 function findLocalFile(name) {
@@ -732,7 +751,7 @@ function autoCompleteInput(input, preResearchText = "") {
       : buildRelevantQuestions(program, keywordPrincipal, sourceText);
   const titluPropus = input.titluPropus || buildAutoTitle(program, keywordPrincipal);
   const slug = slugify(input.urlFinalDorit ? input.urlFinalDorit.replace(/^\//, "").replace(/\.html$/, "") : `${keywordPrincipal} ghid practic`);
-  const urlFinalDorit = input.urlFinalDorit || `/${slug}.html`;
+  const urlFinalDorit = input.urlFinalDorit || `/${slug}`;
 
   return {
     ...input,
@@ -770,7 +789,7 @@ function refineInputWithResearch(input, research, sourceText) {
   const titluPropus = input.titluPropus || buildAutoTitle(program, keywordPrincipal);
   const urlFinalDorit =
     input.urlFinalDorit ||
-    `/${slugify(`${keywordPrincipal} ghid conditii documente`)}.html`;
+    `/${slugify(`${keywordPrincipal} ghid conditii documente`)}`;
 
   return {
     ...input,
@@ -1172,30 +1191,29 @@ function selectInternalLinks(config) {
   const lower = stripDiacritics(config.program.toLowerCase());
   const links = [
     ...(config.paginiInterneObligatorii || []),
-    "/consultanta-fonduri-europene/",
-    "/fonduri-europene/",
-    "/fonduri-nerambursabile/",
-    "/contact/",
-    "/blog.html",
+    "/consultanta-fonduri-europene",
+    "/fonduri-europene",
+    "/fonduri-nerambursabile",
+    "/contact",
+    "/blog",
   ];
   if (lower.includes("afir") || lower.includes("dr 12") || lower.includes("dr 14") || lower.includes("ferm")) {
-    links.push("/afir/", "/consultanta-afir/", "/calculator-soc", "/fonduri-europene-agricultura/");
+    links.push("/afir", "/consultanta-afir", "/calculator-soc", "/fonduri-europene-agricultura");
   }
   if (lower.includes("start")) {
     links.push(
-      "/start-up-nation/",
       "/start-up-nation-2026",
-      "/start-up-nation-2026-conditii/",
-      "/consultanta-start-up-nation/"
+      "/start-up-nation-2026-conditii",
+      "/consultanta-start-up-nation-2026"
     );
   }
   if (lower.includes("pnrr") || lower.includes("digital")) {
-    links.push("/pnrr/", "/fonduri-europene-digitalizare/", "/digitalizare-imm-pnrr/", "/consultanta-pnrr-digitalizare/");
+    links.push("/pnrr", "/fonduri-europene-digitalizare", "/digitalizare-imm-pnrr", "/consultanta-pnrr-digitalizare");
   }
   if (lower.includes("energie") || lower.includes("fotovoltaic") || lower.includes("modernizare")) {
-    links.push("/fondul-de-modernizare/", "/finantari-panouri-fotovoltaice/");
+    links.push("/fondul-de-modernizare", "/finantari-panouri-fotovoltaice");
   }
-  return unique(links).filter((link) => linkExists(link)).slice(0, 6);
+  return unique(links.map(cleanRoute)).filter((link) => linkExists(link)).slice(0, 6);
 }
 
 function linkExists(link) {
@@ -1210,27 +1228,26 @@ function linkExists(link) {
 
 function anchorFor(link) {
   const labels = {
-    "/consultanta-fonduri-europene/": "consultanță pentru fonduri europene",
-    "/contact/": "evaluare gratuită pentru proiect",
-    "/blog.html": "blogul FABER despre finanțări",
-    "/fonduri-europene/": "hubul despre fonduri europene",
-    "/fonduri-nerambursabile/": "ghidul despre fonduri nerambursabile",
-    "/fonduri-europene-nerambursabile-2026/": "fonduri europene nerambursabile 2026",
-    "/afir/": "hubul AFIR",
-    "/consultanta-afir/": "consultanță AFIR",
+    "/consultanta-fonduri-europene": "consultanță pentru fonduri europene",
+    "/contact": "evaluare gratuită pentru proiect",
+    "/blog": "blogul FABER despre finanțări",
+    "/fonduri-europene": "hubul despre fonduri europene",
+    "/fonduri-nerambursabile": "ghidul despre fonduri nerambursabile",
+    "/fonduri-europene-nerambursabile-2026": "fonduri europene nerambursabile 2026",
+    "/afir": "hubul AFIR",
+    "/consultanta-afir": "consultanță AFIR",
     "/calculator-soc": "Calculatorul SO AFIR",
-    "/dr-14-afir-conditii-eligibilitate-greseli-frecvente.html": "ghidul DR 14 AFIR",
+    "/dr-14-afir-conditii-eligibilitate-greseli-frecvente": "ghidul DR 14 AFIR",
     "/dr12-afir": "pagina DR 12 AFIR",
-    "/start-up-nation/": "hubul Start-Up Nation",
     "/start-up-nation-2026": "pagina Start-Up Nation 2026",
-    "/start-up-nation-2026-conditii/": "condiții Start-Up Nation 2026",
-    "/consultanta-start-up-nation/": "consultanță Start-Up Nation",
-    "/digitalizare-imm-pnrr/": "Digitalizare IMM / PNRR",
-    "/pnrr/": "hubul PNRR",
-    "/fonduri-europene-digitalizare/": "fonduri europene pentru digitalizare",
-    "/consultanta-pnrr-digitalizare/": "consultanță PNRR digitalizare",
-    "/fondul-de-modernizare/": "Fondul de Modernizare",
-    "/finantari-panouri-fotovoltaice/": "finanțări pentru panouri fotovoltaice",
+    "/start-up-nation-2026-conditii": "condiții Start-Up Nation 2026",
+    "/consultanta-start-up-nation-2026": "consultanță Start-Up Nation",
+    "/digitalizare-imm-pnrr": "Digitalizare IMM / PNRR",
+    "/pnrr": "hubul PNRR",
+    "/fonduri-europene-digitalizare": "fonduri europene pentru digitalizare",
+    "/consultanta-pnrr-digitalizare": "consultanță PNRR digitalizare",
+    "/fondul-de-modernizare": "Fondul de Modernizare",
+    "/finantari-panouri-fotovoltaice": "finanțări pentru panouri fotovoltaice",
     "/intrebari-frecvente/": "întrebări frecvente despre fonduri europene",
     "/ghiduri/": "ghiduri pentru pregătirea dosarului",
   };
@@ -1309,7 +1326,7 @@ function buildArticle(config, research, sourceText, route, internalLinks) {
     "@type": "BreadcrumbList",
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Acasă", item: `${SITE}/` },
-      { "@type": "ListItem", position: 2, name: "Blog", item: `${SITE}/blog.html` },
+      { "@type": "ListItem", position: 2, name: "Blog", item: `${SITE}/blog` },
       { "@type": "ListItem", position: 3, name: config.titleSeo, item: canonical },
     ],
   };
@@ -1346,14 +1363,14 @@ ${CLARITY_TRACKING_CODE}
   <nav class="navbar" aria-label="Navigare principală">
     <a href="/" class="brand" aria-label="FABER – Atelier de Consultanță, acasă">FABER</a>
     <div class="navbar-links">
-      <a href="/fonduri-europene/">Fonduri europene</a>
-      <a href="/ghiduri/">Ghiduri</a>
-      <a href="/blog.html">Blog</a>
-      <a href="/contact/" class="nav-cta">Evaluare gratuită</a>
+      <a href="/fonduri-europene">Fonduri europene</a>
+      <a href="/ghiduri">Ghiduri</a>
+      <a href="/blog">Blog</a>
+      <a href="/contact" class="nav-cta">Evaluare gratuită</a>
     </div>
   </nav>
 
-  <div class="breadcrumb"><a href="/">Acasă</a> / <a href="/blog.html">Blog</a> / ${esc(config.titleSeo)}</div>
+  <div class="breadcrumb"><a href="/">Acasă</a> / <a href="/blog">Blog</a> / ${esc(config.titleSeo)}</div>
 
   <header class="post-hero">
     <span class="post-category">${esc(config.categorieBlog)}</span>
@@ -1515,12 +1532,12 @@ ${CLARITY_TRACKING_CODE}
       <div class="cta-box">
         <h3>Vrei să verificăm proiectul?</h3>
         <p>Trimite câteva detalii despre solicitant, investiție și programul urmărit. FABER poate verifica eligibilitatea inițială și pașii de pregătire, fără promisiuni comerciale nerealiste.</p>
-        <a class="btn-cta" href="/contact/">Solicită evaluare gratuită</a>
+        <a class="btn-cta" href="/contact">Solicită evaluare gratuită</a>
       </div>
     </article>
   </main>
 
-  <footer class="footer">© 2026 FABER – Atelier de Consultanță · <a href="/blog.html">Blog</a> · <a href="/contact/">Contact</a></footer>
+  <footer class="footer">© 2026 FABER – Atelier de Consultanță · <a href="/blog">Blog</a> · <a href="/contact">Contact</a></footer>
 </body>
 </html>
 `;
@@ -1617,7 +1634,7 @@ function validateArticle(html, config, route) {
     errors.push("Keyword principal is not in H1");
   }
   if (articleWordCount(html) < 1200) errors.push(`Article has fewer than 1200 words: ${articleWordCount(html)}`);
-  if (!html.includes('href="/contact/"')) errors.push("Missing CTA/internal link to /contact/");
+  if (!html.includes('href="/contact"')) errors.push("Missing CTA/internal link to /contact");
   if (/href="\/admin\//i.test(html)) errors.push("Article links to /admin/");
   if (/href="\/index\.html/i.test(html)) errors.push("Article links to /index.html");
   if (hasForbiddenMarketingLanguage(text)) {
@@ -1754,7 +1771,7 @@ ${pass(Boolean(config.editor), "Editor prezent")}
 ${pass(Boolean(config.dataPublicarii), "Dată publicare prezentă")}
 ${pass(Boolean(config.dataActualizarii), "Dată actualizare prezentă")}
 ${pass(true, "Linkuri interne prezente")}
-${pass(true, "CTA către /contact/")}
+${pass(true, "CTA către /contact")}
 ${pass(Boolean(config.linkGhidSolicitant) || research.officialSources.length > 0, "Link ghid solicitantului prezent sau marcat „de adăugat”")}
 ${pass(true, "Fără promisiuni de finanțare garantată")}
 ${pass(true, "Fără sume/date/condiții neverificate")}

@@ -3,7 +3,37 @@ const path = require("path");
 
 const ROOT = path.resolve(__dirname, "..");
 const SITE = "https://atelierdeconsultanta.ro";
-const TODAY = "2026-05-07";
+const TODAY = "2026-05-11";
+const CANONICAL_ALIASES = new Map([
+  ["/start-up-nation", "/start-up-nation-2026"],
+  ["/consultanta-start-up-nation", "/consultanta-start-up-nation-2026"],
+  ["/start-up-nation-2026-idei-afaceri-plan", "/start-up-nation-2026-idei-afaceri"],
+]);
+const REDIRECTED_PAGE_SLUGS = new Set(["start-up-nation", "consultanta-start-up-nation"]);
+
+function cleanPath(value) {
+  if (!value || value === "/") return "/";
+  const hashIndex = value.indexOf("#");
+  const queryIndex = value.indexOf("?");
+  const suffixIndex = [hashIndex, queryIndex].filter((index) => index >= 0).sort((a, b) => a - b)[0];
+  const pathname = suffixIndex >= 0 ? value.slice(0, suffixIndex) : value;
+  const suffix = suffixIndex >= 0 ? value.slice(suffixIndex) : "";
+  if (!pathname || pathname === "/") return `/${suffix}`;
+  const withoutHtml = pathname.replace(/\.html$/i, "");
+  const withoutSlash = withoutHtml.length > 1 ? withoutHtml.replace(/\/+$/g, "") : withoutHtml;
+  const clean = withoutSlash || "/";
+  return `${CANONICAL_ALIASES.get(clean) || clean}${suffix}`;
+}
+
+function cleanHref(value) {
+  if (!value) return value;
+  if (value.startsWith(`${SITE}/`)) {
+    const pathPart = value.slice(SITE.length);
+    return `${SITE}${cleanPath(pathPart)}`;
+  }
+  if (value.startsWith("/")) return cleanPath(value);
+  return value;
+}
 
 const related = {
   contact: ["/contact/", "Solicită evaluare gratuită"],
@@ -397,7 +427,7 @@ function esc(value) {
 }
 
 function canonical(slug) {
-  return `${SITE}/${slug}/`;
+  return `${SITE}/${slug}`;
 }
 
 function faqFor(page) {
@@ -422,7 +452,7 @@ function list(items) {
 }
 
 function links(items) {
-  return items.map(([href, label]) => `<a href="${href}">${esc(label)}</a>`).join("\n");
+  return items.map(([href, label]) => `<a href="${cleanHref(href)}">${esc(label)}</a>`).join("\n");
 }
 
 function schema(page, faq) {
@@ -505,10 +535,10 @@ function pageHtml(page) {
   ${page.internalNote ? `<!-- ${page.internalNote} -->\n  ` : ""}<nav class="navbar" aria-label="Navigare principală">
     <a class="brand" href="/" aria-label="Atelier de Consultanță, acasă">FABER</a>
     <div class="navbar-links">
-      <a href="/fonduri-europene/">Fonduri europene</a>
-      <a href="/ghiduri/">Ghiduri</a>
-      <a href="/blog.html">Blog</a>
-      <a class="nav-cta" href="/contact/">Evaluare gratuită</a>
+      <a href="${cleanHref("/fonduri-europene/")}">Fonduri europene</a>
+      <a href="${cleanHref("/ghiduri/")}">Ghiduri</a>
+      <a href="${cleanHref("/blog.html")}">Blog</a>
+      <a class="nav-cta" href="${cleanHref("/contact/")}">Evaluare gratuită</a>
     </div>
   </nav>
   <div class="breadcrumb"><a href="/">Acasă</a> / ${esc(page.h1)}</div>
@@ -517,8 +547,8 @@ function pageHtml(page) {
     <h1>${esc(page.h1)}</h1>
     <p>${esc(page.summary)}</p>
     <div class="hero-actions">
-      <a class="btn btn-primary" href="/contact/">Solicită evaluare gratuită</a>
-      <a class="btn btn-secondary" href="/consultanta-fonduri-europene/">Vezi serviciile de consultanță</a>
+      <a class="btn btn-primary" href="${cleanHref("/contact/")}">Solicită evaluare gratuită</a>
+      <a class="btn btn-secondary" href="${cleanHref("/consultanta-fonduri-europene/")}">Vezi serviciile de consultanță</a>
     </div>
   </header>
   <main class="container">
@@ -548,18 +578,20 @@ function pageHtml(page) {
       <h2>Cum poate ajuta Atelier de Consultanță</h2>
       <p>Putem verifica eligibilitatea proiectului, documentele disponibile, bugetul estimat și programul potrivit, fără promisiuni absolute privind aprobarea finanțării.</p>
       <div class="cta-actions">
-        <a class="btn btn-primary" href="/contact/">Verifică eligibilitatea proiectului</a>
-        <a class="btn btn-secondary" href="/consultanta-fonduri-europene/">Consultanță fonduri europene</a>
+        <a class="btn btn-primary" href="${cleanHref("/contact/")}">Verifică eligibilitatea proiectului</a>
+        <a class="btn btn-secondary" href="${cleanHref("/consultanta-fonduri-europene/")}">Consultanță fonduri europene</a>
       </div>
     </section>
   </main>
-  <footer class="footer">© 2026 FABER - Atelier de Consultanță · <a href="/fonduri-europene/">Fonduri europene</a> · <a href="/contact/">Contact</a></footer>
+  <footer class="footer">© 2026 FABER - Atelier de Consultanță · <a href="${cleanHref("/fonduri-europene/")}">Fonduri europene</a> · <a href="${cleanHref("/contact/")}">Contact</a></footer>
 </body>
 </html>
 `;
 }
 
-for (const page of pages) {
+const pagesToGenerate = pages.filter((page) => !REDIRECTED_PAGE_SLUGS.has(page.slug));
+
+for (const page of pagesToGenerate) {
   const dir = path.join(ROOT, page.slug);
   fs.mkdirSync(dir, { recursive: true });
   fs.writeFileSync(path.join(dir, "index.html"), pageHtml(page), "utf8");
@@ -568,6 +600,7 @@ for (const page of pages) {
 const existing = [
   ["/", "1.0"],
   ["/consultanta-fonduri-europene/", "0.9"],
+  ["/verificare-eligibilitate-fonduri-europene/", "0.8"],
   ["/fonduri-europene-nerambursabile-2026/", "0.9"],
   ["/dr12-afir", "0.9"],
   ["/dr14", "0.9"],
@@ -587,6 +620,8 @@ const existing = [
   ["/cum-alegi-programul-potrivit-fonduri-europene-2026.html", "0.7"],
   ["/acte-necesare-fonduri-europene-nerambursabile.html", "0.7"],
   ["/dr-12-afir-instalarea-tinerilor-fermieri.html", "0.7"],
+  ["/cod-caen-start-up-nation-2026/", "0.7"],
+  ["/consultanta-start-up-nation-2026/", "0.8"],
   ["/start-up-nation-2026-idei-afaceri-plan.html", "0.7"],
   ["/femeia-antreprenor-2026-conditii-idei-afaceri.html", "0.7"],
   ["/pnrr-digitalizare-imm-cheltuieli-eligibile.html", "0.7"],
@@ -597,13 +632,14 @@ const existing = [
   ["/termeni-si-conditii.html", "0.3"],
 ];
 
-const hubUrls = pages.map((page) => [`/${page.slug}/`, page.slug.includes("consultanta") || page.slug.includes("fonduri-europene") || ["pnrr", "afir", "start-up-nation"].includes(page.slug) ? "0.8" : "0.7"]);
+const hubUrls = pagesToGenerate.map((page) => [`/${page.slug}`, page.slug.includes("consultanta") || page.slug.includes("fonduri-europene") || ["pnrr", "afir", "start-up-nation"].includes(page.slug) ? "0.8" : "0.7"]);
 const seen = new Set();
 const sitemapUrls = [...existing, ...hubUrls].filter(([url]) => {
-  if (seen.has(url)) return false;
-  seen.add(url);
+  const cleanUrl = cleanPath(url);
+  if (seen.has(cleanUrl)) return false;
+  seen.add(cleanUrl);
   return true;
-});
+}).map(([url, priority]) => [cleanPath(url), priority]);
 
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">

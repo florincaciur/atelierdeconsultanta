@@ -3,6 +3,7 @@
     "build": "node tools/build-cloudflare-assets.js",
     "validate:cloudflare": "node tools/validate-cloudflare-deploy.js",
     "audit:program-routes": "node tools/audit-cloudflare-program-routes.js",
+    "audit:gsc-routes": "node tools/audit-gsc-routes.js",
     "deploy": "npm run build && npm run validate:cloudflare && npx wrangler deploy",
     "deploy:pages": "npm run build && npm run validate:cloudflare && npx wrangler pages deploy dist"
   }
