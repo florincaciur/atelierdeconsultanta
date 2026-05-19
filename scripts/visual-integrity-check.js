@@ -17,8 +17,21 @@ const PAGES = [
   { label: 'afir', path: '/afir/' },
   { label: 'pnrr', path: '/pnrr/' },
   { label: 'idei-afaceri-fonduri-europene', path: '/idei-afaceri-fonduri-europene.html' },
-  { label: 'start-up-nation-2026', path: '/start-up-nation-2026/' },
+  { label: 'start-up-nation-2026', path: '/start-up-nation-2026' },
 ];
+
+const CANONICAL_ROOT_HTML_ROUTES = new Set([
+  'por-adr-nord-est',
+  'dr12-afir',
+  'afir-autoconsum-agroalimentar',
+  'autoconsum-public-fotovoltaice-institutii-publice',
+  'dr14',
+  'digitalizare-imm',
+  'femeia-antreprenor-2026',
+  'pro-infra',
+  'start-up-nation-2026',
+  'calculator-soc',
+]);
 
 const VIEWPORTS = [
   { name: 'desktop', width: 1365, height: 900 },
@@ -52,8 +65,13 @@ function safeJoin(root, requestPath) {
     filePath = path.join(filePath, 'index.html');
   }
   if (!path.extname(filePath)) {
+    const cleanRoute = cleanPath.replace(/\/+$/g, '');
+    const canonicalRootPath = CANONICAL_ROOT_HTML_ROUTES.has(cleanRoute)
+      ? `${filePath}.html`
+      : '';
     const indexPath = path.join(filePath, 'index.html');
     const htmlPath = `${filePath}.html`;
+    if (canonicalRootPath && fs.existsSync(canonicalRootPath)) return canonicalRootPath;
     if (fs.existsSync(indexPath)) return indexPath;
     if (fs.existsSync(htmlPath)) return htmlPath;
   }

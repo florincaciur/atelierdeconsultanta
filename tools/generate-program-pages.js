@@ -284,10 +284,37 @@ function renderDownloads() {
   </div>`;
 }
 
+function renderDr14Score() {
+  return `<section class="mini-card dr14-score-tool" aria-labelledby="dr14-score-title">
+      <h2 id="dr14-score-title">Estimator rapid punctaj DR14</h2>
+      <p>Acest estimator este orientativ si ajuta la discutia initiala. Punctajul real se confirma doar prin grila apelului activ si documentele solicitantului.</p>
+      <label><input type="checkbox" name="dr14-mountain" data-score-input data-score-value="10"> Exploatatia este in zona montana sau intr-o zona cu constrangeri specifice.</label>
+      <label><input type="checkbox" name="dr14-young" data-score-input data-score-value="5"> Solicitantul are profil agricol cu experienta sau pregatire relevanta.</label>
+      <label><input type="checkbox" name="dr14-investment" data-score-input data-score-value="5"> Investitia sustine modernizarea directa a fermei mici.</label>
+      <p><strong>Punctaj orientativ:</strong> <span data-score-total>0</span></p>
+      <script>
+        (function(){
+          var inputs = document.querySelectorAll('[data-score-input]');
+          var total = document.querySelector('[data-score-total]');
+          function updateScore(){
+            var score = 0;
+            inputs.forEach(function(input){ if(input.checked){ score += Number(input.getAttribute('data-score-value') || 0); } });
+            if(total){ total.textContent = String(score); }
+          }
+          inputs.forEach(function(input){ input.addEventListener('change', updateScore); });
+          updateScore();
+        })();
+      </script>
+    </section>`;
+}
+
 function renderMainContent(page) {
   const faqHtml = (page.faq || [])
     .map(([question, answer]) => `<section class="faq-item"><h3>${esc(question)}</h3><p>${esc(answer)}</p></section>`)
     .join("\n");
+  const dr14ScoreHtml = page.slug === "dr14" ? `\n${renderDr14Score()}` : "";
+  const toolsHtml = page.includeTools ? `\n${renderTools()}` : "";
+  const downloadsHtml = page.includeDownloads ? `\n${renderDownloads()}` : "";
 
   let html = `
       <p id="speakable-summary" class="intro speakable" data-speakable="true">${esc(page.quickAnswer)}</p>
@@ -316,6 +343,7 @@ function renderMainContent(page) {
       <h2>Criterii de selectie si punctaj</h2>
       <p>Grila de selectie transforma conditiile programului in prioritati concrete. Un proiect eligibil poate pierde daca nu are punctaj suficient, iar un proiect cu punctaj bun poate fi vulnerabil daca documentele de baza sunt incomplete.</p>
       <ul>${li(page.scoring)}</ul>
+${dr14ScoreHtml}
       <p>In practica, punctajul se estimeaza inainte de depunere si se revizuieste dupa fiecare modificare de buget, investitie sau document. Daca o cheltuiala importanta nu sustine criteriile de selectie, ea trebuie justificata foarte clar sau eliminata.</p>
       <h2>Pasi pentru pregatirea cererii</h2>
       <ol>${li(page.steps)}</ol>
@@ -328,8 +356,8 @@ function renderMainContent(page) {
       <p>Exemplele de mai jos sunt anonime si orientative. Ele arata tipul de rationament necesar, nu rezultate promise sau cazuri publicate cu date comerciale.</p>
       <ul>${li(page.examples)}</ul>
       <p>In fiecare exemplu, decizia corecta depinde de documente. Aceeasi investitie poate fi potrivita pentru un solicitant si nepotrivita pentru altul, in functie de activitate, locatie, istoric, buget si calendar.</p>
-      ${page.includeTools ? renderTools() : ""}
-      ${page.includeDownloads ? renderDownloads() : ""}
+${toolsHtml}
+${downloadsHtml}
       <h2>Intrebari frecvente</h2>
       ${faqHtml}
       <h2 id="speakable-cta" class="speakable" data-speakable="true">Pentru o verificare initiala, trimite date despre solicitant, investitie, buget si programul urmarit.</h2>
@@ -350,7 +378,9 @@ function renderMainContent(page) {
 }
 
 function pageHtml(page, config) {
-  const extraCss = page.includeTools || page.includeDownloads ? `\n  <link rel="stylesheet" href="/assets/seo-tools.css" />` : "";
+  const relatedCss = (page.related || []).length ? `\n  <link rel="stylesheet" href="/assets/see-also.css" />` : "";
+  const toolCss = page.includeTools || page.includeDownloads ? `\n  <link rel="stylesheet" href="/assets/seo-tools.css" />` : "";
+  const extraCss = `${relatedCss}${toolCss}`;
   const extraJs = page.includeTools ? `\n  <script src="/assets/seo-tools.js" defer></script>` : "";
   return `<!DOCTYPE html>
 <html lang="ro">

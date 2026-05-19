@@ -354,6 +354,7 @@
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "wnzyco6rq");
   </script>
+  <link rel="stylesheet" href="/assets/see-also.css" />
 </head>
 <body>
 
@@ -582,13 +583,13 @@
     </div>
   <section class="vezi-si-section" aria-labelledby="vezi-si-title">
     <h2 id="vezi-si-title">Vezi și</h2>
-    <ul class="vezi-si">
-    <li><a href="/fonduri-europene/">Fonduri europene</a></li>
-    <li><a href="/consultanta-fonduri-europene/">Consultanță fonduri europene</a></li>
-    <li><a href="/calendar-fonduri-europene/">Calendar fonduri europene</a></li>
-    <li><a href="/consultanta-pnrr-digitalizare/">Consultanță PNRR și digitalizare</a></li>
-    <li><a href="/start-up-nation/">Start-Up Nation</a></li>
-    </ul>
+    <ul class="vezi-si see-also-grid">
+    <li class="see-also-card"><a href="/fonduri-europene"><span class="see-also-card-title">Fonduri europene</span><span class="see-also-card-text">Hub central pentru programe, eligibilitate, ghiduri și resurse utile.</span></a></li>
+    <li class="see-also-card"><a href="/consultanta-fonduri-europene"><span class="see-also-card-title">Consultanță fonduri europene</span><span class="see-also-card-text">Servicii de verificare, pregătire dosar și suport pentru proiecte.</span></a></li>
+    <li class="see-also-card"><a href="/calendar-fonduri-europene"><span class="see-also-card-title">Calendar fonduri europene</span><span class="see-also-card-text">Urmărește programele și pregătește documentele înainte de apel.</span></a></li>
+    <li class="see-also-card"><a href="/consultanta-pnrr-digitalizare"><span class="see-also-card-title">Consultanță PNRR și digitalizare</span><span class="see-also-card-text">Sprijin pentru proiecte PNRR, digitalizare IMM și bugete IT.</span></a></li>
+    <li class="see-also-card"><a href="/start-up-nation-2026"><span class="see-also-card-title">Start-Up Nation</span><span class="see-also-card-text">Condiții, cheltuieli, idei și pași pentru Start-Up Nation.</span></a></li>
+  </ul>
   </section>
 
   </main>
@@ -626,7 +627,7 @@
     const notFoundEl  = document.getElementById('not-found-state');
     const relatedEl   = document.getElementById('related-section');
 
-    / Încărcăm blog.json o singură dată
+    // Încărcăm blog.json o singură dată
     let posts = [];
     try {
       const resp = await fetch('/blog.json');
@@ -634,17 +635,17 @@
       const data = await resp.json();
       posts = (data.posts || []).filter(p => p.published !== false);
     } catch (e) {
-      / silently fail — hub shows without posts
+      // silently fail — hub shows without posts
     }
 
-    / ── MOD HUB (fără parametru ?post=) ──────────────────────────────
+    // ── MOD HUB (fără parametru ?post=) ──────────────────────────────
     if (!postId) {
       hubEl.style.display = 'block';
       renderPostGrid(posts);
       return;
     }
 
-    / ── MOD ARTICOL ───────────────────────────────────────────────────
+    // ── MOD ARTICOL ───────────────────────────────────────────────────
     hubEl.style.display = 'none';
     loadingEl.style.display = 'flex';
 
@@ -656,7 +657,7 @@
       return;
     }
 
-    / Populăm meta tags
+    // Populăm meta tags
     const seo = post.seo || {};
     const canonicalURL = post.canonicalUrl || ('https://atelierdeconsultanta.ro/' + (post.slug || post.id));
 
@@ -671,7 +672,7 @@
       document.getElementById('meta-og-image').setAttribute('content', seo.ogImage || post.bannerImage);
     }
 
-    / Schema.org BlogPosting
+    // Schema.org BlogPosting
     const ldJson = {
       "@context": "https://schema.org",
       "@type": "BlogPosting",
@@ -692,7 +693,7 @@
     if (seo.ogImage) { ldJson.image = seo.ogImage; }
     document.getElementById('ld-json').textContent = JSON.stringify(ldJson, null, 2);
 
-    / Populăm conținut
+    // Populăm conținut
     document.getElementById('post-category').textContent  = post.category || '';
     document.getElementById('post-icon').textContent      = post.icon || '📰';
     document.getElementById('post-title').textContent     = post.title;
@@ -702,7 +703,7 @@
     document.getElementById('post-author').textContent    = post.author || 'FABER Consultanță';
     document.getElementById('post-body').innerHTML        = post.content || '<p>Conținut indisponibil.</p>';
 
-    / Banner
+    // Banner
     if (post.bannerImage) {
       const bannerWrap = document.getElementById('post-banner-wrap');
       const bannerImg  = document.getElementById('post-banner-img');
@@ -711,7 +712,7 @@
       bannerWrap.style.display = 'block';
     }
 
-    / Articole similare
+    // Articole similare
     const others = posts.filter(p => p.id !== post.id);
     if (others.length) {
       const grid = document.getElementById('related-grid');

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-19T18:55:36.382Z",
+  "generatedAt": "2026-05-19T19:03:01.285Z",
   "root": "C:\\Users\\flori\\Documents\\Claude\\Projects\\atelierdeconsultanta-main",
   "summary": {
     "totalFiles": 128,
@@ -221,7 +221,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2182,
+          "words": 2245,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -243,8 +243,7 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 0,
-          "note": "noindex page: meta description is optional"
+          "count": 1
         },
         "canonical": {
           "status": "pass",
@@ -338,7 +337,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2150,
+          "words": 2242,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -396,7 +395,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2168,
+          "words": 2234,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -419,8 +418,7 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 0,
-          "note": "noindex page: meta description is optional"
+          "count": 1
         },
         "canonical": {
           "status": "pass",
@@ -514,7 +512,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 1449,
+          "words": 1487,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -572,7 +570,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 1222,
+          "words": 1260,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -630,7 +628,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2007,
+          "words": 2130,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -653,8 +651,7 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 0,
-          "note": "noindex page: meta description is optional"
+          "count": 1
         },
         "canonical": {
           "status": "pass",
@@ -748,7 +745,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 349,
+          "words": 464,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -770,8 +767,7 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 0,
-          "note": "noindex page: meta description is optional"
+          "count": 1
         },
         "canonical": {
           "status": "pass",
@@ -865,7 +861,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 334,
+          "words": 372,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -923,7 +919,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 483,
+          "words": 618,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -945,8 +941,7 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 0,
-          "note": "noindex page: meta description is optional"
+          "count": 1
         },
         "canonical": {
           "status": "pass",
@@ -1040,7 +1035,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 328,
+          "words": 366,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -1062,8 +1057,7 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 0,
-          "note": "noindex page: meta description is optional"
+          "count": 1
         },
         "canonical": {
           "status": "pass",
@@ -1157,7 +1151,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 337,
+          "words": 457,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -1411,8 +1405,7 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 0,
-          "note": "noindex page: meta description is optional"
+          "count": 1
         },
         "canonical": {
           "status": "pass",
@@ -1506,7 +1499,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 2195,
+          "words": 2311,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -1528,8 +1521,7 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 0,
-          "note": "noindex page: meta description is optional"
+          "count": 1
         },
         "canonical": {
           "status": "pass",
@@ -1623,7 +1615,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 316,
+          "words": 431,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -1681,7 +1673,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 409,
+          "words": 542,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -1703,8 +1695,7 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 0,
-          "note": "noindex page: meta description is optional"
+          "count": 1
         },
         "canonical": {
           "status": "pass",
@@ -1762,8 +1753,7 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 0,
-          "note": "noindex page: meta description is optional"
+          "count": 1
         },
         "canonical": {
           "status": "pass",
@@ -1821,8 +1811,7 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 0,
-          "note": "noindex page: meta description is optional"
+          "count": 1
         },
         "canonical": {
           "status": "pass",
@@ -1916,7 +1905,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 504,
+          "words": 542,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -1938,8 +1927,7 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 0,
-          "note": "noindex page: meta description is optional"
+          "count": 1
         },
         "canonical": {
           "status": "pass",
@@ -2033,7 +2021,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 341,
+          "words": 379,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -2091,7 +2079,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 2043,
+          "words": 2081,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -2113,8 +2101,7 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 0,
-          "note": "noindex page: meta description is optional"
+          "count": 1
         },
         "canonical": {
           "status": "pass",
@@ -2208,7 +2195,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 388,
+          "words": 511,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -2266,7 +2253,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2166,
+          "words": 2239,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -2324,7 +2311,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 1225,
+          "words": 1263,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -2382,7 +2369,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 1257,
+          "words": 1295,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -2440,7 +2427,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2196,
+          "words": 2261,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -2498,7 +2485,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2181,
+          "words": 2257,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -2521,8 +2508,7 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 0,
-          "note": "noindex page: meta description is optional"
+          "count": 1
         },
         "canonical": {
           "status": "pass",
@@ -2616,7 +2602,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 358,
+          "words": 480,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -2674,7 +2660,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 1235,
+          "words": 1273,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -2732,7 +2718,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2190,
+          "words": 2248,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -2813,8 +2799,7 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 0,
-          "note": "noindex page: meta description is optional"
+          "count": 1
         },
         "canonical": {
           "status": "pass",
@@ -2908,7 +2893,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 330,
+          "words": 454,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -2930,8 +2915,7 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 0,
-          "note": "noindex page: meta description is optional"
+          "count": 1
         },
         "canonical": {
           "status": "pass",
@@ -3025,7 +3009,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 329,
+          "words": 367,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -3083,7 +3067,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2189,
+          "words": 2255,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -3105,8 +3089,7 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 0,
-          "note": "noindex page: meta description is optional"
+          "count": 1
         },
         "canonical": {
           "status": "pass",
@@ -3200,7 +3183,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 492,
+          "words": 624,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -3281,8 +3264,7 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 0,
-          "note": "noindex page: meta description is optional"
+          "count": 1
         },
         "canonical": {
           "status": "pass",
@@ -3376,7 +3358,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2157,
+          "words": 2243,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -3746,8 +3728,7 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 0,
-          "note": "noindex page: meta description is optional"
+          "count": 1
         },
         "canonical": {
           "status": "pass",
@@ -3841,7 +3822,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2164,
+          "words": 2251,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -3863,8 +3844,7 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 0,
-          "note": "noindex page: meta description is optional"
+          "count": 1
         },
         "canonical": {
           "status": "pass",
@@ -3958,7 +3938,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 345,
+          "words": 462,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -3980,8 +3960,7 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 0,
-          "note": "noindex page: meta description is optional"
+          "count": 1
         },
         "canonical": {
           "status": "pass",
@@ -4039,8 +4018,7 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 0,
-          "note": "noindex page: meta description is optional"
+          "count": 1
         },
         "canonical": {
           "status": "pass",
@@ -4156,8 +4134,7 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 0,
-          "note": "noindex page: meta description is optional"
+          "count": 1
         },
         "canonical": {
           "status": "pass",
@@ -4251,7 +4228,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2155,
+          "words": 2241,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -4273,8 +4250,7 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 0,
-          "note": "noindex page: meta description is optional"
+          "count": 1
         },
         "canonical": {
           "status": "pass",
@@ -4368,7 +4344,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 385,
+          "words": 501,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -4448,8 +4424,7 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 0,
-          "note": "noindex page: meta description is optional"
+          "count": 1
         },
         "canonical": {
           "status": "pass",
@@ -4543,7 +4518,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2165,
+          "words": 2251,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -4565,8 +4540,7 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 0,
-          "note": "noindex page: meta description is optional"
+          "count": 1
         },
         "canonical": {
           "status": "pass",
@@ -4660,7 +4634,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2136,
+          "words": 2218,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -4682,8 +4656,7 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 0,
-          "note": "noindex page: meta description is optional"
+          "count": 1
         },
         "canonical": {
           "status": "pass",
@@ -4777,7 +4750,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 324,
+          "words": 446,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -4799,8 +4772,7 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 0,
-          "note": "noindex page: meta description is optional"
+          "count": 1
         },
         "canonical": {
           "status": "pass",
@@ -4894,7 +4866,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 337,
+          "words": 461,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -4975,8 +4947,7 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 0,
-          "note": "noindex page: meta description is optional"
+          "count": 1
         },
         "canonical": {
           "status": "pass",
@@ -5123,8 +5094,7 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 0,
-          "note": "noindex page: meta description is optional"
+          "count": 1
         },
         "canonical": {
           "status": "pass",
@@ -5218,7 +5188,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 328,
+          "words": 453,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -5240,8 +5210,7 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 0,
-          "note": "noindex page: meta description is optional"
+          "count": 1
         },
         "canonical": {
           "status": "pass",
@@ -5335,7 +5304,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 336,
+          "words": 374,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -5393,7 +5362,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 1406,
+          "words": 1444,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -5451,7 +5420,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 1223,
+          "words": 1261,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -5532,8 +5501,7 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 0,
-          "note": "noindex page: meta description is optional"
+          "count": 1
         },
         "canonical": {
           "status": "pass",
@@ -5627,7 +5595,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 336,
+          "words": 374,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -5919,7 +5887,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 1233,
+          "words": 1271,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -5941,8 +5909,7 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 0,
-          "note": "noindex page: meta description is optional"
+          "count": 1
         },
         "canonical": {
           "status": "pass",
@@ -6036,7 +6003,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2144,
+          "words": 2237,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -6153,7 +6120,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2163,
+          "words": 2220,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -6271,7 +6238,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 564,
+          "words": 662,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -6353,8 +6320,7 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 0,
-          "note": "noindex page: meta description is optional"
+          "count": 1
         },
         "canonical": {
           "status": "pass",
@@ -6448,7 +6414,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 341,
+          "words": 461,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -6470,8 +6436,7 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 0,
-          "note": "noindex page: meta description is optional"
+          "count": 1
         },
         "canonical": {
           "status": "pass",
@@ -6565,7 +6530,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 350,
+          "words": 472,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -6587,8 +6552,7 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 0,
-          "note": "noindex page: meta description is optional"
+          "count": 1
         },
         "canonical": {
           "status": "pass",
@@ -6646,8 +6610,7 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 0,
-          "note": "noindex page: meta description is optional"
+          "count": 1
         },
         "canonical": {
           "status": "pass",
@@ -6741,7 +6704,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 347,
+          "words": 469,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -6763,8 +6726,7 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 0,
-          "note": "noindex page: meta description is optional"
+          "count": 1
         },
         "canonical": {
           "status": "pass",
@@ -6858,7 +6820,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 357,
+          "words": 479,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -6916,7 +6878,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2178,
+          "words": 2253,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -6996,8 +6958,7 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 0,
-          "note": "noindex page: meta description is optional"
+          "count": 1
         },
         "canonical": {
           "status": "pass",
@@ -7055,8 +7016,7 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 0,
-          "note": "noindex page: meta description is optional"
+          "count": 1
         },
         "canonical": {
           "status": "pass",
@@ -7114,8 +7074,7 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 0,
-          "note": "noindex page: meta description is optional"
+          "count": 1
         },
         "canonical": {
           "status": "pass",
@@ -7385,7 +7344,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2169,
+          "words": 2255,
           "threshold": 2000
         },
         "relatedLinks": {

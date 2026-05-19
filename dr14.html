@@ -17,7 +17,8 @@
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://atelierdeconsultanta.ro/og-image.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
-  <link rel="stylesheet" href="/assets/seo-hub.min.css" />
+  <link rel="stylesheet" href="/assets/seo-hub.css" />
+  <link rel="stylesheet" href="/assets/see-also.css" />
   <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@graph": [
@@ -220,6 +221,28 @@
 <li>calitatea planului de investitii</li>
 <li>componenta de sustenabilitate si eficienta</li>
 <li>coerenta documentelor si a bugetului</li></ul>
+
+<section class="mini-card dr14-score-tool" aria-labelledby="dr14-score-title">
+      <h2 id="dr14-score-title">Estimator rapid punctaj DR14</h2>
+      <p>Acest estimator este orientativ si ajuta la discutia initiala. Punctajul real se confirma doar prin grila apelului activ si documentele solicitantului.</p>
+      <label><input type="checkbox" name="dr14-mountain" data-score-input data-score-value="10"> Exploatatia este in zona montana sau intr-o zona cu constrangeri specifice.</label>
+      <label><input type="checkbox" name="dr14-young" data-score-input data-score-value="5"> Solicitantul are profil agricol cu experienta sau pregatire relevanta.</label>
+      <label><input type="checkbox" name="dr14-investment" data-score-input data-score-value="5"> Investitia sustine modernizarea directa a fermei mici.</label>
+      <p><strong>Punctaj orientativ:</strong> <span data-score-total>0</span></p>
+      <script>
+        (function(){
+          var inputs = document.querySelectorAll('[data-score-input]');
+          var total = document.querySelector('[data-score-total]');
+          function updateScore(){
+            var score = 0;
+            inputs.forEach(function(input){ if(input.checked){ score += Number(input.getAttribute('data-score-value') || 0); } });
+            if(total){ total.textContent = String(score); }
+          }
+          inputs.forEach(function(input){ input.addEventListener('change', updateScore); });
+          updateScore();
+        })();
+      </script>
+    </section>
       <p>In practica, punctajul se estimeaza inainte de depunere si se revizuieste dupa fiecare modificare de buget, investitie sau document. Daca o cheltuiala importanta nu sustine criteriile de selectie, ea trebuie justificata foarte clar sau eliminata.</p>
       <h2>Pasi pentru pregatirea cererii</h2>
       <ol><li>calculeaza SO</li>
@@ -251,9 +274,8 @@
 <section class="faq-item"><h3>Este obligatoriu un calculator SO?</h3><p>Nu este suficient singur, dar calculul SO este un pas practic important inainte de decizia de aplicare.</p></section>
       <h2 id="speakable-cta" class="speakable" data-speakable="true">Pentru o verificare initiala, trimite date despre solicitant, investitie, buget si programul urmarit.</h2>
       <p>Daca proiectul implica sume, cheltuieli tehnice, conditii de varsta, cod CAEN, amplasament sau cofinantare, merita verificat inainte de depunere. O analiza initiala poate identifica rapid documentele lipsa si riscurile evidente.</p>
-<p>Pentru implementare, este important ca fiecare modificare de program sa fie tratata ca actualizare de continut, nu ca simpla schimbare de cifra. Daca se modifica un prag, se pot schimba si eligibilitatea, punctajul, documentele, bugetul si ordinea pasilor de pregatire.</p>
-<p>La nivel de strategie SEO si AI Search, pagina este structurata pentru intrebari naturale. Fiecare sectiune raspunde unei intentii clare: cine poate aplica, ce se poate finanta, ce documente trebuie pregatite, ce riscuri apar si ce pasi urmeaza dupa depunere. Aceasta structura ajuta atat utilizatorii care citesc rapid, cat si sistemele care extrag raspunsuri scurte.</p>
-<p>Pentru cautarile traditionale, continutul foloseste termeni apropiati de modul in care beneficiarii formuleaza intrebari: fonduri europene, eligibilitate, documente, cheltuieli eligibile, cofinantare, punctaj, dosar si consultanta. Pentru cautarile vocale, raspunsurile de la inceputul paginii sunt scurte, directe si vizibile.</p>
+<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
+<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
 <p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
 <p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
 <p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
@@ -290,6 +312,29 @@
       </div>
     </section>
   </main>
+  <section class="program-cluster" aria-labelledby="program-cluster-title">
+    <div class="program-cluster-card">
+      <span class="program-cluster-kicker">Cluster informațional</span>
+      <h2 id="program-cluster-title">Pe scurt: DR 14 AFIR</h2>
+      <p>DR 14 cere o verificare atentă a fermei mici, a componentei proiectului și a punctajului minim înainte de pregătirea dosarului.</p>
+      <div class="program-cluster-grid">
+        <section class="program-cluster-panel">
+          <h3>Cui se adresează</h3>
+          <ul><li>ferme mici</li><li>exploatații vegetale sau zootehnice</li><li>beneficiari care verifică punctajul DR 14</li></ul>
+        </section>
+        <section class="program-cluster-panel">
+          <h3>Ce trebuie verificat</h3>
+          <ul><li>pragul SO și componenta proiectului</li><li>vechimea, asocierea și proprietatea</li><li>documentele agricole și investiția propusă</li></ul>
+        </section>
+        <section class="program-cluster-panel">
+          <h3>Pași recomandați</h3>
+          <ol><li>calculează SO</li><li>alege componenta corectă</li><li>completează calculatorul de punctaj</li><li>verifică documentele suport</li></ol>
+        </section>
+      </div>
+      <div class="program-cluster-links"><a href="/calculator-soc">Calculator SO</a><a href="/dr-14-afir-conditii-eligibilitate-greseli-frecvente">Condiții DR 14</a><a href="/afir">AFIR</a></div>
+    </div>
+  </section>
+
   <footer class="footer">© 2026 FABER - Atelier de Consultanta · <a href="/fonduri-europene">Fonduri europene</a> · <a href="/contact">Contact</a></footer>
 </body>
 </html>

@@ -89,6 +89,7 @@ function html({ title, description, h1, route, category, summary, body, faq, rel
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="${canonical(route)}" />
   <link rel="stylesheet" href="/assets/seo-hub.css" />
+  <link rel="stylesheet" href="/assets/see-also.css" />
   <script type="application/ld+json">${schema(title, description, route, faq)}</script>
 </head>
 <body>
