@@ -207,8 +207,10 @@ function hasVisibleFaqForSchema($) {
   const hasFaqSchema = jsonLdBlocks($).some((block) => includesJsonLdType(block, 'FAQPage'));
   if (!hasFaqSchema) return status(true, { required: false, count: 0 });
   const isDepthPage = String($('meta[name="seo-depth" i]').first().attr('content') || '').toLowerCase() === 'true';
+  const minFaq = Number($('meta[name="seo-min-faq" i]').first().attr('content') || 0);
   const count = $('.faq-item, .faq-q, details, [itemprop="mainEntity"], [class*="faq" i]').length;
-  return status(!isDepthPage || count > 0, { required: isDepthPage, count });
+  const threshold = minFaq || (isDepthPage ? 4 : 0);
+  return status(!threshold || count >= threshold, { required: Boolean(threshold), count, threshold });
 }
 
 function hasSpeakableSchemaCoverage($) {

@@ -72,8 +72,10 @@ function main() {
     "words",
     "json_ld_types",
     "faq_visible",
+    "faq_required",
     "speakable_blocks",
     "speakable_schema",
+    "words_required",
     "under_min_words"
   ]];
   for (const file of files()) {
@@ -81,23 +83,31 @@ function main() {
     const $ = cheerio.load(html, { decodeEntities: true });
     const words = wordCount(visibleText($));
     const types = jsonLdTypes($);
+    const robots = $('meta[name="robots"]').first().attr("content") || "";
+    const metaMinWords = Number($('meta[name="seo-min-words"]').first().attr("content") || 0);
+    const requiredWords = Math.max(args.minWords || 0, metaMinWords || 0);
+    const requiredFaq = Number($('meta[name="seo-min-faq"]').first().attr("content") || 0);
+    const faqCount = $(".faq-item, .faq-q, details").length;
+    const indexable = /index, follow/i.test(robots);
     rows.push([
       file.replace(/\\/g, "/"),
       $("title").first().text().replace(/\s+/g, " ").trim(),
       $("h1").first().text().replace(/\s+/g, " ").trim(),
       $('link[rel="canonical"]').first().attr("href") || "",
-      $('meta[name="robots"]').first().attr("content") || "",
+      robots,
       words,
       types,
-      $(".faq-item, .faq-q, details").length,
+      faqCount,
+      requiredFaq || "",
       $(".speakable,[data-speakable='true']").length,
       /SpeakableSpecification/.test(html) ? "yes" : "no",
-      args.minWords && /index, follow/i.test($('meta[name="robots"]').first().attr("content") || "") && words < args.minWords ? "yes" : "no"
+      requiredWords || "",
+      requiredWords && indexable && words < requiredWords ? "yes" : (requiredFaq && indexable && faqCount < requiredFaq ? "faq" : "no")
     ]);
   }
   fs.mkdirSync(REPORT_DIR, { recursive: true });
   fs.writeFileSync(OUT, rows.map((row) => row.map(csv).join(",")).join("\n") + "\n", "utf8");
-  const under = rows.slice(1).filter((row) => row[row.length - 1] === "yes");
+  const under = rows.slice(1).filter((row) => row[row.length - 1] !== "no");
   console.log(`Wrote ${path.relative(ROOT, OUT)} with ${rows.length - 1} HTML rows.`);
   if (under.length) {
     console.log(`${under.length} indexable pages are under ${args.minWords} words. See report for details.`);

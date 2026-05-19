@@ -11,6 +11,7 @@ const URLS = [
   "https://atelierdeconsultanta.ro/consultanta-pnrr-digitalizare/",
   "https://atelierdeconsultanta.ro/contact/",
   "https://atelierdeconsultanta.ro/fonduri-nerambursabile/",
+  "https://atelierdeconsultanta.ro/blog/safir-fotovoltaice-ferme-2026.html",
   "https://atelierdeconsultanta.ro/blog-afir-fotovoltaice-ferme-2026.html",
   "https://atelierdeconsultanta.ro/consultanta-start-up-nation/",
   "https://atelierdeconsultanta.ro/fonduri-europene/",

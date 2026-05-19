@@ -1,7 +1,7 @@
 (function () {
   "use strict";
 
-  var GUIDE_LABEL = "LINK GHID OFICIAL";
+  var GUIDE_LABEL = "Ghid oficial";
   var guidesData = {};
   var applyQueued = false;
   var guidesLoaded = false;

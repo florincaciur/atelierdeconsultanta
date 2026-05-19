@@ -2770,13 +2770,19 @@
 
   function normalizeOfficialGuides(data) {
     const normalized = { ...(data || {}) };
+    const missingMeta = "De completat";
 
     PROGRAMS_DATA.forEach(program => {
       const rawGuide = normalized[program.key];
       const guide = typeof rawGuide === "string" ? { url: rawGuide } : (rawGuide || {});
       normalized[program.key] = {
+        ...guide,
         name: guide.name || program.name,
-        url: String(guide.url || "").trim()
+        title: guide.title || guide.name || program.name,
+        institution: guide.institution || missingMeta,
+        documentType: guide.documentType || missingMeta,
+        url: String(guide.url || "").trim(),
+        accessedAt: guide.accessedAt || missingMeta
       };
     });
 
@@ -2802,9 +2808,15 @@
   function updateOfficialGuideLink(key, value) {
     const program = PROGRAMS_DATA.find(item => item.key === key);
     const current = getOfficialGuide(key);
+    const missingMeta = "De completat";
 
     officialGuides[key] = {
+      ...current,
       name: current.name || program?.name || key,
+      title: current.title || current.name || program?.name || key,
+      institution: current.institution || missingMeta,
+      documentType: current.documentType || missingMeta,
+      accessedAt: current.accessedAt || missingMeta,
       url: String(value || "").trim()
     };
   }
@@ -2929,7 +2941,7 @@
             </div>
 
             <div class="help-text">
-              Lasă câmpul gol ca butonul „LINK GHID OFICIAL” să fie ascuns pe site. Acest tab actualizează doar fișierul de linkuri, nu pagina HTML a programului.
+              Lasă câmpul gol ca linkul de ghid oficial să fie marcat pentru completare la următoarea generare statică.
             </div>
 
             <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px;">

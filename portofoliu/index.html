@@ -8,6 +8,8 @@
   <meta name="description" content="Portofoliu publicabil pentru proiecte de consultanta fonduri europene, cu exemple anonimizate si categorii de programe." />
   <meta name="robots" content="index, follow" />
   <meta name="seo-depth" content="true" />
+  <meta name="seo-min-words" content="1000" />
+  <meta name="seo-min-faq" content="4" />
   <link rel="canonical" href="https://atelierdeconsultanta.ro/portofoliu" />
   <link rel="icon" type="image/png" href="/favicon.png" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -19,40 +21,10 @@
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="stylesheet" href="/assets/seo-hub.css" />
   <link rel="stylesheet" href="/assets/see-also.css" />
+  <link rel="stylesheet" href="/assets/official-sources.css" />
   <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@graph": [
-    {
-      "@type": "Organization",
-      "@id": "https://atelierdeconsultanta.ro/#organization",
-      "name": "Atelier de Consultanta",
-      "url": "https://atelierdeconsultanta.ro",
-      "email": "atelier.consultanta@gmail.com",
-      "telephone": [
-        "+40769828338",
-        "+40753326229"
-      ],
-      "areaServed": "RO",
-      "knowsAbout": [
-        "fonduri europene",
-        "finantari nerambursabile",
-        "AFIR",
-        "PNRR",
-        "Start-Up Nation",
-        "digitalizare IMM",
-        "energie regenerabila"
-      ]
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://atelierdeconsultanta.ro/#website",
-      "url": "https://atelierdeconsultanta.ro",
-      "name": "Atelier de Consultanta",
-      "publisher": {
-        "@id": "https://atelierdeconsultanta.ro/#organization"
-      },
-      "inLanguage": "ro-RO"
-    },
     {
       "@type": "CollectionPage",
       "@id": "https://atelierdeconsultanta.ro/portofoliu#webpage",
@@ -74,7 +46,18 @@
           "#speakable-eligibility",
           "#speakable-cta"
         ]
-      }
+      },
+      "citation": [
+        {
+          "@type": "CreativeWork",
+          "name": "Fonduri europene nerambursabile",
+          "url": "https://mfe.gov.ro/",
+          "publisher": {
+            "@type": "Organization",
+            "name": "MIPE"
+          }
+        }
+      ]
     },
     {
       "@type": "BreadcrumbList",
@@ -127,6 +110,14 @@
             "@type": "Answer",
             "text": "Da, prin contact pot fi discutate exemple relevante fara date confidentiale."
           }
+        },
+        {
+          "@type": "Question",
+          "name": "Cum verific daca Portofoliu este potrivit pentru proiectul meu?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Porneste de la solicitant, cod CAEN, localitate, investitie, buget si documentele disponibile. Daca una dintre aceste piese nu se potriveste cu apelul activ, proiectul trebuie ajustat inainte de depunere."
+          }
         }
       ]
     }
@@ -167,9 +158,11 @@
 <tr><th>CTA</th><td>verificare eligibilitate si discutie de consultanta</td></tr>
     </tbody>
   </table>
+
       <h2>Pe scurt</h2>
       <p>Portofoliu trebuie analizat ca o decizie de investitie, nu doar ca o oportunitate de finantare. Inainte de orice buget, solicitantul trebuie sa verifice incadrarea, documentele, calendarul, costurile eligibile si riscurile care pot aparea la evaluare sau implementare.</p>
       <p>Informatiile de pe aceasta pagina sunt construite pentru orientare practica. Ele nu promit aprobare si nu inlocuiesc verificarea apelului activ, a anexelor si a grilei de selectie. Scopul este sa poti pregati o discutie serioasa despre eligibilitate si dosar.</p>
+
       <div class="grid">
         <section class="mini-card"><h3>Cui se adreseaza</h3><ul><li>vizitatori care vor sa inteleaga experienta</li>
 <li>clienti care cer exemple</li>
@@ -226,42 +219,31 @@
       <p>In fiecare exemplu, decizia corecta depinde de documente. Aceeasi investitie poate fi potrivita pentru un solicitant si nepotrivita pentru altul, in functie de activitate, locatie, istoric, buget si calendar.</p>
 
 
+<section class="official-sources" aria-labelledby="portofoliu-official-sources">
+        <h2 id="portofoliu-official-sources">Surse oficiale consultate</h2>
+        <ul class="official-sources__list">
+        <li class="official-sources__item" data-source-key="fonduri-europene">
+          <a class="official-sources__title" href="https://mfe.gov.ro/" target="_blank" rel="noopener noreferrer">Fonduri europene nerambursabile</a>
+          <dl class="official-sources__meta">
+            <div><dt>Institutie</dt><dd>MIPE</dd></div>
+            <div><dt>Tip document</dt><dd>pagina program</dd></div>
+            <div><dt>Verificat</dt><dd><time datetime="2026-05-20">20 mai 2026</time></dd></div>
+            <div class="official-sources__url"><dt>URL</dt><dd><a href="https://mfe.gov.ro/" target="_blank" rel="noopener noreferrer">https://mfe.gov.ro/</a></dd></div>
+          </dl>
+          
+        </li>
+        </ul>
+      </section>
       <h2>Intrebari frecvente</h2>
       <section class="faq-item"><h3>De ce lipsesc numele clientilor?</h3><p>Pentru ca numele se publica doar cu acord explicit.</p></section>
 <section class="faq-item"><h3>Ce proiecte pot fi prezentate?</h3><p>Doar proiecte cu informatii confirmate si permisiune de publicare.</p></section>
 <section class="faq-item"><h3>Portofoliul garanteaza rezultate?</h3><p>Nu. El prezinta experienta si tipuri de situatii.</p></section>
 <section class="faq-item"><h3>Pot cere detalii?</h3><p>Da, prin contact pot fi discutate exemple relevante fara date confidentiale.</p></section>
+<section class="faq-item"><h3>Cum verific daca Portofoliu este potrivit pentru proiectul meu?</h3><p>Porneste de la solicitant, cod CAEN, localitate, investitie, buget si documentele disponibile. Daca una dintre aceste piese nu se potriveste cu apelul activ, proiectul trebuie ajustat inainte de depunere.</p></section>
       <h2 id="speakable-cta" class="speakable" data-speakable="true">Pentru o verificare initiala, trimite date despre solicitant, investitie, buget si programul urmarit.</h2>
       <p>Daca proiectul implica sume, cheltuieli tehnice, conditii de varsta, cod CAEN, amplasament sau cofinantare, merita verificat inainte de depunere. O analiza initiala poate identifica rapid documentele lipsa si riscurile evidente.</p>
+<p>La nivel de strategie SEO si AI Search, pagina este structurata pentru intrebari naturale. Fiecare sectiune raspunde unei intentii clare: cine poate aplica, ce se poate finanta, ce documente trebuie pregatite, ce riscuri apar si ce pasi urmeaza dupa depunere. Aceasta structura ajuta atat utilizatorii care citesc rapid, cat si sistemele care extrag raspunsuri scurte.</p>
 <p>Pentru cautarile traditionale, continutul foloseste termeni apropiati de modul in care beneficiarii formuleaza intrebari: fonduri europene, eligibilitate, documente, cheltuieli eligibile, cofinantare, punctaj, dosar si consultanta. Pentru cautarile vocale, raspunsurile de la inceputul paginii sunt scurte, directe si vizibile.</p>
-<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
-<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
-<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
-<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
-<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
-<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
-<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
-<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
-<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
-<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
-<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
-<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
-<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
-<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
-<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
-<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
-<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
-<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
-<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
-<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
-<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
-<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
-<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
-<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
-<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
-<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
-<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
-<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
 <p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
 <p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
 <p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>

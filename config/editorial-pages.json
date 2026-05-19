@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "allowedStatuses": [
+    "actualizat",
+    "in_curs_de_verificare",
+    "arhivat"
+  ],
+  "pages": [
+    {
+      "title": "Consultanta fonduri europene pentru firme si antreprenori",
+      "description": "Servicii de consultanta fonduri europene: eligibilitate, program potrivit, documente, buget, depunere, clarificari si implementare.",
+      "slug": "consultanta-fonduri-europene",
+      "pageType": "service",
+      "primaryKeyword": "consultanta fonduri europene",
+      "secondaryKeywords": [
+        "consultant fonduri europene",
+        "servicii fonduri europene",
+        "consultanta fonduri europene nerambursabile",
+        "consultanta Start Up Nation 2026",
+        "consultanta Digitalizare IMM"
+      ],
+      "author": "FABER - Atelier de Consultanta",
+      "reviewer": "TODO_CLIENT_REVIEWER",
+      "publishedAt": "2026-05-19",
+      "updatedAt": "2026-05-20",
+      "officialSources": [
+        {
+          "url": "https://mfe.gov.ro/",
+          "title": "Fonduri europene nerambursabile",
+          "accessedAt": "TODO_DATA_ACCESARII"
+        }
+      ],
+      "status": "in_curs_de_verificare",
+      "readingTime": 12,
+      "lastVerifiedAt": "TODO_DATA_ACCESARII"
+    },
+    {
+      "title": "DR 12 AFIR 2026 - Tineri fermieri, eligibilitate si dosar",
+      "description": "Ghid DR 12 AFIR pentru tineri fermieri: eligibilitate, investitii, cheltuieli, punctaj, documente, depunere si verificare proiect.",
+      "slug": "dr12-afir",
+      "pageType": "program",
+      "primaryKeyword": "DR 12 AFIR",
+      "secondaryKeywords": [
+        "DR12 AFIR",
+        "program DR12 investitii tineri fermieri",
+        "investitii tineri fermieri 2026",
+        "ghid DR12 AFIR"
+      ],
+      "author": "FABER - Atelier de Consultanta",
+      "reviewer": "TODO_CLIENT_REVIEWER",
+      "publishedAt": "2026-05-19",
+      "updatedAt": "2026-05-20",
+      "officialSources": [
+        {
+          "url": "https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/",
+          "title": "DR 12 AFIR - Tineri fermieri",
+          "accessedAt": "TODO_DATA_ACCESARII"
+        }
+      ],
+      "status": "in_curs_de_verificare",
+      "readingTime": 12,
+      "lastVerifiedAt": "TODO_DATA_ACCESARII"
+    },
+    {
+      "title": "DR 12 AFIR - Instalarea tinerilor fermieri",
+      "description": "Ghid pentru tinerii fermieri interesati de DR 12 AFIR: eligibilitate, documente, planificare si pasi de pregatire.",
+      "slug": "dr-12-afir-instalarea-tinerilor-fermieri",
+      "pageType": "blog",
+      "primaryKeyword": "dr 12 afir",
+      "secondaryKeywords": [
+        "dr 12",
+        "instalarea tinerilor fermieri",
+        "tanarul fermier"
+      ],
+      "author": "FABER - Atelier de Consultanta",
+      "reviewer": "TODO_CLIENT_REVIEWER",
+      "publishedAt": "2026-04-30",
+      "updatedAt": "2026-05-20",
+      "officialSources": [
+        {
+          "url": "https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/",
+          "title": "DR 12 AFIR - Tineri fermieri",
+          "accessedAt": "TODO_DATA_ACCESARII"
+        }
+      ],
+      "status": "in_curs_de_verificare",
+      "readingTime": 8,
+      "lastVerifiedAt": "TODO_DATA_ACCESARII"
+    }
+  ]
+}

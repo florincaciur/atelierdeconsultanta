@@ -145,6 +145,9 @@
 /plan-afaceri-start-up-nation-2026/ /start-up-nation-2026-plan-de-afaceri 301
 
 # Root HTML content pages and program pages.
+/blog/safir-fotovoltaice-ferme-2026.html /blog-afir-fotovoltaice-ferme-2026 301
+/blog/safir-fotovoltaice-ferme-2026 /blog-afir-fotovoltaice-ferme-2026 301
+/blog/safir-fotovoltaice-ferme-2026/ /blog-afir-fotovoltaice-ferme-2026 301
 /blog.html /blog 301
 /blog/ /blog 301
 /blog-afir-fotovoltaice-ferme-2026.html /blog-afir-fotovoltaice-ferme-2026 301
@@ -224,3 +227,6 @@
 /webinarii/ /webinarii 301
 /webinarii.html /webinarii 301
 /webinarii/index.html /webinarii 301
+
+# SEO and AI Search canonical routes.
+/pro-infra/index.html /pro-infra 301

@@ -12,6 +12,74 @@ const REDIRECTS_PATH = path.join(ROOT, "_redirects");
 const BLOG_JSON_PATH = path.join(ROOT, "blog.json");
 const BANNERS_PATH = path.join(ROOT, "banners.json");
 const LLMS_PATH = path.join(ROOT, "llms.txt");
+const ORGANIZATION_ID = `${SITE}/#organization`;
+const WEBSITE_ID = `${SITE}/#website`;
+const {
+  editorialSchemaProperties,
+  getEditorialMetadata,
+  renderEditorialSection
+} = require("./editorial-metadata");
+const {
+  officialSourceCitations,
+  renderOfficialSources,
+  sourcesForKeys
+} = require("./official-sources");
+
+const PILLAR_SLUGS = new Set([
+  "consultanta-fonduri-europene",
+  "verificare-eligibilitate-fonduri-europene",
+  "fonduri-europene",
+  "fonduri-europene-nerambursabile-2026",
+  "dr12-afir",
+  "dr14",
+  "digitalizare-imm",
+  "femeia-antreprenor-2026",
+  "start-up-nation-2026",
+  "fonduri-europene-imm",
+  "investitii-modernizarea-microintreprinderilor-apel-2",
+  "pro-infra",
+  "fondul-modernizare-energie-regenerabila-2026"
+]);
+
+const SECONDARY_SLUGS = new Set([
+  "start-up-nation-2026-conditii",
+  "start-up-nation-2026-cheltuieli-eligibile",
+  "start-up-nation-2026-idei-afaceri",
+  "start-up-nation-2026-plan-de-afaceri",
+  "cod-caen-start-up-nation-2026",
+  "consultanta-start-up-nation-2026",
+  "consultant-fonduri-europene-imm",
+  "firma-consultanta-fonduri-europene",
+  "consultanta-afir",
+  "consultanta-pnrr-digitalizare",
+  "digitalizare-imm-pnrr",
+  "granturi-digitalizare-imm",
+  "fonduri-europene-femei-antreprenor",
+  "femeia-antreprenor-2026-conditii-idei-afaceri"
+]);
+
+const KEYWORDS_BY_SLUG = {
+  "consultanta-fonduri-europene": ["consultanta fonduri europene", "consultant fonduri europene", "servicii fonduri europene", "consultanta fonduri europene nerambursabile", "consultanta Start Up Nation 2026", "consultanta Digitalizare IMM"],
+  "verificare-eligibilitate-fonduri-europene": ["verificare eligibilitate fonduri europene", "eligibilitate fonduri europene 2026", "eligibilitate DR12", "eligibilitate DR14", "verificare cod CAEN fonduri europene"],
+  "fonduri-europene-nerambursabile-2026": ["fonduri europene nerambursabile 2026", "fonduri europene 2026 pentru tineri", "fonduri europene 2026 rural non agricol", "program fonduri europene 2026", "fonduri europene 2026 pentru femei"],
+  "dr12-afir": ["DR12 AFIR", "program DR12 investitii tineri fermieri", "investitii tineri fermieri 2026", "ghid DR12 AFIR"],
+  "dr14": ["DR14 AFIR", "investitii ferme mici", "program fonduri ferme mici 2026", "conditii DR14", "SO ferma mica"],
+  "digitalizare-imm": ["Digitalizare IMM 2026", "PNRR digitalizare IMM", "grant digitalizare IMM 2026", "echipamente digitalizare IMM"],
+  "femeia-antreprenor-2026": ["Femeia Antreprenor 2026", "fonduri europene femei antreprenor 2026", "grant Femeia Antreprenor 2026", "cheltuieli eligibile Femeia Antreprenor 2026"],
+  "start-up-nation-2026": ["Start Up Nation 2026", "Start Up Nation 2026 conditii", "cheltuieli eligibile Start Up Nation 2026", "cod CAEN Start Up Nation 2026", "idei afaceri Start Up Nation 2026", "plan de afaceri Start Up Nation 2026"],
+  "fonduri-europene-imm": ["fonduri europene IMM 2026", "program IMM 2026", "granturi IMM 2026", "fonduri pentru IMM"],
+  "investitii-modernizarea-microintreprinderilor-apel-2": ["fonduri microintreprinderi 2026", "program microintreprinderi 2026", "conditii microintreprinderi 2026"],
+  "pro-infra": ["PRO INFRA 2026", "program energie 2026", "granturi energie verde 2026", "fonduri energie regenerabile 2026"],
+  "fondul-modernizare-energie-regenerabila-2026": ["program energie 2026", "fonduri energie regenerabile 2026", "granturi energie verde 2026", "Fondul pentru Modernizare energie regenerabila"],
+  "calculator-soc": ["calculator SOC", "calculator DR12 AFIR", "calculator cofinantare"],
+  "cod-caen-start-up-nation-2026": ["cod CAEN Start Up Nation 2026", "verificare cod CAEN fonduri europene", "cod CAEN eligibil Start Up Nation"],
+  "start-up-nation-2026-conditii": ["Start Up Nation 2026 conditii", "eligibilitate Start Up Nation 2026", "cod CAEN Start Up Nation 2026"],
+  "start-up-nation-2026-cheltuieli-eligibile": ["cheltuieli eligibile Start Up Nation 2026", "buget Start Up Nation 2026", "achizitii Start Up Nation 2026"],
+  "start-up-nation-2026-idei-afaceri": ["idei afaceri Start Up Nation 2026", "afaceri eligibile Start Up Nation", "program IMM 2026"],
+  "start-up-nation-2026-plan-de-afaceri": ["plan de afaceri Start Up Nation 2026", "buget plan de afaceri", "consultanta Start Up Nation 2026"],
+  "firma-consultanta-fonduri-europene": ["firma consultanta fonduri europene", "servicii fonduri europene", "alegere consultant fonduri europene"],
+  "consultant-fonduri-europene-imm": ["consultant fonduri europene IMM", "fonduri europene IMM 2026", "verificare eligibilitate IMM"]
+};
 
 function readJson(file) {
   return JSON.parse(fs.readFileSync(file, "utf8"));
@@ -111,6 +179,63 @@ function labelForHref(href) {
   return clean.replace(/^\/+/, "").replace(/-/g, " ").replace(/\b\w/g, (m) => m.toUpperCase());
 }
 
+function minWordsForPage(page) {
+  if (Number(page.minWords) > 0) return Number(page.minWords);
+  if (PILLAR_SLUGS.has(page.slug)) return 2100;
+  if (SECONDARY_SLUGS.has(page.slug)) return 1200;
+  if (page.type === "program" || page.type === "hub" || page.type === "service") return 2000;
+  return 1000;
+}
+
+function minFaqForPage(page) {
+  if (Number(page.minFaq) > 0) return Number(page.minFaq);
+  if (PILLAR_SLUGS.has(page.slug)) return 10;
+  if (SECONDARY_SLUGS.has(page.slug)) return 6;
+  if (page.type === "program" || page.type === "hub" || page.type === "service") return 8;
+  return 4;
+}
+
+function keywordsForPage(page) {
+  return page.keywords || KEYWORDS_BY_SLUG[page.slug] || [];
+}
+
+function faqsForPage(page) {
+  const faq = Array.isArray(page.faq) ? [...page.faq] : [];
+  const programName = page.programName || page.h1 || "program";
+  const keyword = keywordsForPage(page)[0] || programName;
+  const additions = [
+    [`Cum verific daca ${programName} este potrivit pentru proiectul meu?`, `Porneste de la solicitant, cod CAEN, localitate, investitie, buget si documentele disponibile. Daca una dintre aceste piese nu se potriveste cu apelul activ, proiectul trebuie ajustat inainte de depunere.`],
+    [`Cand nu merita sa aplic pentru ${programName}?`, `Nu merita sa aplici cand nu poti dovedi eligibilitatea, cand cheltuielile principale nu sunt permise, cand cofinantarea nu este acoperita sau cand calendarul nu permite documente complete si verificabile.`],
+    ["Ce documente trebuie pregatite inainte de analiza?", "De regula sunt necesare documente de firma sau solicitant, documente pentru activitate si locatie, date financiare, oferte, descrierea investitiei si informatii despre cofinantare."],
+    ["Cum se verifica un cod CAEN pentru fonduri europene?", "Codul CAEN se verifica prin certificatul constatator, activitatea reala, autorizarea necesara, lista de coduri eligibile a apelului si legatura directa dintre investitie si activitatea finantata."],
+    ["Ce cheltuieli sunt cele mai sensibile la evaluare?", "Sunt sensibile cheltuielile greu de justificat, activele supradimensionate, serviciile descrise vag, achizitiile incepute prea devreme si costurile care nu au legatura directa cu obiectivele proiectului."],
+    ["Cum tratez cofinantarea si cheltuielile neeligibile?", "Cofinantarea si cheltuielile neeligibile trebuie estimate separat de grant. Include rezerve pentru TVA, diferente de pret, costuri neacoperite si intarzieri in rambursare."],
+    ["Ce greseli duc frecvent la respingere sau clarificari?", "Apar probleme cand documentele sunt expirate, ofertele sunt incomplete, bugetul nu se leaga de activitate, punctajul este estimat optimist sau solicitantul nu poate sustine implementarea."],
+    ["Cum folosesc informatiile despre eligibilitate fonduri europene 2026?", "Foloseste informatiile ca filtru initial si confirma intotdeauna regulile in apelul activ. Programele pot schimba praguri, documente, punctaje si termene de la o sesiune la alta."],
+    [`Ce rol are consultanta pentru ${keyword}?`, `Consultanta ajuta la trierea programului, verificarea documentelor, structurarea bugetului, pregatirea raspunsurilor la clarificari si reducerea riscurilor, dar nu poate garanta aprobarea finantarii.`],
+    ["Cat de repede trebuie inceputa pregatirea dosarului?", "Pregatirea trebuie inceputa inainte de deschiderea efectiva a apelului, mai ales daca sunt necesare oferte, documente pentru spatiu, autorizatii, calcule de punctaj sau clarificari privind solicitantul."]
+  ];
+  const seen = new Set(faq.map(([question]) => String(question).toLowerCase()));
+  for (const item of additions) {
+    const key = item[0].toLowerCase();
+    if (!seen.has(key)) {
+      faq.push(item);
+      seen.add(key);
+    }
+    if (faq.length >= minFaqForPage(page)) break;
+  }
+  return faq;
+}
+
+function renderKeywordIntent(page) {
+  const keywords = keywordsForPage(page);
+  if (!keywords.length) return "";
+  const chunks = keywords.slice(0, 6).map((keyword) => `<li>${esc(keyword)}</li>`).join("\n");
+  return `<h2>Situatii frecvente cautate de beneficiari</h2>
+      <p>Pagina raspunde natural intrebarilor pe care le au beneficiarii cand compara programe, documente, bugete si servicii de consultanta. Formularea ramane orientativa si trebuie verificata cu ghidul apelului activ.</p>
+      <ul>${chunks}</ul>`;
+}
+
 function hasNumericClaim(page) {
   return [page.funding, page.description, page.quickAnswer].some((value) => /\d/.test(String(value || "")));
 }
@@ -125,36 +250,19 @@ function validatePage(page) {
 }
 
 function schemaGraph(page, config) {
-  const faq = page.faq || [];
+  const faq = faqsForPage(page);
+  const editorial = getEditorialMetadata(page.slug);
   const graph = [
-    {
-      "@type": "Organization",
-      "@id": `${SITE}/#organization`,
-      "name": "Atelier de Consultanta",
-      "url": SITE,
-      "email": "atelier.consultanta@gmail.com",
-      "telephone": ["+40769828338", "+40753326229"],
-      "areaServed": "RO",
-      "knowsAbout": ["fonduri europene", "finantari nerambursabile", "AFIR", "PNRR", "Start-Up Nation", "digitalizare IMM", "energie regenerabila"]
-    },
-    {
-      "@type": "WebSite",
-      "@id": `${SITE}/#website`,
-      "url": SITE,
-      "name": "Atelier de Consultanta",
-      "publisher": { "@id": `${SITE}/#organization` },
-      "inLanguage": "ro-RO"
-    },
     {
       "@type": page.schemaType === "CollectionPage" ? "CollectionPage" : "WebPage",
       "@id": `${canonical(page)}#webpage`,
       "url": canonical(page),
       "name": page.title,
       "description": page.description,
-      "isPartOf": { "@id": `${SITE}/#website` },
+      "isPartOf": { "@id": WEBSITE_ID },
       "inLanguage": "ro-RO",
       "dateModified": config.updatedAt,
-      "publisher": { "@id": `${SITE}/#organization` },
+      "publisher": { "@id": ORGANIZATION_ID },
       "speakable": {
         "@type": "SpeakableSpecification",
         "cssSelector": ["#speakable-summary", "#speakable-eligibility", "#speakable-cta"]
@@ -177,13 +285,21 @@ function schemaGraph(page, config) {
     }
   ];
 
+  if (editorial) {
+    Object.assign(graph[0], editorialSchemaProperties(editorial));
+  }
+
+  if (Array.isArray(page.sourceKeys) && page.sourceKeys.length) {
+    graph[0].citation = officialSourceCitations(page.sourceKeys);
+  }
+
   if (page.type === "program" || page.type === "service" || page.schemaType === "Service" || page.schemaType === "GovernmentService") {
     graph.push({
       "@type": page.schemaType === "GovernmentService" ? "GovernmentService" : "Service",
       "@id": `${canonical(page)}#service`,
       "name": page.programName || page.h1,
       "description": page.description,
-      "provider": { "@id": `${SITE}/#organization` },
+      "provider": { "@id": ORGANIZATION_ID },
       "areaServed": "RO",
       "serviceType": page.category
     });
@@ -198,7 +314,7 @@ function schemaGraph(page, config) {
       "operatingSystem": "Web",
       "url": canonical(page),
       "offers": { "@type": "Offer", "price": "0", "priceCurrency": "RON" },
-      "provider": { "@id": `${SITE}/#organization` }
+      "provider": { "@id": ORGANIZATION_ID }
     });
   }
 
@@ -309,19 +425,24 @@ function renderDr14Score() {
 }
 
 function renderMainContent(page) {
-  const faqHtml = (page.faq || [])
+  const editorialHtml = renderEditorialSection(getEditorialMetadata(page.slug));
+  const officialSourcesHtml = renderOfficialSources(page.sourceKeys, { id: `${page.slug}-official-sources` });
+  const faqHtml = faqsForPage(page)
     .map(([question, answer]) => `<section class="faq-item"><h3>${esc(question)}</h3><p>${esc(answer)}</p></section>`)
     .join("\n");
   const dr14ScoreHtml = page.slug === "dr14" ? `\n${renderDr14Score()}` : "";
   const toolsHtml = page.includeTools ? `\n${renderTools()}` : "";
   const downloadsHtml = page.includeDownloads ? `\n${renderDownloads()}` : "";
+  const keywordHtml = renderKeywordIntent(page);
 
   let html = `
       <p id="speakable-summary" class="intro speakable" data-speakable="true">${esc(page.quickAnswer)}</p>
       ${renderTable(page)}
+${editorialHtml}
       <h2>Pe scurt</h2>
       <p>${esc(page.programName)} trebuie analizat ca o decizie de investitie, nu doar ca o oportunitate de finantare. Inainte de orice buget, solicitantul trebuie sa verifice incadrarea, documentele, calendarul, costurile eligibile si riscurile care pot aparea la evaluare sau implementare.</p>
       <p>Informatiile de pe aceasta pagina sunt construite pentru orientare practica. Ele nu promit aprobare si nu inlocuiesc verificarea apelului activ, a anexelor si a grilei de selectie. Scopul este sa poti pregati o discutie serioasa despre eligibilitate si dosar.</p>
+${keywordHtml}
       <div class="grid">
         ${renderChecklist("Cui se adreseaza", page.audience)}
         ${renderChecklist("Conditii de eligibilitate", page.eligibility)}
@@ -358,6 +479,7 @@ ${dr14ScoreHtml}
       <p>In fiecare exemplu, decizia corecta depinde de documente. Aceeasi investitie poate fi potrivita pentru un solicitant si nepotrivita pentru altul, in functie de activitate, locatie, istoric, buget si calendar.</p>
 ${toolsHtml}
 ${downloadsHtml}
+${officialSourcesHtml}
       <h2>Intrebari frecvente</h2>
       ${faqHtml}
       <h2 id="speakable-cta" class="speakable" data-speakable="true">Pentru o verificare initiala, trimite date despre solicitant, investitie, buget si programul urmarit.</h2>
@@ -371,7 +493,7 @@ ${downloadsHtml}
     "Un proiect matur nu inseamna un proiect incarcat cu multe cheltuieli. Inseamna un proiect in care fiecare cheltuiala are rol, fiecare document sustine o afirmatie, iar solicitantul poate explica de ce investitia este necesara si cum va fi folosita dupa finalizare.",
     "Daca exista incertitudini, primul pas nu este depunerea rapida, ci clarificarea lor. O conditie interpretata gresit poate afecta intregul dosar. De aceea, verificarea eligibilitatii trebuie facuta inainte de semnarea contractelor, inainte de achizitii si inainte de blocarea bugetului propriu."
   ];
-  while (wordCount(html) < 2050) {
+  while (wordCount(html) < minWordsForPage(page)) {
     html += `\n<p>${esc(depthParagraphs[wordCount(html) % depthParagraphs.length])}</p>`;
   }
   return html;
@@ -380,7 +502,8 @@ ${downloadsHtml}
 function pageHtml(page, config) {
   const relatedCss = (page.related || []).length ? `\n  <link rel="stylesheet" href="/assets/see-also.css" />` : "";
   const toolCss = page.includeTools || page.includeDownloads ? `\n  <link rel="stylesheet" href="/assets/seo-tools.css" />` : "";
-  const extraCss = `${relatedCss}${toolCss}`;
+  const sourcesCss = (page.sourceKeys || []).length ? `\n  <link rel="stylesheet" href="/assets/official-sources.css" />` : "";
+  const extraCss = `${relatedCss}${toolCss}${sourcesCss}`;
   const extraJs = page.includeTools ? `\n  <script src="/assets/seo-tools.js" defer></script>` : "";
   return `<!DOCTYPE html>
 <html lang="ro">
@@ -392,6 +515,8 @@ function pageHtml(page, config) {
   <meta name="description" content="${esc(page.description)}" />
   <meta name="robots" content="index, follow" />
   <meta name="seo-depth" content="true" />
+  <meta name="seo-min-words" content="${minWordsForPage(page)}" />
+  <meta name="seo-min-faq" content="${minFaqForPage(page)}" />
   <link rel="canonical" href="${canonical(page)}" />
   <link rel="icon" type="image/png" href="/favicon.png" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -457,6 +582,27 @@ function parseSitemapUrls() {
   return [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]);
 }
 
+function htmlCandidatesForRoute(route) {
+  if (route === "/") return ["index.html"];
+  const clean = route.replace(/^\/+/, "");
+  return [`${clean}.html`, path.posix.join(clean, "index.html")];
+}
+
+function routeIsIndexable(route) {
+  const clean = cleanUrl(route);
+  if (!clean || clean.includes("/admin") || clean.includes("herambursabile") || clean.includes("/index")) return false;
+  if (clean === "/") return true;
+  const candidates = htmlCandidatesForRoute(clean);
+  for (const candidate of candidates) {
+    const file = path.join(ROOT, candidate);
+    if (!fs.existsSync(file)) continue;
+    const html = fs.readFileSync(file, "utf8");
+    const robots = (html.match(/<meta\s+name=["']robots["']\s+content=["']([^"']+)/i) || [])[1] || "";
+    if (!/noindex/i.test(robots)) return true;
+  }
+  return false;
+}
+
 function updateSitemap(pages, config) {
   const existing = parseSitemapUrls()
     .map((url) => url.replace(SITE, ""))
@@ -466,6 +612,7 @@ function updateSitemap(pages, config) {
   const seen = new Set();
   const urls = all.filter((url) => {
     if (seen.has(url)) return false;
+    if (!routeIsIndexable(url)) return false;
     seen.add(url);
     return true;
   });
@@ -513,6 +660,7 @@ function updateBlogJson(pages, config) {
   data.posts = Array.isArray(data.posts) ? data.posts : [];
   const byId = new Map(data.posts.map((post) => [post.id, post]));
   for (const page of pages.filter((item) => item.type === "program" && !byId.has(item.slug))) {
+    const editorial = getEditorialMetadata(page.slug);
     data.posts.push({
       id: page.slug,
       title: page.h1,
@@ -527,18 +675,30 @@ function updateBlogJson(pages, config) {
       secondaryKeywords: [page.category, "fonduri europene", "eligibilitate"],
       bannerImage: "",
       bannerAlt: "",
-      author: config.defaults.author,
+      author: editorial?.author || config.defaults.author,
+      reviewer: editorial?.reviewer,
+      officialSources: editorial?.officialSources || sourcesForKeys(page.sourceKeys).map((source) => ({
+        url: source.url,
+        title: source.title,
+        institution: source.institution,
+        documentType: source.documentType,
+        accessedAt: source.accessedAt,
+        note: source.note
+      })),
+      editorialStatus: editorial?.status || "in_curs_de_verificare",
+      lastVerifiedAt: editorial?.lastVerifiedAt,
       createdAt: config.updatedAt,
-      updatedAt: config.updatedAt,
-      publishedAt: config.updatedAt,
+      updatedAt: editorial?.updatedAt || config.updatedAt,
+      publishedAt: editorial?.publishedAt || config.updatedAt,
       date: config.updatedAt,
       dateFormatted: "19 mai 2026",
       category: page.category,
       readTime: 12,
+      readingTime: editorial?.readingTime || 12,
       icon: "",
       canonicalUrl: canonical(page),
       internalLinks: page.related || [],
-      faq: (page.faq || []).map(([question, answer]) => ({ question, answer }))
+      faq: faqsForPage(page).map(([question, answer]) => ({ question, answer }))
     });
   }
   writeJson(BLOG_JSON_PATH, data);

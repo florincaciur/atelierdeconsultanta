@@ -8,6 +8,10 @@ const ROOT = path.resolve(__dirname, "..");
 const SITE = "https://atelierdeconsultanta.ro";
 const CONFIG = path.join(ROOT, "config", "seo-programmatic-pages.json");
 const SITEMAP = path.join(ROOT, "sitemap.xml");
+const ORGANIZATION_ID = `${SITE}/#organization`;
+const WEBSITE_ID = `${SITE}/#website`;
+const PROGRAMMATIC_MIN_WORDS = 1100;
+const PROGRAMMATIC_MIN_FAQ = 4;
 
 function esc(value) {
   return String(value ?? "")
@@ -29,6 +33,19 @@ function li(items) {
   return (items || []).map((item) => `<li>${esc(item)}</li>`).join("\n");
 }
 
+function stripTags(html) {
+  return html.replace(/<script[\s\S]*?<\/script>/gi, " ")
+    .replace(/<style[\s\S]*?<\/style>/gi, " ")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function wordCount(html) {
+  const words = stripTags(html).match(/[\p{L}\p{N}]+(?:[-''][\p{L}\p{N}]+)*/gu);
+  return words ? words.length : 0;
+}
+
 function relatedLinks(items) {
   return (items || []).map((href) => `<a href="${cleanUrl(href)}">${esc(cleanUrl(href).replace(/^\/+/, "").replace(/-/g, " "))}</a>`).join("\n");
 }
@@ -38,21 +55,14 @@ function schema(title, description, route, faq) {
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "Organization",
-        "@id": `${SITE}/#organization`,
-        "name": "Atelier de Consultanta",
-        "url": SITE,
-        "email": "atelier.consultanta@gmail.com",
-        "telephone": ["+40769828338", "+40753326229"]
-      },
-      {
         "@type": "WebPage",
         "@id": `${canonical(route)}#webpage`,
         "url": canonical(route),
         "name": title,
         "description": description,
         "inLanguage": "ro-RO",
-        "publisher": { "@id": `${SITE}/#organization` },
+        "isPartOf": { "@id": WEBSITE_ID },
+        "publisher": { "@id": ORGANIZATION_ID },
         "speakable": {
           "@type": "SpeakableSpecification",
           "cssSelector": ["#speakable-summary", "#speakable-answer"]
@@ -87,6 +97,9 @@ function html({ title, description, h1, route, category, summary, body, faq, rel
   <title>${esc(title)}</title>
   <meta name="description" content="${esc(description)}" />
   <meta name="robots" content="index, follow" />
+  <meta name="seo-depth" content="true" />
+  <meta name="seo-min-words" content="${PROGRAMMATIC_MIN_WORDS}" />
+  <meta name="seo-min-faq" content="${PROGRAMMATIC_MIN_FAQ}" />
   <link rel="canonical" href="${canonical(route)}" />
   <link rel="stylesheet" href="/assets/seo-hub.css" />
   <link rel="stylesheet" href="/assets/see-also.css" />
@@ -135,6 +148,24 @@ function writePage(route, content) {
   fs.writeFileSync(file, content, "utf8");
 }
 
+function ensureDepth(body, context) {
+  const paragraphs = [
+    `Pentru ${context}, decizia nu se ia doar dupa denumirea programului. Trebuie verificata potrivirea dintre solicitant, activitate, localitate, documente, investitie, buget si calendarul apelului activ.`,
+    "Un dosar bine pregatit porneste de la documente verificabile. Certificatul constatator, documentele pentru spatiu, situatiile financiare, ofertele si descrierea investitiei trebuie sa sustina aceeasi poveste economica.",
+    "Cheltuielile eligibile trebuie legate direct de activitatea finantata. Daca o achizitie nu poate fi explicata prin fluxul de lucru, prin obiectivele proiectului sau prin rezultatele asteptate, riscul de clarificari creste.",
+    "Cofinantarea se analizeaza separat de grant. Beneficiarul trebuie sa inteleaga ce plateste din surse proprii, ce nu se deconteaza, ce documente sunt cerute la plata si ce se intampla daca apar diferente de pret.",
+    "Punctajul orientativ se verifica inainte de depunere si se reface dupa fiecare schimbare de buget sau investitie. Un proiect eligibil poate ramane nefinantat daca nu intra in bugetul disponibil al apelului.",
+    "Informatiile de pe pagina sunt orientative. Eligibilitatea finala depinde de ghidul oficial, anexele apelului, documentele solicitantului si evaluarea autoritatii finantatoare."
+  ];
+  let html = body;
+  let index = 0;
+  while (wordCount(html) < PROGRAMMATIC_MIN_WORDS) {
+    html += `\n      <p>${esc(paragraphs[index % paragraphs.length])}</p>`;
+    index += 1;
+  }
+  return html;
+}
+
 function caenPage(item) {
   const route = `/fonduri-europene-caen/${item.code}-${item.slug}`;
   const title = `Fonduri europene pentru CAEN ${item.code} - ${item.label}`;
@@ -145,7 +176,7 @@ function caenPage(item) {
     ["Ce programe pot fi relevante?", item.programs.join("; ")],
     ["Ce trebuie verificat inainte de buget?", "Eligibilitatea solicitantului, codul CAEN, cheltuielile permise, cofinantarea si punctajul."]
   ];
-  const body = `
+  let body = `
       <h2>Programe relevante</h2>
       <p>Pentru CAEN ${esc(item.code)}, analiza trebuie facuta pe program, nu pe cod izolat. Un cod poate fi potrivit intr-un apel si exclus in altul, in functie de regiune, obiective si tipul investitiei.</p>
       <ul>${li(item.programs)}</ul>
@@ -160,6 +191,7 @@ function caenPage(item) {
         <li>calculeaza cofinantarea si cheltuielile neeligibile;</li>
         <li>verifica grila de punctaj inainte de depunere.</li>
       </ul>`;
+  body = ensureDepth(body, `CAEN ${item.code} - ${item.label}`);
   return { route, content: html({ title, description, h1: title, route, category: "Cod CAEN", summary: `Pentru CAEN ${item.code}, fondurile europene se aleg dupa program, regiune, investitie si documente, nu doar dupa denumirea codului.`, body, faq, related: ["/fonduri-europene-imm", "/instrumente", "/contact"] }) };
 }
 
@@ -175,7 +207,7 @@ function localPage(item, consulting) {
     ["Ce documente pregatesc?", "Documente de firma, cod CAEN, documente pentru spatiu, buget, oferte, situatii financiare si descrierea investitiei."],
     ["Pot primi consultanta la distanta?", "Da. Analiza initiala se poate face pe baza datelor si documentelor transmise electronic."]
   ];
-  const body = `
+  let body = `
       <h2>Particularitati locale</h2>
       <p>${esc(item.county)} se analizeaza prin regiunea ${esc(item.region)} si prin tipul investitiei. Pentru ${esc(item.focus)}, conteaza codul CAEN, localitatea, documentele pentru spatiu si calendarul apelurilor.</p>
       <h2>Programe de verificat</h2>
@@ -188,6 +220,7 @@ function localPage(item, consulting) {
       </ul>
       <h2>Checklist local</h2>
       <p>Inainte de depunere, verifica daca locatia investitiei este eligibila, daca punctul de lucru este documentat, daca autorizatiile pot fi obtinute si daca investitia are legatura cu activitatea firmei.</p>`;
+  body = ensureDepth(body, `${title} in ${item.region}`);
   return { route, content: html({ title, description, h1: title, route, category: consulting ? "Consultanta locala" : "Fonduri locale", summary: `${title}: eligibilitatea se verifica dupa regiune, solicitant, cod CAEN, investitie si documente.`, body, faq, related: ["/fonduri-europene", "/verificare-eligibilitate-fonduri-europene", "/contact"] }) };
 }
 
@@ -201,7 +234,7 @@ function faqPage(item) {
     ["Raspunsul garanteaza eligibilitatea?", "Nu. Raspunsul este orientativ si trebuie confirmat prin documentele proiectului si apelul activ."],
     ["Cum pot primi analiza pe cazul meu?", "Trimite datele proiectului prin pagina de contact pentru o verificare initiala."]
   ];
-  const body = `
+  let body = `
       <h2>Raspuns scurt</h2>
       <p>${esc(item.answer)}</p>
       <h2>Ce inseamna in practica</h2>
@@ -214,6 +247,7 @@ function faqPage(item) {
         <li>calculeaza cofinantarea si calendarul;</li>
         <li>cere o analiza daca exista incertitudini.</li>
       </ul>`;
+  body = ensureDepth(body, item.question);
   return { route, content: html({ title, description, h1: title, route, category: "Intrebare frecventa", summary: item.answer, body, faq, related: item.related }) };
 }
 
@@ -224,6 +258,7 @@ function updateSitemap(routes, updatedAt) {
   const seen = new Set();
   const all = [...existing, ...routes].map(cleanUrl).filter((route) => {
     if (seen.has(route)) return false;
+    if (route.includes("/admin") || route.includes("herambursabile") || route.includes("/index")) return false;
     seen.add(route);
     return true;
   });

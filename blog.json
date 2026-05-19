@@ -145,13 +145,24 @@
       "bannerImage": "",
       "bannerAlt": "",
       "author": "FABER – Atelier de Consultanță",
+      "reviewer": "TODO_CLIENT_REVIEWER",
+      "officialSources": [
+        {
+          "url": "https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/",
+          "title": "DR 12 AFIR - Tineri fermieri",
+          "accessedAt": "TODO_DATA_ACCESARII"
+        }
+      ],
+      "editorialStatus": "in_curs_de_verificare",
+      "lastVerifiedAt": "TODO_DATA_ACCESARII",
       "createdAt": "2026-04-30",
-      "updatedAt": "2026-04-30",
+      "updatedAt": "2026-05-20",
       "publishedAt": "2026-04-30",
       "date": "2026-04-30",
       "dateFormatted": "30 aprilie 2026",
       "category": "AFIR",
       "readTime": 8,
+      "readingTime": 8,
       "icon": "🚜",
       "canonicalUrl": "https://atelierdeconsultanta.ro/dr-12-afir-instalarea-tinerilor-fermieri",
       "internalLinks": [
@@ -862,6 +873,84 @@
         {
           "question": "Este necesara achizitie publica?",
           "answer": "Da, beneficiarii publici trebuie sa respecte regulile de achizitie aplicabile."
+        }
+      ]
+    },
+    {
+      "id": "pro-infra",
+      "title": "PRO INFRA 2026: investitii, energie si pregatirea dosarului",
+      "slug": "pro-infra",
+      "metaTitle": "PRO INFRA 2026 - energie, investitii si eligibilitate",
+      "metaDescription": "Ghid PRO INFRA si programe energie 2026: conditii, investitii eligibile, energie verde, eficienta energetica, buget si documente.",
+      "excerpt": "PRO INFRA 2026 si programele de energie se verifica prin solicitant, activitate, amplasament, avize, consum, buget si documentele tehnice.",
+      "content": "<p>Pagina statica publicata la /pro-infra.</p>",
+      "status": "published",
+      "published": true,
+      "primaryKeyword": "PRO INFRA 2026",
+      "secondaryKeywords": [
+        "PRO INFRA si energie",
+        "fonduri europene",
+        "eligibilitate"
+      ],
+      "bannerImage": "",
+      "bannerAlt": "",
+      "author": "FABER - Atelier de Consultanta",
+      "createdAt": "2026-05-19",
+      "updatedAt": "2026-05-19",
+      "publishedAt": "2026-05-19",
+      "date": "2026-05-19",
+      "dateFormatted": "19 mai 2026",
+      "category": "PRO INFRA si energie",
+      "readTime": 12,
+      "icon": "",
+      "canonicalUrl": "https://atelierdeconsultanta.ro/pro-infra",
+      "internalLinks": [
+        "/fondul-modernizare-energie-regenerabila-2026",
+        "/fondul-de-modernizare",
+        "/finantari-panouri-fotovoltaice",
+        "/fonduri-europene-imm",
+        "/contact"
+      ],
+      "faq": [
+        {
+          "question": "Verificarea garanteaza finantarea?",
+          "answer": "Nu. Verificarea reduce riscurile si clarifica documentele, dar aprobarea depinde de apel, punctaj, buget si evaluarea autoritatii."
+        },
+        {
+          "question": "Cand trebuie inceputa pregatirea?",
+          "answer": "Pregatirea trebuie inceputa inainte de depunere, mai ales daca sunt necesare oferte, documente pentru spatiu, autorizatii sau calcule de punctaj."
+        },
+        {
+          "question": "Ce date sunt utile pentru analiza?",
+          "answer": "Sunt utile codul CAEN, localitatea, forma solicitantului, bugetul, investitia, documentele disponibile si programul vizat."
+        },
+        {
+          "question": "Pot compara mai multe programe?",
+          "answer": "Da. Compararea programelor este recomandata cand proiectul poate intra in digitalizare, IMM, energie, agricultura sau antreprenoriat."
+        },
+        {
+          "question": "Cum verific daca PRO INFRA 2026 este potrivit pentru proiectul meu?",
+          "answer": "Porneste de la solicitant, cod CAEN, localitate, investitie, buget si documentele disponibile. Daca una dintre aceste piese nu se potriveste cu apelul activ, proiectul trebuie ajustat inainte de depunere."
+        },
+        {
+          "question": "Cand nu merita sa aplic pentru PRO INFRA 2026?",
+          "answer": "Nu merita sa aplici cand nu poti dovedi eligibilitatea, cand cheltuielile principale nu sunt permise, cand cofinantarea nu este acoperita sau cand calendarul nu permite documente complete si verificabile."
+        },
+        {
+          "question": "Ce documente trebuie pregatite inainte de analiza?",
+          "answer": "De regula sunt necesare documente de firma sau solicitant, documente pentru activitate si locatie, date financiare, oferte, descrierea investitiei si informatii despre cofinantare."
+        },
+        {
+          "question": "Cum se verifica un cod CAEN pentru fonduri europene?",
+          "answer": "Codul CAEN se verifica prin certificatul constatator, activitatea reala, autorizarea necesara, lista de coduri eligibile a apelului si legatura directa dintre investitie si activitatea finantata."
+        },
+        {
+          "question": "Ce cheltuieli sunt cele mai sensibile la evaluare?",
+          "answer": "Sunt sensibile cheltuielile greu de justificat, activele supradimensionate, serviciile descrise vag, achizitiile incepute prea devreme si costurile care nu au legatura directa cu obiectivele proiectului."
+        },
+        {
+          "question": "Cum tratez cofinantarea si cheltuielile neeligibile?",
+          "answer": "Cofinantarea si cheltuielile neeligibile trebuie estimate separat de grant. Include rezerve pentru TVA, diferente de pret, costuri neacoperite si intarzieri in rambursare."
         }
       ]
     }

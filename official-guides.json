@@ -1,58 +1,114 @@
 {
   "por-ne": {
     "name": "POR ADR Nord-Est - Investitii pentru microintreprinderi",
-    "url": "https://adrnordest.ro/comentariiGhid/P1IMMInovative/Apel1/Ghid.pdf"
+    "title": "POR ADR Nord-Est - Investitii pentru microintreprinderi",
+    "institution": "ADR Nord-Est",
+    "documentType": "ghid",
+    "url": "https://adrnordest.ro/comentariiGhid/P1IMMInovative/Apel1/Ghid.pdf",
+    "accessedAt": "2026-05-20"
   },
   "por-ne-apel-2": {
     "name": "Program Regional Nord-Est - Modernizarea microintreprinderilor Apel 2",
-    "url": "https://adrnordest.ro/"
+    "title": "Program Regional Nord-Est - Modernizarea microintreprinderilor Apel 2",
+    "institution": "ADR Nord-Est",
+    "documentType": "pagina program",
+    "url": "https://adrnordest.ro/",
+    "accessedAt": "2026-05-20"
   },
   "dr12": {
     "name": "DR 12 AFIR - Tineri fermieri",
-    "url": "https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/"
+    "title": "DR 12 AFIR - Tineri fermieri",
+    "institution": "AFIR",
+    "documentType": "comunicat",
+    "url": "https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/",
+    "accessedAt": "2026-05-20"
   },
   "dr14": {
     "name": "DR 14 AFIR - Ferme mici",
-    "url": "https://www.afir.ro/info-la-zi/versiunea-consultativa-a-ghidului-solicitantului-dr-14/"
+    "title": "DR 14 AFIR - Ferme mici",
+    "institution": "AFIR",
+    "documentType": "ghid",
+    "url": "https://www.afir.ro/info-la-zi/versiunea-consultativa-a-ghidului-solicitantului-dr-14/",
+    "accessedAt": "2026-05-20"
   },
   "digitalizare": {
     "name": "Digitalizare IMM",
-    "url": "https://mfe.gov.ro/ghidul-specific-conditii-de-accesare-a-fondurilor-europene-aferente-planului-national-de-redresare-si-rezilienta-in-cadrul-apelului-de-proiecte-digitalizarea-imm-urilor-grant-de-pana-la-100-000-e/"
+    "title": "Digitalizare IMM",
+    "institution": "MIPE",
+    "documentType": "ghid",
+    "url": "https://mfe.gov.ro/ghidul-specific-conditii-de-accesare-a-fondurilor-europene-aferente-planului-national-de-redresare-si-rezilienta-in-cadrul-apelului-de-proiecte-digitalizarea-imm-urilor-grant-de-pana-la-100-000-e/",
+    "accessedAt": "2026-05-20"
   },
   "digitalizare-pnrr": {
     "name": "Digitalizare IMM / PNRR",
-    "url": "https://mfe.gov.ro/ghidul-specific-conditii-de-accesare-a-fondurilor-europene-aferente-planului-national-de-redresare-si-rezilienta-in-cadrul-apelului-de-proiecte-digitalizarea-imm-urilor-grant-de-pana-la-100-000-e/"
+    "title": "Digitalizare IMM / PNRR",
+    "institution": "MIPE",
+    "documentType": "ghid",
+    "url": "https://mfe.gov.ro/ghidul-specific-conditii-de-accesare-a-fondurilor-europene-aferente-planului-national-de-redresare-si-rezilienta-in-cadrul-apelului-de-proiecte-digitalizarea-imm-urilor-grant-de-pana-la-100-000-e/",
+    "accessedAt": "2026-05-20"
   },
   "femeia": {
     "name": "Femeia Antreprenor",
-    "url": "https://economie.gov.ro/pe-data-de-30-iulie-se-da-startul-inscrierilor-in-cadrul-programului-femeia-antreprenor/"
+    "title": "Femeia Antreprenor",
+    "institution": "Ministerul Economiei",
+    "documentType": "comunicat",
+    "url": "https://economie.gov.ro/pe-data-de-30-iulie-se-da-startul-inscrierilor-in-cadrul-programului-femeia-antreprenor/",
+    "accessedAt": "2026-05-20"
   },
   "pro-infra": {
     "name": "PRO INFRA",
-    "url": "https://legislatie.just.ro/Public/DetaliiDocument/306391"
+    "title": "PRO INFRA",
+    "institution": "Guvern",
+    "documentType": "act normativ",
+    "url": "https://legislatie.just.ro/Public/DetaliiDocument/306391",
+    "accessedAt": "2026-05-20"
   },
   "startup": {
     "name": "Start-Up Nation",
-    "url": "https://economie.gov.ro/participa-la-definitivarea-procedurii-de-implementare-a-programului-de-succes-start-up-nation-editia-2024/"
+    "title": "Start-Up Nation",
+    "institution": "Ministerul Economiei",
+    "documentType": "procedura",
+    "url": "https://economie.gov.ro/participa-la-definitivarea-procedurii-de-implementare-a-programului-de-succes-start-up-nation-editia-2024/",
+    "accessedAt": "2026-05-20"
   },
   "afir-autoconsum": {
     "name": "AFIR Autoconsum Agroalimentar",
-    "url": "https://www.afir.ro/comunicate/consultare-publica-privind-schema-de-energie-regenerabila/"
+    "title": "AFIR Autoconsum Agroalimentar",
+    "institution": "AFIR",
+    "documentType": "comunicat",
+    "url": "https://www.afir.ro/comunicate/consultare-publica-privind-schema-de-energie-regenerabila/",
+    "accessedAt": "2026-05-20"
   },
   "autoconsum-publici": {
     "name": "Autoconsum public - fotovoltaice institutii publice",
-    "url": "https://legislatie.just.ro/public/DetaliiDocument/276306"
+    "title": "Autoconsum public - fotovoltaice institutii publice",
+    "institution": "Guvern",
+    "documentType": "act normativ",
+    "url": "https://legislatie.just.ro/public/DetaliiDocument/276306",
+    "accessedAt": "2026-05-20"
   },
   "fondul-modernizare": {
     "name": "Fondul pentru Modernizare",
-    "url": "https://energie.gov.ro/category/fondul-pentru-modernizare/"
+    "title": "Fondul pentru Modernizare",
+    "institution": "Ministerul Energiei",
+    "documentType": "pagina program",
+    "url": "https://energie.gov.ro/category/fondul-pentru-modernizare/",
+    "accessedAt": "2026-05-20"
   },
   "fondul-modernizare-regenerabile": {
     "name": "Fondul pentru Modernizare - energie regenerabila",
-    "url": "https://energie.gov.ro/category/fondul-pentru-modernizare/"
+    "title": "Fondul pentru Modernizare - energie regenerabila",
+    "institution": "Ministerul Energiei",
+    "documentType": "pagina program",
+    "url": "https://energie.gov.ro/category/fondul-pentru-modernizare/",
+    "accessedAt": "2026-05-20"
   },
   "fonduri-europene": {
     "name": "Fonduri europene nerambursabile",
-    "url": "https://mfe.gov.ro/"
+    "title": "Fonduri europene nerambursabile",
+    "institution": "MIPE",
+    "documentType": "pagina program",
+    "url": "https://mfe.gov.ro/",
+    "accessedAt": "2026-05-20"
   }
 }
