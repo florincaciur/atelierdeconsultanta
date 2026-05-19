@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-05-19T12:52:17.552Z",
-  "baseUrl": "http://127.0.0.1:61499",
+  "generatedAt": "2026-05-19T18:41:31.041Z",
+  "baseUrl": "http://127.0.0.1:62930",
   "summary": {
     "totalChecks": 18,
     "passedChecks": 18,
@@ -8,7 +8,7 @@
   },
   "results": [
     {
-      "url": "http://127.0.0.1:61499/",
+      "url": "http://127.0.0.1:62930/",
       "pagePath": "/",
       "viewportName": "desktop",
       "title": "Atelier de Consultanță | Fonduri Europene și Finanțări Nerambursabile",
@@ -29,7 +29,7 @@
       "screenshot": "reports/visual-screenshots/home-desktop.png"
     },
     {
-      "url": "http://127.0.0.1:61499/contact/",
+      "url": "http://127.0.0.1:62930/contact/",
       "pagePath": "/contact/",
       "viewportName": "desktop",
       "title": "Contact Atelier de Consultanță | Evaluare Eligibilitate Fonduri Europene",
@@ -45,7 +45,7 @@
       "screenshot": "reports/visual-screenshots/contact-desktop.png"
     },
     {
-      "url": "http://127.0.0.1:61499/consultanta-fonduri-europene/",
+      "url": "http://127.0.0.1:62930/consultanta-fonduri-europene/",
       "pagePath": "/consultanta-fonduri-europene/",
       "viewportName": "desktop",
       "title": "Consultanță fonduri europene pentru firme și antreprenori",
@@ -61,10 +61,10 @@
       "screenshot": "reports/visual-screenshots/consultanta-fonduri-europene-desktop.png"
     },
     {
-      "url": "http://127.0.0.1:61499/fonduri-europene/",
+      "url": "http://127.0.0.1:62930/fonduri-europene/",
       "pagePath": "/fonduri-europene/",
       "viewportName": "desktop",
-      "title": "Fonduri Europene în România | Ghid pentru IMM-uri și antreprenori",
+      "title": "Fonduri europene in Romania - programe, eligibilitate si ghiduri",
       "badgeCheck": {
         "required": false,
         "pass": true,
@@ -77,10 +77,10 @@
       "screenshot": "reports/visual-screenshots/fonduri-europene-desktop.png"
     },
     {
-      "url": "http://127.0.0.1:61499/fonduri-europene-imm/",
+      "url": "http://127.0.0.1:62930/fonduri-europene-imm/",
       "pagePath": "/fonduri-europene-imm/",
       "viewportName": "desktop",
-      "title": "Fonduri Europene pentru IMM-uri | Investiții, Digitalizare, Energie",
+      "title": "Fonduri europene pentru IMM-uri - investitii, digitalizare, energie",
       "badgeCheck": {
         "required": false,
         "pass": true,
@@ -93,10 +93,10 @@
       "screenshot": "reports/visual-screenshots/fonduri-europene-imm-desktop.png"
     },
     {
-      "url": "http://127.0.0.1:61499/afir/",
+      "url": "http://127.0.0.1:62930/afir/",
       "pagePath": "/afir/",
       "viewportName": "desktop",
-      "title": "AFIR | Fonduri pentru Fermieri, DR 12, DR 14 și Agricultură",
+      "title": "AFIR - fonduri pentru fermieri, DR12, DR14 si energie",
       "badgeCheck": {
         "required": false,
         "pass": true,
@@ -109,10 +109,10 @@
       "screenshot": "reports/visual-screenshots/afir-desktop.png"
     },
     {
-      "url": "http://127.0.0.1:61499/pnrr/",
+      "url": "http://127.0.0.1:62930/pnrr/",
       "pagePath": "/pnrr/",
       "viewportName": "desktop",
-      "title": "PNRR pentru IMM-uri | Digitalizare, Eligibilitate și Consultanță",
+      "title": "PNRR pentru IMM-uri - digitalizare, documente si proiecte",
       "badgeCheck": {
         "required": false,
         "pass": true,
@@ -125,7 +125,7 @@
       "screenshot": "reports/visual-screenshots/pnrr-desktop.png"
     },
     {
-      "url": "http://127.0.0.1:61499/idei-afaceri-fonduri-europene.html",
+      "url": "http://127.0.0.1:62930/idei-afaceri-fonduri-europene.html",
       "pagePath": "/idei-afaceri-fonduri-europene.html",
       "viewportName": "desktop",
       "title": "Idei de afaceri cu fonduri europene",
@@ -141,7 +141,7 @@
       "screenshot": "reports/visual-screenshots/idei-afaceri-fonduri-europene-desktop.png"
     },
     {
-      "url": "http://127.0.0.1:61499/start-up-nation-2026",
+      "url": "http://127.0.0.1:62930/start-up-nation-2026",
       "pagePath": "/start-up-nation-2026/",
       "viewportName": "desktop",
       "title": "Start-Up Nation 2026 | FABER",
@@ -157,7 +157,7 @@
       "screenshot": "reports/visual-screenshots/start-up-nation-2026-desktop.png"
     },
     {
-      "url": "http://127.0.0.1:61499/",
+      "url": "http://127.0.0.1:62930/",
       "pagePath": "/",
       "viewportName": "mobile",
       "title": "Atelier de Consultanță | Fonduri Europene și Finanțări Nerambursabile",
@@ -178,7 +178,7 @@
       "screenshot": "reports/visual-screenshots/home-mobile.png"
     },
     {
-      "url": "http://127.0.0.1:61499/contact/",
+      "url": "http://127.0.0.1:62930/contact/",
       "pagePath": "/contact/",
       "viewportName": "mobile",
       "title": "Contact Atelier de Consultanță | Evaluare Eligibilitate Fonduri Europene",
@@ -194,7 +194,7 @@
       "screenshot": "reports/visual-screenshots/contact-mobile.png"
     },
     {
-      "url": "http://127.0.0.1:61499/consultanta-fonduri-europene/",
+      "url": "http://127.0.0.1:62930/consultanta-fonduri-europene/",
       "pagePath": "/consultanta-fonduri-europene/",
       "viewportName": "mobile",
       "title": "Consultanță fonduri europene pentru firme și antreprenori",
@@ -210,10 +210,10 @@
       "screenshot": "reports/visual-screenshots/consultanta-fonduri-europene-mobile.png"
     },
     {
-      "url": "http://127.0.0.1:61499/fonduri-europene/",
+      "url": "http://127.0.0.1:62930/fonduri-europene/",
       "pagePath": "/fonduri-europene/",
       "viewportName": "mobile",
-      "title": "Fonduri Europene în România | Ghid pentru IMM-uri și antreprenori",
+      "title": "Fonduri europene in Romania - programe, eligibilitate si ghiduri",
       "badgeCheck": {
         "required": false,
         "pass": true,
@@ -226,10 +226,10 @@
       "screenshot": "reports/visual-screenshots/fonduri-europene-mobile.png"
     },
     {
-      "url": "http://127.0.0.1:61499/fonduri-europene-imm/",
+      "url": "http://127.0.0.1:62930/fonduri-europene-imm/",
       "pagePath": "/fonduri-europene-imm/",
       "viewportName": "mobile",
-      "title": "Fonduri Europene pentru IMM-uri | Investiții, Digitalizare, Energie",
+      "title": "Fonduri europene pentru IMM-uri - investitii, digitalizare, energie",
       "badgeCheck": {
         "required": false,
         "pass": true,
@@ -242,10 +242,10 @@
       "screenshot": "reports/visual-screenshots/fonduri-europene-imm-mobile.png"
     },
     {
-      "url": "http://127.0.0.1:61499/afir/",
+      "url": "http://127.0.0.1:62930/afir/",
       "pagePath": "/afir/",
       "viewportName": "mobile",
-      "title": "AFIR | Fonduri pentru Fermieri, DR 12, DR 14 și Agricultură",
+      "title": "AFIR - fonduri pentru fermieri, DR12, DR14 si energie",
       "badgeCheck": {
         "required": false,
         "pass": true,
@@ -258,10 +258,10 @@
       "screenshot": "reports/visual-screenshots/afir-mobile.png"
     },
     {
-      "url": "http://127.0.0.1:61499/pnrr/",
+      "url": "http://127.0.0.1:62930/pnrr/",
       "pagePath": "/pnrr/",
       "viewportName": "mobile",
-      "title": "PNRR pentru IMM-uri | Digitalizare, Eligibilitate și Consultanță",
+      "title": "PNRR pentru IMM-uri - digitalizare, documente si proiecte",
       "badgeCheck": {
         "required": false,
         "pass": true,
@@ -274,7 +274,7 @@
       "screenshot": "reports/visual-screenshots/pnrr-mobile.png"
     },
     {
-      "url": "http://127.0.0.1:61499/idei-afaceri-fonduri-europene.html",
+      "url": "http://127.0.0.1:62930/idei-afaceri-fonduri-europene.html",
       "pagePath": "/idei-afaceri-fonduri-europene.html",
       "viewportName": "mobile",
       "title": "Idei de afaceri cu fonduri europene",
@@ -290,7 +290,7 @@
       "screenshot": "reports/visual-screenshots/idei-afaceri-fonduri-europene-mobile.png"
     },
     {
-      "url": "http://127.0.0.1:61499/start-up-nation-2026",
+      "url": "http://127.0.0.1:62930/start-up-nation-2026",
       "pagePath": "/start-up-nation-2026/",
       "viewportName": "mobile",
       "title": "Start-Up Nation 2026 | FABER",

@@ -1,0 +1,87 @@
+{
+  "updatedAt": "2026-05-19",
+  "caenPages": [
+    {
+      "code": "6201",
+      "slug": "dezvoltare-software",
+      "label": "dezvoltare software",
+      "audience": "firme IT, SaaS, servicii software si automatizare",
+      "programs": ["Digitalizare IMM", "programe regionale pentru IMM", "Start-Up Nation, daca editia permite activitatea"],
+      "investments": ["software intern", "echipamente IT justificate", "securitate cibernetica", "cloud si servicii de implementare"]
+    },
+    {
+      "code": "5610",
+      "slug": "restaurante",
+      "label": "restaurante si servicii alimentare",
+      "audience": "restaurante, cafenele, unitati de alimentatie publica",
+      "programs": ["programe regionale pentru IMM", "Start-Up Nation", "eficienta energetica si digitalizare, daca apelul permite"],
+      "investments": ["echipamente profesionale", "dotari pentru fluxul de lucru", "software gestiune", "eficienta energetica"]
+    },
+    {
+      "code": "4321",
+      "slug": "instalatii-electrice",
+      "label": "instalatii electrice",
+      "audience": "firme de instalatii, service si lucrari tehnice",
+      "programs": ["programe regionale pentru IMM", "Fondul pentru Modernizare, daca solicitantul si proiectul se incadreaza", "Digitalizare IMM"],
+      "investments": ["scule si echipamente", "autoutilitare daca sunt permise", "software ofertare si proiectare", "echipamente de masurare"]
+    },
+    {
+      "code": "0111",
+      "slug": "culturi-cereale",
+      "label": "culturi de cereale",
+      "audience": "ferme vegetale si exploatatii agricole",
+      "programs": ["DR 12 AFIR", "DR 14 AFIR", "fonduri pentru utilaje agricole"],
+      "investments": ["utilaje agricole", "depozitare", "irigatii daca apelul permite", "digitalizare si agricultura de precizie"]
+    }
+  ],
+  "localPages": [
+    {
+      "county": "Iasi",
+      "slug": "iasi",
+      "city": "Iasi",
+      "region": "Nord-Est",
+      "focus": "microintreprinderi, IMM-uri, digitalizare si agricultura"
+    },
+    {
+      "county": "Suceava",
+      "slug": "suceava",
+      "city": "Suceava",
+      "region": "Nord-Est",
+      "focus": "agricultura, turism, servicii si investitii productive"
+    },
+    {
+      "county": "Bacau",
+      "slug": "bacau",
+      "city": "Bacau",
+      "region": "Nord-Est",
+      "focus": "IMM-uri, productie, energie si servicii"
+    },
+    {
+      "county": "Bucuresti",
+      "slug": "bucuresti",
+      "city": "Bucuresti",
+      "region": "Bucuresti-Ilfov",
+      "focus": "digitalizare, servicii, energie si programe nationale"
+    }
+  ],
+  "faqPages": [
+    {
+      "slug": "ce-documente-sunt-necesare-pentru-dr12",
+      "question": "Ce documente sunt necesare pentru DR12?",
+      "answer": "Pentru DR12 sunt importante documentele solicitantului, exploatatiei, calculul SO, actele privind terenurile sau animalele, ofertele, bugetul si declaratiile cerute de apel.",
+      "related": ["/dr12-afir", "/calculator-soc", "/consultanta-afir"]
+    },
+    {
+      "slug": "ce-cheltuieli-sunt-eligibile-la-digitalizare-imm",
+      "question": "Ce cheltuieli sunt eligibile la Digitalizare IMM?",
+      "answer": "Pot fi eligibile software, echipamente IT, servicii cloud, securitate cibernetica, implementare si instruire, daca sunt permise de apel si justificate prin proiect.",
+      "related": ["/digitalizare-imm", "/fonduri-europene-digitalizare", "/instrumente"]
+    },
+    {
+      "slug": "cum-se-calculeaza-cofinantarea-la-fonduri-europene",
+      "question": "Cum se calculeaza cofinantarea la fonduri europene?",
+      "answer": "Cofinantarea se calculeaza pornind de la valoarea eligibila, procentul nerambursabil si cheltuielile neeligibile, care trebuie acoperite separat de beneficiar.",
+      "related": ["/instrumente", "/fonduri-nerambursabile", "/verificare-eligibilitate-fonduri-europene"]
+    }
+  ]
+}

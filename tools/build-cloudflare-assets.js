@@ -46,18 +46,22 @@ const PUBLIC_EXTENSIONS = new Set([
   ".json",
   ".map",
   ".png",
+  ".pdf",
   ".svg",
   ".txt",
   ".webmanifest",
   ".webp",
+  ".xlsx",
   ".xml",
 ]);
 
 const CANONICAL_ROOT_HTML_ROUTES = new Set([
   "por-adr-nord-est",
+  "investitii-modernizarea-microintreprinderilor-apel-2",
   "dr12-afir",
   "afir-autoconsum-agroalimentar",
   "autoconsum-public-fotovoltaice-institutii-publice",
+  "fondul-modernizare-energie-regenerabila-2026",
   "dr14",
   "digitalizare-imm",
   "femeia-antreprenor-2026",
@@ -103,6 +107,11 @@ const CANONICAL_DIRECTORY_HTML_ROUTES = [
   "consultant-fonduri-europene-imm",
   "greseli-fonduri-europene",
   "fonduri-europene-nerambursabile-2026",
+  "portofoliu",
+  "testimoniale",
+  "instrumente",
+  "resurse",
+  "webinarii",
 ];
 
 function posixPath(value) {
@@ -128,7 +137,7 @@ function isPublicFile(relativePath) {
 function trackedFiles() {
   try {
     return cp
-      .execFileSync("git", ["ls-files", "-z"], { cwd: ROOT })
+      .execFileSync("git", ["ls-files", "-z", "--cached", "--others", "--exclude-standard"], { cwd: ROOT })
       .toString("utf8")
       .split("\0")
       .filter(Boolean);

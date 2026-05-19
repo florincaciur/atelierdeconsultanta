@@ -14,6 +14,8 @@
   <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="apple-touch-icon" href="apple-touch-icon.png" />
   <meta name="robots" content="index, follow" />
+  <meta name="seo-depth" content="true" />
+  <meta name="seo-min-words" content="2000" />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -61,6 +63,23 @@
     "operatingSystem": "Web",
     "offers": {"@type": "Offer", "price": "0", "priceCurrency": "RON"},
     "provider": {"@type": "Organization", "name": "FABER – Atelier de Consultanță", "url": "https://atelierdeconsultanta.ro"}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://atelierdeconsultanta.ro/calculator-soc#webpage",
+    "url": "https://atelierdeconsultanta.ro/calculator-soc",
+    "name": "Calculator SO AFIR DR12 DR14",
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": [
+        "#soc-speakable-summary",
+        "#soc-speakable-steps",
+        "#soc-speakable-cta"
+      ]
+    }
   }
   </script>
   <meta name="ai-content-type" content="interactive-calculator" />
@@ -144,6 +163,17 @@
     .threshold-range{font-size:1.35rem;font-weight:900;color:var(--orange);margin-bottom:12px;}
     .threshold-desc{font-size:0.9rem;color:var(--text-soft);line-height:1.5;}
     .threshold-icon{font-size:2rem;margin-bottom:12px;}
+
+    .content-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:32px;}
+    .content-card{background:white;border:1px solid var(--gray-200);border-radius:var(--rm);padding:24px;box-shadow:0 3px 18px rgba(13,31,60,0.08);}
+    .content-card h3{font-size:1.05rem;font-weight:800;color:var(--navy);margin-bottom:10px;}
+    .content-card p,.content-card li{font-size:0.94rem;color:var(--text-soft);line-height:1.7;}
+    .content-card ul{padding-left:18px;margin-top:10px;}
+    .speakable{border-left:4px solid var(--orange);background:#fff6f1;padding:14px 18px;border-radius:var(--rs);margin:20px 0;color:var(--navy);font-weight:700;}
+    .faq-list{display:grid;gap:16px;margin-top:28px;}
+    .faq-item{background:white;border:1px solid var(--gray-200);border-radius:var(--rm);padding:22px;box-shadow:0 3px 18px rgba(13,31,60,0.08);}
+    .faq-item h3{font-size:1rem;font-weight:800;color:var(--navy);margin-bottom:8px;}
+    .faq-item p{font-size:0.94rem;color:var(--text-soft);line-height:1.7;}
 
     .page-footer{background:#060f20;padding:32px 24px;text-align:center;}
     .page-footer p{color:rgba(255,255,255,0.35);font-size:0.8rem;}
@@ -456,6 +486,149 @@
           </tbody>
         </table>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- Interpretare si pregatirea dosarului -->
+<section class="section">
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-label">Interpretare rezultat</div>
+      <h2 class="sec-title">Cum folosesti rezultatul SO in pregatirea proiectului AFIR</h2>
+      <p class="sec-sub">Calculatorul te ajuta sa obtii o estimare initiala a dimensiunii economice a exploatatiei. Rezultatul nu inlocuieste analiza documentelor fermei, dar arata rapid daca are sens sa pregatesti o cerere pentru DR14, pentru DR12 sau daca trebuie cautata o alta linie de finantare.</p>
+      <p id="soc-speakable-summary" class="speakable" data-speakable="true">Cum pot folosi calculatorul SO? Adauga culturile si animalele fermei, apoi compara totalul cu pragurile DR12 si DR14.</p>
+    </div>
+
+    <div class="content-grid reveal">
+      <article class="content-card">
+        <h3>1. Strange datele reale ale fermei</h3>
+        <p>Inainte de calcul, noteaza suprafetele lucrate, culturile existente, animalele detinute si eventualele activitati planificate. Pentru o analiza serioasa se folosesc date coerente cu documentele exploatatiei: inscrieri agricole, identificarea parcelelor, situatia animalelor si istoricul exploatatiei. Daca o cultura sau o specie apare doar ca intentie viitoare, rezultatul trebuie interpretat separat fata de situatia curenta.</p>
+        <p>Este util sa faci doua calcule: unul pentru structura actuala a fermei si unul pentru structura propusa dupa investitie. Diferenta dintre cele doua rezultate ajuta la verificarea coerentei planului de afaceri si la explicarea modului in care proiectul contribuie la dezvoltarea exploatatiei.</p>
+      </article>
+
+      <article class="content-card">
+        <h3>2. Verifica incadrarea in program</h3>
+        <p>Dupa ce totalul SO este calculat, incadrarea se compara cu pragurile programelor agricole. O exploatatie aflata in zona DR14 are o logica diferita fata de o exploatatie pregatita pentru DR12: dimensiunea, tipul investitiei, documentele si ritmul de implementare trebuie sa fie proportionale cu capacitatea fermei.</p>
+        <p>Un rezultat apropiat de limita unui prag trebuie tratat cu atentie. In practica, diferente mici pot aparea din actualizarea documentelor, din schimbarea structurii de culturi sau din inregistrari incomplete. De aceea, calculatorul este un punct de pornire, iar eligibilitatea finala trebuie corelata cu forma juridica, varsta solicitantului acolo unde este cazul, istoricul instalarii si documentele disponibile.</p>
+      </article>
+
+      <article class="content-card">
+        <h3>3. Leaga SO de investitia propusa</h3>
+        <p>SO nu este doar o cifra izolata. In cererea de finantare, investitia trebuie sa fie credibila pentru dimensiunea fermei: utilajele, echipamentele, constructiile, sistemele de irigatii, dotarile pentru depozitare sau digitalizare trebuie sa aiba legatura directa cu productia si cu obiectivele proiectului.</p>
+        <p>Daca proiectul include mai multe categorii de cheltuieli, fiecare trebuie justificata prin nevoile fermei. Un tractor, o sera, o linie de procesare sau un echipament de monitorizare nu trebuie prezentate ca simple achizitii, ci ca parti ale unei schimbari operationale: crestere de productivitate, reducere de pierderi, diversificare sau imbunatatirea calitatii produselor.</p>
+      </article>
+
+      <article class="content-card">
+        <h3>4. Pregateste documentele din timp</h3>
+        <p>Un calcul bun nu compenseaza un dosar incomplet. In mod normal, pregatirea trebuie sa includa verificarea actelor firmei sau ale persoanei autorizate, documentele exploatatiei, dreptul de folosinta asupra terenurilor sau spatiilor, situatia animalelor, ofertele pentru investitii si declaratiile solicitate in apel.</p>
+        <p>Documentele trebuie sa spuna aceeasi poveste: cine aplica, ce exploatatie exista, ce investitie se propune, cum este finantata contributia proprie si cum va fi administrat proiectul dupa contractare. Incoerentele intre calculator, planul de afaceri si documentele suport pot crea intrebari la evaluare.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-label">DR12 si DR14</div>
+      <h2 class="sec-title">Ce inseamna incadrarea pentru tineri fermieri si ferme mici</h2>
+      <p class="sec-sub">Aceleasi valori SO pot sustine decizii diferite in functie de profilul solicitantului. Pentru tineri fermieri conteaza nu doar dimensiunea economica, ci si momentul instalarii, controlul asupra exploatatiei si capacitatea de a implementa planul. Pentru ferme mici, accentul cade pe investitii proportionale si pe consolidarea unei activitati agricole viabile.</p>
+      <p id="soc-speakable-steps" class="speakable" data-speakable="true">Pentru DR12 si DR14, rezultatul SO trebuie corelat cu solicitantul, documentele fermei, investitia propusa si conditiile apelului.</p>
+    </div>
+
+    <div class="content-grid reveal">
+      <article class="content-card">
+        <h3>Cand merita analizat DR14</h3>
+        <p>DR14 este relevant atunci cand exploatatia se incadreaza in zona fermelor mici si are nevoie de o investitie concreta pentru a deveni mai stabila. Exemplele uzuale includ achizitia de utilaje adaptate suprafetei, modernizarea unor spatii de lucru, echipamente pentru depozitare, dotari pentru legumicultura, pomicultura sau zootehnie si solutii care reduc costurile de operare.</p>
+        <p>Pentru acest tip de proiect, cererea trebuie sa explice clar cum investitia sustine activitatea existenta, ce probleme rezolva si ce efect are asupra fermei. Nu este suficient ca solicitantul sa fie in intervalul SO; trebuie sa existe o relatie logica intre dimensiunea exploatatiei, cheltuieli si rezultatele asteptate.</p>
+      </article>
+
+      <article class="content-card">
+        <h3>Cand merita analizat DR12</h3>
+        <p>DR12 este analizat in special pentru solicitanti tineri sau recent instalati care pot demonstra controlul asupra exploatatiei si o strategie de dezvoltare. In acest caz, calculatorul SO ajuta la confirmarea dimensiunii economice, dar proiectul trebuie sa fie sustinut si de un plan de instalare sau dezvoltare convingator.</p>
+        <p>Un proiect DR12 trebuie pregatit cu atentie la statutul solicitantului, istoricul instalarii, investitiile propuse si capacitatea de a indeplini obligatiile din perioada de implementare. Daca exista terenuri, animale sau active in curs de clarificare, este mai prudent sa fie verificate inainte de depunere decat explicate ulterior in evaluare.</p>
+      </article>
+
+      <article class="content-card">
+        <h3>Ce verificari faci dupa calcul</h3>
+        <ul>
+          <li>compari totalul SO cu pragurile programului vizat;</li>
+          <li>verifici daca toate culturile si animalele sunt sustinute de documente;</li>
+          <li>separi situatia curenta de investitiile planificate;</li>
+          <li>analizezi daca forma juridica si istoricul solicitantului se potrivesc apelului;</li>
+          <li>pregatesti bugetul si contributia proprie inainte de ofertele finale;</li>
+          <li>notezi riscurile: lipsa actelor, contracte neactualizate, diferente intre registre si situatia reala.</li>
+        </ul>
+      </article>
+
+      <article class="content-card">
+        <h3>Greseli frecvente</h3>
+        <p>Cele mai multe erori apar cand se introduce o suprafata estimata fara documente, cand se amesteca date curente cu investitii viitoare sau cand se considera ca un scor bun de eligibilitate garanteaza finantarea. Calculatorul ofera orientare, dar proiectul ramane dependent de conditiile apelului, de punctaj, de bugetul disponibil si de calitatea dosarului.</p>
+        <p>O alta greseala este alegerea investitiei inainte de verificarea incadrarii. Ordinea sanatoasa este inversa: calcul SO, verificare solicitant, verificare program, schita de buget, lista de documente, apoi configurarea finala a investitiei.</p>
+        <p>Este bine ca rezultatul sa fie salvat impreuna cu ipotezele folosite: ce suprafete au fost introduse, ce categorii de animale au fost luate in calcul si ce elemente urmeaza sa fie clarificate. Acest mic istoric ajuta consultantul, contabilul si solicitantul sa discute pe aceeasi baza. Cand datele se schimba, se poate vedea rapid ce a determinat diferenta de SO si daca proiectul ramane in programul potrivit.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-label">Exemple aplicate</div>
+      <h2 class="sec-title">Cum poate fi folosit calculatorul in scenarii reale</h2>
+      <p class="sec-sub">Exemplele de mai jos sunt anonime si orientative. Ele arata modul de gandire, nu o promisiune de finantare.</p>
+    </div>
+
+    <div class="content-grid reveal">
+      <article class="content-card">
+        <h3>Ferma vegetala care vrea utilaje</h3>
+        <p>O ferma vegetala introduce in calculator culturile cultivate si suprafetele aferente. Rezultatul indica daca proiectul se afla mai aproape de logica unei ferme mici sau de un proiect pentru tineri fermieri. Dupa calcul, solicitantul poate verifica daca utilajele propuse sunt proportionale cu suprafata si daca pot fi justificate prin lucrari agricole concrete.</p>
+        <p>In etapa de pregatire, accentul cade pe documentele terenurilor, structura culturilor, ofertele pentru utilaje si explicarea fluxului de lucru dupa investitie.</p>
+      </article>
+
+      <article class="content-card">
+        <h3>Ferma zootehnica in extindere</h3>
+        <p>O exploatatie cu animale poate introduce numarul de capete pe fiecare categorie disponibila. Daca rezultatul este aproape de un prag, se verifica atent situatia din registre si documentele de identificare. In functie de program, investitia poate viza adaposturi, echipamente, furajare, depozitare sau alte dotari direct legate de cresterea animalelor.</p>
+        <p>Pentru astfel de proiecte, coerenta intre numarul de animale, capacitatea spatiilor si bugetul propus este esentiala.</p>
+      </article>
+
+      <article class="content-card">
+        <h3>Ferma mixta cu culturi si animale</h3>
+        <p>Fermele mixte trebuie calculate pe toate componentele relevante, nu doar pe activitatea principala. O suprafata mica de legume, o livada, un efectiv de animale sau stupi pot schimba rezultatul total si pot influenta programul potrivit. Calculatorul permite adaugarea mai multor categorii pentru o imagine mai apropiata de realitate.</p>
+        <p>Dupa calcul, proiectul trebuie sa arate care activitate este prioritara si cum investitia ajuta intreaga exploatatie, fara sa fragmenteze artificial justificarea.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section section-alt">
+  <div class="container">
+    <div class="reveal">
+      <div class="sec-label">Intrebari frecvente</div>
+      <h2 class="sec-title">FAQ despre calculul Standard Output</h2>
+      <p class="sec-sub">Raspunsuri scurte pentru intrebarile care apar cel mai des inainte de pregatirea unui proiect AFIR.</p>
+      <p id="soc-speakable-cta" class="speakable" data-speakable="true">Daca rezultatul SO pare eligibil, urmatorul pas este verificarea documentelor si a conditiilor specifice apelului.</p>
+    </div>
+
+    <div class="faq-list reveal">
+      <article class="faq-item">
+        <h3>Cum se calculeaza Standard Output (SO) pentru AFIR DR12 si DR14?</h3>
+        <p>Standard Output se calculeaza inmultind suprafata cultivata sau numarul de animale cu valoarea SO aferenta fiecarei categorii. Totalul fermei este suma tuturor componentelor introduse. Pentru o analiza corecta, valorile din calculator trebuie comparate cu documentele reale ale exploatatiei.</p>
+      </article>
+      <article class="faq-item">
+        <h3>Cate hectare de grau am nevoie pentru DR12 AFIR?</h3>
+        <p>Calculul depinde de valoarea SO pe hectar si de structura totala a fermei. Daca exploatatia are doar grau, numarul de hectare necesar poate fi estimat prin impartirea pragului programului la valoarea SO pe hectar. In practica, multe ferme combina culturi si animale, iar totalul se verifica pe intreaga exploatatie.</p>
+      </article>
+      <article class="faq-item">
+        <h3>Care este diferenta dintre DR12 si DR14 ca prag SO?</h3>
+        <p>DR14 se adreseaza fermelor mici, iar DR12 vizeaza tinerii fermieri sau solicitanti recent instalati care indeplinesc conditiile apelului. Pragurile SO sunt doar o parte a verificarii: varsta, istoricul solicitantului, documentele exploatatiei, investitia propusa si punctajul pot influenta eligibilitatea si sansele de finantare.</p>
+      </article>
+      <article class="faq-item">
+        <h3>Rezultatul calculatorului garanteaza eligibilitatea?</h3>
+        <p>Nu. Calculatorul ofera o estimare initiala si ajuta la incadrarea rapida, dar eligibilitatea finala depinde de ghidul apelului, documentele solicitantului, conditiile obligatorii, buget, punctaj si evaluarea proiectului. Rezultatul trebuie folosit ca punct de pornire pentru analiza dosarului.</p>
+        <p>Pentru o decizie de depunere, verifica si calendarul apelului, forma solicitantului, capacitatea de cofinantare, documentele terenurilor sau animalelor si legatura dintre investitie si activitatea agricola. O analiza scurta inainte de pregatirea ofertelor poate economisi timp si poate evita o candidatura construita pe premise fragile.</p>
+      </article>
     </div>
   </div>
 </section>

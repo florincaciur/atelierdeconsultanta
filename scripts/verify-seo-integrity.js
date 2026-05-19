@@ -65,6 +65,14 @@ const NON_CONTENT_FILES = new Set([
   'admin/index.html',
 ]);
 
+const ROBOTS_ALLOWED_DIRECTIVES = new Set([
+  'allow',
+  'crawl-delay',
+  'disallow',
+  'sitemap',
+  'user-agent',
+]);
+
 function resolveTargetRoot() {
   const requested = process.argv[2]
     ? path.resolve(process.argv[2])
@@ -129,9 +137,31 @@ function hasMetaDescription($, noindex) {
   return status(count > 0, { count });
 }
 
+function hasUtf8Charset($) {
+  const hasCharset = $('meta[charset]').toArray().some((element) => {
+    return String($(element).attr('charset') || '').toLowerCase() === 'utf-8';
+  });
+  const hasHttpEquiv = $('meta[http-equiv="Content-Type" i]').toArray().some((element) => {
+    return String($(element).attr('content') || '').toLowerCase().includes('charset=utf-8');
+  });
+  return status(hasCharset || hasHttpEquiv, { hasCharset, hasHttpEquiv });
+}
+
 function hasCanonical($) {
   const count = $('link[rel="canonical" i]').length;
   return status(count > 0, { count });
+}
+
+function hasCleanCanonical($, noindex) {
+  const href = $('link[rel="canonical" i]').first().attr('href') || '';
+  if (!href) return status(noindex, { href, note: noindex ? 'noindex page without canonical is ignored' : 'missing canonical' });
+  try {
+    const url = new URL(href);
+    const clean = url.pathname === '/' || (!url.pathname.endsWith('.html') && !url.pathname.endsWith('/'));
+    return status(clean, { href });
+  } catch {
+    return status(false, { href, note: 'invalid canonical URL' });
+  }
 }
 
 function hasImgAlt($) {
@@ -150,6 +180,60 @@ function hasImgAlt($) {
 function hasSingleH1($) {
   const h1s = $('h1').toArray().map((element) => $(element).text().replace(/\s+/g, ' ').trim());
   return status(h1s.length === 1, { count: h1s.length, text: h1s });
+}
+
+function jsonLdBlocks($) {
+  const blocks = [];
+  $('script[type="application/ld+json"]').each((_, element) => {
+    try {
+      blocks.push(JSON.parse($(element).text()));
+    } catch {
+      blocks.push({ '@type': 'INVALID_JSONLD' });
+    }
+  });
+  return blocks;
+}
+
+function includesJsonLdType(node, type) {
+  if (!node || typeof node !== 'object') return false;
+  const nodeType = node['@type'];
+  if (Array.isArray(nodeType) && nodeType.includes(type)) return true;
+  if (nodeType === type) return true;
+  if (Array.isArray(node['@graph'])) return node['@graph'].some((child) => includesJsonLdType(child, type));
+  return false;
+}
+
+function hasVisibleFaqForSchema($) {
+  const hasFaqSchema = jsonLdBlocks($).some((block) => includesJsonLdType(block, 'FAQPage'));
+  if (!hasFaqSchema) return status(true, { required: false, count: 0 });
+  const isDepthPage = String($('meta[name="seo-depth" i]').first().attr('content') || '').toLowerCase() === 'true';
+  const count = $('.faq-item, .faq-q, details, [itemprop="mainEntity"], [class*="faq" i]').length;
+  return status(!isDepthPage || count > 0, { required: isDepthPage, count });
+}
+
+function hasSpeakableSchemaCoverage($) {
+  const blocks = jsonLdBlocks($);
+  const hasSpeakable = blocks.some((block) => JSON.stringify(block).includes('SpeakableSpecification'));
+  if (!hasSpeakable) return status(true, { required: false, count: 0 });
+  const count = $('.speakable, [data-speakable="true"]').length;
+  return status(count > 0, { required: true, count });
+}
+
+function visibleWordCount($) {
+  const clone = $.root().clone();
+  clone.find('script,style,noscript,svg,template').remove();
+  const text = clone.text().replace(/\s+/g, ' ').trim();
+  const words = text.match(/[\p{L}\p{N}]+(?:[-'’][\p{L}\p{N}]+)*/gu);
+  return words ? words.length : 0;
+}
+
+function hasRequiredContentDepth($, noindex) {
+  if (noindex) return status(true, { required: false, words: 0 });
+  const minWords = Number($('meta[name="seo-min-words" i]').first().attr('content') || 0);
+  const required = minWords > 0 || String($('meta[name="seo-depth" i]').first().attr('content') || '').toLowerCase() === 'true';
+  const threshold = minWords || 2000;
+  const words = visibleWordCount($);
+  return status(!required || words >= threshold, { required, words, threshold });
 }
 
 function shouldRequireRelatedLinks($, relativePath, noindex) {
@@ -204,10 +288,15 @@ function checkFile(filePath, root) {
   }
 
   const checks = {
+    utf8Charset: hasUtf8Charset($),
     metaDescription: hasMetaDescription($, noindex),
     canonical: hasCanonical($),
+    cleanCanonical: hasCleanCanonical($, noindex),
     imageAltAttributes: hasImgAlt($),
     singleH1: hasSingleH1($),
+    visibleFaqForSchema: hasVisibleFaqForSchema($),
+    speakableSchemaCoverage: hasSpeakableSchemaCoverage($),
+    contentDepth: hasRequiredContentDepth($, noindex),
     relatedLinks: hasRelatedLinks($, relativePath, noindex),
   };
 
@@ -241,15 +330,46 @@ function summarize(results) {
   return summary;
 }
 
+function validateRobotsTxt(root) {
+  const filePath = path.join(root, 'robots.txt');
+  if (!fs.existsSync(filePath)) {
+    return status(false, { errors: ['robots.txt is missing'] });
+  }
+
+  const errors = [];
+  const lines = fs.readFileSync(filePath, 'utf8').split(/\r?\n/);
+
+  lines.forEach((line, index) => {
+    const lineNumber = index + 1;
+    const trimmed = line.trim();
+    if (!trimmed || trimmed.startsWith('#')) return;
+
+    const colonIndex = trimmed.indexOf(':');
+    if (colonIndex === -1) {
+      errors.push({ line: lineNumber, directive: trimmed, reason: 'missing colon' });
+      return;
+    }
+
+    const directive = trimmed.slice(0, colonIndex).trim().toLowerCase();
+    if (!ROBOTS_ALLOWED_DIRECTIVES.has(directive)) {
+      errors.push({ line: lineNumber, directive: trimmed.slice(0, colonIndex).trim(), reason: 'unknown directive' });
+    }
+  });
+
+  return status(errors.length === 0, { errors });
+}
+
 function main() {
   const root = resolveTargetRoot();
   const files = walkHtmlFiles(root);
   const results = files.map((filePath) => checkFile(filePath, root));
   const summary = summarize(results);
+  const robotsTxt = validateRobotsTxt(root);
   const report = {
     generatedAt: new Date().toISOString(),
     root,
     summary,
+    robotsTxt,
     results,
   };
 
@@ -263,8 +383,9 @@ function main() {
   for (const [name, counts] of Object.entries(summary.checks)) {
     console.log(`${name}: ${counts.pass} pass, ${counts.fail} fail`);
   }
+  console.log(`robots.txt: ${robotsTxt.status}${robotsTxt.errors.length ? ` (${robotsTxt.errors.length} errors)` : ''}`);
 
-  if (summary.failedFiles > 0) {
+  if (summary.failedFiles > 0 || robotsTxt.status === 'fail') {
     console.log('\nFailed files:');
     for (const result of results.filter((item) => !item.pass)) {
       const failedChecks = Object.entries(result.checks)
@@ -272,6 +393,12 @@ function main() {
         .map(([name]) => name)
         .join(', ');
       console.log(`- ${result.file}: ${failedChecks}`);
+    }
+    if (robotsTxt.status === 'fail') {
+      console.log('\nrobots.txt errors:');
+      for (const error of robotsTxt.errors) {
+        console.log(`- line ${error.line}: ${error.directive} (${error.reason})`);
+      }
     }
     process.exitCode = 1;
   }

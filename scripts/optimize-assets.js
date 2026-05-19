@@ -8,7 +8,7 @@ const terser = require('terser');
 const IMAGE_THRESHOLD_BYTES = 200 * 1024;
 const WEBP_QUALITY = 80;
 const DEFAULT_RELATIVE_TARGET = path.join('atelierdeconsultanta', 'atelierdeconsultanta');
-const EXCLUDED_DIRS = new Set(['.git', '.github', '.wrangler', 'node_modules', 'dist']);
+const EXCLUDED_DIRS = new Set(['.git', '.github', '.wrangler', 'node_modules', 'dist', 'reports']);
 const MINIFY_EXCLUDED_DIRS = new Set(['scripts', 'tools', 'config']);
 
 function resolveTargetRoot() {
@@ -165,6 +165,7 @@ async function moveOriginalToLegacy(originalPath, targetRoot) {
 async function convertImages(targetRoot) {
   const files = await walkFiles(targetRoot, (fullPath, name) => shouldSkipDirForAssets(targetRoot, fullPath, name));
   const conversions = [];
+  const skipped = [];
   const imageMap = new Map();
 
   for (const filePath of files) {
@@ -179,7 +180,16 @@ async function convertImages(targetRoot) {
 
     const ext = path.extname(filePath);
     const webpPath = path.join(path.dirname(filePath), `${path.basename(filePath, ext)}.webp`);
-    const webpBuffer = await sharp(filePath).webp({ quality: WEBP_QUALITY }).toBuffer();
+    let webpBuffer;
+    try {
+      webpBuffer = await sharp(filePath).webp({ quality: WEBP_QUALITY }).toBuffer();
+    } catch (error) {
+      skipped.push({
+        source: filePath,
+        reason: error && error.message ? error.message : String(error),
+      });
+      continue;
+    }
 
     await fsp.writeFile(webpPath, webpBuffer);
     const legacyPath = await moveOriginalToLegacy(filePath, targetRoot);
@@ -196,7 +206,7 @@ async function convertImages(targetRoot) {
     });
   }
 
-  return { conversions, imageMap };
+  return { conversions, skipped, imageMap };
 }
 
 function replaceMappedUrl(value, fromFile, targetRoot, assetMap) {
@@ -357,7 +367,7 @@ async function updateHtmlReferences(targetRoot, assetMap) {
   return changedFiles;
 }
 
-function printReport(targetRoot, imageConversions, minifiedFiles, cssRefsChanged, htmlRefsChanged) {
+function printReport(targetRoot, imageConversions, skippedImages, minifiedFiles, cssRefsChanged, htmlRefsChanged) {
   const imageSavings = imageConversions.reduce((sum, item) => sum + item.savedBytes, 0);
   const minifySavings = minifiedFiles.reduce((sum, item) => sum + item.savedBytes, 0);
 
@@ -365,6 +375,10 @@ function printReport(targetRoot, imageConversions, minifiedFiles, cssRefsChanged
   console.log(`Images converted: ${imageConversions.length}`);
   for (const item of imageConversions) {
     console.log(`  ${toPosix(path.relative(targetRoot, item.original))} -> ${toPosix(path.relative(targetRoot, item.webp))} (${bytesLabel(item.savedBytes)} saved)`);
+  }
+  console.log(`Images skipped: ${skippedImages.length}`);
+  for (const item of skippedImages) {
+    console.log(`  ${toPosix(path.relative(targetRoot, item.source))}: ${item.reason}`);
   }
 
   console.log(`CSS image references updated: ${cssRefsChanged.length}`);
@@ -387,13 +401,13 @@ function printReport(targetRoot, imageConversions, minifiedFiles, cssRefsChanged
 
 async function main() {
   const targetRoot = resolveTargetRoot();
-  const { conversions, imageMap } = await convertImages(targetRoot);
+  const { conversions, skipped, imageMap } = await convertImages(targetRoot);
   const cssRefsChanged = await updateCssImageReferences(targetRoot, imageMap);
   const { minified, minMap } = await minifyResources(targetRoot);
   const allHtmlRefs = new Map([...imageMap, ...minMap]);
   const htmlRefsChanged = await updateHtmlReferences(targetRoot, allHtmlRefs);
 
-  printReport(targetRoot, conversions, minified, cssRefsChanged, htmlRefsChanged);
+  printReport(targetRoot, conversions, skipped, minified, cssRefsChanged, htmlRefsChanged);
 }
 
 main().catch((error) => {

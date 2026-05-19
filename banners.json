@@ -133,5 +133,35 @@
     "order": 9,
     "active": true,
     "officialGuideKey": "startup"
+  },
+  {
+    "id": "slide-micro-apel-2",
+    "tag": "Microintreprinderi",
+    "title": "Modernizarea microintreprinderilor\nApel 2",
+    "description": "Pregatire pentru microintreprinderi: regiune, CAEN, documente, buget, cheltuieli si punctaj.",
+    "amount": "Finantare: conform apelului activ",
+    "ctaText": "Detalii program ->",
+    "ctaLink": "/investitii-modernizarea-microintreprinderilor-apel-2",
+    "image": "",
+    "altText": "Banner modernizarea microintreprinderilor Apel 2",
+    "icon": "ph-buildings",
+    "order": 10,
+    "active": true,
+    "officialGuideKey": "por-ne"
+  },
+  {
+    "id": "slide-fond-modernizare-regenerabila",
+    "tag": "Energie regenerabila",
+    "title": "Fondul pentru Modernizare\nEnergie regenerabila",
+    "description": "Pagina pentru capacitati noi de producere a energiei regenerabile: amplasament, avize, buget si depunere.",
+    "amount": "Finantare: conform ghidului apelului activ",
+    "ctaText": "Detalii program ->",
+    "ctaLink": "/fondul-modernizare-energie-regenerabila-2026",
+    "image": "",
+    "altText": "Banner Fondul pentru Modernizare energie regenerabila",
+    "icon": "ph-sun",
+    "order": 11,
+    "active": true,
+    "officialGuideKey": "fondul-modernizare"
   }
 ]

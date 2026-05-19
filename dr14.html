@@ -4,583 +4,292 @@
   <meta charset="UTF-8" />
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DR 14 AFIR | Ferme mici, apicultura si calculator punctaj</title>
-  <meta name="description" content="DR 14 AFIR pentru ferme mici: eligibilitate, investitii, apicultura, praguri SO si calculator live de punctaj." />
+  <title>DR 14 AFIR 2026 - Ferme mici, eligibilitate, punctaj si dosar</title>
+  <meta name="description" content="Ghid DR 14 AFIR pentru ferme mici: conditii de eligibilitate, investitii, cheltuieli, selectie, documente si pasi de depunere." />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://atelierdeconsultanta.ro/dr-14-afir-conditii-eligibilitate-greseli-frecvente.html" />
+  <meta name="seo-depth" content="true" />
+  <link rel="canonical" href="https://atelierdeconsultanta.ro/dr14" />
   <link rel="icon" type="image/png" href="/favicon.png" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-  <meta property="og:title" content="DR 14 AFIR | Ferme mici, apicultura si calculator punctaj" />
-  <meta property="og:description" content="Pagina de program DR 14 AFIR cu sectiune apicola si calculator live de punctaj pentru ferme mici." />
+  <meta property="og:title" content="DR 14 AFIR 2026 - Ferme mici, eligibilitate, punctaj si dosar" />
+  <meta property="og:description" content="Ghid DR 14 AFIR pentru ferme mici: conditii de eligibilitate, investitii, cheltuieli, selectie, documente si pasi de depunere." />
   <meta property="og:url" content="https://atelierdeconsultanta.ro/dr14" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://atelierdeconsultanta.ro/og-image.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/assets/program-scoring.min.css" />
-  <style>
-    :root {
-      --navy: #0d1f3c;
-      --navy-mid: #112a50;
-      --green: #1f7a4d;
-      --green-dark: #165a39;
-      --orange: #e8642a;
-      --orange-dark: #c4541f;
-      --gold: #f5a623;
-      --white: #fff;
-      --gray-100: #f8f9fb;
-      --gray-200: #e8edf5;
-      --gray-600: #6b7a99;
-      --text-main: #1a2540;
-      --text-soft: #4a5568;
-      --radius-sm: 8px;
-      --radius-md: 8px;
-      --radius-lg: 8px;
-      --shadow-md: 0 8px 32px rgba(13, 31, 60, 0.14);
-      --shadow-lg: 0 20px 60px rgba(13, 31, 60, 0.18);
-      --transition: 0.25s ease;
-    }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; font-size: 16px; }
-    body {
-      background: var(--white);
-      color: var(--text-main);
-      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-      line-height: 1.65;
-      overflow-x: hidden;
-    }
-    a { color: inherit; text-decoration: none; }
-    ul { padding-left: 20px; }
-    li { margin-bottom: 8px; }
-    .topbar {
-      align-items: center;
-      background: rgba(13, 31, 60, 0.97);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-      display: flex;
-      gap: 20px;
-      height: 68px;
-      justify-content: space-between;
-      padding: 0 24px;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    .topbar-logo {
-      color: var(--orange);
-      font-family: Georgia, "Times New Roman", serif;
-      font-size: 28px;
-      font-weight: 800;
-      letter-spacing: 0;
-      white-space: nowrap;
-    }
-    .topbar-nav {
-      align-items: center;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      justify-content: flex-end;
-    }
-    .topbar-nav a {
-      border-radius: var(--radius-sm);
-      color: rgba(255, 255, 255, 0.78);
-      font-size: 0.86rem;
-      font-weight: 700;
-      padding: 8px 12px;
-      transition: background var(--transition), color var(--transition);
-    }
-    .topbar-nav a:hover { background: rgba(255, 255, 255, 0.08); color: #fff; }
-    .topbar-nav .cta { background: var(--orange); color: #fff; }
-    .topbar-nav .cta:hover { background: var(--orange-dark); }
-    .hero {
-      background:
-        linear-gradient(135deg, rgba(13, 31, 60, 0.94), rgba(31, 122, 77, 0.9)),
-        url("https://images.unsplash.com/photo-1523741543316-beb7fc7023d8?auto=format&fit=crop&w=1800&q=80") center/cover;
-      color: var(--white);
-      padding: 88px 24px 72px;
-      position: relative;
-    }
-    .hero-inner {
-      display: grid;
-      gap: 36px;
-      grid-template-columns: minmax(0, 1fr) 320px;
-      margin: 0 auto;
-      max-width: 1120px;
-      position: relative;
-      z-index: 1;
-    }
-    .hero-tag {
-      background: rgba(232, 100, 42, 0.18);
-      border: 1px solid rgba(232, 100, 42, 0.42);
-      border-radius: var(--radius-sm);
-      color: #ffd28a;
-      display: inline-block;
-      font-size: 0.76rem;
-      font-weight: 900;
-      letter-spacing: 0;
-      margin-bottom: 18px;
-      padding: 6px 14px;
-      text-transform: uppercase;
-    }
-    .hero h1 {
-      font-size: 3.6rem;
-      font-weight: 900;
-      letter-spacing: 0;
-      line-height: 1.08;
-      margin-bottom: 20px;
-      max-width: 760px;
-    }
-    .hero-sub {
-      color: rgba(255, 255, 255, 0.82);
-      font-size: 1.08rem;
-      line-height: 1.75;
-      margin-bottom: 30px;
-      max-width: 760px;
-    }
-    .hero-ctas {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-    .btn-orange,
-    .btn-ghost {
-      align-items: center;
-      border-radius: var(--radius-sm);
-      display: inline-flex;
-      font-size: 0.94rem;
-      font-weight: 900;
-      justify-content: center;
-      min-height: 46px;
-      padding: 13px 22px;
-    }
-    .btn-orange { background: var(--orange); color: #fff; box-shadow: 0 10px 28px rgba(232, 100, 42, 0.28); }
-    .btn-orange:hover { background: var(--orange-dark); }
-    .btn-ghost { border: 1px solid rgba(255, 255, 255, 0.28); color: #fff; }
-    .btn-ghost:hover { background: rgba(255, 255, 255, 0.1); }
-    .hero-panel {
-      align-self: center;
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      border-radius: var(--radius-lg);
-      backdrop-filter: blur(12px);
-      padding: 24px;
-    }
-    .hero-panel strong {
-      color: #fff;
-      display: block;
-      font-size: 2.2rem;
-      font-weight: 900;
-      line-height: 1;
-      margin-bottom: 6px;
-    }
-    .hero-panel span {
-      color: rgba(255, 255, 255, 0.78);
-      display: block;
-      font-size: 0.9rem;
-      margin-bottom: 18px;
-    }
-    .section { padding: 76px 24px; }
-    .section-alt { background: var(--gray-100); }
-    .section-dark { background: linear-gradient(135deg, #0a1628 0%, var(--navy) 100%); color: var(--white); }
-    .container { margin: 0 auto; max-width: 1120px; }
-    .sec-label {
-      color: var(--orange);
-      font-size: 0.76rem;
-      font-weight: 900;
-      letter-spacing: 0;
-      margin-bottom: 10px;
-      text-transform: uppercase;
-    }
-    .sec-title {
-      color: var(--navy);
-      font-size: 2.35rem;
-      font-weight: 900;
-      line-height: 1.18;
-      margin-bottom: 14px;
-    }
-    .section-dark .sec-title { color: #fff; }
-    .sec-sub {
-      color: var(--text-soft);
-      font-size: 1rem;
-      line-height: 1.75;
-      max-width: 780px;
-    }
-    .section-dark .sec-sub { color: rgba(255, 255, 255, 0.72); }
-    .info-grid {
-      display: grid;
-      gap: 18px;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      margin-top: 34px;
-    }
-    .info-card,
-    .soft-card {
-      background: #fff;
-      border: 1px solid var(--gray-200);
-      border-radius: var(--radius-md);
-      box-shadow: 0 8px 28px rgba(13, 31, 60, 0.08);
-      padding: 22px;
-    }
-    .info-icon { color: var(--orange); font-size: 0.78rem; font-weight: 900; letter-spacing: 0; text-transform: uppercase; }
-    .info-title { color: var(--navy); font-size: 0.92rem; font-weight: 900; margin: 10px 0 6px; }
-    .info-val { color: var(--green-dark); font-size: 1.45rem; font-weight: 900; line-height: 1.15; }
-    .info-sub { color: var(--text-soft); font-size: 0.86rem; line-height: 1.55; margin-top: 8px; }
-    .two-col {
-      display: grid;
-      gap: 28px;
-      grid-template-columns: 1fr 1fr;
-      margin-top: 34px;
-    }
-    .dark-grid {
-      display: grid;
-      gap: 16px;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      margin-top: 32px;
-    }
-    .dark-item {
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      border-radius: var(--radius-md);
-      padding: 20px;
-    }
-    .dark-item strong { color: #fff; display: block; margin-bottom: 8px; }
-    .dark-item p { color: rgba(255, 255, 255, 0.72); font-size: 0.9rem; }
-    .note {
-      background: #fff7ed;
-      border-left: 4px solid var(--orange);
-      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-      color: var(--text-main);
-      margin-top: 24px;
-      padding: 16px 18px;
-    }
-    .cta-section {
-      background: linear-gradient(135deg, var(--green-dark), var(--navy));
-      color: #fff;
-      padding: 76px 24px;
-      text-align: center;
-    }
-    .cta-section h2 { font-size: 2.25rem; font-weight: 900; margin-bottom: 14px; }
-    .cta-section p { color: rgba(255, 255, 255, 0.75); margin: 0 auto 26px; max-width: 700px; }
-    .page-footer {
-      background: #071326;
-      color: rgba(255, 255, 255, 0.62);
-      font-size: 0.84rem;
-      padding: 28px 24px;
-      text-align: center;
-    }
-    .page-footer a { color: var(--orange); font-weight: 800; }
-    @media (max-width: 920px) {
-      .hero-inner,
-      .two-col { grid-template-columns: 1fr; }
-      .info-grid,
-      .dark-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-    }
-    @media (max-width: 640px) {
-      .topbar { align-items: flex-start; flex-direction: column; height: auto; padding: 12px 18px; }
-      .topbar-nav { justify-content: flex-start; width: 100%; }
-      .topbar-nav a { font-size: 0.8rem; padding: 7px 9px; }
-      .hero { padding: 58px 18px 48px; }
-      .hero h1 { font-size: 2.25rem; }
-      .section { padding: 52px 18px; }
-      .sec-title,
-      .cta-section h2 { font-size: 1.85rem; }
-      .info-grid,
-      .dark-grid { grid-template-columns: 1fr; }
-      .hero-panel { padding: 18px; }
-    }
-  </style>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "GovernmentService",
-    "name": "DR 14 AFIR - Investitii in fermele de mici dimensiuni",
-    "description": "Pagina de orientare pentru ferme mici interesate de DR 14 AFIR, inclusiv apicultura si calculator de punctaj.",
-    "provider": {
-      "@type": "ProfessionalService",
-      "name": "FABER - Atelier de Consultanta",
-      "url": "https://atelierdeconsultanta.ro"
+  <link rel="stylesheet" href="/assets/seo-hub.min.css" />
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://atelierdeconsultanta.ro/#organization",
+      "name": "Atelier de Consultanta",
+      "url": "https://atelierdeconsultanta.ro",
+      "email": "atelier.consultanta@gmail.com",
+      "telephone": [
+        "+40769828338",
+        "+40753326229"
+      ],
+      "areaServed": "RO",
+      "knowsAbout": [
+        "fonduri europene",
+        "finantari nerambursabile",
+        "AFIR",
+        "PNRR",
+        "Start-Up Nation",
+        "digitalizare IMM",
+        "energie regenerabila"
+      ]
     },
-    "areaServed": "RO",
-    "serviceType": "Funding program"
-  }
-  </script>
-  <!-- Clarity tracking code for https://atelierdeconsultanta.ro/ -->
-  <script>
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "wnzyco6rq");
-  </script>
+    {
+      "@type": "WebSite",
+      "@id": "https://atelierdeconsultanta.ro/#website",
+      "url": "https://atelierdeconsultanta.ro",
+      "name": "Atelier de Consultanta",
+      "publisher": {
+        "@id": "https://atelierdeconsultanta.ro/#organization"
+      },
+      "inLanguage": "ro-RO"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://atelierdeconsultanta.ro/dr14#webpage",
+      "url": "https://atelierdeconsultanta.ro/dr14",
+      "name": "DR 14 AFIR 2026 - Ferme mici, eligibilitate, punctaj si dosar",
+      "description": "Ghid DR 14 AFIR pentru ferme mici: conditii de eligibilitate, investitii, cheltuieli, selectie, documente si pasi de depunere.",
+      "isPartOf": {
+        "@id": "https://atelierdeconsultanta.ro/#website"
+      },
+      "inLanguage": "ro-RO",
+      "dateModified": "2026-05-19",
+      "publisher": {
+        "@id": "https://atelierdeconsultanta.ro/#organization"
+      },
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          "#speakable-summary",
+          "#speakable-eligibility",
+          "#speakable-cta"
+        ]
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Acasa",
+          "item": "https://atelierdeconsultanta.ro/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "DR 14 AFIR pentru ferme mici: conditii, cheltuieli si pregatirea dosarului",
+          "item": "https://atelierdeconsultanta.ro/dr14"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Ce este DR 14 AFIR?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "DR 14 este o interventie orientata catre ferme mici care vor sa isi imbunatateasca activitatea prin investitii eligibile."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Cum se verifica eligibilitatea pentru DR 14?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Eligibilitatea se verifica prin forma solicitantului, dimensiunea economica, documentele exploatatiei, investitia si conditiile specifice apelului."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ce greseli apar frecvent la DR 14?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cele mai frecvente greseli sunt calculul SO gresit, documente agricole incomplete, investitii supradimensionate si oferte necorelate cu proiectul."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Este obligatoriu un calculator SO?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nu este suficient singur, dar calculul SO este un pas practic important inainte de decizia de aplicare."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "GovernmentService",
+      "@id": "https://atelierdeconsultanta.ro/dr14#service",
+      "name": "DR 14 AFIR",
+      "description": "Ghid DR 14 AFIR pentru ferme mici: conditii de eligibilitate, investitii, cheltuieli, selectie, documente si pasi de depunere.",
+      "provider": {
+        "@id": "https://atelierdeconsultanta.ro/#organization"
+      },
+      "areaServed": "RO",
+      "serviceType": "AFIR"
+    }
+  ]
+}</script>
 </head>
 <body>
-  <nav class="topbar" aria-label="Navigare principala">
-    <a href="/" class="topbar-logo" aria-label="FABER - Atelier de Consultanta, acasa">FABER</a>
-    <div class="topbar-nav">
-      <a href="/">Acasa</a>
-      <a href="/afir">AFIR</a>
-      <a href="/dr12-afir">DR 12</a>
-      <a href="/calculator-soc">Calculator SO</a>
-      <a href="/contact" class="cta">Evaluare gratuita</a>
+  <nav class="navbar" aria-label="Navigare principala">
+    <a class="brand" href="/" aria-label="Atelier de Consultanta, acasa">FABER</a>
+    <div class="navbar-links">
+      <a href="/fonduri-europene">Fonduri europene</a>
+      <a href="/ghiduri">Ghiduri</a>
+      <a href="/instrumente">Instrumente</a>
+      <a href="/resurse">Resurse</a>
+      <a class="nav-cta" href="/contact">Evaluare gratuita</a>
     </div>
   </nav>
-
+  <div class="breadcrumb"><a href="/">Acasa</a> / DR 14 AFIR pentru ferme mici: conditii, cheltuieli si pregatirea dosarului</div>
   <header class="hero">
-    <div class="hero-inner">
-      <div>
-        <div class="hero-tag">PAC 2023-2027 | Ferme mici</div>
-        <h1>DR 14 AFIR pentru ferme mici care vor sa creasca sanatos</h1>
-        <p class="hero-sub">DR 14 nu este doar o lista de utilaje. Este o verificare serioasa a fermei: dimensiune economica, documente, investitie potrivita si punctaj suficient. Pagina aceasta iti arata rapid unde te afli si ce merita pregatit.</p>
-        <div class="hero-ctas">
-          <a href="#calculator-punctaj-dr14" class="btn-orange">Calculeaza punctajul</a>
-          <a href="#apicultura" class="btn-ghost">Vezi apicultura</a>
-          <a href="/contact" class="btn-ghost">Vreau evaluare</a>
-        </div>
-      </div>
-      <aside class="hero-panel" aria-label="Repere DR14">
-        <strong>50.000 EUR</strong>
-        <span>sprijin maxim orientativ per proiect</span>
-        <strong>85%</strong>
-        <span>intensitate maxima a sprijinului public</span>
-        <strong>40p</strong>
-        <span>prag minim de calitate in etapa a doua</span>
-      </aside>
+    <span class="eyebrow">AFIR</span>
+    <h1>DR 14 AFIR pentru ferme mici: conditii, cheltuieli si pregatirea dosarului</h1>
+    <p>Ghid DR 14 AFIR pentru ferme mici: conditii de eligibilitate, investitii, cheltuieli, selectie, documente si pasi de depunere.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="/verificare-eligibilitate-fonduri-europene">Verifica eligibilitatea</a>
+      <a class="btn btn-secondary" href="/contact">Discuta cu un consultant</a>
     </div>
   </header>
+  <main class="container">
+    <article class="panel">
 
-  <section class="section" id="detalii">
-    <div class="container">
-      <div class="sec-label">Repere esentiale</div>
-      <h2 class="sec-title">Ce trebuie sa stii inainte sa pregatesti DR 14</h2>
-      <p class="sec-sub">Interventia se adreseaza fermelor mici, dar nu orice ferma mica este automat pregatita pentru depunere. Conteaza componenta proiectului, vechimea, forma asociativa, zona, proprietatea asupra terenurilor si documentele care confirma exploatatia.</p>
-
-      <div class="info-grid">
-        <div class="info-card">
-          <div class="info-icon">Finantare</div>
-          <div class="info-title">Sprijin maxim</div>
-          <div class="info-val">50.000 EUR</div>
-          <div class="info-sub">Plafonul maxim se raporteaza la valoarea eligibila si la intensitatea de sprijin.</div>
-        </div>
-        <div class="info-card">
-          <div class="info-icon">Intensitate</div>
-          <div class="info-title">Sprijin nerambursabil</div>
-          <div class="info-val">85%</div>
-          <div class="info-sub">Beneficiarul trebuie sa sustina cofinantarea, TVA-ul si eventualele cheltuieli neeligibile.</div>
-        </div>
-        <div class="info-card">
-          <div class="info-icon">Dimensiune</div>
-          <div class="info-title">Ferma mica</div>
-          <div class="info-val">4.000-11.999 SO</div>
-          <div class="info-sub">Exista praguri specifice pentru legumicol si pentru zootehnic cu rase autohtone.</div>
-        </div>
-        <div class="info-card">
-          <div class="info-icon">Selectie</div>
-          <div class="info-title">Praguri de punctaj</div>
-          <div class="info-val">40-85p</div>
-          <div class="info-sub">Pragul primei etape difera: 60p la legumicol, 85p la celelalte componente.</div>
-        </div>
+      <p id="speakable-summary" class="intro speakable" data-speakable="true">Cum pot obtine fonduri europene pentru o ferma mica prin DR 14? Confirma incadrarea SO, documentele exploatatiei, investitia eligibila si punctajul inainte de depunere.</p>
+      <table class="program-table">
+    <tbody>
+      <tr><th>Program</th><td>DR 14 AFIR</td></tr>
+<tr><th>Pentru cine</th><td>ferme mici cu activitate agricola verificabila; gospodarii agricole care vor sa treaca spre o exploatatie mai competitiva; beneficiari care urmaresc utilaje, dotari, spatii agricole sau investitii conexe</td></tr>
+<tr><th>Finantare</th><td>valoarea sprijinului si intensitatea se confirma in apelul activ; informatiile numerice sunt pastrate doar daca exista acoperire in sursele interne.</td></tr>
+<tr><th>Ce verifici intai</th><td>calcul SO actualizat; documente agricole si fiscale clare; ofertare realista pentru echipamente sau lucrari; respectarea conditiilor de mediu, sanitar-veterinare si autorizare aplicabile</td></tr>
+<tr><th>CTA</th><td>verificare eligibilitate si discutie de consultanta</td></tr>
+    </tbody>
+  </table>
+      <h2>Pe scurt</h2>
+      <p>DR 14 AFIR trebuie analizat ca o decizie de investitie, nu doar ca o oportunitate de finantare. Inainte de orice buget, solicitantul trebuie sa verifice incadrarea, documentele, calendarul, costurile eligibile si riscurile care pot aparea la evaluare sau implementare.</p>
+      <p>Informatiile de pe aceasta pagina sunt construite pentru orientare practica. Ele nu promit aprobare si nu inlocuiesc verificarea apelului activ, a anexelor si a grilei de selectie. Scopul este sa poti pregati o discutie serioasa despre eligibilitate si dosar.</p>
+      <div class="grid">
+        <section class="mini-card"><h3>Cui se adreseaza</h3><ul><li>ferme mici cu activitate agricola verificabila</li>
+<li>gospodarii agricole care vor sa treaca spre o exploatatie mai competitiva</li>
+<li>beneficiari care urmaresc utilaje, dotari, spatii agricole sau investitii conexe</li></ul></section>
+        <section class="mini-card"><h3>Conditii de eligibilitate</h3><ul><li>ferma trebuie sa se incadreze in dimensiunea economica ceruta de apel</li>
+<li>solicitantul trebuie sa poata dovedi exploatatia si dreptul de utilizare</li>
+<li>investitia trebuie sa sustina dezvoltarea fermei si sa fie justificata economic</li></ul></section>
       </div>
-
-      <div class="note">Praguri SO de lucru pentru DR 14: 4.000-11.999 SO in general, 2.000-11.999 SO pentru ferme zootehnice populate cu rase autohtone si 2.300-11.999 SO pentru ferme legumicole. Forma finala a programului poate ajusta detaliile.</div>
-    </div>
-  </section>
-
-  <section class="section section-dark">
-    <div class="container">
-      <div class="sec-label">Cine poate aplica</div>
-      <h2 class="sec-title">Beneficiari si proiecte potrivite</h2>
-      <p class="sec-sub">DR 14 este pentru fermieri, cu exceptia persoanelor fizice simple. Proiectul trebuie sa plece de la o nevoie reala a fermei si sa poata fi sustinut cu documente la depunere si pe perioada de monitorizare.</p>
-
-      <div class="dark-grid">
-        <div class="dark-item">
-          <strong>Forme eligibile</strong>
-          <p>PFA, II, IF, SRL, SA si alte forme economice acceptate pentru program, cu exploatatia inregistrata pe forma care solicita sprijinul.</p>
-        </div>
-        <div class="dark-item">
-          <strong>Investitii coerente</strong>
-          <p>Utilaje, echipamente, modernizari, spatii protejate, irigatii, depozitare, procesare sau digitalizare, daca sunt legate direct de activitatea fermei.</p>
-        </div>
-        <div class="dark-item">
-          <strong>Documente curate</strong>
-          <p>APIA, ANSVSA, ANZ/DSVSA, acte de proprietate sau folosinta, oferte si justificarea tehnica trebuie sa se potriveasca intre ele.</p>
-        </div>
+      <h2 id="speakable-eligibility" class="speakable" data-speakable="true">Eligibilitatea se verifica prin solicitant, activitate, documente si investitie.</h2>
+      <p>programul sprijina fermele mici care au nevoie de modernizare, diversificare si cresterea capacitatii de a ramane active pe piata. Aceasta contributie conteaza pentru modul in care este scris proiectul: obiectivele trebuie sa fie clare, cheltuielile sa fie explicate, iar rezultatele sa poata fi urmarite dupa contractare.</p>
+      <p>O eroare frecventa este pornirea de la lista de cumparaturi. Ordinea mai sigura este inversa: intai se verifica solicitantul, apoi activitatea, apoi locatia si documentele, iar abia dupa aceea se confirma echipamentele, serviciile sau lucrarile care pot intra in buget.</p>
+      <div class="grid">
+        <section class="mini-card"><h3>Conditii obligatorii</h3><ul><li>calcul SO actualizat</li>
+<li>documente agricole si fiscale clare</li>
+<li>ofertare realista pentru echipamente sau lucrari</li>
+<li>respectarea conditiilor de mediu, sanitar-veterinare si autorizare aplicabile</li></ul></section>
+        <section class="mini-card"><h3>Investitii si cheltuieli eligibile</h3><ul><li>utilaje si echipamente agricole</li>
+<li>constructii usoare, modernizari si dotari permise</li>
+<li>echipamente pentru depozitare, procesare la nivel de ferma sau valorificare</li>
+<li>solutii digitale si echipamente pentru eficienta activitatii</li>
+<li>servicii generale in limitele programului</li></ul></section>
       </div>
-    </div>
-  </section>
+      <h2>Cheltuieli neeligibile si riscuri</h2>
+      <p>Cheltuielile neeligibile sunt importante pentru cash-flow. Chiar daca un proiect primeste sprijin, beneficiarul poate ramane responsabil pentru costuri care nu se deconteaza, diferente de pret, TVA tratat separat sau cheltuieli respinse la verificare.</p>
+      <ul><li>cheltuieli fara legatura cu ferma</li>
+<li>active nejustificate prin dimensiunea exploatatiei</li>
+<li>achizitii incepute prea devreme</li>
+<li>costuri care nu pot fi documentate prin oferte si contracte</li>
+<li>cheltuieli finantate deja prin alt program</li></ul>
+      <p>Riscurile apar mai ales cand documentele nu spun aceeasi poveste: codul CAEN descrie o activitate, oferta descrie alta activitate, iar planul de afaceri nu explica legatura dintre ele. De aceea, toate documentele trebuie citite impreuna, nu separat.</p>
+      <h2>Finantare, cofinantare si buget</h2>
+      <p>valoarea sprijinului si intensitatea se confirma in apelul activ; informatiile numerice sunt pastrate doar daca exista acoperire in sursele interne. Pentru o decizie realista, bugetul trebuie impartit in cheltuieli eligibile, cheltuieli neeligibile, contributie proprie, posibile diferente de curs, costuri de implementare si rezerva pentru intarzieri.</p>
+      <p>Cand pregatesti bugetul, evita rotunjirile agresive si ofertele prea generale. Un evaluator trebuie sa poata intelege ce cumperi, de ce este necesar, cum contribuie la obiective si cum va fi folosit dupa finalizarea proiectului.</p>
+      <h2>Criterii de selectie si punctaj</h2>
+      <p>Grila de selectie transforma conditiile programului in prioritati concrete. Un proiect eligibil poate pierde daca nu are punctaj suficient, iar un proiect cu punctaj bun poate fi vulnerabil daca documentele de baza sunt incomplete.</p>
+      <ul><li>incadrarea exploatatiei</li>
+<li>sectorul agricol si potentialul de dezvoltare</li>
+<li>calitatea planului de investitii</li>
+<li>componenta de sustenabilitate si eficienta</li>
+<li>coerenta documentelor si a bugetului</li></ul>
+      <p>In practica, punctajul se estimeaza inainte de depunere si se revizuieste dupa fiecare modificare de buget, investitie sau document. Daca o cheltuiala importanta nu sustine criteriile de selectie, ea trebuie justificata foarte clar sau eliminata.</p>
+      <h2>Pasi pentru pregatirea cererii</h2>
+      <ol><li>calculeaza SO</li>
+<li>verifica documentele de teren, animale si registru</li>
+<li>alege investitii proportionale cu ferma</li>
+<li>pregateste ofertele si justificarea</li>
+<li>completeaza cererea si anexele pentru depunere</li></ol>
+      <p>Pregatirea buna inseamna timp pentru clarificari, nu doar completarea formularelor. Documentele expirate, semnaturile lipsa, ofertele incomplete si fisierele incarcate gresit pot bloca proiecte care altfel ar avea o logica solida.</p>
+      <h2>Evaluare, contractare si plata</h2>
+      <p>Fluxul de dupa depunere trebuie inteles inainte de semnarea contractului. Evaluarea poate cere clarificari, contractarea poate impune termene stricte, iar plata depinde de documentele de achizitie, livrare, receptie si raportare.</p>
+      <ol><li>conformitate administrativa</li>
+<li>verificare eligibilitate</li>
+<li>punctaj si selectie</li>
+<li>contractare</li>
+<li>implementare si cereri de plata</li></ol>
+      <p>Un proiect bun pastreaza trasabilitate de la cerere pana la plata: cerinta din ghid, cheltuiala din buget, oferta, contractul de achizitie, factura, dovada platii si rezultatul implementat trebuie sa fie coerente.</p>
+      <h2>Exemple de situatii aplicate</h2>
+      <p>Exemplele de mai jos sunt anonime si orientative. Ele arata tipul de rationament necesar, nu rezultate promise sau cazuri publicate cu date comerciale.</p>
+      <ul><li>o ferma mica de legume poate urmari echipamente de irigare si dotari de depozitare</li>
+<li>o exploatatie zootehnica poate pregati dotari corelate cu efectivul</li>
+<li>o ferma apicola trebuie sa verifice atent incadrarea si regulile privind dubla finantare</li></ul>
+      <p>In fiecare exemplu, decizia corecta depinde de documente. Aceeasi investitie poate fi potrivita pentru un solicitant si nepotrivita pentru altul, in functie de activitate, locatie, istoric, buget si calendar.</p>
 
-  <section class="section section-alt" id="apicultura">
-    <div class="container">
-      <div class="sec-label">Sector apicol</div>
-      <h2 class="sec-title">Apicultura in DR 14: o sansa buna, dar cu atentie la suprapuneri</h2>
-      <p class="sec-sub">Apicultorii pot analiza DR 14 daca exploatatia atinge dimensiunea economica necesara si familiile de albine sunt sustinute de documente. Pentru corectitudine, cheltuielile propuse prin DR 14 trebuie separate de interventiile apicole FEGA.</p>
 
-      <div class="two-col">
-        <div class="soft-card">
-          <h3>Ce poate intra intr-un proiect apicol</h3>
-          <ul>
-            <li>echipamente pentru extractie, filtrare, maturare si procesare miere;</li>
-            <li>sisteme de ambalare si etichetare pentru produsele proprii;</li>
-            <li>spatii de depozitare, igiena, flux tehnologic si organizare a productiei;</li>
-            <li>echipamente apicole si dotari corelate cu numarul de familii de albine;</li>
-            <li>investitii complementare pentru valorificarea mierii, polenului, propolisului, cerii sau pasturii.</li>
-          </ul>
-        </div>
-        <div class="soft-card">
-          <h3>Ce verificam inainte de depunere</h3>
-          <ul>
-            <li>dovada vetrei stupinei si inscrierea exploatatiei in evidentele cerute;</li>
-            <li>adeverinta pentru familiile de albine si data inscrierii in Registrul Exploatatiei;</li>
-            <li>calculul SO conform coeficientilor SOC 2020 si pragului aplicabil;</li>
-            <li>lista cheltuielilor finantate sau solicitate prin interventiile apicole FEGA;</li>
-            <li>capacitatea de cofinantare si fluxul realist de implementare.</li>
-          </ul>
-        </div>
+      <h2>Intrebari frecvente</h2>
+      <section class="faq-item"><h3>Ce este DR 14 AFIR?</h3><p>DR 14 este o interventie orientata catre ferme mici care vor sa isi imbunatateasca activitatea prin investitii eligibile.</p></section>
+<section class="faq-item"><h3>Cum se verifica eligibilitatea pentru DR 14?</h3><p>Eligibilitatea se verifica prin forma solicitantului, dimensiunea economica, documentele exploatatiei, investitia si conditiile specifice apelului.</p></section>
+<section class="faq-item"><h3>Ce greseli apar frecvent la DR 14?</h3><p>Cele mai frecvente greseli sunt calculul SO gresit, documente agricole incomplete, investitii supradimensionate si oferte necorelate cu proiectul.</p></section>
+<section class="faq-item"><h3>Este obligatoriu un calculator SO?</h3><p>Nu este suficient singur, dar calculul SO este un pas practic important inainte de decizia de aplicare.</p></section>
+      <h2 id="speakable-cta" class="speakable" data-speakable="true">Pentru o verificare initiala, trimite date despre solicitant, investitie, buget si programul urmarit.</h2>
+      <p>Daca proiectul implica sume, cheltuieli tehnice, conditii de varsta, cod CAEN, amplasament sau cofinantare, merita verificat inainte de depunere. O analiza initiala poate identifica rapid documentele lipsa si riscurile evidente.</p>
+<p>Pentru implementare, este important ca fiecare modificare de program sa fie tratata ca actualizare de continut, nu ca simpla schimbare de cifra. Daca se modifica un prag, se pot schimba si eligibilitatea, punctajul, documentele, bugetul si ordinea pasilor de pregatire.</p>
+<p>La nivel de strategie SEO si AI Search, pagina este structurata pentru intrebari naturale. Fiecare sectiune raspunde unei intentii clare: cine poate aplica, ce se poate finanta, ce documente trebuie pregatite, ce riscuri apar si ce pasi urmeaza dupa depunere. Aceasta structura ajuta atat utilizatorii care citesc rapid, cat si sistemele care extrag raspunsuri scurte.</p>
+<p>Pentru cautarile traditionale, continutul foloseste termeni apropiati de modul in care beneficiarii formuleaza intrebari: fonduri europene, eligibilitate, documente, cheltuieli eligibile, cofinantare, punctaj, dosar si consultanta. Pentru cautarile vocale, raspunsurile de la inceputul paginii sunt scurte, directe si vizibile.</p>
+<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
+<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
+<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
+<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
+<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
+<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
+<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
+<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
+<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
+<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
+<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
+<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
+<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
+<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
+<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
+<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
+<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
+<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
+<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
+<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
+<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
+      <div class="related-links"><a href="/calculator-soc">Calculator SO AFIR</a>
+<a href="/dr12-afir">DR 12 AFIR</a>
+<a href="/consultanta-afir">Consultanta AFIR</a>
+<a href="/fonduri-pentru-ferme">Fonduri pentru ferme</a>
+<a href="/fonduri-pentru-utilaje-agricole">Fonduri pentru utilaje agricole</a></div>
+    </article>
+    <section class="cta-box">
+      <h2>Urmatorul pas</h2>
+      <p>Trimite cateva detalii despre solicitant, localitate, cod CAEN, investitie si buget. Raspunsul initial este orientativ si nu reprezinta promisiune de finantare.</p>
+      <div class="cta-actions">
+        <a class="btn btn-primary" href="/contact">Trimite datele proiectului</a>
+        <a class="btn btn-secondary" href="/consultanta-fonduri-europene">Vezi serviciile</a>
       </div>
-
-      <div class="note">Orientativ, pentru o exploatatie exclusiv apicola, pragul general de 4.000 SO poate insemna aproximativ 58 familii de albine daca se foloseste un coeficient SOC in jur de 69 EUR/familie. Nu trata aceasta cifra ca verdict: calculatorul SO oficial si documentele APIA/ANSVSA/ANZ decid incadrarea.</div>
-    </div>
-  </section>
-
-  <section class="section" id="calculator-punctaj-dr14">
-    <div class="container">
-      <div class="sec-label">Autoevaluare live</div>
-      <h2 class="sec-title">Calculator punctaj DR 14</h2>
-      <p class="sec-sub">Selecteaza componenta proiectului si vezi scorul estimat. Calculatorul urmeaza grilele din ghidul consultativ: zootehnic, legumicol, achizitii simple si alte sectoare.</p>
-
-      <div class="scorecalc" data-score-calculator="dr14">
-        <div class="scorecalc-head">
-          <div class="scorecalc-kicker">DR 14 | prag minim 40p</div>
-          <h3 class="scorecalc-title">Afla daca proiectul are punctaj suficient pentru depunere</h3>
-          <p class="scorecalc-subtitle">Punctajul bun nu salveaza un dosar slab, dar iti arata din timp unde sunt blocajele: zona montana, vechime, asociere, proprietate si tipul investitiei.</p>
-        </div>
-
-        <div class="scorecalc-body">
-          <form class="scorecalc-form">
-            <fieldset class="scorecalc-fieldset">
-              <legend>Componenta proiectului</legend>
-              <div class="scorecalc-options">
-                <label class="scorecalc-option">
-                  <input type="radio" name="dr14-component" value="zootehnic" checked>
-                  <span>Zootehnic<small>Include ferme cu animale si proiecte in zona montana sau cu rase autohtone.</small></span>
-                </label>
-                <label class="scorecalc-option">
-                  <input type="radio" name="dr14-component" value="legumicol">
-                  <span>Legumicol<small>Accent pe extinderea sau modernizarea spatiilor protejate.</small></span>
-                </label>
-                <label class="scorecalc-option">
-                  <input type="radio" name="dr14-component" value="achizitii">
-                  <span>Achizitii simple<small>Investitii fara constructii-montaj, indiferent de sector.</small></span>
-                </label>
-                <label class="scorecalc-option">
-                  <input type="radio" name="dr14-component" value="alte">
-                  <span>Alte sectoare<small>Pomicultura, floricultura si alte investitii vegetale cu C+M.</small></span>
-                </label>
-              </div>
-            </fieldset>
-
-            <div class="scorecalc-grid">
-              <div class="scorecalc-control" data-score-scope="zootehnic achizitii alte">
-                <label class="scorecalc-checkbox">
-                  <input type="checkbox" name="dr14-mountain">
-                  <span><strong>Investitie in zona montana</strong><small>20p pentru zootehnic, 15p pentru achizitii simple si alte sectoare.</small></span>
-                </label>
-              </div>
-
-              <div class="scorecalc-control" data-score-scope="zootehnic">
-                <label class="scorecalc-checkbox">
-                  <input type="checkbox" name="dr14-autochthonous">
-                  <span><strong>Animale din rase autohtone</strong><small>Investitia vizeaza exclusiv cresterea raselor autohtone: 20p.</small></span>
-                </label>
-              </div>
-
-              <div class="scorecalc-control" data-score-scope="legumicol">
-                <label for="dr14-protected">Investitie in spatii protejate</label>
-                <select id="dr14-protected" name="dr14-protected">
-                  <option value="0">Nu se puncteaza</option>
-                  <option value="20">Modernizare spatiu protejat existent - 20p</option>
-                  <option value="30">Extindere spatii protejate - 30p</option>
-                </select>
-              </div>
-
-              <div class="scorecalc-control" data-score-scope="zootehnic">
-                <label for="dr14-age-zoo">Vechime exploatatie</label>
-                <select id="dr14-age-zoo" name="dr14-age-zoo">
-                  <option value="0">Sub 5 ani</option>
-                  <option value="15">Intre 5 si 7 ani - 15p</option>
-                  <option value="20">Peste 7 ani - 20p</option>
-                </select>
-              </div>
-
-              <div class="scorecalc-control" data-score-scope="legumicol">
-                <label for="dr14-age-legume">Vechime exploatatie</label>
-                <select id="dr14-age-legume" name="dr14-age-legume">
-                  <option value="0">Sub 5 ani</option>
-                  <option value="20">Intre 5 si 7 ani - 20p</option>
-                  <option value="30">Peste 7 ani - 30p</option>
-                </select>
-              </div>
-
-              <div class="scorecalc-control" data-score-scope="achizitii alte">
-                <label for="dr14-age-simple">Vechime exploatatie</label>
-                <select id="dr14-age-simple" name="dr14-age-simple">
-                  <option value="0">Sub 5 ani</option>
-                  <option value="25">Intre 5 si 7 ani - 25p</option>
-                  <option value="35">Peste 7 ani - 35p</option>
-                </select>
-              </div>
-
-              <div class="scorecalc-control">
-                <label class="scorecalc-checkbox">
-                  <input type="checkbox" name="dr14-association">
-                  <span><strong>Membru intr-o forma asociativa cu rol economic</strong><small>Cooperativa, grup sau organizatie de producatori: 20p.</small></span>
-                </label>
-              </div>
-
-              <div class="scorecalc-control">
-                <div class="scorecalc-slider-top">
-                  <label for="dr14-terrain">Teren agricol in proprietate</label>
-                  <span class="scorecalc-slider-value" data-score-slider-value="dr14-terrain">0%</span>
-                </div>
-                <input id="dr14-terrain" type="range" name="dr14-terrain" min="0" max="100" value="0" data-score-slider>
-                <small>Punctaj proportional: max. 20p pentru zootehnic/legumicol, max. 30p pentru achizitii simple si alte sectoare.</small>
-              </div>
-            </div>
-          </form>
-
-          <aside class="scorecalc-result" aria-live="polite">
-            <div class="scorecalc-score"><span data-score-total>0</span><span>/100</span></div>
-            <div class="scorecalc-status is-low" data-score-status>Completeaza criteriile pentru estimare.</div>
-            <p class="scorecalc-note">Prag etapa 1: <strong data-score-first>85p</strong>. Prag minim: <strong data-score-min>40p</strong>.</p>
-            <div class="scorecalc-breakdown" data-score-breakdown></div>
-            <p class="scorecalc-note">Grila este orientativa si foloseste varianta consultativa a ghidului DR 14. Verifica forma finala inainte de depunere.</p>
-          </aside>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="cta-section">
-    <h2>Vrei sa stim daca DR 14 merita pregatit pentru ferma ta?</h2>
-    <p>Trimite-ne dimensiunea exploatatiei, sectorul, investitia dorita si ce documente ai deja. Iti spunem rapid ce este solid, ce lipseste si ce risc trebuie corectat.</p>
-    <a href="/contact" class="btn-orange">Solicita evaluare gratuita</a>
-  </section>
-
-  <section class="vezi-si-section" aria-labelledby="vezi-si-title">
-    <h2 id="vezi-si-title">Vezi și</h2>
-    <ul class="vezi-si">
-    <li><a href="/fonduri-europene/">Fonduri europene</a></li>
-    <li><a href="/consultanta-fonduri-europene/">Consultanță fonduri europene</a></li>
-    <li><a href="/calendar-fonduri-europene/">Calendar fonduri europene</a></li>
-    <li><a href="/consultanta-pnrr-digitalizare/">Consultanță PNRR și digitalizare</a></li>
-    <li><a href="/start-up-nation/">Start-Up Nation</a></li>
-    </ul>
-  </section>
-
-  <footer class="page-footer">
-    <p>&copy; 2026 FABER - Atelier de Consultanta &middot; <a href="/">Acasa</a> &middot; <a href="/afir">AFIR</a> &middot; <a href="/contact">Contact</a></p>
-  </footer>
-
-  <script src="/assets/official-guides.min.js" defer></script>
-  <script src="/assets/program-scoring.min.js" defer></script>
+    </section>
+  </main>
+  <footer class="footer">© 2026 FABER - Atelier de Consultanta · <a href="/fonduri-europene">Fonduri europene</a> · <a href="/contact">Contact</a></footer>
 </body>
 </html>

@@ -11,12 +11,19 @@ const PROGRAM_ROUTES = [
   "dr12-afir",
   "dr14",
   "por-adr-nord-est",
+  "investitii-modernizarea-microintreprinderilor-apel-2",
   "afir-autoconsum-agroalimentar",
   "autoconsum-public-fotovoltaice-institutii-publice",
   "digitalizare-imm",
   "femeia-antreprenor-2026",
+  "fondul-modernizare-energie-regenerabila-2026",
   "pro-infra",
   "start-up-nation-2026",
+  "instrumente",
+  "resurse",
+  "portofoliu",
+  "testimoniale",
+  "webinarii",
 ];
 
 function posixFromFs(file) {
@@ -31,8 +38,8 @@ function isPublicAuditFile(file) {
 function trackedFiles() {
   try {
     return cp
-      .execFileSync("git", ["ls-files"], { cwd: ROOT, encoding: "utf8" })
-      .split(/\r?\n/)
+      .execFileSync("git", ["ls-files", "-z", "--cached", "--others", "--exclude-standard"], { cwd: ROOT, encoding: "utf8" })
+      .split("\0")
       .filter(Boolean)
       .filter(isPublicAuditFile)
       .filter((file) => TEXT_EXTENSIONS.has(path.extname(file).toLowerCase()));
@@ -193,7 +200,10 @@ for (const slug of PROGRAM_ROUTES) {
     (redirect) => redirect.from === fileRoute && redirect.to === cleanRoute && redirect.status.startsWith("301")
   );
   const hasHtmlAsset = fs.existsSync(path.join(ROOT, `${slug}.html`));
-  if (!hasCleanRewrite && !hasHtmlAsset) programRouteIssues.push(`${cleanRoute} should be backed by ${fileRoute}`);
+  const hasDirectoryAsset = fs.existsSync(path.join(ROOT, slug, "index.html"));
+  if (!hasCleanRewrite && !hasHtmlAsset && !hasDirectoryAsset) {
+    programRouteIssues.push(`${cleanRoute} should be backed by ${fileRoute} or /${slug}/index.html`);
+  }
   if (!hasHtmlRedirect) programRouteIssues.push(`${fileRoute} should redirect to ${cleanRoute}`);
 }
 

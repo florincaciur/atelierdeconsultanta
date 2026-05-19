@@ -1,373 +1,301 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ro">
 <head>
   <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fondul de Modernizare – Energie și autoconsum</title>
-  <meta name="description" content="Ghid despre Fondul de Modernizare pentru investiții în energie, fotovoltaice, autoconsum și eficiență energetică." />
-  <meta name="author" content="FABER – Atelier de Consultanță" />
+  <title>Fondul de Modernizare - energie, fotovoltaice si autoconsum</title>
+  <meta name="description" content="Ghid Fondul de Modernizare pentru energie, fotovoltaice si autoconsum: eligibilitate, cheltuieli, documente, evaluare si pasi de aplicare." />
   <meta name="robots" content="index, follow" />
+  <meta name="seo-depth" content="true" />
   <link rel="canonical" href="https://atelierdeconsultanta.ro/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum" />
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="Fondul de Modernizare – Energie și autoconsum" />
-  <meta property="og:description" content="Ghid despre Fondul de Modernizare pentru investiții în energie, fotovoltaice, autoconsum și eficiență energetică." />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+  <meta property="og:title" content="Fondul de Modernizare - energie, fotovoltaice si autoconsum" />
+  <meta property="og:description" content="Ghid Fondul de Modernizare pentru energie, fotovoltaice si autoconsum: eligibilitate, cheltuieli, documente, evaluare si pasi de aplicare." />
   <meta property="og:url" content="https://atelierdeconsultanta.ro/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum" />
-  <link rel="icon" type="image/png" href="favicon.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <style>
-    :root{
-      --navy:#0d1f3c;
-      --navy-mid:#112a50;
-      --navy-light:#1a3a6a;
-      --orange:#e8642a;
-      --orange-dark:#c4541f;
-      --gold:#f5a623;
-      --white:#ffffff;
-      --gray-100:#f8f9fb;
-      --gray-200:#e8edf5;
-      --gray-600:#6b7a99;
-      --text-main:#1a2540;
-      --text-soft:#4a5568;
-      --radius-sm:8px;
-      --radius-md:16px;
-      --shadow-sm:0 2px 12px rgba(13,31,60,.08);
-      --shadow-md:0 8px 32px rgba(13,31,60,.14);
-    }
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth;font-size:16px}
-    body{
-      font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
-      color:var(--text-main);
-      background:var(--gray-100);
-      line-height:1.7;
-      overflow-x:hidden;
-    }
-    a{color:inherit;text-decoration:none}
-    img{max-width:100%;height:auto;display:block}
-    .navbar{
-      position:sticky;
-      top:0;
-      z-index:100;
-      min-height:68px;
-      background:rgba(13,31,60,.96);
-      backdrop-filter:blur(14px);
-      border-bottom:1px solid rgba(255,255,255,.08);
-      box-shadow:0 2px 16px rgba(0,0,0,.16);
-      padding:0 24px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:20px;
-    }
-    .brand,.navbar-brand{display:flex;align-items:center;flex:0 0 auto}
-    .brand{
-      color:var(--orange);
-      font-family:Georgia,"Times New Roman",serif;
-      font-size:28px;
-      font-weight:700;
-      white-space:nowrap;
-    }
-    .navbar-brand svg{height:40px;width:auto;display:block}
-    .navbar-links{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:flex-end}
-    .navbar-links a{
-      color:rgba(255,255,255,.82);
-      font-size:.88rem;
-      font-weight:600;
-      padding:8px 13px;
-      border-radius:var(--radius-sm);
-      transition:color .2s ease,background .2s ease;
-    }
-    .navbar-links a:hover{color:var(--white);background:rgba(255,255,255,.08);text-decoration:none}
-    .navbar-links .nav-cta{
-      background:var(--orange);
-      color:var(--white);
-      font-weight:800;
-    }
-    .navbar-links .nav-cta:hover{background:var(--orange-dark)}
-    .breadcrumb{
-      max-width:1120px;
-      margin:0 auto;
-      padding:18px 24px 0;
-      font-size:.82rem;
-      color:var(--gray-600);
-    }
-    .breadcrumb a{color:var(--orange);font-weight:700}
-    .post-hero{
-      background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 100%);
-      padding:70px 24px 58px;
-      text-align:center;
-    }
-    .post-category{
-      display:inline-block;
-      background:var(--orange);
-      color:var(--white);
-      font-size:.75rem;
-      font-weight:800;
-      text-transform:uppercase;
-      padding:5px 14px;
-      border-radius:20px;
-      margin-bottom:18px;
-    }
-    .post-icon{font-size:2.8rem;margin-bottom:16px;display:block;line-height:1}
-    .post-title{
-      font-size:2.45rem;
-      font-weight:900;
-      color:var(--white);
-      line-height:1.18;
-      max-width:860px;
-      margin:0 auto 18px;
-    }
-    .post-excerpt{
-      font-size:1.05rem;
-      color:rgba(255,255,255,.74);
-      max-width:720px;
-      margin:0 auto 24px;
-      line-height:1.7;
-    }
-    .post-meta{
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      gap:20px;
-      flex-wrap:wrap;
-      font-size:.83rem;
-      color:rgba(255,255,255,.62);
-    }
-    .post-container{
-      max-width:880px;
-      margin:0 auto;
-      padding:48px 24px 84px;
-    }
-    .post-body{
-      background:var(--white);
-      border-radius:var(--radius-md);
-      padding:48px;
-      box-shadow:var(--shadow-md);
-      font-size:1.03rem;
-      color:var(--text-soft);
-      line-height:1.85;
-    }
-    .post-body p{margin-bottom:18px}
-    .post-body p:last-child{margin-bottom:0}
-    .post-body h2{
-      font-size:1.48rem;
-      font-weight:900;
-      color:var(--navy);
-      margin:40px 0 16px;
-      padding-left:16px;
-      border-left:4px solid var(--orange);
-      line-height:1.3;
-    }
-    .post-body h2:first-child{margin-top:0}
-    .post-body h3{
-      font-size:1.15rem;
-      font-weight:800;
-      color:var(--navy-mid);
-      margin:26px 0 10px;
-    }
-    .post-body ul,.post-body ol{margin:0 0 20px 24px}
-    .post-body li{margin-bottom:8px;color:var(--text-soft);line-height:1.75}
-    .post-body strong{color:var(--text-main);font-weight:800}
-    .post-body a{color:var(--orange);font-weight:700;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
-    .note{
-      border-left:4px solid var(--orange);
-      padding:16px 18px;
-      background:var(--gray-100);
-      border-radius:0 var(--radius-sm) var(--radius-sm) 0;
-      margin:28px 0;
-      color:var(--text-main);
-    }
-    .faq-item{
-      margin-bottom:16px;
-      padding:18px 20px;
-      background:var(--gray-100);
-      border:1px solid var(--gray-200);
-      border-radius:var(--radius-sm);
-    }
-    .faq-q{font-weight:900;color:var(--navy);margin-bottom:8px}
-    .cta-box{
-      background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 100%);
-      border-radius:var(--radius-md);
-      padding:40px;
-      text-align:center;
-      margin-top:40px;
-    }
-    .cta-box h3{font-size:1.28rem;font-weight:900;color:var(--white);margin-bottom:12px}
-    .cta-box p{color:rgba(255,255,255,.76);margin-bottom:24px;font-size:.96rem}
-    .post-body a.btn-cta,.cta-box a.btn-cta,.btn-cta{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      background:var(--orange);
-      color:var(--white);
-      padding:13px 28px;
-      border-radius:var(--radius-sm);
-      font-weight:900;
-      font-size:.92rem;
-      box-shadow:0 10px 28px rgba(232,100,42,.24);
-      transition:background .2s ease,transform .2s ease;
-    }
-    .btn-cta:hover{background:var(--orange-dark);transform:translateY(-2px);text-decoration:none}
-    .footer{
-      background:var(--navy);
-      color:rgba(255,255,255,.65);
-      text-align:center;
-      padding:30px 24px;
-      font-size:.84rem;
-    }
-    .footer a{color:var(--orange);font-weight:700}
-    @media(max-width:760px){
-      .navbar{align-items:flex-start;flex-direction:column;padding:12px 18px;gap:8px}
-      .navbar-links{width:100%;justify-content:flex-start}
-      .navbar-links .optional{display:none}
-      .post-hero{padding:52px 20px 42px}
-      .post-title{font-size:1.85rem}
-      .post-excerpt{font-size:.98rem}
-      .post-container{padding:32px 18px 64px}
-      .post-body{padding:26px 20px;border-radius:var(--radius-sm)}
-      .post-body h2{font-size:1.28rem;margin-top:32px}
-      .cta-box{padding:28px 20px;border-radius:var(--radius-sm)}
-    }
-    @media(max-width:430px){
-      .navbar-links a{font-size:.8rem;padding:7px 10px}
-      .navbar-links .nav-cta{width:100%;justify-content:center;text-align:center}
-      .post-title{font-size:1.62rem}
-      .post-meta{gap:10px}
-    }
-  </style>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "BlogPosting",
-        "headline": "Fondul de Modernizare: finanțări pentru energie, fotovoltaice și autoconsum",
-        "description": "Ghid despre Fondul de Modernizare pentru investiții în energie, fotovoltaice, autoconsum și eficiență energetică.",
-        "datePublished": "2026-04-30",
-        "dateModified": "2026-04-30",
-        "author": {"@type": "Organization", "name": "FABER – Atelier de Consultanță"},
-        "publisher": {"@type": "Organization", "name": "FABER – Atelier de Consultanță", "url": "https://atelierdeconsultanta.ro"},
-        "mainEntityOfPage": {"@type": "WebPage", "@id": "https://atelierdeconsultanta.ro/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum"}
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://atelierdeconsultanta.ro/og-image.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="stylesheet" href="/assets/seo-hub.min.css" />
+  <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://atelierdeconsultanta.ro/#organization",
+      "name": "Atelier de Consultanta",
+      "url": "https://atelierdeconsultanta.ro",
+      "email": "atelier.consultanta@gmail.com",
+      "telephone": [
+        "+40769828338",
+        "+40753326229"
+      ],
+      "areaServed": "RO",
+      "knowsAbout": [
+        "fonduri europene",
+        "finantari nerambursabile",
+        "AFIR",
+        "PNRR",
+        "Start-Up Nation",
+        "digitalizare IMM",
+        "energie regenerabila"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://atelierdeconsultanta.ro/#website",
+      "url": "https://atelierdeconsultanta.ro",
+      "name": "Atelier de Consultanta",
+      "publisher": {
+        "@id": "https://atelierdeconsultanta.ro/#organization"
       },
-      {
-        "@type": "FAQPage",
-        "mainEntity": [
-          {"@type": "Question", "name": "Ce finanțează Fondul de Modernizare?", "acceptedAnswer": {"@type": "Answer", "text": "Fondul de Modernizare poate susține investiții în energie, eficiență energetică și producție din surse regenerabile, conform apelurilor și ghidurilor active."}},
-          {"@type": "Question", "name": "Sunt eligibile proiectele fotovoltaice pentru autoconsum?", "acceptedAnswer": {"@type": "Answer", "text": "În anumite apeluri pot fi eligibile investițiile în fotovoltaice pentru autoconsum, dar condițiile tehnice și administrative trebuie verificate în ghid."}},
-          {"@type": "Question", "name": "Pot promite economii exacte înainte de proiectare?", "acceptedAnswer": {"@type": "Answer", "text": "Nu este prudent. Economiile depind de consum, profilul de producție, dimensionare, tarife și soluția tehnică. Este necesară o analiză energetică."}}
-        ]
+      "inLanguage": "ro-RO"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://atelierdeconsultanta.ro/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum#webpage",
+      "url": "https://atelierdeconsultanta.ro/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum",
+      "name": "Fondul de Modernizare - energie, fotovoltaice si autoconsum",
+      "description": "Ghid Fondul de Modernizare pentru energie, fotovoltaice si autoconsum: eligibilitate, cheltuieli, documente, evaluare si pasi de aplicare.",
+      "isPartOf": {
+        "@id": "https://atelierdeconsultanta.ro/#website"
       },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {"@type": "ListItem", "position": 1, "name": "Acasă", "item": "https://atelierdeconsultanta.ro/"},
-          {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://atelierdeconsultanta.ro/blog"},
-          {"@type": "ListItem", "position": 3, "name": "Fondul de Modernizare", "item": "https://atelierdeconsultanta.ro/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum"}
+      "inLanguage": "ro-RO",
+      "dateModified": "2026-05-19",
+      "publisher": {
+        "@id": "https://atelierdeconsultanta.ro/#organization"
+      },
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          "#speakable-summary",
+          "#speakable-eligibility",
+          "#speakable-cta"
         ]
       }
-    ]
-  }
-  </script>
-  <!-- Clarity tracking code for https://atelierdeconsultanta.ro/ -->
-  <script>
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "wnzyco6rq");
-  </script>
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Acasa",
+          "item": "https://atelierdeconsultanta.ro/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Fondul de Modernizare: finantari pentru energie, fotovoltaice si autoconsum",
+          "item": "https://atelierdeconsultanta.ro/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Ce finanteaza Fondul de Modernizare?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Finanteaza investitii in energie si eficienta energetica, in functie de apelul activ si categoria de beneficiar."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Sunt eligibile panourile fotovoltaice?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pot fi eligibile daca apelul permite, daca solutia este justificata tehnic si daca documentele amplasamentului sunt clare."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Am nevoie de facturi de consum?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pentru proiectele de autoconsum, datele de consum sunt foarte importante pentru dimensionare si justificare."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Pot promite economie garantata?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nu. Estimarile energetice trebuie tratate realist si verificate tehnic."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "GovernmentService",
+      "@id": "https://atelierdeconsultanta.ro/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum#service",
+      "name": "Fondul de Modernizare - energie si autoconsum",
+      "description": "Ghid Fondul de Modernizare pentru energie, fotovoltaice si autoconsum: eligibilitate, cheltuieli, documente, evaluare si pasi de aplicare.",
+      "provider": {
+        "@id": "https://atelierdeconsultanta.ro/#organization"
+      },
+      "areaServed": "RO",
+      "serviceType": "Energie"
+    }
+  ]
+}</script>
 </head>
 <body>
-  <nav class="navbar">
-    <a href="/" class="navbar-brand" aria-label="FABER Atelier de Consultanta, acasa">
-      <svg xmlns="http:/www.w3.org/2000/svg" viewBox="0 0 240 44" width="200" height="38" aria-hidden="true">
-        <text x="0" y="32" font-family="Georgia,'Times New Roman',serif" font-size="28" font-weight="700" fill="#e8642a">FABER</text>
-        <path d="M118,22 L125,13 L132,22 L125,31 Z" fill="white" opacity="0.95"/>
-        <text x="138" y="18" font-family="'Inter','Helvetica Neue',sans-serif" font-size="10" font-weight="600" fill="white">ATELIER de</text>
-        <text x="138" y="33" font-family="'Inter','Helvetica Neue',sans-serif" font-size="10" font-weight="600" fill="white">CONSULTANTA</text>
-      </svg>
-    </a>
+  <nav class="navbar" aria-label="Navigare principala">
+    <a class="brand" href="/" aria-label="Atelier de Consultanta, acasa">FABER</a>
     <div class="navbar-links">
-      <a href="/blog">Blog</a>
-      <a href="/fondul-de-modernizare" class="optional">Fondul de Modernizare</a>
-      <a href="/contact" class="nav-cta">Evaluare gratuită</a>
+      <a href="/fonduri-europene">Fonduri europene</a>
+      <a href="/ghiduri">Ghiduri</a>
+      <a href="/instrumente">Instrumente</a>
+      <a href="/resurse">Resurse</a>
+      <a class="nav-cta" href="/contact">Evaluare gratuita</a>
     </div>
   </nav>
-  <div class="breadcrumb"><a href="/">Acasă</a> › <a href="/blog">Blog</a> › Fondul de Modernizare</div>
-  <section class="post-hero">
-    <span class="post-category">Energie</span>
-    <span class="post-icon">☀️</span>
-    <h1 class="post-title">Fondul de Modernizare: finanțări pentru energie, fotovoltaice și autoconsum</h1>
-    <p class="post-excerpt">Investițiile în energie pot reduce costuri, dar proiectele finanțabile trebuie dimensionate tehnic, justificate economic și pregătite cu documente solide.</p>
-    <div class="post-meta"><span>30 aprilie 2026</span><span>8 min lectură</span><span>FABER – Atelier de Consultanță</span></div>
-  </section>
-  <main class="post-container">
-    <article class="post-body">
-      <p><strong>Fondul de Modernizare</strong> este asociat tot mai des cu investiții în energie, producție din surse regenerabile, <strong>fotovoltaice autoconsum</strong> și <strong>eficiență energetică</strong>. Pentru firme, ferme, procesatori sau entități publice, costurile cu energia au devenit un factor strategic. O investiție bine dimensionată poate reduce vulnerabilitatea la prețuri și poate crește predictibilitatea operațională.</p>
-      <p>Totuși, finanțările pentru energie nu se obțin printr-o simplă ofertă de panouri. Un proiect serios trebuie să demonstreze consumul, necesitatea investiției, dimensionarea sistemului, regimul de utilizare, documentele tehnice, dreptul asupra amplasamentului și capacitatea de implementare. Informațiile de aici sunt orientative; condițiile oficiale se verifică în ghidul solicitantului și în apelul activ.</p>
-      <h2>Ce înseamnă autoconsum</h2>
-      <p>Autoconsumul presupune ca energia produsă să fie utilizată în principal de beneficiar pentru activitatea proprie. În cazul unei fabrici, ferme sau unități de procesare, sistemul fotovoltaic este dimensionat în raport cu profilul de consum. Nu este același lucru cu un parc fotovoltaic construit în scop principal de vânzare a energiei. De aceea, analiza facturilor și a consumului orar este esențială.</p>
-      <p>Un proiect de autoconsum trebuie să răspundă la întrebări tehnice: cât consumă beneficiarul, când consumă, ce putere instalată este justificată, există spațiu disponibil, care este orientarea, ce capacitate de racordare există, este necesară stocare, ce lucrări sunt implicate? Fără aceste răspunsuri, bugetul rămâne fragil.</p>
-      <h2>Fotovoltaice pentru firme și ferme</h2>
-      <p>Investițiile în fotovoltaice pot fi relevante pentru firme cu consum constant, spații productive, depozite frigorifice, activități agricole, procesare, hoteluri, servicii sau alte operațiuni energointensive. Pentru agricultură și agroalimentar pot exista apeluri dedicate sau scheme distincte, de aceea este important să compari opțiunile. Căutările de tip <strong>fonduri europene parc fotovoltaic</strong> trebuie diferențiate de finanțările pentru autoconsum.</p>
-      <p>Un parc fotovoltaic orientat spre producție și vânzare are o logică diferită față de un sistem de autoconsum. Modelul de venit, autorizațiile, racordarea, suprafața, avizele și analiza financiară pot fi mult mai complexe. Dacă scopul este reducerea facturii proprii, proiectul trebuie scris ca investiție în eficiența activității, nu ca dezvoltare energetică independentă.</p>
-      <h2>Eficiență energetică înainte de producție</h2>
-      <p>Uneori, cea mai bună investiție nu este prima ofertă de panouri, ci reducerea consumului inutil. Iluminatul eficient, motoarele performante, automatizarea, recuperarea de căldură, izolarea, monitorizarea consumului sau optimizarea proceselor pot reduce baza de consum. În anumite programe, măsurile de eficiență energetică pot fi finanțabile sau pot completa investiția în producție regenerabilă.</p>
-      <p>Un proiect matur arată că beneficiarul înțelege consumul. Dacă instalezi producție fără să știi unde pierzi energie, poți supradimensiona sistemul sau poți rata economii mai simple. De aceea, auditul energetic sau analiza de consum poate fi un document util, chiar când nu este cerut explicit.</p>
-      <h2>Documente tehnice și administrative</h2>
-      <p>Proiectele de energie pot cere documente privind amplasamentul, dreptul de proprietate sau folosință, avize, certificat de urbanism, studii tehnice, soluție de racordare, oferte, plan de implementare, documente financiare, declarații și analiza cost-beneficiu. Lista diferă în funcție de apel și de tipul beneficiarului.</p>
-      <p>Dacă investiția se realizează pe acoperiș, verifică structura, dreptul asupra clădirii, sarcinile din cartea funciară și eventualele restricții. Dacă se realizează pe teren, verifică destinația terenului, urbanismul, accesul, racordarea și condițiile de mediu. Problemele de amplasament sunt printre cele mai costisitoare dacă apar târziu.</p>
-      <h2>Buget și oferte</h2>
-      <p>Bugetul trebuie construit cu oferte comparabile și specificații clare: panouri, invertoare, structură, cabluri, protecții, proiectare, montaj, monitorizare, eventual stocare și lucrări conexe. Nu compara doar prețul total. Verifică garanțiile, randamentul, compatibilitatea, costurile de mentenanță și capacitatea furnizorului de a livra în termenele proiectului.</p>
-      <p>În planul financiar, evită promisiunile exacte fără suport. Economiile depind de consum, producție, tarife, sezonalitate și modul de utilizare. O estimare prudentă, bazată pe date, este mai bună decât o economie spectaculoasă dar neverificabilă. Finanțatorul vrea să vadă realism, nu optimism generic.</p>
-      <h2>Legătura cu fondurile europene 2026</h2>
-      <p>În 2026 pot exista mai multe surse pentru investiții în energie: Fondul de Modernizare, programe regionale, apeluri pentru sector public, scheme pentru IMM-uri sau programe sectoriale. Fiecare are beneficiari, cheltuieli și criterii diferite. Înainte de a decide, compară programul potrivit pentru profilul tău. Poți începe de la pagina <a href="/fondul-de-modernizare">Fondul de Modernizare</a> și de la resursa generală despre <a href="/fonduri-europene-nerambursabile-2026">fonduri europene nerambursabile 2026</a>.</p>
-      <p>O analiză de <a href="/consultanta-fonduri-europene">consultanta fonduri europene</a> este utilă mai ales când ai mai multe opțiuni. Un consultant poate compara ghidurile, eligibilitatea și termenele, astfel încât să nu pregătești un dosar pentru programul greșit.</p>
-      <h2>Greșeli frecvente</h2>
-      <ul>
-        <li><strong>Dimensionare după buget</strong>, nu după consumul real al beneficiarului.</li>
-        <li><strong>Confuzie între autoconsum și producție pentru vânzare</strong>, cu documente și reguli diferite.</li>
-        <li><strong>Amplasament neverificat</strong>, mai ales pe acoperișuri sau terenuri cu situație juridică neclară.</li>
-        <li><strong>Oferte necomparabile</strong>, care nu permit o evaluare corectă a costurilor.</li>
-        <li><strong>Ignorarea racordării</strong>, deși aceasta poate influența calendarul și fezabilitatea.</li>
-      </ul>
-      <h2>Checklist înainte de ofertare</h2>
-      <p>Înainte să soliciți o ofertă finală, strânge facturile de energie pe cel puțin ultimele luni disponibile, programul de lucru, puterea instalată a consumatorilor principali și informații despre amplasament. Pentru acoperiș, ai nevoie de suprafață, orientare, structură și drept de folosință. Pentru teren, ai nevoie de situația juridică, acces, urbanism și posibilități de racordare. Aceste date influențează direct dimensiunea și costul proiectului.</p>
-      <p>Cere furnizorilor să explice ipotezele de producție și economie. O ofertă care promite rezultate fără să cunoască profilul de consum trebuie tratată cu prudență. În proiectele finanțate, documentația tehnică trebuie să fie coerentă cu bugetul, iar bugetul cu obiectivul proiectului. Dacă finanțarea urmărește autoconsum, sistemul trebuie argumentat prin consumul beneficiarului, nu doar prin suprafața disponibilă.</p>
-      <p>Planifică și exploatarea după finalizare: mentenanță, monitorizare, curățare, garanții, intervenții și responsabilități interne. Un sistem energetic nu este o achiziție care se uită pe acoperiș; performanța lui depinde de verificări periodice și de utilizarea corectă a datelor produse.</p>
-      <p>În plus, discută din timp cu proiectantul și cu operatorul de distribuție despre pașii de racordare. Calendarul tehnic poate influența termenul de implementare, iar întârzierile nu sunt întotdeauna controlate de beneficiar. Un dosar bine pregătit include rezerve de timp și documente clare pentru fiecare etapă: proiectare, avizare, achiziție, montaj, punere în funcțiune și monitorizare.</p>
-      <p>Dacă proiectul include și măsuri de eficiență energetică, separă clar investițiile: ce reduce consumul, ce produce energie și ce monitorizează performanța. Această separare ajută la buget, la verificarea eligibilității și la demonstrarea impactului. Un proiect energetic bun este ușor de urmărit de la consumul inițial până la rezultatul estimat.</p>
-      <div class="note">Acest articol nu promite finanțare și nu înlocuiește ghidul solicitantului. Verifică apelul activ, documentele oficiale, condițiile tehnice și calendarul înainte să angajezi costuri.</div>
-      <h2>Întrebări frecvente</h2>
-      <div class="faq-item"><p class="faq-q">Pot finanța baterii de stocare?</p><p>Depinde de apel. Unele programe pot permite stocare, altele o limitează sau o condiționează tehnic. Verifică ghidul și schema de finanțare.</p></div>
-      <div class="faq-item"><p class="faq-q">Am nevoie de audit energetic?</p><p>În unele programe poate fi obligatoriu, în altele util pentru justificare. O analiză de consum ajută la dimensionarea corectă a investiției.</p></div>
-      <div class="faq-item"><p class="faq-q">Pot aplica dacă nu dețin clădirea?</p><p>Poate fi posibil dacă ai drept de folosință suficient și acordurile necesare, dar durata și forma contractului trebuie verificate conform ghidului.</p></div>
-      <div class="cta-box">
-        <h3>Pregătești o investiție în energie?</h3>
-        <p>Trimite-ne consumul, amplasamentul și investiția dorită. Verificăm ce program poate fi potrivit și ce documente trebuie pregătite.</p>
-        <a href="/contact" class="btn-cta">Solicită evaluare gratuită</a>
-      </div>
-          <div class="cta-box" data-official-guide-box hidden>
-        <h3>Ghid oficial</h3>
-        <p>Consultă documentele publicate de autoritatea programului înainte de depunere.</p>
-        <a class="btn-cta" data-official-guide-key="fondul-modernizare" data-official-guide-label="LINK GHID OFICIAL" hidden>LINK GHID OFICIAL</a>
-      </div>
-</article>
-  <section class="vezi-si-section" aria-labelledby="vezi-si-title">
-    <h2 id="vezi-si-title">Vezi și</h2>
-    <ul class="vezi-si">
-    <li><a href="/fonduri-europene/">Fonduri europene</a></li>
-    <li><a href="/consultanta-fonduri-europene/">Consultanță fonduri europene</a></li>
-    <li><a href="/calendar-fonduri-europene/">Calendar fonduri europene</a></li>
-    <li><a href="/consultanta-pnrr-digitalizare/">Consultanță PNRR și digitalizare</a></li>
-    <li><a href="/start-up-nation/">Start-Up Nation</a></li>
-    </ul>
-  </section>
+  <div class="breadcrumb"><a href="/">Acasa</a> / Fondul de Modernizare: finantari pentru energie, fotovoltaice si autoconsum</div>
+  <header class="hero">
+    <span class="eyebrow">Energie</span>
+    <h1>Fondul de Modernizare: finantari pentru energie, fotovoltaice si autoconsum</h1>
+    <p>Ghid Fondul de Modernizare pentru energie, fotovoltaice si autoconsum: eligibilitate, cheltuieli, documente, evaluare si pasi de aplicare.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="/verificare-eligibilitate-fonduri-europene">Verifica eligibilitatea</a>
+      <a class="btn btn-secondary" href="/contact">Discuta cu un consultant</a>
+    </div>
+  </header>
+  <main class="container">
+    <article class="panel">
 
+      <p id="speakable-summary" class="intro speakable" data-speakable="true">Cum pot obtine finantare pentru energie prin Fondul de Modernizare? Porneste de la consum, capacitatea propusa, amplasament, avize si documentele tehnice.</p>
+      <table class="program-table">
+    <tbody>
+      <tr><th>Program</th><td>Fondul de Modernizare - energie si autoconsum</td></tr>
+<tr><th>Pentru cine</th><td>firme si organizatii care pregatesc investitii in energie; beneficiari care au consum documentabil; proiecte cu fotovoltaice, stocare sau componente tehnice permise</td></tr>
+<tr><th>Finantare</th><td>valorile, intensitatile si plafoanele se confirma in apelul activ.</td></tr>
+<tr><th>Ce verifici intai</th><td>facturi sau date de consum; documente de proprietate sau folosinta; studiu tehnic sau solutie preliminara; avize si acorduri dupa caz</td></tr>
+<tr><th>CTA</th><td>verificare eligibilitate si discutie de consultanta</td></tr>
+    </tbody>
+  </table>
+      <h2>Pe scurt</h2>
+      <p>Fondul de Modernizare - energie si autoconsum trebuie analizat ca o decizie de investitie, nu doar ca o oportunitate de finantare. Inainte de orice buget, solicitantul trebuie sa verifice incadrarea, documentele, calendarul, costurile eligibile si riscurile care pot aparea la evaluare sau implementare.</p>
+      <p>Informatiile de pe aceasta pagina sunt construite pentru orientare practica. Ele nu promit aprobare si nu inlocuiesc verificarea apelului activ, a anexelor si a grilei de selectie. Scopul este sa poti pregati o discutie serioasa despre eligibilitate si dosar.</p>
+      <div class="grid">
+        <section class="mini-card"><h3>Cui se adreseaza</h3><ul><li>firme si organizatii care pregatesc investitii in energie</li>
+<li>beneficiari care au consum documentabil</li>
+<li>proiecte cu fotovoltaice, stocare sau componente tehnice permise</li></ul></section>
+        <section class="mini-card"><h3>Conditii de eligibilitate</h3><ul><li>beneficiarul trebuie sa se incadreze in categoria apelului</li>
+<li>amplasamentul si dreptul de folosinta trebuie documentate</li>
+<li>capacitatea propusa trebuie justificata</li>
+<li>racordarea, avizele si consumul trebuie analizate</li></ul></section>
+      </div>
+      <h2 id="speakable-eligibility" class="speakable" data-speakable="true">Eligibilitatea se verifica prin solicitant, activitate, documente si investitie.</h2>
+      <p>programul sustine tranzitia energetica, productia de energie regenerabila, autoconsumul si reducerea presiunii costurilor energetice pentru beneficiari eligibili. Aceasta contributie conteaza pentru modul in care este scris proiectul: obiectivele trebuie sa fie clare, cheltuielile sa fie explicate, iar rezultatele sa poata fi urmarite dupa contractare.</p>
+      <p>O eroare frecventa este pornirea de la lista de cumparaturi. Ordinea mai sigura este inversa: intai se verifica solicitantul, apoi activitatea, apoi locatia si documentele, iar abia dupa aceea se confirma echipamentele, serviciile sau lucrarile care pot intra in buget.</p>
+      <div class="grid">
+        <section class="mini-card"><h3>Conditii obligatorii</h3><ul><li>facturi sau date de consum</li>
+<li>documente de proprietate sau folosinta</li>
+<li>studiu tehnic sau solutie preliminara</li>
+<li>avize si acorduri dupa caz</li>
+<li>buget si oferte</li></ul></section>
+        <section class="mini-card"><h3>Investitii si cheltuieli eligibile</h3><ul><li>panouri fotovoltaice si echipamente conexe</li>
+<li>invertoare, structuri, cabluri si protectii</li>
+<li>stocare, daca este permisa</li>
+<li>servicii de proiectare si montaj</li>
+<li>echipamente de monitorizare</li></ul></section>
+      </div>
+      <h2>Cheltuieli neeligibile si riscuri</h2>
+      <p>Cheltuielile neeligibile sunt importante pentru cash-flow. Chiar daca un proiect primeste sprijin, beneficiarul poate ramane responsabil pentru costuri care nu se deconteaza, diferente de pret, TVA tratat separat sau cheltuieli respinse la verificare.</p>
+      <ul><li>capacitati nejustificate prin consum sau scop</li>
+<li>lucrari fara avize necesare</li>
+<li>achizitii incepute inainte de momentul permis</li>
+<li>costuri excluse de apel</li>
+<li>cheltuieli necorelate cu obiectivul energetic</li></ul>
+      <p>Riscurile apar mai ales cand documentele nu spun aceeasi poveste: codul CAEN descrie o activitate, oferta descrie alta activitate, iar planul de afaceri nu explica legatura dintre ele. De aceea, toate documentele trebuie citite impreuna, nu separat.</p>
+      <h2>Finantare, cofinantare si buget</h2>
+      <p>valorile, intensitatile si plafoanele se confirma in apelul activ. Pentru o decizie realista, bugetul trebuie impartit in cheltuieli eligibile, cheltuieli neeligibile, contributie proprie, posibile diferente de curs, costuri de implementare si rezerva pentru intarzieri.</p>
+      <p>Cand pregatesti bugetul, evita rotunjirile agresive si ofertele prea generale. Un evaluator trebuie sa poata intelege ce cumperi, de ce este necesar, cum contribuie la obiective si cum va fi folosit dupa finalizarea proiectului.</p>
+      <h2>Criterii de selectie si punctaj</h2>
+      <p>Grila de selectie transforma conditiile programului in prioritati concrete. Un proiect eligibil poate pierde daca nu are punctaj suficient, iar un proiect cu punctaj bun poate fi vulnerabil daca documentele de baza sunt incomplete.</p>
+      <ul><li>impact energetic</li>
+<li>maturitatea documentatiei</li>
+<li>eficienta investitiei</li>
+<li>capacitatea de implementare</li>
+<li>respectarea conditiilor tehnice</li></ul>
+      <p>In practica, punctajul se estimeaza inainte de depunere si se revizuieste dupa fiecare modificare de buget, investitie sau document. Daca o cheltuiala importanta nu sustine criteriile de selectie, ea trebuie justificata foarte clar sau eliminata.</p>
+      <h2>Pasi pentru pregatirea cererii</h2>
+      <ol><li>colecteaza facturi si date de consum</li>
+<li>verifica amplasamentul</li>
+<li>stabileste solutia tehnica</li>
+<li>pregateste avizele</li>
+<li>construieste bugetul</li>
+<li>depune cererea</li></ol>
+      <p>Pregatirea buna inseamna timp pentru clarificari, nu doar completarea formularelor. Documentele expirate, semnaturile lipsa, ofertele incomplete si fisierele incarcate gresit pot bloca proiecte care altfel ar avea o logica solida.</p>
+      <h2>Evaluare, contractare si plata</h2>
+      <p>Fluxul de dupa depunere trebuie inteles inainte de semnarea contractului. Evaluarea poate cere clarificari, contractarea poate impune termene stricte, iar plata depinde de documentele de achizitie, livrare, receptie si raportare.</p>
+      <ol><li>conformitate</li>
+<li>eligibilitate tehnica</li>
+<li>evaluare financiara</li>
+<li>contractare</li>
+<li>achizitii, montaj si plata</li></ol>
+      <p>Un proiect bun pastreaza trasabilitate de la cerere pana la plata: cerinta din ghid, cheltuiala din buget, oferta, contractul de achizitie, factura, dovada platii si rezultatul implementat trebuie sa fie coerente.</p>
+      <h2>Exemple de situatii aplicate</h2>
+      <p>Exemplele de mai jos sunt anonime si orientative. Ele arata tipul de rationament necesar, nu rezultate promise sau cazuri publicate cu date comerciale.</p>
+      <ul><li>un beneficiar cu consum predictibil poate proiecta o capacitate pentru autoconsum</li>
+<li>o unitate cu acoperis disponibil trebuie sa confirme structura si racordarea</li>
+<li>un proiect cu stocare trebuie analizat prin regulile apelului activ</li></ul>
+      <p>In fiecare exemplu, decizia corecta depinde de documente. Aceeasi investitie poate fi potrivita pentru un solicitant si nepotrivita pentru altul, in functie de activitate, locatie, istoric, buget si calendar.</p>
+
+
+      <h2>Intrebari frecvente</h2>
+      <section class="faq-item"><h3>Ce finanteaza Fondul de Modernizare?</h3><p>Finanteaza investitii in energie si eficienta energetica, in functie de apelul activ si categoria de beneficiar.</p></section>
+<section class="faq-item"><h3>Sunt eligibile panourile fotovoltaice?</h3><p>Pot fi eligibile daca apelul permite, daca solutia este justificata tehnic si daca documentele amplasamentului sunt clare.</p></section>
+<section class="faq-item"><h3>Am nevoie de facturi de consum?</h3><p>Pentru proiectele de autoconsum, datele de consum sunt foarte importante pentru dimensionare si justificare.</p></section>
+<section class="faq-item"><h3>Pot promite economie garantata?</h3><p>Nu. Estimarile energetice trebuie tratate realist si verificate tehnic.</p></section>
+      <h2 id="speakable-cta" class="speakable" data-speakable="true">Pentru o verificare initiala, trimite date despre solicitant, investitie, buget si programul urmarit.</h2>
+      <p>Daca proiectul implica sume, cheltuieli tehnice, conditii de varsta, cod CAEN, amplasament sau cofinantare, merita verificat inainte de depunere. O analiza initiala poate identifica rapid documentele lipsa si riscurile evidente.</p>
+<p>Pentru cautarile traditionale, continutul foloseste termeni apropiati de modul in care beneficiarii formuleaza intrebari: fonduri europene, eligibilitate, documente, cheltuieli eligibile, cofinantare, punctaj, dosar si consultanta. Pentru cautarile vocale, raspunsurile de la inceputul paginii sunt scurte, directe si vizibile.</p>
+<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
+<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
+<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
+<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
+<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
+<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
+<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
+<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
+<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
+<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
+<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
+<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
+<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
+<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
+<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
+<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
+<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
+<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
+<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
+<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
+<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
+<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
+<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
+<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
+<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
+<p>Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.</p>
+      <div class="related-links"><a href="/fondul-modernizare-energie-regenerabila-2026">Energie regenerabila 2026</a>
+<a href="/fondul-de-modernizare">Fondul de Modernizare</a>
+<a href="/finantari-panouri-fotovoltaice">Finantari panouri fotovoltaice</a>
+<a href="/afir-autoconsum-agroalimentar">AFIR autoconsum agroalimentar</a>
+<a href="/instrumente">Instrumente</a></div>
+    </article>
+    <section class="cta-box">
+      <h2>Urmatorul pas</h2>
+      <p>Trimite cateva detalii despre solicitant, localitate, cod CAEN, investitie si buget. Raspunsul initial este orientativ si nu reprezinta promisiune de finantare.</p>
+      <div class="cta-actions">
+        <a class="btn btn-primary" href="/contact">Trimite datele proiectului</a>
+        <a class="btn btn-secondary" href="/consultanta-fonduri-europene">Vezi serviciile</a>
+      </div>
+    </section>
   </main>
-  <footer class="footer">© 2026 FABER – Atelier de Consultanță · <a href="/fonduri-europene-nerambursabile-2026">Fonduri europene 2026</a></footer>
-  <script src="/assets/official-guides.min.js" defer></script>
+  <footer class="footer">© 2026 FABER - Atelier de Consultanta · <a href="/fonduri-europene">Fonduri europene</a> · <a href="/contact">Contact</a></footer>
 </body>
 </html>

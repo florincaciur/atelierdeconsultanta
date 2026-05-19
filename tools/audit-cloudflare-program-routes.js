@@ -8,15 +8,22 @@ const MAX_REDIRECTS = 10;
 
 const PROGRAM_ROUTES = [
   "/por-adr-nord-est",
+  "/investitii-modernizarea-microintreprinderilor-apel-2",
   "/dr12-afir",
   "/afir-autoconsum-agroalimentar",
   "/autoconsum-public-fotovoltaice-institutii-publice",
+  "/fondul-modernizare-energie-regenerabila-2026",
   "/dr14",
   "/digitalizare-imm",
   "/femeia-antreprenor-2026",
   "/pro-infra",
   "/start-up-nation-2026",
   "/calculator-soc",
+  "/instrumente",
+  "/resurse",
+  "/portofoliu",
+  "/testimoniale",
+  "/webinarii",
 ];
 
 function parseArgs() {
