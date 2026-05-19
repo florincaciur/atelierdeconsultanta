@@ -4,3 +4,10 @@ config/articol-*.json
 # Cloudflare Workers static asset build output.
 dist/
 .wrangler/
+
+# Local package installs.
+node_modules/
+
+# Local browser-saved page exports.
+FABER*Fonduri Europene.html
+FABER*Fonduri Europene_files/

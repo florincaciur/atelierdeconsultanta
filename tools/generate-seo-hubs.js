@@ -3,7 +3,7 @@ const path = require("path");
 
 const ROOT = path.resolve(__dirname, "..");
 const SITE = "https://atelierdeconsultanta.ro";
-const TODAY = "2026-05-07";
+const TODAY = "2026-05-11";
 const CANONICAL_ALIASES = new Map([
   ["/start-up-nation", "/start-up-nation-2026"],
   ["/consultanta-start-up-nation", "/consultanta-start-up-nation-2026"],
