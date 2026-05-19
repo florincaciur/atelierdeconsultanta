@@ -1,0 +1,1710 @@
+{
+  "generatedAt": "2026-05-19T16:04:43.753Z",
+  "mode": "check",
+  "changedFiles": [],
+  "summary": {
+    "totalFiles": 106,
+    "passedFiles": 106,
+    "failedFiles": 0
+  },
+  "inlineScripts": {
+    "checked": 86,
+    "failures": []
+  },
+  "results": [
+    {
+      "file": "404.html",
+      "pass": true,
+      "noindex": true,
+      "technicalFile": true,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Pagina nu a fost găsită"
+        ],
+        "missingAlt": [],
+        "relatedCount": 0,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "acte-necesare-fonduri-europene-nerambursabile.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Acte necesare pentru fonduri europene nerambursabile"
+        ],
+        "missingAlt": [],
+        "relatedCount": 1,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "admin/index.html",
+      "pass": true,
+      "noindex": true,
+      "technicalFile": true,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "FABER Admin Panel"
+        ],
+        "missingAlt": [],
+        "relatedCount": 0,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "afir-autoconsum-agroalimentar.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Panouri Fotovoltaice pentru Sectorul Agroalimentar"
+        ],
+        "missingAlt": [],
+        "relatedCount": 1,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "afir.html",
+      "pass": true,
+      "noindex": true,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "afir"
+        ],
+        "missingAlt": [],
+        "relatedCount": 0,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "afir/index.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "AFIR: fonduri pentru fermieri și proiecte agricole"
+        ],
+        "missingAlt": [],
+        "relatedCount": 2,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "autoconsum-public-fotovoltaice-institutii-publice.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Sisteme Fotovoltaice pentru Entități Publice"
+        ],
+        "missingAlt": [],
+        "relatedCount": 1,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "autoconsum-publici.html",
+      "pass": true,
+      "noindex": true,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "autoconsum public fotovoltaice institutii publice"
+        ],
+        "missingAlt": [],
+        "relatedCount": 0,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "blog-afir-fotovoltaice-ferme-2026.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "AFIR Fotovoltaice Ferme 2026 – Ghid Complet:Până la 500.000 Euro Nerambursabil"
+        ],
+        "missingAlt": [],
+        "relatedCount": 1,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "blog.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Blog despre fonduri europene, finanțări nerambursabile și programe pentru antreprenori"
+        ],
+        "missingAlt": [],
+        "relatedCount": 1,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "calculator-soc.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Calculator Standard Output (SO)"
+        ],
+        "missingAlt": [],
+        "relatedCount": 1,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "calendar-fonduri-europene.html",
+      "pass": true,
+      "noindex": true,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "calendar fonduri europene"
+        ],
+        "missingAlt": [],
+        "relatedCount": 0,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "calendar-fonduri-europene/index.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Calendar fonduri europene"
+        ],
+        "missingAlt": [],
+        "relatedCount": 2,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "cat-costa-consultanta-fonduri-europene.html",
+      "pass": true,
+      "noindex": true,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "cat costa consultanta fonduri europene"
+        ],
+        "missingAlt": [],
+        "relatedCount": 0,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "cat-costa-consultanta-fonduri-europene/index.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Cât costă consultanța pentru fonduri europene"
+        ],
+        "missingAlt": [],
+        "relatedCount": 2,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "cod-caen-start-up-nation-2026/index.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Cod CAEN Start-Up Nation 2026: cum verifici activitatea eligibilă"
+        ],
+        "missingAlt": [],
+        "relatedCount": 1,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "consultant-fonduri-europene-imm.html",
+      "pass": true,
+      "noindex": true,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "consultant fonduri europene imm"
+        ],
+        "missingAlt": [],
+        "relatedCount": 0,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "consultant-fonduri-europene-imm/index.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Consultant fonduri europene pentru IMM-uri"
+        ],
+        "missingAlt": [],
+        "relatedCount": 2,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "consultanta-afir.html",
+      "pass": true,
+      "noindex": true,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "consultanta afir"
+        ],
+        "missingAlt": [],
+        "relatedCount": 0,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "consultanta-afir/index.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Consultanță AFIR"
+        ],
+        "missingAlt": [],
+        "relatedCount": 2,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "consultanta-fonduri-europene.html",
+      "pass": true,
+      "noindex": true,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Consultanta fonduri europene"
+        ],
+        "missingAlt": [],
+        "relatedCount": 0,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "consultanta-fonduri-europene/index.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Consultanță fonduri europene pentru firme, fermieri și antreprenori"
+        ],
+        "missingAlt": [],
+        "relatedCount": 1,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "consultanta-pnrr-digitalizare.html",
+      "pass": true,
+      "noindex": true,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "consultanta pnrr digitalizare"
+        ],
+        "missingAlt": [],
+        "relatedCount": 0,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "consultanta-pnrr-digitalizare/index.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Consultanță PNRR digitalizare"
+        ],
+        "missingAlt": [],
+        "relatedCount": 2,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "consultanta-start-up-nation-2026/index.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Consultanță Start-Up Nation 2026: verificare, dosar și depunere"
+        ],
+        "missingAlt": [],
+        "relatedCount": 1,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "consultanta-start-up-nation.html",
+      "pass": true,
+      "noindex": true,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "consultanta start up nation 2026"
+        ],
+        "missingAlt": [],
+        "relatedCount": 0,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "consultanta-start-up-nation/index.html",
+      "pass": true,
+      "noindex": true,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Consultanta Start-Up Nation 2026"
+        ],
+        "missingAlt": [],
+        "relatedCount": 0,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "contact.html",
+      "pass": true,
+      "noindex": true,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Contact Atelier de Consultanta"
+        ],
+        "missingAlt": [],
+        "relatedCount": 0,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "contact/index.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Contact FABER"
+        ],
+        "missingAlt": [],
+        "relatedCount": 1,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "cum-alegi-consultant-fonduri-europene.html",
+      "pass": true,
+      "noindex": true,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "cum alegi consultant fonduri europene"
+        ],
+        "missingAlt": [],
+        "relatedCount": 0,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "cum-alegi-consultant-fonduri-europene/index.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Cum alegi un consultant pentru fonduri europene"
+        ],
+        "missingAlt": [],
+        "relatedCount": 2,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "cum-alegi-programul-potrivit-fonduri-europene-2026.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Cum alegi programul potrivit de fonduri europene în 2026"
+        ],
+        "missingAlt": [],
+        "relatedCount": 1,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "digitalizare-imm-pnrr.html",
+      "pass": true,
+      "noindex": true,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "digitalizare imm pnrr"
+        ],
+        "missingAlt": [],
+        "relatedCount": 0,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "digitalizare-imm-pnrr/index.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Digitalizare IMM / PNRR"
+        ],
+        "missingAlt": [],
+        "relatedCount": 1,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "digitalizare-imm.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Digitalizare IMM 2026"
+        ],
+        "missingAlt": [],
+        "relatedCount": 1,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "dr-12-afir-instalarea-tinerilor-fermieri.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "DR 12 AFIR și instalarea tinerilor fermieri: ce trebuie pregătit"
+        ],
+        "missingAlt": [],
+        "relatedCount": 1,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "dr-14-afir-conditii-eligibilitate-greseli-frecvente.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "DR 14 AFIR: condiții, eligibilitate și greșeli frecvente"
+        ],
+        "missingAlt": [],
+        "relatedCount": 1,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "dr12-afir.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "DR 12 AFIR – Tineri Fermieri și Fermieri până la 45 de ani"
+        ],
+        "missingAlt": [],
+        "relatedCount": 1,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "dr14.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "DR 14 AFIR pentru ferme mici care vor sa creasca sanatos"
+        ],
+        "missingAlt": [],
+        "relatedCount": 1,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "eligibilitate-fonduri-europene.html",
+      "pass": true,
+      "noindex": true,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "eligibilitate fonduri europene"
+        ],
+        "missingAlt": [],
+        "relatedCount": 0,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "eligibilitate-fonduri-europene/index.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Eligibilitate fonduri europene"
+        ],
+        "missingAlt": [],
+        "relatedCount": 2,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "femeia-antreprenor-2026-conditii-idei-afaceri.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Femeia Antreprenor 2026: condiții, idei de afaceri și pregătire"
+        ],
+        "missingAlt": [],
+        "relatedCount": 1,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "femeia-antreprenor-2026.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Finanțare Nerambursabilă pentru IMM-uri Conduse de Femei"
+        ],
+        "missingAlt": [],
+        "relatedCount": 1,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "femeia-antreprenor-2026/index.html",
+      "pass": true,
+      "noindex": true,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Femeia Antreprenor 2026"
+        ],
+        "missingAlt": [],
+        "relatedCount": 0,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "finantari-panouri-fotovoltaice.html",
+      "pass": true,
+      "noindex": true,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "finantari panouri fotovoltaice"
+        ],
+        "missingAlt": [],
+        "relatedCount": 0,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "finantari-panouri-fotovoltaice/index.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Finanțări pentru panouri fotovoltaice"
+        ],
+        "missingAlt": [],
+        "relatedCount": 2,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "firma-consultanta-fonduri-europene.html",
+      "pass": true,
+      "noindex": true,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "firma consultanta fonduri europene"
+        ],
+        "missingAlt": [],
+        "relatedCount": 0,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "firma-consultanta-fonduri-europene/index.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Firmă de consultanță pentru fonduri europene"
+        ],
+        "missingAlt": [],
+        "relatedCount": 2,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Fondul de Modernizare: finanțări pentru energie, fotovoltaice și autoconsum"
+        ],
+        "missingAlt": [],
+        "relatedCount": 1,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "fondul-de-modernizare.html",
+      "pass": true,
+      "noindex": true,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "fondul de modernizare"
+        ],
+        "missingAlt": [],
+        "relatedCount": 0,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "fondul-de-modernizare/index.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Fondul de Modernizare: index pentru măsurile de finanțare"
+        ],
+        "missingAlt": [],
+        "relatedCount": 1,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "fonduri-europene-agricultura.html",
+      "pass": true,
+      "noindex": true,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "fonduri europene agricultura"
+        ],
+        "missingAlt": [],
+        "relatedCount": 0,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "fonduri-europene-agricultura/index.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Fonduri europene pentru agricultură"
+        ],
+        "missingAlt": [],
+        "relatedCount": 2,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "fonduri-europene-digitalizare.html",
+      "pass": true,
+      "noindex": true,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "fonduri europene digitalizare"
+        ],
+        "missingAlt": [],
+        "relatedCount": 0,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "fonduri-europene-digitalizare/index.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Fonduri europene pentru digitalizare"
+        ],
+        "missingAlt": [],
+        "relatedCount": 2,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "fonduri-europene-femei-antreprenor.html",
+      "pass": true,
+      "noindex": true,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "fonduri europene femei antreprenor"
+        ],
+        "missingAlt": [],
+        "relatedCount": 0,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "fonduri-europene-femei-antreprenor/index.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Fonduri europene pentru femei antreprenor"
+        ],
+        "missingAlt": [],
+        "relatedCount": 2,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "fonduri-europene-herambursabile-2026.html",
+      "pass": true,
+      "noindex": true,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "fonduri europene nerambursabile 2026"
+        ],
+        "missingAlt": [],
+        "relatedCount": 0,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "fonduri-europene-herambursabile-2026/index.html",
+      "pass": true,
+      "noindex": true,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "fonduri europene nerambursabile 2026"
+        ],
+        "missingAlt": [],
+        "relatedCount": 0,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "fonduri-europene-imm.html",
+      "pass": true,
+      "noindex": true,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "fonduri europene imm"
+        ],
+        "missingAlt": [],
+        "relatedCount": 0,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "fonduri-europene-imm/index.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Fonduri europene pentru IMM-uri"
+        ],
+        "missingAlt": [],
+        "relatedCount": 2,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "fonduri-europene-nerambursabile-2026.html",
+      "pass": true,
+      "noindex": true,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "fonduri europene nerambursabile 2026"
+        ],
+        "missingAlt": [],
+        "relatedCount": 0,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "fonduri-europene-nerambursabile-2026/index.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Fonduri europene nerambursabile 2026"
+        ],
+        "missingAlt": [],
+        "relatedCount": 1,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "fonduri-europene.html",
+      "pass": true,
+      "noindex": true,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "fonduri europene"
+        ],
+        "missingAlt": [],
+        "relatedCount": 0,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "fonduri-europene/index.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Fonduri europene în România"
+        ],
+        "missingAlt": [],
+        "relatedCount": 2,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "fonduri-nerambursabile.html",
+      "pass": true,
+      "noindex": true,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "fonduri nerambursabile"
+        ],
+        "missingAlt": [],
+        "relatedCount": 0,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "fonduri-nerambursabile/index.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Fonduri nerambursabile"
+        ],
+        "missingAlt": [],
+        "relatedCount": 2,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "fonduri-pentru-ferme.html",
+      "pass": true,
+      "noindex": true,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "fonduri pentru ferme"
+        ],
+        "missingAlt": [],
+        "relatedCount": 0,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "fonduri-pentru-ferme/index.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Fonduri pentru ferme"
+        ],
+        "missingAlt": [],
+        "relatedCount": 2,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "fonduri-pentru-utilaje-agricole.html",
+      "pass": true,
+      "noindex": true,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "fonduri pentru utilaje agricole"
+        ],
+        "missingAlt": [],
+        "relatedCount": 0,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "fonduri-pentru-utilaje-agricole/index.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Fonduri pentru utilaje agricole"
+        ],
+        "missingAlt": [],
+        "relatedCount": 2,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "gdpr.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Politica GDPR"
+        ],
+        "missingAlt": [],
+        "relatedCount": 0,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "ghiduri.html",
+      "pass": true,
+      "noindex": true,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "ghiduri"
+        ],
+        "missingAlt": [],
+        "relatedCount": 0,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "ghiduri/index.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Ghiduri pentru fonduri europene"
+        ],
+        "missingAlt": [],
+        "relatedCount": 2,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "google8bbb9999c523a3bd.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": true,
+      "issues": [],
+      "details": {
+        "h1Count": 0,
+        "h1s": [],
+        "missingAlt": [],
+        "relatedCount": 0,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "granturi-digitalizare-imm.html",
+      "pass": true,
+      "noindex": true,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "granturi digitalizare imm"
+        ],
+        "missingAlt": [],
+        "relatedCount": 0,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "granturi-digitalizare-imm/index.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Granturi pentru digitalizarea IMM-urilor"
+        ],
+        "missingAlt": [],
+        "relatedCount": 2,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "greseli-fonduri-europene.html",
+      "pass": true,
+      "noindex": true,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "greseli fonduri europene"
+        ],
+        "missingAlt": [],
+        "relatedCount": 0,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "greseli-fonduri-europene/index.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Greșeli frecvente la fonduri europene"
+        ],
+        "missingAlt": [],
+        "relatedCount": 2,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "idei-afaceri-fonduri-europene.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Idei de afaceri cu fonduri europene"
+        ],
+        "missingAlt": [],
+        "relatedCount": 1,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "index.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Transformăm ideile tale în Transformăm ideiletale în proiecte finanțate"
+        ],
+        "missingAlt": [],
+        "relatedCount": 1,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "intrebari-frecvente.html",
+      "pass": true,
+      "noindex": true,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "intrebari frecvente"
+        ],
+        "missingAlt": [],
+        "relatedCount": 0,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "intrebari-frecvente/index.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Întrebări frecvente despre fonduri europene"
+        ],
+        "missingAlt": [],
+        "relatedCount": 2,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "pnrr-digitalizare-imm-cheltuieli-eligibile.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "PNRR Digitalizare IMM: ce poți cumpăra prin finanțare"
+        ],
+        "missingAlt": [],
+        "relatedCount": 1,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "pnrr.html",
+      "pass": true,
+      "noindex": true,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "pnrr"
+        ],
+        "missingAlt": [],
+        "relatedCount": 0,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "pnrr/index.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "PNRR pentru IMM-uri și proiecte de digitalizare"
+        ],
+        "missingAlt": [],
+        "relatedCount": 2,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "politica-de-confidentialitate.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Politica de Confidențialitate"
+        ],
+        "missingAlt": [],
+        "relatedCount": 0,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "por-adr-nord-est.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "POR Micro: Investiții pentru Modernizarea Microîntreprinderilor"
+        ],
+        "missingAlt": [],
+        "relatedCount": 1,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "pro-infra.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "PRO INFRA – Materiale de Construcții pentru Infrastructura de Transport"
+        ],
+        "missingAlt": [],
+        "relatedCount": 1,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "start-up-nation-2026-cheltuieli-eligibile.html",
+      "pass": true,
+      "noindex": true,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "start up nation 2026 cheltuieli eligibile"
+        ],
+        "missingAlt": [],
+        "relatedCount": 0,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "start-up-nation-2026-cheltuieli-eligibile/index.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Start-Up Nation 2026: cheltuieli eligibile"
+        ],
+        "missingAlt": [],
+        "relatedCount": 2,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "start-up-nation-2026-conditii.html",
+      "pass": true,
+      "noindex": true,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "start up nation 2026 conditii"
+        ],
+        "missingAlt": [],
+        "relatedCount": 0,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "start-up-nation-2026-conditii/index.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Start-Up Nation 2026: condiții de verificat"
+        ],
+        "missingAlt": [],
+        "relatedCount": 2,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "start-up-nation-2026-idei-afaceri-plan.html",
+      "pass": true,
+      "noindex": true,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "start up nation 2026 idei afaceri"
+        ],
+        "missingAlt": [],
+        "relatedCount": 0,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "start-up-nation-2026-idei-afaceri.html",
+      "pass": true,
+      "noindex": true,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "start up nation 2026 idei afaceri"
+        ],
+        "missingAlt": [],
+        "relatedCount": 0,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "start-up-nation-2026-idei-afaceri/index.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Start-Up Nation 2026: idei de afaceri"
+        ],
+        "missingAlt": [],
+        "relatedCount": 2,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "start-up-nation-2026-plan-de-afaceri.html",
+      "pass": true,
+      "noindex": true,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "start up nation 2026 plan de afaceri"
+        ],
+        "missingAlt": [],
+        "relatedCount": 0,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "start-up-nation-2026-plan-de-afaceri/index.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Start-Up Nation 2026: plan de afaceri"
+        ],
+        "missingAlt": [],
+        "relatedCount": 2,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "start-up-nation-2026.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Start-Up Nation 2026: condiții, finanțare, cheltuieli eligibile și pași de pregătire"
+        ],
+        "missingAlt": [],
+        "relatedCount": 1,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "start-up-nation-2026/index.html",
+      "pass": true,
+      "noindex": true,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Start-Up Nation 2026"
+        ],
+        "missingAlt": [],
+        "relatedCount": 0,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "start-up-nation.html",
+      "pass": true,
+      "noindex": true,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "start up nation 2026"
+        ],
+        "missingAlt": [],
+        "relatedCount": 0,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "start-up-nation/index.html",
+      "pass": true,
+      "noindex": true,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Start-Up Nation 2026"
+        ],
+        "missingAlt": [],
+        "relatedCount": 0,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "studii-de-caz.html",
+      "pass": true,
+      "noindex": true,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "studii de caz"
+        ],
+        "missingAlt": [],
+        "relatedCount": 0,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "studii-de-caz/index.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Studii de caz pentru fonduri europene"
+        ],
+        "missingAlt": [],
+        "relatedCount": 2,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "termeni-si-conditii.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Termeni și Condiții"
+        ],
+        "missingAlt": [],
+        "relatedCount": 0,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "verificare-eligibilitate-fonduri-europene/index.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Verificare eligibilitate fonduri europene"
+        ],
+        "missingAlt": [],
+        "relatedCount": 1,
+        "jsonLdErrors": []
+      }
+    }
+  ]
+}

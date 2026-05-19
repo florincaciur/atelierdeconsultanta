@@ -1,0 +1,281 @@
+{
+  "generatedAt": "2026-05-19T16:04:49.948Z",
+  "mode": "check",
+  "baseUrl": "http://127.0.0.1:49157",
+  "summary": {
+    "checked": 21,
+    "passed": 21,
+    "failed": 0
+  },
+  "pages": [
+    {
+      "page": "/",
+      "status": 200,
+      "pass": true,
+      "errors": [],
+      "dom": {
+        "title": "Atelier de Consultanță | Fonduri Europene și Finanțări Nerambursabile",
+        "h1Count": 1,
+        "seeAlsoCards": 5,
+        "programCluster": 0,
+        "overflow": 0
+      },
+      "screenshot": "reports/functional-screenshots/home.png"
+    },
+    {
+      "page": "/contact",
+      "status": 200,
+      "pass": true,
+      "errors": [],
+      "dom": {
+        "title": "Contact Atelier de Consultanță | Evaluare Eligibilitate Fonduri Europene",
+        "h1Count": 1,
+        "seeAlsoCards": 5,
+        "programCluster": 0,
+        "overflow": 0
+      },
+      "screenshot": "reports/functional-screenshots/contact.png"
+    },
+    {
+      "page": "/fonduri-europene",
+      "status": 200,
+      "pass": true,
+      "errors": [],
+      "dom": {
+        "title": "Fonduri Europene în România | Ghid pentru IMM-uri și antreprenori",
+        "h1Count": 1,
+        "seeAlsoCards": 4,
+        "programCluster": 1,
+        "overflow": 0
+      },
+      "screenshot": "reports/functional-screenshots/fonduri-europene.png"
+    },
+    {
+      "page": "/consultanta-fonduri-europene",
+      "status": 200,
+      "pass": true,
+      "errors": [],
+      "dom": {
+        "title": "Consultanță fonduri europene pentru firme și antreprenori",
+        "h1Count": 1,
+        "seeAlsoCards": 4,
+        "programCluster": 1,
+        "overflow": 0
+      },
+      "screenshot": "reports/functional-screenshots/consultanta-fonduri-europene.png"
+    },
+    {
+      "page": "/calendar-fonduri-europene",
+      "status": 200,
+      "pass": true,
+      "errors": [],
+      "dom": {
+        "title": "Calendar Fonduri Europene | Programe și Pregătire Dosare",
+        "h1Count": 1,
+        "seeAlsoCards": 4,
+        "programCluster": 1,
+        "overflow": 0
+      },
+      "screenshot": "reports/functional-screenshots/calendar-fonduri-europene.png"
+    },
+    {
+      "page": "/consultanta-pnrr-digitalizare",
+      "status": 200,
+      "pass": true,
+      "errors": [],
+      "dom": {
+        "title": "Consultanță PNRR Digitalizare | Eligibilitate și Dosar IMM",
+        "h1Count": 1,
+        "seeAlsoCards": 4,
+        "programCluster": 1,
+        "overflow": 0
+      },
+      "screenshot": "reports/functional-screenshots/consultanta-pnrr-digitalizare.png"
+    },
+    {
+      "page": "/start-up-nation-2026",
+      "status": 200,
+      "pass": true,
+      "errors": [],
+      "dom": {
+        "title": "Start-Up Nation 2026: condiții, finanțare și cheltuieli eligibile",
+        "h1Count": 1,
+        "seeAlsoCards": 4,
+        "programCluster": 1,
+        "overflow": 0
+      },
+      "screenshot": "reports/functional-screenshots/start-up-nation-2026.png"
+    },
+    {
+      "page": "/por-adr-nord-est",
+      "status": 200,
+      "pass": true,
+      "errors": [],
+      "dom": {
+        "title": "POR Micro Nord-Est 2021-2027 | FABER Consultanță",
+        "h1Count": 1,
+        "seeAlsoCards": 5,
+        "programCluster": 1,
+        "overflow": 0
+      },
+      "screenshot": "reports/functional-screenshots/por-adr-nord-est.png"
+    },
+    {
+      "page": "/dr12-afir",
+      "status": 200,
+      "pass": true,
+      "errors": [],
+      "dom": {
+        "title": "DR 12 AFIR – Instalarea Tinerilor Fermieri | FABER",
+        "h1Count": 1,
+        "seeAlsoCards": 5,
+        "programCluster": 1,
+        "overflow": 0
+      },
+      "screenshot": "reports/functional-screenshots/dr12-afir.png"
+    },
+    {
+      "page": "/afir-autoconsum-agroalimentar",
+      "status": 200,
+      "pass": true,
+      "errors": [],
+      "dom": {
+        "title": "AFIR Autoconsum Agroalimentar – Fotovoltaice | FABER",
+        "h1Count": 1,
+        "seeAlsoCards": 5,
+        "programCluster": 1,
+        "overflow": 0
+      },
+      "screenshot": "reports/functional-screenshots/afir-autoconsum-agroalimentar.png"
+    },
+    {
+      "page": "/autoconsum-public-fotovoltaice-institutii-publice",
+      "status": 200,
+      "pass": true,
+      "errors": [],
+      "dom": {
+        "title": "Fotovoltaice Entități Publice | Fondul de Modernizare",
+        "h1Count": 1,
+        "seeAlsoCards": 5,
+        "programCluster": 1,
+        "overflow": 0
+      },
+      "screenshot": "reports/functional-screenshots/autoconsum-public-fotovoltaice-institutii-publice.png"
+    },
+    {
+      "page": "/dr14",
+      "status": 200,
+      "pass": true,
+      "errors": [],
+      "dom": {
+        "title": "DR 14 AFIR | Ferme mici, apicultura si calculator punctaj",
+        "h1Count": 1,
+        "seeAlsoCards": 5,
+        "programCluster": 1,
+        "overflow": 0
+      },
+      "screenshot": "reports/functional-screenshots/dr14.png"
+    },
+    {
+      "page": "/digitalizare-imm",
+      "status": 200,
+      "pass": true,
+      "errors": [],
+      "dom": {
+        "title": "Digitalizare IMM 2026 | FABER – Atelier de Consultanță",
+        "h1Count": 1,
+        "seeAlsoCards": 5,
+        "programCluster": 1,
+        "overflow": 0
+      },
+      "screenshot": "reports/functional-screenshots/digitalizare-imm.png"
+    },
+    {
+      "page": "/femeia-antreprenor-2026",
+      "status": 200,
+      "pass": true,
+      "errors": [],
+      "dom": {
+        "title": "Femeia Antreprenor 2026 – Finanțare IMM | FABER",
+        "h1Count": 1,
+        "seeAlsoCards": 5,
+        "programCluster": 1,
+        "overflow": 0
+      },
+      "screenshot": "reports/functional-screenshots/femeia-antreprenor-2026.png"
+    },
+    {
+      "page": "/pro-infra",
+      "status": 200,
+      "pass": true,
+      "errors": [],
+      "dom": {
+        "title": "PRO INFRA – Materiale Construcții Infrastructură | FABER",
+        "h1Count": 1,
+        "seeAlsoCards": 5,
+        "programCluster": 1,
+        "overflow": 0
+      },
+      "screenshot": "reports/functional-screenshots/pro-infra.png"
+    },
+    {
+      "page": "/calculator-soc",
+      "status": 200,
+      "pass": true,
+      "errors": [],
+      "dom": {
+        "title": "Calculator SO AFIR DR12 DR14 | FABER",
+        "h1Count": 1,
+        "seeAlsoCards": 5,
+        "programCluster": 1,
+        "overflow": 0
+      },
+      "screenshot": "reports/functional-screenshots/calculator-soc.png"
+    },
+    {
+      "page": "/fondul-de-modernizare",
+      "status": 200,
+      "pass": true,
+      "errors": [],
+      "dom": {
+        "title": "Fondul de Modernizare | Index măsuri de finanțare",
+        "h1Count": 1,
+        "seeAlsoCards": 5,
+        "programCluster": 1,
+        "overflow": 0
+      },
+      "screenshot": "reports/functional-screenshots/fondul-de-modernizare.png"
+    },
+    {
+      "page": "/fonduri-europene-digitalizare",
+      "status": 200,
+      "pass": true,
+      "errors": [],
+      "dom": {
+        "title": "Fonduri Europene Digitalizare | PNRR și Granturi pentru IMM-uri",
+        "h1Count": 1,
+        "seeAlsoCards": 4,
+        "programCluster": 1,
+        "overflow": 0
+      },
+      "screenshot": "reports/functional-screenshots/fonduri-europene-digitalizare.png"
+    }
+  ],
+  "interactions": [
+    {
+      "name": "contact-form",
+      "pass": true,
+      "message": "success message visible"
+    },
+    {
+      "name": "calculator-so",
+      "pass": true,
+      "message": "total SO: 490"
+    },
+    {
+      "name": "dr14-score",
+      "pass": true,
+      "message": "DR14 score: 20"
+    }
+  ]
+}

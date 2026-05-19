@@ -15,20 +15,20 @@ SKIPPED_SLUGS = {
 }
 
 HUB_LINKS = {
-    "fonduri-europene": ("/fonduri-europene/", "Fonduri europene"),
+    "fonduri-europene": ("/fonduri-europene", "Fonduri europene"),
     "consultanta-fonduri-europene": (
-        "/consultanta-fonduri-europene/",
+        "/consultanta-fonduri-europene",
         "Consultanță fonduri europene",
     ),
     "calendar-fonduri-europene": (
-        "/calendar-fonduri-europene/",
+        "/calendar-fonduri-europene",
         "Calendar fonduri europene",
     ),
     "consultanta-pnrr-digitalizare": (
-        "/consultanta-pnrr-digitalizare/",
+        "/consultanta-pnrr-digitalizare",
         "Consultanță PNRR și digitalizare",
     ),
-    "start-up-nation": ("/start-up-nation/", "Start-Up Nation"),
+    "start-up-nation": ("/start-up-nation-2026", "Start-Up Nation"),
 }
 
 
