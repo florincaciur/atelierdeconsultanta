@@ -112,6 +112,9 @@ const CANONICAL_DIRECTORY_HTML_ROUTES = [
   "instrumente",
   "resurse",
   "webinarii",
+  "metodologie-verificare-eligibilitate",
+  "surse-oficiale-fonduri-europene",
+  "glosar-fonduri-europene",
 ];
 
 function posixPath(value) {

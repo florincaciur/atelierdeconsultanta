@@ -86,6 +86,99 @@
       "status": "in_curs_de_verificare",
       "readingTime": 8,
       "lastVerifiedAt": "TODO_DATA_ACCESARII"
+    },
+    {
+      "title": "Metodologia FABER pentru verificarea eligibilitatii la fonduri europene",
+      "description": "Metodologie editoriala pentru analiza eligibilitatii: cod CAEN, forma juridica, vechime, datorii, punctaj, cofinantare, documente si riscuri.",
+      "slug": "metodologie-verificare-eligibilitate",
+      "pageType": "editorial",
+      "primaryKeyword": "metodologie verificare eligibilitate fonduri europene",
+      "secondaryKeywords": [
+        "verificare eligibilitate fonduri europene",
+        "cod CAEN fonduri europene",
+        "cofinantare fonduri europene",
+        "punctaj fonduri europene"
+      ],
+      "author": "FABER - Atelier de Consultanta",
+      "reviewer": "TODO_CLIENT_REVIEWER",
+      "publishedAt": "2026-05-20",
+      "updatedAt": "2026-05-20",
+      "officialSources": [
+        {
+          "url": "https://mfe.gov.ro/",
+          "title": "MIPE - Fonduri europene",
+          "accessedAt": "2026-05-20"
+        }
+      ],
+      "status": "actualizat",
+      "readingTime": 7,
+      "lastVerifiedAt": "2026-05-20"
+    },
+    {
+      "title": "Surse oficiale pentru fonduri europene si finantari nerambursabile",
+      "description": "Tabel editorial cu surse oficiale pentru AFIR, MIPE, ADR Nord-Est, PNRR, Start-Up Nation si alte institutii folosite in analiza proiectelor.",
+      "slug": "surse-oficiale-fonduri-europene",
+      "pageType": "editorial",
+      "primaryKeyword": "surse oficiale fonduri europene",
+      "secondaryKeywords": [
+        "AFIR oficial",
+        "MIPE fonduri europene",
+        "ADR Nord-Est oficial",
+        "PNRR oficial",
+        "Start-Up Nation minister"
+      ],
+      "author": "FABER - Atelier de Consultanta",
+      "reviewer": "TODO_CLIENT_REVIEWER",
+      "publishedAt": "2026-05-20",
+      "updatedAt": "2026-05-20",
+      "officialSources": [
+        {
+          "url": "https://www.afir.ro/",
+          "title": "AFIR",
+          "accessedAt": "2026-05-20"
+        },
+        {
+          "url": "https://mfe.gov.ro/",
+          "title": "MIPE",
+          "accessedAt": "2026-05-20"
+        },
+        {
+          "url": "https://adrnordest.ro/",
+          "title": "ADR Nord-Est",
+          "accessedAt": "2026-05-20"
+        }
+      ],
+      "status": "actualizat",
+      "readingTime": 5,
+      "lastVerifiedAt": "2026-05-20"
+    },
+    {
+      "title": "Glosar fonduri europene: termeni explicati simplu",
+      "description": "Glosar editorial cu definitii scurte pentru solicitant, beneficiar, eligibilitate, cofinantare, punctaj, CAEN, IMM si ajutor de stat.",
+      "slug": "glosar-fonduri-europene",
+      "pageType": "editorial",
+      "primaryKeyword": "glosar fonduri europene",
+      "secondaryKeywords": [
+        "termeni fonduri europene",
+        "eligibilitate definitie",
+        "cofinantare definitie",
+        "ajutor de minimis",
+        "ajutor de stat"
+      ],
+      "author": "FABER - Atelier de Consultanta",
+      "reviewer": "TODO_CLIENT_REVIEWER",
+      "publishedAt": "2026-05-20",
+      "updatedAt": "2026-05-20",
+      "officialSources": [
+        {
+          "url": "https://mfe.gov.ro/",
+          "title": "MIPE - Fonduri europene",
+          "accessedAt": "2026-05-20"
+        }
+      ],
+      "status": "actualizat",
+      "readingTime": 5,
+      "lastVerifiedAt": "2026-05-20"
     }
   ]
 }
