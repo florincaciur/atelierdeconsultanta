@@ -16,7 +16,7 @@
   <meta property="og:url" content="https://atelierdeconsultanta.ro/idei-afaceri-fonduri-europene" />
   <meta property="og:image" content="https://atelierdeconsultanta.ro/og-image.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
-  <link rel="stylesheet" href="/assets/seo-hub.css" />
+  <link rel="stylesheet" href="/assets/seo-hub.min.css" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -107,7 +107,9 @@
   }
   </script>
   <style>
-    .content-table{width:100%;border-collapse:collapse;margin:18px 0 28px;background:#fff}
+    .table-scroll{width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;margin:18px 0 28px}
+    .content-table{width:100%;border-collapse:collapse;margin:0;background:#fff}
+    .table-scroll .content-table{min-width:720px}
     .content-table th,.content-table td{border:1px solid #e6eaf0;padding:12px;text-align:left;vertical-align:top}
     .content-table th{background:#f8f9fb;color:#0d1f3c;font-weight:800}
     .idea-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:18px 0 26px;padding:0;list-style:none}
@@ -173,6 +175,7 @@
       <h2>Programe care pot fi relevante</h2>
       <p>Programele se schimbă de la an la an, iar condițiile finale se confirmă doar prin ghidul publicat pentru apelul activ. Totuși, pentru orientare, poți grupa ideile după tipul de finanțare. O firmă care vrea utilaje productive va urmări de obicei programe regionale sau scheme pentru IMM-uri. O afacere agricolă va analiza AFIR și Planul Strategic PAC. O firmă care vrea software, echipamente IT și automatizări va urmări granturi de digitalizare sau apeluri PNRR, atunci când sunt disponibile.</p>
 
+      <div class="table-scroll" role="region" aria-label="Programe care pot fi relevante">
       <table class="content-table">
         <thead>
           <tr>
@@ -209,6 +212,7 @@
           </tr>
         </tbody>
       </table>
+      </div>
 
       <h2>Idei bune care pot eșua la finanțare</h2>
       <p>O idee poate fi bună comercial, dar slabă pentru un anumit program. De exemplu, o activitate cu cerere mare poate fi exclusă prin cod CAEN. O investiție utilă poate avea prea multe cheltuieli neeligibile. O afacere locală poate fi într-o regiune în care apelul nu este deschis. Uneori, problema nu este ideea, ci sincronizarea: documentele nu sunt pregătite, spațiul nu este clarificat, contribuția proprie nu este disponibilă sau ofertele tehnice sunt incomplete.</p>

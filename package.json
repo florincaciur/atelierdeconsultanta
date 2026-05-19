@@ -1,10 +1,20 @@
 {
   "scripts": {
+    "optimize:assets": "node scripts/optimize-assets.js",
+    "verify:seo": "node scripts/verify-seo-integrity.js",
+    "verify:visual": "node scripts/visual-integrity-check.js",
     "build": "node tools/build-cloudflare-assets.js",
     "validate:cloudflare": "node tools/validate-cloudflare-deploy.js",
     "audit:program-routes": "node tools/audit-cloudflare-program-routes.js",
     "audit:gsc-routes": "node tools/audit-gsc-routes.js",
     "deploy": "npm run build && npm run validate:cloudflare && npx wrangler deploy",
     "deploy:pages": "npm run build && npm run validate:cloudflare && npx wrangler pages deploy dist"
+  },
+  "devDependencies": {
+    "cheerio": "^1.2.0",
+    "clean-css": "^5.3.3",
+    "playwright": "^1.60.0",
+    "sharp": "^0.34.5",
+    "terser": "^5.47.1"
   }
 }

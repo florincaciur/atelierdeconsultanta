@@ -1,0 +1,3618 @@
+{
+  "generatedAt": "2026-05-19T12:52:29.526Z",
+  "root": "C:\\Users\\flori\\Documents\\Claude\\Projects\\atelierdeconsultanta-main",
+  "summary": {
+    "totalFiles": 106,
+    "passedFiles": 106,
+    "failedFiles": 0,
+    "checks": {
+      "metaDescription": {
+        "pass": 106,
+        "fail": 0
+      },
+      "canonical": {
+        "pass": 106,
+        "fail": 0
+      },
+      "imageAltAttributes": {
+        "pass": 106,
+        "fail": 0
+      },
+      "singleH1": {
+        "pass": 106,
+        "fail": 0
+      },
+      "relatedLinks": {
+        "pass": 106,
+        "fail": 0
+      }
+    }
+  },
+  "results": [
+    {
+      "file": "404.html",
+      "noindex": true,
+      "technicalFile": true,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "note": "technical verification page"
+        },
+        "canonical": {
+          "status": "pass",
+          "note": "technical verification page"
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "note": "technical verification page"
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": false,
+          "note": "technical verification page"
+        }
+      }
+    },
+    {
+      "file": "acte-necesare-fonduri-europene-nerambursabile.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Acte necesare pentru fonduri europene nerambursabile"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 3
+        }
+      }
+    },
+    {
+      "file": "admin/index.html",
+      "noindex": true,
+      "technicalFile": true,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "note": "technical verification page"
+        },
+        "canonical": {
+          "status": "pass",
+          "note": "technical verification page"
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "note": "technical verification page"
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": false,
+          "note": "technical verification page"
+        }
+      }
+    },
+    {
+      "file": "afir-autoconsum-agroalimentar.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Panouri Fotovoltaice pentru Sectorul Agroalimentar"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 3
+        }
+      }
+    },
+    {
+      "file": "afir.html",
+      "noindex": true,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 0,
+          "note": "noindex page: meta description is optional"
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "afir"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": false,
+          "count": 0,
+          "note": "not a hub/blog page"
+        }
+      }
+    },
+    {
+      "file": "afir/index.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "AFIR: fonduri pentru fermieri și proiecte agricole"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 4
+        }
+      }
+    },
+    {
+      "file": "autoconsum-public-fotovoltaice-institutii-publice.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Sisteme Fotovoltaice pentru Entități Publice"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": false,
+          "count": 3,
+          "note": "not a hub/blog page"
+        }
+      }
+    },
+    {
+      "file": "autoconsum-publici.html",
+      "noindex": true,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 0,
+          "note": "noindex page: meta description is optional"
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "autoconsum public fotovoltaice institutii publice"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": false,
+          "count": 0,
+          "note": "not a hub/blog page"
+        }
+      }
+    },
+    {
+      "file": "blog-afir-fotovoltaice-ferme-2026.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "AFIR Fotovoltaice Ferme 2026 – Ghid Complet:Până la 500.000 Euro Nerambursabil"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 3
+        }
+      }
+    },
+    {
+      "file": "blog.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 1,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Blog despre fonduri europene, finanțări nerambursabile și programe pentru antreprenori"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 3
+        }
+      }
+    },
+    {
+      "file": "calculator-soc.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Calculator Standard Output (SO)"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": false,
+          "count": 3,
+          "note": "not a hub/blog page"
+        }
+      }
+    },
+    {
+      "file": "calendar-fonduri-europene.html",
+      "noindex": true,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 0,
+          "note": "noindex page: meta description is optional"
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "calendar fonduri europene"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": false,
+          "count": 0,
+          "note": "not a hub/blog page"
+        }
+      }
+    },
+    {
+      "file": "calendar-fonduri-europene/index.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Calendar fonduri europene"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 4
+        }
+      }
+    },
+    {
+      "file": "cat-costa-consultanta-fonduri-europene.html",
+      "noindex": true,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 0,
+          "note": "noindex page: meta description is optional"
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "cat costa consultanta fonduri europene"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": false,
+          "count": 0,
+          "note": "not a hub/blog page"
+        }
+      }
+    },
+    {
+      "file": "cat-costa-consultanta-fonduri-europene/index.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Cât costă consultanța pentru fonduri europene"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 4
+        }
+      }
+    },
+    {
+      "file": "cod-caen-start-up-nation-2026/index.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Cod CAEN Start-Up Nation 2026: cum verifici activitatea eligibilă"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 3
+        }
+      }
+    },
+    {
+      "file": "consultant-fonduri-europene-imm.html",
+      "noindex": true,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 0,
+          "note": "noindex page: meta description is optional"
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "consultant fonduri europene imm"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": false,
+          "count": 0,
+          "note": "not a hub/blog page"
+        }
+      }
+    },
+    {
+      "file": "consultant-fonduri-europene-imm/index.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Consultant fonduri europene pentru IMM-uri"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 4
+        }
+      }
+    },
+    {
+      "file": "consultanta-afir.html",
+      "noindex": true,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 0,
+          "note": "noindex page: meta description is optional"
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "consultanta afir"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": false,
+          "count": 0,
+          "note": "not a hub/blog page"
+        }
+      }
+    },
+    {
+      "file": "consultanta-afir/index.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Consultanță AFIR"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 4
+        }
+      }
+    },
+    {
+      "file": "consultanta-fonduri-europene.html",
+      "noindex": true,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 0,
+          "note": "noindex page: meta description is optional"
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Consultanta fonduri europene"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": false,
+          "count": 0,
+          "note": "not a hub/blog page"
+        }
+      }
+    },
+    {
+      "file": "consultanta-fonduri-europene/index.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Consultanță fonduri europene pentru firme, fermieri și antreprenori"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 3
+        }
+      }
+    },
+    {
+      "file": "consultanta-pnrr-digitalizare.html",
+      "noindex": true,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 0,
+          "note": "noindex page: meta description is optional"
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "consultanta pnrr digitalizare"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": false,
+          "count": 0,
+          "note": "not a hub/blog page"
+        }
+      }
+    },
+    {
+      "file": "consultanta-pnrr-digitalizare/index.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Consultanță PNRR digitalizare"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 4
+        }
+      }
+    },
+    {
+      "file": "consultanta-start-up-nation-2026/index.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Consultanță Start-Up Nation 2026: verificare, dosar și depunere"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 3
+        }
+      }
+    },
+    {
+      "file": "consultanta-start-up-nation.html",
+      "noindex": true,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 0,
+          "note": "noindex page: meta description is optional"
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "consultanta start up nation 2026"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": false,
+          "count": 0,
+          "note": "not a hub/blog page"
+        }
+      }
+    },
+    {
+      "file": "consultanta-start-up-nation/index.html",
+      "noindex": true,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 0,
+          "note": "noindex page: meta description is optional"
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Consultanta Start-Up Nation 2026"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": false,
+          "count": 0,
+          "note": "not a hub/blog page"
+        }
+      }
+    },
+    {
+      "file": "contact.html",
+      "noindex": true,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 0,
+          "note": "noindex page: meta description is optional"
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Contact Atelier de Consultanta"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": false,
+          "count": 0,
+          "note": "not a hub/blog page"
+        }
+      }
+    },
+    {
+      "file": "contact/index.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Contact FABER"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 3
+        }
+      }
+    },
+    {
+      "file": "cum-alegi-consultant-fonduri-europene.html",
+      "noindex": true,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 0,
+          "note": "noindex page: meta description is optional"
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "cum alegi consultant fonduri europene"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": false,
+          "count": 0,
+          "note": "not a hub/blog page"
+        }
+      }
+    },
+    {
+      "file": "cum-alegi-consultant-fonduri-europene/index.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Cum alegi un consultant pentru fonduri europene"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 4
+        }
+      }
+    },
+    {
+      "file": "cum-alegi-programul-potrivit-fonduri-europene-2026.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Cum alegi programul potrivit de fonduri europene în 2026"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 3
+        }
+      }
+    },
+    {
+      "file": "digitalizare-imm-pnrr.html",
+      "noindex": true,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 0,
+          "note": "noindex page: meta description is optional"
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "digitalizare imm pnrr"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": false,
+          "count": 0,
+          "note": "not a hub/blog page"
+        }
+      }
+    },
+    {
+      "file": "digitalizare-imm-pnrr/index.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Digitalizare IMM / PNRR"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 3
+        }
+      }
+    },
+    {
+      "file": "digitalizare-imm.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Digitalizare IMM 2026"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 3
+        }
+      }
+    },
+    {
+      "file": "dr-12-afir-instalarea-tinerilor-fermieri.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "DR 12 AFIR și instalarea tinerilor fermieri: ce trebuie pregătit"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 3
+        }
+      }
+    },
+    {
+      "file": "dr-14-afir-conditii-eligibilitate-greseli-frecvente.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "DR 14 AFIR: condiții, eligibilitate și greșeli frecvente"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 3
+        }
+      }
+    },
+    {
+      "file": "dr12-afir.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "DR 12 AFIR – Tineri Fermieri și Fermieri până la 45 de ani"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 3
+        }
+      }
+    },
+    {
+      "file": "dr14.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "DR 14 AFIR pentru ferme mici care vor sa creasca sanatos"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": false,
+          "count": 3,
+          "note": "not a hub/blog page"
+        }
+      }
+    },
+    {
+      "file": "eligibilitate-fonduri-europene.html",
+      "noindex": true,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 0,
+          "note": "noindex page: meta description is optional"
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "eligibilitate fonduri europene"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": false,
+          "count": 0,
+          "note": "not a hub/blog page"
+        }
+      }
+    },
+    {
+      "file": "eligibilitate-fonduri-europene/index.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Eligibilitate fonduri europene"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 4
+        }
+      }
+    },
+    {
+      "file": "femeia-antreprenor-2026-conditii-idei-afaceri.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Femeia Antreprenor 2026: condiții, idei de afaceri și pregătire"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 3
+        }
+      }
+    },
+    {
+      "file": "femeia-antreprenor-2026.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Finanțare Nerambursabilă pentru IMM-uri Conduse de Femei"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": false,
+          "count": 3,
+          "note": "not a hub/blog page"
+        }
+      }
+    },
+    {
+      "file": "femeia-antreprenor-2026/index.html",
+      "noindex": true,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Femeia Antreprenor 2026"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": false,
+          "count": 0,
+          "note": "not a hub/blog page"
+        }
+      }
+    },
+    {
+      "file": "finantari-panouri-fotovoltaice.html",
+      "noindex": true,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 0,
+          "note": "noindex page: meta description is optional"
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "finantari panouri fotovoltaice"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": false,
+          "count": 0,
+          "note": "not a hub/blog page"
+        }
+      }
+    },
+    {
+      "file": "finantari-panouri-fotovoltaice/index.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Finanțări pentru panouri fotovoltaice"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 4
+        }
+      }
+    },
+    {
+      "file": "firma-consultanta-fonduri-europene.html",
+      "noindex": true,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 0,
+          "note": "noindex page: meta description is optional"
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "firma consultanta fonduri europene"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": false,
+          "count": 0,
+          "note": "not a hub/blog page"
+        }
+      }
+    },
+    {
+      "file": "firma-consultanta-fonduri-europene/index.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Firmă de consultanță pentru fonduri europene"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 4
+        }
+      }
+    },
+    {
+      "file": "fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Fondul de Modernizare: finanțări pentru energie, fotovoltaice și autoconsum"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 3
+        }
+      }
+    },
+    {
+      "file": "fondul-de-modernizare.html",
+      "noindex": true,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 0,
+          "note": "noindex page: meta description is optional"
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "fondul de modernizare"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": false,
+          "count": 0,
+          "note": "not a hub/blog page"
+        }
+      }
+    },
+    {
+      "file": "fondul-de-modernizare/index.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Fondul de Modernizare: index pentru măsurile de finanțare"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 3
+        }
+      }
+    },
+    {
+      "file": "fonduri-europene-agricultura.html",
+      "noindex": true,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 0,
+          "note": "noindex page: meta description is optional"
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "fonduri europene agricultura"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": false,
+          "count": 0,
+          "note": "not a hub/blog page"
+        }
+      }
+    },
+    {
+      "file": "fonduri-europene-agricultura/index.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Fonduri europene pentru agricultură"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 4
+        }
+      }
+    },
+    {
+      "file": "fonduri-europene-digitalizare.html",
+      "noindex": true,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 0,
+          "note": "noindex page: meta description is optional"
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "fonduri europene digitalizare"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": false,
+          "count": 0,
+          "note": "not a hub/blog page"
+        }
+      }
+    },
+    {
+      "file": "fonduri-europene-digitalizare/index.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Fonduri europene pentru digitalizare"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 4
+        }
+      }
+    },
+    {
+      "file": "fonduri-europene-femei-antreprenor.html",
+      "noindex": true,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 0,
+          "note": "noindex page: meta description is optional"
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "fonduri europene femei antreprenor"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": false,
+          "count": 0,
+          "note": "not a hub/blog page"
+        }
+      }
+    },
+    {
+      "file": "fonduri-europene-femei-antreprenor/index.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Fonduri europene pentru femei antreprenor"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 4
+        }
+      }
+    },
+    {
+      "file": "fonduri-europene-herambursabile-2026.html",
+      "noindex": true,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 0,
+          "note": "noindex page: meta description is optional"
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "fonduri europene nerambursabile 2026"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": false,
+          "count": 0,
+          "note": "not a hub/blog page"
+        }
+      }
+    },
+    {
+      "file": "fonduri-europene-herambursabile-2026/index.html",
+      "noindex": true,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 0,
+          "note": "noindex page: meta description is optional"
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "fonduri europene nerambursabile 2026"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": false,
+          "count": 0,
+          "note": "not a hub/blog page"
+        }
+      }
+    },
+    {
+      "file": "fonduri-europene-imm.html",
+      "noindex": true,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 0,
+          "note": "noindex page: meta description is optional"
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "fonduri europene imm"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": false,
+          "count": 0,
+          "note": "not a hub/blog page"
+        }
+      }
+    },
+    {
+      "file": "fonduri-europene-imm/index.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Fonduri europene pentru IMM-uri"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 4
+        }
+      }
+    },
+    {
+      "file": "fonduri-europene-nerambursabile-2026.html",
+      "noindex": true,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 0,
+          "note": "noindex page: meta description is optional"
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "fonduri europene nerambursabile 2026"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": false,
+          "count": 0,
+          "note": "not a hub/blog page"
+        }
+      }
+    },
+    {
+      "file": "fonduri-europene-nerambursabile-2026/index.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Fonduri europene nerambursabile 2026"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 3
+        }
+      }
+    },
+    {
+      "file": "fonduri-europene.html",
+      "noindex": true,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 0,
+          "note": "noindex page: meta description is optional"
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "fonduri europene"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": false,
+          "count": 0,
+          "note": "not a hub/blog page"
+        }
+      }
+    },
+    {
+      "file": "fonduri-europene/index.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Fonduri europene în România"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 4
+        }
+      }
+    },
+    {
+      "file": "fonduri-nerambursabile.html",
+      "noindex": true,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 0,
+          "note": "noindex page: meta description is optional"
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "fonduri nerambursabile"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": false,
+          "count": 0,
+          "note": "not a hub/blog page"
+        }
+      }
+    },
+    {
+      "file": "fonduri-nerambursabile/index.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Fonduri nerambursabile"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 4
+        }
+      }
+    },
+    {
+      "file": "fonduri-pentru-ferme.html",
+      "noindex": true,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 0,
+          "note": "noindex page: meta description is optional"
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "fonduri pentru ferme"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": false,
+          "count": 0,
+          "note": "not a hub/blog page"
+        }
+      }
+    },
+    {
+      "file": "fonduri-pentru-ferme/index.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Fonduri pentru ferme"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 4
+        }
+      }
+    },
+    {
+      "file": "fonduri-pentru-utilaje-agricole.html",
+      "noindex": true,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 0,
+          "note": "noindex page: meta description is optional"
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "fonduri pentru utilaje agricole"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": false,
+          "count": 0,
+          "note": "not a hub/blog page"
+        }
+      }
+    },
+    {
+      "file": "fonduri-pentru-utilaje-agricole/index.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Fonduri pentru utilaje agricole"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 4
+        }
+      }
+    },
+    {
+      "file": "gdpr.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Politica GDPR"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": false,
+          "count": 0,
+          "note": "not a hub/blog page"
+        }
+      }
+    },
+    {
+      "file": "ghiduri.html",
+      "noindex": true,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 0,
+          "note": "noindex page: meta description is optional"
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "ghiduri"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": false,
+          "count": 0,
+          "note": "not a hub/blog page"
+        }
+      }
+    },
+    {
+      "file": "ghiduri/index.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Ghiduri pentru fonduri europene"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 4
+        }
+      }
+    },
+    {
+      "file": "google8bbb9999c523a3bd.html",
+      "noindex": false,
+      "technicalFile": true,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "note": "technical verification page"
+        },
+        "canonical": {
+          "status": "pass",
+          "note": "technical verification page"
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "note": "technical verification page"
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": false,
+          "note": "technical verification page"
+        }
+      }
+    },
+    {
+      "file": "granturi-digitalizare-imm.html",
+      "noindex": true,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 0,
+          "note": "noindex page: meta description is optional"
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "granturi digitalizare imm"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": false,
+          "count": 0,
+          "note": "not a hub/blog page"
+        }
+      }
+    },
+    {
+      "file": "granturi-digitalizare-imm/index.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Granturi pentru digitalizarea IMM-urilor"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 4
+        }
+      }
+    },
+    {
+      "file": "greseli-fonduri-europene.html",
+      "noindex": true,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 0,
+          "note": "noindex page: meta description is optional"
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "greseli fonduri europene"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": false,
+          "count": 0,
+          "note": "not a hub/blog page"
+        }
+      }
+    },
+    {
+      "file": "greseli-fonduri-europene/index.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Greșeli frecvente la fonduri europene"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 4
+        }
+      }
+    },
+    {
+      "file": "idei-afaceri-fonduri-europene.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Idei de afaceri cu fonduri europene"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 3
+        }
+      }
+    },
+    {
+      "file": "index.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Transformăm ideile tale în Transformăm ideiletale în proiecte finanțate"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 3
+        }
+      }
+    },
+    {
+      "file": "intrebari-frecvente.html",
+      "noindex": true,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 0,
+          "note": "noindex page: meta description is optional"
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "intrebari frecvente"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": false,
+          "count": 0,
+          "note": "not a hub/blog page"
+        }
+      }
+    },
+    {
+      "file": "intrebari-frecvente/index.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Întrebări frecvente despre fonduri europene"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 4
+        }
+      }
+    },
+    {
+      "file": "pnrr-digitalizare-imm-cheltuieli-eligibile.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "PNRR Digitalizare IMM: ce poți cumpăra prin finanțare"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 3
+        }
+      }
+    },
+    {
+      "file": "pnrr.html",
+      "noindex": true,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 0,
+          "note": "noindex page: meta description is optional"
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "pnrr"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": false,
+          "count": 0,
+          "note": "not a hub/blog page"
+        }
+      }
+    },
+    {
+      "file": "pnrr/index.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "PNRR pentru IMM-uri și proiecte de digitalizare"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 4
+        }
+      }
+    },
+    {
+      "file": "politica-de-confidentialitate.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Politica de Confidențialitate"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": false,
+          "count": 0,
+          "note": "not a hub/blog page"
+        }
+      }
+    },
+    {
+      "file": "por-adr-nord-est.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "POR Micro: Investiții pentru Modernizarea Microîntreprinderilor"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": false,
+          "count": 3,
+          "note": "not a hub/blog page"
+        }
+      }
+    },
+    {
+      "file": "pro-infra.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "PRO INFRA – Materiale de Construcții pentru Infrastructura de Transport"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": false,
+          "count": 3,
+          "note": "not a hub/blog page"
+        }
+      }
+    },
+    {
+      "file": "start-up-nation-2026-cheltuieli-eligibile.html",
+      "noindex": true,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 0,
+          "note": "noindex page: meta description is optional"
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "start up nation 2026 cheltuieli eligibile"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": false,
+          "count": 0,
+          "note": "not a hub/blog page"
+        }
+      }
+    },
+    {
+      "file": "start-up-nation-2026-cheltuieli-eligibile/index.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Start-Up Nation 2026: cheltuieli eligibile"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 4
+        }
+      }
+    },
+    {
+      "file": "start-up-nation-2026-conditii.html",
+      "noindex": true,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 0,
+          "note": "noindex page: meta description is optional"
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "start up nation 2026 conditii"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": false,
+          "count": 0,
+          "note": "not a hub/blog page"
+        }
+      }
+    },
+    {
+      "file": "start-up-nation-2026-conditii/index.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Start-Up Nation 2026: condiții de verificat"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 4
+        }
+      }
+    },
+    {
+      "file": "start-up-nation-2026-idei-afaceri-plan.html",
+      "noindex": true,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 0,
+          "note": "noindex page: meta description is optional"
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "start up nation 2026 idei afaceri"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": false,
+          "count": 0,
+          "note": "not a hub/blog page"
+        }
+      }
+    },
+    {
+      "file": "start-up-nation-2026-idei-afaceri.html",
+      "noindex": true,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 0,
+          "note": "noindex page: meta description is optional"
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "start up nation 2026 idei afaceri"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": false,
+          "count": 0,
+          "note": "not a hub/blog page"
+        }
+      }
+    },
+    {
+      "file": "start-up-nation-2026-idei-afaceri/index.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Start-Up Nation 2026: idei de afaceri"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 4
+        }
+      }
+    },
+    {
+      "file": "start-up-nation-2026-plan-de-afaceri.html",
+      "noindex": true,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 0,
+          "note": "noindex page: meta description is optional"
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "start up nation 2026 plan de afaceri"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": false,
+          "count": 0,
+          "note": "not a hub/blog page"
+        }
+      }
+    },
+    {
+      "file": "start-up-nation-2026-plan-de-afaceri/index.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Start-Up Nation 2026: plan de afaceri"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 4
+        }
+      }
+    },
+    {
+      "file": "start-up-nation-2026.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Start-Up Nation 2026: condiții, finanțare, cheltuieli eligibile și pași de pregătire"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 3
+        }
+      }
+    },
+    {
+      "file": "start-up-nation-2026/index.html",
+      "noindex": true,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Start-Up Nation 2026"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": false,
+          "count": 0,
+          "note": "not a hub/blog page"
+        }
+      }
+    },
+    {
+      "file": "start-up-nation.html",
+      "noindex": true,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 0,
+          "note": "noindex page: meta description is optional"
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "start up nation 2026"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": false,
+          "count": 0,
+          "note": "not a hub/blog page"
+        }
+      }
+    },
+    {
+      "file": "start-up-nation/index.html",
+      "noindex": true,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 0,
+          "note": "noindex page: meta description is optional"
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Start-Up Nation 2026"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": false,
+          "count": 0,
+          "note": "not a hub/blog page"
+        }
+      }
+    },
+    {
+      "file": "studii-de-caz.html",
+      "noindex": true,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 0,
+          "note": "noindex page: meta description is optional"
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "studii de caz"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": false,
+          "count": 0,
+          "note": "not a hub/blog page"
+        }
+      }
+    },
+    {
+      "file": "studii-de-caz/index.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Studii de caz pentru fonduri europene"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 4
+        }
+      }
+    },
+    {
+      "file": "termeni-si-conditii.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Termeni și Condiții"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": false,
+          "count": 0,
+          "note": "not a hub/blog page"
+        }
+      }
+    },
+    {
+      "file": "verificare-eligibilitate-fonduri-europene/index.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Verificare eligibilitate fonduri europene"
+          ]
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 3
+        }
+      }
+    }
+  ]
+}

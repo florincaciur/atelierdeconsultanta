@@ -101,7 +101,7 @@
     .sec-sub{font-size:1rem;color:var(--text-soft);max-width:680px;margin-bottom:40px;line-height:1.7;}
 
     .calc-wrapper{background:white;border-radius:var(--rm);padding:40px;border:2px solid var(--navy);box-shadow:0 4px 24px rgba(13,31,60,0.12);}
-    .calc-section{margin-bottom:40px;}
+    .calc-section{margin-bottom:40px;overflow-x:auto;padding-bottom:4px;}
     .calc-section h3{font-size:1.15rem;font-weight:700;color:var(--navy);margin-bottom:20px;padding-bottom:12px;border-bottom:2px solid var(--orange);}
 
     .calc-table{width:100%;border-collapse:collapse;margin-top:20px;}
@@ -149,12 +149,12 @@
     .page-footer p{color:rgba(255,255,255,0.35);font-size:0.8rem;}
     .page-footer a{color:var(--orange);}
 
-    .reveal{opacity:0;transform:translateY(24px);transition:opacity 0.7s cubic-bezier(0.4,0,0.2,1),transform 0.7s cubic-bezier(0.4,0,0.2,1);}
+    .reveal{opacity:1;transform:none;transition:opacity 0.7s cubic-bezier(0.4,0,0.2,1),transform 0.7s cubic-bezier(0.4,0,0.2,1);}
     .reveal.revealed{opacity:1;transform:translateY(0);}
 
     @media(max-width:768px){
       .calc-wrapper{padding:24px;}
-      .calc-table{font-size:0.85rem;}
+      .calc-table{font-size:0.85rem;min-width:640px;}
       .calc-table th,
       .calc-table td{padding:10px 8px;}
       .calc-table select,
@@ -461,12 +461,23 @@
 </section>
 
 <!-- Footer -->
+  <section class="vezi-si-section" aria-labelledby="vezi-si-title">
+    <h2 id="vezi-si-title">Vezi și</h2>
+    <ul class="vezi-si">
+    <li><a href="/fonduri-europene/">Fonduri europene</a></li>
+    <li><a href="/consultanta-fonduri-europene/">Consultanță fonduri europene</a></li>
+    <li><a href="/calendar-fonduri-europene/">Calendar fonduri europene</a></li>
+    <li><a href="/consultanta-pnrr-digitalizare/">Consultanță PNRR și digitalizare</a></li>
+    <li><a href="/start-up-nation/">Start-Up Nation</a></li>
+    </ul>
+  </section>
+
 <footer class="page-footer">
   <p>© 2026 FABER – Atelier de Consultanță &nbsp;·&nbsp; <a href="/">Acasă</a> &nbsp;·&nbsp; <a href="/#finantare">Programe</a> &nbsp;·&nbsp; <a href="/termeni-si-conditii">Termeni</a> &nbsp;·&nbsp; <a href="/gdpr">GDPR</a></p>
 </footer>
 
 <script>
-  / SO Values Database
+  // SO Values Database
   const soDatabase = {
     culturi: {
       'Grâu de toamnă': 490,
@@ -545,14 +556,14 @@
         </select>
       </td>
       <td><input type="number" readonly value="${defaultSo}" class="so-input"></td>
-      <td><input type="number" value="1" min="0" step="0.1" onchange="updateCalculation()" class="area-input" placeholder="0"></td>
+      <td><input type="number" value="1" min="0" step="0.1" oninput="updateCalculation()" onchange="updateCalculation()" class="area-input" placeholder="0"></td>
       <td class="so-val">0</td>
       <td><button class="calc-remove" onclick="removeRow('${rowId}')">✕ Șterge</button></td>
     `;
 
     tbody.appendChild(row);
 
-    / Add change listener to select
+    // Add change listener to select
     row.querySelector('.cultura-select').addEventListener('change', function() {
       const soVal = soDatabase[type][this.value];
       row.querySelector('.so-input').value = soVal;
@@ -573,7 +584,7 @@
   function updateCalculation() {
     let totalSo = 0;
 
-    / Process all rows
+    // Process all rows
     document.querySelectorAll('tbody tr').forEach(row => {
       const soInput = row.querySelector('.so-input');
       const areaInput = row.querySelector('.area-input');
@@ -591,7 +602,7 @@
       }
     });
 
-    / Update result
+    // Update result
     document.getElementById('total-so').textContent = Math.round(totalSo).toLocaleString('ro-RO');
     updateStatusBadges(totalSo);
   }
@@ -625,11 +636,12 @@
     updateCalculation();
   }
 
-  / Reveal animations
+  // Reveal animations
   var obs = new IntersectionObserver(function(entries){
     entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('revealed'); obs.unobserve(e.target); } });
   },{threshold:0.1,rootMargin:'0px 0px -30px 0px'});
   document.querySelectorAll('.reveal').forEach(function(el){ obs.observe(el); });
+  updateCalculation();
 </script>
 
 </body>
