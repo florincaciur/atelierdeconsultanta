@@ -79,6 +79,7 @@ function normalizeTarget(rawValue, sourceFile) {
   if (!rawValue) return null;
   const value = rawValue.replace(/&amp;/g, "&").trim();
   if (!value || value === "#") return null;
+  if (/^TODO(?:_|$)/.test(value)) return null;
   if (value.includes("${") || value.includes("{{")) return null;
   if (SKIP_PREFIXES.some((prefix) => value.toLowerCase().startsWith(prefix))) return null;
 

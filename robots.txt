@@ -1,68 +1,30 @@
-# robots.txt - Atelier de Consultanta
-# https://atelierdeconsultanta.ro
-# Public content is crawlable. The admin area is intentionally private/noindex.
+# robots.txt - FABER / Atelier de Consultanta
+# Public canonical pages are crawlable. Private, generated or non-public paths are not.
 
 User-agent: *
 Allow: /
-Disallow: /admin/
 
-User-agent: Googlebot
-Allow: /
+# Private/admin and internal build areas
 Disallow: /admin/
+Disallow: /dist/
+Disallow: /tools/
+Disallow: /scripts/
+Disallow: /reports/
+Disallow: /config/
+Disallow: /node_modules/
+Disallow: /.github/
+Disallow: /.wrangler/
 
-User-agent: Bingbot
-Allow: /
-Disallow: /admin/
+# Non-public or low-value generated assets
+Disallow: /*.map$
 
-User-agent: OAI-SearchBot
-Allow: /
-Disallow: /admin/
-
-User-agent: ChatGPT-User
-Allow: /
-Disallow: /admin/
-
-User-agent: GPTBot
-Allow: /
-Disallow: /admin/
-
-User-agent: PerplexityBot
-Allow: /
-Disallow: /admin/
-
-User-agent: ClaudeBot
-Allow: /
-Disallow: /admin/
-
-User-agent: Claude-SearchBot
-Allow: /
-Disallow: /admin/
-
-User-agent: Claude-User
-Allow: /
-Disallow: /admin/
-
-User-agent: anthropic-ai
-Allow: /
-Disallow: /admin/
-
-User-agent: Claude-Web
-Allow: /
-Disallow: /admin/
-
-User-agent: Applebot
-Allow: /
-Disallow: /admin/
-
-User-agent: Google-Extended
-Allow: /
-Disallow: /admin/
-
-User-agent: CCBot
-Allow: /
-Disallow: /admin/
+# Tracking and duplicate parameter variants
+Disallow: /*?utm_
+Disallow: /*?fbclid=
+Disallow: /*?gclid=
+Disallow: /*?msclkid=
+Disallow: /*?ref=
 
 Sitemap: https://atelierdeconsultanta.ro/sitemap.xml
 
-# AI context file:
-# https://atelierdeconsultanta.ro/llms.txt
+# AI/search crawler policy is documented in the repository at docs/crawler-policy.md.

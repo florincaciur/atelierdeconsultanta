@@ -1,49 +1,49 @@
 {
-  "generatedAt": "2026-05-20T10:09:39.050Z",
+  "generatedAt": "2026-05-20T21:07:28.971Z",
   "root": "C:\\Users\\flori\\Documents\\GitHub\\atelierdeconsultanta",
   "summary": {
-    "totalFiles": 133,
-    "passedFiles": 133,
+    "totalFiles": 147,
+    "passedFiles": 147,
     "failedFiles": 0,
     "checks": {
       "metaDescription": {
-        "pass": 133,
+        "pass": 147,
         "fail": 0
       },
       "canonical": {
-        "pass": 133,
+        "pass": 147,
         "fail": 0
       },
       "imageAltAttributes": {
-        "pass": 133,
+        "pass": 147,
         "fail": 0
       },
       "singleH1": {
-        "pass": 133,
+        "pass": 147,
         "fail": 0
       },
       "relatedLinks": {
-        "pass": 133,
+        "pass": 147,
         "fail": 0
       },
       "utf8Charset": {
-        "pass": 130,
+        "pass": 144,
         "fail": 0
       },
       "cleanCanonical": {
-        "pass": 130,
+        "pass": 144,
         "fail": 0
       },
       "visibleFaqForSchema": {
-        "pass": 130,
+        "pass": 144,
         "fail": 0
       },
       "speakableSchemaCoverage": {
-        "pass": 130,
+        "pass": 144,
         "fail": 0
       },
       "contentDepth": {
-        "pass": 130,
+        "pass": 144,
         "fail": 0
       }
     }
@@ -576,13 +576,71 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 1295,
+          "words": 1348,
           "threshold": 2000
         },
         "relatedLinks": {
           "status": "pass",
           "required": true,
-          "count": 3
+          "count": 4
+        }
+      }
+    },
+    {
+      "file": "calculator-so-afir.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "utf8Charset": {
+          "status": "pass",
+          "hasCharset": true,
+          "hasHttpEquiv": false
+        },
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "cleanCanonical": {
+          "status": "pass",
+          "href": "https://atelierdeconsultanta.ro/calculator-so-afir"
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Calculator SO AFIR: ce este Standard Output și de ce contează pentru eligibilitate"
+          ]
+        },
+        "visibleFaqForSchema": {
+          "status": "pass",
+          "required": false,
+          "count": 0
+        },
+        "speakableSchemaCoverage": {
+          "status": "pass",
+          "required": false,
+          "count": 0
+        },
+        "contentDepth": {
+          "status": "pass",
+          "required": false,
+          "words": 687,
+          "threshold": 2000
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 1
         }
       }
     },
@@ -764,6 +822,122 @@
       }
     },
     {
+      "file": "cand-merita-consultant-fonduri-europene.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "utf8Charset": {
+          "status": "pass",
+          "hasCharset": true,
+          "hasHttpEquiv": false
+        },
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "cleanCanonical": {
+          "status": "pass",
+          "href": "https://atelierdeconsultanta.ro/cand-merita-consultant-fonduri-europene"
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Când merită să lucrezi cu un consultant pentru fonduri europene și când nu?"
+          ]
+        },
+        "visibleFaqForSchema": {
+          "status": "pass",
+          "required": false,
+          "count": 0
+        },
+        "speakableSchemaCoverage": {
+          "status": "pass",
+          "required": false,
+          "count": 0
+        },
+        "contentDepth": {
+          "status": "pass",
+          "required": false,
+          "words": 705,
+          "threshold": 2000
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 1
+        }
+      }
+    },
+    {
+      "file": "cat-costa-consultanta-fonduri-europene-ghid.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "utf8Charset": {
+          "status": "pass",
+          "hasCharset": true,
+          "hasHttpEquiv": false
+        },
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "cleanCanonical": {
+          "status": "pass",
+          "href": "https://atelierdeconsultanta.ro/cat-costa-consultanta-fonduri-europene-ghid"
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Cât costă consultanța pentru fonduri europene și ce ar trebui să includă?"
+          ]
+        },
+        "visibleFaqForSchema": {
+          "status": "pass",
+          "required": false,
+          "count": 0
+        },
+        "speakableSchemaCoverage": {
+          "status": "pass",
+          "required": false,
+          "count": 0
+        },
+        "contentDepth": {
+          "status": "pass",
+          "required": false,
+          "words": 658,
+          "threshold": 2000
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 1
+        }
+      }
+    },
+    {
       "file": "cat-costa-consultanta-fonduri-europene.html",
       "noindex": true,
       "pass": true,
@@ -881,6 +1055,180 @@
       }
     },
     {
+      "file": "ce-acte-sunt-necesare-fonduri-europene.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "utf8Charset": {
+          "status": "pass",
+          "hasCharset": true,
+          "hasHttpEquiv": false
+        },
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "cleanCanonical": {
+          "status": "pass",
+          "href": "https://atelierdeconsultanta.ro/ce-acte-sunt-necesare-fonduri-europene"
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Ce acte sunt necesare pentru fonduri europene în 2026?"
+          ]
+        },
+        "visibleFaqForSchema": {
+          "status": "pass",
+          "required": false,
+          "count": 0
+        },
+        "speakableSchemaCoverage": {
+          "status": "pass",
+          "required": false,
+          "count": 0
+        },
+        "contentDepth": {
+          "status": "pass",
+          "required": false,
+          "words": 608,
+          "threshold": 2000
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 1
+        }
+      }
+    },
+    {
+      "file": "cheltuieli-eligibile-digitalizare-imm.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "utf8Charset": {
+          "status": "pass",
+          "hasCharset": true,
+          "hasHttpEquiv": false
+        },
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "cleanCanonical": {
+          "status": "pass",
+          "href": "https://atelierdeconsultanta.ro/cheltuieli-eligibile-digitalizare-imm"
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Cheltuieli eligibile pentru Digitalizare IMM: software, hardware, securitate și servicii"
+          ]
+        },
+        "visibleFaqForSchema": {
+          "status": "pass",
+          "required": false,
+          "count": 0
+        },
+        "speakableSchemaCoverage": {
+          "status": "pass",
+          "required": false,
+          "count": 0
+        },
+        "contentDepth": {
+          "status": "pass",
+          "required": false,
+          "words": 565,
+          "threshold": 2000
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 1
+        }
+      }
+    },
+    {
+      "file": "cheltuieli-eligibile-startup-nation.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "utf8Charset": {
+          "status": "pass",
+          "hasCharset": true,
+          "hasHttpEquiv": false
+        },
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "cleanCanonical": {
+          "status": "pass",
+          "href": "https://atelierdeconsultanta.ro/cheltuieli-eligibile-startup-nation"
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Cheltuieli eligibile Start-Up Nation: ce poți include și ce trebuie verificat"
+          ]
+        },
+        "visibleFaqForSchema": {
+          "status": "pass",
+          "required": false,
+          "count": 0
+        },
+        "speakableSchemaCoverage": {
+          "status": "pass",
+          "required": false,
+          "count": 0
+        },
+        "contentDepth": {
+          "status": "pass",
+          "required": false,
+          "words": 587,
+          "threshold": 2000
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 1
+        }
+      }
+    },
+    {
       "file": "cod-caen-start-up-nation-2026/index.html",
       "noindex": false,
       "pass": true,
@@ -931,6 +1279,64 @@
           "required": true,
           "words": 1353,
           "threshold": 1200
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 1
+        }
+      }
+    },
+    {
+      "file": "cod-caen-startup-nation.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "utf8Charset": {
+          "status": "pass",
+          "hasCharset": true,
+          "hasHttpEquiv": false
+        },
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "cleanCanonical": {
+          "status": "pass",
+          "href": "https://atelierdeconsultanta.ro/cod-caen-startup-nation"
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Cum verifici dacă un cod CAEN este potrivit pentru Start-Up Nation?"
+          ]
+        },
+        "visibleFaqForSchema": {
+          "status": "pass",
+          "required": false,
+          "count": 0
+        },
+        "speakableSchemaCoverage": {
+          "status": "pass",
+          "required": false,
+          "count": 0
+        },
+        "contentDepth": {
+          "status": "pass",
+          "required": false,
+          "words": 644,
+          "threshold": 2000
         },
         "relatedLinks": {
           "status": "pass",
@@ -1516,13 +1922,13 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1821,
+          "words": 1881,
           "threshold": 1800
         },
         "relatedLinks": {
           "status": "pass",
           "required": true,
-          "count": 3
+          "count": 4
         }
       }
     },
@@ -2111,6 +2517,180 @@
       }
     },
     {
+      "file": "cum-se-calculeaza-cofinantarea-fonduri-europene.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "utf8Charset": {
+          "status": "pass",
+          "hasCharset": true,
+          "hasHttpEquiv": false
+        },
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "cleanCanonical": {
+          "status": "pass",
+          "href": "https://atelierdeconsultanta.ro/cum-se-calculeaza-cofinantarea-fonduri-europene"
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Cum se calculează cofinanțarea la un proiect cu fonduri europene?"
+          ]
+        },
+        "visibleFaqForSchema": {
+          "status": "pass",
+          "required": false,
+          "count": 0
+        },
+        "speakableSchemaCoverage": {
+          "status": "pass",
+          "required": false,
+          "count": 0
+        },
+        "contentDepth": {
+          "status": "pass",
+          "required": false,
+          "words": 633,
+          "threshold": 2000
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 1
+        }
+      }
+    },
+    {
+      "file": "cum-se-verifica-eligibilitatea-fonduri-europene.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "utf8Charset": {
+          "status": "pass",
+          "hasCharset": true,
+          "hasHttpEquiv": false
+        },
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "cleanCanonical": {
+          "status": "pass",
+          "href": "https://atelierdeconsultanta.ro/cum-se-verifica-eligibilitatea-fonduri-europene"
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Cum verifici eligibilitatea pentru fonduri europene înainte să pregătești dosarul?"
+          ]
+        },
+        "visibleFaqForSchema": {
+          "status": "pass",
+          "required": false,
+          "count": 0
+        },
+        "speakableSchemaCoverage": {
+          "status": "pass",
+          "required": false,
+          "count": 0
+        },
+        "contentDepth": {
+          "status": "pass",
+          "required": false,
+          "words": 600,
+          "threshold": 2000
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 1
+        }
+      }
+    },
+    {
+      "file": "digitalizare-imm-erp-crm-cloud.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "utf8Charset": {
+          "status": "pass",
+          "hasCharset": true,
+          "hasHttpEquiv": false
+        },
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "cleanCanonical": {
+          "status": "pass",
+          "href": "https://atelierdeconsultanta.ro/digitalizare-imm-erp-crm-cloud"
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Digitalizare IMM: cum justifici ERP, CRM, cloud și echipamente IT într-un proiect"
+          ]
+        },
+        "visibleFaqForSchema": {
+          "status": "pass",
+          "required": false,
+          "count": 0
+        },
+        "speakableSchemaCoverage": {
+          "status": "pass",
+          "required": false,
+          "count": 0
+        },
+        "contentDepth": {
+          "status": "pass",
+          "required": false,
+          "words": 622,
+          "threshold": 2000
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 1
+        }
+      }
+    },
+    {
       "file": "digitalizare-imm-pnrr.html",
       "noindex": true,
       "pass": true,
@@ -2276,7 +2856,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2206,
+          "words": 2231,
           "threshold": 2100
         },
         "relatedLinks": {
@@ -2405,6 +2985,64 @@
       }
     },
     {
+      "file": "dr12-afir-tineri-fermieri.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "utf8Charset": {
+          "status": "pass",
+          "hasCharset": true,
+          "hasHttpEquiv": false
+        },
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "cleanCanonical": {
+          "status": "pass",
+          "href": "https://atelierdeconsultanta.ro/dr12-afir-tineri-fermieri"
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "DR12 AFIR pentru tineri fermieri: eligibilitate, acte necesare și pași de pregătire"
+          ]
+        },
+        "visibleFaqForSchema": {
+          "status": "pass",
+          "required": false,
+          "count": 0
+        },
+        "speakableSchemaCoverage": {
+          "status": "pass",
+          "required": false,
+          "count": 0
+        },
+        "contentDepth": {
+          "status": "pass",
+          "required": false,
+          "words": 752,
+          "threshold": 2000
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 1
+        }
+      }
+    },
+    {
       "file": "dr12-afir.html",
       "noindex": false,
       "pass": true,
@@ -2453,8 +3091,124 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1107,
+          "words": 1134,
           "threshold": 1100
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 1
+        }
+      }
+    },
+    {
+      "file": "dr12-vs-dr14.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "utf8Charset": {
+          "status": "pass",
+          "hasCharset": true,
+          "hasHttpEquiv": false
+        },
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "cleanCanonical": {
+          "status": "pass",
+          "href": "https://atelierdeconsultanta.ro/dr12-vs-dr14"
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "DR12 sau DR14: ce program AFIR se potrivește mai bine fermei tale?"
+          ]
+        },
+        "visibleFaqForSchema": {
+          "status": "pass",
+          "required": false,
+          "count": 0
+        },
+        "speakableSchemaCoverage": {
+          "status": "pass",
+          "required": false,
+          "count": 0
+        },
+        "contentDepth": {
+          "status": "pass",
+          "required": false,
+          "words": 708,
+          "threshold": 2000
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 1
+        }
+      }
+    },
+    {
+      "file": "dr14-afir-ferme-mici.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "utf8Charset": {
+          "status": "pass",
+          "hasCharset": true,
+          "hasHttpEquiv": false
+        },
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "cleanCanonical": {
+          "status": "pass",
+          "href": "https://atelierdeconsultanta.ro/dr14-afir-ferme-mici"
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "DR14 AFIR pentru ferme mici: condiții, acte necesare și greșeli frecvente"
+          ]
+        },
+        "visibleFaqForSchema": {
+          "status": "pass",
+          "required": false,
+          "count": 0
+        },
+        "speakableSchemaCoverage": {
+          "status": "pass",
+          "required": false,
+          "count": 0
+        },
+        "contentDepth": {
+          "status": "pass",
+          "required": false,
+          "words": 678,
+          "threshold": 2000
         },
         "relatedLinks": {
           "status": "pass",
@@ -2512,7 +3266,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2213,
+          "words": 2240,
           "threshold": 2100
         },
         "relatedLinks": {
@@ -5476,7 +6230,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1308,
+          "words": 1330,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -5593,7 +6347,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 1348,
+          "words": 1360,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -6542,7 +7296,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1082,
+          "words": 1085,
           "threshold": 1000
         },
         "relatedLinks": {
@@ -7128,7 +7882,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1155,
+          "words": 1185,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -7309,6 +8063,64 @@
           "required": false,
           "count": 0,
           "note": "not a hub/blog page"
+        }
+      }
+    },
+    {
+      "file": "startup-nation-2026-conditii.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "utf8Charset": {
+          "status": "pass",
+          "hasCharset": true,
+          "hasHttpEquiv": false
+        },
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "cleanCanonical": {
+          "status": "pass",
+          "href": "https://atelierdeconsultanta.ro/startup-nation-2026-conditii"
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Start-Up Nation 2026: condiții, pași și documente de pregătit înainte de înscriere"
+          ]
+        },
+        "visibleFaqForSchema": {
+          "status": "pass",
+          "required": false,
+          "count": 0
+        },
+        "speakableSchemaCoverage": {
+          "status": "pass",
+          "required": false,
+          "count": 0
+        },
+        "contentDepth": {
+          "status": "pass",
+          "required": false,
+          "words": 636,
+          "threshold": 2000
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 1
         }
       }
     },

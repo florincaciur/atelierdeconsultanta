@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-05-20T10:09:38.939Z",
+  "generatedAt": "2026-05-20T21:07:28.814Z",
   "summary": {
-    "filesChecked": 133,
-    "filesWithStructuredData": 76,
+    "filesChecked": 147,
+    "filesWithStructuredData": 90,
     "filesWithIssues": 0,
     "types": {
-      "Organization": 163,
-      "ImageObject": 71,
+      "Organization": 191,
+      "ImageObject": 85,
       "Country": 69,
       "ContactPoint": 126,
       "WebSite": 66,
-      "WebPage": 67,
+      "WebPage": 81,
       "CreativeWork": 67,
       "BreadcrumbList": 74,
       "ListItem": 163,
@@ -18,7 +18,7 @@
       "Question": 446,
       "Answer": 446,
       "GovernmentService": 14,
-      "BlogPosting": 7,
+      "BlogPosting": 21,
       "Blog": 1,
       "WebApplication": 2,
       "Offer": 2,
@@ -167,6 +167,17 @@
       "issues": []
     },
     {
+      "file": "calculator-so-afir.html",
+      "blocks": 1,
+      "types": {
+        "BlogPosting": 1,
+        "Organization": 2,
+        "ImageObject": 1,
+        "WebPage": 1
+      },
+      "issues": []
+    },
+    {
       "file": "calculator-soc.html",
       "blocks": 1,
       "types": {
@@ -211,6 +222,28 @@
       "issues": []
     },
     {
+      "file": "cand-merita-consultant-fonduri-europene.html",
+      "blocks": 1,
+      "types": {
+        "BlogPosting": 1,
+        "Organization": 2,
+        "ImageObject": 1,
+        "WebPage": 1
+      },
+      "issues": []
+    },
+    {
+      "file": "cat-costa-consultanta-fonduri-europene-ghid.html",
+      "blocks": 1,
+      "types": {
+        "BlogPosting": 1,
+        "Organization": 2,
+        "ImageObject": 1,
+        "WebPage": 1
+      },
+      "issues": []
+    },
+    {
       "file": "cat-costa-consultanta-fonduri-europene.html",
       "blocks": 0,
       "types": {},
@@ -236,6 +269,39 @@
       "issues": []
     },
     {
+      "file": "ce-acte-sunt-necesare-fonduri-europene.html",
+      "blocks": 1,
+      "types": {
+        "BlogPosting": 1,
+        "Organization": 2,
+        "ImageObject": 1,
+        "WebPage": 1
+      },
+      "issues": []
+    },
+    {
+      "file": "cheltuieli-eligibile-digitalizare-imm.html",
+      "blocks": 1,
+      "types": {
+        "BlogPosting": 1,
+        "Organization": 2,
+        "ImageObject": 1,
+        "WebPage": 1
+      },
+      "issues": []
+    },
+    {
+      "file": "cheltuieli-eligibile-startup-nation.html",
+      "blocks": 1,
+      "types": {
+        "BlogPosting": 1,
+        "Organization": 2,
+        "ImageObject": 1,
+        "WebPage": 1
+      },
+      "issues": []
+    },
+    {
       "file": "cod-caen-start-up-nation-2026/index.html",
       "blocks": 1,
       "types": {
@@ -251,6 +317,17 @@
         "FAQPage": 1,
         "Question": 8,
         "Answer": 8
+      },
+      "issues": []
+    },
+    {
+      "file": "cod-caen-startup-nation.html",
+      "blocks": 1,
+      "types": {
+        "BlogPosting": 1,
+        "Organization": 2,
+        "ImageObject": 1,
+        "WebPage": 1
       },
       "issues": []
     },
@@ -478,6 +555,39 @@
       "issues": []
     },
     {
+      "file": "cum-se-calculeaza-cofinantarea-fonduri-europene.html",
+      "blocks": 1,
+      "types": {
+        "BlogPosting": 1,
+        "Organization": 2,
+        "ImageObject": 1,
+        "WebPage": 1
+      },
+      "issues": []
+    },
+    {
+      "file": "cum-se-verifica-eligibilitatea-fonduri-europene.html",
+      "blocks": 1,
+      "types": {
+        "BlogPosting": 1,
+        "Organization": 2,
+        "ImageObject": 1,
+        "WebPage": 1
+      },
+      "issues": []
+    },
+    {
+      "file": "digitalizare-imm-erp-crm-cloud.html",
+      "blocks": 1,
+      "types": {
+        "BlogPosting": 1,
+        "Organization": 2,
+        "ImageObject": 1,
+        "WebPage": 1
+      },
+      "issues": []
+    },
+    {
       "file": "digitalizare-imm-pnrr.html",
       "blocks": 0,
       "types": {},
@@ -554,6 +664,17 @@
       "issues": []
     },
     {
+      "file": "dr12-afir-tineri-fermieri.html",
+      "blocks": 1,
+      "types": {
+        "BlogPosting": 1,
+        "Organization": 2,
+        "ImageObject": 1,
+        "WebPage": 1
+      },
+      "issues": []
+    },
+    {
       "file": "dr12-afir.html",
       "blocks": 1,
       "types": {
@@ -572,6 +693,28 @@
         "Answer": 6,
         "Audience": 3,
         "CommunicateAction": 1
+      },
+      "issues": []
+    },
+    {
+      "file": "dr12-vs-dr14.html",
+      "blocks": 1,
+      "types": {
+        "BlogPosting": 1,
+        "Organization": 2,
+        "ImageObject": 1,
+        "WebPage": 1
+      },
+      "issues": []
+    },
+    {
+      "file": "dr14-afir-ferme-mici.html",
+      "blocks": 1,
+      "types": {
+        "BlogPosting": 1,
+        "Organization": 2,
+        "ImageObject": 1,
+        "WebPage": 1
       },
       "issues": []
     },
@@ -1667,6 +1810,17 @@
       "file": "start-up-nation/index.html",
       "blocks": 0,
       "types": {},
+      "issues": []
+    },
+    {
+      "file": "startup-nation-2026-conditii.html",
+      "blocks": 1,
+      "types": {
+        "BlogPosting": 1,
+        "Organization": 2,
+        "ImageObject": 1,
+        "WebPage": 1
+      },
       "issues": []
     },
     {
