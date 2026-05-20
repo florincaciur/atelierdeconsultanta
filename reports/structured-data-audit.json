@@ -1,19 +1,19 @@
 {
-  "generatedAt": "2026-05-20T21:07:28.814Z",
+  "generatedAt": "2026-05-20T21:18:24.828Z",
   "summary": {
-    "filesChecked": 147,
-    "filesWithStructuredData": 90,
+    "filesChecked": 148,
+    "filesWithStructuredData": 91,
     "filesWithIssues": 0,
     "types": {
-      "Organization": 191,
-      "ImageObject": 85,
-      "Country": 69,
-      "ContactPoint": 126,
-      "WebSite": 66,
+      "Organization": 192,
+      "ImageObject": 86,
+      "Country": 70,
+      "ContactPoint": 128,
+      "WebSite": 67,
       "WebPage": 81,
       "CreativeWork": 67,
-      "BreadcrumbList": 74,
-      "ListItem": 163,
+      "BreadcrumbList": 75,
+      "ListItem": 165,
       "FAQPage": 71,
       "Question": 446,
       "Answer": 446,
@@ -26,6 +26,7 @@
       "LocalBusiness": 2,
       "ProfessionalService": 2,
       "ContactPage": 1,
+      "AboutPage": 1,
       "Audience": 6,
       "CommunicateAction": 2,
       "CollectionPage": 7,
@@ -573,6 +574,21 @@
         "Organization": 2,
         "ImageObject": 1,
         "WebPage": 1
+      },
+      "issues": []
+    },
+    {
+      "file": "despre-faber/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 1,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "AboutPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2
       },
       "issues": []
     },

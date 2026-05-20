@@ -2,7 +2,14 @@
 
 const SITE = "https://atelierdeconsultanta.ro";
 const BRAND_NAME = "FABER - Atelier de Consultanta";
-const BRAND_ALTERNATE_NAMES = ["Atelier de Consultanta", "Atelier de Consultanta FABER"];
+const BRAND_ALTERNATE_NAMES = [
+  "FABER",
+  "Atelier de Consultanta",
+  "Atelier de Consultanță",
+  "Atelier de Consultanta FABER",
+  "atelierdeconsultanta.ro"
+];
+const BRAND_DESCRIPTION = "FABER - Atelier de Consultanta ajuta firme, fermieri, start-up-uri si IMM-uri sa verifice eligibilitatea si sa pregateasca proiecte pentru fonduri europene si finantari nerambursabile.";
 const ORGANIZATION_ID = `${SITE}/#organization`;
 const LOCAL_BUSINESS_ID = `${SITE}/#localbusiness`;
 const WEBSITE_ID = `${SITE}/#website`;
@@ -83,6 +90,7 @@ function organizationSchema(options = {}) {
     name: BRAND_NAME,
     alternateName: BRAND_ALTERNATE_NAMES,
     url: SITE,
+    description: BRAND_DESCRIPTION,
     logo: {
       "@type": "ImageObject",
       url: LOGO_URL
@@ -107,7 +115,9 @@ function organizationSchema(options = {}) {
       "@type": "Organization",
       "@id": ORGANIZATION_ID,
       name: BRAND_NAME,
+      alternateName: BRAND_ALTERNATE_NAMES,
       url: SITE,
+      description: BRAND_DESCRIPTION,
       logo: { "@type": "ImageObject", url: LOGO_URL }
     };
   }
@@ -282,6 +292,8 @@ function jsonLdGraph(nodes) {
 module.exports = {
   SITE,
   BRAND_NAME,
+  BRAND_ALTERNATE_NAMES,
+  BRAND_DESCRIPTION,
   ORGANIZATION_ID,
   LOCAL_BUSINESS_ID,
   WEBSITE_ID,

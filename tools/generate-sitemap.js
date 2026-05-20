@@ -70,6 +70,7 @@ function priority(url) {
     "/digitalizare-imm",
   ];
   const authority = [
+    "/despre-faber",
     "/metodologie-verificare-eligibilitate",
     "/surse-oficiale-fonduri-europene",
     "/glosar-fonduri-europene",

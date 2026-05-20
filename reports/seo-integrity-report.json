@@ -1,49 +1,49 @@
 {
-  "generatedAt": "2026-05-20T21:07:28.971Z",
+  "generatedAt": "2026-05-20T21:18:25.083Z",
   "root": "C:\\Users\\flori\\Documents\\GitHub\\atelierdeconsultanta",
   "summary": {
-    "totalFiles": 147,
-    "passedFiles": 147,
+    "totalFiles": 148,
+    "passedFiles": 148,
     "failedFiles": 0,
     "checks": {
       "metaDescription": {
-        "pass": 147,
+        "pass": 148,
         "fail": 0
       },
       "canonical": {
-        "pass": 147,
+        "pass": 148,
         "fail": 0
       },
       "imageAltAttributes": {
-        "pass": 147,
+        "pass": 148,
         "fail": 0
       },
       "singleH1": {
-        "pass": 147,
+        "pass": 148,
         "fail": 0
       },
       "relatedLinks": {
-        "pass": 147,
+        "pass": 148,
         "fail": 0
       },
       "utf8Charset": {
-        "pass": 144,
+        "pass": 145,
         "fail": 0
       },
       "cleanCanonical": {
-        "pass": 144,
+        "pass": 145,
         "fail": 0
       },
       "visibleFaqForSchema": {
-        "pass": 144,
+        "pass": 145,
         "fail": 0
       },
       "speakableSchemaCoverage": {
-        "pass": 144,
+        "pass": 145,
         "fail": 0
       },
       "contentDepth": {
-        "pass": 144,
+        "pass": 145,
         "fail": 0
       }
     }
@@ -517,7 +517,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 1487,
+          "words": 1492,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -2629,6 +2629,65 @@
           "status": "pass",
           "required": true,
           "count": 1
+        }
+      }
+    },
+    {
+      "file": "despre-faber/index.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "utf8Charset": {
+          "status": "pass",
+          "hasCharset": true,
+          "hasHttpEquiv": false
+        },
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "cleanCanonical": {
+          "status": "pass",
+          "href": "https://atelierdeconsultanta.ro/despre-faber"
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Despre FABER / Atelier de Consultanță"
+          ]
+        },
+        "visibleFaqForSchema": {
+          "status": "pass",
+          "required": false,
+          "count": 0
+        },
+        "speakableSchemaCoverage": {
+          "status": "pass",
+          "required": false,
+          "count": 0
+        },
+        "contentDepth": {
+          "status": "pass",
+          "required": false,
+          "words": 879,
+          "threshold": 2000
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": false,
+          "count": 2,
+          "note": "not a hub/blog page"
         }
       }
     },
@@ -5789,7 +5848,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 633,
+          "words": 635,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -6347,7 +6406,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 1360,
+          "words": 1375,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -7056,7 +7115,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 788,
+          "words": 791,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -8405,7 +8464,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 890,
+          "words": 891,
           "threshold": 2000
         },
         "relatedLinks": {
