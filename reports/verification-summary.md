@@ -1,6 +1,6 @@
 # Verification Summary
 
-Generated: 2026-05-19T19:03:00.695Z
+Generated: 2026-05-19T22:45:47.012Z
 Mode: check
 
 ## SEO
@@ -8,7 +8,7 @@ Mode: check
 Files checked: 128
 Passed: 128
 Failed: 0
-Inline scripts checked: 70
+Inline scripts checked: 64
 Inline script failures: 0
 
 ## Functional

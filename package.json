@@ -3,6 +3,7 @@
     "optimize:assets": "node scripts/optimize-assets.js",
     "extract:sources": "node tools/extract-source-facts.js",
     "audit:content": "node tools/audit-content-depth.js --min-words 2000",
+    "audit:structured-data": "node tools/audit-structured-data.js",
     "generate:program-pages": "node tools/generate-program-pages.js",
     "generate:programmatic-seo": "node tools/generate-programmatic-seo.js",
     "generate:lead-magnets": "node tools/generate-lead-magnets.js",

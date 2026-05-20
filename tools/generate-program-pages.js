@@ -12,8 +12,6 @@ const REDIRECTS_PATH = path.join(ROOT, "_redirects");
 const BLOG_JSON_PATH = path.join(ROOT, "blog.json");
 const BANNERS_PATH = path.join(ROOT, "banners.json");
 const LLMS_PATH = path.join(ROOT, "llms.txt");
-const ORGANIZATION_ID = `${SITE}/#organization`;
-const WEBSITE_ID = `${SITE}/#website`;
 const {
   editorialSchemaProperties,
   getEditorialMetadata,
@@ -24,6 +22,23 @@ const {
   renderOfficialSources,
   sourcesForKeys
 } = require("./official-sources");
+const {
+  breadcrumbSchema,
+  faqPageSchema,
+  jsonLdGraph,
+  organizationSchema,
+  serviceSchema,
+  webApplicationSchema,
+  webPageSchema,
+  websiteSchema
+} = require("./schema-helpers");
+const CLARITY_TRACKING_CODE = `  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wnvzyco6rq");
+  </script>`;
 
 const PILLAR_SLUGS = new Set([
   "consultanta-fonduri-europene",
@@ -59,7 +74,7 @@ const SECONDARY_SLUGS = new Set([
 ]);
 
 const KEYWORDS_BY_SLUG = {
-  "consultanta-fonduri-europene": ["consultanta fonduri europene", "consultant fonduri europene", "servicii fonduri europene", "consultanta fonduri europene nerambursabile", "consultanta Start Up Nation 2026", "consultanta Digitalizare IMM"],
+  "consultanta-fonduri-europene": ["consultanță fonduri europene", "firmă consultanță fonduri europene", "consultant fonduri europene", "verificare eligibilitate fonduri europene", "cost consultanță fonduri europene", "dosar fonduri europene"],
   "verificare-eligibilitate-fonduri-europene": ["verificare eligibilitate fonduri europene", "eligibilitate fonduri europene 2026", "eligibilitate DR12", "eligibilitate DR14", "verificare cod CAEN fonduri europene"],
   "fonduri-europene-nerambursabile-2026": ["fonduri europene nerambursabile 2026", "fonduri europene 2026 pentru tineri", "fonduri europene 2026 rural non agricol", "program fonduri europene 2026", "fonduri europene 2026 pentru femei"],
   "dr12-afir": ["DR12 AFIR", "program DR12 investitii tineri fermieri", "investitii tineri fermieri 2026", "ghid DR12 AFIR"],
@@ -125,6 +140,15 @@ function wordCount(html) {
   return words ? words.length : 0;
 }
 
+function textWordCount(value) {
+  const words = String(value || "").match(/[\p{L}\p{N}]+(?:[-''][\p{L}\p{N}]+)*/gu);
+  return words ? words.length : 0;
+}
+
+function isEditorialProgram(page) {
+  return page.template === "editorial-program";
+}
+
 function li(items) {
   return (items || []).map((item) => `<li>${esc(item)}</li>`).join("\n");
 }
@@ -180,6 +204,7 @@ function labelForHref(href) {
 }
 
 function minWordsForPage(page) {
+  if (isEditorialProgram(page)) return Number(page.minWords || 1200);
   if (Number(page.minWords) > 0) return Number(page.minWords);
   if (PILLAR_SLUGS.has(page.slug)) return 2100;
   if (SECONDARY_SLUGS.has(page.slug)) return 1200;
@@ -188,6 +213,7 @@ function minWordsForPage(page) {
 }
 
 function minFaqForPage(page) {
+  if (isEditorialProgram(page)) return Math.min(6, Math.max(2, (page.faq || []).length || 2));
   if (Number(page.minFaq) > 0) return Number(page.minFaq);
   if (PILLAR_SLUGS.has(page.slug)) return 10;
   if (SECONDARY_SLUGS.has(page.slug)) return 6;
@@ -201,19 +227,20 @@ function keywordsForPage(page) {
 
 function faqsForPage(page) {
   const faq = Array.isArray(page.faq) ? [...page.faq] : [];
+  if (isEditorialProgram(page)) return faq.slice(0, 6);
   const programName = page.programName || page.h1 || "program";
   const keyword = keywordsForPage(page)[0] || programName;
   const additions = [
     [`Cum verific daca ${programName} este potrivit pentru proiectul meu?`, `Porneste de la solicitant, cod CAEN, localitate, investitie, buget si documentele disponibile. Daca una dintre aceste piese nu se potriveste cu apelul activ, proiectul trebuie ajustat inainte de depunere.`],
     [`Cand nu merita sa aplic pentru ${programName}?`, `Nu merita sa aplici cand nu poti dovedi eligibilitatea, cand cheltuielile principale nu sunt permise, cand cofinantarea nu este acoperita sau cand calendarul nu permite documente complete si verificabile.`],
-    ["Ce documente trebuie pregatite inainte de analiza?", "De regula sunt necesare documente de firma sau solicitant, documente pentru activitate si locatie, date financiare, oferte, descrierea investitiei si informatii despre cofinantare."],
-    ["Cum se verifica un cod CAEN pentru fonduri europene?", "Codul CAEN se verifica prin certificatul constatator, activitatea reala, autorizarea necesara, lista de coduri eligibile a apelului si legatura directa dintre investitie si activitatea finantata."],
-    ["Ce cheltuieli sunt cele mai sensibile la evaluare?", "Sunt sensibile cheltuielile greu de justificat, activele supradimensionate, serviciile descrise vag, achizitiile incepute prea devreme si costurile care nu au legatura directa cu obiectivele proiectului."],
-    ["Cum tratez cofinantarea si cheltuielile neeligibile?", "Cofinantarea si cheltuielile neeligibile trebuie estimate separat de grant. Include rezerve pentru TVA, diferente de pret, costuri neacoperite si intarzieri in rambursare."],
-    ["Ce greseli duc frecvent la respingere sau clarificari?", "Apar probleme cand documentele sunt expirate, ofertele sunt incomplete, bugetul nu se leaga de activitate, punctajul este estimat optimist sau solicitantul nu poate sustine implementarea."],
-    ["Cum folosesc informatiile despre eligibilitate fonduri europene 2026?", "Foloseste informatiile ca filtru initial si confirma intotdeauna regulile in apelul activ. Programele pot schimba praguri, documente, punctaje si termene de la o sesiune la alta."],
+    [`Ce documente trebuie pregatite pentru ${programName}?`, "De regula sunt necesare documente de firma sau solicitant, documente pentru activitate si locatie, date financiare, oferte, descrierea investitiei si informatii despre cofinantare."],
+    [`Cum se verifica un cod CAEN pentru ${programName}?`, "Codul CAEN se verifica prin certificatul constatator, activitatea reala, autorizarea necesara, lista de coduri eligibile a apelului si legatura directa dintre investitie si activitatea finantata."],
+    [`Ce cheltuieli sunt sensibile la evaluare pentru ${programName}?`, "Sunt sensibile cheltuielile greu de justificat, activele supradimensionate, serviciile descrise vag, achizitiile incepute prea devreme si costurile care nu au legatura directa cu obiectivele proiectului."],
+    [`Cum tratez cofinantarea si cheltuielile neeligibile pentru ${programName}?`, "Cofinantarea si cheltuielile neeligibile trebuie estimate separat de grant. Include rezerve pentru TVA, diferente de pret, costuri neacoperite si intarzieri in rambursare."],
+    [`Ce greseli duc frecvent la respingere sau clarificari pentru ${programName}?`, "Apar probleme cand documentele sunt expirate, ofertele sunt incomplete, bugetul nu se leaga de activitate, punctajul este estimat optimist sau solicitantul nu poate sustine implementarea."],
+    [`Cum folosesc informatiile despre ${programName} in 2026?`, "Foloseste informatiile ca filtru initial si confirma intotdeauna regulile in apelul activ. Programele pot schimba praguri, documente, punctaje si termene de la o sesiune la alta."],
     [`Ce rol are consultanta pentru ${keyword}?`, `Consultanta ajuta la trierea programului, verificarea documentelor, structurarea bugetului, pregatirea raspunsurilor la clarificari si reducerea riscurilor, dar nu poate garanta aprobarea finantarii.`],
-    ["Cat de repede trebuie inceputa pregatirea dosarului?", "Pregatirea trebuie inceputa inainte de deschiderea efectiva a apelului, mai ales daca sunt necesare oferte, documente pentru spatiu, autorizatii, calcule de punctaj sau clarificari privind solicitantul."]
+    [`Cat de repede trebuie inceputa pregatirea dosarului pentru ${programName}?`, "Pregatirea trebuie inceputa inainte de deschiderea efectiva a apelului, mai ales daca sunt necesare oferte, documente pentru spatiu, autorizatii, calcule de punctaj sau clarificari privind solicitantul."]
   ];
   const seen = new Set(faq.map(([question]) => String(question).toLowerCase()));
   for (const item of additions) {
@@ -247,78 +274,90 @@ function validatePage(page) {
   if (hasNumericClaim(page) && (!Array.isArray(page.sourceKeys) || page.sourceKeys.length === 0)) {
     throw new Error(`${page.slug} contine valori numerice si nu are sourceKeys interne.`);
   }
+  if (isEditorialProgram(page)) {
+    const quickAnswerWords = textWordCount(page.quickAnswer);
+    if (quickAnswerWords < 100 || quickAnswerWords > 150) {
+      throw new Error(`${page.slug} trebuie sa aiba raspuns scurt intre 100 si 150 cuvinte; are ${quickAnswerWords}.`);
+    }
+    if ((page.faq || []).length > 6) {
+      throw new Error(`${page.slug} trebuie sa aiba maximum 6 intrebari FAQ.`);
+    }
+    if ((page.commonMistakes || []).length < 6) {
+      throw new Error(`${page.slug} trebuie sa aiba cel putin 6 greseli frecvente.`);
+    }
+  }
 }
 
 function schemaGraph(page, config) {
   const faq = faqsForPage(page);
   const editorial = getEditorialMetadata(page.slug);
-  const graph = [
-    {
-      "@type": page.schemaType === "CollectionPage" ? "CollectionPage" : "WebPage",
-      "@id": `${canonical(page)}#webpage`,
-      "url": canonical(page),
-      "name": page.title,
-      "description": page.description,
-      "isPartOf": { "@id": WEBSITE_ID },
-      "inLanguage": "ro-RO",
-      "dateModified": config.updatedAt,
-      "publisher": { "@id": ORGANIZATION_ID },
-      "speakable": {
-        "@type": "SpeakableSpecification",
-        "cssSelector": ["#speakable-summary", "#speakable-eligibility", "#speakable-cta"]
-      }
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Acasa", "item": `${SITE}/` },
-        { "@type": "ListItem", "position": 2, "name": page.h1, "item": canonical(page) }
-      ]
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": faq.map(([question, answer]) => ({
-        "@type": "Question",
-        "name": question,
-        "acceptedAnswer": { "@type": "Answer", "text": answer }
-      }))
-    }
-  ];
+  const pageNode = webPageSchema({
+    type: page.schemaType === "CollectionPage" ? "CollectionPage" : "WebPage",
+    url: canonical(page),
+    name: page.title,
+    description: page.description,
+    dateModified: config.updatedAt
+  });
 
   if (editorial) {
-    Object.assign(graph[0], editorialSchemaProperties(editorial));
+    Object.assign(pageNode, editorialSchemaProperties(editorial));
   }
 
   if (Array.isArray(page.sourceKeys) && page.sourceKeys.length) {
-    graph[0].citation = officialSourceCitations(page.sourceKeys);
+    pageNode.citation = officialSourceCitations(page.sourceKeys);
+  }
+  if (isEditorialProgram(page)) {
+    pageNode.mainEntity = { "@id": `${canonical(page)}#service` };
+    pageNode.about = {
+      "@type": page.schemaType === "GovernmentService" ? "GovernmentService" : "Service",
+      name: page.programName || page.h1,
+      serviceType: page.category
+    };
   }
 
+  const graph = [
+    organizationSchema(),
+    websiteSchema(),
+    pageNode,
+    breadcrumbSchema([
+      { name: "Acasa", item: `${SITE}/` },
+      { name: page.h1, item: canonical(page) }
+    ]),
+    faqPageSchema(faq, { minItems: 2 })
+  ];
+
   if (page.type === "program" || page.type === "service" || page.schemaType === "Service" || page.schemaType === "GovernmentService") {
-    graph.push({
-      "@type": page.schemaType === "GovernmentService" ? "GovernmentService" : "Service",
-      "@id": `${canonical(page)}#service`,
-      "name": page.programName || page.h1,
-      "description": page.description,
-      "provider": { "@id": ORGANIZATION_ID },
-      "areaServed": "RO",
-      "serviceType": page.category
+    const serviceNode = serviceSchema({
+      type: page.schemaType === "GovernmentService" ? "GovernmentService" : "Service",
+      url: canonical(page),
+      name: page.programName || page.h1,
+      description: page.description,
+      serviceType: page.category
     });
+    if (isEditorialProgram(page)) {
+      serviceNode.audience = (page.audience || []).slice(0, 4).map((item) => ({
+        "@type": "Audience",
+        audienceType: item
+      }));
+      serviceNode.potentialAction = {
+        "@type": "CommunicateAction",
+        name: "Trimite date pentru verificarea eligibilitatii",
+        target: `${SITE}/contact`
+      };
+    }
+    graph.push(serviceNode);
   }
 
   if (page.type === "tools") {
-    graph.push({
-      "@type": "WebApplication",
-      "@id": `${canonical(page)}#app`,
-      "name": "Instrumente fonduri europene",
-      "applicationCategory": "FinanceApplication",
-      "operatingSystem": "Web",
-      "url": canonical(page),
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "RON" },
-      "provider": { "@id": ORGANIZATION_ID }
-    });
+    graph.push(webApplicationSchema({
+      url: canonical(page),
+      name: "Instrumente fonduri europene",
+      description: page.description,
+      applicationCategory: "FinanceApplication"
+    }));
   }
 
-  return JSON.stringify({ "@context": "https://schema.org", "@graph": graph }, null, 2);
+  return jsonLdGraph(graph);
 }
 
 function renderChecklist(title, items) {
@@ -338,6 +377,84 @@ function renderTable(page) {
       ${rows.map(([key, value]) => `<tr><th>${esc(key)}</th><td>${esc(value)}</td></tr>`).join("\n")}
     </tbody>
   </table>`;
+}
+
+function renderEditorialTable(title, columns, rows) {
+  const safeRows = Array.isArray(rows) ? rows : [];
+  return `<h2>${esc(title)}</h2>
+      <div class="table-wrap">
+        <table class="program-table">
+          <thead>
+            <tr>${columns.map((column) => `<th>${esc(column)}</th>`).join("")}</tr>
+          </thead>
+          <tbody>
+            ${safeRows.map((row) => `<tr>${columns.map((_, index) => `<td>${esc(Array.isArray(row) ? row[index] : "")}</td>`).join("")}</tr>`).join("\n")}
+          </tbody>
+        </table>
+      </div>`;
+}
+
+function renderPreparationSteps(steps) {
+  const safeSteps = Array.isArray(steps) ? steps : [];
+  return `<ol class="process-list">
+        ${safeSteps.map((step) => {
+    const title = Array.isArray(step) ? step[0] : "";
+    const detail = Array.isArray(step) ? step[1] : step;
+    return `<li><strong>${esc(title)}</strong>${detail ? ` ${esc(detail)}` : ""}</li>`;
+  }).join("\n")}
+      </ol>`;
+}
+
+function renderCaseExample(example) {
+  const item = example || {};
+  const rows = [
+    ["Tip beneficiar", item.beneficiary || "TODO_CLIENT_EXEMPLU"],
+    ["Obiectiv investi\u021bie", item.investmentObjective || "TODO_CLIENT_EXEMPLU"],
+    ["Provoc\u0103ri", item.challenges || "TODO_CLIENT_EXEMPLU"],
+    ["Ce s-a verificat", item.checked || "TODO_CLIENT_EXEMPLU"]
+  ];
+  return `${item.note ? `<p class="note">${esc(item.note)}</p>` : ""}
+      <div class="table-wrap">
+        <table class="program-table">
+          <tbody>
+            ${rows.map(([key, value]) => `<tr><th>${esc(key)}</th><td>${esc(value)}</td></tr>`).join("\n")}
+          </tbody>
+        </table>
+      </div>`;
+}
+
+function renderEditorialNotes(notes) {
+  if (!Array.isArray(notes) || !notes.length) return "";
+  return `<h2>Note de verificare</h2>
+      ${notes.map((note) => `<p>${esc(note)}</p>`).join("\n")}`;
+}
+
+function renderEditorialProgramContent(page) {
+  const editorialHtml = renderEditorialSection(getEditorialMetadata(page.slug));
+  const officialSourcesHtml = renderOfficialSources(page.sourceKeys, { id: `${page.slug}-official-sources` });
+  const faqHtml = faqsForPage(page)
+    .map(([question, answer]) => `<section class="faq-item"><h3>${esc(question)}</h3><p>${esc(answer)}</p></section>`)
+    .join("\n");
+
+  return `
+${editorialHtml}
+      <h2>R\u0103spuns scurt</h2>
+      <p class="intro">${esc(page.quickAnswer)}</p>
+      ${renderEditorialTable("Cine poate aplica", ["Tip solicitant", "Eligibilitate posibil\u0103", "Ce trebuie verificat", "Observa\u021bii"], page.applicantRows)}
+      ${renderEditorialTable("Ce investi\u021bii pot fi eligibile", ["Categorie cheltuial\u0103", "Exemple", "Aten\u021bie la", "Surs\u0103/TODO"], page.eligibleInvestmentRows)}
+      ${renderEditorialTable("Documente necesare", ["Document", "Cine \u00eel preg\u0103te\u0219te", "C\u00e2nd este necesar", "Risc dac\u0103 lipse\u0219te"], page.documentRows)}
+      <h2>Pa\u0219i de preg\u0103tire</h2>
+      ${renderPreparationSteps(page.preparationSteps)}
+      <h2>Gre\u0219eli frecvente</h2>
+      <ul class="warning-list">${li(page.commonMistakes)}</ul>
+      <h2>Exemplu realist anonimizat</h2>
+      ${renderCaseExample(page.caseExample)}
+      ${renderEditorialNotes(page.editorialNotes)}
+${officialSourcesHtml}
+      <h2>FAQ</h2>
+      ${faqHtml}
+      <h2>CTA</h2>
+      <p>Trimite-ne codul CAEN / tipul fermei / investi\u021bia dorit\u0103 pentru verificarea eligibilit\u0103\u021bii.</p>`;
 }
 
 function renderTools() {
@@ -400,6 +517,166 @@ function renderDownloads() {
   </div>`;
 }
 
+function renderConsultantaPillarContent(page) {
+  const editorialHtml = renderEditorialSection(getEditorialMetadata(page.slug));
+  const officialSourcesHtml = renderOfficialSources(page.sourceKeys, { id: `${page.slug}-official-sources` });
+  const faqHtml = faqsForPage(page)
+    .map(([question, answer]) => `<section class="faq-item"><h3>${esc(question)}</h3><p>${esc(answer)}</p></section>`)
+    .join("\n");
+
+  return `
+      <p class="intro">FABER ajută firmele, fermierii și antreprenorii să decidă dacă un proiect merită pregătit pentru finanțare, ce program poate fi potrivit și ce riscuri trebuie clarificate înainte de dosar. Analiza pornește de la datele solicitantului, documente, buget și regulile apelului activ.</p>
+${editorialHtml}
+
+      <h2>Ce face o firmă de consultanță fonduri europene?</h2>
+      <p>O firmă de consultanță pentru fonduri europene verifică dacă solicitantul, activitatea, investiția și documentele disponibile se potrivesc cu un program de finanțare. Rolul ei nu este să promită aprobarea, ci să reducă riscurile înainte ca beneficiarul să investească timp și bani într-un dosar. În practică, consultantul analizează codul CAEN, localitatea, forma juridică, istoricul firmei sau fermei, bugetul, cofinanțarea, cheltuielile propuse și grila de punctaj. Apoi recomandă programul potrivit, structurează strategia de depunere, pregătește documentația, răspunde la clarificări și poate sprijini etapa de contractare sau implementare. O colaborare bună începe cu date minime clare și cu o concluzie prudentă: proiect potrivit, proiect cu riscuri de clarificat sau proiect care nu ar trebui depus în forma actuală.</p>
+
+      <h2>Pentru cine lucrăm</h2>
+      <div class="grid">
+        <section class="mini-card"><h3>Solicitanți</h3><ul>
+          <li>firme existente;</li>
+          <li>start-up-uri;</li>
+          <li>fermieri;</li>
+          <li>microîntreprinderi.</li>
+        </ul></section>
+        <section class="mini-card"><h3>Tipuri de proiecte</h3><ul>
+          <li>proiecte de digitalizare;</li>
+          <li>investiții agricole;</li>
+          <li>producție și servicii;</li>
+          <li>investiții regionale sau energetice, dacă apelul permite.</li>
+        </ul></section>
+      </div>
+
+      <h2>Ce verificăm înainte de dosar</h2>
+      <p>Verificarea inițială separă ideile promițătoare de dosarele riscante. Tabelul de mai jos arată informațiile cerute înainte de recomandarea unui program sau a unei strategii de punctaj.</p>
+      <div class="table-wrap">
+        <table class="program-table">
+          <thead>
+            <tr>
+              <th>Element verificat</th>
+              <th>De ce contează</th>
+              <th>Documente/date necesare</th>
+              <th>Risc dacă este ignorat</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Solicitant și formă juridică</td>
+              <td>Programul poate accepta doar anumite categorii de beneficiari.</td>
+              <td>CUI, certificat constatator, formă juridică, vechime.</td>
+              <td>Dosar respins administrativ sau eligibilitate interpretată greșit.</td>
+            </tr>
+            <tr>
+              <td>Cod CAEN și activitate reală</td>
+              <td>Investiția trebuie să fie legată de activitatea finanțată.</td>
+              <td>Coduri CAEN, autorizări, descriere activitate, punct de lucru.</td>
+              <td>Cheltuieli neeligibile sau punctaj supraestimat.</td>
+            </tr>
+            <tr>
+              <td>Localizare și spațiu</td>
+              <td>Multe apeluri depind de regiune, rural/urban sau dreptul de folosință.</td>
+              <td>Adresă proiect, contract spațiu, acte teren/clădire, durată folosință.</td>
+              <td>Blocaj la contractare, clarificări sau imposibilitate de implementare.</td>
+            </tr>
+            <tr>
+              <td>Buget și cofinanțare</td>
+              <td>Grantul nu acoperă toate costurile și nu elimină presiunea de cash-flow.</td>
+              <td>Buget estimativ, oferte, sursă cofinanțare, tratament TVA.</td>
+              <td>Proiect aprobat pe hârtie, dar greu de susținut financiar.</td>
+            </tr>
+            <tr>
+              <td>Cheltuieli propuse</td>
+              <td>Fiecare achiziție trebuie să fie permisă și justificată prin obiective.</td>
+              <td>Listă echipamente/servicii, specificații, oferte, justificare necesitate.</td>
+              <td>Tăieri de buget, corecții sau respingere la evaluare.</td>
+            </tr>
+            <tr>
+              <td>Punctaj și priorități</td>
+              <td>Eligibilitatea nu înseamnă automat selecție la finanțare.</td>
+              <td>Grilă de evaluare, criterii aplicabile, documente care susțin punctajul.</td>
+              <td>Depunere cu șanse slabe sau strategie construită pe presupuneri.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h2>Cum decurge procesul</h2>
+      <ol class="process-list">
+        <li><strong>Discuție inițială.</strong> Clarificăm solicitantul, investiția, bugetul și termenul dorit.</li>
+        <li><strong>Analiză eligibilitate.</strong> Verificăm datele minime, documentele disponibile și riscurile evidente.</li>
+        <li><strong>Alegere program.</strong> Comparăm apelurile relevante și eliminăm programele nepotrivite.</li>
+        <li><strong>Strategie punctaj.</strong> Estimăm prudent criteriile care pot fi susținute prin documente.</li>
+        <li><strong>Dosar.</strong> Pregătim cererea, bugetul, anexele și justificările necesare.</li>
+        <li><strong>Depunere.</strong> Verificăm forma finală și încărcarea documentelor în platforma programului.</li>
+        <li><strong>Clarificări.</strong> Răspundem solicitărilor primite de la autoritate, pe baza documentelor.</li>
+        <li><strong>Contractare.</strong> Verificăm condițiile de semnare, termenele și obligațiile beneficiarului.</li>
+        <li><strong>Implementare.</strong> Sprijinim achizițiile, raportările și cererile de plată/rambursare dacă serviciul este inclus.</li>
+      </ol>
+
+      <h2>Ce NU promitem</h2>
+      <ul class="warning-list">
+        <li>Nu promitem finanțare garantată.</li>
+        <li>Nu recomandăm programe nepotrivite doar pentru a depune un dosar.</li>
+        <li>Nu estimăm șanse fără date minime despre solicitant, investiție, buget și documente.</li>
+      </ul>
+      <p>Un răspuns responsabil poate fi uneori „nu acum” sau „nu pe acest program”. Este mai util să oprești un dosar slab înainte de depunere decât să consumi resurse într-un proiect care nu poate fi susținut.</p>
+
+      <h2>Cost consultanță fonduri europene</h2>
+      <p>Costul consultanței depinde de program, complexitatea investiției, documentele existente, etapa în care se află proiectul și suportul cerut după depunere. Un dosar simplu, cu documente pregătite, nu se estimează la fel ca un proiect cu investiții tehnice, achiziții complexe, clarificări sau implementare pe termen lung.</p>
+      <p>Nu introducem prețuri standard dacă ele nu există deja în proiect. Pentru o estimare prudentă, trimite datele de bază și programul vizat, iar FABER poate indica ce trebuie verificat înainte de ofertare.</p>
+      <p><a class="btn btn-primary" href="/verificare-eligibilitate-fonduri-europene">Solicită evaluare pentru cost</a></p>
+
+      <h2>Programe relevante</h2>
+      <p>Pagina aceasta funcționează ca punct de intrare. Pentru reguli, documente și condiții specifice, verifică pagina programului potrivit și sursa oficială a apelului activ.</p>
+      <div class="related-links">
+        <a href="/consultanta-afir">Consultanță AFIR</a>
+        <a href="/dr12-afir">DR 12 AFIR</a>
+        <a href="/dr14">DR 14 AFIR</a>
+        <a href="/start-up-nation-2026">Start-Up Nation</a>
+        <a href="/digitalizare-imm">Digitalizare IMM</a>
+        <a href="/por-adr-nord-est">POR / ADR Nord-Est</a>
+        <a href="/fonduri-europene-agricultura">Fonduri europene agricultură</a>
+        <a href="/fondul-de-modernizare">Fondul de Modernizare</a>
+      </div>
+
+      <h2>Ce intră, de regulă, într-un dosar</h2>
+      <p>Un dosar pentru fonduri europene nu este doar un formular completat. El trebuie să lege solicitantul, investiția, bugetul și documentele suport într-o explicație coerentă. Documentele diferă de la program la program, dar de obicei includ informații despre firmă sau fermă, situații financiare, acte pentru spațiu, oferte, descrierea investiției, buget, declarații și anexe specifice apelului.</p>
+      <p>Înainte de depunere, verificarea internă trebuie să urmărească dacă fiecare afirmație poate fi susținută prin documente. Dacă bugetul include echipamente, serviciile sau lucrările trebuie să fie justificate prin nevoia proiectului. Dacă se solicită punctaj pentru o condiție, acea condiție trebuie să poată fi demonstrată. Această disciplină reduce clarificările și riscul de respingere.</p>
+
+      <h2>Responsabilități în colaborare</h2>
+      <p>Consultanța funcționează bine atunci când responsabilitățile sunt clare de la început. Beneficiarul cunoaște activitatea, investiția și constrângerile reale ale afacerii. Consultantul cunoaște logica programului, documentele cerute, riscurile frecvente și modul în care informațiile trebuie așezate în dosar. Niciuna dintre părți nu poate înlocui complet rolul celeilalte.</p>
+      <ul>
+        <li>Clientul furnizează date corecte despre firmă, fermă, localizare, buget și documentele disponibile.</li>
+        <li>FABER verifică potrivirea cu programele relevante și semnalează riscurile înainte de depunere.</li>
+        <li>Bugetul se construiește pe oferte și justificări, nu pe estimări optimiste.</li>
+        <li>Decizia de depunere se ia după verificarea ghidului activ și a documentelor minime.</li>
+      </ul>
+      <p>Această împărțire este importantă mai ales când proiectul trece din etapa de idee în etapa de implementare. După contractare, apar termene, achiziții, raportări și obligații de menținere a investiției. Un dosar pregătit corect ar trebui să poată fi implementat, nu doar depus.</p>
+
+      <h2>Riscuri frecvente înainte de depunere</h2>
+      <p>Cele mai multe probleme apar când proiectul este construit prea repede sau când programul este ales doar pentru că pare popular. Un cod CAEN nealiniat cu investiția, un spațiu fără documente suficiente, o ofertă prea generală sau o cofinanțare neclară pot transforma o idee bună într-un dosar vulnerabil. De aceea, verificarea eligibilității trebuie făcută înainte de achiziții, contracte ferme sau promisiuni către furnizori.</p>
+      <p>Un alt risc este supraestimarea punctajului. Dacă un criteriu nu poate fi susținut prin documente, el nu ar trebui tratat ca punctaj sigur. La fel, dacă un program cere condiții de vechime, localizare, dimensiune economică sau activitate autorizată, aceste elemente trebuie confirmate înainte de a investi în documentație completă.</p>
+
+      <h2>Când recomandăm să nu depui imediat</h2>
+      <p>Există situații în care o amânare este mai sănătoasă decât o depunere rapidă. Dacă documentele pentru spațiu nu acoperă perioada cerută, dacă ofertele nu descriu suficient cheltuielile, dacă solicitantul nu poate susține cofinanțarea sau dacă activitatea nu este clar legată de investiție, dosarul trebuie corectat înainte de depunere. Aceeași prudență se aplică atunci când programul este încă în consultare, când ghidul nu este final sau când informațiile publice nu permit o estimare serioasă a punctajului. În aceste cazuri, rolul consultanței este să protejeze beneficiarul de decizii costisitoare, nu să forțeze un dosar doar pentru a respecta un calendar comercial. Concluzia trebuie documentată și revizuită când apar reguli noi.</p>
+      <p>Pentru proiectele aflate la limită, recomandarea poate fi pregătirea documentelor lipsă, ajustarea investiției, schimbarea calendarului sau urmărirea unui apel viitor. Această etapă nu blochează proiectul; îl face mai ușor de apărat la evaluare.</p>
+
+      <h2>Întrebări frecvente</h2>
+      ${faqHtml}
+
+      <h2>Surse și metodologie</h2>
+      <p>Metodologia FABER pornește de la verificarea eligibilității, a documentelor, a grilei de punctaj și a riscurilor de implementare. Pentru decizii finale se verifică întotdeauna ghidul oficial, anexele, corrigendumurile și comunicările autorității.</p>
+      <div class="related-links">
+        <a href="/metodologie-verificare-eligibilitate">Metodologia FABER</a>
+        <a href="/surse-oficiale-fonduri-europene">Surse oficiale fonduri europene</a>
+        <a href="/glosar-fonduri-europene">Glosar fonduri europene</a>
+        <a href="/verificare-eligibilitate-fonduri-europene">Verificare eligibilitate</a>
+      </div>
+      ${officialSourcesHtml}
+      <p class="note">Data actualizării: <time datetime="2026-05-20">20 mai 2026</time>. Indicatorii comerciali precum număr de proiecte, valoare atrasă sau rată de aprobare trebuie publicați doar dacă există documente interne, portofoliu sau metodologie care îi susțin.</p>
+`;
+}
+
 function renderDr14Score() {
   return `<section class="mini-card dr14-score-tool" aria-labelledby="dr14-score-title">
       <h2 id="dr14-score-title">Estimator rapid punctaj DR14</h2>
@@ -425,6 +702,13 @@ function renderDr14Score() {
 }
 
 function renderMainContent(page) {
+  if (page.slug === "consultanta-fonduri-europene") {
+    return renderConsultantaPillarContent(page);
+  }
+  if (isEditorialProgram(page)) {
+    return renderEditorialProgramContent(page);
+  }
+
   const editorialHtml = renderEditorialSection(getEditorialMetadata(page.slug));
   const officialSourcesHtml = renderOfficialSources(page.sourceKeys, { id: `${page.slug}-official-sources` });
   const faqHtml = faqsForPage(page)
@@ -436,7 +720,7 @@ function renderMainContent(page) {
   const keywordHtml = renderKeywordIntent(page);
 
   let html = `
-      <p id="speakable-summary" class="intro speakable" data-speakable="true">${esc(page.quickAnswer)}</p>
+      <p class="intro">${esc(page.quickAnswer)}</p>
       ${renderTable(page)}
 ${editorialHtml}
       <h2>Pe scurt</h2>
@@ -447,7 +731,7 @@ ${keywordHtml}
         ${renderChecklist("Cui se adreseaza", page.audience)}
         ${renderChecklist("Conditii de eligibilitate", page.eligibility)}
       </div>
-      <h2 id="speakable-eligibility" class="speakable" data-speakable="true">Eligibilitatea se verifica prin solicitant, activitate, documente si investitie.</h2>
+      <h2>Eligibilitatea se verifica prin solicitant, activitate, documente si investitie.</h2>
       <p>${esc(page.policyContribution)} Aceasta contributie conteaza pentru modul in care este scris proiectul: obiectivele trebuie sa fie clare, cheltuielile sa fie explicate, iar rezultatele sa poata fi urmarite dupa contractare.</p>
       <p>O eroare frecventa este pornirea de la lista de cumparaturi. Ordinea mai sigura este inversa: intai se verifica solicitantul, apoi activitatea, apoi locatia si documentele, iar abia dupa aceea se confirma echipamentele, serviciile sau lucrarile care pot intra in buget.</p>
       <div class="grid">
@@ -482,7 +766,7 @@ ${downloadsHtml}
 ${officialSourcesHtml}
       <h2>Intrebari frecvente</h2>
       ${faqHtml}
-      <h2 id="speakable-cta" class="speakable" data-speakable="true">Pentru o verificare initiala, trimite date despre solicitant, investitie, buget si programul urmarit.</h2>
+      <h2>Pentru o verificare initiala, trimite date despre solicitant, investitie, buget si programul urmarit.</h2>
       <p>Daca proiectul implica sume, cheltuieli tehnice, conditii de varsta, cod CAEN, amplasament sau cofinantare, merita verificat inainte de depunere. O analiza initiala poate identifica rapid documentele lipsa si riscurile evidente.</p>`;
 
   const depthParagraphs = [
@@ -505,6 +789,15 @@ function pageHtml(page, config) {
   const sourcesCss = (page.sourceKeys || []).length ? `\n  <link rel="stylesheet" href="/assets/official-sources.css" />` : "";
   const extraCss = `${relatedCss}${toolCss}${sourcesCss}`;
   const extraJs = page.includeTools ? `\n  <script src="/assets/seo-tools.js" defer></script>` : "";
+  const isConsultantaPillar = page.slug === "consultanta-fonduri-europene";
+  const primaryCta = isConsultantaPillar ? "Solicită verificare eligibilitate" : "Verifica eligibilitatea";
+  const secondaryCta = isConsultantaPillar ? "Vezi metodologia de lucru" : "Discuta cu un consultant";
+  const secondaryHref = isConsultantaPillar ? "/metodologie-verificare-eligibilitate" : "/contact";
+  const finalCtaTitle = isEditorialProgram(page) ? "Verificare eligibilitate" : "Urmatorul pas";
+  const finalCtaText = isEditorialProgram(page)
+    ? "Trimite-ne codul CAEN / tipul fermei / investi\u021bia dorit\u0103 pentru verificarea eligibilit\u0103\u021bii."
+    : "Trimite cateva detalii despre solicitant, localitate, cod CAEN, investitie si buget. Raspunsul initial este orientativ si nu reprezinta promisiune de finantare.";
+  const finalPrimaryCta = isEditorialProgram(page) ? "Trimite datele pentru verificare" : "Trimite datele proiectului";
   return `<!DOCTYPE html>
 <html lang="ro">
 <head>
@@ -528,6 +821,7 @@ function pageHtml(page, config) {
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="stylesheet" href="/assets/seo-hub.css" />${extraCss}
   <script type="application/ld+json">${schemaGraph(page, config)}</script>${extraJs}
+${CLARITY_TRACKING_CODE}
 </head>
 <body>
   <nav class="navbar" aria-label="Navigare principala">
@@ -546,8 +840,8 @@ function pageHtml(page, config) {
     <h1>${esc(page.h1)}</h1>
     <p>${esc(page.description)}</p>
     <div class="hero-actions">
-      <a class="btn btn-primary" href="/verificare-eligibilitate-fonduri-europene">Verifica eligibilitatea</a>
-      <a class="btn btn-secondary" href="/contact">Discuta cu un consultant</a>
+      <a class="btn btn-primary" href="/verificare-eligibilitate-fonduri-europene">${esc(primaryCta)}</a>
+      <a class="btn btn-secondary" href="${secondaryHref}">${esc(secondaryCta)}</a>
     </div>
   </header>
   <main class="container">
@@ -556,10 +850,10 @@ ${renderMainContent(page)}
       <div class="related-links">${links(page.related)}</div>
     </article>
     <section class="cta-box">
-      <h2>Urmatorul pas</h2>
-      <p>Trimite cateva detalii despre solicitant, localitate, cod CAEN, investitie si buget. Raspunsul initial este orientativ si nu reprezinta promisiune de finantare.</p>
+      <h2>${esc(finalCtaTitle)}</h2>
+      <p>${esc(finalCtaText)}</p>
       <div class="cta-actions">
-        <a class="btn btn-primary" href="/contact">Trimite datele proiectului</a>
+        <a class="btn btn-primary" href="/contact">${esc(finalPrimaryCta)}</a>
         <a class="btn btn-secondary" href="/consultanta-fonduri-europene">Vezi serviciile</a>
       </div>
     </section>
@@ -751,7 +1045,7 @@ function updateLlms(pages) {
   const block = `\n## Pagini noi pentru vizibilitate AI si cautare vocala\n${pages
     .filter((page) => ["portofoliu", "testimoniale", "instrumente", "resurse", "webinarii", "investitii-modernizarea-microintreprinderilor-apel-2", "fondul-modernizare-energie-regenerabila-2026"].includes(page.slug))
     .map((page) => `- ${page.h1}: ${SITE}/${page.slug}`)
-    .join("\n")}\n\n## Structura pentru asistenti AI\n- Paginile importante includ intrebari in limbaj natural, raspunsuri scurte vizibile, schema FAQPage si SpeakableSpecification.\n- Pentru sume, procente, punctaje si conditii finale, informatia trebuie verificata in apelul activ.\n`;
+    .join("\n")}\n\n## Structura pentru asistenti AI\n- Paginile importante includ intrebari in limbaj natural, raspunsuri scurte vizibile si schema FAQPage doar cand intrebarile sunt vizibile in pagina.\n- Pentru sume, procente, punctaje si conditii finale, informatia trebuie verificata in apelul activ.\n`;
   if (!text.includes("Pagini noi pentru vizibilitate AI")) {
     text = `${text.replace(/\s+$/g, "")}\n${block}`;
     fs.writeFileSync(LLMS_PATH, text, "utf8");

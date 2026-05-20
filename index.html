@@ -3,29 +3,99 @@
 <head>
   <!-- ✦ Meta & charset — totul pornește de aici ✦ -->
   <meta charset="UTF-8" />
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": ["LocalBusiness", "ProfessionalService"],
-    "@id": "https://atelierdeconsultanta.ro/#localbusiness",
-    "name": "FABER – Atelier de Consultanță",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Strada X, Nr. Y",
-      "addressLocality": "București",
-      "addressCountry": "Romania"
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://atelierdeconsultanta.ro/#organization",
+      "name": "FABER - Atelier de Consultanta",
+      "alternateName": [
+        "Atelier de Consultanta",
+        "Atelier de Consultanta FABER"
+      ],
+      "url": "https://atelierdeconsultanta.ro",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://atelierdeconsultanta.ro/favicon-192.png"
+      },
+      "image": "https://atelierdeconsultanta.ro/og-image.jpg",
+      "email": "atelier.consultanta@gmail.com",
+      "areaServed": {
+        "@type": "Country",
+        "name": "Romania"
+      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+40769828338",
+          "contactType": "customer service",
+          "availableLanguage": "Romanian"
+        },
+        {
+          "@type": "ContactPoint",
+          "telephone": "+40753326229",
+          "contactType": "customer service",
+          "availableLanguage": "Romanian"
+        }
+      ],
+      "knowsAbout": [
+        "fonduri europene",
+        "finantari nerambursabile",
+        "AFIR",
+        "PNRR",
+        "Start-Up Nation",
+        "Digitalizare IMM",
+        "consultanta IMM"
+      ]
     },
-    "telephone": "+40 769 828 338",
-    "email": "atelier.consultanta@gmail.com",
-    "openingHours": "Mo-Fr 09:00-18:00",
-    "url": "https://atelierdeconsultanta.ro/",
-    "areaServed": {
-      "@type": "Country",
-      "name": "România"
+    {
+      "@type": [
+        "LocalBusiness",
+        "ProfessionalService"
+      ],
+      "@id": "https://atelierdeconsultanta.ro/#localbusiness",
+      "name": "FABER - Atelier de Consultanta",
+      "url": "https://atelierdeconsultanta.ro",
+      "email": "atelier.consultanta@gmail.com",
+      "telephone": "+40769828338",
+      "openingHours": "Mo-Fr 09:00-18:00",
+      "image": "https://atelierdeconsultanta.ro/og-image.jpg",
+      "areaServed": {
+        "@type": "Country",
+        "name": "Romania"
+      },
+      "parentOrganization": {
+        "@id": "https://atelierdeconsultanta.ro/#organization"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://atelierdeconsultanta.ro/#website",
+      "url": "https://atelierdeconsultanta.ro",
+      "name": "FABER - Atelier de Consultanta",
+      "publisher": {
+        "@id": "https://atelierdeconsultanta.ro/#organization"
+      },
+      "inLanguage": "ro-RO"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://atelierdeconsultanta.ro#webpage",
+      "url": "https://atelierdeconsultanta.ro",
+      "name": "Atelier de Consultanta | Fonduri Europene si Finantari Nerambursabile",
+      "description": "Consultanta pentru fonduri europene, AFIR, PNRR, Start-Up Nation si finantari nerambursabile pentru IMM-uri, antreprenori si proiecte de investitii.",
+      "isPartOf": {
+        "@id": "https://atelierdeconsultanta.ro/#website"
+      },
+      "inLanguage": "ro-RO",
+      "publisher": {
+        "@id": "https://atelierdeconsultanta.ro/#organization"
+      }
     }
-  }
-  </script>
-  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
+  ]
+}</script>
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Consultanță pentru fonduri europene, AFIR, PNRR, Start-Up Nation și finanțări nerambursabile pentru IMM-uri, antreprenori și proiecte de investiții." />
   <meta name="keywords" content="fonduri europene, consultanță fonduri europene, PNRR, POR, AFIR, finanțare nerambursabilă, proiecte europene, fonduri nerambursabile România, consultanță finanțare, absorbție fonduri europene" />
@@ -55,116 +125,12 @@
   <meta name="twitter:description" content="Consultanță pentru fonduri europene, AFIR, PNRR, Start-Up Nation și finanțări nerambursabile pentru IMM-uri și antreprenori." />
 
   <!-- ✦ Schema.org structured data pentru Google ✦ -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "FABER – Atelier de Consultanță",
-    "alternateName": "Atelier de Consultanta",
-    "description": "Consultanță specializată în accesarea fondurilor europene nerambursabile. Experți în PNRR, POR, AFIR, Digitalizare IMM și alte programe de finanțare 2021-2027.",
-    "url": "https://atelierdeconsultanta.ro",
-    "logo": "https://atelierdeconsultanta.ro/favicon-192.png",
-    "image": "https://atelierdeconsultanta.ro/og-image.jpg",
-    "address": {
-      "@type": "PostalAddress",
-      "addressCountry": "RO"
-    },
-    "areaServed": {
-      "@type": "Country",
-      "name": "România"
-    },
-    "serviceType": [
-      "Consultanță fonduri europene",
-      "Accesare PNRR",
-      "Consultanță AFIR",
-      "Consultanță POR",
-      "Digitalizare IMM"
-    ],
-    "priceRange": "$$",
-    "openingHours": "Mo-Fr 09:00-18:00",
-    "sameAs": [
-      "https://atelierdeconsultanta.ro"
-    ]
-  }
-  </script>
 
   <!-- ✦ Breadcrumb Schema ✦ -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "FABER – Atelier de Consultanță",
-    "url": "https://atelierdeconsultanta.ro",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://atelierdeconsultanta.ro/?s={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
-  }
-  </script>
 
   <!-- ✦ FAQ Schema homepage — optimizare AI (ChatGPT, Claude, Gemini, Perplexity) ✦ -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Ce fonduri europene sunt disponibile în România în 2026?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "În 2026 sunt active mai multe programe de finanțare europeană în România: DR12 AFIR (tineri fermieri, 80%, max 200.000 EUR), DR14 AFIR (ferme mici, 85%, max 50.000 EUR), POR Micro Nord-Est (microîntreprinderi, 70-90%, 100.000-300.000 EUR), AFIR Autoconsum Agroalimentar (fotovoltaice, 100%), Autoconsum Publici (entități publice, 100%, max 10M EUR), Femeia Antreprenor (90%, max 200.000 lei), Start-Up Nation 2026 (90%, max 250.000 RON), PRO INFRA (max 15M EUR). FABER – Atelier de Consultanță oferă consultanță pentru toate aceste programe."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Ce este FABER Atelier de Consultanță?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "FABER – Atelier de Consultanță este o firmă românească specializată în accesarea fondurilor europene nerambursabile. Are peste 10 ani de experiență, 250+ proiecte aprobate și o rată de succes de 98%. Oferă servicii complete: identificare programe, pregătire dosar, depunere, implementare și monitorizare. Contact: 0769828338, atelier.consultanta@gmail.com."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Cum pot afla dacă sunt eligibil pentru fonduri europene?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Eligibilitatea depinde de tipul de activitate, forma juridică, dimensiunea fermei/firmei și județul în care activezi. FABER oferă consultanță gratuită pentru evaluarea eligibilității. Poți folosi și Calculatorul SO AFIR gratuit de pe site pentru a determina dacă ferma ta se califică pentru DR12 sau DR14. Contactează-ne la 0769828338 sau atelier.consultanta@gmail.com."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Cât costă consultanța pentru fonduri europene la FABER?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "FABER – Atelier de Consultanță oferă o primă consultanță gratuită pentru evaluarea eligibilității și identificarea programului potrivit. Tarifele pentru pregătirea dosarului variază în funcție de complexitatea proiectului și programul de finanțare. Contactați-ne la 0769828338 pentru o ofertă personalizată."
-        }
-      }
-    ]
-  }
-  </script>
 
   <!-- ✦ Organization Schema extins pentru AI ✦ -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "FABER – Atelier de Consultanță",
-    "alternateName": ["FABER Atelier de Consultanta", "Atelier de Consultanta FABER"],
-    "description": "Firmă de consultanță specializată în accesarea fondurilor europene nerambursabile în România. Experți în AFIR, POR, PNRR, Digitalizare IMM, PAC 2023-2027.",
-    "url": "https://atelierdeconsultanta.ro",
-    "logo": "https://atelierdeconsultanta.ro/favicon-192.png",
-    "foundingDate": "2016",
-    "areaServed": {"@type": "Country", "name": "România"},
-    "contactPoint": [
-      {"@type": "ContactPoint", "telephone": "+40769828338", "contactType": "customer service", "availableLanguage": "Romanian"},
-      {"@type": "ContactPoint", "telephone": "+40753326229", "contactType": "customer service", "availableLanguage": "Romanian"}
-    ],
-    "email": "atelier.consultanta@gmail.com",
-    "knowsAbout": ["Fonduri europene", "AFIR", "PAC 2023-2027", "DR12", "DR14", "POR", "Start-Up Nation", "Digitalizare IMM", "Femeia Antreprenor", "Fonduri nerambursabile Romania"]
-  }
-  </script>
 
   <meta name="ai-content-type" content="consulting-firm-homepage" />
   <meta name="business-type" content="EU Funds Consulting Romania" />
@@ -182,13 +148,12 @@
       white-space: nowrap;
     }
   </style>
-  <!-- Clarity tracking code for https://atelierdeconsultanta.ro/ -->
-  <script>
+  <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
         t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "wnzyco6rq");
+    })(window, document, "clarity", "script", "wnvzyco6rq");
   </script>
   <link rel="stylesheet" href="/assets/see-also.css" />
 </head>
@@ -499,6 +464,9 @@
             <div class="stat-number">10 ani</div>
             <div class="stat-label">Experiență în domeniu</div>
           </div>
+          <p style="grid-column:1 / -1;color:rgba(255,255,255,0.72);font-size:0.78rem;line-height:1.55;text-align:center;margin-top:4px;">
+            TODO_CLIENT_CONFIRMAT: date declarate de client; necesită pagină de metodologie/portofoliu sau document intern de validare.
+          </p>
         </div>
       </div>
     </section>
@@ -919,13 +887,13 @@
     <h2 id="vezi-si-title">Vezi și</h2>
     <ul class="vezi-si see-also-grid">
     <li class="see-also-card"><a href="/fonduri-europene"><span class="see-also-card-title">Fonduri europene</span><span class="see-also-card-text">Hub central pentru programe, eligibilitate, ghiduri și resurse utile.</span></a></li>
-<li class="see-also-card"><a href="/metodologie-verificare-eligibilitate"><span class="see-also-card-title">Metodologie eligibilitate</span><span class="see-also-card-text">Cum verificam CAEN, documente, cofinantare, punctaj si riscuri inainte de recomandare.</span></a></li>
-    <li class="see-also-card"><a href="/surse-oficiale-fonduri-europene"><span class="see-also-card-title">Surse oficiale</span><span class="see-also-card-text">Institutii si linkuri oficiale pentru ghiduri, apeluri, proceduri si acte normative.</span></a></li>
-    <li class="see-also-card"><a href="/glosar-fonduri-europene"><span class="see-also-card-title">Glosar fonduri europene</span><span class="see-also-card-text">Termeni explicati simplu: eligibilitate, cofinantare, punctaj, CAEN, IMM si ajutor de stat.</span></a></li>
     <li class="see-also-card"><a href="/consultanta-fonduri-europene"><span class="see-also-card-title">Consultanță fonduri europene</span><span class="see-also-card-text">Servicii de verificare, pregătire dosar și suport pentru proiecte.</span></a></li>
     <li class="see-also-card"><a href="/calendar-fonduri-europene"><span class="see-also-card-title">Calendar fonduri europene</span><span class="see-also-card-text">Urmărește programele și pregătește documentele înainte de apel.</span></a></li>
     <li class="see-also-card"><a href="/consultanta-pnrr-digitalizare"><span class="see-also-card-title">Consultanță PNRR și digitalizare</span><span class="see-also-card-text">Sprijin pentru proiecte PNRR, digitalizare IMM și bugete IT.</span></a></li>
     <li class="see-also-card"><a href="/start-up-nation-2026"><span class="see-also-card-title">Start-Up Nation</span><span class="see-also-card-text">Condiții, cheltuieli, idei și pași pentru Start-Up Nation.</span></a></li>
+    <li class="see-also-card"><a href="/metodologie-verificare-eligibilitate"><span class="see-also-card-title">Metodologie eligibilitate</span><span class="see-also-card-text">Cum verificam CAEN, documente, cofinantare, punctaj si riscuri inainte de recomandare.</span></a></li>
+    <li class="see-also-card"><a href="/surse-oficiale-fonduri-europene"><span class="see-also-card-title">Surse oficiale</span><span class="see-also-card-text">Institutii si linkuri oficiale pentru ghiduri, apeluri, proceduri si acte normative.</span></a></li>
+    <li class="see-also-card"><a href="/glosar-fonduri-europene"><span class="see-also-card-title">Glosar fonduri europene</span><span class="see-also-card-text">Termeni explicati simplu: eligibilitate, cofinantare, punctaj, CAEN, IMM si ajutor de stat.</span></a></li>
   </ul>
   </section>
 

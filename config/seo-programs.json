@@ -1,6 +1,6 @@
 {
   "site": "https://atelierdeconsultanta.ro",
-  "updatedAt": "2026-05-19",
+  "updatedAt": "2026-05-20",
   "defaults": {
     "author": "FABER - Atelier de Consultanta",
     "contactUrl": "/contact",
@@ -14,10 +14,10 @@
       "type": "program",
       "schemaType": "GovernmentService",
       "category": "AFIR",
-      "title": "DR 12 AFIR 2026 - Tineri fermieri, eligibilitate si dosar",
-      "description": "Ghid DR 12 AFIR pentru tineri fermieri: eligibilitate, investitii, cheltuieli, punctaj, documente, depunere si verificare proiect.",
-      "h1": "DR 12 AFIR pentru tineri fermieri: eligibilitate, investitii si pasi de pregatire",
-      "quickAnswer": "Cum pot obtine fonduri europene prin DR 12 AFIR? Verifica intai varsta, rolul de sef al exploatatiei, dimensiunea economica, documentele fermei si investitia propusa.",
+      "title": "DR 12 AFIR: conditii, eligibilitate, acte necesare si pregatire",
+      "description": "DR 12 AFIR pentru tineri fermieri: cine poate aplica, ce investitii pot fi eligibile, documente necesare, pasi de pregatire, greseli frecvente si surse.",
+      "h1": "DR 12 AFIR: condiții, eligibilitate, acte necesare și pași de pregătire",
+      "quickAnswer": "DR 12 AFIR trebuie verificat pornind de la solicitant, exploatatie si investitia propusa. Inainte de depunere, tanarul fermier trebuie sa confirme forma juridica, rolul efectiv in conducerea exploatatiei, dimensiunea economica, documentele APIA, ANSVSA sau alte registre aplicabile si legatura dintre cheltuieli si activitatea agricola. Pagina nu introduce praguri, punctaje sau valori finale fara sursa oficiala; aceste elemente raman de confirmat in apelul activ. Pregatirea ar trebui sa includa calculul bugetului si al cofinantarii, verificarea punctajului, lista documentelor, riscurile de dubla finantare si un plan realist pentru clarificari si contractare. Daca una dintre aceste piese nu este clara, dosarul ar trebui amanat pana cand documentele confirma proiectul.",
       "programName": "DR 12 AFIR",
       "policyContribution": "interventia sustine instalarea si consolidarea fermierilor tineri, reinnoirea generatiilor in agricultura si investitii care pot imbunatati competitivitatea exploatatiilor agricole.",
       "funding": "sprijinul maxim, intensitatea si pragurile SO se verifica in forma finala a apelului activ; pagina foloseste doar valori prezente in sursele interne configurate.",
@@ -79,19 +79,27 @@
       "faq": [
         [
           "Cine poate aplica la DR 12 AFIR?",
-          "Pot aplica solicitantii care indeplinesc incadrarea din apel, conduc exploatatia si pot dovedi eligibilitatea prin documente agricole, juridice si financiare."
+          "Pot aplica doar solicitantii care se incadreaza in apelul activ si pot dovedi prin documente rolul in exploatatie, dimensiunea economica si legatura investitiei cu activitatea agricola."
         ],
         [
-          "Ce documente sunt importante pentru DR 12?",
-          "Sunt importante documentele de identificare a solicitantului, documentele exploatatiei, calculele SO, ofertele, actele privind terenurile sau animalele si declaratiile cerute de apel."
+          "Ce verifici inainte de calculul SO?",
+          "Verifica suprafetele, efectivele, registrele agricole, documentele APIA sau ANSVSA si dreptul de folosinta. Calculul SO facut pe date incomplete poate schimba eligibilitatea si punctajul."
         ],
         [
-          "Pot cumpara utilaje prin DR 12?",
-          "Utilajele pot fi eligibile daca sunt noi, necesare exploatatiei, dimensionate corect si permise de ghidul apelului activ."
+          "Pot include utilaje agricole in proiect?",
+          "Da, doar daca apelul activ le permite, sunt necesare exploatatiei si sunt dimensionate realist. Tipul utilajului, capacitatea si oferta trebuie corelate cu activitatea fermei."
         ],
         [
-          "Consultanta garanteaza aprobarea proiectului?",
-          "Nu. Consultanta poate reduce riscurile si poate organiza dosarul, dar aprobarea depinde de eligibilitate, punctaj, buget si evaluarea autoritatii."
+          "Ce documente pot bloca un proiect DR 12?",
+          "Documentele necorelate privind exploatatia, terenul, animalele, forma juridica, ofertele sau cofinantarea pot genera clarificari, taieri de buget sau respingere."
+        ],
+        [
+          "De ce conteaza verificarea dublei finantari?",
+          "Pentru ca aceeasi cheltuiala nu trebuie acoperita prin doua surse de sprijin. Verificarea se face inainte de buget si trebuie sustinuta prin declaratii si documente."
+        ],
+        [
+          "Cand trebuie confirmata cofinantarea?",
+          "Cofinantarea trebuie verificata inainte de depunere, nu dupa selectie. Include contributia proprie, TVA, cheltuieli neeligibile, rezerve si intarzieri posibile la plata."
         ]
       ],
       "related": [
@@ -103,7 +111,163 @@
       ],
       "sourceKeys": [
         "dr12"
-      ]
+      ],
+      "template": "editorial-program",
+      "minWords": 1100,
+      "minFaq": 6,
+      "applicantRows": [
+        [
+          "Tanar fermier instalat sau in curs de consolidare",
+          "Posibila, daca profilul solicitantului se incadreaza in apelul activ",
+          "Varsta, forma juridica, rolul real in conducerea exploatatiei si istoricul instalarii",
+          "Pragurile si definitiile finale: TODO_SURSA_OFICIALA"
+        ],
+        [
+          "Exploatatie vegetala",
+          "Posibila, daca dimensiunea economica si documentele agricole sunt verificabile",
+          "Calcul SO, suprafete declarate, APIA, registru agricol si dreptul de folosinta",
+          "Nu se estimeaza punctajul fara documente actuale"
+        ],
+        [
+          "Exploatatie zootehnica sau apicola",
+          "Posibila, daca efectivele si activitatea sunt documentate corect",
+          "ANSVSA/DSVSA, registre, amplasament, autorizari si corelarea cu investitia",
+          "Atentie la dubla finantare si la neconcordante intre registre"
+        ],
+        [
+          "Exploatatie mixta",
+          "Posibila, daca investitia are logica pentru structura fermei",
+          "Ponderea culturilor/animalelor, fluxul de lucru si justificarea utilajelor",
+          "Investitiile supradimensionate trebuie eliminate sau explicate"
+        ]
+      ],
+      "eligibleInvestmentRows": [
+        [
+          "Utilaje si echipamente agricole",
+          "Tractor, semanatoare, echipamente pentru lucrari agricole, dotari de ferma",
+          "Dimensionarea fata de suprafata, activitate si capacitatea de implementare",
+          "TODO_SURSA_OFICIALA"
+        ],
+        [
+          "Constructii si modernizari agricole",
+          "Spatii de productie, depozitare sau adaposturi, daca apelul le permite",
+          "Autorizatii, teren, folosinta pe durata ceruta si costuri neeligibile",
+          "TODO_SURSA_OFICIALA"
+        ],
+        [
+          "Tehnologie si digitalizare pentru ferma",
+          "Software, senzori, monitorizare, gestiune sau echipamente de precizie",
+          "Legatura directa cu exploatatia si livrabile verificabile",
+          "TODO_SURSA_OFICIALA"
+        ],
+        [
+          "Energie pentru consum propriu",
+          "Panouri fotovoltaice sau echipamente conexe, daca sunt permise de apel",
+          "Conditii specifice, dimensionare, avize si separarea costurilor",
+          "TODO_SURSA_OFICIALA"
+        ],
+        [
+          "Servicii si costuri generale",
+          "Consultanta, proiectare, avize sau documentatii tehnice in limitele programului",
+          "Plafoane, momentul contractarii si documente justificative",
+          "TODO_SURSA_OFICIALA"
+        ]
+      ],
+      "documentRows": [
+        [
+          "Acte solicitant si forma juridica",
+          "Beneficiar, cu verificare de consultant",
+          "La verificarea eligibilitatii si la depunere",
+          "Solicitantul poate fi incadrat gresit sau respins administrativ"
+        ],
+        [
+          "Documente exploatatie agricola",
+          "Beneficiar",
+          "Inainte de calculul SO si inainte de buget",
+          "Suprafetele, efectivele sau activitatea nu pot fi demonstrate"
+        ],
+        [
+          "Calcul SO",
+          "Consultant, pe baza datelor furnizate de beneficiar",
+          "Inainte de alegerea investitiei",
+          "Punctajul si incadrarea pot fi supraestimate"
+        ],
+        [
+          "Acte teren, spatiu sau amplasament",
+          "Beneficiar",
+          "Cand investitia depinde de locatie, constructii sau instalare",
+          "Blocaj la contractare sau imposibilitate de implementare"
+        ],
+        [
+          "Oferte si specificatii tehnice",
+          "Furnizori, coordonati de beneficiar si consultant",
+          "La construirea bugetului si la depunere, daca apelul cere",
+          "Cheltuieli taiate, clarificari sau buget nejustificat"
+        ],
+        [
+          "Dovezi cofinantare si cash-flow",
+          "Beneficiar",
+          "Inainte de decizia de depunere",
+          "Proiectul poate fi aprobat, dar greu de sustinut financiar"
+        ],
+        [
+          "Declaratii si anexe ale apelului",
+          "Beneficiar si consultant",
+          "La depunere si la clarificari",
+          "Dosar incomplet sau declaratii nealiniate cu documentele"
+        ]
+      ],
+      "preparationSteps": [
+        [
+          "Verificare solicitant.",
+          "Confirma varsta, forma juridica, rolul de conducere si incadrarea din apelul activ."
+        ],
+        [
+          "Verificare investitie.",
+          "Leaga fiecare cheltuiala de activitatea agricola si de documentele exploatatiei."
+        ],
+        [
+          "Calcul buget/cofinantare.",
+          "Separarea grantului, contributiei proprii, TVA, costurilor neeligibile si rezervelor de cash-flow."
+        ],
+        [
+          "Verificare punctaj.",
+          "Estimeaza criteriile doar daca exista documente care le pot sustine."
+        ],
+        [
+          "Pregatire documente.",
+          "Strange actele fermei, calculul SO, ofertele, documentele de amplasament si anexele."
+        ],
+        [
+          "Depunere.",
+          "Verifica forma finala a cererii si incarcarea corecta in platforma indicata de autoritate."
+        ],
+        [
+          "Clarificari.",
+          "Pastreaza trasabilitatea intre raspunsuri, documente, buget si ghidul apelului."
+        ],
+        [
+          "Contractare.",
+          "Confirma termenele, conditiile de achizitie si obligatiile de implementare inainte de semnare."
+        ]
+      ],
+      "commonMistakes": [
+        "Calcul SO facut pe date vechi sau pe suprafete/efective care nu apar la fel in documente.",
+        "Solicitantul este prezentat ca sef al exploatatiei, dar documentele nu sustin controlul real.",
+        "Utilajele sunt supradimensionate fata de ferma sau nu au legatura clara cu activitatea agricola.",
+        "Aceeasi cheltuiala sau acelasi obiectiv este atins si prin alta finantare, fara verificarea dublei finantari.",
+        "Ofertele sunt generale, fara specificatii tehnice suficiente pentru evaluare.",
+        "Actele pentru teren, animale sau spatii au perioade, titulari sau adrese necorelate.",
+        "Bugetul ignora TVA, costuri neeligibile, avize sau diferente de pret.",
+        "Punctajul este estimat optimist, fara documente care sa dovedeasca fiecare criteriu."
+      ],
+      "caseExample": {
+        "note": "TODO_CLIENT_EXEMPLU - de inlocuit cu un caz real anonimizat, verificat intern.",
+        "beneficiary": "TODO_CLIENT_EXEMPLU - tanar fermier cu exploatatie vegetala si cateva dotari existente",
+        "investmentObjective": "Achizitie utilaje agricole si solutie minima de monitorizare a lucrarilor",
+        "challenges": "Corelarea utilajelor cu suprafata lucrata, confirmarea documentelor APIA si separarea costurilor neeligibile",
+        "checked": "Forma solicitantului, calcul SO, documente de folosinta, oferte, cofinantare si riscul de dublare cu alte programe"
+      }
     },
     {
       "slug": "dr14",
@@ -209,10 +373,10 @@
       "type": "program",
       "schemaType": "GovernmentService",
       "category": "Start-Up Nation",
-      "title": "Start-Up Nation 2026 - conditii, cheltuieli, punctaj si plan",
-      "description": "Ghid Start-Up Nation 2026: eligibilitate, cod CAEN, cheltuieli eligibile, plan de afaceri, buget, selectie si depunere.",
-      "h1": "Start-Up Nation 2026: conditii, buget, cod CAEN si pasi de aplicare",
-      "quickAnswer": "Cum pot obtine fonduri prin Start-Up Nation 2026? Alege o activitate eligibila, verifica profilul solicitantului, construieste un buget justificat si pregateste planul de afaceri.",
+      "title": "Start-Up Nation 2026: conditii, eligibilitate si acte necesare",
+      "description": "Start-Up Nation 2026 explicat editorial: cine poate aplica, investitii posibile, documente necesare, pasi de pregatire, greseli frecvente si surse.",
+      "h1": "Start-Up Nation 2026: condiții, eligibilitate, acte necesare și pași de pregătire",
+      "quickAnswer": "Start-Up Nation 2026 trebuie analizat prin profilul solicitantului, codul CAEN, activitatea care urmeaza sa fie autorizata si bugetul propus. Inainte de depunere, verifica daca firma sau viitorul beneficiar se incadreaza in procedura activa, daca investitia este legata de activitatea economica si daca exista cofinantare pentru costuri neeligibile, TVA sau diferente de pret. Pagina nu introduce valori de grant, punctaje sau conditii finale fara sursa oficiala. Pregatirea corecta inseamna cod CAEN verificat, plan de afaceri coerent, oferte comparabile, documente de firma, buget realist, punctaj sustinut prin dovezi si disponibilitate pentru clarificari si contractare. Daca procedura nu este finala, decizia de depunere trebuie amanata pana cand regulile si anexele pot fi verificate.",
       "programName": "Start-Up Nation 2026",
       "policyContribution": "programul sustine antreprenoriatul, infiintarea si dezvoltarea firmelor tinere, crearea de activitate economica si ocupare.",
       "funding": "valoarea grantului, contributia proprie si criteriile finale se confirma in procedura editiei active.",
@@ -277,20 +441,28 @@
       ],
       "faq": [
         [
-          "Ce cod CAEN aleg pentru Start-Up Nation?",
-          "Codul CAEN trebuie sa descrie activitatea finantata, sa fie eligibil si sa poata fi autorizat pentru locatia si modelul de afacere."
+          "Ce verific inainte de a alege codul CAEN?",
+          "Verifica daca activitatea este permisa de procedura activa, daca poate fi autorizata in locatia propusa si daca investitia are legatura directa cu acel cod CAEN."
         ],
         [
-          "Pot modifica bugetul dupa depunere?",
-          "Modificarile depind de procedura si de etapa proiectului. Bugetul trebuie construit atent inainte de depunere."
+          "Pot include software sau website in Start-Up Nation?",
+          "Pot fi posibile doar daca procedura activa le permite si daca exista livrabile clare. Software-ul sau website-ul trebuie sa sustina activitatea finantata, nu sa fie o cheltuiala decorativa."
         ],
         [
-          "Start-Up Nation garanteaza finantarea?",
-          "Nu. Selectia depinde de regulile editiei, punctaj, buget disponibil si verificarea documentelor."
+          "Ce inseamna buget justificat?",
+          "Un buget justificat porneste de la activitate, flux operational si oferte reale. Fiecare cheltuiala trebuie sa aiba rol, furnizor, specificatii si legatura cu veniturile estimate."
         ],
         [
-          "Cand trebuie pregatit planul de afaceri?",
-          "Planul trebuie pregatit inainte de lansarea efectiva sau imediat dupa publicarea procedurii, nu in ultimele zile ale apelului."
+          "Am nevoie de firma infiintata inainte de depunere?",
+          "Depinde de procedura editiei active. Nu presupune acest lucru fara verificarea regulilor oficiale, pentru ca momentul infiintarii poate afecta eligibilitatea."
+        ],
+        [
+          "Ce documente pot bloca depunerea?",
+          "Certificatul constatator, documentele asociatilor, ofertele, planul de afaceri, documentele pentru spatiu si declaratiile pot bloca dosarul daca sunt incomplete sau contradictorii."
+        ],
+        [
+          "Consultanta garanteaza finantarea?",
+          "Nu. Consultanta poate reduce riscurile si poate structura dosarul, dar selectia depinde de eligibilitate, bugetul programului, punctaj, verificarea documentelor si decizia autoritatii."
         ]
       ],
       "related": [
@@ -302,6 +474,166 @@
       ],
       "sourceKeys": [
         "startup"
+      ],
+      "template": "editorial-program",
+      "minWords": 1100,
+      "minFaq": 6,
+      "applicantRows": [
+        [
+          "Persoana care pregateste o firma noua",
+          "Posibila, daca editia activa permite profilul solicitantului",
+          "Varsta/profilul, statutul, asociatii, istoricul si regulile procedurii",
+          "Conditiile finale: TODO_SURSA_OFICIALA"
+        ],
+        [
+          "Firma tanara cu cod CAEN propus",
+          "Posibila, daca activitatea si codul CAEN sunt acceptate",
+          "Certificat constatator, autorizare, punct de lucru si legatura cu investitia",
+          "Nu se alege CAEN doar pentru punctaj"
+        ],
+        [
+          "Antreprenor cu proiect de productie sau servicii",
+          "Posibila, daca bugetul sustine activitatea reala",
+          "Flux de lucru, echipamente, furnizori, piata si venituri estimate",
+          "Planul de afaceri trebuie sa explice utilizarea activelor"
+        ],
+        [
+          "Solicitant cu cofinantare limitata",
+          "Posibila doar daca poate sustine partea proprie si costurile neeligibile",
+          "Cash-flow, TVA, rezerve, termene de plata si costuri de implementare",
+          "Riscul principal este blocajul dupa aprobare"
+        ]
+      ],
+      "eligibleInvestmentRows": [
+        [
+          "Echipamente si utilaje",
+          "Dotari pentru productie, servicii, activitati creative sau prestari locale",
+          "Necesitate, dimensionare, livrare si legatura cu codul CAEN",
+          "TODO_SURSA_OFICIALA"
+        ],
+        [
+          "Software si digitalizare",
+          "Website, magazin online, aplicatii, licente, sisteme de gestiune sau CRM",
+          "Servicii recurente, livrabile, drepturi de utilizare si perioada eligibila",
+          "TODO_SURSA_OFICIALA"
+        ],
+        [
+          "Mobilier si dotari",
+          "Mobilier de lucru, dotari operationale sau echipamente auxiliare",
+          "Justificare prin activitate si evitarea bunurilor cu uz personal",
+          "TODO_SURSA_OFICIALA"
+        ],
+        [
+          "Promovare si servicii profesionale",
+          "Branding, promovare, consultanta sau instruire, daca procedura le permite",
+          "Plafoane, momentul contractarii si dovezi ale serviciilor livrate",
+          "TODO_SURSA_OFICIALA"
+        ],
+        [
+          "Amenajari sau cheltuieli conexe",
+          "Lucrari sau adaptari minime pentru activitate, daca apelul le permite",
+          "Documente de spatiu, autorizatii, durate de folosinta si costuri neeligibile",
+          "TODO_SURSA_OFICIALA"
+        ]
+      ],
+      "documentRows": [
+        [
+          "Documente solicitant/asociati",
+          "Beneficiar",
+          "La verificarea incadrarii si la depunere",
+          "Profilul poate fi neeligibil sau nedovedit"
+        ],
+        [
+          "Certificat constatator si cod CAEN",
+          "Beneficiar",
+          "Inainte de planul de afaceri si buget",
+          "Activitatea finantata poate sa nu fie autorizabila sau eligibila"
+        ],
+        [
+          "Plan de afaceri",
+          "Consultant, cu date de la beneficiar",
+          "La pregatirea cererii",
+          "Bugetul si obiectivele nu pot fi evaluate coerent"
+        ],
+        [
+          "Oferte si specificatii",
+          "Furnizori, coordonati de beneficiar si consultant",
+          "La construirea bugetului",
+          "Costurile pot fi considerate nejustificate sau necomparabile"
+        ],
+        [
+          "Documente pentru spatiu/punct de lucru",
+          "Beneficiar",
+          "Cand activitatea necesita locatie sau autorizare",
+          "Blocaj la autorizare, contractare sau implementare"
+        ],
+        [
+          "Dovezi cofinantare si cash-flow",
+          "Beneficiar",
+          "Inainte de depunere si contractare",
+          "Proiectul poate ramane fara resurse pentru partea proprie"
+        ],
+        [
+          "Declaratii si anexe procedura",
+          "Beneficiar si consultant",
+          "La depunere si clarificari",
+          "Dosar incomplet, informatii contradictorii sau risc de respingere"
+        ]
+      ],
+      "preparationSteps": [
+        [
+          "Verificare solicitant.",
+          "Confirma profilul, istoricul, asociatii si forma juridica acceptata in procedura activa."
+        ],
+        [
+          "Verificare investitie.",
+          "Leaga fiecare achizitie de codul CAEN, activitatea autorizabila si modelul de afacere."
+        ],
+        [
+          "Calcul buget/cofinantare.",
+          "Separarea grantului posibil, contributiei proprii, TVA, costurilor neeligibile si rezervelor."
+        ],
+        [
+          "Verificare punctaj.",
+          "Estimeaza criteriile doar daca pot fi sustinute prin documente si decizii reale de proiect."
+        ],
+        [
+          "Pregatire documente.",
+          "Pregateste planul de afaceri, ofertele, actele firmei, documentele de spatiu si declaratiile."
+        ],
+        [
+          "Depunere.",
+          "Verifica formularele, anexele si incarcarea documentelor in platforma indicata."
+        ],
+        [
+          "Clarificari.",
+          "Raspunde pe baza documentelor, fara sa schimbi logica proiectului in contradictie cu bugetul."
+        ],
+        [
+          "Contractare.",
+          "Verifica termenele, achizitiile, indicatorii si obligatiile inainte de semnare."
+        ]
+      ],
+      "commonMistakes": [
+        "Cod CAEN ales pentru ca pare avantajos, dar fara legatura cu activitatea reala.",
+        "Plan de afaceri generic, fara clienti, flux operational sau justificare pentru dotari.",
+        "Buget construit pe preturi rotunjite, fara oferte comparabile si specificatii clare.",
+        "Cofinantarea, TVA si costurile neeligibile sunt tratate ca detalii de verificat dupa aprobare.",
+        "Spatiul de lucru nu poate fi autorizat pentru activitatea propusa.",
+        "Obligatiile privind locurile de munca sau indicatorii sunt asumate fara calcul de cash-flow.",
+        "Achizitiile sunt incepute inainte de momentul permis de procedura.",
+        "Cheltuielile de promovare, software sau consultanta nu au livrabile verificabile."
+      ],
+      "caseExample": {
+        "note": "TODO_CLIENT_EXEMPLU - de inlocuit cu un caz real anonimizat, verificat intern.",
+        "beneficiary": "TODO_CLIENT_EXEMPLU - antreprenor la inceput de drum, cu firma pregatita pentru servicii tehnice",
+        "investmentObjective": "Dotari de lucru, software operational si promovare initiala pentru lansarea activitatii",
+        "challenges": "Alegerea codului CAEN, justificarea echipamentelor, documentarea spatiului si acoperirea costurilor neeligibile",
+        "checked": "Profil solicitant, CAEN, plan de afaceri, oferte, cofinantare, autorizare punct de lucru si riscuri de implementare"
+      },
+      "editorialNotes": [
+        "Pentru Start-Up Nation, verificarea trebuie sa separe ideea de afacere de lista de cheltuieli dorite. Un laptop, un website sau o campanie de promovare nu sunt suficiente ca argument daca planul nu explica serviciul sau produsul, clientii, fluxul de lucru si modul in care activul va genera venituri. Inainte de depunere, bugetul trebuie citit impreuna cu codul CAEN, spatiul, autorizarea si obligatiile asumate, astfel incat fiecare cost sa poata fi aparat la clarificari.",
+        "Daca procedura finala schimba criteriile, documentele sau calendarul, pagina trebuie actualizata inainte de a fi folosita ca baza pentru decizie. Pana atunci, elementele marcate cu TODO_SURSA_OFICIALA raman puncte de verificare manuala."
       ]
     },
     {
@@ -2676,45 +3008,73 @@
       ],
       "faq": [
         [
-          "Verificarea garanteaza finantarea?",
-          "Nu. Verificarea reduce riscurile si clarifica documentele, dar aprobarea depinde de apel, punctaj, buget si evaluarea autoritatii."
+          "Ce face concret o firmă de consultanță fonduri europene?",
+          "Verifică eligibilitatea, compară programele potrivite, structurează bugetul, pregătește dosarul, gestionează clarificările și poate sprijini implementarea după contractare."
         ],
         [
-          "Cand trebuie inceputa pregatirea?",
-          "Pregatirea trebuie inceputa inainte de depunere, mai ales daca sunt necesare oferte, documente pentru spatiu, autorizatii sau calcule de punctaj."
+          "Verificarea eligibilității garantează finanțarea?",
+          "Nu. Verificarea reduce riscurile și arată dacă merită pregătit dosarul, dar aprobarea depinde de ghid, punctaj, bugetul apelului și evaluarea autorității."
         ],
         [
-          "Ce date sunt utile pentru analiza?",
-          "Sunt utile codul CAEN, localitatea, forma solicitantului, bugetul, investitia, documentele disponibile si programul vizat."
+          "Ce date trebuie trimise pentru o analiză inițială?",
+          "Sunt utile forma juridică, codul CAEN, localitatea, activitatea reală, investiția dorită, bugetul estimat, cofinanțarea disponibilă și documentele existente."
         ],
         [
-          "Pot compara mai multe programe?",
-          "Da. Compararea programelor este recomandata cand proiectul poate intra in digitalizare, IMM, energie, agricultura sau antreprenoriat."
+          "Cât costă consultanța pentru fonduri europene?",
+          "Costul depinde de program, complexitatea investiției, documentele disponibile, etapa de implementare și volumul de clarificări. Nu folosim un preț unic fără evaluarea proiectului."
+        ],
+        [
+          "Pot compara mai multe programe înainte să aleg?",
+          "Da. Este recomandat să compari programele înainte de dosar, mai ales când proiectul poate intra în digitalizare, agricultură, investiții regionale sau antreprenoriat."
+        ],
+        [
+          "Când nu merită depus un dosar?",
+          "Nu merită depus când solicitantul nu poate demonstra eligibilitatea, investiția nu se potrivește programului, punctajul este slab sau cofinanțarea nu este realistă."
+        ],
+        [
+          "Ce documente sunt verificate înainte de dosar?",
+          "De regulă se verifică documentele firmei sau fermei, certificatul constatator, datele financiare, actele pentru spațiu, ofertele, bugetul și documentele specifice apelului."
+        ],
+        [
+          "FABER se ocupă și de implementare?",
+          "Poate sprijini implementarea atunci când serviciul este inclus în colaborare: clarificări, contractare, achiziții, cereri de plată sau rambursare și raportări."
         ]
-      ],
-      "sourceKeys": [
-        "fonduri-europene"
       ],
       "slug": "consultanta-fonduri-europene",
       "output": "consultanta-fonduri-europene/index.html",
       "type": "service",
       "schemaType": "Service",
       "category": "Consultanta fonduri europene",
-      "minWords": 2100,
-      "minFaq": 12,
-      "title": "Consultanta fonduri europene pentru firme si antreprenori",
-      "description": "Servicii de consultanta fonduri europene: eligibilitate, program potrivit, documente, buget, depunere, clarificari si implementare.",
-      "h1": "Consultanta fonduri europene pentru firme, fermieri si antreprenori",
-      "quickAnswer": "Consultanta fonduri europene incepe cu verificarea solicitantului, a codului CAEN, a investitiei, a bugetului si a documentelor disponibile.",
-      "programName": "Consultanta fonduri europene",
+      "minWords": 1800,
+      "minFaq": 8,
+      "title": "Consultanță fonduri europene | Eligibilitate, dosar și cost",
+      "description": "Consultanță fonduri europene pentru firme, fermieri și start-up-uri: verificare eligibilitate, program potrivit, dosar, costuri și metodologie FABER.",
+      "h1": "Consultanță fonduri europene pentru firme, fermieri și antreprenori",
+      "quickAnswer": "O firmă de consultanță pentru fonduri europene verifică întâi dacă solicitantul, investiția și documentele disponibile se potrivesc cu un program real.",
+      "programName": "Consultanță fonduri europene",
       "related": [
         "/verificare-eligibilitate-fonduri-europene",
+        "/metodologie-verificare-eligibilitate",
+        "/surse-oficiale-fonduri-europene",
+        "/consultanta-afir",
+        "/fonduri-europene-agricultura",
         "/fonduri-europene-nerambursabile-2026",
         "/start-up-nation-2026",
         "/digitalizare-imm",
+        "/por-adr-nord-est",
         "/dr12-afir",
         "/dr14",
+        "/firma-consultanta-fonduri-europene",
+        "/cat-costa-consultanta-fonduri-europene",
         "/contact"
+      ],
+      "sourceKeys": [
+        "fonduri-europene",
+        "dr12",
+        "dr14",
+        "startup",
+        "digitalizare",
+        "por-ne-apel-2"
       ]
     },
     {

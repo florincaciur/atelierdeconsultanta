@@ -79,6 +79,10 @@ function statusLabel(status) {
   return STATUS_LABELS[status] || status || STATUS_LABELS.in_curs_de_verificare;
 }
 
+function isPlaceholder(value) {
+  return !value || /^TODO_/i.test(String(value));
+}
+
 function renderSource(source) {
   const url = source.url || TODO_SOURCE.url;
   const title = source.title || TODO_SOURCE.title;
@@ -110,23 +114,30 @@ function renderEditorialSection(metadata) {
 function editorialSchemaProperties(metadata) {
   if (!metadata) return {};
   const sources = normalizeSources(metadata.officialSources);
-  return {
-    datePublished: metadata.publishedAt,
-    dateModified: metadata.updatedAt,
-    author: {
+  const schema = {};
+  if (!isPlaceholder(metadata.publishedAt)) schema.datePublished = metadata.publishedAt;
+  if (!isPlaceholder(metadata.updatedAt)) schema.dateModified = metadata.updatedAt;
+  if (!isPlaceholder(metadata.author)) {
+    schema.author = {
       "@type": "Organization",
-      name: metadata.author || "TODO_CLIENT_AUTOR"
-    },
-    reviewedBy: {
+      name: metadata.author
+    };
+  }
+  if (!isPlaceholder(metadata.reviewer)) {
+    schema.reviewedBy = {
       "@type": "Organization",
-      name: metadata.reviewer || "TODO_CLIENT_REVIEWER"
-    },
-    citation: sources.map((source) => ({
+      name: metadata.reviewer
+    };
+  }
+  const citations = sources
+    .filter((source) => !isPlaceholder(source.title) && !isPlaceholder(source.url))
+    .map((source) => ({
       "@type": "CreativeWork",
       name: source.title,
       url: source.url
-    }))
-  };
+    }));
+  if (citations.length) schema.citation = citations;
+  return schema;
 }
 
 module.exports = {

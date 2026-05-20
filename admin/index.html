@@ -1532,6 +1532,13 @@
   };
 
   const SITE_BASE_URL = "https://atelierdeconsultanta.ro";
+  const CLARITY_TRACKING_CODE = `  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wnvzyco6rq");
+  <\/script>`;
 
   const PAGE_CONFIG = [
     {
@@ -3376,12 +3383,32 @@
     showStatus(qs("#postModalStatus"), "Bannerul a fost eliminat din articol. Fișierul vechi nu va mai fi referențiat.", "success");
   }
 
+  function normalizeFaqQuestion(value) {
+    return String(value || "")
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase()
+      .replace(/[^\p{L}\p{N}]+/gu, " ")
+      .trim();
+  }
+
+  function uniqueFaqItems(items) {
+    const seen = new Set();
+    return (items || []).filter(item => {
+      const key = normalizeFaqQuestion(item.question);
+      if (!key || !item.answer || seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    });
+  }
+
   function faqSchema(post) {
-    if (!post.faq?.length) return null;
+    const faq = uniqueFaqItems(post.faq);
+    if (faq.length < 2) return null;
     return {
       "@context": "https://schema.org",
       "@type": "FAQPage",
-      "mainEntity": post.faq.map(item => ({
+      "mainEntity": faq.map(item => ({
         "@type": "Question",
         "name": item.question,
         "acceptedAnswer": { "@type": "Answer", "text": item.answer }
@@ -3393,17 +3420,25 @@
 
   function generateStaticPostHtml(post) {
     const canonical = post.canonicalUrl || `${SITE_BASE_URL}/${post.slug}`;
+    const publisher = {
+      "@type": "Organization",
+      "@id": SITE_BASE_URL + "/#organization",
+      "name": "FABER - Atelier de Consultanta",
+      "url": SITE_BASE_URL,
+      "logo": { "@type": "ImageObject", "url": SITE_BASE_URL + "/favicon-192.png" }
+    };
     const blogPosting = {
       "@context": "https://schema.org",
       "@type": "BlogPosting",
       "headline": post.title,
       "description": post.metaDescription || post.excerpt,
       "datePublished": post.publishedAt || post.date,
-      "dateModified": post.updatedAt,
-      "author": { "@type": "Organization", "name": post.author },
-      "publisher": { "@type": "Organization", "name": "FABER – Atelier de Consultanță", "url": SITE_BASE_URL },
+      "dateModified": post.updatedAt || post.publishedAt || post.date,
+      "author": { "@type": "Organization", "name": post.author || publisher.name },
+      "publisher": publisher,
       "mainEntityOfPage": { "@type": "WebPage", "@id": canonical }
     };
+    if (post.reviewer) blogPosting.reviewedBy = { "@type": "Organization", "name": post.reviewer };
     if (post.bannerImage) blogPosting.image = post.bannerImage.startsWith("http") ? post.bannerImage : SITE_BASE_URL + post.bannerImage;
     const breadcrumb = {
       "@context": "https://schema.org",
@@ -3432,6 +3467,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <style>${STATIC_POST_CSS}</style>
   <script type="application/ld+json">${JSON.stringify(schemas, null, 2)}<\/script>
+${CLARITY_TRACKING_CODE}
 </head>
 <body>
   <nav class="navbar">

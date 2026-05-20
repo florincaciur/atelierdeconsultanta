@@ -2,29 +2,116 @@
 <html lang="ro">
 <head>
   <meta charset="UTF-8" />
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": ["LocalBusiness", "ProfessionalService"],
-    "@id": "https://atelierdeconsultanta.ro/#localbusiness",
-    "name": "FABER – Atelier de Consultanță",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Strada X, Nr. Y",
-      "addressLocality": "București",
-      "addressCountry": "Romania"
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://atelierdeconsultanta.ro/#organization",
+      "name": "FABER - Atelier de Consultanta",
+      "alternateName": [
+        "Atelier de Consultanta",
+        "Atelier de Consultanta FABER"
+      ],
+      "url": "https://atelierdeconsultanta.ro",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://atelierdeconsultanta.ro/favicon-192.png"
+      },
+      "image": "https://atelierdeconsultanta.ro/og-image.jpg",
+      "email": "atelier.consultanta@gmail.com",
+      "areaServed": {
+        "@type": "Country",
+        "name": "Romania"
+      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+40769828338",
+          "contactType": "customer service",
+          "availableLanguage": "Romanian"
+        },
+        {
+          "@type": "ContactPoint",
+          "telephone": "+40753326229",
+          "contactType": "customer service",
+          "availableLanguage": "Romanian"
+        }
+      ],
+      "knowsAbout": [
+        "fonduri europene",
+        "finantari nerambursabile",
+        "AFIR",
+        "PNRR",
+        "Start-Up Nation",
+        "Digitalizare IMM",
+        "consultanta IMM"
+      ]
     },
-    "telephone": "+40 769 828 338",
-    "email": "atelier.consultanta@gmail.com",
-    "openingHours": "Mo-Fr 09:00-18:00",
-    "url": "https://atelierdeconsultanta.ro/",
-    "areaServed": {
-      "@type": "Country",
-      "name": "România"
+    {
+      "@type": [
+        "LocalBusiness",
+        "ProfessionalService"
+      ],
+      "@id": "https://atelierdeconsultanta.ro/#localbusiness",
+      "name": "FABER - Atelier de Consultanta",
+      "url": "https://atelierdeconsultanta.ro",
+      "email": "atelier.consultanta@gmail.com",
+      "telephone": "+40769828338",
+      "openingHours": "Mo-Fr 09:00-18:00",
+      "image": "https://atelierdeconsultanta.ro/og-image.jpg",
+      "areaServed": {
+        "@type": "Country",
+        "name": "Romania"
+      },
+      "parentOrganization": {
+        "@id": "https://atelierdeconsultanta.ro/#organization"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://atelierdeconsultanta.ro/#website",
+      "url": "https://atelierdeconsultanta.ro",
+      "name": "FABER - Atelier de Consultanta",
+      "publisher": {
+        "@id": "https://atelierdeconsultanta.ro/#organization"
+      },
+      "inLanguage": "ro-RO"
+    },
+    {
+      "@type": "ContactPage",
+      "@id": "https://atelierdeconsultanta.ro/contact#webpage",
+      "url": "https://atelierdeconsultanta.ro/contact",
+      "name": "Contact Atelier de Consultanta",
+      "description": "Contact pentru evaluare eligibilitate fonduri europene si finantari nerambursabile.",
+      "isPartOf": {
+        "@id": "https://atelierdeconsultanta.ro/#website"
+      },
+      "inLanguage": "ro-RO",
+      "publisher": {
+        "@id": "https://atelierdeconsultanta.ro/#organization"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Acasa",
+          "item": "https://atelierdeconsultanta.ro/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Contact",
+          "item": "https://atelierdeconsultanta.ro/contact"
+        }
+      ]
     }
-  }
-  </script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  ]
+}</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Atelier de Consultanță | Evaluare Eligibilitate Fonduri Europene</title>
   <meta name="description" content="Contactează Atelier de Consultanță pentru o discuție despre eligibilitatea proiectului tău pentru fonduri europene sau finanțări nerambursabile." />
   <meta name="robots" content="index, follow" />
@@ -39,38 +126,12 @@
   <meta name="twitter:description" content="Trimite datele proiectului și primește o evaluare inițială pentru fonduri europene sau finanțări nerambursabile." />
   <link rel="stylesheet" href="/assets/blog/article.min.css" />
   <link rel="stylesheet" href="/assets/see-also.css" />
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://atelierdeconsultanta.ro/#organization",
-        "name": "Atelier de Consultanță",
-        "url": "https://atelierdeconsultanta.ro/",
-        "email": "atelier.consultanta@gmail.com",
-        "telephone": ["+40769828338", "+40753326229"],
-        "areaServed": "RO"
-      },
-      {
-        "@type": "ContactPage",
-        "@id": "https://atelierdeconsultanta.ro/contact#webpage",
-        "url": "https://atelierdeconsultanta.ro/contact",
-        "name": "Contact Atelier de Consultanță",
-        "description": "Contact pentru evaluare eligibilitate fonduri europene și finanțări nerambursabile.",
-        "isPartOf": {"@type": "WebSite", "url": "https://atelierdeconsultanta.ro/", "name": "Atelier de Consultanță"},
-        "publisher": {"@id": "https://atelierdeconsultanta.ro/#organization"}
-      }
-    ]
-  }
-  </script>
-  <!-- Clarity tracking code for https://atelierdeconsultanta.ro/ -->
-  <script>
+  <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
         t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "wnzyco6rq");
+    })(window, document, "clarity", "script", "wnvzyco6rq");
   </script>
 </head>
 <body>

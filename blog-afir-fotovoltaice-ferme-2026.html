@@ -39,70 +39,127 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
-  <!-- ✦ Schema.org — Article ✦ -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "AFIR Fotovoltaice Ferme 2026 – Ghid Complet: 500.000 Euro Nerambursabil",
-    "description": "Ghid complet AFIR Autoconsum Agroalimentar 2026: eligibilitate, cheltuieli acoperite, proces de aplicare.",
-    "author": { "@type": "Organization", "name": "FABER – Atelier de Consultanță", "url": "https://atelierdeconsultanta.ro" },
-    "publisher": { "@type": "Organization", "name": "FABER – Atelier de Consultanță", "logo": { "@type": "ImageObject", "url": "https://atelierdeconsultanta.ro/favicon-192.png" }},
-    "datePublished": "2026-04-13",
-    "dateModified": "2026-04-13",
-    "url": "https://atelierdeconsultanta.ro/blog-afir-fotovoltaice-ferme-2026",
-    "mainEntityOfPage": "https://atelierdeconsultanta.ro/blog-afir-fotovoltaice-ferme-2026",
-    "keywords": "AFIR fotovoltaice ferme, AFIR autoconsum agroalimentar 2026, panouri fotovoltaice agricultura"
-  }
-  </script>
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://atelierdeconsultanta.ro/#organization",
+      "name": "FABER - Atelier de Consultanta",
+      "url": "https://atelierdeconsultanta.ro",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://atelierdeconsultanta.ro/favicon-192.png"
+      }
+    },
+    {
+      "@type": "BlogPosting",
+      "headline": "AFIR Fotovoltaice Ferme 2026 - Ghid complet",
+      "description": "Ghid AFIR Autoconsum Agroalimentar 2026: eligibilitate, cheltuieli acoperite, pasi de pregatire si greseli de evitat.",
+      "author": {
+        "@type": "Organization",
+        "name": "FABER - Atelier de Consultanta"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "@id": "https://atelierdeconsultanta.ro/#organization",
+        "name": "FABER - Atelier de Consultanta",
+        "url": "https://atelierdeconsultanta.ro",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://atelierdeconsultanta.ro/favicon-192.png"
+        }
+      },
+      "datePublished": "2026-04-13",
+      "dateModified": "2026-04-13",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://atelierdeconsultanta.ro/blog-afir-fotovoltaice-ferme-2026"
+      },
+      "url": "https://atelierdeconsultanta.ro/blog-afir-fotovoltaice-ferme-2026",
+      "inLanguage": "ro-RO",
+      "reviewedBy": {
+        "@type": "Organization",
+        "name": "FABER - Atelier de Consultanta"
+      },
+      "image": "https://atelierdeconsultanta.ro/og-image.jpg",
+      "keywords": "AFIR fotovoltaice ferme, AFIR autoconsum agroalimentar 2026, panouri fotovoltaice agricultura"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Pot aplica dacă am o fermă mică, sub 10 hectare?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Da, programul nu impune o suprafață minimă. Contează mai mult că ești fermier activ înregistrat și că ai un consum energetic real la nivelul exploatației pentru care dimensionezi sistemul."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Pot combina AFIR Autoconsum cu alte finanțări europene?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cumularea cu alte programe pe aceleași cheltuieli nu este permisă. Totuși, poți accesa simultan AFIR Autoconsum pentru fotovoltaice și alt program (de ex. DR12 AFIR sau POR) pentru alte tipuri de investiții la aceeași fermă."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Trebuie să fiu plătitor de TVA pentru a aplica?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nu este o condiție obligatorie. Dacă ești plătitor de TVA, aceasta nu este o cheltuială eligibilă și trebuie suportată din fonduri proprii. Dacă nu ești plătitor de TVA, TVA-ul poate fi inclus în cheltuielile eligibile, crescând efectiv suma finanțată."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Când se deschide sesiunea de depunere AFIR 2026?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sesiunile de depunere se anunță pe site-ul afir.ro cu 30–45 de zile înainte. Pregătirea dosarului durează 2–3 luni, deci recomandăm să începi procesul acum, indiferent de data exactă a deschiderii."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Pot să montez panourile pe sol, nu pe acoperișul fermei?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Da, structurile de montaj pe sol (ground-mounted) sunt eligibile, cu condiția ca instalarea să se facă pe teren aparținând sau folosit de fermă. Soluțiile agrivoltaice (panouri deasupra culturilor) sunt de asemenea eligibile și pot fi punctate suplimentar."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Acasa",
+          "item": "https://atelierdeconsultanta.ro"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://atelierdeconsultanta.ro/blog"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "AFIR Fotovoltaice Ferme 2026",
+          "item": "https://atelierdeconsultanta.ro/blog-afir-fotovoltaice-ferme-2026"
+        }
+      ]
+    }
+  ]
+}</script>
+<!-- ✦ Schema.org — Article ✦ -->
 
   <!-- ✦ Schema.org — FAQ (Rich Results Google) ✦ -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Cine este eligibil pentru AFIR Autoconsum Agroalimentar 2026?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Sunt eligibili fermierii activi, procesatorii din sectorul agroalimentar, cooperativele agricole și formele asociative din agricultură înregistrate în România care au nevoie de energie electrică pentru activitatea lor agricolă." }
-      },
-      {
-        "@type": "Question",
-        "name": "Care este suma maximă nerambursabilă AFIR fotovoltaice ferme?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Suma maximă nerambursabilă este de 500.000 euro per beneficiar, cu o intensitate a ajutorului de până la 90% din valoarea eligibilă a investiției." }
-      },
-      {
-        "@type": "Question",
-        "name": "Ce cheltuieli sunt eligibile în cadrul AFIR Autoconsum Agroalimentar?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Sunt eligibile cheltuielile pentru achiziția și instalarea panourilor fotovoltaice, invertoare, sisteme de stocare energie (baterii), structuri de montaj, racordare la rețea, sisteme de monitorizare și proiectare tehnică." }
-      },
-      {
-        "@type": "Question",
-        "name": "Cum aplic pentru AFIR fotovoltaice ferme în 2026?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Aplicarea se face prin sistemul online MySMIS2021. Procesul include: obținere avize, elaborare plan de afaceri, depunere proiect online, evaluare AFIR și semnare contract de finanțare. Durata medie a procesului este 6-12 luni." }
-      },
-      {
-        "@type": "Question",
-        "name": "Este deschis apelul AFIR Autoconsum Agroalimentar în 2026?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Sesiunile de depunere AFIR se deschid periodic pe parcursul anului. Contactați FABER – Atelier de Consultanță pentru a afla data exactă a următorului apel și pentru pregătirea dosarului din timp." }
-      }
-    ]
-  }
-  </script>
 
   <!-- ✦ Breadcrumb Schema ✦ -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Acasă", "item": "https://atelierdeconsultanta.ro/" },
-      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://atelierdeconsultanta.ro/blog" },
-      { "@type": "ListItem", "position": 3, "name": "AFIR Fotovoltaice Ferme 2026", "item": "https://atelierdeconsultanta.ro/blog-afir-fotovoltaice-ferme-2026" }
-    ]
-  }
-  </script>
 
   <style>
     :root {
@@ -238,13 +295,12 @@
     footer { background: var(--navy); color: rgba(255,255,255,0.65); text-align: center; padding: 2rem; font-size: 0.85rem; margin-top: 3rem; }
     footer a { color: var(--orange); }
   </style>
-  <!-- Clarity tracking code for https://atelierdeconsultanta.ro/ -->
-  <script>
+  <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
         t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "wnzyco6rq");
+    })(window, document, "clarity", "script", "wnvzyco6rq");
   </script>
   <link rel="stylesheet" href="/assets/see-also.css" />
 </head>

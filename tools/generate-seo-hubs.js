@@ -4,6 +4,21 @@ const path = require("path");
 const ROOT = path.resolve(__dirname, "..");
 const SITE = "https://atelierdeconsultanta.ro";
 const TODAY = "2026-05-11";
+const {
+  breadcrumbSchema,
+  faqPageSchema,
+  jsonLdGraph,
+  organizationSchema,
+  webPageSchema,
+  websiteSchema
+} = require("./schema-helpers");
+const CLARITY_TRACKING_CODE = `  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wnvzyco6rq");
+  </script>`;
 const CANONICAL_ALIASES = new Map([
   ["/start-up-nation", "/start-up-nation-2026"],
   ["/consultanta-start-up-nation", "/consultanta-start-up-nation-2026"],
@@ -433,16 +448,16 @@ function canonical(slug) {
 function faqFor(page) {
   return [
     {
-      q: `Este suficientă această pagină pentru a decide aplicarea?`,
-      a: `Nu. Pagina este orientativă. Decizia trebuie luată după verificarea ghidului solicitantului activ și a documentelor concrete ale solicitantului.`,
+      q: `Este suficienta pagina ${page.h1} pentru a decide aplicarea?`,
+      a: `Nu. Pagina este orientativa. Decizia trebuie luata dupa verificarea ghidului solicitantului activ si a documentelor concrete ale solicitantului.`,
     },
     {
-      q: `Pot solicita o verificare de eligibilitate?`,
-      a: `Da. Poți trimite datele proiectului prin pagina de contact, iar analiza inițială urmărește solicitantul, investiția, documentele și programul potrivit.`,
+      q: `Pot solicita o verificare de eligibilitate pentru ${page.h1}?`,
+      a: `Da. Poti trimite datele proiectului prin pagina de contact, iar analiza initiala urmareste solicitantul, investitia, documentele si programul potrivit.`,
     },
     {
-      q: `Ce se întâmplă dacă programul nu este deschis încă?`,
-      a: `Poți pregăti din timp documentele de bază, bugetul, ofertele și verificările interne, astfel încât să nu începi dosarul pe grabă când apelul se lansează.`,
+      q: `Ce fac daca programul relevant pentru ${page.h1} nu este deschis inca?`,
+      a: `Poti pregati din timp documentele de baza, bugetul, ofertele si verificarile interne, astfel incat sa nu incepi dosarul pe graba cand apelul se lanseaza.`,
     },
   ];
 }
@@ -456,56 +471,22 @@ function links(items) {
 }
 
 function schema(page, faq) {
-  return JSON.stringify({
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": `${SITE}/#organization`,
-        "name": "Atelier de Consultanță",
-        "url": SITE,
-        "email": "atelier.consultanta@gmail.com",
-        "telephone": ["+40769828338", "+40753326229"],
-        "areaServed": "RO",
-        "knowsAbout": ["fonduri europene", "finanțări nerambursabile", "AFIR", "PNRR", "Start-Up Nation", "consultanță IMM"]
-      },
-      {
-        "@type": "WebSite",
-        "@id": `${SITE}/#website`,
-        "url": SITE,
-        "name": "Atelier de Consultanță",
-        "publisher": { "@id": `${SITE}/#organization` },
-        "inLanguage": "ro-RO"
-      },
-      {
-        "@type": "WebPage",
-        "@id": `${canonical(page.slug)}#webpage`,
-        "url": canonical(page.slug),
-        "name": page.title,
-        "description": page.description,
-        "isPartOf": { "@id": `${SITE}/#website` },
-        "about": page.h1,
-        "inLanguage": "ro-RO",
-        "dateModified": TODAY,
-        "publisher": { "@id": `${SITE}/#organization` }
-      },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Acasă", "item": `${SITE}/` },
-          { "@type": "ListItem", "position": 2, "name": page.h1, "item": canonical(page.slug) }
-        ]
-      },
-      {
-        "@type": "FAQPage",
-        "mainEntity": faq.map((item) => ({
-          "@type": "Question",
-          "name": item.q,
-          "acceptedAnswer": { "@type": "Answer", "text": item.a }
-        }))
-      }
-    ]
-  }, null, 2);
+  return jsonLdGraph([
+    organizationSchema(),
+    websiteSchema(),
+    webPageSchema({
+      url: canonical(page.slug),
+      name: page.title,
+      description: page.description,
+      about: page.h1,
+      dateModified: TODAY
+    }),
+    breadcrumbSchema([
+      { name: "Acasa", item: `${SITE}/` },
+      { name: page.h1, item: canonical(page.slug) }
+    ]),
+    faqPageSchema(faq.map((item) => ({ question: item.q, answer: item.a })), { minItems: 2 })
+  ]);
 }
 
 function pageHtml(page) {
@@ -530,6 +511,7 @@ function pageHtml(page) {
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="stylesheet" href="/assets/seo-hub.css" />
   <script type="application/ld+json">${schema(page, faq)}</script>
+${CLARITY_TRACKING_CODE}
 </head>
 <body>
   ${page.internalNote ? `<!-- ${page.internalNote} -->\n  ` : ""}<nav class="navbar" aria-label="Navigare principală">

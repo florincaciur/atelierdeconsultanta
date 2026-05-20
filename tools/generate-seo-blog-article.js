@@ -10,15 +10,20 @@ const cp = require("child_process");
 const ROOT = path.resolve(__dirname, "..");
 const SITE = "https://atelierdeconsultanta.ro";
 const REPORT_DIR = path.join(ROOT, "reports");
+const {
+  breadcrumbSchema,
+  blogPostingSchema,
+  faqPageSchema,
+  organizationSchema
+} = require("./schema-helpers");
 const WEB_ERROR =
   "Nu pot genera articol publicabil: lipsește accesul web necesar pentru verificarea surselor oficiale, a SERP-urilor și a semnalelor AI Search.";
-const CLARITY_TRACKING_CODE = `  <!-- Clarity tracking code for https://atelierdeconsultanta.ro/ -->
-  <script>
+const CLARITY_TRACKING_CODE = `  <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
         t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "wnzyco6rq");
+    })(window, document, "clarity", "script", "wnvzyco6rq");
   </script>`;
 
 const OFFICIAL_DOMAINS = [
@@ -1295,42 +1300,27 @@ function buildArticle(config, research, sourceText, route, internalLinks) {
     ["Pregătire", "buget, oferte, calendar, responsabilități", "Pregătirea începe înainte de deschiderea efectivă a depunerii."],
   ];
 
-  const blogPosting = {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
+  const blogPosting = blogPostingSchema({
     headline: config.titleSeo,
     description: config.metaDescription,
-    author: { "@type": "Organization", name: config.autor },
-    editor: { "@type": "Organization", name: config.editor },
-    publisher: { "@type": "Organization", name: "FABER – Atelier de Consultanță", url: SITE },
+    author: config.autor,
+    reviewer: config.editor,
+    editor: config.editor,
     datePublished: config.dataPublicarii,
     dateModified: config.dataActualizarii,
-    mainEntityOfPage: { "@type": "WebPage", "@id": canonical },
     url: canonical,
-    inLanguage: "ro-RO",
-    keywords: [keyword, ...(config.keyworduriSecundare || [])].join(", "),
-  };
+    keywords: [keyword, ...(config.keyworduriSecundare || [])]
+  });
 
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faq.map((item) => ({
-      "@type": "Question",
-      name: item.q,
-      acceptedAnswer: { "@type": "Answer", text: item.a },
-    })),
-  };
+  const faqSchema = faqPageSchema(faq.map((item) => ({ question: item.q, answer: item.a })), { minItems: 2 });
 
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Acasă", item: `${SITE}/` },
-      { "@type": "ListItem", position: 2, name: "Blog", item: `${SITE}/blog` },
-      { "@type": "ListItem", position: 3, name: config.titleSeo, item: canonical },
-    ],
-  };
+  const breadcrumbSchemaNode = breadcrumbSchema([
+    { name: "Acasa", item: `${SITE}/` },
+    { name: "Blog", item: `${SITE}/blog` },
+    { name: config.titleSeo, item: canonical }
+  ]);
 
+  const articleSchemas = [organizationSchema({ minimal: true }), blogPosting, faqSchema, breadcrumbSchemaNode].filter(Boolean);
   return `<!DOCTYPE html>
 <html lang="ro">
 <head>
@@ -1355,9 +1345,7 @@ ${CLARITY_TRACKING_CODE}
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/assets/blog/article.css" />
-  <script type="application/ld+json">${JSON.stringify(blogPosting, null, 2)}</script>
-  <script type="application/ld+json">${JSON.stringify(faqSchema, null, 2)}</script>
-  <script type="application/ld+json">${JSON.stringify(breadcrumbSchema, null, 2)}</script>
+  <script type="application/ld+json">${JSON.stringify({ "@context": "https://schema.org", "@graph": articleSchemas }, null, 2)}</script>
 </head>
 <body>
   <nav class="navbar" aria-label="Navigare principală">
@@ -1977,3 +1965,4 @@ main().catch((error) => {
   }
   process.exit(1);
 });
+

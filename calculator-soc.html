@@ -19,69 +19,140 @@
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <!-- ✦ FAQ Schema — Calculator SO AFIR pentru motoare AI ✦ -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Cum se calculează Standard Output (SO) pentru AFIR DR12 și DR14?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Standard Output (SO) se calculează înmulțind suprafața cultivată (ha) sau numărul de animale cu valoarea SO per unitate. Exemple valori SO PAC 2023-2027 România: grâu 490 EUR/ha, porumb 710 EUR/ha, floarea soarelui 590 EUR/ha, vaci lapte 2.450 EUR/cap, oi 115 EUR/cap, familii albine 52 EUR/familie. Total SO fermă = suma SO din toate culturile și animalele."
-        }
+    <script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://atelierdeconsultanta.ro/#organization",
+      "name": "FABER - Atelier de Consultanta",
+      "alternateName": [
+        "Atelier de Consultanta",
+        "Atelier de Consultanta FABER"
+      ],
+      "url": "https://atelierdeconsultanta.ro",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://atelierdeconsultanta.ro/favicon-192.png"
       },
-      {
-        "@type": "Question",
-        "name": "Câte hectare de grâu am nevoie pentru DR12 AFIR?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Pentru DR12 AFIR (minimum 12.000 SO), la grâu de toamnă cu valoarea SO de 490 EUR/ha, ai nevoie de aproximativ 24-25 hectare de grâu. La porumb (710 EUR/ha SO), ai nevoie de aproximativ 17 hectare. Poți combina mai multe culturi și animale pentru a atinge pragul de 12.000 SO."
-        }
+      "image": "https://atelierdeconsultanta.ro/og-image.jpg",
+      "email": "atelier.consultanta@gmail.com",
+      "areaServed": {
+        "@type": "Country",
+        "name": "Romania"
       },
-      {
-        "@type": "Question",
-        "name": "Care este diferența dintre DR12 și DR14 ca prag SO?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "DR14 Ferme Mici: 4.000-11.999 SO, maximum 50.000 EUR, intensitate 85%. DR12 Tineri Fermieri: 12.000-100.000 SO, maximum 200.000 EUR, intensitate 80% (tineri) sau 65% (recent instalați). Dacă ferma ta are sub 12.000 SO, aplici la DR14. Dacă ai 12.000-100.000 SO și ești tânăr fermier, aplici la DR12."
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+40769828338",
+          "contactType": "customer service",
+          "availableLanguage": "Romanian"
+        },
+        {
+          "@type": "ContactPoint",
+          "telephone": "+40753326229",
+          "contactType": "customer service",
+          "availableLanguage": "Romanian"
         }
+      ],
+      "knowsAbout": [
+        "fonduri europene",
+        "finantari nerambursabile",
+        "AFIR",
+        "PNRR",
+        "Start-Up Nation",
+        "Digitalizare IMM",
+        "consultanta IMM"
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://atelierdeconsultanta.ro/calculator-soc#webpage",
+      "url": "https://atelierdeconsultanta.ro/calculator-soc",
+      "name": "Calculator SO AFIR DR12 DR14",
+      "description": "Calculator Standard Output (SO) pentru programele AFIR DR12 si DR14. Calculeaza dimensiunea economica a fermei si verifica orientativ pragurile SO.",
+      "isPartOf": {
+        "@id": "https://atelierdeconsultanta.ro/#website"
+      },
+      "inLanguage": "ro-RO",
+      "publisher": {
+        "@id": "https://atelierdeconsultanta.ro/#organization"
       }
-    ]
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "Calculator SO AFIR — Standard Output Fermieri România",
-    "description": "Calculator gratuit Standard Output (SO) pentru fermieri români. Determină eligibilitatea pentru DR12 (minimum 12.000 SO) și DR14 (4.000-11.999 SO) din PAC 2023-2027.",
-    "url": "https://atelierdeconsultanta.ro/calculator-soc",
-    "applicationCategory": "FinanceApplication",
-    "operatingSystem": "Web",
-    "offers": {"@type": "Offer", "price": "0", "priceCurrency": "RON"},
-    "provider": {"@type": "Organization", "name": "FABER – Atelier de Consultanță", "url": "https://atelierdeconsultanta.ro"}
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    "@id": "https://atelierdeconsultanta.ro/calculator-soc#webpage",
-    "url": "https://atelierdeconsultanta.ro/calculator-soc",
-    "name": "Calculator SO AFIR DR12 DR14",
-    "speakable": {
-      "@type": "SpeakableSpecification",
-      "cssSelector": [
-        "#soc-speakable-summary",
-        "#soc-speakable-steps",
-        "#soc-speakable-cta"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Acasa",
+          "item": "https://atelierdeconsultanta.ro"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Calculator SO AFIR",
+          "item": "https://atelierdeconsultanta.ro/calculator-soc"
+        }
+      ]
+    },
+    {
+      "@type": "WebApplication",
+      "@id": "https://atelierdeconsultanta.ro/calculator-soc#app",
+      "name": "Calculator SO AFIR - Standard Output",
+      "description": "Calculator gratuit Standard Output pentru fermieri, folosit ca estimare initiala pentru analiza DR12 si DR14.",
+      "applicationCategory": "FinanceApplication",
+      "operatingSystem": "Web",
+      "url": "https://atelierdeconsultanta.ro/calculator-soc",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "RON"
+      },
+      "provider": {
+        "@id": "https://atelierdeconsultanta.ro/#organization"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Cum se calculeaza Standard Output (SO) pentru AFIR DR12 si DR14?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Standard Output se calculeaza inmultind suprafata cultivata sau numarul de animale cu valoarea SO aferenta fiecarei categorii. Totalul fermei este suma tuturor componentelor introduse. Pentru o analiza corecta, valorile din calculator trebuie comparate cu documentele reale ale exploatatiei."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Cate hectare de grau am nevoie pentru DR12 AFIR?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Calculul depinde de valoarea SO pe hectar si de structura totala a fermei. Daca exploatatia are doar grau, numarul de hectare necesar poate fi estimat prin impartirea pragului programului la valoarea SO pe hectar. In practica, multe ferme combina culturi si animale, iar totalul se verifica pe intreaga exploatatie."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Care este diferenta dintre DR12 si DR14 ca prag SO?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "DR14 se adreseaza fermelor mici, iar DR12 vizeaza tinerii fermieri sau solicitanti recent instalati care indeplinesc conditiile apelului. Pragurile SO sunt doar o parte a verificarii: varsta, istoricul solicitantului, documentele exploatatiei, investitia propusa si punctajul pot influenta eligibilitatea si sansele de finantare."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Rezultatul calculatorului garanteaza eligibilitatea?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nu. Calculatorul ofera o estimare initiala si ajuta la incadrarea rapida, dar eligibilitatea finala depinde de ghidul apelului, documentele solicitantului, conditiile obligatorii, buget, punctaj si evaluarea proiectului. Rezultatul trebuie folosit ca punct de pornire pentru analiza dosarului. Pentru o decizie de depunere, verifica si calendarul apelului, forma solicitantului, capacitatea de cofinantare, documentele terenurilor sau animalelor si legatura dintre investitie si activitatea agricola. O analiza scurta inainte de pregatirea ofertelor poate economisi timp si poate evita o candidatura construita pe premise fragile."
+          }
+        }
       ]
     }
-  }
-  </script>
+  ]
+}</script>
+<!-- ✦ FAQ Schema — Calculator SO AFIR pentru motoare AI ✦ -->
   <meta name="ai-content-type" content="interactive-calculator" />
   <meta name="tool-purpose" content="Calculator Standard Output SO AFIR DR12 DR14 PAC 2023-2027" />
   <meta name="country" content="Romania" />
@@ -169,7 +240,6 @@
     .content-card h3{font-size:1.05rem;font-weight:800;color:var(--navy);margin-bottom:10px;}
     .content-card p,.content-card li{font-size:0.94rem;color:var(--text-soft);line-height:1.7;}
     .content-card ul{padding-left:18px;margin-top:10px;}
-    .speakable{border-left:4px solid var(--orange);background:#fff6f1;padding:14px 18px;border-radius:var(--rs);margin:20px 0;color:var(--navy);font-weight:700;}
     .faq-list{display:grid;gap:16px;margin-top:28px;}
     .faq-item{background:white;border:1px solid var(--gray-200);border-radius:var(--rm);padding:22px;box-shadow:0 3px 18px rgba(13,31,60,0.08);}
     .faq-item h3{font-size:1rem;font-weight:800;color:var(--navy);margin-bottom:8px;}
@@ -195,13 +265,12 @@
       .calc-buttons{flex-direction:column;}
     }
   </style>
-  <!-- Clarity tracking code for https://atelierdeconsultanta.ro/ -->
-  <script>
+  <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
         t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "wnzyco6rq");
+    })(window, document, "clarity", "script", "wnvzyco6rq");
   </script>
   <link rel="stylesheet" href="/assets/see-also.css" />
 </head>
@@ -498,7 +567,7 @@
       <div class="sec-label">Interpretare rezultat</div>
       <h2 class="sec-title">Cum folosesti rezultatul SO in pregatirea proiectului AFIR</h2>
       <p class="sec-sub">Calculatorul te ajuta sa obtii o estimare initiala a dimensiunii economice a exploatatiei. Rezultatul nu inlocuieste analiza documentelor fermei, dar arata rapid daca are sens sa pregatesti o cerere pentru DR14, pentru DR12 sau daca trebuie cautata o alta linie de finantare.</p>
-      <p id="soc-speakable-summary" class="speakable" data-speakable="true">Cum pot folosi calculatorul SO? Adauga culturile si animalele fermei, apoi compara totalul cu pragurile DR12 si DR14.</p>
+      <p>Cum pot folosi calculatorul SO? Adauga culturile si animalele fermei, apoi compara totalul cu pragurile DR12 si DR14.</p>
     </div>
 
     <div class="content-grid reveal">
@@ -535,7 +604,7 @@
       <div class="sec-label">DR12 si DR14</div>
       <h2 class="sec-title">Ce inseamna incadrarea pentru tineri fermieri si ferme mici</h2>
       <p class="sec-sub">Aceleasi valori SO pot sustine decizii diferite in functie de profilul solicitantului. Pentru tineri fermieri conteaza nu doar dimensiunea economica, ci si momentul instalarii, controlul asupra exploatatiei si capacitatea de a implementa planul. Pentru ferme mici, accentul cade pe investitii proportionale si pe consolidarea unei activitati agricole viabile.</p>
-      <p id="soc-speakable-steps" class="speakable" data-speakable="true">Pentru DR12 si DR14, rezultatul SO trebuie corelat cu solicitantul, documentele fermei, investitia propusa si conditiile apelului.</p>
+      <p>Pentru DR12 si DR14, rezultatul SO trebuie corelat cu solicitantul, documentele fermei, investitia propusa si conditiile apelului.</p>
     </div>
 
     <div class="content-grid reveal">
@@ -609,7 +678,7 @@
       <div class="sec-label">Intrebari frecvente</div>
       <h2 class="sec-title">FAQ despre calculul Standard Output</h2>
       <p class="sec-sub">Raspunsuri scurte pentru intrebarile care apar cel mai des inainte de pregatirea unui proiect AFIR.</p>
-      <p id="soc-speakable-cta" class="speakable" data-speakable="true">Daca rezultatul SO pare eligibil, urmatorul pas este verificarea documentelor si a conditiilor specifice apelului.</p>
+      <p>Daca rezultatul SO pare eligibil, urmatorul pas este verificarea documentelor si a conditiilor specifice apelului.</p>
     </div>
 
     <div class="faq-list reveal">

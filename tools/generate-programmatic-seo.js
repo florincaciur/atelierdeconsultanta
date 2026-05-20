@@ -8,10 +8,23 @@ const ROOT = path.resolve(__dirname, "..");
 const SITE = "https://atelierdeconsultanta.ro";
 const CONFIG = path.join(ROOT, "config", "seo-programmatic-pages.json");
 const SITEMAP = path.join(ROOT, "sitemap.xml");
-const ORGANIZATION_ID = `${SITE}/#organization`;
-const WEBSITE_ID = `${SITE}/#website`;
 const PROGRAMMATIC_MIN_WORDS = 1100;
 const PROGRAMMATIC_MIN_FAQ = 4;
+const {
+  breadcrumbSchema,
+  faqPageSchema,
+  jsonLdGraph,
+  organizationSchema,
+  webPageSchema,
+  websiteSchema
+} = require("./schema-helpers");
+const CLARITY_TRACKING_CODE = `  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wnvzyco6rq");
+  </script>`;
 
 function esc(value) {
   return String(value ?? "")
@@ -51,40 +64,20 @@ function relatedLinks(items) {
 }
 
 function schema(title, description, route, faq) {
-  return JSON.stringify({
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebPage",
-        "@id": `${canonical(route)}#webpage`,
-        "url": canonical(route),
-        "name": title,
-        "description": description,
-        "inLanguage": "ro-RO",
-        "isPartOf": { "@id": WEBSITE_ID },
-        "publisher": { "@id": ORGANIZATION_ID },
-        "speakable": {
-          "@type": "SpeakableSpecification",
-          "cssSelector": ["#speakable-summary", "#speakable-answer"]
-        }
-      },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Acasa", "item": `${SITE}/` },
-          { "@type": "ListItem", "position": 2, "name": title, "item": canonical(route) }
-        ]
-      },
-      {
-        "@type": "FAQPage",
-        "mainEntity": faq.map(([question, answer]) => ({
-          "@type": "Question",
-          "name": question,
-          "acceptedAnswer": { "@type": "Answer", "text": answer }
-        }))
-      }
-    ]
-  }, null, 2);
+  return jsonLdGraph([
+    organizationSchema(),
+    websiteSchema(),
+    webPageSchema({
+      url: canonical(route),
+      name: title,
+      description
+    }),
+    breadcrumbSchema([
+      { name: "Acasa", item: `${SITE}/` },
+      { name: title, item: canonical(route) }
+    ]),
+    faqPageSchema(faq, { minItems: 2 })
+  ]);
 }
 
 function html({ title, description, h1, route, category, summary, body, faq, related }) {
@@ -104,6 +97,7 @@ function html({ title, description, h1, route, category, summary, body, faq, rel
   <link rel="stylesheet" href="/assets/seo-hub.css" />
   <link rel="stylesheet" href="/assets/see-also.css" />
   <script type="application/ld+json">${schema(title, description, route, faq)}</script>
+${CLARITY_TRACKING_CODE}
 </head>
 <body>
   <nav class="navbar" aria-label="Navigare principala">
@@ -123,10 +117,10 @@ function html({ title, description, h1, route, category, summary, body, faq, rel
   </header>
   <main class="container">
     <article class="panel">
-      <p id="speakable-summary" class="intro speakable" data-speakable="true">${esc(summary)}</p>
+      <p class="intro">${esc(summary)}</p>
       ${body}
       <h2>Intrebari frecvente</h2>
-      ${faq.map(([question, answer], index) => `<section class="faq-item"><h3>${esc(question)}</h3><p${index === 0 ? ' id="speakable-answer" class="speakable" data-speakable="true"' : ""}>${esc(answer)}</p></section>`).join("\n")}
+      ${faq.map(([question, answer]) => `<section class="faq-item"><h3>${esc(question)}</h3><p>${esc(answer)}</p></section>`).join("\n")}
       <h2>Resurse conexe</h2>
       <div class="related-links">${relatedLinks(related)}</div>
     </article>
@@ -172,9 +166,9 @@ function caenPage(item) {
   const description = `Ghid pentru CAEN ${item.code}: programe posibile, investitii eligibile, documente, punctaj si checklist pentru ${item.label}.`;
   const faq = [
     [`Pot obtine fonduri europene pentru CAEN ${item.code}?`, `Da, daca activitatea ${item.label} este eligibila in apelul activ si solicitantul indeplineste conditiile programului.`],
-    ["Ce documente sunt utile?", "Certificatul constatator, autorizarea CAEN, documentele firmei, ofertele, bugetul si documentele pentru spatiul investitiei."],
-    ["Ce programe pot fi relevante?", item.programs.join("; ")],
-    ["Ce trebuie verificat inainte de buget?", "Eligibilitatea solicitantului, codul CAEN, cheltuielile permise, cofinantarea si punctajul."]
+    [`Ce documente sunt utile pentru CAEN ${item.code}?`, "Certificatul constatator, autorizarea CAEN, documentele firmei, ofertele, bugetul si documentele pentru spatiul investitiei."],
+    [`Ce programe pot fi relevante pentru CAEN ${item.code}?`, item.programs.join("; ")],
+    [`Ce trebuie verificat inainte de buget pentru CAEN ${item.code}?`, "Eligibilitatea solicitantului, codul CAEN, cheltuielile permise, cofinantarea si punctajul."]
   ];
   let body = `
       <h2>Programe relevante</h2>
@@ -203,9 +197,9 @@ function localPage(item, consulting) {
     : `Ghid fonduri europene pentru ${item.county}: programe active, regiune, IMM-uri, agricultura, digitalizare, energie si documente.`;
   const faq = [
     [`Ce fonduri europene sunt relevante in ${item.county}?`, `Depinde de regiune, solicitant si investitie. In ${item.region}, verifica programele regionale, nationale, AFIR, digitalizare si energie.`],
-    ["Conteaza localitatea investitiei?", "Da. Pentru programele regionale si unele scheme sectoriale, localizarea investitiei este esentiala."],
-    ["Ce documente pregatesc?", "Documente de firma, cod CAEN, documente pentru spatiu, buget, oferte, situatii financiare si descrierea investitiei."],
-    ["Pot primi consultanta la distanta?", "Da. Analiza initiala se poate face pe baza datelor si documentelor transmise electronic."]
+    [`Conteaza localitatea investitiei in ${item.county}?`, "Da. Pentru programele regionale si unele scheme sectoriale, localizarea investitiei este esentiala."],
+    [`Ce documente pregatesc pentru un proiect in ${item.county}?`, "Documente de firma, cod CAEN, documente pentru spatiu, buget, oferte, situatii financiare si descrierea investitiei."],
+    [`Pot primi consultanta la distanta pentru ${item.county}?`, "Da. Analiza initiala se poate face pe baza datelor si documentelor transmise electronic."]
   ];
   let body = `
       <h2>Particularitati locale</h2>

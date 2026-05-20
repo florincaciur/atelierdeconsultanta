@@ -1,22 +1,53 @@
 {
-  "generatedAt": "2026-05-19T19:02:54.469Z",
+  "generatedAt": "2026-05-19T22:45:38.227Z",
   "mode": "check",
   "changedFiles": [
     "afir-autoconsum-agroalimentar.html",
     "afir/index.html",
     "autoconsum-public-fotovoltaice-institutii-publice.html",
+    "blog-afir-fotovoltaice-ferme-2026.html",
+    "blog.html",
+    "calculator-soc.html",
+    "calendar-fonduri-europene/index.html",
+    "cod-caen-start-up-nation-2026/index.html",
+    "consultanta-afir/index.html",
+    "consultanta-fonduri-europene/index.html",
+    "consultanta-pnrr-digitalizare/index.html",
+    "consultanta-start-up-nation-2026/index.html",
+    "contact/index.html",
+    "cum-alegi-programul-potrivit-fonduri-europene-2026.html",
+    "digitalizare-imm-pnrr/index.html",
     "digitalizare-imm.html",
+    "dr-12-afir-instalarea-tinerilor-fermieri.html",
+    "dr-14-afir-conditii-eligibilitate-greseli-frecvente.html",
     "dr12-afir.html",
     "dr14.html",
+    "eligibilitate-fonduri-europene/index.html",
+    "femeia-antreprenor-2026-conditii-idei-afaceri.html",
     "femeia-antreprenor-2026.html",
+    "finantari-panouri-fotovoltaice/index.html",
     "fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum.html",
+    "fondul-de-modernizare/index.html",
     "fonduri-europene-agricultura/index.html",
     "fonduri-europene-digitalizare/index.html",
+    "fonduri-europene-femei-antreprenor/index.html",
     "fonduri-europene-imm/index.html",
+    "fonduri-europene-nerambursabile-2026/index.html",
     "fonduri-europene/index.html",
     "fonduri-nerambursabile/index.html",
+    "fonduri-pentru-ferme/index.html",
+    "fonduri-pentru-utilaje-agricole/index.html",
+    "granturi-digitalizare-imm/index.html",
+    "idei-afaceri-fonduri-europene.html",
+    "index.html",
+    "pnrr-digitalizare-imm-cheltuieli-eligibile.html",
     "pnrr/index.html",
     "por-adr-nord-est.html",
+    "pro-infra.html",
+    "start-up-nation-2026-cheltuieli-eligibile/index.html",
+    "start-up-nation-2026-conditii/index.html",
+    "start-up-nation-2026-idei-afaceri/index.html",
+    "start-up-nation-2026-plan-de-afaceri/index.html",
     "start-up-nation-2026.html",
     "verificare-eligibilitate-fonduri-europene/index.html"
   ],
@@ -26,7 +57,7 @@
     "failedFiles": 0
   },
   "inlineScripts": {
-    "checked": 70,
+    "checked": 64,
     "failures": []
   },
   "results": [
@@ -234,7 +265,7 @@
           "Calendar fonduri europene"
         ],
         "missingAlt": [],
-        "relatedCount": 2,
+        "relatedCount": 1,
         "jsonLdErrors": []
       }
     },
@@ -263,10 +294,10 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Cât costă consultanța pentru fonduri europene"
+          "Cat costa consultanta pentru fonduri europene"
         ],
         "missingAlt": [],
-        "relatedCount": 2,
+        "relatedCount": 1,
         "jsonLdErrors": []
       }
     },
@@ -279,7 +310,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Cod CAEN Start-Up Nation 2026: cum verifici activitatea eligibilă"
+          "Cod CAEN Start Up Nation 2026: cum verifici activitatea eligibila"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -314,7 +345,7 @@
           "Consultant fonduri europene pentru IMM-uri"
         ],
         "missingAlt": [],
-        "relatedCount": 2,
+        "relatedCount": 1,
         "jsonLdErrors": []
       }
     },
@@ -343,10 +374,10 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Consultanță AFIR"
+          "Consultanta AFIR"
         ],
         "missingAlt": [],
-        "relatedCount": 2,
+        "relatedCount": 1,
         "jsonLdErrors": []
       }
     },
@@ -439,7 +470,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Consultanță fonduri europene pentru firme, fermieri și antreprenori"
+          "Consultanta fonduri europene pentru firme, fermieri si antreprenori"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -471,10 +502,10 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Consultanță PNRR digitalizare"
+          "Consultanta PNRR digitalizare"
         ],
         "missingAlt": [],
-        "relatedCount": 2,
+        "relatedCount": 1,
         "jsonLdErrors": []
       }
     },
@@ -487,7 +518,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Consultanță Start-Up Nation 2026: verificare, dosar și depunere"
+          "Consultanta Start Up Nation 2026: verificare, dosar si depunere"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -586,7 +617,7 @@
           "Cum alegi un consultant pentru fonduri europene"
         ],
         "missingAlt": [],
-        "relatedCount": 2,
+        "relatedCount": 1,
         "jsonLdErrors": []
       }
     },
@@ -746,7 +777,7 @@
           "Eligibilitate fonduri europene"
         ],
         "missingAlt": [],
-        "relatedCount": 2,
+        "relatedCount": 1,
         "jsonLdErrors": []
       }
     },
@@ -823,10 +854,10 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Finanțări pentru panouri fotovoltaice"
+          "Finantari pentru panouri fotovoltaice"
         ],
         "missingAlt": [],
-        "relatedCount": 2,
+        "relatedCount": 1,
         "jsonLdErrors": []
       }
     },
@@ -855,10 +886,10 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Firmă de consultanță pentru fonduri europene"
+          "Firma de consultanta pentru fonduri europene"
         ],
         "missingAlt": [],
-        "relatedCount": 2,
+        "relatedCount": 1,
         "jsonLdErrors": []
       }
     },
@@ -903,7 +934,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Fondul de Modernizare: index pentru măsurile de finanțare"
+          "Fondul de Modernizare: index pentru masurile de finantare"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -1114,7 +1145,7 @@
           "Fonduri europene pentru femei antreprenor"
         ],
         "missingAlt": [],
-        "relatedCount": 2,
+        "relatedCount": 1,
         "jsonLdErrors": []
       }
     },
@@ -1223,7 +1254,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Fonduri europene nerambursabile 2026"
+          "Fonduri europene nerambursabile 2026: programe, eligibilitate si pasi"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -1338,7 +1369,7 @@
           "Fonduri pentru ferme"
         ],
         "missingAlt": [],
-        "relatedCount": 2,
+        "relatedCount": 1,
         "jsonLdErrors": []
       }
     },
@@ -1370,7 +1401,7 @@
           "Fonduri pentru utilaje agricole"
         ],
         "missingAlt": [],
-        "relatedCount": 2,
+        "relatedCount": 1,
         "jsonLdErrors": []
       }
     },
@@ -1464,7 +1495,7 @@
           "Granturi pentru digitalizarea IMM-urilor"
         ],
         "missingAlt": [],
-        "relatedCount": 2,
+        "relatedCount": 1,
         "jsonLdErrors": []
       }
     },
@@ -1493,10 +1524,10 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Greșeli frecvente la fonduri europene"
+          "Greseli frecvente la fonduri europene"
         ],
         "missingAlt": [],
-        "relatedCount": 2,
+        "relatedCount": 1,
         "jsonLdErrors": []
       }
     },
@@ -1573,10 +1604,10 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Întrebări frecvente despre fonduri europene"
+          "Intrebari frecvente despre fonduri europene"
         ],
         "missingAlt": [],
-        "relatedCount": 2,
+        "relatedCount": 1,
         "jsonLdErrors": []
       }
     },
@@ -1749,7 +1780,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "PRO INFRA – Materiale de Construcții pentru Infrastructura de Transport"
+          "PRO INFRA 2026: investitii, energie si pregatirea dosarului"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -1797,10 +1828,10 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Start-Up Nation 2026: cheltuieli eligibile"
+          "Start Up Nation 2026: cheltuieli eligibile"
         ],
         "missingAlt": [],
-        "relatedCount": 2,
+        "relatedCount": 1,
         "jsonLdErrors": []
       }
     },
@@ -1829,10 +1860,10 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Start-Up Nation 2026: condiții de verificat"
+          "Start Up Nation 2026: conditii de verificat"
         ],
         "missingAlt": [],
-        "relatedCount": 2,
+        "relatedCount": 1,
         "jsonLdErrors": []
       }
     },
@@ -1877,10 +1908,10 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Start-Up Nation 2026: idei de afaceri"
+          "Start Up Nation 2026: idei de afaceri"
         ],
         "missingAlt": [],
-        "relatedCount": 2,
+        "relatedCount": 1,
         "jsonLdErrors": []
       }
     },
@@ -1909,10 +1940,10 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Start-Up Nation 2026: plan de afaceri"
+          "Start Up Nation 2026: plan de afaceri"
         ],
         "missingAlt": [],
-        "relatedCount": 2,
+        "relatedCount": 1,
         "jsonLdErrors": []
       }
     },

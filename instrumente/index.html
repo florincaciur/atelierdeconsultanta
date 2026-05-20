@@ -27,6 +27,59 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "Organization",
+      "@id": "https://atelierdeconsultanta.ro/#organization",
+      "name": "FABER - Atelier de Consultanta",
+      "alternateName": [
+        "Atelier de Consultanta",
+        "Atelier de Consultanta FABER"
+      ],
+      "url": "https://atelierdeconsultanta.ro",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://atelierdeconsultanta.ro/favicon-192.png"
+      },
+      "image": "https://atelierdeconsultanta.ro/og-image.jpg",
+      "email": "atelier.consultanta@gmail.com",
+      "areaServed": {
+        "@type": "Country",
+        "name": "Romania"
+      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+40769828338",
+          "contactType": "customer service",
+          "availableLanguage": "Romanian"
+        },
+        {
+          "@type": "ContactPoint",
+          "telephone": "+40753326229",
+          "contactType": "customer service",
+          "availableLanguage": "Romanian"
+        }
+      ],
+      "knowsAbout": [
+        "fonduri europene",
+        "finantari nerambursabile",
+        "AFIR",
+        "PNRR",
+        "Start-Up Nation",
+        "Digitalizare IMM",
+        "consultanta IMM"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://atelierdeconsultanta.ro/#website",
+      "url": "https://atelierdeconsultanta.ro",
+      "name": "FABER - Atelier de Consultanta",
+      "publisher": {
+        "@id": "https://atelierdeconsultanta.ro/#organization"
+      },
+      "inLanguage": "ro-RO"
+    },
+    {
       "@type": "WebPage",
       "@id": "https://atelierdeconsultanta.ro/instrumente#webpage",
       "url": "https://atelierdeconsultanta.ro/instrumente",
@@ -36,18 +89,10 @@
         "@id": "https://atelierdeconsultanta.ro/#website"
       },
       "inLanguage": "ro-RO",
-      "dateModified": "2026-05-19",
       "publisher": {
         "@id": "https://atelierdeconsultanta.ro/#organization"
       },
-      "speakable": {
-        "@type": "SpeakableSpecification",
-        "cssSelector": [
-          "#speakable-summary",
-          "#speakable-eligibility",
-          "#speakable-cta"
-        ]
-      },
+      "dateModified": "2026-05-20",
       "citation": [
         {
           "@type": "CreativeWork",
@@ -126,6 +171,7 @@
       "@type": "WebApplication",
       "@id": "https://atelierdeconsultanta.ro/instrumente#app",
       "name": "Instrumente fonduri europene",
+      "description": "Instrumente pentru fonduri europene: calculator cofinantare, eligibilitate rapida, buget Digitalizare IMM, Start-Up Nation si calculator SO.",
       "applicationCategory": "FinanceApplication",
       "operatingSystem": "Web",
       "url": "https://atelierdeconsultanta.ro/instrumente",
@@ -141,6 +187,13 @@
   ]
 }</script>
   <script src="/assets/seo-tools.js" defer></script>
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wnvzyco6rq");
+  </script>
 </head>
 <body>
   <nav class="navbar" aria-label="Navigare principala">
@@ -166,7 +219,7 @@
   <main class="container">
     <article class="panel">
 
-      <p id="speakable-summary" class="intro speakable" data-speakable="true">Ce pot calcula rapid? Cofinantarea, bugetul orientativ, eligibilitatea initiala, structura cheltuielilor si urmatorii pasi pentru dosar.</p>
+      <p class="intro">Ce pot calcula rapid? Cofinantarea, bugetul orientativ, eligibilitatea initiala, structura cheltuielilor si urmatorii pasi pentru dosar.</p>
       <table class="program-table">
     <tbody>
       <tr><th>Program</th><td>Instrumente fonduri europene</td></tr>
@@ -191,7 +244,7 @@
 <li>program</li>
 <li>documente</li></ul></section>
       </div>
-      <h2 id="speakable-eligibility" class="speakable" data-speakable="true">Eligibilitatea se verifica prin solicitant, activitate, documente si investitie.</h2>
+      <h2>Eligibilitatea se verifica prin solicitant, activitate, documente si investitie.</h2>
       <p>instrumentele ajuta beneficiarii sa estimeze riscuri si documente inainte de discutii detaliate. Aceasta contributie conteaza pentru modul in care este scris proiectul: obiectivele trebuie sa fie clare, cheltuielile sa fie explicate, iar rezultatele sa poata fi urmarite dupa contractare.</p>
       <p>O eroare frecventa este pornirea de la lista de cumparaturi. Ordinea mai sigura este inversa: intai se verifica solicitantul, apoi activitatea, apoi locatia si documentele, iar abia dupa aceea se confirma echipamentele, serviciile sau lucrarile care pot intra in buget.</p>
       <div class="grid">
@@ -299,7 +352,7 @@
 <section class="faq-item"><h3>Pot descarca checklisturi?</h3><p>Da, resursele sunt in pagina Resurse.</p></section>
 <section class="faq-item"><h3>Exista calculator SO separat?</h3><p>Da, calculatorul SO ramane disponibil la pagina dedicata.</p></section>
 <section class="faq-item"><h3>Cum verific daca Instrumente fonduri europene este potrivit pentru proiectul meu?</h3><p>Porneste de la solicitant, cod CAEN, localitate, investitie, buget si documentele disponibile. Daca una dintre aceste piese nu se potriveste cu apelul activ, proiectul trebuie ajustat inainte de depunere.</p></section>
-      <h2 id="speakable-cta" class="speakable" data-speakable="true">Pentru o verificare initiala, trimite date despre solicitant, investitie, buget si programul urmarit.</h2>
+      <h2>Pentru o verificare initiala, trimite date despre solicitant, investitie, buget si programul urmarit.</h2>
       <p>Daca proiectul implica sume, cheltuieli tehnice, conditii de varsta, cod CAEN, amplasament sau cofinantare, merita verificat inainte de depunere. O analiza initiala poate identifica rapid documentele lipsa si riscurile evidente.</p>
 <p>Pentru implementare, este important ca fiecare modificare de program sa fie tratata ca actualizare de continut, nu ca simpla schimbare de cifra. Daca se modifica un prag, se pot schimba si eligibilitatea, punctajul, documentele, bugetul si ordinea pasilor de pregatire.</p>
 <p>La nivel de strategie SEO si AI Search, pagina este structurata pentru intrebari naturale. Fiecare sectiune raspunde unei intentii clare: cine poate aplica, ce se poate finanta, ce documente trebuie pregatite, ce riscuri apar si ce pasi urmeaza dupa depunere. Aceasta structura ajuta atat utilizatorii care citesc rapid, cat si sistemele care extrag raspunsuri scurte.</p>

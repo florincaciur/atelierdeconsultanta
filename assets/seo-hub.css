@@ -222,6 +222,42 @@ a { color: inherit; }
   padding: 20px;
   background: var(--gray-100);
 }
+.table-wrap {
+  overflow-x: auto;
+  margin: 20px 0 30px;
+}
+.program-table {
+  width: 100%;
+  min-width: 760px;
+  border-collapse: collapse;
+  background: var(--white);
+}
+.program-table th,
+.program-table td {
+  border: 1px solid var(--gray-200);
+  padding: 13px 15px;
+  text-align: left;
+  vertical-align: top;
+}
+.program-table th {
+  background: var(--navy);
+  color: var(--white);
+  font-size: .78rem;
+  text-transform: uppercase;
+}
+.program-table td {
+  color: var(--text-soft);
+}
+.process-list {
+  display: grid;
+  gap: 10px;
+}
+.process-list li {
+  padding-left: 4px;
+}
+.warning-list li::marker {
+  color: var(--orange);
+}
 .index-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));

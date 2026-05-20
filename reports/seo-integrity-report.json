@@ -1,49 +1,49 @@
 {
-  "generatedAt": "2026-05-19T22:28:16.711Z",
+  "generatedAt": "2026-05-19T23:58:47.816Z",
   "root": "C:\\Users\\flori\\Documents\\GitHub\\atelierdeconsultanta",
   "summary": {
-    "totalFiles": 128,
-    "passedFiles": 128,
+    "totalFiles": 131,
+    "passedFiles": 131,
     "failedFiles": 0,
     "checks": {
       "metaDescription": {
-        "pass": 128,
+        "pass": 131,
         "fail": 0
       },
       "canonical": {
-        "pass": 128,
+        "pass": 131,
         "fail": 0
       },
       "imageAltAttributes": {
-        "pass": 128,
+        "pass": 131,
         "fail": 0
       },
       "singleH1": {
-        "pass": 128,
+        "pass": 131,
         "fail": 0
       },
       "relatedLinks": {
-        "pass": 128,
+        "pass": 131,
         "fail": 0
       },
       "utf8Charset": {
-        "pass": 125,
+        "pass": 128,
         "fail": 0
       },
       "cleanCanonical": {
-        "pass": 125,
+        "pass": 128,
         "fail": 0
       },
       "visibleFaqForSchema": {
-        "pass": 125,
+        "pass": 128,
         "fail": 0
       },
       "speakableSchemaCoverage": {
-        "pass": 125,
+        "pass": 128,
         "fail": 0
       },
       "contentDepth": {
-        "pass": 125,
+        "pass": 128,
         "fail": 0
       }
     }
@@ -127,8 +127,8 @@
         },
         "speakableSchemaCoverage": {
           "status": "pass",
-          "required": true,
-          "count": 3
+          "required": false,
+          "count": 0
         },
         "contentDepth": {
           "status": "pass",
@@ -217,8 +217,8 @@
         },
         "speakableSchemaCoverage": {
           "status": "pass",
-          "required": true,
-          "count": 3
+          "required": false,
+          "count": 0
         },
         "contentDepth": {
           "status": "pass",
@@ -334,8 +334,8 @@
         },
         "speakableSchemaCoverage": {
           "status": "pass",
-          "required": true,
-          "count": 3
+          "required": false,
+          "count": 0
         },
         "contentDepth": {
           "status": "pass",
@@ -393,13 +393,13 @@
         },
         "speakableSchemaCoverage": {
           "status": "pass",
-          "required": true,
-          "count": 3
+          "required": false,
+          "count": 0
         },
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2122,
+          "words": 2086,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -576,7 +576,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 1260,
+          "words": 1295,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -629,8 +629,8 @@
         },
         "speakableSchemaCoverage": {
           "status": "pass",
-          "required": true,
-          "count": 3
+          "required": false,
+          "count": 0
         },
         "contentDepth": {
           "status": "pass",
@@ -747,8 +747,8 @@
         },
         "speakableSchemaCoverage": {
           "status": "pass",
-          "required": true,
-          "count": 3
+          "required": false,
+          "count": 0
         },
         "contentDepth": {
           "status": "pass",
@@ -864,8 +864,8 @@
         },
         "speakableSchemaCoverage": {
           "status": "pass",
-          "required": true,
-          "count": 3
+          "required": false,
+          "count": 0
         },
         "contentDepth": {
           "status": "pass",
@@ -923,13 +923,13 @@
         },
         "speakableSchemaCoverage": {
           "status": "pass",
-          "required": true,
-          "count": 3
+          "required": false,
+          "count": 0
         },
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1345,
+          "words": 1353,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -1040,8 +1040,8 @@
         },
         "speakableSchemaCoverage": {
           "status": "pass",
-          "required": true,
-          "count": 3
+          "required": false,
+          "count": 0
         },
         "contentDepth": {
           "status": "pass",
@@ -1157,8 +1157,8 @@
         },
         "speakableSchemaCoverage": {
           "status": "pass",
-          "required": true,
-          "count": 3
+          "required": false,
+          "count": 0
         },
         "contentDepth": {
           "status": "pass",
@@ -1216,13 +1216,13 @@
         },
         "speakableSchemaCoverage": {
           "status": "pass",
-          "required": true,
-          "count": 2
+          "required": false,
+          "count": 0
         },
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1282,
+          "words": 1301,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -1275,13 +1275,13 @@
         },
         "speakableSchemaCoverage": {
           "status": "pass",
-          "required": true,
-          "count": 2
+          "required": false,
+          "count": 0
         },
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1283,
+          "words": 1302,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -1334,13 +1334,13 @@
         },
         "speakableSchemaCoverage": {
           "status": "pass",
-          "required": true,
-          "count": 2
+          "required": false,
+          "count": 0
         },
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1282,
+          "words": 1301,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -1393,13 +1393,13 @@
         },
         "speakableSchemaCoverage": {
           "status": "pass",
-          "required": true,
-          "count": 2
+          "required": false,
+          "count": 0
         },
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1283,
+          "words": 1302,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -1499,30 +1499,30 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Consultanta fonduri europene pentru firme, fermieri si antreprenori"
+            "Consultanță fonduri europene pentru firme, fermieri și antreprenori"
           ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
           "required": true,
-          "count": 12,
-          "threshold": 12
+          "count": 9,
+          "threshold": 8
         },
         "speakableSchemaCoverage": {
           "status": "pass",
-          "required": true,
-          "count": 3
+          "required": false,
+          "count": 0
         },
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2218,
-          "threshold": 2100
+          "words": 1808,
+          "threshold": 1800
         },
         "relatedLinks": {
           "status": "pass",
           "required": true,
-          "count": 1
+          "count": 3
         }
       }
     },
@@ -1627,8 +1627,8 @@
         },
         "speakableSchemaCoverage": {
           "status": "pass",
-          "required": true,
-          "count": 3
+          "required": false,
+          "count": 0
         },
         "contentDepth": {
           "status": "pass",
@@ -1686,13 +1686,13 @@
         },
         "speakableSchemaCoverage": {
           "status": "pass",
-          "required": true,
-          "count": 3
+          "required": false,
+          "count": 0
         },
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1324,
+          "words": 1330,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -2035,8 +2035,8 @@
         },
         "speakableSchemaCoverage": {
           "status": "pass",
-          "required": true,
-          "count": 3
+          "required": false,
+          "count": 0
         },
         "contentDepth": {
           "status": "pass",
@@ -2211,8 +2211,8 @@
         },
         "speakableSchemaCoverage": {
           "status": "pass",
-          "required": true,
-          "count": 3
+          "required": false,
+          "count": 0
         },
         "contentDepth": {
           "status": "pass",
@@ -2270,13 +2270,13 @@
         },
         "speakableSchemaCoverage": {
           "status": "pass",
-          "required": true,
-          "count": 3
+          "required": false,
+          "count": 0
         },
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2194,
+          "words": 2206,
           "threshold": 2100
         },
         "relatedLinks": {
@@ -2436,25 +2436,25 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "DR 12 AFIR pentru tineri fermieri: eligibilitate, investitii si pasi de pregatire"
+            "DR 12 AFIR: condiții, eligibilitate, acte necesare și pași de pregătire"
           ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
           "required": true,
-          "count": 10,
-          "threshold": 10
+          "count": 6,
+          "threshold": 6
         },
         "speakableSchemaCoverage": {
           "status": "pass",
-          "required": true,
-          "count": 3
+          "required": false,
+          "count": 0
         },
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2204,
-          "threshold": 2100
+          "words": 1107,
+          "threshold": 1100
         },
         "relatedLinks": {
           "status": "pass",
@@ -2506,8 +2506,8 @@
         },
         "speakableSchemaCoverage": {
           "status": "pass",
-          "required": true,
-          "count": 3
+          "required": false,
+          "count": 0
         },
         "contentDepth": {
           "status": "pass",
@@ -2624,8 +2624,8 @@
         },
         "speakableSchemaCoverage": {
           "status": "pass",
-          "required": true,
-          "count": 3
+          "required": false,
+          "count": 0
         },
         "contentDepth": {
           "status": "pass",
@@ -2742,13 +2742,13 @@
         },
         "speakableSchemaCoverage": {
           "status": "pass",
-          "required": true,
-          "count": 3
+          "required": false,
+          "count": 0
         },
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2204,
+          "words": 2216,
           "threshold": 2100
         },
         "relatedLinks": {
@@ -2918,8 +2918,8 @@
         },
         "speakableSchemaCoverage": {
           "status": "pass",
-          "required": true,
-          "count": 3
+          "required": false,
+          "count": 0
         },
         "contentDepth": {
           "status": "pass",
@@ -3035,8 +3035,8 @@
         },
         "speakableSchemaCoverage": {
           "status": "pass",
-          "required": true,
-          "count": 3
+          "required": false,
+          "count": 0
         },
         "contentDepth": {
           "status": "pass",
@@ -3094,8 +3094,8 @@
         },
         "speakableSchemaCoverage": {
           "status": "pass",
-          "required": true,
-          "count": 3
+          "required": false,
+          "count": 0
         },
         "contentDepth": {
           "status": "pass",
@@ -3211,8 +3211,8 @@
         },
         "speakableSchemaCoverage": {
           "status": "pass",
-          "required": true,
-          "count": 3
+          "required": false,
+          "count": 0
         },
         "contentDepth": {
           "status": "pass",
@@ -3270,13 +3270,13 @@
         },
         "speakableSchemaCoverage": {
           "status": "pass",
-          "required": true,
-          "count": 3
+          "required": false,
+          "count": 0
         },
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2224,
+          "words": 2236,
           "threshold": 2100
         },
         "relatedLinks": {
@@ -3388,8 +3388,8 @@
         },
         "speakableSchemaCoverage": {
           "status": "pass",
-          "required": true,
-          "count": 3
+          "required": false,
+          "count": 0
         },
         "contentDepth": {
           "status": "pass",
@@ -3447,13 +3447,13 @@
         },
         "speakableSchemaCoverage": {
           "status": "pass",
-          "required": true,
-          "count": 2
+          "required": false,
+          "count": 0
         },
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1272,
+          "words": 1281,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -3506,13 +3506,13 @@
         },
         "speakableSchemaCoverage": {
           "status": "pass",
-          "required": true,
-          "count": 2
+          "required": false,
+          "count": 0
         },
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1273,
+          "words": 1282,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -3565,13 +3565,13 @@
         },
         "speakableSchemaCoverage": {
           "status": "pass",
-          "required": true,
-          "count": 2
+          "required": false,
+          "count": 0
         },
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1283,
+          "words": 1292,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -3624,13 +3624,13 @@
         },
         "speakableSchemaCoverage": {
           "status": "pass",
-          "required": true,
-          "count": 2
+          "required": false,
+          "count": 0
         },
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1284,
+          "words": 1293,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -3683,13 +3683,13 @@
         },
         "speakableSchemaCoverage": {
           "status": "pass",
-          "required": true,
-          "count": 2
+          "required": false,
+          "count": 0
         },
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1299,
+          "words": 1308,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -3742,13 +3742,13 @@
         },
         "speakableSchemaCoverage": {
           "status": "pass",
-          "required": true,
-          "count": 2
+          "required": false,
+          "count": 0
         },
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1276,
+          "words": 1285,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -3859,13 +3859,13 @@
         },
         "speakableSchemaCoverage": {
           "status": "pass",
-          "required": true,
-          "count": 3
+          "required": false,
+          "count": 0
         },
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2106,
+          "words": 2118,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -3976,8 +3976,8 @@
         },
         "speakableSchemaCoverage": {
           "status": "pass",
-          "required": true,
-          "count": 3
+          "required": false,
+          "count": 0
         },
         "contentDepth": {
           "status": "pass",
@@ -4151,13 +4151,13 @@
         },
         "speakableSchemaCoverage": {
           "status": "pass",
-          "required": true,
-          "count": 2
+          "required": false,
+          "count": 0
         },
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1272,
+          "words": 1281,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -4268,13 +4268,13 @@
         },
         "speakableSchemaCoverage": {
           "status": "pass",
-          "required": true,
-          "count": 3
+          "required": false,
+          "count": 0
         },
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2211,
+          "words": 2223,
           "threshold": 2100
         },
         "relatedLinks": {
@@ -4385,13 +4385,13 @@
         },
         "speakableSchemaCoverage": {
           "status": "pass",
-          "required": true,
-          "count": 3
+          "required": false,
+          "count": 0
         },
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2240,
+          "words": 2210,
           "threshold": 2100
         },
         "relatedLinks": {
@@ -4444,13 +4444,13 @@
         },
         "speakableSchemaCoverage": {
           "status": "pass",
-          "required": true,
-          "count": 2
+          "required": false,
+          "count": 0
         },
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1273,
+          "words": 1282,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -4561,13 +4561,13 @@
         },
         "speakableSchemaCoverage": {
           "status": "pass",
-          "required": true,
-          "count": 3
+          "required": false,
+          "count": 0
         },
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2215,
+          "words": 2185,
           "threshold": 2100
         },
         "relatedLinks": {
@@ -4678,8 +4678,8 @@
         },
         "speakableSchemaCoverage": {
           "status": "pass",
-          "required": true,
-          "count": 3
+          "required": false,
+          "count": 0
         },
         "contentDepth": {
           "status": "pass",
@@ -4795,8 +4795,8 @@
         },
         "speakableSchemaCoverage": {
           "status": "pass",
-          "required": true,
-          "count": 3
+          "required": false,
+          "count": 0
         },
         "contentDepth": {
           "status": "pass",
@@ -4912,8 +4912,8 @@
         },
         "speakableSchemaCoverage": {
           "status": "pass",
-          "required": true,
-          "count": 3
+          "required": false,
+          "count": 0
         },
         "contentDepth": {
           "status": "pass",
@@ -5088,14 +5088,72 @@
         },
         "speakableSchemaCoverage": {
           "status": "pass",
-          "required": true,
-          "count": 3
+          "required": false,
+          "count": 0
         },
         "contentDepth": {
           "status": "pass",
           "required": true,
           "words": 1097,
           "threshold": 1000
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 1
+        }
+      }
+    },
+    {
+      "file": "glosar-fonduri-europene/index.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "utf8Charset": {
+          "status": "pass",
+          "hasCharset": true,
+          "hasHttpEquiv": false
+        },
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "cleanCanonical": {
+          "status": "pass",
+          "href": "https://atelierdeconsultanta.ro/glosar-fonduri-europene"
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Glosar fonduri europene: termeni explicati simplu"
+          ]
+        },
+        "visibleFaqForSchema": {
+          "status": "pass",
+          "required": false,
+          "count": 0
+        },
+        "speakableSchemaCoverage": {
+          "status": "pass",
+          "required": false,
+          "count": 0
+        },
+        "contentDepth": {
+          "status": "pass",
+          "required": false,
+          "words": 506,
+          "threshold": 2000
         },
         "relatedLinks": {
           "status": "pass",
@@ -5236,8 +5294,8 @@
         },
         "speakableSchemaCoverage": {
           "status": "pass",
-          "required": true,
-          "count": 3
+          "required": false,
+          "count": 0
         },
         "contentDepth": {
           "status": "pass",
@@ -5353,8 +5411,8 @@
         },
         "speakableSchemaCoverage": {
           "status": "pass",
-          "required": true,
-          "count": 3
+          "required": false,
+          "count": 0
         },
         "contentDepth": {
           "status": "pass",
@@ -5466,8 +5524,7 @@
         "visibleFaqForSchema": {
           "status": "pass",
           "required": false,
-          "count": 0,
-          "threshold": 0
+          "count": 0
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -5477,7 +5534,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 1252,
+          "words": 1307,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -5530,8 +5587,8 @@
         },
         "speakableSchemaCoverage": {
           "status": "pass",
-          "required": true,
-          "count": 3
+          "required": false,
+          "count": 0
         },
         "contentDepth": {
           "status": "pass",
@@ -5648,8 +5705,8 @@
         },
         "speakableSchemaCoverage": {
           "status": "pass",
-          "required": true,
-          "count": 3
+          "required": false,
+          "count": 0
         },
         "contentDepth": {
           "status": "pass",
@@ -5707,8 +5764,8 @@
         },
         "speakableSchemaCoverage": {
           "status": "pass",
-          "required": true,
-          "count": 2
+          "required": false,
+          "count": 0
         },
         "contentDepth": {
           "status": "pass",
@@ -5766,8 +5823,8 @@
         },
         "speakableSchemaCoverage": {
           "status": "pass",
-          "required": true,
-          "count": 2
+          "required": false,
+          "count": 0
         },
         "contentDepth": {
           "status": "pass",
@@ -5826,8 +5883,8 @@
         },
         "speakableSchemaCoverage": {
           "status": "pass",
-          "required": true,
-          "count": 2
+          "required": false,
+          "count": 0
         },
         "contentDepth": {
           "status": "pass",
@@ -5885,14 +5942,74 @@
         },
         "speakableSchemaCoverage": {
           "status": "pass",
-          "required": true,
-          "count": 3
+          "required": false,
+          "count": 0
         },
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2212,
+          "words": 2224,
           "threshold": 2100
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": false,
+          "count": 1,
+          "note": "not a hub/blog page"
+        }
+      }
+    },
+    {
+      "file": "metodologie-verificare-eligibilitate/index.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "utf8Charset": {
+          "status": "pass",
+          "hasCharset": true,
+          "hasHttpEquiv": false
+        },
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "cleanCanonical": {
+          "status": "pass",
+          "href": "https://atelierdeconsultanta.ro/metodologie-verificare-eligibilitate"
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Metodologia FABER pentru verificarea eligibilitatii la fonduri europene"
+          ]
+        },
+        "visibleFaqForSchema": {
+          "status": "pass",
+          "required": false,
+          "count": 3,
+          "threshold": 0
+        },
+        "speakableSchemaCoverage": {
+          "status": "pass",
+          "required": false,
+          "count": 0
+        },
+        "contentDepth": {
+          "status": "pass",
+          "required": false,
+          "words": 829,
+          "threshold": 2000
         },
         "relatedLinks": {
           "status": "pass",
@@ -6062,13 +6179,13 @@
         },
         "speakableSchemaCoverage": {
           "status": "pass",
-          "required": true,
-          "count": 3
+          "required": false,
+          "count": 0
         },
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2122,
+          "words": 2116,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -6180,13 +6297,13 @@
         },
         "speakableSchemaCoverage": {
           "status": "pass",
-          "required": true,
-          "count": 3
+          "required": false,
+          "count": 0
         },
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2117,
+          "words": 2087,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -6240,8 +6357,8 @@
         },
         "speakableSchemaCoverage": {
           "status": "pass",
-          "required": true,
-          "count": 3
+          "required": false,
+          "count": 0
         },
         "contentDepth": {
           "status": "pass",
@@ -6300,8 +6417,8 @@
         },
         "speakableSchemaCoverage": {
           "status": "pass",
-          "required": true,
-          "count": 3
+          "required": false,
+          "count": 0
         },
         "contentDepth": {
           "status": "pass",
@@ -6360,8 +6477,8 @@
         },
         "speakableSchemaCoverage": {
           "status": "pass",
-          "required": true,
-          "count": 3
+          "required": false,
+          "count": 0
         },
         "contentDepth": {
           "status": "pass",
@@ -6478,8 +6595,8 @@
         },
         "speakableSchemaCoverage": {
           "status": "pass",
-          "required": true,
-          "count": 3
+          "required": false,
+          "count": 0
         },
         "contentDepth": {
           "status": "pass",
@@ -6595,8 +6712,8 @@
         },
         "speakableSchemaCoverage": {
           "status": "pass",
-          "required": true,
-          "count": 3
+          "required": false,
+          "count": 0
         },
         "contentDepth": {
           "status": "pass",
@@ -6770,8 +6887,8 @@
         },
         "speakableSchemaCoverage": {
           "status": "pass",
-          "required": true,
-          "count": 3
+          "required": false,
+          "count": 0
         },
         "contentDepth": {
           "status": "pass",
@@ -6887,8 +7004,8 @@
         },
         "speakableSchemaCoverage": {
           "status": "pass",
-          "required": true,
-          "count": 3
+          "required": false,
+          "count": 0
         },
         "contentDepth": {
           "status": "pass",
@@ -6935,25 +7052,25 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Start-Up Nation 2026: conditii, buget, cod CAEN si pasi de aplicare"
+            "Start-Up Nation 2026: condiții, eligibilitate, acte necesare și pași de pregătire"
           ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
           "required": true,
-          "count": 10,
-          "threshold": 10
+          "count": 6,
+          "threshold": 6
         },
         "speakableSchemaCoverage": {
           "status": "pass",
-          "required": true,
-          "count": 3
+          "required": false,
+          "count": 0
         },
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2210,
-          "threshold": 2100
+          "words": 1155,
+          "threshold": 1100
         },
         "relatedLinks": {
           "status": "pass",
@@ -7237,14 +7354,72 @@
         },
         "speakableSchemaCoverage": {
           "status": "pass",
-          "required": true,
-          "count": 3
+          "required": false,
+          "count": 0
         },
         "contentDepth": {
           "status": "pass",
           "required": true,
           "words": 1089,
           "threshold": 1000
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 1
+        }
+      }
+    },
+    {
+      "file": "surse-oficiale-fonduri-europene/index.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "utf8Charset": {
+          "status": "pass",
+          "hasCharset": true,
+          "hasHttpEquiv": false
+        },
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "cleanCanonical": {
+          "status": "pass",
+          "href": "https://atelierdeconsultanta.ro/surse-oficiale-fonduri-europene"
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Surse oficiale pentru fonduri europene si finantari nerambursabile"
+          ]
+        },
+        "visibleFaqForSchema": {
+          "status": "pass",
+          "required": false,
+          "count": 0
+        },
+        "speakableSchemaCoverage": {
+          "status": "pass",
+          "required": false,
+          "count": 0
+        },
+        "contentDepth": {
+          "status": "pass",
+          "required": false,
+          "words": 517,
+          "threshold": 2000
         },
         "relatedLinks": {
           "status": "pass",
@@ -7355,8 +7530,8 @@
         },
         "speakableSchemaCoverage": {
           "status": "pass",
-          "required": true,
-          "count": 3
+          "required": false,
+          "count": 0
         },
         "contentDepth": {
           "status": "pass",
@@ -7415,13 +7590,13 @@
         },
         "speakableSchemaCoverage": {
           "status": "pass",
-          "required": true,
-          "count": 3
+          "required": false,
+          "count": 0
         },
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2177,
+          "words": 2189,
           "threshold": 2100
         },
         "relatedLinks": {
@@ -7474,8 +7649,8 @@
         },
         "speakableSchemaCoverage": {
           "status": "pass",
-          "required": true,
-          "count": 3
+          "required": false,
+          "count": 0
         },
         "contentDepth": {
           "status": "pass",

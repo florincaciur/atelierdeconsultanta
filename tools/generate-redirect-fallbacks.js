@@ -3,6 +3,13 @@ const path = require("path");
 
 const ROOT = path.resolve(__dirname, "..");
 const SITE = "https://atelierdeconsultanta.ro";
+const CLARITY_TRACKING_CODE = `  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "wnvzyco6rq");
+  </script>`;
 
 function cleanTarget(target) {
   if (!target || target === "/") return "/";
@@ -35,6 +42,7 @@ function html(target) {
   <link rel="canonical" href="${canonical}" />
   <meta http-equiv="refresh" content="0; url=${target}" />
   <script>window.location.replace('${target}');</script>
+${CLARITY_TRACKING_CODE}
 </head>
 <body>
   <p>Pagina canonică este disponibilă la <a href="${target}">${canonical}</a>.</p>

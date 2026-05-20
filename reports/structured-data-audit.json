@@ -1,0 +1,1859 @@
+{
+  "generatedAt": "2026-05-19T23:58:56.592Z",
+  "summary": {
+    "filesChecked": 131,
+    "filesWithStructuredData": 82,
+    "filesWithIssues": 0,
+    "types": {
+      "Organization": 168,
+      "ImageObject": 78,
+      "Country": 76,
+      "ContactPoint": 142,
+      "WebSite": 73,
+      "WebPage": 73,
+      "CreativeWork": 67,
+      "BreadcrumbList": 80,
+      "ListItem": 174,
+      "FAQPage": 78,
+      "Question": 474,
+      "Answer": 474,
+      "GovernmentService": 14,
+      "BlogPosting": 7,
+      "Blog": 1,
+      "WebApplication": 2,
+      "Offer": 2,
+      "Service": 10,
+      "LocalBusiness": 2,
+      "ProfessionalService": 2,
+      "ContactPage": 1,
+      "Audience": 6,
+      "CommunicateAction": 2,
+      "CollectionPage": 7,
+      "DefinedTermSet": 1,
+      "DefinedTerm": 19,
+      "Article": 1,
+      "ItemList": 1
+    }
+  },
+  "results": [
+    {
+      "file": "404.html",
+      "blocks": 0,
+      "types": {},
+      "issues": []
+    },
+    {
+      "file": "acte-necesare-fonduri-europene-nerambursabile.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 2,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 5,
+        "Answer": 5
+      },
+      "issues": []
+    },
+    {
+      "file": "admin/index.html",
+      "blocks": 0,
+      "types": {},
+      "issues": []
+    },
+    {
+      "file": "afir-autoconsum-agroalimentar.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 2,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 8,
+        "Answer": 8,
+        "GovernmentService": 1
+      },
+      "issues": []
+    },
+    {
+      "file": "afir.html",
+      "blocks": 0,
+      "types": {},
+      "issues": []
+    },
+    {
+      "file": "afir/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 3,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 2,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 8,
+        "Answer": 8
+      },
+      "issues": []
+    },
+    {
+      "file": "autoconsum-public-fotovoltaice-institutii-publice.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 2,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 8,
+        "Answer": 8,
+        "GovernmentService": 1
+      },
+      "issues": []
+    },
+    {
+      "file": "autoconsum-publici.html",
+      "blocks": 0,
+      "types": {},
+      "issues": []
+    },
+    {
+      "file": "blog-afir-fotovoltaice-ferme-2026.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 4,
+        "ImageObject": 2,
+        "BlogPosting": 1,
+        "WebPage": 1,
+        "FAQPage": 1,
+        "Question": 5,
+        "Answer": 5,
+        "BreadcrumbList": 1,
+        "ListItem": 3
+      },
+      "issues": []
+    },
+    {
+      "file": "blog.html",
+      "blocks": 2,
+      "types": {
+        "Blog": 1,
+        "Organization": 1,
+        "FAQPage": 1,
+        "Question": 5,
+        "Answer": 5
+      },
+      "issues": []
+    },
+    {
+      "file": "calculator-soc.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 1,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "WebApplication": 1,
+        "Offer": 1,
+        "FAQPage": 1,
+        "Question": 4,
+        "Answer": 4
+      },
+      "issues": []
+    },
+    {
+      "file": "calendar-fonduri-europene.html",
+      "blocks": 0,
+      "types": {},
+      "issues": []
+    },
+    {
+      "file": "calendar-fonduri-europene/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 2,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 6,
+        "Answer": 6
+      },
+      "issues": []
+    },
+    {
+      "file": "cat-costa-consultanta-fonduri-europene.html",
+      "blocks": 0,
+      "types": {},
+      "issues": []
+    },
+    {
+      "file": "cat-costa-consultanta-fonduri-europene/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 2,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 6,
+        "Answer": 6
+      },
+      "issues": []
+    },
+    {
+      "file": "cod-caen-start-up-nation-2026/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 2,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 8,
+        "Answer": 8
+      },
+      "issues": []
+    },
+    {
+      "file": "consultant-fonduri-europene-imm.html",
+      "blocks": 0,
+      "types": {},
+      "issues": []
+    },
+    {
+      "file": "consultant-fonduri-europene-imm/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 2,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 6,
+        "Answer": 6,
+        "Service": 1
+      },
+      "issues": []
+    },
+    {
+      "file": "consultanta-afir.html",
+      "blocks": 0,
+      "types": {},
+      "issues": []
+    },
+    {
+      "file": "consultanta-afir/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 3,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 2,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 6,
+        "Answer": 6,
+        "Service": 1
+      },
+      "issues": []
+    },
+    {
+      "file": "consultanta-fonduri-europene-bacau/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 1,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 4,
+        "Answer": 4
+      },
+      "issues": []
+    },
+    {
+      "file": "consultanta-fonduri-europene-bucuresti/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 1,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 4,
+        "Answer": 4
+      },
+      "issues": []
+    },
+    {
+      "file": "consultanta-fonduri-europene-iasi/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 1,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 4,
+        "Answer": 4
+      },
+      "issues": []
+    },
+    {
+      "file": "consultanta-fonduri-europene-suceava/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 1,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 4,
+        "Answer": 4
+      },
+      "issues": []
+    },
+    {
+      "file": "consultanta-fonduri-europene.html",
+      "blocks": 0,
+      "types": {},
+      "issues": []
+    },
+    {
+      "file": "consultanta-fonduri-europene/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 8,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 6,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 9,
+        "Answer": 9,
+        "Service": 1
+      },
+      "issues": []
+    },
+    {
+      "file": "consultanta-pnrr-digitalizare.html",
+      "blocks": 0,
+      "types": {},
+      "issues": []
+    },
+    {
+      "file": "consultanta-pnrr-digitalizare/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 2,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 6,
+        "Answer": 6,
+        "Service": 1
+      },
+      "issues": []
+    },
+    {
+      "file": "consultanta-start-up-nation-2026/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 2,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 8,
+        "Answer": 8,
+        "Service": 1
+      },
+      "issues": []
+    },
+    {
+      "file": "consultanta-start-up-nation.html",
+      "blocks": 0,
+      "types": {},
+      "issues": []
+    },
+    {
+      "file": "consultanta-start-up-nation/index.html",
+      "blocks": 0,
+      "types": {},
+      "issues": []
+    },
+    {
+      "file": "contact.html",
+      "blocks": 0,
+      "types": {},
+      "issues": []
+    },
+    {
+      "file": "contact/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 1,
+        "ImageObject": 1,
+        "Country": 2,
+        "ContactPoint": 2,
+        "LocalBusiness": 1,
+        "ProfessionalService": 1,
+        "WebSite": 1,
+        "ContactPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2
+      },
+      "issues": []
+    },
+    {
+      "file": "cum-alegi-consultant-fonduri-europene.html",
+      "blocks": 0,
+      "types": {},
+      "issues": []
+    },
+    {
+      "file": "cum-alegi-consultant-fonduri-europene/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 2,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 6,
+        "Answer": 6
+      },
+      "issues": []
+    },
+    {
+      "file": "cum-alegi-programul-potrivit-fonduri-europene-2026.html",
+      "blocks": 2,
+      "types": {
+        "BlogPosting": 1,
+        "Organization": 2,
+        "WebPage": 1,
+        "FAQPage": 1,
+        "Question": 6,
+        "Answer": 6,
+        "BreadcrumbList": 1,
+        "ListItem": 3
+      },
+      "issues": []
+    },
+    {
+      "file": "digitalizare-imm-pnrr.html",
+      "blocks": 0,
+      "types": {},
+      "issues": []
+    },
+    {
+      "file": "digitalizare-imm-pnrr/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 2,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 6,
+        "Answer": 6
+      },
+      "issues": []
+    },
+    {
+      "file": "digitalizare-imm.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 3,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 2,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 10,
+        "Answer": 10,
+        "GovernmentService": 1
+      },
+      "issues": []
+    },
+    {
+      "file": "dr-12-afir-instalarea-tinerilor-fermieri.html",
+      "blocks": 1,
+      "types": {
+        "BlogPosting": 1,
+        "Organization": 3,
+        "CreativeWork": 1,
+        "WebPage": 1,
+        "FAQPage": 1,
+        "Question": 3,
+        "Answer": 3,
+        "BreadcrumbList": 1,
+        "ListItem": 3
+      },
+      "issues": []
+    },
+    {
+      "file": "dr-14-afir-conditii-eligibilitate-greseli-frecvente.html",
+      "blocks": 1,
+      "types": {
+        "BlogPosting": 1,
+        "Organization": 2,
+        "WebPage": 1,
+        "FAQPage": 1,
+        "Question": 3,
+        "Answer": 3,
+        "BreadcrumbList": 1,
+        "ListItem": 3
+      },
+      "issues": []
+    },
+    {
+      "file": "dr12-afir.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 3,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 1,
+        "GovernmentService": 2,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 6,
+        "Answer": 6,
+        "Audience": 3,
+        "CommunicateAction": 1
+      },
+      "issues": []
+    },
+    {
+      "file": "dr14.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 2,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 10,
+        "Answer": 10,
+        "GovernmentService": 1
+      },
+      "issues": []
+    },
+    {
+      "file": "eligibilitate-fonduri-europene.html",
+      "blocks": 0,
+      "types": {},
+      "issues": []
+    },
+    {
+      "file": "eligibilitate-fonduri-europene/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 2,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 6,
+        "Answer": 6
+      },
+      "issues": []
+    },
+    {
+      "file": "femeia-antreprenor-2026-conditii-idei-afaceri.html",
+      "blocks": 1,
+      "types": {
+        "BlogPosting": 1,
+        "Organization": 2,
+        "WebPage": 1,
+        "FAQPage": 1,
+        "Question": 3,
+        "Answer": 3,
+        "BreadcrumbList": 1,
+        "ListItem": 3
+      },
+      "issues": []
+    },
+    {
+      "file": "femeia-antreprenor-2026.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 2,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 10,
+        "Answer": 10,
+        "GovernmentService": 1
+      },
+      "issues": []
+    },
+    {
+      "file": "femeia-antreprenor-2026/index.html",
+      "blocks": 0,
+      "types": {},
+      "issues": []
+    },
+    {
+      "file": "finantari-panouri-fotovoltaice.html",
+      "blocks": 0,
+      "types": {},
+      "issues": []
+    },
+    {
+      "file": "finantari-panouri-fotovoltaice/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 2,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 6,
+        "Answer": 6
+      },
+      "issues": []
+    },
+    {
+      "file": "firma-consultanta-fonduri-europene.html",
+      "blocks": 0,
+      "types": {},
+      "issues": []
+    },
+    {
+      "file": "firma-consultanta-fonduri-europene/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 2,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 6,
+        "Answer": 6,
+        "Service": 1
+      },
+      "issues": []
+    },
+    {
+      "file": "fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 2,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 8,
+        "Answer": 8,
+        "GovernmentService": 1
+      },
+      "issues": []
+    },
+    {
+      "file": "fondul-de-modernizare.html",
+      "blocks": 0,
+      "types": {},
+      "issues": []
+    },
+    {
+      "file": "fondul-de-modernizare/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 2,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 6,
+        "Answer": 6
+      },
+      "issues": []
+    },
+    {
+      "file": "fondul-modernizare-energie-regenerabila-2026.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 2,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 10,
+        "Answer": 10,
+        "GovernmentService": 1
+      },
+      "issues": []
+    },
+    {
+      "file": "fonduri-europene-agricultura.html",
+      "blocks": 0,
+      "types": {},
+      "issues": []
+    },
+    {
+      "file": "fonduri-europene-agricultura/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 3,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 2,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 8,
+        "Answer": 8,
+        "Service": 1
+      },
+      "issues": []
+    },
+    {
+      "file": "fonduri-europene-bacau/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 1,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 4,
+        "Answer": 4
+      },
+      "issues": []
+    },
+    {
+      "file": "fonduri-europene-bucuresti/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 1,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 4,
+        "Answer": 4
+      },
+      "issues": []
+    },
+    {
+      "file": "fonduri-europene-caen/0111-culturi-cereale/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 1,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 4,
+        "Answer": 4
+      },
+      "issues": []
+    },
+    {
+      "file": "fonduri-europene-caen/4321-instalatii-electrice/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 1,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 4,
+        "Answer": 4
+      },
+      "issues": []
+    },
+    {
+      "file": "fonduri-europene-caen/5610-restaurante/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 1,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 4,
+        "Answer": 4
+      },
+      "issues": []
+    },
+    {
+      "file": "fonduri-europene-caen/6201-dezvoltare-software/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 1,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 4,
+        "Answer": 4
+      },
+      "issues": []
+    },
+    {
+      "file": "fonduri-europene-digitalizare.html",
+      "blocks": 0,
+      "types": {},
+      "issues": []
+    },
+    {
+      "file": "fonduri-europene-digitalizare/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 2,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 8,
+        "Answer": 8,
+        "Service": 1
+      },
+      "issues": []
+    },
+    {
+      "file": "fonduri-europene-femei-antreprenor.html",
+      "blocks": 0,
+      "types": {},
+      "issues": []
+    },
+    {
+      "file": "fonduri-europene-femei-antreprenor/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 2,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 6,
+        "Answer": 6
+      },
+      "issues": []
+    },
+    {
+      "file": "fonduri-europene-herambursabile-2026.html",
+      "blocks": 0,
+      "types": {},
+      "issues": []
+    },
+    {
+      "file": "fonduri-europene-herambursabile-2026/index.html",
+      "blocks": 0,
+      "types": {},
+      "issues": []
+    },
+    {
+      "file": "fonduri-europene-iasi/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 1,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 4,
+        "Answer": 4
+      },
+      "issues": []
+    },
+    {
+      "file": "fonduri-europene-imm.html",
+      "blocks": 0,
+      "types": {},
+      "issues": []
+    },
+    {
+      "file": "fonduri-europene-imm/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 2,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 10,
+        "Answer": 10,
+        "Service": 1
+      },
+      "issues": []
+    },
+    {
+      "file": "fonduri-europene-nerambursabile-2026.html",
+      "blocks": 0,
+      "types": {},
+      "issues": []
+    },
+    {
+      "file": "fonduri-europene-nerambursabile-2026/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 2,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 10,
+        "Answer": 10
+      },
+      "issues": []
+    },
+    {
+      "file": "fonduri-europene-suceava/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 1,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 4,
+        "Answer": 4
+      },
+      "issues": []
+    },
+    {
+      "file": "fonduri-europene.html",
+      "blocks": 0,
+      "types": {},
+      "issues": []
+    },
+    {
+      "file": "fonduri-europene/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 2,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 10,
+        "Answer": 10
+      },
+      "issues": []
+    },
+    {
+      "file": "fonduri-nerambursabile.html",
+      "blocks": 0,
+      "types": {},
+      "issues": []
+    },
+    {
+      "file": "fonduri-nerambursabile/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 2,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 8,
+        "Answer": 8
+      },
+      "issues": []
+    },
+    {
+      "file": "fonduri-pentru-ferme.html",
+      "blocks": 0,
+      "types": {},
+      "issues": []
+    },
+    {
+      "file": "fonduri-pentru-ferme/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 3,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 2,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 6,
+        "Answer": 6
+      },
+      "issues": []
+    },
+    {
+      "file": "fonduri-pentru-utilaje-agricole.html",
+      "blocks": 0,
+      "types": {},
+      "issues": []
+    },
+    {
+      "file": "fonduri-pentru-utilaje-agricole/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 3,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 2,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 6,
+        "Answer": 6
+      },
+      "issues": []
+    },
+    {
+      "file": "gdpr.html",
+      "blocks": 0,
+      "types": {},
+      "issues": []
+    },
+    {
+      "file": "ghiduri.html",
+      "blocks": 0,
+      "types": {},
+      "issues": []
+    },
+    {
+      "file": "ghiduri/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 2,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "CollectionPage": 1,
+        "CreativeWork": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 5,
+        "Answer": 5
+      },
+      "issues": []
+    },
+    {
+      "file": "glosar-fonduri-europene/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 3,
+        "ImageObject": 1,
+        "Country": 1,
+        "WebSite": 1,
+        "WebPage": 1,
+        "DefinedTermSet": 1,
+        "DefinedTerm": 19,
+        "BreadcrumbList": 1,
+        "ListItem": 2
+      },
+      "issues": []
+    },
+    {
+      "file": "google8bbb9999c523a3bd.html",
+      "blocks": 0,
+      "types": {},
+      "issues": []
+    },
+    {
+      "file": "granturi-digitalizare-imm.html",
+      "blocks": 0,
+      "types": {},
+      "issues": []
+    },
+    {
+      "file": "granturi-digitalizare-imm/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 2,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 6,
+        "Answer": 6
+      },
+      "issues": []
+    },
+    {
+      "file": "greseli-fonduri-europene.html",
+      "blocks": 0,
+      "types": {},
+      "issues": []
+    },
+    {
+      "file": "greseli-fonduri-europene/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 2,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 6,
+        "Answer": 6
+      },
+      "issues": []
+    },
+    {
+      "file": "idei-afaceri-fonduri-europene.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 4,
+        "ImageObject": 2,
+        "BlogPosting": 1,
+        "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 3,
+        "FAQPage": 1,
+        "Question": 4,
+        "Answer": 4
+      },
+      "issues": []
+    },
+    {
+      "file": "index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 1,
+        "ImageObject": 1,
+        "Country": 2,
+        "ContactPoint": 2,
+        "LocalBusiness": 1,
+        "ProfessionalService": 1,
+        "WebSite": 1,
+        "WebPage": 1
+      },
+      "issues": []
+    },
+    {
+      "file": "instrumente/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 2,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 5,
+        "Answer": 5,
+        "WebApplication": 1,
+        "Offer": 1
+      },
+      "issues": []
+    },
+    {
+      "file": "intrebari-frecvente.html",
+      "blocks": 0,
+      "types": {},
+      "issues": []
+    },
+    {
+      "file": "intrebari-frecvente/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 2,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 6,
+        "Answer": 6
+      },
+      "issues": []
+    },
+    {
+      "file": "intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 1,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 4,
+        "Answer": 4
+      },
+      "issues": []
+    },
+    {
+      "file": "intrebari/ce-documente-sunt-necesare-pentru-dr12/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 1,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 4,
+        "Answer": 4
+      },
+      "issues": []
+    },
+    {
+      "file": "intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 1,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 4,
+        "Answer": 4
+      },
+      "issues": []
+    },
+    {
+      "file": "investitii-modernizarea-microintreprinderilor-apel-2.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 2,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 10,
+        "Answer": 10,
+        "GovernmentService": 1
+      },
+      "issues": []
+    },
+    {
+      "file": "metodologie-verificare-eligibilitate/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 3,
+        "ImageObject": 1,
+        "Country": 1,
+        "WebSite": 1,
+        "Article": 1,
+        "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 3,
+        "Answer": 3
+      },
+      "issues": []
+    },
+    {
+      "file": "pnrr-digitalizare-imm-cheltuieli-eligibile.html",
+      "blocks": 1,
+      "types": {
+        "BlogPosting": 1,
+        "Organization": 2,
+        "WebPage": 1,
+        "FAQPage": 1,
+        "Question": 3,
+        "Answer": 3,
+        "BreadcrumbList": 1,
+        "ListItem": 3
+      },
+      "issues": []
+    },
+    {
+      "file": "pnrr.html",
+      "blocks": 0,
+      "types": {},
+      "issues": []
+    },
+    {
+      "file": "pnrr/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 2,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 8,
+        "Answer": 8
+      },
+      "issues": []
+    },
+    {
+      "file": "politica-de-confidentialitate.html",
+      "blocks": 0,
+      "types": {},
+      "issues": []
+    },
+    {
+      "file": "por-adr-nord-est.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 2,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 8,
+        "Answer": 8,
+        "GovernmentService": 1
+      },
+      "issues": []
+    },
+    {
+      "file": "portofoliu/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 2,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "CollectionPage": 1,
+        "CreativeWork": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 5,
+        "Answer": 5
+      },
+      "issues": []
+    },
+    {
+      "file": "pro-infra.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 4,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 3,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 10,
+        "Answer": 10,
+        "GovernmentService": 1
+      },
+      "issues": []
+    },
+    {
+      "file": "resurse/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 2,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "CollectionPage": 1,
+        "CreativeWork": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 5,
+        "Answer": 5
+      },
+      "issues": []
+    },
+    {
+      "file": "start-up-nation-2026-cheltuieli-eligibile.html",
+      "blocks": 0,
+      "types": {},
+      "issues": []
+    },
+    {
+      "file": "start-up-nation-2026-cheltuieli-eligibile/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 2,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 6,
+        "Answer": 6
+      },
+      "issues": []
+    },
+    {
+      "file": "start-up-nation-2026-conditii.html",
+      "blocks": 0,
+      "types": {},
+      "issues": []
+    },
+    {
+      "file": "start-up-nation-2026-conditii/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 2,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 6,
+        "Answer": 6
+      },
+      "issues": []
+    },
+    {
+      "file": "start-up-nation-2026-idei-afaceri-plan.html",
+      "blocks": 0,
+      "types": {},
+      "issues": []
+    },
+    {
+      "file": "start-up-nation-2026-idei-afaceri.html",
+      "blocks": 0,
+      "types": {},
+      "issues": []
+    },
+    {
+      "file": "start-up-nation-2026-idei-afaceri/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 2,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 6,
+        "Answer": 6
+      },
+      "issues": []
+    },
+    {
+      "file": "start-up-nation-2026-plan-de-afaceri.html",
+      "blocks": 0,
+      "types": {},
+      "issues": []
+    },
+    {
+      "file": "start-up-nation-2026-plan-de-afaceri/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 2,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 6,
+        "Answer": 6
+      },
+      "issues": []
+    },
+    {
+      "file": "start-up-nation-2026.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 2,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 1,
+        "GovernmentService": 2,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 6,
+        "Answer": 6,
+        "Audience": 3,
+        "CommunicateAction": 1
+      },
+      "issues": []
+    },
+    {
+      "file": "start-up-nation-2026/index.html",
+      "blocks": 0,
+      "types": {},
+      "issues": []
+    },
+    {
+      "file": "start-up-nation.html",
+      "blocks": 0,
+      "types": {},
+      "issues": []
+    },
+    {
+      "file": "start-up-nation/index.html",
+      "blocks": 0,
+      "types": {},
+      "issues": []
+    },
+    {
+      "file": "studii-de-caz.html",
+      "blocks": 0,
+      "types": {},
+      "issues": []
+    },
+    {
+      "file": "studii-de-caz/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 2,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "CollectionPage": 1,
+        "CreativeWork": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 5,
+        "Answer": 5
+      },
+      "issues": []
+    },
+    {
+      "file": "surse-oficiale-fonduri-europene/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 3,
+        "ImageObject": 1,
+        "Country": 1,
+        "WebSite": 1,
+        "CollectionPage": 1,
+        "ItemList": 1,
+        "ListItem": 9,
+        "BreadcrumbList": 1
+      },
+      "issues": []
+    },
+    {
+      "file": "termeni-si-conditii.html",
+      "blocks": 0,
+      "types": {},
+      "issues": []
+    },
+    {
+      "file": "testimoniale/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 2,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "CollectionPage": 1,
+        "CreativeWork": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 5,
+        "Answer": 5
+      },
+      "issues": []
+    },
+    {
+      "file": "verificare-eligibilitate-fonduri-europene/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 2,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 10,
+        "Answer": 10,
+        "Service": 1
+      },
+      "issues": []
+    },
+    {
+      "file": "webinarii/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 2,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "CollectionPage": 1,
+        "CreativeWork": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 5,
+        "Answer": 5
+      },
+      "issues": []
+    }
+  ]
+}
