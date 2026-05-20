@@ -57,6 +57,7 @@ const HUB_SLUGS = new Set([
   'start-up-nation-2026-idei-afaceri',
   'start-up-nation-2026-plan-de-afaceri',
   'studii-de-caz',
+  'studii-de-caz-fonduri-europene',
   'verificare-eligibilitate-fonduri-europene',
 ]);
 

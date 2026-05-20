@@ -63,6 +63,10 @@ function relatedLinks(items) {
   return (items || []).map((href) => `<a href="${cleanUrl(href)}">${esc(cleanUrl(href).replace(/^\/+/, "").replace(/-/g, " "))}</a>`).join("\n");
 }
 
+function linkTo(href, label) {
+  return `<a href="${cleanUrl(href)}">${esc(label)}</a>`;
+}
+
 function schema(title, description, route, faq) {
   return jsonLdGraph([
     organizationSchema(),
@@ -142,6 +146,27 @@ function writePage(route, content) {
   fs.writeFileSync(file, content, "utf8");
 }
 
+function redirectFallbackPage({ route, target, title }) {
+  return `<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Redirectionare | ${esc(title)}</title>
+  <meta name="robots" content="noindex, follow" />
+  <link rel="canonical" href="${canonical(target)}" />
+  <meta http-equiv="refresh" content="0; url=${cleanUrl(target)}" />
+  <script>window.location.replace('${cleanUrl(target)}');</script>
+${CLARITY_TRACKING_CODE}
+</head>
+<body>
+  <h1>${esc(title)}</h1>
+  <p>Pagina a fost consolidata. Continua la <a href="${cleanUrl(target)}">${canonical(target)}</a>.</p>
+</body>
+</html>
+`;
+}
+
 function ensureDepth(body, context) {
   const paragraphs = [
     `Pentru ${context}, decizia nu se ia doar dupa denumirea programului. Trebuie verificata potrivirea dintre solicitant, activitate, localitate, documente, investitie, buget si calendarul apelului activ.`,
@@ -218,6 +243,76 @@ function localPage(item, consulting) {
   return { route, content: html({ title, description, h1: title, route, category: consulting ? "Consultanta locala" : "Fonduri locale", summary: `${title}: eligibilitatea se verifica dupa regiune, solicitant, cod CAEN, investitie si documente.`, body, faq, related: ["/fonduri-europene", "/verificare-eligibilitate-fonduri-europene", "/contact"] }) };
 }
 
+function regionalPage(item) {
+  const route = `/${item.slug}`;
+  const counties = item.counties || [];
+  const title = item.title || `Fonduri europene ${item.region}`;
+  const description = item.description || `Ghid regional pentru fonduri europene in ${item.region}.`;
+  const faq = [
+    [`Ce judete acopera pagina ${item.region}?`, `Pagina acopera orientativ judetele ${counties.join(", ")}.`],
+    ["Care este diferenta dintre programe regionale, AFIR si nationale?", "Programele regionale tin de regiunea investitiei si de autoritatea regionala. AFIR acopera proiecte agricole si rurale. Programele nationale sau PNRR au reguli stabilite la nivel national si pot avea criterii diferite de localizare."],
+    ["Cand conteaza ADR Nord-Est?", "ADR Nord-Est conteaza pentru apelurile Programului Regional Nord-Est: ghiduri, clarificari, criterii regionale si documentele specifice apelului activ."],
+    ["Pot folosi pagina pentru o decizie finala de depunere?", "Nu. Pagina este un filtru initial; decizia finala se ia dupa ghidul activ, anexele oficiale si documentele solicitantului."]
+  ];
+  let body = `
+      <h2>Judete acoperite</h2>
+      <p>Pagina consolideaza intentiile locale pentru Regiunea ${esc(item.region)} si acopera orientativ judetele: ${esc(counties.join(", "))}. In locul unor pagini separate pentru fiecare oras, analiza porneste de la regiune, program, localizarea investitiei si documentele beneficiarului.</p>
+      <h2>Programe relevante in Nord-Est</h2>
+      <p>Pentru firme si microintreprinderi, pot fi relevante apeluri din Programul Regional Nord-Est, inclusiv investitii productive, modernizare, digitalizare sau eficienta energetica atunci cand ghidul permite. Pentru ferme si activitati agricole, traseul este de obicei AFIR si Planul Strategic PAC. Pentru digitalizare, energie sau antreprenoriat, pot aparea apeluri nationale, PNRR sau scheme sectoriale.</p>
+      <h2>Rolul ADR Nord-Est</h2>
+      <p>ADR Nord-Est este relevanta pentru apelurile regionale: publica sau administreaza informatii despre program, ghiduri, clarificari si reguli de eligibilitate pentru investitii in regiune. Pentru un proiect local, nu este suficient sa existe o firma in regiune; trebuie verificata locatia investitiei, codul CAEN, tipul solicitantului, cheltuielile si calendarul apelului activ.</p>
+      <h2>Regional, AFIR sau national?</h2>
+      <p>Un proiect din Iasi, Suceava, Bacau, Botosani, Neamt sau Vaslui nu intra automat intr-un program regional. Daca investitia este agricola sau rurala, AFIR poate fi ruta principala. Daca investitia este digitalizare, energie sau antreprenoriat, poate fi mai potrivit un program national. Daca investitia este productiva pentru o microintreprindere sau IMM local, merita verificat Programul Regional Nord-Est si apelurile active.</p>
+      <table>
+        <thead>
+          <tr><th>Tip beneficiar</th><th>Program posibil</th><th>Ce verificam</th><th>Link intern</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Microintreprindere din Nord-Est</td><td>Program Regional Nord-Est / POR</td><td>locatia investitiei, CAEN, vechime, buget, cofinantare</td><td>${linkTo("/por-adr-nord-est", "POR ADR Nord-Est")}</td></tr>
+          <tr><td>IMM cu investitie productiva</td><td>Programe regionale sau scheme IMM</td><td>eligibilitate firma, cheltuieli, punctaj, documente pentru spatiu</td><td>${linkTo("/fonduri-europene-imm", "Fonduri IMM")}</td></tr>
+          <tr><td>Ferma sau exploatatie agricola</td><td>AFIR, DR 12, DR 14 sau alte interventii PAC</td><td>SO, terenuri/animale, forma juridica, documente agricole</td><td>${linkTo("/afir", "AFIR")}</td></tr>
+          <tr><td>Firma care vrea software sau automatizare</td><td>Digitalizare IMM, PNRR sau apeluri regionale</td><td>nevoia digitala, cheltuieli IT, indicatori, oferte</td><td>${linkTo("/fonduri-europene-digitalizare", "Digitalizare")}</td></tr>
+          <tr><td>Firma sau institutie cu proiect energetic</td><td>Fondul pentru Modernizare sau apeluri de autoconsum</td><td>consum, avize, solutie tehnica, solicitant eligibil</td><td>${linkTo("/fondul-de-modernizare", "Energie")}</td></tr>
+        </tbody>
+      </table>
+      <h2>Exemple locale orientative</h2>
+      <ul>
+        <li>Iasi: microintreprindere de servicii care verifica Programul Regional Nord-Est si buget IT. TODO_DATE_LOCALE.</li>
+        <li>Suceava: ferma sau afacere turistica unde trebuie comparate AFIR, programe regionale si investitii energetice. TODO_DATE_LOCALE.</li>
+        <li>Bacau: firma de productie sau servicii care verifica echipamente, cofinantare si documentele pentru punctul de lucru. TODO_DATE_LOCALE.</li>
+      </ul>
+      <h2>Intrebari locale frecvente</h2>
+      <p>Conteaza orasul sau judetul? Da, mai ales la programele regionale si cand investitia trebuie localizata in regiune. Conteaza sediul social sau punctul de lucru? Depinde de ghid: unele apeluri urmaresc locul implementarii, nu doar sediul. Pot depune online fara intalnire locala? De obicei analiza initiala se poate face la distanta, dar documentele trebuie sa sustina locatia si investitia.</p>
+      <h2>Cum verificam un proiect pe judet</h2>
+      <p>Analiza regionala nu inseamna ca toate judetele sunt tratate identic. Pentru fiecare proiect notam unde se implementeaza investitia, ce document exista pentru locatie si daca activitatea se desfasoara efectiv acolo. Pentru o firma cu sediu intr-un judet si punct de lucru in alt judet, locul implementarii poate fi mai important decat sediul social.</p>
+      <p>In practica, cerem minimum cinci informatii inainte sa recomandam o ruta: judetul si localitatea investitiei, forma juridica, codul CAEN sau activitatea agricola, tipul cheltuielilor si bugetul estimat. Dupa aceea comparam programele posibile: regional pentru investitii productive, AFIR pentru agricultura, digitalizare sau PNRR pentru software si automatizare, energie pentru autoconsum sau eficienta.</p>
+      <h2>Cand ar merita o pagina locala separata</h2>
+      <p>O pagina separata pentru un judet ar fi justificata doar daca poate raspunde la intrebari pe care pagina regionala nu le acopera: apel cu restrictii clare pe teritoriu, sursa oficiala judeteana, diferenta de calendar, exemplu anonimizat local sau intrebari frecvente din proiecte reale. Fara aceste elemente, o pagina locala devine doar un schimb de nume in titlu si H1.</p>
+      <h2>Ce trimiti pentru verificarea eligibilitatii</h2>
+      <p>Pentru o analiza initiala, sunt utile datele firmei, judetul si localitatea investitiei, descrierea activitatii, lista de cheltuieli dorite, bugetul estimat, cofinantarea disponibila si documentele pentru spatiu sau teren. Pentru agricultura, sunt necesare si informatii despre exploatatie, culturi, animale si dimensiune economica.</p>
+      <h2>Surse oficiale regionale</h2>
+      <ul>
+        <li><a href="https://adrnordest.ro/" target="_blank" rel="noopener noreferrer">ADR Nord-Est</a> pentru informatii regionale si apeluri active.</li>
+        <li><a href="https://adrnordest.ro/comentariiGhid/P1IMMInovative/Apel1/Ghid.pdf" target="_blank" rel="noopener noreferrer">Ghid ADR Nord-Est pentru investitii microintreprinderi</a>, verificat in sursele proiectului.</li>
+        <li>${linkTo("/surse-oficiale-fonduri-europene", "Tabelul intern de surse oficiale")}</li>
+      </ul>`;
+  body = ensureDepth(body, `fonduri europene ${item.region}`);
+  return {
+    route,
+    content: html({
+      title,
+      description,
+      h1: item.h1 || title,
+      route,
+      category: "Pagina regionala",
+      summary: `Fondurile europene in ${item.region} se verifica dupa judet, localizarea investitiei, tipul beneficiarului si programul activ.`,
+      body,
+      faq,
+      related: item.related || ["/por-adr-nord-est", "/fonduri-europene-imm", "/consultanta-fonduri-europene", "/contact"]
+    })
+  };
+}
+
 function faqPage(item) {
   const route = `/intrebari/${item.slug}`;
   const title = item.question;
@@ -245,13 +340,15 @@ function faqPage(item) {
   return { route, content: html({ title, description, h1: title, route, category: "Intrebare frecventa", summary: item.answer, body, faq, related: item.related }) };
 }
 
-function updateSitemap(routes, updatedAt) {
+function updateSitemap(routes, updatedAt, excludedRoutes = []) {
   const existing = fs.existsSync(SITEMAP)
     ? [...fs.readFileSync(SITEMAP, "utf8").matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1].replace(SITE, ""))
     : ["/"];
   const seen = new Set();
+  const excluded = new Set(excludedRoutes.map(cleanUrl));
   const all = [...existing, ...routes].map(cleanUrl).filter((route) => {
     if (seen.has(route)) return false;
+    if (excluded.has(route)) return false;
     if (route.includes("/admin") || route.includes("herambursabile") || route.includes("/index")) return false;
     seen.add(route);
     return true;
@@ -271,14 +368,35 @@ ${all.map((route) => `  <url>
 
 function main() {
   const config = JSON.parse(fs.readFileSync(CONFIG, "utf8"));
+  const activeLocalPages = (config.localPages || []).filter((item) => item.status !== "consolidate");
+  const localRedirects = (config.localPages || [])
+    .filter((item) => item.status === "consolidate" && item.redirectTo)
+    .flatMap((item) => [
+      {
+        route: `/fonduri-europene-${item.slug}`,
+        target: item.redirectTo,
+        title: `Fonduri europene ${item.county}`
+      },
+      {
+        route: `/consultanta-fonduri-europene-${item.slug}`,
+        target: item.consultingRedirectTo || item.redirectTo,
+        title: `Consultanta fonduri europene ${item.city}`
+      }
+    ]);
   const pages = [
     ...(config.caenPages || []).map(caenPage),
-    ...(config.localPages || []).flatMap((item) => [localPage(item, false), localPage(item, true)]),
+    ...(config.regionalPages || []).map(regionalPage),
+    ...activeLocalPages.flatMap((item) => [localPage(item, false), localPage(item, true)]),
     ...(config.faqPages || []).map(faqPage)
   ];
   for (const page of pages) writePage(page.route, page.content);
-  updateSitemap(pages.map((page) => page.route), config.updatedAt || "2026-05-19");
-  console.log(`Generated ${pages.length} programmatic SEO pages.`);
+  for (const redirect of localRedirects) writePage(redirect.route, redirectFallbackPage(redirect));
+  updateSitemap(
+    pages.map((page) => page.route),
+    config.updatedAt || "2026-05-19",
+    localRedirects.map((redirect) => redirect.route)
+  );
+  console.log(`Generated ${pages.length} programmatic SEO pages and ${localRedirects.length} local redirect fallbacks.`);
 }
 
 main();

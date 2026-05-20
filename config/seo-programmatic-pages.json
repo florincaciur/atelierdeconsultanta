@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-19",
+  "updatedAt": "2026-05-20",
   "caenPages": [
     {
       "code": "6201",
@@ -40,28 +40,53 @@
       "slug": "iasi",
       "city": "Iasi",
       "region": "Nord-Est",
-      "focus": "microintreprinderi, IMM-uri, digitalizare si agricultura"
+      "focus": "microintreprinderi, IMM-uri, digitalizare si agricultura",
+      "status": "consolidate",
+      "redirectTo": "/fonduri-europene-nord-est",
+      "reason": "Pagina locala este prea similara cu celelalte pagini oras si nu contine date locale verificabile."
     },
     {
       "county": "Suceava",
       "slug": "suceava",
       "city": "Suceava",
       "region": "Nord-Est",
-      "focus": "agricultura, turism, servicii si investitii productive"
+      "focus": "agricultura, turism, servicii si investitii productive",
+      "status": "consolidate",
+      "redirectTo": "/fonduri-europene-nord-est",
+      "reason": "Pagina locala este prea similara cu celelalte pagini oras si nu contine date locale verificabile."
     },
     {
       "county": "Bacau",
       "slug": "bacau",
       "city": "Bacau",
       "region": "Nord-Est",
-      "focus": "IMM-uri, productie, energie si servicii"
+      "focus": "IMM-uri, productie, energie si servicii",
+      "status": "consolidate",
+      "redirectTo": "/fonduri-europene-nord-est",
+      "reason": "Pagina locala este prea similara cu celelalte pagini oras si nu contine date locale verificabile."
     },
     {
       "county": "Bucuresti",
       "slug": "bucuresti",
       "city": "Bucuresti",
       "region": "Bucuresti-Ilfov",
-      "focus": "digitalizare, servicii, energie si programe nationale"
+      "focus": "digitalizare, servicii, energie si programe nationale",
+      "status": "consolidate",
+      "redirectTo": "/fonduri-europene",
+      "consultingRedirectTo": "/consultanta-fonduri-europene",
+      "reason": "Nu exista continut local Bucuresti-Ilfov verificabil suficient pentru o pagina separata."
+    }
+  ],
+  "regionalPages": [
+    {
+      "slug": "fonduri-europene-nord-est",
+      "region": "Nord-Est",
+      "title": "Fonduri europene Nord-Est | Iasi, Suceava, Bacau, Botosani, Neamt, Vaslui",
+      "description": "Ghid regional pentru fonduri europene in Nord-Est: judete acoperite, ADR Nord-Est, programe regionale, AFIR, programe nationale si verificare eligibilitate.",
+      "h1": "Fonduri europene Nord-Est",
+      "counties": ["Iasi", "Suceava", "Bacau", "Botosani", "Neamt", "Vaslui"],
+      "sourceKeys": ["por-ne", "por-ne-apel-2", "dr12", "dr14", "digitalizare", "fondul-modernizare"],
+      "related": ["/por-adr-nord-est", "/fonduri-europene-imm", "/consultanta-fonduri-europene", "/verificare-eligibilitate-fonduri-europene", "/surse-oficiale-fonduri-europene"]
     }
   ],
   "faqPages": [

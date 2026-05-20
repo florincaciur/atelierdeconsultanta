@@ -65,6 +65,8 @@ const related = {
   digitalizare: ["/fonduri-europene-digitalizare/", "Fonduri pentru digitalizare"],
   startup: ["/start-up-nation/", "Start-Up Nation"],
   imm: ["/fonduri-europene-imm/", "Fonduri europene IMM"],
+  nordest: ["/fonduri-europene-nord-est/", "Fonduri europene Nord-Est"],
+  caseStudies: ["/studii-de-caz-fonduri-europene/", "Studii de caz fonduri europene"],
   femei: ["/fonduri-europene-femei-antreprenor/", "Fonduri pentru femei antreprenor"],
   intrebari: ["/intrebari-frecvente/", "Întrebări frecvente"],
 };
@@ -80,7 +82,7 @@ const pages = [
     audience: ["IMM-uri care planifică investiții în echipamente, digitalizare, energie sau extindere", "Fermieri interesați de AFIR, DR 12, DR 14 sau proiecte pentru ferme", "Antreprenori aflați la început care urmăresc Start-Up Nation sau granturi similare"],
     checks: ["încadrarea solicitantului și codul CAEN", "vechimea firmei, istoricul financiar și obligațiile fiscale", "bugetul investiției, cofinanțarea și documentele care pot fi obținute la timp"],
     steps: ["identifică programul compatibil cu investiția", "verifică ghidul solicitantului și grila de punctaj", "pregătește documentele minime înainte de lansarea apelului", "discută cu un consultant dacă proiectul are condiții tehnice sau financiare sensibile"],
-    links: [related.consultanta, related.nerambursabile, related.imm, related.agricultura, related.pnrr, related.ghiduri],
+    links: [related.consultanta, related.caseStudies, related.nerambursabile, related.imm, related.agricultura, related.pnrr, related.ghiduri],
   },
   {
     slug: "fonduri-nerambursabile",
@@ -140,7 +142,7 @@ const pages = [
     audience: ["microîntreprinderi, întreprinderi mici și mijlocii", "firme cu investiții în utilaje, software, energie sau extindere", "antreprenori care vor o evaluare înainte de pregătirea dosarului"],
     checks: ["încadrarea IMM și datele financiare", "codul CAEN autorizat sau autorizabil", "cofinanțarea și capacitatea de implementare"],
     steps: ["stabilește investiția și obiectivele economice", "verifică programul regional sau național potrivit", "pregătește bugetul și documentele firmei", "corelează proiectul cu punctajul programului"],
-    links: [related.consultanta, related.digitalizare, related.startup, ["/por-adr-nord-est", "POR ADR Nord-Est"], related.eligibilitate],
+    links: [related.consultanta, related.nordest, related.digitalizare, related.startup, ["/por-adr-nord-est", "POR ADR Nord-Est"], related.eligibilitate],
   },
   {
     slug: "fonduri-europene-agricultura",
@@ -224,7 +226,7 @@ const pages = [
     audience: ["vizitatori care vor să înțeleagă cum arată un parcurs de proiect", "beneficiari care vor exemple de documente și decizii", "echipa editorială care va publica materiale aprobate"],
     checks: ["acordul beneficiarului pentru publicare", "datele care pot fi anonimizate", "lecțiile utile fără divulgarea informațiilor confidențiale"],
     steps: ["documentează contextul proiectului", "elimină datele sensibile", "verifică acordul scris", "publică doar informații confirmate"],
-    links: [related.consultanta, related.ghiduri, related.intrebari, related.contact],
+    links: [related.caseStudies, related.consultanta, related.ghiduri, related.intrebari, related.contact],
     internalNote: "TODO intern: publicați studii de caz doar cu acordul explicit al clientului și fără date comerciale inventate.",
   },
   {
@@ -417,7 +419,7 @@ const pages = [
     audience: ["microîntreprinderi", "întreprinderi mici și mijlocii", "firme care vor să compare programe de finanțare"],
     checks: ["încadrarea IMM", "codul CAEN și istoricul financiar", "bugetul, contribuția proprie și documentele"],
     steps: ["transmite datele firmei", "descrie investiția", "verificăm programele potrivite", "pregătim lista de documente"],
-    links: [related.imm, related.consultanta, ["/por-adr-nord-est", "POR ADR Nord-Est"], related.digitalizare, related.contact],
+    links: [related.nordest, related.imm, related.consultanta, ["/por-adr-nord-est", "POR ADR Nord-Est"], related.digitalizare, related.contact],
   },
   {
     slug: "greseli-fonduri-europene",
@@ -595,6 +597,7 @@ const existing = [
   ["/afir-autoconsum-agroalimentar", "0.8"],
   ["/autoconsum-public-fotovoltaice-institutii-publice", "0.8"],
   ["/por-adr-nord-est", "0.8"],
+  ["/fonduri-europene-nord-est", "0.8"],
   ["/pro-infra", "0.8"],
   ["/calculator-soc", "0.8"],
   ["/contact/", "0.8"],

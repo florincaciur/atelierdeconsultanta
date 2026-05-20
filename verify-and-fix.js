@@ -38,6 +38,7 @@ const CANONICAL_ROOT_HTML_ROUTES = new Set([
 
 const PROGRAM_ROUTES = [
   "/por-adr-nord-est",
+  "/fonduri-europene-nord-est",
   "/dr12-afir",
   "/afir-autoconsum-agroalimentar",
   "/autoconsum-public-fotovoltaice-institutii-publice",

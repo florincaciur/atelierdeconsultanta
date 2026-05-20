@@ -73,6 +73,7 @@ const CANONICAL_ROOT_HTML_ROUTES = new Set([
 const CANONICAL_DIRECTORY_HTML_ROUTES = [
   "contact",
   "consultanta-fonduri-europene",
+  "fonduri-europene-nord-est",
   "verificare-eligibilitate-fonduri-europene",
   "digitalizare-imm-pnrr",
   "fondul-de-modernizare",
@@ -88,6 +89,7 @@ const CANONICAL_DIRECTORY_HTML_ROUTES = [
   "eligibilitate-fonduri-europene",
   "ghiduri",
   "studii-de-caz",
+  "studii-de-caz-fonduri-europene",
   "intrebari-frecvente",
   "start-up-nation-2026-conditii",
   "start-up-nation-2026-cheltuieli-eligibile",

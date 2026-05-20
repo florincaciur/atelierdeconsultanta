@@ -1,22 +1,22 @@
 {
-  "generatedAt": "2026-05-19T23:58:56.592Z",
+  "generatedAt": "2026-05-20T10:09:38.939Z",
   "summary": {
-    "filesChecked": 131,
-    "filesWithStructuredData": 82,
+    "filesChecked": 133,
+    "filesWithStructuredData": 76,
     "filesWithIssues": 0,
     "types": {
-      "Organization": 168,
-      "ImageObject": 78,
-      "Country": 76,
-      "ContactPoint": 142,
-      "WebSite": 73,
-      "WebPage": 73,
+      "Organization": 163,
+      "ImageObject": 71,
+      "Country": 69,
+      "ContactPoint": 126,
+      "WebSite": 66,
+      "WebPage": 67,
       "CreativeWork": 67,
-      "BreadcrumbList": 80,
-      "ListItem": 174,
-      "FAQPage": 78,
-      "Question": 474,
-      "Answer": 474,
+      "BreadcrumbList": 74,
+      "ListItem": 163,
+      "FAQPage": 71,
+      "Question": 446,
+      "Answer": 446,
       "GovernmentService": 14,
       "BlogPosting": 7,
       "Blog": 1,
@@ -31,7 +31,7 @@
       "CollectionPage": 7,
       "DefinedTermSet": 1,
       "DefinedTerm": 19,
-      "Article": 1,
+      "Article": 2,
       "ItemList": 1
     }
   },
@@ -308,74 +308,26 @@
     },
     {
       "file": "consultanta-fonduri-europene-bacau/index.html",
-      "blocks": 1,
-      "types": {
-        "Organization": 1,
-        "ImageObject": 1,
-        "Country": 1,
-        "ContactPoint": 2,
-        "WebSite": 1,
-        "WebPage": 1,
-        "BreadcrumbList": 1,
-        "ListItem": 2,
-        "FAQPage": 1,
-        "Question": 4,
-        "Answer": 4
-      },
+      "blocks": 0,
+      "types": {},
       "issues": []
     },
     {
       "file": "consultanta-fonduri-europene-bucuresti/index.html",
-      "blocks": 1,
-      "types": {
-        "Organization": 1,
-        "ImageObject": 1,
-        "Country": 1,
-        "ContactPoint": 2,
-        "WebSite": 1,
-        "WebPage": 1,
-        "BreadcrumbList": 1,
-        "ListItem": 2,
-        "FAQPage": 1,
-        "Question": 4,
-        "Answer": 4
-      },
+      "blocks": 0,
+      "types": {},
       "issues": []
     },
     {
       "file": "consultanta-fonduri-europene-iasi/index.html",
-      "blocks": 1,
-      "types": {
-        "Organization": 1,
-        "ImageObject": 1,
-        "Country": 1,
-        "ContactPoint": 2,
-        "WebSite": 1,
-        "WebPage": 1,
-        "BreadcrumbList": 1,
-        "ListItem": 2,
-        "FAQPage": 1,
-        "Question": 4,
-        "Answer": 4
-      },
+      "blocks": 0,
+      "types": {},
       "issues": []
     },
     {
       "file": "consultanta-fonduri-europene-suceava/index.html",
-      "blocks": 1,
-      "types": {
-        "Organization": 1,
-        "ImageObject": 1,
-        "Country": 1,
-        "ContactPoint": 2,
-        "WebSite": 1,
-        "WebPage": 1,
-        "BreadcrumbList": 1,
-        "ListItem": 2,
-        "FAQPage": 1,
-        "Question": 4,
-        "Answer": 4
-      },
+      "blocks": 0,
+      "types": {},
       "issues": []
     },
     {
@@ -853,38 +805,14 @@
     },
     {
       "file": "fonduri-europene-bacau/index.html",
-      "blocks": 1,
-      "types": {
-        "Organization": 1,
-        "ImageObject": 1,
-        "Country": 1,
-        "ContactPoint": 2,
-        "WebSite": 1,
-        "WebPage": 1,
-        "BreadcrumbList": 1,
-        "ListItem": 2,
-        "FAQPage": 1,
-        "Question": 4,
-        "Answer": 4
-      },
+      "blocks": 0,
+      "types": {},
       "issues": []
     },
     {
       "file": "fonduri-europene-bucuresti/index.html",
-      "blocks": 1,
-      "types": {
-        "Organization": 1,
-        "ImageObject": 1,
-        "Country": 1,
-        "ContactPoint": 2,
-        "WebSite": 1,
-        "WebPage": 1,
-        "BreadcrumbList": 1,
-        "ListItem": 2,
-        "FAQPage": 1,
-        "Question": 4,
-        "Answer": 4
-      },
+      "blocks": 0,
+      "types": {},
       "issues": []
     },
     {
@@ -1024,20 +952,8 @@
     },
     {
       "file": "fonduri-europene-iasi/index.html",
-      "blocks": 1,
-      "types": {
-        "Organization": 1,
-        "ImageObject": 1,
-        "Country": 1,
-        "ContactPoint": 2,
-        "WebSite": 1,
-        "WebPage": 1,
-        "BreadcrumbList": 1,
-        "ListItem": 2,
-        "FAQPage": 1,
-        "Question": 4,
-        "Answer": 4
-      },
+      "blocks": 0,
+      "types": {},
       "issues": []
     },
     {
@@ -1092,21 +1008,23 @@
       "issues": []
     },
     {
-      "file": "fonduri-europene-suceava/index.html",
+      "file": "fonduri-europene-nord-est/index.html",
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "ImageObject": 1,
-        "Country": 1,
-        "ContactPoint": 2,
-        "WebSite": 1,
         "WebPage": 1,
         "BreadcrumbList": 1,
-        "ListItem": 2,
+        "ListItem": 3,
         "FAQPage": 1,
         "Question": 4,
         "Answer": 4
       },
+      "issues": []
+    },
+    {
+      "file": "fonduri-europene-suceava/index.html",
+      "blocks": 0,
+      "types": {},
       "issues": []
     },
     {
@@ -1749,6 +1667,21 @@
       "file": "start-up-nation/index.html",
       "blocks": 0,
       "types": {},
+      "issues": []
+    },
+    {
+      "file": "studii-de-caz-fonduri-europene/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 2,
+        "ImageObject": 1,
+        "Country": 1,
+        "WebSite": 1,
+        "WebPage": 1,
+        "Article": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2
+      },
       "issues": []
     },
     {

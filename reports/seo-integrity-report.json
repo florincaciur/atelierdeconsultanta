@@ -1,49 +1,49 @@
 {
-  "generatedAt": "2026-05-19T23:58:47.816Z",
+  "generatedAt": "2026-05-20T10:09:39.050Z",
   "root": "C:\\Users\\flori\\Documents\\GitHub\\atelierdeconsultanta",
   "summary": {
-    "totalFiles": 131,
-    "passedFiles": 131,
+    "totalFiles": 133,
+    "passedFiles": 133,
     "failedFiles": 0,
     "checks": {
       "metaDescription": {
-        "pass": 131,
+        "pass": 133,
         "fail": 0
       },
       "canonical": {
-        "pass": 131,
+        "pass": 133,
         "fail": 0
       },
       "imageAltAttributes": {
-        "pass": 131,
+        "pass": 133,
         "fail": 0
       },
       "singleH1": {
-        "pass": 131,
+        "pass": 133,
         "fail": 0
       },
       "relatedLinks": {
-        "pass": 131,
+        "pass": 133,
         "fail": 0
       },
       "utf8Charset": {
-        "pass": 128,
+        "pass": 130,
         "fail": 0
       },
       "cleanCanonical": {
-        "pass": 128,
+        "pass": 130,
         "fail": 0
       },
       "visibleFaqForSchema": {
-        "pass": 128,
+        "pass": 130,
         "fail": 0
       },
       "speakableSchemaCoverage": {
-        "pass": 128,
+        "pass": 130,
         "fail": 0
       },
       "contentDepth": {
-        "pass": 128,
+        "pass": 130,
         "fail": 0
       }
     }
@@ -1175,7 +1175,7 @@
     },
     {
       "file": "consultanta-fonduri-europene-bacau/index.html",
-      "noindex": false,
+      "noindex": true,
       "pass": true,
       "checks": {
         "utf8Charset": {
@@ -1185,7 +1185,8 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 1
+          "count": 0,
+          "note": "noindex page: meta description is optional"
         },
         "canonical": {
           "status": "pass",
@@ -1193,7 +1194,7 @@
         },
         "cleanCanonical": {
           "status": "pass",
-          "href": "https://atelierdeconsultanta.ro/consultanta-fonduri-europene-bacau"
+          "href": "https://atelierdeconsultanta.ro/fonduri-europene-nord-est"
         },
         "imageAltAttributes": {
           "status": "pass",
@@ -1210,9 +1211,8 @@
         },
         "visibleFaqForSchema": {
           "status": "pass",
-          "required": true,
-          "count": 4,
-          "threshold": 4
+          "required": false,
+          "count": 0
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -1221,20 +1221,20 @@
         },
         "contentDepth": {
           "status": "pass",
-          "required": true,
-          "words": 1301,
-          "threshold": 1100
+          "required": false,
+          "words": 0
         },
         "relatedLinks": {
           "status": "pass",
-          "required": true,
-          "count": 1
+          "required": false,
+          "count": 0,
+          "note": "not a hub/blog page"
         }
       }
     },
     {
       "file": "consultanta-fonduri-europene-bucuresti/index.html",
-      "noindex": false,
+      "noindex": true,
       "pass": true,
       "checks": {
         "utf8Charset": {
@@ -1244,7 +1244,8 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 1
+          "count": 0,
+          "note": "noindex page: meta description is optional"
         },
         "canonical": {
           "status": "pass",
@@ -1252,7 +1253,7 @@
         },
         "cleanCanonical": {
           "status": "pass",
-          "href": "https://atelierdeconsultanta.ro/consultanta-fonduri-europene-bucuresti"
+          "href": "https://atelierdeconsultanta.ro/consultanta-fonduri-europene"
         },
         "imageAltAttributes": {
           "status": "pass",
@@ -1269,9 +1270,8 @@
         },
         "visibleFaqForSchema": {
           "status": "pass",
-          "required": true,
-          "count": 4,
-          "threshold": 4
+          "required": false,
+          "count": 0
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -1280,20 +1280,20 @@
         },
         "contentDepth": {
           "status": "pass",
-          "required": true,
-          "words": 1302,
-          "threshold": 1100
+          "required": false,
+          "words": 0
         },
         "relatedLinks": {
           "status": "pass",
-          "required": true,
-          "count": 1
+          "required": false,
+          "count": 0,
+          "note": "not a hub/blog page"
         }
       }
     },
     {
       "file": "consultanta-fonduri-europene-iasi/index.html",
-      "noindex": false,
+      "noindex": true,
       "pass": true,
       "checks": {
         "utf8Charset": {
@@ -1303,7 +1303,8 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 1
+          "count": 0,
+          "note": "noindex page: meta description is optional"
         },
         "canonical": {
           "status": "pass",
@@ -1311,7 +1312,7 @@
         },
         "cleanCanonical": {
           "status": "pass",
-          "href": "https://atelierdeconsultanta.ro/consultanta-fonduri-europene-iasi"
+          "href": "https://atelierdeconsultanta.ro/fonduri-europene-nord-est"
         },
         "imageAltAttributes": {
           "status": "pass",
@@ -1328,9 +1329,8 @@
         },
         "visibleFaqForSchema": {
           "status": "pass",
-          "required": true,
-          "count": 4,
-          "threshold": 4
+          "required": false,
+          "count": 0
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -1339,20 +1339,20 @@
         },
         "contentDepth": {
           "status": "pass",
-          "required": true,
-          "words": 1301,
-          "threshold": 1100
+          "required": false,
+          "words": 0
         },
         "relatedLinks": {
           "status": "pass",
-          "required": true,
-          "count": 1
+          "required": false,
+          "count": 0,
+          "note": "not a hub/blog page"
         }
       }
     },
     {
       "file": "consultanta-fonduri-europene-suceava/index.html",
-      "noindex": false,
+      "noindex": true,
       "pass": true,
       "checks": {
         "utf8Charset": {
@@ -1362,7 +1362,8 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 1
+          "count": 0,
+          "note": "noindex page: meta description is optional"
         },
         "canonical": {
           "status": "pass",
@@ -1370,7 +1371,7 @@
         },
         "cleanCanonical": {
           "status": "pass",
-          "href": "https://atelierdeconsultanta.ro/consultanta-fonduri-europene-suceava"
+          "href": "https://atelierdeconsultanta.ro/fonduri-europene-nord-est"
         },
         "imageAltAttributes": {
           "status": "pass",
@@ -1387,9 +1388,8 @@
         },
         "visibleFaqForSchema": {
           "status": "pass",
-          "required": true,
-          "count": 4,
-          "threshold": 4
+          "required": false,
+          "count": 0
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -1398,14 +1398,14 @@
         },
         "contentDepth": {
           "status": "pass",
-          "required": true,
-          "words": 1302,
-          "threshold": 1100
+          "required": false,
+          "words": 0
         },
         "relatedLinks": {
           "status": "pass",
-          "required": true,
-          "count": 1
+          "required": false,
+          "count": 0,
+          "note": "not a hub/blog page"
         }
       }
     },
@@ -1516,7 +1516,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1808,
+          "words": 1821,
           "threshold": 1800
         },
         "relatedLinks": {
@@ -3406,7 +3406,7 @@
     },
     {
       "file": "fonduri-europene-bacau/index.html",
-      "noindex": false,
+      "noindex": true,
       "pass": true,
       "checks": {
         "utf8Charset": {
@@ -3416,7 +3416,8 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 1
+          "count": 0,
+          "note": "noindex page: meta description is optional"
         },
         "canonical": {
           "status": "pass",
@@ -3424,7 +3425,7 @@
         },
         "cleanCanonical": {
           "status": "pass",
-          "href": "https://atelierdeconsultanta.ro/fonduri-europene-bacau"
+          "href": "https://atelierdeconsultanta.ro/fonduri-europene-nord-est"
         },
         "imageAltAttributes": {
           "status": "pass",
@@ -3441,9 +3442,8 @@
         },
         "visibleFaqForSchema": {
           "status": "pass",
-          "required": true,
-          "count": 4,
-          "threshold": 4
+          "required": false,
+          "count": 0
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -3452,20 +3452,20 @@
         },
         "contentDepth": {
           "status": "pass",
-          "required": true,
-          "words": 1281,
-          "threshold": 1100
+          "required": false,
+          "words": 0
         },
         "relatedLinks": {
           "status": "pass",
-          "required": true,
-          "count": 1
+          "required": false,
+          "count": 0,
+          "note": "not a hub/blog page"
         }
       }
     },
     {
       "file": "fonduri-europene-bucuresti/index.html",
-      "noindex": false,
+      "noindex": true,
       "pass": true,
       "checks": {
         "utf8Charset": {
@@ -3475,7 +3475,8 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 1
+          "count": 0,
+          "note": "noindex page: meta description is optional"
         },
         "canonical": {
           "status": "pass",
@@ -3483,7 +3484,7 @@
         },
         "cleanCanonical": {
           "status": "pass",
-          "href": "https://atelierdeconsultanta.ro/fonduri-europene-bucuresti"
+          "href": "https://atelierdeconsultanta.ro/fonduri-europene"
         },
         "imageAltAttributes": {
           "status": "pass",
@@ -3500,9 +3501,8 @@
         },
         "visibleFaqForSchema": {
           "status": "pass",
-          "required": true,
-          "count": 4,
-          "threshold": 4
+          "required": false,
+          "count": 0
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -3511,14 +3511,14 @@
         },
         "contentDepth": {
           "status": "pass",
-          "required": true,
-          "words": 1282,
-          "threshold": 1100
+          "required": false,
+          "words": 0
         },
         "relatedLinks": {
           "status": "pass",
-          "required": true,
-          "count": 1
+          "required": false,
+          "count": 0,
+          "note": "not a hub/blog page"
         }
       }
     },
@@ -4110,7 +4110,7 @@
     },
     {
       "file": "fonduri-europene-iasi/index.html",
-      "noindex": false,
+      "noindex": true,
       "pass": true,
       "checks": {
         "utf8Charset": {
@@ -4120,7 +4120,8 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 1
+          "count": 0,
+          "note": "noindex page: meta description is optional"
         },
         "canonical": {
           "status": "pass",
@@ -4128,7 +4129,7 @@
         },
         "cleanCanonical": {
           "status": "pass",
-          "href": "https://atelierdeconsultanta.ro/fonduri-europene-iasi"
+          "href": "https://atelierdeconsultanta.ro/fonduri-europene-nord-est"
         },
         "imageAltAttributes": {
           "status": "pass",
@@ -4145,9 +4146,8 @@
         },
         "visibleFaqForSchema": {
           "status": "pass",
-          "required": true,
-          "count": 4,
-          "threshold": 4
+          "required": false,
+          "count": 0
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -4156,14 +4156,14 @@
         },
         "contentDepth": {
           "status": "pass",
-          "required": true,
-          "words": 1281,
-          "threshold": 1100
+          "required": false,
+          "words": 0
         },
         "relatedLinks": {
           "status": "pass",
-          "required": true,
-          "count": 1
+          "required": false,
+          "count": 0,
+          "note": "not a hub/blog page"
         }
       }
     },
@@ -4402,7 +4402,7 @@
       }
     },
     {
-      "file": "fonduri-europene-suceava/index.html",
+      "file": "fonduri-europene-nord-est/index.html",
       "noindex": false,
       "pass": true,
       "checks": {
@@ -4421,7 +4421,7 @@
         },
         "cleanCanonical": {
           "status": "pass",
-          "href": "https://atelierdeconsultanta.ro/fonduri-europene-suceava"
+          "href": "https://atelierdeconsultanta.ro/fonduri-europene-nord-est"
         },
         "imageAltAttributes": {
           "status": "pass",
@@ -4433,7 +4433,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Fonduri europene Suceava"
+            "Fonduri europene Nord-Est"
           ]
         },
         "visibleFaqForSchema": {
@@ -4450,13 +4450,72 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1282,
-          "threshold": 1100
+          "words": 1246,
+          "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
           "required": true,
           "count": 1
+        }
+      }
+    },
+    {
+      "file": "fonduri-europene-suceava/index.html",
+      "noindex": true,
+      "pass": true,
+      "checks": {
+        "utf8Charset": {
+          "status": "pass",
+          "hasCharset": true,
+          "hasHttpEquiv": false
+        },
+        "metaDescription": {
+          "status": "pass",
+          "count": 0,
+          "note": "noindex page: meta description is optional"
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "cleanCanonical": {
+          "status": "pass",
+          "href": "https://atelierdeconsultanta.ro/fonduri-europene-nord-est"
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Fonduri europene Suceava"
+          ]
+        },
+        "visibleFaqForSchema": {
+          "status": "pass",
+          "required": false,
+          "count": 0
+        },
+        "speakableSchemaCoverage": {
+          "status": "pass",
+          "required": false,
+          "count": 0
+        },
+        "contentDepth": {
+          "status": "pass",
+          "required": false,
+          "words": 0
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": false,
+          "count": 0,
+          "note": "not a hub/blog page"
         }
       }
     },
@@ -4567,7 +4626,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2185,
+          "words": 2193,
           "threshold": 2100
         },
         "relatedLinks": {
@@ -5518,7 +5577,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Transformăm ideile tale în Transformăm ideiletale în proiecte finanțate"
+            "Consultanță pentru accesarea fondurilor europene și finanțărilor nerambursabile"
           ]
         },
         "visibleFaqForSchema": {
@@ -5534,7 +5593,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 1307,
+          "words": 1348,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -6008,7 +6067,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 829,
+          "words": 834,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -6303,7 +6362,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2087,
+          "words": 2090,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -7254,6 +7313,64 @@
       }
     },
     {
+      "file": "studii-de-caz-fonduri-europene/index.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "utf8Charset": {
+          "status": "pass",
+          "hasCharset": true,
+          "hasHttpEquiv": false
+        },
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "cleanCanonical": {
+          "status": "pass",
+          "href": "https://atelierdeconsultanta.ro/studii-de-caz-fonduri-europene"
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Studii de caz anonimizate: proiecte pregătite pentru fonduri europene"
+          ]
+        },
+        "visibleFaqForSchema": {
+          "status": "pass",
+          "required": false,
+          "count": 0
+        },
+        "speakableSchemaCoverage": {
+          "status": "pass",
+          "required": false,
+          "count": 0
+        },
+        "contentDepth": {
+          "status": "pass",
+          "required": true,
+          "words": 1432,
+          "threshold": 1200
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 4
+        }
+      }
+    },
+    {
       "file": "studii-de-caz.html",
       "noindex": true,
       "pass": true,
@@ -7360,7 +7477,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1089,
+          "words": 1094,
           "threshold": 1000
         },
         "relatedLinks": {
@@ -7418,7 +7535,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 517,
+          "words": 522,
           "threshold": 2000
         },
         "relatedLinks": {

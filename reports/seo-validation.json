@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-19T22:45:38.227Z",
+  "generatedAt": "2026-05-20T10:09:17.230Z",
   "mode": "check",
   "changedFiles": [
     "afir-autoconsum-agroalimentar.html",
@@ -11,6 +11,10 @@
     "calendar-fonduri-europene/index.html",
     "cod-caen-start-up-nation-2026/index.html",
     "consultanta-afir/index.html",
+    "consultanta-fonduri-europene-bacau/index.html",
+    "consultanta-fonduri-europene-bucuresti/index.html",
+    "consultanta-fonduri-europene-iasi/index.html",
+    "consultanta-fonduri-europene-suceava/index.html",
     "consultanta-fonduri-europene/index.html",
     "consultanta-pnrr-digitalizare/index.html",
     "consultanta-start-up-nation-2026/index.html",
@@ -29,10 +33,14 @@
     "fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum.html",
     "fondul-de-modernizare/index.html",
     "fonduri-europene-agricultura/index.html",
+    "fonduri-europene-bacau/index.html",
+    "fonduri-europene-bucuresti/index.html",
     "fonduri-europene-digitalizare/index.html",
     "fonduri-europene-femei-antreprenor/index.html",
+    "fonduri-europene-iasi/index.html",
     "fonduri-europene-imm/index.html",
     "fonduri-europene-nerambursabile-2026/index.html",
+    "fonduri-europene-suceava/index.html",
     "fonduri-europene/index.html",
     "fonduri-nerambursabile/index.html",
     "fonduri-pentru-ferme/index.html",
@@ -49,15 +57,16 @@
     "start-up-nation-2026-idei-afaceri/index.html",
     "start-up-nation-2026-plan-de-afaceri/index.html",
     "start-up-nation-2026.html",
+    "studii-de-caz-fonduri-europene/index.html",
     "verificare-eligibilitate-fonduri-europene/index.html"
   ],
   "summary": {
-    "totalFiles": 128,
-    "passedFiles": 128,
+    "totalFiles": 133,
+    "passedFiles": 133,
     "failedFiles": 0
   },
   "inlineScripts": {
-    "checked": 64,
+    "checked": 185,
     "failures": []
   },
   "results": [
@@ -384,7 +393,7 @@
     {
       "file": "consultanta-fonduri-europene-bacau/index.html",
       "pass": true,
-      "noindex": false,
+      "noindex": true,
       "technicalFile": false,
       "issues": [],
       "details": {
@@ -393,14 +402,14 @@
           "Consultanta fonduri europene Bacau"
         ],
         "missingAlt": [],
-        "relatedCount": 1,
+        "relatedCount": 0,
         "jsonLdErrors": []
       }
     },
     {
       "file": "consultanta-fonduri-europene-bucuresti/index.html",
       "pass": true,
-      "noindex": false,
+      "noindex": true,
       "technicalFile": false,
       "issues": [],
       "details": {
@@ -409,14 +418,14 @@
           "Consultanta fonduri europene Bucuresti"
         ],
         "missingAlt": [],
-        "relatedCount": 1,
+        "relatedCount": 0,
         "jsonLdErrors": []
       }
     },
     {
       "file": "consultanta-fonduri-europene-iasi/index.html",
       "pass": true,
-      "noindex": false,
+      "noindex": true,
       "technicalFile": false,
       "issues": [],
       "details": {
@@ -425,14 +434,14 @@
           "Consultanta fonduri europene Iasi"
         ],
         "missingAlt": [],
-        "relatedCount": 1,
+        "relatedCount": 0,
         "jsonLdErrors": []
       }
     },
     {
       "file": "consultanta-fonduri-europene-suceava/index.html",
       "pass": true,
-      "noindex": false,
+      "noindex": true,
       "technicalFile": false,
       "issues": [],
       "details": {
@@ -441,7 +450,7 @@
           "Consultanta fonduri europene Suceava"
         ],
         "missingAlt": [],
-        "relatedCount": 1,
+        "relatedCount": 0,
         "jsonLdErrors": []
       }
     },
@@ -470,10 +479,10 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Consultanta fonduri europene pentru firme, fermieri si antreprenori"
+          "Consultanță fonduri europene pentru firme, fermieri și antreprenori"
         ],
         "missingAlt": [],
-        "relatedCount": 1,
+        "relatedCount": 3,
         "jsonLdErrors": []
       }
     },
@@ -726,7 +735,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "DR 12 AFIR pentru tineri fermieri: eligibilitate, investitii si pasi de pregatire"
+          "DR 12 AFIR: condiții, eligibilitate, acte necesare și pași de pregătire"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -992,7 +1001,7 @@
     {
       "file": "fonduri-europene-bacau/index.html",
       "pass": true,
-      "noindex": false,
+      "noindex": true,
       "technicalFile": false,
       "issues": [],
       "details": {
@@ -1001,14 +1010,14 @@
           "Fonduri europene Bacau"
         ],
         "missingAlt": [],
-        "relatedCount": 1,
+        "relatedCount": 0,
         "jsonLdErrors": []
       }
     },
     {
       "file": "fonduri-europene-bucuresti/index.html",
       "pass": true,
-      "noindex": false,
+      "noindex": true,
       "technicalFile": false,
       "issues": [],
       "details": {
@@ -1017,7 +1026,7 @@
           "Fonduri europene Bucuresti"
         ],
         "missingAlt": [],
-        "relatedCount": 1,
+        "relatedCount": 0,
         "jsonLdErrors": []
       }
     },
@@ -1184,7 +1193,7 @@
     {
       "file": "fonduri-europene-iasi/index.html",
       "pass": true,
-      "noindex": false,
+      "noindex": true,
       "technicalFile": false,
       "issues": [],
       "details": {
@@ -1193,7 +1202,7 @@
           "Fonduri europene Iasi"
         ],
         "missingAlt": [],
-        "relatedCount": 1,
+        "relatedCount": 0,
         "jsonLdErrors": []
       }
     },
@@ -1262,9 +1271,25 @@
       }
     },
     {
-      "file": "fonduri-europene-suceava/index.html",
+      "file": "fonduri-europene-nord-est/index.html",
       "pass": true,
       "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Fonduri europene Nord-Est"
+        ],
+        "missingAlt": [],
+        "relatedCount": 1,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "fonduri-europene-suceava/index.html",
+      "pass": true,
+      "noindex": true,
       "technicalFile": false,
       "issues": [],
       "details": {
@@ -1273,7 +1298,7 @@
           "Fonduri europene Suceava"
         ],
         "missingAlt": [],
-        "relatedCount": 1,
+        "relatedCount": 0,
         "jsonLdErrors": []
       }
     },
@@ -1454,6 +1479,22 @@
       }
     },
     {
+      "file": "glosar-fonduri-europene/index.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Glosar fonduri europene: termeni explicati simplu"
+        ],
+        "missingAlt": [],
+        "relatedCount": 1,
+        "jsonLdErrors": []
+      }
+    },
+    {
       "file": "google8bbb9999c523a3bd.html",
       "pass": true,
       "noindex": false,
@@ -1556,7 +1597,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Transformăm ideile tale în Transformăm ideiletale în proiecte finanțate"
+          "Consultanță pentru accesarea fondurilor europene și finanțărilor nerambursabile"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -1669,6 +1710,22 @@
         "h1Count": 1,
         "h1s": [
           "Investitii pentru modernizarea microintreprinderilor - Apel 2"
+        ],
+        "missingAlt": [],
+        "relatedCount": 1,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "metodologie-verificare-eligibilitate/index.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Metodologia FABER pentru verificarea eligibilitatii la fonduri europene"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -1956,7 +2013,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Start-Up Nation 2026: conditii, buget, cod CAEN si pasi de aplicare"
+          "Start-Up Nation 2026: condiții, eligibilitate, acte necesare și pași de pregătire"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -2012,6 +2069,22 @@
       }
     },
     {
+      "file": "studii-de-caz-fonduri-europene/index.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Studii de caz anonimizate: proiecte pregătite pentru fonduri europene"
+        ],
+        "missingAlt": [],
+        "relatedCount": 2,
+        "jsonLdErrors": []
+      }
+    },
+    {
       "file": "studii-de-caz.html",
       "pass": true,
       "noindex": true,
@@ -2037,6 +2110,22 @@
         "h1Count": 1,
         "h1s": [
           "Studii de caz pentru fonduri europene"
+        ],
+        "missingAlt": [],
+        "relatedCount": 1,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "surse-oficiale-fonduri-europene/index.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Surse oficiale pentru fonduri europene si finantari nerambursabile"
         ],
         "missingAlt": [],
         "relatedCount": 1,

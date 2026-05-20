@@ -14,6 +14,7 @@
         "Atelier de Consultanta",
         "Atelier de Consultanta FABER"
       ],
+      "description": "Consultanta pentru accesarea fondurilor europene si finantarilor nerambursabile pentru firme, fermieri, start-up-uri si IMM-uri.",
       "url": "https://atelierdeconsultanta.ro",
       "logo": {
         "@type": "ImageObject",
@@ -46,7 +47,10 @@
         "PNRR",
         "Start-Up Nation",
         "Digitalizare IMM",
-        "consultanta IMM"
+        "consultanta IMM",
+        "eligibilitate fonduri europene",
+        "strategie punctaj",
+        "implementare proiecte cu finantare nerambursabila"
       ]
     },
     {
@@ -56,6 +60,7 @@
       ],
       "@id": "https://atelierdeconsultanta.ro/#localbusiness",
       "name": "FABER - Atelier de Consultanta",
+      "description": "Servicii de consultanta pentru eligibilitate, alegere program, pregatire dosar si suport in clarificari pentru fonduri europene.",
       "url": "https://atelierdeconsultanta.ro",
       "email": "atelier.consultanta@gmail.com",
       "telephone": "+40769828338",
@@ -83,8 +88,8 @@
       "@type": "WebPage",
       "@id": "https://atelierdeconsultanta.ro#webpage",
       "url": "https://atelierdeconsultanta.ro",
-      "name": "Atelier de Consultanta | Fonduri Europene si Finantari Nerambursabile",
-      "description": "Consultanta pentru fonduri europene, AFIR, PNRR, Start-Up Nation si finantari nerambursabile pentru IMM-uri, antreprenori si proiecte de investitii.",
+      "name": "FABER | Consultanta fonduri europene si finantari nerambursabile",
+      "description": "FABER ofera consultanta pentru accesarea fondurilor europene si finantarilor nerambursabile: eligibilitate, program potrivit, punctaj, dosar si clarificari.",
       "isPartOf": {
         "@id": "https://atelierdeconsultanta.ro/#website"
       },
@@ -97,16 +102,16 @@
 }</script>
 <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Consultanță pentru fonduri europene, AFIR, PNRR, Start-Up Nation și finanțări nerambursabile pentru IMM-uri, antreprenori și proiecte de investiții." />
+  <meta name="description" content="FABER oferă consultanță pentru accesarea fondurilor europene și finanțărilor nerambursabile: eligibilitate, program potrivit, punctaj, dosar și clarificări." />
   <meta name="keywords" content="fonduri europene, consultanță fonduri europene, PNRR, POR, AFIR, finanțare nerambursabilă, proiecte europene, fonduri nerambursabile România, consultanță finanțare, absorbție fonduri europene" />
   <meta name="author" content="FABER – Atelier de Consultanță" />
-  <meta property="og:title" content="Atelier de Consultanță | Fonduri Europene și Finanțări Nerambursabile" />
-  <meta property="og:description" content="Consultanță pentru fonduri europene, AFIR, PNRR, Start-Up Nation și finanțări nerambursabile pentru IMM-uri și antreprenori." />
+  <meta property="og:title" content="FABER | Consultanță fonduri europene și finanțări nerambursabile" />
+  <meta property="og:description" content="Consultanță pentru firme, fermieri, start-up-uri și IMM-uri: eligibilitate, program potrivit, punctaj, dosar și clarificări." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://atelierdeconsultanta.ro" />
   <meta property="og:image" content="https://atelierdeconsultanta.ro/og-image.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
-  <title>Atelier de Consultanță | Fonduri Europene și Finanțări Nerambursabile</title>
+  <title>FABER | Consultanță fonduri europene și finanțări nerambursabile</title>
 
   <!-- ✦ Canonical URL pentru SEO ✦ -->
   <link rel="canonical" href="https://atelierdeconsultanta.ro/" />
@@ -146,6 +151,15 @@
       margin: 0 auto 12px;
       text-align: center;
       white-space: nowrap;
+    }
+    .claim-marker {
+      display: block;
+      margin-top: 4px;
+      color: rgba(255,255,255,0.66);
+      font-size: 0.66rem;
+      font-weight: 700;
+      line-height: 1.25;
+      overflow-wrap: anywhere;
     }
   </style>
   <script type="text/javascript">
@@ -200,6 +214,11 @@
               <div class="d-text">POR ADR Nord-Est<div class="d-label">Microîntreprinderi | până la 300.000 EUR</div></div>
             </a>
 
+            <a href="/fonduri-europene-nord-est" class="dropdown-item" data-service-id="fonduri-ne">
+              <div class="d-icon" style="background:rgba(59,130,246,0.2)"><i class="ph-duotone ph-map-pin" style="color:#93c5fd"></i></div>
+              <div class="d-text">Fonduri Nord-Est<div class="d-label">Iasi, Suceava, Bacau si regiune</div></div>
+            </a>
+
             <a href="/dr12-afir" class="dropdown-item" data-service-id="dr12-afir">
               <div class="d-icon" style="background:rgba(34,197,94,0.2)"><i class="ph-duotone ph-plant" style="color:#86efac"></i></div>
               <div class="d-text">DR 12 / AFIR<div class="d-label">Tineri Fermieri | până la 200.000 EUR</div></div>
@@ -246,7 +265,7 @@
 
         <a href="#contact" style="color:rgba(255,255,255,0.8);font-size:0.85rem;font-weight:600;padding:8px 14px;border-radius:8px;transition:all 0.3s;" onmouseover="this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.background='transparent'">Contact</a>
 
-        <a href="#contact" class="nav-cta">Consultanță Gratuită</a>
+        <a href="/verificare-eligibilitate-fonduri-europene" class="nav-cta">Verifică eligibilitatea</a>
       </div>
 
       <button class="hamburger" id="hamburgerBtn" type="button"
@@ -275,7 +294,7 @@
       <a href="/start-up-nation-2026">Start-Up Nation 2026</a>
       <a href="/calculator-soc">🧮 Calculator SOC AFIR</a>
       <a href="#contact" onclick="closeMobileMenu()">Contact</a>
-      <a href="#contact" class="mobile-cta" onclick="closeMobileMenu()">Consultanță Gratuită</a>
+      <a href="/verificare-eligibilitate-fonduri-europene" class="mobile-cta" onclick="closeMobileMenu()">Verifică eligibilitatea</a>
     </nav>
   </div>
 
@@ -296,24 +315,21 @@
       <div class="hero-content">
         <div class="hero-badge">
           <span class="dot" aria-hidden="true"></span>
-          Experți în fonduri europene din 2016
+          FABER pentru firme, fermieri, start-up-uri și IMM-uri
         </div>
 
         <h1 class="hero-title">
-          <span class="desktop-title">Transformăm ideile tale în</span>
-          <span class="mobile-title">Transformăm ideile<br>tale în</span>
-          <br>
-          <span class="gradient-text">proiecte finanțate</span>
+          Consultanță pentru accesarea<br>
+          <span class="gradient-text">fondurilor europene și finanțărilor nerambursabile</span>
         </h1>
 
         <p class="hero-subtitle">
-          Gestionăm întregul proces de accesare — de la identificarea finanțării potrivite
-          până la ultimul raport de progres. Tu te ocupi de afacere, noi ne ocupăm de dosare.
+          Verificăm eligibilitatea, alegem programul potrivit, construim strategia de punctaj și pregătim dosarul pentru firme, fermieri, start-up-uri și IMM-uri, fără promisiuni de finanțare garantată.
         </p>
 
         <div class="hero-ctas">
-          <a href="#contact" class="btn-primary">Consultanță Gratuită</a>
-          <a href="#finantare" class="btn-secondary">Descoperă programele →</a>
+          <a href="/verificare-eligibilitate-fonduri-europene" class="btn-primary">Verifică eligibilitatea</a>
+          <a href="#finantare" class="btn-secondary">Vezi programe active →</a>
         </div>
 
       </div>
@@ -349,9 +365,9 @@
     ============================================================ -->
     <section id="servicii" data-section-id="services" aria-label="Serviciile noastre">
       <div style="padding: 0 24px;" class="reveal">
-        <div class="section-label">Ce facem</div>
-        <h2 class="section-title">Servicii Complete de Consultanță</h2>
-        <p class="section-subtitle">De la identificarea oportunității până la ultimul raport de progres</p>
+        <div class="section-label">Ce face FABER</div>
+        <h2 class="section-title">Consultanță aplicată pentru proiecte finanțabile</h2>
+        <p class="section-subtitle">Analizăm proiectul înainte de dosar, alegem programul potrivit și pregătim documentele fără promisiuni absolute.</p>
       </div>
 
       <div class="card-carousel" data-card-carousel="services">
@@ -360,49 +376,49 @@
           <div class="services-grid card-carousel-track">
         <article class="service-card reveal reveal-delay-1" data-service-id="service-identificare">
           <div class="service-icon" aria-hidden="true"><i class="ph-duotone ph-magnifying-glass"></i></div>
-          <h3 class="service-title">Identificare Finanțări</h3>
+          <h3 class="service-title">Analiză eligibilitate</h3>
           <p class="service-desc">
-            Analizăm profilul afacerii tale și identificăm programele de finanțare pentru care ești eligibil — active acum sau în deschidere.
+            Verificăm solicitantul, codul CAEN, localitatea, activitatea, documentele disponibile, cofinanțarea și riscurile evidente înainte de recomandare.
           </p>
         </article>
 
         <article class="service-card reveal reveal-delay-2" data-service-id="service-elaborare">
           <div class="service-icon" aria-hidden="true"><i class="ph-duotone ph-file-text"></i></div>
-          <h3 class="service-title">Elaborare Dosare</h3>
+          <h3 class="service-title">Alegere program</h3>
           <p class="service-desc">
-            Pregătim documentația completă: cerere de finanțare, plan de afaceri, studiu de fezabilitate și toate anexele impuse.
+            Comparăm AFIR, Start-Up Nation, Digitalizare IMM, POR/ADR și alte apeluri relevante ca să evităm depunerea pe un program nepotrivit.
           </p>
         </article>
 
         <article class="service-card reveal reveal-delay-3" data-service-id="service-implementare">
           <div class="service-icon" aria-hidden="true"><i class="ph-duotone ph-arrows-clockwise"></i></div>
-          <h3 class="service-title">Implementare Proiecte</h3>
+          <h3 class="service-title">Strategie punctaj</h3>
           <p class="service-desc">
-            Asistăm implementarea pas cu pas: achiziții, raportări, management financiar și relația cu autoritatea de management.
+            Citim grila de evaluare, estimăm prudent punctele care pot fi susținute prin documente și semnalăm criteriile fragile.
           </p>
         </article>
 
         <article class="service-card reveal reveal-delay-1" data-service-id="service-monitorizare">
           <div class="service-icon" aria-hidden="true"><i class="ph-duotone ph-chart-line-up"></i></div>
-          <h3 class="service-title">Monitorizare &amp; Raportare</h3>
+          <h3 class="service-title">Pregătire dosar</h3>
           <p class="service-desc">
-            Urmărim indicatorii de performanță și pregătim rapoartele de progres pentru autoritățile de management implicate.
+            Structurăm cererea, planul, bugetul, anexele, ofertele și justificările astfel încât documentele să spună aceeași poveste.
           </p>
         </article>
 
         <article class="service-card reveal reveal-delay-2" data-service-id="service-audit">
           <div class="service-icon" aria-hidden="true"><i class="ph-duotone ph-seal-check"></i></div>
-          <h3 class="service-title">Audit &amp; Conformitate</h3>
+          <h3 class="service-title">Sprijin clarificări</h3>
           <p class="service-desc">
-            Verificăm conformitatea cu regulamentele europene și pregătim dosarele pentru controalele autorităților.
+            Pregătim răspunsuri la solicitările autorității și verificăm ca modificările să rămână coerente cu ghidul, bugetul și obiectivele.
           </p>
         </article>
 
         <article class="service-card reveal reveal-delay-3" data-service-id="service-training">
           <div class="service-icon" aria-hidden="true"><i class="ph-duotone ph-graduation-cap"></i></div>
-          <h3 class="service-title">Training &amp; Formare</h3>
+          <h3 class="service-title">Suport implementare</h3>
           <p class="service-desc">
-            Sesiuni practice pentru echipa ta: gestionarea proiectelor europene, reglementări esențiale și bune practici în absorbția fondurilor.
+            Dacă serviciul este inclus în colaborare, sprijinim achiziții, raportări, cereri de plată/rambursare și monitorizarea obligațiilor asumate.
           </p>
         </article>
           </div>
@@ -417,32 +433,30 @@
     <section id="despre" data-section-id="about" aria-label="Despre FABER">
       <div class="despre-container">
         <div class="despre-text reveal-left">
-          <div class="section-label">Povestea noastră</div>
-          <h2 class="section-title">De ce FABER?</h2>
+          <div class="section-label">Cum lucrăm</div>
+          <h2 class="section-title">Metodă clară, concluzii prudente</h2>
           <p>
-            Din 2016, echipa FABER a transformat zeci de idei în realitate finanțată.
-            Știm că birocrația poate părea copleșitoare — de aceea suntem noi aici.
+            FABER lucrează ca un filtru de decizie înainte de depunere: verificăm dacă solicitantul, investiția și documentele se potrivesc cu un apel real.
           </p>
           <p>
-            Ne specializăm exclusiv în fonduri europene. Cunoaștem fiecare ghid al
-            solicitantului, fiecare cerință de eligibilitate și fiecare termen limită.
+            Procesul complet este descris în <a href="/metodologie-verificare-eligibilitate" style="color:var(--gold);font-weight:800">metodologia FABER de verificare a eligibilității</a>. Concluzia poate fi „continuăm”, „ajustăm proiectul” sau „nu depunem acum”.
           </p>
           <div class="despre-features">
             <div class="feature-item">
               <div class="feature-check" aria-hidden="true">✓</div>
-              <div class="feature-text">Echipă dedicată exclusiv fondurilor europene</div>
+              <div class="feature-text">Colectăm date despre solicitant, CAEN, localitate, investiție, buget și documente.</div>
             </div>
             <div class="feature-item">
               <div class="feature-check" aria-hidden="true">✓</div>
-              <div class="feature-text">Răspuns în maxim 24 ore la orice solicitare</div>
+              <div class="feature-text">Verificăm ghidul, sursele oficiale și programul potrivit înainte de bugetul final.</div>
             </div>
             <div class="feature-item">
               <div class="feature-check" aria-hidden="true">✓</div>
-              <div class="feature-text">Monitorizare activă a noilor programe de finanțare</div>
+              <div class="feature-text">Estimăm punctajul și riscurile doar pe criterii care pot fi susținute prin documente.</div>
             </div>
             <div class="feature-item">
               <div class="feature-check" aria-hidden="true">✓</div>
-              <div class="feature-text">Fără taxe ascunse — onorarii clare de la început</div>
+              <div class="feature-text">Recomandăm pașii următori fără garanții de aprobare și fără presiune pentru depunere rapidă.</div>
             </div>
           </div>
         </div>
@@ -450,22 +464,22 @@
         <div class="despre-stats reveal-right">
           <div class="stat-card">
             <div class="stat-number">250+</div>
-            <div class="stat-label">Proiecte finalizate cu succes</div>
+            <div class="stat-label">Proiecte declarate lucrate <span class="claim-marker">TODO_CLIENT_VERIFICARE_CLAIM</span></div>
           </div>
           <div class="stat-card">
             <div class="stat-number">45M€+</div>
-            <div class="stat-label">Fonduri europene atrase</div>
+            <div class="stat-label">Valoare declarată în proiecte <span class="claim-marker">TODO_CLIENT_VERIFICARE_CLAIM</span></div>
           </div>
           <div class="stat-card">
             <div class="stat-number">98%</div>
-            <div class="stat-label">Rată de aprobare dosare</div>
+            <div class="stat-label">Rată declarată, nu garanție <span class="claim-marker">TODO_CLIENT_VERIFICARE_CLAIM</span></div>
           </div>
           <div class="stat-card">
             <div class="stat-number">10 ani</div>
-            <div class="stat-label">Experiență în domeniu</div>
+            <div class="stat-label">Experiență declarată <span class="claim-marker">TODO_CLIENT_VERIFICARE_CLAIM</span></div>
           </div>
           <p style="grid-column:1 / -1;color:rgba(255,255,255,0.72);font-size:0.78rem;line-height:1.55;text-align:center;margin-top:4px;">
-            TODO_CLIENT_CONFIRMAT: date declarate de client; necesită pagină de metodologie/portofoliu sau document intern de validare.
+            Cifrele sunt afișate prudent până la confirmarea prin portofoliu, metodologie internă sau documente aprobate pentru publicare.
           </p>
         </div>
       </div>
@@ -476,9 +490,9 @@
     ============================================================ -->
     <section id="finantare" data-section-id="financing" aria-label="Programe de finanțare disponibile">
       <div style="padding: 0 24px;" class="reveal">
-        <div class="section-label">Oportunități</div>
-        <h2 class="section-title">Programe Disponibile în 2026</h2>
-        <p class="section-subtitle">Finanțări active și viitoare pentru afacerea sau instituția ta</p>
+        <div class="section-label">Programe urmărite</div>
+        <h2 class="section-title">AFIR, Start-Up Nation, Digitalizare IMM și programe regionale</h2>
+        <p class="section-subtitle">Urmărim programe pentru firme, fermieri, start-up-uri, IMM-uri și instituții. Statusul, valorile și intensitățile se confirmă în ghidul apelului activ.</p>
       </div>
 
       <div class="beneficiary-filter" role="group" aria-label="Filtrare programe dupa tipul beneficiarului">
@@ -606,16 +620,16 @@
           <h3 class="finantare-title">PNRR – Componente Noi</h3>
           <p class="finantare-amount">Variabil în funcție de componentă</p>
           <p style="font-size:0.85rem;color:var(--text-soft)">Noi apeluri PNRR în pregătire pentru 2026–2027</p>
-          <a href="#contact" class="finantare-link">Înscrie-te pe lista de așteptare →</a>
+          <a href="/pnrr" class="finantare-link">Vezi pagina PNRR →</a>
         </article>
 
-        <article class="finantare-card reveal reveal-delay-2" data-service-id="fin-horizont" data-beneficiary="both">
+        <article class="finantare-card reveal reveal-delay-2" data-service-id="fin-fond-modernizare" data-beneficiary="both">
           <span class="finantare-badge badge-planning">Viitor</span>
           <span class="beneficiary-chip">Public / privat</span>
-          <h3 class="finantare-title">Horizon Europe – Cercetare</h3>
-          <p class="finantare-amount">Variabil, procente competitive</p>
-          <p style="font-size:0.85rem;color:var(--text-soft)">Proiecte de cercetare și inovare pentru universități și companii</p>
-          <a href="#contact" class="finantare-link">Discută cu un expert →</a>
+          <h3 class="finantare-title">Fondul de Modernizare</h3>
+          <p class="finantare-amount">Variabil în funcție de apel</p>
+          <p style="font-size:0.85rem;color:var(--text-soft)">Energie, eficiență și investiții care trebuie verificate pe ghidul apelului activ</p>
+          <a href="/fondul-de-modernizare" class="finantare-link">Vezi programul →</a>
         </article>
 
           </div>
@@ -628,58 +642,52 @@
     <!-- ============================================================
          ✦ TESTIMONIALE ✦
     ============================================================ -->
-    <section id="testimoniale" data-section-id="testimonials" aria-label="Studii de caz și lecții din proiecte reale">
+    <section id="testimoniale" data-section-id="trust" aria-label="De ce nu promitem finantare garantata">
       <div style="padding: 0 24px;" class="reveal">
-        <div class="section-label">Lecții din proiecte reale</div>
-        <h2 class="section-title">Ce contează în dosar, implementare și monitorizare</h2>
-        <p class="section-subtitle">Publicăm nume de firme, date și rezultate doar când există acord explicit și documente verificabile.</p>
+        <div class="section-label">De ce nu promitem finanțare garantată</div>
+        <h2 class="section-title">Încrederea începe cu limite clare</h2>
+        <p class="section-subtitle">Un proiect poate fi eligibil și totuși să depindă de punctaj, bugetul apelului, clarificări și evaluarea autorității.</p>
       </div>
 
       <div class="testimoniale-grid">
         <article class="testimonial-card reveal reveal-delay-1" data-testimonial-id="case-eligibility">
           <div class="stars" aria-label="Etapă proiect">Analiză</div>
           <p class="testimonial-text">
-            Înainte de buget, punctul critic este eligibilitatea reală: forma juridică, codul CAEN,
-            documentele de proprietate sau folosință, cofinanțarea și încadrarea investiției în ghid.
-            O verificare făcută devreme previne cheltuieli neeligibile și dosare construite pe ipoteze fragile.
+            Verificarea eligibilității arată dacă merită pregătit dosarul, dar nu transformă proiectul într-o finanțare sigură. Ghidul activ, anexele și documentele beneficiarului decid direcția.
           </p>
           <div class="testimonial-author">
             <div class="author-avatar" aria-hidden="true">01</div>
             <div>
-              <div class="author-name">Etapa de pregătire</div>
-              <div class="author-role">Eligibilitate, buget și documente suport</div>
+              <div class="author-name">Eligibilitate înainte de buget</div>
+              <div class="author-role">Solicitant, CAEN, spațiu și cofinanțare</div>
             </div>
           </div>
         </article>
 
         <article class="testimonial-card reveal reveal-delay-2" data-testimonial-id="case-implementation">
-          <div class="stars" aria-label="Etapă proiect">Implementare</div>
+          <div class="stars" aria-label="Etapă proiect">Punctaj</div>
           <p class="testimonial-text">
-            După contractare, finanțarea se apără prin proceduri corecte: achiziții documentate,
-            oferte comparabile, cereri de plată sau rambursare pregătite complet și răspunsuri clare
-            la solicitările autorității. Aprobarea proiectului nu înlocuiește disciplina de implementare.
+            Un proiect eligibil poate pierde competiția dacă punctajul este slab sau dacă bugetul apelului se epuizează. De aceea estimăm punctajul prudent și marcăm criteriile care trebuie susținute prin documente.
           </p>
           <div class="testimonial-author">
             <div class="author-avatar" aria-hidden="true">02</div>
             <div>
-              <div class="author-name">Etapa de execuție</div>
-              <div class="author-role">Achiziții, raportări și cereri de plată</div>
+              <div class="author-name">Punctajul contează</div>
+              <div class="author-role">Grilă, priorități și dovezi verificabile</div>
             </div>
           </div>
         </article>
 
         <article class="testimonial-card reveal reveal-delay-3" data-testimonial-id="case-monitoring">
-          <div class="stars" aria-label="Etapă proiect">Monitorizare</div>
+          <div class="stars" aria-label="Etapă proiect">Prudență</div>
           <p class="testimonial-text">
-            Un proiect nu se termină la ultima plată. Indicatorii asumați, activele achiziționate,
-            locurile de muncă, documentele contabile și obligațiile de publicitate trebuie urmărite
-            pe toată perioada de monitorizare, pentru a evita corecții sau recuperări ulterioare.
+            Uneori recomandarea responsabilă este „nu acum” sau „nu pe acest program”. E mai sănătos să corectezi documentele și bugetul înainte de depunere decât să forțezi un dosar vulnerabil.
           </p>
           <div class="testimonial-author">
             <div class="author-avatar" aria-hidden="true">03</div>
             <div>
-              <div class="author-name">Etapa post-implementare</div>
-              <div class="author-role">Indicatori, conformitate și monitorizare</div>
+              <div class="author-name">Nu forțăm dosare fragile</div>
+              <div class="author-role">Ajustare, amânare sau program mai potrivit</div>
             </div>
           </div>
         </article>
@@ -783,10 +791,9 @@
           <span class="cta-eyebrow-dot" aria-hidden="true"></span>
           <span class="cta-eyebrow-text">HAI SĂ VORBIM</span>
         </div>
-        <h2 class="section-title reveal">Consultanță Gratuită</h2>
+        <h2 class="section-title reveal">Verificare inițială a proiectului</h2>
         <p class="section-subtitle reveal">
-          Completează formularul și te contactăm în 24 ore cu o evaluare
-          a oportunităților de finanțare disponibile pentru tine.
+          Completează formularul cu solicitantul, localitatea, codul CAEN, investiția și bugetul. Răspunsul inițial este orientativ și nu reprezintă promisiune de finanțare.
         </p>
 
         <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:32px;">
@@ -884,16 +891,14 @@
     </section>
 
   <section class="vezi-si-section" aria-labelledby="vezi-si-title">
-    <h2 id="vezi-si-title">Vezi și</h2>
+    <h2 id="vezi-si-title">Resurse utile</h2>
     <ul class="vezi-si see-also-grid">
-    <li class="see-also-card"><a href="/fonduri-europene"><span class="see-also-card-title">Fonduri europene</span><span class="see-also-card-text">Hub central pentru programe, eligibilitate, ghiduri și resurse utile.</span></a></li>
-    <li class="see-also-card"><a href="/consultanta-fonduri-europene"><span class="see-also-card-title">Consultanță fonduri europene</span><span class="see-also-card-text">Servicii de verificare, pregătire dosar și suport pentru proiecte.</span></a></li>
-    <li class="see-also-card"><a href="/calendar-fonduri-europene"><span class="see-also-card-title">Calendar fonduri europene</span><span class="see-also-card-text">Urmărește programele și pregătește documentele înainte de apel.</span></a></li>
-    <li class="see-also-card"><a href="/consultanta-pnrr-digitalizare"><span class="see-also-card-title">Consultanță PNRR și digitalizare</span><span class="see-also-card-text">Sprijin pentru proiecte PNRR, digitalizare IMM și bugete IT.</span></a></li>
-    <li class="see-also-card"><a href="/start-up-nation-2026"><span class="see-also-card-title">Start-Up Nation</span><span class="see-also-card-text">Condiții, cheltuieli, idei și pași pentru Start-Up Nation.</span></a></li>
     <li class="see-also-card"><a href="/metodologie-verificare-eligibilitate"><span class="see-also-card-title">Metodologie eligibilitate</span><span class="see-also-card-text">Cum verificam CAEN, documente, cofinantare, punctaj si riscuri inainte de recomandare.</span></a></li>
     <li class="see-also-card"><a href="/surse-oficiale-fonduri-europene"><span class="see-also-card-title">Surse oficiale</span><span class="see-also-card-text">Institutii si linkuri oficiale pentru ghiduri, apeluri, proceduri si acte normative.</span></a></li>
     <li class="see-also-card"><a href="/glosar-fonduri-europene"><span class="see-also-card-title">Glosar fonduri europene</span><span class="see-also-card-text">Termeni explicati simplu: eligibilitate, cofinantare, punctaj, CAEN, IMM si ajutor de stat.</span></a></li>
+    <li class="see-also-card"><a href="/blog"><span class="see-also-card-title">Blog</span><span class="see-also-card-text">Articole și ghiduri despre programe, documente, greșeli frecvente și pași de pregătire.</span></a></li>
+    <li class="see-also-card"><a href="/studii-de-caz-fonduri-europene"><span class="see-also-card-title">Studii de caz</span><span class="see-also-card-text">Exemple anonimizate despre metoda de analiză, riscuri și decizii de proiect.</span></a></li>
+    <li class="see-also-card"><a href="/fonduri-europene"><span class="see-also-card-title">Programe relevante</span><span class="see-also-card-text">Hub central pentru programe, eligibilitate, ghiduri și resurse utile.</span></a></li>
   </ul>
   </section>
 
@@ -915,8 +920,8 @@
           </svg>
         </div>
         <p>
-          Specialiști în accesarea fondurilor europene nerambursabile.
-          Transformăm ideile în proiecte finanțate din 2016.
+          Consultanță pentru accesarea fondurilor europene și finanțărilor nerambursabile.
+          Verificăm proiecte pentru firme, fermieri, start-up-uri și IMM-uri.
         </p>
 
         <div class="anpc-badges" aria-label="Certificate și conformitate">
@@ -951,13 +956,13 @@
       <div class="footer-col">
         <h2 class="footer-heading">Servicii</h2>
         <ul>
-          <li><a href="#servicii">Identificare finanțări</a></li>
-          <li><a href="#servicii">Elaborare dosare</a></li>
+          <li><a href="#servicii">Analiză eligibilitate</a></li>
+          <li><a href="#servicii">Alegere program</a></li>
           <li><a href="/consultanta-fonduri-europene">Consultanță fonduri europene</a></li>
           <li><a href="/verificare-eligibilitate-fonduri-europene">Verificare eligibilitate</a></li>
-          <li><a href="#servicii">Implementare proiecte</a></li>
-          <li><a href="#servicii">Monitorizare & raportare</a></li>
-          <li><a href="#servicii">Audit & conformitate</a></li>
+          <li><a href="#servicii">Strategie punctaj</a></li>
+          <li><a href="#servicii">Pregătire dosar</a></li>
+          <li><a href="#servicii">Suport implementare</a></li>
         </ul>
       </div>
 

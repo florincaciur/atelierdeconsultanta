@@ -179,6 +179,7 @@ function labelForHref(href) {
     "/fonduri-europene-digitalizare": "Fonduri europene digitalizare",
     "/consultanta-pnrr-digitalizare": "Consultanta PNRR digitalizare",
     "/investitii-modernizarea-microintreprinderilor-apel-2": "Modernizarea microintreprinderilor - Apel 2",
+    "/fonduri-europene-nord-est": "Fonduri europene Nord-Est",
     "/por-adr-nord-est": "POR ADR Nord-Est",
     "/eligibilitate-fonduri-europene": "Eligibilitate fonduri europene",
     "/consultanta-fonduri-europene": "Consultanta fonduri europene",
@@ -196,6 +197,7 @@ function labelForHref(href) {
     "/portofoliu": "Portofoliu",
     "/testimoniale": "Testimoniale",
     "/studii-de-caz": "Studii de caz",
+    "/studii-de-caz-fonduri-europene": "Studii de caz fonduri europene",
     "/webinarii": "Webinarii"
   };
   const clean = cleanUrl(href);

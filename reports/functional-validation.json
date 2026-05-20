@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-05-19T22:45:47.011Z",
+  "generatedAt": "2026-05-20T10:09:21.249Z",
   "mode": "check",
-  "baseUrl": "http://127.0.0.1:65513",
+  "baseUrl": "http://127.0.0.1:55780",
   "summary": {
-    "checked": 21,
-    "passed": 21,
+    "checked": 22,
+    "passed": 22,
     "failed": 0
   },
   "pages": [
@@ -14,9 +14,9 @@
       "pass": true,
       "errors": [],
       "dom": {
-        "title": "Atelier de Consultanță | Fonduri Europene și Finanțări Nerambursabile",
+        "title": "FABER | Consultanță fonduri europene și finanțări nerambursabile",
         "h1Count": 1,
-        "seeAlsoCards": 5,
+        "seeAlsoCards": 6,
         "programCluster": 0,
         "overflow": 0
       },
@@ -56,7 +56,7 @@
       "pass": true,
       "errors": [],
       "dom": {
-        "title": "Consultanta fonduri europene pentru firme si antreprenori",
+        "title": "Consultanță fonduri europene | Eligibilitate, dosar și cost",
         "h1Count": 1,
         "seeAlsoCards": 0,
         "programCluster": 0,
@@ -98,7 +98,7 @@
       "pass": true,
       "errors": [],
       "dom": {
-        "title": "Start-Up Nation 2026 - conditii, cheltuieli, punctaj si plan",
+        "title": "Start-Up Nation 2026: conditii, eligibilitate si acte necesare",
         "h1Count": 1,
         "seeAlsoCards": 0,
         "programCluster": 0,
@@ -121,12 +121,26 @@
       "screenshot": "reports/functional-screenshots/por-adr-nord-est.png"
     },
     {
+      "page": "/fonduri-europene-nord-est",
+      "status": 200,
+      "pass": true,
+      "errors": [],
+      "dom": {
+        "title": "Fonduri europene Nord-Est | Iasi, Suceava, Bacau, Botosani, Neamt, Vaslui",
+        "h1Count": 1,
+        "seeAlsoCards": 0,
+        "programCluster": 0,
+        "overflow": 0
+      },
+      "screenshot": "reports/functional-screenshots/fonduri-europene-nord-est.png"
+    },
+    {
       "page": "/dr12-afir",
       "status": 200,
       "pass": true,
       "errors": [],
       "dom": {
-        "title": "DR 12 AFIR 2026 - Tineri fermieri, eligibilitate si dosar",
+        "title": "DR 12 AFIR: conditii, eligibilitate, acte necesare si pregatire",
         "h1Count": 1,
         "seeAlsoCards": 0,
         "programCluster": 0,
