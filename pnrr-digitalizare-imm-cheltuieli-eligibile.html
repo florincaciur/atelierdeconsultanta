@@ -180,6 +180,34 @@
       margin:28px 0;
       color:var(--text-main);
     }
+    .answer-box{
+      background:#fff7ed;
+      border:1px solid rgba(232,100,42,.25);
+      border-left:4px solid var(--orange);
+      border-radius:var(--radius-sm);
+      padding:18px 20px;
+      margin:24px 0;
+      color:var(--text-main);
+    }
+    .answer-box strong{display:block;margin-bottom:6px;color:var(--navy)}
+    .table-wrap{overflow-x:auto;margin:24px 0}
+    .program-table{
+      width:100%;
+      border-collapse:collapse;
+      background:var(--white);
+      border:1px solid var(--gray-200);
+      border-radius:var(--radius-sm);
+      overflow:hidden;
+      font-size:.94rem;
+    }
+    .program-table th,.program-table td{
+      text-align:left;
+      vertical-align:top;
+      padding:12px 14px;
+      border-bottom:1px solid var(--gray-200);
+    }
+    .program-table th{background:var(--gray-100);color:var(--navy);font-weight:900}
+    .program-table tr:last-child th,.program-table tr:last-child td{border-bottom:0}
     .faq-item{
       margin-bottom:16px;
       padding:18px 20px;
@@ -246,7 +274,7 @@
       "headline": "PNRR Digitalizare IMM: ce poți cumpăra prin finanțare",
       "description": "Ghid despre digitalizarea IMM-urilor prin finanțări nerambursabile: software, echipamente, securitate și pregătirea proiectului.",
       "datePublished": "2026-04-30",
-      "dateModified": "2026-04-30",
+      "dateModified": "2026-05-21",
       "author": {
         "@type": "Organization",
         "name": "FABER – Atelier de Consultanță"
@@ -337,7 +365,7 @@
     <div class="navbar-links">
       <a href="/blog">Blog</a>
       <a href="/digitalizare-imm-pnrr" class="optional">Digitalizare IMM</a>
-      <a href="/contact" class="nav-cta">Evaluare gratuită</a>
+      <a href="/contact" class="nav-cta">Solicită verificare eligibilitate</a>
     </div>
   </nav>
   <div class="breadcrumb"><a href="/">Acasă</a> › <a href="/blog">Blog</a> › PNRR Digitalizare IMM</div>
@@ -352,6 +380,24 @@
     <article class="post-body">
       <p><strong>PNRR digitalizare</strong> și programele similare pentru <strong>digitalizare IMM</strong> sunt căutate de firme care vor să cumpere software, echipamente, servicii cloud, soluții de securitate sau instrumente de automatizare. Interesul este justificat: multe companii românești încă lucrează cu fișiere dispersate, procese manuale și raportări făcute târziu. Dar o finanțare pentru digitalizare nu trebuie transformată într-o listă de gadgeturi.</p>
       <p>Un proiect de <strong>digitalizare PNRR</strong> sau din alte fonduri pentru digitalizare trebuie să explice ce procese se schimbă, ce rezultate apar și cum investiția ajută firma să fie mai eficientă. Informațiile din acest articol sunt orientative; ghidul solicitantului și apelul activ stabilesc exact cheltuielile eligibile, condițiile și documentele.</p>
+      <div class="answer-box">
+        <strong>Răspuns scurt</strong>
+        Cheltuielile pentru Digitalizare IMM pot include software, hardware, cloud, securitate cibernetică și servicii de implementare doar dacă apelul le permite și dacă sunt legate de procese reale ale firmei. Lista finală, limitele și documentele se verifică în ghidul apelului activ și în <a href="/surse-oficiale-fonduri-europene">sursele oficiale</a>.
+      </div>
+      <div class="table-wrap">
+        <table class="program-table">
+          <thead>
+            <tr><th>Categorie</th><th>Când poate avea sens</th><th>Ce trebuie verificat</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>ERP / gestiune</td><td>Când firma are stocuri, producție, achiziții sau raportări greu de urmărit manual.</td><td>Eligibilitatea software-ului, utilizatorii, licențele, implementarea și mentenanța.</td></tr>
+            <tr><td>CRM / vânzări</td><td>Când există leaduri, clienți recurenți, oferte sau pipeline comercial care trebuie urmărite.</td><td>Legătura cu activitatea firmei, indicatorii și modul de utilizare după proiect.</td></tr>
+            <tr><td>Cloud și infrastructură</td><td>Când soluțiile digitale au nevoie de acces sigur, backup, scalare sau lucru distribuit.</td><td>Perioada acceptată, costurile recurente și cerințele tehnice din ghid.</td></tr>
+            <tr><td>Securitate cibernetică</td><td>Când firma gestionează date, conturi, documente financiare sau sisteme critice.</td><td>Tipurile de servicii permise, livrabilele, dovezile de implementare și instruirea.</td></tr>
+            <tr><td>Hardware</td><td>Când echipamentele susțin direct fluxurile digitale propuse.</td><td>Proporționalitatea, specificațiile, ofertele și legătura cu procesele digitalizate.</td></tr>
+          </tbody>
+        </table>
+      </div>
       <h2>Digitalizarea începe cu procesele firmei</h2>
       <p>Înainte să alegi aplicații sau echipamente, descrie cum funcționează firma acum. Cum vin comenzile? Cum sunt gestionate stocurile? Cum se emit facturile? Cum se urmăresc clienții? Cum se lucrează cu furnizorii? Unde apar întârzieri, erori sau pierderi de date? Răspunsurile la aceste întrebări arată ce trebuie digitalizat.</p>
       <p>Fără această analiză, proiectul devine superficial. Poți cumpăra un CRM, dar dacă nu ai proces de vânzare, nu îl vei folosi. Poți cumpăra un ERP, dar dacă nu ai fluxuri clare, implementarea va fi grea. Poți cumpăra echipamente IT, dar dacă nu există politici de securitate, riscul operațional rămâne.</p>
@@ -406,7 +452,7 @@
       <div class="cta-box">
         <h3>Vrei să structurezi un proiect de digitalizare?</h3>
         <p>Trimite-ne activitatea firmei și investițiile dorite. Verificăm dacă soluțiile au logică, eligibilitate și documente suficiente pentru depunere.</p>
-        <a href="/contact" class="btn-cta">Solicită evaluare gratuită</a>
+        <a href="/contact" class="btn-cta">Solicită verificare eligibilitate</a>
       </div>
 </article>
   <section class="vezi-si-section" aria-labelledby="vezi-si-title">

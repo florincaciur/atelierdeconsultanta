@@ -248,6 +248,17 @@ a { color: inherit; }
 .program-table td {
   color: var(--text-soft);
 }
+@media (max-width: 640px) {
+  .program-table {
+    min-width: 0;
+    table-layout: fixed;
+  }
+  .program-table th,
+  .program-table td {
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
+}
 .process-list {
   display: grid;
   gap: 10px;

@@ -5,6 +5,17 @@ const ROOT = path.resolve(__dirname, "..");
 const PUBLIC_DIR = fs.existsSync(path.join(ROOT, "dist")) ? path.join(ROOT, "dist") : ROOT;
 const SITE = "https://atelierdeconsultanta.ro";
 const URLS = [
+  "https://atelierdeconsultanta.ro/index.html",
+  "https://atelierdeconsultanta.ro/pnrr-digitalizare-imm-cheltuieli-eligibile",
+  "https://atelierdeconsultanta.ro/fonduri-europene-imm",
+  "https://atelierdeconsultanta.ro/fonduri-europene-agricultura",
+  "https://atelierdeconsultanta.ro/fonduri-pentru-utilaje-agricole",
+  "https://atelierdeconsultanta.ro/finantari-panouri-fotovoltaice",
+  "https://atelierdeconsultanta.ro/fonduri-europene-nerambursabile-2026",
+  "https://atelierdeconsultanta.ro/fonduri-pentru-ferme",
+  "https://atelierdeconsultanta.ro/consultanta-afir",
+  "https://atelierdeconsultanta.ro/granturi-digitalizare-imm",
+  "https://atelierdeconsultanta.ro/start-up-nation-2026-plan-de-afaceri",
   "https://atelierdeconsultanta.ro/cat-costa-consultanta-fonduri-europene/",
   "https://atelierdeconsultanta.ro/consultanta-fonduri-europene-imm/",
   "https://atelierdeconsultanta.ro/consultanta-afir/",

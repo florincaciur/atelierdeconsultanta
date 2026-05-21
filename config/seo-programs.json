@@ -1,6 +1,6 @@
 {
   "site": "https://atelierdeconsultanta.ro",
-  "updatedAt": "2026-05-20",
+  "updatedAt": "2026-05-21",
   "defaults": {
     "author": "FABER - Atelier de Consultanta",
     "contactUrl": "/contact",
@@ -3163,7 +3163,7 @@
       "type": "hub",
       "schemaType": "WebPage",
       "category": "Fonduri europene 2026",
-      "minWords": 2100,
+      "minWords": 1500,
       "minFaq": 10,
       "title": "Fonduri europene nerambursabile 2026 - programe si pasi",
       "description": "Revista programelor de fonduri europene nerambursabile 2026: IMM, tineri, rural, femei antreprenor, digitalizare, AFIR si energie.",
@@ -3265,7 +3265,7 @@
       "type": "program",
       "schemaType": "GovernmentService",
       "category": "PRO INFRA si energie",
-      "minWords": 2100,
+      "minWords": 1500,
       "minFaq": 10,
       "title": "PRO INFRA 2026 - energie, investitii si eligibilitate",
       "description": "Ghid PRO INFRA si programe energie 2026: conditii, investitii eligibile, energie verde, eficienta energetica, buget si documente.",

@@ -208,10 +208,10 @@ function labelForHref(href) {
 function minWordsForPage(page) {
   if (isEditorialProgram(page)) return Number(page.minWords || 1200);
   if (Number(page.minWords) > 0) return Number(page.minWords);
-  if (PILLAR_SLUGS.has(page.slug)) return 2100;
-  if (SECONDARY_SLUGS.has(page.slug)) return 1200;
-  if (page.type === "program" || page.type === "hub" || page.type === "service") return 2000;
-  return 1000;
+  if (PILLAR_SLUGS.has(page.slug)) return 1200;
+  if (SECONDARY_SLUGS.has(page.slug)) return 1100;
+  if (page.type === "program" || page.type === "hub" || page.type === "service") return 1100;
+  return 900;
 }
 
 function minFaqForPage(page) {
@@ -379,6 +379,37 @@ function renderTable(page) {
       ${rows.map(([key, value]) => `<tr><th>${esc(key)}</th><td>${esc(value)}</td></tr>`).join("\n")}
     </tbody>
   </table>`;
+}
+
+function compactTextList(items, fallback, limit = 4) {
+  const values = (items || [])
+    .filter(Boolean)
+    .slice(0, limit)
+    .map((item) => String(item).trim())
+    .filter(Boolean);
+  return values.length ? values.join("; ") : fallback;
+}
+
+function renderDecisionMatrix(page) {
+  const programName = page.programName || page.h1 || "programul";
+  const audience = compactTextList(page.audience, "solicitantul si forma juridica");
+  const mandatory = compactTextList(page.mandatory, "documentele solicitantului, bugetul si ofertele");
+  const expenses = compactTextList(page.eligibleExpenses, "cheltuielile propuse prin proiect");
+  const risks = compactTextList(page.ineligibleExpenses, "cheltuieli nepermise sau insuficient justificate");
+  const steps = compactTextList(page.steps, "verificare, documentare, bugetare si depunere", 5);
+
+  return `<h2>Ce verifici concret pentru ${esc(programName)}</h2>
+      <p>O pagina utila trebuie sa raspunda la intrebari reale ale beneficiarului. Pentru ${esc(programName)}, raspunsul practic porneste de la solicitant, investitie, documente si riscuri, nu de la o suma promisa sau de la o lista generica de achizitii.</p>
+      <table class="program-table">
+        <tbody>
+          <tr><th>Potrivirea solicitantului</th><td>${esc(audience)}</td></tr>
+          <tr><th>Documente sensibile</th><td>${esc(mandatory)}</td></tr>
+          <tr><th>Investitii de argumentat</th><td>${esc(expenses)}</td></tr>
+          <tr><th>Riscuri de verificat</th><td>${esc(risks)}</td></tr>
+          <tr><th>Ordinea pregatirii</th><td>${esc(steps)}</td></tr>
+        </tbody>
+      </table>
+      <p>Daca una dintre piesele de mai sus nu se potriveste cu ghidul apelului activ, proiectul trebuie ajustat inainte de depunere. Conditiile finale, pragurile, grilele si perioadele se confirma doar din documentele oficiale ale apelului.</p>`;
 }
 
 function renderEditorialTable(title, columns, rows) {
@@ -728,6 +759,7 @@ ${editorialHtml}
       <h2>Pe scurt</h2>
       <p>${esc(page.programName)} trebuie analizat ca o decizie de investitie, nu doar ca o oportunitate de finantare. Inainte de orice buget, solicitantul trebuie sa verifice incadrarea, documentele, calendarul, costurile eligibile si riscurile care pot aparea la evaluare sau implementare.</p>
       <p>Informatiile de pe aceasta pagina sunt construite pentru orientare practica. Ele nu promit aprobare si nu inlocuiesc verificarea apelului activ, a anexelor si a grilei de selectie. Scopul este sa poti pregati o discutie serioasa despre eligibilitate si dosar.</p>
+${renderDecisionMatrix(page)}
 ${keywordHtml}
       <div class="grid">
         ${renderChecklist("Cui se adreseaza", page.audience)}
@@ -771,17 +803,6 @@ ${officialSourcesHtml}
       <h2>Pentru o verificare initiala, trimite date despre solicitant, investitie, buget si programul urmarit.</h2>
       <p>Daca proiectul implica sume, cheltuieli tehnice, conditii de varsta, cod CAEN, amplasament sau cofinantare, merita verificat inainte de depunere. O analiza initiala poate identifica rapid documentele lipsa si riscurile evidente.</p>`;
 
-  const depthParagraphs = [
-    "La nivel de strategie SEO si AI Search, pagina este structurata pentru intrebari naturale. Fiecare sectiune raspunde unei intentii clare: cine poate aplica, ce se poate finanta, ce documente trebuie pregatite, ce riscuri apar si ce pasi urmeaza dupa depunere. Aceasta structura ajuta atat utilizatorii care citesc rapid, cat si sistemele care extrag raspunsuri scurte.",
-    "Pentru cautarile traditionale, continutul foloseste termeni apropiati de modul in care beneficiarii formuleaza intrebari: fonduri europene, eligibilitate, documente, cheltuieli eligibile, cofinantare, punctaj, dosar si consultanta. Pentru cautarile vocale, raspunsurile de la inceputul paginii sunt scurte, directe si vizibile.",
-    "Pentru implementare, este important ca fiecare modificare de program sa fie tratata ca actualizare de continut, nu ca simpla schimbare de cifra. Daca se modifica un prag, se pot schimba si eligibilitatea, punctajul, documentele, bugetul si ordinea pasilor de pregatire.",
-    "Beneficiarul ar trebui sa pastreze un dosar intern cu toate versiunile de documente, ofertele primite, justificarile de buget si clarificarile transmise. Aceasta disciplina ajuta in evaluare, in contractare si in perioada de implementare, mai ales cand proiectul are achizitii sau termene stranse.",
-    "Un proiect matur nu inseamna un proiect incarcat cu multe cheltuieli. Inseamna un proiect in care fiecare cheltuiala are rol, fiecare document sustine o afirmatie, iar solicitantul poate explica de ce investitia este necesara si cum va fi folosita dupa finalizare.",
-    "Daca exista incertitudini, primul pas nu este depunerea rapida, ci clarificarea lor. O conditie interpretata gresit poate afecta intregul dosar. De aceea, verificarea eligibilitatii trebuie facuta inainte de semnarea contractelor, inainte de achizitii si inainte de blocarea bugetului propriu."
-  ];
-  while (wordCount(html) < minWordsForPage(page)) {
-    html += `\n<p>${esc(depthParagraphs[wordCount(html) % depthParagraphs.length])}</p>`;
-  }
   return html;
 }
 
@@ -792,8 +813,8 @@ function pageHtml(page, config) {
   const extraCss = `${relatedCss}${toolCss}${sourcesCss}`;
   const extraJs = page.includeTools ? `\n  <script src="/assets/seo-tools.js" defer></script>` : "";
   const isConsultantaPillar = page.slug === "consultanta-fonduri-europene";
-  const primaryCta = isConsultantaPillar ? "Solicită verificare eligibilitate" : "Verifica eligibilitatea";
-  const secondaryCta = isConsultantaPillar ? "Vezi metodologia de lucru" : "Discuta cu un consultant";
+  const primaryCta = isConsultantaPillar ? "Solicita verificare eligibilitate" : "Verifica eligibilitatea";
+  const secondaryCta = isConsultantaPillar ? "Vezi metodologia" : "Discuta cu un consultant";
   const secondaryHref = isConsultantaPillar ? "/metodologie-verificare-eligibilitate" : "/contact";
   const finalCtaTitle = isEditorialProgram(page) ? "Verificare eligibilitate" : "Urmatorul pas";
   const finalCtaText = isEditorialProgram(page)
@@ -833,7 +854,7 @@ ${CLARITY_TRACKING_CODE}
       <a href="/ghiduri">Ghiduri</a>
       <a href="/instrumente">Instrumente</a>
       <a href="/resurse">Resurse</a>
-      <a class="nav-cta" href="/contact">Evaluare gratuita</a>
+      <a class="nav-cta" href="/contact">Solicita verificare eligibilitate</a>
     </div>
   </nav>
   <div class="breadcrumb"><a href="/">Acasa</a> / ${esc(page.h1)}</div>

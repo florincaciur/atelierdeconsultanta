@@ -164,6 +164,32 @@
       line-height: 1.25;
       overflow-wrap: anywhere;
     }
+    .form-note {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 8px;
+      color: rgba(255,255,255,0.8);
+      font-size: 0.86rem;
+      line-height: 1.6;
+      margin: 0 0 18px;
+      padding: 14px 16px;
+    }
+    .form-note a,
+    .form-trust-links a {
+      color: var(--gold);
+      font-weight: 800;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+    .form-trust-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 16px;
+      margin: 14px 0 18px;
+    }
+    .form-trust-links a {
+      font-size: 0.82rem;
+    }
   </style>
   <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
@@ -268,7 +294,7 @@
 
         <a href="#contact" style="color:rgba(255,255,255,0.8);font-size:0.85rem;font-weight:600;padding:8px 14px;border-radius:8px;transition:all 0.3s;" onmouseover="this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.background='transparent'">Contact</a>
 
-        <a href="/verificare-eligibilitate-fonduri-europene" class="nav-cta">Verifică eligibilitatea</a>
+          <a href="/verificare-eligibilitate-fonduri-europene" class="nav-cta">Solicită verificare eligibilitate</a>
       </div>
 
       <button class="hamburger" id="hamburgerBtn" type="button"
@@ -297,7 +323,7 @@
       <a href="/start-up-nation-2026">Start-Up Nation 2026</a>
       <a href="/calculator-soc">🧮 Calculator SOC AFIR</a>
       <a href="#contact" onclick="closeMobileMenu()">Contact</a>
-      <a href="/verificare-eligibilitate-fonduri-europene" class="mobile-cta" onclick="closeMobileMenu()">Verifică eligibilitatea</a>
+      <a href="/verificare-eligibilitate-fonduri-europene" class="mobile-cta" onclick="closeMobileMenu()">Solicită verificare eligibilitate</a>
     </nav>
   </div>
 
@@ -331,8 +357,8 @@
         </p>
 
         <div class="hero-ctas">
-          <a href="/verificare-eligibilitate-fonduri-europene" class="btn-primary">Verifică eligibilitatea</a>
-          <a href="#finantare" class="btn-secondary">Vezi programe active →</a>
+          <a href="/verificare-eligibilitate-fonduri-europene" class="btn-primary">Solicită verificare eligibilitate</a>
+          <a href="/metodologie-verificare-eligibilitate" class="btn-secondary">Vezi metodologia</a>
         </div>
 
       </div>
@@ -517,7 +543,7 @@
           <p style="font-size:0.85rem;color:var(--text-soft)">Microîntreprinderi din Regiunea Nord-Est, cu intensitate nerambursabilă între 70% și 90%</p>
           <div class="finantare-actions">
             <a href="/por-adr-nord-est" class="finantare-link">Detalii complete →</a>
-            <a class="finantare-guide-link" href="https://adrnordest.ro/comentariiGhid/P1IMMInovative/Apel1/Ghid.pdf" target="_blank" rel="noopener noreferrer">Ghid oficial</a>
+            <a class="finantare-guide-link" href="https://adrnordest.ro/comentariiGhid/P1IMMInovative/Apel1/Ghid.pdf" target="_blank" rel="noopener noreferrer">Consultă sursele oficiale</a>
           </div>
         </article>
 
@@ -529,7 +555,7 @@
           <p style="font-size:0.85rem;color:var(--text-soft)">80% pentru tineri fermieri și 65% pentru fermieri recent instalați</p>
           <div class="finantare-actions">
             <a href="/dr12-afir" class="finantare-link">Detalii complete →</a>
-            <a class="finantare-guide-link" href="https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/" target="_blank" rel="noopener noreferrer">Ghid oficial</a>
+            <a class="finantare-guide-link" href="https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/" target="_blank" rel="noopener noreferrer">Consultă sursele oficiale</a>
           </div>
         </article>
 
@@ -541,7 +567,7 @@
           <p style="font-size:0.85rem;color:var(--text-soft)">Sisteme fotovoltaice pentru autoconsum în sectorul agroalimentar</p>
           <div class="finantare-actions">
             <a href="/afir-autoconsum-agroalimentar" class="finantare-link">Detalii complete →</a>
-            <a class="finantare-guide-link" href="https://www.afir.ro/comunicate/consultare-publica-privind-schema-de-energie-regenerabila/" target="_blank" rel="noopener noreferrer">Ghid oficial</a>
+            <a class="finantare-guide-link" href="https://www.afir.ro/comunicate/consultare-publica-privind-schema-de-energie-regenerabila/" target="_blank" rel="noopener noreferrer">Consultă sursele oficiale</a>
           </div>
         </article>
 
@@ -553,7 +579,7 @@
           <p style="font-size:0.85rem;color:var(--text-soft)">Primării, consilii județene, spitale, școli și alte entități publice</p>
           <div class="finantare-actions">
             <a href="/autoconsum-public-fotovoltaice-institutii-publice" class="finantare-link">Detalii complete →</a>
-            <a class="finantare-guide-link" href="https://legislatie.just.ro/public/DetaliiDocument/276306" target="_blank" rel="noopener noreferrer">Ghid oficial</a>
+            <a class="finantare-guide-link" href="https://legislatie.just.ro/public/DetaliiDocument/276306" target="_blank" rel="noopener noreferrer">Consultă sursele oficiale</a>
           </div>
         </article>
 
@@ -565,7 +591,7 @@
           <p style="font-size:0.85rem;color:var(--text-soft)">Ferme mici între 4.000 și 11.999 SO, cu buget total de 108 milioane EUR</p>
           <div class="finantare-actions">
             <a href="/dr14" class="finantare-link">Detalii complete →</a>
-            <a class="finantare-guide-link" href="https://www.afir.ro/info-la-zi/versiunea-consultativa-a-ghidului-solicitantului-dr-14/" target="_blank" rel="noopener noreferrer">Ghid oficial</a>
+            <a class="finantare-guide-link" href="https://www.afir.ro/info-la-zi/versiunea-consultativa-a-ghidului-solicitantului-dr-14/" target="_blank" rel="noopener noreferrer">Consultă sursele oficiale</a>
           </div>
         </article>
 
@@ -577,7 +603,7 @@
           <p style="font-size:0.85rem;color:var(--text-soft)">ERP, CRM, automatizare, securitate cibernetică și cloud</p>
           <div class="finantare-actions">
             <a href="/digitalizare-imm" class="finantare-link">Detalii complete →</a>
-            <a class="finantare-guide-link" href="https://mfe.gov.ro/ghidul-specific-conditii-de-accesare-a-fondurilor-europene-aferente-planului-national-de-redresare-si-rezilienta-in-cadrul-apelului-de-proiecte-digitalizarea-imm-urilor-grant-de-pana-la-100-000-e/" target="_blank" rel="noopener noreferrer">Ghid oficial</a>
+            <a class="finantare-guide-link" href="https://mfe.gov.ro/ghidul-specific-conditii-de-accesare-a-fondurilor-europene-aferente-planului-national-de-redresare-si-rezilienta-in-cadrul-apelului-de-proiecte-digitalizarea-imm-urilor-grant-de-pana-la-100-000-e/" target="_blank" rel="noopener noreferrer">Consultă sursele oficiale</a>
           </div>
         </article>
 
@@ -589,7 +615,7 @@
           <p style="font-size:0.85rem;color:var(--text-soft)">Start-up-uri și IMM-uri cu capital deținut în proporție de minimum 50% de femei</p>
           <div class="finantare-actions">
             <a href="/femeia-antreprenor-2026" class="finantare-link">Detalii complete →</a>
-            <a class="finantare-guide-link" href="https://economie.gov.ro/pe-data-de-30-iulie-se-da-startul-inscrierilor-in-cadrul-programului-femeia-antreprenor/" target="_blank" rel="noopener noreferrer">Ghid oficial</a>
+            <a class="finantare-guide-link" href="https://economie.gov.ro/pe-data-de-30-iulie-se-da-startul-inscrierilor-in-cadrul-programului-femeia-antreprenor/" target="_blank" rel="noopener noreferrer">Consultă sursele oficiale</a>
           </div>
         </article>
 
@@ -601,7 +627,7 @@
           <p style="font-size:0.85rem;color:var(--text-soft)">Schema de ajutor de stat pentru producători de materiale de construcții utilizate în infrastructura de transport</p>
           <div class="finantare-actions">
             <a href="/pro-infra" class="finantare-link">Detalii complete →</a>
-            <a class="finantare-guide-link" href="https://legislatie.just.ro/Public/DetaliiDocument/306391" target="_blank" rel="noopener noreferrer">Ghid oficial</a>
+            <a class="finantare-guide-link" href="https://legislatie.just.ro/Public/DetaliiDocument/306391" target="_blank" rel="noopener noreferrer">Consultă sursele oficiale</a>
           </div>
         </article>
 
@@ -613,7 +639,7 @@
           <p style="font-size:0.85rem;color:var(--text-soft)">Finanțare pentru tineri antreprenori și alte grupuri eligibile, cu minimum 2 locuri de muncă</p>
           <div class="finantare-actions">
             <a href="/start-up-nation-2026" class="finantare-link">Detalii complete →</a>
-            <a class="finantare-guide-link" href="https://economie.gov.ro/participa-la-definitivarea-procedurii-de-implementare-a-programului-de-succes-start-up-nation-editia-2024/" target="_blank" rel="noopener noreferrer">Ghid oficial</a>
+            <a class="finantare-guide-link" href="https://economie.gov.ro/participa-la-definitivarea-procedurii-de-implementare-a-programului-de-succes-start-up-nation-editia-2024/" target="_blank" rel="noopener noreferrer">Consultă sursele oficiale</a>
           </div>
         </article>
 
@@ -798,6 +824,11 @@
         <p class="section-subtitle reveal">
           Completează formularul cu solicitantul, localitatea, codul CAEN, investiția și bugetul. Răspunsul inițial este orientativ și nu reprezintă promisiune de finanțare.
         </p>
+        <div class="form-trust-links" aria-label="Resurse utile inainte de formular" style="justify-content:center;margin-top:-18px;margin-bottom:28px;">
+          <a href="/metodologie-verificare-eligibilitate">Vezi metodologia</a>
+          <a href="/surse-oficiale-fonduri-europene">Consultă sursele oficiale</a>
+          <a href="/politica-de-confidentialitate">Politica de confidențialitate</a>
+        </div>
 
         <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:32px;">
           <a href="https://wa.me/40769828338"
@@ -824,6 +855,7 @@
 
         <div class="contact-form reveal" id="contactFormWrapper">
           <form id="contactForm" onsubmit="handleSubmit(event)" novalidate>
+            <p class="form-note">Analiza inițială nu garantează finanțarea. Verificăm eligibilitatea pe baza informațiilor transmise și a ghidurilor disponibile.</p>
             <div class="form-grid">
               <div class="form-group">
                 <label for="contact-name">Nume complet *</label>
@@ -841,6 +873,32 @@
                        autocomplete="tel" />
               </div>
               <div class="form-group">
+                <label for="contact-location">Județ / localitate</label>
+                <input type="text" id="contact-location" name="location" placeholder="Iași, Pașcani"
+                       autocomplete="address-level2" />
+              </div>
+              <div class="form-group">
+                <label for="contact-applicant-type">Tip solicitant</label>
+                <select id="contact-applicant-type" name="applicant_type">
+                  <option value="">Selectează tipul...</option>
+                  <option value="srl">Firmă / SRL</option>
+                  <option value="pfa-ii-if">PFA / II / IF</option>
+                  <option value="fermier">Fermier / exploatație agricolă</option>
+                  <option value="startup">Firmă nouă / start-up</option>
+                  <option value="institutie-publica">Instituție publică</option>
+                  <option value="ong">ONG / asociație</option>
+                  <option value="altul">Alt tip solicitant</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="contact-activity">Domeniu activitate</label>
+                <input type="text" id="contact-activity" name="activity" placeholder="Agricultură, producție, IT, servicii..." />
+              </div>
+              <div class="form-group">
+                <label for="contact-caen">Cod CAEN, dacă există</label>
+                <input type="text" id="contact-caen" name="caen" placeholder="Ex: 6201, 0111, 5610" inputmode="numeric" />
+              </div>
+              <div class="form-group">
                 <label for="contact-program">Program de interes</label>
                 <select id="contact-program" name="program">
                   <option value="">Selectează programul...</option>
@@ -855,6 +913,14 @@
                   <option value="start-up-nation-2026">Start-Up Nation 2026</option>
                   <option value="altul">Alt program / Nu știu</option>
                 </select>
+              </div>
+              <div class="form-group">
+                <label for="contact-investment">Investiție dorită</label>
+                <input type="text" id="contact-investment" name="investment" placeholder="Utilaje, ERP, panouri fotovoltaice, spațiu..." />
+              </div>
+              <div class="form-group">
+                <label for="contact-budget">Buget estimat / cofinanțare</label>
+                <input type="text" id="contact-budget" name="budget" placeholder="Ex: 80.000 EUR, cofinanțare disponibilă parțial" />
               </div>
               <div class="form-group full">
                 <label for="contact-message">Descrieți pe scurt activitatea / proiectul</label>
@@ -872,13 +938,18 @@
                 Înțeleg că datele mele sunt prelucrate pentru a-mi răspunde la solicitare. *
               </label>
             </div>
+            <div class="form-trust-links" aria-label="Linkuri utile formular">
+              <a href="/metodologie-verificare-eligibilitate">Vezi metodologia</a>
+              <a href="/surse-oficiale-fonduri-europene">Consultă sursele oficiale</a>
+              <a href="/politica-de-confidentialitate">Politica de confidențialitate</a>
+            </div>
 
             <input type="text" name="website" style="display:none!important" tabindex="-1" autocomplete="off">
 
             <div id="formError" style="display:none;background:#fef2f2;border:1px solid #fca5a5;color:#dc2626;padding:10px 14px;border-radius:8px;font-size:.9rem;margin-bottom:12px" role="alert"></div>
 
             <button type="submit" class="form-submit">
-              Trimite solicitarea
+              Trimite detaliile proiectului
             </button>
           </form>
 
@@ -1156,7 +1227,7 @@
         : escH(banner.amount);
       var guideUrl = OFFICIAL_GUIDE_URLS[banner.officialGuideKey] || '';
       var guideHtml = guideUrl
-        ? '<a class="slide-cta slide-guide-cta" href="' + escH(guideUrl) + '" target="_blank" rel="noopener noreferrer">Ghid oficial</a>'
+        ? '<a class="slide-cta slide-guide-cta" href="' + escH(guideUrl) + '" target="_blank" rel="noopener noreferrer">Consultă sursele oficiale</a>'
         : '';
 
       return '<article class="carousel-slide" data-slide="' + idx + '"' +
@@ -1471,7 +1542,13 @@
       var name    = form.querySelector('#contact-name').value.trim();
       var email   = form.querySelector('#contact-email').value.trim();
       var phone   = (form.querySelector('#contact-phone') || {}).value || '';
+      var location = (form.querySelector('#contact-location') || {}).value || '';
+      var applicantType = (form.querySelector('#contact-applicant-type') || {}).value || '';
+      var activity = (form.querySelector('#contact-activity') || {}).value || '';
+      var caen = (form.querySelector('#contact-caen') || {}).value || '';
       var program = (form.querySelector('#contact-program') || {}).value || '';
+      var investment = (form.querySelector('#contact-investment') || {}).value || '';
+      var budget = (form.querySelector('#contact-budget') || {}).value || '';
       var message = (form.querySelector('#contact-message') || {}).value || '';
       var gdpr    = form.querySelector('#gdpr-consent').checked;
       var submitBtn = form.querySelector('[type="submit"]');
@@ -1507,7 +1584,13 @@
             name:     name,
             email:    email,
             phone:    phone || '—',
+            location: location || '—',
+            applicant_type: applicantType || '—',
+            activity: activity || '—',
+            caen: caen || '—',
             program:  program || '—',
+            investment: investment || '—',
+            budget: budget || '—',
             message:  message || '(fără mesaj)',
             _subject: 'Cerere consultanță FABER — ' + name,
             _template: 'table'
@@ -1522,11 +1605,11 @@
           document.getElementById('formSuccess').classList.add('show');
         } else {
           showFormError('Eroare la trimitere. Vă rugăm contactați-ne direct la email.');
-          if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = 'Trimite solicitarea'; }
+          if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = 'Trimite detaliile proiectului'; }
         }
       } catch (err) {
         showFormError('Eroare de conexiune. Contactați-ne la atelier.consultanta@gmail.com');
-        if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = 'Trimite solicitarea'; }
+        if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = 'Trimite detaliile proiectului'; }
       }
     }
 

@@ -124,14 +124,18 @@ async function inspectPage(page, pageInfo, viewport) {
         && rect.height > 0;
     };
 
+    const normalizeText = (value) => (value || '')
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .toLowerCase();
     const badge = document.querySelector('#contact .badge-centered, #contact .cta-badge, #contact .consultanta-badge, #contact .cta-eyebrow');
     const heading = Array.from(document.querySelectorAll('#contact h1, #contact h2, h1, h2'))
-      .find((element) => /Consultanță Gratuită|Consultanta Gratuita/i.test(element.textContent));
+      .find((element) => /verificare initiala|solicita verificare|trimite detaliile proiectului/i.test(normalizeText(element.textContent)));
 
     let badgeCheck = { required: pagePath === '/', pass: pagePath !== '/', reason: 'not homepage contact section' };
     if (pagePath === '/') {
       if (!badge || !heading) {
-        badgeCheck = { required: true, pass: false, reason: 'badge or Consultanta heading not found' };
+        badgeCheck = { required: true, pass: false, reason: 'badge or contact verification heading not found' };
       } else {
         const badgeRect = badge.getBoundingClientRect();
         const headingRect = heading.getBoundingClientRect();
