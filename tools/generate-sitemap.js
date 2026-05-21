@@ -4,6 +4,7 @@ const path = require("path");
 const ROOT = path.resolve(__dirname, "..");
 const SITE = "https://atelierdeconsultanta.ro";
 const SITEMAP_PATH = path.join(ROOT, "sitemap.xml");
+const TODAY = new Date("2026-05-21T12:00:00Z");
 
 const EXCLUDED_DIRS = new Set([
   ".git",
@@ -84,6 +85,12 @@ function priority(url) {
   return 4;
 }
 
+function lastmodForFile(filePath) {
+  const mtime = fs.statSync(filePath).mtime;
+  const safeDate = mtime > TODAY ? TODAY : mtime;
+  return safeDate.toISOString().slice(0, 10);
+}
+
 function generate() {
   const urls = new Map();
   for (const filePath of walkHtml(ROOT)) {
@@ -93,7 +100,10 @@ function generate() {
     if (!canonical || !isInternalCanonical(canonical)) continue;
     const parsed = new URL(canonical);
     const normalized = parsed.pathname === "/" ? `${SITE}/` : canonical.replace(/\/$/, "");
-    urls.set(normalized, toPosix(path.relative(ROOT, filePath)));
+    urls.set(normalized, {
+      file: toPosix(path.relative(ROOT, filePath)),
+      lastmod: lastmodForFile(filePath),
+    });
   }
 
   const orderedUrls = [...urls.keys()].sort((a, b) => {
@@ -104,7 +114,7 @@ function generate() {
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${orderedUrls.map((url) => `  <url>\n    <loc>${url}</loc>\n  </url>`).join("\n")}
+${orderedUrls.map((url) => `  <url>\n    <loc>${url}</loc>\n    <lastmod>${urls.get(url).lastmod}</lastmod>\n  </url>`).join("\n")}
 </urlset>
 `;
 

@@ -136,7 +136,7 @@ function isPublicFile(relativePath) {
   for (const route of CANONICAL_ROOT_HTML_ROUTES) {
     if (normalized === `${route}/index.html` && fs.existsSync(path.join(ROOT, `${route}.html`))) return false;
   }
-  if (normalized === "_redirects") return true;
+  if (normalized === "_redirects" || normalized === "_headers") return true;
   return PUBLIC_EXTENSIONS.has(path.posix.extname(normalized).toLowerCase());
 }
 
