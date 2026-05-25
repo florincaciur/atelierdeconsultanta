@@ -296,7 +296,7 @@ function checkFile(filePath, root) {
     canonical: hasCanonical($),
     cleanCanonical: hasCleanCanonical($, noindex),
     imageAltAttributes: hasImgAlt($),
-    singleH1: hasSingleH1($),
+    singleH1: noindex ? status(true, { note: 'noindex page: h1 not required' }) : hasSingleH1($),
     visibleFaqForSchema: hasVisibleFaqForSchema($),
     speakableSchemaCoverage: hasSpeakableSchemaCoverage($),
     contentDepth: hasRequiredContentDepth($, noindex),

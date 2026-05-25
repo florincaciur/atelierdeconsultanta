@@ -26,8 +26,18 @@ const CLARITY_TRACKING_CODE = `  <script type="text/javascript">
     })(window, document, "clarity", "script", "wnvzyco6rq");
   </script>`;
 
+function publicText(value, fallback = "In curs de validare") {
+  const text = String(value ?? "").trim();
+  if (!text || /^TODO_/i.test(text)) return fallback;
+  return text
+    .replace(/TODO_CLIENT_[A-Z0-9_ -]*/gi, fallback)
+    .replace(/TODO_SURSA_OFICIALA[A-Z0-9_ -]*/gi, "Se confirma in ghidul activ")
+    .replace(/TODO_DATA_ACCESARII/gi, "In curs de actualizare")
+    .replace(/TODO_DATE_LOCALE/gi, "Exemplele locale vor fi publicate dupa validare");
+}
+
 function esc(value) {
-  return String(value ?? "")
+  return publicText(value)
     .replace(/&/g, "&amp;")
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;")
@@ -68,18 +78,30 @@ function linkTo(href, label) {
 }
 
 function schema(title, description, route, faq) {
+  const pageNode = webPageSchema({
+    url: canonical(route),
+    name: title,
+    description
+  });
   return jsonLdGraph([
     organizationSchema(),
     websiteSchema(),
-    webPageSchema({
-      url: canonical(route),
-      name: title,
-      description
-    }),
+    pageNode,
     breadcrumbSchema([
       { name: "Acasa", item: `${SITE}/` },
       { name: title, item: canonical(route) }
     ]),
+    {
+      "@type": "Article",
+      "@id": `${canonical(route)}#article`,
+      mainEntityOfPage: { "@id": pageNode["@id"] },
+      headline: publicText(title),
+      description: publicText(description),
+      inLanguage: "ro-RO",
+      author: { "@id": `${SITE}/#organization` },
+      publisher: { "@id": `${SITE}/#organization` },
+      dateModified: "2026-05-20"
+    },
     faqPageSchema(faq, { minItems: 2 })
   ]);
 }
@@ -160,8 +182,7 @@ function redirectFallbackPage({ route, target, title }) {
 ${CLARITY_TRACKING_CODE}
 </head>
 <body>
-  <h1>${esc(title)}</h1>
-  <p>Pagina a fost consolidata. Continua la <a href="${cleanUrl(target)}">${canonical(target)}</a>.</p>
+  <script>window.location.replace('${cleanUrl(target)}');</script>
 </body>
 </html>
 `;
@@ -195,7 +216,19 @@ function caenPage(item) {
     [`Ce programe pot fi relevante pentru CAEN ${item.code}?`, item.programs.join("; ")],
     [`Ce trebuie verificat inainte de buget pentru CAEN ${item.code}?`, "Eligibilitatea solicitantului, codul CAEN, cheltuielile permise, cofinantarea si punctajul."]
   ];
+  const programRows = item.programs
+    .map((program) => `<tr><td>${esc(program)}</td><td>Se confirma in ghidul activ</td><td>Eligibilitatea depinde de solicitant, regiune, cod CAEN, buget si documentele investitiei.</td></tr>`)
+    .join("\n");
   let body = `
+      <h2>Descriere CAEN</h2>
+      <p>CAEN ${esc(item.code)} - ${esc(item.label)} descrie activitatea economica pentru care investitia trebuie justificata prin documente, autorizare, flux operational si buget. Codul nu garanteaza finantarea; el este doar prima piesa verificata inainte de alegerea programului.</p>
+      <h2>Programe eligibile pentru CAEN ${esc(item.code)}</h2>
+      <div class="table-wrap">
+        <table class="program-table">
+          <thead><tr><th>Program</th><th>Buget</th><th>Conditii</th></tr></thead>
+          <tbody>${programRows}</tbody>
+        </table>
+      </div>
       <h2>Programe relevante</h2>
       <p>Pentru CAEN ${esc(item.code)}, analiza trebuie facuta pe program, nu pe cod izolat. Un cod poate fi potrivit intr-un apel si exclus in altul, in functie de regiune, obiective si tipul investitiei.</p>
       <ul>${li(item.programs)}</ul>
@@ -277,9 +310,9 @@ function regionalPage(item) {
       </table>
       <h2>Exemple locale orientative</h2>
       <ul>
-        <li>Iasi: microintreprindere de servicii care verifica Programul Regional Nord-Est si buget IT. TODO_DATE_LOCALE.</li>
-        <li>Suceava: ferma sau afacere turistica unde trebuie comparate AFIR, programe regionale si investitii energetice. TODO_DATE_LOCALE.</li>
-        <li>Bacau: firma de productie sau servicii care verifica echipamente, cofinantare si documentele pentru punctul de lucru. TODO_DATE_LOCALE.</li>
+        <li>Iasi: microintreprindere de servicii care verifica Programul Regional Nord-Est si buget IT. Exemplele locale vor fi publicate dupa validare.</li>
+        <li>Suceava: ferma sau afacere turistica unde trebuie comparate AFIR, programe regionale si investitii energetice. Exemplele locale vor fi publicate dupa validare.</li>
+        <li>Bacau: firma de productie sau servicii care verifica echipamente, cofinantare si documentele pentru punctul de lucru. Exemplele locale vor fi publicate dupa validare.</li>
       </ul>
       <h2>Intrebari locale frecvente</h2>
       <p>Conteaza orasul sau judetul? Da, mai ales la programele regionale si cand investitia trebuie localizata in regiune. Conteaza sediul social sau punctul de lucru? Depinde de ghid: unele apeluri urmaresc locul implementarii, nu doar sediul. Pot depune online fara intalnire locala? De obicei analiza initiala se poate face la distanta, dar documentele trebuie sa sustina locatia si investitia.</p>

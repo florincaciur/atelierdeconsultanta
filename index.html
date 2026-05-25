@@ -57,27 +57,6 @@
       ]
     },
     {
-      "@type": [
-        "LocalBusiness",
-        "ProfessionalService"
-      ],
-      "@id": "https://atelierdeconsultanta.ro/#localbusiness",
-      "name": "FABER - Atelier de Consultanta",
-      "description": "Servicii de consultanta pentru eligibilitate, alegere program, pregatire dosar si suport in clarificari pentru fonduri europene.",
-      "url": "https://atelierdeconsultanta.ro",
-      "email": "atelier.consultanta@gmail.com",
-      "telephone": "+40769828338",
-      "openingHours": "Mo-Fr 09:00-18:00",
-      "image": "https://atelierdeconsultanta.ro/og-image.jpg",
-      "areaServed": {
-        "@type": "Country",
-        "name": "Romania"
-      },
-      "parentOrganization": {
-        "@id": "https://atelierdeconsultanta.ro/#organization"
-      }
-    },
-    {
       "@type": "WebSite",
       "@id": "https://atelierdeconsultanta.ro/#website",
       "url": "https://atelierdeconsultanta.ro",
@@ -182,6 +161,35 @@
           "position": 13,
           "name": "Contact",
           "item": "https://atelierdeconsultanta.ro/#contact"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Ce face FABER pentru un proiect cu fonduri europene?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "FABER verifica eligibilitatea initiala, compara programele potrivite, indica documentele necesare si ajuta la pregatirea dosarului. Analiza nu garanteaza aprobarea finantarii."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Pot primi o concluzie daca nu stiu programul potrivit?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Da. Este suficient sa descrii solicitantul, localitatea, activitatea, bugetul si investitia dorita, iar FABER poate indica programele care merita verificate in ghidul activ."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "De ce nu promite FABER finantare garantata?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Aprobarea depinde de ghidul oficial, punctaj, bugetul apelului, documentele solicitantului si evaluarea autoritatii. O promisiune de finantare garantata ar fi neserioasa."
+          }
         }
       ]
     }
@@ -411,7 +419,7 @@
       justify-content: center;
     }
     #finantare .finantare-grid {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       align-items: stretch;
       gap: 20px;
     }
@@ -517,9 +525,38 @@
       flex-basis: 100%;
       margin-left: 26px;
     }
+    #homepage-faq {
+      background: var(--white);
+      padding: 90px 24px;
+    }
+    .homepage-faq-grid {
+      display: grid;
+      gap: 18px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      margin: 0 auto;
+      max-width: 1200px;
+    }
+    .homepage-faq-item {
+      background: var(--gray-100);
+      border: 1px solid var(--gray-200);
+      border-radius: 8px;
+      padding: 24px;
+    }
+    .homepage-faq-item h3 {
+      color: var(--navy);
+      font-size: 1rem;
+      line-height: 1.35;
+      margin-bottom: 10px;
+    }
+    .homepage-faq-item p {
+      color: var(--text-soft);
+      font-size: 0.92rem;
+      line-height: 1.7;
+      margin: 0;
+    }
     @media (max-width: 1024px) {
       #finantare .finantare-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       }
     }
     @media (max-width: 768px) {
@@ -825,23 +862,23 @@
 
         <div class="despre-stats reveal-right">
           <div class="stat-card">
-            <div class="stat-number">250+</div>
-            <div class="stat-label">Proiecte declarate lucrate <span class="claim-marker claim-marker--hidden"><!-- TODO_CLIENT_DOVADA_CLAIM: completati dovada claim-ului inainte de publicare. --></span></div>
+            <div class="stat-number">In validare</div>
+            <div class="stat-label">Portofoliu anonimizat in curs de confirmare</div>
           </div>
           <div class="stat-card">
-            <div class="stat-number">45M€+</div>
-            <div class="stat-label">Valoare declarată în proiecte <span class="claim-marker claim-marker--hidden"><!-- TODO_CLIENT_DOVADA_CLAIM: completati dovada claim-ului inainte de publicare. --></span></div>
+            <div class="stat-number">Pe ghid activ</div>
+            <div class="stat-label">Bugete si praguri verificate la fiecare apel</div>
           </div>
           <div class="stat-card">
-            <div class="stat-number">98%</div>
-            <div class="stat-label">Rată declarată, nu garanție <span class="claim-marker claim-marker--hidden"><!-- TODO_CLIENT_DOVADA_CLAIM: completati dovada claim-ului inainte de publicare. --></span></div>
+            <div class="stat-number">Fara garantii</div>
+            <div class="stat-label">Aprobarea depinde de autoritate, punctaj si buget</div>
           </div>
           <div class="stat-card">
-            <div class="stat-number">10 ani</div>
-            <div class="stat-label">Experiență declarată <span class="claim-marker claim-marker--hidden"><!-- TODO_CLIENT_DOVADA_CLAIM: completati dovada claim-ului inainte de publicare. --></span></div>
+            <div class="stat-number">Metoda</div>
+            <div class="stat-label">Eligibilitate, documente, punctaj si riscuri</div>
           </div>
           <p style="grid-column:1 / -1;color:rgba(255,255,255,0.72);font-size:0.78rem;line-height:1.55;text-align:center;margin-top:4px;">
-            Cifrele sunt afișate prudent până la confirmarea prin portofoliu, metodologie internă sau documente aprobate pentru publicare.
+            Informațiile comerciale cantitative vor fi publicate doar după confirmare prin portofoliu, metodologie internă sau documente aprobate.
           </p>
         </div>
       </div>
@@ -1293,6 +1330,26 @@
             <p>Te contactăm în maxim 24 de ore cu o evaluare a oportunităților de finanțare disponibile pentru tine.</p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section id="homepage-faq" aria-labelledby="homepage-faq-title">
+      <div class="section-label">FAQ</div>
+      <h2 class="section-title" id="homepage-faq-title">Intrebari frecvente</h2>
+      <p class="section-subtitle">Raspunsuri scurte pentru prima verificare a unui proiect cu fonduri europene.</p>
+      <div class="homepage-faq-grid">
+        <section class="homepage-faq-item faq-item">
+          <h3>Ce face FABER pentru un proiect cu fonduri europene?</h3>
+          <p>FABER verifica eligibilitatea initiala, compara programele potrivite, indica documentele necesare si ajuta la pregatirea dosarului. Analiza nu garanteaza aprobarea finantarii.</p>
+        </section>
+        <section class="homepage-faq-item faq-item">
+          <h3>Pot primi o concluzie daca nu stiu programul potrivit?</h3>
+          <p>Da. Este suficient sa descrii solicitantul, localitatea, activitatea, bugetul si investitia dorita, iar FABER poate indica programele care merita verificate in ghidul activ.</p>
+        </section>
+        <section class="homepage-faq-item faq-item">
+          <h3>De ce nu promite FABER finantare garantata?</h3>
+          <p>Aprobarea depinde de ghidul oficial, punctaj, bugetul apelului, documentele solicitantului si evaluarea autoritatii. O promisiune de finantare garantata ar fi neserioasa.</p>
+        </section>
       </div>
     </section>
 

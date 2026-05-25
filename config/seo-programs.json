@@ -3041,6 +3041,22 @@
         [
           "FABER se ocupă și de implementare?",
           "Poate sprijini implementarea atunci când serviciul este inclus în colaborare: clarificări, contractare, achiziții, cereri de plată sau rambursare și raportări."
+        ],
+        [
+          "Cum se calculeaza cofinantarea intr-un proiect?",
+          "Cofinantarea se calculeaza separat de grant si include contributia proprie, cheltuielile neeligibile, TVA cand nu este decontat si rezervele pentru diferente de pret sau cash-flow."
+        ],
+        [
+          "Ce exemple numerice pot folosi inainte de ghidul final?",
+          "Se pot folosi scenarii prudente, de exemplu investitie de 100.000 EUR si contributie proprie de 30%, dar procentele reale se confirma numai in ghidul activ."
+        ],
+        [
+          "Ce coduri CAEN merita verificate pentru fonduri europene?",
+          "Codurile CAEN se verifica in functie de program. Exemple frecvente sunt 0111 pentru agricultura, 4321 pentru instalatii, 5610 pentru restaurante si 6201 pentru software."
+        ],
+        [
+          "De ce cere FABER documente inainte de oferta finala?",
+          "Documentele arata daca proiectul poate fi sustinut: activitatea, locatia, bugetul, cofinantarea si cheltuielile trebuie sa se potriveasca programului vizat."
         ]
       ],
       "slug": "consultanta-fonduri-europene",
@@ -3049,7 +3065,7 @@
       "schemaType": "Service",
       "category": "Consultanta fonduri europene",
       "minWords": 1800,
-      "minFaq": 8,
+      "minFaq": 12,
       "title": "Consultanță fonduri europene | Eligibilitate, dosar și cost",
       "description": "Consultanță fonduri europene pentru firme, fermieri și start-up-uri: verificare eligibilitate, program potrivit, dosar, costuri și metodologie FABER.",
       "h1": "Consultanță fonduri europene pentru firme, fermieri și antreprenori",

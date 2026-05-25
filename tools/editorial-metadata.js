@@ -18,6 +18,8 @@ const STATUS_LABELS = {
   arhivat: "Arhivat"
 };
 
+const PUBLIC_PLACEHOLDER = "In curs de actualizare";
+
 const RO_MONTHS = [
   "ianuarie",
   "februarie",
@@ -41,6 +43,12 @@ function esc(value) {
     .replace(/"/g, "&quot;");
 }
 
+function publicText(value, fallback = PUBLIC_PLACEHOLDER) {
+  const text = String(value || "").trim();
+  if (!text || /^TODO_/i.test(text)) return fallback;
+  return text;
+}
+
 function readEditorialConfig() {
   if (!fs.existsSync(CONFIG_PATH)) return { pages: [] };
   return JSON.parse(fs.readFileSync(CONFIG_PATH, "utf8"));
@@ -49,9 +57,9 @@ function readEditorialConfig() {
 function normalizeSources(sources) {
   const items = Array.isArray(sources) && sources.length ? sources : [TODO_SOURCE];
   return items.map((source) => ({
-    url: source.url || TODO_SOURCE.url,
-    title: source.title || TODO_SOURCE.title,
-    accessedAt: source.accessedAt || TODO_SOURCE.accessedAt
+    url: source.url || "",
+    title: publicText(source.title, "Sursa oficiala in curs de validare"),
+    accessedAt: publicText(source.accessedAt, PUBLIC_PLACEHOLDER)
   }));
 }
 
@@ -62,7 +70,7 @@ function getEditorialMetadata(slug) {
 
 function formatDate(value) {
   const raw = String(value || "").trim();
-  if (!/^\d{4}-\d{2}-\d{2}$/.test(raw)) return raw || "TODO_DATA_ACCESARII";
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(raw)) return publicText(raw);
   const date = new Date(`${raw}T12:00:00Z`);
   return `${date.getUTCDate()} ${RO_MONTHS[date.getUTCMonth()]} ${date.getUTCFullYear()}`;
 }
@@ -84,8 +92,8 @@ function isPlaceholder(value) {
 }
 
 function renderSource(source) {
-  const url = source.url || TODO_SOURCE.url;
-  const title = source.title || TODO_SOURCE.title;
+  const url = source.url || "";
+  const title = publicText(source.title, "Sursa oficiala in curs de validare");
   const titleHtml = /^https?:\/\//i.test(url)
     ? `<a href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(title)}</a>`
     : `<span>${esc(title)}</span>`;
@@ -100,12 +108,12 @@ function renderEditorialSection(metadata) {
           <span class="editorial-meta__status" data-status="${esc(metadata.status || "in_curs_de_verificare")}">${esc(statusLabel(metadata.status))}</span>
         </div>
         <dl class="editorial-meta__grid">
-          <div><dt>Autor</dt><dd>${esc(metadata.author || "TODO_CLIENT_AUTOR")}</dd></div>
-          <div><dt>Verificat de</dt><dd>${esc(metadata.reviewer || "TODO_CLIENT_REVIEWER")}</dd></div>
+          <div><dt>Autor</dt><dd>${esc(publicText(metadata.author))}</dd></div>
+          <div><dt>Verificat de</dt><dd>${esc(publicText(metadata.reviewer))}</dd></div>
           <div><dt>Data publicarii</dt><dd>${renderDate(metadata.publishedAt)}</dd></div>
           <div><dt>Ultima actualizare</dt><dd>${renderDate(metadata.updatedAt)}</dd></div>
           <div><dt>Ultima verificare</dt><dd>${renderDate(metadata.lastVerifiedAt)}</dd></div>
-          <div><dt>Timp de lectura</dt><dd>${esc(metadata.readingTime || "TODO_READING_TIME")} min</dd></div>
+          <div><dt>Timp de lectura</dt><dd>${esc(publicText(metadata.readingTime, "In curs de estimare"))} min</dd></div>
         </dl>
         <p class="editorial-meta__note">Informatiile pot fi modificate de autoritati; verificam periodic ghidurile oficiale.</p>
       </section>`;

@@ -1,30 +1,29 @@
 {
-  "generatedAt": "2026-05-21T13:59:24.119Z",
+  "generatedAt": "2026-05-25T12:22:21.895Z",
   "summary": {
-    "filesChecked": 148,
+    "filesChecked": 161,
     "filesWithStructuredData": 91,
     "filesWithIssues": 0,
     "types": {
-      "Organization": 192,
+      "Organization": 259,
       "ImageObject": 86,
-      "Country": 70,
-      "ContactPoint": 128,
-      "WebSite": 67,
+      "Country": 68,
+      "ContactPoint": 130,
+      "WebSite": 68,
       "WebPage": 81,
-      "CreativeWork": 67,
-      "BreadcrumbList": 75,
-      "ListItem": 165,
-      "FAQPage": 71,
-      "Question": 446,
-      "Answer": 446,
+      "CreativeWork": 132,
+      "BreadcrumbList": 76,
+      "ListItem": 177,
+      "FAQPage": 74,
+      "Question": 460,
+      "Answer": 460,
+      "Article": 62,
       "GovernmentService": 14,
       "BlogPosting": 21,
       "Blog": 1,
       "WebApplication": 2,
       "Offer": 2,
       "Service": 10,
-      "LocalBusiness": 2,
-      "ProfessionalService": 2,
       "ContactPage": 1,
       "AboutPage": 1,
       "Audience": 6,
@@ -32,7 +31,6 @@
       "CollectionPage": 7,
       "DefinedTermSet": 1,
       "DefinedTerm": 19,
-      "Article": 2,
       "ItemList": 1
     }
   },
@@ -45,20 +43,27 @@
     },
     {
       "file": "acte-necesare-fonduri-europene-nerambursabile.html",
+      "blocks": 0,
+      "types": {},
+      "issues": []
+    },
+    {
+      "file": "acte-necesare-fonduri-europene-nerambursabile/index.html",
       "blocks": 1,
       "types": {
-        "Organization": 2,
+        "Organization": 3,
         "ImageObject": 1,
         "Country": 1,
         "ContactPoint": 2,
         "WebSite": 1,
         "WebPage": 1,
-        "CreativeWork": 1,
+        "CreativeWork": 2,
         "BreadcrumbList": 1,
         "ListItem": 2,
         "FAQPage": 1,
         "Question": 5,
-        "Answer": 5
+        "Answer": 5,
+        "Article": 1
       },
       "issues": []
     },
@@ -70,20 +75,27 @@
     },
     {
       "file": "afir-autoconsum-agroalimentar.html",
+      "blocks": 0,
+      "types": {},
+      "issues": []
+    },
+    {
+      "file": "afir-autoconsum-agroalimentar/index.html",
       "blocks": 1,
       "types": {
-        "Organization": 2,
+        "Organization": 3,
         "ImageObject": 1,
         "Country": 1,
         "ContactPoint": 2,
         "WebSite": 1,
         "WebPage": 1,
-        "CreativeWork": 1,
+        "CreativeWork": 2,
         "BreadcrumbList": 1,
         "ListItem": 2,
         "FAQPage": 1,
         "Question": 8,
         "Answer": 8,
+        "Article": 1,
         "GovernmentService": 1
       },
       "issues": []
@@ -98,6 +110,32 @@
       "file": "afir/index.html",
       "blocks": 1,
       "types": {
+        "Organization": 5,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 4,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 8,
+        "Answer": 8,
+        "Article": 1
+      },
+      "issues": []
+    },
+    {
+      "file": "autoconsum-public-fotovoltaice-institutii-publice.html",
+      "blocks": 0,
+      "types": {},
+      "issues": []
+    },
+    {
+      "file": "autoconsum-public-fotovoltaice-institutii-publice/index.html",
+      "blocks": 1,
+      "types": {
         "Organization": 3,
         "ImageObject": 1,
         "Country": 1,
@@ -109,26 +147,8 @@
         "ListItem": 2,
         "FAQPage": 1,
         "Question": 8,
-        "Answer": 8
-      },
-      "issues": []
-    },
-    {
-      "file": "autoconsum-public-fotovoltaice-institutii-publice.html",
-      "blocks": 1,
-      "types": {
-        "Organization": 2,
-        "ImageObject": 1,
-        "Country": 1,
-        "ContactPoint": 2,
-        "WebSite": 1,
-        "WebPage": 1,
-        "CreativeWork": 1,
-        "BreadcrumbList": 1,
-        "ListItem": 2,
-        "FAQPage": 1,
-        "Question": 8,
         "Answer": 8,
+        "Article": 1,
         "GovernmentService": 1
       },
       "issues": []
@@ -157,6 +177,12 @@
     },
     {
       "file": "blog.html",
+      "blocks": 0,
+      "types": {},
+      "issues": []
+    },
+    {
+      "file": "blog/index.html",
       "blocks": 2,
       "types": {
         "Blog": 1,
@@ -207,18 +233,19 @@
       "file": "calendar-fonduri-europene/index.html",
       "blocks": 1,
       "types": {
-        "Organization": 2,
+        "Organization": 3,
         "ImageObject": 1,
         "Country": 1,
         "ContactPoint": 2,
         "WebSite": 1,
         "WebPage": 1,
-        "CreativeWork": 1,
+        "CreativeWork": 2,
         "BreadcrumbList": 1,
         "ListItem": 2,
         "FAQPage": 1,
         "Question": 6,
-        "Answer": 6
+        "Answer": 6,
+        "Article": 1
       },
       "issues": []
     },
@@ -254,18 +281,19 @@
       "file": "cat-costa-consultanta-fonduri-europene/index.html",
       "blocks": 1,
       "types": {
-        "Organization": 2,
+        "Organization": 3,
         "ImageObject": 1,
         "Country": 1,
         "ContactPoint": 2,
         "WebSite": 1,
         "WebPage": 1,
-        "CreativeWork": 1,
+        "CreativeWork": 2,
         "BreadcrumbList": 1,
         "ListItem": 2,
         "FAQPage": 1,
         "Question": 6,
-        "Answer": 6
+        "Answer": 6,
+        "Article": 1
       },
       "issues": []
     },
@@ -306,18 +334,19 @@
       "file": "cod-caen-start-up-nation-2026/index.html",
       "blocks": 1,
       "types": {
-        "Organization": 2,
+        "Organization": 3,
         "ImageObject": 1,
         "Country": 1,
         "ContactPoint": 2,
         "WebSite": 1,
         "WebPage": 1,
-        "CreativeWork": 1,
+        "CreativeWork": 2,
         "BreadcrumbList": 1,
         "ListItem": 2,
         "FAQPage": 1,
         "Question": 8,
-        "Answer": 8
+        "Answer": 8,
+        "Article": 1
       },
       "issues": []
     },
@@ -342,18 +371,19 @@
       "file": "consultant-fonduri-europene-imm/index.html",
       "blocks": 1,
       "types": {
-        "Organization": 2,
+        "Organization": 3,
         "ImageObject": 1,
         "Country": 1,
         "ContactPoint": 2,
         "WebSite": 1,
         "WebPage": 1,
-        "CreativeWork": 1,
+        "CreativeWork": 2,
         "BreadcrumbList": 1,
         "ListItem": 2,
         "FAQPage": 1,
         "Question": 6,
         "Answer": 6,
+        "Article": 1,
         "Service": 1
       },
       "issues": []
@@ -368,18 +398,19 @@
       "file": "consultanta-afir/index.html",
       "blocks": 1,
       "types": {
-        "Organization": 3,
+        "Organization": 5,
         "ImageObject": 1,
         "Country": 1,
         "ContactPoint": 2,
         "WebSite": 1,
         "WebPage": 1,
-        "CreativeWork": 2,
+        "CreativeWork": 4,
         "BreadcrumbList": 1,
         "ListItem": 2,
         "FAQPage": 1,
         "Question": 6,
         "Answer": 6,
+        "Article": 1,
         "Service": 1
       },
       "issues": []
@@ -418,18 +449,19 @@
       "file": "consultanta-fonduri-europene/index.html",
       "blocks": 1,
       "types": {
-        "Organization": 8,
+        "Organization": 15,
         "ImageObject": 1,
         "Country": 1,
         "ContactPoint": 2,
         "WebSite": 1,
         "WebPage": 1,
-        "CreativeWork": 6,
+        "CreativeWork": 12,
         "BreadcrumbList": 1,
         "ListItem": 2,
         "FAQPage": 1,
-        "Question": 9,
-        "Answer": 9,
+        "Question": 13,
+        "Answer": 13,
+        "Article": 1,
         "Service": 1
       },
       "issues": []
@@ -444,18 +476,19 @@
       "file": "consultanta-pnrr-digitalizare/index.html",
       "blocks": 1,
       "types": {
-        "Organization": 2,
+        "Organization": 3,
         "ImageObject": 1,
         "Country": 1,
         "ContactPoint": 2,
         "WebSite": 1,
         "WebPage": 1,
-        "CreativeWork": 1,
+        "CreativeWork": 2,
         "BreadcrumbList": 1,
         "ListItem": 2,
         "FAQPage": 1,
         "Question": 6,
         "Answer": 6,
+        "Article": 1,
         "Service": 1
       },
       "issues": []
@@ -464,18 +497,19 @@
       "file": "consultanta-start-up-nation-2026/index.html",
       "blocks": 1,
       "types": {
-        "Organization": 2,
+        "Organization": 3,
         "ImageObject": 1,
         "Country": 1,
         "ContactPoint": 2,
         "WebSite": 1,
         "WebPage": 1,
-        "CreativeWork": 1,
+        "CreativeWork": 2,
         "BreadcrumbList": 1,
         "ListItem": 2,
         "FAQPage": 1,
         "Question": 8,
         "Answer": 8,
+        "Article": 1,
         "Service": 1
       },
       "issues": []
@@ -503,15 +537,14 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "ImageObject": 1,
-        "Country": 2,
         "ContactPoint": 2,
-        "LocalBusiness": 1,
-        "ProfessionalService": 1,
         "WebSite": 1,
         "ContactPage": 1,
         "BreadcrumbList": 1,
-        "ListItem": 2
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 3,
+        "Answer": 3
       },
       "issues": []
     },
@@ -525,18 +558,19 @@
       "file": "cum-alegi-consultant-fonduri-europene/index.html",
       "blocks": 1,
       "types": {
-        "Organization": 2,
+        "Organization": 3,
         "ImageObject": 1,
         "Country": 1,
         "ContactPoint": 2,
         "WebSite": 1,
         "WebPage": 1,
-        "CreativeWork": 1,
+        "CreativeWork": 2,
         "BreadcrumbList": 1,
         "ListItem": 2,
         "FAQPage": 1,
         "Question": 6,
-        "Answer": 6
+        "Answer": 6,
+        "Article": 1
       },
       "issues": []
     },
@@ -588,7 +622,10 @@
         "WebSite": 1,
         "AboutPage": 1,
         "BreadcrumbList": 1,
-        "ListItem": 2
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 4,
+        "Answer": 4
       },
       "issues": []
     },
@@ -613,25 +650,6 @@
       "file": "digitalizare-imm-pnrr/index.html",
       "blocks": 1,
       "types": {
-        "Organization": 2,
-        "ImageObject": 1,
-        "Country": 1,
-        "ContactPoint": 2,
-        "WebSite": 1,
-        "WebPage": 1,
-        "CreativeWork": 1,
-        "BreadcrumbList": 1,
-        "ListItem": 2,
-        "FAQPage": 1,
-        "Question": 6,
-        "Answer": 6
-      },
-      "issues": []
-    },
-    {
-      "file": "digitalizare-imm.html",
-      "blocks": 1,
-      "types": {
         "Organization": 3,
         "ImageObject": 1,
         "Country": 1,
@@ -642,8 +660,35 @@
         "BreadcrumbList": 1,
         "ListItem": 2,
         "FAQPage": 1,
+        "Question": 6,
+        "Answer": 6,
+        "Article": 1
+      },
+      "issues": []
+    },
+    {
+      "file": "digitalizare-imm.html",
+      "blocks": 0,
+      "types": {},
+      "issues": []
+    },
+    {
+      "file": "digitalizare-imm/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 5,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 4,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
         "Question": 10,
         "Answer": 10,
+        "Article": 1,
         "GovernmentService": 1
       },
       "issues": []
@@ -692,21 +737,28 @@
     },
     {
       "file": "dr12-afir.html",
+      "blocks": 0,
+      "types": {},
+      "issues": []
+    },
+    {
+      "file": "dr12-afir/index.html",
       "blocks": 1,
       "types": {
-        "Organization": 3,
+        "Organization": 5,
         "ImageObject": 1,
         "Country": 1,
         "ContactPoint": 2,
         "WebSite": 1,
         "WebPage": 1,
-        "CreativeWork": 1,
+        "CreativeWork": 2,
         "GovernmentService": 2,
         "BreadcrumbList": 1,
         "ListItem": 2,
         "FAQPage": 1,
         "Question": 6,
         "Answer": 6,
+        "Article": 1,
         "Audience": 3,
         "CommunicateAction": 1
       },
@@ -736,20 +788,27 @@
     },
     {
       "file": "dr14.html",
+      "blocks": 0,
+      "types": {},
+      "issues": []
+    },
+    {
+      "file": "dr14/index.html",
       "blocks": 1,
       "types": {
-        "Organization": 2,
+        "Organization": 3,
         "ImageObject": 1,
         "Country": 1,
         "ContactPoint": 2,
         "WebSite": 1,
         "WebPage": 1,
-        "CreativeWork": 1,
+        "CreativeWork": 2,
         "BreadcrumbList": 1,
         "ListItem": 2,
         "FAQPage": 1,
         "Question": 10,
         "Answer": 10,
+        "Article": 1,
         "GovernmentService": 1
       },
       "issues": []
@@ -764,18 +823,19 @@
       "file": "eligibilitate-fonduri-europene/index.html",
       "blocks": 1,
       "types": {
-        "Organization": 2,
+        "Organization": 3,
         "ImageObject": 1,
         "Country": 1,
         "ContactPoint": 2,
         "WebSite": 1,
         "WebPage": 1,
-        "CreativeWork": 1,
+        "CreativeWork": 2,
         "BreadcrumbList": 1,
         "ListItem": 2,
         "FAQPage": 1,
         "Question": 6,
-        "Answer": 6
+        "Answer": 6,
+        "Article": 1
       },
       "issues": []
     },
@@ -796,28 +856,29 @@
     },
     {
       "file": "femeia-antreprenor-2026.html",
+      "blocks": 0,
+      "types": {},
+      "issues": []
+    },
+    {
+      "file": "femeia-antreprenor-2026/index.html",
       "blocks": 1,
       "types": {
-        "Organization": 2,
+        "Organization": 3,
         "ImageObject": 1,
         "Country": 1,
         "ContactPoint": 2,
         "WebSite": 1,
         "WebPage": 1,
-        "CreativeWork": 1,
+        "CreativeWork": 2,
         "BreadcrumbList": 1,
         "ListItem": 2,
         "FAQPage": 1,
         "Question": 10,
         "Answer": 10,
+        "Article": 1,
         "GovernmentService": 1
       },
-      "issues": []
-    },
-    {
-      "file": "femeia-antreprenor-2026/index.html",
-      "blocks": 0,
-      "types": {},
       "issues": []
     },
     {
@@ -830,18 +891,19 @@
       "file": "finantari-panouri-fotovoltaice/index.html",
       "blocks": 1,
       "types": {
-        "Organization": 2,
+        "Organization": 3,
         "ImageObject": 1,
         "Country": 1,
         "ContactPoint": 2,
         "WebSite": 1,
         "WebPage": 1,
-        "CreativeWork": 1,
+        "CreativeWork": 2,
         "BreadcrumbList": 1,
         "ListItem": 2,
         "FAQPage": 1,
         "Question": 6,
-        "Answer": 6
+        "Answer": 6,
+        "Article": 1
       },
       "issues": []
     },
@@ -855,95 +917,31 @@
       "file": "firma-consultanta-fonduri-europene/index.html",
       "blocks": 1,
       "types": {
-        "Organization": 2,
+        "Organization": 3,
         "ImageObject": 1,
         "Country": 1,
         "ContactPoint": 2,
         "WebSite": 1,
         "WebPage": 1,
-        "CreativeWork": 1,
+        "CreativeWork": 2,
         "BreadcrumbList": 1,
         "ListItem": 2,
         "FAQPage": 1,
         "Question": 6,
         "Answer": 6,
+        "Article": 1,
         "Service": 1
       },
       "issues": []
     },
     {
       "file": "fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum.html",
-      "blocks": 1,
-      "types": {
-        "Organization": 2,
-        "ImageObject": 1,
-        "Country": 1,
-        "ContactPoint": 2,
-        "WebSite": 1,
-        "WebPage": 1,
-        "CreativeWork": 1,
-        "BreadcrumbList": 1,
-        "ListItem": 2,
-        "FAQPage": 1,
-        "Question": 8,
-        "Answer": 8,
-        "GovernmentService": 1
-      },
-      "issues": []
-    },
-    {
-      "file": "fondul-de-modernizare.html",
       "blocks": 0,
       "types": {},
       "issues": []
     },
     {
-      "file": "fondul-de-modernizare/index.html",
-      "blocks": 1,
-      "types": {
-        "Organization": 2,
-        "ImageObject": 1,
-        "Country": 1,
-        "ContactPoint": 2,
-        "WebSite": 1,
-        "WebPage": 1,
-        "CreativeWork": 1,
-        "BreadcrumbList": 1,
-        "ListItem": 2,
-        "FAQPage": 1,
-        "Question": 6,
-        "Answer": 6
-      },
-      "issues": []
-    },
-    {
-      "file": "fondul-modernizare-energie-regenerabila-2026.html",
-      "blocks": 1,
-      "types": {
-        "Organization": 2,
-        "ImageObject": 1,
-        "Country": 1,
-        "ContactPoint": 2,
-        "WebSite": 1,
-        "WebPage": 1,
-        "CreativeWork": 1,
-        "BreadcrumbList": 1,
-        "ListItem": 2,
-        "FAQPage": 1,
-        "Question": 10,
-        "Answer": 10,
-        "GovernmentService": 1
-      },
-      "issues": []
-    },
-    {
-      "file": "fonduri-europene-agricultura.html",
-      "blocks": 0,
-      "types": {},
-      "issues": []
-    },
-    {
-      "file": "fonduri-europene-agricultura/index.html",
+      "file": "fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum/index.html",
       "blocks": 1,
       "types": {
         "Organization": 3,
@@ -958,6 +956,87 @@
         "FAQPage": 1,
         "Question": 8,
         "Answer": 8,
+        "Article": 1,
+        "GovernmentService": 1
+      },
+      "issues": []
+    },
+    {
+      "file": "fondul-de-modernizare.html",
+      "blocks": 0,
+      "types": {},
+      "issues": []
+    },
+    {
+      "file": "fondul-de-modernizare/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 3,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 2,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 6,
+        "Answer": 6,
+        "Article": 1
+      },
+      "issues": []
+    },
+    {
+      "file": "fondul-modernizare-energie-regenerabila-2026.html",
+      "blocks": 0,
+      "types": {},
+      "issues": []
+    },
+    {
+      "file": "fondul-modernizare-energie-regenerabila-2026/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 3,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 2,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 10,
+        "Answer": 10,
+        "Article": 1,
+        "GovernmentService": 1
+      },
+      "issues": []
+    },
+    {
+      "file": "fonduri-europene-agricultura.html",
+      "blocks": 0,
+      "types": {},
+      "issues": []
+    },
+    {
+      "file": "fonduri-europene-agricultura/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 5,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 4,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 8,
+        "Answer": 8,
+        "Article": 1,
         "Service": 1
       },
       "issues": []
@@ -986,6 +1065,7 @@
         "WebPage": 1,
         "BreadcrumbList": 1,
         "ListItem": 2,
+        "Article": 1,
         "FAQPage": 1,
         "Question": 4,
         "Answer": 4
@@ -1004,6 +1084,7 @@
         "WebPage": 1,
         "BreadcrumbList": 1,
         "ListItem": 2,
+        "Article": 1,
         "FAQPage": 1,
         "Question": 4,
         "Answer": 4
@@ -1022,6 +1103,7 @@
         "WebPage": 1,
         "BreadcrumbList": 1,
         "ListItem": 2,
+        "Article": 1,
         "FAQPage": 1,
         "Question": 4,
         "Answer": 4
@@ -1040,6 +1122,7 @@
         "WebPage": 1,
         "BreadcrumbList": 1,
         "ListItem": 2,
+        "Article": 1,
         "FAQPage": 1,
         "Question": 4,
         "Answer": 4
@@ -1056,18 +1139,19 @@
       "file": "fonduri-europene-digitalizare/index.html",
       "blocks": 1,
       "types": {
-        "Organization": 2,
+        "Organization": 3,
         "ImageObject": 1,
         "Country": 1,
         "ContactPoint": 2,
         "WebSite": 1,
         "WebPage": 1,
-        "CreativeWork": 1,
+        "CreativeWork": 2,
         "BreadcrumbList": 1,
         "ListItem": 2,
         "FAQPage": 1,
         "Question": 8,
         "Answer": 8,
+        "Article": 1,
         "Service": 1
       },
       "issues": []
@@ -1082,18 +1166,19 @@
       "file": "fonduri-europene-femei-antreprenor/index.html",
       "blocks": 1,
       "types": {
-        "Organization": 2,
+        "Organization": 3,
         "ImageObject": 1,
         "Country": 1,
         "ContactPoint": 2,
         "WebSite": 1,
         "WebPage": 1,
-        "CreativeWork": 1,
+        "CreativeWork": 2,
         "BreadcrumbList": 1,
         "ListItem": 2,
         "FAQPage": 1,
         "Question": 6,
-        "Answer": 6
+        "Answer": 6,
+        "Article": 1
       },
       "issues": []
     },
@@ -1125,18 +1210,19 @@
       "file": "fonduri-europene-imm/index.html",
       "blocks": 1,
       "types": {
-        "Organization": 2,
+        "Organization": 3,
         "ImageObject": 1,
         "Country": 1,
         "ContactPoint": 2,
         "WebSite": 1,
         "WebPage": 1,
-        "CreativeWork": 1,
+        "CreativeWork": 2,
         "BreadcrumbList": 1,
         "ListItem": 2,
         "FAQPage": 1,
         "Question": 10,
         "Answer": 10,
+        "Article": 1,
         "Service": 1
       },
       "issues": []
@@ -1151,18 +1237,19 @@
       "file": "fonduri-europene-nerambursabile-2026/index.html",
       "blocks": 1,
       "types": {
-        "Organization": 2,
+        "Organization": 3,
         "ImageObject": 1,
         "Country": 1,
         "ContactPoint": 2,
         "WebSite": 1,
         "WebPage": 1,
-        "CreativeWork": 1,
+        "CreativeWork": 2,
         "BreadcrumbList": 1,
         "ListItem": 2,
         "FAQPage": 1,
         "Question": 10,
-        "Answer": 10
+        "Answer": 10,
+        "Article": 1
       },
       "issues": []
     },
@@ -1171,9 +1258,14 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
         "WebPage": 1,
         "BreadcrumbList": 1,
-        "ListItem": 3,
+        "ListItem": 2,
+        "Article": 1,
         "FAQPage": 1,
         "Question": 4,
         "Answer": 4
@@ -1196,18 +1288,19 @@
       "file": "fonduri-europene/index.html",
       "blocks": 1,
       "types": {
-        "Organization": 2,
+        "Organization": 3,
         "ImageObject": 1,
         "Country": 1,
         "ContactPoint": 2,
         "WebSite": 1,
         "WebPage": 1,
-        "CreativeWork": 1,
+        "CreativeWork": 2,
         "BreadcrumbList": 1,
         "ListItem": 2,
         "FAQPage": 1,
         "Question": 10,
-        "Answer": 10
+        "Answer": 10,
+        "Article": 1
       },
       "issues": []
     },
@@ -1221,18 +1314,19 @@
       "file": "fonduri-nerambursabile/index.html",
       "blocks": 1,
       "types": {
-        "Organization": 2,
+        "Organization": 3,
         "ImageObject": 1,
         "Country": 1,
         "ContactPoint": 2,
         "WebSite": 1,
         "WebPage": 1,
-        "CreativeWork": 1,
+        "CreativeWork": 2,
         "BreadcrumbList": 1,
         "ListItem": 2,
         "FAQPage": 1,
         "Question": 8,
-        "Answer": 8
+        "Answer": 8,
+        "Article": 1
       },
       "issues": []
     },
@@ -1246,18 +1340,19 @@
       "file": "fonduri-pentru-ferme/index.html",
       "blocks": 1,
       "types": {
-        "Organization": 3,
+        "Organization": 5,
         "ImageObject": 1,
         "Country": 1,
         "ContactPoint": 2,
         "WebSite": 1,
         "WebPage": 1,
-        "CreativeWork": 2,
+        "CreativeWork": 4,
         "BreadcrumbList": 1,
         "ListItem": 2,
         "FAQPage": 1,
         "Question": 6,
-        "Answer": 6
+        "Answer": 6,
+        "Article": 1
       },
       "issues": []
     },
@@ -1271,18 +1366,19 @@
       "file": "fonduri-pentru-utilaje-agricole/index.html",
       "blocks": 1,
       "types": {
-        "Organization": 3,
+        "Organization": 5,
         "ImageObject": 1,
         "Country": 1,
         "ContactPoint": 2,
         "WebSite": 1,
         "WebPage": 1,
-        "CreativeWork": 2,
+        "CreativeWork": 4,
         "BreadcrumbList": 1,
         "ListItem": 2,
         "FAQPage": 1,
         "Question": 6,
-        "Answer": 6
+        "Answer": 6,
+        "Article": 1
       },
       "issues": []
     },
@@ -1302,18 +1398,19 @@
       "file": "ghiduri/index.html",
       "blocks": 1,
       "types": {
-        "Organization": 2,
+        "Organization": 3,
         "ImageObject": 1,
         "Country": 1,
         "ContactPoint": 2,
         "WebSite": 1,
         "CollectionPage": 1,
-        "CreativeWork": 1,
+        "CreativeWork": 2,
         "BreadcrumbList": 1,
         "ListItem": 2,
         "FAQPage": 1,
         "Question": 5,
-        "Answer": 5
+        "Answer": 5,
+        "Article": 1
       },
       "issues": []
     },
@@ -1349,18 +1446,19 @@
       "file": "granturi-digitalizare-imm/index.html",
       "blocks": 1,
       "types": {
-        "Organization": 2,
+        "Organization": 3,
         "ImageObject": 1,
         "Country": 1,
         "ContactPoint": 2,
         "WebSite": 1,
         "WebPage": 1,
-        "CreativeWork": 1,
+        "CreativeWork": 2,
         "BreadcrumbList": 1,
         "ListItem": 2,
         "FAQPage": 1,
         "Question": 6,
-        "Answer": 6
+        "Answer": 6,
+        "Article": 1
       },
       "issues": []
     },
@@ -1374,18 +1472,19 @@
       "file": "greseli-fonduri-europene/index.html",
       "blocks": 1,
       "types": {
-        "Organization": 2,
+        "Organization": 3,
         "ImageObject": 1,
         "Country": 1,
         "ContactPoint": 2,
         "WebSite": 1,
         "WebPage": 1,
-        "CreativeWork": 1,
+        "CreativeWork": 2,
         "BreadcrumbList": 1,
         "ListItem": 2,
         "FAQPage": 1,
         "Question": 6,
-        "Answer": 6
+        "Answer": 6,
+        "Article": 1
       },
       "issues": []
     },
@@ -1411,12 +1510,15 @@
       "types": {
         "Organization": 1,
         "ImageObject": 1,
-        "Country": 2,
+        "Country": 1,
         "ContactPoint": 2,
-        "LocalBusiness": 1,
-        "ProfessionalService": 1,
         "WebSite": 1,
-        "WebPage": 1
+        "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 13,
+        "FAQPage": 1,
+        "Question": 3,
+        "Answer": 3
       },
       "issues": []
     },
@@ -1451,18 +1553,19 @@
       "file": "intrebari-frecvente/index.html",
       "blocks": 1,
       "types": {
-        "Organization": 2,
+        "Organization": 3,
         "ImageObject": 1,
         "Country": 1,
         "ContactPoint": 2,
         "WebSite": 1,
         "WebPage": 1,
-        "CreativeWork": 1,
+        "CreativeWork": 2,
         "BreadcrumbList": 1,
         "ListItem": 2,
         "FAQPage": 1,
         "Question": 6,
-        "Answer": 6
+        "Answer": 6,
+        "Article": 1
       },
       "issues": []
     },
@@ -1478,6 +1581,7 @@
         "WebPage": 1,
         "BreadcrumbList": 1,
         "ListItem": 2,
+        "Article": 1,
         "FAQPage": 1,
         "Question": 4,
         "Answer": 4
@@ -1496,6 +1600,7 @@
         "WebPage": 1,
         "BreadcrumbList": 1,
         "ListItem": 2,
+        "Article": 1,
         "FAQPage": 1,
         "Question": 4,
         "Answer": 4
@@ -1514,6 +1619,7 @@
         "WebPage": 1,
         "BreadcrumbList": 1,
         "ListItem": 2,
+        "Article": 1,
         "FAQPage": 1,
         "Question": 4,
         "Answer": 4
@@ -1522,20 +1628,27 @@
     },
     {
       "file": "investitii-modernizarea-microintreprinderilor-apel-2.html",
+      "blocks": 0,
+      "types": {},
+      "issues": []
+    },
+    {
+      "file": "investitii-modernizarea-microintreprinderilor-apel-2/index.html",
       "blocks": 1,
       "types": {
-        "Organization": 2,
+        "Organization": 3,
         "ImageObject": 1,
         "Country": 1,
         "ContactPoint": 2,
         "WebSite": 1,
         "WebPage": 1,
-        "CreativeWork": 1,
+        "CreativeWork": 2,
         "BreadcrumbList": 1,
         "ListItem": 2,
         "FAQPage": 1,
         "Question": 10,
         "Answer": 10,
+        "Article": 1,
         "GovernmentService": 1
       },
       "issues": []
@@ -1583,18 +1696,19 @@
       "file": "pnrr/index.html",
       "blocks": 1,
       "types": {
-        "Organization": 2,
+        "Organization": 3,
         "ImageObject": 1,
         "Country": 1,
         "ContactPoint": 2,
         "WebSite": 1,
         "WebPage": 1,
-        "CreativeWork": 1,
+        "CreativeWork": 2,
         "BreadcrumbList": 1,
         "ListItem": 2,
         "FAQPage": 1,
         "Question": 8,
-        "Answer": 8
+        "Answer": 8,
+        "Article": 1
       },
       "issues": []
     },
@@ -1606,20 +1720,27 @@
     },
     {
       "file": "por-adr-nord-est.html",
+      "blocks": 0,
+      "types": {},
+      "issues": []
+    },
+    {
+      "file": "por-adr-nord-est/index.html",
       "blocks": 1,
       "types": {
-        "Organization": 2,
+        "Organization": 3,
         "ImageObject": 1,
         "Country": 1,
         "ContactPoint": 2,
         "WebSite": 1,
         "WebPage": 1,
-        "CreativeWork": 1,
+        "CreativeWork": 2,
         "BreadcrumbList": 1,
         "ListItem": 2,
         "FAQPage": 1,
         "Question": 8,
         "Answer": 8,
+        "Article": 1,
         "GovernmentService": 1
       },
       "issues": []
@@ -1628,37 +1749,45 @@
       "file": "portofoliu/index.html",
       "blocks": 1,
       "types": {
-        "Organization": 2,
+        "Organization": 3,
         "ImageObject": 1,
         "Country": 1,
         "ContactPoint": 2,
         "WebSite": 1,
         "CollectionPage": 1,
-        "CreativeWork": 1,
+        "CreativeWork": 2,
         "BreadcrumbList": 1,
         "ListItem": 2,
         "FAQPage": 1,
         "Question": 5,
-        "Answer": 5
+        "Answer": 5,
+        "Article": 1
       },
       "issues": []
     },
     {
       "file": "pro-infra.html",
+      "blocks": 0,
+      "types": {},
+      "issues": []
+    },
+    {
+      "file": "pro-infra/index.html",
       "blocks": 1,
       "types": {
-        "Organization": 4,
+        "Organization": 7,
         "ImageObject": 1,
         "Country": 1,
         "ContactPoint": 2,
         "WebSite": 1,
         "WebPage": 1,
-        "CreativeWork": 3,
+        "CreativeWork": 6,
         "BreadcrumbList": 1,
         "ListItem": 2,
         "FAQPage": 1,
         "Question": 10,
         "Answer": 10,
+        "Article": 1,
         "GovernmentService": 1
       },
       "issues": []
@@ -1667,18 +1796,19 @@
       "file": "resurse/index.html",
       "blocks": 1,
       "types": {
-        "Organization": 2,
+        "Organization": 3,
         "ImageObject": 1,
         "Country": 1,
         "ContactPoint": 2,
         "WebSite": 1,
         "CollectionPage": 1,
-        "CreativeWork": 1,
+        "CreativeWork": 2,
         "BreadcrumbList": 1,
         "ListItem": 2,
         "FAQPage": 1,
         "Question": 5,
-        "Answer": 5
+        "Answer": 5,
+        "Article": 1
       },
       "issues": []
     },
@@ -1692,18 +1822,19 @@
       "file": "start-up-nation-2026-cheltuieli-eligibile/index.html",
       "blocks": 1,
       "types": {
-        "Organization": 2,
+        "Organization": 3,
         "ImageObject": 1,
         "Country": 1,
         "ContactPoint": 2,
         "WebSite": 1,
         "WebPage": 1,
-        "CreativeWork": 1,
+        "CreativeWork": 2,
         "BreadcrumbList": 1,
         "ListItem": 2,
         "FAQPage": 1,
         "Question": 6,
-        "Answer": 6
+        "Answer": 6,
+        "Article": 1
       },
       "issues": []
     },
@@ -1717,18 +1848,19 @@
       "file": "start-up-nation-2026-conditii/index.html",
       "blocks": 1,
       "types": {
-        "Organization": 2,
+        "Organization": 3,
         "ImageObject": 1,
         "Country": 1,
         "ContactPoint": 2,
         "WebSite": 1,
         "WebPage": 1,
-        "CreativeWork": 1,
+        "CreativeWork": 2,
         "BreadcrumbList": 1,
         "ListItem": 2,
         "FAQPage": 1,
         "Question": 6,
-        "Answer": 6
+        "Answer": 6,
+        "Article": 1
       },
       "issues": []
     },
@@ -1748,18 +1880,19 @@
       "file": "start-up-nation-2026-idei-afaceri/index.html",
       "blocks": 1,
       "types": {
-        "Organization": 2,
+        "Organization": 3,
         "ImageObject": 1,
         "Country": 1,
         "ContactPoint": 2,
         "WebSite": 1,
         "WebPage": 1,
-        "CreativeWork": 1,
+        "CreativeWork": 2,
         "BreadcrumbList": 1,
         "ListItem": 2,
         "FAQPage": 1,
         "Question": 6,
-        "Answer": 6
+        "Answer": 6,
+        "Article": 1
       },
       "issues": []
     },
@@ -1773,47 +1906,49 @@
       "file": "start-up-nation-2026-plan-de-afaceri/index.html",
       "blocks": 1,
       "types": {
-        "Organization": 2,
+        "Organization": 3,
         "ImageObject": 1,
         "Country": 1,
         "ContactPoint": 2,
         "WebSite": 1,
         "WebPage": 1,
-        "CreativeWork": 1,
+        "CreativeWork": 2,
         "BreadcrumbList": 1,
         "ListItem": 2,
         "FAQPage": 1,
         "Question": 6,
-        "Answer": 6
+        "Answer": 6,
+        "Article": 1
       },
       "issues": []
     },
     {
       "file": "start-up-nation-2026.html",
+      "blocks": 0,
+      "types": {},
+      "issues": []
+    },
+    {
+      "file": "start-up-nation-2026/index.html",
       "blocks": 1,
       "types": {
-        "Organization": 2,
+        "Organization": 3,
         "ImageObject": 1,
         "Country": 1,
         "ContactPoint": 2,
         "WebSite": 1,
         "WebPage": 1,
-        "CreativeWork": 1,
+        "CreativeWork": 2,
         "GovernmentService": 2,
         "BreadcrumbList": 1,
         "ListItem": 2,
         "FAQPage": 1,
         "Question": 6,
         "Answer": 6,
+        "Article": 1,
         "Audience": 3,
         "CommunicateAction": 1
       },
-      "issues": []
-    },
-    {
-      "file": "start-up-nation-2026/index.html",
-      "blocks": 0,
-      "types": {},
       "issues": []
     },
     {
@@ -1864,18 +1999,19 @@
       "file": "studii-de-caz/index.html",
       "blocks": 1,
       "types": {
-        "Organization": 2,
+        "Organization": 3,
         "ImageObject": 1,
         "Country": 1,
         "ContactPoint": 2,
         "WebSite": 1,
         "CollectionPage": 1,
-        "CreativeWork": 1,
+        "CreativeWork": 2,
         "BreadcrumbList": 1,
         "ListItem": 2,
         "FAQPage": 1,
         "Question": 5,
-        "Answer": 5
+        "Answer": 5,
+        "Article": 1
       },
       "issues": []
     },
@@ -1901,21 +2037,28 @@
       "issues": []
     },
     {
+      "file": "testimoniale.html",
+      "blocks": 0,
+      "types": {},
+      "issues": []
+    },
+    {
       "file": "testimoniale/index.html",
       "blocks": 1,
       "types": {
-        "Organization": 2,
+        "Organization": 3,
         "ImageObject": 1,
         "Country": 1,
         "ContactPoint": 2,
         "WebSite": 1,
         "CollectionPage": 1,
-        "CreativeWork": 1,
+        "CreativeWork": 2,
         "BreadcrumbList": 1,
         "ListItem": 2,
         "FAQPage": 1,
         "Question": 5,
-        "Answer": 5
+        "Answer": 5,
+        "Article": 1
       },
       "issues": []
     },
@@ -1923,18 +2066,19 @@
       "file": "verificare-eligibilitate-fonduri-europene/index.html",
       "blocks": 1,
       "types": {
-        "Organization": 2,
+        "Organization": 3,
         "ImageObject": 1,
         "Country": 1,
         "ContactPoint": 2,
         "WebSite": 1,
         "WebPage": 1,
-        "CreativeWork": 1,
+        "CreativeWork": 2,
         "BreadcrumbList": 1,
         "ListItem": 2,
         "FAQPage": 1,
         "Question": 10,
         "Answer": 10,
+        "Article": 1,
         "Service": 1
       },
       "issues": []
@@ -1943,18 +2087,19 @@
       "file": "webinarii/index.html",
       "blocks": 1,
       "types": {
-        "Organization": 2,
+        "Organization": 3,
         "ImageObject": 1,
         "Country": 1,
         "ContactPoint": 2,
         "WebSite": 1,
         "CollectionPage": 1,
-        "CreativeWork": 1,
+        "CreativeWork": 2,
         "BreadcrumbList": 1,
         "ListItem": 2,
         "FAQPage": 1,
         "Question": 5,
-        "Answer": 5
+        "Answer": 5,
+        "Article": 1
       },
       "issues": []
     }

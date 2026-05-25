@@ -104,8 +104,18 @@ function writeJson(file, value) {
   fs.writeFileSync(file, `${JSON.stringify(value, null, 2)}\n`, "utf8");
 }
 
+function publicText(value, fallback = "In curs de validare") {
+  const text = String(value ?? "").trim();
+  if (!text || /^TODO_/i.test(text)) return fallback;
+  return text
+    .replace(/TODO_CLIENT_[A-Z0-9_ -]*/gi, fallback)
+    .replace(/TODO_SURSA_OFICIALA[A-Z0-9_ -]*/gi, "Se confirma in ghidul activ")
+    .replace(/TODO_DATA_ACCESARII/gi, "In curs de actualizare")
+    .replace(/TODO_VERIFICARE_GHID[A-Z0-9_ -]*/gi, "Se verifica in ghidul activ");
+}
+
 function esc(value) {
-  return String(value ?? "")
+  return publicText(value)
     .replace(/&/g, "&amp;")
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;")
@@ -328,6 +338,25 @@ function schemaGraph(page, config) {
     faqPageSchema(faq, { minItems: 2 })
   ];
 
+  if (page.type !== "tools") {
+    const articleNode = {
+      "@type": "Article",
+      "@id": `${canonical(page)}#article`,
+      "mainEntityOfPage": { "@id": pageNode["@id"] },
+      "headline": publicText(page.h1 || page.title),
+      "description": publicText(page.description),
+      "inLanguage": "ro-RO",
+      "author": { "@id": `${SITE}/#organization` },
+      "publisher": { "@id": `${SITE}/#organization` },
+      "dateModified": config.updatedAt
+    };
+    if (editorial) Object.assign(articleNode, editorialSchemaProperties(editorial));
+    if (Array.isArray(page.sourceKeys) && page.sourceKeys.length) {
+      articleNode.citation = officialSourceCitations(page.sourceKeys);
+    }
+    graph.push(articleNode);
+  }
+
   if (page.type === "program" || page.type === "service" || page.schemaType === "Service" || page.schemaType === "GovernmentService") {
     const serviceNode = serviceSchema({
       type: page.schemaType === "GovernmentService" ? "GovernmentService" : "Service",
@@ -441,10 +470,10 @@ function renderPreparationSteps(steps) {
 function renderCaseExample(example) {
   const item = example || {};
   const rows = [
-    ["Tip beneficiar", item.beneficiary || "TODO_CLIENT_EXEMPLU"],
-    ["Obiectiv investi\u021bie", item.investmentObjective || "TODO_CLIENT_EXEMPLU"],
-    ["Provoc\u0103ri", item.challenges || "TODO_CLIENT_EXEMPLU"],
-    ["Ce s-a verificat", item.checked || "TODO_CLIENT_EXEMPLU"]
+    ["Tip beneficiar", item.beneficiary || "Exemplu anonimizat in curs de validare"],
+    ["Obiectiv investi\u021bie", item.investmentObjective || "Date in curs de validare"],
+    ["Provoc\u0103ri", item.challenges || "Date in curs de validare"],
+    ["Ce s-a verificat", item.checked || "Date in curs de validare"]
   ];
   return `${item.note ? `<p class="note">${esc(item.note)}</p>` : ""}
       <div class="table-wrap">
@@ -474,7 +503,7 @@ ${editorialHtml}
       <h2>R\u0103spuns scurt</h2>
       <p class="intro">${esc(page.quickAnswer)}</p>
       ${renderEditorialTable("Cine poate aplica", ["Tip solicitant", "Eligibilitate posibil\u0103", "Ce trebuie verificat", "Observa\u021bii"], page.applicantRows)}
-      ${renderEditorialTable("Ce investi\u021bii pot fi eligibile", ["Categorie cheltuial\u0103", "Exemple", "Aten\u021bie la", "Surs\u0103/TODO"], page.eligibleInvestmentRows)}
+      ${renderEditorialTable("Ce investi\u021bii pot fi eligibile", ["Categorie cheltuial\u0103", "Exemple", "Aten\u021bie la", "Sursa"], page.eligibleInvestmentRows)}
       ${renderEditorialTable("Documente necesare", ["Document", "Cine \u00eel preg\u0103te\u0219te", "C\u00e2nd este necesar", "Risc dac\u0103 lipse\u0219te"], page.documentRows)}
       <h2>Pa\u0219i de preg\u0103tire</h2>
       ${renderPreparationSteps(page.preparationSteps)}
@@ -633,6 +662,60 @@ ${editorialHtml}
         </table>
       </div>
 
+      <h2>Programe, CAEN si exemple numerice 2026</h2>
+      <p>Exemplele de mai jos sunt orientative si folosesc procente simple ca exercitiu de buget. Pragurile, intensitatea sprijinului, punctajul si calendarul se confirma in ghidul activ al fiecarui apel.</p>
+      <div class="table-wrap">
+        <table class="program-table">
+          <thead>
+            <tr>
+              <th>Program</th>
+              <th>CAEN sau profil potrivit</th>
+              <th>Buget / sprijin orientativ</th>
+              <th>Exemplu numeric prudent</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>AFIR DR12</td>
+              <td>Tineri fermieri si investitii agricole, conform ghidului activ.</td>
+              <td>Pragurile se confirma in documentele AFIR pentru sesiunea activa.</td>
+              <td>La o investitie eligibila de 100.000 EUR si contributie proprie de 30%, beneficiarul pregateste 30.000 EUR contributie si verifica documentele pentru diferenta finantata.</td>
+            </tr>
+            <tr>
+              <td>AFIR DR14</td>
+              <td>Ferme mici, modernizare si investitii direct legate de exploatatie.</td>
+              <td>Sprijinul si intensitatea se confirma in ghidul DR14 activ.</td>
+              <td>La 40.000 EUR cheltuieli eligibile si sprijin estimat de 85%, analiza bugetului porneste de la 34.000 EUR grant si 6.000 EUR contributie.</td>
+            </tr>
+            <tr>
+              <td>Digitalizare IMM</td>
+              <td>CAEN 6201, servicii, productie sau comert cu nevoie reala de software, hardware si securitate.</td>
+              <td>Bugetul maxim si procentul se confirma in apelul activ.</td>
+              <td>Un proiect de 60.000 EUR poate include software, echipamente si instruire; la 90% sprijin orientativ, contributia proprie estimata este 6.000 EUR.</td>
+            </tr>
+            <tr>
+              <td>Program Regional Nord-Est</td>
+              <td>Microintreprinderi si IMM-uri cu investitii productive sau modernizare, in functie de regiune si CAEN.</td>
+              <td>Intervalele si cofinantarea depind de ghidul ADR activ.</td>
+              <td>La 150.000 EUR cheltuieli eligibile si 80% sprijin orientativ, grantul estimat este 120.000 EUR, iar contributia 30.000 EUR.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="table-wrap">
+        <table class="program-table">
+          <thead>
+            <tr><th>Cod CAEN</th><th>Exemplu de investitie</th><th>Program de verificat</th><th>Risc frecvent</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>0111</td><td>utilaje pentru culturi de camp</td><td>AFIR / agricultura</td><td>dimensiune economica sau documente agricole incomplete</td></tr>
+            <tr><td>4321</td><td>echipamente pentru instalatii electrice</td><td>regional, energie, digitalizare</td><td>legatura slaba intre achizitie si activitatea autorizata</td></tr>
+            <tr><td>5610</td><td>dotari restaurant si eficienta operationala</td><td>regional / IMM</td><td>cheltuieli care nu sustin punctajul apelului</td></tr>
+            <tr><td>6201</td><td>software, echipamente IT, securitate cibernetica</td><td>Digitalizare IMM / programe regionale</td><td>buget IT prea general sau indicatori neclar formulati</td></tr>
+          </tbody>
+        </table>
+      </div>
+
       <h2>Cum decurge procesul</h2>
       <ol class="process-list">
         <li><strong>Discuție inițială.</strong> Clarificăm solicitantul, investiția, bugetul și termenul dorit.</li>
@@ -694,8 +777,10 @@ ${editorialHtml}
       <p>Există situații în care o amânare este mai sănătoasă decât o depunere rapidă. Dacă documentele pentru spațiu nu acoperă perioada cerută, dacă ofertele nu descriu suficient cheltuielile, dacă solicitantul nu poate susține cofinanțarea sau dacă activitatea nu este clar legată de investiție, dosarul trebuie corectat înainte de depunere. Aceeași prudență se aplică atunci când programul este încă în consultare, când ghidul nu este final sau când informațiile publice nu permit o estimare serioasă a punctajului. În aceste cazuri, rolul consultanței este să protejeze beneficiarul de decizii costisitoare, nu să forțeze un dosar doar pentru a respecta un calendar comercial. Concluzia trebuie documentată și revizuită când apar reguli noi.</p>
       <p>Pentru proiectele aflate la limită, recomandarea poate fi pregătirea documentelor lipsă, ajustarea investiției, schimbarea calendarului sau urmărirea unui apel viitor. Această etapă nu blochează proiectul; îl face mai ușor de apărat la evaluare.</p>
 
-      <h2>Întrebări frecvente</h2>
-      ${faqHtml}
+      <section class="faq" aria-labelledby="consultanta-faq">
+        <h2 id="consultanta-faq">Intrebari frecvente</h2>
+        ${faqHtml}
+      </section>
 
       <h2>Surse și metodologie</h2>
       <p>Metodologia FABER pornește de la verificarea eligibilității, a documentelor, a grilei de punctaj și a riscurilor de implementare. Pentru decizii finale se verifică întotdeauna ghidul oficial, anexele, corrigendumurile și comunicările autorității.</p>
@@ -813,14 +898,14 @@ function pageHtml(page, config) {
   const extraCss = `${relatedCss}${toolCss}${sourcesCss}`;
   const extraJs = page.includeTools ? `\n  <script src="/assets/seo-tools.js" defer></script>` : "";
   const isConsultantaPillar = page.slug === "consultanta-fonduri-europene";
-  const primaryCta = isConsultantaPillar ? "Solicita verificare eligibilitate" : "Verifica eligibilitatea";
+  const primaryCta = "Solicita verificare eligibilitate";
   const secondaryCta = isConsultantaPillar ? "Vezi metodologia" : "Discuta cu un consultant";
   const secondaryHref = isConsultantaPillar ? "/metodologie-verificare-eligibilitate" : "/contact";
   const finalCtaTitle = isEditorialProgram(page) ? "Verificare eligibilitate" : "Urmatorul pas";
   const finalCtaText = isEditorialProgram(page)
     ? "Trimite-ne codul CAEN / tipul fermei / investi\u021bia dorit\u0103 pentru verificarea eligibilit\u0103\u021bii."
     : "Trimite cateva detalii despre solicitant, localitate, cod CAEN, investitie si buget. Raspunsul initial este orientativ si nu reprezinta promisiune de finantare.";
-  const finalPrimaryCta = isEditorialProgram(page) ? "Trimite datele pentru verificare" : "Trimite datele proiectului";
+  const finalPrimaryCta = "Solicita verificare eligibilitate";
   return `<!DOCTYPE html>
 <html lang="ro">
 <head>
@@ -887,10 +972,35 @@ ${renderMainContent(page)}
 `;
 }
 
+function redirectFallbackHtml(page) {
+  const target = slugPath(page);
+  return `<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Redirectionare | ${esc(page.h1 || page.title)}</title>
+  <meta name="robots" content="noindex, follow" />
+  <link rel="canonical" href="${canonical(page)}" />
+  <meta http-equiv="refresh" content="0; url=${target}" />
+  <script>window.location.replace('${target}');</script>
+${CLARITY_TRACKING_CODE}
+</head>
+<body></body>
+</html>
+`;
+}
+
 function ensureFile(page, html) {
-  const file = path.join(ROOT, page.output);
-  fs.mkdirSync(path.dirname(file), { recursive: true });
-  fs.writeFileSync(file, html, "utf8");
+  const canonicalFile = path.join(ROOT, slugPath(page).slice(1), "index.html");
+  fs.mkdirSync(path.dirname(canonicalFile), { recursive: true });
+  fs.writeFileSync(canonicalFile, html, "utf8");
+
+  if (/\.html$/i.test(page.output) && !/\/index\.html$/i.test(page.output.replace(/\\/g, "/"))) {
+    const legacyFile = path.join(ROOT, page.output);
+    fs.mkdirSync(path.dirname(legacyFile), { recursive: true });
+    fs.writeFileSync(legacyFile, redirectFallbackHtml(page), "utf8");
+  }
 }
 
 function parseSitemapUrls() {
