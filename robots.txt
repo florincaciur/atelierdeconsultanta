@@ -1,30 +1,4 @@
-# robots.txt - FABER / Atelier de Consultanta
-# Public canonical pages are crawlable. Private, generated or non-public paths are not.
-
 User-agent: *
 Allow: /
-
-# Private/admin and internal build areas
 Disallow: /admin/
-Disallow: /dist/
-Disallow: /tools/
-Disallow: /scripts/
-Disallow: /reports/
-Disallow: /config/
-Disallow: /node_modules/
-Disallow: /.github/
-Disallow: /.wrangler/
-
-# Non-public or low-value generated assets
-Disallow: /*.map$
-
-# Tracking and duplicate parameter variants
-Disallow: /*?utm_
-Disallow: /*?fbclid=
-Disallow: /*?gclid=
-Disallow: /*?msclkid=
-Disallow: /*?ref=
-
 Sitemap: https://atelierdeconsultanta.ro/sitemap.xml
-
-# AI/search crawler policy is documented in the repository at docs/crawler-policy.md.

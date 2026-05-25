@@ -4,7 +4,7 @@ const path = require("path");
 const ROOT = path.resolve(__dirname, "..");
 const SITE = "https://atelierdeconsultanta.ro";
 const SITEMAP_PATH = path.join(ROOT, "sitemap.xml");
-const TODAY = new Date("2026-05-21T12:00:00Z");
+const TODAY = new Date();
 
 const EXCLUDED_DIRS = new Set([
   ".git",
@@ -15,8 +15,16 @@ const EXCLUDED_DIRS = new Set([
   "reports",
 ]);
 
+const DRAFT_PATH_PATTERN = /(^|\/)(?:draft|drafts|_draft|_drafts)(?:\/|$)/i;
+
 function toPosix(value) {
   return value.split(path.sep).join("/");
+}
+
+function isDraftPath(filePath) {
+  const relativePath = toPosix(path.relative(ROOT, filePath));
+  const basename = path.posix.basename(relativePath).toLowerCase();
+  return DRAFT_PATH_PATTERN.test(relativePath) || basename.startsWith("draft-") || basename.endsWith(".draft.html");
 }
 
 function walkHtml(dir, files = []) {
@@ -25,7 +33,7 @@ function walkHtml(dir, files = []) {
     const fullPath = path.join(dir, entry.name);
     if (entry.isDirectory()) {
       walkHtml(fullPath, files);
-    } else if (entry.isFile() && entry.name.toLowerCase().endsWith(".html")) {
+    } else if (entry.isFile() && entry.name.toLowerCase().endsWith(".html") && !isDraftPath(fullPath)) {
       files.push(fullPath);
     }
   }
@@ -91,6 +99,15 @@ function lastmodForFile(filePath) {
   return safeDate.toISOString().slice(0, 10);
 }
 
+function escapeXml(value) {
+  return String(value)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&apos;");
+}
+
 function generate() {
   const urls = new Map();
   for (const filePath of walkHtml(ROOT)) {
@@ -114,7 +131,7 @@ function generate() {
 
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${orderedUrls.map((url) => `  <url>\n    <loc>${url}</loc>\n    <lastmod>${urls.get(url).lastmod}</lastmod>\n  </url>`).join("\n")}
+${orderedUrls.map((url) => `  <url>\n    <loc>${escapeXml(url)}</loc>\n    <lastmod>${escapeXml(urls.get(url).lastmod)}</lastmod>\n  </url>`).join("\n")}
 </urlset>
 `;
 

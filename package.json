@@ -13,7 +13,7 @@
     "verify:functional": "node verify-and-fix.js",
     "verify:all": "node verify-and-fix.js && node scripts/verify-seo-integrity.js . && node tools/audit-site-links.js",
     "fix:all": "node verify-and-fix.js --apply",
-    "build": "node tools/build-cloudflare-assets.js",
+    "build": "npm run generate:sitemap && node tools/build-cloudflare-assets.js",
     "validate:cloudflare": "node tools/validate-cloudflare-deploy.js",
     "audit:program-routes": "node tools/audit-cloudflare-program-routes.js",
     "audit:gsc-routes": "node tools/audit-gsc-routes.js",
