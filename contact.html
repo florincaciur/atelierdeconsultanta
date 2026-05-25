@@ -235,12 +235,24 @@
       }
     ]
   }</script>
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "wnvzyco6rq");
+  <script>
+    (function(w,d,id){
+      function loadClarity(){
+        if (w.__faberClarityLoaded) return;
+        w.__faberClarityLoaded = true;
+        (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(w,d,"clarity","script",id);
+      }
+      function scheduleClarity(){ w.setTimeout(loadClarity, 6500); }
+      if (d.readyState === "complete") scheduleClarity();
+      else w.addEventListener("load", scheduleClarity, { once:true });
+      ["pointerdown","keydown","scroll"].forEach(function(eventName){
+        w.addEventListener(eventName, loadClarity, { once:true, passive:true });
+      });
+    })(window, document, "wnvzyco6rq");
   </script>
 </head>
 <body>

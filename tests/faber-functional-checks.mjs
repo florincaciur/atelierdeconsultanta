@@ -1,0 +1,264 @@
+import assert from "node:assert/strict";
+import fs from "node:fs";
+import fsp from "node:fs/promises";
+import http from "node:http";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+import { chromium } from "playwright";
+
+const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+const DIST = path.join(ROOT, "dist");
+const SITE_ORIGIN = "https://atelierdeconsultanta.ro";
+
+function parseRedirects() {
+  const raw = fs.readFileSync(path.join(ROOT, "_redirects"), "utf8");
+  return raw
+    .split(/\r?\n/)
+    .map((line) => line.trim())
+    .filter((line) => line && !line.startsWith("#"))
+    .map((line) => {
+      const [from, to, status = "301"] = line.split(/\s+/);
+      return { from, to, status: Number(status) || 301 };
+    });
+}
+
+function parseHeaders() {
+  const raw = fs.readFileSync(path.join(ROOT, "_headers"), "utf8");
+  const rules = [];
+  let current = null;
+
+  for (const line of raw.split(/\r?\n/)) {
+    if (!line.trim()) continue;
+    if (!/^\s/.test(line)) {
+      current = { pattern: line.trim(), headers: {} };
+      rules.push(current);
+      continue;
+    }
+    if (!current) continue;
+    const [name, ...rest] = line.trim().split(":");
+    current.headers[name.toLowerCase()] = rest.join(":").trim();
+  }
+
+  return rules;
+}
+
+function matchesPattern(pattern, pathname) {
+  if (pattern === pathname) return true;
+  if (!pattern.includes("*")) return false;
+  const escaped = pattern.replace(/[.+?^${}()|[\]\\]/g, "\\$&").replace(/\*/g, ".*");
+  return new RegExp(`^${escaped}$`).test(pathname);
+}
+
+function findRedirect(pathname, redirects) {
+  return redirects.find((rule) => matchesPattern(rule.from, pathname));
+}
+
+function headersFor(pathname, headerRules) {
+  const headers = {};
+  for (const rule of headerRules) {
+    if (matchesPattern(rule.pattern, pathname)) Object.assign(headers, rule.headers);
+  }
+  return headers;
+}
+
+async function fileExists(filePath) {
+  try {
+    const stat = await fsp.stat(filePath);
+    return stat.isFile();
+  } catch {
+    return false;
+  }
+}
+
+async function resolveStaticFile(pathname) {
+  const clean = decodeURIComponent(pathname).replace(/^\/+/, "");
+  const candidates = pathname === "/"
+    ? [path.join(DIST, "index.html")]
+    : [
+        path.join(DIST, clean, "index.html"),
+        path.join(DIST, `${clean}.html`),
+        path.join(DIST, clean)
+      ];
+
+  for (const candidate of candidates) {
+    if (await fileExists(candidate)) return { filePath: candidate, status: 200 };
+  }
+
+  return { filePath: path.join(DIST, "404.html"), status: 404 };
+}
+
+function contentType(filePath) {
+  const ext = path.extname(filePath).toLowerCase();
+  if (ext === ".html") return "text/html; charset=utf-8";
+  if (ext === ".css") return "text/css; charset=utf-8";
+  if (ext === ".js") return "application/javascript; charset=utf-8";
+  if (ext === ".json") return "application/json; charset=utf-8";
+  if (ext === ".svg") return "image/svg+xml";
+  if (ext === ".png") return "image/png";
+  if (ext === ".jpg" || ext === ".jpeg") return "image/jpeg";
+  if (ext === ".webp") return "image/webp";
+  if (ext === ".avif") return "image/avif";
+  return "application/octet-stream";
+}
+
+async function createServer() {
+  const redirects = parseRedirects();
+  const headerRules = parseHeaders();
+  const server = http.createServer(async (request, response) => {
+    try {
+      const url = new URL(request.url || "/", "http://127.0.0.1");
+      const pathname = url.pathname;
+      const headers = headersFor(pathname, headerRules);
+      const redirect = findRedirect(pathname, redirects);
+
+      if (redirect) {
+        response.writeHead(redirect.status, { ...headers, location: redirect.to });
+        response.end();
+        return;
+      }
+
+      const { filePath, status } = await resolveStaticFile(pathname);
+      const body = await fsp.readFile(filePath);
+      response.writeHead(status, { ...headers, "content-type": contentType(filePath) });
+      response.end(body);
+    } catch (error) {
+      response.writeHead(500, { "content-type": "text/plain; charset=utf-8" });
+      response.end(String(error.stack || error));
+    }
+  });
+
+  await new Promise((resolve) => server.listen(0, "127.0.0.1", resolve));
+  const { port } = server.address();
+  return { server, baseUrl: `http://127.0.0.1:${port}` };
+}
+
+async function fetchManual(url) {
+  return fetch(url, { redirect: "manual" });
+}
+
+async function assertCanonicalRoutes(baseUrl) {
+  const sitemap = await fsp.readFile(path.join(ROOT, "sitemap.xml"), "utf8");
+  const paths = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => {
+    const url = new URL(match[1]);
+    return url.pathname || "/";
+  });
+
+  assert.equal(paths.length, 94, "sitemap canonical URL count changed unexpectedly");
+
+  for (const routePath of paths) {
+    const response = await fetchManual(`${baseUrl}${routePath}`);
+    assert.equal(response.status, 200, `${routePath} should return 200`);
+    const robots = response.headers.get("x-robots-tag") || "";
+    assert(!/noindex/i.test(robots), `${routePath} should not send noindex header`);
+    const html = await response.text();
+    assert(/<h1[\s>]/i.test(html), `${routePath} should include an H1`);
+  }
+}
+
+async function assertRedirectsAndFallback(baseUrl) {
+  const checks = [
+    ["/index.html", "/"],
+    ["/contact.html", "/contact"],
+    ["/consultanta-fonduri-europene-imm/", "/consultant-fonduri-europene-imm"],
+    ["/consultanta-start-up-nation/", "/consultanta-start-up-nation-2026"],
+    ["/blog/safir-fotovoltaice-ferme-2026.html", "/blog-afir-fotovoltaice-ferme-2026"]
+  ];
+
+  for (const [from, to] of checks) {
+    const response = await fetchManual(`${baseUrl}${from}`);
+    assert.equal(response.status, 301, `${from} should redirect`);
+    assert.equal(response.headers.get("location"), to, `${from} should redirect to ${to}`);
+  }
+
+  const fallback = await fetchManual(`${baseUrl}/ro/11.html`);
+  assert.equal(fallback.status, 404, "legacy /ro/* fallback should return 404");
+  assert.match(fallback.headers.get("x-robots-tag") || "", /noindex/i, "legacy /ro/* fallback should be noindex");
+}
+
+async function assertHomepageInteractions(baseUrl) {
+  const browser = await chromium.launch({ headless: true });
+  const page = await browser.newPage({ viewport: { width: 1366, height: 900 } });
+
+  try {
+    await page.goto(`${baseUrl}/`, { waitUntil: "networkidle" });
+    assert.equal(await page.locator("h1").count(), 1, "homepage should have one H1");
+
+    await page.locator("#dropdownBtn").click();
+    assert.equal(await page.locator("#dropdownBtn").getAttribute("aria-expanded"), "true", "program menu should open");
+    assert.equal(await page.locator("#dropdownPanel.open").count(), 1, "program menu panel should be visible");
+    assert.equal(await page.locator("#dropdownPanel a[href]").count(), 10, "program menu should expose 10 program links");
+
+    const internalLinks = await page.$$eval(
+      ".nav-links a[href], #dropdownPanel a[href], #mobileMenu a[href], #financing-grid a[href], a.btn-primary[href], a.btn-secondary[href]",
+      (links) => [...new Set(links.map((link) => link.getAttribute("href")).filter(Boolean))]
+    );
+
+    for (const href of internalLinks) {
+      if (href.startsWith("#")) continue;
+      if (/^(mailto:|tel:|https?:\/\/)/i.test(href) && !href.startsWith(SITE_ORIGIN)) continue;
+      const url = href.startsWith(SITE_ORIGIN) ? new URL(href).pathname : href;
+      const response = await fetchManual(`${baseUrl}${url}`);
+      assert(response.status < 400, `${href} should resolve below 400`);
+    }
+
+    const invalidVisibleButtons = await page.$$eval("button", (buttons) =>
+      buttons
+        .filter((button) => {
+          const style = getComputedStyle(button);
+          const visible = style.display !== "none" && style.visibility !== "hidden" && button.offsetParent !== null;
+          if (!visible) return false;
+          const type = (button.getAttribute("type") || "submit").toLowerCase();
+          const hasIntent = Boolean(
+            button.id ||
+            button.getAttribute("onclick") ||
+            button.getAttribute("aria-controls") ||
+            button.dataset.beneficiaryFilter ||
+            type === "submit"
+          );
+          return !hasIntent;
+        })
+        .map((button) => button.textContent.trim() || button.outerHTML.slice(0, 80))
+    );
+    assert.deepEqual(invalidVisibleButtons, [], "visible buttons should have an actionable intent");
+
+    const gridDisplay = await page.$eval("#financing-grid", (element) => getComputedStyle(element).display);
+    assert.equal(gridDisplay, "grid", "program section should use a CSS grid");
+    assert.equal(await page.locator("#finantare .carousel-btn, #finantare .card-carousel-btn").count(), 0, "program section should not expose carousel controls");
+    assert((await page.locator("#financing-grid .finantare-card").count()) >= 10, "program grid should contain program cards");
+
+    await page.locator('[data-beneficiary-filter="public"]').click();
+    const publicVisibleCards = await page.$$eval("#financing-grid .finantare-card", (cards) =>
+      cards.filter((card) => !card.hidden && getComputedStyle(card).display !== "none").length
+    );
+    assert(publicVisibleCards > 0, "public beneficiary filter should show at least one card");
+    assert.equal(await page.locator('[data-beneficiary-filter="public"]').getAttribute("aria-pressed"), "true", "public filter should set aria-pressed");
+
+    await page.setViewportSize({ width: 390, height: 844 });
+    await page.goto(`${baseUrl}/`, { waitUntil: "networkidle" });
+    await page.locator("#hamburgerBtn").click();
+    assert.equal(await page.locator("#hamburgerBtn").getAttribute("aria-expanded"), "true", "mobile hamburger should open");
+    assert.equal(await page.locator("#mobileMenu.open").count(), 1, "mobile menu should have open state");
+    assert((await page.locator("#mobileMenu a[href]").count()) >= 12, "mobile menu should expose navigation links");
+  } finally {
+    await browser.close();
+  }
+}
+
+async function main() {
+  assert(fs.existsSync(path.join(DIST, "index.html")), "dist/index.html missing; run npm run build first");
+  const { server, baseUrl } = await createServer();
+
+  try {
+    await assertCanonicalRoutes(baseUrl);
+    await assertRedirectsAndFallback(baseUrl);
+    await assertHomepageInteractions(baseUrl);
+    console.log("Functional navigation checks passed.");
+  } finally {
+    await new Promise((resolve) => server.close(resolve));
+  }
+}
+
+main().catch((error) => {
+  console.error(error);
+  process.exitCode = 1;
+});

@@ -17,6 +17,7 @@
     "validate:cloudflare": "node tools/validate-cloudflare-deploy.js",
     "audit:program-routes": "node tools/audit-cloudflare-program-routes.js",
     "audit:gsc-routes": "node tools/audit-gsc-routes.js",
+    "test:functional": "node tests/faber-functional-checks.mjs",
     "deploy": "npm run build && npm run validate:cloudflare && npx wrangler deploy",
     "deploy:pages": "npm run build && npm run validate:cloudflare && npx wrangler pages deploy dist"
   },
