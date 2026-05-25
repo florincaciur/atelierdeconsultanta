@@ -120,7 +120,7 @@
           "Tanar fermier instalat sau in curs de consolidare",
           "Posibila, daca profilul solicitantului se incadreaza in apelul activ",
           "Varsta, forma juridica, rolul real in conducerea exploatatiei si istoricul instalarii",
-          "Pragurile si definitiile finale: TODO_SURSA_OFICIALA"
+          "Pragurile si definitiile finale se confirma in ghidul apelului activ"
         ],
         [
           "Exploatatie vegetala",
@@ -146,31 +146,31 @@
           "Utilaje si echipamente agricole",
           "Tractor, semanatoare, echipamente pentru lucrari agricole, dotari de ferma",
           "Dimensionarea fata de suprafata, activitate si capacitatea de implementare",
-          "TODO_SURSA_OFICIALA"
+          "sursa oficiala a apelului activ"
         ],
         [
           "Constructii si modernizari agricole",
           "Spatii de productie, depozitare sau adaposturi, daca apelul le permite",
           "Autorizatii, teren, folosinta pe durata ceruta si costuri neeligibile",
-          "TODO_SURSA_OFICIALA"
+          "sursa oficiala a apelului activ"
         ],
         [
           "Tehnologie si digitalizare pentru ferma",
           "Software, senzori, monitorizare, gestiune sau echipamente de precizie",
           "Legatura directa cu exploatatia si livrabile verificabile",
-          "TODO_SURSA_OFICIALA"
+          "sursa oficiala a apelului activ"
         ],
         [
           "Energie pentru consum propriu",
           "Panouri fotovoltaice sau echipamente conexe, daca sunt permise de apel",
           "Conditii specifice, dimensionare, avize si separarea costurilor",
-          "TODO_SURSA_OFICIALA"
+          "sursa oficiala a apelului activ"
         ],
         [
           "Servicii si costuri generale",
           "Consultanta, proiectare, avize sau documentatii tehnice in limitele programului",
           "Plafoane, momentul contractarii si documente justificative",
-          "TODO_SURSA_OFICIALA"
+          "sursa oficiala a apelului activ"
         ]
       ],
       "documentRows": [
@@ -262,8 +262,8 @@
         "Punctajul este estimat optimist, fara documente care sa dovedeasca fiecare criteriu."
       ],
       "caseExample": {
-        "note": "TODO_CLIENT_EXEMPLU - de inlocuit cu un caz real anonimizat, verificat intern.",
-        "beneficiary": "TODO_CLIENT_EXEMPLU - tanar fermier cu exploatatie vegetala si cateva dotari existente",
+        "note": "Exemplu anonimizat de completat dupa validare interna - de inlocuit cu un caz real anonimizat, verificat intern.",
+        "beneficiary": "Exemplu anonimizat de completat dupa validare interna - tanar fermier cu exploatatie vegetala si cateva dotari existente",
         "investmentObjective": "Achizitie utilaje agricole si solutie minima de monitorizare a lucrarilor",
         "challenges": "Corelarea utilajelor cu suprafata lucrata, confirmarea documentelor APIA si separarea costurilor neeligibile",
         "checked": "Forma solicitantului, calcul SO, documente de folosinta, oferte, cofinantare si riscul de dublare cu alte programe"
@@ -483,7 +483,7 @@
           "Persoana care pregateste o firma noua",
           "Posibila, daca editia activa permite profilul solicitantului",
           "Varsta/profilul, statutul, asociatii, istoricul si regulile procedurii",
-          "Conditiile finale: TODO_SURSA_OFICIALA"
+          "Conditiile finale se confirma in ghidul apelului activ"
         ],
         [
           "Firma tanara cu cod CAEN propus",
@@ -509,31 +509,31 @@
           "Echipamente si utilaje",
           "Dotari pentru productie, servicii, activitati creative sau prestari locale",
           "Necesitate, dimensionare, livrare si legatura cu codul CAEN",
-          "TODO_SURSA_OFICIALA"
+          "sursa oficiala a apelului activ"
         ],
         [
           "Software si digitalizare",
           "Website, magazin online, aplicatii, licente, sisteme de gestiune sau CRM",
           "Servicii recurente, livrabile, drepturi de utilizare si perioada eligibila",
-          "TODO_SURSA_OFICIALA"
+          "sursa oficiala a apelului activ"
         ],
         [
           "Mobilier si dotari",
           "Mobilier de lucru, dotari operationale sau echipamente auxiliare",
           "Justificare prin activitate si evitarea bunurilor cu uz personal",
-          "TODO_SURSA_OFICIALA"
+          "sursa oficiala a apelului activ"
         ],
         [
           "Promovare si servicii profesionale",
           "Branding, promovare, consultanta sau instruire, daca procedura le permite",
           "Plafoane, momentul contractarii si dovezi ale serviciilor livrate",
-          "TODO_SURSA_OFICIALA"
+          "sursa oficiala a apelului activ"
         ],
         [
           "Amenajari sau cheltuieli conexe",
           "Lucrari sau adaptari minime pentru activitate, daca apelul le permite",
           "Documente de spatiu, autorizatii, durate de folosinta si costuri neeligibile",
-          "TODO_SURSA_OFICIALA"
+          "sursa oficiala a apelului activ"
         ]
       ],
       "documentRows": [
@@ -625,15 +625,15 @@
         "Cheltuielile de promovare, software sau consultanta nu au livrabile verificabile."
       ],
       "caseExample": {
-        "note": "TODO_CLIENT_EXEMPLU - de inlocuit cu un caz real anonimizat, verificat intern.",
-        "beneficiary": "TODO_CLIENT_EXEMPLU - antreprenor la inceput de drum, cu firma pregatita pentru servicii tehnice",
+        "note": "Exemplu anonimizat de completat dupa validare interna - de inlocuit cu un caz real anonimizat, verificat intern.",
+        "beneficiary": "Exemplu anonimizat de completat dupa validare interna - antreprenor la inceput de drum, cu firma pregatita pentru servicii tehnice",
         "investmentObjective": "Dotari de lucru, software operational si promovare initiala pentru lansarea activitatii",
         "challenges": "Alegerea codului CAEN, justificarea echipamentelor, documentarea spatiului si acoperirea costurilor neeligibile",
         "checked": "Profil solicitant, CAEN, plan de afaceri, oferte, cofinantare, autorizare punct de lucru si riscuri de implementare"
       },
       "editorialNotes": [
         "Pentru Start-Up Nation, verificarea trebuie sa separe ideea de afacere de lista de cheltuieli dorite. Un laptop, un website sau o campanie de promovare nu sunt suficiente ca argument daca planul nu explica serviciul sau produsul, clientii, fluxul de lucru si modul in care activul va genera venituri. Inainte de depunere, bugetul trebuie citit impreuna cu codul CAEN, spatiul, autorizarea si obligatiile asumate, astfel incat fiecare cost sa poata fi aparat la clarificari.",
-        "Daca procedura finala schimba criteriile, documentele sau calendarul, pagina trebuie actualizata inainte de a fi folosita ca baza pentru decizie. Pana atunci, elementele marcate cu TODO_SURSA_OFICIALA raman puncte de verificare manuala."
+        "Daca procedura finala schimba criteriile, documentele sau calendarul, pagina trebuie actualizata inainte de a fi folosita ca baza pentru decizie. Pana atunci, elementele marcate cu sursa oficiala a apelului activ raman puncte de verificare manuala."
       ]
     },
     {

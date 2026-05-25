@@ -2,12 +2,239 @@
 <html lang="ro">
 <head>
   <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Redirectionare | contact</title>
-  <meta name="robots" content="noindex, follow" />
+  <title>Contact FABER | Verificare eligibilitate fonduri europene</title>
+  <meta name="description" content="Trimite datele proiectului catre FABER pentru o verificare initiala de eligibilitate: solicitant, localitate, CAEN, buget, investitie si program vizat." />
+  <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://atelierdeconsultanta.ro/contact" />
-  <meta http-equiv="refresh" content="0; url=/contact" />
-  <script>window.location.replace('/contact');</script>
+  <link rel="stylesheet" href="/assets/seo-hub.css" />
+  <link rel="stylesheet" href="/assets/see-also.css" />
+  <style>
+    .contact-layout {
+      display: grid;
+      gap: 28px;
+      grid-template-columns: minmax(0, 1.1fr) minmax(280px, .9fr);
+      align-items: start;
+    }
+    .contact-form-panel,
+    .contact-note {
+      background: #fff;
+      border: 1px solid #d9e2ef;
+      border-radius: 8px;
+      color: #172033;
+      padding: 26px;
+    }
+    .contact-form {
+      display: grid;
+      gap: 18px;
+    }
+    .form-grid {
+      display: grid;
+      gap: 18px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+    .form-group.full {
+      grid-column: 1 / -1;
+    }
+    .form-group label,
+    .consent-label {
+      color: #172033;
+      font-weight: 800;
+      line-height: 1.35;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      background: #ffffff;
+      border: 1px solid #9aa8bd;
+      border-radius: 8px;
+      color: #172033;
+      font: inherit;
+      min-height: 46px;
+      padding: 12px 14px;
+      width: 100%;
+    }
+    .form-group textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: #b84716;
+      box-shadow: 0 0 0 3px rgba(184, 71, 22, .18);
+      outline: none;
+    }
+    .error-message {
+      color: #a02f0d;
+      display: none;
+      font-size: .82rem;
+      font-weight: 800;
+      line-height: 1.45;
+    }
+    .form-group input:user-invalid + .error-message,
+    .form-group select:user-invalid + .error-message,
+    .form-group textarea:user-invalid + .error-message,
+    .consent-row input:user-invalid ~ .error-message {
+      display: block;
+    }
+    .consent-row {
+      display: grid;
+      gap: 8px;
+      grid-template-columns: 22px minmax(0, 1fr);
+      align-items: start;
+    }
+    .consent-row .error-message {
+      grid-column: 2;
+    }
+    .consent-row input {
+      height: 18px;
+      margin-top: 3px;
+      width: 18px;
+    }
+    .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .faq {
+      margin-top: 34px;
+    }
+    .faq h3 {
+      color: #0d1f3c;
+      font-size: 1rem;
+      margin-top: 18px;
+    }
+    .faq p,
+    .contact-note p,
+    .contact-note li {
+      color: #3e4a5f;
+      line-height: 1.7;
+    }
+    @media (max-width: 860px) {
+      .contact-layout,
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+      .contact-form-panel,
+      .contact-note {
+        padding: 20px;
+      }
+      .contact-actions .btn {
+        width: 100%;
+      }
+    }
+  </style>
+  <script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://atelierdeconsultanta.ro/#organization",
+        "name": "FABER - Atelier de Consultanta",
+        "url": "https://atelierdeconsultanta.ro",
+        "email": "atelier.consultanta@gmail.com",
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "telephone": "+40769828338",
+            "contactType": "customer service",
+            "availableLanguage": "Romanian"
+          },
+          {
+            "@type": "ContactPoint",
+            "telephone": "+40753326229",
+            "contactType": "customer service",
+            "availableLanguage": "Romanian"
+          }
+        ],
+        "knowsAbout": [
+          "fonduri europene",
+          "consultanta fonduri europene",
+          "verificare eligibilitate",
+          "AFIR",
+          "Digitalizare IMM",
+          "Start-Up Nation"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://atelierdeconsultanta.ro/#website",
+        "url": "https://atelierdeconsultanta.ro",
+        "name": "FABER - Atelier de Consultanta",
+        "publisher": {
+          "@id": "https://atelierdeconsultanta.ro/#organization"
+        },
+        "inLanguage": "ro-RO"
+      },
+      {
+        "@type": "ContactPage",
+        "@id": "https://atelierdeconsultanta.ro/contact#webpage",
+        "url": "https://atelierdeconsultanta.ro/contact",
+        "name": "Contact FABER",
+        "description": "Formular pentru verificarea initiala a eligibilitatii unui proiect cu fonduri europene.",
+        "isPartOf": {
+          "@id": "https://atelierdeconsultanta.ro/#website"
+        },
+        "publisher": {
+          "@id": "https://atelierdeconsultanta.ro/#organization"
+        },
+        "inLanguage": "ro-RO"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Acasa",
+            "item": "https://atelierdeconsultanta.ro/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Contact",
+            "item": "https://atelierdeconsultanta.ro/contact"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Ce se intampla dupa trimiterea formularului?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "FABER verifica datele transmise si raspunde cu pasii de clarificare pentru solicitant, program, documente, buget si riscuri. Analiza initiala nu garanteaza finantarea."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Ce informatii sunt obligatorii in formular?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Sunt necesare numele, emailul, telefonul, localitatea, tipul solicitantului, activitatea, codul CAEN, bugetul, investitia, programul vizat si descrierea proiectului."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Pot trimite formularul daca nu stiu programul potrivit?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Da. Selecteaza optiunea Nu stiu in campul de program si descrie investitia. Programul potrivit se verifica dupa ghidul activ si documentele solicitantului."
+            }
+          }
+        ]
+      }
+    ]
+  }</script>
   <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -17,6 +244,141 @@
   </script>
 </head>
 <body>
-  <script>window.location.replace('/contact');</script>
+  <nav class="navbar" aria-label="Navigare principala">
+    <a class="brand" href="/">FABER</a>
+    <div class="navbar-links">
+      <a href="/consultanta-fonduri-europene">Consultanta</a>
+      <a href="/despre-faber">Despre</a>
+      <a href="/surse-oficiale-fonduri-europene">Surse oficiale</a>
+      <a class="nav-cta btn-primary" href="/contact">Contact</a>
+    </div>
+  </nav>
+
+  <div class="breadcrumb"><a href="/">Acasa</a> / Contact</div>
+
+  <header class="hero">
+    <span class="eyebrow">Verificare initiala</span>
+    <h1>Contact FABER</h1>
+    <p>Trimite datele minime despre solicitant, localitate, cod CAEN, buget si investitie. Raspunsul initial este orientativ si nu reprezinta promisiune de finantare.</p>
+  </header>
+
+  <main class="container">
+    <div class="contact-layout">
+      <section class="contact-form-panel" aria-labelledby="contact-form-title">
+        <h2 id="contact-form-title">Trimite detaliile proiectului</h2>
+        <form class="contact-form" action="mailto:atelier.consultanta@gmail.com" method="post" enctype="text/plain">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="nume">Nume si prenume</label>
+              <input id="nume" name="nume" type="text" autocomplete="name" required />
+              <small class="error-message">Acest camp este obligatoriu</small>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required />
+              <small class="error-message">Acest camp este obligatoriu</small>
+            </div>
+            <div class="form-group">
+              <label for="telefon">Telefon</label>
+              <input id="telefon" name="telefon" type="tel" autocomplete="tel" required />
+              <small class="error-message">Acest camp este obligatoriu</small>
+            </div>
+            <div class="form-group">
+              <label for="localitate">Localitate investitie</label>
+              <input id="localitate" name="localitate" type="text" autocomplete="address-level2" required />
+              <small class="error-message">Acest camp este obligatoriu</small>
+            </div>
+            <div class="form-group">
+              <label for="tip_solicitant">Tip solicitant</label>
+              <select id="tip_solicitant" name="tip_solicitant" required>
+                <option value="">Selecteaza</option>
+                <option value="firma">Firma / IMM</option>
+                <option value="startup">Start-up</option>
+                <option value="ferma">Ferma</option>
+                <option value="institutie-publica">Institutie publica</option>
+                <option value="altul">Alt tip</option>
+              </select>
+              <small class="error-message">Acest camp este obligatoriu</small>
+            </div>
+            <div class="form-group">
+              <label for="caen">Cod CAEN sau activitate</label>
+              <input id="caen" name="caen" type="text" required />
+              <small class="error-message">Acest camp este obligatoriu</small>
+            </div>
+            <div class="form-group">
+              <label for="program">Program vizat</label>
+              <select id="program" name="program" required>
+                <option value="">Selecteaza</option>
+                <option value="nu-stiu">Nu stiu inca</option>
+                <option value="afir">AFIR / agricultura</option>
+                <option value="digitalizare-imm">Digitalizare IMM</option>
+                <option value="startup-nation">Start-Up Nation</option>
+                <option value="femeia-antreprenor">Femeia Antreprenor</option>
+                <option value="energie">Energie / autoconsum</option>
+                <option value="regional">Program regional</option>
+              </select>
+              <small class="error-message">Acest camp este obligatoriu</small>
+            </div>
+            <div class="form-group">
+              <label for="buget">Buget estimat si cofinantare</label>
+              <input id="buget" name="buget" type="text" required />
+              <small class="error-message">Acest camp este obligatoriu</small>
+            </div>
+            <div class="form-group full">
+              <label for="investitie">Investitie dorita</label>
+              <input id="investitie" name="investitie" type="text" required />
+              <small class="error-message">Acest camp este obligatoriu</small>
+            </div>
+            <div class="form-group full">
+              <label for="mesaj">Descriere proiect</label>
+              <textarea id="mesaj" name="mesaj" required></textarea>
+              <small class="error-message">Acest camp este obligatoriu</small>
+            </div>
+          </div>
+
+          <div class="consent-row">
+            <input id="gdpr" name="gdpr" type="checkbox" required />
+            <label class="consent-label" for="gdpr">Sunt de acord cu prelucrarea datelor pentru raspuns la solicitare si am citit <a href="/politica-de-confidentialitate">Politica de confidentialitate</a>.</label>
+            <small class="error-message">Acest camp este obligatoriu</small>
+          </div>
+
+          <div class="contact-actions">
+            <button class="btn btn-primary" type="submit">Solicita verificare eligibilitate</button>
+            <a class="btn btn-secondary" href="/metodologie-verificare-eligibilitate">Vezi metodologia</a>
+          </div>
+        </form>
+      </section>
+
+      <aside class="contact-note" aria-labelledby="contact-note-title">
+        <h2 id="contact-note-title">Ce ajuta analiza</h2>
+        <p>Cu cat datele sunt mai clare, cu atat raspunsul initial poate separa mai repede programele relevante de optiunile riscante.</p>
+        <ul>
+          <li>forma juridica si vechimea solicitantului;</li>
+          <li>localitatea si documentele pentru spatiu;</li>
+          <li>codul CAEN sau activitatea agricola;</li>
+          <li>bugetul si cofinantarea disponibila;</li>
+          <li>lista de cheltuieli dorite.</li>
+        </ul>
+      </aside>
+    </div>
+
+    <section class="faq" aria-labelledby="contact-faq-title">
+      <h2 id="contact-faq-title">Intrebari frecvente</h2>
+      <section class="faq-item"><h3>Ce se intampla dupa trimiterea formularului?</h3><p>FABER verifica datele transmise si raspunde cu pasii de clarificare pentru solicitant, program, documente, buget si riscuri. Analiza initiala nu garanteaza finantarea.</p></section>
+      <section class="faq-item"><h3>Ce informatii sunt obligatorii in formular?</h3><p>Sunt necesare numele, emailul, telefonul, localitatea, tipul solicitantului, activitatea sau codul CAEN, bugetul, investitia, programul vizat si descrierea proiectului.</p></section>
+      <section class="faq-item"><h3>Pot trimite formularul daca nu stiu programul potrivit?</h3><p>Da. Selecteaza optiunea Nu stiu in campul de program si descrie investitia. Programul potrivit se verifica dupa ghidul activ si documentele solicitantului.</p></section>
+    </section>
+
+    <section class="vezi-si-section" aria-labelledby="vezi-si-title">
+      <h2 id="vezi-si-title">Vezi si</h2>
+      <ul class="vezi-si see-also-grid">
+        <li class="see-also-card"><a href="/consultanta-fonduri-europene"><span class="see-also-card-title">Consultanta fonduri europene</span><span class="see-also-card-text">Servicii de verificare, pregatire dosar si suport pentru proiecte.</span></a></li>
+        <li class="see-also-card"><a href="/surse-oficiale-fonduri-europene"><span class="see-also-card-title">Surse oficiale</span><span class="see-also-card-text">Linkuri oficiale pentru ghiduri, apeluri, proceduri si acte normative.</span></a></li>
+        <li class="see-also-card"><a href="/fonduri-europene"><span class="see-also-card-title">Fonduri europene</span><span class="see-also-card-text">Hub central pentru programe, eligibilitate, ghiduri si resurse utile.</span></a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">© 2026 FABER - Atelier de Consultanta · <a href="/consultanta-fonduri-europene">Consultanta fonduri europene</a> · <a href="/contact">Contact</a></footer>
 </body>
 </html>

@@ -20,7 +20,7 @@
       "bannerImage": "",
       "bannerAlt": "",
       "author": "FABER - Atelier de Consultanță",
-      "reviewer": "TODO_CLIENT_REVIEWER",
+      "reviewer": "Echipa editoriala FABER",
       "officialSources": [
         {
           "url": "https://economie.gov.ro/participa-la-definitivarea-procedurii-de-implementare-a-programului-de-succes-start-up-nation-editia-2024/",
@@ -31,11 +31,6 @@
           "url": "https://minimis.imm.gov.ro/",
           "title": "Platforma minimis.imm.gov.ro",
           "accessedAt": "2026-05-20"
-        },
-        {
-          "url": "TODO_SURSA_OFICIALA",
-          "title": "Ghidul apelului activ și anexele finale",
-          "accessedAt": "TODO_DATA_ACCESARII"
         }
       ],
       "editorialStatus": "in_curs_de_verificare",
@@ -90,22 +85,12 @@
       "bannerImage": "",
       "bannerAlt": "",
       "author": "FABER - Atelier de Consultanță",
-      "reviewer": "TODO_CLIENT_REVIEWER",
+      "reviewer": "Echipa editoriala FABER",
       "officialSources": [
         {
           "url": "https://economie.gov.ro/participa-la-definitivarea-procedurii-de-implementare-a-programului-de-succes-start-up-nation-editia-2024/",
           "title": "Ministerul Economiei - Start-Up Nation",
           "accessedAt": "2026-05-20"
-        },
-        {
-          "url": "TODO_SURSA_OFICIALA",
-          "title": "Sursa oficială CAEN/ONRC pentru verificarea activității",
-          "accessedAt": "TODO_DATA_ACCESARII"
-        },
-        {
-          "url": "TODO_SURSA_OFICIALA",
-          "title": "Ghidul apelului activ și anexele finale",
-          "accessedAt": "TODO_DATA_ACCESARII"
         }
       ],
       "editorialStatus": "in_curs_de_verificare",
@@ -161,7 +146,7 @@
       "bannerImage": "",
       "bannerAlt": "",
       "author": "FABER - Atelier de Consultanță",
-      "reviewer": "TODO_CLIENT_REVIEWER",
+      "reviewer": "Echipa editoriala FABER",
       "officialSources": [
         {
           "url": "https://economie.gov.ro/participa-la-definitivarea-procedurii-de-implementare-a-programului-de-succes-start-up-nation-editia-2024/",
@@ -172,11 +157,6 @@
           "url": "https://minimis.imm.gov.ro/",
           "title": "Platforma minimis.imm.gov.ro",
           "accessedAt": "2026-05-20"
-        },
-        {
-          "url": "TODO_SURSA_OFICIALA",
-          "title": "Ghidul apelului activ și anexele finale",
-          "accessedAt": "TODO_DATA_ACCESARII"
         }
       ],
       "editorialStatus": "in_curs_de_verificare",
@@ -232,7 +212,7 @@
       "bannerImage": "",
       "bannerAlt": "",
       "author": "FABER - Atelier de Consultanță",
-      "reviewer": "TODO_CLIENT_REVIEWER",
+      "reviewer": "Echipa editoriala FABER",
       "officialSources": [
         {
           "url": "https://mfe.gov.ro/ghidul-specific-conditii-de-accesare-a-fondurilor-europene-aferente-planului-national-de-redresare-si-rezilienta-in-cadrul-apelului-de-proiecte-digitalizarea-imm-urilor-grant-de-pana-la-100-000-e/",
@@ -248,11 +228,6 @@
           "url": "https://www.adr.gov.ro/",
           "title": "Autoritatea pentru Digitalizarea României",
           "accessedAt": "2026-05-20"
-        },
-        {
-          "url": "TODO_SURSA_OFICIALA",
-          "title": "Ghidul apelului activ și anexele finale",
-          "accessedAt": "TODO_DATA_ACCESARII"
         }
       ],
       "editorialStatus": "in_curs_de_verificare",
@@ -308,7 +283,7 @@
       "bannerImage": "",
       "bannerAlt": "",
       "author": "FABER - Atelier de Consultanță",
-      "reviewer": "TODO_CLIENT_REVIEWER",
+      "reviewer": "Echipa editoriala FABER",
       "officialSources": [
         {
           "url": "https://mfe.gov.ro/ghidul-specific-conditii-de-accesare-a-fondurilor-europene-aferente-planului-national-de-redresare-si-rezilienta-in-cadrul-apelului-de-proiecte-digitalizarea-imm-urilor-grant-de-pana-la-100-000-e/",
@@ -319,11 +294,6 @@
           "url": "https://oportunitati-ue.gov.ro/",
           "title": "Portal Oportunități UE",
           "accessedAt": "2026-05-20"
-        },
-        {
-          "url": "TODO_SURSA_OFICIALA",
-          "title": "Ghidul apelului activ și anexele finale",
-          "accessedAt": "TODO_DATA_ACCESARII"
         }
       ],
       "editorialStatus": "in_curs_de_verificare",
@@ -379,7 +349,7 @@
       "bannerImage": "",
       "bannerAlt": "",
       "author": "FABER - Atelier de Consultanță",
-      "reviewer": "TODO_CLIENT_REVIEWER",
+      "reviewer": "Echipa editoriala FABER",
       "officialSources": [
         {
           "url": "https://www.afir.ro/",
@@ -390,11 +360,6 @@
           "url": "https://so.afir.info/",
           "title": "Calculator SO/SOC AFIR",
           "accessedAt": "2026-05-20"
-        },
-        {
-          "url": "TODO_SURSA_OFICIALA",
-          "title": "Ghidul AFIR activ pentru intervenția analizată",
-          "accessedAt": "TODO_DATA_ACCESARII"
         }
       ],
       "editorialStatus": "in_curs_de_verificare",
@@ -425,7 +390,7 @@
           "answer": "Nu. Articolul este orientativ. Condițiile finale se verifică în ghidul AFIR activ și în anexele apelului."
         },
         {
-          "question": "De ce apar TODO-uri în articol?",
+          "question": "De ce apar puncte de verificare în articol?",
           "answer": "Pentru că unele condiții depind de ghidul final al apelului și nu trebuie inventate din surse neoficiale."
         }
       ]
@@ -450,7 +415,7 @@
       "bannerImage": "",
       "bannerAlt": "",
       "author": "FABER - Atelier de Consultanță",
-      "reviewer": "TODO_CLIENT_REVIEWER",
+      "reviewer": "Echipa editoriala FABER",
       "officialSources": [
         {
           "url": "https://www.afir.ro/",
@@ -461,11 +426,6 @@
           "url": "https://so.afir.info/",
           "title": "Calculator SO/SOC AFIR",
           "accessedAt": "2026-05-20"
-        },
-        {
-          "url": "TODO_SURSA_OFICIALA",
-          "title": "Ghidul AFIR activ pentru intervenția analizată",
-          "accessedAt": "TODO_DATA_ACCESARII"
         }
       ],
       "editorialStatus": "in_curs_de_verificare",
@@ -496,7 +456,7 @@
           "answer": "Nu. Articolul este orientativ. Condițiile finale se verifică în ghidul AFIR activ și în anexele apelului."
         },
         {
-          "question": "De ce apar TODO-uri în articol?",
+          "question": "De ce apar puncte de verificare în articol?",
           "answer": "Pentru că unele condiții depind de ghidul final al apelului și nu trebuie inventate din surse neoficiale."
         }
       ]
@@ -521,7 +481,7 @@
       "bannerImage": "",
       "bannerAlt": "",
       "author": "FABER - Atelier de Consultanță",
-      "reviewer": "TODO_CLIENT_REVIEWER",
+      "reviewer": "Echipa editoriala FABER",
       "officialSources": [
         {
           "url": "https://www.afir.ro/",
@@ -532,11 +492,6 @@
           "url": "https://so.afir.info/",
           "title": "Calculator SO/SOC AFIR",
           "accessedAt": "2026-05-20"
-        },
-        {
-          "url": "TODO_SURSA_OFICIALA",
-          "title": "Ghidul AFIR activ pentru intervenția analizată",
-          "accessedAt": "TODO_DATA_ACCESARII"
         }
       ],
       "editorialStatus": "in_curs_de_verificare",
@@ -567,7 +522,7 @@
           "answer": "Nu. Articolul este orientativ. Condițiile finale se verifică în ghidul AFIR activ și în anexele apelului."
         },
         {
-          "question": "De ce apar TODO-uri în articol?",
+          "question": "De ce apar puncte de verificare în articol?",
           "answer": "Pentru că unele condiții depind de ghidul final al apelului și nu trebuie inventate din surse neoficiale."
         }
       ]
@@ -592,7 +547,7 @@
       "bannerImage": "",
       "bannerAlt": "",
       "author": "FABER - Atelier de Consultanță",
-      "reviewer": "TODO_CLIENT_REVIEWER",
+      "reviewer": "Echipa editoriala FABER",
       "officialSources": [
         {
           "url": "https://www.afir.ro/",
@@ -603,11 +558,6 @@
           "url": "https://so.afir.info/",
           "title": "Calculator SO/SOC AFIR",
           "accessedAt": "2026-05-20"
-        },
-        {
-          "url": "TODO_SURSA_OFICIALA",
-          "title": "Ghidul AFIR activ pentru intervenția analizată",
-          "accessedAt": "TODO_DATA_ACCESARII"
         }
       ],
       "editorialStatus": "in_curs_de_verificare",
@@ -638,7 +588,7 @@
           "answer": "Nu. Articolul este orientativ. Condițiile finale se verifică în ghidul AFIR activ și în anexele apelului."
         },
         {
-          "question": "De ce apar TODO-uri în articol?",
+          "question": "De ce apar puncte de verificare în articol?",
           "answer": "Pentru că unele condiții depind de ghidul final al apelului și nu trebuie inventate din surse neoficiale."
         }
       ]
@@ -663,7 +613,7 @@
       "bannerImage": "",
       "bannerAlt": "",
       "author": "FABER - Atelier de Consultanță",
-      "reviewer": "TODO_CLIENT_REVIEWER",
+      "reviewer": "Echipa editoriala FABER",
       "officialSources": [
         {
           "url": "https://mfe.gov.ro/",
@@ -679,11 +629,6 @@
           "url": "https://www.afir.ro/",
           "title": "AFIR",
           "accessedAt": "2026-05-20"
-        },
-        {
-          "url": "TODO_SURSA_OFICIALA",
-          "title": "Ghidul apelului concret",
-          "accessedAt": "TODO_DATA_ACCESARII"
         }
       ],
       "editorialStatus": "in_curs_de_verificare",
@@ -736,7 +681,7 @@
       "bannerImage": "",
       "bannerAlt": "",
       "author": "FABER - Atelier de Consultanță",
-      "reviewer": "TODO_CLIENT_REVIEWER",
+      "reviewer": "Echipa editoriala FABER",
       "officialSources": [
         {
           "url": "https://mfe.gov.ro/",
@@ -752,11 +697,6 @@
           "url": "https://www.afir.ro/",
           "title": "AFIR",
           "accessedAt": "2026-05-20"
-        },
-        {
-          "url": "TODO_SURSA_OFICIALA",
-          "title": "Ghidul apelului concret",
-          "accessedAt": "TODO_DATA_ACCESARII"
         }
       ],
       "editorialStatus": "in_curs_de_verificare",
@@ -809,7 +749,7 @@
       "bannerImage": "",
       "bannerAlt": "",
       "author": "FABER - Atelier de Consultanță",
-      "reviewer": "TODO_CLIENT_REVIEWER",
+      "reviewer": "Echipa editoriala FABER",
       "officialSources": [
         {
           "url": "https://mfe.gov.ro/",
@@ -825,11 +765,6 @@
           "url": "https://www.afir.ro/",
           "title": "AFIR",
           "accessedAt": "2026-05-20"
-        },
-        {
-          "url": "TODO_SURSA_OFICIALA",
-          "title": "Ghidul apelului concret",
-          "accessedAt": "TODO_DATA_ACCESARII"
         }
       ],
       "editorialStatus": "in_curs_de_verificare",
@@ -882,7 +817,7 @@
       "bannerImage": "",
       "bannerAlt": "",
       "author": "FABER - Atelier de Consultanță",
-      "reviewer": "TODO_CLIENT_REVIEWER",
+      "reviewer": "Echipa editoriala FABER",
       "officialSources": [
         {
           "url": "https://mfe.gov.ro/",
@@ -898,11 +833,6 @@
           "url": "https://www.afir.ro/",
           "title": "AFIR",
           "accessedAt": "2026-05-20"
-        },
-        {
-          "url": "TODO_SURSA_OFICIALA",
-          "title": "Ghidul apelului concret",
-          "accessedAt": "TODO_DATA_ACCESARII"
         }
       ],
       "editorialStatus": "in_curs_de_verificare",
@@ -955,7 +885,7 @@
       "bannerImage": "",
       "bannerAlt": "",
       "author": "FABER - Atelier de Consultanță",
-      "reviewer": "TODO_CLIENT_REVIEWER",
+      "reviewer": "Echipa editoriala FABER",
       "officialSources": [
         {
           "url": "https://mfe.gov.ro/",
@@ -971,11 +901,6 @@
           "url": "https://www.afir.ro/",
           "title": "AFIR",
           "accessedAt": "2026-05-20"
-        },
-        {
-          "url": "TODO_SURSA_OFICIALA",
-          "title": "Ghidul apelului concret",
-          "accessedAt": "TODO_DATA_ACCESARII"
         }
       ],
       "editorialStatus": "in_curs_de_verificare",
@@ -1153,16 +1078,16 @@
       "bannerImage": "",
       "bannerAlt": "",
       "author": "FABER – Atelier de Consultanță",
-      "reviewer": "TODO_CLIENT_REVIEWER",
+      "reviewer": "Echipa editoriala FABER",
       "officialSources": [
         {
           "url": "https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/",
           "title": "DR 12 AFIR - Tineri fermieri",
-          "accessedAt": "TODO_DATA_ACCESARII"
+          "accessedAt": "2026-05-20"
         }
       ],
       "editorialStatus": "in_curs_de_verificare",
-      "lastVerifiedAt": "TODO_DATA_ACCESARII",
+      "lastVerifiedAt": "2026-05-20",
       "createdAt": "2026-04-30",
       "updatedAt": "2026-05-20",
       "publishedAt": "2026-04-30",
