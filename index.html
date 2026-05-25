@@ -331,6 +331,44 @@
       border-color: rgba(255,255,255,0.42);
       color: var(--white);
     }
+    #navbar {
+      transition: background var(--transition), box-shadow var(--transition), border-color var(--transition);
+    }
+    #navbar.scrolled {
+      box-shadow: 0 8px 22px rgba(6,15,32,0.22);
+    }
+    #navbar .nav-container {
+      transition: height var(--transition), padding var(--transition);
+    }
+    #navbar.scrolled .nav-container {
+      height: 64px;
+    }
+    #navbar .nav-logo svg {
+      transition: height var(--transition), transform var(--transition);
+    }
+    #navbar.scrolled .nav-logo svg {
+      height: 38px;
+    }
+    #navbar .nav-links > a,
+    #navbar .nav-dropdown-btn {
+      color: rgba(255,255,255,0.96);
+      font-size: 0.96rem;
+      font-weight: 750;
+    }
+    #navbar .nav-links > a:hover,
+    #navbar .nav-links > a:focus-visible,
+    #navbar .nav-dropdown-btn:hover,
+    #navbar .nav-dropdown-btn:focus-visible,
+    #navbar .nav-dropdown-btn[aria-expanded="true"] {
+      background: rgba(255,255,255,0.12);
+      color: var(--white);
+    }
+    #navbar .nav-links > a:focus-visible,
+    #navbar .nav-dropdown-btn:focus-visible,
+    #navbar .dropdown-item:focus-visible {
+      outline: 3px solid rgba(245,166,35,0.95);
+      outline-offset: 3px;
+    }
     #navbar .nav-cta.btn-primary {
       background: linear-gradient(135deg, var(--orange) 0%, var(--orange-contrast) 100%);
       border: 1px solid var(--orange-contrast);
@@ -344,10 +382,26 @@
       color: var(--white);
     }
     #navbar .nav-utility {
-      font-size: 0.85rem;
+      font-size: 0.94rem;
       font-weight: 700;
       min-height: 40px;
       padding: 8px 14px;
+    }
+    #navbar .nav-dropdown-panel[hidden] {
+      display: none;
+    }
+    #navbar .dropdown-item {
+      color: rgba(255,255,255,0.92);
+      font-size: 0.88rem;
+      font-weight: 700;
+    }
+    #navbar .dropdown-item:hover,
+    #navbar .dropdown-item:focus-visible {
+      background: rgba(232,100,42,0.18);
+      color: var(--white);
+    }
+    #navbar .dropdown-item .d-label {
+      color: rgba(255,255,255,0.82);
     }
     #mobileMenu .mobile-cta.btn-primary {
       background: linear-gradient(135deg, var(--orange) 0%, var(--orange-contrast) 100%) !important;
@@ -539,55 +593,55 @@
                   aria-controls="dropdownPanel">
             Programe <span class="arrow" aria-hidden="true"></span>
           </button>
-          <div class="nav-dropdown-panel" id="dropdownPanel" aria-labelledby="dropdownBtn">
+          <div class="nav-dropdown-panel" id="dropdownPanel" aria-labelledby="dropdownBtn" role="menu" hidden>
             <div class="dropdown-header">Programe de finanțare 2026</div>
 
-            <a href="/por-adr-nord-est" class="dropdown-item" data-service-id="por-adr-ne">
+            <a href="/por-adr-nord-est" class="dropdown-item" role="menuitem" data-service-id="por-adr-ne">
               <div class="d-icon" style="background:rgba(59,130,246,0.2)"><i class="ph-duotone ph-buildings" style="color:#93c5fd"></i></div>
               <div class="d-text">POR ADR Nord-Est<div class="d-label">Microîntreprinderi | până la 300.000 EUR</div></div>
             </a>
 
-            <a href="/fonduri-europene-nord-est" class="dropdown-item" data-service-id="fonduri-ne">
+            <a href="/fonduri-europene-nord-est" class="dropdown-item" role="menuitem" data-service-id="fonduri-ne">
               <div class="d-icon" style="background:rgba(59,130,246,0.2)"><i class="ph-duotone ph-map-pin" style="color:#93c5fd"></i></div>
               <div class="d-text">Fonduri Nord-Est<div class="d-label">Iasi, Suceava, Bacau si regiune</div></div>
             </a>
 
-            <a href="/dr12-afir" class="dropdown-item" data-service-id="dr12-afir">
+            <a href="/dr12-afir" class="dropdown-item" role="menuitem" data-service-id="dr12-afir">
               <div class="d-icon" style="background:rgba(34,197,94,0.2)"><i class="ph-duotone ph-plant" style="color:#86efac"></i></div>
               <div class="d-text">DR 12 / AFIR<div class="d-label">Tineri Fermieri | până la 200.000 EUR</div></div>
             </a>
 
-            <a href="/afir-autoconsum-agroalimentar" class="dropdown-item" data-service-id="afir-autoconsum">
+            <a href="/afir-autoconsum-agroalimentar" class="dropdown-item" role="menuitem" data-service-id="afir-autoconsum">
               <div class="d-icon" style="background:rgba(234,179,8,0.2)"><i class="ph-duotone ph-sun" style="color:#fde68a"></i></div>
               <div class="d-text">AFIR Autoconsum Agro<div class="d-label">100% nerambursabil</div></div>
             </a>
 
-            <a href="/autoconsum-public-fotovoltaice-institutii-publice" class="dropdown-item" data-service-id="autoconsum-pub">
+            <a href="/autoconsum-public-fotovoltaice-institutii-publice" class="dropdown-item" role="menuitem" data-service-id="autoconsum-pub">
               <div class="d-icon" style="background:rgba(139,92,246,0.2)"><i class="ph-duotone ph-bank" style="color:#c4b5fd"></i></div>
               <div class="d-text">Autoconsum Publici<div class="d-label">Instituții publice | 100%</div></div>
             </a>
 
-            <a href="/dr14" class="dropdown-item" data-service-id="dr14">
+            <a href="/dr14" class="dropdown-item" role="menuitem" data-service-id="dr14">
               <div class="d-icon" style="background:rgba(34,197,94,0.2)"><i class="ph-duotone ph-tractor" style="color:#86efac"></i></div>
               <div class="d-text">DR 14 – Ferme Mici<div class="d-label">PAC 2023-2027 | până la 50.000 EUR</div></div>
             </a>
 
-            <a href="/digitalizare-imm" class="dropdown-item" data-service-id="digitalizare-imm">
+            <a href="/digitalizare-imm" class="dropdown-item" role="menuitem" data-service-id="digitalizare-imm">
               <div class="d-icon" style="background:rgba(14,165,233,0.2)"><i class="ph-duotone ph-desktop" style="color:#7dd3fc"></i></div>
               <div class="d-text">Digitalizare IMM<div class="d-label">Transformare Digitală | 90%</div></div>
             </a>
 
-            <a href="/femeia-antreprenor-2026" class="dropdown-item" data-service-id="femeia-antreprenor">
+            <a href="/femeia-antreprenor-2026" class="dropdown-item" role="menuitem" data-service-id="femeia-antreprenor">
               <div class="d-icon" style="background:rgba(236,72,153,0.2)"><i class="ph-duotone ph-user-circle" style="color:#f9a8d4"></i></div>
               <div class="d-text">Femeia Antreprenor 2026<div class="d-label">Antreprenoriat Feminin</div></div>
             </a>
 
-            <a href="/pro-infra" class="dropdown-item" data-service-id="pro-infra">
+            <a href="/pro-infra" class="dropdown-item" role="menuitem" data-service-id="pro-infra">
               <div class="d-icon" style="background:rgba(251,146,60,0.2)"><i class="ph-duotone ph-factory" style="color:#fdba74"></i></div>
               <div class="d-text">PRO INFRA<div class="d-label">Materiale Construcții | până la 15M EUR</div></div>
             </a>
 
-            <a href="/start-up-nation-2026" class="dropdown-item" data-service-id="startup-nation">
+            <a href="/start-up-nation-2026" class="dropdown-item" role="menuitem" data-service-id="startup-nation">
               <div class="d-icon" style="background:rgba(139,92,246,0.2)"><i class="ph-duotone ph-rocket-launch" style="color:#a78bfa"></i></div>
               <div class="d-text">Start-Up Nation 2026<div class="d-label">Antreprenoriat | 250.000 RON</div></div>
             </a>
@@ -1394,7 +1448,7 @@
 
     function updateScrollState() {
       scrollTicking = false;
-      navbar.classList.toggle('scrolled', window.scrollY > 50);
+      navbar.classList.toggle('scrolled', window.scrollY > 100);
       updateBackToTop();
     }
 
@@ -1429,16 +1483,86 @@
     ===================================================== */
     var dropdownBtn   = document.getElementById('dropdownBtn');
     var dropdownPanel = document.getElementById('dropdownPanel');
+    var dropdownItems = dropdownPanel ? Array.prototype.slice.call(dropdownPanel.querySelectorAll('a')) : [];
+
+    function openDropdown(focusTarget) {
+      if (!dropdownPanel || !dropdownBtn) return;
+      dropdownPanel.hidden = false;
+      dropdownPanel.classList.add('open');
+      dropdownBtn.setAttribute('aria-expanded', 'true');
+      if (focusTarget && dropdownItems.length) {
+        window.requestAnimationFrame(function() {
+          focusTarget.focus();
+        });
+      }
+    }
+
+    function toggleDropdown() {
+      var shouldOpen = dropdownPanel.hidden || !dropdownPanel.classList.contains('open');
+      if (shouldOpen) {
+        openDropdown();
+      } else {
+        closeDropdown();
+      }
+    }
 
     dropdownBtn.addEventListener('click', function(e) {
       e.stopPropagation();
-      var isOpen = dropdownPanel.classList.toggle('open');
-      dropdownBtn.setAttribute('aria-expanded', String(isOpen));
+      toggleDropdown();
     });
 
-    function closeDropdown() {
+    dropdownBtn.addEventListener('keydown', function(e) {
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        openDropdown(dropdownItems[0]);
+      }
+      if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        openDropdown(dropdownItems[dropdownItems.length - 1]);
+      }
+      if (e.key === 'Escape') {
+        closeDropdown();
+      }
+    });
+
+    dropdownPanel.addEventListener('keydown', function(e) {
+      var currentIndex = dropdownItems.indexOf(document.activeElement);
+      if (currentIndex === -1) return;
+
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        dropdownItems[(currentIndex + 1) % dropdownItems.length].focus();
+      }
+      if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        dropdownItems[(currentIndex - 1 + dropdownItems.length) % dropdownItems.length].focus();
+      }
+      if (e.key === 'Home') {
+        e.preventDefault();
+        dropdownItems[0].focus();
+      }
+      if (e.key === 'End') {
+        e.preventDefault();
+        dropdownItems[dropdownItems.length - 1].focus();
+      }
+      if (e.key === 'Escape') {
+        e.preventDefault();
+        closeDropdown({ restoreFocus: true });
+      }
+    });
+
+    dropdownPanel.addEventListener('focusout', function(e) {
+      if (!dropdownPanel.contains(e.relatedTarget) && e.relatedTarget !== dropdownBtn) {
+        closeDropdown();
+      }
+    });
+
+    function closeDropdown(options) {
+      if (!dropdownPanel || !dropdownBtn) return;
       dropdownPanel.classList.remove('open');
+      dropdownPanel.hidden = true;
       dropdownBtn.setAttribute('aria-expanded', 'false');
+      if (options && options.restoreFocus) dropdownBtn.focus();
     }
 
     document.addEventListener('click', function(e) {
