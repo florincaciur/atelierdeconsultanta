@@ -197,20 +197,23 @@
     }
     .cta-box h3{font-size:1.28rem;font-weight:900;color:var(--white);margin-bottom:12px}
     .cta-box p{color:rgba(255,255,255,.76);margin-bottom:24px;font-size:.96rem}
-    .post-body a.btn-cta,.cta-box a.btn-cta,.btn-cta{
+    .post-body a.btn-primary,.cta-box a.btn-primary,.btn-primary{
       display:inline-flex;
       align-items:center;
       justify-content:center;
-      background:var(--orange);
+      min-height:44px;
+      background:linear-gradient(135deg,var(--orange),var(--orange-dark));
+      border:1px solid var(--orange);
       color:var(--white);
       padding:13px 28px;
       border-radius:var(--radius-sm);
       font-weight:900;
       font-size:.92rem;
+      text-decoration:none;
       box-shadow:0 10px 28px rgba(232,100,42,.24);
-      transition:background .2s ease,transform .2s ease;
+      transition:background .2s ease,transform .2s ease,box-shadow .2s ease;
     }
-    .btn-cta:hover{background:var(--orange-dark);transform:translateY(-2px);text-decoration:none}
+    .btn-primary:hover{background:linear-gradient(135deg,var(--orange-dark),#9d3a0f);transform:translateY(-2px);text-decoration:none}
     .footer{
       background:var(--navy);
       color:rgba(255,255,255,.65);
@@ -337,7 +340,7 @@
     <div class="navbar-links">
       <a href="/blog">Blog</a>
       <a href="/dr14" class="optional">DR 14</a>
-      <a href="/contact" class="nav-cta">Solicită verificare eligibilitate</a>
+      <a href="/contact" class="nav-cta btn-primary">Solicită verificare eligibilitate</a>
     </div>
   </nav>
   <div class="breadcrumb"><a href="/">Acasă</a> › <a href="/blog">Blog</a> › DR 14 AFIR</div>
@@ -402,7 +405,7 @@
       <div class="cta-box">
         <h3>Vrei să verificăm eligibilitatea fermei?</h3>
         <p>Trimite-ne câteva detalii despre exploatație și investiția dorită. Îți spunem ce trebuie verificat înainte de un dosar DR 14 AFIR.</p>
-        <a href="/contact" class="btn-cta">Solicită verificare eligibilitate</a>
+        <a href="/contact" class="btn-primary">Solicită verificare eligibilitate</a>
       </div>
 </article>
   <section class="vezi-si-section" aria-labelledby="vezi-si-title">

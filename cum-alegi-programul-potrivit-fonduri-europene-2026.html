@@ -153,8 +153,8 @@
     .cta-box{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-mid) 100%);border-radius:var(--radius);padding:40px;text-align:center;margin-top:40px}
     .cta-box h3{font-size:1.25rem;font-weight:700;color:var(--white);margin-bottom:12px}
     .cta-box p{color:rgba(255,255,255,.7);margin-bottom:24px;font-size:.93rem}
-    .post-body a.btn-cta,.cta-box a.btn-cta,.btn-cta{display:inline-flex;align-items:center;gap:8px;background:var(--orange);color:var(--white);padding:13px 28px;border-radius:100px;font-weight:700;font-size:.9rem;transition:background .2s,transform .2s}
-    .btn-cta:hover{background:var(--orange-dark);transform:translateY(-2px)}
+    .post-body a.btn-primary,.cta-box a.btn-primary,.btn-primary{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;background:linear-gradient(135deg,var(--orange),var(--orange-dark));border:1px solid var(--orange);color:var(--white);padding:13px 28px;border-radius:100px;font-weight:700;font-size:.9rem;text-decoration:none;box-shadow:0 10px 28px rgba(232,100,42,.24);transition:background .2s,transform .2s,box-shadow .2s}
+    .btn-primary:hover{background:linear-gradient(135deg,var(--orange-dark),#9d3a0f);transform:translateY(-2px);text-decoration:none}
     .footer{background:var(--navy);color:rgba(255,255,255,.6);text-align:center;padding:28px 24px;font-size:.82rem}
     .footer a{color:var(--orange)}
     @media(max-width:600px){.post-body{padding:24px 18px}.cta-box{padding:28px 18px}.navbar-links .nav-blog,.navbar-links .nav-pgm{display:none}}
@@ -181,7 +181,7 @@
     <div class="navbar-links">
       <a href="/#finantare" class="nav-pgm">Programe</a>
       <a href="/blog" class="nav-blog">Blog</a>
-      <a href="/#contact" class="nav-cta">Solicită verificare eligibilitate</a>
+      <a href="/#contact" class="nav-cta btn-primary">Solicită verificare eligibilitate</a>
     </div>
   </nav>
 
@@ -339,7 +339,7 @@
       <div class="cta-box">
         <h3>Verifică eligibilitatea proiectului tău</h3>
         <p>Trimite detaliile proiectului și verificăm dacă solicitantul, investiția și documentele disponibile pot fi potrivite pentru un program real. Analiza inițială nu garantează finanțarea.</p>
-        <a href="/#contact" class="btn-cta">Solicită verificare eligibilitate</a>
+        <a href="/#contact" class="btn-primary">Solicită verificare eligibilitate</a>
       </div>
 
     </article>

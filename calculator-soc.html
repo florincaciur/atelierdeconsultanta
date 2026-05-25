@@ -172,8 +172,14 @@
     .topbar-nav{display:flex;gap:6px;align-items:center;}
     .topbar-nav a{color:rgba(255,255,255,0.75);font-size:0.85rem;font-weight:500;padding:7px 13px;border-radius:var(--rs);transition:color var(--tr),background var(--tr);}
     .topbar-nav a:hover{color:white;background:rgba(255,255,255,0.08);}
-    .topbar-nav .cta{background:var(--orange);color:white!important;font-weight:600;padding:8px 18px;}
-    .topbar-nav .cta:hover{background:#c4541f;}
+    .btn-primary,
+    .btn-secondary{display:inline-flex;align-items:center;justify-content:center;min-height:40px;border-radius:var(--rs);border:1px solid transparent;font-weight:700;text-decoration:none;transition:background var(--tr),border-color var(--tr),color var(--tr),transform var(--tr),box-shadow var(--tr);}
+    .btn-primary{background:linear-gradient(135deg,var(--orange),#c4541f);border-color:var(--orange);color:white!important;box-shadow:0 8px 22px rgba(232,100,42,0.28);}
+    .btn-primary:hover{background:linear-gradient(135deg,#c4541f,#9d3a0f);color:white!important;transform:translateY(-1px);}
+    .btn-secondary{background:rgba(232,100,42,0.08);border-color:rgba(232,100,42,0.42);color:#f5a623!important;}
+    .btn-secondary:hover{background:rgba(232,100,42,0.14);border-color:var(--orange);color:white!important;}
+    .topbar-nav .btn-primary{padding:8px 18px;}
+    .topbar-nav .btn-secondary{padding:7px 12px;font-size:0.82rem;}
 
     .hero{background:linear-gradient(135deg,#0d1f3c 0%,#1a3a6a 100%);padding:80px 24px 60px;position:relative;overflow:hidden;}
     .hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,0.04) 1px,transparent 1px);background-size:36px 36px;pointer-events:none;}
@@ -290,8 +296,8 @@
     <a href="/">← Acasă</a>
     <a href="/#finantare">Programe</a>
     <a href="/#blog">Blog</a>
-    <a href="/calculator-soc" style="color:rgba(255,255,255,0.75);font-size:0.82rem;font-weight:600;padding:7px 12px;border-radius:6px;border:1px solid rgba(232,100,42,0.4);transition:all 0.3s;">🧮 Calculator SOC</a>
-    <a href="/#contact" class="cta">Solicită verificare eligibilitate</a>
+    <a href="/calculator-soc" class="btn-secondary">🧮 Calculator SOC</a>
+    <a href="/#contact" class="btn-primary">Solicită verificare eligibilitate</a>
   </div>
 </nav>
 

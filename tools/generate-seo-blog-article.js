@@ -1354,7 +1354,7 @@ ${CLARITY_TRACKING_CODE}
       <a href="/fonduri-europene">Fonduri europene</a>
       <a href="/ghiduri">Ghiduri</a>
       <a href="/blog">Blog</a>
-      <a href="/contact" class="nav-cta">Evaluare gratuită</a>
+      <a href="/contact" class="nav-cta btn-primary">Evaluare gratuită</a>
     </div>
   </nav>
 
@@ -1489,8 +1489,8 @@ ${CLARITY_TRACKING_CODE}
           </div>
           ${
             guideUrl
-              ? `<a class="official-guide-button" href="${esc(guideUrl)}" target="_blank" rel="noopener">Consultă documentul oficial</a>`
-              : `<span class="official-guide-button">Link ghid: de adăugat</span>`
+              ? `<a class="official-guide-button btn-secondary" href="${esc(guideUrl)}" target="_blank" rel="noopener">Consultă documentul oficial</a>`
+              : `<span class="official-guide-button btn-secondary">Link ghid: de adăugat</span>`
           }
         </div>
         <p>Surse oficiale verificate în etapa de documentare:</p>
@@ -1520,7 +1520,7 @@ ${CLARITY_TRACKING_CODE}
       <div class="cta-box">
         <h3>Vrei să verificăm proiectul?</h3>
         <p>Trimite câteva detalii despre solicitant, investiție și programul urmărit. FABER poate verifica eligibilitatea inițială și pașii de pregătire, fără promisiuni comerciale nerealiste.</p>
-        <a class="btn-cta" href="/contact">Solicită evaluare gratuită</a>
+        <a class="btn-primary" href="/contact">Solicită evaluare gratuită</a>
       </div>
     </article>
   </main>

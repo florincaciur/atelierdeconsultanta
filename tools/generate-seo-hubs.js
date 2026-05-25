@@ -522,7 +522,7 @@ ${CLARITY_TRACKING_CODE}
       <a href="${cleanHref("/fonduri-europene/")}">Fonduri europene</a>
       <a href="${cleanHref("/ghiduri/")}">Ghiduri</a>
       <a href="${cleanHref("/blog.html")}">Blog</a>
-      <a class="nav-cta" href="${cleanHref("/contact/")}">Evaluare gratuită</a>
+      <a class="nav-cta btn-primary" href="${cleanHref("/contact/")}">Evaluare gratuită</a>
     </div>
   </nav>
   <div class="breadcrumb"><a href="/">Acasă</a> / ${esc(page.h1)}</div>

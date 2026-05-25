@@ -100,6 +100,90 @@
       "publisher": {
         "@id": "https://atelierdeconsultanta.ro/#organization"
       }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://atelierdeconsultanta.ro/#homepage-navigation",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Acasa",
+          "item": "https://atelierdeconsultanta.ro/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Consultanta fonduri europene",
+          "item": "https://atelierdeconsultanta.ro/#hero"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Analiza eligibilitate",
+          "item": "https://atelierdeconsultanta.ro/#analiza-eligibilitate"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Alegere program",
+          "item": "https://atelierdeconsultanta.ro/#alegere-program"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Strategie punctaj",
+          "item": "https://atelierdeconsultanta.ro/#strategie-punctaj"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Pregatire dosar",
+          "item": "https://atelierdeconsultanta.ro/#pregatire-dosar"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Sprijin clarificari",
+          "item": "https://atelierdeconsultanta.ro/#sprijin-clarificari"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "Suport implementare",
+          "item": "https://atelierdeconsultanta.ro/#suport-implementare"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "name": "Programe urmarite",
+          "item": "https://atelierdeconsultanta.ro/#finantare"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "name": "Metoda clara, concluzii prudente",
+          "item": "https://atelierdeconsultanta.ro/#despre"
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "name": "De ce nu promitem finantare garantata",
+          "item": "https://atelierdeconsultanta.ro/#testimoniale"
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "name": "Blog",
+          "item": "https://atelierdeconsultanta.ro/#blog"
+        },
+        {
+          "@type": "ListItem",
+          "position": 13,
+          "name": "Contact",
+          "item": "https://atelierdeconsultanta.ro/#contact"
+        }
+      ]
     }
   ]
 }</script>
@@ -164,6 +248,9 @@
       line-height: 1.25;
       overflow-wrap: anywhere;
     }
+    .claim-marker--hidden {
+      display: none !important;
+    }
     .form-note {
       background: rgba(255,255,255,0.07);
       border: 1px solid rgba(255,255,255,0.12);
@@ -189,6 +276,223 @@
     }
     .form-trust-links a {
       font-size: 0.82rem;
+    }
+    .btn-primary,
+    .btn-secondary {
+      align-items: center;
+      border-radius: var(--radius-sm);
+      display: inline-flex;
+      font-weight: 800;
+      gap: 8px;
+      justify-content: center;
+      line-height: 1.25;
+      min-height: 44px;
+      padding: 12px 22px;
+      text-align: center;
+      text-decoration: none;
+      transition: background var(--transition), border-color var(--transition), color var(--transition), box-shadow var(--transition), transform var(--transition);
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--orange) 0%, var(--orange-contrast) 100%);
+      border: 1px solid var(--orange-contrast);
+      color: var(--white);
+      box-shadow: 0 10px 28px rgba(232,100,42,0.28);
+    }
+    .btn-primary:hover {
+      background: linear-gradient(135deg, var(--orange-contrast) 0%, var(--orange-contrast-dark) 100%);
+      border-color: var(--orange-contrast-dark);
+      color: var(--white);
+      transform: translateY(-2px);
+    }
+    .btn-secondary {
+      background: rgba(232,100,42,0.06);
+      border: 1px solid rgba(232,100,42,0.38);
+      color: var(--orange-contrast);
+    }
+    .btn-secondary:hover {
+      background: rgba(232,100,42,0.12);
+      border-color: var(--orange-contrast);
+      color: var(--orange-contrast-dark);
+      transform: translateY(-2px);
+    }
+    #hero .btn-secondary,
+    #navbar .btn-secondary,
+    #newsletter .btn-secondary,
+    #contact .btn-secondary {
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(255,255,255,0.26);
+      color: var(--white);
+    }
+    #hero .btn-secondary:hover,
+    #navbar .btn-secondary:hover,
+    #newsletter .btn-secondary:hover,
+    #contact .btn-secondary:hover {
+      background: rgba(255,255,255,0.14);
+      border-color: rgba(255,255,255,0.42);
+      color: var(--white);
+    }
+    #navbar .nav-cta.btn-primary {
+      background: linear-gradient(135deg, var(--orange) 0%, var(--orange-contrast) 100%);
+      border: 1px solid var(--orange-contrast);
+      color: var(--white);
+      min-height: 42px;
+      padding: 10px 20px;
+    }
+    #navbar .nav-cta.btn-primary:hover {
+      background: linear-gradient(135deg, var(--orange-contrast) 0%, var(--orange-contrast-dark) 100%);
+      border-color: var(--orange-contrast-dark);
+      color: var(--white);
+    }
+    #navbar .nav-utility {
+      font-size: 0.85rem;
+      font-weight: 700;
+      min-height: 40px;
+      padding: 8px 14px;
+    }
+    #mobileMenu .mobile-cta.btn-primary {
+      background: linear-gradient(135deg, var(--orange) 0%, var(--orange-contrast) 100%) !important;
+      border: 1px solid var(--orange-contrast) !important;
+      color: var(--white) !important;
+      display: flex;
+      justify-content: center;
+    }
+    #finantare .finantare-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      align-items: stretch;
+      gap: 20px;
+    }
+    #finantare .finantare-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: 8px;
+      box-shadow: none;
+      min-width: 0;
+      padding: 26px;
+    }
+    #finantare .finantare-card:hover {
+      border-color: rgba(13,31,60,0.18);
+      box-shadow: var(--shadow-sm);
+      transform: translateY(-2px);
+    }
+    #finantare .finantare-card[hidden] {
+      display: none !important;
+    }
+    #finantare .finantare-badge,
+    #finantare .badge-active,
+    #finantare .badge-upcoming,
+    #finantare .badge-planning {
+      background: var(--gray-100);
+      border: 1px solid var(--gray-200);
+      color: var(--text-soft);
+      width: fit-content;
+    }
+    #finantare .finantare-title {
+      font-size: 1.02rem;
+    }
+    #finantare .finantare-actions {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+      margin-top: auto;
+    }
+    #finantare .finantare-actions .btn-primary,
+    #finantare .finantare-actions .btn-secondary {
+      font-size: 0.82rem;
+      min-height: 44px;
+      padding: 11px 14px;
+      width: 100%;
+    }
+    #finantare .finantare-actions .btn-secondary {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      color: var(--navy);
+      letter-spacing: 0;
+    }
+    #finantare .finantare-actions .btn-secondary:hover {
+      background: var(--gray-100);
+      border-color: rgba(13,31,60,0.2);
+    }
+    #newsletter .newsletter-submit {
+      border: 0;
+      cursor: pointer;
+      font-family: inherit;
+      white-space: nowrap;
+    }
+    #contact .form-submit.btn-primary {
+      width: 100%;
+    }
+    #contact .form-group label,
+    #contact .form-consent label {
+      color: var(--white);
+    }
+    #contact .form-group input::placeholder,
+    #contact .form-group textarea::placeholder {
+      color: var(--white);
+      opacity: 1;
+    }
+    #contact .form-group select {
+      color: var(--white);
+    }
+    #contact .form-group input.field-invalid,
+    #contact .form-group select.field-invalid,
+    #contact .form-group textarea.field-invalid {
+      border-color: #fca5a5;
+      background: rgba(254,242,242,0.12);
+    }
+    #contact .form-group input.field-valid,
+    #contact .form-group select.field-valid,
+    #contact .form-group textarea.field-valid {
+      border-color: rgba(34,197,94,0.55);
+    }
+    #contact .field-error {
+      color: #fecaca;
+      display: none;
+      font-size: 0.8rem;
+      font-weight: 700;
+      line-height: 1.45;
+      margin: 0;
+    }
+    #contact .form-group.invalid .field-error,
+    #contact .form-consent.invalid .field-error {
+      display: block;
+    }
+    #contact .form-consent {
+      flex-wrap: wrap;
+    }
+    #contact .form-consent .field-error {
+      flex-basis: 100%;
+      margin-left: 26px;
+    }
+    @media (max-width: 1024px) {
+      #finantare .finantare-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+    @media (max-width: 768px) {
+      #contact .form-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        margin-bottom: 18px;
+      }
+      #contact .form-group.full {
+        grid-column: auto;
+      }
+      #contact .form-consent {
+        margin: 18px 0;
+      }
+    }
+    @media (max-width: 700px) {
+      #finantare {
+        padding-left: 18px;
+        padding-right: 18px;
+      }
+      #finantare .finantare-grid {
+        grid-template-columns: 1fr;
+      }
+      #finantare .finantare-card {
+        padding: 22px;
+      }
     }
   </style>
   <script type="text/javascript">
@@ -290,11 +594,11 @@
           </div>
         </div>
 
-        <a href="/calculator-soc" style="color:rgba(255,255,255,0.8);font-size:0.85rem;font-weight:600;padding:8px 14px;border-radius:8px;border:1px solid rgba(232,100,42,0.35);transition:all 0.3s;" onmouseover="this.style.background='rgba(232,100,42,0.15)'" onmouseout="this.style.background='transparent'">🧮 Calculator SOC</a>
+        <a href="/calculator-soc" class="nav-utility btn-secondary">🧮 Calculator SOC</a>
 
-        <a href="#contact" style="color:rgba(255,255,255,0.8);font-size:0.85rem;font-weight:600;padding:8px 14px;border-radius:8px;transition:all 0.3s;" onmouseover="this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.background='transparent'">Contact</a>
+        <a href="#contact" class="nav-utility btn-secondary">Contact</a>
 
-          <a href="/verificare-eligibilitate-fonduri-europene" class="nav-cta">Solicită verificare eligibilitate</a>
+          <a href="/verificare-eligibilitate-fonduri-europene" class="nav-cta btn-primary">Solicită verificare eligibilitate</a>
       </div>
 
       <button class="hamburger" id="hamburgerBtn" type="button"
@@ -323,7 +627,7 @@
       <a href="/start-up-nation-2026">Start-Up Nation 2026</a>
       <a href="/calculator-soc">🧮 Calculator SOC AFIR</a>
       <a href="#contact" onclick="closeMobileMenu()">Contact</a>
-      <a href="/verificare-eligibilitate-fonduri-europene" class="mobile-cta" onclick="closeMobileMenu()">Solicită verificare eligibilitate</a>
+      <a href="/verificare-eligibilitate-fonduri-europene" class="mobile-cta btn-primary" onclick="closeMobileMenu()">Solicită verificare eligibilitate</a>
     </nav>
   </div>
 
@@ -365,31 +669,6 @@
     </section>
 
     <!-- ============================================================
-         ✦ CARUSEL — programe de finanțare (dinamic din banners.json) ✦
-    ============================================================ -->
-    <section id="carousel-section" data-section-id="carousel-programs" aria-label="Programe de finanțare">
-      <div style="padding: 0 24px;" class="reveal">
-        <div class="section-label">Oportunități active</div>
-        <h2 class="section-title">Programe de Finanțare Disponibile</h2>
-        <p class="section-subtitle">Selectează programul potrivit pentru afacerea sau instituția ta</p>
-      </div>
-
-      <div class="carousel-wrapper" id="carouselWrapper"
-           role="region" aria-label="Carusel programe de finanțare"
-           data-section-id="carousel-wrapper">
-
-        <div class="carousel-track" id="carouselTrack">
-          <!-- Slide-urile sunt injectate dinamic din banners.json -->
-        </div>
-
-        <button class="carousel-btn prev" id="carouselPrev" type="button" aria-label="Slide anterior" onclick="carouselMove(-1)">&#8592;</button>
-        <button class="carousel-btn next" id="carouselNext" type="button" aria-label="Slide următor" onclick="carouselMove(1)">&#8594;</button>
-      </div>
-
-      <div class="carousel-dots" id="carouselDots" aria-label="Navigare carusel"></div>
-    </section>
-
-    <!-- ============================================================
          ✦ SERVICII ✦
     ============================================================ -->
     <section id="servicii" data-section-id="services" aria-label="Serviciile noastre">
@@ -403,7 +682,7 @@
         <button class="card-carousel-btn" type="button" aria-label="Serviciul anterior" onclick="moveCardCarousel('services-carousel', -1)">&#8592;</button>
         <div class="card-carousel-viewport" id="services-carousel" tabindex="0" aria-label="Carusel servicii">
           <div class="services-grid card-carousel-track">
-        <article class="service-card reveal reveal-delay-1" data-service-id="service-identificare">
+        <article id="analiza-eligibilitate" class="service-card reveal reveal-delay-1" data-service-id="service-identificare">
           <div class="service-icon" aria-hidden="true"><i class="ph-duotone ph-magnifying-glass"></i></div>
           <h3 class="service-title">Analiză eligibilitate</h3>
           <p class="service-desc">
@@ -411,7 +690,7 @@
           </p>
         </article>
 
-        <article class="service-card reveal reveal-delay-2" data-service-id="service-elaborare">
+        <article id="alegere-program" class="service-card reveal reveal-delay-2" data-service-id="service-elaborare">
           <div class="service-icon" aria-hidden="true"><i class="ph-duotone ph-file-text"></i></div>
           <h3 class="service-title">Alegere program</h3>
           <p class="service-desc">
@@ -419,7 +698,7 @@
           </p>
         </article>
 
-        <article class="service-card reveal reveal-delay-3" data-service-id="service-implementare">
+        <article id="strategie-punctaj" class="service-card reveal reveal-delay-3" data-service-id="service-implementare">
           <div class="service-icon" aria-hidden="true"><i class="ph-duotone ph-arrows-clockwise"></i></div>
           <h3 class="service-title">Strategie punctaj</h3>
           <p class="service-desc">
@@ -427,7 +706,7 @@
           </p>
         </article>
 
-        <article class="service-card reveal reveal-delay-1" data-service-id="service-monitorizare">
+        <article id="pregatire-dosar" class="service-card reveal reveal-delay-1" data-service-id="service-monitorizare">
           <div class="service-icon" aria-hidden="true"><i class="ph-duotone ph-chart-line-up"></i></div>
           <h3 class="service-title">Pregătire dosar</h3>
           <p class="service-desc">
@@ -435,7 +714,7 @@
           </p>
         </article>
 
-        <article class="service-card reveal reveal-delay-2" data-service-id="service-audit">
+        <article id="sprijin-clarificari" class="service-card reveal reveal-delay-2" data-service-id="service-audit">
           <div class="service-icon" aria-hidden="true"><i class="ph-duotone ph-seal-check"></i></div>
           <h3 class="service-title">Sprijin clarificări</h3>
           <p class="service-desc">
@@ -443,7 +722,7 @@
           </p>
         </article>
 
-        <article class="service-card reveal reveal-delay-3" data-service-id="service-training">
+        <article id="suport-implementare" class="service-card reveal reveal-delay-3" data-service-id="service-training">
           <div class="service-icon" aria-hidden="true"><i class="ph-duotone ph-graduation-cap"></i></div>
           <h3 class="service-title">Suport implementare</h3>
           <p class="service-desc">
@@ -493,19 +772,19 @@
         <div class="despre-stats reveal-right">
           <div class="stat-card">
             <div class="stat-number">250+</div>
-            <div class="stat-label">Proiecte declarate lucrate <span class="claim-marker">TODO_CLIENT_DOVADA_CLAIM</span></div>
+            <div class="stat-label">Proiecte declarate lucrate <span class="claim-marker claim-marker--hidden"><!-- TODO_CLIENT_DOVADA_CLAIM: completati dovada claim-ului inainte de publicare. --></span></div>
           </div>
           <div class="stat-card">
             <div class="stat-number">45M€+</div>
-            <div class="stat-label">Valoare declarată în proiecte <span class="claim-marker">TODO_CLIENT_DOVADA_CLAIM</span></div>
+            <div class="stat-label">Valoare declarată în proiecte <span class="claim-marker claim-marker--hidden"><!-- TODO_CLIENT_DOVADA_CLAIM: completati dovada claim-ului inainte de publicare. --></span></div>
           </div>
           <div class="stat-card">
             <div class="stat-number">98%</div>
-            <div class="stat-label">Rată declarată, nu garanție <span class="claim-marker">TODO_CLIENT_DOVADA_CLAIM</span></div>
+            <div class="stat-label">Rată declarată, nu garanție <span class="claim-marker claim-marker--hidden"><!-- TODO_CLIENT_DOVADA_CLAIM: completati dovada claim-ului inainte de publicare. --></span></div>
           </div>
           <div class="stat-card">
             <div class="stat-number">10 ani</div>
-            <div class="stat-label">Experiență declarată <span class="claim-marker">TODO_CLIENT_DOVADA_CLAIM</span></div>
+            <div class="stat-label">Experiență declarată <span class="claim-marker claim-marker--hidden"><!-- TODO_CLIENT_DOVADA_CLAIM: completati dovada claim-ului inainte de publicare. --></span></div>
           </div>
           <p style="grid-column:1 / -1;color:rgba(255,255,255,0.72);font-size:0.78rem;line-height:1.55;text-align:center;margin-top:4px;">
             Cifrele sunt afișate prudent până la confirmarea prin portofoliu, metodologie internă sau documente aprobate pentru publicare.
@@ -530,10 +809,7 @@
         <button class="beneficiary-toggle" type="button" data-beneficiary-filter="public" aria-pressed="false" onclick="filterFinancing('public', this)">Beneficiari publici</button>
       </div>
 
-      <div class="card-carousel" data-card-carousel="financing">
-        <button class="card-carousel-btn" type="button" aria-label="Program anterior" onclick="moveCardCarousel('financing-carousel', -1)">&#8592;</button>
-        <div class="card-carousel-viewport" id="financing-carousel" tabindex="0" aria-label="Carusel programe de finantare">
-          <div class="finantare-grid card-carousel-track">
+      <div class="finantare-grid" id="financing-grid">
 
         <article class="finantare-card reveal reveal-delay-1" data-service-id="fin-por-ne" data-beneficiary="private">
           <span class="finantare-badge badge-active">Activ</span>
@@ -542,8 +818,8 @@
           <p class="finantare-amount">Între <strong>100.000 € și 300.000 €</strong> per proiect</p>
           <p style="font-size:0.85rem;color:var(--text-soft)">Microîntreprinderi din Regiunea Nord-Est, cu intensitate nerambursabilă între 70% și 90%</p>
           <div class="finantare-actions">
-            <a href="/por-adr-nord-est" class="finantare-link">Detalii complete →</a>
-            <a class="finantare-guide-link" href="https://adrnordest.ro/comentariiGhid/P1IMMInovative/Apel1/Ghid.pdf" target="_blank" rel="noopener noreferrer">Consultă sursele oficiale</a>
+            <a href="/por-adr-nord-est" class="btn-primary">Detalii program</a>
+            <a class="btn-secondary" href="https://adrnordest.ro/comentariiGhid/P1IMMInovative/Apel1/Ghid.pdf" target="_blank" rel="noopener noreferrer">Consultă sursele oficiale</a>
           </div>
         </article>
 
@@ -554,8 +830,8 @@
           <p class="finantare-amount">Până la <strong>200.000 €</strong> per proiect</p>
           <p style="font-size:0.85rem;color:var(--text-soft)">80% pentru tineri fermieri și 65% pentru fermieri recent instalați</p>
           <div class="finantare-actions">
-            <a href="/dr12-afir" class="finantare-link">Detalii complete →</a>
-            <a class="finantare-guide-link" href="https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/" target="_blank" rel="noopener noreferrer">Consultă sursele oficiale</a>
+            <a href="/dr12-afir" class="btn-primary">Detalii program</a>
+            <a class="btn-secondary" href="https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/" target="_blank" rel="noopener noreferrer">Consultă sursele oficiale</a>
           </div>
         </article>
 
@@ -566,8 +842,8 @@
           <p class="finantare-amount"><strong>100% nerambursabil</strong>, până la 650.000 €/MW</p>
           <p style="font-size:0.85rem;color:var(--text-soft)">Sisteme fotovoltaice pentru autoconsum în sectorul agroalimentar</p>
           <div class="finantare-actions">
-            <a href="/afir-autoconsum-agroalimentar" class="finantare-link">Detalii complete →</a>
-            <a class="finantare-guide-link" href="https://www.afir.ro/comunicate/consultare-publica-privind-schema-de-energie-regenerabila/" target="_blank" rel="noopener noreferrer">Consultă sursele oficiale</a>
+            <a href="/afir-autoconsum-agroalimentar" class="btn-primary">Detalii program</a>
+            <a class="btn-secondary" href="https://www.afir.ro/comunicate/consultare-publica-privind-schema-de-energie-regenerabila/" target="_blank" rel="noopener noreferrer">Consultă sursele oficiale</a>
           </div>
         </article>
 
@@ -578,8 +854,8 @@
           <p class="finantare-amount"><strong>100% nerambursabil</strong>, până la 10.000.000 €</p>
           <p style="font-size:0.85rem;color:var(--text-soft)">Primării, consilii județene, spitale, școli și alte entități publice</p>
           <div class="finantare-actions">
-            <a href="/autoconsum-public-fotovoltaice-institutii-publice" class="finantare-link">Detalii complete →</a>
-            <a class="finantare-guide-link" href="https://legislatie.just.ro/public/DetaliiDocument/276306" target="_blank" rel="noopener noreferrer">Consultă sursele oficiale</a>
+            <a href="/autoconsum-public-fotovoltaice-institutii-publice" class="btn-primary">Detalii program</a>
+            <a class="btn-secondary" href="https://legislatie.just.ro/public/DetaliiDocument/276306" target="_blank" rel="noopener noreferrer">Consultă sursele oficiale</a>
           </div>
         </article>
 
@@ -590,8 +866,8 @@
           <p class="finantare-amount">Până la <strong>50.000 €</strong>, intensitate 85%</p>
           <p style="font-size:0.85rem;color:var(--text-soft)">Ferme mici între 4.000 și 11.999 SO, cu buget total de 108 milioane EUR</p>
           <div class="finantare-actions">
-            <a href="/dr14" class="finantare-link">Detalii complete →</a>
-            <a class="finantare-guide-link" href="https://www.afir.ro/info-la-zi/versiunea-consultativa-a-ghidului-solicitantului-dr-14/" target="_blank" rel="noopener noreferrer">Consultă sursele oficiale</a>
+            <a href="/dr14" class="btn-primary">Detalii program</a>
+            <a class="btn-secondary" href="https://www.afir.ro/info-la-zi/versiunea-consultativa-a-ghidului-solicitantului-dr-14/" target="_blank" rel="noopener noreferrer">Consultă sursele oficiale</a>
           </div>
         </article>
 
@@ -602,8 +878,8 @@
           <p class="finantare-amount">Până la <strong>100.000 €</strong>, intensitate 90%</p>
           <p style="font-size:0.85rem;color:var(--text-soft)">ERP, CRM, automatizare, securitate cibernetică și cloud</p>
           <div class="finantare-actions">
-            <a href="/digitalizare-imm" class="finantare-link">Detalii complete →</a>
-            <a class="finantare-guide-link" href="https://mfe.gov.ro/ghidul-specific-conditii-de-accesare-a-fondurilor-europene-aferente-planului-national-de-redresare-si-rezilienta-in-cadrul-apelului-de-proiecte-digitalizarea-imm-urilor-grant-de-pana-la-100-000-e/" target="_blank" rel="noopener noreferrer">Consultă sursele oficiale</a>
+            <a href="/digitalizare-imm" class="btn-primary">Detalii program</a>
+            <a class="btn-secondary" href="https://mfe.gov.ro/ghidul-specific-conditii-de-accesare-a-fondurilor-europene-aferente-planului-national-de-redresare-si-rezilienta-in-cadrul-apelului-de-proiecte-digitalizarea-imm-urilor-grant-de-pana-la-100-000-e/" target="_blank" rel="noopener noreferrer">Consultă sursele oficiale</a>
           </div>
         </article>
 
@@ -614,8 +890,8 @@
           <p class="finantare-amount">Până la <strong>200.000 lei</strong>, intensitate 90%</p>
           <p style="font-size:0.85rem;color:var(--text-soft)">Start-up-uri și IMM-uri cu capital deținut în proporție de minimum 50% de femei</p>
           <div class="finantare-actions">
-            <a href="/femeia-antreprenor-2026" class="finantare-link">Detalii complete →</a>
-            <a class="finantare-guide-link" href="https://economie.gov.ro/pe-data-de-30-iulie-se-da-startul-inscrierilor-in-cadrul-programului-femeia-antreprenor/" target="_blank" rel="noopener noreferrer">Consultă sursele oficiale</a>
+            <a href="/femeia-antreprenor-2026" class="btn-primary">Detalii program</a>
+            <a class="btn-secondary" href="https://economie.gov.ro/pe-data-de-30-iulie-se-da-startul-inscrierilor-in-cadrul-programului-femeia-antreprenor/" target="_blank" rel="noopener noreferrer">Consultă sursele oficiale</a>
           </div>
         </article>
 
@@ -626,8 +902,8 @@
           <p class="finantare-amount">Până la <strong>15.000.000 €</strong> per beneficiar</p>
           <p style="font-size:0.85rem;color:var(--text-soft)">Schema de ajutor de stat pentru producători de materiale de construcții utilizate în infrastructura de transport</p>
           <div class="finantare-actions">
-            <a href="/pro-infra" class="finantare-link">Detalii complete →</a>
-            <a class="finantare-guide-link" href="https://legislatie.just.ro/Public/DetaliiDocument/306391" target="_blank" rel="noopener noreferrer">Consultă sursele oficiale</a>
+            <a href="/pro-infra" class="btn-primary">Detalii program</a>
+            <a class="btn-secondary" href="https://legislatie.just.ro/Public/DetaliiDocument/306391" target="_blank" rel="noopener noreferrer">Consultă sursele oficiale</a>
           </div>
         </article>
 
@@ -638,8 +914,8 @@
           <p class="finantare-amount">Până la <strong>250.000 RON</strong>, intensitate 90%</p>
           <p style="font-size:0.85rem;color:var(--text-soft)">Finanțare pentru tineri antreprenori și alte grupuri eligibile, cu minimum 2 locuri de muncă</p>
           <div class="finantare-actions">
-            <a href="/start-up-nation-2026" class="finantare-link">Detalii complete →</a>
-            <a class="finantare-guide-link" href="https://economie.gov.ro/participa-la-definitivarea-procedurii-de-implementare-a-programului-de-succes-start-up-nation-editia-2024/" target="_blank" rel="noopener noreferrer">Consultă sursele oficiale</a>
+            <a href="/start-up-nation-2026" class="btn-primary">Detalii program</a>
+            <a class="btn-secondary" href="https://economie.gov.ro/participa-la-definitivarea-procedurii-de-implementare-a-programului-de-succes-start-up-nation-editia-2024/" target="_blank" rel="noopener noreferrer">Consultă sursele oficiale</a>
           </div>
         </article>
 
@@ -649,7 +925,10 @@
           <h3 class="finantare-title">PNRR – Componente Noi</h3>
           <p class="finantare-amount">Variabil în funcție de componentă</p>
           <p style="font-size:0.85rem;color:var(--text-soft)">Noi apeluri PNRR în pregătire pentru 2026–2027</p>
-          <a href="/pnrr" class="finantare-link">Vezi pagina PNRR →</a>
+          <div class="finantare-actions">
+            <a href="/pnrr" class="btn-primary">Detalii program</a>
+            <a class="btn-secondary" href="https://mfe.gov.ro/pnrr/" target="_blank" rel="noopener noreferrer">Consultă sursele oficiale</a>
+          </div>
         </article>
 
         <article class="finantare-card reveal reveal-delay-2" data-service-id="fin-fond-modernizare" data-beneficiary="both">
@@ -658,12 +937,12 @@
           <h3 class="finantare-title">Fondul de Modernizare</h3>
           <p class="finantare-amount">Variabil în funcție de apel</p>
           <p style="font-size:0.85rem;color:var(--text-soft)">Energie, eficiență și investiții care trebuie verificate pe ghidul apelului activ</p>
-          <a href="/fondul-de-modernizare" class="finantare-link">Vezi programul →</a>
+          <div class="finantare-actions">
+            <a href="/fondul-de-modernizare" class="btn-primary">Detalii program</a>
+            <a class="btn-secondary" href="https://energie.gov.ro/category/fondul-pentru-modernizare/" target="_blank" rel="noopener noreferrer">Consultă sursele oficiale</a>
+          </div>
         </article>
 
-          </div>
-        </div>
-        <button class="card-carousel-btn" type="button" aria-label="Program urmator" onclick="moveCardCarousel('financing-carousel', 1)">&#8594;</button>
       </div>
       <p class="finantare-empty" id="financing-empty">Nu exista programe pentru filtrul selectat.</p>
     </section>
@@ -791,10 +1070,8 @@
           <input type="hidden" name="_subject" value="Abonare newsletter FABER – Atelier de Consultanță" />
 
           <button type="submit"
-                  data-fs-submit-btn
-                  style="padding:15px 28px;background:#b84716;color:white;border:none;border-radius:8px;font-size:0.95rem;font-weight:700;cursor:pointer;font-family:'Inter',sans-serif;transition:background 0.3s,transform 0.2s;white-space:nowrap;"
-                  onmouseover="this.style.background='#9d3a0f';this.style.transform='translateY(-2px)'"
-                  onmouseout="this.style.background='#b84716';this.style.transform='translateY(0)'">
+                  class="btn-primary newsletter-submit"
+                  data-fs-submit-btn>
             Notifică-mă →
           </button>
         </form>
@@ -860,17 +1137,17 @@
               <div class="form-group">
                 <label for="contact-name">Nume complet *</label>
                 <input type="text" id="contact-name" name="name" placeholder="Ion Popescu"
-                       required autocomplete="name" />
+                       required minlength="2" maxlength="100" autocomplete="name" data-validate />
               </div>
               <div class="form-group">
                 <label for="contact-email">Email *</label>
                 <input type="email" id="contact-email" name="email" placeholder="ion@exemplu.ro"
-                       required autocomplete="email" />
+                       required autocomplete="email" data-validate />
               </div>
               <div class="form-group">
                 <label for="contact-phone">Telefon</label>
                 <input type="tel" id="contact-phone" name="phone" placeholder="07XX XXX XXX"
-                       autocomplete="tel" />
+                       autocomplete="tel" inputmode="tel" data-validate />
               </div>
               <div class="form-group">
                 <label for="contact-location">Județ / localitate</label>
@@ -923,14 +1200,15 @@
                 <input type="text" id="contact-budget" name="budget" placeholder="Ex: 80.000 EUR, cofinanțare disponibilă parțial" />
               </div>
               <div class="form-group full">
-                <label for="contact-message">Descrieți pe scurt activitatea / proiectul</label>
+                <label for="contact-message">Descrieți pe scurt activitatea / proiectul *</label>
                 <textarea id="contact-message" name="message" rows="4"
-                          placeholder="Ex: Dețin o fermă de 50 ha și vreau să instalez panouri fotovoltaice..."></textarea>
+                          placeholder="Ex: Dețin o fermă de 50 ha și vreau să instalez panouri fotovoltaice..."
+                          required minlength="10" maxlength="2000" data-validate></textarea>
               </div>
             </div>
 
             <div class="form-consent">
-              <input type="checkbox" id="gdpr-consent" name="gdpr" required />
+              <input type="checkbox" id="gdpr-consent" name="gdpr" required data-validate />
               <label for="gdpr-consent">
                 Am citit și sunt de acord cu
                 <a href="/politica-de-confidentialitate">Politica de confidențialitate</a>
@@ -948,7 +1226,7 @@
 
             <div id="formError" style="display:none;background:#fef2f2;border:1px solid #fca5a5;color:#dc2626;padding:10px 14px;border-radius:8px;font-size:.9rem;margin-bottom:12px" role="alert"></div>
 
-            <button type="submit" class="form-submit">
+            <button type="submit" class="form-submit btn-primary">
               Trimite detaliile proiectului
             </button>
           </form>
@@ -1170,31 +1448,8 @@
     });
 
     /* =====================================================
-       ✦ CARUSEL — dinamic din banners.json ✦
+       ✦ TASK SCHEDULING ✦
     ===================================================== */
-    var carouselIndex = 0;
-    var totalSlides   = 0;
-    var carouselTimer = null;
-    var carouselTrack = document.getElementById('carouselTrack');
-    var carouselWrapper = document.getElementById('carouselWrapper');
-    var carouselSection = document.getElementById('carousel-section');
-
-    function escH(str) {
-      return String(str || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
-    }
-
-    var OFFICIAL_GUIDE_URLS = {
-      'por-ne': 'https://adrnordest.ro/comentariiGhid/P1IMMInovative/Apel1/Ghid.pdf',
-      'dr12': 'https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/',
-      'afir-autoconsum': 'https://www.afir.ro/comunicate/consultare-publica-privind-schema-de-energie-regenerabila/',
-      'autoconsum-publici': 'https://legislatie.just.ro/public/DetaliiDocument/276306',
-      'dr14': 'https://www.afir.ro/info-la-zi/versiunea-consultativa-a-ghidului-solicitantului-dr-14/',
-      'digitalizare': 'https://mfe.gov.ro/ghidul-specific-conditii-de-accesare-a-fondurilor-europene-aferente-planului-national-de-redresare-si-rezilienta-in-cadrul-apelului-de-proiecte-digitalizarea-imm-urilor-grant-de-pana-la-100-000-e/',
-      'femeia': 'https://economie.gov.ro/pe-data-de-30-iulie-se-da-startul-inscrierilor-in-cadrul-programului-femeia-antreprenor/',
-      'pro-infra': 'https://legislatie.just.ro/Public/DetaliiDocument/306391',
-      'startup': 'https://economie.gov.ro/participa-la-definitivarea-procedurii-de-implementare-a-programului-de-succes-start-up-nation-editia-2024/',
-      'fondul-modernizare': 'https://energie.gov.ro/category/fondul-pentru-modernizare/'
-    };
 
     function scheduleAfterFirstPaint(callback, timeout) {
       var runWhenIdle = function() {
@@ -1213,154 +1468,6 @@
         }, { once: true });
       }
     }
-
-    function buildSlideHtml(banner, idx, total) {
-      var titleLines = banner.title.split('\n');
-      var titleHtml  = titleLines.map(function(l) { return escH(l); }).join('<br>');
-      var bgAttr     = '';
-      if (banner.image) {
-        bgAttr = ' data-bg-image="' + escH(banner.image) + '"';
-      }
-      var amountParts = banner.amount.split(':');
-      var amountHtml  = amountParts.length > 1
-        ? escH(amountParts[0]) + ': <strong>' + escH(amountParts.slice(1).join(':').trim()) + '</strong>'
-        : escH(banner.amount);
-      var guideUrl = OFFICIAL_GUIDE_URLS[banner.officialGuideKey] || '';
-      var guideHtml = guideUrl
-        ? '<a class="slide-cta slide-guide-cta" href="' + escH(guideUrl) + '" target="_blank" rel="noopener noreferrer">Consultă sursele oficiale</a>'
-        : '';
-
-      return '<article class="carousel-slide" data-slide="' + idx + '"' +
-        ' role="group" aria-roledescription="slide"' +
-        ' aria-label="' + (idx+1) + ' din ' + total + ': ' + escH(banner.title.replace('\n',' ')) + '"' +
-        ' data-service-id="' + escH(banner.id) + '"' + bgAttr + '>' +
-        '<div class="slide-deco" aria-hidden="true"></div>' +
-        '<div class="slide-deco2" aria-hidden="true"></div>' +
-        '<div class="slide-content">' +
-          '<div class="slide-tag">' + escH(banner.tag) + '</div>' +
-          '<h3 class="slide-title">' + titleHtml + '</h3>' +
-          '<p class="slide-desc">' + escH(banner.description) + '</p>' +
-          '<div class="slide-amount">' + amountHtml + '</div>' +
-          '<div class="slide-actions">' +
-            '<a href="' + escH(banner.ctaLink) + '" class="slide-cta">' + escH(banner.ctaText) + '</a>' +
-            guideHtml +
-          '</div>' +
-        '</div>' +
-        (banner.icon ? '<div class="slide-visual" aria-hidden="true"><i class="ph-duotone ' + escH(banner.icon) + '"></i></div>' : '') +
-        '<div class="carousel-progress" id="progress-' + idx + '"></div>' +
-      '</article>';
-    }
-
-    function buildDots(total) {
-      var dotsContainer = document.getElementById('carouselDots');
-      dotsContainer.innerHTML = '';
-      for (var i = 0; i < total; i++) {
-        (function(idx) {
-          var dot = document.createElement('button');
-          dot.type = 'button';
-          dot.className = 'carousel-dot' + (idx === 0 ? ' active' : '');
-          dot.setAttribute('aria-label', 'Slide ' + (idx + 1) + ' din ' + total);
-          dot.setAttribute('aria-current', idx === 0 ? 'true' : 'false');
-          dot.addEventListener('click', function() {
-            clearInterval(carouselTimer);
-            goToSlide(idx);
-            startAutoPlay();
-          });
-          dotsContainer.appendChild(dot);
-        })(i);
-      }
-    }
-
-    function ensureSlideBackground(index) {
-      if (!totalSlides) return;
-      var slideIndex = ((index % totalSlides) + totalSlides) % totalSlides;
-      var slide = document.querySelector('[data-slide="' + slideIndex + '"]');
-      if (!slide || slide.dataset.bgLoaded === 'true') return;
-
-      var image = slide.getAttribute('data-bg-image');
-      if (!image) return;
-
-      slide.style.backgroundImage = "linear-gradient(rgba(13,31,60,0.58),rgba(13,31,60,0.58)),url('" + image.replace(/'/g, "%27") + "')";
-      slide.style.backgroundSize = 'cover';
-      slide.style.backgroundPosition = 'center';
-      slide.dataset.bgLoaded = 'true';
-    }
-
-    function goToSlide(index) {
-      carouselIndex = ((index % totalSlides) + totalSlides) % totalSlides;
-      ensureSlideBackground(carouselIndex);
-      ensureSlideBackground(carouselIndex + 1);
-      carouselTrack.style.transform = 'translateX(-' + (carouselIndex * 100) + '%)';
-      document.querySelectorAll('.carousel-dot').forEach(function(dot, i) {
-        var active = i === carouselIndex;
-        dot.classList.toggle('active', active);
-        dot.setAttribute('aria-current', String(active));
-      });
-      restartProgressBar();
-    }
-
-    function carouselMove(dir) {
-      clearInterval(carouselTimer);
-      goToSlide(carouselIndex + dir);
-      startAutoPlay();
-    }
-
-    function startAutoPlay() {
-      clearInterval(carouselTimer);
-      carouselTimer = setInterval(function() { goToSlide(carouselIndex + 1); }, 5000);
-    }
-
-    function restartProgressBar() {
-      document.querySelectorAll('.carousel-progress').forEach(function(b) {
-        b.style.transition = 'none';
-        b.style.width = '0%';
-        b.classList.remove('animating');
-      });
-      setTimeout(function() {
-        var bar = document.getElementById('progress-' + carouselIndex);
-        if (bar) { bar.classList.add('animating'); }
-      }, 60);
-    }
-
-    function initCarousel(banners) {
-      var active = banners
-        .filter(function(b) { return b.active !== false; })
-        .sort(function(a, b) { return (a.order || 0) - (b.order || 0); });
-
-      if (active.length === 0) {
-        carouselSection.style.display = 'none';
-        return;
-      }
-
-      totalSlides = active.length;
-      carouselTrack.innerHTML = active.map(function(b, i) {
-        return buildSlideHtml(b, i, active.length);
-      }).join('');
-
-      buildDots(active.length);
-
-      carouselWrapper.addEventListener('mouseenter', function() { clearInterval(carouselTimer); });
-      carouselWrapper.addEventListener('mouseleave', startAutoPlay);
-
-      var touchStartX = 0;
-      carouselWrapper.addEventListener('touchstart', function(e) {
-        touchStartX = e.changedTouches[0].clientX;
-      }, { passive: true });
-      carouselWrapper.addEventListener('touchend', function(e) {
-        var diff = touchStartX - e.changedTouches[0].clientX;
-        if (Math.abs(diff) > 50) { carouselMove(diff > 0 ? 1 : -1); }
-      }, { passive: true });
-
-      goToSlide(0);
-      startAutoPlay();
-    }
-
-    scheduleAfterFirstPaint(function() {
-      fetch('banners.json')
-        .then(function(r) { return r.ok ? r.json() : Promise.reject(r.status); })
-        .then(initCarousel)
-        .catch(function() { carouselSection.style.display = 'none'; });
-    }, 1200);
 
     /* =====================================================
        ✦ SCROLL REVEAL — IntersectionObserver ✦
@@ -1396,7 +1503,7 @@
     }, 800);
 
     /* =====================================================
-       ✦ CARD CAROUSELS — servicii, finanțări, blog ✦
+       ✦ CARD CAROUSELS — servicii, blog ✦
     ===================================================== */
     function getVisibleCarouselCards(viewport) {
       return Array.prototype.slice.call(
@@ -1444,8 +1551,8 @@
     }
 
     function filterFinancing(filter, activeButton) {
-      var viewport = document.getElementById('financing-carousel');
-      var cards = viewport ? viewport.querySelectorAll('.finantare-card') : [];
+      var grid = document.getElementById('financing-grid');
+      var cards = grid ? grid.querySelectorAll('.finantare-card') : [];
       var visibleCount = 0;
 
       Array.prototype.forEach.call(cards, function(card) {
@@ -1463,7 +1570,6 @@
 
       var empty = document.getElementById('financing-empty');
       if (empty) empty.classList.toggle('show', visibleCount === 0);
-      resetCardCarousel('financing-carousel');
     }
 
     /* =====================================================
@@ -1518,7 +1624,7 @@
                   '<span>📅 ' + (p.dateFormatted||p.date) + '</span>' +
                   '<span>⏱️ ' + (p.readTime||'5') + ' min</span>' +
                 '</div>' +
-                '<a href="' + postHref + '" class="blog-read-more" aria-label="Citește articolul ' + p.title + '">' +
+                '<a href="' + postHref + '" class="blog-read-more btn-secondary" aria-label="Citește articolul ' + p.title + '">' +
                   'Citește mai mult →' +
                 '</a>' +
               '</div>' +
@@ -1536,9 +1642,174 @@
     /* =====================================================
        ✦ FORMULAR — validare și trimitere ✦
     ===================================================== */
+    var CONTACT_FIELD_MESSAGES = {
+      'contact-name': {
+        valueMissing: 'Completează numele complet.',
+        tooShort: 'Numele trebuie să aibă cel puțin 2 caractere.',
+        tooLong: 'Numele este prea lung.'
+      },
+      'contact-email': {
+        valueMissing: 'Completează adresa de email.',
+        typeMismatch: 'Introdu o adresă de email validă.'
+      },
+      'contact-phone': {
+        customError: 'Introdu un număr de telefon valid sau lasă câmpul necompletat.'
+      },
+      'contact-message': {
+        valueMissing: 'Descrie pe scurt activitatea sau proiectul.',
+        tooShort: 'Descrierea trebuie să aibă cel puțin 10 caractere.',
+        tooLong: 'Descrierea poate avea maximum 2000 de caractere.'
+      },
+      'gdpr-consent': {
+        valueMissing: 'Acceptă politica GDPR pentru a putea trimite formularul.'
+      }
+    };
+
+    function getContactFields(form) {
+      return Array.prototype.slice.call(form.querySelectorAll('[data-validate]'));
+    }
+
+    function getContactFieldGroup(field) {
+      return field.closest('.form-consent') || field.closest('.form-group');
+    }
+
+    function ensureContactFieldError(field) {
+      var group = getContactFieldGroup(field);
+      if (!group || !field.id) return null;
+
+      var errorId = field.id + '-error';
+      var error = document.getElementById(errorId);
+      if (!error) {
+        error = document.createElement('p');
+        error.id = errorId;
+        error.className = 'field-error';
+        group.appendChild(error);
+      }
+
+      field.setAttribute('aria-describedby', errorId);
+      return error;
+    }
+
+    function applyContactCustomValidity(field) {
+      field.setCustomValidity('');
+
+      if (field.required && field.type !== 'checkbox' && field.value.trim() === '') {
+        var requiredMessages = CONTACT_FIELD_MESSAGES[field.id] || {};
+        field.setCustomValidity(requiredMessages.valueMissing || 'Completează acest câmp.');
+        return;
+      }
+
+      if (field.id === 'contact-name') {
+        var nameValue = field.value.trim();
+        if (nameValue && nameValue.length < 2) {
+          field.setCustomValidity(CONTACT_FIELD_MESSAGES[field.id].tooShort);
+        }
+      }
+
+      if (field.id === 'contact-phone') {
+        var phoneValue = field.value.trim();
+        var phoneDigits = phoneValue.replace(/\D/g, '');
+        if (phoneValue && (!/^[0-9+().\s-]{7,20}$/.test(phoneValue) || phoneDigits.length < 7)) {
+          field.setCustomValidity(CONTACT_FIELD_MESSAGES[field.id].customError);
+        }
+      }
+
+      if (field.id === 'contact-message') {
+        var messageValue = field.value.trim();
+        if (messageValue && messageValue.length < 10) {
+          field.setCustomValidity(CONTACT_FIELD_MESSAGES[field.id].tooShort);
+        }
+      }
+    }
+
+    function getContactErrorMessage(field) {
+      var messages = CONTACT_FIELD_MESSAGES[field.id] || {};
+      var validity = field.validity;
+
+      if (validity.valueMissing) return messages.valueMissing || 'Completează acest câmp.';
+      if (validity.typeMismatch) return messages.typeMismatch || 'Verifică formatul câmpului.';
+      if (validity.tooShort) return messages.tooShort || 'Valoarea introdusă este prea scurtă.';
+      if (validity.tooLong) return messages.tooLong || 'Valoarea introdusă este prea lungă.';
+      if (validity.customError) return field.validationMessage || messages.customError || 'Verifică acest câmp.';
+      return 'Verifică acest câmp.';
+    }
+
+    function setContactFieldState(field, message) {
+      var group = getContactFieldGroup(field);
+      var error = ensureContactFieldError(field);
+
+      if (group) group.classList.toggle('invalid', Boolean(message));
+      field.classList.toggle('field-invalid', Boolean(message));
+      field.classList.toggle('field-valid', !message && Boolean(field.value || field.checked));
+      field.setAttribute('aria-invalid', message ? 'true' : 'false');
+
+      if (error) {
+        error.textContent = message || '';
+      }
+    }
+
+    function validateContactField(field, showError) {
+      applyContactCustomValidity(field);
+      var valid = field.checkValidity();
+
+      if (showError || field.dataset.touched === 'true') {
+        setContactFieldState(field, valid ? '' : getContactErrorMessage(field));
+      }
+
+      return valid;
+    }
+
+    function validateContactForm(form, showError) {
+      var firstInvalid = null;
+      getContactFields(form).forEach(function(field) {
+        var valid = validateContactField(field, showError);
+        if (!valid && !firstInvalid) firstInvalid = field;
+      });
+      return { valid: !firstInvalid, firstInvalid: firstInvalid };
+    }
+
+    function initContactValidation() {
+      var form = document.getElementById('contactForm');
+      if (!form) return;
+
+      getContactFields(form).forEach(function(field) {
+        ensureContactFieldError(field);
+
+        field.addEventListener('blur', function() {
+          field.dataset.touched = 'true';
+          validateContactField(field, true);
+        });
+
+        field.addEventListener(field.type === 'checkbox' ? 'change' : 'input', function() {
+          if (field.dataset.touched === 'true' || field.getAttribute('aria-invalid') === 'true') {
+            validateContactField(field, true);
+          }
+        });
+      });
+    }
+
+    function clearFormError() {
+      var errEl = document.getElementById('formError');
+      if (errEl) {
+        errEl.textContent = '';
+        errEl.style.display = 'none';
+      }
+    }
+
     async function handleSubmit(event) {
       event.preventDefault();
       var form    = event.target;
+      var validation = validateContactForm(form, true);
+
+      if (!validation.valid) {
+        showFormError('Corectează câmpurile marcate înainte de trimitere.');
+        if (validation.firstInvalid && typeof validation.firstInvalid.focus === 'function') {
+          validation.firstInvalid.focus();
+        }
+        return;
+      }
+
+      clearFormError();
       var name    = form.querySelector('#contact-name').value.trim();
       var email   = form.querySelector('#contact-email').value.trim();
       var phone   = (form.querySelector('#contact-phone') || {}).value || '';
@@ -1552,27 +1823,6 @@
       var message = (form.querySelector('#contact-message') || {}).value || '';
       var gdpr    = form.querySelector('#gdpr-consent').checked;
       var submitBtn = form.querySelector('[type="submit"]');
-
-      if (!name || name.length < 2) {
-        showFormError('Te rugăm introdu numele tău (minimum 2 caractere).');
-        return;
-      }
-      if (name.length > 100) {
-        showFormError('Numele este prea lung.');
-        return;
-      }
-      if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-        showFormError('Te rugăm introdu o adresă de email validă.');
-        return;
-      }
-      if (!gdpr) {
-        showFormError('Te rugăm acceptă politica GDPR pentru a continua.');
-        return;
-      }
-      if (message.length > 2000) {
-        showFormError('Mesajul este prea lung (max. 2000 caractere).');
-        return;
-      }
 
       if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Se trimite...'; }
 
@@ -1602,7 +1852,12 @@
 
         if (res.ok && data.success) {
           form.style.display = 'none';
-          document.getElementById('formSuccess').classList.add('show');
+          var success = document.getElementById('formSuccess');
+          if (success) {
+            success.classList.add('show');
+            success.setAttribute('tabindex', '-1');
+            success.focus({ preventScroll: true });
+          }
         } else {
           showFormError('Eroare la trimitere. Vă rugăm contactați-ne direct la email.');
           if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = 'Trimite detaliile proiectului'; }
@@ -1623,6 +1878,8 @@
         alert(msg);
       }
     }
+
+    initContactValidation();
 
     /* =====================================================
        ✦ BACK TO TOP ✦

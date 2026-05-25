@@ -28,6 +28,7 @@
     .compact-checklist li { break-inside: avoid; }
     @media (max-width: 760px) { .compact-checklist { columns: 1; } }
   </style>
+  <!-- TODO_CLIENT_REVIEWER: completati reviewerul editorial confirmat in schema JSON-LD. -->
   <script type="application/ld+json">{
     "@context": "https://schema.org",
     "@graph": [
@@ -77,7 +78,7 @@
         },
         "reviewedBy": {
           "@type": "Organization",
-          "name": "TODO_CLIENT_REVIEWER"
+          "name": "\u00cen curs de actualizare"
         },
         "publisher": {
           "@id": "https://atelierdeconsultanta.ro/#organization"
@@ -169,7 +170,7 @@
       <a href="/ghiduri">Ghiduri</a>
       <a href="/instrumente">Instrumente</a>
       <a href="/resurse">Resurse</a>
-      <a class="nav-cta" href="/contact">Solicită verificare eligibilitate</a>
+      <a class="nav-cta btn-primary" href="/contact">Solicită verificare eligibilitate</a>
     </div>
   </nav>
 
@@ -196,7 +197,7 @@
         </div>
         <dl class="editorial-meta__grid">
           <div><dt>Autor</dt><dd>FABER - Atelier de Consultanta</dd></div>
-          <div><dt>Reviewer</dt><dd>TODO_CLIENT_REVIEWER</dd></div>
+          <div><dt>Reviewer</dt><dd>&Icirc;n curs de actualizare<!-- TODO_CLIENT_REVIEWER: completati reviewerul editorial confirmat. --></dd></div>
           <div><dt>Ultima actualizare</dt><dd><time datetime="2026-05-20">20 mai 2026</time></dd></div>
         </dl>
         <p class="editorial-meta__note">Informatiile sunt orientative. Pentru o decizie finala se verifica ghidul oficial, anexele si forma activa a apelului.</p>

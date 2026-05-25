@@ -220,20 +220,23 @@
     }
     .cta-box h3{font-size:1.28rem;font-weight:900;color:var(--white);margin-bottom:12px}
     .cta-box p{color:rgba(255,255,255,.76);margin-bottom:24px;font-size:.96rem}
-    .post-body a.btn-cta,.cta-box a.btn-cta,.btn-cta{
+    .post-body a.btn-primary,.cta-box a.btn-primary,.btn-primary{
       display:inline-flex;
       align-items:center;
       justify-content:center;
-      background:var(--orange);
+      min-height:44px;
+      background:linear-gradient(135deg,var(--orange),var(--orange-dark));
+      border:1px solid var(--orange);
       color:var(--white);
       padding:13px 28px;
       border-radius:var(--radius-sm);
       font-weight:900;
       font-size:.92rem;
+      text-decoration:none;
       box-shadow:0 10px 28px rgba(232,100,42,.24);
-      transition:background .2s ease,transform .2s ease;
+      transition:background .2s ease,transform .2s ease,box-shadow .2s ease;
     }
-    .btn-cta:hover{background:var(--orange-dark);transform:translateY(-2px);text-decoration:none}
+    .btn-primary:hover{background:linear-gradient(135deg,var(--orange-dark),#9d3a0f);transform:translateY(-2px);text-decoration:none}
     .footer{
       background:var(--navy);
       color:rgba(255,255,255,.65);
@@ -263,6 +266,7 @@
       .post-meta{gap:10px}
     }
   </style>
+  <!-- TODO_CLIENT_REVIEWER: completati reviewerul editorial confirmat in schema JSON-LD. -->
   <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@graph": [
@@ -278,7 +282,7 @@
       },
       "reviewedBy": {
         "@type": "Organization",
-        "name": "TODO_CLIENT_REVIEWER"
+        "name": "\u00cen curs de actualizare"
       },
       "citation": [
         {
@@ -373,7 +377,7 @@
     <div class="navbar-links">
       <a href="/blog">Blog</a>
       <a href="/dr12-afir" class="optional">DR 12</a>
-      <a href="/contact" class="nav-cta">Solicită verificare eligibilitate</a>
+      <a href="/contact" class="nav-cta btn-primary">Solicită verificare eligibilitate</a>
     </div>
   </nav>
   <div class="breadcrumb"><a href="/">Acasă</a> › <a href="/blog">Blog</a> › DR 12 AFIR</div>
@@ -395,7 +399,7 @@
         </div>
         <dl class="editorial-meta__grid">
           <div><dt>Autor</dt><dd>FABER - Atelier de Consultanta</dd></div>
-          <div><dt>Verificat de</dt><dd>TODO_CLIENT_REVIEWER</dd></div>
+          <div><dt>Verificat de</dt><dd>&Icirc;n curs de actualizare<!-- TODO_CLIENT_REVIEWER: completati reviewerul editorial confirmat. --></dd></div>
           <div><dt>Data publicarii</dt><dd><time datetime="2026-04-30">30 aprilie 2026</time></dd></div>
           <div><dt>Ultima actualizare</dt><dd><time datetime="2026-05-20">20 mai 2026</time></dd></div>
           <div><dt>Ultima verificare</dt><dd>TODO_DATA_ACCESARII</dd></div>
@@ -454,7 +458,7 @@
       <div class="cta-box">
         <h3>Pregătești un dosar DR 12?</h3>
         <p>Trimite-ne datele exploatației și investiția dorită. Îți indicăm ce documente trebuie verificate înainte să construiești dosarul.</p>
-        <a href="/contact" class="btn-cta">Solicită verificare eligibilitate</a>
+        <a href="/contact" class="btn-primary">Solicită verificare eligibilitate</a>
       </div>
 </article>
   <section class="vezi-si-section" aria-labelledby="vezi-si-title">

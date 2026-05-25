@@ -300,14 +300,35 @@
     }
     .cta-box h3 { font-size: 1.3rem; font-weight: 700; color: var(--white); margin-bottom: 12px; }
     .cta-box p { color: rgba(255,255,255,.7); margin-bottom: 24px; font-size: 0.95rem; }
-    .btn-cta {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: var(--orange); color: var(--white);
-      padding: 13px 28px; border-radius: 100px;
-      font-weight: 700; font-size: 0.9rem;
-      transition: background .2s, transform .2s;
+    .btn-primary,
+    .btn-secondary {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      min-height: 44px; padding: 13px 28px; border-radius: 100px;
+      border: 1px solid transparent; font-weight: 700; font-size: 0.9rem;
+      text-decoration: none !important;
+      transition: background .2s, border-color .2s, color .2s, transform .2s, box-shadow .2s;
     }
-    .btn-cta:hover { background: var(--orange-dark); transform: translateY(-2px); }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--orange), var(--orange-dark));
+      border-color: var(--orange);
+      color: var(--white);
+      box-shadow: 0 10px 28px rgba(232,100,42,.24);
+    }
+    .btn-primary:hover {
+      background: linear-gradient(135deg, var(--orange-dark), #9d3a0f);
+      transform: translateY(-2px);
+    }
+    .btn-secondary {
+      background: rgba(232,100,42,.06);
+      border-color: rgba(232,100,42,.42);
+      color: var(--orange);
+    }
+    .btn-secondary:hover {
+      background: rgba(232,100,42,.12);
+      border-color: var(--orange);
+      color: var(--orange-dark);
+      transform: translateY(-2px);
+    }
 
     /* RELATED */
     .related-section {
@@ -572,7 +593,7 @@
       <div class="cta-box" style="margin-top: 48px;">
         <h3>Vrei să aplici la fonduri europene?</h3>
         <p>Echipa FABER te ajută să verifici eligibilitatea, să alegi programul potrivit și să pregătești documentele cu prudență. Concluzia depinde de ghidul apelului și de informațiile transmise.</p>
-        <a href="/#contact" class="btn-cta">Solicită verificare eligibilitate</a>
+        <a href="/#contact" class="btn-primary">Solicită verificare eligibilitate</a>
       </div>
     </div>
   </div>
@@ -606,7 +627,7 @@
       <div class="cta-box" style="margin-top:32px">
         <h3>Vrei să accesezi fonduri europene?</h3>
         <p>Trimite detaliile proiectului și îți spunem ce trebuie verificat înainte de o decizie de depunere. Nu promitem aprobare; clarificăm riscurile și pașii următori.</p>
-        <a href="/#contact" class="btn-cta">Trimite detaliile proiectului</a>
+        <a href="/#contact" class="btn-primary">Trimite detaliile proiectului</a>
       </div>
     </div>
   <section class="vezi-si-section" aria-labelledby="vezi-si-title">
@@ -637,7 +658,7 @@
   <div id="not-found-state" class="post-not-found" style="display:none">
     <h2>Articolul nu a fost găsit</h2>
     <p>Acest articol nu există sau a fost mutat.</p>
-    <a href="/blog" class="btn-cta">← Înapoi la blog</a>
+    <a href="/blog" class="btn-secondary">← Înapoi la blog</a>
   </div>
 
   <!-- FOOTER -->
