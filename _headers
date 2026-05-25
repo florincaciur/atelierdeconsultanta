@@ -45,3 +45,18 @@
 
 /sitemap.xml
   Cache-Control: public, max-age=3600
+
+/afir
+  X-Robots-Tag: index, follow
+
+/ghiduri
+  X-Robots-Tag: index, follow
+
+/dr12-vs-dr14
+  X-Robots-Tag: index, follow
+
+/dr14-afir-ferme-mici
+  X-Robots-Tag: index, follow
+
+/fonduri-nerambursabile
+  X-Robots-Tag: index, follow

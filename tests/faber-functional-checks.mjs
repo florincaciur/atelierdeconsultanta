@@ -159,6 +159,11 @@ async function assertRedirectsAndFallback(baseUrl) {
   const checks = [
     ["/index.html", "/"],
     ["/contact.html", "/contact"],
+    ["/afir/", "/afir"],
+    ["/ghiduri/", "/ghiduri"],
+    ["/fonduri-nerambursabile/", "/fonduri-nerambursabile"],
+    ["/dr12-vs-dr14/", "/dr12-vs-dr14"],
+    ["/dr14-afir-ferme-mici/", "/dr14-afir-ferme-mici"],
     ["/consultanta-fonduri-europene-imm/", "/consultant-fonduri-europene-imm"],
     ["/consultanta-start-up-nation/", "/consultanta-start-up-nation-2026"],
     ["/blog/safir-fotovoltaice-ferme-2026.html", "/blog-afir-fotovoltaice-ferme-2026"]
@@ -168,6 +173,16 @@ async function assertRedirectsAndFallback(baseUrl) {
     const response = await fetchManual(`${baseUrl}${from}`);
     assert.equal(response.status, 301, `${from} should redirect`);
     assert.equal(response.headers.get("location"), to, `${from} should redirect to ${to}`);
+  }
+
+  const gscCanonicalPaths = ["/afir", "/ghiduri", "/fonduri-nerambursabile", "/dr12-vs-dr14", "/dr14-afir-ferme-mici"];
+  for (const routePath of gscCanonicalPaths) {
+    const response = await fetchManual(`${baseUrl}${routePath}`);
+    assert.equal(response.status, 200, `${routePath} should return 200 for GSC canonical indexing`);
+    assert.match(response.headers.get("x-robots-tag") || "index, follow", /index/i, `${routePath} should be indexable`);
+    const html = await response.text();
+    assert.match(html, new RegExp(`<link\\s+rel=["']canonical["']\\s+href=["']${SITE_ORIGIN}${routePath.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}`, "i"), `${routePath} should self-canonicalize`);
+    assert.match(html, /<meta\s+name=["']robots["']\s+content=["']index,\s*follow["']/i, `${routePath} should expose index, follow robots meta`);
   }
 
   const fallback = await fetchManual(`${baseUrl}/ro/11.html`);
@@ -224,13 +239,30 @@ async function assertHomepageInteractions(baseUrl) {
     const gridDisplay = await page.$eval("#financing-grid", (element) => getComputedStyle(element).display);
     assert.equal(gridDisplay, "grid", "program section should use a CSS grid");
     assert.equal(await page.locator("#finantare .carousel-btn, #finantare .card-carousel-btn").count(), 0, "program section should not expose carousel controls");
-    assert((await page.locator("#financing-grid .finantare-card").count()) >= 10, "program grid should contain program cards");
+    const totalProgramCards = await page.locator("#financing-grid .finantare-card").count();
+    assert(totalProgramCards >= 10, "program grid should contain program cards");
+    const initialVisibleCards = await page.$$eval("#financing-grid .finantare-card", (cards) =>
+      cards.filter((card) => !card.hidden && getComputedStyle(card).display !== "none").length
+    );
+    assert.equal(initialVisibleCards, 3, "program grid should initially show only the first row of 3 cards");
+    assert.equal(await page.locator("#financing-toggle").getAttribute("aria-expanded"), "false", "program toggle should start collapsed");
+
+    await page.locator("#financing-toggle").click();
+    assert.equal(await page.locator("#financing-toggle").getAttribute("aria-expanded"), "true", "program toggle should expand");
+    const expandedVisibleCards = await page.$$eval("#financing-grid .finantare-card", (cards) =>
+      cards.filter((card) => !card.hidden && getComputedStyle(card).display !== "none").length
+    );
+    assert.equal(expandedVisibleCards, totalProgramCards, "expanded program grid should show every card for the active filter");
+
+    await page.locator("#financing-toggle").click();
+    assert.equal(await page.locator("#financing-toggle").getAttribute("aria-expanded"), "false", "program toggle should collapse");
 
     await page.locator('[data-beneficiary-filter="public"]').click();
     const publicVisibleCards = await page.$$eval("#financing-grid .finantare-card", (cards) =>
       cards.filter((card) => !card.hidden && getComputedStyle(card).display !== "none").length
     );
     assert(publicVisibleCards > 0, "public beneficiary filter should show at least one card");
+    assert(publicVisibleCards <= 3, "public beneficiary filter should respect collapsed first-row display");
     assert.equal(await page.locator('[data-beneficiary-filter="public"]').getAttribute("aria-pressed"), "true", "public filter should set aria-pressed");
 
     await page.setViewportSize({ width: 390, height: 844 });
