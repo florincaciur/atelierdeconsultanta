@@ -23,39 +23,7 @@
 /fonduri-europene-nord-est.html /fonduri-europene-nord-est 301
 /fonduri-europene-nord-est/index.html /fonduri-europene-nord-est 301
 
-# Consolidated local pages without unique local evidence.
-/fonduri-europene-iasi /fonduri-europene-nord-est 301
-/fonduri-europene-iasi/ /fonduri-europene-nord-est 301
-/fonduri-europene-iasi.html /fonduri-europene-nord-est 301
-/fonduri-europene-iasi/index.html /fonduri-europene-nord-est 301
-/consultanta-fonduri-europene-iasi /fonduri-europene-nord-est 301
-/consultanta-fonduri-europene-iasi/ /fonduri-europene-nord-est 301
-/consultanta-fonduri-europene-iasi.html /fonduri-europene-nord-est 301
-/consultanta-fonduri-europene-iasi/index.html /fonduri-europene-nord-est 301
-/fonduri-europene-suceava /fonduri-europene-nord-est 301
-/fonduri-europene-suceava/ /fonduri-europene-nord-est 301
-/fonduri-europene-suceava.html /fonduri-europene-nord-est 301
-/fonduri-europene-suceava/index.html /fonduri-europene-nord-est 301
-/consultanta-fonduri-europene-suceava /fonduri-europene-nord-est 301
-/consultanta-fonduri-europene-suceava/ /fonduri-europene-nord-est 301
-/consultanta-fonduri-europene-suceava.html /fonduri-europene-nord-est 301
-/consultanta-fonduri-europene-suceava/index.html /fonduri-europene-nord-est 301
-/fonduri-europene-bacau /fonduri-europene-nord-est 301
-/fonduri-europene-bacau/ /fonduri-europene-nord-est 301
-/fonduri-europene-bacau.html /fonduri-europene-nord-est 301
-/fonduri-europene-bacau/index.html /fonduri-europene-nord-est 301
-/consultanta-fonduri-europene-bacau /fonduri-europene-nord-est 301
-/consultanta-fonduri-europene-bacau/ /fonduri-europene-nord-est 301
-/consultanta-fonduri-europene-bacau.html /fonduri-europene-nord-est 301
-/consultanta-fonduri-europene-bacau/index.html /fonduri-europene-nord-est 301
-/fonduri-europene-bucuresti /fonduri-europene 301
-/fonduri-europene-bucuresti/ /fonduri-europene 301
-/fonduri-europene-bucuresti.html /fonduri-europene 301
-/fonduri-europene-bucuresti/index.html /fonduri-europene 301
-/consultanta-fonduri-europene-bucuresti /consultanta-fonduri-europene 301
-/consultanta-fonduri-europene-bucuresti/ /consultanta-fonduri-europene 301
-/consultanta-fonduri-europene-bucuresti.html /consultanta-fonduri-europene 301
-/consultanta-fonduri-europene-bucuresti/index.html /consultanta-fonduri-europene 301
+# Local pages are active and canonical in sitemap.
 /verificare-eligibilitate-fonduri-europene/ /verificare-eligibilitate-fonduri-europene 301
 /verificare-eligibilitate-fonduri-europene.html /verificare-eligibilitate-fonduri-europene 301
 /verificare-eligibilitate-fonduri-europene/index.html /verificare-eligibilitate-fonduri-europene 301
@@ -327,3 +295,12 @@
 /cheltuieli-eligibile-digitalizare-imm.html /cheltuieli-eligibile-digitalizare-imm 301
 /cheltuieli-eligibile-digitalizare-imm/ /cheltuieli-eligibile-digitalizare-imm 301
 /cheltuieli-eligibile-digitalizare-imm/index.html /cheltuieli-eligibile-digitalizare-imm 301
+
+# Legacy HTML fallback pages.
+/blog/index.html /blog 301
+/consultanta-start-up-nation.html /consultanta-start-up-nation 301
+/consultanta-start-up-nation/index.html /consultanta-start-up-nation 301
+/fonduri-europene-herambursabile-2026.html /fonduri-europene-herambursabile-2026 301
+/fonduri-europene-herambursabile-2026/index.html /fonduri-europene-herambursabile-2026 301
+/start-up-nation.html /start-up-nation 301
+/start-up-nation/index.html /start-up-nation 301

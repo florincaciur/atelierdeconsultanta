@@ -9,7 +9,7 @@ const { normalizeQuestion } = require("./schema-helpers");
 const ROOT = path.resolve(__dirname, "..");
 const REPORT_PATH = path.join(ROOT, "reports", "structured-data-audit.json");
 const EXCLUDED_DIRS = new Set([".git", ".github", ".wrangler", "dist", "node_modules", "reports"]);
-const RATING_TYPES = new Set(["AggregateRating", "Review"]);
+const RATING_TYPES = new Set(["AggregateRating"]);
 const TODAY = new Date("2026-05-21T12:00:00Z");
 
 function toPosix(value) {

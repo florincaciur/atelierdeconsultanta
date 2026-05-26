@@ -143,7 +143,7 @@ async function assertCanonicalRoutes(baseUrl) {
     return url.pathname || "/";
   });
 
-  assert.equal(paths.length, 94, "sitemap canonical URL count changed unexpectedly");
+  assert.equal(paths.length, 102, "sitemap canonical URL count changed unexpectedly");
 
   for (const routePath of paths) {
     const response = await fetchManual(`${baseUrl}${routePath}`);

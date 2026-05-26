@@ -52,6 +52,19 @@ function canonical(route) {
   return `${SITE}${cleanUrl(route)}`;
 }
 
+function heroImageFor(route, category = "") {
+  const text = `${route} ${category}`.toLowerCase();
+  if (/agricultur|ferme|0111/.test(text)) return "/assets/hero/hero-agriculture.webp";
+  if (/energie|fotovoltaic/.test(text)) return "/assets/hero/hero-solar.webp";
+  if (/bacau|iasi|suceava|bucuresti|nord-est|local/.test(text)) return "/assets/hero/hero-local.webp";
+  if (/caen|digital|software|pnrr/.test(text)) return "/assets/hero/hero-digital.webp";
+  return "/assets/hero/hero-business.webp";
+}
+
+function heroAttrs(route, category) {
+  return `class="hero hero--image" style="--hero-image:url('${heroImageFor(route, category)}')"`;
+}
+
 function li(items) {
   return (items || []).map((item) => `<li>${esc(item)}</li>`).join("\n");
 }
@@ -136,10 +149,11 @@ ${CLARITY_TRACKING_CODE}
     </div>
   </nav>
   <div class="breadcrumb"><a href="/">Acasa</a> / ${esc(h1)}</div>
-  <header class="hero">
+  <header ${heroAttrs(route, category)}>
     <span class="eyebrow">${esc(category)}</span>
     <h1>${esc(h1)}</h1>
     <p>${esc(description)}</p>
+    <div class="hero-actions"><a class="btn btn-primary" href="/verificare-eligibilitate-fonduri-europene">Verifică eligibilitatea</a></div>
   </header>
   <main class="container">
     <article class="panel">
@@ -182,6 +196,10 @@ function redirectFallbackPage({ route, target, title }) {
 ${CLARITY_TRACKING_CODE}
 </head>
 <body>
+  <main style="font-family: Arial, sans-serif; max-width: 720px; margin: 12vh auto; padding: 32px; line-height: 1.6; color: #1a2540;">
+    <h1>Ești redirecționat către o nouă adresă</h1>
+    <p>Pagina veche a fost mutată. Dacă redirecționarea nu pornește automat, deschide <a href="${cleanUrl(target)}">${cleanUrl(target)}</a>.</p>
+  </main>
   <script>window.location.replace('${cleanUrl(target)}');</script>
 </body>
 </html>
@@ -195,7 +213,16 @@ function ensureDepth(body, context) {
     "Cheltuielile eligibile trebuie legate direct de activitatea finantata. Daca o achizitie nu poate fi explicata prin fluxul de lucru, prin obiectivele proiectului sau prin rezultatele asteptate, riscul de clarificari creste.",
     "Cofinantarea se analizeaza separat de grant. Beneficiarul trebuie sa inteleaga ce plateste din surse proprii, ce nu se deconteaza, ce documente sunt cerute la plata si ce se intampla daca apar diferente de pret.",
     "Punctajul orientativ se verifica inainte de depunere si se reface dupa fiecare schimbare de buget sau investitie. Un proiect eligibil poate ramane nefinantat daca nu intra in bugetul disponibil al apelului.",
-    "Informatiile de pe pagina sunt orientative. Eligibilitatea finala depinde de ghidul oficial, anexele apelului, documentele solicitantului si evaluarea autoritatii finantatoare."
+    "Informatiile de pe pagina sunt orientative. Eligibilitatea finala depinde de ghidul oficial, anexele apelului, documentele solicitantului si evaluarea autoritatii finantatoare.",
+    "O verificare utila incepe cu intrebari simple: cine aplica, unde se implementeaza investitia, ce activitate este autorizata, ce se cumpara si cum se sustine contributia proprie. Raspunsurile trebuie confirmate in documente, nu doar declarate in discutia initiala.",
+    "Daca proiectul are lucrari, echipamente sau servicii tehnice, ofertele trebuie sa fie comparabile si suficient de clare. Specificatiile vagi pot duce la clarificari, ajustari de buget sau eliminarea unor costuri.",
+    "Pentru firmele cu mai multe activitati, codul CAEN trebuie citit impreuna cu activitatea reala si cu punctul de lucru. Un cod prezent in certificat nu este suficient daca investitia nu poate fi legata de fluxul operational.",
+    "Pentru ferme, analiza include suprafete, efective, documente APIA sau registre relevante, dreptul de folosinta si dimensiunea economica. O schimbare aparent mica in date poate modifica eligibilitatea sau punctajul.",
+    "Pentru proiectele de digitalizare, lista de achizitii trebuie legata de procese: vanzari, productie, gestiune, raportare, securitate sau relatia cu clientii. Un buget IT general este mai greu de aparat decat un buget conectat la probleme concrete.",
+    "Pentru proiectele energetice, consumul, amplasamentul, avizele si dimensionarea tehnica trebuie verificate inainte de buget. O capacitate aleasa doar dupa plafonul programului poate fi vulnerabila la evaluare.",
+    "Calendarul conteaza la fel de mult ca bugetul. Documentele pentru spatiu, oferte, certificate, autorizatii sau registre pot avea durate diferite de obtinere si pot bloca depunerea daca sunt lasate la final.",
+    "Un raspuns responsabil poate fi si amanarea depunerii. Daca documentele sunt incomplete, cofinantarea este neclara sau ghidul nu este final, pregatirea trebuie continuata pana cand riscurile principale sunt intelese.",
+    "Dupa depunere, proiectul nu se incheie. Contractarea, achizitiile, cererile de plata si monitorizarea cer aceeasi coerenta intre ce s-a promis in dosar si ce se poate implementa practic."
   ];
   let html = body;
   let index = 0;
@@ -217,7 +244,7 @@ function caenPage(item) {
     [`Ce trebuie verificat inainte de buget pentru CAEN ${item.code}?`, "Eligibilitatea solicitantului, codul CAEN, cheltuielile permise, cofinantarea si punctajul."]
   ];
   const programRows = item.programs
-    .map((program) => `<tr><td>${esc(program)}</td><td>Se confirma in ghidul activ</td><td>Eligibilitatea depinde de solicitant, regiune, cod CAEN, buget si documentele investitiei.</td></tr>`)
+    .map((program) => `<tr><td>${esc(program)}</td><td>Se confirma in ghidul activ</td><td>Contributie proprie estimata separat de grant</td><td>Eligibilitatea depinde de solicitant, regiune, cod CAEN, buget si documentele investitiei.</td></tr>`)
     .join("\n");
   let body = `
       <h2>Descriere CAEN</h2>
@@ -225,10 +252,12 @@ function caenPage(item) {
       <h2>Programe eligibile pentru CAEN ${esc(item.code)}</h2>
       <div class="table-wrap">
         <table class="program-table">
-          <thead><tr><th>Program</th><th>Buget</th><th>Conditii</th></tr></thead>
+          <thead><tr><th>Program</th><th>Buget orientativ</th><th>Cofinantare</th><th>Conditii</th></tr></thead>
           <tbody>${programRows}</tbody>
         </table>
       </div>
+      <h2>Exemplu de proiect tipic</h2>
+      <p>Un proiect pentru CAEN ${esc(item.code)} poate porni de la o investitie de 50.000 EUR in echipamente, software sau dotari direct legate de activitatea ${esc(item.label)}. Daca apelul ar permite orientativ 70% sprijin, grantul ar fi 35.000 EUR, iar contributia proprie ar incepe de la 15.000 EUR, la care se adauga cheltuieli neeligibile, TVA sau rezerve de implementare.</p>
       <h2>Programe relevante</h2>
       <p>Pentru CAEN ${esc(item.code)}, analiza trebuie facuta pe program, nu pe cod izolat. Un cod poate fi potrivit intr-un apel si exclus in altul, in functie de regiune, obiective si tipul investitiei.</p>
       <ul>${li(item.programs)}</ul>
@@ -262,6 +291,7 @@ function localPage(item, consulting) {
   let body = `
       <h2>Particularitati locale</h2>
       <p>${esc(item.county)} se analizeaza prin regiunea ${esc(item.region)} si prin tipul investitiei. Pentru ${esc(item.focus)}, conteaza codul CAEN, localitatea, documentele pentru spatiu si calendarul apelurilor.</p>
+      <p>Programele AFIR DR14, digitalizare IMM, investitii regionale si energie pentru autoconsum apar frecvent in discutiile locale, dar eligibilitatea se confirma numai dupa ghidul activ si documentele solicitantului.</p>
       <h2>Programe de verificat</h2>
       <ul>
         <li>programe regionale pentru IMM-uri si microintreprinderi;</li>
@@ -270,6 +300,17 @@ function localPage(item, consulting) {
         <li>Fondul pentru Modernizare si energie regenerabila;</li>
         <li>Start-Up Nation si programe nationale pentru antreprenori.</li>
       </ul>
+      <h2>Exemple locale si bugete orientative</h2>
+      <div class="table-wrap">
+        <table class="program-table">
+          <thead><tr><th>Exemplu local</th><th>Program posibil</th><th>Buget de discutie</th><th>Ce se verifica</th></tr></thead>
+          <tbody>
+            <tr><td>Ferma sau exploatatie mica</td><td>AFIR DR14 / DR12</td><td>25.000 - 100.000 EUR, in functie de apel</td><td>SO, terenuri, animale, varsta, cofinantare</td></tr>
+            <tr><td>IMM de servicii sau productie</td><td>Program regional / IMM</td><td>50.000 - 300.000 EUR orientativ</td><td>CAEN, locatie, vechime, punctaj, cash-flow</td></tr>
+            <tr><td>Firma cu nevoie de software</td><td>Digitalizare IMM / PNRR</td><td>10.000 - 100.000 EUR orientativ</td><td>ERP, CRM, hardware, securitate, indicatori</td></tr>
+          </tbody>
+        </table>
+      </div>
       <h2>Checklist local</h2>
       <p>Inainte de depunere, verifica daca locatia investitiei este eligibila, daca punctul de lucru este documentat, daca autorizatiile pot fi obtinute si daca investitia are legatura cu activitatea firmei.</p>`;
   body = ensureDepth(body, `${title} in ${item.region}`);

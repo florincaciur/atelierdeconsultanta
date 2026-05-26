@@ -1,23 +1,23 @@
 {
-  "generatedAt": "2026-05-25T12:22:21.895Z",
+  "generatedAt": "2026-05-26T06:39:49.963Z",
   "summary": {
     "filesChecked": 161,
-    "filesWithStructuredData": 91,
+    "filesWithStructuredData": 99,
     "filesWithIssues": 0,
     "types": {
-      "Organization": 259,
-      "ImageObject": 86,
-      "Country": 68,
-      "ContactPoint": 130,
-      "WebSite": 68,
-      "WebPage": 81,
+      "Organization": 271,
+      "ImageObject": 94,
+      "Country": 76,
+      "ContactPoint": 146,
+      "WebSite": 76,
+      "WebPage": 89,
       "CreativeWork": 132,
-      "BreadcrumbList": 76,
-      "ListItem": 177,
-      "FAQPage": 74,
-      "Question": 460,
-      "Answer": 460,
-      "Article": 62,
+      "BreadcrumbList": 84,
+      "ListItem": 193,
+      "FAQPage": 82,
+      "Question": 505,
+      "Answer": 505,
+      "Article": 70,
       "GovernmentService": 14,
       "BlogPosting": 21,
       "Blog": 1,
@@ -31,7 +31,10 @@
       "CollectionPage": 7,
       "DefinedTermSet": 1,
       "DefinedTerm": 19,
-      "ItemList": 1
+      "CreativeWorkSeries": 1,
+      "ItemList": 1,
+      "Review": 1,
+      "Person": 1
     }
   },
   "results": [
@@ -417,26 +420,78 @@
     },
     {
       "file": "consultanta-fonduri-europene-bacau/index.html",
-      "blocks": 0,
-      "types": {},
+      "blocks": 1,
+      "types": {
+        "Organization": 1,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "Article": 1,
+        "FAQPage": 1,
+        "Question": 4,
+        "Answer": 4
+      },
       "issues": []
     },
     {
       "file": "consultanta-fonduri-europene-bucuresti/index.html",
-      "blocks": 0,
-      "types": {},
+      "blocks": 1,
+      "types": {
+        "Organization": 1,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "Article": 1,
+        "FAQPage": 1,
+        "Question": 4,
+        "Answer": 4
+      },
       "issues": []
     },
     {
       "file": "consultanta-fonduri-europene-iasi/index.html",
-      "blocks": 0,
-      "types": {},
+      "blocks": 1,
+      "types": {
+        "Organization": 1,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "Article": 1,
+        "FAQPage": 1,
+        "Question": 4,
+        "Answer": 4
+      },
       "issues": []
     },
     {
       "file": "consultanta-fonduri-europene-suceava/index.html",
-      "blocks": 0,
-      "types": {},
+      "blocks": 1,
+      "types": {
+        "Organization": 1,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "Article": 1,
+        "FAQPage": 1,
+        "Question": 4,
+        "Answer": 4
+      },
       "issues": []
     },
     {
@@ -449,7 +504,7 @@
       "file": "consultanta-fonduri-europene/index.html",
       "blocks": 1,
       "types": {
-        "Organization": 15,
+        "Organization": 17,
         "ImageObject": 1,
         "Country": 1,
         "ContactPoint": 2,
@@ -543,8 +598,8 @@
         "BreadcrumbList": 1,
         "ListItem": 2,
         "FAQPage": 1,
-        "Question": 3,
-        "Answer": 3
+        "Question": 6,
+        "Answer": 6
       },
       "issues": []
     },
@@ -624,8 +679,8 @@
         "BreadcrumbList": 1,
         "ListItem": 2,
         "FAQPage": 1,
-        "Question": 4,
-        "Answer": 4
+        "Question": 9,
+        "Answer": 9
       },
       "issues": []
     },
@@ -745,7 +800,7 @@
       "file": "dr12-afir/index.html",
       "blocks": 1,
       "types": {
-        "Organization": 5,
+        "Organization": 7,
         "ImageObject": 1,
         "Country": 1,
         "ContactPoint": 2,
@@ -1043,14 +1098,40 @@
     },
     {
       "file": "fonduri-europene-bacau/index.html",
-      "blocks": 0,
-      "types": {},
+      "blocks": 1,
+      "types": {
+        "Organization": 1,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "Article": 1,
+        "FAQPage": 1,
+        "Question": 4,
+        "Answer": 4
+      },
       "issues": []
     },
     {
       "file": "fonduri-europene-bucuresti/index.html",
-      "blocks": 0,
-      "types": {},
+      "blocks": 1,
+      "types": {
+        "Organization": 1,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "Article": 1,
+        "FAQPage": 1,
+        "Question": 4,
+        "Answer": 4
+      },
       "issues": []
     },
     {
@@ -1196,8 +1277,21 @@
     },
     {
       "file": "fonduri-europene-iasi/index.html",
-      "blocks": 0,
-      "types": {},
+      "blocks": 1,
+      "types": {
+        "Organization": 1,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "Article": 1,
+        "FAQPage": 1,
+        "Question": 4,
+        "Answer": 4
+      },
       "issues": []
     },
     {
@@ -1274,8 +1368,21 @@
     },
     {
       "file": "fonduri-europene-suceava/index.html",
-      "blocks": 0,
-      "types": {},
+      "blocks": 1,
+      "types": {
+        "Organization": 1,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "Article": 1,
+        "FAQPage": 1,
+        "Question": 4,
+        "Answer": 4
+      },
       "issues": []
     },
     {
@@ -1517,8 +1624,8 @@
         "BreadcrumbList": 1,
         "ListItem": 13,
         "FAQPage": 1,
-        "Question": 3,
-        "Answer": 3
+        "Question": 6,
+        "Answer": 6
       },
       "issues": []
     },
@@ -1761,7 +1868,8 @@
         "FAQPage": 1,
         "Question": 5,
         "Answer": 5,
-        "Article": 1
+        "Article": 1,
+        "CreativeWorkSeries": 1
       },
       "issues": []
     },
@@ -2056,9 +2164,11 @@
         "BreadcrumbList": 1,
         "ListItem": 2,
         "FAQPage": 1,
-        "Question": 5,
-        "Answer": 5,
-        "Article": 1
+        "Question": 7,
+        "Answer": 7,
+        "Article": 1,
+        "Review": 1,
+        "Person": 1
       },
       "issues": []
     },

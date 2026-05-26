@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-25T12:22:22.276Z",
+  "generatedAt": "2026-05-26T06:40:06.734Z",
   "root": "C:\\Users\\CODEXS\\Desktop\\atelierdeconsultanta",
   "summary": {
     "totalFiles": 161,
@@ -189,7 +189,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1026,
+          "words": 1108,
           "threshold": 900
         },
         "relatedLinks": {
@@ -335,7 +335,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1279,
+          "words": 1361,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -450,7 +450,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1135,
+          "words": 1217,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -565,7 +565,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1317,
+          "words": 1399,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -854,7 +854,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 690,
+          "words": 699,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -1029,7 +1029,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1306,
+          "words": 1388,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -1087,7 +1087,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 707,
+          "words": 708,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -1145,7 +1145,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 661,
+          "words": 664,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -1260,7 +1260,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1326,
+          "words": 1408,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -1318,7 +1318,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 611,
+          "words": 614,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -1376,7 +1376,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 567,
+          "words": 577,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -1434,7 +1434,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 589,
+          "words": 599,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -1493,7 +1493,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1561,
+          "words": 1643,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -1551,7 +1551,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 647,
+          "words": 659,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -1666,7 +1666,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1453,
+          "words": 1535,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -1781,7 +1781,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1409,
+          "words": 1491,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -1793,7 +1793,7 @@
     },
     {
       "file": "consultanta-fonduri-europene-bacau/index.html",
-      "noindex": true,
+      "noindex": false,
       "pass": true,
       "checks": {
         "utf8Charset": {
@@ -1803,8 +1803,7 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 0,
-          "note": "noindex page: meta description is optional"
+          "count": 1
         },
         "canonical": {
           "status": "pass",
@@ -1812,7 +1811,7 @@
         },
         "cleanCanonical": {
           "status": "pass",
-          "href": "https://atelierdeconsultanta.ro/fonduri-europene-nord-est"
+          "href": "https://atelierdeconsultanta.ro/consultanta-fonduri-europene-bacau"
         },
         "imageAltAttributes": {
           "status": "pass",
@@ -1822,12 +1821,16 @@
         },
         "singleH1": {
           "status": "pass",
-          "note": "noindex page: h1 not required"
+          "count": 1,
+          "text": [
+            "Consultanta fonduri europene Bacau"
+          ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
-          "required": false,
-          "count": 0
+          "required": true,
+          "count": 4,
+          "threshold": 4
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -1836,20 +1839,20 @@
         },
         "contentDepth": {
           "status": "pass",
-          "required": false,
-          "words": 0
+          "required": true,
+          "words": 1293,
+          "threshold": 1100
         },
         "relatedLinks": {
           "status": "pass",
-          "required": false,
-          "count": 0,
-          "note": "not a hub/blog page"
+          "required": true,
+          "count": 1
         }
       }
     },
     {
       "file": "consultanta-fonduri-europene-bucuresti/index.html",
-      "noindex": true,
+      "noindex": false,
       "pass": true,
       "checks": {
         "utf8Charset": {
@@ -1859,8 +1862,7 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 0,
-          "note": "noindex page: meta description is optional"
+          "count": 1
         },
         "canonical": {
           "status": "pass",
@@ -1868,7 +1870,7 @@
         },
         "cleanCanonical": {
           "status": "pass",
-          "href": "https://atelierdeconsultanta.ro/consultanta-fonduri-europene"
+          "href": "https://atelierdeconsultanta.ro/consultanta-fonduri-europene-bucuresti"
         },
         "imageAltAttributes": {
           "status": "pass",
@@ -1878,12 +1880,16 @@
         },
         "singleH1": {
           "status": "pass",
-          "note": "noindex page: h1 not required"
+          "count": 1,
+          "text": [
+            "Consultanta fonduri europene Bucuresti"
+          ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
-          "required": false,
-          "count": 0
+          "required": true,
+          "count": 4,
+          "threshold": 4
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -1892,20 +1898,20 @@
         },
         "contentDepth": {
           "status": "pass",
-          "required": false,
-          "words": 0
+          "required": true,
+          "words": 1294,
+          "threshold": 1100
         },
         "relatedLinks": {
           "status": "pass",
-          "required": false,
-          "count": 0,
-          "note": "not a hub/blog page"
+          "required": true,
+          "count": 1
         }
       }
     },
     {
       "file": "consultanta-fonduri-europene-iasi/index.html",
-      "noindex": true,
+      "noindex": false,
       "pass": true,
       "checks": {
         "utf8Charset": {
@@ -1915,8 +1921,7 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 0,
-          "note": "noindex page: meta description is optional"
+          "count": 1
         },
         "canonical": {
           "status": "pass",
@@ -1924,7 +1929,7 @@
         },
         "cleanCanonical": {
           "status": "pass",
-          "href": "https://atelierdeconsultanta.ro/fonduri-europene-nord-est"
+          "href": "https://atelierdeconsultanta.ro/consultanta-fonduri-europene-iasi"
         },
         "imageAltAttributes": {
           "status": "pass",
@@ -1934,12 +1939,16 @@
         },
         "singleH1": {
           "status": "pass",
-          "note": "noindex page: h1 not required"
+          "count": 1,
+          "text": [
+            "Consultanta fonduri europene Iasi"
+          ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
-          "required": false,
-          "count": 0
+          "required": true,
+          "count": 4,
+          "threshold": 4
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -1948,20 +1957,20 @@
         },
         "contentDepth": {
           "status": "pass",
-          "required": false,
-          "words": 0
+          "required": true,
+          "words": 1293,
+          "threshold": 1100
         },
         "relatedLinks": {
           "status": "pass",
-          "required": false,
-          "count": 0,
-          "note": "not a hub/blog page"
+          "required": true,
+          "count": 1
         }
       }
     },
     {
       "file": "consultanta-fonduri-europene-suceava/index.html",
-      "noindex": true,
+      "noindex": false,
       "pass": true,
       "checks": {
         "utf8Charset": {
@@ -1971,8 +1980,7 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 0,
-          "note": "noindex page: meta description is optional"
+          "count": 1
         },
         "canonical": {
           "status": "pass",
@@ -1980,7 +1988,7 @@
         },
         "cleanCanonical": {
           "status": "pass",
-          "href": "https://atelierdeconsultanta.ro/fonduri-europene-nord-est"
+          "href": "https://atelierdeconsultanta.ro/consultanta-fonduri-europene-suceava"
         },
         "imageAltAttributes": {
           "status": "pass",
@@ -1990,12 +1998,16 @@
         },
         "singleH1": {
           "status": "pass",
-          "note": "noindex page: h1 not required"
+          "count": 1,
+          "text": [
+            "Consultanta fonduri europene Suceava"
+          ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
-          "required": false,
-          "count": 0
+          "required": true,
+          "count": 4,
+          "threshold": 4
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -2004,14 +2016,14 @@
         },
         "contentDepth": {
           "status": "pass",
-          "required": false,
-          "words": 0
+          "required": true,
+          "words": 1294,
+          "threshold": 1100
         },
         "relatedLinks": {
           "status": "pass",
-          "required": false,
-          "count": 0,
-          "note": "not a hub/blog page"
+          "required": true,
+          "count": 1
         }
       }
     },
@@ -2103,7 +2115,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Consultanță fonduri europene pentru firme, fermieri și antreprenori"
+            "Consultanță pentru Fonduri Europene"
           ]
         },
         "visibleFaqForSchema": {
@@ -2120,7 +2132,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2223,
+          "words": 2215,
           "threshold": 1800
         },
         "relatedLinks": {
@@ -2235,7 +2247,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1386,
+          "words": 1468,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -2294,7 +2306,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1498,
+          "words": 1580,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -2325,7 +2337,7 @@
         },
         "cleanCanonical": {
           "status": "pass",
-          "href": "https://atelierdeconsultanta.ro/consultanta-start-up-nation-2026"
+          "href": "https://atelierdeconsultanta.ro/consultanta-start-up-nation"
         },
         "imageAltAttributes": {
           "status": "pass",
@@ -2504,13 +2516,13 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Contact FABER"
+            "Contactează-ne"
           ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
           "required": false,
-          "count": 4,
+          "count": 7,
           "threshold": 0
         },
         "speakableSchemaCoverage": {
@@ -2521,7 +2533,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 327,
+          "words": 423,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -2637,7 +2649,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1328,
+          "words": 1410,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -2754,7 +2766,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 636,
+          "words": 639,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -2812,7 +2824,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 603,
+          "words": 606,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -2854,13 +2866,13 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Despre FABER / Atelier de Consultanță"
+            "Despre FABER"
           ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
           "required": false,
-          "count": 5,
+          "count": 10,
           "threshold": 0
         },
         "speakableSchemaCoverage": {
@@ -2871,7 +2883,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 991,
+          "words": 1377,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -2930,7 +2942,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 624,
+          "words": 631,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -3045,7 +3057,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1392,
+          "words": 1474,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -3160,7 +3172,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1540,
+          "words": 1622,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -3219,7 +3231,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 1310,
+          "words": 1307,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -3336,7 +3348,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 755,
+          "words": 770,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -3451,7 +3463,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1100,
+          "words": 1210,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -3509,7 +3521,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 710,
+          "words": 965,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -3567,7 +3579,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 681,
+          "words": 914,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -3682,7 +3694,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1713,
+          "words": 1795,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -3798,7 +3810,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1304,
+          "words": 1386,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -3972,7 +3984,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1567,
+          "words": 1649,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -3995,7 +4007,8 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 1
+          "count": 0,
+          "note": "noindex page: meta description is optional"
         },
         "canonical": {
           "status": "pass",
@@ -4087,7 +4100,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1311,
+          "words": 1393,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -4109,7 +4122,8 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 1
+          "count": 0,
+          "note": "noindex page: meta description is optional"
         },
         "canonical": {
           "status": "pass",
@@ -4201,7 +4215,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1461,
+          "words": 1543,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -4316,7 +4330,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1425,
+          "words": 1507,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -4338,7 +4352,8 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 1
+          "count": 0,
+          "note": "noindex page: meta description is optional"
         },
         "canonical": {
           "status": "pass",
@@ -4430,7 +4445,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1324,
+          "words": 1406,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -4545,7 +4560,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1483,
+          "words": 1565,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -4661,7 +4676,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1204,
+          "words": 1286,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -4673,7 +4688,7 @@
     },
     {
       "file": "fonduri-europene-bacau/index.html",
-      "noindex": true,
+      "noindex": false,
       "pass": true,
       "checks": {
         "utf8Charset": {
@@ -4683,8 +4698,7 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 0,
-          "note": "noindex page: meta description is optional"
+          "count": 1
         },
         "canonical": {
           "status": "pass",
@@ -4692,7 +4706,7 @@
         },
         "cleanCanonical": {
           "status": "pass",
-          "href": "https://atelierdeconsultanta.ro/fonduri-europene-nord-est"
+          "href": "https://atelierdeconsultanta.ro/fonduri-europene-bacau"
         },
         "imageAltAttributes": {
           "status": "pass",
@@ -4702,12 +4716,16 @@
         },
         "singleH1": {
           "status": "pass",
-          "note": "noindex page: h1 not required"
+          "count": 1,
+          "text": [
+            "Fonduri europene Bacau"
+          ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
-          "required": false,
-          "count": 0
+          "required": true,
+          "count": 4,
+          "threshold": 4
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -4716,20 +4734,20 @@
         },
         "contentDepth": {
           "status": "pass",
-          "required": false,
-          "words": 0
+          "required": true,
+          "words": 1286,
+          "threshold": 1100
         },
         "relatedLinks": {
           "status": "pass",
-          "required": false,
-          "count": 0,
-          "note": "not a hub/blog page"
+          "required": true,
+          "count": 1
         }
       }
     },
     {
       "file": "fonduri-europene-bucuresti/index.html",
-      "noindex": true,
+      "noindex": false,
       "pass": true,
       "checks": {
         "utf8Charset": {
@@ -4739,8 +4757,7 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 0,
-          "note": "noindex page: meta description is optional"
+          "count": 1
         },
         "canonical": {
           "status": "pass",
@@ -4748,7 +4765,7 @@
         },
         "cleanCanonical": {
           "status": "pass",
-          "href": "https://atelierdeconsultanta.ro/fonduri-europene"
+          "href": "https://atelierdeconsultanta.ro/fonduri-europene-bucuresti"
         },
         "imageAltAttributes": {
           "status": "pass",
@@ -4758,12 +4775,16 @@
         },
         "singleH1": {
           "status": "pass",
-          "note": "noindex page: h1 not required"
+          "count": 1,
+          "text": [
+            "Fonduri europene Bucuresti"
+          ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
-          "required": false,
-          "count": 0
+          "required": true,
+          "count": 4,
+          "threshold": 4
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -4772,14 +4793,14 @@
         },
         "contentDepth": {
           "status": "pass",
-          "required": false,
-          "words": 0
+          "required": true,
+          "words": 1287,
+          "threshold": 1100
         },
         "relatedLinks": {
           "status": "pass",
-          "required": false,
-          "count": 0,
-          "note": "not a hub/blog page"
+          "required": true,
+          "count": 1
         }
       }
     },
@@ -4832,7 +4853,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1291,
+          "words": 1287,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -4891,7 +4912,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1296,
+          "words": 1295,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -4950,7 +4971,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1311,
+          "words": 1304,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -5009,7 +5030,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1285,
+          "words": 1284,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -5124,7 +5145,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1147,
+          "words": 1229,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -5239,7 +5260,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1402,
+          "words": 1484,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -5270,7 +5291,7 @@
         },
         "cleanCanonical": {
           "status": "pass",
-          "href": "https://atelierdeconsultanta.ro/fonduri-europene-nerambursabile-2026"
+          "href": "https://atelierdeconsultanta.ro/fonduri-europene-herambursabile-2026"
         },
         "imageAltAttributes": {
           "status": "pass",
@@ -5363,7 +5384,7 @@
     },
     {
       "file": "fonduri-europene-iasi/index.html",
-      "noindex": true,
+      "noindex": false,
       "pass": true,
       "checks": {
         "utf8Charset": {
@@ -5373,8 +5394,7 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 0,
-          "note": "noindex page: meta description is optional"
+          "count": 1
         },
         "canonical": {
           "status": "pass",
@@ -5382,7 +5402,7 @@
         },
         "cleanCanonical": {
           "status": "pass",
-          "href": "https://atelierdeconsultanta.ro/fonduri-europene-nord-est"
+          "href": "https://atelierdeconsultanta.ro/fonduri-europene-iasi"
         },
         "imageAltAttributes": {
           "status": "pass",
@@ -5392,12 +5412,16 @@
         },
         "singleH1": {
           "status": "pass",
-          "note": "noindex page: h1 not required"
+          "count": 1,
+          "text": [
+            "Fonduri europene Iasi"
+          ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
-          "required": false,
-          "count": 0
+          "required": true,
+          "count": 4,
+          "threshold": 4
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -5406,14 +5430,14 @@
         },
         "contentDepth": {
           "status": "pass",
-          "required": false,
-          "words": 0
+          "required": true,
+          "words": 1286,
+          "threshold": 1100
         },
         "relatedLinks": {
           "status": "pass",
-          "required": false,
-          "count": 0,
-          "note": "not a hub/blog page"
+          "required": true,
+          "count": 1
         }
       }
     },
@@ -5429,7 +5453,8 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 1
+          "count": 0,
+          "note": "noindex page: meta description is optional"
         },
         "canonical": {
           "status": "pass",
@@ -5521,7 +5546,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1293,
+          "words": 1375,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -5543,7 +5568,8 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 1
+          "count": 0,
+          "note": "noindex page: meta description is optional"
         },
         "canonical": {
           "status": "pass",
@@ -5635,7 +5661,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1609,
+          "words": 1691,
           "threshold": 1500
         },
         "relatedLinks": {
@@ -5694,7 +5720,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1301,
+          "words": 1307,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -5706,7 +5732,7 @@
     },
     {
       "file": "fonduri-europene-suceava/index.html",
-      "noindex": true,
+      "noindex": false,
       "pass": true,
       "checks": {
         "utf8Charset": {
@@ -5716,8 +5742,7 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 0,
-          "note": "noindex page: meta description is optional"
+          "count": 1
         },
         "canonical": {
           "status": "pass",
@@ -5725,7 +5750,7 @@
         },
         "cleanCanonical": {
           "status": "pass",
-          "href": "https://atelierdeconsultanta.ro/fonduri-europene-nord-est"
+          "href": "https://atelierdeconsultanta.ro/fonduri-europene-suceava"
         },
         "imageAltAttributes": {
           "status": "pass",
@@ -5735,12 +5760,16 @@
         },
         "singleH1": {
           "status": "pass",
-          "note": "noindex page: h1 not required"
+          "count": 1,
+          "text": [
+            "Fonduri europene Suceava"
+          ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
-          "required": false,
-          "count": 0
+          "required": true,
+          "count": 4,
+          "threshold": 4
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -5749,14 +5778,14 @@
         },
         "contentDepth": {
           "status": "pass",
-          "required": false,
-          "words": 0
+          "required": true,
+          "words": 1287,
+          "threshold": 1100
         },
         "relatedLinks": {
           "status": "pass",
-          "required": false,
-          "count": 0,
-          "note": "not a hub/blog page"
+          "required": true,
+          "count": 1
         }
       }
     },
@@ -5865,7 +5894,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1264,
+          "words": 1346,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -5896,7 +5925,7 @@
         },
         "cleanCanonical": {
           "status": "pass",
-          "href": "https://atelierdeconsultanta.ro/fonduri-europene-nerambursabile-2026"
+          "href": "https://atelierdeconsultanta.ro/fonduri-nerambursabile"
         },
         "imageAltAttributes": {
           "status": "pass",
@@ -5980,7 +6009,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1109,
+          "words": 1191,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -6095,7 +6124,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1421,
+          "words": 1503,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -6210,7 +6239,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1424,
+          "words": 1506,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -6268,7 +6297,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 635,
+          "words": 674,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -6384,7 +6413,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 994,
+          "words": 1076,
           "threshold": 900
         },
         "relatedLinks": {
@@ -6442,7 +6471,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 508,
+          "words": 507,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -6588,7 +6617,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1392,
+          "words": 1474,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -6703,7 +6732,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1315,
+          "words": 1397,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -6804,13 +6833,13 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Consultanță pentru accesarea fondurilor europene și finanțărilor nerambursabile"
+            "Consultanță Fonduri Europeneși Finanțări Nerambursabile"
           ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
           "required": false,
-          "count": 4,
+          "count": 7,
           "threshold": 0
         },
         "speakableSchemaCoverage": {
@@ -6821,7 +6850,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 1546,
+          "words": 1669,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -6880,7 +6909,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1078,
+          "words": 1160,
           "threshold": 900
         },
         "relatedLinks": {
@@ -6996,7 +7025,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1315,
+          "words": 1397,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -7114,7 +7143,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1312,
+          "words": 1317,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -7289,7 +7318,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1473,
+          "words": 1555,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -7349,7 +7378,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 837,
+          "words": 836,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -7524,7 +7553,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1101,
+          "words": 1183,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -7582,7 +7611,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 791,
+          "words": 835,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -7698,7 +7727,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1437,
+          "words": 1519,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -7758,7 +7787,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1010,
+          "words": 923,
           "threshold": 900
         },
         "relatedLinks": {
@@ -7874,7 +7903,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1626,
+          "words": 1708,
           "threshold": 1500
         },
         "relatedLinks": {
@@ -7934,7 +7963,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1025,
+          "words": 1107,
           "threshold": 900
         },
         "relatedLinks": {
@@ -8050,7 +8079,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1479,
+          "words": 1561,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -8165,7 +8194,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1473,
+          "words": 1555,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -8336,7 +8365,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1486,
+          "words": 1568,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -8451,7 +8480,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1485,
+          "words": 1567,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -8566,7 +8595,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1141,
+          "words": 1260,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -8597,7 +8626,7 @@
         },
         "cleanCanonical": {
           "status": "pass",
-          "href": "https://atelierdeconsultanta.ro/start-up-nation-2026"
+          "href": "https://atelierdeconsultanta.ro/start-up-nation"
         },
         "imageAltAttributes": {
           "status": "pass",
@@ -8735,7 +8764,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 639,
+          "words": 657,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -8793,7 +8822,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1436,
+          "words": 1437,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -8908,7 +8937,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1046,
+          "words": 919,
           "threshold": 900
         },
         "relatedLinks": {
@@ -8966,7 +8995,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 526,
+          "words": 527,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -9024,7 +9053,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 891,
+          "words": 932,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -9129,7 +9158,7 @@
         "visibleFaqForSchema": {
           "status": "pass",
           "required": true,
-          "count": 5,
+          "count": 7,
           "threshold": 4
         },
         "speakableSchemaCoverage": {
@@ -9140,7 +9169,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 976,
+          "words": 947,
           "threshold": 900
         },
         "relatedLinks": {
@@ -9200,7 +9229,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1210,
+          "words": 1292,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -9259,7 +9288,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 979,
+          "words": 1061,
           "threshold": 900
         },
         "relatedLinks": {

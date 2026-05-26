@@ -2674,6 +2674,14 @@
         [
           "Cum trimit feedback?",
           "Prin pagina de contact sau direct catre echipa."
+        ],
+        [
+          "Cum colectam testimoniale?",
+          "Feedbackul este cerut dupa etape concrete de lucru si este publicat doar daca beneficiarul isi da acordul."
+        ],
+        [
+          "Clientul isi da acordul pentru publicare?",
+          "Da. Fara acord explicit, testimonialul ramane intern sau este anonimizat strict."
         ]
       ],
       "related": [
@@ -3066,11 +3074,11 @@
       "category": "Consultanta fonduri europene",
       "minWords": 1800,
       "minFaq": 12,
-      "title": "Consultanță fonduri europene | Eligibilitate, dosar și cost",
-      "description": "Consultanță fonduri europene pentru firme, fermieri și start-up-uri: verificare eligibilitate, program potrivit, dosar, costuri și metodologie FABER.",
-      "h1": "Consultanță fonduri europene pentru firme, fermieri și antreprenori",
-      "quickAnswer": "O firmă de consultanță pentru fonduri europene verifică întâi dacă solicitantul, investiția și documentele disponibile se potrivesc cu un program real.",
-      "programName": "Consultanță fonduri europene",
+      "title": "Consultanță pentru fonduri europene | Eligibilitate, dosar și cost",
+      "description": "Consultanță pentru fonduri europene: evaluarea proiectului, alegerea programului potrivit, strategie de punctaj, dosar și clarificări FABER.",
+      "h1": "Consultanță pentru Fonduri Europene",
+      "quickAnswer": "FABER oferă consultanță pentru fonduri europene prin evaluarea proiectului, alegerea programului potrivit și construirea unei strategii de punctaj bazate pe documente. Analiza include eligibilitatea solicitantului, cofinanțarea, cheltuielile propuse și riscurile de clarificat înainte de depunere.",
+      "programName": "Consultanță pentru fonduri europene",
       "related": [
         "/verificare-eligibilitate-fonduri-europene",
         "/metodologie-verificare-eligibilitate",

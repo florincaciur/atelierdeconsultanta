@@ -74,7 +74,21 @@ a { color: inherit; }
   background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
   padding: 70px 24px 58px;
   text-align: center;
+  position: relative;
+  overflow: hidden;
 }
+.hero--image {
+  background:
+    linear-gradient(135deg, rgba(13,31,60,.88) 0%, rgba(26,58,106,.76) 100%),
+    var(--hero-image),
+    linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+  background-size: cover;
+  background-position: center;
+  min-height: 390px;
+  display: grid;
+  place-items: center;
+}
+.hero--image > * { position: relative; z-index: 1; }
 .eyebrow {
   display: inline-block;
   background: var(--orange);
@@ -164,6 +178,39 @@ a { color: inherit; }
   margin-bottom: 24px;
 }
 .intro { font-size: 1.08rem; color: var(--text-soft); }
+.snippet-box {
+  border: 1px solid var(--gray-200);
+  border-left: 4px solid var(--orange);
+  border-radius: var(--radius-sm);
+  background: #fffaf6;
+  padding: 18px 20px;
+  margin: 0 0 28px;
+  color: var(--text-main);
+}
+.case-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin: 22px 0 30px;
+}
+.case-card {
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-sm);
+  background: var(--white);
+  padding: 20px;
+}
+.case-card h3 { margin-top: 0; }
+.case-card blockquote {
+  margin: 0 0 10px;
+  color: var(--text-main);
+  font-size: 1rem;
+  line-height: 1.65;
+}
+.case-card cite {
+  color: var(--text-soft);
+  font-style: normal;
+  font-weight: 800;
+}
 .editorial-meta {
   border: 1px solid var(--gray-200);
   border-left: 4px solid var(--orange);
@@ -431,7 +478,7 @@ li { margin-bottom: 8px; }
   .hero { padding: 52px 20px 42px; }
   .container { padding: 32px 18px 64px; }
   .panel { padding: 26px 20px; border-radius: var(--radius-sm); }
-  .grid, .related-links, .index-grid, .editorial-meta__grid { grid-template-columns: 1fr; }
+  .grid, .case-grid, .related-links, .index-grid, .editorial-meta__grid { grid-template-columns: 1fr; }
   .editorial-meta__header { flex-direction: column; }
   .navbar-links .nav-cta { width: 100%; }
 }

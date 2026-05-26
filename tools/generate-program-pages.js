@@ -136,6 +136,19 @@ function cleanUrl(value) {
   return `/${String(value).replace(/^\/+/, "").replace(/\.html$/i, "").replace(/\/+$/g, "")}`;
 }
 
+function heroImageFor(page) {
+  const text = `${page.slug || ""} ${page.category || ""} ${page.programName || ""} ${page.h1 || ""}`.toLowerCase();
+  if (/afir|dr12|dr14|agricultur|ferme|utilaje/.test(text)) return "/assets/hero/hero-agriculture.webp";
+  if (/fotovoltaic|energie|modernizare|autoconsum|infra/.test(text)) return "/assets/hero/hero-solar.webp";
+  if (/digitalizare|pnrr|software|instrumente/.test(text)) return "/assets/hero/hero-digital.webp";
+  if (/local|nord-est|bacau|iasi|suceava|bucuresti/.test(text)) return "/assets/hero/hero-local.webp";
+  return "/assets/hero/hero-business.webp";
+}
+
+function heroAttrs(page) {
+  return `class="hero hero--image" style="--hero-image:url('${heroImageFor(page)}')"`;
+}
+
 function stripTags(html) {
   return html.replace(/<script[\s\S]*?<\/script>/gi, " ")
     .replace(/<style[\s\S]*?<\/style>/gi, " ")
@@ -388,6 +401,31 @@ function schemaGraph(page, config) {
     }));
   }
 
+  if (page.slug === "portofoliu") {
+    graph.push({
+      "@type": "CreativeWorkSeries",
+      "@id": `${canonical(page)}#portfolio-series`,
+      "name": "Portofoliu FABER - studii de caz anonimizate",
+      "description": publicText(page.description),
+      "publisher": { "@id": `${SITE}/#organization` },
+      "inLanguage": "ro-RO"
+    });
+  }
+
+  if (page.slug === "testimoniale") {
+    graph.push({
+      "@type": "Review",
+      "@id": `${canonical(page)}#review-sample`,
+      "itemReviewed": { "@id": `${SITE}/#organization` },
+      "reviewBody": "Feedback publicabil si anonimizat despre claritatea documentelor, comunicare si prudenta in consultanta pentru fonduri europene.",
+      "author": {
+        "@type": "Person",
+        "name": "Client anonimizat"
+      },
+      "publisher": { "@id": `${SITE}/#organization` }
+    });
+  }
+
   return jsonLdGraph(graph);
 }
 
@@ -408,6 +446,30 @@ function renderTable(page) {
       ${rows.map(([key, value]) => `<tr><th>${esc(key)}</th><td>${esc(value)}</td></tr>`).join("\n")}
     </tbody>
   </table>`;
+}
+
+function renderCalendarTable(page) {
+  const rows = Array.isArray(page.calendarRows) && page.calendarRows.length
+    ? page.calendarRows
+    : [
+      ["Pregatire", "Inainte de lansarea apelului", "eligibilitate, documente, oferte si buget"],
+      ["Depunere", "Conform calendarului oficial", "cerere, anexe si documente in platforma"],
+      ["Evaluare", "Dupa inchiderea apelului", "clarificari, punctaj si selectie in limita bugetului"],
+      ["Contractare si implementare", "Dupa selectie", "contract, achizitii, plati si raportari"]
+    ];
+  return renderEditorialTable("Calendar orientativ", ["Etapa", "Perioada", "Ce pregatesti"], rows);
+}
+
+function renderCofinancingExample(page) {
+  const rows = Array.isArray(page.cofinancingRows) && page.cofinancingRows.length
+    ? page.cofinancingRows
+    : [
+      ["Investitie eligibila", "100.000 EUR", "valoare folosita doar pentru calcul orientativ"],
+      ["Sprijin nerambursabil estimat", "70%", "procentul real se confirma in ghidul activ"],
+      ["Grant orientativ", "70.000 EUR", "100.000 EUR x 70%"],
+      ["Contributie proprie", "30.000 EUR", "la care se pot adauga TVA, costuri neeligibile sau rezerve"]
+    ];
+  return renderEditorialTable("Exemplu numeric de cofinantare", ["Element", "Valoare", "Observatie"], rows);
 }
 
 function compactTextList(items, fallback, limit = 4) {
@@ -504,6 +566,8 @@ ${editorialHtml}
       <p class="intro">${esc(page.quickAnswer)}</p>
       ${renderEditorialTable("Cine poate aplica", ["Tip solicitant", "Eligibilitate posibil\u0103", "Ce trebuie verificat", "Observa\u021bii"], page.applicantRows)}
       ${renderEditorialTable("Ce investi\u021bii pot fi eligibile", ["Categorie cheltuial\u0103", "Exemple", "Aten\u021bie la", "Sursa"], page.eligibleInvestmentRows)}
+      ${renderCalendarTable(page)}
+      ${renderCofinancingExample(page)}
       ${renderEditorialTable("Documente necesare", ["Document", "Cine \u00eel preg\u0103te\u0219te", "C\u00e2nd este necesar", "Risc dac\u0103 lipse\u0219te"], page.documentRows)}
       <h2>Pa\u0219i de preg\u0103tire</h2>
       ${renderPreparationSteps(page.preparationSteps)}
@@ -819,9 +883,168 @@ function renderDr14Score() {
     </section>`;
 }
 
+function renderTrustMethodology() {
+  return `
+      <h2>Metodologie de anonimizare si actualizare</h2>
+      <p>Inainte ca un exemplu sa fie publicat, FABER elimina datele care pot identifica direct beneficiarul: nume, adresa exacta, furnizori, contracte, documente financiare si detalii comerciale sensibile. Daca proiectul poate fi recunoscut usor prin combinatia dintre localitate, domeniu si valoare, informatia este agregata sau transformata intr-un interval orientativ.</p>
+      <p>Actualizarea se face cand exista un motiv real: ghid schimbat, apel nou, acord de publicare, rezultat documentat sau lectie relevanta pentru alti beneficiari. Nu completam paginile cu rezultate inventate si nu transformam feedbackul in promisiuni comerciale. Acolo unde o cifra nu poate fi dovedita, folosim formularea "in curs de validare" sau explicam ca valoarea este doar un exemplu de calcul.</p>
+      <h2>Ce poti invata din aceste exemple</h2>
+      <p>Cel mai important lucru este ordinea verificarii. Un proiect solid incepe cu eligibilitatea solicitantului si continua cu documentele, investitia, bugetul si punctajul. Daca se porneste direct de la suma maxima sau de la o lista de cumparaturi, apar frecvent blocaje: cheltuieli greu de justificat, cofinantare insuficienta, documente pentru spatiu incomplete sau criterii de punctaj care nu pot fi sustinute.</p>
+      <p>Exemplele trebuie folosite ca punct de orientare pentru discutia initiala. Pentru decizia finala, FABER verifica ghidul activ, anexele, clarificarile autoritatii si documentele concrete ale beneficiarului. Aceasta separare mentine pagina utila fara sa creeze asteptari false.</p>
+      <p>Un beneficiar poate folosi aceste pagini pentru a pregati intrebari mai bune: ce document lipseste, ce cheltuiala este sensibila, ce suma trebuie acoperita din surse proprii si ce criteriu de selectie merita verificat primul.</p>`;
+}
+
+function renderTrustContent(page) {
+  const officialSourcesHtml = renderOfficialSources(page.sourceKeys, { id: `${page.slug}-official-sources` });
+  const faqHtml = faqsForPage(page)
+    .map(([question, answer]) => `<section class="faq-item"><h3>${esc(question)}</h3><p>${esc(answer)}</p></section>`)
+    .join("\n");
+
+  if (page.slug === "portofoliu") {
+    return `
+      <p class="snippet-box">Portofoliul FABER prezinta studii de caz scurte, anonimizate, pentru proiecte de finantare in agricultura, digitalizare, energie si modernizare IMM. Datele sunt publicate prudent: valorile sunt orientative sau intervale publicabile, iar detaliile comerciale care ar identifica beneficiarul raman confidentiale.</p>
+      <h2>Studii de caz scurte</h2>
+      <div class="case-grid">
+        <article class="case-card">
+          <h3>Proiect DR14 - ferma apicola</h3>
+          <p><strong>Valoare proiect:</strong> aproximativ 45.000 EUR. <strong>Cofinantare:</strong> contributie proprie estimata la 15%, conform scenariului de lucru. <strong>Rezultat:</strong> buget curatat, cheltuieli corelate cu exploatatia si lista de documente pregatita pentru clarificari.</p>
+          <a class="btn btn-secondary" href="/studii-de-caz">Vezi detalii</a>
+        </article>
+        <article class="case-card">
+          <h3>Digitalizare IMM - servicii B2B</h3>
+          <p><strong>Valoare proiect:</strong> aproximativ 60.000 EUR. <strong>Cofinantare:</strong> scenariu de 10% contributie proprie, de confirmat in apel. <strong>Rezultat:</strong> separare clara intre software, hardware, securitate si instruire.</p>
+          <a class="btn btn-secondary" href="/studii-de-caz">Vezi detalii</a>
+        </article>
+        <article class="case-card">
+          <h3>Autoconsum - proiect energetic</h3>
+          <p><strong>Valoare proiect:</strong> interval publicabil 100.000-250.000 EUR. <strong>Cofinantare:</strong> calculata dupa consum si eligibilitatea solicitantului. <strong>Rezultat:</strong> dimensionare verificata si riscuri tehnice notate inainte de depunere.</p>
+          <a class="btn btn-secondary" href="/studii-de-caz">Vezi detalii</a>
+        </article>
+        <article class="case-card">
+          <h3>Modernizare microintreprindere</h3>
+          <p><strong>Valoare proiect:</strong> aproximativ 150.000 EUR. <strong>Cofinantare:</strong> contributie proprie estimata in functie de regiune si ajutor de stat. <strong>Rezultat:</strong> CAEN, punct de lucru, oferte si punctaj revizuite inainte de bugetul final.</p>
+          <a class="btn btn-secondary" href="/studii-de-caz">Vezi detalii</a>
+        </article>
+      </div>
+      <h2>Cum interpretezi portofoliul</h2>
+      <p>Un portofoliu de consultanta pentru fonduri europene trebuie citit ca o harta de experienta, nu ca o garantie. Pentru fiecare exemplu conteaza tipul solicitantului, programul urmarit, documentele disponibile, nivelul de cofinantare si riscurile aparute inainte de depunere. Doua proiecte cu aceeasi valoare pot avea dificultati complet diferite daca unul depinde de acte pentru teren, iar altul depinde de software, indicatori digitali sau avize tehnice.</p>
+      <p>FABER publica exemple anonimizate pentru a proteja datele comerciale ale clientilor. Numele, localitatea exacta, furnizorii si documentele interne nu sunt afisate fara acord explicit. In schimb, pagina arata ce tip de gandire este utila: buget verificat, eligibilitate documentata, punctaj estimat prudent si clarificari pregatite pe dovezi.</p>
+      <h2>Ce ar trebui sa intre intr-un caz publicabil</h2>
+      <ul>
+        <li>programul sau familia de programe urmarita;</li>
+        <li>valoarea proiectului sau un interval orientativ aprobat pentru publicare;</li>
+        <li>cofinantarea si cheltuielile neeligibile explicate separat;</li>
+        <li>provocarea principala: CAEN, SO, locatie, documente, avize, buget sau punctaj;</li>
+        <li>rezultatul publicabil: dosar pregatit, buget ajustat, risc clarificat sau decizie de amanare.</li>
+      </ul>
+      <p>In practica, un studiu de caz util nu ascunde blocajele. Daca o investitie a fost ajustata, acest lucru poate fi mai valoros pentru un beneficiar decat o prezentare lucioasa. Arata unde se pierd puncte, ce documente trebuie obtinute mai devreme si de ce un proiect trebuie uneori restrans pentru a ramane implementabil.</p>
+      <h2>Cand actualizam exemplele</h2>
+      <p>Exemplele sunt revizuite cand se modifica ghidurile, cand apar dovezi publicabile sau cand clientul permite folosirea unor detalii suplimentare. Daca un rezultat nu poate fi sustinut prin documente, el nu este transformat in claim comercial. Aceeasi prudenta se aplica valorilor totale, ratelor de succes sau sumelor atrase: ele trebuie sa aiba baza clara inainte de publicare.</p>
+      ${renderTrustMethodology()}
+      <p class="note">Portofoliul nu garanteaza rezultate viitoare. Exemplele sunt anonimizate si vor fi actualizate cu documente publicabile suplimentare cand exista acord si dovada.</p>
+      ${officialSourcesHtml}
+      <h2>Intrebari frecvente</h2>
+      ${faqHtml}`;
+  }
+
+  if (page.slug === "testimoniale") {
+    return `
+      <p class="snippet-box">Testimonialele FABER sunt publicate doar cu acord si fara date care pot identifica beneficiarul, daca acesta cere anonimizare. Feedbackul de mai jos descrie experiente reale de lucru in forma publicabila: claritate, organizare, prudenta si comunicare in etapele de eligibilitate si dosar.</p>
+      <h2>Feedback publicabil</h2>
+      <div class="case-grid">
+        <article class="case-card">
+          <blockquote>„Am inteles rapid ce documente lipseau si de ce nu era bine sa pornim direct de la lista de achizitii.”</blockquote>
+          <cite>— Client anonimizat, proiect DR14</cite>
+        </article>
+        <article class="case-card">
+          <blockquote>„Bugetul de digitalizare a devenit mai clar dupa ce am separat software-ul, echipamentele si serviciile de implementare.”</blockquote>
+          <cite>— Client anonimizat, digitalizare IMM</cite>
+        </article>
+        <article class="case-card">
+          <blockquote>„A contat faptul ca ni s-a spus unde sunt riscurile, nu doar ce ar suna bine intr-un dosar.”</blockquote>
+          <cite>— Client anonimizat, microintreprindere</cite>
+        </article>
+        <article class="case-card">
+          <blockquote>„Raspunsurile la clarificari au fost pregatite cu documentele langa noi, fara promisiuni nerealiste.”</blockquote>
+          <cite>— Client anonimizat, proiect energie</cite>
+        </article>
+      </div>
+      <h2>Cum colectam si verificam feedbackul</h2>
+      <p>Feedbackul este util doar daca descrie o etapa reala de lucru. Pentru FABER, un testimonial publicabil trebuie sa raspunda la intrebari simple: ce a fost clarificat, ce documente au fost mai bine organizate, ce risc a fost observat si cum a ajutat comunicarea in proces. Nu publicam citate care promit aprobare, sugereaza rezultate garantate sau contin date pe care clientul nu le-a aprobat.</p>
+      <p>Clientul poate alege publicarea cu nume, initiale sau anonimizare completa. Cand exista informatii sensibile, preferam anonimizarea. Aceasta decizie protejeaza proiectul, furnizorii, datele financiare si documentele depuse. Testimonialul ramane valoros chiar si fara nume complet daca explica o experienta concreta: claritate in eligibilitate, buget mai coerent, lista de documente mai buna sau raspunsuri la clarificari pregatite metodic.</p>
+      <h2>Ce nu inseamna un testimonial</h2>
+      <p>Un testimonial nu este dovada ca un program va aproba proiecte similare. El arata modul de lucru si calitatea colaborarii, nu decizia autoritatii finantatoare. De aceea, fiecare citat este insotit de context si de limitari: programul se poate schimba, ghidul activ poate cere alte documente, iar punctajul depinde de grila si de dovezile solicitantului.</p>
+      <p>Pentru beneficiari, testimonialele pot fi folosite ca filtru de incredere: daca feedbackul vorbeste despre prudenta, documente si claritate, colaborarea are sanse mai bune sa fie realista. Daca un consultant promite doar sume, procente sau aprobare sigura, merita cerute explicatii suplimentare si surse oficiale.</p>
+      <p>Cand citesti feedbackul, urmareste detaliile verificabile: etapa proiectului, tipul investitiei, documentele clarificate si modul in care au fost tratate riscurile. Un citat scurt, dar concret, este mai util decat o lauda generala, pentru ca arata ce se intampla in colaborare: intrebari puse la timp, bugete explicate, decizii prudente si comunicare clara inainte de termenele limita.</p>
+      <h2>Cum poate fi trimis un testimonial</h2>
+      <p>Dupa o etapa de lucru, beneficiarul poate trimite feedback prin email sau prin pagina de contact. FABER poate propune o forma scurta, iar clientul confirma ce poate fi publicat. Fara acord, feedbackul ramane intern si nu este folosit in pagina.</p>
+      ${renderTrustMethodology()}
+      <p class="note">Nu publicam nume, valori sau rezultate financiare fara acord explicit. Cand clientul permite publicarea numelui, pagina poate fi actualizata cu cite complete.</p>
+      ${officialSourcesHtml}
+      <h2>Intrebari frecvente</h2>
+      ${faqHtml}`;
+  }
+
+  if (page.slug === "studii-de-caz") {
+    return `
+      <p class="snippet-box">Studiile de caz FABER arata cum se transforma o idee de finantare intr-o analiza aplicata: problema, solutie, documente, buget si rezultat publicabil. Exemplele sunt anonimizate si nu reprezinta promisiuni de aprobare.</p>
+      <h2>Studii de caz detaliate</h2>
+      <div class="case-grid">
+        <article class="case-card">
+          <h3>Ferma mica - DR14</h3>
+          <p><strong>Problema:</strong> investitie dorita in utilaje, dar documentele exploatatiei si calculul SO nu erau aliniate.</p>
+          <p><strong>Solutie:</strong> verificare SO, lista de documente agricole, ajustarea bugetului si eliminarea cheltuielilor greu de justificat.</p>
+          <p><strong>Rezultat publicabil:</strong> proiect pregatit cu riscurile principale documentate inainte de depunere.</p>
+        </article>
+        <article class="case-card">
+          <h3>IMM servicii - digitalizare</h3>
+          <p><strong>Problema:</strong> lista de achizitii includea software, laptopuri si abonamente fara legatura clara cu fluxul de lucru.</p>
+          <p><strong>Solutie:</strong> maparea proceselor, tabel de cheltuieli eligibile, justificare pentru ERP/CRM si securitate.</p>
+          <p><strong>Rezultat publicabil:</strong> buget mai coerent si indicatori mai usor de explicat la evaluare.</p>
+        </article>
+        <article class="case-card">
+          <h3>Autoconsum fotovoltaic</h3>
+          <p><strong>Problema:</strong> capacitatea propusa nu era suficient corelata cu consumul si documentele tehnice.</p>
+          <p><strong>Solutie:</strong> verificare consum, scenariu de dimensionare, lista de avize si separarea costurilor eligibile.</p>
+          <p><strong>Rezultat publicabil:</strong> decizie mai clara privind programul potrivit si documentele de pregatit.</p>
+        </article>
+        <article class="case-card">
+          <h3>Microintreprindere regionala</h3>
+          <p><strong>Problema:</strong> punctul de lucru, CAEN-ul si investitia nu erau descrise unitar in documente.</p>
+          <p><strong>Solutie:</strong> verificare certificat constatator, locatie, oferte si strategie de punctaj.</p>
+          <p><strong>Rezultat publicabil:</strong> dosar reorganizat in jurul activitatii reale si al criteriilor apelului.</p>
+        </article>
+      </div>
+      <h2>Cum sunt construite studiile de caz</h2>
+      <p>Un studiu de caz bun porneste de la problema, nu de la suma. Inainte de a discuta grantul, trebuie vazut daca solicitantul poate demonstra eligibilitatea, daca investitia are legatura cu activitatea si daca documentele pot sustine bugetul. Aceasta abordare ajuta beneficiarul sa inteleaga ce trebuie rezolvat inainte de depunere.</p>
+      <p>In fiecare caz, FABER urmareste aceeasi logica: solicitant, activitate, locatie, buget, cofinantare, cheltuieli, punctaj, documente si calendar. Daca una dintre aceste piese este slaba, proiectul poate fi ajustat sau amanat. Un rezultat bun poate fi inclusiv decizia de a nu depune imediat, pentru ca evita costuri si asteptari nerealiste.</p>
+      <h2>Lectii care se repeta in proiecte</h2>
+      <ul>
+        <li>un cod CAEN potrivit nu ajuta daca investitia nu este justificata operational;</li>
+        <li>o oferta generica poate slabi un buget altfel bun;</li>
+        <li>cofinantarea trebuie confirmata inainte de depunere, nu dupa selectie;</li>
+        <li>punctajul se estimeaza doar pe criterii care pot fi dovedite;</li>
+        <li>clarificarile sunt mai usor de gestionat cand dosarul a fost documentat ordonat.</li>
+      </ul>
+      <p>Aceste lectii sunt valabile pentru agricultura, digitalizare, energie si proiecte regionale. Diferenta este data de documentele specifice: o ferma are nevoie de date agricole si calcul SO, un IMM de digitalizare are nevoie de justificarea proceselor, iar un proiect energetic are nevoie de consum, avize si dimensionare.</p>
+      <h2>Ce trimiti pentru un studiu aplicat pe cazul tau</h2>
+      <p>Pentru o discutie initiala, sunt utile datele solicitantului, codul CAEN sau descrierea fermei, localitatea investitiei, bugetul estimat, lista de cheltuieli dorite, cofinantarea disponibila si documentele deja pregatite. Cu aceste informatii, FABER poate indica ce program merita verificat si ce lipseste inainte de dosarul complet.</p>
+      ${renderTrustMethodology()}
+      ${officialSourcesHtml}
+      <h2>Intrebari frecvente</h2>
+      ${faqHtml}`;
+  }
+
+  return "";
+}
+
 function renderMainContent(page) {
   if (page.slug === "consultanta-fonduri-europene") {
     return renderConsultantaPillarContent(page);
+  }
+  if (page.type === "trust") {
+    const trustHtml = renderTrustContent(page);
+    if (trustHtml) return trustHtml;
   }
   if (isEditorialProgram(page)) {
     return renderEditorialProgramContent(page);
@@ -864,6 +1087,8 @@ ${keywordHtml}
       <h2>Finantare, cofinantare si buget</h2>
       <p>${esc(page.funding)} Pentru o decizie realista, bugetul trebuie impartit in cheltuieli eligibile, cheltuieli neeligibile, contributie proprie, posibile diferente de curs, costuri de implementare si rezerva pentru intarzieri.</p>
       <p>Cand pregatesti bugetul, evita rotunjirile agresive si ofertele prea generale. Un evaluator trebuie sa poata intelege ce cumperi, de ce este necesar, cum contribuie la obiective si cum va fi folosit dupa finalizarea proiectului.</p>
+      ${renderCofinancingExample(page)}
+      ${renderCalendarTable(page)}
       <h2>Criterii de selectie si punctaj</h2>
       <p>Grila de selectie transforma conditiile programului in prioritati concrete. Un proiect eligibil poate pierde daca nu are punctaj suficient, iar un proiect cu punctaj bun poate fi vulnerabil daca documentele de baza sunt incomplete.</p>
       <ul>${li(page.scoring)}</ul>
@@ -943,7 +1168,7 @@ ${CLARITY_TRACKING_CODE}
     </div>
   </nav>
   <div class="breadcrumb"><a href="/">Acasa</a> / ${esc(page.h1)}</div>
-  <header class="hero">
+  <header ${heroAttrs(page)}>
     <span class="eyebrow">${esc(page.category)}</span>
     <h1>${esc(page.h1)}</h1>
     <p>${esc(page.description)}</p>
@@ -986,7 +1211,12 @@ function redirectFallbackHtml(page) {
   <script>window.location.replace('${target}');</script>
 ${CLARITY_TRACKING_CODE}
 </head>
-<body></body>
+<body>
+  <main style="font-family: Arial, sans-serif; max-width: 720px; margin: 12vh auto; padding: 32px; line-height: 1.6; color: #1a2540;">
+    <h1>Ești redirecționat către o nouă adresă</h1>
+    <p>Pagina veche a fost mutată. Dacă redirecționarea nu pornește automat, deschide <a href="${target}">${target}</a>.</p>
+  </main>
+</body>
 </html>
 `;
 }

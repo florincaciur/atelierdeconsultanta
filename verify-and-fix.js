@@ -627,9 +627,6 @@ function resolveLocalPath(urlPath) {
   if (relativePath === "index.html") candidates.push("index.html");
   else {
     const cleanRoute = relativePath.replace(/\/+$/g, "");
-    if (!path.posix.extname(cleanRoute) && CANONICAL_ROOT_HTML_ROUTES.has(cleanRoute)) {
-      candidates.push(`${cleanRoute}.html`);
-    }
     candidates.push(relativePath);
     if (!path.posix.extname(cleanRoute)) {
       candidates.push(`${cleanRoute}/index.html`);
