@@ -536,6 +536,20 @@
     #finantare .finantare-toggle[hidden] {
       display: none !important;
     }
+    #blog .blog-card-icon {
+      color: var(--orange-contrast);
+      font-size: 0;
+      line-height: 1;
+    }
+    #blog .blog-card-icon svg {
+      display: block;
+      height: 42px;
+      width: 42px;
+      stroke: currentColor;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-width: 2;
+    }
     #newsletter .newsletter-submit {
       border: 0;
       cursor: pointer;
@@ -1920,13 +1934,35 @@
           }
 
           var delays = ['reveal-delay-1','reveal-delay-2','reveal-delay-3'];
+          var blogIconPaths = {
+            sun: '<circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="M4.93 4.93l1.41 1.41"></path><path d="M17.66 17.66l1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="M4.93 19.07l1.41-1.41"></path><path d="M17.66 6.34l1.41-1.41"></path>',
+            caen: '<rect x="4" y="4" width="16" height="16" rx="2"></rect><path d="M8 8h8"></path><path d="M8 12h5"></path><path d="M8 16h8"></path>',
+            buget: '<rect x="3" y="6" width="18" height="13" rx="2"></rect><path d="M16 10h3v5h-3a2.5 2.5 0 0 1 0-5Z"></path><path d="M7 9h5"></path>',
+            it: '<rect x="3" y="4" width="18" height="13" rx="2"></rect><path d="M8 21h8"></path><path d="M12 17v4"></path>',
+            digi: '<rect x="4" y="4" width="7" height="7" rx="1"></rect><rect x="13" y="4" width="7" height="7" rx="1"></rect><rect x="4" y="13" width="7" height="7" rx="1"></rect><path d="M14 17h6"></path><path d="M17 14v6"></path>',
+            dr12: '<path d="M12 21V9"></path><path d="M7 12c-2.5 0-4-1.5-4-4 2.5 0 4 1.5 4 4Z"></path><path d="M17 12c2.5 0 4-1.5 4-4-2.5 0-4 1.5-4 4Z"></path><path d="M7 17c-2.5 0-4-1.5-4-4 2.5 0 4 1.5 4 4Z"></path><path d="M17 17c2.5 0 4-1.5 4-4-2.5 0-4 1.5-4 4Z"></path>',
+            dr14: '<circle cx="7" cy="17" r="2"></circle><circle cx="17" cy="17" r="2"></circle><path d="M5 17H3v-5l3-5h8l3 5h4v5h-2"></path><path d="M9 17h6"></path><path d="M7 7v5"></path><path d="M14 7v5"></path>',
+            so: '<rect x="4" y="3" width="16" height="18" rx="2"></rect><path d="M8 7h8"></path><path d="M8 11h2"></path><path d="M12 11h2"></path><path d="M16 11h0"></path><path d="M8 15h2"></path><path d="M12 15h2"></path><path d="M16 15h0"></path>',
+            afir: '<path d="M12 3 4 7v6c0 4.5 3.2 7.4 8 8 4.8-.6 8-3.5 8-8V7l-8-4Z"></path><path d="m9 12 2 2 4-4"></path>',
+            fe: '<path d="M4 4h16v16H4z"></path><path d="M8 8h8"></path><path d="M8 12h8"></path><path d="M8 16h4"></path>',
+            roi: '<path d="M4 19V5"></path><path d="M4 19h16"></path><path d="m7 15 4-4 3 3 5-7"></path>',
+            ok: '<circle cx="12" cy="12" r="9"></circle><path d="m8 12 3 3 5-6"></path>',
+            doc: '<path d="M6 3h9l3 3v15H6z"></path><path d="M14 3v4h4"></path><path d="M9 12h6"></path><path d="M9 16h6"></path>',
+            co: '<circle cx="12" cy="12" r="9"></circle><path d="M8 12h8"></path><path d="M12 8v8"></path>',
+            default: '<path d="M6 3h9l3 3v15H6z"></path><path d="M14 3v4h4"></path><path d="M9 13h6"></path><path d="M9 17h4"></path>'
+          };
+          function blogIconSvg(icon) {
+            var key = String(icon || '').trim().toLowerCase();
+            var path = blogIconPaths[key] || blogIconPaths.default;
+            return '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">' + path + '</svg>';
+          }
           grid.innerHTML = posts.map(function(p, i){
             var delay = delays[i] || '';
             var postHref = p.canonicalUrl || ('/' + (p.slug || p.id));
             var imageHtml = p.bannerImage
               ? '<div class="blog-image" aria-hidden="true" style="background-image:url(' + p.bannerImage + ');background-size:cover;background-position:center;"></div>'
               : '<div class="blog-image" aria-hidden="true">' +
-                '<span class="blog-card-icon">' + (p.icon || '📝') + '</span>' +
+                '<span class="blog-card-icon">' + blogIconSvg(p.icon) + '</span>' +
                 '</div>';
             return '<article class="blog-card reveal ' + delay + '" data-blog-id="' + p.id + '">' +
               imageHtml +

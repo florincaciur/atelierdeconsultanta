@@ -265,6 +265,14 @@ async function assertHomepageInteractions(baseUrl) {
     assert(publicVisibleCards <= 3, "public beneficiary filter should respect collapsed first-row display");
     assert.equal(await page.locator('[data-beneficiary-filter="public"]').getAttribute("aria-pressed"), "true", "public filter should set aria-pressed");
 
+    await page.waitForSelector("#blog-grid .blog-card-icon svg", { timeout: 6000 });
+    const renderedBlogIcons = await page.locator("#blog-grid .blog-card-icon svg").count();
+    assert(renderedBlogIcons >= 3, "blog cards should render visible SVG icons instead of text placeholders");
+    const textOnlyBlogIcons = await page.$$eval("#blog-grid .blog-card-icon", (icons) =>
+      icons.filter((icon) => !icon.querySelector("svg") && icon.textContent.trim()).map((icon) => icon.textContent.trim())
+    );
+    assert.deepEqual(textOnlyBlogIcons, [], "blog icon placeholders should not render as raw text labels");
+
     await page.setViewportSize({ width: 390, height: 844 });
     await page.goto(`${baseUrl}/`, { waitUntil: "networkidle" });
     await page.locator("#hamburgerBtn").click();
