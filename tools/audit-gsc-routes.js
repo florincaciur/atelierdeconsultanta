@@ -6,6 +6,10 @@ const PUBLIC_DIR = fs.existsSync(path.join(ROOT, "dist")) ? path.join(ROOT, "dis
 const SITE = "https://atelierdeconsultanta.ro";
 const URLS = [
   "https://atelierdeconsultanta.ro/index.html",
+  "https://atelierdeconsultanta.ro/dr12-vs-dr14",
+  "https://atelierdeconsultanta.ro/dr14-afir-ferme-mici",
+  "https://atelierdeconsultanta.ro/afir",
+  "https://atelierdeconsultanta.ro/ghiduri",
   "https://atelierdeconsultanta.ro/pnrr-digitalizare-imm-cheltuieli-eligibile",
   "https://atelierdeconsultanta.ro/fonduri-europene-imm",
   "https://atelierdeconsultanta.ro/fonduri-europene-agricultura",

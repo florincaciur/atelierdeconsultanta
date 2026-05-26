@@ -2172,6 +2172,22 @@
         [
           "Ce verific prima data?",
           "Verifica forma solicitantului, exploatatia si dimensiunea economica."
+        ],
+        [
+          "Cum aleg intre DR12 si DR14?",
+          "Alegerea se face dupa profilul solicitantului, exploatatie, SO/SOC, investitie si documente. DR12 si DR14 nu trebuie tratate ca variante interschimbabile."
+        ],
+        [
+          "Cand folosesc calculatorul SO/SOC?",
+          "Calculatorul se foloseste inainte de alegerea finala a programului, pe date actuale si documentabile despre culturi, animale si exploatatie."
+        ],
+        [
+          "Pot pregati bugetul inainte de eligibilitate?",
+          "Nu este recomandat. Bugetul trebuie construit dupa ce solicitantul, exploatatia, investitia si documentele de baza au fost verificate."
+        ],
+        [
+          "Ce risc apare cel mai des la proiectele AFIR?",
+          "Cel mai des apar necorelari intre documentele exploatatiei, calculul SO/SOC, investitie si ofertele folosite in buget."
         ]
       ],
       "related": [
@@ -2185,7 +2201,9 @@
         "dr12",
         "dr14"
       ],
-      "heroIcon": "ph-duotone ph-plant"
+      "heroIcon": "ph-duotone ph-plant",
+      "minWords": 2000,
+      "minFaq": 8
     },
     {
       "slug": "ghiduri",
@@ -2266,6 +2284,18 @@
         [
           "Pot cere verificarea dosarului?",
           "Da, pagina trimite catre contact pentru o analiza initiala."
+        ],
+        [
+          "Cum stiu daca un ghid este actual?",
+          "Verifica data paginii, sursa oficiala si daca exista ghid final, anexe, corrigendumuri sau calendar activ."
+        ],
+        [
+          "Ce fac daca ghidul oficial lipseste?",
+          "Pastreaza concluziile la nivel orientativ si nu lua decizii pe sume, procente sau termene pana cand sursa oficiala este completa."
+        ],
+        [
+          "Ce documente pregatesc inainte de consultanta?",
+          "Pregateste date despre solicitant, activitate, localitate, cod CAEN sau ferma, buget, investitie si documentele disponibile."
         ]
       ],
       "related": [
@@ -2278,7 +2308,9 @@
       "sourceKeys": [
         "fonduri-europene"
       ],
-      "heroIcon": "ph-duotone ph-file-text"
+      "heroIcon": "ph-duotone ph-file-text",
+      "minWords": 2000,
+      "minFaq": 7
     },
     {
       "slug": "studii-de-caz",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-26T16:19:53.971Z",
+  "generatedAt": "2026-05-26T16:41:56.648Z",
   "mode": "check",
   "changedFiles": [
     "404.html",
@@ -9,6 +9,7 @@
     "afir/index.html",
     "autoconsum-public-fotovoltaice-institutii-publice.html",
     "autoconsum-publici.html",
+    "blog-afir-fotovoltaice-ferme-2026.html",
     "blog.html",
     "blog/index.html",
     "calculator-soc.html",
@@ -115,7 +116,7 @@
     "failedFiles": 0
   },
   "inlineScripts": {
-    "checked": 279,
+    "checked": 275,
     "failures": []
   },
   "results": [
@@ -243,7 +244,7 @@
           "AFIR: fonduri pentru fermieri si proiecte agricole"
         ],
         "missingAlt": [],
-        "relatedCount": 1,
+        "relatedCount": 2,
         "jsonLdErrors": []
       }
     },
@@ -1216,7 +1217,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Esti redirectionat catre o noua adresa"
+          "Ești redirecționat către o nouă adresă"
         ],
         "missingAlt": [],
         "relatedCount": 0,
@@ -1907,7 +1908,7 @@
           "Ghiduri pentru fonduri europene"
         ],
         "missingAlt": [],
-        "relatedCount": 1,
+        "relatedCount": 2,
         "jsonLdErrors": []
       }
     },
@@ -2286,7 +2287,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Esti redirectionat catre o noua adresa"
+          "Ești redirecționat către o nouă adresă"
         ],
         "missingAlt": [],
         "relatedCount": 0,
@@ -2334,7 +2335,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Esti redirectionat catre o noua adresa"
+          "Ești redirecționat către o nouă adresă"
         ],
         "missingAlt": [],
         "relatedCount": 0,
@@ -2526,7 +2527,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Esti redirectionat catre o noua adresa"
+          "Ești redirecționat către o nouă adresă"
         ],
         "missingAlt": [],
         "relatedCount": 0,

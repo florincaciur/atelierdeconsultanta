@@ -1,23 +1,23 @@
 {
-  "generatedAt": "2026-05-26T16:20:10.932Z",
+  "generatedAt": "2026-05-26T16:42:15.265Z",
   "summary": {
     "filesChecked": 164,
     "filesWithStructuredData": 95,
     "filesWithIssues": 0,
     "types": {
-      "Organization": 271,
-      "ImageObject": 87,
+      "Organization": 275,
+      "ImageObject": 89,
       "Country": 69,
       "ContactPoint": 132,
       "WebSite": 69,
-      "WebPage": 85,
+      "WebPage": 87,
       "CreativeWork": 136,
       "BreadcrumbList": 77,
       "ListItem": 180,
-      "FAQPage": 77,
-      "Question": 505,
-      "Answer": 505,
-      "Article": 63,
+      "FAQPage": 79,
+      "Question": 521,
+      "Answer": 521,
+      "Article": 65,
       "GovernmentService": 15,
       "BlogPosting": 21,
       "Blog": 1,
@@ -122,8 +122,8 @@
         "BreadcrumbList": 1,
         "ListItem": 2,
         "FAQPage": 1,
-        "Question": 8,
-        "Answer": 8,
+        "Question": 9,
+        "Answer": 9,
         "Article": 1
       },
       "issues": []
@@ -789,23 +789,31 @@
     },
     {
       "file": "dr12-vs-dr14.html",
-      "blocks": 1,
+      "blocks": 2,
       "types": {
         "BlogPosting": 1,
-        "Organization": 2,
-        "ImageObject": 1,
-        "WebPage": 1
+        "Organization": 4,
+        "ImageObject": 2,
+        "WebPage": 2,
+        "Article": 1,
+        "FAQPage": 1,
+        "Question": 6,
+        "Answer": 6
       },
       "issues": []
     },
     {
       "file": "dr14-afir-ferme-mici.html",
-      "blocks": 1,
+      "blocks": 2,
       "types": {
         "BlogPosting": 1,
-        "Organization": 2,
-        "ImageObject": 1,
-        "WebPage": 1
+        "Organization": 4,
+        "ImageObject": 2,
+        "WebPage": 2,
+        "Article": 1,
+        "FAQPage": 1,
+        "Question": 6,
+        "Answer": 6
       },
       "issues": []
     },
@@ -1435,8 +1443,8 @@
         "BreadcrumbList": 1,
         "ListItem": 2,
         "FAQPage": 1,
-        "Question": 5,
-        "Answer": 5,
+        "Question": 8,
+        "Answer": 8,
         "Article": 1
       },
       "issues": []

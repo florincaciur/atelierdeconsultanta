@@ -1084,9 +1084,244 @@ function renderTrustContent(page) {
   return "";
 }
 
+function renderAfirHubContent(page) {
+  const officialSourcesHtml = renderOfficialSources(page.sourceKeys, { id: `${page.slug}-official-sources` });
+  const faqHtml = faqsForPage(page)
+    .map(([question, answer]) => `<section class="faq-item"><h3>${esc(question)}</h3><p>${esc(answer)}</p></section>`)
+    .join("\n");
+  const programRows = [
+    ["DR 12 AFIR", "tineri fermieri si exploatatii care trebuie sa dovedeasca rolul solicitantului", "profil solicitant, exploatatie, calcul SO/SOC, documente de folosinta", "/dr12-afir"],
+    ["DR 14 AFIR", "ferme mici care urmaresc modernizare proportionala cu activitatea reala", "incadrare ferma mica, documente exploatatie, buget si grila activa", "/dr14"],
+    ["Autoconsum agroalimentar", "beneficiari care verifica investitii in energie pentru activitatea agroalimentara", "consum, amplasament, avize, capacitate si costuri neeligibile", "/afir-autoconsum-agroalimentar"],
+    ["Fonduri pentru utilaje agricole", "ferme care vor echipamente legate direct de productie", "necesitate, dimensiune, oferte si corelare cu activitatea", "/fonduri-pentru-utilaje-agricole"],
+    ["Calculator SO/SOC", "solicitanti care trebuie sa porneasca de la dimensiunea economica", "date actuale despre culturi, animale si exploatatie", "/calculator-soc"]
+  ];
+
+  return `
+      <p class="intro">${esc(page.quickAnswer)} Hub-ul AFIR este punctul de intrare pentru fermieri care vor sa aleaga intre interventii, sa verifice documentele exploatatiei si sa pregateasca o discutie realista despre eligibilitate.</p>
+      <p class="snippet-box">Pe scurt: foloseste aceasta pagina pentru trierea initiala AFIR. Porneste de la solicitant, ferma, SO/SOC, documente, investitie si cofinantare. Apoi mergi in pagina programului potrivit si confirma regulile in ghidul oficial activ, pentru ca sumele, pragurile, grilele si termenele pot fi diferite de la un apel la altul.</p>
+      ${renderTable(page)}
+      <h2>Ce problema rezolva hub-ul AFIR</h2>
+      <p>Multe cautari despre AFIR pornesc de la o intrebare prea larga: ce bani pot lua pentru ferma. O analiza utila incepe mai precis. Intai se verifica solicitantul, apoi exploatatia, dimensiunea economica, dreptul de folosinta asupra terenurilor sau animalelor, investitia propusa, capacitatea de cofinantare si documentele care pot sustine fiecare afirmatie.</p>
+      <p>Hub-ul grupeaza paginile agricole principale si explica ordinea verificarii. Nu inlocuieste ghidul solicitantului, nu stabileste praguri finale si nu promite aprobare. Rolul sau este sa reduca riscul de a pregati un dosar pe programul gresit sau cu documente care se contrazic.</p>
+${renderDecisionMatrix(page)}
+      <h2>Harta programelor AFIR si a paginilor utile</h2>
+      <div class="table-wrap">
+        <table class="program-table">
+          <thead><tr><th>Resursa</th><th>Cand o folosesti</th><th>Ce verifici inainte de buget</th><th>Pagina</th></tr></thead>
+          <tbody>
+            ${programRows.map(([name, use, check, href]) => `<tr><td>${esc(name)}</td><td>${esc(use)}</td><td>${esc(check)}</td><td><a href="${href}">${esc(labelForHref(href))}</a></td></tr>`).join("\n")}
+          </tbody>
+        </table>
+      </div>
+      <h2>DR12, DR14 si alegerea programului potrivit</h2>
+      <p>DR12 si DR14 sunt adesea comparate pentru ca ambele pot fi relevante in agricultura, dar criteriile nu trebuie amestecate. DR12 se analizeaza cand profilul solicitantului si logica de instalare sau consolidare a unui tanar fermier sunt centrale. DR14 se analizeaza cand punctul de plecare este ferma mica si dezvoltarea ei proportionala cu activitatea existenta.</p>
+      <p>Daca o familie lucreaza terenuri impreuna, daca actele sunt impartite intre mai multe persoane sau daca investitia a fost aleasa inaintea calculului SO/SOC, decizia trebuie amanata pana cand documentele spun aceeasi poveste. O pagina de program ajuta doar dupa ce datele fermei sunt ordonate.</p>
+      <p>Pentru o comparatie aplicata intre cele doua interventii, foloseste si pagina <a href="/dr12-vs-dr14">DR12 vs DR14</a>. Pentru o analiza specifica fermei mici, mergi in pagina <a href="/dr14-afir-ferme-mici">DR14 AFIR ferme mici</a>. Ambele pagini pastreaza formularea prudenta: concluzia finala depinde de ghidul activ si de documentele solicitantului.</p>
+      <h2>Documente care trebuie pregatite devreme</h2>
+      <p>In proiectele agricole, documentele nu sunt o formalitate de final. Ele decid daca investitia poate fi sustinuta. Daca dreptul de folosinta, calculul SO/SOC, ofertele sau anexele nu se potrivesc, proiectul poate intra in clarificari sau poate deveni greu de aparat.</p>
+      <div class="table-wrap">
+        <table class="program-table">
+          <thead><tr><th>Document / informatie</th><th>De ce conteaza</th><th>Risc daca lipseste</th></tr></thead>
+          <tbody>
+            <tr><td>Date despre exploatatie</td><td>Arata ce culturi, animale sau activitati exista in prezent.</td><td>Dimensiune economica neclara sau incadrare gresita.</td></tr>
+            <tr><td>Documente de folosinta</td><td>Dovedesc terenul, spatiul, adaposturile sau punctul de lucru.</td><td>Blocaj la eligibilitate, contractare sau implementare.</td></tr>
+            <tr><td>Calcul SO/SOC</td><td>Leaga ferma reala de interventia potrivita.</td><td>Alegerea unui program nepotrivit sau punctaj supraestimat.</td></tr>
+            <tr><td>Oferte si specificatii</td><td>Explica achizitiile si legatura lor cu activitatea agricola.</td><td>Buget slab justificat sau cheltuieli taiate la evaluare.</td></tr>
+            <tr><td>Cofinantare si cash-flow</td><td>Arata daca proiectul poate fi sustinut dupa selectie.</td><td>Proiect aprobat pe hartie, dar greu de implementat.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <h2>Buget, cofinantare si exemple prudente</h2>
+      <p>Bugetul AFIR trebuie construit dupa verificarea eligibilitatii, nu inainte. Un utilaj sau o lucrare poate fi utila comercial, dar trebuie sa fie permisa de ghid, proportionala cu ferma si justificata prin obiectivele proiectului. Diferenta dintre cheltuieli eligibile si costuri suportate separat trebuie explicata de la inceput.</p>
+      <p>Exemplele numerice de pe site sunt scenarii de calcul, nu promisiuni. Daca se foloseste o investitie de 100.000 EUR si un procent orientativ, scopul este sa arate cum se separa grantul de contributia proprie, TVA, diferente de pret si rezerve. Procentul real, pragurile si tratamentul costurilor se confirma doar in ghidul apelului activ.</p>
+      ${renderCofinancingExample(page)}
+      ${renderCalendarTable(page)}
+      <h2>Cum folosesti calculatorul SO/SOC</h2>
+      <p>Calculatorul SO/SOC este util cand datele introduse sunt actuale si pot fi dovedite. Nu este suficient sa obtii o cifra; trebuie pastrata legatura dintre calcul, documentele exploatatiei si programul analizat. Daca datele despre culturi sau efective nu sunt stabile, concluzia de eligibilitate trebuie tratata ca provizorie.</p>
+      <p>Inainte de o discutie cu FABER, pregateste tipul fermei, localitatea, suprafetele, efectivele, forma juridica, documentele de folosinta si investitia dorita. Cu aceste informatii se poate decide daca merita analizat DR12, DR14, o pagina despre utilaje, o interventie de energie sau un alt apel.</p>
+      <h2>Riscuri frecvente la proiecte AFIR</h2>
+      <ul>
+        <li>program ales dupa denumire, fara verificarea ghidului activ;</li>
+        <li>calcul SO/SOC facut pe date incomplete sau greu de dovedit;</li>
+        <li>terenuri, animale sau puncte de lucru cu documente nealiniate;</li>
+        <li>investitie aleasa inainte de analiza activitatii reale;</li>
+        <li>oferte generale, fara specificatii tehnice si fara justificare;</li>
+        <li>cofinantare tratata superficial, fara rezerva pentru costuri neeligibile;</li>
+        <li>punctaj estimat pe criterii care nu pot fi demonstrate;</li>
+        <li>calendar strans, fara timp pentru clarificari sau completari;</li>
+        <li>amestecarea informatiilor din ghiduri consultative cu regulile apelului activ;</li>
+        <li>promisiuni comerciale facute inainte de confirmarea documentelor.</li>
+      </ul>
+      <h2>Scenarii orientative de folosire a hub-ului</h2>
+      <p>Un tanar fermier care preia treptat o exploatatie ar trebui sa porneasca de la rolul sau real, documentele care dovedesc exploatatia si planul de dezvoltare. Abia dupa aceea compara investitiile si bugetul. Un fermier cu exploatatie mica, dar stabila, poate avea o discutie mai utila pornind de la DR14, cu accent pe proportia dintre activitate, investitie si capacitatea de implementare.</p>
+      <p>O ferma care vrea energie pentru autoconsum are nevoie de alta ordine de verificare: consum, amplasament, avize, dimensionare si legatura cu activitatea agroalimentara. O ferma care vrea utilaje trebuie sa arate de ce utilajul este necesar, nu doar ca este eligibil in principiu. Aceste scenarii sunt diferite, iar hub-ul exista tocmai pentru a le separa.</p>
+      <h2>Cand are sens consultanta AFIR</h2>
+      <p>Consultanta AFIR are sens cand proiectul nu poate fi decis dintr-o lista simpla de conditii. Daca solicitantul are mai multe suprafete, exploatatia este impartita intre membri ai familiei, investitia include utilaje si lucrari, cofinantarea trebuie confirmata sau ghidul este inca in consultare, este mai sigur sa faci o verificare structurata inainte de a comanda documente scumpe.</p>
+      <p>Un consultant nu transforma un proiect nepotrivit intr-un proiect eligibil. Rolul sau este sa puna intrebarile corecte, sa identifice documentele lipsa, sa compare interventiile relevante si sa opreasca scenariile care nu pot fi sustinute. In agricultura, aceasta prudenta conteaza pentru ca multe decizii luate devreme afecteaza implementarea: achizitii, drepturi de folosinta, contracte, termene, plati si obligatii de mentinere.</p>
+      <div class="table-wrap">
+        <table class="program-table">
+          <thead><tr><th>Profil beneficiar</th><th>Intrebare de pornire</th><th>Pagina recomandata</th><th>Ce trimiti pentru analiza</th></tr></thead>
+          <tbody>
+            <tr><td>Tanar fermier</td><td>Poate solicitantul demonstra rolul real si exploatatia?</td><td><a href="/dr12-afir">DR 12 AFIR</a></td><td>date solicitant, documente ferma, SO/SOC, plan investitie.</td></tr>
+            <tr><td>Ferma mica</td><td>Investitia este proportionala si documentele sunt coerente?</td><td><a href="/dr14">DR 14 AFIR</a></td><td>acte exploatatie, calcul SO/SOC, lista achizitii, buget.</td></tr>
+            <tr><td>Ferma care compara programe</td><td>DR12 si DR14 sunt ambele posibile sau doar par similare?</td><td><a href="/dr12-vs-dr14">DR12 vs DR14</a></td><td>profil solicitant, varsta, forma juridica, documente si investitie.</td></tr>
+            <tr><td>Agroalimentar / energie</td><td>Consumul si amplasamentul justifica investitia?</td><td><a href="/afir-autoconsum-agroalimentar">AFIR autoconsum</a></td><td>consum, locatie, avize, capacitate, buget si sursa cofinantarii.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <h2>Ce informatii sunt utile in primul mesaj</h2>
+      <p>Pentru o verificare initiala, nu este nevoie sa trimiti tot dosarul. Sunt utile cateva date de baza: forma juridica, localitatea, tipul fermei, suprafetele sau efectivele, calculul SO/SOC daca exista, investitia dorita, bugetul estimat, cofinantarea disponibila si documentele pe care le ai deja. Cu aceste informatii se poate spune daca analiza trebuie sa continue pe DR12, DR14, utilaje, energie sau alta directie.</p>
+      <p>Daca datele lipsesc, raspunsul corect este o lista de completari, nu o concluzie fortata. Aceasta abordare poate parea mai lenta, dar previne alegerea unui program gresit. In practica, un dosar respins sau imposibil de implementat costa mai mult decat o verificare facuta inainte de buget.</p>
+      <h2>Cum citesti raspunsul primit dupa verificare</h2>
+      <p>Un raspuns bun pentru AFIR trebuie sa fie specific. Ar trebui sa spuna ce program ramane in analiza, ce document lipseste, ce risc trebuie clarificat si ce nu poate fi concluzionat pana la ghidul activ. Daca raspunsul contine doar o incurajare generala, beneficiarul nu are inca baza pentru buget sau depunere.</p>
+      <p>De aceea, FABER prefera concluzii operationale: pregateste calculul SO/SOC, corecteaza actele de folosinta, verifica alta interventie, separa TVA si cheltuielile neeligibile, ajusteaza investitia sau asteapta documentele oficiale. Aceste indicatii transforma hub-ul AFIR intr-un instrument de decizie, nu intr-o simpla lista de programe.</p>
+      <h2>Concluzie pentru paginile AFIR</h2>
+      <p>AFIR trebuie privit ca o familie de reguli, nu ca o singura oportunitate. Fiecare interventie are logica ei, iar fermierul trebuie sa poata demonstra incadrarea prin documente. Hub-ul acesta trimite catre paginile unde analiza devine specifica si pastreaza aceeasi regula editoriala: fara sume finale neverificate, fara promisiuni de aprobare si fara recomandari care ignora ghidul activ.</p>
+      <h2>Linkuri interne pentru urmatorul pas</h2>
+      <div class="related-links">
+        <a href="/dr12-afir">DR 12 AFIR</a>
+        <a href="/dr14">DR 14 AFIR</a>
+        <a href="/dr12-vs-dr14">DR12 vs DR14</a>
+        <a href="/dr14-afir-ferme-mici">DR14 ferme mici</a>
+        <a href="/calculator-soc">Calculator SO/SOC</a>
+        <a href="/consultanta-afir">Consultanta AFIR</a>
+        <a href="/fonduri-pentru-ferme">Fonduri pentru ferme</a>
+        <a href="/surse-oficiale-fonduri-europene">Surse oficiale</a>
+      </div>
+${officialSourcesHtml}
+      <h2>Intrebari frecvente</h2>
+      ${faqHtml}`;
+}
+
+function renderGuidesHubContent(page) {
+  const officialSourcesHtml = renderOfficialSources(page.sourceKeys, { id: `${page.slug}-official-sources` });
+  const faqHtml = faqsForPage(page)
+    .map(([question, answer]) => `<section class="faq-item"><h3>${esc(question)}</h3><p>${esc(answer)}</p></section>`)
+    .join("\n");
+
+  return `
+      <p class="intro">${esc(page.quickAnswer)} Pagina strange resursele care ajuta beneficiarul sa treaca de la idee la verificare: program, documente, buget, calendar, riscuri si surse oficiale.</p>
+      <p class="snippet-box">Pe scurt: ghidurile FABER sunt puncte de orientare, nu inlocuitori pentru apelurile active. Foloseste-le pentru a intelege ce informatii trebuie pregatite, ce documente lipsesc si ce intrebari trebuie clarificate inainte de depunere.</p>
+      ${renderTable(page)}
+      <h2>Cum alegi ghidul potrivit</h2>
+      <p>O pagina de ghiduri este utila doar daca te ajuta sa alegi urmatorul pas. Inainte sa descarci un checklist sau sa citesti un articol, noteaza programul urmarit, tipul solicitantului, localitatea proiectului, codul CAEN sau profilul fermei, investitia dorita si bugetul estimat. Aceste date separa ghidurile relevante de materialele care par utile, dar nu se aplica proiectului tau.</p>
+      <p>Ghidurile de pe site sunt scrise prudent. Ele explica ordinea verificarii si riscurile frecvente, dar nu publica rezultate, testimoniale, statistici sau valori finale fara baza verificabila. Daca un apel nu are inca ghid final, textul ramane orientativ si trimite la sursa oficiala.</p>
+${renderDecisionMatrix(page)}
+      <h2>Biblioteca rapida de ghiduri si instrumente</h2>
+      <div class="table-wrap">
+        <table class="program-table">
+          <thead><tr><th>Subiect</th><th>Ce clarifica</th><th>Resursa interna</th></tr></thead>
+          <tbody>
+            <tr><td>Consultanta fonduri europene</td><td>procesul de verificare, documentele minime si riscurile inainte de dosar</td><td><a href="/consultanta-fonduri-europene">pagina de consultanta</a></td></tr>
+            <tr><td>AFIR si agricultura</td><td>DR12, DR14, ferme, utilaje, SO/SOC si documente agricole</td><td><a href="/afir">hub AFIR</a></td></tr>
+            <tr><td>Digitalizare IMM</td><td>software, hardware, securitate, indicatori si buget IT</td><td><a href="/digitalizare-imm">Digitalizare IMM</a></td></tr>
+            <tr><td>Start-Up Nation</td><td>CAEN, plan de afaceri, cheltuieli si pregatire prudent verificata</td><td><a href="/start-up-nation-2026">Start-Up Nation 2026</a></td></tr>
+            <tr><td>Documente si checklisturi</td><td>liste de verificare, calendar si fisiere descarcabile pentru pregatire</td><td><a href="/resurse">Resurse descarcabile</a></td></tr>
+            <tr><td>Calculatoare</td><td>scenarii orientative pentru cofinantare, digitalizare si eligibilitate initiala</td><td><a href="/instrumente">Instrumente</a></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <h2>Metoda de lucru cu un ghid</h2>
+      <p>Primul pas este citirea scopului. Un ghid despre eligibilitate nu iti spune automat ce cumperi; un ghid despre buget nu decide daca solicitantul este eligibil. Separarea aceasta previne multe greseli, mai ales cand proiectul pare simplu la inceput.</p>
+      <ol>
+        <li>Alege programul sau familia de programe care se potriveste solicitantului.</li>
+        <li>Verifica daca exista ghid oficial activ, anexe, grila si calendar.</li>
+        <li>Noteaza documentele pe care le ai deja si documentele care lipsesc.</li>
+        <li>Construieste bugetul dupa eligibilitate, nu invers.</li>
+        <li>Verifica riscurile: cofinantare, TVA, oferte, autorizari, punctaj si implementare.</li>
+        <li>Revizuieste concluzia cand apare un corrigendum, o versiune noua de ghid sau o clarificare oficiala.</li>
+      </ol>
+      <h2>Checklist minim inainte de depunere</h2>
+      <div class="table-wrap">
+        <table class="program-table">
+          <thead><tr><th>Zona verificata</th><th>Intrebare practica</th><th>Ce document cauti</th></tr></thead>
+          <tbody>
+            <tr><td>Solicitant</td><td>Forma juridica si istoricul permit aplicarea?</td><td>CUI, certificat constatator, situatii financiare, date de reprezentare.</td></tr>
+            <tr><td>Activitate</td><td>Codul CAEN sau profilul fermei are legatura cu investitia?</td><td>Coduri autorizate, descriere activitate, punct de lucru, documente agricole.</td></tr>
+            <tr><td>Locatie</td><td>Proiectul se implementeaza intr-un spatiu dovedit?</td><td>Contracte, acte teren/cladire, durata folosintei, avize daca sunt necesare.</td></tr>
+            <tr><td>Buget</td><td>Cheltuielile sunt permise si pot fi justificate?</td><td>Oferte, specificatii, devize, justificare operationala, tratament TVA.</td></tr>
+            <tr><td>Punctaj</td><td>Criteriile estimate pot fi dovedite?</td><td>Grila, anexe, declaratii, documente suport pentru fiecare criteriu.</td></tr>
+            <tr><td>Implementare</td><td>Beneficiarul poate sustine proiectul dupa selectie?</td><td>Cash-flow, cofinantare, calendar achizitii, responsabilitati si obligatii.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <h2>Cum eviti folosirea informatiilor expirate</h2>
+      <p>Ghidurile se schimba. O informatie corecta intr-o versiune consultativa poate deveni incompleta sau irelevanta dupa publicarea ghidului final. De aceea, fiecare pagina trebuie citita impreuna cu data actualizarii, sursa oficiala si mentiunile despre caracterul orientativ al exemplelor.</p>
+      <p>Inainte sa iei o decizie, verifica daca pagina trimite la AFIR, MIPE, ADR, PNRR sau alta institutie relevanta. Daca sursa oficiala nu este completa, nu trata butonul de ghid ca dovada finala. In proiectele cu bani publici, sursa de adevar ramane documentul apelului activ, nu un rezumat comercial.</p>
+      <h2>Exemple de folosire responsabila</h2>
+      <p>Un antreprenor care cauta digitalizare poate porni din ghidul Digitalizare IMM, dar trebuie sa ajunga rapid la lista de procese digitalizate, buget IT, securitate, indicatori si documente. Un fermier care cauta utilaje are nevoie de hub-ul AFIR, de calcul SO/SOC si de justificarea investitiei in ferma. Un start-up are nevoie de CAEN, cheltuieli eligibile, cofinantare si plan de afaceri, nu doar de lista cu idei.</p>
+      <p>Daca un ghid nu raspunde direct la cazul tau, foloseste-l ca lista de intrebari pentru discutia de eligibilitate. O intrebare buna economiseste timp: ce lipseste, ce program trebuie eliminat, ce document trebuie obtinut inainte de buget si ce criteriu nu poate fi sustinut prin dovezi.</p>
+      <h2>Ghiduri pe profil de beneficiar</h2>
+      <p>Un fermier are nevoie de documente diferite fata de un IMM din servicii sau fata de un start-up. De aceea, resursele trebuie citite prin filtrul beneficiarului, nu doar prin titlul programului. O pagina despre agricultura trebuie sa ajunga la SO/SOC, acte de folosinta si investitii agricole. O pagina despre digitalizare trebuie sa ajunga la procese, hardware, software, securitate si indicatori. O pagina despre programe regionale trebuie sa verifice regiunea, codul CAEN, punctul de lucru si cheltuielile productive.</p>
+      <div class="table-wrap">
+        <table class="program-table">
+          <thead><tr><th>Beneficiar</th><th>Ghiduri de pornire</th><th>Intrebarea care decide urmatorul pas</th></tr></thead>
+          <tbody>
+            <tr><td>Fermier sau exploatatie agricola</td><td><a href="/afir">AFIR</a>, <a href="/dr12-afir">DR12</a>, <a href="/dr14">DR14</a>, <a href="/calculator-soc">calculator SO/SOC</a></td><td>Exploatatia si investitia pot fi dovedite prin documente coerente?</td></tr>
+            <tr><td>IMM existent</td><td><a href="/fonduri-europene-imm">fonduri IMM</a>, <a href="/digitalizare-imm">digitalizare</a>, <a href="/por-adr-nord-est">regional</a></td><td>Codul CAEN, localizarea si bugetul se potrivesc cu apelul activ?</td></tr>
+            <tr><td>Start-up</td><td><a href="/start-up-nation-2026">Start-Up Nation</a>, <a href="/cod-caen-start-up-nation-2026">cod CAEN</a>, <a href="/start-up-nation-2026-plan-de-afaceri">plan de afaceri</a></td><td>Activitatea, cofinantarea si cheltuielile pot fi sustinute realist?</td></tr>
+            <tr><td>Proiect energetic</td><td><a href="/fondul-de-modernizare">Fondul de Modernizare</a>, <a href="/finantari-panouri-fotovoltaice">fotovoltaice</a>, <a href="/afir-autoconsum-agroalimentar">autoconsum agroalimentar</a></td><td>Consumul, amplasamentul, avizele si dimensionarea sunt documentate?</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <h2>Plan de verificare inainte sa ceri oferta</h2>
+      <p>Inainte sa ceri o oferta de consultanta, strange informatiile care permit o concluzie. Pentru o firma, sunt utile CUI-ul, codurile CAEN, localitatea proiectului, activitatea reala, bugetul estimat, lista de achizitii si documentele pentru spatiu. Pentru o ferma, sunt utile datele exploatatiei, SO/SOC, documentele de folosinta si investitia dorita. Pentru un proiect energetic, sunt utile consumul, amplasamentul, puterea estimata si stadiul avizelor.</p>
+      <p>Acest plan reduce raspunsurile vagi. Un consultant poate raspunde mai clar cand vede daca programul este posibil, ce lipseste si ce trebuie verificat in sursa oficiala. Daca informatiile sunt incomplete, prima etapa devine completarea datelor, nu redactarea dosarului.</p>
+      <h2>Ce inseamna concluzie buna dupa citirea ghidurilor</h2>
+      <p>O concluzie buna nu este doar "aplica" sau "nu aplica". Poate fi "aplica doar daca se confirma ghidul final", "corecteaza documentele pentru spatiu", "restrange bugetul", "schimba programul", "asteapta o sesiune viitoare" sau "pregateste intai cofinantarea". Aceste raspunsuri sunt mai utile decat un optimism general pentru ca arata ce trebuie facut concret.</p>
+      <p>Ghidurile FABER incearca sa duca cititorul spre acest tip de concluzie. Fiecare pagina foloseste rezumat scurt, tabele, intrebari frecvente, linkuri interne si surse oficiale pentru a face informatia usor de verificat. Cand o informatie nu este finala, textul pastreaza formularea orientativa.</p>
+      <h2>Cum se actualizeaza si cum se pastreaza prudenta</h2>
+      <p>O biblioteca de ghiduri pentru fonduri europene trebuie sa fie utila si cand regulile se schimba. De aceea, paginile nu ar trebui sa depinda de promisiuni comerciale sau de cifre fara sursa. Cand exista o valoare oficiala clara, ea poate fi citata cu sursa. Cand sursa nu este completa, pagina explica doar scenariul de verificare si trimite cititorul catre documentul activ.</p>
+      <p>Actualizarea responsabila inseamna si eliminarea informatiilor care pot induce in eroare. Daca un apel s-a inchis, daca un ghid consultativ a fost inlocuit sau daca un program are conditii noi, concluziile trebuie revizuite. Pentru utilizator, semnul bun este existenta surselor oficiale, a datei de actualizare si a unor avertismente clare acolo unde informatia este orientativa.</p>
+      <h2>Ce ar trebui sa rezulte dupa 15 minute de lucru cu pagina</h2>
+      <p>Dupa ce folosesti pagina Ghiduri, ar trebui sa ai o lista scurta de actiuni: programul pe care il verifici, documentele pe care le ai, documentele lipsa, riscurile evidente si intrebarile pentru consultant. Daca nu poti completa aceste puncte, proiectul este inca prea neclar pentru buget final.</p>
+      <div class="table-wrap">
+        <table class="program-table">
+          <thead><tr><th>Rezultat asteptat</th><th>Exemplu de formulare utila</th><th>Urmatorul pas</th></tr></thead>
+          <tbody>
+            <tr><td>Program probabil</td><td>Analizam DR14, dar comparam cu DR12 pentru ca solicitantul este tanar fermier.</td><td>Verifica pagina programului si calculul SO/SOC.</td></tr>
+            <tr><td>Document lipsa</td><td>Lipseste actul de folosinta pentru spatiul investitiei.</td><td>Obtine documentul inainte de oferta finala.</td></tr>
+            <tr><td>Risc de buget</td><td>TVA si costurile neeligibile nu sunt separate.</td><td>Refa scenariul de cofinantare.</td></tr>
+            <tr><td>Intrebare pentru consultant</td><td>Codul CAEN si investitia propusa se potrivesc cu apelul activ?</td><td>Trimite datele prin pagina de contact.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <h2>Cand pagina trebuie completata cu analiza individuala</h2>
+      <p>Ghidurile generale nu pot decide cazurile cu mai multi solicitanti, ferme cu documente impartite, investitii tehnice, cofinantare sensibila, punctaje la limita sau apeluri in consultare. In aceste cazuri, pagina este doar punctul de pornire. Analiza individuala trebuie sa citeasca documentele si sa compare regulile cu situatia reala.</p>
+      <p>Aceasta limita este intentionata. Un site bun nu ar trebui sa creeze impresia ca orice situatie poate fi rezolvata printr-un text standard. Pentru proiecte cu bani publici, concluzia corecta se construieste pe documente, surse oficiale si verificari repetate.</p>
+      <h2>Cum transformi ghidul intr-o cerere de verificare</h2>
+      <p>Cand scrii catre FABER dupa ce ai citit ghidurile, include programul vizat, de ce crezi ca se potriveste, ce documente ai, ce lipseste si ce investitie vrei sa faci. Un mesaj scurt, dar structurat, permite un raspuns mai concret decat o intrebare generala despre "ce fonduri sunt disponibile".</p>
+      <p>Exemplu de mesaj util: "Sunt IMM cu CAEN autorizat, investitie in software si echipamente, buget estimat, punct de lucru in regiune, dar nu stiu daca TVA si securitatea cibernetica sunt tratate corect". Pentru agricultura, mesajul poate include SO/SOC, suprafete, efective, documente de folosinta si utilajul dorit. Pentru energie, include consumul si amplasamentul.</p>
+      <p>Cu cat mesajul este mai clar, cu atat verificarea poate separa mai repede programele potrivite de cele care trebuie eliminate. Aceasta economie de timp conteaza mai ales cand apelul are termen scurt, documentele trebuie actualizate sau bugetul depinde de oferte noi, anexe revizuite sau conditii publicate recent.</p>
+      <h2>Concluzie pentru biblioteca de ghiduri</h2>
+      <p>Pagina Ghiduri trebuie folosita ca masa de lucru: alegi programul, verifici documentele, notezi riscurile si mergi catre sursa oficiala. Nu este o lista de promisiuni si nu inlocuieste analiza pe cazul concret. Daca ai deja date despre solicitant, investitie si buget, urmatorul pas este verificarea eligibilitatii, nu cautarea unui rezumat mai lung sau a unei valori care nu poate fi confirmata oficial, public.</p>
+      <h2>Linkuri interne utile</h2>
+      <div class="related-links">
+        <a href="/resurse">Resurse descarcabile</a>
+        <a href="/instrumente">Instrumente</a>
+        <a href="/afir">Hub AFIR</a>
+        <a href="/dr12-vs-dr14">DR12 vs DR14</a>
+        <a href="/digitalizare-imm">Digitalizare IMM</a>
+        <a href="/start-up-nation-2026">Start-Up Nation</a>
+        <a href="/metodologie-verificare-eligibilitate">Metodologie</a>
+        <a href="/surse-oficiale-fonduri-europene">Surse oficiale</a>
+        <a href="/contact">Contact</a>
+      </div>
+${officialSourcesHtml}
+      <h2>Intrebari frecvente</h2>
+      ${faqHtml}`;
+}
+
 function renderMainContent(page) {
   if (page.slug === "consultanta-fonduri-europene") {
     return renderConsultantaPillarContent(page);
+  }
+  if (page.slug === "afir") {
+    return renderAfirHubContent(page);
+  }
+  if (page.slug === "ghiduri") {
+    return renderGuidesHubContent(page);
   }
   if (page.type === "trust") {
     const trustHtml = renderTrustContent(page);

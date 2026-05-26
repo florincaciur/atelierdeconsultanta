@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-26T16:20:02.056Z",
+  "generatedAt": "2026-05-26T16:42:06.529Z",
   "root": "C:\\Users\\flori\\Documents\\GitHub\\atelierdeconsultanta",
   "summary": {
     "totalFiles": 164,
@@ -439,7 +439,7 @@
         "visibleFaqForSchema": {
           "status": "pass",
           "required": true,
-          "count": 8,
+          "count": 9,
           "threshold": 8
         },
         "speakableSchemaCoverage": {
@@ -450,13 +450,13 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1215,
-          "threshold": 1100
+          "words": 2052,
+          "threshold": 2000
         },
         "relatedLinks": {
           "status": "pass",
           "required": true,
-          "count": 1
+          "count": 2
         }
       }
     },
@@ -3558,8 +3558,9 @@
         },
         "visibleFaqForSchema": {
           "status": "pass",
-          "required": false,
-          "count": 0
+          "required": true,
+          "count": 6,
+          "threshold": 6
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -3568,8 +3569,8 @@
         },
         "contentDepth": {
           "status": "pass",
-          "required": false,
-          "words": 965,
+          "required": true,
+          "words": 2013,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -3616,8 +3617,9 @@
         },
         "visibleFaqForSchema": {
           "status": "pass",
-          "required": false,
-          "count": 0
+          "required": true,
+          "count": 6,
+          "threshold": 6
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -3626,8 +3628,8 @@
         },
         "contentDepth": {
           "status": "pass",
-          "required": false,
-          "words": 914,
+          "required": true,
+          "words": 2008,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -6438,8 +6440,8 @@
         "visibleFaqForSchema": {
           "status": "pass",
           "required": true,
-          "count": 5,
-          "threshold": 4
+          "count": 8,
+          "threshold": 7
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -6449,13 +6451,13 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1074,
-          "threshold": 900
+          "words": 2007,
+          "threshold": 2000
         },
         "relatedLinks": {
           "status": "pass",
           "required": true,
-          "count": 1
+          "count": 2
         }
       }
     },
