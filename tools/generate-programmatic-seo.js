@@ -9,7 +9,7 @@ const SITE = "https://atelierdeconsultanta.ro";
 const CONFIG = path.join(ROOT, "config", "seo-programmatic-pages.json");
 const SITEMAP = path.join(ROOT, "sitemap.xml");
 const PROGRAMMATIC_MIN_WORDS = 1100;
-const PROGRAMMATIC_MIN_FAQ = 4;
+const PROGRAMMATIC_MIN_FAQ = 5;
 const {
   breadcrumbSchema,
   faqPageSchema,
@@ -90,11 +90,12 @@ function linkTo(href, label) {
   return `<a href="${cleanUrl(href)}">${esc(label)}</a>`;
 }
 
-function schema(title, description, route, faq) {
+function schema(title, description, route, faq, updatedAt = "2026-05-20") {
   const pageNode = webPageSchema({
     url: canonical(route),
     name: title,
-    description
+    description,
+    dateModified: updatedAt
   });
   return jsonLdGraph([
     organizationSchema(),
@@ -113,13 +114,14 @@ function schema(title, description, route, faq) {
       inLanguage: "ro-RO",
       author: { "@id": `${SITE}/#organization` },
       publisher: { "@id": `${SITE}/#organization` },
-      dateModified: "2026-05-20"
+      datePublished: updatedAt,
+      dateModified: updatedAt
     },
     faqPageSchema(faq, { minItems: 2 })
   ]);
 }
 
-function html({ title, description, h1, route, category, summary, body, faq, related }) {
+function html({ title, description, h1, route, category, summary, body, faq, related, updatedAt = "2026-05-20" }) {
   return `<!DOCTYPE html>
 <html lang="ro">
 <head>
@@ -135,7 +137,7 @@ function html({ title, description, h1, route, category, summary, body, faq, rel
   <link rel="canonical" href="${canonical(route)}" />
   <link rel="stylesheet" href="/assets/seo-hub.css" />
   <link rel="stylesheet" href="/assets/see-also.css" />
-  <script type="application/ld+json">${schema(title, description, route, faq)}</script>
+  <script type="application/ld+json">${schema(title, description, route, faq, updatedAt)}</script>
 ${CLARITY_TRACKING_CODE}
 </head>
 <body>
@@ -157,6 +159,7 @@ ${CLARITY_TRACKING_CODE}
   </header>
   <main class="container">
     <article class="panel">
+      <h2>Raspuns scurt</h2>
       <p class="intro">${esc(summary)}</p>
       ${body}
       <h2>Intrebari frecvente</h2>
@@ -241,7 +244,8 @@ function caenPage(item) {
     [`Pot obtine fonduri europene pentru CAEN ${item.code}?`, `Da, daca activitatea ${item.label} este eligibila in apelul activ si solicitantul indeplineste conditiile programului.`],
     [`Ce documente sunt utile pentru CAEN ${item.code}?`, "Certificatul constatator, autorizarea CAEN, documentele firmei, ofertele, bugetul si documentele pentru spatiul investitiei."],
     [`Ce programe pot fi relevante pentru CAEN ${item.code}?`, item.programs.join("; ")],
-    [`Ce trebuie verificat inainte de buget pentru CAEN ${item.code}?`, "Eligibilitatea solicitantului, codul CAEN, cheltuielile permise, cofinantarea si punctajul."]
+    [`Ce trebuie verificat inainte de buget pentru CAEN ${item.code}?`, "Eligibilitatea solicitantului, codul CAEN, cheltuielile permise, cofinantarea si punctajul."],
+    [`Ce investitii pot fi analizate pentru CAEN ${item.code}?`, `Pot fi analizate ${item.investments.join(", ")}, daca sunt permise de ghidul activ si au legatura directa cu activitatea ${item.label}.`]
   ];
   const programRows = item.programs
     .map((program) => `<tr><td>${esc(program)}</td><td>Se confirma in ghidul activ</td><td>Contributie proprie estimata separat de grant</td><td>Eligibilitatea depinde de solicitant, regiune, cod CAEN, buget si documentele investitiei.</td></tr>`)
@@ -326,7 +330,8 @@ function regionalPage(item) {
     [`Ce judete acopera pagina ${item.region}?`, `Pagina acopera orientativ judetele ${counties.join(", ")}.`],
     ["Care este diferenta dintre programe regionale, AFIR si nationale?", "Programele regionale tin de regiunea investitiei si de autoritatea regionala. AFIR acopera proiecte agricole si rurale. Programele nationale sau PNRR au reguli stabilite la nivel national si pot avea criterii diferite de localizare."],
     ["Cand conteaza ADR Nord-Est?", "ADR Nord-Est conteaza pentru apelurile Programului Regional Nord-Est: ghiduri, clarificari, criterii regionale si documentele specifice apelului activ."],
-    ["Pot folosi pagina pentru o decizie finala de depunere?", "Nu. Pagina este un filtru initial; decizia finala se ia dupa ghidul activ, anexele oficiale si documentele solicitantului."]
+    ["Pot folosi pagina pentru o decizie finala de depunere?", "Nu. Pagina este un filtru initial; decizia finala se ia dupa ghidul activ, anexele oficiale si documentele solicitantului."],
+    ["De ce nu sunt indexate paginile locale separate?", "Paginile locale separate raman consolidate pana exista date locale reale, surse regionale sau exemple aprobate care sa justifice continut distinct."]
   ];
   let body = `
       <h2>Judete acoperite</h2>
@@ -395,7 +400,8 @@ function faqPage(item) {
     [item.question, item.answer],
     ["Ce trebuie verificat inainte de aplicare?", "Solicitantul, programul, documentele, bugetul, cheltuielile eligibile si regulile apelului activ."],
     ["Raspunsul garanteaza eligibilitatea?", "Nu. Raspunsul este orientativ si trebuie confirmat prin documentele proiectului si apelul activ."],
-    ["Cum pot primi analiza pe cazul meu?", "Trimite datele proiectului prin pagina de contact pentru o verificare initiala."]
+    ["Cum pot primi analiza pe cazul meu?", "Trimite datele proiectului prin pagina de contact pentru o verificare initiala."],
+    ["Cand trebuie actualizat raspunsul?", "Raspunsul trebuie actualizat cand se publica un ghid nou, apar clarificari oficiale sau documentele solicitantului schimba incadrarea."]
   ];
   let body = `
       <h2>Raspuns scurt</h2>

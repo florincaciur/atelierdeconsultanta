@@ -9,6 +9,17 @@ import { chromium } from "playwright";
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const DIST = path.join(ROOT, "dist");
 const SITE_ORIGIN = "https://atelierdeconsultanta.ro";
+const EXPECTED_CANONICAL_URLS = 94;
+const CONSOLIDATED_LOCAL_ROUTES = [
+  "/fonduri-europene-bacau",
+  "/consultanta-fonduri-europene-bacau",
+  "/fonduri-europene-iasi",
+  "/consultanta-fonduri-europene-iasi",
+  "/fonduri-europene-suceava",
+  "/consultanta-fonduri-europene-suceava",
+  "/fonduri-europene-bucuresti",
+  "/consultanta-fonduri-europene-bucuresti",
+];
 
 function parseRedirects() {
   const raw = fs.readFileSync(path.join(ROOT, "_redirects"), "utf8");
@@ -143,7 +154,10 @@ async function assertCanonicalRoutes(baseUrl) {
     return url.pathname || "/";
   });
 
-  assert.equal(paths.length, 102, "sitemap canonical URL count changed unexpectedly");
+  assert.equal(paths.length, EXPECTED_CANONICAL_URLS, "sitemap canonical URL count changed unexpectedly");
+  for (const routePath of CONSOLIDATED_LOCAL_ROUTES) {
+    assert(!paths.includes(routePath), `${routePath} should stay out of sitemap while consolidated`);
+  }
 
   for (const routePath of paths) {
     const response = await fetchManual(`${baseUrl}${routePath}`);

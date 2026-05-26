@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-26T06:40:02.038Z",
+  "generatedAt": "2026-05-26T13:35:58.801Z",
   "mode": "check",
   "changedFiles": [
     "404.html",
@@ -20,6 +20,10 @@
     "consultant-fonduri-europene-imm.html",
     "consultanta-afir.html",
     "consultanta-afir/index.html",
+    "consultanta-fonduri-europene-bacau/index.html",
+    "consultanta-fonduri-europene-bucuresti/index.html",
+    "consultanta-fonduri-europene-iasi/index.html",
+    "consultanta-fonduri-europene-suceava/index.html",
     "consultanta-fonduri-europene.html",
     "consultanta-fonduri-europene/index.html",
     "consultanta-pnrr-digitalizare.html",
@@ -52,16 +56,20 @@
     "fondul-modernizare-energie-regenerabila-2026.html",
     "fonduri-europene-agricultura.html",
     "fonduri-europene-agricultura/index.html",
+    "fonduri-europene-bacau/index.html",
+    "fonduri-europene-bucuresti/index.html",
     "fonduri-europene-digitalizare.html",
     "fonduri-europene-digitalizare/index.html",
     "fonduri-europene-femei-antreprenor.html",
     "fonduri-europene-femei-antreprenor/index.html",
     "fonduri-europene-herambursabile-2026.html",
     "fonduri-europene-herambursabile-2026/index.html",
+    "fonduri-europene-iasi/index.html",
     "fonduri-europene-imm.html",
     "fonduri-europene-imm/index.html",
     "fonduri-europene-nerambursabile-2026.html",
     "fonduri-europene-nerambursabile-2026/index.html",
+    "fonduri-europene-suceava/index.html",
     "fonduri-europene.html",
     "fonduri-europene/index.html",
     "fonduri-nerambursabile.html",
@@ -106,7 +114,7 @@
     "failedFiles": 0
   },
   "inlineScripts": {
-    "checked": 173,
+    "checked": 202,
     "failures": []
   },
   "results": [
@@ -609,64 +617,64 @@
     {
       "file": "consultanta-fonduri-europene-bacau/index.html",
       "pass": true,
-      "noindex": false,
+      "noindex": true,
       "technicalFile": false,
       "issues": [],
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Consultanta fonduri europene Bacau"
+          "Ești redirecționat către o nouă adresă"
         ],
         "missingAlt": [],
-        "relatedCount": 1,
+        "relatedCount": 0,
         "jsonLdErrors": []
       }
     },
     {
       "file": "consultanta-fonduri-europene-bucuresti/index.html",
       "pass": true,
-      "noindex": false,
+      "noindex": true,
       "technicalFile": false,
       "issues": [],
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Consultanta fonduri europene Bucuresti"
+          "Ești redirecționat către o nouă adresă"
         ],
         "missingAlt": [],
-        "relatedCount": 1,
+        "relatedCount": 0,
         "jsonLdErrors": []
       }
     },
     {
       "file": "consultanta-fonduri-europene-iasi/index.html",
       "pass": true,
-      "noindex": false,
+      "noindex": true,
       "technicalFile": false,
       "issues": [],
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Consultanta fonduri europene Iasi"
+          "Ești redirecționat către o nouă adresă"
         ],
         "missingAlt": [],
-        "relatedCount": 1,
+        "relatedCount": 0,
         "jsonLdErrors": []
       }
     },
     {
       "file": "consultanta-fonduri-europene-suceava/index.html",
       "pass": true,
-      "noindex": false,
+      "noindex": true,
       "technicalFile": false,
       "issues": [],
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Consultanta fonduri europene Suceava"
+          "Ești redirecționat către o nouă adresă"
         ],
         "missingAlt": [],
-        "relatedCount": 1,
+        "relatedCount": 0,
         "jsonLdErrors": []
       }
     },
@@ -1409,32 +1417,32 @@
     {
       "file": "fonduri-europene-bacau/index.html",
       "pass": true,
-      "noindex": false,
+      "noindex": true,
       "technicalFile": false,
       "issues": [],
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Fonduri europene Bacau"
+          "Ești redirecționat către o nouă adresă"
         ],
         "missingAlt": [],
-        "relatedCount": 1,
+        "relatedCount": 0,
         "jsonLdErrors": []
       }
     },
     {
       "file": "fonduri-europene-bucuresti/index.html",
       "pass": true,
-      "noindex": false,
+      "noindex": true,
       "technicalFile": false,
       "issues": [],
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Fonduri europene Bucuresti"
+          "Ești redirecționat către o nouă adresă"
         ],
         "missingAlt": [],
-        "relatedCount": 1,
+        "relatedCount": 0,
         "jsonLdErrors": []
       }
     },
@@ -1601,16 +1609,16 @@
     {
       "file": "fonduri-europene-iasi/index.html",
       "pass": true,
-      "noindex": false,
+      "noindex": true,
       "technicalFile": false,
       "issues": [],
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Fonduri europene Iasi"
+          "Ești redirecționat către o nouă adresă"
         ],
         "missingAlt": [],
-        "relatedCount": 1,
+        "relatedCount": 0,
         "jsonLdErrors": []
       }
     },
@@ -1697,16 +1705,16 @@
     {
       "file": "fonduri-europene-suceava/index.html",
       "pass": true,
-      "noindex": false,
+      "noindex": true,
       "technicalFile": false,
       "issues": [],
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Fonduri europene Suceava"
+          "Ești redirecționat către o nouă adresă"
         ],
         "missingAlt": [],
-        "relatedCount": 1,
+        "relatedCount": 0,
         "jsonLdErrors": []
       }
     },
