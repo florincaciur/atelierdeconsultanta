@@ -1,24 +1,24 @@
 {
-  "generatedAt": "2026-05-26T13:36:14.319Z",
+  "generatedAt": "2026-05-26T16:20:10.932Z",
   "summary": {
-    "filesChecked": 161,
-    "filesWithStructuredData": 91,
+    "filesChecked": 164,
+    "filesWithStructuredData": 95,
     "filesWithIssues": 0,
     "types": {
-      "Organization": 263,
-      "ImageObject": 86,
-      "Country": 68,
-      "ContactPoint": 130,
-      "WebSite": 68,
-      "WebPage": 81,
-      "CreativeWork": 132,
-      "BreadcrumbList": 76,
-      "ListItem": 177,
-      "FAQPage": 74,
-      "Question": 489,
-      "Answer": 489,
-      "Article": 62,
-      "GovernmentService": 14,
+      "Organization": 271,
+      "ImageObject": 87,
+      "Country": 69,
+      "ContactPoint": 132,
+      "WebSite": 69,
+      "WebPage": 85,
+      "CreativeWork": 136,
+      "BreadcrumbList": 77,
+      "ListItem": 180,
+      "FAQPage": 77,
+      "Question": 505,
+      "Answer": 505,
+      "Article": 63,
+      "GovernmentService": 15,
       "BlogPosting": 21,
       "Blog": 1,
       "WebApplication": 2,
@@ -28,9 +28,10 @@
       "AboutPage": 1,
       "Audience": 6,
       "CommunicateAction": 2,
+      "LegalService": 3,
       "CollectionPage": 7,
       "DefinedTermSet": 1,
-      "DefinedTerm": 19,
+      "DefinedTerm": 23,
       "CreativeWorkSeries": 1,
       "ItemList": 1
     }
@@ -124,6 +125,27 @@
         "Question": 8,
         "Answer": 8,
         "Article": 1
+      },
+      "issues": []
+    },
+    {
+      "file": "apeluri-gal/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 5,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 4,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 8,
+        "Answer": 8,
+        "Article": 1,
+        "GovernmentService": 1
       },
       "issues": []
     },
@@ -1385,8 +1407,12 @@
     },
     {
       "file": "gdpr.html",
-      "blocks": 0,
-      "types": {},
+      "blocks": 1,
+      "types": {
+        "Organization": 1,
+        "LegalService": 1,
+        "WebPage": 1
+      },
       "issues": []
     },
     {
@@ -1425,7 +1451,7 @@
         "WebSite": 1,
         "WebPage": 1,
         "DefinedTermSet": 1,
-        "DefinedTerm": 19,
+        "DefinedTerm": 23,
         "BreadcrumbList": 1,
         "ListItem": 2
       },
@@ -1688,6 +1714,18 @@
       "issues": []
     },
     {
+      "file": "pnrr-digitalizare-imm.html",
+      "blocks": 0,
+      "types": {},
+      "issues": []
+    },
+    {
+      "file": "pnrr-digitalizare-imm/index.html",
+      "blocks": 0,
+      "types": {},
+      "issues": []
+    },
+    {
       "file": "pnrr.html",
       "blocks": 0,
       "types": {},
@@ -1715,8 +1753,12 @@
     },
     {
       "file": "politica-de-confidentialitate.html",
-      "blocks": 0,
-      "types": {},
+      "blocks": 1,
+      "types": {
+        "Organization": 1,
+        "LegalService": 1,
+        "WebPage": 1
+      },
       "issues": []
     },
     {
@@ -1986,6 +2028,9 @@
         "WebSite": 1,
         "WebPage": 1,
         "Article": 1,
+        "FAQPage": 1,
+        "Question": 4,
+        "Answer": 4,
         "BreadcrumbList": 1,
         "ListItem": 2
       },
@@ -2027,15 +2072,22 @@
         "WebSite": 1,
         "CollectionPage": 1,
         "ItemList": 1,
-        "ListItem": 9,
+        "ListItem": 10,
+        "FAQPage": 1,
+        "Question": 4,
+        "Answer": 4,
         "BreadcrumbList": 1
       },
       "issues": []
     },
     {
       "file": "termeni-si-conditii.html",
-      "blocks": 0,
-      "types": {},
+      "blocks": 1,
+      "types": {
+        "Organization": 1,
+        "LegalService": 1,
+        "WebPage": 1
+      },
       "issues": []
     },
     {

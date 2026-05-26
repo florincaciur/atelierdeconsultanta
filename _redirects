@@ -42,6 +42,10 @@
 /pnrr/ /pnrr 301
 /pnrr.html /pnrr 301
 /pnrr/index.html /pnrr 301
+/pnrr-digitalizare-imm /digitalizare-imm-pnrr 301
+/pnrr-digitalizare-imm/ /digitalizare-imm-pnrr 301
+/pnrr-digitalizare-imm.html /digitalizare-imm-pnrr 301
+/pnrr-digitalizare-imm/index.html /digitalizare-imm-pnrr 301
 /afir/ /afir 301
 /afir.html /afir 301
 /afir/index.html /afir 301
@@ -304,3 +308,8 @@
 /fonduri-europene-herambursabile-2026/index.html /fonduri-europene-herambursabile-2026 301
 /start-up-nation.html /start-up-nation 301
 /start-up-nation/index.html /start-up-nation 301
+
+# SEO and AI Search canonical routes.
+/apeluri-gal/ /apeluri-gal 301
+/apeluri-gal.html /apeluri-gal 301
+/apeluri-gal/index.html /apeluri-gal 301

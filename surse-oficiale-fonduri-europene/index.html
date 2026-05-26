@@ -33,127 +33,174 @@
   </style>
 
   <script type="application/ld+json">{
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://atelierdeconsultanta.ro/#organization",
-        "name": "FABER - Atelier de Consultanta",
-        "alternateName": ["Atelier de Consultanta", "Atelier de Consultanta FABER"],
-        "url": "https://atelierdeconsultanta.ro",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://atelierdeconsultanta.ro/favicon-192.png"
-        },
-        "image": "https://atelierdeconsultanta.ro/og-image.jpg",
-        "email": "atelier.consultanta@gmail.com",
-        "areaServed": {
-          "@type": "Country",
-          "name": "Romania"
-        }
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://atelierdeconsultanta.ro/#organization",
+      "name": "FABER - Atelier de Consultanta",
+      "alternateName": [
+        "Atelier de Consultanta",
+        "Atelier de Consultanta FABER"
+      ],
+      "url": "https://atelierdeconsultanta.ro",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://atelierdeconsultanta.ro/favicon-192.png"
       },
-      {
-        "@type": "WebSite",
-        "@id": "https://atelierdeconsultanta.ro/#website",
-        "url": "https://atelierdeconsultanta.ro",
-        "name": "FABER - Atelier de Consultanta",
-        "publisher": {
-          "@id": "https://atelierdeconsultanta.ro/#organization"
-        },
-        "inLanguage": "ro-RO"
-      },
-      {
-        "@type": "CollectionPage",
-        "@id": "https://atelierdeconsultanta.ro/surse-oficiale-fonduri-europene#webpage",
-        "url": "https://atelierdeconsultanta.ro/surse-oficiale-fonduri-europene",
-        "name": "Surse oficiale pentru fonduri europene si finantari nerambursabile",
-        "description": "Lista de surse oficiale verificate pentru fonduri europene, AFIR, PNRR, programe regionale, Start-Up Nation si alte finantari nerambursabile.",
-        "isPartOf": {
-          "@id": "https://atelierdeconsultanta.ro/#website"
-        },
-        "inLanguage": "ro-RO",
-        "publisher": {
-          "@id": "https://atelierdeconsultanta.ro/#organization"
-        },
-        "author": {
-          "@type": "Organization",
-          "name": "FABER - Atelier de Consultanta"
-        },
-        "reviewedBy": {
-          "@type": "Organization",
-          "name": "\u00cen curs de actualizare"
-        },
-        "datePublished": "2026-05-20",
-        "dateModified": "2026-05-20"
-      },
-      {
-        "@type": "ItemList",
-        "@id": "https://atelierdeconsultanta.ro/surse-oficiale-fonduri-europene#official-sources",
-        "name": "Surse oficiale fonduri europene",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "AFIR",
-            "url": "https://www.afir.ro/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "MIPE",
-            "url": "https://mfe.gov.ro/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "name": "ADR Nord-Est",
-            "url": "https://adrnordest.ro/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 4,
-            "name": "PNRR",
-            "url": "https://mfe.gov.ro/pnrr/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 5,
-            "name": "Ministerul Economiei",
-            "url": "https://economie.gov.ro/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 6,
-            "name": "Ministerul Energiei",
-            "url": "https://energie.gov.ro/category/fondul-pentru-modernizare/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 7,
-            "name": "Legislatie oficiala",
-            "url": "https://legislatie.just.ro/"
-          }
-        ]
-      },
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Acasa",
-            "item": "https://atelierdeconsultanta.ro/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Surse oficiale fonduri europene",
-            "item": "https://atelierdeconsultanta.ro/surse-oficiale-fonduri-europene"
-          }
-        ]
+      "image": "https://atelierdeconsultanta.ro/og-image.jpg",
+      "email": "atelier.consultanta@gmail.com",
+      "areaServed": {
+        "@type": "Country",
+        "name": "Romania"
       }
-    ]
-  }</script>
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://atelierdeconsultanta.ro/#website",
+      "url": "https://atelierdeconsultanta.ro",
+      "name": "FABER - Atelier de Consultanta",
+      "publisher": {
+        "@id": "https://atelierdeconsultanta.ro/#organization"
+      },
+      "inLanguage": "ro-RO"
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://atelierdeconsultanta.ro/surse-oficiale-fonduri-europene#webpage",
+      "url": "https://atelierdeconsultanta.ro/surse-oficiale-fonduri-europene",
+      "name": "Surse oficiale pentru fonduri europene si finantari nerambursabile",
+      "description": "Lista de surse oficiale verificate pentru fonduri europene, AFIR, PNRR, programe regionale, Start-Up Nation si alte finantari nerambursabile.",
+      "isPartOf": {
+        "@id": "https://atelierdeconsultanta.ro/#website"
+      },
+      "inLanguage": "ro-RO",
+      "publisher": {
+        "@id": "https://atelierdeconsultanta.ro/#organization"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "FABER - Atelier de Consultanta"
+      },
+      "reviewedBy": {
+        "@type": "Organization",
+        "name": "În curs de actualizare"
+      },
+      "datePublished": "2026-05-20",
+      "dateModified": "2026-05-20"
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://atelierdeconsultanta.ro/surse-oficiale-fonduri-europene#official-sources",
+      "name": "Surse oficiale fonduri europene",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "AFIR",
+          "url": "https://www.afir.ro/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "MIPE",
+          "url": "https://mfe.gov.ro/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "ADR Nord-Est",
+          "url": "https://adrnordest.ro/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "PNRR",
+          "url": "https://mfe.gov.ro/pnrr/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Ministerul Economiei",
+          "url": "https://economie.gov.ro/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Ministerul Energiei",
+          "url": "https://energie.gov.ro/category/fondul-pentru-modernizare/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Legislatie oficiala",
+          "url": "https://legislatie.just.ro/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "name": "AFIR LEADER / GAL",
+          "url": "https://www.afir.ro/finantare/leader/"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://atelierdeconsultanta.ro/surse-oficiale-fonduri-europene#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Este suficient un link general catre o institutie?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nu. Linkul general confirma autoritatea, dar pentru o decizie se verifica pagina apelului activ, ghidul solicitantului, anexele, corrigendumurile si raspunsurile oficiale."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ce se intampla daca o sursa oficiala se schimba?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Recomandarea se revalideaza. Notam data verificarii si folosim documentul publicat de autoritatea responsabila la momentul analizei."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Pot folosi comunicate sau postari social media ca sursa finala?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nu ca sursa finala. Ele pot semnala o oportunitate, dar decizia trebuie sustinuta de ghid, procedura, anexe sau acte normative oficiale."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Unde verific apelurile GAL si LEADER?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pentru LEADER pornim de la paginile AFIR si de la documentele GAL-ului relevant. Plafoanele, intensitatea si criteriile se confirma in ghidul local activ."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Acasa",
+          "item": "https://atelierdeconsultanta.ro/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Surse oficiale fonduri europene",
+          "item": "https://atelierdeconsultanta.ro/surse-oficiale-fonduri-europene"
+        }
+      ]
+    }
+  ]
+}</script>
   <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -267,6 +314,14 @@
 
       <h2>Ce nu tratam ca sursa finala</h2>
       <p>Nu tratam ca sursa finala postarile din retele sociale, rezumatele fara link la ghid, promisiunile comerciale, capturile de ecran fara context sau informatiile transmise informal. Ele pot semnala o oportunitate, dar decizia se ia pe documente oficiale.</p>
+
+      <h2 id="faq-surse-oficiale">Intrebari frecvente despre surse</h2>
+      <section class="faq-list" aria-labelledby="faq-surse-oficiale">
+        <section class="faq-item"><h3>Este suficient un link general catre o institutie?</h3><p>Nu. Linkul general confirma autoritatea, dar pentru o decizie se verifica pagina apelului activ, ghidul solicitantului, anexele, corrigendumurile si raspunsurile oficiale.</p></section>
+        <section class="faq-item"><h3>Ce se intampla daca o sursa oficiala se schimba?</h3><p>Recomandarea se revalideaza. Notam data verificarii si folosim documentul publicat de autoritatea responsabila la momentul analizei.</p></section>
+        <section class="faq-item"><h3>Pot folosi comunicate sau postari social media ca sursa finala?</h3><p>Nu ca sursa finala. Ele pot semnala o oportunitate, dar decizia trebuie sustinuta de ghid, procedura, anexe sau acte normative oficiale.</p></section>
+        <section class="faq-item"><h3>Unde verific apelurile GAL si LEADER?</h3><p>Pentru LEADER pornim de la paginile AFIR si de la documentele GAL-ului relevant. Plafoanele, intensitatea si criteriile se confirma in ghidul local activ.</p></section>
+      </section>
 
       <h2>Resurse conexe</h2>
       <div class="related-links">

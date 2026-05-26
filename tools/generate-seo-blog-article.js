@@ -1490,7 +1490,7 @@ ${CLARITY_TRACKING_CODE}
           ${
             guideUrl
               ? `<a class="official-guide-button btn-secondary" href="${esc(guideUrl)}" target="_blank" rel="noopener">Consultă documentul oficial</a>`
-              : `<span class="official-guide-button btn-secondary">Link ghid: de adăugat</span>`
+              : ``
           }
         </div>
         <p>Surse oficiale verificate în etapa de documentare:</p>
@@ -1760,7 +1760,7 @@ ${pass(Boolean(config.dataPublicarii), "Dată publicare prezentă")}
 ${pass(Boolean(config.dataActualizarii), "Dată actualizare prezentă")}
 ${pass(true, "Linkuri interne prezente")}
 ${pass(true, "CTA către /contact")}
-${pass(Boolean(config.linkGhidSolicitant) || research.officialSources.length > 0, "Link ghid solicitantului prezent sau marcat „de adăugat”")}
+${pass(Boolean(guideUrl) || research.officialSources.length > 0, "Ghid oficial afisat doar cand exista URL verificat")}
 ${pass(true, "Fără promisiuni de finanțare garantată")}
 ${pass(true, "Fără sume/date/condiții neverificate")}
 ${pass(htmlOk, "Gramatica verificată")}

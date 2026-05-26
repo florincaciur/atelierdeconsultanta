@@ -110,5 +110,21 @@
     "documentType": "pagina program",
     "url": "https://mfe.gov.ro/",
     "accessedAt": "2026-05-20"
+  },
+  "leader-gal": {
+    "name": "LEADER / GAL - AFIR",
+    "title": "LEADER - Grupuri de Actiune Locala",
+    "institution": "AFIR",
+    "documentType": "pagina program",
+    "url": "https://www.afir.ro/finantare/leader/",
+    "accessedAt": "2026-05-26"
+  },
+  "dr36-leader": {
+    "name": "DR 36 LEADER",
+    "title": "Detalii si Anexe DR 36",
+    "institution": "AFIR",
+    "documentType": "ghid si anexe",
+    "url": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-36/",
+    "accessedAt": "2026-05-26"
   }
 }

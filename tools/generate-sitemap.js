@@ -77,6 +77,7 @@ function priority(url) {
     "/dr14",
     "/start-up-nation-2026",
     "/digitalizare-imm",
+    "/apeluri-gal",
   ];
   const authority = [
     "/despre-faber",

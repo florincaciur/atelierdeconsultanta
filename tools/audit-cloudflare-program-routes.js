@@ -17,6 +17,7 @@ const PROGRAM_ROUTES = [
   "/dr14",
   "/digitalizare-imm",
   "/femeia-antreprenor-2026",
+  "/apeluri-gal",
   "/pro-infra",
   "/start-up-nation-2026",
   "/calculator-soc",

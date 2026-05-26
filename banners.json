@@ -163,5 +163,20 @@
     "order": 11,
     "active": true,
     "officialGuideKey": "fondul-modernizare"
+  },
+  {
+    "id": "slide-apeluri-gal",
+    "tag": "LEADER / GAL",
+    "title": "Apeluri GAL\nFinantari locale",
+    "description": "Orientare prudenta pentru identificarea GAL-ului local, verificarea ghidului, a documentelor si a criteriilor locale.",
+    "amount": "Finantare: conform ghidului GAL activ",
+    "ctaText": "Detalii GAL ->",
+    "ctaLink": "/apeluri-gal",
+    "image": "",
+    "altText": "Banner apeluri GAL LEADER",
+    "icon": "ph-map-pin",
+    "order": 12,
+    "active": true,
+    "officialGuideKey": "dr36-leader"
   }
 ]

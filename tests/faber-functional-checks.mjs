@@ -9,7 +9,7 @@ import { chromium } from "playwright";
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const DIST = path.join(ROOT, "dist");
 const SITE_ORIGIN = "https://atelierdeconsultanta.ro";
-const EXPECTED_CANONICAL_URLS = 94;
+const EXPECTED_CANONICAL_URLS = 95;
 const CONSOLIDATED_LOCAL_ROUTES = [
   "/fonduri-europene-bacau",
   "/consultanta-fonduri-europene-bacau",
@@ -180,6 +180,7 @@ async function assertRedirectsAndFallback(baseUrl) {
     ["/dr14-afir-ferme-mici/", "/dr14-afir-ferme-mici"],
     ["/consultanta-fonduri-europene-imm/", "/consultant-fonduri-europene-imm"],
     ["/consultanta-start-up-nation/", "/consultanta-start-up-nation-2026"],
+    ["/pnrr-digitalizare-imm", "/digitalizare-imm-pnrr"],
     ["/blog/safir-fotovoltaice-ferme-2026.html", "/blog-afir-fotovoltaice-ferme-2026"]
   ];
 

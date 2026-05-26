@@ -149,6 +149,73 @@ function heroAttrs(page) {
   return `class="hero hero--image" style="--hero-image:url('${heroImageFor(page)}')"`;
 }
 
+function heroIconFor(page) {
+  if (page.heroIcon) return page.heroIcon;
+  const text = `${page.slug || ""} ${page.category || ""} ${page.programName || ""} ${page.h1 || ""}`.toLowerCase();
+  if (/dr12|dr14|afir|agricultur|ferme|utilaje/.test(text)) return "ph-duotone ph-plant";
+  if (/digitalizare|pnrr|software|instrumente/.test(text)) return "ph-duotone ph-desktop";
+  if (/energie|fotovoltaic|modernizare|autoconsum/.test(text)) return "ph-duotone ph-sun";
+  if (/start-up|startup/.test(text)) return "ph-duotone ph-rocket-launch";
+  if (/femeia|antreprenor/.test(text)) return "ph-duotone ph-user-circle";
+  if (/infra|productie|microintreprinderi/.test(text)) return "ph-duotone ph-factory";
+  if (/gal|leader|local|nord-est|regional/.test(text)) return "ph-duotone ph-map-pin";
+  if (/contact|consultanta|eligibilitate|verificare/.test(text)) return "ph-duotone ph-magnifying-glass";
+  return "ph-duotone ph-info";
+}
+
+function guideSourceForPage(page) {
+  const keys = [
+    page.officialGuideKey,
+    page.guideSourceKey,
+    page.secondaryCtaSourceKey,
+    ...(Array.isArray(page.sourceKeys) ? page.sourceKeys : [])
+  ].filter(Boolean);
+  const seen = new Set();
+  for (const key of keys) {
+    if (seen.has(key)) continue;
+    seen.add(key);
+    const source = sourcesForKeys([key])[0];
+    if (source && source.isComplete && /^https?:\/\//i.test(source.url)) return source;
+  }
+  return null;
+}
+
+function heroSecondaryCta(page) {
+  if (page.secondaryCtaHref && page.secondaryCtaLabel) {
+    return {
+      href: cleanUrl(page.secondaryCtaHref),
+      label: page.secondaryCtaLabel,
+      external: /^https?:\/\//i.test(page.secondaryCtaHref)
+    };
+  }
+  const guide = guideSourceForPage(page);
+  if (guide) {
+    return {
+      href: guide.url,
+      label: page.guideCtaLabel || "Ghid oficial",
+      external: true
+    };
+  }
+  if (page.slug === "consultanta-fonduri-europene") {
+    return {
+      href: "/metodologie-verificare-eligibilitate",
+      label: "Vezi metodologia",
+      external: false
+    };
+  }
+  return {
+    href: "/contact",
+    label: "Discuta cu un consultant",
+    external: false
+  };
+}
+
+function renderCtaLink(cta, className = "btn btn-secondary") {
+  const href = cta.external ? cta.href : cleanUrl(cta.href);
+  const attrs = cta.external ? ` target="_blank" rel="noopener noreferrer"` : "";
+  return `<a class="${className}" href="${esc(href)}"${attrs}>${esc(cta.label)}</a>`;
+}
+
 function stripTags(html) {
   return html.replace(/<script[\s\S]*?<\/script>/gi, " ")
     .replace(/<style[\s\S]*?<\/style>/gi, " ")
@@ -221,7 +288,8 @@ function labelForHref(href) {
     "/testimoniale": "Testimoniale",
     "/studii-de-caz": "Studii de caz",
     "/studii-de-caz-fonduri-europene": "Studii de caz fonduri europene",
-    "/webinarii": "Webinarii"
+    "/webinarii": "Webinarii",
+    "/apeluri-gal": "Apeluri GAL"
   };
   const clean = cleanUrl(href);
   if (labels[clean]) return labels[clean];
@@ -1100,10 +1168,8 @@ function pageHtml(page, config) {
   const sourcesCss = (page.sourceKeys || []).length ? `\n  <link rel="stylesheet" href="/assets/official-sources.css" />` : "";
   const extraCss = `${relatedCss}${toolCss}${sourcesCss}`;
   const extraJs = page.includeTools ? `\n  <script src="/assets/seo-tools.js" defer></script>` : "";
-  const isConsultantaPillar = page.slug === "consultanta-fonduri-europene";
   const primaryCta = "Solicita verificare eligibilitate";
-  const secondaryCta = isConsultantaPillar ? "Vezi metodologia" : "Discuta cu un consultant";
-  const secondaryHref = isConsultantaPillar ? "/metodologie-verificare-eligibilitate" : "/contact";
+  const secondaryCta = heroSecondaryCta(page);
   const finalCtaTitle = isEditorialProgram(page) ? "Verificare eligibilitate" : "Urmatorul pas";
   const finalCtaText = isEditorialProgram(page)
     ? "Trimite-ne codul CAEN / tipul fermei / investi\u021bia dorit\u0103 pentru verificarea eligibilit\u0103\u021bii."
@@ -1130,6 +1196,8 @@ function pageHtml(page, config) {
   <meta property="og:type" content="website" />
   <meta property="og:image" content="${SITE}/og-image.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preload" as="style" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/duotone/style.css" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/duotone/style.css" /></noscript>
   <link rel="stylesheet" href="/assets/seo-hub.css" />${extraCss}
   <script type="application/ld+json">${schemaGraph(page, config)}</script>${extraJs}
 ${CLARITY_TRACKING_CODE}
@@ -1147,12 +1215,13 @@ ${CLARITY_TRACKING_CODE}
   </nav>
   <div class="breadcrumb"><a href="/">Acasa</a> / ${esc(page.h1)}</div>
   <header ${heroAttrs(page)}>
+    <span class="hero-icon" aria-hidden="true"><i class="${esc(heroIconFor(page))}"></i></span>
     <span class="eyebrow">${esc(page.category)}</span>
     <h1>${esc(page.h1)}</h1>
     <p>${esc(page.description)}</p>
     <div class="hero-actions">
       <a class="btn btn-primary" href="/verificare-eligibilitate-fonduri-europene">${esc(primaryCta)}</a>
-      <a class="btn btn-secondary" href="${secondaryHref}">${esc(secondaryCta)}</a>
+      ${renderCtaLink(secondaryCta)}
     </div>
   </header>
   <main class="container">
@@ -1372,6 +1441,21 @@ function updateBanners() {
       order: 11,
       active: true,
       officialGuideKey: "fondul-modernizare"
+    },
+    {
+      id: "slide-apeluri-gal",
+      tag: "LEADER / GAL",
+      title: "Apeluri GAL\nFinantari locale",
+      description: "Orientare prudenta pentru identificarea GAL-ului local, verificarea ghidului, a documentelor si a criteriilor locale.",
+      amount: "Finantare: conform ghidului GAL activ",
+      ctaText: "Detalii GAL ->",
+      ctaLink: "/apeluri-gal",
+      image: "",
+      altText: "Banner apeluri GAL LEADER",
+      icon: "ph-map-pin",
+      order: 12,
+      active: true,
+      officialGuideKey: "dr36-leader"
     }
   ];
   for (const banner of wanted) {
@@ -1384,7 +1468,7 @@ function updateLlms(pages) {
   if (!fs.existsSync(LLMS_PATH)) return;
   let text = fs.readFileSync(LLMS_PATH, "utf8");
   const block = `\n## Pagini noi pentru vizibilitate AI si cautare vocala\n${pages
-    .filter((page) => ["portofoliu", "testimoniale", "instrumente", "resurse", "webinarii", "investitii-modernizarea-microintreprinderilor-apel-2", "fondul-modernizare-energie-regenerabila-2026"].includes(page.slug))
+    .filter((page) => ["portofoliu", "testimoniale", "instrumente", "resurse", "webinarii", "apeluri-gal", "investitii-modernizarea-microintreprinderilor-apel-2", "fondul-modernizare-energie-regenerabila-2026"].includes(page.slug))
     .map((page) => `- ${page.h1}: ${SITE}/${page.slug}`)
     .join("\n")}\n\n## Structura pentru asistenti AI\n- Paginile importante includ intrebari in limbaj natural, raspunsuri scurte vizibile si schema FAQPage doar cand intrebarile sunt vizibile in pagina.\n- Pentru sume, procente, punctaje si conditii finale, informatia trebuie verificata in apelul activ.\n`;
   if (!text.includes("Pagini noi pentru vizibilitate AI")) {

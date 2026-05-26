@@ -73,6 +73,7 @@ const CANONICAL_ROOT_HTML_ROUTES = new Set([
 const CANONICAL_DIRECTORY_HTML_ROUTES = [
   "contact",
   "despre-faber",
+  "apeluri-gal",
   "consultanta-fonduri-europene",
   "fonduri-europene-nord-est",
   "verificare-eligibilitate-fonduri-europene",

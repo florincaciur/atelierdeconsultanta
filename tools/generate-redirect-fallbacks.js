@@ -46,6 +46,8 @@ const fallbacks = [
   ["greseli-fonduri-europene.html", "/greseli-fonduri-europene"],
   ["intrebari-frecvente.html", "/intrebari-frecvente"],
   ["pnrr.html", "/pnrr"],
+  ["pnrr-digitalizare-imm.html", "/digitalizare-imm-pnrr"],
+  ["pnrr-digitalizare-imm/index.html", "/digitalizare-imm-pnrr"],
   ["por-adr-nord-est.html", "/por-adr-nord-est"],
   ["pro-infra.html", "/pro-infra"],
   ["studii-de-caz.html", "/studii-de-caz"],
@@ -80,6 +82,10 @@ function html(target) {
 ${CLARITY_TRACKING_CODE}
 </head>
 <body>
+  <main style="font-family: Arial, sans-serif; max-width: 720px; margin: 12vh auto; padding: 32px; line-height: 1.6; color: #1a2540;">
+    <h1>Esti redirectionat catre o noua adresa</h1>
+    <p>Pagina veche a fost mutata. Daca redirectionarea nu porneste automat, deschide <a href="${target}">${target}</a>.</p>
+  </main>
   <script>window.location.replace('${target}');</script>
 </body>
 </html>

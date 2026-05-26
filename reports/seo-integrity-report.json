@@ -1,49 +1,49 @@
 {
-  "generatedAt": "2026-05-26T13:36:05.950Z",
+  "generatedAt": "2026-05-26T16:20:02.056Z",
   "root": "C:\\Users\\flori\\Documents\\GitHub\\atelierdeconsultanta",
   "summary": {
-    "totalFiles": 161,
-    "passedFiles": 161,
+    "totalFiles": 164,
+    "passedFiles": 164,
     "failedFiles": 0,
     "checks": {
       "metaDescription": {
-        "pass": 161,
+        "pass": 164,
         "fail": 0
       },
       "canonical": {
-        "pass": 161,
+        "pass": 164,
         "fail": 0
       },
       "imageAltAttributes": {
-        "pass": 161,
+        "pass": 164,
         "fail": 0
       },
       "singleH1": {
-        "pass": 161,
+        "pass": 164,
         "fail": 0
       },
       "relatedLinks": {
-        "pass": 161,
+        "pass": 164,
         "fail": 0
       },
       "utf8Charset": {
-        "pass": 158,
+        "pass": 161,
         "fail": 0
       },
       "cleanCanonical": {
-        "pass": 158,
+        "pass": 161,
         "fail": 0
       },
       "visibleFaqForSchema": {
-        "pass": 158,
+        "pass": 161,
         "fail": 0
       },
       "speakableSchemaCoverage": {
-        "pass": 158,
+        "pass": 161,
         "fail": 0
       },
       "contentDepth": {
-        "pass": 158,
+        "pass": 161,
         "fail": 0
       }
     }
@@ -189,7 +189,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1108,
+          "words": 1106,
           "threshold": 900
         },
         "relatedLinks": {
@@ -335,7 +335,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1361,
+          "words": 1359,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -450,13 +450,73 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1217,
+          "words": 1215,
           "threshold": 1100
         },
         "relatedLinks": {
           "status": "pass",
           "required": true,
           "count": 1
+        }
+      }
+    },
+    {
+      "file": "apeluri-gal/index.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "utf8Charset": {
+          "status": "pass",
+          "hasCharset": true,
+          "hasHttpEquiv": false
+        },
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "cleanCanonical": {
+          "status": "pass",
+          "href": "https://atelierdeconsultanta.ro/apeluri-gal"
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Apeluri GAL - finantari locale prin LEADER"
+          ]
+        },
+        "visibleFaqForSchema": {
+          "status": "pass",
+          "required": true,
+          "count": 8,
+          "threshold": 8
+        },
+        "speakableSchemaCoverage": {
+          "status": "pass",
+          "required": false,
+          "count": 0
+        },
+        "contentDepth": {
+          "status": "pass",
+          "required": true,
+          "words": 1759,
+          "threshold": 1100
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": false,
+          "count": 1,
+          "note": "not a hub/blog page"
         }
       }
     },
@@ -565,7 +625,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1399,
+          "words": 1397,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -664,7 +724,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "AFIR Fotovoltaice Ferme 2026 – Ghid Complet:Până la 500.000 Euro Nerambursabil"
+            "AFIR Fotovoltaice Ferme 2026 - ghid prudent pentru verificare si pregatire"
           ]
         },
         "visibleFaqForSchema": {
@@ -681,7 +741,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 1496,
+          "words": 1009,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -796,7 +856,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 1357,
+          "words": 1354,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -1029,7 +1089,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1388,
+          "words": 1386,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -1260,7 +1320,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1408,
+          "words": 1406,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -1493,7 +1553,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1643,
+          "words": 1641,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -1666,7 +1726,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1535,
+          "words": 1533,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -1781,7 +1841,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1491,
+          "words": 1489,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -2235,7 +2295,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1468,
+          "words": 1466,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -2294,7 +2354,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1580,
+          "words": 1578,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -2325,7 +2385,7 @@
         },
         "cleanCanonical": {
           "status": "pass",
-          "href": "https://atelierdeconsultanta.ro/consultanta-start-up-nation"
+          "href": "https://atelierdeconsultanta.ro/consultanta-start-up-nation-2026"
         },
         "imageAltAttributes": {
           "status": "pass",
@@ -2637,7 +2697,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1410,
+          "words": 1408,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -2871,7 +2931,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 1377,
+          "words": 1170,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -3045,7 +3105,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1474,
+          "words": 1472,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -3160,7 +3220,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1622,
+          "words": 1620,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -3451,7 +3511,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1354,
+          "words": 1352,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -3682,7 +3742,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1795,
+          "words": 1793,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -3798,7 +3858,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1386,
+          "words": 1384,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -3972,7 +4032,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1649,
+          "words": 1647,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -4088,7 +4148,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1393,
+          "words": 1391,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -4203,7 +4263,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1543,
+          "words": 1541,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -4318,7 +4378,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1507,
+          "words": 1505,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -4433,7 +4493,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1406,
+          "words": 1404,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -4548,7 +4608,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1565,
+          "words": 1563,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -4664,7 +4724,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1286,
+          "words": 1284,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -5127,7 +5187,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1229,
+          "words": 1227,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -5242,7 +5302,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1484,
+          "words": 1482,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -5273,7 +5333,7 @@
         },
         "cleanCanonical": {
           "status": "pass",
-          "href": "https://atelierdeconsultanta.ro/fonduri-europene-herambursabile-2026"
+          "href": "https://atelierdeconsultanta.ro/fonduri-europene-nerambursabile-2026"
         },
         "imageAltAttributes": {
           "status": "pass",
@@ -5525,7 +5585,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1375,
+          "words": 1373,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -5640,7 +5700,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1691,
+          "words": 1689,
           "threshold": 1500
         },
         "relatedLinks": {
@@ -5870,7 +5930,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1346,
+          "words": 1344,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -5901,7 +5961,7 @@
         },
         "cleanCanonical": {
           "status": "pass",
-          "href": "https://atelierdeconsultanta.ro/fonduri-nerambursabile"
+          "href": "https://atelierdeconsultanta.ro/fonduri-europene-nerambursabile-2026"
         },
         "imageAltAttributes": {
           "status": "pass",
@@ -5985,7 +6045,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1191,
+          "words": 1189,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -6100,7 +6160,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1503,
+          "words": 1501,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -6215,7 +6275,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1506,
+          "words": 1504,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -6389,7 +6449,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1076,
+          "words": 1074,
           "threshold": 900
         },
         "relatedLinks": {
@@ -6447,7 +6507,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 507,
+          "words": 692,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -6593,7 +6653,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1474,
+          "words": 1472,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -6708,7 +6768,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1397,
+          "words": 1395,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -6826,7 +6886,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 1669,
+          "words": 1700,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -6885,7 +6945,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1160,
+          "words": 1158,
           "threshold": 900
         },
         "relatedLinks": {
@@ -7001,7 +7061,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1397,
+          "words": 1395,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -7294,7 +7354,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1555,
+          "words": 1553,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -7354,7 +7414,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 836,
+          "words": 896,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -7421,6 +7481,118 @@
           "status": "pass",
           "required": true,
           "count": 3
+        }
+      }
+    },
+    {
+      "file": "pnrr-digitalizare-imm.html",
+      "noindex": true,
+      "pass": true,
+      "checks": {
+        "utf8Charset": {
+          "status": "pass",
+          "hasCharset": true,
+          "hasHttpEquiv": false
+        },
+        "metaDescription": {
+          "status": "pass",
+          "count": 0,
+          "note": "noindex page: meta description is optional"
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "cleanCanonical": {
+          "status": "pass",
+          "href": "https://atelierdeconsultanta.ro/digitalizare-imm-pnrr"
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "note": "noindex page: h1 not required"
+        },
+        "visibleFaqForSchema": {
+          "status": "pass",
+          "required": false,
+          "count": 0
+        },
+        "speakableSchemaCoverage": {
+          "status": "pass",
+          "required": false,
+          "count": 0
+        },
+        "contentDepth": {
+          "status": "pass",
+          "required": false,
+          "words": 0
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": false,
+          "count": 0,
+          "note": "not a hub/blog page"
+        }
+      }
+    },
+    {
+      "file": "pnrr-digitalizare-imm/index.html",
+      "noindex": true,
+      "pass": true,
+      "checks": {
+        "utf8Charset": {
+          "status": "pass",
+          "hasCharset": true,
+          "hasHttpEquiv": false
+        },
+        "metaDescription": {
+          "status": "pass",
+          "count": 0,
+          "note": "noindex page: meta description is optional"
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "cleanCanonical": {
+          "status": "pass",
+          "href": "https://atelierdeconsultanta.ro/digitalizare-imm-pnrr"
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "note": "noindex page: h1 not required"
+        },
+        "visibleFaqForSchema": {
+          "status": "pass",
+          "required": false,
+          "count": 0
+        },
+        "speakableSchemaCoverage": {
+          "status": "pass",
+          "required": false,
+          "count": 0
+        },
+        "contentDepth": {
+          "status": "pass",
+          "required": false,
+          "words": 0
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": false,
+          "count": 0,
+          "note": "not a hub/blog page"
         }
       }
     },
@@ -7529,7 +7701,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1183,
+          "words": 1181,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -7703,7 +7875,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1519,
+          "words": 1517,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -7763,7 +7935,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 917,
+          "words": 915,
           "threshold": 900
         },
         "relatedLinks": {
@@ -7879,7 +8051,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1708,
+          "words": 1706,
           "threshold": 1500
         },
         "relatedLinks": {
@@ -7939,7 +8111,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1107,
+          "words": 1105,
           "threshold": 900
         },
         "relatedLinks": {
@@ -8055,7 +8227,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1561,
+          "words": 1559,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -8170,7 +8342,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1555,
+          "words": 1553,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -8341,7 +8513,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1568,
+          "words": 1566,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -8456,7 +8628,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1567,
+          "words": 1565,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -8571,7 +8743,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1404,
+          "words": 1402,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -8602,7 +8774,7 @@
         },
         "cleanCanonical": {
           "status": "pass",
-          "href": "https://atelierdeconsultanta.ro/start-up-nation"
+          "href": "https://atelierdeconsultanta.ro/start-up-nation-2026"
         },
         "imageAltAttributes": {
           "status": "pass",
@@ -8787,8 +8959,9 @@
         },
         "visibleFaqForSchema": {
           "status": "pass",
-          "required": false,
-          "count": 0
+          "required": true,
+          "count": 5,
+          "threshold": 4
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -8798,7 +8971,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1437,
+          "words": 1564,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -8913,7 +9086,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 922,
+          "words": 920,
           "threshold": 900
         },
         "relatedLinks": {
@@ -8961,7 +9134,8 @@
         "visibleFaqForSchema": {
           "status": "pass",
           "required": false,
-          "count": 0
+          "count": 5,
+          "threshold": 0
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -8971,7 +9145,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 527,
+          "words": 645,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -9145,7 +9319,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 939,
+          "words": 937,
           "threshold": 900
         },
         "relatedLinks": {
@@ -9205,7 +9379,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1292,
+          "words": 1290,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -9264,7 +9438,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1061,
+          "words": 1059,
           "threshold": 900
         },
         "relatedLinks": {

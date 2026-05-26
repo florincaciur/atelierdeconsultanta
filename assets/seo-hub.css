@@ -89,6 +89,35 @@ a { color: inherit; }
   place-items: center;
 }
 .hero--image > * { position: relative; z-index: 1; }
+.hero-icon {
+  width: 62px;
+  height: 62px;
+  margin: 0 auto 16px;
+  border: 1px solid rgba(255,255,255,.24);
+  border-radius: 18px;
+  background: rgba(255,255,255,.1);
+  color: var(--white);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+.hero-icon [class*="ph-"] { line-height: 1; }
+[class*="ph-"]::before {
+  display: inline-block;
+  font-style: normal;
+  font-weight: 900;
+}
+.ph-info::before { content: "i"; }
+.ph-plant::before { content: "*"; }
+.ph-desktop::before { content: "[]"; }
+.ph-sun::before { content: "o"; }
+.ph-rocket-launch::before { content: "^"; }
+.ph-user-circle::before { content: "@"; }
+.ph-factory::before { content: "#"; }
+.ph-map-pin::before { content: "+"; }
+.ph-magnifying-glass::before { content: "?"; }
+.ph-file-text::before { content: "="; }
 .eyebrow {
   display: inline-block;
   background: var(--orange);

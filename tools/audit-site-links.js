@@ -17,6 +17,7 @@ const PROGRAM_ROUTES = [
   "autoconsum-public-fotovoltaice-institutii-publice",
   "digitalizare-imm",
   "femeia-antreprenor-2026",
+  "apeluri-gal",
   "fondul-modernizare-energie-regenerabila-2026",
   "pro-infra",
   "start-up-nation-2026",

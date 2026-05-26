@@ -102,6 +102,37 @@
     .step-content h4 { font-size: 0.95rem; font-weight: 700; color: var(--text-main); margin-bottom: 4px; }
     .step-content p { font-size: 0.875rem; color: var(--text-soft); margin: 0; }
   </style>
+  <script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://atelierdeconsultanta.ro/#organization",
+        "name": "FABER - Atelier de Consultanta",
+        "url": "https://atelierdeconsultanta.ro",
+        "email": "atelier.consultanta@gmail.com"
+      },
+      {
+        "@type": "LegalService",
+        "@id": "https://atelierdeconsultanta.ro/gdpr#legal-service",
+        "name": "Informare juridica FABER",
+        "provider": {"@id": "https://atelierdeconsultanta.ro/#organization"},
+        "areaServed": "RO",
+        "serviceType": "Informare privind termeni, confidentialitate si protectia datelor"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://atelierdeconsultanta.ro/gdpr#webpage",
+        "url": "https://atelierdeconsultanta.ro/gdpr",
+        "name": "Politica GDPR",
+        "description": "Drepturile privind datele personale si modul in care FABER raspunde solicitarilor GDPR.",
+        "inLanguage": "ro-RO",
+        "dateModified": "2026-05-26",
+        "publisher": {"@id": "https://atelierdeconsultanta.ro/#organization"},
+        "about": {"@id": "https://atelierdeconsultanta.ro/gdpr#legal-service"}
+      }
+    ]
+  }</script>
   <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -115,7 +146,7 @@
   <nav class="topbar" role="navigation">
     <!-- ✦ Logo SVG FABER — înlocuiește textul simplu cu marca vizuală completă ✦ -->
       <a href="/" class="topbar-logo" aria-label="FABER – Atelier de Consultanță, acasă">
-      <svg xmlns="http:/www.w3.org/2000/svg" viewBox="0 0 240 44" width="240" height="44" aria-hidden="true">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 44" width="240" height="44" aria-hidden="true">
         <text x="0" y="32" font-family="Georgia,'Times New Roman',serif" font-size="28" font-weight="700" fill="#e8642a" letter-spacing="3">FABER</text>
         <path d="M118,22 L125,13 L132,22 L125,31 Z" fill="white" opacity="0.95"></path>
         <text x="138" y="18" font-family="'Inter','Helvetica Neue',sans-serif" font-size="10" font-weight="600" fill="white" letter-spacing="2">ATELIER de</text>

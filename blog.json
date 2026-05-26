@@ -1886,6 +1886,96 @@
           "answer": "Cofinantarea si cheltuielile neeligibile trebuie estimate separat de grant. Include rezerve pentru TVA, diferente de pret, costuri neacoperite si intarzieri in rambursare."
         }
       ]
+    },
+    {
+      "id": "apeluri-gal",
+      "title": "Apeluri GAL - finantari locale prin LEADER",
+      "slug": "apeluri-gal",
+      "metaTitle": "Apeluri GAL si LEADER: eligibilitate, documente si pregatire prudenta",
+      "metaDescription": "Ghid prudent pentru apeluri GAL si LEADER: cum identifici GAL-ul local, ce verifici in strategia locala, ce documente pregatesti si ce riscuri controlezi.",
+      "excerpt": "Apelurile GAL trebuie verificate local, prin strategia GAL-ului care acopera localitatea proiectului si prin documentele AFIR pentru interventia DR 36 LEADER. Pagina explica pasii de orientare: identificarea GAL-ului, citirea ghidului local, verificarea solicitantului, a investitiei, a documentelor si a calendarului. Nu promite plafoane, punctaj sau aprobare, deoarece fiecare GAL poate avea criterii, masuri si termene proprii.",
+      "content": "<p>Pagina statica publicata la /apeluri-gal.</p>",
+      "status": "published",
+      "published": true,
+      "primaryKeyword": "Apeluri GAL / LEADER",
+      "secondaryKeywords": [
+        "LEADER / GAL",
+        "fonduri europene",
+        "eligibilitate"
+      ],
+      "bannerImage": "",
+      "bannerAlt": "",
+      "author": "FABER - Atelier de Consultanta",
+      "officialSources": [
+        {
+          "url": "https://www.afir.ro/finantare/leader/",
+          "title": "LEADER - Grupuri de Actiune Locala",
+          "institution": "AFIR",
+          "documentType": "pagina program",
+          "accessedAt": "2026-05-26",
+          "note": ""
+        },
+        {
+          "url": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-36/",
+          "title": "Detalii si Anexe DR 36",
+          "institution": "AFIR",
+          "documentType": "ghid si anexe",
+          "accessedAt": "2026-05-26",
+          "note": ""
+        }
+      ],
+      "editorialStatus": "in_curs_de_verificare",
+      "createdAt": "2026-05-26",
+      "updatedAt": "2026-05-26",
+      "publishedAt": "2026-05-26",
+      "date": "2026-05-26",
+      "dateFormatted": "19 mai 2026",
+      "category": "LEADER / GAL",
+      "readTime": 12,
+      "readingTime": 12,
+      "icon": "",
+      "canonicalUrl": "https://atelierdeconsultanta.ro/apeluri-gal",
+      "internalLinks": [
+        "/fonduri-europene",
+        "/fonduri-europene-nord-est",
+        "/consultanta-afir",
+        "/verificare-eligibilitate-fonduri-europene",
+        "/contact"
+      ],
+      "faq": [
+        {
+          "question": "Cum gasesc GAL-ul pentru localitatea mea?",
+          "answer": "Verifica lista si platformele AFIR/LEADER, apoi confirma pe site-ul GAL-ului daca localitatea proiectului este inclusa in teritoriu."
+        },
+        {
+          "question": "Se aplica aceleasi reguli in toate GAL-urile?",
+          "answer": "Nu. Fiecare GAL lucreaza cu o strategie locala si cu ghiduri specifice. De aceea, conditiile finale se citesc in apelul local activ."
+        },
+        {
+          "question": "Pot folosi pagina ca ghid final de eligibilitate?",
+          "answer": "Nu. Pagina este orientativa. Eligibilitatea finala se confirma in ghidul GAL si in documentele AFIR aplicabile apelului."
+        },
+        {
+          "question": "Ce trimit pentru o verificare initiala?",
+          "answer": "Trimite localitatea, solicitantul, activitatea, codul CAEN daca exista, investitia dorita, bugetul estimat si documentele disponibile."
+        },
+        {
+          "question": "Cum verific daca Apeluri GAL / LEADER este potrivit pentru proiectul meu?",
+          "answer": "Porneste de la solicitant, cod CAEN, localitate, investitie, buget si documentele disponibile. Daca una dintre aceste piese nu se potriveste cu apelul activ, proiectul trebuie ajustat inainte de depunere."
+        },
+        {
+          "question": "Cand nu merita sa aplic pentru Apeluri GAL / LEADER?",
+          "answer": "Nu merita sa aplici cand nu poti dovedi eligibilitatea, cand cheltuielile principale nu sunt permise, cand cofinantarea nu este acoperita sau cand calendarul nu permite documente complete si verificabile."
+        },
+        {
+          "question": "Ce documente trebuie pregatite pentru Apeluri GAL / LEADER?",
+          "answer": "De regula sunt necesare documente de firma sau solicitant, documente pentru activitate si locatie, date financiare, oferte, descrierea investitiei si informatii despre cofinantare."
+        },
+        {
+          "question": "Cum se verifica un cod CAEN pentru Apeluri GAL / LEADER?",
+          "answer": "Codul CAEN se verifica prin certificatul constatator, activitatea reala, autorizarea necesara, lista de coduri eligibile a apelului si legatura directa dintre investitie si activitatea finantata."
+        }
+      ]
     }
   ]
 }

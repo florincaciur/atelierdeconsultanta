@@ -1,6 +1,6 @@
 {
   "site": "https://atelierdeconsultanta.ro",
-  "updatedAt": "2026-05-21",
+  "updatedAt": "2026-05-26",
   "defaults": {
     "author": "FABER - Atelier de Consultanta",
     "contactUrl": "/contact",
@@ -267,7 +267,10 @@
         "investmentObjective": "Achizitie utilaje agricole si solutie minima de monitorizare a lucrarilor",
         "challenges": "Corelarea utilajelor cu suprafata lucrata, confirmarea documentelor APIA si separarea costurilor neeligibile",
         "checked": "Forma solicitantului, calcul SO, documente de folosinta, oferte, cofinantare si riscul de dublare cu alte programe"
-      }
+      },
+      "heroIcon": "ph-duotone ph-plant",
+      "officialGuideKey": "dr12",
+      "guideCtaLabel": "Ghid oficial"
     },
     {
       "slug": "dr14",
@@ -365,7 +368,10 @@
       ],
       "sourceKeys": [
         "dr14"
-      ]
+      ],
+      "heroIcon": "ph-duotone ph-plant",
+      "officialGuideKey": "dr14",
+      "guideCtaLabel": "Ghid oficial"
     },
     {
       "slug": "start-up-nation-2026",
@@ -634,7 +640,10 @@
       "editorialNotes": [
         "Pentru Start-Up Nation, verificarea trebuie sa separe ideea de afacere de lista de cheltuieli dorite. Un laptop, un website sau o campanie de promovare nu sunt suficiente ca argument daca planul nu explica serviciul sau produsul, clientii, fluxul de lucru si modul in care activul va genera venituri. Inainte de depunere, bugetul trebuie citit impreuna cu codul CAEN, spatiul, autorizarea si obligatiile asumate, astfel incat fiecare cost sa poata fi aparat la clarificari.",
         "Daca procedura finala schimba criteriile, documentele sau calendarul, pagina trebuie actualizata inainte de a fi folosita ca baza pentru decizie. Pana atunci, elementele marcate cu sursa oficiala a apelului activ raman puncte de verificare manuala."
-      ]
+      ],
+      "heroIcon": "ph-duotone ph-rocket-launch",
+      "officialGuideKey": "startup",
+      "guideCtaLabel": "Ghid oficial"
     },
     {
       "slug": "femeia-antreprenor-2026",
@@ -734,7 +743,10 @@
       ],
       "sourceKeys": [
         "femeia"
-      ]
+      ],
+      "heroIcon": "ph-duotone ph-user-circle",
+      "officialGuideKey": "femeia",
+      "guideCtaLabel": "Ghid oficial"
     },
     {
       "slug": "digitalizare-imm",
@@ -836,7 +848,10 @@
       "sourceKeys": [
         "digitalizare",
         "digitalizare-pnrr"
-      ]
+      ],
+      "heroIcon": "ph-duotone ph-desktop",
+      "officialGuideKey": "digitalizare",
+      "guideCtaLabel": "Ghid oficial"
     },
     {
       "slug": "por-adr-nord-est",
@@ -937,7 +952,10 @@
       ],
       "sourceKeys": [
         "por-ne"
-      ]
+      ],
+      "heroIcon": "ph-duotone ph-map-pin",
+      "officialGuideKey": "por-ne",
+      "guideCtaLabel": "Ghid oficial"
     },
     {
       "slug": "investitii-modernizarea-microintreprinderilor-apel-2",
@@ -1039,7 +1057,10 @@
       ],
       "sourceKeys": [
         "por-ne"
-      ]
+      ],
+      "heroIcon": "ph-duotone ph-buildings",
+      "officialGuideKey": "por-ne",
+      "guideCtaLabel": "Ghid oficial"
     },
     {
       "slug": "fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum",
@@ -1140,7 +1161,10 @@
       ],
       "sourceKeys": [
         "fondul-modernizare"
-      ]
+      ],
+      "heroIcon": "ph-duotone ph-sun",
+      "officialGuideKey": "fondul-modernizare",
+      "guideCtaLabel": "Ghid oficial"
     },
     {
       "slug": "fondul-modernizare-energie-regenerabila-2026",
@@ -1241,7 +1265,10 @@
       ],
       "sourceKeys": [
         "fondul-modernizare"
-      ]
+      ],
+      "heroIcon": "ph-duotone ph-sun",
+      "officialGuideKey": "fondul-modernizare",
+      "guideCtaLabel": "Ghid oficial"
     },
     {
       "slug": "afir-autoconsum-agroalimentar",
@@ -1342,7 +1369,10 @@
       ],
       "sourceKeys": [
         "afir-autoconsum"
-      ]
+      ],
+      "heroIcon": "ph-duotone ph-sun",
+      "officialGuideKey": "afir-autoconsum",
+      "guideCtaLabel": "Ghid oficial"
     },
     {
       "slug": "autoconsum-public-fotovoltaice-institutii-publice",
@@ -1443,7 +1473,10 @@
       ],
       "sourceKeys": [
         "autoconsum-publici"
-      ]
+      ],
+      "heroIcon": "ph-duotone ph-sun",
+      "officialGuideKey": "autoconsum-publici",
+      "guideCtaLabel": "Ghid oficial"
     },
     {
       "slug": "fonduri-europene",
@@ -1543,7 +1576,8 @@
       ],
       "sourceKeys": [
         "fonduri-europene"
-      ]
+      ],
+      "heroIcon": "ph-duotone ph-info"
     },
     {
       "slug": "fonduri-europene-imm",
@@ -1642,7 +1676,8 @@
       ],
       "sourceKeys": [
         "fonduri-europene"
-      ]
+      ],
+      "heroIcon": "ph-duotone ph-info"
     },
     {
       "slug": "fonduri-europene-agricultura",
@@ -1744,7 +1779,9 @@
       "sourceKeys": [
         "dr12",
         "dr14"
-      ]
+      ],
+      "heroIcon": "ph-duotone ph-plant",
+      "officialGuideKey": "dr12"
     },
     {
       "slug": "fonduri-europene-digitalizare",
@@ -1846,7 +1883,8 @@
       ],
       "sourceKeys": [
         "digitalizare"
-      ]
+      ],
+      "heroIcon": "ph-duotone ph-desktop"
     },
     {
       "slug": "fonduri-nerambursabile",
@@ -1946,7 +1984,8 @@
       ],
       "sourceKeys": [
         "fonduri-europene"
-      ]
+      ],
+      "heroIcon": "ph-duotone ph-info"
     },
     {
       "slug": "pnrr",
@@ -2044,7 +2083,8 @@
       ],
       "sourceKeys": [
         "digitalizare-pnrr"
-      ]
+      ],
+      "heroIcon": "ph-duotone ph-desktop"
     },
     {
       "slug": "afir",
@@ -2144,7 +2184,8 @@
       "sourceKeys": [
         "dr12",
         "dr14"
-      ]
+      ],
+      "heroIcon": "ph-duotone ph-plant"
     },
     {
       "slug": "ghiduri",
@@ -2236,7 +2277,8 @@
       ],
       "sourceKeys": [
         "fonduri-europene"
-      ]
+      ],
+      "heroIcon": "ph-duotone ph-file-text"
     },
     {
       "slug": "studii-de-caz",
@@ -2326,7 +2368,8 @@
       ],
       "sourceKeys": [
         "fonduri-europene"
-      ]
+      ],
+      "heroIcon": "ph-duotone ph-seal-check"
     },
     {
       "slug": "verificare-eligibilitate-fonduri-europene",
@@ -2420,7 +2463,8 @@
       ],
       "sourceKeys": [
         "fonduri-europene"
-      ]
+      ],
+      "heroIcon": "ph-duotone ph-magnifying-glass"
     },
     {
       "slug": "acte-necesare-fonduri-europene-nerambursabile",
@@ -2510,7 +2554,8 @@
       ],
       "sourceKeys": [
         "fonduri-europene"
-      ]
+      ],
+      "heroIcon": "ph-duotone ph-info"
     },
     {
       "slug": "portofoliu",
@@ -2598,7 +2643,8 @@
       ],
       "sourceKeys": [
         "fonduri-europene"
-      ]
+      ],
+      "heroIcon": "ph-duotone ph-seal-check"
     },
     {
       "slug": "testimoniale",
@@ -2691,7 +2737,8 @@
       ],
       "sourceKeys": [
         "fonduri-europene"
-      ]
+      ],
+      "heroIcon": "ph-duotone ph-seal-check"
     },
     {
       "slug": "instrumente",
@@ -2781,7 +2828,8 @@
       "sourceKeys": [
         "fonduri-europene"
       ],
-      "includeTools": true
+      "includeTools": true,
+      "heroIcon": "ph-duotone ph-chart-line-up"
     },
     {
       "slug": "resurse",
@@ -2873,7 +2921,8 @@
       "sourceKeys": [
         "fonduri-europene"
       ],
-      "includeDownloads": true
+      "includeDownloads": true,
+      "heroIcon": "ph-duotone ph-file-text"
     },
     {
       "slug": "webinarii",
@@ -2959,7 +3008,8 @@
       ],
       "sourceKeys": [
         "fonduri-europene"
-      ]
+      ],
+      "heroIcon": "ph-duotone ph-info"
     },
     {
       "funding": "finantarea, contributia proprie, pragurile si termenele se confirma in ghidul apelului activ; pagina evita valori fixe cand nu exista apel final publicat sau documente verificate.",
@@ -3103,7 +3153,8 @@
         "startup",
         "digitalizare",
         "por-ne-apel-2"
-      ]
+      ],
+      "heroIcon": "ph-duotone ph-magnifying-glass"
     },
     {
       "funding": "finantarea, contributia proprie, pragurile si termenele se confirma in ghidul apelului activ; pagina evita valori fixe cand nu exista apel final publicat sau documente verificate.",
@@ -3203,7 +3254,8 @@
         "/dr12-afir",
         "/pro-infra",
         "/contact"
-      ]
+      ],
+      "heroIcon": "ph-duotone ph-info"
     },
     {
       "funding": "finantarea, contributia proprie, pragurile si termenele se confirma in ghidul apelului activ; pagina evita valori fixe cand nu exista apel final publicat sau documente verificate.",
@@ -3302,7 +3354,10 @@
         "/finantari-panouri-fotovoltaice",
         "/fonduri-europene-imm",
         "/contact"
-      ]
+      ],
+      "heroIcon": "ph-duotone ph-factory",
+      "officialGuideKey": "pro-infra",
+      "guideCtaLabel": "Ghid oficial"
     },
     {
       "funding": "finantarea, contributia proprie, pragurile si termenele se confirma in ghidul apelului activ; pagina evita valori fixe cand nu exista apel final publicat sau documente verificate.",
@@ -3398,7 +3453,8 @@
         "/consultanta-fonduri-europene",
         "/cat-costa-consultanta-fonduri-europene",
         "/contact"
-      ]
+      ],
+      "heroIcon": "ph-duotone ph-info"
     },
     {
       "funding": "finantarea, contributia proprie, pragurile si termenele se confirma in ghidul apelului activ; pagina evita valori fixe cand nu exista apel final publicat sau documente verificate.",
@@ -3495,7 +3551,8 @@
         "/investitii-modernizarea-microintreprinderilor-apel-2",
         "/consultanta-fonduri-europene",
         "/contact"
-      ]
+      ],
+      "heroIcon": "ph-duotone ph-info"
     },
     {
       "funding": "finantarea, contributia proprie, pragurile si termenele se confirma in ghidul apelului activ; pagina evita valori fixe cand nu exista apel final publicat sau documente verificate.",
@@ -3591,7 +3648,8 @@
         "/cod-caen-start-up-nation-2026",
         "/start-up-nation-2026-cheltuieli-eligibile",
         "/consultanta-start-up-nation-2026"
-      ]
+      ],
+      "heroIcon": "ph-duotone ph-info"
     },
     {
       "funding": "finantarea, contributia proprie, pragurile si termenele se confirma in ghidul apelului activ; pagina evita valori fixe cand nu exista apel final publicat sau documente verificate.",
@@ -3687,7 +3745,8 @@
         "/start-up-nation-2026-conditii",
         "/start-up-nation-2026-plan-de-afaceri",
         "/consultanta-start-up-nation-2026"
-      ]
+      ],
+      "heroIcon": "ph-duotone ph-info"
     },
     {
       "funding": "finantarea, contributia proprie, pragurile si termenele se confirma in ghidul apelului activ; pagina evita valori fixe cand nu exista apel final publicat sau documente verificate.",
@@ -3783,7 +3842,8 @@
         "/cod-caen-start-up-nation-2026",
         "/start-up-nation-2026-plan-de-afaceri",
         "/consultanta-start-up-nation-2026"
-      ]
+      ],
+      "heroIcon": "ph-duotone ph-info"
     },
     {
       "funding": "finantarea, contributia proprie, pragurile si termenele se confirma in ghidul apelului activ; pagina evita valori fixe cand nu exista apel final publicat sau documente verificate.",
@@ -3879,7 +3939,8 @@
         "/start-up-nation-2026-conditii",
         "/start-up-nation-2026-cheltuieli-eligibile",
         "/consultanta-start-up-nation-2026"
-      ]
+      ],
+      "heroIcon": "ph-duotone ph-info"
     },
     {
       "funding": "finantarea, contributia proprie, pragurile si termenele se confirma in ghidul apelului activ; pagina evita valori fixe cand nu exista apel final publicat sau documente verificate.",
@@ -3975,7 +4036,8 @@
         "/start-up-nation-2026-conditii",
         "/start-up-nation-2026-plan-de-afaceri",
         "/contact"
-      ]
+      ],
+      "heroIcon": "ph-duotone ph-info"
     },
     {
       "funding": "finantarea, contributia proprie, pragurile si termenele se confirma in ghidul apelului activ; pagina evita valori fixe cand nu exista apel final publicat sau documente verificate.",
@@ -4071,7 +4133,8 @@
         "/start-up-nation-2026-conditii",
         "/cod-caen-start-up-nation-2026",
         "/contact"
-      ]
+      ],
+      "heroIcon": "ph-duotone ph-info"
     },
     {
       "funding": "finantarea, contributia proprie, pragurile si termenele se confirma in ghidul apelului activ; pagina evita valori fixe cand nu exista apel final publicat sau documente verificate.",
@@ -4169,7 +4232,9 @@
         "/calculator-soc",
         "/fonduri-europene-agricultura",
         "/contact"
-      ]
+      ],
+      "heroIcon": "ph-duotone ph-plant",
+      "officialGuideKey": "dr12"
     },
     {
       "funding": "finantarea, contributia proprie, pragurile si termenele se confirma in ghidul apelului activ; pagina evita valori fixe cand nu exista apel final publicat sau documente verificate.",
@@ -4265,7 +4330,9 @@
         "/digitalizare-imm-pnrr",
         "/granturi-digitalizare-imm",
         "/contact"
-      ]
+      ],
+      "heroIcon": "ph-duotone ph-desktop",
+      "officialGuideKey": "digitalizare-pnrr"
     },
     {
       "funding": "finantarea, contributia proprie, pragurile si termenele se confirma in ghidul apelului activ; pagina evita valori fixe cand nu exista apel final publicat sau documente verificate.",
@@ -4361,7 +4428,9 @@
         "/granturi-digitalizare-imm",
         "/fonduri-europene-digitalizare",
         "/contact"
-      ]
+      ],
+      "heroIcon": "ph-duotone ph-desktop",
+      "officialGuideKey": "digitalizare-pnrr"
     },
     {
       "funding": "finantarea, contributia proprie, pragurile si termenele se confirma in ghidul apelului activ; pagina evita valori fixe cand nu exista apel final publicat sau documente verificate.",
@@ -4457,7 +4526,9 @@
         "/digitalizare-imm-pnrr",
         "/consultanta-pnrr-digitalizare",
         "/contact"
-      ]
+      ],
+      "heroIcon": "ph-duotone ph-desktop",
+      "officialGuideKey": "digitalizare"
     },
     {
       "funding": "finantarea, contributia proprie, pragurile si termenele se confirma in ghidul apelului activ; pagina evita valori fixe cand nu exista apel final publicat sau documente verificate.",
@@ -4553,7 +4624,8 @@
         "/fonduri-europene-imm",
         "/consultanta-fonduri-europene",
         "/contact"
-      ]
+      ],
+      "heroIcon": "ph-duotone ph-info"
     },
     {
       "funding": "finantarea, contributia proprie, pragurile si termenele se confirma in ghidul apelului activ; pagina evita valori fixe cand nu exista apel final publicat sau documente verificate.",
@@ -4651,7 +4723,9 @@
         "/calculator-soc",
         "/fonduri-pentru-utilaje-agricole",
         "/contact"
-      ]
+      ],
+      "heroIcon": "ph-duotone ph-plant",
+      "officialGuideKey": "dr12"
     },
     {
       "funding": "finantarea, contributia proprie, pragurile si termenele se confirma in ghidul apelului activ; pagina evita valori fixe cand nu exista apel final publicat sau documente verificate.",
@@ -4749,7 +4823,9 @@
         "/dr14",
         "/calculator-soc",
         "/contact"
-      ]
+      ],
+      "heroIcon": "ph-duotone ph-plant",
+      "officialGuideKey": "dr12"
     },
     {
       "type": "hub",
@@ -4845,7 +4921,8 @@
       "description": "Calendar fonduri europene 2026: cum urmaresti programe, termene, documente, ghiduri, cofinantare si pregatirea dosarului.",
       "h1": "Calendar fonduri europene",
       "quickAnswer": "Calendarul de fonduri europene ajuta la pregatirea documentelor inainte de deschiderea apelurilor si la evitarea depunerilor pe fuga.",
-      "programName": "Calendar fonduri europene"
+      "programName": "Calendar fonduri europene",
+      "heroIcon": "ph-duotone ph-arrows-clockwise"
     },
     {
       "type": "hub",
@@ -4941,7 +5018,8 @@
       "description": "Cat costa consultanta pentru fonduri europene: factori, servicii incluse, complexitatea proiectului, buget, implementare si riscuri.",
       "h1": "Cat costa consultanta pentru fonduri europene",
       "quickAnswer": "Costul consultantei pentru fonduri europene depinde de program, documente, complexitatea investitiei, etapa de lucru si suportul cerut la implementare.",
-      "programName": "Cost consultanta fonduri europene"
+      "programName": "Cost consultanta fonduri europene",
+      "heroIcon": "ph-duotone ph-info"
     },
     {
       "type": "hub",
@@ -5037,7 +5115,8 @@
       "description": "Cum alegi un consultant pentru fonduri europene: experienta, transparenta, servicii, contract, comunicare, riscuri si intrebari utile.",
       "h1": "Cum alegi un consultant pentru fonduri europene",
       "quickAnswer": "Alege consultantul dupa experienta relevanta, claritatea serviciilor, transparenta privind riscurile si modul in care verifica documentele inainte de promisiuni.",
-      "programName": "Alegere consultant fonduri europene"
+      "programName": "Alegere consultant fonduri europene",
+      "heroIcon": "ph-duotone ph-info"
     },
     {
       "type": "hub",
@@ -5133,7 +5212,8 @@
       "description": "Eligibilitate fonduri europene: cum verifici firma, codul CAEN, localitatea, investitia, documentele, cofinantarea si programul potrivit.",
       "h1": "Eligibilitate fonduri europene",
       "quickAnswer": "Eligibilitatea pentru fonduri europene se verifica prin solicitant, cod CAEN, localitate, investitie, documente, cheltuieli si cofinantare.",
-      "programName": "Eligibilitate fonduri europene"
+      "programName": "Eligibilitate fonduri europene",
+      "heroIcon": "ph-duotone ph-info"
     },
     {
       "type": "hub",
@@ -5229,7 +5309,9 @@
       "description": "Finantari pentru panouri fotovoltaice: autoconsum, energie regenerabila, Fondul pentru Modernizare, documente, buget si eligibilitate.",
       "h1": "Finantari pentru panouri fotovoltaice",
       "quickAnswer": "Finantarile pentru panouri fotovoltaice se verifica prin solicitant, amplasament, consum, avize, buget si programul de energie activ.",
-      "programName": "Finantari panouri fotovoltaice"
+      "programName": "Finantari panouri fotovoltaice",
+      "heroIcon": "ph-duotone ph-sun",
+      "officialGuideKey": "fondul-modernizare"
     },
     {
       "type": "hub",
@@ -5325,7 +5407,9 @@
       "description": "Fondul de Modernizare: index pentru energie regenerabila, fotovoltaice, autoconsum, eficienta energetica, documente si programe active.",
       "h1": "Fondul de Modernizare: index pentru masurile de finantare",
       "quickAnswer": "Fondul de Modernizare trebuie urmarit pe apeluri distincte, cu verificarea solicitantului, a investitiei energetice, a documentelor tehnice si a cofinantarii.",
-      "programName": "Fondul de Modernizare"
+      "programName": "Fondul de Modernizare",
+      "heroIcon": "ph-duotone ph-sun",
+      "officialGuideKey": "fondul-modernizare"
     },
     {
       "type": "hub",
@@ -5421,7 +5505,8 @@
       "description": "Greseli frecvente la fonduri europene: eligibilitate, documente, buget, cheltuieli neeligibile, punctaj, clarificari si implementare.",
       "h1": "Greseli frecvente la fonduri europene",
       "quickAnswer": "Cele mai multe greseli la fonduri europene apar din eligibilitate neverificata, documente incomplete, buget slab justificat si termene tratate prea optimist.",
-      "programName": "Greseli fonduri europene"
+      "programName": "Greseli fonduri europene",
+      "heroIcon": "ph-duotone ph-info"
     },
     {
       "type": "hub",
@@ -5517,7 +5602,108 @@
       "description": "Intrebari frecvente despre fonduri europene: eligibilitate, documente, cofinantare, cheltuieli, cod CAEN, depunere si consultanta.",
       "h1": "Intrebari frecvente despre fonduri europene",
       "quickAnswer": "Intrebarile frecvente despre fonduri europene trebuie citite ca orientare initiala, nu ca verdict final pentru un proiect concret.",
-      "programName": "Intrebari frecvente fonduri europene"
+      "programName": "Intrebari frecvente fonduri europene",
+      "heroIcon": "ph-duotone ph-info"
+    },
+    {
+      "slug": "apeluri-gal",
+      "output": "apeluri-gal/index.html",
+      "type": "program",
+      "schemaType": "GovernmentService",
+      "category": "LEADER / GAL",
+      "title": "Apeluri GAL si LEADER: eligibilitate, documente si pregatire prudenta",
+      "description": "Ghid prudent pentru apeluri GAL si LEADER: cum identifici GAL-ul local, ce verifici in strategia locala, ce documente pregatesti si ce riscuri controlezi.",
+      "h1": "Apeluri GAL - finantari locale prin LEADER",
+      "quickAnswer": "Apelurile GAL trebuie verificate local, prin strategia GAL-ului care acopera localitatea proiectului si prin documentele AFIR pentru interventia DR 36 LEADER. Pagina explica pasii de orientare: identificarea GAL-ului, citirea ghidului local, verificarea solicitantului, a investitiei, a documentelor si a calendarului. Nu promite plafoane, punctaj sau aprobare, deoarece fiecare GAL poate avea criterii, masuri si termene proprii.",
+      "programName": "Apeluri GAL / LEADER",
+      "policyContribution": "interventia LEADER sprijina dezvoltarea locala prin strategii construite la nivelul Grupurilor de Actiune Locala si prin proiecte adaptate nevoilor din teritoriu.",
+      "funding": "valoarea sprijinului, intensitatea si conditiile se confirma in ghidul local al GAL-ului si in documentele AFIR pentru apelul activ; nu se folosesc plafoane comerciale fara verificare.",
+      "audience": [
+        "firme, PFA, fermieri sau ONG-uri din teritoriul unui GAL",
+        "autoritati publice locale si parteneriate care urmaresc proiecte comunitare",
+        "beneficiari care trebuie sa confirme incadrarea localitatii in strategia GAL"
+      ],
+      "eligibility": [
+        "solicitantul trebuie sa fie in teritoriul GAL si sa se incadreze in masura locala",
+        "investitia trebuie sa respecte strategia de dezvoltare locala si ghidul apelului",
+        "documentele, codul CAEN sau activitatea trebuie sa sustina proiectul propus"
+      ],
+      "mandatory": [
+        "identificarea GAL-ului care acopera localitatea proiectului",
+        "citirea ghidului local si a criteriilor de selectie",
+        "verificarea eligibilitatii solicitantului si a investitiei",
+        "confirmarea cofinantarii, a documentelor si a calendarului local"
+      ],
+      "eligibleExpenses": [
+        "investitii productive sau servicii permise de masura locala",
+        "dotari, echipamente sau lucrari justificate prin obiectivul proiectului",
+        "servicii, consultanta sau costuri generale doar daca ghidul le permite",
+        "activitati comunitare sau publice in limitele strategiei locale"
+      ],
+      "ineligibleExpenses": [
+        "cheltuieli incepute inainte de momentul permis",
+        "investitii in afara teritoriului GAL sau fara legatura cu masura locala",
+        "costuri care nu sunt justificate prin proiect si prin ghid",
+        "cheltuieli acoperite deja prin alta finantare"
+      ],
+      "scoring": [
+        "potrivirea cu strategia de dezvoltare locala",
+        "impactul economic sau comunitar in teritoriul GAL",
+        "claritatea bugetului si a documentelor",
+        "capacitatea solicitantului de a implementa proiectul"
+      ],
+      "steps": [
+        "identifica GAL-ul local si masura potrivita",
+        "verifica ghidul local, anexele si calendarul",
+        "pregateste documentele solicitantului si ale investitiei",
+        "construieste bugetul si verifica cofinantarea",
+        "depune dosarul conform procedurii GAL/AFIR"
+      ],
+      "evaluation": [
+        "verificare administrativa si de eligibilitate la nivel local",
+        "evaluare conform criteriilor GAL",
+        "selectie si transmitere catre fluxul AFIR, daca procedura o cere",
+        "contractare, implementare, achizitii si raportare"
+      ],
+      "examples": [
+        "o firma rurala poate verifica daca activitatea propusa este acoperita de masura locala",
+        "o primarie poate analiza proiecte comunitare doar dupa confirmarea criteriilor GAL",
+        "un fermier care diversifica activitatea trebuie sa verifice CAEN-ul, localitatea si bugetul"
+      ],
+      "faq": [
+        [
+          "Cum gasesc GAL-ul pentru localitatea mea?",
+          "Verifica lista si platformele AFIR/LEADER, apoi confirma pe site-ul GAL-ului daca localitatea proiectului este inclusa in teritoriu."
+        ],
+        [
+          "Se aplica aceleasi reguli in toate GAL-urile?",
+          "Nu. Fiecare GAL lucreaza cu o strategie locala si cu ghiduri specifice. De aceea, conditiile finale se citesc in apelul local activ."
+        ],
+        [
+          "Pot folosi pagina ca ghid final de eligibilitate?",
+          "Nu. Pagina este orientativa. Eligibilitatea finala se confirma in ghidul GAL si in documentele AFIR aplicabile apelului."
+        ],
+        [
+          "Ce trimit pentru o verificare initiala?",
+          "Trimite localitatea, solicitantul, activitatea, codul CAEN daca exista, investitia dorita, bugetul estimat si documentele disponibile."
+        ]
+      ],
+      "related": [
+        "/fonduri-europene",
+        "/fonduri-europene-nord-est",
+        "/consultanta-afir",
+        "/verificare-eligibilitate-fonduri-europene",
+        "/contact"
+      ],
+      "sourceKeys": [
+        "leader-gal",
+        "dr36-leader"
+      ],
+      "officialGuideKey": "dr36-leader",
+      "heroIcon": "ph-duotone ph-map-pin",
+      "guideCtaLabel": "Ghid DR 36 AFIR",
+      "minWords": 1100,
+      "minFaq": 8
     }
   ]
 }
