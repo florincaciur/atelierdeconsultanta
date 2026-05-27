@@ -1,6 +1,6 @@
 {
   "site": "https://atelierdeconsultanta.ro",
-  "updatedAt": "2026-05-26",
+  "updatedAt": "2026-05-27",
   "defaults": {
     "author": "FABER - Atelier de Consultanta",
     "contactUrl": "/contact",
@@ -270,7 +270,15 @@
       },
       "heroIcon": "ph-duotone ph-plant",
       "officialGuideKey": "dr12",
-      "guideCtaLabel": "Ghid oficial"
+      "guideCtaLabel": "Ghid oficial",
+      "contentSections": [
+        {
+          "title": "Sef de exploatatie, prag SO si suprascore",
+          "paragraphs": [
+            "Pentru DR 12 conteaza rolul real al solicitantului ca sef de exploatatie, incadrarea in pragurile SO ale apelului activ, situatia tinerilor fermieri sau a fermierilor recent instalati, cofinantarea si riscul de suprascorare. Punctajul se noteaza doar cand poate fi dovedit prin documente."
+          ]
+        }
+      ]
     },
     {
       "slug": "dr14",
@@ -364,14 +372,33 @@
         "/dr12-afir",
         "/consultanta-afir",
         "/fonduri-pentru-ferme",
-        "/fonduri-pentru-utilaje-agricole"
+        "/fonduri-pentru-utilaje-agricole",
+        "/dr-14-afir-conditii-eligibilitate-greseli-frecvente"
       ],
       "sourceKeys": [
         "dr14"
       ],
       "heroIcon": "ph-duotone ph-plant",
       "officialGuideKey": "dr14",
-      "guideCtaLabel": "Ghid oficial"
+      "guideCtaLabel": "Ghid oficial",
+      "contentSections": [
+        {
+          "title": "Calculator SO si greseli frecvente DR14",
+          "paragraphs": [
+            "Inainte de buget, verifica dimensiunea economica prin calculatorul SOC si citeste lista de greseli frecvente: SO calculat gresit, documente incomplete, oferte necorelate, investitii supradimensionate si cofinantare fragila."
+          ],
+          "links": [
+            {
+              "href": "/calculator-soc",
+              "label": "Calculator SOC AFIR"
+            },
+            {
+              "href": "/dr-14-afir-conditii-eligibilitate-greseli-frecvente",
+              "label": "Greseli frecvente DR14"
+            }
+          ]
+        }
+      ]
     },
     {
       "slug": "start-up-nation-2026",
@@ -643,7 +670,33 @@
       ],
       "heroIcon": "ph-duotone ph-rocket-launch",
       "officialGuideKey": "startup",
-      "guideCtaLabel": "Ghid oficial"
+      "guideCtaLabel": "Ghid oficial",
+      "contentSections": [
+        {
+          "title": "Editia oficiala si cautarea comerciala 2026",
+          "paragraphs": [
+            "Cautarea Start-Up Nation 2026 este folosita comercial de beneficiari, dar regulile se confirma in procedura oficiala a editiei active. Diferentiaza conditiile de participare, cheltuielile eligibile, ideile de afaceri si structura planului inainte de decizia de depunere."
+          ],
+          "links": [
+            {
+              "href": "/start-up-nation-2026-conditii",
+              "label": "Conditii Start-Up Nation"
+            },
+            {
+              "href": "/start-up-nation-2026-cheltuieli-eligibile",
+              "label": "Cheltuieli eligibile Start-Up Nation"
+            },
+            {
+              "href": "/start-up-nation-2026-idei-afaceri",
+              "label": "Idei de afaceri"
+            },
+            {
+              "href": "/start-up-nation-2026-plan-de-afaceri",
+              "label": "Plan de afaceri"
+            }
+          ]
+        }
+      ]
     },
     {
       "slug": "femeia-antreprenor-2026",
@@ -746,7 +799,15 @@
       ],
       "heroIcon": "ph-duotone ph-user-circle",
       "officialGuideKey": "femeia",
-      "guideCtaLabel": "Ghid oficial"
+      "guideCtaLabel": "Ghid oficial",
+      "contentSections": [
+        {
+          "title": "Capital social, asociat majoritar si documente",
+          "paragraphs": [
+            "Pentru programele dedicate femeilor antreprenor, verificarea porneste de la structura asociatilor, capital social, procentul detinut de femei, rolul in administrare, cheltuielile propuse si documentele firmei. O idee buna nu este suficienta fara incadrare si documente coerente."
+          ]
+        }
+      ]
     },
     {
       "slug": "digitalizare-imm",
@@ -843,7 +904,10 @@
         "/pnrr-digitalizare-imm-cheltuieli-eligibile",
         "/fonduri-europene-digitalizare",
         "/consultanta-pnrr-digitalizare",
-        "/instrumente"
+        "/instrumente",
+        "/cheltuieli-eligibile-digitalizare-imm",
+        "/digitalizare-imm-erp-crm-cloud",
+        "/pnrr"
       ],
       "sourceKeys": [
         "digitalizare",
@@ -851,7 +915,15 @@
       ],
       "heroIcon": "ph-duotone ph-desktop",
       "officialGuideKey": "digitalizare",
-      "guideCtaLabel": "Ghid oficial"
+      "guideCtaLabel": "Ghid oficial",
+      "contentSections": [
+        {
+          "title": "ERP, CRM, cloud si PNRR in analiza de digitalizare",
+          "paragraphs": [
+            "Un proiect de digitalizare se verifica prin procese reale: ERP, CRM, cloud, securitate, automatizari si indicatori. PNRR digitalizare si programele regionale pot avea reguli diferite, deci bugetul si cheltuielile trebuie separate pe apelul activ."
+          ]
+        }
+      ]
     },
     {
       "slug": "por-adr-nord-est",
@@ -955,7 +1027,15 @@
       ],
       "heroIcon": "ph-duotone ph-map-pin",
       "officialGuideKey": "por-ne",
-      "guideCtaLabel": "Ghid oficial"
+      "guideCtaLabel": "Ghid oficial",
+      "contentSections": [
+        {
+          "title": "RIS3 si judete Nord-Est",
+          "paragraphs": [
+            "Pentru POR ADR Nord-Est verifica judetul, localitatea, incadrarea RIS3, categoria microintreprinderii, CAEN-ul, punctul de lucru si cheltuielile eligibile."
+          ]
+        }
+      ]
     },
     {
       "slug": "investitii-modernizarea-microintreprinderilor-apel-2",
@@ -1060,7 +1140,15 @@
       ],
       "heroIcon": "ph-duotone ph-buildings",
       "officialGuideKey": "por-ne",
-      "guideCtaLabel": "Ghid oficial"
+      "guideCtaLabel": "Ghid oficial",
+      "contentSections": [
+        {
+          "title": "Conditii microintreprindere",
+          "paragraphs": [
+            "Verifica statutul de microintreprindere, numarul de angajati, cifra de afaceri, activele, locatia investitiei si legaturile cu programele IMM regionale."
+          ]
+        }
+      ]
     },
     {
       "slug": "fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum",
@@ -1164,7 +1252,25 @@
       ],
       "heroIcon": "ph-duotone ph-sun",
       "officialGuideKey": "fondul-modernizare",
-      "guideCtaLabel": "Ghid oficial"
+      "guideCtaLabel": "Ghid oficial",
+      "contentSections": [
+        {
+          "title": "Legatura cu AFIR autoconsum si panouri fotovoltaice",
+          "paragraphs": [
+            "Fondul de Modernizare trebuie comparat cu AFIR autoconsum si cu paginile dedicate panourilor fotovoltaice. Verifica beneficiarul, schema, avizele, racordarea, stocarea, autoconsumul si obligatiile tehnice inainte de buget."
+          ],
+          "links": [
+            {
+              "href": "/afir-autoconsum-agroalimentar",
+              "label": "AFIR autoconsum"
+            },
+            {
+              "href": "/finantari-panouri-fotovoltaice",
+              "label": "Finantari panouri fotovoltaice"
+            }
+          ]
+        }
+      ]
     },
     {
       "slug": "fondul-modernizare-energie-regenerabila-2026",
@@ -1268,7 +1374,15 @@
       ],
       "heroIcon": "ph-duotone ph-sun",
       "officialGuideKey": "fondul-modernizare",
-      "guideCtaLabel": "Ghid oficial"
+      "guideCtaLabel": "Ghid oficial",
+      "contentSections": [
+        {
+          "title": "Surse regenerabile, autoconsum, stocare si avize",
+          "paragraphs": [
+            "Proiectele de energie regenerabila trebuie pregatite tehnic: amplasament, avize, racordare, putere instalata, autoconsum, stocare, criterii tehnice si obligatii de exploatare. Bugetul se valideaza doar dupa ce aceste elemente sunt verificabile."
+          ]
+        }
+      ]
     },
     {
       "slug": "afir-autoconsum-agroalimentar",
@@ -1469,14 +1583,38 @@
         "/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum",
         "/fondul-modernizare-energie-regenerabila-2026",
         "/resurse",
-        "/contact"
+        "/contact",
+        "/afir-autoconsum-agroalimentar",
+        "/fondul-de-modernizare"
       ],
       "sourceKeys": [
         "autoconsum-publici"
       ],
       "heroIcon": "ph-duotone ph-sun",
       "officialGuideKey": "autoconsum-publici",
-      "guideCtaLabel": "Ghid oficial"
+      "guideCtaLabel": "Ghid oficial",
+      "contentSections": [
+        {
+          "title": "Comparatie cu AFIR autoconsum si Fondul de Modernizare",
+          "paragraphs": [
+            "Autoconsumul pentru institutii publice trebuie comparat cu apelurile AFIR pentru sectorul agroalimentar si cu liniile din Fondul pentru Modernizare. Diferenta principala tine de beneficiar, amplasament, sursa de finantare, intensitate, avize si obligatii de operare."
+          ],
+          "links": [
+            {
+              "href": "/afir-autoconsum-agroalimentar",
+              "label": "AFIR autoconsum agroalimentar"
+            },
+            {
+              "href": "/fondul-de-modernizare",
+              "label": "Fondul de Modernizare"
+            },
+            {
+              "href": "/finantari-panouri-fotovoltaice",
+              "label": "Finantari panouri fotovoltaice"
+            }
+          ]
+        }
+      ]
     },
     {
       "slug": "fonduri-europene",
@@ -1572,12 +1710,24 @@
         "/fonduri-europene-agricultura",
         "/fonduri-europene-digitalizare",
         "/ghiduri",
-        "/instrumente"
+        "/instrumente",
+        "/e-move",
+        "/gal-afir",
+        "/apeluri-gal",
+        "/fondul-de-modernizare"
       ],
       "sourceKeys": [
         "fonduri-europene"
       ],
-      "heroIcon": "ph-duotone ph-info"
+      "heroIcon": "ph-duotone ph-info",
+      "contentSections": [
+        {
+          "title": "Programe noi in hub: e-MOVE si GAL-AFIR",
+          "paragraphs": [
+            "Hub-ul central include acum si e-MOVE RO pentru mobilitate electrica, respectiv GAL-AFIR pentru apeluri LEADER dedicate beneficiarilor publici si privati. Fiecare program trebuie confirmat in ghidul activ si in sursele oficiale."
+          ]
+        }
+      ]
     },
     {
       "slug": "fonduri-europene-imm",
@@ -1672,7 +1822,9 @@
         "/investitii-modernizarea-microintreprinderilor-apel-2",
         "/digitalizare-imm",
         "/start-up-nation-2026",
-        "/instrumente"
+        "/instrumente",
+        "/femeia-antreprenor-2026",
+        "/e-move"
       ],
       "sourceKeys": [
         "fonduri-europene"
@@ -1774,7 +1926,9 @@
         "/dr14",
         "/calculator-soc",
         "/consultanta-afir",
-        "/fonduri-pentru-utilaje-agricole"
+        "/fonduri-pentru-utilaje-agricole",
+        "/afir-autoconsum-agroalimentar",
+        "/fonduri-pentru-ferme"
       ],
       "sourceKeys": [
         "dr12",
@@ -1879,7 +2033,8 @@
         "/digitalizare-imm-pnrr",
         "/granturi-digitalizare-imm",
         "/consultanta-pnrr-digitalizare",
-        "/instrumente"
+        "/instrumente",
+        "/digitalizare-imm-erp-crm-cloud"
       ],
       "sourceKeys": [
         "digitalizare"
@@ -1985,7 +2140,25 @@
       "sourceKeys": [
         "fonduri-europene"
       ],
-      "heroIcon": "ph-duotone ph-info"
+      "heroIcon": "ph-duotone ph-info",
+      "contentSections": [
+        {
+          "title": "Pagina evergreen, diferita de hubul Fonduri europene",
+          "paragraphs": [
+            "Aceasta pagina explica tipurile de fonduri nerambursabile si conceptele de baza. Pentru lista de programe active, foloseste hubul Fonduri europene, unde sunt legate paginile de program si sursele oficiale actualizate."
+          ],
+          "links": [
+            {
+              "href": "/fonduri-europene",
+              "label": "Hub Fonduri europene"
+            },
+            {
+              "href": "/fonduri-europene-nerambursabile-2026",
+              "label": "Hub anual 2026"
+            }
+          ]
+        }
+      ]
     },
     {
       "slug": "pnrr",
@@ -2084,7 +2257,15 @@
       "sourceKeys": [
         "digitalizare-pnrr"
       ],
-      "heroIcon": "ph-duotone ph-desktop"
+      "heroIcon": "ph-duotone ph-desktop",
+      "contentSections": [
+        {
+          "title": "Status PNRR",
+          "paragraphs": [
+            "Statusul PNRR se confirma in sursele oficiale. Pentru proiecte digitale, compara pagina PNRR cu digitalizare IMM si consultanta PNRR digitalizare inainte de buget."
+          ]
+        }
+      ]
     },
     {
       "slug": "afir",
@@ -2195,7 +2376,9 @@
         "/dr14",
         "/calculator-soc",
         "/consultanta-afir",
-        "/afir-autoconsum-agroalimentar"
+        "/afir-autoconsum-agroalimentar",
+        "/gal-afir",
+        "/apeluri-gal"
       ],
       "sourceKeys": [
         "dr12",
@@ -2303,14 +2486,24 @@
         "/instrumente",
         "/dr12-afir",
         "/digitalizare-imm",
-        "/contact"
+        "/contact",
+        "/e-move",
+        "/gal-afir"
       ],
       "sourceKeys": [
         "fonduri-europene"
       ],
       "heroIcon": "ph-duotone ph-file-text",
       "minWords": 2000,
-      "minFaq": 7
+      "minFaq": 7,
+      "contentSections": [
+        {
+          "title": "Ghiduri e-MOVE si GAL-AFIR",
+          "paragraphs": [
+            "Ghidurile sunt grupate pe IMM, agricultura, energie si GAL. Pentru e-MOVE verifica sursa MTI/DGPET, iar pentru GAL-AFIR verifica sursele AFIR LEADER si ghidul GAL local."
+          ]
+        }
+      ]
     },
     {
       "slug": "studii-de-caz",
@@ -2582,12 +2775,44 @@
         "/resurse",
         "/ghiduri",
         "/verificare-eligibilitate-fonduri-europene",
-        "/contact"
+        "/contact",
+        "/gal-afir",
+        "/consultanta-afir"
       ],
       "sourceKeys": [
         "fonduri-europene"
       ],
-      "heroIcon": "ph-duotone ph-info"
+      "heroIcon": "ph-duotone ph-info",
+      "contentSections": [
+        {
+          "title": "Acte pe tip de beneficiar",
+          "paragraphs": [
+            "Lista de acte se adapteaza la program si la solicitant. Un beneficiar public, un beneficiar privat, un fermier, un IMM si un proiect GAL pot avea documente de baza diferite, chiar daca folosesc acelasi formular de cerere."
+          ],
+          "tableRows": [
+            [
+              "Beneficiar public",
+              "hotarari, buget local, documente de proprietate sau administrare, achizitii, avize, indicatori si documente semnate de reprezentantul legal"
+            ],
+            [
+              "Beneficiar privat",
+              "certificat constatator, situatii financiare, declaratii, documente pentru spatiu, oferte, buget si dovada capacitatii de cofinantare"
+            ],
+            [
+              "Fermier",
+              "documente exploatatie, APIA/ANSVSA dupa caz, calcul SO/SOC, drept de folosinta, investitie justificata si oferte"
+            ],
+            [
+              "IMM",
+              "incadrare IMM, legaturi cu alte firme, CAEN autorizat, bilanturi, numar de angajati, active, cifra de afaceri si documente fiscale"
+            ],
+            [
+              "GAL",
+              "dovada localizarii in teritoriul GAL, ghid local, criterii de selectie, documente specifice masurii si clarificari GAL/AFIR"
+            ]
+          ]
+        }
+      ]
     },
     {
       "slug": "portofoliu",
@@ -2676,7 +2901,21 @@
       "sourceKeys": [
         "fonduri-europene"
       ],
-      "heroIcon": "ph-duotone ph-seal-check"
+      "heroIcon": "ph-duotone ph-seal-check",
+      "contentSections": [
+        {
+          "title": "Fara clienti inventati si fara testimoniale nevalidate",
+          "paragraphs": [
+            "Portofoliul FABER foloseste exemple anonimizate si metoda de lucru acolo unde nu exista acord explicit pentru publicarea clientului. Nu inventam clienti, valori, rate de succes sau testimoniale; publicam doar informatii care pot fi sustinute si permise."
+          ],
+          "links": [
+            {
+              "href": "/studii-de-caz-fonduri-europene",
+              "label": "Studii de caz anonimizate"
+            }
+          ]
+        }
+      ]
     },
     {
       "slug": "testimoniale",
@@ -2855,7 +3094,9 @@
         "/calculator-soc",
         "/resurse",
         "/verificare-eligibilitate-fonduri-europene",
-        "/contact"
+        "/contact",
+        "/acte-necesare-fonduri-europene-nerambursabile",
+        "/calendar-fonduri-europene"
       ],
       "sourceKeys": [
         "fonduri-europene"
@@ -2948,13 +3189,25 @@
         "/instrumente",
         "/dr12-afir",
         "/digitalizare-imm",
-        "/contact"
+        "/contact",
+        "/e-move",
+        "/gal-afir",
+        "/acte-necesare-fonduri-europene-nerambursabile",
+        "/calendar-fonduri-europene"
       ],
       "sourceKeys": [
         "fonduri-europene"
       ],
       "includeDownloads": true,
-      "heroIcon": "ph-duotone ph-file-text"
+      "heroIcon": "ph-duotone ph-file-text",
+      "contentSections": [
+        {
+          "title": "Checklisturi noi",
+          "paragraphs": [
+            "Resursele trebuie sa acopere acte, cofinantare, GAL, e-MOVE, AFIR si calendarul de pregatire, astfel incat beneficiarul sa poata verifica proiectul inainte de bugetul final."
+          ]
+        }
+      ]
     },
     {
       "slug": "webinarii",
@@ -3176,7 +3429,9 @@
         "/dr14",
         "/firma-consultanta-fonduri-europene",
         "/cat-costa-consultanta-fonduri-europene",
-        "/contact"
+        "/contact",
+        "/gal-afir",
+        "/e-move"
       ],
       "sourceKeys": [
         "fonduri-europene",
@@ -3186,7 +3441,15 @@
         "digitalizare",
         "por-ne-apel-2"
       ],
-      "heroIcon": "ph-duotone ph-magnifying-glass"
+      "heroIcon": "ph-duotone ph-magnifying-glass",
+      "contentSections": [
+        {
+          "title": "Comparatie cu firmele mari de consultanta: ce face FABER diferit",
+          "paragraphs": [
+            "FABER lucreaza cu verificare prudenta, comunicare directa si explicarea riscurilor inainte de decizia de depunere. Nu promitem finantare garantata si nu impingem un proiect spre buget complet daca solicitantul, documentele sau punctajul nu sustin cererea."
+          ]
+        }
+      ]
     },
     {
       "funding": "finantarea, contributia proprie, pragurile si termenele se confirma in ghidul apelului activ; pagina evita valori fixe cand nu exista apel final publicat sau documente verificate.",
@@ -3285,9 +3548,19 @@
         "/digitalizare-imm",
         "/dr12-afir",
         "/pro-infra",
-        "/contact"
+        "/contact",
+        "/e-move",
+        "/gal-afir"
       ],
-      "heroIcon": "ph-duotone ph-info"
+      "heroIcon": "ph-duotone ph-info",
+      "contentSections": [
+        {
+          "title": "Programe 2026 de verificat",
+          "paragraphs": [
+            "Lista anuala include e-MOVE RO si GAL-AFIR alaturi de AFIR, Start-Up Nation, digitalizare, energie si programe regionale. Statusul fiecarui apel se confirma in surse oficiale."
+          ]
+        }
+      ]
     },
     {
       "funding": "finantarea, contributia proprie, pragurile si termenele se confirma in ghidul apelului activ; pagina evita valori fixe cand nu exista apel final publicat sau documente verificate.",
@@ -3389,7 +3662,15 @@
       ],
       "heroIcon": "ph-duotone ph-factory",
       "officialGuideKey": "pro-infra",
-      "guideCtaLabel": "Ghid oficial"
+      "guideCtaLabel": "Ghid oficial",
+      "contentSections": [
+        {
+          "title": "Schema PRO INFRA pe scurt",
+          "paragraphs": [
+            "Verifica eficienta energetica, materialele pentru infrastructura de transport, sistemul de management energetic, casarea echipamentelor si documentele tehnice inainte de bugetul final."
+          ]
+        }
+      ]
     },
     {
       "funding": "finantarea, contributia proprie, pragurile si termenele se confirma in ghidul apelului activ; pagina evita valori fixe cand nu exista apel final publicat sau documente verificate.",
@@ -3486,7 +3767,15 @@
         "/cat-costa-consultanta-fonduri-europene",
         "/contact"
       ],
-      "heroIcon": "ph-duotone ph-info"
+      "heroIcon": "ph-duotone ph-info",
+      "contentSections": [
+        {
+          "title": "Firma de consultanta fonduri europene",
+          "paragraphs": [
+            "O firma de consultanta trebuie evaluata prin experienta relevanta, metoda de verificare, transparenta, comunicare si refuzul garantiilor false de finantare."
+          ]
+        }
+      ]
     },
     {
       "funding": "finantarea, contributia proprie, pragurile si termenele se confirma in ghidul apelului activ; pagina evita valori fixe cand nu exista apel final publicat sau documente verificate.",
@@ -3584,7 +3873,33 @@
         "/consultanta-fonduri-europene",
         "/contact"
       ],
-      "heroIcon": "ph-duotone ph-info"
+      "heroIcon": "ph-duotone ph-info",
+      "contentSections": [
+        {
+          "title": "Consultanta pentru IMM: regional, digitalizare, energie si start-up",
+          "paragraphs": [
+            "Pentru IMM-uri, FABER compara programele regionale, digitalizarea, energia, microintreprinderile, Start-Up Nation si alte linii relevante. Alegerea depinde de regiune, CAEN, vechime, dimensiune IMM, indicatori, buget si capacitatea de implementare."
+          ],
+          "links": [
+            {
+              "href": "/fonduri-europene-imm",
+              "label": "Fonduri europene IMM"
+            },
+            {
+              "href": "/digitalizare-imm",
+              "label": "Digitalizare IMM"
+            },
+            {
+              "href": "/investitii-modernizarea-microintreprinderilor-apel-2",
+              "label": "Microintreprinderi Apel 2"
+            },
+            {
+              "href": "/start-up-nation-2026",
+              "label": "Start-Up Nation"
+            }
+          ]
+        }
+      ]
     },
     {
       "funding": "finantarea, contributia proprie, pragurile si termenele se confirma in ghidul apelului activ; pagina evita valori fixe cand nu exista apel final publicat sau documente verificate.",
@@ -4069,7 +4384,15 @@
         "/start-up-nation-2026-plan-de-afaceri",
         "/contact"
       ],
-      "heroIcon": "ph-duotone ph-info"
+      "heroIcon": "ph-duotone ph-info",
+      "contentSections": [
+        {
+          "title": "Cod CAEN eligibil nu inseamna proiect eligibil",
+          "paragraphs": [
+            "Un cod CAEN acceptat este doar primul filtru. Proiectul trebuie sa aiba solicitant eligibil, activitate coerenta, cheltuieli permise, buget justificat, locuri de munca sustenabile si documente care pot confirma investitia."
+          ]
+        }
+      ]
     },
     {
       "funding": "finantarea, contributia proprie, pragurile si termenele se confirma in ghidul apelului activ; pagina evita valori fixe cand nu exista apel final publicat sau documente verificate.",
@@ -4166,7 +4489,15 @@
         "/cod-caen-start-up-nation-2026",
         "/contact"
       ],
-      "heroIcon": "ph-duotone ph-info"
+      "heroIcon": "ph-duotone ph-info",
+      "contentSections": [
+        {
+          "title": "Flux Start-Up Nation",
+          "paragraphs": [
+            "Fluxul de verificare este: grup tinta, curs, firma, CAEN, buget, locuri de munca, documente si procedura oficiala a editiei active."
+          ]
+        }
+      ]
     },
     {
       "funding": "finantarea, contributia proprie, pragurile si termenele se confirma in ghidul apelului activ; pagina evita valori fixe cand nu exista apel final publicat sau documente verificate.",
@@ -4263,10 +4594,20 @@
         "/dr14",
         "/calculator-soc",
         "/fonduri-europene-agricultura",
-        "/contact"
+        "/contact",
+        "/gal-afir",
+        "/apeluri-gal"
       ],
       "heroIcon": "ph-duotone ph-plant",
-      "officialGuideKey": "dr12"
+      "officialGuideKey": "dr12",
+      "contentSections": [
+        {
+          "title": "GAL-AFIR si preluare implementare proiecte AFIR/GAL",
+          "paragraphs": [
+            "Consultanta AFIR poate include proiecte GAL-AFIR, proiecte LEADER si preluarea suportului de implementare pentru proiecte contractate, daca documentele, contractul si procedurile permit acest lucru."
+          ]
+        }
+      ]
     },
     {
       "funding": "finantarea, contributia proprie, pragurile si termenele se confirma in ghidul apelului activ; pagina evita valori fixe cand nu exista apel final publicat sau documente verificate.",
@@ -4364,7 +4705,15 @@
         "/contact"
       ],
       "heroIcon": "ph-duotone ph-desktop",
-      "officialGuideKey": "digitalizare-pnrr"
+      "officialGuideKey": "digitalizare-pnrr",
+      "contentSections": [
+        {
+          "title": "PNRR digitalizare versus programe regionale",
+          "paragraphs": [
+            "PNRR digitalizare si programele regionale pentru digitalizare IMM nu trebuie tratate ca acelasi apel. Difera sursa, calendarul, cheltuielile, indicatorii si documentele."
+          ]
+        }
+      ]
     },
     {
       "funding": "finantarea, contributia proprie, pragurile si termenele se confirma in ghidul apelului activ; pagina evita valori fixe cand nu exista apel final publicat sau documente verificate.",
@@ -4462,7 +4811,25 @@
         "/contact"
       ],
       "heroIcon": "ph-duotone ph-desktop",
-      "officialGuideKey": "digitalizare-pnrr"
+      "officialGuideKey": "digitalizare-pnrr",
+      "contentSections": [
+        {
+          "title": "PNRR digitalizare versus programe regionale si Digitalizare IMM",
+          "paragraphs": [
+            "PNRR digitalizare, programele regionale si apelurile de digitalizare IMM pot finanta investitii similare, dar au reguli diferite pentru beneficiar, calendar, cheltuieli, platforma si indicatori. Pagina aceasta ramane suport pentru PNRR, iar pagina principala Digitalizare IMM centralizeaza comparatia intre linii."
+          ],
+          "links": [
+            {
+              "href": "/digitalizare-imm",
+              "label": "Pagina principala Digitalizare IMM"
+            },
+            {
+              "href": "/fonduri-europene-digitalizare",
+              "label": "Cluster fonduri europene digitalizare"
+            }
+          ]
+        }
+      ]
     },
     {
       "funding": "finantarea, contributia proprie, pragurile si termenele se confirma in ghidul apelului activ; pagina evita valori fixe cand nu exista apel final publicat sau documente verificate.",
@@ -4754,7 +5121,8 @@
         "/dr14",
         "/calculator-soc",
         "/fonduri-pentru-utilaje-agricole",
-        "/contact"
+        "/contact",
+        "/afir-autoconsum-agroalimentar"
       ],
       "heroIcon": "ph-duotone ph-plant",
       "officialGuideKey": "dr12"
@@ -4941,7 +5309,9 @@
         "/fonduri-europene-nerambursabile-2026",
         "/ghiduri",
         "/resurse",
-        "/contact"
+        "/contact",
+        "/e-move",
+        "/gal-afir"
       ],
       "sourceKeys": [
         "fonduri-europene"
@@ -4954,7 +5324,15 @@
       "h1": "Calendar fonduri europene",
       "quickAnswer": "Calendarul de fonduri europene ajuta la pregatirea documentelor inainte de deschiderea apelurilor si la evitarea depunerilor pe fuga.",
       "programName": "Calendar fonduri europene",
-      "heroIcon": "ph-duotone ph-arrows-clockwise"
+      "heroIcon": "ph-duotone ph-arrows-clockwise",
+      "contentSections": [
+        {
+          "title": "e-MOVE si GAL-AFIR in calendar",
+          "paragraphs": [
+            "e-MOVE si GAL-AFIR se urmaresc cu status de verificat in surse oficiale: ghidul MTI/DGPET pentru e-MOVE si paginile AFIR/GAL pentru LEADER."
+          ]
+        }
+      ]
     },
     {
       "type": "hub",
@@ -5038,7 +5416,8 @@
         "/firma-consultanta-fonduri-europene",
         "/consultanta-fonduri-europene",
         "/cum-alegi-consultant-fonduri-europene",
-        "/contact"
+        "/contact",
+        "/cat-costa-consultanta-fonduri-europene-ghid"
       ],
       "sourceKeys": [
         "fonduri-europene"
@@ -5051,7 +5430,33 @@
       "h1": "Cat costa consultanta pentru fonduri europene",
       "quickAnswer": "Costul consultantei pentru fonduri europene depinde de program, documente, complexitatea investitiei, etapa de lucru si suportul cerut la implementare.",
       "programName": "Cost consultanta fonduri europene",
-      "heroIcon": "ph-duotone ph-info"
+      "heroIcon": "ph-duotone ph-info",
+      "contentSections": [
+        {
+          "title": "Structura tarifara orientativa",
+          "paragraphs": [
+            "Costul consultantei se discuta pe etape, nu ca promisiune de aprobare. O structura prudenta separa analiza initiala, scrierea proiectului, componenta de succes si suportul de implementare. Valorile concrete depind de program, documente, complexitate si responsabilitatile asumate."
+          ],
+          "tableRows": [
+            [
+              "Analiza",
+              "verificare solicitant, program, documente, riscuri, cofinantare si decizie de continuare"
+            ],
+            [
+              "Scriere",
+              "cerere, buget, anexe, plan, justificari, oferte si verificari inainte de depunere"
+            ],
+            [
+              "Succes",
+              "componenta conditionata de rezultat, daca este acceptata contractual si compatibila cu programul"
+            ],
+            [
+              "Implementare",
+              "achizitii, cereri de plata, raportari, clarificari si modificari in limitele contractului"
+            ]
+          ]
+        }
+      ]
     },
     {
       "type": "hub",
@@ -5148,7 +5553,22 @@
       "h1": "Cum alegi un consultant pentru fonduri europene",
       "quickAnswer": "Alege consultantul dupa experienta relevanta, claritatea serviciilor, transparenta privind riscurile si modul in care verifica documentele inainte de promisiuni.",
       "programName": "Alegere consultant fonduri europene",
-      "heroIcon": "ph-duotone ph-info"
+      "heroIcon": "ph-duotone ph-info",
+      "contentSections": [
+        {
+          "title": "Checklist comparativ pentru alegerea consultantului",
+          "paragraphs": [
+            "Compara consultantii dupa transparenta, surse, experienta relevanta, capacitatea de implementare si modul in care discuta riscurile. Evita promisiunile false de aprobare, punctaj garantat sau finantare sigura."
+          ],
+          "items": [
+            "prezinta sursele oficiale folosite",
+            "explica limitele si riscurile proiectului",
+            "separa analiza de scriere si implementare",
+            "nu garanteaza finantarea",
+            "documenteaza deciziile de buget si eligibilitate"
+          ]
+        }
+      ]
     },
     {
       "type": "hub",
@@ -5232,7 +5652,8 @@
         "/verificare-eligibilitate-fonduri-europene",
         "/fonduri-europene-nerambursabile-2026",
         "/instrumente",
-        "/contact"
+        "/contact",
+        "/metodologie-verificare-eligibilitate"
       ],
       "sourceKeys": [
         "fonduri-europene"
@@ -5245,7 +5666,43 @@
       "h1": "Eligibilitate fonduri europene",
       "quickAnswer": "Eligibilitatea pentru fonduri europene se verifica prin solicitant, cod CAEN, localitate, investitie, documente, cheltuieli si cofinantare.",
       "programName": "Eligibilitate fonduri europene",
-      "heroIcon": "ph-duotone ph-info"
+      "heroIcon": "ph-duotone ph-info",
+      "contentSections": [
+        {
+          "title": "Criterii generale de eligibilitate",
+          "paragraphs": [
+            "Eligibilitatea se verifica simultan pe solicitant, activitate, locatie, investitie, buget, documente si calendar. Un singur criteriu neconfirmat poate schimba recomandarea."
+          ],
+          "tableRows": [
+            [
+              "Solicitant",
+              "forma juridica, vechime, dimensiune, datorii si declaratii"
+            ],
+            [
+              "Activitate",
+              "CAEN, autorizare si legatura cu investitia"
+            ],
+            [
+              "Locatie",
+              "regiune, teritoriu GAL, amplasament si drept de folosinta"
+            ],
+            [
+              "Investitie",
+              "cheltuieli eligibile, justificare, oferte si risc de supradimensionare"
+            ],
+            [
+              "Financiar",
+              "cofinantare, TVA, costuri neeligibile si cash-flow"
+            ]
+          ],
+          "links": [
+            {
+              "href": "/verificare-eligibilitate-fonduri-europene",
+              "label": "Solicita verificare eligibilitate"
+            }
+          ]
+        }
+      ]
     },
     {
       "type": "hub",
@@ -5329,7 +5786,9 @@
         "/pro-infra",
         "/fondul-modernizare-energie-regenerabila-2026",
         "/fondul-de-modernizare",
-        "/contact"
+        "/contact",
+        "/afir-autoconsum-agroalimentar",
+        "/autoconsum-public-fotovoltaice-institutii-publice"
       ],
       "sourceKeys": [
         "fondul-modernizare"
@@ -5427,7 +5886,9 @@
         "/pro-infra",
         "/fondul-modernizare-energie-regenerabila-2026",
         "/finantari-panouri-fotovoltaice",
-        "/contact"
+        "/contact",
+        "/afir-autoconsum-agroalimentar",
+        "/e-move"
       ],
       "sourceKeys": [
         "fondul-modernizare"
@@ -5441,7 +5902,15 @@
       "quickAnswer": "Fondul de Modernizare trebuie urmarit pe apeluri distincte, cu verificarea solicitantului, a investitiei energetice, a documentelor tehnice si a cofinantarii.",
       "programName": "Fondul de Modernizare",
       "heroIcon": "ph-duotone ph-sun",
-      "officialGuideKey": "fondul-modernizare"
+      "officialGuideKey": "fondul-modernizare",
+      "contentSections": [
+        {
+          "title": "Carduri tematice Fondul de Modernizare",
+          "paragraphs": [
+            "Fondul de Modernizare trebuie citit pe apeluri: energie regenerabila, autoconsum, PRO INFRA si e-MOVE au reguli, beneficiari, avize si documente diferite."
+          ]
+        }
+      ]
     },
     {
       "type": "hub",
@@ -5538,7 +6007,15 @@
       "h1": "Greseli frecvente la fonduri europene",
       "quickAnswer": "Cele mai multe greseli la fonduri europene apar din eligibilitate neverificata, documente incomplete, buget slab justificat si termene tratate prea optimist.",
       "programName": "Greseli fonduri europene",
-      "heroIcon": "ph-duotone ph-info"
+      "heroIcon": "ph-duotone ph-info",
+      "contentSections": [
+        {
+          "title": "Greseli specifice",
+          "paragraphs": [
+            "Greselile recurente sunt suprascore, cofinantare ignorata, dubla finantare, documente expirate, oferte necomparabile si cheltuieli care nu sustin obiectivul proiectului."
+          ]
+        }
+      ]
     },
     {
       "type": "hub",
@@ -5616,13 +6093,23 @@
         [
           "Cum se evita greselile frecvente?",
           "Prin verificarea eligibilitatii, a bugetului, a cheltuielilor neeligibile, a punctajului si a termenelor inainte de depunere."
+        ],
+        [
+          "Ce verific pentru e-MOVE RO?",
+          "Verifica beneficiarul, amplasamentul, dreptul de folosinta, avizele, racordarea, bugetul, cofinantarea si obligatiile de operare."
+        ],
+        [
+          "FABER preia proiecte GAL in implementare?",
+          "Da, daca documentele si contractul permit preluarea. Analiza initiala verifica achizitii, plati, raportari si clarificari existente."
         ]
       ],
       "related": [
         "/fonduri-europene",
         "/verificare-eligibilitate-fonduri-europene",
         "/ghiduri",
-        "/contact"
+        "/contact",
+        "/e-move",
+        "/gal-afir"
       ],
       "sourceKeys": [
         "fonduri-europene"
@@ -5725,7 +6212,8 @@
         "/fonduri-europene-nord-est",
         "/consultanta-afir",
         "/verificare-eligibilitate-fonduri-europene",
-        "/contact"
+        "/contact",
+        "/gal-afir"
       ],
       "sourceKeys": [
         "leader-gal",
@@ -5735,7 +6223,738 @@
       "heroIcon": "ph-duotone ph-map-pin",
       "guideCtaLabel": "Ghid DR 36 AFIR",
       "minWords": 1100,
-      "minFaq": 8
+      "minFaq": 8,
+      "contentSections": [
+        {
+          "title": "Ghid complet GAL-AFIR",
+          "paragraphs": [
+            "Pagina de apeluri GAL ramane orientata pe identificarea sesiunilor locale. Pentru explicatia completa despre GAL-AFIR, beneficiari publici si privati, scriere de proiecte si preluare implementare, foloseste hub-ul dedicat."
+          ],
+          "links": [
+            {
+              "href": "/gal-afir",
+              "label": "Ghid complet GAL-AFIR"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "e-move",
+      "output": "e-move/index.html",
+      "type": "program",
+      "schemaType": "GovernmentService",
+      "category": "Mobilitate electrica",
+      "title": "e-MOVE RO 2026 - statii de incarcare, eligibilitate si dosar",
+      "description": "Program e-MOVE RO pentru mobilitate electrica: statii de incarcare, energie regenerabila, beneficiari, cheltuieli, documente si pasi de pregatire.",
+      "h1": "e-MOVE RO: statii de incarcare, energie regenerabila si pregatirea dosarului",
+      "programName": "e-MOVE RO",
+      "heroIcon": "ph-duotone ph-battery-charging",
+      "funding": "valoarea sprijinului, intensitatea si plafoanele se confirma exclusiv din ghidul oficial al apelului activ.",
+      "quickAnswer": "e-MOVE RO trebuie analizat ca un proiect de infrastructura, nu doar ca o oportunitate de finantare. Inainte de depunere se verifica beneficiarul, amplasamentul, dreptul asupra terenului, avizele, racordarea, capacitatea tehnica, sursa de energie, bugetul, cofinantarea si obligatiile de operare dupa finalizare. Programul poate sprijini statii de incarcare si elemente asociate mobilitatii electrice, dar valorile, intensitatea si conditiile finale se confirma in ghidul activ publicat de autoritate. Pregatirea corecta incepe cu analiza locatiei, a documentelor si a operarii, nu cu lista de achizitii. FABER poate ajuta la analiza eligibilitatii, structurarea dosarului, buget, riscuri si clarificari, fara a promite aprobarea finantarii. Sursa oficiala trebuie recitita inaintea fiecarei decizii.",
+      "policyContribution": "programul sustine infrastructura de mobilitate cu emisii zero si investitii care pot reduce presiunea energetica a transportului, daca proiectul respecta ghidul activ, schema de ajutor de stat si conditiile tehnice aplicabile.",
+      "audience": [
+        "beneficiari care pot implementa infrastructura de incarcare",
+        "operatori economici sau entitati eligibile conform ghidului activ",
+        "solicitanti care au amplasament, buget si documente tehnice verificabile"
+      ],
+      "eligibility": [
+        "beneficiarul trebuie sa se incadreze in categoriile permise de apelul activ",
+        "amplasamentul trebuie sa fie documentat si disponibil pentru investitie",
+        "investitia trebuie sa fie justificata tehnic, financiar si operational"
+      ],
+      "mandatory": [
+        "verificarea dreptului asupra amplasamentului",
+        "verificarea avizelor, racordarii si conditiilor tehnice",
+        "buget realist si oferte comparabile",
+        "confirmarea obligatiilor de operare si mentenanta"
+      ],
+      "eligibleExpenses": [
+        "statii de incarcare si echipamente conexe, daca apelul le permite",
+        "lucrari de instalare si racordare necesare investitiei",
+        "software, monitorizare si echipamente de gestiune",
+        "surse regenerabile sau stocare, daca sunt permise de ghid",
+        "servicii tehnice si documentatii in limitele apelului"
+      ],
+      "ineligibleExpenses": [
+        "cheltuieli incepute inainte de momentul permis",
+        "costuri fara legatura directa cu infrastructura finantata",
+        "echipamente nejustificate prin capacitate, amplasament sau flux",
+        "TVA sau costuri neeligibile conform ghidului",
+        "investitii fara avize sau fara drept clar asupra locatiei"
+      ],
+      "scoring": [
+        "maturitatea tehnica a proiectului",
+        "calitatea amplasamentului si accesibilitatea",
+        "eficienta energetica si impactul asupra mobilitatii",
+        "capacitatea de implementare si operare",
+        "documente complete si buget justificat"
+      ],
+      "steps": [
+        "verifica beneficiarul si amplasamentul",
+        "confirma avizele si conditiile tehnice",
+        "stabileste investitia si ofertele",
+        "calculeaza bugetul, cofinantarea si cash-flow-ul",
+        "pregateste cererea si anexele"
+      ],
+      "evaluation": [
+        "verificare administrativa",
+        "verificare eligibilitate beneficiar si investitie",
+        "evaluare tehnico-economica",
+        "selectie, contractare, implementare si monitorizare"
+      ],
+      "examples": [
+        "statii de incarcare intr-un amplasament cu acces public sau operational clar",
+        "infrastructura de incarcare corelata cu sursa de energie si capacitatea disponibila",
+        "proiect cu software de monitorizare si mentenanta justificata"
+      ],
+      "faq": [
+        [
+          "Ce este e-MOVE RO?",
+          "e-MOVE RO este o linie de finantare care trebuie verificata prin ghidul activ si care poate viza infrastructura de mobilitate electrica, statii de incarcare si elemente asociate, in functie de forma finala a apelului."
+        ],
+        [
+          "Cine poate aplica la e-MOVE?",
+          "Pot aplica doar beneficiarii acceptati de ghidul oficial. Inainte de depunere trebuie verificate forma solicitantului, amplasamentul, capacitatea financiara si documentele tehnice."
+        ],
+        [
+          "Ce investitii pot fi eligibile?",
+          "Pot fi eligibile statii de incarcare, lucrari de instalare, racordare, software, monitorizare, surse regenerabile sau stocare numai daca ghidul activ le permite."
+        ],
+        [
+          "Ce documente trebuie pregatite?",
+          "Sunt utile documentele solicitantului, dreptul asupra amplasamentului, avizele, solutia tehnica, ofertele, bugetul si dovezile de cofinantare."
+        ],
+        [
+          "De ce conteaza amplasamentul?",
+          "Amplasamentul decide accesul, racordarea, autorizarea, fluxul de utilizare si posibilitatea de operare dupa finalizarea investitiei."
+        ],
+        [
+          "Pot include energie regenerabila?",
+          "Doar daca ghidul activ permite surse regenerabile sau stocare ca parte a investitiei. Costurile trebuie separate si justificate."
+        ],
+        [
+          "Ce riscuri apar la evaluare?",
+          "Apar riscuri cand amplasamentul nu este clar, avizele lipsesc, racordarea nu este fezabila, bugetul este vag sau obligatiile de operare nu pot fi sustinute."
+        ],
+        [
+          "Cum poate ajuta FABER?",
+          "FABER poate analiza eligibilitatea, documentele, bugetul, riscurile si clarificarile, fara sa garanteze aprobarea finantarii."
+        ]
+      ],
+      "related": [
+        "/fondul-de-modernizare",
+        "/finantari-panouri-fotovoltaice",
+        "/surse-oficiale-fonduri-europene",
+        "/verificare-eligibilitate-fonduri-europene",
+        "/contact"
+      ],
+      "sourceKeys": [
+        "emove"
+      ],
+      "officialGuideKey": "emove",
+      "guideCtaLabel": "Sursa oficiala e-MOVE",
+      "template": "editorial-program",
+      "minWords": 1200,
+      "minFaq": 8,
+      "redirects": [
+        "/e-move.html",
+        "/e-move/",
+        "/e-move/index.html",
+        "/emove",
+        "/emove/",
+        "/e-move-ro",
+        "/e-move-ro/"
+      ],
+      "contentSections": [
+        {
+          "title": "Pe scurt",
+          "tableRows": [
+            [
+              "Program",
+              "e-MOVE RO"
+            ],
+            [
+              "Pentru cine",
+              "operatori economici sau entitati eligibile care pot implementa infrastructura de incarcare, conform ghidului apelului activ"
+            ],
+            [
+              "Finantare",
+              "valoarea, intensitatea si plafoanele se confirma exclusiv din ghidul oficial al apelului activ"
+            ],
+            [
+              "Ce verifici intai",
+              "amplasament, drept de folosinta, avize, racordare, capacitate tehnica, contributie proprie si obligatii de operare"
+            ],
+            [
+              "CTA",
+              "verificare eligibilitate si discutie de consultanta"
+            ]
+          ]
+        },
+        {
+          "title": "Ce verifici concret pentru e-MOVE",
+          "paragraphs": [
+            "Analiza incepe cu incadrarea solicitantului, tipul investitiei, locatia, accesul public sau operational, puterea instalata, racordarea si obligatiile de operare. Lista de echipamente vine dupa aceste verificari, nu inaintea lor."
+          ]
+        },
+        {
+          "title": "Cui se adreseaza",
+          "paragraphs": [
+            "Programul este relevant pentru solicitanti care pot implementa si opera infrastructura de incarcare pe termenul cerut de ghid. Forma finala a beneficiarilor eligibili se confirma in apelul activ."
+          ]
+        },
+        {
+          "title": "Beneficiari eligibili",
+          "paragraphs": [
+            "Beneficiarul trebuie sa poata demonstra forma juridica, capacitatea financiara, dreptul asupra amplasamentului si capacitatea de a respecta obligatiile post-implementare."
+          ]
+        },
+        {
+          "title": "Investitii eligibile",
+          "paragraphs": [
+            "Investitiile pot include infrastructura de incarcare, lucrari conexe, racordare, sisteme de monitorizare si componente energetice, numai daca sunt permise de ghid si justificate tehnic."
+          ]
+        },
+        {
+          "title": "Cheltuieli sensibile si riscuri",
+          "paragraphs": [
+            "Sunt sensibile costurile fara legatura directa cu obiectivul, echipamentele supradimensionate, avizele lipsa, racordarea neconfirmata si bugetele construite pe oferte necomparabile."
+          ]
+        },
+        {
+          "title": "Documente pregatitoare",
+          "paragraphs": [
+            "Pregatirea include acte solicitant, documente pentru teren sau spatiu, solutie tehnica, avize, oferte, estimare de consum sau utilizare, buget, cofinantare si asumari operationale."
+          ]
+        },
+        {
+          "title": "Amplasament, avize si racordare",
+          "paragraphs": [
+            "Amplasamentul trebuie verificat juridic si tehnic: acces, drept de folosinta, autorizari, racordare, putere disponibila, restrictii urbanistice si posibilitatea de operare dupa finalizare."
+          ]
+        },
+        {
+          "title": "Energie regenerabila si stocare",
+          "paragraphs": [
+            "Daca ghidul permite componente de energie regenerabila sau stocare, acestea trebuie dimensionate separat, corelate cu infrastructura de incarcare si sustinute prin documente tehnice."
+          ]
+        },
+        {
+          "title": "Calendar si depunere",
+          "paragraphs": [
+            "Calendarul se confirma exclusiv in sursa oficiala. O decizie buna presupune pregatirea documentelor inainte de deschiderea depunerii, mai ales cand sunt necesare avize sau clarificari tehnice."
+          ]
+        },
+        {
+          "title": "Evaluare, selectie si contractare",
+          "paragraphs": [
+            "Dupa depunere pot aparea verificari administrative, clarificari tehnice, selectie competitiva, contractare si obligatii de implementare, raportare, mentenanta si operare."
+          ]
+        },
+        {
+          "title": "Cum ajuta FABER",
+          "paragraphs": [
+            "FABER poate verifica incadrarea, documentele, bugetul, riscurile, sursele oficiale si raspunsurile la clarificari. Analiza reduce riscurile, dar nu garanteaza aprobarea finantarii."
+          ]
+        },
+        {
+          "title": "Surse oficiale consultate",
+          "paragraphs": [
+            "Pentru decizia finala se verifica pagina DGPET/MTI, schema de ajutor de stat, ghidul solicitantului, anexele, corrigendumurile si orice revizie oficiala publicata ulterior."
+          ]
+        }
+      ],
+      "applicantRows": [
+        [
+          "Operator economic sau entitate eligibila",
+          "Posibila, daca forma finala a ghidului o permite",
+          "Forma juridica, activitate, situatia financiara si obligatii asumate",
+          "Nu se decide pe baza denumirii programului, ci pe ghidul activ"
+        ],
+        [
+          "Solicitant cu amplasament identificat",
+          "Posibila, daca dreptul de folosinta este documentat",
+          "Acte teren/spatiu, durata, acces, restrictii si autorizari",
+          "Amplasamentul fragil poate bloca proiectul"
+        ],
+        [
+          "Solicitant cu investitie tehnica matura",
+          "Posibila, daca solutia si racordarea sunt fezabile",
+          "Putere, racordare, avize, oferte si operare",
+          "Lista de echipamente trebuie justificata"
+        ]
+      ],
+      "eligibleInvestmentRows": [
+        [
+          "Statii de incarcare",
+          "Echipamente si componente conexe",
+          "Dimensionare, standarde, capacitate si operare",
+          "ghidul oficial e-MOVE"
+        ],
+        [
+          "Racordare si lucrari conexe",
+          "Instalare, cablare, lucrari necesare functionarii",
+          "Avize, drepturi asupra amplasamentului si costuri neeligibile",
+          "ghidul oficial e-MOVE"
+        ],
+        [
+          "Software si monitorizare",
+          "Gestiune, monitorizare, raportare sau plata",
+          "Legatura directa cu infrastructura finantata",
+          "ghidul oficial e-MOVE"
+        ],
+        [
+          "Energie regenerabila sau stocare",
+          "Componente permise de apel",
+          "Separare bugetara si justificare tehnica",
+          "ghidul oficial e-MOVE"
+        ]
+      ],
+      "documentRows": [
+        [
+          "Acte solicitant",
+          "Beneficiar",
+          "La verificarea eligibilitatii",
+          "Incadrare gresita sau respingere administrativa"
+        ],
+        [
+          "Documente amplasament",
+          "Beneficiar",
+          "Inainte de solutia tehnica",
+          "Blocaj la autorizare sau contractare"
+        ],
+        [
+          "Avize si racordare",
+          "Beneficiar si specialist tehnic",
+          "Inainte de bugetul final",
+          "Costuri nerealiste sau solutie nefezabila"
+        ],
+        [
+          "Oferte si specificatii",
+          "Furnizori",
+          "La construirea bugetului",
+          "Cheltuieli taiate sau clarificari"
+        ],
+        [
+          "Dovezi cofinantare",
+          "Beneficiar",
+          "Inainte de depunere",
+          "Proiect aprobat dar greu de sustinut financiar"
+        ]
+      ],
+      "preparationSteps": [
+        [
+          "Verifica solicitantul.",
+          "Confirma forma juridica, activitatea si restrictiile apelului activ."
+        ],
+        [
+          "Verifica amplasamentul.",
+          "Controleaza dreptul de folosinta, accesul, avizele si racordarea."
+        ],
+        [
+          "Construieste solutia tehnica.",
+          "Leaga statiile, puterea, softul si eventualele componente energetice."
+        ],
+        [
+          "Construieste bugetul.",
+          "Separa eligibilele, neeligibilele, TVA, cofinantarea si rezervele."
+        ],
+        [
+          "Pregateste depunerea.",
+          "Aliniaza cererea, anexele, ofertele si raspunsurile la riscurile anticipate."
+        ]
+      ],
+      "commonMistakes": [
+        "pornirea de la echipamente inainte de verificarea amplasamentului",
+        "drept de folosinta insuficient sau greu de demonstrat",
+        "racordare estimata optimist fara confirmare tehnica",
+        "buget construit pe oferte necomparabile",
+        "componenta regenerabila inclusa fara baza in ghid",
+        "obligatii de operare si mentenanta ignorate"
+      ],
+      "caseExample": {
+        "title": "Exemplu metodologic e-MOVE",
+        "context": "Un solicitant are un amplasament vizibil si doreste statii de incarcare plus monitorizare.",
+        "approach": "FABER verifica dreptul asupra locatiei, racordarea, avizele, fluxul de utilizare, ofertele si cofinantarea inainte de redactare.",
+        "result": "Daca locatia sau racordarea nu pot fi dovedite, proiectul se ajusteaza sau se amana pana la clarificarea documentelor."
+      }
+    },
+    {
+      "slug": "gal-afir",
+      "output": "gal-afir/index.html",
+      "type": "program",
+      "schemaType": "GovernmentService",
+      "category": "LEADER / GAL / AFIR",
+      "title": "GAL-AFIR 2026 - apeluri LEADER pentru beneficiari publici si privati",
+      "description": "Consultanta pentru apeluri GAL-AFIR: proiecte LEADER pentru primarii, firme, ONG-uri si beneficiari privati. Scriem proiecte noi si preluam proiecte in implementare.",
+      "h1": "GAL-AFIR: apeluri LEADER pentru beneficiari publici si privati",
+      "programName": "GAL-AFIR / LEADER",
+      "heroIcon": "ph-duotone ph-map-pin",
+      "funding": "valoarea sprijinului, intensitatea si contributia proprie se verifica in ghidul GAL activ.",
+      "quickAnswer": "GAL-AFIR inseamna finantari locale lansate prin Grupuri de Actiune Locala, cu reguli stabilite in ghidul fiecarui GAL si in cadrul AFIR. Proiectele pot viza beneficiari publici si privati, in functie de interventia locala. Inainte de depunere trebuie verificata localizarea in teritoriul GAL, tipul beneficiarului, eligibilitatea investitiei, bugetul, punctajul si documentele cerute. Diferentele dintre ghiduri sunt importante, pentru ca doua localitati pot avea criterii si bugete diferite. FABER scrie proiecte GAL si poate prelua proiecte aflate in implementare, inclusiv pentru achizitii, cereri de plata, raportari si clarificari, daca documentele si contractul permit acest lucru. Aceasta verificare separa oportunitatile reale de depunerile grabite sau greu de implementat.",
+      "policyContribution": "interventia LEADER sprijina dezvoltarea locala prin strategii GAL, iar proiectele trebuie sa raspunda nevoilor din teritoriu si sa respecte procedurile AFIR si ghidul local activ.",
+      "audience": [
+        "UAT-uri, ADI-uri si entitati publice eligibile prin GAL",
+        "firme, fermieri, PFA, II, IF, ONG-uri sau beneficiari privati eligibili",
+        "beneficiari cu proiecte GAL deja contractate si aflate in implementare"
+      ],
+      "eligibility": [
+        "proiectul trebuie sa fie localizat in teritoriul GAL relevant",
+        "beneficiarul trebuie sa fie acceptat de ghidul local",
+        "investitia trebuie sa respecte strategia GAL si criteriile de selectie"
+      ],
+      "mandatory": [
+        "identificarea GAL-ului competent",
+        "verificarea ghidului local si a anexelor",
+        "confirmarea tipului de beneficiar public sau privat",
+        "analiza punctajului si a documentelor obligatorii"
+      ],
+      "eligibleExpenses": [
+        "dotari si echipamente pentru servicii publice locale, daca ghidul permite",
+        "investitii pentru firme sau activitati non-agricole, daca sunt prevazute in interventia GAL",
+        "utilaje, echipamente, digitalizare sau servicii locale, conform apelului",
+        "documentatii, proiectare si costuri generale in limitele ghidului"
+      ],
+      "ineligibleExpenses": [
+        "investitii in afara teritoriului GAL",
+        "cheltuieli care nu sunt prevazute in ghidul local",
+        "achizitii incepute inainte de momentul permis",
+        "costuri fara oferte sau justificare",
+        "dubla finantare"
+      ],
+      "scoring": [
+        "alinierea cu strategia GAL",
+        "populatia sau grupul tinta deservit",
+        "maturitatea documentelor",
+        "impactul local",
+        "contributia proprie, daca puncteaza"
+      ],
+      "steps": [
+        "identifica GAL-ul si apelul activ",
+        "verifica beneficiarul si investitia",
+        "calculeaza punctajul si bugetul",
+        "pregateste documentele si ofertele",
+        "depune proiectul si raspunde la clarificari"
+      ],
+      "evaluation": [
+        "verificare la nivel GAL",
+        "selectie conform criteriilor locale",
+        "verificare AFIR",
+        "contractare, achizitii, cereri de plata si monitorizare"
+      ],
+      "examples": [
+        "primarie care achizitioneaza utilaj pentru servicii locale",
+        "firma care dezvolta o activitate non-agricola in teritoriul GAL",
+        "beneficiar privat care are nevoie de sprijin pentru implementare si cereri de plata"
+      ],
+      "faq": [
+        [
+          "Ce este GAL-AFIR?",
+          "GAL-AFIR se refera la apelurile locale LEADER lansate prin Grupuri de Actiune Locala si verificate in cadrul AFIR."
+        ],
+        [
+          "Cine poate aplica la un apel GAL?",
+          "Pot aplica beneficiarii acceptati de ghidul GAL local: publici sau privati, in functie de interventie."
+        ],
+        [
+          "FABER scrie proiecte GAL?",
+          "Da. FABER poate sprijini pregatirea cererii, bugetului, documentelor, ofertelor si raspunsurilor la clarificari."
+        ],
+        [
+          "FABER preia proiecte GAL in implementare?",
+          "Da, daca documentele si contractul permit acest lucru. Preluarea poate include achizitii, cereri de plata, raportari si clarificari."
+        ],
+        [
+          "Ce verific prima data?",
+          "Verifica teritoriul GAL, tipul beneficiarului, investitia, punctajul, bugetul si documentele obligatorii."
+        ],
+        [
+          "De ce difera apelurile GAL intre localitati?",
+          "Fiecare GAL are strategie proprie, alocari, criterii si ghiduri locale, chiar daca lucreaza in cadrul LEADER/AFIR."
+        ],
+        [
+          "Beneficiarii publici si privati au aceleasi reguli?",
+          "Nu. Regulile difera dupa tipul beneficiarului, interventia GAL si procedurile de achizitie, plata si implementare."
+        ],
+        [
+          "Unde vad apelurile GAL active?",
+          "Porneste de la pagina GAL-ului local si de la sursele AFIR LEADER, apoi confirma ghidul local, anexele si calendarul apelului."
+        ]
+      ],
+      "related": [
+        "/apeluri-gal",
+        "/consultanta-afir",
+        "/fonduri-europene-agricultura",
+        "/fonduri-europene-nerambursabile-2026",
+        "/verificare-eligibilitate-fonduri-europene",
+        "/contact"
+      ],
+      "sourceKeys": [
+        "leader-gal",
+        "dr36-leader"
+      ],
+      "officialGuideKey": "leader-gal",
+      "guideCtaLabel": "Surse AFIR LEADER",
+      "template": "editorial-program",
+      "minWords": 1400,
+      "minFaq": 8,
+      "redirects": [
+        "/gal-afir.html",
+        "/gal-afir/",
+        "/gal-afir/index.html",
+        "/gal-leader",
+        "/gal-leader/",
+        "/leader-afir",
+        "/leader-afir/"
+      ],
+      "heroCtas": [
+        {
+          "label": "Solicita verificare eligibilitate",
+          "href": "/verificare-eligibilitate-fonduri-europene",
+          "className": "btn btn-primary"
+        },
+        {
+          "label": "Vezi apeluri GAL",
+          "href": "/apeluri-gal",
+          "className": "btn btn-secondary"
+        },
+        {
+          "label": "Surse AFIR LEADER",
+          "sourceKey": "leader-gal",
+          "fallbackHref": "/surse-oficiale-fonduri-europene",
+          "className": "btn btn-secondary"
+        }
+      ],
+      "contentSections": [
+        {
+          "title": "Pe scurt",
+          "tableRows": [
+            [
+              "Beneficiari publici",
+              "UAT-uri, ADI-uri, institutii sau entitati eligibile conform ghidului GAL local"
+            ],
+            [
+              "Beneficiari privati",
+              "firme, PFA/II/IF, ONG-uri, fermieri sau alte forme acceptate de apelul local"
+            ],
+            [
+              "Proiecte posibile",
+              "dotari, servicii locale, utilaje, digitalizare, investitii non-agricole, infrastructura mica, proiecte sociale sau economice, in functie de interventia GAL"
+            ],
+            [
+              "Ce verifici intai",
+              "localizarea in teritoriul GAL, tipul beneficiarului, ghidul local, punctajul, bugetul disponibil si documentele cerute"
+            ]
+          ]
+        },
+        {
+          "title": "Ce sunt apelurile GAL-AFIR",
+          "paragraphs": [
+            "Apelurile GAL sunt sesiuni locale de finantare lansate prin Grupuri de Actiune Locala. Regulile se citesc in ghidul local si se coreleaza cu procedurile AFIR si cadrul LEADER."
+          ]
+        },
+        {
+          "title": "Diferenta dintre beneficiar public si beneficiar privat",
+          "paragraphs": [
+            "Beneficiarii publici lucreaza de obicei cu hotarari, mandate, bugete publice si reguli de achizitie specifice. Beneficiarii privati trebuie sa confirme forma juridica, activitatea, localizarea, capacitatea financiara si cheltuielile permise."
+          ]
+        },
+        {
+          "title": "Tipuri de proiecte eligibile",
+          "paragraphs": [
+            "Tipurile de proiecte difera de la un GAL la altul: servicii locale, dotari, utilaje, investitii non-agricole, proiecte sociale, infrastructura mica sau interventii economice. Lista finala se confirma in apelul local."
+          ]
+        },
+        {
+          "title": "Ce verifici inainte de depunere",
+          "paragraphs": [
+            "Verifica localitatea, GAL-ul competent, ghidul local, incadrarea beneficiarului, punctajul, bugetul disponibil, contributia proprie si documentele care pot demonstra fiecare criteriu."
+          ]
+        },
+        {
+          "title": "Documente necesare",
+          "paragraphs": [
+            "Documentele pot include acte solicitant, documente de localizare, buget, oferte, hotarari sau declaratii, documente tehnice si anexe GAL/AFIR. Lista exacta se verifica in ghidul activ."
+          ]
+        },
+        {
+          "title": "Punctaj si criterii locale",
+          "paragraphs": [
+            "Punctajul este local si trebuie estimat prudent. Un criteriu se ia in calcul doar daca poate fi dovedit prin documente, nu doar prin intentie sau formulare comerciale."
+          ]
+        },
+        {
+          "title": "Scriere proiecte GAL",
+          "paragraphs": [
+            "Scrierea proiectului trebuie sa lege obiectivul local, beneficiarul, investitia, bugetul, punctajul si capacitatea de implementare. Un proiect GAL bun este simplu de verificat si coerent cu strategia locala."
+          ]
+        },
+        {
+          "title": "Scriem proiecte GAL si preluam proiecte in implementare",
+          "paragraphs": [
+            "FABER poate sprijini beneficiarii publici si privati in pregatirea proiectelor GAL, de la verificarea eligibilitatii pana la buget, documente, cerere de finantare si clarificari. Pentru proiectele deja contractate, putem analiza documentatia existenta si putem prelua suportul de implementare, inclusiv achizitii, cereri de plata, raportari si raspunsuri la solicitarile GAL sau AFIR, in limitele contractului si ale procedurilor aplicabile."
+          ]
+        },
+        {
+          "title": "Preluare proiecte GAL in implementare",
+          "paragraphs": [
+            "Preluarea incepe cu auditul contractului, anexelor, achizitiilor, platii si corespondentei existente. Daca documentele permit, FABER poate continua suportul de implementare fara a rescrie istoricul proiectului."
+          ]
+        },
+        {
+          "title": "Riscuri frecvente",
+          "paragraphs": [
+            "Riscurile apar la localizare gresita, ghid citit incomplet, punctaj supraestimat, cheltuieli incepute prea devreme, oferte neclare, achizitii neconforme sau raportari intarziate."
+          ]
+        },
+        {
+          "title": "Cum lucreaza FABER",
+          "paragraphs": [
+            "FABER lucreaza prudent: verifica ghidul local, documentele, punctajul, bugetul si riscurile inainte de recomandarea depunerii sau preluarii implementarii."
+          ]
+        },
+        {
+          "title": "Legaturi catre pagini relevante",
+          "links": [
+            {
+              "href": "/apeluri-gal",
+              "label": "Apeluri GAL active si orientare operationala"
+            },
+            {
+              "href": "/consultanta-afir",
+              "label": "Consultanta AFIR si implementare"
+            },
+            {
+              "href": "/verificare-eligibilitate-fonduri-europene",
+              "label": "Verificare eligibilitate"
+            }
+          ],
+          "paragraphs": [
+            "Pentru o analiza completa, pagina GAL-AFIR trebuie citita impreuna cu apelurile GAL publicate, consultanta AFIR, fondurile pentru agricultura si pagina de verificare eligibilitate. Aceasta legatura ajuta solicitantul sa treaca de la interes general la o decizie concreta: ce GAL este competent, ce ghid local se aplica, ce document lipseste si cine poate gestiona implementarea dupa contractare."
+          ]
+        }
+      ],
+      "applicantRows": [
+        [
+          "UAT / ADI / entitate publica",
+          "Posibila, daca ghidul GAL local accepta beneficiarul",
+          "Localizare, mandat, buget, documente publice si achizitii",
+          "Regulile publice pot schimba calendarul de implementare"
+        ],
+        [
+          "Firma / PFA / II / IF",
+          "Posibila, daca forma si activitatea sunt eligibile",
+          "CAEN, localizare, vechime, buget, oferte si punctaj",
+          "Apelurile difera intre GAL-uri"
+        ],
+        [
+          "ONG sau beneficiar privat",
+          "Posibila, daca interventia locala il accepta",
+          "Statut, activitate, locatie, grup tinta si documente",
+          "Eligibilitatea finala este in ghidul local"
+        ],
+        [
+          "Proiect deja contractat",
+          "Poate fi preluat pentru implementare daca documentele permit",
+          "Contract, anexe, achizitii, cereri de plata si corespondenta",
+          "Preluarea nu schimba obligatiile asumate"
+        ]
+      ],
+      "eligibleInvestmentRows": [
+        [
+          "Dotari si utilaje",
+          "Echipamente pentru servicii locale sau activitati economice",
+          "Dimensionare, oferte si legatura cu obiectivul",
+          "ghid GAL activ"
+        ],
+        [
+          "Investitii non-agricole",
+          "Activitati economice locale permise de interventie",
+          "CAEN, localizare, buget si punctaj",
+          "ghid GAL activ"
+        ],
+        [
+          "Proiecte publice locale",
+          "Servicii, infrastructura mica sau dotari comunitare",
+          "Mandat, achizitii, documente tehnice",
+          "ghid GAL activ"
+        ],
+        [
+          "Servicii si costuri generale",
+          "Consultanta, proiectare sau documentatii, daca sunt permise",
+          "Plafoane si momentul contractarii",
+          "ghid GAL activ"
+        ]
+      ],
+      "documentRows": [
+        [
+          "Ghid local si anexe",
+          "GAL / beneficiar",
+          "Inainte de orice buget",
+          "Reguli aplicate gresit"
+        ],
+        [
+          "Acte beneficiar",
+          "Beneficiar",
+          "La verificarea eligibilitatii",
+          "Respingeri administrative"
+        ],
+        [
+          "Documente locatie",
+          "Beneficiar",
+          "Inainte de depunere",
+          "Proiect in afara teritoriului sau fara drept de folosinta"
+        ],
+        [
+          "Buget si oferte",
+          "Beneficiar si furnizori",
+          "La redactarea proiectului",
+          "Cheltuieli taiate sau clarificari"
+        ],
+        [
+          "Documente implementare",
+          "Beneficiar / consultant",
+          "Dupa contractare",
+          "Achizitii, plati sau raportari blocate"
+        ]
+      ],
+      "preparationSteps": [
+        [
+          "Identifica GAL-ul.",
+          "Confirma ca localitatea si investitia intra in teritoriul GAL."
+        ],
+        [
+          "Citeste ghidul local.",
+          "Verifica beneficiarii, cheltuielile, punctajul si anexele."
+        ],
+        [
+          "Verifica public/privat.",
+          "Stabileste regulile specifice tipului de beneficiar."
+        ],
+        [
+          "Construieste bugetul.",
+          "Leaga ofertele de obiectiv si de criteriile locale."
+        ],
+        [
+          "Pregateste implementarea.",
+          "Anticipeaza achizitii, cereri de plata, raportari si clarificari."
+        ]
+      ],
+      "commonMistakes": [
+        "alegerea GAL-ului gresit sau ignorarea teritoriului eligibil",
+        "confundarea regulilor GAL cu reguli generale AFIR",
+        "punctaj local estimat fara documente",
+        "cheltuieli incepute inainte de momentul permis",
+        "buget fara oferte comparabile",
+        "preluarea implementarii fara auditul contractului si anexelor"
+      ],
+      "caseExample": {
+        "title": "Exemplu metodologic GAL-AFIR",
+        "context": "Un beneficiar privat dintr-un teritoriu GAL vrea dotari pentru o activitate locala si are un proiect cu termen scurt.",
+        "approach": "FABER verifica ghidul local, incadrarea beneficiarului, punctajul, bugetul si documentele inainte de depunere sau preluarea implementarii.",
+        "result": "Daca punctajul sau documentele sunt fragile, proiectul se ajusteaza, se amana sau se pregateste doar pentru o sesiune potrivita."
+      }
     }
   ]
 }

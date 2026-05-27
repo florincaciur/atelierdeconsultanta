@@ -192,6 +192,36 @@
       margin-bottom: 28px; padding-bottom: 14px;
       border-bottom: 2px solid var(--gray-200);
     }
+    .category-filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 0 0 28px;
+    }
+    .category-filter {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: 999px;
+      color: var(--text-soft);
+      cursor: pointer;
+      font: inherit;
+      font-size: 0.82rem;
+      font-weight: 800;
+      min-height: 42px;
+      padding: 9px 16px;
+      transition: background .2s, border-color .2s, color .2s, transform .2s;
+    }
+    .category-filter:hover,
+    .category-filter.active {
+      background: var(--orange);
+      border-color: var(--orange);
+      color: var(--white);
+      transform: translateY(-1px);
+    }
+    .category-filter:focus-visible {
+      outline: 3px solid rgba(249,115,22,.25);
+      outline-offset: 3px;
+    }
     .posts-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -502,6 +532,15 @@
 
       <!-- DYNAMIC POST GRID -->
       <div class="posts-section-title">Articole recente</div>
+      <div class="category-filters" role="group" aria-label="Filtre categorii blog">
+        <button class="category-filter active" type="button" data-blog-filter="all" aria-pressed="true">Toate</button>
+        <button class="category-filter" type="button" data-blog-filter="afir" aria-pressed="false">AFIR</button>
+        <button class="category-filter" type="button" data-blog-filter="start-up" aria-pressed="false">Start-Up Nation</button>
+        <button class="category-filter" type="button" data-blog-filter="digitalizare" aria-pressed="false">Digitalizare</button>
+        <button class="category-filter" type="button" data-blog-filter="gal" aria-pressed="false">GAL</button>
+        <button class="category-filter" type="button" data-blog-filter="energie" aria-pressed="false">Energie</button>
+        <button class="category-filter" type="button" data-blog-filter="imm" aria-pressed="false">IMM</button>
+      </div>
       <div class="posts-grid" id="posts-grid">
         <article class="post-card">
           <a href="/cum-alegi-programul-potrivit-fonduri-europene-2026" aria-label="Cum alegi programul potrivit de fonduri europene în 2026">
@@ -673,6 +712,8 @@
   </footer>
 
   <script>
+  let activeBlogFilter = 'all';
+
   (async function () {
     const params  = new URLSearchParams(location.search);
     const postId  = params.get('post');
@@ -697,6 +738,7 @@
     // ── MOD HUB (fără parametru ?post=) ──────────────────────────────
     if (!postId) {
       hubEl.style.display = 'block';
+      setupBlogCategoryFilters(posts);
       renderPostGrid(posts);
       return;
     }
@@ -794,14 +836,48 @@
 
   })();
 
+  function blogFilterText(post) {
+    return [
+      post.category,
+      post.title,
+      post.excerpt,
+      post.primaryKeyword,
+      (post.secondaryKeywords || []).join(' ')
+    ].join(' ').toLowerCase();
+  }
+
+  function matchesBlogFilter(post, filter) {
+    if (!filter || filter === 'all') return true;
+    const text = blogFilterText(post);
+    if (filter === 'start-up') return /start|startup|start-up/.test(text);
+    if (filter === 'gal') return /gal|leader/.test(text);
+    if (filter === 'imm') return /imm|microintreprind/.test(text);
+    return text.indexOf(filter) !== -1;
+  }
+
+  function setupBlogCategoryFilters(posts) {
+    document.querySelectorAll('[data-blog-filter]').forEach(button => {
+      button.addEventListener('click', () => {
+        activeBlogFilter = button.getAttribute('data-blog-filter') || 'all';
+        document.querySelectorAll('[data-blog-filter]').forEach(item => {
+          const isActive = item === button;
+          item.classList.toggle('active', isActive);
+          item.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+        });
+        renderPostGrid(posts);
+      });
+    });
+  }
+
   function renderPostGrid(posts) {
     const grid = document.getElementById('posts-grid');
-    if (!posts.length) {
+    const visiblePosts = posts.filter(p => matchesBlogFilter(p, activeBlogFilter));
+    if (!visiblePosts.length) {
       grid.innerHTML = '<div class="no-posts"><p>Nu există articole publicate momentan. Reveniți în curând.</p></div>';
       return;
     }
     grid.innerHTML = '';
-    posts.forEach(p => {
+    visiblePosts.forEach(p => {
       const card = document.createElement('article');
       card.className = 'post-card';
       const postHref = p.canonicalUrl || ('/' + (p.slug || p.id));

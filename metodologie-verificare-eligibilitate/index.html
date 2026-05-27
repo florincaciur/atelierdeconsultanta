@@ -24,8 +24,13 @@
     .method-list { display: grid; gap: 14px; margin: 18px 0 0; padding: 0; list-style: none; }
     .method-list li { border: 1px solid var(--gray-200); border-radius: var(--radius-sm); background: var(--gray-100); padding: 16px 18px; color: var(--text-soft); }
     .method-list strong { display: block; color: var(--navy); margin-bottom: 4px; }
+    .eligibility-flow { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 8px; margin: 18px 0 20px; }
+    .eligibility-flow span { align-items: center; background: #fff7ed; border: 1px solid rgba(249, 115, 22, .28); border-radius: 8px; color: var(--navy); display: flex; font-size: .78rem; font-weight: 900; justify-content: center; min-height: 58px; padding: 10px; text-align: center; }
+    .eligibility-flow span::after { color: var(--orange); content: "->"; margin-left: 8px; }
+    .eligibility-flow span:last-child::after { content: ""; margin: 0; }
     .compact-checklist { columns: 2; column-gap: 36px; }
     .compact-checklist li { break-inside: avoid; }
+    @media (max-width: 900px) { .eligibility-flow { grid-template-columns: repeat(2, minmax(0, 1fr)); } .eligibility-flow span::after { content: ""; margin: 0; } }
     @media (max-width: 760px) { .compact-checklist { columns: 1; } }
   </style>
 
@@ -84,7 +89,7 @@
           "@id": "https://atelierdeconsultanta.ro/#organization"
         },
         "datePublished": "2026-05-20",
-        "dateModified": "2026-05-20",
+        "dateModified": "2026-05-27",
         "mainEntityOfPage": {
           "@id": "https://atelierdeconsultanta.ro/metodologie-verificare-eligibilitate#webpage"
         },
@@ -104,7 +109,7 @@
         "publisher": {
           "@id": "https://atelierdeconsultanta.ro/#organization"
         },
-        "dateModified": "2026-05-20"
+        "dateModified": "2026-05-27"
       },
       {
         "@type": "BreadcrumbList",
@@ -199,12 +204,21 @@
         <dl class="editorial-meta__grid">
           <div><dt>Autor</dt><dd>FABER - Atelier de Consultanta</dd></div>
           <div><dt>Reviewer</dt><dd>Echipa editoriala FABER</dd></div>
-          <div><dt>Ultima actualizare</dt><dd><time datetime="2026-05-20">20 mai 2026</time></dd></div>
+          <div><dt>Ultima actualizare</dt><dd><time datetime="2026-05-27">27 mai 2026</time></dd></div>
         </dl>
         <p class="editorial-meta__note">Informatiile sunt orientative. Pentru o decizie finala se verifica ghidul oficial, anexele si forma activa a apelului.</p>
       </section>
 
       <h2 id="flux-verificare">Flux de verificare</h2>
+      <div class="eligibility-flow" aria-label="Flux vizual verificare eligibilitate">
+        <span>Solicitant</span>
+        <span>Activitate / CAEN</span>
+        <span>Locatie</span>
+        <span>Investitie</span>
+        <span>Documente</span>
+        <span>Punctaj</span>
+        <span>Decizie</span>
+      </div>
       <ol class="process-list" aria-label="Flux verificare eligibilitate FABER">
         <li><strong>Date de baza.</strong> Solicitant, localitate, CAEN sau tip de exploatatie, investitie si buget estimat.</li>
         <li><strong>Potrivire program.</strong> Comparatie intre idee, ghid activ, apeluri regionale, AFIR, PNRR, Start-Up Nation sau GAL.</li>

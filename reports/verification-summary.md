@@ -1,14 +1,14 @@
 # Verification Summary
 
-Generated: 2026-05-26T17:20:35.687Z
+Generated: 2026-05-27T13:23:15.633Z
 Mode: check
 
 ## SEO
 
-Files checked: 164
-Passed: 164
+Files checked: 166
+Passed: 166
 Failed: 0
-Inline scripts checked: 275
+Inline scripts checked: 265
 Inline script failures: 0
 
 ## Functional

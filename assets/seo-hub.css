@@ -112,12 +112,15 @@ a { color: inherit; }
 .ph-plant::before { content: "*"; }
 .ph-desktop::before { content: "[]"; }
 .ph-sun::before { content: "o"; }
+.ph-battery-charging::before { content: "⚡"; }
 .ph-rocket-launch::before { content: "^"; }
 .ph-user-circle::before { content: "@"; }
 .ph-factory::before { content: "#"; }
 .ph-map-pin::before { content: "+"; }
 .ph-magnifying-glass::before { content: "?"; }
 .ph-file-text::before { content: "="; }
+.ph-bank::before { content: "▣"; }
+.ph-tractor::before { content: "T"; }
 .eyebrow {
   display: inline-block;
   background: var(--orange);

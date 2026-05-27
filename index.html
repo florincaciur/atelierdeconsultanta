@@ -704,6 +704,7 @@
     })(window, document, "wnvzyco6rq");
   </script>
   <link rel="stylesheet" href="/assets/see-also.css">
+  <link rel="stylesheet" href="/assets/program-carousel.css">
 <style id="requested-content-css">
       .homepage-snippet{padding:34px 24px;background:#fff7f3;border-bottom:1px solid #f0d4c5}
       .homepage-snippet p{max-width:980px;margin:0 auto;color:#1a2540;font-size:1.04rem;line-height:1.75}
@@ -781,6 +782,20 @@
               <div class="d-text">Femeia Antreprenor 2026<div class="d-label">Antreprenoriat Feminin</div></div>
             </a>
 
+            <a href="/gal-afir" class="dropdown-item" role="menuitem" data-service-id="gal-afir">
+              <div class="d-icon" style="background:rgba(34,197,94,0.2)">
+                <i class="ph-duotone ph-map-pin" style="color:#86efac"></i>
+              </div>
+              <div class="d-text">GAL-AFIR<div class="d-label">LEADER | public si privat</div></div>
+            </a>
+
+            <a href="/e-move" class="dropdown-item" role="menuitem" data-service-id="e-move">
+              <div class="d-icon" style="background:rgba(14,165,233,0.2)">
+                <i class="ph-duotone ph-battery-charging" style="color:#7dd3fc"></i>
+              </div>
+              <div class="d-text">e-MOVE RO<div class="d-label">Statii incarcare | mobilitate electrica</div></div>
+            </a>
+
             <a href="/pro-infra" class="dropdown-item" role="menuitem" data-service-id="pro-infra">
               <div class="d-icon" style="background:rgba(251,146,60,0.2)"><i class="ph-duotone ph-factory" style="color:#fdba74"></i></div>
               <div class="d-text">PRO INFRA<div class="d-label">Materiale Construcții | până la 15M EUR</div></div>
@@ -820,6 +835,8 @@
       <a href="/autoconsum-public-fotovoltaice-institutii-publice">Autoconsum Publici</a>
       <a href="/dr14">DR 14 – Ferme Mici</a>
       <a href="/digitalizare-imm">Digitalizare IMM</a>
+      <a href="/gal-afir">GAL-AFIR / LEADER</a>
+      <a href="/e-move">e-MOVE RO</a>
       <a href="/femeia-antreprenor-2026">Femeia Antreprenor 2026</a>
       <a href="/pro-infra">PRO INFRA</a>
       <a href="/start-up-nation-2026">Start-Up Nation 2026</a>
@@ -849,7 +866,7 @@
           FABER pentru firme, fermieri, start-up-uri și IMM-uri
         </div>
 
-        <h1 class="hero-title">Consultanță Fonduri Europene<br><span class="gradient-text">și Finanțări Nerambursabile</span></h1>
+        <h1 class="hero-title">Consultanță Fonduri Europene<br> <span class="gradient-text">și Finanțări Nerambursabile</span></h1>
 
         <p class="hero-subtitle">FABER ajută firme, fermieri, start-up-uri și IMM-uri să verifice eligibilitatea, să aleagă programul potrivit, să construiască strategia de punctaj și să pregătească dosarul pentru finanțări nerambursabile.</p>
 
@@ -860,6 +877,24 @@
 
       </div>
     </section>
+    <section id="carousel-section" class="program-carousel-section" aria-labelledby="program-carousel-title">
+      <div class="program-carousel-header">
+        <span class="section-label">Programe de finantare</span>
+        <h2 id="program-carousel-title">Programe urmarite de FABER</h2>
+        <p>Exploreaza programele principale de finantare si verifica ghidul inainte de decizia de aplicare.</p>
+      </div>
+
+      <div class="program-carousel" data-program-carousel>
+        <button class="program-carousel-btn prev" type="button" aria-label="Program anterior" onclick="moveProgramCarousel(-1)">‹</button>
+        <div class="program-carousel-viewport" id="program-carousel-viewport" tabindex="0" aria-label="Carusel programe de finantare">
+          <div class="program-carousel-track" id="program-carousel-track" aria-live="polite"></div>
+        </div>
+        <button class="program-carousel-btn next" type="button" aria-label="Program urmator" onclick="moveProgramCarousel(1)">›</button>
+      </div>
+
+      <div class="program-carousel-dots" id="program-carousel-dots" aria-label="Navigare slide-uri programe"></div>
+    </section>
+
     <section id="seo-ai-snippet" class="homepage-snippet" aria-label="Rezumat FABER">
       <p>FABER oferă consultanță pentru fonduri europene și finanțări nerambursabile, de la analiza eligibilității până la pregătirea dosarului și suportul în clarificări. Misiunea FABER este să ajute beneficiarii să aleagă programul potrivit, să estimeze prudent punctajul și să evite depunerile grăbite pe proiecte care nu pot fi susținute prin documente.</p>
     </section>
@@ -1139,6 +1174,30 @@
           </div>
         </article>
 
+        <article class="finantare-card reveal reveal-delay-1" data-service-id="fin-gal-afir" data-beneficiary="both">
+          <span class="finantare-badge badge-active">Local</span>
+          <span class="beneficiary-chip">Public / privat</span>
+          <h3 class="finantare-title">GAL-AFIR / LEADER</h3>
+          <p class="finantare-amount">Conform ghidului GAL activ</p>
+          <p style="font-size:0.85rem;color:var(--text-soft)">Apeluri locale pentru beneficiari publici si privati. Scriem proiecte noi si preluam proiecte in implementare.</p>
+          <div class="finantare-actions">
+            <a href="/gal-afir" class="btn-primary">Detalii GAL-AFIR</a>
+            <a class="btn-secondary" href="https://www.afir.ro/finantare/leader/" target="_blank" rel="noopener noreferrer">Surse AFIR LEADER</a>
+          </div>
+        </article>
+
+        <article class="finantare-card reveal reveal-delay-2" data-service-id="fin-e-move" data-beneficiary="both">
+          <span class="finantare-badge badge-planning">In pregatire</span>
+          <span class="beneficiary-chip">Public / privat</span>
+          <h3 class="finantare-title">e-MOVE RO</h3>
+          <p class="finantare-amount">Conform ghidului oficial</p>
+          <p style="font-size:0.85rem;color:var(--text-soft)">Mobilitate electrica, statii de incarcare si infrastructura asociata. Datele finale se verifica in apelul activ.</p>
+          <div class="finantare-actions">
+            <a href="/e-move" class="btn-primary">Detalii e-MOVE</a>
+            <a class="btn-secondary" href="/surse-oficiale-fonduri-europene">Surse oficiale</a>
+          </div>
+        </article>
+
         <article class="finantare-card reveal reveal-delay-3" data-service-id="fin-gal" data-beneficiary="both">
           <span class="finantare-badge badge-planning">Local</span>
           <span class="beneficiary-chip">Public / privat</span>
@@ -1375,6 +1434,9 @@
                   <option value="autoconsum-publici">Autoconsum Instituții Publice</option>
                   <option value="dr14">DR 14 – Ferme Mici</option>
                   <option value="digitalizare-imm">Digitalizare IMM</option>
+                  <option value="gal-afir">GAL-AFIR / LEADER</option>
+                  <option value="e-move">e-MOVE RO</option>
+                  <option value="preluare-implementare">Preluare proiect in implementare</option>
                   <option value="femeia-antreprenor">Femeia Antreprenor 2026</option>
                   <option value="pro-infra">PRO INFRA</option>
                   <option value="start-up-nation-2026">Start-Up Nation 2026</option>
@@ -1535,6 +1597,8 @@
           <li><a href="/autoconsum-public-fotovoltaice-institutii-publice">Autoconsum Publici</a></li>
           <li><a href="/dr14">DR 14 – Ferme Mici</a></li>
           <li><a href="/digitalizare-imm">Digitalizare IMM</a></li>
+          <li><a href="/gal-afir">GAL-AFIR</a></li>
+          <li><a href="/e-move">e-MOVE RO</a></li>
           <li><a href="/femeia-antreprenor-2026">Femeia Antreprenor</a></li>
           <li><a href="/pro-infra">PRO INFRA</a></li>
           <li><a href="/start-up-nation-2026">Start-Up Nation 2026</a></li>
@@ -1747,6 +1811,261 @@
     /* =====================================================
        ✦ SCROLL REVEAL — IntersectionObserver ✦
     ===================================================== */
+    var programCarouselState = {
+      index: 0,
+      slides: [],
+      sources: {},
+      track: null,
+      dots: null,
+      viewport: null
+    };
+
+    function escapeProgramHtml(value) {
+      return String(value == null ? '' : value).replace(/[&<>"']/g, function(char) {
+        return {
+          '&': '&amp;',
+          '<': '&lt;',
+          '>': '&gt;',
+          '"': '&quot;',
+          "'": '&#39;'
+        }[char];
+      });
+    }
+
+    function getProgramFallbackBanners() {
+      return [
+        {
+          id: 'slide-dr14',
+          tag: 'Agricultura - PAC 2023-2027',
+          title: 'DR 14\nFerme de Mici Dimensiuni',
+          description: 'Sprijin pentru ferme mici. Verifica SO, documentele exploatatiei, investitia si ghidul activ inainte de depunere.',
+          ctaText: 'Detalii program',
+          ctaLink: '/dr14',
+          icon: 'ph-tractor',
+          order: 1,
+          active: true,
+          officialGuideKey: 'dr14'
+        },
+        {
+          id: 'slide-dr12-afir',
+          tag: 'Agricultura si rural',
+          title: 'DR 12 / AFIR\nTineri fermieri',
+          description: 'Linie pentru consolidarea exploatatiilor tinerilor fermieri si a fermierilor recent instalati, verificata prin ghidul activ.',
+          ctaText: 'Detalii program',
+          ctaLink: '/dr12-afir',
+          icon: 'ph-plant',
+          order: 2,
+          active: true,
+          officialGuideKey: 'dr12'
+        },
+        {
+          id: 'slide-digitalizare-imm',
+          tag: 'Digitalizare IMM',
+          title: 'Digitalizare IMM\nERP, CRM si cloud',
+          description: 'Finantare pentru software, automatizare, securitate cibernetica, cloud si echipamente justificate in proiect.',
+          ctaText: 'Detalii program',
+          ctaLink: '/digitalizare-imm',
+          icon: 'ph-desktop',
+          order: 3,
+          active: true,
+          officialGuideKey: 'digitalizare'
+        },
+        {
+          id: 'slide-startup-nation',
+          tag: 'Antreprenoriat',
+          title: 'Start-Up Nation\nPregatirea dosarului',
+          description: 'Verifica grupul tinta, cursul, firma, codul CAEN, bugetul si locurile de munca inainte de pregatirea planului.',
+          ctaText: 'Detalii program',
+          ctaLink: '/start-up-nation-2026',
+          icon: 'ph-rocket-launch',
+          order: 4,
+          active: true,
+          officialGuideKey: 'startup'
+        },
+        {
+          id: 'slide-gal-afir',
+          tag: 'LEADER / GAL / AFIR',
+          title: 'GAL-AFIR\nApeluri publice si private',
+          description: 'Finantari locale prin GAL. FABER scrie proiecte noi si poate prelua proiecte aflate in implementare.',
+          ctaText: 'Detalii GAL-AFIR',
+          ctaLink: '/gal-afir',
+          icon: 'ph-map-pin',
+          order: 5,
+          active: true,
+          officialGuideKey: 'leader-gal'
+        }
+      ];
+    }
+
+    function getHeroImageForBanner(banner) {
+      if (banner && banner.image) return banner.image;
+      var text = [
+        banner && banner.id,
+        banner && banner.tag,
+        banner && banner.title,
+        banner && banner.ctaLink
+      ].join(' ').toLowerCase();
+
+      if (/dr12|dr14|afir|agricultur|ferme|fermieri|tractor|plant/.test(text)) return '/assets/hero/hero-agriculture.webp';
+      if (/digital|erp|crm|cloud|pnrr/.test(text)) return '/assets/hero/hero-digital.webp';
+      if (/gal|leader|local/.test(text)) return '/assets/hero/hero-local.webp';
+      if (/e-move|emove|solar|fotovoltaic|energie|autoconsum|modernizare|pro-infra/.test(text)) return '/assets/hero/hero-solar.webp';
+      return '/assets/hero/hero-business.webp';
+    }
+
+    function programIconClass(icon) {
+      var value = String(icon || 'ph-file-text').trim();
+      if (value.indexOf('ph-duotone') === 0) return value;
+      return value.indexOf('ph-') === 0 ? 'ph-duotone ' + value : value;
+    }
+
+    function guideSourceForBanner(banner, source) {
+      if (source && source.url) {
+        return {
+          href: source.url,
+          label: 'Ghidul solicitantului',
+          external: /^https?:\/\//i.test(source.url)
+        };
+      }
+      return {
+        href: '/surse-oficiale-fonduri-europene',
+        label: 'Surse oficiale',
+        external: false
+      };
+    }
+
+    function renderProgramSlide(banner, source) {
+      var slideId = escapeProgramHtml(banner.id || ('slide-' + (banner.order || 0)));
+      var heroImage = String(getHeroImageForBanner(banner)).replace(/'/g, '%27');
+      var iconClass = escapeProgramHtml(programIconClass(banner.icon));
+      var guide = guideSourceForBanner(banner, source);
+      var guideAttrs = guide.external ? ' target="_blank" rel="noopener noreferrer"' : '';
+      var ctaLink = escapeProgramHtml(banner.ctaLink || '/verificare-eligibilitate-fonduri-europene');
+      var ctaText = escapeProgramHtml(banner.ctaText || 'Detalii program');
+
+      return '<article class="program-slide hero hero--image" style="--hero-image:url(\'' + heroImage + '\')" data-slide-id="' + slideId + '" aria-hidden="true">' +
+        '<span class="hero-icon" aria-hidden="true"><i class="' + iconClass + '"></i></span>' +
+        '<span class="eyebrow">' + escapeProgramHtml(banner.tag || 'Program de finantare') + '</span>' +
+        '<h3>' + escapeProgramHtml(banner.title || 'Program de finantare') + '</h3>' +
+        '<p>' + escapeProgramHtml(banner.description || 'Verifica ghidul oficial si documentele inainte de decizia de aplicare.') + '</p>' +
+        '<div class="hero-actions">' +
+          '<a class="btn btn-primary" href="' + ctaLink + '">' + ctaText + '</a>' +
+          '<a class="btn btn-secondary" href="' + escapeProgramHtml(guide.href) + '"' + guideAttrs + '>' + escapeProgramHtml(guide.label) + '</a>' +
+        '</div>' +
+      '</article>';
+    }
+
+    function renderProgramCarousel(banners, sources) {
+      var track = document.getElementById('program-carousel-track');
+      var dots = document.getElementById('program-carousel-dots');
+      var viewport = document.getElementById('program-carousel-viewport');
+      if (!track || !dots || !viewport) return;
+
+      var activeBanners = (banners || []).filter(function(banner) {
+        return banner && banner.active !== false;
+      }).sort(function(a, b) {
+        return (a.order || 999) - (b.order || 999);
+      });
+
+      if (!activeBanners.length) activeBanners = getProgramFallbackBanners();
+
+      programCarouselState.index = 0;
+      programCarouselState.slides = activeBanners;
+      programCarouselState.sources = sources || {};
+      programCarouselState.track = track;
+      programCarouselState.dots = dots;
+      programCarouselState.viewport = viewport;
+
+      track.innerHTML = activeBanners.map(function(banner) {
+        return renderProgramSlide(banner, (sources || {})[banner.officialGuideKey]);
+      }).join('');
+
+      dots.innerHTML = activeBanners.map(function(banner, index) {
+        return '<button class="program-carousel-dot" type="button" aria-label="Mergi la programul ' + (index + 1) + '" onclick="goToProgramSlide(' + index + ')"></button>';
+      }).join('');
+
+      viewport.addEventListener('keydown', function(event) {
+        if (event.key === 'ArrowRight') {
+          event.preventDefault();
+          moveProgramCarousel(1);
+        }
+        if (event.key === 'ArrowLeft') {
+          event.preventDefault();
+          moveProgramCarousel(-1);
+        }
+        if (event.key === 'Home') {
+          event.preventDefault();
+          goToProgramSlide(0);
+        }
+        if (event.key === 'End') {
+          event.preventDefault();
+          goToProgramSlide(programCarouselState.slides.length - 1);
+        }
+      }, { passive: false });
+
+      updateProgramCarouselState();
+    }
+
+    function loadProgramCarousel() {
+      var track = document.getElementById('program-carousel-track');
+      if (!track) return;
+
+      Promise.all([
+        fetch('/banners.json').then(function(response) {
+          if (!response.ok) throw new Error('banners');
+          return response.json();
+        }),
+        fetch('/official-guides.json').then(function(response) {
+          if (!response.ok) throw new Error('guides');
+          return response.json();
+        }).catch(function() { return {}; })
+      ])
+        .then(function(results) {
+          renderProgramCarousel(results[0], results[1] || {});
+        })
+        .catch(function() {
+          renderProgramCarousel(getProgramFallbackBanners(), {});
+        });
+    }
+
+    function moveProgramCarousel(direction) {
+      var total = programCarouselState.slides.length;
+      if (!total) return;
+      goToProgramSlide((programCarouselState.index + direction + total) % total);
+    }
+
+    function goToProgramSlide(index) {
+      var total = programCarouselState.slides.length;
+      if (!total) return;
+      programCarouselState.index = Math.max(0, Math.min(index, total - 1));
+      updateProgramCarouselState();
+    }
+
+    function updateProgramCarouselState() {
+      var track = programCarouselState.track || document.getElementById('program-carousel-track');
+      var dots = programCarouselState.dots || document.getElementById('program-carousel-dots');
+      if (!track) return;
+
+      track.style.transform = 'translateX(-' + (programCarouselState.index * 100) + '%)';
+
+      Array.prototype.forEach.call(track.querySelectorAll('.program-slide'), function(slide, index) {
+        var isActive = index === programCarouselState.index;
+        slide.classList.toggle('is-active', isActive);
+        slide.setAttribute('aria-hidden', isActive ? 'false' : 'true');
+        slide.setAttribute('aria-live', isActive ? 'polite' : 'off');
+      });
+
+      if (dots) {
+        Array.prototype.forEach.call(dots.querySelectorAll('.program-carousel-dot'), function(dot, index) {
+          var isActive = index === programCarouselState.index;
+          dot.classList.toggle('is-active', isActive);
+          dot.setAttribute('aria-current', isActive ? 'true' : 'false');
+        });
+      }
+    }
+
+    scheduleAfterFirstPaint(loadProgramCarousel, 1200);
+
     var revealObserver = null;
 
     function observeReveal(el) {

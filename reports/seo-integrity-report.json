@@ -1,49 +1,49 @@
 {
-  "generatedAt": "2026-05-26T17:20:36.502Z",
-  "root": "C:\\Users\\flori\\Documents\\GitHub\\atelierdeconsultanta",
+  "generatedAt": "2026-05-27T13:23:16.378Z",
+  "root": "C:\\Users\\CODEXS\\Desktop\\atelierdeconsultanta",
   "summary": {
-    "totalFiles": 164,
-    "passedFiles": 164,
+    "totalFiles": 166,
+    "passedFiles": 166,
     "failedFiles": 0,
     "checks": {
       "metaDescription": {
-        "pass": 164,
+        "pass": 166,
         "fail": 0
       },
       "canonical": {
-        "pass": 164,
+        "pass": 166,
         "fail": 0
       },
       "imageAltAttributes": {
-        "pass": 164,
+        "pass": 166,
         "fail": 0
       },
       "singleH1": {
-        "pass": 164,
+        "pass": 166,
         "fail": 0
       },
       "relatedLinks": {
-        "pass": 164,
+        "pass": 166,
         "fail": 0
       },
       "utf8Charset": {
-        "pass": 161,
+        "pass": 163,
         "fail": 0
       },
       "cleanCanonical": {
-        "pass": 161,
+        "pass": 163,
         "fail": 0
       },
       "visibleFaqForSchema": {
-        "pass": 161,
+        "pass": 163,
         "fail": 0
       },
       "speakableSchemaCoverage": {
-        "pass": 161,
+        "pass": 163,
         "fail": 0
       },
       "contentDepth": {
-        "pass": 161,
+        "pass": 163,
         "fail": 0
       }
     }
@@ -86,7 +86,7 @@
     },
     {
       "file": "acte-necesare-fonduri-europene-nerambursabile.html",
-      "noindex": true,
+      "noindex": false,
       "pass": true,
       "checks": {
         "utf8Charset": {
@@ -96,8 +96,7 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 0,
-          "note": "noindex page: meta description is optional"
+          "count": 1
         },
         "canonical": {
           "status": "pass",
@@ -115,12 +114,16 @@
         },
         "singleH1": {
           "status": "pass",
-          "note": "noindex page: h1 not required"
+          "count": 1,
+          "text": [
+            "Acte necesare pentru fonduri europene nerambursabile"
+          ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
-          "required": false,
-          "count": 0
+          "required": true,
+          "count": 5,
+          "threshold": 4
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -129,14 +132,14 @@
         },
         "contentDepth": {
           "status": "pass",
-          "required": false,
-          "words": 0
+          "required": true,
+          "words": 1238,
+          "threshold": 900
         },
         "relatedLinks": {
           "status": "pass",
-          "required": false,
-          "count": 0,
-          "note": "not a hub/blog page"
+          "required": true,
+          "count": 1
         }
       }
     },
@@ -189,7 +192,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1106,
+          "words": 1238,
           "threshold": 900
         },
         "relatedLinks": {
@@ -232,7 +235,7 @@
     },
     {
       "file": "afir-autoconsum-agroalimentar.html",
-      "noindex": true,
+      "noindex": false,
       "pass": true,
       "checks": {
         "utf8Charset": {
@@ -242,8 +245,7 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 0,
-          "note": "noindex page: meta description is optional"
+          "count": 1
         },
         "canonical": {
           "status": "pass",
@@ -261,12 +263,16 @@
         },
         "singleH1": {
           "status": "pass",
-          "note": "noindex page: h1 not required"
+          "count": 1,
+          "text": [
+            "AFIR autoconsum agroalimentar: finantare pentru energie in sectorul agroalimentar"
+          ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
-          "required": false,
-          "count": 0
+          "required": true,
+          "count": 8,
+          "threshold": 8
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -275,14 +281,14 @@
         },
         "contentDepth": {
           "status": "pass",
-          "required": false,
-          "words": 0
+          "required": true,
+          "words": 1359,
+          "threshold": 1100
         },
         "relatedLinks": {
           "status": "pass",
-          "required": false,
-          "count": 0,
-          "note": "not a hub/blog page"
+          "required": true,
+          "count": 1
         }
       }
     },
@@ -450,7 +456,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2052,
+          "words": 2056,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -509,20 +515,20 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1759,
+          "words": 1795,
           "threshold": 1100
         },
         "relatedLinks": {
           "status": "pass",
           "required": false,
-          "count": 1,
+          "count": 2,
           "note": "not a hub/blog page"
         }
       }
     },
     {
       "file": "autoconsum-public-fotovoltaice-institutii-publice.html",
-      "noindex": true,
+      "noindex": false,
       "pass": true,
       "checks": {
         "utf8Charset": {
@@ -532,8 +538,7 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 0,
-          "note": "noindex page: meta description is optional"
+          "count": 1
         },
         "canonical": {
           "status": "pass",
@@ -551,12 +556,16 @@
         },
         "singleH1": {
           "status": "pass",
-          "note": "noindex page: h1 not required"
+          "count": 1,
+          "text": [
+            "Autoconsum public: fotovoltaice pentru institutii publice"
+          ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
-          "required": false,
-          "count": 0
+          "required": true,
+          "count": 8,
+          "threshold": 8
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -565,13 +574,14 @@
         },
         "contentDepth": {
           "status": "pass",
-          "required": false,
-          "words": 0
+          "required": true,
+          "words": 1454,
+          "threshold": 1100
         },
         "relatedLinks": {
           "status": "pass",
           "required": false,
-          "count": 0,
+          "count": 2,
           "note": "not a hub/blog page"
         }
       }
@@ -625,13 +635,13 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1397,
+          "words": 1454,
           "threshold": 1100
         },
         "relatedLinks": {
           "status": "pass",
           "required": false,
-          "count": 1,
+          "count": 2,
           "note": "not a hub/blog page"
         }
       }
@@ -741,7 +751,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 1009,
+          "words": 1068,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -856,7 +866,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 1354,
+          "words": 1362,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -868,7 +878,7 @@
     },
     {
       "file": "calculator-so-afir.html",
-      "noindex": false,
+      "noindex": true,
       "pass": true,
       "checks": {
         "utf8Charset": {
@@ -878,7 +888,8 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 1
+          "count": 0,
+          "note": "noindex page: meta description is optional"
         },
         "canonical": {
           "status": "pass",
@@ -886,7 +897,7 @@
         },
         "cleanCanonical": {
           "status": "pass",
-          "href": "https://atelierdeconsultanta.ro/calculator-so-afir"
+          "href": "https://atelierdeconsultanta.ro/calculator-soc"
         },
         "imageAltAttributes": {
           "status": "pass",
@@ -896,10 +907,7 @@
         },
         "singleH1": {
           "status": "pass",
-          "count": 1,
-          "text": [
-            "Calculator SO AFIR: ce este Standard Output și de ce contează pentru eligibilitate"
-          ]
+          "note": "noindex page: h1 not required"
         },
         "visibleFaqForSchema": {
           "status": "pass",
@@ -914,13 +922,13 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 699,
-          "threshold": 2000
+          "words": 0
         },
         "relatedLinks": {
           "status": "pass",
-          "required": true,
-          "count": 1
+          "required": false,
+          "count": 0,
+          "note": "not a hub/blog page"
         }
       }
     },
@@ -1089,7 +1097,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1386,
+          "words": 1418,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -1320,7 +1328,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1406,
+          "words": 1495,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -1448,7 +1456,7 @@
     },
     {
       "file": "cheltuieli-eligibile-startup-nation.html",
-      "noindex": false,
+      "noindex": true,
       "pass": true,
       "checks": {
         "utf8Charset": {
@@ -1458,7 +1466,8 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 1
+          "count": 0,
+          "note": "noindex page: meta description is optional"
         },
         "canonical": {
           "status": "pass",
@@ -1466,7 +1475,7 @@
         },
         "cleanCanonical": {
           "status": "pass",
-          "href": "https://atelierdeconsultanta.ro/cheltuieli-eligibile-startup-nation"
+          "href": "https://atelierdeconsultanta.ro/start-up-nation-2026-cheltuieli-eligibile"
         },
         "imageAltAttributes": {
           "status": "pass",
@@ -1476,10 +1485,7 @@
         },
         "singleH1": {
           "status": "pass",
-          "count": 1,
-          "text": [
-            "Cheltuieli eligibile Start-Up Nation: ce poți include și ce trebuie verificat"
-          ]
+          "note": "noindex page: h1 not required"
         },
         "visibleFaqForSchema": {
           "status": "pass",
@@ -1494,13 +1500,13 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 599,
-          "threshold": 2000
+          "words": 0
         },
         "relatedLinks": {
           "status": "pass",
-          "required": true,
-          "count": 1
+          "required": false,
+          "count": 0,
+          "note": "not a hub/blog page"
         }
       }
     },
@@ -1553,7 +1559,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1641,
+          "words": 1678,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -1565,7 +1571,7 @@
     },
     {
       "file": "cod-caen-startup-nation.html",
-      "noindex": false,
+      "noindex": true,
       "pass": true,
       "checks": {
         "utf8Charset": {
@@ -1575,7 +1581,8 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 1
+          "count": 0,
+          "note": "noindex page: meta description is optional"
         },
         "canonical": {
           "status": "pass",
@@ -1583,7 +1590,7 @@
         },
         "cleanCanonical": {
           "status": "pass",
-          "href": "https://atelierdeconsultanta.ro/cod-caen-startup-nation"
+          "href": "https://atelierdeconsultanta.ro/cod-caen-start-up-nation-2026"
         },
         "imageAltAttributes": {
           "status": "pass",
@@ -1593,10 +1600,7 @@
         },
         "singleH1": {
           "status": "pass",
-          "count": 1,
-          "text": [
-            "Cum verifici dacă un cod CAEN este potrivit pentru Start-Up Nation?"
-          ]
+          "note": "noindex page: h1 not required"
         },
         "visibleFaqForSchema": {
           "status": "pass",
@@ -1611,13 +1615,13 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 659,
-          "threshold": 2000
+          "words": 0
         },
         "relatedLinks": {
           "status": "pass",
-          "required": true,
-          "count": 1
+          "required": false,
+          "count": 0,
+          "note": "not a hub/blog page"
         }
       }
     },
@@ -1726,13 +1730,13 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1533,
+          "words": 1580,
           "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
           "required": true,
-          "count": 1
+          "count": 2
         }
       }
     },
@@ -1841,7 +1845,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1489,
+          "words": 1524,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -2180,7 +2184,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2217,
+          "words": 2221,
           "threshold": 1800
         },
         "relatedLinks": {
@@ -2295,7 +2299,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1466,
+          "words": 1492,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -2354,7 +2358,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1578,
+          "words": 1601,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -2581,7 +2585,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 425,
+          "words": 433,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -2697,7 +2701,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1408,
+          "words": 1463,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -2931,7 +2935,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 1170,
+          "words": 1259,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -3105,19 +3109,19 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1472,
+          "words": 1527,
           "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
           "required": true,
-          "count": 1
+          "count": 2
         }
       }
     },
     {
       "file": "digitalizare-imm.html",
-      "noindex": true,
+      "noindex": false,
       "pass": true,
       "checks": {
         "utf8Charset": {
@@ -3127,8 +3131,7 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 0,
-          "note": "noindex page: meta description is optional"
+          "count": 1
         },
         "canonical": {
           "status": "pass",
@@ -3146,12 +3149,16 @@
         },
         "singleH1": {
           "status": "pass",
-          "note": "noindex page: h1 not required"
+          "count": 1,
+          "text": [
+            "Digitalizare IMM: eligibilitate, cheltuieli si buget pentru proiect"
+          ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
-          "required": false,
-          "count": 0
+          "required": true,
+          "count": 10,
+          "threshold": 10
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -3160,14 +3167,14 @@
         },
         "contentDepth": {
           "status": "pass",
-          "required": false,
-          "words": 0
+          "required": true,
+          "words": 1673,
+          "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
-          "required": false,
-          "count": 0,
-          "note": "not a hub/blog page"
+          "required": true,
+          "count": 1
         }
       }
     },
@@ -3220,7 +3227,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1620,
+          "words": 1673,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -3350,64 +3357,6 @@
     },
     {
       "file": "dr12-afir-tineri-fermieri.html",
-      "noindex": false,
-      "pass": true,
-      "checks": {
-        "utf8Charset": {
-          "status": "pass",
-          "hasCharset": true,
-          "hasHttpEquiv": false
-        },
-        "metaDescription": {
-          "status": "pass",
-          "count": 1
-        },
-        "canonical": {
-          "status": "pass",
-          "count": 1
-        },
-        "cleanCanonical": {
-          "status": "pass",
-          "href": "https://atelierdeconsultanta.ro/dr12-afir-tineri-fermieri"
-        },
-        "imageAltAttributes": {
-          "status": "pass",
-          "totalImages": 0,
-          "missingAltCount": 0,
-          "missingAlt": []
-        },
-        "singleH1": {
-          "status": "pass",
-          "count": 1,
-          "text": [
-            "DR12 AFIR pentru tineri fermieri: eligibilitate, acte necesare și pași de pregătire"
-          ]
-        },
-        "visibleFaqForSchema": {
-          "status": "pass",
-          "required": false,
-          "count": 0
-        },
-        "speakableSchemaCoverage": {
-          "status": "pass",
-          "required": false,
-          "count": 0
-        },
-        "contentDepth": {
-          "status": "pass",
-          "required": false,
-          "words": 770,
-          "threshold": 2000
-        },
-        "relatedLinks": {
-          "status": "pass",
-          "required": true,
-          "count": 1
-        }
-      }
-    },
-    {
-      "file": "dr12-afir.html",
       "noindex": true,
       "pass": true,
       "checks": {
@@ -3463,6 +3412,65 @@
       }
     },
     {
+      "file": "dr12-afir.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "utf8Charset": {
+          "status": "pass",
+          "hasCharset": true,
+          "hasHttpEquiv": false
+        },
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "cleanCanonical": {
+          "status": "pass",
+          "href": "https://atelierdeconsultanta.ro/dr12-afir"
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "DR 12 AFIR: condiții, eligibilitate, acte necesare și pași de pregătire"
+          ]
+        },
+        "visibleFaqForSchema": {
+          "status": "pass",
+          "required": true,
+          "count": 10,
+          "threshold": 10
+        },
+        "speakableSchemaCoverage": {
+          "status": "pass",
+          "required": false,
+          "count": 0
+        },
+        "contentDepth": {
+          "status": "pass",
+          "required": true,
+          "words": 1401,
+          "threshold": 1100
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 1
+        }
+      }
+    },
+    {
       "file": "dr12-afir/index.html",
       "noindex": false,
       "pass": true,
@@ -3511,7 +3519,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1352,
+          "words": 1401,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -3582,65 +3590,6 @@
     },
     {
       "file": "dr14-afir-ferme-mici.html",
-      "noindex": false,
-      "pass": true,
-      "checks": {
-        "utf8Charset": {
-          "status": "pass",
-          "hasCharset": true,
-          "hasHttpEquiv": false
-        },
-        "metaDescription": {
-          "status": "pass",
-          "count": 1
-        },
-        "canonical": {
-          "status": "pass",
-          "count": 1
-        },
-        "cleanCanonical": {
-          "status": "pass",
-          "href": "https://atelierdeconsultanta.ro/dr14-afir-ferme-mici"
-        },
-        "imageAltAttributes": {
-          "status": "pass",
-          "totalImages": 0,
-          "missingAltCount": 0,
-          "missingAlt": []
-        },
-        "singleH1": {
-          "status": "pass",
-          "count": 1,
-          "text": [
-            "DR14 AFIR pentru ferme mici: condiții, acte necesare și greșeli frecvente"
-          ]
-        },
-        "visibleFaqForSchema": {
-          "status": "pass",
-          "required": true,
-          "count": 6,
-          "threshold": 6
-        },
-        "speakableSchemaCoverage": {
-          "status": "pass",
-          "required": false,
-          "count": 0
-        },
-        "contentDepth": {
-          "status": "pass",
-          "required": true,
-          "words": 2008,
-          "threshold": 2000
-        },
-        "relatedLinks": {
-          "status": "pass",
-          "required": true,
-          "count": 1
-        }
-      }
-    },
-    {
-      "file": "dr14.html",
       "noindex": true,
       "pass": true,
       "checks": {
@@ -3696,6 +3645,66 @@
       }
     },
     {
+      "file": "dr14.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "utf8Charset": {
+          "status": "pass",
+          "hasCharset": true,
+          "hasHttpEquiv": false
+        },
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "cleanCanonical": {
+          "status": "pass",
+          "href": "https://atelierdeconsultanta.ro/dr14"
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "DR 14 AFIR pentru ferme mici: conditii, cheltuieli si pregatirea dosarului"
+          ]
+        },
+        "visibleFaqForSchema": {
+          "status": "pass",
+          "required": true,
+          "count": 10,
+          "threshold": 10
+        },
+        "speakableSchemaCoverage": {
+          "status": "pass",
+          "required": false,
+          "count": 0
+        },
+        "contentDepth": {
+          "status": "pass",
+          "required": true,
+          "words": 1839,
+          "threshold": 1200
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": false,
+          "count": 2,
+          "note": "not a hub/blog page"
+        }
+      }
+    },
+    {
       "file": "dr14/index.html",
       "noindex": false,
       "pass": true,
@@ -3744,7 +3753,67 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1793,
+          "words": 1839,
+          "threshold": 1200
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": false,
+          "count": 2,
+          "note": "not a hub/blog page"
+        }
+      }
+    },
+    {
+      "file": "e-move/index.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "utf8Charset": {
+          "status": "pass",
+          "hasCharset": true,
+          "hasHttpEquiv": false
+        },
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "cleanCanonical": {
+          "status": "pass",
+          "href": "https://atelierdeconsultanta.ro/e-move"
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "e-MOVE RO: statii de incarcare, energie regenerabila si pregatirea dosarului"
+          ]
+        },
+        "visibleFaqForSchema": {
+          "status": "pass",
+          "required": true,
+          "count": 10,
+          "threshold": 10
+        },
+        "speakableSchemaCoverage": {
+          "status": "pass",
+          "required": false,
+          "count": 0
+        },
+        "contentDepth": {
+          "status": "pass",
+          "required": true,
+          "words": 1346,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -3860,13 +3929,13 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1384,
+          "words": 1449,
           "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
           "required": true,
-          "count": 1
+          "count": 2
         }
       }
     },
@@ -3931,7 +4000,7 @@
     },
     {
       "file": "femeia-antreprenor-2026.html",
-      "noindex": true,
+      "noindex": false,
       "pass": true,
       "checks": {
         "utf8Charset": {
@@ -3941,8 +4010,7 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 0,
-          "note": "noindex page: meta description is optional"
+          "count": 1
         },
         "canonical": {
           "status": "pass",
@@ -3960,12 +4028,16 @@
         },
         "singleH1": {
           "status": "pass",
-          "note": "noindex page: h1 not required"
+          "count": 1,
+          "text": [
+            "Femeia Antreprenor 2026: conditii, cheltuieli si pasi pentru dosar"
+          ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
-          "required": false,
-          "count": 0
+          "required": true,
+          "count": 10,
+          "threshold": 10
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -3974,13 +4046,14 @@
         },
         "contentDepth": {
           "status": "pass",
-          "required": false,
-          "words": 0
+          "required": true,
+          "words": 1689,
+          "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
           "required": false,
-          "count": 0,
+          "count": 1,
           "note": "not a hub/blog page"
         }
       }
@@ -4034,7 +4107,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1647,
+          "words": 1689,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -4150,7 +4223,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1391,
+          "words": 1399,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -4265,7 +4338,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1541,
+          "words": 1566,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -4277,7 +4350,7 @@
     },
     {
       "file": "fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum.html",
-      "noindex": true,
+      "noindex": false,
       "pass": true,
       "checks": {
         "utf8Charset": {
@@ -4287,8 +4360,7 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 0,
-          "note": "noindex page: meta description is optional"
+          "count": 1
         },
         "canonical": {
           "status": "pass",
@@ -4306,12 +4378,16 @@
         },
         "singleH1": {
           "status": "pass",
-          "note": "noindex page: h1 not required"
+          "count": 1,
+          "text": [
+            "Fondul de Modernizare: finantari pentru energie, fotovoltaice si autoconsum"
+          ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
-          "required": false,
-          "count": 0
+          "required": true,
+          "count": 8,
+          "threshold": 8
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -4320,14 +4396,14 @@
         },
         "contentDepth": {
           "status": "pass",
-          "required": false,
-          "words": 0
+          "required": true,
+          "words": 1544,
+          "threshold": 1100
         },
         "relatedLinks": {
           "status": "pass",
-          "required": false,
-          "count": 0,
-          "note": "not a hub/blog page"
+          "required": true,
+          "count": 2
         }
       }
     },
@@ -4380,13 +4456,13 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1505,
+          "words": 1544,
           "threshold": 1100
         },
         "relatedLinks": {
           "status": "pass",
           "required": true,
-          "count": 1
+          "count": 2
         }
       }
     },
@@ -4495,7 +4571,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1404,
+          "words": 1435,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -4507,7 +4583,7 @@
     },
     {
       "file": "fondul-modernizare-energie-regenerabila-2026.html",
-      "noindex": true,
+      "noindex": false,
       "pass": true,
       "checks": {
         "utf8Charset": {
@@ -4517,8 +4593,7 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 0,
-          "note": "noindex page: meta description is optional"
+          "count": 1
         },
         "canonical": {
           "status": "pass",
@@ -4536,12 +4611,16 @@
         },
         "singleH1": {
           "status": "pass",
-          "note": "noindex page: h1 not required"
+          "count": 1,
+          "text": [
+            "Fondul pentru Modernizare: capacitati noi de producere a energiei regenerabile"
+          ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
-          "required": false,
-          "count": 0
+          "required": true,
+          "count": 10,
+          "threshold": 10
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -4550,13 +4629,14 @@
         },
         "contentDepth": {
           "status": "pass",
-          "required": false,
-          "words": 0
+          "required": true,
+          "words": 1599,
+          "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
           "required": false,
-          "count": 0,
+          "count": 1,
           "note": "not a hub/blog page"
         }
       }
@@ -4610,7 +4690,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1563,
+          "words": 1599,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -4726,7 +4806,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1284,
+          "words": 1290,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -5189,7 +5269,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1227,
+          "words": 1232,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -5587,7 +5667,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1373,
+          "words": 1378,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -5702,7 +5782,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1689,
+          "words": 1722,
           "threshold": 1500
         },
         "relatedLinks": {
@@ -5932,7 +6012,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1344,
+          "words": 1391,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -6047,13 +6127,13 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1189,
+          "words": 1232,
           "threshold": 1100
         },
         "relatedLinks": {
           "status": "pass",
           "required": true,
-          "count": 1
+          "count": 2
         }
       }
     },
@@ -6162,7 +6242,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1501,
+          "words": 1504,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -6284,6 +6364,65 @@
           "status": "pass",
           "required": true,
           "count": 1
+        }
+      }
+    },
+    {
+      "file": "gal-afir/index.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "utf8Charset": {
+          "status": "pass",
+          "hasCharset": true,
+          "hasHttpEquiv": false
+        },
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "cleanCanonical": {
+          "status": "pass",
+          "href": "https://atelierdeconsultanta.ro/gal-afir"
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "GAL-AFIR: apeluri LEADER pentru beneficiari publici si privati"
+          ]
+        },
+        "visibleFaqForSchema": {
+          "status": "pass",
+          "required": true,
+          "count": 10,
+          "threshold": 10
+        },
+        "speakableSchemaCoverage": {
+          "status": "pass",
+          "required": false,
+          "count": 0
+        },
+        "contentDepth": {
+          "status": "pass",
+          "required": true,
+          "words": 1412,
+          "threshold": 1400
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 2
         }
       }
     },
@@ -6451,7 +6590,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2007,
+          "words": 2011,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -6509,7 +6648,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 692,
+          "words": 812,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -6770,7 +6909,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1395,
+          "words": 1416,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -6871,7 +7010,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Consultanță Fonduri Europeneși Finanțări Nerambursabile"
+            "Consultanță Fonduri Europene și Finanțări Nerambursabile"
           ]
         },
         "visibleFaqForSchema": {
@@ -6888,7 +7027,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 1703,
+          "words": 1805,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -6947,7 +7086,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1158,
+          "words": 1166,
           "threshold": 900
         },
         "relatedLinks": {
@@ -7052,7 +7191,7 @@
         "visibleFaqForSchema": {
           "status": "pass",
           "required": true,
-          "count": 6,
+          "count": 7,
           "threshold": 6
         },
         "speakableSchemaCoverage": {
@@ -7063,7 +7202,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1395,
+          "words": 1401,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -7253,7 +7392,7 @@
     },
     {
       "file": "investitii-modernizarea-microintreprinderilor-apel-2.html",
-      "noindex": true,
+      "noindex": false,
       "pass": true,
       "checks": {
         "utf8Charset": {
@@ -7263,8 +7402,7 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 0,
-          "note": "noindex page: meta description is optional"
+          "count": 1
         },
         "canonical": {
           "status": "pass",
@@ -7282,12 +7420,16 @@
         },
         "singleH1": {
           "status": "pass",
-          "note": "noindex page: h1 not required"
+          "count": 1,
+          "text": [
+            "Investitii pentru modernizarea microintreprinderilor - Apel 2"
+          ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
-          "required": false,
-          "count": 0
+          "required": true,
+          "count": 10,
+          "threshold": 10
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -7296,13 +7438,14 @@
         },
         "contentDepth": {
           "status": "pass",
-          "required": false,
-          "words": 0
+          "required": true,
+          "words": 1574,
+          "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
           "required": false,
-          "count": 0,
+          "count": 1,
           "note": "not a hub/blog page"
         }
       }
@@ -7356,7 +7499,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1553,
+          "words": 1574,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -7416,7 +7559,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 896,
+          "words": 904,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -7703,7 +7846,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1181,
+          "words": 1206,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -7774,7 +7917,7 @@
     },
     {
       "file": "por-adr-nord-est.html",
-      "noindex": true,
+      "noindex": false,
       "pass": true,
       "checks": {
         "utf8Charset": {
@@ -7784,8 +7927,7 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 0,
-          "note": "noindex page: meta description is optional"
+          "count": 1
         },
         "canonical": {
           "status": "pass",
@@ -7803,12 +7945,16 @@
         },
         "singleH1": {
           "status": "pass",
-          "note": "noindex page: h1 not required"
+          "count": 1,
+          "text": [
+            "Investitii pentru modernizarea microintreprinderilor in Nord-Est"
+          ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
-          "required": false,
-          "count": 0
+          "required": true,
+          "count": 8,
+          "threshold": 8
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -7817,13 +7963,14 @@
         },
         "contentDepth": {
           "status": "pass",
-          "required": false,
-          "words": 0
+          "required": true,
+          "words": 1539,
+          "threshold": 1100
         },
         "relatedLinks": {
           "status": "pass",
           "required": false,
-          "count": 0,
+          "count": 1,
           "note": "not a hub/blog page"
         }
       }
@@ -7877,7 +8024,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1517,
+          "words": 1539,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -7950,7 +8097,7 @@
     },
     {
       "file": "pro-infra.html",
-      "noindex": true,
+      "noindex": false,
       "pass": true,
       "checks": {
         "utf8Charset": {
@@ -7960,8 +8107,7 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 0,
-          "note": "noindex page: meta description is optional"
+          "count": 1
         },
         "canonical": {
           "status": "pass",
@@ -7979,12 +8125,16 @@
         },
         "singleH1": {
           "status": "pass",
-          "note": "noindex page: h1 not required"
+          "count": 1,
+          "text": [
+            "PRO INFRA 2026: investitii, energie si pregatirea dosarului"
+          ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
-          "required": false,
-          "count": 0
+          "required": true,
+          "count": 10,
+          "threshold": 10
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -7993,13 +8143,14 @@
         },
         "contentDepth": {
           "status": "pass",
-          "required": false,
-          "words": 0
+          "required": true,
+          "words": 1732,
+          "threshold": 1500
         },
         "relatedLinks": {
           "status": "pass",
           "required": false,
-          "count": 0,
+          "count": 1,
           "note": "not a hub/blog page"
         }
       }
@@ -8053,7 +8204,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1706,
+          "words": 1732,
           "threshold": 1500
         },
         "relatedLinks": {
@@ -8113,7 +8264,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1105,
+          "words": 1143,
           "threshold": 900
         },
         "relatedLinks": {
@@ -8642,7 +8793,7 @@
     },
     {
       "file": "start-up-nation-2026.html",
-      "noindex": true,
+      "noindex": false,
       "pass": true,
       "checks": {
         "utf8Charset": {
@@ -8652,8 +8803,7 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 0,
-          "note": "noindex page: meta description is optional"
+          "count": 1
         },
         "canonical": {
           "status": "pass",
@@ -8671,12 +8821,16 @@
         },
         "singleH1": {
           "status": "pass",
-          "note": "noindex page: h1 not required"
+          "count": 1,
+          "text": [
+            "Start-Up Nation 2026: condiții, eligibilitate, acte necesare și pași de pregătire"
+          ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
-          "required": false,
-          "count": 0
+          "required": true,
+          "count": 10,
+          "threshold": 10
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -8685,14 +8839,14 @@
         },
         "contentDepth": {
           "status": "pass",
-          "required": false,
-          "words": 0
+          "required": true,
+          "words": 1457,
+          "threshold": 1100
         },
         "relatedLinks": {
           "status": "pass",
-          "required": false,
-          "count": 0,
-          "note": "not a hub/blog page"
+          "required": true,
+          "count": 2
         }
       }
     },
@@ -8745,13 +8899,13 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1402,
+          "words": 1457,
           "threshold": 1100
         },
         "relatedLinks": {
           "status": "pass",
           "required": true,
-          "count": 1
+          "count": 2
         }
       }
     },
@@ -8868,7 +9022,7 @@
     },
     {
       "file": "startup-nation-2026-conditii.html",
-      "noindex": false,
+      "noindex": true,
       "pass": true,
       "checks": {
         "utf8Charset": {
@@ -8878,7 +9032,8 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 1
+          "count": 0,
+          "note": "noindex page: meta description is optional"
         },
         "canonical": {
           "status": "pass",
@@ -8886,7 +9041,7 @@
         },
         "cleanCanonical": {
           "status": "pass",
-          "href": "https://atelierdeconsultanta.ro/startup-nation-2026-conditii"
+          "href": "https://atelierdeconsultanta.ro/start-up-nation-2026-conditii"
         },
         "imageAltAttributes": {
           "status": "pass",
@@ -8896,10 +9051,7 @@
         },
         "singleH1": {
           "status": "pass",
-          "count": 1,
-          "text": [
-            "Start-Up Nation 2026: condiții, pași și documente de pregătit înainte de înscriere"
-          ]
+          "note": "noindex page: h1 not required"
         },
         "visibleFaqForSchema": {
           "status": "pass",
@@ -8914,13 +9066,13 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 657,
-          "threshold": 2000
+          "words": 0
         },
         "relatedLinks": {
           "status": "pass",
-          "required": true,
-          "count": 1
+          "required": false,
+          "count": 0,
+          "note": "not a hub/blog page"
         }
       }
     },
@@ -9147,7 +9299,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 645,
+          "words": 730,
           "threshold": 2000
         },
         "relatedLinks": {

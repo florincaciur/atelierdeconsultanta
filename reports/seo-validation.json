@@ -1,9 +1,8 @@
 {
-  "generatedAt": "2026-05-26T17:20:27.958Z",
+  "generatedAt": "2026-05-27T13:23:08.654Z",
   "mode": "check",
   "changedFiles": [
     "404.html",
-    "acte-necesare-fonduri-europene-nerambursabile.html",
     "afir-autoconsum-agroalimentar.html",
     "afir.html",
     "afir/index.html",
@@ -12,11 +11,14 @@
     "blog-afir-fotovoltaice-ferme-2026.html",
     "blog.html",
     "blog/index.html",
+    "calculator-so-afir.html",
     "calculator-soc.html",
     "calendar-fonduri-europene.html",
     "calendar-fonduri-europene/index.html",
     "cat-costa-consultanta-fonduri-europene.html",
+    "cheltuieli-eligibile-startup-nation.html",
     "cod-caen-start-up-nation-2026/index.html",
+    "cod-caen-startup-nation.html",
     "consultant-fonduri-europene-imm.html",
     "consultanta-afir.html",
     "consultanta-afir/index.html",
@@ -41,7 +43,9 @@
     "digitalizare-imm.html",
     "dr-12-afir-instalarea-tinerilor-fermieri.html",
     "dr-14-afir-conditii-eligibilitate-greseli-frecvente.html",
+    "dr12-afir-tineri-fermieri.html",
     "dr12-afir.html",
+    "dr14-afir-ferme-mici.html",
     "dr14.html",
     "eligibilitate-fonduri-europene.html",
     "eligibilitate-fonduri-europene/index.html",
@@ -53,7 +57,6 @@
     "fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum.html",
     "fondul-de-modernizare.html",
     "fondul-de-modernizare/index.html",
-    "fondul-modernizare-energie-regenerabila-2026.html",
     "fonduri-europene-agricultura.html",
     "fonduri-europene-agricultura/index.html",
     "fonduri-europene-bacau/index.html",
@@ -85,7 +88,6 @@
     "idei-afaceri-fonduri-europene.html",
     "index.html",
     "intrebari-frecvente.html",
-    "investitii-modernizarea-microintreprinderilor-apel-2.html",
     "pnrr-digitalizare-imm-cheltuieli-eligibile.html",
     "pnrr-digitalizare-imm.html",
     "pnrr-digitalizare-imm/index.html",
@@ -105,18 +107,19 @@
     "start-up-nation-2026.html",
     "start-up-nation-2026/index.html",
     "start-up-nation.html",
+    "startup-nation-2026-conditii.html",
     "studii-de-caz-fonduri-europene/index.html",
     "studii-de-caz.html",
     "testimoniale.html",
     "verificare-eligibilitate-fonduri-europene/index.html"
   ],
   "summary": {
-    "totalFiles": 164,
-    "passedFiles": 164,
+    "totalFiles": 166,
+    "passedFiles": 166,
     "failedFiles": 0
   },
   "inlineScripts": {
-    "checked": 275,
+    "checked": 265,
     "failures": []
   },
   "results": [
@@ -139,16 +142,16 @@
     {
       "file": "acte-necesare-fonduri-europene-nerambursabile.html",
       "pass": true,
-      "noindex": true,
+      "noindex": false,
       "technicalFile": false,
       "issues": [],
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Ești redirecționat către o nouă adresă"
+          "Acte necesare pentru fonduri europene nerambursabile"
         ],
         "missingAlt": [],
-        "relatedCount": 0,
+        "relatedCount": 1,
         "jsonLdErrors": []
       }
     },
@@ -187,16 +190,16 @@
     {
       "file": "afir-autoconsum-agroalimentar.html",
       "pass": true,
-      "noindex": true,
+      "noindex": false,
       "technicalFile": false,
       "issues": [],
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Ești redirecționat către o nouă adresă"
+          "AFIR autoconsum agroalimentar: finantare pentru energie in sectorul agroalimentar"
         ],
         "missingAlt": [],
-        "relatedCount": 0,
+        "relatedCount": 1,
         "jsonLdErrors": []
       }
     },
@@ -260,23 +263,23 @@
           "Apeluri GAL - finantari locale prin LEADER"
         ],
         "missingAlt": [],
-        "relatedCount": 1,
+        "relatedCount": 2,
         "jsonLdErrors": []
       }
     },
     {
       "file": "autoconsum-public-fotovoltaice-institutii-publice.html",
       "pass": true,
-      "noindex": true,
+      "noindex": false,
       "technicalFile": false,
       "issues": [],
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Ești redirecționat către o nouă adresă"
+          "Autoconsum public: fotovoltaice pentru institutii publice"
         ],
         "missingAlt": [],
-        "relatedCount": 0,
+        "relatedCount": 2,
         "jsonLdErrors": []
       }
     },
@@ -292,7 +295,7 @@
           "Autoconsum public: fotovoltaice pentru institutii publice"
         ],
         "missingAlt": [],
-        "relatedCount": 1,
+        "relatedCount": 2,
         "jsonLdErrors": []
       }
     },
@@ -363,16 +366,16 @@
     {
       "file": "calculator-so-afir.html",
       "pass": true,
-      "noindex": false,
+      "noindex": true,
       "technicalFile": false,
       "issues": [],
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Calculator SO AFIR: ce este Standard Output și de ce contează pentru eligibilitate"
+          "Pagina a fost mutata"
         ],
         "missingAlt": [],
-        "relatedCount": 1,
+        "relatedCount": 0,
         "jsonLdErrors": []
       }
     },
@@ -523,16 +526,16 @@
     {
       "file": "cheltuieli-eligibile-startup-nation.html",
       "pass": true,
-      "noindex": false,
+      "noindex": true,
       "technicalFile": false,
       "issues": [],
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Cheltuieli eligibile Start-Up Nation: ce poți include și ce trebuie verificat"
+          "Pagina a fost mutata"
         ],
         "missingAlt": [],
-        "relatedCount": 1,
+        "relatedCount": 0,
         "jsonLdErrors": []
       }
     },
@@ -555,16 +558,16 @@
     {
       "file": "cod-caen-startup-nation.html",
       "pass": true,
-      "noindex": false,
+      "noindex": true,
       "technicalFile": false,
       "issues": [],
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Cum verifici dacă un cod CAEN este potrivit pentru Start-Up Nation?"
+          "Pagina a fost mutata"
         ],
         "missingAlt": [],
-        "relatedCount": 1,
+        "relatedCount": 0,
         "jsonLdErrors": []
       }
     },
@@ -596,7 +599,7 @@
           "Consultant fonduri europene pentru IMM-uri"
         ],
         "missingAlt": [],
-        "relatedCount": 1,
+        "relatedCount": 2,
         "jsonLdErrors": []
       }
     },
@@ -980,23 +983,23 @@
           "Digitalizare IMM / PNRR"
         ],
         "missingAlt": [],
-        "relatedCount": 1,
+        "relatedCount": 2,
         "jsonLdErrors": []
       }
     },
     {
       "file": "digitalizare-imm.html",
       "pass": true,
-      "noindex": true,
+      "noindex": false,
       "technicalFile": false,
       "issues": [],
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Ești redirecționat către o nouă adresă"
+          "Digitalizare IMM: eligibilitate, cheltuieli si buget pentru proiect"
         ],
         "missingAlt": [],
-        "relatedCount": 0,
+        "relatedCount": 1,
         "jsonLdErrors": []
       }
     },
@@ -1051,32 +1054,32 @@
     {
       "file": "dr12-afir-tineri-fermieri.html",
       "pass": true,
-      "noindex": false,
-      "technicalFile": false,
-      "issues": [],
-      "details": {
-        "h1Count": 1,
-        "h1s": [
-          "DR12 AFIR pentru tineri fermieri: eligibilitate, acte necesare și pași de pregătire"
-        ],
-        "missingAlt": [],
-        "relatedCount": 1,
-        "jsonLdErrors": []
-      }
-    },
-    {
-      "file": "dr12-afir.html",
-      "pass": true,
       "noindex": true,
       "technicalFile": false,
       "issues": [],
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Ești redirecționat către o nouă adresă"
+          "Pagina a fost mutata"
         ],
         "missingAlt": [],
         "relatedCount": 0,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "dr12-afir.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "DR 12 AFIR: condiții, eligibilitate, acte necesare și pași de pregătire"
+        ],
+        "missingAlt": [],
+        "relatedCount": 1,
         "jsonLdErrors": []
       }
     },
@@ -1115,32 +1118,32 @@
     {
       "file": "dr14-afir-ferme-mici.html",
       "pass": true,
-      "noindex": false,
-      "technicalFile": false,
-      "issues": [],
-      "details": {
-        "h1Count": 1,
-        "h1s": [
-          "DR14 AFIR pentru ferme mici: condiții, acte necesare și greșeli frecvente"
-        ],
-        "missingAlt": [],
-        "relatedCount": 1,
-        "jsonLdErrors": []
-      }
-    },
-    {
-      "file": "dr14.html",
-      "pass": true,
       "noindex": true,
       "technicalFile": false,
       "issues": [],
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Ești redirecționat către o nouă adresă"
+          "Pagina a fost mutata"
         ],
         "missingAlt": [],
         "relatedCount": 0,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "dr14.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "DR 14 AFIR pentru ferme mici: conditii, cheltuieli si pregatirea dosarului"
+        ],
+        "missingAlt": [],
+        "relatedCount": 2,
         "jsonLdErrors": []
       }
     },
@@ -1154,6 +1157,22 @@
         "h1Count": 1,
         "h1s": [
           "DR 14 AFIR pentru ferme mici: conditii, cheltuieli si pregatirea dosarului"
+        ],
+        "missingAlt": [],
+        "relatedCount": 2,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "e-move/index.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "e-MOVE RO: statii de incarcare, energie regenerabila si pregatirea dosarului"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -1188,7 +1207,7 @@
           "Eligibilitate fonduri europene"
         ],
         "missingAlt": [],
-        "relatedCount": 1,
+        "relatedCount": 2,
         "jsonLdErrors": []
       }
     },
@@ -1211,16 +1230,16 @@
     {
       "file": "femeia-antreprenor-2026.html",
       "pass": true,
-      "noindex": true,
+      "noindex": false,
       "technicalFile": false,
       "issues": [],
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Ești redirecționat către o nouă adresă"
+          "Femeia Antreprenor 2026: conditii, cheltuieli si pasi pentru dosar"
         ],
         "missingAlt": [],
-        "relatedCount": 0,
+        "relatedCount": 1,
         "jsonLdErrors": []
       }
     },
@@ -1307,16 +1326,16 @@
     {
       "file": "fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum.html",
       "pass": true,
-      "noindex": true,
+      "noindex": false,
       "technicalFile": false,
       "issues": [],
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Ești redirecționat către o nouă adresă"
+          "Fondul de Modernizare: finantari pentru energie, fotovoltaice si autoconsum"
         ],
         "missingAlt": [],
-        "relatedCount": 0,
+        "relatedCount": 2,
         "jsonLdErrors": []
       }
     },
@@ -1332,7 +1351,7 @@
           "Fondul de Modernizare: finantari pentru energie, fotovoltaice si autoconsum"
         ],
         "missingAlt": [],
-        "relatedCount": 1,
+        "relatedCount": 2,
         "jsonLdErrors": []
       }
     },
@@ -1371,16 +1390,16 @@
     {
       "file": "fondul-modernizare-energie-regenerabila-2026.html",
       "pass": true,
-      "noindex": true,
+      "noindex": false,
       "technicalFile": false,
       "issues": [],
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Ești redirecționat către o nouă adresă"
+          "Fondul pentru Modernizare: capacitati noi de producere a energiei regenerabile"
         ],
         "missingAlt": [],
-        "relatedCount": 0,
+        "relatedCount": 1,
         "jsonLdErrors": []
       }
     },
@@ -1796,7 +1815,7 @@
           "Fonduri nerambursabile"
         ],
         "missingAlt": [],
-        "relatedCount": 1,
+        "relatedCount": 2,
         "jsonLdErrors": []
       }
     },
@@ -1861,6 +1880,22 @@
         ],
         "missingAlt": [],
         "relatedCount": 1,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "gal-afir/index.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "GAL-AFIR: apeluri LEADER pentru beneficiari publici si privati"
+        ],
+        "missingAlt": [],
+        "relatedCount": 2,
         "jsonLdErrors": []
       }
     },
@@ -2031,7 +2066,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Consultanță Fonduri Europeneși Finanțări Nerambursabile"
+          "Consultanță Fonduri Europene și Finanțări Nerambursabile"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -2137,16 +2172,16 @@
     {
       "file": "investitii-modernizarea-microintreprinderilor-apel-2.html",
       "pass": true,
-      "noindex": true,
+      "noindex": false,
       "technicalFile": false,
       "issues": [],
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Ești redirecționat către o nouă adresă"
+          "Investitii pentru modernizarea microintreprinderilor - Apel 2"
         ],
         "missingAlt": [],
-        "relatedCount": 0,
+        "relatedCount": 1,
         "jsonLdErrors": []
       }
     },
@@ -2281,16 +2316,16 @@
     {
       "file": "por-adr-nord-est.html",
       "pass": true,
-      "noindex": true,
+      "noindex": false,
       "technicalFile": false,
       "issues": [],
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Ești redirecționat către o nouă adresă"
+          "Investitii pentru modernizarea microintreprinderilor in Nord-Est"
         ],
         "missingAlt": [],
-        "relatedCount": 0,
+        "relatedCount": 1,
         "jsonLdErrors": []
       }
     },
@@ -2329,16 +2364,16 @@
     {
       "file": "pro-infra.html",
       "pass": true,
-      "noindex": true,
+      "noindex": false,
       "technicalFile": false,
       "issues": [],
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Ești redirecționat către o nouă adresă"
+          "PRO INFRA 2026: investitii, energie si pregatirea dosarului"
         ],
         "missingAlt": [],
-        "relatedCount": 0,
+        "relatedCount": 1,
         "jsonLdErrors": []
       }
     },
@@ -2521,16 +2556,16 @@
     {
       "file": "start-up-nation-2026.html",
       "pass": true,
-      "noindex": true,
+      "noindex": false,
       "technicalFile": false,
       "issues": [],
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Ești redirecționat către o nouă adresă"
+          "Start-Up Nation 2026: condiții, eligibilitate, acte necesare și pași de pregătire"
         ],
         "missingAlt": [],
-        "relatedCount": 0,
+        "relatedCount": 2,
         "jsonLdErrors": []
       }
     },
@@ -2546,7 +2581,7 @@
           "Start-Up Nation 2026: condiții, eligibilitate, acte necesare și pași de pregătire"
         ],
         "missingAlt": [],
-        "relatedCount": 1,
+        "relatedCount": 2,
         "jsonLdErrors": []
       }
     },
@@ -2585,16 +2620,16 @@
     {
       "file": "startup-nation-2026-conditii.html",
       "pass": true,
-      "noindex": false,
+      "noindex": true,
       "technicalFile": false,
       "issues": [],
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Start-Up Nation 2026: condiții, pași și documente de pregătit înainte de înscriere"
+          "Pagina a fost mutata"
         ],
         "missingAlt": [],
-        "relatedCount": 1,
+        "relatedCount": 0,
         "jsonLdErrors": []
       }
     },

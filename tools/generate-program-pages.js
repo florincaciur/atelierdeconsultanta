@@ -53,7 +53,9 @@ const PILLAR_SLUGS = new Set([
   "fonduri-europene-imm",
   "investitii-modernizarea-microintreprinderilor-apel-2",
   "pro-infra",
-  "fondul-modernizare-energie-regenerabila-2026"
+  "fondul-modernizare-energie-regenerabila-2026",
+  "e-move",
+  "gal-afir"
 ]);
 
 const SECONDARY_SLUGS = new Set([
@@ -86,6 +88,8 @@ const KEYWORDS_BY_SLUG = {
   "investitii-modernizarea-microintreprinderilor-apel-2": ["fonduri microintreprinderi 2026", "program microintreprinderi 2026", "conditii microintreprinderi 2026"],
   "pro-infra": ["PRO INFRA 2026", "program energie 2026", "granturi energie verde 2026", "fonduri energie regenerabile 2026"],
   "fondul-modernizare-energie-regenerabila-2026": ["program energie 2026", "fonduri energie regenerabile 2026", "granturi energie verde 2026", "Fondul pentru Modernizare energie regenerabila"],
+  "e-move": ["e-MOVE RO", "program e-MOVE RO 2026", "finantare statii incarcare electrice", "mobilitate electrica fonduri europene", "statii incarcare masini electrice finantare"],
+  "gal-afir": ["GAL AFIR", "apeluri GAL 2026", "finantari LEADER beneficiari publici", "finantari GAL beneficiari privati", "preluare proiecte GAL implementare"],
   "calculator-soc": ["calculator SOC", "calculator DR12 AFIR", "calculator cofinantare"],
   "cod-caen-start-up-nation-2026": ["cod CAEN Start Up Nation 2026", "verificare cod CAEN fonduri europene", "cod CAEN eligibil Start Up Nation"],
   "start-up-nation-2026-conditii": ["Start Up Nation 2026 conditii", "eligibilitate Start Up Nation 2026", "cod CAEN Start Up Nation 2026"],
@@ -138,6 +142,8 @@ function cleanUrl(value) {
 
 function heroImageFor(page) {
   const text = `${page.slug || ""} ${page.category || ""} ${page.programName || ""} ${page.h1 || ""}`.toLowerCase();
+  if (page.slug === "e-move") return "/assets/hero/hero-solar.webp";
+  if (page.slug === "gal-afir") return "/assets/hero/hero-local.webp";
   if (/afir|dr12|dr14|agricultur|ferme|utilaje/.test(text)) return "/assets/hero/hero-agriculture.webp";
   if (/fotovoltaic|energie|modernizare|autoconsum|infra/.test(text)) return "/assets/hero/hero-solar.webp";
   if (/digitalizare|pnrr|software|instrumente/.test(text)) return "/assets/hero/hero-digital.webp";
@@ -151,6 +157,8 @@ function heroAttrs(page) {
 
 function heroIconFor(page) {
   if (page.heroIcon) return page.heroIcon;
+  if (page.slug === "e-move") return "ph-duotone ph-battery-charging";
+  if (page.slug === "gal-afir") return "ph-duotone ph-map-pin";
   const text = `${page.slug || ""} ${page.category || ""} ${page.programName || ""} ${page.h1 || ""}`.toLowerCase();
   if (/dr12|dr14|afir|agricultur|ferme|utilaje/.test(text)) return "ph-duotone ph-plant";
   if (/digitalizare|pnrr|software|instrumente/.test(text)) return "ph-duotone ph-desktop";
@@ -216,6 +224,43 @@ function renderCtaLink(cta, className = "btn btn-secondary") {
   return `<a class="${className}" href="${esc(href)}"${attrs}>${esc(cta.label)}</a>`;
 }
 
+function configuredCta(item) {
+  if (!item || typeof item !== "object") return null;
+  if (item.sourceKey) {
+    const guide = sourcesForKeys([item.sourceKey])[0];
+    if (guide && guide.isComplete && /^https?:\/\//i.test(guide.url)) {
+      return {
+        href: guide.url,
+        label: item.label || "Sursa oficiala",
+        external: true,
+        className: item.className
+      };
+    }
+  }
+
+  const href = item.href || item.fallbackHref;
+  if (!href) return null;
+  return {
+    href,
+    label: item.label || item.fallbackLabel || "Detalii",
+    external: /^https?:\/\//i.test(href),
+    className: item.className
+  };
+}
+
+function renderHeroActions(page, primaryCta, secondaryCta) {
+  if (Array.isArray(page.heroCtas) && page.heroCtas.length) {
+    return page.heroCtas
+      .map(configuredCta)
+      .filter(Boolean)
+      .map((cta, index) => renderCtaLink(cta, cta.className || (index === 0 ? "btn btn-primary" : "btn btn-secondary")))
+      .join("\n      ");
+  }
+
+  return `<a class="btn btn-primary" href="/verificare-eligibilitate-fonduri-europene">${esc(primaryCta)}</a>
+      ${renderCtaLink(secondaryCta)}`;
+}
+
 function stripTags(html) {
   return html.replace(/<script[\s\S]*?<\/script>/gi, " ")
     .replace(/<style[\s\S]*?<\/style>/gi, " ")
@@ -277,6 +322,8 @@ function labelForHref(href) {
     "/resurse": "Resurse descarcabile",
     "/fondul-modernizare-energie-regenerabila-2026": "Energie regenerabila 2026",
     "/fondul-de-modernizare": "Fondul de Modernizare",
+    "/e-move": "e-MOVE RO",
+    "/gal-afir": "GAL-AFIR / LEADER",
     "/finantari-panouri-fotovoltaice": "Finantari panouri fotovoltaice",
     "/afir-autoconsum-agroalimentar": "AFIR autoconsum agroalimentar",
     "/fonduri-pentru-ferme": "Fonduri pentru ferme",
@@ -487,6 +534,35 @@ function renderChecklist(title, items) {
   return `<section class="mini-card"><h3>${esc(title)}</h3><ul>${li(items)}</ul></section>`;
 }
 
+function renderSimpleTable(rows) {
+  if (!Array.isArray(rows) || !rows.length) return "";
+  return `<table class="program-table">
+    <tbody>
+      ${rows.map((row) => `<tr><th>${esc(row[0])}</th><td>${esc(row[1])}</td></tr>`).join("\n")}
+    </tbody>
+  </table>`;
+}
+
+function renderContentSections(sections) {
+  if (!Array.isArray(sections) || !sections.length) return "";
+  return sections.map((section) => {
+    const title = section.title ? `<h2>${esc(section.title)}</h2>` : "";
+    const body = Array.isArray(section.paragraphs)
+      ? section.paragraphs.map((paragraph) => `<p>${esc(paragraph)}</p>`).join("\n")
+      : (section.body ? `<p>${esc(section.body)}</p>` : "");
+    const table = renderSimpleTable(section.tableRows);
+    const list = Array.isArray(section.items) && section.items.length ? `<ul>${li(section.items)}</ul>` : "";
+    const linksHtml = Array.isArray(section.links) && section.links.length
+      ? `<div class="related-links">${section.links.map((link) => `<a href="${cleanUrl(link.href)}">${esc(link.label || labelForHref(link.href))}</a>`).join("\n")}</div>`
+      : "";
+    return `${title}
+      ${body}
+      ${table}
+      ${list}
+      ${linksHtml}`;
+  }).join("\n");
+}
+
 function renderTable(page) {
   const rows = [
     ["Program", page.programName || page.h1],
@@ -618,6 +694,7 @@ function renderEditorialProgramContent(page) {
 ${editorialHtml}
       <h2>R\u0103spuns scurt</h2>
       <p class="intro">${esc(page.quickAnswer)}</p>
+      ${renderContentSections(page.contentSections)}
       ${renderEditorialTable("Cine poate aplica", ["Tip solicitant", "Eligibilitate posibil\u0103", "Ce trebuie verificat", "Observa\u021bii"], page.applicantRows)}
       ${renderEditorialTable("Ce investi\u021bii pot fi eligibile", ["Categorie cheltuial\u0103", "Exemple", "Aten\u021bie la", "Sursa"], page.eligibleInvestmentRows)}
       ${renderCalendarTable(page)}
@@ -1350,6 +1427,7 @@ ${editorialHtml}
       <p>Informatiile de pe aceasta pagina sunt construite pentru orientare practica. Ele nu promit aprobare si nu inlocuiesc verificarea apelului activ, a anexelor si a grilei de selectie. Scopul este sa poti pregati o discutie serioasa despre eligibilitate si dosar.</p>
 ${renderDecisionMatrix(page)}
 ${keywordHtml}
+      ${renderContentSections(page.contentSections)}
       <div class="grid">
         ${renderChecklist("Cui se adreseaza", page.audience)}
         ${renderChecklist("Conditii de eligibilitate", page.eligibility)}
@@ -1455,8 +1533,7 @@ ${CLARITY_TRACKING_CODE}
     <h1>${esc(page.h1)}</h1>
     <p>${esc(page.description)}</p>
     <div class="hero-actions">
-      <a class="btn btn-primary" href="/verificare-eligibilitate-fonduri-europene">${esc(primaryCta)}</a>
-      ${renderCtaLink(secondaryCta)}
+      ${renderHeroActions(page, primaryCta, secondaryCta)}
     </div>
   </header>
   <main class="container">
@@ -1511,7 +1588,7 @@ function ensureFile(page, html) {
   if (/\.html$/i.test(page.output) && !/\/index\.html$/i.test(page.output.replace(/\\/g, "/"))) {
     const legacyFile = path.join(ROOT, page.output);
     fs.mkdirSync(path.dirname(legacyFile), { recursive: true });
-    fs.writeFileSync(legacyFile, redirectFallbackHtml(page), "utf8");
+    fs.writeFileSync(legacyFile, html, "utf8");
   }
 }
 
@@ -1577,14 +1654,18 @@ ${urls.map((url) => `  <url>
 function updateRedirects(pages) {
   let text = fs.existsSync(REDIRECTS_PATH) ? fs.readFileSync(REDIRECTS_PATH, "utf8") : "";
   const additions = [];
+  const queued = new Set();
   for (const page of pages) {
     const clean = slugPath(page);
     const html = `${clean}.html`;
     const slash = `${clean}/`;
     const index = `${clean}/index.html`;
-    for (const source of [slash, html, index]) {
-      if (source === clean || text.includes(`${source} ${clean} 301`)) continue;
-      additions.push(`${source} ${clean} 301`);
+    const customRedirects = Array.isArray(page.redirects) ? page.redirects : [];
+    for (const source of [slash, html, index, ...customRedirects]) {
+      const line = `${source} ${clean} 301`;
+      if (source === clean || queued.has(line) || text.includes(line)) continue;
+      queued.add(line);
+      additions.push(line);
     }
   }
   if (additions.length) {
@@ -1691,6 +1772,36 @@ function updateBanners() {
       order: 12,
       active: true,
       officialGuideKey: "dr36-leader"
+    },
+    {
+      id: "slide-e-move",
+      tag: "Mobilitate electrica",
+      title: "e-MOVE RO\nStatii de incarcare si energie regenerabila",
+      description: "Program pentru infrastructura de mobilitate electrica. Verifica beneficiarul, amplasamentul, avizele, sursa de energie si ghidul activ inainte de depunere.",
+      amount: "Finantare: conform ghidului oficial al apelului activ",
+      ctaText: "Detalii e-MOVE ->",
+      ctaLink: "/e-move",
+      image: "",
+      altText: "Banner program e-MOVE RO statii de incarcare si energie regenerabila",
+      icon: "ph-battery-charging",
+      order: 13,
+      active: true,
+      officialGuideKey: "emove"
+    },
+    {
+      id: "slide-gal-afir",
+      tag: "LEADER / GAL / AFIR",
+      title: "GAL-AFIR\nApeluri pentru beneficiari publici si privati",
+      description: "Finantari locale prin Grupuri de Actiune Locala. FABER scrie proiecte noi si poate prelua proiecte aflate in implementare.",
+      amount: "Finantare: conform ghidului GAL activ",
+      ctaText: "Detalii GAL-AFIR ->",
+      ctaLink: "/gal-afir",
+      image: "",
+      altText: "Banner GAL AFIR apeluri LEADER pentru beneficiari publici si privati",
+      icon: "ph-map-pin",
+      order: 14,
+      active: true,
+      officialGuideKey: "leader-gal"
     }
   ];
   for (const banner of wanted) {
@@ -1703,7 +1814,7 @@ function updateLlms(pages) {
   if (!fs.existsSync(LLMS_PATH)) return;
   let text = fs.readFileSync(LLMS_PATH, "utf8");
   const block = `\n## Pagini noi pentru vizibilitate AI si cautare vocala\n${pages
-    .filter((page) => ["portofoliu", "testimoniale", "instrumente", "resurse", "webinarii", "apeluri-gal", "investitii-modernizarea-microintreprinderilor-apel-2", "fondul-modernizare-energie-regenerabila-2026"].includes(page.slug))
+    .filter((page) => ["portofoliu", "testimoniale", "instrumente", "resurse", "webinarii", "apeluri-gal", "e-move", "gal-afir", "investitii-modernizarea-microintreprinderilor-apel-2", "fondul-modernizare-energie-regenerabila-2026"].includes(page.slug))
     .map((page) => `- ${page.h1}: ${SITE}/${page.slug}`)
     .join("\n")}\n\n## Structura pentru asistenti AI\n- Paginile importante includ intrebari in limbaj natural, raspunsuri scurte vizibile si schema FAQPage doar cand intrebarile sunt vizibile in pagina.\n- Pentru sume, procente, punctaje si conditii finale, informatia trebuie verificata in apelul activ.\n`;
   if (!text.includes("Pagini noi pentru vizibilitate AI")) {

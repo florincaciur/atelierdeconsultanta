@@ -178,5 +178,35 @@
     "order": 12,
     "active": true,
     "officialGuideKey": "dr36-leader"
+  },
+  {
+    "id": "slide-e-move",
+    "tag": "Mobilitate electrica",
+    "title": "e-MOVE RO\nStatii de incarcare si energie regenerabila",
+    "description": "Program pentru infrastructura de mobilitate electrica. Verifica beneficiarul, amplasamentul, avizele, sursa de energie si ghidul activ inainte de depunere.",
+    "amount": "Finantare: conform ghidului oficial al apelului activ",
+    "ctaText": "Detalii e-MOVE ->",
+    "ctaLink": "/e-move",
+    "image": "",
+    "altText": "Banner program e-MOVE RO statii de incarcare si energie regenerabila",
+    "icon": "ph-battery-charging",
+    "order": 13,
+    "active": true,
+    "officialGuideKey": "emove"
+  },
+  {
+    "id": "slide-gal-afir",
+    "tag": "LEADER / GAL / AFIR",
+    "title": "GAL-AFIR\nApeluri pentru beneficiari publici si privati",
+    "description": "Finantari locale prin Grupuri de Actiune Locala. FABER scrie proiecte noi si poate prelua proiecte aflate in implementare.",
+    "amount": "Finantare: conform ghidului GAL activ",
+    "ctaText": "Detalii GAL-AFIR ->",
+    "ctaLink": "/gal-afir",
+    "image": "",
+    "altText": "Banner GAL AFIR apeluri LEADER pentru beneficiari publici si privati",
+    "icon": "ph-map-pin",
+    "order": 14,
+    "active": true,
+    "officialGuideKey": "leader-gal"
   }
 ]

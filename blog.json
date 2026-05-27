@@ -1976,6 +1976,195 @@
           "answer": "Codul CAEN se verifica prin certificatul constatator, activitatea reala, autorizarea necesara, lista de coduri eligibile a apelului si legatura directa dintre investitie si activitatea finantata."
         }
       ]
+    },
+    {
+      "id": "e-move",
+      "title": "e-MOVE RO: statii de incarcare, energie regenerabila si pregatirea dosarului",
+      "slug": "e-move",
+      "metaTitle": "e-MOVE RO 2026 - statii de incarcare, eligibilitate si dosar",
+      "metaDescription": "Program e-MOVE RO pentru mobilitate electrica: statii de incarcare, energie regenerabila, beneficiari, cheltuieli, documente si pasi de pregatire.",
+      "excerpt": "e-MOVE RO trebuie analizat ca un proiect de infrastructura, nu doar ca o oportunitate de finantare. Inainte de depunere se verifica beneficiarul, amplasamentul, dreptul asupra terenului, avizele, racordarea, capacitatea tehnica, sursa de energie, bugetul, cofinantarea si obligatiile de operare dupa finalizare. Programul poate sprijini statii de incarcare si elemente asociate mobilitatii electrice, dar valorile, intensitatea si conditiile finale se confirma in ghidul activ publicat de autoritate. Pregatirea corecta incepe cu analiza locatiei, a documentelor si a operarii, nu cu lista de achizitii. FABER poate ajuta la analiza eligibilitatii, structurarea dosarului, buget, riscuri si clarificari, fara a promite aprobarea finantarii. Sursa oficiala trebuie recitita inaintea fiecarei decizii.",
+      "content": "<p>Pagina statica publicata la /e-move.</p>",
+      "status": "published",
+      "published": true,
+      "primaryKeyword": "e-MOVE RO",
+      "secondaryKeywords": [
+        "Mobilitate electrica",
+        "fonduri europene",
+        "eligibilitate"
+      ],
+      "bannerImage": "",
+      "bannerAlt": "",
+      "author": "FABER - Atelier de Consultanta",
+      "officialSources": [
+        {
+          "url": "https://fonduri.mt.ro/transparenta/consultare-publica/fondul-pentru-modernizare/comunicat-fm-consultare-publica-ghidul-solicitantului-promovarea-infrastructurii-pentru-o-mobilitate-cu-emisii-zero-in-sprijinul-intreprinderilor-si-comunitatilor-e-move-ro",
+          "title": "Program e-MOVE RO - infrastructura de mobilitate electrica",
+          "institution": "Ministerul Transporturilor si Infrastructurii - Directia Generala Programe Europene Transport",
+          "documentType": "ghid publicat spre consultare publica / schema de ajutor de stat / comunicat oficial",
+          "accessedAt": "2026-05-27",
+          "note": "Pagina oficiala DGPET/MTI publica ghidul e-MOVE RO spre consultare si trimite la schema de ajutor de stat; ghidul final sau reviziile ulterioare trebuie confirmate in sursa oficiala inainte de depunere."
+        }
+      ],
+      "editorialStatus": "in_curs_de_verificare",
+      "createdAt": "2026-05-27",
+      "updatedAt": "2026-05-27",
+      "publishedAt": "2026-05-27",
+      "date": "2026-05-27",
+      "dateFormatted": "19 mai 2026",
+      "category": "Mobilitate electrica",
+      "readTime": 12,
+      "readingTime": 12,
+      "icon": "",
+      "canonicalUrl": "https://atelierdeconsultanta.ro/e-move",
+      "internalLinks": [
+        "/fondul-de-modernizare",
+        "/finantari-panouri-fotovoltaice",
+        "/surse-oficiale-fonduri-europene",
+        "/verificare-eligibilitate-fonduri-europene",
+        "/contact"
+      ],
+      "faq": [
+        {
+          "question": "Ce este e-MOVE RO?",
+          "answer": "e-MOVE RO este o linie de finantare care trebuie verificata prin ghidul activ si care poate viza infrastructura de mobilitate electrica, statii de incarcare si elemente asociate, in functie de forma finala a apelului."
+        },
+        {
+          "question": "Cine poate aplica la e-MOVE?",
+          "answer": "Pot aplica doar beneficiarii acceptati de ghidul oficial. Inainte de depunere trebuie verificate forma solicitantului, amplasamentul, capacitatea financiara si documentele tehnice."
+        },
+        {
+          "question": "Ce investitii pot fi eligibile?",
+          "answer": "Pot fi eligibile statii de incarcare, lucrari de instalare, racordare, software, monitorizare, surse regenerabile sau stocare numai daca ghidul activ le permite."
+        },
+        {
+          "question": "Ce documente trebuie pregatite?",
+          "answer": "Sunt utile documentele solicitantului, dreptul asupra amplasamentului, avizele, solutia tehnica, ofertele, bugetul si dovezile de cofinantare."
+        },
+        {
+          "question": "De ce conteaza amplasamentul?",
+          "answer": "Amplasamentul decide accesul, racordarea, autorizarea, fluxul de utilizare si posibilitatea de operare dupa finalizarea investitiei."
+        },
+        {
+          "question": "Pot include energie regenerabila?",
+          "answer": "Doar daca ghidul activ permite surse regenerabile sau stocare ca parte a investitiei. Costurile trebuie separate si justificate."
+        },
+        {
+          "question": "Ce riscuri apar la evaluare?",
+          "answer": "Apar riscuri cand amplasamentul nu este clar, avizele lipsesc, racordarea nu este fezabila, bugetul este vag sau obligatiile de operare nu pot fi sustinute."
+        },
+        {
+          "question": "Cum poate ajuta FABER?",
+          "answer": "FABER poate analiza eligibilitatea, documentele, bugetul, riscurile si clarificarile, fara sa garanteze aprobarea finantarii."
+        },
+        {
+          "question": "Cum verific daca e-MOVE RO este potrivit pentru proiectul meu?",
+          "answer": "Porneste de la solicitant, cod CAEN, localitate, investitie, buget si documentele disponibile. Daca una dintre aceste piese nu se potriveste cu apelul activ, proiectul trebuie ajustat inainte de depunere."
+        },
+        {
+          "question": "Cand nu merita sa aplic pentru e-MOVE RO?",
+          "answer": "Nu merita sa aplici cand nu poti dovedi eligibilitatea, cand cheltuielile principale nu sunt permise, cand cofinantarea nu este acoperita sau cand calendarul nu permite documente complete si verificabile."
+        }
+      ]
+    },
+    {
+      "id": "gal-afir",
+      "title": "GAL-AFIR: apeluri LEADER pentru beneficiari publici si privati",
+      "slug": "gal-afir",
+      "metaTitle": "GAL-AFIR 2026 - apeluri LEADER pentru beneficiari publici si privati",
+      "metaDescription": "Consultanta pentru apeluri GAL-AFIR: proiecte LEADER pentru primarii, firme, ONG-uri si beneficiari privati. Scriem proiecte noi si preluam proiecte in implementare.",
+      "excerpt": "GAL-AFIR inseamna finantari locale lansate prin Grupuri de Actiune Locala, cu reguli stabilite in ghidul fiecarui GAL si in cadrul AFIR. Proiectele pot viza beneficiari publici si privati, in functie de interventia locala. Inainte de depunere trebuie verificata localizarea in teritoriul GAL, tipul beneficiarului, eligibilitatea investitiei, bugetul, punctajul si documentele cerute. Diferentele dintre ghiduri sunt importante, pentru ca doua localitati pot avea criterii si bugete diferite. FABER scrie proiecte GAL si poate prelua proiecte aflate in implementare, inclusiv pentru achizitii, cereri de plata, raportari si clarificari, daca documentele si contractul permit acest lucru. Aceasta verificare separa oportunitatile reale de depunerile grabite sau greu de implementat.",
+      "content": "<p>Pagina statica publicata la /gal-afir.</p>",
+      "status": "published",
+      "published": true,
+      "primaryKeyword": "GAL-AFIR / LEADER",
+      "secondaryKeywords": [
+        "LEADER / GAL / AFIR",
+        "fonduri europene",
+        "eligibilitate"
+      ],
+      "bannerImage": "",
+      "bannerAlt": "",
+      "author": "FABER - Atelier de Consultanta",
+      "officialSources": [
+        {
+          "url": "https://www.afir.ro/finantare/leader/",
+          "title": "LEADER - Grupuri de Actiune Locala",
+          "institution": "AFIR",
+          "documentType": "pagina program",
+          "accessedAt": "2026-05-26",
+          "note": ""
+        },
+        {
+          "url": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-36/",
+          "title": "Detalii si Anexe DR 36",
+          "institution": "AFIR",
+          "documentType": "ghid si anexe",
+          "accessedAt": "2026-05-26",
+          "note": ""
+        }
+      ],
+      "editorialStatus": "in_curs_de_verificare",
+      "createdAt": "2026-05-27",
+      "updatedAt": "2026-05-27",
+      "publishedAt": "2026-05-27",
+      "date": "2026-05-27",
+      "dateFormatted": "19 mai 2026",
+      "category": "LEADER / GAL / AFIR",
+      "readTime": 12,
+      "readingTime": 12,
+      "icon": "",
+      "canonicalUrl": "https://atelierdeconsultanta.ro/gal-afir",
+      "internalLinks": [
+        "/apeluri-gal",
+        "/consultanta-afir",
+        "/fonduri-europene-agricultura",
+        "/fonduri-europene-nerambursabile-2026",
+        "/verificare-eligibilitate-fonduri-europene",
+        "/contact"
+      ],
+      "faq": [
+        {
+          "question": "Ce este GAL-AFIR?",
+          "answer": "GAL-AFIR se refera la apelurile locale LEADER lansate prin Grupuri de Actiune Locala si verificate in cadrul AFIR."
+        },
+        {
+          "question": "Cine poate aplica la un apel GAL?",
+          "answer": "Pot aplica beneficiarii acceptati de ghidul GAL local: publici sau privati, in functie de interventie."
+        },
+        {
+          "question": "FABER scrie proiecte GAL?",
+          "answer": "Da. FABER poate sprijini pregatirea cererii, bugetului, documentelor, ofertelor si raspunsurilor la clarificari."
+        },
+        {
+          "question": "FABER preia proiecte GAL in implementare?",
+          "answer": "Da, daca documentele si contractul permit acest lucru. Preluarea poate include achizitii, cereri de plata, raportari si clarificari."
+        },
+        {
+          "question": "Ce verific prima data?",
+          "answer": "Verifica teritoriul GAL, tipul beneficiarului, investitia, punctajul, bugetul si documentele obligatorii."
+        },
+        {
+          "question": "De ce difera apelurile GAL intre localitati?",
+          "answer": "Fiecare GAL are strategie proprie, alocari, criterii si ghiduri locale, chiar daca lucreaza in cadrul LEADER/AFIR."
+        },
+        {
+          "question": "Beneficiarii publici si privati au aceleasi reguli?",
+          "answer": "Nu. Regulile difera dupa tipul beneficiarului, interventia GAL si procedurile de achizitie, plata si implementare."
+        },
+        {
+          "question": "Unde vad apelurile GAL active?",
+          "answer": "Porneste de la pagina GAL-ului local si de la sursele AFIR LEADER, apoi confirma ghidul local, anexele si calendarul apelului."
+        },
+        {
+          "question": "Cum verific daca GAL-AFIR / LEADER este potrivit pentru proiectul meu?",
+          "answer": "Porneste de la solicitant, cod CAEN, localitate, investitie, buget si documentele disponibile. Daca una dintre aceste piese nu se potriveste cu apelul activ, proiectul trebuie ajustat inainte de depunere."
+        },
+        {
+          "question": "Cand nu merita sa aplic pentru GAL-AFIR / LEADER?",
+          "answer": "Nu merita sa aplici cand nu poti dovedi eligibilitatea, cand cheltuielile principale nu sunt permise, cand cofinantarea nu este acoperita sau cand calendarul nu permite documente complete si verificabile."
+        }
+      ]
     }
   ]
 }
