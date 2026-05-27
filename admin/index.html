@@ -1,10 +1,10 @@
-﻿<!-- PARTEA 1 / 4: HEAD + CSS -->
-<!DOCTYPE html>
-<html lang="ro">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="robots" content="noindex,nofollow" />
+<html lang="ro"><head></head><body>﻿<!-- PARTEA 1 / 4: HEAD + CSS -->
+
+
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex,nofollow">
   <title>FABER Admin Panel</title>
 
   <style>
@@ -851,41 +851,29 @@
       }
     }
   </style>
-  <link rel="canonical" href="https://atelierdeconsultanta.ro/admin/" />
-</head>
+  <link rel="canonical" href="https://atelierdeconsultanta.ro/admin/">
+
 <!-- PARTEA 2 / 4: BODY + STRUCTURĂ ADMIN -->
-<body>
+
   <div class="auth-overlay" id="authOverlay">
     <div class="auth-box">
       <div class="auth-logo">FABER</div>
       <div class="auth-sub">Panou de Administrare</div>
 
       <div class="auth-note">
-        Credențialele sunt salvate <strong>doar local în browserul tău</strong>.<br/>
-        Prima autentificare folosește valorile implicite dacă nu ai setat altele.<br/>
+        Credențialele sunt salvate <strong>doar local în browserul tău</strong>.<br>
+        Prima autentificare folosește valorile implicite dacă nu ai setat altele.<br>
         Email implicit: <code style="font-size:11px">atelier.consultanta@gmail.com</code>
       </div>
 
       <div class="field-group">
         <label class="field-label" for="loginEmail">Email</label>
-        <input
-          type="email"
-          id="loginEmail"
-          class="field-input"
-          placeholder="atelier.consultanta@gmail.com"
-          autocomplete="email"
-        />
+        <input type="email" id="loginEmail" class="field-input" placeholder="atelier.consultanță@gmail.com" autocomplete="email">
       </div>
 
       <div class="field-group">
         <label class="field-label" for="loginPassword">Parolă locală</label>
-        <input
-          type="password"
-          id="loginPassword"
-          class="field-input"
-          placeholder="Parola panoului"
-          autocomplete="current-password"
-        />
+        <input type="password" id="loginPassword" class="field-input" placeholder="Parola panoului" autocomplete="current-password">
       </div>
 
       <div class="status-msg" id="authStatus"></div>
@@ -895,12 +883,9 @@
       </button>
 
       <div id="resetHint" style="display:none; margin-top:14px; padding:12px; background:#fef2f2; border:1px solid #fecaca; border-radius:8px; font-size:12px; color:#991b1b;">
-        <strong>Datele locale par corupte sau schimbate.</strong><br/>
-        Dacă ai modificat credențialele în fișierul HTML dar localStorage are valori vechi, acestea au prioritate.<br/>
-        <button
-          onclick="resetLocalAuth()"
-          style="margin-top:8px; padding:6px 12px; background:#dc2626; color:white; border:none; border-radius:6px; cursor:pointer; font-size:12px; font-weight:700;"
-        >🔄 Resetează datele locale de autentificare</button>
+        <strong>Datele locale par corupte sau schimbate.</strong><br>
+        Dacă ai modificat credențialele în fișierul HTML dar localStorage are valori vechi, acestea au prioritate.<br>
+        <button onclick="resetLocalAuth()" style="margin-top:8px; padding:6px 12px; background:#dc2626; color:white; border:none; border-radius:6px; cursor:pointer; font-size:12px; font-weight:700;">🔄 Resetează datele locale de autentificare</button>
       </div>
 
       <p class="help-text" style="margin-top: 12px; text-align: center; font-size:11px; color:#6b7280;">
@@ -1068,12 +1053,12 @@
             <div class="grid-2">
               <div class="field-group">
                 <label class="field-label" for="seoTitle">Title</label>
-                <input id="seoTitle" class="field-input" type="text" />
+                <input id="seoTitle" class="field-input" type="text">
               </div>
 
               <div class="field-group">
                 <label class="field-label" for="seoCanonical">Canonical URL</label>
-                <input id="seoCanonical" class="field-input" type="url" />
+                <input id="seoCanonical" class="field-input" type="url">
               </div>
             </div>
 
@@ -1091,12 +1076,12 @@
             <div class="grid-2">
               <div class="field-group">
                 <label class="field-label" for="seoOgTitle">OG title</label>
-                <input id="seoOgTitle" class="field-input" type="text" />
+                <input id="seoOgTitle" class="field-input" type="text">
               </div>
 
               <div class="field-group">
                 <label class="field-label" for="seoOgImage">OG image</label>
-                <input id="seoOgImage" class="field-input" type="url" />
+                <input id="seoOgImage" class="field-input" type="url">
               </div>
             </div>
 
@@ -1108,12 +1093,12 @@
             <div class="grid-2">
               <div class="field-group">
                 <label class="field-label" for="seoTwitterTitle">Twitter title</label>
-                <input id="seoTwitterTitle" class="field-input" type="text" />
+                <input id="seoTwitterTitle" class="field-input" type="text">
               </div>
 
               <div class="field-group">
                 <label class="field-label" for="seoTwitterDescription">Twitter description</label>
-                <input id="seoTwitterDescription" class="field-input" type="text" />
+                <input id="seoTwitterDescription" class="field-input" type="text">
               </div>
             </div>
 
@@ -1153,7 +1138,7 @@
 
             <div class="field-group">
               <label class="field-label" for="contentHeroTag">Hero tag</label>
-              <input id="contentHeroTag" class="field-input" type="text" />
+              <input id="contentHeroTag" class="field-input" type="text">
             </div>
 
             <div class="field-group">
@@ -1169,12 +1154,12 @@
             <div class="grid-2">
               <div class="field-group">
                 <label class="field-label" for="contentPrimaryCta">Text CTA principal</label>
-                <input id="contentPrimaryCta" class="field-input" type="text" />
+                <input id="contentPrimaryCta" class="field-input" type="text">
               </div>
 
               <div class="field-group">
                 <label class="field-label" for="contentPrimaryHref">Link CTA principal</label>
-                <input id="contentPrimaryHref" class="field-input" type="text" />
+                <input id="contentPrimaryHref" class="field-input" type="text">
               </div>
             </div>
 
@@ -1291,23 +1276,23 @@
             <div class="grid-3">
               <div class="field-group">
                 <label class="field-label" for="githubOwner">Owner</label>
-                <input id="githubOwner" class="field-input" type="text" value="florincaciur" />
+                <input id="githubOwner" class="field-input" type="text" value="florincaciur">
               </div>
 
               <div class="field-group">
                 <label class="field-label" for="githubRepo">Repository</label>
-                <input id="githubRepo" class="field-input" type="text" value="atelierdeconsultanta" />
+                <input id="githubRepo" class="field-input" type="text" value="atelierdeconsultanta">
               </div>
 
               <div class="field-group">
                 <label class="field-label" for="githubBranch">Branch</label>
-                <input id="githubBranch" class="field-input" type="text" value="main" />
+                <input id="githubBranch" class="field-input" type="text" value="main">
               </div>
             </div>
 
             <div class="field-group">
               <label class="field-label" for="githubToken">Personal Access Token</label>
-              <input id="githubToken" class="field-input" type="password" placeholder="github_pat_..." />
+              <input id="githubToken" class="field-input" type="password" placeholder="github_pat_...">
             </div>
 
             <div style="display: flex; gap: 10px; flex-wrap: wrap;">
@@ -1326,22 +1311,22 @@
             <div class="grid-2">
               <div class="field-group">
                 <label class="field-label" for="newAdminEmail">Email admin</label>
-                <input id="newAdminEmail" class="field-input" type="email" />
+                <input id="newAdminEmail" class="field-input" type="email">
               </div>
 
               <div class="field-group">
                 <label class="field-label" for="currentAdminPassword">Parola curentă</label>
-                <input id="currentAdminPassword" class="field-input" type="password" />
+                <input id="currentAdminPassword" class="field-input" type="password">
               </div>
 
               <div class="field-group">
                 <label class="field-label" for="newAdminPassword">Parolă nouă</label>
-                <input id="newAdminPassword" class="field-input" type="password" />
+                <input id="newAdminPassword" class="field-input" type="password">
               </div>
 
               <div class="field-group">
                 <label class="field-label" for="confirmAdminPassword">Confirmă parola nouă</label>
-                <input id="confirmAdminPassword" class="field-input" type="password" />
+                <input id="confirmAdminPassword" class="field-input" type="password">
               </div>
             </div>
 
@@ -1351,7 +1336,7 @@
 
           <div class="card">
             <div class="card-title">
-              <span>📡 SEO & indexare</span>
+              <span>📡 SEO &amp; indexare</span>
             </div>
 
             <div style="display: flex; gap: 10px; flex-wrap: wrap;">
@@ -1379,30 +1364,30 @@
         <button class="modal-close" onclick="closeModal('postModal')">×</button>
       </div>
 
-      <input id="postEditIndex" type="hidden" value="-1" />
+      <input id="postEditIndex" type="hidden" value="-1">
 
       <div class="grid-2">
         <div class="field-group">
           <label class="field-label" for="postTitle">Titlu articol *</label>
-          <input id="postTitle" class="field-input" type="text" />
+          <input id="postTitle" class="field-input" type="text">
         </div>
 
         <div class="field-group">
           <label class="field-label" for="postSlug">Slug URL *</label>
-          <input id="postSlug" class="field-input" type="text" />
+          <input id="postSlug" class="field-input" type="text">
         </div>
       </div>
 
       <div class="grid-2">
         <div class="field-group">
           <label class="field-label" for="postMetaTitle">Meta title *</label>
-          <input id="postMetaTitle" class="field-input" type="text" maxlength="70" />
+          <input id="postMetaTitle" class="field-input" type="text" maxlength="70">
           <div class="help-text" id="postMetaTitleCount">0 caractere</div>
         </div>
 
         <div class="field-group">
           <label class="field-label" for="postCanonicalUrl">Canonical URL</label>
-          <input id="postCanonicalUrl" class="field-input" type="url" placeholder="https://atelierdeconsultanta.ro/slug" />
+          <input id="postCanonicalUrl" class="field-input" type="url" placeholder="https://atelierdeconsultanta.ro/slug">
         </div>
       </div>
 
@@ -1415,7 +1400,7 @@
       <div class="grid-3">
         <div class="field-group">
           <label class="field-label" for="postDate">Data publicării</label>
-          <input id="postDate" class="field-input" type="date" />
+          <input id="postDate" class="field-input" type="date">
         </div>
 
         <div class="field-group">
@@ -1434,7 +1419,7 @@
 
         <div class="field-group">
           <label class="field-label" for="postReadTime">Timp citire</label>
-          <input id="postReadTime" class="field-input" type="number" min="1" max="60" value="5" />
+          <input id="postReadTime" class="field-input" type="number" min="1" max="60" value="5">
         </div>
       </div>
 
@@ -1446,33 +1431,33 @@
       <div class="grid-2">
         <div class="field-group">
           <label class="field-label" for="postPrimaryKeyword">Keyword principal *</label>
-          <input id="postPrimaryKeyword" class="field-input" type="text" />
+          <input id="postPrimaryKeyword" class="field-input" type="text">
         </div>
 
         <div class="field-group">
           <label class="field-label" for="postSecondaryKeywords">Keyworduri secundare</label>
-          <input id="postSecondaryKeywords" class="field-input" type="text" placeholder="separate prin virgulă" />
+          <input id="postSecondaryKeywords" class="field-input" type="text" placeholder="separate prin virgulă">
         </div>
       </div>
 
       <div class="grid-2">
         <div class="field-group">
           <label class="field-label" for="postIcon">Icon blog card</label>
-          <input id="postIcon" class="field-input" type="text" placeholder="Ex: 🌾, 💻, 🚀, 🏗️" />
+          <input id="postIcon" class="field-input" type="text" placeholder="Ex: 🌾, 💻, 🚀, 🏗️">
           <div class="help-text">Se afișează pe card dacă nu există imagine.</div>
         </div>
 
         <div class="field-group">
           <label class="field-label" for="postBannerFile">Banner articol</label>
-          <input id="postBannerFile" class="field-input" type="file" accept="image/webp,image/jpeg,image/png" />
-          <input id="postImage" class="field-input" type="text" placeholder="/assets/blogbanner.webp" style="margin-top:8px;" />
+          <input id="postBannerFile" class="field-input" type="file" accept="image/webp,image/jpeg,image/png">
+          <input id="postImage" class="field-input" type="text" placeholder="/assets/blogbanner.webp" style="margin-top:8px;">
           <button class="btn btn-secondary btn-sm" type="button" onclick="removePostBanner()" style="margin-top:8px;">Elimină banner</button>
         </div>
       </div>
 
       <div class="field-group">
         <label class="field-label" for="postBannerAlt">Alt text banner</label>
-        <input id="postBannerAlt" class="field-input" type="text" />
+        <input id="postBannerAlt" class="field-input" type="text">
         <div class="help-text">Obligatoriu dacă articolul are banner.</div>
       </div>
 
@@ -1484,7 +1469,8 @@
       <div class="grid-2">
         <div class="field-group">
           <label class="field-label" for="postInternalLinks">Linkuri interne</label>
-          <textarea id="postInternalLinks" class="field-textarea" rows="4" placeholder="/dr-14-afir-conditii-eligibilitate-greseli-frecvente&#10;/contact"></textarea>
+          <textarea id="postInternalLinks" class="field-textarea" rows="4" placeholder="/dr-14-afir-condiții-eligibilitate-greșeli-frecvente
+/contact"></textarea>
         </div>
 
         <div class="field-group">
@@ -1496,7 +1482,7 @@
       <div class="grid-2">
         <div class="field-group">
           <label class="field-label" for="postAuthor">Autor</label>
-          <input id="postAuthor" class="field-input" type="text" value="FABER – Atelier de Consultanță" />
+          <input id="postAuthor" class="field-input" type="text" value="FABER – Atelier de Consultanță">
         </div>
 
         <div class="field-group">
@@ -3874,5 +3860,6 @@ ${CLARITY_TRACKING_CODE}
     }
   });
 </script>
-</body>
-</html>
+
+
+</body></html>

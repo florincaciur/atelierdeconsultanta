@@ -198,9 +198,77 @@ function verdictFor({ input, chain, finalUrl, finalStatus, inSitemap, canonical,
   return "FAIL_CANONICAL_MISMATCH";
 }
 
+function csvCell(value) {
+  return JSON.stringify(String(value ?? ""));
+}
+
+function mdCell(value) {
+  return String(value ?? "")
+    .replace(/\r?\n/g, " ")
+    .replace(/\|/g, "\\|")
+    .trim();
+}
+
+function redirectChainText(chain) {
+  return chain
+    .map((step) => step.to ? `${step.url} -> ${step.to} [${step.status}]` : `${step.url} [${step.status}]`)
+    .join(" | ");
+}
+
+function writeReports(rows) {
+  const reportDate = new Date().toISOString().slice(0, 10);
+  const reportDir = path.join(ROOT, "reports");
+  fs.mkdirSync(reportDir, { recursive: true });
+
+  const csvRows = [
+    [
+      "input URL",
+      "redirect chain",
+      "final URL",
+      "final status",
+      "in_sitemap",
+      "canonical",
+      "meta robots",
+      "title",
+      "H1",
+      "verdict",
+    ].map(csvCell).join(","),
+    ...rows.map((row) => [
+      row.inputUrl,
+      redirectChainText(row.redirectChain),
+      row.finalUrl,
+      row.finalStatus,
+      row.inSitemap ? "yes" : "no",
+      row.canonical,
+      row.robots,
+      row.title,
+      row.h1,
+      row.verdict,
+    ].map(csvCell).join(",")),
+  ];
+
+  const mdRows = [
+    "# Audit GSC routes",
+    "",
+    `Data: ${reportDate}`,
+    "",
+    "| input URL | redirect chain | final URL | final status | in_sitemap | canonical | meta robots | title | H1 | verdict |",
+    "|---|---|---|---:|:---:|---|---|---|---|---|",
+    ...rows.map((row) => `| ${mdCell(row.inputUrl)} | ${mdCell(redirectChainText(row.redirectChain)).replace(/ \| /g, "<br>")} | ${mdCell(row.finalUrl)} | ${mdCell(row.finalStatus)} | ${row.inSitemap ? "yes" : "no"} | ${mdCell(row.canonical)} | ${mdCell(row.robots)} | ${mdCell(row.title)} | ${mdCell(row.h1)} | ${mdCell(row.verdict)} |`),
+    "",
+  ];
+
+  const csvPath = path.join(reportDir, `gsc-routes-${reportDate}.csv`);
+  const mdPath = path.join(reportDir, `gsc-routes-${reportDate}.md`);
+  fs.writeFileSync(csvPath, `${csvRows.join("\n")}\n`, "utf8");
+  fs.writeFileSync(mdPath, `${mdRows.join("\n")}\n`, "utf8");
+  console.error(`Wrote ${rows.length} GSC audit rows to ${path.relative(ROOT, csvPath)} and ${path.relative(ROOT, mdPath)}.`);
+}
+
 const redirects = parseRedirects();
 const headerRules = parseHeaders();
 const sitemap = sitemapUrls();
+const rows = [];
 
 for (const inputUrl of URLS) {
   const chain = trace(inputUrl, redirects);
@@ -219,7 +287,7 @@ for (const inputUrl of URLS) {
     ...data,
   });
 
-  console.log(JSON.stringify({
+  rows.push({
     inputUrl,
     redirectChain: chain.map(({ file, ...step }) => step),
     finalUrl,
@@ -227,5 +295,11 @@ for (const inputUrl of URLS) {
     inSitemap,
     ...data,
     verdict,
-  }));
+  });
+}
+
+writeReports(rows);
+
+for (const row of rows) {
+  console.log(JSON.stringify(row));
 }

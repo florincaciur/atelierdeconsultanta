@@ -288,6 +288,23 @@ async function assertHomepageInteractions(baseUrl) {
     );
     assert.deepEqual(textOnlyBlogIcons, [], "blog icon placeholders should not render as raw text labels");
 
+    const aboutUnderlineWidth = await page.$eval("#despre .section-label", (element) =>
+      parseFloat(getComputedStyle(element, "::after").width) || 0
+    );
+    assert(aboutUnderlineWidth > 0, "about section label should render underline");
+
+    const statTexts = await page.$$eval("#despre .stat-card", (cards) =>
+      cards.map((card) => card.textContent.replace(/\s+/g, " ").trim())
+    );
+    assert(statTexts.some((text) => /Peste 150 proiecte finanțate/i.test(text)), "missing 'Peste 150 proiecte finanțate' card");
+    assert(statTexts.some((text) => /250 milioane euro fonduri absorbite pentru beneficiari/i.test(text)), "missing '250 milioane euro fonduri absorbite pentru beneficiari' card");
+
+    const viewportHeight = await page.$eval("#blog .card-carousel-viewport", (element) => element.getBoundingClientRect().height);
+    const tallestBlogCard = await page.$$eval("#blog .blog-card", (cards) =>
+      Math.max(0, ...cards.map((card) => card.getBoundingClientRect().height))
+    );
+    assert(viewportHeight <= tallestBlogCard + 24, "blog carousel viewport should not leave large blank space under cards");
+
     await page.setViewportSize({ width: 390, height: 844 });
     await page.goto(`${baseUrl}/`, { waitUntil: "networkidle" });
     await page.locator("#hamburgerBtn").click();
