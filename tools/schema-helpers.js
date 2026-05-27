@@ -1,15 +1,14 @@
 "use strict";
 
 const SITE = "https://atelierdeconsultanta.ro";
-const BRAND_NAME = "FABER - Atelier de Consultanta";
+const BRAND_NAME = "FABER - Atelier de Consultanță";
 const BRAND_ALTERNATE_NAMES = [
   "FABER",
-  "Atelier de Consultanta",
   "Atelier de Consultanță",
-  "Atelier de Consultanta FABER",
+  "Atelier de Consultanță FABER",
   "atelierdeconsultanta.ro"
 ];
-const BRAND_DESCRIPTION = "FABER - Atelier de Consultanta ajuta firme, fermieri, start-up-uri si IMM-uri sa verifice eligibilitatea si sa pregateasca proiecte pentru fonduri europene si finantari nerambursabile.";
+const BRAND_DESCRIPTION = "FABER - Atelier de Consultanță ajută firme, fermieri, start-up-uri și IMM-uri să verifice eligibilitatea și să pregătească proiecte pentru fonduri europene și finanțări nerambursabile.";
 const ORGANIZATION_ID = `${SITE}/#organization`;
 const LOCAL_BUSINESS_ID = `${SITE}/#localbusiness`;
 const WEBSITE_ID = `${SITE}/#website`;
@@ -19,12 +18,12 @@ const EMAIL = "atelier.consultanta@gmail.com";
 const TELEPHONES = ["+40769828338", "+40753326229"];
 const KNOWS_ABOUT = [
   "fonduri europene",
-  "finantari nerambursabile",
+  "finanțări nerambursabile",
   "AFIR",
   "PNRR",
   "Start-Up Nation",
   "Digitalizare IMM",
-  "consultanta IMM"
+  "consultanță IMM"
 ];
 
 function cleanText(value) {

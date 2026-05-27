@@ -16,6 +16,16 @@ const EXCLUDED_DIRS = new Set([
 ]);
 
 const DRAFT_PATH_PATTERN = /(^|\/)(?:draft|drafts|_draft|_drafts)(?:\/|$)/i;
+const ALTERNATE_CANONICAL_PATHS = new Set([
+  "/blog?post=blog-1",
+  "/intrebari/ce-documente-sunt-necesare-pentru-afir",
+  "/intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene",
+  "/intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm",
+  "/fonduri-europene-caen/4321-instalatii-electrice",
+  "/fonduri-europene-caen/5610-restaurante",
+  "/fonduri-europene-caen/6201-dezvoltare-software",
+  "/fonduri-europene-caen/0111-culturi-cereale",
+]);
 
 function toPosix(value) {
   return value.split(path.sep).join("/");
@@ -61,10 +71,23 @@ function extractCanonical(html) {
 function isInternalCanonical(url) {
   try {
     const parsed = new URL(url);
-    return parsed.origin === SITE && !parsed.search && !parsed.hash;
+    return parsed.origin === SITE && !parsed.search && !parsed.hash && !parsed.pathname.endsWith("/index.html") && !parsed.pathname.endsWith(".html");
   } catch {
     return false;
   }
+}
+
+function canonicalRouteForFile(filePath) {
+  const relativePath = toPosix(path.relative(ROOT, filePath));
+  if (relativePath === "index.html") return "/";
+  if (relativePath.endsWith("/index.html")) return `/${relativePath.replace(/\/index\.html$/i, "")}`;
+  if (relativePath.endsWith(".html")) return `/${relativePath.replace(/\.html$/i, "")}`;
+  return "";
+}
+
+function isAlternateCanonicalPath(pathname) {
+  const clean = pathname === "/" ? "/" : pathname.replace(/\/+$/g, "");
+  return ALTERNATE_CANONICAL_PATHS.has(clean);
 }
 
 function priority(url) {
@@ -118,6 +141,9 @@ function generate() {
     if (!canonical || !isInternalCanonical(canonical)) continue;
     const parsed = new URL(canonical);
     const normalized = parsed.pathname === "/" ? `${SITE}/` : canonical.replace(/\/$/, "");
+    const canonicalPath = new URL(normalized).pathname;
+    if (isAlternateCanonicalPath(canonicalPath)) continue;
+    if (canonicalPath !== canonicalRouteForFile(filePath)) continue;
     urls.set(normalized, {
       file: toPosix(path.relative(ROOT, filePath)),
       lastmod: lastmodForFile(filePath),

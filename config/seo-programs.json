@@ -401,6 +401,380 @@
       ]
     },
     {
+      "slug": "dr14-afir-ferme-mici",
+      "output": "dr14-afir-ferme-mici.html",
+      "type": "program",
+      "schemaType": "GovernmentService",
+      "template": "editorial-program",
+      "category": "AFIR",
+      "title": "DR14 AFIR ferme mici - condiții, documente și pregătirea dosarului",
+      "description": "Ghid DR14 AFIR pentru ferme mici: eligibilitate, documente, investiții, punctaj, buget și pași clari înainte de depunere.",
+      "h1": "DR14 AFIR pentru ferme mici: eligibilitate, documente și pregătire",
+      "quickAnswer": "DR14 AFIR se potrivește fermelor mici care pot demonstra dimensiunea economică, activitatea agricolă și necesitatea investiției. Înainte de buget, verifică SO/SOC, documentele exploatației, dreptul de folosință, ofertele, cofinanțarea și criteriile de selecție. Programul nu se alege doar după suma dorită sau după utilajul preferat, ci după legătura dintre fermă, obiective și documente. O analiză responsabilă compară investiția propusă cu activitatea reală, verifică dacă ferma poate susține implementarea și arată ce lipsește înainte de depunere. Pentru FABER, concluzia trebuie să fie concretă și verificabilă. Pagina este un ghid de orientare: condițiile finale, plafoanele, punctajele și anexele se confirmă doar în ghidul activ publicat de AFIR.",
+      "programName": "DR14 AFIR ferme mici",
+      "policyContribution": "intervenția poate sprijini modernizarea fermelor mici, dar numai dacă investiția este proporțională cu exploatația și poate fi dovedită prin documente coerente.",
+      "funding": "valoarea sprijinului, intensitatea și condițiile finale se confirmă în ghidul activ DR14; exemplele de pe pagină sunt orientative și nu țin loc de decizie AFIR.",
+      "audience": [
+        "ferme mici cu activitate agricolă verificabilă",
+        "fermieri care urmăresc modernizare, dotări sau utilaje proporționale cu exploatația",
+        "beneficiari care trebuie să clarifice SO/SOC, documentele agricole și cofinanțarea înainte de depunere"
+      ],
+      "eligibility": [
+        "exploatația trebuie să se încadreze în intervalul economic cerut de apel",
+        "solicitantul trebuie să poată dovedi terenurile, animalele, spațiile sau activitățile declarate",
+        "investiția trebuie să fie legată direct de dezvoltarea fermei și de obiectivele programului",
+        "bugetul trebuie să fie susținut prin oferte și justificări realiste"
+      ],
+      "mandatory": [
+        "calcul SO/SOC actualizat",
+        "documente de folosință pentru terenuri, adăposturi sau spații relevante",
+        "date agricole corelate cu registrele și declarațiile disponibile",
+        "oferte și specificații tehnice pentru investiția propusă",
+        "scenariu realist de cofinanțare și implementare"
+      ],
+      "eligibleExpenses": [
+        "utilaje și echipamente agricole justificate prin activitatea fermei",
+        "dotări pentru depozitare, procesare primară sau valorificare, dacă sunt permise de ghid",
+        "lucrări sau modernizări necesare exploatației, în limitele apelului",
+        "soluții tehnice care cresc eficiența sau calitatea activității agricole",
+        "servicii generale și costuri conexe acceptate de program"
+      ],
+      "ineligibleExpenses": [
+        "investiții supradimensionate față de dimensiunea fermei",
+        "cheltuieli fără legătură directă cu activitatea agricolă declarată",
+        "achiziții începute înainte de momentul permis",
+        "oferte neclare sau greu de comparat",
+        "costuri finanțate deja prin alt program sau imposibil de documentat"
+      ],
+      "scoring": [
+        "încadrarea fermei mici și coerența datelor SO/SOC",
+        "sectorul agricol, nevoia investiției și impactul propus",
+        "sustenabilitate, eficiență și capacitate de implementare",
+        "calitatea documentelor și a justificării bugetului",
+        "criteriile specifice publicate în grila apelului activ"
+      ],
+      "steps": [
+        "calculează SO/SOC pe date actuale și verificabile",
+        "strânge documentele exploatației și verifică dreptul de folosință",
+        "alege investiții proporționale cu activitatea fermei",
+        "construiește bugetul pe oferte și scenarii de cofinanțare",
+        "compară punctajul estimat cu grila apelului activ",
+        "pregătește anexele și planul de implementare înainte de depunere"
+      ],
+      "evaluation": [
+        "verificare administrativă și conformitate documente",
+        "eligibilitate solicitant, exploatație și investiție",
+        "punctaj și selecție în limita bugetului apelului",
+        "contractare, achiziții și implementare",
+        "cereri de plată, raportări și obligații de menținere"
+      ],
+      "examples": [
+        "fermă vegetală mică ce justifică echipamente prin suprafețe, culturi și calendar de lucru",
+        "exploatație zootehnică ce corelează dotările cu efectivul și spațiile existente",
+        "fermă mixtă care trebuie să decidă dacă investiția se potrivește mai bine pe DR14 sau pe altă intervenție AFIR"
+      ],
+      "faq": [
+        [
+          "Pentru cine este DR14 AFIR?",
+          "Pentru ferme mici care pot demonstra activitatea agricolă și pot justifica investiția prin documentele exploatației și prin ghidul activ."
+        ],
+        [
+          "Ce verific prima dată?",
+          "Începe cu SO/SOC, forma solicitantului, documentele de folosință, activitatea agricolă și investiția propusă."
+        ],
+        [
+          "DR14 este același lucru cu DR12?",
+          "Nu. DR12 pornește de la profilul tânărului fermier sau fermierului recent instalat, iar DR14 pornește de la logica fermei mici și a modernizării proporționale."
+        ],
+        [
+          "Pot cumpăra utilaje prin DR14?",
+          "Doar dacă utilajele sunt permise de ghid, sunt proporționale cu ferma și pot fi justificate prin activitatea agricolă."
+        ],
+        [
+          "Este suficient calculatorul SO/SOC?",
+          "Nu. Calculul este un punct de plecare, dar trebuie susținut de documente agricole, registre, folosință și investiția propusă."
+        ],
+        [
+          "Când trebuie cerute ofertele?",
+          "După ce investiția este coerentă cu exploatația și cu ghidul. Ofertele premature pot duce la bugete greu de apărat."
+        ],
+        [
+          "Ce risc apare cel mai des?",
+          "Investiția supradimensionată față de fermă, documentele nealiniate și cofinanțarea tratată superficial."
+        ],
+        [
+          "Poate FABER verifica eligibilitatea?",
+          "Da. Verificarea pornește de la datele fermei, documente, SO/SOC, investiție, buget și ghidul activ, fără promisiune de aprobare."
+        ]
+      ],
+      "related": [
+        "/afir",
+        "/dr14",
+        "/dr12-vs-dr14",
+        "/calculator-soc",
+        "/fonduri-pentru-ferme",
+        "/fonduri-pentru-utilaje-agricole",
+        "/consultanta-afir",
+        "/ghiduri",
+        "/surse-oficiale-fonduri-europene"
+      ],
+      "sourceKeys": [
+        "dr14"
+      ],
+      "officialGuideKey": "dr14",
+      "guideCtaLabel": "Ghid oficial DR14",
+      "heroIcon": "ph-duotone ph-plant",
+      "heroImage": "/assets/hero/hero-agriculture.webp",
+      "minWords": 1700,
+      "minFaq": 8,
+      "contentSections": [
+        {
+          "title": "Când are sens să analizezi DR14",
+          "paragraphs": [
+            "DR14 merită analizat când ferma este suficient de clară pentru a susține o investiție, dar nu atât de mare încât logica programului să devină nepotrivită. Nu porni de la suma maximă sau de la utilajul dorit. Pornește de la exploatație, documente, activitate și capacitatea reală de implementare.",
+            "Dacă documentele sunt împărțite între mai mulți membri ai familiei, dacă suprafețele nu sunt stabile sau dacă investiția nu are legătură directă cu activitatea agricolă, concluzia trebuie amânată până când datele pot fi verificate."
+          ],
+          "links": [
+            {
+              "href": "/afir",
+              "label": "Hub AFIR"
+            },
+            {
+              "href": "/dr12-vs-dr14",
+              "label": "DR12 vs DR14"
+            }
+          ]
+        },
+        {
+          "title": "Diferența practică față de DR12",
+          "paragraphs": [
+            "DR12 și DR14 pot apărea în aceeași discuție, dar nu rezolvă aceeași problemă. DR12 se uită la instalare, profilul solicitantului și consolidarea exploatației. DR14 se uită la ferma mică, la modernizarea ei și la investiții proporționale cu activitatea existentă.",
+            "Dacă solicitantul este tânăr fermier, nu presupune automat că DR12 este mai bun. Dacă ferma este mică, nu presupune automat că DR14 este suficient. Alegerea se face după ghid, documente, SO/SOC, punctaj și buget."
+          ]
+        },
+        {
+          "title": "Ce trimite beneficiarul pentru prima verificare",
+          "paragraphs": [
+            "Pentru o verificare inițială sunt utile: localitatea fermei, forma juridică, tipul exploatației, suprafețele sau efectivele, documentele de folosință, calculul SO/SOC dacă există, investiția dorită, bugetul estimat și cofinanțarea disponibilă. Cu aceste date se poate decide dacă analiza continuă pe DR14 sau dacă trebuie comparată cu DR12, utilaje agricole, energie sau alte programe AFIR.",
+            "Un răspuns bun nu este doar da sau nu. Ar trebui să indice ce document lipsește, ce risc trebuie clarificat, ce cheltuială este sensibilă și ce nu poate fi concluzionat înainte de ghidul activ."
+          ]
+        },
+        {
+          "title": "Cum construiești bugetul fără supradimensionare",
+          "paragraphs": [
+            "Pentru o fermă mică, bugetul trebuie să rămână proporțional cu exploatația. O listă de utilaje sau echipamente poate părea logică din punct de vedere comercial, dar în proiect trebuie explicată prin culturi, efective, flux de lucru, capacitate de operare și rezultate verificabile. Dacă investiția este prea mare pentru dimensiunea fermei sau dacă nu poate fi legată de activitatea agricolă, riscul de clarificări crește.",
+            "O verificare responsabilă separă cheltuielile eligibile de costurile suportate separat. TVA-ul, diferențele de preț, transportul, punerea în funcțiune, autorizațiile sau eventualele cheltuieli neeligibile pot schimba presiunea de cash-flow. De aceea, bugetul trebuie testat înainte de depunere, nu ajustat în grabă după ce apar întrebări de la evaluator."
+          ]
+        },
+        {
+          "title": "Documente agricole care schimbă concluzia",
+          "paragraphs": [
+            "În DR14, documentele exploatației sunt la fel de importante ca investiția. Dreptul de folosință pentru terenuri, spații sau adăposturi, registrele relevante, declarațiile agricole, calculul SO/SOC și forma juridică trebuie să descrie aceeași realitate. Dacă suprafețele sunt instabile, dacă animalele nu pot fi documentate sau dacă spațiile nu acoperă perioada cerută, concluzia de eligibilitate trebuie amânată.",
+            "Pentru beneficiari, această verificare poate părea administrativă, dar ea protejează proiectul. Un dosar coerent arată cine solicită finanțarea, ce fermă există, ce problemă rezolvă investiția și cum va fi implementată. Un dosar grăbit poate avea cheltuieli corecte pe hârtie, dar documente care nu susțin povestea proiectului."
+          ]
+        },
+        {
+          "title": "Când compari DR14 cu alte programe",
+          "paragraphs": [
+            "DR14 nu este singurul traseu posibil pentru o fermă. Uneori trebuie comparat cu DR12, cu o pagină despre utilaje agricole, cu proiecte de energie pentru autoconsum sau cu alte intervenții AFIR. Comparația nu se face după denumirea programului, ci după solicitant, dimensiune economică, vârstă, documente, investiție, punctaj estimat și capacitatea reală de cofinanțare.",
+            "Dacă analiza arată că DR14 nu se potrivește, concluzia utilă nu este un refuz generic. Poate însemna completarea documentelor, reconfigurarea investiției, așteptarea ghidului final, alegerea unei intervenții diferite sau amânarea depunerii până când ferma poate susține proiectul. Această prudență este mai valoroasă decât depunerea unui dosar vulnerabil."
+          ],
+          "links": [
+            {
+              "href": "/fonduri-pentru-utilaje-agricole",
+              "label": "Fonduri pentru utilaje agricole"
+            },
+            {
+              "href": "/afir-autoconsum-agroalimentar",
+              "label": "AFIR autoconsum agroalimentar"
+            }
+          ]
+        },
+        {
+          "title": "Ce înseamnă o concluzie bună înainte de depunere",
+          "paragraphs": [
+            "La finalul verificării, beneficiarul ar trebui să primească o concluzie concretă: program probabil, documente lipsă, riscuri de buget, riscuri de punctaj și pașii care trebuie făcuți înainte de depunere. O concluzie bună nu promite aprobarea, dar arată dacă proiectul poate continua, dacă trebuie ajustat sau dacă este mai responsabil să fie amânat.",
+            "Pentru fermele mici, această claritate contează mai mult decât viteza. Documentele agricole, ofertele, cofinanțarea și calendarul trebuie să fie pregătite suficient de devreme încât dosarul să nu depindă de presupuneri. Când aceste elemente sunt coerente, pagina DR14 devine un punct de lucru real, nu doar o descriere generală a programului."
+          ]
+        }
+      ],
+      "applicantRows": [
+        [
+          "Fermă vegetală mică",
+          "Posibilă dacă SO/SOC și documentele confirmă încadrarea",
+          "Suprafețe, culturi, folosință, APIA sau alte registre aplicabile",
+          "Investiția trebuie să fie proporțională cu exploatația."
+        ],
+        [
+          "Exploatație zootehnică",
+          "Posibilă dacă efectivele și spațiile sunt documentate",
+          "Efective, adăposturi, registre, autorizații sau documente relevante",
+          "Dotările trebuie legate de activitatea reală."
+        ],
+        [
+          "Fermă mixtă",
+          "Necesită analiză atentă pe fiecare componentă",
+          "SO/SOC, documente agricole, buget separat pe activități",
+          "Poate cere comparație cu alte intervenții AFIR."
+        ],
+        [
+          "Solicitant cu documente incomplete",
+          "Nu este recomandată depunerea imediată",
+          "Acte de folosință, clarificări, dovezi pentru activitate",
+          "Prima etapă este completarea dosarului de bază."
+        ]
+      ],
+      "eligibleInvestmentRows": [
+        [
+          "Utilaje agricole",
+          "Tractoare, echipamente, dotări specifice",
+          "Supradimensionare și oferte prea generale",
+          "Ghid DR14 activ"
+        ],
+        [
+          "Dotări pentru fermă",
+          "Depozitare, manipulare, echipamente conexe",
+          "Legătura slabă cu activitatea agricolă",
+          "Anexe și lista cheltuielilor"
+        ],
+        [
+          "Lucrări sau modernizări",
+          "Spații agricole sau elemente necesare exploatației",
+          "Avize, autorizații și documente de folosință",
+          "Ghid și documente tehnice"
+        ],
+        [
+          "Servicii generale",
+          "Consultanță, proiectare sau alte servicii acceptate",
+          "Plafoane și tratament diferit al costurilor",
+          "Ghidul apelului activ"
+        ]
+      ],
+      "calendarRows": [
+        [
+          "Pregătire",
+          "Înainte de apel sau imediat după publicarea ghidului",
+          "SO/SOC, documente, investiție și buget orientativ"
+        ],
+        [
+          "Verificare ghid",
+          "La publicarea versiunii active",
+          "eligibilitate, cheltuieli, grilă și anexe"
+        ],
+        [
+          "Depunere",
+          "Conform calendarului AFIR",
+          "cerere, documente, oferte și declarații"
+        ],
+        [
+          "Implementare",
+          "După contractare",
+          "achiziții, plată, raportări și obligații"
+        ]
+      ],
+      "cofinancingRows": [
+        [
+          "Investiție analizată",
+          "100.000 EUR",
+          "valoare folosită doar pentru exemplu"
+        ],
+        [
+          "Sprijin nerambursabil",
+          "conform ghidului",
+          "procentul real se confirmă în apelul activ"
+        ],
+        [
+          "Contribuție proprie",
+          "diferența neacoperită",
+          "include rezerve pentru TVA, curs și costuri neeligibile"
+        ],
+        [
+          "Risc de cash-flow",
+          "variabil",
+          "trebuie verificat înainte de contractare"
+        ]
+      ],
+      "documentRows": [
+        [
+          "Calcul SO/SOC",
+          "beneficiar / consultant",
+          "înainte de alegerea investiției",
+          "program ales greșit sau punctaj supraestimat"
+        ],
+        [
+          "Documente de folosință",
+          "beneficiar",
+          "înainte de buget final",
+          "blocaj la eligibilitate sau implementare"
+        ],
+        [
+          "Oferte și specificații",
+          "beneficiar / furnizori",
+          "înainte de depunere",
+          "cheltuieli respinse sau buget neclar"
+        ],
+        [
+          "Documente fiscale și juridice",
+          "beneficiar",
+          "în etapa de eligibilitate",
+          "neconformitate administrativă"
+        ],
+        [
+          "Dovezi pentru criterii de punctaj",
+          "beneficiar / consultant",
+          "înainte de estimarea punctajului",
+          "punctaj tratat ca sigur fără acoperire"
+        ]
+      ],
+      "preparationSteps": [
+        [
+          "1.",
+          "Stabilește exploatația reală și datele care pot fi dovedite."
+        ],
+        [
+          "2.",
+          "Calculează SO/SOC și verifică dacă încadrarea este compatibilă cu DR14."
+        ],
+        [
+          "3.",
+          "Alege investiția doar după ce documentele și activitatea o susțin."
+        ],
+        [
+          "4.",
+          "Construiește bugetul pe oferte comparabile și pe costuri realiste."
+        ],
+        [
+          "5.",
+          "Estimează punctajul doar pentru criteriile care pot fi demonstrate."
+        ],
+        [
+          "6.",
+          "Revizuiește concluzia când apare ghidul final sau o clarificare AFIR."
+        ]
+      ],
+      "commonMistakes": [
+        "calcul SO/SOC făcut pe date incomplete",
+        "utilaj ales înainte de verificarea exploatației",
+        "documente de folosință insuficiente pentru perioada cerută",
+        "oferte fără specificații tehnice clare",
+        "cofinanțare estimată fără rezervă pentru costuri neeligibile",
+        "punctaj presupus, dar nedovedit prin documente",
+        "confuzie între reguli consultative și ghidul activ"
+      ],
+      "caseExample": {
+        "beneficiary": "fermă mică mixtă, exemplu anonimizat",
+        "investmentObjective": "dotări și echipamente proporționale cu activitatea existentă",
+        "challenges": "SO/SOC neactualizat, documente de folosință parțiale și buget construit înainte de clarificarea investiției",
+        "checked": "încadrare, documente, legătura investiției cu activitatea, cofinanțare și riscuri de implementare",
+        "note": "Exemplul este orientativ. Decizia finală depinde de ghidul DR14 activ și de documentele concrete ale solicitantului."
+      },
+      "editorialNotes": [
+        "Pagina nu promite aprobare și nu înlocuiește ghidul oficial AFIR.",
+        "Valorile finale, intensitatea sprijinului și criteriile de selecție se verifică în apelul activ.",
+        "Dacă documentele fermei nu sunt coerente, recomandarea responsabilă este completarea lor înainte de depunere."
+      ]
+    },
+    {
       "slug": "start-up-nation-2026",
       "output": "start-up-nation-2026.html",
       "type": "program",

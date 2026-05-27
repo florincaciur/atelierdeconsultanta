@@ -11,7 +11,6 @@
 /consultanta-fonduri-europene-imm /consultant-fonduri-europene-imm 301
 /consultanta-fonduri-europene-imm/ /consultant-fonduri-europene-imm 301
 /consultanta-fonduri-europene-imm.html /consultant-fonduri-europene-imm 301
-/ro/11.html /fonduri-europene 301
 
 # Directory-backed canonical pages.
 /contact/ /contact 301
@@ -163,6 +162,7 @@
 /blog/safir-fotovoltaice-ferme-2026/ /blog-afir-fotovoltaice-ferme-2026 301
 /blog.html /blog 301
 /blog/ /blog 301
+/blog/index.html /blog 301
 /blog-afir-fotovoltaice-ferme-2026.html /blog-afir-fotovoltaice-ferme-2026 301
 /blog-afir-fotovoltaice-ferme-2026/ /blog-afir-fotovoltaice-ferme-2026 301
 /acte-necesare-fonduri-europene-nerambursabile.html /acte-necesare-fonduri-europene-nerambursabile 301
@@ -207,6 +207,24 @@
 /politica-de-confidentialitate/ /politica-de-confidentialitate 301
 /termeni-si-conditii.html /termeni-si-conditii 301
 /termeni-si-conditii/ /termeni-si-conditii 301
+
+# GSC alternate and historical auxiliary routes.
+/intrebari/ce-documente-sunt-necesare-pentru-afir /afir 301
+/intrebari/ce-documente-sunt-necesare-pentru-afir/ /afir 301
+/intrebari/ce-documente-sunt-necesare-pentru-afir.html /afir 301
+/intrebari/ce-documente-sunt-necesare-pentru-afir/index.html /afir 301
+/intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene/ /intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene 301
+/intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene/index.html /intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene 301
+/intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm/ /intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm 301
+/intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm/index.html /intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm 301
+/fonduri-europene-caen/4321-instalatii-electrice/ /fonduri-europene-caen/4321-instalatii-electrice 301
+/fonduri-europene-caen/4321-instalatii-electrice/index.html /fonduri-europene-caen/4321-instalatii-electrice 301
+/fonduri-europene-caen/5610-restaurante/ /fonduri-europene-caen/5610-restaurante 301
+/fonduri-europene-caen/5610-restaurante/index.html /fonduri-europene-caen/5610-restaurante 301
+/fonduri-europene-caen/6201-dezvoltare-software/ /fonduri-europene-caen/6201-dezvoltare-software 301
+/fonduri-europene-caen/6201-dezvoltare-software/index.html /fonduri-europene-caen/6201-dezvoltare-software 301
+/fonduri-europene-caen/0111-culturi-cereale/ /fonduri-europene-caen/0111-culturi-cereale 301
+/fonduri-europene-caen/0111-culturi-cereale/index.html /fonduri-europene-caen/0111-culturi-cereale 301
 
 # SEO and AI Search canonical routes.
 /dr12-afir/index.html /dr12-afir 301
@@ -275,10 +293,9 @@
 /dr12-afir-tineri-fermieri.html /dr12-afir 301
 /dr12-afir-tineri-fermieri/ /dr12-afir 301
 /dr12-afir-tineri-fermieri/index.html /dr12-afir 301
-/dr14-afir-ferme-mici /dr14 301
-/dr14-afir-ferme-mici.html /dr14 301
-/dr14-afir-ferme-mici/ /dr14 301
-/dr14-afir-ferme-mici/index.html /dr14 301
+/dr14-afir-ferme-mici.html /dr14-afir-ferme-mici 301
+/dr14-afir-ferme-mici/ /dr14-afir-ferme-mici 301
+/dr14-afir-ferme-mici/index.html /dr14-afir-ferme-mici 301
 /calculator-so-afir /calculator-soc 301
 /calculator-so-afir.html /calculator-soc 301
 /calculator-so-afir/ /calculator-soc 301
@@ -308,9 +325,8 @@
 /cheltuieli-eligibile-digitalizare-imm/index.html /cheltuieli-eligibile-digitalizare-imm 301
 
 # Legacy HTML fallback pages.
-/blog/index.html /blog 301
-/consultanta-start-up-nation/index.html /consultanta-start-up-nation 301
-/start-up-nation/index.html /start-up-nation 301
+/consultanta-start-up-nation/index.html /consultanta-start-up-nation-2026 301
+/start-up-nation/index.html /start-up-nation-2026 301
 
 # SEO and AI Search canonical routes.
 /apeluri-gal/ /apeluri-gal 301

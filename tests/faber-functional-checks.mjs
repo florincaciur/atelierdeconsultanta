@@ -9,7 +9,7 @@ import { chromium } from "playwright";
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const DIST = path.join(ROOT, "dist");
 const SITE_ORIGIN = "https://atelierdeconsultanta.ro";
-const EXPECTED_CANONICAL_URLS = 95;
+const EXPECTED_CANONICAL_URLS = 86;
 const CONSOLIDATED_LOCAL_ROUTES = [
   "/fonduri-europene-bacau",
   "/consultanta-fonduri-europene-bacau",
@@ -216,7 +216,7 @@ async function assertHomepageInteractions(baseUrl) {
     await page.locator("#dropdownBtn").click();
     assert.equal(await page.locator("#dropdownBtn").getAttribute("aria-expanded"), "true", "program menu should open");
     assert.equal(await page.locator("#dropdownPanel.open").count(), 1, "program menu panel should be visible");
-    assert.equal(await page.locator("#dropdownPanel a[href]").count(), 10, "program menu should expose 10 program links");
+    assert.equal(await page.locator("#dropdownPanel a[href]").count(), 12, "program menu should expose 12 program links");
 
     const internalLinks = await page.$$eval(
       ".nav-links a[href], #dropdownPanel a[href], #mobileMenu a[href], #financing-grid a[href], a.btn-primary[href], a.btn-secondary[href]",

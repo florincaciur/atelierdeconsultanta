@@ -59,6 +59,7 @@ const CANONICAL_ROOT_HTML_ROUTES = new Set([
   "por-adr-nord-est",
   "investitii-modernizarea-microintreprinderilor-apel-2",
   "dr12-afir",
+  "dr14-afir-ferme-mici",
   "afir-autoconsum-agroalimentar",
   "autoconsum-public-fotovoltaice-institutii-publice",
   "fondul-modernizare-energie-regenerabila-2026",
@@ -71,6 +72,7 @@ const CANONICAL_ROOT_HTML_ROUTES = new Set([
 ]);
 
 const CANONICAL_DIRECTORY_HTML_ROUTES = [
+  "blog",
   "contact",
   "despre-faber",
   "apeluri-gal",
@@ -138,6 +140,9 @@ function isPublicFile(relativePath) {
   if (EXCLUDED_FILES.has(normalized)) return false;
   for (const route of CANONICAL_ROOT_HTML_ROUTES) {
     if (normalized === `${route}/index.html` && fs.existsSync(path.join(ROOT, `${route}.html`))) return false;
+  }
+  if (CANONICAL_DIRECTORY_HTML_ROUTES.includes(normalized.replace(/\/index\.html$/i, "")) && normalized.endsWith("/index.html")) {
+    return false;
   }
   if (normalized === "_redirects" || normalized === "_headers") return true;
   return PUBLIC_EXTENSIONS.has(path.posix.extname(normalized).toLowerCase());

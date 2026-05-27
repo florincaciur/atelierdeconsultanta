@@ -3,6 +3,7 @@
 
 const fs = require("fs");
 const path = require("path");
+const cheerio = require("cheerio");
 
 const ROOT = path.resolve(__dirname, "..");
 const SITE = "https://atelierdeconsultanta.ro";
@@ -47,6 +48,7 @@ const PILLAR_SLUGS = new Set([
   "fonduri-europene-nerambursabile-2026",
   "dr12-afir",
   "dr14",
+  "dr14-afir-ferme-mici",
   "digitalizare-imm",
   "femeia-antreprenor-2026",
   "start-up-nation-2026",
@@ -81,6 +83,7 @@ const KEYWORDS_BY_SLUG = {
   "fonduri-europene-nerambursabile-2026": ["fonduri europene nerambursabile 2026", "fonduri europene 2026 pentru tineri", "fonduri europene 2026 rural non agricol", "program fonduri europene 2026", "fonduri europene 2026 pentru femei"],
   "dr12-afir": ["DR12 AFIR", "program DR12 investitii tineri fermieri", "investitii tineri fermieri 2026", "ghid DR12 AFIR"],
   "dr14": ["DR14 AFIR", "investitii ferme mici", "program fonduri ferme mici 2026", "conditii DR14", "SO ferma mica"],
+  "dr14-afir-ferme-mici": ["DR14 AFIR ferme mici", "conditii DR14 ferme mici", "documente DR14 AFIR", "eligibilitate ferme mici"],
   "digitalizare-imm": ["Digitalizare IMM 2026", "PNRR digitalizare IMM", "grant digitalizare IMM 2026", "echipamente digitalizare IMM"],
   "femeia-antreprenor-2026": ["Femeia Antreprenor 2026", "fonduri europene femei antreprenor 2026", "grant Femeia Antreprenor 2026", "cheltuieli eligibile Femeia Antreprenor 2026"],
   "start-up-nation-2026": ["Start Up Nation 2026", "Start Up Nation 2026 conditii", "cheltuieli eligibile Start Up Nation 2026", "cod CAEN Start Up Nation 2026", "idei afaceri Start Up Nation 2026", "plan de afaceri Start Up Nation 2026"],
@@ -108,14 +111,246 @@ function writeJson(file, value) {
   fs.writeFileSync(file, `${JSON.stringify(value, null, 2)}\n`, "utf8");
 }
 
-function publicText(value, fallback = "In curs de validare") {
+const ROMANIAN_COPY_REPLACEMENTS = [
+  [/\bMicrointreprinderi\b/g, "Microîntreprinderi"],
+  [/\bmicrointreprinderi\b/g, "microîntreprinderi"],
+  [/\bAcasa\b/g, "Acasă"],
+  [/\bacasa\b/g, "acasă"],
+  [/\bSolicita\b/g, "Solicită"],
+  [/\bsolicita\b/g, "solicită"],
+  [/\bSa\b/g, "Să"],
+  [/\bsa\b/g, "să"],
+  [/\bDaca\b/g, "Dacă"],
+  [/\bdaca\b/g, "dacă"],
+  [/\bColectie\b/g, "Colecție"],
+  [/\bcolectie\b/g, "colecție"],
+  [/\binitiala\b/g, "inițială"],
+  [/\binitial\b/g, "inițial"],
+  [/\boficiala\b/g, "oficială"],
+  [/\boficial\b/g, "oficial"],
+  [/\bfinala\b/g, "finală"],
+  [/\bpractica\b/g, "practică"],
+  [/\breala\b/g, "reală"],
+  [/\brealistă\b/g, "realistă"],
+  [/\brealista\b/g, "realistă"],
+  [/\bprudenta\b/g, "prudentă"],
+  [/\borientativa\b/g, "orientativă"],
+  [/\bagricola\b/g, "agricolă"],
+  [/\beconomica\b/g, "economică"],
+  [/\bjuridica\b/g, "juridică"],
+  [/\btehnica\b/g, "tehnică"],
+  [/\boperationala\b/g, "operațională"],
+  [/\bdisponibila\b/g, "disponibilă"],
+  [/\bestimata\b/g, "estimată"],
+  [/\bposibila\b/g, "posibilă"],
+  [/\bpotrivita\b/g, "potrivită"],
+  [/\bneclara\b/g, "neclară"],
+  [/\bneeligibila\b/g, "neeligibilă"],
+  [/\bConsultanta\b/g, "Consultanță"],
+  [/\bconsultanta\b/g, "consultanță"],
+  [/\bFinantare\b/g, "Finanțare"],
+  [/\bfinantare\b/g, "finanțare"],
+  [/\bfinantari\b/g, "finanțări"],
+  [/\bfinantarii\b/g, "finanțării"],
+  [/\bfinantata\b/g, "finanțată"],
+  [/\bfinantat\b/g, "finanțat"],
+  [/\bfinantate\b/g, "finanțate"],
+  [/\bfinantator\b/g, "finanțator"],
+  [/\bCofinantare\b/g, "Cofinanțare"],
+  [/\bcofinantare\b/g, "cofinanțare"],
+  [/\bcofinantarea\b/g, "cofinanțarea"],
+  [/\bcofinantarii\b/g, "cofinanțării"],
+  [/\bInvestitii\b/g, "Investiții"],
+  [/\binvestitii\b/g, "investiții"],
+  [/\binvestitie\b/g, "investiție"],
+  [/\binvestitia\b/g, "investiția"],
+  [/\binvestitiei\b/g, "investiției"],
+  [/\binvestitiile\b/g, "investițiile"],
+  [/\bConditii\b/g, "Condiții"],
+  [/\bconditii\b/g, "condiții"],
+  [/\bconditiile\b/g, "condițiile"],
+  [/\bconditie\b/g, "condiție"],
+  [/\bPregatire\b/g, "Pregătire"],
+  [/\bpregatire\b/g, "pregătire"],
+  [/\bpregatirea\b/g, "pregătirea"],
+  [/\bpregateste\b/g, "pregătește"],
+  [/\bpregatesti\b/g, "pregătești"],
+  [/\bpregatesc\b/g, "pregătesc"],
+  [/\bpregatite\b/g, "pregătite"],
+  [/\bpregatit\b/g, "pregătit"],
+  [/\bpregatita\b/g, "pregătită"],
+  [/\bpregatim\b/g, "pregătim"],
+  [/\bSe verifica\b/g, "Se verifică"],
+  [/\bse verifica\b/g, "se verifică"],
+  [/\bVerifica\b/g, "Verifică"],
+  [/\bverificari\b/g, "verificări"],
+  [/\bverificarile\b/g, "verificările"],
+  [/\bverificata\b/g, "verificată"],
+  [/\bverificat\b/g, "verificat"],
+  [/\bverificate\b/g, "verificate"],
+  [/\bIntrebari\b/g, "Întrebări"],
+  [/\bintrebari\b/g, "întrebări"],
+  [/\bintrebarea\b/g, "întrebarea"],
+  [/\bintai\b/g, "întâi"],
+  [/\bInainte\b/g, "Înainte"],
+  [/\binainte\b/g, "înainte"],
+  [/\bDupa\b/g, "După"],
+  [/\bdupa\b/g, "după"],
+  [/\bCand\b/g, "Când"],
+  [/\bcand\b/g, "când"],
+  [/\bCat\b/g, "Cât"],
+  [/\bcat\b/g, "cât"],
+  [/\bCatre\b/g, "Către"],
+  [/\bcatre\b/g, "către"],
+  [/\bIn\b/g, "În"],
+  [/\bin\b/g, "în"],
+  [/\bsi\b/g, "și"],
+  [/\bEste\b/g, "Este"],
+  [/\bexista\b/g, "există"],
+  [/\bExista\b/g, "Există"],
+  [/\binseamna\b/g, "înseamnă"],
+  [/\bInseamna\b/g, "Înseamnă"],
+  [/\bobtin\b/g, "obțin"],
+  [/\bobtine\b/g, "obține"],
+  [/\bobtinut\b/g, "obținut"],
+  [/\bobtinere\b/g, "obținere"],
+  [/\bFirma\b/g, "Firmă"],
+  [/\bfirma\b/g, "firmă"],
+  [/\bfermei\b/g, "fermei"],
+  [/\bexploatatie\b/g, "exploatație"],
+  [/\bexploatatia\b/g, "exploatația"],
+  [/\bexploatatiei\b/g, "exploatației"],
+  [/\bexploatatii\b/g, "exploatații"],
+  [/\bexploatatiile\b/g, "exploatațiile"],
+  [/\bcomparatie\b/g, "comparație"],
+  [/\bTanar\b/g, "Tânăr"],
+  [/\btanar\b/g, "tânăr"],
+  [/\btineri\b/g, "tineri"],
+  [/\bvarsta\b/g, "vârstă"],
+  [/\bvarstei\b/g, "vârstei"],
+  [/\bLocatie\b/g, "Locație"],
+  [/\blocatie\b/g, "locație"],
+  [/\blocatia\b/g, "locația"],
+  [/\bspatiu\b/g, "spațiu"],
+  [/\bspatiul\b/g, "spațiul"],
+  [/\bspatii\b/g, "spații"],
+  [/\bcladire\b/g, "clădire"],
+  [/\bcladiri\b/g, "clădiri"],
+  [/\bfolosinta\b/g, "folosință"],
+  [/\bfolosintei\b/g, "folosinței"],
+  [/\badaposturi\b/g, "adăposturi"],
+  [/\bsuprafete\b/g, "suprafețe"],
+  [/\bsuprafetele\b/g, "suprafețele"],
+  [/\bdotari\b/g, "dotări"],
+  [/\bdotarile\b/g, "dotările"],
+  [/\beficienta\b/g, "eficiență"],
+  [/\bproductie\b/g, "producție"],
+  [/\bproductiei\b/g, "producției"],
+  [/\binstalatii\b/g, "instalații"],
+  [/\bincarcare\b/g, "încărcare"],
+  [/\belectrica\b/g, "electrică"],
+  [/\bregenerabila\b/g, "regenerabilă"],
+  [/\bprivati\b/g, "privați"],
+  [/\bLocala\b/g, "Locală"],
+  [/\blocala\b/g, "locală"],
+  [/\bAdresa\b/g, "Adresă"],
+  [/\badresa\b/g, "adresă"],
+  [/\bsituatii\b/g, "situații"],
+  [/\bsituatiile\b/g, "situațiile"],
+  [/\bselectie\b/g, "selecție"],
+  [/\bselectia\b/g, "selecția"],
+  [/\bachizitii\b/g, "achiziții"],
+  [/\bachizitie\b/g, "achiziție"],
+  [/\bplati\b/g, "plăți"],
+  [/\bplata\b/g, "plată"],
+  [/\braportari\b/g, "raportări"],
+  [/\bobligatii\b/g, "obligații"],
+  [/\bautorizari\b/g, "autorizări"],
+  [/\bclarificari\b/g, "clarificări"],
+  [/\bsemnaturi\b/g, "semnături"],
+  [/\bfisiere\b/g, "fișiere"],
+  [/\bInformatii\b/g, "Informații"],
+  [/\binformatii\b/g, "informații"],
+  [/\binformatiile\b/g, "informațiile"],
+  [/\braspuns\b/g, "răspuns"],
+  [/\braspunsuri\b/g, "răspunsuri"],
+  [/\braspunda\b/g, "răspundă"],
+  [/\braspunde\b/g, "răspunde"],
+  [/\blipseste\b/g, "lipsește"],
+  [/\blipsa\b/g, "lipsă"],
+  [/\bfoloseste\b/g, "folosește"],
+  [/\bfolosesti\b/g, "folosești"],
+  [/\bcauta\b/g, "caută"],
+  [/\bcauti\b/g, "cauți"],
+  [/\bcitesti\b/g, "citești"],
+  [/\bnoteaza\b/g, "notează"],
+  [/\bconstruieste\b/g, "construiește"],
+  [/\brevizuieste\b/g, "revizuiește"],
+  [/\btrimiti\b/g, "trimiți"],
+  [/\bpoti\b/g, "poți"],
+  [/\bpoata\b/g, "poată"],
+  [/\bfata\b/g, "față"],
+  [/\bfara\b/g, "fără"],
+  [/\bdiscutia\b/g, "discuția"],
+  [/\bajunga\b/g, "ajungă"],
+  [/\bmentioneaza\b/g, "menționează"],
+  [/\burmarit\b/g, "urmărit"],
+  [/\burmareste\b/g, "urmărește"],
+  [/\bschimba\b/g, "schimbă"],
+  [/\bactualizari\b/g, "actualizări"],
+  [/\baprobari\b/g, "aprobări"],
+  [/\bintalnire\b/g, "întâlnire"],
+  [/\bdistanta\b/g, "distanță"],
+  [/\bStiu\b/g, "Știu"],
+  [/\bstiu\b/g, "știu"],
+  [/\bramane\b/g, "rămâne"],
+  [/\braman\b/g, "rămân"],
+  [/\bpromisiune\b/g, "promisiune"],
+  [/\bgaranteaza\b/g, "garantează"],
+  [/\bgarantata\b/g, "garantată"],
+  [/\bGreseli\b/g, "Greșeli"],
+  [/\bgreseli\b/g, "greșeli"],
+  [/\bgresit\b/g, "greșit"],
+  [/\bgresita\b/g, "greșită"],
+  [/\blegatura\b/g, "legătura"],
+  [/\bslaba\b/g, "slabă"],
+  [/\bsustin\b/g, "susțin"],
+  [/\bsustine\b/g, "susține"],
+  [/\bsustinuta\b/g, "susținută"],
+  [/\bsustinute\b/g, "susținute"],
+  [/\bsursa oficiala\b/g, "sursa oficială"],
+  [/\boferta\b/g, "ofertă"],
+  [/\bofertare\b/g, "ofertare"],
+  [/\bactiuni\b/g, "acțiuni"],
+  [/\bactiunile\b/g, "acțiunile"],
+  [/\bactiune\b/g, "acțiune"],
+  [/\bActiune\b/g, "Acțiune"],
+  [/\bautoritatii\b/g, "autorității"],
+  [/\bjudet\b/g, "județ"],
+  [/\bjudetul\b/g, "județul"],
+  [/\bjudetului\b/g, "județului"],
+  [/\bjudete\b/g, "județe"],
+  [/\bIasi\b/g, "Iași"],
+  [/\bBacau\b/g, "Bacău"],
+  [/\bBucuresti\b/g, "București"]
+];
+
+function normalizeRomanianCopy(value) {
+  let text = String(value ?? "");
+  for (const [pattern, replacement] of ROMANIAN_COPY_REPLACEMENTS) {
+    text = text.replace(pattern, replacement);
+  }
+  return text;
+}
+
+function publicText(value, fallback = "În curs de validare") {
   const text = String(value ?? "").trim();
   if (!text || /^TODO_/i.test(text)) return fallback;
-  return text
+  return normalizeRomanianCopy(text
     .replace(/TODO_CLIENT_[A-Z0-9_ -]*/gi, fallback)
     .replace(/TODO_SURSA_OFICIALA[A-Z0-9_ -]*/gi, "Se confirma in ghidul activ")
     .replace(/TODO_DATA_ACCESARII/gi, "In curs de actualizare")
-    .replace(/TODO_VERIFICARE_GHID[A-Z0-9_ -]*/gi, "Se verifica in ghidul activ");
+    .replace(/TODO_VERIFICARE_GHID[A-Z0-9_ -]*/gi, "Se verifica in ghidul activ"));
 }
 
 function esc(value) {
@@ -124,6 +359,32 @@ function esc(value) {
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;");
+}
+
+function normalizeHtmlCopy(html) {
+  const $ = cheerio.load(html, { decodeEntities: false });
+  $("title").text((_, text) => normalizeRomanianCopy(text));
+  $("meta[name='description'], meta[property='og:title'], meta[property='og:description'], meta[name='twitter:title'], meta[name='twitter:description']").each((_, element) => {
+    const content = $(element).attr("content");
+    if (content) $(element).attr("content", normalizeRomanianCopy(content));
+  });
+  $("[aria-label], [alt], [title], [placeholder]").each((_, element) => {
+    for (const attr of ["aria-label", "alt", "title", "placeholder"]) {
+      const value = $(element).attr(attr);
+      if (value) $(element).attr(attr, normalizeRomanianCopy(value));
+    }
+  });
+  $("body")
+    .find("*")
+    .addBack()
+    .contents()
+    .each((_, node) => {
+      if (node.type !== "text") return;
+      const parent = node.parent && node.parent.name ? String(node.parent.name).toLowerCase() : "";
+      if (["script", "style", "code", "pre", "textarea"].includes(parent)) return;
+      node.data = normalizeRomanianCopy(node.data);
+    });
+  return $.html();
 }
 
 function slugPath(page) {
@@ -140,7 +401,23 @@ function cleanUrl(value) {
   return `/${String(value).replace(/^\/+/, "").replace(/\.html$/i, "").replace(/\/+$/g, "")}`;
 }
 
-function heroImageFor(page) {
+let bannerHeroImageByRoute = null;
+
+function bannerHeroImageForPage(page) {
+  if (!bannerHeroImageByRoute) {
+    bannerHeroImageByRoute = new Map();
+    if (fs.existsSync(BANNERS_PATH)) {
+      for (const banner of readJson(BANNERS_PATH)) {
+        const route = cleanUrl(banner.ctaLink || "");
+        const image = String(banner.image || "").trim();
+        if (route && image) bannerHeroImageByRoute.set(route, image);
+      }
+    }
+  }
+  return bannerHeroImageByRoute.get(slugPath(page)) || "";
+}
+
+function fallbackHeroImageFor(page) {
   const text = `${page.slug || ""} ${page.category || ""} ${page.programName || ""} ${page.h1 || ""}`.toLowerCase();
   if (page.slug === "e-move") return "/assets/hero/hero-solar.webp";
   if (page.slug === "gal-afir") return "/assets/hero/hero-local.webp";
@@ -149,6 +426,10 @@ function heroImageFor(page) {
   if (/digitalizare|pnrr|software|instrumente/.test(text)) return "/assets/hero/hero-digital.webp";
   if (/local|nord-est|bacau|iasi|suceava|bucuresti/.test(text)) return "/assets/hero/hero-local.webp";
   return "/assets/hero/hero-business.webp";
+}
+
+function heroImageFor(page) {
+  return page.heroImage || bannerHeroImageForPage(page) || fallbackHeroImageFor(page);
 }
 
 function heroAttrs(page) {
@@ -1581,14 +1862,15 @@ ${CLARITY_TRACKING_CODE}
 }
 
 function ensureFile(page, html) {
+  const normalizedHtml = normalizeHtmlCopy(html);
   const canonicalFile = path.join(ROOT, slugPath(page).slice(1), "index.html");
   fs.mkdirSync(path.dirname(canonicalFile), { recursive: true });
-  fs.writeFileSync(canonicalFile, html, "utf8");
+  fs.writeFileSync(canonicalFile, normalizedHtml, "utf8");
 
   if (/\.html$/i.test(page.output) && !/\/index\.html$/i.test(page.output.replace(/\\/g, "/"))) {
     const legacyFile = path.join(ROOT, page.output);
     fs.mkdirSync(path.dirname(legacyFile), { recursive: true });
-    fs.writeFileSync(legacyFile, html, "utf8");
+    fs.writeFileSync(legacyFile, normalizedHtml, "utf8");
   }
 }
 
@@ -1730,14 +2012,14 @@ function updateBanners() {
   const wanted = [
     {
       id: "slide-micro-apel-2",
-      tag: "Microintreprinderi",
-      title: "Modernizarea microintreprinderilor\nApel 2",
-      description: "Pregatire pentru microintreprinderi: regiune, CAEN, documente, buget, cheltuieli si punctaj.",
-      amount: "Finantare: conform apelului activ",
-      ctaText: "Detalii program ->",
+      tag: "Microîntreprinderi",
+      title: "Modernizarea microîntreprinderilor\nApel 2",
+      description: "Pregătire pentru microîntreprinderi: regiune, CAEN, documente, buget, cheltuieli și punctaj.",
+      amount: "Finanțare: conform apelului activ",
+      ctaText: "Detalii program →",
       ctaLink: "/investitii-modernizarea-microintreprinderilor-apel-2",
       image: "",
-      altText: "Banner modernizarea microintreprinderilor Apel 2",
+      altText: "Banner modernizarea microîntreprinderilor Apel 2",
       icon: "ph-buildings",
       order: 10,
       active: true,
@@ -1745,14 +2027,14 @@ function updateBanners() {
     },
     {
       id: "slide-fond-modernizare-regenerabila",
-      tag: "Energie regenerabila",
-      title: "Fondul pentru Modernizare\nEnergie regenerabila",
-      description: "Pagina pentru capacitati noi de producere a energiei regenerabile: amplasament, avize, buget si depunere.",
-      amount: "Finantare: conform ghidului apelului activ",
-      ctaText: "Detalii program ->",
+      tag: "Energie regenerabilă",
+      title: "Fondul pentru Modernizare\nEnergie regenerabilă",
+      description: "Pagina pentru capacități noi de producere a energiei regenerabile: amplasament, avize, buget și depunere.",
+      amount: "Finanțare: conform ghidului apelului activ",
+      ctaText: "Detalii program →",
       ctaLink: "/fondul-modernizare-energie-regenerabila-2026",
       image: "",
-      altText: "Banner Fondul pentru Modernizare energie regenerabila",
+      altText: "Banner Fondul pentru Modernizare energie regenerabilă",
       icon: "ph-sun",
       order: 11,
       active: true,
@@ -1761,10 +2043,10 @@ function updateBanners() {
     {
       id: "slide-apeluri-gal",
       tag: "LEADER / GAL",
-      title: "Apeluri GAL\nFinantari locale",
-      description: "Orientare prudenta pentru identificarea GAL-ului local, verificarea ghidului, a documentelor si a criteriilor locale.",
-      amount: "Finantare: conform ghidului GAL activ",
-      ctaText: "Detalii GAL ->",
+      title: "Apeluri GAL\nFinanțări locale",
+      description: "Orientare prudentă pentru identificarea GAL-ului local, verificarea ghidului, a documentelor și a criteriilor locale.",
+      amount: "Finanțare: conform ghidului GAL activ",
+      ctaText: "Detalii GAL →",
       ctaLink: "/apeluri-gal",
       image: "",
       altText: "Banner apeluri GAL LEADER",
@@ -1775,14 +2057,14 @@ function updateBanners() {
     },
     {
       id: "slide-e-move",
-      tag: "Mobilitate electrica",
-      title: "e-MOVE RO\nStatii de incarcare si energie regenerabila",
-      description: "Program pentru infrastructura de mobilitate electrica. Verifica beneficiarul, amplasamentul, avizele, sursa de energie si ghidul activ inainte de depunere.",
-      amount: "Finantare: conform ghidului oficial al apelului activ",
-      ctaText: "Detalii e-MOVE ->",
+      tag: "Mobilitate electrică",
+      title: "e-MOVE RO\nStații de încărcare și energie regenerabilă",
+      description: "Program pentru infrastructura de mobilitate electrică. Verifică beneficiarul, amplasamentul, avizele, sursa de energie și ghidul activ înainte de depunere.",
+      amount: "Finanțare: conform ghidului oficial al apelului activ",
+      ctaText: "Detalii e-MOVE →",
       ctaLink: "/e-move",
       image: "",
-      altText: "Banner program e-MOVE RO statii de incarcare si energie regenerabila",
+      altText: "Banner program e-MOVE RO stații de încărcare și energie regenerabilă",
       icon: "ph-battery-charging",
       order: 13,
       active: true,
@@ -1791,13 +2073,13 @@ function updateBanners() {
     {
       id: "slide-gal-afir",
       tag: "LEADER / GAL / AFIR",
-      title: "GAL-AFIR\nApeluri pentru beneficiari publici si privati",
-      description: "Finantari locale prin Grupuri de Actiune Locala. FABER scrie proiecte noi si poate prelua proiecte aflate in implementare.",
-      amount: "Finantare: conform ghidului GAL activ",
-      ctaText: "Detalii GAL-AFIR ->",
+      title: "GAL-AFIR\nApeluri pentru beneficiari publici și privați",
+      description: "Finanțări locale prin Grupuri de Acțiune Locală. FABER scrie proiecte noi și poate prelua proiecte aflate în implementare.",
+      amount: "Finanțare: conform ghidului GAL activ",
+      ctaText: "Detalii GAL-AFIR →",
       ctaLink: "/gal-afir",
       image: "",
-      altText: "Banner GAL AFIR apeluri LEADER pentru beneficiari publici si privati",
+      altText: "Banner GAL AFIR apeluri LEADER pentru beneficiari publici și privați",
       icon: "ph-map-pin",
       order: 14,
       active: true,
