@@ -74,6 +74,8 @@ const CANONICAL_DIRECTORY_HTML_ROUTES = [
   "contact",
   "despre-faber",
   "apeluri-gal",
+  "e-move",
+  "gal-afir",
   "consultanta-fonduri-europene",
   "fonduri-europene-nord-est",
   "verificare-eligibilitate-fonduri-europene",
