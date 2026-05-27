@@ -309,11 +309,7 @@
 
 # Legacy HTML fallback pages.
 /blog/index.html /blog 301
-/consultanta-start-up-nation.html /consultanta-start-up-nation 301
 /consultanta-start-up-nation/index.html /consultanta-start-up-nation 301
-/fonduri-europene-herambursabile-2026.html /fonduri-europene-herambursabile-2026 301
-/fonduri-europene-herambursabile-2026/index.html /fonduri-europene-herambursabile-2026 301
-/start-up-nation.html /start-up-nation 301
 /start-up-nation/index.html /start-up-nation 301
 
 # SEO and AI Search canonical routes.
