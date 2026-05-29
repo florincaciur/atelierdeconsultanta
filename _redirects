@@ -1,5 +1,25 @@
 /index.html / 301
 
+# FABER canonical cleanup - 2026-05-29
+/calculator-so-afir /calculator-soc 301
+/calculator-so-afir.html /calculator-soc 301
+/calculator-so-afir/ /calculator-soc 301
+/dr12-afir-tineri-fermieri /dr12-afir 301
+/dr12-afir-tineri-fermieri.html /dr12-afir 301
+/dr12-afir.html /dr12-afir 301
+/startup-nation-2026-conditii /start-up-nation-2026-conditii 301
+/startup-nation-2026-conditii.html /start-up-nation-2026-conditii 301
+/startup-nation-2026-conditii/ /start-up-nation-2026-conditii 301
+/intrebari/ce-documente-sunt-necesare-pentru-dr12 /dr12-afir 301
+/intrebari/ce-documente-sunt-necesare-pentru-dr12/ /dr12-afir 301
+/intrebari/ce-documente-sunt-necesare-pentru-dr12/index.html /dr12-afir 301
+/intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene /cum-se-calculeaza-cofinantarea-fonduri-europene 301
+/intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene/ /cum-se-calculeaza-cofinantarea-fonduri-europene 301
+/intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene/index.html /cum-se-calculeaza-cofinantarea-fonduri-europene 301
+/intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm /pnrr-digitalizare-imm-cheltuieli-eligibile 301
+/intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm/ /pnrr-digitalizare-imm-cheltuieli-eligibile 301
+/intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm/index.html /pnrr-digitalizare-imm-cheltuieli-eligibile 301
+
 # Canonical URL convention: clean paths without .html and without trailing slash.
 # Legacy and renamed service routes.
 /start-up-nation /start-up-nation-2026 301
@@ -181,7 +201,6 @@
 /pnrr-digitalizare-imm-cheltuieli-eligibile/ /pnrr-digitalizare-imm-cheltuieli-eligibile 301
 /fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum.html /fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum 301
 /fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum/ /fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum 301
-/dr12-afir.html /dr12-afir 301
 /dr12-afir/ /dr12-afir 301
 /dr14.html /dr14 301
 /dr14/ /dr14 301
@@ -213,10 +232,6 @@
 /intrebari/ce-documente-sunt-necesare-pentru-afir/ /afir 301
 /intrebari/ce-documente-sunt-necesare-pentru-afir.html /afir 301
 /intrebari/ce-documente-sunt-necesare-pentru-afir/index.html /afir 301
-/intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene/ /intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene 301
-/intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene/index.html /intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene 301
-/intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm/ /intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm 301
-/intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm/index.html /intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm 301
 /fonduri-europene-caen/4321-instalatii-electrice/ /fonduri-europene-caen/4321-instalatii-electrice 301
 /fonduri-europene-caen/4321-instalatii-electrice/index.html /fonduri-europene-caen/4321-instalatii-electrice 301
 /fonduri-europene-caen/5610-restaurante/ /fonduri-europene-caen/5610-restaurante 301
@@ -289,25 +304,17 @@
 /cum-se-calculeaza-cofinantarea-fonduri-europene/index.html /cum-se-calculeaza-cofinantarea-fonduri-europene 301
 
 # AFIR editorial articles.
-/dr12-afir-tineri-fermieri /dr12-afir 301
-/dr12-afir-tineri-fermieri.html /dr12-afir 301
 /dr12-afir-tineri-fermieri/ /dr12-afir 301
 /dr12-afir-tineri-fermieri/index.html /dr12-afir 301
 /dr14-afir-ferme-mici.html /dr14-afir-ferme-mici 301
 /dr14-afir-ferme-mici/ /dr14-afir-ferme-mici 301
 /dr14-afir-ferme-mici/index.html /dr14-afir-ferme-mici 301
-/calculator-so-afir /calculator-soc 301
-/calculator-so-afir.html /calculator-soc 301
-/calculator-so-afir/ /calculator-soc 301
 /calculator-so-afir/index.html /calculator-soc 301
 /dr12-vs-dr14.html /dr12-vs-dr14 301
 /dr12-vs-dr14/ /dr12-vs-dr14 301
 /dr12-vs-dr14/index.html /dr12-vs-dr14 301
 
 # Start-Up Nation and Digitalizare editorial articles.
-/startup-nation-2026-conditii /start-up-nation-2026-conditii 301
-/startup-nation-2026-conditii.html /start-up-nation-2026-conditii 301
-/startup-nation-2026-conditii/ /start-up-nation-2026-conditii 301
 /startup-nation-2026-conditii/index.html /start-up-nation-2026-conditii 301
 /cod-caen-startup-nation /cod-caen-start-up-nation-2026 301
 /cod-caen-startup-nation.html /cod-caen-start-up-nation-2026 301

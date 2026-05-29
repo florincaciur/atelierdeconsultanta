@@ -11,6 +11,7 @@
     "generate:lead-magnets": "node tools/generate-lead-magnets.js",
     "generate:sitemap": "node tools/generate-sitemap.js",
     "verify:sitemap": "node tools/verify-sitemap.js",
+    "verify:seo-local": "node tools/validate-seo-local.js",
     "verify:seo": "node scripts/verify-seo-integrity.js .",
     "verify:visual": "node scripts/visual-integrity-check.js",
     "verify:functional": "node verify-and-fix.js",

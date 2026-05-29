@@ -98,13 +98,13 @@ function organizationSchema(options = {}) {
     email: EMAIL,
     areaServed: {
       "@type": "Country",
-      name: "Romania"
+      name: "România"
     },
     contactPoint: TELEPHONES.map((telephone) => ({
       "@type": "ContactPoint",
       telephone,
       contactType: "customer service",
-      availableLanguage: "Romanian"
+      availableLanguage: "ro-RO"
     })),
     knowsAbout: KNOWS_ABOUT
   };
@@ -136,7 +136,7 @@ function localBusinessSchema() {
     image: IMAGE_URL,
     areaServed: {
       "@type": "Country",
-      name: "Romania"
+      name: "România"
     },
     parentOrganization: { "@id": ORGANIZATION_ID }
   };

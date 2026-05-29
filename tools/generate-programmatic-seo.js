@@ -18,6 +18,10 @@ const {
   webPageSchema,
   websiteSchema
 } = require("./schema-helpers");
+const {
+  normalizeHtmlCopy,
+  normalizeRomanianCopy
+} = require("./normalize-copy-ro");
 const CLARITY_TRACKING_CODE = `  <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -29,11 +33,11 @@ const CLARITY_TRACKING_CODE = `  <script type="text/javascript">
 function publicText(value, fallback = "In curs de validare") {
   const text = String(value ?? "").trim();
   if (!text || /^TODO_/i.test(text)) return fallback;
-  return text
+  return normalizeRomanianCopy(text
     .replace(/TODO_CLIENT_[A-Z0-9_ -]*/gi, fallback)
     .replace(/TODO_SURSA_OFICIALA[A-Z0-9_ -]*/gi, "Se confirma in ghidul activ")
     .replace(/TODO_DATA_ACCESARII/gi, "In curs de actualizare")
-    .replace(/TODO_DATE_LOCALE/gi, "Exemplele locale vor fi publicate dupa validare");
+    .replace(/TODO_DATE_LOCALE/gi, "Exemplele locale vor fi publicate dupa validare"));
 }
 
 function esc(value) {
@@ -182,7 +186,7 @@ ${CLARITY_TRACKING_CODE}
 function writePage(route, content) {
   const file = path.join(ROOT, cleanUrl(route).slice(1), "index.html");
   fs.mkdirSync(path.dirname(file), { recursive: true });
-  fs.writeFileSync(file, content, "utf8");
+  fs.writeFileSync(file, normalizeHtmlCopy(content), "utf8");
 }
 
 function redirectFallbackPage({ route, target, title }) {
@@ -463,20 +467,27 @@ function main() {
         title: `Consultanta fonduri europene ${item.city}`
       }
     ]);
+  const faqRedirects = (config.faqPages || [])
+    .filter((item) => item.status === "redirect" && item.redirectTo)
+    .map((item) => ({
+      route: `/intrebari/${item.slug}`,
+      target: item.redirectTo,
+      title: item.question || item.slug
+    }));
   const pages = [
     ...(config.caenPages || []).map(caenPage),
     ...(config.regionalPages || []).map(regionalPage),
     ...activeLocalPages.flatMap((item) => [localPage(item, false), localPage(item, true)]),
-    ...(config.faqPages || []).map(faqPage)
+    ...(config.faqPages || []).filter((item) => item.status !== "redirect").map(faqPage)
   ];
   for (const page of pages) writePage(page.route, page.content);
-  for (const redirect of localRedirects) writePage(redirect.route, redirectFallbackPage(redirect));
+  for (const redirect of [...localRedirects, ...faqRedirects]) writePage(redirect.route, redirectFallbackPage(redirect));
   updateSitemap(
     pages.map((page) => page.route),
     config.updatedAt || "2026-05-19",
-    localRedirects.map((redirect) => redirect.route)
+    [...localRedirects, ...faqRedirects].map((redirect) => redirect.route)
   );
-  console.log(`Generated ${pages.length} programmatic SEO pages and ${localRedirects.length} local redirect fallbacks.`);
+  console.log(`Generated ${pages.length} programmatic SEO pages and ${localRedirects.length + faqRedirects.length} redirect fallbacks.`);
 }
 
 main();

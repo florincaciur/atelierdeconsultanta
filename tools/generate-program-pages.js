@@ -644,9 +644,13 @@ function renderDecisionMatrix(page) {
   const expenses = compactTextList(page.eligibleExpenses, "cheltuielile propuse prin proiect");
   const risks = compactTextList(page.ineligibleExpenses, "cheltuieli nepermise sau insuficient justificate");
   const steps = compactTextList(page.steps, "verificare, documentare, bugetare si depunere", 5);
+  const decisionIntro = page.decisionIntro ||
+    `${programName} se verifica prin elemente concrete: cine aplica, ce documente exista, ce investitie se propune si ce riscuri pot aparea la evaluare sau implementare.`;
+  const decisionClose = page.decisionClose ||
+    "Daca datele, documentele sau bugetul nu sustin proiectul, recomandarea prudenta este ajustarea sau amanarea depunerii. Regulile finale se confirma in ghidul activ, anexele apelului si sursele oficiale.";
 
   return `<h2>Ce verifici concret pentru ${esc(programName)}</h2>
-      <p>O pagina utila trebuie sa raspunda la intrebari reale ale beneficiarului. Pentru ${esc(programName)}, raspunsul practic porneste de la solicitant, investitie, documente si riscuri, nu de la o suma promisa sau de la o lista generica de achizitii.</p>
+      <p>${esc(decisionIntro)}</p>
       <table class="program-table">
         <tbody>
           <tr><th>Potrivirea solicitantului</th><td>${esc(audience)}</td></tr>
@@ -656,7 +660,7 @@ function renderDecisionMatrix(page) {
           <tr><th>Ordinea pregatirii</th><td>${esc(steps)}</td></tr>
         </tbody>
       </table>
-      <p>Daca una dintre piesele de mai sus nu se potriveste cu ghidul apelului activ, proiectul trebuie ajustat inainte de depunere. Conditiile finale, pragurile, grilele si perioadele se confirma doar din documentele oficiale ale apelului.</p>`;
+      <p>${esc(decisionClose)}</p>`;
 }
 
 function renderEditorialTable(title, columns, rows) {
@@ -736,8 +740,8 @@ ${editorialHtml}
 ${officialSourcesHtml}
       <h2>FAQ</h2>
       ${faqHtml}
-      <h2>CTA</h2>
-      <p>Trimite-ne codul CAEN / tipul fermei / investi\u021bia dorit\u0103 pentru verificarea eligibilit\u0103\u021bii.</p>`;
+      <h2>${esc(page.inlineCtaTitle || "Urmatorul pas")}</h2>
+      <p>${esc(page.inlineCtaText || "Trimite datele principale despre solicitant, localitate, activitate, investitie si buget. FABER poate verifica incadrarea initiala si riscurile, fara sa promita aprobarea finantarii.")}</p>`;
 }
 
 function renderTools() {
@@ -1398,7 +1402,7 @@ ${renderDecisionMatrix(page)}
       <p>Exemplu de mesaj util: "Sunt IMM cu CAEN autorizat, investitie in software si echipamente, buget estimat, punct de lucru in regiune, dar nu stiu daca TVA si securitatea cibernetica sunt tratate corect". Pentru agricultura, mesajul poate include SO/SOC, suprafete, efective, documente de folosinta si utilajul dorit. Pentru energie, include consumul si amplasamentul.</p>
       <p>Cu cat mesajul este mai clar, cu atat verificarea poate separa mai repede programele potrivite de cele care trebuie eliminate. Aceasta economie de timp conteaza mai ales cand apelul are termen scurt, documentele trebuie actualizate sau bugetul depinde de oferte noi, anexe revizuite sau conditii publicate recent.</p>
       <h2>Concluzie pentru biblioteca de ghiduri</h2>
-      <p>Pagina Ghiduri trebuie folosita ca masa de lucru: alegi programul, verifici documentele, notezi riscurile si mergi catre sursa oficiala. Nu este o lista de promisiuni si nu inlocuieste analiza pe cazul concret. Daca ai deja date despre solicitant, investitie si buget, urmatorul pas este verificarea eligibilitatii, nu cautarea unui rezumat mai lung sau a unei valori care nu poate fi confirmata oficial, public.</p>
+      <p>Pagina Ghiduri trebuie folosita ca masa de lucru: alegi programul, verifici documentele, notezi riscurile si mergi catre sursa oficiala. Nu este o lista de promisiuni si nu inlocuieste analiza pe cazul concret. Daca ai deja date despre solicitant, investitie si buget, urmatorul pas este verificarea eligibilitatii, nu cautarea unui rezumat mai lung sau a unei valori care nu poate fi confirmata oficial, public. Pentru proiectele neclare, revino la lista scurta de intrebari inainte sa continui.</p>
       <h2>Linkuri interne utile</h2>
       <div class="related-links">
         <a href="/resurse">Resurse descarcabile</a>
@@ -1507,13 +1511,13 @@ function pageHtml(page, config) {
   const sourcesCss = (page.sourceKeys || []).length ? `\n  <link rel="stylesheet" href="/assets/official-sources.css" />` : "";
   const extraCss = `${relatedCss}${toolCss}${sourcesCss}`;
   const extraJs = page.includeTools ? `\n  <script src="/assets/seo-tools.js" defer></script>` : "";
-  const primaryCta = "Solicita verificare eligibilitate";
+  const primaryCta = page.heroPrimaryCta || "Solicita verificare eligibilitate";
   const secondaryCta = heroSecondaryCta(page);
-  const finalCtaTitle = isEditorialProgram(page) ? "Verificare eligibilitate" : "Urmatorul pas";
-  const finalCtaText = isEditorialProgram(page)
+  const finalCtaTitle = page.finalCtaTitle || (isEditorialProgram(page) ? "Verificare eligibilitate" : "Urmatorul pas");
+  const finalCtaText = page.finalCtaText || (isEditorialProgram(page)
     ? "Trimite-ne codul CAEN / tipul fermei / investi\u021bia dorit\u0103 pentru verificarea eligibilit\u0103\u021bii."
-    : "Trimite cateva detalii despre solicitant, localitate, cod CAEN, investitie si buget. Raspunsul initial este orientativ si nu reprezinta promisiune de finantare.";
-  const finalPrimaryCta = "Solicita verificare eligibilitate";
+    : "Trimite cateva detalii despre solicitant, localitate, cod CAEN, investitie si buget. Raspunsul initial este orientativ si nu reprezinta promisiune de finantare.");
+  const finalPrimaryCta = page.finalPrimaryCta || "Solicita verificare eligibilitate";
   return `<!DOCTYPE html>
 <html lang="ro">
 <head>

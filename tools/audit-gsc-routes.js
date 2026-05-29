@@ -120,7 +120,7 @@ function meta(file, pathname, headerRules) {
   return {
     canonical: extractCanonical(text),
     robots: [robots, headerRobots].filter(Boolean).join("; "),
-    title: textMatch(text, /<title>([\s\S]*?)<\/title>/i),
+    title: textMatch(text, /<title\b[^>]*>([\s\S]*?)<\/title>/i),
     h1: textMatch(text, /<h1[^>]*>([\s\S]*?)<\/h1>/i).replace(/<[^>]*>/g, "").replace(/\s+/g, " ").trim(),
   };
 }

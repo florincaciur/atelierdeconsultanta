@@ -9,7 +9,7 @@ import { chromium } from "playwright";
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const DIST = path.join(ROOT, "dist");
 const SITE_ORIGIN = "https://atelierdeconsultanta.ro";
-const EXPECTED_CANONICAL_URLS = 86;
+const EXPECTED_CANONICAL_URLS = 89;
 const CONSOLIDATED_LOCAL_ROUTES = [
   "/fonduri-europene-bacau",
   "/consultanta-fonduri-europene-bacau",
@@ -181,7 +181,11 @@ async function assertRedirectsAndFallback(baseUrl) {
     ["/consultanta-fonduri-europene-imm/", "/consultant-fonduri-europene-imm"],
     ["/consultanta-start-up-nation/", "/consultanta-start-up-nation-2026"],
     ["/pnrr-digitalizare-imm", "/digitalizare-imm-pnrr"],
-    ["/blog/safir-fotovoltaice-ferme-2026.html", "/blog-afir-fotovoltaice-ferme-2026"]
+    ["/blog/safir-fotovoltaice-ferme-2026.html", "/blog-afir-fotovoltaice-ferme-2026"],
+    ["/startup-nation-2026-conditii", "/start-up-nation-2026-conditii"],
+    ["/calculator-so-afir", "/calculator-soc"],
+    ["/intrebari/ce-documente-sunt-necesare-pentru-dr12/", "/dr12-afir"],
+    ["/intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene/", "/cum-se-calculeaza-cofinantarea-fonduri-europene"]
   ];
 
   for (const [from, to] of checks) {
@@ -296,8 +300,8 @@ async function assertHomepageInteractions(baseUrl) {
     const statTexts = await page.$$eval("#despre .stat-card", (cards) =>
       cards.map((card) => card.textContent.replace(/\s+/g, " ").trim())
     );
-    assert(statTexts.some((text) => /Peste 150 proiecte finanțate/i.test(text)), "missing 'Peste 150 proiecte finanțate' card");
-    assert(statTexts.some((text) => /250 milioane euro fonduri absorbite pentru beneficiari/i.test(text)), "missing '250 milioane euro fonduri absorbite pentru beneficiari' card");
+    assert(statTexts.some((text) => /Eligibilitate/i.test(text) && /Verific[ăa]m/i.test(text)), "missing prudent eligibility card");
+    assert(statTexts.some((text) => /Dosar coerent/i.test(text)), "missing prudent dossier card");
 
     const viewportHeight = await page.$eval("#blog .card-carousel-viewport", (element) => element.getBoundingClientRect().height);
     const tallestBlogCard = await page.$$eval("#blog .blog-card", (cards) =>
