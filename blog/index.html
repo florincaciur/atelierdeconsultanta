@@ -270,7 +270,7 @@
 
     /* ARTICLE VIEW */
     .post-hero {
-      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+      background: linear-gradient(135deg, rgba(13,31,60,.96) 0%, rgba(29,50,82,.9) 100%);
       padding: 80px 24px 60px; text-align: center;
     }
     .post-category {
@@ -296,6 +296,23 @@
       font-size: 0.82rem; color: rgba(255,255,255,.55);
     }
     .post-meta span { display: flex; align-items: center; gap: 5px; }
+    .article-toc {
+      border: 1px solid var(--gray-200);
+      border-left: 4px solid var(--orange);
+      border-radius: 8px;
+      background: var(--gray-100);
+      padding: 18px 20px;
+      margin: 0 0 28px;
+    }
+    .article-toc strong {
+      display: block;
+      color: var(--navy);
+      font-size: 0.78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .article-toc ul { margin: 0; padding-left: 18px; }
     .post-banner {
       max-width: 760px; margin: 0 auto;
       border-radius: var(--radius); overflow: hidden;
@@ -333,7 +350,7 @@
     .btn-primary,
     .btn-secondary {
       display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-      min-height: 44px; padding: 13px 28px; border-radius: 100px;
+      min-height: 46px; padding: 13px 28px; border-radius: 8px;
       border: 1px solid transparent; font-weight: 700; font-size: 0.9rem;
       text-decoration: none !important;
       transition: background .2s, border-color .2s, color .2s, transform .2s, box-shadow .2s;
@@ -373,7 +390,7 @@
       gap: 20px;
     }
     .related-card {
-      border: 1px solid var(--gray-200); border-radius: 12px;
+      border: 1px solid var(--gray-200); border-radius: 8px;
       padding: 20px; transition: box-shadow .2s, transform .2s; cursor: pointer;
     }
     .related-card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
@@ -408,6 +425,7 @@
     @media (max-width: 600px) {
       .hub-intro { padding: 28px 20px; }
       .post-body { padding: 28px 20px; }
+      .btn-primary, .btn-secondary { width: 100%; }
       .cta-box { padding: 28px 20px; }
     }
   </style>
@@ -419,8 +437,9 @@
     })(window, document, "clarity", "script", "wnvzyco6rq");
   </script>
   <link rel="stylesheet" href="/assets/see-also.css">
-<meta name="twitter:description" content="Articole FABER despre fonduri europene, AFIR, GAL, Start-Up Nation, digitalizare, energie, documente, cofinanțare și riscuri."><meta name="twitter:title" content="Blog fonduri europene | FABER"></head>
-<body>
+<meta name="twitter:description" content="Articole FABER despre fonduri europene, AFIR, GAL, Start-Up Nation, digitalizare, energie, documente, cofinanțare și riscuri."><meta name="twitter:title" content="Blog fonduri europene | FABER">  <link rel="stylesheet" href="/assets/design-profiles.css">
+</head>
+<body class="page-family-editorial">
 
   <!-- NAVBAR -->
   <nav class="navbar">
@@ -442,6 +461,10 @@
       <div class="hub-badge">Resurse gratuite</div>
       <h1>Blog despre fonduri europene, finanțări nerambursabile și programe pentru beneficiari reali</h1>
       <p>Ghiduri scrise prudent despre programe, documente, eligibilitate, cofinanțare și riscuri, cu verificarea regulilor în ghidul activ.</p>
+      <div class="hero-actions">
+        <a href="/contact" class="btn-primary">Verifică situația ta concretă</a>
+        <a href="/ghiduri" class="btn-secondary">Vezi ghidurile</a>
+      </div>
     </div>
 
     <div class="hub-container">
@@ -657,6 +680,10 @@
         <span>⏱️ <span id="post-read-time"></span> min citire</span>
         <span>✍️ <span id="post-author">FABER - Atelier de Consultanță</span></span>
       </div>
+      <div class="hero-actions" style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:22px">
+        <a href="/contact" class="btn-primary">Verifică situatia ta concreta</a>
+        <a href="/surse-oficiale-fonduri-europene" class="btn-secondary">Vezi surse oficiale</a>
+      </div>
     </div>
 
     <div id="post-banner-wrap" style="display:none; max-width:760px; margin: 32px auto 0; padding: 0 24px;">
@@ -664,7 +691,17 @@
     </div>
 
     <div class="post-container">
-      <div class="post-body" id="post-body"></div>
+      <div class="post-body">
+        <nav class="article-toc" aria-label="Cuprins articol">
+          <strong>Cuprins rapid</strong>
+          <ul>
+            <li><a href="#post-body">Articol</a></li>
+            <li><a href="#related-section">Articole conexe</a></li>
+            <li><a href="/contact">Verificare proiect</a></li>
+          </ul>
+        </nav>
+        <div id="post-body"></div>
+      </div>
       <div class="cta-box" style="margin-top:32px">
         <h3>Vrei să accesezi fonduri europene?</h3>
         <p>Trimite detaliile proiectului și îți spunem ce trebuie verificat înainte de o decizie de depunere. Nu promitem aprobare; clarificăm riscurile și pașii următori.</p>
@@ -902,6 +939,7 @@
     });
   }
   </script>
+
 
 
 

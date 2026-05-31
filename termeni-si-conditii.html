@@ -89,6 +89,14 @@
     }
     .page-footer p { color: rgba(255,255,255,0.4); font-size: 0.82rem; }
     .page-footer a { color: var(--orange); }
+    .page-family-legal .page-hero { background: linear-gradient(135deg, #0d1f3c 0%, #253650 100%); padding: 44px 24px; }
+    .page-family-legal .page-hero h1 { max-width: 760px; margin-left: auto; margin-right: auto; }
+    .page-family-legal .page-hero p { max-width: 680px; margin: 0 auto; color: rgba(255,255,255,0.74); }
+    .page-family-legal .update-badge { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.22); color: #ffffff; border-radius: 8px; }
+    .page-family-legal .content-wrapper { max-width: 780px; padding-top: 44px; }
+    .page-family-legal .highlight-box,
+    .page-family-legal .toc { border-radius: 8px; box-shadow: none; }
+    .page-family-legal a:focus-visible { outline: 3px solid rgba(184,71,22,.36); outline-offset: 3px; }
   </style>
   <script type="application/ld+json">{
     "@context": "https://schema.org",
@@ -128,8 +136,9 @@
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "wnvzyco6rq");
   </script>
+  <link rel="stylesheet" href="/assets/design-profiles.css">
 </head>
-<body>
+<body class="page-family-legal">
 
   <!-- Navbar simplu de navigare -->
   <nav class="topbar" role="navigation">
@@ -146,11 +155,20 @@
   </nav>
 
   <!-- Hero pagină -->
-  <header class="page-hero">
+  <header class="page-hero hero--legal" data-design-family="legal">
     <div class="update-badge">Ultima revizuire: 26 mai 2026</div>
     <h1>Termeni și Condiții</h1>
     <p>Condițiile generale pentru folosirea site-ului și pentru discuțiile de consultanță cu FABER.</p>
-  </header>
+  
+    <div class="hero-actions">
+      <a class="btn-primary" href="/contact">Contacteaza echipa</a>
+      <a class="btn-secondary" href="/resurse">Inapoi la site</a>
+    </div>
+</header>
+<aside class="audit-design-summary" aria-label="Pe scurt">
+  <p class="audit-design-summary__label">Pe scurt</p>
+  <div class="audit-design-summary__grid"><div class="audit-design-summary__item"><strong>Document</strong><span>reguli institutionale</span></div><div class="audit-design-summary__item"><strong>Claritate</strong><span>text cu latime controlata</span></div><div class="audit-design-summary__item"><strong>Acces</strong><span>ancore și citire rapida</span></div><div class="audit-design-summary__item"><strong>Contact</strong><span>canal pentru întrebări</span></div></div>
+</aside>
 
   <main class="content-wrapper">
       <div class="highlight-box legal-review-note">
@@ -327,6 +345,7 @@
   <footer class="page-footer">
         <p>© 2026 FABER – Atelier de Consultanță | <a href="/">Acasă</a> | <a href="/politica-de-confidentialitate">Confidențialitate</a> | <a href="/gdpr">GDPR</a></p>
   </footer>
+
 
 
 

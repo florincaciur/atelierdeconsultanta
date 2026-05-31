@@ -1371,14 +1371,27 @@ ${CLARITY_TRACKING_CODE}
       <span>✍ ${esc(config.autor)}</span>
       <span>Editor: ${esc(config.editor)}</span>
     </div>
+    <div class="hero-actions">
+      <a class="btn-primary" href="/contact">Verifica situatia ta concreta</a>
+      ${guideUrl ? `<a class="btn-secondary" href="${esc(guideUrl)}" target="_blank" rel="noopener">Vezi sursa oficiala</a>` : `<a class="btn-secondary" href="/surse-oficiale-fonduri-europene">Vezi surse oficiale</a>`}
+    </div>
   </header>
 
   <main class="post-container">
     <article class="post-body">
+      <nav class="article-toc" aria-label="Cuprins articol">
+        <strong>Cuprins rapid</strong>
+        <ul>
+          <li><a href="#pe-scurt">Pe scurt</a></li>
+          <li><a href="#eligibilitate">Eligibilitate</a></li>
+          <li><a href="#cheltuieli">Cheltuieli</a></li>
+          <li><a href="#documente">Documente</a></li>
+        </ul>
+      </nav>
       <p><strong>${esc(keyword)}</strong> este o temă care trebuie tratată atent înainte de pregătirea unui dosar. Pentru ${esc(program)}, informațiile oficiale din ghidul solicitantului, anexele apelului și comunicările autorității finanțatoare au prioritate față de orice rezumat publicat online.</p>
       <p>Acest articol explică, pe înțelesul beneficiarului, cum poți analiza eligibilitatea, ce documente merită pregătite din timp, ce riscuri apar frecvent și cum poate sprijini <strong>FABER – Atelier de Consultanță</strong> verificarea proiectului. Rolul articolului este orientativ: înainte de depunere, fiecare sumă, termen, procent, condiție sau document trebuie confirmat în apelul activ.</p>
 
-      <section>
+      <section id="pe-scurt">
         <h2>Pe scurt: ce trebuie să știi despre ${esc(program)}</h2>
         <p>${esc(program)} trebuie privit ca un cadru de finanțare cu reguli proprii, nu ca o promisiune automată de aprobare. Beneficiarul trebuie să verifice dacă se încadrează ca solicitant, dacă investiția propusă este compatibilă cu obiectivele programului și dacă poate susține documentele, bugetul și implementarea.</p>
         <ul>
@@ -1400,14 +1413,14 @@ ${CLARITY_TRACKING_CODE}
         </ul>
       </section>
 
-      <section>
+      <section id="eligibilitate">
         <h2>Cine poate fi eligibil?</h2>
         <p>Eligibilitatea depinde de tipul de beneficiar, forma juridică, activitatea desfășurată, localizarea investiției, situația fiscală și istoricul solicitantului. În practică, prima verificare nu ar trebui să pornească de la întrebarea „ce sumă pot obține?”, ci de la întrebarea „se potrivește solicitantul meu cu regulile apelului?”.</p>
         <p>Pentru ${esc(program)}, beneficiarul principal este marcat în config ca: <strong>${esc(config.beneficiarPrincipal)}</strong>. Dacă această informație nu este completată explicit, trebuie confirmată în ghidul solicitantului. O firmă, o fermă, un start-up sau o instituție publică pot avea condiții foarte diferite, chiar dacă programul pare relevant la nivel de titlu.</p>
         <p>Înainte de orice achiziție, recomandarea practică este să pregătești datele de bază: certificat constatator, coduri CAEN, situații financiare, documente privind terenul sau spațiul, date despre investiție și orice informație care poate afecta punctajul sau eligibilitatea.</p>
       </section>
 
-      <section>
+      <section id="cheltuieli">
         <h2>Ce cheltuieli sau investiții pot fi eligibile?</h2>
         <p>Cheltuielile eligibile se stabilesc strict prin ghid, anexe și eventuale corrigendumuri. Unele programe finanțează echipamente, lucrări, software, servicii, energie sau investiții agricole; altele exclud anumite cheltuieli chiar dacă acestea par utile pentru beneficiar.</p>
         <p>Nu este recomandat să construiești bugetul doar pe baza ofertelor comerciale primite de la furnizori. Mai întâi trebuie verificat dacă tipul de cheltuială este permis, dacă se încadrează în plafon, dacă are justificare economică și dacă poate fi susținut prin documente.</p>
@@ -1433,7 +1446,7 @@ ${CLARITY_TRACKING_CODE}
         </table>
       </section>
 
-      <section>
+      <section id="documente">
         <h2>Ce documente trebuie pregătite?</h2>
         <p>Lista exactă de documente se confirmă în ghidul solicitantului. Totuși, pentru majoritatea finanțărilor, pregătirea începe cu documentele solicitantului, documentele financiare, documentele tehnice pentru investiție și declarațiile cerute de autoritate.</p>
         <ul>

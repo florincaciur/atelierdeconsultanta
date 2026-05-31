@@ -22,6 +22,7 @@ const {
   renderOfficialSources,
   sourcesForKeys
 } = require("./official-sources");
+const { designFamilyForSlug } = require("./design-family-map");
 const {
   breadcrumbSchema,
   faqPageSchema,
@@ -132,6 +133,129 @@ function esc(value) {
     .replace(/"/g, "&quot;");
 }
 
+function pageText(page) {
+  return `${page.slug || ""} ${page.type || ""} ${page.category || ""} ${page.programName || ""} ${page.h1 || ""}`.toLowerCase();
+}
+
+function shortProgramName(page) {
+  return publicText(page.programName || page.h1 || "proiectul")
+    .replace(/\s*\|\s*.*$/g, "")
+    .replace(/\s*-\s*ghid.*$/gi, "")
+    .trim();
+}
+
+function designFamilyFor(page) {
+  if (page.designFamily) return page.designFamily;
+  const mappedFamily = designFamilyForSlug(page.slug || "");
+  if (mappedFamily) return mappedFamily;
+  if (page.type === "trust") return "trust";
+  if (page.includeTools || /calculator|instrumente/.test(pageText(page))) return "tool";
+  if (/apeluri-gal|gal-afir|leader/.test(pageText(page))) return "gal";
+  if (/dr12|dr14|afir|agricultur|ferme|fermieri|utilaje/.test(pageText(page))) return "afir";
+  if (/digitalizare|pnrr|software|cloud|crm|erp|cyber|granturi-digitalizare/.test(pageText(page))) return "digital";
+  if (/start-up|startup|femeia antreprenor|antreprenor 2026|cod-caen-start/.test(pageText(page))) return "startup";
+  if (/energie|fotovoltaic|modernizare|autoconsum|e-move|infra|panouri/.test(pageText(page))) return "energy";
+  if (/consultanta|consultant|eligibilitate|metodologie|servici/.test(pageText(page))) return "service";
+  if (/blog|ghid|resurse|glosar|acte|documente|calendar|surse/.test(pageText(page))) return "editorial";
+  if (/fonduri europene|fonduri nerambursabile|imm|nord-est|regional|cluster/.test(pageText(page))) return "cluster";
+  return "generic";
+}
+
+const DESIGN_FAMILY_PROFILES = {
+  afir: {
+    badge: "AFIR | status apel | verificare documente",
+    icon: "ph-duotone ph-plant",
+    image: "/assets/hero/hero-agriculture.webp",
+    cards: ["Solicitant", "Investitie", "Documente", "Punctaj"],
+    primary: "Verifica eligibilitatea",
+    secondary: "Vezi sursa oficiala"
+  },
+  gal: {
+    badge: "GAL/LEADER | ghid local | teritoriu",
+    icon: "ph-duotone ph-map-pin",
+    image: "/assets/hero/hero-local.webp",
+    cards: ["Beneficiar public", "Beneficiar privat", "DR36", "Implementare"],
+    primary: "Verifica eligibilitatea GAL",
+    secondary: "Vezi sursa oficiala"
+  },
+  digital: {
+    badge: "PNRR/MIPE | digitalizare | ghid verificat",
+    icon: "ph-duotone ph-desktop",
+    image: "/assets/hero/hero-digital.webp",
+    cards: ["Hardware", "Software", "Cloud", "Cybersecurity"],
+    primary: "Verifica eligibilitatea",
+    secondary: "Vezi sursa oficiala"
+  },
+  startup: {
+    badge: "Antreprenoriat | ghid | status oficial",
+    icon: "ph-duotone ph-rocket-launch",
+    image: "/assets/hero/hero-business.webp",
+    cards: ["Eligibilitate", "CAEN", "Buget", "Plan afaceri"],
+    primary: "Verifica eligibilitatea",
+    secondary: "Vezi sursa oficiala"
+  },
+  energy: {
+    badge: "Energie | autoconsum | avize",
+    icon: "ph-duotone ph-sun",
+    image: "/assets/hero/hero-solar.webp",
+    cards: ["Consum", "Avize", "Capacitate", "Buget"],
+    primary: "Verifica proiectul energetic",
+    secondary: "Vezi sursa oficiala"
+  },
+  cluster: {
+    badge: "FABER | resursa | actualizare",
+    icon: "ph-duotone ph-info",
+    image: "/assets/hero/hero-business.webp",
+    cards: ["Program", "Solicitant", "Documente", "Riscuri"],
+    primary: "Verifica eligibilitatea",
+    secondary: "Vezi documentele"
+  },
+  service: {
+    badge: "Serviciu FABER | proces | livrabile",
+    icon: "ph-duotone ph-magnifying-glass",
+    image: "/assets/hero/hero-business.webp",
+    cards: ["Verificare", "Strategie", "Dosar", "Clarificari"],
+    primary: "Solicita analiza",
+    secondary: "Vezi documentele"
+  },
+  editorial: {
+    badge: "Ghid editorial | actualizat | surse citate",
+    icon: "ph-duotone ph-file-text",
+    image: "/assets/hero/hero-business.webp",
+    cards: ["Pe scurt", "Ce verifici", "Greseli", "Pasi"],
+    primary: "Verifica situatia ta",
+    secondary: "Citeste ghidul"
+  },
+  trust: {
+    badge: "Dovada sociala | caz anonimizat | rezultat",
+    icon: "ph-duotone ph-bank",
+    image: "/assets/hero/hero-business.webp",
+    cards: ["Beneficiar", "Problema", "Interventie", "Rezultat"],
+    primary: "Solicita o analiza similara",
+    secondary: "Vezi portofoliul"
+  },
+  tool: {
+    badge: "Instrument FABER | calcul | verificare",
+    icon: "ph-duotone ph-calculator",
+    image: "/assets/hero/hero-digital.webp",
+    cards: ["Date", "Calcul", "Rezultat", "Avertizare"],
+    primary: "Foloseste instrumentul",
+    secondary: "Vezi metodologia"
+  },
+  generic: {
+    badge: "FABER | resursa | actualizare",
+    icon: "ph-duotone ph-info",
+    image: "/assets/hero/hero-business.webp",
+    cards: ["Context", "Verificare", "Resurse", "Urmator pas"],
+    primary: "Solicita consultanta",
+    secondary: "Vezi documentele"
+  }
+};
+
+function designProfileFor(page) {
+  return DESIGN_FAMILY_PROFILES[designFamilyFor(page)] || DESIGN_FAMILY_PROFILES.generic;
+}
+
 function slugPath(page) {
   return `/${page.slug}`;
 }
@@ -163,7 +287,9 @@ function bannerHeroImageForPage(page) {
 }
 
 function fallbackHeroImageFor(page) {
-  const text = `${page.slug || ""} ${page.category || ""} ${page.programName || ""} ${page.h1 || ""}`.toLowerCase();
+  const profile = designProfileFor(page);
+  if (profile.image) return profile.image;
+  const text = pageText(page);
   if (page.slug === "e-move") return "/assets/hero/hero-solar.webp";
   if (page.slug === "gal-afir") return "/assets/hero/hero-local.webp";
   if (/afir|dr12|dr14|agricultur|ferme|utilaje/.test(text)) return "/assets/hero/hero-agriculture.webp";
@@ -178,14 +304,17 @@ function heroImageFor(page) {
 }
 
 function heroAttrs(page) {
-  return `class="hero hero--image" style="--hero-image:url('${heroImageFor(page)}')"`;
+  const family = designFamilyFor(page);
+  return `class="hero hero--image hero--${esc(family)}" data-design-family="${esc(family)}" style="--hero-image:url('${heroImageFor(page)}')"`;
 }
 
 function heroIconFor(page) {
   if (page.heroIcon) return page.heroIcon;
+  const profile = designProfileFor(page);
+  if (profile.icon) return profile.icon;
   if (page.slug === "e-move") return "ph-duotone ph-battery-charging";
   if (page.slug === "gal-afir") return "ph-duotone ph-map-pin";
-  const text = `${page.slug || ""} ${page.category || ""} ${page.programName || ""} ${page.h1 || ""}`.toLowerCase();
+  const text = pageText(page);
   if (/dr12|dr14|afir|agricultur|ferme|utilaje/.test(text)) return "ph-duotone ph-plant";
   if (/digitalizare|pnrr|software|instrumente/.test(text)) return "ph-duotone ph-desktop";
   if (/energie|fotovoltaic|modernizare|autoconsum/.test(text)) return "ph-duotone ph-sun";
@@ -195,6 +324,10 @@ function heroIconFor(page) {
   if (/gal|leader|local|nord-est|regional/.test(text)) return "ph-duotone ph-map-pin";
   if (/contact|consultanta|eligibilitate|verificare/.test(text)) return "ph-duotone ph-magnifying-glass";
   return "ph-duotone ph-info";
+}
+
+function heroBadgeFor(page) {
+  return page.heroBadge || designProfileFor(page).badge || page.category;
 }
 
 function guideSourceForPage(page) {
@@ -226,7 +359,7 @@ function heroSecondaryCta(page) {
   if (guide) {
     return {
       href: guide.url,
-      label: page.guideCtaLabel || "Ghid oficial",
+      label: page.guideCtaLabel || designProfileFor(page).secondary || "Vezi sursa oficiala",
       external: true
     };
   }
@@ -237,9 +370,23 @@ function heroSecondaryCta(page) {
       external: false
     };
   }
+  if (designFamilyFor(page) === "trust") {
+    return {
+      href: "/portofoliu",
+      label: "Vezi portofoliul",
+      external: false
+    };
+  }
+  if (designFamilyFor(page) === "tool") {
+    return {
+      href: "/metodologie-verificare-eligibilitate",
+      label: "Vezi metodologia",
+      external: false
+    };
+  }
   return {
-    href: "/contact",
-    label: "Discuta cu un consultant",
+    href: designFamilyFor(page) === "editorial" ? "/surse-oficiale-fonduri-europene" : "/contact",
+    label: designProfileFor(page).secondary || "Discuta cu un consultant",
     external: false
   };
 }
@@ -285,6 +432,85 @@ function renderHeroActions(page, primaryCta, secondaryCta) {
 
   return `<a class="btn btn-primary" href="/verificare-eligibilitate-fonduri-europene">${esc(primaryCta)}</a>
       ${renderCtaLink(secondaryCta)}`;
+}
+
+function heroPrimaryCtaFor(page) {
+  if (page.heroPrimaryCta) return page.heroPrimaryCta;
+  const family = designFamilyFor(page);
+  const profile = designProfileFor(page);
+  const name = shortProgramName(page);
+  if (family === "service") return `Solicita analiza pentru ${name}`;
+  if (family === "trust") return profile.primary;
+  if (family === "tool") return profile.primary;
+  if (["afir", "gal", "digital", "startup", "energy"].includes(family)) return `${profile.primary} pentru ${name}`;
+  if (family === "editorial") return profile.primary;
+  return profile.primary || "Solicita verificare eligibilitate";
+}
+
+function renderHeroSummary(page) {
+  const family = designFamilyFor(page);
+  const program = shortProgramName(page);
+  const audience = compactTextList(page.audience, family === "trust" ? "caz anonimizat" : "solicitant de verificat", 1);
+  const status = family === "legal"
+    ? "informare"
+    : (page.funding || page.category || "se confirma in ghidul activ");
+  const docs = compactTextList(page.mandatory || page.documentRows?.map((row) => row && row[0]), "documente si buget", 2);
+  const risk = compactTextList(page.ineligibleExpenses || page.commonMistakes, "eligibilitatea depinde de apelul activ", 1);
+  const items = [
+    ["Beneficiar", audience],
+    ["Status", status],
+    ["Documente", docs],
+    ["Risc", risk]
+  ];
+  return `<div class="hero-summary" aria-label="Rezumat vizual pentru ${esc(program)}">
+      ${items.map(([label, value]) => `<span class="hero-summary__item"><strong>${esc(label)}</strong><em>${esc(value)}</em></span>`).join("\n      ")}
+    </div>`;
+}
+
+function renderFamilyCards(page) {
+  const profile = designProfileFor(page);
+  const family = designFamilyFor(page);
+  const labels = page.designCards || profile.cards || DESIGN_FAMILY_PROFILES.generic.cards;
+  const program = shortProgramName(page);
+  const detailByLabel = {
+    Solicitant: compactTextList(page.audience, "profilul solicitantului", 2),
+    Investitie: compactTextList(page.eligibleExpenses, "investitia propusa", 2),
+    Documente: compactTextList(page.mandatory, "documente, oferte si buget", 2),
+    Punctaj: compactTextList(page.scoring, "criterii si grila activa", 2),
+    Hardware: "echipamente justificate prin procesul firmei",
+    Software: "ERP, CRM, aplicatii si automatizari utile",
+    Cloud: "servicii digitale si infrastructura scalabila",
+    Cybersecurity: "securitate, backup si continuitate",
+    CAEN: "activitate, autorizare si legatura cu investitia",
+    Buget: page.funding || "grant, cofinantare si costuri neeligibile",
+    "Plan afaceri": "obiective, achizitii, calendar si riscuri",
+    Consum: "consum, amplasament si dimensionare",
+    Avize: "documente tehnice si aprobari necesare",
+    Capacitate: "puterea instalata sau dimensiunea investitiei",
+    Verificare: "date primite si incadrare initiala",
+    Strategie: "program, punctaj, buget si calendar",
+    Dosar: "documente, anexe, oferte si formulare",
+    Clarificari: "raspunsuri si ajustari dupa evaluare",
+    "Pe scurt": page.quickAnswer || `rezumat pentru ${program}`,
+    "Ce verifici": compactTextList(page.mandatory, "program, documente si investitie", 2),
+    Greseli: compactTextList(page.commonMistakes || page.ineligibleExpenses, "presupuneri neverificate", 2),
+    Pasi: compactTextList(page.steps, "verificare, buget, depunere", 2),
+    Beneficiar: compactTextList(page.audience, "beneficiar anonimizat", 2),
+    Problema: "incadrare, documente sau buget de clarificat",
+    Interventie: "analiza FABER pe documente si surse oficiale",
+    Rezultat: "decizie prudenta, ajustare sau pas urmator",
+    Date: "completeaza valorile de lucru",
+    Calcul: "scenariu orientativ, nu promisiune",
+    Avertizare: "confirma rezultatul in ghidul activ",
+    Program: page.programName || page.h1,
+    Riscuri: compactTextList(page.ineligibleExpenses || page.commonMistakes, "riscuri la evaluare", 2),
+    Context: page.category || "resursa FABER",
+    Resurse: "linkuri interne si surse oficiale",
+    "Urmator pas": "verificare concreta pe cazul tau"
+  };
+  return `<section class="design-card-grid design-card-grid--${esc(family)}" aria-label="Repere vizuale ${esc(program)}">
+        ${labels.map((label) => `<article class="mini-card design-card"><span class="design-card__badge">${esc(label)}</span><h3>${esc(label)}</h3><p>${esc(detailByLabel[label] || `Verificare pentru ${program}`)}</p></article>`).join("\n        ")}
+      </section>`;
 }
 
 function stripTags(html) {
@@ -562,11 +788,13 @@ function renderChecklist(title, items) {
 
 function renderSimpleTable(rows) {
   if (!Array.isArray(rows) || !rows.length) return "";
-  return `<table class="program-table">
+  return `<div class="table-wrap">
+    <table class="program-table">
     <tbody>
       ${rows.map((row) => `<tr><th>${esc(row[0])}</th><td>${esc(row[1])}</td></tr>`).join("\n")}
     </tbody>
-  </table>`;
+  </table>
+  </div>`;
 }
 
 function renderContentSections(sections) {
@@ -597,11 +825,13 @@ function renderTable(page) {
     ["Ce verifici intai", (page.mandatory || []).slice(0, 4).join("; ")],
     ["CTA", "verificare eligibilitate si discutie de consultanta"]
   ];
-  return `<table class="program-table">
+  return `<div class="table-wrap table-wrap--summary">
+    <table class="program-table">
     <tbody>
       ${rows.map(([key, value]) => `<tr><th>${esc(key)}</th><td>${esc(value)}</td></tr>`).join("\n")}
     </tbody>
-  </table>`;
+  </table>
+  </div>`;
 }
 
 function renderCalendarTable(page) {
@@ -1506,18 +1736,19 @@ ${officialSourcesHtml}
 }
 
 function pageHtml(page, config) {
+  const family = designFamilyFor(page);
   const relatedCss = (page.related || []).length ? `\n  <link rel="stylesheet" href="/assets/see-also.css" />` : "";
   const toolCss = page.includeTools || page.includeDownloads ? `\n  <link rel="stylesheet" href="/assets/seo-tools.css" />` : "";
   const sourcesCss = (page.sourceKeys || []).length ? `\n  <link rel="stylesheet" href="/assets/official-sources.css" />` : "";
   const extraCss = `${relatedCss}${toolCss}${sourcesCss}`;
   const extraJs = page.includeTools ? `\n  <script src="/assets/seo-tools.js" defer></script>` : "";
-  const primaryCta = page.heroPrimaryCta || "Solicita verificare eligibilitate";
+  const primaryCta = heroPrimaryCtaFor(page);
   const secondaryCta = heroSecondaryCta(page);
-  const finalCtaTitle = page.finalCtaTitle || (isEditorialProgram(page) ? "Verificare eligibilitate" : "Urmatorul pas");
+  const finalCtaTitle = page.finalCtaTitle || (family === "editorial" ? "Verificare discreta pe cazul tau" : family === "trust" ? "Ai un caz asemanator?" : "Urmatorul pas");
   const finalCtaText = page.finalCtaText || (isEditorialProgram(page)
     ? "Trimite-ne codul CAEN / tipul fermei / investi\u021bia dorit\u0103 pentru verificarea eligibilit\u0103\u021bii."
     : "Trimite cateva detalii despre solicitant, localitate, cod CAEN, investitie si buget. Raspunsul initial este orientativ si nu reprezinta promisiune de finantare.");
-  const finalPrimaryCta = page.finalPrimaryCta || "Solicita verificare eligibilitate";
+  const finalPrimaryCta = page.finalPrimaryCta || designProfileFor(page).primary || "Solicita verificare eligibilitate";
   return `<!DOCTYPE html>
 <html lang="ro">
 <head>
@@ -1545,7 +1776,7 @@ function pageHtml(page, config) {
   <script type="application/ld+json">${schemaGraph(page, config)}</script>${extraJs}
 ${CLARITY_TRACKING_CODE}
 </head>
-<body>
+<body class="page-family-${esc(family)}">
   <nav class="navbar" aria-label="Navigare principala">
     <a class="brand" href="/" aria-label="Atelier de Consultanta, acasa">FABER</a>
     <div class="navbar-links">
@@ -1559,15 +1790,17 @@ ${CLARITY_TRACKING_CODE}
   <div class="breadcrumb"><a href="/">Acasa</a> / ${esc(page.h1)}</div>
   <header ${heroAttrs(page)}>
     <span class="hero-icon" aria-hidden="true"><i class="${esc(heroIconFor(page))}"></i></span>
-    <span class="eyebrow">${esc(page.category)}</span>
+    <span class="eyebrow design-badge design-badge--${esc(family)}">${esc(heroBadgeFor(page))}</span>
     <h1>${esc(page.h1)}</h1>
     <p>${esc(page.description)}</p>
     <div class="hero-actions">
       ${renderHeroActions(page, primaryCta, secondaryCta)}
     </div>
+    ${renderHeroSummary(page)}
   </header>
   <main class="container">
     <article class="panel">
+${renderFamilyCards(page)}
 ${renderMainContent(page)}
       <div class="related-links">${links(page.related)}</div>
     </article>

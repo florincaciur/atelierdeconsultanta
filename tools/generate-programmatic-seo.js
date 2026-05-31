@@ -22,6 +22,7 @@ const {
   normalizeHtmlCopy,
   normalizeRomanianCopy
 } = require("./normalize-copy-ro");
+const { designFamilyForSlug } = require("./design-family-map");
 const CLARITY_TRACKING_CODE = `  <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -66,7 +67,70 @@ function heroImageFor(route, category = "") {
 }
 
 function heroAttrs(route, category) {
-  return `class="hero hero--image" style="--hero-image:url('${heroImageFor(route, category)}')"`;
+  const family = designFamilyForRoute(route, category);
+  return `class="hero hero--image hero--${esc(family)}" data-design-family="${esc(family)}" style="--hero-image:url('${heroImageFor(route, category)}')"`;
+}
+
+function designFamilyForRoute(route, category = "") {
+  const mappedFamily = designFamilyForSlug(route);
+  if (mappedFamily) return mappedFamily;
+  const text = `${route} ${category}`.toLowerCase();
+  if (/caen/.test(text)) return "caen";
+  if (/intrebari/.test(text)) return "editorial";
+  if (/consultanta/.test(text)) return "service";
+  if (/nord-est|regional|bacau|iasi|suceava|bucuresti|local/.test(text)) return "cluster";
+  if (/digital|software|pnrr/.test(text)) return "digital";
+  if (/agricultur|ferme|0111/.test(text)) return "afir";
+  if (/energie|fotovoltaic/.test(text)) return "energy";
+  return "cluster";
+}
+
+function heroIconForRoute(route, category = "") {
+  const family = designFamilyForRoute(route, category);
+  if (family === "caen") return "ph-duotone ph-file-text";
+  if (family === "digital") return "ph-duotone ph-desktop";
+  if (family === "afir") return "ph-duotone ph-plant";
+  if (family === "energy") return "ph-duotone ph-sun";
+  if (family === "service") return "ph-duotone ph-magnifying-glass";
+  return "ph-duotone ph-info";
+}
+
+function heroBadgeForRoute(route, category = "") {
+  const family = designFamilyForRoute(route, category);
+  if (family === "caen") return "CAEN | eligibilitatea depinde de apel";
+  if (family === "digital") return "PNRR/MIPE | digitalizare | ghid verificat";
+  if (family === "afir") return "AFIR | status apel | verificare documente";
+  if (family === "energy") return "Energie | autoconsum | avize";
+  if (family === "service") return "Serviciu FABER | proces | livrabile";
+  if (family === "editorial") return "Ghid editorial | actualizat | surse citate";
+  return category || "FABER | resursa | actualizare";
+}
+
+function renderHeroSummary({ route, category, summary }) {
+  const family = designFamilyForRoute(route, category);
+  const items = family === "caen"
+    ? [["Cod", route.split("/").filter(Boolean).pop().slice(0, 4)], ["Status", "depinde de apelul activ"], ["Documente", "CAEN, buget, spatiu"], ["Risc", "program incompatibil"]]
+    : [["Beneficiar", category || "solicitant"], ["Status", "se confirma in ghid"], ["Documente", "buget si dovezi"], ["Risc", "eligibilitate neconfirmata"]];
+  return `<div class="hero-summary" aria-label="Rezumat vizual">
+      ${items.map(([label, value]) => `<span class="hero-summary__item"><strong>${esc(label)}</strong><em>${esc(value || summary)}</em></span>`).join("\n      ")}
+    </div>`;
+}
+
+function renderCaenSheet(item) {
+  const programs = (item.programs || []).slice(0, 4).join("; ");
+  const investments = (item.investments || []).slice(0, 4).join("; ");
+  return `<section class="caen-sheet" aria-label="Fisa eligibilitate CAEN ${esc(item.code)}">
+        <div class="caen-sheet__code">CAEN ${esc(item.code)}</div>
+        <div class="caen-sheet__content">
+          <h2>Fisa de eligibilitate pentru ${esc(item.label)}</h2>
+          <div class="design-card-grid design-card-grid--caen">
+            <article class="mini-card design-card"><span class="design-card__badge">Cod CAEN</span><h3>Activitate</h3><p>${esc(item.label)}</p></article>
+            <article class="mini-card design-card"><span class="design-card__badge">Programe</span><h3>Compatibile</h3><p>${esc(programs || "Se verifica in ghidul activ")}</p></article>
+            <article class="mini-card design-card"><span class="design-card__badge">Finantare</span><h3>Ce poate fi finantat</h3><p>${esc(investments || "investitii legate direct de activitate")}</p></article>
+            <article class="mini-card design-card"><span class="design-card__badge">Risc</span><h3>Ce trebuie verificat</h3><p>autorizare, localizare, cofinantare si legatura dintre investitie si activitate.</p></article>
+          </div>
+        </div>
+      </section>`;
 }
 
 function li(items) {
@@ -126,6 +190,7 @@ function schema(title, description, route, faq, updatedAt = "2026-05-20") {
 }
 
 function html({ title, description, h1, route, category, summary, body, faq, related, updatedAt = "2026-05-20" }) {
+  const family = designFamilyForRoute(route, category);
   return `<!DOCTYPE html>
 <html lang="ro">
 <head>
@@ -144,22 +209,27 @@ function html({ title, description, h1, route, category, summary, body, faq, rel
   <script type="application/ld+json">${schema(title, description, route, faq, updatedAt)}</script>
 ${CLARITY_TRACKING_CODE}
 </head>
-<body>
+<body class="page-family-${esc(family)}">
   <nav class="navbar" aria-label="Navigare principala">
     <a class="brand" href="/">FABER</a>
     <div class="navbar-links">
       <a href="/fonduri-europene">Fonduri europene</a>
       <a href="/instrumente">Instrumente</a>
       <a href="/resurse">Resurse</a>
-      <a class="nav-cta" href="/contact">Evaluare gratuita</a>
+      <a class="nav-cta btn-primary" href="/contact">Solicita verificare eligibilitate</a>
     </div>
   </nav>
   <div class="breadcrumb"><a href="/">Acasa</a> / ${esc(h1)}</div>
   <header ${heroAttrs(route, category)}>
-    <span class="eyebrow">${esc(category)}</span>
+    <span class="hero-icon" aria-hidden="true"><i class="${esc(heroIconForRoute(route, category))}"></i></span>
+    <span class="eyebrow design-badge design-badge--${esc(family)}">${esc(heroBadgeForRoute(route, category))}</span>
     <h1>${esc(h1)}</h1>
     <p>${esc(description)}</p>
-    <div class="hero-actions"><a class="btn btn-primary" href="/verificare-eligibilitate-fonduri-europene">Verifică eligibilitatea</a></div>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="/verificare-eligibilitate-fonduri-europene">Verifica eligibilitatea</a>
+      <a class="btn btn-secondary" href="${family === "caen" ? "/fonduri-europene" : "/surse-oficiale-fonduri-europene"}">${family === "caen" ? "Vezi programe compatibile" : "Vezi surse oficiale"}</a>
+    </div>
+    ${renderHeroSummary({ route, category, summary })}
   </header>
   <main class="container">
     <article class="panel">
@@ -257,6 +327,7 @@ function caenPage(item) {
   let body = `
       <h2>Descriere CAEN</h2>
       <p>CAEN ${esc(item.code)} - ${esc(item.label)} descrie activitatea economica pentru care investitia trebuie justificata prin documente, autorizare, flux operational si buget. Codul nu garanteaza finantarea; el este doar prima piesa verificata inainte de alegerea programului.</p>
+      ${renderCaenSheet(item)}
       <h2>Programe eligibile pentru CAEN ${esc(item.code)}</h2>
       <div class="table-wrap">
         <table class="program-table">

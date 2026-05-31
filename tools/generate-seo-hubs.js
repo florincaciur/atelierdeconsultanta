@@ -12,6 +12,7 @@ const {
   webPageSchema,
   websiteSchema
 } = require("./schema-helpers");
+const { designFamilyForSlug } = require("./design-family-map");
 const CLARITY_TRACKING_CODE = `  <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -48,6 +49,58 @@ function cleanHref(value) {
   }
   if (value.startsWith("/")) return cleanPath(value);
   return value;
+}
+
+function pageText(page) {
+  return `${page.slug || ""} ${page.category || ""} ${page.title || ""} ${page.h1 || ""}`.toLowerCase();
+}
+
+function designFamilyFor(page) {
+  const mappedFamily = designFamilyForSlug(page.slug || "");
+  if (mappedFamily) return mappedFamily;
+  const text = pageText(page);
+  if (/afir|dr12|dr14|agricultur|ferme|utilaje/.test(text)) return "afir";
+  if (/digitalizare|pnrr|software|cloud|crm|erp/.test(text)) return "digital";
+  if (/start-up|startup|femei antreprenor|femeia/.test(text)) return "startup";
+  if (/energie|fotovoltaic|modernizare|autoconsum|e-move|infra/.test(text)) return "energy";
+  if (/consultanta|consultant|eligibilitate|servici/.test(text)) return "service";
+  if (/studii|testimoniale|portofoliu|caz/.test(text)) return "trust";
+  if (/ghid|blog|resurse|glosar|calendar|intrebari/.test(text)) return "editorial";
+  return "cluster";
+}
+
+function designProfileFor(page) {
+  const family = designFamilyFor(page);
+  const profiles = {
+    afir: ["AFIR | status apel | verificare documente", "ph-duotone ph-plant", ["Solicitant", "Investitie", "Documente", "Punctaj"]],
+    digital: ["PNRR/MIPE | digitalizare | ghid verificat", "ph-duotone ph-desktop", ["Hardware", "Software", "Cloud", "Cybersecurity"]],
+    startup: ["Antreprenoriat | ghid | status oficial", "ph-duotone ph-rocket-launch", ["Eligibilitate", "CAEN", "Buget", "Plan afaceri"]],
+    energy: ["Energie | autoconsum | avize", "ph-duotone ph-sun", ["Consum", "Avize", "Capacitate", "Buget"]],
+    service: ["Serviciu FABER | proces | livrabile", "ph-duotone ph-magnifying-glass", ["Verificare", "Strategie", "Dosar", "Clarificari"]],
+    editorial: ["Ghid editorial | actualizat | surse citate", "ph-duotone ph-file-text", ["Pe scurt", "Ce verifici", "Greseli", "Pasi"]],
+    trust: ["Dovada sociala | caz anonimizat | rezultat", "ph-duotone ph-bank", ["Beneficiar", "Problema", "Interventie", "Rezultat"]],
+    cluster: ["FABER | resursa | actualizare", "ph-duotone ph-info", ["Program", "Solicitant", "Documente", "Riscuri"]]
+  };
+  return profiles[family] || profiles.cluster;
+}
+
+function renderHubHeroSummary(page) {
+  const items = [
+    ["Beneficiar", (page.audience || [page.category || "solicitant"])[0]],
+    ["Status", "se confirma in ghidul activ"],
+    ["Documente", (page.checks || ["documente si buget"]).slice(0, 2).join("; ")],
+    ["Risc", "eligibilitate neconfirmata"]
+  ];
+  return `<div class="hero-summary" aria-label="Rezumat vizual">
+      ${items.map(([label, value]) => `<span class="hero-summary__item"><strong>${esc(label)}</strong><em>${esc(value)}</em></span>`).join("\n      ")}
+    </div>`;
+}
+
+function renderHubDesignCards(page) {
+  const [badge, , cards] = designProfileFor(page);
+  return `<section class="design-card-grid design-card-grid--${esc(designFamilyFor(page))}" aria-label="${esc(badge)}">
+        ${cards.map((label, index) => `<article class="mini-card design-card"><span class="design-card__badge">${esc(label)}</span><h3>${esc(label)}</h3><p>${esc((page.checks || page.steps || page.audience || [page.summary])[index] || page.summary)}</p></article>`).join("\n        ")}
+      </section>`;
 }
 
 const related = {
@@ -493,6 +546,8 @@ function schema(page, faq) {
 
 function pageHtml(page) {
   const faq = faqFor(page);
+  const family = designFamilyFor(page);
+  const [, heroIcon] = designProfileFor(page);
   return `<!DOCTYPE html>
 <html lang="ro">
 <head>
@@ -515,7 +570,7 @@ function pageHtml(page) {
   <script type="application/ld+json">${schema(page, faq)}</script>
 ${CLARITY_TRACKING_CODE}
 </head>
-<body>
+<body class="page-family-${esc(family)}">
   ${page.internalNote ? `<!-- ${page.internalNote} -->\n  ` : ""}<nav class="navbar" aria-label="Navigare principală">
     <a class="brand" href="/" aria-label="Atelier de Consultanță, acasă">FABER</a>
     <div class="navbar-links">
@@ -526,17 +581,20 @@ ${CLARITY_TRACKING_CODE}
     </div>
   </nav>
   <div class="breadcrumb"><a href="/">Acasă</a> / ${esc(page.h1)}</div>
-  <header class="hero">
-    <span class="eyebrow">${esc(page.category)}</span>
+  <header class="hero hero--${esc(family)}" data-design-family="${esc(family)}">
+    <span class="hero-icon" aria-hidden="true"><i class="${esc(heroIcon)}"></i></span>
+    <span class="eyebrow design-badge design-badge--${esc(family)}">${esc(designProfileFor(page)[0])}</span>
     <h1>${esc(page.h1)}</h1>
     <p>${esc(page.summary)}</p>
     <div class="hero-actions">
       <a class="btn btn-primary" href="${cleanHref("/contact/")}">Solicită evaluare gratuită</a>
       <a class="btn btn-secondary" href="${cleanHref("/consultanta-fonduri-europene/")}">Vezi serviciile de consultanță</a>
     </div>
+    ${renderHubHeroSummary(page)}
   </header>
   <main class="container">
     <article class="panel">
+      ${renderHubDesignCards(page)}
       <p class="intro">${esc(page.summary)}</p>
       <h2>Pe scurt</h2>
       <p>Pagina explică ce trebuie verificat înainte de pregătirea dosarului și trimite către resursele conexe deja publicate pe Atelier de Consultanță. Conținutul este informativ și nu înlocuiește ghidul oficial al programului de finanțare.</p>
