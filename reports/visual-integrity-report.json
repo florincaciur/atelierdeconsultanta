@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-05-21T06:34:22.331Z",
-  "baseUrl": "http://127.0.0.1:61390",
+  "generatedAt": "2026-05-31T17:05:58.284Z",
+  "baseUrl": "http://127.0.0.1:64762",
   "summary": {
     "totalChecks": 18,
     "passedChecks": 18,
@@ -8,7 +8,7 @@
   },
   "results": [
     {
-      "url": "http://127.0.0.1:61390/",
+      "url": "http://127.0.0.1:64762/",
       "pagePath": "/",
       "viewportName": "desktop",
       "title": "FABER | Consultanță fonduri europene și finanțări nerambursabile",
@@ -29,10 +29,10 @@
       "screenshot": "reports/visual-screenshots/home-desktop.png"
     },
     {
-      "url": "http://127.0.0.1:61390/contact/",
+      "url": "http://127.0.0.1:64762/contact/",
       "pagePath": "/contact/",
       "viewportName": "desktop",
-      "title": "Contact Atelier de Consultanță | Evaluare Eligibilitate Fonduri Europene",
+      "title": "Contactează consultantul tău pentru fonduri europene – FABER",
       "badgeCheck": {
         "required": false,
         "pass": true,
@@ -45,10 +45,10 @@
       "screenshot": "reports/visual-screenshots/contact-desktop.png"
     },
     {
-      "url": "http://127.0.0.1:61390/consultanta-fonduri-europene/",
+      "url": "http://127.0.0.1:64762/consultanta-fonduri-europene/",
       "pagePath": "/consultanta-fonduri-europene/",
       "viewportName": "desktop",
-      "title": "Consultanță fonduri europene | Eligibilitate, dosar și cost",
+      "title": "Consultanță pentru fonduri europene | Eligibilitate, dosar și cost",
       "badgeCheck": {
         "required": false,
         "pass": true,
@@ -61,10 +61,10 @@
       "screenshot": "reports/visual-screenshots/consultanta-fonduri-europene-desktop.png"
     },
     {
-      "url": "http://127.0.0.1:61390/fonduri-europene/",
+      "url": "http://127.0.0.1:64762/fonduri-europene/",
       "pagePath": "/fonduri-europene/",
       "viewportName": "desktop",
-      "title": "Fonduri europene in Romania - programe, eligibilitate si ghiduri",
+      "title": "Fonduri europene în Romania - programe, eligibilitate și ghiduri",
       "badgeCheck": {
         "required": false,
         "pass": true,
@@ -77,10 +77,10 @@
       "screenshot": "reports/visual-screenshots/fonduri-europene-desktop.png"
     },
     {
-      "url": "http://127.0.0.1:61390/fonduri-europene-imm/",
+      "url": "http://127.0.0.1:64762/fonduri-europene-imm/",
       "pagePath": "/fonduri-europene-imm/",
       "viewportName": "desktop",
-      "title": "Fonduri europene pentru IMM-uri - investitii, digitalizare, energie",
+      "title": "Fonduri europene pentru IMM-uri - investiții, digitalizare, energie",
       "badgeCheck": {
         "required": false,
         "pass": true,
@@ -93,10 +93,10 @@
       "screenshot": "reports/visual-screenshots/fonduri-europene-imm-desktop.png"
     },
     {
-      "url": "http://127.0.0.1:61390/afir/",
+      "url": "http://127.0.0.1:64762/afir/",
       "pagePath": "/afir/",
       "viewportName": "desktop",
-      "title": "AFIR - fonduri pentru fermieri, DR12, DR14 si energie",
+      "title": "AFIR - fonduri pentru fermieri, DR12, DR14 și energie",
       "badgeCheck": {
         "required": false,
         "pass": true,
@@ -109,10 +109,10 @@
       "screenshot": "reports/visual-screenshots/afir-desktop.png"
     },
     {
-      "url": "http://127.0.0.1:61390/pnrr/",
+      "url": "http://127.0.0.1:64762/pnrr/",
       "pagePath": "/pnrr/",
       "viewportName": "desktop",
-      "title": "PNRR pentru IMM-uri - digitalizare, documente si proiecte",
+      "title": "PNRR pentru IMM-uri - digitalizare, documente și proiecte",
       "badgeCheck": {
         "required": false,
         "pass": true,
@@ -125,7 +125,7 @@
       "screenshot": "reports/visual-screenshots/pnrr-desktop.png"
     },
     {
-      "url": "http://127.0.0.1:61390/idei-afaceri-fonduri-europene.html",
+      "url": "http://127.0.0.1:64762/idei-afaceri-fonduri-europene.html",
       "pagePath": "/idei-afaceri-fonduri-europene.html",
       "viewportName": "desktop",
       "title": "Idei de afaceri cu fonduri europene",
@@ -141,10 +141,10 @@
       "screenshot": "reports/visual-screenshots/idei-afaceri-fonduri-europene-desktop.png"
     },
     {
-      "url": "http://127.0.0.1:61390/start-up-nation-2026",
+      "url": "http://127.0.0.1:64762/start-up-nation-2026",
       "pagePath": "/start-up-nation-2026",
       "viewportName": "desktop",
-      "title": "Start-Up Nation 2026: conditii, eligibilitate si acte necesare",
+      "title": "Start-Up Nation 2026: condiții, eligibilitate și acte necesare",
       "badgeCheck": {
         "required": false,
         "pass": true,
@@ -157,7 +157,7 @@
       "screenshot": "reports/visual-screenshots/start-up-nation-2026-desktop.png"
     },
     {
-      "url": "http://127.0.0.1:61390/",
+      "url": "http://127.0.0.1:64762/",
       "pagePath": "/",
       "viewportName": "mobile",
       "title": "FABER | Consultanță fonduri europene și finanțări nerambursabile",
@@ -178,10 +178,10 @@
       "screenshot": "reports/visual-screenshots/home-mobile.png"
     },
     {
-      "url": "http://127.0.0.1:61390/contact/",
+      "url": "http://127.0.0.1:64762/contact/",
       "pagePath": "/contact/",
       "viewportName": "mobile",
-      "title": "Contact Atelier de Consultanță | Evaluare Eligibilitate Fonduri Europene",
+      "title": "Contactează consultantul tău pentru fonduri europene – FABER",
       "badgeCheck": {
         "required": false,
         "pass": true,
@@ -194,10 +194,10 @@
       "screenshot": "reports/visual-screenshots/contact-mobile.png"
     },
     {
-      "url": "http://127.0.0.1:61390/consultanta-fonduri-europene/",
+      "url": "http://127.0.0.1:64762/consultanta-fonduri-europene/",
       "pagePath": "/consultanta-fonduri-europene/",
       "viewportName": "mobile",
-      "title": "Consultanță fonduri europene | Eligibilitate, dosar și cost",
+      "title": "Consultanță pentru fonduri europene | Eligibilitate, dosar și cost",
       "badgeCheck": {
         "required": false,
         "pass": true,
@@ -210,10 +210,10 @@
       "screenshot": "reports/visual-screenshots/consultanta-fonduri-europene-mobile.png"
     },
     {
-      "url": "http://127.0.0.1:61390/fonduri-europene/",
+      "url": "http://127.0.0.1:64762/fonduri-europene/",
       "pagePath": "/fonduri-europene/",
       "viewportName": "mobile",
-      "title": "Fonduri europene in Romania - programe, eligibilitate si ghiduri",
+      "title": "Fonduri europene în Romania - programe, eligibilitate și ghiduri",
       "badgeCheck": {
         "required": false,
         "pass": true,
@@ -226,10 +226,10 @@
       "screenshot": "reports/visual-screenshots/fonduri-europene-mobile.png"
     },
     {
-      "url": "http://127.0.0.1:61390/fonduri-europene-imm/",
+      "url": "http://127.0.0.1:64762/fonduri-europene-imm/",
       "pagePath": "/fonduri-europene-imm/",
       "viewportName": "mobile",
-      "title": "Fonduri europene pentru IMM-uri - investitii, digitalizare, energie",
+      "title": "Fonduri europene pentru IMM-uri - investiții, digitalizare, energie",
       "badgeCheck": {
         "required": false,
         "pass": true,
@@ -242,10 +242,10 @@
       "screenshot": "reports/visual-screenshots/fonduri-europene-imm-mobile.png"
     },
     {
-      "url": "http://127.0.0.1:61390/afir/",
+      "url": "http://127.0.0.1:64762/afir/",
       "pagePath": "/afir/",
       "viewportName": "mobile",
-      "title": "AFIR - fonduri pentru fermieri, DR12, DR14 si energie",
+      "title": "AFIR - fonduri pentru fermieri, DR12, DR14 și energie",
       "badgeCheck": {
         "required": false,
         "pass": true,
@@ -258,10 +258,10 @@
       "screenshot": "reports/visual-screenshots/afir-mobile.png"
     },
     {
-      "url": "http://127.0.0.1:61390/pnrr/",
+      "url": "http://127.0.0.1:64762/pnrr/",
       "pagePath": "/pnrr/",
       "viewportName": "mobile",
-      "title": "PNRR pentru IMM-uri - digitalizare, documente si proiecte",
+      "title": "PNRR pentru IMM-uri - digitalizare, documente și proiecte",
       "badgeCheck": {
         "required": false,
         "pass": true,
@@ -274,7 +274,7 @@
       "screenshot": "reports/visual-screenshots/pnrr-mobile.png"
     },
     {
-      "url": "http://127.0.0.1:61390/idei-afaceri-fonduri-europene.html",
+      "url": "http://127.0.0.1:64762/idei-afaceri-fonduri-europene.html",
       "pagePath": "/idei-afaceri-fonduri-europene.html",
       "viewportName": "mobile",
       "title": "Idei de afaceri cu fonduri europene",
@@ -290,10 +290,10 @@
       "screenshot": "reports/visual-screenshots/idei-afaceri-fonduri-europene-mobile.png"
     },
     {
-      "url": "http://127.0.0.1:61390/start-up-nation-2026",
+      "url": "http://127.0.0.1:64762/start-up-nation-2026",
       "pagePath": "/start-up-nation-2026",
       "viewportName": "mobile",
-      "title": "Start-Up Nation 2026: conditii, eligibilitate si acte necesare",
+      "title": "Start-Up Nation 2026: condiții, eligibilitate și acte necesare",
       "badgeCheck": {
         "required": false,
         "pass": true,

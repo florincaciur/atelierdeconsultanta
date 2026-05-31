@@ -8,6 +8,8 @@
     "generate:programmatic-seo": "node tools/generate-programmatic-seo.js",
     "generate:lead-magnets": "node tools/generate-lead-magnets.js",
     "generate:sitemap": "node tools/generate-sitemap.js",
+    "apply:design-profiles": "node tools/apply-design-profiles.js",
+    "verify:sitemap": "node tools/verify-sitemap.js",
     "verify:seo": "node scripts/verify-seo-integrity.js",
     "verify:visual": "node scripts/visual-integrity-check.js",
     "verify:functional": "node verify-and-fix.js",

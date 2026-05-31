@@ -1,0 +1,135 @@
+:root{
+  --faber-navy:#0d1f3c;
+  --faber-orange:#b84716;
+  --faber-gold:#f5a623;
+  --faber-radius:8px;
+}
+
+.nav-logo{
+  align-items:center;
+  display:flex;
+  flex:0 0 auto;
+  min-height:44px;
+  text-decoration:none;
+}
+
+.nav-logo svg{
+  display:block;
+  height:44px;
+  max-width:240px;
+  width:auto;
+}
+
+.navbar .nav-logo svg,
+.topbar .nav-logo svg{
+  height:44px;
+}
+
+.program-hero-status{
+  display:grid;
+  gap:10px;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  margin:22px auto 0;
+  max-width:760px;
+  width:100%;
+}
+
+.program-hero-status__item{
+  background:rgba(255,255,255,.12);
+  border:1px solid rgba(255,255,255,.22);
+  border-radius:var(--faber-radius);
+  padding:14px 16px;
+}
+
+.program-hero-status__label{
+  color:#f5a623;
+  display:block;
+  font-size:.74rem;
+  font-weight:900;
+  letter-spacing:0;
+  line-height:1.35;
+  margin-bottom:3px;
+}
+
+.program-hero-status__value{
+  color:#fff;
+  display:block;
+  font-size:.95rem;
+  font-weight:800;
+  line-height:1.45;
+}
+
+.cta-box,
+.next-step-box,
+.inline-cta,
+.final-cta,
+.newsletter-box,
+.sidebar-cta,
+.dark-cta{
+  padding:24px;
+}
+
+.cta-box h2,
+.cta-box h3,
+.next-step-box h2,
+.next-step-box h3,
+.inline-cta h2,
+.inline-cta h3,
+.final-cta h2,
+.final-cta h3,
+.newsletter-box h2,
+.newsletter-box h3,
+.dark-cta h2,
+.dark-cta h3{
+  color:#fff;
+  font-size:clamp(1rem,2vw,1.35rem);
+  font-weight:800;
+  letter-spacing:0;
+  line-height:1.35;
+  opacity:1;
+}
+
+.cta-box p,
+.next-step-box p,
+.inline-cta p,
+.final-cta p,
+.newsletter-box p,
+.sidebar-cta p,
+.dark-cta p{
+  color:rgba(255,255,255,.88);
+  font-size:max(.92rem,14px);
+  line-height:1.55;
+  opacity:1;
+}
+
+.cta-box .btn,
+.next-step-box .btn,
+.inline-cta .btn,
+.final-cta .btn,
+.newsletter-box .btn,
+.dark-cta .btn{
+  min-height:44px;
+}
+
+@media (max-width:760px){
+  .nav-logo svg,
+  .navbar .nav-logo svg,
+  .topbar .nav-logo svg{
+    height:38px;
+    max-width:210px;
+  }
+
+  .cta-box,
+  .next-step-box,
+  .inline-cta,
+  .final-cta,
+  .newsletter-box,
+  .sidebar-cta,
+  .dark-cta{
+    padding:18px;
+  }
+
+  .program-hero-status{
+    grid-template-columns:1fr;
+  }
+}

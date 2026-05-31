@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-27T13:23:08.654Z",
+  "generatedAt": "2026-05-31T17:06:04.385Z",
   "mode": "check",
   "changedFiles": [
     "404.html",
@@ -45,7 +45,6 @@
     "dr-14-afir-conditii-eligibilitate-greseli-frecvente.html",
     "dr12-afir-tineri-fermieri.html",
     "dr12-afir.html",
-    "dr14-afir-ferme-mici.html",
     "dr14.html",
     "eligibilitate-fonduri-europene.html",
     "eligibilitate-fonduri-europene/index.html",
@@ -114,12 +113,12 @@
     "verificare-eligibilitate-fonduri-europene/index.html"
   ],
   "summary": {
-    "totalFiles": 166,
-    "passedFiles": 166,
+    "totalFiles": 167,
+    "passedFiles": 167,
     "failedFiles": 0
   },
   "inlineScripts": {
-    "checked": 265,
+    "checked": 266,
     "failures": []
   },
   "results": [
@@ -196,7 +195,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "AFIR autoconsum agroalimentar: finantare pentru energie in sectorul agroalimentar"
+          "AFIR autoconsum agroalimentar: finanțare pentru energie în sectorul agroalimentar"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -212,7 +211,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "AFIR autoconsum agroalimentar: finantare pentru energie in sectorul agroalimentar"
+          "AFIR autoconsum agroalimentar: finanțare pentru energie în sectorul agroalimentar"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -244,7 +243,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "AFIR: fonduri pentru fermieri si proiecte agricole"
+          "AFIR: fonduri pentru fermieri și proiecte agricole"
         ],
         "missingAlt": [],
         "relatedCount": 2,
@@ -260,7 +259,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Apeluri GAL - finantari locale prin LEADER"
+          "Apeluri GAL - finanțări locale prin LEADER"
         ],
         "missingAlt": [],
         "relatedCount": 2,
@@ -484,7 +483,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Cat costa consultanta pentru fonduri europene"
+          "Cât costa consultanță pentru fonduri europene"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -628,7 +627,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Consultanta AFIR"
+          "Consultanță AFIR"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -756,7 +755,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Consultanta PNRR digitalizare"
+          "Consultanță PNRR digitalizare"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -772,7 +771,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Consultanta Start Up Nation 2026: verificare, dosar si depunere"
+          "Consultanță Start Up Nation 2026: verificare, dosar și depunere"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -996,7 +995,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Digitalizare IMM: eligibilitate, cheltuieli si buget pentru proiect"
+          "Digitalizare IMM: eligibilitate, cheltuieli și buget pentru proiect"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -1012,7 +1011,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Digitalizare IMM: eligibilitate, cheltuieli si buget pentru proiect"
+          "Digitalizare IMM: eligibilitate, cheltuieli și buget pentru proiect"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -1118,16 +1117,32 @@
     {
       "file": "dr14-afir-ferme-mici.html",
       "pass": true,
-      "noindex": true,
+      "noindex": false,
       "technicalFile": false,
       "issues": [],
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Pagina a fost mutata"
+          "DR14 AFIR pentru ferme mici: eligibilitate, documente și pregătire"
         ],
         "missingAlt": [],
-        "relatedCount": 0,
+        "relatedCount": 3,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "dr14-afir-ferme-mici/index.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "DR14 AFIR pentru ferme mici: eligibilitate, documente și pregătire"
+        ],
+        "missingAlt": [],
+        "relatedCount": 3,
         "jsonLdErrors": []
       }
     },
@@ -1140,7 +1155,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "DR 14 AFIR pentru ferme mici: conditii, cheltuieli si pregatirea dosarului"
+          "DR 14 AFIR pentru ferme mici: condiții, cheltuieli și pregătirea dosarului"
         ],
         "missingAlt": [],
         "relatedCount": 2,
@@ -1156,7 +1171,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "DR 14 AFIR pentru ferme mici: conditii, cheltuieli si pregatirea dosarului"
+          "DR 14 AFIR pentru ferme mici: condiții, cheltuieli și pregătirea dosarului"
         ],
         "missingAlt": [],
         "relatedCount": 2,
@@ -1172,7 +1187,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "e-MOVE RO: statii de incarcare, energie regenerabila si pregatirea dosarului"
+          "e-MOVE RO: statii de încărcare, energie regenerabilă și pregătirea dosarului"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -1236,7 +1251,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Femeia Antreprenor 2026: conditii, cheltuieli si pasi pentru dosar"
+          "Femeia Antreprenor 2026: condiții, cheltuieli și pasi pentru dosar"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -1252,7 +1267,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Femeia Antreprenor 2026: conditii, cheltuieli si pasi pentru dosar"
+          "Femeia Antreprenor 2026: condiții, cheltuieli și pasi pentru dosar"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -1316,7 +1331,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Firma de consultanta pentru fonduri europene"
+          "Firmă de consultanță pentru fonduri europene"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -1332,7 +1347,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Fondul de Modernizare: finantari pentru energie, fotovoltaice si autoconsum"
+          "Fondul de Modernizare: finanțări pentru energie, fotovoltaice și autoconsum"
         ],
         "missingAlt": [],
         "relatedCount": 2,
@@ -1348,7 +1363,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Fondul de Modernizare: finantari pentru energie, fotovoltaice si autoconsum"
+          "Fondul de Modernizare: finanțări pentru energie, fotovoltaice și autoconsum"
         ],
         "missingAlt": [],
         "relatedCount": 2,
@@ -1380,7 +1395,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Fondul de Modernizare: index pentru masurile de finantare"
+          "Fondul de Modernizare: index pentru masurile de finanțare"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -1716,7 +1731,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Fonduri europene nerambursabile 2026: programe, eligibilitate si pasi"
+          "Fonduri europene nerambursabile 2026: programe, eligibilitate și pasi"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -1780,7 +1795,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Fonduri europene in Romania"
+          "Fonduri europene în Romania"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -1892,7 +1907,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "GAL-AFIR: apeluri LEADER pentru beneficiari publici si privati"
+          "GAL-AFIR: apeluri LEADER pentru beneficiari publici și privați"
         ],
         "missingAlt": [],
         "relatedCount": 2,
@@ -2034,7 +2049,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Greseli frecvente la fonduri europene"
+          "Greșeli frecvente la fonduri europene"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -2114,7 +2129,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Intrebari frecvente despre fonduri europene"
+          "Întrebări frecvente despre fonduri europene"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -2178,7 +2193,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Investitii pentru modernizarea microintreprinderilor - Apel 2"
+          "Investiții pentru modernizarea microintreprinderilor - Apel 2"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -2194,7 +2209,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Investitii pentru modernizarea microintreprinderilor - Apel 2"
+          "Investiții pentru modernizarea microintreprinderilor - Apel 2"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -2290,7 +2305,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "PNRR pentru IMM-uri si proiecte de digitalizare"
+          "PNRR pentru IMM-uri și proiecte de digitalizare"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -2322,7 +2337,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Investitii pentru modernizarea microintreprinderilor in Nord-Est"
+          "Investiții pentru modernizarea microintreprinderilor în Nord-Est"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -2338,7 +2353,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Investitii pentru modernizarea microintreprinderilor in Nord-Est"
+          "Investiții pentru modernizarea microintreprinderilor în Nord-Est"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -2354,7 +2369,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Portofoliu de proiecte si domenii de finantare"
+          "Portofoliu de proiecte și domenii de finanțare"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -2370,7 +2385,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "PRO INFRA 2026: investitii, energie si pregatirea dosarului"
+          "PRO INFRA 2026: investiții, energie și pregătirea dosarului"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -2386,7 +2401,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "PRO INFRA 2026: investitii, energie si pregatirea dosarului"
+          "PRO INFRA 2026: investiții, energie și pregătirea dosarului"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -2402,7 +2417,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Resurse descarcabile pentru pregatirea dosarului"
+          "Resurse descarcabile pentru pregătirea dosarului"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -2466,7 +2481,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Start Up Nation 2026: conditii de verificat"
+          "Start Up Nation 2026: condiții de verificat"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -2738,7 +2753,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Testimoniale si feedback publicabil"
+          "Testimoniale și feedback publicabil"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -2770,7 +2785,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Webinarii si evenimente despre fonduri europene"
+          "Webinarii și evenimente despre fonduri europene"
         ],
         "missingAlt": [],
         "relatedCount": 1,

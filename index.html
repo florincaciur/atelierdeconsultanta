@@ -708,6 +708,21 @@
 <style id="requested-content-css">
       .homepage-snippet{padding:34px 24px;background:#fff7f3;border-bottom:1px solid #f0d4c5}
       .homepage-snippet p{max-width:980px;margin:0 auto;color:#1a2540;font-size:1.04rem;line-height:1.75}
+      .faber-method-section{padding:72px 24px;background:var(--white)}
+      .faber-method-inner{max-width:1120px;margin:0 auto}
+      .faber-method-head{max-width:760px;margin:0 auto 30px;text-align:center}
+      .faber-method-head .section-title{margin-bottom:12px}
+      .faber-method-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+      .faber-method-step{position:relative;border:1px solid var(--gray-200);border-radius:8px;background:#fff;padding:18px 16px;box-shadow:0 8px 24px rgba(13,31,60,.06)}
+      .faber-method-step::before{content:"";position:absolute;left:16px;right:16px;top:0;height:3px;border-radius:999px;background:linear-gradient(90deg,var(--orange),var(--gold))}
+      .faber-method-meta{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+      .faber-method-number{color:var(--orange);font-size:.76rem;font-weight:900;letter-spacing:0}
+      .faber-method-icon{width:34px;height:34px;border-radius:8px;background:#fff7f3;color:var(--orange);display:inline-flex;align-items:center;justify-content:center;font-weight:900}
+      .faber-method-step h3{font-size:1rem;line-height:1.3;margin:0 0 8px;color:var(--text-main)}
+      .faber-method-step p{font-size:.9rem;line-height:1.55;color:var(--text-soft);margin:0}
+      .cta-box h2,.cta-box h3,.dark-cta h2,.dark-cta h3,#newsletter h2,#contact h2{color:#fff;opacity:1;font-size:max(1rem,1.35rem);font-weight:800;letter-spacing:0;line-height:1.35}
+      .cta-box p,.dark-cta p,#newsletter p,#contact .section-subtitle,.contact-container .section-subtitle{color:rgba(255,255,255,.88);font-size:max(.92rem,14px);line-height:1.55}
+      .cta-box,.dark-cta,#newsletter .newsletter-box{padding:24px}
       #despre .despre-text .section-label{display:inline-flex;flex-direction:column;align-items:flex-start;gap:0;text-align:left}
       #despre .despre-text .section-label::after{content:"";display:block;width:58px;height:2px;margin-top:8px;border-radius:999px;background:linear-gradient(90deg,var(--orange),var(--gold))}
       #despre .despre-stats{align-items:stretch}
@@ -723,8 +738,10 @@
       #blog .blog-title{line-height:1.3}
       #blog .blog-excerpt{flex:1}
       #blog .blog-read-more{margin-top:auto}
-      @media (max-width:700px){#despre .stat-card{height:150px;min-height:150px}#despre .stat-card .stat-number{font-size:1.62rem}#blog .card-carousel{grid-template-columns:44px minmax(0,1fr) 44px}}
-    </style></head>
+      @media (max-width:900px){.faber-method-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+      @media (max-width:700px){.faber-method-section{padding:54px 18px}.faber-method-grid{grid-template-columns:1fr}.faber-method-step{padding:16px 14px}.faber-method-grid{position:relative}.faber-method-step{box-shadow:none}#despre .stat-card{height:150px;min-height:150px}#despre .stat-card .stat-number{font-size:1.62rem}#blog .card-carousel{grid-template-columns:44px minmax(0,1fr) 44px}}
+    </style>  <link rel="stylesheet" href="/assets/design-profiles.css">
+</head>
 
 <body>
   <!-- ✦ Skip link pentru accesibilitate ✦ -->
@@ -737,13 +754,13 @@
     <div class="nav-container">
 
       <a href="/" class="nav-logo" aria-label="FABER – Atelier de Consultanță, acasă">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 44" width="240" height="44" aria-hidden="true">
-          <text x="0" y="32" font-family="Georgia,'Times New Roman',serif" font-size="28" font-weight="700" fill="#b84716" letter-spacing="3">FABER</text>
-          <path d="M118,22 L125,13 L132,22 L125,31 Z" fill="white" opacity="0.95"></path>
-          <text x="138" y="18" font-family="'Inter','Helvetica Neue',sans-serif" font-size="10" font-weight="600" fill="white" letter-spacing="2">ATELIER de</text>
-          <text x="138" y="33" font-family="'Inter','Helvetica Neue',sans-serif" font-size="10" font-weight="600" fill="white" letter-spacing="2">CONSULTANȚĂ</text>
-        </svg>
-      </a>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 44" width="240" height="44" aria-hidden="true">
+        <text x="0" y="32" font-family="Georgia,'Times New Roman',serif" font-size="28" font-weight="700" fill="#b84716" letter-spacing="3">FABER</text>
+        <path d="M118,22 L125,13 L132,22 L125,31 Z" fill="white" opacity="0.95"></path>
+        <text x="138" y="18" font-family="'Inter','Helvetica Neue',sans-serif" font-size="10" font-weight="600" fill="white" letter-spacing="2">ATELIER de</text>
+        <text x="138" y="33" font-family="'Inter','Helvetica Neue',sans-serif" font-size="10" font-weight="600" fill="white" letter-spacing="2">CONSULTANȚĂ</text>
+      </svg>
+    </a>
 
       <div class="nav-links">
         <a href="#servicii">Servicii</a>
@@ -918,67 +935,51 @@
     <!-- ============================================================
          ✦ SERVICII ✦
     ============================================================ -->
-    <section id="servicii" data-section-id="services" aria-label="Serviciile noastre">
-      <div style="padding: 0 24px;" class="reveal">
-        <div class="section-label">Ce facem</div>
-        <h2 class="section-title">Consultanță clară, de la eligibilitate la clarificări</h2>
-        <p class="section-subtitle">Serviciile includ analiza eligibilității, alegerea programului, strategia de punctaj, redactarea dosarului și suportul în clarificări.</p>
-      </div>
-
-      <div class="card-carousel" data-card-carousel="services">
-        <button class="card-carousel-btn" type="button" aria-label="Serviciul anterior" onclick="moveCardCarousel('services-carousel', -1)">←</button>
-        <div class="card-carousel-viewport" id="services-carousel" tabindex="0" aria-label="Carusel servicii">
-          <div class="services-grid card-carousel-track">
-        <article id="analiza-eligibilitate" class="service-card reveal reveal-delay-1" data-service-id="service-identificare">
-          <div class="service-icon" aria-hidden="true"><i class="ph-duotone ph-magnifying-glass"></i></div>
-          <h3 class="service-title">Analiză eligibilitate</h3>
-          <p class="service-desc">
-            Verificăm solicitantul, codul CAEN, localitatea, activitatea, documentele disponibile, cofinanțarea și riscurile evidente înainte de recomandare.
-          </p>
-        </article>
-
-        <article id="alegere-program" class="service-card reveal reveal-delay-2" data-service-id="service-elaborare">
-          <div class="service-icon" aria-hidden="true"><i class="ph-duotone ph-file-text"></i></div>
-          <h3 class="service-title">Alegere program</h3>
-          <p class="service-desc">
-            Comparăm AFIR, Start-Up Nation, Digitalizare IMM, POR/ADR și alte apeluri relevante ca să evităm depunerea pe un program nepotrivit.
-          </p>
-        </article>
-
-        <article id="strategie-punctaj" class="service-card reveal reveal-delay-3" data-service-id="service-implementare">
-          <div class="service-icon" aria-hidden="true"><i class="ph-duotone ph-arrows-clockwise"></i></div>
-          <h3 class="service-title">Strategie punctaj</h3>
-          <p class="service-desc">
-            Citim grila de evaluare, estimăm prudent punctele care pot fi susținute prin documente și semnalăm criteriile fragile.
-          </p>
-        </article>
-
-        <article id="pregatire-dosar" class="service-card reveal reveal-delay-1" data-service-id="service-monitorizare">
-          <div class="service-icon" aria-hidden="true"><i class="ph-duotone ph-chart-line-up"></i></div>
-          <h3 class="service-title">Pregătire dosar</h3>
-          <p class="service-desc">
-            Structurăm cererea, planul, bugetul, anexele, ofertele și justificările astfel încât documentele să spună aceeași poveste.
-          </p>
-        </article>
-
-        <article id="sprijin-clarificari" class="service-card reveal reveal-delay-2" data-service-id="service-audit">
-          <div class="service-icon" aria-hidden="true"><i class="ph-duotone ph-seal-check"></i></div>
-          <h3 class="service-title">Sprijin clarificări</h3>
-          <p class="service-desc">
-            Pregătim răspunsuri la solicitările autorității și verificăm ca modificările să rămână coerente cu ghidul, bugetul și obiectivele.
-          </p>
-        </article>
-
-        <article id="suport-implementare" class="service-card reveal reveal-delay-3" data-service-id="service-training">
-          <div class="service-icon" aria-hidden="true"><i class="ph-duotone ph-graduation-cap"></i></div>
-          <h3 class="service-title">Suport implementare</h3>
-          <p class="service-desc">
-            Dacă serviciul este inclus în colaborare, sprijinim achiziții, raportări, cereri de plată/rambursare și monitorizarea obligațiilor asumate.
-          </p>
-        </article>
-          </div>
+    <section id="servicii" class="faber-method-section" data-section-id="services" aria-labelledby="metoda-faber-title">
+      <div class="faber-method-inner reveal">
+        <div class="faber-method-head">
+          <div class="section-label">Cum lucrăm</div>
+          <h2 class="section-title" id="metoda-faber-title">Metoda FABER</h2>
+          <p class="section-subtitle">Verificăm proiectul în etape clare: eligibilitate, program potrivit, dosar coerent și sprijin în implementare.</p>
         </div>
-        <button class="card-carousel-btn" type="button" aria-label="Serviciul următor" onclick="moveCardCarousel('services-carousel', 1)">→</button>
+
+        <div class="faber-method-grid" aria-label="Pașii metodei FABER">
+          <article id="analiza-eligibilitate" class="faber-method-step reveal reveal-delay-1">
+            <div class="faber-method-meta">
+              <span class="faber-method-number">01</span>
+              <span class="faber-method-icon" aria-hidden="true"><i class="ph-duotone ph-magnifying-glass"></i></span>
+            </div>
+            <h3>Eligibilitate</h3>
+            <p>Verificăm solicitantul, activitatea, CAEN-ul, localitatea și documentele disponibile.</p>
+          </article>
+
+          <article id="alegere-program" class="faber-method-step reveal reveal-delay-2">
+            <div class="faber-method-meta">
+              <span class="faber-method-number">02</span>
+              <span class="faber-method-icon" aria-hidden="true"><i class="ph-duotone ph-file-magnifying-glass"></i></span>
+            </div>
+            <h3>Program potrivit</h3>
+            <p>Comparăm programele relevante și eliminăm opțiunile care nu se potrivesc proiectului.</p>
+          </article>
+
+          <article id="pregatire-dosar" class="faber-method-step reveal reveal-delay-3">
+            <div class="faber-method-meta">
+              <span class="faber-method-number">03</span>
+              <span class="faber-method-icon" aria-hidden="true"><i class="ph-duotone ph-files"></i></span>
+            </div>
+            <h3>Dosar coerent</h3>
+            <p>Structurăm bugetul, anexele, justificările și documentele pe baza ghidului aplicabil.</p>
+          </article>
+
+          <article id="suport-implementare" class="faber-method-step reveal reveal-delay-4">
+            <div class="faber-method-meta">
+              <span class="faber-method-number">04</span>
+              <span class="faber-method-icon" aria-hidden="true"><i class="ph-duotone ph-shield-check"></i></span>
+            </div>
+            <h3>Implementare</h3>
+            <p>Semnalăm riscurile de achiziții, plăți, clarificări și monitorizare.</p>
+          </article>
+        </div>
       </div>
     </section>
 

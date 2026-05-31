@@ -23,6 +23,7 @@ const {
   renderOfficialSources,
   sourcesForKeys
 } = require("./official-sources");
+const { CANONICAL_LOGO } = require("./site-logo");
 const {
   breadcrumbSchema,
   faqPageSchema,
@@ -499,10 +500,35 @@ function heroSecondaryCta(page) {
   };
 }
 
+function hasText(value) {
+  return typeof value === "string" && Boolean(value.trim()) && !/^TODO(?:_|$|\b|:)/i.test(value.trim());
+}
+
+function hasValidHref(value) {
+  if (typeof value !== "string") return false;
+  const href = value.trim();
+  return Boolean(href)
+    && href !== "#"
+    && !/^TODO(?:_|$|\b|:)/i.test(href)
+    && !/^(undefined|null)$/i.test(href)
+    && !/^javascript:/i.test(href);
+}
+
+function normalizeCta(cta) {
+  if (!cta || typeof cta !== "object") return null;
+  if (!hasText(cta.label) || !hasValidHref(cta.href)) return null;
+  return {
+    ...cta,
+    href: cta.external ? cta.href.trim() : cleanUrl(cta.href),
+    label: cta.label.trim()
+  };
+}
+
 function renderCtaLink(cta, className = "btn btn-secondary") {
-  const href = cta.external ? cta.href : cleanUrl(cta.href);
-  const attrs = cta.external ? ` target="_blank" rel="noopener noreferrer"` : "";
-  return `<a class="${className}" href="${esc(href)}"${attrs}>${esc(cta.label)}</a>`;
+  const safeCta = normalizeCta(cta);
+  if (!safeCta) return "";
+  const attrs = safeCta.external ? ` target="_blank" rel="noopener noreferrer"` : "";
+  return `<a class="${className}" href="${esc(safeCta.href)}"${attrs}>${esc(safeCta.label)}</a>`;
 }
 
 function configuredCta(item) {
@@ -510,23 +536,23 @@ function configuredCta(item) {
   if (item.sourceKey) {
     const guide = sourcesForKeys([item.sourceKey])[0];
     if (guide && guide.isComplete && /^https?:\/\//i.test(guide.url)) {
-      return {
+      return normalizeCta({
         href: guide.url,
         label: item.label || "Sursa oficiala",
         external: true,
         className: item.className
-      };
+      });
     }
   }
 
   const href = item.href || item.fallbackHref;
-  if (!href) return null;
-  return {
+  const label = item.label || item.fallbackLabel || "Detalii";
+  return normalizeCta({
     href,
-    label: item.label || item.fallbackLabel || "Detalii",
+    label,
     external: /^https?:\/\//i.test(href),
     className: item.className
-  };
+  });
 }
 
 function renderHeroActions(page, primaryCta, secondaryCta) {
@@ -538,8 +564,45 @@ function renderHeroActions(page, primaryCta, secondaryCta) {
       .join("\n      ");
   }
 
-  return `<a class="btn btn-primary" href="/verificare-eligibilitate-fonduri-europene">${esc(primaryCta)}</a>
-      ${renderCtaLink(secondaryCta)}`;
+  return [
+    renderCtaLink({ href: "/verificare-eligibilitate-fonduri-europene", label: primaryCta, external: false }, "btn btn-primary"),
+    renderCtaLink(secondaryCta)
+  ].filter(Boolean).join("\n      ");
+}
+
+function isProgramLikePage(page) {
+  return page.type === "program" || page.schemaType === "GovernmentService" || page.schemaType === "Service";
+}
+
+function firstTextValue(...values) {
+  for (const value of values) {
+    if (typeof value === "string" && value.trim()) return value.trim();
+  }
+  return "";
+}
+
+function programStatusValue(page) {
+  return firstTextValue(page.programStatus, page.statusLabel, page.status, page.callStatus)
+    || "de verificat în sursa oficială";
+}
+
+function programSubmissionPeriodValue(page) {
+  return firstTextValue(page.submissionPeriod, page.applicationPeriod, page.period, page.perioadaDepunere)
+    || "conform calendarului apelului activ";
+}
+
+function renderProgramHeroStatus(page) {
+  if (!isProgramLikePage(page)) return "";
+  return `<div class="program-hero-status" aria-label="Status program și perioadă de depunere">
+        <div class="program-hero-status__item">
+          <span class="program-hero-status__label">Status:</span>
+          <strong class="program-hero-status__value">${esc(programStatusValue(page))}</strong>
+        </div>
+        <div class="program-hero-status__item">
+          <span class="program-hero-status__label">Perioada depunere:</span>
+          <strong class="program-hero-status__value">${esc(programSubmissionPeriodValue(page))}</strong>
+        </div>
+      </div>`;
 }
 
 function stripTags(html) {
@@ -1798,7 +1861,7 @@ ${CLARITY_TRACKING_CODE}
 </head>
 <body>
   <nav class="navbar" aria-label="Navigare principala">
-    <a class="brand" href="/" aria-label="Atelier de Consultanta, acasa">FABER</a>
+    ${CANONICAL_LOGO}
     <div class="navbar-links">
       <a href="/fonduri-europene">Fonduri europene</a>
       <a href="/ghiduri">Ghiduri</a>
@@ -1816,6 +1879,7 @@ ${CLARITY_TRACKING_CODE}
     <div class="hero-actions">
       ${renderHeroActions(page, primaryCta, secondaryCta)}
     </div>
+    ${renderProgramHeroStatus(page)}
   </header>
   <main class="container">
     <article class="panel">
@@ -2022,7 +2086,7 @@ function updateBanners() {
       altText: "Banner modernizarea microîntreprinderilor Apel 2",
       icon: "ph-buildings",
       order: 10,
-      active: true,
+      active: false,
       officialGuideKey: "por-ne"
     },
     {
