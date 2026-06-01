@@ -23,6 +23,7 @@ const {
   normalizeRomanianCopy
 } = require("./normalize-copy-ro");
 const { designFamilyForSlug } = require("./design-family-map");
+const { brandLogoLink } = require("./brand-logo");
 const CLARITY_TRACKING_CODE = `  <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -211,7 +212,7 @@ ${CLARITY_TRACKING_CODE}
 </head>
 <body class="page-family-${esc(family)}">
   <nav class="navbar" aria-label="Navigare principala">
-    <a class="brand" href="/">FABER</a>
+    ${brandLogoLink()}
     <div class="navbar-links">
       <a href="/fonduri-europene">Fonduri europene</a>
       <a href="/instrumente">Instrumente</a>

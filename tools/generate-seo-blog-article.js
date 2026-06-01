@@ -16,6 +16,7 @@ const {
   faqPageSchema,
   organizationSchema
 } = require("./schema-helpers");
+const { brandLogoLink } = require("./brand-logo");
 const WEB_ERROR =
   "Nu pot genera articol publicabil: lipsește accesul web necesar pentru verificarea surselor oficiale, a SERP-urilor și a semnalelor AI Search.";
 const CLARITY_TRACKING_CODE = `  <script type="text/javascript">
@@ -1349,7 +1350,7 @@ ${CLARITY_TRACKING_CODE}
 </head>
 <body>
   <nav class="navbar" aria-label="Navigare principală">
-    <a href="/" class="brand" aria-label="FABER – Atelier de Consultanță, acasă">FABER</a>
+    ${brandLogoLink()}
     <div class="navbar-links">
       <a href="/fonduri-europene">Fonduri europene</a>
       <a href="/ghiduri">Ghiduri</a>

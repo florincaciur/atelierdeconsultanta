@@ -47,13 +47,16 @@ button:focus-visible,
   gap: 20px;
 }
 .brand {
-  color: var(--gold);
-  font-family: Georgia, "Times New Roman", serif;
-  font-size: 28px;
-  font-weight: 700;
-  letter-spacing: 3px;
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
   text-decoration: none;
-  white-space: nowrap;
+}
+.brand svg {
+  display: block;
+  width: 240px;
+  max-width: min(240px, 72vw);
+  height: auto;
 }
 .navbar-links { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; justify-content: flex-end; }
 .navbar-links a {

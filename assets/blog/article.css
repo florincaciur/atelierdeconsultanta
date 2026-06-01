@@ -52,13 +52,9 @@ button:focus-visible,
 }
 .brand,.navbar-brand{display:flex;align-items:center;flex:0 0 auto}
 .brand{
-  color:var(--gold);
-  font-family:Georgia,"Times New Roman",serif;
-  font-size:28px;
-  font-weight:700;
-  white-space:nowrap;
+  text-decoration:none;
 }
-.navbar-brand svg{height:40px;width:auto;display:block}
+.brand svg,.navbar-brand svg{display:block;width:240px;max-width:min(240px,72vw);height:auto}
 .navbar-links{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:flex-end}
 .navbar-links a{
   color:rgba(255,255,255,.82);

@@ -13,6 +13,7 @@ const {
   websiteSchema
 } = require("./schema-helpers");
 const { designFamilyForSlug } = require("./design-family-map");
+const { brandLogoLink } = require("./brand-logo");
 const CLARITY_TRACKING_CODE = `  <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -572,7 +573,7 @@ ${CLARITY_TRACKING_CODE}
 </head>
 <body class="page-family-${esc(family)}">
   ${page.internalNote ? `<!-- ${page.internalNote} -->\n  ` : ""}<nav class="navbar" aria-label="Navigare principală">
-    <a class="brand" href="/" aria-label="Atelier de Consultanță, acasă">FABER</a>
+    ${brandLogoLink()}
     <div class="navbar-links">
       <a href="${cleanHref("/fonduri-europene/")}">Fonduri europene</a>
       <a href="${cleanHref("/ghiduri/")}">Ghiduri</a>
