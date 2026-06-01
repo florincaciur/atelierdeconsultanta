@@ -2956,17 +2956,18 @@
       "type": "hub",
       "schemaType": "WebPage",
       "category": "AFIR",
-      "title": "AFIR | DR12, DR14, GAL și autoconsum",
-      "description": "Hub AFIR pentru fermieri: DR12, DR14, autoconsum agroalimentar, GAL/LEADER, calculator SO/SOC, documente și verificări înainte de dosar.",
-      "h1": "AFIR: programe pentru fermieri și beneficiari rurali",
-      "quickAnswer": "Hub-ul AFIR organizează programele pentru fermieri și beneficiari rurali: DR12, DR14, autoconsum agroalimentar, GAL/LEADER și calculatorul SO/SOC. Înainte de dosar se verifică solicitantul, exploatația, documentele agricole, investiția, cofinanțarea și ghidul activ.",
+      "title": "AFIR | calculator SO, DR12, DR14 și GAL",
+      "description": "Hub AFIR pentru fermieri: calculator SO/SOC, DR12, DR14, GAL-AFIR, autoconsum, documente agricole și rutare prudentă către program.",
+      "h1": "AFIR: calculator SO, programe și verificare dosar",
+      "quickAnswer": "Hub-ul AFIR organizează traseul de verificare pentru fermieri și beneficiari rurali: calculator SO/SOC, DR12, DR14, GAL-AFIR, autoconsum agroalimentar și consultanță AFIR. Înainte de dosar se verifică solicitantul, exploatația, documentele agricole, investiția, cofinanțarea și ghidul aplicabil. Pagina nu înlocuiește calculatorul SO sau ghidul solicitantului, ci arată ce pagină internă trebuie folosită pentru fiecare intenție.",
       "programName": "AFIR",
       "policyContribution": "hub-ul organizeaza resurse pentru fermieri și proiecte agricole eligibile.",
       "funding": "valorile difera pe interventie.",
       "audience": [
+        "fermieri care caută calculator SO AFIR sau calcul SO AFIR",
+        "beneficiari care nu știu dacă pornesc de la DR12, DR14 sau GAL-AFIR",
         "tineri fermieri",
         "ferme mici",
-        "fermieri în dezvoltare",
         "sector agroalimentar"
       ],
       "eligibility": [
@@ -2977,7 +2978,8 @@
         "investiție"
       ],
       "mandatory": [
-        "calculator SO",
+        "calcul SO/SOC pe date documentabile",
+        "alegerea paginii potrivite: calculator SO, DR12, DR14, GAL-AFIR sau consultanță AFIR",
         "documente exploatație",
         "oferte",
         "plan",
@@ -3003,7 +3005,8 @@
         "maturitate"
       ],
       "steps": [
-        "calculeaza SO",
+        "calculeaza SO/SOC înainte de alegerea programului",
+        "separă intenția de căutare: calculator, ghid de program, GAL-AFIR sau consultanță",
         "alege interventia",
         "pregătește documente",
         "depune",
@@ -3052,13 +3055,30 @@
         [
           "Ce risc apare cel mai des la proiectele AFIR?",
           "Cel mai des apar necorelari intre documentele exploatației, calculul SO/SOC, investiție și ofertele folosite în buget."
+        ],
+        [
+          "Unde folosesc calculator SO AFIR?",
+          "Dacă ai nevoie de calcul SO AFIR, pornește din hub pentru context, apoi folosește pagina Calculator SO/SOC. Rezultatul trebuie comparat cu documentele fermei și cu programul analizat."
+        ],
+        [
+          "Ce înseamnă AFIR SO sau calcul SO AFIR?",
+          "În acest context, SO/SOC este punctul de pornire pentru încadrarea economică a exploatației. Hub-ul explică ordinea verificării, iar calculatorul dedicat ajută la estimarea inițială."
+        ],
+        [
+          "Ce fac dacă nu știu dacă merg pe DR12, DR14 sau GAL-AFIR?",
+          "Nu alege după denumire. Compară solicitantul, exploatația, SO/SOC, investiția, documentele și sursa apelului, apoi mergi la pagina internă potrivită."
+        ],
+        [
+          "Când are sens consultanță AFIR?",
+          "Consultanța are sens când trebuie comparate mai multe intervenții, când documentele fermei nu sunt clare sau când bugetul și cofinanțarea trebuie verificate înainte de oferte."
         ]
       ],
       "related": [
+        "/consultanta-afir",
+        "/calculator-soc",
         "/dr12-afir",
         "/dr14",
-        "/calculator-soc",
-        "/consultanta-afir",
+        "/dr12-vs-dr14",
         "/afir-autoconsum-agroalimentar",
         "/gal-afir",
         "/apeluri-gal"
@@ -3069,13 +3089,40 @@
       ],
       "heroIcon": "ph-duotone ph-plant",
       "minWords": 2000,
-      "minFaq": 8,
-      "finalCtaText": "Trimite tipul exploatației, SO/SOC, documentele agricole și investiția ca să alegem traseul AFIR potrivit.",
+      "minFaq": 12,
+      "cofinancingTitle": "Buget AFIR fără valori presupuse",
+      "cofinancingRows": [
+        [
+          "Sprijin nerambursabil",
+          "Se confirmă în ghidul aplicabil",
+          "Nu se preia un procent din rezumate sau din alt apel."
+        ],
+        [
+          "Contribuție proprie",
+          "Se verifică după program și investiție",
+          "Include cheltuieli neeligibile, TVA dacă este cazul și rezerve de cash-flow."
+        ],
+        [
+          "Oferte și specificații",
+          "Se pregătesc după alegerea traseului",
+          "Ofertele trebuie să susțină nevoia fermei, nu doar lista de achiziții."
+        ],
+        [
+          "Decizie de depunere",
+          "După verificarea documentelor",
+          "Un rezultat bun în calculator nu înlocuiește eligibilitatea din ghid."
+        ]
+      ],
+      "finalCtaText": "Trimite tipul exploatației, SO/SOC, documentele agricole și investiția ca să alegem traseul AFIR potrivit sau să direcționăm cazul către consultanță AFIR.",
       "contentSections": [],
       "heroPrimaryCta": "Verifică eligibilitatea",
+      "secondaryCtaHref": "/consultanta-afir",
+      "secondaryCtaLabel": "Consultanță AFIR",
       "finalPrimaryCta": "Trimite datele proiectului",
+      "finalSecondaryHref": "/consultanta-afir",
+      "finalSecondaryLabel": "Vezi consultanță AFIR",
       "inlineCtaTitle": "Ce poți trimite pentru verificare",
-      "inlineCtaText": "Trimite tipul exploatației, SO/SOC, documentele agricole și investiția ca să alegem traseul AFIR potrivit.",
+      "inlineCtaText": "Trimite tipul exploatației, SO/SOC, documentele agricole și investiția ca să alegem traseul AFIR potrivit sau să indicăm pagina internă corectă: calculator, DR12, DR14, GAL-AFIR ori consultanță AFIR.",
       "decisionClose": "Dacă documentele, bugetul sau condițiile nu se potrivesc, proiectul se ajustează înainte de depunere. Regulile finale se confirmă în ghidul activ, anexele apelului și sursele oficiale."
     },
     {

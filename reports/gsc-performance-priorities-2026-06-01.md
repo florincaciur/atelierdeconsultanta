@@ -4,24 +4,29 @@ Export sursă: `atelierdeconsultanta.ro-Performance-on-Search-2026-06-01.zip`, S
 
 ## Cluster lucrat
 
-- Cluster: DR12 AFIR
-- Pagină comercială principală: `/dr12-afir`
-- Query-uri țintă: poziții GSC 4-15, fără clickuri în export.
+- Cluster: AFIR Hub
+- Pagină hub principală: `/afir`
+- Pagină comercială întărită: `/consultanta-afir`
+- Query-uri țintă: poziții GSC 4-15 din export, cu intenție AFIR/SO/SOC/GAL/DR14.
 
 ## Priorități query
 
 | Query | Clicks | Impressions | Position | Țintă |
 | --- | ---: | ---: | ---: | --- |
-| acte necesare pentru tanarul fermier | 0 | 11 | 8.36 | `/dr12-afir` |
-| dr 12 afir lansare | 0 | 3 | 6.67 | `/dr12-afir` |
-| dr 12 afir ghid | 0 | 3 | 9 | `/dr12-afir` |
-| afir dr 12 ghid | 0 | 2 | 10 | `/dr12-afir` |
-| ghidul solicitantului dr 12 | 0 | 1 | 5 | `/dr12-afir` |
-| dr12 afir | 0 | 1 | 10 | `/dr12-afir` |
+| calcul so afir 2026 | 6 | 158 | 7.7 | `/afir` |
+| calculator so afir | 1 | 62 | 8.37 | `/afir` |
+| calcul so afir | 0 | 13 | 10.08 | `/afir` |
+| so afir | 0 | 13 | 8.92 | `/afir` |
+| afir so | 0 | 5 | 8.4 | `/afir` |
+| afir calcul so | 0 | 2 | 10 | `/afir` |
+| galafir | 0 | 8 | 5.62 | `/afir` |
+| galafir.ro | 0 | 2 | 6 | `/afir` |
+| dr14 afir 2026 | 1 | 23 | 8.48 | `/afir` |
+| dr 14 afir 2026 | 1 | 7 | 7.71 | `/afir` |
 
 ## Direcție de optimizare
 
-- Adăugat conținut crawlable despre ghidul solicitantului, lansare și actele necesare pentru tânărul fermier.
+- Adăugat conținut crawlable despre calcul SO AFIR, calculator SO AFIR, rutarea către DR12/DR14/GAL-AFIR și momentul potrivit pentru consultanță AFIR.
 - Evitate valori, plafoane, calendar sau claims oficiale nevalidate.
-- Întărite linkurile interne contextuale din pagini DR12 către `/dr12-afir`.
-- Canonicalul rămâne pe `https://atelierdeconsultanta.ro/dr12-afir`.
+- Întărite linkurile interne contextuale către `/consultanta-afir`, `/calculator-soc` și paginile de program potrivite.
+- Canonicalul rămâne pe `https://atelierdeconsultanta.ro/afir`.
