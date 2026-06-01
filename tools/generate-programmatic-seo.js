@@ -361,14 +361,41 @@ function localPage(item, consulting) {
   const description = consulting
     ? `Consultanta pentru fonduri europene in ${item.city}: programe active, documente, eligibilitate, buget si pregatirea dosarului.`
     : `Ghid fonduri europene pentru ${item.county}: programe active, regiune, IMM-uri, agricultura, digitalizare, energie si documente.`;
+  const isBucharest = item.slug === "bucuresti";
   const faq = [
     [`Ce fonduri europene sunt relevante in ${item.county}?`, `Depinde de regiune, solicitant si investitie. In ${item.region}, verifica programele regionale, nationale, AFIR, digitalizare si energie.`],
     [`Conteaza localitatea investitiei in ${item.county}?`, "Da. Pentru programele regionale si unele scheme sectoriale, localizarea investitiei este esentiala."],
     [`Ce documente pregatesc pentru un proiect in ${item.county}?`, "Documente de firma, cod CAEN, documente pentru spatiu, buget, oferte, situatii financiare si descrierea investitiei."],
-    [`Pot primi consultanta la distanta pentru ${item.county}?`, "Da. Analiza initiala se poate face pe baza datelor si documentelor transmise electronic."]
+    [`Pot primi consultanta la distanta pentru ${item.county}?`, "Da. Analiza initiala se poate face pe baza datelor si documentelor transmise electronic."],
+    [`Cand este utila o pagina locala pentru ${item.county}?`, "Cand localizarea poate schimba eligibilitatea, punctajul, documentele pentru punctul de lucru sau programul recomandat."],
+    [`Ce verific prima data pentru un proiect din ${item.county}?`, "Verifica solicitantul, locul de implementare, codul CAEN sau activitatea agricola, bugetul, cofinantarea si ghidul activ."]
   ];
-  let body = `
-      <h2>Particularitati locale</h2>
+  let body = isBucharest ? `<h2>Particularitati pentru Bucuresti-Ilfov</h2>
+      <p>${esc(item.county)} se analizeaza prin regiunea ${esc(item.region)}, prin locul real de implementare si prin tipul programului. Pentru ${esc(item.focus)}, localizarea poate conta diferit fata de proiectele din alte regiuni: unele apeluri sunt nationale, unele sunt regionale, iar altele cer documente clare pentru punctul de lucru sau amplasament.</p>
+      <p>O firma din Bucuresti nu ar trebui sa aleaga programul doar dupa numele finantarii. Trebuie verificate activitatea autorizata, codul CAEN, vechimea, locatia investitiei, bugetul, cofinantarea si daca ghidul activ accepta cheltuielile propuse.</p>
+      <h2>Programe de verificat pentru Bucuresti</h2>
+      <ul>
+        <li>programe nationale pentru IMM-uri, antreprenoriat si servicii;</li>
+        <li>Start-Up Nation, daca editia activa permite profilul solicitantului;</li>
+        <li>digitalizare, software, automatizare, securitate cibernetica si cloud;</li>
+        <li>energie pentru autoconsum sau eficienta, daca solicitantul si amplasamentul se incadreaza;</li>
+        <li>apeluri regionale Bucuresti-Ilfov, atunci cand ghidul activ le confirma.</li>
+      </ul>
+      <h2>Exemple locale si bugete orientative</h2>
+      <div class="table-wrap">
+        <table class="program-table">
+          <thead><tr><th>Exemplu Bucuresti</th><th>Program posibil</th><th>Buget de discutie</th><th>Ce se verifica</th></tr></thead>
+          <tbody>
+            <tr><td>Firma de servicii sau productie usoara</td><td>program national sau regional IMM</td><td>50.000 - 300.000 EUR orientativ</td><td>CAEN, punct de lucru, cheltuieli, cofinantare, punctaj</td></tr>
+            <tr><td>Start-up cu investitii initiale</td><td>Start-Up Nation sau schema nationala similara</td><td>pana la plafonul apelului activ</td><td>varsta firmei, asociati, activitate, buget, loc implementare</td></tr>
+            <tr><td>Firma care vrea digitalizare</td><td>Digitalizare IMM / PNRR / apel national</td><td>10.000 - 100.000 EUR orientativ</td><td>procese digitalizate, software, hardware, securitate, indicatori</td></tr>
+            <tr><td>Proiect energetic pentru sediu sau punct de lucru</td><td>Fondul pentru Modernizare sau apel de autoconsum</td><td>se confirma in ghidul activ</td><td>consum, drept de folosinta, avize, dimensionare, eligibilitate</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <h2>Checklist local Bucuresti</h2>
+      <p>Inainte de depunere, verifica daca investitia se implementeaza in Bucuresti sau Ilfov, daca punctul de lucru este documentat, daca activitatea este autorizata sau autorizabila si daca toate cheltuielile au legatura directa cu proiectul.</p>
+      <p>Pentru servicii, software si digitalizare, bugetul trebuie legat de procese concrete: vanzari, productie, gestiune, securitate, raportare sau relatia cu clientii. Pentru energie, trebuie verificate consumul, amplasamentul, racordarea, avizele si dreptul de folosinta.</p>` : `<h2>Particularitati locale</h2>
       <p>${esc(item.county)} se analizeaza prin regiunea ${esc(item.region)} si prin tipul investitiei. Pentru ${esc(item.focus)}, conteaza codul CAEN, localitatea, documentele pentru spatiu si calendarul apelurilor.</p>
       <p>Programele AFIR DR14, digitalizare IMM, investitii regionale si energie pentru autoconsum apar frecvent in discutiile locale, dar eligibilitatea se confirma numai dupa ghidul activ si documentele solicitantului.</p>
       <h2>Programe de verificat</h2>
@@ -393,7 +420,18 @@ function localPage(item, consulting) {
       <h2>Checklist local</h2>
       <p>Inainte de depunere, verifica daca locatia investitiei este eligibila, daca punctul de lucru este documentat, daca autorizatiile pot fi obtinute si daca investitia are legatura cu activitatea firmei.</p>`;
   body = ensureDepth(body, `${title} in ${item.region}`);
-  return { route, content: html({ title, description, h1: title, route, category: consulting ? "Consultanta locala" : "Fonduri locale", summary: `${title}: eligibilitatea se verifica dupa regiune, solicitant, cod CAEN, investitie si documente.`, body, faq, related: ["/fonduri-europene", "/verificare-eligibilitate-fonduri-europene", "/contact"] }) };
+  const related = isBucharest
+    ? [
+        consulting ? "/fonduri-europene-bucuresti" : "/consultanta-fonduri-europene-bucuresti",
+        "/fonduri-europene",
+        "/consultanta-fonduri-europene",
+        "/digitalizare-imm",
+        "/consultanta-start-up-nation-2026",
+        "/consultanta-pnrr-digitalizare",
+        "/contact"
+      ]
+    : ["/fonduri-europene", "/verificare-eligibilitate-fonduri-europene", "/contact"];
+  return { route, content: html({ title, description, h1: title, route, category: consulting ? "Consultanta locala" : "Fonduri locale", summary: `${title}: eligibilitatea se verifica dupa regiune, solicitant, cod CAEN, investitie si documente.`, body, faq, related }) };
 }
 
 function regionalPage(item) {
@@ -469,8 +507,8 @@ function regionalPage(item) {
 
 function faqPage(item) {
   const route = `/intrebari/${item.slug}`;
-  const title = item.question;
-  const description = `${item.answer.slice(0, 145)}...`;
+  const title = `Raspuns rapid: ${item.question}`;
+  const description = `Raspuns rapid pentru intrebarea "${item.question}": ${item.answer.slice(0, 120)}...`;
   const faq = [
     [item.question, item.answer],
     ["Ce trebuie verificat inainte de aplicare?", "Solicitantul, programul, documentele, bugetul, cheltuielile eligibile si regulile apelului activ."],

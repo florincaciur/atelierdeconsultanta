@@ -10,15 +10,12 @@
 /startup-nation-2026-conditii /start-up-nation-2026-conditii 301
 /startup-nation-2026-conditii.html /start-up-nation-2026-conditii 301
 /startup-nation-2026-conditii/ /start-up-nation-2026-conditii 301
-/intrebari/ce-documente-sunt-necesare-pentru-dr12 /dr12-afir 301
-/intrebari/ce-documente-sunt-necesare-pentru-dr12/ /dr12-afir 301
-/intrebari/ce-documente-sunt-necesare-pentru-dr12/index.html /dr12-afir 301
-/intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene /cum-se-calculeaza-cofinantarea-fonduri-europene 301
-/intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene/ /cum-se-calculeaza-cofinantarea-fonduri-europene 301
-/intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene/index.html /cum-se-calculeaza-cofinantarea-fonduri-europene 301
-/intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm /pnrr-digitalizare-imm-cheltuieli-eligibile 301
-/intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm/ /pnrr-digitalizare-imm-cheltuieli-eligibile 301
-/intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm/index.html /pnrr-digitalizare-imm-cheltuieli-eligibile 301
+/intrebari/ce-documente-sunt-necesare-pentru-dr12/ /intrebari/ce-documente-sunt-necesare-pentru-dr12 301
+/intrebari/ce-documente-sunt-necesare-pentru-dr12/index.html /intrebari/ce-documente-sunt-necesare-pentru-dr12 301
+/intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene/ /intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene 301
+/intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene/index.html /intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene 301
+/intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm/ /intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm 301
+/intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm/index.html /intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm 301
 
 # Canonical URL convention: clean paths without .html and without trailing slash.
 # Legacy and renamed service routes.
@@ -42,6 +39,38 @@
 /fonduri-europene-nord-est/ /fonduri-europene-nord-est 301
 /fonduri-europene-nord-est.html /fonduri-europene-nord-est 301
 /fonduri-europene-nord-est/index.html /fonduri-europene-nord-est 301
+
+# Local SEO landing pages and consolidated local fallbacks.
+/fonduri-europene-bucuresti/ /fonduri-europene-bucuresti 301
+/fonduri-europene-bucuresti.html /fonduri-europene-bucuresti 301
+/fonduri-europene-bucuresti/index.html /fonduri-europene-bucuresti 301
+/consultanta-fonduri-europene-bucuresti/ /consultanta-fonduri-europene-bucuresti 301
+/consultanta-fonduri-europene-bucuresti.html /consultanta-fonduri-europene-bucuresti 301
+/consultanta-fonduri-europene-bucuresti/index.html /consultanta-fonduri-europene-bucuresti 301
+/fonduri-europene-iasi /fonduri-europene-nord-est 301
+/fonduri-europene-iasi/ /fonduri-europene-nord-est 301
+/fonduri-europene-iasi.html /fonduri-europene-nord-est 301
+/fonduri-europene-iasi/index.html /fonduri-europene-nord-est 301
+/consultanta-fonduri-europene-iasi /fonduri-europene-nord-est 301
+/consultanta-fonduri-europene-iasi/ /fonduri-europene-nord-est 301
+/consultanta-fonduri-europene-iasi.html /fonduri-europene-nord-est 301
+/consultanta-fonduri-europene-iasi/index.html /fonduri-europene-nord-est 301
+/fonduri-europene-suceava /fonduri-europene-nord-est 301
+/fonduri-europene-suceava/ /fonduri-europene-nord-est 301
+/fonduri-europene-suceava.html /fonduri-europene-nord-est 301
+/fonduri-europene-suceava/index.html /fonduri-europene-nord-est 301
+/consultanta-fonduri-europene-suceava /fonduri-europene-nord-est 301
+/consultanta-fonduri-europene-suceava/ /fonduri-europene-nord-est 301
+/consultanta-fonduri-europene-suceava.html /fonduri-europene-nord-est 301
+/consultanta-fonduri-europene-suceava/index.html /fonduri-europene-nord-est 301
+/fonduri-europene-bacau /fonduri-europene-nord-est 301
+/fonduri-europene-bacau/ /fonduri-europene-nord-est 301
+/fonduri-europene-bacau.html /fonduri-europene-nord-est 301
+/fonduri-europene-bacau/index.html /fonduri-europene-nord-est 301
+/consultanta-fonduri-europene-bacau /fonduri-europene-nord-est 301
+/consultanta-fonduri-europene-bacau/ /fonduri-europene-nord-est 301
+/consultanta-fonduri-europene-bacau.html /fonduri-europene-nord-est 301
+/consultanta-fonduri-europene-bacau/index.html /fonduri-europene-nord-est 301
 
 # Local pages are active and canonical in sitemap.
 /verificare-eligibilitate-fonduri-europene/ /verificare-eligibilitate-fonduri-europene 301

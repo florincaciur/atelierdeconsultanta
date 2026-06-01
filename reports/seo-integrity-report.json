@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-05-31T00:03:40.760Z",
-  "root": "C:\\Users\\CODEXS\\Documents\\GitHub\\atelierdeconsultanta",
+  "generatedAt": "2026-06-01T09:44:30.155Z",
+  "root": "C:\\Users\\flori\\Documents\\GitHub\\atelierdeconsultanta",
   "summary": {
     "totalFiles": 167,
     "passedFiles": 167,
@@ -1913,7 +1913,7 @@
     },
     {
       "file": "consultanta-fonduri-europene-bucuresti/index.html",
-      "noindex": true,
+      "noindex": false,
       "pass": true,
       "checks": {
         "utf8Charset": {
@@ -1923,8 +1923,7 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 0,
-          "note": "noindex page: meta description is optional"
+          "count": 1
         },
         "canonical": {
           "status": "pass",
@@ -1932,7 +1931,7 @@
         },
         "cleanCanonical": {
           "status": "pass",
-          "href": "https://atelierdeconsultanta.ro/consultanta-fonduri-europene"
+          "href": "https://atelierdeconsultanta.ro/consultanta-fonduri-europene-bucuresti"
         },
         "imageAltAttributes": {
           "status": "pass",
@@ -1942,12 +1941,16 @@
         },
         "singleH1": {
           "status": "pass",
-          "note": "noindex page: h1 not required"
+          "count": 1,
+          "text": [
+            "Consultanță fonduri europene București"
+          ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
-          "required": false,
-          "count": 0
+          "required": true,
+          "count": 6,
+          "threshold": 5
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -1956,14 +1959,14 @@
         },
         "contentDepth": {
           "status": "pass",
-          "required": false,
-          "words": 0
+          "required": true,
+          "words": 1364,
+          "threshold": 1100
         },
         "relatedLinks": {
           "status": "pass",
-          "required": false,
-          "count": 0,
-          "note": "not a hub/blog page"
+          "required": true,
+          "count": 1
         }
       }
     },
@@ -2184,7 +2187,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2277,
+          "words": 2284,
           "threshold": 1800
         },
         "relatedLinks": {
@@ -4936,7 +4939,7 @@
     },
     {
       "file": "fonduri-europene-bucuresti/index.html",
-      "noindex": true,
+      "noindex": false,
       "pass": true,
       "checks": {
         "utf8Charset": {
@@ -4946,8 +4949,7 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 0,
-          "note": "noindex page: meta description is optional"
+          "count": 1
         },
         "canonical": {
           "status": "pass",
@@ -4955,7 +4957,7 @@
         },
         "cleanCanonical": {
           "status": "pass",
-          "href": "https://atelierdeconsultanta.ro/fonduri-europene"
+          "href": "https://atelierdeconsultanta.ro/fonduri-europene-bucuresti"
         },
         "imageAltAttributes": {
           "status": "pass",
@@ -4965,12 +4967,16 @@
         },
         "singleH1": {
           "status": "pass",
-          "note": "noindex page: h1 not required"
+          "count": 1,
+          "text": [
+            "Fonduri europene București"
+          ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
-          "required": false,
-          "count": 0
+          "required": true,
+          "count": 6,
+          "threshold": 5
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -4979,14 +4985,14 @@
         },
         "contentDepth": {
           "status": "pass",
-          "required": false,
-          "words": 0
+          "required": true,
+          "words": 1357,
+          "threshold": 1100
         },
         "relatedLinks": {
           "status": "pass",
-          "required": false,
-          "count": 0,
-          "note": "not a hub/blog page"
+          "required": true,
+          "count": 1
         }
       }
     },
@@ -5886,7 +5892,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Fonduri europene Nord-Est: Iași, Suceava, Bacău, Botoșani, Neamț, Vaslui"
+            "Fonduri europene Nord-Est"
           ]
         },
         "visibleFaqForSchema": {
@@ -5903,7 +5909,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1358,
+          "words": 1352,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -6074,7 +6080,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1490,
+          "words": 1497,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -7089,7 +7095,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 1823,
+          "words": 1843,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -7276,7 +7282,7 @@
     },
     {
       "file": "intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm/index.html",
-      "noindex": true,
+      "noindex": false,
       "pass": true,
       "checks": {
         "utf8Charset": {
@@ -7286,8 +7292,7 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 0,
-          "note": "noindex page: meta description is optional"
+          "count": 1
         },
         "canonical": {
           "status": "pass",
@@ -7295,7 +7300,7 @@
         },
         "cleanCanonical": {
           "status": "pass",
-          "href": "https://atelierdeconsultanta.ro/pnrr-digitalizare-imm-cheltuieli-eligibile"
+          "href": "https://atelierdeconsultanta.ro/intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm"
         },
         "imageAltAttributes": {
           "status": "pass",
@@ -7305,12 +7310,16 @@
         },
         "singleH1": {
           "status": "pass",
-          "note": "noindex page: h1 not required"
+          "count": 1,
+          "text": [
+            "Raspuns rapid: Ce cheltuieli sunt eligibile la Digitalizare IMM?"
+          ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
-          "required": false,
-          "count": 0
+          "required": true,
+          "count": 5,
+          "threshold": 5
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -7319,20 +7328,20 @@
         },
         "contentDepth": {
           "status": "pass",
-          "required": false,
-          "words": 0
+          "required": true,
+          "words": 1352,
+          "threshold": 1100
         },
         "relatedLinks": {
           "status": "pass",
-          "required": false,
-          "count": 0,
-          "note": "not a hub/blog page"
+          "required": true,
+          "count": 1
         }
       }
     },
     {
       "file": "intrebari/ce-documente-sunt-necesare-pentru-dr12/index.html",
-      "noindex": true,
+      "noindex": false,
       "pass": true,
       "checks": {
         "utf8Charset": {
@@ -7342,8 +7351,7 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 0,
-          "note": "noindex page: meta description is optional"
+          "count": 1
         },
         "canonical": {
           "status": "pass",
@@ -7351,7 +7359,7 @@
         },
         "cleanCanonical": {
           "status": "pass",
-          "href": "https://atelierdeconsultanta.ro/dr12-afir"
+          "href": "https://atelierdeconsultanta.ro/intrebari/ce-documente-sunt-necesare-pentru-dr12"
         },
         "imageAltAttributes": {
           "status": "pass",
@@ -7361,12 +7369,16 @@
         },
         "singleH1": {
           "status": "pass",
-          "note": "noindex page: h1 not required"
+          "count": 1,
+          "text": [
+            "Raspuns rapid: Ce documente sunt necesare pentru DR12?"
+          ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
-          "required": false,
-          "count": 0
+          "required": true,
+          "count": 5,
+          "threshold": 5
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -7375,20 +7387,21 @@
         },
         "contentDepth": {
           "status": "pass",
-          "required": false,
-          "words": 0
+          "required": true,
+          "words": 1371,
+          "threshold": 1100
         },
         "relatedLinks": {
           "status": "pass",
           "required": false,
-          "count": 0,
+          "count": 1,
           "note": "not a hub/blog page"
         }
       }
     },
     {
       "file": "intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene/index.html",
-      "noindex": true,
+      "noindex": false,
       "pass": true,
       "checks": {
         "utf8Charset": {
@@ -7398,8 +7411,7 @@
         },
         "metaDescription": {
           "status": "pass",
-          "count": 0,
-          "note": "noindex page: meta description is optional"
+          "count": 1
         },
         "canonical": {
           "status": "pass",
@@ -7407,7 +7419,7 @@
         },
         "cleanCanonical": {
           "status": "pass",
-          "href": "https://atelierdeconsultanta.ro/cum-se-calculeaza-cofinantarea-fonduri-europene"
+          "href": "https://atelierdeconsultanta.ro/intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene"
         },
         "imageAltAttributes": {
           "status": "pass",
@@ -7417,12 +7429,16 @@
         },
         "singleH1": {
           "status": "pass",
-          "note": "noindex page: h1 not required"
+          "count": 1,
+          "text": [
+            "Raspuns rapid: Cum se calculeaza cofinanțarea la fonduri europene?"
+          ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
-          "required": false,
-          "count": 0
+          "required": true,
+          "count": 5,
+          "threshold": 5
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -7431,14 +7447,14 @@
         },
         "contentDepth": {
           "status": "pass",
-          "required": false,
-          "words": 0
+          "required": true,
+          "words": 1344,
+          "threshold": 1100
         },
         "relatedLinks": {
           "status": "pass",
-          "required": false,
-          "count": 0,
-          "note": "not a hub/blog page"
+          "required": true,
+          "count": 1
         }
       }
     },

@@ -18,10 +18,6 @@ const EXCLUDED_DIRS = new Set([
 const DRAFT_PATH_PATTERN = /(^|\/)(?:draft|drafts|_draft|_drafts)(?:\/|$)/i;
 const ALTERNATE_CANONICAL_PATHS = new Set([
   "/blog?post=blog-1",
-  "/intrebari/ce-documente-sunt-necesare-pentru-afir",
-  "/intrebari/ce-documente-sunt-necesare-pentru-dr12",
-  "/intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene",
-  "/intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm",
 ]);
 
 function toPosix(value) {

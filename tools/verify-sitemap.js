@@ -8,117 +8,136 @@ const ROOT = path.resolve(__dirname, "..");
 const SITE = "https://atelierdeconsultanta.ro";
 const SITEMAP_PATH = path.join(ROOT, "sitemap.xml");
 
-function extractTagAttr(tag, attr) {
-  const match = tag.match(new RegExp(`\\b${attr}=["']([^"']+)["']`, "i"));
-  return match ? match[1].trim() : "";
+const EXCLUDED_DIRS = new Set([
+  ".git",
+  ".github",
+  ".wrangler",
+  "dist",
+  "node_modules",
+  "reports",
+]);
+
+const DRAFT_PATH_PATTERN = /(^|\/)(?:draft|drafts|_draft|_drafts)(?:\/|$)/i;
+const ALTERNATE_CANONICAL_PATHS = new Set([
+  "/blog?post=blog-1",
+]);
+
+function toPosix(value) {
+  return value.split(path.sep).join("/");
+}
+
+function fail(message, details = []) {
+  console.error(message);
+  for (const detail of details.slice(0, 20)) console.error(`- ${detail}`);
+  if (details.length > 20) console.error(`- ...and ${details.length - 20} more`);
+  process.exit(1);
+}
+
+function isDraftPath(filePath) {
+  const relativePath = toPosix(path.relative(ROOT, filePath));
+  const basename = path.posix.basename(relativePath).toLowerCase();
+  return DRAFT_PATH_PATTERN.test(relativePath) || basename.startsWith("draft-") || basename.endsWith(".draft.html");
+}
+
+function walkHtml(dir, files = []) {
+  for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
+    if (EXCLUDED_DIRS.has(entry.name)) continue;
+    const fullPath = path.join(dir, entry.name);
+    if (entry.isDirectory()) {
+      walkHtml(fullPath, files);
+    } else if (entry.isFile() && entry.name.toLowerCase().endsWith(".html") && !isDraftPath(fullPath)) {
+      files.push(fullPath);
+    }
+  }
+  return files;
+}
+
+function hasNoindexOrRedirect(html) {
+  return (
+    /<meta[^>]+name=["']robots["'][^>]+content=["'][^"']*\bnoindex\b/i.test(html) ||
+    /<meta[^>]+http-equiv=["']refresh["']/i.test(html)
+  );
 }
 
 function extractCanonical(html) {
-  for (const match of html.matchAll(/<link\b[^>]*>/gi)) {
+  const linkMatches = html.matchAll(/<link\b[^>]*>/gi);
+  for (const match of linkMatches) {
     const tag = match[0];
-    if (/\brel=["'][^"']*\bcanonical\b[^"']*["']/i.test(tag)) {
-      return extractTagAttr(tag, "href");
-    }
+    if (!/\brel=["'][^"']*\bcanonical\b[^"']*["']/i.test(tag)) continue;
+    const href = tag.match(/\bhref=["']([^"']+)["']/i);
+    if (href) return href[1].trim();
   }
   return "";
 }
 
-function extractRobots(html) {
-  for (const match of html.matchAll(/<meta\b[^>]*>/gi)) {
-    const tag = match[0];
-    if (/\bname=["']robots["']/i.test(tag)) return extractTagAttr(tag, "content");
-  }
-  return "";
-}
-
-function sourceCandidates(pathname) {
-  const clean = decodeURIComponent(pathname).replace(/^\/+/, "");
-  if (!clean) return [path.join(ROOT, "index.html")];
-  return [
-    path.join(ROOT, `${clean}.html`),
-    path.join(ROOT, clean, "index.html"),
-  ];
-}
-
-function sourceFor(url) {
-  const parsed = new URL(url);
-  const candidates = sourceCandidates(parsed.pathname).filter((candidate) => fs.existsSync(candidate));
-  const checked = [];
-
-  for (const file of candidates) {
-    const html = fs.readFileSync(file, "utf8");
-    const canonical = extractCanonical(html);
-    const robots = extractRobots(html);
-    const noindex = /\bnoindex\b/i.test(robots);
-    checked.push({ file, canonical, robots, noindex });
-    if (canonical === url && !noindex) return { file, canonical, robots, candidates: checked };
-  }
-
-  return { file: "", canonical: "", robots: "", candidates: checked };
-}
-
-function validateUrl(url, index, seen, problems) {
-  if (seen.has(url)) problems.push(`Duplicate in sitemap: ${url}`);
-  seen.add(url);
-
-  let parsed;
+function isInternalCanonical(url) {
   try {
-    parsed = new URL(url);
+    const parsed = new URL(url);
+    return parsed.origin === SITE && !parsed.search && !parsed.hash && !parsed.pathname.endsWith("/index.html") && !parsed.pathname.endsWith(".html");
   } catch {
-    problems.push(`Invalid sitemap URL at position ${index + 1}: ${url}`);
-    return;
+    return false;
   }
-
-  if (parsed.origin !== SITE) problems.push(`Non-site URL in sitemap: ${url}`);
-  if (parsed.search) problems.push(`Query string in sitemap: ${url}`);
-  if (parsed.hash) problems.push(`Hash in sitemap: ${url}`);
-  if (parsed.pathname !== "/" && parsed.pathname.endsWith("/")) problems.push(`Trailing slash in sitemap: ${url}`);
-  if (parsed.pathname.endsWith(".html")) problems.push(`.html URL in sitemap: ${url}`);
-  if (parsed.pathname.endsWith("/index.html")) problems.push(`/index.html URL in sitemap: ${url}`);
-
-  const source = sourceFor(url);
-  if (!source.file) {
-    if (!source.candidates.length) {
-      problems.push(`No source HTML file found for sitemap URL: ${url}`);
-      return;
-    }
-    const details = source.candidates
-      .map((candidate) => {
-        const relative = path.relative(ROOT, candidate.file).replace(/\\/g, "/");
-        const flags = [candidate.canonical ? `canonical=${candidate.canonical}` : "missing canonical"];
-        if (candidate.noindex) flags.push("noindex");
-        return `${relative} (${flags.join(", ")})`;
-      })
-      .join("; ");
-    problems.push(`No indexable source file with matching canonical for ${url}: ${details}`);
-    return;
-  }
-
-  if (source.canonical !== url) problems.push(`Canonical mismatch for ${url} -> ${source.canonical || "(missing)"}`);
-  if (/\bnoindex\b/i.test(source.robots)) problems.push(`noindex page present in sitemap: ${url}`);
 }
 
-function main() {
-  if (!fs.existsSync(SITEMAP_PATH)) {
-    console.error("sitemap.xml not found; run npm run generate:sitemap first.");
-    process.exitCode = 1;
-    return;
-  }
+function canonicalRouteForFile(filePath) {
+  const relativePath = toPosix(path.relative(ROOT, filePath));
+  if (relativePath === "index.html") return "/";
+  if (relativePath.endsWith("/index.html")) return `/${relativePath.replace(/\/index\.html$/i, "")}`;
+  if (relativePath.endsWith(".html")) return `/${relativePath.replace(/\.html$/i, "")}`;
+  return "";
+}
 
+function isAlternateCanonicalPath(pathname) {
+  const clean = pathname === "/" ? "/" : pathname.replace(/\/+$/g, "");
+  return ALTERNATE_CANONICAL_PATHS.has(clean);
+}
+
+function normalizeUrl(url) {
+  const parsed = new URL(url);
+  return parsed.pathname === "/" ? `${SITE}/` : `${SITE}${parsed.pathname.replace(/\/$/, "")}`;
+}
+
+function sitemapUrls() {
+  if (!fs.existsSync(SITEMAP_PATH)) fail("sitemap.xml is missing.");
   const xml = fs.readFileSync(SITEMAP_PATH, "utf8");
   const urls = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1].trim());
-  const problems = [];
-  const seen = new Set();
-
-  urls.forEach((url, index) => validateUrl(url, index, seen, problems));
-
-  if (problems.length) {
-    for (const problem of problems) console.error(`ERROR ${problem}`);
-    process.exitCode = 1;
-    return;
-  }
-
-  console.log(`sitemap.xml valid with ${urls.length} canonical URLs.`);
+  if (!urls.length) fail("sitemap.xml has no <loc> entries.");
+  return urls;
 }
 
-if (require.main === module) main();
+function expectedUrls() {
+  const urls = new Set();
+  for (const filePath of walkHtml(ROOT)) {
+    const html = fs.readFileSync(filePath, "utf8");
+    if (hasNoindexOrRedirect(html)) continue;
+    const canonical = extractCanonical(html);
+    if (!canonical || !isInternalCanonical(canonical)) continue;
+    const normalized = normalizeUrl(canonical);
+    const canonicalPath = new URL(normalized).pathname;
+    if (isAlternateCanonicalPath(canonicalPath)) continue;
+    if (canonicalPath !== canonicalRouteForFile(filePath)) continue;
+    urls.add(normalized);
+  }
+  return urls;
+}
+
+const actualList = sitemapUrls();
+const actual = new Set(actualList);
+const expected = expectedUrls();
+
+const duplicates = actualList.filter((url, index) => actualList.indexOf(url) !== index);
+if (duplicates.length) fail("sitemap.xml contains duplicate URLs.", duplicates);
+
+const invalidUrls = actualList.filter((url) => !isInternalCanonical(url));
+if (invalidUrls.length) fail("sitemap.xml contains invalid canonical URLs.", invalidUrls);
+
+const missing = [...expected].filter((url) => !actual.has(url)).sort();
+const extra = [...actual].filter((url) => !expected.has(url)).sort();
+if (missing.length || extra.length) {
+  fail("sitemap.xml does not match indexable canonical HTML pages.", [
+    ...missing.map((url) => `missing: ${url}`),
+    ...extra.map((url) => `extra: ${url}`),
+  ]);
+}
+
+console.log(`Verified sitemap.xml with ${actual.size} canonical URLs.`);

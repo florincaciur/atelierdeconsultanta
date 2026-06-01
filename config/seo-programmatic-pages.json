@@ -1,186 +1,110 @@
 {
-  "updatedAt": "2026-05-29",
+  "updatedAt": "2026-05-20",
   "caenPages": [
     {
       "code": "6201",
       "slug": "dezvoltare-software",
       "label": "dezvoltare software",
-      "audience": "firme IT, SaaS, servicii software și automatizare",
-      "programs": [
-        "Digitalizare IMM",
-        "programe regionale pentru IMM",
-        "Start-Up Nation, dacă editia permite activitatea"
-      ],
-      "investments": [
-        "software intern",
-        "echipamente IT justificate",
-        "securitate cibernetica",
-        "cloud și servicii de implementare"
-      ]
+      "audience": "firme IT, SaaS, servicii software si automatizare",
+      "programs": ["Digitalizare IMM", "programe regionale pentru IMM", "Start-Up Nation, daca editia permite activitatea"],
+      "investments": ["software intern", "echipamente IT justificate", "securitate cibernetica", "cloud si servicii de implementare"]
     },
     {
       "code": "5610",
       "slug": "restaurante",
-      "label": "restaurante și servicii alimentare",
+      "label": "restaurante si servicii alimentare",
       "audience": "restaurante, cafenele, unitati de alimentatie publica",
-      "programs": [
-        "programe regionale pentru IMM",
-        "Start-Up Nation",
-        "eficiență energetica și digitalizare, dacă apelul permite"
-      ],
-      "investments": [
-        "echipamente profesionale",
-        "dotări pentru fluxul de lucru",
-        "software gestiune",
-        "eficiență energetica"
-      ]
+      "programs": ["programe regionale pentru IMM", "Start-Up Nation", "eficienta energetica si digitalizare, daca apelul permite"],
+      "investments": ["echipamente profesionale", "dotari pentru fluxul de lucru", "software gestiune", "eficienta energetica"]
     },
     {
       "code": "4321",
       "slug": "instalatii-electrice",
-      "label": "instalații electrice",
-      "audience": "firme de instalații, service și lucrari tehnice",
-      "programs": [
-        "programe regionale pentru IMM",
-        "Fondul pentru Modernizare, dacă solicitantul și proiectul se incadreaza",
-        "Digitalizare IMM"
-      ],
-      "investments": [
-        "scule și echipamente",
-        "autoutilitare dacă sunt permise",
-        "software ofertare și proiectare",
-        "echipamente de masurare"
-      ]
+      "label": "instalatii electrice",
+      "audience": "firme de instalatii, service si lucrari tehnice",
+      "programs": ["programe regionale pentru IMM", "Fondul pentru Modernizare, daca solicitantul si proiectul se incadreaza", "Digitalizare IMM"],
+      "investments": ["scule si echipamente", "autoutilitare daca sunt permise", "software ofertare si proiectare", "echipamente de masurare"]
     },
     {
       "code": "0111",
       "slug": "culturi-cereale",
       "label": "culturi de cereale",
-      "audience": "ferme vegetale și exploatații agricole",
-      "programs": [
-        "DR 12 AFIR",
-        "DR 14 AFIR",
-        "fonduri pentru utilaje agricole"
-      ],
-      "investments": [
-        "utilaje agricole",
-        "depozitare",
-        "irigatii dacă apelul permite",
-        "digitalizare și agricultura de precizie"
-      ]
+      "audience": "ferme vegetale si exploatatii agricole",
+      "programs": ["DR 12 AFIR", "DR 14 AFIR", "fonduri pentru utilaje agricole"],
+      "investments": ["utilaje agricole", "depozitare", "irigatii daca apelul permite", "digitalizare si agricultura de precizie"]
     }
   ],
   "localPages": [
     {
-      "county": "Iași",
+      "county": "Iasi",
       "slug": "iasi",
-      "city": "Iași",
+      "city": "Iasi",
       "region": "Nord-Est",
-      "focus": "microîntreprinderi, IMM-uri, digitalizare și agricultura",
+      "focus": "microintreprinderi, IMM-uri, digitalizare si agricultura",
       "status": "consolidate",
       "redirectTo": "/fonduri-europene-nord-est",
-      "reason": "Pagina locală este prea similara cu celelalte pagini oras și nu contine date locale verificabile."
+      "reason": "Pagina locala este prea similara cu celelalte pagini oras si nu contine date locale verificabile."
     },
     {
       "county": "Suceava",
       "slug": "suceava",
       "city": "Suceava",
       "region": "Nord-Est",
-      "focus": "agricultura, turism, servicii și investiții productive",
+      "focus": "agricultura, turism, servicii si investitii productive",
       "status": "consolidate",
       "redirectTo": "/fonduri-europene-nord-est",
-      "reason": "Pagina locală este prea similara cu celelalte pagini oras și nu contine date locale verificabile."
+      "reason": "Pagina locala este prea similara cu celelalte pagini oras si nu contine date locale verificabile."
     },
     {
-      "county": "Bacău",
+      "county": "Bacau",
       "slug": "bacau",
-      "city": "Bacău",
+      "city": "Bacau",
       "region": "Nord-Est",
-      "focus": "IMM-uri, producție, energie și servicii",
+      "focus": "IMM-uri, productie, energie si servicii",
       "status": "consolidate",
       "redirectTo": "/fonduri-europene-nord-est",
-      "reason": "Pagina locală este prea similara cu celelalte pagini oras și nu contine date locale verificabile."
+      "reason": "Pagina locala este prea similara cu celelalte pagini oras si nu contine date locale verificabile."
     },
     {
-      "county": "București",
+      "county": "Bucuresti",
       "slug": "bucuresti",
-      "city": "București",
-      "region": "București-Ilfov",
-      "focus": "digitalizare, servicii, energie și programe nationale",
-      "status": "consolidate",
-      "redirectTo": "/fonduri-europene",
-      "consultingRedirectTo": "/consultanta-fonduri-europene",
-      "reason": "Nu există continut local București-Ilfov verificabil suficient pentru o pagina separata."
+      "city": "Bucuresti",
+      "region": "Bucuresti-Ilfov",
+      "focus": "digitalizare, servicii, energie si programe nationale",
+      "status": "active",
+      "reason": "Landing page local indexabil pentru intentiile SEO Bucuresti si Bucuresti-Ilfov, cu canonical self si linkuri interne canonice."
     }
   ],
   "regionalPages": [
     {
       "slug": "fonduri-europene-nord-est",
       "region": "Nord-Est",
-      "title": "Fonduri europene Nord-Est | Iași, Suceava, Bacău",
-      "description": "Fonduri europene în Nord-Est: Iași, Suceava, Bacău, Botoșani, Neamț, Vaslui, ADR Nord-Est, RIS3 și verificare eligibilitate.",
-      "h1": "Fonduri europene Nord-Est: Iași, Suceava, Bacău, Botoșani, Neamț, Vaslui",
-      "counties": [
-        "Iași",
-        "Suceava",
-        "Bacău",
-        "Botoșani",
-        "Neamț",
-        "Vaslui"
-      ],
-      "sourceKeys": [
-        "por-ne",
-        "por-ne-apel-2",
-        "dr12",
-        "dr14",
-        "digitalizare",
-        "fondul-modernizare"
-      ],
-      "related": [
-        "/por-adr-nord-est",
-        "/fonduri-europene-imm",
-        "/consultanta-fonduri-europene",
-        "/verificare-eligibilitate-fonduri-europene",
-        "/surse-oficiale-fonduri-europene"
-      ]
+      "title": "Fonduri europene Nord-Est | Iasi, Suceava, Bacau, Botosani, Neamt, Vaslui",
+      "description": "Ghid regional pentru fonduri europene in Nord-Est: judete acoperite, ADR Nord-Est, programe regionale, AFIR, programe nationale si verificare eligibilitate.",
+      "h1": "Fonduri europene Nord-Est",
+      "counties": ["Iasi", "Suceava", "Bacau", "Botosani", "Neamt", "Vaslui"],
+      "sourceKeys": ["por-ne", "por-ne-apel-2", "dr12", "dr14", "digitalizare", "fondul-modernizare"],
+      "related": ["/por-adr-nord-est", "/fonduri-europene-imm", "/consultanta-fonduri-europene", "/verificare-eligibilitate-fonduri-europene", "/surse-oficiale-fonduri-europene"]
     }
   ],
   "faqPages": [
     {
       "slug": "ce-documente-sunt-necesare-pentru-dr12",
-      "status": "redirect",
-      "redirectTo": "/dr12-afir",
       "question": "Ce documente sunt necesare pentru DR12?",
-      "answer": "Pentru DR12 sunt importante documentele solicitantului, exploatației, calculul SO, actele privind terenurile sau animalele, ofertele, bugetul și declaratiile cerute de apel.",
-      "related": [
-        "/dr12-afir",
-        "/calculator-soc",
-        "/consultanta-afir"
-      ]
+      "answer": "Pentru DR12 sunt importante documentele solicitantului, exploatatiei, calculul SO, actele privind terenurile sau animalele, ofertele, bugetul si declaratiile cerute de apel.",
+      "related": ["/dr12-afir", "/calculator-soc", "/consultanta-afir"]
     },
     {
       "slug": "ce-cheltuieli-sunt-eligibile-la-digitalizare-imm",
-      "status": "redirect",
-      "redirectTo": "/pnrr-digitalizare-imm-cheltuieli-eligibile",
       "question": "Ce cheltuieli sunt eligibile la Digitalizare IMM?",
-      "answer": "Pot fi eligibile software, echipamente IT, servicii cloud, securitate cibernetica, implementare și instruire, dacă sunt permise de apel și justificate prin proiect.",
-      "related": [
-        "/digitalizare-imm",
-        "/fonduri-europene-digitalizare",
-        "/instrumente"
-      ]
+      "answer": "Pot fi eligibile software, echipamente IT, servicii cloud, securitate cibernetica, implementare si instruire, daca sunt permise de apel si justificate prin proiect.",
+      "related": ["/digitalizare-imm", "/fonduri-europene-digitalizare", "/instrumente"]
     },
     {
       "slug": "cum-se-calculeaza-cofinantarea-la-fonduri-europene",
-      "status": "redirect",
-      "redirectTo": "/cum-se-calculeaza-cofinantarea-fonduri-europene",
-      "question": "Cum se calculeaza cofinanțarea la fonduri europene?",
-      "answer": "Cofinantarea se calculeaza pornind de la valoarea eligibila, procentul nerambursabil și cheltuielile neeligibile, care trebuie acoperite separat de beneficiar.",
-      "related": [
-        "/instrumente",
-        "/fonduri-nerambursabile",
-        "/verificare-eligibilitate-fonduri-europene"
-      ]
+      "question": "Cum se calculeaza cofinantarea la fonduri europene?",
+      "answer": "Cofinantarea se calculeaza pornind de la valoarea eligibila, procentul nerambursabil si cheltuielile neeligibile, care trebuie acoperite separat de beneficiar.",
+      "related": ["/instrumente", "/fonduri-nerambursabile", "/verificare-eligibilitate-fonduri-europene"]
     }
   ]
 }

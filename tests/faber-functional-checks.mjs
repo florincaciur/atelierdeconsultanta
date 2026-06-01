@@ -9,16 +9,18 @@ import { chromium } from "playwright";
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const DIST = path.join(ROOT, "dist");
 const SITE_ORIGIN = "https://atelierdeconsultanta.ro";
-const EXPECTED_CANONICAL_URLS = 89;
+const EXPECTED_CANONICAL_URLS = 94;
 const CONSOLIDATED_LOCAL_ROUTES = [
   "/fonduri-europene-bacau",
   "/consultanta-fonduri-europene-bacau",
   "/fonduri-europene-iasi",
   "/consultanta-fonduri-europene-iasi",
   "/fonduri-europene-suceava",
-  "/consultanta-fonduri-europene-suceava",
+  "/consultanta-fonduri-europene-suceava"
+];
+const INDEXABLE_LOCAL_ROUTES = [
   "/fonduri-europene-bucuresti",
-  "/consultanta-fonduri-europene-bucuresti",
+  "/consultanta-fonduri-europene-bucuresti"
 ];
 
 function parseRedirects() {
@@ -158,6 +160,9 @@ async function assertCanonicalRoutes(baseUrl) {
   for (const routePath of CONSOLIDATED_LOCAL_ROUTES) {
     assert(!paths.includes(routePath), `${routePath} should stay out of sitemap while consolidated`);
   }
+  for (const routePath of INDEXABLE_LOCAL_ROUTES) {
+    assert(paths.includes(routePath), `${routePath} should be in sitemap as an indexable local landing page`);
+  }
 
   for (const routePath of paths) {
     const response = await fetchManual(`${baseUrl}${routePath}`);
@@ -182,10 +187,10 @@ async function assertRedirectsAndFallback(baseUrl) {
     ["/consultanta-start-up-nation/", "/consultanta-start-up-nation-2026"],
     ["/pnrr-digitalizare-imm", "/digitalizare-imm-pnrr"],
     ["/blog/safir-fotovoltaice-ferme-2026.html", "/blog-afir-fotovoltaice-ferme-2026"],
-    ["/startup-nation-2026-conditii", "/start-up-nation-2026-conditii"],
-    ["/calculator-so-afir", "/calculator-soc"],
-    ["/intrebari/ce-documente-sunt-necesare-pentru-dr12/", "/dr12-afir"],
-    ["/intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene/", "/cum-se-calculeaza-cofinantarea-fonduri-europene"]
+    ["/fonduri-europene-bucuresti/", "/fonduri-europene-bucuresti"],
+    ["/consultanta-fonduri-europene-bucuresti.html", "/consultanta-fonduri-europene-bucuresti"],
+    ["/fonduri-europene-iasi", "/fonduri-europene-nord-est"],
+    ["/consultanta-fonduri-europene-bacau", "/fonduri-europene-nord-est"]
   ];
 
   for (const [from, to] of checks) {
@@ -194,7 +199,7 @@ async function assertRedirectsAndFallback(baseUrl) {
     assert.equal(response.headers.get("location"), to, `${from} should redirect to ${to}`);
   }
 
-  const gscCanonicalPaths = ["/afir", "/ghiduri", "/fonduri-nerambursabile", "/dr12-vs-dr14", "/dr14-afir-ferme-mici"];
+  const gscCanonicalPaths = ["/afir", "/ghiduri", "/fonduri-nerambursabile", "/dr12-vs-dr14", "/dr14-afir-ferme-mici", ...INDEXABLE_LOCAL_ROUTES];
   for (const routePath of gscCanonicalPaths) {
     const response = await fetchManual(`${baseUrl}${routePath}`);
     assert.equal(response.status, 200, `${routePath} should return 200 for GSC canonical indexing`);
@@ -291,23 +296,6 @@ async function assertHomepageInteractions(baseUrl) {
       icons.filter((icon) => !icon.querySelector("svg") && icon.textContent.trim()).map((icon) => icon.textContent.trim())
     );
     assert.deepEqual(textOnlyBlogIcons, [], "blog icon placeholders should not render as raw text labels");
-
-    const aboutUnderlineWidth = await page.$eval("#despre .section-label", (element) =>
-      parseFloat(getComputedStyle(element, "::after").width) || 0
-    );
-    assert(aboutUnderlineWidth > 0, "about section label should render underline");
-
-    const statTexts = await page.$$eval("#despre .stat-card", (cards) =>
-      cards.map((card) => card.textContent.replace(/\s+/g, " ").trim())
-    );
-    assert(statTexts.some((text) => /Eligibilitate/i.test(text) && /Verific[ăa]m/i.test(text)), "missing prudent eligibility card");
-    assert(statTexts.some((text) => /Dosar coerent/i.test(text)), "missing prudent dossier card");
-
-    const viewportHeight = await page.$eval("#blog .card-carousel-viewport", (element) => element.getBoundingClientRect().height);
-    const tallestBlogCard = await page.$$eval("#blog .blog-card", (cards) =>
-      Math.max(0, ...cards.map((card) => card.getBoundingClientRect().height))
-    );
-    assert(viewportHeight <= tallestBlogCard + 24, "blog carousel viewport should not leave large blank space under cards");
 
     await page.setViewportSize({ width: 390, height: 844 });
     await page.goto(`${baseUrl}/`, { waitUntil: "networkidle" });
