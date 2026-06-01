@@ -14,15 +14,15 @@
       "type": "program",
       "schemaType": "GovernmentService",
       "category": "AFIR",
-      "title": "DR12 AFIR | tineri fermieri instalați",
-      "description": "DR12 AFIR pentru tineri fermieri instalați: vârstă, șef exploatație, SO/SOC, APIA, ANSVSA, folosință, investiție și cofinanțare.",
-      "h1": "DR12 AFIR pentru tineri fermieri instalați",
-      "quickAnswer": "DR12 trebuie verificat ca program de consolidare pentru tineri fermieri instalați, nu ca promisiune automată de instalare. Contează vârsta, rolul real de șef al exploatației, SO/SOC, documentele APIA sau ANSVSA, dreptul de folosință, investiția, cofinanțarea și grila apelului activ. Înainte de buget, verificarea trebuie să lege vârsta solicitantului, rolul în exploatație, documentele agricole și investiția propusă într-o explicație coerentă. Dacă ghidul activ schimbă definițiile, pragurile sau documentele, concluzia se actualizează înainte de depunere, nu după ce ofertele sunt deja pregătite. FABER poate semnala documentele lipsă, riscurile de punctaj și cheltuielile sensibile, însă aprobarea rămâne decizia autorității finanțatoare. Bugetul se pregătește după clarificarea acestor elemente.",
+      "title": "DR12 AFIR | ghid, lansare și acte",
+      "description": "DR12 AFIR pentru tineri fermieri: ghidul solicitantului, lansare, acte necesare, SO/SOC, APIA, ANSVSA, investiție și verificare prudentă.",
+      "h1": "DR12 AFIR pentru tineri fermieri: ghid, acte și lansare",
+      "quickAnswer": "DR12 AFIR trebuie verificat prin ghidul solicitantului și prin documentele fermei, nu doar prin denumirea programului. Pentru tinerii fermieri contează rolul real în exploatație, SO/SOC, documentele APIA sau ANSVSA, dreptul de folosință, investiția, cofinanțarea și criteriile apelului activ. Dacă urmărești lansarea DR 12 AFIR, pregătirea sigură începe cu actele solicitantului, exploatația, calculul SO și ofertele, dar fără să presupui calendar, plafon sau punctaj înainte de sursa oficială aplicabilă. Analiza inițială trebuie să arate ce lipsește, ce poate fi corectat și ce nu merită bugetat încă. FABER poate analiza documentele lipsă, riscurile de punctaj și cheltuielile sensibile, fără să trateze eligibilitatea ca finanțare garantată.",
       "programName": "DR 12 AFIR",
       "policyContribution": "interventia susține instalarea și consolidarea fermierilor tineri, reinnoirea generatiilor în agricultura și investiții care pot imbunatati competitivitatea exploatatiilor agricole.",
       "funding": "sprijinul maxim, intensitatea și pragurile SO se verifică în forma finală a apelului activ; pagina folosește doar valori prezente în sursele interne configurate.",
       "audience": [
-        "tineri fermieri care conduc exploatația",
+        "tineri fermieri care caută ghidul DR12 AFIR și actele necesare",
         "fermieri recent instalati care pregătesc investiții",
         "exploatații agricole care trebuie să confirme dimensiunea economică și documentele de folosință"
       ],
@@ -32,6 +32,8 @@
         "investiția trebuie să fie legata direct de activitatea agricolă și de obiectivele programului"
       ],
       "mandatory": [
+        "identificarea ghidului solicitantului DR 12 AFIR, a anexelor și a eventualelor clarificări aplicabile",
+        "verificarea statusului de lansare înainte de buget, oferte sau decizie de depunere",
         "verificarea vârstei și a incadrarii solicitantului",
         "calcul Standard Output pe baza culturilor și animalelor declarate",
         "documente APIA, ANSVSA, DSVSA, registru agricol sau alte dovezi aplicabile",
@@ -59,6 +61,7 @@
         "calitatea documentelor și coerenta bugetului"
       ],
       "steps": [
+        "verifică pagina AFIR și documentul aplicabil înainte de a trata apelul ca lansat",
         "calculeaza SO înainte de alegerea investiției",
         "verifică forma juridică și documentele fermei",
         "stabileste lista de cheltuieli și ofertele",
@@ -100,6 +103,22 @@
         [
           "Când trebuie confirmata cofinanțarea?",
           "Cofinantarea trebuie verificată înainte de depunere, nu după selecție. Include contributia proprie, TVA, cheltuieli neeligibile, rezerve și intarzieri posibile la plată."
+        ],
+        [
+          "Unde verific ghidul solicitantului DR 12 AFIR?",
+          "Verifică pagina AFIR indicată pentru DR 12, anexele publicate, eventualele clarificări și versiunea documentului. O pagină consultativă nu trebuie tratată ca ghid final fără confirmare oficială."
+        ],
+        [
+          "Ce înseamnă lansarea DR 12 AFIR pentru pregătirea dosarului?",
+          "Lansarea contează pentru calendar, forma finală a documentelor și modul de depunere. Până atunci poți pregăti datele fermei, calculul SO, actele de folosință și lista de investiții, dar nu presupui termene sau punctaj."
+        ],
+        [
+          "Ce acte sunt necesare pentru tânărul fermier la DR12?",
+          "Sunt utile actele solicitantului, documentele exploatației, dovezile pentru terenuri sau animale, calculul SO/SOC, ofertele, bugetul, documentele de cofinanțare și declarațiile cerute de apel."
+        ],
+        [
+          "DR12 AFIR este același lucru cu instalarea tinerilor fermieri?",
+          "Nu trebuie presupus automat. Denumirea, beneficiarii și condițiile se citesc în ghidul activ. Pagina folosește o abordare prudentă: tânăr fermier, rol în exploatație, documente și investiție verificabilă."
         ]
       ],
       "related": [
@@ -114,7 +133,7 @@
       ],
       "template": "editorial-program",
       "minWords": 1100,
-      "minFaq": 6,
+      "minFaq": 10,
       "applicantRows": [
         [
           "Tânăr fermier instalat sau în curs de consolidare",
@@ -173,12 +192,35 @@
           "sursa oficială a apelului activ"
         ]
       ],
+      "cofinancingTitle": "Cofinanțare fără valori presupuse",
+      "cofinancingRows": [
+        [
+          "Sprijin nerambursabil",
+          "Se confirmă în ghidul activ",
+          "Nu se folosește un procent sau plafon înainte de documentul aplicabil."
+        ],
+        [
+          "Contribuție proprie",
+          "Se estimează după lista de cheltuieli",
+          "Include costuri neeligibile, TVA dacă este cazul și rezerve de cash-flow."
+        ],
+        [
+          "Oferte și buget",
+          "Se verifică înainte de depunere",
+          "Ofertele trebuie să explice ce se cumpără, de ce este necesar și cum se folosește în fermă."
+        ],
+        [
+          "Decizie de depunere",
+          "După documente și cofinanțare",
+          "Un proiect eligibil pe hârtie poate fi riscant dacă finanțarea proprie nu este susținută."
+        ]
+      ],
       "documentRows": [
         [
-          "Acte solicitant și forma juridică",
+          "Acte solicitant și formă juridică pentru tânărul fermier",
           "Beneficiar, cu verificare de consultant",
-          "La verificarea eligibilitatii și la depunere",
-          "Solicitantul poate fi incadrat greșit sau respins administrativ"
+          "La verificarea eligibilității și la depunere",
+          "Solicitantul poate fi încadrat greșit sau respins administrativ"
         ],
         [
           "Documente exploatație agricolă",
@@ -213,11 +255,15 @@
         [
           "Declaratii și anexe ale apelului",
           "Beneficiar și consultant",
-          "La depunere și la clarificări",
-          "Dosar incomplet sau declaratii nealiniate cu documentele"
+          "La depunere și la clarificări, conform ghidului solicitantului DR 12",
+          "Dosar incomplet sau declarații nealiniate cu documentele"
         ]
       ],
       "preparationSteps": [
+        [
+          "Verificare ghid și lansare.",
+          "Confirmă sursa AFIR, versiunea documentului, anexele, clarificările și statusul apelului înainte de buget."
+        ],
         [
           "Verificare solicitant.",
           "Confirma vârstă, forma juridică, rolul de conducere și incadrarea din apelul activ."
@@ -252,6 +298,8 @@
         ]
       ],
       "commonMistakes": [
+        "Ghidul consultativ este tratat ca ghid final, fără verificarea versiunii active și a anexelor.",
+        "Lansarea DR 12 AFIR este presupusă din surse secundare, iar bugetul este blocat înainte de confirmarea documentului aplicabil.",
         "Calcul SO facut pe date vechi sau pe suprafețe/efective care nu apar la fel în documente.",
         "Solicitantul este prezentat ca sef al exploatației, dar documentele nu susțin controlul real.",
         "Utilajele sunt supradimensionate față de ferma sau nu au legătura clara cu activitatea agricolă.",
@@ -270,18 +318,78 @@
       },
       "heroIcon": "ph-duotone ph-plant",
       "officialGuideKey": "dr12",
-      "guideCtaLabel": "Ghid oficial",
+      "guideCtaLabel": "Sursa AFIR",
       "contentSections": [
         {
-          "title": "Nu confundăm DR12 cu orice instalare",
+          "title": "Ghidul solicitantului DR 12 AFIR: ce citești întâi",
           "paragraphs": [
-            "Pagina tratează DR12 ca intervenție pentru tineri fermieri instalați sau în consolidare, în funcție de ghidul activ. Dacă apelul final definește altfel beneficiarii, textul trebuie citit împreună cu sursa oficială."
+            "Când cauți ghidul solicitantului DR 12 AFIR, verifică mai întâi dacă documentul este consultativ sau activ, ce anexe îl însoțesc și dacă există clarificări publicate ulterior. Diferența contează: o versiune de consultare ajută la pregătire, dar nu trebuie folosită ca regulă finală pentru depunere.",
+            "Citirea ghidului începe cu beneficiarul, condițiile de eligibilitate, documentele obligatorii, cheltuielile permise, criteriile de selecție, calendarul și modul de transmitere a dosarului. Fiecare element trebuie legat de actele fermei, nu doar de intenția de investiție."
+          ]
+        },
+        {
+          "title": "Lansare DR 12 AFIR: ce pregătești fără să presupui calendarul",
+          "paragraphs": [
+            "Interesul pentru lansarea DR 12 AFIR trebuie separat de pregătirea dosarului. Până la documentul aplicabil, poți să verifici solicitantul, exploatația, SO/SOC, documentele de folosință, investiția și cofinanțarea, dar nu trebuie blocate achiziții sau promisiuni comerciale pe baza unui calendar presupus.",
+            "După publicarea apelului, se revizuiesc anexe, declarații, grila de selecție, cheltuielile eligibile și termenul de depunere. Dacă o condiție se schimbă, bugetul și lista de acte se ajustează înainte de încărcarea dosarului."
+          ]
+        },
+        {
+          "title": "Acte necesare pentru tânărul fermier",
+          "paragraphs": [
+            "Lista exactă de acte se confirmă în ghidul activ, însă verificarea inițială pentru un tânăr fermier are câteva zone recurente: identitatea și forma solicitantului, controlul asupra exploatației, documentele agricole, calculul SO/SOC, investiția propusă, cofinanțarea și declarațiile apelului."
+          ],
+          "tableRows": [
+            [
+              "Solicitant și formă juridică",
+              "acte de identificare sau înregistrare, documente privind rolul în exploatație și declarațiile cerute de apel"
+            ],
+            [
+              "Exploatație agricolă",
+              "date APIA, ANSVSA/DSVSA, registru agricol sau alte dovezi care susțin culturile, animalele și activitatea declarată"
+            ],
+            [
+              "Teren, spațiu sau animale",
+              "drept de folosință, amplasament, registre și documente care trebuie să aibă titulari, perioade și suprafețe coerente"
+            ],
+            [
+              "Investiție și buget",
+              "oferte, specificații tehnice, justificarea utilajelor sau dotărilor și legătura cu lucrările fermei"
+            ],
+            [
+              "Cofinanțare și cash-flow",
+              "surse de contribuție proprie, tratamentul TVA, costuri neeligibile și rezerve pentru implementare"
+            ]
           ]
         },
         {
           "title": "Sef de exploatație, prag SO și suprascore",
           "paragraphs": [
             "Pentru DR 12 conteaza rolul real al solicitantului ca sef de exploatație, incadrarea în pragurile SO ale apelului activ, situatia tinerilor fermieri sau a fermierilor recent instalati, cofinanțarea și riscul de suprascorare. Punctajul se notează doar când poate fi dovedit prin documente."
+          ]
+        },
+        {
+          "title": "Legături utile în clusterul DR12 AFIR",
+          "paragraphs": [
+            "Pagina DR12 trebuie citită împreună cu instrumentele și paginile care verifică aceeași decizie: calculul SO/SOC, consultanța AFIR, comparația DR12 vs DR14 și ghidurile pentru ferme. Aceste legături ajută solicitantul să treacă de la căutarea unui ghid la verificarea documentelor proprii."
+          ],
+          "links": [
+            {
+              "href": "/calculator-soc",
+              "label": "Calculator SO/SOC pentru DR12 AFIR"
+            },
+            {
+              "href": "/consultanta-afir",
+              "label": "Consultanță AFIR pentru verificare DR12"
+            },
+            {
+              "href": "/dr12-vs-dr14",
+              "label": "DR12 vs DR14"
+            },
+            {
+              "href": "/fonduri-pentru-ferme",
+              "label": "Fonduri pentru ferme"
+            }
           ]
         }
       ],

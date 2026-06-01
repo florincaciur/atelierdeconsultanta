@@ -251,8 +251,6 @@ const ROMANIAN_COPY_REPLACEMENTS = [
   [/\bBacau\b/g, "Bacău"],
   [/\bBucuresti\b/g, "București"],
   [/\bRomania\b/g, "România"],
-  [/\bGhidul solicitantului\b/g, "Ghidul activ"],
-  [/\bghidul solicitantului\b/g, "ghidul activ"],
 ];
 
 function normalizeRomanianCopy(value) {
