@@ -4,6 +4,7 @@
     "extract:sources": "node tools/extract-source-facts.js",
     "audit:content": "node tools/audit-content-depth.js --min-words 2000",
     "audit:structured-data": "node tools/audit-structured-data.js",
+    "check:copy": "node tools/normalize-copy-ro.js --check dr12-afir.html && node tools/normalize-copy-ro.js --check dr12-afir && node tools/normalize-copy-ro.js --check dr-12-afir-instalarea-tinerilor-fermieri.html && node tools/normalize-copy-ro.js --check dr12-vs-dr14.html",
     "generate:program-pages": "node tools/generate-program-pages.js",
     "generate:programmatic-seo": "node tools/generate-programmatic-seo.js",
     "generate:lead-magnets": "node tools/generate-lead-magnets.js",

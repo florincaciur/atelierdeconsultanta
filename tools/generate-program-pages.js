@@ -943,7 +943,7 @@ function renderCofinancingExample(page) {
       ["Grant orientativ", "70.000 EUR", "100.000 EUR x 70%"],
       ["Contributie proprie", "30.000 EUR", "la care se pot adauga TVA, costuri neeligibile sau rezerve"]
     ];
-  return renderEditorialTable("Exemplu numeric de cofinantare", ["Element", "Valoare", "Observatie"], rows);
+  return renderEditorialTable(page.cofinancingTitle || "Exemplu numeric de cofinantare", ["Element", "Valoare", "Observatie"], rows);
 }
 
 function compactTextList(items, fallback, limit = 4) {
@@ -1858,6 +1858,7 @@ function pageHtml(page, config) {
   <link rel="stylesheet" href="/assets/seo-hub.css" />${extraCss}
   <script type="application/ld+json">${schemaGraph(page, config)}</script>${extraJs}
 ${CLARITY_TRACKING_CODE}
+  <link rel="stylesheet" href="/assets/design-profiles.css">
 </head>
 <body>
   <nav class="navbar" aria-label="Navigare principala">
