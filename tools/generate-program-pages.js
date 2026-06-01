@@ -134,6 +134,14 @@ function esc(value) {
     .replace(/"/g, "&quot;");
 }
 
+function escAttr(value) {
+  return String(value ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+
 function pageText(page) {
   return `${page.slug || ""} ${page.type || ""} ${page.category || ""} ${page.programName || ""} ${page.h1 || ""}`.toLowerCase();
 }
@@ -395,7 +403,7 @@ function heroSecondaryCta(page) {
 function renderCtaLink(cta, className = "btn btn-secondary") {
   const href = cta.external ? cta.href : cleanUrl(cta.href);
   const attrs = cta.external ? ` target="_blank" rel="noopener noreferrer"` : "";
-  return `<a class="${className}" href="${esc(href)}"${attrs}>${esc(cta.label)}</a>`;
+  return `<a class="${className}" href="${escAttr(href)}"${attrs}>${esc(cta.label)}</a>`;
 }
 
 function configuredCta(item) {
@@ -1428,11 +1436,13 @@ function renderAfirHubContent(page) {
     .map(([question, answer]) => `<section class="faq-item"><h3>${esc(question)}</h3><p>${esc(answer)}</p></section>`)
     .join("\n");
   const programRows = [
+    ["Consultanta AFIR", "beneficiari care au nevoie de verificarea traseului, documentelor si bugetului", "solicitant, exploatatie, SO/SOC, investitie, cofinantare si riscuri", "/consultanta-afir"],
+    ["Calculator SO/SOC", "solicitanti care cauta calcul SO AFIR, calculator SO AFIR sau incadrare economica", "date actuale despre culturi, animale si exploatatie", "/calculator-soc"],
     ["DR 12 AFIR", "tineri fermieri si exploatatii care trebuie sa dovedeasca rolul solicitantului", "profil solicitant, exploatatie, calcul SO/SOC, documente de folosinta", "/dr12-afir"],
     ["DR 14 AFIR", "ferme mici care urmaresc modernizare proportionala cu activitatea reala", "incadrare ferma mica, documente exploatatie, buget si grila activa", "/dr14"],
     ["Autoconsum agroalimentar", "beneficiari care verifica investitii in energie pentru activitatea agroalimentara", "consum, amplasament, avize, capacitate si costuri neeligibile", "/afir-autoconsum-agroalimentar"],
     ["Fonduri pentru utilaje agricole", "ferme care vor echipamente legate direct de productie", "necesitate, dimensiune, oferte si corelare cu activitatea", "/fonduri-pentru-utilaje-agricole"],
-    ["Calculator SO/SOC", "solicitanti care trebuie sa porneasca de la dimensiunea economica", "date actuale despre culturi, animale si exploatatie", "/calculator-soc"]
+    ["GAL-AFIR / LEADER", "beneficiari care verifica apeluri locale prin GAL si proceduri AFIR", "localitate in teritoriul GAL, ghid local, criterii si documente", "/gal-afir"]
   ];
 
   return `
@@ -1452,6 +1462,11 @@ ${renderDecisionMatrix(page)}
           </tbody>
         </table>
       </div>
+      <h2>Calcul SO AFIR si calculator SO AFIR</h2>
+      <p>Cautarile de tip calcul SO AFIR, calculator SO AFIR, AFIR SO sau AFIR calcul SO au o intentie practica: beneficiarul vrea sa afle daca exploatatia poate fi incadrata economic in programul potrivit. Hub-ul explica ordinea verificarii, iar calculul efectiv se face in pagina <a href="/calculator-soc">Calculator SO/SOC</a>, pe date care pot fi sustinute prin documente.</p>
+      <p>Rezultatul calculatorului nu decide singur programul. Dupa calcul se verifica solicitantul, forma juridica, dreptul de folosinta, documentele APIA sau ANSVSA, investitia si cofinantarea. Daca datele sunt incomplete sau mai multe interventii par posibile, urmatorul pas este <a href="/consultanta-afir">consultanta AFIR</a>, nu blocarea bugetului pe o presupunere.</p>
+      <h2>GAL-AFIR in hub: cand mergi la pagina LEADER</h2>
+      <p>Cautarile pentru GAL-AFIR trebuie separate de programele AFIR nationale. Daca proiectul depinde de un Grup de Actiune Locala, verificarea se muta pe teritoriul GAL, ghidul local, criteriile locale si fluxul AFIR aplicabil. Pentru acest traseu, foloseste pagina <a href="/gal-afir">GAL-AFIR / LEADER</a> si apoi confirma sursa locala.</p>
       <h2>DR12, DR14 si alegerea programului potrivit</h2>
       <p>DR12 si DR14 sunt adesea comparate pentru ca ambele pot fi relevante in agricultura, dar criteriile nu trebuie amestecate. DR12 se analizeaza cand profilul solicitantului si logica de instalare sau consolidare a unui tanar fermier sunt centrale. DR14 se analizeaza cand punctul de plecare este ferma mica si dezvoltarea ei proportionala cu activitatea existenta.</p>
       <p>Daca o familie lucreaza terenuri impreuna, daca actele sunt impartite intre mai multe persoane sau daca investitia a fost aleasa inaintea calculului SO/SOC, decizia trebuie amanata pana cand documentele spun aceeasi poveste. O pagina de program ajuta doar dupa ce datele fermei sunt ordonate.</p>
@@ -1470,9 +1485,9 @@ ${renderDecisionMatrix(page)}
           </tbody>
         </table>
       </div>
-      <h2>Buget, cofinantare si exemple prudente</h2>
+      <h2>Buget, cofinantare si valori nepresupuse</h2>
       <p>Bugetul AFIR trebuie construit dupa verificarea eligibilitatii, nu inainte. Un utilaj sau o lucrare poate fi utila comercial, dar trebuie sa fie permisa de ghid, proportionala cu ferma si justificata prin obiectivele proiectului. Diferenta dintre cheltuieli eligibile si costuri suportate separat trebuie explicata de la inceput.</p>
-      <p>Exemplele numerice de pe site sunt scenarii de calcul, nu promisiuni. Daca se foloseste o investitie de 100.000 EUR si un procent orientativ, scopul este sa arate cum se separa grantul de contributia proprie, TVA, diferente de pret si rezerve. Procentul real, pragurile si tratamentul costurilor se confirma doar in ghidul apelului activ.</p>
+      <p>Pe hub-ul AFIR nu folosim procente, plafoane sau calendare ca si cum ar fi reguli finale. Fiecare valoare se confirma in pagina programului si in ghidul aplicabil. Rolul hub-ului este sa arate ce trebuie verificat inainte de oferte, contracte sau decizia de depunere.</p>
       ${renderCofinancingExample(page)}
       ${renderCalendarTable(page)}
       <h2>Cum folosesti calculatorul SO/SOC</h2>
@@ -1495,7 +1510,7 @@ ${renderDecisionMatrix(page)}
       <p>Un tanar fermier care preia treptat o exploatatie ar trebui sa porneasca de la rolul sau real, documentele care dovedesc exploatatia si planul de dezvoltare. Abia dupa aceea compara investitiile si bugetul. Un fermier cu exploatatie mica, dar stabila, poate avea o discutie mai utila pornind de la DR14, cu accent pe proportia dintre activitate, investitie si capacitatea de implementare.</p>
       <p>O ferma care vrea energie pentru autoconsum are nevoie de alta ordine de verificare: consum, amplasament, avize, dimensionare si legatura cu activitatea agroalimentara. O ferma care vrea utilaje trebuie sa arate de ce utilajul este necesar, nu doar ca este eligibil in principiu. Aceste scenarii sunt diferite, iar hub-ul exista tocmai pentru a le separa.</p>
       <h2>Cand are sens consultanta AFIR</h2>
-      <p>Consultanta AFIR are sens cand proiectul nu poate fi decis dintr-o lista simpla de conditii. Daca solicitantul are mai multe suprafete, exploatatia este impartita intre membri ai familiei, investitia include utilaje si lucrari, cofinantarea trebuie confirmata sau ghidul este inca in consultare, este mai sigur sa faci o verificare structurata inainte de a comanda documente scumpe.</p>
+      <p><a href="/consultanta-afir">Consultanta AFIR</a> are sens cand proiectul nu poate fi decis dintr-o lista simpla de conditii. Daca solicitantul are mai multe suprafete, exploatatia este impartita intre membri ai familiei, investitia include utilaje si lucrari, cofinantarea trebuie confirmata sau ghidul este inca in consultare, este mai sigur sa faci o verificare structurata inainte de a comanda documente scumpe.</p>
       <p>Un consultant nu transforma un proiect nepotrivit intr-un proiect eligibil. Rolul sau este sa puna intrebarile corecte, sa identifice documentele lipsa, sa compare interventiile relevante si sa opreasca scenariile care nu pot fi sustinute. In agricultura, aceasta prudenta conteaza pentru ca multe decizii luate devreme afecteaza implementarea: achizitii, drepturi de folosinta, contracte, termene, plati si obligatii de mentinere.</p>
       <div class="table-wrap">
         <table class="program-table">
@@ -1518,12 +1533,13 @@ ${renderDecisionMatrix(page)}
       <p>AFIR trebuie privit ca o familie de reguli, nu ca o singura oportunitate. Fiecare interventie are logica ei, iar fermierul trebuie sa poata demonstra incadrarea prin documente. Hub-ul acesta trimite catre paginile unde analiza devine specifica si pastreaza aceeasi regula editoriala: fara sume finale neverificate, fara promisiuni de aprobare si fara recomandari care ignora ghidul activ.</p>
       <h2>Linkuri interne pentru urmatorul pas</h2>
       <div class="related-links">
+        <a href="/consultanta-afir">Consultanta AFIR pentru alegerea programului</a>
+        <a href="/calculator-soc">Calculator SO AFIR</a>
         <a href="/dr12-afir">DR 12 AFIR</a>
         <a href="/dr14">DR 14 AFIR</a>
         <a href="/dr12-vs-dr14">DR12 vs DR14</a>
         <a href="/dr14-afir-ferme-mici">DR14 ferme mici</a>
-        <a href="/calculator-soc">Calculator SO/SOC</a>
-        <a href="/consultanta-afir">Consultanta AFIR</a>
+        <a href="/gal-afir">GAL-AFIR / LEADER</a>
         <a href="/fonduri-pentru-ferme">Fonduri pentru ferme</a>
         <a href="/surse-oficiale-fonduri-europene">Surse oficiale</a>
       </div>
@@ -1750,6 +1766,8 @@ function pageHtml(page, config) {
     ? "Trimite-ne codul CAEN / tipul fermei / investi\u021bia dorit\u0103 pentru verificarea eligibilit\u0103\u021bii."
     : "Trimite cateva detalii despre solicitant, localitate, cod CAEN, investitie si buget. Raspunsul initial este orientativ si nu reprezinta promisiune de finantare.");
   const finalPrimaryCta = page.finalPrimaryCta || designProfileFor(page).primary || "Solicita verificare eligibilitate";
+  const finalSecondaryHref = page.finalSecondaryHref || "/consultanta-fonduri-europene";
+  const finalSecondaryLabel = page.finalSecondaryLabel || "Vezi serviciile";
   return `<!DOCTYPE html>
 <html lang="ro">
 <head>
@@ -1811,7 +1829,7 @@ ${renderMainContent(page)}
       <p>${esc(finalCtaText)}</p>
       <div class="cta-actions">
         <a class="btn btn-primary" href="/contact">${esc(finalPrimaryCta)}</a>
-        <a class="btn btn-secondary" href="/consultanta-fonduri-europene">Vezi serviciile</a>
+        <a class="btn btn-secondary" href="${escAttr(cleanUrl(finalSecondaryHref))}">${esc(finalSecondaryLabel)}</a>
       </div>
     </section>
   </main>
