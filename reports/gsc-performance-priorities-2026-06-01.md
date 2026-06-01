@@ -1,32 +1,35 @@
 # GSC performance priorities - 2026-06-01
 
-Export sursă: `atelierdeconsultanta.ro-Performance-on-Search-2026-06-01.zip`, Search type Web, Last 3 months.
+Export sursa: `atelierdeconsultanta.ro-Performance-on-Search-2026-06-01.zip`, Search type Web, Last 3 months.
 
 ## Cluster lucrat
 
-- Cluster: AFIR Hub
-- Pagină hub principală: `/afir`
-- Pagină comercială întărită: `/consultanta-afir`
-- Query-uri țintă: poziții GSC 4-15 din export, cu intenție AFIR/SO/SOC/GAL/DR14.
+- Cluster: Start-Up Nation 2026
+- Pagina hub principala: `/start-up-nation-2026`
+- Pagina comerciala intarita: `/consultanta-start-up-nation-2026`
+- Query-uri tinta: pozitii GSC 4-15 din export, cu intentie Start-Up Nation, conditii, plan de afaceri si variatii fara cratima.
 
-## Priorități query
+## Prioritati query
 
-| Query | Clicks | Impressions | Position | Țintă |
+| Query | Clicks | Impressions | Position | Tinta |
 | --- | ---: | ---: | ---: | --- |
-| calcul so afir 2026 | 6 | 158 | 7.7 | `/afir` |
-| calculator so afir | 1 | 62 | 8.37 | `/afir` |
-| calcul so afir | 0 | 13 | 10.08 | `/afir` |
-| so afir | 0 | 13 | 8.92 | `/afir` |
-| afir so | 0 | 5 | 8.4 | `/afir` |
-| afir calcul so | 0 | 2 | 10 | `/afir` |
-| galafir | 0 | 8 | 5.62 | `/afir` |
-| galafir.ro | 0 | 2 | 6 | `/afir` |
-| dr14 afir 2026 | 1 | 23 | 8.48 | `/afir` |
-| dr 14 afir 2026 | 1 | 7 | 7.71 | `/afir` |
+| start up nation | 0 | 4 | 4.5 | `/start-up-nation-2026` |
+| plan de afaceri start up nation | 0 | 1 | 6 | `/start-up-nation-2026-plan-de-afaceri` |
+| start up.nation | 0 | 1 | 6 | `/start-up-nation-2026` |
+| startup nation | 0 | 5 | 6.8 | `/start-up-nation-2026` |
+| start-up nation 2026 | 0 | 1 | 7 | `/start-up-nation-2026` |
+| conditii start up nation 2026 | 0 | 1 | 8 | `/start-up-nation-2026-conditii` |
+| programul start up nation 2026 | 0 | 1 | 10 | `/start-up-nation-2026` |
 
-## Direcție de optimizare
+## Semnale pe pagini
 
-- Adăugat conținut crawlable despre calcul SO AFIR, calculator SO AFIR, rutarea către DR12/DR14/GAL-AFIR și momentul potrivit pentru consultanță AFIR.
-- Evitate valori, plafoane, calendar sau claims oficiale nevalidate.
-- Întărite linkurile interne contextuale către `/consultanta-afir`, `/calculator-soc` și paginile de program potrivite.
-- Canonicalul rămâne pe `https://atelierdeconsultanta.ro/afir`.
+- `/start-up-nation-2026.html`: 4 clicks, 166 impressions, pozitie 10.73; varianta canonica ramane `/start-up-nation-2026`.
+- `/consultanta-start-up-nation-2026`: 0 clicks, 14 impressions, pozitie 4.29; pagina comerciala merita legaturi contextuale mai puternice din hub si resurse.
+- `/start-up-nation-2026-idei-afaceri-plan.html`: 3 clicks, 58 impressions, pozitie 14.6; intentia a fost rutata catre pagina canonica de plan `/start-up-nation-2026-plan-de-afaceri`.
+
+## Directie de optimizare
+
+- Consolidat continut crawlable pentru variantele `Start Up Nation`, `startup nation`, `programul Start Up Nation 2026`, conditii, plan de afaceri, cod CAEN si cheltuieli eligibile.
+- Intarite linkurile interne catre `/consultanta-start-up-nation-2026` din hub si paginile-suport ale clusterului.
+- Inlocuite exemplele numerice generice de buget cu verificari nenumerice, pentru a evita claims nevalidate despre grant, procente sau plafoane.
+- Canonicalul ramane pe `https://atelierdeconsultanta.ro/start-up-nation-2026`, iar rutele suport pastreaza canonicalele proprii curate.

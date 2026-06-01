@@ -4,7 +4,7 @@
     "extract:sources": "node tools/extract-source-facts.js",
     "audit:content": "node tools/audit-content-depth.js --min-words 2000",
     "audit:structured-data": "node tools/audit-structured-data.js",
-    "check:copy": "node tools/normalize-copy-ro.js --check afir && node tools/normalize-copy-ro.js --check calculator-soc.html && node tools/normalize-copy-ro.js --check consultanta-afir && node tools/normalize-copy-ro.js --check fonduri-europene-agricultura && node tools/normalize-copy-ro.js --check fonduri-pentru-ferme && node tools/normalize-copy-ro.js --check fonduri-pentru-utilaje-agricole",
+    "check:copy": "node tools/normalize-copy-ro.js --check start-up-nation-2026 && node tools/normalize-copy-ro.js --check start-up-nation-2026.html && node tools/normalize-copy-ro.js --check start-up-nation-2026-conditii && node tools/normalize-copy-ro.js --check start-up-nation-2026-cheltuieli-eligibile && node tools/normalize-copy-ro.js --check start-up-nation-2026-idei-afaceri && node tools/normalize-copy-ro.js --check start-up-nation-2026-plan-de-afaceri && node tools/normalize-copy-ro.js --check cod-caen-start-up-nation-2026 && node tools/normalize-copy-ro.js --check consultanta-start-up-nation-2026",
     "generate:program-pages": "node tools/generate-program-pages.js",
     "generate:programmatic-seo": "node tools/generate-programmatic-seo.js",
     "generate:lead-magnets": "node tools/generate-lead-magnets.js",
