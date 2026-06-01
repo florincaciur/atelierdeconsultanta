@@ -27,6 +27,10 @@ const URLS = [
   "https://atelierdeconsultanta.ro/fonduri-europene-caen/5610-restaurante/",
   "https://atelierdeconsultanta.ro/fonduri-europene-caen/6201-dezvoltare-software/",
   "https://atelierdeconsultanta.ro/fonduri-europene-caen/0111-culturi-cereale/",
+  "https://atelierdeconsultanta.ro/fonduri-europene-bucuresti",
+  "https://atelierdeconsultanta.ro/consultanta-fonduri-europene-bucuresti",
+  "https://atelierdeconsultanta.ro/fonduri-europene-iasi",
+  "https://atelierdeconsultanta.ro/consultanta-fonduri-europene-bacau",
 ];
 
 function parseRedirects() {

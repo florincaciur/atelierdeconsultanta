@@ -94,7 +94,7 @@ const pages = [
     audience: ["firme care vor investi fără să se bazeze exclusiv pe credit bancar", "persoane care pregătesc o firmă nouă sau un proiect de dezvoltare", "beneficiari care au nevoie să compare granturi, ajutoare de stat și scheme sectoriale"],
     checks: ["procentul nerambursabil și contribuția proprie", "cheltuielile eligibile și neeligibile", "obligațiile după aprobare, inclusiv menținerea investiției și raportarea"],
     steps: ["definește investiția în termeni măsurabili", "verifică dacă solicitantul este eligibil", "calculează cash-flow-ul și cofinanțarea", "pregătește documentele înainte de deschiderea apelului"],
-    links: [related.fonduri, related.eligibilitate, related.calendar, related.consultanta, ["/acte-necesare-fonduri-europene-nerambursabile.html", "Acte necesare fonduri europene"]],
+    links: [related.fonduri, related.eligibilitate, related.calendar, related.consultanta, ["/acte-necesare-fonduri-europene-nerambursabile", "Acte necesare fonduri europene"]],
   },
   {
     slug: "pnrr",
@@ -190,7 +190,7 @@ const pages = [
     audience: ["firme care vor să pregătească dosarul înainte de deschiderea apelului", "fermieri care urmăresc sesiunile AFIR", "antreprenori care nu vor să piardă termene din lipsă de documente"],
     checks: ["stadiul ghidului solicitantului", "documentele care pot expira", "timpul necesar pentru oferte, avize sau autorizații"],
     steps: ["monitorizează programele relevante", "pregătește documentele de firmă și investiție", "actualizează ofertele înainte de depunere", "confirmă eligibilitatea înainte de a bloca bugetul"],
-    links: [related.fonduri, related.eligibilitate, related.ghiduri, ["/blog.html", "Blog fonduri europene"], related.contact],
+    links: [related.fonduri, related.eligibilitate, related.ghiduri, ["/blog", "Blog fonduri europene"], related.contact],
   },
   {
     slug: "eligibilitate-fonduri-europene",
@@ -202,7 +202,7 @@ const pages = [
     audience: ["firme care vor o verificare înainte de pregătirea dosarului", "fermieri care trebuie să confirme încadrarea exploatației", "antreprenori care compară mai multe programe"],
     checks: ["statutul solicitantului, codul CAEN și situația fiscală", "vechimea firmei, datele financiare și ajutoarele primite", "cheltuielile, locația investiției și documentele suport"],
     steps: ["strânge datele de firmă", "descrie investiția în detaliu", "compară cerințele programului", "notează riscurile și documentele lipsă"],
-    links: [related.consultanta, related.contact, ["/acte-necesare-fonduri-europene-nerambursabile.html", "Acte necesare"], related.calendar, related.intrebari],
+    links: [related.consultanta, related.contact, ["/acte-necesare-fonduri-europene-nerambursabile", "Acte necesare"], related.calendar, related.intrebari],
   },
   {
     slug: "ghiduri",
@@ -214,7 +214,7 @@ const pages = [
     audience: ["antreprenori care vor să înțeleagă pașii înainte de depunere", "beneficiari care compară programe", "echipe care pregătesc documente și bugete"],
     checks: ["data actualizării informației", "diferența dintre articol informativ și ghid oficial", "linkurile către programele și paginile conexe"],
     steps: ["alege clusterul potrivit", "citește pagina comercială relevantă", "verifică articolul detaliat", "solicită evaluare dacă există neclarități"],
-    links: [[ "/blog.html", "Blog" ], ["/cum-alegi-programul-potrivit-fonduri-europene-2026.html", "Cum alegi programul potrivit"], ["/acte-necesare-fonduri-europene-nerambursabile.html", "Acte necesare"], ["/greseli-fonduri-europene/", "Greșeli frecvente"], related.contact],
+    links: [[ "/blog", "Blog" ], ["/cum-alegi-programul-potrivit-fonduri-europene-2026", "Cum alegi programul potrivit"], ["/acte-necesare-fonduri-europene-nerambursabile", "Acte necesare"], ["/greseli-fonduri-europene", "Greșeli frecvente"], related.contact],
   },
   {
     slug: "studii-de-caz",
@@ -521,7 +521,7 @@ ${CLARITY_TRACKING_CODE}
     <div class="navbar-links">
       <a href="${cleanHref("/fonduri-europene/")}">Fonduri europene</a>
       <a href="${cleanHref("/ghiduri/")}">Ghiduri</a>
-      <a href="${cleanHref("/blog.html")}">Blog</a>
+      <a href="${cleanHref("/blog")}">Blog</a>
       <a class="nav-cta btn-primary" href="${cleanHref("/contact/")}">Evaluare gratuită</a>
     </div>
   </nav>
@@ -601,9 +601,9 @@ const existing = [
   ["/pro-infra", "0.8"],
   ["/calculator-soc", "0.8"],
   ["/contact/", "0.8"],
-  ["/blog.html", "0.8"],
+  ["/blog", "0.8"],
   ["/cum-alegi-programul-potrivit-fonduri-europene-2026.html", "0.7"],
-  ["/acte-necesare-fonduri-europene-nerambursabile.html", "0.7"],
+  ["/acte-necesare-fonduri-europene-nerambursabile", "0.7"],
   ["/dr-12-afir-instalarea-tinerilor-fermieri.html", "0.7"],
   ["/cod-caen-start-up-nation-2026/", "0.7"],
   ["/consultanta-start-up-nation-2026/", "0.8"],

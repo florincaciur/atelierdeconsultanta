@@ -1,0 +1,522 @@
+# Raport remediere indexare GSC - 2026-06-01
+
+## Rezumat
+
+- Conventie canonica finala: HTTPS, domeniul `https://atelierdeconsultanta.ro`, fara `.html`, fara `/index.html` si fara slash final, exceptand homepage `/`.
+- Paginile `/fonduri-europene-bucuresti` si `/consultanta-fonduri-europene-bucuresti` sunt landing page-uri indexabile, cu `index, follow`, canonical self si linkuri interne canonice.
+- Paginile locale Iasi, Suceava si Bacau raman duplicate consolidate si sunt mutate prin 301 catre `/fonduri-europene-nord-est`; nu sunt in sitemap si nu sunt folosite in navigatia interna canonica.
+- Paginile publice self-canonical omise anterior din sitemap, inclusiv FAQ-urile si paginile CAEN, sunt acum incluse in sitemap.
+- `/blog?post=blog-1` ramane varianta alternativa legitima a hubului `/blog`; nu este in sitemap si nu este folosit ca link intern important.
+- `noindex` ramane doar pentru pagini tehnice sau fallback-uri: `/404`, `/404.html`, `/ro/*`, `/admin/` si fisiere HTML fallback vechi care sunt protejate suplimentar de redirecturi 301.
+
+## Fisiere modificate
+
+- `_redirects`
+- `blog.json`
+- `blog/index.html`
+- `ce-acte-sunt-necesare-fonduri-europene.html`
+- `config/seo-programmatic-pages.json`
+- `consultanta-fonduri-europene-bacau/index.html`
+- `consultanta-fonduri-europene-bucuresti/index.html`
+- `consultanta-fonduri-europene-iasi/index.html`
+- `consultanta-fonduri-europene-suceava/index.html`
+- `consultanta-fonduri-europene/index.html`
+- `fonduri-europene-bacau/index.html`
+- `fonduri-europene-bucuresti/index.html`
+- `fonduri-europene-caen/0111-culturi-cereale/index.html`
+- `fonduri-europene-caen/4321-instalatii-electrice/index.html`
+- `fonduri-europene-caen/5610-restaurante/index.html`
+- `fonduri-europene-caen/6201-dezvoltare-software/index.html`
+- `fonduri-europene-iasi/index.html`
+- `fonduri-europene-nord-est/index.html`
+- `fonduri-europene-suceava/index.html`
+- `fonduri-europene/index.html`
+- `index.html`
+- `intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm/index.html`
+- `intrebari/ce-documente-sunt-necesare-pentru-dr12/index.html`
+- `intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene/index.html`
+- `llms.txt`
+- `package.json`
+- `reports/indexing-audit.json`
+- `reports/indexing-remediation-2026-06-01.md`
+- `reports/seo-integrity-report.json`
+- `sitemap.xml`
+- `tests/faber-functional-checks.mjs`
+- `tools/audit-gsc-routes.js`
+- `tools/audit-indexing.js`
+- `tools/build-cloudflare-assets.js`
+- `tools/generate-programmatic-seo.js`
+- `tools/generate-seo-hubs.js`
+- `tools/generate-sitemap.js`
+- `tools/verify-sitemap.js`
+
+## URL-uri canonice finale in sitemap
+
+- https://atelierdeconsultanta.ro/
+- https://atelierdeconsultanta.ro/apeluri-gal
+- https://atelierdeconsultanta.ro/consultanta-fonduri-europene
+- https://atelierdeconsultanta.ro/digitalizare-imm
+- https://atelierdeconsultanta.ro/dr12-afir
+- https://atelierdeconsultanta.ro/dr14
+- https://atelierdeconsultanta.ro/fonduri-europene
+- https://atelierdeconsultanta.ro/start-up-nation-2026
+- https://atelierdeconsultanta.ro/blog
+- https://atelierdeconsultanta.ro/despre-faber
+- https://atelierdeconsultanta.ro/glosar-fonduri-europene
+- https://atelierdeconsultanta.ro/metodologie-verificare-eligibilitate
+- https://atelierdeconsultanta.ro/studii-de-caz-fonduri-europene
+- https://atelierdeconsultanta.ro/surse-oficiale-fonduri-europene
+- https://atelierdeconsultanta.ro/acte-necesare-fonduri-europene-nerambursabile
+- https://atelierdeconsultanta.ro/afir
+- https://atelierdeconsultanta.ro/afir-autoconsum-agroalimentar
+- https://atelierdeconsultanta.ro/autoconsum-public-fotovoltaice-institutii-publice
+- https://atelierdeconsultanta.ro/blog-afir-fotovoltaice-ferme-2026
+- https://atelierdeconsultanta.ro/calculator-soc
+- https://atelierdeconsultanta.ro/calendar-fonduri-europene
+- https://atelierdeconsultanta.ro/cand-merita-consultant-fonduri-europene
+- https://atelierdeconsultanta.ro/cat-costa-consultanta-fonduri-europene
+- https://atelierdeconsultanta.ro/cat-costa-consultanta-fonduri-europene-ghid
+- https://atelierdeconsultanta.ro/ce-acte-sunt-necesare-fonduri-europene
+- https://atelierdeconsultanta.ro/cheltuieli-eligibile-digitalizare-imm
+- https://atelierdeconsultanta.ro/cod-caen-start-up-nation-2026
+- https://atelierdeconsultanta.ro/consultant-fonduri-europene-imm
+- https://atelierdeconsultanta.ro/consultanta-afir
+- https://atelierdeconsultanta.ro/consultanta-fonduri-europene-bucuresti
+- https://atelierdeconsultanta.ro/consultanta-pnrr-digitalizare
+- https://atelierdeconsultanta.ro/consultanta-start-up-nation-2026
+- https://atelierdeconsultanta.ro/contact
+- https://atelierdeconsultanta.ro/cum-alegi-consultant-fonduri-europene
+- https://atelierdeconsultanta.ro/cum-alegi-programul-potrivit-fonduri-europene-2026
+- https://atelierdeconsultanta.ro/cum-se-calculeaza-cofinantarea-fonduri-europene
+- https://atelierdeconsultanta.ro/cum-se-verifica-eligibilitatea-fonduri-europene
+- https://atelierdeconsultanta.ro/digitalizare-imm-erp-crm-cloud
+- https://atelierdeconsultanta.ro/digitalizare-imm-pnrr
+- https://atelierdeconsultanta.ro/dr-12-afir-instalarea-tinerilor-fermieri
+- https://atelierdeconsultanta.ro/dr-14-afir-conditii-eligibilitate-greseli-frecvente
+- https://atelierdeconsultanta.ro/dr12-vs-dr14
+- https://atelierdeconsultanta.ro/dr14-afir-ferme-mici
+- https://atelierdeconsultanta.ro/e-move
+- https://atelierdeconsultanta.ro/eligibilitate-fonduri-europene
+- https://atelierdeconsultanta.ro/femeia-antreprenor-2026
+- https://atelierdeconsultanta.ro/femeia-antreprenor-2026-conditii-idei-afaceri
+- https://atelierdeconsultanta.ro/finantari-panouri-fotovoltaice
+- https://atelierdeconsultanta.ro/firma-consultanta-fonduri-europene
+- https://atelierdeconsultanta.ro/fondul-de-modernizare
+- https://atelierdeconsultanta.ro/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum
+- https://atelierdeconsultanta.ro/fondul-modernizare-energie-regenerabila-2026
+- https://atelierdeconsultanta.ro/fonduri-europene-agricultura
+- https://atelierdeconsultanta.ro/fonduri-europene-bucuresti
+- https://atelierdeconsultanta.ro/fonduri-europene-digitalizare
+- https://atelierdeconsultanta.ro/fonduri-europene-femei-antreprenor
+- https://atelierdeconsultanta.ro/fonduri-europene-imm
+- https://atelierdeconsultanta.ro/fonduri-europene-nerambursabile-2026
+- https://atelierdeconsultanta.ro/fonduri-europene-nord-est
+- https://atelierdeconsultanta.ro/fonduri-nerambursabile
+- https://atelierdeconsultanta.ro/fonduri-pentru-ferme
+- https://atelierdeconsultanta.ro/fonduri-pentru-utilaje-agricole
+- https://atelierdeconsultanta.ro/gal-afir
+- https://atelierdeconsultanta.ro/gdpr
+- https://atelierdeconsultanta.ro/ghiduri
+- https://atelierdeconsultanta.ro/granturi-digitalizare-imm
+- https://atelierdeconsultanta.ro/greseli-fonduri-europene
+- https://atelierdeconsultanta.ro/idei-afaceri-fonduri-europene
+- https://atelierdeconsultanta.ro/instrumente
+- https://atelierdeconsultanta.ro/intrebari-frecvente
+- https://atelierdeconsultanta.ro/investitii-modernizarea-microintreprinderilor-apel-2
+- https://atelierdeconsultanta.ro/pnrr
+- https://atelierdeconsultanta.ro/pnrr-digitalizare-imm-cheltuieli-eligibile
+- https://atelierdeconsultanta.ro/politica-de-confidentialitate
+- https://atelierdeconsultanta.ro/por-adr-nord-est
+- https://atelierdeconsultanta.ro/portofoliu
+- https://atelierdeconsultanta.ro/pro-infra
+- https://atelierdeconsultanta.ro/resurse
+- https://atelierdeconsultanta.ro/start-up-nation-2026-cheltuieli-eligibile
+- https://atelierdeconsultanta.ro/start-up-nation-2026-conditii
+- https://atelierdeconsultanta.ro/start-up-nation-2026-idei-afaceri
+- https://atelierdeconsultanta.ro/start-up-nation-2026-plan-de-afaceri
+- https://atelierdeconsultanta.ro/studii-de-caz
+- https://atelierdeconsultanta.ro/termeni-si-conditii
+- https://atelierdeconsultanta.ro/testimoniale
+- https://atelierdeconsultanta.ro/verificare-eligibilitate-fonduri-europene
+- https://atelierdeconsultanta.ro/webinarii
+- https://atelierdeconsultanta.ro/intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm
+- https://atelierdeconsultanta.ro/intrebari/ce-documente-sunt-necesare-pentru-dr12
+- https://atelierdeconsultanta.ro/intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene
+- https://atelierdeconsultanta.ro/fonduri-europene-caen/0111-culturi-cereale
+- https://atelierdeconsultanta.ro/fonduri-europene-caen/4321-instalatii-electrice
+- https://atelierdeconsultanta.ro/fonduri-europene-caen/5610-restaurante
+- https://atelierdeconsultanta.ro/fonduri-europene-caen/6201-dezvoltare-software
+
+## Redirecturi 301 pastrate
+
+- `/index.html / 301`
+- `/start-up-nation /start-up-nation-2026 301`
+- `/start-up-nation/ /start-up-nation-2026 301`
+- `/start-up-nation.html /start-up-nation-2026 301`
+- `/consultanta-start-up-nation /consultanta-start-up-nation-2026 301`
+- `/consultanta-start-up-nation/ /consultanta-start-up-nation-2026 301`
+- `/consultanta-start-up-nation.html /consultanta-start-up-nation-2026 301`
+- `/consultanta-fonduri-europene-imm /consultant-fonduri-europene-imm 301`
+- `/consultanta-fonduri-europene-imm/ /consultant-fonduri-europene-imm 301`
+- `/consultanta-fonduri-europene-imm.html /consultant-fonduri-europene-imm 301`
+- `/contact/ /contact 301`
+- `/contact.html /contact 301`
+- `/contact/index.html /contact 301`
+- `/consultanta-fonduri-europene/ /consultanta-fonduri-europene 301`
+- `/consultanta-fonduri-europene.html /consultanta-fonduri-europene 301`
+- `/consultanta-fonduri-europene/index.html /consultanta-fonduri-europene 301`
+- `/fonduri-europene-nord-est/ /fonduri-europene-nord-est 301`
+- `/fonduri-europene-nord-est.html /fonduri-europene-nord-est 301`
+- `/fonduri-europene-nord-est/index.html /fonduri-europene-nord-est 301`
+- `/fonduri-europene-bucuresti/ /fonduri-europene-bucuresti 301`
+- `/fonduri-europene-bucuresti.html /fonduri-europene-bucuresti 301`
+- `/fonduri-europene-bucuresti/index.html /fonduri-europene-bucuresti 301`
+- `/consultanta-fonduri-europene-bucuresti/ /consultanta-fonduri-europene-bucuresti 301`
+- `/consultanta-fonduri-europene-bucuresti.html /consultanta-fonduri-europene-bucuresti 301`
+- `/consultanta-fonduri-europene-bucuresti/index.html /consultanta-fonduri-europene-bucuresti 301`
+- `/fonduri-europene-iasi /fonduri-europene-nord-est 301`
+- `/fonduri-europene-iasi/ /fonduri-europene-nord-est 301`
+- `/fonduri-europene-iasi.html /fonduri-europene-nord-est 301`
+- `/fonduri-europene-iasi/index.html /fonduri-europene-nord-est 301`
+- `/consultanta-fonduri-europene-iasi /fonduri-europene-nord-est 301`
+- `/consultanta-fonduri-europene-iasi/ /fonduri-europene-nord-est 301`
+- `/consultanta-fonduri-europene-iasi.html /fonduri-europene-nord-est 301`
+- `/consultanta-fonduri-europene-iasi/index.html /fonduri-europene-nord-est 301`
+- `/fonduri-europene-suceava /fonduri-europene-nord-est 301`
+- `/fonduri-europene-suceava/ /fonduri-europene-nord-est 301`
+- `/fonduri-europene-suceava.html /fonduri-europene-nord-est 301`
+- `/fonduri-europene-suceava/index.html /fonduri-europene-nord-est 301`
+- `/consultanta-fonduri-europene-suceava /fonduri-europene-nord-est 301`
+- `/consultanta-fonduri-europene-suceava/ /fonduri-europene-nord-est 301`
+- `/consultanta-fonduri-europene-suceava.html /fonduri-europene-nord-est 301`
+- `/consultanta-fonduri-europene-suceava/index.html /fonduri-europene-nord-est 301`
+- `/fonduri-europene-bacau /fonduri-europene-nord-est 301`
+- `/fonduri-europene-bacau/ /fonduri-europene-nord-est 301`
+- `/fonduri-europene-bacau.html /fonduri-europene-nord-est 301`
+- `/fonduri-europene-bacau/index.html /fonduri-europene-nord-est 301`
+- `/consultanta-fonduri-europene-bacau /fonduri-europene-nord-est 301`
+- `/consultanta-fonduri-europene-bacau/ /fonduri-europene-nord-est 301`
+- `/consultanta-fonduri-europene-bacau.html /fonduri-europene-nord-est 301`
+- `/consultanta-fonduri-europene-bacau/index.html /fonduri-europene-nord-est 301`
+- `/verificare-eligibilitate-fonduri-europene/ /verificare-eligibilitate-fonduri-europene 301`
+- `/verificare-eligibilitate-fonduri-europene.html /verificare-eligibilitate-fonduri-europene 301`
+- `/verificare-eligibilitate-fonduri-europene/index.html /verificare-eligibilitate-fonduri-europene 301`
+- `/digitalizare-imm-pnrr/ /digitalizare-imm-pnrr 301`
+- `/digitalizare-imm-pnrr.html /digitalizare-imm-pnrr 301`
+- `/digitalizare-imm-pnrr/index.html /digitalizare-imm-pnrr 301`
+- `/fondul-de-modernizare/ /fondul-de-modernizare 301`
+- `/fondul-de-modernizare.html /fondul-de-modernizare 301`
+- `/fondul-de-modernizare/index.html /fondul-de-modernizare 301`
+- `/fonduri-europene/ /fonduri-europene 301`
+- `/fonduri-europene.html /fonduri-europene 301`
+- `/fonduri-europene/index.html /fonduri-europene 301`
+- `/fonduri-nerambursabile/ /fonduri-nerambursabile 301`
+- `/fonduri-nerambursabile.html /fonduri-nerambursabile 301`
+- `/fonduri-nerambursabile/index.html /fonduri-nerambursabile 301`
+- `/pnrr/ /pnrr 301`
+- `/pnrr.html /pnrr 301`
+- `/pnrr/index.html /pnrr 301`
+- `/pnrr-digitalizare-imm /digitalizare-imm-pnrr 301`
+- `/pnrr-digitalizare-imm/ /digitalizare-imm-pnrr 301`
+- `/pnrr-digitalizare-imm.html /digitalizare-imm-pnrr 301`
+- `/pnrr-digitalizare-imm/index.html /digitalizare-imm-pnrr 301`
+- `/afir/ /afir 301`
+- `/afir.html /afir 301`
+- `/afir/index.html /afir 301`
+- `/fonduri-europene-imm/ /fonduri-europene-imm 301`
+- `/fonduri-europene-imm.html /fonduri-europene-imm 301`
+- `/fonduri-europene-imm/index.html /fonduri-europene-imm 301`
+- `/fonduri-europene-agricultura/ /fonduri-europene-agricultura 301`
+- `/fonduri-europene-agricultura.html /fonduri-europene-agricultura 301`
+- `/fonduri-europene-agricultura/index.html /fonduri-europene-agricultura 301`
+- `/fonduri-europene-digitalizare/ /fonduri-europene-digitalizare 301`
+- `/fonduri-europene-digitalizare.html /fonduri-europene-digitalizare 301`
+- `/fonduri-europene-digitalizare/index.html /fonduri-europene-digitalizare 301`
+- `/fonduri-europene-femei-antreprenor/ /fonduri-europene-femei-antreprenor 301`
+- `/fonduri-europene-femei-antreprenor.html /fonduri-europene-femei-antreprenor 301`
+- `/fonduri-europene-femei-antreprenor/index.html /fonduri-europene-femei-antreprenor 301`
+- `/calendar-fonduri-europene/ /calendar-fonduri-europene 301`
+- `/calendar-fonduri-europene.html /calendar-fonduri-europene 301`
+- `/calendar-fonduri-europene/index.html /calendar-fonduri-europene 301`
+- `/eligibilitate-fonduri-europene/ /eligibilitate-fonduri-europene 301`
+- `/eligibilitate-fonduri-europene.html /eligibilitate-fonduri-europene 301`
+- `/eligibilitate-fonduri-europene/index.html /eligibilitate-fonduri-europene 301`
+- `/ghiduri/ /ghiduri 301`
+- `/ghiduri.html /ghiduri 301`
+- `/ghiduri/index.html /ghiduri 301`
+- `/studii-de-caz/ /studii-de-caz 301`
+- `/studii-de-caz.html /studii-de-caz 301`
+- `/studii-de-caz/index.html /studii-de-caz 301`
+- `/studii-de-caz-fonduri-europene/ /studii-de-caz-fonduri-europene 301`
+- `/studii-de-caz-fonduri-europene.html /studii-de-caz-fonduri-europene 301`
+- `/studii-de-caz-fonduri-europene/index.html /studii-de-caz-fonduri-europene 301`
+- `/intrebari-frecvente/ /intrebari-frecvente 301`
+- `/intrebari-frecvente.html /intrebari-frecvente 301`
+- `/intrebari-frecvente/index.html /intrebari-frecvente 301`
+- `/start-up-nation-2026-conditii/ /start-up-nation-2026-conditii 301`
+- `/start-up-nation-2026-conditii.html /start-up-nation-2026-conditii 301`
+- `/start-up-nation-2026-conditii/index.html /start-up-nation-2026-conditii 301`
+- `/start-up-nation-2026-cheltuieli-eligibile/ /start-up-nation-2026-cheltuieli-eligibile 301`
+- `/start-up-nation-2026-cheltuieli-eligibile.html /start-up-nation-2026-cheltuieli-eligibile 301`
+- `/start-up-nation-2026-cheltuieli-eligibile/index.html /start-up-nation-2026-cheltuieli-eligibile 301`
+- `/start-up-nation-2026-idei-afaceri/ /start-up-nation-2026-idei-afaceri 301`
+- `/start-up-nation-2026-idei-afaceri.html /start-up-nation-2026-idei-afaceri 301`
+- `/start-up-nation-2026-idei-afaceri/index.html /start-up-nation-2026-idei-afaceri 301`
+- `/start-up-nation-2026-plan-de-afaceri/ /start-up-nation-2026-plan-de-afaceri 301`
+- `/start-up-nation-2026-plan-de-afaceri.html /start-up-nation-2026-plan-de-afaceri 301`
+- `/start-up-nation-2026-plan-de-afaceri/index.html /start-up-nation-2026-plan-de-afaceri 301`
+- `/cod-caen-start-up-nation-2026/ /cod-caen-start-up-nation-2026 301`
+- `/cod-caen-start-up-nation-2026.html /cod-caen-start-up-nation-2026 301`
+- `/cod-caen-start-up-nation-2026/index.html /cod-caen-start-up-nation-2026 301`
+- `/consultanta-start-up-nation-2026/ /consultanta-start-up-nation-2026 301`
+- `/consultanta-start-up-nation-2026.html /consultanta-start-up-nation-2026 301`
+- `/consultanta-start-up-nation-2026/index.html /consultanta-start-up-nation-2026 301`
+- `/consultanta-afir/ /consultanta-afir 301`
+- `/consultanta-afir.html /consultanta-afir 301`
+- `/consultanta-afir/index.html /consultanta-afir 301`
+- `/fonduri-pentru-ferme/ /fonduri-pentru-ferme 301`
+- `/fonduri-pentru-ferme.html /fonduri-pentru-ferme 301`
+- `/fonduri-pentru-ferme/index.html /fonduri-pentru-ferme 301`
+- `/fonduri-pentru-utilaje-agricole/ /fonduri-pentru-utilaje-agricole 301`
+- `/fonduri-pentru-utilaje-agricole.html /fonduri-pentru-utilaje-agricole 301`
+- `/fonduri-pentru-utilaje-agricole/index.html /fonduri-pentru-utilaje-agricole 301`
+- `/granturi-digitalizare-imm/ /granturi-digitalizare-imm 301`
+- `/granturi-digitalizare-imm.html /granturi-digitalizare-imm 301`
+- `/granturi-digitalizare-imm/index.html /granturi-digitalizare-imm 301`
+- `/consultanta-pnrr-digitalizare/ /consultanta-pnrr-digitalizare 301`
+- `/consultanta-pnrr-digitalizare.html /consultanta-pnrr-digitalizare 301`
+- `/consultanta-pnrr-digitalizare/index.html /consultanta-pnrr-digitalizare 301`
+- `/finantari-panouri-fotovoltaice/ /finantari-panouri-fotovoltaice 301`
+- `/finantari-panouri-fotovoltaice.html /finantari-panouri-fotovoltaice 301`
+- `/finantari-panouri-fotovoltaice/index.html /finantari-panouri-fotovoltaice 301`
+- `/cum-alegi-consultant-fonduri-europene/ /cum-alegi-consultant-fonduri-europene 301`
+- `/cum-alegi-consultant-fonduri-europene.html /cum-alegi-consultant-fonduri-europene 301`
+- `/cum-alegi-consultant-fonduri-europene/index.html /cum-alegi-consultant-fonduri-europene 301`
+- `/cat-costa-consultanta-fonduri-europene/ /cat-costa-consultanta-fonduri-europene 301`
+- `/cat-costa-consultanta-fonduri-europene.html /cat-costa-consultanta-fonduri-europene 301`
+- `/cat-costa-consultanta-fonduri-europene/index.html /cat-costa-consultanta-fonduri-europene 301`
+- `/firma-consultanta-fonduri-europene/ /firma-consultanta-fonduri-europene 301`
+- `/firma-consultanta-fonduri-europene.html /firma-consultanta-fonduri-europene 301`
+- `/firma-consultanta-fonduri-europene/index.html /firma-consultanta-fonduri-europene 301`
+- `/consultant-fonduri-europene-imm/ /consultant-fonduri-europene-imm 301`
+- `/consultant-fonduri-europene-imm.html /consultant-fonduri-europene-imm 301`
+- `/consultant-fonduri-europene-imm/index.html /consultant-fonduri-europene-imm 301`
+- `/greseli-fonduri-europene/ /greseli-fonduri-europene 301`
+- `/greseli-fonduri-europene.html /greseli-fonduri-europene 301`
+- `/greseli-fonduri-europene/index.html /greseli-fonduri-europene 301`
+- `/fonduri-europene-nerambursabile-2026/ /fonduri-europene-nerambursabile-2026 301`
+- `/fonduri-europene-nerambursabile-2026.html /fonduri-europene-nerambursabile-2026 301`
+- `/fonduri-europene-nerambursabile-2026/index.html /fonduri-europene-nerambursabile-2026 301`
+- `/fonduri-europene-herambursabile-2026 /fonduri-europene-nerambursabile-2026 301`
+- `/fonduri-europene-herambursabile-2026/ /fonduri-europene-nerambursabile-2026 301`
+- `/fonduri-europene-herambursabile-2026.html /fonduri-europene-nerambursabile-2026 301`
+- `/fonduri-europene-herambursabile-2026/index.html /fonduri-europene-nerambursabile-2026 301`
+- `/autoconsum-publici /autoconsum-public-fotovoltaice-institutii-publice 301`
+- `/autoconsum-publici/ /autoconsum-public-fotovoltaice-institutii-publice 301`
+- `/autoconsum-publici.html /autoconsum-public-fotovoltaice-institutii-publice 301`
+- `/dr14-afir /dr14 301`
+- `/dr14-afir/ /dr14 301`
+- `/dr14-afir.html /dr14 301`
+- `/dr-14-afir /dr14 301`
+- `/dr-14-afir/ /dr14 301`
+- `/dr-14-afir.html /dr14 301`
+- `/start-up-nation-2026-idei-afaceri-plan /start-up-nation-2026-idei-afaceri 301`
+- `/start-up-nation-2026-idei-afaceri-plan/ /start-up-nation-2026-idei-afaceri 301`
+- `/start-up-nation-2026-idei-afaceri-plan.html /start-up-nation-2026-idei-afaceri 301`
+- `/idei-afaceri-start-up-nation-2026 /start-up-nation-2026-idei-afaceri 301`
+- `/idei-afaceri-start-up-nation-2026/ /start-up-nation-2026-idei-afaceri 301`
+- `/plan-afaceri-start-up-nation-2026 /start-up-nation-2026-plan-de-afaceri 301`
+- `/plan-afaceri-start-up-nation-2026/ /start-up-nation-2026-plan-de-afaceri 301`
+- `/blog/safir-fotovoltaice-ferme-2026.html /blog-afir-fotovoltaice-ferme-2026 301`
+- `/blog/safir-fotovoltaice-ferme-2026 /blog-afir-fotovoltaice-ferme-2026 301`
+- `/blog/safir-fotovoltaice-ferme-2026/ /blog-afir-fotovoltaice-ferme-2026 301`
+- `/blog.html /blog 301`
+- `/blog/ /blog 301`
+- `/blog/index.html /blog 301`
+- `/blog-afir-fotovoltaice-ferme-2026.html /blog-afir-fotovoltaice-ferme-2026 301`
+- `/blog-afir-fotovoltaice-ferme-2026/ /blog-afir-fotovoltaice-ferme-2026 301`
+- `/acte-necesare-fonduri-europene-nerambursabile.html /acte-necesare-fonduri-europene-nerambursabile 301`
+- `/acte-necesare-fonduri-europene-nerambursabile/ /acte-necesare-fonduri-europene-nerambursabile 301`
+- `/cum-alegi-programul-potrivit-fonduri-europene-2026.html /cum-alegi-programul-potrivit-fonduri-europene-2026 301`
+- `/cum-alegi-programul-potrivit-fonduri-europene-2026/ /cum-alegi-programul-potrivit-fonduri-europene-2026 301`
+- `/idei-afaceri-fonduri-europene.html /idei-afaceri-fonduri-europene 301`
+- `/idei-afaceri-fonduri-europene/ /idei-afaceri-fonduri-europene 301`
+- `/dr-12-afir-instalarea-tinerilor-fermieri.html /dr-12-afir-instalarea-tinerilor-fermieri 301`
+- `/dr-12-afir-instalarea-tinerilor-fermieri/ /dr-12-afir-instalarea-tinerilor-fermieri 301`
+- `/dr-14-afir-conditii-eligibilitate-greseli-frecvente.html /dr-14-afir-conditii-eligibilitate-greseli-frecvente 301`
+- `/dr-14-afir-conditii-eligibilitate-greseli-frecvente/ /dr-14-afir-conditii-eligibilitate-greseli-frecvente 301`
+- `/femeia-antreprenor-2026-conditii-idei-afaceri.html /femeia-antreprenor-2026-conditii-idei-afaceri 301`
+- `/femeia-antreprenor-2026-conditii-idei-afaceri/ /femeia-antreprenor-2026-conditii-idei-afaceri 301`
+- `/pnrr-digitalizare-imm-cheltuieli-eligibile.html /pnrr-digitalizare-imm-cheltuieli-eligibile 301`
+- `/pnrr-digitalizare-imm-cheltuieli-eligibile/ /pnrr-digitalizare-imm-cheltuieli-eligibile 301`
+- `/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum.html /fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum 301`
+- `/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum/ /fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum 301`
+- `/dr12-afir.html /dr12-afir 301`
+- `/dr12-afir/ /dr12-afir 301`
+- `/dr14.html /dr14 301`
+- `/dr14/ /dr14 301`
+- `/por-adr-nord-est.html /por-adr-nord-est 301`
+- `/por-adr-nord-est/ /por-adr-nord-est 301`
+- `/afir-autoconsum-agroalimentar.html /afir-autoconsum-agroalimentar 301`
+- `/afir-autoconsum-agroalimentar/ /afir-autoconsum-agroalimentar 301`
+- `/autoconsum-public-fotovoltaice-institutii-publice.html /autoconsum-public-fotovoltaice-institutii-publice 301`
+- `/autoconsum-public-fotovoltaice-institutii-publice/ /autoconsum-public-fotovoltaice-institutii-publice 301`
+- `/digitalizare-imm.html /digitalizare-imm 301`
+- `/digitalizare-imm/ /digitalizare-imm 301`
+- `/femeia-antreprenor-2026.html /femeia-antreprenor-2026 301`
+- `/femeia-antreprenor-2026/ /femeia-antreprenor-2026 301`
+- `/pro-infra.html /pro-infra 301`
+- `/pro-infra/ /pro-infra 301`
+- `/start-up-nation-2026.html /start-up-nation-2026 301`
+- `/start-up-nation-2026/ /start-up-nation-2026 301`
+- `/calculator-soc.html /calculator-soc 301`
+- `/calculator-soc/ /calculator-soc 301`
+- `/gdpr.html /gdpr 301`
+- `/gdpr/ /gdpr 301`
+- `/politica-de-confidentialitate.html /politica-de-confidentialitate 301`
+- `/politica-de-confidentialitate/ /politica-de-confidentialitate 301`
+- `/termeni-si-conditii.html /termeni-si-conditii 301`
+- `/termeni-si-conditii/ /termeni-si-conditii 301`
+- `/intrebari/ce-documente-sunt-necesare-pentru-afir /afir 301`
+- `/intrebari/ce-documente-sunt-necesare-pentru-afir/ /afir 301`
+- `/intrebari/ce-documente-sunt-necesare-pentru-afir.html /afir 301`
+- `/intrebari/ce-documente-sunt-necesare-pentru-afir/index.html /afir 301`
+- `/intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene/ /intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene 301`
+- `/intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene/index.html /intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene 301`
+- `/intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm/ /intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm 301`
+- `/intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm/index.html /intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm 301`
+- `/fonduri-europene-caen/4321-instalatii-electrice/ /fonduri-europene-caen/4321-instalatii-electrice 301`
+- `/fonduri-europene-caen/4321-instalatii-electrice/index.html /fonduri-europene-caen/4321-instalatii-electrice 301`
+- `/fonduri-europene-caen/5610-restaurante/ /fonduri-europene-caen/5610-restaurante 301`
+- `/fonduri-europene-caen/5610-restaurante/index.html /fonduri-europene-caen/5610-restaurante 301`
+- `/fonduri-europene-caen/6201-dezvoltare-software/ /fonduri-europene-caen/6201-dezvoltare-software 301`
+- `/fonduri-europene-caen/6201-dezvoltare-software/index.html /fonduri-europene-caen/6201-dezvoltare-software 301`
+- `/fonduri-europene-caen/0111-culturi-cereale/ /fonduri-europene-caen/0111-culturi-cereale 301`
+- `/fonduri-europene-caen/0111-culturi-cereale/index.html /fonduri-europene-caen/0111-culturi-cereale 301`
+- `/dr12-afir/index.html /dr12-afir 301`
+- `/dr14/index.html /dr14 301`
+- `/start-up-nation-2026/index.html /start-up-nation-2026 301`
+- `/femeia-antreprenor-2026/index.html /femeia-antreprenor-2026 301`
+- `/digitalizare-imm/index.html /digitalizare-imm 301`
+- `/por-adr-nord-est/index.html /por-adr-nord-est 301`
+- `/investitii-modernizarea-microintreprinderilor-apel-2/ /investitii-modernizarea-microintreprinderilor-apel-2 301`
+- `/investitii-modernizarea-microintreprinderilor-apel-2.html /investitii-modernizarea-microintreprinderilor-apel-2 301`
+- `/investitii-modernizarea-microintreprinderilor-apel-2/index.html /investitii-modernizarea-microintreprinderilor-apel-2 301`
+- `/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum/index.html /fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum 301`
+- `/fondul-modernizare-energie-regenerabila-2026/ /fondul-modernizare-energie-regenerabila-2026 301`
+- `/fondul-modernizare-energie-regenerabila-2026.html /fondul-modernizare-energie-regenerabila-2026 301`
+- `/fondul-modernizare-energie-regenerabila-2026/index.html /fondul-modernizare-energie-regenerabila-2026 301`
+- `/afir-autoconsum-agroalimentar/index.html /afir-autoconsum-agroalimentar 301`
+- `/autoconsum-public-fotovoltaice-institutii-publice/index.html /autoconsum-public-fotovoltaice-institutii-publice 301`
+- `/acte-necesare-fonduri-europene-nerambursabile/index.html /acte-necesare-fonduri-europene-nerambursabile 301`
+- `/portofoliu/ /portofoliu 301`
+- `/portofoliu.html /portofoliu 301`
+- `/portofoliu/index.html /portofoliu 301`
+- `/testimoniale/ /testimoniale 301`
+- `/testimoniale.html /testimoniale 301`
+- `/testimoniale/index.html /testimoniale 301`
+- `/instrumente/ /instrumente 301`
+- `/instrumente.html /instrumente 301`
+- `/instrumente/index.html /instrumente 301`
+- `/resurse/ /resurse 301`
+- `/resurse.html /resurse 301`
+- `/resurse/index.html /resurse 301`
+- `/webinarii/ /webinarii 301`
+- `/webinarii.html /webinarii 301`
+- `/webinarii/index.html /webinarii 301`
+- `/metodologie-verificare-eligibilitate/ /metodologie-verificare-eligibilitate 301`
+- `/metodologie-verificare-eligibilitate.html /metodologie-verificare-eligibilitate 301`
+- `/metodologie-verificare-eligibilitate/index.html /metodologie-verificare-eligibilitate 301`
+- `/surse-oficiale-fonduri-europene/ /surse-oficiale-fonduri-europene 301`
+- `/surse-oficiale-fonduri-europene.html /surse-oficiale-fonduri-europene 301`
+- `/surse-oficiale-fonduri-europene/index.html /surse-oficiale-fonduri-europene 301`
+- `/glosar-fonduri-europene/ /glosar-fonduri-europene 301`
+- `/glosar-fonduri-europene.html /glosar-fonduri-europene 301`
+- `/glosar-fonduri-europene/index.html /glosar-fonduri-europene 301`
+- `/pro-infra/index.html /pro-infra 301`
+- `/cand-merita-consultant-fonduri-europene.html /cand-merita-consultant-fonduri-europene 301`
+- `/cand-merita-consultant-fonduri-europene/ /cand-merita-consultant-fonduri-europene 301`
+- `/cand-merita-consultant-fonduri-europene/index.html /cand-merita-consultant-fonduri-europene 301`
+- `/cat-costa-consultanta-fonduri-europene-ghid.html /cat-costa-consultanta-fonduri-europene-ghid 301`
+- `/cat-costa-consultanta-fonduri-europene-ghid/ /cat-costa-consultanta-fonduri-europene-ghid 301`
+- `/cat-costa-consultanta-fonduri-europene-ghid/index.html /cat-costa-consultanta-fonduri-europene-ghid 301`
+- `/cum-se-verifica-eligibilitatea-fonduri-europene.html /cum-se-verifica-eligibilitatea-fonduri-europene 301`
+- `/cum-se-verifica-eligibilitatea-fonduri-europene/ /cum-se-verifica-eligibilitatea-fonduri-europene 301`
+- `/cum-se-verifica-eligibilitatea-fonduri-europene/index.html /cum-se-verifica-eligibilitatea-fonduri-europene 301`
+- `/ce-acte-sunt-necesare-fonduri-europene.html /ce-acte-sunt-necesare-fonduri-europene 301`
+- `/ce-acte-sunt-necesare-fonduri-europene/ /ce-acte-sunt-necesare-fonduri-europene 301`
+- `/ce-acte-sunt-necesare-fonduri-europene/index.html /ce-acte-sunt-necesare-fonduri-europene 301`
+- `/cum-se-calculeaza-cofinantarea-fonduri-europene.html /cum-se-calculeaza-cofinantarea-fonduri-europene 301`
+- `/cum-se-calculeaza-cofinantarea-fonduri-europene/ /cum-se-calculeaza-cofinantarea-fonduri-europene 301`
+- `/cum-se-calculeaza-cofinantarea-fonduri-europene/index.html /cum-se-calculeaza-cofinantarea-fonduri-europene 301`
+- `/dr12-afir-tineri-fermieri /dr12-afir 301`
+- `/dr12-afir-tineri-fermieri.html /dr12-afir 301`
+- `/dr12-afir-tineri-fermieri/ /dr12-afir 301`
+- `/dr12-afir-tineri-fermieri/index.html /dr12-afir 301`
+- `/dr14-afir-ferme-mici.html /dr14-afir-ferme-mici 301`
+- `/dr14-afir-ferme-mici/ /dr14-afir-ferme-mici 301`
+- `/dr14-afir-ferme-mici/index.html /dr14-afir-ferme-mici 301`
+- `/calculator-so-afir /calculator-soc 301`
+- `/calculator-so-afir.html /calculator-soc 301`
+- `/calculator-so-afir/ /calculator-soc 301`
+- `/calculator-so-afir/index.html /calculator-soc 301`
+- `/dr12-vs-dr14.html /dr12-vs-dr14 301`
+- `/dr12-vs-dr14/ /dr12-vs-dr14 301`
+- `/dr12-vs-dr14/index.html /dr12-vs-dr14 301`
+- `/startup-nation-2026-conditii /start-up-nation-2026-conditii 301`
+- `/startup-nation-2026-conditii.html /start-up-nation-2026-conditii 301`
+- `/startup-nation-2026-conditii/ /start-up-nation-2026-conditii 301`
+- `/startup-nation-2026-conditii/index.html /start-up-nation-2026-conditii 301`
+- `/cod-caen-startup-nation /cod-caen-start-up-nation-2026 301`
+- `/cod-caen-startup-nation.html /cod-caen-start-up-nation-2026 301`
+- `/cod-caen-startup-nation/ /cod-caen-start-up-nation-2026 301`
+- `/cod-caen-startup-nation/index.html /cod-caen-start-up-nation-2026 301`
+- `/cheltuieli-eligibile-startup-nation /start-up-nation-2026-cheltuieli-eligibile 301`
+- `/cheltuieli-eligibile-startup-nation.html /start-up-nation-2026-cheltuieli-eligibile 301`
+- `/cheltuieli-eligibile-startup-nation/ /start-up-nation-2026-cheltuieli-eligibile 301`
+- `/cheltuieli-eligibile-startup-nation/index.html /start-up-nation-2026-cheltuieli-eligibile 301`
+- `/digitalizare-imm-erp-crm-cloud.html /digitalizare-imm-erp-crm-cloud 301`
+- `/digitalizare-imm-erp-crm-cloud/ /digitalizare-imm-erp-crm-cloud 301`
+- `/digitalizare-imm-erp-crm-cloud/index.html /digitalizare-imm-erp-crm-cloud 301`
+- `/cheltuieli-eligibile-digitalizare-imm.html /cheltuieli-eligibile-digitalizare-imm 301`
+- `/cheltuieli-eligibile-digitalizare-imm/ /cheltuieli-eligibile-digitalizare-imm 301`
+- `/cheltuieli-eligibile-digitalizare-imm/index.html /cheltuieli-eligibile-digitalizare-imm 301`
+- `/consultanta-start-up-nation/index.html /consultanta-start-up-nation-2026 301`
+- `/start-up-nation/index.html /start-up-nation-2026 301`
+- `/apeluri-gal/ /apeluri-gal 301`
+- `/apeluri-gal.html /apeluri-gal 301`
+- `/apeluri-gal/index.html /apeluri-gal 301`
+- `/e-move/ /e-move 301`
+- `/e-move.html /e-move 301`
+- `/e-move/index.html /e-move 301`
+- `/emove /e-move 301`
+- `/emove/ /e-move 301`
+- `/e-move-ro /e-move 301`
+- `/e-move-ro/ /e-move 301`
+- `/gal-afir/ /gal-afir 301`
+- `/gal-afir.html /gal-afir 301`
+- `/gal-afir/index.html /gal-afir 301`
+- `/gal-leader /gal-afir 301`
+- `/gal-leader/ /gal-afir 301`
+- `/leader-afir /gal-afir 301`
+- `/leader-afir/ /gal-afir 301`
+
+## Verificari executate
+
+- `npm run generate:sitemap` - PASS, 94 URL-uri canonice
+- `npm run verify:sitemap` - PASS, sitemap-ul se potriveste cu paginile HTML indexabile
+- `npm run audit:indexing` - PASS, 94 URL-uri din sitemap si linkuri interne din paginile canonice
+- `npm run audit:gsc-routes` - PASS pentru rutele GSC auditate; Bucuresti este canonical 200, localele consolidate redirectioneaza 301
+- `npm run verify:seo` - PASS, 167 fisiere verificate, 0 fail
+- `node tools/audit-site-links.js` - PASS, 0 targeturi/ancore lipsa
+- `npm run build` - PASS, dist reconstruit
+- `npm run validate:cloudflare` - PASS, 351 reguli redirect valide
+- `npm run test:functional` - PASS, navigatie functionala
+
+## Pasi in Google Search Console dupa deploy
+
+1. Deschide **Sitemaps** si retrimite `https://atelierdeconsultanta.ro/sitemap.xml`.
+2. In **URL Inspection**, testeaza live si cere indexare pentru `/fonduri-europene-bucuresti`, `/consultanta-fonduri-europene-bucuresti`, cele doua FAQ-uri noi din sitemap si cele patru pagini CAEN.
+3. In rapoartele **Page indexing**, foloseste **Validate Fix** pentru **Alternate page with proper canonical tag** si **Excluded by 'noindex' tag** dupa ce deploy-ul este live.
+4. Pentru URL-urile locale consolidate Iasi/Suceava/Bacau, confirma in URL Inspection ca raspunsul este 301 catre `/fonduri-europene-nord-est`, nu 200 noindex.
+5. Dupa recrawl, verifica in **Pages > Indexed** ca sitemap-ul contine doar URL-uri finale 200, indexabile si self-canonical.

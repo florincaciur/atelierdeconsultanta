@@ -9,16 +9,18 @@ import { chromium } from "playwright";
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const DIST = path.join(ROOT, "dist");
 const SITE_ORIGIN = "https://atelierdeconsultanta.ro";
-const EXPECTED_CANONICAL_URLS = 86;
+const EXPECTED_CANONICAL_URLS = 94;
 const CONSOLIDATED_LOCAL_ROUTES = [
   "/fonduri-europene-bacau",
   "/consultanta-fonduri-europene-bacau",
   "/fonduri-europene-iasi",
   "/consultanta-fonduri-europene-iasi",
   "/fonduri-europene-suceava",
-  "/consultanta-fonduri-europene-suceava",
+  "/consultanta-fonduri-europene-suceava"
+];
+const INDEXABLE_LOCAL_ROUTES = [
   "/fonduri-europene-bucuresti",
-  "/consultanta-fonduri-europene-bucuresti",
+  "/consultanta-fonduri-europene-bucuresti"
 ];
 
 function parseRedirects() {
@@ -158,6 +160,9 @@ async function assertCanonicalRoutes(baseUrl) {
   for (const routePath of CONSOLIDATED_LOCAL_ROUTES) {
     assert(!paths.includes(routePath), `${routePath} should stay out of sitemap while consolidated`);
   }
+  for (const routePath of INDEXABLE_LOCAL_ROUTES) {
+    assert(paths.includes(routePath), `${routePath} should be in sitemap as an indexable local landing page`);
+  }
 
   for (const routePath of paths) {
     const response = await fetchManual(`${baseUrl}${routePath}`);
@@ -181,7 +186,11 @@ async function assertRedirectsAndFallback(baseUrl) {
     ["/consultanta-fonduri-europene-imm/", "/consultant-fonduri-europene-imm"],
     ["/consultanta-start-up-nation/", "/consultanta-start-up-nation-2026"],
     ["/pnrr-digitalizare-imm", "/digitalizare-imm-pnrr"],
-    ["/blog/safir-fotovoltaice-ferme-2026.html", "/blog-afir-fotovoltaice-ferme-2026"]
+    ["/blog/safir-fotovoltaice-ferme-2026.html", "/blog-afir-fotovoltaice-ferme-2026"],
+    ["/fonduri-europene-bucuresti/", "/fonduri-europene-bucuresti"],
+    ["/consultanta-fonduri-europene-bucuresti.html", "/consultanta-fonduri-europene-bucuresti"],
+    ["/fonduri-europene-iasi", "/fonduri-europene-nord-est"],
+    ["/consultanta-fonduri-europene-bacau", "/fonduri-europene-nord-est"]
   ];
 
   for (const [from, to] of checks) {
@@ -190,7 +199,7 @@ async function assertRedirectsAndFallback(baseUrl) {
     assert.equal(response.headers.get("location"), to, `${from} should redirect to ${to}`);
   }
 
-  const gscCanonicalPaths = ["/afir", "/ghiduri", "/fonduri-nerambursabile", "/dr12-vs-dr14", "/dr14-afir-ferme-mici"];
+  const gscCanonicalPaths = ["/afir", "/ghiduri", "/fonduri-nerambursabile", "/dr12-vs-dr14", "/dr14-afir-ferme-mici", ...INDEXABLE_LOCAL_ROUTES];
   for (const routePath of gscCanonicalPaths) {
     const response = await fetchManual(`${baseUrl}${routePath}`);
     assert.equal(response.status, 200, `${routePath} should return 200 for GSC canonical indexing`);

@@ -20,13 +20,6 @@ const EXCLUDED_DIRS = new Set([
 const DRAFT_PATH_PATTERN = /(^|\/)(?:draft|drafts|_draft|_drafts)(?:\/|$)/i;
 const ALTERNATE_CANONICAL_PATHS = new Set([
   "/blog?post=blog-1",
-  "/intrebari/ce-documente-sunt-necesare-pentru-afir",
-  "/intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene",
-  "/intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm",
-  "/fonduri-europene-caen/4321-instalatii-electrice",
-  "/fonduri-europene-caen/5610-restaurante",
-  "/fonduri-europene-caen/6201-dezvoltare-software",
-  "/fonduri-europene-caen/0111-culturi-cereale",
 ]);
 
 function toPosix(value) {
