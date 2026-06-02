@@ -541,6 +541,15 @@ li { margin-bottom: 8px; }
   opacity: 1;
 }
 .cta-box p { color: rgba(255,255,255,.88); font-size: max(.92rem, 14px); line-height: 1.55; max-width: 680px; margin: 0 auto 22px; }
+.cta-box :is(h1,h2,h3,h4,p,li,strong,em,span) {
+  color: var(--white) !important;
+  opacity: 1;
+}
+.cta-box a:not(.btn):not(.btn-primary):not(.btn-secondary):not(.btn-cta) {
+  color: var(--white) !important;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
 .footer {
   background: var(--navy);
   color: rgba(255,255,255,.65);

@@ -247,6 +247,8 @@ img{max-width:100%;height:auto;display:block}
 }
 .cta-box h3{font-size:1.28rem;font-weight:900;color:var(--white);margin-bottom:12px}
 .cta-box p{color:rgba(255,255,255,.76);margin-bottom:24px;font-size:.96rem}
+.cta-box :is(h1,h2,h3,h4,p,li,strong,em,span){color:var(--white)!important;opacity:1}
+.cta-box a:not(.btn):not(.btn-primary):not(.btn-secondary):not(.btn-cta){color:var(--white)!important;text-decoration:underline;text-underline-offset:3px}
 .btn-cta{
   display:inline-flex;
   align-items:center;
