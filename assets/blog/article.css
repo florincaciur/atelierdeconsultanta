@@ -281,6 +281,7 @@ button:focus-visible,
 .cta-box p{color:rgba(255,255,255,.76);margin-bottom:24px;font-size:.96rem}
 .cta-box :is(h1,h2,h3,h4,p,li,strong,em,span){color:var(--white)!important;opacity:1}
 .cta-box a:not(.btn):not(.btn-primary):not(.btn-secondary):not(.btn-cta){color:var(--white)!important;text-decoration:underline;text-underline-offset:3px}
+.cta-box > :is(h1,h2,h3,h4):first-child{color:var(--orange)!important}
 .btn-cta{
   display:inline-flex;
   align-items:center;

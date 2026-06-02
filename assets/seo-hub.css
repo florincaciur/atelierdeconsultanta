@@ -711,6 +711,9 @@ li { margin-bottom: 8px; }
   text-decoration: underline;
   text-underline-offset: 3px;
 }
+.cta-box > :is(h1,h2,h3,h4):first-child {
+  color: var(--orange) !important;
+}
 .footer {
   background: var(--navy);
   color: rgba(255,255,255,.65);

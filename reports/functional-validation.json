@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-06-02T09:36:39.569Z",
+  "generatedAt": "2026-06-02T11:59:26.616Z",
   "mode": "check",
-  "baseUrl": "http://127.0.0.1:61914",
+  "baseUrl": "http://127.0.0.1:59866",
   "summary": {
     "checked": 22,
     "passed": 22,
@@ -112,7 +112,7 @@
       "pass": true,
       "errors": [],
       "dom": {
-        "title": "POR ADR Nord-Est pentru microîntreprinderi",
+        "title": "POR ADR Nord-Est pentru microîntreprinderi - Apel 2",
         "h1Count": 1,
         "seeAlsoCards": 0,
         "programCluster": 0,

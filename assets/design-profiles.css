@@ -194,6 +194,10 @@
   text-underline-offset:3px;
 }
 
+.cta-box > :is(h1,h2,h3,h4):first-child{
+  color:var(--design-orange,#b84716) !important;
+}
+
 .sidebar-cta{
   background:linear-gradient(135deg,var(--design-navy),#183a69) !important;
   color:#fff !important;

@@ -69,7 +69,7 @@ const DESIGN_FAMILY_BY_SLUG = Object.freeze({
   "idei-afaceri-fonduri-europene": "editorial",
   "instrumente": "tool",
   "intrebari-frecvente": "editorial",
-  "investitii-modernizarea-microintreprinderilor-apel-2": "energy",
+  "investitii-modernizarea-microintreprinderilor-apel-2": "generic",
   "pnrr": "digital",
   "pnrr-digitalizare-imm-cheltuieli-eligibile": "digital",
   "politica-de-confidentialitate": "legal",
