@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-06-02T00:31:55.099Z",
+  "generatedAt": "2026-06-02T07:45:37.017Z",
   "mode": "check",
-  "baseUrl": "http://127.0.0.1:52998",
+  "baseUrl": "http://127.0.0.1:65404",
   "summary": {
     "checked": 22,
     "passed": 22,
@@ -14,7 +14,7 @@
       "pass": true,
       "errors": [],
       "dom": {
-        "title": "FABER | Consultanță fonduri europene",
+        "title": "FABER | Consultanță fonduri europene și finanțări nerambursabile",
         "h1Count": 1,
         "seeAlsoCards": 10,
         "programCluster": 0,
@@ -28,7 +28,7 @@
       "pass": true,
       "errors": [],
       "dom": {
-        "title": "Contact FABER | verificare eligibilitate",
+        "title": "Contactează consultantul tău pentru fonduri europene – FABER",
         "h1Count": 1,
         "seeAlsoCards": 3,
         "programCluster": 0,
@@ -42,7 +42,7 @@
       "pass": true,
       "errors": [],
       "dom": {
-        "title": "Fonduri europene pentru firme și fermieri",
+        "title": "Fonduri europene în Romania - programe, eligibilitate și ghiduri",
         "h1Count": 1,
         "seeAlsoCards": 0,
         "programCluster": 0,
@@ -56,7 +56,7 @@
       "pass": true,
       "errors": [],
       "dom": {
-        "title": "Consultanță fonduri europene | FABER",
+        "title": "Consultanță pentru fonduri europene | Eligibilitate, dosar și cost",
         "h1Count": 1,
         "seeAlsoCards": 0,
         "programCluster": 0,
@@ -70,7 +70,7 @@
       "pass": true,
       "errors": [],
       "dom": {
-        "title": "Calendar fonduri europene | pregătire",
+        "title": "Calendar fonduri europene 2026 - programe și pregătire",
         "h1Count": 1,
         "seeAlsoCards": 0,
         "programCluster": 0,
@@ -112,7 +112,7 @@
       "pass": true,
       "errors": [],
       "dom": {
-        "title": "POR ADR Nord-Est pentru microîntreprinderi",
+        "title": "Modernizarea microintreprinderilor Nord-Est - eligibilitate și dosar",
         "h1Count": 1,
         "seeAlsoCards": 0,
         "programCluster": 0,
@@ -126,7 +126,7 @@
       "pass": true,
       "errors": [],
       "dom": {
-        "title": "Fonduri europene Nord-Est | Iași, Suceava, Bacău",
+        "title": "Fonduri europene Nord-Est | Iasi, Suceava, Bacau, Botosani, Neamt, Vaslui",
         "h1Count": 1,
         "seeAlsoCards": 0,
         "programCluster": 0,
@@ -154,7 +154,7 @@
       "pass": true,
       "errors": [],
       "dom": {
-        "title": "AFIR autoconsum agroalimentar | energie",
+        "title": "AFIR autoconsum agroalimentar - fotovoltaice, eligibilitate și dosar",
         "h1Count": 1,
         "seeAlsoCards": 0,
         "programCluster": 0,
@@ -168,7 +168,7 @@
       "pass": true,
       "errors": [],
       "dom": {
-        "title": "Autoconsum public fotovoltaice | instituții",
+        "title": "Fotovoltaice pentru institutii publice - autoconsum și dosar",
         "h1Count": 1,
         "seeAlsoCards": 0,
         "programCluster": 0,
@@ -182,7 +182,7 @@
       "pass": true,
       "errors": [],
       "dom": {
-        "title": "DR14 AFIR 2026 | ferme mici și ghid solicitant",
+        "title": "DR 14 AFIR 2026 - Ferme mici, eligibilitate, punctaj și dosar",
         "h1Count": 1,
         "seeAlsoCards": 0,
         "programCluster": 0,
@@ -196,7 +196,7 @@
       "pass": true,
       "errors": [],
       "dom": {
-        "title": "Digitalizare IMM | ERP, CRM, cloud",
+        "title": "Digitalizare IMM 2026 - cheltuieli, eligibilitate și proiect",
         "h1Count": 1,
         "seeAlsoCards": 0,
         "programCluster": 0,
@@ -210,7 +210,7 @@
       "pass": true,
       "errors": [],
       "dom": {
-        "title": "Femeia Antreprenor 2026 | pregătire",
+        "title": "Femeia Antreprenor 2026 - eligibilitate, buget și dosar",
         "h1Count": 1,
         "seeAlsoCards": 0,
         "programCluster": 0,
@@ -224,7 +224,7 @@
       "pass": true,
       "errors": [],
       "dom": {
-        "title": "PRO INFRA | eficiență energetică",
+        "title": "PRO INFRA 2026 - energie, investiții și eligibilitate",
         "h1Count": 1,
         "seeAlsoCards": 0,
         "programCluster": 0,

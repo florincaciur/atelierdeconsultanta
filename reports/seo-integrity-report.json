@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-02T00:31:56.188Z",
+  "generatedAt": "2026-06-02T07:45:37.764Z",
   "root": "C:\\Users\\flori\\Documents\\GitHub\\atelierdeconsultanta",
   "summary": {
     "totalFiles": 167,
@@ -265,7 +265,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "AFIR autoconsum agroalimentar"
+            "AFIR autoconsum agroalimentar: finanțare pentru energie în sectorul agroalimentar"
           ]
         },
         "visibleFaqForSchema": {
@@ -282,7 +282,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1426,
+          "words": 1370,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -324,7 +324,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "AFIR autoconsum agroalimentar"
+            "AFIR autoconsum agroalimentar: finanțare pentru energie în sectorul agroalimentar"
           ]
         },
         "visibleFaqForSchema": {
@@ -341,7 +341,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1426,
+          "words": 1370,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -456,7 +456,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2741,
+          "words": 2579,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -498,7 +498,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Apeluri GAL: ce sunt și cum se verifică"
+            "Apeluri GAL - finanțări locale prin LEADER"
           ]
         },
         "visibleFaqForSchema": {
@@ -515,7 +515,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1827,
+          "words": 1806,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -558,7 +558,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Autoconsum public fotovoltaice pentru instituții publice"
+            "Autoconsum public: fotovoltaice pentru institutii publice"
           ]
         },
         "visibleFaqForSchema": {
@@ -575,7 +575,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1681,
+          "words": 1465,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -618,7 +618,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Autoconsum public fotovoltaice pentru instituții publice"
+            "Autoconsum public: fotovoltaice pentru institutii publice"
           ]
         },
         "visibleFaqForSchema": {
@@ -635,7 +635,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1681,
+          "words": 1465,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -734,7 +734,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "AFIR fotovoltaice pentru ferme: autoconsum și verificări"
+            "AFIR Fotovoltaice Ferme 2026 - ghid prudent pentru verificare si pregatire"
           ]
         },
         "visibleFaqForSchema": {
@@ -751,7 +751,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 1160,
+          "words": 1068,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -970,7 +970,7 @@
         "visibleFaqForSchema": {
           "status": "pass",
           "required": true,
-          "count": 8,
+          "count": 5,
           "threshold": 4
         },
         "speakableSchemaCoverage": {
@@ -981,7 +981,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2665,
+          "words": 2151,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -1080,7 +1080,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Calendar fonduri europene: pregătire fără grabă"
+            "Calendar fonduri europene"
           ]
         },
         "visibleFaqForSchema": {
@@ -1097,7 +1097,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1706,
+          "words": 1417,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -1139,7 +1139,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Când merită să lucrezi cu un consultant pentru fonduri europene"
+            "Când merită să lucrezi cu un consultant pentru fonduri europene și când nu?"
           ]
         },
         "visibleFaqForSchema": {
@@ -1155,7 +1155,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 720,
+          "words": 708,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -1197,7 +1197,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Cât costă consultanța pentru fonduri europene"
+            "Cât costă consultanța pentru fonduri europene și ce ar trebui să includă?"
           ]
         },
         "visibleFaqForSchema": {
@@ -1213,7 +1213,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 670,
+          "words": 664,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -1328,7 +1328,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1565,
+          "words": 1494,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -1370,7 +1370,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Ce acte sunt necesare pentru fonduri europene?"
+            "Ce acte sunt necesare pentru fonduri europene în 2026?"
           ]
         },
         "visibleFaqForSchema": {
@@ -1386,7 +1386,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 747,
+          "words": 614,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -1444,7 +1444,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 598,
+          "words": 577,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -1730,7 +1730,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1632,
+          "words": 1591,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -1845,7 +1845,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1602,
+          "words": 1535,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -1943,7 +1943,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Consultanță fonduri europene București"
+            "Consultanta fonduri europene Bucuresti"
           ]
         },
         "visibleFaqForSchema": {
@@ -1960,7 +1960,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1363,
+          "words": 1347,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -2170,7 +2170,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Consultanță pentru fonduri europene"
+            "Consultanță pentru Fonduri Europene"
           ]
         },
         "visibleFaqForSchema": {
@@ -2187,7 +2187,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2347,
+          "words": 2239,
           "threshold": 1800
         },
         "relatedLinks": {
@@ -2302,7 +2302,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1681,
+          "words": 1503,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -2361,7 +2361,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1900,
+          "words": 1814,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -2571,7 +2571,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Contact FABER"
+            "Contactează-ne"
           ]
         },
         "visibleFaqForSchema": {
@@ -2588,13 +2588,13 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 596,
+          "words": 432,
           "threshold": 2000
         },
         "relatedLinks": {
           "status": "pass",
           "required": false,
-          "count": 5,
+          "count": 3,
           "note": "not a hub/blog page"
         }
       }
@@ -2704,7 +2704,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1533,
+          "words": 1462,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -2805,7 +2805,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Cum se calculează cofinanțarea la fonduri europene"
+            "Cum se calculează cofinanțarea la un proiect cu fonduri europene?"
           ]
         },
         "visibleFaqForSchema": {
@@ -2821,7 +2821,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 647,
+          "words": 639,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -2863,7 +2863,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Cum se verifică eligibilitatea pentru fonduri europene"
+            "Cum verifici eligibilitatea pentru fonduri europene înainte să pregătești dosarul?"
           ]
         },
         "visibleFaqForSchema": {
@@ -2879,7 +2879,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 719,
+          "words": 606,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -2921,7 +2921,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Despre FABER - Atelier de Consultanță"
+            "Despre FABER"
           ]
         },
         "visibleFaqForSchema": {
@@ -2938,7 +2938,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 1472,
+          "words": 1258,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -2981,7 +2981,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "ERP, CRM și cloud în proiectele de digitalizare IMM"
+            "Digitalizare IMM: cum justifici ERP, CRM, cloud și echipamente IT într-un proiect"
           ]
         },
         "visibleFaqForSchema": {
@@ -2997,7 +2997,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 644,
+          "words": 631,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -3112,7 +3112,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1580,
+          "words": 1526,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -3154,7 +3154,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Digitalizare IMM: ERP, CRM, cloud și securitate"
+            "Digitalizare IMM: eligibilitate, cheltuieli și buget pentru proiect"
           ]
         },
         "visibleFaqForSchema": {
@@ -3171,13 +3171,13 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1765,
+          "words": 1684,
           "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
           "required": true,
-          "count": 2
+          "count": 1
         }
       }
     },
@@ -3213,7 +3213,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Digitalizare IMM: ERP, CRM, cloud și securitate"
+            "Digitalizare IMM: eligibilitate, cheltuieli și buget pentru proiect"
           ]
         },
         "visibleFaqForSchema": {
@@ -3230,13 +3230,13 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2008,
+          "words": 1684,
           "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
           "required": true,
-          "count": 2
+          "count": 1
         }
       }
     },
@@ -3331,7 +3331,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "DR14 AFIR: condiții, eligibilitate și greșeli frecvente"
+            "DR 14 AFIR: condiții, eligibilitate și greșeli frecvente"
           ]
         },
         "visibleFaqForSchema": {
@@ -3348,7 +3348,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 1465,
+          "words": 1302,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -3522,7 +3522,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2120,
+          "words": 2025,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -3623,7 +3623,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "DR14 AFIR ferme mici: checklist și greșeli frecvente"
+            "DR14 AFIR pentru ferme mici: eligibilitate, documente și pregătire"
           ]
         },
         "visibleFaqForSchema": {
@@ -3640,7 +3640,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2076,
+          "words": 1739,
           "threshold": 1700
         },
         "relatedLinks": {
@@ -3682,7 +3682,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "DR14 AFIR ferme mici: checklist și greșeli frecvente"
+            "DR14 AFIR pentru ferme mici: eligibilitate, documente și pregătire"
           ]
         },
         "visibleFaqForSchema": {
@@ -3699,7 +3699,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2076,
+          "words": 1739,
           "threshold": 1700
         },
         "relatedLinks": {
@@ -3741,13 +3741,13 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "DR14 AFIR pentru ferme mici"
+            "DR 14 AFIR pentru ferme mici: condiții, cheltuieli și pregătirea dosarului"
           ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
           "required": true,
-          "count": 12,
+          "count": 10,
           "threshold": 10
         },
         "speakableSchemaCoverage": {
@@ -3758,13 +3758,13 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2262,
+          "words": 1850,
           "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
           "required": false,
-          "count": 3,
+          "count": 2,
           "note": "not a hub/blog page"
         }
       }
@@ -3801,13 +3801,13 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "DR14 AFIR pentru ferme mici"
+            "DR 14 AFIR pentru ferme mici: condiții, cheltuieli și pregătirea dosarului"
           ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
           "required": true,
-          "count": 12,
+          "count": 10,
           "threshold": 10
         },
         "speakableSchemaCoverage": {
@@ -3818,13 +3818,13 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2262,
+          "words": 1850,
           "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
           "required": false,
-          "count": 3,
+          "count": 2,
           "note": "not a hub/blog page"
         }
       }
@@ -3861,7 +3861,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "e-MOVE: stații de încărcare și mobilitate electrică"
+            "e-MOVE RO: statii de încărcare, energie regenerabilă și pregătirea dosarului"
           ]
         },
         "visibleFaqForSchema": {
@@ -3878,7 +3878,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1485,
+          "words": 1357,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -3977,7 +3977,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Eligibilitate fonduri europene: administrativ, tehnic și punctaj"
+            "Eligibilitate fonduri europene"
           ]
         },
         "visibleFaqForSchema": {
@@ -3994,7 +3994,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1716,
+          "words": 1448,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -4053,7 +4053,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 1384,
+          "words": 1277,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -4095,7 +4095,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Femeia Antreprenor 2026: eligibilitate și pregătire"
+            "Femeia Antreprenor 2026: condiții, cheltuieli și pasi pentru dosar"
           ]
         },
         "visibleFaqForSchema": {
@@ -4112,7 +4112,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1941,
+          "words": 1700,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -4155,7 +4155,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Femeia Antreprenor 2026: eligibilitate și pregătire"
+            "Femeia Antreprenor 2026: condiții, cheltuieli și pasi pentru dosar"
           ]
         },
         "visibleFaqForSchema": {
@@ -4172,7 +4172,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2024,
+          "words": 1700,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -4288,7 +4288,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1454,
+          "words": 1398,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -4403,7 +4403,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1618,
+          "words": 1577,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -4462,7 +4462,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1769,
+          "words": 1555,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -4521,7 +4521,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1769,
+          "words": 1555,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -4636,7 +4636,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1752,
+          "words": 1434,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -4695,7 +4695,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1817,
+          "words": 1610,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -4755,7 +4755,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1817,
+          "words": 1610,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -4871,7 +4871,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1303,
+          "words": 1301,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -4969,7 +4969,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Fonduri europene București"
+            "Fonduri europene Bucuresti"
           ]
         },
         "visibleFaqForSchema": {
@@ -4986,7 +4986,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1356,
+          "words": 1342,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -5045,7 +5045,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1330,
+          "words": 1327,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -5087,7 +5087,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Fonduri europene pentru CAEN 4321 - instalații electrice"
+            "Fonduri europene pentru CAEN 4321 - instalatii electrice"
           ]
         },
         "visibleFaqForSchema": {
@@ -5104,7 +5104,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1344,
+          "words": 1336,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -5146,7 +5146,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Fonduri europene pentru CAEN 5610 - restaurante și servicii alimentare"
+            "Fonduri europene pentru CAEN 5610 - restaurante si servicii alimentare"
           ]
         },
         "visibleFaqForSchema": {
@@ -5163,7 +5163,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1351,
+          "words": 1344,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -5222,7 +5222,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1326,
+          "words": 1323,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -5337,7 +5337,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1252,
+          "words": 1243,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -5452,7 +5452,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1784,
+          "words": 1481,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -5735,7 +5735,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1476,
+          "words": 1389,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -5833,7 +5833,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Fonduri europene nerambursabile 2026"
+            "Fonduri europene nerambursabile 2026: programe, eligibilitate și pasi"
           ]
         },
         "visibleFaqForSchema": {
@@ -5850,7 +5850,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2074,
+          "words": 1721,
           "threshold": 1500
         },
         "relatedLinks": {
@@ -5892,7 +5892,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Fonduri europene Nord-Est: Iași, Suceava, Bacău, Botoșani, Neamț, Vaslui"
+            "Fonduri europene Nord-Est"
           ]
         },
         "visibleFaqForSchema": {
@@ -5909,7 +5909,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1557,
+          "words": 1337,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -6063,7 +6063,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Fonduri europene: programe, eligibilitate și ghiduri"
+            "Fonduri europene în Romania"
           ]
         },
         "visibleFaqForSchema": {
@@ -6080,13 +6080,13 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1755,
+          "words": 1397,
           "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
           "required": true,
-          "count": 2
+          "count": 1
         }
       }
     },
@@ -6178,7 +6178,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Fonduri nerambursabile: grant, cofinanțare și obligații"
+            "Fonduri nerambursabile"
           ]
         },
         "visibleFaqForSchema": {
@@ -6195,7 +6195,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1313,
+          "words": 1231,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -6310,7 +6310,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1582,
+          "words": 1503,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -6425,7 +6425,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1584,
+          "words": 1503,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -6467,7 +6467,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "GAL-AFIR: proiecte LEADER publice și private"
+            "GAL-AFIR: apeluri LEADER pentru beneficiari publici și privați"
           ]
         },
         "visibleFaqForSchema": {
@@ -6484,7 +6484,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1474,
+          "words": 1423,
           "threshold": 1400
         },
         "relatedLinks": {
@@ -6542,7 +6542,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 691,
+          "words": 674,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -6641,7 +6641,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Ghiduri și resurse pentru fonduri europene"
+            "Ghiduri pentru fonduri europene"
           ]
         },
         "visibleFaqForSchema": {
@@ -6658,7 +6658,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2227,
+          "words": 2010,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -6716,7 +6716,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 981,
+          "words": 811,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -6862,7 +6862,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1665,
+          "words": 1471,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -6977,7 +6977,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1488,
+          "words": 1415,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -7036,7 +7036,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 1482,
+          "words": 1497,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -7078,7 +7078,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Consultanță fonduri europene cu eligibilitate verificată"
+            "Consultanță Fonduri Europene și Finanțări Nerambursabile"
           ]
         },
         "visibleFaqForSchema": {
@@ -7095,7 +7095,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 1956,
+          "words": 1749,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -7154,7 +7154,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1180,
+          "words": 1165,
           "threshold": 900
         },
         "relatedLinks": {
@@ -7270,7 +7270,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1655,
+          "words": 1400,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -7312,7 +7312,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Raspuns rapid: Ce cheltuieli sunt eligibile la Digitalizare IMM?"
+            "Ce cheltuieli sunt eligibile la Digitalizare IMM?"
           ]
         },
         "visibleFaqForSchema": {
@@ -7329,7 +7329,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1351,
+          "words": 1322,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -7371,7 +7371,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Raspuns rapid: Ce documente sunt necesare pentru DR12?"
+            "Ce documente sunt necesare pentru DR12?"
           ]
         },
         "visibleFaqForSchema": {
@@ -7388,7 +7388,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1370,
+          "words": 1340,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -7431,7 +7431,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Raspuns rapid: Cum se calculeaza cofinanțarea la fonduri europene?"
+            "Cum se calculeaza cofinantarea la fonduri europene?"
           ]
         },
         "visibleFaqForSchema": {
@@ -7448,7 +7448,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1343,
+          "words": 1311,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -7507,7 +7507,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1610,
+          "words": 1585,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -7567,7 +7567,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1693,
+          "words": 1585,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -7627,7 +7627,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 1098,
+          "words": 903,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -7670,7 +7670,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "PNRR Digitalizare IMM: cheltuieli eligibile"
+            "PNRR Digitalizare IMM: ce poți cumpăra prin finanțare"
           ]
         },
         "visibleFaqForSchema": {
@@ -7687,7 +7687,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 1511,
+          "words": 1431,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -7897,7 +7897,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "PNRR: apeluri, digitalizare și reguli specifice"
+            "PNRR pentru IMM-uri și proiecte de digitalizare"
           ]
         },
         "visibleFaqForSchema": {
@@ -7914,13 +7914,13 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1485,
+          "words": 1205,
           "threshold": 1100
         },
         "relatedLinks": {
           "status": "pass",
           "required": true,
-          "count": 2
+          "count": 1
         }
       }
     },
@@ -7972,7 +7972,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 852,
+          "words": 835,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -8015,7 +8015,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "POR ADR Nord-Est pentru microîntreprinderi"
+            "Investiții pentru modernizarea microintreprinderilor în Nord-Est"
           ]
         },
         "visibleFaqForSchema": {
@@ -8032,7 +8032,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1820,
+          "words": 1550,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -8075,7 +8075,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "POR ADR Nord-Est pentru microîntreprinderi"
+            "Investiții pentru modernizarea microintreprinderilor în Nord-Est"
           ]
         },
         "visibleFaqForSchema": {
@@ -8092,7 +8092,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1902,
+          "words": 1550,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -8152,7 +8152,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 969,
+          "words": 914,
           "threshold": 900
         },
         "relatedLinks": {
@@ -8195,7 +8195,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "PRO INFRA: eficiență energetică și echipamente"
+            "PRO INFRA 2026: investiții, energie și pregătirea dosarului"
           ]
         },
         "visibleFaqForSchema": {
@@ -8212,7 +8212,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2012,
+          "words": 1743,
           "threshold": 1500
         },
         "relatedLinks": {
@@ -8255,7 +8255,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "PRO INFRA: eficiență energetică și echipamente"
+            "PRO INFRA 2026: investiții, energie și pregătirea dosarului"
           ]
         },
         "visibleFaqForSchema": {
@@ -8272,7 +8272,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2120,
+          "words": 1743,
           "threshold": 1500
         },
         "relatedLinks": {
@@ -8332,7 +8332,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1169,
+          "words": 1142,
           "threshold": 900
         },
         "relatedLinks": {
@@ -8448,7 +8448,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1811,
+          "words": 1726,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -8734,7 +8734,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1836,
+          "words": 1741,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -8967,7 +8967,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2083,
+          "words": 1978,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -9193,7 +9193,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1774,
+          "words": 1563,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -9308,7 +9308,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 970,
+          "words": 919,
           "threshold": 900
         },
         "relatedLinks": {
@@ -9350,7 +9350,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Surse oficiale pentru fonduri europene și finanțări nerambursabile"
+            "Surse oficiale pentru fonduri europene si finantari nerambursabile"
           ]
         },
         "visibleFaqForSchema": {
@@ -9367,7 +9367,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 921,
+          "words": 729,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -9425,7 +9425,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 949,
+          "words": 932,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -9541,7 +9541,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1073,
+          "words": 936,
           "threshold": 900
         },
         "relatedLinks": {
@@ -9584,7 +9584,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Verificare eligibilitate pentru fonduri europene"
+            "Verificare eligibilitate fonduri europene"
           ]
         },
         "visibleFaqForSchema": {
@@ -9601,7 +9601,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1620,
+          "words": 1301,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -9660,7 +9660,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1066,
+          "words": 1058,
           "threshold": 900
         },
         "relatedLinks": {
