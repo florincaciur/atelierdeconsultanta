@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-02T09:17:57.248Z",
+  "generatedAt": "2026-06-02T12:04:05.093Z",
   "root": "C:\\Users\\flori\\Documents\\GitHub\\atelierdeconsultanta",
   "summary": {
     "totalFiles": 167,
@@ -7490,14 +7490,14 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Investiții pentru modernizarea microintreprinderilor - Apel 2"
+            "Modernizarea microîntreprinderilor - Apel 2 Nord-Est"
           ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
           "required": true,
-          "count": 10,
-          "threshold": 10
+          "count": 8,
+          "threshold": 8
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -7507,8 +7507,8 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1585,
-          "threshold": 1200
+          "words": 1114,
+          "threshold": 1100
         },
         "relatedLinks": {
           "status": "pass",
@@ -7550,14 +7550,14 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Investiții pentru modernizarea microintreprinderilor - Apel 2"
+            "Modernizarea microîntreprinderilor - Apel 2 Nord-Est"
           ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
           "required": true,
-          "count": 10,
-          "threshold": 10
+          "count": 8,
+          "threshold": 8
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -7567,8 +7567,8 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1585,
-          "threshold": 1200
+          "words": 1197,
+          "threshold": 1100
         },
         "relatedLinks": {
           "status": "pass",
@@ -8015,7 +8015,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Investiții pentru modernizarea microintreprinderilor în Nord-Est"
+            "POR ADR Nord-Est pentru microîntreprinderi - Apel 2"
           ]
         },
         "visibleFaqForSchema": {
@@ -8032,7 +8032,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1550,
+          "words": 1115,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -8075,7 +8075,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Investiții pentru modernizarea microintreprinderilor în Nord-Est"
+            "POR ADR Nord-Est pentru microîntreprinderi - Apel 2"
           ]
         },
         "visibleFaqForSchema": {
@@ -8092,7 +8092,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1550,
+          "words": 1197,
           "threshold": 1100
         },
         "relatedLinks": {
