@@ -88,8 +88,17 @@
   border: 1px solid rgba(232, 100, 42, .28);
   background: #fff7ed;
   border-radius: var(--radius-sm, 8px);
+  color: var(--text-main, #1a2540);
   padding: 18px;
   margin-top: 22px;
+}
+
+.newsletter-box strong {
+  color: var(--navy, #0d1f3c);
+}
+
+.newsletter-box p {
+  color: var(--text-soft, #4a5568);
 }
 
 @media (max-width: 760px) {

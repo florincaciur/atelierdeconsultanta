@@ -175,6 +175,44 @@
   color:#fff;
 }
 
+.cta-box :is(h1,h2,h3,h4,p,li,strong,em,span),
+.next-step-box :is(h1,h2,h3,h4,p,li,strong,em,span),
+.inline-cta :is(h1,h2,h3,h4,p,li,strong,em,span),
+.final-cta :is(h1,h2,h3,h4,p,li,strong,em,span),
+.dark-cta :is(h1,h2,h3,h4,p,li,strong,em,span){
+  color:#fff !important;
+  opacity:1;
+}
+
+.cta-box a:not(.btn):not(.btn-primary):not(.btn-secondary):not(.btn-cta),
+.next-step-box a:not(.btn):not(.btn-primary):not(.btn-secondary):not(.btn-cta),
+.inline-cta a:not(.btn):not(.btn-primary):not(.btn-secondary):not(.btn-cta),
+.final-cta a:not(.btn):not(.btn-primary):not(.btn-secondary):not(.btn-cta),
+.dark-cta a:not(.btn):not(.btn-primary):not(.btn-secondary):not(.btn-cta){
+  color:#fff !important;
+  text-decoration:underline;
+  text-underline-offset:3px;
+}
+
+.sidebar-cta{
+  background:linear-gradient(135deg,var(--design-navy),#183a69) !important;
+  color:#fff !important;
+}
+
+.sidebar-cta :is(h1,h2,h3,h4,p,li,strong,em,span){
+  color:#fff !important;
+  opacity:1;
+}
+
+.sidebar-cta a:not(.btn):not(.btn-primary):not(.btn-secondary):not(.btn-cta){
+  background:#fff;
+  color:var(--design-navy) !important;
+}
+
+.sidebar-cta a:not(.btn):not(.btn-primary):not(.btn-secondary):not(.btn-cta) :is(span,strong,em){
+  color:inherit !important;
+}
+
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
