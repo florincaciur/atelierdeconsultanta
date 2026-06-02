@@ -1,0 +1,136 @@
+.seo-plan-block {
+  background: #ffffff;
+  border-bottom: 1px solid #e8edf5;
+  border-top: 1px solid #e8edf5;
+  color: #1a2540;
+  padding: 34px 20px;
+}
+
+.seo-plan-block__inner {
+  margin: 0 auto;
+  max-width: 1100px;
+}
+
+.seo-plan-block__eyebrow {
+  color: #b84716;
+  font-size: .78rem;
+  font-weight: 900;
+  letter-spacing: 0;
+  margin: 0 0 10px;
+  text-transform: uppercase;
+}
+
+.seo-plan-block h2 {
+  color: #0d1f3c;
+  font-size: clamp(1.55rem, 2.2vw, 2.1rem);
+  line-height: 1.2;
+  margin: 0 0 12px;
+}
+
+.seo-plan-block__intro {
+  color: #52617a;
+  font-size: 1rem;
+  line-height: 1.7;
+  margin: 0 0 22px;
+  max-width: 850px;
+}
+
+.seo-plan-block__grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 0 0 22px;
+}
+
+.seo-plan-card {
+  background: #f8f9fb;
+  border: 1px solid #e8edf5;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.seo-plan-card h3 {
+  color: #0d1f3c;
+  font-size: 1rem;
+  line-height: 1.35;
+  margin: 0 0 8px;
+}
+
+.seo-plan-card p {
+  color: #52617a;
+  font-size: .93rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.seo-plan-block__checklist {
+  background: #fff7f3;
+  border: 1px solid #f0d4c5;
+  border-radius: 8px;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  list-style: none;
+  margin: 0 0 22px;
+  padding: 16px;
+}
+
+.seo-plan-block__checklist li {
+  color: #1a2540;
+  font-size: .94rem;
+  line-height: 1.55;
+  padding-left: 22px;
+  position: relative;
+}
+
+.seo-plan-block__checklist li::before {
+  color: #b84716;
+  content: ">";
+  font-weight: 900;
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+.seo-plan-block__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.seo-plan-block__links a {
+  align-items: center;
+  background: #0d1f3c;
+  border-radius: 8px;
+  color: #ffffff;
+  display: inline-flex;
+  font-weight: 800;
+  min-height: 42px;
+  padding: 10px 14px;
+  text-decoration: none;
+}
+
+.seo-plan-block__links a:nth-child(2n) {
+  background: #b84716;
+}
+
+@media (max-width: 760px) {
+  .seo-plan-block {
+    padding: 26px 16px;
+  }
+
+  .seo-plan-block__grid,
+  .seo-plan-block__checklist {
+    grid-template-columns: 1fr;
+  }
+
+  .seo-plan-block__links {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .seo-plan-block__links a {
+    justify-content: center;
+    width: 100%;
+  }
+}

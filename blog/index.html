@@ -1,23 +1,21 @@
-<!DOCTYPE html>
-<html lang="ro">
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!DOCTYPE html><html lang="ro"><head><script id="blog-query-cleanup">(function(){var p=new URLSearchParams(location.search);if(p.get("post")==="blog-1"){location.replace("/blog");}}());</script>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- SEO — hub default; JS suprascrie pentru articole individuale -->
-  <title id="page-title">Blog Fonduri Europene | FABER – Atelier de Consultanță</title>
-  <meta id="meta-description" name="description" content="Ghiduri despre fonduri europene 2026, AFIR, Start-Up Nation, Femeia Antreprenor, PNRR Digitalizare și Fondul de Modernizare." />
-  <meta id="meta-keywords" name="keywords" content="fonduri europene, consultanta fonduri europene, AFIR, start up nation 2026, femeia antreprenor, pnrr digitalizare, fondul de modernizare" />
-  <meta id="meta-og-title" property="og:title" content="Blog Fonduri Europene | FABER – Atelier de Consultanță" />
-  <meta id="meta-og-desc" property="og:description" content="Ghiduri despre fonduri europene 2026, AFIR, DR12, DR14, Start-Up Nation, Femeia Antreprenor, PNRR Digitalizare și energie." />
-  <meta id="meta-og-image" property="og:image" content="https://atelierdeconsultanta.ro/og-image.jpg" />
-  <meta property="og:type" content="website" />
-  <meta id="meta-og-url" property="og:url" content="https://atelierdeconsultanta.ro/blog" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="robots" content="index, follow" />
-  <link id="canonical" rel="canonical" href="https://atelierdeconsultanta.ro/blog" />
-  <link rel="icon" type="image/png" href="/favicon.png" />
+  <title id="page-title">Blog fonduri europene | FABER</title>
+  <meta id="meta-description" name="description" content="Articole FABER despre fonduri europene, AFIR, GAL, Start-Up Nation, digitalizare, energie, documente, cofinanțare și riscuri.">
+  <meta id="meta-keywords" name="keywords" content="fonduri europene, consultanta fonduri europene, AFIR, start up nation 2026, femeia antreprenor, pnrr digitalizare, fondul de modernizare">
+  <meta id="meta-og-title" property="og:title" content="Blog fonduri europene | FABER">
+  <meta id="meta-og-desc" property="og:description" content="Articole FABER despre fonduri europene, AFIR, GAL, Start-Up Nation, digitalizare, energie, documente, cofinanțare și riscuri.">
+  <meta id="meta-og-image" property="og:image" content="https://atelierdeconsultanta.ro/og-image.jpg">
+  <meta property="og:type" content="website">
+  <meta id="meta-og-url" property="og:url" content="https://atelierdeconsultanta.ro/blog">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="robots" content="index, follow">
+  <link id="canonical" rel="canonical" href="https://atelierdeconsultanta.ro/blog">
+  <link rel="icon" type="image/png" href="/favicon.png">
 
   <!-- Schema.org BlogPosting — completat dinamic; hub folosește Blog schema -->
   <script type="application/ld+json" id="ld-json">
@@ -81,9 +79,9 @@
   ]
 }</script>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -272,7 +270,7 @@
 
     /* ARTICLE VIEW */
     .post-hero {
-      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+      background: linear-gradient(135deg, rgba(13,31,60,.96) 0%, rgba(29,50,82,.9) 100%);
       padding: 80px 24px 60px; text-align: center;
     }
     .post-category {
@@ -298,6 +296,23 @@
       font-size: 0.82rem; color: rgba(255,255,255,.55);
     }
     .post-meta span { display: flex; align-items: center; gap: 5px; }
+    .article-toc {
+      border: 1px solid var(--gray-200);
+      border-left: 4px solid var(--orange);
+      border-radius: 8px;
+      background: var(--gray-100);
+      padding: 18px 20px;
+      margin: 0 0 28px;
+    }
+    .article-toc strong {
+      display: block;
+      color: var(--navy);
+      font-size: 0.78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+    .article-toc ul { margin: 0; padding-left: 18px; }
     .post-banner {
       max-width: 760px; margin: 0 auto;
       border-radius: var(--radius); overflow: hidden;
@@ -335,7 +350,7 @@
     .btn-primary,
     .btn-secondary {
       display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-      min-height: 44px; padding: 13px 28px; border-radius: 100px;
+      min-height: 46px; padding: 13px 28px; border-radius: 8px;
       border: 1px solid transparent; font-weight: 700; font-size: 0.9rem;
       text-decoration: none !important;
       transition: background .2s, border-color .2s, color .2s, transform .2s, box-shadow .2s;
@@ -375,7 +390,7 @@
       gap: 20px;
     }
     .related-card {
-      border: 1px solid var(--gray-200); border-radius: 12px;
+      border: 1px solid var(--gray-200); border-radius: 8px;
       padding: 20px; transition: box-shadow .2s, transform .2s; cursor: pointer;
     }
     .related-card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
@@ -410,6 +425,7 @@
     @media (max-width: 600px) {
       .hub-intro { padding: 28px 20px; }
       .post-body { padding: 28px 20px; }
+      .btn-primary, .btn-secondary { width: 100%; }
       .cta-box { padding: 28px 20px; }
     }
   </style>
@@ -420,21 +436,20 @@
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "wnvzyco6rq");
   </script>
-  <link rel="stylesheet" href="/assets/see-also.css" />
-  <link rel="stylesheet" href="/assets/design-profiles.css">
-</head>
-<body>
+  <link rel="stylesheet" href="/assets/see-also.css">
+<meta name="twitter:description" content="Articole FABER despre fonduri europene, AFIR, GAL, Start-Up Nation, digitalizare, energie, documente, cofinanțare și riscuri."><meta name="twitter:title" content="Blog fonduri europene | FABER">  <link rel="stylesheet" href="/assets/design-profiles.css">
+
+  <link rel="stylesheet" href="/assets/seo-plan-execution.css"></head>
+<body class="page-family-editorial">
 
   <!-- NAVBAR -->
   <nav class="navbar">
-    <a href="/" class="nav-logo" aria-label="FABER – Atelier de Consultanță, acasă">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 44" width="240" height="44" aria-hidden="true">
-        <text x="0" y="32" font-family="Georgia,'Times New Roman',serif" font-size="28" font-weight="700" fill="#b84716" letter-spacing="3">FABER</text>
-        <path d="M118,22 L125,13 L132,22 L125,31 Z" fill="white" opacity="0.95"></path>
-        <text x="138" y="18" font-family="'Inter','Helvetica Neue',sans-serif" font-size="10" font-weight="600" fill="white" letter-spacing="2">ATELIER de</text>
-        <text x="138" y="33" font-family="'Inter','Helvetica Neue',sans-serif" font-size="10" font-weight="600" fill="white" letter-spacing="2">CONSULTANȚĂ</text>
-      </svg>
-    </a>
+    <a class="navbar-brand" href="/" aria-label="FABER - Atelier de Consultanță, acasă"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 44" width="240" height="44" aria-hidden="true">
+          <text x="0" y="32" font-family="Georgia,'Times New Roman',serif" font-size="28" font-weight="700" fill="#b84716" letter-spacing="3">FABER</text>
+          <path d="M118,22 L125,13 L132,22 L125,31 Z" fill="white" opacity="0.95"></path>
+          <text x="138" y="18" font-family="'Inter','Helvetica Neue',sans-serif" font-size="10" font-weight="600" fill="white" letter-spacing="2">ATELIER de</text>
+          <text x="138" y="33" font-family="'Inter','Helvetica Neue',sans-serif" font-size="10" font-weight="600" fill="white" letter-spacing="2">CONSULTANȚĂ</text>
+        </svg></a>
     <a href="/" class="navbar-back">← Înapoi la pagina principală</a>
   </nav>
 
@@ -443,25 +458,29 @@
 
     <div class="hub-hero">
       <div class="hub-badge">Resurse gratuite</div>
-      <h1>Blog despre fonduri europene, finanțări nerambursabile și programe pentru antreprenori</h1>
-      <p>Ghiduri practice, analize si explicatii orientative despre fonduri europene, cu trimitere la verificarea ghidului activ inainte de orice decizie.</p>
+      <h1>Blog despre fonduri europene, finanțări nerambursabile și programe pentru beneficiari reali</h1>
+      <p>Ghiduri scrise prudent despre programe, documente, eligibilitate, cofinanțare și riscuri, cu verificarea regulilor în ghidul activ.</p>
+      <div class="hero-actions">
+        <a href="/verificare-eligibilitate-fonduri-europene" class="btn-primary">Verifică situația ta concretă</a>
+        <a href="/consultanta-fonduri-europene" class="btn-secondary">Vezi serviciul de consultanță</a>
+      </div>
     </div>
 
     <div class="hub-container">
       <!-- SEO CONTENT BLOCK -->
       <div class="hub-intro">
 
-        <div class="hub-summary"><p><strong>Pe scurt:</strong> blogul FABER explica programe, documente, eligibilitate, cofinantare si riscuri frecvente. Fiecare articol este orientativ si trebuie verificat cu ghidul oficial al apelului activ inainte de depunere.</p></div>
+        <div class="hub-summary"><p><strong>Pe scurt:</strong> blogul FABER explica programe, documente, eligibilitate, cofinanțare și riscuri frecvente. Fiecare articol este orientativ și trebuie verificat cu ghidul oficial al apelului activ înainte de depunere.</p></div>
 
-        <p>Accesarea fondurilor europene nerambursabile este, pentru mulți antreprenori, fermieri sau reprezentanți ai instituțiilor publice, un proces care pare complicat. Documentele necesare, criteriile de eligibilitate, termenele-limită, planul de afaceri, indicatorii de monitorizare — toate acestea pot descuraja înainte ca proiectul să ajungă să fie depus. Acest blog există tocmai pentru a simplifica informațiile și a le pune la dispoziția celor care vor să înțeleagă, pas cu pas, cum funcționează <a href="/">consultanța pentru fonduri europene</a>.</p>
+        <p>Accesarea fondurilor europene nerambursabile este, pentru mulți antreprenori, fermieri sau reprezentanți ai instituțiilor publice, un proces care pare complicat. Documentele necesare, criteriile de eligibilitate, termenele-limită, planul de afaceri, indicatorii de monitorizare — toate acestea pot descuraja înainte ca proiectul să ajungă să fie depus. Acest blog există tocmai pentru a simplifica informațiile și a le pune la dispoziția celor care vor să înțeleagă, pas cu pas, cum funcționează <a href="/consultanta-fonduri-europene">consultanța pentru fonduri europene</a>.</p>
 
-        <p>Articolele publicate aici sunt scrise de specialistii FABER - Atelier de Consultanta, cu experienta in pregatirea si implementarea proiectelor finantate din fonduri europene nerambursabile, AFIR, PNRR, POR si alte programe active in Romania. Separam informatia orientativa de regulile care trebuie confirmate in ghidul solicitantului, in apelurile active si in documentele oficiale publicate de autoritati.</p>
+        <p>Articolele publicate aici sunt scrise de specialistii FABER - Atelier de Consultanță, cu experienta în pregătirea și implementarea proiectelor finanțate din fonduri europene nerambursabile, AFIR, PNRR, POR și alte programe active în România. Separam informatia orientativă de regulile care trebuie confirmate în ghidul activ, în apelurile active și în documentele oficiale publicate de autoritati.</p>
 
         <h2>Ghiduri pentru fonduri europene nerambursabile</h2>
 
         <p>Fondurile europene nerambursabile 2026 sunt disponibile prin mai multe programe, fiecare cu reguli specifice de eligibilitate, cheltuieli acoperite și proceduri de depunere. Înainte de a decide că „vrei fonduri europene", cel mai important pas este să înțelegi dacă ești eligibil și care program se potrivește situației tale concrete: tipul de activitate, forma juridică, dimensiunea firmei sau fermei, județul în care activezi și tipul de investiție pe care o planifici.</p>
 
-        <p>În articolele din această secțiune vei găsi informații despre:</p>
+        <p>În articolele din această secțiune vei găși informații despre:</p>
         <ul>
           <li>Ce documente sunt necesare pentru un dosar de fonduri europene nerambursabile;</li>
           <li>Cum se verifică eligibilitatea înainte de depunere;</li>
@@ -470,11 +489,35 @@
           <li>Greșeli frecvente în dosare și cum le eviți.</li>
         </ul>
 
-        <p>Dacă vrei o verificare aplicată pe situația ta, <a href="/#contact">consultanții FABER</a> pot analiza informațiile de bază și pot indica ce trebuie clarificat înainte de pregătirea dosarului.</p>
+        <p>Dacă vrei o verificare aplicată pe situația ta, <a href="/verificare-eligibilitate-fonduri-europene">pagina de verificare a eligibilității</a> te ajută să trimiți informațiile de bază. Pentru proiecte care ajung la pregătire de dosar, continuarea firească este <a href="/consultanta-fonduri-europene">serviciul de consultanță fonduri europene</a>.</p>
+
+        <h2>Cum legăm articolele de o decizie de dosar</h2>
+        <p>Articolele din blog răspund la întrebări punctuale, dar nu ar trebui folosite ca singura bază pentru depunere. Pentru fiecare subiect, traseul util este: citești explicația, verifici sursa oficială, notezi documentele lipsă și apoi decizi dacă proiectul intră într-o analiză de eligibilitate sau într-un dosar complet.</p>
+        <ul>
+          <li><strong>Întrebări despre documente:</strong> pornesc de la <a href="/acte-necesare-fonduri-europene-nerambursabile">acte necesare pentru fonduri europene</a> și continuă cu verificarea situației solicitantului.</li>
+          <li><strong>Întrebări despre programe active sau estimate:</strong> se compară cu <a href="/calendar-fonduri-europene">calendarul de pregătire</a> și cu <a href="/surse-oficiale-fonduri-europene">sursele oficiale</a>.</li>
+          <li><strong>Întrebări despre dosar:</strong> trimit către <a href="/consultanta-fonduri-europene">consultanță fonduri europene</a>, unde contează documentele, bugetul și riscurile concrete.</li>
+        </ul>
+
+        <h2>Trasee interne utile din blog către servicii</h2>
+        <p>Blogul nu înlocuiește analiza proiectului. Rolul lui este să ducă cititorul de la o întrebare punctuală la pagina care poate clarifica următorul pas: verificare de eligibilitate, consultanță pentru fonduri europene sau o pagină de program.</p>
+        <div class="table-wrap">
+          <table class="program-table">
+            <thead>
+              <tr><th>Intenția cititorului</th><th>Articol sau hub util</th><th>Pas comercial potrivit</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>vrea să aleagă programul potrivit</td><td><a href="/cum-alegi-programul-potrivit-fonduri-europene-2026">cum alegi programul de fonduri europene</a></td><td><a href="/consultanta-fonduri-europene">consultanță fonduri europene</a></td></tr>
+              <tr><td>strânge actele pentru dosar</td><td><a href="/acte-necesare-fonduri-europene-nerambursabile">acte necesare pentru fonduri europene</a></td><td><a href="/verificare-eligibilitate-fonduri-europene">verificare eligibilitate</a></td></tr>
+              <tr><td>nu știe dacă poate aplica</td><td><a href="/cum-se-verifica-eligibilitatea-fonduri-europene">cum se verifică eligibilitatea</a></td><td><a href="/consultanta-fonduri-europene">analiză de consultanță</a></td></tr>
+              <tr><td>caută programe disponibile sau calendar</td><td><a href="/calendar-fonduri-europene">calendar fonduri europene</a> și <a href="/fonduri-europene">hub fonduri europene</a></td><td><a href="/surse-oficiale-fonduri-europene">surse oficiale</a></td></tr>
+            </tbody>
+          </table>
+        </div>
 
         <h2>Articole despre AFIR, DR12 și DR14</h2>
 
-      <p>Programele agricole administrate prin AFIR - in special <a href="/dr12-afir">DR 12</a> pentru tinerii fermieri si <a href="/dr14">DR 14</a> pentru fermele mici - pot avea plafoane, intensitati si cheltuieli eligibile diferite de la o sesiune la alta. Valoarea finala si tipurile de investitii se confirma in ghidul solicitantului activ la momentul analizei.</p>
+      <p>Programele agricole administrate prin AFIR - în special <a href="/dr12-afir">DR 12</a> pentru tinerii fermieri și <a href="/dr14">DR 14</a> pentru fermele mici - pot avea plafoane, intensitati și cheltuieli eligibile diferite de la o sesiune la alta. Valoarea finală și tipurile de investiții se confirma în ghidul activ activ la momentul analizei.</p>
 
         <p>Un element esențial pentru ambele programe este <strong>Standard Output-ul (SO)</strong> — dimensiunea economică a exploatației, calculată pe baza culturilor și a animalelor înregistrate. Dacă nu știi care este SO-ul fermei tale, poți folosi <a href="/calculator-soc">Calculatorul SO AFIR</a> disponibil gratuit pe site.</p>
 
@@ -484,7 +527,7 @@
 
         <p>Programele destinate antreprenorilor — <a href="/start-up-nation-2026">Start-Up Nation 2026</a>, <a href="/femeia-antreprenor-2026">Femeia Antreprenor 2026</a> și <a href="/digitalizare-imm">PNRR Digitalizare IMM</a> — se adresează unor categorii distincte de beneficiari și au reguli proprii de eligibilitate. Articolele publicate pe acest blog îți explică cum să alegi ideea de afacere potrivită, cum să pregătești planul de afaceri, ce cod CAEN trebuie să ai și ce documente sunt cerute frecvent.</p>
 
-        <p>Digitalizarea IMM-urilor este unul dintre domeniile cu cea mai mare dinamică în finanțările europene active în România. Dacă firma ta are nevoie de software ERP, CRM, soluții cloud, securitate cibernetică sau alte investiții digitale, există programe care pot acoperi o parte semnificativă din aceste costuri. <a href="/digitalizare-imm">Vezi detaliile programului Digitalizare IMM</a>.</p>
+        <p>Digitalizarea IMM-urilor este unul dintre domeniile cu cea mai mare dinamică în finanțările europene active în România. Dacă firmă ta are nevoie de software ERP, CRM, soluții cloud, securitate cibernetică sau alte investiții digitale, există programe care pot acoperi o parte semnificativă din aceste costuri. <a href="/digitalizare-imm">Vezi detaliile programului Digitalizare IMM</a>.</p>
 
         <p>Nu în ultimul rând, <a href="/fondul-de-modernizare">Fondul de Modernizare</a> și programele de eficiență energetică deschid oportunități pentru investiții în fotovoltaice, stocare energie și reducerea consumului, atât pentru firme private, cât și pentru entități publice.</p>
 
@@ -492,7 +535,7 @@
 
         <div class="faq-item">
           <p class="faq-q">Cine poate accesa fonduri europene nerambursabile în România?</p>
-          <p class="faq-a">Eligibilitatea depinde de program. IMM-urile, fermierii, tinerii antreprenori, femeile care conduc firme, entitățile publice și instituțiile de învățământ pot accesa finanțări diferite, fiecare cu criterii specifice. Înainte de orice, trebuie verificat ghidul solicitantului aferent programului de interes.</p>
+          <p class="faq-a">Eligibilitatea depinde de program. IMM-urile, fermierii, tinerii antreprenori, femeile care conduc firme, entitățile publice și instituțiile de învățământ pot accesa finanțări diferite, fiecare cu criterii specifice. Înainte de orice, trebuie verificat ghidul activ aferent programului de interes.</p>
         </div>
         <div class="faq-item">
           <p class="faq-q">Ce acte sunt necesare în general pentru un dosar de fonduri europene?</p>
@@ -512,7 +555,7 @@
         </div>
 
         <div style="margin-top: 32px; padding: 24px; background: var(--gray-100); border-radius: 12px; border-left: 4px solid var(--orange);">
-          <p><strong>Notă importantă:</strong> Informațiile din articolele acestui blog au scop orientativ. Condițiile exacte de eligibilitate, sumele disponibile și procedurile de depunere sunt stabilite în ghidul solicitantului aferent fiecărui apel activ. Înainte de depunere, verificați întotdeauna documentele oficiale publicate de autoritatea de management.</p>
+          <p><strong>Notă importantă:</strong> Informațiile din articolele acestui blog au scop orientativ. Condițiile exacte de eligibilitate, sumele disponibile și procedurile de depunere sunt stabilite în ghidul activ aferent fiecărui apel activ. Înainte de depunere, verificăți întotdeauna documentele oficiale publicate de autoritatea de management.</p>
         </div>
       </div>
 
@@ -637,7 +680,7 @@
       <div class="cta-box" style="margin-top: 48px;">
         <h3>Vrei să aplici la fonduri europene?</h3>
         <p>Echipa FABER te ajută să verifici eligibilitatea, să alegi programul potrivit și să pregătești documentele cu prudență. Concluzia depinde de ghidul apelului și de informațiile transmise.</p>
-        <a href="/#contact" class="btn-primary">Solicită verificare eligibilitate</a>
+        <a href="/verificare-eligibilitate-fonduri-europene" class="btn-primary">Solicită verificare eligibilitate</a>
       </div>
     </div>
   </div>
@@ -645,33 +688,73 @@
   <!-- ========================= LOADING STATE ========================= -->
   <div id="loading-state" class="post-loading" style="display:none">
     <div class="spinner"></div>
-    <p>Se încarcă articolul...</p>
+    <p>Articolul se pregătește pentru afișare.</p>
   </div>
 
   <!-- ========================= ARTICLE VIEW ========================= -->
   <main id="main-content" style="display:none">
     <div class="post-hero">
       <div class="post-category" id="post-category">Ghid</div>
-      <div class="post-icon" id="post-icon">📰</div>
-      <div class="post-title" id="post-title" role="heading" aria-level="1">Titlu articol</div>
-      <p class="post-excerpt" id="post-excerpt">Rezumat articol</p>
+      <div class="post-icon" id="post-icon">•</div>
+      <div class="post-title" id="post-title" role="heading" aria-level="1">Articol FABER</div>
+      <p class="post-excerpt" id="post-excerpt">Alege un articol din blog sau urmărește linkul canonic al ghidului.</p>
       <div class="post-meta">
-        <span>📅 <span id="post-date">—</span></span>
-        <span>⏱️ <span id="post-read-time">—</span> min citire</span>
-        <span>✍️ <span id="post-author">FABER Consultanță</span></span>
+        <span>📅 <span id="post-date"></span></span>
+        <span>⏱️ <span id="post-read-time"></span> min citire</span>
+        <span>✍️ <span id="post-author">FABER - Atelier de Consultanță</span></span>
+      </div>
+      <div class="hero-actions" style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:22px">
+        <a href="/contact" class="btn-primary">Verifică situatia ta concreta</a>
+        <a href="/surse-oficiale-fonduri-europene" class="btn-secondary">Vezi surse oficiale</a>
       </div>
     </div>
+  <section id="seo-plan-blog" class="seo-plan-block" aria-labelledby="seo-plan-blog-title">
+    <div class="seo-plan-block__inner">
+      <p class="seo-plan-block__eyebrow">Traseu din articol</p>
+      <h2 id="seo-plan-blog-title">De la explicație la verificarea proiectului</h2>
+      <p class="seo-plan-block__intro">Fiecare articol răspunde la o întrebare punctuală, apoi trimite către pagina de program, verificarea de eligibilitate sau serviciul de consultanță relevant.</p>
+      <div class="seo-plan-block__grid">
+        <article class="seo-plan-card"><h3>Articol suport</h3><p>Clarifică documente, eligibilitate, buget sau calendar fără să promită aprobare.</p></article>
+        <article class="seo-plan-card"><h3>Hub</h3><p>Blogul grupează articolele pe AFIR, IMM, Start-Up, PNRR, energie, documente și riscuri.</p></article>
+        <article class="seo-plan-card"><h3>Pas următor</h3><p>Cititorul ajunge la verificare sau consultanță doar când are date concrete de analizat.</p></article>
+      </div>
+      <ul class="seo-plan-block__checklist">
+        <li>Folosește articolul pentru orientare, nu ca bază unică de depunere.</li>
+        <li>Compară informația cu ghidul activ și cu sursele oficiale publicate.</li>
+        <li>Strânge datele despre solicitant, investiție, buget și documente.</li>
+        <li>Trimite proiectul către analiză doar după ce riscurile principale sunt clare.</li>
+      </ul>
+      <div class="seo-plan-block__links">
+        <a href="/verificare-eligibilitate-fonduri-europene">Verifică eligibilitatea proiectului</a>
+        <a href="/consultanta-fonduri-europene">Serviciul principal</a>
+        <a href="/ghiduri">Ghiduri</a>
+      </div>
+    </div>
+  </section>
+
+
+
 
     <div id="post-banner-wrap" style="display:none; max-width:760px; margin: 32px auto 0; padding: 0 24px;">
-      <img id="post-banner-img" src="" alt="" style="width:100%; border-radius: 16px; box-shadow: 0 10px 40px rgba(0,0,0,.15);" />
+      <img id="post-banner-img" src="" alt="" style="width:100%; border-radius: 16px; box-shadow: 0 10px 40px rgba(0,0,0,.15);">
     </div>
 
     <div class="post-container">
-      <div class="post-body" id="post-body"></div>
+      <div class="post-body">
+        <nav class="article-toc" aria-label="Cuprins articol">
+          <strong>Cuprins rapid</strong>
+          <ul>
+            <li><a href="#post-body">Articol</a></li>
+            <li><a href="#related-section">Articole conexe</a></li>
+            <li><a href="/contact">Verificare proiect</a></li>
+          </ul>
+        </nav>
+        <div id="post-body"></div>
+      </div>
       <div class="cta-box" style="margin-top:32px">
         <h3>Vrei să accesezi fonduri europene?</h3>
         <p>Trimite detaliile proiectului și îți spunem ce trebuie verificat înainte de o decizie de depunere. Nu promitem aprobare; clarificăm riscurile și pașii următori.</p>
-        <a href="/#contact" class="btn-primary">Trimite detaliile proiectului</a>
+        <a href="/verificare-eligibilitate-fonduri-europene" class="btn-primary">Trimite detaliile proiectului</a>
       </div>
     </div>
   <section class="vezi-si-section" aria-labelledby="vezi-si-title">
@@ -682,9 +765,9 @@
     <li class="see-also-card"><a href="/calendar-fonduri-europene"><span class="see-also-card-title">Calendar fonduri europene</span><span class="see-also-card-text">Urmărește programele și pregătește documentele înainte de apel.</span></a></li>
     <li class="see-also-card"><a href="/consultanta-pnrr-digitalizare"><span class="see-also-card-title">Consultanță PNRR și digitalizare</span><span class="see-also-card-text">Sprijin pentru proiecte PNRR, digitalizare IMM și bugete IT.</span></a></li>
     <li class="see-also-card"><a href="/start-up-nation-2026"><span class="see-also-card-title">Start-Up Nation</span><span class="see-also-card-text">Condiții, cheltuieli, idei și pași pentru Start-Up Nation.</span></a></li>
-    <li class="see-also-card"><a href="/metodologie-verificare-eligibilitate"><span class="see-also-card-title">Metodologie eligibilitate</span><span class="see-also-card-text">Cum verificam solicitantul, CAEN-ul, punctajul, cofinantarea si riscurile.</span></a></li>
-    <li class="see-also-card"><a href="/surse-oficiale-fonduri-europene"><span class="see-also-card-title">Surse oficiale</span><span class="see-also-card-text">AFIR, MIPE, ADR Nord-Est, PNRR si alte institutii verificate inainte de recomandari.</span></a></li>
-    <li class="see-also-card"><a href="/glosar-fonduri-europene"><span class="see-also-card-title">Glosar fonduri europene</span><span class="see-also-card-text">Definitii scurte pentru termenii folositi in ghiduri si grile de evaluare.</span></a></li>
+    <li class="see-also-card"><a href="/metodologie-verificare-eligibilitate"><span class="see-also-card-title">Metodologie eligibilitate</span><span class="see-also-card-text">Cum verificam solicitantul, CAEN-ul, punctajul, cofinanțarea și riscurile.</span></a></li>
+    <li class="see-also-card"><a href="/surse-oficiale-fonduri-europene"><span class="see-also-card-title">Surse oficiale</span><span class="see-also-card-text">AFIR, MIPE, ADR Nord-Est, PNRR și alte institutii verificate înainte de recomandari.</span></a></li>
+    <li class="see-also-card"><a href="/glosar-fonduri-europene"><span class="see-also-card-title">Glosar fonduri europene</span><span class="see-also-card-text">Definitii scurte pentru termenii folositi în ghiduri și grile de evaluare.</span></a></li>
   </ul>
   </section>
 
@@ -906,5 +989,8 @@
   }
   </script>
 
-</body>
-</html>
+
+
+
+
+</body></html>
