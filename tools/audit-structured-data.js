@@ -10,7 +10,8 @@ const ROOT = path.resolve(__dirname, "..");
 const REPORT_PATH = path.join(ROOT, "reports", "structured-data-audit.json");
 const EXCLUDED_DIRS = new Set([".git", ".github", ".wrangler", "dist", "node_modules", "reports"]);
 const RATING_TYPES = new Set(["AggregateRating"]);
-const TODAY = new Date();
+const AUDIT_TODAY = process.env.STRUCTURED_DATA_AUDIT_TODAY || new Date().toISOString().slice(0, 10);
+const TODAY = new Date(`${AUDIT_TODAY}T23:59:59Z`);
 
 function toPosix(value) {
   return value.split(path.sep).join("/");
