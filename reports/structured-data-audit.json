@@ -1,37 +1,37 @@
 {
-  "generatedAt": "2026-05-26T16:42:15.265Z",
+  "generatedAt": "2026-06-02T00:32:02.914Z",
   "summary": {
-    "filesChecked": 164,
-    "filesWithStructuredData": 95,
+    "filesChecked": 167,
+    "filesWithStructuredData": 108,
     "filesWithIssues": 0,
     "types": {
-      "Organization": 275,
-      "ImageObject": 89,
-      "Country": 69,
-      "ContactPoint": 132,
-      "WebSite": 69,
-      "WebPage": 87,
-      "CreativeWork": 136,
-      "BreadcrumbList": 77,
-      "ListItem": 180,
-      "FAQPage": 79,
-      "Question": 521,
-      "Answer": 521,
-      "Article": 65,
-      "GovernmentService": 15,
-      "BlogPosting": 21,
+      "Organization": 326,
+      "ImageObject": 101,
+      "Country": 88,
+      "ContactPoint": 170,
+      "WebSite": 88,
+      "WebPage": 99,
+      "CreativeWork": 178,
+      "BreadcrumbList": 96,
+      "ListItem": 219,
+      "FAQPage": 97,
+      "Question": 693,
+      "Answer": 693,
+      "Article": 83,
+      "GovernmentService": 37,
+      "BlogPosting": 15,
       "Blog": 1,
       "WebApplication": 2,
       "Offer": 2,
       "Service": 10,
       "ContactPage": 1,
       "AboutPage": 1,
-      "Audience": 6,
-      "CommunicateAction": 2,
+      "Audience": 24,
+      "CommunicateAction": 8,
       "LegalService": 3,
       "CollectionPage": 7,
       "DefinedTermSet": 1,
-      "DefinedTerm": 23,
+      "DefinedTerm": 28,
       "CreativeWorkSeries": 1,
       "ItemList": 1
     }
@@ -45,8 +45,22 @@
     },
     {
       "file": "acte-necesare-fonduri-europene-nerambursabile.html",
-      "blocks": 0,
-      "types": {},
+      "blocks": 1,
+      "types": {
+        "Organization": 3,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 2,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 5,
+        "Answer": 5,
+        "Article": 1
+      },
       "issues": []
     },
     {
@@ -77,8 +91,23 @@
     },
     {
       "file": "afir-autoconsum-agroalimentar.html",
-      "blocks": 0,
-      "types": {},
+      "blocks": 1,
+      "types": {
+        "Organization": 3,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 2,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 8,
+        "Answer": 8,
+        "Article": 1,
+        "GovernmentService": 1
+      },
       "issues": []
     },
     {
@@ -122,8 +151,8 @@
         "BreadcrumbList": 1,
         "ListItem": 2,
         "FAQPage": 1,
-        "Question": 9,
-        "Answer": 9,
+        "Question": 13,
+        "Answer": 13,
         "Article": 1
       },
       "issues": []
@@ -151,8 +180,23 @@
     },
     {
       "file": "autoconsum-public-fotovoltaice-institutii-publice.html",
-      "blocks": 0,
-      "types": {},
+      "blocks": 1,
+      "types": {
+        "Organization": 3,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 2,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 8,
+        "Answer": 8,
+        "Article": 1,
+        "GovernmentService": 1
+      },
       "issues": []
     },
     {
@@ -218,13 +262,8 @@
     },
     {
       "file": "calculator-so-afir.html",
-      "blocks": 1,
-      "types": {
-        "BlogPosting": 1,
-        "Organization": 2,
-        "ImageObject": 1,
-        "WebPage": 1
-      },
+      "blocks": 0,
+      "types": {},
       "issues": []
     },
     {
@@ -344,13 +383,8 @@
     },
     {
       "file": "cheltuieli-eligibile-startup-nation.html",
-      "blocks": 1,
-      "types": {
-        "BlogPosting": 1,
-        "Organization": 2,
-        "ImageObject": 1,
-        "WebPage": 1
-      },
+      "blocks": 0,
+      "types": {},
       "issues": []
     },
     {
@@ -375,13 +409,8 @@
     },
     {
       "file": "cod-caen-startup-nation.html",
-      "blocks": 1,
-      "types": {
-        "BlogPosting": 1,
-        "Organization": 2,
-        "ImageObject": 1,
-        "WebPage": 1
-      },
+      "blocks": 0,
+      "types": {},
       "issues": []
     },
     {
@@ -446,8 +475,21 @@
     },
     {
       "file": "consultanta-fonduri-europene-bucuresti/index.html",
-      "blocks": 0,
-      "types": {},
+      "blocks": 1,
+      "types": {
+        "Organization": 1,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "Article": 1,
+        "FAQPage": 1,
+        "Question": 6,
+        "Answer": 6
+      },
       "issues": []
     },
     {
@@ -691,8 +733,23 @@
     },
     {
       "file": "digitalizare-imm.html",
-      "blocks": 0,
-      "types": {},
+      "blocks": 1,
+      "types": {
+        "Organization": 5,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 4,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 10,
+        "Answer": 10,
+        "Article": 1,
+        "GovernmentService": 1
+      },
       "issues": []
     },
     {
@@ -749,19 +806,31 @@
     },
     {
       "file": "dr12-afir-tineri-fermieri.html",
-      "blocks": 1,
-      "types": {
-        "BlogPosting": 1,
-        "Organization": 2,
-        "ImageObject": 1,
-        "WebPage": 1
-      },
+      "blocks": 0,
+      "types": {},
       "issues": []
     },
     {
       "file": "dr12-afir.html",
-      "blocks": 0,
-      "types": {},
+      "blocks": 1,
+      "types": {
+        "Organization": 7,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 2,
+        "GovernmentService": 2,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 11,
+        "Answer": 11,
+        "Article": 1,
+        "Audience": 3,
+        "CommunicateAction": 1
+      },
       "issues": []
     },
     {
@@ -779,8 +848,8 @@
         "BreadcrumbList": 1,
         "ListItem": 2,
         "FAQPage": 1,
-        "Question": 10,
-        "Answer": 10,
+        "Question": 11,
+        "Answer": 11,
         "Article": 1,
         "Audience": 3,
         "CommunicateAction": 1
@@ -804,23 +873,69 @@
     },
     {
       "file": "dr14-afir-ferme-mici.html",
-      "blocks": 2,
+      "blocks": 1,
       "types": {
-        "BlogPosting": 1,
-        "Organization": 4,
-        "ImageObject": 2,
-        "WebPage": 2,
-        "Article": 1,
+        "Organization": 3,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 2,
+        "GovernmentService": 2,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
         "FAQPage": 1,
-        "Question": 6,
-        "Answer": 6
+        "Question": 10,
+        "Answer": 10,
+        "Article": 1,
+        "Audience": 3,
+        "CommunicateAction": 1
+      },
+      "issues": []
+    },
+    {
+      "file": "dr14-afir-ferme-mici/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 3,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 2,
+        "GovernmentService": 2,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 10,
+        "Answer": 10,
+        "Article": 1,
+        "Audience": 3,
+        "CommunicateAction": 1
       },
       "issues": []
     },
     {
       "file": "dr14.html",
-      "blocks": 0,
-      "types": {},
+      "blocks": 1,
+      "types": {
+        "Organization": 3,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 2,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 10,
+        "Answer": 10,
+        "Article": 1,
+        "GovernmentService": 1
+      },
       "issues": []
     },
     {
@@ -841,6 +956,29 @@
         "Answer": 10,
         "Article": 1,
         "GovernmentService": 1
+      },
+      "issues": []
+    },
+    {
+      "file": "e-move/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 3,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 2,
+        "GovernmentService": 2,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 10,
+        "Answer": 10,
+        "Article": 1,
+        "Audience": 3,
+        "CommunicateAction": 1
       },
       "issues": []
     },
@@ -887,8 +1025,23 @@
     },
     {
       "file": "femeia-antreprenor-2026.html",
-      "blocks": 0,
-      "types": {},
+      "blocks": 1,
+      "types": {
+        "Organization": 3,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 2,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 10,
+        "Answer": 10,
+        "Article": 1,
+        "GovernmentService": 1
+      },
       "issues": []
     },
     {
@@ -967,8 +1120,23 @@
     },
     {
       "file": "fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum.html",
-      "blocks": 0,
-      "types": {},
+      "blocks": 1,
+      "types": {
+        "Organization": 3,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 2,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 8,
+        "Answer": 8,
+        "Article": 1,
+        "GovernmentService": 1
+      },
       "issues": []
     },
     {
@@ -1020,8 +1188,23 @@
     },
     {
       "file": "fondul-modernizare-energie-regenerabila-2026.html",
-      "blocks": 0,
-      "types": {},
+      "blocks": 1,
+      "types": {
+        "Organization": 3,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 2,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 10,
+        "Answer": 10,
+        "Article": 1,
+        "GovernmentService": 1
+      },
       "issues": []
     },
     {
@@ -1080,8 +1263,21 @@
     },
     {
       "file": "fonduri-europene-bucuresti/index.html",
-      "blocks": 0,
-      "types": {},
+      "blocks": 1,
+      "types": {
+        "Organization": 1,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "Article": 1,
+        "FAQPage": 1,
+        "Question": 6,
+        "Answer": 6
+      },
       "issues": []
     },
     {
@@ -1414,6 +1610,29 @@
       "issues": []
     },
     {
+      "file": "gal-afir/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 5,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 4,
+        "GovernmentService": 2,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 10,
+        "Answer": 10,
+        "Article": 1,
+        "Audience": 3,
+        "CommunicateAction": 1
+      },
+      "issues": []
+    },
+    {
       "file": "gdpr.html",
       "blocks": 1,
       "types": {
@@ -1459,7 +1678,7 @@
         "WebSite": 1,
         "WebPage": 1,
         "DefinedTermSet": 1,
-        "DefinedTerm": 23,
+        "DefinedTerm": 28,
         "BreadcrumbList": 1,
         "ListItem": 2
       },
@@ -1598,8 +1817,8 @@
         "BreadcrumbList": 1,
         "ListItem": 2,
         "FAQPage": 1,
-        "Question": 6,
-        "Answer": 6,
+        "Question": 7,
+        "Answer": 7,
         "Article": 1
       },
       "issues": []
@@ -1663,8 +1882,23 @@
     },
     {
       "file": "investitii-modernizarea-microintreprinderilor-apel-2.html",
-      "blocks": 0,
-      "types": {},
+      "blocks": 1,
+      "types": {
+        "Organization": 3,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 2,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 10,
+        "Answer": 10,
+        "Article": 1,
+        "GovernmentService": 1
+      },
       "issues": []
     },
     {
@@ -1771,8 +2005,23 @@
     },
     {
       "file": "por-adr-nord-est.html",
-      "blocks": 0,
-      "types": {},
+      "blocks": 1,
+      "types": {
+        "Organization": 3,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 2,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 8,
+        "Answer": 8,
+        "Article": 1,
+        "GovernmentService": 1
+      },
       "issues": []
     },
     {
@@ -1819,8 +2068,23 @@
     },
     {
       "file": "pro-infra.html",
-      "blocks": 0,
-      "types": {},
+      "blocks": 1,
+      "types": {
+        "Organization": 7,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 6,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 10,
+        "Answer": 10,
+        "Article": 1,
+        "GovernmentService": 1
+      },
       "issues": []
     },
     {
@@ -1976,8 +2240,25 @@
     },
     {
       "file": "start-up-nation-2026.html",
-      "blocks": 0,
-      "types": {},
+      "blocks": 1,
+      "types": {
+        "Organization": 3,
+        "ImageObject": 1,
+        "Country": 1,
+        "ContactPoint": 2,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 2,
+        "GovernmentService": 2,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
+        "FAQPage": 1,
+        "Question": 11,
+        "Answer": 11,
+        "Article": 1,
+        "Audience": 3,
+        "CommunicateAction": 1
+      },
       "issues": []
     },
     {
@@ -1995,8 +2276,8 @@
         "BreadcrumbList": 1,
         "ListItem": 2,
         "FAQPage": 1,
-        "Question": 10,
-        "Answer": 10,
+        "Question": 11,
+        "Answer": 11,
         "Article": 1,
         "Audience": 3,
         "CommunicateAction": 1
@@ -2017,13 +2298,8 @@
     },
     {
       "file": "startup-nation-2026-conditii.html",
-      "blocks": 1,
-      "types": {
-        "BlogPosting": 1,
-        "Organization": 2,
-        "ImageObject": 1,
-        "WebPage": 1
-      },
+      "blocks": 0,
+      "types": {},
       "issues": []
     },
     {
@@ -2080,7 +2356,7 @@
         "WebSite": 1,
         "CollectionPage": 1,
         "ItemList": 1,
-        "ListItem": 10,
+        "ListItem": 11,
         "FAQPage": 1,
         "Question": 4,
         "Answer": 4,

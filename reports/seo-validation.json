@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-27T13:23:08.654Z",
+  "generatedAt": "2026-06-02T00:31:45.696Z",
   "mode": "check",
   "changedFiles": [
     "404.html",
@@ -23,7 +23,6 @@
     "consultanta-afir.html",
     "consultanta-afir/index.html",
     "consultanta-fonduri-europene-bacau/index.html",
-    "consultanta-fonduri-europene-bucuresti/index.html",
     "consultanta-fonduri-europene-iasi/index.html",
     "consultanta-fonduri-europene-suceava/index.html",
     "consultanta-fonduri-europene.html",
@@ -45,7 +44,6 @@
     "dr-14-afir-conditii-eligibilitate-greseli-frecvente.html",
     "dr12-afir-tineri-fermieri.html",
     "dr12-afir.html",
-    "dr14-afir-ferme-mici.html",
     "dr14.html",
     "eligibilitate-fonduri-europene.html",
     "eligibilitate-fonduri-europene/index.html",
@@ -60,7 +58,6 @@
     "fonduri-europene-agricultura.html",
     "fonduri-europene-agricultura/index.html",
     "fonduri-europene-bacau/index.html",
-    "fonduri-europene-bucuresti/index.html",
     "fonduri-europene-digitalizare.html",
     "fonduri-europene-digitalizare/index.html",
     "fonduri-europene-femei-antreprenor.html",
@@ -107,6 +104,7 @@
     "start-up-nation-2026.html",
     "start-up-nation-2026/index.html",
     "start-up-nation.html",
+    "start-up-nation/index.html",
     "startup-nation-2026-conditii.html",
     "studii-de-caz-fonduri-europene/index.html",
     "studii-de-caz.html",
@@ -114,12 +112,12 @@
     "verificare-eligibilitate-fonduri-europene/index.html"
   ],
   "summary": {
-    "totalFiles": 166,
-    "passedFiles": 166,
+    "totalFiles": 167,
+    "passedFiles": 167,
     "failedFiles": 0
   },
   "inlineScripts": {
-    "checked": 265,
+    "checked": 264,
     "failures": []
   },
   "results": [
@@ -196,7 +194,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "AFIR autoconsum agroalimentar: finantare pentru energie in sectorul agroalimentar"
+          "AFIR autoconsum agroalimentar"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -212,7 +210,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "AFIR autoconsum agroalimentar: finantare pentru energie in sectorul agroalimentar"
+          "AFIR autoconsum agroalimentar"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -228,7 +226,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Esti redirectionat catre o noua adresa"
+          "Esti redirectionat către o noua adresă"
         ],
         "missingAlt": [],
         "relatedCount": 0,
@@ -244,7 +242,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "AFIR: fonduri pentru fermieri si proiecte agricole"
+          "AFIR: calculator SO, programe și verificare dosar"
         ],
         "missingAlt": [],
         "relatedCount": 2,
@@ -260,7 +258,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Apeluri GAL - finantari locale prin LEADER"
+          "Apeluri GAL: ce sunt și cum se verifică"
         ],
         "missingAlt": [],
         "relatedCount": 2,
@@ -276,7 +274,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Autoconsum public: fotovoltaice pentru institutii publice"
+          "Autoconsum public fotovoltaice pentru instituții publice"
         ],
         "missingAlt": [],
         "relatedCount": 2,
@@ -292,7 +290,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Autoconsum public: fotovoltaice pentru institutii publice"
+          "Autoconsum public fotovoltaice pentru instituții publice"
         ],
         "missingAlt": [],
         "relatedCount": 2,
@@ -308,7 +306,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Esti redirectionat catre o noua adresa"
+          "Esti redirectionat către o noua adresă"
         ],
         "missingAlt": [],
         "relatedCount": 0,
@@ -324,7 +322,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "AFIR Fotovoltaice Ferme 2026 - ghid prudent pentru verificare si pregatire"
+          "AFIR fotovoltaice pentru ferme: autoconsum și verificări"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -340,7 +338,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Esti redirectionat catre o noua adresa"
+          "Esti redirectionat către o noua adresă"
         ],
         "missingAlt": [],
         "relatedCount": 0,
@@ -356,7 +354,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Blog despre fonduri europene, finanțări nerambursabile și programe pentru antreprenori"
+          "Blog despre fonduri europene, finanțări nerambursabile și programe pentru beneficiari reali"
         ],
         "missingAlt": [],
         "relatedCount": 2,
@@ -388,7 +386,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Calculator Standard Output (SO)"
+          "Calculator SO/SOC pentru AFIR DR12 și DR14"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -404,7 +402,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Esti redirectionat catre o noua adresa"
+          "Esti redirectionat către o noua adresă"
         ],
         "missingAlt": [],
         "relatedCount": 0,
@@ -420,7 +418,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Calendar fonduri europene"
+          "Calendar fonduri europene: pregătire fără grabă"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -436,7 +434,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Când merită să lucrezi cu un consultant pentru fonduri europene și când nu?"
+          "Când merită să lucrezi cu un consultant pentru fonduri europene"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -452,7 +450,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Cât costă consultanța pentru fonduri europene și ce ar trebui să includă?"
+          "Cât costă consultanța pentru fonduri europene"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -468,7 +466,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Esti redirectionat catre o noua adresa"
+          "Esti redirectionat către o noua adresă"
         ],
         "missingAlt": [],
         "relatedCount": 0,
@@ -484,7 +482,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Cat costa consultanta pentru fonduri europene"
+          "Cât costa consultanță pentru fonduri europene"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -500,7 +498,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Ce acte sunt necesare pentru fonduri europene în 2026?"
+          "Ce acte sunt necesare pentru fonduri europene?"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -551,7 +549,7 @@
           "Cod CAEN Start Up Nation 2026: cum verifici activitatea eligibila"
         ],
         "missingAlt": [],
-        "relatedCount": 1,
+        "relatedCount": 2,
         "jsonLdErrors": []
       }
     },
@@ -580,7 +578,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Esti redirectionat catre o noua adresa"
+          "Esti redirectionat către o noua adresă"
         ],
         "missingAlt": [],
         "relatedCount": 0,
@@ -612,7 +610,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Esti redirectionat catre o noua adresa"
+          "Esti redirectionat către o noua adresă"
         ],
         "missingAlt": [],
         "relatedCount": 0,
@@ -628,7 +626,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Consultanta AFIR"
+          "Consultanță AFIR"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -654,16 +652,16 @@
     {
       "file": "consultanta-fonduri-europene-bucuresti/index.html",
       "pass": true,
-      "noindex": true,
+      "noindex": false,
       "technicalFile": false,
       "issues": [],
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Ești redirecționat către o nouă adresă"
+          "Consultanță fonduri europene București"
         ],
         "missingAlt": [],
-        "relatedCount": 0,
+        "relatedCount": 1,
         "jsonLdErrors": []
       }
     },
@@ -708,7 +706,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Esti redirectionat catre o noua adresa"
+          "Esti redirectionat către o noua adresă"
         ],
         "missingAlt": [],
         "relatedCount": 0,
@@ -724,7 +722,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Consultanță pentru Fonduri Europene"
+          "Consultanță pentru fonduri europene"
         ],
         "missingAlt": [],
         "relatedCount": 3,
@@ -740,7 +738,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Esti redirectionat catre o noua adresa"
+          "Esti redirectionat către o noua adresă"
         ],
         "missingAlt": [],
         "relatedCount": 0,
@@ -756,7 +754,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Consultanta PNRR digitalizare"
+          "Consultanță PNRR digitalizare"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -772,7 +770,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Consultanta Start Up Nation 2026: verificare, dosar si depunere"
+          "Consultanță Start-Up Nation 2026: CAEN, plan și dosar"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -788,7 +786,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Esti redirectionat catre o noua adresa"
+          "Esti redirectionat către o noua adresă"
         ],
         "missingAlt": [],
         "relatedCount": 0,
@@ -804,7 +802,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Esti redirectionat catre o noua adresa"
+          "Esti redirectionat către o noua adresă"
         ],
         "missingAlt": [],
         "relatedCount": 0,
@@ -820,7 +818,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Esti redirectionat catre o noua adresa"
+          "Esti redirectionat către o noua adresă"
         ],
         "missingAlt": [],
         "relatedCount": 0,
@@ -836,10 +834,10 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Contactează-ne"
+          "Contact FABER"
         ],
         "missingAlt": [],
-        "relatedCount": 1,
+        "relatedCount": 3,
         "jsonLdErrors": []
       }
     },
@@ -852,7 +850,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Esti redirectionat catre o noua adresa"
+          "Esti redirectionat către o noua adresă"
         ],
         "missingAlt": [],
         "relatedCount": 0,
@@ -900,7 +898,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Cum se calculează cofinanțarea la un proiect cu fonduri europene?"
+          "Cum se calculează cofinanțarea la fonduri europene"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -916,7 +914,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Cum verifici eligibilitatea pentru fonduri europene înainte să pregătești dosarul?"
+          "Cum se verifică eligibilitatea pentru fonduri europene"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -932,7 +930,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Despre FABER"
+          "Despre FABER - Atelier de Consultanță"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -948,7 +946,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Digitalizare IMM: cum justifici ERP, CRM, cloud și echipamente IT într-un proiect"
+          "ERP, CRM și cloud în proiectele de digitalizare IMM"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -964,7 +962,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Esti redirectionat catre o noua adresa"
+          "Esti redirectionat către o noua adresă"
         ],
         "missingAlt": [],
         "relatedCount": 0,
@@ -996,10 +994,10 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Digitalizare IMM: eligibilitate, cheltuieli si buget pentru proiect"
+          "Digitalizare IMM: ERP, CRM, cloud și securitate"
         ],
         "missingAlt": [],
-        "relatedCount": 1,
+        "relatedCount": 2,
         "jsonLdErrors": []
       }
     },
@@ -1012,10 +1010,10 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Digitalizare IMM: eligibilitate, cheltuieli si buget pentru proiect"
+          "Digitalizare IMM: ERP, CRM, cloud și securitate"
         ],
         "missingAlt": [],
-        "relatedCount": 1,
+        "relatedCount": 2,
         "jsonLdErrors": []
       }
     },
@@ -1028,7 +1026,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "DR 12 AFIR și instalarea tinerilor fermieri: ce trebuie pregătit"
+          "DR12 pentru tineri fermieri instalați"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -1044,7 +1042,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "DR 14 AFIR: condiții, eligibilitate și greșeli frecvente"
+          "DR14 AFIR: condiții, eligibilitate și greșeli frecvente"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -1076,10 +1074,10 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "DR 12 AFIR: condiții, eligibilitate, acte necesare și pași de pregătire"
+          "DR12 AFIR pentru tineri fermieri: ghid, acte și lansare"
         ],
         "missingAlt": [],
-        "relatedCount": 1,
+        "relatedCount": 2,
         "jsonLdErrors": []
       }
     },
@@ -1092,10 +1090,10 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "DR 12 AFIR: condiții, eligibilitate, acte necesare și pași de pregătire"
+          "DR12 AFIR pentru tineri fermieri: ghid, acte și lansare"
         ],
         "missingAlt": [],
-        "relatedCount": 1,
+        "relatedCount": 2,
         "jsonLdErrors": []
       }
     },
@@ -1108,7 +1106,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "DR12 sau DR14: ce program AFIR se potrivește mai bine fermei tale?"
+          "DR12 sau DR14: ce program AFIR se potrivește fermei?"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -1118,16 +1116,32 @@
     {
       "file": "dr14-afir-ferme-mici.html",
       "pass": true,
-      "noindex": true,
+      "noindex": false,
       "technicalFile": false,
       "issues": [],
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Pagina a fost mutata"
+          "DR14 AFIR ferme mici: checklist și greșeli frecvente"
         ],
         "missingAlt": [],
-        "relatedCount": 0,
+        "relatedCount": 3,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "dr14-afir-ferme-mici/index.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "DR14 AFIR ferme mici: checklist și greșeli frecvente"
+        ],
+        "missingAlt": [],
+        "relatedCount": 3,
         "jsonLdErrors": []
       }
     },
@@ -1140,10 +1154,10 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "DR 14 AFIR pentru ferme mici: conditii, cheltuieli si pregatirea dosarului"
+          "DR14 AFIR pentru ferme mici"
         ],
         "missingAlt": [],
-        "relatedCount": 2,
+        "relatedCount": 3,
         "jsonLdErrors": []
       }
     },
@@ -1156,10 +1170,10 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "DR 14 AFIR pentru ferme mici: conditii, cheltuieli si pregatirea dosarului"
+          "DR14 AFIR pentru ferme mici"
         ],
         "missingAlt": [],
-        "relatedCount": 2,
+        "relatedCount": 3,
         "jsonLdErrors": []
       }
     },
@@ -1172,7 +1186,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "e-MOVE RO: statii de incarcare, energie regenerabila si pregatirea dosarului"
+          "e-MOVE: stații de încărcare și mobilitate electrică"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -1188,7 +1202,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Esti redirectionat catre o noua adresa"
+          "Esti redirectionat către o noua adresă"
         ],
         "missingAlt": [],
         "relatedCount": 0,
@@ -1204,7 +1218,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Eligibilitate fonduri europene"
+          "Eligibilitate fonduri europene: administrativ, tehnic și punctaj"
         ],
         "missingAlt": [],
         "relatedCount": 2,
@@ -1236,7 +1250,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Femeia Antreprenor 2026: conditii, cheltuieli si pasi pentru dosar"
+          "Femeia Antreprenor 2026: eligibilitate și pregătire"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -1252,7 +1266,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Femeia Antreprenor 2026: conditii, cheltuieli si pasi pentru dosar"
+          "Femeia Antreprenor 2026: eligibilitate și pregătire"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -1316,7 +1330,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Firma de consultanta pentru fonduri europene"
+          "Firmă de consultanță pentru fonduri europene"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -1332,7 +1346,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Fondul de Modernizare: finantari pentru energie, fotovoltaice si autoconsum"
+          "Fondul de Modernizare: finanțări pentru energie, fotovoltaice și autoconsum"
         ],
         "missingAlt": [],
         "relatedCount": 2,
@@ -1348,7 +1362,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Fondul de Modernizare: finantari pentru energie, fotovoltaice si autoconsum"
+          "Fondul de Modernizare: finanțări pentru energie, fotovoltaice și autoconsum"
         ],
         "missingAlt": [],
         "relatedCount": 2,
@@ -1380,7 +1394,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Fondul de Modernizare: index pentru masurile de finantare"
+          "Fondul de Modernizare: index pentru masurile de finanțare"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -1428,7 +1442,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Esti redirectionat catre o noua adresa"
+          "Esti redirectionat către o noua adresă"
         ],
         "missingAlt": [],
         "relatedCount": 0,
@@ -1470,16 +1484,16 @@
     {
       "file": "fonduri-europene-bucuresti/index.html",
       "pass": true,
-      "noindex": true,
+      "noindex": false,
       "technicalFile": false,
       "issues": [],
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Ești redirecționat către o nouă adresă"
+          "Fonduri europene București"
         ],
         "missingAlt": [],
-        "relatedCount": 0,
+        "relatedCount": 1,
         "jsonLdErrors": []
       }
     },
@@ -1508,7 +1522,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Fonduri europene pentru CAEN 4321 - instalatii electrice"
+          "Fonduri europene pentru CAEN 4321 - instalații electrice"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -1524,7 +1538,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Fonduri europene pentru CAEN 5610 - restaurante si servicii alimentare"
+          "Fonduri europene pentru CAEN 5610 - restaurante și servicii alimentare"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -1556,7 +1570,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Esti redirectionat catre o noua adresa"
+          "Esti redirectionat către o noua adresă"
         ],
         "missingAlt": [],
         "relatedCount": 0,
@@ -1588,7 +1602,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Esti redirectionat catre o noua adresa"
+          "Esti redirectionat către o noua adresă"
         ],
         "missingAlt": [],
         "relatedCount": 0,
@@ -1620,7 +1634,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Esti redirectionat catre o noua adresa"
+          "Esti redirectionat către o noua adresă"
         ],
         "missingAlt": [],
         "relatedCount": 0,
@@ -1636,7 +1650,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Esti redirectionat catre o noua adresa"
+          "Esti redirectionat către o noua adresă"
         ],
         "missingAlt": [],
         "relatedCount": 0,
@@ -1716,7 +1730,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Fonduri europene nerambursabile 2026: programe, eligibilitate si pasi"
+          "Fonduri europene nerambursabile 2026"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -1732,7 +1746,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Fonduri europene Nord-Est"
+          "Fonduri europene Nord-Est: Iași, Suceava, Bacău, Botoșani, Neamț, Vaslui"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -1764,7 +1778,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Esti redirectionat catre o noua adresa"
+          "Esti redirectionat către o noua adresă"
         ],
         "missingAlt": [],
         "relatedCount": 0,
@@ -1780,10 +1794,10 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Fonduri europene in Romania"
+          "Fonduri europene: programe, eligibilitate și ghiduri"
         ],
         "missingAlt": [],
-        "relatedCount": 1,
+        "relatedCount": 2,
         "jsonLdErrors": []
       }
     },
@@ -1796,7 +1810,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Esti redirectionat catre o noua adresa"
+          "Esti redirectionat către o noua adresă"
         ],
         "missingAlt": [],
         "relatedCount": 0,
@@ -1812,7 +1826,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Fonduri nerambursabile"
+          "Fonduri nerambursabile: grant, cofinanțare și obligații"
         ],
         "missingAlt": [],
         "relatedCount": 2,
@@ -1828,7 +1842,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Esti redirectionat catre o noua adresa"
+          "Esti redirectionat către o noua adresă"
         ],
         "missingAlt": [],
         "relatedCount": 0,
@@ -1860,7 +1874,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Esti redirectionat catre o noua adresa"
+          "Esti redirectionat către o noua adresă"
         ],
         "missingAlt": [],
         "relatedCount": 0,
@@ -1892,7 +1906,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "GAL-AFIR: apeluri LEADER pentru beneficiari publici si privati"
+          "GAL-AFIR: proiecte LEADER publice și private"
         ],
         "missingAlt": [],
         "relatedCount": 2,
@@ -1924,7 +1938,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Esti redirectionat catre o noua adresa"
+          "Esti redirectionat către o noua adresă"
         ],
         "missingAlt": [],
         "relatedCount": 0,
@@ -1940,7 +1954,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Ghiduri pentru fonduri europene"
+          "Ghiduri și resurse pentru fonduri europene"
         ],
         "missingAlt": [],
         "relatedCount": 2,
@@ -1986,7 +2000,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Esti redirectionat catre o noua adresa"
+          "Esti redirectionat către o noua adresă"
         ],
         "missingAlt": [],
         "relatedCount": 0,
@@ -2018,7 +2032,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Esti redirectionat catre o noua adresa"
+          "Esti redirectionat către o noua adresă"
         ],
         "missingAlt": [],
         "relatedCount": 0,
@@ -2034,7 +2048,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Greseli frecvente la fonduri europene"
+          "Greșeli frecvente la fonduri europene"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -2066,7 +2080,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Consultanță Fonduri Europene și Finanțări Nerambursabile"
+          "Consultanță fonduri europene cu eligibilitate verificată"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -2098,7 +2112,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Esti redirectionat catre o noua adresa"
+          "Esti redirectionat către o noua adresă"
         ],
         "missingAlt": [],
         "relatedCount": 0,
@@ -2114,7 +2128,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Intrebari frecvente despre fonduri europene"
+          "Întrebări frecvente despre fonduri europene"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -2130,7 +2144,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Ce cheltuieli sunt eligibile la Digitalizare IMM?"
+          "Raspuns rapid: Ce cheltuieli sunt eligibile la Digitalizare IMM?"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -2146,7 +2160,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Ce documente sunt necesare pentru DR12?"
+          "Raspuns rapid: Ce documente sunt necesare pentru DR12?"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -2162,7 +2176,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Cum se calculeaza cofinantarea la fonduri europene?"
+          "Raspuns rapid: Cum se calculeaza cofinanțarea la fonduri europene?"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -2178,7 +2192,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Investitii pentru modernizarea microintreprinderilor - Apel 2"
+          "Investiții pentru modernizarea microintreprinderilor - Apel 2"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -2194,7 +2208,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Investitii pentru modernizarea microintreprinderilor - Apel 2"
+          "Investiții pentru modernizarea microintreprinderilor - Apel 2"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -2226,7 +2240,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "PNRR Digitalizare IMM: ce poți cumpăra prin finanțare"
+          "PNRR Digitalizare IMM: cheltuieli eligibile"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -2242,7 +2256,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Esti redirectionat catre o noua adresa"
+          "Esti redirectionat către o noua adresă"
         ],
         "missingAlt": [],
         "relatedCount": 0,
@@ -2258,7 +2272,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Esti redirectionat catre o noua adresa"
+          "Esti redirectionat către o noua adresă"
         ],
         "missingAlt": [],
         "relatedCount": 0,
@@ -2274,7 +2288,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Esti redirectionat catre o noua adresa"
+          "Esti redirectionat către o noua adresă"
         ],
         "missingAlt": [],
         "relatedCount": 0,
@@ -2290,10 +2304,10 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "PNRR pentru IMM-uri si proiecte de digitalizare"
+          "PNRR: apeluri, digitalizare și reguli specifice"
         ],
         "missingAlt": [],
-        "relatedCount": 1,
+        "relatedCount": 2,
         "jsonLdErrors": []
       }
     },
@@ -2322,7 +2336,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Investitii pentru modernizarea microintreprinderilor in Nord-Est"
+          "POR ADR Nord-Est pentru microîntreprinderi"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -2338,7 +2352,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Investitii pentru modernizarea microintreprinderilor in Nord-Est"
+          "POR ADR Nord-Est pentru microîntreprinderi"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -2354,7 +2368,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Portofoliu de proiecte si domenii de finantare"
+          "Portofoliu de proiecte și domenii de finanțare"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -2370,7 +2384,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "PRO INFRA 2026: investitii, energie si pregatirea dosarului"
+          "PRO INFRA: eficiență energetică și echipamente"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -2386,7 +2400,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "PRO INFRA 2026: investitii, energie si pregatirea dosarului"
+          "PRO INFRA: eficiență energetică și echipamente"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -2402,7 +2416,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Resurse descarcabile pentru pregatirea dosarului"
+          "Resurse descarcabile pentru pregătirea dosarului"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -2418,7 +2432,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Esti redirectionat catre o noua adresa"
+          "Esti redirectionat către o noua adresă"
         ],
         "missingAlt": [],
         "relatedCount": 0,
@@ -2437,7 +2451,7 @@
           "Start Up Nation 2026: cheltuieli eligibile"
         ],
         "missingAlt": [],
-        "relatedCount": 1,
+        "relatedCount": 2,
         "jsonLdErrors": []
       }
     },
@@ -2450,7 +2464,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Esti redirectionat catre o noua adresa"
+          "Esti redirectionat către o noua adresă"
         ],
         "missingAlt": [],
         "relatedCount": 0,
@@ -2466,10 +2480,10 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Start Up Nation 2026: conditii de verificat"
+          "Start-Up Nation 2026: checklist de condiții"
         ],
         "missingAlt": [],
-        "relatedCount": 1,
+        "relatedCount": 2,
         "jsonLdErrors": []
       }
     },
@@ -2482,7 +2496,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Esti redirectionat catre o noua adresa"
+          "Esti redirectionat către o noua adresă"
         ],
         "missingAlt": [],
         "relatedCount": 0,
@@ -2498,7 +2512,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Esti redirectionat catre o noua adresa"
+          "Esti redirectionat către o noua adresă"
         ],
         "missingAlt": [],
         "relatedCount": 0,
@@ -2517,7 +2531,7 @@
           "Start Up Nation 2026: idei de afaceri"
         ],
         "missingAlt": [],
-        "relatedCount": 1,
+        "relatedCount": 2,
         "jsonLdErrors": []
       }
     },
@@ -2530,7 +2544,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Esti redirectionat catre o noua adresa"
+          "Esti redirectionat către o noua adresă"
         ],
         "missingAlt": [],
         "relatedCount": 0,
@@ -2549,7 +2563,7 @@
           "Start Up Nation 2026: plan de afaceri"
         ],
         "missingAlt": [],
-        "relatedCount": 1,
+        "relatedCount": 2,
         "jsonLdErrors": []
       }
     },
@@ -2562,10 +2576,10 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Start-Up Nation 2026: condiții, eligibilitate, acte necesare și pași de pregătire"
+          "Start-Up Nation 2026: condiții, CAEN și plan de afaceri"
         ],
         "missingAlt": [],
-        "relatedCount": 2,
+        "relatedCount": 5,
         "jsonLdErrors": []
       }
     },
@@ -2578,10 +2592,10 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Start-Up Nation 2026: condiții, eligibilitate, acte necesare și pași de pregătire"
+          "Start-Up Nation 2026: condiții, CAEN și plan de afaceri"
         ],
         "missingAlt": [],
-        "relatedCount": 2,
+        "relatedCount": 5,
         "jsonLdErrors": []
       }
     },
@@ -2594,7 +2608,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Esti redirectionat catre o noua adresa"
+          "Esti redirectionat către o noua adresă"
         ],
         "missingAlt": [],
         "relatedCount": 0,
@@ -2658,7 +2672,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Esti redirectionat catre o noua adresa"
+          "Esti redirectionat către o noua adresă"
         ],
         "missingAlt": [],
         "relatedCount": 0,
@@ -2690,7 +2704,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Surse oficiale pentru fonduri europene si finantari nerambursabile"
+          "Surse oficiale pentru fonduri europene și finanțări nerambursabile"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -2722,7 +2736,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Esti redirectionat catre o noua adresa"
+          "Esti redirectionat către o noua adresă"
         ],
         "missingAlt": [],
         "relatedCount": 0,
@@ -2738,7 +2752,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Testimoniale si feedback publicabil"
+          "Testimoniale și feedback publicabil"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -2754,7 +2768,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Verificare eligibilitate fonduri europene"
+          "Verificare eligibilitate pentru fonduri europene"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -2770,7 +2784,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Webinarii si evenimente despre fonduri europene"
+          "Webinarii și evenimente despre fonduri europene"
         ],
         "missingAlt": [],
         "relatedCount": 1,
