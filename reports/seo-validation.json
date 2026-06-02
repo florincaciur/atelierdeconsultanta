@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-02T00:31:45.696Z",
+  "generatedAt": "2026-06-02T01:03:37.326Z",
   "mode": "check",
   "changedFiles": [
     "404.html",
@@ -112,12 +112,12 @@
     "verificare-eligibilitate-fonduri-europene/index.html"
   ],
   "summary": {
-    "totalFiles": 167,
-    "passedFiles": 167,
+    "totalFiles": 168,
+    "passedFiles": 168,
     "failedFiles": 0
   },
   "inlineScripts": {
-    "checked": 264,
+    "checked": 266,
     "failures": []
   },
   "results": [
@@ -1891,6 +1891,22 @@
         "h1Count": 1,
         "h1s": [
           "Fonduri pentru utilaje agricole"
+        ],
+        "missingAlt": [],
+        "relatedCount": 1,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "fonduri-regionale/index.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Fonduri regionale: hartă ADR România"
         ],
         "missingAlt": [],
         "relatedCount": 1,

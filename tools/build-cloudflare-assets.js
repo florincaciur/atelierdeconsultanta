@@ -80,6 +80,7 @@ const CANONICAL_DIRECTORY_HTML_ROUTES = [
   "gal-afir",
   "consultanta-fonduri-europene",
   "consultanta-fonduri-europene-bucuresti",
+  "fonduri-regionale",
   "fonduri-europene-nord-est",
   "fonduri-europene-bucuresti",
   "verificare-eligibilitate-fonduri-europene",

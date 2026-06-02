@@ -1,49 +1,49 @@
 {
-  "generatedAt": "2026-06-02T00:31:56.188Z",
+  "generatedAt": "2026-06-02T01:03:44.287Z",
   "root": "C:\\Users\\flori\\Documents\\GitHub\\atelierdeconsultanta",
   "summary": {
-    "totalFiles": 167,
-    "passedFiles": 167,
+    "totalFiles": 168,
+    "passedFiles": 168,
     "failedFiles": 0,
     "checks": {
       "metaDescription": {
-        "pass": 167,
+        "pass": 168,
         "fail": 0
       },
       "canonical": {
-        "pass": 167,
+        "pass": 168,
         "fail": 0
       },
       "imageAltAttributes": {
-        "pass": 167,
+        "pass": 168,
         "fail": 0
       },
       "singleH1": {
-        "pass": 167,
+        "pass": 168,
         "fail": 0
       },
       "relatedLinks": {
-        "pass": 167,
+        "pass": 168,
         "fail": 0
       },
       "utf8Charset": {
-        "pass": 164,
+        "pass": 165,
         "fail": 0
       },
       "cleanCanonical": {
-        "pass": 164,
+        "pass": 165,
         "fail": 0
       },
       "visibleFaqForSchema": {
-        "pass": 164,
+        "pass": 165,
         "fail": 0
       },
       "speakableSchemaCoverage": {
-        "pass": 164,
+        "pass": 165,
         "fail": 0
       },
       "contentDepth": {
-        "pass": 164,
+        "pass": 165,
         "fail": 0
       }
     }
@@ -6080,7 +6080,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1755,
+          "words": 1772,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -6426,6 +6426,65 @@
           "status": "pass",
           "required": true,
           "words": 1584,
+          "threshold": 1200
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 1
+        }
+      }
+    },
+    {
+      "file": "fonduri-regionale/index.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "utf8Charset": {
+          "status": "pass",
+          "hasCharset": true,
+          "hasHttpEquiv": false
+        },
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "cleanCanonical": {
+          "status": "pass",
+          "href": "https://atelierdeconsultanta.ro/fonduri-regionale"
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Fonduri regionale: hartă ADR România"
+          ]
+        },
+        "visibleFaqForSchema": {
+          "status": "pass",
+          "required": true,
+          "count": 5,
+          "threshold": 5
+        },
+        "speakableSchemaCoverage": {
+          "status": "pass",
+          "required": false,
+          "count": 0
+        },
+        "contentDepth": {
+          "status": "pass",
+          "required": true,
+          "words": 1274,
           "threshold": 1200
         },
         "relatedLinks": {

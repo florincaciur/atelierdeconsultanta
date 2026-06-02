@@ -11,6 +11,7 @@ const PROGRAM_ROUTES = [
   "dr12-afir",
   "dr14",
   "por-adr-nord-est",
+  "fonduri-regionale",
   "fonduri-europene-nord-est",
   "investitii-modernizarea-microintreprinderilor-apel-2",
   "afir-autoconsum-agroalimentar",

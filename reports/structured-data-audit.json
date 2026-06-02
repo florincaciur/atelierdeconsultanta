@@ -1,22 +1,22 @@
 {
-  "generatedAt": "2026-06-02T00:32:02.914Z",
+  "generatedAt": "2026-06-02T01:03:53.584Z",
   "summary": {
-    "filesChecked": 167,
-    "filesWithStructuredData": 108,
+    "filesChecked": 168,
+    "filesWithStructuredData": 109,
     "filesWithIssues": 0,
     "types": {
-      "Organization": 326,
-      "ImageObject": 101,
-      "Country": 88,
+      "Organization": 330,
+      "ImageObject": 102,
+      "Country": 89,
       "ContactPoint": 170,
-      "WebSite": 88,
+      "WebSite": 89,
       "WebPage": 99,
-      "CreativeWork": 178,
-      "BreadcrumbList": 96,
-      "ListItem": 219,
-      "FAQPage": 97,
-      "Question": 693,
-      "Answer": 693,
+      "CreativeWork": 181,
+      "BreadcrumbList": 97,
+      "ListItem": 229,
+      "FAQPage": 98,
+      "Question": 698,
+      "Answer": 698,
       "Article": 83,
       "GovernmentService": 37,
       "BlogPosting": 15,
@@ -28,12 +28,12 @@
       "AboutPage": 1,
       "Audience": 24,
       "CommunicateAction": 8,
+      "CollectionPage": 8,
+      "ItemList": 2,
       "LegalService": 3,
-      "CollectionPage": 7,
       "DefinedTermSet": 1,
       "DefinedTerm": 28,
-      "CreativeWorkSeries": 1,
-      "ItemList": 1
+      "CreativeWorkSeries": 1
     }
   },
   "results": [
@@ -1606,6 +1606,25 @@
         "Question": 6,
         "Answer": 6,
         "Article": 1
+      },
+      "issues": []
+    },
+    {
+      "file": "fonduri-regionale/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 4,
+        "ImageObject": 1,
+        "Country": 1,
+        "WebSite": 1,
+        "CollectionPage": 1,
+        "CreativeWork": 3,
+        "BreadcrumbList": 1,
+        "ListItem": 10,
+        "ItemList": 1,
+        "FAQPage": 1,
+        "Question": 5,
+        "Answer": 5
       },
       "issues": []
     },
