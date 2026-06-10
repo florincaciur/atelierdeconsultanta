@@ -9,7 +9,7 @@ import { chromium } from "playwright";
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const DIST = path.join(ROOT, "dist");
 const SITE_ORIGIN = "https://atelierdeconsultanta.ro";
-const EXPECTED_CANONICAL_URLS = 91;
+const EXPECTED_CANONICAL_URLS = 92;
 const CONSOLIDATED_LOCAL_ROUTES = [
   "/fonduri-europene-bacau",
   "/consultanta-fonduri-europene-bacau",
@@ -21,6 +21,15 @@ const CONSOLIDATED_LOCAL_ROUTES = [
 const INDEXABLE_LOCAL_ROUTES = [
   "/fonduri-europene-bucuresti",
   "/consultanta-fonduri-europene-bucuresti"
+];
+const INDEXABLE_PROGRAM_ROUTES = [
+  "/dr12-afir",
+  "/dr14",
+  "/e-move",
+  "/pro-infra",
+  "/start-up-nation-2026",
+  "/investitii-modernizarea-microintreprinderilor-apel-2",
+  "/pocidif-21"
 ];
 const NOINDEX_TRUST_ROUTES = [
   "/portofoliu",
@@ -174,6 +183,9 @@ async function assertCanonicalRoutes(baseUrl) {
   for (const routePath of INDEXABLE_LOCAL_ROUTES) {
     assert(paths.includes(routePath), `${routePath} should be in sitemap as an indexable local landing page`);
   }
+  for (const routePath of INDEXABLE_PROGRAM_ROUTES) {
+    assert(paths.includes(routePath), `${routePath} should be in sitemap as an indexable program page`);
+  }
 
   for (const routePath of NOINDEX_TRUST_ROUTES) {
     const response = await fetchManual(`${baseUrl}${routePath}`);
@@ -255,7 +267,8 @@ async function assertHomepageInteractions(baseUrl) {
     await page.locator("#dropdownBtn").click();
     assert.equal(await page.locator("#dropdownBtn").getAttribute("aria-expanded"), "true", "program menu should open");
     assert.equal(await page.locator("#dropdownPanel.open").count(), 1, "program menu panel should be visible");
-    assert.equal(await page.locator("#dropdownPanel a[href]").count(), 12, "program menu should expose 12 program links");
+    assert.equal(await page.locator("#dropdownPanel a[href]").count(), 13, "program menu should expose 13 program links");
+    assert.equal(await page.locator('#dropdownPanel a[href="/pocidif-21"]').count(), 1, "program menu should link PoCIDIF 2.1");
 
     const internalLinks = await page.$$eval(
       ".nav-links a[href], #dropdownPanel a[href], #mobileMenu a[href], #financing-grid a[href], a.btn-primary[href], a.btn-secondary[href]",

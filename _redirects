@@ -388,6 +388,11 @@
 /leader-afir /gal-afir 301
 /leader-afir/ /gal-afir 301
 
+# SEO and AI Search canonical routes.
+/pocidif-21/ /pocidif-21 301
+/pocidif-21.html /pocidif-21 301
+/pocidif-21/index.html /pocidif-21 301
+
 # Global URL normalization. Keep after static aliases so legacy routes redirect directly.
 /:slug/index.html /:slug 301
 /:section/:slug/index.html /:section/:slug 301

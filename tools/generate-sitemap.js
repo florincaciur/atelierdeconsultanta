@@ -136,6 +136,10 @@ function priority(url) {
     "/dr14",
     "/start-up-nation-2026",
     "/digitalizare-imm",
+    "/e-move",
+    "/pro-infra",
+    "/investitii-modernizarea-microintreprinderilor-apel-2",
+    "/pocidif-21",
     "/apeluri-gal",
   ];
   const authority = [
