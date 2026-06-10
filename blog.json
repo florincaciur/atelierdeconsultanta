@@ -2165,6 +2165,102 @@
           "answer": "Nu merita sa aplici cand nu poti dovedi eligibilitatea, cand cheltuielile principale nu sunt permise, cand cofinantarea nu este acoperita sau cand calendarul nu permite documente complete si verificabile."
         }
       ]
+    },
+    {
+      "id": "pocidif-21",
+      "title": "PoCIDIF 2.1: inovare si tehnologii avansate pentru IMM din TIC",
+      "slug": "pocidif-21",
+      "metaTitle": "PoCIDIF 2.1 | inovare digitala pentru IMM din TIC",
+      "metaDescription": "PoCIDIF 2.1 explicat: granturi pentru dezvoltarea de servicii, aplicatii si produse digitale inovatoare de catre IMM din sectorul TIC.",
+      "excerpt": "PoCIDIF 2.1 este un apel consultativ pentru IMM din sectorul TIC care dezvolta servicii, aplicatii sau produse digitale prin inovare si adoptarea de tehnologii avansate. Sursele analizate indica finantari intre 500.000 si 3.000.000 euro, cu intensitate de pana la 75% pentru ajutor regional si pana la 100% pentru ajutor de minimis. Verificarea trebuie sa porneasca de la incadrarea IMM, codurile CAEN TIC, maturitatea proiectului, noutatea solutiei, echipa, bugetul de dezvoltare, drepturile asupra produsului si capacitatea de implementare. Nu este un program pentru website-uri simple sau achizitii IT generice; conditiile finale se confirma in ghidul activ PoCIDIF si in anexele apelului.",
+      "content": "<p>Pagina statica publicata la /pocidif-21.</p>",
+      "status": "published",
+      "published": true,
+      "primaryKeyword": "PoCIDIF 2.1",
+      "secondaryKeywords": [
+        "Digitalizare si inovare",
+        "fonduri europene",
+        "eligibilitate"
+      ],
+      "bannerImage": "",
+      "bannerAlt": "",
+      "author": "FABER - Atelier de Consultanță",
+      "officialSources": [],
+      "editorialStatus": "in_curs_de_verificare",
+      "createdAt": "2026-05-29",
+      "updatedAt": "2026-05-29",
+      "publishedAt": "2026-05-29",
+      "date": "2026-05-29",
+      "dateFormatted": "19 mai 2026",
+      "category": "Digitalizare si inovare",
+      "readTime": 12,
+      "readingTime": 12,
+      "icon": "",
+      "canonicalUrl": "https://atelierdeconsultanta.ro/pocidif-21",
+      "internalLinks": [
+        {
+          "href": "/fonduri-europene-digitalizare",
+          "label": "Fonduri europene digitalizare"
+        },
+        {
+          "href": "/digitalizare-imm",
+          "label": "Digitalizare IMM"
+        },
+        {
+          "href": "/fonduri-europene-imm",
+          "label": "Fonduri europene IMM"
+        },
+        {
+          "href": "/e-move",
+          "label": "e-MOVE RO"
+        },
+        {
+          "href": "/verificare-eligibilitate-fonduri-europene",
+          "label": "Verificare eligibilitate"
+        }
+      ],
+      "faq": [
+        {
+          "question": "Ce este PoCIDIF 2.1?",
+          "answer": "Este un apel pentru dezvoltarea de noi servicii, aplicatii sau produse digitale prin inovare si adoptarea de tehnologii avansate, destinat IMM din sectorul TIC."
+        },
+        {
+          "question": "Care este valoarea finantarii?",
+          "answer": "Forma consultativa analizata mentioneaza finantari intre 500.000 si 3.000.000 euro."
+        },
+        {
+          "question": "Care este intensitatea finantarii?",
+          "answer": "Sursele indica pana la 75% pentru ajutor regional si pana la 100% pentru ajutor de minimis, cu confirmare in ghidul activ."
+        },
+        {
+          "question": "Cine poate aplica?",
+          "answer": "IMM-urile din sectorul TIC care indeplinesc conditiile ghidului activ si pot demonstra proiectul digital inovator."
+        },
+        {
+          "question": "Este eligibil un website simplu?",
+          "answer": "In mod normal, un website simplu nu este suficient. Proiectul trebuie sa demonstreze inovare, tehnologii avansate si rezultate masurabile."
+        },
+        {
+          "question": "Ce verific prima data?",
+          "answer": "Incadrarea IMM, codurile CAEN TIC, produsul digital, echipa, bugetul si categoriile de ajutor."
+        },
+        {
+          "question": "Ce documente sunt sensibile?",
+          "answer": "Descrierea tehnica, arhitectura, echipa, piata, bugetul, ofertele si separarea cheltuielilor pe tipuri de ajutor."
+        },
+        {
+          "question": "Cand se confirma conditiile finale?",
+          "answer": "In ghidul activ PoCIDIF, anexele si clarificarile publicate de autoritatea finantatoare."
+        },
+        {
+          "question": "Cum verific daca PoCIDIF 2.1 este potrivit pentru proiectul meu?",
+          "answer": "Porneste de la solicitant, cod CAEN, localitate, investitie, buget si documentele disponibile. Daca una dintre aceste piese nu se potriveste cu apelul activ, proiectul trebuie ajustat inainte de depunere."
+        },
+        {
+          "question": "Cand nu merita sa aplic pentru PoCIDIF 2.1?",
+          "answer": "Nu merita sa aplici cand nu poti dovedi eligibilitatea, cand cheltuielile principale nu sunt permise, cand cofinantarea nu este acoperita sau cand calendarul nu permite documente complete si verificabile."
+        }
+      ]
     }
   ]
 }

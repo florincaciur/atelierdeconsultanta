@@ -14,300 +14,258 @@
       "type": "program",
       "schemaType": "GovernmentService",
       "category": "AFIR",
-      "title": "DR12 AFIR | ghid, lansare și acte",
-      "description": "DR12 AFIR pentru tineri fermieri: ghidul solicitantului, lansare, acte necesare, SO/SOC, APIA, ANSVSA, investiție și verificare prudentă.",
-      "h1": "DR12 AFIR pentru tineri fermieri: ghid, acte și lansare",
-      "quickAnswer": "DR12 AFIR trebuie verificat prin ghidul solicitantului și prin documentele fermei, nu doar prin denumirea programului. Pentru tinerii fermieri contează rolul real în exploatație, SO/SOC, documentele APIA sau ANSVSA, dreptul de folosință, investiția, cofinanțarea și criteriile apelului activ. Dacă urmărești lansarea DR 12 AFIR, pregătirea sigură începe cu actele solicitantului, exploatația, calculul SO și ofertele, dar fără să presupui calendar, plafon sau punctaj înainte de sursa oficială aplicabilă. Analiza inițială trebuie să arate ce lipsește, ce poate fi corectat și ce nu merită bugetat încă. FABER poate analiza documentele lipsă, riscurile de punctaj și cheltuielile sensibile, fără să trateze eligibilitatea ca finanțare garantată.",
-      "programName": "DR 12 AFIR",
+      "title": "DR12 AFIR | consolidarea exploatatiilor tinerilor fermieri",
+      "description": "DR12 AFIR explicat practic: cine poate aplica, finantare maxima, intensitate, conditii de exploatatie, documente si riscuri de eligibilitate pentru tineri fermieri.",
+      "h1": "DR12 AFIR: consolidarea exploatatiilor tinerilor fermieri",
+      "quickAnswer": "DR12 AFIR finanteaza investitii pentru consolidarea exploatatiilor conduse de tineri fermieri. Ghidul consultativ publicat de AFIR mentioneaza granturi de pana la 200.000 euro/proiect, cu intensitate maxima de 80% pentru tineri fermieri si 65% pentru celelalte categorii eligibile. Verificarea incepe cu varsta si calitatea solicitantului, istoricul instalarii, dimensiunea economica a exploatatiei, documentele APIA sau ANSVSA, localizarea investitiei si legatura clara dintre utilaje, constructii, dotari si activitatea agricola. Inainte de depunere trebuie separate grantul, cofinantarea, TVA-ul si costurile neeligibile. Conditiile finale trebuie confirmate in ghidul activ, in anuntul sesiunii si in anexele AFIR. Se verifica separat daca proiectul creeaza riscuri de fragmentare artificiala, daca dimensiunea echipamentelor este proportionala si daca solicitantul poate sustine implementarea si monitorizarea.",
+      "programName": "DR12 AFIR",
       "policyContribution": "interventia susține instalarea și consolidarea fermierilor tineri, reinnoirea generatiilor în agricultura și investiții care pot imbunatati competitivitatea exploatatiilor agricole.",
-      "funding": "sprijinul maxim, intensitatea și pragurile SO se verifică în forma finală a apelului activ; pagina folosește doar valori prezente în sursele interne configurate.",
+      "funding": "Pana la 200.000 euro/proiect, cu intensitate maxima de 80% pentru tineri fermieri si 65% pentru celelalte categorii eligibile, conform ghidului consultativ.",
       "audience": [
-        "tineri fermieri care caută ghidul DR12 AFIR și actele necesare",
-        "fermieri recent instalati care pregătesc investiții",
-        "exploatații agricole care trebuie să confirme dimensiunea economică și documentele de folosință"
+        "Tineri fermieri care conduc sau preiau exploatatii agricole si vor investitii pentru crestere, modernizare ori consolidare.",
+        "Exploatatii vegetale, zootehnice sau mixte care pot demonstra dimensiunea economica si utilizarea investitiei in activitatea agricola.",
+        "Solicitanti care pot sustine cofinantarea, calendarul de implementare si documentele APIA, ANSVSA, fiscale si juridice cerute de apel."
       ],
       "eligibility": [
-        "solicitantul trebuie să aiba forma juridică eligibila și rol real în administrarea exploatației",
-        "exploatația trebuie să fie inregistrata și verificabila prin documente agricole",
-        "investiția trebuie să fie legata direct de activitatea agricolă și de obiectivele programului"
+        "Verifica varsta si incadrarea in categoria de tanar fermier la data stabilita de ghidul activ.",
+        "Confirma forma juridica, calitatea de fermier si istoricul instalarii sau preluarii exploatatiei.",
+        "Calculeaza dimensiunea economica prin SO si pastreaza documentele care sustin cultura, efectivul sau activitatea declarata.",
+        "Dovedeste dreptul de utilizare pentru terenuri, animale, spatii, cladiri sau amplasamentele investitiei.",
+        "Evita fragmentarea artificiala a exploatatiei si proiectele in care legatura dintre investitie si activitatea agricola nu este clara."
       ],
       "mandatory": [
-        "identificarea ghidului solicitantului DR 12 AFIR, a anexelor și a eventualelor clarificări aplicabile",
-        "verificarea statusului de lansare înainte de buget, oferte sau decizie de depunere",
-        "verificarea vârstei și a incadrarii solicitantului",
-        "calcul Standard Output pe baza culturilor și animalelor declarate",
-        "documente APIA, ANSVSA, DSVSA, registru agricol sau alte dovezi aplicabile",
-        "evitarea dublei finanțări pentru aceleasi cheltuieli"
+        "Stabilirea formei juridice si verificarea eligibilitatii solicitantului inainte de construirea bugetului.",
+        "Calcul SO coerent cu documentele APIA, ANSVSA si cu activitatea agricola reala.",
+        "Buget separat pentru grant, cofinantare, TVA, costuri neeligibile si rezerve de pret.",
+        "Documente de proprietate, folosinta sau exploatare valabile pe perioada ceruta de ghid.",
+        "Respectarea perioadelor de implementare si monitorizare mentionate in ghidul activ."
       ],
       "eligibleExpenses": [
-        "constructii și modernizari agricole necesare exploatației",
-        "utilaje și echipamente agricole noi",
-        "tehnologii de precizie, software și solutii digitale pentru ferma",
-        "energie regenerabilă pentru consum propriu, dacă este permisa de apel",
-        "costuri generale și servicii profesionale în limitele programului"
+        "Utilaje si echipamente agricole justificate de cultura, efectiv si fluxul de lucru al exploatatiei.",
+        "Constructii, modernizari sau dotari pentru activitatea agricola, daca sunt permise in ghidul activ.",
+        "Echipamente pentru depozitare, conditionare, manipulare sau eficientizarea activitatii agricole.",
+        "Servicii si documentatii necesare proiectului, in limitele si conditiile apelului."
       ],
       "ineligibleExpenses": [
-        "cheltuieli facute înainte de momentul permis de ghid",
-        "active second-hand când programul cere bunuri noi",
-        "investiții fără legătura cu exploatația",
-        "TVA nerecuperabila doar dacă nu este eligibila conform regulilor apelului",
-        "cheltuieli care primesc deja sprijin din alta sursa"
+        "Investitii fara legatura directa cu exploatatia agricola declarata.",
+        "Achizitii incepute inainte de momentul permis de schema de finantare.",
+        "Active supradimensionate fata de dimensiunea economica sau fata de fluxul real de productie.",
+        "Costuri care nu pot fi sustinute prin documente, oferte si justificare tehnica verificabila."
       ],
       "scoring": [
-        "sectorul și dimensiunea exploatației",
-        "investiții cu efect economic clar",
-        "componenta de mediu și eficiență resurselor",
-        "pregătirea profesionala și capacitatea de implementare",
-        "calitatea documentelor și coerenta bugetului"
+        "Punctajul trebuie estimat pe baza datelor verificabile, nu pe scenarii optimiste.",
+        "Dimensiunea economica, tipul investitiei, profilul solicitantului si coerenta bugetului pot influenta evaluarea.",
+        "Investitiile trebuie explicate prin nevoie, capacitate de utilizare si efect asupra exploatatiei."
       ],
       "steps": [
-        "verifică pagina AFIR și documentul aplicabil înainte de a trata apelul ca lansat",
-        "calculeaza SO înainte de alegerea investiției",
-        "verifică forma juridică și documentele fermei",
-        "stabileste lista de cheltuieli și ofertele",
-        "construiește bugetul și planul de implementare",
-        "pregătește cererea și anexele pentru depunerea online"
+        "Verificam solicitantul, exploatatia si dimensiunea economica.",
+        "Confirmam lista de investitii si excludem achizitiile care nu au legatura directa cu activitatea agricola.",
+        "Structuram bugetul pe grant, cofinantare, TVA si cheltuieli neeligibile.",
+        "Pregatim documentele suport, ofertele si justificarile tehnice.",
+        "Verificam proiectul inainte de depunere si pregatim raspunsurile pentru clarificari."
       ],
       "evaluation": [
-        "verificare administrativa și a eligibilitatii",
-        "evaluare tehnico-economică și punctaj",
-        "selecție în limita bugetului disponibil",
-        "contractare, achiziții, implementare și cereri de plată"
+        "Eligibilitatea solicitantului si a exploatatiei este filtrul principal.",
+        "Bugetul trebuie sa se lege de productie, capacitate si documentele prezentate.",
+        "Riscurile apar frecvent la istoricul exploatatiei, SO, documente expirate si active necorelate cu activitatea."
       ],
       "examples": [
-        "o ferma vegetala poate urmari utilaje corelate cu suprafata exploatata",
-        "o exploatație mixta poate combina investiții în producție, depozitare și digitalizare",
-        "un proiect apicol trebuie verificat atent pentru incadrare și evitarea dublei finanțări"
+        "Tanara fermiera cu exploatatie vegetala care are nevoie de utilaje adaptate culturilor declarate si poate justifica dimensiunea economica.",
+        "Exploatatie zootehnica ce pregateste dotari pentru fluxul de hranire, adapostire sau manipulare, cu documente ANSVSA si drept de folosinta clare.",
+        "Ferma mixta care vrea investitii etapizate, cu buget realist si cofinantare confirmata inainte de depunere."
       ],
       "faq": [
         [
-          "Cine poate aplica la DR 12 AFIR?",
-          "Pot aplica doar solicitantii care se incadreaza în apelul activ și pot dovedi prin documente rolul în exploatație, dimensiunea economică și legătura investiției cu activitatea agricolă."
+          "Ce finanteaza DR12 AFIR?",
+          "DR12 finanteaza investitii pentru consolidarea exploatatiilor tinerilor fermieri. Lista exacta de cheltuieli si conditiile finale se confirma in ghidul activ al sesiunii."
         ],
         [
-          "Ce verifici înainte de calculul SO?",
-          "Verifică suprafețele, efectivele, registrele agricole, documentele APIA sau ANSVSA și dreptul de folosință. Calculul SO facut pe date incomplete poate schimbă eligibilitatea și punctajul."
+          "Care este finantarea maxima la DR12?",
+          "Forma consultativa analizata mentioneaza pana la 200.000 euro/proiect, cu intensitate maxima de 80% pentru tineri fermieri si 65% pentru alte categorii eligibile."
         ],
         [
-          "Pot include utilaje agricole în proiect?",
-          "Da, doar dacă apelul activ le permite, sunt necesare exploatației și sunt dimensionate realist. Tipul utilajului, capacitatea și ofertă trebuie corelate cu activitatea fermei."
+          "Ce verific inainte de a pregati dosarul DR12?",
+          "Verifica solicitantul, varsta, forma juridica, dimensiunea economica, documentele APIA sau ANSVSA, dreptul de folosinta si cofinantarea."
         ],
         [
-          "Ce documente pot bloca un proiect DR 12?",
-          "Documentele necorelate privind exploatația, terenul, animalele, forma juridică, ofertele sau cofinanțarea pot genera clarificări, taieri de buget sau respingere."
+          "Este suficient sa am teren sau animale declarate?",
+          "Nu. Datele declarate trebuie sa fie corelate cu dimensiunea economica, activitatea reala, investitia propusa si documentele cerute de ghid."
         ],
         [
-          "De ce conteaza verificarea dublei finanțări?",
-          "Pentru ca aceeași cheltuiala nu trebuie acoperita prin doua surse de sprijin. Verificarea se face înainte de buget și trebuie susținută prin declaratii și documente."
+          "Pot include utilaje agricole?",
+          "Da, daca sunt eligibile in ghidul activ, justificate de exploatatie si proportionale cu activitatea agricola finantata."
         ],
         [
-          "Când trebuie confirmata cofinanțarea?",
-          "Cofinantarea trebuie verificată înainte de depunere, nu după selecție. Include contributia proprie, TVA, cheltuieli neeligibile, rezerve și intarzieri posibile la plată."
+          "Ce riscuri apar la DR12?",
+          "Cele mai frecvente riscuri sunt exploatatii fragmentate artificial, SO nejustificat, documente expirate, buget nerealist si investitii fara legatura directa cu activitatea."
         ],
         [
-          "Unde verific ghidul solicitantului DR 12 AFIR?",
-          "Verifică pagina AFIR indicată pentru DR 12, anexele publicate, eventualele clarificări și versiunea documentului. O pagină consultativă nu trebuie tratată ca ghid final fără confirmare oficială."
+          "Cand trebuie confirmate conditiile finale?",
+          "Inainte de depunere, in ghidul activ si in anuntul sesiunii, deoarece forma consultativa poate fi modificata."
         ],
         [
-          "Ce înseamnă lansarea DR 12 AFIR pentru pregătirea dosarului?",
-          "Lansarea contează pentru calendar, forma finală a documentelor și modul de depunere. Până atunci poți pregăti datele fermei, calculul SO, actele de folosință și lista de investiții, dar nu presupui termene sau punctaj."
-        ],
-        [
-          "Ce acte sunt necesare pentru tânărul fermier la DR12?",
-          "Sunt utile actele solicitantului, documentele exploatației, dovezile pentru terenuri sau animale, calculul SO/SOC, ofertele, bugetul, documentele de cofinanțare și declarațiile cerute de apel."
-        ],
-        [
-          "DR12 AFIR este același lucru cu instalarea tinerilor fermieri?",
-          "Nu trebuie presupus automat. Denumirea, beneficiarii și condițiile se citesc în ghidul activ. Pagina folosește o abordare prudentă: tânăr fermier, rol în exploatație, documente și investiție verificabilă."
+          "Poate consultanta garanta aprobarea DR12?",
+          "Nu. Consultanta poate reduce riscurile de eligibilitate si documentare, dar aprobarea depinde de regulile apelului, punctaj, buget si verificarea autoritatii."
         ]
       ],
       "related": [
-        "/calculator-soc",
-        "/dr14",
-        "/consultanta-afir",
-        "/fonduri-europene-agricultura",
-        "/verificare-eligibilitate-fonduri-europene"
+        {
+          "href": "/consultanta-afir",
+          "label": "Consultanta AFIR"
+        },
+        {
+          "href": "/dr14",
+          "label": "DR14 AFIR pentru ferme mici"
+        },
+        {
+          "href": "/calculator-soc",
+          "label": "Calculator SO AFIR"
+        },
+        {
+          "href": "/fonduri-europene-agricultura",
+          "label": "Fonduri europene agricultura"
+        },
+        {
+          "href": "/verificare-eligibilitate-fonduri-europene",
+          "label": "Verificare eligibilitate"
+        }
       ],
       "sourceKeys": [
         "dr12"
       ],
       "template": "editorial-program",
-      "minWords": 1100,
-      "minFaq": 10,
+      "minWords": 1200,
+      "minFaq": 8,
       "applicantRows": [
         [
-          "Tânăr fermier instalat sau în curs de consolidare",
-          "Posibila, dacă profilul solicitantului se incadreaza în apelul activ",
-          "Varsta, forma juridică, rolul real în conducerea exploatației și istoricul instalarii",
-          "Pragurile și definitiile finale se confirma în ghidul apelului activ"
+          "Solicitant",
+          "Tanar fermier sau alta categorie eligibila mentionata in ghidul activ.",
+          "Varsta, forma juridica, istoricul instalarii si controlul exploatatiei.",
+          "AFIR"
         ],
         [
-          "Exploatatie vegetala",
-          "Posibila, dacă dimensiunea economică și documentele agricole sunt verificabile",
-          "Calcul SO, suprafețe declarate, APIA, registru agricol și dreptul de folosință",
-          "Nu se estimeaza punctajul fără documente actuale"
+          "Exploatatie",
+          "Ferma vegetala, zootehnica sau mixta cu activitate documentata.",
+          "Dimensiune economica SO si documente APIA, ANSVSA sau echivalente.",
+          "AFIR"
         ],
         [
-          "Exploatatie zootehnica sau apicola",
-          "Posibila, dacă efectivele și activitatea sunt documentate corect",
-          "ANSVSA/DSVSA, registre, amplasament, autorizări și corelarea cu investiția",
-          "Atentie la dubla finanțare și la neconcordante intre registre"
+          "Amplasament",
+          "Terenuri, animale, spatii sau cladiri legate de investitie.",
+          "Dreptul de utilizare si valabilitatea documentelor pe perioada ceruta.",
+          "Ghidul activ"
         ],
         [
-          "Exploatatie mixta",
-          "Posibila, dacă investiția are logica pentru structura fermei",
-          "Ponderea culturilor/animalelor, fluxul de lucru și justificarea utilajelor",
-          "Investitiile supradimensionate trebuie eliminate sau explicate"
+          "Cofinantare",
+          "Beneficiarul suporta partea proprie si costurile neeligibile.",
+          "Disponibilitati, TVA, diferente de pret si rezerve.",
+          "Bugetul proiectului"
         ]
       ],
       "eligibleInvestmentRows": [
         [
-          "Utilaje și echipamente agricole",
-          "Tractor, semanatoare, echipamente pentru lucrari agricole, dotări de ferma",
-          "Dimensionarea față de suprafata, activitate și capacitatea de implementare",
-          "sursa oficială a apelului activ"
+          "Utilaje agricole",
+          "Tractoare, echipamente sau utilaje adaptate culturilor si efectivelor.",
+          "Proportionalitate cu SO si activitatea reala.",
+          "Ghidul activ"
         ],
         [
-          "Constructii și modernizari agricole",
-          "Spatii de producție, depozitare sau adăposturi, dacă apelul le permite",
-          "Autorizatii, teren, folosință pe durata ceruta și costuri neeligibile",
-          "sursa oficială a apelului activ"
+          "Constructii si dotari",
+          "Spatii, amenajari sau dotari pentru activitatea agricola.",
+          "Autorizatii, amplasament si eligibilitate expresa.",
+          "Ghidul activ"
         ],
         [
-          "Tehnologie și digitalizare pentru ferma",
-          "Software, senzori, monitorizare, gestiune sau echipamente de precizie",
-          "Legatura directa cu exploatația și livrabile verificabile",
-          "sursa oficială a apelului activ"
+          "Depozitare si conditionare",
+          "Echipamente pentru manipulare, depozitare sau conditionare.",
+          "Legatura directa cu productia agricola.",
+          "Ghidul activ"
         ],
         [
-          "Energie pentru consum propriu",
-          "Panouri fotovoltaice sau echipamente conexe, dacă sunt permise de apel",
-          "Condiții specifice, dimensionare, avize și separarea costurilor",
-          "sursa oficială a apelului activ"
-        ],
-        [
-          "Servicii și costuri generale",
-          "Consultanță, proiectare, avize sau documentatii tehnice în limitele programului",
-          "Plafoane, momentul contractarii și documente justificative",
-          "sursa oficială a apelului activ"
+          "Servicii proiect",
+          "Documentatii, proiectare sau servicii eligibile.",
+          "Plafoane, procente si momentul cheltuielii.",
+          "Ghidul activ"
         ]
       ],
-      "cofinancingTitle": "Cofinanțare fără valori presupuse",
+      "cofinancingTitle": "Finantare si cofinantare DR12",
       "cofinancingRows": [
         [
-          "Sprijin nerambursabil",
-          "Se confirmă în ghidul activ",
-          "Nu se folosește un procent sau plafon înainte de documentul aplicabil."
+          "Grant maxim",
+          "200.000 euro/proiect",
+          "Valoare indicata in forma consultativa analizata."
         ],
         [
-          "Contribuție proprie",
-          "Se estimează după lista de cheltuieli",
-          "Include costuri neeligibile, TVA dacă este cazul și rezerve de cash-flow."
+          "Intensitate tineri fermieri",
+          "Pana la 80%",
+          "Se verifica incadrarea solicitantului si conditiile finale."
         ],
         [
-          "Oferte și buget",
-          "Se verifică înainte de depunere",
-          "Ofertele trebuie să explice ce se cumpără, de ce este necesar și cum se folosește în fermă."
+          "Alte categorii eligibile",
+          "Pana la 65%",
+          "Aplicabil doar unde ghidul activ permite."
         ],
         [
-          "Decizie de depunere",
-          "După documente și cofinanțare",
-          "Un proiect eligibil pe hârtie poate fi riscant dacă finanțarea proprie nu este susținută."
+          "Costuri proprii",
+          "Cofinantare, TVA si cheltuieli neeligibile",
+          "Trebuie acoperite separat de beneficiar."
         ]
       ],
       "documentRows": [
         [
-          "Acte solicitant și formă juridică pentru tânărul fermier",
-          "Beneficiar, cu verificare de consultant",
-          "La verificarea eligibilității și la depunere",
-          "Solicitantul poate fi încadrat greșit sau respins administrativ"
+          "Solicitant",
+          "Beneficiar si consultant",
+          "La verificarea initiala si depunere.",
+          "Acte juridice, fiscale si declaratii."
         ],
         [
-          "Documente exploatație agricolă",
+          "Exploatatie",
           "Beneficiar",
-          "Înainte de calculul SO și înainte de buget",
-          "Suprafetele, efectivele sau activitatea nu pot fi demonstrate"
+          "Inainte de buget.",
+          "APIA, ANSVSA, registru agricol sau dovezi echivalente."
         ],
         [
-          "Calcul SO",
-          "Consultant, pe baza datelor furnizate de beneficiar",
-          "Înainte de alegerea investiției",
-          "Punctajul și incadrarea pot fi supraestimate"
+          "Investitie",
+          "Beneficiar, consultant si furnizori",
+          "Inainte de depunere.",
+          "Oferte, devize, justificari tehnice si documente amplasament."
         ],
         [
-          "Acte teren, spațiu sau amplasament",
-          "Beneficiar",
-          "Când investiția depinde de locație, constructii sau instalare",
-          "Blocaj la contractare sau imposibilitate de implementare"
-        ],
-        [
-          "Oferte și specificatii tehnice",
-          "Furnizori, coordonati de beneficiar și consultant",
-          "La construirea bugetului și la depunere, dacă apelul cere",
-          "Cheltuieli taiate, clarificări sau buget nejustificat"
-        ],
-        [
-          "Dovezi cofinanțare și cash-flow",
-          "Beneficiar",
-          "Înainte de decizia de depunere",
-          "Proiectul poate fi aprobat, dar greu de sustinut financiar"
-        ],
-        [
-          "Declaratii și anexe ale apelului",
-          "Beneficiar și consultant",
-          "La depunere și la clarificări, conform ghidului solicitantului DR 12",
-          "Dosar incomplet sau declarații nealiniate cu documentele"
+          "Financiar",
+          "Beneficiar si contabil",
+          "Inainte de semnare.",
+          "Cofinantare, TVA si costuri neeligibile estimate separat."
         ]
       ],
       "preparationSteps": [
         [
-          "Verificare ghid și lansare.",
-          "Confirmă sursa AFIR, versiunea documentului, anexele, clarificările și statusul apelului înainte de buget."
+          "1.",
+          "Clarifica istoricul exploatatiei inainte de a promite punctaj sau intensitate."
         ],
         [
-          "Verificare solicitant.",
-          "Confirma vârstă, forma juridică, rolul de conducere și incadrarea din apelul activ."
+          "2.",
+          "Strange documentele pentru terenuri, animale, spatii si activitatea agricola."
         ],
         [
-          "Verificare investiție.",
-          "Leaga fiecare cheltuiala de activitatea agricolă și de documentele exploatației."
+          "3.",
+          "Cere oferte comparabile si evita specificatiile care par dedicate unui singur furnizor."
         ],
         [
-          "Calcul buget/cofinanțare.",
-          "Separarea grantului, contributiei proprii, TVA, costurilor neeligibile și rezervelor de cash-flow."
+          "4.",
+          "Pastreaza o rezerva de buget pentru TVA, diferente de pret si costuri neeligibile."
         ],
         [
-          "Verificare punctaj.",
-          "Estimeaza criteriile doar dacă există documente care le pot susține."
-        ],
-        [
-          "Pregătire documente.",
-          "Strange actele fermei, calculul SO, ofertele, documentele de amplasament și anexele."
-        ],
-        [
-          "Depunere.",
-          "Verifică forma finală a cererii și incarcarea corecta în platforma indicata de autoritate."
-        ],
-        [
-          "Clarificari.",
-          "Leaga raspunsurile la clarificari de documente, buget si ghidul apelului."
-        ],
-        [
-          "Contractare.",
-          "Confirma termenele, condițiile de achiziție și obligatiile de implementare înainte de semnare."
+          "5.",
+          "Verifica ghidul final, anuntul sesiunii si eventualele erate inainte de depunere."
         ]
       ],
       "commonMistakes": [
-        "Ghidul consultativ este tratat ca ghid final, fără verificarea versiunii active și a anexelor.",
-        "Lansarea DR 12 AFIR este presupusă din surse secundare, iar bugetul este blocat înainte de confirmarea documentului aplicabil.",
-        "Calcul SO facut pe date vechi sau pe suprafețe/efective care nu apar la fel în documente.",
-        "Solicitantul este prezentat ca sef al exploatației, dar documentele nu susțin controlul real.",
-        "Utilajele sunt supradimensionate față de ferma sau nu au legătura clara cu activitatea agricolă.",
-        "Aceeași cheltuiala sau acelasi obiectiv este atins și prin alta finanțare, fără verificarea dublei finanțări.",
-        "Ofertele sunt generale, fără specificatii tehnice suficiente pentru evaluare.",
-        "Actele pentru teren, animale sau spații au perioade, titulari sau adrese necorelate.",
-        "Bugetul ignora TVA, costuri neeligibile, avize sau diferente de pret.",
-        "Punctajul este estimat optimist, fără documente care să dovedeasca fiecare criteriu."
+        "Calcul SO facut fara documentele care sustin culturile sau efectivele declarate.",
+        "Utilaje prea mari pentru exploatatia existenta sau pentru activitatea propusa.",
+        "Documente pentru teren, animale sau spatii care expira inainte de perioada ceruta.",
+        "Buget care ignora cofinantarea, TVA sau costurile neeligibile.",
+        "Punctaj estimat pe intentii, nu pe criterii demonstrabile.",
+        "Achizitii sau angajamente incepute inainte de momentul permis."
       ],
       "caseExample": {
         "note": "Exemplu anonimizat de completat după validare interna - de inlocuit cu un caz real anonimizat, verificat intern.",
@@ -316,90 +274,37 @@
         "challenges": "Corelarea utilajelor cu suprafata lucrata, confirmarea documentelor APIA și separarea costurilor neeligibile",
         "checked": "Forma solicitantului, calcul SO, documente de folosință, oferte, cofinanțare și riscul de dublare cu alte programe"
       },
-      "heroIcon": "ph-duotone ph-plant",
+      "heroIcon": "ph-duotone ph-tractor",
       "officialGuideKey": "dr12",
       "guideCtaLabel": "Sursa AFIR",
       "contentSections": [
         {
-          "title": "Ghidul solicitantului DR 12 AFIR: ce citești întâi",
-          "paragraphs": [
-            "Când cauți ghidul solicitantului DR 12 AFIR, verifică mai întâi dacă documentul este consultativ sau activ, ce anexe îl însoțesc și dacă există clarificări publicate ulterior. Diferența contează: o versiune de consultare ajută la pregătire, dar nu trebuie folosită ca regulă finală pentru depunere.",
-            "Citirea ghidului începe cu beneficiarul, condițiile de eligibilitate, documentele obligatorii, cheltuielile permise, criteriile de selecție, calendarul și modul de transmitere a dosarului. Fiecare element trebuie legat de actele fermei, nu doar de intenția de investiție."
-          ]
+          "title": "Cum verificam eligibilitatea pentru DR12",
+          "body": "Incepem cu solicitantul si cu exploatatia, nu cu lista de cumparaturi. Varsta, istoricul instalarii, forma juridica, dimensiunea economica si documentele APIA sau ANSVSA stabilesc daca proiectul poate intra in analiza. Abia apoi verificam utilajele, constructiile, dotarile si serviciile care pot fi incluse in buget."
         },
         {
-          "title": "Lansare DR 12 AFIR: ce pregătești fără să presupui calendarul",
-          "paragraphs": [
-            "Interesul pentru lansarea DR 12 AFIR trebuie separat de pregătirea dosarului. Până la documentul aplicabil, poți să verifici solicitantul, exploatația, SO/SOC, documentele de folosință, investiția și cofinanțarea, dar nu trebuie blocate achiziții sau promisiuni comerciale pe baza unui calendar presupus.",
-            "După publicarea apelului, se revizuiesc anexe, declarații, grila de selecție, cheltuielile eligibile și termenul de depunere. Dacă o condiție se schimbă, bugetul și lista de acte se ajustează înainte de încărcarea dosarului."
-          ]
+          "title": "De ce este important calculul SO",
+          "body": "Dimensiunea economica arata daca exploatatia sustine investitia propusa. Un proiect poate deveni vulnerabil daca SO este calculat din date incomplete, daca nu exista documente pentru culturi sau efective ori daca investitia este supradimensionata fata de activitatea agricola."
         },
         {
-          "title": "Acte necesare pentru tânărul fermier",
-          "paragraphs": [
-            "Lista exactă de acte se confirmă în ghidul activ, însă verificarea inițială pentru un tânăr fermier are câteva zone recurente: identitatea și forma solicitantului, controlul asupra exploatației, documentele agricole, calculul SO/SOC, investiția propusă, cofinanțarea și declarațiile apelului."
-          ],
-          "tableRows": [
-            [
-              "Solicitant și formă juridică",
-              "acte de identificare sau înregistrare, documente privind rolul în exploatație și declarațiile cerute de apel"
-            ],
-            [
-              "Exploatație agricolă",
-              "date APIA, ANSVSA/DSVSA, registru agricol sau alte dovezi care susțin culturile, animalele și activitatea declarată"
-            ],
-            [
-              "Teren, spațiu sau animale",
-              "drept de folosință, amplasament, registre și documente care trebuie să aibă titulari, perioade și suprafețe coerente"
-            ],
-            [
-              "Investiție și buget",
-              "oferte, specificații tehnice, justificarea utilajelor sau dotărilor și legătura cu lucrările fermei"
-            ],
-            [
-              "Cofinanțare și cash-flow",
-              "surse de contribuție proprie, tratamentul TVA, costuri neeligibile și rezerve pentru implementare"
-            ]
-          ]
+          "title": "Cum tratam cofinantarea si calendarul",
+          "body": "Grantul nu acopera automat toate costurile. Separarea grantului de cofinantare, TVA, cheltuieli neeligibile si rezerve de pret trebuie facuta inainte de depunere. Calendarul trebuie comparat cu perioada de implementare si cu obligatiile de monitorizare ale apelului activ."
         },
         {
-          "title": "Sef de exploatație, prag SO și suprascore",
-          "paragraphs": [
-            "Pentru DR 12 conteaza rolul real al solicitantului ca sef de exploatație, incadrarea în pragurile SO ale apelului activ, situatia tinerilor fermieri sau a fermierilor recent instalati, cofinanțarea și riscul de suprascorare. Punctajul se notează doar când poate fi dovedit prin documente."
-          ]
-        },
-        {
-          "title": "Legături utile în clusterul DR12 AFIR",
-          "paragraphs": [
-            "Pagina DR12 trebuie citită împreună cu instrumentele și paginile care verifică aceeași decizie: calculul SO/SOC, consultanța AFIR, comparația DR12 vs DR14 și ghidurile pentru ferme. Aceste legături ajută solicitantul să treacă de la căutarea unui ghid la verificarea documentelor proprii."
-          ],
-          "links": [
-            {
-              "href": "/calculator-soc",
-              "label": "Calculator SO/SOC pentru DR12 AFIR"
-            },
-            {
-              "href": "/consultanta-afir",
-              "label": "Consultanță AFIR pentru verificare DR12"
-            },
-            {
-              "href": "/dr12-vs-dr14",
-              "label": "DR12 vs DR14"
-            },
-            {
-              "href": "/fonduri-pentru-ferme",
-              "label": "Fonduri pentru ferme"
-            }
-          ]
+          "title": "Rolul surselor oficiale",
+          "body": "Pagina foloseste ghidul consultativ AFIR ca reper de lucru. Pentru decizia finala de aplicare verificam ghidul activ, anuntul sesiunii, anexele si eventualele clarificari publicate de autoritate."
         }
       ],
-      "decisionIntro": "Pentru DR12, întrebarea principală este dacă solicitantul poate demonstra rolul real în exploatație și dacă investiția consolidează ferma în limitele apelului.",
-      "decisionClose": "Dacă vârsta, SO/SOC, actele de folosință sau documentele agricole nu sunt clare, dosarul trebuie ajustat înainte de buget. Condițiile finale se confirmă în ghidul activ AFIR.",
-      "finalCtaText": "Trimite vârsta solicitantului, forma juridică, datele exploatației, SO/SOC, documentele agricole și investiția dorită pentru verificarea DR12.",
-      "heroPrimaryCta": "Verifică eligibilitatea",
-      "finalPrimaryCta": "Trimite datele proiectului",
-      "inlineCtaTitle": "Ce poți trimite pentru verificare",
-      "inlineCtaText": "Trimite vârsta solicitantului, forma juridică, datele exploatației, SO/SOC, documentele agricole și investiția dorită pentru verificarea DR12."
+      "decisionIntro": "DR12 merita pregatit cand solicitantul si exploatatia pot fi demonstrate documentar, investitia este proportionala cu activitatea agricola, iar cofinantarea este realista.",
+      "decisionClose": "Daca varsta, SO, documentele de exploatatie sau bugetul nu sustin proiectul, recomandarea prudenta este ajustarea inainte de depunere.",
+      "finalCtaText": "Verifica eligibilitatea DR12",
+      "heroPrimaryCta": "Verifica eligibilitatea DR12",
+      "finalPrimaryCta": "Verifica eligibilitatea DR12",
+      "inlineCtaTitle": "Urmatorul pas",
+      "inlineCtaText": "Trimite datele principale despre solicitant, localitate, activitate, investitie si buget. Verificarea initiala arata daca programul merita pregatit si ce riscuri trebuie rezolvate inainte de depunere.",
+      "updatedAt": "2026-06-11",
+      "ctaText": "Verifica eligibilitatea DR12",
+      "secondaryCtaText": "Compara cu DR14 AFIR"
     },
     {
       "slug": "dr14",
@@ -407,141 +312,294 @@
       "type": "program",
       "schemaType": "GovernmentService",
       "category": "AFIR",
-      "title": "DR14 AFIR | ferme mici și investiții",
-      "description": "DR14 AFIR pentru ferme mici: SO/SOC, exploatație, investiții eligibile, documente, cofinanțare, punctaj și legătura cu calculatorul SO.",
-      "h1": "DR14 AFIR pentru ferme mici",
-      "quickAnswer": "DR14 se verifică pentru ferme mici care pot demonstra dimensiunea economică, documentele exploatației, dreptul de folosință, investiția necesară și cofinanțarea. Pragurile, sumele și punctajul se confirmă în ghidul activ. Calculatorul SO/SOC este doar un punct de pornire.",
-      "programName": "DR 14 AFIR",
+      "title": "DR14 AFIR | investitii pentru ferme mici",
+      "description": "DR14 AFIR explicat pentru ferme mici: cine poate aplica, pragul de 50.000 euro, intensitate de pana la 85%, documente, SO si riscuri de eligibilitate.",
+      "h1": "DR14 AFIR: investitii pentru ferme mici",
+      "quickAnswer": "DR14 AFIR este o interventie pentru ferme mici care au nevoie de investitii proportionale cu dimensiunea exploatatiei. Forma consultativa publicata de AFIR mentioneaza o valoare maxima de 50.000 euro/proiect si o intensitate de pana la 85%. Inainte de pregatirea dosarului trebuie verificate forma juridica, dimensiunea economica, documentele pentru terenuri sau animale, activitatea agricola, codurile si investitiile permise. Programul nu trebuie tratat ca o finantare generala pentru orice achizitie rurala; bugetul trebuie legat direct de ferma. Cofinantarea, TVA-ul, documentele de amplasament si calendarul se confirma in ghidul activ si in anexele sesiunii. Dosarul devine mai sigur cand fiecare echipament are oferta, justificare tehnica, document de exploatatie si sursa realista pentru partea proprie.",
+      "programName": "DR14 AFIR",
       "policyContribution": "programul sprijina fermele mici care au nevoie de modernizare, diversificare și cresterea capacitatii de a rămâne active pe piata.",
-      "funding": "valoarea sprijinului și intensitatea se confirma în apelul activ; informațiile numerice sunt pastrate doar dacă există acoperire în sursele interne.",
+      "funding": "Pana la 50.000 euro/proiect, cu intensitate maxima de 85%, conform formei consultative publicate de AFIR.",
       "audience": [
-        "ferme mici cu activitate agricolă verificabila",
-        "gospodarii agricole care vor să treaca spre o exploatație mai competitiva",
-        "beneficiari care urmaresc utilaje, dotări, spații agricole sau investiții conexe"
+        "Ferme mici care pot demonstra activitate agricola reala si documente coerente pentru exploatatie.",
+        "Solicitanti care au nevoie de utilaje, dotari sau investitii punctuale, nu de proiecte supradimensionate.",
+        "Exploatatii care pot sustine cofinantarea si obligatiile asumate dupa semnarea contractului."
       ],
       "eligibility": [
-        "ferma trebuie să se incadreze în dimensiunea economică ceruta de apel",
-        "solicitantul trebuie să poată dovedi exploatația și dreptul de utilizare",
-        "investiția trebuie să sustina dezvoltarea fermei și să fie justificata economic"
+        "Verifica dimensiunea economica a fermei si incadrarea in categoria vizata de DR14.",
+        "Confirma forma juridica si documentele de functionare sau exploatare cerute de ghid.",
+        "Coreleaza fiecare investitie cu activitatea agricola declarata si cu capacitatea exploatatiei.",
+        "Dovedeste dreptul de utilizare pentru terenuri, animale, spatii si amplasamente.",
+        "Pregateste cofinantarea si costurile neeligibile inainte de depunere."
       ],
       "mandatory": [
-        "calcul SO actualizat",
-        "documente agricole și fiscale clare",
-        "ofertare realistă pentru echipamente sau lucrari",
-        "respectarea conditiilor de mediu, sanitar-veterinare și autorizare aplicabile"
+        "Calcul SO si documente suport pentru exploatatie.",
+        "Forma juridica si activitate agricola compatibile cu cerintele apelului.",
+        "Buget realist, cu TVA, cofinantare si cheltuieli neeligibile tratate separat.",
+        "Documente de proprietate sau folosinta valabile pe perioada ceruta.",
+        "Respectarea conditiilor finale din ghidul activ, nu doar din forma consultativa."
       ],
       "eligibleExpenses": [
-        "utilaje și echipamente agricole",
-        "constructii usoare, modernizari și dotări permise",
-        "echipamente pentru depozitare, procesare la nivel de ferma sau valorificare",
-        "solutii digitale și echipamente pentru eficiență activitatii",
-        "servicii generale în limitele programului"
+        "Utilaje, echipamente si dotari agricole in limitele si conditiile ghidului activ.",
+        "Investitii pentru modernizarea activitatii fermei, cand sunt justificate de exploatatie.",
+        "Documentatii, servicii si cheltuieli conexe eligibile potrivit apelului.",
+        "Lucrari sau dotari permise explicit pentru tipul de ferma si obiectivul proiectului."
       ],
       "ineligibleExpenses": [
-        "cheltuieli fără legătura cu ferma",
-        "active nejustificate prin dimensiunea exploatației",
-        "achiziții incepute prea devreme",
-        "costuri care nu pot fi documentate prin oferte și contracte",
-        "cheltuieli finanțate deja prin alt program"
+        "Cheltuieli fara legatura cu activitatea agricola a fermei mici.",
+        "Achizitii incepute prea devreme sau nepermise de schema de finantare.",
+        "Investitii dimensionate pentru o exploatatie mai mare decat cea dovedita documentar.",
+        "Costuri nejustificate prin oferte, devize si explicatii tehnice."
       ],
       "scoring": [
-        "incadrarea exploatației",
-        "sectorul agricol și potentialul de dezvoltare",
-        "calitatea planului de investiții",
-        "componenta de sustenabilitate și eficiență",
-        "coerenta documentelor și a bugetului"
+        "Punctajul se estimeaza numai pe criterii demonstrabile.",
+        "Bugetul si investitia trebuie sa fie proportionale cu ferma mica.",
+        "Riscurile cresc cand proiectul incearca sa forteze activitati care nu sunt documentate."
       ],
       "steps": [
-        "calculeaza SO",
-        "verifică documentele de teren, animale și registru",
-        "alege investiții proportionale cu ferma",
-        "pregătește ofertele și justificarea",
-        "completeaza cererea și anexele pentru depunere"
+        "Calculam dimensiunea economica si verificam incadrarea fermei.",
+        "Stabilim investitiile permise si eliminam costurile fragile.",
+        "Pregatim documentele pentru solicitant, exploatatie si amplasament.",
+        "Construim bugetul si scenariul de cofinantare.",
+        "Verificam ghidul final si anexele inainte de depunere."
       ],
       "evaluation": [
-        "conformitate administrativa",
-        "verificare eligibilitate",
-        "punctaj și selecție",
-        "contractare",
-        "implementare și cereri de plată"
+        "Evaluatorul va urmari daca ferma exista documentar si daca investitia este proportionala.",
+        "Ofertele, devizele si justificarile tehnice trebuie sa explice clar necesitatea achizitiilor.",
+        "Conditiile consultative pot fi ajustate pana la lansarea sesiunii."
       ],
       "examples": [
-        "o ferma mica de legume poate urmari echipamente de irigare și dotări de depozitare",
-        "o exploatație zootehnica poate pregati dotări corelate cu efectivul",
-        "o ferma apicola trebuie să verifice atent incadrarea și regulile privind dubla finanțare"
+        "Ferma vegetala mica ce solicita echipamente adaptate culturilor declarate si suprafetelor lucrate.",
+        "Exploatatie zootehnica mica ce pregateste dotari legate de cresterea si ingrijirea animalelor.",
+        "Ferma mixta care are nevoie de modernizare punctuala si poate acoperi cofinantarea."
       ],
       "faq": [
         [
-          "Ce este DR 14 AFIR?",
-          "DR 14 este o interventie orientata către ferme mici care vor să isi imbunatateasca activitatea prin investiții eligibile."
+          "Ce este DR14 AFIR?",
+          "DR14 este o interventie pentru investitii in ferme mici. Conditiile finale se confirma in ghidul activ publicat de AFIR."
         ],
         [
-          "Cum se verifică eligibilitatea pentru DR 14?",
-          "Eligibilitatea se verifică prin forma solicitantului, dimensiunea economică, documentele exploatației, investiția și condițiile specifice apelului."
+          "Care este valoarea maxima DR14?",
+          "Forma consultativa analizata mentioneaza pana la 50.000 euro/proiect si intensitate de pana la 85%."
         ],
         [
-          "Ce greșeli apar frecvent la DR 14?",
-          "Cele mai frecvente greșeli sunt calculul SO greșit, documente agricole incomplete, investiții supradimensionate și oferte necorelate cu proiectul."
+          "Cine poate aplica la DR14?",
+          "Pot aplica solicitantii care se incadreaza in categoria de ferme mici si pot demonstra exploatatia, activitatea agricola si documentele cerute de ghid."
         ],
         [
-          "Este obligatoriu un calculator SO?",
-          "Nu este suficient singur, dar calculul SO este un pas practic important înainte de decizia de aplicare."
+          "Este DR14 potrivit pentru utilaje mari?",
+          "Doar daca utilajele sunt eligibile, proportionale cu exploatatia si justificate de activitatea reala a fermei."
+        ],
+        [
+          "Ce documente sunt sensibile?",
+          "Calculul SO, documentele pentru terenuri sau animale, actele juridice, ofertele si dovada cofinantarii sunt zone sensibile."
+        ],
+        [
+          "Pot pregati dosarul inainte de ghidul final?",
+          "Da, pentru triere si documente, dar decizia finala trebuie facuta dupa verificarea ghidului activ si a anexelor."
+        ],
+        [
+          "Ce greseli duc la clarificari?",
+          "Bugete supradimensionate, documente expirate, oferte incomplete si investitii care nu se leaga clar de ferma."
+        ],
+        [
+          "Consultanta garanteaza finantarea?",
+          "Nu. Consultanta structureaza eligibilitatea si dosarul, dar aprobarea depinde de reguli, punctaj, buget si verificarea autoritatii."
         ]
       ],
       "related": [
-        "/calculator-soc",
-        "/dr12-afir",
-        "/consultanta-afir",
-        "/fonduri-pentru-ferme",
-        "/fonduri-pentru-utilaje-agricole",
-        "/dr-14-afir-conditii-eligibilitate-greseli-frecvente"
+        {
+          "href": "/consultanta-afir",
+          "label": "Consultanta AFIR"
+        },
+        {
+          "href": "/dr12-afir",
+          "label": "DR12 AFIR"
+        },
+        {
+          "href": "/calculator-soc",
+          "label": "Calculator SO AFIR"
+        },
+        {
+          "href": "/fonduri-pentru-ferme",
+          "label": "Fonduri pentru ferme"
+        },
+        {
+          "href": "/verificare-eligibilitate-fonduri-europene",
+          "label": "Verificare eligibilitate"
+        }
       ],
       "sourceKeys": [
         "dr14"
       ],
-      "heroIcon": "ph-duotone ph-plant",
+      "heroIcon": "ph-duotone ph-seedling",
       "officialGuideKey": "dr14",
       "guideCtaLabel": "Ghid oficial",
       "contentSections": [
         {
-          "title": "Legătura cu calculatorul SO/SOC",
-          "paragraphs": [
-            "Un rezultat orientativ din calculator nu este suficient. Datele trebuie susținute prin documente APIA, ANSVSA, registru agricol sau alte dovezi cerute de ghid."
-          ],
-          "links": [
-            {
-              "href": "/calculator-soc",
-              "label": "Calculator SO/SOC"
-            },
-            {
-              "href": "/dr14-afir-ferme-mici",
-              "label": "Checklist DR14 ferme mici"
-            }
-          ]
+          "title": "Cum se citeste DR14 pentru o ferma mica",
+          "body": "DR14 trebuie analizat prin capacitatea reala a fermei. Daca exploatatia este mica, investitia trebuie sa ramana proportionala si justificabila. Un buget apropiat de plafon poate fi corect numai daca documentele, activitatea si fluxul tehnic il sustin."
         },
         {
-          "title": "Calculator SO și greșeli frecvente DR14",
-          "paragraphs": [
-            "Înainte de buget, verifică dimensiunea economică prin calculatorul SOC și citeste lista de greșeli frecvente: SO calculat greșit, documente incomplete, oferte necorelate, investiții supradimensionate și cofinanțare fragila."
-          ],
-          "links": [
-            {
-              "href": "/calculator-soc",
-              "label": "Calculator SOC AFIR"
-            },
-            {
-              "href": "/dr-14-afir-conditii-eligibilitate-greseli-frecvente",
-              "label": "Greșeli frecvente DR14"
-            }
-          ]
+          "title": "Documentele conteaza mai mult decat intentia",
+          "body": "Intentia de modernizare nu este suficienta. Documentele pentru terenuri, animale, spatii, forma juridica, autorizari, oferte si cofinantare trebuie sa confirme ca proiectul poate fi implementat si monitorizat."
+        },
+        {
+          "title": "Cum pregatim bugetul",
+          "body": "Separarea grantului de cofinantare, TVA si costuri neeligibile reduce riscul de blocaj dupa aprobare. Bugetul trebuie sa explice fiecare echipament si fiecare serviciu prin nevoia fermei."
+        },
+        {
+          "title": "Ce ramane de confirmat",
+          "body": "Pagina foloseste forma consultativa ca reper. Inainte de depunere verificam ghidul final, anexele, criteriile de selectie, calendarul si orice clarificare publicata de AFIR."
+        },
+        {
+          "title": "Cum se decide daca investitia este proportionala",
+          "body": "Pentru DR14 nu este suficient ca solicitantul sa se incadreze formal ca ferma mica. Analiza trebuie sa arate ca utilajele, dotarile sau lucrarile cerute pot fi folosite de exploatatia existenta si ca nu genereaza capacitati greu de justificat. In practica verificam suprafetele, efectivele, fluxul de lucru, sezonul agricol, operatorii disponibili si costurile de exploatare dupa achizitie. Daca investitia depaseste nevoia reala, proiectul trebuie redus sau mutat catre un apel mai potrivit."
         }
       ],
-      "finalCtaText": "Trimite structura fermei, SO/SOC, documentele exploatației, investiția și bugetul ca să verificăm dacă DR14 merită pregătit.",
-      "heroPrimaryCta": "Verifică eligibilitatea",
-      "finalPrimaryCta": "Trimite datele proiectului",
-      "inlineCtaTitle": "Ce poți trimite pentru verificare",
-      "inlineCtaText": "Trimite structura fermei, SO/SOC, documentele exploatației, investiția și bugetul ca să verificăm dacă DR14 merită pregătit.",
-      "decisionClose": "Dacă documentele, bugetul sau condițiile nu se potrivesc, proiectul se ajustează înainte de depunere. Regulile finale se confirmă în ghidul activ, anexele apelului și sursele oficiale."
+      "finalCtaText": "Verifica eligibilitatea DR14",
+      "heroPrimaryCta": "Verifica eligibilitatea DR14",
+      "finalPrimaryCta": "Verifica eligibilitatea DR14",
+      "inlineCtaTitle": "Urmatorul pas",
+      "inlineCtaText": "Trimite datele principale despre solicitant, localitate, activitate, investitie si buget. Verificarea initiala arata daca programul merita pregatit si ce riscuri trebuie rezolvate inainte de depunere.",
+      "decisionClose": "Daca proiectul se bazeaza doar pe plafonul maxim sau pe date neconfirmate, trebuie refacut inainte de depunere.",
+      "updatedAt": "2026-06-11",
+      "template": "editorial-program",
+      "minWords": 1200,
+      "minFaq": 8,
+      "applicantRows": [
+        [
+          "Solicitant",
+          "Ferma mica sau forma juridica eligibila conform ghidului activ.",
+          "Incadrare, documente juridice si activitate agricola reala.",
+          "AFIR"
+        ],
+        [
+          "Dimensiune",
+          "Exploatatie cu SO si date agricole verificabile.",
+          "Calcul SO si documente pentru culturi, animale sau spatii.",
+          "AFIR"
+        ],
+        [
+          "Investitie",
+          "Utilaje, dotari sau lucrari proportionale cu ferma.",
+          "Legatura directa cu activitatea agricola.",
+          "Ghidul activ"
+        ],
+        [
+          "Cofinantare",
+          "Partea proprie si costurile neeligibile raman la beneficiar.",
+          "TVA, rezerve si surse de finantare.",
+          "Bugetul proiectului"
+        ]
+      ],
+      "eligibleInvestmentRows": [
+        [
+          "Utilaje si echipamente",
+          "Dotari agricole adaptate fermei mici.",
+          "Proportionalitate si eligibilitate expresa.",
+          "Ghidul activ"
+        ],
+        [
+          "Lucrari si amenajari",
+          "Investitii permise pentru activitatea agricola.",
+          "Autorizatii si drepturi asupra amplasamentului.",
+          "Ghidul activ"
+        ],
+        [
+          "Servicii proiect",
+          "Documentatii si asistenta eligibila.",
+          "Plafoane si momentul cheltuielii.",
+          "Ghidul activ"
+        ],
+        [
+          "Modernizare punctuala",
+          "Dotari care imbunatatesc fluxul fermei.",
+          "Sa nu fie doar inlocuire nejustificata.",
+          "Ghidul activ"
+        ]
+      ],
+      "cofinancingTitle": "Finantare si cofinantare DR14",
+      "cofinancingRows": [
+        [
+          "Grant maxim",
+          "50.000 euro/proiect",
+          "Valoare indicata in forma consultativa analizata."
+        ],
+        [
+          "Intensitate",
+          "Pana la 85%",
+          "Se confirma in ghidul activ si anexele sesiunii."
+        ],
+        [
+          "Contributie proprie",
+          "Minimum diferenta pana la valoarea proiectului",
+          "La aceasta se pot adauga TVA si costuri neeligibile."
+        ],
+        [
+          "Confirmare",
+          "In ghidul activ AFIR",
+          "Forma consultativa poate fi modificata."
+        ]
+      ],
+      "documentRows": [
+        [
+          "Solicitant",
+          "Beneficiar",
+          "La verificare si depunere.",
+          "Acte juridice, fiscale si declaratii."
+        ],
+        [
+          "Exploatatie",
+          "Beneficiar",
+          "Inainte de buget.",
+          "Documente terenuri, animale, spatii si calcul SO."
+        ],
+        [
+          "Investitie",
+          "Beneficiar, consultant si furnizori",
+          "Inainte de depunere.",
+          "Oferte, devize, justificari tehnice."
+        ],
+        [
+          "Financiar",
+          "Beneficiar si contabil",
+          "Inainte de contractare.",
+          "Cofinantare, TVA si costuri neeligibile."
+        ]
+      ],
+      "preparationSteps": [
+        [
+          "1.",
+          "Nu porni de la suma maxima daca ferma nu sustine investitia."
+        ],
+        [
+          "2.",
+          "Verifica documentele de exploatatie inainte de oferte."
+        ],
+        [
+          "3.",
+          "Coreleaza fiecare cost cu activitatea agricola si cu dimensiunea fermei."
+        ],
+        [
+          "4.",
+          "Pastreaza rezerve pentru TVA si diferente de pret."
+        ],
+        [
+          "5.",
+          "Revizuieste ghidul final imediat ce este publicat."
+        ]
+      ],
+      "commonMistakes": [
+        "Folosirea unei dimensiuni economice nejustificate documentar.",
+        "Buget construit pentru suma maxima, nu pentru nevoia reala a fermei.",
+        "Oferte incomplete sau greu de comparat.",
+        "Documente de teren, spatiu sau animale nevalabile.",
+        "Ignorarea TVA si a costurilor neeligibile.",
+        "Aplicarea pe baza formei consultative fara verificarea ghidului activ."
+      ],
+      "decisionIntro": "DR14 este potrivit cand ferma mica are documente clare, investitia este dimensionata corect si cofinantarea este acoperita.",
+      "ctaText": "Verifica eligibilitatea DR14",
+      "secondaryCtaText": "Compara cu DR12 AFIR"
     },
     {
       "slug": "dr14-afir-ferme-mici",
@@ -929,274 +987,235 @@
       "type": "program",
       "schemaType": "GovernmentService",
       "category": "Start-Up Nation",
-      "title": "Start-Up Nation 2026 | conditii, CAEN si plan",
-      "description": "Start-Up Nation 2026: conditii, cod CAEN, plan de afaceri, cheltuieli, buget fara valori presupuse si consultanta pentru dosar.",
-      "h1": "Start-Up Nation 2026: conditii, CAEN si plan de afaceri",
-      "quickAnswer": "Start-Up Nation 2026 trebuie verificat ca program complet, nu doar ca idee de afacere. Cautarile Start Up Nation, startup nation sau programul Start Up Nation 2026 duc la aceeasi analiza: solicitant, conditii, cod CAEN, plan de afaceri, cheltuieli eligibile, buget si documente. Pagina pastreaza ruta canonica /start-up-nation-2026 si trimite catre paginile specializate pentru conditii, plan de afaceri, cheltuieli si cod CAEN. Pentru decizia de depunere, regulile finale se confirma in procedura activa, iar consultanta Start-Up Nation poate analiza daca proiectul merita pregatit in forma actuala. Analiza trebuie sa arate ce este clar, ce lipseste si ce trebuie amanat pana cand exista documente suficiente.",
-      "programName": "Start-Up Nation 2026",
+      "title": "Start-Up Nation | conditii, cheltuieli eligibile si plan",
+      "description": "Start-Up Nation explicat pe baza regulilor publicate pentru editia 2024: grant 250.000 lei, intensitate 90%, locuri de munca, cheltuieli si verificari utile.",
+      "h1": "Start-Up Nation: conditii, cheltuieli eligibile si plan de afaceri",
+      "quickAnswer": "Ruta acestei pagini ramane /start-up-nation-2026 pentru continuitate tehnica, dar informatiile factuale sunt tratate prudent pe baza regulilor publicate pentru editia 2024. Programul a prevazut granturi de pana la 250.000 lei, intensitate maxima de 90%, crearea a doua locuri de munca si mentinerea lor pe perioada ceruta de schema. Pentru o sesiune viitoare, trebuie confirmate ghidul, bugetul, pilonii, codurile CAEN, cheltuielile eligibile si calendarul. Pagina este utila pentru pregatirea preliminara, verificarea ideii de afaceri, estimarea aportului propriu, alegerea furnizorilor si evitarea promisiunilor nepublicate, nu ca garantie de lansare, selectie sau aprobare. Orice scenariu de aplicare trebuie refacut dupa publicarea regulilor finale, mai ales pentru punctaj, aport propriu si obligatii de angajare.",
+      "programName": "Start-Up Nation",
       "policyContribution": "programul susține antreprenoriatul, infiintarea și dezvoltarea firmelor tinere, crearea de activitate economică și ocupare.",
-      "funding": "valoarea grantului, contributia proprie și criteriile finale se confirma în procedura editiei active.",
+      "funding": "Pana la 250.000 lei, cu intensitate maxima de 90%, potrivit regulilor publicate pentru editia 2024.",
       "audience": [
-        "antreprenori care cauta Start Up Nation sau startup nation si vor o harta de verificare",
-        "solicitanti care pregatesc plan de afaceri Start Up Nation 2026",
-        "persoane care compara conditii, cod CAEN, cheltuieli si consultanta Start-Up Nation"
+        "Antreprenori care vor sa pregateasca din timp o idee de afacere si un buget realist.",
+        "Firme nou infiintate sau solicitanti eligibili potrivit regulilor sesiunii active.",
+        "Aplicanti care pot sustine contributia proprie, locurile de munca si obligatiile de monitorizare."
       ],
       "eligibility": [
-        "solicitantul trebuie să indeplineasca profilul editiei active",
-        "activitatea propusa trebuie să fie eligibila și autorizabila",
-        "bugetul trebuie să fie justificat de modelul de business",
-        "cofinanțarea și sustenabilitatea trebuie analizate realist"
+        "Confirma sesiunea activa si ghidul valabil inainte de orice decizie de depunere.",
+        "Verifica incadrarea solicitantului, codul CAEN, istoricul si restrictiile programului.",
+        "Analizeaza cheltuielile eligibile, aportul propriu si TVA-ul separat de grant.",
+        "Calculeaza obligatiile privind locurile de munca, implementarea si monitorizarea.",
+        "Pregateste planul de afaceri pe baza unei activitati reale, nu doar pentru punctaj."
       ],
       "mandatory": [
-        "verificarea conditiilor Start Up Nation 2026 in procedura activa",
-        "cod CAEN potrivit si autorizabil pentru activitatea reala",
-        "plan de afaceri coerent cu piata, bugetul si cheltuielile",
-        "oferte si specificatii care pot sustine fiecare cost",
-        "cash-flow pentru contributie proprie, TVA si costuri neeligibile"
+        "Confirmarea ghidului activ, a bugetului si a calendarului.",
+        "Plan de afaceri coerent cu activitatea, piata si cheltuielile propuse.",
+        "Buget separat pentru grant, aport propriu, TVA si costuri neeligibile.",
+        "Respectarea obligatiilor privind locurile de munca si perioada de monitorizare.",
+        "Documente juridice, fiscale si financiare actualizate la momentul depunerii."
       ],
       "eligibleExpenses": [
-        "echipamente și utilaje necesare activitatii",
-        "software, website, solutii digitale și servicii conexe",
-        "mobilier, dotări și active necesare functionarii",
-        "servicii de consultanță și promovare în limitele programului",
-        "alte cheltuieli permise de procedura activa"
+        "Echipamente, dotari si active necesare activitatii, in limitele schemei active.",
+        "Servicii, promovare, software sau alte cheltuieli permise explicit in ghid.",
+        "Cheltuieli legate de infiintare, functionare sau implementare, daca sunt acceptate de apel.",
+        "Investitii care sustin direct activitatea economica si locurile de munca asumate."
       ],
       "ineligibleExpenses": [
-        "cheltuieli fără legătura cu activitatea",
-        "costuri umflate artificial",
-        "achiziții facute înainte de momentul permis",
-        "bunuri sau servicii care nu pot fi justificate",
-        "activitati excluse de procedura"
+        "Achizitii fara legatura cu activitatea autorizata.",
+        "Costuri incepute inainte de momentul permis.",
+        "Bugete construite pe furnizori, preturi sau specificatii neverificabile.",
+        "Promisiuni de lansare sau conditii tratate ca definitive fara ghid activ."
       ],
       "scoring": [
-        "profilul solicitantului",
-        "domeniul de activitate",
-        "locurile de munca și sustenabilitatea",
-        "calitatea planului de afaceri",
-        "corelarea bugetului cu activitatea"
+        "Punctajul trebuie calculat numai dupa publicarea criteriilor active.",
+        "Codul CAEN, cheltuielile si locurile de munca pot influenta eligibilitatea si evaluarea.",
+        "Un plan bun explica piata, bugetul si implementarea, nu doar indeplineste formularul."
       ],
       "steps": [
-        "clarifica solicitantul si stadiul firmei",
-        "verifica regulile Start Up Nation 2026 in procedura activa",
-        "alege codul CAEN si activitatea reala",
-        "separa cheltuielile eligibile de costurile neeligibile",
-        "construieste planul de afaceri si bugetul pe oferte",
-        "decide daca mergi spre depunere sau spre ajustarea proiectului"
+        "Clarificam ideea de afacere si codul CAEN.",
+        "Comparam cheltuielile dorite cu regulile ultimei editii si cu ghidul activ cand apare.",
+        "Construim bugetul cu aport propriu, TVA si rezerve.",
+        "Pregatim planul de afaceri si documentele suport.",
+        "Actualizam dosarul imediat dupa publicarea regulilor finale."
       ],
       "evaluation": [
-        "verificare administrativa",
-        "evaluare după grila",
-        "selecție în ordinea criteriilor aplicabile",
-        "semnare contract",
-        "achiziții, implementare, raportare și plată"
+        "Evaluarea depinde de sesiunea activa si criteriile publicate atunci.",
+        "Planul trebuie sa arate capacitatea reala de implementare si sustinere a locurilor de munca.",
+        "Cheltuielile trebuie sa fie eligibile, necesare si verificabile."
       ],
       "examples": [
-        "un atelier de producție trebuie să justifice echipamentele prin fluxul tehnologic",
-        "un serviciu digital trebuie să explice piata, clientii și instrumentele necesare",
-        "o activitate locală trebuie să arate cum va genera venituri și cum va susține cheltuielile"
+        "Afacere de servicii care cumpara echipamente direct legate de codul CAEN autorizat.",
+        "Microintreprindere care pregateste software, dotari si promovare, cu aport propriu disponibil.",
+        "Aplicant care isi testeaza ideea si piata inainte de lansarea sesiunii."
       ],
       "faq": [
         [
-          "Ce inseamna Start Up Nation sau startup nation in cautari?",
-          "Sunt variante de cautare pentru programul Start-Up Nation. In site, intentia este consolidata pe pagina canonica /start-up-nation-2026, cu trimiteri catre conditii, cheltuieli, plan de afaceri, cod CAEN si consultanta."
+          "De ce URL-ul contine 2026?",
+          "Ruta ramane pentru continuitate tehnica si pentru linkurile existente, dar pagina nu trateaza 2026 ca sesiune garantata."
         ],
         [
-          "Unde verific conditiile Start Up Nation 2026?",
-          "Conditiile se verifica in procedura activa si in anexele oficiale. Pe site, pagina de conditii functioneaza ca checklist practic, dar decizia finala se ia doar dupa verificarea sursei oficiale."
+          "Care au fost valorile in editia 2024?",
+          "Regulile publicate pentru editia 2024 au prevazut grant de pana la 250.000 lei si intensitate maxima de 90%."
         ],
         [
-          "Cum pregatesc un plan de afaceri Start Up Nation?",
-          "Porneste de la activitatea reala, clienti, flux de lucru, cod CAEN, buget si documente. Fiecare cheltuiala trebuie sa aiba rol in plan si sa poata fi sustinuta prin oferte si specificatii."
+          "Pot folosi pagina pentru o sesiune viitoare?",
+          "Da, ca pregatire preliminara. Conditiile finale trebuie confirmate in ghidul activ al sesiunii viitoare."
         ],
         [
-          "Ce cod CAEN aleg pentru Start-Up Nation?",
-          "Codul CAEN se alege dupa activitatea reala si dupa regulile apelului activ. Nu alege codul doar pentru ca pare avantajos; verifica autorizarea, cheltuielile si legatura dintre investitie si activitate."
+          "Ce verific prima data?",
+          "Codul CAEN, solicitantul, cheltuielile eligibile, aportul propriu, locurile de munca si calendarul."
         ],
         [
-          "Ce cheltuieli pot intra in Start-Up Nation 2026?",
-          "Pot intra doar categoriile permise de procedura activa. Inainte de depunere, separa echipamentele, software-ul, serviciile, promovarea si costurile neeligibile, fara sa presupui plafoane sau procente neverificate."
+          "Cate locuri de munca trebuie create?",
+          "Editia analizata a inclus doua locuri de munca, dar obligatia trebuie verificata in ghidul activ."
         ],
         [
-          "Programul Start Up Nation 2026 garanteaza finantarea?",
-          "Nu. Eligibilitatea si depunerea nu garanteaza selectia. Rezultatul depinde de regulile apelului, bugetul disponibil, punctaj, documente, clarificari si decizia autoritatii."
+          "Sunt eligibile toate echipamentele?",
+          "Nu. Echipamentele trebuie sa fie permise, necesare activitatii si sustinute prin oferte si plan."
         ],
         [
-          "Cand merita sa cer consultanta Start-Up Nation?",
-          "Merita cand ai o idee, un cod CAEN propus, un buget preliminar sau documente de verificat si vrei sa stii daca proiectul poate fi pregatit responsabil pentru editia activa."
+          "Pot incepe achizitiile inainte de aprobare?",
+          "Nu presupune acest lucru. Momentul de eligibilitate al cheltuielilor trebuie confirmat in ghidul activ."
         ],
         [
-          "Pot folosi informatii din editii vechi Start-Up Nation?",
-          "Le poti folosi doar ca orientare istorica. Pentru decizia de depunere, criteriile, documentele, calendarul, cheltuielile si bugetul se confirma in procedura activa."
-        ],
-        [
-          "Ce documente pot bloca un dosar Start-Up Nation?",
-          "Pot bloca dosarul documentele de solicitant, certificatul constatator, autorizarea, documentele pentru spatiu, ofertele, declaratiile sau informatiile care contrazic planul si bugetul."
-        ],
-        [
-          "Cum evit un dosar decorativ?",
-          "Leaga fiecare paragraf din plan de o verificare concreta: solicitant, activitate, clienti, achizitii, costuri, documente si implementare. Textul care nu ajuta evaluarea sau decizia trebuie eliminat."
+          "Consultanta garanteaza aprobarea?",
+          "Nu. Consultanta ajuta la verificarea eligibilitatii, bugetului si planului, dar aprobarea tine de regulile si evaluarea programului."
         ]
       ],
       "related": [
-        "/consultanta-start-up-nation-2026",
-        "/start-up-nation-2026-conditii",
-        "/start-up-nation-2026-plan-de-afaceri",
-        "/start-up-nation-2026-cheltuieli-eligibile",
-        "/cod-caen-start-up-nation-2026",
-        "/start-up-nation-2026-idei-afaceri",
-        "/instrumente"
+        {
+          "href": "/consultanta-start-up-nation-2026",
+          "label": "Consultanta Start-Up Nation"
+        },
+        {
+          "href": "/start-up-nation-2026-conditii",
+          "label": "Conditii Start-Up Nation"
+        },
+        {
+          "href": "/start-up-nation-2026-cheltuieli-eligibile",
+          "label": "Cheltuieli eligibile Start-Up Nation"
+        },
+        {
+          "href": "/cod-caen-start-up-nation-2026",
+          "label": "Cod CAEN Start-Up Nation"
+        },
+        {
+          "href": "/verificare-eligibilitate-fonduri-europene",
+          "label": "Verificare eligibilitate"
+        }
       ],
       "sourceKeys": [
         "startup"
       ],
       "template": "editorial-program",
-      "minWords": 1100,
-      "minFaq": 6,
+      "minWords": 1200,
+      "minFaq": 8,
       "applicantRows": [
         [
-          "Persoana care pregătește o firmă noua",
-          "Posibila, dacă editia activa permite profilul solicitantului",
-          "Varsta/profilul, statutul, asociatii, istoricul și regulile procedurii",
-          "Conditiile finale se confirma în ghidul apelului activ"
+          "Solicitant",
+          "Se verifica dupa ghidul activ; regulile anterioare nu garanteaza sesiunea viitoare.",
+          "Forma juridica, restrictii si criterii ale editiei active.",
+          "Ghidul activ"
         ],
         [
-          "Firmă tanara cu cod CAEN propus",
-          "Posibila, dacă activitatea și codul CAEN sunt acceptate",
-          "Certificat constatator, autorizare, punct de lucru și legătura cu investiția",
-          "Nu se alege CAEN doar pentru punctaj"
+          "Grant",
+          "Ultima editie analizata a prevazut pana la 250.000 lei.",
+          "Valoarea poate fi modificata in sesiuni viitoare.",
+          "Editia 2024"
         ],
         [
-          "Antreprenor cu proiect de producție sau servicii",
-          "Posibila, dacă bugetul susține activitatea reală",
-          "Flux de lucru, echipamente, furnizori, piata și venituri estimate",
-          "Planul de afaceri trebuie să explice utilizarea activelor"
+          "Intensitate",
+          "Maximum 90% in regulile publicate pentru editia 2024.",
+          "Aport propriu, TVA si costuri neeligibile.",
+          "Editia 2024"
         ],
         [
-          "Solicitant cu cofinanțare limitata",
-          "Posibila doar dacă poate susține partea proprie și costurile neeligibile",
-          "Cash-flow, TVA, rezerve, termene de plată și costuri de implementare",
-          "Riscul principal este blocajul după aprobare"
+          "Locuri de munca",
+          "Editia analizata a inclus doua locuri de munca.",
+          "Numar, durata si obligatii finale.",
+          "Ghidul activ"
         ]
       ],
       "eligibleInvestmentRows": [
         [
-          "Echipamente și utilaje",
-          "Dotari pentru producție, servicii, activitati creative sau prestari locale",
-          "Necesitate, dimensionare, livrare și legătura cu codul CAEN",
-          "sursa oficială a apelului activ"
+          "Echipamente si dotari",
+          "Active necesare activitatii autorizate.",
+          "Legatura cu CAEN si planul de afaceri.",
+          "Ghidul activ"
         ],
         [
-          "Software și digitalizare",
-          "Website, magazin online, aplicatii, licente, sisteme de gestiune sau CRM",
-          "Servicii recurente, livrabile, drepturi de utilizare și perioada eligibila",
-          "sursa oficială a apelului activ"
+          "Software si servicii",
+          "Licente, servicii sau componente permise.",
+          "Plafoane si eligibilitate expresa.",
+          "Ghidul activ"
         ],
         [
-          "Mobilier și dotări",
-          "Mobilier de lucru, dotări operationale sau echipamente auxiliare",
-          "Justificare prin activitate și evitarea bunurilor cu uz personal",
-          "sursa oficială a apelului activ"
+          "Promovare si operational",
+          "Cheltuieli acceptate doar daca apelul le permite.",
+          "Sa sustina activitatea finantata.",
+          "Ghidul activ"
         ],
         [
-          "Promovare și servicii profesionale",
-          "Branding, promovare, consultanță sau instruire, dacă procedura le permite",
-          "Plafoane, momentul contractarii și dovezi ale serviciilor livrate",
-          "sursa oficială a apelului activ"
-        ],
-        [
-          "Amenajari sau cheltuieli conexe",
-          "Lucrari sau adaptari minime pentru activitate, dacă apelul le permite",
-          "Documente de spațiu, autorizatii, durate de folosință și costuri neeligibile",
-          "sursa oficială a apelului activ"
+          "Cheltuieli sensibile",
+          "Costuri greu de justificat sau neclare.",
+          "Oferte, preturi si necesitate reala.",
+          "Dosarul proiectului"
         ]
       ],
       "documentRows": [
         [
-          "Documente solicitant/asociati",
+          "Firma si solicitant",
           "Beneficiar",
-          "La verificarea incadrarii și la depunere",
-          "Profilul poate fi neeligibil sau nedovedit"
+          "La verificarea initiala.",
+          "Acte juridice, fiscale, declaratii si date reprezentant."
         ],
         [
-          "Certificat constatator și cod CAEN",
+          "Activitate",
+          "Beneficiar si consultant",
+          "Inainte de plan.",
+          "Cod CAEN, autorizare, piata, clienti si capacitate."
+        ],
+        [
+          "Buget",
+          "Beneficiar si furnizori",
+          "Inainte de depunere.",
+          "Oferte, descrieri, justificari si aport propriu."
+        ],
+        [
+          "Monitorizare",
           "Beneficiar",
-          "Înainte de planul de afaceri și buget",
-          "Activitatea finanțată poate să nu fie autorizabila sau eligibila"
-        ],
-        [
-          "Plan de afaceri",
-          "Consultant, cu date de la beneficiar",
-          "La pregătirea cererii",
-          "Bugetul și obiectivele nu pot fi evaluate coerent"
-        ],
-        [
-          "Oferte și specificatii",
-          "Furnizori, coordonati de beneficiar și consultant",
-          "La construirea bugetului",
-          "Costurile pot fi considerate nejustificate sau necomparabile"
-        ],
-        [
-          "Documente pentru spațiu/punct de lucru",
-          "Beneficiar",
-          "Când activitatea necesita locație sau autorizare",
-          "Blocaj la autorizare, contractare sau implementare"
-        ],
-        [
-          "Dovezi cofinanțare și cash-flow",
-          "Beneficiar",
-          "Înainte de depunere și contractare",
-          "Proiectul poate rămâne fără resurse pentru partea proprie"
-        ],
-        [
-          "Declaratii și anexe procedura",
-          "Beneficiar și consultant",
-          "La depunere și clarificări",
-          "Dosar incomplet, informații contradictorii sau risc de respingere"
+          "Inainte de contractare.",
+          "Documente privind locurile de munca si obligatiile asumate."
         ]
       ],
       "preparationSteps": [
         [
-          "Verificare solicitant.",
-          "Confirma profilul, istoricul, asociatii și forma juridică acceptata în procedura activa."
+          "1.",
+          "Nu promite lansare sau conditii pentru o sesiune nepublicata."
         ],
         [
-          "Verificare investiție.",
-          "Leaga fiecare achiziție de codul CAEN, activitatea autorizabila și modelul de afacere."
+          "2.",
+          "Pastreaza ruta tehnica, dar foloseste copy neutru si verificabil."
         ],
         [
-          "Calcul buget/cofinanțare.",
-          "Separarea grantului posibil, contributiei proprii, TVA, costurilor neeligibile și rezervelor."
+          "3.",
+          "Pregateste codul CAEN si bugetul doar ca scenariu preliminar."
         ],
         [
-          "Verificare punctaj.",
-          "Estimeaza criteriile doar dacă pot fi susținute prin documente și decizii reale de proiect."
+          "4.",
+          "Actualizeaza planul cand apar ghidul, pilonii si criteriile finale."
         ],
         [
-          "Pregătire documente.",
-          "Pregateste planul de afaceri, ofertele, actele firmei, documentele de spațiu și declaratiile."
-        ],
-        [
-          "Depunere.",
-          "Verifică formularele, anexele și incarcarea documentelor în platforma indicata."
-        ],
-        [
-          "Clarificari.",
-          "Raspunde pe baza documentelor, fără să schimbi logica proiectului în contradictie cu bugetul."
-        ],
-        [
-          "Contractare.",
-          "Verifică termenele, achizitiile, indicatorii și obligatiile înainte de semnare."
+          "5.",
+          "Verifica daca obligatiile privind locurile de munca sunt sustenabile."
         ]
       ],
       "commonMistakes": [
-        "Cod CAEN ales pentru ca pare avantajos, dar fără legătura cu activitatea reală.",
-        "Plan de afaceri generic, fără clienti, flux operational sau justificare pentru dotări.",
-        "Buget construit pe preturi rotunjite, fără oferte comparabile și specificatii clare.",
-        "Cofinantarea, TVA și costurile neeligibile sunt tratate ca detalii de verificat după aprobare.",
-        "Spatiul de lucru nu poate fi autorizat pentru activitatea propusa.",
-        "Obligatiile privind locurile de munca sau indicatorii sunt asumate fără calcul de cash-flow.",
-        "Achizitiile sunt incepute înainte de momentul permis de procedura.",
-        "Cheltuielile de promovare, software sau consultanță nu au livrabile verificabile."
+        "Prezentarea anului din URL ca sesiune garantata.",
+        "Copierea regulilor vechi fara avertisment ca pot fi schimbate.",
+        "Buget construit fara aport propriu si TVA.",
+        "Cod CAEN ales doar pentru punctaj, fara activitate reala.",
+        "Plan de afaceri generic, fara piata si implementare.",
+        "Ignorarea obligatiilor privind locurile de munca si monitorizarea."
       ],
       "caseExample": {
         "note": "Exemplu anonimizat de completat după validare interna - de inlocuit cu un caz real anonimizat, verificat intern.",
@@ -1214,114 +1233,49 @@
       "guideCtaLabel": "Ghid oficial",
       "contentSections": [
         {
-          "title": "Start-Up Nation 2026: ce verifici prima data",
-          "paragraphs": [
-            "Start Up Nation, startup nation si Start-Up Nation descriu aceeasi nevoie practica: beneficiarul vrea sa inteleaga daca poate pregati o firma, un cod CAEN, un buget si un plan de afaceri pentru editia activa. Informatiile de pe aceasta pagina sunt centralizate pentru programul Start-Up Nation 2026, iar regulile finale se verifica in procedura activa.",
-            "Pentru utilizator, prima decizie nu este valoarea grantului, ci daca proiectul are o logica eligibila: solicitant potrivit, activitate verificabila, cheltuieli permise, documente disponibile si capacitate de implementare."
-          ],
-          "links": [
-            {
-              "href": "/consultanta-start-up-nation-2026",
-              "label": "Consultanta Start-Up Nation"
-            },
-            {
-              "href": "/start-up-nation-2026-conditii",
-              "label": "Conditii Start-Up Nation 2026"
-            }
-          ]
+          "title": "Cum folosim informatiile Start-Up Nation fara sa promitem o sesiune",
+          "body": "Pagina pastreaza ruta istorica pentru continuitate, dar copy-ul este construit ca ghid de pregatire. Valorile concrete sunt atribuite regulilor publicate pentru editia 2024 si nu sunt prezentate ca garantie pentru o sesiune viitoare."
         },
         {
-          "title": "Conditii Start Up Nation 2026: ce verifici inainte de plan",
-          "paragraphs": [
-            "Conditiile Start Up Nation 2026 se citesc in procedura activa si se traduc in verificari practice. Nu este suficient ca ideea sa para buna; trebuie verificat cine aplica, ce firma sau forma de organizare este acceptata, ce activitate se finanteaza si ce documente pot sustine proiectul."
-          ],
-          "tableRows": [
-            [
-              "Solicitant",
-              "profil, asociati, stadiul firmei si eventuale restrictii din procedura activa"
-            ],
-            [
-              "Activitate",
-              "cod CAEN, autorizare, punct de lucru si legatura directa cu investitia"
-            ],
-            [
-              "Buget",
-              "cheltuieli eligibile, costuri neeligibile, TVA, contributie proprie si rezerve"
-            ],
-            [
-              "Plan de afaceri",
-              "piata, clienti, flux operational, venituri estimate si justificarea achizitiilor"
-            ]
-          ],
-          "links": [
-            {
-              "href": "/cod-caen-start-up-nation-2026",
-              "label": "Cod CAEN Start-Up Nation"
-            },
-            {
-              "href": "/start-up-nation-2026-cheltuieli-eligibile",
-              "label": "Cheltuieli eligibile"
-            }
-          ]
+          "title": "Ce poate fi pregatit din timp",
+          "body": "Ideea de afacere, codul CAEN, lista de echipamente, furnizorii, aportul propriu si logica locurilor de munca pot fi pregatite inainte de ghidul final. Totusi, formularul si punctajul trebuie refacute dupa regulile active."
         },
         {
-          "title": "Plan de afaceri Start Up Nation: de la idee la buget",
-          "paragraphs": [
-            "Planul de afaceri Start Up Nation trebuie sa explice activitatea, clientii, modul de lucru si motivul pentru fiecare achizitie. O lista de echipamente nu este un plan; bugetul trebuie sa arate cum activele, serviciile si cheltuielile propuse produc valoare pentru activitatea finantata.",
-            "Daca proiectul depinde de un spatiu, de autorizare, de personal, de furnizori sau de servicii digitale, aceste piese trebuie clarificate inainte ca bugetul sa fie tratat ca final."
-          ],
-          "links": [
-            {
-              "href": "/start-up-nation-2026-plan-de-afaceri",
-              "label": "Plan de afaceri Start-Up Nation"
-            },
-            {
-              "href": "/start-up-nation-2026-idei-afaceri",
-              "label": "Idei de afaceri"
-            }
-          ]
+          "title": "De ce conteaza planul de afaceri",
+          "body": "Planul trebuie sa explice piata, veniturile, costurile, implementarea si folosirea activelor finantate. Un plan generic poate trece formal prin sectiuni, dar ramane vulnerabil la clarificari si implementare."
         },
         {
-          "title": "Cand are sens consultanta Start-Up Nation",
-          "paragraphs": [
-            "Consultanta Start-Up Nation are sens cand exista o idee, un cod CAEN propus, un buget preliminar sau documente de firma care trebuie verificate inainte de depunere. Rolul verificarii este sa indice daca proiectul poate fi pregatit, ce lipseste si ce riscuri ar trebui rezolvate inainte de inscriere.",
-            "Consultanta nu garanteaza finantarea si nu inlocuieste procedura activa. Ea ajuta la structurarea dosarului, la verificarea bugetului, la pregatirea planului si la formularea raspunsurilor pentru clarificari, daca proiectul ajunge in acea etapa."
-          ],
-          "links": [
-            {
-              "href": "/consultanta-start-up-nation-2026",
-              "label": "Vezi pagina comerciala Start-Up Nation"
-            }
-          ]
+          "title": "Ce ramane de verificat in ghidul activ",
+          "body": "Pentru o sesiune noua verificam bugetul, pilonii, beneficiarii, codurile CAEN, cheltuielile, locurile de munca, calendarul, forma aportului propriu si obligatiile de monitorizare."
         }
       ],
-      "finalCtaText": "Trimite ideea, CAEN-ul, bugetul, stadiul firmei și documentele disponibile pentru verificarea condițiilor Start-Up Nation.",
-      "heroPrimaryCta": "Verifică eligibilitatea",
-      "finalPrimaryCta": "Trimite datele proiectului",
-      "inlineCtaTitle": "Ce poți trimite pentru verificare",
-      "inlineCtaText": "Trimite ideea, CAEN-ul, bugetul, stadiul firmei și documentele disponibile pentru verificarea condițiilor Start-Up Nation.",
-      "decisionClose": "Dacă documentele, bugetul sau condițiile nu se potrivesc, proiectul se ajustează înainte de depunere. Regulile finale se confirmă în ghidul activ, anexele apelului și sursele oficiale.",
-      "cofinancingTitle": "Buget Start-Up Nation fara valori presupuse",
+      "finalCtaText": "Verifica scenariul Start-Up Nation",
+      "heroPrimaryCta": "Verifica scenariul Start-Up Nation",
+      "finalPrimaryCta": "Verifica scenariul Start-Up Nation",
+      "inlineCtaTitle": "Urmatorul pas",
+      "inlineCtaText": "Trimite datele principale despre solicitant, localitate, activitate, investitie si buget. Verificarea initiala arata daca programul merita pregatit si ce riscuri trebuie rezolvate inainte de depunere.",
+      "decisionClose": "Nu trata anul din URL ca promisiune de lansare; decizia finala se ia doar dupa ghidul activ.",
+      "cofinancingTitle": "Valori orientative pe baza editiei 2024",
       "cofinancingRows": [
         [
-          "Grant si contributie proprie",
-          "se confirma in procedura activa",
-          "Procentele si plafoanele se confirma doar in procedura activa si in sursele oficiale."
+          "Grant maxim",
+          "250.000 lei",
+          "Valoare publicata pentru editia 2024."
         ],
         [
-          "TVA si cheltuieli neeligibile",
-          "se separa in bugetul intern",
-          "Aceste costuri pot schimba decizia de depunere chiar daca ideea pare eligibila."
+          "Intensitate",
+          "Pana la 90%",
+          "Regula publicata pentru editia 2024."
         ],
         [
-          "Oferte si costuri",
-          "se verifica prin furnizori si specificatii",
-          "Bugetul trebuie sa explice ce cumperi, de ce este necesar si cum sustine activitatea."
+          "Aport propriu",
+          "Minimum diferenta si costurile neeligibile",
+          "Se confirma in ghidul activ."
         ],
         [
-          "Cash-flow de implementare",
-          "se verifica inainte de depunere",
-          "Un proiect selectat poate deveni riscant daca partea proprie si termenele de plata nu sunt acoperite."
+          "Confirmare",
+          "Ghidul sesiunii active",
+          "Anul din URL nu garanteaza lansarea."
         ]
       ],
       "finalSecondaryHref": "/consultanta-start-up-nation-2026",
@@ -1337,7 +1291,11 @@
           "label": "Vezi conditiile",
           "className": "btn btn-secondary"
         }
-      ]
+      ],
+      "updatedAt": "2026-06-11",
+      "decisionIntro": "Start-Up Nation merita pregatit cand ideea de afacere este realista, aportul propriu exista si obligatiile pot fi sustinute.",
+      "ctaText": "Verifica scenariul Start-Up Nation",
+      "secondaryCtaText": "Construieste planul de afaceri"
     },
     {
       "slug": "femeia-antreprenor-2026",
@@ -1554,7 +1512,11 @@
         "/instrumente",
         "/cheltuieli-eligibile-digitalizare-imm",
         "/digitalizare-imm-erp-crm-cloud",
-        "/pnrr"
+        "/pnrr",
+        {
+          "href": "/pocidif-21",
+          "label": "PoCIDIF 2.1"
+        }
       ],
       "sourceKeys": [
         "digitalizare",
@@ -1730,113 +1692,303 @@
       "output": "investitii-modernizarea-microintreprinderilor-apel-2.html",
       "type": "program",
       "schemaType": "GovernmentService",
-      "category": "Program regional",
-      "title": "Modernizarea microintreprinderilor - Apel 2: eligibilitate și dosar",
-      "description": "Pagina pentru Apelul 2 privind modernizarea microintreprinderilor: condiții, cheltuieli eligibile, selecție, documente și pasi de aplicare.",
-      "h1": "Investiții pentru modernizarea microintreprinderilor - Apel 2",
-      "quickAnswer": "Cum pregătesc dosarul pentru Apelul 2 de modernizare a microintreprinderilor? Verifică regiunea, incadrarea firmei, codul CAEN, spațiul investiției și bugetul.",
+      "category": "Fonduri regionale",
+      "title": "Modernizarea microintreprinderilor Apel 2 | Nord-Est",
+      "description": "Programul Regional Nord-Est Apel 2 pentru modernizarea microintreprinderilor: grant 100.000-300.000 euro, intensitate 90%, eligibilitate si documente.",
+      "h1": "Modernizarea microintreprinderilor - Apel 2 Nord-Est",
+      "quickAnswer": "Modernizarea microintreprinderilor - Apel 2 este un apel regional pentru microintreprinderi din Nord-Est, in forma consultativa in sursele analizate. Valoarea orientativa este intre 100.000 si 300.000 euro, cu intensitate maxima de 90%. Verificarea incepe cu statutul de microintreprindere, sediul sau punctul de lucru in regiune, codul CAEN, autorizarea activitatii, situatiile financiare, spatiul investitiei si lista de cheltuieli. Programul nu este national; localizarea si regulile ADR Nord-Est sunt filtre esentiale. Pentru decizia de aplicare conteaza si cofinantarea, TVA-ul, documentele pentru spatiu, ofertele comparabile, capacitatea de implementare si grila finala a apelului. Un proiect bun arata modernizare reala, nu doar o lista de achizitii, si pastreaza legatura dintre CAEN, spatiu, buget si rezultate.",
       "programName": "Modernizarea microintreprinderilor - Apel 2",
       "policyContribution": "apelul susține investiții productive, modernizare, competitivitate regionala și cresterea capacitatii firmelor mici de a livra servicii sau produse mai bune.",
-      "funding": "valorile finale se confirma în ghidul apelului activ; pagina nu folosește sume nevalidate.",
+      "funding": "Intre 100.000 si 300.000 euro, cu intensitate maxima de 90%, conform ghidului consultativ pentru Programul Regional Nord-Est.",
       "audience": [
-        "microîntreprinderi care pregătesc investiții productive",
-        "firme care au nevoie de echipamente, dotări sau digitalizare",
-        "antreprenori care asteapta lansarea apelului și vor dosarul pregătit"
+        "Microintreprinderi cu sediu sau punct de lucru relevant in regiunea Nord-Est.",
+        "Firme care modernizeaza activitatea existenta prin echipamente, dotari sau servicii permise de apel.",
+        "Solicitanti care pot demonstra cod CAEN, autorizare, spatiu, cofinantare si capacitate de implementare."
       ],
       "eligibility": [
-        "incadrare ca microintreprindere",
-        "localizare eligibila",
-        "cod CAEN compatibil",
-        "istoric financiar verificabil",
-        "capacitate de cofinanțare și implementare"
+        "Verifica incadrarea ca microintreprindere si datele financiare relevante.",
+        "Confirma localizarea investitiei in regiunea Nord-Est si dreptul asupra spatiului.",
+        "Analizeaza codul CAEN si autorizarea la sediu, punct de lucru sau terti, dupa caz.",
+        "Coreleaza cheltuielile cu activitatea si obiectivele apelului regional.",
+        "Confirma ghidul activ, anexele si grila ADR Nord-Est inainte de depunere."
       ],
       "mandatory": [
-        "documente ONRC",
-        "situații financiare",
-        "documente privind spațiul",
-        "oferte și specificatii",
-        "declaratii și anexe"
+        "Statut de microintreprindere verificat prin date juridice si financiare.",
+        "Sediu, punct de lucru sau investitie localizata corect in regiunea Nord-Est.",
+        "Cod CAEN eligibil si autorizat conform cerintelor apelului.",
+        "Buget separat pentru grant, cofinantare, TVA si cheltuieli neeligibile.",
+        "Documente pentru spatiu, oferte, plan de investitii si capacitate de implementare."
       ],
       "eligibleExpenses": [
-        "echipamente și utilaje noi",
-        "dotări pentru activitatea finanțată",
-        "lucrari și amenajari permise",
-        "software și instrumente digitale",
-        "servicii profesionale eligibile"
+        "Echipamente, utilaje si dotari pentru modernizarea activitatii eligibile.",
+        "Investitii in spatii, amenajari sau active necorporale, daca sunt permise de ghid.",
+        "Digitalizare, eficienta sau alte componente acceptate in apelul activ.",
+        "Servicii si documentatii eligibile in limitele programului regional."
       ],
       "ineligibleExpenses": [
-        "costuri curente",
-        "achiziții fără legătura cu proiectul",
-        "cheltuieli incepute înainte de momentul permis",
-        "active nejustificate",
-        "cheltuieli excluse de ghid"
+        "Investitii localizate in afara regiunii eligibile pentru apel.",
+        "Coduri CAEN neeligibile sau neautorizate potrivit cerintelor.",
+        "Cheltuieli fara legatura cu activitatea modernizata.",
+        "Achizitii incepute inainte de momentul permis de ghid."
       ],
       "scoring": [
-        "maturitatea proiectului",
-        "impactul economic",
-        "sustenabilitatea",
-        "digitalizarea",
-        "calitatea documentelor"
+        "Criteriile regionale pot favoriza proiecte cu impact economic, modernizare reala si buget coerent.",
+        "Punctajul trebuie estimat dupa grila activa, nu dupa ghiduri anterioare.",
+        "Localizarea, CAEN-ul si capacitatea firmei sunt filtre de risc."
       ],
       "steps": [
-        "stabileste locația investiției",
-        "verifică firmă și codul CAEN",
-        "pregătește bugetul",
-        "colecteaza oferte",
-        "completeaza cererea",
-        "răspunde la clarificări"
+        "Verificam microintreprinderea si localizarea investitiei.",
+        "Analizam codul CAEN, autorizarea si istoricul activitatii.",
+        "Definim lista de echipamente, dotari si servicii permise.",
+        "Construim bugetul si documentele pentru spatiu si cofinantare.",
+        "Actualizam dosarul dupa ghidul final ADR Nord-Est."
       ],
       "evaluation": [
-        "conformitate",
-        "eligibilitate",
-        "evaluare tehnico-financiara",
-        "contractare",
-        "implementare și rambursare"
+        "Evaluatorul va urmari incadrarea regionala, eligibilitatea firmei si coerenta investitiei.",
+        "Codul CAEN si autorizarea trebuie sa fie compatibile cu activitatea finantata.",
+        "Bugetul trebuie sa arate modernizare reala, nu doar inlocuiri greu de justificat."
       ],
       "examples": [
-        "un atelier poate pregati dotări productive și amenajari proportionale",
-        "o firmă de servicii poate include echipamente și software",
-        "o microintreprindere regionala poate combina modernizarea spatiului cu active necesare activitatii"
+        "Microintreprindere din Nord-Est care modernizeaza o activitate de productie sau servicii cu echipamente direct legate de CAEN.",
+        "Firma cu punct de lucru in regiune si spatiu pregatit pentru investitie.",
+        "Proiect care combina echipamente, digitalizare si amenajari permise de ghid."
       ],
       "faq": [
         [
-          "Ce înseamnă Apel 2?",
-          "Apel 2 desemneaza o sesiune distincta de finanțare, cu calendar, buget și reguli care trebuie confirmate în ghidul publicat."
+          "Este apelul national?",
+          "Nu. Programul este regional si trebuie verificata localizarea investitiei in regiunea Nord-Est."
         ],
         [
-          "Trebuie să am punct de lucru în regiune?",
-          "Locatia investiției este esentiala și trebuie verificată conform apelului."
+          "Care este grantul orientativ?",
+          "Forma consultativa analizata mentioneaza intre 100.000 si 300.000 euro, cu intensitate maxima de 90%."
         ],
         [
-          "Pot pregati dosarul înainte de lansare?",
-          "Da. Documentele de firmă, bugetul, ofertele și analiza CAEN pot fi pregătite înainte de deschiderea apelului."
+          "Cine poate aplica?",
+          "Microintreprinderile care indeplinesc conditiile ghidului activ, inclusiv localizarea, CAEN-ul si documentele financiare."
         ],
         [
-          "Este sigur ca firmă este eligibila dacă e microintreprindere?",
-          "Nu. Incadrarea micro este doar o condiție; trebuie verificate și celelalte reguli."
+          "Ce verific prima data?",
+          "Statutul de microintreprindere, regiunea, codul CAEN, autorizarea activitatii si spatiul investitiei."
+        ],
+        [
+          "Sunt eligibile echipamentele?",
+          "Da, daca sunt permise de ghid, legate de activitatea eligibila si justificate prin proiect."
+        ],
+        [
+          "Ce documente sunt sensibile?",
+          "Certificatul constatator, autorizarea CAEN, documentele pentru spatiu, situatiile financiare, ofertele si cofinantarea."
+        ],
+        [
+          "Cand se confirma conditiile finale?",
+          "In ghidul activ si anexele publicate de ADR Nord-Est pentru apelul deschis."
+        ],
+        [
+          "Consultanta poate garanta aprobarea?",
+          "Nu. Poate reduce riscurile de eligibilitate si documentare, dar aprobarea depinde de reguli, punctaj si buget."
         ]
       ],
       "related": [
-        "/por-adr-nord-est",
-        "/fonduri-europene-imm",
-        "/resurse",
-        "/instrumente",
-        "/contact"
+        {
+          "href": "/fonduri-europene-nord-est",
+          "label": "Fonduri europene Nord-Est"
+        },
+        {
+          "href": "/por-adr-nord-est",
+          "label": "POR ADR Nord-Est"
+        },
+        {
+          "href": "/fonduri-europene-imm",
+          "label": "Fonduri europene IMM"
+        },
+        {
+          "href": "/pocidif-21",
+          "label": "PoCIDIF 2.1"
+        },
+        {
+          "href": "/verificare-eligibilitate-fonduri-europene",
+          "label": "Verificare eligibilitate"
+        }
       ],
       "sourceKeys": [
-        "por-ne"
+        "por-ne-micro"
       ],
       "heroIcon": "ph-duotone ph-buildings",
-      "officialGuideKey": "por-ne",
+      "officialGuideKey": "por-ne-micro",
       "guideCtaLabel": "Ghid oficial",
       "contentSections": [
         {
-          "title": "Condiții microintreprindere",
-          "paragraphs": [
-            "Verifică statutul de microintreprindere, numarul de angajati, cifra de afaceri, activele, locația investiției și legaturile cu programele IMM regionale."
-          ]
+          "title": "De ce localizarea este primul filtru",
+          "body": "Apelul este regional. Inainte de echipamente si buget verificam daca firma, punctul de lucru si investitia se incadreaza in Nord-Est si daca documentele pentru spatiu acopera perioada ceruta de ghid."
+        },
+        {
+          "title": "Cum verificam CAEN-ul si activitatea",
+          "body": "Codul CAEN trebuie sa fie eligibil si autorizat in forma ceruta de apel. Echipamentele trebuie sa serveasca activitatea finantata, iar descrierea proiectului trebuie sa arate modernizarea reala a microintreprinderii."
+        },
+        {
+          "title": "Cum pregatim bugetul",
+          "body": "Bugetul se construieste pe nevoi reale: echipamente, dotari, servicii, TVA, cofinantare si costuri neeligibile. Pentru fiecare achizitie cerem oferte si justificari comparabile."
+        },
+        {
+          "title": "Ce ramane de confirmat",
+          "body": "Forma consultativa este utila pentru pregatire, dar conditiile finale, lista CAEN, cheltuielile si grila se confirma in documentele active ale ADR Nord-Est."
+        },
+        {
+          "title": "Cum se verifica localizarea proiectului",
+          "body": "Pentru acest apel regional, localizarea nu este un detaliu administrativ. Firma trebuie sa poata demonstra ca investitia se realizeaza in regiunea Nord-Est, ca spatiul este disponibil pe perioada ceruta si ca activitatea finantata poate functiona acolo. Verificam certificatul constatator, punctul de lucru, contractul de inchiriere sau proprietate, autorizarea CAEN si legatura dintre echipamente si spatiu. Daca aceste elemente nu sunt rezolvate, proiectul poate fi respins chiar daca bugetul pare corect."
+        },
+        {
+          "title": "Modernizare reala, nu lista de cumparaturi",
+          "body": "Un dosar solid explica de ce achizitiile schimba capacitatea firmei, calitatea serviciului sau procesul operational. Pentru fiecare echipament notam rolul in activitate, situatia existenta, rezultatul asteptat si documentul care sustine necesitatea. Aceasta abordare reduce riscul ca evaluatorul sa vada proiectul ca pe o lista de cumparaturi fara impact regional. Bugetul ramane separat pe grant, cofinantare, TVA, cheltuieli neeligibile si rezerve."
+        },
+        {
+          "title": "Documentele financiare si capacitatea de implementare",
+          "body": "Pe langa eligibilitatea regionala, microintreprinderea trebuie sa arate ca poate gestiona proiectul dupa aprobare. Situatiile financiare, disponibilitatile pentru cofinantare, fluxul de numerar si capacitatea de a suporta TVA-ul sau costurile neeligibile sunt verificate inainte de depunere. Daca aceste elemente nu sunt clare, proiectul poate ajunge in blocaj la contractare sau implementare."
         }
-      ]
+      ],
+      "updatedAt": "2026-06-11",
+      "template": "editorial-program",
+      "minWords": 1200,
+      "minFaq": 8,
+      "applicantRows": [
+        [
+          "Solicitant",
+          "Microintreprindere eligibila potrivit ghidului activ.",
+          "Incadrare IMM, date financiare si restrictii.",
+          "ADR Nord-Est"
+        ],
+        [
+          "Regiune",
+          "Investitia trebuie localizata in Nord-Est.",
+          "Sediu, punct de lucru, spatiu si documente de folosinta.",
+          "ADR Nord-Est"
+        ],
+        [
+          "CAEN",
+          "Cod eligibil si autorizat in forma ceruta de apel.",
+          "Certificat constatator si activitate reala.",
+          "Ghidul activ"
+        ],
+        [
+          "Spatiu",
+          "Drept de folosinta compatibil cu monitorizarea.",
+          "Durata, acorduri, planuri si autorizatii.",
+          "Documente proiect"
+        ]
+      ],
+      "eligibleInvestmentRows": [
+        [
+          "Echipamente si utilaje",
+          "Active pentru modernizarea activitatii.",
+          "Legatura cu CAEN si spatiul investitiei.",
+          "Ghidul activ"
+        ],
+        [
+          "Dotari si amenajari",
+          "Componente permise pentru punctul de lucru.",
+          "Drepturi asupra spatiului si autorizatii.",
+          "Ghidul activ"
+        ],
+        [
+          "Digitalizare",
+          "Software, licente sau echipamente IT daca apelul permite.",
+          "Sa sustina activitatea modernizata.",
+          "Ghidul activ"
+        ],
+        [
+          "Servicii si documentatii",
+          "Proiectare, consultanta sau alte servicii permise.",
+          "Plafoane si momentul cheltuielii.",
+          "Ghidul activ"
+        ]
+      ],
+      "cofinancingTitle": "Finantare si cofinantare Apel 2 Nord-Est",
+      "cofinancingRows": [
+        [
+          "Valoare grant",
+          "100.000 - 300.000 euro",
+          "Valoare indicata in forma consultativa analizata."
+        ],
+        [
+          "Intensitate",
+          "Pana la 90%",
+          "Se confirma in ghidul activ ADR Nord-Est."
+        ],
+        [
+          "Cofinantare",
+          "Minimum diferenta si costurile neeligibile",
+          "TVA si rezervele se bugeteaza separat."
+        ],
+        [
+          "Confirmare",
+          "Ghidul activ si grila ADR Nord-Est",
+          "Forma consultativa poate fi modificata."
+        ]
+      ],
+      "documentRows": [
+        [
+          "Firma",
+          "Beneficiar si contabil",
+          "La verificarea initiala.",
+          "Acte juridice, fiscale, situatii financiare si incadrare IMM."
+        ],
+        [
+          "CAEN",
+          "Beneficiar",
+          "Inainte de buget.",
+          "Certificat constatator, autorizare si descrierea activitatii."
+        ],
+        [
+          "Spatiu",
+          "Beneficiar",
+          "Inainte de depunere.",
+          "Contract, proprietate, acorduri, planuri sau documente cerute."
+        ],
+        [
+          "Investitie",
+          "Beneficiar, consultant si furnizori",
+          "Inainte de depunere.",
+          "Oferte, devize, specificatii, plan de investitii si cofinantare."
+        ]
+      ],
+      "preparationSteps": [
+        [
+          "1.",
+          "Nu trata apelul ca national; verifica intai regiunea si localizarea investitiei."
+        ],
+        [
+          "2.",
+          "Confirma microintreprinderea si CAEN-ul inainte de lista de achizitii."
+        ],
+        [
+          "3.",
+          "Verifica spatiul si dreptul de folosinta pe perioada ceruta."
+        ],
+        [
+          "4.",
+          "Pregateste oferte comparabile si buget cu rezerve."
+        ],
+        [
+          "5.",
+          "Actualizeaza proiectul dupa ghidul final si grila ADR Nord-Est."
+        ]
+      ],
+      "commonMistakes": [
+        "Aplicare cu investitie localizata in afara regiunii eligibile.",
+        "CAEN neautorizat sau fara legatura cu echipamentele propuse.",
+        "Spatiu fara drept de folosinta suficient.",
+        "Buget construit la plafon fara justificare operationala.",
+        "Ignorarea TVA si a costurilor neeligibile.",
+        "Folosirea ghidului consultativ ca regula finala."
+      ],
+      "decisionIntro": "Apelul este potrivit pentru microintreprinderi din Nord-Est care au CAEN eligibil, spatiu clar si o investitie de modernizare bine justificata.",
+      "decisionClose": "Daca localizarea sau autorizarea nu sunt rezolvate, proiectul trebuie amanat sau redimensionat.",
+      "ctaText": "Verifica eligibilitatea regionala",
+      "secondaryCtaText": "Analizeaza CAEN-ul si spatiul",
+      "heroPrimaryCta": "Verifica eligibilitatea regionala",
+      "finalPrimaryCta": "Verifica eligibilitatea regionala",
+      "finalCtaText": "Verifica eligibilitatea regionala",
+      "inlineCtaTitle": "Urmatorul pas",
+      "inlineCtaText": "Trimite datele principale despre solicitant, localitate, activitate, investitie si buget. Verificarea initiala arata daca programul merita pregatit si ce riscuri trebuie rezolvate inainte de depunere."
     },
     {
       "slug": "fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum",
@@ -2431,7 +2583,15 @@
         "/e-move",
         "/gal-afir",
         "/apeluri-gal",
-        "/fondul-de-modernizare"
+        "/fondul-de-modernizare",
+        {
+          "href": "/pocidif-21",
+          "label": "PoCIDIF 2.1"
+        },
+        {
+          "href": "/pro-infra",
+          "label": "PRO INFRA"
+        }
       ],
       "sourceKeys": [
         "fonduri-europene"
@@ -2584,7 +2744,11 @@
         "/start-up-nation-2026",
         "/instrumente",
         "/femeia-antreprenor-2026",
-        "/e-move"
+        "/e-move",
+        {
+          "href": "/pocidif-21",
+          "label": "PoCIDIF 2.1"
+        }
       ],
       "sourceKeys": [
         "fonduri-europene"
@@ -2794,7 +2958,11 @@
         "/granturi-digitalizare-imm",
         "/consultanta-pnrr-digitalizare",
         "/instrumente",
-        "/digitalizare-imm-erp-crm-cloud"
+        "/digitalizare-imm-erp-crm-cloud",
+        {
+          "href": "/pocidif-21",
+          "label": "PoCIDIF 2.1"
+        }
       ],
       "sourceKeys": [
         "digitalizare"
@@ -3998,7 +4166,11 @@
         "/verificare-eligibilitate-fonduri-europene",
         "/contact",
         "/acte-necesare-fonduri-europene-nerambursabile",
-        "/calendar-fonduri-europene"
+        "/calendar-fonduri-europene",
+        {
+          "href": "/pocidif-21",
+          "label": "PoCIDIF 2.1"
+        }
       ],
       "sourceKeys": [
         "fonduri-europene"
@@ -4499,120 +4671,303 @@
       "decisionClose": "Dacă documentele, bugetul sau condițiile nu se potrivesc, proiectul se ajustează înainte de depunere. Regulile finale se confirmă în ghidul activ, anexele apelului și sursele oficiale."
     },
     {
-      "funding": "finantarea, contributia proprie, pragurile și termenele se confirma în ghidul apelului activ; pagina evita valori fixe când nu există apel final publicat sau documente verificate.",
+      "funding": "Pana la 15.000.000 euro/beneficiar, cu intensitate maxima de 100% in forma consultativa.",
       "policyContribution": "pagina ajuta beneficiarii să compare programul, solicitantul, documentele și investiția înainte de o decizie costisitoare.",
       "audience": [
-        "firme care urmaresc program energie 2026",
-        "beneficiari interesati de granturi energie verde 2026",
-        "proiecte cu energie regenerabilă și eficiență energetica"
+        "Companii care produc materiale, componente, echipamente sau solutii relevante pentru infrastructura de transport.",
+        "Solicitanti care pot demonstra capacitate tehnica, amplasament si flux de productie verificabil.",
+        "Proiecte industriale care au nevoie de buget mare, dar pot justifica fiecare componenta a investitiei."
       ],
       "eligibility": [
-        "solicitantul trebuie să se incadreze în regulile apelului activ",
-        "activitatea și codul CAEN trebuie să fie compatibile cu investiția",
-        "locația, documentele și bugetul trebuie să poată fi dovedite"
+        "Verifica forma juridica, codurile CAEN si activitatea reala a solicitantului.",
+        "Confirma legatura dintre investitie si infrastructura de transport.",
+        "Analizeaza amplasamentul, autorizatiile, utilitatile si capacitatea de productie.",
+        "Dovedeste ca echipamentele, liniile sau tehnologiile propuse sunt necesare si proportionale.",
+        "Confirma pragurile, intensitatea si categoriile de cheltuieli in ghidul activ."
       ],
       "mandatory": [
-        "verificare solicitant și cod CAEN",
-        "documente actualizate pentru firmă sau proiect",
-        "buget construit pe oferte și specificatii",
-        "analiza cofinanțării și a cheltuielilor neeligibile"
+        "Incadrarea solicitantului si a activitatii economice in cerintele schemei.",
+        "Documente pentru amplasament, utilitati, autorizatii si flux tehnologic.",
+        "Buget separat pentru grant, TVA, costuri neeligibile si rezerve.",
+        "Oferte si specificatii comparabile pentru echipamentele majore.",
+        "Confirmarea ghidului activ, a anexelor si a calendarului inainte de depunere."
       ],
       "eligibleExpenses": [
-        "echipamente și investiții permise de apel",
-        "solutii pentru energie regenerabilă și eficiență energetica dacă ghidul permite",
-        "documentatii tehnice, avize și servicii în limitele programului",
-        "dotări corelate cu activitatea finanțată"
+        "Echipamente si tehnologii pentru productie, cand sunt permise de ghidul activ.",
+        "Linii, utilaje, instalatii sau componente tehnice legate de infrastructura de transport.",
+        "Lucrari si amenajari necesare investitiei, daca sunt eligibile in apel.",
+        "Servicii, proiectare si documentatii in limitele schemei."
       ],
       "ineligibleExpenses": [
-        "cheltuieli incepute înainte de momentul permis",
-        "achiziții fără legătura cu activitatea finanțată",
-        "costuri nejustificate prin oferte și documente",
-        "cheltuieli finanțate deja prin alt program"
+        "Investitii fara legatura directa cu infrastructura de transport.",
+        "Echipamente folosite pentru activitati neeligibile sau necorelate cu codurile autorizate.",
+        "Costuri incepute inainte de momentul permis.",
+        "Bugete supradimensionate fara justificare tehnica, economica si operationala."
       ],
       "scoring": [
-        "eligibilitatea solicitantului",
-        "calitatea investiției și coerenta bugetului",
-        "punctajul programului și prioritatile apelului",
-        "capacitatea de implementare și documentele suport"
+        "Evaluatorul va urmari relevanta investitiei pentru infrastructura de transport.",
+        "Capacitatea de productie si fezabilitatea operationala trebuie demonstrate documentar.",
+        "Proiectele mari sunt vulnerabile cand bugetul nu explica fluxul tehnologic."
       ],
       "steps": [
-        "verifică solicitantul și activitatea",
-        "alege programul potrivit",
-        "pregătește documentele și ofertele",
-        "estimeaza cofinanțarea",
-        "revizuiește punctajul și depune dosarul"
+        "Stabilim daca activitatea si codurile CAEN sunt compatibile.",
+        "Mapam fluxul de productie si componentele investitiei.",
+        "Verificam amplasamentul, utilitatile si autorizatiile necesare.",
+        "Construim bugetul pe echipamente, lucrari, servicii si costuri neeligibile.",
+        "Actualizam dosarul dupa ghidul final."
       ],
       "evaluation": [
-        "verificare administrativa",
-        "verificare eligibilitate",
-        "evaluare tehnică și financiara",
-        "contractare",
-        "implementare și plată"
+        "Fezabilitatea tehnica, activitatea economica si legatura cu infrastructura sunt filtre centrale.",
+        "Bugetele mari necesita explicatii solide pentru capacitate, furnizori, instalare si exploatare.",
+        "Conditiile consultative trebuie reconfirmate in documentatia finala a apelului."
       ],
       "examples": [
-        "o firmă poate compara digitalizare, investiții productive și energie în functie de activitate",
-        "un start-up trebuie să alinieze codul CAEN, bugetul și planul de afaceri",
-        "un proiect cu documente incomplete trebuie amanat până la clarificarea riscurilor"
+        "Producator care modernizeaza o linie pentru materiale sau componente folosite in lucrari de infrastructura de transport.",
+        "Companie care introduce echipamente industriale pentru cresterea capacitatii si calitatii productiei relevante.",
+        "Investitie intr-un amplasament cu utilitati, acces si autorizatii pregatite din timp."
       ],
       "faq": [
         [
-          "Verificarea garantează finantarea?",
-          "Nu. Verificarea reduce riscurile și clarifica documentele, dar aprobarea depinde de apel, punctaj, buget și evaluarea autorității."
+          "Ce este PRO INFRA?",
+          "PRO INFRA este o schema consultativa pentru investitii care sustin productie, echipamente sau tehnologii relevante pentru infrastructura de transport."
         ],
         [
-          "Când trebuie inceputa pregătirea?",
-          "Pregatirea trebuie inceputa înainte de depunere, mai ales dacă sunt necesare oferte, documente pentru spațiu, autorizatii sau calcule de punctaj."
+          "Care este finantarea maxima?",
+          "Sursele analizate mentioneaza pana la 15.000.000 euro/beneficiar si intensitate maxima de 100%, cu confirmare in ghidul activ."
         ],
         [
-          "Ce date sunt utile pentru analiza?",
-          "Sunt utile codul CAEN, localitatea, forma solicitantului, bugetul, investiția, documentele disponibile și programul vizat."
+          "Poate aplica orice fabrica?",
+          "Nu. Investitia trebuie sa se lege direct de obiectivele programului si de infrastructura de transport."
         ],
         [
-          "Pot compara mai multe programe?",
-          "Da. Compararea programelor este recomandata când proiectul poate intra în digitalizare, IMM, energie, agricultura sau antreprenoriat."
+          "Ce verific prima data?",
+          "Codurile CAEN, activitatea reala, amplasamentul, fluxul tehnologic si legatura cu infrastructura vizata."
+        ],
+        [
+          "Sunt eligibile echipamentele de productie?",
+          "Pot fi eligibile daca sunt permise de ghid si justificate prin fluxul tehnologic al proiectului."
+        ],
+        [
+          "Ce documente sunt importante?",
+          "Documentele pentru solicitant, amplasament, autorizatii, utilitati, oferte, devize si justificari tehnice."
+        ],
+        [
+          "Ce riscuri apar la proiectele mari?",
+          "Riscurile sunt bugete supradimensionate, amplasamente nepregatite, autorizatii intarziate si activitati neeligibile."
+        ],
+        [
+          "Cand se confirma conditiile?",
+          "Inainte de depunere, in ghidul activ, anexele si clarificarile publicate de autoritatea finantatoare."
         ]
       ],
       "sourceKeys": [
-        "pro-infra",
-        "fondul-modernizare",
-        "fonduri-europene"
+        "pro-infra"
       ],
       "slug": "pro-infra",
       "output": "pro-infra.html",
       "type": "program",
       "schemaType": "GovernmentService",
-      "category": "PRO INFRA și energie",
-      "minWords": 1500,
-      "minFaq": 10,
-      "title": "PRO INFRA | eficiență energetică",
-      "description": "PRO INFRA: eficiență energetică pentru producători, CAEN, echipamente înlocuite, EMS, casare, audit energetic și documente tehnice.",
-      "h1": "PRO INFRA: eficiență energetică și echipamente",
-      "quickAnswer": "PRO INFRA se analizează ca schemă de eficiență energetică pentru producători sau infrastructură, în funcție de ghid. Verificarea include CAEN-ul, echipamentele înlocuite, eficiența energetică, EMS, casarea, auditul energetic și documentele tehnice. Nu păstrăm sume fără sursă oficială.",
-      "programName": "PRO INFRA 2026",
+      "category": "Industrie si infrastructura",
+      "minWords": 1200,
+      "minFaq": 8,
+      "title": "PRO INFRA | productie pentru infrastructura de transport",
+      "description": "PRO INFRA explicat: finantare pentru productie, materiale, echipamente si tehnologii necesare infrastructurii de transport, cu grant maxim consultativ de 15 milioane euro.",
+      "h1": "PRO INFRA: productie pentru infrastructura de transport",
+      "quickAnswer": "PRO INFRA este o schema consultativa pentru investitii care sprijina lantul de productie necesar infrastructurii de transport. Sursele analizate mentioneaza o valoare maxima de pana la 15.000.000 euro/beneficiar si intensitate de pana la 100%. Proiectul trebuie verificat prin tipul solicitantului, activitatea economica, amplasamentul, capacitatea de productie, echipamentele propuse, standardele tehnice si legatura directa cu infrastructura vizata. Nu este o finantare generala pentru orice fabrica; investitia trebuie sa fie compatibila cu obiectivele schemei, cu ghidul activ si cu documentele tehnice ale amplasamentului. Pentru bugete mari conteaza ofertele comparabile, autorizatiile si justificarea fluxului de productie. Inainte de depunere trebuie clarificate utilitatile, autorizatiile, instalarea echipamentelor si modul in care productia rezultata raspunde obiectivului programului.",
+      "programName": "PRO INFRA",
       "related": [
-        "/fondul-modernizare-energie-regenerabila-2026",
-        "/fondul-de-modernizare",
-        "/finantari-panouri-fotovoltaice",
-        "/fonduri-europene-imm",
-        "/contact"
+        {
+          "href": "/fonduri-europene-imm",
+          "label": "Fonduri europene IMM"
+        },
+        {
+          "href": "/fonduri-europene",
+          "label": "Fonduri europene"
+        },
+        {
+          "href": "/e-move",
+          "label": "e-MOVE RO"
+        },
+        {
+          "href": "/pocidif-21",
+          "label": "PoCIDIF 2.1"
+        },
+        {
+          "href": "/verificare-eligibilitate-fonduri-europene",
+          "label": "Verificare eligibilitate"
+        }
       ],
       "heroIcon": "ph-duotone ph-factory",
       "officialGuideKey": "pro-infra",
       "guideCtaLabel": "Ghid oficial",
       "contentSections": [
         {
-          "title": "Schema PRO INFRA pe scurt",
-          "paragraphs": [
-            "Verifică eficiență energetica, materialele pentru infrastructura de transport, sistemul de management energetic, casarea echipamentelor și documentele tehnice înainte de bugetul final."
-          ]
+          "title": "Ce trebuie sa demonstreze un proiect PRO INFRA",
+          "body": "Un proiect PRO INFRA trebuie sa arate de ce investitia este relevanta pentru infrastructura de transport. Fluxul de productie, echipamentele, amplasamentul si rezultatele trebuie sa fie legate intre ele, nu prezentate ca o lista de achizitii."
+        },
+        {
+          "title": "De ce conteaza amplasamentul",
+          "body": "Echipamentele industriale cer utilitati, acces, spatiu, autorizatii si calendar realist de instalare. Daca amplasamentul nu este pregatit, proiectul poate deveni vulnerabil chiar daca activitatea firmei pare eligibila."
+        },
+        {
+          "title": "Cum pregatim bugetul",
+          "body": "Bugetul trebuie separat pe echipamente, lucrari, servicii, TVA si costuri neeligibile. Pentru valori mari, fiecare componenta trebuie sustinuta prin oferte, specificatii si justificari tehnice comparabile."
+        },
+        {
+          "title": "Ce ramane de verificat",
+          "body": "Pagina foloseste forma consultativa ca reper. Valorile, intensitatea, beneficiarii, cheltuielile si calendarul se valideaza in ghidul activ inainte de depunere."
+        },
+        {
+          "title": "Cum se demonstreaza legatura cu infrastructura de transport",
+          "body": "La PRO INFRA, investitia trebuie sa fie explicata prin rolul ei in lantul de productie pentru infrastructura de transport. Nu este suficient ca firma sa cumpere echipamente industriale. Dosarul trebuie sa arate ce produse sau componente vor rezulta, ce standarde tehnice sunt relevante, ce clienti sau utilizari sunt vizate si cum se schimba capacitatea de productie. Aceasta legatura reduce riscul ca proiectul sa fie interpretat ca modernizare generala fara incadrare in schema."
+        },
+        {
+          "title": "Verificari operationale pentru proiecte mari",
+          "body": "Pentru bugete mari verificam daca amplasamentul poate primi echipamentele, daca utilitatile sunt disponibile, daca instalarea intra in calendar si daca personalul poate opera linia propusa. Ofertele trebuie sa fie comparabile si suficient de detaliate pentru a justifica preturile. Cand exista lucrari, autorizatii sau avize, acestea se trateaza ca riscuri de calendar, nu ca formalitati. Proiectul trebuie sa ramana implementabil dupa semnarea contractului."
         }
       ],
-      "finalCtaText": "Trimite CAEN-ul, echipamentele existente, echipamentele propuse, auditul energetic dacă există și bugetul estimat.",
-      "heroPrimaryCta": "Verifică eligibilitatea",
-      "finalPrimaryCta": "Trimite datele proiectului",
-      "inlineCtaTitle": "Ce poți trimite pentru verificare",
-      "inlineCtaText": "Trimite CAEN-ul, echipamentele existente, echipamentele propuse, auditul energetic dacă există și bugetul estimat.",
-      "decisionClose": "Dacă documentele, bugetul sau condițiile nu se potrivesc, proiectul se ajustează înainte de depunere. Regulile finale se confirmă în ghidul activ, anexele apelului și sursele oficiale."
+      "finalCtaText": "Verifica eligibilitatea PRO INFRA",
+      "heroPrimaryCta": "Verifica eligibilitatea PRO INFRA",
+      "finalPrimaryCta": "Verifica eligibilitatea PRO INFRA",
+      "inlineCtaTitle": "Urmatorul pas",
+      "inlineCtaText": "Trimite datele principale despre solicitant, localitate, activitate, investitie si buget. Verificarea initiala arata daca programul merita pregatit si ce riscuri trebuie rezolvate inainte de depunere.",
+      "decisionClose": "Daca proiectul este doar o modernizare generala de productie, trebuie reanalizat inainte de pregatirea dosarului.",
+      "updatedAt": "2026-06-11",
+      "template": "editorial-program",
+      "applicantRows": [
+        [
+          "Solicitant",
+          "Companie incadrata in categoriile eligibile ale schemei active.",
+          "Forma juridica, coduri CAEN si activitate reala.",
+          "Ghidul activ"
+        ],
+        [
+          "Activitate",
+          "Productie sau servicii tehnice legate de infrastructura de transport.",
+          "Legatura directa cu obiectivele programului.",
+          "Ghidul activ"
+        ],
+        [
+          "Amplasament",
+          "Spatiu, utilitati si autorizatii compatibile cu investitia industriala.",
+          "Drepturi, acces, utilitati si calendar.",
+          "Documente tehnice"
+        ],
+        [
+          "Capacitate",
+          "Flux tehnologic si echipamente proportionale.",
+          "Justificare pentru fiecare componenta majora.",
+          "Dosarul tehnic"
+        ]
+      ],
+      "eligibleInvestmentRows": [
+        [
+          "Echipamente industriale",
+          "Utilaje si tehnologii legate de productia vizata.",
+          "Compatibilitate cu activitatea eligibila.",
+          "Ghidul activ"
+        ],
+        [
+          "Linii de productie",
+          "Fluxuri si instalatii pentru cresterea capacitatii.",
+          "Capacitate, instalare si exploatare.",
+          "Ghidul activ"
+        ],
+        [
+          "Lucrari si utilitati",
+          "Amenajari necesare investitiei.",
+          "Autorizatii, amplasament si costuri proprii.",
+          "Ghidul activ"
+        ],
+        [
+          "Servicii tehnice",
+          "Proiectare, consultanta sau documentatii permise.",
+          "Plafoane si momentul cheltuielii.",
+          "Ghidul activ"
+        ]
+      ],
+      "cofinancingTitle": "Finantare si cofinantare PRO INFRA",
+      "cofinancingRows": [
+        [
+          "Grant maxim",
+          "15.000.000 euro/beneficiar",
+          "Valoare indicata in forma consultativa analizata."
+        ],
+        [
+          "Intensitate",
+          "Pana la 100%",
+          "Se confirma in ghidul activ al schemei."
+        ],
+        [
+          "Costuri proprii",
+          "TVA, costuri neeligibile si diferente de pret",
+          "Trebuie bugetate separat."
+        ],
+        [
+          "Confirmare",
+          "In ghidul activ si anexele schemei",
+          "Forma consultativa poate fi modificata."
+        ]
+      ],
+      "documentRows": [
+        [
+          "Solicitant",
+          "Beneficiar",
+          "La verificarea initiala.",
+          "Acte juridice, fiscale, coduri CAEN si declaratii."
+        ],
+        [
+          "Amplasament",
+          "Beneficiar si proiectant",
+          "Inainte de buget.",
+          "Drept de folosinta, utilitati, autorizatii si planuri."
+        ],
+        [
+          "Investitie",
+          "Beneficiar, proiectant si furnizori",
+          "Inainte de depunere.",
+          "Oferte, specificatii, devize si flux tehnologic."
+        ],
+        [
+          "Financiar",
+          "Beneficiar",
+          "Inainte de contractare.",
+          "Buget, TVA, costuri neeligibile si surse de finantare."
+        ]
+      ],
+      "preparationSteps": [
+        [
+          "1.",
+          "Nu trata PRO INFRA ca program general de productie."
+        ],
+        [
+          "2.",
+          "Demonstreaza legatura cu infrastructura de transport inainte de buget."
+        ],
+        [
+          "3.",
+          "Pregateste specificatii tehnice comparabile pentru echipamentele scumpe."
+        ],
+        [
+          "4.",
+          "Verifica utilitatile si autorizatiile amplasamentului."
+        ],
+        [
+          "5.",
+          "Revalideaza toate valorile dupa publicarea ghidului final."
+        ]
+      ],
+      "commonMistakes": [
+        "Activitate economica necorelata cu obiectivele schemei.",
+        "Buget mare fara flux tehnologic explicat.",
+        "Echipamente folosite si pentru activitati neeligibile fara separare clara.",
+        "Amplasament fara utilitati sau autorizatii suficiente.",
+        "Oferte incomplete pentru echipamente majore.",
+        "Aplicare pe informatii consultative fara confirmarea ghidului activ."
+      ],
+      "decisionIntro": "PRO INFRA este potrivit pentru investitii industriale bine documentate, cu legatura directa cu infrastructura de transport.",
+      "ctaText": "Verifica eligibilitatea PRO INFRA",
+      "secondaryCtaText": "Analizeaza proiectul industrial"
     },
     {
       "funding": "finantarea, contributia proprie, pragurile și termenele se confirma în ghidul apelului activ; pagina evita valori fixe când nu există apel final publicat sau documente verificate.",
@@ -7521,109 +7876,122 @@
       "type": "program",
       "schemaType": "GovernmentService",
       "category": "Mobilitate electrică",
-      "title": "e-MOVE | stații de încărcare",
-      "description": "e-MOVE: stații de încărcare, mobilitate electrică, eligibilitate, locații, racordare, operare, venituri și ajutor de stat.",
-      "h1": "e-MOVE: stații de încărcare și mobilitate electrică",
+      "title": "e-MOVE RO | statii de incarcare si energie regenerabila",
+      "description": "e-MOVE RO explicat: finantare pentru infrastructura de incarcare electrica, productie de energie regenerabila si stocare, solicitanti eligibili si documente.",
+      "h1": "e-MOVE RO: statii de incarcare, energie regenerabila si stocare",
       "programName": "e-MOVE RO",
-      "heroIcon": "ph-duotone ph-battery-charging",
-      "funding": "valoarea sprijinului, intensitatea și plafoanele se confirma exclusiv din ghidul oficial al apelului activ.",
-      "quickAnswer": "e-MOVE se verifică prin beneficiar, locație, drept de folosință, racordare, operare, venituri posibile și ajutor de stat. Nu presupunem un calendar până la publicarea sursei oficiale active. Proiectul trebuie să fie operabil, nu doar eligibil pe hârtie. Înainte de buget, trebuie clarificat dacă amplasamentul poate susține stațiile, dacă racordarea este realistă, cine operează infrastructura și cum se tratează veniturile. Ajutorul de stat, dreptul de folosință și obligațiile de operare pot schimbă decizia, iar calendarul se folosește numai după publicarea sursei oficiale active. FABER poate verifică documentele tehnice și riscurile de implementare, dar nu tratează o locație ca eligibilă fără confirmarea ghidului.",
+      "heroIcon": "ph-duotone ph-charging-station",
+      "funding": "Pana la 25.000.000 euro/beneficiar, cu intensitate maxima de 100% in forma consultativa.",
+      "quickAnswer": "e-MOVE RO este o schema pentru infrastructura de mobilitate electrica, aflata in forma consultativa in sursele analizate. Programul vizeaza statii de incarcare, productie de energie din surse regenerabile si, dupa caz, stocare, cu o valoare maxima indicativa de 25.000.000 euro pe beneficiar si intensitate maxima de 100%. Verificarea trebuie sa porneasca de la tipul solicitantului, amplasament, dreptul asupra terenului, accesul la retea, capacitatea tehnica, autorizatii si modul in care energia produsa sustine infrastructura de incarcare. Pentru proiecte mari, racordarea, urbanismul, documentele de mediu si calendarul avizelor pot fi decisive. Conditiile finale se confirma in ghidul activ si in anexele schemei.",
       "policyContribution": "programul susține infrastructura de mobilitate cu emisii zero și investiții care pot reduce presiunea energetica a transportului, dacă proiectul respecta ghidul activ, schema de ajutor de stat și condițiile tehnice aplicabile.",
       "audience": [
-        "beneficiari care pot implementa infrastructura de încărcare",
-        "operatori economici sau entitati eligibile conform ghidului activ",
-        "solicitanti care au amplasament, buget și documente tehnice verificabile"
+        "Solicitanti publici sau privati incadrati in categoriile permise de ghidul activ.",
+        "Proiecte de infrastructura de incarcare care pot demonstra amplasament, acces public sau functionalitate conform schemei.",
+        "Investitii care combina statii de incarcare cu productie regenerabila si eventual stocare, daca ghidul permite structura propusa."
       ],
       "eligibility": [
-        "beneficiarul trebuie să se incadreze în categoriile permise de apelul activ",
-        "amplasamentul trebuie să fie documentat și disponibil pentru investiție",
-        "investiția trebuie să fie justificata tehnic, financiar și operational"
+        "Verifica tipul solicitantului si incadrarea in submasura potrivita.",
+        "Dovedeste dreptul asupra amplasamentului si compatibilitatea urbanistica sau tehnica.",
+        "Analizeaza racordarea la retea, puterea disponibila si calendarul avizelor.",
+        "Coreleaza statia de incarcare, energia regenerabila si stocarea intr-un flux tehnic coerent.",
+        "Confirma daca proiectul este destinat uzului public, intern sau mixt, potrivit ghidului activ."
       ],
       "mandatory": [
-        "verificarea dreptului asupra amplasamentului",
-        "verificarea avizelor, racordarii și conditiilor tehnice",
-        "buget realist și oferte comparabile",
-        "confirmarea obligatiilor de operare și mentenanta"
+        "Analiza juridica a solicitantului si a amplasamentului.",
+        "Verificarea racordarii, avizelor si cerintelor tehnice pentru statii.",
+        "Buget separat pentru lucrari, echipamente, proiectare, TVA si costuri neeligibile.",
+        "Documente pentru mediu, urbanism si acces la infrastructura, daca sunt cerute.",
+        "Confirmarea conditiilor finale in ghidul activ si anexele schemei."
       ],
       "eligibleExpenses": [
-        "statii de încărcare și echipamente conexe, dacă apelul le permite",
-        "lucrari de instalare și racordare necesare investiției",
-        "software, monitorizare și echipamente de gestiune",
-        "surse regenerabile sau stocare, dacă sunt permise de ghid",
-        "servicii tehnice și documentatii în limitele apelului"
+        "Statii de incarcare pentru vehicule electrice, in conditiile schemei active.",
+        "Echipamente pentru producerea energiei din surse regenerabile asociate investitiei.",
+        "Sisteme de stocare, management energetic si componente tehnice necesare functionarii.",
+        "Lucrari, proiectare, avize si servicii eligibile in limitele apelului."
       ],
       "ineligibleExpenses": [
-        "cheltuieli incepute înainte de momentul permis",
-        "costuri fără legătura directa cu infrastructura finanțată",
-        "echipamente nejustificate prin capacitate, amplasament sau flux",
-        "TVA sau costuri neeligibile conform ghidului",
-        "investiții fără avize sau fără drept clar asupra locatiei"
+        "Investitii fara drept clar asupra terenului sau fara posibilitate realista de racordare.",
+        "Echipamente care nu sustin infrastructura de incarcare finantata.",
+        "Costuri incepute inainte de momentul permis de schema.",
+        "Proiecte care nu pot demonstra utilizarea, functionarea sau obligatiile de monitorizare."
       ],
       "scoring": [
-        "maturitatea tehnică a proiectului",
-        "calitatea amplasamentului și accesibilitatea",
-        "eficiență energetica și impactul asupra mobilitatii",
-        "capacitatea de implementare și operare",
-        "documente complete și buget justificat"
+        "Proiectele sunt mai solide cand amplasamentul, racordarea si utilizarea sunt demonstrate din timp.",
+        "Bugetul trebuie sa se lege de capacitatea tehnica si de scopul infrastructurii.",
+        "Riscul creste cand proiectul depinde de avize sau racordari improbabile in calendarul apelului."
       ],
       "steps": [
-        "verifică beneficiarul și amplasamentul",
-        "confirma avizele și condițiile tehnice",
-        "stabileste investiția și ofertele",
-        "calculeaza bugetul, cofinanțarea și cash-flow-ul",
-        "pregătește cererea și anexele"
+        "Stabilim submasura si categoria solicitantului.",
+        "Verificam amplasamentul, drepturile reale si accesul la retea.",
+        "Definim configuratia tehnica pentru statii, energie regenerabila si stocare.",
+        "Structuram bugetul si documentele de avizare.",
+        "Confirmam ghidul activ si calendarul inainte de depunere."
       ],
       "evaluation": [
-        "verificare administrativa",
-        "verificare eligibilitate beneficiar și investiție",
-        "evaluare tehnico-economică",
-        "selecție, contractare, implementare și monitorizare"
+        "Evaluatorul va urmari eligibilitatea solicitantului si fezabilitatea amplasamentului.",
+        "Capacitatea de racordare si documentele tehnice pot decide viabilitatea proiectului.",
+        "Valoarea mare a grantului cere justificari solide pentru fiecare componenta."
       ],
       "examples": [
-        "statii de încărcare intr-un amplasament cu acces public sau operational clar",
-        "infrastructura de încărcare corelata cu sursa de energie și capacitatea disponibilă",
-        "proiect cu software de monitorizare și mentenanta justificata"
+        "Proiect pentru statii de incarcare cu amplasament identificat, acces la retea si flux de utilizare clar.",
+        "Investitie care include panouri fotovoltaice si stocare pentru alimentarea infrastructurii de incarcare.",
+        "Beneficiar public sau privat care poate demonstra dreptul asupra terenului si calendarul avizelor."
       ],
       "faq": [
         [
-          "Ce este e-MOVE RO?",
-          "e-MOVE RO este o linie de finanțare care trebuie verificată prin ghidul activ și care poate viza infrastructura de mobilitate electrică, statii de încărcare și elemente asociate, în functie de forma finală a apelului."
+          "Ce finanteaza e-MOVE RO?",
+          "Programul vizeaza infrastructura de incarcare electrica, productie de energie regenerabila si, unde este permis, stocare sau componente tehnice asociate."
         ],
         [
-          "Cine poate aplica la e-MOVE?",
-          "Pot aplica doar beneficiarii acceptati de ghidul oficial. Înainte de depunere trebuie verificate forma solicitantului, amplasamentul, capacitatea financiara și documentele tehnice."
+          "Care este grantul maxim e-MOVE RO?",
+          "Forma consultativa analizata mentioneaza pana la 25.000.000 euro/beneficiar si intensitate maxima de 100%."
         ],
         [
-          "Ce investiții pot fi eligibile?",
-          "Pot fi eligibile statii de încărcare, lucrari de instalare, racordare, software, monitorizare, surse regenerabile sau stocare numai dacă ghidul activ le permite."
+          "Cine poate aplica?",
+          "Pot aplica solicitantii incadrati in categoriile din submasura activa. Tipul beneficiarului trebuie confirmat in ghidul final."
         ],
         [
-          "Ce documente trebuie pregătite?",
-          "Sunt utile documentele solicitantului, dreptul asupra amplasamentului, avizele, solutia tehnică, ofertele, bugetul și dovezile de cofinanțare."
+          "Ce trebuie verificat prima data?",
+          "Amplasamentul, dreptul de folosinta, accesul la retea, puterea disponibila si categoria solicitantului."
         ],
         [
-          "De ce conteaza amplasamentul?",
-          "Amplasamentul decide accesul, racordarea, autorizarea, fluxul de utilizare și posibilitatea de operare după finalizarea investiției."
+          "Sunt eligibile panourile fotovoltaice?",
+          "Pot fi eligibile daca sustin infrastructura de incarcare si daca sunt permise de ghidul activ."
         ],
         [
-          "Pot include energie regenerabilă?",
-          "Doar dacă ghidul activ permite surse regenerabile sau stocare ca parte a investiției. Costurile trebuie separate și justificate."
+          "Este obligatorie stocarea?",
+          "Nu trebuie presupus. Stocarea se include doar daca este permisa, justificata tehnic si legata de proiect."
         ],
         [
-          "Ce riscuri apar la evaluare?",
-          "Apar riscuri când amplasamentul nu este clar, avizele lipsesc, racordarea nu este fezabila, bugetul este vag sau obligatiile de operare nu pot fi susținute."
+          "Ce riscuri apar la e-MOVE?",
+          "Riscurile principale sunt racordarea, avizele, dreptul asupra terenului, supradimensionarea tehnica si costurile neeligibile."
         ],
         [
-          "Cum poate ajuta FABER?",
-          "FABER poate analiza eligibilitatea, documentele, bugetul, riscurile și clarificarile, fără să garanteze aprobarea finanțării."
+          "Cand pot lua decizia de aplicare?",
+          "Dupa verificarea ghidului activ, a anexelor si a fezabilitatii tehnice pentru amplasamentul propus."
         ]
       ],
       "related": [
-        "/fondul-de-modernizare",
-        "/finantari-panouri-fotovoltaice",
-        "/surse-oficiale-fonduri-europene",
-        "/verificare-eligibilitate-fonduri-europene",
-        "/contact"
+        {
+          "href": "/fonduri-europene-digitalizare",
+          "label": "Fonduri europene digitalizare"
+        },
+        {
+          "href": "/fondul-de-modernizare",
+          "label": "Fondul de Modernizare"
+        },
+        {
+          "href": "/finantari-panouri-fotovoltaice",
+          "label": "Finantari panouri fotovoltaice"
+        },
+        {
+          "href": "/pocidif-21",
+          "label": "PoCIDIF 2.1"
+        },
+        {
+          "href": "/verificare-eligibilitate-fonduri-europene",
+          "label": "Verificare eligibilitate"
+        }
       ],
       "sourceKeys": [
         "emove"
@@ -7644,210 +8012,137 @@
       ],
       "contentSections": [
         {
-          "title": "Pe scurt",
-          "tableRows": [
-            [
-              "Program",
-              "e-MOVE RO"
-            ],
-            [
-              "Pentru cine",
-              "operatori economici sau entitati eligibile care pot implementa infrastructura de încărcare, conform ghidului apelului activ"
-            ],
-            [
-              "Finanțare",
-              "valoarea, intensitatea și plafoanele se confirma exclusiv din ghidul oficial al apelului activ"
-            ],
-            [
-              "Ce verifici întâi",
-              "amplasament, drept de folosință, avize, racordare, capacitate tehnică, contributie proprie și obligații de operare"
-            ],
-            [
-              "CTA",
-              "verificare eligibilitate și discutie de consultanță"
-            ]
-          ]
+          "title": "Cum se construieste un proiect e-MOVE",
+          "body": "Un proiect e-MOVE trebuie sa lege statia de incarcare de amplasament, racordare, energie regenerabila si utilizarea estimata. Fara aceasta legatura, bugetul poate parea artificial sau imposibil de implementat in calendarul apelului."
         },
         {
-          "title": "Ce verifici concret pentru e-MOVE",
-          "paragraphs": [
-            "Analiza incepe cu incadrarea solicitantului, tipul investiției, locația, accesul public sau operational, puterea instalata, racordarea și obligatiile de operare. Lista de echipamente vine după aceste verificări, nu inaintea lor."
-          ]
+          "title": "De ce racordarea este un filtru critic",
+          "body": "Puterea disponibila, avizele si calendarul operatorului de retea pot decide daca proiectul este realist. Analiza tehnica trebuie facuta inainte de a fixa configuratia statiilor sau dimensiunea productiei regenerabile."
         },
         {
-          "title": "Cui se adreseaza",
-          "paragraphs": [
-            "Programul este relevant pentru solicitanti care pot implementa și opera infrastructura de încărcare pe termenul cerut de ghid. Forma finală a beneficiarilor eligibili se confirma în apelul activ."
-          ]
+          "title": "Cum tratam energia regenerabila si stocarea",
+          "body": "Panourile fotovoltaice si stocarea trebuie corelate cu infrastructura finantata. Nu includem componente doar pentru ca par atractive; ele trebuie sa fie permise, proportionale si explicabile in buget."
         },
         {
-          "title": "Beneficiari eligibili",
-          "paragraphs": [
-            "Beneficiarul trebuie să poată demonstra forma juridică, capacitatea financiara, dreptul asupra amplasamentului și capacitatea de a respecta obligatiile post-implementare."
-          ]
+          "title": "Ce ramane de confirmat",
+          "body": "Sursele analizate indica o schema consultativa. Conditiile finale, beneficiarii eligibili, submasurile, documentele si calendarul trebuie verificate in ghidul activ inainte de depunere."
         },
         {
-          "title": "Investiții eligibile",
-          "paragraphs": [
-            "Investitiile pot include infrastructura de încărcare, lucrari conexe, racordare, sisteme de monitorizare și componente energetice, numai dacă sunt permise de ghid și justificate tehnic."
-          ]
+          "title": "Intrebari tehnice inainte de alegerea locatiei",
+          "body": "La e-MOVE RO amplasamentul trebuie testat prin intrebari foarte concrete: cine foloseste statia, ce putere este disponibila, ce distanta exista pana la punctul de racordare, cine detine terenul si ce restrictii urbanistice sau de mediu pot aparea. Pentru proiectele care includ productie regenerabila verificam daca energia poate fi consumata sau gestionata in mod coerent. Aceste raspunsuri influenteaza bugetul, calendarul, autorizatiile si riscul de implementare."
         },
         {
-          "title": "Cheltuieli sensibile și riscuri",
-          "paragraphs": [
-            "Sunt sensibile costurile fără legătura directa cu obiectivul, echipamentele supradimensionate, avizele lipsă, racordarea neconfirmata și bugetele construite pe oferte necomparabile."
-          ]
-        },
-        {
-          "title": "Documente pregatitoare",
-          "paragraphs": [
-            "Pregatirea include acte solicitant, documente pentru teren sau spațiu, solutie tehnică, avize, oferte, estimare de consum sau utilizare, buget, cofinanțare și asumari operationale."
-          ]
-        },
-        {
-          "title": "Amplasament, avize și racordare",
-          "paragraphs": [
-            "Amplasamentul trebuie verificat juridic și tehnic: acces, drept de folosință, autorizări, racordare, putere disponibilă, restrictii urbanistice și posibilitatea de operare după finalizare."
-          ]
-        },
-        {
-          "title": "Energie regenerabilă și stocare",
-          "paragraphs": [
-            "Dacă ghidul permite componente de energie regenerabilă sau stocare, acestea trebuie dimensionate separat, corelate cu infrastructura de încărcare și susținute prin documente tehnice."
-          ]
-        },
-        {
-          "title": "Calendar și depunere",
-          "paragraphs": [
-            "Calendarul se confirma exclusiv în sursa oficială. O decizie buna presupune pregătirea documentelor înainte de deschiderea depunerii, mai ales când sunt necesare avize sau clarificări tehnice."
-          ]
-        },
-        {
-          "title": "Evaluare, selecție și contractare",
-          "paragraphs": [
-            "După depunere pot aparea verificări administrative, clarificări tehnice, selecție competitiva, contractare și obligații de implementare, raportare, mentenanta și operare."
-          ]
-        },
-        {
-          "title": "Cum ajuta FABER",
-          "paragraphs": [
-            "FABER poate verifică incadrarea, documentele, bugetul, riscurile, sursele oficiale și raspunsurile la clarificări. Analiza reduce riscurile, dar nu garantează aprobarea finanțării."
-          ]
-        },
-        {
-          "title": "Surse oficiale consultate",
-          "paragraphs": [
-            "Pentru decizia finală se verifică pagina DGPET/MTI, schema de ajutor de stat, ghidul activ, anexele, corrigendumurile și orice revizie oficială publicata ulterior."
-          ]
+          "title": "Bugetul trebuie legat de folosirea infrastructurii",
+          "body": "Pentru e-MOVE, bugetul nu se valideaza doar prin preturi. Trebuie aratat cine foloseste infrastructura, ce capacitate este necesara, cum se intretin statiile si ce costuri raman la beneficiar dupa finalizare."
         }
       ],
       "applicantRows": [
         [
-          "Operator economic sau entitate eligibila",
-          "Posibila, dacă forma finală a ghidului o permite",
-          "Forma juridică, activitate, situatia financiara și obligații asumate",
-          "Nu se decide pe baza denumirii programului, ci pe ghidul activ"
+          "Solicitant",
+          "Categorie eligibila potrivit submasurii si ghidului activ.",
+          "Tip beneficiar, capacitate de implementare si restrictii.",
+          "Ghidul activ"
         ],
         [
-          "Solicitant cu amplasament identificat",
-          "Posibila, dacă dreptul de folosință este documentat",
-          "Acte teren/spațiu, durata, acces, restrictii și autorizări",
-          "Amplasamentul fragil poate bloca proiectul"
+          "Amplasament",
+          "Teren sau spatiu pentru statii si echipamente conexe.",
+          "Drepturi, urbanism, acces, siguranta si utilizare.",
+          "Documente tehnice"
         ],
         [
-          "Solicitant cu investiție tehnică matura",
-          "Posibila, dacă solutia și racordarea sunt fezabile",
-          "Putere, racordare, avize, oferte și operare",
-          "Lista de echipamente trebuie justificata"
+          "Racordare",
+          "Putere disponibila si solutie tehnica realista.",
+          "Avize, calendar si capacitate retea.",
+          "Operator retea"
+        ],
+        [
+          "Utilizare",
+          "Infrastructura dimensionata pentru scopul declarat.",
+          "Acces public, intern sau mixt, dupa submasura.",
+          "Ghidul activ"
         ]
       ],
       "eligibleInvestmentRows": [
         [
-          "Statii de încărcare",
-          "Echipamente și componente conexe",
-          "Dimensionare, standarde, capacitate și operare",
-          "ghidul oficial e-MOVE"
+          "Statii de incarcare",
+          "Echipamente si componente pentru incarcare electrica.",
+          "Configuratie tehnica si cerinte de acces.",
+          "Ghidul activ"
         ],
         [
-          "Racordare și lucrari conexe",
-          "Instalare, cablare, lucrari necesare functionarii",
-          "Avize, drepturi asupra amplasamentului și costuri neeligibile",
-          "ghidul oficial e-MOVE"
+          "Energie regenerabila",
+          "Panouri sau echipamente asociate productiei de energie.",
+          "Legatura cu infrastructura finantata.",
+          "Ghidul activ"
         ],
         [
-          "Software și monitorizare",
-          "Gestiune, monitorizare, raportare sau plată",
-          "Legatura directa cu infrastructura finanțată",
-          "ghidul oficial e-MOVE"
+          "Stocare",
+          "Sisteme de stocare si management energetic.",
+          "Dimensionare si justificare tehnica.",
+          "Ghidul activ"
         ],
         [
-          "Energie regenerabilă sau stocare",
-          "Componente permise de apel",
-          "Separare bugetara și justificare tehnică",
-          "ghidul oficial e-MOVE"
+          "Lucrari si avize",
+          "Proiectare, instalare, amenajari si documentatii.",
+          "Eligibilitate, plafoane si calendar.",
+          "Ghidul activ"
         ]
       ],
       "documentRows": [
         [
-          "Acte solicitant",
+          "Solicitant",
           "Beneficiar",
-          "La verificarea eligibilitatii",
-          "Incadrare greșită sau respingere administrativa"
+          "La verificarea initiala.",
+          "Acte juridice, fiscale si incadrarea in categorie."
         ],
         [
-          "Documente amplasament",
+          "Amplasament",
+          "Beneficiar si proiectant",
+          "Inainte de buget.",
+          "Drepturi, planuri, acorduri, urbanism."
+        ],
+        [
+          "Tehnic",
+          "Proiectant si furnizori",
+          "Inainte de depunere.",
+          "Solutie de racordare, configuratie statii, energie si stocare."
+        ],
+        [
+          "Financiar",
           "Beneficiar",
-          "Înainte de solutia tehnică",
-          "Blocaj la autorizare sau contractare"
-        ],
-        [
-          "Avize și racordare",
-          "Beneficiar și specialist tehnic",
-          "Înainte de bugetul final",
-          "Costuri nerealiste sau solutie nefezabila"
-        ],
-        [
-          "Oferte și specificatii",
-          "Furnizori",
-          "La construirea bugetului",
-          "Cheltuieli taiate sau clarificări"
-        ],
-        [
-          "Dovezi cofinanțare",
-          "Beneficiar",
-          "Înainte de depunere",
-          "Proiect aprobat dar greu de sustinut financiar"
+          "Inainte de contractare.",
+          "Buget, TVA, costuri neeligibile si capacitate de implementare."
         ]
       ],
       "preparationSteps": [
         [
-          "Verifică solicitantul.",
-          "Confirma forma juridică, activitatea și restrictiile apelului activ."
+          "1.",
+          "Verifica amplasamentul inainte de buget."
         ],
         [
-          "Verifică amplasamentul.",
-          "Controleaza dreptul de folosință, accesul, avizele și racordarea."
+          "2.",
+          "Discuta racordarea si puterea disponibila cat mai devreme."
         ],
         [
-          "Construieste solutia tehnică.",
-          "Leaga statiile, puterea, softul și eventualele componente energetice."
+          "3.",
+          "Dimensioneaza energia regenerabila si stocarea dupa consumul real al infrastructurii."
         ],
         [
-          "Construieste bugetul.",
-          "Separa eligibilele, neeligibilele, TVA, cofinanțarea și rezervele."
+          "4.",
+          "Nu include echipamente fara rol clar in functionarea statiei."
         ],
         [
-          "Pregateste depunerea.",
-          "Aliniaza cererea, anexele, ofertele și raspunsurile la riscurile anticipate."
+          "5.",
+          "Actualizeaza dosarul dupa ghidul final."
         ]
       ],
       "commonMistakes": [
-        "pornirea de la echipamente înainte de verificarea amplasamentului",
-        "drept de folosință insuficient sau greu de demonstrat",
-        "racordare estimată optimist fără confirmare tehnică",
-        "buget construit pe oferte necomparabile",
-        "componenta regenerabilă inclusa fără baza în ghid",
-        "obligații de operare și mentenanta ignorate"
+        "Alegerea unui amplasament fara drepturi sau avize suficiente.",
+        "Ignorarea timpului pentru racordare si autorizatii.",
+        "Buget construit doar pentru plafon, fara justificare tehnica.",
+        "Confuzie intre consum intern, acces public si obligatiile schemei.",
+        "Stocare sau regenerabile dimensionate fara legatura cu infrastructura de incarcare.",
+        "Aplicare pe forma consultativa fara verificarea conditiilor finale."
       ],
       "caseExample": {
         "title": "Exemplu metodologic e-MOVE",
@@ -7855,13 +8150,39 @@
         "approach": "FABER verifică dreptul asupra locatiei, racordarea, avizele, fluxul de utilizare, ofertele și cofinanțarea înainte de redactare.",
         "result": "Dacă locația sau racordarea nu pot fi dovedite, proiectul se ajusteaza sau se amana până la clarificarea documentelor."
       },
-      "decisionIntro": "Pentru e-MOVE, riscul apare mai ales la locație, racordare, dreptul de folosință și modelul de operare al stațiilor de încărcare.",
-      "finalCtaText": "Trimite locația, dreptul asupra amplasamentului, puterea dorită, datele de racordare și modelul de operare.",
-      "heroPrimaryCta": "Verifică eligibilitatea",
-      "finalPrimaryCta": "Trimite datele proiectului",
-      "inlineCtaTitle": "Ce poți trimite pentru verificare",
-      "inlineCtaText": "Trimite locația, dreptul asupra amplasamentului, puterea dorită, datele de racordare și modelul de operare.",
-      "decisionClose": "Dacă documentele, bugetul sau condițiile nu se potrivesc, proiectul se ajustează înainte de depunere. Regulile finale se confirmă în ghidul activ, anexele apelului și sursele oficiale."
+      "decisionIntro": "e-MOVE este potrivit cand amplasamentul, racordarea si utilizarea infrastructurii sunt clare.",
+      "finalCtaText": "Verifica eligibilitatea e-MOVE",
+      "heroPrimaryCta": "Verifica eligibilitatea e-MOVE",
+      "finalPrimaryCta": "Verifica eligibilitatea e-MOVE",
+      "inlineCtaTitle": "Urmatorul pas",
+      "inlineCtaText": "Trimite datele principale despre solicitant, localitate, activitate, investitie si buget. Verificarea initiala arata daca programul merita pregatit si ce riscuri trebuie rezolvate inainte de depunere.",
+      "decisionClose": "Daca proiectul depinde de avize incerte sau de o configuratie supradimensionata, pregatirea trebuie amanata sau redimensionata.",
+      "updatedAt": "2026-06-11",
+      "cofinancingTitle": "Finantare si cofinantare e-MOVE RO",
+      "cofinancingRows": [
+        [
+          "Grant maxim",
+          "25.000.000 euro/beneficiar",
+          "Valoare indicata in forma consultativa analizata."
+        ],
+        [
+          "Intensitate",
+          "Pana la 100%",
+          "Se confirma in ghidul activ al schemei."
+        ],
+        [
+          "Costuri proprii",
+          "TVA, costuri neeligibile si diferente de pret",
+          "Trebuie tratate separat in buget."
+        ],
+        [
+          "Confirmare",
+          "In ghidul activ si anexele apelului",
+          "Forma consultativa poate fi modificata."
+        ]
+      ],
+      "ctaText": "Verifica eligibilitatea e-MOVE",
+      "secondaryCtaText": "Analizeaza amplasamentul"
     },
     {
       "slug": "gal-afir",
@@ -8244,6 +8565,303 @@
       "inlineCtaTitle": "Ce poți trimite pentru verificare",
       "inlineCtaText": "Trimite localitatea, GAL-ul dacă îl cunoști, tipul beneficiarului și stadiul proiectului: idee, depunere sau implementare.",
       "decisionClose": "Dacă documentele, bugetul sau condițiile nu se potrivesc, proiectul se ajustează înainte de depunere. Regulile finale se confirmă în ghidul activ, anexele apelului și sursele oficiale."
+    },
+    {
+      "slug": "pocidif-21",
+      "output": "pocidif-21.html",
+      "type": "program",
+      "schemaType": "GovernmentService",
+      "category": "Digitalizare si inovare",
+      "template": "editorial-program",
+      "minWords": 1200,
+      "minFaq": 8,
+      "updatedAt": "2026-06-11",
+      "title": "PoCIDIF 2.1 | inovare digitala pentru IMM din TIC",
+      "description": "PoCIDIF 2.1 explicat: granturi pentru dezvoltarea de servicii, aplicatii si produse digitale inovatoare de catre IMM din sectorul TIC.",
+      "h1": "PoCIDIF 2.1: inovare si tehnologii avansate pentru IMM din TIC",
+      "programName": "PoCIDIF 2.1",
+      "funding": "Finantare intre 500.000 si 3.000.000 euro, cu intensitate de pana la 75% pentru ajutor regional si 100% pentru ajutor de minimis, conform ghidului consultativ.",
+      "sourceKeys": [
+        "pocidif-21"
+      ],
+      "officialGuideKey": "pocidif-21",
+      "heroIcon": "ph-duotone ph-circuitry",
+      "quickAnswer": "PoCIDIF 2.1 este un apel consultativ pentru IMM din sectorul TIC care dezvolta servicii, aplicatii sau produse digitale prin inovare si adoptarea de tehnologii avansate. Sursele analizate indica finantari intre 500.000 si 3.000.000 euro, cu intensitate de pana la 75% pentru ajutor regional si pana la 100% pentru ajutor de minimis. Verificarea trebuie sa porneasca de la incadrarea IMM, codurile CAEN TIC, maturitatea proiectului, noutatea solutiei, echipa, bugetul de dezvoltare, drepturile asupra produsului si capacitatea de implementare. Nu este un program pentru website-uri simple sau achizitii IT generice; conditiile finale se confirma in ghidul activ PoCIDIF si in anexele apelului.",
+      "audience": [
+        "IMM-uri din sectorul TIC care dezvolta produse, aplicatii sau servicii digitale proprii.",
+        "Companii care pot demonstra inovare, adoptarea de tehnologii avansate si capacitate tehnica de implementare.",
+        "Solicitanti care pot sustine cofinantarea, echipa, bugetul si documentele cerute de ghidul activ."
+      ],
+      "eligibility": [
+        "Verifica statutul IMM si codurile CAEN relevante pentru sectorul TIC.",
+        "Demonstreaza ca proiectul dezvolta un produs, serviciu sau aplicatie digitala cu componenta inovatoare.",
+        "Confirma nivelul de maturitate, echipa, drepturile asupra solutiei si capacitatea de implementare.",
+        "Separa cheltuielile pentru ajutor regional de cele de minimis, daca ghidul cere aceasta structura.",
+        "Valideaza bugetul, intensitatile si calendarul in ghidul activ PoCIDIF."
+      ],
+      "eligibleExpenses": [
+        "Dezvoltare software, aplicatii, servicii digitale si produse bazate pe tehnologii avansate, in limitele ghidului.",
+        "Echipamente, licente, servicii si resurse tehnice necesare dezvoltarii solutiei.",
+        "Activitati de inovare, testare, validare si punere pe piata, daca sunt permise.",
+        "Cheltuieli de minimis si ajutor regional separate potrivit regulilor apelului."
+      ],
+      "ineligibleExpenses": [
+        "Site-uri simple, servicii generice sau achizitii fara componenta clara de inovare.",
+        "Proiecte fara echipa, proprietate intelectuala sau capacitate de dezvoltare demonstrabila.",
+        "Costuri incepute inainte de momentul permis de schema.",
+        "Bugete care nu separa corect categoriile de ajutor si cheltuielile neeligibile."
+      ],
+      "mandatory": [
+        "Incadrare IMM si activitate TIC verificabila.",
+        "Descriere tehnica a solutiei, gradului de noutate si tehnologiilor avansate folosite.",
+        "Buget detaliat pe activitati, ajutor regional, minimis, TVA si costuri neeligibile.",
+        "Echipa, plan de dezvoltare, calendar si rezultate masurabile.",
+        "Confirmarea ghidului activ, anexelor si grilei de evaluare inainte de depunere."
+      ],
+      "scoring": [
+        "Proiectele mai solide explica noutatea solutiei, piata tinta si tehnologia folosita.",
+        "Evaluatorul poate analiza maturitatea, echipa, bugetul, impactul si sustenabilitatea produsului.",
+        "Punctajul trebuie estimat pe criteriile active, nu pe prezentari comerciale generale."
+      ],
+      "steps": [
+        "Verificam incadrarea IMM si codurile CAEN TIC.",
+        "Clarificam produsul digital, nivelul de inovare si tehnologiile avansate.",
+        "Structuram bugetul pe activitati, categorii de ajutor si costuri proprii.",
+        "Pregatim documentele tehnice, financiare si comerciale.",
+        "Actualizam dosarul dupa ghidul final PoCIDIF."
+      ],
+      "evaluation": [
+        "Evaluarea va urmari daca proiectul este inovator si implementabil, nu doar digital in sens generic.",
+        "Bugetul trebuie sa sustina etapele de dezvoltare, testare si lansare.",
+        "Capacitatea firmei si a echipei este un element critic pentru proiecte TIC mari."
+      ],
+      "examples": [
+        "IMM TIC care dezvolta o aplicatie SaaS cu componenta de inteligenta artificiala sau automatizare avansata.",
+        "Companie care construieste un produs digital propriu si poate demonstra piata, arhitectura si echipa.",
+        "Proiect de servicii digitale avansate care necesita dezvoltare, testare, infrastructura si validare comerciala."
+      ],
+      "applicantRows": [
+        [
+          "Solicitant",
+          "IMM din sectorul TIC, incadrat potrivit ghidului activ.",
+          "Statut IMM, CAEN, activitate si documente financiare.",
+          "MIPE"
+        ],
+        [
+          "Proiect",
+          "Serviciu, aplicatie sau produs digital cu inovare.",
+          "Noutate, tehnologie, maturitate si echipa.",
+          "Ghidul activ"
+        ],
+        [
+          "Valoare",
+          "Finantare intre 500.000 si 3.000.000 euro.",
+          "Buget, cofinantare si categoriile de ajutor.",
+          "Ghidul consultativ"
+        ],
+        [
+          "Intensitate",
+          "Pana la 75% ajutor regional si 100% minimis.",
+          "Incadrare corecta pe cheltuieli si reguli aplicabile.",
+          "Ghidul activ"
+        ]
+      ],
+      "eligibleInvestmentRows": [
+        [
+          "Dezvoltare digitala",
+          "Aplicatii, servicii sau produse digitale inovatoare.",
+          "Sa fie mai mult decat un website simplu.",
+          "Ghidul activ"
+        ],
+        [
+          "Tehnologii avansate",
+          "AI, automatizare, date, cloud sau alte componente justificate.",
+          "Arhitectura si obiective masurabile.",
+          "Dosarul tehnic"
+        ],
+        [
+          "Echipamente si licente",
+          "Resurse tehnice necesare dezvoltarii.",
+          "Legatura directa cu proiectul.",
+          "Ghidul activ"
+        ],
+        [
+          "Testare si validare",
+          "Activitati pentru maturizarea si lansarea solutiei.",
+          "Incadrare in categoriile eligibile.",
+          "Ghidul activ"
+        ]
+      ],
+      "cofinancingTitle": "Finantare si cofinantare PoCIDIF 2.1",
+      "cofinancingRows": [
+        [
+          "Grant minim",
+          "500.000 euro",
+          "Valoare indicata in forma consultativa analizata."
+        ],
+        [
+          "Grant maxim",
+          "3.000.000 euro",
+          "Valoare indicata in forma consultativa analizata."
+        ],
+        [
+          "Ajutor regional",
+          "Pana la 75%",
+          "Se confirma in ghidul activ si harta aplicabila."
+        ],
+        [
+          "Minimis",
+          "Pana la 100%",
+          "In limitele regulilor de minimis si ale apelului."
+        ]
+      ],
+      "documentRows": [
+        [
+          "Firma",
+          "Beneficiar si contabil",
+          "La verificarea initiala.",
+          "Acte juridice, fiscale, situatii financiare si incadrare IMM."
+        ],
+        [
+          "Tehnic",
+          "Beneficiar si echipa tehnica",
+          "Inainte de buget.",
+          "Descriere solutie, arhitectura, tehnologii, echipa si calendar."
+        ],
+        [
+          "Piata",
+          "Beneficiar",
+          "Inainte de depunere.",
+          "Utilizatori, clienti, nevoie, diferentiere si model comercial."
+        ],
+        [
+          "Buget",
+          "Beneficiar, consultant si furnizori",
+          "Inainte de depunere.",
+          "Activitati, oferte, costuri proprii, TVA si cheltuieli neeligibile."
+        ]
+      ],
+      "preparationSteps": [
+        [
+          "1.",
+          "Nu trata PoCIDIF 2.1 ca simplu grant pentru website sau echipamente IT."
+        ],
+        [
+          "2.",
+          "Documenteaza noutatea solutiei si tehnologiile avansate folosite."
+        ],
+        [
+          "3.",
+          "Separa bugetul pe activitati si tipuri de ajutor."
+        ],
+        [
+          "4.",
+          "Pregateste dovezi pentru echipa, piata si capacitatea de dezvoltare."
+        ],
+        [
+          "5.",
+          "Confirma grila finala in ghidul activ inainte de depunere."
+        ]
+      ],
+      "commonMistakes": [
+        "Proiect prezentat ca inovator, dar descris doar ca website sau aplicatie obisnuita.",
+        "Coduri CAEN sau activitate TIC neclare.",
+        "Buget mare fara arhitectura tehnica si etape de dezvoltare.",
+        "Cheltuieli amestecate intre ajutor regional, minimis si costuri neeligibile.",
+        "Lipsa dovezilor privind echipa si capacitatea de implementare.",
+        "Aplicare pe baza ghidului consultativ fara verificarea documentelor finale."
+      ],
+      "faq": [
+        [
+          "Ce este PoCIDIF 2.1?",
+          "Este un apel pentru dezvoltarea de noi servicii, aplicatii sau produse digitale prin inovare si adoptarea de tehnologii avansate, destinat IMM din sectorul TIC."
+        ],
+        [
+          "Care este valoarea finantarii?",
+          "Forma consultativa analizata mentioneaza finantari intre 500.000 si 3.000.000 euro."
+        ],
+        [
+          "Care este intensitatea finantarii?",
+          "Sursele indica pana la 75% pentru ajutor regional si pana la 100% pentru ajutor de minimis, cu confirmare in ghidul activ."
+        ],
+        [
+          "Cine poate aplica?",
+          "IMM-urile din sectorul TIC care indeplinesc conditiile ghidului activ si pot demonstra proiectul digital inovator."
+        ],
+        [
+          "Este eligibil un website simplu?",
+          "In mod normal, un website simplu nu este suficient. Proiectul trebuie sa demonstreze inovare, tehnologii avansate si rezultate masurabile."
+        ],
+        [
+          "Ce verific prima data?",
+          "Incadrarea IMM, codurile CAEN TIC, produsul digital, echipa, bugetul si categoriile de ajutor."
+        ],
+        [
+          "Ce documente sunt sensibile?",
+          "Descrierea tehnica, arhitectura, echipa, piata, bugetul, ofertele si separarea cheltuielilor pe tipuri de ajutor."
+        ],
+        [
+          "Cand se confirma conditiile finale?",
+          "In ghidul activ PoCIDIF, anexele si clarificarile publicate de autoritatea finantatoare."
+        ]
+      ],
+      "contentSections": [
+        {
+          "title": "Ce inseamna inovare in PoCIDIF 2.1",
+          "body": "Inovarea trebuie explicata prin produs, arhitectura, tehnologiile folosite, piata si rezultatele asteptate. O descriere generica de digitalizare nu este suficienta pentru un apel orientat spre servicii, aplicatii si produse noi."
+        },
+        {
+          "title": "Cum pregatim proiectul tehnic",
+          "body": "Documentatia trebuie sa arate componentele solutiei, rolurile echipei, calendarul de dezvoltare, testarea si modul in care cheltuielile sustin produsul. Bugetul trebuie sa poata fi citit ca plan de implementare, nu ca lista de achizitii."
+        },
+        {
+          "title": "Cum tratam ajutorul regional si minimis",
+          "body": "Pentru fiecare cheltuiala verificam incadrarea in categoria corecta, intensitatea aplicabila, TVA-ul, costurile neeligibile si contributia proprie. Separarea incorecta poate genera clarificari sau reducerea bugetului."
+        },
+        {
+          "title": "Ce ramane de confirmat",
+          "body": "Pagina foloseste forma consultativa ca reper. Beneficiarii, intensitatile, pragurile, cheltuielile si grila finala trebuie confirmate in ghidul activ si in anexele apelului."
+        },
+        {
+          "title": "Ce diferentiaza un proiect digital eligibil",
+          "body": "PoCIDIF 2.1 cere mai mult decat prezenta unei componente IT. Un proiect bun descrie problema rezolvata, tehnologia folosita, noutatea fata de solutiile existente, utilizatorii vizati si modul in care produsul ajunge la piata. Documentatia trebuie sa lege arhitectura, echipa, etapele de dezvoltare si bugetul. Daca pagina de prezentare a proiectului poate fi confundata cu o achizitie software obisnuita, descrierea trebuie refacuta inainte de depunere."
+        },
+        {
+          "title": "Cum se pregateste bugetul tehnic",
+          "body": "Bugetul pentru PoCIDIF 2.1 trebuie citit ca un plan de dezvoltare. Separarea activitatilor de analiza, proiectare, dezvoltare, testare, validare, infrastructura si lansare ajuta la justificarea costurilor si la incadrarea corecta in ajutor regional sau minimis. Pentru fiecare linie cerem furnizor, specificatie, rezultat asteptat si legatura cu produsul digital. Zonele neclare se marcheaza pentru revizuire inainte de depunerea finala."
+        }
+      ],
+      "decisionIntro": "PoCIDIF 2.1 este potrivit pentru IMM TIC care au un produs digital propriu, inovare demonstrabila si capacitate de implementare.",
+      "decisionClose": "Daca proiectul este doar o achizitie IT generica, trebuie reformulat sau directionat catre alt program.",
+      "related": [
+        {
+          "href": "/fonduri-europene-digitalizare",
+          "label": "Fonduri europene digitalizare"
+        },
+        {
+          "href": "/digitalizare-imm",
+          "label": "Digitalizare IMM"
+        },
+        {
+          "href": "/fonduri-europene-imm",
+          "label": "Fonduri europene IMM"
+        },
+        {
+          "href": "/e-move",
+          "label": "e-MOVE RO"
+        },
+        {
+          "href": "/verificare-eligibilitate-fonduri-europene",
+          "label": "Verificare eligibilitate"
+        }
+      ],
+      "ctaText": "Verifica eligibilitatea PoCIDIF",
+      "secondaryCtaText": "Analizeaza proiectul digital",
+      "heroPrimaryCta": "Verifica eligibilitatea PoCIDIF",
+      "finalPrimaryCta": "Verifica eligibilitatea PoCIDIF",
+      "finalCtaText": "Verifica eligibilitatea PoCIDIF",
+      "inlineCtaTitle": "Urmatorul pas",
+      "inlineCtaText": "Trimite datele principale despre solicitant, localitate, activitate, investitie si buget. Verificarea initiala arata daca programul merita pregatit si ce riscuri trebuie rezolvate inainte de depunere."
     }
   ]
 }

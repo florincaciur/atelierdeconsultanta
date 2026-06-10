@@ -64,6 +64,7 @@ const PILLAR_SLUGS = new Set([
   "start-up-nation-2026",
   "fonduri-europene-imm",
   "investitii-modernizarea-microintreprinderilor-apel-2",
+  "pocidif-21",
   "pro-infra",
   "fondul-modernizare-energie-regenerabila-2026",
   "e-move",
@@ -99,6 +100,7 @@ const KEYWORDS_BY_SLUG = {
   "start-up-nation-2026": ["Start Up Nation 2026", "Start Up Nation 2026 conditii", "cheltuieli eligibile Start Up Nation 2026", "cod CAEN Start Up Nation 2026", "idei afaceri Start Up Nation 2026", "plan de afaceri Start Up Nation 2026"],
   "fonduri-europene-imm": ["fonduri europene IMM 2026", "program IMM 2026", "granturi IMM 2026", "fonduri pentru IMM"],
   "investitii-modernizarea-microintreprinderilor-apel-2": ["fonduri microintreprinderi 2026", "program microintreprinderi 2026", "conditii microintreprinderi 2026"],
+  "pocidif-21": ["PoCIDIF 2.1", "inovare digitala IMM TIC", "granturi PoCIDIF", "servicii aplicatii produse digitale"],
   "pro-infra": ["PRO INFRA 2026", "program energie 2026", "granturi energie verde 2026", "fonduri energie regenerabile 2026"],
   "fondul-modernizare-energie-regenerabila-2026": ["program energie 2026", "fonduri energie regenerabile 2026", "granturi energie verde 2026", "Fondul pentru Modernizare energie regenerabila"],
   "e-move": ["e-MOVE RO", "program e-MOVE RO 2026", "finantare statii incarcare electrice", "mobilitate electrica fonduri europene", "statii incarcare masini electrice finantare"],
@@ -621,6 +623,7 @@ function labelForHref(href) {
     "/fonduri-europene-digitalizare": "Fonduri europene digitalizare",
     "/consultanta-pnrr-digitalizare": "Consultanta PNRR digitalizare",
     "/investitii-modernizarea-microintreprinderilor-apel-2": "Modernizarea microintreprinderilor - Apel 2",
+    "/pocidif-21": "PoCIDIF 2.1",
     "/fonduri-europene-nord-est": "Fonduri europene Nord-Est",
     "/por-adr-nord-est": "POR ADR Nord-Est",
     "/eligibilitate-fonduri-europene": "Eligibilitate fonduri europene",
@@ -743,7 +746,7 @@ function schemaGraph(page, config, metadata = metadataForPage(page)) {
     url: metadata.canonicalUrl,
     name: metadata.title,
     description: metadata.description,
-    dateModified: config.updatedAt
+    dateModified: page.updatedAt || config.updatedAt
   });
 
   if (editorial) {
@@ -780,7 +783,7 @@ function schemaGraph(page, config, metadata = metadataForPage(page)) {
       "inLanguage": "ro-RO",
       "author": { "@id": `${SITE}/#organization` },
       "publisher": { "@id": `${SITE}/#organization` },
-      "dateModified": config.updatedAt
+      "dateModified": page.updatedAt || config.updatedAt
     };
     if (editorial) Object.assign(articleNode, editorialSchemaProperties(editorial));
     if (Array.isArray(page.sourceKeys) && page.sourceKeys.length) {
@@ -1007,6 +1010,7 @@ function renderEditorialProgramContent(page) {
     .map(([question, answer]) => `<section class="faq-item"><h3>${esc(question)}</h3><p>${esc(answer)}</p></section>`)
     .join("\n");
   const caseExampleHtml = renderCaseExample(page.caseExample);
+  const dr14ScoreHtml = page.slug === "dr14" ? `\n${renderDr14Score()}` : "";
 
   return `
 ${editorialHtml}
@@ -1017,6 +1021,7 @@ ${editorialHtml}
       ${renderEditorialTable("Ce investi\u021bii pot fi eligibile", ["Categorie cheltuial\u0103", "Exemple", "Aten\u021bie la", "Sursa"], page.eligibleInvestmentRows)}
       ${renderCalendarTable(page)}
       ${renderCofinancingExample(page)}
+      ${dr14ScoreHtml}
       ${renderEditorialTable("Documente necesare", ["Document", "Cine \u00eel preg\u0103te\u0219te", "C\u00e2nd este necesar", "Risc dac\u0103 lipse\u0219te"], page.documentRows)}
       <h2>Pa\u0219i de preg\u0103tire</h2>
       ${renderPreparationSteps(page.preparationSteps)}
@@ -1956,35 +1961,10 @@ function routeIsIndexable(route) {
 }
 
 function updateSitemap(pages, config) {
-  const existing = parseSitemapUrls()
-    .map((url) => url.replace(SITE, ""))
-    .filter(Boolean);
-  const generated = pages.map((page) => slugPath(page));
-  const all = [...existing, ...generated].map(cleanUrl);
-  const seen = new Set();
-  const urls = all.filter((url) => {
-    if (seen.has(url)) return false;
-    if (!routeIsIndexable(url)) return false;
-    seen.add(url);
-    return true;
+  require("child_process").execFileSync(process.execPath, [path.join(__dirname, "generate-sitemap.js")], {
+    cwd: ROOT,
+    stdio: "inherit"
   });
-  const priority = (url) => {
-    if (url === "/") return "1.0";
-    if (/dr12|dr14|start-up|digitalizare|femeia|modernizare|fonduri-europene$|consultanta/.test(url)) return "0.9";
-    if (/instrumente|resurse|ghiduri|eligibilitate|portofoliu/.test(url)) return "0.8";
-    return "0.7";
-  };
-  const xml = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${urls.map((url) => `  <url>
-    <loc>${SITE}${url}</loc>
-    <lastmod>${config.updatedAt}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>${priority(url)}</priority>
-  </url>`).join("\n")}
-</urlset>
-`;
-  fs.writeFileSync(SITEMAP_PATH, xml, "utf8");
 }
 
 function updateRedirects(pages) {
@@ -2149,12 +2129,15 @@ function updateBanners() {
 function updateLlms(pages) {
   if (!fs.existsSync(LLMS_PATH)) return;
   let text = fs.readFileSync(LLMS_PATH, "utf8");
-  const llmsSlugs = new Set(["instrumente", "resurse", "webinarii", "apeluri-gal", "e-move", "gal-afir", "investitii-modernizarea-microintreprinderilor-apel-2", "fondul-modernizare-energie-regenerabila-2026"]);
+  const llmsSlugs = new Set(["instrumente", "resurse", "webinarii", "apeluri-gal", "e-move", "gal-afir", "investitii-modernizarea-microintreprinderilor-apel-2", "pocidif-21", "pro-infra", "fondul-modernizare-energie-regenerabila-2026"]);
   const block = `\n## Pagini noi pentru vizibilitate AI si cautare vocala\n${pages
     .filter((page) => llmsSlugs.has(page.slug) && !/noindex/i.test(page.robots || ""))
     .map((page) => `- ${page.h1}: ${SITE}/${page.slug}`)
     .join("\n")}\n\n## Structura pentru asistenti AI\n- Paginile importante includ intrebari in limbaj natural, raspunsuri scurte vizibile si schema FAQPage doar cand intrebarile sunt vizibile in pagina.\n- Pentru sume, procente, punctaje si conditii finale, informatia trebuie verificata in apelul activ.\n`;
-  if (!text.includes("Pagini noi pentru vizibilitate AI")) {
+  if (text.includes("Pagini noi pentru vizibilitate AI")) {
+    text = text.replace(/\n## Pagini noi pentru vizibilitate AI si cautare vocala[\s\S]*?\n## Structura pentru asistenti AI[\s\S]*$/m, block);
+    fs.writeFileSync(LLMS_PATH, text, "utf8");
+  } else {
     text = `${text.replace(/\s+$/g, "")}\n${block}`;
     fs.writeFileSync(LLMS_PATH, text, "utf8");
   }

@@ -101,6 +101,7 @@ const ROUTE_LABELS = new Map([
   ["/digitalizare-imm-pnrr", "Digitalizare IMM / PNRR"],
   ["/pnrr", "PNRR"],
   ["/consultanta-pnrr-digitalizare", "Consultanta PNRR digitalizare"],
+  ["/pocidif-21", "PoCIDIF 2.1"],
   ["/fondul-de-modernizare", "Fondul de Modernizare"],
   ["/fondul-modernizare-energie-regenerabila-2026", "Energie regenerabila 2026"],
   ["/finantari-panouri-fotovoltaice", "Finantari panouri fotovoltaice"],
@@ -117,7 +118,7 @@ const ROUTE_LABELS = new Map([
 const CLUSTER_RULES = [
   { href: "/afir", label: "AFIR", pattern: /\/(?:afir|dr12|dr14|calculator-soc|fonduri-pentru-ferme|fonduri-pentru-utilaje-agricole|gal-afir)/i },
   { href: "/start-up-nation-2026", label: "Start-Up Nation 2026", pattern: /\/(?:start-up-nation|cod-caen-start-up-nation|consultanta-start-up-nation)/i },
-  { href: "/fonduri-europene-digitalizare", label: "Digitalizare", pattern: /\/(?:digitalizare|pnrr|granturi-digitalizare|cheltuieli-eligibile-digitalizare)/i },
+  { href: "/fonduri-europene-digitalizare", label: "Digitalizare", pattern: /\/(?:digitalizare|pnrr|pocidif|granturi-digitalizare|cheltuieli-eligibile-digitalizare)/i },
   { href: "/fondul-de-modernizare", label: "Energie", pattern: /\/(?:fondul-de-modernizare|fondul-modernizare|finantari-panouri|autoconsum|pro-infra|e-move)/i },
   { href: "/fonduri-regionale", label: "Fonduri regionale", pattern: /\/(?:fonduri-europene-nord-est|fonduri-europene-bucuresti|consultanta-fonduri-europene-bucuresti|por-adr-nord-est|investitii-modernizarea-microintreprinderilor)/i },
   { href: "/consultanta-fonduri-europene", label: "Consultanta", pattern: /\/(?:consultanta|consultant-fonduri|firma-consultanta|cat-costa-consultanta|cum-alegi-consultant)/i },
@@ -144,8 +145,8 @@ const INTERNAL_LINK_GROUPS = [
     links: ["/consultanta-afir", "/afir", "/dr12-afir", "/dr14", "/calculator-soc", "/fonduri-pentru-ferme"]
   },
   {
-    pattern: /\/(?:digitalizare|pnrr|granturi-digitalizare|cheltuieli-eligibile-digitalizare)/i,
-    links: ["/consultanta-pnrr-digitalizare", "/fonduri-europene-digitalizare", "/digitalizare-imm", "/digitalizare-imm-pnrr", "/pnrr"]
+    pattern: /\/(?:digitalizare|pnrr|pocidif|granturi-digitalizare|cheltuieli-eligibile-digitalizare)/i,
+    links: ["/consultanta-pnrr-digitalizare", "/fonduri-europene-digitalizare", "/digitalizare-imm", "/digitalizare-imm-pnrr", "/pocidif-21", "/pnrr"]
   },
   {
     pattern: /\/(?:fondul-de-modernizare|fondul-modernizare|finantari-panouri|autoconsum|pro-infra|e-move)/i,
