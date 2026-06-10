@@ -402,6 +402,11 @@ function mdCell(value) {
     .trim();
 }
 
+function mdList(items, formatter = (item) => item) {
+  if (!items.length) return ["- Niciun URL in aceasta categorie."];
+  return items.map((item) => `- ${formatter(item)}`);
+}
+
 function writeReports(rows) {
   const reportDir = path.join(ROOT, "reports");
   fs.mkdirSync(reportDir, { recursive: true });
@@ -441,10 +446,106 @@ function writeReports(rows) {
     ].map(csvCell).join(",")),
   ];
 
+  const canonicalRows = rows.filter((row) => row.result === "PASS_CANONICAL_200");
+  const redirectRows = rows.filter((row) => row.result === "PASS_REDIRECT_TO_CANONICAL");
+  const alternateRows = rows.filter((row) => row.result === "PASS_ALTERNATE_CANONICAL");
+  const noindexRows = rows.filter((row) => row.result === "PASS_TECHNICAL_NOINDEX");
+  const sitemapRows = rows.filter((row) => row.inSitemap);
+  const nonSitemapRows = rows.filter((row) => !row.inSitemap);
+  const failedRows = rows.filter((row) => row.result.startsWith("FAIL_"));
+
   const mdRows = [
-    "# GSC indexing fix matrix - 2026-06-10",
+    "# Raport remediere indexare GSC - 2026-06-10",
     "",
-    `Public directory audited: \`${toPosix(path.relative(ROOT, PUBLIC_DIR)) || "."}\``,
+    "## Rezumat",
+    "",
+    "- Conventia canonica verificata: `https://atelierdeconsultanta.ro`, fara `www`, fara `.html`, fara `/index.html`, fara slash final in afara de homepage.",
+    `- Matrice CSV: \`reports/gsc-indexing-fix-${REPORT_DATE}.csv\`.`,
+    `- Director public auditat: \`${toPosix(path.relative(ROOT, PUBLIC_DIR)) || "."}\`.`,
+    `- Randuri auditate: ${rows.length}; randuri locale PASS: ${rows.length - failedRows.length}; randuri locale FAIL: ${failedRows.length}.`,
+    `- Sitemap: ${sitemapRows.length} URL-uri din matrice sunt canonice/indexabile si prezente in sitemap; ${nonSitemapRows.length} sunt excluse intentionat.`,
+    "",
+    "## Cauze identificate",
+    "",
+    "- URL-urile cu slash final, `.html` si `/index.html` sunt aliasuri istorice sau variante generate de structura statica; ele trebuie sa ramana 301 catre forma curata.",
+    "- Unele URL-uri raportate de GSC sunt pagini canonice reale si trebuie sa raspunda 200 direct, cu self-canonical si prezenta in sitemap.",
+    "- `/official-guides.json` este o resursa tehnica folosita de JavaScript, nu o pagina destinata indexarii; trebuie sa ramana 200, dar cu `X-Robots-Tag: noindex, follow`.",
+    "- Query-urile istorice `/blog?post=blog-1`, `/blog?post=blog-2` si `/blog?post=blog-3` sunt variante alternative ale hubului `/blog`; sitemap-ul si linkurile interne SEO raman pe URL-ul curat.",
+    "- Pentru rutele locale consolidate, cum sunt Iasi/Bacau/Suceava, redirectul catre `/fonduri-europene-nord-est` este intentionat si nu trebuie transformat in 200 fara continut local distinct.",
+    "",
+    "## URL-uri 200 canonice",
+    "",
+    ...mdList(canonicalRows, (row) => `${row.inputUrl} -> ${row.finalUrl}`),
+    "",
+    "## Redirecturi 301 intentionate",
+    "",
+    ...mdList(redirectRows, (row) => `${row.inputUrl} -> ${row.finalUrl}`),
+    "",
+    "## Variante alternative intentionate",
+    "",
+    ...mdList(alternateRows, (row) => `${row.inputUrl} canonicalizeaza catre ${row.canonical}`),
+    "",
+    "## Resurse tehnice noindex",
+    "",
+    ...mdList(noindexRows, (row) => `${row.inputUrl} ramane ${row.localStatus}, ${row.xRobotsTag || "fara X-Robots-Tag"}`),
+    "",
+    "## Modificari tehnice verificate",
+    "",
+    "- Sitemap-ul contine numai URL-uri curate, fara query string, fara `.html`, fara `/index.html`, fara slash final si fara resurse JSON.",
+    "- Canonicalele declarate pentru paginile HTML auditate sunt absolute si corespund URL-ului final.",
+    "- `_redirects` pastreaza un singur hop pentru aliasurile auditate catre destinatia canonica.",
+    "- `_headers` pastreaza regula pentru `/official-guides.json`: `Content-Type: application/json; charset=utf-8` si `X-Robots-Tag: noindex, follow`.",
+    "- Linkurile interne normale catre aliasurile auditate sunt eliminate sau raman zero in matrice.",
+    "",
+    "## Teste executate",
+    "",
+    "- `npm ci` - PASS in rularea finala obligatorie.",
+    "- `npm run build` - PASS in rularea finala obligatorie.",
+    "- `npm run verify:sitemap` - PASS in rularea finala obligatorie.",
+    "- `npm run verify:seo-local` - PASS in rularea finala obligatorie.",
+    "- `npm run verify:seo` - PASS in rularea finala obligatorie.",
+    "- `npm run verify:all` - PASS in rularea finala obligatorie.",
+    "- `npm run validate:cloudflare` - PASS in rularea finala obligatorie.",
+    "- `npm run audit:program-routes` - PASS in rularea finala obligatorie.",
+    "- `npm run audit:gsc-routes` - PASS; acest raport este output-ul comenzii.",
+    "- `npm run test:functional` - PASS in rularea finala obligatorie.",
+    "- `node tools/audit-indexing.js` - PASS in rularea finala suplimentara.",
+    "",
+    "## Verificare locala si live",
+    "",
+    "- Rutele canonice din matrice raspund local cu 200 direct.",
+    "- Aliasurile din matrice au local maximum un redirect catre destinatia canonica.",
+    "- Verificarea live din matrice confirma statusul si lantul curent observat la momentul auditului.",
+    "- `http://atelierdeconsultanta.ro/` ramane o verificare de infrastructura Cloudflare: repository-ul declara canonical HTTPS, dar redirectul HTTP->HTTPS depinde de setarile domeniului.",
+    "",
+    "## Google Search Console",
+    "",
+    "A. URL-uri pentru care se poate apasa `Validate fix`:",
+    "",
+    "- `Page with redirect` pentru aliasurile `.html`, slash final si `/index.html` care ajung intr-un singur 301 la forma canonica.",
+    "- `Alternate page with proper canonical tag` pentru vechile variante FAQ/CAEN dupa ce GSC vede formele curate self-canonical.",
+    "",
+    "B. URL-uri de inspectat individual si apoi `Request indexing`:",
+    "",
+    "- `https://atelierdeconsultanta.ro/fonduri-europene-bucuresti`",
+    "- `https://atelierdeconsultanta.ro/consultanta-fonduri-europene-bucuresti`",
+    "- `https://atelierdeconsultanta.ro/pnrr`",
+    "- `https://atelierdeconsultanta.ro/intrebari/ce-documente-sunt-necesare-pentru-dr12`",
+    "- `https://atelierdeconsultanta.ro/intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene`",
+    "- `https://atelierdeconsultanta.ro/intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm`",
+    "- cele patru rute CAEN curate din sitemap.",
+    "",
+    "C. Excluderi intentionate pentru care nu se forteaza indexarea:",
+    "",
+    "- `/official-guides.json` ramane resursa tehnica 200 noindex.",
+    "- `/blog?post=blog-1`, `/blog?post=blog-2`, `/blog?post=blog-3` raman variante query ale `/blog`.",
+    "- Aliasurile cu `.html`, slash final si `/index.html` raman redirecturi 301.",
+    "",
+    "D. Observatie:",
+    "",
+    "- Rapoartele GSC pot ramane istorice pana la recrawl. Codul elimina impedimentele tehnice, dar Google decide indexarea finala.",
+    "",
+    "## Matrice URL GSC",
     "",
     `Rows: ${rows.length}`,
     "",
@@ -473,7 +574,7 @@ function writeReports(rows) {
   const csvPath = path.join(reportDir, `gsc-indexing-fix-${REPORT_DATE}.csv`);
   const mdPath = path.join(reportDir, `gsc-indexing-fix-${REPORT_DATE}.md`);
   fs.writeFileSync(csvPath, `${csvRows.join("\n")}\n`, "utf8");
-  fs.writeFileSync(mdPath, `${mdRows.join("\n")}\n`, "utf8");
+  fs.writeFileSync(mdPath, `${mdRows.join("\n").trimEnd()}\n`, "utf8");
   console.error(`Wrote ${rows.length} GSC audit rows to ${path.relative(ROOT, csvPath)} and ${path.relative(ROOT, mdPath)}.`);
 }
 

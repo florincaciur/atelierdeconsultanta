@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-06-10T11:42:29.920Z",
+  "generatedAt": "2026-06-10T17:38:08.208Z",
   "mode": "check",
-  "baseUrl": "http://127.0.0.1:50901",
+  "baseUrl": "http://127.0.0.1:63677",
   "summary": {
     "checked": 22,
     "passed": 22,
@@ -16,7 +16,7 @@
       "dom": {
         "title": "FABER | Consultanță fonduri europene",
         "h1Count": 1,
-        "seeAlsoCards": 10,
+        "seeAlsoCards": 16,
         "programCluster": 0,
         "overflow": 0
       },
@@ -42,7 +42,7 @@
       "pass": true,
       "errors": [],
       "dom": {
-        "title": "Fonduri europene pentru firme și fermieri",
+        "title": "Fonduri Europene în România | Ghid pentru IMM-uri și antreprenori",
         "h1Count": 1,
         "seeAlsoCards": 0,
         "programCluster": 0,
@@ -70,7 +70,7 @@
       "pass": true,
       "errors": [],
       "dom": {
-        "title": "Calendar fonduri europene | pregătire",
+        "title": "Calendar Fonduri Europene | Programe și Pregătire Dosare",
         "h1Count": 1,
         "seeAlsoCards": 0,
         "programCluster": 0,
@@ -84,7 +84,7 @@
       "pass": true,
       "errors": [],
       "dom": {
-        "title": "Consultanță PNRR Digitalizare - eligibilitate IMM",
+        "title": "Consultanță PNRR Digitalizare | Eligibilitate și Dosar IMM",
         "h1Count": 1,
         "seeAlsoCards": 0,
         "programCluster": 0,
@@ -112,7 +112,7 @@
       "pass": true,
       "errors": [],
       "dom": {
-        "title": "POR ADR Nord-Est pentru microîntreprinderi - Apel 2",
+        "title": "POR ADR Nord-Est pentru microîntreprinderi",
         "h1Count": 1,
         "seeAlsoCards": 0,
         "programCluster": 0,
@@ -126,7 +126,7 @@
       "pass": true,
       "errors": [],
       "dom": {
-        "title": "Fonduri europene Nord-Est | Iași, Suceava, Bacău",
+        "title": "Fonduri europene Nord-Est | Iași, Suceava, Bacău, Botosani, Neamt, Vaslui",
         "h1Count": 1,
         "seeAlsoCards": 0,
         "programCluster": 0,
@@ -182,7 +182,7 @@
       "pass": true,
       "errors": [],
       "dom": {
-        "title": "DR14 AFIR 2026 | ferme mici și ghid solicitant",
+        "title": "DR14 AFIR | ferme mici și investiții",
         "h1Count": 1,
         "seeAlsoCards": 0,
         "programCluster": 0,
@@ -266,7 +266,7 @@
       "pass": true,
       "errors": [],
       "dom": {
-        "title": "Fonduri europene pentru digitalizare - IMM, PNRR, software",
+        "title": "Fonduri Europene Digitalizare | PNRR și Granturi pentru IMM-uri",
         "h1Count": 1,
         "seeAlsoCards": 0,
         "programCluster": 0,

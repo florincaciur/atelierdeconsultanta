@@ -16,6 +16,7 @@ const SKIP_FUNCTIONAL = process.argv.includes("--skip-functional");
 const EXCLUDED_DIRS = new Set([".git", ".github", ".wrangler", "dist", "node_modules", "reports"]);
 const NON_CONTENT_FILES = new Set(["404.html", "admin/index.html"]);
 const SEE_ALSO_CSS = "/assets/see-also.css";
+const SEO_HUB_CSS = "/assets/seo-hub.css";
 
 const CANONICAL_ALIASES = new Map([
   ["/start-up-nation", "/start-up-nation-2026"],
@@ -362,6 +363,7 @@ function addMissingAltAttributes(html) {
 function ensureSeeAlsoStylesheet(html) {
   if (!/<head\b/i.test(html)) return html;
   if (!/(vezi-si-section|program-cluster|related-links)/.test(html)) return html;
+  if (/related-links/.test(html) && !/(vezi-si-section|program-cluster)/.test(html) && html.includes(SEO_HUB_CSS)) return html;
   if (html.includes(SEE_ALSO_CSS)) return html;
   const tag = `  <link rel="stylesheet" href="${SEE_ALSO_CSS}" />`;
   const lastStylesheet = [...html.matchAll(/^[ \t]*<link\s+rel=["']stylesheet["'][^>]*>\s*$/gim)].pop();
@@ -549,7 +551,9 @@ function parseHtml(filePath, root) {
   const missingAlt = $("img").toArray()
     .filter((element) => !Object.prototype.hasOwnProperty.call(element.attribs || {}, "alt"))
     .map((element) => $(element).attr("src") || "<img without src>");
-  const relatedCount = $(".vezi-si-section, .related-links").length;
+  const seeAlsoCount = $(".vezi-si-section, .program-cluster").length;
+  const relatedLinksCount = $(".related-links").length;
+  const relatedCount = seeAlsoCount + relatedLinksCount;
   const requireRelated = !technicalFile && !noindex && /fonduri|finant|afir|pnrr|start-up|digitalizare|consultanta|calculator|dr12|dr14/i.test(relativePath);
   const jsonLdErrors = [];
   $('script[type="application/ld+json"]').each((_index, element) => {
@@ -569,7 +573,9 @@ function parseHtml(filePath, root) {
     singleH1: technicalFile || h1s.length === 1,
     relatedLinks: !requireRelated || relatedCount > 0,
     jsonLd: jsonLdErrors.length === 0,
-    seeAlsoStylesheet: relatedCount === 0 || html.includes(SEE_ALSO_CSS),
+    seeAlsoStylesheet:
+      (seeAlsoCount === 0 || html.includes(SEE_ALSO_CSS)) &&
+      (relatedLinksCount === 0 || html.includes(SEE_ALSO_CSS) || html.includes(SEO_HUB_CSS)),
   };
   const issues = Object.entries(checks).filter(([, pass]) => !pass).map(([name]) => name);
   return {

@@ -758,8 +758,11 @@ function updateBlog() {
   $("#post-date").text("");
   $("#post-read-time").text("");
   $("#post-author").text("FABER - Atelier de Consultanță");
-  if (!$("#blog-query-cleanup").length) {
-    $("head").prepend(`<script id="blog-query-cleanup">(function(){var p=new URLSearchParams(location.search);if(p.get("post")==="blog-1"){location.replace("/blog");}}());</script>`);
+  const cleanupScript = `(function(){var p=new URLSearchParams(location.search);if(/^blog-[123]$/.test(p.get("post")||"")){location.replace("/blog");}}());`;
+  if ($("#blog-query-cleanup").length) {
+    $("#blog-query-cleanup").text(cleanupScript);
+  } else {
+    $("head").prepend(`<script id="blog-query-cleanup">${cleanupScript}</script>`);
   }
   saveHtml(file, $);
 }
@@ -1031,6 +1034,8 @@ function writeAudit() {
     ["http://atelierdeconsultanta.ro/", "Alternate page with proper canonical tag", "HTTP variantă", "normalizare domeniu/schemă", "301 domeniu către HTTPS; homepage self-canonical", "https://atelierdeconsultanta.ro/", "Cloudflare domeniu + index.html", "finalizat"],
     ["https://atelierdeconsultanta.ro/?s={search_term_string}", "Alternate page with proper canonical tag", "query placeholder", "SearchAction vechi sau descoperire externă", "SearchAction eliminat; script de curățare query pe homepage; query-uri excluse din sitemap", "https://atelierdeconsultanta.ro/", "index.html, schema-helpers.js", "monitorizat"],
     ["https://atelierdeconsultanta.ro/blog?post=blog-1", "Alternate page with proper canonical tag", "query vechi", "container blog cu parametru istoric", "linkuri interne eliminate; script de curățare către /blog; sitemap fără query", "https://atelierdeconsultanta.ro/blog", "blog/index.html", "monitorizat"],
+    ["https://atelierdeconsultanta.ro/blog?post=blog-2", "Alternate page with proper canonical tag", "query vechi", "container blog cu parametru istoric", "linkuri interne eliminate; script de curățare către /blog; sitemap fără query", "https://atelierdeconsultanta.ro/blog", "blog/index.html", "monitorizat"],
+    ["https://atelierdeconsultanta.ro/blog?post=blog-3", "Alternate page with proper canonical tag", "query vechi", "container blog cu parametru istoric", "linkuri interne eliminate; script de curățare către /blog; sitemap fără query", "https://atelierdeconsultanta.ro/blog", "blog/index.html", "monitorizat"],
     ["https://atelierdeconsultanta.ro/intrebari/ce-documente-sunt-necesare-pentru-afir/", "Page with redirect", "FAQ vechi", "rută /intrebari/ înlocuită de hub AFIR", "301 către /afir; scos din sitemap și din linkuri interne", "https://atelierdeconsultanta.ro/afir", "_redirects", "finalizat"],
     ["https://atelierdeconsultanta.ro/intrebari/ce-documente-sunt-necesare-pentru-dr12/", "Alternate page with proper canonical tag", "FAQ vechi", "rută subțire /intrebari/", "301 către /dr12-afir; scos din sitemap", "https://atelierdeconsultanta.ro/dr12-afir", "_redirects, generate-sitemap.js", "finalizat"],
     ["https://atelierdeconsultanta.ro/intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene/", "Alternate page with proper canonical tag", "FAQ vechi", "duplicat cu articol cofinanțare", "301 către articolul canonic", "https://atelierdeconsultanta.ro/cum-se-calculeaza-cofinantarea-fonduri-europene", "_redirects", "finalizat"],
@@ -1061,7 +1066,7 @@ ${gscRows.join("\n")}
 
 - Emailul valid folosit în repo este \`atelier.consultanta@gmail.com\`; aparițiile vizibile cu diacritice în local-part au fost corectate.
 - Indicatorii comerciali numerici de pe homepage au fost înlocuiți cu formulări prudente, deoarece nu există în repo o sursă internă verificabilă pentru \`10 ani\`, \`98%\`, \`150 proiecte\` sau \`250 milioane euro\`.
-- Cloudflare Pages \`_redirects\` nu poate potrivi query parameters; pentru \`?s={search_term_string}\` și \`/blog?post=blog-1\` au fost eliminate sursele interne, sitemap-ul rămâne curat, iar paginile curăță query-ul client-side. Dacă GSC continuă să raporteze aceste query-uri, este necesară o regulă Cloudflare Bulk Redirect/Single Redirect în dashboard.
+- Cloudflare Pages \`_redirects\` nu poate potrivi query parameters; pentru \`?s={search_term_string}\` și \`/blog?post=blog-1\`, \`/blog?post=blog-2\`, \`/blog?post=blog-3\` au fost eliminate sursele interne, sitemap-ul rămâne curat, iar paginile curăță query-ul client-side. Dacă GSC continuă să raporteze aceste query-uri, este necesară o regulă Cloudflare Bulk Redirect/Single Redirect în dashboard.
 `;
   fs.writeFileSync(path.join(ROOT, "CONTENT_AUDIT_FABER.md"), md, "utf8");
 }

@@ -165,6 +165,10 @@ function parseRedirects() {
     });
 }
 
+function containsDynamicToken(value) {
+  return String(value || "").includes("*") || /(^|[^A-Za-z0-9_-]):[A-Za-z][A-Za-z0-9_-]*/.test(String(value || ""));
+}
+
 const files = trackedFiles();
 const links = files.flatMap((file) => extractLinks(file, read(file)));
 const missingTargets = [];
@@ -187,6 +191,7 @@ for (const link of links) {
 const redirects = parseRedirects();
 const redirectIssues = [];
 for (const redirect of redirects) {
+  if (containsDynamicToken(redirect.from) || containsDynamicToken(redirect.to)) continue;
   const target = normalizeTarget(redirect.to, "_redirects");
   if (target && !fs.existsSync(path.join(ROOT, target.targetFile))) {
     redirectIssues.push({ ...redirect, targetFile: target.targetFile });
