@@ -210,7 +210,7 @@ function updateAbout() {
   $(".panel > p.intro").first().text("FABER combină consultanța practică pentru fonduri europene cu o regulă simplă: recomandările trebuie să fie documentabile. Valorile echipei sunt onestitatea, responsabilitatea și prudența, mai ales atunci când un proiect pare atractiv, dar are riscuri de eligibilitate, punctaj sau cofinanțare.");
   $("td").each((_, element) => {
     const text = $(element).text();
-    if (/Se publica dupa confirmare|Date in curs de validare/i.test(text)) $(element).text("În curs de validare");
+    if (/Se publica dupa confirmare|Date in curs de validare/i.test(text)) $(element).closest("tr").remove();
   });
   if (!$("body").text().includes("Misiune si valori FABER")) {
     $("h2").filter((_, el) => $(el).text().includes("Ce nu promite")).first().before(`

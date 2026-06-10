@@ -37,14 +37,14 @@ const CLARITY_TRACKING_CODE = `  <script type="text/javascript">
     })(window, document, "clarity", "script", "wnvzyco6rq");
   </script>`;
 
-function publicText(value, fallback = "In curs de validare") {
+function publicText(value, fallback = "") {
   const text = String(value ?? "").trim();
   if (!text || /^TODO_/i.test(text)) return fallback;
   return normalizeRomanianCopy(text
     .replace(/TODO_CLIENT_[A-Z0-9_ -]*/gi, fallback)
     .replace(/TODO_SURSA_OFICIALA[A-Z0-9_ -]*/gi, "Se confirma in ghidul activ")
-    .replace(/TODO_DATA_ACCESARII/gi, "In curs de actualizare")
-    .replace(/TODO_DATE_LOCALE/gi, "Exemplele locale vor fi publicate dupa validare"));
+    .replace(/TODO_DATA_ACCESARII/gi, "")
+    .replace(/TODO_DATE_LOCALE/gi, ""));
 }
 
 function esc(value) {
@@ -499,9 +499,9 @@ function regionalPage(item) {
       </table>
       <h2>Exemple locale orientative</h2>
       <ul>
-        <li>Iasi: microintreprindere de servicii care verifica Programul Regional Nord-Est si buget IT. Exemplele locale vor fi publicate dupa validare.</li>
-        <li>Suceava: ferma sau afacere turistica unde trebuie comparate AFIR, programe regionale si investitii energetice. Exemplele locale vor fi publicate dupa validare.</li>
-        <li>Bacau: firma de productie sau servicii care verifica echipamente, cofinantare si documentele pentru punctul de lucru. Exemplele locale vor fi publicate dupa validare.</li>
+        <li>Iasi: microintreprindere de servicii care verifica Programul Regional Nord-Est si buget IT.</li>
+        <li>Suceava: ferma sau afacere turistica unde trebuie comparate AFIR, programe regionale si investitii energetice.</li>
+        <li>Bacau: firma de productie sau servicii care verifica echipamente, cofinantare si documentele pentru punctul de lucru.</li>
       </ul>
       <h2>Intrebari locale frecvente</h2>
       <p>Conteaza orasul sau judetul? Da, mai ales la programele regionale si cand investitia trebuie localizata in regiune. Conteaza sediul social sau punctul de lucru? Depinde de ghid: unele apeluri urmaresc locul implementarii, nu doar sediul. Pot depune online fara intalnire locala? De obicei analiza initiala se poate face la distanta, dar documentele trebuie sa sustina locatia si investitia.</p>

@@ -18,7 +18,7 @@ const STATUS_LABELS = {
   arhivat: "Arhivat"
 };
 
-const PUBLIC_PLACEHOLDER = "In curs de actualizare";
+const PUBLIC_PLACEHOLDER = "";
 
 const RO_MONTHS = [
   "ianuarie",
@@ -58,7 +58,7 @@ function normalizeSources(sources) {
   const items = Array.isArray(sources) && sources.length ? sources : [TODO_SOURCE];
   return items.map((source) => ({
     url: source.url || "",
-    title: publicText(source.title, "Sursa oficiala in curs de validare"),
+    title: publicText(source.title, "Sursa oficiala"),
     accessedAt: publicText(source.accessedAt, PUBLIC_PLACEHOLDER)
   }));
 }
@@ -93,7 +93,7 @@ function isPlaceholder(value) {
 
 function renderSource(source) {
   const url = source.url || "";
-  const title = publicText(source.title, "Sursa oficiala in curs de validare");
+  const title = publicText(source.title, "Sursa oficiala");
   const titleHtml = /^https?:\/\//i.test(url)
     ? `<a href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(title)}</a>`
     : `<span>${esc(title)}</span>`;
@@ -113,7 +113,7 @@ function renderEditorialSection(metadata) {
           <div><dt>Data publicarii</dt><dd>${renderDate(metadata.publishedAt)}</dd></div>
           <div><dt>Ultima actualizare</dt><dd>${renderDate(metadata.updatedAt)}</dd></div>
           <div><dt>Ultima verificare</dt><dd>${renderDate(metadata.lastVerifiedAt)}</dd></div>
-          <div><dt>Timp de lectura</dt><dd>${esc(publicText(metadata.readingTime, "In curs de estimare"))} min</dd></div>
+          ${metadata.readingTime ? `<div><dt>Timp de lectura</dt><dd>${esc(publicText(metadata.readingTime))} min</dd></div>` : ""}
         </dl>
         <p class="editorial-meta__note">Informatiile pot fi modificate de autoritati; verificam periodic ghidurile oficiale.</p>
       </section>`;

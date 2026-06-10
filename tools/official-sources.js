@@ -6,7 +6,7 @@ const path = require("path");
 const ROOT = path.resolve(__dirname, "..");
 const GUIDES_PATH = path.join(ROOT, "official-guides.json");
 const TODO_SOURCE = "TODO_SURSA_OFICIALA";
-const PUBLIC_PLACEHOLDER = "In curs de validare";
+const PUBLIC_PLACEHOLDER = "";
 const RO_MONTHS = [
   "ianuarie",
   "februarie",
@@ -59,7 +59,7 @@ function hasValue(value) {
 function normalizeOfficialSource(key, entry) {
   const guide = asGuide(entry);
   const url = String(guide.url || "").trim();
-  const title = publicText(guide.title || guide.name, "Sursa oficiala in curs de validare");
+  const title = publicText(guide.title || guide.name, "Sursa oficiala");
   const source = {
     key,
     title,
@@ -77,18 +77,15 @@ function normalizeOfficialSource(key, entry) {
     && hasValue(source.documentType)
     && hasValue(source.accessedAt);
 
-  if (!source.isComplete && !source.note) {
-    source.note = "Sursa oficiala trebuie completata in official-guides.json.";
-  }
-
   return source;
 }
 
 function sourcesForKeys(keys, guides = readOfficialGuides()) {
   const sourceKeys = Array.isArray(keys) ? keys : [];
   const uniqueKeys = [...new Set(sourceKeys.filter(Boolean))];
-  const selected = uniqueKeys.map((key) => normalizeOfficialSource(key, guides[key]));
-  return selected.length ? selected : [normalizeOfficialSource(TODO_SOURCE, null)];
+  return uniqueKeys
+    .map((key) => normalizeOfficialSource(key, guides[key]))
+    .filter((source) => source.isComplete);
 }
 
 function formatDate(value) {
@@ -108,7 +105,7 @@ function renderDate(value) {
 
 function renderSourceTitle(source) {
   if (!source.isComplete || !isHttpUrl(source.url)) {
-    return `<span class="official-sources__title">${esc(publicText(source.title, "Sursa oficiala in curs de validare"))}</span>`;
+    return `<span class="official-sources__title">${esc(publicText(source.title, "Sursa oficiala"))}</span>`;
   }
 
   return `<a class="official-sources__title" href="${esc(source.url)}" target="_blank" rel="noopener noreferrer">${esc(source.title)}</a>`;
@@ -134,6 +131,7 @@ function renderOfficialSourceItem(source) {
 
 function renderOfficialSources(keys, options = {}) {
   const sources = sourcesForKeys(keys, options.guides);
+  if (!sources.length) return "";
   const id = options.id || "official-sources";
   const title = options.title || "Surse oficiale consultate";
 

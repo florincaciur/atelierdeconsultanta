@@ -121,14 +121,19 @@ function writeJson(file, value) {
   fs.writeFileSync(file, `${JSON.stringify(value, null, 2)}\n`, "utf8");
 }
 
-function publicText(value, fallback = "În curs de validare") {
+function publicText(value, fallback = "") {
   const text = String(value ?? "").trim();
   if (!text || /^TODO_/i.test(text)) return fallback;
   return normalizeRomanianCopy(text
     .replace(/TODO_CLIENT_[A-Z0-9_ -]*/gi, fallback)
     .replace(/TODO_SURSA_OFICIALA[A-Z0-9_ -]*/gi, "Se confirma in ghidul activ")
-    .replace(/TODO_DATA_ACCESARII/gi, "In curs de actualizare")
+    .replace(/TODO_DATA_ACCESARII/gi, "")
     .replace(/TODO_VERIFICARE_GHID[A-Z0-9_ -]*/gi, "Se verifica in ghidul activ"));
+}
+
+function hasPublicPlaceholder(value) {
+  const text = normalizeRomanianCopy(String(value ?? "").trim()).toLowerCase();
+  return !text || /todo_|in curs de validare|în curs de validare|date in curs|date în curs|de completat dupa|de completat după|validare interna|validare internă|program confirmat intern|valoare anonimizata|valoare anonimizată|status anonimizat|rezultat publicabil dupa acord|rezultat publicabil după acord/.test(text);
 }
 
 function esc(value) {
@@ -968,11 +973,16 @@ function renderPreparationSteps(steps) {
 
 function renderCaseExample(example) {
   const item = example || {};
+  const requiredFields = ["beneficiary", "investmentObjective", "challenges", "checked"];
+  const hasApprovedFields = requiredFields.every((field) => !hasPublicPlaceholder(item[field]));
+  const noteText = String(item.note ?? "").trim();
+  if (!hasApprovedFields || (noteText && hasPublicPlaceholder(noteText))) return "";
+
   const rows = [
-    ["Tip beneficiar", item.beneficiary || "Exemplu anonimizat in curs de validare"],
-    ["Obiectiv investi\u021bie", item.investmentObjective || "Date in curs de validare"],
-    ["Provoc\u0103ri", item.challenges || "Date in curs de validare"],
-    ["Ce s-a verificat", item.checked || "Date in curs de validare"]
+    ["Tip beneficiar", publicText(item.beneficiary)],
+    ["Obiectiv investi\u021bie", publicText(item.investmentObjective)],
+    ["Provoc\u0103ri", publicText(item.challenges)],
+    ["Ce s-a verificat", publicText(item.checked)]
   ];
   return `${item.note ? `<p class="note">${esc(item.note)}</p>` : ""}
       <div class="table-wrap">
@@ -996,6 +1006,7 @@ function renderEditorialProgramContent(page) {
   const faqHtml = faqsForPage(page)
     .map(([question, answer]) => `<section class="faq-item"><h3>${esc(question)}</h3><p>${esc(answer)}</p></section>`)
     .join("\n");
+  const caseExampleHtml = renderCaseExample(page.caseExample);
 
   return `
 ${editorialHtml}
@@ -1011,8 +1022,8 @@ ${editorialHtml}
       ${renderPreparationSteps(page.preparationSteps)}
       <h2>Gre\u0219eli frecvente</h2>
       <ul class="warning-list">${li(page.commonMistakes)}</ul>
-      <h2>Exemplu realist anonimizat</h2>
-      ${renderCaseExample(page.caseExample)}
+      ${caseExampleHtml ? `<h2>Exemplu realist anonimizat</h2>
+      ${caseExampleHtml}` : ""}
       ${renderEditorialNotes(page.editorialNotes)}
 ${officialSourcesHtml}
       <h2>FAQ</h2>
@@ -1326,7 +1337,7 @@ function renderTrustMethodology() {
   return `
       <h2>Metodologie de anonimizare si actualizare</h2>
       <p>Inainte ca un exemplu sa fie publicat, FABER elimina datele care pot identifica direct beneficiarul: nume, adresa exacta, furnizori, contracte, documente financiare si detalii comerciale sensibile. Daca proiectul poate fi recunoscut usor prin combinatia dintre localitate, domeniu si valoare, informatia este agregata sau transformata intr-un interval orientativ.</p>
-      <p>Actualizarea se face cand exista un motiv real: ghid schimbat, apel nou, acord de publicare, rezultat documentat sau lectie relevanta pentru alti beneficiari. Nu completam paginile cu rezultate inventate si nu transformam feedbackul in promisiuni comerciale. Acolo unde o cifra nu poate fi dovedita, folosim formularea "in curs de validare" sau explicam ca valoarea este doar un exemplu de calcul.</p>
+      <p>Actualizarea se face cand exista un motiv real: ghid schimbat, apel nou, acord de publicare, rezultat documentat sau lectie relevanta pentru alti beneficiari. Nu completam paginile cu rezultate inventate si nu transformam feedbackul in promisiuni comerciale. Acolo unde o cifra nu poate fi dovedita, informatia ramane nepublicata sau este explicata ca scenariu orientativ.</p>
       <h2>Ce poti invata din aceste exemple</h2>
       <p>Cel mai important lucru este ordinea verificarii. Un proiect solid incepe cu eligibilitatea solicitantului si continua cu documentele, investitia, bugetul si punctajul. Daca se porneste direct de la suma maxima sau de la o lista de cumparaturi, apar frecvent blocaje: cheltuieli greu de justificat, cofinantare insuficienta, documente pentru spatiu incomplete sau criterii de punctaj care nu pot fi sustinute.</p>
       <p>Exemplele trebuie folosite ca punct de orientare pentru discutia initiala. Pentru decizia finala, FABER verifica ghidul activ, anexele, clarificarile autoritatii si documentele concrete ale beneficiarului. Aceasta separare mentine pagina utila fara sa creeze asteptari false.</p>
@@ -1341,24 +1352,24 @@ function renderTrustContent(page) {
 
   if (page.slug === "portofoliu") {
     return `
-      <p class="snippet-box">Portofoliul FABER va include doar proiecte anonimizate si aprobate pentru publicare. Pana la validarea materialelor reale, pagina explica ce informatii sunt necesare pentru un exemplu publicabil si de ce valorile, rezultatele si numele clientilor nu trebuie inventate.</p>
-      <h2>Materiale necesare pentru portofoliu</h2>
+      <p class="snippet-box">Portofoliul FABER include doar proiecte anonimizate si aprobate pentru publicare. Cand lipsesc acordul, dovezile sau nivelul corect de anonimizare, exemplul nu este afisat public.</p>
+      <h2>Criterii pentru un exemplu publicabil</h2>
       <div class="case-grid">
         <article class="case-card">
-          <h3>Proiect agricol anonimizat</h3>
-          <p><strong>De completat dupa validare:</strong> program, tip solicitant, investitie, valoare publicabila, cofinantare, documente verificate si rezultat aprobat pentru publicare.</p>
+          <h3>Acord explicit</h3>
+          <p>Exemplul poate fi publicat doar dupa acceptul beneficiarului pentru informatiile folosite si pentru nivelul de anonimizare ales.</p>
         </article>
         <article class="case-card">
-          <h3>Digitalizare IMM anonimizata</h3>
-          <p><strong>De completat dupa validare:</strong> procese digitalizate, categorii de cheltuieli, criterii de eligibilitate, riscuri clarificate si acordul clientului.</p>
+          <h3>Date verificabile</h3>
+          <p>Programul, tipul solicitantului, provocarea si concluzia trebuie sustinute de documente interne sau surse publice.</p>
         </article>
         <article class="case-card">
-          <h3>Proiect energetic anonimizat</h3>
-          <p><strong>De completat dupa validare:</strong> consum, amplasament, scenariu tehnic, buget aprobat pentru publicare si limitele explicite ale exemplului.</p>
+          <h3>Anonimizare suficienta</h3>
+          <p>Numele, adresa exacta, furnizorii, contractele si detaliile financiare sensibile sunt eliminate sau agregate.</p>
         </article>
         <article class="case-card">
-          <h3>Modernizare IMM anonimizata</h3>
-          <p><strong>De completat dupa validare:</strong> CAEN, punct de lucru, oferte, buget, punctaj si lectia publicabila fara date comerciale sensibile.</p>
+          <h3>Lectie utila</h3>
+          <p>Un caz publicabil trebuie sa explice o decizie, un risc sau o lectie practica, nu doar sa afiseze o suma sau un rezultat.</p>
         </article>
       </div>
       <h2>Cum interpretezi portofoliul</h2>
@@ -1373,11 +1384,11 @@ function renderTrustContent(page) {
         <li>rezultatul publicabil: dosar pregatit, buget ajustat, risc clarificat sau decizie de amanare.</li>
       </ul>
       <p>In practica, un studiu de caz util nu ascunde blocajele. Daca o investitie a fost ajustata, acest lucru poate fi mai valoros pentru un beneficiar decat o prezentare lucioasa. Arata unde se pierd puncte, ce documente trebuie obtinute mai devreme si de ce un proiect trebuie uneori restrans pentru a ramane implementabil.</p>
-      <p>Pana cand exista materiale validate, portofoliul ramane un cadru editorial. Echipa poate adauga un caz doar dupa ce confirma sursa informatiei, acordul de publicare, formularea valorilor si nivelul de anonimizare. Daca una dintre aceste conditii lipseste, exemplul ramane intern si nu este folosit pentru promovare.</p>
+      <p>Cat timp lipsesc acordul, dovada sau anonimizarea suficienta, portofoliul ramane un cadru editorial. Echipa poate adauga un caz doar dupa ce confirma sursa informatiei, formularea valorilor si nivelul de anonimizare. Daca una dintre aceste conditii lipseste, exemplul ramane intern si nu este folosit pentru promovare.</p>
       <h2>Cand actualizam exemplele</h2>
       <p>Exemplele sunt revizuite cand se modifica ghidurile, cand apar dovezi publicabile sau cand clientul permite folosirea unor detalii suplimentare. Daca un rezultat nu poate fi sustinut prin documente, el nu este transformat in claim comercial. Aceeasi prudenta se aplica valorilor totale, ratelor de succes sau sumelor atrase: ele trebuie sa aiba baza clara inainte de publicare.</p>
       ${renderTrustMethodology()}
-      <p class="note">Portofoliul nu garanteaza rezultate viitoare. Exemplele sunt anonimizate si vor fi actualizate cu documente publicabile suplimentare cand exista acord si dovada.</p>
+      <p class="note">Portofoliul nu garanteaza rezultate viitoare. Exemplele sunt anonimizate si se publica doar cand exista acord si dovada.</p>
       ${officialSourcesHtml}
       <h2>Intrebari frecvente</h2>
       ${faqHtml}`;
@@ -1807,6 +1818,8 @@ function pageHtml(page, config) {
   const finalPrimaryCta = page.finalPrimaryCta || designProfileFor(page).primary || "Solicita verificare eligibilitate";
   const finalSecondaryHref = page.finalSecondaryHref || "/consultanta-fonduri-europene";
   const finalSecondaryLabel = page.finalSecondaryLabel || "Vezi serviciile";
+  const hasTrustApprovalGate = page.type === "trust" && Object.prototype.hasOwnProperty.call(page, "approvedItemsCount");
+  const robots = page.robots || (hasTrustApprovalGate && Number(page.approvedItemsCount) < 3 ? "noindex, follow" : "index, follow");
   return `<!DOCTYPE html>
 <html lang="ro">
 <head>
@@ -1815,7 +1828,7 @@ function pageHtml(page, config) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>${esc(metadata.title)}</title>
   <meta name="description" content="${esc(metadata.description)}" />
-  <meta name="robots" content="index, follow" />
+  <meta name="robots" content="${escAttr(robots)}" />
   <meta name="seo-depth" content="true" />
   <meta name="seo-min-words" content="${minWordsForPage(page)}" />
   <meta name="seo-min-faq" content="${minFaqForPage(page)}" />
@@ -2136,8 +2149,9 @@ function updateBanners() {
 function updateLlms(pages) {
   if (!fs.existsSync(LLMS_PATH)) return;
   let text = fs.readFileSync(LLMS_PATH, "utf8");
+  const llmsSlugs = new Set(["instrumente", "resurse", "webinarii", "apeluri-gal", "e-move", "gal-afir", "investitii-modernizarea-microintreprinderilor-apel-2", "fondul-modernizare-energie-regenerabila-2026"]);
   const block = `\n## Pagini noi pentru vizibilitate AI si cautare vocala\n${pages
-    .filter((page) => ["portofoliu", "testimoniale", "instrumente", "resurse", "webinarii", "apeluri-gal", "e-move", "gal-afir", "investitii-modernizarea-microintreprinderilor-apel-2", "fondul-modernizare-energie-regenerabila-2026"].includes(page.slug))
+    .filter((page) => llmsSlugs.has(page.slug) && !/noindex/i.test(page.robots || ""))
     .map((page) => `- ${page.h1}: ${SITE}/${page.slug}`)
     .join("\n")}\n\n## Structura pentru asistenti AI\n- Paginile importante includ intrebari in limbaj natural, raspunsuri scurte vizibile si schema FAQPage doar cand intrebarile sunt vizibile in pagina.\n- Pentru sume, procente, punctaje si conditii finale, informatia trebuie verificata in apelul activ.\n`;
   if (!text.includes("Pagini noi pentru vizibilitate AI")) {

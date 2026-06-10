@@ -9,7 +9,7 @@ import { chromium } from "playwright";
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const DIST = path.join(ROOT, "dist");
 const SITE_ORIGIN = "https://atelierdeconsultanta.ro";
-const EXPECTED_CANONICAL_URLS = 95;
+const EXPECTED_CANONICAL_URLS = 91;
 const CONSOLIDATED_LOCAL_ROUTES = [
   "/fonduri-europene-bacau",
   "/consultanta-fonduri-europene-bacau",
@@ -21,6 +21,12 @@ const CONSOLIDATED_LOCAL_ROUTES = [
 const INDEXABLE_LOCAL_ROUTES = [
   "/fonduri-europene-bucuresti",
   "/consultanta-fonduri-europene-bucuresti"
+];
+const NOINDEX_TRUST_ROUTES = [
+  "/portofoliu",
+  "/testimoniale",
+  "/studii-de-caz",
+  "/studii-de-caz-fonduri-europene"
 ];
 
 function parseRedirects() {
@@ -162,8 +168,18 @@ async function assertCanonicalRoutes(baseUrl) {
   for (const routePath of CONSOLIDATED_LOCAL_ROUTES) {
     assert(!paths.includes(routePath), `${routePath} should stay out of sitemap while consolidated`);
   }
+  for (const routePath of NOINDEX_TRUST_ROUTES) {
+    assert(!paths.includes(routePath), `${routePath} should stay out of sitemap while noindex`);
+  }
   for (const routePath of INDEXABLE_LOCAL_ROUTES) {
     assert(paths.includes(routePath), `${routePath} should be in sitemap as an indexable local landing page`);
+  }
+
+  for (const routePath of NOINDEX_TRUST_ROUTES) {
+    const response = await fetchManual(`${baseUrl}${routePath}`);
+    assert.equal(response.status, 200, `${routePath} should remain publicly accessible`);
+    const html = await response.text();
+    assert.match(html, /<meta\s+name=["']robots["']\s+content=["']noindex,\s*follow["']/i, `${routePath} should declare noindex, follow`);
   }
 
   for (const routePath of paths) {
