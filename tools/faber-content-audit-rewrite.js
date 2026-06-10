@@ -87,7 +87,7 @@ const PROGRAM_OVERRIDES = {
       {
         title: "Cum tratăm costurile",
         paragraphs: [
-          "Costul consultanței depinde de program, complexitatea investiției, documentele existente, clarificările probabile și etapa proiectului. Nu folosim un preț unic înainte de verificarea proiectului."
+          "Costul consultanței depinde de program, complexitatea investiției, documentele existente, clarificările probabile și etapa proiectului. Oferta se stabileste dupa evaluarea proiectului, nu dupa un pret unic."
         ]
       }
     ],
@@ -306,7 +306,7 @@ const PROGRAM_OVERRIDES = {
     title: "Start-Up Nation 2026 condiții | checklist",
     description: "Checklist Start-Up Nation 2026: solicitant, firmă nouă, CAEN, cursuri, buget, cheltuieli, documente, cofinanțare și procedură activă.",
     h1: "Start-Up Nation 2026: checklist de condiții",
-    quickAnswer: "Pagina este un checklist de condiții, nu un articol general. Verifică solicitantul, firma nouă, CAEN-ul, cursurile sau cerințele procedurii, bugetul, cheltuielile, documentele și cofinanțarea. Varianta fără cratimă redirectează către această pagină canonică.",
+    quickAnswer: "Pagina este un checklist de conditii, nu un articol general. Verifica solicitantul, firma noua, CAEN-ul, cursurile sau cerintele procedurii, bugetul, cheltuielile, documentele si cofinantarea.",
     finalCtaText: "Trimite checklistul completat, CAEN-ul, ideea și bugetul ca să verificăm unde pot apărea riscuri."
   },
   "pnrr": {

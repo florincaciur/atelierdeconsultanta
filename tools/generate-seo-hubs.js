@@ -282,7 +282,7 @@ const pages = [
     description: "Pagină pentru studii de caz publicabile despre fonduri europene. Nu include rezultate, nume de clienți sau cifre fără acord explicit.",
     h1: "Studii de caz pentru fonduri europene",
     summary: "Această secțiune este pregătită pentru exemple reale care pot fi publicate doar cu acordul beneficiarilor. Nu sunt introduse rezultate, recenzii sau cifre comerciale care nu există în proiect.",
-    audience: ["vizitatori care vor să înțeleagă cum arată un parcurs de proiect", "beneficiari care vor exemple de documente și decizii", "echipa editorială care va publica materiale aprobate"],
+    audience: ["vizitatori care vor să înțeleagă cum arată un parcurs de proiect", "beneficiari care vor exemple de documente și decizii", "beneficiari care urmaresc exemple publicabile si lectii aplicate"],
     checks: ["acordul beneficiarului pentru publicare", "datele care pot fi anonimizate", "lecțiile utile fără divulgarea informațiilor confidențiale"],
     steps: ["documentează contextul proiectului", "elimină datele sensibile", "verifică acordul scris", "publică doar informații confirmate"],
     links: [related.caseStudies, related.consultanta, related.ghiduri, related.intrebari, related.contact],

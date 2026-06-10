@@ -420,24 +420,7 @@ function ensureCss($) {
 }
 
 function renderModule(item) {
-  const id = `seo-plan-${item.slug}`;
-  return `
-  <section id="${esc(id)}" class="seo-plan-block" aria-labelledby="${esc(id)}-title">
-    <div class="seo-plan-block__inner">
-      <p class="seo-plan-block__eyebrow">Implementare SEO FABER</p>
-      <h2 id="${esc(id)}-title">${esc(item.title)}</h2>
-      <p class="seo-plan-block__intro">${esc(item.intro)}</p>
-      <div class="seo-plan-block__grid">
-        ${item.cards.map(([title, text]) => `<article class="seo-plan-card"><h3>${esc(title)}</h3><p>${esc(text)}</p></article>`).join("\n        ")}
-      </div>
-      <ul class="seo-plan-block__checklist">
-        ${item.checklist.map((text) => `<li>${esc(text)}</li>`).join("\n        ")}
-      </ul>
-      <div class="seo-plan-block__links">
-        ${item.links.map((link) => `<a href="${esc(link.href)}">${esc(link.label)}</a>`).join("\n        ")}
-      </div>
-    </div>
-  </section>`;
+  return "";
 }
 
 function insertionTarget($) {
@@ -460,12 +443,11 @@ function applyModule(item) {
   const full = path.join(ROOT, item.file);
   if (!fs.existsSync(full)) return { file: item.file, status: "missing" };
   const $ = cheerio.load(readHtml(item.file), { decodeEntities: false });
-  ensureCss($);
   const id = `seo-plan-${item.slug}`;
+  const removed = $(`#${id}`).length > 0;
   $(`#${id}`).remove();
-  insertionTarget($).after(renderModule(item));
-  writeHtml(item.file, normalizeHtmlCopy($.html()));
-  return { file: item.file, status: "updated", id };
+  if (removed) writeHtml(item.file, normalizeHtmlCopy($.html()));
+  return { file: item.file, status: removed ? "removed" : "unchanged", id };
 }
 
 function writeStatusReport(results) {

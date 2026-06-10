@@ -290,7 +290,7 @@
         ],
         [
           "Clarificari.",
-          "Pastreaza trasabilitatea intre răspunsuri, documente, buget și ghidul apelului."
+          "Leaga raspunsurile la clarificari de documente, buget si ghidul apelului."
         ],
         [
           "Contractare.",
@@ -1214,9 +1214,9 @@
       "guideCtaLabel": "Ghid oficial",
       "contentSections": [
         {
-          "title": "Start Up Nation, startup nation si pagina canonica",
+          "title": "Start-Up Nation 2026: ce verifici prima data",
           "paragraphs": [
-            "Start Up Nation, startup nation si Start-Up Nation sunt variante de cautare pentru aceeasi intentie comerciala: beneficiarul vrea sa inteleaga daca poate pregati o firma, un cod CAEN, un buget si un plan de afaceri pentru editia activa. Pagina canonica ramane /start-up-nation-2026, iar variantele vechi sau fara cratima trebuie sa conduca spre aceasta ruta, nu spre pagini paralele.",
+            "Start Up Nation, startup nation si Start-Up Nation descriu aceeasi nevoie practica: beneficiarul vrea sa inteleaga daca poate pregati o firma, un cod CAEN, un buget si un plan de afaceri pentru editia activa. Informatiile de pe aceasta pagina sunt centralizate pentru programul Start-Up Nation 2026, iar regulile finale se verifica in procedura activa.",
             "Pentru utilizator, prima decizie nu este valoarea grantului, ci daca proiectul are o logica eligibila: solicitant potrivit, activitate verificabila, cheltuieli permise, documente disponibile si capacitate de implementare."
           ],
           "links": [
@@ -1306,7 +1306,7 @@
         [
           "Grant si contributie proprie",
           "se confirma in procedura activa",
-          "Nu folosi procente sau plafoane din editii vechi fara verificare oficiala."
+          "Procentele si plafoanele se confirma doar in procedura activa si in sursele oficiale."
         ],
         [
           "TVA si cheltuieli neeligibile",
@@ -3170,7 +3170,7 @@
         ],
         [
           "Unde folosesc calculator SO AFIR?",
-          "Dacă ai nevoie de calcul SO AFIR, pornește din hub pentru context, apoi folosește pagina Calculator SO/SOC. Rezultatul trebuie comparat cu documentele fermei și cu programul analizat."
+          "Pentru calcul SO AFIR, hubul ofera context, iar pagina Calculator SO/SOC ofera calculul orientativ. Rezultatul trebuie comparat cu documentele fermei si cu programul analizat."
         ],
         [
           "Ce înseamnă AFIR SO sau calcul SO AFIR?",
@@ -3323,7 +3323,7 @@
         ],
         [
           "Ce fac dacă ghidul oficial lipsește?",
-          "Pastreaza concluziile la nivel orientativ și nu lua decizii pe sume, procente sau termene până când sursa oficială este completa."
+          "Concluziile raman orientative pana cand sursa oficiala confirma sumele, procentele si termenele."
         ],
         [
           "Ce documente pregătesc înainte de consultanță?",
@@ -4263,7 +4263,7 @@
         ],
         [
           "Cât costă consultanța pentru fonduri europene?",
-          "Costul depinde de program, complexitatea investiției, documentele disponibile, etapa de implementare și volumul de clarificări. Nu folosim un preț unic fără evaluarea proiectului."
+          "Costul depinde de program, complexitatea investiției, documentele disponibile, etapa de implementare și volumul de clarificări. Oferta se stabileste dupa evaluarea proiectului, nu dupa un pret unic."
         ],
         [
           "Pot compara mai multe programe înainte să aleg?",
@@ -4342,7 +4342,7 @@
         {
           "title": "Cum tratăm costurile",
           "paragraphs": [
-            "Costul consultanței depinde de program, complexitatea investiției, documentele existente, clarificările probabile și etapa proiectului. Nu folosim un preț unic înainte de verificarea proiectului."
+            "Costul consultanței depinde de program, complexitatea investiției, documentele existente, clarificările probabile și etapa proiectului. Oferta se stabileste dupa evaluarea proiectului, nu dupa un pret unic."
           ]
         },
         {
@@ -4924,7 +4924,7 @@
       "title": "Start-Up Nation 2026 condiții | checklist",
       "description": "Checklist Start-Up Nation 2026: solicitant, firmă nouă, CAEN, cursuri, buget, cheltuieli, documente, cofinanțare și procedură activă.",
       "h1": "Start-Up Nation 2026: checklist de condiții",
-      "quickAnswer": "Pagina este un checklist de condiții, nu un articol general. Verifică solicitantul, firmă nouă, CAEN-ul, cursurile sau cerințele procedurii, bugetul, cheltuielile, documentele și cofinanțarea. Varianta fără cratimă redirectează către această pagină canonică.",
+      "quickAnswer": "Pagina este un checklist de conditii, nu un articol general. Verifica solicitantul, firma noua, CAEN-ul, cursurile sau cerintele procedurii, bugetul, cheltuielile, documentele si cofinantarea.",
       "programName": "Start Up Nation 2026 condiții",
       "related": [
         "/consultanta-start-up-nation-2026",
@@ -4958,7 +4958,7 @@
         [
           "Grant si contributie proprie",
           "se confirma in procedura activa",
-          "Nu folosi procente sau plafoane din editii vechi fara verificare oficiala."
+          "Procentele si plafoanele se confirma doar in procedura activa si in sursele oficiale."
         ],
         [
           "TVA si cheltuieli neeligibile",
@@ -5092,7 +5092,7 @@
         [
           "Grant si contributie proprie",
           "se confirma in procedura activa",
-          "Nu folosi procente sau plafoane din editii vechi fara verificare oficiala."
+          "Procentele si plafoanele se confirma doar in procedura activa si in sursele oficiale."
         ],
         [
           "TVA si cheltuieli neeligibile",
@@ -5240,7 +5240,7 @@
         [
           "Grant si contributie proprie",
           "se confirma in procedura activa",
-          "Nu folosi procente sau plafoane din editii vechi fara verificare oficiala."
+          "Procentele si plafoanele se confirma doar in procedura activa si in sursele oficiale."
         ],
         [
           "TVA si cheltuieli neeligibile",
@@ -5388,7 +5388,7 @@
         [
           "Grant si contributie proprie",
           "se confirma in procedura activa",
-          "Nu folosi procente sau plafoane din editii vechi fara verificare oficiala."
+          "Procentele si plafoanele se confirma doar in procedura activa si in sursele oficiale."
         ],
         [
           "TVA si cheltuieli neeligibile",
@@ -5550,7 +5550,7 @@
         [
           "Grant si contributie proprie",
           "se confirma in procedura activa",
-          "Nu folosi procente sau plafoane din editii vechi fara verificare oficiala."
+          "Procentele si plafoanele se confirma doar in procedura activa si in sursele oficiale."
         ],
         [
           "TVA si cheltuieli neeligibile",
@@ -5711,7 +5711,7 @@
         [
           "Grant si contributie proprie",
           "se confirma in procedura activa",
-          "Nu folosi procente sau plafoane din editii vechi fara verificare oficiala."
+          "Procentele si plafoanele se confirma doar in procedura activa si in sursele oficiale."
         ],
         [
           "TVA si cheltuieli neeligibile",
