@@ -46,6 +46,11 @@
 /sitemap.xml
   Cache-Control: public, max-age=3600
 
+/official-guides.json
+  Content-Type: application/json; charset=utf-8
+  X-Robots-Tag: noindex, follow
+  Cache-Control: public, max-age=300
+
 /afir
   X-Robots-Tag: index, follow
 

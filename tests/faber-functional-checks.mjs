@@ -9,7 +9,7 @@ import { chromium } from "playwright";
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const DIST = path.join(ROOT, "dist");
 const SITE_ORIGIN = "https://atelierdeconsultanta.ro";
-const EXPECTED_CANONICAL_URLS = 94;
+const EXPECTED_CANONICAL_URLS = 95;
 const CONSOLIDATED_LOCAL_ROUTES = [
   "/fonduri-europene-bacau",
   "/consultanta-fonduri-europene-bacau",
@@ -24,7 +24,8 @@ const INDEXABLE_LOCAL_ROUTES = [
 ];
 
 function parseRedirects() {
-  const raw = fs.readFileSync(path.join(ROOT, "_redirects"), "utf8");
+  const source = fs.existsSync(path.join(DIST, "_redirects")) ? path.join(DIST, "_redirects") : path.join(ROOT, "_redirects");
+  const raw = fs.readFileSync(source, "utf8");
   return raw
     .split(/\r?\n/)
     .map((line) => line.trim())
@@ -36,7 +37,8 @@ function parseRedirects() {
 }
 
 function parseHeaders() {
-  const raw = fs.readFileSync(path.join(ROOT, "_headers"), "utf8");
+  const source = fs.existsSync(path.join(DIST, "_headers")) ? path.join(DIST, "_headers") : path.join(ROOT, "_headers");
+  const raw = fs.readFileSync(source, "utf8");
   const rules = [];
   let current = null;
 
@@ -214,6 +216,18 @@ async function assertRedirectsAndFallback(baseUrl) {
   assert.match(fallback.headers.get("x-robots-tag") || "", /noindex/i, "legacy /ro/* fallback should be noindex");
 }
 
+async function assertOfficialGuidesResource(baseUrl) {
+  assert(fs.existsSync(path.join(DIST, "_headers")), "dist/_headers missing; build must copy deploy headers");
+  assert(fs.existsSync(path.join(DIST, "official-guides.json")), "dist/official-guides.json missing");
+
+  const response = await fetchManual(`${baseUrl}/official-guides.json`);
+  assert.equal(response.status, 200, "/official-guides.json should remain available");
+  assert.match(response.headers.get("content-type") || "", /^application\/json\b/i, "/official-guides.json should be application/json");
+  assert.match(response.headers.get("x-robots-tag") || "", /\bnoindex\b/i, "/official-guides.json should send noindex");
+  assert.match(response.headers.get("x-robots-tag") || "", /\bfollow\b/i, "/official-guides.json should keep follow");
+  await response.json();
+}
+
 async function assertHomepageInteractions(baseUrl) {
   const browser = await chromium.launch({ headless: true });
   const page = await browser.newPage({ viewport: { width: 1366, height: 900 } });
@@ -315,6 +329,7 @@ async function main() {
   try {
     await assertCanonicalRoutes(baseUrl);
     await assertRedirectsAndFallback(baseUrl);
+    await assertOfficialGuidesResource(baseUrl);
     await assertHomepageInteractions(baseUrl);
     console.log("Functional navigation checks passed.");
   } finally {

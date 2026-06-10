@@ -1,10 +1,12 @@
 const fs = require("fs");
 const path = require("path");
+const cp = require("child_process");
 
 const ROOT = path.resolve(__dirname, "..");
 const SITE = "https://atelierdeconsultanta.ro";
 const SITEMAP_PATH = path.join(ROOT, "sitemap.xml");
 const TODAY = new Date();
+const TODAY_ISO = TODAY.toISOString().slice(0, 10);
 
 const EXCLUDED_DIRS = new Set([
   ".git",
@@ -110,10 +112,71 @@ function priority(url) {
   return 4;
 }
 
-function lastmodForFile(filePath) {
+function parseSitemapLastmods(xml) {
+  const lastmods = new Map();
+  const pattern = /<url>\s*<loc>([^<]+)<\/loc>\s*<lastmod>([^<]+)<\/lastmod>\s*<\/url>/g;
+  for (const match of xml.matchAll(pattern)) {
+    lastmods.set(match[1].trim(), match[2].trim());
+  }
+  return lastmods;
+}
+
+function committedSitemapLastmods() {
+  try {
+    return parseSitemapLastmods(cp.execFileSync("git", ["show", "HEAD:sitemap.xml"], {
+      cwd: ROOT,
+      encoding: "utf8",
+      stdio: ["ignore", "pipe", "ignore"],
+    }));
+  } catch {
+    if (!fs.existsSync(SITEMAP_PATH)) return new Map();
+    return parseSitemapLastmods(fs.readFileSync(SITEMAP_PATH, "utf8"));
+  }
+}
+
+function dirtyTrackedFiles() {
+  try {
+    return new Set(
+      cp.execFileSync("git", ["status", "--short", "--untracked-files=no"], {
+        cwd: ROOT,
+        encoding: "utf8",
+        stdio: ["ignore", "pipe", "ignore"],
+      })
+        .split(/\r?\n/)
+        .map((line) => line.slice(3).trim().replace(/^"|"$/g, ""))
+        .filter(Boolean)
+        .map((file) => file.replace(/\\/g, "/"))
+    );
+  } catch {
+    return new Set();
+  }
+}
+
+function gitLastmodForFile(filePath) {
+  try {
+    const value = cp.execFileSync("git", ["log", "-1", "--format=%cs", "--", toPosix(path.relative(ROOT, filePath))], {
+      cwd: ROOT,
+      encoding: "utf8",
+      stdio: ["ignore", "pipe", "ignore"],
+    }).trim();
+    return value || TODAY_ISO;
+  } catch {
+    const mtime = fs.statSync(filePath).mtime;
+    const safeDate = mtime > TODAY ? TODAY : mtime;
+    return safeDate.toISOString().slice(0, 10);
+  }
+}
+
+function lastmodForFile(filePath, url, previousLastmods, dirtyFiles) {
+  const relativePath = toPosix(path.relative(ROOT, filePath));
+  if (!dirtyFiles.has(relativePath) && previousLastmods.has(url)) {
+    return previousLastmods.get(url);
+  }
+  if (dirtyFiles.has(relativePath)) return TODAY_ISO;
   const mtime = fs.statSync(filePath).mtime;
   const safeDate = mtime > TODAY ? TODAY : mtime;
-  return safeDate.toISOString().slice(0, 10);
+  const gitDate = gitLastmodForFile(filePath);
+  return gitDate > TODAY_ISO ? safeDate.toISOString().slice(0, 10) : gitDate;
 }
 
 function escapeXml(value) {
@@ -127,6 +190,8 @@ function escapeXml(value) {
 
 function generate() {
   const urls = new Map();
+  const previousLastmods = committedSitemapLastmods();
+  const dirtyFiles = dirtyTrackedFiles();
   for (const filePath of walkHtml(ROOT)) {
     const html = fs.readFileSync(filePath, "utf8");
     if (hasNoindexOrRedirect(html)) continue;
@@ -139,7 +204,7 @@ function generate() {
     if (canonicalPath !== canonicalRouteForFile(filePath)) continue;
     urls.set(normalized, {
       file: toPosix(path.relative(ROOT, filePath)),
-      lastmod: lastmodForFile(filePath),
+      lastmod: lastmodForFile(filePath, normalized, previousLastmods, dirtyFiles),
     });
   }
 

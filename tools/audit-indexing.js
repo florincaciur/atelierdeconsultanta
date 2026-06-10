@@ -281,6 +281,20 @@ function validateSitemapUrl(url, sitemapSet, issues, pageRecords) {
   if (!data.title) addIssue(issues, "missing-title", "Sitemap URL has no title.", { url, file: data.file });
   if (!data.description) addIssue(issues, "missing-description", "Sitemap URL has no meta description.", { url, file: data.file });
   if (data.h1.length !== 1) addIssue(issues, "h1-count", "Sitemap URL must have exactly one H1.", { url, file: data.file, h1: data.h1 });
+  data.$('script[type="application/ld+json"]').each((index, element) => {
+    const json = data.$(element).contents().text().trim();
+    if (!json) return;
+    try {
+      JSON.parse(json);
+    } catch (error) {
+      addIssue(issues, "json-ld-invalid", "JSON-LD block cannot be parsed.", {
+        url,
+        file: data.file,
+        scriptIndex: index,
+        error: error.message,
+      });
+    }
+  });
 
   pageRecords.push({
     url,
@@ -290,6 +304,47 @@ function validateSitemapUrl(url, sitemapSet, issues, pageRecords) {
     h1: data.h1[0] || "",
     canonical: data.canonical,
   });
+}
+
+function validateOfficialGuidesResource(sitemapSet, issues) {
+  const resourceUrl = `${SITE}/official-guides.json`;
+  const chain = trace(resourceUrl);
+  const final = finalStep(chain);
+  const headers = headersFor("/official-guides.json");
+  const robots = headers["x-robots-tag"] || "";
+  const contentType = headers["content-type"] || "";
+
+  if (sitemapSet.has(resourceUrl)) {
+    addIssue(issues, "technical-resource-in-sitemap", "official-guides.json must not be listed in sitemap.", {
+      url: resourceUrl,
+    });
+  }
+  if (hasRedirect(chain) || final.status !== 200 || final.file !== "official-guides.json") {
+    addIssue(issues, "official-guides-status", "official-guides.json must stay available as a direct 200 JSON resource.", {
+      url: resourceUrl,
+      chain,
+    });
+  }
+  if (!/\bnoindex\b/i.test(robots) || !/\bfollow\b/i.test(robots)) {
+    addIssue(issues, "official-guides-robots", "official-guides.json must send X-Robots-Tag: noindex, follow.", {
+      url: resourceUrl,
+      robots,
+    });
+  }
+  if (!/^application\/json\b/i.test(contentType)) {
+    addIssue(issues, "official-guides-content-type", "official-guides.json must declare application/json Content-Type in _headers.", {
+      url: resourceUrl,
+      contentType,
+    });
+  }
+  try {
+    JSON.parse(readIfExists(path.join(ROOT, "official-guides.json")));
+  } catch (error) {
+    addIssue(issues, "official-guides-json", "official-guides.json is not valid JSON.", {
+      url: resourceUrl,
+      error: error.message,
+    });
+  }
 }
 
 function duplicateValues(records, key) {
@@ -481,6 +536,7 @@ function main() {
   }
 
   validateInternalLinks(sitemapSet, issues, pageRecords);
+  validateOfficialGuidesResource(sitemapSet, issues);
 
   const report = {
     generatedAt: new Date().toISOString(),

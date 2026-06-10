@@ -48,8 +48,59 @@ function parseRedirects(file) {
   return { rules, errors };
 }
 
+function parseHeaders(file) {
+  const rules = [];
+  let current = null;
+  const errors = [];
+
+  if (!fs.existsSync(file)) {
+    return { rules, errors: [`${file} is missing`] };
+  }
+
+  const lines = fs.readFileSync(file, "utf8").split(/\r?\n/);
+  for (let index = 0; index < lines.length; index += 1) {
+    const line = lines[index];
+    if (!line.trim()) continue;
+    if (!/^\s/.test(line)) {
+      current = { lineNumber: index + 1, pattern: line.trim(), headers: {} };
+      rules.push(current);
+      continue;
+    }
+    if (!current) {
+      errors.push(`${file}:${index + 1} header without a path rule`);
+      continue;
+    }
+    const [name, ...rest] = line.trim().split(":");
+    if (!name || !rest.length) {
+      errors.push(`${file}:${index + 1} invalid header syntax`);
+      continue;
+    }
+    current.headers[name.toLowerCase()] = rest.join(":").trim();
+  }
+
+  return { rules, errors };
+}
+
 function containsDynamicToken(value) {
   return value.includes("*") || /(^|[^A-Za-z0-9_-]):[A-Za-z][A-Za-z0-9_-]*/.test(value);
+}
+
+function validateOfficialGuidesHeaders(file, errors) {
+  const parsed = parseHeaders(file);
+  errors.push(...parsed.errors);
+  const rule = parsed.rules.find((item) => item.pattern === "/official-guides.json");
+  if (!rule) {
+    errors.push(`${file}: missing /official-guides.json header rule`);
+    return;
+  }
+  const robots = rule.headers["x-robots-tag"] || "";
+  const contentType = rule.headers["content-type"] || "";
+  if (!/\bnoindex\b/i.test(robots) || !/\bfollow\b/i.test(robots)) {
+    errors.push(`${file}:${rule.lineNumber} /official-guides.json must set X-Robots-Tag: noindex, follow`);
+  }
+  if (!/^application\/json\b/i.test(contentType)) {
+    errors.push(`${file}:${rule.lineNumber} /official-guides.json must set Content-Type: application/json`);
+  }
 }
 
 function assertCleanAssetDirectory(directory) {
@@ -101,7 +152,21 @@ if (!config.assets || !config.assets.directory) {
   errors.push("wrangler.jsonc must define assets.directory.");
 } else {
   assertCleanAssetDirectory(config.assets.directory);
+  const distOfficialGuides = path.join(ROOT, config.assets.directory, "official-guides.json");
+  const distHeaders = path.join(ROOT, config.assets.directory, "_headers");
+  if (fs.existsSync(path.join(ROOT, config.assets.directory)) && !fs.existsSync(distOfficialGuides)) {
+    errors.push(`Deploy output is missing ${path.relative(ROOT, distOfficialGuides)}`);
+  }
+  if (fs.existsSync(distOfficialGuides)) {
+    try {
+      JSON.parse(fs.readFileSync(distOfficialGuides, "utf8"));
+    } catch (error) {
+      errors.push(`${path.relative(ROOT, distOfficialGuides)} is not valid JSON: ${error.message}`);
+    }
+  }
+  if (fs.existsSync(path.join(ROOT, config.assets.directory))) validateOfficialGuidesHeaders(distHeaders, errors);
 }
+validateOfficialGuidesHeaders(path.join(ROOT, "_headers"), errors);
 
 if (errors.length) {
   console.error("Cloudflare deploy validation failed:");

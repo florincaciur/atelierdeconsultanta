@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="ro"><head><script id="blog-query-cleanup">(function(){var p=new URLSearchParams(location.search);if(p.get("post")==="blog-1"){location.replace("/blog");}}());</script>
+<!DOCTYPE html><html lang="ro"><head><script id="blog-query-cleanup">(function(){var p=new URLSearchParams(location.search);if(/^blog-[123]$/.test(p.get("post")||"")){location.replace("/blog");}}());</script>
   <meta charset="UTF-8">
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
