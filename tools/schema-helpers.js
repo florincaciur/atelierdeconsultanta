@@ -30,24 +30,217 @@ function cleanText(value) {
   return String(value ?? "").replace(/\s+/g, " ").trim();
 }
 
+function normalizeCanonicalPath(pathname) {
+  const raw = String(pathname ?? "").trim();
+  if (!raw || raw === "/") return "/";
+
+  let pathValue = raw;
+  try {
+    pathValue = new URL(raw, SITE).pathname || "/";
+  } catch {
+    const hashIndex = raw.indexOf("#");
+    const queryIndex = raw.indexOf("?");
+    const suffixIndex = [hashIndex, queryIndex].filter((index) => index >= 0).sort((a, b) => a - b)[0];
+    pathValue = suffixIndex >= 0 ? raw.slice(0, suffixIndex) : raw;
+  }
+
+  pathValue = `/${String(pathValue).replace(/^\/+/, "")}`;
+  pathValue = pathValue.replace(/\/index\.html$/i, "");
+  pathValue = pathValue.replace(/\.html$/i, "");
+  pathValue = pathValue.length > 1 ? pathValue.replace(/\/+$/g, "") : pathValue;
+  return pathValue || "/";
+}
+
+function canonicalUrl(pathname) {
+  const canonicalPath = normalizeCanonicalPath(pathname);
+  return `${SITE}${canonicalPath}`;
+}
+
+function buildPageMetadata(options = {}) {
+  const fallbackTitle = cleanText(options.fallbackTitle || BRAND_NAME);
+  const fallbackDescription = cleanText(options.fallbackDescription || BRAND_DESCRIPTION);
+  const title = cleanText(options.title) || fallbackTitle;
+  let description = cleanText(options.description) || fallbackDescription;
+
+  if (!description || description === title) {
+    description = fallbackDescription && fallbackDescription !== title
+      ? fallbackDescription
+      : BRAND_DESCRIPTION;
+  }
+
+  const canonicalPath = normalizeCanonicalPath(options.pathname || options.route || options.url || "/");
+  const absoluteCanonicalUrl = canonicalUrl(canonicalPath);
+  return {
+    title,
+    description,
+    canonicalPath,
+    canonicalUrl: absoluteCanonicalUrl,
+    ogUrl: absoluteCanonicalUrl
+  };
+}
+
+const ROUTE_LABELS = new Map([
+  ["/", "Acasa"],
+  ["/fonduri-europene", "Fonduri europene"],
+  ["/consultanta-fonduri-europene", "Consultanta fonduri europene"],
+  ["/verificare-eligibilitate-fonduri-europene", "Verificare eligibilitate"],
+  ["/fonduri-europene-imm", "Fonduri europene IMM"],
+  ["/fonduri-europene-agricultura", "Fonduri europene agricultura"],
+  ["/fonduri-europene-digitalizare", "Fonduri europene digitalizare"],
+  ["/fonduri-regionale", "Fonduri regionale"],
+  ["/fonduri-nerambursabile", "Fonduri nerambursabile"],
+  ["/afir", "AFIR"],
+  ["/consultanta-afir", "Consultanta AFIR"],
+  ["/dr12-afir", "DR 12 AFIR"],
+  ["/dr14", "DR 14 AFIR"],
+  ["/calculator-soc", "Calculator SO AFIR"],
+  ["/start-up-nation-2026", "Start-Up Nation 2026"],
+  ["/consultanta-start-up-nation-2026", "Consultanta Start-Up Nation"],
+  ["/fonduri-europene-femei-antreprenor", "Fonduri pentru femei antreprenor"],
+  ["/digitalizare-imm", "Digitalizare IMM"],
+  ["/digitalizare-imm-pnrr", "Digitalizare IMM / PNRR"],
+  ["/pnrr", "PNRR"],
+  ["/consultanta-pnrr-digitalizare", "Consultanta PNRR digitalizare"],
+  ["/fondul-de-modernizare", "Fondul de Modernizare"],
+  ["/fondul-modernizare-energie-regenerabila-2026", "Energie regenerabila 2026"],
+  ["/finantari-panouri-fotovoltaice", "Finantari panouri fotovoltaice"],
+  ["/despre-faber", "Despre FABER"],
+  ["/metodologie-verificare-eligibilitate", "Metodologie eligibilitate"],
+  ["/surse-oficiale-fonduri-europene", "Surse oficiale"],
+  ["/studii-de-caz-fonduri-europene", "Studii de caz"],
+  ["/glosar-fonduri-europene", "Glosar fonduri europene"],
+  ["/blog", "Blog"],
+  ["/ghiduri", "Ghiduri"],
+  ["/contact", "Contact"]
+]);
+
+const CLUSTER_RULES = [
+  { href: "/afir", label: "AFIR", pattern: /\/(?:afir|dr12|dr14|calculator-soc|fonduri-pentru-ferme|fonduri-pentru-utilaje-agricole|gal-afir)/i },
+  { href: "/start-up-nation-2026", label: "Start-Up Nation 2026", pattern: /\/(?:start-up-nation|cod-caen-start-up-nation|consultanta-start-up-nation)/i },
+  { href: "/fonduri-europene-digitalizare", label: "Digitalizare", pattern: /\/(?:digitalizare|pnrr|granturi-digitalizare|cheltuieli-eligibile-digitalizare)/i },
+  { href: "/fondul-de-modernizare", label: "Energie", pattern: /\/(?:fondul-de-modernizare|fondul-modernizare|finantari-panouri|autoconsum|pro-infra|e-move)/i },
+  { href: "/fonduri-regionale", label: "Fonduri regionale", pattern: /\/(?:fonduri-europene-nord-est|fonduri-europene-bucuresti|consultanta-fonduri-europene-bucuresti|por-adr-nord-est|investitii-modernizarea-microintreprinderilor)/i },
+  { href: "/consultanta-fonduri-europene", label: "Consultanta", pattern: /\/(?:consultanta|consultant-fonduri|firma-consultanta|cat-costa-consultanta|cum-alegi-consultant)/i },
+  { href: "/despre-faber", label: "Incredere si metodologie", pattern: /\/(?:despre-faber|metodologie|surse-oficiale|studii-de-caz|testimoniale|portofoliu|glosar)/i },
+  { href: "/ghiduri", label: "Ghiduri", pattern: /\/(?:blog|ghiduri|resurse|intrebari|acte-necesare|greseli|cum-se|ce-acte|cand-merita|idei-afaceri)/i },
+  { href: "/fonduri-europene-imm", label: "Fonduri europene IMM", pattern: /\/(?:fonduri-europene-imm|fonduri-europene-femei-antreprenor|femeia-antreprenor|fonduri-europene-nerambursabile-2026)/i },
+  { href: "/fonduri-europene-agricultura", label: "Agricultura", pattern: /\/(?:fonduri-europene-agricultura|fonduri-europene-caen\/0111)/i }
+];
+
+const INTERNAL_LINK_GROUPS = [
+  {
+    pattern: /\/(?:start-up-nation|cod-caen-start-up-nation|consultanta-start-up-nation)/i,
+    links: [
+      "/consultanta-start-up-nation-2026",
+      "/start-up-nation-2026",
+      "/start-up-nation-2026-conditii",
+      "/start-up-nation-2026-cheltuieli-eligibile",
+      "/start-up-nation-2026-plan-de-afaceri",
+      "/cod-caen-start-up-nation-2026"
+    ]
+  },
+  {
+    pattern: /\/(?:afir|dr12|dr14|calculator-soc|fonduri-pentru-ferme|fonduri-pentru-utilaje-agricole|gal-afir)/i,
+    links: ["/consultanta-afir", "/afir", "/dr12-afir", "/dr14", "/calculator-soc", "/fonduri-pentru-ferme"]
+  },
+  {
+    pattern: /\/(?:digitalizare|pnrr|granturi-digitalizare|cheltuieli-eligibile-digitalizare)/i,
+    links: ["/consultanta-pnrr-digitalizare", "/fonduri-europene-digitalizare", "/digitalizare-imm", "/digitalizare-imm-pnrr", "/pnrr"]
+  },
+  {
+    pattern: /\/(?:fondul-de-modernizare|fondul-modernizare|finantari-panouri|autoconsum|pro-infra|e-move)/i,
+    links: ["/fondul-de-modernizare", "/fondul-modernizare-energie-regenerabila-2026", "/finantari-panouri-fotovoltaice", "/consultanta-fonduri-europene"]
+  },
+  {
+    pattern: /\/(?:consultanta|consultant-fonduri|firma-consultanta|cat-costa-consultanta|cum-alegi-consultant)/i,
+    links: ["/consultanta-fonduri-europene", "/verificare-eligibilitate-fonduri-europene", "/fonduri-europene", "/metodologie-verificare-eligibilitate"]
+  },
+  {
+    pattern: /\/(?:despre-faber|metodologie|surse-oficiale|studii-de-caz|testimoniale|portofoliu|glosar)/i,
+    links: ["/metodologie-verificare-eligibilitate", "/surse-oficiale-fonduri-europene", "/despre-faber", "/contact"]
+  },
+  {
+    pattern: /\/fonduri-europene$/i,
+    links: ["/consultanta-fonduri-europene", "/fonduri-europene-imm", "/fonduri-europene-agricultura", "/fonduri-europene-digitalizare", "/fonduri-regionale"]
+  }
+];
+
+function routeLabel(pathname) {
+  const clean = normalizeCanonicalPath(pathname);
+  if (ROUTE_LABELS.has(clean)) return ROUTE_LABELS.get(clean);
+  const slug = clean.split("/").filter(Boolean).pop() || "pagina";
+  return slug.replace(/-/g, " ").replace(/\b\w/g, (letter) => letter.toUpperCase());
+}
+
+function parentClusterForPath(pathname) {
+  const clean = normalizeCanonicalPath(pathname);
+  if (clean === "/") return null;
+  for (const rule of CLUSTER_RULES) {
+    if (rule.pattern.test(clean) && rule.href !== clean) return { href: rule.href, label: rule.label };
+  }
+  if (clean !== "/fonduri-europene") return { href: "/fonduri-europene", label: "Fonduri europene" };
+  return null;
+}
+
+function breadcrumbItemsForPath(pathname, currentName) {
+  const clean = normalizeCanonicalPath(pathname);
+  const items = [{ name: "Acasa", item: canonicalUrl("/") }];
+  if (clean === "/") return items;
+  const parent = parentClusterForPath(clean);
+  if (parent) items.push({ name: parent.label, item: canonicalUrl(parent.href) });
+  items.push({ name: cleanText(currentName) || routeLabel(clean), item: canonicalUrl(clean) });
+  return items;
+}
+
+function normalizeLinkItem(item) {
+  if (!item) return null;
+  if (typeof item === "string") {
+    const href = normalizeCanonicalPath(item);
+    return { href, label: routeLabel(href) };
+  }
+  if (Array.isArray(item)) {
+    const href = normalizeCanonicalPath(item[0]);
+    return { href, label: cleanText(item[1]) || routeLabel(href) };
+  }
+  const href = normalizeCanonicalPath(item.href || item.url || item.item);
+  return { href, label: cleanText(item.label || item.name || item.title) || routeLabel(href) };
+}
+
+function standardInternalLinksForPath(pathname, existing = []) {
+  const clean = normalizeCanonicalPath(pathname);
+  const grouped = INTERNAL_LINK_GROUPS
+    .filter((group) => group.pattern.test(clean))
+    .flatMap((group) => group.links);
+  const normalized = [...grouped, ...(Array.isArray(existing) ? existing : [])]
+    .map(normalizeLinkItem)
+    .filter((item) => item && item.href && item.href !== clean);
+  const seen = new Set();
+  return normalized.filter((item) => {
+    if (seen.has(item.href)) return false;
+    seen.add(item.href);
+    return true;
+  });
+}
+
 function cleanUrl(value) {
   if (!value || value === "/") return "/";
   if (/^https?:\/\//i.test(value)) {
     try {
       const url = new URL(value);
+      if (url.origin === SITE) return canonicalUrl(url.pathname);
       if (url.pathname === "/" && !url.search && !url.hash) return `${url.origin}/`;
     } catch {
       // Fall back to a simple trim below.
     }
     return value.replace(/\/+$/g, "");
   }
-  return `/${String(value).replace(/^\/+/, "").replace(/\.html$/i, "").replace(/\/+$/g, "")}`;
+  return normalizeCanonicalPath(value);
 }
 
 function absoluteUrl(value) {
   const clean = cleanUrl(value);
   if (/^https?:\/\//i.test(clean)) return clean;
-  return `${SITE}${clean === "/" ? "/" : clean}`;
+  return canonicalUrl(clean);
 }
 
 function normalizeQuestion(value) {
@@ -301,13 +494,20 @@ module.exports = {
   EMAIL,
   TELEPHONES,
   absoluteUrl,
+  buildPageMetadata,
+  breadcrumbItemsForPath,
   breadcrumbSchema,
+  canonicalUrl,
   faqPageSchema,
   jsonLdGraph,
   localBusinessSchema,
+  normalizeCanonicalPath,
+  parentClusterForPath,
   normalizeQuestion,
   organizationSchema,
+  routeLabel,
   serviceSchema,
+  standardInternalLinksForPath,
   uniqueFaqItems,
   webApplicationSchema,
   webPageSchema,

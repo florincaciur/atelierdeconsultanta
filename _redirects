@@ -387,3 +387,14 @@
 /gal-leader/ /gal-afir 301
 /leader-afir /gal-afir 301
 /leader-afir/ /gal-afir 301
+
+# Global URL normalization. Keep after static aliases so legacy routes redirect directly.
+/:slug/index.html /:slug 301
+/:section/:slug/index.html /:section/:slug 301
+/:section/:category/:slug/index.html /:section/:category/:slug 301
+/:slug.html /:slug 301
+/:section/:slug.html /:section/:slug 301
+/:section/:category/:slug.html /:section/:category/:slug 301
+/:slug/ /:slug 301
+/:section/:slug/ /:section/:slug 301
+/:section/:category/:slug/ /:section/:category/:slug 301

@@ -5,16 +5,21 @@ const fs = require("fs");
 const path = require("path");
 
 const ROOT = path.resolve(__dirname, "..");
-const SITE = "https://atelierdeconsultanta.ro";
 const CONFIG = path.join(ROOT, "config", "seo-programmatic-pages.json");
 const SITEMAP = path.join(ROOT, "sitemap.xml");
 const PROGRAMMATIC_MIN_WORDS = 1100;
 const PROGRAMMATIC_MIN_FAQ = 5;
 const {
+  SITE,
+  buildPageMetadata,
+  breadcrumbItemsForPath,
   breadcrumbSchema,
+  canonicalUrl,
   faqPageSchema,
   jsonLdGraph,
+  normalizeCanonicalPath,
   organizationSchema,
+  standardInternalLinksForPath,
   webPageSchema,
   websiteSchema
 } = require("./schema-helpers");
@@ -51,11 +56,11 @@ function esc(value) {
 }
 
 function cleanUrl(value) {
-  return `/${String(value).replace(/^\/+/, "").replace(/\/+$/g, "")}`;
+  return normalizeCanonicalPath(value);
 }
 
 function canonical(route) {
-  return `${SITE}${cleanUrl(route)}`;
+  return canonicalUrl(route);
 }
 
 function heroImageFor(route, category = "") {
@@ -152,34 +157,56 @@ function wordCount(html) {
 }
 
 function relatedLinks(items) {
-  return (items || []).map((href) => `<a href="${cleanUrl(href)}">${esc(cleanUrl(href).replace(/^\/+/, "").replace(/-/g, " "))}</a>`).join("\n");
+  return (items || []).map((item) => {
+    const href = typeof item === "string" ? item : (Array.isArray(item) ? item[0] : item.href);
+    const label = typeof item === "string"
+      ? cleanUrl(href).replace(/^\/+/, "").replace(/-/g, " ")
+      : (Array.isArray(item) ? (item[1] || cleanUrl(href).replace(/^\/+/, "").replace(/-/g, " ")) : (item.label || item.name || item.title || cleanUrl(href).replace(/^\/+/, "").replace(/-/g, " ")));
+    return `<a href="${cleanUrl(href)}">${esc(label)}</a>`;
+  }).join("\n");
 }
 
 function linkTo(href, label) {
   return `<a href="${cleanUrl(href)}">${esc(label)}</a>`;
 }
 
-function schema(title, description, route, faq, updatedAt = "2026-05-20") {
-  const pageNode = webPageSchema({
-    url: canonical(route),
-    name: title,
+function renderBreadcrumb(route, currentName) {
+  const items = breadcrumbItemsForPath(route, currentName);
+  return `<div class="breadcrumb">${items.map((item, index) => {
+    const label = esc(item.name);
+    if (index === items.length - 1) return label;
+    return `<a href="${cleanUrl(item.item)}">${label}</a>`;
+  }).join(" / ")}</div>`;
+}
+
+function metadataForRoute({ title, description, route, h1, summary }) {
+  return buildPageMetadata({
+    title,
     description,
+    pathname: route,
+    fallbackTitle: h1 || cleanUrl(route).replace(/^\/+/, "").replace(/-/g, " "),
+    fallbackDescription: summary || h1 || title
+  });
+}
+
+function schema(title, description, route, faq, updatedAt = "2026-05-20", metadata = metadataForRoute({ title, description, route }), currentName = title) {
+  const pageNode = webPageSchema({
+    url: metadata.canonicalUrl,
+    name: metadata.title,
+    description: metadata.description,
     dateModified: updatedAt
   });
   return jsonLdGraph([
     organizationSchema(),
     websiteSchema(),
     pageNode,
-    breadcrumbSchema([
-      { name: "Acasa", item: `${SITE}/` },
-      { name: title, item: canonical(route) }
-    ]),
+    breadcrumbSchema(breadcrumbItemsForPath(route, currentName)),
     {
       "@type": "Article",
-      "@id": `${canonical(route)}#article`,
+      "@id": `${metadata.canonicalUrl}#article`,
       mainEntityOfPage: { "@id": pageNode["@id"] },
-      headline: publicText(title),
-      description: publicText(description),
+      headline: publicText(metadata.title),
+      description: publicText(metadata.description),
       inLanguage: "ro-RO",
       author: { "@id": `${SITE}/#organization` },
       publisher: { "@id": `${SITE}/#organization` },
@@ -191,6 +218,7 @@ function schema(title, description, route, faq, updatedAt = "2026-05-20") {
 }
 
 function html({ title, description, h1, route, category, summary, body, faq, related, updatedAt = "2026-05-20" }) {
+  const metadata = metadataForRoute({ title, description, route, h1, summary });
   const family = designFamilyForRoute(route, category);
   return `<!DOCTYPE html>
 <html lang="ro">
@@ -198,16 +226,17 @@ function html({ title, description, h1, route, category, summary, body, faq, rel
   <meta charset="UTF-8" />
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>${esc(title)}</title>
-  <meta name="description" content="${esc(description)}" />
+  <title>${esc(metadata.title)}</title>
+  <meta name="description" content="${esc(metadata.description)}" />
   <meta name="robots" content="index, follow" />
   <meta name="seo-depth" content="true" />
   <meta name="seo-min-words" content="${PROGRAMMATIC_MIN_WORDS}" />
   <meta name="seo-min-faq" content="${PROGRAMMATIC_MIN_FAQ}" />
-  <link rel="canonical" href="${canonical(route)}" />
+  <link rel="canonical" href="${metadata.canonicalUrl}" />
+  <meta property="og:url" content="${metadata.ogUrl}" />
   <link rel="stylesheet" href="/assets/seo-hub.css" />
   <link rel="stylesheet" href="/assets/see-also.css" />
-  <script type="application/ld+json">${schema(title, description, route, faq, updatedAt)}</script>
+  <script type="application/ld+json">${schema(title, description, route, faq, updatedAt, metadata, h1)}</script>
 ${CLARITY_TRACKING_CODE}
 </head>
 <body class="page-family-${esc(family)}">
@@ -220,7 +249,7 @@ ${CLARITY_TRACKING_CODE}
       <a class="nav-cta btn-primary" href="/contact">Solicita verificare eligibilitate</a>
     </div>
   </nav>
-  <div class="breadcrumb"><a href="/">Acasa</a> / ${esc(h1)}</div>
+  ${renderBreadcrumb(route, h1)}
   <header ${heroAttrs(route, category)}>
     <span class="hero-icon" aria-hidden="true"><i class="${esc(heroIconForRoute(route, category))}"></i></span>
     <span class="eyebrow design-badge design-badge--${esc(family)}">${esc(heroBadgeForRoute(route, category))}</span>
@@ -240,7 +269,7 @@ ${CLARITY_TRACKING_CODE}
       <h2>Intrebari frecvente</h2>
       ${faq.map(([question, answer]) => `<section class="faq-item"><h3>${esc(question)}</h3><p>${esc(answer)}</p></section>`).join("\n")}
       <h2>Resurse conexe</h2>
-      <div class="related-links">${relatedLinks(related)}</div>
+      <div class="related-links">${relatedLinks(standardInternalLinksForPath(route, related))}</div>
     </article>
     <section class="cta-box">
       <h2>Verifica proiectul inainte de depunere</h2>

@@ -2,7 +2,11 @@ const fs = require("fs");
 const path = require("path");
 
 const ROOT = path.resolve(__dirname, "..");
-const SITE = "https://atelierdeconsultanta.ro";
+const {
+  SITE,
+  canonicalUrl,
+  normalizeCanonicalPath
+} = require("./schema-helpers");
 const CLARITY_TRACKING_CODE = `  <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -12,8 +16,7 @@ const CLARITY_TRACKING_CODE = `  <script type="text/javascript">
   </script>`;
 
 function cleanTarget(target) {
-  if (!target || target === "/") return "/";
-  return target.replace(/\.html$/i, "").replace(/\/+$/g, "");
+  return normalizeCanonicalPath(target);
 }
 
 const fallbacks = [
@@ -68,7 +71,7 @@ function titleFor(target) {
 
 function html(target) {
   target = cleanTarget(target);
-  const canonical = `${SITE}${target}`;
+  const canonical = canonicalUrl(target);
   return `<!DOCTYPE html>
 <html lang="ro">
 <head>

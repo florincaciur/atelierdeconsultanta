@@ -5,8 +5,19 @@ const fs = require("fs");
 const path = require("path");
 
 const ROOT = path.resolve(__dirname, "..");
-const SITE = "https://atelierdeconsultanta.ro";
 const SITEMAP_PATH = path.join(ROOT, "sitemap.xml");
+const ROBOTS_PATH = path.join(ROOT, "robots.txt");
+const LLMS_PATH = path.join(ROOT, "llms.txt");
+const REDIRECTS_PATH = path.join(ROOT, "_redirects");
+const {
+  SITE,
+  canonicalUrl,
+  normalizeCanonicalPath
+} = require("./schema-helpers");
+const ALLOWED_LLMS_TECHNICAL_URLS = new Set([
+  `${SITE}/robots.txt`,
+  `${SITE}/sitemap.xml`
+]);
 
 const EXCLUDED_DIRS = new Set([
   ".git",
@@ -59,6 +70,42 @@ function hasNoindexOrRedirect(html) {
   );
 }
 
+function containsDynamicToken(value) {
+  return value.includes("*") || /(^|[^A-Za-z0-9_-]):[A-Za-z][A-Za-z0-9_-]*/.test(value);
+}
+
+function patternToRegex(pattern) {
+  const escaped = String(pattern)
+    .replace(/[|\\{}()[\]^$+?.]/g, "\\$&")
+    .replace(/\*/g, ".*")
+    .replace(/(^|\/):[A-Za-z][A-Za-z0-9_]*/g, (match) => `${match.startsWith("/") ? "/" : ""}[^/]+`);
+  return new RegExp(`^${escaped}$`);
+}
+
+function parseRedirectRules() {
+  if (!fs.existsSync(REDIRECTS_PATH)) return [];
+  return fs.readFileSync(REDIRECTS_PATH, "utf8")
+    .split(/\r?\n/)
+    .map((line) => line.trim())
+    .filter((line) => line && !line.startsWith("#"))
+    .map((line) => {
+      const [source, destination, status = "302"] = line.split(/\s+/);
+      return { source, destination, status };
+    })
+    .filter((rule) => /^3\d\d$/.test(rule.status))
+    .map((rule) => ({
+      ...rule,
+      dynamic: containsDynamicToken(rule.source),
+      regex: containsDynamicToken(rule.source) ? patternToRegex(rule.source) : null
+    }));
+}
+
+function isRedirectSource(pathname, redirectRules) {
+  return redirectRules.some((rule) => (
+    rule.dynamic ? rule.regex.test(pathname) : rule.source === pathname
+  ));
+}
+
 function extractCanonical(html) {
   const linkMatches = html.matchAll(/<link\b[^>]*>/gi);
   for (const match of linkMatches) {
@@ -73,7 +120,7 @@ function extractCanonical(html) {
 function isInternalCanonical(url) {
   try {
     const parsed = new URL(url);
-    return parsed.origin === SITE && !parsed.search && !parsed.hash && !parsed.pathname.endsWith("/index.html") && !parsed.pathname.endsWith(".html");
+    return parsed.origin === SITE && !parsed.search && !parsed.hash && canonicalUrl(parsed.pathname) === url;
   } catch {
     return false;
   }
@@ -94,7 +141,7 @@ function isAlternateCanonicalPath(pathname) {
 
 function normalizeUrl(url) {
   const parsed = new URL(url);
-  return parsed.pathname === "/" ? `${SITE}/` : `${SITE}${parsed.pathname.replace(/\/$/, "")}`;
+  return canonicalUrl(parsed.pathname);
 }
 
 function sitemapUrls() {
@@ -105,7 +152,32 @@ function sitemapUrls() {
   return urls;
 }
 
-function expectedUrls() {
+function robotsRules() {
+  if (!fs.existsSync(ROBOTS_PATH)) fail("robots.txt is missing.");
+  const text = fs.readFileSync(ROBOTS_PATH, "utf8");
+  if (!new RegExp(`^\\s*Sitemap:\\s*${SITE.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\/sitemap\\.xml\\s*$`, "im").test(text)) {
+    fail("robots.txt must declare the canonical sitemap URL.", [`expected: Sitemap: ${SITE}/sitemap.xml`]);
+  }
+  return text.split(/\r?\n/)
+    .map((line) => line.trim())
+    .filter((line) => /^Disallow:/i.test(line))
+    .map((line) => line.replace(/^Disallow:\s*/i, "").trim())
+    .filter(Boolean);
+}
+
+function isBlockedByRobots(pathname, disallowRules) {
+  return disallowRules.some((rule) => pathname.startsWith(rule));
+}
+
+function llmsUrls() {
+  if (!fs.existsSync(LLMS_PATH)) fail("llms.txt is missing.");
+  const text = fs.readFileSync(LLMS_PATH, "utf8");
+  return [...text.matchAll(/https:\/\/atelierdeconsultanta\.ro\/?[^\s<>)\]]*/g)]
+    .map((match) => match[0].replace(/[.,;:!?]+$/g, ""))
+    .filter(Boolean);
+}
+
+function expectedUrls(redirectRules) {
   const urls = new Set();
   for (const filePath of walkHtml(ROOT)) {
     const html = fs.readFileSync(filePath, "utf8");
@@ -115,21 +187,57 @@ function expectedUrls() {
     const normalized = normalizeUrl(canonical);
     const canonicalPath = new URL(normalized).pathname;
     if (isAlternateCanonicalPath(canonicalPath)) continue;
+    if (isRedirectSource(canonicalPath, redirectRules)) continue;
     if (canonicalPath !== canonicalRouteForFile(filePath)) continue;
     urls.add(normalized);
   }
   return urls;
 }
 
+function validateRobots(actualList) {
+  const disallowRules = robotsRules();
+  const blockedCanonicalUrls = actualList.filter((url) => isBlockedByRobots(new URL(url).pathname, disallowRules));
+  if (blockedCanonicalUrls.length) {
+    fail("robots.txt blocks canonical sitemap URLs.", blockedCanonicalUrls);
+  }
+}
+
+function validateLlms(actual, redirectRules) {
+  const urls = llmsUrls();
+  const invalid = [];
+  for (const url of urls) {
+    if (ALLOWED_LLMS_TECHNICAL_URLS.has(url)) continue;
+    if (!isInternalCanonical(url)) {
+      invalid.push(`${url} is not a clean canonical URL`);
+      continue;
+    }
+    const pathname = normalizeCanonicalPath(new URL(url).pathname);
+    if (isRedirectSource(pathname, redirectRules)) {
+      invalid.push(`${url} is a redirect source`);
+      continue;
+    }
+    if (!actual.has(canonicalUrl(pathname))) {
+      invalid.push(`${url} is not present in sitemap.xml`);
+    }
+  }
+  if (invalid.length) {
+    fail("llms.txt contains non-canonical, redirected or non-sitemap URLs.", invalid);
+  }
+}
+
 const actualList = sitemapUrls();
 const actual = new Set(actualList);
-const expected = expectedUrls();
+const redirectRules = parseRedirectRules();
+const expected = expectedUrls(redirectRules);
 
 const duplicates = actualList.filter((url, index) => actualList.indexOf(url) !== index);
 if (duplicates.length) fail("sitemap.xml contains duplicate URLs.", duplicates);
 
 const invalidUrls = actualList.filter((url) => !isInternalCanonical(url));
 if (invalidUrls.length) fail("sitemap.xml contains invalid canonical URLs.", invalidUrls);
+
+const redirectedUrls = actualList.filter((url) => isRedirectSource(new URL(url).pathname, redirectRules));
+if (redirectedUrls.length) fail("sitemap.xml contains redirect source URLs.", redirectedUrls);
 
 const missing = [...expected].filter((url) => !actual.has(url)).sort();
 const extra = [...actual].filter((url) => !expected.has(url)).sort();
@@ -139,5 +247,8 @@ if (missing.length || extra.length) {
     ...extra.map((url) => `extra: ${url}`),
   ]);
 }
+
+validateRobots(actualList);
+validateLlms(actual, redirectRules);
 
 console.log(`Verified sitemap.xml with ${actual.size} canonical URLs.`);

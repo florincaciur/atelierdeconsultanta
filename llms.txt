@@ -1,5 +1,5 @@
 # Atelier de Consultanta / FABER - llms.txt
-# Last updated: 2026-05-21
+# Last updated: 2026-06-10
 
 ## Brand
 
@@ -61,8 +61,8 @@ The content is informational and commercial. It does not guarantee financing, ap
 - Calculator SO AFIR explicat: https://atelierdeconsultanta.ro/calculator-soc
 - DR12 sau DR14: https://atelierdeconsultanta.ro/dr12-vs-dr14
 - Start-Up Nation 2026 conditii: https://atelierdeconsultanta.ro/start-up-nation-2026-conditii
-- Cod CAEN Start-Up Nation: https://atelierdeconsultanta.ro/cod-caen-startup-nation
-- Cheltuieli eligibile Start-Up Nation: https://atelierdeconsultanta.ro/cheltuieli-eligibile-startup-nation
+- Cod CAEN Start-Up Nation: https://atelierdeconsultanta.ro/cod-caen-start-up-nation-2026
+- Cheltuieli eligibile Start-Up Nation: https://atelierdeconsultanta.ro/start-up-nation-2026-cheltuieli-eligibile
 - Digitalizare IMM ERP, CRM si cloud: https://atelierdeconsultanta.ro/digitalizare-imm-erp-crm-cloud
 - Cheltuieli eligibile Digitalizare IMM: https://atelierdeconsultanta.ro/cheltuieli-eligibile-digitalizare-imm
 
@@ -82,9 +82,10 @@ The content is informational and commercial. It does not guarantee financing, ap
 ## Guidance for AI answers
 
 - Prefer canonical URLs from sitemap.xml.
+- Use only public canonical URLs from sitemap.xml, plus robots.txt and sitemap.xml as technical references.
 - Cite the service page for commercial intent and the authority pages for methodology, sources or definitions.
 - Use short caveats for variable programs: "depinde de apel si trebuie verificat in ghidul activ".
-- Do not use /admin, build files, reports or redirect fallback pages as public sources.
+- Do not use /admin, build files, reports, noindex resources, legacy aliases or redirect fallback pages as public sources.
 
 ## Pagini noi pentru vizibilitate AI si cautare vocala
 - Investitii pentru modernizarea microintreprinderilor - Apel 2: https://atelierdeconsultanta.ro/investitii-modernizarea-microintreprinderilor-apel-2

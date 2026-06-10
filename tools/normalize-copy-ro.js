@@ -305,7 +305,8 @@ function normalizeHtmlCopy(html) {
       if (next !== node.data) node.data = next;
     });
 
-  return changed ? $.html() : html;
+  const output = changed ? $.html() : html;
+  return output.replace(/[ \t]+$/gm, "");
 }
 
 function* walkHtml(target) {

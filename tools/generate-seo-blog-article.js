@@ -8,12 +8,15 @@ const zlib = require("zlib");
 const cp = require("child_process");
 
 const ROOT = path.resolve(__dirname, "..");
-const SITE = "https://atelierdeconsultanta.ro";
 const REPORT_DIR = path.join(ROOT, "reports");
 const {
+  SITE,
+  buildPageMetadata,
   breadcrumbSchema,
   blogPostingSchema,
+  canonicalUrl,
   faqPageSchema,
+  normalizeCanonicalPath,
   organizationSchema
 } = require("./schema-helpers");
 const { brandLogoLink } = require("./brand-logo");
@@ -334,25 +337,17 @@ function fileFromRoute(route) {
 }
 
 function absoluteUrl(route) {
-  return `${SITE}${route}`;
+  return canonicalUrl(route);
 }
 
 function cleanRoute(value) {
-  if (!value || value === "/") return "/";
-  const hashIndex = value.indexOf("#");
-  const queryIndex = value.indexOf("?");
-  const suffixIndex = [hashIndex, queryIndex].filter((index) => index >= 0).sort((a, b) => a - b)[0];
-  const pathname = suffixIndex >= 0 ? value.slice(0, suffixIndex) : value;
-  const suffix = suffixIndex >= 0 ? value.slice(suffixIndex) : "";
-  const withoutHtml = pathname.replace(/\.html$/i, "");
-  const withoutSlash = withoutHtml.length > 1 ? withoutHtml.replace(/\/+$/g, "") : withoutHtml;
-  const clean = withoutSlash || "/";
+  const clean = normalizeCanonicalPath(value);
   const aliases = {
     "/start-up-nation": "/start-up-nation-2026",
     "/consultanta-start-up-nation": "/consultanta-start-up-nation-2026",
     "/start-up-nation-2026-idei-afaceri-plan": "/start-up-nation-2026-idei-afaceri",
   };
-  return `${aliases[clean] || clean}${suffix}`;
+  return aliases[clean] || clean;
 }
 
 function findLocalFile(name) {
@@ -1263,7 +1258,14 @@ function anchorFor(link) {
 function buildArticle(config, research, sourceText, route, internalLinks) {
   const program = config.program;
   const keyword = config.keywordPrincipal;
-  const canonical = absoluteUrl(route);
+  const metadata = buildPageMetadata({
+    title: config.titleSeo,
+    description: config.metaDescription,
+    pathname: route,
+    fallbackTitle: keyword || program,
+    fallbackDescription: config.excerpt || program
+  });
+  const canonical = metadata.canonicalUrl;
   const sourceSnippets = extractSentences(sourceText, [
     "eligibil",
     "cheltuieli",
@@ -1302,8 +1304,8 @@ function buildArticle(config, research, sourceText, route, internalLinks) {
   ];
 
   const blogPosting = blogPostingSchema({
-    headline: config.titleSeo,
-    description: config.metaDescription,
+    headline: metadata.title,
+    description: metadata.description,
     author: config.autor,
     reviewer: config.editor,
     editor: config.editor,
@@ -1318,7 +1320,7 @@ function buildArticle(config, research, sourceText, route, internalLinks) {
   const breadcrumbSchemaNode = breadcrumbSchema([
     { name: "Acasa", item: `${SITE}/` },
     { name: "Blog", item: `${SITE}/blog` },
-    { name: config.titleSeo, item: canonical }
+    { name: metadata.title, item: canonical }
   ]);
 
   const articleSchemas = [organizationSchema({ minimal: true }), blogPosting, faqSchema, breadcrumbSchemaNode].filter(Boolean);
@@ -1328,15 +1330,15 @@ function buildArticle(config, research, sourceText, route, internalLinks) {
   <meta charset="UTF-8" />
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>${esc(config.titleSeo)}</title>
-  <meta name="description" content="${esc(config.metaDescription)}" />
+  <title>${esc(metadata.title)}</title>
+  <meta name="description" content="${esc(metadata.description)}" />
   <meta name="author" content="${esc(config.autor)}" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="${esc(canonical)}" />
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="${esc(config.titleSeo)}" />
-  <meta property="og:description" content="${esc(config.metaDescription)}" />
-  <meta property="og:url" content="${esc(canonical)}" />
+  <meta property="og:title" content="${esc(metadata.title)}" />
+  <meta property="og:description" content="${esc(metadata.description)}" />
+  <meta property="og:url" content="${esc(metadata.ogUrl)}" />
   <meta property="og:image" content="${SITE}/og-image.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
 ${CLARITY_TRACKING_CODE}

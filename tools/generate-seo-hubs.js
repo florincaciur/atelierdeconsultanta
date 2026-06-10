@@ -2,13 +2,18 @@ const fs = require("fs");
 const path = require("path");
 
 const ROOT = path.resolve(__dirname, "..");
-const SITE = "https://atelierdeconsultanta.ro";
 const TODAY = "2026-05-11";
 const {
+  SITE,
+  buildPageMetadata,
+  breadcrumbItemsForPath,
   breadcrumbSchema,
+  canonicalUrl,
   faqPageSchema,
   jsonLdGraph,
+  normalizeCanonicalPath,
   organizationSchema,
+  standardInternalLinksForPath,
   webPageSchema,
   websiteSchema
 } = require("./schema-helpers");
@@ -46,7 +51,7 @@ function cleanHref(value) {
   if (!value) return value;
   if (value.startsWith(`${SITE}/`)) {
     const pathPart = value.slice(SITE.length);
-    return `${SITE}${cleanPath(pathPart)}`;
+    return cleanPath(pathPart);
   }
   if (value.startsWith("/")) return cleanPath(value);
   return value;
@@ -117,7 +122,7 @@ const related = {
   agricultura: ["/fonduri-europene-agricultura/", "Fonduri europene agricultură"],
   pnrr: ["/pnrr/", "PNRR"],
   digitalizare: ["/fonduri-europene-digitalizare/", "Fonduri pentru digitalizare"],
-  startup: ["/start-up-nation/", "Start-Up Nation"],
+  startup: ["/start-up-nation-2026/", "Start-Up Nation 2026"],
   imm: ["/fonduri-europene-imm/", "Fonduri europene IMM"],
   nordest: ["/fonduri-europene-nord-est/", "Fonduri europene Nord-Est"],
   caseStudies: ["/studii-de-caz-fonduri-europene/", "Studii de caz fonduri europene"],
@@ -498,7 +503,30 @@ function esc(value) {
 }
 
 function canonical(slug) {
-  return `${SITE}/${slug}`;
+  const path = normalizeCanonicalPath(slug);
+  return canonicalUrl(CANONICAL_ALIASES.get(path) || path);
+}
+
+function metadataForPage(page) {
+  return buildPageMetadata({
+    title: page.title,
+    description: page.description,
+    pathname: page.slug,
+    fallbackTitle: page.h1 || page.slug,
+    fallbackDescription: page.summary || page.h1
+  });
+}
+
+function breadcrumbItemsForPage(page) {
+  return breadcrumbItemsForPath(`/${page.slug}`, page.h1 || page.title);
+}
+
+function renderBreadcrumb(items) {
+  return `<div class="breadcrumb">${items.map((item, index) => {
+    const label = esc(item.name);
+    if (index === items.length - 1) return label;
+    return `<a href="${cleanHref(item.item)}">${label}</a>`;
+  }).join(" / ")}</div>`;
 }
 
 function faqFor(page) {
@@ -523,24 +551,27 @@ function list(items) {
 }
 
 function links(items) {
-  return items.map(([href, label]) => `<a href="${cleanHref(href)}">${esc(label)}</a>`).join("\n");
+  return (items || []).map((item) => {
+    const href = typeof item === "string" ? item : (Array.isArray(item) ? item[0] : item.href);
+    const label = typeof item === "string"
+      ? cleanHref(href).replace(/^\/+/, "").replace(/-/g, " ")
+      : (Array.isArray(item) ? (item[1] || cleanHref(href).replace(/^\/+/, "").replace(/-/g, " ")) : (item.label || item.name || item.title || cleanHref(href).replace(/^\/+/, "").replace(/-/g, " ")));
+    return `<a href="${cleanHref(href)}">${esc(label)}</a>`;
+  }).join("\n");
 }
 
-function schema(page, faq) {
+function schema(page, faq, metadata = metadataForPage(page)) {
   return jsonLdGraph([
     organizationSchema(),
     websiteSchema(),
     webPageSchema({
-      url: canonical(page.slug),
-      name: page.title,
-      description: page.description,
+      url: metadata.canonicalUrl,
+      name: metadata.title,
+      description: metadata.description,
       about: page.h1,
       dateModified: TODAY
     }),
-    breadcrumbSchema([
-      { name: "Acasa", item: `${SITE}/` },
-      { name: page.h1, item: canonical(page.slug) }
-    ]),
+    breadcrumbSchema(breadcrumbItemsForPage(page)),
     faqPageSchema(faq.map((item) => ({ question: item.q, answer: item.a })), { minItems: 2 })
   ]);
 }
@@ -549,26 +580,27 @@ function pageHtml(page) {
   const faq = faqFor(page);
   const family = designFamilyFor(page);
   const [, heroIcon] = designProfileFor(page);
+  const metadata = metadataForPage(page);
   return `<!DOCTYPE html>
 <html lang="ro">
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>${esc(page.title)}</title>
-  <meta name="description" content="${esc(page.description)}" />
+  <title>${esc(metadata.title)}</title>
+  <meta name="description" content="${esc(metadata.description)}" />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="${canonical(page.slug)}" />
+  <link rel="canonical" href="${metadata.canonicalUrl}" />
   <link rel="icon" type="image/png" href="/favicon.png" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-  <meta property="og:title" content="${esc(page.title)}" />
-  <meta property="og:description" content="${esc(page.description)}" />
-  <meta property="og:url" content="${canonical(page.slug)}" />
+  <meta property="og:title" content="${esc(metadata.title)}" />
+  <meta property="og:description" content="${esc(metadata.description)}" />
+  <meta property="og:url" content="${metadata.ogUrl}" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="${SITE}/og-image.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="stylesheet" href="/assets/seo-hub.css" />
-  <script type="application/ld+json">${schema(page, faq)}</script>
+  <script type="application/ld+json">${schema(page, faq, metadata)}</script>
 ${CLARITY_TRACKING_CODE}
 </head>
 <body class="page-family-${esc(family)}">
@@ -581,7 +613,7 @@ ${CLARITY_TRACKING_CODE}
       <a class="nav-cta btn-primary" href="${cleanHref("/contact/")}">Evaluare gratuită</a>
     </div>
   </nav>
-  <div class="breadcrumb"><a href="/">Acasă</a> / ${esc(page.h1)}</div>
+  ${renderBreadcrumb(breadcrumbItemsForPage(page))}
   <header class="hero hero--${esc(family)}" data-design-family="${esc(family)}">
     <span class="hero-icon" aria-hidden="true"><i class="${esc(heroIcon)}"></i></span>
     <span class="eyebrow design-badge design-badge--${esc(family)}">${esc(designProfileFor(page)[0])}</span>
@@ -613,7 +645,7 @@ ${CLARITY_TRACKING_CODE}
       <ol>${list(page.steps)}</ol>
       <div class="note">Informațiile sunt orientative. Pentru fiecare apel trebuie verificat ghidul solicitantului, anexele, grila de punctaj și forma finală publicată de autoritatea finanțatoare.</div>
       <h2>Resurse conexe</h2>
-      <div class="related-links">${links(page.links)}</div>
+      <div class="related-links">${links(standardInternalLinksForPath(`/${page.slug}`, page.links))}</div>
       <h2>Întrebări frecvente</h2>
       ${faq.map((item) => `<section class="faq-item"><h3>${esc(item.q)}</h3><p>${esc(item.a)}</p></section>`).join("\n      ")}
     </article>

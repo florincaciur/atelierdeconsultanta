@@ -3,10 +3,15 @@ const path = require("path");
 const cp = require("child_process");
 
 const ROOT = path.resolve(__dirname, "..");
-const SITE = "https://atelierdeconsultanta.ro";
 const SITEMAP_PATH = path.join(ROOT, "sitemap.xml");
+const REDIRECTS_PATH = path.join(ROOT, "_redirects");
 const TODAY = new Date();
 const TODAY_ISO = TODAY.toISOString().slice(0, 10);
+const {
+  SITE,
+  canonicalUrl,
+  normalizeCanonicalPath
+} = require("./schema-helpers");
 
 const EXCLUDED_DIRS = new Set([
   ".git",
@@ -52,6 +57,42 @@ function hasNoindexOrRedirect(html) {
   );
 }
 
+function containsDynamicToken(value) {
+  return value.includes("*") || /(^|[^A-Za-z0-9_-]):[A-Za-z][A-Za-z0-9_-]*/.test(value);
+}
+
+function patternToRegex(pattern) {
+  const escaped = String(pattern)
+    .replace(/[|\\{}()[\]^$+?.]/g, "\\$&")
+    .replace(/\*/g, ".*")
+    .replace(/(^|\/):[A-Za-z][A-Za-z0-9_]*/g, (match) => `${match.startsWith("/") ? "/" : ""}[^/]+`);
+  return new RegExp(`^${escaped}$`);
+}
+
+function parseRedirectRules() {
+  if (!fs.existsSync(REDIRECTS_PATH)) return [];
+  return fs.readFileSync(REDIRECTS_PATH, "utf8")
+    .split(/\r?\n/)
+    .map((line) => line.trim())
+    .filter((line) => line && !line.startsWith("#"))
+    .map((line) => {
+      const [source, destination, status = "302"] = line.split(/\s+/);
+      return { source, destination, status };
+    })
+    .filter((rule) => /^3\d\d$/.test(rule.status))
+    .map((rule) => ({
+      ...rule,
+      dynamic: containsDynamicToken(rule.source),
+      regex: containsDynamicToken(rule.source) ? patternToRegex(rule.source) : null
+    }));
+}
+
+function isRedirectSource(pathname, redirectRules) {
+  return redirectRules.some((rule) => (
+    rule.dynamic ? rule.regex.test(pathname) : rule.source === pathname
+  ));
+}
+
 function extractCanonical(html) {
   const linkMatches = html.matchAll(/<link\b[^>]*>/gi);
   for (const match of linkMatches) {
@@ -66,7 +107,7 @@ function extractCanonical(html) {
 function isInternalCanonical(url) {
   try {
     const parsed = new URL(url);
-    return parsed.origin === SITE && !parsed.search && !parsed.hash && !parsed.pathname.endsWith("/index.html") && !parsed.pathname.endsWith(".html");
+    return parsed.origin === SITE && !parsed.search && !parsed.hash && canonicalUrl(parsed.pathname) === url;
   } catch {
     return false;
   }
@@ -192,15 +233,17 @@ function generate() {
   const urls = new Map();
   const previousLastmods = committedSitemapLastmods();
   const dirtyFiles = dirtyTrackedFiles();
+  const redirectRules = parseRedirectRules();
   for (const filePath of walkHtml(ROOT)) {
     const html = fs.readFileSync(filePath, "utf8");
     if (hasNoindexOrRedirect(html)) continue;
     const canonical = extractCanonical(html);
     if (!canonical || !isInternalCanonical(canonical)) continue;
     const parsed = new URL(canonical);
-    const normalized = parsed.pathname === "/" ? `${SITE}/` : canonical.replace(/\/$/, "");
-    const canonicalPath = new URL(normalized).pathname;
+    const canonicalPath = normalizeCanonicalPath(parsed.pathname);
+    const normalized = canonicalUrl(canonicalPath);
     if (isAlternateCanonicalPath(canonicalPath)) continue;
+    if (isRedirectSource(canonicalPath, redirectRules)) continue;
     if (canonicalPath !== canonicalRouteForFile(filePath)) continue;
     urls.set(normalized, {
       file: toPosix(path.relative(ROOT, filePath)),

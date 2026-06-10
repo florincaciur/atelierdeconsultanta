@@ -5,7 +5,6 @@ const fs = require("fs");
 const path = require("path");
 
 const ROOT = path.resolve(__dirname, "..");
-const SITE = "https://atelierdeconsultanta.ro";
 const CONFIG_PATH = path.join(ROOT, "config", "seo-programs.json");
 const SITEMAP_PATH = path.join(ROOT, "sitemap.xml");
 const REDIRECTS_PATH = path.join(ROOT, "_redirects");
@@ -24,11 +23,17 @@ const {
 } = require("./official-sources");
 const { designFamilyForSlug } = require("./design-family-map");
 const {
+  SITE,
+  buildPageMetadata,
+  breadcrumbItemsForPath,
   breadcrumbSchema,
+  canonicalUrl,
   faqPageSchema,
   jsonLdGraph,
+  normalizeCanonicalPath,
   organizationSchema,
   serviceSchema,
+  standardInternalLinksForPath,
   webApplicationSchema,
   webPageSchema,
   websiteSchema
@@ -270,13 +275,43 @@ function slugPath(page) {
 }
 
 function canonical(page) {
-  return `${SITE}${slugPath(page)}`;
+  return canonicalUrl(slugPath(page));
 }
 
 function cleanUrl(value) {
   if (!value || value === "/") return "/";
-  if (/^https?:\/\//i.test(value)) return value;
-  return `/${String(value).replace(/^\/+/, "").replace(/\.html$/i, "").replace(/\/+$/g, "")}`;
+  if (/^https?:\/\//i.test(value)) {
+    try {
+      const url = new URL(value);
+      if (url.origin === SITE) return normalizeCanonicalPath(url.pathname);
+    } catch {
+      return value;
+    }
+    return value;
+  }
+  return normalizeCanonicalPath(value);
+}
+
+function metadataForPage(page) {
+  return buildPageMetadata({
+    title: page.title,
+    description: page.description,
+    pathname: slugPath(page),
+    fallbackTitle: page.h1 || page.slug,
+    fallbackDescription: page.quickAnswer || page.summary || page.h1
+  });
+}
+
+function breadcrumbItemsForPage(page) {
+  return breadcrumbItemsForPath(slugPath(page), page.h1 || page.title);
+}
+
+function renderBreadcrumb(items) {
+  return `<div class="breadcrumb">${items.map((item, index) => {
+    const label = esc(item.name);
+    if (index === items.length - 1) return label;
+    return `<a href="${cleanUrl(item.item)}">${label}</a>`;
+  }).join(" / ")}</div>`;
 }
 
 let bannerHeroImageByRoute = null;
@@ -551,7 +586,13 @@ function li(items) {
 
 function links(items) {
   return (items || [])
-    .map((href) => `<a href="${cleanUrl(href)}">${esc(labelForHref(href))}</a>`)
+    .map((item) => {
+      const href = typeof item === "string" ? item : (Array.isArray(item) ? item[0] : item.href);
+      const label = typeof item === "string"
+        ? labelForHref(href)
+        : (Array.isArray(item) ? (item[1] || labelForHref(href)) : (item.label || item.name || item.title || labelForHref(href)));
+      return `<a href="${cleanUrl(href)}">${esc(label)}</a>`;
+    })
     .join("\n");
 }
 
@@ -689,14 +730,14 @@ function validatePage(page) {
   }
 }
 
-function schemaGraph(page, config) {
+function schemaGraph(page, config, metadata = metadataForPage(page)) {
   const faq = faqsForPage(page);
   const editorial = getEditorialMetadata(page.slug);
   const pageNode = webPageSchema({
     type: page.schemaType === "CollectionPage" ? "CollectionPage" : "WebPage",
-    url: canonical(page),
-    name: page.title,
-    description: page.description,
+    url: metadata.canonicalUrl,
+    name: metadata.title,
+    description: metadata.description,
     dateModified: config.updatedAt
   });
 
@@ -720,10 +761,7 @@ function schemaGraph(page, config) {
     organizationSchema(),
     websiteSchema(),
     pageNode,
-    breadcrumbSchema([
-      { name: "Acasa", item: `${SITE}/` },
-      { name: page.h1, item: canonical(page) }
-    ]),
+    breadcrumbSchema(breadcrumbItemsForPage(page)),
     faqPageSchema(faq, { minItems: 2 })
   ];
 
@@ -733,7 +771,7 @@ function schemaGraph(page, config) {
       "@id": `${canonical(page)}#article`,
       "mainEntityOfPage": { "@id": pageNode["@id"] },
       "headline": publicText(page.h1 || page.title),
-      "description": publicText(page.description),
+      "description": publicText(metadata.description),
       "inLanguage": "ro-RO",
       "author": { "@id": `${SITE}/#organization` },
       "publisher": { "@id": `${SITE}/#organization` },
@@ -749,9 +787,9 @@ function schemaGraph(page, config) {
   if (page.type === "program" || page.type === "service" || page.schemaType === "Service" || page.schemaType === "GovernmentService") {
     const serviceNode = serviceSchema({
       type: page.schemaType === "GovernmentService" ? "GovernmentService" : "Service",
-      url: canonical(page),
+      url: metadata.canonicalUrl,
       name: page.programName || page.h1,
-      description: page.description,
+      description: metadata.description,
       serviceType: page.category
     });
     if (isEditorialProgram(page)) {
@@ -770,9 +808,9 @@ function schemaGraph(page, config) {
 
   if (page.type === "tools") {
     graph.push(webApplicationSchema({
-      url: canonical(page),
+      url: metadata.canonicalUrl,
       name: "Instrumente fonduri europene",
-      description: page.description,
+      description: metadata.description,
       applicationCategory: "FinanceApplication"
     }));
   }
@@ -782,7 +820,7 @@ function schemaGraph(page, config) {
       "@type": "CreativeWorkSeries",
       "@id": `${canonical(page)}#portfolio-series`,
       "name": "Portofoliu FABER - studii de caz anonimizate",
-      "description": publicText(page.description),
+      "description": publicText(metadata.description),
       "publisher": { "@id": `${SITE}/#organization` },
       "inLanguage": "ro-RO"
     });
@@ -1753,6 +1791,7 @@ ${officialSourcesHtml}
 }
 
 function pageHtml(page, config) {
+  const metadata = metadataForPage(page);
   const family = designFamilyFor(page);
   const relatedCss = (page.related || []).length ? `\n  <link rel="stylesheet" href="/assets/see-also.css" />` : "";
   const toolCss = page.includeTools || page.includeDownloads ? `\n  <link rel="stylesheet" href="/assets/seo-tools.css" />` : "";
@@ -1774,25 +1813,25 @@ function pageHtml(page, config) {
   <meta charset="UTF-8" />
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>${esc(page.title)}</title>
-  <meta name="description" content="${esc(page.description)}" />
+  <title>${esc(metadata.title)}</title>
+  <meta name="description" content="${esc(metadata.description)}" />
   <meta name="robots" content="index, follow" />
   <meta name="seo-depth" content="true" />
   <meta name="seo-min-words" content="${minWordsForPage(page)}" />
   <meta name="seo-min-faq" content="${minFaqForPage(page)}" />
-  <link rel="canonical" href="${canonical(page)}" />
+  <link rel="canonical" href="${metadata.canonicalUrl}" />
   <link rel="icon" type="image/png" href="/favicon.png" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-  <meta property="og:title" content="${esc(page.title)}" />
-  <meta property="og:description" content="${esc(page.description)}" />
-  <meta property="og:url" content="${canonical(page)}" />
+  <meta property="og:title" content="${esc(metadata.title)}" />
+  <meta property="og:description" content="${esc(metadata.description)}" />
+  <meta property="og:url" content="${metadata.ogUrl}" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="${SITE}/og-image.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="preload" as="style" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/duotone/style.css" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript><link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/duotone/style.css" /></noscript>
   <link rel="stylesheet" href="/assets/seo-hub.css" />${extraCss}
-  <script type="application/ld+json">${schemaGraph(page, config)}</script>${extraJs}
+  <script type="application/ld+json">${schemaGraph(page, config, metadata)}</script>${extraJs}
 ${CLARITY_TRACKING_CODE}
   <link rel="stylesheet" href="/assets/design-profiles.css">
 </head>
@@ -1807,7 +1846,7 @@ ${CLARITY_TRACKING_CODE}
       <a class="nav-cta btn-primary" href="/contact">Solicita verificare eligibilitate</a>
     </div>
   </nav>
-  <div class="breadcrumb"><a href="/">Acasa</a> / ${esc(page.h1)}</div>
+  ${renderBreadcrumb(breadcrumbItemsForPage(page))}
   <header ${heroAttrs(page)}>
     <span class="hero-icon" aria-hidden="true"><i class="${esc(heroIconFor(page))}"></i></span>
     <span class="eyebrow design-badge design-badge--${esc(family)}">${esc(heroBadgeFor(page))}</span>
@@ -1822,7 +1861,7 @@ ${CLARITY_TRACKING_CODE}
     <article class="panel">
 ${renderFamilyCards(page)}
 ${renderMainContent(page)}
-      <div class="related-links">${links(page.related)}</div>
+      <div class="related-links">${links(standardInternalLinksForPath(slugPath(page), page.related))}</div>
     </article>
     <section class="cta-box">
       <h2>${esc(finalCtaTitle)}</h2>
