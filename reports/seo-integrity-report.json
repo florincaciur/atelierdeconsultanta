@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-11T14:45:56.811Z",
+  "generatedAt": "2026-06-11T15:00:33.936Z",
   "root": "C:\\Users\\flori\\Documents\\GitHub\\atelierdeconsultanta",
   "summary": {
     "totalFiles": 170,
@@ -4036,7 +4036,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Femeia Antreprenor 2026: condiții, idei de afaceri și pregătire"
+            "Condiții și idei de afaceri pentru Femeia Antreprenor 2026"
           ]
         },
         "visibleFaqForSchema": {
@@ -4053,7 +4053,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 1300,
+          "words": 1342,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -4095,7 +4095,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Femeia Antreprenor 2026: eligibilitate și pregătire"
+            "Femeia Antreprenor 2026: program, eligibilitate și dosar"
           ]
         },
         "visibleFaqForSchema": {
@@ -4112,13 +4112,13 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1733,
+          "words": 1799,
           "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
           "required": false,
-          "count": 1,
+          "count": 2,
           "note": "not a hub/blog page"
         }
       }
@@ -4155,7 +4155,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Femeia Antreprenor 2026: eligibilitate și pregătire"
+            "Femeia Antreprenor 2026: program, eligibilitate și dosar"
           ]
         },
         "visibleFaqForSchema": {
@@ -4172,13 +4172,13 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1733,
+          "words": 1799,
           "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
           "required": false,
-          "count": 1,
+          "count": 2,
           "note": "not a hub/blog page"
         }
       }
@@ -4445,7 +4445,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Fondul de Modernizare: finanțări pentru energie, fotovoltaice și autoconsum"
+            "Fondul de Modernizare: proiecte de fotovoltaice și autoconsum"
           ]
         },
         "visibleFaqForSchema": {
@@ -4462,7 +4462,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1592,
+          "words": 1622,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -4504,7 +4504,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Fondul de Modernizare: finanțări pentru energie, fotovoltaice și autoconsum"
+            "Fondul de Modernizare: proiecte de fotovoltaice și autoconsum"
           ]
         },
         "visibleFaqForSchema": {
@@ -4521,7 +4521,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1592,
+          "words": 1622,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -4619,7 +4619,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Fondul de Modernizare: index pentru masurile de finanțare"
+            "Fondul de Modernizare: hub pentru apeluri de energie"
           ]
         },
         "visibleFaqForSchema": {
@@ -4636,13 +4636,13 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1495,
+          "words": 1536,
           "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
           "required": true,
-          "count": 1
+          "count": 2
         }
       }
     },
@@ -4678,7 +4678,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Fondul pentru Modernizare: capacitati noi de producere a energiei regenerabile"
+            "Fondul pentru Modernizare: capacități noi de energie regenerabilă"
           ]
         },
         "visibleFaqForSchema": {
@@ -4695,13 +4695,13 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1646,
+          "words": 1672,
           "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
           "required": false,
-          "count": 1,
+          "count": 2,
           "note": "not a hub/blog page"
         }
       }
@@ -4738,7 +4738,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Fondul pentru Modernizare: capacitati noi de producere a energiei regenerabile"
+            "Fondul pentru Modernizare: capacități noi de energie regenerabilă"
           ]
         },
         "visibleFaqForSchema": {
@@ -4755,13 +4755,13 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1646,
+          "words": 1672,
           "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
           "required": false,
-          "count": 1,
+          "count": 2,
           "note": "not a hub/blog page"
         }
       }
@@ -5435,7 +5435,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Fonduri europene pentru femei antreprenor"
+            "Fonduri europene pentru femei antreprenor: hub de orientare"
           ]
         },
         "visibleFaqForSchema": {
@@ -5452,13 +5452,13 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1562,
+          "words": 1651,
           "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
           "required": true,
-          "count": 1
+          "count": 2
         }
       }
     },

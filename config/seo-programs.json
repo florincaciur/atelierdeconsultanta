@@ -1335,10 +1335,10 @@
       "type": "program",
       "schemaType": "GovernmentService",
       "category": "Antreprenoriat feminin",
-      "title": "Femeia Antreprenor 2026 | pregătire",
-      "description": "Femeia Antreprenor 2026: beneficiari, eligibilitate, idei de investiții, CAEN, documente și pregătire prudentă înainte de lansare.",
-      "h1": "Femeia Antreprenor 2026: eligibilitate și pregătire",
-      "quickAnswer": "Pagina tratează pregătirea pentru Femeia Antreprenor 2026 fără să presupună apel deschis. Verificarea include structura acționariatului, rolul femeii antreprenor, CAEN-ul, activitatea, ideea de investiție, documentele firmei, bugetul și procedura activă atunci când este publicată.",
+      "title": "Femeia Antreprenor 2026 | program, eligibilitate și dosar",
+      "description": "Pagina de program Femeia Antreprenor 2026: eligibilitate, acționariat, CAEN, buget, documente și pași de pregătire pentru dosar.",
+      "h1": "Femeia Antreprenor 2026: program, eligibilitate și dosar",
+      "quickAnswer": "Aceasta este pagina de program pentru Femeia Antreprenor 2026, nu hubul general pentru toate fondurile destinate femeilor antreprenor. Verificarea include structura acționariatului, rolul femeii antreprenor, CAEN-ul, activitatea, ideea de investiție, documentele firmei, bugetul și procedura activă atunci când este publicată.",
       "programName": "Femeia Antreprenor 2026",
       "policyContribution": "programul incurajeaza antreprenoriatul feminin și investițiile în firme conduse sau detinute de femei, cu accent pe dezvoltare economică realistă.",
       "funding": "grantul maxim, contributia proprie și regulile finale se verifică în procedura editiei active.",
@@ -1422,6 +1422,7 @@
         "/fonduri-europene-femei-antreprenor",
         "/femeia-antreprenor-2026-conditii-idei-afaceri",
         "/fonduri-europene-imm",
+        "/consultanta-fonduri-europene",
         "/verificare-eligibilitate-fonduri-europene",
         "/instrumente"
       ],
@@ -1432,6 +1433,26 @@
       "officialGuideKey": "femeia",
       "guideCtaLabel": "Ghid oficial",
       "contentSections": [
+        {
+          "title": "Program concret, hub general si articol suport",
+          "paragraphs": [
+            "Pagina aceasta ramane ruta pentru programul Femeia Antreprenor 2026. Pentru compararea cu alte optiuni foloseste hubul fonduri pentru femei antreprenor; pentru intrebari informationale despre conditii, idei si riscuri foloseste articolul suport."
+          ],
+          "links": [
+            {
+              "href": "/fonduri-europene-femei-antreprenor",
+              "label": "Hub fonduri pentru femei antreprenor"
+            },
+            {
+              "href": "/femeia-antreprenor-2026-conditii-idei-afaceri",
+              "label": "Conditii si idei de afaceri"
+            },
+            {
+              "href": "/consultanta-fonduri-europene",
+              "label": "Consultanta fonduri europene"
+            }
+          ]
+        },
         {
           "title": "Capital social, asociat majoritar și documente",
           "paragraphs": [
@@ -2056,10 +2077,10 @@
       "type": "program",
       "schemaType": "GovernmentService",
       "category": "Energie",
-      "title": "Fondul de Modernizare - energie, fotovoltaice și autoconsum",
-      "description": "Ghid Fondul de Modernizare pentru energie, fotovoltaice și autoconsum: eligibilitate, cheltuieli, documente, evaluare și pasi de aplicare.",
-      "h1": "Fondul de Modernizare: finanțări pentru energie, fotovoltaice și autoconsum",
-      "quickAnswer": "Cum pot obține finanțare pentru energie prin Fondul de Modernizare? Porneste de la consum, capacitatea propusa, amplasament, avize și documentele tehnice.",
+      "title": "Fotovoltaice și autoconsum | Fondul de Modernizare",
+      "description": "Pagina aplicată pentru proiecte de fotovoltaice și autoconsum prin Fondul de Modernizare: consum, amplasament, avize, buget și documente.",
+      "h1": "Fondul de Modernizare: proiecte de fotovoltaice și autoconsum",
+      "quickAnswer": "Aceasta este pagina aplicata pentru fotovoltaice și autoconsum. Hubul Fondul de Modernizare ramane orientarea generala intre apeluri, iar proiectele de energie regenerabila cu capacitate noua se trateaza separat.",
       "programName": "Fondul de Modernizare - energie și autoconsum",
       "policyContribution": "programul susține tranzitia energetica, productia de energie regenerabilă, autoconsumul și reducerea presiunii costurilor energetice pentru beneficiari eligibili.",
       "funding": "valorile, intensitatile și plafoanele se confirma în apelul activ.",
@@ -2141,8 +2162,9 @@
         ]
       ],
       "related": [
-        "/fondul-modernizare-energie-regenerabila-2026",
         "/fondul-de-modernizare",
+        "/fondul-modernizare-energie-regenerabila-2026",
+        "/consultanta-fonduri-europene",
         "/finantari-panouri-fotovoltaice",
         "/afir-autoconsum-agroalimentar",
         "/instrumente"
@@ -2155,11 +2177,23 @@
       "guideCtaLabel": "Ghid oficial",
       "contentSections": [
         {
-          "title": "Legatura cu AFIR autoconsum și panouri fotovoltaice",
+          "title": "Pagina aplicata pentru autoconsum, nu hub general",
           "paragraphs": [
-            "Fondul de Modernizare trebuie comparat cu AFIR autoconsum și cu paginile dedicate panourilor fotovoltaice. Verifică beneficiarul, schema, avizele, racordarea, stocarea, autoconsumul și obligatiile tehnice înainte de buget."
+            "Pentru orientare intre apeluri porneste din hubul Fondul de Modernizare. Pe aceasta pagina verificarea se restrange la consum, dimensionarea instalatiei, amplasament, racordare, stocare si documente tehnice. Pentru capacitate noua de energie regenerabila foloseste pagina dedicata, iar pentru incadrare preliminara vezi consultanta generala."
           ],
           "links": [
+            {
+              "href": "/fondul-de-modernizare",
+              "label": "Hub Fondul de Modernizare"
+            },
+            {
+              "href": "/fondul-modernizare-energie-regenerabila-2026",
+              "label": "Energie regenerabila 2026"
+            },
+            {
+              "href": "/consultanta-fonduri-europene",
+              "label": "Consultanta fonduri europene"
+            },
             {
               "href": "/afir-autoconsum-agroalimentar",
               "label": "AFIR autoconsum"
@@ -2178,10 +2212,10 @@
       "type": "program",
       "schemaType": "GovernmentService",
       "category": "Energie",
-      "title": "Fondul pentru Modernizare energie regenerabilă 2026 - ghid proiect",
-      "description": "Pagina pentru investiții în noi capacitati de producere a energiei electrice regenerabile: eligibilitate, cheltuieli, documente și aplicare.",
-      "h1": "Fondul pentru Modernizare: capacitati noi de producere a energiei regenerabile",
-      "quickAnswer": "Cum pregătesc un proiect de energie regenerabilă? Verifică beneficiarul, terenul sau amplasamentul, racordarea, solutia tehnică, avizele și bugetul.",
+      "title": "Energie regenerabilă 2026 | Fondul pentru Modernizare",
+      "description": "Pagina pentru capacități noi de energie regenerabilă prin Fondul pentru Modernizare: amplasament, racordare, soluție tehnică, avize și buget.",
+      "h1": "Fondul pentru Modernizare: capacități noi de energie regenerabilă",
+      "quickAnswer": "Aceasta este pagina aplicata pentru capacitati noi de energie regenerabila. Hubul Fondul de Modernizare ramane pagina-cadru pentru apeluri, iar pagina de fotovoltaice si autoconsum trateaza proiectele dimensionate prin consum propriu.",
       "programName": "Fondul pentru Modernizare - energie regenerabilă",
       "policyContribution": "apelul susține noi capacitati de producere a energiei electrice din surse regenerabile și contribuie la obiectivele de tranzitie energetica.",
       "funding": "plafoanele, intensitatea și condițiile de selecție se confirma în ghidul apelului activ.",
@@ -2264,8 +2298,9 @@
         ]
       ],
       "related": [
-        "/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum",
         "/fondul-de-modernizare",
+        "/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum",
+        "/consultanta-fonduri-europene",
         "/resurse",
         "/contact"
       ],
@@ -2277,9 +2312,23 @@
       "guideCtaLabel": "Ghid oficial",
       "contentSections": [
         {
-          "title": "Surse regenerabile, autoconsum, stocare și avize",
+          "title": "Capacitate noua, separat de autoconsum",
           "paragraphs": [
-            "Proiectele de energie regenerabilă trebuie pregătite tehnic: amplasament, avize, racordare, putere instalata, autoconsum, stocare, criterii tehnice și obligații de exploatare. Bugetul se valideaza doar după ce aceste elemente sunt verificabile."
+            "Pagina aceasta trateaza proiecte de capacitate noua pentru energie regenerabila: amplasament, racordare, putere instalata, avize, criterii tehnice si obligatii de exploatare. Pentru orientarea intre apeluri revino la hubul Fondul de Modernizare, iar pentru autoconsum si fotovoltaice foloseste pagina aplicata separata."
+          ],
+          "links": [
+            {
+              "href": "/fondul-de-modernizare",
+              "label": "Hub Fondul de Modernizare"
+            },
+            {
+              "href": "/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum",
+              "label": "Fotovoltaice si autoconsum"
+            },
+            {
+              "href": "/consultanta-fonduri-europene",
+              "label": "Consultanta fonduri europene"
+            }
           ]
         }
       ]
@@ -6771,18 +6820,45 @@
       "category": "Femei antreprenor",
       "minWords": 1200,
       "minFaq": 6,
-      "title": "Fonduri europene femei antreprenor 2026 - ghid",
-      "description": "Fonduri europene pentru femei antreprenor 2026: programe, grant Femeia Antreprenor, eligibilitate, cheltuieli și pasi.",
-      "h1": "Fonduri europene pentru femei antreprenor",
-      "quickAnswer": "Fondurile pentru femei antreprenor se verifică prin structura firmei, activitate, buget, documente și regulile programului activ.",
+      "title": "Fonduri europene pentru femei antreprenor | hub IMM",
+      "description": "Hub general pentru femei antreprenor: compară programul Femeia Antreprenor 2026 cu alte fonduri IMM, eligibilitate, documente și consultanță.",
+      "h1": "Fonduri europene pentru femei antreprenor: hub de orientare",
+      "quickAnswer": "Aceasta este pagina generala pentru femei antreprenor. Ea ajuta la compararea programului Femeia Antreprenor 2026 cu alte fonduri pentru IMM, fara sa dubleze pagina de program concret.",
       "programName": "Fonduri europene femei antreprenor",
       "related": [
         "/femeia-antreprenor-2026",
+        "/femeia-antreprenor-2026-conditii-idei-afaceri",
         "/fonduri-europene-imm",
         "/consultanta-fonduri-europene",
         "/contact"
       ],
-      "heroIcon": "ph-duotone ph-info"
+      "heroIcon": "ph-duotone ph-info",
+      "contentSections": [
+        {
+          "title": "Hub general, program concret si consultanta",
+          "paragraphs": [
+            "Pagina generala ajuta la orientare intre programe pentru femei antreprenor, fonduri IMM si verificarea documentelor. Cand intentia este programul dedicat, ruta principala ramane Femeia Antreprenor 2026; cand intrebarea este despre idei, conditii sau riscuri, articolul suport completeaza pagina de program."
+          ],
+          "links": [
+            {
+              "href": "/femeia-antreprenor-2026",
+              "label": "Programul Femeia Antreprenor 2026"
+            },
+            {
+              "href": "/femeia-antreprenor-2026-conditii-idei-afaceri",
+              "label": "Conditii si idei de afaceri"
+            },
+            {
+              "href": "/fonduri-europene-imm",
+              "label": "Fonduri europene IMM"
+            },
+            {
+              "href": "/consultanta-fonduri-europene",
+              "label": "Consultanta fonduri europene"
+            }
+          ]
+        }
+      ]
     },
     {
       "funding": "finantarea, contributia proprie, pragurile și termenele se confirma în ghidul apelului activ; pagina evita valori fixe când nu există apel final publicat sau documente verificate.",
@@ -7653,9 +7729,11 @@
         ]
       ],
       "related": [
-        "/pro-infra",
+        "/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum",
         "/fondul-modernizare-energie-regenerabila-2026",
         "/finantari-panouri-fotovoltaice",
+        "/consultanta-fonduri-europene",
+        "/pro-infra",
         "/contact",
         "/afir-autoconsum-agroalimentar",
         "/e-move"
@@ -7666,18 +7744,32 @@
       "slug": "fondul-de-modernizare",
       "output": "fondul-de-modernizare/index.html",
       "category": "Fondul de Modernizare",
-      "title": "Fondul de Modernizare - energie și finanțări 2026",
-      "description": "Fondul de Modernizare: index pentru energie regenerabilă, fotovoltaice, autoconsum, eficiență energetica, documente și programe active.",
-      "h1": "Fondul de Modernizare: index pentru masurile de finanțare",
-      "quickAnswer": "Fondul de Modernizare trebuie urmărit pe apeluri distincte, cu verificarea solicitantului, a investiției energetice, a documentelor tehnice și a cofinanțării.",
+      "title": "Fondul de Modernizare | hub energie și apeluri",
+      "description": "Hub Fondul de Modernizare pentru orientare între apeluri de energie: fotovoltaice, autoconsum, capacități regenerabile, PRO INFRA, e-MOVE și consultanță.",
+      "h1": "Fondul de Modernizare: hub pentru apeluri de energie",
+      "quickAnswer": "Aceasta este pagina-cadru pentru Fondul de Modernizare. Ea separa apelurile de energie, fotovoltaice, autoconsum, capacitati regenerabile, PRO INFRA si e-MOVE, apoi trimite catre paginile aplicate unde se verifica documentele tehnice.",
       "programName": "Fondul de Modernizare",
       "heroIcon": "ph-duotone ph-sun",
       "officialGuideKey": "fondul-modernizare",
       "contentSections": [
         {
-          "title": "Carduri tematice Fondul de Modernizare",
+          "title": "Hubul trimite catre pagini aplicate",
           "paragraphs": [
-            "Fondul de Modernizare trebuie citit pe apeluri: energie regenerabilă, autoconsum, PRO INFRA și e-MOVE au reguli, beneficiari, avize și documente diferite."
+            "Fondul de Modernizare trebuie citit pe apeluri: energie regenerabila, autoconsum, PRO INFRA si e-MOVE au reguli, beneficiari, avize si documente diferite. Foloseste hubul pentru orientare, apoi mergi pe pagina aplicata potrivita proiectului."
+          ],
+          "links": [
+            {
+              "href": "/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum",
+              "label": "Fotovoltaice si autoconsum"
+            },
+            {
+              "href": "/fondul-modernizare-energie-regenerabila-2026",
+              "label": "Energie regenerabila 2026"
+            },
+            {
+              "href": "/consultanta-fonduri-europene",
+              "label": "Consultanta fonduri europene"
+            }
           ]
         }
       ]
