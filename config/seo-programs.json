@@ -1452,9 +1452,9 @@
       "type": "program",
       "schemaType": "GovernmentService",
       "category": "Digitalizare IMM",
-      "title": "Digitalizare IMM | ERP, CRM, cloud",
-      "description": "Digitalizare IMM: ERP, CRM, cloud, securitate cibernetică, echipamente IT, servicii și legătura cheltuielilor cu activitatea firmei.",
-      "h1": "Digitalizare IMM: ERP, CRM, cloud și securitate",
+      "title": "Digitalizare IMM | hub pentru proiecte si buget IT",
+      "description": "Hub Digitalizare IMM pentru alegerea rutei potrivite: PNRR digitalizare, ERP/CRM/cloud, cheltuieli eligibile, buget IT si consultanta.",
+      "h1": "Digitalizare IMM: hub pentru proiecte, buget IT si consultanta",
       "quickAnswer": "Un proiect de digitalizare trebuie să arate ce proces se îmbunătățește: vânzări, producție, gestiune, raportare, relația cu clienții sau securitatea datelor. ERP, CRM, cloud, hardware și securitate cibernetică pot fi analizate doar dacă sunt permise de ghid și sunt legate de activitatea reală.",
       "programName": "Digitalizare IMM",
       "policyContribution": "programul susține transformarea digitala a IMM-urilor, automatizarea proceselor, cresterea eficientei și utilizarea unor instrumente digitale masurabile.",
@@ -1538,13 +1538,13 @@
       ],
       "related": [
         "/digitalizare-imm-pnrr",
-        "/pnrr-digitalizare-imm-cheltuieli-eligibile",
-        "/fonduri-europene-digitalizare",
-        "/consultanta-pnrr-digitalizare",
-        "/instrumente",
-        "/cheltuieli-eligibile-digitalizare-imm",
-        "/digitalizare-imm-erp-crm-cloud",
         "/pnrr",
+        "/digitalizare-imm-erp-crm-cloud",
+        "/cheltuieli-eligibile-digitalizare-imm",
+        "/consultanta-pnrr-digitalizare",
+        "/fonduri-europene-digitalizare",
+        "/pnrr-digitalizare-imm-cheltuieli-eligibile",
+        "/instrumente",
         {
           "href": "/pocidif-21",
           "label": "PoCIDIF 2.1"
@@ -1559,6 +1559,30 @@
       "guideCtaLabel": "Ghid oficial",
       "contentSections": [
         {
+          "title": "Alege ruta corecta pentru digitalizare",
+          "paragraphs": [
+            "Pagina Digitalizare IMM ramane hubul de orientare. Pentru apeluri si reguli PNRR foloseste pagina aplicata PNRR / digitalizare; pentru solutii tehnice mergi la ERP, CRM si cloud; pentru buget consulta pagina de cheltuieli eligibile; iar pentru un proiect concret foloseste pagina de consultanta PNRR digitalizare."
+          ],
+          "links": [
+            {
+              "href": "/digitalizare-imm-pnrr",
+              "label": "PNRR / digitalizare"
+            },
+            {
+              "href": "/digitalizare-imm-erp-crm-cloud",
+              "label": "ERP, CRM si cloud"
+            },
+            {
+              "href": "/cheltuieli-eligibile-digitalizare-imm",
+              "label": "Cheltuieli eligibile"
+            },
+            {
+              "href": "/consultanta-pnrr-digitalizare",
+              "label": "Consultanta PNRR digitalizare"
+            }
+          ]
+        },
+        {
           "title": "Exemple de cheltuieli digitale",
           "items": [
             "ERP pentru gestiune, producție, stocuri sau raportare;",
@@ -1572,8 +1596,12 @@
               "label": "ERP, CRM și cloud"
             },
             {
-              "href": "/pnrr",
-              "label": "PNRR"
+              "href": "/cheltuieli-eligibile-digitalizare-imm",
+              "label": "Ce poti cumpara prin Digitalizare IMM"
+            },
+            {
+              "href": "/digitalizare-imm-pnrr",
+              "label": "PNRR / digitalizare"
             }
           ]
         },
@@ -3139,9 +3167,9 @@
       "type": "hub",
       "schemaType": "WebPage",
       "category": "PNRR",
-      "title": "PNRR pentru IMM-uri și digitalizare",
-      "description": "Hub PNRR pentru IMM-uri: apeluri specifice, digitalizare, cheltuieli eligibile, documente, indicatori și reguli de confirmat oficial.",
-      "h1": "PNRR: apeluri, digitalizare și reguli specifice",
+      "title": "PNRR | pagina-cadru pentru apeluri si digitalizare",
+      "description": "Pagina-cadru PNRR pentru IMM-uri: cum separi apelurile, digitalizarea aplicata, cheltuielile, documentele, indicatorii si regulile oficiale.",
+      "h1": "PNRR: pagina-cadru pentru apeluri si digitalizare",
       "quickAnswer": "PNRR are apeluri și reguli specifice, cu obiective, indicatori, termene și documente proprii. Pentru IMM-uri, digitalizarea trebuie legată de procese reale și de cheltuieli justificabile. Pagina trimite către Digitalizare IMM și articolul despre cheltuieli eligibile.",
       "programName": "PNRR",
       "policyContribution": "PNRR pune accent pe tinte, jaloane, termene și implementare verificabila.",
@@ -3221,10 +3249,10 @@
         ]
       ],
       "related": [
-        "/digitalizare-imm",
         "/digitalizare-imm-pnrr",
-        "/pnrr-digitalizare-imm-cheltuieli-eligibile",
+        "/digitalizare-imm",
         "/consultanta-pnrr-digitalizare",
+        "/pnrr-digitalizare-imm-cheltuieli-eligibile",
         "/instrumente"
       ],
       "sourceKeys": [
@@ -3233,25 +3261,29 @@
       "heroIcon": "ph-duotone ph-desktop",
       "contentSections": [
         {
-          "title": "PNRR nu este un program unic",
+          "title": "Pagina-cadru PNRR versus pagina aplicata de digitalizare",
           "paragraphs": [
-            "Fiecare apel PNRR trebuie citit separat. Ce a fost permis într-un apel poate să nu fie permis în altul, iar indicatorii și termenele pot schimbă bugetul."
+            "Aceasta este pagina-cadru pentru PNRR: explica faptul ca fiecare apel are reguli, indicatori si termene proprii. Pentru proiecte digitale concrete, pagina aplicata este Digitalizare IMM / PNRR, unde verificarea pleaca de la procese, solutii IT, cheltuieli si documente."
           ],
           "links": [
             {
-              "href": "/digitalizare-imm",
-              "label": "Digitalizare IMM"
+              "href": "/digitalizare-imm-pnrr",
+              "label": "Pagina aplicata Digitalizare IMM / PNRR"
             },
             {
-              "href": "/pnrr-digitalizare-imm-cheltuieli-eligibile",
-              "label": "Cheltuieli eligibile"
+              "href": "/digitalizare-imm",
+              "label": "Hub Digitalizare IMM"
+            },
+            {
+              "href": "/consultanta-pnrr-digitalizare",
+              "label": "Consultanta PNRR digitalizare"
             }
           ]
         },
         {
           "title": "Status PNRR",
           "paragraphs": [
-            "Statusul PNRR se confirma în sursele oficiale. Pentru proiecte digitale, compara pagina PNRR cu digitalizare IMM și consultanță PNRR digitalizare înainte de buget."
+            "Statusul PNRR se confirma in sursele oficiale. Pentru proiecte digitale, compara pagina-cadru PNRR cu pagina aplicata Digitalizare IMM / PNRR si cu pagina de consultanta inainte de buget."
           ]
         }
       ],
@@ -6386,14 +6418,17 @@
       "category": "Consultanță digitalizare",
       "minWords": 1200,
       "minFaq": 6,
-      "title": "Consultanță PNRR Digitalizare - eligibilitate IMM",
-      "description": "Consultanță PNRR Digitalizare pentru IMM: eligibilitate, software, hardware, buget, documente, indicatori și implementare.",
+      "title": "Consultanta PNRR Digitalizare | verificare proiect IMM",
+      "description": "Consultanta PNRR Digitalizare pentru proiecte IMM concrete: eligibilitate, procese digitale, software, hardware, buget, documente si indicatori.",
       "h1": "Consultanță PNRR digitalizare",
       "quickAnswer": "Consultanță PNRR digitalizare porneste de la procesele firmei, cheltuielile digitale, documente și indicatori masurabili.",
       "programName": "Consultanță PNRR digitalizare",
       "related": [
         "/digitalizare-imm",
         "/digitalizare-imm-pnrr",
+        "/pnrr",
+        "/cheltuieli-eligibile-digitalizare-imm",
+        "/digitalizare-imm-erp-crm-cloud",
         "/granturi-digitalizare-imm",
         "/contact"
       ],
@@ -6404,6 +6439,24 @@
           "title": "PNRR digitalizare versus programe regionale",
           "paragraphs": [
             "PNRR digitalizare și programele regionale pentru digitalizare IMM nu trebuie tratate ca acelasi apel. Difera sursa, calendarul, cheltuielile, indicatorii și documentele."
+          ],
+          "links": [
+            {
+              "href": "/digitalizare-imm",
+              "label": "Hub Digitalizare IMM"
+            },
+            {
+              "href": "/digitalizare-imm-pnrr",
+              "label": "Pagina aplicata Digitalizare IMM / PNRR"
+            },
+            {
+              "href": "/pnrr",
+              "label": "Pagina-cadru PNRR"
+            },
+            {
+              "href": "/cheltuieli-eligibile-digitalizare-imm",
+              "label": "Cheltuieli eligibile"
+            }
           ]
         }
       ]
@@ -6492,13 +6545,17 @@
       "category": "PNRR Digitalizare",
       "minWords": 1200,
       "minFaq": 6,
-      "title": "Digitalizare IMM PNRR - software, echipamente și pasi",
-      "description": "Digitalizare IMM PNRR: eligibilitate, software, echipamente, servicii digitale, securitate, buget, documente și pasi.",
-      "h1": "Digitalizare IMM / PNRR",
-      "quickAnswer": "Digitalizare IMM PNRR se verifică prin procesele firmei, solutii digitale, buget, documente și indicatori de transformare digitala.",
+      "title": "Digitalizare IMM PNRR | pagina aplicată pentru proiecte digitale",
+      "description": "Pagina aplicată pentru Digitalizare IMM PNRR: procese, software, echipamente, securitate, cheltuieli, documente, indicatori și consultanță.",
+      "h1": "Digitalizare IMM / PNRR: pagina aplicată pentru proiecte digitale",
+      "quickAnswer": "Digitalizare IMM PNRR este pagina aplicată pentru proiecte digitale concrete. Ea pornește de la procesele firmei, soluții IT, buget, documente, cheltuieli și indicatori; pagina PNRR rămâne cadrul general pentru apeluri, reguli și termene.",
       "programName": "Digitalizare IMM PNRR",
       "related": [
+        "/pnrr",
         "/digitalizare-imm",
+        "/consultanta-pnrr-digitalizare",
+        "/cheltuieli-eligibile-digitalizare-imm",
+        "/digitalizare-imm-erp-crm-cloud",
         "/granturi-digitalizare-imm",
         "/fonduri-europene-digitalizare",
         "/contact"
@@ -6507,18 +6564,26 @@
       "officialGuideKey": "digitalizare-pnrr",
       "contentSections": [
         {
-          "title": "PNRR digitalizare versus programe regionale și Digitalizare IMM",
+          "title": "Pagina aplicată PNRR digitalizare versus pagina-cadru PNRR",
           "paragraphs": [
-            "PNRR digitalizare, programele regionale și apelurile de digitalizare IMM pot finanta investiții similare, dar au reguli diferite pentru beneficiar, calendar, cheltuieli, platforma și indicatori. Pagina aceasta rămâne suport pentru PNRR, iar pagina principala Digitalizare IMM centralizeaza comparatia intre linii."
+            "Această pagină este aplicată proiectelor de digitalizare: procese, software, echipamente, securitate, cheltuieli și indicatori. Pagina PNRR rămâne pagina-cadru pentru apeluri, reguli generale, termene și surse oficiale; hubul Digitalizare IMM compară PNRR cu alte rute de digitalizare."
           ],
           "links": [
             {
-              "href": "/digitalizare-imm",
-              "label": "Pagina principala Digitalizare IMM"
+              "href": "/pnrr",
+              "label": "Pagina-cadru PNRR"
             },
             {
-              "href": "/fonduri-europene-digitalizare",
-              "label": "Cluster fonduri europene digitalizare"
+              "href": "/digitalizare-imm",
+              "label": "Hub Digitalizare IMM"
+            },
+            {
+              "href": "/consultanta-pnrr-digitalizare",
+              "label": "Consultanta PNRR digitalizare"
+            },
+            {
+              "href": "/cheltuieli-eligibile-digitalizare-imm",
+              "label": "Cheltuieli eligibile"
             }
           ]
         }

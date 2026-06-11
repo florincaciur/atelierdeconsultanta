@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-11T14:09:02.067Z",
+  "generatedAt": "2026-06-11T14:45:56.811Z",
   "root": "C:\\Users\\flori\\Documents\\GitHub\\atelierdeconsultanta",
   "summary": {
     "totalFiles": 170,
@@ -1428,7 +1428,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Cheltuieli eligibile pentru Digitalizare IMM: software, hardware, securitate și servicii"
+            "Ce poți cumpăra prin Digitalizare IMM: software, hardware, securitate și servicii"
           ]
         },
         "visibleFaqForSchema": {
@@ -1444,7 +1444,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 598,
+          "words": 625,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -2302,13 +2302,13 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1555,
+          "words": 1581,
           "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
           "required": true,
-          "count": 1
+          "count": 2
         }
       }
     },
@@ -2997,7 +2997,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 644,
+          "words": 675,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -3095,7 +3095,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Digitalizare IMM / PNRR"
+            "Digitalizare IMM / PNRR: pagina aplicată pentru proiecte digitale"
           ]
         },
         "visibleFaqForSchema": {
@@ -3112,7 +3112,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1588,
+          "words": 1624,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -3154,7 +3154,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Digitalizare IMM: ERP, CRM, cloud și securitate"
+            "Digitalizare IMM: hub pentru proiecte, buget IT și consultanță"
           ]
         },
         "visibleFaqForSchema": {
@@ -3171,13 +3171,13 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1771,
+          "words": 1847,
           "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
           "required": true,
-          "count": 2
+          "count": 3
         }
       }
     },
@@ -3213,7 +3213,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Digitalizare IMM: ERP, CRM, cloud și securitate"
+            "Digitalizare IMM: hub pentru proiecte, buget IT și consultanță"
           ]
         },
         "visibleFaqForSchema": {
@@ -3230,13 +3230,13 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1771,
+          "words": 1847,
           "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
           "required": true,
-          "count": 2
+          "count": 3
         }
       }
     },
@@ -7956,7 +7956,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "PNRR: apeluri, digitalizare și reguli specifice"
+            "PNRR: pagina-cadru pentru apeluri și digitalizare"
           ]
         },
         "visibleFaqForSchema": {
@@ -7973,7 +7973,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1278,
+          "words": 1301,
           "threshold": 1100
         },
         "relatedLinks": {

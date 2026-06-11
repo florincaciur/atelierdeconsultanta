@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-06-11T14:09:00.611Z",
+  "generatedAt": "2026-06-11T14:45:55.144Z",
   "mode": "check",
-  "baseUrl": "http://127.0.0.1:64147",
+  "baseUrl": "http://127.0.0.1:53345",
   "summary": {
     "checked": 22,
     "passed": 22,
@@ -84,7 +84,7 @@
       "pass": true,
       "errors": [],
       "dom": {
-        "title": "Consultanță PNRR Digitalizare - eligibilitate IMM",
+        "title": "Consultanță PNRR Digitalizare | verificare proiect IMM",
         "h1Count": 1,
         "seeAlsoCards": 0,
         "programCluster": 0,
@@ -196,7 +196,7 @@
       "pass": true,
       "errors": [],
       "dom": {
-        "title": "Digitalizare IMM | ERP, CRM, cloud",
+        "title": "Digitalizare IMM | hub pentru proiecte și buget IT",
         "h1Count": 1,
         "seeAlsoCards": 0,
         "programCluster": 0,
