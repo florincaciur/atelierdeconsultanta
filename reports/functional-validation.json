@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-06-11T08:17:11.072Z",
+  "generatedAt": "2026-06-11T14:09:00.611Z",
   "mode": "check",
-  "baseUrl": "http://127.0.0.1:56126",
+  "baseUrl": "http://127.0.0.1:64147",
   "summary": {
     "checked": 22,
     "passed": 22,
@@ -98,7 +98,7 @@
       "pass": true,
       "errors": [],
       "dom": {
-        "title": "Start-Up Nation | condiții, cheltuieli eligibile și plan",
+        "title": "Start-Up Nation 2026 | ghid central și rute utile",
         "h1Count": 1,
         "seeAlsoCards": 0,
         "programCluster": 0,

@@ -987,9 +987,9 @@
       "type": "program",
       "schemaType": "GovernmentService",
       "category": "Start-Up Nation",
-      "title": "Start-Up Nation | conditii, cheltuieli eligibile si plan",
-      "description": "Start-Up Nation explicat pe baza regulilor publicate pentru editia 2024: grant 250.000 lei, intensitate 90%, locuri de munca, cheltuieli si verificari utile.",
-      "h1": "Start-Up Nation: conditii, cheltuieli eligibile si plan de afaceri",
+      "title": "Start-Up Nation 2026 | ghid central si rute utile",
+      "description": "Hub Start-Up Nation 2026 pentru pregatire prudenta: conditii, cheltuieli eligibile, cod CAEN, plan de afaceri si consultanta, cu reguli confirmate in ghidul activ.",
+      "h1": "Start-Up Nation 2026: ghid central pentru pregatirea dosarului",
       "quickAnswer": "Ruta acestei pagini ramane /start-up-nation-2026 pentru continuitate tehnica, dar informatiile factuale sunt tratate prudent pe baza regulilor publicate pentru editia 2024. Programul a prevazut granturi de pana la 250.000 lei, intensitate maxima de 90%, crearea a doua locuri de munca si mentinerea lor pe perioada ceruta de schema. Pentru o sesiune viitoare, trebuie confirmate ghidul, bugetul, pilonii, codurile CAEN, cheltuielile eligibile si calendarul. Pagina este utila pentru pregatirea preliminara, verificarea ideii de afaceri, estimarea aportului propriu, alegerea furnizorilor si evitarea promisiunilor nepublicate, nu ca garantie de lansare, selectie sau aprobare. Orice scenariu de aplicare trebuie refacut dupa publicarea regulilor finale, mai ales pentru punctaj, aport propriu si obligatii de angajare.",
       "programName": "Start-Up Nation",
       "policyContribution": "programul susține antreprenoriatul, infiintarea și dezvoltarea firmelor tinere, crearea de activitate economică și ocupare.",
@@ -1083,10 +1083,6 @@
       ],
       "related": [
         {
-          "href": "/consultanta-start-up-nation-2026",
-          "label": "Consultanta Start-Up Nation"
-        },
-        {
           "href": "/start-up-nation-2026-conditii",
           "label": "Conditii Start-Up Nation"
         },
@@ -1097,6 +1093,14 @@
         {
           "href": "/cod-caen-start-up-nation-2026",
           "label": "Cod CAEN Start-Up Nation"
+        },
+        {
+          "href": "/start-up-nation-2026-plan-de-afaceri",
+          "label": "Plan de afaceri Start-Up Nation"
+        },
+        {
+          "href": "/consultanta-start-up-nation-2026",
+          "label": "Consultanta Start-Up Nation"
         },
         {
           "href": "/verificare-eligibilitate-fonduri-europene",
@@ -1232,6 +1236,34 @@
       "officialGuideKey": "startup",
       "guideCtaLabel": "Ghid oficial",
       "contentSections": [
+        {
+          "title": "Alege ruta corecta in clusterul Start-Up Nation",
+          "paragraphs": [
+            "Pagina centrala explica programul si trimite mai departe catre paginile de lucru. Foloseste checklistul pentru conditii, pagina de cheltuieli pentru buget, pagina CAEN pentru activitate, pagina de plan pentru structura dosarului si pagina de consultanta pentru verificarea proiectului concret."
+          ],
+          "links": [
+            {
+              "href": "/start-up-nation-2026-conditii",
+              "label": "Conditii Start-Up Nation"
+            },
+            {
+              "href": "/start-up-nation-2026-cheltuieli-eligibile",
+              "label": "Cheltuieli eligibile"
+            },
+            {
+              "href": "/cod-caen-start-up-nation-2026",
+              "label": "Cod CAEN"
+            },
+            {
+              "href": "/start-up-nation-2026-plan-de-afaceri",
+              "label": "Plan de afaceri"
+            },
+            {
+              "href": "/consultanta-start-up-nation-2026",
+              "label": "Consultanta Start-Up Nation"
+            }
+          ]
+        },
         {
           "title": "Cum folosim informatiile Start-Up Nation fara sa promitem o sesiune",
           "body": "Pagina pastreaza ruta istorica pentru continuitate, dar copy-ul este construit ca ghid de pregatire. Valorile concrete sunt atribuite regulilor publicate pentru editia 2024 si nu sunt prezentate ca garantie pentru o sesiune viitoare."
@@ -5288,10 +5320,10 @@
       "quickAnswer": "Pagina este un checklist de conditii, nu un articol general. Verifica solicitantul, firma noua, CAEN-ul, cursurile sau cerintele procedurii, bugetul, cheltuielile, documentele si cofinantarea.",
       "programName": "Start Up Nation 2026 condiții",
       "related": [
-        "/consultanta-start-up-nation-2026",
         "/start-up-nation-2026",
-        "/cod-caen-start-up-nation-2026",
-        "/start-up-nation-2026-cheltuieli-eligibile"
+        "/consultanta-start-up-nation-2026",
+        "/start-up-nation-2026-cheltuieli-eligibile",
+        "/cod-caen-start-up-nation-2026"
       ],
       "heroIcon": "ph-duotone ph-info",
       "finalCtaText": "Trimite checklistul completat, CAEN-ul, ideea și bugetul ca să verificăm unde pot apărea riscuri.",
@@ -5303,8 +5335,16 @@
           ],
           "links": [
             {
+              "href": "/start-up-nation-2026",
+              "label": "Hub Start-Up Nation 2026"
+            },
+            {
               "href": "/consultanta-start-up-nation-2026",
               "label": "Verificare conditii Start-Up Nation"
+            },
+            {
+              "href": "/start-up-nation-2026-cheltuieli-eligibile",
+              "label": "Urmatorul pas: cheltuieli eligibile"
             }
           ]
         }
@@ -5442,10 +5482,10 @@
       "quickAnswer": "Cheltuielile eligibile Start Up Nation 2026 trebuie legate direct de activitatea finanțată și susținute prin oferte și justificari clare.",
       "programName": "Cheltuieli eligibile Start Up Nation 2026",
       "related": [
-        "/consultanta-start-up-nation-2026",
         "/start-up-nation-2026",
-        "/start-up-nation-2026-plan-de-afaceri",
-        "/cod-caen-start-up-nation-2026"
+        "/consultanta-start-up-nation-2026",
+        "/cod-caen-start-up-nation-2026",
+        "/start-up-nation-2026-plan-de-afaceri"
       ],
       "heroIcon": "ph-duotone ph-info",
       "cofinancingTitle": "Buget Start-Up Nation fara valori presupuse",
@@ -5493,8 +5533,16 @@
           ],
           "links": [
             {
+              "href": "/start-up-nation-2026",
+              "label": "Hub Start-Up Nation 2026"
+            },
+            {
               "href": "/consultanta-start-up-nation-2026",
               "label": "Verificare buget Start-Up Nation"
+            },
+            {
+              "href": "/cod-caen-start-up-nation-2026",
+              "label": "Urmatorul pas: cod CAEN"
             }
           ]
         }
@@ -5738,10 +5786,10 @@
       "quickAnswer": "Planul de afaceri Start Up Nation 2026 trebuie să lege activitatea, piata, bugetul, cheltuielile și capacitatea de implementare.",
       "programName": "Plan de afaceri Start Up Nation 2026",
       "related": [
-        "/consultanta-start-up-nation-2026",
         "/start-up-nation-2026",
-        "/start-up-nation-2026-cheltuieli-eligibile",
-        "/start-up-nation-2026-conditii"
+        "/consultanta-start-up-nation-2026",
+        "/cod-caen-start-up-nation-2026",
+        "/start-up-nation-2026-cheltuieli-eligibile"
       ],
       "heroIcon": "ph-duotone ph-info",
       "cofinancingTitle": "Buget Start-Up Nation fara valori presupuse",
@@ -5789,8 +5837,16 @@
           ],
           "links": [
             {
+              "href": "/start-up-nation-2026",
+              "label": "Hub Start-Up Nation 2026"
+            },
+            {
               "href": "/consultanta-start-up-nation-2026",
-              "label": "Consultanta plan de afaceri Start-Up Nation"
+              "label": "Urmatorul pas: consultanta Start-Up Nation"
+            },
+            {
+              "href": "/start-up-nation-2026-cheltuieli-eligibile",
+              "label": "Revino la buget si cheltuieli"
             }
           ]
         }
@@ -5886,10 +5942,10 @@
       "quickAnswer": "Codul CAEN Start Up Nation 2026 se verifică după activitatea reală, autorizare, lista apelului, buget și legătura cu investiția propusa.",
       "programName": "Cod CAEN Start Up Nation 2026",
       "related": [
-        "/consultanta-start-up-nation-2026",
         "/start-up-nation-2026",
-        "/start-up-nation-2026-conditii",
-        "/start-up-nation-2026-plan-de-afaceri"
+        "/consultanta-start-up-nation-2026",
+        "/start-up-nation-2026-plan-de-afaceri",
+        "/start-up-nation-2026-conditii"
       ],
       "heroIcon": "ph-duotone ph-info",
       "contentSections": [
@@ -5900,8 +5956,16 @@
           ],
           "links": [
             {
+              "href": "/start-up-nation-2026",
+              "label": "Hub Start-Up Nation 2026"
+            },
+            {
               "href": "/consultanta-start-up-nation-2026",
               "label": "Verificare cod CAEN Start-Up Nation"
+            },
+            {
+              "href": "/start-up-nation-2026-plan-de-afaceri",
+              "label": "Urmatorul pas: plan de afaceri"
             }
           ]
         }
@@ -6028,16 +6092,17 @@
       "category": "Consultanță Start Up Nation",
       "minWords": 1200,
       "minFaq": 8,
-      "title": "Consultanta Start-Up Nation 2026 - CAEN, plan si dosar",
-      "description": "Consultanta Start-Up Nation 2026 pentru verificarea conditiilor, codului CAEN, bugetului, planului de afaceri, documentelor si riscurilor.",
+      "title": "Consultanta Start-Up Nation 2026 | verificare dosar",
+      "description": "Consultanta Start-Up Nation 2026 pentru dosar concret: conditii, CAEN, buget, cheltuieli, plan de afaceri, documente si riscuri de depunere.",
       "h1": "Consultanta Start-Up Nation 2026: CAEN, plan si dosar",
       "quickAnswer": "Consultanta Start-Up Nation 2026 verifica solicitantul, conditiile apelului activ, codul CAEN, bugetul, planul de afaceri, cheltuielile si documentele. Scopul este sa clarifice daca proiectul merita pregatit, ce lipseste si ce riscuri trebuie rezolvate inainte de depunere, fara promisiuni de finantare garantata.",
       "programName": "Consultanță Start Up Nation 2026",
       "related": [
         "/start-up-nation-2026",
         "/start-up-nation-2026-conditii",
-        "/start-up-nation-2026-plan-de-afaceri",
+        "/start-up-nation-2026-cheltuieli-eligibile",
         "/cod-caen-start-up-nation-2026",
+        "/start-up-nation-2026-plan-de-afaceri",
         "/contact"
       ],
       "heroIcon": "ph-duotone ph-info",
@@ -6064,6 +6129,28 @@
               "Depunere si clarificari",
               "pregatim informatiile astfel incat raspunsurile sa nu contrazica bugetul si planul"
             ]
+          ],
+          "links": [
+            {
+              "href": "/start-up-nation-2026",
+              "label": "Hub Start-Up Nation 2026"
+            },
+            {
+              "href": "/start-up-nation-2026-conditii",
+              "label": "Checklist conditii"
+            },
+            {
+              "href": "/start-up-nation-2026-cheltuieli-eligibile",
+              "label": "Cheltuieli eligibile"
+            },
+            {
+              "href": "/cod-caen-start-up-nation-2026",
+              "label": "Cod CAEN"
+            },
+            {
+              "href": "/start-up-nation-2026-plan-de-afaceri",
+              "label": "Plan de afaceri"
+            }
           ]
         }
       ],
