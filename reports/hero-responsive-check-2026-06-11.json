@@ -1,0 +1,113 @@
+[
+  {
+    "browser": "chromium",
+    "width": 320,
+    "ok": true,
+    "h1Count": 1,
+    "heroHeight": 1736,
+    "overflow": 0,
+    "activeHref": "/dr12-afir",
+    "spotlightTitle": "DR 12 – Tineri fermieri",
+    "reducedMotionRule": true
+  },
+  {
+    "browser": "chromium",
+    "width": 360,
+    "ok": true,
+    "h1Count": 1,
+    "heroHeight": 1712,
+    "overflow": 0,
+    "activeHref": "/dr12-afir",
+    "spotlightTitle": "DR 12 – Tineri fermieri",
+    "reducedMotionRule": true
+  },
+  {
+    "browser": "chromium",
+    "width": 390,
+    "ok": true,
+    "h1Count": 1,
+    "heroHeight": 1706,
+    "overflow": 0,
+    "activeHref": "/dr12-afir",
+    "spotlightTitle": "DR 12 – Tineri fermieri",
+    "reducedMotionRule": true
+  },
+  {
+    "browser": "chromium",
+    "width": 430,
+    "ok": true,
+    "h1Count": 1,
+    "heroHeight": 1636,
+    "overflow": 0,
+    "activeHref": "/dr12-afir",
+    "spotlightTitle": "DR 12 – Tineri fermieri",
+    "reducedMotionRule": true
+  },
+  {
+    "browser": "chromium",
+    "width": 768,
+    "ok": true,
+    "h1Count": 1,
+    "heroHeight": 1545,
+    "overflow": 0,
+    "activeHref": "/dr12-afir",
+    "spotlightTitle": "DR 12 – Tineri fermieri",
+    "reducedMotionRule": true
+  },
+  {
+    "browser": "chromium",
+    "width": 1024,
+    "ok": true,
+    "h1Count": 1,
+    "heroHeight": 1087,
+    "overflow": 0,
+    "activeHref": "/dr12-afir",
+    "spotlightTitle": "DR 12 – Tineri fermieri",
+    "reducedMotionRule": true
+  },
+  {
+    "browser": "chromium",
+    "width": 1280,
+    "ok": true,
+    "h1Count": 1,
+    "heroHeight": 1111,
+    "overflow": 0,
+    "activeHref": "/dr12-afir",
+    "spotlightTitle": "DR 12 – Tineri fermieri",
+    "reducedMotionRule": true
+  },
+  {
+    "browser": "chromium",
+    "width": 1440,
+    "ok": true,
+    "h1Count": 1,
+    "heroHeight": 1110,
+    "overflow": 0,
+    "activeHref": "/dr12-afir",
+    "spotlightTitle": "DR 12 – Tineri fermieri",
+    "reducedMotionRule": true
+  },
+  {
+    "browser": "chromium",
+    "width": 1920,
+    "ok": true,
+    "h1Count": 1,
+    "heroHeight": 1110,
+    "overflow": 0,
+    "activeHref": "/dr12-afir",
+    "spotlightTitle": "DR 12 – Tineri fermieri",
+    "reducedMotionRule": true
+  },
+  {
+    "browser": "firefox",
+    "unavailable": true,
+    "ok": true,
+    "error": "browserType.launch: Executable doesn't exist at C:\\Users\\flori\\AppData\\Local\\ms-playwright\\firefox-1522\\firefox\\firefox.exe"
+  },
+  {
+    "browser": "webkit",
+    "unavailable": true,
+    "ok": true,
+    "error": "browserType.launch: Executable doesn't exist at C:\\Users\\flori\\AppData\\Local\\ms-playwright\\webkit-2287\\Playwright.exe"
+  }
+]

@@ -1,0 +1,219 @@
+=== npm ci === 
+npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+npm warn deprecated lodash.isequal@4.5.0: This package is deprecated. Use require('node:util').isDeepStrictEqual instead.
+npm warn deprecated rimraf@2.7.1: Rimraf versions prior to v4 are no longer supported
+npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm warn deprecated whatwg-encoding@3.1.1: Use @exodus/bytes instead for a more spec-conformant and faster implementation
+npm warn deprecated fstream@1.0.12: This package is no longer supported.
+npm warn deprecated uuid@8.3.2: uuid@10 and below is no longer supported.  For ESM codebases, update to uuid@latest.  For CommonJS codebases, use uuid@11 (but be aware this version will likely be deprecated in 2028).
+
+added 140 packages, and audited 141 packages in 5s
+
+25 packages are looking for funding
+  run `npm fund` for details
+
+3 vulnerabilities (2 moderate, 1 high)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+=== check:copy === 
+
+> check:copy
+> node tools/normalize-copy-ro.js . --check
+
+Romanian copy check passed.
+=== verify:seo === 
+
+> verify:seo
+> node scripts/verify-seo-integrity.js .
+
+SEO integrity report written to reports/seo-integrity-report.json
+Files: 170; passed: 170; failed: 0
+metaDescription: 170 pass, 0 fail
+canonical: 170 pass, 0 fail
+imageAltAttributes: 170 pass, 0 fail
+singleH1: 170 pass, 0 fail
+relatedLinks: 170 pass, 0 fail
+utf8Charset: 167 pass, 0 fail
+cleanCanonical: 167 pass, 0 fail
+visibleFaqForSchema: 167 pass, 0 fail
+speakableSchemaCoverage: 167 pass, 0 fail
+contentDepth: 167 pass, 0 fail
+robots.txt: pass
+=== verify:visual === 
+
+> verify:visual
+> node scripts/visual-integrity-check.js
+
+Visual integrity report written to reports/visual-integrity-report.json
+Checks: 18; passed: 18; failed: 0
+=== verify:functional === 
+
+> verify:functional
+> node verify-and-fix.js
+
+Functional page: /
+Functional page: /contact
+Functional page: /fonduri-europene
+Functional page: /consultanta-fonduri-europene
+Functional page: /calendar-fonduri-europene
+Functional page: /consultanta-pnrr-digitalizare
+Functional page: /start-up-nation-2026
+Functional page: /por-adr-nord-est
+Functional page: /fonduri-europene-nord-est
+Functional page: /dr12-afir
+Functional page: /afir-autoconsum-agroalimentar
+Functional page: /autoconsum-public-fotovoltaice-institutii-publice
+Functional page: /dr14
+Functional page: /digitalizare-imm
+Functional page: /femeia-antreprenor-2026
+Functional page: /pro-infra
+Functional page: /calculator-soc
+Functional page: /fondul-de-modernizare
+Functional page: /fonduri-europene-digitalizare
+Functional interaction: contact form
+Functional interaction: calculator SO
+Functional interaction: DR14 score
+Mode: check
+HTML files checked: 170; SEO failed: 0; changed: 108
+Inline scripts checked: 268; failures: 0
+Functional checks: 22; failed: 0
+Reports written to reports/seo-validation.json, reports/functional-validation.json and reports/verification-summary.md
+=== verify:sitemap === 
+
+> verify:sitemap
+> node tools/verify-sitemap.js
+
+Verified sitemap.xml with 92 canonical URLs.
+=== audit:program-routes === 
+
+> audit:program-routes
+> node tools/audit-cloudflare-program-routes.js
+
+Program route audit base: http://127.0.0.1:61323
+PASS canonical /por-adr-nord-est                                        final=200 redirects=0 loop=false
+PASS html      /por-adr-nord-est                                        final=200 redirects=1 loop=false
+PASS canonical /fonduri-regionale                                       final=200 redirects=0 loop=false
+PASS html      /fonduri-regionale                                       final=200 redirects=1 loop=false
+PASS canonical /fonduri-europene-nord-est                               final=200 redirects=0 loop=false
+PASS html      /fonduri-europene-nord-est                               final=200 redirects=1 loop=false
+PASS canonical /investitii-modernizarea-microintreprinderilor-apel-2    final=200 redirects=0 loop=false
+PASS html      /investitii-modernizarea-microintreprinderilor-apel-2    final=200 redirects=1 loop=false
+PASS canonical /dr12-afir                                               final=200 redirects=0 loop=false
+PASS html      /dr12-afir                                               final=200 redirects=1 loop=false
+PASS canonical /afir-autoconsum-agroalimentar                           final=200 redirects=0 loop=false
+PASS html      /afir-autoconsum-agroalimentar                           final=200 redirects=1 loop=false
+PASS canonical /autoconsum-public-fotovoltaice-institutii-publice       final=200 redirects=0 loop=false
+PASS html      /autoconsum-public-fotovoltaice-institutii-publice       final=200 redirects=1 loop=false
+PASS canonical /fondul-modernizare-energie-regenerabila-2026            final=200 redirects=0 loop=false
+PASS html      /fondul-modernizare-energie-regenerabila-2026            final=200 redirects=1 loop=false
+PASS canonical /dr14                                                    final=200 redirects=0 loop=false
+PASS html      /dr14                                                    final=200 redirects=1 loop=false
+PASS canonical /digitalizare-imm                                        final=200 redirects=0 loop=false
+PASS html      /digitalizare-imm                                        final=200 redirects=1 loop=false
+PASS canonical /e-move                                                  final=200 redirects=0 loop=false
+PASS html      /e-move                                                  final=200 redirects=1 loop=false
+PASS canonical /femeia-antreprenor-2026                                 final=200 redirects=0 loop=false
+PASS html      /femeia-antreprenor-2026                                 final=200 redirects=1 loop=false
+PASS canonical /apeluri-gal                                             final=200 redirects=0 loop=false
+PASS html      /apeluri-gal                                             final=200 redirects=1 loop=false
+PASS canonical /pro-infra                                               final=200 redirects=0 loop=false
+PASS html      /pro-infra                                               final=200 redirects=1 loop=false
+PASS canonical /pocidif-21                                              final=200 redirects=0 loop=false
+PASS html      /pocidif-21                                              final=200 redirects=1 loop=false
+PASS canonical /start-up-nation-2026                                    final=200 redirects=0 loop=false
+PASS html      /start-up-nation-2026                                    final=200 redirects=1 loop=false
+PASS canonical /calculator-soc                                          final=200 redirects=0 loop=false
+PASS html      /calculator-soc                                          final=200 redirects=1 loop=false
+PASS canonical /instrumente                                             final=200 redirects=0 loop=false
+PASS html      /instrumente                                             final=200 redirects=1 loop=false
+PASS canonical /resurse                                                 final=200 redirects=0 loop=false
+PASS html      /resurse                                                 final=200 redirects=1 loop=false
+PASS canonical /portofoliu                                              final=200 redirects=0 loop=false
+PASS html      /portofoliu                                              final=200 redirects=1 loop=false
+PASS canonical /testimoniale                                            final=200 redirects=0 loop=false
+PASS html      /testimoniale                                            final=200 redirects=1 loop=false
+PASS canonical /webinarii                                               final=200 redirects=0 loop=false
+PASS html      /webinarii                                               final=200 redirects=1 loop=false
+=== audit:gsc-routes === 
+
+> audit:gsc-routes
+> node tools/audit-gsc-routes.js
+
+Wrote 39 GSC audit rows to reports\gsc-indexing-fix-2026-06-10.csv and reports\gsc-indexing-fix-2026-06-10.md.
+{"inputUrl":"https://atelierdeconsultanta.ro/consultanta-start-up-nation-2026/","localStatus":"200 after 1 redirect(s)","liveStatus":"200 after 1 redirect(s)","redirectChain":"https://atelierdeconsultanta.ro/consultanta-start-up-nation-2026/ -> https://atelierdeconsultanta.ro/consultanta-start-up-nation-2026 [301] | https://atelierdeconsultanta.ro/consultanta-start-up-nation-2026 [200]","liveRedirectChain":"https://atelierdeconsultanta.ro/consultanta-start-up-nation-2026/ -> https://atelierdeconsultanta.ro/consultanta-start-up-nation-2026 [301] | https://atelierdeconsultanta.ro/consultanta-start-up-nation-2026 [200]","finalUrl":"https://atelierdeconsultanta.ro/consultanta-start-up-nation-2026","canonical":"https://atelierdeconsultanta.ro/consultanta-start-up-nation-2026","metaRobots":"index, follow","xRobotsTag":"","inSitemap":true,"internalLinkCount":0,"intent":"alias cu redirect","action":"Pastrat 301 direct catre URL-ul canonic; alias exclus din sitemap si din linkurile interne normale.","result":"PASS_REDIRECT_TO_CANONICAL"}
+{"inputUrl":"https://atelierdeconsultanta.ro/firma-consultanta-fonduri-europene/","localStatus":"200 after 1 redirect(s)","liveStatus":"200 after 1 redirect(s)","redirectChain":"https://atelierdeconsultanta.ro/firma-consultanta-fonduri-europene/ -> https://atelierdeconsultanta.ro/firma-consultanta-fonduri-europene [301] | https://atelierdeconsultanta.ro/firma-consultanta-fonduri-europene [200]","liveRedirectChain":"https://atelierdeconsultanta.ro/firma-consultanta-fonduri-europene/ -> https://atelierdeconsultanta.ro/firma-consultanta-fonduri-europene [301] | https://atelierdeconsultanta.ro/firma-consultanta-fonduri-europene [200]","finalUrl":"https://atelierdeconsultanta.ro/firma-consultanta-fonduri-europene","canonical":"https://atelierdeconsultanta.ro/firma-consultanta-fonduri-europene","metaRobots":"index, follow","xRobotsTag":"","inSitemap":true,"internalLinkCount":0,"intent":"alias cu redirect","action":"Pastrat 301 direct catre URL-ul canonic; alias exclus din sitemap si din linkurile interne normale.","result":"PASS_REDIRECT_TO_CANONICAL"}
+{"inputUrl":"https://atelierdeconsultanta.ro/consultanta-start-up-nation/","localStatus":"200 after 1 redirect(s)","liveStatus":"200 after 1 redirect(s)","redirectChain":"https://atelierdeconsultanta.ro/consultanta-start-up-nation/ -> https://atelierdeconsultanta.ro/consultanta-start-up-nation-2026 [301] | https://atelierdeconsultanta.ro/consultanta-start-up-nation-2026 [200]","liveRedirectChain":"https://atelierdeconsultanta.ro/consultanta-start-up-nation/ -> https://atelierdeconsultanta.ro/consultanta-start-up-nation-2026 [301] | https://atelierdeconsultanta.ro/consultanta-start-up-nation-2026 [200]","finalUrl":"https://atelierdeconsultanta.ro/consultanta-start-up-nation-2026","canonical":"https://atelierdeconsultanta.ro/consultanta-start-up-nation-2026","metaRobots":"index, follow","xRobotsTag":"","inSitemap":true,"internalLinkCount":0,"intent":"alias cu redirect","action":"Pastrat 301 direct catre URL-ul canonic; alias exclus din sitemap si din linkurile interne normale.","result":"PASS_REDIRECT_TO_CANONICAL"}
+{"inputUrl":"https://atelierdeconsultanta.ro/fonduri-europene-imm/","localStatus":"200 after 1 redirect(s)","liveStatus":"200 after 1 redirect(s)","redirectChain":"https://atelierdeconsultanta.ro/fonduri-europene-imm/ -> https://atelierdeconsultanta.ro/fonduri-europene-imm [301] | https://atelierdeconsultanta.ro/fonduri-europene-imm [200]","liveRedirectChain":"https://atelierdeconsultanta.ro/fonduri-europene-imm/ -> https://atelierdeconsultanta.ro/fonduri-europene-imm [301] | https://atelierdeconsultanta.ro/fonduri-europene-imm [200]","finalUrl":"https://atelierdeconsultanta.ro/fonduri-europene-imm","canonical":"https://atelierdeconsultanta.ro/fonduri-europene-imm","metaRobots":"index, follow","xRobotsTag":"","inSitemap":true,"internalLinkCount":0,"intent":"alias cu redirect","action":"Pastrat 301 direct catre URL-ul canonic; alias exclus din sitemap si din linkurile interne normale.","result":"PASS_REDIRECT_TO_CANONICAL"}
+{"inputUrl":"https://atelierdeconsultanta.ro/blog-afir-fotovoltaice-ferme-2026.html","localStatus":"200 after 1 redirect(s)","liveStatus":"200 after 1 redirect(s)","redirectChain":"https://atelierdeconsultanta.ro/blog-afir-fotovoltaice-ferme-2026.html -> https://atelierdeconsultanta.ro/blog-afir-fotovoltaice-ferme-2026 [301] | https://atelierdeconsultanta.ro/blog-afir-fotovoltaice-ferme-2026 [200]","liveRedirectChain":"https://atelierdeconsultanta.ro/blog-afir-fotovoltaice-ferme-2026.html -> https://atelierdeconsultanta.ro/blog-afir-fotovoltaice-ferme-2026 [301] | https://atelierdeconsultanta.ro/blog-afir-fotovoltaice-ferme-2026 [200]","finalUrl":"https://atelierdeconsultanta.ro/blog-afir-fotovoltaice-ferme-2026","canonical":"https://atelierdeconsultanta.ro/blog-afir-fotovoltaice-ferme-2026","metaRobots":"index, follow","xRobotsTag":"","inSitemap":true,"internalLinkCount":0,"intent":"alias cu redirect","action":"Pastrat 301 direct catre URL-ul canonic; alias exclus din sitemap si din linkurile interne normale.","result":"PASS_REDIRECT_TO_CANONICAL"}
+{"inputUrl":"https://atelierdeconsultanta.ro/fonduri-europene/","localStatus":"200 after 1 redirect(s)","liveStatus":"200 after 1 redirect(s)","redirectChain":"https://atelierdeconsultanta.ro/fonduri-europene/ -> https://atelierdeconsultanta.ro/fonduri-europene [301] | https://atelierdeconsultanta.ro/fonduri-europene [200]","liveRedirectChain":"https://atelierdeconsultanta.ro/fonduri-europene/ -> https://atelierdeconsultanta.ro/fonduri-europene [301] | https://atelierdeconsultanta.ro/fonduri-europene [200]","finalUrl":"https://atelierdeconsultanta.ro/fonduri-europene","canonical":"https://atelierdeconsultanta.ro/fonduri-europene","metaRobots":"index, follow","xRobotsTag":"","inSitemap":true,"internalLinkCount":0,"intent":"alias cu redirect","action":"Pastrat 301 direct catre URL-ul canonic; alias exclus din sitemap si din linkurile interne normale.","result":"PASS_REDIRECT_TO_CANONICAL"}
+{"inputUrl":"http://atelierdeconsultanta.ro/politica-de-confidentialitate.html","localStatus":"200 after 2 redirect(s)","liveStatus":"200 after 1 redirect(s)","redirectChain":"http://atelierdeconsultanta.ro/politica-de-confidentialitate.html -> https://atelierdeconsultanta.ro/politica-de-confidentialitate.html [301] | https://atelierdeconsultanta.ro/politica-de-confidentialitate.html -> https://atelierdeconsultanta.ro/politica-de-confidentialitate [301] | https://atelierdeconsultanta.ro/politica-de-confidentialitate [200]","liveRedirectChain":"http://atelierdeconsultanta.ro/politica-de-confidentialitate.html -> http://atelierdeconsultanta.ro/politica-de-confidentialitate [301] | http://atelierdeconsultanta.ro/politica-de-confidentialitate [200]","finalUrl":"https://atelierdeconsultanta.ro/politica-de-confidentialitate","canonical":"https://atelierdeconsultanta.ro/politica-de-confidentialitate","metaRobots":"index, follow","xRobotsTag":"","inSitemap":true,"internalLinkCount":0,"intent":"alias cu redirect","action":"Pastrat 301 direct catre URL-ul canonic; alias exclus din sitemap si din linkurile interne normale.","result":"PASS_REDIRECT_TO_CANONICAL"}
+{"inputUrl":"http://atelierdeconsultanta.ro/","localStatus":"200 after 1 redirect(s)","liveStatus":"200 direct","redirectChain":"http://atelierdeconsultanta.ro/ -> https://atelierdeconsultanta.ro/ [301] | https://atelierdeconsultanta.ro/ [200]","liveRedirectChain":"http://atelierdeconsultanta.ro/ [200]","finalUrl":"https://atelierdeconsultanta.ro/","canonical":"https://atelierdeconsultanta.ro/","metaRobots":"index, follow","xRobotsTag":"","inSitemap":true,"internalLinkCount":1373,"intent":"alias cu redirect","action":"Pastrat 301 direct catre URL-ul canonic; alias exclus din sitemap si din linkurile interne normale.","result":"PASS_REDIRECT_TO_CANONICAL"}
+{"inputUrl":"https://atelierdeconsultanta.ro/fonduri-europene-bucuresti","localStatus":"200 direct","liveStatus":"200 direct","redirectChain":"https://atelierdeconsultanta.ro/fonduri-europene-bucuresti [200]","liveRedirectChain":"https://atelierdeconsultanta.ro/fonduri-europene-bucuresti [200]","finalUrl":"https://atelierdeconsultanta.ro/fonduri-europene-bucuresti","canonical":"https://atelierdeconsultanta.ro/fonduri-europene-bucuresti","metaRobots":"index, follow","xRobotsTag":"","inSitemap":true,"internalLinkCount":9,"intent":"pagina canonica indexabila","action":"Confirmat 200 direct, self-canonical, indexabil si prezent in sitemap cand este pagina HTML.","result":"PASS_CANONICAL_200"}
+{"inputUrl":"https://atelierdeconsultanta.ro/consultanta-fonduri-europene-bucuresti","localStatus":"200 direct","liveStatus":"200 direct","redirectChain":"https://atelierdeconsultanta.ro/consultanta-fonduri-europene-bucuresti [200]","liveRedirectChain":"https://atelierdeconsultanta.ro/consultanta-fonduri-europene-bucuresti [200]","finalUrl":"https://atelierdeconsultanta.ro/consultanta-fonduri-europene-bucuresti","canonical":"https://atelierdeconsultanta.ro/consultanta-fonduri-europene-bucuresti","metaRobots":"index, follow","xRobotsTag":"","inSitemap":true,"internalLinkCount":9,"intent":"pagina canonica indexabila","action":"Confirmat 200 direct, self-canonical, indexabil si prezent in sitemap cand este pagina HTML.","result":"PASS_CANONICAL_200"}
+{"inputUrl":"https://atelierdeconsultanta.ro/consultanta-fonduri-europene","localStatus":"200 direct","liveStatus":"200 direct","redirectChain":"https://atelierdeconsultanta.ro/consultanta-fonduri-europene [200]","liveRedirectChain":"https://atelierdeconsultanta.ro/consultanta-fonduri-europene [200]","finalUrl":"https://atelierdeconsultanta.ro/consultanta-fonduri-europene","canonical":"https://atelierdeconsultanta.ro/consultanta-fonduri-europene","metaRobots":"index, follow","xRobotsTag":"","inSitemap":true,"internalLinkCount":177,"intent":"pagina canonica indexabila","action":"Confirmat 200 direct, self-canonical, indexabil si prezent in sitemap cand este pagina HTML.","result":"PASS_CANONICAL_200"}
+{"inputUrl":"https://atelierdeconsultanta.ro/fonduri-europene","localStatus":"200 direct","liveStatus":"200 direct","redirectChain":"https://atelierdeconsultanta.ro/fonduri-europene [200]","liveRedirectChain":"https://atelierdeconsultanta.ro/fonduri-europene [200]","finalUrl":"https://atelierdeconsultanta.ro/fonduri-europene","canonical":"https://atelierdeconsultanta.ro/fonduri-europene","metaRobots":"index, follow","xRobotsTag":"","inSitemap":true,"internalLinkCount":259,"intent":"pagina canonica indexabila","action":"Confirmat 200 direct, self-canonical, indexabil si prezent in sitemap cand este pagina HTML.","result":"PASS_CANONICAL_200"}
+{"inputUrl":"https://atelierdeconsultanta.ro/pnrr","localStatus":"200 direct","liveStatus":"200 direct","redirectChain":"https://atelierdeconsultanta.ro/pnrr [200]","liveRedirectChain":"https://atelierdeconsultanta.ro/pnrr [200]","finalUrl":"https://atelierdeconsultanta.ro/pnrr","canonical":"https://atelierdeconsultanta.ro/pnrr","metaRobots":"index, follow","xRobotsTag":"","inSitemap":true,"internalLinkCount":22,"intent":"pagina canonica indexabila","action":"Confirmat 200 direct, self-canonical, indexabil si prezent in sitemap cand este pagina HTML.","result":"PASS_CANONICAL_200"}
+{"inputUrl":"https://atelierdeconsultanta.ro/afir","localStatus":"200 direct","liveStatus":"200 direct","redirectChain":"https://atelierdeconsultanta.ro/afir [200]","liveRedirectChain":"https://atelierdeconsultanta.ro/afir [200]","finalUrl":"https://atelierdeconsultanta.ro/afir","canonical":"https://atelierdeconsultanta.ro/afir","metaRobots":"index, follow","xRobotsTag":"index, follow","inSitemap":true,"internalLinkCount":54,"intent":"pagina canonica indexabila","action":"Confirmat 200 direct, self-canonical, indexabil si prezent in sitemap cand este pagina HTML.","result":"PASS_CANONICAL_200"}
+{"inputUrl":"https://atelierdeconsultanta.ro/consultanta-afir","localStatus":"200 direct","liveStatus":"200 direct","redirectChain":"https://atelierdeconsultanta.ro/consultanta-afir [200]","liveRedirectChain":"https://atelierdeconsultanta.ro/consultanta-afir [200]","finalUrl":"https://atelierdeconsultanta.ro/consultanta-afir","canonical":"https://atelierdeconsultanta.ro/consultanta-afir","metaRobots":"index, follow","xRobotsTag":"","inSitemap":true,"internalLinkCount":50,"intent":"pagina canonica indexabila","action":"Confirmat 200 direct, self-canonical, indexabil si prezent in sitemap cand este pagina HTML.","result":"PASS_CANONICAL_200"}
+{"inputUrl":"https://atelierdeconsultanta.ro/cat-costa-consultanta-fonduri-europene","localStatus":"200 direct","liveStatus":"200 direct","redirectChain":"https://atelierdeconsultanta.ro/cat-costa-consultanta-fonduri-europene [200]","liveRedirectChain":"https://atelierdeconsultanta.ro/cat-costa-consultanta-fonduri-europene [200]","finalUrl":"https://atelierdeconsultanta.ro/cat-costa-consultanta-fonduri-europene","canonical":"https://atelierdeconsultanta.ro/cat-costa-consultanta-fonduri-europene","metaRobots":"index, follow","xRobotsTag":"","inSitemap":true,"internalLinkCount":13,"intent":"pagina canonica indexabila","action":"Confirmat 200 direct, self-canonical, indexabil si prezent in sitemap cand este pagina HTML.","result":"PASS_CANONICAL_200"}
+{"inputUrl":"https://atelierdeconsultanta.ro/cum-alegi-consultant-fonduri-europene","localStatus":"200 direct","liveStatus":"200 direct","redirectChain":"https://atelierdeconsultanta.ro/cum-alegi-consultant-fonduri-europene [200]","liveRedirectChain":"https://atelierdeconsultanta.ro/cum-alegi-consultant-fonduri-europene [200]","finalUrl":"https://atelierdeconsultanta.ro/cum-alegi-consultant-fonduri-europene","canonical":"https://atelierdeconsultanta.ro/cum-alegi-consultant-fonduri-europene","metaRobots":"index, follow","xRobotsTag":"","inSitemap":true,"internalLinkCount":11,"intent":"pagina canonica indexabila","action":"Confirmat 200 direct, self-canonical, indexabil si prezent in sitemap cand este pagina HTML.","result":"PASS_CANONICAL_200"}
+{"inputUrl":"https://atelierdeconsultanta.ro/pro-infra","localStatus":"200 direct","liveStatus":"200 direct","redirectChain":"https://atelierdeconsultanta.ro/pro-infra [200]","liveRedirectChain":"https://atelierdeconsultanta.ro/pro-infra [200]","finalUrl":"https://atelierdeconsultanta.ro/pro-infra","canonical":"https://atelierdeconsultanta.ro/pro-infra","metaRobots":"index, follow","xRobotsTag":"","inSitemap":true,"internalLinkCount":30,"intent":"pagina canonica indexabila","action":"Confirmat 200 direct, self-canonical, indexabil si prezent in sitemap cand este pagina HTML.","result":"PASS_CANONICAL_200"}
+{"inputUrl":"https://atelierdeconsultanta.ro/official-guides.json","localStatus":"200 direct","liveStatus":"200 direct","redirectChain":"https://atelierdeconsultanta.ro/official-guides.json [200]","liveRedirectChain":"https://atelierdeconsultanta.ro/official-guides.json [200]","finalUrl":"https://atelierdeconsultanta.ro/official-guides.json","canonical":"","metaRobots":"","xRobotsTag":"noindex, follow","inSitemap":false,"internalLinkCount":3,"intent":"resursa tehnica neindexabila","action":"Pastrat 200 ca JSON si marcat noindex, follow prin _headers; exclus din sitemap.","result":"PASS_TECHNICAL_NOINDEX"}
+{"inputUrl":"https://atelierdeconsultanta.ro/blog?post=blog-1","localStatus":"200 direct","liveStatus":"200 direct","redirectChain":"https://atelierdeconsultanta.ro/blog?post=blog-1 [200]","liveRedirectChain":"https://atelierdeconsultanta.ro/blog?post=blog-1 [200]","finalUrl":"https://atelierdeconsultanta.ro/blog?post=blog-1","canonical":"https://atelierdeconsultanta.ro/blog","metaRobots":"index, follow","xRobotsTag":"","inSitemap":false,"internalLinkCount":0,"intent":"pagina alternativa","action":"Pastrat ca varianta query alternativa a hubului /blog; exclus din sitemap si curatat client-side pentru blog-1/2/3.","result":"PASS_ALTERNATE_CANONICAL"}
+{"inputUrl":"https://atelierdeconsultanta.ro/blog?post=blog-2","localStatus":"200 direct","liveStatus":"200 direct","redirectChain":"https://atelierdeconsultanta.ro/blog?post=blog-2 [200]","liveRedirectChain":"https://atelierdeconsultanta.ro/blog?post=blog-2 [200]","finalUrl":"https://atelierdeconsultanta.ro/blog?post=blog-2","canonical":"https://atelierdeconsultanta.ro/blog","metaRobots":"index, follow","xRobotsTag":"","inSitemap":false,"internalLinkCount":0,"intent":"pagina alternativa","action":"Pastrat ca varianta query alternativa a hubului /blog; exclus din sitemap si curatat client-side pentru blog-1/2/3.","result":"PASS_ALTERNATE_CANONICAL"}
+{"inputUrl":"https://atelierdeconsultanta.ro/blog?post=blog-3","localStatus":"200 direct","liveStatus":"200 direct","redirectChain":"https://atelierdeconsultanta.ro/blog?post=blog-3 [200]","liveRedirectChain":"https://atelierdeconsultanta.ro/blog?post=blog-3 [200]","finalUrl":"https://atelierdeconsultanta.ro/blog?post=blog-3","canonical":"https://atelierdeconsultanta.ro/blog","metaRobots":"index, follow","xRobotsTag":"","inSitemap":false,"internalLinkCount":0,"intent":"pagina alternativa","action":"Pastrat ca varianta query alternativa a hubului /blog; exclus din sitemap si curatat client-side pentru blog-1/2/3.","result":"PASS_ALTERNATE_CANONICAL"}
+{"inputUrl":"https://atelierdeconsultanta.ro/intrebari/ce-documente-sunt-necesare-pentru-afir/","localStatus":"200 after 1 redirect(s)","liveStatus":"200 after 1 redirect(s)","redirectChain":"https://atelierdeconsultanta.ro/intrebari/ce-documente-sunt-necesare-pentru-afir/ -> https://atelierdeconsultanta.ro/afir [301] | https://atelierdeconsultanta.ro/afir [200]","liveRedirectChain":"https://atelierdeconsultanta.ro/intrebari/ce-documente-sunt-necesare-pentru-afir/ -> https://atelierdeconsultanta.ro/afir [301] | https://atelierdeconsultanta.ro/afir [200]","finalUrl":"https://atelierdeconsultanta.ro/afir","canonical":"https://atelierdeconsultanta.ro/afir","metaRobots":"index, follow","xRobotsTag":"index, follow","inSitemap":true,"internalLinkCount":0,"intent":"alias cu redirect","action":"Pastrat 301 direct catre URL-ul canonic; alias exclus din sitemap si din linkurile interne normale.","result":"PASS_REDIRECT_TO_CANONICAL"}
+{"inputUrl":"https://atelierdeconsultanta.ro/intrebari/ce-documente-sunt-necesare-pentru-dr12/","localStatus":"200 after 1 redirect(s)","liveStatus":"200 after 1 redirect(s)","redirectChain":"https://atelierdeconsultanta.ro/intrebari/ce-documente-sunt-necesare-pentru-dr12/ -> https://atelierdeconsultanta.ro/intrebari/ce-documente-sunt-necesare-pentru-dr12 [301] | https://atelierdeconsultanta.ro/intrebari/ce-documente-sunt-necesare-pentru-dr12 [200]","liveRedirectChain":"https://atelierdeconsultanta.ro/intrebari/ce-documente-sunt-necesare-pentru-dr12/ -> https://atelierdeconsultanta.ro/intrebari/ce-documente-sunt-necesare-pentru-dr12 [301] | https://atelierdeconsultanta.ro/intrebari/ce-documente-sunt-necesare-pentru-dr12 [200]","finalUrl":"https://atelierdeconsultanta.ro/intrebari/ce-documente-sunt-necesare-pentru-dr12","canonical":"https://atelierdeconsultanta.ro/intrebari/ce-documente-sunt-necesare-pentru-dr12","metaRobots":"index, follow","xRobotsTag":"","inSitemap":true,"internalLinkCount":0,"intent":"alias cu redirect","action":"Pastrat 301 direct catre URL-ul canonic; alias exclus din sitemap si din linkurile interne normale.","result":"PASS_REDIRECT_TO_CANONICAL"}
+{"inputUrl":"https://atelierdeconsultanta.ro/intrebari/ce-documente-sunt-necesare-pentru-dr12","localStatus":"200 direct","liveStatus":"200 direct","redirectChain":"https://atelierdeconsultanta.ro/intrebari/ce-documente-sunt-necesare-pentru-dr12 [200]","liveRedirectChain":"https://atelierdeconsultanta.ro/intrebari/ce-documente-sunt-necesare-pentru-dr12 [200]","finalUrl":"https://atelierdeconsultanta.ro/intrebari/ce-documente-sunt-necesare-pentru-dr12","canonical":"https://atelierdeconsultanta.ro/intrebari/ce-documente-sunt-necesare-pentru-dr12","metaRobots":"index, follow","xRobotsTag":"","inSitemap":true,"internalLinkCount":7,"intent":"pagina canonica indexabila","action":"Confirmat 200 direct, self-canonical, indexabil si prezent in sitemap cand este pagina HTML.","result":"PASS_CANONICAL_200"}
+{"inputUrl":"https://atelierdeconsultanta.ro/intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene/","localStatus":"200 after 1 redirect(s)","liveStatus":"200 after 1 redirect(s)","redirectChain":"https://atelierdeconsultanta.ro/intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene/ -> https://atelierdeconsultanta.ro/intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene [301] | https://atelierdeconsultanta.ro/intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene [200]","liveRedirectChain":"https://atelierdeconsultanta.ro/intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene/ -> https://atelierdeconsultanta.ro/intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene [301] | https://atelierdeconsultanta.ro/intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene [200]","finalUrl":"https://atelierdeconsultanta.ro/intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene","canonical":"https://atelierdeconsultanta.ro/intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene","metaRobots":"index, follow","xRobotsTag":"","inSitemap":true,"internalLinkCount":0,"intent":"alias cu redirect","action":"Pastrat 301 direct catre URL-ul canonic; alias exclus din sitemap si din linkurile interne normale.","result":"PASS_REDIRECT_TO_CANONICAL"}
+{"inputUrl":"https://atelierdeconsultanta.ro/intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene","localStatus":"200 direct","liveStatus":"200 direct","redirectChain":"https://atelierdeconsultanta.ro/intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene [200]","liveRedirectChain":"https://atelierdeconsultanta.ro/intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene [200]","finalUrl":"https://atelierdeconsultanta.ro/intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene","canonical":"https://atelierdeconsultanta.ro/intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene","metaRobots":"index, follow","xRobotsTag":"","inSitemap":true,"internalLinkCount":7,"intent":"pagina canonica indexabila","action":"Confirmat 200 direct, self-canonical, indexabil si prezent in sitemap cand este pagina HTML.","result":"PASS_CANONICAL_200"}
+{"inputUrl":"https://atelierdeconsultanta.ro/intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm/","localStatus":"200 after 1 redirect(s)","liveStatus":"200 after 1 redirect(s)","redirectChain":"https://atelierdeconsultanta.ro/intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm/ -> https://atelierdeconsultanta.ro/intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm [301] | https://atelierdeconsultanta.ro/intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm [200]","liveRedirectChain":"https://atelierdeconsultanta.ro/intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm/ -> https://atelierdeconsultanta.ro/intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm [301] | https://atelierdeconsultanta.ro/intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm [200]","finalUrl":"https://atelierdeconsultanta.ro/intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm","canonical":"https://atelierdeconsultanta.ro/intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm","metaRobots":"index, follow","xRobotsTag":"","inSitemap":true,"internalLinkCount":0,"intent":"alias cu redirect","action":"Pastrat 301 direct catre URL-ul canonic; alias exclus din sitemap si din linkurile interne normale.","result":"PASS_REDIRECT_TO_CANONICAL"}
+{"inputUrl":"https://atelierdeconsultanta.ro/intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm","localStatus":"200 direct","liveStatus":"200 direct","redirectChain":"https://atelierdeconsultanta.ro/intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm [200]","liveRedirectChain":"https://atelierdeconsultanta.ro/intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm [200]","finalUrl":"https://atelierdeconsultanta.ro/intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm","canonical":"https://atelierdeconsultanta.ro/intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm","metaRobots":"index, follow","xRobotsTag":"","inSitemap":true,"internalLinkCount":7,"intent":"pagina canonica indexabila","action":"Confirmat 200 direct, self-canonical, indexabil si prezent in sitemap cand este pagina HTML.","result":"PASS_CANONICAL_200"}
+{"inputUrl":"https://atelierdeconsultanta.ro/fonduri-europene-caen/0111-culturi-cereale/","localStatus":"200 after 1 redirect(s)","liveStatus":"200 after 1 redirect(s)","redirectChain":"https://atelierdeconsultanta.ro/fonduri-europene-caen/0111-culturi-cereale/ -> https://atelierdeconsultanta.ro/fonduri-europene-caen/0111-culturi-cereale [301] | https://atelierdeconsultanta.ro/fonduri-europene-caen/0111-culturi-cereale [200]","liveRedirectChain":"https://atelierdeconsultanta.ro/fonduri-europene-caen/0111-culturi-cereale/ -> https://atelierdeconsultanta.ro/fonduri-europene-caen/0111-culturi-cereale [301] | https://atelierdeconsultanta.ro/fonduri-europene-caen/0111-culturi-cereale [200]","finalUrl":"https://atelierdeconsultanta.ro/fonduri-europene-caen/0111-culturi-cereale","canonical":"https://atelierdeconsultanta.ro/fonduri-europene-caen/0111-culturi-cereale","metaRobots":"index, follow","xRobotsTag":"","inSitemap":true,"internalLinkCount":0,"intent":"alias cu redirect","action":"Pastrat 301 direct catre URL-ul canonic; alias exclus din sitemap si din linkurile interne normale.","result":"PASS_REDIRECT_TO_CANONICAL"}
+{"inputUrl":"https://atelierdeconsultanta.ro/fonduri-europene-caen/0111-culturi-cereale","localStatus":"200 direct","liveStatus":"200 direct","redirectChain":"https://atelierdeconsultanta.ro/fonduri-europene-caen/0111-culturi-cereale [200]","liveRedirectChain":"https://atelierdeconsultanta.ro/fonduri-europene-caen/0111-culturi-cereale [200]","finalUrl":"https://atelierdeconsultanta.ro/fonduri-europene-caen/0111-culturi-cereale","canonical":"https://atelierdeconsultanta.ro/fonduri-europene-caen/0111-culturi-cereale","metaRobots":"index, follow","xRobotsTag":"","inSitemap":true,"internalLinkCount":7,"intent":"pagina canonica indexabila","action":"Confirmat 200 direct, self-canonical, indexabil si prezent in sitemap cand este pagina HTML.","result":"PASS_CANONICAL_200"}
+{"inputUrl":"https://atelierdeconsultanta.ro/fonduri-europene-caen/4321-instalatii-electrice/","localStatus":"200 after 1 redirect(s)","liveStatus":"200 after 1 redirect(s)","redirectChain":"https://atelierdeconsultanta.ro/fonduri-europene-caen/4321-instalatii-electrice/ -> https://atelierdeconsultanta.ro/fonduri-europene-caen/4321-instalatii-electrice [301] | https://atelierdeconsultanta.ro/fonduri-europene-caen/4321-instalatii-electrice [200]","liveRedirectChain":"https://atelierdeconsultanta.ro/fonduri-europene-caen/4321-instalatii-electrice/ -> https://atelierdeconsultanta.ro/fonduri-europene-caen/4321-instalatii-electrice [301] | https://atelierdeconsultanta.ro/fonduri-europene-caen/4321-instalatii-electrice [200]","finalUrl":"https://atelierdeconsultanta.ro/fonduri-europene-caen/4321-instalatii-electrice","canonical":"https://atelierdeconsultanta.ro/fonduri-europene-caen/4321-instalatii-electrice","metaRobots":"index, follow","xRobotsTag":"","inSitemap":true,"internalLinkCount":0,"intent":"alias cu redirect","action":"Pastrat 301 direct catre URL-ul canonic; alias exclus din sitemap si din linkurile interne normale.","result":"PASS_REDIRECT_TO_CANONICAL"}
+{"inputUrl":"https://atelierdeconsultanta.ro/fonduri-europene-caen/4321-instalatii-electrice","localStatus":"200 direct","liveStatus":"200 direct","redirectChain":"https://atelierdeconsultanta.ro/fonduri-europene-caen/4321-instalatii-electrice [200]","liveRedirectChain":"https://atelierdeconsultanta.ro/fonduri-europene-caen/4321-instalatii-electrice [200]","finalUrl":"https://atelierdeconsultanta.ro/fonduri-europene-caen/4321-instalatii-electrice","canonical":"https://atelierdeconsultanta.ro/fonduri-europene-caen/4321-instalatii-electrice","metaRobots":"index, follow","xRobotsTag":"","inSitemap":true,"internalLinkCount":7,"intent":"pagina canonica indexabila","action":"Confirmat 200 direct, self-canonical, indexabil si prezent in sitemap cand este pagina HTML.","result":"PASS_CANONICAL_200"}
+{"inputUrl":"https://atelierdeconsultanta.ro/fonduri-europene-caen/5610-restaurante/","localStatus":"200 after 1 redirect(s)","liveStatus":"200 after 1 redirect(s)","redirectChain":"https://atelierdeconsultanta.ro/fonduri-europene-caen/5610-restaurante/ -> https://atelierdeconsultanta.ro/fonduri-europene-caen/5610-restaurante [301] | https://atelierdeconsultanta.ro/fonduri-europene-caen/5610-restaurante [200]","liveRedirectChain":"https://atelierdeconsultanta.ro/fonduri-europene-caen/5610-restaurante/ -> https://atelierdeconsultanta.ro/fonduri-europene-caen/5610-restaurante [301] | https://atelierdeconsultanta.ro/fonduri-europene-caen/5610-restaurante [200]","finalUrl":"https://atelierdeconsultanta.ro/fonduri-europene-caen/5610-restaurante","canonical":"https://atelierdeconsultanta.ro/fonduri-europene-caen/5610-restaurante","metaRobots":"index, follow","xRobotsTag":"","inSitemap":true,"internalLinkCount":0,"intent":"alias cu redirect","action":"Pastrat 301 direct catre URL-ul canonic; alias exclus din sitemap si din linkurile interne normale.","result":"PASS_REDIRECT_TO_CANONICAL"}
+{"inputUrl":"https://atelierdeconsultanta.ro/fonduri-europene-caen/5610-restaurante","localStatus":"200 direct","liveStatus":"200 direct","redirectChain":"https://atelierdeconsultanta.ro/fonduri-europene-caen/5610-restaurante [200]","liveRedirectChain":"https://atelierdeconsultanta.ro/fonduri-europene-caen/5610-restaurante [200]","finalUrl":"https://atelierdeconsultanta.ro/fonduri-europene-caen/5610-restaurante","canonical":"https://atelierdeconsultanta.ro/fonduri-europene-caen/5610-restaurante","metaRobots":"index, follow","xRobotsTag":"","inSitemap":true,"internalLinkCount":7,"intent":"pagina canonica indexabila","action":"Confirmat 200 direct, self-canonical, indexabil si prezent in sitemap cand este pagina HTML.","result":"PASS_CANONICAL_200"}
+{"inputUrl":"https://atelierdeconsultanta.ro/fonduri-europene-caen/6201-dezvoltare-software/","localStatus":"200 after 1 redirect(s)","liveStatus":"200 after 1 redirect(s)","redirectChain":"https://atelierdeconsultanta.ro/fonduri-europene-caen/6201-dezvoltare-software/ -> https://atelierdeconsultanta.ro/fonduri-europene-caen/6201-dezvoltare-software [301] | https://atelierdeconsultanta.ro/fonduri-europene-caen/6201-dezvoltare-software [200]","liveRedirectChain":"https://atelierdeconsultanta.ro/fonduri-europene-caen/6201-dezvoltare-software/ -> https://atelierdeconsultanta.ro/fonduri-europene-caen/6201-dezvoltare-software [301] | https://atelierdeconsultanta.ro/fonduri-europene-caen/6201-dezvoltare-software [200]","finalUrl":"https://atelierdeconsultanta.ro/fonduri-europene-caen/6201-dezvoltare-software","canonical":"https://atelierdeconsultanta.ro/fonduri-europene-caen/6201-dezvoltare-software","metaRobots":"index, follow","xRobotsTag":"","inSitemap":true,"internalLinkCount":0,"intent":"alias cu redirect","action":"Pastrat 301 direct catre URL-ul canonic; alias exclus din sitemap si din linkurile interne normale.","result":"PASS_REDIRECT_TO_CANONICAL"}
+{"inputUrl":"https://atelierdeconsultanta.ro/fonduri-europene-caen/6201-dezvoltare-software","localStatus":"200 direct","liveStatus":"200 direct","redirectChain":"https://atelierdeconsultanta.ro/fonduri-europene-caen/6201-dezvoltare-software [200]","liveRedirectChain":"https://atelierdeconsultanta.ro/fonduri-europene-caen/6201-dezvoltare-software [200]","finalUrl":"https://atelierdeconsultanta.ro/fonduri-europene-caen/6201-dezvoltare-software","canonical":"https://atelierdeconsultanta.ro/fonduri-europene-caen/6201-dezvoltare-software","metaRobots":"index, follow","xRobotsTag":"","inSitemap":true,"internalLinkCount":7,"intent":"pagina canonica indexabila","action":"Confirmat 200 direct, self-canonical, indexabil si prezent in sitemap cand este pagina HTML.","result":"PASS_CANONICAL_200"}
+{"inputUrl":"https://atelierdeconsultanta.ro/fonduri-europene-iasi","localStatus":"200 after 1 redirect(s)","liveStatus":"200 after 1 redirect(s)","redirectChain":"https://atelierdeconsultanta.ro/fonduri-europene-iasi -> https://atelierdeconsultanta.ro/fonduri-europene-nord-est [301] | https://atelierdeconsultanta.ro/fonduri-europene-nord-est [200]","liveRedirectChain":"https://atelierdeconsultanta.ro/fonduri-europene-iasi -> https://atelierdeconsultanta.ro/fonduri-europene-nord-est [301] | https://atelierdeconsultanta.ro/fonduri-europene-nord-est [200]","finalUrl":"https://atelierdeconsultanta.ro/fonduri-europene-nord-est","canonical":"https://atelierdeconsultanta.ro/fonduri-europene-nord-est","metaRobots":"index, follow","xRobotsTag":"","inSitemap":true,"internalLinkCount":0,"intent":"alias cu redirect","action":"Pastrat 301 direct catre URL-ul canonic; alias exclus din sitemap si din linkurile interne normale.","result":"PASS_REDIRECT_TO_CANONICAL"}
+{"inputUrl":"https://atelierdeconsultanta.ro/consultanta-fonduri-europene-bacau","localStatus":"200 after 1 redirect(s)","liveStatus":"200 after 1 redirect(s)","redirectChain":"https://atelierdeconsultanta.ro/consultanta-fonduri-europene-bacau -> https://atelierdeconsultanta.ro/fonduri-europene-nord-est [301] | https://atelierdeconsultanta.ro/fonduri-europene-nord-est [200]","liveRedirectChain":"https://atelierdeconsultanta.ro/consultanta-fonduri-europene-bacau -> https://atelierdeconsultanta.ro/fonduri-europene-nord-est [301] | https://atelierdeconsultanta.ro/fonduri-europene-nord-est [200]","finalUrl":"https://atelierdeconsultanta.ro/fonduri-europene-nord-est","canonical":"https://atelierdeconsultanta.ro/fonduri-europene-nord-est","metaRobots":"index, follow","xRobotsTag":"","inSitemap":true,"internalLinkCount":0,"intent":"alias cu redirect","action":"Pastrat 301 direct catre URL-ul canonic; alias exclus din sitemap si din linkurile interne normale.","result":"PASS_REDIRECT_TO_CANONICAL"}
+=== test:functional === 
+
+> test:functional
+> node tests/faber-functional-checks.mjs
+
+Functional navigation checks passed.
+=== build === 
+
+> build
+> npm run apply:design-profiles && npm run generate:sitemap && node tools/build-cloudflare-assets.js
+
+
+> apply:design-profiles
+> node tools/apply-design-profiles.js
+
+Applied design profiles to 0 file(s); checked 138 file(s).
+
+> generate:sitemap
+> node tools/generate-sitemap.js
+
+Generated sitemap.xml with 92 canonical URLs.
+Cloudflare assets built in dist (150 files).
+=== validate:cloudflare === 
+
+> validate:cloudflare
+> node tools/validate-cloudflare-deploy.js
+
+Redirect rules: 368
+Dynamic redirect rules: 9
+Cloudflare assets directory: ./dist
+Cloudflare deploy validation passed.
+=== BASELINE DONE ===

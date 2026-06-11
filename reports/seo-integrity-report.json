@@ -1,49 +1,49 @@
 {
-  "generatedAt": "2026-06-10T18:11:34.170Z",
+  "generatedAt": "2026-06-11T08:17:12.312Z",
   "root": "C:\\Users\\flori\\Documents\\GitHub\\atelierdeconsultanta",
   "summary": {
-    "totalFiles": 168,
-    "passedFiles": 168,
+    "totalFiles": 170,
+    "passedFiles": 170,
     "failedFiles": 0,
     "checks": {
       "metaDescription": {
-        "pass": 168,
+        "pass": 170,
         "fail": 0
       },
       "canonical": {
-        "pass": 168,
+        "pass": 170,
         "fail": 0
       },
       "imageAltAttributes": {
-        "pass": 168,
+        "pass": 170,
         "fail": 0
       },
       "singleH1": {
-        "pass": 168,
+        "pass": 170,
         "fail": 0
       },
       "relatedLinks": {
-        "pass": 168,
+        "pass": 170,
         "fail": 0
       },
       "utf8Charset": {
-        "pass": 165,
+        "pass": 167,
         "fail": 0
       },
       "cleanCanonical": {
-        "pass": 165,
+        "pass": 167,
         "fail": 0
       },
       "visibleFaqForSchema": {
-        "pass": 165,
+        "pass": 167,
         "fail": 0
       },
       "speakableSchemaCoverage": {
-        "pass": 165,
+        "pass": 167,
         "fail": 0
       },
       "contentDepth": {
-        "pass": 165,
+        "pass": 167,
         "fail": 0
       }
     }
@@ -439,14 +439,14 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "AFIR: fonduri pentru fermieri și proiecte agricole"
+            "AFIR: calculator SO, programe și verificare dosar"
           ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
-          "required": false,
-          "count": 3,
-          "threshold": 0
+          "required": true,
+          "count": 13,
+          "threshold": 12
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -455,14 +455,14 @@
         },
         "contentDepth": {
           "status": "pass",
-          "required": false,
-          "words": 451,
+          "required": true,
+          "words": 2580,
           "threshold": 2000
         },
         "relatedLinks": {
           "status": "pass",
           "required": true,
-          "count": 1
+          "count": 2
         }
       }
     },
@@ -1080,14 +1080,14 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Calendar fonduri europene"
+            "Calendar fonduri europene: pregătire fără grabă"
           ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
-          "required": false,
-          "count": 3,
-          "threshold": 0
+          "required": true,
+          "count": 6,
+          "threshold": 6
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -1096,9 +1096,9 @@
         },
         "contentDepth": {
           "status": "pass",
-          "required": false,
-          "words": 415,
-          "threshold": 2000
+          "required": true,
+          "words": 1528,
+          "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
@@ -1311,14 +1311,14 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Cât costă consultanța pentru fonduri europene"
+            "Cât costa consultanță pentru fonduri europene"
           ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
-          "required": false,
-          "count": 3,
-          "threshold": 0
+          "required": true,
+          "count": 6,
+          "threshold": 6
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -1327,9 +1327,9 @@
         },
         "contentDepth": {
           "status": "pass",
-          "required": false,
-          "words": 405,
-          "threshold": 2000
+          "required": true,
+          "words": 1572,
+          "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
@@ -1718,9 +1718,9 @@
         },
         "visibleFaqForSchema": {
           "status": "pass",
-          "required": false,
-          "count": 3,
-          "threshold": 0
+          "required": true,
+          "count": 6,
+          "threshold": 6
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -1729,14 +1729,14 @@
         },
         "contentDepth": {
           "status": "pass",
-          "required": false,
-          "words": 386,
-          "threshold": 2000
+          "required": true,
+          "words": 1640,
+          "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
           "required": true,
-          "count": 1
+          "count": 2
         }
       }
     },
@@ -1833,9 +1833,9 @@
         },
         "visibleFaqForSchema": {
           "status": "pass",
-          "required": false,
-          "count": 3,
-          "threshold": 0
+          "required": true,
+          "count": 6,
+          "threshold": 6
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -1844,9 +1844,9 @@
         },
         "contentDepth": {
           "status": "pass",
-          "required": false,
-          "words": 400,
-          "threshold": 2000
+          "required": true,
+          "words": 1612,
+          "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
@@ -2290,9 +2290,9 @@
         },
         "visibleFaqForSchema": {
           "status": "pass",
-          "required": false,
-          "count": 3,
-          "threshold": 0
+          "required": true,
+          "count": 6,
+          "threshold": 6
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -2301,9 +2301,9 @@
         },
         "contentDepth": {
           "status": "pass",
-          "required": false,
-          "words": 374,
-          "threshold": 2000
+          "required": true,
+          "words": 1555,
+          "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
@@ -2692,9 +2692,9 @@
         },
         "visibleFaqForSchema": {
           "status": "pass",
-          "required": false,
-          "count": 3,
-          "threshold": 0
+          "required": true,
+          "count": 6,
+          "threshold": 6
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -2703,9 +2703,9 @@
         },
         "contentDepth": {
           "status": "pass",
-          "required": false,
-          "words": 419,
-          "threshold": 2000
+          "required": true,
+          "words": 1540,
+          "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
@@ -2938,7 +2938,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 1391,
+          "words": 1218,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -3112,7 +3112,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1585,
+          "words": 1588,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -3171,7 +3171,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1768,
+          "words": 1771,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -3230,7 +3230,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1768,
+          "words": 1771,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -3446,13 +3446,13 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "DR12 AFIR pentru tineri fermieri: ghid, acte și lansare"
+            "DR12 AFIR: consolidarea exploatatiilor tinerilor fermieri"
           ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
           "required": true,
-          "count": 11,
+          "count": 10,
           "threshold": 10
         },
         "speakableSchemaCoverage": {
@@ -3463,13 +3463,13 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2031,
-          "threshold": 1100
+          "words": 1325,
+          "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
           "required": true,
-          "count": 2
+          "count": 1
         }
       }
     },
@@ -3505,13 +3505,13 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "DR12 AFIR pentru tineri fermieri: ghid, acte și lansare"
+            "DR12 AFIR: consolidarea exploatatiilor tinerilor fermieri"
           ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
           "required": true,
-          "count": 11,
+          "count": 10,
           "threshold": 10
         },
         "speakableSchemaCoverage": {
@@ -3522,13 +3522,13 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2031,
-          "threshold": 1100
+          "words": 1325,
+          "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
           "required": true,
-          "count": 2
+          "count": 1
         }
       }
     },
@@ -3741,7 +3741,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "DR14 AFIR pentru ferme mici"
+            "DR14 AFIR: investiții pentru ferme mici"
           ]
         },
         "visibleFaqForSchema": {
@@ -3758,13 +3758,13 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1933,
+          "words": 1275,
           "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
           "required": false,
-          "count": 3,
+          "count": 1,
           "note": "not a hub/blog page"
         }
       }
@@ -3801,7 +3801,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "DR14 AFIR pentru ferme mici"
+            "DR14 AFIR: investiții pentru ferme mici"
           ]
         },
         "visibleFaqForSchema": {
@@ -3818,13 +3818,13 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1933,
+          "words": 1275,
           "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
           "required": false,
-          "count": 3,
+          "count": 1,
           "note": "not a hub/blog page"
         }
       }
@@ -3861,7 +3861,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "e-MOVE: stații de încărcare și mobilitate electrică"
+            "e-MOVE RO: statii de încărcare, energie regenerabilă și stocare"
           ]
         },
         "visibleFaqForSchema": {
@@ -3878,7 +3878,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1408,
+          "words": 1223,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -3977,14 +3977,14 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Eligibilitate fonduri europene"
+            "Eligibilitate fonduri europene: administrativ, tehnic și punctaj"
           ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
-          "required": false,
-          "count": 3,
-          "threshold": 0
+          "required": true,
+          "count": 6,
+          "threshold": 6
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -3993,14 +3993,14 @@
         },
         "contentDepth": {
           "status": "pass",
-          "required": false,
-          "words": 433,
-          "threshold": 2000
+          "required": true,
+          "words": 1514,
+          "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
           "required": true,
-          "count": 1
+          "count": 2
         }
       }
     },
@@ -4271,14 +4271,14 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Finanțări pentru panouri fotovoltaice"
+            "Finantari pentru panouri fotovoltaice"
           ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
-          "required": false,
-          "count": 3,
-          "threshold": 0
+          "required": true,
+          "count": 6,
+          "threshold": 6
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -4287,9 +4287,9 @@
         },
         "contentDepth": {
           "status": "pass",
-          "required": false,
-          "words": 390,
-          "threshold": 2000
+          "required": true,
+          "words": 1458,
+          "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
@@ -4391,9 +4391,9 @@
         },
         "visibleFaqForSchema": {
           "status": "pass",
-          "required": false,
-          "count": 3,
-          "threshold": 0
+          "required": true,
+          "count": 6,
+          "threshold": 6
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -4402,9 +4402,9 @@
         },
         "contentDepth": {
           "status": "pass",
-          "required": false,
-          "words": 390,
-          "threshold": 2000
+          "required": true,
+          "words": 1625,
+          "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
@@ -4854,14 +4854,14 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Fonduri europene pentru agricultură"
+            "Fonduri europene pentru agricultura"
           ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
-          "required": false,
-          "count": 3,
-          "threshold": 0
+          "required": true,
+          "count": 8,
+          "threshold": 8
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -4870,9 +4870,9 @@
         },
         "contentDepth": {
           "status": "pass",
-          "required": false,
-          "words": 397,
-          "threshold": 2000
+          "required": true,
+          "words": 1305,
+          "threshold": 1100
         },
         "relatedLinks": {
           "status": "pass",
@@ -5325,9 +5325,9 @@
         },
         "visibleFaqForSchema": {
           "status": "pass",
-          "required": false,
-          "count": 3,
-          "threshold": 0
+          "required": true,
+          "count": 8,
+          "threshold": 8
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -5336,9 +5336,9 @@
         },
         "contentDepth": {
           "status": "pass",
-          "required": false,
-          "words": 415,
-          "threshold": 2000
+          "required": true,
+          "words": 1257,
+          "threshold": 1100
         },
         "relatedLinks": {
           "status": "pass",
@@ -5440,9 +5440,9 @@
         },
         "visibleFaqForSchema": {
           "status": "pass",
-          "required": false,
-          "count": 3,
-          "threshold": 0
+          "required": true,
+          "count": 6,
+          "threshold": 6
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -5451,9 +5451,9 @@
         },
         "contentDepth": {
           "status": "pass",
-          "required": false,
-          "words": 408,
-          "threshold": 2000
+          "required": true,
+          "words": 1562,
+          "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
@@ -5723,9 +5723,9 @@
         },
         "visibleFaqForSchema": {
           "status": "pass",
-          "required": false,
-          "count": 3,
-          "threshold": 0
+          "required": true,
+          "count": 10,
+          "threshold": 10
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -5734,9 +5734,9 @@
         },
         "contentDepth": {
           "status": "pass",
-          "required": false,
-          "words": 409,
-          "threshold": 2000
+          "required": true,
+          "words": 1396,
+          "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
@@ -6063,14 +6063,14 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Fonduri europene în România"
+            "Fonduri europene: programe, eligibilitate și ghiduri"
           ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
-          "required": false,
-          "count": 3,
-          "threshold": 0
+          "required": true,
+          "count": 10,
+          "threshold": 10
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -6079,14 +6079,14 @@
         },
         "contentDepth": {
           "status": "pass",
-          "required": false,
-          "words": 474,
-          "threshold": 2000
+          "required": true,
+          "words": 1497,
+          "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
           "required": true,
-          "count": 1
+          "count": 2
         }
       }
     },
@@ -6178,14 +6178,14 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Fonduri nerambursabile"
+            "Fonduri nerambursabile: grant, cofinanțare și obligații"
           ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
-          "required": false,
-          "count": 3,
-          "threshold": 0
+          "required": true,
+          "count": 8,
+          "threshold": 8
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -6194,14 +6194,14 @@
         },
         "contentDepth": {
           "status": "pass",
-          "required": false,
-          "words": 426,
-          "threshold": 2000
+          "required": true,
+          "words": 1314,
+          "threshold": 1100
         },
         "relatedLinks": {
           "status": "pass",
           "required": true,
-          "count": 1
+          "count": 2
         }
       }
     },
@@ -6298,9 +6298,9 @@
         },
         "visibleFaqForSchema": {
           "status": "pass",
-          "required": false,
-          "count": 3,
-          "threshold": 0
+          "required": true,
+          "count": 6,
+          "threshold": 6
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -6309,9 +6309,9 @@
         },
         "contentDepth": {
           "status": "pass",
-          "required": false,
-          "words": 380,
-          "threshold": 2000
+          "required": true,
+          "words": 1586,
+          "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
@@ -6413,9 +6413,9 @@
         },
         "visibleFaqForSchema": {
           "status": "pass",
-          "required": false,
-          "count": 3,
-          "threshold": 0
+          "required": true,
+          "count": 6,
+          "threshold": 6
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -6424,9 +6424,9 @@
         },
         "contentDepth": {
           "status": "pass",
-          "required": false,
-          "words": 407,
-          "threshold": 2000
+          "required": true,
+          "words": 1588,
+          "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
@@ -6543,7 +6543,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1488,
+          "words": 1460,
           "threshold": 1400
         },
         "relatedLinks": {
@@ -6700,14 +6700,14 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Ghiduri pentru fonduri europene"
+            "Ghiduri și resurse pentru fonduri europene"
           ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
-          "required": false,
-          "count": 3,
-          "threshold": 0
+          "required": true,
+          "count": 8,
+          "threshold": 7
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -6716,14 +6716,14 @@
         },
         "contentDepth": {
           "status": "pass",
-          "required": false,
-          "words": 408,
+          "required": true,
+          "words": 2054,
           "threshold": 2000
         },
         "relatedLinks": {
           "status": "pass",
           "required": true,
-          "count": 1
+          "count": 2
         }
       }
     },
@@ -6909,9 +6909,9 @@
         },
         "visibleFaqForSchema": {
           "status": "pass",
-          "required": false,
-          "count": 3,
-          "threshold": 0
+          "required": true,
+          "count": 6,
+          "threshold": 6
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -6920,9 +6920,9 @@
         },
         "contentDepth": {
           "status": "pass",
-          "required": false,
-          "words": 380,
-          "threshold": 2000
+          "required": true,
+          "words": 1533,
+          "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
@@ -7024,9 +7024,9 @@
         },
         "visibleFaqForSchema": {
           "status": "pass",
-          "required": false,
-          "count": 3,
-          "threshold": 0
+          "required": true,
+          "count": 6,
+          "threshold": 6
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -7035,9 +7035,9 @@
         },
         "contentDepth": {
           "status": "pass",
-          "required": false,
-          "words": 387,
-          "threshold": 2000
+          "required": true,
+          "words": 1489,
+          "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
@@ -7154,7 +7154,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 1905,
+          "words": 2083,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -7213,7 +7213,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1181,
+          "words": 1184,
           "threshold": 900
         },
         "relatedLinks": {
@@ -7317,9 +7317,9 @@
         },
         "visibleFaqForSchema": {
           "status": "pass",
-          "required": false,
-          "count": 3,
-          "threshold": 0
+          "required": true,
+          "count": 7,
+          "threshold": 6
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -7328,9 +7328,9 @@
         },
         "contentDepth": {
           "status": "pass",
-          "required": false,
-          "words": 393,
-          "threshold": 2000
+          "required": true,
+          "words": 1474,
+          "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
@@ -7549,7 +7549,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Investiții pentru modernizarea microintreprinderilor - Apel 2"
+            "Modernizarea microintreprinderilor - Apel 2 Nord-Est"
           ]
         },
         "visibleFaqForSchema": {
@@ -7566,7 +7566,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1624,
+          "words": 1204,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -7609,7 +7609,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Investiții pentru modernizarea microintreprinderilor - Apel 2"
+            "Modernizarea microintreprinderilor - Apel 2 Nord-Est"
           ]
         },
         "visibleFaqForSchema": {
@@ -7626,7 +7626,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1624,
+          "words": 1204,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -7956,14 +7956,14 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "PNRR pentru IMM-uri și proiecte de digitalizare"
+            "PNRR: apeluri, digitalizare și reguli specifice"
           ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
-          "required": false,
-          "count": 3,
-          "threshold": 0
+          "required": true,
+          "count": 8,
+          "threshold": 8
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -7972,14 +7972,134 @@
         },
         "contentDepth": {
           "status": "pass",
-          "required": false,
-          "words": 454,
-          "threshold": 2000
+          "required": true,
+          "words": 1278,
+          "threshold": 1100
         },
         "relatedLinks": {
           "status": "pass",
           "required": true,
+          "count": 2
+        }
+      }
+    },
+    {
+      "file": "pocidif-21.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "utf8Charset": {
+          "status": "pass",
+          "hasCharset": true,
+          "hasHttpEquiv": false
+        },
+        "metaDescription": {
+          "status": "pass",
           "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "cleanCanonical": {
+          "status": "pass",
+          "href": "https://atelierdeconsultanta.ro/pocidif-21"
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "PoCIDIF 2.1: inovare și tehnologii avansate pentru IMM din TIC"
+          ]
+        },
+        "visibleFaqForSchema": {
+          "status": "pass",
+          "required": true,
+          "count": 10,
+          "threshold": 10
+        },
+        "speakableSchemaCoverage": {
+          "status": "pass",
+          "required": false,
+          "count": 0
+        },
+        "contentDepth": {
+          "status": "pass",
+          "required": true,
+          "words": 1230,
+          "threshold": 1200
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": false,
+          "count": 1,
+          "note": "not a hub/blog page"
+        }
+      }
+    },
+    {
+      "file": "pocidif-21/index.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "utf8Charset": {
+          "status": "pass",
+          "hasCharset": true,
+          "hasHttpEquiv": false
+        },
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "cleanCanonical": {
+          "status": "pass",
+          "href": "https://atelierdeconsultanta.ro/pocidif-21"
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "PoCIDIF 2.1: inovare și tehnologii avansate pentru IMM din TIC"
+          ]
+        },
+        "visibleFaqForSchema": {
+          "status": "pass",
+          "required": true,
+          "count": 10,
+          "threshold": 10
+        },
+        "speakableSchemaCoverage": {
+          "status": "pass",
+          "required": false,
+          "count": 0
+        },
+        "contentDepth": {
+          "status": "pass",
+          "required": true,
+          "words": 1230,
+          "threshold": 1200
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": false,
+          "count": 1,
+          "note": "not a hub/blog page"
         }
       }
     },
@@ -8164,7 +8284,7 @@
     },
     {
       "file": "portofoliu/index.html",
-      "noindex": false,
+      "noindex": true,
       "pass": true,
       "checks": {
         "utf8Charset": {
@@ -8192,10 +8312,7 @@
         },
         "singleH1": {
           "status": "pass",
-          "count": 1,
-          "text": [
-            "Portofoliu de proiecte și domenii de finanțare"
-          ]
+          "note": "noindex page: h1 not required"
         },
         "visibleFaqForSchema": {
           "status": "pass",
@@ -8210,9 +8327,8 @@
         },
         "contentDepth": {
           "status": "pass",
-          "required": true,
-          "words": 978,
-          "threshold": 900
+          "required": false,
+          "words": 0
         },
         "relatedLinks": {
           "status": "pass",
@@ -8254,7 +8370,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "PRO INFRA: eficiență energetică și echipamente"
+            "PRO INFRA: producție pentru infrastructura de transport"
           ]
         },
         "visibleFaqForSchema": {
@@ -8271,8 +8387,8 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1801,
-          "threshold": 1500
+          "words": 1205,
+          "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
@@ -8314,7 +8430,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "PRO INFRA: eficiență energetică și echipamente"
+            "PRO INFRA: producție pentru infrastructura de transport"
           ]
         },
         "visibleFaqForSchema": {
@@ -8331,8 +8447,8 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1801,
-          "threshold": 1500
+          "words": 1205,
+          "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
@@ -8490,14 +8606,14 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Start-Up Nation 2026: cheltuieli eligibile"
+            "Start Up Nation 2026: cheltuieli eligibile"
           ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
-          "required": false,
-          "count": 3,
-          "threshold": 0
+          "required": true,
+          "count": 6,
+          "threshold": 6
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -8506,14 +8622,14 @@
         },
         "contentDepth": {
           "status": "pass",
-          "required": false,
-          "words": 430,
-          "threshold": 2000
+          "required": true,
+          "words": 1737,
+          "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
           "required": true,
-          "count": 1
+          "count": 2
         }
       }
     },
@@ -8605,14 +8721,14 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Start-Up Nation 2026: condiții de verificat"
+            "Start-Up Nation 2026: checklist de condiții"
           ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
-          "required": false,
-          "count": 3,
-          "threshold": 0
+          "required": true,
+          "count": 6,
+          "threshold": 6
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -8621,14 +8737,14 @@
         },
         "contentDepth": {
           "status": "pass",
-          "required": false,
-          "words": 451,
-          "threshold": 2000
+          "required": true,
+          "words": 1723,
+          "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
           "required": true,
-          "count": 1
+          "count": 2
         }
       }
     },
@@ -8776,14 +8892,14 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Start-Up Nation 2026: idei de afaceri"
+            "Start Up Nation 2026: idei de afaceri"
           ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
-          "required": false,
-          "count": 3,
-          "threshold": 0
+          "required": true,
+          "count": 6,
+          "threshold": 6
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -8792,14 +8908,14 @@
         },
         "contentDepth": {
           "status": "pass",
-          "required": false,
-          "words": 443,
-          "threshold": 2000
+          "required": true,
+          "words": 1758,
+          "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
           "required": true,
-          "count": 1
+          "count": 2
         }
       }
     },
@@ -8891,14 +9007,14 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Start-Up Nation 2026: plan de afaceri"
+            "Start Up Nation 2026: plan de afaceri"
           ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
-          "required": false,
-          "count": 3,
-          "threshold": 0
+          "required": true,
+          "count": 6,
+          "threshold": 6
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -8907,14 +9023,14 @@
         },
         "contentDepth": {
           "status": "pass",
-          "required": false,
-          "words": 445,
-          "threshold": 2000
+          "required": true,
+          "words": 1738,
+          "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
           "required": true,
-          "count": 1
+          "count": 2
         }
       }
     },
@@ -8950,13 +9066,13 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Start-Up Nation 2026: condiții, CAEN și plan de afaceri"
+            "Start-Up Nation: condiții, cheltuieli eligibile și plan de afaceri"
           ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
           "required": true,
-          "count": 11,
+          "count": 10,
           "threshold": 10
         },
         "speakableSchemaCoverage": {
@@ -8967,13 +9083,13 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1983,
-          "threshold": 1100
+          "words": 1240,
+          "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
           "required": true,
-          "count": 5
+          "count": 1
         }
       }
     },
@@ -9009,13 +9125,13 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Start-Up Nation 2026: condiții, CAEN și plan de afaceri"
+            "Start-Up Nation: condiții, cheltuieli eligibile și plan de afaceri"
           ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
           "required": true,
-          "count": 11,
+          "count": 10,
           "threshold": 10
         },
         "speakableSchemaCoverage": {
@@ -9026,13 +9142,13 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1983,
-          "threshold": 1100
+          "words": 1240,
+          "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
           "required": true,
-          "count": 5
+          "count": 1
         }
       }
     },
@@ -9205,7 +9321,7 @@
     },
     {
       "file": "studii-de-caz-fonduri-europene/index.html",
-      "noindex": false,
+      "noindex": true,
       "pass": true,
       "checks": {
         "utf8Charset": {
@@ -9233,10 +9349,7 @@
         },
         "singleH1": {
           "status": "pass",
-          "count": 1,
-          "text": [
-            "Studii de caz anonimizate: proiecte pregătite pentru fonduri europene"
-          ]
+          "note": "noindex page: h1 not required"
         },
         "visibleFaqForSchema": {
           "status": "pass",
@@ -9251,14 +9364,14 @@
         },
         "contentDepth": {
           "status": "pass",
-          "required": true,
-          "words": 1691,
-          "threshold": 1200
+          "required": false,
+          "words": 0
         },
         "relatedLinks": {
           "status": "pass",
-          "required": true,
-          "count": 4
+          "required": false,
+          "count": 4,
+          "note": "not a hub/blog page"
         }
       }
     },
@@ -9320,7 +9433,7 @@
     },
     {
       "file": "studii-de-caz/index.html",
-      "noindex": false,
+      "noindex": true,
       "pass": true,
       "checks": {
         "utf8Charset": {
@@ -9348,16 +9461,13 @@
         },
         "singleH1": {
           "status": "pass",
-          "count": 1,
-          "text": [
-            "Studii de caz pentru fonduri europene"
-          ]
+          "note": "noindex page: h1 not required"
         },
         "visibleFaqForSchema": {
           "status": "pass",
-          "required": false,
-          "count": 3,
-          "threshold": 0
+          "required": true,
+          "count": 5,
+          "threshold": 4
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -9367,13 +9477,13 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 451,
-          "threshold": 2000
+          "words": 0
         },
         "relatedLinks": {
           "status": "pass",
-          "required": true,
-          "count": 1
+          "required": false,
+          "count": 1,
+          "note": "not a hub/blog page"
         }
       }
     },
@@ -9553,7 +9663,7 @@
     },
     {
       "file": "testimoniale/index.html",
-      "noindex": false,
+      "noindex": true,
       "pass": true,
       "checks": {
         "utf8Charset": {
@@ -9581,10 +9691,7 @@
         },
         "singleH1": {
           "status": "pass",
-          "count": 1,
-          "text": [
-            "Testimoniale și feedback publicabil"
-          ]
+          "note": "noindex page: h1 not required"
         },
         "visibleFaqForSchema": {
           "status": "pass",
@@ -9599,9 +9706,8 @@
         },
         "contentDepth": {
           "status": "pass",
-          "required": true,
-          "words": 984,
-          "threshold": 900
+          "required": false,
+          "words": 0
         },
         "relatedLinks": {
           "status": "pass",

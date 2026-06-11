@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-06-10T17:38:08.208Z",
+  "generatedAt": "2026-06-11T08:17:11.072Z",
   "mode": "check",
-  "baseUrl": "http://127.0.0.1:63677",
+  "baseUrl": "http://127.0.0.1:56126",
   "summary": {
     "checked": 22,
     "passed": 22,
@@ -16,7 +16,7 @@
       "dom": {
         "title": "FABER | Consultanță fonduri europene",
         "h1Count": 1,
-        "seeAlsoCards": 16,
+        "seeAlsoCards": 17,
         "programCluster": 0,
         "overflow": 0
       },
@@ -42,7 +42,7 @@
       "pass": true,
       "errors": [],
       "dom": {
-        "title": "Fonduri Europene în România | Ghid pentru IMM-uri și antreprenori",
+        "title": "Fonduri europene pentru firme și fermieri",
         "h1Count": 1,
         "seeAlsoCards": 0,
         "programCluster": 0,
@@ -70,7 +70,7 @@
       "pass": true,
       "errors": [],
       "dom": {
-        "title": "Calendar Fonduri Europene | Programe și Pregătire Dosare",
+        "title": "Calendar fonduri europene | pregătire",
         "h1Count": 1,
         "seeAlsoCards": 0,
         "programCluster": 0,
@@ -84,7 +84,7 @@
       "pass": true,
       "errors": [],
       "dom": {
-        "title": "Consultanță PNRR Digitalizare | Eligibilitate și Dosar IMM",
+        "title": "Consultanță PNRR Digitalizare - eligibilitate IMM",
         "h1Count": 1,
         "seeAlsoCards": 0,
         "programCluster": 0,
@@ -98,7 +98,7 @@
       "pass": true,
       "errors": [],
       "dom": {
-        "title": "Start-Up Nation 2026 | condiții, CAEN și plan",
+        "title": "Start-Up Nation | condiții, cheltuieli eligibile și plan",
         "h1Count": 1,
         "seeAlsoCards": 0,
         "programCluster": 0,
@@ -140,7 +140,7 @@
       "pass": true,
       "errors": [],
       "dom": {
-        "title": "DR12 AFIR | ghid, lansare și acte",
+        "title": "DR12 AFIR | consolidarea exploatatiilor tinerilor fermieri",
         "h1Count": 1,
         "seeAlsoCards": 0,
         "programCluster": 0,
@@ -182,7 +182,7 @@
       "pass": true,
       "errors": [],
       "dom": {
-        "title": "DR14 AFIR | ferme mici și investiții",
+        "title": "DR14 AFIR | investiții pentru ferme mici",
         "h1Count": 1,
         "seeAlsoCards": 0,
         "programCluster": 0,
@@ -224,7 +224,7 @@
       "pass": true,
       "errors": [],
       "dom": {
-        "title": "PRO INFRA | eficiență energetică",
+        "title": "PRO INFRA | producție pentru infrastructura de transport",
         "h1Count": 1,
         "seeAlsoCards": 0,
         "programCluster": 0,
@@ -266,7 +266,7 @@
       "pass": true,
       "errors": [],
       "dom": {
-        "title": "Fonduri Europene Digitalizare | PNRR și Granturi pentru IMM-uri",
+        "title": "Fonduri europene pentru digitalizare - IMM, PNRR, software",
         "h1Count": 1,
         "seeAlsoCards": 0,
         "programCluster": 0,

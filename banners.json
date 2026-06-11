@@ -107,18 +107,18 @@
   {
     "id": "slide-pro-infra",
     "tag": "Fondul pentru Modernizare",
-    "title": "PRO INFRA\nProductie pentru infrastructura",
+    "title": "PRO INFRA\nProducție pentru infrastructură",
     "description": "Schema de ajutor de stat pentru producătorii de materiale de construcții și materii prime utilizate în infrastructura de transport.",
     "amount": "Finanțare: până la 15.000.000 € per beneficiar",
     "ctaText": "Detalii program →",
     "ctaLink": "/pro-infra",
     "image": "/assets/hero/hero-solar.webp",
-    "altText": "Banner program PRO INFRA productie pentru infrastructura de transport",
+    "altText": "Banner program PRO INFRA producție pentru infrastructura de transport",
     "icon": "ph-factory",
     "order": 8,
     "active": true,
     "officialGuideKey": "pro-infra",
-    "subtitle": "Schema consultativa pentru investitii in productie, echipamente si tehnologii legate de infrastructura de transport."
+    "subtitle": "Schemă consultativă pentru investiții în producție, echipamente și tehnologii legate de infrastructura de transport."
   },
   {
     "id": "slide-startup-nation",
@@ -149,7 +149,7 @@
     "order": 10,
     "active": true,
     "officialGuideKey": "por-ne",
-    "subtitle": "Apel regional Nord-Est pentru microintreprinderi, cu eligibilitate legata de localizare, CAEN si spatiul investitiei."
+    "subtitle": "Apel regional Nord-Est pentru microîntreprinderi, cu eligibilitate legată de localizare, CAEN și spațiul investiției."
   },
   {
     "id": "slide-fond-modernizare-regenerabila",
@@ -184,7 +184,7 @@
   {
     "id": "slide-e-move",
     "tag": "Mobilitate electrică",
-    "title": "e-MOVE RO\nStatii de incarcare si energie regenerabila",
+    "title": "e-MOVE RO\nStații de încărcare și energie regenerabilă",
     "description": "Program pentru infrastructura de mobilitate electrică. Verifică beneficiarul, amplasamentul, avizele, sursa de energie și ghidul activ înainte de depunere.",
     "amount": "Finanțare: conform ghidului oficial al apelului activ",
     "ctaText": "Detalii e-MOVE →",
@@ -195,7 +195,7 @@
     "order": 13,
     "active": true,
     "officialGuideKey": "emove",
-    "subtitle": "Schema consultativa pentru infrastructura de incarcare, productie regenerabila si stocare, cu verificare tehnica a amplasamentului."
+    "subtitle": "Schemă consultativă pentru infrastructura de încărcare, producție regenerabilă și stocare, cu verificare tehnică a amplasamentului."
   },
   {
     "id": "slide-gal-afir",
@@ -214,13 +214,13 @@
   },
   {
     "id": "slide-pocidif-21",
-    "title": "PoCIDIF 2.1\nInovare digitala pentru IMM TIC",
-    "subtitle": "Granturi consultative pentru servicii, aplicatii si produse digitale bazate pe tehnologii avansate.",
+    "title": "PoCIDIF 2.1\nInovare digitală pentru IMM TIC",
+    "subtitle": "Granturi consultative pentru servicii, aplicații și produse digitale bazate pe tehnologii avansate.",
     "ctaText": "Detalii PoCIDIF 2.1",
     "href": "/pocidif-21",
     "icon": "ph-duotone ph-circuitry",
     "image": "/assets/hero/hero-digital.webp",
-    "altText": "Banner program PoCIDIF 2.1 inovare digitala pentru IMM TIC",
+    "altText": "Banner program PoCIDIF 2.1 inovare digitală pentru IMM TIC",
     "active": true,
     "officialGuideKey": "pocidif-21"
   }

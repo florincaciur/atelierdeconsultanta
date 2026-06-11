@@ -735,6 +735,65 @@
       .service-card,.finantare-card,.blog-card,.testimonial-card{border-radius:8px}
       .btn-primary,.btn-secondary{min-height:46px;border-radius:8px}
       @media (max-width:700px){#despre .stat-card{height:150px;min-height:150px}#despre .stat-card .stat-number{font-size:1.62rem}#blog .card-carousel{grid-template-columns:44px minmax(0,1fr) 44px}.hero-ctas .btn-primary,.hero-ctas .btn-secondary{width:100%;justify-content:center}}
+    </style>
+    <style id="hero-2026-css">
+      :root{--motion-fast:0.18s;--motion-base:0.3s;--motion-slow:0.6s;--motion-ease:cubic-bezier(0.4,0,0.2,1)}
+      .hero-content.hero-grid{display:grid;grid-template-columns:minmax(0,1.06fr) minmax(0,.94fr);gap:clamp(32px,4.5vw,64px);align-items:center;max-width:1200px;text-align:left}
+      .hero-grid .hero-subtitle{margin:0 0 34px}
+      .hero-grid .hero-ctas{justify-content:flex-start}
+      .hero-trust{display:flex;flex-direction:column;gap:10px;margin-top:30px;padding:0}
+      .hero-trust li{display:flex;align-items:flex-start;gap:10px;color:rgba(255,255,255,0.78);font-size:0.94rem;line-height:1.55}
+      .hero-trust-check{flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;margin-top:2px;border-radius:50%;background:rgba(245,166,35,0.16);border:1px solid rgba(245,166,35,0.4);color:var(--gold);font-size:0.72rem;font-weight:800}
+      .hero-visual{display:flex;flex-direction:column;gap:16px;min-width:0}
+      .hero-flow{background:rgba(255,255,255,0.045);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius-md);padding:18px 16px 14px}
+      .hero-flow-svg{display:block;width:100%;height:auto}
+      .hf-label{fill:rgba(255,255,255,0.82);font-family:'Inter',sans-serif;font-size:13px;font-weight:600}
+      .hero-flow-caption{margin:10px 4px 0;color:rgba(255,255,255,0.6);font-size:0.82rem;line-height:1.5}
+      .hf-line{stroke-dashoffset:0;animation:hfDash 30s linear infinite}
+      @keyframes hfDash{from{stroke-dashoffset:520}to{stroke-dashoffset:0}}
+      .hf-node{opacity:1;transform-origin:center;transform-box:fill-box;animation:hfPop var(--motion-slow) var(--motion-ease) both}
+      .hf-node-1{animation-delay:.1s}.hf-node-2{animation-delay:.3s}.hf-node-3{animation-delay:.5s}.hf-node-4{animation-delay:.7s}.hf-node-5{animation-delay:.9s}
+      @keyframes hfPop{from{opacity:0;transform:translateY(8px) scale(.92)}to{opacity:1;transform:translateY(0) scale(1)}}
+      .hf-doc{transform-box:fill-box;transform-origin:center;animation:hfFloat 5s ease-in-out infinite}
+      @keyframes hfFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+      .hero-programs{background:rgba(255,255,255,0.045);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius-md);padding:16px 16px 14px}
+      .hero-programs-title{margin:0 0 10px;color:rgba(255,255,255,0.92);font-size:0.86rem;font-weight:800;letter-spacing:1.2px;text-transform:uppercase}
+      .hero-program-spotlight{margin-bottom:12px;padding:14px;border-radius:var(--radius-sm);background:linear-gradient(135deg,rgba(255,255,255,0.09),rgba(255,255,255,0.04));border:1px solid rgba(245,166,35,0.22);box-shadow:0 14px 34px rgba(0,0,0,0.14)}
+      .hero-program-eyebrow{display:inline-flex;margin-bottom:8px;color:var(--gold);font-size:0.7rem;font-weight:800;letter-spacing:1px;text-transform:uppercase}
+      .hero-program-spotlight h3{margin:0 0 8px;color:#fff;font-size:clamp(1.05rem,2vw,1.28rem);line-height:1.25}
+      .hero-program-spotlight p{margin:0;color:rgba(255,255,255,0.72);font-size:0.88rem;line-height:1.58}
+      .hero-program-link{display:inline-flex;align-items:center;gap:6px;margin-top:12px;color:var(--gold);font-size:0.88rem;font-weight:800;border-radius:var(--radius-sm)}
+      .hero-program-controls{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:0 0 10px}
+      .hero-program-controls button{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,0.18);background:rgba(255,255,255,0.07);color:#fff;font-size:1.05rem;transition:background var(--motion-fast) var(--motion-ease),border-color var(--motion-fast) var(--motion-ease)}
+      .hero-program-controls button:hover{background:rgba(245,166,35,0.16);border-color:rgba(245,166,35,0.42)}
+      .hero-program-count{color:rgba(255,255,255,0.62);font-size:0.78rem;font-weight:700}
+      .hero-programs-list{display:flex;flex-direction:column;margin:0;padding:0}
+      .hero-programs-list li + li{border-top:1px solid rgba(255,255,255,0.08)}
+      .hero-programs-list a{display:flex;align-items:baseline;justify-content:space-between;gap:12px;padding:9px 8px;border-radius:var(--radius-sm);transition:background var(--motion-fast) var(--motion-ease),transform var(--motion-fast) var(--motion-ease)}
+      .hero-programs-list a:hover,.hero-programs-list a[aria-current="true"]{background:rgba(255,255,255,0.07);transform:translateX(4px)}
+      .hero-programs-list a[aria-current="true"] .hp-name{color:var(--gold)}
+      .hero-programs-list a:focus-visible,.hero-programs-all:focus-visible,.hero-program-link:focus-visible,.hero-program-controls button:focus-visible,.hero-trust li a:focus-visible{outline:3px solid rgba(245,166,35,0.55);outline-offset:2px}
+      .hp-name{color:#fff;font-size:0.92rem;font-weight:600;line-height:1.4}
+      .hp-tag{color:rgba(255,255,255,0.55);font-size:0.76rem;white-space:nowrap}
+      .hero-programs-all{display:inline-flex;align-items:center;gap:6px;margin-top:10px;padding:6px 8px;color:var(--gold);font-size:0.88rem;font-weight:700;border-radius:var(--radius-sm);transition:gap var(--motion-fast) var(--motion-ease)}
+      .hero-programs-all:hover{gap:10px}
+      @media (max-width:1023px){
+        .hero-content.hero-grid{grid-template-columns:1fr;text-align:center;gap:36px}
+        .hero-grid .hero-subtitle{margin:0 auto 32px}
+        .hero-grid .hero-ctas{justify-content:center}
+        .hero-trust{max-width:520px;margin:26px auto 0;text-align:left}
+        .hero-visual{max-width:520px;margin:0 auto;width:100%}
+        .hp-tag{display:none}
+      }
+      @media (max-width:700px){
+        #hero{padding-top:96px}
+        .hero-flow{padding:12px 10px 10px}
+        .hero-flow-caption{display:none}
+      }
+      @media (prefers-reduced-motion:reduce){
+        .hf-line,.hf-node,.hf-doc{animation:none !important}
+        .hero-programs-list a:hover,.hero-programs-list a[aria-current="true"]{transform:none}
+      }
     </style>  <link rel="stylesheet" href="/assets/design-profiles.css">
 
   <link rel="stylesheet" href="/assets/seo-plan-execution.css"></head>
@@ -895,21 +954,93 @@
       <div class="particle" aria-hidden="true"></div>
       <div class="particle" aria-hidden="true"></div>
 
-      <div class="hero-content">
-        <div class="hero-badge">
-          <span class="dot" aria-hidden="true"></span>
-          FABER pentru firme, fermieri, start-up-uri și IMM-uri
+      <div class="hero-content hero-grid">
+        <div class="hero-copy">
+          <div class="hero-badge">
+            <span class="dot" aria-hidden="true"></span>
+            FABER pentru firme, fermieri, start-up-uri și IMM-uri
+          </div>
+
+          <h1 class="hero-title">Consultanță fonduri europene <span class="gradient-text">cu eligibilitate verificată</span></h1>
+
+          <p class="hero-subtitle">FABER ajută beneficiarii să verifice eligibilitatea, să aleagă programul potrivit și să pregătească un dosar coerent, fără promisiuni de finanțare garantată.</p>
+
+          <div class="hero-ctas">
+            <a href="/verificare-eligibilitate-fonduri-europene" class="btn-primary">Verifică eligibilitatea proiectului</a>
+            <a href="/fonduri-europene" class="btn-secondary">Vezi programele de finanțare</a>
+          </div>
+
+          <ul class="hero-trust">
+            <li><span class="hero-trust-check" aria-hidden="true">✓</span>Analiză de eligibilitate documentată, înainte de orice angajament</li>
+            <li><span class="hero-trust-check" aria-hidden="true">✓</span>Punctaj estimat prudent, pe baza ghidului oficial activ</li>
+            <li><span class="hero-trust-check" aria-hidden="true">✓</span>Surse oficiale citate pe fiecare pagină de program</li>
+          </ul>
         </div>
 
-        <h1 class="hero-title">Consultanță fonduri europene <span class="gradient-text">cu eligibilitate verificată</span></h1>
+        <div class="hero-visual">
+          <div class="hero-flow" aria-hidden="false">
+            <svg class="hero-flow-svg" viewBox="0 0 520 240" role="img" aria-labelledby="hero-flow-title hero-flow-desc" focusable="false">
+              <title id="hero-flow-title">Traseul unui proiect de finanțare</title>
+              <desc id="hero-flow-desc">Etapele unui proiect: idee, verificare a eligibilității, pregătirea dosarului, finanțare și implementare.</desc>
+              <path class="hf-line" d="M52 150 C 120 70, 180 70, 260 120 S 410 190, 468 96" fill="none" stroke="rgba(255,255,255,0.28)" stroke-width="2.5" stroke-dasharray="6 7" stroke-linecap="round"/>
+              <g class="hf-node hf-node-1">
+                <circle cx="52" cy="150" r="22" fill="rgba(245,166,35,0.16)" stroke="#f5a623" stroke-width="1.6"/>
+                <path d="M52 140 a7 7 0 0 1 4 12.6 v3.4 h-8 v-3.4 a7 7 0 0 1 4 -12.6 Z M49.5 159 h5" fill="none" stroke="#f5a623" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                <text x="52" y="192" text-anchor="middle" class="hf-label">Idee</text>
+              </g>
+              <g class="hf-node hf-node-2">
+                <circle cx="156" cy="84" r="22" fill="rgba(255,255,255,0.07)" stroke="rgba(255,255,255,0.65)" stroke-width="1.6"/>
+                <path d="M148 84 l6 6 11 -12" fill="none" stroke="#f5a623" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+                <text x="156" y="126" text-anchor="middle" class="hf-label">Verificare</text>
+              </g>
+              <g class="hf-node hf-node-3">
+                <circle cx="260" cy="120" r="24" fill="rgba(255,255,255,0.07)" stroke="rgba(255,255,255,0.65)" stroke-width="1.6"/>
+                <g class="hf-doc">
+                  <rect x="252" y="109" width="16" height="21" rx="2.5" fill="none" stroke="#fff" stroke-width="1.6"/>
+                  <path d="M256 115 h8 M256 120 h8 M256 125 h5" stroke="rgba(255,255,255,0.85)" stroke-width="1.4" stroke-linecap="round"/>
+                </g>
+                <text x="260" y="164" text-anchor="middle" class="hf-label">Dosar</text>
+              </g>
+              <g class="hf-node hf-node-4">
+                <circle cx="372" cy="158" r="22" fill="rgba(255,255,255,0.07)" stroke="rgba(255,255,255,0.65)" stroke-width="1.6"/>
+                <circle cx="372" cy="158" r="10.5" fill="none" stroke="#f5a623" stroke-width="1.7"/>
+                <path d="M376 154.5 c-1 -1.2 -2.4 -1.8 -4 -1.8 a5.3 5.3 0 0 0 0 10.6 c1.6 0 3 -.6 4 -1.8 M366.5 156.5 h6 M366.5 159.5 h6" fill="none" stroke="#f5a623" stroke-width="1.5" stroke-linecap="round"/>
+                <text x="372" y="200" text-anchor="middle" class="hf-label">Finanțare</text>
+              </g>
+              <g class="hf-node hf-node-5">
+                <circle cx="468" cy="96" r="22" fill="rgba(184,71,22,0.22)" stroke="#e8642a" stroke-width="1.6"/>
+                <path d="M459 104 v-7 h5 v7 M466 104 v-12 h5 v12 M473 104 v-9 h5 v9 M457 104 h23" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                <text x="468" y="138" text-anchor="middle" class="hf-label">Implementare</text>
+              </g>
+            </svg>
+            <p class="hero-flow-caption">De la idee la implementare, cu verificări documentate la fiecare pas.</p>
+          </div>
 
-        <p class="hero-subtitle">FABER ajută beneficiarii să verifice eligibilitatea, să aleagă programul potrivit și să pregătească un dosar coerent, fără promisiuni de finanțare garantată.</p>
-
-        <div class="hero-ctas">
-          <a href="/verificare-eligibilitate-fonduri-europene" class="btn-primary">Verifică eligibilitatea proiectului</a>
-          <a href="/fonduri-europene" class="btn-secondary">Vezi programele active</a>
+          <nav class="hero-programs" aria-label="Programe prioritare">
+            <h2 class="hero-programs-title">Programe prioritare</h2>
+            <article class="hero-program-spotlight" id="heroProgramSpotlight" aria-live="polite">
+              <span class="hero-program-eyebrow" data-hero-program-status>Investiții energetice</span>
+              <h3 data-hero-program-title>AFIR Autoconsum Agroalimentar</h3>
+              <p data-hero-program-desc>Panouri fotovoltaice, stocare și consum propriu pentru procesatori sau ferme eligibile, cu verificarea documentelor înainte de decizia de pregătire.</p>
+              <a class="hero-program-link" data-hero-program-link href="/afir-autoconsum-agroalimentar">Vezi pagina programului <span aria-hidden="true">→</span></a>
+            </article>
+            <div class="hero-program-controls" aria-label="Navigare programe prioritare">
+              <button type="button" data-hero-program-prev aria-label="Program prioritar anterior">‹</button>
+              <span class="hero-program-count" data-hero-program-count>1 / 7</span>
+              <button type="button" data-hero-program-next aria-label="Program prioritar următor">›</button>
+            </div>
+            <ul class="hero-programs-list">
+              <li><a href="/afir-autoconsum-agroalimentar" data-hero-program-item data-status="Investiții energetice" data-title="AFIR Autoconsum Agroalimentar" data-desc="Panouri fotovoltaice, stocare și consum propriu pentru procesatori sau ferme eligibile, cu verificarea documentelor înainte de decizia de pregătire." aria-current="true"><span class="hp-name">AFIR Autoconsum Agroalimentar</span><span class="hp-tag">Fotovoltaice agroalimentar</span></a></li>
+              <li><a href="/dr12-afir" data-hero-program-item data-status="Agricultură și instalare" data-title="DR 12 – Tineri fermieri" data-desc="Consolidarea exploatațiilor pentru tineri fermieri se analizează prin forma juridică, documentele exploatației, SO/SOC și ghidul activ."><span class="hp-name">DR 12 – Tineri fermieri</span><span class="hp-tag">Instalare și consolidare</span></a></li>
+              <li><a href="/dr14" data-hero-program-item data-status="Ferme mici" data-title="DR 14 – Ferme mici" data-desc="Sprijin pentru ferme mici, cu accent pe proporția dintre activitatea existentă, investiție, documente și capacitatea reală de implementare."><span class="hp-name">DR 14 – Ferme mici</span><span class="hp-tag">Modernizare graduală</span></a></li>
+              <li><a href="/e-move" data-hero-program-item data-status="Mobilitate electrică" data-title="e-MOVE RO" data-desc="Infrastructura de încărcare, producția regenerabilă și amplasamentul trebuie verificate tehnic înainte de bugetarea proiectului."><span class="hp-name">e-MOVE RO</span><span class="hp-tag">Mobilitate electrică</span></a></li>
+              <li><a href="/pro-infra" data-hero-program-item data-status="Producție pentru infrastructură" data-title="PRO INFRA" data-desc="Investițiile în producție și echipamente pentru infrastructură se verifică prin CAEN, capacitate, buget și schema oficială aplicabilă."><span class="hp-name">PRO INFRA</span><span class="hp-tag">Producție pentru infrastructură</span></a></li>
+              <li><a href="/start-up-nation-2026" data-hero-program-item data-status="Antreprenoriat" data-title="Start-Up Nation" data-desc="Ideea de afaceri, codul CAEN, bugetul, cofinanțarea și documentele se verifică înainte de redactarea planului de afaceri."><span class="hp-name">Start-Up Nation</span><span class="hp-tag">Antreprenoriat</span></a></li>
+              <li><a href="/investitii-modernizarea-microintreprinderilor-apel-2" data-hero-program-item data-status="Regiunea Nord-Est" data-title="Microîntreprinderi Nord-Est" data-desc="Apel regional pentru modernizare, analizat prin localizare, cod CAEN, spațiul investiției, echipamente și capacitatea de cofinanțare."><span class="hp-name">Microîntreprinderi Nord-Est</span><span class="hp-tag">Apel regional</span></a></li>
+            </ul>
+            <a class="hero-programs-all" href="/fonduri-europene">Vezi toate programele <span aria-hidden="true">→</span></a>
+          </nav>
         </div>
-
       </div>
     </section>
     <section id="carousel-section" class="program-carousel-section" aria-labelledby="program-carousel-title">
@@ -922,7 +1053,19 @@
       <div class="program-carousel" data-program-carousel="">
         <button class="program-carousel-btn prev" type="button" aria-label="Program anterior" onclick="moveProgramCarousel(-1)">‹</button>
         <div class="program-carousel-viewport" id="program-carousel-viewport" tabindex="0" aria-label="Carusel programe de finanțare">
-          <div class="program-carousel-track" id="program-carousel-track" aria-live="polite"></div>
+          <div class="program-carousel-track" id="program-carousel-track" aria-live="polite">
+            <article class="program-slide hero hero--image is-active" style="--hero-image:url('/assets/hero/hero-local.webp')" data-slide-id="slide-por-adr" aria-hidden="false">
+              <span class="hero-icon" aria-hidden="true"><i class="ph-duotone ph-buildings"></i></span>
+              <span class="eyebrow">Infrastructură regională</span>
+              <h3>POR ADR Nord-Est
+2021–2027</h3>
+              <p>Grant 100.000-300.000 EUR pentru microîntreprinderi din regiunile Bacău, Botoșani, Iași, Neamț, Suceava, Vaslui. 70-90% nerambursabil.</p>
+              <div class="hero-actions">
+                <a class="btn btn-primary" href="/por-adr-nord-est">Detalii program →</a>
+                <a class="btn btn-secondary" href="/surse-oficiale-fonduri-europene">Surse oficiale</a>
+              </div>
+            </article>
+          </div>
         </div>
         <button class="program-carousel-btn next" type="button" aria-label="Program următor" onclick="moveProgramCarousel(1)">›</button>
       </div>
@@ -1892,9 +2035,9 @@
       return [
         {
           id: 'slide-dr14',
-          tag: 'Agricultura - PAC 2023-2027',
+          tag: 'Agricultură - PAC 2023-2027',
           title: 'DR 14\nFerme de Mici Dimensiuni',
-          description: 'Sprijin pentru ferme mici. Verifica SO, documentele exploatatiei, investitia si ghidul activ inainte de depunere.',
+          description: 'Sprijin pentru ferme mici. Verifică SO, documentele exploatației, investiția și ghidul activ înainte de depunere.',
           ctaText: 'Detalii program',
           ctaLink: '/dr14',
           icon: 'ph-tractor',
@@ -1904,9 +2047,9 @@
         },
         {
           id: 'slide-dr12-afir',
-          tag: 'Agricultura si rural',
+          tag: 'Agricultură și rural',
           title: 'DR 12 / AFIR\nTineri fermieri',
-          description: 'Linie pentru consolidarea exploatatiilor tinerilor fermieri si a fermierilor recent instalati, verificata prin ghidul activ.',
+          description: 'Linie pentru consolidarea exploatațiilor tinerilor fermieri și a fermierilor recent instalați, verificată prin ghidul activ.',
           ctaText: 'Detalii program',
           ctaLink: '/dr12-afir',
           icon: 'ph-plant',
@@ -1917,8 +2060,8 @@
         {
           id: 'slide-digitalizare-imm',
           tag: 'Digitalizare IMM',
-          title: 'Digitalizare IMM\nERP, CRM si cloud',
-          description: 'Finantare pentru software, automatizare, securitate cibernetica, cloud si echipamente justificate in proiect.',
+          title: 'Digitalizare IMM\nERP, CRM și cloud',
+          description: 'Finanțare pentru software, automatizare, securitate cibernetică, cloud și echipamente justificate în proiect.',
           ctaText: 'Detalii program',
           ctaLink: '/digitalizare-imm',
           icon: 'ph-desktop',
@@ -1928,9 +2071,9 @@
         },
         {
           id: 'slide-pocidif-21',
-          tag: 'Inovare digitala',
+          tag: 'Inovare digitală',
           title: 'PoCIDIF 2.1\nIMM din sectorul TIC',
-          description: 'Apel consultativ pentru servicii, aplicatii si produse digitale bazate pe tehnologii avansate.',
+          description: 'Apel consultativ pentru servicii, aplicații și produse digitale bazate pe tehnologii avansate.',
           ctaText: 'Detalii PoCIDIF 2.1',
           ctaLink: '/pocidif-21',
           icon: 'ph-circuitry',
@@ -1941,8 +2084,8 @@
         {
           id: 'slide-startup-nation',
           tag: 'Antreprenoriat',
-          title: 'Start-Up Nation\nPregatirea dosarului',
-          description: 'Verifica grupul tinta, cursul, firma, codul CAEN, bugetul si locurile de munca inainte de pregatirea planului.',
+          title: 'Start-Up Nation\nPregătirea dosarului',
+          description: 'Verifică grupul țintă, cursul, firma, codul CAEN, bugetul și locurile de muncă înainte de pregătirea planului.',
           ctaText: 'Detalii program',
           ctaLink: '/start-up-nation-2026',
           icon: 'ph-rocket-launch',
@@ -1953,8 +2096,8 @@
         {
           id: 'slide-gal-afir',
           tag: 'LEADER / GAL / AFIR',
-          title: 'GAL-AFIR\nApeluri publice si private',
-          description: 'Finantari locale prin GAL. FABER scrie proiecte noi si poate prelua proiecte aflate in implementare.',
+          title: 'GAL-AFIR\nApeluri publice și private',
+          description: 'Finanțări locale prin GAL. FABER scrie proiecte noi și poate prelua proiecte aflate în implementare.',
           ctaText: 'Detalii GAL-AFIR',
           ctaLink: '/gal-afir',
           icon: 'ph-map-pin',
@@ -2013,9 +2156,9 @@
 
       return '<article class="program-slide hero hero--image" style="--hero-image:url(\'' + heroImage + '\')" data-slide-id="' + slideId + '" aria-hidden="true">' +
         '<span class="hero-icon" aria-hidden="true"><i class="' + iconClass + '"></i></span>' +
-        '<span class="eyebrow">' + escapeProgramHtml(banner.tag || 'Program de finantare') + '</span>' +
-        '<h3>' + escapeProgramHtml(banner.title || 'Program de finantare') + '</h3>' +
-        '<p>' + escapeProgramHtml(banner.description || 'Verifica ghidul oficial si documentele inainte de decizia de aplicare.') + '</p>' +
+        '<span class="eyebrow">' + escapeProgramHtml(banner.tag || 'Program de finanțare') + '</span>' +
+        '<h3>' + escapeProgramHtml(banner.title || 'Program de finanțare') + '</h3>' +
+        '<p>' + escapeProgramHtml(banner.description || 'Verifică ghidul oficial și documentele înainte de decizia de aplicare.') + '</p>' +
         '<div class="hero-actions">' +
           '<a class="btn btn-primary" href="' + ctaLink + '">' + ctaText + '</a>' +
           '<a class="btn btn-secondary" href="' + escapeProgramHtml(guide.href) + '"' + guideAttrs + '>' + escapeProgramHtml(guide.label) + '</a>' +
@@ -2662,6 +2805,64 @@
     document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape') { closeMobileMenu(); closeModal(); closeDropdown(); }
     });
+
+    /* =====================================================
+       ✦ HERO PROGRAM SELECTOR ✦
+    ===================================================== */
+    (function initHeroProgramSelector() {
+      var root = document.querySelector('.hero-programs');
+      if (!root) return;
+
+      var items = Array.prototype.slice.call(root.querySelectorAll('[data-hero-program-item]'));
+      var title = root.querySelector('[data-hero-program-title]');
+      var status = root.querySelector('[data-hero-program-status]');
+      var desc = root.querySelector('[data-hero-program-desc]');
+      var link = root.querySelector('[data-hero-program-link]');
+      var count = root.querySelector('[data-hero-program-count]');
+      var prev = root.querySelector('[data-hero-program-prev]');
+      var next = root.querySelector('[data-hero-program-next]');
+      var activeIndex = 0;
+
+      function setActive(index, options) {
+        if (!items.length) return;
+        activeIndex = (index + items.length) % items.length;
+        var item = items[activeIndex];
+
+        items.forEach(function(entry, entryIndex) {
+          if (entryIndex === activeIndex) {
+            entry.setAttribute('aria-current', 'true');
+          } else {
+            entry.removeAttribute('aria-current');
+          }
+        });
+
+        if (status) status.textContent = item.getAttribute('data-status') || 'Program prioritar';
+        if (title) title.textContent = item.getAttribute('data-title') || item.textContent.trim();
+        if (desc) desc.textContent = item.getAttribute('data-desc') || '';
+        if (link) link.setAttribute('href', item.getAttribute('href') || '/fonduri-europene');
+        if (count) count.textContent = (activeIndex + 1) + ' / ' + items.length;
+        if (options && options.focus) item.focus();
+      }
+
+      items.forEach(function(item, index) {
+        item.addEventListener('focus', function() { setActive(index); });
+        item.addEventListener('mouseenter', function() { setActive(index); });
+        item.addEventListener('keydown', function(event) {
+          if (event.key === 'ArrowDown' || event.key === 'ArrowRight') {
+            event.preventDefault();
+            setActive(index + 1, { focus: true });
+          }
+          if (event.key === 'ArrowUp' || event.key === 'ArrowLeft') {
+            event.preventDefault();
+            setActive(index - 1, { focus: true });
+          }
+        });
+      });
+
+      if (prev) prev.addEventListener('click', function() { setActive(activeIndex - 1, { focus: true }); });
+      if (next) next.addEventListener('click', function() { setActive(activeIndex + 1, { focus: true }); });
+      setActive(0);
+    })();
 
     console.log('✦ FABER – Website v2.0 | Încărcat și funcțional ✦');
 
