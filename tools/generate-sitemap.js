@@ -138,6 +138,7 @@ function priority(url) {
     "/digitalizare-imm",
     "/e-move",
     "/pro-infra",
+    "/programul-tranzitie-justa",
     "/investitii-modernizarea-microintreprinderilor-apel-2",
     "/pocidif-21",
     "/apeluri-gal",

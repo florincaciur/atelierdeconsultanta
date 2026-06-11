@@ -50,6 +50,7 @@ const HUB_SLUGS = new Set([
   'greseli-fonduri-europene',
   'intrebari-frecvente',
   'pnrr',
+  'programul-tranzitie-justa',
   'start-up-nation',
   'start-up-nation-2026',
   'start-up-nation-2026-cheltuieli-eligibile',

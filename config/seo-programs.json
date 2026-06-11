@@ -2692,6 +2692,7 @@
         "/e-move",
         "/gal-afir",
         "/apeluri-gal",
+        "/programul-tranzitie-justa",
         "/fondul-de-modernizare",
         {
           "href": "/pocidif-21",
@@ -2737,6 +2738,10 @@
             {
               "href": "/fonduri-nerambursabile",
               "label": "Fonduri nerambursabile"
+            },
+            {
+              "href": "/programul-tranzitie-justa",
+              "label": "Programul Tranzitie Justa"
             },
             {
               "href": "/ghiduri",

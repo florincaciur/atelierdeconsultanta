@@ -21,6 +21,7 @@ const PROGRAM_ROUTES = [
   "/femeia-antreprenor-2026",
   "/apeluri-gal",
   "/pro-infra",
+  "/programul-tranzitie-justa",
   "/pocidif-21",
   "/start-up-nation-2026",
   "/calculator-soc",

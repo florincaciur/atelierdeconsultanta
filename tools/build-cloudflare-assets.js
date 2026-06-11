@@ -90,6 +90,7 @@ const CANONICAL_DIRECTORY_HTML_ROUTES = [
   "fonduri-nerambursabile",
   "pnrr",
   "afir",
+  "programul-tranzitie-justa",
   "fonduri-europene-imm",
   "fonduri-europene-agricultura",
   "fonduri-europene-digitalizare",

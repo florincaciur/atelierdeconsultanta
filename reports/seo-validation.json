@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-11T15:00:25.965Z",
+  "generatedAt": "2026-06-11T15:16:41.890Z",
   "mode": "check",
   "changedFiles": [
     "404.html",
@@ -112,12 +112,12 @@
     "verificare-eligibilitate-fonduri-europene/index.html"
   ],
   "summary": {
-    "totalFiles": 170,
-    "passedFiles": 170,
+    "totalFiles": 171,
+    "passedFiles": 171,
     "failedFiles": 0
   },
   "inlineScripts": {
-    "checked": 268,
+    "checked": 269,
     "failures": []
   },
   "results": [
@@ -2449,6 +2449,22 @@
         "h1Count": 1,
         "h1s": [
           "PRO INFRA: producție pentru infrastructura de transport"
+        ],
+        "missingAlt": [],
+        "relatedCount": 1,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "programul-tranzitie-justa/index.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Programul Tranziție Justă: verificare eligibilitate, regiuni și pași"
         ],
         "missingAlt": [],
         "relatedCount": 1,

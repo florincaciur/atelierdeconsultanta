@@ -1,49 +1,49 @@
 {
-  "generatedAt": "2026-06-11T15:00:33.936Z",
+  "generatedAt": "2026-06-11T15:16:50.561Z",
   "root": "C:\\Users\\flori\\Documents\\GitHub\\atelierdeconsultanta",
   "summary": {
-    "totalFiles": 170,
-    "passedFiles": 170,
+    "totalFiles": 171,
+    "passedFiles": 171,
     "failedFiles": 0,
     "checks": {
       "metaDescription": {
-        "pass": 170,
+        "pass": 171,
         "fail": 0
       },
       "canonical": {
-        "pass": 170,
+        "pass": 171,
         "fail": 0
       },
       "imageAltAttributes": {
-        "pass": 170,
+        "pass": 171,
         "fail": 0
       },
       "singleH1": {
-        "pass": 170,
+        "pass": 171,
         "fail": 0
       },
       "relatedLinks": {
-        "pass": 170,
+        "pass": 171,
         "fail": 0
       },
       "utf8Charset": {
-        "pass": 167,
+        "pass": 168,
         "fail": 0
       },
       "cleanCanonical": {
-        "pass": 167,
+        "pass": 168,
         "fail": 0
       },
       "visibleFaqForSchema": {
-        "pass": 167,
+        "pass": 168,
         "fail": 0
       },
       "speakableSchemaCoverage": {
-        "pass": 167,
+        "pass": 168,
         "fail": 0
       },
       "contentDepth": {
-        "pass": 167,
+        "pass": 168,
         "fail": 0
       }
     }
@@ -6080,7 +6080,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1497,
+          "words": 1503,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -7566,7 +7566,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1204,
+          "words": 1214,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -7626,7 +7626,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1204,
+          "words": 1214,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -8211,7 +8211,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1659,
+          "words": 1666,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -8271,7 +8271,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1659,
+          "words": 1666,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -8455,6 +8455,65 @@
           "required": false,
           "count": 1,
           "note": "not a hub/blog page"
+        }
+      }
+    },
+    {
+      "file": "programul-tranzitie-justa/index.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "utf8Charset": {
+          "status": "pass",
+          "hasCharset": true,
+          "hasHttpEquiv": false
+        },
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "cleanCanonical": {
+          "status": "pass",
+          "href": "https://atelierdeconsultanta.ro/programul-tranzitie-justa"
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Programul Tranziție Justă: verificare eligibilitate, regiuni și pași"
+          ]
+        },
+        "visibleFaqForSchema": {
+          "status": "pass",
+          "required": true,
+          "count": 6,
+          "threshold": 6
+        },
+        "speakableSchemaCoverage": {
+          "status": "pass",
+          "required": false,
+          "count": 0
+        },
+        "contentDepth": {
+          "status": "pass",
+          "required": true,
+          "words": 1215,
+          "threshold": 1200
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 1
         }
       }
     },
