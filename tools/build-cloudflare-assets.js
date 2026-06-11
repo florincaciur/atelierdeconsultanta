@@ -91,6 +91,7 @@ const CANONICAL_DIRECTORY_HTML_ROUTES = [
   "pnrr",
   "afir",
   "programul-tranzitie-justa",
+  "programul-tranzitie-justa-intrebari-documente",
   "fonduri-europene-imm",
   "fonduri-europene-agricultura",
   "fonduri-europene-digitalizare",

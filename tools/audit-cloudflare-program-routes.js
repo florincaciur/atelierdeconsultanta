@@ -22,6 +22,7 @@ const PROGRAM_ROUTES = [
   "/apeluri-gal",
   "/pro-infra",
   "/programul-tranzitie-justa",
+  "/programul-tranzitie-justa-intrebari-documente",
   "/pocidif-21",
   "/start-up-nation-2026",
   "/calculator-soc",

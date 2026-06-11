@@ -89,6 +89,7 @@ const ROUTE_LABELS = new Map([
   ["/fonduri-europene-digitalizare", "Fonduri europene digitalizare"],
   ["/fonduri-regionale", "Fonduri regionale"],
   ["/programul-tranzitie-justa", "Programul Tranzitie Justa"],
+  ["/programul-tranzitie-justa-intrebari-documente", "Intrebari si documente PTJ"],
   ["/fonduri-nerambursabile", "Fonduri nerambursabile"],
   ["/afir", "AFIR"],
   ["/consultanta-afir", "Consultanta AFIR"],
@@ -121,6 +122,7 @@ const CLUSTER_RULES = [
   { href: "/start-up-nation-2026", label: "Start-Up Nation 2026", pattern: /\/(?:start-up-nation|cod-caen-start-up-nation|consultanta-start-up-nation)/i },
   { href: "/fonduri-europene-digitalizare", label: "Digitalizare", pattern: /\/(?:digitalizare|pnrr|pocidif|granturi-digitalizare|cheltuieli-eligibile-digitalizare)/i },
   { href: "/fondul-de-modernizare", label: "Energie", pattern: /\/(?:fondul-de-modernizare|fondul-modernizare|finantari-panouri|autoconsum|pro-infra|e-move)/i },
+  { href: "/programul-tranzitie-justa", label: "Programul Tranzitie Justa", pattern: /\/(?:programul-tranzitie-justa-intrebari-documente)/i },
   { href: "/fonduri-regionale", label: "Fonduri regionale", pattern: /\/(?:programul-tranzitie-justa|fonduri-europene-nord-est|fonduri-europene-bucuresti|consultanta-fonduri-europene-bucuresti|por-adr-nord-est|investitii-modernizarea-microintreprinderilor)/i },
   { href: "/consultanta-fonduri-europene", label: "Consultanta", pattern: /\/(?:consultanta|consultant-fonduri|firma-consultanta|cat-costa-consultanta|cum-alegi-consultant)/i },
   { href: "/despre-faber", label: "Incredere si metodologie", pattern: /\/(?:despre-faber|metodologie|surse-oficiale|studii-de-caz|testimoniale|portofoliu|glosar)/i },
@@ -167,7 +169,7 @@ const INTERNAL_LINK_GROUPS = [
   },
   {
     pattern: /\/(?:programul-tranzitie-justa|fonduri-europene-nord-est|fonduri-europene-bucuresti|consultanta-fonduri-europene-bucuresti|por-adr-nord-est|investitii-modernizarea-microintreprinderilor)/i,
-    links: ["/programul-tranzitie-justa", "/fonduri-regionale", "/fonduri-europene-imm", "/consultanta-fonduri-europene", "/surse-oficiale-fonduri-europene"]
+    links: ["/programul-tranzitie-justa", "/programul-tranzitie-justa-intrebari-documente", "/fonduri-regionale", "/fonduri-europene-imm", "/consultanta-fonduri-europene", "/surse-oficiale-fonduri-europene"]
   }
 ];
 

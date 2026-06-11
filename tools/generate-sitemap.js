@@ -139,6 +139,7 @@ function priority(url) {
     "/e-move",
     "/pro-infra",
     "/programul-tranzitie-justa",
+    "/programul-tranzitie-justa-intrebari-documente",
     "/investitii-modernizarea-microintreprinderilor-apel-2",
     "/pocidif-21",
     "/apeluri-gal",

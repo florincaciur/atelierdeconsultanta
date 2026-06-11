@@ -1,49 +1,49 @@
 {
-  "generatedAt": "2026-06-11T15:16:50.561Z",
+  "generatedAt": "2026-06-11T19:18:23.568Z",
   "root": "C:\\Users\\flori\\Documents\\GitHub\\atelierdeconsultanta",
   "summary": {
-    "totalFiles": 171,
-    "passedFiles": 171,
+    "totalFiles": 172,
+    "passedFiles": 172,
     "failedFiles": 0,
     "checks": {
       "metaDescription": {
-        "pass": 171,
+        "pass": 172,
         "fail": 0
       },
       "canonical": {
-        "pass": 171,
+        "pass": 172,
         "fail": 0
       },
       "imageAltAttributes": {
-        "pass": 171,
+        "pass": 172,
         "fail": 0
       },
       "singleH1": {
-        "pass": 171,
+        "pass": 172,
         "fail": 0
       },
       "relatedLinks": {
-        "pass": 171,
+        "pass": 172,
         "fail": 0
       },
       "utf8Charset": {
-        "pass": 168,
+        "pass": 169,
         "fail": 0
       },
       "cleanCanonical": {
-        "pass": 168,
+        "pass": 169,
         "fail": 0
       },
       "visibleFaqForSchema": {
-        "pass": 168,
+        "pass": 169,
         "fail": 0
       },
       "speakableSchemaCoverage": {
-        "pass": 168,
+        "pass": 169,
         "fail": 0
       },
       "contentDepth": {
-        "pass": 168,
+        "pass": 169,
         "fail": 0
       }
     }
@@ -2187,7 +2187,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2306,
+          "words": 2336,
           "threshold": 1800
         },
         "relatedLinks": {
@@ -6080,7 +6080,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1503,
+          "words": 1533,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -6484,7 +6484,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1276,
+          "words": 1309,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -6717,7 +6717,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2054,
+          "words": 2074,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -8459,6 +8459,66 @@
       }
     },
     {
+      "file": "programul-tranzitie-justa-intrebari-documente/index.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "utf8Charset": {
+          "status": "pass",
+          "hasCharset": true,
+          "hasHttpEquiv": false
+        },
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "cleanCanonical": {
+          "status": "pass",
+          "href": "https://atelierdeconsultanta.ro/programul-tranzitie-justa-intrebari-documente"
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Programul Tranziție Justă: întrebări și documente pentru verificare"
+          ]
+        },
+        "visibleFaqForSchema": {
+          "status": "pass",
+          "required": true,
+          "count": 6,
+          "threshold": 6
+        },
+        "speakableSchemaCoverage": {
+          "status": "pass",
+          "required": false,
+          "count": 0
+        },
+        "contentDepth": {
+          "status": "pass",
+          "required": true,
+          "words": 1085,
+          "threshold": 1000
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": false,
+          "count": 1,
+          "note": "not a hub/blog page"
+        }
+      }
+    },
+    {
       "file": "programul-tranzitie-justa/index.html",
       "noindex": false,
       "pass": true,
@@ -8507,7 +8567,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1215,
+          "words": 1219,
           "threshold": 1200
         },
         "relatedLinks": {
