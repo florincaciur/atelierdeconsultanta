@@ -325,8 +325,8 @@ function validateOfficialGuidesResource(sitemapSet, issues) {
       chain,
     });
   }
-  if (!/\bnoindex\b/i.test(robots) || !/\bfollow\b/i.test(robots)) {
-    addIssue(issues, "official-guides-robots", "official-guides.json must send X-Robots-Tag: noindex, follow.", {
+  if (!/\bnoindex\b/i.test(robots) || !/\bnofollow\b/i.test(robots)) {
+    addIssue(issues, "official-guides-robots", "official-guides.json must send X-Robots-Tag: noindex, nofollow.", {
       url: resourceUrl,
       robots,
     });

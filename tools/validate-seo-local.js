@@ -57,6 +57,22 @@ function parseRedirects() {
     });
 }
 
+function containsDynamicToken(value) {
+  return String(value || "").includes("*") || /(^|[^A-Za-z0-9_-]):[A-Za-z][A-Za-z0-9_-]*/.test(String(value || ""));
+}
+
+function compileRedirectPattern(pattern) {
+  const names = [];
+  const escaped = String(pattern)
+    .replace(/[|\\{}()[\]^$+?.]/g, "\\$&")
+    .replace(/\*/g, ".*")
+    .replace(/:([A-Za-z][A-Za-z0-9_]*)/g, (_, name) => {
+      names.push(name);
+      return "([^/]+)";
+    });
+  return { regex: new RegExp(`^${escaped}$`), names };
+}
+
 function parseSitemap() {
   return [...read("sitemap.xml").matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]);
 }
@@ -112,7 +128,19 @@ function normalizePath(raw) {
 }
 
 function redirectFor(pathname, redirects) {
-  return redirects.find((redirect) => redirect.from === pathname);
+  for (const redirect of redirects) {
+    if (redirect.from === pathname) return { ...redirect, destination: redirect.to };
+    if (!containsDynamicToken(redirect.from)) continue;
+    if (!redirect.compiled) redirect.compiled = compileRedirectPattern(redirect.from);
+    const match = pathname.match(redirect.compiled.regex);
+    if (!match) continue;
+    let destination = redirect.to;
+    redirect.compiled.names.forEach((name, index) => {
+      destination = destination.replace(new RegExp(`:${name}\\b`, "g"), match[index + 1]);
+    });
+    return { ...redirect, destination };
+  }
+  return null;
 }
 
 function traceRedirect(pathname, redirects) {
@@ -125,7 +153,7 @@ function traceRedirect(pathname, redirects) {
     const redirect = redirectFor(current, redirects);
     if (!redirect) return { chain, loop: false, final: current };
     chain.push(redirect);
-    current = normalizePath(redirect.to);
+    current = normalizePath(redirect.destination);
   }
   return { chain, loop: true, final: current };
 }
@@ -159,9 +187,13 @@ function internalLinks(file, html) {
 const problems = [];
 const redirects = parseRedirects();
 const headers = parseHeaders();
-const redirectSources = new Set(redirects.filter((item) => item.status >= 300 && item.status < 400).map((item) => item.from));
 const sitemapUrls = parseSitemap();
 const sitemapSet = new Set(sitemapUrls);
+
+function isRedirectPath(pathname) {
+  const redirect = redirectFor(pathname, redirects);
+  return Boolean(redirect && redirect.status >= 300 && redirect.status < 400);
+}
 
 for (const url of sitemapUrls) {
   const parsed = new URL(url);
@@ -169,7 +201,7 @@ for (const url of sitemapUrls) {
   if (parsed.search || parsed.hash) problems.push(`Query/hash in sitemap: ${url}`);
   if (parsed.pathname !== "/" && parsed.pathname.endsWith("/")) problems.push(`Trailing slash in sitemap: ${url}`);
   if (parsed.pathname.endsWith(".html")) problems.push(`HTML route in sitemap: ${url}`);
-  if (redirectSources.has(parsed.pathname)) problems.push(`Redirected URL in sitemap: ${url}`);
+  if (isRedirectPath(parsed.pathname)) problems.push(`Redirected URL in sitemap: ${url}`);
 
   const sources = sourceFilesForPathname(parsed.pathname);
   const matching = sources.find((file) => {
@@ -183,7 +215,7 @@ for (const url of sitemapUrls) {
 
   const html = read(matching);
   const canonicalPath = normalizePath(extractCanonical(html));
-  if (redirectSources.has(canonicalPath)) problems.push(`Canonical points to redirect: ${matching} -> ${canonicalPath}`);
+  if (isRedirectPath(canonicalPath)) problems.push(`Canonical points to redirect: ${matching} -> ${canonicalPath}`);
 }
 
 for (const [from, expected] of IMPORTANT_REDIRECTS) {
@@ -197,7 +229,7 @@ for (const [from, expected] of IMPORTANT_REDIRECTS) {
 for (const route of IMPORTANT_CANONICAL_ROUTES) {
   const url = `${SITE}${route}`;
   const sources = sourceFilesForPathname(route);
-  if (redirectSources.has(route)) problems.push(`Important canonical route is configured as redirect: ${route}`);
+  if (isRedirectPath(route)) problems.push(`Important canonical route is configured as redirect: ${route}`);
   if (!sitemapSet.has(url)) problems.push(`Important canonical route missing from sitemap: ${url}`);
   const matching = sources.find((file) => {
     const html = read(file);
@@ -215,8 +247,8 @@ if (!officialGuideHeaders) {
 } else {
   const robots = officialGuideHeaders.headers["x-robots-tag"] || "";
   const contentType = officialGuideHeaders.headers["content-type"] || "";
-  if (!/\bnoindex\b/i.test(robots) || !/\bfollow\b/i.test(robots)) {
-    problems.push("/official-guides.json must send X-Robots-Tag: noindex, follow.");
+  if (!/\bnoindex\b/i.test(robots) || !/\bnofollow\b/i.test(robots)) {
+    problems.push("/official-guides.json must send X-Robots-Tag: noindex, nofollow.");
   }
   if (!/^application\/json\b/i.test(contentType)) {
     problems.push("/official-guides.json must declare application/json Content-Type in _headers.");
@@ -235,7 +267,7 @@ for (const link of allLinks) {
   if (link.pathname.endsWith(".html")) {
     problems.push(`Internal .html link: ${link.file} -> ${link.value}`);
   }
-  if (redirectSources.has(link.pathname)) {
+  if (isRedirectPath(link.pathname)) {
     problems.push(`Internal link to redirected route: ${link.file} -> ${link.value}`);
   }
 }

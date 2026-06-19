@@ -97,6 +97,31 @@ function matchesPattern(pattern, pathname) {
   return new RegExp(`^${escaped}$`).test(pathname);
 }
 
+function compileRedirectPattern(pattern) {
+  const names = [];
+  const escaped = String(pattern)
+    .replace(/[|\\{}()[\]^$+?.]/g, "\\$&")
+    .replace(/\*/g, ".*")
+    .replace(/:([A-Za-z][A-Za-z0-9_]*)/g, (_, name) => {
+      names.push(name);
+      return "([^/]+)";
+    });
+  return { regex: new RegExp(`^${escaped}$`), names };
+}
+
+function redirectDestination(rule, pathname) {
+  if (rule.from === pathname) return rule.to;
+  if (!/[*:]/.test(rule.from)) return "";
+  if (!rule.compiled) rule.compiled = compileRedirectPattern(rule.from);
+  const match = pathname.match(rule.compiled.regex);
+  if (!match) return "";
+  let destination = rule.to;
+  rule.compiled.names.forEach((name, index) => {
+    destination = destination.replace(new RegExp(`:${name}\\b`, "g"), match[index + 1]);
+  });
+  return destination;
+}
+
 function headersFor(pathname, headerRules) {
   const headers = {};
   for (const rule of headerRules) {
@@ -198,10 +223,12 @@ function trace(rawUrl, redirects) {
       continue;
     }
 
-    const redirect = redirects.find((rule) => matchesPattern(rule.from, currentUrl.pathname));
+    const redirect = redirects
+      .map((rule) => ({ rule, destination: redirectDestination(rule, currentUrl.pathname) }))
+      .find((item) => item.destination);
     if (redirect) {
-      const next = new URL(redirect.to, SITE);
-      chain.push({ url: currentUrl.href, status: redirect.status, to: next.href });
+      const next = new URL(redirect.destination, SITE);
+      chain.push({ url: currentUrl.href, status: redirect.rule.status, to: next.href });
       currentUrl = next;
       continue;
     }
@@ -236,7 +263,7 @@ function intentFor(inputUrl, chain, finalUrl, canonical, xRobotsTag) {
 function actionFor(intent, inputUrl) {
   const parsed = new URL(inputUrl);
   if (parsed.pathname === "/official-guides.json") {
-    return "Pastrat 200 ca JSON si marcat noindex, follow prin _headers; exclus din sitemap.";
+    return "Pastrat 200 ca JSON si marcat noindex, nofollow prin _headers; exclus din sitemap.";
   }
   if (parsed.search && parsed.pathname === "/blog") {
     return "Pastrat ca varianta query alternativa a hubului /blog; exclus din sitemap si curatat client-side pentru blog-1/2/3.";
@@ -469,7 +496,7 @@ function writeReports(rows) {
     "",
     "- URL-urile cu slash final, `.html` si `/index.html` sunt aliasuri istorice sau variante generate de structura statica; ele trebuie sa ramana 301 catre forma curata.",
     "- Unele URL-uri raportate de GSC sunt pagini canonice reale si trebuie sa raspunda 200 direct, cu self-canonical si prezenta in sitemap.",
-    "- `/official-guides.json` este o resursa tehnica folosita de JavaScript, nu o pagina destinata indexarii; trebuie sa ramana 200, dar cu `X-Robots-Tag: noindex, follow`.",
+    "- `/official-guides.json` este o resursa tehnica folosita de JavaScript, nu o pagina destinata indexarii; trebuie sa ramana 200, dar cu `X-Robots-Tag: noindex, nofollow`.",
     "- Query-urile istorice `/blog?post=blog-1`, `/blog?post=blog-2` si `/blog?post=blog-3` sunt variante alternative ale hubului `/blog`; sitemap-ul si linkurile interne SEO raman pe URL-ul curat.",
     "- Pentru rutele locale consolidate, cum sunt Iasi/Bacau/Suceava, redirectul catre `/fonduri-europene-nord-est` este intentionat si nu trebuie transformat in 200 fara continut local distinct.",
     "",
@@ -494,7 +521,7 @@ function writeReports(rows) {
     "- Sitemap-ul contine numai URL-uri curate, fara query string, fara `.html`, fara `/index.html`, fara slash final si fara resurse JSON.",
     "- Canonicalele declarate pentru paginile HTML auditate sunt absolute si corespund URL-ului final.",
     "- `_redirects` pastreaza un singur hop pentru aliasurile auditate catre destinatia canonica.",
-    "- `_headers` pastreaza regula pentru `/official-guides.json`: `Content-Type: application/json; charset=utf-8` si `X-Robots-Tag: noindex, follow`.",
+    "- `_headers` pastreaza regula pentru `/official-guides.json`: `Content-Type: application/json; charset=utf-8` si `X-Robots-Tag: noindex, nofollow`.",
     "- Linkurile interne normale catre aliasurile auditate sunt eliminate sau raman zero in matrice.",
     "",
     "## Teste executate",

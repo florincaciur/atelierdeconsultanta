@@ -5,6 +5,7 @@ const cp = require("child_process");
 const ROOT = path.resolve(__dirname, "..");
 const SITEMAP_PATH = path.join(ROOT, "sitemap.xml");
 const REDIRECTS_PATH = path.join(ROOT, "_redirects");
+const HEADERS_PATH = path.join(ROOT, "_headers");
 const TODAY = new Date();
 const TODAY_ISO = TODAY.toISOString().slice(0, 10);
 const {
@@ -90,6 +91,42 @@ function parseRedirectRules() {
 function isRedirectSource(pathname, redirectRules) {
   return redirectRules.some((rule) => (
     rule.dynamic ? rule.regex.test(pathname) : rule.source === pathname
+  ));
+}
+
+function parseHeaderRules() {
+  if (!fs.existsSync(HEADERS_PATH)) return [];
+  const rules = [];
+  let current = null;
+  for (const line of fs.readFileSync(HEADERS_PATH, "utf8").split(/\r?\n/)) {
+    if (!line.trim()) continue;
+    if (!/^\s/.test(line)) {
+      current = { pattern: line.trim(), headers: {} };
+      rules.push(current);
+      continue;
+    }
+    if (!current) continue;
+    const [name, ...rest] = line.trim().split(":");
+    current.headers[name.toLowerCase()] = rest.join(":").trim();
+  }
+  return rules;
+}
+
+function headerPatternToRegex(pattern) {
+  const escaped = String(pattern)
+    .replace(/[|\\{}()[\]^$+?.]/g, "\\$&")
+    .replace(/\*/g, ".*");
+  return new RegExp(`^${escaped}$`);
+}
+
+function headerRuleMatches(pattern, pathname) {
+  return pattern === pathname || (pattern.includes("*") && headerPatternToRegex(pattern).test(pathname));
+}
+
+function hasNoindexHeader(pathname, headerRules) {
+  return headerRules.some((rule) => (
+    headerRuleMatches(rule.pattern, pathname) &&
+    /\bnoindex\b/i.test(rule.headers["x-robots-tag"] || "")
   ));
 }
 
@@ -240,6 +277,7 @@ function generate() {
   const previousLastmods = committedSitemapLastmods();
   const dirtyFiles = dirtyTrackedFiles();
   const redirectRules = parseRedirectRules();
+  const headerRules = parseHeaderRules();
   for (const filePath of walkHtml(ROOT)) {
     const html = fs.readFileSync(filePath, "utf8");
     if (hasNoindexOrRedirect(html)) continue;
@@ -250,6 +288,7 @@ function generate() {
     const normalized = canonicalUrl(canonicalPath);
     if (isAlternateCanonicalPath(canonicalPath)) continue;
     if (isRedirectSource(canonicalPath, redirectRules)) continue;
+    if (hasNoindexHeader(canonicalPath, headerRules)) continue;
     if (canonicalPath !== canonicalRouteForFile(filePath)) continue;
     urls.set(normalized, {
       file: toPosix(path.relative(ROOT, filePath)),
