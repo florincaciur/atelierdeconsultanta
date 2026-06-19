@@ -683,6 +683,7 @@ function faqsForPage(page) {
   const faq = Array.isArray(page.faq) ? [...page.faq] : [];
   const programName = page.programName || page.h1 || "program";
   const keyword = keywordsForPage(page)[0] || programName;
+  const minimumFaq = minFaqForPage(page);
   const additions = [
     [`Cum verific daca ${programName} este potrivit pentru proiectul meu?`, `Porneste de la solicitant, cod CAEN, localitate, investitie, buget si documentele disponibile. Daca una dintre aceste piese nu se potriveste cu apelul activ, proiectul trebuie ajustat inainte de depunere.`],
     [`Cand nu merita sa aplic pentru ${programName}?`, `Nu merita sa aplici cand nu poti dovedi eligibilitatea, cand cheltuielile principale nu sunt permise, cand cofinantarea nu este acoperita sau cand calendarul nu permite documente complete si verificabile.`],
@@ -695,6 +696,7 @@ function faqsForPage(page) {
     [`Ce rol are consultanta pentru ${keyword}?`, `Consultanta ajuta la trierea programului, verificarea documentelor, structurarea bugetului, pregatirea raspunsurilor la clarificari si reducerea riscurilor, dar nu poate garanta aprobarea finantarii.`],
     [`Cat de repede trebuie inceputa pregatirea dosarului pentru ${programName}?`, "Pregatirea trebuie inceputa inainte de deschiderea efectiva a apelului, mai ales daca sunt necesare oferte, documente pentru spatiu, autorizatii, calcule de punctaj sau clarificari privind solicitantul."]
   ];
+  if (faq.length >= minimumFaq) return faq;
   const seen = new Set(faq.map(([question]) => String(question).toLowerCase()));
   for (const item of additions) {
     const key = item[0].toLowerCase();
@@ -702,7 +704,7 @@ function faqsForPage(page) {
       faq.push(item);
       seen.add(key);
     }
-    if (faq.length >= minFaqForPage(page)) break;
+    if (faq.length >= minimumFaq) break;
   }
   return faq;
 }
@@ -870,6 +872,119 @@ function renderContentSections(sections) {
       ${list}
       ${linksHtml}`;
   }).join("\n");
+}
+
+function renderPorAdrNordEstContent(page) {
+  const officialSourcesHtml = renderOfficialSources(page.sourceKeys, { id: `${page.slug}-official-sources` });
+  const faqHtml = faqsForPage(page)
+    .map(([question, answer]) => `<section class="faq-item"><h3>${esc(question)}</h3><p>${esc(answer)}</p></section>`)
+    .join("\n");
+
+  return `
+      <p class="intro">Ce este POR ADR Nord-Est? Este programul regional prin care microîntreprinderile din județele Bacău, Botoșani, Iași, Neamț, Suceava și Vaslui pot pregăti investiții pentru modernizare: echipamente, dotări, software, amenajări sau alte costuri permise de apel. Pagina de mai jos este un ghid de orientare pentru antreprenori, scris pe înțelesul unei firme care vrea să știe dacă merită să înceapă dosarul. Forma oficială a ghidului, anexele, calendarul și eventualele clarificări trebuie verificate de fiecare dată pe site-ul ADR Nord-Est.</p>
+
+      <section aria-labelledby="por-ne-cine-poate-aplica">
+        <h2 id="por-ne-cine-poate-aplica">Cine poate aplica</h2>
+        <p>Programul este gândit pentru firme mici din regiunea Nord-Est care vor să își îmbunătățească activitatea curentă, nu pentru idei fără legătură cu activitatea reală. Înainte de buget, antreprenorul trebuie să confirme dacă solicitantul și locul investiției se potrivesc cu apelul activ.</p>
+        <ul>
+          <li>microîntreprindere cu sediu sau punct de lucru relevant pentru investiție în regiunea Nord-Est;</li>
+          <li>activitate desfășurată într-unul dintre județele Bacău, Botoșani, Iași, Neamț, Suceava sau Vaslui;</li>
+          <li>solicitant cu istoric verificabil, vechime minimă și situații financiare conforme cu cerințele ghidului activ;</li>
+          <li>cod CAEN eligibil și autorizat conform regulilor publicate de ADR Nord-Est;</li>
+          <li>investiție legată de activitatea firmei: utilaje, echipamente, dotări, software, servicii sau amenajări permise;</li>
+          <li>capacitate de a acoperi cofinanțarea, TVA-ul, costurile neeligibile și eventualele decalaje de rambursare.</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="por-ne-conditii">
+        <h2 id="por-ne-conditii">Condiții de eligibilitate</h2>
+        <p>Eligibilitatea nu se verifică dintr-o singură condiție. Un proiect poate părea potrivit la prima vedere, dar poate avea probleme dacă amplasamentul investiției, codul CAEN, istoricul firmei sau lista de achiziții nu se potrivesc cu ghidul.</p>
+        <ul>
+          <li>solicitantul trebuie să se încadreze ca microîntreprindere la momentul cerut de apel;</li>
+          <li>investiția trebuie implementată în regiunea Nord-Est, nu doar declarată prin sediul social;</li>
+          <li>codul CAEN trebuie să fie eligibil, autorizat și conectat direct cu bunurile sau serviciile cumpărate;</li>
+          <li>solicitantul trebuie să poată prezenta situații financiare, declarații și documente fără contradicții;</li>
+          <li>spațiul investiției trebuie să fie disponibil pe perioada cerută, prin proprietate, închiriere, concesiune sau altă formă acceptată;</li>
+          <li>achizițiile propuse trebuie să fie noi, necesare și justificate prin activitatea firmei, dacă ghidul nu permite altfel;</li>
+          <li>proiectul nu trebuie să înceapă achiziții sau lucrări înainte de momentul permis de apel.</li>
+        </ul>
+        <p>O verificare corectă pune împreună certificatul constatator, bilanțurile, locația, ofertele și obiectivul de investiție. Dacă una dintre piese nu se potrivește, proiectul trebuie ajustat înainte de depunere.</p>
+      </section>
+
+      <section aria-labelledby="por-ne-sume">
+        <h2 id="por-ne-sume">Sume și intensitate</h2>
+        <p>Valoarea grantului, procentul nerambursabil și limitele de cheltuieli se confirmă numai în ghidul activ. Pentru antreprenor, partea importantă este să înțeleagă bugetul total, nu doar suma care poate fi obținută.</p>
+        <ul>
+          <li>grantul maxim și minim se verifică în apelul publicat de ADR Nord-Est;</li>
+          <li>intensitatea sprijinului poate depinde de tipul firmei, localizare, regulile de ajutor de stat sau minimis și categoria de cheltuială;</li>
+          <li>cofinanțarea trebuie acoperită din surse proprii, credit, leasing sau alte surse acceptate de program;</li>
+          <li>TVA-ul, costurile neeligibile, diferențele de preț și cheltuielile respinse pot rămâne în sarcina firmei;</li>
+          <li>ofertele prea generale sau rotunjite artificial pot crea întrebări la evaluare;</li>
+          <li>bugetul trebuie să arate clar ce se cumpără, de ce este necesar și cum ajută afacerea după implementare.</li>
+        </ul>
+        <p>Nu porni de la ideea că proiectul este bun doar pentru că există finanțare. Dacă solicitantul nu poate susține partea proprie sau dacă achizițiile nu sunt bine explicate, riscul rămâne ridicat chiar și pentru un proiect eligibil.</p>
+      </section>
+
+      <section aria-labelledby="por-ne-documente">
+        <h2 id="por-ne-documente">Documente necesare</h2>
+        <p>Lista finală de documente se ia din ghid și anexe. Totuși, antreprenorii pot pregăti din timp un set de bază pentru discuția inițială și pentru verificarea riscurilor evidente.</p>
+        <ul>
+          <li>certificat constatator actualizat, cu activitatea si punctul de lucru relevante;</li>
+          <li>situatii financiare, balante sau alte documente contabile cerute de apel;</li>
+          <li>documente pentru spatiul investitiei: proprietate, contract de inchiriere, acorduri sau alte dovezi acceptate;</li>
+          <li>lista de echipamente, utilaje, software, servicii si lucrari propuse;</li>
+          <li>oferte sau estimari de pret suficient de clare pentru fiecare achizitie importanta;</li>
+          <li>descrierea activitatii firmei si a modului in care investitia modernizeaza procesul curent;</li>
+          <li>date despre cofinantare, credite, leasing sau alte surse de bani pentru partea proprie;</li>
+          <li>declaratii si formulare specifice apelului, completate conform modelelor oficiale.</li>
+        </ul>
+        <p>Documentele trebuie să spună aceeași poveste. Dacă o ofertă descrie o activitate, certificatul constatator alta, iar planul de investiții nu le leagă clar, apar clarificări sau riscuri de respingere.</p>
+      </section>
+
+      <section aria-labelledby="por-ne-pasi">
+        <h2 id="por-ne-pasi">Pașii de pregătire</h2>
+        <p>O pregatire buna inseamna sa elimini intrebarile importante inainte de depunere. Fluxul de mai jos arata ordinea fireasca pentru o microintreprindere care vrea sa verifice POR ADR Nord-Est fara sa piarda timp cu un dosar nepotrivit.</p>
+        <div class="table-wrap">
+          <svg role="img" aria-labelledby="por-ne-flow-title por-ne-flow-desc" viewBox="0 0 920 170" width="100%" height="170">
+            <title id="por-ne-flow-title">Flux de pregatire POR ADR Nord-Est</title>
+            <desc id="por-ne-flow-desc">Patru etape: Verificare eligibilitate, Pregatire documente, Depunere si Implementare.</desc>
+            <defs>
+              <marker id="por-ne-arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+                <path d="M0,0 L0,6 L9,3 z" fill="#b84716"></path>
+              </marker>
+            </defs>
+            <g fill="#fff7ed" stroke="#b84716" stroke-width="2">
+              <rect x="24" y="42" width="180" height="82" rx="12"></rect>
+              <rect x="266" y="42" width="180" height="82" rx="12"></rect>
+              <rect x="508" y="42" width="180" height="82" rx="12"></rect>
+              <rect x="750" y="42" width="146" height="82" rx="12"></rect>
+            </g>
+            <g stroke="#b84716" stroke-width="3" marker-end="url(#por-ne-arrow)">
+              <line x1="214" y1="83" x2="254" y2="83"></line>
+              <line x1="456" y1="83" x2="496" y2="83"></line>
+              <line x1="698" y1="83" x2="738" y2="83"></line>
+            </g>
+            <g fill="#1a2540" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" text-anchor="middle">
+              <text x="114" y="78">Verificare</text>
+              <text x="114" y="102">eligibilitate</text>
+              <text x="356" y="78">Pregatire</text>
+              <text x="356" y="102">documente</text>
+              <text x="598" y="91">Depunere</text>
+              <text x="823" y="91">Implementare</text>
+            </g>
+          </svg>
+        </div>
+        <ol>
+          <li><strong>Verificare eligibilitate:</strong> confirmi firma, judetul, codul CAEN, vechimea, istoricul financiar si ideea de investitie.</li>
+          <li><strong>Pregatire documente:</strong> strangi documentele firmei, actele pentru spatiu, ofertele, bugetul si explicatia investitiei.</li>
+          <li><strong>Depunere:</strong> completezi cererea si anexele in forma ceruta de apel, fara informatii contradictorii.</li>
+          <li><strong>Implementare:</strong> respecti achizitiile, termenele, raportarile si dovezile cerute pentru rambursare.</li>
+        </ol>
+      </section>
+
+${officialSourcesHtml}
+      <h2>Întrebări frecvente</h2>
+      ${faqHtml}`;
 }
 
 function renderTable(page) {
@@ -1722,6 +1837,9 @@ ${officialSourcesHtml}
 }
 
 function renderMainContent(page) {
+  if (page.slug === "por-adr-nord-est") {
+    return renderPorAdrNordEstContent(page);
+  }
   if (page.slug === "consultanta-fonduri-europene") {
     return renderConsultantaPillarContent(page);
   }
@@ -1877,7 +1995,7 @@ ${CLARITY_TRACKING_CODE}
   </header>
   <main class="container">
     <article class="panel">
-${renderFamilyCards(page)}
+${page.hideFamilyCards ? "" : renderFamilyCards(page)}
 ${renderMainContent(page)}
       <div class="related-links">${links(standardInternalLinksForPath(slugPath(page), page.related))}</div>
     </article>

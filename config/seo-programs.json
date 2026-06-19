@@ -1647,12 +1647,12 @@
       "schemaType": "GovernmentService",
       "category": "Program regional",
       "title": "POR ADR Nord-Est pentru microîntreprinderi",
-      "description": "POR ADR Nord-Est pentru microîntreprinderi: județ, CAEN, vechime, situații financiare, punct de lucru, RIS3, oferte și buget.",
+      "description": "POR ADR Nord-Est explicat clar pentru microîntreprinderi din Nord-Est: cine poate aplica, documente, sume, pași și verificare eligibilitate.",
       "h1": "POR ADR Nord-Est pentru microîntreprinderi",
-      "quickAnswer": "Pentru o microîntreprindere din Nord-Est, verificarea începe cu județul investiției, CAEN-ul, vechimea, situațiile financiare, punctul de lucru, bugetul și ofertele. RIS3 sau alte condiții regionale se tratează prudent și se confirmă numai în ghidul activ și anexele ADR Nord-Est.",
+      "quickAnswer": "Ce este POR ADR Nord-Est? Este programul regional prin care microîntreprinderile din județele Bacău, Botoșani, Iași, Neamț, Suceava și Vaslui pot pregăti investiții pentru modernizare: echipamente, dotări, software, amenajări sau alte costuri permise de apel. Forma oficială a ghidului, anexele, calendarul și clarificările trebuie verificate de fiecare dată pe site-ul ADR Nord-Est.",
       "programName": "Investiții pentru modernizarea microintreprinderilor",
       "policyContribution": "programul regional susține competitivitatea microintreprinderilor, modernizarea activitatilor locale și investiții productive cu impact economic.",
-      "funding": "valoarea grantului, intensitatea și regulile apelului se confirma în ghidul activ al programului regional.",
+      "funding": "Sumele, intensitatea sprijinului și plafoanele de cheltuieli se confirmă în ghidul activ publicat de ADR Nord-Est.",
       "audience": [
         "microîntreprinderi din regiunea Nord-Est",
         "firme care pregătesc utilaje, echipamente, servicii sau digitalizare",
@@ -1713,20 +1713,36 @@
       ],
       "faq": [
         [
-          "Cine poate aplica la apelul pentru microîntreprinderi?",
-          "Pot aplica firmele care respecta incadrarea, regiunea, codul CAEN, situatia financiara și celelalte condiții din apel."
+          "Ce este POR ADR Nord-Est pentru microîntreprinderi?",
+          "Este un program regional pentru firme mici din Nord-Est care vor să își modernizeze activitatea prin investiții permise de ghid."
         ],
         [
-          "Este important județul investiției?",
-          "Da. Programele regionale sunt legate de regiunea și locația investiției, nu doar de sediul social."
+          "În ce județe trebuie să fie investiția?",
+          "Investiția trebuie să fie în regiunea Nord-Est: Bacău, Botoșani, Iași, Neamț, Suceava sau Vaslui."
         ],
         [
-          "Ce documente sunt necesare?",
-          "Sunt necesare documente de firmă, financiare, documente pentru spațiu, oferte, declaratii și anexele specifice apelului."
+          "Trebuie să am cod CAEN autorizat?",
+          "Da, codul CAEN trebuie verificat în ghid și corelat cu activitatea reală și cu investiția propusă."
         ],
         [
-          "Pot include digitalizare?",
-          "Digitalizarea poate fi eligibila dacă este permisa de apel și are legătura cu investiția principala."
+          "Ce pot cumpăra prin program?",
+          "De regulă se verifică echipamente, dotări, software, servicii și amenajări, dar lista finală este cea din apelul activ."
+        ],
+        [
+          "Cât este finanțarea nerambursabilă?",
+          "Sumele și intensitatea se confirmă în ghidul activ ADR Nord-Est. Nu folosi ghiduri vechi pentru decizia finală."
+        ],
+        [
+          "Ce documente pregătesc prima dată?",
+          "Certificatul constatator, situațiile financiare, actele pentru spațiu, lista de investiții, ofertele și datele despre cofinanțare."
+        ],
+        [
+          "Pot depune dacă nu am toate ofertele?",
+          "Depinde de regulile apelului. Pentru o verificare serioasă, ofertele sau estimările clare trebuie pregătite cât mai devreme."
+        ],
+        [
+          "Când merită să cer o verificare de eligibilitate?",
+          "Înainte să comanzi echipamente sau să plătești documentații. O verificare timpurie poate arăta rapid riscurile proiectului."
         ]
       ],
       "related": [
@@ -1743,29 +1759,14 @@
       "heroIcon": "ph-duotone ph-map-pin",
       "officialGuideKey": "por-ne",
       "guideCtaLabel": "Ghid oficial",
-      "contentSections": [
-        {
-          "title": "Ce verificăm pentru Nord-Est",
-          "items": [
-            "localizarea în Iași, Suceava, Bacău, Botoșani, Neamț sau Vaslui;",
-            "încadrarea de microîntreprindere și istoricul financiar;",
-            "codul CAEN și legătura investiției cu activitatea reală;",
-            "punctul de lucru, dreptul de folosință și ofertele;",
-            "corelarea cu domeniile regionale, inclusiv RIS3, unde ghidul o cere."
-          ]
-        },
-        {
-          "title": "RIS3 și județe Nord-Est",
-          "paragraphs": [
-            "Pentru POR ADR Nord-Est verifică județul, localitatea, incadrarea RIS3, categoria microintreprinderii, CAEN-ul, punctul de lucru și cheltuielile eligibile."
-          ]
-        }
-      ],
-      "finalCtaText": "Trimite județul investiției, CAEN-ul, vechimea firmei, bugetul și lista de achiziții pentru o verificare POR ADR Nord-Est.",
+      "hideFamilyCards": true,
+      "contentSections": [],
+      "finalCtaTitle": "Trimite datele pentru verificarea eligibilității",
+      "finalCtaText": "Trimite județul investiției, codul CAEN, vechimea firmei, bugetul și lista de achiziții. Un consultant FABER va răspunde în maximum 24 de ore.",
       "heroPrimaryCta": "Verifică eligibilitatea",
-      "finalPrimaryCta": "Trimite datele proiectului",
-      "inlineCtaTitle": "Ce poți trimite pentru verificare",
-      "inlineCtaText": "Trimite județul investiției, CAEN-ul, vechimea firmei, bugetul și lista de achiziții pentru o verificare POR ADR Nord-Est.",
+      "finalPrimaryCta": "Trimite datele pentru verificarea eligibilității",
+      "inlineCtaTitle": "Trimite datele pentru verificarea eligibilității",
+      "inlineCtaText": "Trimite județul investiției, codul CAEN, vechimea firmei, bugetul și lista de achiziții. Un consultant FABER va răspunde în maximum 24 de ore.",
       "decisionClose": "Dacă documentele, bugetul sau condițiile nu se potrivesc, proiectul se ajustează înainte de depunere. Regulile finale se confirmă în ghidul activ, anexele apelului și sursele oficiale."
     },
     {
