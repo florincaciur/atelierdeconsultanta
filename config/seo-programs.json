@@ -8833,10 +8833,11 @@
       "template": "editorial-program",
       "minWords": 1200,
       "minFaq": 8,
+      "hideFamilyCards": true,
       "updatedAt": "2026-06-11",
-      "title": "PoCIDIF 2.1 | inovare digitala pentru IMM din TIC",
-      "description": "PoCIDIF 2.1 explicat: granturi pentru dezvoltarea de servicii, aplicatii si produse digitale inovatoare de catre IMM din sectorul TIC.",
-      "h1": "PoCIDIF 2.1: inovare si tehnologii avansate pentru IMM din TIC",
+      "title": "PoCIDIF 2.1 | inovare digital\u0103 IMM TIC",
+      "description": "PoCIDIF 2.1 pentru inovare digital\u0103 IMM TIC: granturi 500.000-3.000.000 euro pentru servicii, aplica\u021bii \u0219i produse digitale inovatoare.",
+      "h1": "PoCIDIF 2.1 \u2013 Granturi pentru inovare digital\u0103 \u00een IMM\u2011urile TIC",
       "programName": "PoCIDIF 2.1",
       "funding": "Finantare intre 500.000 si 3.000.000 euro, cu intensitate de pana la 75% pentru ajutor regional si 100% pentru ajutor de minimis, conform ghidului consultativ.",
       "sourceKeys": [
@@ -8844,7 +8845,7 @@
       ],
       "officialGuideKey": "pocidif-21",
       "heroIcon": "ph-duotone ph-circuitry",
-      "quickAnswer": "PoCIDIF 2.1 este un apel consultativ pentru IMM din sectorul TIC care dezvolta servicii, aplicatii sau produse digitale prin inovare si adoptarea de tehnologii avansate. Sursele analizate indica finantari intre 500.000 si 3.000.000 euro, cu intensitate de pana la 75% pentru ajutor regional si pana la 100% pentru ajutor de minimis. Verificarea trebuie sa porneasca de la incadrarea IMM, codurile CAEN TIC, maturitatea proiectului, noutatea solutiei, echipa, bugetul de dezvoltare, drepturile asupra produsului si capacitatea de implementare. Nu este un program pentru website-uri simple sau achizitii IT generice; conditiile finale se confirma in ghidul activ PoCIDIF si in anexele apelului.",
+      "quickAnswer": "PoCIDIF 2.1 este apelul pentru IMM-uri din sectorul TIC care vor sa dezvolte servicii, aplicatii sau produse digitale inovatoare, nu doar sa cumpere echipamente IT. In forma consultativa analizata, granturile sunt intre 500.000 si 3.000.000 euro, cu intensitati orientative de pana la 75% pentru ajutor regional si pana la 100% pentru componente de minimis. Pentru antreprenori, programul poate accelera dezvoltarea unui produs propriu, testarea, validarea si lansarea pe piata. Verificarea incepe cu statutul IMM, codurile CAEN, noutatea solutiei, echipa, arhitectura tehnica, proprietatea asupra produsului, bugetul si capacitatea de cofinantare. Regulile finale se confirma in ghidul activ si anexele PoCIDIF.",
       "audience": [
         "IMM-uri din sectorul TIC care dezvolta produse, aplicatii sau servicii digitale proprii.",
         "Companii care pot demonstra inovare, adoptarea de tehnologii avansate si capacitate tehnica de implementare.",
@@ -8894,8 +8895,8 @@
         "Capacitatea firmei si a echipei este un element critic pentru proiecte TIC mari."
       ],
       "examples": [
-        "IMM TIC care dezvolta o aplicatie SaaS cu componenta de inteligenta artificiala sau automatizare avansata.",
-        "Companie care construieste un produs digital propriu si poate demonstra piata, arhitectura si echipa.",
+        "IMM TIC care dezvolta o platforma SaaS pentru analiza datelor operationale si automatizarea fluxurilor B2B.",
+        "Companie care construieste un produs digital propriu si poate demonstra piata, arhitectura, echipa si drepturile asupra solutiei.",
         "Proiect de servicii digitale avansate care necesita dezvoltare, testare, infrastructura si validare comerciala."
       ],
       "applicantRows": [
@@ -9031,36 +9032,36 @@
       ],
       "faq": [
         [
-          "Ce este PoCIDIF 2.1?",
-          "Este un apel pentru dezvoltarea de noi servicii, aplicatii sau produse digitale prin inovare si adoptarea de tehnologii avansate, destinat IMM din sectorul TIC."
+          "Ce finanteaza PoCIDIF 2.1?",
+          "Programul finanteaza dezvoltarea de servicii, aplicatii si produse digitale inovatoare pentru IMM-uri din sectorul TIC, in limitele ghidului activ."
         ],
         [
-          "Care este valoarea finantarii?",
-          "Forma consultativa analizata mentioneaza finantari intre 500.000 si 3.000.000 euro."
+          "Care este intervalul grantului PoCIDIF 2.1?",
+          "Forma consultativa analizata mentioneaza granturi intre 500.000 si 3.000.000 euro. Valorile finale se confirma in ghidul activ."
         ],
         [
-          "Care este intensitatea finantarii?",
-          "Sursele indica pana la 75% pentru ajutor regional si pana la 100% pentru ajutor de minimis, cu confirmare in ghidul activ."
+          "Ce intensitate poate avea finantarea?",
+          "Orientativ, intensitatea poate ajunge la 75% pentru ajutor regional si 100% pentru minimis, cu incadrare confirmata in ghid."
         ],
         [
           "Cine poate aplica?",
-          "IMM-urile din sectorul TIC care indeplinesc conditiile ghidului activ si pot demonstra proiectul digital inovator."
+          "IMM-urile din sectorul TIC care au coduri CAEN potrivite, capacitate de implementare si un proiect digital inovator, nu doar o achizitie IT."
         ],
         [
           "Este eligibil un website simplu?",
-          "In mod normal, un website simplu nu este suficient. Proiectul trebuie sa demonstreze inovare, tehnologii avansate si rezultate masurabile."
+          "Un website simplu nu este suficient. Proiectul trebuie sa arate un serviciu, o aplicatie sau un produs digital cu noutate si rezultat masurabil."
         ],
         [
-          "Ce verific prima data?",
-          "Incadrarea IMM, codurile CAEN TIC, produsul digital, echipa, bugetul si categoriile de ajutor."
+          "Ce coduri CAEN sunt relevante?",
+          "Codurile CAEN trebuie verificate in ghidul activ si corelate cu activitatea reala, produsul dezvoltat si veniturile firmei."
         ],
         [
           "Ce documente sunt sensibile?",
-          "Descrierea tehnica, arhitectura, echipa, piata, bugetul, ofertele si separarea cheltuielilor pe tipuri de ajutor."
+          "Descrierea tehnica, arhitectura, echipa, piata, drepturile asupra solutiei, bugetul, ofertele si separarea cheltuielilor pe tipuri de ajutor."
         ],
         [
-          "Cand se confirma conditiile finale?",
-          "In ghidul activ PoCIDIF, anexele si clarificarile publicate de autoritatea finantatoare."
+          "Cum pregatesc analiza de eligibilitate?",
+          "Pregateste statutul IMM, codurile CAEN, produsul propus, arhitectura, echipa, bugetul estimat, sursa cofinantarii si documentele disponibile."
         ]
       ],
       "contentSections": [
@@ -9113,13 +9114,14 @@
           "label": "Verificare eligibilitate"
         }
       ],
-      "ctaText": "Verifica eligibilitatea PoCIDIF",
+      "ctaText": "Solicit\u0103 analiz\u0103 eligibilitate pentru PoCIDIF 2.1",
       "secondaryCtaText": "Analizeaza proiectul digital",
-      "heroPrimaryCta": "Verifica eligibilitatea PoCIDIF",
-      "finalPrimaryCta": "Verifica eligibilitatea PoCIDIF",
-      "finalCtaText": "Verifica eligibilitatea PoCIDIF",
-      "inlineCtaTitle": "Urmatorul pas",
-      "inlineCtaText": "Trimite datele principale despre solicitant, localitate, activitate, investitie si buget. Verificarea initiala arata daca programul merita pregatit si ce riscuri trebuie rezolvate inainte de depunere."
+      "heroPrimaryCta": "Solicit\u0103 analiz\u0103 PoCIDIF",
+      "finalCtaTitle": "Solicit\u0103 analiz\u0103 eligibilitate pentru PoCIDIF 2.1",
+      "finalPrimaryCta": "Solicit\u0103 analiz\u0103 eligibilitate pentru PoCIDIF 2.1",
+      "finalCtaText": "Trimite informatii despre IMM, coduri CAEN, produsul digital, echipa, buget si cofinantare. Verificam daca proiectul merita pregatit pentru PoCIDIF 2.1.",
+      "inlineCtaTitle": "Analiza initiala PoCIDIF 2.1",
+      "inlineCtaText": "Trimite date despre firma, codurile CAEN, produsul digital, arhitectura, echipa, bugetul estimat si sursa cofinantarii. Verificarea initiala separa proiectele pregatibile de ideile care trebuie reformulate."
     }
   ]
 }

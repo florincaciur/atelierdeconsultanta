@@ -946,6 +946,103 @@ ${officialSourcesHtml}
       </section>`;
 }
 
+function renderPocidif21Content(page) {
+  const officialSourcesHtml = renderOfficialSources(page.sourceKeys, { id: `${page.slug}-official-sources` });
+  const faqHtml = faqsForPage(page)
+    .map(([question, answer]) => `<section class="faq-item"><h3>${esc(question)}</h3><p>${esc(answer)}</p></section>`)
+    .join("\n");
+
+  return `
+      <p class="intro">PoCIDIF 2.1 finan&#539;eaz&#259; dezvoltarea de servicii, aplica&#539;ii sau produse digitale inovatoare create de IMM-uri din sectorul TIC. Pentru antreprenori, apelul poate sus&#539;ine trecerea de la o idee tehnic&#259; validat&#259; la un produs digital construit, testat &#537;i preg&#259;tit pentru pia&#539;&#259;. Forma consultativ&#259; analizat&#259; indic&#259; granturi orientative &#238;ntre 500.000 &#537;i 3.000.000 euro, iar valorile finale, plafoanele &#537;i condi&#539;iile exacte trebuie confirmate &#238;n ghidul activ PoCIDIF &#537;i anexele apelului.</p>
+      <p>Programul nu este g&#226;ndit pentru digitalizare de rutin&#259;, website-uri simple sau cump&#259;r&#259;ri IT f&#259;r&#259; leg&#259;tur&#259; cu un produs nou. Un proiect potrivit explic&#259; problema rezolvat&#259;, utilizatorii viza&#539;i, tehnologia folosit&#259;, noutatea fa&#539;&#259; de solu&#539;iile existente, echipa care poate livra &#537;i modul &#238;n care bugetul duce la un rezultat comercial verificabil. Dac&#259; aceste elemente sunt clare, finan&#539;area poate accelera dezvoltarea, validarea, lansarea &#537;i scalarea unui serviciu digital cu valoare real&#259; pentru clien&#539;i.</p>
+
+      <section aria-labelledby="pocidif-criterii-title">
+        <h2 id="pocidif-criterii-title">Criterii de eligibilitate</h2>
+        <p>Eligibilitatea se verific&#259; &#238;nainte de arhitectur&#259;, buget sau oferte. PoCIDIF 2.1 este relevant c&#226;nd solicitantul, activitatea TIC &#537;i solu&#539;ia propus&#259; formeaz&#259; un proiect coerent, nu doar o inten&#539;ie general&#259; de modernizare.</p>
+        <ul>
+          <li><strong>Statut IMM:</strong> solicitantul trebuie s&#259; se &#238;ncadreze ca IMM conform regulilor apelului, cu documente financiare &#537;i juridice care sus&#539;in aceast&#259; &#238;ncadrare.</li>
+          <li><strong>Coduri CAEN TIC:</strong> codurile autorizate trebuie s&#259; fie compatibile cu activitatea finan&#539;at&#259; &#537;i cu veniturile sau proiectele dezvoltate de firm&#259;.</li>
+          <li><strong>Inova&#539;ie:</strong> solu&#539;ia trebuie s&#259; arate ce aduce nou pentru clien&#539;i, proces, pia&#539;&#259; sau tehnologie, nu doar faptul c&#259; este software.</li>
+          <li><strong>Produs propriu:</strong> proiectul trebuie s&#259; aib&#259; un rezultat digital identificabil: serviciu, aplica&#539;ie, platform&#259; sau produs cu func&#539;ionalit&#259;&#539;i descrise clar.</li>
+          <li><strong>Capacitate de implementare:</strong> echipa, furnizorii, calendarul, proprietatea asupra solu&#539;iei &#537;i cofinan&#539;area trebuie s&#259; fie credibile pentru dimensiunea grantului.</li>
+        </ul>
+        <p>Un test util este s&#259; po&#539;i descrie proiectul &#238;ntr-o propozi&#539;ie concret&#259;: cine folose&#537;te solu&#539;ia, ce problem&#259; rezolv&#259;, ce component&#259; tehnic&#259; se dezvolt&#259; &#537;i de ce produsul nu poate fi redus la o simpl&#259; achizi&#539;ie de licen&#539;e sau echipamente. Dac&#259; r&#259;spunsul r&#259;m&#226;ne vag, descrierea tehnic&#259; trebuie rescris&#259; &#238;nainte de depunere.</p>
+      </section>
+
+      <section aria-labelledby="pocidif-valoare-title">
+        <h2 id="pocidif-valoare-title">Valoarea &#537;i intensitatea finan&#539;&#259;rii</h2>
+        <p>Intervalul orientativ de grant este 500.000-3.000.000 euro. Intensitatea poate ajunge p&#226;n&#259; la 75% pentru ajutor regional &#537;i p&#226;n&#259; la 100% pentru componente de minimis, dar &#238;ncadrarea se face pe fiecare categorie de cheltuial&#259; &#537;i numai dup&#259; regulile ghidului activ.</p>
+        <div class="table-wrap">
+          <svg role="img" aria-labelledby="pocidif-grant-svg-title pocidif-grant-svg-desc" viewBox="0 0 920 250" width="100%" height="250">
+            <title id="pocidif-grant-svg-title">Interval de grant &#537;i intensit&#259;&#539;i PoCIDIF 2.1</title>
+            <desc id="pocidif-grant-svg-desc">Grafic cu granturi orientative &#238;ntre 500.000 &#537;i 3.000.000 euro, intensitate maxim&#259; orientativ&#259; de 75% pentru ajutor regional &#537;i 100% pentru minimis.</desc>
+            <rect x="52" y="62" width="560" height="30" rx="15" fill="#eef2ff"></rect>
+            <rect x="142" y="62" width="390" height="30" rx="15" fill="#2563eb"></rect>
+            <line x1="142" y1="48" x2="142" y2="112" stroke="#1a2540" stroke-width="2"></line>
+            <line x1="532" y1="48" x2="532" y2="112" stroke="#1a2540" stroke-width="2"></line>
+            <text x="52" y="38" fill="#1a2540" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">Grant orientativ</text>
+            <text x="142" y="140" fill="#1a2540" font-family="Inter, Arial, sans-serif" font-size="16" text-anchor="middle">500.000 &#8364;</text>
+            <text x="532" y="140" fill="#1a2540" font-family="Inter, Arial, sans-serif" font-size="16" text-anchor="middle">3.000.000 &#8364;</text>
+            <rect x="650" y="42" width="220" height="72" rx="16" fill="#eff6ff" stroke="#2563eb" stroke-width="2"></rect>
+            <text x="760" y="72" fill="#1a2540" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" text-anchor="middle">Ajutor regional</text>
+            <text x="760" y="102" fill="#2563eb" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="800" text-anchor="middle">p&#226;n&#259; la 75%</text>
+            <rect x="650" y="136" width="220" height="72" rx="16" fill="#ecfdf5" stroke="#059669" stroke-width="2"></rect>
+            <text x="760" y="166" fill="#1a2540" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" text-anchor="middle">Minimis</text>
+            <text x="760" y="196" fill="#059669" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="800" text-anchor="middle">p&#226;n&#259; la 100%</text>
+            <text x="52" y="205" fill="#334155" font-family="Inter, Arial, sans-serif" font-size="15">Valorile sunt orientative; bugetul final se verific&#259; &#238;n ghidul activ, anexele apelului &#537;i regulile de ajutor aplicabile.</text>
+          </svg>
+        </div>
+        <p>Bugetul trebuie construit pe activit&#259;&#539;i, nu pe dorin&#539;e de achizi&#539;ie. Separ&#259; dezvoltarea, testarea, infrastructura, licen&#539;ele, serviciile, partea proprie, TVA-ul &#537;i costurile neeligibile. Pentru fiecare linie trebuie s&#259; existe o justificare: ce rezultat produce, de ce este necesar&#259; pentru produs &#537;i cum se &#238;ncadreaz&#259; &#238;n tipul de ajutor permis.</p>
+      </section>
+
+      <section aria-labelledby="pocidif-activitati-title">
+        <h2 id="pocidif-activitati-title">Activit&#259;&#539;i eligibile</h2>
+        <p>Activit&#259;&#539;ile eligibile trebuie legate direct de dezvoltarea serviciului, aplica&#539;iei sau produsului digital. O list&#259; bun&#259; arat&#259; traseul de la cerin&#539;e la versiune testat&#259;, lansare &#537;i exploatare comercial&#259;.</p>
+        <ul>
+          <li>analiz&#259; de produs, definirea cerin&#539;elor, arhitectur&#259; tehnic&#259; &#537;i proiectare func&#539;ional&#259;;</li>
+          <li>dezvoltare software, integrarea modulelor, automatizarea fluxurilor &#537;i construirea componentelor digitale proprii;</li>
+          <li>testare, validare, securizare, documentare tehnic&#259; &#537;i preg&#259;tirea pentru lansare;</li>
+          <li>infrastructur&#259;, servicii cloud, licen&#539;e sau echipamente necesare produsului, dac&#259; au leg&#259;tur&#259; direct&#259; cu proiectul;</li>
+          <li>activit&#259;&#539;i de validare comercial&#259;, pilotare, demonstrare sau intrare pe pia&#539;&#259;, unde ghidul le permite;</li>
+          <li>servicii de consultan&#539;&#259;, management de proiect sau documenta&#539;ii, &#238;n limitele &#537;i condi&#539;iile apelului.</li>
+        </ul>
+        <p>Diferen&#539;a dintre eligibil &#537;i riscant st&#259; &#238;n leg&#259;tura cu produsul. Un server, o licen&#539;&#259; sau un serviciu extern pot fi justificate doar dac&#259; sus&#539;in direct dezvoltarea &#537;i operarea solu&#539;iei propuse. Dac&#259; o cheltuial&#259; poate fi folosit&#259; la fel de bine pentru orice activitate administrativ&#259;, trebuie explicat&#259; mai atent sau eliminat&#259;.</p>
+      </section>
+
+      <section aria-labelledby="pocidif-pasi-title">
+        <h2 id="pocidif-pasi-title">Pa&#537;i de preg&#259;tire</h2>
+        <ol>
+          <li><strong>Verific&#259; solicitantul:</strong> confirm&#259; statutul IMM, codurile CAEN, situa&#539;iile financiare, istoricul firmei &#537;i eventualele ajutoare primite.</li>
+          <li><strong>Define&#537;te produsul:</strong> descrie utilizatorii, problema rezolvat&#259;, func&#539;ionalit&#259;&#539;ile, noutatea &#537;i rezultatul care va fi livrat.</li>
+          <li><strong>Scrie arhitectura:</strong> clarific&#259; modulele, fluxurile de date, integr&#259;rile, securitatea, infrastructura &#537;i rolurile echipei.</li>
+          <li><strong>Construie&#537;te bugetul:</strong> &#238;mparte costurile pe activit&#259;&#539;i, categorii de ajutor, cofinan&#539;are, TVA, costuri neeligibile &#537;i rezerve.</li>
+          <li><strong>Preg&#259;te&#537;te dovezile:</strong> str&#226;nge oferte, CV-uri, documente de proprietate intelectual&#259;, descrieri tehnice, date de pia&#539;&#259; &#537;i documente financiare.</li>
+          <li><strong>Verific&#259; sursa oficial&#259;:</strong> compar&#259; proiectul cu ghidul activ, anexele, grila de evaluare &#537;i clarific&#259;rile publicate &#238;nainte de depunere.</li>
+        </ol>
+        <p>O preg&#259;tire bun&#259; las&#259; c&#226;t mai pu&#539;ine presupuneri deschise. Antreprenorul trebuie s&#259; poat&#259; ar&#259;ta ce se dezvolt&#259; &#238;n fiecare etap&#259;, cine livreaz&#259;, ce se testeaz&#259;, c&#226;t cost&#259; &#537;i cum se m&#259;soar&#259; rezultatul. Aceast&#259; claritate ajut&#259; at&#226;t la scrierea cererii, c&#226;t &#537;i la implementare.</p>
+      </section>
+
+      <section aria-labelledby="pocidif-riscuri-title">
+        <h2 id="pocidif-riscuri-title">Riscuri comune</h2>
+        <p>Riscurile apar mai ales c&#226;nd proiectul este descris comercial, dar nu este sus&#539;inut tehnic &#537;i financiar. Un grant mare cere o documenta&#539;ie propor&#539;ional&#259;: produs clar, echip&#259; credibil&#259;, buget argumentat &#537;i calendar realist.</p>
+        <ul>
+          <li><strong>Inova&#539;ie descris&#259; vag:</strong> expresii precum digitalizare, platform&#259; modern&#259; sau solu&#539;ie integrat&#259; nu sunt suficiente f&#259;r&#259; func&#539;ionalit&#259;&#539;i, utilizatori &#537;i diferen&#539;iere.</li>
+          <li><strong>Cod CAEN necorelat:</strong> activitatea firmei, codurile autorizate &#537;i produsul propus trebuie s&#259; spun&#259; aceea&#537;i poveste.</li>
+          <li><strong>Buget generic:</strong> costurile mari pentru dezvoltare, cloud, licen&#539;e sau echipamente trebuie legate de module, rezultate &#537;i livrabile.</li>
+          <li><strong>Drepturi neclare:</strong> proprietatea asupra codului, licen&#539;elor, datelor, m&#259;rcii sau componentelor dezvoltate trebuie clarificat&#259; &#238;nainte de depunere.</li>
+          <li><strong>Cofinan&#539;are incert&#259;:</strong> partea proprie, TVA-ul, cheltuielile neeligibile &#537;i eventualele decalaje de rambursare trebuie acoperite realist.</li>
+          <li><strong>Calendar optimist:</strong> dezvoltarea, testarea, achizi&#539;iile, contractarea &#537;i lansarea trebuie planificate cu rezerve pentru clarific&#259;ri &#537;i aprob&#259;ri.</li>
+        </ul>
+        <p>Consultan&#539;a ajut&#259; prin verificarea cadrului de finan&#539;are, traducerea ideii tehnice &#238;ntr-o logic&#259; de proiect, structurarea bugetului &#537;i identificarea punctelor care pot genera clarific&#259;ri. Nu poate garanta aprobarea, dar poate reduce riscul ca un proiect bun s&#259; fie pierdut prin documente neclare.</p>
+      </section>
+
+${officialSourcesHtml}
+      <section aria-labelledby="pocidif-faq-title">
+        <h2 id="pocidif-faq-title">&#206;ntreb&#259;ri frecvente</h2>
+        ${faqHtml}
+      </section>`;
+}
+
 function renderPorAdrNordEstContent(page) {
   const officialSourcesHtml = renderOfficialSources(page.sourceKeys, { id: `${page.slug}-official-sources` });
   const faqHtml = faqsForPage(page)
@@ -2024,6 +2121,9 @@ ${officialSourcesHtml}
 function renderMainContent(page) {
   if (page.slug === "dr12-afir") {
     return renderDr12AfirContent(page);
+  }
+  if (page.slug === "pocidif-21") {
+    return renderPocidif21Content(page);
   }
   if (page.slug === "investitii-modernizarea-microintreprinderilor-apel-2") {
     return renderMicroApel2Content(page);
