@@ -987,6 +987,119 @@ ${officialSourcesHtml}
       ${faqHtml}`;
 }
 
+function renderMicroApel2Content(page) {
+  const officialUrl = "https://adrnordest.ro/comentariiGhid/P1Microintreprinderi/Apel2/";
+  const officialSourcesHtml = renderOfficialSources(page.sourceKeys, { id: `${page.slug}-official-sources` });
+  const faqHtml = faqsForPage(page)
+    .map(([question, answer]) => `<section class="faq-item"><h3>${esc(question)}</h3><p>${esc(answer)}</p></section>`)
+    .join("\n");
+
+  return `
+      <p class="intro">Apelul 2 pentru modernizarea microîntreprinderilor din Nord-Est este o oportunitate pentru firme mici care vor să cumpere echipamente, dotări, software, servicii sau amenajări legate direct de activitatea lor. În forma consultativă analizată, granturile sunt între 100.000 și 300.000 euro, cu intensitate maximă de 90%. Aceste valori ajută la pregătirea bugetului, dar pot fi actualizate în forma finală a ghidului, a anexelor și a grilei publicate de ADR Nord-Est.</p>
+
+      <section aria-labelledby="apel2-beneficii-title">
+        <h2 id="apel2-beneficii-title">De ce merită analizat Apelul 2</h2>
+        <p>Pentru antreprenor, beneficiul principal nu este doar grantul, ci posibilitatea de a moderniza o activitate existentă fără să blocheze tot bugetul firmei. Un dosar bine pregătit arată cum investiția crește capacitatea, calitatea serviciilor, viteza de lucru sau eficiența procesului.</p>
+        <ul>
+          <li>poți planifica achiziții mai mari decât ai putea susține rapid doar din resurse proprii;</li>
+          <li>poți corela echipamentele cu un cod CAEN și cu o activitate clară din regiunea Nord-Est;</li>
+          <li>poți separa din timp grantul, cofinanțarea, TVA-ul și cheltuielile neeligibile;</li>
+          <li>poți decide responsabil dacă proiectul merită depus sau dacă trebuie ajustat înainte de apel.</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="apel2-finantare-title">
+        <h2 id="apel2-finantare-title">Finanțare: grant și intensitate</h2>
+        <p>Intervalul de finanțare menționat în forma consultativă este 100.000-300.000 euro, iar intensitatea maximă este 90%. Ghidul final poate modifica detalii, plafoane, condiții sau documente, așa că decizia de depunere trebuie luată după verificarea sursei oficiale.</p>
+        <div class="table-wrap">
+          <svg role="img" aria-labelledby="apel2-finantare-svg-title apel2-finantare-svg-desc" viewBox="0 0 860 230" width="100%" height="230">
+            <title id="apel2-finantare-svg-title">Interval de finanțare și intensitate Apel 2 Nord-Est</title>
+            <desc id="apel2-finantare-svg-desc">Grafic cu bară pentru granturi între 100.000 și 300.000 euro și intensitate maximă de 90%.</desc>
+            <rect x="48" y="62" width="540" height="28" rx="14" fill="#f3f4f6"></rect>
+            <rect x="168" y="62" width="360" height="28" rx="14" fill="#b84716"></rect>
+            <line x1="168" y1="52" x2="168" y2="104" stroke="#1a2540" stroke-width="2"></line>
+            <line x1="528" y1="52" x2="528" y2="104" stroke="#1a2540" stroke-width="2"></line>
+            <text x="48" y="40" fill="#1a2540" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700">Grant orientativ</text>
+            <text x="168" y="130" fill="#1a2540" font-family="Inter, Arial, sans-serif" font-size="16" text-anchor="middle">100.000 €</text>
+            <text x="528" y="130" fill="#1a2540" font-family="Inter, Arial, sans-serif" font-size="16" text-anchor="middle">300.000 €</text>
+            <rect x="640" y="48" width="166" height="94" rx="16" fill="#fff7ed" stroke="#b84716" stroke-width="2"></rect>
+            <text x="723" y="82" fill="#1a2540" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700" text-anchor="middle">Intensitate</text>
+            <text x="723" y="122" fill="#b84716" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800" text-anchor="middle">max. 90%</text>
+            <text x="48" y="180" fill="#334155" font-family="Inter, Arial, sans-serif" font-size="15">Valorile sunt orientative și trebuie reconfirmate în ghidul final ADR Nord-Est.</text>
+          </svg>
+        </div>
+        <p class="note">Sursa oficială ADR Nord-Est pentru acest apel: <a href="${officialUrl}" target="_blank" rel="noopener noreferrer">pagina programului Modernizarea microîntreprinderilor - Apel 2</a>. Pagina oficială indică faptul că sesiunea de comentarii a expirat; forma finală și clarificările se verifică înainte de depunere.</p>
+      </section>
+
+      <section aria-labelledby="apel2-eligibilitate-title">
+        <h2 id="apel2-eligibilitate-title">Eligibilitate: solicitant, regiune, cod CAEN</h2>
+        <p>Eligibilitatea se verifică înainte de lista de cumpărături. Un proiect bun începe cu firma, locul investiției și activitatea finanțată.</p>
+        <ul>
+          <li><strong>Solicitant:</strong> microîntreprindere care respectă condițiile ghidului activ, inclusiv istoricul financiar și limitele de ajutor aplicabile.</li>
+          <li><strong>Regiune:</strong> investiția trebuie realizată în regiunea Nord-Est, nu doar declarată printr-un sediu fără legătură cu proiectul.</li>
+          <li><strong>Cod CAEN:</strong> activitatea trebuie să fie eligibilă, autorizată și legată direct de echipamentele sau serviciile propuse.</li>
+          <li><strong>Spațiu:</strong> punctul de lucru, contractul de închiriere, proprietatea sau alt drept de folosință trebuie să acopere perioada cerută.</li>
+          <li><strong>Cofinanțare:</strong> firma trebuie să poată susține partea proprie, TVA-ul, costurile neeligibile și decalajele de plată.</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="apel2-cheltuieli-title">
+        <h2 id="apel2-cheltuieli-title">Cheltuieli eligibile</h2>
+        <p>Cheltuielile trebuie să susțină modernizarea reală a activității. Nu este suficient ca achizițiile să fie dorite de firmă; ele trebuie să fie permise de apel și justificate în proiect.</p>
+        <ul>
+          <li>echipamente, utilaje și dotări folosite în activitatea eligibilă;</li>
+          <li>software, licențe sau componente digitale, dacă apelul le permite;</li>
+          <li>amenajări sau lucrări legate de spațiul investiției, în limitele ghidului;</li>
+          <li>servicii, documentații, proiectare sau consultanță, doar dacă sunt permise și încadrate corect;</li>
+          <li>cheltuieli auxiliare care pot fi explicate prin obiectivul investiției și prin rezultatele asumate.</li>
+        </ul>
+        <p>O listă de cheltuieli bună este ușor de urmărit: fiecare achiziție are o funcție, o ofertă, un loc de utilizare și o legătură cu rezultatul proiectului. Această logică ajută antreprenorul să evite bugete supradimensionate, echipamente greu de justificat sau costuri care ar putea fi tăiate la evaluare.</p>
+      </section>
+
+      <section aria-labelledby="apel2-proces-title">
+        <h2 id="apel2-proces-title">Proces și calendar</h2>
+        <p>Calendarul real este cel publicat de ADR Nord-Est. Până la forma finală, pregătirea poate avansa pe datele firmei, buget, oferte și documente care nu depind de ultima versiune a ghidului.</p>
+        <ol class="process-list">
+          <li><strong>Verificare inițială.</strong> Confirmăm solicitantul, regiunea, CAEN-ul, spațiul și ideea de investiție.</li>
+          <li><strong>Buget și oferte.</strong> Separăm cheltuielile eligibile, cheltuielile neeligibile, TVA-ul, cofinanțarea și rezervele.</li>
+          <li><strong>Documente.</strong> Pregătim actele firmei, situațiile financiare, documentele pentru spațiu și anexele cerute.</li>
+          <li><strong>Depunere.</strong> Completăm cererea și anexele conform ghidului final și platformei indicate.</li>
+          <li><strong>Evaluare și implementare.</strong> Răspundem la clarificări, apoi urmărim achizițiile, plățile și raportările.</li>
+        </ol>
+      </section>
+
+      <section aria-labelledby="apel2-documente-title">
+        <h2 id="apel2-documente-title">Documente necesare</h2>
+        <p>Documentele finale se iau din ghid și anexe. Pentru o evaluare rapidă a șanselor, merită pregătite din timp următoarele:</p>
+        <ul>
+          <li>certificat constatator actualizat, cu activitatea și punctul de lucru relevante;</li>
+          <li>situații financiare și documente contabile cerute pentru încadrare;</li>
+          <li>documente pentru spațiul investiției: proprietate, închiriere, acorduri, planuri sau autorizații;</li>
+          <li>lista achizițiilor propuse, cu rolul fiecărei cheltuieli în activitatea firmei;</li>
+          <li>oferte comparabile, devize, specificații tehnice sau estimări documentate;</li>
+          <li>date despre cofinanțare, surse proprii, credit, leasing sau alte surse acceptate;</li>
+          <li>declarații și formulare specifice apelului, completate în forma publicată de ADR Nord-Est.</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="apel2-riscuri-title">
+        <h2 id="apel2-riscuri-title">Riscuri și recomandări</h2>
+        <p>Cele mai multe probleme apar când proiectul pornește de la achiziții, nu de la eligibilitate și logică de modernizare. Recomandarea practică este să verifici întâi dacă fiecare document susține aceeași poveste.</p>
+        <ul class="warning-list">
+          <li>nu trata apelul ca program național; localizarea în Nord-Est este filtru de bază;</li>
+          <li>nu include echipamente fără legătură clară cu codul CAEN și activitatea finanțată;</li>
+          <li>nu construi bugetul la plafon fără justificare operațională;</li>
+          <li>nu ignora TVA-ul, cheltuielile neeligibile și decalajele până la rambursare;</li>
+          <li>nu depune cu documente pentru spațiu incomplete sau cu durată insuficientă;</li>
+          <li>nu folosi forma consultativă ca regulă finală; verifică ghidul activ, anexele și clarificările.</li>
+        </ul>
+      </section>
+
+${officialSourcesHtml}
+      <h2>Întrebări frecvente</h2>
+      ${faqHtml}`;
+}
+
 function renderTable(page) {
   const rows = [
     ["Program", page.programName || page.h1],
@@ -1837,6 +1950,9 @@ ${officialSourcesHtml}
 }
 
 function renderMainContent(page) {
+  if (page.slug === "investitii-modernizarea-microintreprinderilor-apel-2") {
+    return renderMicroApel2Content(page);
+  }
   if (page.slug === "por-adr-nord-est") {
     return renderPorAdrNordEstContent(page);
   }

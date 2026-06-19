@@ -1775,10 +1775,10 @@
       "type": "program",
       "schemaType": "GovernmentService",
       "category": "Fonduri regionale",
-      "title": "Modernizarea microintreprinderilor Apel 2 | Nord-Est",
-      "description": "Programul Regional Nord-Est Apel 2 pentru modernizarea microintreprinderilor: grant 100.000-300.000 euro, intensitate 90%, eligibilitate si documente.",
-      "h1": "Modernizarea microintreprinderilor - Apel 2 Nord-Est",
-      "quickAnswer": "Modernizarea microintreprinderilor - Apel 2 este un apel regional pentru microintreprinderi din Nord-Est, in forma consultativa in sursele analizate. Valoarea orientativa este intre 100.000 si 300.000 euro, cu intensitate maxima de 90%. Verificarea incepe cu statutul de microintreprindere, sediul sau punctul de lucru in regiune, codul CAEN, autorizarea activitatii, situatiile financiare, spatiul investitiei si lista de cheltuieli. Programul nu este national; localizarea si regulile ADR Nord-Est sunt filtre esentiale. Pentru decizia de aplicare conteaza si cofinantarea, TVA-ul, documentele pentru spatiu, ofertele comparabile, capacitatea de implementare si grila finala a apelului. Un proiect bun arata modernizare reala, nu doar o lista de achizitii, si pastreaza legatura dintre CAEN, spatiu, buget si rezultate.",
+      "title": "Modernizarea microîntreprinderilor – Apel 2 Nord-Est: ghid practic",
+      "description": "Ghid practic pentru Apel 2 Nord-Est: granturi 100.000-300.000 euro, intensitate maximă 90%, eligibilitate, documente și riscuri.",
+      "h1": "Modernizarea microîntreprinderilor – Apel 2 Nord-Est: Ghid practic pentru antreprenori",
+      "quickAnswer": "Apelul 2 pentru modernizarea microîntreprinderilor din Nord-Est sprijină firmele mici care pregătesc investiții reale în echipamente, dotări, software, servicii sau amenajări. Forma consultativă indică granturi între 100.000 și 300.000 euro și intensitate maximă de 90%, dar valorile finale, condițiile și documentele pot fi actualizate în ghidul final ADR Nord-Est. Pentru antreprenori, verificarea începe cu solicitantul, regiunea, codul CAEN, spațiul investiției și cofinanțarea. Un proiect solid explică de ce achizițiile modernizează activitatea, cum susțin rezultatele firmei și ce documente dovedesc fiecare ipoteză înainte de depunere. Decizia de aplicare trebuie luată după compararea bugetului, a punctajului estimat, a riscurilor de implementare și a calendarului oficial publicat pentru apel.",
       "programName": "Modernizarea microintreprinderilor - Apel 2",
       "policyContribution": "apelul susține investiții productive, modernizare, competitivitate regionala și cresterea capacitatii firmelor mici de a livra servicii sau produse mai bune.",
       "funding": "Intre 100.000 si 300.000 euro, cu intensitate maxima de 90%, conform ghidului consultativ pentru Programul Regional Nord-Est.",
@@ -1892,11 +1892,12 @@
         }
       ],
       "sourceKeys": [
-        "por-ne-micro"
+        "por-ne-apel-2"
       ],
       "heroIcon": "ph-duotone ph-buildings",
-      "officialGuideKey": "por-ne-micro",
+      "officialGuideKey": "por-ne-apel-2",
       "guideCtaLabel": "Ghid oficial",
+      "hideFamilyCards": true,
       "contentSections": [
         {
           "title": "De ce localizarea este primul filtru",
@@ -2067,10 +2068,11 @@
       "ctaText": "Verifica eligibilitatea regionala",
       "secondaryCtaText": "Analizeaza CAEN-ul si spatiul",
       "heroPrimaryCta": "Verifica eligibilitatea regionala",
-      "finalPrimaryCta": "Verifica eligibilitatea regionala",
-      "finalCtaText": "Verifica eligibilitatea regionala",
-      "inlineCtaTitle": "Urmatorul pas",
-      "inlineCtaText": "Trimite datele principale despre solicitant, localitate, activitate, investitie si buget. Verificarea initiala arata daca programul merita pregatit si ce riscuri trebuie rezolvate inainte de depunere."
+      "finalCtaTitle": "Solicită o consultanță gratuită pentru Apel 2",
+      "finalPrimaryCta": "Solicită o consultanță gratuită pentru Apel 2",
+      "finalCtaText": "Trimite datele firmei, codul CAEN, localitatea investiției și lista de achiziții. Te ajutăm să clarifici eligibilitatea, bugetul, documentele lipsă și pașii de pregătire.",
+      "inlineCtaTitle": "Solicită o consultanță gratuită pentru Apel 2",
+      "inlineCtaText": "Trimite datele firmei, codul CAEN, localitatea investiției și lista de achiziții. Verificăm rapid dacă proiectul merită pregătit și ce documente lipsesc înainte de depunere."
     },
     {
       "slug": "fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum",
