@@ -4,6 +4,28 @@ Site static pentru [atelierdeconsultanta.ro](https://atelierdeconsultanta.ro), g
 
 ---
 
+## IndexNow
+
+Site-ul foloseste IndexNow pentru notificarea motoarelor compatibile dupa publicarea continutului.
+
+### Generarea sau rotirea cheii
+
+1. Genereaza o cheie IndexNow din pagina Bing/IndexNow sau cu un generator UUID. Cheia trebuie sa aiba 8-128 caractere si poate contine litere, cifre si cratime.
+2. Pune cheia in fisierul `indexnow-key.txt` din radacina repo-ului. Fisierul trebuie sa contina doar cheia, in UTF-8.
+3. Dupa deploy, verifica public: `https://atelierdeconsultanta.ro/indexnow-key.txt`.
+4. Scriptul `tools/submit-indexnow.js` citeste cheia din `indexnow-key.txt` si trimite `keyLocation: https://atelierdeconsultanta.ro/indexnow-key.txt`.
+
+### Activarea submit-ului
+
+- `npm run deploy` si `npm run deploy:pages` ruleaza automat `npm run submit:indexnow` dupa upload.
+- `npm run submit:indexnow` trimite doar URL-urile noi, actualizate sau sterse fata de sitemap-ul din `HEAD~1`.
+- `npm run submit:indexnow:all` trimite toate URL-urile canonice din `sitemap.xml`; foloseste-l o singura data dupa prima activare sau dupa rotirea cheii.
+- Pentru verificare fara submit: `node tools/submit-indexnow.js --changed --dry-run`.
+
+Documentatie: https://www.indexnow.org/documentation si https://www.bing.com/indexnow/getstarted.
+
+---
+
 ## Administrarea caruselului de bannere
 
 Caruselul de pe homepage este controlat exclusiv prin fișierul **`banners.json`** din rădăcina repository-ului. Nu mai există slide-uri hardcodate în `index.html`.

@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /admin/
 Sitemap: https://atelierdeconsultanta.ro/sitemap.xml
+IndexNow: https://api.indexnow.org/

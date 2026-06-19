@@ -95,8 +95,8 @@ function validateOfficialGuidesHeaders(file, errors) {
   }
   const robots = rule.headers["x-robots-tag"] || "";
   const contentType = rule.headers["content-type"] || "";
-  if (!/\bnoindex\b/i.test(robots) || !/\bfollow\b/i.test(robots)) {
-    errors.push(`${file}:${rule.lineNumber} /official-guides.json must set X-Robots-Tag: noindex, follow`);
+  if (!/\bnoindex\b/i.test(robots) || !/\bnofollow\b/i.test(robots)) {
+    errors.push(`${file}:${rule.lineNumber} /official-guides.json must set X-Robots-Tag: noindex, nofollow`);
   }
   if (!/^application\/json\b/i.test(contentType)) {
     errors.push(`${file}:${rule.lineNumber} /official-guides.json must set Content-Type: application/json`);

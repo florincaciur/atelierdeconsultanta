@@ -33,16 +33,19 @@ jobs:
           echo "✅ Sitemap actualizat cu data: $TODAY"
 
       - name: Commit și push sitemap (doar dacă există modificări)
+        id: commit-sitemap
         run: |
           TODAY=$(date +%Y-%m-%d)
           git config --local user.email "action@github.com"
           git config --local user.name "FABER SEO Bot"
           git add sitemap.xml
           if git diff --staged --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
             echo "ℹ️  Sitemap deja actualizat la $TODAY — nicio modificare de publicat."
           else
             git commit -m "🤖 SEO: Actualizare sitemap lastmod → $TODAY [automated]"
             git push origin HEAD:main
+            echo "changed=true" >> "$GITHUB_OUTPUT"
             echo "✅ Sitemap actualizat și publicat pe main."
           fi
 
@@ -61,6 +64,11 @@ jobs:
           else
             echo "✅ Site-ul este live și funcțional"
           fi
+
+      - name: Submit IndexNow pentru URL-uri actualizate
+        if: steps.commit-sitemap.outputs.changed == 'true'
+        run: |
+          node tools/submit-indexnow.js --changed
 
   check-program-deadlines:
     name: Verifică termene programe finanțare
