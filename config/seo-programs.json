@@ -2217,13 +2217,16 @@
       "type": "program",
       "schemaType": "GovernmentService",
       "category": "Energie",
-      "title": "Energie regenerabilă 2026 | Fondul pentru Modernizare",
-      "description": "Pagina pentru capacități noi de energie regenerabilă prin Fondul pentru Modernizare: amplasament, racordare, soluție tehnică, avize și buget.",
-      "h1": "Fondul pentru Modernizare: capacități noi de energie regenerabilă",
-      "quickAnswer": "Aceasta este pagina aplicata pentru capacitati noi de energie regenerabila. Hubul Fondul de Modernizare ramane pagina-cadru pentru apeluri, iar pagina de fotovoltaice si autoconsum trateaza proiectele dimensionate prin consum propriu.",
+      "title": "Fondul pentru Modernizare 2026 | energie regenerabilă",
+      "description": "Fondul pentru Modernizare 2026: ghid pentru investitori în energie regenerabilă, cu eligibilitate, racordare, avize, buget și riscuri.",
+      "h1": "Fondul pentru Modernizare 2026 – Energie regenerabilă: Ghid pentru investitori",
+      "quickAnswer": "Fondul pentru Modernizare 2026 pentru energie regenerabila sustine investitiile in capacitati noi de producere a energiei electrice din surse regenerabile. Pentru firme, analiza incepe cu solicitantul, codul CAEN, amplasamentul, racordarea, solutia tehnica, documentele urbanistice, avizele, bugetul si cofinantarea. Stocarea se include doar daca este permisa de ghidul activ si justificata prin solutia tehnica. Ghidul oficial, anexele si calendarul apelului se publica de Ministerul Energiei, iar decizia de depunere trebuie luata numai dupa verificarea documentelor active.",
       "programName": "Fondul pentru Modernizare - energie regenerabilă",
       "policyContribution": "apelul susține noi capacitati de producere a energiei electrice din surse regenerabile și contribuie la obiectivele de tranzitie energetica.",
       "funding": "plafoanele, intensitatea și condițiile de selecție se confirma în ghidul apelului activ.",
+      "minWords": 900,
+      "minFaq": 6,
+      "hideFamilyCards": true,
       "audience": [
         "beneficiari care pregătesc capacitati noi de producție",
         "firme cu proiecte fotovoltaice sau regenerabile",
@@ -2286,20 +2289,28 @@
       ],
       "faq": [
         [
-          "Ce înseamnă capacitate noua de energie regenerabilă?",
-          "Înseamnă o investiție care adauga producție noua de energie din surse regenerabile, conform apelului activ."
+          "Ce finanțează Fondul pentru Modernizare pentru energie regenerabilă?",
+          "Finanțează investiții care cresc capacitatea de producție a energiei electrice din surse regenerabile, conform ghidului activ publicat de Ministerul Energiei."
         ],
         [
           "Ce documente tehnice sunt importante?",
-          "Sunt importante solutia tehnică, datele de amplasament, racordarea, avizele și ofertele."
+          "Sunt importante soluția tehnică, documentele de amplasament, PUZ-ul unde este cazul, studiile geotehnice, avizele, racordarea și ofertele."
         ],
         [
-          "Pot include stocare?",
-          "Stocarea se include doar dacă apelul activ o permite și dacă este justificata tehnic."
+          "Pot include stocare în proiect?",
+          "Stocarea este eligibilă doar dacă ghidul activ o permite expres și dacă este justificată prin soluția tehnică."
         ],
         [
           "Când trebuie verificat amplasamentul?",
-          "Înainte de buget și depunere, pentru ca amplasamentul poate bloca proiectul."
+          "Amplasamentul se verifică înainte de buget și depunere, deoarece terenul, urbanismul, mediul sau racordarea pot bloca proiectul."
+        ],
+        [
+          "Ce riscuri apar cel mai des?",
+          "Cele mai frecvente riscuri sunt amplasamentul nepotrivit, activele supradimensionate, racordarea incertă și cofinanțarea insuficientă."
+        ],
+        [
+          "Cum ajută consultanța?",
+          "Consultanța ordonează documentele, verifică riscurile tehnice, corelează bugetul cu ghidul și pregătește explicațiile pentru evaluare."
         ]
       ],
       "related": [
@@ -2310,10 +2321,10 @@
         "/contact"
       ],
       "sourceKeys": [
-        "fondul-modernizare"
+        "fondul-modernizare-regenerabile"
       ],
       "heroIcon": "ph-duotone ph-sun",
-      "officialGuideKey": "fondul-modernizare",
+      "officialGuideKey": "fondul-modernizare-regenerabile",
       "guideCtaLabel": "Ghid oficial",
       "contentSections": [
         {
@@ -2336,7 +2347,12 @@
             }
           ]
         }
-      ]
+      ],
+      "ctaText": "Programează o discuție despre Fondul pentru Modernizare",
+      "heroPrimaryCta": "Programează o discuție",
+      "finalCtaTitle": "Programează o discuție despre Fondul pentru Modernizare",
+      "finalPrimaryCta": "Programează o discuție despre Fondul pentru Modernizare",
+      "finalCtaText": "Trimite date despre firmă, cod CAEN, amplasament, putere instalată, racordare, soluție tehnică, avize și cofinanțare. Verificăm rapid riscurile majore."
     },
     {
       "slug": "afir-autoconsum-agroalimentar",

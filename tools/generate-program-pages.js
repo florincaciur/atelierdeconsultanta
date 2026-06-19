@@ -1043,6 +1043,118 @@ ${officialSourcesHtml}
       </section>`;
 }
 
+function renderFondModernizareRegenerabilaContent(page) {
+  const officialSourcesHtml = renderOfficialSources(page.sourceKeys, { id: `${page.slug}-official-sources` });
+  const faqHtml = faqsForPage(page)
+    .map(([question, answer]) => `<section class="faq-item"><h3>${esc(question)}</h3><p>${esc(answer)}</p></section>`)
+    .join("\n");
+
+  return `
+      <p class="intro">Fondul pentru Modernizare 2026 pentru energie regenerabil&#259; vizeaz&#259; cre&#537;terea capacit&#259;&#539;ii de produc&#539;ie a energiei electrice din surse regenerabile. Pentru investitori, pagina trebuie citit&#259; ca un filtru de preg&#259;tire: verifici solicitantul, codul CAEN, amplasamentul, racordarea, solu&#539;ia tehnic&#259; &#537;i cofinan&#539;area care pot sus&#539;ine un proiect bancabil. Ghidul oficial, anexele &#537;i calendarul apelului se public&#259; de Ministerul Energiei, iar regulile finale trebuie confirmate &#238;n documentele active.</p>
+
+      <section aria-labelledby="fm-eligibilitate-title">
+        <h2 id="fm-eligibilitate-title">Eligibilitate &#537;i condi&#539;ii</h2>
+        <p>Eligibilitatea porne&#537;te de la solicitant, activitatea economic&#259; &#537;i locul unde se construie&#537;te capacitatea nou&#259;. Un proiect poate avea tehnologie bun&#259;, dar s&#259; devin&#259; riscant dac&#259; terenul, racordarea sau dreptul de folosin&#539;&#259; nu sunt clare.</p>
+        <ul>
+          <li><strong>Tipul de solicitant:</strong> firma trebuie s&#259; se &#238;ncadreze &#238;n categoria de beneficiar permis&#259; de ghid, cu situa&#539;ii financiare, documente juridice &#537;i capacitate de implementare verificabile.</li>
+          <li><strong>Cod CAEN:</strong> activitatea finan&#539;at&#259; trebuie corelat&#259; cu certificatul constatator, modelul de afaceri, veniturile estimate &#537;i modul de valorificare a energiei.</li>
+          <li><strong>Amplasament:</strong> terenul sau acoperi&#537;ul trebuie s&#259; aib&#259; drept de folosin&#539;&#259; valabil, acces, posibilitate de autorizare, condi&#539;ii de mediu &#537;i o logic&#259; de racordare realist&#259;.</li>
+          <li><strong>Capacitate nou&#259;:</strong> investi&#539;ia trebuie s&#259; adauge produc&#539;ie nou&#259; din surse regenerabile, nu s&#259; acopere doar &#238;nlocuiri sau cheltuieli de exploatare curent&#259;.</li>
+          <li><strong>Stocare:</strong> bateriile sau alte solu&#539;ii de stocare se trateaz&#259; ca eligibile doar dac&#259; ghidul activ le permite expres &#537;i dac&#259; dimensionarea este justificat&#259; tehnic.</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="fm-valoare-title">
+        <h2 id="fm-valoare-title">Valoarea &#537;i intensitatea grantului</h2>
+        <p>Valoarea grantului, intensitatea sprijinului, pragurile de capacitate, costurile standard &#537;i regula de selec&#539;ie se confirm&#259; &#238;n ghidul activ al Ministerului Energiei. Pentru decizia de investi&#539;ie conteaz&#259; mai mult bugetul total dec&#226;t procentul nerambursabil afi&#537;at.</p>
+        <ul>
+          <li>separ&#259; costurile eligibile de TVA, costuri neeligibile, avize, taxe, proiectare, diferen&#539;e de curs &#537;i rezerve;</li>
+          <li>calculeaz&#259; contribu&#539;ia proprie &#537;i sursa finan&#539;&#259;rii pentru perioadele dintre achizi&#539;ii, cereri de plat&#259; &#537;i rambursare;</li>
+          <li>verific&#259; dac&#259; valoarea investi&#539;iei este propor&#539;ional&#259; cu puterea instalat&#259;, solu&#539;ia tehnic&#259;, racordarea &#537;i veniturile estimate;</li>
+          <li>trateaz&#259; separat costurile pentru produc&#539;ie, racordare, monitorizare, proiectare, consultan&#539;&#259; &#537;i, unde este permis, stocare;</li>
+          <li>nu porni achizi&#539;ii, comenzi sau lucr&#259;ri &#238;nainte de momentul permis de apel.</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="fm-etape-title">
+        <h2 id="fm-etape-title">Etapele proiectului</h2>
+        <p>Un proiect regenerabil trebuie preg&#259;tit &#238;n ordinea real&#259; a investi&#539;iei: idee, studiu, avize, racordare, execu&#539;ie &#537;i punere &#238;n func&#539;iune. Dac&#259; sari direct la lista de echipamente, ri&#537;ti s&#259; bugetezi active care nu pot fi autorizate sau racordate la timp.</p>
+        <div class="table-wrap">
+          <svg role="img" aria-labelledby="fm-flow-title fm-flow-desc" viewBox="0 0 960 210" width="100%" height="210">
+            <title id="fm-flow-title">Flux proiect Fondul pentru Modernizare energie regenerabil&#259;</title>
+            <desc id="fm-flow-desc">Flux cu cinci etape: Idee, Studiu, Avize, Racordare, Execu&#539;ie &#537;i punere &#238;n func&#539;iune.</desc>
+            <defs>
+              <marker id="fm-arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+                <path d="M0,0 L0,6 L9,3 z" fill="#0f766e"></path>
+              </marker>
+            </defs>
+            <g fill="#ecfdf5" stroke="#0f766e" stroke-width="2">
+              <rect x="28" y="58" width="132" height="80" rx="12"></rect>
+              <rect x="205" y="58" width="132" height="80" rx="12"></rect>
+              <rect x="382" y="58" width="132" height="80" rx="12"></rect>
+              <rect x="559" y="58" width="132" height="80" rx="12"></rect>
+              <rect x="736" y="58" width="170" height="80" rx="12"></rect>
+            </g>
+            <g stroke="#0f766e" stroke-width="3" marker-end="url(#fm-arrow)">
+              <line x1="170" y1="98" x2="195" y2="98"></line>
+              <line x1="347" y1="98" x2="372" y2="98"></line>
+              <line x1="524" y1="98" x2="549" y2="98"></line>
+              <line x1="701" y1="98" x2="726" y2="98"></line>
+            </g>
+            <g fill="#1a2540" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="700" text-anchor="middle">
+              <text x="94" y="104">Idee</text>
+              <text x="271" y="104">Studiu</text>
+              <text x="448" y="104">Avize</text>
+              <text x="625" y="104">Racordare</text>
+              <text x="821" y="93">Execu&#539;ie</text>
+              <text x="821" y="116">PIF</text>
+            </g>
+            <text x="28" y="172" fill="#334155" font-family="Inter, Arial, sans-serif" font-size="15">Stocarea se include doar dac&#259; este permis&#259; de ghid &#537;i sus&#539;inut&#259; de solu&#539;ia tehnic&#259;.</text>
+          </svg>
+        </div>
+        <ol>
+          <li><strong>Studiu:</strong> verifici resursa, puterea instalat&#259;, produc&#539;ia estimat&#259;, solu&#539;ia de amplasare &#537;i scenariul de valorificare a energiei.</li>
+          <li><strong>Avize:</strong> clarifici urbanismul, mediul, accesul, regimul terenului, acordurile necesare &#537;i eventualele limit&#259;ri locale.</li>
+          <li><strong>Racordare:</strong> verifici solu&#539;ia de racordare, capacitatea re&#539;elei, termenele operatorului &#537;i costurile asociate.</li>
+          <li><strong>Execu&#539;ie:</strong> planifici achizi&#539;iile, contractele, livrarea echipamentelor, lucr&#259;rile, testele &#537;i raportarea c&#259;tre finan&#539;ator.</li>
+          <li><strong>Punere &#238;n func&#539;iune:</strong> preg&#259;te&#537;ti recep&#539;ia, probele, autoriz&#259;rile finale, m&#259;surarea produc&#539;iei &#537;i obliga&#539;iile de monitorizare.</li>
+        </ol>
+      </section>
+
+      <section aria-labelledby="fm-cheltuieli-title">
+        <h2 id="fm-cheltuieli-title">Cheltuieli sensibile</h2>
+        <p>Cheltuielile sensibile sunt cele care pot bloca evaluarea dac&#259; nu au documente tehnice sau justificare economic&#259;. Pentru o prim&#259; analiz&#259;, preg&#259;te&#537;te cel pu&#539;in urm&#259;toarele piese:</p>
+        <ul>
+          <li>solu&#539;ie tehnic&#259; preliminar&#259;, inclusiv tehnologie, putere instalat&#259;, produc&#539;ie estimat&#259;, scheme &#537;i echipamente principale;</li>
+          <li>certificat de urbanism, PUZ sau alte documente urbanistice, dac&#259; amplasamentul le cere;</li>
+          <li>studii geotehnice, topografice, structurale sau de amplasament, mai ales pentru proiecte la sol sau acoperi&#537;uri cu risc structural;</li>
+          <li>documente pentru teren, cl&#259;dire, drept de folosin&#539;&#259;, acces, servitu&#539;i &#537;i eventuale acorduri ale proprietarilor;</li>
+          <li>documente de mediu, avize, acorduri sau analize necesare &#238;n func&#539;ie de localizare &#537;i tehnologie;</li>
+          <li>oferta de racordare, studiu de solu&#539;ie sau coresponden&#539;&#259; cu operatorul de distribu&#539;ie/transport;</li>
+          <li>oferte tehnice comparabile pentru echipamente, montaj, proiectare, monitorizare, mentenan&#539;&#259; &#537;i, dac&#259; ghidul permite, stocare.</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="fm-sfaturi-title">
+        <h2 id="fm-sfaturi-title">Sfaturi pentru succes</h2>
+        <p>Riscurile tipice sunt amplasamentul nepotrivit, activele supradimensionate &#537;i cofinan&#539;area incert&#259;. Un teren cu regim juridic neclar, o putere instalat&#259; care nu poate fi racordat&#259; sau un buget construit f&#259;r&#259; rezerv&#259; poate transforma un proiect promi&#539;&#259;tor &#238;ntr-un dosar greu de aprobat &#537;i implementat.</p>
+        <ul>
+          <li>confirm&#259; amplasamentul &#238;nainte de dimensionarea final&#259; a parcului sau instala&#539;iei;</li>
+          <li>dimensioneaz&#259; activele dup&#259; resurs&#259;, re&#539;ea, model de venit &#537;i termene, nu doar dup&#259; grantul maxim;</li>
+          <li>preg&#259;te&#537;te cofinan&#539;area, garan&#539;iile, TVA-ul &#537;i rezervele de pre&#539; &#238;nainte de depunere;</li>
+          <li>verific&#259; dac&#259; stocarea, monitorizarea, lucr&#259;rile conexe &#537;i costurile de racordare sunt permise explicit;</li>
+          <li>p&#259;streaz&#259; o trasabilitate clar&#259; &#238;ntre ghid, solu&#539;ia tehnic&#259;, devize, oferte, contracte &#537;i cererile de plat&#259;.</li>
+        </ul>
+        <p>Consultan&#539;a poate ajuta prin ordonarea documentelor, identificarea riscurilor tehnice, verificarea bugetului, corelarea amplasamentului cu racordarea &#537;i preg&#259;tirea explica&#539;iilor pentru evaluare. Rolul ei nu este s&#259; promit&#259; aprobarea, ci s&#259; reduc&#259; zonele neclare &#238;nainte s&#259; apar&#259; costuri mari.</p>
+      </section>
+
+${officialSourcesHtml}
+      <section aria-labelledby="fm-faq-title">
+        <h2 id="fm-faq-title">&#206;ntreb&#259;ri frecvente</h2>
+        ${faqHtml}
+      </section>`;
+}
+
 function renderPorAdrNordEstContent(page) {
   const officialSourcesHtml = renderOfficialSources(page.sourceKeys, { id: `${page.slug}-official-sources` });
   const faqHtml = faqsForPage(page)
@@ -2124,6 +2236,9 @@ function renderMainContent(page) {
   }
   if (page.slug === "pocidif-21") {
     return renderPocidif21Content(page);
+  }
+  if (page.slug === "fondul-modernizare-energie-regenerabila-2026") {
+    return renderFondModernizareRegenerabilaContent(page);
   }
   if (page.slug === "investitii-modernizarea-microintreprinderilor-apel-2") {
     return renderMicroApel2Content(page);
