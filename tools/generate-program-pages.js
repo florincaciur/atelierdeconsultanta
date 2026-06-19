@@ -976,19 +976,19 @@ function renderPocidif21Content(page) {
           <svg role="img" aria-labelledby="pocidif-grant-svg-title pocidif-grant-svg-desc" viewBox="0 0 920 250" width="100%" height="250">
             <title id="pocidif-grant-svg-title">Interval de grant &#537;i intensit&#259;&#539;i PoCIDIF 2.1</title>
             <desc id="pocidif-grant-svg-desc">Grafic cu granturi orientative &#238;ntre 500.000 &#537;i 3.000.000 euro, intensitate maxim&#259; orientativ&#259; de 75% pentru ajutor regional &#537;i 100% pentru minimis.</desc>
-            <rect x="52" y="62" width="560" height="30" rx="15" fill="#eef2ff"></rect>
-            <rect x="142" y="62" width="390" height="30" rx="15" fill="#2563eb"></rect>
+            <rect x="52" y="62" width="560" height="30" rx="15" fill="#f8f9fb"></rect>
+            <rect x="142" y="62" width="390" height="30" rx="15" fill="#b84716"></rect>
             <line x1="142" y1="48" x2="142" y2="112" stroke="#1a2540" stroke-width="2"></line>
             <line x1="532" y1="48" x2="532" y2="112" stroke="#1a2540" stroke-width="2"></line>
             <text x="52" y="38" fill="#1a2540" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">Grant orientativ</text>
             <text x="142" y="140" fill="#1a2540" font-family="Inter, Arial, sans-serif" font-size="16" text-anchor="middle">500.000 &#8364;</text>
             <text x="532" y="140" fill="#1a2540" font-family="Inter, Arial, sans-serif" font-size="16" text-anchor="middle">3.000.000 &#8364;</text>
-            <rect x="650" y="42" width="220" height="72" rx="16" fill="#eff6ff" stroke="#2563eb" stroke-width="2"></rect>
+            <rect x="650" y="42" width="220" height="72" rx="16" fill="#fff7ed" stroke="#b84716" stroke-width="2"></rect>
             <text x="760" y="72" fill="#1a2540" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" text-anchor="middle">Ajutor regional</text>
-            <text x="760" y="102" fill="#2563eb" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="800" text-anchor="middle">p&#226;n&#259; la 75%</text>
-            <rect x="650" y="136" width="220" height="72" rx="16" fill="#ecfdf5" stroke="#059669" stroke-width="2"></rect>
+            <text x="760" y="102" fill="#b84716" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="800" text-anchor="middle">p&#226;n&#259; la 75%</text>
+            <rect x="650" y="136" width="220" height="72" rx="16" fill="#f8f9fb" stroke="#1a2540" stroke-width="2"></rect>
             <text x="760" y="166" fill="#1a2540" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" text-anchor="middle">Minimis</text>
-            <text x="760" y="196" fill="#059669" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="800" text-anchor="middle">p&#226;n&#259; la 100%</text>
+            <text x="760" y="196" fill="#1a2540" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="800" text-anchor="middle">p&#226;n&#259; la 100%</text>
             <text x="52" y="205" fill="#334155" font-family="Inter, Arial, sans-serif" font-size="15">Valorile sunt orientative; bugetul final se verific&#259; &#238;n ghidul activ, anexele apelului &#537;i regulile de ajutor aplicabile.</text>
           </svg>
         </div>
@@ -1085,17 +1085,17 @@ function renderFondModernizareRegenerabilaContent(page) {
             <desc id="fm-flow-desc">Flux cu cinci etape: Idee, Studiu, Avize, Racordare, Execu&#539;ie &#537;i punere &#238;n func&#539;iune.</desc>
             <defs>
               <marker id="fm-arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
-                <path d="M0,0 L0,6 L9,3 z" fill="#0f766e"></path>
+                <path d="M0,0 L0,6 L9,3 z" fill="#b84716"></path>
               </marker>
             </defs>
-            <g fill="#ecfdf5" stroke="#0f766e" stroke-width="2">
+            <g fill="#fff7ed" stroke="#b84716" stroke-width="2">
               <rect x="28" y="58" width="132" height="80" rx="12"></rect>
               <rect x="205" y="58" width="132" height="80" rx="12"></rect>
               <rect x="382" y="58" width="132" height="80" rx="12"></rect>
               <rect x="559" y="58" width="132" height="80" rx="12"></rect>
               <rect x="736" y="58" width="170" height="80" rx="12"></rect>
             </g>
-            <g stroke="#0f766e" stroke-width="3" marker-end="url(#fm-arrow)">
+            <g stroke="#b84716" stroke-width="3" marker-end="url(#fm-arrow)">
               <line x1="170" y1="98" x2="195" y2="98"></line>
               <line x1="347" y1="98" x2="372" y2="98"></line>
               <line x1="524" y1="98" x2="549" y2="98"></line>
@@ -1151,6 +1151,141 @@ function renderFondModernizareRegenerabilaContent(page) {
 ${officialSourcesHtml}
       <section aria-labelledby="fm-faq-title">
         <h2 id="fm-faq-title">&#206;ntreb&#259;ri frecvente</h2>
+        ${faqHtml}
+      </section>`;
+}
+
+function renderAfirAutoconsumAgroalimentarContent(page) {
+  const officialSourcesHtml = renderOfficialSources(page.sourceKeys, { id: `${page.slug}-official-sources` });
+  const faqHtml = faqsForPage(page)
+    .map(([question, answer]) => `<section class="faq-item"><h3>${esc(question)}</h3><p>${esc(answer)}</p></section>`)
+    .join("\n");
+
+  return `
+      <header class="article-lead">
+        <p class="intro">AFIR Autoconsum Agroalimentar este o schem&#259; de finan&#539;are pentru investi&#539;ii fotovoltaice dedicate autoconsumului &#238;n ferme, unit&#259;&#539;i de procesare agroalimentar&#259; &#537;i organiza&#539;ii eligibile din sector. Programul ajut&#259; beneficiarul s&#259; produc&#259; energie pentru activitatea proprie, s&#259; reduc&#259; presiunea costurilor energetice &#537;i s&#259; preg&#259;teasc&#259; investi&#539;ii mai predictibile. Valorile maxime, intensitatea sprijinului, calendarul &#537;i lista final&#259; a documentelor se confirm&#259; &#238;n ghidul activ publicat de AFIR/MADR.</p>
+      </header>
+
+      <section aria-labelledby="afir-beneficiari-title">
+        <h2 id="afir-beneficiari-title">Beneficiari eligibili</h2>
+        <p>Primul filtru este leg&#259;tura real&#259; dintre solicitant, activitatea agroalimentar&#259; &#537;i consumul de energie. Codurile CAEN, punctul de lucru &#537;i documentele financiare trebuie s&#259; sus&#539;in&#259; investi&#539;ia propus&#259;.</p>
+        <h3>Categorii de solicitan&#539;i eligibili</h3>
+        <ul>
+          <li>ferme &#537;i &#238;ntreprinderi din sectorul agricol, legal constituite;</li>
+          <li>procesatori agroalimentari care pot documenta activitatea &#537;i consumul propriu;</li>
+          <li>cooperative agricole sau forme asociative eligibile, dac&#259; sunt permise de ghid;</li>
+          <li>organiza&#539;ii din domeniul &#238;mbun&#259;t&#259;&#539;irilor funciare, c&#226;nd apelul le include;</li>
+          <li>beneficiari cu activit&#259;&#539;i &#537;i coduri CAEN relevante, autorizate &#537;i corelate cu investi&#539;ia.</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="afir-cheltuieli-title">
+        <h2 id="afir-cheltuieli-title">Cheltuieli eligibile</h2>
+        <p>Cheltuielile trebuie s&#259; contribuie direct la realizarea unei capacit&#259;&#539;i noi de producere a energiei pentru autoconsum. Bugetul se construie&#537;te dup&#259; consum, amplasament, racordare &#537;i regulile apelului, nu dup&#259; valoarea maxim&#259; posibil&#259;.</p>
+        <ul>
+          <li>panouri fotovoltaice &#537;i echipamente de producere a energiei solare;</li>
+          <li>invertoare, structuri de montaj, cabluri, tablouri &#537;i echipamente de protec&#539;ie;</li>
+          <li>sisteme de monitorizare, control &#537;i m&#259;surare a produc&#539;iei;</li>
+          <li>instala&#539;ii de stocare, doar dac&#259; ghidul activ le permite &#537;i sunt legate de produc&#539;ia nou&#259;;</li>
+          <li>lucr&#259;ri de montaj, punere &#238;n func&#539;iune, proiectare &#537;i componente auxiliare permise;</li>
+          <li>servicii tehnice sau documenta&#539;ii cerute pentru depunere, &#238;n limitele prev&#259;zute de apel.</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="afir-valoare-title">
+        <h2 id="afir-valoare-title">Valoarea &#537;i intensitatea finan&#539;&#259;rii</h2>
+        <p>Conform comunicatului AFIR consultat, schema men&#539;ioneaz&#259; finan&#539;are pentru producerea energiei solare, cu limit&#259; de p&#226;n&#259; la 20 milioane euro per beneficiar. Valorile orientative indicate sunt de 650.000 euro/MW pentru capacit&#259;&#539;i instalate mai mici sau egale cu 1 MW &#537;i 550.000 euro/MW pentru capacit&#259;&#539;i instalate mai mari de 1 MW. Aceste cifre trebuie verificate &#238;n apelul activ, deoarece ghidul, anexele sau clarific&#259;rile pot modifica detaliile de aplicare.</p>
+        <div class="table-wrap">
+          <table class="program-table">
+            <thead><tr><th>Capacitate instalat&#259;</th><th>Valoare orientativ&#259;</th><th>Observa&#539;ie</th></tr></thead>
+            <tbody>
+              <tr><td>p&#226;n&#259; la 1 MW inclusiv</td><td>650.000 euro/MW</td><td>se verific&#259; &#238;n ghidul activ</td></tr>
+              <tr><td>peste 1 MW</td><td>550.000 euro/MW</td><td>se verific&#259; &#238;n ghidul activ</td></tr>
+              <tr><td>plafon beneficiar</td><td>20 milioane euro</td><td>limit&#259; orientativ&#259; comunicat&#259; de AFIR</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section aria-labelledby="afir-conditii-title">
+        <h2 id="afir-conditii-title">Condi&#539;ii &#537;i documente</h2>
+        <p>Un dosar bun arat&#259; de ce investi&#539;ia este necesar&#259;, unde se instaleaz&#259;, ce consum acoper&#259; &#537;i cum va fi implementat&#259;. Lipsa documentelor de baz&#259; poate bloca proiectul chiar dac&#259; ideea tehnic&#259; este solid&#259;.</p>
+        <h3>Documente de consum &#537;i activitate</h3>
+        <ul>
+          <li>facturi, profil de consum sau alte date care justific&#259; dimensionarea sistemului;</li>
+          <li>certificat constatator, coduri CAEN relevante &#537;i autoriz&#259;ri pentru activitatea finan&#539;at&#259;;</li>
+          <li>documente financiare care arat&#259; capacitatea de implementare &#537;i cofinan&#539;are.</li>
+        </ul>
+        <h3>Documente pentru amplasament &#537;i solu&#539;ie tehnic&#259;</h3>
+        <ul>
+          <li>drept de proprietate, folosin&#539;&#259;, concesiune sau alt document acceptat pentru loca&#539;ie;</li>
+          <li>analiza acoperi&#537;ului sau terenului, inclusiv restric&#539;ii tehnice, urbanistice ori de mediu;</li>
+          <li>solu&#539;ie tehnic&#259;, ofert&#259;, racordare, avize &#537;i calendar realist de implementare;</li>
+          <li>buget defalcat pe echipamente, montaj, documenta&#539;ii, servicii &#537;i cheltuieli neeligibile.</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="afir-pasi-title">
+        <h2 id="afir-pasi-title">Pa&#537;i de preg&#259;tire</h2>
+        <ol>
+          <li><strong>Verificarea activit&#259;&#539;ii:</strong> confirm&#259; sectorul, forma juridic&#259;, codurile CAEN &#537;i leg&#259;tura investi&#539;iei cu activitatea agroalimentar&#259;.</li>
+          <li><strong>Colectarea consumului:</strong> str&#226;nge facturi, date de consum, puncte de consum &#537;i informa&#539;ii despre sezonalitate.</li>
+          <li><strong>Alegerea amplasamentului:</strong> verific&#259; terenul sau acoperi&#537;ul, dreptul de folosin&#539;&#259;, structura, accesul &#537;i eventualele restric&#539;ii.</li>
+          <li><strong>Ob&#539;inerea ofertei tehnice:</strong> cere solu&#539;ie fotovoltaic&#259;, putere instalat&#259;, estimare de produc&#539;ie, stocare unde este permis&#259; &#537;i date de racordare.</li>
+          <li><strong>Preg&#259;tirea cererii:</strong> coreleaz&#259; cererea de finan&#539;are cu bugetul, ofertele, documentele juridice, avizele &#537;i calendarul.</li>
+          <li><strong>Implementarea:</strong> urm&#259;re&#537;te achizi&#539;iile, contractele, livrarea, montajul, recep&#539;ia, cererile de plat&#259; &#537;i raportarea final&#259;.</li>
+        </ol>
+      </section>
+
+      <section aria-labelledby="afir-riscuri-title">
+        <h2 id="afir-riscuri-title">Riscuri &#537;i cheltuieli neeligibile</h2>
+        <h3>Riscuri frecvente</h3>
+        <ul>
+          <li>supradimensionarea capacit&#259;&#539;ii fa&#539;&#259; de consumul justificat;</li>
+          <li>achizi&#539;ii, comenzi sau lucr&#259;ri pornite &#238;nainte de momentul permis;</li>
+          <li>amplasament f&#259;r&#259; drept de folosin&#539;&#259; clar sau cu probleme tehnice;</li>
+          <li>lipsa avizelor, a racord&#259;rii sau a documentelor de urbanism necesare;</li>
+          <li>buget construit pe oferte generale, f&#259;r&#259; explica&#539;ie pentru fiecare echipament.</li>
+        </ul>
+        <h3>Cheltuieli care trebuie verificate atent</h3>
+        <ul>
+          <li>costuri opera&#539;ionale, mentenan&#539;&#259; curent&#259; sau servicii f&#259;r&#259; leg&#259;tur&#259; cu proiectul;</li>
+          <li>active necorelate cu producerea energiei pentru autoconsum;</li>
+          <li>stocare f&#259;r&#259; sistem de producere sau f&#259;r&#259; justificare tehnic&#259;;</li>
+          <li>lucr&#259;ri neautorizate sau cheltuieli care nu apar &#238;n lista permis&#259; de ghid;</li>
+          <li>diferen&#539;e de pre&#539;, TVA sau rezerve care trebuie acoperite separat dac&#259; nu sunt eligibile.</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="afir-servicii-title">
+        <h2 id="afir-servicii-title">Cum te putem ajuta</h2>
+        <p>Rolul consultan&#539;ei este s&#259; clarifice eligibilitatea, s&#259; reduc&#259; riscurile de documentare &#537;i s&#259; preg&#259;teasc&#259; un dosar coerent cu ghidul activ. Nu promitem aprobare, dar putem verifica rapid dac&#259; proiectul are bazele necesare pentru depunere.</p>
+        <div class="grid">
+          <section aria-labelledby="afir-serviciu-cerere">
+            <h3 id="afir-serviciu-cerere">Cererea de finan&#539;are</h3>
+            <p>Structur&#259;m descrierea proiectului, bugetul, justificarea autoconsumului, anexele &#537;i r&#259;spunsurile la cerin&#539;ele ghidului.</p>
+          </section>
+          <section aria-labelledby="afir-serviciu-implementare">
+            <h3 id="afir-serviciu-implementare">Implementare</h3>
+            <p>Preg&#259;tim trasabilitatea dintre cerere, achizi&#539;ii, contracte, facturi, recep&#539;ie, cereri de plat&#259; &#537;i raportare.</p>
+          </section>
+          <section aria-labelledby="afir-serviciu-proiectare">
+            <h3 id="afir-serviciu-proiectare">Proiectare</h3>
+            <p>Verific&#259;m dac&#259; solu&#539;ia tehnic&#259;, amplasamentul, racordarea, stocarea &#537;i avizele sunt coerente cu ghidul.</p>
+          </section>
+          <section aria-labelledby="afir-serviciu-consultanta">
+            <h3 id="afir-serviciu-consultanta">Consultan&#539;&#259;</h3>
+            <p>Analiz&#259;m solicitantul, codurile CAEN, consumul, cofinan&#539;area, documentele critice &#537;i riscurile de eligibilitate.</p>
+          </section>
+        </div>
+        <p><a class="btn btn-primary" href="/contact" aria-label="Solicit&#259; consultan&#539;&#259; gratuit&#259; pentru AFIR Autoconsum Agroalimentar">Solicit&#259; consultan&#539;&#259; gratuit&#259;</a></p>
+      </section>
+
+${officialSourcesHtml}
+      <p class="source-note">Data verific&#259;rii sursei AFIR: 19 iunie 2026. Valorile &#537;i condi&#539;iile finale trebuie confirmate &#238;n ghidul activ, anexele apelului &#537;i eventualele clarific&#259;ri publicate de finan&#539;ator.</p>
+
+      <section aria-labelledby="afir-faq-title">
+        <h2 id="afir-faq-title">&#206;ntreb&#259;ri frecvente</h2>
         ${faqHtml}
       </section>`;
 }
@@ -2239,6 +2374,9 @@ function renderMainContent(page) {
   }
   if (page.slug === "fondul-modernizare-energie-regenerabila-2026") {
     return renderFondModernizareRegenerabilaContent(page);
+  }
+  if (page.slug === "afir-autoconsum-agroalimentar") {
+    return renderAfirAutoconsumAgroalimentarContent(page);
   }
   if (page.slug === "investitii-modernizarea-microintreprinderilor-apel-2") {
     return renderMicroApel2Content(page);

@@ -2360,45 +2360,49 @@
       "type": "program",
       "schemaType": "GovernmentService",
       "category": "AFIR energie",
-      "title": "AFIR autoconsum agroalimentar | energie",
-      "description": "AFIR autoconsum agroalimentar: beneficiari agricoli și alimentari, punct de producție, consum istoric, amplasament, avize, CAEN și stocare.",
-      "h1": "AFIR autoconsum agroalimentar",
-      "quickAnswer": "Programul se analizează pentru beneficiari din agricultură sau industria alimentară care pot justifica producția de energie pentru autoconsum. Verificarea include punctul de producție, punctul de consum, consumul istoric, amplasamentul, avizele, capacitatea, stocarea, CAEN-ul și legătura cu activitatea agroalimentară.",
+      "title": "AFIR autoconsum agroalimentar | panouri fotovoltaice și fonduri AFIR",
+      "description": "AFIR autoconsum agroalimentar: fonduri AFIR pentru panouri fotovoltaice în ferme și procesare, cu eligibilitate, valori pe MW și documente.",
+      "h1": "AFIR Autoconsum Agroalimentar – energie regenerabilă pentru ferme și procesatori",
+      "quickAnswer": "AFIR Autoconsum Agroalimentar susține investiții fotovoltaice pentru autoconsum în ferme, procesare agroalimentară și organizații eligibile din sector. Scopul este reducerea costurilor cu energia prin capacități noi de producere a energiei solare, cu sau fără stocare, dimensionate după consumul real. Valorile maxime, intensitatea și calendarul se confirmă în ghidul activ și în comunicările AFIR/MADR.",
       "programName": "AFIR Autoconsum Agroalimentar",
       "policyContribution": "schema susține reducerea costurilor energetice și cresterea utilizarii energiei regenerabile în lantul agroalimentar.",
-      "funding": "valorile maxime și intensitatea se confirma în apelul activ.",
+      "funding": "schema poate ajunge până la 20 milioane euro per beneficiar, cu valori orientative de 650.000 euro/MW pentru capacități instalate mai mici sau egale cu 1 MW și 550.000 euro/MW pentru capacități peste 1 MW, conform comunicatului AFIR consultat; cifrele se confirmă în apelul activ.",
+      "minWords": 900,
+      "minFaq": 6,
+      "hideFamilyCards": true,
       "audience": [
         "ferme și procesatori agroalimentari",
-        "beneficiari cu consum energetic documentabil",
-        "proiecte de fotovoltaice pentru autoconsum"
+        "cooperative agricole și întreprinderi din sectorul agroalimentar",
+        "organizații din domeniul îmbunătățirilor funciare, dacă sunt eligibile în ghid",
+        "beneficiari cu consum energetic documentabil și amplasament clar"
       ],
       "eligibility": [
-        "activitate eligibila în sectorul agroalimentar",
-        "consum și amplasament justificabile",
-        "drept de folosință asupra locatiei",
-        "solutie tehnică permisa",
-        "documente fiscale și juridice clare"
+        "activitate eligibilă în sectorul agricol sau al industriei alimentare",
+        "coduri CAEN relevante și autorizate pentru investiția propusă",
+        "consum istoric și punct de consum documentabile",
+        "drept de folosință asupra amplasamentului",
+        "soluție tehnică fotovoltaică dimensionată pentru autoconsum"
       ],
       "mandatory": [
         "facturi sau date de consum",
-        "documente amplasament",
-        "ofertă tehnică",
-        "avize după caz",
-        "buget și calendar"
+        "documente pentru amplasament și drept de folosință",
+        "certificat constatator și coduri CAEN",
+        "soluție tehnică, avize și racordare",
+        "buget, oferte și calendar de implementare"
       ],
       "eligibleExpenses": [
         "panouri fotovoltaice",
-        "invertoare, structuri și cabluri",
-        "sisteme de monitorizare",
-        "proiectare și montaj",
-        "componente auxiliare permise"
+        "invertoare, structuri, cabluri și echipamente de protecție",
+        "sisteme de monitorizare și control",
+        "instalații de stocare, dacă sunt permise de ghid",
+        "proiectare, montaj, punere în funcțiune și componente auxiliare permise"
       ],
       "ineligibleExpenses": [
-        "capacitate supradimensionata fără justificare",
-        "costuri operationale",
-        "achiziții înainte de momentul permis",
-        "lucrari fără avize",
-        "cheltuieli nepermise de apel"
+        "capacitate supradimensionată față de consumul justificat",
+        "costuri operaționale sau mentenanță curentă",
+        "achiziții începute înainte de momentul permis",
+        "lucrări fără avize, autorizații sau drept de amplasament",
+        "cheltuieli nepermise ori necorelate cu autoconsumul agroalimentar"
       ],
       "scoring": [
         "relevanta activitatii",
@@ -2408,12 +2412,12 @@
         "capacitate de implementare"
       ],
       "steps": [
-        "verifică activitatea",
-        "colecteaza consumul",
-        "alege amplasamentul",
-        "obține ofertă tehnică",
-        "pregătește cererea",
-        "implementeaza și raporteaza"
+        "verifică activitatea și codurile CAEN",
+        "colectează consumul istoric",
+        "alege amplasamentul și verifică dreptul de folosință",
+        "obține oferta tehnică și soluția de racordare",
+        "pregătește cererea de finanțare",
+        "implementează, recepționează și raportează proiectul"
       ],
       "evaluation": [
         "conformitate",
@@ -2429,20 +2433,28 @@
       ],
       "faq": [
         [
-          "Cine poate aplica?",
-          "Aplicarea depinde de incadrarea beneficiarului în sectorul și apelul eligibil."
+          "Cine poate aplica la AFIR Autoconsum Agroalimentar?",
+          "Pot aplica beneficiarii din sectorul agricol sau al industriei alimentare care se încadrează în ghid, au activități relevante și pot documenta consumul."
         ],
         [
-          "Ce înseamnă autoconsum?",
-          "Autoconsumul înseamnă folosirea energiei produse pentru nevoile proprii ale beneficiarului."
+          "Ce înseamnă autoconsum pentru o fermă sau un procesator?",
+          "Autoconsumul înseamnă folosirea energiei produse de sistemul fotovoltaic pentru activitatea proprie, pe baza consumului și a punctului de consum documentat."
         ],
         [
-          "De ce conteaza facturile?",
-          "Facturile susțin dimensionarea sistemului și justificarea investiției."
+          "Care este valoarea maximă orientativă?",
+          "Comunicarea AFIR indică o limită de 20 milioane euro per beneficiar, cu valori pe MW diferite în funcție de capacitate; ghidul activ rămâne sursa finală."
         ],
         [
-          "Pot depune fără solutie tehnică?",
-          "Nu este recomandat. Solutia tehnică este necesara pentru buget și eligibilitate."
+          "Sunt eligibile bateriile de stocare?",
+          "Stocarea poate fi inclusă doar dacă ghidul activ o permite și dacă este legată de capacitatea nouă de producere a energiei."
+        ],
+        [
+          "Ce documente sunt sensibile?",
+          "Sunt sensibile documentele de consum, dreptul asupra amplasamentului, codurile CAEN, soluția tehnică, racordarea, avizele și ofertele."
+        ],
+        [
+          "Ce riscuri apar cel mai des?",
+          "Cele mai frecvente riscuri sunt supradimensionarea capacității, achizițiile premature, lipsa avizelor și costurile care nu susțin autoconsumul."
         ]
       ],
       "related": [
@@ -2457,7 +2469,9 @@
       "heroIcon": "ph-duotone ph-sun",
       "officialGuideKey": "afir-autoconsum",
       "guideCtaLabel": "Ghid oficial",
-      "finalCtaText": "Trimite CAEN-ul, consumul istoric, punctul de consum, amplasamentul și soluția tehnică propusă pentru verificarea autoconsumului.",
+      "finalCtaTitle": "Solicită consultanță gratuită pentru AFIR Autoconsum Agroalimentar",
+      "finalPrimaryCta": "Solicită consultanță gratuită",
+      "finalCtaText": "Trimite CAEN-ul, consumul istoric, punctul de consum, amplasamentul și soluția tehnică propusă. Verificăm rapid eligibilitatea, documentele critice și riscurile de depunere.",
       "contentSections": [
         {
           "title": "Autoconsum, nu proiect energetic generic",
@@ -2466,8 +2480,7 @@
           ]
         }
       ],
-      "heroPrimaryCta": "Verifică eligibilitatea",
-      "finalPrimaryCta": "Trimite datele proiectului",
+      "heroPrimaryCta": "Solicită consultanță gratuită",
       "inlineCtaTitle": "Ce poți trimite pentru verificare",
       "inlineCtaText": "Trimite CAEN-ul, consumul istoric, punctul de consum, amplasamentul și soluția tehnică propusă pentru verificarea autoconsumului.",
       "decisionClose": "Dacă documentele, bugetul sau condițiile nu se potrivesc, proiectul se ajustează înainte de depunere. Regulile finale se confirmă în ghidul activ, anexele apelului și sursele oficiale."

@@ -1,6 +1,6 @@
 # Fonduri regionale - surse oficiale folosite
 
-Data verificarii: 2026-06-02
+Data verificarii: 2026-06-19
 
 Scop: pagina `/fonduri-regionale` foloseste doar surse oficiale pentru informatiile factuale despre regiunile de dezvoltare, ADR-uri si programe regionale.
 
@@ -12,6 +12,7 @@ Scop: pagina `/fonduri-regionale` foloseste doar surse oficiale pentru informati
 | Director ADR | Inforegio - Contact ADR | https://inforegio.ro/ro/contact-adr | validarea institutiilor ADR si a domeniilor oficiale |
 | Nord-Est, judete | ADR Nord-Est - Organizare administrativ-teritoriala | https://www.adrnordest.ro/regiunea-nord-est/organizare-administrativ-teritoriala/ | lista judetelor Nord-Est si pagina copil regionala |
 | Program Regional Nord-Est | Inforegio Nord-Est / ADR Nord-Est | https://www.inforegionordest.ro/pr-2021-2027 | rol ADR Nord-Est si pagina dedicata programului |
+| Portal oficial Regio Nord-Est | Regio Nord-Est 2021-2027 | https://regionordest.ro/ | linkul "Program oficial" din harta interactiva pentru Nord-Est |
 | Program Regional Sud-Est | Regio Sud-Est | https://www.regiosudest.ro/documente/programul-regional-sud-est-2021-2027 | link oficial program regional |
 | Program Regional Sud-Muntenia | ADR Sud-Muntenia | https://2021-2027.adrmuntenia.ro/ | link oficial program regional |
 | Program Regional Sud-Vest Oltenia | ADR Sud-Vest Oltenia | https://www.adroltenia.ro/category/programul-regional-sud-vest-oltenia-2021-2027/ | link oficial program regional |
