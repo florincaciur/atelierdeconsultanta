@@ -12,7 +12,7 @@
 
 - URL-urile cu slash final, `.html` si `/index.html` sunt aliasuri istorice sau variante generate de structura statica; ele trebuie sa ramana 301 catre forma curata.
 - Unele URL-uri raportate de GSC sunt pagini canonice reale si trebuie sa raspunda 200 direct, cu self-canonical si prezenta in sitemap.
-- `/official-guides.json` este o resursa tehnica folosita de JavaScript, nu o pagina destinata indexarii; trebuie sa ramana 200, dar cu `X-Robots-Tag: noindex, follow`.
+- `/official-guides.json` este o resursa tehnica folosita de JavaScript, nu o pagina destinata indexarii; trebuie sa ramana 200, dar cu `X-Robots-Tag: noindex, nofollow`.
 - Query-urile istorice `/blog?post=blog-1`, `/blog?post=blog-2` si `/blog?post=blog-3` sunt variante alternative ale hubului `/blog`; sitemap-ul si linkurile interne SEO raman pe URL-ul curat.
 - Pentru rutele locale consolidate, cum sunt Iasi/Bacau/Suceava, redirectul catre `/fonduri-europene-nord-est` este intentionat si nu trebuie transformat in 200 fara continut local distinct.
 
@@ -65,14 +65,14 @@
 
 ## Resurse tehnice noindex
 
-- https://atelierdeconsultanta.ro/official-guides.json ramane 200 direct, noindex, follow
+- https://atelierdeconsultanta.ro/official-guides.json ramane 200 direct, noindex, nofollow
 
 ## Modificari tehnice verificate
 
 - Sitemap-ul contine numai URL-uri curate, fara query string, fara `.html`, fara `/index.html`, fara slash final si fara resurse JSON.
 - Canonicalele declarate pentru paginile HTML auditate sunt absolute si corespund URL-ului final.
 - `_redirects` pastreaza un singur hop pentru aliasurile auditate catre destinatia canonica.
-- `_headers` pastreaza regula pentru `/official-guides.json`: `Content-Type: application/json; charset=utf-8` si `X-Robots-Tag: noindex, follow`.
+- `_headers` pastreaza regula pentru `/official-guides.json`: `Content-Type: application/json; charset=utf-8` si `X-Robots-Tag: noindex, nofollow`.
 - Linkurile interne normale catre aliasurile auditate sunt eliminate sau raman zero in matrice.
 
 ## Teste executate
@@ -149,7 +149,7 @@ Local pass rows: 39
 | https://atelierdeconsultanta.ro/cat-costa-consultanta-fonduri-europene | 200 direct | 200 direct | https://atelierdeconsultanta.ro/cat-costa-consultanta-fonduri-europene [200] | https://atelierdeconsultanta.ro/cat-costa-consultanta-fonduri-europene | https://atelierdeconsultanta.ro/cat-costa-consultanta-fonduri-europene | index, follow |  | yes | 13 | pagina canonica indexabila | Confirmat 200 direct, self-canonical, indexabil si prezent in sitemap cand este pagina HTML. | PASS_CANONICAL_200 |
 | https://atelierdeconsultanta.ro/cum-alegi-consultant-fonduri-europene | 200 direct | 200 direct | https://atelierdeconsultanta.ro/cum-alegi-consultant-fonduri-europene [200] | https://atelierdeconsultanta.ro/cum-alegi-consultant-fonduri-europene | https://atelierdeconsultanta.ro/cum-alegi-consultant-fonduri-europene | index, follow |  | yes | 11 | pagina canonica indexabila | Confirmat 200 direct, self-canonical, indexabil si prezent in sitemap cand este pagina HTML. | PASS_CANONICAL_200 |
 | https://atelierdeconsultanta.ro/pro-infra | 200 direct | 200 direct | https://atelierdeconsultanta.ro/pro-infra [200] | https://atelierdeconsultanta.ro/pro-infra | https://atelierdeconsultanta.ro/pro-infra | index, follow |  | yes | 31 | pagina canonica indexabila | Confirmat 200 direct, self-canonical, indexabil si prezent in sitemap cand este pagina HTML. | PASS_CANONICAL_200 |
-| https://atelierdeconsultanta.ro/official-guides.json | 200 direct | 200 direct | https://atelierdeconsultanta.ro/official-guides.json [200] | https://atelierdeconsultanta.ro/official-guides.json |  |  | noindex, follow | no | 3 | resursa tehnica neindexabila | Pastrat 200 ca JSON si marcat noindex, follow prin _headers; exclus din sitemap. | PASS_TECHNICAL_NOINDEX |
+| https://atelierdeconsultanta.ro/official-guides.json | 200 direct | 200 direct | https://atelierdeconsultanta.ro/official-guides.json [200] | https://atelierdeconsultanta.ro/official-guides.json |  |  | noindex, nofollow | no | 3 | resursa tehnica neindexabila | Pastrat 200 ca JSON si marcat noindex, nofollow prin _headers; exclus din sitemap. | PASS_TECHNICAL_NOINDEX |
 | https://atelierdeconsultanta.ro/blog?post=blog-1 | 200 direct | 200 direct | https://atelierdeconsultanta.ro/blog?post=blog-1 [200] | https://atelierdeconsultanta.ro/blog?post=blog-1 | https://atelierdeconsultanta.ro/blog | index, follow |  | no | 0 | pagina alternativa | Pastrat ca varianta query alternativa a hubului /blog; exclus din sitemap si curatat client-side pentru blog-1/2/3. | PASS_ALTERNATE_CANONICAL |
 | https://atelierdeconsultanta.ro/blog?post=blog-2 | 200 direct | 200 direct | https://atelierdeconsultanta.ro/blog?post=blog-2 [200] | https://atelierdeconsultanta.ro/blog?post=blog-2 | https://atelierdeconsultanta.ro/blog | index, follow |  | no | 0 | pagina alternativa | Pastrat ca varianta query alternativa a hubului /blog; exclus din sitemap si curatat client-side pentru blog-1/2/3. | PASS_ALTERNATE_CANONICAL |
 | https://atelierdeconsultanta.ro/blog?post=blog-3 | 200 direct | 200 direct | https://atelierdeconsultanta.ro/blog?post=blog-3 [200] | https://atelierdeconsultanta.ro/blog?post=blog-3 | https://atelierdeconsultanta.ro/blog | index, follow |  | no | 0 | pagina alternativa | Pastrat ca varianta query alternativa a hubului /blog; exclus din sitemap si curatat client-side pentru blog-1/2/3. | PASS_ALTERNATE_CANONICAL |

@@ -110,24 +110,24 @@ function renderHubDesignCards(page) {
 }
 
 const related = {
-  contact: ["/contact/", "Solicită evaluare gratuită"],
-  consultanta: ["/consultanta-fonduri-europene/", "Consultanță fonduri europene"],
-  fonduri: ["/fonduri-europene/", "Fonduri europene"],
-  nerambursabile: ["/fonduri-nerambursabile/", "Finanțări nerambursabile"],
-  eligibilitate: ["/eligibilitate-fonduri-europene/", "Eligibilitate fonduri europene"],
-  calendar: ["/calendar-fonduri-europene/", "Calendar fonduri europene"],
-  ghiduri: ["/ghiduri/", "Ghiduri fonduri europene"],
-  afir: ["/afir/", "AFIR"],
-  consultantaAfir: ["/consultanta-afir/", "Consultanță AFIR"],
-  agricultura: ["/fonduri-europene-agricultura/", "Fonduri europene agricultură"],
-  pnrr: ["/pnrr/", "PNRR"],
-  digitalizare: ["/fonduri-europene-digitalizare/", "Fonduri pentru digitalizare"],
-  startup: ["/start-up-nation-2026/", "Start-Up Nation 2026"],
-  imm: ["/fonduri-europene-imm/", "Fonduri europene IMM"],
-  nordest: ["/fonduri-europene-nord-est/", "Fonduri europene Nord-Est"],
-  caseStudies: ["/studii-de-caz-fonduri-europene/", "Studii de caz fonduri europene"],
-  femei: ["/fonduri-europene-femei-antreprenor/", "Fonduri pentru femei antreprenor"],
-  intrebari: ["/intrebari-frecvente/", "Întrebări frecvente"],
+  contact: ["/contact", "Solicită evaluare gratuită"],
+  consultanta: ["/consultanta-fonduri-europene", "Consultanță fonduri europene"],
+  fonduri: ["/fonduri-europene", "Fonduri europene"],
+  nerambursabile: ["/fonduri-nerambursabile", "Finanțări nerambursabile"],
+  eligibilitate: ["/eligibilitate-fonduri-europene", "Eligibilitate fonduri europene"],
+  calendar: ["/calendar-fonduri-europene", "Calendar fonduri europene"],
+  ghiduri: ["/ghiduri", "Ghiduri fonduri europene"],
+  afir: ["/afir", "AFIR"],
+  consultantaAfir: ["/consultanta-afir", "Consultanță AFIR"],
+  agricultura: ["/fonduri-europene-agricultura", "Fonduri europene agricultură"],
+  pnrr: ["/pnrr", "PNRR"],
+  digitalizare: ["/fonduri-europene-digitalizare", "Fonduri pentru digitalizare"],
+  startup: ["/start-up-nation-2026", "Start-Up Nation 2026"],
+  imm: ["/fonduri-europene-imm", "Fonduri europene IMM"],
+  nordest: ["/fonduri-europene-nord-est", "Fonduri europene Nord-Est"],
+  caseStudies: ["/studii-de-caz-fonduri-europene", "Studii de caz fonduri europene"],
+  femei: ["/fonduri-europene-femei-antreprenor", "Fonduri pentru femei antreprenor"],
+  intrebari: ["/intrebari-frecvente", "Întrebări frecvente"],
 };
 
 const pages = [
@@ -165,7 +165,7 @@ const pages = [
     audience: ["IMM-uri care vor ERP, CRM, automatizare, cloud sau securitate cibernetică", "firme care trebuie să conecteze investiția la procese reale", "antreprenori care vor să evite liste de echipamente fără justificare"],
     checks: ["nevoia reală de digitalizare și procesele afectate", "compatibilitatea cheltuielilor cu ghidul activ", "capacitatea de implementare și raportare în termen"],
     steps: ["descrie fluxurile actuale ale firmei", "separă software-ul, hardware-ul și serviciile eligibile", "verifică indicatorii ceruți de program", "pregătește ofertele și justificarea tehnică"],
-    links: [related.digitalizare, ["/digitalizare-imm-pnrr/", "Digitalizare IMM / PNRR"], ["/pnrr-digitalizare-imm-cheltuieli-eligibile.html", "Cheltuieli eligibile PNRR"], ["/consultanta-pnrr-digitalizare/", "Consultanță PNRR digitalizare"], related.contact],
+    links: [related.digitalizare, ["/digitalizare-imm-pnrr", "Digitalizare IMM / PNRR"], ["/pnrr-digitalizare-imm-cheltuieli-eligibile", "Cheltuieli eligibile PNRR"], ["/consultanta-pnrr-digitalizare", "Consultanță PNRR digitalizare"], related.contact],
   },
   {
     slug: "afir",
@@ -189,7 +189,7 @@ const pages = [
     audience: ["viitori antreprenori care vor să testeze eligibilitatea ideii", "persoane care pregătesc codul CAEN, bugetul și locurile de muncă", "firme noi care vor să evite cheltuieli greu de justificat"],
     checks: ["condițiile solicitantului și forma juridică", "codul CAEN și autorizațiile necesare", "bugetul, contribuția proprie și cheltuielile eligibile"],
     steps: ["alege ideea de afacere și codul CAEN", "verifică lista de cheltuieli eligibile", "construiește bugetul și planul de afaceri", "pregătește documentele înainte de deschiderea apelului"],
-    links: [["/start-up-nation-2026", "Start-Up Nation 2026"], ["/start-up-nation-2026-conditii/", "Condiții Start-Up Nation"], ["/start-up-nation-2026-cheltuieli-eligibile/", "Cheltuieli eligibile"], ["/consultanta-start-up-nation/", "Consultanță Start-Up Nation"], related.contact],
+    links: [["/start-up-nation-2026", "Start-Up Nation 2026"], ["/start-up-nation-2026-conditii", "Condiții Start-Up Nation"], ["/start-up-nation-2026-cheltuieli-eligibile", "Cheltuieli eligibile"], ["/consultanta-start-up-nation", "Consultanță Start-Up Nation"], related.contact],
   },
   {
     slug: "fonduri-europene-imm",
@@ -213,7 +213,7 @@ const pages = [
     audience: ["tineri fermieri", "ferme mici sau ferme aflate în dezvoltare", "beneficiari care pregătesc utilaje, construcții agricole sau energie pentru fermă"],
     checks: ["Standard Output, suprafețe și efective", "acte de proprietate sau folosință", "încadrarea investiției în ghidul activ"],
     steps: ["calculează SO", "pregătește documentele exploatației", "alege investițiile compatibile", "verifică punctajul și riscurile de eligibilitate"],
-    links: [related.afir, related.consultantaAfir, ["/fonduri-pentru-ferme/", "Fonduri pentru ferme"], ["/fonduri-pentru-utilaje-agricole/", "Fonduri pentru utilaje agricole"], ["/calculator-soc", "Calculator SO"]],
+    links: [related.afir, related.consultantaAfir, ["/fonduri-pentru-ferme", "Fonduri pentru ferme"], ["/fonduri-pentru-utilaje-agricole", "Fonduri pentru utilaje agricole"], ["/calculator-soc", "Calculator SO"]],
   },
   {
     slug: "fonduri-europene-digitalizare",
@@ -225,7 +225,7 @@ const pages = [
     audience: ["IMM-uri care vor software de gestiune sau automatizare", "firme care pregătesc investiții în cloud, securitate sau echipamente IT", "beneficiari care au nevoie să justifice transformarea digitală"],
     checks: ["nevoia de business și indicatorii digitali", "eligibilitatea software-ului, hardware-ului și serviciilor", "ofertele și specificațiile tehnice"],
     steps: ["cartografiază procesele actuale", "definește rezultatul digital urmărit", "verifică ghidul și cheltuielile eligibile", "pregătește dosarul cu justificări clare"],
-    links: [related.pnrr, ["/digitalizare-imm", "Digitalizare IMM"], ["/digitalizare-imm-pnrr/", "Digitalizare IMM / PNRR"], ["/granturi-digitalizare-imm/", "Granturi digitalizare IMM"], ["/consultanta-pnrr-digitalizare/", "Consultanță PNRR digitalizare"]],
+    links: [related.pnrr, ["/digitalizare-imm", "Digitalizare IMM"], ["/digitalizare-imm-pnrr", "Digitalizare IMM / PNRR"], ["/granturi-digitalizare-imm", "Granturi digitalizare IMM"], ["/consultanta-pnrr-digitalizare", "Consultanță PNRR digitalizare"]],
   },
   {
     slug: "fonduri-europene-femei-antreprenor",
@@ -237,7 +237,7 @@ const pages = [
     audience: ["firme cu acționariat majoritar feminin", "antreprenoare care pregătesc investiții sau extindere", "beneficiare care vor să compare programul dedicat cu alte finanțări pentru IMM-uri"],
     checks: ["structura acționariatului și istoricul firmei", "codul CAEN și investiția eligibilă", "documentele contabile și bugetul proiectului"],
     steps: ["verifică eligibilitatea firmei", "clarifică ideea de investiție", "pregătește bugetul și documentele", "compară programul cu alte finanțări IMM"],
-    links: [["/femeia-antreprenor-2026", "Femeia Antreprenor 2026"], ["/femeia-antreprenor-2026-conditii-idei-afaceri.html", "Condiții și idei de afaceri"], related.imm, related.consultanta, related.contact],
+    links: [["/femeia-antreprenor-2026", "Femeia Antreprenor 2026"], ["/femeia-antreprenor-2026-conditii-idei-afaceri", "Condiții și idei de afaceri"], related.imm, related.consultanta, related.contact],
   },
   {
     slug: "calendar-fonduri-europene",
@@ -310,7 +310,7 @@ const pages = [
     audience: ["persoane care vor să înființeze o firmă", "antreprenori care pregătesc dosarul", "beneficiari care trebuie să confirme condițiile înainte de aplicare"],
     checks: ["vârsta sau categoria solicitantului, dacă ghidul o cere", "firma, capitalul social și codul CAEN", "obligațiile privind locurile de muncă și implementarea"],
     steps: ["verifică solicitantul", "alege codul CAEN", "testează investiția în buget", "pregătește documentele firmei"],
-    links: [related.startup, ["/start-up-nation-2026", "Program Start-Up Nation 2026"], ["/start-up-nation-2026-cheltuieli-eligibile/", "Cheltuieli eligibile"], ["/consultanta-start-up-nation/", "Consultanță Start-Up Nation"]],
+    links: [related.startup, ["/start-up-nation-2026", "Program Start-Up Nation 2026"], ["/start-up-nation-2026-cheltuieli-eligibile", "Cheltuieli eligibile"], ["/consultanta-start-up-nation", "Consultanță Start-Up Nation"]],
   },
   {
     slug: "start-up-nation-2026-cheltuieli-eligibile",
@@ -322,7 +322,7 @@ const pages = [
     audience: ["antreprenori care construiesc bugetul", "firme care compară oferte", "beneficiari care vor să evite cheltuieli greu de justificat"],
     checks: ["legătura dintre cheltuială și activitatea firmei", "plafoanele, procentul nerambursabil și contribuția proprie", "documentele de achiziție și ofertele"],
     steps: ["listează investițiile necesare", "separă eligibilul de neeligibil", "cere oferte comparabile", "verifică bugetul cu un consultant"],
-    links: [related.startup, ["/start-up-nation-2026-plan-de-afaceri/", "Plan de afaceri"], ["/start-up-nation-2026-idei-afaceri/", "Idei de afaceri"], related.contact],
+    links: [related.startup, ["/start-up-nation-2026-plan-de-afaceri", "Plan de afaceri"], ["/start-up-nation-2026-idei-afaceri", "Idei de afaceri"], related.contact],
   },
   {
     slug: "start-up-nation-2026-idei-afaceri",
@@ -334,7 +334,7 @@ const pages = [
     audience: ["persoane care aleg între mai multe idei", "antreprenori care caută codul CAEN potrivit", "beneficiari care vor să evite proiectele greu de implementat"],
     checks: ["cererea reală din piață", "autorizațiile și locația", "echipamentele, furnizorii și calendarul de implementare"],
     steps: ["notează 2-3 idei posibile", "verifică autorizarea", "estimează bugetul", "alege varianta care poate fi justificată în plan"],
-    links: [[ "/start-up-nation-2026-idei-afaceri-plan.html", "Articol idei și plan" ], related.startup, ["/start-up-nation-2026-conditii/", "Condiții"], ["/consultanta-start-up-nation/", "Consultanță"]],
+    links: [[ "/start-up-nation-2026-idei-afaceri-plan", "Articol idei și plan" ], related.startup, ["/start-up-nation-2026-conditii", "Condiții"], ["/consultanta-start-up-nation", "Consultanță"]],
   },
   {
     slug: "start-up-nation-2026-plan-de-afaceri",
@@ -346,7 +346,7 @@ const pages = [
     audience: ["antreprenori care pregătesc documentația", "persoane care au deja o idee și vor un buget coerent", "firme noi care trebuie să explice fluxul de activitate"],
     checks: ["descrierea activității și piața", "bugetul și ofertele", "indicatorii, locurile de muncă și calendarul"],
     steps: ["scrie modelul de business", "corelează investițiile cu veniturile estimate", "pregătește documentele suport", "revizuiește riscurile de implementare"],
-    links: [related.startup, ["/start-up-nation-2026-cheltuieli-eligibile/", "Cheltuieli eligibile"], ["/consultanta-start-up-nation/", "Consultanță Start-Up Nation"], related.contact],
+    links: [related.startup, ["/start-up-nation-2026-cheltuieli-eligibile", "Cheltuieli eligibile"], ["/consultanta-start-up-nation", "Consultanță Start-Up Nation"], related.contact],
   },
   {
     slug: "consultanta-start-up-nation",
@@ -358,7 +358,7 @@ const pages = [
     audience: ["viitori antreprenori care vor să aplice", "persoane care nu știu dacă ideea lor este potrivită", "firme noi care au nevoie de un plan de afaceri coerent"],
     checks: ["eligibilitatea solicitantului", "codul CAEN și documentele firmei", "bugetul, ofertele și contribuția proprie"],
     steps: ["transmiți datele proiectului", "verificăm eligibilitatea", "stabilim documentele lipsă", "pregătim structura dosarului"],
-    links: [related.startup, ["/start-up-nation-2026-conditii/", "Condiții"], ["/start-up-nation-2026-plan-de-afaceri/", "Plan de afaceri"], related.contact],
+    links: [related.startup, ["/start-up-nation-2026-conditii", "Condiții"], ["/start-up-nation-2026-plan-de-afaceri", "Plan de afaceri"], related.contact],
   },
   {
     slug: "consultanta-afir",
@@ -370,7 +370,7 @@ const pages = [
     audience: ["tineri fermieri", "ferme mici și ferme în dezvoltare", "beneficiari care pregătesc utilaje, construcții sau energie"],
     checks: ["SO, suprafețe, animale și forma juridică", "dreptul de folosință și documentele exploatației", "investiția, ofertele și punctajul"],
     steps: ["calculăm dimensiunea exploatației", "verificăm documentele", "alegem programul potrivit", "pregătim pașii pentru dosar"],
-    links: [related.afir, ["/dr12-afir", "DR 12 AFIR"], ["/dr14", "DR 14 AFIR"], ["/fonduri-pentru-ferme/", "Fonduri pentru ferme"], related.contact],
+    links: [related.afir, ["/dr12-afir", "DR 12 AFIR"], ["/dr14", "DR 14 AFIR"], ["/fonduri-pentru-ferme", "Fonduri pentru ferme"], related.contact],
   },
   {
     slug: "fonduri-pentru-ferme",
@@ -382,7 +382,7 @@ const pages = [
     audience: ["ferme mici", "tineri fermieri", "exploatații care pregătesc investiții în utilaje sau infrastructură"],
     checks: ["dimensiunea economică", "documentele privind terenurile și animalele", "investiția propusă și calendarul de implementare"],
     steps: ["calculează SO", "alege programul potrivit", "pregătește documentele fermei", "verifică investiția și ofertele"],
-    links: [related.afir, related.consultantaAfir, ["/fonduri-pentru-utilaje-agricole/", "Utilaje agricole"], ["/calculator-soc", "Calculator SO"], related.contact],
+    links: [related.afir, related.consultantaAfir, ["/fonduri-pentru-utilaje-agricole", "Utilaje agricole"], ["/calculator-soc", "Calculator SO"], related.contact],
   },
   {
     slug: "fonduri-pentru-utilaje-agricole",
@@ -394,7 +394,7 @@ const pages = [
     audience: ["fermieri care vor tractoare, echipamente sau tehnologii agricole", "ferme care compară oferte", "beneficiari care pregătesc un buget AFIR"],
     checks: ["capacitatea utilajului raportată la exploatație", "eligibilitatea cheltuielii în ghid", "ofertele, specificațiile și necesitatea investiției"],
     steps: ["descrie lucrările fermei", "alege echipamentele proporționale", "cere oferte comparabile", "verifică bugetul înainte de depunere"],
-    links: [related.agricultura, related.afir, related.consultantaAfir, ["/fonduri-pentru-ferme/", "Fonduri pentru ferme"], related.contact],
+    links: [related.agricultura, related.afir, related.consultantaAfir, ["/fonduri-pentru-ferme", "Fonduri pentru ferme"], related.contact],
   },
   {
     slug: "granturi-digitalizare-imm",
@@ -406,7 +406,7 @@ const pages = [
     audience: ["IMM-uri care pregătesc ERP, CRM sau automatizare", "firme care vor securitate cibernetică sau cloud", "antreprenori care au nevoie de justificare tehnică"],
     checks: ["procesele digitalizate", "cheltuielile eligibile", "indicatorii și documentele tehnice"],
     steps: ["definește problema operațională", "alege soluțiile compatibile", "pregătește ofertele", "verifică indicatorii ceruți"],
-    links: [related.digitalizare, related.pnrr, ["/digitalizare-imm", "Digitalizare IMM"], ["/consultanta-pnrr-digitalizare/", "Consultanță PNRR"], related.contact],
+    links: [related.digitalizare, related.pnrr, ["/digitalizare-imm", "Digitalizare IMM"], ["/consultanta-pnrr-digitalizare", "Consultanță PNRR"], related.contact],
   },
   {
     slug: "consultanta-pnrr-digitalizare",
@@ -418,7 +418,7 @@ const pages = [
     audience: ["IMM-uri care vor să aplice pe digitalizare", "firme cu investiții în software sau automatizare", "beneficiari care trebuie să clarifice indicatorii"],
     checks: ["eligibilitatea firmei", "cheltuielile și indicatorii", "ofertele și documentele tehnice"],
     steps: ["analizăm procesele firmei", "verificăm cheltuielile", "structurăm bugetul", "pregătim documentele pentru dosar"],
-    links: [related.pnrr, related.digitalizare, ["/pnrr-digitalizare-imm-cheltuieli-eligibile.html", "Cheltuieli eligibile"], related.contact],
+    links: [related.pnrr, related.digitalizare, ["/pnrr-digitalizare-imm-cheltuieli-eligibile", "Cheltuieli eligibile"], related.contact],
   },
   {
     slug: "finantari-panouri-fotovoltaice",
@@ -430,7 +430,7 @@ const pages = [
     audience: ["ferme și procesatori agroalimentari", "instituții publice", "firme interesate de autoconsum și eficiență energetică"],
     checks: ["consumul energetic și dimensionarea", "locația, avizele și soluția tehnică", "programul potrivit pentru tipul solicitantului"],
     steps: ["analizează consumul", "alege programul compatibil", "pregătește documentele tehnice", "verifică bugetul și termenele"],
-    links: [["/fondul-de-modernizare/", "Fondul de Modernizare"], ["/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum.html", "Energie și autoconsum"], ["/afir-autoconsum-agroalimentar", "AFIR Autoconsum Agroalimentar"], ["/autoconsum-public-fotovoltaice-institutii-publice", "Autoconsum instituții publice"], related.contact],
+    links: [["/fondul-de-modernizare", "Fondul de Modernizare"], ["/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum", "Energie și autoconsum"], ["/afir-autoconsum-agroalimentar", "AFIR Autoconsum Agroalimentar"], ["/autoconsum-public-fotovoltaice-institutii-publice", "Autoconsum instituții publice"], related.contact],
   },
   {
     slug: "cum-alegi-consultant-fonduri-europene",
@@ -442,7 +442,7 @@ const pages = [
     audience: ["antreprenori care caută consultanță pentru prima dată", "firme care au avut dosare respinse", "beneficiari care vor o colaborare clară"],
     checks: ["modul în care se verifică eligibilitatea", "transparența privind documentele și responsabilitățile", "evitarea promisiunilor absolute de aprobare"],
     steps: ["cere o evaluare inițială", "verifică ce include serviciul", "clarifică termenele și documentele", "păstrează deciziile importante în scris"],
-    links: [related.consultanta, ["/firma-consultanta-fonduri-europene/", "Firmă consultanță fonduri europene"], ["/cat-costa-consultanta-fonduri-europene/", "Cost consultanță"], related.contact],
+    links: [related.consultanta, ["/firma-consultanta-fonduri-europene", "Firmă consultanță fonduri europene"], ["/cat-costa-consultanta-fonduri-europene", "Cost consultanță"], related.contact],
   },
   {
     slug: "cat-costa-consultanta-fonduri-europene",
@@ -454,7 +454,7 @@ const pages = [
     audience: ["firme care compară oferte de consultanță", "antreprenori care vor să înțeleagă etapele serviciului", "beneficiari care pregătesc bugetul proiectului"],
     checks: ["ce include evaluarea inițială", "ce include pregătirea dosarului", "dacă implementarea și raportarea sunt incluse separat"],
     steps: ["descrie proiectul", "transmite datele firmei", "clarifică programul și documentele", "solicită o ofertă adaptată proiectului"],
-    links: [related.consultanta, ["/cum-alegi-consultant-fonduri-europene/", "Cum alegi consultantul"], ["/eligibilitate-fonduri-europene/", "Eligibilitate"], related.contact],
+    links: [related.consultanta, ["/cum-alegi-consultant-fonduri-europene", "Cum alegi consultantul"], ["/eligibilitate-fonduri-europene", "Eligibilitate"], related.contact],
   },
   {
     slug: "firma-consultanta-fonduri-europene",
@@ -490,7 +490,7 @@ const pages = [
     audience: ["beneficiari la prima aplicare", "firme care au fost respinse anterior", "echipe care pregătesc documente sub presiunea termenului"],
     checks: ["eligibilitatea solicitantului", "cheltuielile și bugetul", "documentele, avizele și termenele"],
     steps: ["verifică programul înainte de buget", "nu comanda echipamente înainte de eligibilitate", "actualizează documentele", "cere o revizuire independentă"],
-    links: [related.eligibilitate, related.ghiduri, related.consultanta, ["/cum-alegi-programul-potrivit-fonduri-europene-2026.html", "Cum alegi programul"], related.contact],
+    links: [related.eligibilitate, related.ghiduri, related.consultanta, ["/cum-alegi-programul-potrivit-fonduri-europene-2026", "Cum alegi programul"], related.contact],
   },
 ];
 
@@ -607,10 +607,10 @@ ${CLARITY_TRACKING_CODE}
   ${page.internalNote ? `<!-- ${page.internalNote} -->\n  ` : ""}<nav class="navbar" aria-label="Navigare principală">
     ${brandLogoLink()}
     <div class="navbar-links">
-      <a href="${cleanHref("/fonduri-europene/")}">Fonduri europene</a>
-      <a href="${cleanHref("/ghiduri/")}">Ghiduri</a>
+      <a href="${cleanHref("/fonduri-europene")}">Fonduri europene</a>
+      <a href="${cleanHref("/ghiduri")}">Ghiduri</a>
       <a href="${cleanHref("/blog")}">Blog</a>
-      <a class="nav-cta btn-primary" href="${cleanHref("/contact/")}">Evaluare gratuită</a>
+      <a class="nav-cta btn-primary" href="${cleanHref("/contact")}">Evaluare gratuită</a>
     </div>
   </nav>
   ${renderBreadcrumb(breadcrumbItemsForPage(page))}
@@ -620,8 +620,8 @@ ${CLARITY_TRACKING_CODE}
     <h1>${esc(page.h1)}</h1>
     <p>${esc(page.summary)}</p>
     <div class="hero-actions">
-      <a class="btn btn-primary" href="${cleanHref("/contact/")}">Solicită evaluare gratuită</a>
-      <a class="btn btn-secondary" href="${cleanHref("/consultanta-fonduri-europene/")}">Vezi serviciile de consultanță</a>
+      <a class="btn btn-primary" href="${cleanHref("/contact")}">Solicită evaluare gratuită</a>
+      <a class="btn btn-secondary" href="${cleanHref("/consultanta-fonduri-europene")}">Vezi serviciile de consultanță</a>
     </div>
     ${renderHubHeroSummary(page)}
   </header>
@@ -653,12 +653,12 @@ ${CLARITY_TRACKING_CODE}
       <h2>Cum poate ajuta Atelier de Consultanță</h2>
       <p>Putem verifica eligibilitatea proiectului, documentele disponibile, bugetul estimat și programul potrivit, fără promisiuni absolute privind aprobarea finanțării.</p>
       <div class="cta-actions">
-        <a class="btn btn-primary" href="${cleanHref("/contact/")}">Verifică eligibilitatea proiectului</a>
-        <a class="btn btn-secondary" href="${cleanHref("/consultanta-fonduri-europene/")}">Consultanță fonduri europene</a>
+        <a class="btn btn-primary" href="${cleanHref("/contact")}">Verifică eligibilitatea proiectului</a>
+        <a class="btn btn-secondary" href="${cleanHref("/consultanta-fonduri-europene")}">Consultanță fonduri europene</a>
       </div>
     </section>
   </main>
-  <footer class="footer">© 2026 FABER - Atelier de Consultanță · <a href="${cleanHref("/fonduri-europene/")}">Fonduri europene</a> · <a href="${cleanHref("/contact/")}">Contact</a></footer>
+  <footer class="footer">© 2026 FABER - Atelier de Consultanță · <a href="${cleanHref("/fonduri-europene")}">Fonduri europene</a> · <a href="${cleanHref("/contact")}">Contact</a></footer>
 </body>
 </html>
 `;
@@ -674,38 +674,38 @@ for (const page of pagesToGenerate) {
 
 const existing = [
   ["/", "1.0"],
-  ["/consultanta-fonduri-europene/", "0.9"],
-  ["/verificare-eligibilitate-fonduri-europene/", "0.8"],
-  ["/fonduri-europene-nerambursabile-2026/", "0.9"],
+  ["/consultanta-fonduri-europene", "0.9"],
+  ["/verificare-eligibilitate-fonduri-europene", "0.8"],
+  ["/fonduri-europene-nerambursabile-2026", "0.9"],
   ["/dr12-afir", "0.9"],
   ["/dr14", "0.9"],
-  ["/dr-14-afir-conditii-eligibilitate-greseli-frecvente.html", "0.7"],
+  ["/dr-14-afir-conditii-eligibilitate-greseli-frecvente", "0.7"],
   ["/start-up-nation-2026", "0.9"],
   ["/femeia-antreprenor-2026", "0.9"],
   ["/digitalizare-imm", "0.9"],
-  ["/digitalizare-imm-pnrr/", "0.8"],
-  ["/fondul-de-modernizare/", "0.8"],
+  ["/digitalizare-imm-pnrr", "0.8"],
+  ["/fondul-de-modernizare", "0.8"],
   ["/afir-autoconsum-agroalimentar", "0.8"],
   ["/autoconsum-public-fotovoltaice-institutii-publice", "0.8"],
   ["/por-adr-nord-est", "0.8"],
   ["/fonduri-europene-nord-est", "0.8"],
   ["/pro-infra", "0.8"],
   ["/calculator-soc", "0.8"],
-  ["/contact/", "0.8"],
+  ["/contact", "0.8"],
   ["/blog", "0.8"],
-  ["/cum-alegi-programul-potrivit-fonduri-europene-2026.html", "0.7"],
+  ["/cum-alegi-programul-potrivit-fonduri-europene-2026", "0.7"],
   ["/acte-necesare-fonduri-europene-nerambursabile", "0.7"],
-  ["/dr-12-afir-instalarea-tinerilor-fermieri.html", "0.7"],
-  ["/cod-caen-start-up-nation-2026/", "0.7"],
-  ["/consultanta-start-up-nation-2026/", "0.8"],
-  ["/start-up-nation-2026-idei-afaceri-plan.html", "0.7"],
-  ["/femeia-antreprenor-2026-conditii-idei-afaceri.html", "0.7"],
-  ["/pnrr-digitalizare-imm-cheltuieli-eligibile.html", "0.7"],
-  ["/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum.html", "0.7"],
-  ["/blog-afir-fotovoltaice-ferme-2026.html", "0.5"],
-  ["/gdpr.html", "0.3"],
-  ["/politica-de-confidentialitate.html", "0.3"],
-  ["/termeni-si-conditii.html", "0.3"],
+  ["/dr-12-afir-instalarea-tinerilor-fermieri", "0.7"],
+  ["/cod-caen-start-up-nation-2026", "0.7"],
+  ["/consultanta-start-up-nation-2026", "0.8"],
+  ["/start-up-nation-2026-idei-afaceri-plan", "0.7"],
+  ["/femeia-antreprenor-2026-conditii-idei-afaceri", "0.7"],
+  ["/pnrr-digitalizare-imm-cheltuieli-eligibile", "0.7"],
+  ["/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum", "0.7"],
+  ["/blog-afir-fotovoltaice-ferme-2026", "0.5"],
+  ["/gdpr", "0.3"],
+  ["/politica-de-confidentialitate", "0.3"],
+  ["/termeni-si-conditii", "0.3"],
 ];
 
 const hubUrls = pagesToGenerate.map((page) => [`/${page.slug}`, page.slug.includes("consultanta") || page.slug.includes("fonduri-europene") || ["pnrr", "afir", "start-up-nation"].includes(page.slug) ? "0.8" : "0.7"]);

@@ -169,6 +169,31 @@ function containsDynamicToken(value) {
   return String(value || "").includes("*") || /(^|[^A-Za-z0-9_-]):[A-Za-z][A-Za-z0-9_-]*/.test(String(value || ""));
 }
 
+function compileRedirectPattern(pattern) {
+  const names = [];
+  const escaped = String(pattern)
+    .replace(/[|\\{}()[\]^$+?.]/g, "\\$&")
+    .replace(/\*/g, ".*")
+    .replace(/:([A-Za-z][A-Za-z0-9_]*)/g, (_, name) => {
+      names.push(name);
+      return "([^/]+)";
+    });
+  return { regex: new RegExp(`^${escaped}$`), names };
+}
+
+function redirectDestination(redirect, pathname) {
+  if (redirect.from === pathname) return redirect.to;
+  if (!containsDynamicToken(redirect.from)) return "";
+  if (!redirect.compiled) redirect.compiled = compileRedirectPattern(redirect.from);
+  const match = pathname.match(redirect.compiled.regex);
+  if (!match) return "";
+  let destination = redirect.to;
+  redirect.compiled.names.forEach((name, index) => {
+    destination = destination.replace(new RegExp(`:${name}\\b`, "g"), match[index + 1]);
+  });
+  return destination;
+}
+
 const files = trackedFiles();
 const links = files.flatMap((file) => extractLinks(file, read(file)));
 const missingTargets = [];
@@ -206,7 +231,13 @@ for (const slug of PROGRAM_ROUTES) {
     (redirect) => redirect.from === cleanRoute && redirect.to === fileRoute && redirect.status.startsWith("200")
   );
   const hasHtmlRedirect = redirects.some(
-    (redirect) => redirect.from === fileRoute && redirect.to === cleanRoute && redirect.status.startsWith("301")
+    (redirect) => {
+      if (!redirect.status.startsWith("301")) return false;
+      const destination = redirectDestination(redirect, fileRoute);
+      if (!destination) return false;
+      const target = normalizeTarget(destination, "_redirects");
+      return target?.route === cleanRoute;
+    }
   );
   const hasHtmlAsset = fs.existsSync(path.join(ROOT, `${slug}.html`));
   const hasDirectoryAsset = fs.existsSync(path.join(ROOT, slug, "index.html"));
@@ -217,9 +248,11 @@ for (const slug of PROGRAM_ROUTES) {
 }
 
 const dr14BadRedirect = redirects.find(
-  (redirect) =>
-    ["/dr14.html", "/dr14-afir.html", "/dr-14-afir.html"].includes(redirect.from) &&
-    redirect.to !== "/dr14"
+  (redirect) => {
+    if (!["/dr14.html", "/dr14-afir.html", "/dr-14-afir.html"].includes(redirect.from)) return false;
+    const target = normalizeTarget(redirect.to, "_redirects");
+    return target?.route !== "/dr14";
+  }
 );
 
 console.log("Functional link audit");

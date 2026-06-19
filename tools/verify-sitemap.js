@@ -9,6 +9,7 @@ const SITEMAP_PATH = path.join(ROOT, "sitemap.xml");
 const ROBOTS_PATH = path.join(ROOT, "robots.txt");
 const LLMS_PATH = path.join(ROOT, "llms.txt");
 const REDIRECTS_PATH = path.join(ROOT, "_redirects");
+const HEADERS_PATH = path.join(ROOT, "_headers");
 const {
   SITE,
   canonicalUrl,
@@ -106,6 +107,42 @@ function isRedirectSource(pathname, redirectRules) {
   ));
 }
 
+function parseHeaderRules() {
+  if (!fs.existsSync(HEADERS_PATH)) return [];
+  const rules = [];
+  let current = null;
+  for (const line of fs.readFileSync(HEADERS_PATH, "utf8").split(/\r?\n/)) {
+    if (!line.trim()) continue;
+    if (!/^\s/.test(line)) {
+      current = { pattern: line.trim(), headers: {} };
+      rules.push(current);
+      continue;
+    }
+    if (!current) continue;
+    const [name, ...rest] = line.trim().split(":");
+    current.headers[name.toLowerCase()] = rest.join(":").trim();
+  }
+  return rules;
+}
+
+function headerPatternToRegex(pattern) {
+  const escaped = String(pattern)
+    .replace(/[|\\{}()[\]^$+?.]/g, "\\$&")
+    .replace(/\*/g, ".*");
+  return new RegExp(`^${escaped}$`);
+}
+
+function headerRuleMatches(pattern, pathname) {
+  return pattern === pathname || (pattern.includes("*") && headerPatternToRegex(pattern).test(pathname));
+}
+
+function hasNoindexHeader(pathname, headerRules) {
+  return headerRules.some((rule) => (
+    headerRuleMatches(rule.pattern, pathname) &&
+    /\bnoindex\b/i.test(rule.headers["x-robots-tag"] || "")
+  ));
+}
+
 function extractCanonical(html) {
   const linkMatches = html.matchAll(/<link\b[^>]*>/gi);
   for (const match of linkMatches) {
@@ -177,7 +214,7 @@ function llmsUrls() {
     .filter(Boolean);
 }
 
-function expectedUrls(redirectRules) {
+function expectedUrls(redirectRules, headerRules) {
   const urls = new Set();
   for (const filePath of walkHtml(ROOT)) {
     const html = fs.readFileSync(filePath, "utf8");
@@ -188,6 +225,7 @@ function expectedUrls(redirectRules) {
     const canonicalPath = new URL(normalized).pathname;
     if (isAlternateCanonicalPath(canonicalPath)) continue;
     if (isRedirectSource(canonicalPath, redirectRules)) continue;
+    if (hasNoindexHeader(canonicalPath, headerRules)) continue;
     if (canonicalPath !== canonicalRouteForFile(filePath)) continue;
     urls.add(normalized);
   }
@@ -228,7 +266,8 @@ function validateLlms(actual, redirectRules) {
 const actualList = sitemapUrls();
 const actual = new Set(actualList);
 const redirectRules = parseRedirectRules();
-const expected = expectedUrls(redirectRules);
+const headerRules = parseHeaderRules();
+const expected = expectedUrls(redirectRules, headerRules);
 
 const duplicates = actualList.filter((url, index) => actualList.indexOf(url) !== index);
 if (duplicates.length) fail("sitemap.xml contains duplicate URLs.", duplicates);

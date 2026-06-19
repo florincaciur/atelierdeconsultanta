@@ -1973,12 +1973,10 @@ function updateRedirects(pages) {
   const queued = new Set();
   for (const page of pages) {
     const clean = slugPath(page);
-    const html = `${clean}.html`;
-    const slash = `${clean}/`;
-    const index = `${clean}/index.html`;
     const customRedirects = Array.isArray(page.redirects) ? page.redirects : [];
-    for (const source of [slash, html, index, ...customRedirects]) {
-      const line = `${source} ${clean} 301`;
+    for (const source of customRedirects) {
+      if (normalizeCanonicalPath(source) === clean) continue;
+      const line = `${source} ${canonicalUrl(clean)} 301`;
       if (source === clean || queued.has(line) || text.includes(line)) continue;
       queued.add(line);
       additions.push(line);
