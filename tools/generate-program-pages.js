@@ -664,8 +664,8 @@ function minWordsForPage(page) {
 
 function minFaqForPage(page) {
   if (isEditorialProgram(page)) {
-    if (PILLAR_SLUGS.has(page.slug)) return 10;
     if (Number(page.minFaq) > 0) return Number(page.minFaq);
+    if (PILLAR_SLUGS.has(page.slug)) return 10;
     return Math.min(6, Math.max(2, (page.faq || []).length || 2));
   }
   if (Number(page.minFaq) > 0) return Number(page.minFaq);
@@ -872,6 +872,78 @@ function renderContentSections(sections) {
       ${list}
       ${linksHtml}`;
   }).join("\n");
+}
+
+function renderDr12AfirContent(page) {
+  const officialSourcesHtml = renderOfficialSources(page.sourceKeys, { id: `${page.slug}-official-sources` });
+  const faqHtml = faqsForPage(page)
+    .map(([question, answer]) => `<section class="faq-item"><h3>${esc(question)}</h3><p>${esc(answer)}</p></section>`)
+    .join("\n");
+
+  return `
+      <p class="intro">Ce finan&#539;eaz&#259; DR12 AFIR? DR12 AFIR sprijin&#259; investi&#539;iile &#238;n fermele tinerilor fermieri, astfel &#238;nc&#226;t exploata&#539;iile s&#259; poat&#259; cump&#259;ra utilaje, echipamente, dot&#259;ri sau s&#259; preg&#259;teasc&#259; moderniz&#259;ri legate direct de activitatea agricol&#259;. Pagina este scris&#259; pentru o prim&#259; orientare, &#238;n limbaj practic, nu ca &#238;nlocuitor pentru ghidul oficial. Pragurile, documentele, calendarul &#537;i condi&#539;iile finale trebuie verificate &#238;ntotdeauna &#238;n forma activ&#259; publicat&#259; de AFIR, inclusiv anexele &#537;i eventualele clarific&#259;ri ale sesiunii.</p>
+
+      <section aria-labelledby="dr12-finantare-intensitate">
+        <h2 id="dr12-finantare-intensitate">Finan&#539;are &#537;i intensitate</h2>
+        <p>Finan&#539;area trebuie privit&#259; ca parte dintr-un plan de ferm&#259;, nu ca o list&#259; de achizi&#539;ii. Grantul poate reduce presiunea pe investi&#539;ie, dar beneficiarul trebuie s&#259; aib&#259; cofinan&#539;are, documente coerente &#537;i capacitate de implementare.</p>
+        <ul>
+          <li><strong>Grant orientativ:</strong> forma consultativ&#259; analizat&#259; men&#539;ioneaz&#259; p&#226;n&#259; la 200.000 euro/proiect; valoarea final&#259; se confirm&#259; &#238;n ghidul activ.</li>
+          <li><strong>Intensitate:</strong> sprijinul poate ajunge orientativ la 80% pentru tineri fermieri &#537;i la 65% pentru alte categorii eligibile, dac&#259; apelul activ p&#259;streaz&#259; aceste condi&#539;ii.</li>
+          <li><strong>Partea proprie:</strong> cofinan&#539;area, TVA-ul, diferen&#539;ele de pre&#539; &#537;i cheltuielile neeligibile trebuie calculate separat de grant.</li>
+          <li><strong>Investi&#539;ie propor&#539;ional&#259;:</strong> utilajele, dot&#259;rile sau construc&#539;iile trebuie s&#259; fie potrivite cu suprafa&#539;a, efectivele, fluxul de lucru &#537;i obiectivul exploata&#539;iei.</li>
+          <li><strong>Reguli finale:</strong> contractarea, cererile de plat&#259;, rambursarea &#537;i monitorizarea se fac dup&#259; regulile AFIR publicate pentru sesiunea deschis&#259;.</li>
+        </ul>
+        <p>&#206;n practic&#259;, t&#226;n&#259;rul fermier trebuie s&#259; compare valoarea dorit&#259; a investi&#539;iei cu produc&#539;ia real&#259;, utilajele existente &#537;i veniturile fermei. O achizi&#539;ie util&#259; pentru o ferm&#259; mare poate fi greu de justificat pentru o exploata&#539;ie aflat&#259; la &#238;nceput. De aceea, bugetul trebuie s&#259; explice nu doar ce se cump&#259;r&#259;, ci &#537;i de ce acea achizi&#539;ie este necesar&#259; acum, cum va fi folosit&#259; &#537;i ce rezultate poate sus&#539;ine dup&#259; implementare.</p>
+      </section>
+
+      <section aria-labelledby="dr12-solicitanti-eligibili">
+        <h2 id="dr12-solicitanti-eligibili">Solicitan&#539;i eligibili</h2>
+        <p>DR12 se adreseaz&#259; fermierilor tineri care pot demonstra c&#259; au un rol real &#238;n exploata&#539;ie &#537;i c&#259; investi&#539;ia propus&#259; ajut&#259; activitatea agricol&#259;. Verificarea porne&#537;te de la solicitant, apoi continu&#259; cu ferma, documentele &#537;i bugetul.</p>
+        <ul>
+          <li>solicitantul trebuie s&#259; se &#238;ncadreze &#238;n categoria de t&#226;n&#259;r fermier la data stabilit&#259; de ghid;</li>
+          <li>forma juridic&#259;, controlul asupra exploata&#539;iei &#537;i istoricul instal&#259;rii trebuie s&#259; poat&#259; fi dovedite;</li>
+          <li>exploata&#539;ia poate fi vegetal&#259;, zootehnic&#259; sau mixt&#259;, dac&#259; activitatea este documentat&#259; &#537;i legat&#259; de investi&#539;ie;</li>
+          <li>terenurile, animalele, spa&#539;iile sau cl&#259;dirile trebuie s&#259; aib&#259; documente valabile pe perioada cerut&#259;;</li>
+          <li>solicitantul trebuie s&#259; poat&#259; sus&#539;ine partea proprie &#537;i s&#259; respecte obliga&#539;iile de implementare &#537;i monitorizare;</li>
+          <li>investi&#539;ia trebuie s&#259; aib&#259; o leg&#259;tur&#259; clar&#259; cu activitatea agricol&#259;, nu doar cu o inten&#539;ie general&#259; de dezvoltare.</li>
+        </ul>
+        <p>Dac&#259; ferma include terenuri arendate, animale &#238;nregistrate, spa&#539;ii &#238;nchiriate sau activit&#259;&#539;i derulate prin mai multe documente, toate trebuie citite &#238;mpreun&#259;. Un dosar solid arat&#259; continuitate: cine lucreaz&#259; ferma, ce produce, unde se face investi&#539;ia, ce documente sus&#539;in activitatea &#537;i cum r&#259;m&#226;n valabile obliga&#539;iile pe perioada cerut&#259; de program. Aceast&#259; verificare este important&#259; mai ales pentru fermele tinere, unde istoricul poate fi scurt &#537;i fiecare dovad&#259; conteaz&#259;.</p>
+      </section>
+
+      <section aria-labelledby="dr12-pasi-verificare">
+        <h2 id="dr12-pasi-verificare">Pa&#537;i de verificare</h2>
+        <p>O verificare bun&#259; reduce riscul de clarific&#259;ri, respingere sau buget imposibil de sus&#539;inut. Ordinea de mai jos ajut&#259; tinerii fermieri s&#259; decid&#259; dac&#259; proiectul merit&#259; preg&#259;tit pentru DR12.</p>
+        <ol>
+          <li><strong>Solicitantul:</strong> verific&#259; forma juridic&#259;, calitatea de fermier, controlul asupra exploata&#539;iei &#537;i eventualele condi&#539;ii legate de instalare.</li>
+          <li><strong>V&#226;rsta:</strong> confirm&#259; &#238;ncadrarea ca t&#226;n&#259;r fermier exact la momentul cerut de ghidul activ.</li>
+          <li><strong>Suprafa&#539;a &#537;i efectivele:</strong> centralizeaz&#259; terenurile, culturile, animalele &#537;i documentele care sus&#539;in dimensiunea economic&#259;.</li>
+          <li><strong>Documentele APIA/ANSVSA:</strong> preg&#259;te&#537;te adeverin&#539;e, extrase, registre, autoriza&#539;ii sau dovezi echivalente, dup&#259; specificul fermei.</li>
+          <li><strong>Dreptul de folosin&#539;&#259;:</strong> verific&#259; proprietatea, arenda, concesiunea, &#238;nchirierea sau alte documente pentru terenuri, spa&#539;ii &#537;i amplasamente.</li>
+          <li><strong>Investi&#539;ia:</strong> compar&#259; fiecare utilaj, dotare sau lucrare cu activitatea fermei, nu doar cu bugetul disponibil.</li>
+          <li><strong>Cofinan&#539;area:</strong> separ&#259; grantul de contribu&#539;ia proprie, TVA, costuri neeligibile, diferen&#539;e de pre&#539; &#537;i rezerve pentru &#238;nt&#226;rzieri.</li>
+          <li><strong>Calendarul:</strong> confirm&#259; perioada de depunere, implementare, plat&#259; &#537;i monitorizare &#238;nainte de a angaja cheltuieli.</li>
+        </ol>
+        <p>La finalul verific&#259;rii, proiectul ar trebui s&#259; poat&#259; fi explicat &#238;n c&#226;teva propozi&#539;ii simple: cine aplic&#259;, ce ferm&#259; exist&#259;, ce problem&#259; rezolv&#259; investi&#539;ia, ce costuri r&#259;m&#226;n la beneficiar &#537;i ce documente dovedesc fiecare afirma&#539;ie. Dac&#259; r&#259;spunsurile sunt neclare, este mai sigur s&#259; ajustezi proiectul &#238;nainte de depunere dec&#226;t s&#259; r&#259;spunzi gr&#259;bit la clarific&#259;ri.</p>
+      </section>
+
+      <section aria-labelledby="dr12-sfaturi-succes">
+        <h2 id="dr12-sfaturi-succes">Sfaturi pentru succes</h2>
+        <p>Cele mai multe probleme apar atunci c&#226;nd proiectul pare bun pe h&#226;rtie, dar documentele nu sus&#539;in aceea&#537;i poveste. Preg&#259;tirea trebuie s&#259; arate c&#259; ferma exist&#259;, investi&#539;ia este necesar&#259;, iar bugetul poate fi dus p&#226;n&#259; la cap&#259;t.</p>
+        <ul>
+          <li><strong>Fragmentarea exploata&#539;iei:</strong> evit&#259; &#238;mp&#259;r&#539;iri artificiale ale terenurilor, efectivelor sau activit&#259;&#539;ilor doar pentru a intra &#238;n program. Preg&#259;te&#537;te documente care arat&#259; traseul real al fermei.</li>
+          <li><strong>Buget nerealist:</strong> cere oferte clare, verific&#259; pre&#539;urile, explic&#259; de ce sunt necesare achizi&#539;iile &#537;i p&#259;streaz&#259; o rezerv&#259; pentru TVA, diferen&#539;e de curs sau costuri neeligibile.</li>
+          <li><strong>Documente expirate:</strong> verific&#259; din timp valabilitatea contractelor de folosin&#539;&#259;, adeverin&#539;elor APIA, documentelor ANSVSA, certificatelor fiscale &#537;i actelor societ&#259;&#539;ii.</li>
+          <li><strong>Active supradimensionate:</strong> un utilaj prea mare pentru suprafa&#539;a lucrat&#259; sau pentru efectivele existente poate ridica &#238;ntreb&#259;ri la evaluare. Justificarea tehnic&#259; trebuie scris&#259; pe date concrete.</li>
+          <li><strong>Cofinan&#539;are incert&#259;:</strong> stabile&#537;te sursa banilor pentru partea proprie &#238;nainte de depunere. Include scenarii pentru ramburs&#259;ri &#238;nt&#226;rziate &#537;i cheltuieli respinse.</li>
+        </ul>
+        <p>Pentru o analiz&#259; realist&#259;, preg&#259;te&#537;te date despre solicitant, v&#226;rst&#259;, localitate, suprafe&#539;e, efective, documente APIA/ANSVSA, investi&#539;ia dorit&#259;, ofertele disponibile &#537;i sursa cofinan&#539;&#259;rii.</p>
+      </section>
+
+${officialSourcesHtml}
+      <section aria-labelledby="dr12-faq-title">
+        <h2 id="dr12-faq-title">&#206;ntreb&#259;ri frecvente</h2>
+        ${faqHtml}
+      </section>`;
 }
 
 function renderPorAdrNordEstContent(page) {
@@ -1950,6 +2022,9 @@ ${officialSourcesHtml}
 }
 
 function renderMainContent(page) {
+  if (page.slug === "dr12-afir") {
+    return renderDr12AfirContent(page);
+  }
   if (page.slug === "investitii-modernizarea-microintreprinderilor-apel-2") {
     return renderMicroApel2Content(page);
   }

@@ -77,35 +77,35 @@
       "faq": [
         [
           "Ce finanteaza DR12 AFIR?",
-          "DR12 finanteaza investitii pentru consolidarea exploatatiilor tinerilor fermieri. Lista exacta de cheltuieli si conditiile finale se confirma in ghidul activ al sesiunii."
+          "DR12 finanteaza investitii in fermele tinerilor fermieri: utilaje, dotari, modernizari si alte cheltuieli permise de ghidul activ AFIR."
         ],
         [
           "Care este finantarea maxima la DR12?",
-          "Forma consultativa analizata mentioneaza pana la 200.000 euro/proiect, cu intensitate maxima de 80% pentru tineri fermieri si 65% pentru alte categorii eligibile."
+          "Forma consultativa mentioneaza pana la 200.000 euro/proiect. Valoarea finala, intensitatea si plafoanele se confirma in ghidul activ al sesiunii."
         ],
         [
-          "Ce verific inainte de a pregati dosarul DR12?",
-          "Verifica solicitantul, varsta, forma juridica, dimensiunea economica, documentele APIA sau ANSVSA, dreptul de folosinta si cofinantarea."
+          "Ce documente sunt sensibile pentru tinerii fermieri?",
+          "Documentele APIA, ANSVSA, contractele de folosinta, actele solicitantului si dovada cofinantarii sunt sensibile deoarece sustin eligibilitatea si dimensiunea fermei."
         ],
         [
-          "Este suficient sa am teren sau animale declarate?",
-          "Nu. Datele declarate trebuie sa fie corelate cu dimensiunea economica, activitatea reala, investitia propusa si documentele cerute de ghid."
+          "Cand trebuie verificat calendarul apelului?",
+          "Calendarul trebuie verificat inainte de oferte si depunere, apoi din nou la publicarea ghidului final, a anexelor si a eventualelor clarificari AFIR."
         ],
         [
-          "Pot include utilaje agricole?",
-          "Da, daca sunt eligibile in ghidul activ, justificate de exploatatie si proportionale cu activitatea agricola finantata."
+          "Cum dovedesc incadrarea ca tanar fermier?",
+          "Incadrarea se verifica prin varsta, forma juridica, controlul asupra exploatatiei, istoricul instalarii si documentele cerute expres de ghid."
         ],
         [
-          "Ce riscuri apar la DR12?",
-          "Cele mai frecvente riscuri sunt exploatatii fragmentate artificial, SO nejustificat, documente expirate, buget nerealist si investitii fara legatura directa cu activitatea."
+          "Ce rol au documentele APIA si ANSVSA?",
+          "Ele sustin suprafetele, efectivele, activitatea agricola si calculul exploatatiei. Datele din aceste documente trebuie sa fie coerente cu investitia propusa."
         ],
         [
-          "Cand trebuie confirmate conditiile finale?",
-          "Inainte de depunere, in ghidul activ si in anuntul sesiunii, deoarece forma consultativa poate fi modificata."
+          "Ce risc are fragmentarea exploatatiei?",
+          "Fragmentarea poate ridica suspiciuni daca terenurile, animalele sau activitatile sunt impartite artificial. Documentele trebuie sa arate o exploatatie reala si coerenta."
         ],
         [
-          "Poate consultanta garanta aprobarea DR12?",
-          "Nu. Consultanta poate reduce riscurile de eligibilitate si documentare, dar aprobarea depinde de regulile apelului, punctaj, buget si verificarea autoritatii."
+          "Cum pregatesc cofinantarea?",
+          "Separi grantul de contributia proprie, TVA, costuri neeligibile si rezerve. Ideal, confirmi sursa banilor inainte de depunerea proiectului."
         ]
       ],
       "related": [
@@ -136,6 +136,7 @@
       "template": "editorial-program",
       "minWords": 1200,
       "minFaq": 8,
+      "hideFamilyCards": true,
       "applicantRows": [
         [
           "Solicitant",
@@ -297,13 +298,14 @@
       ],
       "decisionIntro": "DR12 merita pregatit cand solicitantul si exploatatia pot fi demonstrate documentar, investitia este proportionala cu activitatea agricola, iar cofinantarea este realista.",
       "decisionClose": "Daca varsta, SO, documentele de exploatatie sau bugetul nu sustin proiectul, recomandarea prudenta este ajustarea inainte de depunere.",
-      "finalCtaText": "Verifica eligibilitatea DR12",
-      "heroPrimaryCta": "Verifica eligibilitatea DR12",
-      "finalPrimaryCta": "Verifica eligibilitatea DR12",
-      "inlineCtaTitle": "Urmatorul pas",
-      "inlineCtaText": "Trimite datele principale despre solicitant, localitate, activitate, investitie si buget. Verificarea initiala arata daca programul merita pregatit si ce riscuri trebuie rezolvate inainte de depunere.",
+      "finalCtaTitle": "Verific\u0103 eligibilitatea fermei tale cu un consultant FABER",
+      "finalCtaText": "Trimite date despre solicitant, varsta, exploatatie, documente APIA/ANSVSA, investitie si cofinantare. Iti raspundem cu riscurile de verificat inainte de dosar.",
+      "heroPrimaryCta": "Verific\u0103 eligibilitatea fermei",
+      "finalPrimaryCta": "Verific\u0103 eligibilitatea fermei tale cu un consultant FABER",
+      "inlineCtaTitle": "Verificare initiala pentru DR12",
+      "inlineCtaText": "Trimite datele principale despre solicitant, localitate, varsta, exploatatie, investitie si buget. Verificarea initiala arata daca programul merita pregatit si ce riscuri trebuie rezolvate inainte de depunere.",
       "updatedAt": "2026-06-11",
-      "ctaText": "Verifica eligibilitatea DR12",
+      "ctaText": "Verific\u0103 eligibilitatea fermei",
       "secondaryCtaText": "Compara cu DR14 AFIR"
     },
     {
