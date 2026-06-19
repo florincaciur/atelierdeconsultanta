@@ -4,11 +4,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- SEO — hub default; JS suprascrie pentru articole individuale -->
-  <title id="page-title">Blog fonduri europene | FABER</title>
-  <meta id="meta-description" name="description" content="Articole FABER despre fonduri europene, AFIR, GAL, Start-Up Nation, digitalizare, energie, documente, cofinanțare și riscuri.">
+  <title id="page-title">Blog fonduri europene, AFIR și granturi IMM | FABER</title>
+  <meta id="meta-description" name="description" content="Articole despre fonduri europene, AFIR, PNRR, Start-Up Nation, granturi IMM, documente, cofinanțare și consultanță.">
   <meta id="meta-keywords" name="keywords" content="fonduri europene, consultanta fonduri europene, AFIR, start up nation 2026, femeia antreprenor, pnrr digitalizare, fondul de modernizare">
-  <meta id="meta-og-title" property="og:title" content="Blog fonduri europene | FABER">
-  <meta id="meta-og-desc" property="og:description" content="Articole FABER despre fonduri europene, AFIR, GAL, Start-Up Nation, digitalizare, energie, documente, cofinanțare și riscuri.">
+  <meta id="meta-og-title" property="og:title" content="Blog fonduri europene, AFIR și granturi IMM | FABER">
+  <meta id="meta-og-desc" property="og:description" content="Articole despre fonduri europene, AFIR, PNRR, Start-Up Nation, granturi IMM, documente, cofinanțare și consultanță.">
   <meta id="meta-og-image" property="og:image" content="https://atelierdeconsultanta.ro/og-image.jpg">
   <meta property="og:type" content="website">
   <meta id="meta-og-url" property="og:url" content="https://atelierdeconsultanta.ro/blog">
@@ -22,8 +22,8 @@
   {
     "@context": "https://schema.org",
     "@type": "Blog",
-    "name": "Blog FABER – Fonduri Europene",
-    "description": "Ghiduri practice despre fonduri europene nerambursabile, AFIR, PNRR, Start-Up Nation și alte programe de finanțare.",
+    "name": "Blog FABER - fonduri europene, AFIR și granturi IMM",
+    "description": "Articole despre fonduri europene, AFIR, PNRR, Start-Up Nation, granturi IMM, documente, cofinanțare și consultanță.",
     "url": "https://atelierdeconsultanta.ro/blog",
     "publisher": {
       "@type": "Organization",
@@ -736,7 +736,7 @@
 
 
     <div id="post-banner-wrap" style="display:none; max-width:760px; margin: 32px auto 0; padding: 0 24px;">
-      <img id="post-banner-img" src="" alt="" style="width:100%; border-radius: 16px; box-shadow: 0 10px 40px rgba(0,0,0,.15);">
+      <img id="post-banner-img" src="" alt="Imagine editorială pentru articol despre fonduri europene" width="1200" height="630" loading="eager" decoding="async" fetchpriority="high" style="width:100%; border-radius: 16px; box-shadow: 0 10px 40px rgba(0,0,0,.15);">
     </div>
 
     <div class="post-container">
@@ -854,9 +854,8 @@
       document.getElementById('meta-og-image').setAttribute('content', seo.ogImage || post.bannerImage);
     }
 
-    // Schema.org BlogPosting
+    // Schema.org BlogPosting + BreadcrumbList
     const ldJson = {
-      "@context": "https://schema.org",
       "@type": "BlogPosting",
       "headline": post.title,
       "description": post.excerpt || '',
@@ -875,7 +874,18 @@
     };
     if (post.reviewer) { ldJson.reviewedBy = { "@type": "Organization", "name": post.reviewer }; }    if (post.bannerImage) { ldJson.image = post.bannerImage; }
     if (seo.ogImage) { ldJson.image = seo.ogImage; }
-    document.getElementById('ld-json').textContent = JSON.stringify(ldJson, null, 2);
+    const breadcrumbJson = {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Acasă", "item": "https://atelierdeconsultanta.ro/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://atelierdeconsultanta.ro/blog" },
+        { "@type": "ListItem", "position": 3, "name": post.title, "item": canonicalURL }
+      ]
+    };
+    document.getElementById('ld-json').textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@graph": [ldJson, breadcrumbJson]
+    }, null, 2);
 
     // Populăm conținut
     document.getElementById('post-category').textContent  = post.category || '';
@@ -967,7 +977,7 @@
       const postHref = p.canonicalUrl || ('/' + (p.slug || p.id));
       const imgHtml = p.bannerImage
         ? `<div class="post-card-img" style="background:none; padding:0; height:160px; overflow:hidden;">
-             <img src="${p.bannerImage}" alt="${p.bannerAlt || p.title}" loading="lazy" decoding="async" style="width:100%;height:160px;object-fit:cover;" />
+             <img src="${p.bannerImage}" alt="${p.bannerAlt || p.title}" width="360" height="160" loading="lazy" decoding="async" style="width:100%;height:160px;object-fit:cover;" />
            </div>`
         : `<div class="post-card-img">${p.icon || '📰'}</div>`;
       card.innerHTML = `

@@ -1,23 +1,23 @@
 {
-  "generatedAt": "2026-06-11T22:34:49.192Z",
+  "generatedAt": "2026-06-19T08:53:06.101Z",
   "summary": {
     "filesChecked": 172,
     "filesWithStructuredData": 113,
     "filesWithIssues": 0,
     "types": {
-      "Organization": 322,
-      "ImageObject": 106,
+      "Organization": 324,
+      "ImageObject": 107,
       "Country": 93,
       "ContactPoint": 178,
       "WebSite": 93,
-      "WebPage": 103,
+      "WebPage": 104,
       "CreativeWork": 169,
-      "BreadcrumbList": 101,
-      "ListItem": 322,
+      "BreadcrumbList": 109,
+      "ListItem": 346,
       "FAQPage": 102,
-      "Question": 726,
-      "Answer": 726,
-      "Article": 87,
+      "Question": 787,
+      "Answer": 787,
+      "Article": 88,
       "GovernmentService": 47,
       "BlogPosting": 15,
       "Blog": 1,
@@ -268,20 +268,21 @@
     },
     {
       "file": "calculator-soc.html",
-      "blocks": 1,
+      "blocks": 2,
       "types": {
-        "Organization": 1,
-        "ImageObject": 1,
+        "Organization": 3,
+        "ImageObject": 2,
         "Country": 1,
         "ContactPoint": 2,
-        "WebPage": 1,
+        "WebPage": 2,
         "BreadcrumbList": 1,
         "ListItem": 2,
         "WebApplication": 1,
         "Offer": 1,
         "FAQPage": 1,
         "Question": 4,
-        "Answer": 4
+        "Answer": 4,
+        "Article": 1
       },
       "issues": []
     },
@@ -313,23 +314,27 @@
     },
     {
       "file": "cand-merita-consultant-fonduri-europene.html",
-      "blocks": 1,
+      "blocks": 2,
       "types": {
         "BlogPosting": 1,
         "Organization": 2,
         "ImageObject": 1,
-        "WebPage": 1
+        "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 3
       },
       "issues": []
     },
     {
       "file": "cat-costa-consultanta-fonduri-europene-ghid.html",
-      "blocks": 1,
+      "blocks": 2,
       "types": {
         "BlogPosting": 1,
         "Organization": 2,
         "ImageObject": 1,
-        "WebPage": 1
+        "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 3
       },
       "issues": []
     },
@@ -361,23 +366,27 @@
     },
     {
       "file": "ce-acte-sunt-necesare-fonduri-europene.html",
-      "blocks": 1,
+      "blocks": 2,
       "types": {
         "BlogPosting": 1,
         "Organization": 2,
         "ImageObject": 1,
-        "WebPage": 1
+        "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 3
       },
       "issues": []
     },
     {
       "file": "cheltuieli-eligibile-digitalizare-imm.html",
-      "blocks": 1,
+      "blocks": 2,
       "types": {
         "BlogPosting": 1,
         "Organization": 2,
         "ImageObject": 1,
-        "WebPage": 1
+        "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 3
       },
       "issues": []
     },
@@ -487,8 +496,8 @@
         "ListItem": 3,
         "Article": 1,
         "FAQPage": 1,
-        "Question": 6,
-        "Answer": 6
+        "Question": 12,
+        "Answer": 12
       },
       "issues": []
     },
@@ -656,23 +665,27 @@
     },
     {
       "file": "cum-se-calculeaza-cofinantarea-fonduri-europene.html",
-      "blocks": 1,
+      "blocks": 2,
       "types": {
         "BlogPosting": 1,
         "Organization": 2,
         "ImageObject": 1,
-        "WebPage": 1
+        "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 3
       },
       "issues": []
     },
     {
       "file": "cum-se-verifica-eligibilitatea-fonduri-europene.html",
-      "blocks": 1,
+      "blocks": 2,
       "types": {
         "BlogPosting": 1,
         "Organization": 2,
         "ImageObject": 1,
-        "WebPage": 1
+        "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 3
       },
       "issues": []
     },
@@ -696,12 +709,14 @@
     },
     {
       "file": "digitalizare-imm-erp-crm-cloud.html",
-      "blocks": 1,
+      "blocks": 2,
       "types": {
         "BlogPosting": 1,
         "Organization": 2,
         "ImageObject": 1,
-        "WebPage": 1
+        "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 3
       },
       "issues": []
     },
@@ -858,7 +873,7 @@
     },
     {
       "file": "dr12-vs-dr14.html",
-      "blocks": 2,
+      "blocks": 3,
       "types": {
         "BlogPosting": 1,
         "Organization": 4,
@@ -867,7 +882,9 @@
         "Article": 1,
         "FAQPage": 1,
         "Question": 6,
-        "Answer": 6
+        "Answer": 6,
+        "BreadcrumbList": 1,
+        "ListItem": 3
       },
       "issues": []
     },
@@ -1279,8 +1296,8 @@
         "ListItem": 3,
         "Article": 1,
         "FAQPage": 1,
-        "Question": 6,
-        "Answer": 6
+        "Question": 12,
+        "Answer": 12
       },
       "issues": []
     },
@@ -1298,8 +1315,8 @@
         "ListItem": 3,
         "Article": 1,
         "FAQPage": 1,
-        "Question": 5,
-        "Answer": 5
+        "Question": 11,
+        "Answer": 11
       },
       "issues": []
     },
@@ -1317,8 +1334,8 @@
         "ListItem": 3,
         "Article": 1,
         "FAQPage": 1,
-        "Question": 5,
-        "Answer": 5
+        "Question": 11,
+        "Answer": 11
       },
       "issues": []
     },
@@ -1336,8 +1353,8 @@
         "ListItem": 3,
         "Article": 1,
         "FAQPage": 1,
-        "Question": 5,
-        "Answer": 5
+        "Question": 11,
+        "Answer": 11
       },
       "issues": []
     },
@@ -1355,8 +1372,8 @@
         "ListItem": 3,
         "Article": 1,
         "FAQPage": 1,
-        "Question": 5,
-        "Answer": 5
+        "Question": 11,
+        "Answer": 11
       },
       "issues": []
     },
@@ -1498,8 +1515,8 @@
         "ListItem": 3,
         "Article": 1,
         "FAQPage": 1,
-        "Question": 5,
-        "Answer": 5
+        "Question": 11,
+        "Answer": 11
       },
       "issues": []
     },
@@ -1860,8 +1877,8 @@
         "ListItem": 3,
         "Article": 1,
         "FAQPage": 1,
-        "Question": 5,
-        "Answer": 5
+        "Question": 11,
+        "Answer": 11
       },
       "issues": []
     },
@@ -1879,8 +1896,8 @@
         "ListItem": 3,
         "Article": 1,
         "FAQPage": 1,
-        "Question": 5,
-        "Answer": 5
+        "Question": 11,
+        "Answer": 11
       },
       "issues": []
     },
@@ -1898,8 +1915,8 @@
         "ListItem": 3,
         "Article": 1,
         "FAQPage": 1,
-        "Question": 5,
-        "Answer": 5
+        "Question": 11,
+        "Answer": 11
       },
       "issues": []
     },
@@ -2426,8 +2443,8 @@
         "WebPage": 1,
         "Article": 1,
         "FAQPage": 1,
-        "Question": 4,
-        "Answer": 4,
+        "Question": 5,
+        "Answer": 5,
         "BreadcrumbList": 1,
         "ListItem": 2
       },

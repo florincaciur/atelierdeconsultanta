@@ -143,6 +143,36 @@ function li(items) {
   return (items || []).map((item) => `<li>${esc(item)}</li>`).join("\n");
 }
 
+function configuredBody(item) {
+  const body = String(item?.body || "").trim();
+  return body ? `\n      ${body}` : "";
+}
+
+function normalizeFaqEntries(faq) {
+  if (!Array.isArray(faq)) return [];
+  return faq
+    .map((entry) => {
+      if (Array.isArray(entry)) return [entry[0], entry[1]];
+      return [entry?.question || entry?.name, entry?.answer || entry?.text];
+    })
+    .filter(([question, answer]) => String(question || "").trim() && String(answer || "").trim());
+}
+
+function configuredFaq(item, fallback) {
+  const seen = new Set();
+  return [...normalizeFaqEntries(item?.faq), ...fallback].filter(([question]) => {
+    const key = String(question || "").trim().toLowerCase();
+    if (!key || seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+}
+
+function appendConfiguredBody(body, item) {
+  const extra = configuredBody(item);
+  return extra ? `${body}${extra}` : body;
+}
+
 function stripTags(html) {
   return html.replace(/<script[\s\S]*?<\/script>/gi, " ")
     .replace(/<style[\s\S]*?<\/style>/gi, " ")
@@ -344,13 +374,13 @@ function caenPage(item) {
   const route = `/fonduri-europene-caen/${item.code}-${item.slug}`;
   const title = `Fonduri europene pentru CAEN ${item.code} - ${item.label}`;
   const description = `Ghid pentru CAEN ${item.code}: programe posibile, investitii eligibile, documente, punctaj si checklist pentru ${item.label}.`;
-  const faq = [
+  const faq = configuredFaq(item, [
     [`Pot obtine fonduri europene pentru CAEN ${item.code}?`, `Da, daca activitatea ${item.label} este eligibila in apelul activ si solicitantul indeplineste conditiile programului.`],
     [`Ce documente sunt utile pentru CAEN ${item.code}?`, "Certificatul constatator, autorizarea CAEN, documentele firmei, ofertele, bugetul si documentele pentru spatiul investitiei."],
     [`Ce programe pot fi relevante pentru CAEN ${item.code}?`, item.programs.join("; ")],
     [`Ce trebuie verificat inainte de buget pentru CAEN ${item.code}?`, "Eligibilitatea solicitantului, codul CAEN, cheltuielile permise, cofinantarea si punctajul."],
     [`Ce investitii pot fi analizate pentru CAEN ${item.code}?`, `Pot fi analizate ${item.investments.join(", ")}, daca sunt permise de ghidul activ si au legatura directa cu activitatea ${item.label}.`]
-  ];
+  ]);
   const programRows = item.programs
     .map((program) => `<tr><td>${esc(program)}</td><td>Se confirma in ghidul activ</td><td>Contributie proprie estimata separat de grant</td><td>Eligibilitatea depinde de solicitant, regiune, cod CAEN, buget si documentele investitiei.</td></tr>`)
     .join("\n");
@@ -381,7 +411,7 @@ function caenPage(item) {
         <li>calculeaza cofinantarea si cheltuielile neeligibile;</li>
         <li>verifica grila de punctaj inainte de depunere.</li>
       </ul>`;
-  body = ensureDepth(body, `CAEN ${item.code} - ${item.label}`);
+  body = ensureDepth(appendConfiguredBody(body, item), `CAEN ${item.code} - ${item.label}`);
   return { route, content: html({ title, description, h1: title, route, category: "Cod CAEN", summary: `Pentru CAEN ${item.code}, fondurile europene se aleg dupa program, regiune, investitie si documente, nu doar dupa denumirea codului.`, body, faq, related: ["/fonduri-europene-imm", "/instrumente", "/contact"] }) };
 }
 
@@ -392,14 +422,14 @@ function localPage(item, consulting) {
     ? `Consultanta pentru fonduri europene in ${item.city}: programe active, documente, eligibilitate, buget si pregatirea dosarului.`
     : `Ghid fonduri europene pentru ${item.county}: programe active, regiune, IMM-uri, agricultura, digitalizare, energie si documente.`;
   const isBucharest = item.slug === "bucuresti";
-  const faq = [
+  const faq = configuredFaq(item, [
     [`Ce fonduri europene sunt relevante in ${item.county}?`, `Depinde de regiune, solicitant si investitie. In ${item.region}, verifica programele regionale, nationale, AFIR, digitalizare si energie.`],
     [`Conteaza localitatea investitiei in ${item.county}?`, "Da. Pentru programele regionale si unele scheme sectoriale, localizarea investitiei este esentiala."],
     [`Ce documente pregatesc pentru un proiect in ${item.county}?`, "Documente de firma, cod CAEN, documente pentru spatiu, buget, oferte, situatii financiare si descrierea investitiei."],
     [`Pot primi consultanta la distanta pentru ${item.county}?`, "Da. Analiza initiala se poate face pe baza datelor si documentelor transmise electronic."],
     [`Cand este utila o pagina locala pentru ${item.county}?`, "Cand localizarea poate schimba eligibilitatea, punctajul, documentele pentru punctul de lucru sau programul recomandat."],
     [`Ce verific prima data pentru un proiect din ${item.county}?`, "Verifica solicitantul, locul de implementare, codul CAEN sau activitatea agricola, bugetul, cofinantarea si ghidul activ."]
-  ];
+  ]);
   let body = isBucharest ? `<h2>Particularitati pentru Bucuresti-Ilfov</h2>
       <p>${esc(item.county)} se analizeaza prin regiunea ${esc(item.region)}, prin locul real de implementare si prin tipul programului. Pentru ${esc(item.focus)}, localizarea poate conta diferit fata de proiectele din alte regiuni: unele apeluri sunt nationale, unele sunt regionale, iar altele cer documente clare pentru punctul de lucru sau amplasament.</p>
       <p>O firma din Bucuresti nu ar trebui sa aleaga programul doar dupa numele finantarii. Trebuie verificate activitatea autorizata, codul CAEN, vechimea, locatia investitiei, bugetul, cofinantarea si daca ghidul activ accepta cheltuielile propuse.</p>
@@ -449,7 +479,7 @@ function localPage(item, consulting) {
       </div>
       <h2>Checklist local</h2>
       <p>Inainte de depunere, verifica daca locatia investitiei este eligibila, daca punctul de lucru este documentat, daca autorizatiile pot fi obtinute si daca investitia are legatura cu activitatea firmei.</p>`;
-  body = ensureDepth(body, `${title} in ${item.region}`);
+  body = ensureDepth(appendConfiguredBody(body, item), `${title} in ${item.region}`);
   const related = isBucharest
     ? [
         consulting ? "/fonduri-europene-bucuresti" : "/consultanta-fonduri-europene-bucuresti",
@@ -469,13 +499,13 @@ function regionalPage(item) {
   const counties = item.counties || [];
   const title = item.title || `Fonduri europene ${item.region}`;
   const description = item.description || `Ghid regional pentru fonduri europene in ${item.region}.`;
-  const faq = [
+  const faq = configuredFaq(item, [
     [`Ce judete acopera pagina ${item.region}?`, `Pagina acopera orientativ judetele ${counties.join(", ")}.`],
     ["Care este diferenta dintre programe regionale, AFIR si nationale?", "Programele regionale tin de regiunea investitiei si de autoritatea regionala. AFIR acopera proiecte agricole si rurale. Programele nationale sau PNRR au reguli stabilite la nivel national si pot avea criterii diferite de localizare."],
     ["Cand conteaza ADR Nord-Est?", "ADR Nord-Est conteaza pentru apelurile Programului Regional Nord-Est: ghiduri, clarificari, criterii regionale si documentele specifice apelului activ."],
     ["Pot folosi pagina pentru o decizie finala de depunere?", "Nu. Pagina este un filtru initial; decizia finala se ia dupa ghidul activ, anexele oficiale si documentele solicitantului."],
     ["De ce nu sunt indexate paginile locale separate?", "Paginile locale separate raman consolidate pana exista date locale reale, surse regionale sau exemple aprobate care sa justifice continut distinct."]
-  ];
+  ]);
   let body = `
       <h2>Judete acoperite</h2>
       <p>Pagina consolideaza intentiile locale pentru Regiunea ${esc(item.region)} si acopera orientativ judetele: ${esc(counties.join(", "))}. In locul unor pagini separate pentru fiecare oras, analiza porneste de la regiune, program, localizarea investitiei si documentele beneficiarului.</p>
@@ -518,7 +548,7 @@ function regionalPage(item) {
         <li><a href="https://adrnordest.ro/comentariiGhid/P1IMMInovative/Apel1/Ghid.pdf" target="_blank" rel="noopener noreferrer">Ghid ADR Nord-Est pentru investitii microintreprinderi</a>, verificat in sursele proiectului.</li>
         <li>${linkTo("/surse-oficiale-fonduri-europene", "Tabelul intern de surse oficiale")}</li>
       </ul>`;
-  body = ensureDepth(body, `fonduri europene ${item.region}`);
+  body = ensureDepth(appendConfiguredBody(body, item), `fonduri europene ${item.region}`);
   return {
     route,
     content: html({
@@ -539,13 +569,13 @@ function faqPage(item) {
   const route = `/intrebari/${item.slug}`;
   const title = `Raspuns rapid: ${item.question}`;
   const description = `Raspuns rapid pentru intrebarea "${item.question}": ${item.answer.slice(0, 120)}...`;
-  const faq = [
+  const faq = configuredFaq(item, [
     [item.question, item.answer],
     ["Ce trebuie verificat inainte de aplicare?", "Solicitantul, programul, documentele, bugetul, cheltuielile eligibile si regulile apelului activ."],
     ["Raspunsul garanteaza eligibilitatea?", "Nu. Raspunsul este orientativ si trebuie confirmat prin documentele proiectului si apelul activ."],
     ["Cum pot primi analiza pe cazul meu?", "Trimite datele proiectului prin pagina de contact pentru o verificare initiala."],
     ["Cand trebuie actualizat raspunsul?", "Raspunsul trebuie actualizat cand se publica un ghid nou, apar clarificari oficiale sau documentele solicitantului schimba incadrarea."]
-  ];
+  ]);
   let body = `
       <h2>Raspuns scurt</h2>
       <p>${esc(item.answer)}</p>
@@ -559,7 +589,7 @@ function faqPage(item) {
         <li>calculeaza cofinantarea si calendarul;</li>
         <li>cere o analiza daca exista incertitudini.</li>
       </ul>`;
-  body = ensureDepth(body, item.question);
+  body = ensureDepth(appendConfiguredBody(body, item), item.question);
   return { route, content: html({ title, description, h1: title, route, category: "Intrebare frecventa", summary: item.answer, body, faq, related: item.related }) };
 }
 
