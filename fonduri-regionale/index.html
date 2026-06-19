@@ -51,6 +51,102 @@
       margin: 28px 0 36px;
     }
 
+    .regional-programs {
+      margin: 34px 0;
+    }
+
+    .regional-programs__intro {
+      color: var(--text-soft);
+      max-width: 920px;
+    }
+
+    .regional-program-grid {
+      display: grid;
+      gap: 16px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      margin: 22px 0 20px;
+    }
+
+    .regional-program-card {
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-sm);
+      background: var(--white);
+      box-shadow: var(--shadow-sm);
+      padding: 20px;
+    }
+
+    .regional-program-card h3 {
+      color: var(--navy);
+      margin-top: 0;
+    }
+
+    .regional-program-card ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .regional-program-card li {
+      margin: 8px 0;
+    }
+
+    .regional-program-card a {
+      color: var(--orange);
+      font-weight: 800;
+    }
+
+    .regional-consultanta-cta {
+      align-items: center;
+      background: var(--orange);
+      border-radius: var(--radius-sm);
+      color: var(--white);
+      display: inline-flex;
+      font-weight: 900;
+      justify-content: center;
+      margin-top: 4px;
+      padding: 13px 22px;
+      text-decoration: none;
+    }
+
+    .region-map-disclosure {
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-md);
+      background: #f8f9fb;
+      margin: 30px 0;
+      padding: 0;
+    }
+
+    .region-map-disclosure summary {
+      align-items: center;
+      color: var(--navy);
+      cursor: pointer;
+      display: flex;
+      font-size: 1.05rem;
+      font-weight: 900;
+      justify-content: space-between;
+      list-style: none;
+      padding: 18px 22px;
+    }
+
+    .region-map-disclosure summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .region-map-disclosure summary::after {
+      color: var(--orange);
+      content: "+";
+      font-size: 1.4rem;
+      line-height: 1;
+    }
+
+    .region-map-disclosure[open] summary::after {
+      content: "-";
+    }
+
+    .region-map-disclosure__body {
+      border-top: 1px solid var(--gray-200);
+      padding: 8px 22px 22px;
+    }
+
     .regional-map {
       border: 1px solid var(--gray-200);
       border-radius: var(--radius-md);
@@ -220,7 +316,8 @@
     @media (max-width: 900px) {
       .regional-intro,
       .regional-map-wrap,
-      .region-directory {
+      .region-directory,
+      .regional-program-grid {
         grid-template-columns: 1fr;
       }
 
@@ -429,11 +526,11 @@
   <header class="hero hero--image hero--cluster" data-design-family="cluster" style="--hero-image:url('/assets/hero/hero-local.webp')">
     <span class="hero-icon" aria-hidden="true"><i class="ph-duotone ph-map-pin"></i></span>
     <span class="eyebrow design-badge design-badge--cluster">Fonduri de la agențiile regionale</span>
-    <h1>Fonduri regionale: hartă ADR România</h1>
-    <p>Alege regiunea investiției, verifică județele acoperite și mergi către programul regional oficial sau către pagina copil Nord-Est.</p>
+    <h1>Fonduri regionale: programe regionale 2021-2027</h1>
+    <p>Alege regiunea investiției și mergi rapid către programul regional 2021-2027 sau către pagina internă relevantă pentru proiect.</p>
     <div class="hero-actions">
       <a class="btn btn-primary" href="/consultanta-fonduri-europene">Discută proiectul regional</a>
-      <a class="btn btn-secondary" href="#harta-adr">Alege regiunea</a>
+      <a class="btn btn-secondary" href="#programe-regionale-2021-2027">Vezi programele regionale</a>
     </div>
     <div class="hero-summary" aria-label="Rezumat vizual fonduri regionale">
       <span class="hero-summary__item"><strong>Acoperire</strong><em>regiunile de dezvoltare din România</em></span>
@@ -456,9 +553,79 @@
         </aside>
       </div>
 
-      <section id="harta-adr" aria-labelledby="harta-adr-title">
+      <section class="regional-programs" id="programe-regionale-2021-2027" aria-labelledby="programe-regionale-title">
+        <h2 id="programe-regionale-title">Programe regionale 2021-2027 pe regiuni</h2>
+        <p class="regional-programs__intro">Programele regionale 2021-2027 sunt rutele gestionate prin ADR-uri pentru investiții locale și regionale. Lista de mai jos te ajută să ajungi rapid la programul potrivit, însă detaliile complete, apelurile active, anexele și condițiile finale trebuie confirmate pe paginile oficiale: <a href="https://inforegio.ro/ro/contact-adr" target="_blank" rel="noopener noreferrer">Inforegio - Contact ADR</a>, <a href="https://legislatie.just.ro/Public/DetaliiDocument/65881" target="_blank" rel="noopener noreferrer">Legea nr. 315/2004</a> și paginile fiecărui program regional.</p>
+        <p class="regional-programs__intro">În practică, primul filtru este locul implementării: punctul de lucru, imobilul sau UAT-ul trebuie să fie în regiunea apelului. Apoi se verifică tipul beneficiarului, codurile CAEN, istoricul financiar, procentul de cofinanțare, cheltuielile eligibile și documentele cerute în ghid. Pentru proiectele publice contează maturitatea documentației tehnice, dreptul asupra terenului, avizele și indicatorii asumați. Folosește linkurile interne pentru orientare și pregătirea discuției, apoi confirmă calendarul, anexele, corrigendumurile și depunerea finală pe sursa oficială a programului. Dacă apelul se închide sau se modifică, criteriile publicate de ADR au prioritate față de orice sinteză editorială. Pentru proiecte mixte, verifică separat regulile fiecărui solicitant.</p>
+        <nav class="regional-program-grid" aria-label="Navigare programe regionale 2021-2027 pe regiuni">
+          <section class="regional-program-card" id="nord-vest" aria-labelledby="program-nord-vest-title">
+            <h3 id="program-nord-vest-title">Nord-Vest</h3>
+            <ul>
+              <li><a href="https://regionordvest.ro/" target="_blank" rel="noopener noreferrer">Programul Regional Nord-Vest 2021-2027</a></li>
+              <li><a href="/consultanta-fonduri-europene">Consultanță fonduri europene pentru proiecte regionale</a></li>
+            </ul>
+          </section>
+          <section class="regional-program-card" id="centru" aria-labelledby="program-centru-title">
+            <h3 id="program-centru-title">Centru</h3>
+            <ul>
+              <li><a href="https://www.regiocentru.ro/" target="_blank" rel="noopener noreferrer">Programul Regiunea Centru 2021-2027</a></li>
+              <li><a href="/consultanta-fonduri-europene">Consultanță pentru alegerea programului regional</a></li>
+            </ul>
+          </section>
+          <section class="regional-program-card" id="nord-est" aria-labelledby="program-nord-est-title">
+            <h3 id="program-nord-est-title">Nord-Est</h3>
+            <ul>
+              <li><a href="/investitii-modernizarea-microintreprinderilor-apel-2">Modernizarea microîntreprinderilor - Apel 2</a></li>
+              <li><a href="/por-adr-nord-est">POR ADR Nord-Est</a></li>
+              <li><a href="/fonduri-europene-nord-est">Fonduri europene Nord-Est</a></li>
+              <li><a href="https://www.inforegionordest.ro/pr-2021-2027" target="_blank" rel="noopener noreferrer">Programul Regional Nord-Est 2021-2027 - sursă oficială</a></li>
+            </ul>
+          </section>
+          <section class="regional-program-card" id="sud-est" aria-labelledby="program-sud-est-title">
+            <h3 id="program-sud-est-title">Sud-Est</h3>
+            <ul>
+              <li><a href="https://www.regiosudest.ro/documente/programul-regional-sud-est-2021-2027" target="_blank" rel="noopener noreferrer">Programul Regional Sud-Est 2021-2027</a></li>
+              <li><a href="/consultanta-fonduri-europene">Consultanță fonduri europene pentru proiecte regionale</a></li>
+            </ul>
+          </section>
+          <section class="regional-program-card" id="sud-muntenia" aria-labelledby="program-sud-muntenia-title">
+            <h3 id="program-sud-muntenia-title">Sud-Muntenia</h3>
+            <ul>
+              <li><a href="https://2021-2027.adrmuntenia.ro/" target="_blank" rel="noopener noreferrer">Programul Regional Sud-Muntenia 2021-2027</a></li>
+              <li><a href="/consultanta-fonduri-europene">Consultanță pentru verificarea eligibilității regionale</a></li>
+            </ul>
+          </section>
+          <section class="regional-program-card" id="sud-vest-oltenia" aria-labelledby="program-sud-vest-title">
+            <h3 id="program-sud-vest-title">Sud-Vest Oltenia</h3>
+            <ul>
+              <li><a href="https://www.adroltenia.ro/category/programul-regional-sud-vest-oltenia-2021-2027/" target="_blank" rel="noopener noreferrer">Programul Regional Sud-Vest Oltenia 2021-2027</a></li>
+              <li><a href="/contact">Verificare inițială pentru proiect regional</a></li>
+            </ul>
+          </section>
+          <section class="regional-program-card" id="vest" aria-labelledby="program-vest-title">
+            <h3 id="program-vest-title">Vest</h3>
+            <ul>
+              <li><a href="https://www.vest.ro/" target="_blank" rel="noopener noreferrer">Programul Regional Vest 2021-2027</a></li>
+              <li><a href="/consultanta-fonduri-europene">Consultanță fonduri europene pentru IMM și investiții</a></li>
+            </ul>
+          </section>
+          <section class="regional-program-card" id="bucuresti-ilfov" aria-labelledby="program-bucuresti-ilfov-title">
+            <h3 id="program-bucuresti-ilfov-title">București-Ilfov</h3>
+            <ul>
+              <li><a href="https://www.adrbi.ro/programe-regionale/por-bi-2021-2027/?external=1" target="_blank" rel="noopener noreferrer">Programul Regional București-Ilfov 2021-2027</a></li>
+              <li><a href="/fonduri-europene-bucuresti">Fonduri europene București</a></li>
+              <li><a href="/consultanta-fonduri-europene-bucuresti">Consultanță fonduri europene București</a></li>
+            </ul>
+          </section>
+        </nav>
+        <a class="regional-consultanta-cta" href="/contact" aria-label="Solicită o consultanță gratuită pentru un proiect regional">Solicită o consultanță gratuită</a>
+      </section>
+
+      <details class="region-map-disclosure" id="afla-regiunea-ta">
+        <summary aria-controls="harta-adr" aria-label="Deschide harta interactivă pentru alegerea regiunii">Află regiunea ta</summary>
+        <section class="region-map-disclosure__body" id="harta-adr" aria-labelledby="harta-adr-title">
         <h2 id="harta-adr-title">Hartă interactivă ADR</h2>
-        <p>Harta este un selector editorial pentru regiunile de dezvoltare. La hover vezi regiunea, iar la click se actualizează panoul cu județe, ADR și linkul oficial. Toate datele importante sunt repetate mai jos în HTML crawlable.</p>
+        <p>Folosește harta doar dacă vrei să vezi rapid județele din fiecare regiune. Linkurile de program sunt listate mai sus.</p>
         <div class="regional-map-wrap">
           <div class="regional-map" aria-label="Hartă stilizată cu regiunile de dezvoltare ale României">
             <svg viewBox="0 0 760 560" role="img" aria-labelledby="romania-map-title romania-map-desc">
@@ -525,87 +692,8 @@
             </div>
           </aside>
         </div>
-      </section>
-
-      <section id="nord-est" aria-labelledby="nord-est-title">
-        <h2 id="nord-est-title">Nord-Est: pagina copil dedicată</h2>
-        <p>Nord-Est are o pagină copil separată pentru că există deja intenție regională validată în site: <a href="/fonduri-europene-nord-est">fonduri europene Nord-Est</a>. Pentru microîntreprinderi și investiții productive, traseul intern relevant este <a href="/por-adr-nord-est">POR ADR Nord-Est</a>, iar decizia comercială se discută prin <a href="/consultanta-fonduri-europene">consultanță fonduri europene</a>.</p>
-        <div class="program-choice-grid">
-          <section class="program-choice">
-            <h3>Beneficiari privați în Nord-Est</h3>
-            <p>Firmele și IMM-urile trebuie să confirme regiunea investiției, CAEN-ul, punctul de lucru, documentele financiare și cheltuielile permise în ghidul activ. Nu se presupune eligibilitate doar pentru că sediul este în regiune.</p>
-            <a class="btn btn-primary" href="/por-adr-nord-est">Verifică POR ADR Nord-Est</a>
-          </section>
-          <section class="program-choice">
-            <h3>Beneficiari publici în Nord-Est</h3>
-            <p>UAT-urile, instituțiile sau parteneriatele publice trebuie să pornească de la pagina oficială a Programului Regional Nord-Est și de la documentele apelului aplicabil.</p>
-            <a class="btn btn-secondary" href="https://www.inforegionordest.ro/pr-2021-2027" target="_blank" rel="noopener noreferrer">Sursa oficială Nord-Est</a>
-          </section>
-        </div>
-      </section>
-
-      <section aria-labelledby="director-adr-title">
-        <h2 id="director-adr-title">Director crawlable pentru toate ADR-urile</h2>
-        <p>Lista de mai jos este conținut crawlable, nu doar interfață. Componența pe județe este verificată prin Legea nr. 315/2004 publicată în Portalul Legislativ, iar linkurile de program duc către pagini oficiale ale programelor regionale sau ale ADR-urilor.</p>
-
-        <div class="region-directory">
-          <article class="region-card" id="sud-est">
-            <h3>Sud-Est</h3>
-            <p><strong>Județe:</strong> Brăila, Buzău, Constanța, Galați, Tulcea, Vrancea.</p>
-            <p>Verificarea se face pe Programul Regional Sud-Est și pe pagina ADR Sud-Est.</p>
-            <div class="program-cluster-links"><a href="https://www.regiosudest.ro/documente/programul-regional-sud-est-2021-2027" target="_blank" rel="noopener noreferrer">Program oficial Sud-Est</a></div>
-          </article>
-
-          <article class="region-card" id="sud-muntenia">
-            <h3>Sud-Muntenia</h3>
-            <p><strong>Județe:</strong> Argeș, Călărași, Dâmbovița, Giurgiu, Ialomița, Prahova, Teleorman.</p>
-            <p>Programul Regional Sud-Muntenia trebuie verificat pe site-ul oficial dedicat regiunii.</p>
-            <div class="program-cluster-links"><a href="https://2021-2027.adrmuntenia.ro/" target="_blank" rel="noopener noreferrer">Program oficial Sud-Muntenia</a></div>
-          </article>
-
-          <article class="region-card" id="sud-vest-oltenia">
-            <h3>Sud-Vest Oltenia</h3>
-            <p><strong>Județe:</strong> Dolj, Gorj, Mehedinți, Olt, Vâlcea.</p>
-            <p>Pentru apeluri și documente se verifică pagina oficială ADR Sud-Vest Oltenia.</p>
-            <div class="program-cluster-links"><a href="https://www.adroltenia.ro/category/programul-regional-sud-vest-oltenia-2021-2027/" target="_blank" rel="noopener noreferrer">Program oficial Sud-Vest Oltenia</a></div>
-          </article>
-
-          <article class="region-card" id="vest">
-            <h3>Vest</h3>
-            <p><strong>Județe:</strong> Arad, Caraș-Severin, Hunedoara, Timiș.</p>
-            <p>Programul Regional Vest se confirmă pe pagina oficială a programului și a ADR Vest.</p>
-            <div class="program-cluster-links"><a href="https://www.vest.ro/" target="_blank" rel="noopener noreferrer">Program oficial Vest</a></div>
-          </article>
-
-          <article class="region-card" id="nord-vest">
-            <h3>Nord-Vest</h3>
-            <p><strong>Județe:</strong> Bihor, Bistrița-Năsăud, Cluj, Maramureș, Satu Mare, Sălaj.</p>
-            <p>Regio Nord-Vest este sursa oficială pentru program, apeluri, documente utile și implementare.</p>
-            <div class="program-cluster-links"><a href="https://regionordvest.ro/" target="_blank" rel="noopener noreferrer">Program oficial Nord-Vest</a></div>
-          </article>
-
-          <article class="region-card" id="centru">
-            <h3>Centru</h3>
-            <p><strong>Județe:</strong> Alba, Brașov, Covasna, Harghita, Mureș, Sibiu.</p>
-            <p>Programul „Regiunea Centru” 2021-2027 se verifică pe site-ul oficial al programului.</p>
-            <div class="program-cluster-links"><a href="https://www.regiocentru.ro/" target="_blank" rel="noopener noreferrer">Program oficial Centru</a></div>
-          </article>
-
-          <article class="region-card" id="bucuresti-ilfov">
-            <h3>București-Ilfov</h3>
-            <p><strong>Acoperire:</strong> municipiul București și județul Ilfov.</p>
-            <p>Programul Regional București-Ilfov se verifică prin ADRBI și pagina programului regional.</p>
-            <div class="program-cluster-links"><a href="https://www.adrbi.ro/programe-regionale/por-bi-2021-2027/?external=1" target="_blank" rel="noopener noreferrer">Program oficial București-Ilfov</a></div>
-          </article>
-
-          <article class="region-card">
-            <h3>Nord-Est</h3>
-            <p><strong>Județe:</strong> Bacău, Botoșani, Iași, Neamț, Suceava, Vaslui.</p>
-            <p>Pentru proiecte din Nord-Est, consulta pagina regionala dedicata și apoi verifică documentele oficiale ale Programului Regional Nord-Est.</p>
-            <div class="program-cluster-links"><a href="/fonduri-europene-nord-est">Pagina copil Nord-Est</a><a href="https://regionordest.ro/" target="_blank" rel="noopener noreferrer">Program oficial Nord-Est</a></div>
-          </article>
-        </div>
-      </section>
+        </section>
+      </details>
 
       <section class="source-gate" aria-labelledby="source-gate-title">
         <h2 id="source-gate-title">Ce nu publicăm fără sursă oficială</h2>
