@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-06-11T22:34:38.728Z",
+  "generatedAt": "2026-07-09T21:19:10.516Z",
   "mode": "check",
-  "baseUrl": "http://127.0.0.1:52350",
+  "baseUrl": "http://127.0.0.1:57967",
   "summary": {
     "checked": 22,
     "passed": 22,
@@ -98,7 +98,7 @@
       "pass": true,
       "errors": [],
       "dom": {
-        "title": "Start-Up Nation 2026 | ghid central și rute utile",
+        "title": "Start-Up Nation 2026 | ghid Start-Up Nation",
         "h1Count": 1,
         "seeAlsoCards": 0,
         "programCluster": 0,
@@ -154,7 +154,7 @@
       "pass": true,
       "errors": [],
       "dom": {
-        "title": "AFIR autoconsum agroalimentar | energie",
+        "title": "AFIR autoconsum agroalimentar | panouri fotovoltaice și fonduri AFIR",
         "h1Count": 1,
         "seeAlsoCards": 0,
         "programCluster": 0,
@@ -168,7 +168,7 @@
       "pass": true,
       "errors": [],
       "dom": {
-        "title": "Autoconsum public fotovoltaice | instituții",
+        "title": "Autoconsum public fotovoltaice | ghid energie",
         "h1Count": 1,
         "seeAlsoCards": 0,
         "programCluster": 0,
@@ -182,7 +182,7 @@
       "pass": true,
       "errors": [],
       "dom": {
-        "title": "DR14 AFIR | investiții pentru ferme mici",
+        "title": "DR 14 AFIR | ghid AFIR",
         "h1Count": 1,
         "seeAlsoCards": 0,
         "programCluster": 0,
@@ -196,7 +196,7 @@
       "pass": true,
       "errors": [],
       "dom": {
-        "title": "Digitalizare IMM | hub pentru proiecte și buget IT",
+        "title": "Digitalizare IMM | ghid digitalizare",
         "h1Count": 1,
         "seeAlsoCards": 0,
         "programCluster": 0,
@@ -210,7 +210,7 @@
       "pass": true,
       "errors": [],
       "dom": {
-        "title": "Femeia Antreprenor 2026 | program, eligibilitate și dosar",
+        "title": "Femeia Antreprenor 2026 | ghid FABER",
         "h1Count": 1,
         "seeAlsoCards": 0,
         "programCluster": 0,
@@ -224,7 +224,7 @@
       "pass": true,
       "errors": [],
       "dom": {
-        "title": "PRO INFRA | producție pentru infrastructura de transport",
+        "title": "PRO INFRA 2026 | ghid FABER",
         "h1Count": 1,
         "seeAlsoCards": 0,
         "programCluster": 0,
@@ -238,7 +238,7 @@
       "pass": true,
       "errors": [],
       "dom": {
-        "title": "Calculator SO/SOC AFIR | DR12 și DR14",
+        "title": "calculator SO AFIR | ghid AFIR",
         "h1Count": 1,
         "seeAlsoCards": 5,
         "programCluster": 1,

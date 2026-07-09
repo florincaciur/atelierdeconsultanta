@@ -1230,7 +1230,7 @@ function linkExists(link) {
 function anchorFor(link) {
   const labels = {
     "/consultanta-fonduri-europene": "consultanță pentru fonduri europene",
-    "/contact": "evaluare gratuită pentru proiect",
+    "/contact": "verificare eligibilitate pentru proiect",
     "/blog": "blogul FABER despre finanțări",
     "/fonduri-europene": "hubul despre fonduri europene",
     "/fonduri-nerambursabile": "ghidul despre fonduri nerambursabile",
@@ -1357,7 +1357,7 @@ ${CLARITY_TRACKING_CODE}
       <a href="/fonduri-europene">Fonduri europene</a>
       <a href="/ghiduri">Ghiduri</a>
       <a href="/blog">Blog</a>
-      <a href="/contact" class="nav-cta btn-primary">Evaluare gratuită</a>
+      <a href="/contact" class="nav-cta btn-primary">Verificare eligibilitate</a>
     </div>
   </nav>
 
@@ -1536,7 +1536,7 @@ ${CLARITY_TRACKING_CODE}
       <div class="cta-box">
         <h3>Vrei să verificăm proiectul?</h3>
         <p>Trimite câteva detalii despre solicitant, investiție și programul urmărit. FABER poate verifica eligibilitatea inițială și pașii de pregătire, fără promisiuni comerciale nerealiste.</p>
-        <a class="btn-primary" href="/contact">Solicită evaluare gratuită</a>
+        <a class="btn-primary" href="/contact">Solicită verificare eligibilitate</a>
       </div>
     </article>
   </main>

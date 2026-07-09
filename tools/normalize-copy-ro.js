@@ -262,6 +262,7 @@ function normalizeRomanianCopy(value) {
 }
 
 function normalizeHtmlCopy(html) {
+  const preferredEol = html.includes("\r\n") ? "\r\n" : "\n";
   const $ = cheerio.load(html, { decodeEntities: false });
   let changed = false;
 
@@ -305,8 +306,8 @@ function normalizeHtmlCopy(html) {
       if (next !== node.data) node.data = next;
     });
 
-  const output = changed ? $.html() : html;
-  return output.replace(/[ \t]+$/gm, "");
+  const output = (changed ? $.html() : html).replace(/[ \t]+$/gm, "");
+  return preferredEol === "\r\n" ? output.replace(/\r?\n/g, "\r\n") : output;
 }
 
 function* walkHtml(target) {

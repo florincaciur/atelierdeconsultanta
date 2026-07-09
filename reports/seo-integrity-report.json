@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-11T22:34:39.566Z",
+  "generatedAt": "2026-07-09T21:18:09.612Z",
   "root": "C:\\Users\\flori\\Documents\\GitHub\\atelierdeconsultanta",
   "summary": {
     "totalFiles": 172,
@@ -192,7 +192,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1272,
+          "words": 1271,
           "threshold": 900
         },
         "relatedLinks": {
@@ -265,14 +265,14 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "AFIR autoconsum agroalimentar"
+            "AFIR Autoconsum Agroalimentar – energie regenerabilă pentru ferme și procesatori"
           ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
           "required": true,
-          "count": 8,
-          "threshold": 8
+          "count": 6,
+          "threshold": 6
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -282,8 +282,8 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1442,
-          "threshold": 1100
+          "words": 1170,
+          "threshold": 900
         },
         "relatedLinks": {
           "status": "pass",
@@ -324,14 +324,14 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "AFIR autoconsum agroalimentar"
+            "AFIR Autoconsum Agroalimentar – energie regenerabilă pentru ferme și procesatori"
           ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
           "required": true,
-          "count": 8,
-          "threshold": 8
+          "count": 6,
+          "threshold": 6
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -341,8 +341,8 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1442,
-          "threshold": 1100
+          "words": 1170,
+          "threshold": 900
         },
         "relatedLinks": {
           "status": "pass",
@@ -635,7 +635,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1528,
+          "words": 1529,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -866,7 +866,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 1708,
+          "words": 1712,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -981,7 +981,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2665,
+          "words": 2663,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -1155,7 +1155,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 720,
+          "words": 722,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -1213,7 +1213,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 671,
+          "words": 672,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -1444,7 +1444,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 625,
+          "words": 624,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -1559,13 +1559,13 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1799,
+          "words": 1834,
           "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
           "required": true,
-          "count": 2
+          "count": 3
         }
       }
     },
@@ -1949,7 +1949,7 @@
         "visibleFaqForSchema": {
           "status": "pass",
           "required": true,
-          "count": 6,
+          "count": 12,
           "threshold": 5
         },
         "speakableSchemaCoverage": {
@@ -1960,7 +1960,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1367,
+          "words": 1862,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -2763,7 +2763,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 2255,
+          "words": 2254,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -2821,7 +2821,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 647,
+          "words": 648,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -2879,7 +2879,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 719,
+          "words": 721,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -3230,7 +3230,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1847,
+          "words": 1843,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -3289,7 +3289,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 1303,
+          "words": 1306,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -3348,7 +3348,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 1465,
+          "words": 1467,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -3452,8 +3452,8 @@
         "visibleFaqForSchema": {
           "status": "pass",
           "required": true,
-          "count": 10,
-          "threshold": 10
+          "count": 8,
+          "threshold": 8
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -3463,7 +3463,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1325,
+          "words": 1245,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -3511,8 +3511,8 @@
         "visibleFaqForSchema": {
           "status": "pass",
           "required": true,
-          "count": 10,
-          "threshold": 10
+          "count": 8,
+          "threshold": 8
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -3522,7 +3522,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1325,
+          "words": 1245,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -3818,7 +3818,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1275,
+          "words": 1274,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -3878,7 +3878,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1223,
+          "words": 1219,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -4053,7 +4053,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 1342,
+          "words": 1341,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -4172,7 +4172,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1799,
+          "words": 1797,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -4521,7 +4521,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1622,
+          "words": 1621,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -4678,14 +4678,14 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Fondul pentru Modernizare: capacități noi de energie regenerabilă"
+            "Fondul pentru Modernizare 2026 – Energie regenerabilă: Ghid pentru investitori"
           ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
           "required": true,
-          "count": 10,
-          "threshold": 10
+          "count": 6,
+          "threshold": 6
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -4695,13 +4695,13 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1672,
-          "threshold": 1200
+          "words": 1005,
+          "threshold": 900
         },
         "relatedLinks": {
           "status": "pass",
           "required": false,
-          "count": 2,
+          "count": 1,
           "note": "not a hub/blog page"
         }
       }
@@ -4738,14 +4738,14 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Fondul pentru Modernizare: capacități noi de energie regenerabilă"
+            "Fondul pentru Modernizare 2026 – Energie regenerabilă: Ghid pentru investitori"
           ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
           "required": true,
-          "count": 10,
-          "threshold": 10
+          "count": 6,
+          "threshold": 6
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -4755,13 +4755,13 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1672,
-          "threshold": 1200
+          "words": 1005,
+          "threshold": 900
         },
         "relatedLinks": {
           "status": "pass",
           "required": false,
-          "count": 2,
+          "count": 1,
           "note": "not a hub/blog page"
         }
       }
@@ -4975,7 +4975,7 @@
         "visibleFaqForSchema": {
           "status": "pass",
           "required": true,
-          "count": 6,
+          "count": 12,
           "threshold": 5
         },
         "speakableSchemaCoverage": {
@@ -4986,7 +4986,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1356,
+          "words": 1853,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -5034,7 +5034,7 @@
         "visibleFaqForSchema": {
           "status": "pass",
           "required": true,
-          "count": 5,
+          "count": 11,
           "threshold": 5
         },
         "speakableSchemaCoverage": {
@@ -5045,7 +5045,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1331,
+          "words": 1844,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -5093,7 +5093,7 @@
         "visibleFaqForSchema": {
           "status": "pass",
           "required": true,
-          "count": 5,
+          "count": 11,
           "threshold": 5
         },
         "speakableSchemaCoverage": {
@@ -5104,7 +5104,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1346,
+          "words": 1866,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -5152,7 +5152,7 @@
         "visibleFaqForSchema": {
           "status": "pass",
           "required": true,
-          "count": 5,
+          "count": 11,
           "threshold": 5
         },
         "speakableSchemaCoverage": {
@@ -5163,7 +5163,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1353,
+          "words": 1871,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -5211,7 +5211,7 @@
         "visibleFaqForSchema": {
           "status": "pass",
           "required": true,
-          "count": 5,
+          "count": 11,
           "threshold": 5
         },
         "speakableSchemaCoverage": {
@@ -5222,7 +5222,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1328,
+          "words": 1857,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -5850,7 +5850,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1846,
+          "words": 1893,
           "threshold": 1500
         },
         "relatedLinks": {
@@ -5898,7 +5898,7 @@
         "visibleFaqForSchema": {
           "status": "pass",
           "required": true,
-          "count": 5,
+          "count": 11,
           "threshold": 5
         },
         "speakableSchemaCoverage": {
@@ -5909,7 +5909,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1349,
+          "words": 2204,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -6467,13 +6467,13 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Fonduri regionale: hartă ADR România"
+            "Fonduri regionale: programe regionale 2021-2027"
           ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
           "required": true,
-          "count": 5,
+          "count": 6,
           "threshold": 5
         },
         "speakableSchemaCoverage": {
@@ -6484,7 +6484,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1309,
+          "words": 1208,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -6543,7 +6543,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1460,
+          "words": 1459,
           "threshold": 1400
         },
         "relatedLinks": {
@@ -7154,7 +7154,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 2083,
+          "words": 2126,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -7377,7 +7377,7 @@
         "visibleFaqForSchema": {
           "status": "pass",
           "required": true,
-          "count": 5,
+          "count": 11,
           "threshold": 5
         },
         "speakableSchemaCoverage": {
@@ -7388,7 +7388,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1352,
+          "words": 1546,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -7436,7 +7436,7 @@
         "visibleFaqForSchema": {
           "status": "pass",
           "required": true,
-          "count": 5,
+          "count": 11,
           "threshold": 5
         },
         "speakableSchemaCoverage": {
@@ -7447,7 +7447,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1373,
+          "words": 1556,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -7496,7 +7496,7 @@
         "visibleFaqForSchema": {
           "status": "pass",
           "required": true,
-          "count": 5,
+          "count": 11,
           "threshold": 5
         },
         "speakableSchemaCoverage": {
@@ -7507,7 +7507,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1342,
+          "words": 1576,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -7549,7 +7549,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Modernizarea microintreprinderilor - Apel 2 Nord-Est"
+            "Modernizarea microîntreprinderilor – Apel 2 Nord-Est: Ghid practic pentru antreprenori"
           ]
         },
         "visibleFaqForSchema": {
@@ -7566,7 +7566,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1214,
+          "words": 1216,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -7609,7 +7609,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Modernizarea microintreprinderilor - Apel 2 Nord-Est"
+            "Modernizarea microîntreprinderilor – Apel 2 Nord-Est: Ghid practic pentru antreprenori"
           ]
         },
         "visibleFaqForSchema": {
@@ -7626,7 +7626,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1214,
+          "words": 1216,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -7746,7 +7746,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 1426,
+          "words": 1425,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -8015,14 +8015,14 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "PoCIDIF 2.1: inovare și tehnologii avansate pentru IMM din TIC"
+            "PoCIDIF 2.1 – Granturi pentru inovare digitală în IMM‑urile TIC"
           ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
           "required": true,
-          "count": 10,
-          "threshold": 10
+          "count": 8,
+          "threshold": 8
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -8032,7 +8032,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1230,
+          "words": 1338,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -8075,14 +8075,14 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "PoCIDIF 2.1: inovare și tehnologii avansate pentru IMM din TIC"
+            "PoCIDIF 2.1 – Granturi pentru inovare digitală în IMM‑urile TIC"
           ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
           "required": true,
-          "count": 10,
-          "threshold": 10
+          "count": 8,
+          "threshold": 8
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -8092,7 +8092,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1230,
+          "words": 1338,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -8211,7 +8211,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1666,
+          "words": 1147,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -8271,7 +8271,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1666,
+          "words": 1147,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -8387,7 +8387,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1205,
+          "words": 1262,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -8447,7 +8447,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1205,
+          "words": 1260,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -8742,13 +8742,13 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1745,
+          "words": 1781,
           "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
           "required": true,
-          "count": 2
+          "count": 3
         }
       }
     },
@@ -8857,13 +8857,13 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1731,
+          "words": 1769,
           "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
           "required": true,
-          "count": 2
+          "count": 3
         }
       }
     },
@@ -9028,13 +9028,13 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1758,
+          "words": 1790,
           "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
           "required": true,
-          "count": 2
+          "count": 3
         }
       }
     },
@@ -9261,13 +9261,13 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1298,
+          "words": 1332,
           "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
           "required": true,
-          "count": 2
+          "count": 3
         }
       }
     },
@@ -9440,7 +9440,7 @@
     },
     {
       "file": "studii-de-caz-fonduri-europene/index.html",
-      "noindex": true,
+      "noindex": false,
       "pass": true,
       "checks": {
         "utf8Charset": {
@@ -9468,12 +9468,15 @@
         },
         "singleH1": {
           "status": "pass",
-          "note": "noindex page: h1 not required"
+          "count": 1,
+          "text": [
+            "Studii de caz anonimizate: proiecte pregătite pentru fonduri europene"
+          ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
           "required": true,
-          "count": 5,
+          "count": 6,
           "threshold": 4
         },
         "speakableSchemaCoverage": {
@@ -9483,14 +9486,14 @@
         },
         "contentDepth": {
           "status": "pass",
-          "required": false,
-          "words": 0
+          "required": true,
+          "words": 1283,
+          "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
-          "required": false,
-          "count": 4,
-          "note": "not a hub/blog page"
+          "required": true,
+          "count": 4
         }
       }
     },

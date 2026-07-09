@@ -110,7 +110,7 @@ function renderHubDesignCards(page) {
 }
 
 const related = {
-  contact: ["/contact", "Solicită evaluare gratuită"],
+  contact: ["/contact", "Solicită verificare eligibilitate"],
   consultanta: ["/consultanta-fonduri-europene", "Consultanță fonduri europene"],
   fonduri: ["/fonduri-europene", "Fonduri europene"],
   nerambursabile: ["/fonduri-nerambursabile", "Finanțări nerambursabile"],
@@ -610,7 +610,7 @@ ${CLARITY_TRACKING_CODE}
       <a href="${cleanHref("/fonduri-europene")}">Fonduri europene</a>
       <a href="${cleanHref("/ghiduri")}">Ghiduri</a>
       <a href="${cleanHref("/blog")}">Blog</a>
-      <a class="nav-cta btn-primary" href="${cleanHref("/contact")}">Evaluare gratuită</a>
+      <a class="nav-cta btn-primary" href="${cleanHref("/contact")}">Verificare eligibilitate</a>
     </div>
   </nav>
   ${renderBreadcrumb(breadcrumbItemsForPage(page))}
@@ -620,7 +620,7 @@ ${CLARITY_TRACKING_CODE}
     <h1>${esc(page.h1)}</h1>
     <p>${esc(page.summary)}</p>
     <div class="hero-actions">
-      <a class="btn btn-primary" href="${cleanHref("/contact")}">Solicită evaluare gratuită</a>
+      <a class="btn btn-primary" href="${cleanHref("/contact")}">Solicită verificare eligibilitate</a>
       <a class="btn btn-secondary" href="${cleanHref("/consultanta-fonduri-europene")}">Vezi serviciile de consultanță</a>
     </div>
     ${renderHubHeroSummary(page)}

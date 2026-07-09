@@ -4,7 +4,7 @@ Data audit: 2026-05-21
 
 ## Rezumat
 
-Auditul a verificat CTA-urile din homepage, pagina principala de consultanta fonduri europene, hub-uri de programe, blog si contact. Formularea veche folosea frecvent `Evaluare gratuita`, `Verifica eligibilitatea`, `Trimite datele proiectului`, `Ghid oficial` si cateva CTA-uri mai comerciale precum `Consultanta gratuita`.
+Auditul a verificat CTA-urile din homepage, pagina principala de consultanta fonduri europene, hub-uri de programe, blog si contact. Formularea veche folosea frecvent CTA-uri bazate pe gratuitate, `Verifica eligibilitatea`, `Trimite datele proiectului`, `Ghid oficial` si cateva formulari comerciale prea generale.
 
 CTA-urile au fost standardizate catre formulari prudente:
 
@@ -22,9 +22,9 @@ CTA-urile au fost standardizate catre formulari prudente:
 | Homepage - hero secundar | `Vezi programe active` | `Vezi metodologia` | Mutat spre pagina de metoda pentru incredere si AI visibility. |
 | Homepage - program cards | `Ghid oficial` | `Consultă sursele oficiale` | Linkurile raman catre surse oficiale externe sau pagini oficiale. |
 | Homepage - formular contact | `Trimite solicitarea` | `Trimite detaliile proiectului` | Mai specific pentru lead qualification. |
-| Consultanta fonduri europene | `Evaluare gratuita`, `Solicită evaluare pentru cost`, `Vezi metodologia de lucru`, `Vezi serviciile` | `Solicită verificare eligibilitate`, `Discută cu un consultant`, `Vezi metodologia` | Am eliminat accentul pe gratuit si pe servicii generice. |
-| Hub-uri programatice | `Evaluare gratuita`, `Verifica eligibilitatea`, `Discuta cu un consultant`, `Trimite datele proiectului`, `Vezi serviciile` | `Solicită verificare eligibilitate`, `Discută cu un consultant`, `Trimite detaliile proiectului`, `Vezi metodologia` | Aplicat mecanic pe paginile publice cu aceeasi structura. |
-| Blog hub | `Solicită o evaluare gratuită`, `Consultanță gratuită` | `Solicită verificare eligibilitate`, `Trimite detaliile proiectului` | Microcopy mai prudent, fara promisiuni de contractare sau rezultat. |
+| Consultanta fonduri europene | CTA-uri bazate pe gratuitate, `Solicită verificare pentru cost`, `Vezi metodologia de lucru`, `Vezi serviciile` | `Solicită verificare eligibilitate`, `Discută cu un consultant`, `Vezi metodologia` | Am eliminat accentul pe gratuit si pe servicii generice. |
+| Hub-uri programatice | CTA-uri bazate pe gratuitate, `Verifica eligibilitatea`, `Discuta cu un consultant`, `Trimite datele proiectului`, `Vezi serviciile` | `Solicită verificare eligibilitate`, `Discută cu un consultant`, `Trimite detaliile proiectului`, `Vezi metodologia` | Aplicat mecanic pe paginile publice cu aceeasi structura. |
+| Blog hub | CTA-uri bazate pe gratuitate | `Solicită verificare eligibilitate`, `Trimite detaliile proiectului` | Microcopy mai prudent, fara promisiuni de contractare sau rezultat. |
 | Contact | `Formular`, `Deschide formularul` | `Trimite detaliile proiectului` | Pagina Contact trimite in continuare catre formularul de pe homepage. |
 
 ## Formulare identificate

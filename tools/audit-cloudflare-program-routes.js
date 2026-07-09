@@ -55,6 +55,64 @@ function parseRedirects(file) {
     });
 }
 
+function escapeRegExp(value) {
+  return value.replace(/[\\^$.*+?()[\]{}|]/g, "\\$&");
+}
+
+function matchRedirectPattern(pattern, pathname) {
+  if (pattern === pathname) return {};
+
+  const names = [];
+  let regexSource = "^";
+  for (let index = 0; index < pattern.length; index += 1) {
+    const char = pattern[index];
+    if (char === ":" && /[A-Za-z_]/.test(pattern[index + 1] || "")) {
+      let end = index + 1;
+      while (/[A-Za-z0-9_]/.test(pattern[end] || "")) end += 1;
+      names.push(pattern.slice(index + 1, end));
+      regexSource += "([^/]+)";
+      index = end - 1;
+      continue;
+    }
+    regexSource += escapeRegExp(char);
+  }
+  regexSource += "$";
+
+  const match = pathname.match(new RegExp(regexSource));
+  if (!match) return null;
+
+  return names.reduce((params, name, index) => {
+    params[name] = match[index + 1];
+    return params;
+  }, {});
+}
+
+function interpolateRedirectDestination(destination, params) {
+  return destination.replace(/:([A-Za-z_][A-Za-z0-9_]*)/g, (_, name) => params[name] || "");
+}
+
+function normalizeLocalLocation(destination) {
+  try {
+    const url = new URL(destination);
+    if (url.hostname === "atelierdeconsultanta.ro") return `${url.pathname}${url.search}${url.hash}`;
+  } catch {
+    // Relative redirect destination.
+  }
+  return destination;
+}
+
+function findRedirect(redirects, pathname) {
+  for (const rule of redirects) {
+    const params = matchRedirectPattern(rule.source, pathname);
+    if (!params) continue;
+    return {
+      ...rule,
+      destination: interpolateRedirectDestination(rule.destination, params),
+    };
+  }
+  return null;
+}
+
 function safeRelativePath(urlPath) {
   const decoded = decodeURIComponent(urlPath).replace(/^\/+/, "");
   const normalized = path.posix.normalize(decoded);
@@ -80,16 +138,16 @@ function createLocalServer() {
   return http.createServer((request, response) => {
     const url = new URL(request.url, "http://localhost");
     const pathname = url.pathname;
-    const redirect = redirects.find((rule) => rule.source === pathname);
+    const redirect = findRedirect(redirects, pathname);
 
     if (redirect && redirect.status >= 300 && redirect.status < 400) {
-      response.writeHead(redirect.status, { Location: redirect.destination });
+      response.writeHead(redirect.status, { Location: normalizeLocalLocation(redirect.destination) });
       response.end();
       return;
     }
 
     if (redirect && redirect.status === 200) {
-      servePath(redirect.destination, response);
+      servePath(normalizeLocalLocation(redirect.destination), response);
       return;
     }
 

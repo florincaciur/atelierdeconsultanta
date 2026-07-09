@@ -122,7 +122,7 @@ Foloseste modelul hub-and-spoke:
 - Tabel: conditii / documente / cheltuieli / pasi.
 - FAQ: 4-6 intrebari reale, cu raspunsuri scurte.
 - Surse: minimum 2 linkuri oficiale pentru programe active.
-- CTA: evaluare gratuita, dar fara promisiuni de aprobare.
+- CTA: verificare eligibilitate, fara promisiuni de aprobare.
 - Linkuri interne: 3 spre huburi, 1 spre contact, 1 spre articol conex.
 
 ## Recomandari de interlinking

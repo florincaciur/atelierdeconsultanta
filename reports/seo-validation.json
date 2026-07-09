@@ -1,8 +1,7 @@
 {
-  "generatedAt": "2026-06-11T22:34:30.153Z",
+  "generatedAt": "2026-07-09T21:19:01.221Z",
   "mode": "check",
   "changedFiles": [
-    "404.html",
     "afir-autoconsum-agroalimentar.html",
     "afir.html",
     "afir/index.html",
@@ -194,7 +193,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "AFIR autoconsum agroalimentar"
+          "AFIR Autoconsum Agroalimentar – energie regenerabilă pentru ferme și procesatori"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -210,7 +209,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "AFIR autoconsum agroalimentar"
+          "AFIR Autoconsum Agroalimentar – energie regenerabilă pentru ferme și procesatori"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -549,7 +548,7 @@
           "Cod CAEN Start Up Nation 2026: cum verifici activitatea eligibila"
         ],
         "missingAlt": [],
-        "relatedCount": 2,
+        "relatedCount": 3,
         "jsonLdErrors": []
       }
     },
@@ -1410,10 +1409,10 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Fondul pentru Modernizare: capacități noi de energie regenerabilă"
+          "Fondul pentru Modernizare 2026 – Energie regenerabilă: Ghid pentru investitori"
         ],
         "missingAlt": [],
-        "relatedCount": 2,
+        "relatedCount": 1,
         "jsonLdErrors": []
       }
     },
@@ -1426,10 +1425,10 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Fondul pentru Modernizare: capacități noi de energie regenerabilă"
+          "Fondul pentru Modernizare 2026 – Energie regenerabilă: Ghid pentru investitori"
         ],
         "missingAlt": [],
-        "relatedCount": 2,
+        "relatedCount": 1,
         "jsonLdErrors": []
       }
     },
@@ -1906,7 +1905,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Fonduri regionale: hartă ADR România"
+          "Fonduri regionale: programe regionale 2021-2027"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -2208,7 +2207,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Modernizarea microintreprinderilor - Apel 2 Nord-Est"
+          "Modernizarea microîntreprinderilor – Apel 2 Nord-Est: Ghid practic pentru antreprenori"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -2224,7 +2223,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Modernizarea microintreprinderilor - Apel 2 Nord-Est"
+          "Modernizarea microîntreprinderilor – Apel 2 Nord-Est: Ghid practic pentru antreprenori"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -2336,7 +2335,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "PoCIDIF 2.1: inovare și tehnologii avansate pentru IMM din TIC"
+          "PoCIDIF 2.1 – Granturi pentru inovare digitală în IMM‑urile TIC"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -2352,7 +2351,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "PoCIDIF 2.1: inovare și tehnologii avansate pentru IMM din TIC"
+          "PoCIDIF 2.1 – Granturi pentru inovare digitală în IMM‑urile TIC"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -2531,7 +2530,7 @@
           "Start Up Nation 2026: cheltuieli eligibile"
         ],
         "missingAlt": [],
-        "relatedCount": 2,
+        "relatedCount": 3,
         "jsonLdErrors": []
       }
     },
@@ -2563,7 +2562,7 @@
           "Start-Up Nation 2026: checklist de condiții"
         ],
         "missingAlt": [],
-        "relatedCount": 2,
+        "relatedCount": 3,
         "jsonLdErrors": []
       }
     },
@@ -2611,7 +2610,7 @@
           "Start Up Nation 2026: idei de afaceri"
         ],
         "missingAlt": [],
-        "relatedCount": 2,
+        "relatedCount": 3,
         "jsonLdErrors": []
       }
     },
@@ -2675,7 +2674,7 @@
           "Start-Up Nation 2026: ghid central pentru pregătirea dosarului"
         ],
         "missingAlt": [],
-        "relatedCount": 2,
+        "relatedCount": 3,
         "jsonLdErrors": []
       }
     },
@@ -2730,7 +2729,7 @@
     {
       "file": "studii-de-caz-fonduri-europene/index.html",
       "pass": true,
-      "noindex": true,
+      "noindex": false,
       "technicalFile": false,
       "issues": [],
       "details": {
