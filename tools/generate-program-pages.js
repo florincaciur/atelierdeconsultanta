@@ -98,8 +98,8 @@ const KEYWORDS_BY_SLUG = {
   "consultanta-fonduri-europene": ["consultanță fonduri europene", "firmă consultanță fonduri europene", "consultant fonduri europene", "verificare eligibilitate fonduri europene", "cost consultanță fonduri europene", "dosar fonduri europene"],
   "verificare-eligibilitate-fonduri-europene": ["verificare eligibilitate fonduri europene", "eligibilitate fonduri europene 2026", "eligibilitate DR12", "eligibilitate DR14", "verificare cod CAEN fonduri europene"],
   "fonduri-europene-nerambursabile-2026": ["fonduri europene nerambursabile 2026", "fonduri europene 2026 pentru tineri", "fonduri europene 2026 rural non agricol", "program fonduri europene 2026", "fonduri europene 2026 pentru femei"],
-  "dr12-afir": ["DR12 AFIR", "program DR12 investitii tineri fermieri", "investitii tineri fermieri 2026", "ghid DR12 AFIR"],
-  "dr14": ["DR14 AFIR", "investitii ferme mici", "program fonduri ferme mici 2026", "conditii DR14", "SO ferma mica"],
+  "dr12-afir": ["dr 12 afir lansare", "dr 12 ghid final", "dr12 afir", "afir dr 12", "ghid dr 12 afir"],
+  "dr14": ["dr14", "dr14 afir", "dr14 afir 2026", "dr 14 conditii", "când se lansează dr 14", "ghidul solicitantului dr 14"],
   "dr14-afir-ferme-mici": ["DR14 AFIR ferme mici", "conditii DR14 ferme mici", "documente DR14 AFIR", "eligibilitate ferme mici"],
   "digitalizare-imm": ["Digitalizare IMM 2026", "PNRR digitalizare IMM", "grant digitalizare IMM 2026", "echipamente digitalizare IMM"],
   "femeia-antreprenor-2026": ["Femeia Antreprenor 2026", "fonduri europene femei antreprenor 2026", "grant Femeia Antreprenor 2026", "cheltuieli eligibile Femeia Antreprenor 2026"],
@@ -2371,9 +2371,256 @@ ${officialSourcesHtml}
       ${faqHtml}`;
 }
 
+function renderDr12SearchIntentContent(page) {
+  const officialSourcesHtml = renderOfficialSources(page.sourceKeys, { id: `${page.slug}-official-sources` });
+  const faqHtml = faqsForPage(page)
+    .map(([question, answer]) => `<section class="faq-item"><h3>${esc(question)}</h3><p>${esc(answer)}</p></section>`)
+    .join("\n");
+
+  return `
+      <section aria-labelledby="dr12-raspuns-rapid">
+        <h2 id="dr12-raspuns-rapid">Răspuns rapid</h2>
+        <p class="intro">DR12 AFIR 2026 este intervenția pentru investiții în consolidarea exploatațiilor tinerilor fermieri instalați și ale fermierilor instalați cu vârsta de până la 45 de ani. Ghidul DR 12 AFIR disponibil în documentația proiectului este o versiune consultativă, nu ghidul final. El indică o dimensiune economică de minimum 12.000 euro SO, un sprijin public de maximum 200.000 euro/proiect și două intensități maxime: 80% pentru tinerii fermieri care îndeplinesc condițiile specifice și 65% pentru celelalte categorii eligibile. O dată de lansare nu se deduce din consultare. Sesiunea, etapele lunare, alocarea și termenele se confirmă exclusiv prin ghidul activ și nota oficială de lansare.</p>
+        <p>Căutările „dr12 afir”, „afir dr 12”, „ghid dr 12 afir”, „dr 12 ghid final” și „dr 12 afir lansare” se referă la aceeași intervenție; răspunsurile de mai jos separă explicit informațiile consultative de regulile care vor fi confirmate în apelul activ.</p>
+      </section>
+
+      <section aria-labelledby="dr12-status-ghid">
+        <h2 id="dr12-status-ghid">Statusul ghidului: consultativ sau final</h2>
+        <p>Documentul analizat poartă explicit mențiunea de versiune consultativă și a fost publicat pentru dezbatere. Prin urmare, expresiile „dr 12 ghid final” și „ghid DR 12 AFIR” trebuie tratate prudent: pagina descrie regulile din varianta consultativă, iar forma finală poate modifica praguri, documente, punctaje, alocări sau termene.</p>
+        <p>Înainte de orice depunere se verifică versiunea activă publicată de AFIR, ordinul de aprobare, anexele, cererea de finanțare, grila de selecție și eventualele erate. Nicio regulă consultativă nu este prezentată aici drept regulă definitivă.</p>
+      </section>
+
+      <section aria-labelledby="dr12-lansare">
+        <h2 id="dr12-lansare">Când se lansează DR12</h2>
+        <p>Pentru query-ul „dr 12 afir lansare”, răspunsul corect este că versiunea consultativă nu fixează o dată certă de deschidere. Ghidul arată că sesiunea se organizează în două etape lunare, stabilite prin nota de lansare. Pentru prima etapă este indicat un prag de calitate de 75 de puncte, iar pentru etapa a doua pragul minim consultativ este de 45 de puncte.</p>
+        <p>Data, ora deschiderii, durata fiecărei etape, alocarea și condițiile de oprire anticipată trebuie preluate numai din anunțul oficial al sesiunii active. Pregătirea documentelor poate începe înainte, dar depunerea nu trebuie planificată pe o dată nepublicată.</p>
+      </section>
+
+      <section aria-labelledby="dr12-solicitanti">
+        <h2 id="dr12-solicitanti">Cine poate aplica</h2>
+        <p>Varianta consultativă enumeră trei categorii: tineri fermieri instalați cu vârsta de până la 40 de ani, înainte de împlinirea vârstei de 41 de ani; fermieri care au finalizat planul de afaceri prin submăsura 6.1 din PNDR 2014-2022, indiferent de vârsta de la depunere; și fermieri instalați cu vârsta de până la 45 de ani, înainte de împlinirea vârstei de 46 de ani.</p>
+        <p>Solicitantul trebuie să fie șef al exploatației și să exercite controlul efectiv. Persoanele fizice neautorizate nu sunt eligibile. Ghidul include PFA, întreprindere individuală, întreprindere familială și SRL în condițiile detaliate pentru asociat, administrator și control. Încadrarea juridică și profesională se reconfirmă în ghidul activ.</p>
+      </section>
+
+      <section aria-labelledby="dr12-so-minim">
+        <h2 id="dr12-so-minim">Pragul minim SO</h2>
+        <p>Investiția trebuie realizată într-o fermă cu dimensiunea economică de minimum 12.000 euro SO la momentul depunerii. Calculul folosește coeficienții SOC 2020 din cererea de finanțare și datele documentabile pentru suprafețe, culturi și efective.</p>
+        <p>Suprafețele se corelează cu IACS-APIA, iar efectivele care nu pot fi înregistrate acolo se verifică în registrele ANSVSA/DSVSA, ANZ sau prin documentele circumscripției veterinare, după caz. Un calcul realizat fără aceleași date în documentele oficiale poate schimba eligibilitatea și punctajul.</p>
+      </section>
+
+      <section aria-labelledby="dr12-componente">
+        <h2 id="dr12-componente">Sector zootehnic versus alte sectoare</h2>
+        <p>DR12 are două componente distincte: <strong>sector zootehnic</strong> și <strong>alte sectoare</strong>. Solicitantul poate depune un singur proiect pe una dintre cele două componente. Încadrarea pornește de la structura exploatației și de la sectorul relevant descris în ghid.</p>
+        <p>Pentru componenta alte sectoare pot exista investiții și în sectoare diferite de cel predominant, însă proiectul trebuie să includă investiții în sectorul vegetal care determină încadrarea. Alegerea componentei influențează alocarea, criteriile aplicabile și riscul de neconformitate dacă proiectul este încadrat greșit.</p>
+      </section>
+
+      <section aria-labelledby="dr12-intensitate">
+        <h2 id="dr12-intensitate">Intensitatea sprijinului</h2>
+        <div class="table-wrap">
+          <table class="program-table">
+            <thead><tr><th>Categorie</th><th>Intensitate maximă consultativă</th><th>Condiție-cheie</th></tr></thead>
+            <tbody>
+              <tr><td>Tineri fermieri</td><td>80% din costurile eligibile</td><td>Până la 40 de ani înainte de împlinirea vârstei de 41 de ani, competențe profesionale și calitatea de șef al exploatației.</td></tr>
+              <tr><td>Celelalte categorii eligibile</td><td>65% din costurile eligibile</td><td>Îndeplinirea condițiilor specifice categoriei și ale proiectului.</td></tr>
+              <tr><td>Plafon proiect</td><td>Maximum 200.000 euro</td><td>Sprijin public nerambursabil per proiect, conform variantei consultative.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Procentele se aplică numai cheltuielilor eligibile. Contribuția privată, cheltuielile neeligibile și tratamentul TVA se calculează separat și se confirmă în documentele sesiunii active.</p>
+      </section>
+
+      <section aria-labelledby="dr12-investitii">
+        <h2 id="dr12-investitii">Investiții eligibile</h2>
+        <p>Lista indicativă din ghid cuprinde construcții noi și modernizări, spații protejate cu dotări și utilități, înființarea sau modernizarea fermelor pomicole, unități de condiționare și depozitare, precum și procesare la nivelul fermei ca parte secundară a proiectului.</p>
+        <p>Pot fi analizate utilaje agricole noi, remorci și semiremorci tehnologice, echipamente pentru furajare, soluții digitale și agricultură de precizie, facilități de igienă și biosecuritate, căi de acces și irigații la nivel de fermă ca părți secundare. Energia regenerabilă este prevăzută ca parte secundară pentru consum propriu, fără livrarea surplusului în rețea. Fiecare investiție trebuie corelată cu producția și capacitatea reală a fermei.</p>
+      </section>
+
+      <section aria-labelledby="dr12-documente">
+        <h2 id="dr12-documente">Documente APIA, ANSVSA, ANZ și ONRC</h2>
+        <ul>
+          <li><strong>APIA:</strong> forma de organizare, codul exploatației, suprafețele și culturile declarate trebuie să susțină calculul SO și proiectul.</li>
+          <li><strong>ANSVSA/DSVSA:</strong> registrele exploatației și efectivele sunt verificate pentru fermele cu animale; pentru anumite animale se folosesc și adeverințe veterinare.</li>
+          <li><strong>ANZ:</strong> documentele sunt relevante, între altele, pentru familiile de albine, vatra stupinei și situațiile prevăzute de ghid.</li>
+          <li><strong>ONRC:</strong> forma juridică, reprezentantul, asociații și controlul efectiv se verifică inclusiv prin RECOM online.</li>
+        </ul>
+        <p>Contractele de proprietate sau folosință trebuie să fie în numele solicitantului și să acopere perioada cerută. Datele din toate registrele trebuie să descrie aceeași exploatație; diferențele pot genera clarificări sau neeligibilitate.</p>
+      </section>
+
+      <section aria-labelledby="dr12-cofinantare">
+        <h2 id="dr12-cofinantare">Cofinanțare</h2>
+        <p>Beneficiarul adaugă contribuția privată la sprijinul public și suportă integral cheltuielile neeligibile. Pentru proiectele cu intensitate de 80%, diferența eligibilă pornește de la 20%; pentru intensitatea de 65%, diferența pornește de la 35%. Calculul real include și TVA-ul după regimul fiscal aplicabil, diferențe de preț și rezerva de numerar pentru implementare.</p>
+        <p>Ghidul consultativ cere dovada cofinanțării private prin extras de cont și/sau contract de credit. Dacă se folosește extrasul de cont, acesta este însoțit de angajamentul privind destinația a minimum 50% din disponibilul prezentat, conform regulilor descrise în document. Cerința exactă se reconfirmă la contractare în versiunea activă.</p>
+      </section>
+
+      <section aria-labelledby="dr12-punctaj">
+        <h2 id="dr12-punctaj">Pragul de calitate și riscul de suprascore</h2>
+        <p>Varianta consultativă stabilește un prag de 75 de puncte pentru prima etapă lunară și 45 de puncte pentru etapa a doua, atât pentru sectorul zootehnic, cât și pentru alte sectoare. Cererea nu poate fi depusă într-o etapă dacă prescoringul este sub pragul lunii respective.</p>
+        <p>Suprascore-ul nu este o rezervă de siguranță. Punctele trebuie susținute de documente încă de la depunere. Dacă evaluatorul reduce punctajul sub pragul etapei sau constată o încadrare greșită pe componentă, proiectul poate fi declarat neconform. Se punctează numai ceea ce poate fi demonstrat, nu o investiție ori o situație viitoare nesusținută.</p>
+      </section>
+
+      <section aria-labelledby="dr12-greseli">
+        <h2 id="dr12-greseli">Greșeli</h2>
+        <ul class="warning-list">
+          <li>prezentarea ghidului consultativ ca ghid final sau presupunerea unei date de lansare;</li>
+          <li>calcul SO sub 12.000 sau necorelat cu APIA, ANSVSA, ANZ și documentele de folosință;</li>
+          <li>confundarea limitei de vârstă pentru categoria solicitantului cu limita pentru intensitatea de 80%;</li>
+          <li>alegerea greșită între sector zootehnic și alte sectoare;</li>
+          <li>utilaje supradimensionate față de suprafețe, efective și parcul existent;</li>
+          <li>prescoring optimist, fără documente pentru fiecare criteriu;</li>
+          <li>cofinanțare, TVA și cheltuieli neeligibile neacoperite;</li>
+          <li>contracte de folosință sau înregistrări oficiale care nu acoperă perioada și forma solicitantului.</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="dr12-faq">
+        <h2 id="dr12-faq">FAQ</h2>
+        ${faqHtml}
+      </section>
+
+${officialSourcesHtml}
+
+      <section aria-labelledby="dr12-cta">
+        <h2 id="dr12-cta">CTA: verifică eligibilitatea DR12</h2>
+        <p>Pregătește vârsta și forma solicitantului, situația APIA/ANSVSA/ANZ, calculul SO, componenta proiectului, lista investițiilor și sursa cofinanțării. Verificarea pornește de la documente și de la ghidul activ, nu de la plafonul maxim.</p>
+        <p><a class="btn btn-primary" href="/verificare-eligibilitate-fonduri-europene">Solicită verificarea eligibilității DR12</a></p>
+      </section>`;
+}
+
+function renderDr14SearchIntentContent(page) {
+  const officialSourcesHtml = renderOfficialSources(page.sourceKeys, { id: `${page.slug}-official-sources` });
+  const faqHtml = faqsForPage(page)
+    .map(([question, answer]) => `<section class="faq-item"><h3>${esc(question)}</h3><p>${esc(answer)}</p></section>`)
+    .join("\n");
+
+  return `
+      <section aria-labelledby="dr14-raspuns-rapid">
+        <h2 id="dr14-raspuns-rapid">Răspuns rapid</h2>
+        <p class="intro">DR14 AFIR 2026 este intervenția pentru investiții în fermele de mici dimensiuni. Ghidul solicitantului DR 14 folosit în documentația proiectului este varianta consultativă, nu forma finală. Documentul prevede un sprijin public de maximum 50.000 euro/proiect și o intensitate de până la 85% din costurile eligibile. Condițiile DR14 pornesc de la dimensiunea economică și SO majoritar: intervalul general este 4.000-11.999 SO, cu praguri minime distincte de 2.000 SO pentru rase autohtone și anumite subsectoare floricole, respectiv 2.300 SO pentru sectorul legumicol. Solicitantul depune pe o singură componentă dintre legumicol, zootehnic, achiziții simple și național-alte sectoare. Lansarea și regulile finale se confirmă numai în documentele oficiale active.</p>
+        <p>Căutările „dr14”, „dr14 afir”, „dr14 afir 2026”, „dr 14 conditii”, „când se lansează dr 14” și „ghidul solicitantului dr 14” sunt tratate distinct în secțiunile următoare, fără a prezenta varianta consultativă drept formă finală.</p>
+      </section>
+
+      <section aria-labelledby="dr14-status">
+        <h2 id="dr14-status">Status apel</h2>
+        <p>Pagina oficială și ghidul disponibile în proiect sunt marcate explicit „versiunea consultativă”. Acest statut nu echivalează cu un apel deschis și nici cu un ghid final aprobat. Pentru întrebarea „când se lansează DR 14”, sursa consultată nu oferă o dată certă de depunere.</p>
+        <p>Perioada apelului, bugetul, cele două etape lunare, pragurile aplicabile și anexele obligatorii se verifică în nota de lansare și în versiunea activă a ghidului. Până atunci pot fi pregătite datele fermei și documentele, fără a transforma regulile consultative în promisiuni finale.</p>
+      </section>
+
+      <section aria-labelledby="dr14-so">
+        <h2 id="dr14-so">Intervalele SO pe sectoare</h2>
+        <div class="table-wrap">
+          <table class="program-table">
+            <thead><tr><th>Încadrare</th><th>Interval consultativ</th><th>Regulă de verificare</th></tr></thead>
+            <tbody>
+              <tr><td>Ferme mici - regulă generală</td><td>4.000-11.999 euro SO</td><td>Dimensiunea trebuie dovedită la depunere.</td></tr>
+              <tr><td>Zootehnic cu rase autohtone</td><td>2.000-11.999 euro SO</td><td>SO majoritar și minimum 2.000 SO trebuie să provină din animalele din rase autohtone.</td></tr>
+              <tr><td>Flori, plante aromatice, medicinale și ornamentale</td><td>2.000-11.999 euro SO</td><td>Subsectorul trebuie să determine SO majoritar și să atingă pragul minim.</td></tr>
+              <tr><td>Ferme legumicole</td><td>2.300-11.999 euro SO</td><td>Legumicolul trebuie să determine SO majoritar și să atingă minimum 2.300 SO.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Calculul folosește coeficienții SOC 2020 și înregistrările APIA, ANSVSA/DSVSA și ANZ, după caz. Nu este suficient ca totalul fermei să depășească pragul redus; sectorul care justifică pragul trebuie să fie majoritar în condițiile ghidului.</p>
+      </section>
+
+      <section aria-labelledby="dr14-componente">
+        <h2 id="dr14-componente">Cele patru componente</h2>
+        <ol>
+          <li><strong>Legumicol:</strong> încadrarea se bazează pe SO majoritar și proiectul trebuie să includă investiții în sectorul care determină componenta.</li>
+          <li><strong>Zootehnic:</strong> se verifică efectivele, documentele sanitar-veterinare și legătura investiției cu activitatea zootehnică.</li>
+          <li><strong>Achiziții simple:</strong> proiectele care propun numai achiziții simple intră pe alocarea distinctă, indiferent de sector.</li>
+          <li><strong>Național - alte sectoare:</strong> reunește proiectele încadrate în celelalte sectoare conform SO majoritar și investiției.</li>
+        </ol>
+        <p>Un solicitant poate depune proiect pe o singură componentă. Încadrarea greșită poate afecta evaluarea, alocarea și pragul de calitate aplicabil.</p>
+      </section>
+
+      <section aria-labelledby="dr14-solicitanti">
+        <h2 id="dr14-solicitanti">Solicitanți eligibili</h2>
+        <p>Ghidul consultativ se adresează fermierilor organizați în forme eligibile și înregistrați în România, care acționează în nume propriu și pot asigura surse financiare stabile și suficiente. Sunt enumerate forme precum PFA, întreprindere individuală, întreprindere familială și mai multe tipuri de societăți, inclusiv SRL, cu condițiile juridice din ghid.</p>
+        <p>Solicitantul trebuie să figureze anterior depunerii în sistemele APIA și/sau ANSVSA pe forma de organizare cu care cere sprijinul. Exploatația, activitatea, drepturile de folosință și investiția trebuie să aparțină aceleiași structuri eligibile. Situațiile de lichidare, insolvență sau faliment și regulile privind numărul de proiecte se verifică separat.</p>
+      </section>
+
+      <section aria-labelledby="dr14-investitii">
+        <h2 id="dr14-investitii">Investiții eligibile</h2>
+        <p>Ghidul permite investiții corporale și necorporale legate direct de producția agricolă a fermei. În funcție de componentă pot fi analizate construcții și modernizări, spații protejate, dotări, utilaje și echipamente, facilități de condiționare sau depozitare, soluții digitale, servicii tehnice și alte cheltuieli descrise în lista eligibilă.</p>
+        <p>Investițiile se fac numai în sectoarele pentru care solicitantul are SO la depunere. O fermă exclusiv zootehnică poate investi în vegetal numai pentru baza furajeră, iar o fermă exclusiv vegetală rămâne în sectorul vegetal. Depozitarea, condiționarea și procesarea urmează aceeași corelare cu sectoarele documentate.</p>
+      </section>
+
+      <section aria-labelledby="dr14-achizitii-simple">
+        <h2 id="dr14-achizitii-simple">Achiziții simple</h2>
+        <p>Componenta „achiziții simple” este o alocare distinctă pentru proiectele care propun numai astfel de achiziții, indiferent de sectorul agricol în care activează ferma. Ea nu înseamnă că orice utilaj este automat eligibil sau că justificarea tehnică dispare.</p>
+        <p>Echipamentele trebuie să fie noi, eligibile, dimensionate pentru exploatație și legate de activitatea documentată. Costurile generale aferente proiectelor cu achiziții simple au, în varianta consultativă, limita specifică de 3% din totalul cheltuielilor eligibile. Definiția și lista finală se reconfirmă în ghidul activ.</p>
+      </section>
+
+      <section aria-labelledby="dr14-documente">
+        <h2 id="dr14-documente">Documente</h2>
+        <ul>
+          <li>înregistrările APIA din anul depunerii pentru suprafețe, culturi, codul exploatației și calculul SO;</li>
+          <li>înregistrările ANSVSA/DSVSA și ANZ pentru animale, păsări, familii de albine și situațiile speciale prevăzute de ghid;</li>
+          <li>certificate de origine pentru rasele autohtone, emise de organizațiile acreditate, când se folosește pragul specific;</li>
+          <li>documentele ONRC/RECOM pentru forma juridică, reprezentare și situația solicitantului;</li>
+          <li>documente de proprietate sau folosință, oferte, devize, documentații tehnice, avize și autorizații potrivit investiției;</li>
+          <li>dovada sursei de cofinanțare la momentul cerut de regulile de contractare.</li>
+        </ul>
+        <p>Documentele nu se verifică izolat. Totalul SO, SO majoritar, componenta, investiția și forma solicitantului trebuie să fie coerente în toate bazele și anexele.</p>
+      </section>
+
+      <section aria-labelledby="dr14-cofinantare">
+        <h2 id="dr14-cofinantare">Cofinanțare</h2>
+        <p>Varianta consultativă prevede un sprijin public de maximum 50.000 euro/proiect și o intensitate de maximum 85% din costurile eligibile. Diferența eligibilă de minimum 15%, cheltuielile neeligibile, TVA-ul după regimul fiscal și eventualele depășiri de preț rămân în sarcina beneficiarului.</p>
+        <p>Documentele bancare sau de trezorerie care dovedesc capacitatea și sursa cofinanțării se prezintă în termenul descris de ghidul consultativ după aprobarea raportului de selecție sau de contestații. Termenul și forma documentelor se confirmă în versiunea activă înainte de contractare.</p>
+      </section>
+
+      <section aria-labelledby="dr14-selectie">
+        <h2 id="dr14-selectie">Selecție și punctaj</h2>
+        <p>Ghidul consultativ organizează sesiunea în două etape lunare. Pentru zootehnic, achiziții simple și național-alte sectoare este indicat un prag de 85 de puncte în prima etapă și 40 de puncte în etapa a doua. Pentru componenta legumicolă sunt indicate 60 de puncte în prima etapă și 40 de puncte în etapa a doua.</p>
+        <p>Prescoringul trebuie calculat obiectiv și susținut cu documente. O bifă fără dovadă nu protejează proiectul; scăderea sub pragul lunii poate duce la neconformitate. Grila finală, alocările și criteriile se verifică în apelul activ.</p>
+      </section>
+
+      <section aria-labelledby="dr14-conditii-artificiale">
+        <h2 id="dr14-conditii-artificiale">Condiții artificiale</h2>
+        <p>Nu este permisă crearea artificială a condițiilor pentru obținerea sau creșterea sprijinului. Fragmentarea exploatației, mutarea formală a animalelor sau suprafețelor, schimbarea aparentă a formei de control ori construirea unui SO majoritar numai pentru pragul redus pot declanșa verificări și pot conduce la neacordarea sprijinului.</p>
+        <p>Ferma trebuie să existe economic și documentar în forma prezentată. Relațiile dintre solicitanți, grupuri, asociați, exploatații și alte proiecte publice se declară și se verifică potrivit ghidului și instrucțiunii privind evitarea condițiilor artificiale.</p>
+      </section>
+
+      <section aria-labelledby="dr14-calculator-so">
+        <h2 id="dr14-calculator-so">Calculator SO</h2>
+        <p>Calculatorul SO este punctul de pornire, nu decizia finală. Introdu numai culturi și efective care pot fi susținute prin APIA, ANSVSA/DSVSA și ANZ. Verifică atât totalul exploatației, cât și sectorul care generează SO majoritar, deoarece pragul minim și componenta DR14 depind de această structură.</p>
+        <p><a class="btn btn-secondary" href="/calculator-soc">Calculează SO pentru ferma ta</a></p>
+      </section>
+
+      <section aria-labelledby="dr14-greseli">
+        <h2 id="dr14-greseli">Greșeli</h2>
+        <ul class="warning-list">
+          <li>tratarea variantei consultative drept ghid final sau anunț de lansare;</li>
+          <li>aplicarea pragului de 2.000 ori 2.300 SO fără ca subsectorul să determine SO majoritar;</li>
+          <li>alegerea unei componente care nu corespunde structurii fermei și investiției;</li>
+          <li>confundarea achizițiilor simple cu o eligibilitate automată a utilajelor;</li>
+          <li>diferențe între APIA, ANSVSA/ANZ, calculul SO și cererea de finanțare;</li>
+          <li>prescoring nesusținut de documente sau condiții create artificial;</li>
+          <li>investiție supradimensionată pentru o fermă mică;</li>
+          <li>lipsa cofinanțării, a TVA-ului și a rezervei pentru cheltuieli neeligibile.</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="dr14-faq">
+        <h2 id="dr14-faq">FAQ</h2>
+        ${faqHtml}
+      </section>
+
+${officialSourcesHtml}
+
+      <section aria-labelledby="dr14-cta">
+        <h2 id="dr14-cta">CTA: verifică eligibilitatea DR14</h2>
+        <p>Trimite forma solicitantului, culturile și efectivele, calculul SO, documentele APIA/ANSVSA/ANZ, componenta dorită, lista achizițiilor și sursa cofinanțării. Analiza se raportează la ghidul activ înainte de orice concluzie finală.</p>
+        <p><a class="btn btn-primary" href="/verificare-eligibilitate-fonduri-europene">Solicită verificarea eligibilității DR14</a></p>
+      </section>`;
+}
+
 function renderMainContent(page) {
   if (page.slug === "dr12-afir") {
-    return renderDr12AfirContent(page);
+    return renderDr12SearchIntentContent(page);
+  }
+  if (page.slug === "dr14") {
+    return renderDr14SearchIntentContent(page);
   }
   if (page.slug === "pocidif-21") {
     return renderPocidif21Content(page);
@@ -2595,13 +2842,13 @@ ${CLARITY_TRACKING_CODE}
 `;
 }
 
-function ensureFile(page, html) {
+function ensureFile(page, html, { writeLegacy = true } = {}) {
   const normalizedHtml = normalizeHtmlCopy(html);
   const canonicalFile = path.join(ROOT, slugPath(page).slice(1), "index.html");
   fs.mkdirSync(path.dirname(canonicalFile), { recursive: true });
   fs.writeFileSync(canonicalFile, normalizedHtml, "utf8");
 
-  if (/\.html$/i.test(page.output) && !/\/index\.html$/i.test(page.output.replace(/\\/g, "/"))) {
+  if (writeLegacy && /\.html$/i.test(page.output) && !/\/index\.html$/i.test(page.output.replace(/\\/g, "/"))) {
     const legacyFile = path.join(ROOT, page.output);
     fs.mkdirSync(path.dirname(legacyFile), { recursive: true });
     fs.writeFileSync(legacyFile, normalizedHtml, "utf8");
@@ -2820,10 +3067,23 @@ function updateLlms(pages) {
 
 function main() {
   const config = readJson(CONFIG_PATH);
-  const pages = (config.pages || []).filter((page) => !page.redirectTo);
+  const onlyArgument = process.argv.slice(2).find((argument) => argument.startsWith("--only="));
+  const onlySlugs = onlyArgument
+    ? new Set(onlyArgument.slice("--only=".length).split(",").map((slug) => slug.trim()).filter(Boolean))
+    : null;
+  const pages = (config.pages || []).filter((page) => !page.redirectTo && (!onlySlugs || onlySlugs.has(page.slug)));
+  if (onlySlugs && pages.length !== onlySlugs.size) {
+    const found = new Set(pages.map((page) => page.slug));
+    const missing = [...onlySlugs].filter((slug) => !found.has(slug));
+    throw new Error(`Unknown or redirected --only slug(s): ${missing.join(", ")}`);
+  }
   for (const page of pages) {
     validatePage(page);
-    ensureFile(page, pageHtml(page, config));
+    ensureFile(page, pageHtml(page, config), { writeLegacy: !onlySlugs });
+  }
+  if (onlySlugs) {
+    console.log(`Generated ${pages.length} selected canonical SEO page(s): ${[...onlySlugs].join(", ")}.`);
+    return;
   }
   updateSitemap(pages, config);
   updateRedirects(pages);

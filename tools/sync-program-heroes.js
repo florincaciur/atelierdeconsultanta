@@ -190,7 +190,7 @@ function renderProgramHero({ route, banner, existing = {}, actionsHtml }) {
       }
     : {
         tag: banner.tag || existing.tag || banner.subtitle || "Program de finanțare",
-        title: banner.title || existing.title,
+        title: banner.pageTitle || banner.title || existing.title,
         description: banner.description || banner.subtitle || existing.description
       };
   const finalActions = ensureHeroActions(normalizedRoute, banner, actionsHtml || existing.actionsHtml);

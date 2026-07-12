@@ -100,7 +100,7 @@ function verifyStaticPage(route, bannerIndex) {
   const expectedIcon = iconClass(route === "/pro-infra" ? PRO_INFRA_REFERENCE.icon : banner.icon);
   if (actualIcon !== expectedIcon) fail(route, `icon differs: ${actualIcon} != ${expectedIcon}`);
 
-  const expectedTitle = route === "/pro-infra" ? PRO_INFRA_REFERENCE.title : banner.title;
+  const expectedTitle = route === "/pro-infra" ? PRO_INFRA_REFERENCE.title : (banner.pageTitle || banner.title);
   const expectedDescription = route === "/pro-infra"
     ? PRO_INFRA_REFERENCE.description
     : (banner.description || banner.subtitle);
