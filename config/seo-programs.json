@@ -2367,15 +2367,17 @@
       "type": "program",
       "schemaType": "GovernmentService",
       "category": "AFIR energie",
-      "title": "AFIR autoconsum agroalimentar | panouri fotovoltaice și fonduri AFIR",
-      "description": "AFIR autoconsum agroalimentar: fonduri AFIR pentru panouri fotovoltaice în ferme și procesare, cu eligibilitate, valori pe MW și documente.",
-      "h1": "AFIR Autoconsum Agroalimentar – energie regenerabilă pentru ferme și procesatori",
-      "quickAnswer": "AFIR Autoconsum Agroalimentar susține investiții fotovoltaice pentru autoconsum în ferme, procesare agroalimentară și organizații eligibile din sector. Scopul este reducerea costurilor cu energia prin capacități noi de producere a energiei solare, cu sau fără stocare, dimensionate după consumul real. Valorile maxime, intensitatea și calendarul se confirmă în ghidul activ și în comunicările AFIR/MADR.",
+      "title": "AFIR Autoconsum 2026: fotovoltaice și stocare | FABER",
+      "description": "AFIR Autoconsum 2026: Ghidul V7 pentru capacități solare noi, autoconsum, stocare, beneficiari, CAEN, documente, selecție și plată.",
+      "h1": "AFIR Autoconsum Agroalimentar 2026 – energie solară pentru ferme și procesatori",
+      "quickAnswer": "Schema ENERGIE finanțează capacități noi de producere a energiei electrice din sursă solară pentru autoconsumul întreprinderilor din agricultură și industria alimentară, cu sau fără stocare. La 13 iulie 2026, reperul aplicabil este Ghidul Solicitantului V7, aprobat prin Ordinul MADR nr. 180/09.06.2026 pentru sesiunea 15 iunie–14 august 2026, nu versiunea publicată anterior în consultare. Sunt eligibile întreprinderi agricole, întreprinderi din industria alimentară și OUAI/FOUAI, în condițiile ghidului. Proiectul trebuie să propună o capacitate nouă, să asigure minimum 70% autoconsum și să fie dimensionat prin studiul de fezabilitate pe baza consumului justificat. Sprijinul este de 100% din costurile eligibile, în limitele pe MW și ale plafonului per beneficiar prevăzute de V7.",
+      "updatedAt": "2026-07-13",
+      "lastVerifiedAt": "2026-07-13",
       "programName": "AFIR Autoconsum Agroalimentar",
-      "policyContribution": "schema susține reducerea costurilor energetice și cresterea utilizarii energiei regenerabile în lantul agroalimentar.",
-      "funding": "schema poate ajunge până la 20 milioane euro per beneficiar, cu valori orientative de 650.000 euro/MW pentru capacități instalate mai mici sau egale cu 1 MW și 550.000 euro/MW pentru capacități peste 1 MW, conform comunicatului AFIR consultat; cifrele se confirmă în apelul activ.",
-      "minWords": 900,
-      "minFaq": 6,
+      "policyContribution": "schema susține capacități solare noi pentru autoconsum și reducerea emisiilor în sectorul agricol și industria alimentară.",
+      "funding": "Ghidul V7 prevede 100% din costurile eligibile, în limita a 650.000 euro/MW pentru capacități instalate de până la 1 MW inclusiv, 550.000 euro/MW pentru capacități mai mari de 1 MW și maximum 20 milioane euro pe beneficiar.",
+      "minWords": 2200,
+      "minFaq": 8,
       "hideFamilyCards": true,
       "audience": [
         "ferme și procesatori agroalimentari",
@@ -2441,37 +2443,47 @@
       "faq": [
         [
           "Cine poate aplica la AFIR Autoconsum Agroalimentar?",
-          "Pot aplica beneficiarii din sectorul agricol sau al industriei alimentare care se încadrează în ghid, au activități relevante și pot documenta consumul."
+          "Pot aplica întreprinderile din sectorul agricol, întreprinderile din industria alimentară și organizațiile sau federațiile de organizații din domeniul îmbunătățirilor funciare, OUAI/FOUAI, în condițiile Ghidului V7."
         ],
         [
-          "Ce înseamnă autoconsum pentru o fermă sau un procesator?",
-          "Autoconsumul înseamnă folosirea energiei produse de sistemul fotovoltaic pentru activitatea proprie, pe baza consumului și a punctului de consum documentat."
+          "Care este statusul Ghidului Solicitantului V7?",
+          "Ghidul V7 este aprobat prin Ordinul MADR nr. 180 din 9 iunie 2026 și este aplicabil sesiunii deschise între 15 iunie și 14 august 2026. Pagina nu tratează varianta consultativă din aprilie drept document final."
         ],
         [
-          "Care este valoarea maximă orientativă?",
-          "Comunicarea AFIR indică o limită de 20 milioane euro per beneficiar, cu valori pe MW diferite în funcție de capacitate; ghidul activ rămâne sursa finală."
+          "Ce procent de autoconsum trebuie demonstrat?",
+          "Ghidul V7 cere ca autoconsumul să reprezinte minimum 70% din producția anuală a centralei finanțate, pentru activitățile eligibile CAEN 01, 10 și 11 și, după caz, pentru activitatea OUAI/FOUAI."
         ],
         [
           "Sunt eligibile bateriile de stocare?",
-          "Stocarea poate fi inclusă doar dacă ghidul activ o permite și dacă este legată de capacitatea nouă de producere a energiei."
+          "Da, proiectul poate include stocare împreună cu o capacitate solară nouă. Stocarea singură nu este eligibilă, cel puțin 75% din energia stocată trebuie să provină din instalația proprie, iar capacitatea bateriilor nu poate depăși capacitatea totală de producere prevăzută de proiect."
         ],
         [
-          "Ce documente sunt sensibile?",
-          "Sunt sensibile documentele de consum, dreptul asupra amplasamentului, codurile CAEN, soluția tehnică, racordarea, avizele și ofertele."
+          "Cum se justifică dimensionarea sistemului fotovoltaic?",
+          "Studiul de fezabilitate folosește ultimele 12 facturi pentru consumatorii activi. Pentru activități sau consumatori viitori, estimarea trebuie susținută prin contracte, facturi, intabulare, liste de echipamente, bilanț energetic ori alte documente acceptate de ghid."
         ],
         [
-          "Ce riscuri apar cel mai des?",
-          "Cele mai frecvente riscuri sunt supradimensionarea capacității, achizițiile premature, lipsa avizelor și costurile care nu susțin autoconsumul."
+          "Care sunt valorile maxime ale sprijinului?",
+          "Ghidul V7 prevede 650.000 euro/MW până la 1 MW inclusiv, 550.000 euro/MW peste 1 MW și un plafon de maximum 20 milioane euro pe beneficiar, în limita costurilor eligibile."
+        ],
+        [
+          "Poate proiectul să funcționeze off-grid?",
+          "Da. Descrierea investiției și studiul de fezabilitate trebuie să precizeze și să justifice conectarea la rețea sau funcționarea off-grid. Pentru proiectele conectate, racordarea și poziția echipamentelor influențează eligibilitatea unor costuri."
+        ],
+        [
+          "Ce mecanisme de plată sunt prevăzute?",
+          "V7 prevede prefinanțare de maximum 30% cu garanția cerută, mecanismul cererii de plată și rambursarea cheltuielilor efectuate, toate conform contractului, graficului de plăți și instrucțiunilor AFIR."
         ]
       ],
       "related": [
+        "/fondul-de-modernizare",
         "/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum",
         "/finantari-panouri-fotovoltaice",
         "/fonduri-europene-agricultura",
         "/contact"
       ],
       "sourceKeys": [
-        "afir-autoconsum"
+        "afir-autoconsum",
+        "afir-autoconsum-session-2026"
       ],
       "heroIcon": "ph-duotone ph-sun",
       "officialGuideKey": "afir-autoconsum",
