@@ -13,6 +13,13 @@ const BLOG_JSON_PATH = path.join(ROOT, "blog.json");
 const BANNERS_PATH = path.join(ROOT, "banners.json");
 const LLMS_PATH = path.join(ROOT, "llms.txt");
 const {
+  bannerForRoute,
+  createBannerIndex,
+  loadBanners,
+  renderProgramHero
+} = require("./sync-program-heroes");
+const PROGRAM_BANNER_INDEX = createBannerIndex(loadBanners(BANNERS_PATH));
+const {
   editorialSchemaProperties,
   getEditorialMetadata,
   renderEditorialSection
@@ -2471,6 +2478,8 @@ ${officialSourcesHtml}
 function pageHtml(page, config) {
   const metadata = metadataForPage(page);
   const family = designFamilyFor(page);
+  const route = slugPath(page);
+  const programBanner = bannerForRoute(route, PROGRAM_BANNER_INDEX);
   const relatedCss = (page.related || []).length ? `\n  <link rel="stylesheet" href="/assets/see-also.css" />` : "";
   const toolCss = page.includeTools || page.includeDownloads ? `\n  <link rel="stylesheet" href="/assets/seo-tools.css" />` : "";
   const sourcesCss = (page.sourceKeys || []).length ? `\n  <link rel="stylesheet" href="/assets/official-sources.css" />` : "";
@@ -2478,6 +2487,28 @@ function pageHtml(page, config) {
   const extraJs = page.includeTools ? `\n  <script src="/assets/seo-tools.js" defer></script>` : "";
   const primaryCta = heroPrimaryCtaFor(page);
   const secondaryCta = heroSecondaryCta(page);
+  const heroActionsHtml = renderHeroActions(page, primaryCta, secondaryCta);
+  const programHeroHtml = programBanner
+    ? renderProgramHero({
+        route,
+        banner: programBanner,
+        existing: {
+          tag: heroBadgeFor(page),
+          title: page.h1,
+          description: page.description
+        },
+        actionsHtml: heroActionsHtml
+      })
+    : `<header ${heroAttrs(page)}>
+    <span class="hero-icon" aria-hidden="true"><i class="${esc(heroIconFor(page))}"></i></span>
+    <span class="eyebrow design-badge design-badge--${esc(family)}">${esc(heroBadgeFor(page))}</span>
+    <h1>${esc(page.h1)}</h1>
+    <p>${esc(page.description)}</p>
+    <div class="hero-actions">
+      ${heroActionsHtml}
+    </div>
+    ${renderHeroSummary(page)}
+  </header>`;
   const finalCtaTitle = page.finalCtaTitle || (family === "editorial" ? "Verificare discreta pe cazul tau" : family === "trust" ? "Ai un caz asemanator?" : "Urmatorul pas");
   const finalCtaText = page.finalCtaText || (isEditorialProgram(page)
     ? "Trimite-ne codul CAEN / tipul fermei / investi\u021bia dorit\u0103 pentru verificarea eligibilit\u0103\u021bii."
@@ -2514,20 +2545,12 @@ function pageHtml(page, config) {
   <script type="application/ld+json">${schemaGraph(page, config, metadata)}</script>${extraJs}
 ${CLARITY_TRACKING_CODE}
   <link rel="stylesheet" href="/assets/design-profiles.css">
+${programBanner ? "  <link rel=\"stylesheet\" href=\"/assets/program-heroes.css\">" : ""}
 </head>
 <body class="page-family-${esc(family)}">
   ${GLOBAL_HEADER}
   ${renderBreadcrumb(breadcrumbItemsForPage(page))}
-  <header ${heroAttrs(page)}>
-    <span class="hero-icon" aria-hidden="true"><i class="${esc(heroIconFor(page))}"></i></span>
-    <span class="eyebrow design-badge design-badge--${esc(family)}">${esc(heroBadgeFor(page))}</span>
-    <h1>${esc(page.h1)}</h1>
-    <p>${esc(page.description)}</p>
-    <div class="hero-actions">
-      ${renderHeroActions(page, primaryCta, secondaryCta)}
-    </div>
-    ${renderHeroSummary(page)}
-  </header>
+  ${programHeroHtml}
   <main class="container">
     <article class="panel">
 ${page.hideFamilyCards ? "" : renderFamilyCards(page)}
@@ -2809,4 +2832,6 @@ function main() {
   console.log(`Generated ${pages.length} SEO program, hub and resource pages.`);
 }
 
-main();
+if (require.main === module) main();
+
+module.exports = { pageHtml };

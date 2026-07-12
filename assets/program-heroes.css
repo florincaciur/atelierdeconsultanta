@@ -1,0 +1,56 @@
+/* Static program heroes synchronized from banners.json. */
+.program-hero[data-program-family="generic"] {
+  background:
+    linear-gradient(135deg, rgba(13,31,60,.88) 0%, rgba(26,58,106,.76) 100%),
+    var(--hero-image),
+    linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%) !important;
+}
+
+.program-hero[data-program-family="afir"] {
+  background:
+    linear-gradient(135deg, rgba(11,56,38,.9) 0%, rgba(18,76,54,.76) 100%),
+    var(--hero-image),
+    linear-gradient(135deg, #0d1f3c 0%, #143d2d 100%) !important;
+}
+
+.program-hero[data-program-family="digital"] {
+  background:
+    linear-gradient(135deg, rgba(11,36,66,.9) 0%, rgba(18,85,112,.72) 100%),
+    var(--hero-image),
+    linear-gradient(135deg, #0d1f3c 0%, #164e63 100%) !important;
+}
+
+.program-hero[data-program-family="gal"] {
+  background:
+    linear-gradient(135deg, rgba(45,59,25,.9) 0%, rgba(81,93,37,.72) 100%),
+    var(--hero-image),
+    linear-gradient(135deg, #0d1f3c 0%, #3f4b1f 100%) !important;
+}
+
+.program-hero[data-program-family="startup"] {
+  background:
+    linear-gradient(135deg, rgba(74,38,18,.9) 0%, rgba(132,66,29,.74) 100%),
+    var(--hero-image),
+    linear-gradient(135deg, #0d1f3c 0%, #6a2f14 100%) !important;
+}
+
+.program-hero[data-program-family="energy"] {
+  background:
+    linear-gradient(135deg, rgba(34,58,72,.9) 0%, rgba(60,94,112,.72) 100%),
+    var(--hero-image),
+    linear-gradient(135deg, #0d1f3c 0%, #31576a 100%) !important;
+}
+
+.program-hero[data-program-family="afir"] .design-badge { background: #1f7a4d; }
+.program-hero[data-program-family="digital"] .design-badge { background: #146b8a; }
+.program-hero[data-program-family="gal"] .design-badge { background: #64742b; }
+.program-hero[data-program-family="startup"] .design-badge { background: #b65b21; }
+.program-hero[data-program-family="energy"] .design-badge { background: #3b758d; }
+
+.program-hero h1,
+.program-hero p { overflow-wrap: anywhere; }
+
+@media (max-width: 760px) {
+  .program-hero h1 { text-wrap: balance; }
+  .program-hero .hero-actions { width: 100%; }
+}
