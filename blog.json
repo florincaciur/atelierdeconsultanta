@@ -450,9 +450,9 @@
       "metaTitle": "DR14 AFIR ferme mici | ghid AFIR",
       "metaDescription": "DR14 AFIR ferme mici: documente AFIR, SO/SOC, eligibilitate, investitii, cofinantare si riscuri de verificat inainte de depunere.",
       "excerpt": "DR14 AFIR ferme mici: documente AFIR, SO/SOC, eligibilitate, investitii, cofinantare si riscuri de verificat inainte de depunere.",
-      "content": "<p>Articol static publicat la /dr14-afir-ferme-mici.</p>",
-      "status": "published",
-      "published": true,
+      "content": "<p>Rută consolidată în pagina canonică /dr14.</p>",
+      "status": "redirected",
+      "published": false,
       "primaryKeyword": "DR14 AFIR ferme mici",
       "secondaryKeywords": [
         "DR 14 AFIR",
@@ -486,7 +486,7 @@
       "category": "AFIR",
       "readTime": 9,
       "icon": "DR14",
-      "canonicalUrl": "https://atelierdeconsultanta.ro/dr14-afir-ferme-mici",
+      "canonicalUrl": "https://atelierdeconsultanta.ro/dr14",
       "internalLinks": [
         "/consultanta-afir",
         "/fonduri-pentru-ferme",

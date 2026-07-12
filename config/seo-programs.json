@@ -606,6 +606,7 @@
     {
       "slug": "dr14-afir-ferme-mici",
       "output": "dr14-afir-ferme-mici.html",
+      "redirectTo": "/dr14",
       "type": "program",
       "schemaType": "GovernmentService",
       "template": "editorial-program",

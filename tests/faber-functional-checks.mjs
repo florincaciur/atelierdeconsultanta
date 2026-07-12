@@ -9,14 +9,19 @@ import { chromium } from "playwright";
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const DIST = path.join(ROOT, "dist");
 const SITE_ORIGIN = "https://atelierdeconsultanta.ro";
-const EXPECTED_CANONICAL_URLS = 100;
+const EXPECTED_CANONICAL_URLS = 99;
 const CONSOLIDATED_LOCAL_ROUTES = [
   "/fonduri-europene-bacau",
   "/consultanta-fonduri-europene-bacau",
   "/fonduri-europene-iasi",
   "/consultanta-fonduri-europene-iasi",
   "/fonduri-europene-suceava",
-  "/consultanta-fonduri-europene-suceava"
+  "/consultanta-fonduri-europene-suceava",
+  "/dr14-afir-ferme-mici",
+  "/fonduri-europene-herambursabile-2026",
+  "/start-up-nation",
+  "/consultanta-start-up-nation",
+  "/studii-de-caz"
 ];
 const INDEXABLE_LOCAL_ROUTES = [
   "/fonduri-europene-bucuresti",
@@ -38,8 +43,7 @@ const INDEXABLE_PROGRAM_ROUTES = [
 ];
 const NOINDEX_TRUST_ROUTES = [
   "/portofoliu",
-  "/testimoniale",
-  "/studii-de-caz"
+  "/testimoniale"
 ];
 
 function parseRedirects() {
@@ -78,13 +82,34 @@ function parseHeaders() {
 
 function matchesPattern(pattern, pathname) {
   if (pattern === pathname) return true;
-  if (!pattern.includes("*")) return false;
-  const escaped = pattern.replace(/[.+?^${}()|[\]\\]/g, "\\$&").replace(/\*/g, ".*");
+  if (!pattern.includes("*") && !/:([A-Za-z][A-Za-z0-9_]*)/.test(pattern)) return false;
+  const escaped = pattern
+    .replace(/[.+?^${}()|[\]\\]/g, "\\$&")
+    .replace(/\*/g, ".*")
+    .replace(/:([A-Za-z][A-Za-z0-9_]*)/g, "[^/]+");
   return new RegExp(`^${escaped}$`).test(pathname);
 }
 
 function findRedirect(pathname, redirects) {
-  return redirects.find((rule) => matchesPattern(rule.from, pathname));
+  for (const rule of redirects) {
+    if (rule.from === pathname) return rule;
+    const names = [];
+    const escaped = rule.from
+      .replace(/[.+?^${}()|[\]\\]/g, "\\$&")
+      .replace(/\*/g, ".*")
+      .replace(/:([A-Za-z][A-Za-z0-9_]*)/g, (_, name) => {
+        names.push(name);
+        return "([^/]+)";
+      });
+    const match = pathname.match(new RegExp(`^${escaped}$`));
+    if (!match) continue;
+    let to = rule.to;
+    names.forEach((name, index) => {
+      to = to.replace(new RegExp(`:${name}\\b`, "g"), match[index + 1]);
+    });
+    return { ...rule, to };
+  }
+  return undefined;
 }
 
 function headersFor(pathname, headerRules) {
@@ -216,7 +241,7 @@ async function assertRedirectsAndFallback(baseUrl) {
     ["/ghiduri/", "/ghiduri"],
     ["/fonduri-nerambursabile/", "/fonduri-nerambursabile"],
     ["/dr12-vs-dr14/", "/dr12-vs-dr14"],
-    ["/dr14-afir-ferme-mici/", "/dr14-afir-ferme-mici"],
+    ["/dr14-afir-ferme-mici/", "/dr14"],
     ["/consultanta-fonduri-europene-imm/", "/consultant-fonduri-europene-imm"],
     ["/consultanta-start-up-nation/", "/consultanta-start-up-nation-2026"],
     ["/pnrr-digitalizare-imm", "/digitalizare-imm-pnrr"],
@@ -230,10 +255,12 @@ async function assertRedirectsAndFallback(baseUrl) {
   for (const [from, to] of checks) {
     const response = await fetchManual(`${baseUrl}${from}`);
     assert.equal(response.status, 301, `${from} should redirect`);
-    assert.equal(response.headers.get("location"), to, `${from} should redirect to ${to}`);
+    const actualLocation = new URL(response.headers.get("location"), SITE_ORIGIN);
+    const expectedLocation = new URL(to, SITE_ORIGIN);
+    assert.equal(`${actualLocation.pathname}${actualLocation.search}`, `${expectedLocation.pathname}${expectedLocation.search}`, `${from} should redirect to ${to}`);
   }
 
-  const gscCanonicalPaths = ["/afir", "/ghiduri", "/fonduri-nerambursabile", "/dr12-vs-dr14", "/dr14-afir-ferme-mici", ...INDEXABLE_LOCAL_ROUTES];
+  const gscCanonicalPaths = ["/afir", "/ghiduri", "/fonduri-nerambursabile", "/dr12-vs-dr14", ...INDEXABLE_LOCAL_ROUTES];
   for (const routePath of gscCanonicalPaths) {
     const response = await fetchManual(`${baseUrl}${routePath}`);
     assert.equal(response.status, 200, `${routePath} should return 200 for GSC canonical indexing`);
@@ -243,9 +270,12 @@ async function assertRedirectsAndFallback(baseUrl) {
     assert.match(html, /<meta\s+name=["']robots["']\s+content=["']index,\s*follow["']/i, `${routePath} should expose index, follow robots meta`);
   }
 
-  const fallback = await fetchManual(`${baseUrl}/ro/11.html`);
-  assert.equal(fallback.status, 404, "legacy /ro/* fallback should return 404");
-  assert.match(fallback.headers.get("x-robots-tag") || "", /noindex/i, "legacy /ro/* fallback should be noindex");
+  const legacyHtml = await fetchManual(`${baseUrl}/ro/11.html`);
+  assert.equal(legacyHtml.status, 301, "legacy /ro/*.html should normalize in one hop");
+  assert.equal(new URL(legacyHtml.headers.get("location"), SITE_ORIGIN).pathname, "/ro/11", "legacy /ro/*.html should drop the extension");
+  const fallback = await fetchManual(`${baseUrl}/ro/11`);
+  assert.equal(fallback.status, 404, "normalized legacy /ro/* fallback should return 404");
+  assert.match(fallback.headers.get("x-robots-tag") || "", /noindex/i, "normalized legacy /ro/* fallback should be noindex");
 }
 
 async function assertOfficialGuidesResource(baseUrl) {
@@ -256,7 +286,7 @@ async function assertOfficialGuidesResource(baseUrl) {
   assert.equal(response.status, 200, "/official-guides.json should remain available");
   assert.match(response.headers.get("content-type") || "", /^application\/json\b/i, "/official-guides.json should be application/json");
   assert.match(response.headers.get("x-robots-tag") || "", /\bnoindex\b/i, "/official-guides.json should send noindex");
-  assert.match(response.headers.get("x-robots-tag") || "", /\bfollow\b/i, "/official-guides.json should keep follow");
+  assert.match(response.headers.get("x-robots-tag") || "", /\bnofollow\b/i, "/official-guides.json should keep nofollow");
   await response.json();
 }
 

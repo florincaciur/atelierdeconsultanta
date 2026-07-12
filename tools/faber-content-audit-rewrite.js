@@ -34,7 +34,6 @@ const MINIMUM_ROUTES = [
   "/afir-autoconsum-agroalimentar",
   "/autoconsum-public-fotovoltaice-institutii-publice",
   "/dr14",
-  "/dr14-afir-ferme-mici",
   "/digitalizare-imm",
   "/femeia-antreprenor-2026",
   "/gal-afir",
@@ -257,7 +256,7 @@ const PROGRAM_OVERRIDES = {
         paragraphs: [
           "Un rezultat orientativ din calculator nu este suficient. Datele trebuie susținute prin documente APIA, ANSVSA, registru agricol sau alte dovezi cerute de ghid."
         ],
-        links: [{ href: "/calculator-soc", label: "Calculator SO/SOC" }, { href: "/dr14-afir-ferme-mici", label: "Checklist DR14 ferme mici" }]
+        links: [{ href: "/calculator-soc", label: "Calculator SO/SOC" }, { href: "/dr14", label: "Checklist DR14 ferme mici" }]
       }
     ],
     finalCtaText: "Trimite structura fermei, SO/SOC, documentele exploatației, investiția și bugetul ca să verificăm dacă DR14 merită pregătit."

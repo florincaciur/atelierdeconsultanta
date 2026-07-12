@@ -1,6 +1,24 @@
 # Canonical URL policy: HTTPS, no .html, no trailing slash except homepage.
 # Specific legacy aliases stay above the global normalizers so every source resolves in one hop.
-/index.html https://atelierdeconsultanta.ro/ 301
+/index.html / 301
+
+# GSC canonical consolidation: primary DR12, DR14, POR and AFIR program routes.
+/dr12-afir.html https://atelierdeconsultanta.ro/dr12-afir 301
+/dr12-afir/index.html https://atelierdeconsultanta.ro/dr12-afir 301
+/dr14.html https://atelierdeconsultanta.ro/dr14 301
+/dr14/index.html https://atelierdeconsultanta.ro/dr14 301
+/dr14-afir-ferme-mici https://atelierdeconsultanta.ro/dr14 301
+/dr14-afir-ferme-mici/ https://atelierdeconsultanta.ro/dr14 301
+/dr14-afir-ferme-mici.html https://atelierdeconsultanta.ro/dr14 301
+/dr14-afir-ferme-mici/index.html https://atelierdeconsultanta.ro/dr14 301
+/por-adr-nord-est.html https://atelierdeconsultanta.ro/por-adr-nord-est 301
+/afir-autoconsum-agroalimentar.html https://atelierdeconsultanta.ro/afir-autoconsum-agroalimentar 301
+
+# Retired public folders. Their canonical equivalents remain indexable.
+/studii-de-caz https://atelierdeconsultanta.ro/studii-de-caz-fonduri-europene 301
+/studii-de-caz/ https://atelierdeconsultanta.ro/studii-de-caz-fonduri-europene 301
+/studii-de-caz.html https://atelierdeconsultanta.ro/studii-de-caz-fonduri-europene 301
+/studii-de-caz/index.html https://atelierdeconsultanta.ro/studii-de-caz-fonduri-europene 301
 
 # Legacy aliases and consolidated routes.
 /calculator-so-afir https://atelierdeconsultanta.ro/calculator-soc 301

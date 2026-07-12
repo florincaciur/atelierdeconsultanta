@@ -74,7 +74,7 @@ const modules = [
   ], ["Include carduri pe tip de beneficiar.", "Trimite DR12 și DR14 către paginile lor principale.", "Păstrează calculatorul SO/SOC ca sprijin, nu verdict.", "Leagă toate paginile AFIR către sursele oficiale."], [
     CTA,
     { href: "/dr12-afir", label: "DR12 AFIR" },
-    { href: "/dr14-afir-ferme-mici", label: "DR14 ferme mici" }
+    { href: "/dr14", label: "DR14 ferme mici" }
   ]),
   moduleFor("dr12-afir/index.html", "dr12-afir", "Checklist DR12 înainte de dosar", "DR12 se verifică prin date concrete despre solicitant și exploatație, nu doar prin dorința de instalare sau vârsta beneficiarului.", [
     ["Solicitant", "Vârstă, formă juridică, rol în exploatație și documente de control."],
@@ -98,9 +98,9 @@ const modules = [
     ["Intenție", "Utilizatorul caută rapid condiții DR14, nu un articol lung despre toate greșelile."],
     ["Traseu", "Pagina scurtă trimite către checklistul DR14 ferme mici și calculatorul SO/SOC."],
     ["Conversie", "CTA-ul trebuie să ceară datele exploatației înainte de buget."]
-  ], ["Menține self-canonical pe `/dr14`.", "Leagă explicit către `/dr14-afir-ferme-mici`.", "Explică diferența dintre pagina program și articolul de greșeli.", "Păstrează termenii calcul SO/SOC aproape de DR14."], [
+  ], ["Menține self-canonical pe `/dr14`.", "Leagă explicit către `/dr14`.", "Explică diferența dintre pagina program și articolul de greșeli.", "Păstrează termenii calcul SO/SOC aproape de DR14."], [
     CTA,
-    { href: "/dr14-afir-ferme-mici", label: "Checklist DR14 ferme mici" },
+    { href: "/dr14", label: "Checklist DR14 ferme mici" },
     { href: "/calculator-soc", label: "Calculator SO/SOC" }
   ]),
   moduleFor("calculator-soc.html", "calculator-soc", "Calculatorul SO/SOC este prioritatea GSC numărul 1", "Exportul Performance arată cele mai mari oportunități pe `calculator-soc`, `calcul so AFIR 2026` și variații pentru animale/vegetal. Pagina trebuie să explice calculul, limitele și următorul pas către DR12/DR14.", [
@@ -118,7 +118,7 @@ const modules = [
     ["Buget", "Achiziții greu de justificat sau disproporționate față de fermă."]
   ], ["Canonical și link intern către pagina principală DR14.", "Evită același H1 cu pagina principală.", "Adaugă exemple concrete de erori.", "Trimite cititorul către verificarea eligibilității."], [
     CTA,
-    { href: "/dr14-afir-ferme-mici", label: "Pagina principală DR14" },
+    { href: "/dr14", label: "Pagina principală DR14" },
     { href: "/calculator-soc", label: "Calculator SO/SOC" }
   ]),
   moduleFor("blog-afir-fotovoltaice-ferme-2026.html", "afir-fotovoltaice-ferme", "Autoconsum AFIR explicat pe flux", "Articolul trebuie să arate diferența dintre proiect energetic generic și proiect pentru autoconsum justificat prin activitatea agricolă sau alimentară.", [

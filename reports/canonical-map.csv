@@ -1,0 +1,218 @@
+source_path,canonical_path,http_status,action,in_sitemap,indexability,internal_links_to_source,reason
+/,/,200,keep,yes,"index, follow",320,URL self-canonical din sitemap
+/:section/:category/:slug.html,https://atelierdeconsultanta.ro/:section/:category/:slug,301,normalize,no,not applicable,0,Regulă globală de normalizare URL
+/:section/:category/:slug/,https://atelierdeconsultanta.ro/:section/:category/:slug,301,normalize,no,not applicable,0,Regulă globală de normalizare URL
+/:section/:category/:slug/index.html,https://atelierdeconsultanta.ro/:section/:category/:slug,301,normalize,no,not applicable,0,Regulă globală de normalizare URL
+/:section/:slug.html,https://atelierdeconsultanta.ro/:section/:slug,301,normalize,no,not applicable,0,Regulă globală de normalizare URL
+/:section/:slug/,https://atelierdeconsultanta.ro/:section/:slug,301,normalize,no,not applicable,0,Regulă globală de normalizare URL
+/:section/:slug/index.html,https://atelierdeconsultanta.ro/:section/:slug,301,normalize,no,not applicable,0,Regulă globală de normalizare URL
+/:slug.html,https://atelierdeconsultanta.ro/:slug,301,normalize,no,not applicable,0,Regulă globală de normalizare URL
+/:slug/,https://atelierdeconsultanta.ro/:slug,301,normalize,no,not applicable,0,Regulă globală de normalizare URL
+/:slug/index.html,https://atelierdeconsultanta.ro/:slug,301,normalize,no,not applicable,0,Regulă globală de normalizare URL
+/acte-necesare-fonduri-europene-nerambursabile,/acte-necesare-fonduri-europene-nerambursabile,200,keep,yes,"index, follow",11,URL self-canonical din sitemap
+/afir,/afir,200,keep,yes,"index, follow",35,URL self-canonical din sitemap
+/afir-autoconsum-agroalimentar,/afir-autoconsum-agroalimentar,200,keep,yes,"index, follow",379,URL self-canonical din sitemap
+/afir-autoconsum-agroalimentar.html,/afir-autoconsum-agroalimentar,301,redirect,no,not applicable,0,Normalizare URL legacy AFIR Autoconsum
+/apeluri-gal,/apeluri-gal,200,keep,yes,"index, follow",7,URL self-canonical din sitemap
+/autoconsum-public-fotovoltaice-institutii-publice,/autoconsum-public-fotovoltaice-institutii-publice,200,keep,yes,"index, follow",358,URL self-canonical din sitemap
+/autoconsum-publici,/autoconsum-public-fotovoltaice-institutii-publice,301,redirect,no,not applicable,0,Alias legacy consolidat
+/autoconsum-publici.html,/autoconsum-public-fotovoltaice-institutii-publice,301,redirect,no,not applicable,0,Alias legacy consolidat
+/autoconsum-publici/,/autoconsum-public-fotovoltaice-institutii-publice,301,redirect,no,not applicable,0,Alias legacy consolidat
+/blog,/blog,200,keep,yes,"index, follow",27,URL self-canonical din sitemap
+/blog-afir-fotovoltaice-ferme-2026,/blog-afir-fotovoltaice-ferme-2026,200,keep,yes,"index, follow",1,URL self-canonical din sitemap
+/blog/safir-fotovoltaice-ferme-2026,/blog-afir-fotovoltaice-ferme-2026,301,redirect,no,not applicable,0,Alias legacy consolidat
+/blog/safir-fotovoltaice-ferme-2026.html,/blog-afir-fotovoltaice-ferme-2026,301,redirect,no,not applicable,0,Alias legacy consolidat
+/blog/safir-fotovoltaice-ferme-2026/,/blog-afir-fotovoltaice-ferme-2026,301,redirect,no,not applicable,0,Alias legacy consolidat
+/calculator-so-afir,/calculator-soc,301,redirect,no,not applicable,0,Alias legacy consolidat
+/calculator-so-afir.html,/calculator-soc,301,redirect,no,not applicable,0,Alias legacy consolidat
+/calculator-so-afir/,/calculator-soc,301,redirect,no,not applicable,0,Alias legacy consolidat
+/calculator-so-afir/index.html,/calculator-soc,301,redirect,no,not applicable,0,Alias legacy consolidat
+/calculator-soc,/calculator-soc,200,keep,yes,"index, follow",382,URL self-canonical din sitemap
+/calendar-fonduri-europene,/calendar-fonduri-europene,200,keep,yes,"index, follow",27,URL self-canonical din sitemap
+/cand-merita-consultant-fonduri-europene,/cand-merita-consultant-fonduri-europene,200,keep,yes,"index, follow",1,URL self-canonical din sitemap
+/cat-costa-consultanta-fonduri-europene,/cat-costa-consultanta-fonduri-europene,200,keep,yes,"index, follow",5,URL self-canonical din sitemap
+/cat-costa-consultanta-fonduri-europene-ghid,/cat-costa-consultanta-fonduri-europene-ghid,200,keep,yes,"index, follow",1,URL self-canonical din sitemap
+/ce-acte-sunt-necesare-fonduri-europene,/ce-acte-sunt-necesare-fonduri-europene,200,keep,yes,"index, follow",1,URL self-canonical din sitemap
+/cheltuieli-eligibile-digitalizare-imm,/cheltuieli-eligibile-digitalizare-imm,200,keep,yes,"index, follow",11,URL self-canonical din sitemap
+/cheltuieli-eligibile-startup-nation,/start-up-nation-2026-cheltuieli-eligibile,301,redirect,no,not applicable,0,Alias legacy consolidat
+/cheltuieli-eligibile-startup-nation.html,/start-up-nation-2026-cheltuieli-eligibile,301,redirect,no,not applicable,0,Alias legacy consolidat
+/cheltuieli-eligibile-startup-nation/,/start-up-nation-2026-cheltuieli-eligibile,301,redirect,no,not applicable,0,Alias legacy consolidat
+/cheltuieli-eligibile-startup-nation/index.html,/start-up-nation-2026-cheltuieli-eligibile,301,redirect,no,not applicable,0,Alias legacy consolidat
+/cod-caen-start-up-nation-2026,/cod-caen-start-up-nation-2026,200,keep,yes,"index, follow",13,URL self-canonical din sitemap
+/cod-caen-startup-nation,/cod-caen-start-up-nation-2026,301,redirect,no,not applicable,0,Alias legacy consolidat
+/cod-caen-startup-nation.html,/cod-caen-start-up-nation-2026,301,redirect,no,not applicable,0,Alias legacy consolidat
+/cod-caen-startup-nation/,/cod-caen-start-up-nation-2026,301,redirect,no,not applicable,0,Alias legacy consolidat
+/cod-caen-startup-nation/index.html,/cod-caen-start-up-nation-2026,301,redirect,no,not applicable,0,Alias legacy consolidat
+/consultant-fonduri-europene-imm,/consultant-fonduri-europene-imm,200,keep,yes,"index, follow",1,URL self-canonical din sitemap
+/consultanta-afir,/consultanta-afir,200,keep,yes,"index, follow",38,URL self-canonical din sitemap
+/consultanta-fonduri-europene,/consultanta-fonduri-europene,200,keep,yes,"index, follow",198,URL self-canonical din sitemap
+/consultanta-fonduri-europene-bacau,/fonduri-europene-nord-est,301,redirect,no,not applicable,0,Alias legacy consolidat
+/consultanta-fonduri-europene-bacau.html,/fonduri-europene-nord-est,301,redirect,no,not applicable,0,Alias legacy consolidat
+/consultanta-fonduri-europene-bacau/,/fonduri-europene-nord-est,301,redirect,no,not applicable,0,Alias legacy consolidat
+/consultanta-fonduri-europene-bacau/index.html,/fonduri-europene-nord-est,301,redirect,no,not applicable,0,Alias legacy consolidat
+/consultanta-fonduri-europene-bucuresti,/consultanta-fonduri-europene-bucuresti,200,keep,yes,"index, follow",3,URL self-canonical din sitemap
+/consultanta-fonduri-europene-iasi,/fonduri-europene-nord-est,301,redirect,no,not applicable,0,Alias legacy consolidat
+/consultanta-fonduri-europene-iasi.html,/fonduri-europene-nord-est,301,redirect,no,not applicable,0,Alias legacy consolidat
+/consultanta-fonduri-europene-iasi/,/fonduri-europene-nord-est,301,redirect,no,not applicable,0,Alias legacy consolidat
+/consultanta-fonduri-europene-iasi/index.html,/fonduri-europene-nord-est,301,redirect,no,not applicable,0,Alias legacy consolidat
+/consultanta-fonduri-europene-imm,/consultant-fonduri-europene-imm,301,redirect,no,not applicable,0,Alias legacy consolidat
+/consultanta-fonduri-europene-imm.html,/consultant-fonduri-europene-imm,301,redirect,no,not applicable,0,Alias legacy consolidat
+/consultanta-fonduri-europene-imm/,/consultant-fonduri-europene-imm,301,redirect,no,not applicable,0,Alias legacy consolidat
+/consultanta-fonduri-europene-suceava,/fonduri-europene-nord-est,301,redirect,no,not applicable,0,Alias legacy consolidat
+/consultanta-fonduri-europene-suceava.html,/fonduri-europene-nord-est,301,redirect,no,not applicable,0,Alias legacy consolidat
+/consultanta-fonduri-europene-suceava/,/fonduri-europene-nord-est,301,redirect,no,not applicable,0,Alias legacy consolidat
+/consultanta-fonduri-europene-suceava/index.html,/fonduri-europene-nord-est,301,redirect,no,not applicable,0,Alias legacy consolidat
+/consultanta-pnrr-digitalizare,/consultanta-pnrr-digitalizare,200,keep,yes,"index, follow",30,URL self-canonical din sitemap
+/consultanta-start-up-nation,/consultanta-start-up-nation-2026,301,redirect,no,not applicable,0,Folder legacy consolidat către pagina echivalentă
+/consultanta-start-up-nation-2026,/consultanta-start-up-nation-2026,200,keep,yes,"index, follow",36,URL self-canonical din sitemap
+/consultanta-start-up-nation.html,/consultanta-start-up-nation-2026,301,redirect,no,not applicable,0,Folder legacy consolidat către pagina echivalentă
+/consultanta-start-up-nation/,/consultanta-start-up-nation-2026,301,redirect,no,not applicable,0,Folder legacy consolidat către pagina echivalentă
+/consultanta-start-up-nation/index.html,/consultanta-start-up-nation-2026,301,redirect,no,not applicable,0,Folder legacy consolidat către pagina echivalentă
+/contact,/contact,200,keep,yes,"index, follow",293,URL self-canonical din sitemap
+/cum-alegi-consultant-fonduri-europene,/cum-alegi-consultant-fonduri-europene,200,keep,yes,"index, follow",3,URL self-canonical din sitemap
+/cum-alegi-programul-potrivit-fonduri-europene-2026,/cum-alegi-programul-potrivit-fonduri-europene-2026,200,keep,yes,"index, follow",2,URL self-canonical din sitemap
+/cum-se-calculeaza-cofinantarea-fonduri-europene,/cum-se-calculeaza-cofinantarea-fonduri-europene,200,keep,yes,"index, follow",2,URL self-canonical din sitemap
+/cum-se-verifica-eligibilitatea-fonduri-europene,/cum-se-verifica-eligibilitatea-fonduri-europene,200,keep,yes,"index, follow",3,URL self-canonical din sitemap
+/despre-faber,/despre-faber,200,keep,yes,"index, follow",360,URL self-canonical din sitemap
+/digitalizare-imm,/digitalizare-imm,200,keep,yes,"index, follow",388,URL self-canonical din sitemap
+/digitalizare-imm-erp-crm-cloud,/digitalizare-imm-erp-crm-cloud,200,keep,yes,"index, follow",12,URL self-canonical din sitemap
+/digitalizare-imm-pnrr,/digitalizare-imm-pnrr,200,keep,yes,"index, follow",21,URL self-canonical din sitemap
+/dr-12-afir-instalarea-tinerilor-fermieri,/dr-12-afir-instalarea-tinerilor-fermieri,200,keep,yes,"index, follow",1,Articol suport DR12 distinct
+/dr-14-afir,/dr14,301,redirect,no,not applicable,0,Alias legacy consolidat
+/dr-14-afir-conditii-eligibilitate-greseli-frecvente,/dr-14-afir-conditii-eligibilitate-greseli-frecvente,200,keep,yes,"index, follow",1,URL self-canonical din sitemap
+/dr-14-afir.html,/dr14,301,redirect,no,not applicable,0,Alias legacy consolidat
+/dr-14-afir/,/dr14,301,redirect,no,not applicable,0,Alias legacy consolidat
+/dr12-afir,/dr12-afir,200,keep,yes,"index, follow",391,URL self-canonical din sitemap
+/dr12-afir-tineri-fermieri,/dr12-afir,301,redirect,no,not applicable,0,Consolidare DR12 cerută de auditul GSC
+/dr12-afir-tineri-fermieri.html,/dr12-afir,301,redirect,no,not applicable,0,Consolidare DR12 cerută de auditul GSC
+/dr12-afir-tineri-fermieri/,/dr12-afir,301,redirect,no,not applicable,0,Consolidare DR12 cerută de auditul GSC
+/dr12-afir-tineri-fermieri/index.html,/dr12-afir,301,redirect,no,not applicable,0,Consolidare DR12 cerută de auditul GSC
+/dr12-afir.html,/dr12-afir,301,redirect,no,not applicable,0,Consolidare DR12 cerută de auditul GSC
+/dr12-afir/index.html,/dr12-afir,301,redirect,no,not applicable,0,Consolidare DR12 cerută de auditul GSC
+/dr12-vs-dr14,/dr12-vs-dr14,200,keep,yes,"index, follow",9,URL self-canonical din sitemap
+/dr14,/dr14,200,keep,yes,"index, follow",392,URL self-canonical din sitemap
+/dr14-afir,/dr14,301,redirect,no,not applicable,0,Consolidare DR14 cerută de auditul GSC
+/dr14-afir-ferme-mici,/dr14,301,redirect,no,not applicable,0,Consolidare DR14 cerută de auditul GSC
+/dr14-afir-ferme-mici.html,/dr14,301,redirect,no,not applicable,0,Consolidare DR14 cerută de auditul GSC
+/dr14-afir-ferme-mici/,/dr14,301,redirect,no,not applicable,0,Consolidare DR14 cerută de auditul GSC
+/dr14-afir-ferme-mici/index.html,/dr14,301,redirect,no,not applicable,0,Consolidare DR14 cerută de auditul GSC
+/dr14-afir.html,/dr14,301,redirect,no,not applicable,0,Consolidare DR14 cerută de auditul GSC
+/dr14-afir/,/dr14,301,redirect,no,not applicable,0,Consolidare DR14 cerută de auditul GSC
+/dr14.html,/dr14,301,redirect,no,not applicable,0,Consolidare DR14 cerută de auditul GSC
+/dr14/index.html,/dr14,301,redirect,no,not applicable,0,Consolidare DR14 cerută de auditul GSC
+/e-move,/e-move,200,keep,yes,"index, follow",370,URL self-canonical din sitemap
+/e-move-ro,/e-move,301,redirect,no,not applicable,0,Alias legacy consolidat
+/e-move-ro/,/e-move,301,redirect,no,not applicable,0,Alias legacy consolidat
+/eligibilitate-fonduri-europene,/eligibilitate-fonduri-europene,200,keep,yes,"index, follow",8,URL self-canonical din sitemap
+/emove,/e-move,301,redirect,no,not applicable,0,Alias legacy consolidat
+/emove/,/e-move,301,redirect,no,not applicable,0,Alias legacy consolidat
+/femeia-antreprenor-2026,/femeia-antreprenor-2026,200,keep,yes,"index, follow",363,URL self-canonical din sitemap
+/femeia-antreprenor-2026-conditii-idei-afaceri,/femeia-antreprenor-2026-conditii-idei-afaceri,200,keep,yes,"index, follow",7,URL self-canonical din sitemap
+/finantari-panouri-fotovoltaice,/finantari-panouri-fotovoltaice,200,keep,yes,"index, follow",19,URL self-canonical din sitemap
+/firma-consultanta-fonduri-europene,/firma-consultanta-fonduri-europene,200,keep,yes,"index, follow",5,URL self-canonical din sitemap
+/fondul-de-modernizare,/fondul-de-modernizare,200,keep,yes,"index, follow",34,URL self-canonical din sitemap
+/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum,/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum,200,keep,yes,"index, follow",9,URL self-canonical din sitemap
+/fondul-modernizare-energie-regenerabila-2026,/fondul-modernizare-energie-regenerabila-2026,200,keep,yes,"index, follow",13,URL self-canonical din sitemap
+/fonduri-europene,/fonduri-europene,200,keep,yes,"index, follow",155,URL self-canonical din sitemap
+/fonduri-europene-agricultura,/fonduri-europene-agricultura,200,keep,yes,"index, follow",14,URL self-canonical din sitemap
+/fonduri-europene-bacau,/fonduri-europene-nord-est,301,redirect,no,not applicable,0,Alias legacy consolidat
+/fonduri-europene-bacau.html,/fonduri-europene-nord-est,301,redirect,no,not applicable,0,Alias legacy consolidat
+/fonduri-europene-bacau/,/fonduri-europene-nord-est,301,redirect,no,not applicable,0,Alias legacy consolidat
+/fonduri-europene-bacau/index.html,/fonduri-europene-nord-est,301,redirect,no,not applicable,0,Alias legacy consolidat
+/fonduri-europene-bucuresti,/fonduri-europene-bucuresti,200,keep,yes,"index, follow",3,URL self-canonical din sitemap
+/fonduri-europene-caen/0111-culturi-cereale,/fonduri-europene-caen/0111-culturi-cereale,200,keep,yes,"index, follow",0,URL self-canonical din sitemap
+/fonduri-europene-caen/4321-instalatii-electrice,/fonduri-europene-caen/4321-instalatii-electrice,200,keep,yes,"index, follow",0,URL self-canonical din sitemap
+/fonduri-europene-caen/5610-restaurante,/fonduri-europene-caen/5610-restaurante,200,keep,yes,"index, follow",0,URL self-canonical din sitemap
+/fonduri-europene-caen/6201-dezvoltare-software,/fonduri-europene-caen/6201-dezvoltare-software,200,keep,yes,"index, follow",0,URL self-canonical din sitemap
+/fonduri-europene-digitalizare,/fonduri-europene-digitalizare,200,keep,yes,"index, follow",20,URL self-canonical din sitemap
+/fonduri-europene-femei-antreprenor,/fonduri-europene-femei-antreprenor,200,keep,yes,"index, follow",7,URL self-canonical din sitemap
+/fonduri-europene-herambursabile-2026,/fonduri-europene-nerambursabile-2026,301,redirect,no,not applicable,0,Folder legacy consolidat către pagina echivalentă
+/fonduri-europene-herambursabile-2026.html,/fonduri-europene-nerambursabile-2026,301,redirect,no,not applicable,0,Folder legacy consolidat către pagina echivalentă
+/fonduri-europene-herambursabile-2026/,/fonduri-europene-nerambursabile-2026,301,redirect,no,not applicable,0,Folder legacy consolidat către pagina echivalentă
+/fonduri-europene-herambursabile-2026/index.html,/fonduri-europene-nerambursabile-2026,301,redirect,no,not applicable,0,Folder legacy consolidat către pagina echivalentă
+/fonduri-europene-iasi,/fonduri-europene-nord-est,301,redirect,no,not applicable,0,Alias legacy consolidat
+/fonduri-europene-iasi.html,/fonduri-europene-nord-est,301,redirect,no,not applicable,0,Alias legacy consolidat
+/fonduri-europene-iasi/,/fonduri-europene-nord-est,301,redirect,no,not applicable,0,Alias legacy consolidat
+/fonduri-europene-iasi/index.html,/fonduri-europene-nord-est,301,redirect,no,not applicable,0,Alias legacy consolidat
+/fonduri-europene-imm,/fonduri-europene-imm,200,keep,yes,"index, follow",41,URL self-canonical din sitemap
+/fonduri-europene-nerambursabile-2026,/fonduri-europene-nerambursabile-2026,200,keep,yes,"index, follow",11,URL self-canonical din sitemap
+/fonduri-europene-nord-est,/fonduri-europene-nord-est,200,keep,yes,"index, follow",15,URL self-canonical din sitemap
+/fonduri-europene-suceava,/fonduri-europene-nord-est,301,redirect,no,not applicable,0,Alias legacy consolidat
+/fonduri-europene-suceava.html,/fonduri-europene-nord-est,301,redirect,no,not applicable,0,Alias legacy consolidat
+/fonduri-europene-suceava/,/fonduri-europene-nord-est,301,redirect,no,not applicable,0,Alias legacy consolidat
+/fonduri-europene-suceava/index.html,/fonduri-europene-nord-est,301,redirect,no,not applicable,0,Alias legacy consolidat
+/fonduri-nerambursabile,/fonduri-nerambursabile,200,keep,yes,"index, follow",3,URL self-canonical din sitemap
+/fonduri-pentru-ferme,/fonduri-pentru-ferme,200,keep,yes,"index, follow",15,URL self-canonical din sitemap
+/fonduri-pentru-utilaje-agricole,/fonduri-pentru-utilaje-agricole,200,keep,yes,"index, follow",8,URL self-canonical din sitemap
+/fonduri-regionale,/fonduri-regionale,200,keep,yes,"index, follow",203,URL self-canonical din sitemap
+/gal-afir,/gal-afir,200,keep,yes,"index, follow",375,URL self-canonical din sitemap
+/gal-leader,/gal-afir,301,redirect,no,not applicable,0,Alias legacy consolidat
+/gal-leader/,/gal-afir,301,redirect,no,not applicable,0,Alias legacy consolidat
+/gdpr,/gdpr,200,keep,yes,"index, follow",11,URL self-canonical din sitemap
+/ghiduri,/ghiduri,200,keep,yes,"index, follow",25,URL self-canonical din sitemap
+/glosar-fonduri-europene,/glosar-fonduri-europene,200,keep,yes,"index, follow",17,URL self-canonical din sitemap
+/granturi-digitalizare-imm,/granturi-digitalizare-imm,200,keep,yes,"index, follow",6,URL self-canonical din sitemap
+/greseli-fonduri-europene,/greseli-fonduri-europene,200,keep,yes,"index, follow",1,URL self-canonical din sitemap
+/idei-afaceri-fonduri-europene,/idei-afaceri-fonduri-europene,200,keep,yes,"index, follow",1,URL self-canonical din sitemap
+/idei-afaceri-start-up-nation-2026,/start-up-nation-2026-idei-afaceri,301,redirect,no,not applicable,0,Alias legacy consolidat
+/idei-afaceri-start-up-nation-2026/,/start-up-nation-2026-idei-afaceri,301,redirect,no,not applicable,0,Alias legacy consolidat
+/index.html,/,301,redirect,no,not applicable,0,Alias legacy consolidat
+/instrumente,/instrumente,200,keep,yes,"index, follow",26,URL self-canonical din sitemap
+/intrebari-frecvente,/intrebari-frecvente,200,keep,yes,"index, follow",3,URL self-canonical din sitemap
+/intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm,/intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm,200,keep,yes,"index, follow",0,URL self-canonical din sitemap
+/intrebari/ce-documente-sunt-necesare-pentru-afir,/afir,301,redirect,no,not applicable,0,Alias legacy consolidat
+/intrebari/ce-documente-sunt-necesare-pentru-afir.html,/afir,301,redirect,no,not applicable,0,Alias legacy consolidat
+/intrebari/ce-documente-sunt-necesare-pentru-afir/,/afir,301,redirect,no,not applicable,0,Alias legacy consolidat
+/intrebari/ce-documente-sunt-necesare-pentru-afir/index.html,/afir,301,redirect,no,not applicable,0,Alias legacy consolidat
+/intrebari/ce-documente-sunt-necesare-pentru-dr12,/intrebari/ce-documente-sunt-necesare-pentru-dr12,200,keep,yes,"index, follow",0,URL self-canonical din sitemap
+/intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene,/intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene,200,keep,yes,"index, follow",0,URL self-canonical din sitemap
+/investitii-modernizarea-microintreprinderilor-apel-2,/investitii-modernizarea-microintreprinderilor-apel-2,200,keep,yes,"index, follow",7,URL self-canonical din sitemap
+/leader-afir,/gal-afir,301,redirect,no,not applicable,0,Alias legacy consolidat
+/leader-afir/,/gal-afir,301,redirect,no,not applicable,0,Alias legacy consolidat
+/management-proiecte-fonduri-europene,/management-proiecte-fonduri-europene,200,keep,yes,"index, follow",5,URL self-canonical din sitemap
+/metodologie-verificare-eligibilitate,/metodologie-verificare-eligibilitate,200,keep,yes,"index, follow",49,URL self-canonical din sitemap
+/plan-afaceri-start-up-nation-2026,/start-up-nation-2026-plan-de-afaceri,301,redirect,no,not applicable,0,Alias legacy consolidat
+/plan-afaceri-start-up-nation-2026/,/start-up-nation-2026-plan-de-afaceri,301,redirect,no,not applicable,0,Alias legacy consolidat
+/plan-de-afaceri-fonduri-europene,/plan-de-afaceri-fonduri-europene,200,keep,yes,"index, follow",6,URL self-canonical din sitemap
+/pnrr,/pnrr,200,keep,yes,"index, follow",14,URL self-canonical din sitemap
+/pnrr-digitalizare-imm,/digitalizare-imm-pnrr,301,redirect,no,not applicable,0,Alias legacy consolidat
+/pnrr-digitalizare-imm-cheltuieli-eligibile,/pnrr-digitalizare-imm-cheltuieli-eligibile,200,keep,yes,"index, follow",6,URL self-canonical din sitemap
+/pnrr-digitalizare-imm.html,/digitalizare-imm-pnrr,301,redirect,no,not applicable,0,Alias legacy consolidat
+/pnrr-digitalizare-imm/,/digitalizare-imm-pnrr,301,redirect,no,not applicable,0,Alias legacy consolidat
+/pnrr-digitalizare-imm/index.html,/digitalizare-imm-pnrr,301,redirect,no,not applicable,0,Alias legacy consolidat
+/pocidif-21,/pocidif-21,200,keep,yes,"index, follow",369,URL self-canonical din sitemap
+/politica-de-confidentialitate,/politica-de-confidentialitate,200,keep,yes,"index, follow",14,URL self-canonical din sitemap
+/por-adr-nord-est,/por-adr-nord-est,200,keep,yes,"index, follow",370,URL self-canonical din sitemap
+/por-adr-nord-est.html,/por-adr-nord-est,301,redirect,no,not applicable,0,Normalizare URL legacy POR ADR Nord-Est
+/pro-infra,/pro-infra,200,keep,yes,"index, follow",360,URL self-canonical din sitemap
+/programul-tranzitie-justa,/programul-tranzitie-justa,200,keep,yes,"index, follow",25,URL self-canonical din sitemap
+/programul-tranzitie-justa-intrebari-documente,/programul-tranzitie-justa-intrebari-documente,200,keep,yes,"index, follow",21,URL self-canonical din sitemap
+/proiectare-fonduri-europene,/proiectare-fonduri-europene,200,keep,yes,"index, follow",10,URL self-canonical din sitemap
+/resurse,/resurse,200,keep,yes,"index, follow",34,URL self-canonical din sitemap
+/resurse-utile,/resurse-utile,200,keep,yes,"index, follow",6,URL self-canonical din sitemap
+/start-up-nation,/start-up-nation-2026,301,redirect,no,not applicable,0,Folder legacy consolidat către pagina echivalentă
+/start-up-nation-2026,/start-up-nation-2026,200,keep,yes,"index, follow",396,URL self-canonical din sitemap
+/start-up-nation-2026-cheltuieli-eligibile,/start-up-nation-2026-cheltuieli-eligibile,200,keep,yes,"index, follow",14,URL self-canonical din sitemap
+/start-up-nation-2026-conditii,/start-up-nation-2026-conditii,200,keep,yes,"index, follow",19,URL self-canonical din sitemap
+/start-up-nation-2026-idei-afaceri,/start-up-nation-2026-idei-afaceri,200,keep,yes,"index, follow",3,URL self-canonical din sitemap
+/start-up-nation-2026-idei-afaceri-plan,/start-up-nation-2026-idei-afaceri,301,redirect,no,not applicable,0,Alias legacy consolidat
+/start-up-nation-2026-idei-afaceri-plan.html,/start-up-nation-2026-idei-afaceri,301,redirect,no,not applicable,0,Alias legacy consolidat
+/start-up-nation-2026-idei-afaceri-plan/,/start-up-nation-2026-idei-afaceri,301,redirect,no,not applicable,0,Alias legacy consolidat
+/start-up-nation-2026-plan-de-afaceri,/start-up-nation-2026-plan-de-afaceri,200,keep,yes,"index, follow",13,URL self-canonical din sitemap
+/start-up-nation.html,/start-up-nation-2026,301,redirect,no,not applicable,0,Folder legacy consolidat către pagina echivalentă
+/start-up-nation/,/start-up-nation-2026,301,redirect,no,not applicable,0,Folder legacy consolidat către pagina echivalentă
+/start-up-nation/index.html,/start-up-nation-2026,301,redirect,no,not applicable,0,Folder legacy consolidat către pagina echivalentă
+/startup-nation-2026-conditii,/start-up-nation-2026-conditii,301,redirect,no,not applicable,0,Alias legacy consolidat
+/startup-nation-2026-conditii.html,/start-up-nation-2026-conditii,301,redirect,no,not applicable,0,Alias legacy consolidat
+/startup-nation-2026-conditii/,/start-up-nation-2026-conditii,301,redirect,no,not applicable,0,Alias legacy consolidat
+/startup-nation-2026-conditii/index.html,/start-up-nation-2026-conditii,301,redirect,no,not applicable,0,Alias legacy consolidat
+/studii-de-caz,/studii-de-caz-fonduri-europene,301,redirect,no,not applicable,0,Folder legacy consolidat către pagina echivalentă
+/studii-de-caz-fonduri-europene,/studii-de-caz-fonduri-europene,200,keep,yes,"index, follow",11,URL self-canonical din sitemap
+/studii-de-caz.html,/studii-de-caz-fonduri-europene,301,redirect,no,not applicable,0,Folder legacy consolidat către pagina echivalentă
+/studii-de-caz/,/studii-de-caz-fonduri-europene,301,redirect,no,not applicable,0,Folder legacy consolidat către pagina echivalentă
+/studii-de-caz/index.html,/studii-de-caz-fonduri-europene,301,redirect,no,not applicable,0,Folder legacy consolidat către pagina echivalentă
+/studiu-fezabilitate-fonduri-europene,/studiu-fezabilitate-fonduri-europene,200,keep,yes,"index, follow",6,URL self-canonical din sitemap
+/surse-oficiale-fonduri-europene,/surse-oficiale-fonduri-europene,200,keep,yes,"index, follow",61,URL self-canonical din sitemap
+/termeni-si-conditii,/termeni-si-conditii,200,keep,yes,"index, follow",6,URL self-canonical din sitemap
+/verificare-eligibilitate-fonduri-europene,/verificare-eligibilitate-fonduri-europene,200,keep,yes,"index, follow",517,URL self-canonical din sitemap
+/webinarii,/webinarii,200,keep,yes,"index, follow",0,URL self-canonical din sitemap

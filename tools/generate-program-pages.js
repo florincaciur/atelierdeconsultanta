@@ -65,7 +65,6 @@ const PILLAR_SLUGS = new Set([
   "fonduri-europene-nerambursabile-2026",
   "dr12-afir",
   "dr14",
-  "dr14-afir-ferme-mici",
   "digitalizare-imm",
   "femeia-antreprenor-2026",
   "start-up-nation-2026",
@@ -2175,7 +2174,7 @@ ${renderDecisionMatrix(page)}
       <h2>DR12, DR14 si alegerea programului potrivit</h2>
       <p>DR12 si DR14 sunt adesea comparate pentru ca ambele pot fi relevante in agricultura, dar criteriile nu trebuie amestecate. DR12 se analizeaza cand profilul solicitantului si logica de instalare sau consolidare a unui tanar fermier sunt centrale. DR14 se analizeaza cand punctul de plecare este ferma mica si dezvoltarea ei proportionala cu activitatea existenta.</p>
       <p>Daca o familie lucreaza terenuri impreuna, daca actele sunt impartite intre mai multe persoane sau daca investitia a fost aleasa inaintea calculului SO/SOC, decizia trebuie amanata pana cand documentele spun aceeasi poveste. O pagina de program ajuta doar dupa ce datele fermei sunt ordonate.</p>
-      <p>Pentru o comparatie aplicata intre cele doua interventii, foloseste si pagina <a href="/dr12-vs-dr14">DR12 vs DR14</a>. Pentru o analiza specifica fermei mici, mergi in pagina <a href="/dr14-afir-ferme-mici">DR14 AFIR ferme mici</a>. Ambele pagini pastreaza formularea prudenta: concluzia finala depinde de ghidul activ si de documentele solicitantului.</p>
+      <p>Pentru o comparatie aplicata intre cele doua interventii, foloseste si pagina <a href="/dr12-vs-dr14">DR12 vs DR14</a>. Pentru o analiza specifica fermei mici, mergi in pagina <a href="/dr14">DR14 AFIR ferme mici</a>. Ambele pagini pastreaza formularea prudenta: concluzia finala depinde de ghidul activ si de documentele solicitantului.</p>
       <h2>Documente care trebuie pregatite devreme</h2>
       <p>In proiectele agricole, documentele nu sunt o formalitate de final. Ele decid daca investitia poate fi sustinuta. Daca dreptul de folosinta, calculul SO/SOC, ofertele sau anexele nu se potrivesc, proiectul poate intra in clarificari sau poate deveni greu de aparat.</p>
       <div class="table-wrap">
@@ -2243,7 +2242,7 @@ ${renderDecisionMatrix(page)}
         <a href="/dr12-afir">DR 12 AFIR</a>
         <a href="/dr14">DR 14 AFIR</a>
         <a href="/dr12-vs-dr14">DR12 vs DR14</a>
-        <a href="/dr14-afir-ferme-mici">DR14 ferme mici</a>
+        <a href="/dr14">DR14 ferme mici</a>
         <a href="/gal-afir">GAL-AFIR / LEADER</a>
         <a href="/fonduri-pentru-ferme">Fonduri pentru ferme</a>
         <a href="/surse-oficiale-fonduri-europene">Surse oficiale</a>
@@ -2668,6 +2667,8 @@ function updateBlogJson(pages, config) {
   if (!fs.existsSync(BLOG_JSON_PATH)) return;
   const data = readJson(BLOG_JSON_PATH);
   data.posts = Array.isArray(data.posts) ? data.posts : [];
+  const retiredSlugs = new Set((config.pages || []).filter((page) => page.redirectTo).map((page) => page.slug));
+  data.posts = data.posts.filter((post) => !retiredSlugs.has(post.id) && !retiredSlugs.has(post.slug));
   const byId = new Map(data.posts.map((post) => [post.id, post]));
   for (const page of pages.filter((item) => item.type === "program" && !byId.has(item.slug))) {
     const editorial = getEditorialMetadata(page.slug);
@@ -2819,7 +2820,7 @@ function updateLlms(pages) {
 
 function main() {
   const config = readJson(CONFIG_PATH);
-  const pages = config.pages || [];
+  const pages = (config.pages || []).filter((page) => !page.redirectTo);
   for (const page of pages) {
     validatePage(page);
     ensureFile(page, pageHtml(page, config));
