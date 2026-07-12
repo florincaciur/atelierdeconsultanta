@@ -2450,11 +2450,11 @@
     },
     {
       "id": "pocidif-21",
-      "title": "PoCIDIF 2.1: inovare si tehnologii avansate pentru IMM din TIC",
+      "title": "PoCIDIF 2.1 – inovare și tehnologii digitale pentru IMM din sectorul TIC",
       "slug": "pocidif-21",
-      "metaTitle": "PoCIDIF 2.1 | ghid FABER",
-      "metaDescription": "PoCIDIF 2.1: software, hardware, cloud, securitate, documente, buget IT si riscuri pentru proiecte de digitalizare IMM. Include documente, buget.",
-      "excerpt": "PoCIDIF 2.1: software, hardware, cloud, securitate, documente, buget IT si riscuri pentru proiecte de digitalizare IMM. Include documente, buget.",
+      "metaTitle": "PoCIDIF 2.1: finanțare pentru inovare digitală | FABER",
+      "metaDescription": "PoCIDIF 2.1 pentru IMM TIC: eligibilitate, CAEN, activități CDI, hardware, software, indicatori, documente, buget și punctaj.",
+      "excerpt": "Ghid aprobat pentru IMM-uri TIC care dezvoltă și introduc pe piață servicii, aplicații sau produse inovatoare folosind tehnologii avansate.",
       "content": "<p>Pagina statica publicata la /pocidif-21.</p>",
       "status": "published",
       "published": true,
@@ -2467,10 +2467,12 @@
       "bannerImage": "/assets/hero/hero-digital.webp",
       "bannerAlt": "Echipa IMM analizand solutii digitale pentru PoCIDIF 2.1",
       "author": "FABER - Atelier de Consultanță",
-      "officialSources": [],
-      "editorialStatus": "in_curs_de_verificare",
+      "officialSources": [
+        "https://mfe.gov.ro/ghiduri_pocidif/pocidif-ghidul-solicitantului-dezvoltarea-de-noi-servicii-aplicatii-produse-prin-inovare-si-adoptarea-de-tehnologii-avansate-2/"
+      ],
+      "editorialStatus": "verificat",
       "createdAt": "2026-05-29",
-      "updatedAt": "2026-06-19",
+      "updatedAt": "2026-07-13",
       "publishedAt": "2026-05-29",
       "date": "2026-05-29",
       "dateFormatted": "19 mai 2026",
@@ -2493,6 +2495,18 @@
           "label": "Fonduri europene IMM"
         },
         {
+          "href": "/eligibilitate-pocidif-21",
+          "label": "Eligibilitate PoCIDIF 2.1"
+        },
+        {
+          "href": "/cheltuieli-eligibile-pocidif-21",
+          "label": "Cheltuieli eligibile PoCIDIF 2.1"
+        },
+        {
+          "href": "/documente-punctaj-pocidif-21",
+          "label": "Documente și punctaj PoCIDIF 2.1"
+        },
+        {
           "href": "/e-move",
           "label": "e-MOVE RO"
         },
@@ -2508,11 +2522,11 @@
         },
         {
           "question": "Care este valoarea finantarii?",
-          "answer": "Forma consultativa analizata mentioneaza finantari intre 500.000 si 3.000.000 euro."
+          "answer": "Ghidul aprobat stabilește minimum 200.000 euro, maximum 1.500.000 euro pentru soluții software și maximum 3.000.000 euro pentru produse hardware inovatoare."
         },
         {
           "question": "Care este intensitatea finantarii?",
-          "answer": "Sursele indica pana la 75% pentru ajutor regional si pana la 100% pentru ajutor de minimis, cu confirmare in ghidul activ."
+          "answer": "Intensitatea se calculează separat după tipul ajutorului, dimensiunea întreprinderii și regiune; nu există un procent unic pentru întregul buget."
         },
         {
           "question": "Cine poate aplica?",
@@ -2543,12 +2557,12 @@
           "answer": "Nu merita sa aplici cand nu poti dovedi eligibilitatea, cand cheltuielile principale nu sunt permise, cand cofinantarea nu este acoperita sau cand calendarul nu permite documente complete si verificabile."
         }
       ],
-      "lastVerifiedAt": "2026-06-19",
+      "lastVerifiedAt": "2026-07-13",
       "seo": {
-        "metaTitle": "PoCIDIF 2.1 | ghid FABER",
-        "metaDescription": "PoCIDIF 2.1: software, hardware, cloud, securitate, documente, buget IT si riscuri pentru proiecte de digitalizare IMM. Include documente, buget.",
-        "ogTitle": "PoCIDIF 2.1 | ghid FABER",
-        "ogDescription": "PoCIDIF 2.1: software, hardware, cloud, securitate, documente, buget IT si riscuri pentru proiecte de digitalizare IMM. Include documente, buget.",
+        "metaTitle": "PoCIDIF 2.1: finanțare pentru inovare digitală | FABER",
+        "metaDescription": "PoCIDIF 2.1 pentru IMM TIC: eligibilitate, CAEN, activități CDI, hardware, software, indicatori, documente, buget și punctaj.",
+        "ogTitle": "PoCIDIF 2.1: finanțare pentru inovare digitală | FABER",
+        "ogDescription": "Ghid aprobat pentru IMM-uri TIC care dezvoltă servicii, aplicații și produse inovatoare prin CDI și tehnologii avansate.",
         "ogImage": "https://atelierdeconsultanta.ro/assets/hero/hero-digital.webp"
       }
     }

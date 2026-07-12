@@ -178,13 +178,42 @@
   },
   "pocidif-21": {
     "name": "PoCIDIF 2.1",
-    "title": "PoCIDIF - Actiunea 2.1 dezvoltarea de noi servicii, aplicatii si produse prin inovare si adoptarea de tehnologii avansate",
-    "url": "https://mfe.gov.ro/ghiduri_pocidif/pocidif-ghidul-solicitantului-dezvoltarea-de-noi-servicii-aplicatii-produse-prin-inovare-si-adoptarea-de-tehnologii-avansate/",
-    "institution": "Ministerul Investitiilor si Proiectelor Europene",
-    "documentType": "ghid consultativ",
-    "publisher": "Ministerul Investitiilor si Proiectelor Europene",
-    "version": "Ghid consultativ",
-    "accessedAt": "2026-06-11",
-    "note": "Ghidul consultativ PoCIDIF 2.1 stabileste conditiile orientative pentru dezvoltarea de noi servicii, aplicatii si produse digitale; valorile finale se confirma in ghidul activ si anexele apelului."
+    "title": "PoCIDIF – Acțiunea 2.1: ghid aprobat, schemă și anexe",
+    "url": "https://mfe.gov.ro/ghiduri_pocidif/pocidif-ghidul-solicitantului-dezvoltarea-de-noi-servicii-aplicatii-produse-prin-inovare-si-adoptarea-de-tehnologii-avansate-2/",
+    "institution": "Ministerul Investițiilor și Proiectelor Europene",
+    "documentType": "pagină oficială cu ghid aprobat, schemă, anexe și întrebări-răspunsuri",
+    "publisher": "Ministerul Investițiilor și Proiectelor Europene",
+    "version": "Ghid aprobat prin Ordinul MIPE nr. 965/23.06.2026",
+    "accessedAt": "2026-07-13",
+    "note": "Sursa editorială principală pentru Acțiunea 2.1. Pagina MIPE publică ghidul aprobat, anexele, schema de ajutor și tabelul de întrebări și răspunsuri."
+  },
+  "pocidif-21-guide": {
+    "name": "Ghidul solicitantului PoCIDIF 2.1",
+    "title": "Ghidul aprobat și anexele Acțiunii 2.1",
+    "url": "https://mfe.gov.ro/wp-content/uploads/2026/06/3b7daf66f17fdaad63fef93466d155e3-1.zip",
+    "institution": "Ministerul Investițiilor și Proiectelor Europene",
+    "documentType": "ghid aprobat și 19 anexe",
+    "version": "Aprobat prin Ordinul MIPE nr. 965/23.06.2026",
+    "accessedAt": "2026-07-13",
+    "note": "Conține condițiile finale privind solicitanții, CAEN, parteneriatele, activitățile, cheltuielile, indicatorii, documentele și grila de evaluare."
+  },
+  "pocidif-21-scheme": {
+    "name": "Schema de ajutor PoCIDIF 2.1",
+    "title": "Schema de ajutor de stat și de minimis pentru Acțiunea 2.1",
+    "url": "https://mfe.gov.ro/wp-content/uploads/2026/06/d6bee3673c763582ff4b4fce5be59861.pdf",
+    "institution": "Ministerul Investițiilor și Proiectelor Europene",
+    "documentType": "schemă de ajutor aprobată prin Ordinul MIPE nr. 875/15.06.2026",
+    "accessedAt": "2026-07-13",
+    "note": "Sursa oficială pentru tipurile de ajutor, intensități, cumul și condițiile de acordare."
+  },
+  "pocidif-21-qa": {
+    "name": "Întrebări și răspunsuri PoCIDIF 2.1",
+    "title": "Tabel de întrebări și răspunsuri după publicarea ghidului aprobat",
+    "url": "https://mfe.gov.ro/wp-content/uploads/2026/07/4b934c3ee5a4ddb2e0195e23d955c43b.docx",
+    "institution": "Ministerul Investițiilor și Proiectelor Europene",
+    "documentType": "clarificări oficiale",
+    "version": "09.07.2026",
+    "accessedAt": "2026-07-13",
+    "note": "Clarificări oficiale publicate după aprobarea ghidului; documentul completează lectura ghidului și anexelor."
   }
 }

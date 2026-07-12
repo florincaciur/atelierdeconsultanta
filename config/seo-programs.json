@@ -8881,21 +8881,25 @@
       "schemaType": "GovernmentService",
       "category": "Digitalizare si inovare",
       "template": "editorial-program",
-      "minWords": 1200,
+      "minWords": 2100,
       "minFaq": 8,
       "hideFamilyCards": true,
-      "updatedAt": "2026-06-11",
-      "title": "PoCIDIF 2.1 | inovare digital\u0103 IMM TIC",
-      "description": "PoCIDIF 2.1 pentru inovare digital\u0103 IMM TIC: granturi 500.000-3.000.000 euro pentru servicii, aplica\u021bii \u0219i produse digitale inovatoare.",
-      "h1": "PoCIDIF 2.1 \u2013 Granturi pentru inovare digital\u0103 \u00een IMM\u2011urile TIC",
+      "updatedAt": "2026-07-13",
+      "title": "PoCIDIF 2.1: finanțare pentru inovare digitală | FABER",
+      "description": "PoCIDIF 2.1 pentru IMM din sectorul TIC: eligibilitate, CAEN, activități CDI, hardware, software, indicatori, documente, buget și punctaj.",
+      "h1": "PoCIDIF 2.1 – inovare și tehnologii digitale pentru IMM din sectorul TIC",
       "programName": "PoCIDIF 2.1",
-      "funding": "Finantare intre 500.000 si 3.000.000 euro, cu intensitate de pana la 75% pentru ajutor regional si 100% pentru ajutor de minimis, conform ghidului consultativ.",
+      "funding": "Ghidul aprobat stabilește minimum 200.000 euro și maximum 1.500.000 euro pentru o soluție software ori 3.000.000 euro pentru un produs hardware inovator; intensitatea depinde de tipul ajutorului, dimensiunea întreprinderii și regiune.",
       "sourceKeys": [
-        "pocidif-21"
+        "pocidif-21",
+        "pocidif-21-guide",
+        "pocidif-21-scheme",
+        "pocidif-21-qa"
       ],
       "officialGuideKey": "pocidif-21",
+      "guideCtaLabel": "Ghid aprobat",
       "heroIcon": "ph-duotone ph-circuitry",
-      "quickAnswer": "PoCIDIF 2.1 este apelul pentru IMM-uri din sectorul TIC care vor sa dezvolte servicii, aplicatii sau produse digitale inovatoare, nu doar sa cumpere echipamente IT. In forma consultativa analizata, granturile sunt intre 500.000 si 3.000.000 euro, cu intensitati orientative de pana la 75% pentru ajutor regional si pana la 100% pentru componente de minimis. Pentru antreprenori, programul poate accelera dezvoltarea unui produs propriu, testarea, validarea si lansarea pe piata. Verificarea incepe cu statutul IMM, codurile CAEN, noutatea solutiei, echipa, arhitectura tehnica, proprietatea asupra produsului, bugetul si capacitatea de cofinantare. Regulile finale se confirma in ghidul activ si anexele PoCIDIF.",
+      "quickAnswer": "PoCIDIF 2.1 finanțează IMM-uri din sectorul TIC care dezvoltă prin cercetare, dezvoltare și inovare cel puțin un serviciu, o aplicație sau un produs nou ori semnificativ îmbunătățit, folosind tehnologii avansate, și îl introduc pe piață. Apelul nu este o linie pentru simple achiziții IT și nici pentru cercetare fără inovare de produs și comercializare. Solicitantul trebuie să aibă unul dintre codurile CAEN indicate de ghid, o echipă cu minimum un coordonator și doi experți tehnici, un plan de afaceri, indicatori măsurabili și capacitatea de cofinanțare. Ghidul aprobat diferențiază proiectele software de produsele hardware și combină, după caz, ajutor regional, ajutor pentru cercetare-dezvoltare, ajutor pentru întreprinderi nou-înființate și ajutor de minimis.",
       "audience": [
         "IMM-uri din sectorul TIC care dezvolta produse, aplicatii sau servicii digitale proprii.",
         "Companii care pot demonstra inovare, adoptarea de tehnologii avansate si capacitate tehnica de implementare.",
@@ -8964,9 +8968,9 @@
         ],
         [
           "Valoare",
-          "Finantare intre 500.000 si 3.000.000 euro.",
+          "Finanțare de la 200.000 euro; maximum 1.500.000 euro pentru software și 3.000.000 euro pentru hardware.",
           "Buget, cofinantare si categoriile de ajutor.",
-          "Ghidul consultativ"
+          "Ghidul aprobat"
         ],
         [
           "Intensitate",
@@ -9005,13 +9009,13 @@
       "cofinancingRows": [
         [
           "Grant minim",
-          "500.000 euro",
-          "Valoare indicata in forma consultativa analizata."
+          "200.000 euro",
+          "Valoare stabilită de ghidul aprobat."
         ],
         [
           "Grant maxim",
-          "3.000.000 euro",
-          "Valoare indicata in forma consultativa analizata."
+          "1.500.000 euro software / 3.000.000 euro hardware",
+          "Valori stabilite de ghidul aprobat, inclusiv ajutorul de minimis."
         ],
         [
           "Ajutor regional",
@@ -9078,20 +9082,20 @@
         "Buget mare fara arhitectura tehnica si etape de dezvoltare.",
         "Cheltuieli amestecate intre ajutor regional, minimis si costuri neeligibile.",
         "Lipsa dovezilor privind echipa si capacitatea de implementare.",
-        "Aplicare pe baza ghidului consultativ fara verificarea documentelor finale."
+        "Aplicare fără corelarea ghidului aprobat, anexelor, schemei și clarificărilor oficiale."
       ],
       "faq": [
         [
           "Ce finanteaza PoCIDIF 2.1?",
-          "Programul finanteaza dezvoltarea de servicii, aplicatii si produse digitale inovatoare pentru IMM-uri din sectorul TIC, in limitele ghidului activ."
+          "Apelul finanțează proiecte ale IMM-urilor TIC care dezvoltă prin cercetare, dezvoltare și inovare servicii, aplicații sau produse noi ori semnificativ îmbunătățite, folosesc tehnologii avansate și includ introducerea rezultatului pe piață."
         ],
         [
           "Care este intervalul grantului PoCIDIF 2.1?",
-          "Forma consultativa analizata mentioneaza granturi intre 500.000 si 3.000.000 euro. Valorile finale se confirma in ghidul activ."
+          "Ghidul aprobat stabilește o valoare minimă nerambursabilă de 200.000 euro. Maximul este 1.500.000 euro pentru o soluție software inovatoare și 3.000.000 euro pentru un produs hardware inovator, inclusiv ajutorul de minimis."
         ],
         [
           "Ce intensitate poate avea finantarea?",
-          "Orientativ, intensitatea poate ajunge la 75% pentru ajutor regional si 100% pentru minimis, cu incadrare confirmata in ghid."
+          "Nu există o intensitate unică. Rata se stabilește pentru fiecare categorie de cost în funcție de ajutorul aplicabil, dimensiunea întreprinderii și regiunea proiectului; ajutorul de minimis și ajutorul pentru întreprinderi nou-înființate au reguli distincte."
         ],
         [
           "Cine poate aplica?",
@@ -9103,7 +9107,7 @@
         ],
         [
           "Ce coduri CAEN sunt relevante?",
-          "Codurile CAEN trebuie verificate in ghidul activ si corelate cu activitatea reala, produsul dezvoltat si veniturile firmei."
+          "Ghidul aprobat indică 2611, 2612, 2630, 5821, 5829, 6210, 6220, 6290 și 6310. Codul folosit pentru finanțare trebuie să fie autorizat, inclusiv la fiecare locație de implementare, cel târziu în etapa cerută de ghid."
         ],
         [
           "Ce documente sunt sensibile?",
@@ -9111,7 +9115,7 @@
         ],
         [
           "Cum pregatesc analiza de eligibilitate?",
-          "Pregateste statutul IMM, codurile CAEN, produsul propus, arhitectura, echipa, bugetul estimat, sursa cofinantarii si documentele disponibile."
+          "Pregătește statutul IMM, certificatul constatator și CAEN, situațiile financiare, produsul propus, subdomeniul de specializare inteligentă, arhitectura, echipa, planul de afaceri, indicatorii, bugetul, ofertele și sursa cofinanțării."
         ]
       ],
       "contentSections": [
@@ -9129,7 +9133,7 @@
         },
         {
           "title": "Ce ramane de confirmat",
-          "body": "Pagina foloseste forma consultativa ca reper. Beneficiarii, intensitatile, pragurile, cheltuielile si grila finala trebuie confirmate in ghidul activ si in anexele apelului."
+          "body": "Pagina folosește ghidul aprobat. Eventualele corrigenda, instrucțiuni și clarificări ulterioare trebuie verificate în pagina oficială MIPE înainte de depunere."
         },
         {
           "title": "Ce diferentiaza un proiect digital eligibil",
@@ -9156,6 +9160,18 @@
           "label": "Fonduri europene IMM"
         },
         {
+          "href": "/eligibilitate-pocidif-21",
+          "label": "Eligibilitate PoCIDIF 2.1"
+        },
+        {
+          "href": "/cheltuieli-eligibile-pocidif-21",
+          "label": "Cheltuieli eligibile PoCIDIF 2.1"
+        },
+        {
+          "href": "/documente-punctaj-pocidif-21",
+          "label": "Documente și punctaj PoCIDIF 2.1"
+        },
+        {
           "href": "/e-move",
           "label": "e-MOVE RO"
         },
@@ -9172,6 +9188,114 @@
       "finalCtaText": "Trimite informatii despre IMM, coduri CAEN, produsul digital, echipa, buget si cofinantare. Verificam daca proiectul merita pregatit pentru PoCIDIF 2.1.",
       "inlineCtaTitle": "Analiza initiala PoCIDIF 2.1",
       "inlineCtaText": "Trimite date despre firma, codurile CAEN, produsul digital, arhitectura, echipa, bugetul estimat si sursa cofinantarii. Verificarea initiala separa proiectele pregatibile de ideile care trebuie reformulate."
+    },
+    {
+      "slug": "eligibilitate-pocidif-21",
+      "output": "eligibilitate-pocidif-21.html",
+      "type": "article",
+      "schemaType": "WebPage",
+      "category": "Digitalizare si inovare",
+      "template": "pocidif-support",
+      "minWords": 1200,
+      "minFaq": 6,
+      "hideFamilyCards": true,
+      "updatedAt": "2026-07-13",
+      "title": "Eligibilitate PoCIDIF 2.1: IMM TIC, CAEN și condiții | FABER",
+      "description": "Eligibilitate PoCIDIF 2.1 conform ghidului aprobat: tipuri de IMM, coduri CAEN, întreprinderi nou-înființate, parteneriate și condiții financiare.",
+      "h1": "Eligibilitate PoCIDIF 2.1 – IMM TIC, coduri CAEN și parteneriate",
+      "programName": "PoCIDIF 2.1",
+      "sourceKeys": ["pocidif-21", "pocidif-21-guide", "pocidif-21-scheme", "pocidif-21-qa"],
+      "heroIcon": "ph-duotone ph-identification-card",
+      "quickAnswer": "Eligibilitatea pornește de la statutul de microîntreprindere, întreprindere mică sau mijlocie din sectorul TIC, forma juridică permisă și autorizarea unuia dintre codurile CAEN prevăzute de ghid. Se verifică apoi situația financiară și fiscală, capacitatea de cofinanțare, locația, lipsa stării de dificultate și caracterul inovator al proiectului. Parteneriatele sunt permise între IMM-uri TIC eligibile, însă întreprinderile nou-înființate nu pot avea rol de partener. Fiecare solicitant, partener și grup de firme trebuie să respecte limita de participare stabilită de apel.",
+      "faq": [
+        ["Ce tipuri de firme pot solicita PoCIDIF 2.1?", "Microîntreprinderile, întreprinderile mici și întreprinderile mijlocii din sectorul TIC, inclusiv anumite întreprinderi nou-înființate, dacă îndeplinesc cumulativ condițiile ghidului aprobat."],
+        ["Care sunt codurile CAEN PoCIDIF 2.1?", "Ghidul indică 2611, 2612, 2630, 5821, 5829, 6210, 6220, 6290 și 6310. Codul pentru care se solicită finanțarea trebuie autorizat conform momentului și locațiilor stabilite în ghid."],
+        ["Poate aplica o întreprindere mijlocie?", "Da. Întreprinderile mijlocii sunt eligibile pentru categoriile generale de ajutor, dar ajutorul pentru întreprinderi nou-înființate este destinat microîntreprinderilor și întreprinderilor mici care îndeplinesc condițiile specifice."],
+        ["Sunt permise parteneriatele?", "Da. Liderul și partenerii trebuie să fie IMM-uri TIC eligibile, iar acordul de parteneriat trebuie corelat cu activitățile și bugetul. Întreprinderea nou-înființată poate fi lider, dar nu partener."],
+        ["Este obligatoriu profitul din exploatare?", "Ghidul cere profit din exploatare pozitiv în ultimul exercițiu financiar încheiat, cu excepția IMM-urilor înființate în anul depunerii, pentru care nu există situații financiare încheiate."],
+        ["Câte proiecte poate depune un grup de firme?", "În cadrul apelului, doar o societate la nivelul grupului poate beneficia de finanțare pentru un singur proiect; regula se aplică și firmelor legate și partenere." ]
+      ],
+      "related": [
+        {"href": "/pocidif-21", "label": "Pagina principală PoCIDIF 2.1"},
+        {"href": "/cheltuieli-eligibile-pocidif-21", "label": "Cheltuieli eligibile PoCIDIF 2.1"},
+        {"href": "/documente-punctaj-pocidif-21", "label": "Documente și punctaj PoCIDIF 2.1"},
+        {"href": "/fonduri-europene-digitalizare", "label": "Fonduri europene pentru digitalizare"}
+      ],
+      "finalCtaTitle": "Verifică eligibilitatea firmei pentru PoCIDIF 2.1",
+      "finalCtaText": "Trimite statutul IMM, certificatul constatator, codurile CAEN, locațiile, situațiile financiare și structura de grup pentru o verificare documentată.",
+      "finalPrimaryCta": "Solicită verificarea eligibilității"
+    },
+    {
+      "slug": "cheltuieli-eligibile-pocidif-21",
+      "output": "cheltuieli-eligibile-pocidif-21.html",
+      "type": "article",
+      "schemaType": "WebPage",
+      "category": "Digitalizare si inovare",
+      "template": "pocidif-support",
+      "minWords": 1400,
+      "minFaq": 6,
+      "hideFamilyCards": true,
+      "updatedAt": "2026-07-13",
+      "title": "Cheltuieli eligibile PoCIDIF 2.1: hardware și software | FABER",
+      "description": "Cheltuieli eligibile PoCIDIF 2.1 din ghidul aprobat: cercetare-dezvoltare, hardware, software, cloud, servicii, personal, minimis și limite bugetare.",
+      "h1": "Cheltuieli eligibile PoCIDIF 2.1 – hardware, software și servicii CDI",
+      "programName": "PoCIDIF 2.1",
+      "sourceKeys": ["pocidif-21", "pocidif-21-guide", "pocidif-21-scheme", "pocidif-21-qa"],
+      "heroIcon": "ph-duotone ph-receipt",
+      "quickAnswer": "Bugetul PoCIDIF 2.1 trebuie construit pe activități de cercetare industrială, dezvoltare experimentală, introducere în producție și introducere obligatorie pe piață a rezultatului inovator. Hardware-ul, software-ul, licențele, cloud-ul, serviciile specializate și costurile de personal pot fi eligibile numai în categoria de ajutor potrivită și în măsura în care sunt necesare proiectului. Activitatea de bază trebuie să concentreze minimum 80% din finanțarea nerambursabilă, iar activitatea tehnică realizată de personalul propriu minimum 20% din finanțarea activității de bază. Achiziția izolată de echipamente și externalizarea integrală a dezvoltării nu sunt acceptate.",
+      "faq": [
+        ["Este eligibil hardware-ul în PoCIDIF 2.1?", "Da, dacă este justificat pentru introducerea în producție sau este utilizat direct pentru cercetare și dezvoltare, în condițiile categoriei de ajutor aplicabile. O listă generică de echipamente nu este suficientă."],
+        ["Sunt eligibile software-ul și serviciile cloud?", "Ghidul permite aplicații, licențe, acces la platforme cloud și servicii specializate necesare dezvoltării, testării ori operării activităților CDI, cu legătură exclusivă și justificată cu proiectul."],
+        ["Poate fi externalizată dezvoltarea?", "Pot fi contractate servicii specializate, însă externalizarea integrală a activităților tehnice nu este admisă. Beneficiarul trebuie să demonstreze capacitate proprie de coordonare și contribuția tehnică minimă cerută."],
+        ["Câte oferte sunt necesare pentru buget?", "Ghidul cere minimum două oferte sau justificări de preț pentru cheltuielile eligibile, împreună cu centralizatorul și justificarea alegerii valorii bugetate."],
+        ["Care este plafonul ajutorului de minimis?", "Ajutorul de minimis acordat unei întreprinderi unice nu poate depăși echivalentul a 300.000 euro în nicio perioadă de trei ani, ținând cont de toate ajutoarele relevante."],
+        ["Care sunt valorile proiectului?", "Valoarea minimă nerambursabilă este 200.000 euro. Maximul este 1.500.000 euro pentru soluții software și 3.000.000 euro pentru produse hardware inovatoare, inclusiv componenta de minimis." ]
+      ],
+      "related": [
+        {"href": "/pocidif-21", "label": "Pagina principală PoCIDIF 2.1"},
+        {"href": "/eligibilitate-pocidif-21", "label": "Eligibilitate PoCIDIF 2.1"},
+        {"href": "/documente-punctaj-pocidif-21", "label": "Documente și punctaj PoCIDIF 2.1"},
+        {"href": "/digitalizare-imm", "label": "Digitalizare IMM"}
+      ],
+      "finalCtaTitle": "Verifică bugetul PoCIDIF 2.1",
+      "finalCtaText": "Trimite arhitectura soluției, activitățile CDI, lista de costuri, ofertele și contribuția proprie pentru verificarea încadrării pe tipuri de ajutor.",
+      "finalPrimaryCta": "Solicită analiza bugetului"
+    },
+    {
+      "slug": "documente-punctaj-pocidif-21",
+      "output": "documente-punctaj-pocidif-21.html",
+      "type": "article",
+      "schemaType": "WebPage",
+      "category": "Digitalizare si inovare",
+      "template": "pocidif-support",
+      "minWords": 1400,
+      "minFaq": 6,
+      "hideFamilyCards": true,
+      "updatedAt": "2026-07-13",
+      "title": "Documente și punctaj PoCIDIF 2.1: ghid practic | FABER",
+      "description": "Documentele și punctajul PoCIDIF 2.1 conform ghidului aprobat: plan de afaceri, echipă, buget, oferte, indicatori, prag de calitate și excelență.",
+      "h1": "Documente și punctaj PoCIDIF 2.1 – dosar, indicatori și evaluare",
+      "programName": "PoCIDIF 2.1",
+      "sourceKeys": ["pocidif-21", "pocidif-21-guide", "pocidif-21-scheme", "pocidif-21-qa"],
+      "heroIcon": "ph-duotone ph-check-square-offset",
+      "quickAnswer": "Dosarul PoCIDIF 2.1 leagă cererea de finanțare, planul de afaceri, planul de monitorizare, bugetul defalcat, ofertele, echipa tehnică și indicatorii produsului inovator. Evaluarea nu punctează o prezentare comercială generică: proiectul trebuie să demonstreze noutatea, tehnologia, maturitatea comercială, capacitatea echipei, fezabilitatea financiară și sustenabilitatea. Ghidul stabilește un prag de calitate de 70 de puncte și un prag de excelență de 92 de puncte, fără punctaje intermediare acolo unde grila prevede opțiuni fixe. Absența coordonatorului tehnic și a cel puțin doi experți tehnici conduce la respingere, iar indicatorii nerealizați pot determina diminuarea sau recuperarea finanțării.",
+      "faq": [
+        ["Ce documente se depun pentru PoCIDIF 2.1?", "Lista include cererea, declarația unică, hotărârea de aprobare, planul de afaceri, planul de monitorizare, bugetul defalcat, minimum două oferte, centralizatorul ofertelor, documentele echipei, declarațiile IMM și de cumul și situațiile financiare."],
+        ["Care este pragul minim de punctaj?", "Aprobarea este condiționată de obținerea a minimum 70 de puncte. Proiectele sub acest prag sunt respinse."],
+        ["Ce înseamnă pragul de excelență?", "Pragul de excelență este 92 de puncte. Proiectele care îl ating urmează mecanismul de selecție și contractare descris în ghid, în limita alocării și a regulilor de departajare."],
+        ["Ce echipă tehnică este obligatorie?", "Echipa trebuie să conțină cel puțin un coordonator tehnic și doi experți tehnici cu calificare și experiență în domeniul proiectului."],
+        ["Ce indicatori trebuie asumați?", "Sunt obligatorii indicatorii de realizare, rezultat și etapă. Proiectul trebuie să livreze cel puțin un produs, serviciu sau aplicație inovatoare și să demonstreze introducerea pe piață în condițiile ghidului."],
+        ["Cum se departajează proiectele cu același punctaj?", "Se prioritizează mai întâi punctajul pentru Relevanță și maturitate, apoi Calitatea proiectului; dacă egalitatea persistă, contează ordinea depunerii." ]
+      ],
+      "related": [
+        {"href": "/pocidif-21", "label": "Pagina principală PoCIDIF 2.1"},
+        {"href": "/eligibilitate-pocidif-21", "label": "Eligibilitate PoCIDIF 2.1"},
+        {"href": "/cheltuieli-eligibile-pocidif-21", "label": "Cheltuieli eligibile PoCIDIF 2.1"},
+        {"href": "/ghiduri", "label": "Ghiduri de finanțare"}
+      ],
+      "finalCtaTitle": "Verifică dosarul și punctajul PoCIDIF 2.1",
+      "finalCtaText": "Trimite planul de afaceri, indicatorii, echipa, bugetul și dovezile de piață pentru o verificare înainte de depunere.",
+      "finalPrimaryCta": "Solicită verificarea dosarului"
     }
   ]
 }

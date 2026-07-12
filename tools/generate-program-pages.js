@@ -18,6 +18,7 @@ const {
   loadBanners,
   renderProgramHero
 } = require("./sync-program-heroes");
+const { renderPocidifContent } = require("./pocidif-content");
 const PROGRAM_BANNER_INDEX = createBannerIndex(loadBanners(BANNERS_PATH));
 const {
   editorialSchemaProperties,
@@ -106,7 +107,10 @@ const KEYWORDS_BY_SLUG = {
   "start-up-nation-2026": ["Start Up Nation 2026", "Start Up Nation 2026 conditii", "cheltuieli eligibile Start Up Nation 2026", "cod CAEN Start Up Nation 2026", "idei afaceri Start Up Nation 2026", "plan de afaceri Start Up Nation 2026"],
   "fonduri-europene-imm": ["fonduri europene IMM 2026", "program IMM 2026", "granturi IMM 2026", "fonduri pentru IMM"],
   "investitii-modernizarea-microintreprinderilor-apel-2": ["fonduri microintreprinderi 2026", "program microintreprinderi 2026", "conditii microintreprinderi 2026"],
-  "pocidif-21": ["PoCIDIF 2.1", "inovare digitala IMM TIC", "granturi PoCIDIF", "servicii aplicatii produse digitale"],
+  "pocidif-21": ["PoCIDIF 2.1", "inovare digitală IMM TIC", "finanțare PoCIDIF", "servicii aplicații produse digitale"],
+  "eligibilitate-pocidif-21": ["eligibilitate PoCIDIF 2.1", "coduri CAEN PoCIDIF", "IMM TIC PoCIDIF", "parteneriat PoCIDIF"],
+  "cheltuieli-eligibile-pocidif-21": ["cheltuieli eligibile PoCIDIF 2.1", "hardware PoCIDIF", "software PoCIDIF", "buget PoCIDIF"],
+  "documente-punctaj-pocidif-21": ["documente PoCIDIF 2.1", "punctaj PoCIDIF", "plan de afaceri PoCIDIF", "indicatori PoCIDIF"],
   "pro-infra": ["PRO INFRA", "eficiență energetică industrială", "echipamente eficiente energetic", "sistem EMS", "audit energetic"],
   "fondul-modernizare-energie-regenerabila-2026": ["program energie 2026", "fonduri energie regenerabile 2026", "granturi energie verde 2026", "Fondul pentru Modernizare energie regenerabila"],
   "e-move": ["e-MOVE RO", "program e-MOVE RO 2026", "finantare statii incarcare electrice", "mobilitate electrica fonduri europene", "statii incarcare masini electrice finantare"],
@@ -609,6 +613,42 @@ function links(items) {
     .join("\n");
 }
 
+const POCIDIF_DISCOVERY_COPY = Object.freeze({
+  "digitalizare-imm": [
+    "PoCIDIF 2.1 pentru IMM din sectorul TIC",
+    "Dacă întreprinderea dezvoltă un produs, o aplicație sau un serviciu digital inovator pentru piață, nu doar își digitalizează procesele interne, verifică separat eligibilitatea în PoCIDIF 2.1."
+  ],
+  "fonduri-europene-digitalizare": [
+    "Inovare digitală prin PoCIDIF 2.1",
+    "Pentru microîntreprinderi și IMM-uri TIC care fac cercetare, dezvoltare și inovare și introduc pe piață un rezultat digital, traseul relevant este pagina PoCIDIF 2.1."
+  ],
+  "pnrr": [
+    "PoCIDIF 2.1 este un program distinct de PNRR",
+    "Un IMM TIC care dezvoltă un produs digital inovator trebuie să compare apelurile PNRR cu PoCIDIF 2.1 și să evite suprapunerea aceleiași investiții sau a acelorași costuri."
+  ],
+  "fonduri-europene-imm": [
+    "PoCIDIF 2.1 pentru IMM-uri TIC",
+    "PoCIDIF 2.1 este ruta specializată pentru IMM-urile din sectorul TIC care dezvoltă servicii, aplicații sau produse inovatoare folosind tehnologii avansate."
+  ],
+  "consultanta-fonduri-europene": [
+    "Verificare specializată PoCIDIF 2.1",
+    "Proiectele CDI ale IMM-urilor TIC cer verificarea separată a CAEN-ului, produsului inovator, echipei, tipurilor de ajutor, indicatorilor și grilei PoCIDIF 2.1."
+  ],
+  "ghiduri": [
+    "Ghidul aprobat PoCIDIF 2.1",
+    "Pentru inovare digitală în IMM-uri TIC, consultă sinteza ghidului aprobat, schema, anexele și articolele despre eligibilitate, cheltuieli, documente și punctaj."
+  ]
+});
+
+function renderPocidifDiscoveryLink(page) {
+  const copy = POCIDIF_DISCOVERY_COPY[page.slug];
+  if (!copy) return "";
+  return `<aside class="source-note" aria-label="Resursă contextuală PoCIDIF 2.1">
+        <h2>${esc(copy[0])}</h2>
+        <p>${esc(copy[1])} <a href="/pocidif-21">Vezi pagina PoCIDIF 2.1</a>.</p>
+      </aside>`;
+}
+
 function labelForHref(href) {
   const labels = {
     "/calculator-soc": "Calculator SO AFIR",
@@ -959,7 +999,7 @@ function renderPocidif21Content(page) {
     .join("\n");
 
   return `
-      <p class="intro">PoCIDIF 2.1 finan&#539;eaz&#259; dezvoltarea de servicii, aplica&#539;ii sau produse digitale inovatoare create de IMM-uri din sectorul TIC. Pentru antreprenori, apelul poate sus&#539;ine trecerea de la o idee tehnic&#259; validat&#259; la un produs digital construit, testat &#537;i preg&#259;tit pentru pia&#539;&#259;. Forma consultativ&#259; analizat&#259; indic&#259; granturi orientative &#238;ntre 500.000 &#537;i 3.000.000 euro, iar valorile finale, plafoanele &#537;i condi&#539;iile exacte trebuie confirmate &#238;n ghidul activ PoCIDIF &#537;i anexele apelului.</p>
+      <p class="intro">${esc(page.quickAnswer)}</p>
       <p>Programul nu este g&#226;ndit pentru digitalizare de rutin&#259;, website-uri simple sau cump&#259;r&#259;ri IT f&#259;r&#259; leg&#259;tur&#259; cu un produs nou. Un proiect potrivit explic&#259; problema rezolvat&#259;, utilizatorii viza&#539;i, tehnologia folosit&#259;, noutatea fa&#539;&#259; de solu&#539;iile existente, echipa care poate livra &#537;i modul &#238;n care bugetul duce la un rezultat comercial verificabil. Dac&#259; aceste elemente sunt clare, finan&#539;area poate accelera dezvoltarea, validarea, lansarea &#537;i scalarea unui serviciu digital cu valoare real&#259; pentru clien&#539;i.</p>
 
       <section aria-labelledby="pocidif-criterii-title">
@@ -977,25 +1017,25 @@ function renderPocidif21Content(page) {
 
       <section aria-labelledby="pocidif-valoare-title">
         <h2 id="pocidif-valoare-title">Valoarea &#537;i intensitatea finan&#539;&#259;rii</h2>
-        <p>Intervalul orientativ de grant este 500.000-3.000.000 euro. Intensitatea poate ajunge p&#226;n&#259; la 75% pentru ajutor regional &#537;i p&#226;n&#259; la 100% pentru componente de minimis, dar &#238;ncadrarea se face pe fiecare categorie de cheltuial&#259; &#537;i numai dup&#259; regulile ghidului activ.</p>
+        <p>Ghidul aprobat stabile&#537;te minimum 200.000 euro, maximum 1.500.000 euro pentru solu&#539;ii software &#537;i maximum 3.000.000 euro pentru produse hardware inovatoare. Intensitatea se stabile&#537;te separat dup&#259; tipul ajutorului, dimensiunea firmei &#537;i regiune.</p>
         <div class="table-wrap">
           <svg role="img" aria-labelledby="pocidif-grant-svg-title pocidif-grant-svg-desc" viewBox="0 0 920 250" width="100%" height="250">
             <title id="pocidif-grant-svg-title">Interval de grant &#537;i intensit&#259;&#539;i PoCIDIF 2.1</title>
-            <desc id="pocidif-grant-svg-desc">Grafic cu granturi orientative &#238;ntre 500.000 &#537;i 3.000.000 euro, intensitate maxim&#259; orientativ&#259; de 75% pentru ajutor regional &#537;i 100% pentru minimis.</desc>
+            <desc id="pocidif-grant-svg-desc">Grafic cu finan&#539;are aprobat&#259; &#238;ntre 200.000 &#537;i 3.000.000 euro &#537;i rate diferen&#539;iate dup&#259; tipul ajutorului.</desc>
             <rect x="52" y="62" width="560" height="30" rx="15" fill="#f8f9fb"></rect>
             <rect x="142" y="62" width="390" height="30" rx="15" fill="#b84716"></rect>
             <line x1="142" y1="48" x2="142" y2="112" stroke="#1a2540" stroke-width="2"></line>
             <line x1="532" y1="48" x2="532" y2="112" stroke="#1a2540" stroke-width="2"></line>
-            <text x="52" y="38" fill="#1a2540" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">Grant orientativ</text>
-            <text x="142" y="140" fill="#1a2540" font-family="Inter, Arial, sans-serif" font-size="16" text-anchor="middle">500.000 &#8364;</text>
+            <text x="52" y="38" fill="#1a2540" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="700">Grant aprobat</text>
+            <text x="142" y="140" fill="#1a2540" font-family="Inter, Arial, sans-serif" font-size="16" text-anchor="middle">200.000 &#8364;</text>
             <text x="532" y="140" fill="#1a2540" font-family="Inter, Arial, sans-serif" font-size="16" text-anchor="middle">3.000.000 &#8364;</text>
             <rect x="650" y="42" width="220" height="72" rx="16" fill="#fff7ed" stroke="#b84716" stroke-width="2"></rect>
             <text x="760" y="72" fill="#1a2540" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" text-anchor="middle">Ajutor regional</text>
-            <text x="760" y="102" fill="#b84716" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="800" text-anchor="middle">p&#226;n&#259; la 75%</text>
+            <text x="760" y="102" fill="#b84716" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800" text-anchor="middle">rate diferen&#539;iate</text>
             <rect x="650" y="136" width="220" height="72" rx="16" fill="#f8f9fb" stroke="#1a2540" stroke-width="2"></rect>
             <text x="760" y="166" fill="#1a2540" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="700" text-anchor="middle">Minimis</text>
             <text x="760" y="196" fill="#1a2540" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="800" text-anchor="middle">p&#226;n&#259; la 100%</text>
-            <text x="52" y="205" fill="#334155" font-family="Inter, Arial, sans-serif" font-size="15">Valorile sunt orientative; bugetul final se verific&#259; &#238;n ghidul activ, anexele apelului &#537;i regulile de ajutor aplicabile.</text>
+            <text x="52" y="205" fill="#334155" font-family="Inter, Arial, sans-serif" font-size="15">Bugetul se verific&#259; pe tipuri de ajutor, dimensiunea firmei, regiune &#537;i categoria rezultatului.</text>
           </svg>
         </div>
         <p>Bugetul trebuie construit pe activit&#259;&#539;i, nu pe dorin&#539;e de achizi&#539;ie. Separ&#259; dezvoltarea, testarea, infrastructura, licen&#539;ele, serviciile, partea proprie, TVA-ul &#537;i costurile neeligibile. Pentru fiecare linie trebuie s&#259; existe o justificare: ce rezultat produce, de ce este necesar&#259; pentru produs &#537;i cum se &#238;ncadreaz&#259; &#238;n tipul de ajutor permis.</p>
@@ -2808,14 +2848,13 @@ ${officialSourcesHtml}
 }
 
 function renderMainContent(page) {
+  const pocidifHtml = renderPocidifContent(page);
+  if (pocidifHtml) return pocidifHtml;
   if (page.slug === "dr12-afir") {
     return renderDr12SearchIntentContent(page);
   }
   if (page.slug === "dr14") {
     return renderDr14SearchIntentContent(page);
-  }
-  if (page.slug === "pocidif-21") {
-    return renderPocidif21Content(page);
   }
   if (page.slug === "fondul-modernizare-energie-regenerabila-2026") {
     return renderFondModernizareRegenerabilaContent(page);
@@ -2996,6 +3035,7 @@ ${programBanner ? "  <link rel=\"stylesheet\" href=\"/assets/program-heroes.css\
     <article class="panel">
 ${page.hideFamilyCards ? "" : renderFamilyCards(page)}
 ${renderMainContent(page)}
+${renderPocidifDiscoveryLink(page)}
       <div class="related-links">${links(standardInternalLinksForPath(slugPath(page), page.related))}</div>
     </article>
     <section class="cta-box">
@@ -3246,7 +3286,7 @@ function updateBanners() {
 function updateLlms(pages) {
   if (!fs.existsSync(LLMS_PATH)) return;
   let text = fs.readFileSync(LLMS_PATH, "utf8");
-  const llmsSlugs = new Set(["instrumente", "resurse", "webinarii", "apeluri-gal", "e-move", "gal-afir", "investitii-modernizarea-microintreprinderilor-apel-2", "pocidif-21", "pro-infra", "fondul-modernizare-energie-regenerabila-2026"]);
+  const llmsSlugs = new Set(["instrumente", "resurse", "webinarii", "apeluri-gal", "e-move", "gal-afir", "investitii-modernizarea-microintreprinderilor-apel-2", "pocidif-21", "eligibilitate-pocidif-21", "cheltuieli-eligibile-pocidif-21", "documente-punctaj-pocidif-21", "pro-infra", "fondul-modernizare-energie-regenerabila-2026"]);
   const block = `\n## Pagini noi pentru vizibilitate AI si cautare vocala\n${pages
     .filter((page) => llmsSlugs.has(page.slug) && !/noindex/i.test(page.robots || ""))
     .map((page) => `- ${page.h1}: ${SITE}/${page.slug}`)
