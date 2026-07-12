@@ -12,6 +12,7 @@
     "apply:design-profiles": "node tools/apply-design-profiles.js",
     "generate:lead-magnets": "node tools/generate-lead-magnets.js",
     "generate:sitemap": "node tools/generate-sitemap.js",
+    "generate:feed": "node tools/generate-feed.js",
     "submit:indexnow": "node tools/submit-indexnow.js --changed",
     "submit:indexnow:all": "node tools/submit-indexnow.js --sitemap",
     "verify:sitemap": "node tools/verify-sitemap.js",
@@ -21,13 +22,14 @@
     "verify:functional": "node verify-and-fix.js",
     "verify:all": "npm run check:copy && npm run generate:sitemap && npm run verify:sitemap && node verify-and-fix.js && node scripts/verify-seo-integrity.js . && node tools/audit-site-links.js",
     "fix:all": "node verify-and-fix.js --apply",
-    "build": "npm run apply:design-profiles && npm run generate:sitemap && node tools/build-cloudflare-assets.js",
+    "build": "npm run apply:design-profiles && npm run generate:sitemap && npm run generate:feed && node tools/build-cloudflare-assets.js",
     "validate:cloudflare": "node tools/validate-cloudflare-deploy.js",
     "audit:program-routes": "node tools/audit-cloudflare-program-routes.js",
     "audit:gsc-routes": "node tools/audit-gsc-routes.js",
     "test:functional": "node tests/faber-functional-checks.mjs",
     "deploy": "npm run build && npm run validate:cloudflare && npx wrangler deploy && npm run submit:indexnow",
-    "deploy:pages": "npm run build && npm run validate:cloudflare && npx wrangler pages deploy dist && npm run submit:indexnow"
+    "deploy:pages": "npm run build && npm run validate:cloudflare && npx wrangler pages deploy dist && npm run submit:indexnow",
+    "seo:check": "node scripts/seo-release-check.js"
   },
   "devDependencies": {
     "cheerio": "^1.2.0",

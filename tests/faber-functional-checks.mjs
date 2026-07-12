@@ -9,7 +9,7 @@ import { chromium } from "playwright";
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const DIST = path.join(ROOT, "dist");
 const SITE_ORIGIN = "https://atelierdeconsultanta.ro";
-const EXPECTED_CANONICAL_URLS = 94;
+const EXPECTED_CANONICAL_URLS = 100;
 const CONSOLIDATED_LOCAL_ROUTES = [
   "/fonduri-europene-bacau",
   "/consultanta-fonduri-europene-bacau",
@@ -23,6 +23,11 @@ const INDEXABLE_LOCAL_ROUTES = [
   "/consultanta-fonduri-europene-bucuresti"
 ];
 const INDEXABLE_PROGRAM_ROUTES = [
+  "/proiectare-fonduri-europene",
+  "/studiu-fezabilitate-fonduri-europene",
+  "/plan-de-afaceri-fonduri-europene",
+  "/management-proiecte-fonduri-europene",
+  "/resurse-utile",
   "/dr12-afir",
   "/dr14",
   "/e-move",
@@ -34,8 +39,7 @@ const INDEXABLE_PROGRAM_ROUTES = [
 const NOINDEX_TRUST_ROUTES = [
   "/portofoliu",
   "/testimoniale",
-  "/studii-de-caz",
-  "/studii-de-caz-fonduri-europene"
+  "/studii-de-caz"
 ];
 
 function parseRedirects() {

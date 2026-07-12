@@ -15,6 +15,7 @@ const EXCLUDED_DIRS = new Set([
   "reports",
   "scripts",
   "tools",
+  "archive",
 ]);
 
 const EXCLUDED_FILES = new Set([
@@ -79,6 +80,10 @@ const CANONICAL_DIRECTORY_HTML_ROUTES = [
   "e-move",
   "gal-afir",
   "consultanta-fonduri-europene",
+  "proiectare-fonduri-europene",
+  "studiu-fezabilitate-fonduri-europene",
+  "plan-de-afaceri-fonduri-europene",
+  "management-proiecte-fonduri-europene",
   "consultanta-fonduri-europene-bucuresti",
   "fonduri-regionale",
   "fonduri-europene-nord-est",
@@ -124,6 +129,7 @@ const CANONICAL_DIRECTORY_HTML_ROUTES = [
   "testimoniale",
   "instrumente",
   "resurse",
+  "resurse-utile",
   "webinarii",
   "metodologie-verificare-eligibilitate",
   "surse-oficiale-fonduri-europene",

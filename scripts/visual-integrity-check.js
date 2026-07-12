@@ -12,12 +12,15 @@ const PAGES = [
   { label: 'home', path: '/' },
   { label: 'contact', path: '/contact/' },
   { label: 'consultanta-fonduri-europene', path: '/consultanta-fonduri-europene/' },
+  { label: 'proiectare-fonduri-europene', path: '/proiectare-fonduri-europene/' },
   { label: 'fonduri-europene', path: '/fonduri-europene/' },
-  { label: 'fonduri-europene-imm', path: '/fonduri-europene-imm/' },
   { label: 'afir', path: '/afir/' },
   { label: 'pnrr', path: '/pnrr/' },
-  { label: 'idei-afaceri-fonduri-europene', path: '/idei-afaceri-fonduri-europene.html' },
   { label: 'start-up-nation-2026', path: '/start-up-nation-2026' },
+  { label: 'femeia-antreprenor-2026', path: '/femeia-antreprenor-2026' },
+  { label: 'fondul-de-modernizare', path: '/fondul-de-modernizare/' },
+  { label: 'programul-tranzitie-justa', path: '/programul-tranzitie-justa/' },
+  { label: 'blog', path: '/blog/' },
 ];
 
 const CANONICAL_ROOT_HTML_ROUTES = new Set([

@@ -1,38 +1,39 @@
 {
-  "generatedAt": "2026-07-09T21:18:08.412Z",
+  "generatedAt": "2026-07-12T18:32:01.007Z",
   "summary": {
-    "filesChecked": 172,
-    "filesWithStructuredData": 113,
+    "filesChecked": 177,
+    "filesWithStructuredData": 118,
     "filesWithIssues": 0,
     "types": {
-      "Organization": 332,
-      "ImageObject": 107,
-      "Country": 93,
+      "Organization": 337,
+      "ImageObject": 111,
+      "Country": 103,
       "ContactPoint": 178,
       "WebSite": 93,
-      "WebPage": 104,
+      "WebPage": 108,
       "CreativeWork": 177,
-      "BreadcrumbList": 109,
-      "ListItem": 346,
-      "FAQPage": 102,
-      "Question": 767,
-      "Answer": 767,
+      "BreadcrumbList": 114,
+      "ListItem": 360,
+      "FAQPage": 106,
+      "Question": 787,
+      "Answer": 787,
       "Article": 88,
       "GovernmentService": 47,
       "BlogPosting": 15,
       "Blog": 1,
       "WebApplication": 2,
       "Offer": 2,
-      "Service": 12,
+      "Service": 16,
       "ContactPage": 1,
       "AboutPage": 1,
       "Audience": 48,
       "CommunicateAction": 16,
-      "CollectionPage": 8,
+      "CollectionPage": 9,
       "ItemList": 2,
       "LegalService": 3,
       "DefinedTermSet": 1,
       "DefinedTerm": 28,
+      "ProfessionalService": 1,
       "CreativeWorkSeries": 1
     }
   },
@@ -1804,9 +1805,10 @@
       "types": {
         "Organization": 1,
         "ImageObject": 1,
-        "Country": 1,
+        "Country": 2,
         "ContactPoint": 2,
         "WebSite": 1,
+        "ProfessionalService": 1,
         "WebPage": 1,
         "BreadcrumbList": 1,
         "ListItem": 13,
@@ -1967,6 +1969,23 @@
       "issues": []
     },
     {
+      "file": "management-proiecte-fonduri-europene/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 1,
+        "Country": 2,
+        "ImageObject": 1,
+        "WebPage": 1,
+        "Service": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 3,
+        "FAQPage": 1,
+        "Question": 5,
+        "Answer": 5
+      },
+      "issues": []
+    },
+    {
       "file": "metodologie-verificare-eligibilitate/index.html",
       "blocks": 1,
       "types": {
@@ -1981,6 +2000,23 @@
         "FAQPage": 1,
         "Question": 3,
         "Answer": 3
+      },
+      "issues": []
+    },
+    {
+      "file": "plan-de-afaceri-fonduri-europene/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 1,
+        "Country": 2,
+        "ImageObject": 1,
+        "WebPage": 1,
+        "Service": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 3,
+        "FAQPage": 1,
+        "Question": 5,
+        "Answer": 5
       },
       "issues": []
     },
@@ -2243,6 +2279,35 @@
       "issues": []
     },
     {
+      "file": "proiectare-fonduri-europene/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 1,
+        "Country": 2,
+        "ImageObject": 1,
+        "WebPage": 1,
+        "Service": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 3,
+        "FAQPage": 1,
+        "Question": 5,
+        "Answer": 5
+      },
+      "issues": []
+    },
+    {
+      "file": "resurse-utile/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 1,
+        "Country": 1,
+        "CollectionPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2
+      },
+      "issues": []
+    },
+    {
       "file": "resurse/index.html",
       "blocks": 1,
       "types": {
@@ -2477,6 +2542,23 @@
         "Question": 5,
         "Answer": 5,
         "Article": 1
+      },
+      "issues": []
+    },
+    {
+      "file": "studiu-fezabilitate-fonduri-europene/index.html",
+      "blocks": 1,
+      "types": {
+        "Organization": 1,
+        "Country": 2,
+        "ImageObject": 1,
+        "WebPage": 1,
+        "Service": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 3,
+        "FAQPage": 1,
+        "Question": 5,
+        "Answer": 5
       },
       "issues": []
     },

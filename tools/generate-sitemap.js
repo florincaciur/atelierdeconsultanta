@@ -168,6 +168,10 @@ function priority(url) {
   if (pathname === "/") return 0;
   const primary = [
     "/consultanta-fonduri-europene",
+    "/proiectare-fonduri-europene",
+    "/studiu-fezabilitate-fonduri-europene",
+    "/plan-de-afaceri-fonduri-europene",
+    "/management-proiecte-fonduri-europene",
     "/fonduri-europene",
     "/dr12-afir",
     "/dr14",
