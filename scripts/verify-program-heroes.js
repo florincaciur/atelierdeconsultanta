@@ -100,10 +100,12 @@ function verifyStaticPage(route, bannerIndex) {
   const expectedIcon = iconClass(route === "/pro-infra" ? PRO_INFRA_REFERENCE.icon : banner.icon);
   if (actualIcon !== expectedIcon) fail(route, `icon differs: ${actualIcon} != ${expectedIcon}`);
 
-  const expectedTitle = route === "/pro-infra" ? PRO_INFRA_REFERENCE.title : (banner.pageTitle || banner.title);
+  const expectedTitle = route === "/pro-infra"
+    ? PRO_INFRA_REFERENCE.title
+    : ((banner.pageTitles && banner.pageTitles[route]) || banner.pageTitle || banner.title);
   const expectedDescription = route === "/pro-infra"
     ? PRO_INFRA_REFERENCE.description
-    : (banner.description || banner.subtitle);
+    : ((banner.pageDescriptions && banner.pageDescriptions[route]) || banner.description || banner.subtitle);
   if (heroText(hero.find("h1").first()) !== normalizeText(expectedTitle)) fail(route, "H1 does not reuse the banner title");
   if (normalizeText(hero.find("p").first().text()) !== normalizeText(expectedDescription)) fail(route, "description does not reuse banners.json");
 
@@ -113,7 +115,8 @@ function verifyStaticPage(route, bannerIndex) {
   if (normalizeCtaLink(links.eq(0).attr("href")) !== "/verificare-eligibilitate-fonduri-europene") {
     fail(route, "first CTA is not the eligibility check");
   }
-  const officialSource = sourcesForKeys([banner.officialGuideKey])[0];
+  const officialGuideKey = (banner.officialGuideKeys && banner.officialGuideKeys[route]) || banner.officialGuideKey;
+  const officialSource = sourcesForKeys([officialGuideKey])[0];
   if (!officialSource || links.eq(1).attr("href") !== officialSource.url) fail(route, "official-guide CTA does not target the banner's official source");
   if (!/ghid|surs|program|apel/i.test(normalizeText(links.eq(1).text()))) fail(route, "second CTA is not labelled as an official guide/source");
 

@@ -379,9 +379,9 @@
     {
       "slug": "fonduri-europene-nord-est",
       "region": "Nord-Est",
-      "title": "Fonduri europene Nord-Est | Iasi, Suceava, Bacau, Botosani, Neamt, Vaslui",
-      "description": "Ghid regional pentru fonduri europene in Nord-Est: judete acoperite, ADR Nord-Est, programe regionale, AFIR, programe nationale si verificare eligibilitate.",
-      "h1": "Fonduri europene Nord-Est",
+      "title": "Fonduri europene Nord-Est: programe regionale, AFIR și IMM | FABER",
+      "description": "Hub regional pentru finanțările relevante în Nord-Est: Program Regional, AFIR, IMM, digitalizare, energie, județe, documente și eligibilitate.",
+      "h1": "Fonduri europene în regiunea Nord-Est",
       "counties": [
         "Iasi",
         "Suceava",
@@ -391,6 +391,8 @@
         "Vaslui"
       ],
       "sourceKeys": [
+        "adr-ne-program",
+        "adr-ne-region",
         "por-ne",
         "por-ne-apel-2",
         "dr12",
@@ -399,7 +401,9 @@
         "fondul-modernizare"
       ],
       "related": [
+        "/fonduri-regionale",
         "/por-adr-nord-est",
+        "/investitii-modernizarea-microintreprinderilor-apel-2",
         "/fonduri-europene-imm",
         "/consultanta-fonduri-europene",
         "/verificare-eligibilitate-fonduri-europene",

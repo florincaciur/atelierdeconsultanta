@@ -1303,7 +1303,29 @@ function renderPorAdrNordEstContent(page) {
     .join("\n");
 
   return `
-      <p class="intro">Ce este POR ADR Nord-Est? Este programul regional prin care microîntreprinderile din județele Bacău, Botoșani, Iași, Neamț, Suceava și Vaslui pot pregăti investiții pentru modernizare: echipamente, dotări, software, amenajări sau alte costuri permise de apel. Pagina de mai jos este un ghid de orientare pentru antreprenori, scris pe înțelesul unei firme care vrea să știe dacă merită să înceapă dosarul. Forma oficială a ghidului, anexele, calendarul și eventualele clarificări trebuie verificate de fiecare dată pe site-ul ADR Nord-Est.</p>
+      <p class="intro">Programul Regional Nord-Est 2021–2027 este cadrul regional pentru apelurile administrate de ADR Nord-Est în județele Bacău, Botoșani, Iași, Neamț, Suceava și Vaslui. Expresia istorică „POR ADR Nord-Est” este încă folosită de antreprenori, însă această pagină oferă orientare la nivel de program pentru IMM și microîntreprinderi, nu regulile unei singure sesiuni. Eligibilitatea, bugetele și termenele se confirmă în ghidul activ al fiecărui apel.</p>
+
+      <section aria-labelledby="por-ne-judete-apeluri">
+        <h2 id="por-ne-judete-apeluri">Județele regiunii și tipurile de apeluri</h2>
+        <p>Regiunea Nord-Est cuprinde cele șase județe <strong>Bacău, Botoșani, Iași, Neamț, Suceava și Vaslui</strong>. Pentru încadrare contează locul în care se implementează investiția și documentele care dovedesc dreptul asupra amplasamentului, nu doar adresa sediului social.</p>
+        <p>Programul Regional poate publica tipuri diferite de apeluri, în funcție de prioritățile și calendarul activ: competitivitate și investiții productive pentru IMM, inovare și digitalizare, eficiență energetică, dezvoltare urbană, mobilitate, educație, sănătate, turism sau patrimoniu. Fiecare apel are beneficiari, cheltuieli și documente proprii; această pagină nu declară un apel deschis fără confirmarea sursei oficiale.</p>
+      </section>
+
+      <section aria-labelledby="por-ne-diferenta-rute">
+        <h2 id="por-ne-diferenta-rute">Diferența dintre hub, program și Apelul 2</h2>
+        <div class="table-wrap">
+          <table class="program-table">
+            <thead><tr><th>Pagină</th><th>Intenție</th><th>Când o folosești</th></tr></thead>
+            <tbody>
+              <tr><td><a href="/fonduri-regionale">Fonduri regionale</a></td><td>Hub național pentru toate programele regionale și ADR-urile din România.</td><td>Când nu ai stabilit încă regiunea sau vrei să compari autoritățile regionale.</td></tr>
+              <tr><td><a href="/fonduri-europene-nord-est">Fonduri europene Nord-Est</a></td><td>Hub regional pentru programe regionale, AFIR, scheme naționale, digitalizare și energie.</td><td>Când investiția este în Nord-Est, dar programul potrivit nu este încă stabilit.</td></tr>
+              <tr><td>Programul Regional Nord-Est</td><td>Orientare privind programul regional și apelurile sale pentru IMM și microîntreprinderi.</td><td>Când știi că ruta regională este relevantă, dar nu analizezi încă o singură sesiune.</td></tr>
+              <tr><td><a href="/investitii-modernizarea-microintreprinderilor-apel-2">Investiții pentru modernizarea microîntreprinderilor – Apel 2</a></td><td>Condițiile și pregătirea exclusiv pentru Apelul 2.</td><td>Când vrei analiza detaliată a solicitantului, CAEN-ului, amplasamentului, bugetului și documentelor pentru această sesiune.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p><a class="btn btn-secondary" href="/investitii-modernizarea-microintreprinderilor-apel-2">Vezi pagina detaliată pentru Apelul 2</a></p>
+      </section>
 
       <section aria-labelledby="por-ne-cine-poate-aplica">
         <h2 id="por-ne-cine-poate-aplica">Cine poate aplica</h2>
@@ -1417,7 +1439,8 @@ function renderMicroApel2Content(page) {
     .join("\n");
 
   return `
-      <p class="intro">Apelul 2 pentru modernizarea microîntreprinderilor din Nord-Est este o oportunitate pentru firme mici care vor să cumpere echipamente, dotări, software, servicii sau amenajări legate direct de activitatea lor. În forma consultativă analizată, granturile sunt între 100.000 și 300.000 euro, cu intensitate maximă de 90%. Aceste valori ajută la pregătirea bugetului, dar pot fi actualizate în forma finală a ghidului, a anexelor și a grilei publicate de ADR Nord-Est.</p>
+      <p class="intro"><strong>Investiții pentru modernizarea microîntreprinderilor – Apel 2</strong> este pagina dedicată exclusiv acestei sesiuni din Programul Regional Nord-Est. Ea urmărește solicitantul, localizarea, codul CAEN, amplasamentul, situațiile financiare, cheltuielile și cofinanțarea necesare proiectului. În forma consultativă analizată, granturile sunt între 100.000 și 300.000 euro, cu intensitate maximă de 90%; valorile și condițiile se reconfirmă în documentele active ADR Nord-Est.</p>
+      <p class="note">Pentru cadrul general, celelalte apeluri și rolul autorității regionale, consultă <a href="/por-adr-nord-est">Programul Regional Nord-Est – finanțări pentru IMM și microîntreprinderi</a>. Pagina curentă nu este un hub general și rămâne limitată la Apelul 2.</p>
 
       <section aria-labelledby="apel2-beneficii-title">
         <h2 id="apel2-beneficii-title">De ce merită analizat Apelul 2</h2>

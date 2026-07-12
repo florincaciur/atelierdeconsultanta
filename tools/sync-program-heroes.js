@@ -42,6 +42,7 @@ const BANNER_ALIASES = Object.freeze({
 const FAMILY_BY_ROUTE = Object.freeze({
   "/por-adr-nord-est": "generic",
   "/fonduri-regionale": "generic",
+  "/investitii-modernizarea-microintreprinderilor-apel-2": "generic",
   "/dr12-afir": "afir",
   "/afir-autoconsum-agroalimentar": "energy",
   "/autoconsum-public-fotovoltaice-institutii-publice": "energy",
@@ -162,7 +163,8 @@ function ensureHeroActions(route, banner, actionsHtml) {
   const $ = cheerio.load(`<div class="hero-actions">${String(actionsHtml || "")}</div>`, { decodeEntities: false }, false);
   const links = $(".hero-actions a");
   const eligibility = links.filter((_, element) => normalizeCtaLink($(element).attr("href")) === "/verificare-eligibilitate-fonduri-europene").first();
-  const officialSource = sourcesForKeys([banner.officialGuideKey])[0];
+  const officialGuideKey = (banner.officialGuideKeys && banner.officialGuideKeys[normalizedRoute]) || banner.officialGuideKey;
+  const officialSource = sourcesForKeys([officialGuideKey])[0];
   if (!officialSource || !officialSource.isComplete || !/^https?:\/\//i.test(officialSource.url)) {
     throw new Error(`No complete official guide configured for ${normalizedRoute}`);
   }
@@ -190,8 +192,8 @@ function renderProgramHero({ route, banner, existing = {}, actionsHtml }) {
       }
     : {
         tag: banner.tag || existing.tag || banner.subtitle || "Program de finanțare",
-        title: banner.pageTitle || banner.title || existing.title,
-        description: banner.description || banner.subtitle || existing.description
+        title: (banner.pageTitles && banner.pageTitles[normalizedRoute]) || banner.pageTitle || banner.title || existing.title,
+        description: (banner.pageDescriptions && banner.pageDescriptions[normalizedRoute]) || banner.description || banner.subtitle || existing.description
       };
   const finalActions = ensureHeroActions(normalizedRoute, banner, actionsHtml || existing.actionsHtml);
   if (!finalActions) throw new Error(`Missing hero actions for ${normalizedRoute}`);

@@ -3,6 +3,18 @@
     "id": "slide-por-adr",
     "tag": "Infrastructură regională",
     "title": "POR ADR Nord-Est\n2021–2027",
+    "pageTitles": {
+      "/por-adr-nord-est": "Programul Regional Nord-Est – finanțări pentru IMM și microîntreprinderi",
+      "/fonduri-regionale": "Programe regionale și ADR-uri din România"
+    },
+    "pageDescriptions": {
+      "/por-adr-nord-est": "Orientare privind Programul Regional Nord-Est 2021–2027 și apelurile pentru IMM și microîntreprinderi.",
+      "/fonduri-regionale": "Hub național pentru programele regionale 2021–2027, regiunile de dezvoltare și agențiile pentru dezvoltare regională."
+    },
+    "officialGuideKeys": {
+      "/por-adr-nord-est": "adr-ne-program",
+      "/fonduri-regionale": "adr-ne-program"
+    },
     "description": "Grant 100.000-300.000 EUR pentru microîntreprinderi din regiunile Bacău, Botoșani, Iași, Neamț, Suceava, Vaslui. 70-90% nerambursabil.",
     "amount": "Finanțare: până la 300.000 € per proiect",
     "ctaText": "Detalii program →",
@@ -141,6 +153,7 @@
     "id": "slide-micro-apel-2",
     "tag": "Microîntreprinderi",
     "title": "Modernizarea microîntreprinderilor\nApel 2",
+    "pageTitle": "Investiții pentru modernizarea microîntreprinderilor – Apel 2 Nord-Est",
     "description": "Pregătire pentru microîntreprinderi: regiune, CAEN, documente, buget, cheltuieli și punctaj.",
     "amount": "Finanțare: conform apelului activ",
     "ctaText": "Detalii program →",

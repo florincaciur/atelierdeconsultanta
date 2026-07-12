@@ -499,6 +499,9 @@ function regionalPage(item) {
     ["De ce nu sunt indexate paginile locale separate?", "Paginile locale separate raman consolidate pana exista date locale reale, surse regionale sau exemple aprobate care sa justifice continut distinct."]
   ]);
   let body = `
+      <h2>Rolul hub-ului regional Nord-Est</h2>
+      <p>Această pagină grupează toate rutele de finanțare relevante pentru proiecte implementate în regiunea Nord-Est: Programul Regional administrat de ADR Nord-Est, intervențiile AFIR pentru agricultură și rural, programe naționale pentru IMM și antreprenoriat, digitalizare, energie și alte scheme sectoriale. Nu este pagina unui singur apel și nu presupune că orice proiect din regiune trebuie depus prin Programul Regional.</p>
+      <p>Pentru orientare națională folosește ${linkTo("/fonduri-regionale", "hub-ul programelor regionale și ADR-urilor")}. Pentru cadrul Programului Regional și apelurile destinate firmelor folosește ${linkTo("/por-adr-nord-est", "Programul Regional Nord-Est")}. Pentru condițiile unei singure sesiuni deschide ${linkTo("/investitii-modernizarea-microintreprinderilor-apel-2", "Investiții pentru modernizarea microîntreprinderilor – Apel 2")}.</p>
       <h2>Judete acoperite</h2>
       <p>Pagina consolideaza intentiile locale pentru Regiunea ${esc(item.region)} si acopera orientativ judetele: ${esc(counties.join(", "))}. In locul unor pagini separate pentru fiecare oras, analiza porneste de la regiune, program, localizarea investitiei si documentele beneficiarului.</p>
       <h2>Programe relevante in Nord-Est</h2>
@@ -536,8 +539,8 @@ function regionalPage(item) {
       <p>Pentru o analiza initiala, sunt utile datele firmei, judetul si localitatea investitiei, descrierea activitatii, lista de cheltuieli dorite, bugetul estimat, cofinantarea disponibila si documentele pentru spatiu sau teren. Pentru agricultura, sunt necesare si informatii despre exploatatie, culturi, animale si dimensiune economica.</p>
       <h2>Surse oficiale regionale</h2>
       <ul>
-        <li><a href="https://adrnordest.ro/" target="_blank" rel="noopener noreferrer">ADR Nord-Est</a> pentru informatii regionale si apeluri active.</li>
-        <li><a href="https://adrnordest.ro/comentariiGhid/P1IMMInovative/Apel1/Ghid.pdf" target="_blank" rel="noopener noreferrer">Ghid ADR Nord-Est pentru investitii microintreprinderi</a>, verificat in sursele proiectului.</li>
+        <li><a href="https://regionordest.ro/" target="_blank" rel="noopener noreferrer">Programul Regional Nord-Est 2021–2027</a> pentru calendar, apeluri și documentele administrate regional.</li>
+        <li><a href="https://www.adrnordest.ro/regiunea-nord-est/organizare-administrativ-teritoriala/" target="_blank" rel="noopener noreferrer">ADR Nord-Est - organizare administrativ-teritorială</a> pentru componența regiunii.</li>
         <li>${linkTo("/surse-oficiale-fonduri-europene", "Tabelul intern de surse oficiale")}</li>
       </ul>`;
   body = ensureDepth(appendConfiguredBody(body, item), `fonduri europene ${item.region}`);
@@ -613,6 +616,10 @@ ${all.map((route) => `  <url>
 
 function main() {
   const config = JSON.parse(fs.readFileSync(CONFIG, "utf8"));
+  const onlyArgument = process.argv.slice(2).find((argument) => argument.startsWith("--only="));
+  const onlyRoutes = onlyArgument
+    ? new Set(onlyArgument.slice("--only=".length).split(",").map((route) => cleanUrl(route.trim())).filter(Boolean))
+    : null;
   const activeLocalPages = (config.localPages || []).filter((item) => item.status !== "consolidate");
   const localRedirects = (config.localPages || [])
     .filter((item) => item.status === "consolidate" && item.redirectTo)
@@ -635,13 +642,25 @@ function main() {
       target: item.redirectTo,
       title: item.question || item.slug
     }));
-  const pages = [
+  const generatedPages = [
     ...(config.caenPages || []).map(caenPage),
     ...(config.regionalPages || []).map(regionalPage),
     ...activeLocalPages.flatMap((item) => [localPage(item, false), localPage(item, true)]),
     ...(config.faqPages || []).filter((item) => item.status !== "redirect").map(faqPage)
   ];
+  const pages = onlyRoutes
+    ? generatedPages.filter((page) => onlyRoutes.has(cleanUrl(page.route)))
+    : generatedPages;
+  if (onlyRoutes && pages.length !== onlyRoutes.size) {
+    const found = new Set(pages.map((page) => cleanUrl(page.route)));
+    const missing = [...onlyRoutes].filter((route) => !found.has(route));
+    throw new Error(`Unknown or redirected --only route(s): ${missing.join(", ")}`);
+  }
   for (const page of pages) writePage(page.route, page.content);
+  if (onlyRoutes) {
+    console.log(`Generated ${pages.length} selected programmatic SEO page(s): ${[...onlyRoutes].join(", ")}.`);
+    return;
+  }
   for (const redirect of [...localRedirects, ...faqRedirects]) writePage(redirect.route, redirectFallbackPage(redirect));
   updateSitemap(
     pages.map((page) => page.route),

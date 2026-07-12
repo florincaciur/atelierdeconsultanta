@@ -1649,11 +1649,11 @@
       "type": "program",
       "schemaType": "GovernmentService",
       "category": "Program regional",
-      "title": "POR ADR Nord-Est pentru microîntreprinderi",
-      "description": "POR ADR Nord-Est explicat clar pentru microîntreprinderi din Nord-Est: cine poate aplica, documente, sume, pași și verificare eligibilitate.",
-      "h1": "POR ADR Nord-Est pentru microîntreprinderi",
-      "quickAnswer": "Ce este POR ADR Nord-Est? Este programul regional prin care microîntreprinderile din județele Bacău, Botoșani, Iași, Neamț, Suceava și Vaslui pot pregăti investiții pentru modernizare: echipamente, dotări, software, amenajări sau alte costuri permise de apel. Forma oficială a ghidului, anexele, calendarul și clarificările trebuie verificate de fiecare dată pe site-ul ADR Nord-Est.",
-      "programName": "Investiții pentru modernizarea microintreprinderilor",
+      "title": "Programul Regional Nord-Est: apeluri pentru IMM | FABER",
+      "description": "Programul Regional Nord-Est 2021–2027: orientare pentru IMM și microîntreprinderi privind apelurile, județele, CAEN, amplasamentul și documentele.",
+      "h1": "Programul Regional Nord-Est – finanțări pentru IMM și microîntreprinderi",
+      "quickAnswer": "Programul Regional Nord-Est 2021–2027 este cadrul regional de finanțare administrat de ADR Nord-Est pentru investiții în Bacău, Botoșani, Iași, Neamț, Suceava și Vaslui. Denumirea istorică „POR ADR Nord-Est” este încă folosită în căutări, însă pagina de față orientează utilizatorul la nivelul programului și al tipurilor de apeluri pentru IMM și microîntreprinderi. Nu descrie exclusiv o singură sesiune. Pentru regulile detaliate ale investițiilor pentru modernizarea microîntreprinderilor – Apel 2 există o pagină separată. Înainte de alegerea unui apel se verifică solicitantul, codul CAEN, amplasamentul, situațiile financiare, cofinanțarea, documentele și ghidul activ publicat de autoritatea regională.",
+      "programName": "Programul Regional Nord-Est 2021–2027",
       "policyContribution": "programul regional susține competitivitatea microintreprinderilor, modernizarea activitatilor locale și investiții productive cu impact economic.",
       "funding": "Sumele, intensitatea sprijinului și plafoanele de cheltuieli se confirmă în ghidul activ publicat de ADR Nord-Est.",
       "audience": [
@@ -1749,6 +1749,7 @@
         ]
       ],
       "related": [
+        "/fonduri-regionale",
         "/investitii-modernizarea-microintreprinderilor-apel-2",
         "/fonduri-europene-nord-est",
         "/fonduri-europene-imm",
@@ -1757,10 +1758,11 @@
         "/instrumente"
       ],
       "sourceKeys": [
-        "por-ne"
+        "adr-ne-program",
+        "adr-ne-region"
       ],
       "heroIcon": "ph-duotone ph-map-pin",
-      "officialGuideKey": "por-ne",
+      "officialGuideKey": "adr-ne-program",
       "guideCtaLabel": "Ghid oficial",
       "hideFamilyCards": true,
       "contentSections": [],
@@ -1778,10 +1780,10 @@
       "type": "program",
       "schemaType": "GovernmentService",
       "category": "Fonduri regionale",
-      "title": "Modernizarea microîntreprinderilor – Apel 2 Nord-Est: ghid practic",
-      "description": "Ghid practic pentru Apel 2 Nord-Est: granturi 100.000-300.000 euro, intensitate maximă 90%, eligibilitate, documente și riscuri.",
-      "h1": "Modernizarea microîntreprinderilor – Apel 2 Nord-Est: Ghid practic pentru antreprenori",
-      "quickAnswer": "Apelul 2 pentru modernizarea microîntreprinderilor din Nord-Est sprijină firmele mici care pregătesc investiții reale în echipamente, dotări, software, servicii sau amenajări. Forma consultativă indică granturi între 100.000 și 300.000 euro și intensitate maximă de 90%, dar valorile finale, condițiile și documentele pot fi actualizate în ghidul final ADR Nord-Est. Pentru antreprenori, verificarea începe cu solicitantul, regiunea, codul CAEN, spațiul investiției și cofinanțarea. Un proiect solid explică de ce achizițiile modernizează activitatea, cum susțin rezultatele firmei și ce documente dovedesc fiecare ipoteză înainte de depunere. Decizia de aplicare trebuie luată după compararea bugetului, a punctajului estimat, a riscurilor de implementare și a calendarului oficial publicat pentru apel.",
+      "title": "Investiții pentru modernizarea microîntreprinderilor – Apel 2 | FABER",
+      "description": "Investiții pentru modernizarea microîntreprinderilor – Apel 2 Nord-Est: eligibilitate, CAEN, amplasament, buget, documente și riscuri.",
+      "h1": "Investiții pentru modernizarea microîntreprinderilor – Apel 2 Nord-Est",
+      "quickAnswer": "Investiții pentru modernizarea microîntreprinderilor – Apel 2 este pagina dedicată exclusiv sesiunii regionale pentru firme mici din Nord-Est. Forma consultativă analizată indică granturi între 100.000 și 300.000 euro și intensitate maximă de 90%, valori care trebuie reconfirmate în ghidul și anexele active. Verificarea pornește de la statutul de microîntreprindere, localizarea investiției în regiune, codul CAEN, dreptul asupra spațiului, situațiile financiare și sursa cofinanțării. Fiecare echipament, aplicație software, serviciu sau amenajare trebuie legată de modernizarea activității eligibile. Pentru imaginea generală a programului și pentru alte apeluri se folosește pagina Programul Regional Nord-Est, nu această pagină de Apel 2. Pagina curentă nu generalizează condițiile sesiunii către alte finanțări regionale.",
       "programName": "Modernizarea microintreprinderilor - Apel 2",
       "policyContribution": "apelul susține investiții productive, modernizare, competitivitate regionala și cresterea capacitatii firmelor mici de a livra servicii sau produse mai bune.",
       "funding": "Intre 100.000 si 300.000 euro, cu intensitate maxima de 90%, conform ghidului consultativ pentru Programul Regional Nord-Est.",
@@ -1873,6 +1875,10 @@
         ]
       ],
       "related": [
+        {
+          "href": "/fonduri-regionale",
+          "label": "Programe regionale și ADR-uri"
+        },
         {
           "href": "/fonduri-europene-nord-est",
           "label": "Fonduri europene Nord-Est"
