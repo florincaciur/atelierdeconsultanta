@@ -5,6 +5,7 @@ const fs = require("fs");
 const path = require("path");
 
 const ROOT = path.resolve(__dirname, "..");
+const GLOBAL_HEADER = fs.readFileSync(path.join(ROOT, "partials", "global-header.html"), "utf8").trim();
 const CONFIG = path.join(ROOT, "config", "seo-programmatic-pages.json");
 const SITEMAP = path.join(ROOT, "sitemap.xml");
 const PROGRAMMATIC_MIN_WORDS = 1100;
@@ -28,7 +29,6 @@ const {
   normalizeRomanianCopy
 } = require("./normalize-copy-ro");
 const { designFamilyForSlug } = require("./design-family-map");
-const { brandLogoLink } = require("./brand-logo");
 const CLARITY_TRACKING_CODE = `  <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -270,15 +270,7 @@ function html({ title, description, h1, route, category, summary, body, faq, rel
 ${CLARITY_TRACKING_CODE}
 </head>
 <body class="page-family-${esc(family)}">
-  <nav class="navbar" aria-label="Navigare principala">
-    ${brandLogoLink()}
-    <div class="navbar-links">
-      <a href="/fonduri-europene">Fonduri europene</a>
-      <a href="/instrumente">Instrumente</a>
-      <a href="/resurse">Resurse</a>
-      <a class="nav-cta btn-primary" href="/contact">Solicita verificare eligibilitate</a>
-    </div>
-  </nav>
+  ${GLOBAL_HEADER}
   ${renderBreadcrumb(route, h1)}
   <header ${heroAttrs(route, category)}>
     <span class="hero-icon" aria-hidden="true"><i class="${esc(heroIconForRoute(route, category))}"></i></span>

@@ -8,6 +8,7 @@ const zlib = require("zlib");
 const cp = require("child_process");
 
 const ROOT = path.resolve(__dirname, "..");
+const GLOBAL_HEADER = fs.readFileSync(path.join(ROOT, "partials", "global-header.html"), "utf8").trim();
 const REPORT_DIR = path.join(ROOT, "reports");
 const {
   SITE,
@@ -19,7 +20,6 @@ const {
   normalizeCanonicalPath,
   organizationSchema
 } = require("./schema-helpers");
-const { brandLogoLink } = require("./brand-logo");
 const WEB_ERROR =
   "Nu pot genera articol publicabil: lipsește accesul web necesar pentru verificarea surselor oficiale, a SERP-urilor și a semnalelor AI Search.";
 const CLARITY_TRACKING_CODE = `  <script type="text/javascript">
@@ -1351,15 +1351,7 @@ ${CLARITY_TRACKING_CODE}
   <script type="application/ld+json">${JSON.stringify({ "@context": "https://schema.org", "@graph": articleSchemas }, null, 2)}</script>
 </head>
 <body>
-  <nav class="navbar" aria-label="Navigare principală">
-    ${brandLogoLink()}
-    <div class="navbar-links">
-      <a href="/fonduri-europene">Fonduri europene</a>
-      <a href="/ghiduri">Ghiduri</a>
-      <a href="/blog">Blog</a>
-      <a href="/contact" class="nav-cta btn-primary">Verificare eligibilitate</a>
-    </div>
-  </nav>
+  ${GLOBAL_HEADER}
 
   <div class="breadcrumb"><a href="/">Acasă</a> / <a href="/blog">Blog</a> / ${esc(config.titleSeo)}</div>
 

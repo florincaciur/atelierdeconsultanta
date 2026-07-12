@@ -231,20 +231,145 @@
   </script>
 </head>
 <body class="page-family-editorial">
-  <nav class="navbar" aria-label="Navigare principala">
-    <a class="brand" href="/" aria-label="FABER - Atelier de Consultanță, acasă"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 44" width="240" height="44" aria-hidden="true">
-          <text x="0" y="32" font-family="Georgia,'Times New Roman',serif" font-size="28" font-weight="700" fill="#b84716" letter-spacing="3">FABER</text>
-          <path d="M118,22 L125,13 L132,22 L125,31 Z" fill="white" opacity="0.95"></path>
-          <text x="138" y="18" font-family="'Inter','Helvetica Neue',sans-serif" font-size="10" font-weight="600" fill="white" letter-spacing="2">ATELIER de</text>
-          <text x="138" y="33" font-family="'Inter','Helvetica Neue',sans-serif" font-size="10" font-weight="600" fill="white" letter-spacing="2">CONSULTANȚĂ</text>
-        </svg></a>
-    <div class="navbar-links">
-      <a href="/fonduri-europene">Fonduri europene</a>
-      <a href="/instrumente">Instrumente</a>
-      <a href="/resurse">Resurse</a>
-      <a class="nav-cta btn-primary" href="/contact">Solicită verificare eligibilitate</a>
+  <!-- GLOBAL_HEADER_START -->
+<link rel="stylesheet" href="/assets/global-header.css">
+<nav id="navbar" role="navigation" aria-label="Navigare principală" data-section-id="navbar">
+  <div class="nav-container">
+
+    <a class="nav-logo" href="/" aria-label="FABER - Atelier de Consultanță, acasă"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 44" width="240" height="44" aria-hidden="true">
+        <text x="0" y="32" font-family="Georgia,'Times New Roman',serif" font-size="28" font-weight="700" fill="#b84716" letter-spacing="3">FABER</text>
+        <path d="M118,22 L125,13 L132,22 L125,31 Z" fill="white" opacity="0.95"></path>
+        <text x="138" y="18" font-family="'Inter','Helvetica Neue',sans-serif" font-size="10" font-weight="600" fill="white" letter-spacing="2">ATELIER de</text>
+        <text x="138" y="33" font-family="'Inter','Helvetica Neue',sans-serif" font-size="10" font-weight="600" fill="white" letter-spacing="2">CONSULTANȚĂ</text>
+      </svg></a>
+
+    <div class="nav-links">
+      <a href="#servicii">Servicii</a>
+      <a href="/despre-faber">Despre noi</a>
+      <a href="#finantare">Finanțări</a>
+      <a href="#blog">Blog</a>
+
+      <div class="nav-dropdown" data-section-id="nav-dropdown-programe">
+        <button class="nav-dropdown-btn" type="button" id="dropdownBtn" aria-haspopup="true" aria-expanded="false" aria-controls="dropdownPanel">
+          Programe <span class="arrow" aria-hidden="true"></span>
+        </button>
+        <div class="nav-dropdown-panel" id="dropdownPanel" aria-labelledby="dropdownBtn" role="menu" hidden="">
+          <div class="dropdown-header">Programe de finanțare 2026</div>
+
+          <a href="/por-adr-nord-est" class="dropdown-item" role="menuitem" data-service-id="por-adr-ne">
+            <div class="d-icon" style="background:rgba(59,130,246,0.2)"><i class="ph-duotone ph-buildings" style="color:#93c5fd"></i></div>
+            <div class="d-text">POR ADR Nord-Est<div class="d-label">Microîntreprinderi | până la 300.000 EUR</div></div>
+          </a>
+
+          <a href="/fonduri-regionale" class="dropdown-item" role="menuitem" data-service-id="fonduri-regionale">
+            <div class="d-icon" style="background:rgba(59,130,246,0.2)"><i class="ph-duotone ph-map-pin" style="color:#93c5fd"></i></div>
+            <div class="d-text">Fonduri Regionale<div class="d-label">Fonduri de la agențiile regionale</div></div>
+          </a>
+
+          <a href="/dr12-afir" class="dropdown-item" role="menuitem" data-service-id="dr12-afir">
+            <div class="d-icon" style="background:rgba(34,197,94,0.2)"><i class="ph-duotone ph-plant" style="color:#86efac"></i></div>
+            <div class="d-text">DR 12 / AFIR<div class="d-label">Tineri Fermieri | până la 200.000 EUR</div></div>
+          </a>
+
+          <a href="/afir-autoconsum-agroalimentar" class="dropdown-item" role="menuitem" data-service-id="afir-autoconsum">
+            <div class="d-icon" style="background:rgba(234,179,8,0.2)"><i class="ph-duotone ph-sun" style="color:#fde68a"></i></div>
+            <div class="d-text">AFIR Autoconsum Agro<div class="d-label">100% nerambursabil</div></div>
+          </a>
+
+          <a href="/autoconsum-public-fotovoltaice-institutii-publice" class="dropdown-item" role="menuitem" data-service-id="autoconsum-pub">
+            <div class="d-icon" style="background:rgba(139,92,246,0.2)"><i class="ph-duotone ph-bank" style="color:#c4b5fd"></i></div>
+            <div class="d-text">Autoconsum Publici<div class="d-label">Instituții publice | 100%</div></div>
+          </a>
+
+          <a href="/dr14" class="dropdown-item" role="menuitem" data-service-id="dr14">
+            <div class="d-icon" style="background:rgba(34,197,94,0.2)"><i class="ph-duotone ph-tractor" style="color:#86efac"></i></div>
+            <div class="d-text">DR 14 – Ferme Mici<div class="d-label">PAC 2023-2027 | până la 50.000 EUR</div></div>
+          </a>
+
+          <a href="/digitalizare-imm" class="dropdown-item" role="menuitem" data-service-id="digitalizare-imm">
+            <div class="d-icon" style="background:rgba(14,165,233,0.2)"><i class="ph-duotone ph-desktop" style="color:#7dd3fc"></i></div>
+            <div class="d-text">Digitalizare IMM<div class="d-label">Transformare Digitală | 90%</div></div>
+          </a>
+
+          <a href="/femeia-antreprenor-2026" class="dropdown-item" role="menuitem" data-service-id="femeia-antreprenor">
+            <div class="d-icon" style="background:rgba(236,72,153,0.2)"><i class="ph-duotone ph-user-circle" style="color:#f9a8d4"></i></div>
+            <div class="d-text">Femeia Antreprenor 2026<div class="d-label">Antreprenoriat Feminin</div></div>
+          </a>
+
+          <a href="/gal-afir" class="dropdown-item" role="menuitem" data-service-id="gal-afir">
+            <div class="d-icon" style="background:rgba(34,197,94,0.2)">
+              <i class="ph-duotone ph-map-pin" style="color:#86efac"></i>
+            </div>
+            <div class="d-text">GAL-AFIR<div class="d-label">LEADER | public și privat</div></div>
+          </a>
+
+          <a href="/e-move" class="dropdown-item" role="menuitem" data-service-id="e-move">
+            <div class="d-icon" style="background:rgba(14,165,233,0.2)">
+              <i class="ph-duotone ph-battery-charging" style="color:#7dd3fc"></i>
+            </div>
+            <div class="d-text">e-MOVE RO<div class="d-label">Statii încărcare | mobilitate electrică</div></div>
+          </a>
+
+          <a href="/pocidif-21" class="dropdown-item" role="menuitem" data-service-id="pocidif-21">
+            <div class="d-icon" style="background:rgba(99,102,241,0.2)">
+              <i class="ph-duotone ph-circuitry" style="color:#c4b5fd"></i>
+            </div>
+            <div class="d-text">PoCIDIF 2.1<div class="d-label">Inovare digitala | IMM TIC</div></div>
+          </a>
+
+          <a href="/pro-infra" class="dropdown-item" role="menuitem" data-service-id="pro-infra">
+            <div class="d-icon" style="background:rgba(251,146,60,0.2)"><i class="ph-duotone ph-factory" style="color:#fdba74"></i></div>
+            <div class="d-text">PRO INFRA<div class="d-label">Productie infrastructura | până la 15M EUR</div></div>
+          </a>
+
+          <a href="/start-up-nation-2026" class="dropdown-item" role="menuitem" data-service-id="startup-nation">
+            <div class="d-icon" style="background:rgba(139,92,246,0.2)"><i class="ph-duotone ph-rocket-launch" style="color:#a78bfa"></i></div>
+            <div class="d-text">Start-Up Nation<div class="d-label">Antreprenoriat | verificare ghid activ</div></div>
+          </a>
+        </div>
+      </div>
+
+      <a href="/calculator-soc" class="nav-utility btn-secondary">🧮 Calculator SOC</a>
+
+      <a href="#contact" class="nav-utility btn-secondary">Contact</a>
+
+        <a href="/verificare-eligibilitate-fonduri-europene" class="nav-cta btn-primary">Solicită verificare eligibilitate</a>
     </div>
+
+    <button class="hamburger" id="hamburgerBtn" type="button" aria-label="Deschide meniu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ✦ Meniu mobil full-screen ✦ -->
+<div id="mobileMenu" aria-label="Meniu mobil">
+  <nav class="mobile-links">
+    <a href="#servicii" onclick="closeMobileMenu()">Servicii</a>
+    <a href="/despre-faber" onclick="closeMobileMenu()">Despre noi</a>
+    <a href="#finantare" onclick="closeMobileMenu()">Finanțări</a>
+    <a href="#blog" onclick="closeMobileMenu()">Blog</a>
+    <div class="mobile-section-title">Programe de finanțare</div>
+    <a href="/por-adr-nord-est">POR ADR Nord-Est</a>
+    <a href="/dr12-afir">DR 12 / AFIR</a>
+    <a href="/afir-autoconsum-agroalimentar">AFIR Autoconsum Agroalimentar</a>
+    <a href="/autoconsum-public-fotovoltaice-institutii-publice">Autoconsum Publici</a>
+    <a href="/dr14">DR 14 – Ferme Mici</a>
+    <a href="/digitalizare-imm">Digitalizare IMM</a>
+    <a href="/gal-afir">GAL-AFIR / LEADER</a>
+    <a href="/e-move">e-MOVE RO</a>
+    <a href="/pocidif-21">PoCIDIF 2.1</a>
+    <a href="/femeia-antreprenor-2026">Femeia Antreprenor 2026</a>
+    <a href="/pro-infra">PRO INFRA</a>
+    <a href="/start-up-nation-2026">Start-Up Nation</a>
+    <a href="/calculator-soc">🧮 Calculator SOC AFIR</a>
+    <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+    <a href="/verificare-eligibilitate-fonduri-europene" class="mobile-cta btn-primary" onclick="closeMobileMenu()">Solicită verificare eligibilitate</a>
   </nav>
+</div>
+<div class="global-header-spacer" aria-hidden="true"></div>
+<script src="/assets/global-header.js"></script>
+<!-- GLOBAL_HEADER_END -->
   <div class="breadcrumb"><a href="/">Acasă</a> / <a href="/ghiduri">Ghiduri</a> / Raspuns rapid: Ce documente sunt necesare pentru DR12?</div>
   <header class="hero hero--image hero--editorial" data-design-family="editorial" style="--hero-image:url('/assets/hero/hero-business.webp')">
     <span class="hero-icon" aria-hidden="true"><i class="ph-duotone ph-info"></i></span>

@@ -5,7 +5,7 @@ const cp = require("child_process");
 const ROOT = path.resolve(__dirname, "..");
 const SITE_HOSTS = new Set(["atelierdeconsultanta.ro", "www.atelierdeconsultanta.ro"]);
 const TEXT_EXTENSIONS = new Set([".html", ".json", ".xml", ".txt", ".js"]);
-const INTERNAL_PATH_PREFIXES = ["tools/", "config/", "reports/"];
+const INTERNAL_PATH_PREFIXES = ["tools/", "config/", "partials/", "reports/"];
 const SKIP_PREFIXES = ["mailto:", "tel:", "sms:", "javascript:", "data:", "blob:", "whatsapp:"];
 const PROGRAM_ROUTES = [
   "dr12-afir",

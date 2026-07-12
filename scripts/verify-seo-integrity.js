@@ -9,6 +9,7 @@ const EXCLUDED_DIRS = new Set([
   '.wrangler',
   'dist',
   'node_modules',
+  'partials',
   'reports',
 ]);
 

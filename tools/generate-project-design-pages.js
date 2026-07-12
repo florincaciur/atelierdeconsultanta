@@ -5,6 +5,7 @@ const fs = require("fs");
 const path = require("path");
 
 const ROOT = path.resolve(__dirname, "..");
+const GLOBAL_HEADER = fs.readFileSync(path.join(ROOT, "partials", "global-header.html"), "utf8").trim();
 const SITE = "https://atelierdeconsultanta.ro";
 const UPDATED = "2026-07-10";
 
@@ -245,16 +246,7 @@ function renderPage(page) {
   </script>
 </head>
 <body class="page-family-service">
-  <nav class="navbar" aria-label="Navigare principală">
-    <a class="brand" href="/" aria-label="FABER – Atelier de Consultanță, acasă">FABER</a>
-    <div class="navbar-links">
-      <a href="/fonduri-europene">Fonduri europene</a>
-      <a href="/ghiduri">Ghiduri</a>
-      <a href="/instrumente">Instrumente</a>
-      <a href="/resurse">Resurse</a>
-      <a class="nav-cta btn-primary" href="/contact">Solicită verificare eligibilitate</a>
-    </div>
-  </nav>
+  ${GLOBAL_HEADER}
   <div class="breadcrumb"><a href="/">Acasă</a> / <a href="/consultanta-fonduri-europene">Consultanță</a> / ${escapeHtml(page.h1)}</div>
   <header class="hero hero--image hero--service" data-design-family="service" style="--hero-image:url('/assets/hero/hero-business.webp')">
     <span class="hero-icon" aria-hidden="true"><i class="ph-duotone ph-ruler"></i></span>
