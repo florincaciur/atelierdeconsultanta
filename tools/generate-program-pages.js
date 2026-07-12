@@ -12,6 +12,14 @@ const REDIRECTS_PATH = path.join(ROOT, "_redirects");
 const BLOG_JSON_PATH = path.join(ROOT, "blog.json");
 const BANNERS_PATH = path.join(ROOT, "banners.json");
 const LLMS_PATH = path.join(ROOT, "llms.txt");
+const CANONICAL_DIRECTORY_ONLY_SLUGS = new Set([
+  "dr12-afir",
+  "dr14",
+  "por-adr-nord-est",
+  "afir-autoconsum-agroalimentar",
+  "pro-infra",
+  "pocidif-21"
+]);
 const {
   bannerForRoute,
   createBannerIndex,
@@ -3085,8 +3093,10 @@ function ensureFile(page, html, { writeLegacy = true } = {}) {
   fs.mkdirSync(path.dirname(canonicalFile), { recursive: true });
   fs.writeFileSync(canonicalFile, normalizedHtml, "utf8");
 
-  if (writeLegacy && /\.html$/i.test(page.output) && !/\/index\.html$/i.test(page.output.replace(/\\/g, "/"))) {
-    const legacyFile = path.join(ROOT, page.output);
+  const legacyFile = path.join(ROOT, page.output);
+  if (CANONICAL_DIRECTORY_ONLY_SLUGS.has(page.slug) && fs.existsSync(legacyFile)) {
+    fs.rmSync(legacyFile);
+  } else if (writeLegacy && /\.html$/i.test(page.output) && !/\/index\.html$/i.test(page.output.replace(/\\/g, "/"))) {
     fs.mkdirSync(path.dirname(legacyFile), { recursive: true });
     fs.writeFileSync(legacyFile, normalizedHtml, "utf8");
   }
