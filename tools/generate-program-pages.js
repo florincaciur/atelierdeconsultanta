@@ -19,6 +19,7 @@ const {
   renderProgramHero
 } = require("./sync-program-heroes");
 const { renderPocidifContent } = require("./pocidif-content");
+const { applyPriorityAeo } = require("./priority-aeo");
 const PROGRAM_BANNER_INDEX = createBannerIndex(loadBanners(BANNERS_PATH));
 const {
   editorialSchemaProperties,
@@ -2998,7 +2999,7 @@ function pageHtml(page, config) {
   const finalSecondaryLabel = page.finalSecondaryLabel || "Vezi serviciile";
   const hasTrustApprovalGate = page.type === "trust" && Object.prototype.hasOwnProperty.call(page, "approvedItemsCount");
   const robots = page.robots || (hasTrustApprovalGate && Number(page.approvedItemsCount) < 3 ? "noindex, follow" : "index, follow");
-  return `<!DOCTYPE html>
+  const html = `<!DOCTYPE html>
 <html lang="ro">
 <head>
   <meta charset="UTF-8" />
@@ -3051,6 +3052,7 @@ ${renderPocidifDiscoveryLink(page)}
 </body>
 </html>
 `;
+  return applyPriorityAeo(html, page.slug);
 }
 
 function redirectFallbackHtml(page) {

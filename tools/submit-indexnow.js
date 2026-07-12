@@ -23,8 +23,9 @@ Optiuni:
   --url <url>          trimite un URL catre IndexNow; se poate repeta
   --urls <file>        citeste URL-uri dintr-un fisier text, cate unul pe linie
   --changed            trimite URL-urile noi, actualizate sau sterse fata de HEAD~1
-  --changed-from <ref> compara sitemap.xml cu ref-ul indicat (implicit HEAD~1)
+  --changed-from <ref> compara fisierele publice cu ref-ul indicat (implicit HEAD~1)
   --sitemap            trimite toate URL-urile din sitemap.xml
+  --list               afiseaza doar URL-urile selectate, cate unul pe linie
   --dry-run            afiseaza payload-ul fara submit
   --skip-key-check     nu verifica live fisierul keyLocation inainte de submit
   --endpoint <url>     endpoint IndexNow alternativ
@@ -44,6 +45,7 @@ function parseArgs(argv) {
     changed: false,
     changedFrom: "HEAD~1",
     sitemap: false,
+    list: false,
     dryRun: false,
     skipKeyCheck: false,
     endpoint: process.env.INDEXNOW_ENDPOINT || DEFAULT_ENDPOINT,
@@ -58,6 +60,7 @@ function parseArgs(argv) {
     else if (arg === "--changed") args.changed = true;
     else if (arg === "--changed-from") args.changedFrom = argv[++i] || "HEAD~1";
     else if (arg === "--sitemap") args.sitemap = true;
+    else if (arg === "--list") args.list = true;
     else if (arg === "--dry-run") args.dryRun = true;
     else if (arg === "--skip-key-check") args.skipKeyCheck = true;
     else if (arg === "--endpoint") args.endpoint = argv[++i] || DEFAULT_ENDPOINT;
@@ -72,7 +75,8 @@ function keyFileName() {
 }
 
 function keyPath() {
-  return path.join(ROOT, keyFileName());
+  const value = keyFileName();
+  return path.isAbsolute(value) ? value : path.join(ROOT, value);
 }
 
 function readKey() {
@@ -85,7 +89,7 @@ function readKey() {
 
 function publicKeyLocation() {
   if (process.env.INDEXNOW_KEY_LOCATION) return process.env.INDEXNOW_KEY_LOCATION;
-  return `${SITE}/${keyFileName().split("/").map(encodeURIComponent).join("/")}`;
+  return `${SITE}/${DEFAULT_KEY_FILE}`;
 }
 
 function parseSitemapXml(xml) {
@@ -122,16 +126,70 @@ function sitemapUrls() {
 function changedSitemapUrls(ref) {
   const current = currentSitemapEntries();
   const previous = previousSitemapEntries(ref);
-  if (!previous) return [...current.keys()];
+  if (!previous) return [];
 
   const urls = [];
-  for (const [url, lastmod] of current) {
-    if (!previous.has(url) || previous.get(url) !== lastmod) urls.push(url);
-  }
+  for (const url of current.keys()) if (!previous.has(url)) urls.push(url);
   for (const url of previous.keys()) {
     if (!current.has(url)) urls.push(url);
   }
   return urls;
+}
+
+function canonicalFromHtml(html) {
+  for (const match of String(html || "").matchAll(/<link\b[^>]*>/gi)) {
+    const tag = match[0];
+    if (!/\brel=["'][^"']*\bcanonical\b[^"']*["']/i.test(tag)) continue;
+    const href = tag.match(/\bhref=["']([^"']+)["']/i);
+    if (href) return href[1].trim();
+  }
+  return null;
+}
+
+function gitText(args) {
+  try {
+    return cp.execFileSync("git", args, {
+      cwd: ROOT,
+      encoding: "utf8",
+      stdio: ["ignore", "pipe", "ignore"],
+    });
+  } catch {
+    return null;
+  }
+}
+
+function htmlChanges(ref) {
+  const output = gitText(["diff", "--name-status", "-M", ref, "HEAD", "--", "*.html"]);
+  if (output === null) return [];
+  return output.split(/\r?\n/).filter(Boolean).map((line) => {
+    const fields = line.split("\t");
+    const status = fields[0];
+    if (/^[RC]/.test(status)) return { status, before: fields[1], after: fields[2] };
+    return { status, before: fields[1], after: fields[1] };
+  });
+}
+
+function htmlAtRef(ref, file) {
+  return gitText(["show", `${ref}:${file}`]);
+}
+
+function changedCanonicalUrls(ref) {
+  const current = currentSitemapEntries();
+  const previous = previousSitemapEntries(ref);
+  if (!previous) return [];
+  const urls = new Set(changedSitemapUrls(ref));
+
+  for (const change of htmlChanges(ref)) {
+    if (!change.status.startsWith("D") && change.after && fs.existsSync(path.join(ROOT, change.after))) {
+      const canonical = canonicalFromHtml(fs.readFileSync(path.join(ROOT, change.after), "utf8"));
+      if (canonical && current.has(canonical)) urls.add(canonical);
+    }
+    if (!change.status.startsWith("A") && change.before) {
+      const canonical = canonicalFromHtml(htmlAtRef(ref, change.before));
+      if (canonical && previous.has(canonical)) urls.add(canonical);
+    }
+  }
+  return [...urls];
 }
 
 function urlsFromFile(file) {
@@ -198,19 +256,25 @@ async function main() {
     process.exit(1);
   }
 
-  const key = readKey();
-  const keyLocation = publicKeyLocation();
   const urls = unique([
     ...args.urls,
     ...args.urlFiles.flatMap(urlsFromFile),
-    ...(args.changed ? changedSitemapUrls(args.changedFrom) : []),
+    ...(args.changed ? changedCanonicalUrls(args.changedFrom) : []),
     ...(args.sitemap ? sitemapUrls() : []),
   ]);
+
+  if (args.list) {
+    for (const url of urls) console.log(url);
+    return;
+  }
 
   if (!urls.length) {
     console.log("IndexNow: nu exista URL-uri de trimis.");
     return;
   }
+
+  const key = readKey();
+  const keyLocation = publicKeyLocation();
 
   if (args.dryRun) {
     console.log("IndexNow dry-run:");

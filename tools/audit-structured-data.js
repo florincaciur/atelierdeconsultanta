@@ -10,7 +10,18 @@ const ROOT = path.resolve(__dirname, "..");
 const REPORT_PATH = path.join(ROOT, "reports", "structured-data-audit.json");
 const EXCLUDED_DIRS = new Set([".git", ".github", ".wrangler", "dist", "node_modules", "reports"]);
 const RATING_TYPES = new Set(["AggregateRating"]);
-const AUDIT_TODAY = process.env.STRUCTURED_DATA_AUDIT_TODAY || new Date().toISOString().slice(0, 10);
+function bucharestIsoDate(date = new Date()) {
+  const parts = new Intl.DateTimeFormat("en-GB", {
+    timeZone: "Europe/Bucharest",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit"
+  }).formatToParts(date);
+  const values = Object.fromEntries(parts.map((part) => [part.type, part.value]));
+  return `${values.year}-${values.month}-${values.day}`;
+}
+
+const AUDIT_TODAY = process.env.STRUCTURED_DATA_AUDIT_TODAY || bucharestIsoDate();
 const TODAY = new Date(`${AUDIT_TODAY}T23:59:59Z`);
 
 function toPosix(value) {

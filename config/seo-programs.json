@@ -304,7 +304,7 @@
       "finalPrimaryCta": "Verific\u0103 eligibilitatea fermei tale cu un consultant FABER",
       "inlineCtaTitle": "Verificare initiala pentru DR12",
       "inlineCtaText": "Trimite datele principale despre solicitant, localitate, varsta, exploatatie, investitie si buget. Verificarea initiala arata daca programul merita pregatit si ce riscuri trebuie rezolvate inainte de depunere.",
-      "updatedAt": "2026-06-11",
+      "updatedAt": "2026-07-13",
       "ctaText": "Verific\u0103 eligibilitatea fermei",
       "secondaryCtaText": "Compara cu DR14 AFIR"
     },
@@ -464,7 +464,7 @@
       "inlineCtaTitle": "Urmatorul pas",
       "inlineCtaText": "Trimite datele principale despre solicitant, localitate, activitate, investitie si buget. Verificarea initiala arata daca programul merita pregatit si ce riscuri trebuie rezolvate inainte de depunere.",
       "decisionClose": "Daca proiectul se bazeaza doar pe plafonul maxim sau pe date neconfirmate, trebuie refacut inainte de depunere.",
-      "updatedAt": "2026-06-11",
+      "updatedAt": "2026-07-13",
       "template": "editorial-program",
       "minWords": 1200,
       "minFaq": 8,
@@ -1772,6 +1772,7 @@
       "finalPrimaryCta": "Trimite datele pentru verificarea eligibilității",
       "inlineCtaTitle": "Trimite datele pentru verificarea eligibilității",
       "inlineCtaText": "Trimite județul investiției, codul CAEN, vechimea firmei, bugetul și lista de achiziții. Un consultant FABER va răspunde în maximum 24 de ore.",
+      "updatedAt": "2026-07-13",
       "decisionClose": "Dacă documentele, bugetul sau condițiile nu se potrivesc, proiectul se ajustează înainte de depunere. Regulile finale se confirmă în ghidul activ, anexele apelului și sursele oficiale."
     },
     {

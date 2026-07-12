@@ -12,6 +12,7 @@ const { normalizeHtmlCopy } = require("./normalize-copy-ro");
 const ROOT = path.resolve(__dirname, "..");
 const DESIGN_CSS = '<link rel="stylesheet" href="/assets/design-profiles.css">';
 const FAMILY_HERO_CLASS = /\bhero--(?:home|afir|gal|digital|startup|energy|cluster|service|editorial|caen|trust|tool|contact|legal|generic)\b/g;
+const DESIGN_SYNC_EXCLUDED_SLUGS = new Set(["fonduri-europene-nord-est"]);
 
 const PROFILES = {
   home: {
@@ -216,6 +217,9 @@ function addArticleToc(html) {
 
 function decorateFile(file, family) {
   const before = fs.readFileSync(file, "utf8");
+  // Program heroes are generated from banners.json and may contain deliberately
+  // curated layouts. Do not reinterpret them or recreate removed summary cards.
+  if (before.includes("<!-- PROGRAM_HERO_START -->")) return false;
   let html = before;
   html = addCss(html);
   html = addBodyFamily(html, family);
@@ -232,6 +236,7 @@ let touched = 0;
 let checked = 0;
 
 for (const [slug, family] of Object.entries(DESIGN_FAMILY_BY_SLUG)) {
+  if (DESIGN_SYNC_EXCLUDED_SLUGS.has(slug)) continue;
   for (const file of existingFilesForSlug(slug)) {
     checked += 1;
     if (decorateFile(file, family)) touched += 1;

@@ -1,103 +1,34 @@
-# ============================================================
-# ✦ FABER – SEO Freshness Automation ✦
-# Rulează automat săptămânal pentru a menține conținutul proaspăt
-# și a semnala motoarele de căutare că site-ul este activ.
-# ============================================================
-
-name: SEO Freshness & Sitemap Ping
+name: SEO integrity audit
 
 on:
   schedule:
-    # Rulează în fiecare luni la 08:00 UTC (10:00 România)
-    - cron: '0 8 * * 1'
-  # Permite și rulare manuală din GitHub UI
+    - cron: "0 8 * * 1"
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
-  update-sitemap-date:
-    name: Actualizează data sitemap și ping motoare căutare
+  verify-seo-inventory:
+    name: Verify canonical inventory without changing lastmod
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Actualizează lastmod în sitemap.xml
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Verify sitemap and llms inventory
         run: |
-          TODAY=$(date +%Y-%m-%d)
-          echo "📅 Data actualizare: $TODAY"
-          # Actualizează toate datele lastmod în sitemap
-          sed -i "s|<lastmod>[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}</lastmod>|<lastmod>$TODAY</lastmod>|g" sitemap.xml
-          echo "✅ Sitemap actualizat cu data: $TODAY"
+          node tools/verify-sitemap.js
+          node scripts/verify-llms-urls.js
 
-      - name: Commit și push sitemap (doar dacă există modificări)
-        id: commit-sitemap
-        run: |
-          TODAY=$(date +%Y-%m-%d)
-          git config --local user.email "action@github.com"
-          git config --local user.name "FABER SEO Bot"
-          git add sitemap.xml
-          if git diff --staged --quiet; then
-            echo "changed=false" >> "$GITHUB_OUTPUT"
-            echo "ℹ️  Sitemap deja actualizat la $TODAY — nicio modificare de publicat."
-          else
-            git commit -m "🤖 SEO: Actualizare sitemap lastmod → $TODAY [automated]"
-            git push origin HEAD:main
-            echo "changed=true" >> "$GITHUB_OUTPUT"
-            echo "✅ Sitemap actualizat și publicat pe main."
-          fi
-
-      - name: Ping Bing / Copilot (sitemap resubmit)
-        run: |
-          echo "📡 Notificare Bing despre sitemap actualizat..."
-          curl -sf "https://www.bing.com/ping?sitemap=https://atelierdeconsultanta.ro/sitemap.xml" \
-            -o /dev/null -w "Bing ping status: %{http_code}\n" || echo "⚠️ Bing ping nu a răspuns"
-
-      - name: Verifică că site-ul este live
-        run: |
-          STATUS=$(curl -s -o /dev/null -w "%{http_code}" https://atelierdeconsultanta.ro)
-          echo "🌐 Status site: $STATUS"
-          if [ "$STATUS" != "200" ]; then
-            echo "⚠️ ATENȚIE: Site-ul returnează status $STATUS!"
-          else
-            echo "✅ Site-ul este live și funcțional"
-          fi
-
-      - name: Submit IndexNow pentru URL-uri actualizate
-        if: steps.commit-sitemap.outputs.changed == 'true'
-        run: |
-          node tools/submit-indexnow.js --changed
-
-  check-program-deadlines:
-    name: Verifică termene programe finanțare
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Verifică termene și alertează dacă expiră în 30 zile
-        run: |
-          TODAY=$(date +%s)
-
-          echo "=== Verificare termene programe FABER ==="
-
-          # DR12 - 30 iunie 2026
-          DR12_DATE=$(date -d "2026-06-30" +%s)
-          DR12_DIFF=$(( ($DR12_DATE - $TODAY) / 86400 ))
-          echo "📋 DR12 AFIR: $DR12_DIFF zile rămase (termen: 30 iunie 2026)"
-
-          # DR14 - 31 iulie 2026
-          DR14_DATE=$(date -d "2026-07-31" +%s)
-          DR14_DIFF=$(( ($DR14_DATE - $TODAY) / 86400 ))
-          echo "📋 DR14 Ferme Mici: $DR14_DIFF zile rămase (termen: 31 iulie 2026)"
-
-          # POR Micro - 31 mai 2026
-          POR_DATE=$(date -d "2026-05-31" +%s)
-          POR_DIFF=$(( ($POR_DATE - $TODAY) / 86400 ))
-          echo "📋 POR Micro Nord-Est: $POR_DIFF zile rămase (termen: 31 mai 2026)"
-
-          echo ""
-          echo "✅ Verificare termene completă - $(date)"
+      - name: Check public site health
+        run: curl --fail --silent --show-error --location https://atelierdeconsultanta.ro/ --output /dev/null

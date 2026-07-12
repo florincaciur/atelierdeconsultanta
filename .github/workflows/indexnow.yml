@@ -1,0 +1,80 @@
+name: IndexNow changed URLs
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+concurrency:
+  group: indexnow-main
+  cancel-in-progress: true
+
+jobs:
+  notify-after-deploy:
+    name: Notify IndexNow after the public deployment is reachable
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Checkout full history
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Select only URLs changed by this deployment
+        id: changed
+        env:
+          BEFORE_SHA: ${{ github.event.before }}
+        run: |
+          if [[ "$BEFORE_SHA" =~ ^0+$ ]]; then
+            BEFORE_SHA="HEAD~1"
+          fi
+          node tools/submit-indexnow.js --changed --changed-from "$BEFORE_SHA" --list > "$RUNNER_TEMP/indexnow-urls.txt"
+          COUNT=$(grep -c '^https://atelierdeconsultanta.ro' "$RUNNER_TEMP/indexnow-urls.txt" || true)
+          echo "count=$COUNT" >> "$GITHUB_OUTPUT"
+          echo "Selected $COUNT changed public URLs."
+
+      - name: Wait until the changed URLs are reachable after deploy
+        id: deployed
+        if: steps.changed.outputs.count != '0'
+        continue-on-error: true
+        env:
+          URL_FILE: ${{ runner.temp }}/indexnow-urls.txt
+        run: |
+          sleep 45
+          for attempt in {1..12}; do
+            READY=true
+            while IFS= read -r url; do
+              [[ -z "$url" ]] && continue
+              STATUS=$(curl --silent --output /dev/null --write-out '%{http_code}' --max-time 20 "$url" || true)
+              case "$STATUS" in
+                2*|3*|404|410) ;;
+                *) READY=false ;;
+              esac
+            done < "$URL_FILE"
+            if [[ "$READY" == "true" ]]; then
+              echo "Public deployment is reachable."
+              exit 0
+            fi
+            sleep 15
+          done
+          echo "Deployment readiness could not be confirmed; IndexNow will be skipped."
+          exit 1
+
+      - name: Submit changed URLs to IndexNow
+        if: steps.changed.outputs.count != '0' && steps.deployed.outcome == 'success'
+        continue-on-error: true
+        env:
+          INDEXNOW_KEY_FILE: indexnow-key.txt
+        run: node tools/submit-indexnow.js --urls "$RUNNER_TEMP/indexnow-urls.txt"
+
+      - name: Explain skipped submission
+        if: steps.changed.outputs.count == '0'
+        run: echo "No added, updated, deleted, or redirected public URL in this commit."

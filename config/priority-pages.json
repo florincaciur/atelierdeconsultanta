@@ -1,0 +1,151 @@
+{
+  "lastVerified": "2026-07-13",
+  "author": "FABER - Atelier de Consultanță",
+  "reviewer": "Echipa editorială FABER",
+  "pages": {
+    "dr12-afir": {
+      "quickAnswer": "DR12 AFIR sprijină investițiile exploatațiilor conduse de tineri fermieri și de fermieri de până la 45 de ani, în condițiile ghidului aplicabil. Înainte de pregătirea proiectului trebuie confirmate forma activă a ghidului, dimensiunea economică SO, sectorul, istoricul exploatației, investițiile propuse, punctajul și cofinanțarea. Calendarul, pragurile și documentele finale nu se deduc din variante consultative: ele se verifică în versiunea publicată de AFIR la data depunerii.",
+      "checks": [
+        "Versiunea și statusul ghidului DR12 publicat de AFIR.",
+        "Vârsta, rolul real și forma juridică a solicitantului.",
+        "Dimensiunea economică SO și sectorul exploatației.",
+        "Legătura dintre investiție, capacitatea fermei și obiectivele intervenției.",
+        "Pragul de calitate și punctajul susținut prin documente.",
+        "Cofinanțarea, cash-flow-ul și cheltuielile neeligibile."
+      ],
+      "documents": [
+        "Documente de identificare și acte ONRC ale solicitantului.",
+        "Documente APIA, ANSVSA și ANZ aplicabile exploatației.",
+        "Calculul SO și evidențele pentru culturi sau efective.",
+        "Acte privind terenurile, clădirile și locul investiției.",
+        "Oferte, memoriu tehnic, buget și dovada cofinanțării."
+      ],
+      "risks": [
+        "Folosirea unei variante consultative ca și cum ar fi ghid final.",
+        "Suprascore fără documente care susțin criteriile declarate.",
+        "Neconcordanțe între SO, evidențele exploatației și investiție.",
+        "Buget subestimat sau cofinanțare indisponibilă la implementare."
+      ]
+    },
+    "dr14": {
+      "quickAnswer": "DR14 AFIR este intervenția destinată investițiilor în ferme de mici dimensiuni, cu praguri SO diferențiate pe sectoare și componente care trebuie verificate în ghidul activ. Eligibilitatea nu rezultă doar din mărimea fermei: contează solicitantul, încadrarea sectorială, investiția, documentele exploatației, punctajul și capacitatea de cofinanțare. Data lansării, intervalele SO, intensitatea sprijinului și regulile de selecție se confirmă exclusiv în forma oficială aplicabilă sesiunii.",
+      "checks": [
+        "Statusul apelului și versiunea activă a ghidului DR14.",
+        "Intervalul SO aplicabil sectorului și componentei urmărite.",
+        "Forma solicitantului și istoricul exploatației.",
+        "Caracterul eligibil și proporțional al achizițiilor propuse.",
+        "Punctajul documentabil și evitarea condițiilor artificiale.",
+        "Cofinanțarea și calendarul realist al achizițiilor."
+      ],
+      "documents": [
+        "Acte de identificare, documente ONRC și certificate relevante.",
+        "Documente APIA, ANSVSA sau ANZ, după profilul fermei.",
+        "Calculul SO și evidențele culturilor ori efectivelor.",
+        "Acte de proprietate sau folosință pentru amplasament.",
+        "Oferte, justificări tehnice, buget și dovada cofinanțării."
+      ],
+      "risks": [
+        "Încadrarea fermei într-un interval SO greșit.",
+        "Condiții artificiale create pentru accesarea unei componente.",
+        "Achiziții disproporționate față de activitatea documentată.",
+        "Punctaj estimat pe criterii care nu pot fi demonstrate."
+      ]
+    },
+    "por-adr-nord-est": {
+      "quickAnswer": "Programul Regional Nord-Est 2021–2027 reunește apelurile gestionate de ADR Nord-Est pentru investiții regionale, inclusiv oportunități dedicate IMM-urilor și microîntreprinderilor din cele șase județe ale regiunii. Pagina oferă orientare generală, nu înlocuiește condițiile unui apel. Pentru fiecare proiect trebuie verificate apelul exact, localizarea, codul CAEN, situațiile financiare, dimensiunea întreprinderii, investiția și cofinanțarea. Apelul 2 pentru modernizarea microîntreprinderilor are propria pagină detaliată și propriile reguli.",
+      "checks": [
+        "Apelul exact și versiunea ghidului publicată de ADR Nord-Est.",
+        "Județul, localitatea și eligibilitatea amplasamentului.",
+        "Codul CAEN și autorizarea activității finanțate.",
+        "Categoria IMM și situațiile financiare ale solicitantului.",
+        "Lista cheltuielilor și legătura lor cu obiectivul apelului.",
+        "Cofinanțarea, ajutorul de stat și calendarul investiției."
+      ],
+      "documents": [
+        "Acte ONRC și declarații privind categoria întreprinderii.",
+        "Situații financiare și documente fiscale solicitate de apel.",
+        "Documente pentru amplasament și autorizarea codului CAEN.",
+        "Plan de afaceri, oferte și documentații tehnice.",
+        "Dovada cofinanțării și declarațiile privind ajutorul de stat."
+      ],
+      "risks": [
+        "Confundarea hubului regional cu regulile unui apel concret.",
+        "Amplasament sau cod CAEN neeligibil pentru apelul selectat.",
+        "Date financiare care nu susțin categoria ori capacitatea solicitantului.",
+        "Buget necorelat cu activitatea și obiectivele regionale."
+      ]
+    },
+    "afir-autoconsum-agroalimentar": {
+      "quickAnswer": "Schema AFIR pentru autoconsum finanțează capacități noi de producere a energiei solare pentru întreprinderi din agricultură și industria alimentară, precum și pentru OUAI sau FOUAI eligibile, cu sau fără stocare. Proiectul trebuie dimensionat pe consumul justificat și corelat cu punctele de consum și producție, amplasamentul, racordarea și datele istorice. Condițiile, plafoanele și documentele se confirmă în Ghidul Solicitantului Schema ENERGIE, versiunea activă, înainte de depunere.",
+      "checks": [
+        "Versiunea activă a Ghidului Solicitantului Schema ENERGIE.",
+        "Categoria beneficiarului și codurile CAEN relevante.",
+        "Datele istorice de consum și dimensionarea capacității.",
+        "Punctele de consum și producție și dreptul asupra amplasamentului.",
+        "Soluția de racordare sau justificarea configurației off-grid.",
+        "Studiul de fezabilitate, selecția și riscul supradimensionării."
+      ],
+      "documents": [
+        "Acte ale beneficiarului și certificatele privind activitatea.",
+        "Facturi și curbe ori evidențe istorice de consum.",
+        "Acte pentru amplasament și punctele de consum sau producție.",
+        "Studiu de fezabilitate, avize și documentația de racordare.",
+        "Oferte, buget, plan de achiziții și documente de cofinanțare."
+      ],
+      "risks": [
+        "Capacitate supradimensionată față de autoconsumul demonstrabil.",
+        "Neconcordanțe între consum, amplasament și punctele declarate.",
+        "Pornirea achizițiilor înainte de momentul permis de schemă.",
+        "Costuri sau componente fără justificare tehnică și economică."
+      ]
+    },
+    "pro-infra": {
+      "quickAnswer": "PRO INFRA sprijină eficiența energetică a producătorilor de materii prime, materiale și produse necesare infrastructurii de transport. Investiția urmărește înlocuirea instalațiilor, utilajelor sau echipamentelor cu alternative mai eficiente, inclusiv electrificarea echipamentelor cu combustie internă, și presupune un sistem EMS. Eligibilitatea depinde de schema oficială, auditul energetic, analiza de oportunitate, efectul stimulativ, casarea echipamentelor înlocuite, indicatorii asumați și documentele tehnice; schema nu trebuie prezentată generic ca finanțare pentru fotovoltaice.",
+      "checks": [
+        "Încadrarea activității în producția necesară infrastructurii de transport.",
+        "Versiunea schemei și lipsa unei demarări premature a proiectului.",
+        "Auditul energetic și analiza de oportunitate.",
+        "Echipamentele înlocuite, soluția eficientă și obligația de casare.",
+        "Sistemul EMS și indicatorii de eficiență energetică.",
+        "Excluderile sectoriale și statutul de întreprindere în dificultate."
+      ],
+      "documents": [
+        "Acte ale întreprinderii și documente privind activitatea productivă.",
+        "Audit energetic și analiza de oportunitate.",
+        "Fișe tehnice pentru echipamentele existente și cele propuse.",
+        "Planul EMS, indicatorii și metodologia de monitorizare.",
+        "Oferte, buget, calendar și declarații privind efectul stimulativ."
+      ],
+      "risks": [
+        "Demararea investiției înainte de momentul permis.",
+        "Lipsa legăturii directe cu producția pentru infrastructura de transport.",
+        "Economii energetice sau indicatori insuficient fundamentați.",
+        "Neîndeplinirea obligațiilor privind EMS, casarea și monitorizarea."
+      ]
+    },
+    "pocidif-21": {
+      "quickAnswer": "PoCIDIF 2.1 vizează proiecte de cercetare, inovare și dezvoltare de tehnologii digitale realizate de IMM-uri din sectorul TIC, în limitele documentelor oficiale ale apelului. O investiție nu devine eligibilă doar pentru că include hardware sau software: trebuie demonstrată legătura cu activitățile de cercetare-dezvoltare, produsul ori serviciul digital, codul CAEN, indicatorii, proprietatea intelectuală și capacitatea de implementare. Bugetul, cofinanțarea, parteneriatele și punctajul se verifică în forma activă a ghidului și a anexelor.",
+      "checks": [
+        "Denumirea și versiunea oficială a apelului PoCIDIF 2.1.",
+        "Categoria IMM, codul CAEN și activitatea din sectorul TIC.",
+        "Caracterul de cercetare, inovare și dezvoltare al proiectului.",
+        "Legătura dintre hardware, software, servicii și produsul digital.",
+        "Regimul proprietății intelectuale și eventualele parteneriate.",
+        "Indicatorii, bugetul, cofinanțarea și punctajul documentabil."
+      ],
+      "documents": [
+        "Acte ONRC și documente privind categoria IMM și codul CAEN.",
+        "Situații financiare și documente privind capacitatea solicitantului.",
+        "Planul de cercetare-dezvoltare și descrierea produsului digital.",
+        "Documente privind drepturile de proprietate intelectuală.",
+        "Oferte, buget, indicatori, parteneriate și dovada cofinanțării."
+      ],
+      "risks": [
+        "Proiect de simplă achiziție fără activitate de cercetare sau inovare.",
+        "Cod CAEN ori categorie de întreprindere neconforme cu apelul.",
+        "Indicatori, drepturi intelectuale sau parteneriate insuficient clarificate.",
+        "Cheltuieli tehnice fără legătură demonstrată cu rezultatul digital."
+      ]
+    }
+  }
+}

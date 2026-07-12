@@ -9,7 +9,7 @@ import { chromium } from "playwright";
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const DIST = path.join(ROOT, "dist");
 const SITE_ORIGIN = "https://atelierdeconsultanta.ro";
-const EXPECTED_CANONICAL_URLS = 99;
+const EXPECTED_CANONICAL_URLS = 102;
 const CONSOLIDATED_LOCAL_ROUTES = [
   "/fonduri-europene-bacau",
   "/consultanta-fonduri-europene-bacau",
@@ -366,9 +366,11 @@ async function assertHomepageInteractions(baseUrl) {
     assert(publicVisibleCards <= 3, "public beneficiary filter should respect collapsed first-row display");
     assert.equal(await page.locator('[data-beneficiary-filter="public"]').getAttribute("aria-pressed"), "true", "public filter should set aria-pressed");
 
-    await page.waitForSelector("#blog-grid .blog-card-icon svg", { timeout: 6000 });
-    const renderedBlogIcons = await page.locator("#blog-grid .blog-card-icon svg").count();
-    assert(renderedBlogIcons >= 3, "blog cards should render visible SVG icons instead of text placeholders");
+    await page.waitForSelector("#blog-grid article.blog-card .blog-image", { timeout: 6000 });
+    const renderedBlogVisuals = await page.$$eval("#blog-grid article.blog-card .blog-image", (images) =>
+      images.filter((image) => image.querySelector("svg") || getComputedStyle(image).backgroundImage !== "none").length
+    );
+    assert(renderedBlogVisuals >= 3, "blog cards should render banner images or visible SVG icons instead of text placeholders");
     const textOnlyBlogIcons = await page.$$eval("#blog-grid .blog-card-icon", (icons) =>
       icons.filter((icon) => !icon.querySelector("svg") && icon.textContent.trim()).map((icon) => icon.textContent.trim())
     );
