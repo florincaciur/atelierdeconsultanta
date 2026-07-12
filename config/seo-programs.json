@@ -4842,8 +4842,8 @@
       "decisionClose": "Dacă documentele, bugetul sau condițiile nu se potrivesc, proiectul se ajustează înainte de depunere. Regulile finale se confirmă în ghidul activ, anexele apelului și sursele oficiale."
     },
     {
-      "funding": "Pana la 15.000.000 euro/beneficiar, cu intensitate maxima de 100% in forma consultativa.",
-      "policyContribution": "pagina ajuta beneficiarii să compare programul, solicitantul, documentele și investiția înainte de o decizie costisitoare.",
+      "funding": "Schema aprobată prevede maximum 15.000.000 euro pe beneficiar și o intensitate de maximum 100% din cheltuielile eligibile, în cadrul procedurii de ofertare concurențială.",
+      "policyContribution": "schema urmărește eficiența energetică a capacităților care produc materii prime, materiale și produse necesare proiectelor de infrastructură de transport.",
       "audience": [
         "Companii care produc materiale, componente, echipamente sau solutii relevante pentru infrastructura de transport.",
         "Solicitanti care pot demonstra capacitate tehnica, amplasament si flux de productie verificabil.",
@@ -4900,51 +4900,52 @@
       "faq": [
         [
           "Ce este PRO INFRA?",
-          "PRO INFRA este o schema consultativa pentru investitii care sustin productie, echipamente sau tehnologii relevante pentru infrastructura de transport."
+          "PRO INFRA este schema aprobată pentru investiții care cresc eficiența energetică a capacităților de producție a materiilor prime, materialelor și produselor necesare infrastructurii de transport."
         ],
         [
-          "Care este finantarea maxima?",
-          "Sursele analizate mentioneaza pana la 15.000.000 euro/beneficiar si intensitate maxima de 100%, cu confirmare in ghidul activ."
+          "Ce investiții finanțează direct schema?",
+          "Schema finanțează costurile achiziționării și instalării instalațiilor de producție, utilajelor și echipamentelor eficiente energetic care nu utilizează combustibili fosili sau gaze naturale, precum și EMS-ul integrat, după caz."
         ],
         [
-          "Poate aplica orice fabrica?",
-          "Nu. Investitia trebuie sa se lege direct de obiectivele programului si de infrastructura de transport."
+          "Este obligatoriu sistemul EMS?",
+          "Proiectele includ instalarea și operaționalizarea unui EMS integrat. Excepția este posibilă numai dacă solicitantul demonstrează că EMS nu este necesar și prezintă alte documente care dovedesc eficiența energetică realizată."
         ],
         [
-          "Ce verific prima data?",
-          "Codurile CAEN, activitatea reala, amplasamentul, fluxul tehnologic si legatura cu infrastructura vizata."
+          "Este obligatoriu auditul energetic?",
+          "Da. Proiectul se fundamentează prin audit energetic pentru ultimul an calendaristic încheiat la deschiderea apelului, iar auditul se repetă la finalul fiecărui an din perioada de monitorizare a indicatorilor."
         ],
         [
-          "Sunt eligibile echipamentele de productie?",
-          "Pot fi eligibile daca sunt permise de ghid si justificate prin fluxul tehnologic al proiectului."
+          "Pot începe achizițiile înainte de depunere?",
+          "Nu. Cererea trebuie transmisă înainte de demararea lucrărilor sau de primul angajament juridic obligatoriu. Dacă proiectul începe prematur, întregul proiect pierde eligibilitatea pentru ajutor."
         ],
         [
-          "Ce documente sunt importante?",
-          "Documentele pentru solicitant, amplasament, autorizatii, utilitati, oferte, devize si justificari tehnice."
+          "Ce se întâmplă cu echipamentele înlocuite?",
+          "Beneficiarul trebuie să dovedească, în termen de 30 de zile de la recepția noilor instalații, utilaje sau echipamente, casarea bunurilor pentru care a solicitat înlocuirea."
         ],
         [
-          "Ce riscuri apar la proiectele mari?",
-          "Riscurile sunt bugete supradimensionate, amplasamente nepregatite, autorizatii intarziate si activitati neeligibile."
+          "PRO INFRA finanțează panouri fotovoltaice?",
+          "Schema nu enumeră instalațiile fotovoltaice între costurile eligibile directe. Energia regenerabilă produsă la nivelul beneficiarului apare ca un criteriu de selecție, nu ca obiect principal al finanțării PRO INFRA."
         ],
         [
-          "Cand se confirma conditiile?",
-          "Inainte de depunere, in ghidul activ, anexele si clarificarile publicate de autoritatea finantatoare."
+          "Care este valoarea maximă a ajutorului?",
+          "Schema consolidată prevede maximum 15 milioane euro pe beneficiar și o intensitate de maximum 100% din cheltuielile eligibile, în urma procedurii de ofertare concurențială."
         ]
       ],
       "sourceKeys": [
-        "pro-infra"
+        "pro-infra",
+        "pro-infra-order"
       ],
       "slug": "pro-infra",
       "output": "pro-infra.html",
       "type": "program",
       "schemaType": "GovernmentService",
       "category": "Industrie si infrastructura",
-      "minWords": 1200,
+      "minWords": 2200,
       "minFaq": 8,
-      "title": "PRO INFRA | productie pentru infrastructura de transport",
-      "description": "PRO INFRA explicat: finantare pentru productie, materiale, echipamente si tehnologii necesare infrastructurii de transport, cu grant maxim consultativ de 15 milioane euro.",
-      "h1": "PRO INFRA: productie pentru infrastructura de transport",
-      "quickAnswer": "PRO INFRA este o schema consultativa pentru investitii care sprijina lantul de productie necesar infrastructurii de transport. Sursele analizate mentioneaza o valoare maxima de pana la 15.000.000 euro/beneficiar si intensitate de pana la 100%. Proiectul trebuie verificat prin tipul solicitantului, activitatea economica, amplasamentul, capacitatea de productie, echipamentele propuse, standardele tehnice si legatura directa cu infrastructura vizata. Nu este o finantare generala pentru orice fabrica; investitia trebuie sa fie compatibila cu obiectivele schemei, cu ghidul activ si cu documentele tehnice ale amplasamentului. Pentru bugete mari conteaza ofertele comparabile, autorizatiile si justificarea fluxului de productie. Inainte de depunere trebuie clarificate utilitatile, autorizatiile, instalarea echipamentelor si modul in care productia rezultata raspunde obiectivului programului.",
+      "title": "PRO INFRA: ajutor pentru eficiență energetică | FABER",
+      "description": "PRO INFRA: eficiență energetică pentru producătorii de materii prime, materiale și produse necesare infrastructurii de transport, cu EMS și audit energetic.",
+      "h1": "PRO INFRA – eficiență energetică pentru producătorii din infrastructura de transport",
+      "quickAnswer": "PRO INFRA sprijină înlocuirea instalațiilor de producție, utilajelor și echipamentelor folosite la producerea materiilor prime, materialelor și produselor necesare infrastructurii de transport cu alternative noi, eficiente energetic. Schema include electrificarea echipamentelor care folosesc combustie internă și instalarea unui sistem de management al energiei, EMS, integrat în investiție, cu excepția justificată prevăzută de actul oficial. Proiectul se fundamentează prin audit energetic și analiză de oportunitate, trebuie să demonstreze economiile de energie și reducerea emisiilor și nu poate începe înainte de depunerea solicitării. Instalațiile și echipamentele înlocuite se casează. Schema nu este un program general pentru energie regenerabilă și nu finanțează direct instalații fotovoltaice; utilizarea energiei regenerabile produsă la beneficiar este doar un criteriu distinct de selecție.",
       "programName": "PRO INFRA",
       "related": [
         {
@@ -4970,7 +4971,8 @@
       ],
       "heroIcon": "ph-duotone ph-factory",
       "officialGuideKey": "pro-infra",
-      "guideCtaLabel": "Ghid oficial",
+      "guideCtaLabel": "Sursă oficială",
+      "hideFamilyCards": true,
       "contentSections": [
         {
           "title": "Ce trebuie sa demonstreze un proiect PRO INFRA",
@@ -5007,7 +5009,7 @@
       "inlineCtaTitle": "Urmatorul pas",
       "inlineCtaText": "Trimite datele principale despre solicitant, localitate, activitate, investitie si buget. Verificarea initiala arata daca programul merita pregatit si ce riscuri trebuie rezolvate inainte de depunere.",
       "decisionClose": "Daca proiectul este doar o modernizare generala de productie, trebuie reanalizat inainte de pregatirea dosarului.",
-      "updatedAt": "2026-06-11",
+      "updatedAt": "2026-07-13",
       "template": "editorial-program",
       "applicantRows": [
         [
@@ -5138,7 +5140,7 @@
         "Echipamente folosite si pentru activitati neeligibile fara separare clara.",
         "Amplasament fara utilitati sau autorizatii suficiente.",
         "Oferte incomplete pentru echipamente majore.",
-        "Aplicare pe informatii consultative fara confirmarea ghidului activ."
+        "Demararea lucrărilor sau comenzilor înainte de depunerea solicitării."
       ],
       "decisionIntro": "PRO INFRA este potrivit pentru investitii industriale bine documentate, cu legatura directa cu infrastructura de transport.",
       "ctaText": "Verifica eligibilitatea PRO INFRA",

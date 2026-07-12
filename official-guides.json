@@ -76,12 +76,22 @@
     "accessedAt": "2026-05-20"
   },
   "pro-infra": {
-    "name": "PRO INFRA",
-    "title": "PRO INFRA",
-    "institution": "Guvern",
-    "documentType": "act normativ",
+    "name": "Schema de ajutor de stat PRO INFRA",
+    "title": "Schema PRO INFRA – formă consolidată",
+    "institution": "Ministerul Transporturilor și Infrastructurii / Portal Legislativ",
+    "documentType": "schemă de ajutor de stat consolidată la 12.02.2026",
+    "url": "https://legislatie.just.ro/Public/DetaliiDocumentAfis/306916",
+    "accessedAt": "2026-07-13",
+    "note": "Sursa editorială principală: schema aprobată pentru eficiența energetică a producției necesare infrastructurii de transport, inclusiv EMS, audit energetic, analiză de oportunitate și casarea echipamentelor înlocuite."
+  },
+  "pro-infra-order": {
+    "name": "Ordinul MTI nr. 2.292/2025",
+    "title": "Ordinul nr. 2.292/2025 pentru aprobarea Schemei PRO INFRA",
+    "institution": "Ministerul Transporturilor și Infrastructurii / Portal Legislativ",
+    "documentType": "ordin de aprobare publicat în Monitorul Oficial nr. 20/14.01.2026",
     "url": "https://legislatie.just.ro/Public/DetaliiDocument/306391",
-    "accessedAt": "2026-05-20"
+    "accessedAt": "2026-07-13",
+    "note": "Actul de aprobare al schemei; forma consolidată a anexei include modificarea din 12 februarie 2026."
   },
   "startup": {
     "name": "Start-Up Nation",

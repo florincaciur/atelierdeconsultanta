@@ -263,7 +263,7 @@ async function verifyResponsivePages(routes, bannerIndex) {
       if (!signature.backgroundImage.includes("rgba(34, 58, 72, 0.9)") || !signature.backgroundImage.includes("hero-solar.webp")) fail("/pro-infra", "reference gradient or banner changed visually");
       if (signature.padding !== "70px 24px 58px" || signature.textAlign !== "center" || signature.h1MaxWidth !== "900px") fail("/pro-infra", "reference hero layout styles changed");
       if (signature.iconWidth !== "62px" || signature.iconHeight !== "62px") fail("/pro-infra", "reference icon geometry changed");
-      if (!approximate(signature.iconTop, 70) || !approximate(signature.h1Top, 192.1875) || !approximate(signature.actionsTop, 429.875) || !approximate(signature.actionsWidth, 407.421875)) {
+      if (!approximate(signature.iconTop, 70) || !approximate(signature.h1Top, 192.1875) || !approximate(signature.actionsTop, 486.90625) || !approximate(signature.actionsWidth, 421.3125)) {
         fail("/pro-infra", `reference geometry changed: ${JSON.stringify(signature)}`);
       }
     } finally {

@@ -107,7 +107,7 @@ const KEYWORDS_BY_SLUG = {
   "fonduri-europene-imm": ["fonduri europene IMM 2026", "program IMM 2026", "granturi IMM 2026", "fonduri pentru IMM"],
   "investitii-modernizarea-microintreprinderilor-apel-2": ["fonduri microintreprinderi 2026", "program microintreprinderi 2026", "conditii microintreprinderi 2026"],
   "pocidif-21": ["PoCIDIF 2.1", "inovare digitala IMM TIC", "granturi PoCIDIF", "servicii aplicatii produse digitale"],
-  "pro-infra": ["PRO INFRA 2026", "program energie 2026", "granturi energie verde 2026", "fonduri energie regenerabile 2026"],
+  "pro-infra": ["PRO INFRA", "eficiență energetică industrială", "echipamente eficiente energetic", "sistem EMS", "audit energetic"],
   "fondul-modernizare-energie-regenerabila-2026": ["program energie 2026", "fonduri energie regenerabile 2026", "granturi energie verde 2026", "Fondul pentru Modernizare energie regenerabila"],
   "e-move": ["e-MOVE RO", "program e-MOVE RO 2026", "finantare statii incarcare electrice", "mobilitate electrica fonduri europene", "statii incarcare masini electrice finantare"],
   "gal-afir": ["GAL AFIR", "apeluri GAL 2026", "finantari LEADER beneficiari publici", "finantari GAL beneficiari privati", "preluare proiecte GAL implementare"],
@@ -1320,6 +1320,148 @@ ${officialSourcesHtml}
         <h2 id="afir-cta">CTA: verifică proiectul înainte de depunere</h2>
         <p>Trimite forma juridică, codurile CAEN, punctul de consum, ultimele 12 facturi, consumatorii viitori, amplasamentul, puterea propusă, soluția de stocare și racordare, bugetul și sursa contribuției proprii. Verificarea urmărește Ghidul V7 și documentele oficiale active, fără promisiunea aprobării.</p>
         <p><a class="btn btn-primary" href="/verificare-eligibilitate-fonduri-europene">Solicită verificarea eligibilității</a></p>
+      </section>`;
+}
+
+function renderProInfraEfficiencyContent(page) {
+  const officialSourcesHtml = renderOfficialSources(page.sourceKeys, { id: `${page.slug}-official-sources` });
+  const faqHtml = faqsForPage(page)
+    .map(([question, answer]) => `<section class="faq-item"><h3>${esc(question)}</h3><p>${esc(answer)}</p></section>`)
+    .join("\n");
+
+  return `
+      <p class="intro">${esc(page.quickAnswer)}</p>
+      <p class="source-note"><strong>Status document:</strong> pagina folosește Schema de ajutor de stat PRO INFRA aprobată prin Ordinul MTI nr. 2.292/29.12.2025, publicată în Monitorul Oficial nr. 20/14.01.2026, în forma consolidată la 12 februarie 2026. Condițiile concrete ale unei proceduri de ofertare, calendarul și anexele de depunere se confirmă în Ghidul solicitantului aferent apelului. <strong>Ultima verificare:</strong> <time datetime="2026-07-13">13 iulie 2026</time>.</p>
+
+      <section aria-labelledby="pro-infra-scop">
+        <h2 id="pro-infra-scop">Scopul schemei</h2>
+        <p>PRO INFRA sprijină investițiile care cresc eficiența energetică a capacităților industriale folosite pentru producerea materiilor prime, materialelor și produselor necesare proiectelor de infrastructură de transport. Schema face parte din programul-cheie 9 al Fondului pentru Modernizare — eficiență energetică în transporturi — și urmărește reducerea consumului de energie și a emisiilor de gaze cu efect de seră în procesele de producție.</p>
+        <p>Ajutorul nu finanțează o extindere industrială generică și nici o linie generală de „energie verde”. Investiția trebuie să înlocuiască active existente cu tehnologii moderne, eficiente energetic și cu emisii reduse, iar beneficiarul trebuie să măsoare rezultatul energetic pe conturul proiectului. Schema consolidată prevede granturi de maximum 15 milioane euro pe beneficiar și o intensitate de maximum 100% din cheltuielile eligibile, acordate prin procedură de ofertare concurențială.</p>
+      </section>
+
+      <section aria-labelledby="pro-infra-legatura-productie">
+        <h2 id="pro-infra-legatura-productie">Legătura directă cu producția necesară infrastructurii de transport</h2>
+        <p>Solicitantul trebuie să producă materii prime, materiale sau produse care susțin implementarea proiectelor de infrastructură de transport, în activitățile din lista CAEN eligibilă anexată schemei. Lista include, între altele, extracția pietrei, pietrișului, nisipului și argilei, fabricarea unor produse din plastic, produse refractare, cărămizi, var și ipsos, beton, mortar, produse din beton, prelucrarea pietrei, profile și fire metalice, metale neferoase, construcții metalice, elemente de fixare și cabluri electrice.</p>
+        <p>Înscrierea unui cod CAEN în anexă nu este suficientă singură. Cererea, auditul și analiza de oportunitate trebuie să explice ce resursă rezultă, unde intră în lanțul de producție pentru infrastructura de transport, ce instalație existentă este înlocuită și cum noua soluție reduce consumul energetic. Sunt eligibile microîntreprinderi, întreprinderi mici și mijlocii și întreprinderi mari, în condițiile schemei. În fiecare procedură concurențială poate fi depus un singur proiect, care poate include mai multe locații sau puncte de lucru.</p>
+      </section>
+
+      <section aria-labelledby="pro-infra-inlocuire">
+        <h2 id="pro-infra-inlocuire">Înlocuirea instalațiilor, utilajelor și echipamentelor</h2>
+        <p>Proiectul trebuie să vizeze <strong>înlocuirea</strong> instalațiilor de producție, utilajelor și echipamentelor existente cu alternative noi, de generație nouă și eficiente energetic. Logica proiectului pornește de la situația existentă: consum, performanță, emisii, capacitate și rol în flux. Pentru fiecare activ înlocuit se descrie alternativa propusă și economia de energie demonstrabilă.</p>
+        <p>Schema nu tratează drept eligibilă simpla cumpărare a unei linii suplimentare fără legătură cu activele înlocuite și cu economia de energie. Echipamentele noi trebuie să fie instalate pe teritoriul României, în locațiile asupra cărora beneficiarul dovedește dreptul de folosință. Investițiile destinate respectării unor standarde UE deja în vigoare nu primesc ajutor; excepția privește standarde adoptate, dar încă neintrate în vigoare, dacă investiția este finalizată cu cel puțin 18 luni înainte de aplicarea lor.</p>
+      </section>
+
+      <section aria-labelledby="pro-infra-electrificare">
+        <h2 id="pro-infra-electrificare">Înlocuirea echipamentelor cu combustie internă cu echipamente electrice</h2>
+        <p>Electrificarea este una dintre direcțiile explicite ale schemei. Utilajele și echipamentele aferente producției pot fi înlocuite cu alternative electrice eficiente energetic. Pentru echipamentele existente bazate pe combustie internă, proiectul trebuie să arate consumul de referință, soluția electrică, necesarul de putere, adaptările instalației și energia economisită pe conturul analizat.</p>
+        <p>PRO INFRA nu finanțează instalații, echipamente sau utilaje noi care utilizează combustibili fosili, inclusiv gaze naturale, și nici componente suplimentare pentru asemenea active. De aceea, o soluție tehnică mixtă trebuie separată riguros: partea care păstrează sau adaugă consum fosil nu poate fi prezentată drept cost eligibil doar pentru că restul liniei este eficient energetic.</p>
+      </section>
+
+      <section aria-labelledby="pro-infra-ems">
+        <h2 id="pro-infra-ems">Obligativitatea sistemului EMS</h2>
+        <p>Proiectele finanțate includ instalarea și operaționalizarea unui <strong>sistem de management al energiei — EMS</strong> integrat în instalațiile și echipamentele investiției. EMS-ul trebuie să monitorizeze complet și în timp real consumul de energie pe conturul proiectului și să furnizeze rapoarte periodice care arată reducerea consumului și performanțele energetice.</p>
+        <p>Schema admite o excepție numai când solicitantul demonstrează că EMS-ul nu este necesar pentru a proba eficiența energetică și furnizează alte documente adecvate. Excepția nu este automată. O afirmație generală că utilajul nou „consumă mai puțin” nu înlocuiește măsurarea. Când EMS-ul este instalat, datele sale sunt integrate și validate prin auditul energetic.</p>
+      </section>
+
+      <section aria-labelledby="pro-infra-audit">
+        <h2 id="pro-infra-audit">Auditul energetic</h2>
+        <p>Proiectul se fundamentează prin audit energetic realizat pe conturul proiectului pentru ultimul an calendaristic încheiat la momentul deschiderii apelului. Auditul stabilește situația de referință, identifică măsurile de eficiență, cuantifică economia estimată și leagă instalațiile înlocuite de indicatorii asumați.</p>
+        <p>Documentul este realizat și semnat de un auditor energetic sau manager energetic autorizat ori atestat de Ministerul Energiei, în conformitate cu Legea nr. 121/2014. Auditul nu este doar anexă de depunere: la finalul fiecărui an din perioada de monitorizare a indicatorilor de rezultat, beneficiarul prezintă un nou audit pe conturul proiectului și/sau al beneficiarului. Acolo unde există EMS, auditul integrează și validează datele sistemului.</p>
+      </section>
+
+      <section aria-labelledby="pro-infra-oportunitate">
+        <h2 id="pro-infra-oportunitate">Analiza de oportunitate</h2>
+        <p>Analiza de oportunitate este documentul tehnico-economic care dovedește necesitatea și fezabilitatea investiției. Ea descrie beneficiarul, situația existentă și motivele înlocuirii, apoi compară cel puțin două scenarii tehnico-economice independente. Dacă limitările tehnice sau de mediu permit un singur scenariu, documentul trebuie să justifice explicit această situație.</p>
+        <p>Analiza cuprinde evaluarea impactului economic, social și de mediu, o analiză cost-eficacitate, reducerea estimată a consumului și emisiilor, economiile de resurse și costurile evitate. Ea tratează schimbările climatice, reziliența la dezastre, dimensionarea proiectului, durabilitatea și respectarea condițiilor privind standardele UE. Costul minim nu este singurul criteriu; opțiunea aleasă trebuie să producă economia energetică asumată și să poată fi implementată în amplasament.</p>
+      </section>
+
+      <section aria-labelledby="pro-infra-efect-stimulativ">
+        <h2 id="pro-infra-efect-stimulativ">Efectul stimulativ și interdicția demarării premature</h2>
+        <p>Ajutorul are efect stimulativ numai dacă solicitarea scrisă este transmisă furnizorului în cadrul procedurii concurențiale <strong>înainte de demararea lucrărilor</strong>. Demararea înseamnă fie începerea construcțiilor, fie primul angajament juridic obligatoriu pentru comandarea echipamentelor, fie orice alt angajament care face investiția ireversibilă, în funcție de momentul care apare primul.</p>
+        <p>Cumpărarea terenului, obținerea avizelor și autorizațiilor, studiile tehnice pregătitoare și analiza de oportunitate nu sunt considerate demararea lucrărilor. În schimb, o comandă fermă, un contract executoriu sau lucrări începute prea devreme pot face <strong>întregul proiect neeligibil</strong>, nu doar factura respectivă. Calendarul achizițiilor trebuie verificat înainte de orice semnare.</p>
+      </section>
+
+      <section aria-labelledby="pro-infra-casare">
+        <h2 id="pro-infra-casare">Casarea echipamentelor înlocuite</h2>
+        <p>Beneficiarul trebuie să dovedească, în termen de 30 de zile de la recepția noii instalații de producție, a utilajului sau echipamentului, casarea activului pentru care a solicitat înlocuirea. Casarea presupune dezmembrare, demontare, tăiere, spargere sau alte operațiuni prin care bunul își pierde forma inițială și nu mai poate fi folosit potrivit destinației pentru care a fost creat.</p>
+        <p>Proiectul trebuie să păstreze trasabilitatea dintre activul vechi identificat în audit, activul nou din buget și dovada finală a casării. Lipsa seriilor, a proceselor-verbale, a documentelor de predare sau a unei corespondențe clare între bunuri poate crea un risc de neîndeplinire a condiției de înlocuire.</p>
+      </section>
+
+      <section aria-labelledby="pro-infra-excluderi">
+        <h2 id="pro-infra-excluderi">Sectoarele și situațiile excluse</h2>
+        <p>Schema nu acordă ajutor pentru activități legate direct de export, ajutoare condiționate de folosirea preferențială a produselor naționale, pescuit și acvacultură, producția agricolă primară, anumite activități de prelucrare și comercializare a produselor agricole, închiderea minelor de cărbune necompetitive sau măsuri care încalcă nedisociabil dreptul Uniunii.</p>
+        <p>Nu sunt eligibile întreprinderile încadrate în activitățile din anexa I la Directiva ETS 2003/87/CE, chiar dacă folosesc un CAEN din anexa PRO INFRA. Schema nu se aplică nici întreprinderilor care au beneficiat de sprijin în temeiul OUG nr. 138/2022 privind compensarea costurilor indirecte ale emisiilor. Dacă firma desfășoară și activități excluse, acestea trebuie separate de activitățile eligibile prin organizare și distincție între costuri, astfel încât ajutorul să nu le finanțeze.</p>
+      </section>
+
+      <section aria-labelledby="pro-infra-dificultate">
+        <h2 id="pro-infra-dificultate">Întreprinderea în dificultate</h2>
+        <p>PRO INFRA nu acordă ajutor unei întreprinderi în dificultate. Verificarea acoperă pierderea a mai mult de jumătate din capitalul social sau capitalurile proprii în situațiile definite de Regulamentul (UE) nr. 651/2014, procedurile colective de insolvență, ajutoarele de salvare nerambursate, planurile de restructurare încă active și, pentru întreprinderile care nu sunt IMM, indicatorii financiari specifici.</p>
+        <p>Pentru o întreprindere non-IMM, raportul datorii/capitaluri proprii mai mare de 7,5 și capacitatea de acoperire a dobânzilor pe baza EBITDA sub 1,0, în ultimii doi ani, fac parte din testul legal. Separat, la depunere se verifică solvabilitatea: raportul dintre datoriile totale și capitalurile proprii trebuie să fie pozitiv și sub 7,5 în ultimul an financiar. Dacă acest criteriu nu este îndeplinit sau trebuie susținute contribuția proprie și cheltuielile neeligibile, schema prevede prezentarea unei scrisori de bonitate ori de confort bancar.</p>
+      </section>
+
+      <section aria-labelledby="pro-infra-cheltuieli">
+        <h2 id="pro-infra-cheltuieli">Cheltuieli eligibile</h2>
+        <p>Cheltuielile eligibile sunt strict costurile pentru achiziționarea și instalarea instalațiilor de producție, utilajelor și echipamentelor eficiente energetic care nu utilizează combustibili fosili sau gaze naturale, precum și costurile EMS-ului integrat, după caz. Activele trebuie să fie noi și de generație nouă la solicitarea finanțării.</p>
+        <p>Costurile care nu intră în aceste categorii sunt, ca regulă generală, neeligibile. TVA-ul nu este eligibil. Documentele justificative trebuie să fie clare, specifice și contemporane faptelor. Aceleași cheltuieli nu pot primi o altă finanțare publică, inclusiv ajutor de minimis. Diferența până la valoarea totală, contribuția necesară în urma ofertei concurențiale și toate costurile neeligibile sunt suportate de beneficiar.</p>
+        <p>Schema nu enumeră panourile fotovoltaice sau alte instalații de producere a energiei regenerabile ca obiect direct al cheltuielilor eligibile. Energia regenerabilă produsă la nivelul beneficiarului apare în criteriul secundar de selecție; acest criteriu nu transformă automat o instalație fotovoltaică într-un cost PRO INFRA eligibil.</p>
+      </section>
+
+      <section aria-labelledby="pro-infra-documente">
+        <h2 id="pro-infra-documente">Documente tehnice</h2>
+        <p>Solicitarea include denumirea și dimensiunea întreprinderii, descrierea proiectului și calendarul, obiectivele și rezultatele, localizarea, bugetul, lista costurilor eligibile și neeligibile, valoarea ajutorului solicitat și analiza de oportunitate cu analiza cost-eficacitate. Pentru verificarea tehnică sunt necesare cel puțin:</p>
+        <ul>
+          <li>auditul energetic de referință, semnat de specialist autorizat sau atestat;</li>
+          <li>analiza de oportunitate și scenariile tehnico-economice;</li>
+          <li>inventarul instalațiilor și echipamentelor înlocuite, cu identificare și consumuri;</li>
+          <li>specificațiile, ofertele și documentația pentru instalațiile și utilajele noi;</li>
+          <li>arhitectura EMS, conturul de măsurare, punctele de monitorizare și raportarea propusă;</li>
+          <li>calculul economiei de energie, al reducerii emisiilor și al costului ajutorului per MWh economisit;</li>
+          <li>documentele pentru locație, dreptul de folosință, utilități, avize și autorizații;</li>
+          <li>documentele CAEN, financiare, fiscale, de capacitate tehnică și declarațiile privind ajutoarele și sectoarele excluse.</li>
+        </ul>
+        <p>Ghidul solicitantului al fiecărei proceduri poate detalia formatele, anexele și documentele suplimentare. Dosarul tehnic trebuie să spună aceeași poveste în audit, analiza de oportunitate, buget, oferte și indicatori.</p>
+      </section>
+
+      <section aria-labelledby="pro-infra-indicatori">
+        <h2 id="pro-infra-indicatori">Indicatorii de eficiență energetică</h2>
+        <p>Indicatorul central este energia economisită în procesul de producție, exprimată în MWh și demonstrată față de situația de referință din audit. Proiectul urmărește și reducerea consumului pe contur, reducerea emisiilor de gaze cu efect de seră și performanța instalațiilor noi. EMS-ul furnizează date în timp real, iar auditurile ulterioare confirmă rezultatul.</p>
+        <p>Selecția reflectă această logică. 90% din criteriile de clasificare se bazează pe ajutorul solicitat pentru fiecare MWh economisit: cu cât valoarea EUR/MWh este mai mică, cu atât punctajul este mai mare. Restul de 10% privește utilizarea energiei regenerabile produse la nivelul beneficiarului în proces sau pentru alimentarea utilajelor. Nu există punctaj intermediar pentru acest al doilea criteriu.</p>
+      </section>
+
+      <section aria-labelledby="pro-infra-monitorizare">
+        <h2 id="pro-infra-monitorizare">Monitorizare</h2>
+        <p>Beneficiarul respectă o perioadă de durabilitate de cinci ani de la finalizarea implementării. În această perioadă nu poate înceta activitatea desfășurată cu bunul finanțat, nu poate înstrăina activele și nu poate face o modificare substanțială care afectează natura, obiectivele sau condițiile proiectului.</p>
+        <p>La finalul fiecărui an din perioada de monitorizare a indicatorilor se prezintă auditul energetic; acesta validează datele EMS unde sistemul este instalat. Beneficiarul furnizează MTI informațiile cerute pentru raportare și monitorizare și păstrează cel puțin 10 ani evidența ajutorului primit și documentele care demonstrează respectarea condițiilor. Nerealizarea indicatorilor sau încălcarea obligațiilor poate conduce la stoparea ori recuperarea ajutorului, inclusiv cu dobândă.</p>
+      </section>
+
+      <section aria-labelledby="pro-infra-riscuri">
+        <h2 id="pro-infra-riscuri">Riscuri</h2>
+        <ul class="warning-list">
+          <li>proiectul descrie o modernizare industrială generală, fără legătură demonstrată cu resursele necesare infrastructurii de transport;</li>
+          <li>codul CAEN apare în anexă, dar activitatea intră într-un sector exclus sau în anexa I ETS;</li>
+          <li>auditul nu delimitează conturul, nu folosește un an de referință complet ori nu susține economia declarată;</li>
+          <li>analiza de oportunitate nu compară scenarii și nu explică dimensionarea ori cost-eficacitatea;</li>
+          <li>EMS-ul nu este integrat, nu măsoară toate punctele relevante sau excepția este insuficient justificată;</li>
+          <li>echipamentele noi folosesc combustibili fosili ori gaze naturale;</li>
+          <li>contractele, comenzile sau lucrările încep înainte de depunerea solicitării;</li>
+          <li>activele înlocuite nu pot fi identificate sau casarea nu este dovedită în termen;</li>
+          <li>solicitantul este întreprindere în dificultate, are indicatori financiari neconformi sau nu poate acoperi costurile proprii;</li>
+          <li>beneficiarul tratează criteriul energiei regenerabile ca finanțare directă pentru fotovoltaice;</li>
+          <li>economia de energie și valoarea EUR/MWh sunt supraestimate, reducând credibilitatea și punctajul proiectului.</li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="pro-infra-faq">
+        <h2 id="pro-infra-faq">FAQ</h2>
+        ${faqHtml}
+      </section>
+
+${officialSourcesHtml}
+
+      <section aria-labelledby="pro-infra-cta">
+        <h2 id="pro-infra-cta">CTA: verifică investiția PRO INFRA</h2>
+        <p>Trimite codul CAEN, produsele realizate pentru infrastructura de transport, inventarul instalațiilor și utilajelor existente, consumurile energetice, auditul disponibil, soluția de înlocuire, documentele locației, bugetul și sursa contribuției proprii. Verificarea urmărește legătura cu schema, riscul de demarare prematură, costurile eligibile și indicatorii EUR/MWh înainte de depunere.</p>
+        <p><a class="btn btn-primary" href="/verificare-eligibilitate-fonduri-europene">Solicită verificarea eligibilității PRO INFRA</a></p>
       </section>`;
 }
 
@@ -2680,6 +2822,9 @@ function renderMainContent(page) {
   }
   if (page.slug === "afir-autoconsum-agroalimentar") {
     return renderAfirAutoconsumAgroalimentarContent(page);
+  }
+  if (page.slug === "pro-infra") {
+    return renderProInfraEfficiencyContent(page);
   }
   if (page.slug === "investitii-modernizarea-microintreprinderilor-apel-2") {
     return renderMicroApel2Content(page);

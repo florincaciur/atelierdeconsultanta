@@ -57,16 +57,16 @@ const FAMILY_BY_ROUTE = Object.freeze({
 });
 
 const PRO_INFRA_REFERENCE = Object.freeze({
-  tag: "Energie | autoconsum | avize",
-  title: "PRO INFRA: producție pentru infrastructura de transport",
-  description: "PRO INFRA explicat: finanțare pentru producție, materiale, echipamente și tehnologii necesare infrastructurii de transport, cu grant maxim consultativ de 15 milioane euro.",
+  tag: "Eficiență energetică | PRO INFRA | MTI",
+  title: "PRO INFRA – eficiență energetică pentru producătorii din infrastructura de transport",
+  description: "Înlocuirea instalațiilor, utilajelor și echipamentelor cu alternative eficiente energetic, electrificare și monitorizare prin EMS.",
   icon: "ph-duotone ph-factory",
   image: "/assets/hero/hero-solar.webp",
   family: "energy",
   primaryHref: "/verificare-eligibilitate-fonduri-europene",
   primaryText: "Verifică eligibilitatea PRO INFRA",
-  guideHref: "https://legislatie.just.ro/Public/DetaliiDocument/306391",
-  guideText: "Ghid oficial"
+  guideHref: "https://legislatie.just.ro/Public/DetaliiDocumentAfis/306916",
+  guideText: "Sursă oficială"
 });
 
 function normalizeCtaLink(value) {
