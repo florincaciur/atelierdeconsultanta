@@ -63,10 +63,10 @@ function verifyStructure($, partialLinks, partialMobileLinks, partialMegaLinks) 
   if ($("#dropdownPanel").length !== 1 || $("#dropdownBtn").length !== 1) errors.push("mega-menu lipsă sau duplicat");
   if ($("#dropdownPanel .dropdown-item").length !== partialMegaLinks.length) errors.push("mega-menu incomplet");
   if ($("#mobileMenu .mobile-links").length !== 1) errors.push("meniul mobil lipsește");
-  if ($('script[src="/assets/global-header.js"]').length !== 1) errors.push("comportamentul static al headerului lipsește sau este duplicat");
-  if ($('link[rel="stylesheet"][href="/assets/global-header.css"]').length !== 1) errors.push("stilurile headerului lipsesc sau sunt duplicate");
+  if ($('script[src="/assets/global-header.js?v=20260713-2"]').length !== 1) errors.push("comportamentul static versionat al headerului lipsește sau este duplicat");
+  if ($('link[rel="stylesheet"][href="/assets/global-header.css?v=20260713-2"]').length !== 1) errors.push("stilurile versionate ale headerului lipsesc sau sunt duplicate");
   if ($("#eligibility-whatsapp-dialog").length !== 1) errors.push("dialogul WhatsApp lipsește sau este duplicat");
-  if ($("[data-whatsapp-dialog-open]").length !== 2) errors.push("CTA-urile desktop/mobil pentru dialog lipsesc");
+  if ($("#navbar [data-whatsapp-dialog-open], #mobileMenu [data-whatsapp-dialog-open]").length !== 2) errors.push("CTA-urile desktop/mobil pentru dialog lipsesc");
   const whatsappLinks = hrefs($, "#eligibility-whatsapp-dialog .eligibility-whatsapp-options a");
   if (!equalSequence(whatsappLinks, ["https://wa.me/40769828338", "https://wa.me/40753326229"])) errors.push("numerele WhatsApp diferă de configurația cerută");
   if ($('a.nav-cta[href="/verificare-eligibilitate-fonduri-europene"], a.mobile-cta[href="/verificare-eligibilitate-fonduri-europene"]').length) errors.push("CTA-ul global trimite încă spre pagina dedicată");
@@ -85,9 +85,9 @@ async function verifyBehavior(partial, stylesheet, behavior) {
   try {
     const page = await browser.newPage({ viewport: { width: 1280, height: 900 } });
     const executablePartial = partial
-      .replace('<link rel="stylesheet" href="/assets/global-header.css">', `<style>${stylesheet}</style>`)
-      .replace('<script src="/assets/global-header.js"></script>', `<script>${behavior}</script>`);
-    await page.setContent(`<!doctype html><html><body>${executablePartial}</body></html>`, { waitUntil: "domcontentloaded" });
+      .replace('<link rel="stylesheet" href="/assets/global-header.css?v=20260713-2">', `<style>${stylesheet}</style>`)
+      .replace('<script src="/assets/global-header.js?v=20260713-2"></script>', `<script>${behavior}</script>`);
+    await page.setContent(`<!doctype html><html><body>${executablePartial}<main><a id="homepage-eligibility-cta" href="#eligibility-whatsapp-dialog" data-whatsapp-dialog-open>Solicită verificare eligibilitate</a></main></body></html>`, { waitUntil: "domcontentloaded" });
 
     await page.click("#dropdownBtn");
     if (await page.getAttribute("#dropdownBtn", "aria-expanded") !== "true") throw new Error("mega-menu nu se deschide la click");
@@ -121,6 +121,11 @@ async function verifyBehavior(partial, stylesheet, behavior) {
     await page.keyboard.press("Escape");
     if (!(await page.$eval("#eligibility-whatsapp-dialog", (element) => element.hidden))) throw new Error("Escape nu închide dialogul WhatsApp");
     if (!(await page.$eval("#navbar [data-whatsapp-dialog-open]", (element) => element === document.activeElement))) throw new Error("dialogul nu restaurează focusul pe CTA");
+
+    await page.click("#homepage-eligibility-cta");
+    if (await page.$eval("#eligibility-whatsapp-dialog", (element) => element.hidden)) throw new Error("CTA-ul homepage încărcat după script nu deschide dialogul WhatsApp");
+    await page.click("[data-whatsapp-dialog-close]");
+    if (!(await page.$eval("#eligibility-whatsapp-dialog", (element) => element.hidden))) throw new Error("dialogul homepage nu se închide");
 
     await page.setViewportSize({ width: 375, height: 800 });
     await page.click("#hamburgerBtn");

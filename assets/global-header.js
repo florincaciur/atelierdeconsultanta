@@ -9,7 +9,6 @@
   var dropdownPanel = document.getElementById('dropdownPanel');
   var dropdownItems = dropdownPanel ? Array.prototype.slice.call(dropdownPanel.querySelectorAll('a')) : [];
   var eligibilityDialog = document.getElementById('eligibility-whatsapp-dialog');
-  var eligibilityDialogOpeners = Array.prototype.slice.call(document.querySelectorAll('[data-whatsapp-dialog-open]'));
   var eligibilityDialogClose = eligibilityDialog ? eligibilityDialog.querySelector('[data-whatsapp-dialog-close]') : null;
   var eligibilityDialogOptions = eligibilityDialog ? Array.prototype.slice.call(eligibilityDialog.querySelectorAll('.eligibility-whatsapp-options a')) : [];
   var eligibilityDialogTrigger = null;
@@ -118,10 +117,10 @@
     return Array.prototype.slice.call(eligibilityDialog.querySelectorAll('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'));
   }
 
-  function openEligibilityDialog(event) {
+  function openEligibilityDialog(event, opener) {
     if (event) event.preventDefault();
     if (!eligibilityDialog) return;
-    eligibilityDialogTrigger = event && event.currentTarget ? event.currentTarget : document.activeElement;
+    eligibilityDialogTrigger = opener || document.activeElement;
     window.closeMobileMenu();
     window.closeDropdown();
     eligibilityDialog.hidden = false;
@@ -140,8 +139,10 @@
     }
   }
 
-  eligibilityDialogOpeners.forEach(function (opener) {
-    opener.addEventListener('click', openEligibilityDialog);
+  document.addEventListener('click', function (event) {
+    var opener = event.target.closest ? event.target.closest('[data-whatsapp-dialog-open]') : null;
+    if (!opener) return;
+    openEligibilityDialog(event, opener);
   });
   if (eligibilityDialogClose) eligibilityDialogClose.addEventListener('click', function () { closeEligibilityDialog(); });
   if (eligibilityDialog) {
