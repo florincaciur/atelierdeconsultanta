@@ -995,6 +995,8 @@
       "h1": "Start-Up Nation 2026: ghid central pentru pregatirea dosarului",
       "quickAnswer": "Ruta acestei pagini ramane /start-up-nation-2026 pentru continuitate tehnica, dar informatiile factuale sunt tratate prudent pe baza regulilor publicate pentru editia 2024. Programul a prevazut granturi de pana la 250.000 lei, intensitate maxima de 90%, crearea a doua locuri de munca si mentinerea lor pe perioada ceruta de schema. Pentru o sesiune viitoare, trebuie confirmate ghidul, bugetul, pilonii, codurile CAEN, cheltuielile eligibile si calendarul. Pagina este utila pentru pregatirea preliminara, verificarea ideii de afaceri, estimarea aportului propriu, alegerea furnizorilor si evitarea promisiunilor nepublicate, nu ca garantie de lansare, selectie sau aprobare. Orice scenariu de aplicare trebuie refacut dupa publicarea regulilor finale, mai ales pentru punctaj, aport propriu si obligatii de angajare.",
       "programName": "Start-Up Nation",
+      "hideHeroSummary": true,
+      "hideFamilyCards": true,
       "policyContribution": "programul susține antreprenoriatul, infiintarea și dezvoltarea firmelor tinere, crearea de activitate economică și ocupare.",
       "funding": "Pana la 250.000 lei, cu intensitate maxima de 90%, potrivit regulilor publicate pentru editia 2024.",
       "audience": [
@@ -1343,6 +1345,8 @@
       "h1": "Femeia Antreprenor 2026: program, eligibilitate și dosar",
       "quickAnswer": "Aceasta este pagina de program pentru Femeia Antreprenor 2026, nu hubul general pentru toate fondurile destinate femeilor antreprenor. Verificarea include structura acționariatului, rolul femeii antreprenor, CAEN-ul, activitatea, ideea de investiție, documentele firmei, bugetul și procedura activă atunci când este publicată.",
       "programName": "Femeia Antreprenor 2026",
+      "hideHeroSummary": true,
+      "hideFamilyCards": true,
       "policyContribution": "programul incurajeaza antreprenoriatul feminin și investițiile în firme conduse sau detinute de femei, cu accent pe dezvoltare economică realistă.",
       "funding": "grantul maxim, contributia proprie și regulile finale se verifică în procedura editiei active.",
       "audience": [
@@ -1481,6 +1485,8 @@
       "h1": "Digitalizare IMM: hub pentru proiecte, buget IT si consultanta",
       "quickAnswer": "Un proiect de digitalizare trebuie să arate ce proces se îmbunătățește: vânzări, producție, gestiune, raportare, relația cu clienții sau securitatea datelor. ERP, CRM, cloud, hardware și securitate cibernetică pot fi analizate doar dacă sunt permise de ghid și sunt legate de activitatea reală.",
       "programName": "Digitalizare IMM",
+      "hideHeroSummary": true,
+      "hideFamilyCards": true,
       "policyContribution": "programul susține transformarea digitala a IMM-urilor, automatizarea proceselor, cresterea eficientei și utilizarea unor instrumente digitale masurabile.",
       "funding": "valoarea grantului, intensitatea și pragurile se confirma în ghidul apelului activ.",
       "audience": [
