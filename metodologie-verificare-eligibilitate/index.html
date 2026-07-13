@@ -270,7 +270,7 @@
 
       <a href="#contact" class="nav-utility btn-secondary">Contact</a>
 
-        <a href="/verificare-eligibilitate-fonduri-europene" class="nav-cta btn-primary">Solicită verificare eligibilitate</a>
+        <a href="#eligibility-whatsapp-dialog" class="nav-cta btn-primary" data-whatsapp-dialog-open aria-haspopup="dialog" aria-controls="eligibility-whatsapp-dialog">Solicită verificare eligibilitate</a>
     </div>
 
     <button class="hamburger" id="hamburgerBtn" type="button" aria-label="Deschide meniu" aria-expanded="false" aria-controls="mobileMenu">
@@ -301,8 +301,26 @@
     <a href="/start-up-nation-2026">Start-Up Nation</a>
     <a href="/calculator-soc">🧮 Calculator SOC AFIR</a>
     <a href="#contact" onclick="closeMobileMenu()">Contact</a>
-    <a href="/verificare-eligibilitate-fonduri-europene" class="mobile-cta btn-primary" onclick="closeMobileMenu()">Solicită verificare eligibilitate</a>
+    <a href="#eligibility-whatsapp-dialog" class="mobile-cta btn-primary" data-whatsapp-dialog-open aria-haspopup="dialog" aria-controls="eligibility-whatsapp-dialog">Solicită verificare eligibilitate</a>
   </nav>
+</div>
+<div id="eligibility-whatsapp-dialog" class="eligibility-whatsapp-dialog" role="dialog" aria-modal="true" aria-labelledby="eligibility-whatsapp-title" hidden>
+  <div class="eligibility-whatsapp-card" role="document">
+    <button type="button" class="eligibility-whatsapp-close" data-whatsapp-dialog-close aria-label="Închide fereastra">×</button>
+    <span class="eligibility-whatsapp-eyebrow">Contact rapid</span>
+    <h2 id="eligibility-whatsapp-title">Trimite mesaj prin WhatsApp</h2>
+    <p>Alege numărul la care dorești să trimiți mesajul.</p>
+    <div class="eligibility-whatsapp-options">
+      <a href="https://wa.me/40769828338" target="_blank" rel="noopener noreferrer">
+        <span>WhatsApp</span>
+        <strong>0769 828 338</strong>
+      </a>
+      <a href="https://wa.me/40753326229" target="_blank" rel="noopener noreferrer">
+        <span>WhatsApp</span>
+        <strong>0753 326 229</strong>
+      </a>
+    </div>
+  </div>
 </div>
 <div class="global-header-spacer" aria-hidden="true"></div>
 <script src="/assets/global-header.js"></script>

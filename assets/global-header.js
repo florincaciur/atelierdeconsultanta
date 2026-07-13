@@ -8,6 +8,11 @@
   var dropdownBtn = document.getElementById('dropdownBtn');
   var dropdownPanel = document.getElementById('dropdownPanel');
   var dropdownItems = dropdownPanel ? Array.prototype.slice.call(dropdownPanel.querySelectorAll('a')) : [];
+  var eligibilityDialog = document.getElementById('eligibility-whatsapp-dialog');
+  var eligibilityDialogOpeners = Array.prototype.slice.call(document.querySelectorAll('[data-whatsapp-dialog-open]'));
+  var eligibilityDialogClose = eligibilityDialog ? eligibilityDialog.querySelector('[data-whatsapp-dialog-close]') : null;
+  var eligibilityDialogOptions = eligibilityDialog ? Array.prototype.slice.call(eligibilityDialog.querySelectorAll('.eligibility-whatsapp-options a')) : [];
+  var eligibilityDialogTrigger = null;
   var scrollTicking = false;
 
   function updateScrollState() {
@@ -108,6 +113,46 @@
     }
   });
 
+  function dialogFocusableElements() {
+    if (!eligibilityDialog) return [];
+    return Array.prototype.slice.call(eligibilityDialog.querySelectorAll('a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])'));
+  }
+
+  function openEligibilityDialog(event) {
+    if (event) event.preventDefault();
+    if (!eligibilityDialog) return;
+    eligibilityDialogTrigger = event && event.currentTarget ? event.currentTarget : document.activeElement;
+    window.closeMobileMenu();
+    window.closeDropdown();
+    eligibilityDialog.hidden = false;
+    document.body.style.overflow = 'hidden';
+    window.requestAnimationFrame(function () {
+      if (eligibilityDialogClose) eligibilityDialogClose.focus();
+    });
+  }
+
+  function closeEligibilityDialog(options) {
+    if (!eligibilityDialog || eligibilityDialog.hidden) return;
+    eligibilityDialog.hidden = true;
+    document.body.style.overflow = '';
+    if (!options || options.restoreFocus !== false) {
+      if (eligibilityDialogTrigger && typeof eligibilityDialogTrigger.focus === 'function') eligibilityDialogTrigger.focus();
+    }
+  }
+
+  eligibilityDialogOpeners.forEach(function (opener) {
+    opener.addEventListener('click', openEligibilityDialog);
+  });
+  if (eligibilityDialogClose) eligibilityDialogClose.addEventListener('click', function () { closeEligibilityDialog(); });
+  if (eligibilityDialog) {
+    eligibilityDialog.addEventListener('click', function (event) {
+      if (event.target === eligibilityDialog) closeEligibilityDialog();
+    });
+  }
+  eligibilityDialogOptions.forEach(function (option) {
+    option.addEventListener('click', function () { closeEligibilityDialog({ restoreFocus: false }); });
+  });
+
   document.addEventListener('click', function (event) {
     if (!dropdownBtn.contains(event.target) && !dropdownPanel.contains(event.target)) {
       window.closeDropdown();
@@ -115,7 +160,26 @@
   });
 
   document.addEventListener('keydown', function (event) {
+    if (eligibilityDialog && !eligibilityDialog.hidden && event.key === 'Tab') {
+      var focusable = dialogFocusableElements();
+      if (!focusable.length) return;
+      var first = focusable[0];
+      var last = focusable[focusable.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+      return;
+    }
     if (event.key !== 'Escape') return;
+    if (eligibilityDialog && !eligibilityDialog.hidden) {
+      event.preventDefault();
+      closeEligibilityDialog();
+      return;
+    }
     window.closeMobileMenu();
     window.closeDropdown({ restoreFocus: dropdownPanel && !dropdownPanel.hidden });
   });

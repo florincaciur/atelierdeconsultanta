@@ -262,9 +262,102 @@
   margin-top: 12px;
   border-radius: var(--radius-sm) !important;
 }
+.eligibility-whatsapp-dialog[hidden] { display: none !important; }
+.eligibility-whatsapp-dialog {
+  position: fixed;
+  inset: 0;
+  z-index: 2200;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(6, 15, 32, 0.76);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.eligibility-whatsapp-card {
+  position: relative;
+  width: min(100%, 520px);
+  border: 1px solid rgba(13, 31, 60, 0.14);
+  border-radius: 16px;
+  background: #ffffff;
+  color: #1a2540;
+  padding: 34px;
+  box-shadow: 0 24px 70px rgba(6, 15, 32, 0.35);
+  text-align: center;
+}
+.eligibility-whatsapp-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 50%;
+  background: #eef2f7;
+  color: #0d1f3c;
+  font-size: 1.65rem;
+  line-height: 1;
+  cursor: pointer;
+}
+.eligibility-whatsapp-close:hover { background: #e1e8f0; }
+.eligibility-whatsapp-close:focus-visible,
+.eligibility-whatsapp-options a:focus-visible {
+  outline: 3px solid rgba(184, 71, 22, 0.45);
+  outline-offset: 3px;
+}
+.eligibility-whatsapp-eyebrow {
+  display: inline-flex;
+  margin-bottom: 10px;
+  color: #b84716;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+.eligibility-whatsapp-card h2 {
+  margin: 0 34px 10px;
+  color: #0d1f3c;
+  font-size: clamp(1.45rem, 4vw, 2rem);
+  line-height: 1.2;
+}
+.eligibility-whatsapp-card p {
+  margin: 0 0 24px;
+  color: #4a5568;
+  line-height: 1.6;
+}
+.eligibility-whatsapp-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.eligibility-whatsapp-options a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 92px;
+  padding: 16px;
+  border-radius: 10px;
+  background: #128c7e;
+  color: #ffffff;
+  text-decoration: none;
+  transition: background var(--transition), transform var(--transition);
+}
+.eligibility-whatsapp-options a:hover {
+  background: #0f756a;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+.eligibility-whatsapp-options span { font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; }
+.eligibility-whatsapp-options strong { margin-top: 4px; font-size: 1.05rem; }
 .global-header-spacer { height: 72px; }
 body.page-family-home .global-header-spacer { display: none; }
 @media (max-width: 768px) {
   #navbar .nav-links { display: none; }
   #navbar .hamburger { display: flex; }
+  .eligibility-whatsapp-card { padding: 32px 20px 22px; }
+  .eligibility-whatsapp-options { grid-template-columns: 1fr; }
 }

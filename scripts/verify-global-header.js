@@ -65,6 +65,11 @@ function verifyStructure($, partialLinks, partialMobileLinks, partialMegaLinks) 
   if ($("#mobileMenu .mobile-links").length !== 1) errors.push("meniul mobil lipsește");
   if ($('script[src="/assets/global-header.js"]').length !== 1) errors.push("comportamentul static al headerului lipsește sau este duplicat");
   if ($('link[rel="stylesheet"][href="/assets/global-header.css"]').length !== 1) errors.push("stilurile headerului lipsesc sau sunt duplicate");
+  if ($("#eligibility-whatsapp-dialog").length !== 1) errors.push("dialogul WhatsApp lipsește sau este duplicat");
+  if ($("[data-whatsapp-dialog-open]").length !== 2) errors.push("CTA-urile desktop/mobil pentru dialog lipsesc");
+  const whatsappLinks = hrefs($, "#eligibility-whatsapp-dialog .eligibility-whatsapp-options a");
+  if (!equalSequence(whatsappLinks, ["https://wa.me/40769828338", "https://wa.me/40753326229"])) errors.push("numerele WhatsApp diferă de configurația cerută");
+  if ($('a.nav-cta[href="/verificare-eligibilitate-fonduri-europene"], a.mobile-cta[href="/verificare-eligibilitate-fonduri-europene"]').length) errors.push("CTA-ul global trimite încă spre pagina dedicată");
 
   const pageLinks = hrefs($, "#navbar a");
   const pageMobileLinks = hrefs($, "#mobileMenu a");
@@ -108,12 +113,24 @@ async function verifyBehavior(partial, stylesheet, behavior) {
     if (!(await page.$eval("#dropdownBtn", (element) => element === document.activeElement))) throw new Error("Escape nu restaurează focusul pe butonul Programe");
     if (!(await page.$eval("#dropdownPanel", (element) => element.hidden))) throw new Error("Escape nu închide mega-menu-ul");
 
+    await page.click("#navbar [data-whatsapp-dialog-open]");
+    if (await page.$eval("#eligibility-whatsapp-dialog", (element) => element.hidden)) throw new Error("CTA-ul desktop nu deschide dialogul WhatsApp");
+    if (!(await page.$eval("[data-whatsapp-dialog-close]", (element) => element === document.activeElement))) throw new Error("dialogul nu mută focusul pe butonul de închidere");
+    const whatsappHrefs = await page.$$eval("#eligibility-whatsapp-dialog .eligibility-whatsapp-options a", (links) => links.map((link) => link.href));
+    if (!equalSequence(whatsappHrefs, ["https://wa.me/40769828338", "https://wa.me/40753326229"])) throw new Error("dialogul nu conține cele două numere WhatsApp");
+    await page.keyboard.press("Escape");
+    if (!(await page.$eval("#eligibility-whatsapp-dialog", (element) => element.hidden))) throw new Error("Escape nu închide dialogul WhatsApp");
+    if (!(await page.$eval("#navbar [data-whatsapp-dialog-open]", (element) => element === document.activeElement))) throw new Error("dialogul nu restaurează focusul pe CTA");
+
     await page.setViewportSize({ width: 375, height: 800 });
     await page.click("#hamburgerBtn");
     if (!(await page.$eval("#mobileMenu", (element) => element.classList.contains("open")))) throw new Error("hamburgerul nu deschide meniul mobil");
     if (await page.getAttribute("#hamburgerBtn", "aria-expanded") !== "true") throw new Error("hamburgerul nu actualizează aria-expanded");
-    await page.keyboard.press("Escape");
-    if (await page.$eval("#mobileMenu", (element) => element.classList.contains("open"))) throw new Error("Escape nu închide meniul mobil");
+    await page.click("#mobileMenu [data-whatsapp-dialog-open]");
+    if (await page.$eval("#eligibility-whatsapp-dialog", (element) => element.hidden)) throw new Error("CTA-ul mobil nu deschide dialogul WhatsApp");
+    if (await page.$eval("#mobileMenu", (element) => element.classList.contains("open"))) throw new Error("CTA-ul mobil nu închide meniul înainte de dialog");
+    await page.click("[data-whatsapp-dialog-close]");
+    if (!(await page.$eval("#eligibility-whatsapp-dialog", (element) => element.hidden))) throw new Error("butonul de închidere nu închide dialogul WhatsApp");
   } finally {
     await browser.close();
   }
@@ -129,7 +146,7 @@ async function main() {
 
   const stylesheet = fs.readFileSync(path.join(ROOT, "assets", "global-header.css"), "utf8");
   const behavior = fs.readFileSync(path.join(ROOT, "assets", "global-header.js"), "utf8");
-  for (const required of ["ArrowDown", "ArrowUp", "Home", "End", "Escape", "focusout", "aria-expanded", "closeMobileMenu"]) {
+  for (const required of ["ArrowDown", "ArrowUp", "Home", "End", "Escape", "focusout", "aria-expanded", "closeMobileMenu", "eligibility-whatsapp-dialog"]) {
     if (!behavior.includes(required)) errors.push(`comportament obligatoriu absent din partial: ${required}`);
   }
 
