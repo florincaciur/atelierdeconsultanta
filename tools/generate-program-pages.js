@@ -2996,7 +2996,7 @@ function pageHtml(page, config) {
     <div class="hero-actions">
       ${heroActionsHtml}
     </div>
-    ${renderHeroSummary(page)}
+    ${page.hideHeroSummary ? "" : renderHeroSummary(page)}
   </header>`;
   const finalCtaTitle = page.finalCtaTitle || (family === "editorial" ? "Verificare discreta pe cazul tau" : family === "trust" ? "Ai un caz asemanator?" : "Urmatorul pas");
   const finalCtaText = page.finalCtaText || (isEditorialProgram(page)

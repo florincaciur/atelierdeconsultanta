@@ -2516,6 +2516,8 @@
       "h1": "Autoconsum public fotovoltaice pentru instituții publice",
       "quickAnswer": "Pagina este pentru primării, școli, spitale și instituții publice care analizează fotovoltaice pentru consum propriu. Spre deosebire de autoconsumul agroalimentar, verificarea pornește de la documente publice: HCL, consum, amplasament, avize, proprietate sau administrare, buget și proceduri de achiziție.",
       "programName": "Autoconsum public fotovoltaice",
+      "hideHeroSummary": true,
+      "hideFamilyCards": true,
       "policyContribution": "programul poate reduce costurile energetice ale institutiilor și susține tranzitia către energie regenerabilă în sectorul public.",
       "funding": "valorile și intensitatea se verifică în apelul activ.",
       "audience": [
