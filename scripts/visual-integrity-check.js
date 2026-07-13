@@ -38,6 +38,8 @@ const CANONICAL_ROOT_HTML_ROUTES = new Set([
 
 const VIEWPORTS = [
   { name: 'desktop', width: 1365, height: 900 },
+  { name: 'mobile-320', width: 320, height: 740, homepageOnly: true },
+  { name: 'mobile-360', width: 360, height: 800, homepageOnly: true },
   { name: 'mobile', width: 390, height: 844 },
 ];
 
@@ -166,7 +168,7 @@ async function inspectPage(page, pageInfo, viewport) {
 
     const horizontalOverflow = document.documentElement.scrollWidth - window.innerWidth;
     const clippedText = [];
-    const candidates = Array.from(document.querySelectorAll('h1, h2, h3, p, a, button, label, input, textarea, select, .btn-primary, .btn-secondary, .btn-cta, .cta-eyebrow, .card, .service-card, .finantare-card, .blog-card'));
+    const candidates = Array.from(document.querySelectorAll('h1, h2, h3, p, a, button, label, input, textarea, select, .btn-primary, .btn-secondary, .btn-cta, .cta-eyebrow, .card, .service-card, .finantare-card, .blog-card, .testimonial-card, .stat-card, .stat-label, .program-slide, .hero-program-spotlight'));
     for (const element of candidates) {
       if (!visible(element)) continue;
       if (element.matches('.skip-link')) continue;
@@ -243,6 +245,7 @@ async function main() {
     for (const viewport of VIEWPORTS) {
       const page = await browser.newPage({ viewport: { width: viewport.width, height: viewport.height } });
       for (const pageInfo of PAGES) {
+        if (viewport.homepageOnly && pageInfo.path !== '/') continue;
         const url = `${baseUrl}${pageInfo.path}`;
         await page.goto(url, { waitUntil: 'load', timeout: 20000 });
         await page.screenshot({

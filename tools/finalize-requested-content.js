@@ -161,22 +161,17 @@ function updateConfig() {
 function updateHome() {
   const file = "index.html";
   const $ = load(file);
-  if (!$("#requested-content-css").length) {
-    $("head").append(`<style id="requested-content-css">
-      .homepage-snippet{padding:34px 24px;background:#fff7f3;border-bottom:1px solid #f0d4c5}
-      .homepage-snippet p{max-width:980px;margin:0 auto;color:#1a2540;font-size:1.04rem;line-height:1.75}
-    </style>`);
-  }
+  $("#requested-content-css").remove();
   $(".hero-title").first().html('Consultanță Fonduri Europene<br><span class="gradient-text">și Finanțări Nerambursabile</span>');
   $(".hero-subtitle").first().text("FABER ajută firme, fermieri, start-up-uri și IMM-uri să verifice eligibilitatea, să aleagă programul potrivit, să construiască strategia de punctaj și să pregătească dosarul pentru finanțări nerambursabile.");
   const heroCta = $("#hero .hero-ctas .btn-primary").first();
-  heroCta.attr("href", "/verificare-eligibilitate-fonduri-europene").text("Verifică eligibilitatea");
-  if (!$("#seo-ai-snippet").length) {
-    $("#hero").after(`
-    <section id="seo-ai-snippet" class="homepage-snippet" aria-label="Rezumat FABER">
-      <p>FABER oferă consultanță pentru fonduri europene și finanțări nerambursabile, de la analiza eligibilității până la pregătirea dosarului și suportul în clarificări. Misiunea FABER este să ajute beneficiarii să aleagă programul potrivit, să estimeze prudent punctajul și să evite depunerile grăbite pe proiecte care nu pot fi susținute prin documente.</p>
-    </section>`);
-  }
+  heroCta
+    .attr("href", "#eligibility-whatsapp-dialog")
+    .attr("data-whatsapp-dialog-open", "")
+    .attr("aria-haspopup", "dialog")
+    .attr("aria-controls", "eligibility-whatsapp-dialog")
+    .text("Verifică eligibilitatea");
+  $("#seo-ai-snippet").remove();
   $("#servicii .section-label").first().text("Ce facem");
   $("#servicii .section-title").first().text("Consultanță clară, de la eligibilitate la clarificări");
   $("#servicii .section-subtitle").first().text("Serviciile includ analiza eligibilității, alegerea programului, strategia de punctaj, redactarea dosarului și suportul în clarificări.");

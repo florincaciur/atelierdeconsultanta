@@ -422,8 +422,6 @@
       }
     }
 
-.homepage-snippet{padding:34px 24px;background:#fff7f3;border-bottom:1px solid #f0d4c5}
-      .homepage-snippet p{max-width:980px;margin:0 auto;color:#1a2540;font-size:1.04rem;line-height:1.75}
       #despre .despre-text .section-label{display:inline-flex;flex-direction:column;align-items:flex-start;gap:0;text-align:left}
       #despre .despre-text .section-label::after{content:"";display:block;width:58px;height:2px;margin-top:8px;border-radius:999px;background:linear-gradient(90deg,var(--orange),var(--gold))}
       #despre .despre-stats{align-items:stretch}
