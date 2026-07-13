@@ -148,18 +148,6 @@ function profileFor(family) {
   return PROFILES[family] || PROFILES.generic;
 }
 
-function renderSummary(family) {
-  const profile = profileFor(family);
-  const items = profile.items
-    .map(([title, text]) => `<div class="audit-design-summary__item"><strong>${title}</strong><span>${text}</span></div>`)
-    .join("");
-  return `
-<aside class="audit-design-summary" aria-label="Pe scurt">
-  <p class="audit-design-summary__label">Pe scurt</p>
-  <div class="audit-design-summary__grid">${items}</div>
-</aside>`;
-}
-
 function renderHeroActions(family) {
   const profile = profileFor(family);
   return `
@@ -185,13 +173,6 @@ function addHeroActions(html, family) {
   if (!hero) return html;
   const closeTag = `</${hero.tag}>`;
   return `${html.slice(0, hero.end - closeTag.length)}${renderHeroActions(family)}\n${html.slice(hero.end - closeTag.length)}`;
-}
-
-function addSummary(html, family) {
-  if (html.includes("hero-summary") || html.includes("audit-design-summary")) return html;
-  const hero = findFirstHero(html);
-  if (!hero) return html;
-  return `${html.slice(0, hero.end)}${renderSummary(family)}${html.slice(hero.end)}`;
 }
 
 function addArticleToc(html) {
@@ -225,7 +206,6 @@ function decorateFile(file, family) {
   html = addBodyFamily(html, family);
   html = addHeroFamily(html, family);
   html = addHeroActions(html, family);
-  html = addSummary(html, family);
   html = addArticleToc(html);
   html = normalizeHtmlCopy(html);
   if (html !== before) fs.writeFileSync(file, html, "utf8");

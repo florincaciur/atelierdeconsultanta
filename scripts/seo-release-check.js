@@ -15,6 +15,7 @@ if (!NPM_CLI || !fs.existsSync(NPM_CLI)) {
 
 const commands = [
   [NODE, [NPM_CLI, "run", "build"], "build"],
+  [NODE, ["scripts/verify-section-cleanup.js"], "section cleanup and FAQ collapse"],
   [NODE, ["tools/audit-content-depth.js"], "content depth"],
   [NODE, ["tools/audit-site-links.js"], "site links"],
   [NODE, ["tools/audit-gsc-routes.js"], "GSC routes"],
