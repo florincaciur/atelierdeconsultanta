@@ -49,6 +49,6 @@ Validarea întregii categorii „Page with redirect” nu trebuie folosită pent
 - Crawled-not-indexed: 200, conținut unic, self-canonical, sitemap și minimum două legături contextuale înainte de cererea de indexare.
 - Validate Fix se pornește numai pentru rândurile completate și verificate live din registru.
 
-## Limită operațională
+## Închidere operațională Cloudflare
 
-La data auditului, `http://atelierdeconsultanta.ro/` răspundea 200. Setarea Always Use HTTPS sau regula permanentă echivalentă trebuie activată în zona Cloudflare și retestată înainte de HSTS. Configurația exactă este documentată în `docs/cloudflare-seo-domain-settings.md`.
+La începutul auditului, `http://atelierdeconsultanta.ro/` răspundea `200`. La 20 iulie 2026 a fost publicat Worker-ul `atelierdeconsultanta-domain-seo` pe ruta `atelierdeconsultanta.ro/*`. Testul live confirmă un singur `301` HTTP→HTTPS cu păstrarea căii și query-ului, un singur `301` pentru URL-ul SearchAction către homepage fără query și răspuns `200` direct pentru cele cinci URL-uri canonice. HSTS este activ cu `max-age=15552000`, fără `includeSubDomains` și fără `preload`.

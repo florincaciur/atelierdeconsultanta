@@ -1,0 +1,37 @@
+import assert from "node:assert/strict";
+import { handleRequest } from "../cloudflare/domain-seo-redirects.mjs";
+
+async function expectRedirect(source, destination) {
+  const response = await handleRequest(new Request(source), async () => {
+    throw new Error("Origin must not be called for a redirect case.");
+  });
+  assert.equal(response.status, 301, source);
+  assert.equal(response.headers.get("location"), destination, source);
+}
+
+await expectRedirect(
+  "http://atelierdeconsultanta.ro/dr12-afir?gsc_protocol_test=1",
+  "https://atelierdeconsultanta.ro/dr12-afir?gsc_protocol_test=1"
+);
+await expectRedirect(
+  "http://atelierdeconsultanta.ro/?s=%7Bsearch_term_string%7D",
+  "https://atelierdeconsultanta.ro/"
+);
+await expectRedirect(
+  "https://atelierdeconsultanta.ro/?s=%7Bsearch_term_string%7D",
+  "https://atelierdeconsultanta.ro/"
+);
+
+let originRequest;
+const originResponse = await handleRequest(
+  new Request("https://atelierdeconsultanta.ro/calendar-fonduri-europene/"),
+  async (request) => {
+    originRequest = request;
+    return new Response(null, { status: 204 });
+  }
+);
+assert.equal(originResponse.status, 204);
+assert.equal(originRequest.url, "https://atelierdeconsultanta.ro/calendar-fonduri-europene/");
+assert.equal(originResponse.headers.get("strict-transport-security"), "max-age=15552000");
+
+console.log("Cloudflare domain SEO worker tests passed.");

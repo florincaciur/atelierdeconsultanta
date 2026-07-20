@@ -15,6 +15,28 @@ function readWranglerConfig() {
   return JSON.parse(stripJsonComments(fs.readFileSync(configPath, "utf8")));
 }
 
+function validateDomainWorkerConfig(errors) {
+  const configPath = path.join(ROOT, "wrangler.redirects.jsonc");
+  const workerPath = path.join(ROOT, "cloudflare", "domain-seo-redirects.mjs");
+  if (!fs.existsSync(configPath)) {
+    errors.push("wrangler.redirects.jsonc is missing");
+    return;
+  }
+  if (!fs.existsSync(workerPath)) errors.push("cloudflare/domain-seo-redirects.mjs is missing");
+  let workerConfig;
+  try {
+    workerConfig = JSON.parse(stripJsonComments(fs.readFileSync(configPath, "utf8")));
+  } catch (error) {
+    errors.push(`wrangler.redirects.jsonc is invalid: ${error.message}`);
+    return;
+  }
+  if (workerConfig.name !== "atelierdeconsultanta-domain-seo") errors.push("domain SEO worker name differs from the managed production worker");
+  if (workerConfig.main !== "cloudflare/domain-seo-redirects.mjs") errors.push("domain SEO worker main file differs");
+  if (workerConfig.workers_dev !== false) errors.push("domain SEO worker must not expose a workers.dev route");
+  const route = (workerConfig.routes || []).find((item) => item.pattern === "atelierdeconsultanta.ro/*");
+  if (!route || route.zone_name !== "atelierdeconsultanta.ro") errors.push("domain SEO worker must use the apex zone route");
+}
+
 function validateDomainSeoIntent(file, errors) {
   if (!fs.existsSync(file)) {
     errors.push(`${file} is missing`);
@@ -34,6 +56,7 @@ function validateDomainSeoIntent(file, errors) {
   if (config.legacySearchRedirect?.enabled !== true || config.legacySearchRedirect?.status !== 301) errors.push(`${file}: legacy search redirect must be enabled as 301 desired state`);
   if (config.legacySearchRedirect?.destination !== "https://atelierdeconsultanta.ro/") errors.push(`${file}: legacy search redirect must target the canonical homepage`);
   if (config.legacySearchRedirect?.preserveQuery !== false) errors.push(`${file}: legacy search redirect must discard the obsolete query`);
+  if (config.deploymentState === "active_cloudflare_worker_route" && config.hsts?.enabled !== true) errors.push(`${file}: active domain worker must enable the verified HSTS policy`);
   if (config.hsts?.enableOnlyAfterHttpRedirectVerification !== true) errors.push(`${file}: HSTS must be gated by live HTTPS verification`);
   if (config.hsts?.preload !== false) errors.push(`${file}: HSTS preload must remain disabled initially`);
 }
@@ -191,6 +214,7 @@ if (!config.assets || !config.assets.directory) {
 }
 validateOfficialGuidesHeaders(path.join(ROOT, "_headers"), errors);
 validateDomainSeoIntent(path.join(ROOT, "config", "cloudflare-domain-seo.json"), errors);
+validateDomainWorkerConfig(errors);
 
 if (errors.length) {
   console.error("Cloudflare deploy validation failed:");

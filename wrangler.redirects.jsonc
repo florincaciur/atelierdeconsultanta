@@ -1,0 +1,13 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "atelierdeconsultanta-domain-seo",
+  "main": "cloudflare/domain-seo-redirects.mjs",
+  "compatibility_date": "2026-07-20",
+  "workers_dev": false,
+  "routes": [
+    {
+      "pattern": "atelierdeconsultanta.ro/*",
+      "zone_name": "atelierdeconsultanta.ro"
+    }
+  ]
+}

@@ -2,6 +2,10 @@
 
 Aceste setări sunt la nivelul zonei Cloudflare și nu pot fi impuse prin `_redirects` într-un deploy de active statice. La verificarea din 20 iulie 2026, `http://atelierdeconsultanta.ro/` răspundea `200`, deși paginile declară canonical HTTPS.
 
+Repository-ul include și alternativa operațională `cloudflare/domain-seo-redirects.mjs`, configurată separat prin `wrangler.redirects.jsonc`. Worker-ul rulează ca proxy transparent în fața origin-ului existent, aplică numai redirecturile de protocol și SearchAction, iar pentru toate celelalte cereri folosește `fetch(request)` către origin. Configurația separată evită înlocuirea accidentală a deploy-ului de active statice.
+
+Această alternativă a fost publicată la 20 iulie 2026 pe ruta `atelierdeconsultanta.ro/*`. Versiunea verificată live este `1afc947a-8944-4446-b466-0d535030f77f`. Testul repository/build/live este verde pentru toate cele cinci pagini prioritare.
+
 ## 1. Redirect HTTP către HTTPS
 
 În Cloudflare, activează **SSL/TLS → Edge Certificates → Always Use HTTPS**. Alternativ, creează o singură Redirect Rule permanentă pentru toate cererile cu schema HTTP:

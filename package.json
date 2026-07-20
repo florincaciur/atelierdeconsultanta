@@ -50,6 +50,8 @@
     "verify:priority-urls": "node tools/verify-priority-url-matrix.js",
     "verify:priority-urls:live": "node tools/verify-priority-url-matrix.js --live",
     "verify:priority-responsive": "node scripts/verify-priority-responsive.js",
+    "verify:cloudflare-domain-worker": "node tests/cloudflare-domain-seo-redirects.mjs && npx wrangler deploy --dry-run --config wrangler.redirects.jsonc",
+    "deploy:cloudflare-domain-worker": "npm run verify:cloudflare-domain-worker && npx wrangler deploy --config wrangler.redirects.jsonc",
     "test:functional": "node tests/faber-functional-checks.mjs && node tests/generative-language-checks.mjs && node scripts/verify-answer-readiness.js && node scripts/verify-contextual-next-steps.js && npm run verify:analytics",
     "deploy": "npm run build && npm run validate:cloudflare && npx wrangler deploy",
     "deploy:pages": "npm run build && npm run validate:cloudflare && npx wrangler pages deploy dist",

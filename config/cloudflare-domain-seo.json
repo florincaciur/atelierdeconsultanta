@@ -1,7 +1,13 @@
 {
   "lastReviewed": "2026-07-20",
   "canonicalOrigin": "https://atelierdeconsultanta.ro",
-  "deploymentState": "requires_cloudflare_zone_change",
+  "deploymentState": "active_cloudflare_worker_route",
+  "worker": {
+    "name": "atelierdeconsultanta-domain-seo",
+    "route": "atelierdeconsultanta.ro/*",
+    "deployedAt": "2026-07-20",
+    "versionId": "1afc947a-8944-4446-b466-0d535030f77f"
+  },
   "httpRedirect": {
     "enabled": true,
     "status": 301,
@@ -19,6 +25,7 @@
     "status": 301
   },
   "hsts": {
+    "enabled": true,
     "enableOnlyAfterHttpRedirectVerification": true,
     "includeSubDomains": false,
     "preload": false,
