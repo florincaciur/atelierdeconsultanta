@@ -97,7 +97,7 @@ function isHiddenFromUsers($, element) {
 function visibleFaqItems($) {
   const items = [];
   const seen = new Set();
-  const containers = $(".faq-item, details, [itemprop='mainEntity'][itemtype*='Question']");
+  const containers = $(".faq-item, details:not([data-non-faq]), [itemprop='mainEntity'][itemtype*='Question']");
 
   containers.each((_, container) => {
     if (isHiddenFromUsers($, container)) return;

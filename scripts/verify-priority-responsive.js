@@ -74,6 +74,9 @@ async function main() {
           const h1 = document.querySelector("h1");
           const h1Rect = h1?.getBoundingClientRect();
           const nextStep = document.querySelector("[data-contextual-next-step]");
+          const answerReadiness = document.querySelector(".answer-readiness--compact");
+          const answerDetails = answerReadiness?.querySelector(".answer-readiness__details");
+          const directAnswer = answerReadiness?.querySelector("[data-answer-readiness-direct]");
           const sections = [...document.querySelectorAll("main section")];
           const nextStepIndex = nextStep ? sections.indexOf(nextStep) : -1;
           const nextStepTop = nextStep ? nextStep.getBoundingClientRect().top + window.scrollY : null;
@@ -89,6 +92,14 @@ async function main() {
             nextStepRatio: nextStepTop === null ? null : nextStepTop / root.scrollHeight,
             sectionsAfterNextStep: nextStepIndex < 0 ? null : sections.length - nextStepIndex - 1,
             projectDesignLinks: document.querySelectorAll("[data-contextual-next-step] a[href='/proiectare-fonduri-europene']").length,
+            compactAnswer: !expectNextStep ? {
+              count: document.querySelectorAll(".answer-readiness--compact").length,
+              height: answerReadiness?.getBoundingClientRect().height || 0,
+              detailsOpen: Boolean(answerDetails?.open),
+              directAnswerVisible: Boolean(directAnswer && directAnswer.getBoundingClientRect().height > 0),
+              factCount: answerDetails?.querySelectorAll(".answer-readiness__facts > div").length || 0,
+              sourceCount: answerDetails?.querySelectorAll(".answer-readiness__source").length || 0
+            } : null,
             homepageServicePaths: !expectNextStep ? {
               consulting: serviceTargets.has("/consultanta-fonduri-europene"),
               projectDesign: serviceTargets.has("/proiectare-fonduri-europene")
@@ -99,6 +110,11 @@ async function main() {
 
         const screenshot = path.join(OUTPUT, `${spec.slug}-${viewport.width}.png`);
         await page.screenshot({ path: screenshot, fullPage: false });
+        if (spec.slug === "home") {
+          await page.locator(".answer-readiness--compact").screenshot({
+            path: path.join(OUTPUT, `home-answer-readiness-${viewport.width}.png`)
+          });
+        }
         const errors = [];
         if (!response || response.status() !== 200) errors.push(`HTTP ${response?.status() || "missing"}`);
         if (metrics.scrollWidth > metrics.viewportWidth + 1) errors.push(`horizontal overflow ${metrics.scrollWidth}/${metrics.viewportWidth}`);
@@ -107,8 +123,20 @@ async function main() {
           if (metrics.nextStepCount !== 1) errors.push(`next-step count ${metrics.nextStepCount}`);
           if (metrics.projectDesignLinks !== 1) errors.push(`project-design links ${metrics.projectDesignLinks}`);
           if (metrics.nextStepRatio < 0.75 || metrics.sectionsAfterNextStep !== 1) errors.push("next-step block is not immediately before the final CTA area");
-        } else if (!metrics.homepageServicePaths?.consulting || !metrics.homepageServicePaths?.projectDesign) {
-          errors.push("homepage does not expose both consulting and project-design paths");
+        } else {
+          if (!metrics.homepageServicePaths?.consulting || !metrics.homepageServicePaths?.projectDesign) {
+            errors.push("homepage does not expose both consulting and project-design paths");
+          }
+          if (metrics.compactAnswer?.count !== 1 || metrics.compactAnswer.detailsOpen || !metrics.compactAnswer?.directAnswerVisible) {
+            errors.push("homepage compact answer is missing, expanded by default or lacks a visible direct answer");
+          }
+          if (metrics.compactAnswer?.factCount !== 8 || metrics.compactAnswer?.sourceCount !== 1) {
+            errors.push("homepage compact answer does not keep all facts and its source in the HTML");
+          }
+          const maxCompactHeight = viewport.width <= 390 ? 460 : 330;
+          if (metrics.compactAnswer?.height > maxCompactHeight) {
+            errors.push(`homepage compact answer is too tall ${Math.round(metrics.compactAnswer.height)}/${maxCompactHeight}`);
+          }
         }
         if (consoleErrors.length) errors.push(`console errors: ${consoleErrors.join(" | ")}`);
         results.push({ page: spec.slug, viewport, screenshot: path.relative(ROOT, screenshot), metrics, errors });

@@ -226,6 +226,153 @@ textarea:focus-visible{
   outline-offset:3px;
 }
 
+/* Compact, server-rendered answer block placed directly after the homepage hero. */
+.answer-readiness--compact{
+  background:linear-gradient(180deg,#f8fafc 0%,#fff 100%);
+  padding:clamp(16px,2.5vw,28px) 0;
+}
+
+.answer-readiness--compact > .container{
+  background:#fff;
+  border:1px solid #dbe4ef;
+  border-radius:16px;
+  box-shadow:0 12px 34px rgba(13,31,60,.08);
+  max-width:1120px;
+  padding:clamp(18px,2.2vw,24px);
+}
+
+.answer-readiness--compact .answer-readiness__direct{
+  border-left:4px solid var(--design-orange);
+  color:var(--design-ink);
+  font-size:clamp(1rem,1.3vw,1.075rem);
+  line-height:1.65;
+  margin:0 0 18px;
+  padding:2px 0 2px 16px;
+}
+
+.answer-readiness--compact h2{
+  color:var(--design-navy);
+  font-size:clamp(1.3rem,2.1vw,1.75rem);
+  line-height:1.25;
+  margin:0 0 14px;
+}
+
+.answer-readiness__details{
+  border:1px solid #d8e1ec;
+  border-radius:12px;
+  overflow:clip;
+}
+
+.answer-readiness__details > summary{
+  align-items:center;
+  background:#f4f7fb;
+  color:var(--design-navy);
+  cursor:pointer;
+  display:flex;
+  font-size:1rem;
+  font-weight:700;
+  gap:16px;
+  justify-content:space-between;
+  list-style:none;
+  min-height:54px;
+  padding:13px 52px 13px 18px;
+  position:relative;
+}
+
+.answer-readiness__details > summary::-webkit-details-marker{
+  display:none;
+}
+
+.answer-readiness__details > summary::after{
+  align-items:center;
+  background:#fff;
+  border:1px solid #cbd7e5;
+  border-radius:50%;
+  content:"+";
+  display:flex;
+  font-size:1.25rem;
+  font-weight:500;
+  height:28px;
+  justify-content:center;
+  line-height:1;
+  position:absolute;
+  right:16px;
+  top:50%;
+  transform:translateY(-50%);
+  width:28px;
+}
+
+.answer-readiness__details[open] > summary::after{
+  content:"−";
+}
+
+.answer-readiness__details > summary:hover{
+  background:#edf3f9;
+}
+
+.answer-readiness__details > summary:focus-visible{
+  outline:3px solid rgba(184,71,22,.36);
+  outline-offset:-3px;
+}
+
+.answer-readiness__summary-meta{
+  color:var(--design-muted);
+  flex:0 0 auto;
+  font-size:.8rem;
+  font-weight:600;
+  letter-spacing:.02em;
+}
+
+.answer-readiness__details-body{
+  border-top:1px solid #dbe4ef;
+  padding:clamp(18px,3vw,28px);
+}
+
+.answer-readiness--compact .answer-readiness__facts{
+  display:grid;
+  gap:12px;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  margin:0;
+}
+
+.answer-readiness--compact .answer-readiness__facts > div{
+  background:#f8fafc;
+  border:1px solid #e3e9f1;
+  border-radius:10px;
+  min-width:0;
+  padding:15px 16px;
+}
+
+.answer-readiness--compact .answer-readiness__facts dt{
+  color:var(--design-navy);
+  font-size:.95rem;
+  font-weight:750;
+  line-height:1.35;
+  margin:0 0 5px;
+}
+
+.answer-readiness--compact .answer-readiness__facts dd{
+  color:var(--design-muted);
+  font-size:.9rem;
+  line-height:1.55;
+  margin:0;
+}
+
+.answer-readiness--compact .answer-readiness__source{
+  border-top:1px solid #e3e9f1;
+  color:var(--design-muted);
+  font-size:.82rem;
+  line-height:1.55;
+  margin:20px 0 0;
+  padding-top:16px;
+}
+
+.answer-readiness--compact .answer-readiness__source a{
+  color:#9f3c13;
+  font-weight:650;
+  text-underline-offset:3px;
+}
+
 @media (max-width:760px){
   .hero-actions{
     align-items:stretch;
@@ -242,6 +389,40 @@ textarea:focus-visible{
   }
 
   .audit-design-summary__grid{
+    grid-template-columns:1fr;
+  }
+
+  .answer-readiness--compact{
+    padding:12px 0 16px;
+  }
+
+  .answer-readiness--compact > .container{
+    border-left:0;
+    border-radius:0;
+    border-right:0;
+    box-shadow:none;
+    padding:16px;
+  }
+
+  .answer-readiness--compact .answer-readiness__direct{
+    font-size:.94rem;
+    line-height:1.5;
+    margin-bottom:14px;
+    padding-left:13px;
+  }
+
+  .answer-readiness__details > summary{
+    align-items:flex-start;
+    flex-direction:column;
+    gap:3px;
+    padding:13px 48px 13px 14px;
+  }
+
+  .answer-readiness__summary-meta{
+    font-size:.75rem;
+  }
+
+  .answer-readiness--compact .answer-readiness__facts{
     grid-template-columns:1fr;
   }
 

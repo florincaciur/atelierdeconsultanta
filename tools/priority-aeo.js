@@ -44,23 +44,44 @@ function renderPriorityAeo(slug, config = loadPriorityConfig()) {
   if (!page) return "";
   const id = `answer-readiness-${slug}`;
   const reviewed = page.lastReviewed || config.lastReviewed || config.lastVerified;
-  const content = `      <p data-answer-readiness-direct="" data-information-status="${escapeHtml(page.source.status)}">${escapeHtml(page.directAnswer)}</p>
-
-      <h2 id="${id}-conditions">${escapeHtml(page.sectionTitle)}</h2>
-      <dl class="answer-readiness__facts" aria-labelledby="${id}-conditions">
-${renderFacts(page.facts)}
-      </dl>
-
-      <p class="source-note answer-readiness__source"><strong>Sursă oficială:</strong> <a href="${escapeHtml(page.source.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(page.source.document)}</a>. <strong>Instituție:</strong> ${escapeHtml(page.source.institution)}. <strong>Statut:</strong> ${escapeHtml(page.source.status)} <strong>Ultima verificare:</strong> <time datetime="${escapeHtml(reviewed)}">${escapeHtml(formatRomanianDate(reviewed))}</time>.</p>${page.interpretation ? `
+  const source = `      <p class="source-note answer-readiness__source"><strong>Sursă oficială:</strong> <a href="${escapeHtml(page.source.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(page.source.document)}</a>. <strong>Instituție:</strong> ${escapeHtml(page.source.institution)}. <strong>Statut:</strong> ${escapeHtml(page.source.status)} <strong>Ultima verificare:</strong> <time datetime="${escapeHtml(reviewed)}">${escapeHtml(formatRomanianDate(reviewed))}</time>.</p>${page.interpretation ? `
 
       <aside aria-labelledby="${id}-interpretation">
         <h3 id="${id}-interpretation">Interpretarea FABER</h3>
         <p>${escapeHtml(page.interpretation)}</p>
       </aside>` : ""}`;
+  const facts = `      <dl class="answer-readiness__facts" aria-labelledby="${id}-conditions">
+${renderFacts(page.facts)}
+      </dl>`;
+  const directClass = page.presentation === "compact-disclosure" ? " class=\"answer-readiness__direct\"" : "";
+  const directAnswer = `      <p${directClass} data-answer-readiness-direct="" data-information-status="${escapeHtml(page.source.status)}">${escapeHtml(page.directAnswer)}</p>`;
+  const content = page.presentation === "compact-disclosure"
+    ? `${directAnswer}
+
+      <h2 id="${id}-conditions">${escapeHtml(page.sectionTitle)}</h2>
+
+      <details class="answer-readiness__details" data-non-faq="">
+        <summary>
+          <span>Vezi criteriile verificate înainte de depunere</span>
+          <span class="answer-readiness__summary-meta">8 criterii + sursa oficială</span>
+        </summary>
+        <div class="answer-readiness__details-body">
+${facts}
+
+${source}
+        </div>
+      </details>`
+    : `${directAnswer}
+
+      <h2 id="${id}-conditions">${escapeHtml(page.sectionTitle)}</h2>
+${facts}
+
+${source}`;
+  const modifier = page.presentation === "compact-disclosure" ? " answer-readiness--compact" : "";
 
   if (page.layout === "standalone") {
     return `${START}
-  <section class="section answer-readiness" aria-labelledby="${id}-conditions">
+  <section class="section answer-readiness${modifier}" aria-labelledby="${id}-conditions">
     <div class="container">
 ${content}
     </div>
@@ -69,7 +90,7 @@ ${END}`;
   }
 
   return `${START}
-    <section class="answer-readiness" aria-labelledby="${id}-conditions">
+    <section class="answer-readiness${modifier}" aria-labelledby="${id}-conditions">
 ${content}
     </section>
 ${END}`;

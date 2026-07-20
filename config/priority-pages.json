@@ -7,9 +7,10 @@
       "route": "/",
       "file": "index.html",
       "layout": "standalone",
+      "presentation": "compact-disclosure",
       "beforeMarker": "<section id=\"carousel-section\"",
-      "sectionTitle": "Cum se stabilește eligibilitatea",
-      "directAnswer": "FABER verifică eligibilitatea firmelor, fermierilor, start-up-urilor și instituțiilor care pregătesc proiecte cu finanțare nerambursabilă. Analiza compară solicitantul, activitatea, amplasamentul, investiția, bugetul și documentele cu ghidul programului identificat. Informația de pe această pagină descrie metoda de lucru; condițiile, finanțarea și calendarul se confirmă în documentul oficial activ al fiecărui apel.",
+      "sectionTitle": "Cum verificăm eligibilitatea?",
+      "directAnswer": "FABER verifică eligibilitatea firmelor, fermierilor, start-up-urilor și instituțiilor pentru proiecte cu fonduri europene. Analiza compară solicitantul, activitatea, amplasamentul, investiția, bugetul și documentele cu ghidul programului ales. Acesta este modul de lucru FABER; condițiile, finanțarea și calendarul fiecărui apel se confirmă exclusiv în documentul oficial activ.",
       "facts": [
         {
           "term": "Cine este eligibil?",

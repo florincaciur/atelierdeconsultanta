@@ -85,6 +85,15 @@ function inspectPage(slug, page, config) {
 
   if (hiddenContent($, activeModule).length) errors.push("secțiunea answer-readiness conține text ascuns");
   if (activeModule.closest("details:not([open])").length) errors.push("informația principală este într-un accordion închis implicit");
+  const compactDetails = activeModule.find("details.answer-readiness__details[data-non-faq]");
+  if (page.presentation === "compact-disclosure") {
+    if (!activeModule.hasClass("answer-readiness--compact")) errors.push("lipsește modificatorul vizual compact");
+    if (compactDetails.length !== 1) errors.push(`panoul compact are ${compactDetails.length} elemente details; este necesar unul`);
+    if (compactDetails.is("[open]")) errors.push("panoul compact trebuie să fie închis implicit");
+    if (!cleanText(compactDetails.children("summary").first().text())) errors.push("panoul compact nu are un rezumat accesibil");
+  } else if (compactDetails.length || activeModule.hasClass("answer-readiness--compact")) {
+    errors.push("prezentarea compactă apare pe o pagină fără configurarea aferentă");
+  }
   const hiddenFaq = $(".faq-item").filter((_, element) => {
     const item = $(element);
     return item.is("[hidden], [aria-hidden='true']") || item.closest("[hidden], [aria-hidden='true']").length > 0 || /display\s*:\s*none|visibility\s*:\s*hidden/iu.test(item.attr("style") || "");
