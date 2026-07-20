@@ -26,23 +26,14 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Organization",
       "@id": "https://atelierdeconsultanta.ro/#organization",
-      "name": "FABER - Atelier de Consultanță",
+      "@type": "Organization",
       "alternateName": [
         "FABER",
         "Atelier de Consultanță",
         "Atelier de Consultanță FABER",
         "atelierdeconsultanta.ro"
       ],
-      "url": "https://atelierdeconsultanta.ro",
-      "description": "FABER - Atelier de Consultanță ajută firme, fermieri, start-up-uri și IMM-uri să verifice eligibilitatea și să pregătească proiecte pentru fonduri europene și finanțări nerambursabile.",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://atelierdeconsultanta.ro/favicon-192.png"
-      },
-      "image": "https://atelierdeconsultanta.ro/og-image.jpg",
-      "email": "atelier.consultanta@gmail.com",
       "areaServed": {
         "@type": "Country",
         "name": "România"
@@ -50,17 +41,20 @@
       "contactPoint": [
         {
           "@type": "ContactPoint",
-          "telephone": "+40769828338",
+          "availableLanguage": "ro-RO",
           "contactType": "customer service",
-          "availableLanguage": "ro-RO"
+          "telephone": "+40769828338"
         },
         {
           "@type": "ContactPoint",
-          "telephone": "+40753326229",
+          "availableLanguage": "ro-RO",
           "contactType": "customer service",
-          "availableLanguage": "ro-RO"
+          "telephone": "+40753326229"
         }
       ],
+      "description": "FABER - Atelier de Consultanță ajută firme, fermieri, start-up-uri și IMM-uri să verifice eligibilitatea și să pregătească proiecte pentru fonduri europene și finanțări nerambursabile.",
+      "email": "atelier.consultanta@gmail.com",
+      "image": "https://atelierdeconsultanta.ro/og-image.jpg",
       "knowsAbout": [
         "fonduri europene",
         "finanțări nerambursabile",
@@ -69,73 +63,60 @@
         "Start-Up Nation",
         "Digitalizare IMM",
         "consultanță IMM"
-      ]
+      ],
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://atelierdeconsultanta.ro/favicon-192.png"
+      },
+      "name": "FABER - Atelier de Consultanță",
+      "url": "https://atelierdeconsultanta.ro"
     },
     {
-      "@type": "WebSite",
       "@id": "https://atelierdeconsultanta.ro/#website",
-      "url": "https://atelierdeconsultanta.ro",
+      "@type": "WebSite",
+      "inLanguage": "ro-RO",
       "name": "FABER - Atelier de Consultanță",
       "publisher": {
         "@id": "https://atelierdeconsultanta.ro/#organization"
       },
-      "inLanguage": "ro-RO"
+      "url": "https://atelierdeconsultanta.ro"
     },
     {
-      "@type": "WebPage",
       "@id": "https://atelierdeconsultanta.ro/afir#webpage",
-      "url": "https://atelierdeconsultanta.ro/afir",
-      "name": "AFIR | calculator SO, DR12, DR14 și GAL",
+      "@type": "WebPage",
+      "dateModified": "2026-05-29",
+      "datePublished": "2026-05-29",
       "description": "Hub AFIR pentru fermieri: calculator SO/SOC, DR12, DR14, GAL-AFIR, autoconsum, documente agricole și rutare prudentă către program.",
+      "inLanguage": "ro-RO",
       "isPartOf": {
         "@id": "https://atelierdeconsultanta.ro/#website"
       },
-      "inLanguage": "ro-RO",
+      "name": "AFIR: calculator SO, programe și verificare dosar",
       "publisher": {
         "@id": "https://atelierdeconsultanta.ro/#organization"
       },
-      "dateModified": "2026-05-29",
-      "citation": [
-        {
-          "@type": "CreativeWork",
-          "name": "DR 12 AFIR - Tineri fermieri",
-          "url": "https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/",
-          "publisher": {
-            "@type": "Organization",
-            "name": "AFIR"
-          }
-        },
-        {
-          "@type": "CreativeWork",
-          "name": "DR 14 AFIR - Ferme mici",
-          "url": "https://www.afir.ro/info-la-zi/versiunea-consultativa-a-ghidului-solicitantului-dr-14/",
-          "publisher": {
-            "@type": "Organization",
-            "name": "AFIR"
-          }
-        }
-      ]
+      "url": "https://atelierdeconsultanta.ro/afir"
     },
     {
       "@type": "BreadcrumbList",
       "itemListElement": [
         {
           "@type": "ListItem",
-          "position": 1,
-          "name": "Acasa",
-          "item": "https://atelierdeconsultanta.ro/"
+          "item": "https://atelierdeconsultanta.ro/",
+          "name": "Acasă",
+          "position": 1
         },
         {
           "@type": "ListItem",
-          "position": 2,
+          "item": "https://atelierdeconsultanta.ro/fonduri-europene",
           "name": "Fonduri europene",
-          "item": "https://atelierdeconsultanta.ro/fonduri-europene"
+          "position": 2
         },
         {
           "@type": "ListItem",
-          "position": 3,
+          "item": "https://atelierdeconsultanta.ro/afir",
           "name": "AFIR: calculator SO, programe și verificare dosar",
-          "item": "https://atelierdeconsultanta.ro/afir"
+          "position": 3
         }
       ]
     },
@@ -144,165 +125,115 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "Ce este AFIR?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "AFIR gestioneaza programe de finanțare pentru agricultura și dezvoltare rurala."
-          }
+          },
+          "name": "Ce este AFIR?"
         },
         {
           "@type": "Question",
-          "name": "De ce conteaza SO?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "SO ajuta la incadrarea fermei în interventia potrivită."
-          }
+          },
+          "name": "De ce conteaza SO?"
         },
         {
           "@type": "Question",
-          "name": "Pot aplica pentru utilaje?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Da, dacă programul permite și utilajele sunt justificate."
-          }
+          },
+          "name": "Pot aplica pentru utilaje?"
         },
         {
           "@type": "Question",
-          "name": "Ce verific prima data?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Verifică forma solicitantului, exploatația și dimensiunea economică."
-          }
+          },
+          "name": "Ce verific prima data?"
         },
         {
           "@type": "Question",
-          "name": "Cum aleg intre DR12 și DR14?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Alegerea se face după profilul solicitantului, exploatație, SO/SOC, investiție și documente. DR12 și DR14 nu trebuie tratate ca variante interschimbabile."
-          }
+          },
+          "name": "Cum aleg intre DR12 și DR14?"
         },
         {
           "@type": "Question",
-          "name": "Când folosesc calculatorul SO/SOC?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Calculatorul se folosește înainte de alegerea finală a programului, pe date actuale și documentabile despre culturi, animale și exploatație."
-          }
+          },
+          "name": "Când folosesc calculatorul SO/SOC?"
         },
         {
           "@type": "Question",
-          "name": "Pot pregati bugetul înainte de eligibilitate?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Nu este recomandat. Bugetul trebuie construit după ce solicitantul, exploatația, investiția și documentele de baza au fost verificate."
-          }
+          },
+          "name": "Pot pregati bugetul înainte de eligibilitate?"
         },
         {
           "@type": "Question",
-          "name": "Ce risc apare cel mai des la proiectele AFIR?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Cel mai des apar necorelari intre documentele exploatației, calculul SO/SOC, investiție și ofertele folosite în buget."
-          }
+          },
+          "name": "Ce risc apare cel mai des la proiectele AFIR?"
         },
         {
           "@type": "Question",
-          "name": "Unde folosesc calculator SO AFIR?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Pentru calcul SO AFIR, hubul ofera context, iar pagina Calculator SO/SOC ofera calculul orientativ. Rezultatul trebuie comparat cu documentele fermei si cu programul analizat."
-          }
+            "text": "Pentru calcul SO AFIR, hubul ofera context, iar pagina Calculator SO/SOC ofera calculul orientativ. Rezultatul trebuie comparat cu documentele fermei și cu programul analizat."
+          },
+          "name": "Unde folosesc calculator SO AFIR?"
         },
         {
           "@type": "Question",
-          "name": "Ce înseamnă AFIR SO sau calcul SO AFIR?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "În acest context, SO/SOC este punctul de pornire pentru încadrarea economică a exploatației. Hub-ul explică ordinea verificării, iar calculatorul dedicat ajută la estimarea inițială."
-          }
+          },
+          "name": "Ce înseamnă AFIR SO sau calcul SO AFIR?"
         },
         {
           "@type": "Question",
-          "name": "Ce fac dacă nu știu dacă merg pe DR12, DR14 sau GAL-AFIR?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Nu alege după denumire. Compară solicitantul, exploatația, SO/SOC, investiția, documentele și sursa apelului, apoi mergi la pagina internă potrivită."
-          }
+          },
+          "name": "Ce fac dacă nu știu dacă merg pe DR12, DR14 sau GAL-AFIR?"
         },
         {
           "@type": "Question",
-          "name": "Când are sens consultanță AFIR?",
           "acceptedAnswer": {
             "@type": "Answer",
             "text": "Consultanța are sens când trebuie comparate mai multe intervenții, când documentele fermei nu sunt clare sau când bugetul și cofinanțarea trebuie verificate înainte de oferte."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Cum verific daca AFIR este potrivit pentru proiectul meu?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Porneste de la solicitant, cod CAEN, localitate, investitie, buget si documentele disponibile. Daca una dintre aceste piese nu se potriveste cu apelul activ, proiectul trebuie ajustat inainte de depunere."
-          }
-        }
-      ]
-    },
-    {
-      "@type": "Article",
-      "@id": "https://atelierdeconsultanta.ro/afir#article",
-      "mainEntityOfPage": {
-        "@id": "https://atelierdeconsultanta.ro/afir#webpage"
-      },
-      "headline": "AFIR: calculator SO, programe și verificare dosar",
-      "description": "Hub AFIR pentru fermieri: calculator SO/SOC, DR12, DR14, GAL-AFIR, autoconsum, documente agricole și rutare prudentă către program.",
-      "inLanguage": "ro-RO",
-      "author": {
-        "@id": "https://atelierdeconsultanta.ro/#organization"
-      },
-      "publisher": {
-        "@id": "https://atelierdeconsultanta.ro/#organization"
-      },
-      "dateModified": "2026-05-29",
-      "citation": [
-        {
-          "@type": "CreativeWork",
-          "name": "DR 12 AFIR - Tineri fermieri",
-          "url": "https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/",
-          "publisher": {
-            "@type": "Organization",
-            "name": "AFIR"
-          }
-        },
-        {
-          "@type": "CreativeWork",
-          "name": "DR 14 AFIR - Ferme mici",
-          "url": "https://www.afir.ro/info-la-zi/versiunea-consultativa-a-ghidului-solicitantului-dr-14/",
-          "publisher": {
-            "@type": "Organization",
-            "name": "AFIR"
-          }
+          },
+          "name": "Când are sens consultanță AFIR?"
         }
       ]
     }
   ]
 }</script>
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "wnvzyco6rq");
-  </script>
   <link rel="stylesheet" href="/assets/design-profiles.css">
+
+  <script src="/assets/analytics-events.js" defer></script>
 </head>
 <body class="page-family-afir">
   <!-- GLOBAL_HEADER_START -->
 <link rel="stylesheet" href="/assets/global-header.css?v=20260713-2">
-<nav id="navbar" role="navigation" aria-label="Navigare principală" data-section-id="navbar">
+<nav id="navbar" role="navigation" aria-label="Navigare principală" data-section-id="navbar" data-factual-governance="config/seo-programs.json#programs">
   <div class="nav-container">
 
-    <a class="nav-logo" href="/" aria-label="FABER - Atelier de Consultanță, acasă"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 44" width="240" height="44" aria-hidden="true">
+    <a class="nav-logo" href="/" aria-label="FABER - Atelier de Consultanță, acasă" data-analytics-event="nav_click" data-analytics-component="desktop_nav" data-analytics-cta-id="home_logo" data-analytics-target="/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 44" width="240" height="44" aria-hidden="true">
         <text x="0" y="32" font-family="Georgia,'Times New Roman',serif" font-size="28" font-weight="700" fill="#b84716" letter-spacing="3">FABER</text>
         <path d="M118,22 L125,13 L132,22 L125,31 Z" fill="white" opacity="0.95"></path>
         <text x="138" y="18" font-family="'Inter','Helvetica Neue',sans-serif" font-size="10" font-weight="600" fill="white" letter-spacing="2">ATELIER de</text>
@@ -310,99 +241,99 @@
       </svg></a>
 
     <div class="nav-links">
-      <a href="#servicii">Servicii</a>
-      <a href="/despre-faber">Despre noi</a>
-      <a href="#finantare">Finanțări</a>
-      <a href="#blog">Blog</a>
+      <a href="/consultanta-fonduri-europene" data-analytics-event="nav_click" data-analytics-component="desktop_nav" data-analytics-cta-id="services" data-analytics-target="/consultanta-fonduri-europene">Servicii</a>
+      <a href="/despre-faber" data-analytics-event="nav_click" data-analytics-component="desktop_nav" data-analytics-cta-id="about" data-analytics-target="/despre-faber">Despre noi</a>
+      <a href="/fonduri-europene" data-analytics-event="nav_click" data-analytics-component="desktop_nav" data-analytics-cta-id="funding" data-analytics-target="/fonduri-europene">Finanțări</a>
+      <a href="/blog" data-analytics-event="nav_click" data-analytics-component="desktop_nav" data-analytics-cta-id="blog" data-analytics-target="/blog">Blog</a>
 
       <div class="nav-dropdown" data-section-id="nav-dropdown-programe">
-        <button class="nav-dropdown-btn" type="button" id="dropdownBtn" aria-haspopup="true" aria-expanded="false" aria-controls="dropdownPanel">
+        <button class="nav-dropdown-btn" type="button" id="dropdownBtn" aria-haspopup="true" aria-expanded="false" aria-controls="dropdownPanel" data-analytics-event="program_menu_click" data-analytics-component="desktop_program_menu_toggle" data-analytics-cta-id="program_menu_toggle">
           Programe <span class="arrow" aria-hidden="true"></span>
         </button>
         <div class="nav-dropdown-panel" id="dropdownPanel" aria-labelledby="dropdownBtn" role="menu" hidden="">
           <div class="dropdown-header">Programe de finanțare 2026</div>
 
-          <a href="/por-adr-nord-est" class="dropdown-item" role="menuitem" data-service-id="por-adr-ne">
+          <a href="/por-adr-nord-est" class="dropdown-item" role="menuitem" data-service-id="por-adr-ne" data-analytics-event="program_menu_click" data-analytics-component="desktop_program_menu" data-analytics-target="/por-adr-nord-est" data-analytics-program-category="regional" data-program-id="program-regional-nord-est" data-source-status="final" data-reviewed-at="2026-07-20">
             <div class="d-icon" style="background:rgba(59,130,246,0.2)"><i class="ph-duotone ph-buildings" style="color:#93c5fd"></i></div>
-            <div class="d-text">POR ADR Nord-Est<div class="d-label">Microîntreprinderi | până la 300.000 EUR</div></div>
+            <div class="d-text">POR ADR Nord-Est<div class="d-label">Apeluri regionale pentru IMM</div></div>
           </a>
 
-          <a href="/fonduri-regionale" class="dropdown-item" role="menuitem" data-service-id="fonduri-regionale">
+          <a href="/fonduri-regionale" class="dropdown-item" role="menuitem" data-service-id="fonduri-regionale" data-analytics-event="program_menu_click" data-analytics-component="desktop_program_menu" data-analytics-target="/fonduri-regionale" data-analytics-program-category="regional" data-program-id="fonduri-regionale" data-source-status="unknown" data-reviewed-at="2026-07-20">
             <div class="d-icon" style="background:rgba(59,130,246,0.2)"><i class="ph-duotone ph-map-pin" style="color:#93c5fd"></i></div>
-            <div class="d-text">Fonduri Regionale<div class="d-label">Fonduri de la agențiile regionale</div></div>
+            <div class="d-text">Fonduri regionale<div class="d-label">Programe administrate regional</div></div>
           </a>
 
-          <a href="/dr12-afir" class="dropdown-item" role="menuitem" data-service-id="dr12-afir">
+          <a href="/dr12-afir" class="dropdown-item" role="menuitem" data-service-id="dr12-afir" data-analytics-event="program_menu_click" data-analytics-component="desktop_program_menu" data-analytics-target="/dr12-afir" data-analytics-program-category="agriculture" data-program-id="dr12-afir" data-source-status="consultation" data-reviewed-at="2026-07-20">
             <div class="d-icon" style="background:rgba(34,197,94,0.2)"><i class="ph-duotone ph-plant" style="color:#86efac"></i></div>
-            <div class="d-text">DR 12 / AFIR<div class="d-label">Tineri Fermieri | până la 200.000 EUR</div></div>
+            <div class="d-text">DR 12 / AFIR<div class="d-label">Tineri fermieri | variantă consultativă</div></div>
           </a>
 
-          <a href="/afir-autoconsum-agroalimentar" class="dropdown-item" role="menuitem" data-service-id="afir-autoconsum">
+          <a href="/afir-autoconsum-agroalimentar" class="dropdown-item" role="menuitem" data-service-id="afir-autoconsum" data-analytics-event="program_menu_click" data-analytics-component="desktop_program_menu" data-analytics-target="/afir-autoconsum-agroalimentar" data-analytics-program-category="agriculture_energy" data-program-id="afir-energie-autoconsum" data-source-status="open" data-reviewed-at="2026-07-20">
             <div class="d-icon" style="background:rgba(234,179,8,0.2)"><i class="ph-duotone ph-sun" style="color:#fde68a"></i></div>
-            <div class="d-text">AFIR Autoconsum Agro<div class="d-label">100% nerambursabil</div></div>
+            <div class="d-text">AFIR Autoconsum agroalimentar<div class="d-label">Apel deschis până la 14 august 2026</div></div>
           </a>
 
-          <a href="/autoconsum-public-fotovoltaice-institutii-publice" class="dropdown-item" role="menuitem" data-service-id="autoconsum-pub">
+          <a href="/autoconsum-public-fotovoltaice-institutii-publice" class="dropdown-item" role="menuitem" data-service-id="autoconsum-pub" data-analytics-event="program_menu_click" data-analytics-component="desktop_program_menu" data-analytics-target="/autoconsum-public-fotovoltaice-institutii-publice" data-analytics-program-category="public_energy" data-program-id="autoconsum-institutii-publice" data-source-status="final" data-reviewed-at="2026-05-20">
             <div class="d-icon" style="background:rgba(139,92,246,0.2)"><i class="ph-duotone ph-bank" style="color:#c4b5fd"></i></div>
-            <div class="d-text">Autoconsum Publici<div class="d-label">Instituții publice | 100%</div></div>
+            <div class="d-text">Autoconsum instituții publice<div class="d-label">Calendarul apelului se confirmă</div></div>
           </a>
 
-          <a href="/dr14" class="dropdown-item" role="menuitem" data-service-id="dr14">
+          <a href="/dr14" class="dropdown-item" role="menuitem" data-service-id="dr14" data-analytics-event="program_menu_click" data-analytics-component="desktop_program_menu" data-analytics-target="/dr14" data-analytics-program-category="agriculture" data-program-id="dr14-afir" data-source-status="consultation" data-reviewed-at="2026-07-20">
             <div class="d-icon" style="background:rgba(34,197,94,0.2)"><i class="ph-duotone ph-tractor" style="color:#86efac"></i></div>
-            <div class="d-text">DR 14 – Ferme Mici<div class="d-label">PAC 2023-2027 | până la 50.000 EUR</div></div>
+            <div class="d-text">DR 14 – Ferme mici<div class="d-label">Ferme mici | variantă consultativă</div></div>
           </a>
 
-          <a href="/digitalizare-imm" class="dropdown-item" role="menuitem" data-service-id="digitalizare-imm">
+          <a href="/digitalizare-imm" class="dropdown-item" role="menuitem" data-service-id="digitalizare-imm" data-analytics-event="program_menu_click" data-analytics-component="desktop_program_menu" data-analytics-target="/digitalizare-imm" data-analytics-program-category="digitalization" data-program-id="digitalizare-imm" data-source-status="unknown" data-reviewed-at="2026-05-20">
             <div class="d-icon" style="background:rgba(14,165,233,0.2)"><i class="ph-duotone ph-desktop" style="color:#7dd3fc"></i></div>
-            <div class="d-text">Digitalizare IMM<div class="d-label">Transformare Digitală | 90%</div></div>
+            <div class="d-text">Digitalizare IMM<div class="d-label">Identifică apelul digital activ</div></div>
           </a>
 
-          <a href="/femeia-antreprenor-2026" class="dropdown-item" role="menuitem" data-service-id="femeia-antreprenor">
+          <a href="/femeia-antreprenor-2026" class="dropdown-item" role="menuitem" data-service-id="femeia-antreprenor" data-analytics-event="program_menu_click" data-analytics-component="desktop_program_menu" data-analytics-target="/femeia-antreprenor-2026" data-analytics-program-category="entrepreneurship" data-program-id="femeia-antreprenor" data-source-status="unknown" data-reviewed-at="2026-05-20">
             <div class="d-icon" style="background:rgba(236,72,153,0.2)"><i class="ph-duotone ph-user-circle" style="color:#f9a8d4"></i></div>
-            <div class="d-text">Femeia Antreprenor 2026<div class="d-label">Antreprenoriat Feminin</div></div>
+            <div class="d-text">Femeia Antreprenor<div class="d-label">Ediția activă trebuie confirmată</div></div>
           </a>
 
-          <a href="/gal-afir" class="dropdown-item" role="menuitem" data-service-id="gal-afir">
+          <a href="/gal-afir" class="dropdown-item" role="menuitem" data-service-id="gal-afir" data-analytics-event="program_menu_click" data-analytics-component="desktop_program_menu" data-analytics-target="/gal-afir" data-analytics-program-category="local_development" data-program-id="gal-afir-leader" data-source-status="final" data-reviewed-at="2026-05-26">
             <div class="d-icon" style="background:rgba(34,197,94,0.2)">
               <i class="ph-duotone ph-map-pin" style="color:#86efac"></i>
             </div>
-            <div class="d-text">GAL-AFIR<div class="d-label">LEADER | public și privat</div></div>
+            <div class="d-text">GAL-AFIR<div class="d-label">LEADER | verifică ghidul local</div></div>
           </a>
 
-          <a href="/e-move" class="dropdown-item" role="menuitem" data-service-id="e-move">
+          <a href="/e-move" class="dropdown-item" role="menuitem" data-service-id="e-move" data-analytics-event="program_menu_click" data-analytics-component="desktop_program_menu" data-analytics-target="/e-move" data-analytics-program-category="electric_mobility" data-program-id="e-move-ro" data-source-status="consultation" data-reviewed-at="2026-05-27">
             <div class="d-icon" style="background:rgba(14,165,233,0.2)">
               <i class="ph-duotone ph-battery-charging" style="color:#7dd3fc"></i>
             </div>
-            <div class="d-text">e-MOVE RO<div class="d-label">Statii încărcare | mobilitate electrică</div></div>
+            <div class="d-text">e-MOVE RO<div class="d-label">Stații de încărcare | consultativ</div></div>
           </a>
 
-          <a href="/pocidif-21" class="dropdown-item" role="menuitem" data-service-id="pocidif-21">
+          <a href="/pocidif-21" class="dropdown-item" role="menuitem" data-service-id="pocidif-21" data-analytics-event="program_menu_click" data-analytics-component="desktop_program_menu" data-analytics-target="/pocidif-21" data-analytics-program-category="digital_innovation" data-program-id="pocidif-21" data-source-status="final" data-reviewed-at="2026-07-13">
             <div class="d-icon" style="background:rgba(99,102,241,0.2)">
               <i class="ph-duotone ph-circuitry" style="color:#c4b5fd"></i>
             </div>
-            <div class="d-text">PoCIDIF 2.1<div class="d-label">Inovare digitala | IMM TIC</div></div>
+            <div class="d-text">PoCIDIF 2.1<div class="d-label">Inovare digitală | ghid aprobat</div></div>
           </a>
 
-          <a href="/pro-infra" class="dropdown-item" role="menuitem" data-service-id="pro-infra">
+          <a href="/pro-infra" class="dropdown-item" role="menuitem" data-service-id="pro-infra" data-analytics-event="program_menu_click" data-analytics-component="desktop_program_menu" data-analytics-target="/pro-infra" data-analytics-program-category="infrastructure_production" data-program-id="pro-infra" data-source-status="final" data-reviewed-at="2026-07-13">
             <div class="d-icon" style="background:rgba(251,146,60,0.2)"><i class="ph-duotone ph-factory" style="color:#fdba74"></i></div>
-            <div class="d-text">PRO INFRA<div class="d-label">Productie infrastructura | până la 15M EUR</div></div>
+            <div class="d-text">PRO INFRA<div class="d-label">Schemă aprobată | verifică apelul</div></div>
           </a>
 
-          <a href="/start-up-nation-2026" class="dropdown-item" role="menuitem" data-service-id="startup-nation">
+          <a href="/start-up-nation-2026" class="dropdown-item" role="menuitem" data-service-id="startup-nation" data-analytics-event="program_menu_click" data-analytics-component="desktop_program_menu" data-analytics-target="/start-up-nation-2026" data-analytics-program-category="entrepreneurship" data-program-id="start-up-nation" data-source-status="unknown" data-reviewed-at="2026-05-20">
             <div class="d-icon" style="background:rgba(139,92,246,0.2)"><i class="ph-duotone ph-rocket-launch" style="color:#a78bfa"></i></div>
-            <div class="d-text">Start-Up Nation<div class="d-label">Antreprenoriat | verificare ghid activ</div></div>
+            <div class="d-text">Start-Up Nation<div class="d-label">Ediția activă trebuie confirmată</div></div>
           </a>
         </div>
       </div>
 
-      <a href="/calculator-soc" class="nav-utility btn-secondary">🧮 Calculator SOC</a>
+      <a href="/calculator-soc" class="nav-utility btn-secondary" data-analytics-event="nav_click" data-analytics-component="desktop_nav" data-analytics-cta-id="calculator_soc" data-analytics-target="/calculator-soc">🧮 Calculator SOC</a>
 
-      <a href="#contact" class="nav-utility btn-secondary">Contact</a>
+      <a href="/contact" class="nav-utility btn-secondary" data-analytics-event="nav_click" data-analytics-component="desktop_nav" data-analytics-cta-id="contact" data-analytics-target="/contact">Contact</a>
 
-        <a href="#eligibility-whatsapp-dialog" class="nav-cta btn-primary" data-whatsapp-dialog-open aria-haspopup="dialog" aria-controls="eligibility-whatsapp-dialog">Solicită verificare eligibilitate</a>
+        <a href="#eligibility-whatsapp-dialog" class="nav-cta btn-primary" data-whatsapp-dialog-open="" data-analytics-event="eligibility_cta_click" data-analytics-component="desktop_nav" data-analytics-cta-id="eligibility_whatsapp" aria-haspopup="dialog" aria-controls="eligibility-whatsapp-dialog">Solicită verificare eligibilitate</a>
     </div>
 
-    <button class="hamburger" id="hamburgerBtn" type="button" aria-label="Deschide meniu" aria-expanded="false" aria-controls="mobileMenu">
+    <button class="hamburger" id="hamburgerBtn" type="button" aria-label="Deschide meniu" aria-expanded="false" aria-controls="mobileMenu" data-analytics-event="nav_click" data-analytics-component="mobile_menu_toggle" data-analytics-cta-id="mobile_menu_toggle">
       <span></span><span></span><span></span>
     </button>
   </div>
@@ -411,40 +342,41 @@
 <!-- ✦ Meniu mobil full-screen ✦ -->
 <div id="mobileMenu" aria-label="Meniu mobil">
   <nav class="mobile-links">
-    <a href="#servicii" onclick="closeMobileMenu()">Servicii</a>
-    <a href="/despre-faber" onclick="closeMobileMenu()">Despre noi</a>
-    <a href="#finantare" onclick="closeMobileMenu()">Finanțări</a>
-    <a href="#blog" onclick="closeMobileMenu()">Blog</a>
+    <a href="/consultanta-fonduri-europene" onclick="closeMobileMenu()" data-analytics-event="nav_click" data-analytics-component="mobile_nav" data-analytics-cta-id="services" data-analytics-target="/consultanta-fonduri-europene">Servicii</a>
+    <a href="/despre-faber" onclick="closeMobileMenu()" data-analytics-event="nav_click" data-analytics-component="mobile_nav" data-analytics-cta-id="about" data-analytics-target="/despre-faber">Despre noi</a>
+    <a href="/fonduri-europene" onclick="closeMobileMenu()" data-analytics-event="nav_click" data-analytics-component="mobile_nav" data-analytics-cta-id="funding" data-analytics-target="/fonduri-europene">Finanțări</a>
+    <a href="/blog" onclick="closeMobileMenu()" data-analytics-event="nav_click" data-analytics-component="mobile_nav" data-analytics-cta-id="blog" data-analytics-target="/blog">Blog</a>
     <div class="mobile-section-title">Programe de finanțare</div>
-    <a href="/por-adr-nord-est">POR ADR Nord-Est</a>
-    <a href="/dr12-afir">DR 12 / AFIR</a>
-    <a href="/afir-autoconsum-agroalimentar">AFIR Autoconsum Agroalimentar</a>
-    <a href="/autoconsum-public-fotovoltaice-institutii-publice">Autoconsum Publici</a>
-    <a href="/dr14">DR 14 – Ferme Mici</a>
-    <a href="/digitalizare-imm">Digitalizare IMM</a>
-    <a href="/gal-afir">GAL-AFIR / LEADER</a>
-    <a href="/e-move">e-MOVE RO</a>
-    <a href="/pocidif-21">PoCIDIF 2.1</a>
-    <a href="/femeia-antreprenor-2026">Femeia Antreprenor 2026</a>
-    <a href="/pro-infra">PRO INFRA</a>
-    <a href="/start-up-nation-2026">Start-Up Nation</a>
-    <a href="/calculator-soc">🧮 Calculator SOC AFIR</a>
-    <a href="#contact" onclick="closeMobileMenu()">Contact</a>
-    <a href="#eligibility-whatsapp-dialog" class="mobile-cta btn-primary" data-whatsapp-dialog-open aria-haspopup="dialog" aria-controls="eligibility-whatsapp-dialog">Solicită verificare eligibilitate</a>
+    <a href="/por-adr-nord-est" data-analytics-event="program_menu_click" data-analytics-component="mobile_program_menu" data-analytics-target="/por-adr-nord-est" data-analytics-program-category="regional" data-program-id="program-regional-nord-est" data-source-status="final" data-reviewed-at="2026-07-20">POR ADR Nord-Est</a>
+    <a href="/fonduri-regionale" data-analytics-event="program_menu_click" data-analytics-component="mobile_program_menu" data-analytics-target="/fonduri-regionale" data-analytics-program-category="regional" data-program-id="fonduri-regionale" data-source-status="unknown" data-reviewed-at="2026-07-20">Fonduri regionale</a>
+    <a href="/dr12-afir" data-analytics-event="program_menu_click" data-analytics-component="mobile_program_menu" data-analytics-target="/dr12-afir" data-analytics-program-category="agriculture" data-program-id="dr12-afir" data-source-status="consultation" data-reviewed-at="2026-07-20">DR 12 / AFIR</a>
+    <a href="/afir-autoconsum-agroalimentar" data-analytics-event="program_menu_click" data-analytics-component="mobile_program_menu" data-analytics-target="/afir-autoconsum-agroalimentar" data-analytics-program-category="agriculture_energy" data-program-id="afir-energie-autoconsum" data-source-status="open" data-reviewed-at="2026-07-20">AFIR Autoconsum agroalimentar</a>
+    <a href="/autoconsum-public-fotovoltaice-institutii-publice" data-analytics-event="program_menu_click" data-analytics-component="mobile_program_menu" data-analytics-target="/autoconsum-public-fotovoltaice-institutii-publice" data-analytics-program-category="public_energy" data-program-id="autoconsum-institutii-publice" data-source-status="final" data-reviewed-at="2026-05-20">Autoconsum instituții publice</a>
+    <a href="/dr14" data-analytics-event="program_menu_click" data-analytics-component="mobile_program_menu" data-analytics-target="/dr14" data-analytics-program-category="agriculture" data-program-id="dr14-afir" data-source-status="consultation" data-reviewed-at="2026-07-20">DR 14 – Ferme mici</a>
+    <a href="/digitalizare-imm" data-analytics-event="program_menu_click" data-analytics-component="mobile_program_menu" data-analytics-target="/digitalizare-imm" data-analytics-program-category="digitalization" data-program-id="digitalizare-imm" data-source-status="unknown" data-reviewed-at="2026-05-20">Digitalizare IMM</a>
+    <a href="/femeia-antreprenor-2026" data-analytics-event="program_menu_click" data-analytics-component="mobile_program_menu" data-analytics-target="/femeia-antreprenor-2026" data-analytics-program-category="entrepreneurship" data-program-id="femeia-antreprenor" data-source-status="unknown" data-reviewed-at="2026-05-20">Femeia Antreprenor</a>
+    <a href="/gal-afir" data-analytics-event="program_menu_click" data-analytics-component="mobile_program_menu" data-analytics-target="/gal-afir" data-analytics-program-category="local_development" data-program-id="gal-afir-leader" data-source-status="final" data-reviewed-at="2026-05-26">GAL-AFIR</a>
+    <a href="/e-move" data-analytics-event="program_menu_click" data-analytics-component="mobile_program_menu" data-analytics-target="/e-move" data-analytics-program-category="electric_mobility" data-program-id="e-move-ro" data-source-status="consultation" data-reviewed-at="2026-05-27">e-MOVE RO</a>
+    <a href="/pocidif-21" data-analytics-event="program_menu_click" data-analytics-component="mobile_program_menu" data-analytics-target="/pocidif-21" data-analytics-program-category="digital_innovation" data-program-id="pocidif-21" data-source-status="final" data-reviewed-at="2026-07-13">PoCIDIF 2.1</a>
+    <a href="/pro-infra" data-analytics-event="program_menu_click" data-analytics-component="mobile_program_menu" data-analytics-target="/pro-infra" data-analytics-program-category="infrastructure_production" data-program-id="pro-infra" data-source-status="final" data-reviewed-at="2026-07-13">PRO INFRA</a>
+    <a href="/start-up-nation-2026" data-analytics-event="program_menu_click" data-analytics-component="mobile_program_menu" data-analytics-target="/start-up-nation-2026" data-analytics-program-category="entrepreneurship" data-program-id="start-up-nation" data-source-status="unknown" data-reviewed-at="2026-05-20">Start-Up Nation</a>
+    <a href="/calculator-soc" data-analytics-event="nav_click" data-analytics-component="mobile_nav" data-analytics-cta-id="calculator_soc" data-analytics-target="/calculator-soc">🧮 Calculator SOC</a>
+    <a href="/contact" onclick="closeMobileMenu()" data-analytics-event="nav_click" data-analytics-component="mobile_nav" data-analytics-cta-id="contact" data-analytics-target="/contact">Contact</a>
+    <a href="#eligibility-whatsapp-dialog" class="mobile-cta btn-primary" data-whatsapp-dialog-open="" data-analytics-event="eligibility_cta_click" data-analytics-component="mobile_nav" data-analytics-cta-id="eligibility_whatsapp" aria-haspopup="dialog" aria-controls="eligibility-whatsapp-dialog">Solicită verificare eligibilitate</a>
   </nav>
 </div>
-<div id="eligibility-whatsapp-dialog" class="eligibility-whatsapp-dialog" role="dialog" aria-modal="true" aria-labelledby="eligibility-whatsapp-title" hidden>
+<div id="eligibility-whatsapp-dialog" class="eligibility-whatsapp-dialog" role="dialog" aria-modal="true" aria-labelledby="eligibility-whatsapp-title" hidden="">
   <div class="eligibility-whatsapp-card" role="document">
-    <button type="button" class="eligibility-whatsapp-close" data-whatsapp-dialog-close aria-label="Închide fereastra">×</button>
+    <button type="button" class="eligibility-whatsapp-close" data-whatsapp-dialog-close="" aria-label="Închide fereastra">×</button>
     <span class="eligibility-whatsapp-eyebrow">Contact rapid</span>
     <h2 id="eligibility-whatsapp-title">Trimite mesaj prin WhatsApp</h2>
     <p>Alege numărul la care dorești să trimiți mesajul.</p>
     <div class="eligibility-whatsapp-options">
-      <a href="https://wa.me/40769828338" target="_blank" rel="noopener noreferrer">
+      <a href="https://wa.me/40769828338" target="_blank" rel="noopener noreferrer" data-analytics-event="whatsapp_number_click" data-analytics-component="whatsapp_dialog" data-analytics-cta-id="whatsapp_option_a">
         <span>WhatsApp</span>
         <strong>0769 828 338</strong>
       </a>
-      <a href="https://wa.me/40753326229" target="_blank" rel="noopener noreferrer">
+      <a href="https://wa.me/40753326229" target="_blank" rel="noopener noreferrer" data-analytics-event="whatsapp_number_click" data-analytics-component="whatsapp_dialog" data-analytics-cta-id="whatsapp_option_b">
         <span>WhatsApp</span>
         <strong>0753 326 229</strong>
       </a>
@@ -493,10 +425,10 @@
     </tbody>
   </table>
   </div>
-      <h2>Răspuns rapid</h2>
-      <p>Multe cautari despre AFIR pornesc de la o intrebare prea larga: ce bani pot lua pentru ferma. O analiza utila incepe mai precis. Intai se verifică solicitantul, apoi exploatația, dimensiunea economică, dreptul de folosință asupra terenurilor sau animalelor, investiția propusa, capacitatea de cofinanțare și documentele care pot susține fiecare afirmatie.</p>
+      <h2>Ce problema rezolva hub-ul AFIR</h2>
+      <p>Multe cautari despre AFIR pornesc de la o intrebare prea larga: ce bani pot lua pentru ferma. O analiza utilă incepe mai precis. Intai se verifică solicitantul, apoi exploatația, dimensiunea economică, dreptul de folosință asupra terenurilor sau animalelor, investiția propusa, capacitatea de cofinanțare și documentele care pot susține fiecare afirmatie.</p>
       <p>Hub-ul grupeaza paginile agricole principale și explica ordinea verificarii. Nu inlocuieste ghidul solicitantului, nu stabileste praguri finale și nu promite aprobare. Rolul sau este să reduca riscul de a pregati un dosar pe programul greșit sau cu documente care se contrazic.</p>
-<h2>Ce trebuie verificat</h2>
+<h2>Ce verifici concret pentru AFIR</h2>
       <p>AFIR se verifică prin elemente concrete: cine aplica, ce documente există, ce investiție se propune și ce riscuri pot aparea la evaluare sau implementare.</p>
       <table class="program-table">
         <tbody>
@@ -514,9 +446,9 @@
           <thead><tr><th>Resursa</th><th>Când o folosești</th><th>Ce verifici înainte de buget</th><th>Pagina</th></tr></thead>
           <tbody>
             <tr><td>Consultanță AFIR</td><td>beneficiari care au nevoie de verificarea traseului, documentelor și bugetului</td><td>solicitant, exploatație, SO/SOC, investiție, cofinanțare și riscuri</td><td><a href="/consultanta-afir">Consultanță AFIR</a></td></tr>
-<tr><td>Calculator SO/SOC</td><td>solicitanti care caută calcul SO AFIR, calculator SO AFIR sau incadrare economică</td><td>date actuale despre culturi, animale și exploatație</td><td><a href="/calculator-soc">Calculator SO AFIR</a></td></tr>
+<tr><td>Calculator SO/SOC</td><td>solicitanti care caută calcul SO AFIR, calculator SO AFIR sau încadrare economică</td><td>date actuale despre culturi, animale și exploatație</td><td><a href="/calculator-soc">Calculator SO AFIR</a></td></tr>
 <tr><td>DR 12 AFIR</td><td>tineri fermieri și exploatații care trebuie să dovedeasca rolul solicitantului</td><td>profil solicitant, exploatație, calcul SO/SOC, documente de folosință</td><td><a href="/dr12-afir">DR 12 AFIR</a></td></tr>
-<tr><td>DR 14 AFIR</td><td>ferme mici care urmaresc modernizare proportionala cu activitatea reală</td><td>incadrare ferma mica, documente exploatație, buget și grila activa</td><td><a href="/dr14">DR 14 AFIR</a></td></tr>
+<tr><td>DR 14 AFIR</td><td>ferme mici care urmaresc modernizare proportionala cu activitatea reală</td><td>încadrare ferma mica, documente exploatație, buget și grila activa</td><td><a href="/dr14">DR 14 AFIR</a></td></tr>
 <tr><td>Autoconsum agroalimentar</td><td>beneficiari care verifică investiții în energie pentru activitatea agroalimentara</td><td>consum, amplasament, avize, capacitate și costuri neeligibile</td><td><a href="/afir-autoconsum-agroalimentar">AFIR autoconsum agroalimentar</a></td></tr>
 <tr><td>Fonduri pentru utilaje agricole</td><td>ferme care vor echipamente legate direct de producție</td><td>necesitate, dimensiune, oferte și corelare cu activitatea</td><td><a href="/fonduri-pentru-utilaje-agricole">Fonduri pentru utilaje agricole</a></td></tr>
 <tr><td>GAL-AFIR / LEADER</td><td>beneficiari care verifică apeluri locale prin GAL și proceduri AFIR</td><td>localitate în teritoriul GAL, ghid local, criterii și documente</td><td><a href="/gal-afir">GAL-AFIR / LEADER</a></td></tr>
@@ -538,7 +470,7 @@
         <table class="program-table">
           <thead><tr><th>Document / informatie</th><th>De ce conteaza</th><th>Risc dacă lipsește</th></tr></thead>
           <tbody>
-            <tr><td>Date despre exploatație</td><td>Arata ce culturi, animale sau activitati există în prezent.</td><td>Dimensiune economică neclară sau incadrare greșită.</td></tr>
+            <tr><td>Date despre exploatație</td><td>Arata ce culturi, animale sau activitati există în prezent.</td><td>Dimensiune economică neclară sau încadrare greșită.</td></tr>
             <tr><td>Documente de folosință</td><td>Dovedesc terenul, spațiul, adaposturile sau punctul de lucru.</td><td>Blocaj la eligibilitate, contractare sau implementare.</td></tr>
             <tr><td>Calcul SO/SOC</td><td>Leaga ferma reală de interventia potrivită.</td><td>Alegerea unui program nepotrivit sau punctaj supraestimat.</td></tr>
             <tr><td>Oferte și specificatii</td><td>Explica achizitiile și legătura lor cu activitatea agricolă.</td><td>Buget slab justificat sau cheltuieli taiate la evaluare.</td></tr>
@@ -547,7 +479,7 @@
         </table>
       </div>
       <h2>Buget, cofinanțare și valori nepresupuse</h2>
-      <p>Bugetul AFIR trebuie construit după verificarea eligibilitatii, nu înainte. Un utilaj sau o lucrare poate fi utila comercial, dar trebuie să fie permisa de ghid, proportionala cu ferma și justificata prin obiectivele proiectului. Diferenta dintre cheltuieli eligibile și costuri suportate separat trebuie explicata de la inceput.</p>
+      <p>Bugetul AFIR trebuie construit după verificarea eligibilității, nu înainte. Un utilaj sau o lucrare poate fi utilă comercial, dar trebuie să fie permisa de ghid, proportionala cu ferma și justificata prin obiectivele proiectului. Diferenta dintre cheltuieli eligibile și costuri suportate separat trebuie explicata de la inceput.</p>
       <p>Pe hub-ul AFIR nu folosim procente, plafoane sau calendare ca și cum ar fi reguli finale. Fiecare valoare se confirma în pagina programului și în ghidul aplicabil. Rolul hub-ului este să arate ce trebuie verificat înainte de oferte, contracte sau decizia de depunere.</p>
       <h2>Buget AFIR fără valori presupuse</h2>
       <div class="table-wrap">
@@ -594,7 +526,7 @@
         <li>promisiuni comerciale facute înainte de confirmarea documentelor.</li>
       </ul>
       <h2>Scenarii orientative de folosire a hub-ului</h2>
-      <p>Un tânăr fermier care preia treptat o exploatație ar trebui să porneasca de la rolul sau real, documentele care dovedesc exploatația și planul de dezvoltare. Abia după aceea compara investițiile și bugetul. Un fermier cu exploatație mica, dar stabila, poate avea o discutie mai utila pornind de la DR14, cu accent pe proportia dintre activitate, investiție și capacitatea de implementare.</p>
+      <p>Un tânăr fermier care preia treptat o exploatație ar trebui să porneasca de la rolul sau real, documentele care dovedesc exploatația și planul de dezvoltare. Abia după aceea compara investițiile și bugetul. Un fermier cu exploatație mica, dar stabila, poate avea o discutie mai utilă pornind de la DR14, cu accent pe proportia dintre activitate, investiție și capacitatea de implementare.</p>
       <p>O ferma care vrea energie pentru autoconsum are nevoie de alta ordine de verificare: consum, amplasament, avize, dimensionare și legătura cu activitatea agroalimentara. O ferma care vrea utilaje trebuie să arate de ce utilajul este necesar, nu doar ca este eligibil în principiu. Aceste scenarii sunt diferite, iar hub-ul există tocmai pentru a le separa.</p>
       <h2>Când are sens consultanță AFIR</h2>
       <p><a href="/consultanta-afir">Consultanță AFIR</a> are sens când proiectul nu poate fi decis dintr-o lista simpla de condiții. Dacă solicitantul are mai multe suprafețe, exploatația este impartita intre membri ai familiei, investiția include utilaje și lucrari, cofinanțarea trebuie confirmata sau ghidul este inca în consultare, este mai sigur să faci o verificare structurata înainte de a comanda documente scumpe.</p>
@@ -629,29 +561,27 @@
         <a href="/gal-afir">GAL-AFIR / LEADER</a>
         <a href="/fonduri-pentru-ferme">Fonduri pentru ferme</a>
         <a href="/surse-oficiale-fonduri-europene">Surse oficiale</a>
-        <a href="/consultanta-fonduri-europene">Consultanță fonduri europene</a>
-        <a href="/proiectare-fonduri-europene">Proiectare fonduri europene</a>
       </div>
 <section class="official-sources" aria-labelledby="afir-official-sources">
         <h2 id="afir-official-sources">Surse oficiale consultate</h2>
         <ul class="official-sources__list">
         <li class="official-sources__item" data-source-key="dr12">
-          <a class="official-sources__title" href="https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/" target="_blank" rel="noopener noreferrer">DR 12 AFIR - Tineri fermieri</a>
+          <a class="official-sources__title" href="https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/" target="_blank" rel="noopener noreferrer" data-analytics-event="source_document_click" data-analytics-component="official_source" data-analytics-cta-id="source_document" data-analytics-target="https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/">DR 12 AFIR - Tineri fermieri</a>
           <dl class="official-sources__meta">
             <div><dt>Institutie</dt><dd>AFIR</dd></div>
             <div><dt>Tip document</dt><dd>comunicat</dd></div>
-            <div><dt>Verificat</dt><dd><time datetime="2026-05-20">20 mai 2026</time></dd></div>
-            <div class="official-sources__url"><dt>URL</dt><dd><a href="https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/" target="_blank" rel="noopener noreferrer">https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/</a></dd></div>
+            <div><dt>Verificat</dt><dd><time datetime="2026-07-13">13 iulie 2026</time></dd></div>
+            <div class="official-sources__url"><dt>URL</dt><dd><a href="https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/" target="_blank" rel="noopener noreferrer" data-analytics-event="source_document_click" data-analytics-component="official_source" data-analytics-cta-id="source_document" data-analytics-target="https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/">https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/</a></dd></div>
           </dl>
 
         </li>
         <li class="official-sources__item" data-source-key="dr14">
-          <a class="official-sources__title" href="https://www.afir.ro/info-la-zi/versiunea-consultativa-a-ghidului-solicitantului-dr-14/" target="_blank" rel="noopener noreferrer">DR 14 AFIR - Ferme mici</a>
+          <a class="official-sources__title" href="https://www.afir.ro/comunicare/utile/dezbatere-publica/" target="_blank" rel="noopener noreferrer" data-analytics-event="source_document_click" data-analytics-component="official_source" data-analytics-cta-id="source_document" data-analytics-target="https://www.afir.ro/comunicare/utile/dezbatere-publica/">DR 14 AFIR - Ferme mici</a>
           <dl class="official-sources__meta">
             <div><dt>Institutie</dt><dd>AFIR</dd></div>
             <div><dt>Tip document</dt><dd>ghid</dd></div>
-            <div><dt>Verificat</dt><dd><time datetime="2026-05-20">20 mai 2026</time></dd></div>
-            <div class="official-sources__url"><dt>URL</dt><dd><a href="https://www.afir.ro/info-la-zi/versiunea-consultativa-a-ghidului-solicitantului-dr-14/" target="_blank" rel="noopener noreferrer">https://www.afir.ro/info-la-zi/versiunea-consultativa-a-ghidului-solicitantului-dr-14/</a></dd></div>
+            <div><dt>Verificat</dt><dd><time datetime="2026-07-13">13 iulie 2026</time></dd></div>
+            <div class="official-sources__url"><dt>URL</dt><dd><a href="https://www.afir.ro/comunicare/utile/dezbatere-publica/" target="_blank" rel="noopener noreferrer" data-analytics-event="source_document_click" data-analytics-component="official_source" data-analytics-cta-id="source_document" data-analytics-target="https://www.afir.ro/comunicare/utile/dezbatere-publica/">https://www.afir.ro/comunicare/utile/dezbatere-publica/</a></dd></div>
           </dl>
 
         </li>
@@ -670,7 +600,7 @@
 <section class="faq-item"><h3>Ce înseamnă AFIR SO sau calcul SO AFIR?</h3><p>În acest context, SO/SOC este punctul de pornire pentru încadrarea economică a exploatației. Hub-ul explică ordinea verificării, iar calculatorul dedicat ajută la estimarea inițială.</p></section>
 <section class="faq-item"><h3>Ce fac dacă nu știu dacă merg pe DR12, DR14 sau GAL-AFIR?</h3><p>Nu alege după denumire. Compară solicitantul, exploatația, SO/SOC, investiția, documentele și sursa apelului, apoi mergi la pagina internă potrivită.</p></section>
 <section class="faq-item"><h3>Când are sens consultanță AFIR?</h3><p>Consultanța are sens când trebuie comparate mai multe intervenții, când documentele fermei nu sunt clare sau când bugetul și cofinanțarea trebuie verificate înainte de oferte.</p></section>
-<section class="faq-item"><h3>Cum verific dacă AFIR este potrivit pentru proiectul meu?</h3><p>Porneste de la solicitant, cod CAEN, localitate, investiție, buget și documentele disponibile. Dacă una dintre aceste piese nu se potriveste cu apelul activ, proiectul trebuie ajustat înainte de depunere.</p></section>
+
       <div class="related-links"><a href="/consultanta-afir">Consultanță AFIR</a>
 <a href="/dr12-afir">DR 12 AFIR</a>
 <a href="/dr14">DR 14 AFIR</a>
@@ -685,12 +615,12 @@
       <h2>Urmatorul pas</h2>
       <p>Trimite tipul exploatației, SO/SOC, documentele agricole și investiția ca să alegem traseul AFIR potrivit sau să direcționăm cazul către consultanță AFIR.</p>
       <div class="cta-actions">
-        <a class="btn btn-primary" href="/contact">Trimite datele proiectului</a>
+        <a class="btn btn-primary" href="/contact" data-analytics-event="contact_page_click" data-analytics-component="contact_cta" data-analytics-cta-id="contact_page" data-analytics-target="/contact">Trimite datele proiectului</a>
         <a class="btn btn-secondary" href="/consultanta-afir">Vezi consultanță AFIR</a>
       </div>
     </section>
   </main>
-  <footer class="footer">© 2026 FABER - Atelier de Consultanță · <a href="/fonduri-europene">Fonduri europene</a> · <a href="/contact">Contact</a></footer>
+  <footer class="footer">© 2026 FABER - Atelier de Consultanță · <a href="/fonduri-europene">Fonduri europene</a> · <a href="/contact" data-analytics-event="contact_page_click" data-analytics-component="contact_cta" data-analytics-cta-id="contact_page" data-analytics-target="/contact">Contact</a></footer>
 
 
 </body></html>

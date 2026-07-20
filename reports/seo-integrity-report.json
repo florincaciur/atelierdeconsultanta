@@ -1,49 +1,49 @@
 {
-  "generatedAt": "2026-07-09T21:18:09.612Z",
+  "generatedAt": "2026-07-20T09:28:40.517Z",
   "root": "C:\\Users\\flori\\Documents\\GitHub\\atelierdeconsultanta",
   "summary": {
-    "totalFiles": 172,
-    "passedFiles": 172,
+    "totalFiles": 179,
+    "passedFiles": 179,
     "failedFiles": 0,
     "checks": {
       "metaDescription": {
-        "pass": 172,
+        "pass": 179,
         "fail": 0
       },
       "canonical": {
-        "pass": 172,
+        "pass": 179,
         "fail": 0
       },
       "imageAltAttributes": {
-        "pass": 172,
+        "pass": 179,
         "fail": 0
       },
       "singleH1": {
-        "pass": 172,
+        "pass": 179,
         "fail": 0
       },
       "relatedLinks": {
-        "pass": 172,
+        "pass": 179,
         "fail": 0
       },
       "utf8Charset": {
-        "pass": 169,
+        "pass": 176,
         "fail": 0
       },
       "cleanCanonical": {
-        "pass": 169,
+        "pass": 176,
         "fail": 0
       },
       "visibleFaqForSchema": {
-        "pass": 169,
+        "pass": 176,
         "fail": 0
       },
       "speakableSchemaCoverage": {
-        "pass": 169,
+        "pass": 176,
         "fail": 0
       },
       "contentDepth": {
-        "pass": 169,
+        "pass": 176,
         "fail": 0
       }
     }
@@ -122,7 +122,7 @@
         "visibleFaqForSchema": {
           "status": "pass",
           "required": true,
-          "count": 5,
+          "count": 4,
           "threshold": 4
         },
         "speakableSchemaCoverage": {
@@ -133,7 +133,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1272,
+          "words": 1380,
           "threshold": 900
         },
         "relatedLinks": {
@@ -181,7 +181,7 @@
         "visibleFaqForSchema": {
           "status": "pass",
           "required": true,
-          "count": 5,
+          "count": 4,
           "threshold": 4
         },
         "speakableSchemaCoverage": {
@@ -192,7 +192,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1271,
+          "words": 1380,
           "threshold": 900
         },
         "relatedLinks": {
@@ -265,14 +265,14 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "AFIR Autoconsum Agroalimentar – energie regenerabilă pentru ferme și procesatori"
+            "AFIR Autoconsum Agroalimentar 2026 – energie solară pentru ferme și procesatori"
           ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
           "required": true,
-          "count": 6,
-          "threshold": 6
+          "count": 8,
+          "threshold": 8
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -282,13 +282,13 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1170,
-          "threshold": 900
+          "words": 3399,
+          "threshold": 2200
         },
         "relatedLinks": {
           "status": "pass",
           "required": true,
-          "count": 1
+          "count": 2
         }
       }
     },
@@ -324,14 +324,14 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "AFIR Autoconsum Agroalimentar – energie regenerabilă pentru ferme și procesatori"
+            "AFIR Autoconsum Agroalimentar 2026 – energie solară pentru ferme și procesatori"
           ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
           "required": true,
-          "count": 6,
-          "threshold": 6
+          "count": 8,
+          "threshold": 8
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -341,13 +341,13 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1170,
-          "threshold": 900
+          "words": 3403,
+          "threshold": 2200
         },
         "relatedLinks": {
           "status": "pass",
           "required": true,
-          "count": 1
+          "count": 2
         }
       }
     },
@@ -445,7 +445,7 @@
         "visibleFaqForSchema": {
           "status": "pass",
           "required": true,
-          "count": 13,
+          "count": 12,
           "threshold": 12
         },
         "speakableSchemaCoverage": {
@@ -456,7 +456,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2580,
+          "words": 2692,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -498,7 +498,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Apeluri GAL: ce sunt și cum se verifică"
+            "Apeluri GALFinanțări locale"
           ]
         },
         "visibleFaqForSchema": {
@@ -515,7 +515,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1830,
+          "words": 1961,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -558,7 +558,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Autoconsum public fotovoltaice pentru instituții publice"
+            "Autoconsum PubliciEnergie Regenerabilă"
           ]
         },
         "visibleFaqForSchema": {
@@ -575,7 +575,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1528,
+          "words": 1677,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -618,7 +618,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Autoconsum public fotovoltaice pentru instituții publice"
+            "Autoconsum PubliciEnergie Regenerabilă"
           ]
         },
         "visibleFaqForSchema": {
@@ -635,7 +635,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1529,
+          "words": 1671,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -751,7 +751,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 1071,
+          "words": 1228,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -866,7 +866,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 1712,
+          "words": 1909,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -981,13 +981,13 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2663,
+          "words": 2840,
           "threshold": 2000
         },
         "relatedLinks": {
           "status": "pass",
           "required": false,
-          "count": 3,
+          "count": 2,
           "note": "not a hub/blog page"
         }
       }
@@ -1097,7 +1097,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1528,
+          "words": 1677,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -1155,7 +1155,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 722,
+          "words": 876,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -1213,7 +1213,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 672,
+          "words": 826,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -1328,7 +1328,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1572,
+          "words": 1721,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -1386,7 +1386,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 747,
+          "words": 901,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -1444,13 +1444,133 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 624,
+          "words": 778,
           "threshold": 2000
         },
         "relatedLinks": {
           "status": "pass",
           "required": true,
           "count": 1
+        }
+      }
+    },
+    {
+      "file": "cheltuieli-eligibile-pocidif-21.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "utf8Charset": {
+          "status": "pass",
+          "hasCharset": true,
+          "hasHttpEquiv": false
+        },
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "cleanCanonical": {
+          "status": "pass",
+          "href": "https://atelierdeconsultanta.ro/cheltuieli-eligibile-pocidif-21"
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Cheltuieli eligibile PoCIDIF 2.1 – hardware, software și servicii CDI"
+          ]
+        },
+        "visibleFaqForSchema": {
+          "status": "pass",
+          "required": true,
+          "count": 6,
+          "threshold": 6
+        },
+        "speakableSchemaCoverage": {
+          "status": "pass",
+          "required": false,
+          "count": 0
+        },
+        "contentDepth": {
+          "status": "pass",
+          "required": true,
+          "words": 1998,
+          "threshold": 1400
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": false,
+          "count": 1,
+          "note": "not a hub/blog page"
+        }
+      }
+    },
+    {
+      "file": "cheltuieli-eligibile-pocidif-21/index.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "utf8Charset": {
+          "status": "pass",
+          "hasCharset": true,
+          "hasHttpEquiv": false
+        },
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "cleanCanonical": {
+          "status": "pass",
+          "href": "https://atelierdeconsultanta.ro/cheltuieli-eligibile-pocidif-21"
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Cheltuieli eligibile PoCIDIF 2.1 – hardware, software și servicii CDI"
+          ]
+        },
+        "visibleFaqForSchema": {
+          "status": "pass",
+          "required": true,
+          "count": 6,
+          "threshold": 6
+        },
+        "speakableSchemaCoverage": {
+          "status": "pass",
+          "required": false,
+          "count": 0
+        },
+        "contentDepth": {
+          "status": "pass",
+          "required": true,
+          "words": 1998,
+          "threshold": 1400
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": false,
+          "count": 1,
+          "note": "not a hub/blog page"
         }
       }
     },
@@ -1559,13 +1679,13 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1834,
+          "words": 1948,
           "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
           "required": true,
-          "count": 3
+          "count": 2
         }
       }
     },
@@ -1730,7 +1850,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1640,
+          "words": 1789,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -1845,13 +1965,13 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1612,
+          "words": 1802,
           "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
           "required": true,
-          "count": 1
+          "count": 2
         }
       }
     },
@@ -1960,7 +2080,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1862,
+          "words": 2012,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -2176,7 +2296,7 @@
         "visibleFaqForSchema": {
           "status": "pass",
           "required": true,
-          "count": 14,
+          "count": 13,
           "threshold": 12
         },
         "speakableSchemaCoverage": {
@@ -2187,7 +2307,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2336,
+          "words": 2322,
           "threshold": 1800
         },
         "relatedLinks": {
@@ -2302,7 +2422,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1581,
+          "words": 1730,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -2361,7 +2481,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1851,
+          "words": 2000,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -2588,7 +2708,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 518,
+          "words": 672,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -2704,7 +2824,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1540,
+          "words": 1689,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -2763,7 +2883,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 2254,
+          "words": 2406,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -2821,7 +2941,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 648,
+          "words": 802,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -2879,7 +2999,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 721,
+          "words": 875,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -2927,7 +3047,7 @@
         "visibleFaqForSchema": {
           "status": "pass",
           "required": false,
-          "count": 10,
+          "count": 9,
           "threshold": 0
         },
         "speakableSchemaCoverage": {
@@ -2938,7 +3058,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 1218,
+          "words": 1357,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -2997,7 +3117,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 675,
+          "words": 829,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -3112,7 +3232,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1624,
+          "words": 1773,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -3154,7 +3274,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Digitalizare IMM: hub pentru proiecte, buget IT și consultanță"
+            "Digitalizare IMM2024–2026"
           ]
         },
         "visibleFaqForSchema": {
@@ -3171,7 +3291,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1847,
+          "words": 2018,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -3213,7 +3333,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Digitalizare IMM: hub pentru proiecte, buget IT și consultanță"
+            "Digitalizare IMM2024–2026"
           ]
         },
         "visibleFaqForSchema": {
@@ -3230,13 +3350,133 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1843,
+          "words": 2018,
           "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
           "required": true,
           "count": 3
+        }
+      }
+    },
+    {
+      "file": "documente-punctaj-pocidif-21.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "utf8Charset": {
+          "status": "pass",
+          "hasCharset": true,
+          "hasHttpEquiv": false
+        },
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "cleanCanonical": {
+          "status": "pass",
+          "href": "https://atelierdeconsultanta.ro/documente-punctaj-pocidif-21"
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Documente și punctaj PoCIDIF 2.1 – dosar, indicatori și evaluare"
+          ]
+        },
+        "visibleFaqForSchema": {
+          "status": "pass",
+          "required": true,
+          "count": 6,
+          "threshold": 6
+        },
+        "speakableSchemaCoverage": {
+          "status": "pass",
+          "required": false,
+          "count": 0
+        },
+        "contentDepth": {
+          "status": "pass",
+          "required": true,
+          "words": 1931,
+          "threshold": 1400
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": false,
+          "count": 1,
+          "note": "not a hub/blog page"
+        }
+      }
+    },
+    {
+      "file": "documente-punctaj-pocidif-21/index.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "utf8Charset": {
+          "status": "pass",
+          "hasCharset": true,
+          "hasHttpEquiv": false
+        },
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "cleanCanonical": {
+          "status": "pass",
+          "href": "https://atelierdeconsultanta.ro/documente-punctaj-pocidif-21"
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Documente și punctaj PoCIDIF 2.1 – dosar, indicatori și evaluare"
+          ]
+        },
+        "visibleFaqForSchema": {
+          "status": "pass",
+          "required": true,
+          "count": 6,
+          "threshold": 6
+        },
+        "speakableSchemaCoverage": {
+          "status": "pass",
+          "required": false,
+          "count": 0
+        },
+        "contentDepth": {
+          "status": "pass",
+          "required": true,
+          "words": 1931,
+          "threshold": 1400
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": false,
+          "count": 1,
+          "note": "not a hub/blog page"
         }
       }
     },
@@ -3272,7 +3512,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "DR12 pentru tineri fermieri instalați"
+            "DR12 AFIR și instalarea tinerilor fermieri: diferențe"
           ]
         },
         "visibleFaqForSchema": {
@@ -3289,7 +3529,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 1306,
+          "words": 1463,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -3348,7 +3588,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 1467,
+          "words": 1618,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -3415,65 +3655,6 @@
       }
     },
     {
-      "file": "dr12-afir.html",
-      "noindex": false,
-      "pass": true,
-      "checks": {
-        "utf8Charset": {
-          "status": "pass",
-          "hasCharset": true,
-          "hasHttpEquiv": false
-        },
-        "metaDescription": {
-          "status": "pass",
-          "count": 1
-        },
-        "canonical": {
-          "status": "pass",
-          "count": 1
-        },
-        "cleanCanonical": {
-          "status": "pass",
-          "href": "https://atelierdeconsultanta.ro/dr12-afir"
-        },
-        "imageAltAttributes": {
-          "status": "pass",
-          "totalImages": 0,
-          "missingAltCount": 0,
-          "missingAlt": []
-        },
-        "singleH1": {
-          "status": "pass",
-          "count": 1,
-          "text": [
-            "DR12 AFIR: consolidarea exploatatiilor tinerilor fermieri"
-          ]
-        },
-        "visibleFaqForSchema": {
-          "status": "pass",
-          "required": true,
-          "count": 8,
-          "threshold": 8
-        },
-        "speakableSchemaCoverage": {
-          "status": "pass",
-          "required": false,
-          "count": 0
-        },
-        "contentDepth": {
-          "status": "pass",
-          "required": true,
-          "words": 1245,
-          "threshold": 1200
-        },
-        "relatedLinks": {
-          "status": "pass",
-          "required": true,
-          "count": 1
-        }
-      }
-    },
-    {
       "file": "dr12-afir/index.html",
       "noindex": false,
       "pass": true,
@@ -3505,7 +3686,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "DR12 AFIR: consolidarea exploatatiilor tinerilor fermieri"
+            "DR12 AFIR 2026 – investiții pentru tineri fermieri și fermieri până la 45 de ani"
           ]
         },
         "visibleFaqForSchema": {
@@ -3522,13 +3703,13 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1245,
+          "words": 2196,
           "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
           "required": true,
-          "count": 1
+          "count": 2
         }
       }
     },
@@ -3581,7 +3762,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2054,
+          "words": 2208,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -3593,124 +3774,6 @@
     },
     {
       "file": "dr14-afir-ferme-mici.html",
-      "noindex": false,
-      "pass": true,
-      "checks": {
-        "utf8Charset": {
-          "status": "pass",
-          "hasCharset": true,
-          "hasHttpEquiv": false
-        },
-        "metaDescription": {
-          "status": "pass",
-          "count": 1
-        },
-        "canonical": {
-          "status": "pass",
-          "count": 1
-        },
-        "cleanCanonical": {
-          "status": "pass",
-          "href": "https://atelierdeconsultanta.ro/dr14-afir-ferme-mici"
-        },
-        "imageAltAttributes": {
-          "status": "pass",
-          "totalImages": 0,
-          "missingAltCount": 0,
-          "missingAlt": []
-        },
-        "singleH1": {
-          "status": "pass",
-          "count": 1,
-          "text": [
-            "DR14 AFIR ferme mici: checklist și greșeli frecvente"
-          ]
-        },
-        "visibleFaqForSchema": {
-          "status": "pass",
-          "required": true,
-          "count": 10,
-          "threshold": 10
-        },
-        "speakableSchemaCoverage": {
-          "status": "pass",
-          "required": false,
-          "count": 0
-        },
-        "contentDepth": {
-          "status": "pass",
-          "required": true,
-          "words": 1863,
-          "threshold": 1700
-        },
-        "relatedLinks": {
-          "status": "pass",
-          "required": true,
-          "count": 3
-        }
-      }
-    },
-    {
-      "file": "dr14-afir-ferme-mici/index.html",
-      "noindex": false,
-      "pass": true,
-      "checks": {
-        "utf8Charset": {
-          "status": "pass",
-          "hasCharset": true,
-          "hasHttpEquiv": false
-        },
-        "metaDescription": {
-          "status": "pass",
-          "count": 1
-        },
-        "canonical": {
-          "status": "pass",
-          "count": 1
-        },
-        "cleanCanonical": {
-          "status": "pass",
-          "href": "https://atelierdeconsultanta.ro/dr14-afir-ferme-mici"
-        },
-        "imageAltAttributes": {
-          "status": "pass",
-          "totalImages": 0,
-          "missingAltCount": 0,
-          "missingAlt": []
-        },
-        "singleH1": {
-          "status": "pass",
-          "count": 1,
-          "text": [
-            "DR14 AFIR ferme mici: checklist și greșeli frecvente"
-          ]
-        },
-        "visibleFaqForSchema": {
-          "status": "pass",
-          "required": true,
-          "count": 10,
-          "threshold": 10
-        },
-        "speakableSchemaCoverage": {
-          "status": "pass",
-          "required": false,
-          "count": 0
-        },
-        "contentDepth": {
-          "status": "pass",
-          "required": true,
-          "words": 1863,
-          "threshold": 1700
-        },
-        "relatedLinks": {
-          "status": "pass",
-          "required": true,
-          "count": 3
-        }
-      }
-    },
-    {
-      "file": "dr14.html",
       "noindex": false,
       "pass": true,
       "checks": {
@@ -3741,7 +3804,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "DR14 AFIR: investiții pentru ferme mici"
+            "DR14 AFIR ferme mici: checklist și greșeli frecvente"
           ]
         },
         "visibleFaqForSchema": {
@@ -3758,14 +3821,72 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1275,
-          "threshold": 1200
+          "words": 2012,
+          "threshold": 1700
         },
         "relatedLinks": {
           "status": "pass",
-          "required": false,
+          "required": true,
+          "count": 3
+        }
+      }
+    },
+    {
+      "file": "dr14-afir-ferme-mici/index.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "utf8Charset": {
+          "status": "pass",
+          "hasCharset": true,
+          "hasHttpEquiv": false
+        },
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "cleanCanonical": {
+          "status": "pass",
+          "href": "https://atelierdeconsultanta.ro/dr14"
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
           "count": 1,
-          "note": "not a hub/blog page"
+          "text": [
+            "DR14 AFIR ferme mici: checklist și greșeli frecvente"
+          ]
+        },
+        "visibleFaqForSchema": {
+          "status": "pass",
+          "required": true,
+          "count": 10,
+          "threshold": 10
+        },
+        "speakableSchemaCoverage": {
+          "status": "pass",
+          "required": false,
+          "count": 0
+        },
+        "contentDepth": {
+          "status": "pass",
+          "required": true,
+          "words": 2012,
+          "threshold": 1700
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 3
         }
       }
     },
@@ -3801,14 +3922,14 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "DR14 AFIR: investiții pentru ferme mici"
+            "DR14 AFIR 2026 – investiții pentru fermele de mici dimensiuni"
           ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
           "required": true,
-          "count": 10,
-          "threshold": 10
+          "count": 8,
+          "threshold": 8
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -3818,13 +3939,13 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1274,
+          "words": 2217,
           "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
           "required": false,
-          "count": 1,
+          "count": 2,
           "note": "not a hub/blog page"
         }
       }
@@ -3861,14 +3982,14 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "e-MOVE RO: statii de încărcare, energie regenerabilă și stocare"
+            "e-MOVE ROStații de încărcare și energie regenerabilă"
           ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
           "required": true,
-          "count": 10,
-          "threshold": 10
+          "count": 8,
+          "threshold": 8
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -3878,7 +3999,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1219,
+          "words": 1620,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -3994,13 +4115,133 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1514,
+          "words": 1663,
           "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
           "required": true,
           "count": 2
+        }
+      }
+    },
+    {
+      "file": "eligibilitate-pocidif-21.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "utf8Charset": {
+          "status": "pass",
+          "hasCharset": true,
+          "hasHttpEquiv": false
+        },
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "cleanCanonical": {
+          "status": "pass",
+          "href": "https://atelierdeconsultanta.ro/eligibilitate-pocidif-21"
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Eligibilitate PoCIDIF 2.1 – IMM TIC, coduri CAEN și parteneriate"
+          ]
+        },
+        "visibleFaqForSchema": {
+          "status": "pass",
+          "required": true,
+          "count": 6,
+          "threshold": 6
+        },
+        "speakableSchemaCoverage": {
+          "status": "pass",
+          "required": false,
+          "count": 0
+        },
+        "contentDepth": {
+          "status": "pass",
+          "required": true,
+          "words": 1600,
+          "threshold": 1200
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": false,
+          "count": 1,
+          "note": "not a hub/blog page"
+        }
+      }
+    },
+    {
+      "file": "eligibilitate-pocidif-21/index.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "utf8Charset": {
+          "status": "pass",
+          "hasCharset": true,
+          "hasHttpEquiv": false
+        },
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "cleanCanonical": {
+          "status": "pass",
+          "href": "https://atelierdeconsultanta.ro/eligibilitate-pocidif-21"
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Eligibilitate PoCIDIF 2.1 – IMM TIC, coduri CAEN și parteneriate"
+          ]
+        },
+        "visibleFaqForSchema": {
+          "status": "pass",
+          "required": true,
+          "count": 6,
+          "threshold": 6
+        },
+        "speakableSchemaCoverage": {
+          "status": "pass",
+          "required": false,
+          "count": 0
+        },
+        "contentDepth": {
+          "status": "pass",
+          "required": true,
+          "words": 1600,
+          "threshold": 1200
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": false,
+          "count": 1,
+          "note": "not a hub/blog page"
         }
       }
     },
@@ -4053,7 +4294,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 1341,
+          "words": 1492,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -4095,14 +4336,14 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Femeia Antreprenor 2026: program, eligibilitate și dosar"
+            "Femeia Antreprenor2026"
           ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
           "required": true,
-          "count": 10,
-          "threshold": 10
+          "count": 8,
+          "threshold": 8
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -4112,13 +4353,13 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1799,
+          "words": 2159,
           "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
           "required": false,
-          "count": 2,
+          "count": 3,
           "note": "not a hub/blog page"
         }
       }
@@ -4155,14 +4396,14 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Femeia Antreprenor 2026: program, eligibilitate și dosar"
+            "Femeia Antreprenor2026"
           ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
           "required": true,
-          "count": 10,
-          "threshold": 10
+          "count": 8,
+          "threshold": 8
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -4172,13 +4413,13 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1797,
+          "words": 2080,
           "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
           "required": false,
-          "count": 2,
+          "count": 3,
           "note": "not a hub/blog page"
         }
       }
@@ -4288,13 +4529,13 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1458,
+          "words": 1653,
           "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
           "required": true,
-          "count": 1
+          "count": 2
         }
       }
     },
@@ -4403,7 +4644,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1625,
+          "words": 1774,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -4462,7 +4703,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1622,
+          "words": 1815,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -4521,7 +4762,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1621,
+          "words": 1815,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -4636,7 +4877,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1536,
+          "words": 1685,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -4678,7 +4919,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Fondul pentru Modernizare 2026 – Energie regenerabilă: Ghid pentru investitori"
+            "Fondul pentru ModernizareEnergie regenerabilă"
           ]
         },
         "visibleFaqForSchema": {
@@ -4695,7 +4936,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1005,
+          "words": 1163,
           "threshold": 900
         },
         "relatedLinks": {
@@ -4738,7 +4979,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Fondul pentru Modernizare 2026 – Energie regenerabilă: Ghid pentru investitori"
+            "Fondul pentru ModernizareEnergie regenerabilă"
           ]
         },
         "visibleFaqForSchema": {
@@ -4755,7 +4996,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1005,
+          "words": 1163,
           "threshold": 900
         },
         "relatedLinks": {
@@ -4871,13 +5112,13 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1305,
+          "words": 1503,
           "threshold": 1100
         },
         "relatedLinks": {
           "status": "pass",
           "required": true,
-          "count": 1
+          "count": 2
         }
       }
     },
@@ -4986,7 +5227,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1853,
+          "words": 2003,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -5045,7 +5286,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1844,
+          "words": 1994,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -5104,7 +5345,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1866,
+          "words": 2016,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -5163,7 +5404,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1871,
+          "words": 2021,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -5222,7 +5463,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1857,
+          "words": 2007,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -5337,7 +5578,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1257,
+          "words": 1442,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -5452,7 +5693,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1651,
+          "words": 1800,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -5735,13 +5976,13 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1396,
+          "words": 1624,
           "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
           "required": true,
-          "count": 1
+          "count": 2
         }
       }
     },
@@ -5850,7 +6091,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1893,
+          "words": 1995,
           "threshold": 1500
         },
         "relatedLinks": {
@@ -5892,7 +6133,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Fonduri europene Nord-Est"
+            "Fonduri europene în regiunea Nord-Est"
           ]
         },
         "visibleFaqForSchema": {
@@ -5909,13 +6150,13 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2204,
+          "words": 2503,
           "threshold": 1100
         },
         "relatedLinks": {
           "status": "pass",
           "required": true,
-          "count": 1
+          "count": 2
         }
       }
     },
@@ -6080,13 +6321,13 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1533,
+          "words": 1680,
           "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
           "required": true,
-          "count": 2
+          "count": 3
         }
       }
     },
@@ -6195,7 +6436,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1314,
+          "words": 1463,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -6310,7 +6551,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1586,
+          "words": 1736,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -6425,7 +6666,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1588,
+          "words": 1738,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -6467,7 +6708,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Fonduri regionale: programe regionale 2021-2027"
+            "Programe regionale și ADR-uri din România"
           ]
         },
         "visibleFaqForSchema": {
@@ -6484,13 +6725,13 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1208,
+          "words": 1361,
           "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
           "required": true,
-          "count": 1
+          "count": 2
         }
       }
     },
@@ -6526,14 +6767,14 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "GAL-AFIR: proiecte LEADER publice și private"
+            "GAL-AFIRApeluri pentru beneficiari publici și privați"
           ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
           "required": true,
-          "count": 10,
-          "threshold": 10
+          "count": 8,
+          "threshold": 8
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -6543,7 +6784,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1459,
+          "words": 1538,
           "threshold": 1400
         },
         "relatedLinks": {
@@ -6601,7 +6842,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 691,
+          "words": 848,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -6706,7 +6947,7 @@
         "visibleFaqForSchema": {
           "status": "pass",
           "required": true,
-          "count": 8,
+          "count": 7,
           "threshold": 7
         },
         "speakableSchemaCoverage": {
@@ -6717,7 +6958,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2074,
+          "words": 2193,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -6765,7 +7006,8 @@
         "visibleFaqForSchema": {
           "status": "pass",
           "required": false,
-          "count": 0
+          "count": 4,
+          "threshold": 0
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -6775,7 +7017,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 911,
+          "words": 1060,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -6921,7 +7163,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1533,
+          "words": 1682,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -7036,7 +7278,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1489,
+          "words": 1638,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -7095,7 +7337,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 1482,
+          "words": 1632,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -7137,13 +7379,13 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Consultanță fonduri europene cu eligibilitate verificată"
+            "Consultanță și proiectare pentru proiecte cu fonduri europene"
           ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
           "required": false,
-          "count": 7,
+          "count": 10,
           "threshold": 0
         },
         "speakableSchemaCoverage": {
@@ -7154,7 +7396,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 2126,
+          "words": 2446,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -7202,7 +7444,7 @@
         "visibleFaqForSchema": {
           "status": "pass",
           "required": true,
-          "count": 5,
+          "count": 4,
           "threshold": 4
         },
         "speakableSchemaCoverage": {
@@ -7213,7 +7455,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1184,
+          "words": 1293,
           "threshold": 900
         },
         "relatedLinks": {
@@ -7318,7 +7560,7 @@
         "visibleFaqForSchema": {
           "status": "pass",
           "required": true,
-          "count": 7,
+          "count": 6,
           "threshold": 6
         },
         "speakableSchemaCoverage": {
@@ -7329,7 +7571,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1474,
+          "words": 1582,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -7388,7 +7630,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1546,
+          "words": 1696,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -7447,7 +7689,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1556,
+          "words": 1706,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -7507,7 +7749,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1576,
+          "words": 1726,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -7549,14 +7791,14 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Modernizarea microîntreprinderilor – Apel 2 Nord-Est: Ghid practic pentru antreprenori"
+            "Investiții pentru modernizarea microîntreprinderilor – Apel 2 Nord-Est"
           ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
           "required": true,
-          "count": 10,
-          "threshold": 10
+          "count": 8,
+          "threshold": 8
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -7566,7 +7808,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1216,
+          "words": 1287,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -7609,14 +7851,14 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Modernizarea microîntreprinderilor – Apel 2 Nord-Est: Ghid practic pentru antreprenori"
+            "Investiții pentru modernizarea microîntreprinderilor – Apel 2 Nord-Est"
           ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
           "required": true,
-          "count": 10,
-          "threshold": 10
+          "count": 8,
+          "threshold": 8
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -7626,14 +7868,73 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1216,
+          "words": 1387,
           "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
           "required": false,
-          "count": 1,
+          "count": 2,
           "note": "not a hub/blog page"
+        }
+      }
+    },
+    {
+      "file": "management-proiecte-fonduri-europene/index.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "utf8Charset": {
+          "status": "pass",
+          "hasCharset": true,
+          "hasHttpEquiv": false
+        },
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "cleanCanonical": {
+          "status": "pass",
+          "href": "https://atelierdeconsultanta.ro/management-proiecte-fonduri-europene"
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Managementul proiectelor finanțate din fonduri europene"
+          ]
+        },
+        "visibleFaqForSchema": {
+          "status": "pass",
+          "required": true,
+          "count": 6,
+          "threshold": 5
+        },
+        "speakableSchemaCoverage": {
+          "status": "pass",
+          "required": false,
+          "count": 0
+        },
+        "contentDepth": {
+          "status": "pass",
+          "required": true,
+          "words": 1294,
+          "threshold": 1000
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 1
         }
       }
     },
@@ -7669,7 +7970,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Metodologia FABER pentru verificarea eligibilitatii la fonduri europene"
+            "Metodologia FABER pentru verificarea eligibilității la fonduri europene"
           ]
         },
         "visibleFaqForSchema": {
@@ -7686,7 +7987,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 1016,
+          "words": 1328,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -7694,6 +7995,65 @@
           "required": false,
           "count": 1,
           "note": "not a hub/blog page"
+        }
+      }
+    },
+    {
+      "file": "plan-de-afaceri-fonduri-europene/index.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "utf8Charset": {
+          "status": "pass",
+          "hasCharset": true,
+          "hasHttpEquiv": false
+        },
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "cleanCanonical": {
+          "status": "pass",
+          "href": "https://atelierdeconsultanta.ro/plan-de-afaceri-fonduri-europene"
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Plan de afaceri pentru proiecte finanțate"
+          ]
+        },
+        "visibleFaqForSchema": {
+          "status": "pass",
+          "required": true,
+          "count": 6,
+          "threshold": 5
+        },
+        "speakableSchemaCoverage": {
+          "status": "pass",
+          "required": false,
+          "count": 0
+        },
+        "contentDepth": {
+          "status": "pass",
+          "required": true,
+          "words": 1263,
+          "threshold": 1000
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 1
         }
       }
     },
@@ -7746,7 +8106,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 1425,
+          "words": 1576,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -7973,73 +8333,13 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1301,
+          "words": 1492,
           "threshold": 1100
         },
         "relatedLinks": {
           "status": "pass",
           "required": true,
           "count": 2
-        }
-      }
-    },
-    {
-      "file": "pocidif-21.html",
-      "noindex": false,
-      "pass": true,
-      "checks": {
-        "utf8Charset": {
-          "status": "pass",
-          "hasCharset": true,
-          "hasHttpEquiv": false
-        },
-        "metaDescription": {
-          "status": "pass",
-          "count": 1
-        },
-        "canonical": {
-          "status": "pass",
-          "count": 1
-        },
-        "cleanCanonical": {
-          "status": "pass",
-          "href": "https://atelierdeconsultanta.ro/pocidif-21"
-        },
-        "imageAltAttributes": {
-          "status": "pass",
-          "totalImages": 0,
-          "missingAltCount": 0,
-          "missingAlt": []
-        },
-        "singleH1": {
-          "status": "pass",
-          "count": 1,
-          "text": [
-            "PoCIDIF 2.1 – Granturi pentru inovare digitală în IMM‑urile TIC"
-          ]
-        },
-        "visibleFaqForSchema": {
-          "status": "pass",
-          "required": true,
-          "count": 8,
-          "threshold": 8
-        },
-        "speakableSchemaCoverage": {
-          "status": "pass",
-          "required": false,
-          "count": 0
-        },
-        "contentDepth": {
-          "status": "pass",
-          "required": true,
-          "words": 1338,
-          "threshold": 1200
-        },
-        "relatedLinks": {
-          "status": "pass",
-          "required": false,
-          "count": 1,
-          "note": "not a hub/blog page"
         }
       }
     },
@@ -8075,7 +8375,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "PoCIDIF 2.1 – Granturi pentru inovare digitală în IMM‑urile TIC"
+            "PoCIDIF 2.1 – inovare și tehnologii digitale pentru IMM din sectorul TIC"
           ]
         },
         "visibleFaqForSchema": {
@@ -8092,8 +8392,8 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1338,
-          "threshold": 1200
+          "words": 2894,
+          "threshold": 2100
         },
         "relatedLinks": {
           "status": "pass",
@@ -8151,73 +8451,13 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 852,
+          "words": 1009,
           "threshold": 2000
         },
         "relatedLinks": {
           "status": "pass",
           "required": false,
           "count": 0,
-          "note": "not a hub/blog page"
-        }
-      }
-    },
-    {
-      "file": "por-adr-nord-est.html",
-      "noindex": false,
-      "pass": true,
-      "checks": {
-        "utf8Charset": {
-          "status": "pass",
-          "hasCharset": true,
-          "hasHttpEquiv": false
-        },
-        "metaDescription": {
-          "status": "pass",
-          "count": 1
-        },
-        "canonical": {
-          "status": "pass",
-          "count": 1
-        },
-        "cleanCanonical": {
-          "status": "pass",
-          "href": "https://atelierdeconsultanta.ro/por-adr-nord-est"
-        },
-        "imageAltAttributes": {
-          "status": "pass",
-          "totalImages": 0,
-          "missingAltCount": 0,
-          "missingAlt": []
-        },
-        "singleH1": {
-          "status": "pass",
-          "count": 1,
-          "text": [
-            "POR ADR Nord-Est pentru microîntreprinderi"
-          ]
-        },
-        "visibleFaqForSchema": {
-          "status": "pass",
-          "required": true,
-          "count": 8,
-          "threshold": 8
-        },
-        "speakableSchemaCoverage": {
-          "status": "pass",
-          "required": false,
-          "count": 0
-        },
-        "contentDepth": {
-          "status": "pass",
-          "required": true,
-          "words": 1147,
-          "threshold": 1100
-        },
-        "relatedLinks": {
-          "status": "pass",
-          "required": false,
-          "count": 1,
           "note": "not a hub/blog page"
         }
       }
@@ -8254,7 +8494,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "POR ADR Nord-Est pentru microîntreprinderi"
+            "Programul Regional Nord-Est – finanțări pentru IMM și microîntreprinderi"
           ]
         },
         "visibleFaqForSchema": {
@@ -8271,13 +8511,13 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1147,
+          "words": 1831,
           "threshold": 1100
         },
         "relatedLinks": {
           "status": "pass",
           "required": false,
-          "count": 1,
+          "count": 2,
           "note": "not a hub/blog page"
         }
       }
@@ -8317,7 +8557,7 @@
         "visibleFaqForSchema": {
           "status": "pass",
           "required": true,
-          "count": 5,
+          "count": 4,
           "threshold": 4
         },
         "speakableSchemaCoverage": {
@@ -8370,14 +8610,14 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "PRO INFRA: producție pentru infrastructura de transport"
+            "PRO INFRA – eficiență energetică pentru producătorii din infrastructura de transport"
           ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
           "required": true,
-          "count": 10,
-          "threshold": 10
+          "count": 8,
+          "threshold": 8
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -8387,8 +8627,8 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1262,
-          "threshold": 1200
+          "words": 3187,
+          "threshold": 2200
         },
         "relatedLinks": {
           "status": "pass",
@@ -8430,14 +8670,14 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "PRO INFRA: producție pentru infrastructura de transport"
+            "PRO INFRA – eficiență energetică pentru producătorii din infrastructura de transport"
           ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
           "required": true,
-          "count": 10,
-          "threshold": 10
+          "count": 8,
+          "threshold": 8
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -8447,8 +8687,8 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1260,
-          "threshold": 1200
+          "words": 3187,
+          "threshold": 2200
         },
         "relatedLinks": {
           "status": "pass",
@@ -8507,7 +8747,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1085,
+          "words": 1231,
           "threshold": 1000
         },
         "relatedLinks": {
@@ -8567,13 +8807,131 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1219,
+          "words": 1362,
           "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
           "required": true,
           "count": 1
+        }
+      }
+    },
+    {
+      "file": "proiectare-fonduri-europene/index.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "utf8Charset": {
+          "status": "pass",
+          "hasCharset": true,
+          "hasHttpEquiv": false
+        },
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "cleanCanonical": {
+          "status": "pass",
+          "href": "https://atelierdeconsultanta.ro/proiectare-fonduri-europene"
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Proiectare pentru investiții finanțate din fonduri europene"
+          ]
+        },
+        "visibleFaqForSchema": {
+          "status": "pass",
+          "required": true,
+          "count": 6,
+          "threshold": 5
+        },
+        "speakableSchemaCoverage": {
+          "status": "pass",
+          "required": false,
+          "count": 0
+        },
+        "contentDepth": {
+          "status": "pass",
+          "required": true,
+          "words": 1791,
+          "threshold": 1200
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 1
+        }
+      }
+    },
+    {
+      "file": "resurse-utile/index.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "utf8Charset": {
+          "status": "pass",
+          "hasCharset": true,
+          "hasHttpEquiv": false
+        },
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "cleanCanonical": {
+          "status": "pass",
+          "href": "https://atelierdeconsultanta.ro/resurse-utile"
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Resurse utile pentru proiecte cu fonduri europene"
+          ]
+        },
+        "visibleFaqForSchema": {
+          "status": "pass",
+          "required": false,
+          "count": 0
+        },
+        "speakableSchemaCoverage": {
+          "status": "pass",
+          "required": false,
+          "count": 0
+        },
+        "contentDepth": {
+          "status": "pass",
+          "required": false,
+          "words": 838,
+          "threshold": 2000
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": false,
+          "count": 1,
+          "note": "not a hub/blog page"
         }
       }
     },
@@ -8615,7 +8973,7 @@
         "visibleFaqForSchema": {
           "status": "pass",
           "required": true,
-          "count": 5,
+          "count": 4,
           "threshold": 4
         },
         "speakableSchemaCoverage": {
@@ -8626,7 +8984,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1170,
+          "words": 1280,
           "threshold": 900
         },
         "relatedLinks": {
@@ -8742,13 +9100,13 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1781,
+          "words": 1894,
           "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
           "required": true,
-          "count": 3
+          "count": 2
         }
       }
     },
@@ -8857,13 +9215,13 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1769,
+          "words": 1880,
           "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
           "required": true,
-          "count": 3
+          "count": 2
         }
       }
     },
@@ -9028,13 +9386,13 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1790,
+          "words": 1907,
           "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
           "required": true,
-          "count": 3
+          "count": 2
         }
       }
     },
@@ -9143,7 +9501,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1746,
+          "words": 1895,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -9185,14 +9543,14 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Start-Up Nation 2026: ghid central pentru pregătirea dosarului"
+            "Start-Up Nation2026"
           ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
           "required": true,
-          "count": 10,
-          "threshold": 10
+          "count": 8,
+          "threshold": 8
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -9202,7 +9560,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1298,
+          "words": 1320,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -9244,14 +9602,14 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Start-Up Nation 2026: ghid central pentru pregătirea dosarului"
+            "Start-Up Nation2026"
           ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
           "required": true,
-          "count": 10,
-          "threshold": 10
+          "count": 8,
+          "threshold": 8
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -9261,13 +9619,13 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1332,
+          "words": 1320,
           "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
           "required": true,
-          "count": 3
+          "count": 2
         }
       }
     },
@@ -9487,7 +9845,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1283,
+          "words": 1432,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -9518,7 +9876,7 @@
         },
         "cleanCanonical": {
           "status": "pass",
-          "href": "https://atelierdeconsultanta.ro/studii-de-caz"
+          "href": "https://atelierdeconsultanta.ro/studii-de-caz-fonduri-europene"
         },
         "imageAltAttributes": {
           "status": "pass",
@@ -9573,7 +9931,7 @@
         },
         "cleanCanonical": {
           "status": "pass",
-          "href": "https://atelierdeconsultanta.ro/studii-de-caz"
+          "href": "https://atelierdeconsultanta.ro/studii-de-caz-fonduri-europene"
         },
         "imageAltAttributes": {
           "status": "pass",
@@ -9588,7 +9946,7 @@
         "visibleFaqForSchema": {
           "status": "pass",
           "required": true,
-          "count": 5,
+          "count": 4,
           "threshold": 4
         },
         "speakableSchemaCoverage": {
@@ -9606,6 +9964,65 @@
           "required": false,
           "count": 1,
           "note": "not a hub/blog page"
+        }
+      }
+    },
+    {
+      "file": "studiu-fezabilitate-fonduri-europene/index.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "utf8Charset": {
+          "status": "pass",
+          "hasCharset": true,
+          "hasHttpEquiv": false
+        },
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "cleanCanonical": {
+          "status": "pass",
+          "href": "https://atelierdeconsultanta.ro/studiu-fezabilitate-fonduri-europene"
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 0,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "Studiu de fezabilitate pentru proiecte cu fonduri europene"
+          ]
+        },
+        "visibleFaqForSchema": {
+          "status": "pass",
+          "required": true,
+          "count": 6,
+          "threshold": 5
+        },
+        "speakableSchemaCoverage": {
+          "status": "pass",
+          "required": false,
+          "count": 0
+        },
+        "contentDepth": {
+          "status": "pass",
+          "required": true,
+          "words": 1272,
+          "threshold": 1000
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": true,
+          "count": 1
         }
       }
     },
@@ -9658,7 +10075,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 849,
+          "words": 1002,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -9716,7 +10133,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 949,
+          "words": 1106,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -9818,7 +10235,7 @@
         "visibleFaqForSchema": {
           "status": "pass",
           "required": true,
-          "count": 7,
+          "count": 6,
           "threshold": 4
         },
         "speakableSchemaCoverage": {
@@ -9877,8 +10294,8 @@
         "visibleFaqForSchema": {
           "status": "pass",
           "required": true,
-          "count": 10,
-          "threshold": 10
+          "count": 8,
+          "threshold": 8
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -9888,13 +10305,13 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1408,
+          "words": 2003,
           "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
           "required": true,
-          "count": 1
+          "count": 2
         }
       }
     },
@@ -9936,7 +10353,7 @@
         "visibleFaqForSchema": {
           "status": "pass",
           "required": true,
-          "count": 5,
+          "count": 4,
           "threshold": 4
         },
         "speakableSchemaCoverage": {
@@ -9947,7 +10364,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1067,
+          "words": 1176,
           "threshold": 900
         },
         "relatedLinks": {

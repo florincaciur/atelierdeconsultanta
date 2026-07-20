@@ -1,17 +1,17 @@
 {
-  "generatedAt": "2026-06-11T22:34:16.400Z",
-  "baseUrl": "http://127.0.0.1:63033",
+  "generatedAt": "2026-07-13T11:47:23.769Z",
+  "baseUrl": "http://127.0.0.1:53965",
   "summary": {
-    "totalChecks": 18,
-    "passedChecks": 18,
+    "totalChecks": 26,
+    "passedChecks": 26,
     "failedChecks": 0
   },
   "results": [
     {
-      "url": "http://127.0.0.1:63033/",
+      "url": "http://127.0.0.1:53965/",
       "pagePath": "/",
       "viewportName": "desktop",
-      "title": "FABER | Consultanță fonduri europene",
+      "title": "Consultanță și proiectare fonduri europene | FABER",
       "badgeCheck": {
         "required": true,
         "pass": true,
@@ -29,10 +29,10 @@
       "screenshot": "reports/visual-screenshots/home-desktop.png"
     },
     {
-      "url": "http://127.0.0.1:63033/contact/",
+      "url": "http://127.0.0.1:53965/contact/",
       "pagePath": "/contact/",
       "viewportName": "desktop",
-      "title": "Contact FABER | verificare eligibilitate",
+      "title": "Contact FABER pentru eligibilitate și proiecte",
       "badgeCheck": {
         "required": false,
         "pass": true,
@@ -45,10 +45,10 @@
       "screenshot": "reports/visual-screenshots/contact-desktop.png"
     },
     {
-      "url": "http://127.0.0.1:63033/consultanta-fonduri-europene/",
+      "url": "http://127.0.0.1:53965/consultanta-fonduri-europene/",
       "pagePath": "/consultanta-fonduri-europene/",
       "viewportName": "desktop",
-      "title": "Consultanță fonduri europene | FABER",
+      "title": "Consultanță fonduri europene pentru firme | FABER",
       "badgeCheck": {
         "required": false,
         "pass": true,
@@ -61,7 +61,23 @@
       "screenshot": "reports/visual-screenshots/consultanta-fonduri-europene-desktop.png"
     },
     {
-      "url": "http://127.0.0.1:63033/fonduri-europene/",
+      "url": "http://127.0.0.1:53965/proiectare-fonduri-europene/",
+      "pagePath": "/proiectare-fonduri-europene/",
+      "viewportName": "desktop",
+      "title": "Proiectare fonduri europene: SF, DALI și planuri | FABER",
+      "badgeCheck": {
+        "required": false,
+        "pass": true,
+        "reason": "not homepage contact section"
+      },
+      "horizontalOverflow": 0,
+      "clippedText": [],
+      "overlapIssues": [],
+      "pass": true,
+      "screenshot": "reports/visual-screenshots/proiectare-fonduri-europene-desktop.png"
+    },
+    {
+      "url": "http://127.0.0.1:53965/fonduri-europene/",
       "pagePath": "/fonduri-europene/",
       "viewportName": "desktop",
       "title": "Fonduri europene pentru firme și fermieri",
@@ -77,23 +93,7 @@
       "screenshot": "reports/visual-screenshots/fonduri-europene-desktop.png"
     },
     {
-      "url": "http://127.0.0.1:63033/fonduri-europene-imm/",
-      "pagePath": "/fonduri-europene-imm/",
-      "viewportName": "desktop",
-      "title": "Fonduri europene pentru IMM-uri - investiții, digitalizare, energie",
-      "badgeCheck": {
-        "required": false,
-        "pass": true,
-        "reason": "not homepage contact section"
-      },
-      "horizontalOverflow": 0,
-      "clippedText": [],
-      "overlapIssues": [],
-      "pass": true,
-      "screenshot": "reports/visual-screenshots/fonduri-europene-imm-desktop.png"
-    },
-    {
-      "url": "http://127.0.0.1:63033/afir/",
+      "url": "http://127.0.0.1:53965/afir/",
       "pagePath": "/afir/",
       "viewportName": "desktop",
       "title": "AFIR | calculator SO, DR12, DR14 și GAL",
@@ -109,7 +109,7 @@
       "screenshot": "reports/visual-screenshots/afir-desktop.png"
     },
     {
-      "url": "http://127.0.0.1:63033/pnrr/",
+      "url": "http://127.0.0.1:53965/pnrr/",
       "pagePath": "/pnrr/",
       "viewportName": "desktop",
       "title": "PNRR | pagina-cadru pentru apeluri și digitalizare",
@@ -125,26 +125,10 @@
       "screenshot": "reports/visual-screenshots/pnrr-desktop.png"
     },
     {
-      "url": "http://127.0.0.1:63033/idei-afaceri-fonduri-europene.html",
-      "pagePath": "/idei-afaceri-fonduri-europene.html",
-      "viewportName": "desktop",
-      "title": "Idei de afaceri cu fonduri europene",
-      "badgeCheck": {
-        "required": false,
-        "pass": true,
-        "reason": "not homepage contact section"
-      },
-      "horizontalOverflow": 0,
-      "clippedText": [],
-      "overlapIssues": [],
-      "pass": true,
-      "screenshot": "reports/visual-screenshots/idei-afaceri-fonduri-europene-desktop.png"
-    },
-    {
-      "url": "http://127.0.0.1:63033/start-up-nation-2026",
+      "url": "http://127.0.0.1:53965/start-up-nation-2026",
       "pagePath": "/start-up-nation-2026",
       "viewportName": "desktop",
-      "title": "Start-Up Nation 2026 | ghid central și rute utile",
+      "title": "Start-Up Nation: pregătire și verificarea ediției active",
       "badgeCheck": {
         "required": false,
         "pass": true,
@@ -157,10 +141,116 @@
       "screenshot": "reports/visual-screenshots/start-up-nation-2026-desktop.png"
     },
     {
-      "url": "http://127.0.0.1:63033/",
+      "url": "http://127.0.0.1:53965/femeia-antreprenor-2026",
+      "pagePath": "/femeia-antreprenor-2026",
+      "viewportName": "desktop",
+      "title": "Femeia Antreprenor: condiții și documente | FABER",
+      "badgeCheck": {
+        "required": false,
+        "pass": true,
+        "reason": "not homepage contact section"
+      },
+      "horizontalOverflow": 0,
+      "clippedText": [],
+      "overlapIssues": [],
+      "pass": true,
+      "screenshot": "reports/visual-screenshots/femeia-antreprenor-2026-desktop.png"
+    },
+    {
+      "url": "http://127.0.0.1:53965/fondul-de-modernizare/",
+      "pagePath": "/fondul-de-modernizare/",
+      "viewportName": "desktop",
+      "title": "Fondul de Modernizare | hub energie și apeluri",
+      "badgeCheck": {
+        "required": false,
+        "pass": true,
+        "reason": "not homepage contact section"
+      },
+      "horizontalOverflow": 0,
+      "clippedText": [],
+      "overlapIssues": [],
+      "pass": true,
+      "screenshot": "reports/visual-screenshots/fondul-de-modernizare-desktop.png"
+    },
+    {
+      "url": "http://127.0.0.1:53965/programul-tranzitie-justa/",
+      "pagePath": "/programul-tranzitie-justa/",
+      "viewportName": "desktop",
+      "title": "Programul Tranziție Justă | verificare eligibilitate, regiuni și pași",
+      "badgeCheck": {
+        "required": false,
+        "pass": true,
+        "reason": "not homepage contact section"
+      },
+      "horizontalOverflow": 0,
+      "clippedText": [],
+      "overlapIssues": [],
+      "pass": true,
+      "screenshot": "reports/visual-screenshots/programul-tranzitie-justa-desktop.png"
+    },
+    {
+      "url": "http://127.0.0.1:53965/blog/",
+      "pagePath": "/blog/",
+      "viewportName": "desktop",
+      "title": "Blog fonduri europene, AFIR și granturi IMM | FABER",
+      "badgeCheck": {
+        "required": false,
+        "pass": true,
+        "reason": "not homepage contact section"
+      },
+      "horizontalOverflow": 0,
+      "clippedText": [],
+      "overlapIssues": [],
+      "pass": true,
+      "screenshot": "reports/visual-screenshots/blog-desktop.png"
+    },
+    {
+      "url": "http://127.0.0.1:53965/",
+      "pagePath": "/",
+      "viewportName": "mobile-320",
+      "title": "Consultanță și proiectare fonduri europene | FABER",
+      "badgeCheck": {
+        "required": true,
+        "pass": true,
+        "delta": 0.0078125,
+        "badgeClass": "cta-eyebrow contact-eyebrow badge-centered",
+        "badgeDisplay": "block",
+        "badgeMarginLeft": "55.1719px",
+        "badgeMarginRight": "55.1875px",
+        "containerTextAlign": "start"
+      },
+      "horizontalOverflow": 0,
+      "clippedText": [],
+      "overlapIssues": [],
+      "pass": true,
+      "screenshot": "reports/visual-screenshots/home-mobile-320.png"
+    },
+    {
+      "url": "http://127.0.0.1:53965/",
+      "pagePath": "/",
+      "viewportName": "mobile-360",
+      "title": "Consultanță și proiectare fonduri europene | FABER",
+      "badgeCheck": {
+        "required": true,
+        "pass": true,
+        "delta": 0.0078125,
+        "badgeClass": "cta-eyebrow contact-eyebrow badge-centered",
+        "badgeDisplay": "block",
+        "badgeMarginLeft": "75.1719px",
+        "badgeMarginRight": "75.1875px",
+        "containerTextAlign": "start"
+      },
+      "horizontalOverflow": 0,
+      "clippedText": [],
+      "overlapIssues": [],
+      "pass": true,
+      "screenshot": "reports/visual-screenshots/home-mobile-360.png"
+    },
+    {
+      "url": "http://127.0.0.1:53965/",
       "pagePath": "/",
       "viewportName": "mobile",
-      "title": "FABER | Consultanță fonduri europene",
+      "title": "Consultanță și proiectare fonduri europene | FABER",
       "badgeCheck": {
         "required": true,
         "pass": true,
@@ -178,10 +268,10 @@
       "screenshot": "reports/visual-screenshots/home-mobile.png"
     },
     {
-      "url": "http://127.0.0.1:63033/contact/",
+      "url": "http://127.0.0.1:53965/contact/",
       "pagePath": "/contact/",
       "viewportName": "mobile",
-      "title": "Contact FABER | verificare eligibilitate",
+      "title": "Contact FABER pentru eligibilitate și proiecte",
       "badgeCheck": {
         "required": false,
         "pass": true,
@@ -194,10 +284,10 @@
       "screenshot": "reports/visual-screenshots/contact-mobile.png"
     },
     {
-      "url": "http://127.0.0.1:63033/consultanta-fonduri-europene/",
+      "url": "http://127.0.0.1:53965/consultanta-fonduri-europene/",
       "pagePath": "/consultanta-fonduri-europene/",
       "viewportName": "mobile",
-      "title": "Consultanță fonduri europene | FABER",
+      "title": "Consultanță fonduri europene pentru firme | FABER",
       "badgeCheck": {
         "required": false,
         "pass": true,
@@ -210,7 +300,23 @@
       "screenshot": "reports/visual-screenshots/consultanta-fonduri-europene-mobile.png"
     },
     {
-      "url": "http://127.0.0.1:63033/fonduri-europene/",
+      "url": "http://127.0.0.1:53965/proiectare-fonduri-europene/",
+      "pagePath": "/proiectare-fonduri-europene/",
+      "viewportName": "mobile",
+      "title": "Proiectare fonduri europene: SF, DALI și planuri | FABER",
+      "badgeCheck": {
+        "required": false,
+        "pass": true,
+        "reason": "not homepage contact section"
+      },
+      "horizontalOverflow": 0,
+      "clippedText": [],
+      "overlapIssues": [],
+      "pass": true,
+      "screenshot": "reports/visual-screenshots/proiectare-fonduri-europene-mobile.png"
+    },
+    {
+      "url": "http://127.0.0.1:53965/fonduri-europene/",
       "pagePath": "/fonduri-europene/",
       "viewportName": "mobile",
       "title": "Fonduri europene pentru firme și fermieri",
@@ -226,23 +332,7 @@
       "screenshot": "reports/visual-screenshots/fonduri-europene-mobile.png"
     },
     {
-      "url": "http://127.0.0.1:63033/fonduri-europene-imm/",
-      "pagePath": "/fonduri-europene-imm/",
-      "viewportName": "mobile",
-      "title": "Fonduri europene pentru IMM-uri - investiții, digitalizare, energie",
-      "badgeCheck": {
-        "required": false,
-        "pass": true,
-        "reason": "not homepage contact section"
-      },
-      "horizontalOverflow": 0,
-      "clippedText": [],
-      "overlapIssues": [],
-      "pass": true,
-      "screenshot": "reports/visual-screenshots/fonduri-europene-imm-mobile.png"
-    },
-    {
-      "url": "http://127.0.0.1:63033/afir/",
+      "url": "http://127.0.0.1:53965/afir/",
       "pagePath": "/afir/",
       "viewportName": "mobile",
       "title": "AFIR | calculator SO, DR12, DR14 și GAL",
@@ -258,7 +348,7 @@
       "screenshot": "reports/visual-screenshots/afir-mobile.png"
     },
     {
-      "url": "http://127.0.0.1:63033/pnrr/",
+      "url": "http://127.0.0.1:53965/pnrr/",
       "pagePath": "/pnrr/",
       "viewportName": "mobile",
       "title": "PNRR | pagina-cadru pentru apeluri și digitalizare",
@@ -274,26 +364,10 @@
       "screenshot": "reports/visual-screenshots/pnrr-mobile.png"
     },
     {
-      "url": "http://127.0.0.1:63033/idei-afaceri-fonduri-europene.html",
-      "pagePath": "/idei-afaceri-fonduri-europene.html",
-      "viewportName": "mobile",
-      "title": "Idei de afaceri cu fonduri europene",
-      "badgeCheck": {
-        "required": false,
-        "pass": true,
-        "reason": "not homepage contact section"
-      },
-      "horizontalOverflow": 0,
-      "clippedText": [],
-      "overlapIssues": [],
-      "pass": true,
-      "screenshot": "reports/visual-screenshots/idei-afaceri-fonduri-europene-mobile.png"
-    },
-    {
-      "url": "http://127.0.0.1:63033/start-up-nation-2026",
+      "url": "http://127.0.0.1:53965/start-up-nation-2026",
       "pagePath": "/start-up-nation-2026",
       "viewportName": "mobile",
-      "title": "Start-Up Nation 2026 | ghid central și rute utile",
+      "title": "Start-Up Nation: pregătire și verificarea ediției active",
       "badgeCheck": {
         "required": false,
         "pass": true,
@@ -304,6 +378,70 @@
       "overlapIssues": [],
       "pass": true,
       "screenshot": "reports/visual-screenshots/start-up-nation-2026-mobile.png"
+    },
+    {
+      "url": "http://127.0.0.1:53965/femeia-antreprenor-2026",
+      "pagePath": "/femeia-antreprenor-2026",
+      "viewportName": "mobile",
+      "title": "Femeia Antreprenor: condiții și documente | FABER",
+      "badgeCheck": {
+        "required": false,
+        "pass": true,
+        "reason": "not homepage contact section"
+      },
+      "horizontalOverflow": 0,
+      "clippedText": [],
+      "overlapIssues": [],
+      "pass": true,
+      "screenshot": "reports/visual-screenshots/femeia-antreprenor-2026-mobile.png"
+    },
+    {
+      "url": "http://127.0.0.1:53965/fondul-de-modernizare/",
+      "pagePath": "/fondul-de-modernizare/",
+      "viewportName": "mobile",
+      "title": "Fondul de Modernizare | hub energie și apeluri",
+      "badgeCheck": {
+        "required": false,
+        "pass": true,
+        "reason": "not homepage contact section"
+      },
+      "horizontalOverflow": 0,
+      "clippedText": [],
+      "overlapIssues": [],
+      "pass": true,
+      "screenshot": "reports/visual-screenshots/fondul-de-modernizare-mobile.png"
+    },
+    {
+      "url": "http://127.0.0.1:53965/programul-tranzitie-justa/",
+      "pagePath": "/programul-tranzitie-justa/",
+      "viewportName": "mobile",
+      "title": "Programul Tranziție Justă | verificare eligibilitate, regiuni și pași",
+      "badgeCheck": {
+        "required": false,
+        "pass": true,
+        "reason": "not homepage contact section"
+      },
+      "horizontalOverflow": 0,
+      "clippedText": [],
+      "overlapIssues": [],
+      "pass": true,
+      "screenshot": "reports/visual-screenshots/programul-tranzitie-justa-mobile.png"
+    },
+    {
+      "url": "http://127.0.0.1:53965/blog/",
+      "pagePath": "/blog/",
+      "viewportName": "mobile",
+      "title": "Blog fonduri europene, AFIR și granturi IMM | FABER",
+      "badgeCheck": {
+        "required": false,
+        "pass": true,
+        "reason": "not homepage contact section"
+      },
+      "horizontalOverflow": 0,
+      "clippedText": [],
+      "overlapIssues": [],
+      "pass": true,
+      "screenshot": "reports/visual-screenshots/blog-mobile.png"
     }
   ]
 }

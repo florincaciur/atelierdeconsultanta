@@ -15,6 +15,29 @@ function readWranglerConfig() {
   return JSON.parse(stripJsonComments(fs.readFileSync(configPath, "utf8")));
 }
 
+function validateDomainSeoIntent(file, errors) {
+  if (!fs.existsSync(file)) {
+    errors.push(`${file} is missing`);
+    return;
+  }
+  let config;
+  try {
+    config = JSON.parse(fs.readFileSync(file, "utf8"));
+  } catch (error) {
+    errors.push(`${file} is not valid JSON: ${error.message}`);
+    return;
+  }
+  if (config.canonicalOrigin !== "https://atelierdeconsultanta.ro") errors.push(`${file}: canonicalOrigin must use the HTTPS apex domain`);
+  if (config.httpRedirect?.enabled !== true || config.httpRedirect?.status !== 301) errors.push(`${file}: HTTP redirect must be enabled as 301 desired state`);
+  if (config.httpRedirect?.preservePath !== true || config.httpRedirect?.preserveQuery !== true) errors.push(`${file}: HTTP redirect must preserve path and query`);
+  if (config.httpRedirect?.maximumHops !== 1) errors.push(`${file}: HTTP redirect desired state must use one hop`);
+  if (config.legacySearchRedirect?.enabled !== true || config.legacySearchRedirect?.status !== 301) errors.push(`${file}: legacy search redirect must be enabled as 301 desired state`);
+  if (config.legacySearchRedirect?.destination !== "https://atelierdeconsultanta.ro/") errors.push(`${file}: legacy search redirect must target the canonical homepage`);
+  if (config.legacySearchRedirect?.preserveQuery !== false) errors.push(`${file}: legacy search redirect must discard the obsolete query`);
+  if (config.hsts?.enableOnlyAfterHttpRedirectVerification !== true) errors.push(`${file}: HSTS must be gated by live HTTPS verification`);
+  if (config.hsts?.preload !== false) errors.push(`${file}: HSTS preload must remain disabled initially`);
+}
+
 function parseRedirects(file) {
   const lines = fs.readFileSync(file, "utf8").split(/\r?\n/);
   const rules = [];
@@ -167,6 +190,7 @@ if (!config.assets || !config.assets.directory) {
   if (fs.existsSync(path.join(ROOT, config.assets.directory))) validateOfficialGuidesHeaders(distHeaders, errors);
 }
 validateOfficialGuidesHeaders(path.join(ROOT, "_headers"), errors);
+validateDomainSeoIntent(path.join(ROOT, "config", "cloudflare-domain-seo.json"), errors);
 
 if (errors.length) {
   console.error("Cloudflare deploy validation failed:");

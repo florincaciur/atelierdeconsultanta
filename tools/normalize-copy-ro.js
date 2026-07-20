@@ -4,6 +4,7 @@
 const fs = require("fs");
 const path = require("path");
 const cheerio = require("cheerio");
+const { serializeJsonLd } = require("./schema-helpers");
 
 const ROOT = path.resolve(__dirname, "..");
 const CHECK_ONLY = process.argv.includes("--check");
@@ -27,8 +28,8 @@ const ROMANIAN_COPY_REPLACEMENTS = [
   [/\bacasa\b/g, "acasă"],
   [/\bSolicita\b/g, "Solicită"],
   [/\bsolicita\b/g, "solicită"],
-  [/\bSa\b/g, "Să"],
-  [/\bsa\b/g, "să"],
+  [/\bSa(?=\s+(?:fie|poată|se|verifice|pregătească|depună))\b/g, "Să"],
+  [/\b(?:ca|poate|trebuie|astfel încât) sa\b/g, (match) => match.replace(/sa$/, "să")],
   [/\bDaca\b/g, "Dacă"],
   [/\bdaca\b/g, "dacă"],
   [/\bColectie\b/g, "Colecție"],
@@ -44,6 +45,7 @@ const ROMANIAN_COPY_REPLACEMENTS = [
   [/\brealista\b/g, "realistă"],
   [/\bprudenta\b/g, "prudentă"],
   [/\borientativa\b/g, "orientativă"],
+  [/\butila\b/g, "utilă"],
   [/\bagricola\b/g, "agricolă"],
   [/\beconomica\b/g, "economică"],
   [/\bjuridica\b/g, "juridică"],
@@ -60,6 +62,7 @@ const ROMANIAN_COPY_REPLACEMENTS = [
   [/\bFinantare\b/g, "Finanțare"],
   [/\bfinantare\b/g, "finanțare"],
   [/\bfinantari\b/g, "finanțări"],
+  [/\bfinantarea\b/g, "finanțarea"],
   [/\bfinantarii\b/g, "finanțării"],
   [/\bfinantata\b/g, "finanțată"],
   [/\bfinantat\b/g, "finanțat"],
@@ -76,6 +79,16 @@ const ROMANIAN_COPY_REPLACEMENTS = [
   [/\binvestitia\b/g, "investiția"],
   [/\binvestitiei\b/g, "investiției"],
   [/\binvestitiile\b/g, "investițiile"],
+  [/\bFunctie\b/g, "Funcție"],
+  [/\bfunctie\b/g, "funcție"],
+  [/\beligibilitatii\b/g, "eligibilității"],
+  [/\bincadrare\b/g, "încadrare"],
+  [/\bdiferita\b/g, "diferită"],
+  [/\bmecanica\b/g, "mecanică"],
+  [/\brecomandam\b/g, "recomandăm"],
+  [/\bpasii\b/g, "pașii"],
+  [/\bintampla\b/g, "întâmplă"],
+  [/\bsolutia\b/g, "soluția"],
   [/\bConditii\b/g, "Condiții"],
   [/\bconditii\b/g, "condiții"],
   [/\bconditiile\b/g, "condițiile"],
@@ -236,7 +249,6 @@ const ROMANIAN_COPY_REPLACEMENTS = [
   [/\bsustinuta\b/g, "susținută"],
   [/\bsustinute\b/g, "susținute"],
   [/\bsursa oficiala\b/g, "sursa oficială"],
-  [/\boferta\b/g, "ofertă"],
   [/\bofertare\b/g, "ofertare"],
   [/\bactiuni\b/g, "acțiuni"],
   [/\bactiunile\b/g, "acțiunile"],
@@ -258,17 +270,110 @@ function normalizeRomanianCopy(value) {
   for (const [pattern, replacement] of ROMANIAN_COPY_REPLACEMENTS) {
     text = text.replace(pattern, replacement);
   }
+  text = text.replace(
+    /\b(Pot|pot|Poți|poți|Poate|poate|Putem|putem|Puteți|puteți|Vor|vor|Va|va|Ar|ar) verifică(?=\s|[?!.,;:]|$)/gu,
+    (match) => match.replace(/verifică$/, "verifica")
+  );
+  text = text.replace(/\b(pentru|fără) a verifică(?=\s|[?!.,;:]|$)/gu, (match) => match.replace(/verifică$/, "verifica"));
+  text = text.replace(
+    /\b(Pot|pot|Poți|poți|Poate|poate|Putem|putem|Puteți|puteți|Vor|vor|Va|va|Ar|ar) schimbă(?=\s|[?!.,;:]|$)/gu,
+    (match) => match.replace(/schimbă$/, "schimba")
+  );
+  text = text.replace(/\b(pentru|fără) a schimbă(?=\s|[?!.,;:]|$)/gu, (match) => match.replace(/schimbă$/, "schimba"));
   return text;
+}
+
+const JSON_LD_PROTECTED_KEYS = new Set([
+  "@context",
+  "@id",
+  "@type",
+  "applicationCategory",
+  "addressCountry",
+  "availableLanguage",
+  "contentUrl",
+  "dateCreated",
+  "dateModified",
+  "datePublished",
+  "email",
+  "embedUrl",
+  "identifier",
+  "image",
+  "inLanguage",
+  "item",
+  "latitude",
+  "logo",
+  "longitude",
+  "openingHours",
+  "operatingSystem",
+  "position",
+  "price",
+  "priceCurrency",
+  "query-input",
+  "sameAs",
+  "telephone",
+  "termCode",
+  "thumbnailUrl",
+  "url",
+]);
+
+function isProtectedJsonLdValue(key, value) {
+  if (JSON_LD_PROTECTED_KEYS.has(key)) return true;
+  if (/^(?:https?:|mailto:|tel:|\/)/i.test(value)) return true;
+  if (/^\d{4}-\d{2}-\d{2}(?:T.*)?$/.test(value)) return true;
+  if (/^[A-Z0-9][A-Z0-9._/-]{1,15}$/.test(value)) return true;
+  if (/^[+\d][\d\s().-]+$/.test(value)) return true;
+  return false;
+}
+
+function normalizeJsonLdValue(value, key = "") {
+  if (Array.isArray(value)) return value.map((item) => normalizeJsonLdValue(item, key));
+  if (value && typeof value === "object") {
+    return Object.fromEntries(Object.entries(value).map(([childKey, child]) => [childKey, normalizeJsonLdValue(child, childKey)]));
+  }
+  if (typeof value !== "string") return value;
+
+  if (key === "inLanguage" || key === "availableLanguage") {
+    if (/^(?:Romanian|română|ro|ro-RO)$/i.test(value.trim())) return "ro-RO";
+  }
+  if (isProtectedJsonLdValue(key, value)) return value;
+  return normalizeRomanianCopy(value);
+}
+
+function normalizeJsonLdScripts(html) {
+  let changed = false;
+  const errors = [];
+  let blockIndex = 0;
+  const output = html.replace(
+    /(<script\b[^>]*\btype=["']application\/ld\+json["'][^>]*>)([\s\S]*?)(<\/script>)/gi,
+    (full, opening, raw, closing) => {
+      blockIndex += 1;
+      const source = raw.trim();
+      if (!source) return full;
+      let parsed;
+      try {
+        parsed = JSON.parse(source);
+      } catch (error) {
+        errors.push({ blockIndex, message: error.message });
+        return full;
+      }
+      const serialized = serializeJsonLd(normalizeJsonLdValue(parsed));
+      if (serialized === source) return full;
+      changed = true;
+      return `${opening}${serialized}${closing}`;
+    }
+  );
+  return { html: output, changed, errors, blocksChecked: blockIndex };
 }
 
 function normalizeHtmlCopy(html) {
   const preferredEol = html.includes("\r\n") ? "\r\n" : "\n";
-  const $ = cheerio.load(html, { decodeEntities: false });
-  let changed = false;
+  const jsonLdResult = normalizeJsonLdScripts(html);
+  const $ = cheerio.load(jsonLdResult.html, { decodeEntities: false });
+  let domChanged = false;
 
   function normalizeValue(value) {
     const next = normalizeRomanianCopy(value);
-    if (next !== value) changed = true;
+    if (next !== value) domChanged = true;
     return next;
   }
 
@@ -306,7 +411,7 @@ function normalizeHtmlCopy(html) {
       if (next !== node.data) node.data = next;
     });
 
-  const output = (changed ? $.html() : html).replace(/[ \t]+$/gm, "");
+  const output = (domChanged ? $.html() : jsonLdResult.html).replace(/[ \t]+$/gm, "");
   return preferredEol === "\r\n" ? output.replace(/\r?\n/g, "\r\n") : output;
 }
 
@@ -330,17 +435,34 @@ function* walkHtml(target) {
 
 function main() {
   const changed = [];
+  const jsonLdChanged = [];
+  const jsonLdErrors = [];
   for (const file of walkHtml(TARGET)) {
     const input = fs.readFileSync(file, "utf8");
+    const jsonLdAudit = normalizeJsonLdScripts(input);
+    const relative = path.relative(ROOT, file);
+    if (jsonLdAudit.changed) jsonLdChanged.push(relative);
+    for (const error of jsonLdAudit.errors) jsonLdErrors.push({ file: relative, ...error });
     const output = normalizeHtmlCopy(input);
-    if (input === output) continue;
-    changed.push(path.relative(ROOT, file));
+    const semanticInput = input.replace(/\r\n/g, "\n");
+    const semanticOutput = output.replace(/\r\n/g, "\n");
+    if (semanticInput === semanticOutput) continue;
+    changed.push(relative);
     if (!CHECK_ONLY) fs.writeFileSync(file, output, "utf8");
+  }
+
+  if (jsonLdErrors.length) {
+    console.error(`Invalid JSON-LD detected in ${jsonLdErrors.length} block(s):`);
+    for (const error of jsonLdErrors) console.error(` - ${error.file} block ${error.blockIndex}: ${error.message}`);
   }
 
   if (CHECK_ONLY && changed.length) {
     console.error(`Romanian copy issues detected in ${changed.length} file(s):`);
-    for (const file of changed) console.error(` - ${file}`);
+    const jsonLdFiles = new Set(jsonLdChanged);
+    for (const file of changed) console.error(` - ${file}${jsonLdFiles.has(file) ? " [JSON-LD]" : ""}`);
+  }
+
+  if (jsonLdErrors.length || (CHECK_ONLY && changed.length)) {
     process.exitCode = 1;
     return;
   }
@@ -357,5 +479,7 @@ if (require.main === module) main();
 module.exports = {
   ROMANIAN_COPY_REPLACEMENTS,
   normalizeHtmlCopy,
+  normalizeJsonLdScripts,
+  normalizeJsonLdValue,
   normalizeRomanianCopy,
 };

@@ -12,6 +12,8 @@ const PROGRAMMATIC_MIN_WORDS = 1100;
 const PROGRAMMATIC_MIN_FAQ = 5;
 const {
   SITE,
+  PAGE_KINDS,
+  articleSchema,
   buildPageMetadata,
   breadcrumbItemsForPath,
   breadcrumbSchema,
@@ -20,6 +22,8 @@ const {
   jsonLdGraph,
   normalizeCanonicalPath,
   organizationSchema,
+  pageKindForPath,
+  serviceSchema,
   standardInternalLinksForPath,
   webPageSchema,
   websiteSchema
@@ -29,13 +33,7 @@ const {
   normalizeRomanianCopy
 } = require("./normalize-copy-ro");
 const { designFamilyForSlug } = require("./design-family-map");
-const CLARITY_TRACKING_CODE = `  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "wnvzyco6rq");
-  </script>`;
+const ANALYTICS_EVENTS_SCRIPT = `  <script src="/assets/analytics-events.js" defer></script>`;
 
 function publicText(value, fallback = "") {
   const text = String(value ?? "").trim();
@@ -220,29 +218,37 @@ function metadataForRoute({ title, description, route, h1, summary }) {
 }
 
 function schema(title, description, route, faq, updatedAt = "2026-05-20", metadata = metadataForRoute({ title, description, route }), currentName = title) {
+  const pageKind = pageKindForPath(route);
   const pageNode = webPageSchema({
     url: metadata.canonicalUrl,
     name: metadata.title,
     description: metadata.description,
     dateModified: updatedAt
   });
+  if (pageKind === PAGE_KINDS.ARTICLE) pageNode.mainEntity = { "@id": `${metadata.canonicalUrl}#article` };
+  if (pageKind === PAGE_KINDS.SERVICE) pageNode.mainEntity = { "@id": `${metadata.canonicalUrl}#service` };
+  const contentNode = pageKind === PAGE_KINDS.ARTICLE
+    ? articleSchema({
+      url: metadata.canonicalUrl,
+      headline: publicText(metadata.title),
+      description: publicText(metadata.description),
+      datePublished: updatedAt,
+      dateModified: updatedAt
+    })
+    : pageKind === PAGE_KINDS.SERVICE
+      ? serviceSchema({
+        url: metadata.canonicalUrl,
+        name: currentName || metadata.title,
+        description: metadata.description,
+        serviceType: "Consultanță pentru fonduri europene"
+      })
+      : null;
   return jsonLdGraph([
     organizationSchema(),
     websiteSchema(),
     pageNode,
     breadcrumbSchema(breadcrumbItemsForPath(route, currentName)),
-    {
-      "@type": "Article",
-      "@id": `${metadata.canonicalUrl}#article`,
-      mainEntityOfPage: { "@id": pageNode["@id"] },
-      headline: publicText(metadata.title),
-      description: publicText(metadata.description),
-      inLanguage: "ro-RO",
-      author: { "@id": `${SITE}/#organization` },
-      publisher: { "@id": `${SITE}/#organization` },
-      datePublished: updatedAt,
-      dateModified: updatedAt
-    },
+    contentNode,
     faqPageSchema(faq, { minItems: 2 })
   ]);
 }
@@ -267,7 +273,7 @@ function html({ title, description, h1, route, category, summary, body, faq, rel
   <link rel="stylesheet" href="/assets/seo-hub.css" />
   <link rel="stylesheet" href="/assets/see-also.css" />
   <script type="application/ld+json">${schema(title, description, route, faq, updatedAt, metadata, h1)}</script>
-${CLARITY_TRACKING_CODE}
+${ANALYTICS_EVENTS_SCRIPT}
 </head>
 <body class="page-family-${esc(family)}">
   ${GLOBAL_HEADER}
@@ -299,7 +305,7 @@ ${CLARITY_TRACKING_CODE}
       <div class="cta-actions"><a class="btn btn-primary" href="/contact">Trimite datele proiectului</a></div>
     </section>
   </main>
-  <footer class="footer">© 2026 FABER - Atelier de Consultanta</footer>
+  <footer class="footer">© 2026 FABER - Atelier de Consultanță</footer>
 </body>
 </html>
 `;
@@ -322,7 +328,7 @@ function redirectFallbackPage({ route, target, title }) {
   <link rel="canonical" href="${canonical(target)}" />
   <meta http-equiv="refresh" content="0; url=${cleanUrl(target)}" />
   <script>window.location.replace('${cleanUrl(target)}');</script>
-${CLARITY_TRACKING_CODE}
+${ANALYTICS_EVENTS_SCRIPT}
 </head>
 <body>
   <main style="font-family: Arial, sans-serif; max-width: 720px; margin: 12vh auto; padding: 32px; line-height: 1.6; color: #1a2540;">

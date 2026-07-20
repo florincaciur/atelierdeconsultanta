@@ -1,7 +1,8 @@
 {
-  "generatedAt": "2026-07-09T21:19:01.221Z",
+  "generatedAt": "2026-07-13T11:53:48.913Z",
   "mode": "check",
   "changedFiles": [
+    "admin/index.html",
     "afir-autoconsum-agroalimentar.html",
     "afir.html",
     "afir/index.html",
@@ -42,12 +43,13 @@
     "dr-12-afir-instalarea-tinerilor-fermieri.html",
     "dr-14-afir-conditii-eligibilitate-greseli-frecvente.html",
     "dr12-afir-tineri-fermieri.html",
-    "dr12-afir.html",
-    "dr14.html",
+    "dr12-afir/index.html",
+    "dr14/index.html",
     "eligibilitate-fonduri-europene.html",
     "eligibilitate-fonduri-europene/index.html",
     "femeia-antreprenor-2026-conditii-idei-afaceri.html",
     "femeia-antreprenor-2026.html",
+    "femeia-antreprenor-2026/index.html",
     "finantari-panouri-fotovoltaice.html",
     "finantari-panouri-fotovoltaice/index.html",
     "firma-consultanta-fonduri-europene.html",
@@ -89,7 +91,7 @@
     "pnrr-digitalizare-imm/index.html",
     "pnrr.html",
     "pnrr/index.html",
-    "por-adr-nord-est.html",
+    "por-adr-nord-est/index.html",
     "pro-infra.html",
     "start-up-nation-2026-cheltuieli-eligibile.html",
     "start-up-nation-2026-cheltuieli-eligibile/index.html",
@@ -111,12 +113,12 @@
     "verificare-eligibilitate-fonduri-europene/index.html"
   ],
   "summary": {
-    "totalFiles": 172,
-    "passedFiles": 172,
-    "failedFiles": 0
+    "totalFiles": 180,
+    "passedFiles": 176,
+    "failedFiles": 4
   },
   "inlineScripts": {
-    "checked": 270,
+    "checked": 108,
     "failures": []
   },
   "results": [
@@ -193,7 +195,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "AFIR Autoconsum Agroalimentar – energie regenerabilă pentru ferme și procesatori"
+          "AFIR Autoconsum Agroalimentar 2026 – energie solară pentru ferme și procesatori"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -209,7 +211,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "AFIR Autoconsum Agroalimentar – energie regenerabilă pentru ferme și procesatori"
+          "AFIR Autoconsum Agroalimentar 2026 – energie solară pentru ferme și procesatori"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -257,7 +259,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Apeluri GAL: ce sunt și cum se verifică"
+          "Apeluri GALFinanțări locale"
         ],
         "missingAlt": [],
         "relatedCount": 2,
@@ -273,7 +275,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Autoconsum public fotovoltaice pentru instituții publice"
+          "Autoconsum PubliciEnergie Regenerabilă"
         ],
         "missingAlt": [],
         "relatedCount": 2,
@@ -289,7 +291,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Autoconsum public fotovoltaice pentru instituții publice"
+          "Autoconsum PubliciEnergie Regenerabilă"
         ],
         "missingAlt": [],
         "relatedCount": 2,
@@ -388,7 +390,7 @@
           "Calculator SO/SOC pentru AFIR DR12 și DR14"
         ],
         "missingAlt": [],
-        "relatedCount": 2,
+        "relatedCount": 1,
         "jsonLdErrors": []
       }
     },
@@ -521,6 +523,38 @@
       }
     },
     {
+      "file": "cheltuieli-eligibile-pocidif-21.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Cheltuieli eligibile PoCIDIF 2.1 – hardware, software și servicii CDI"
+        ],
+        "missingAlt": [],
+        "relatedCount": 1,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "cheltuieli-eligibile-pocidif-21/index.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Cheltuieli eligibile PoCIDIF 2.1 – hardware, software și servicii CDI"
+        ],
+        "missingAlt": [],
+        "relatedCount": 1,
+        "jsonLdErrors": []
+      }
+    },
+    {
       "file": "cheltuieli-eligibile-startup-nation.html",
       "pass": true,
       "noindex": true,
@@ -548,7 +582,7 @@
           "Cod CAEN Start Up Nation 2026: cum verifici activitatea eligibila"
         ],
         "missingAlt": [],
-        "relatedCount": 3,
+        "relatedCount": 2,
         "jsonLdErrors": []
       }
     },
@@ -932,7 +966,7 @@
           "Despre FABER - Atelier de Consultanță"
         ],
         "missingAlt": [],
-        "relatedCount": 2,
+        "relatedCount": 1,
         "jsonLdErrors": []
       }
     },
@@ -993,7 +1027,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Digitalizare IMM: hub pentru proiecte, buget IT și consultanță"
+          "Digitalizare IMM2024–2026"
         ],
         "missingAlt": [],
         "relatedCount": 3,
@@ -1009,10 +1043,42 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Digitalizare IMM: hub pentru proiecte, buget IT și consultanță"
+          "Digitalizare IMM2024–2026"
         ],
         "missingAlt": [],
         "relatedCount": 3,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "documente-punctaj-pocidif-21.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Documente și punctaj PoCIDIF 2.1 – dosar, indicatori și evaluare"
+        ],
+        "missingAlt": [],
+        "relatedCount": 1,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "documente-punctaj-pocidif-21/index.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Documente și punctaj PoCIDIF 2.1 – dosar, indicatori și evaluare"
+        ],
+        "missingAlt": [],
+        "relatedCount": 1,
         "jsonLdErrors": []
       }
     },
@@ -1025,7 +1091,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "DR12 pentru tineri fermieri instalați"
+          "DR12 AFIR și instalarea tinerilor fermieri: diferențe"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -1065,34 +1131,20 @@
       }
     },
     {
-      "file": "dr12-afir.html",
-      "pass": true,
-      "noindex": false,
-      "technicalFile": false,
-      "issues": [],
-      "details": {
-        "h1Count": 1,
-        "h1s": [
-          "DR12 AFIR: consolidarea exploatatiilor tinerilor fermieri"
-        ],
-        "missingAlt": [],
-        "relatedCount": 1,
-        "jsonLdErrors": []
-      }
-    },
-    {
       "file": "dr12-afir/index.html",
-      "pass": true,
+      "pass": false,
       "noindex": false,
       "technicalFile": false,
-      "issues": [],
+      "issues": [
+        "relatedLinks"
+      ],
       "details": {
         "h1Count": 1,
         "h1s": [
-          "DR12 AFIR: consolidarea exploatatiilor tinerilor fermieri"
+          "DR12 AFIR 2026 – investiții pentru tineri fermieri și fermieri până la 45 de ani"
         ],
         "missingAlt": [],
-        "relatedCount": 1,
+        "relatedCount": 0,
         "jsonLdErrors": []
       }
     },
@@ -1145,34 +1197,20 @@
       }
     },
     {
-      "file": "dr14.html",
-      "pass": true,
-      "noindex": false,
-      "technicalFile": false,
-      "issues": [],
-      "details": {
-        "h1Count": 1,
-        "h1s": [
-          "DR14 AFIR: investiții pentru ferme mici"
-        ],
-        "missingAlt": [],
-        "relatedCount": 1,
-        "jsonLdErrors": []
-      }
-    },
-    {
       "file": "dr14/index.html",
-      "pass": true,
+      "pass": false,
       "noindex": false,
       "technicalFile": false,
-      "issues": [],
+      "issues": [
+        "relatedLinks"
+      ],
       "details": {
         "h1Count": 1,
         "h1s": [
-          "DR14 AFIR: investiții pentru ferme mici"
+          "DR14 AFIR 2026 – investiții pentru fermele de mici dimensiuni"
         ],
         "missingAlt": [],
-        "relatedCount": 1,
+        "relatedCount": 0,
         "jsonLdErrors": []
       }
     },
@@ -1185,7 +1223,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "e-MOVE RO: statii de încărcare, energie regenerabilă și stocare"
+          "e-MOVE ROStații de încărcare și energie regenerabilă"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -1225,6 +1263,38 @@
       }
     },
     {
+      "file": "eligibilitate-pocidif-21.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Eligibilitate PoCIDIF 2.1 – IMM TIC, coduri CAEN și parteneriate"
+        ],
+        "missingAlt": [],
+        "relatedCount": 1,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "eligibilitate-pocidif-21/index.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Eligibilitate PoCIDIF 2.1 – IMM TIC, coduri CAEN și parteneriate"
+        ],
+        "missingAlt": [],
+        "relatedCount": 1,
+        "jsonLdErrors": []
+      }
+    },
+    {
       "file": "femeia-antreprenor-2026-conditii-idei-afaceri.html",
       "pass": true,
       "noindex": false,
@@ -1249,7 +1319,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Femeia Antreprenor 2026: program, eligibilitate și dosar"
+          "Femeia Antreprenor2026"
         ],
         "missingAlt": [],
         "relatedCount": 2,
@@ -1265,10 +1335,10 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Femeia Antreprenor 2026: program, eligibilitate și dosar"
+          "Femeia Antreprenor2026"
         ],
         "missingAlt": [],
-        "relatedCount": 2,
+        "relatedCount": 1,
         "jsonLdErrors": []
       }
     },
@@ -1409,7 +1479,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Fondul pentru Modernizare 2026 – Energie regenerabilă: Ghid pentru investitori"
+          "Fondul pentru ModernizareEnergie regenerabilă"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -1425,7 +1495,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Fondul pentru Modernizare 2026 – Energie regenerabilă: Ghid pentru investitori"
+          "Fondul pentru ModernizareEnergie regenerabilă"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -1745,7 +1815,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Fonduri europene Nord-Est"
+          "Fonduri europene în regiunea Nord-Est"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -1905,7 +1975,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Fonduri regionale: programe regionale 2021-2027"
+          "Programe regionale și ADR-uri din România"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -1921,7 +1991,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "GAL-AFIR: proiecte LEADER publice și private"
+          "GAL-AFIRApeluri pentru beneficiari publici și privați"
         ],
         "missingAlt": [],
         "relatedCount": 2,
@@ -2095,7 +2165,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Consultanță fonduri europene cu eligibilitate verificată"
+          "Consultanță și proiectare pentru proiecte cu fonduri europene"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -2207,7 +2277,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Modernizarea microîntreprinderilor – Apel 2 Nord-Est: Ghid practic pentru antreprenori"
+          "Investiții pentru modernizarea microîntreprinderilor – Apel 2 Nord-Est"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -2223,7 +2293,23 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Modernizarea microîntreprinderilor – Apel 2 Nord-Est: Ghid practic pentru antreprenori"
+          "Investiții pentru modernizarea microîntreprinderilor – Apel 2 Nord-Est"
+        ],
+        "missingAlt": [],
+        "relatedCount": 1,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "management-proiecte-fonduri-europene/index.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Managementul proiectelor finanțate din fonduri europene"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -2239,7 +2325,41 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Metodologia FABER pentru verificarea eligibilitatii la fonduri europene"
+          "Metodologia FABER pentru verificarea eligibilității la fonduri europene"
+        ],
+        "missingAlt": [],
+        "relatedCount": 1,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "partials/global-header.html",
+      "pass": false,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [
+        "metaDescription",
+        "canonical",
+        "singleH1"
+      ],
+      "details": {
+        "h1Count": 0,
+        "h1s": [],
+        "missingAlt": [],
+        "relatedCount": 0,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "plan-de-afaceri-fonduri-europene/index.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Plan de afaceri pentru proiecte finanțate"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -2327,22 +2447,6 @@
       }
     },
     {
-      "file": "pocidif-21.html",
-      "pass": true,
-      "noindex": false,
-      "technicalFile": false,
-      "issues": [],
-      "details": {
-        "h1Count": 1,
-        "h1s": [
-          "PoCIDIF 2.1 – Granturi pentru inovare digitală în IMM‑urile TIC"
-        ],
-        "missingAlt": [],
-        "relatedCount": 1,
-        "jsonLdErrors": []
-      }
-    },
-    {
       "file": "pocidif-21/index.html",
       "pass": true,
       "noindex": false,
@@ -2351,7 +2455,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "PoCIDIF 2.1 – Granturi pentru inovare digitală în IMM‑urile TIC"
+          "PoCIDIF 2.1 – inovare și tehnologii digitale pentru IMM din sectorul TIC"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -2375,22 +2479,6 @@
       }
     },
     {
-      "file": "por-adr-nord-est.html",
-      "pass": true,
-      "noindex": false,
-      "technicalFile": false,
-      "issues": [],
-      "details": {
-        "h1Count": 1,
-        "h1s": [
-          "POR ADR Nord-Est pentru microîntreprinderi"
-        ],
-        "missingAlt": [],
-        "relatedCount": 1,
-        "jsonLdErrors": []
-      }
-    },
-    {
       "file": "por-adr-nord-est/index.html",
       "pass": true,
       "noindex": false,
@@ -2399,10 +2487,10 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "POR ADR Nord-Est pentru microîntreprinderi"
+          "Programul Regional Nord-Est – finanțări pentru IMM și microîntreprinderi"
         ],
         "missingAlt": [],
-        "relatedCount": 1,
+        "relatedCount": 0,
         "jsonLdErrors": []
       }
     },
@@ -2431,7 +2519,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "PRO INFRA: producție pentru infrastructura de transport"
+          "PRO INFRA – eficiență energetică pentru producătorii din infrastructura de transport"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -2447,7 +2535,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "PRO INFRA: producție pentru infrastructura de transport"
+          "PRO INFRA – eficiență energetică pentru producătorii din infrastructura de transport"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -2480,6 +2568,38 @@
         "h1Count": 1,
         "h1s": [
           "Programul Tranziție Justă: verificare eligibilitate, regiuni și pași"
+        ],
+        "missingAlt": [],
+        "relatedCount": 1,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "proiectare-fonduri-europene/index.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Proiectare pentru investiții finanțate din fonduri europene"
+        ],
+        "missingAlt": [],
+        "relatedCount": 1,
+        "jsonLdErrors": []
+      }
+    },
+    {
+      "file": "resurse-utile/index.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Resurse utile pentru proiecte cu fonduri europene"
         ],
         "missingAlt": [],
         "relatedCount": 1,
@@ -2530,7 +2650,7 @@
           "Start Up Nation 2026: cheltuieli eligibile"
         ],
         "missingAlt": [],
-        "relatedCount": 3,
+        "relatedCount": 2,
         "jsonLdErrors": []
       }
     },
@@ -2562,7 +2682,7 @@
           "Start-Up Nation 2026: checklist de condiții"
         ],
         "missingAlt": [],
-        "relatedCount": 3,
+        "relatedCount": 2,
         "jsonLdErrors": []
       }
     },
@@ -2610,7 +2730,7 @@
           "Start Up Nation 2026: idei de afaceri"
         ],
         "missingAlt": [],
-        "relatedCount": 3,
+        "relatedCount": 2,
         "jsonLdErrors": []
       }
     },
@@ -2655,7 +2775,7 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Start-Up Nation 2026: ghid central pentru pregătirea dosarului"
+          "Start-Up Nation2026"
         ],
         "missingAlt": [],
         "relatedCount": 2,
@@ -2671,10 +2791,10 @@
       "details": {
         "h1Count": 1,
         "h1s": [
-          "Start-Up Nation 2026: ghid central pentru pregătirea dosarului"
+          "Start-Up Nation2026"
         ],
         "missingAlt": [],
-        "relatedCount": 3,
+        "relatedCount": 2,
         "jsonLdErrors": []
       }
     },
@@ -2775,6 +2895,22 @@
       }
     },
     {
+      "file": "studiu-fezabilitate-fonduri-europene/index.html",
+      "pass": true,
+      "noindex": false,
+      "technicalFile": false,
+      "issues": [],
+      "details": {
+        "h1Count": 1,
+        "h1s": [
+          "Studiu de fezabilitate pentru proiecte cu fonduri europene"
+        ],
+        "missingAlt": [],
+        "relatedCount": 1,
+        "jsonLdErrors": []
+      }
+    },
+    {
       "file": "surse-oficiale-fonduri-europene/index.html",
       "pass": true,
       "noindex": false,
@@ -2840,17 +2976,19 @@
     },
     {
       "file": "verificare-eligibilitate-fonduri-europene/index.html",
-      "pass": true,
+      "pass": false,
       "noindex": false,
       "technicalFile": false,
-      "issues": [],
+      "issues": [
+        "relatedLinks"
+      ],
       "details": {
         "h1Count": 1,
         "h1s": [
           "Verificare eligibilitate pentru fonduri europene"
         ],
         "missingAlt": [],
-        "relatedCount": 1,
+        "relatedCount": 0,
         "jsonLdErrors": []
       }
     },

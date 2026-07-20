@@ -6,8 +6,18 @@ const path = require("path");
 
 const ROOT = path.resolve(__dirname, "..");
 const GLOBAL_HEADER = fs.readFileSync(path.join(ROOT, "partials", "global-header.html"), "utf8").trim();
-const SITE = "https://atelierdeconsultanta.ro";
 const UPDATED = "2026-07-10";
+const {
+  SITE,
+  breadcrumbItemsForPath,
+  breadcrumbSchema,
+  faqPageSchema,
+  jsonLdGraph,
+  organizationSchema,
+  serviceSchema,
+  webPageSchema,
+  websiteSchema
+} = require("./schema-helpers");
 
 const pages = [
   {
@@ -156,54 +166,27 @@ function escapeHtml(value) {
 
 function schemaFor(page) {
   const url = `${SITE}/${page.slug}`;
-  const faq = page.faqs.map(([name, text]) => ({
-    "@type": "Question",
-    name,
-    acceptedAnswer: { "@type": "Answer", text }
-  }));
-  return JSON.stringify({
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": `${SITE}/#organization`,
-        name: "FABER – Atelier de Consultanță",
-        url: `${SITE}/`,
-        email: "atelier.consultanta@gmail.com",
-        areaServed: { "@type": "Country", name: "România" },
-        logo: { "@type": "ImageObject", url: `${SITE}/favicon-192.png` }
-      },
-      {
-        "@type": "WebPage",
-        "@id": `${url}#webpage`,
-        url,
-        name: page.title,
-        description: page.description,
-        inLanguage: "ro-RO",
-        dateModified: UPDATED,
-        publisher: { "@id": `${SITE}/#organization` }
-      },
-      {
-        "@type": "Service",
-        "@id": `${url}#service`,
-        name: page.h1,
-        description: page.description,
-        serviceType: page.serviceType,
-        provider: { "@id": `${SITE}/#organization` },
-        areaServed: { "@type": "Country", name: "România" },
-        url
-      },
-      {
-        "@type": "BreadcrumbList",
-        itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Acasă", item: `${SITE}/` },
-          { "@type": "ListItem", position: 2, name: "Consultanță fonduri europene", item: `${SITE}/consultanta-fonduri-europene` },
-          { "@type": "ListItem", position: 3, name: page.h1, item: url }
-        ]
-      },
-      { "@type": "FAQPage", mainEntity: faq }
-    ]
-  }, null, 2).replace(/</g, "\\u003c");
+  const pageNode = webPageSchema({
+    url,
+    name: page.title,
+    description: page.description,
+    datePublished: UPDATED,
+    dateModified: UPDATED
+  });
+  pageNode.mainEntity = { "@id": `${url}#service` };
+  return jsonLdGraph([
+    organizationSchema(),
+    websiteSchema(),
+    pageNode,
+    serviceSchema({
+      url,
+      name: page.h1,
+      description: page.description,
+      serviceType: page.serviceType
+    }),
+    breadcrumbSchema(breadcrumbItemsForPath(`/${page.slug}`, page.h1)),
+    faqPageSchema(page.faqs, { minItems: 2 })
+  ]).replace(/</g, "\\u003c");
 }
 
 function renderPage(page) {
@@ -241,9 +224,7 @@ function renderPage(page) {
   <noscript><link rel="stylesheet" href="/assets/see-also.css"></noscript>
   <link rel="stylesheet" href="/assets/design-profiles.css">
   <script type="application/ld+json">${schemaFor(page)}</script>
-  <script>
-    (function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","wnvzyco6rq");
-  </script>
+  <script src="/assets/analytics-events.js" defer></script>
 </head>
 <body class="page-family-service">
   ${GLOBAL_HEADER}

@@ -17,18 +17,15 @@ const {
   blogPostingSchema,
   canonicalUrl,
   faqPageSchema,
+  jsonLdGraph,
   normalizeCanonicalPath,
-  organizationSchema
+  organizationSchema,
+  webPageSchema,
+  websiteSchema
 } = require("./schema-helpers");
 const WEB_ERROR =
   "Nu pot genera articol publicabil: lipsește accesul web necesar pentru verificarea surselor oficiale, a SERP-urilor și a semnalelor AI Search.";
-const CLARITY_TRACKING_CODE = `  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "wnvzyco6rq");
-  </script>`;
+const ANALYTICS_EVENTS_SCRIPT = `  <script src="/assets/analytics-events.js" defer></script>`;
 
 const OFFICIAL_DOMAINS = [
   "afir.ro",
@@ -1317,13 +1314,22 @@ function buildArticle(config, research, sourceText, route, internalLinks) {
 
   const faqSchema = faqPageSchema(faq.map((item) => ({ question: item.q, answer: item.a })), { minItems: 2 });
 
+  const pageSchema = webPageSchema({
+    url: canonical,
+    name: metadata.title,
+    description: metadata.description,
+    datePublished: config.dataPublicarii,
+    dateModified: config.dataActualizarii
+  });
+  pageSchema.mainEntity = { "@id": `${canonical}#blogposting` };
+
   const breadcrumbSchemaNode = breadcrumbSchema([
-    { name: "Acasa", item: `${SITE}/` },
+    { name: "Acasă", item: `${SITE}/` },
     { name: "Blog", item: `${SITE}/blog` },
     { name: metadata.title, item: canonical }
   ]);
 
-  const articleSchemas = [organizationSchema({ minimal: true }), blogPosting, faqSchema, breadcrumbSchemaNode].filter(Boolean);
+  const articleSchemas = [organizationSchema(), websiteSchema(), pageSchema, blogPosting, faqSchema, breadcrumbSchemaNode].filter(Boolean);
   return `<!DOCTYPE html>
 <html lang="ro">
 <head>
@@ -1341,14 +1347,14 @@ function buildArticle(config, research, sourceText, route, internalLinks) {
   <meta property="og:url" content="${esc(metadata.ogUrl)}" />
   <meta property="og:image" content="${SITE}/og-image.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
-${CLARITY_TRACKING_CODE}
+${ANALYTICS_EVENTS_SCRIPT}
   <link rel="icon" type="image/png" href="/favicon.png" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/assets/blog/article.css" />
-  <script type="application/ld+json">${JSON.stringify({ "@context": "https://schema.org", "@graph": articleSchemas }, null, 2)}</script>
+  <script type="application/ld+json">${jsonLdGraph(articleSchemas)}</script>
 </head>
 <body>
   ${GLOBAL_HEADER}

@@ -26,11 +26,13 @@
     window.requestAnimationFrame(updateScrollState);
   }, { passive: true });
 
-  window.closeMobileMenu = function closeMobileMenu() {
+  window.closeMobileMenu = function closeMobileMenu(options) {
+    var wasOpen = mobileMenu.classList.contains('open');
     mobileMenu.classList.remove('open');
     hamburgerBtn.classList.remove('open');
     hamburgerBtn.setAttribute('aria-expanded', 'false');
     document.body.style.overflow = '';
+    if (wasOpen && options && options.restoreFocus) hamburgerBtn.focus();
   };
 
   hamburgerBtn.addEventListener('click', function () {
@@ -120,11 +122,13 @@
   function openEligibilityDialog(event, opener) {
     if (event) event.preventDefault();
     if (!eligibilityDialog) return;
-    eligibilityDialogTrigger = opener || document.activeElement;
+    var openedFromMobileMenu = opener && mobileMenu.contains(opener);
+    eligibilityDialogTrigger = openedFromMobileMenu ? hamburgerBtn : (opener || document.activeElement);
     window.closeMobileMenu();
     window.closeDropdown();
     eligibilityDialog.hidden = false;
     document.body.style.overflow = 'hidden';
+    document.dispatchEvent(new CustomEvent('faber:whatsapp-dialog-open'));
     window.requestAnimationFrame(function () {
       if (eligibilityDialogClose) eligibilityDialogClose.focus();
     });
@@ -181,7 +185,7 @@
       closeEligibilityDialog();
       return;
     }
-    window.closeMobileMenu();
+    window.closeMobileMenu({ restoreFocus: mobileMenu.classList.contains('open') });
     window.closeDropdown({ restoreFocus: dropdownPanel && !dropdownPanel.hidden });
   });
 })();

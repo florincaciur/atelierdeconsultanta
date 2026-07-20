@@ -2,6 +2,10 @@
 
 const fs = require("fs");
 const path = require("path");
+const {
+  loadProgramConfig,
+  programForRoute
+} = require("./program-factual-governance");
 
 const ROOT = path.resolve(__dirname, "..");
 const GUIDES_PATH = path.join(ROOT, "official-guides.json");
@@ -68,7 +72,10 @@ function normalizeOfficialSource(key, entry) {
     documentType: publicText(guide.documentType || guide.type),
     url: url || "",
     accessedAt: publicText(guide.accessedAt || guide.lastVerifiedAt),
-    note: guide.note || ""
+    note: guide.note || "",
+    programIds: Array.isArray(guide.programIds) ? guide.programIds : [],
+    sourceStatus: publicText(guide.sourceStatus),
+    reviewedAt: publicText(guide.reviewedAt || guide.accessedAt || guide.lastVerifiedAt)
   };
 
   source.isComplete = isHttpUrl(source.url)
@@ -78,6 +85,15 @@ function normalizeOfficialSource(key, entry) {
     && hasValue(source.accessedAt);
 
   return source;
+}
+
+function sourcesForProgram(programOrRoute, options = {}) {
+  const programs = options.programs || loadProgramConfig().programs;
+  const program = typeof programOrRoute === "string"
+    ? programForRoute(programOrRoute, programs)
+    : programOrRoute;
+  if (!program) return [];
+  return sourcesForKeys(program.officialGuideKeys || [], options.guides || readOfficialGuides());
 }
 
 function sourcesForKeys(keys, guides = readOfficialGuides()) {
@@ -160,5 +176,6 @@ module.exports = {
   officialSourceCitations,
   readOfficialGuides,
   renderOfficialSources,
+  sourcesForProgram,
   sourcesForKeys
 };

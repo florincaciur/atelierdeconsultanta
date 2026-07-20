@@ -1,0 +1,450 @@
+{
+  "lastReviewed": "2026-07-20",
+  "pages": {
+    "verificare-eligibilitate-fonduri-europene": {
+      "route": "/verificare-eligibilitate-fonduri-europene",
+      "file": "verificare-eligibilitate-fonduri-europene/index.html",
+      "replacedLinkCount": 4,
+      "title": "Continuă verificarea",
+      "links": [
+        {
+          "href": "/metodologie-verificare-eligibilitate",
+          "anchor": "urmărește metodologia verificării eligibilității",
+          "explanation": "Află ce criterii și documente sunt controlate înainte de recomandarea unui program."
+        },
+        {
+          "href": "/fonduri-europene",
+          "anchor": "compară programele de finanțare disponibile",
+          "explanation": "Folosește hubul programelor pentru a restrânge opțiunile după beneficiar și investiție."
+        },
+        {
+          "href": "/proiectare-fonduri-europene",
+          "anchor": "stabilește documentația tehnică necesară",
+          "explanation": "Separă analiza eligibilității de studiul de fezabilitate, DALI, proiectul tehnic și avizele cerute investiției."
+        },
+        {
+          "href": "/contact",
+          "anchor": "trimite documentele pentru verificarea inițială",
+          "explanation": "Transmite datele solicitantului și investiției pentru identificarea necorelărilor înainte de depunere."
+        }
+      ]
+    },
+    "calculator-soc": {
+      "route": "/calculator-soc",
+      "file": "calculator-soc.html",
+      "layout": "standalone",
+      "replacedLinkCount": 5,
+      "title": "Următorul pas util",
+      "links": [
+        {
+          "href": "/dr12-afir",
+          "anchor": "verifică condițiile DR12 pentru tineri fermieri",
+          "explanation": "Compară totalul SO cu beneficiarii, intensitatea și documentele din ghidul consultativ DR12."
+        },
+        {
+          "href": "/dr14",
+          "anchor": "verifică pragurile DR14 pentru ferme mici",
+          "explanation": "Vezi cum influențează sectorul, SO majoritar și componenta analiza unei ferme mici."
+        },
+        {
+          "href": "/fonduri-europene-agricultura",
+          "anchor": "compară finanțările pentru agricultură",
+          "explanation": "Identifică și alte trasee agricole dacă rezultatul nu se potrivește cu DR12 sau DR14."
+        },
+        {
+          "href": "/verificare-eligibilitate-fonduri-europene",
+          "anchor": "verifică documentele pentru eligibilitate",
+          "explanation": "Corelează rezultatul calculatorului cu actele exploatației, investiția și ghidul aplicabil."
+        }
+      ]
+    },
+    "dr12-afir": {
+      "route": "/dr12-afir",
+      "file": "dr12-afir/index.html",
+      "replacedLinkCount": 7,
+      "title": "Continuă verificarea",
+      "links": [
+        {
+          "href": "/calculator-soc",
+          "anchor": "calculează dimensiunea economică SO",
+          "explanation": "Estimează totalul exploatației înainte de verificarea pragului și a sectorului DR12."
+        },
+        {
+          "href": "/proiectare-fonduri-europene",
+          "anchor": "pregătește proiectarea și actele tehnice DR12",
+          "explanation": "Clarifică studiul de fezabilitate, avizele și proiectarea pentru construcții, modernizări sau spații de depozitare."
+        },
+        {
+          "href": "/consultanta-afir",
+          "anchor": "pregătește traseul de consultanță AFIR",
+          "explanation": "Vezi cum sunt verificate exploatația, investiția, bugetul și documentele înainte de dosar."
+        },
+        {
+          "href": "https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/",
+          "anchor": "consultă documentația DR12 publicată de AFIR",
+          "explanation": "Confirmă în sursa instituției statutul consultativ și eventualele actualizări ale documentului."
+        }
+      ]
+    },
+    "dr14": {
+      "route": "/dr14",
+      "file": "dr14/index.html",
+      "replacedLinkCount": 6,
+      "title": "Continuă verificarea",
+      "links": [
+        {
+          "href": "/calculator-soc",
+          "anchor": "calculează dimensiunea economică SO",
+          "explanation": "Verifică orientativ intervalul fermei înainte de alegerea componentei DR14."
+        },
+        {
+          "href": "/dr12-vs-dr14",
+          "anchor": "compară condițiile DR12 și DR14",
+          "explanation": "Alege intervenția care corespunde dimensiunii fermei și profilului solicitantului."
+        },
+        {
+          "href": "/proiectare-fonduri-europene",
+          "anchor": "definește proiectarea pentru investiția DR14",
+          "explanation": "Separă achizițiile simple de lucrările care cer SF, avize, autorizații și documentație tehnică."
+        },
+        {
+          "href": "/consultanta-afir",
+          "anchor": "pregătește analiza proiectului AFIR",
+          "explanation": "Vezi ordinea verificărilor pentru solicitant, investiție, punctaj și documentele fermei."
+        }
+      ]
+    },
+    "por-adr-nord-est": {
+      "route": "/por-adr-nord-est",
+      "file": "por-adr-nord-est/index.html",
+      "replacedLinkCount": 10,
+      "title": "Următorul pas util",
+      "links": [
+        {
+          "href": "/investitii-modernizarea-microintreprinderilor-apel-2",
+          "anchor": "verifică Apelul 2 pentru microîntreprinderi",
+          "explanation": "Consultă pagina apelului concret dacă investiția urmărește modernizarea unei microîntreprinderi."
+        },
+        {
+          "href": "/proiectare-fonduri-europene",
+          "anchor": "verifică traseul SF, DALI și proiect tehnic",
+          "explanation": "Stabilește documentația tehnică necesară după tipul investiției, amplasament și cerințele apelului regional."
+        },
+        {
+          "href": "/fonduri-regionale",
+          "anchor": "identifică programul regional potrivit",
+          "explanation": "Compară logica programelor regionale înainte de alegerea unui apel și a documentației."
+        },
+        {
+          "href": "/verificare-eligibilitate-fonduri-europene",
+          "anchor": "verifică eligibilitatea investiției regionale",
+          "explanation": "Corelează județul, codul CAEN, amplasamentul, bugetul și actele firmei cu apelul ales."
+        }
+      ]
+    },
+    "femeia-antreprenor-2026": {
+      "route": "/femeia-antreprenor-2026",
+      "file": "femeia-antreprenor-2026.html",
+      "replacedLinkCount": 6,
+      "title": "Continuă verificarea",
+      "links": [
+        {
+          "href": "/femeia-antreprenor-2026-conditii-idei-afaceri",
+          "anchor": "verifică condițiile și ideile de afaceri pentru 2026",
+          "explanation": "Separă informațiile confirmate de elementele care așteaptă procedura finală a ediției."
+        },
+        {
+          "href": "/verificare-eligibilitate-fonduri-europene",
+          "anchor": "verifică actele firmei și investiția",
+          "explanation": "Controlează structura firmei, codul CAEN, bugetul și documentele înainte de publicarea procedurii."
+        },
+        {
+          "href": "/contact",
+          "anchor": "trimite datele pentru verificarea preliminară",
+          "explanation": "Transmite structura asociaților și investiția fără a presupune condiții încă nepublicate."
+        }
+      ]
+    },
+    "despre-faber": {
+      "route": "/despre-faber",
+      "file": "despre-faber/index.html",
+      "layout": "standalone",
+      "replacedLinkCount": 5,
+      "title": "Următorul pas util",
+      "links": [
+        {
+          "href": "/metodologie-verificare-eligibilitate",
+          "anchor": "urmărește metodologia de verificare FABER",
+          "explanation": "Vezi ordinea în care sunt analizate solicitantul, programul, investiția și documentele."
+        },
+        {
+          "href": "/surse-oficiale-fonduri-europene",
+          "anchor": "consultă sursele oficiale pentru finanțări",
+          "explanation": "Identifică instituțiile și documentele folosite pentru confirmarea condițiilor unui apel."
+        },
+        {
+          "href": "/proiectare-fonduri-europene",
+          "anchor": "vezi serviciile de proiectare pentru investiții",
+          "explanation": "Identifică livrabilele tehnice care pot fi necesare după confirmarea programului și a eligibilității."
+        },
+        {
+          "href": "/contact",
+          "anchor": "discută situația concretă a proiectului",
+          "explanation": "Trimite contextul și documentele disponibile pentru stabilirea următorului pas de verificare."
+        }
+      ]
+    },
+    "afir-autoconsum-agroalimentar": {
+      "route": "/afir-autoconsum-agroalimentar",
+      "file": "afir-autoconsum-agroalimentar.html",
+      "replacedLinkCount": 11,
+      "title": "Alege traseul pentru pregătirea proiectului",
+      "links": [
+        {
+          "href": "/consultanta-afir",
+          "anchor": "verifică eligibilitatea și dosarul AFIR",
+          "explanation": "Corelează beneficiarul, codul CAEN, autoconsumul, bugetul și documentele cu Ghidul V7."
+        },
+        {
+          "href": "/proiectare-fonduri-europene",
+          "anchor": "pregătește studiul de fezabilitate și proiectarea",
+          "explanation": "Definește dimensionarea, amplasamentul, stocarea, racordarea și livrabilele tehnice pentru centrala propusă."
+        },
+        {
+          "href": "/finantari-panouri-fotovoltaice",
+          "anchor": "compară programele pentru investiții fotovoltaice",
+          "explanation": "Verifică dacă profilul beneficiarului și obiectivul energetic indică această schemă sau alt apel."
+        },
+        {
+          "href": "https://www.afir.ro/comunicate/deschiderea-sesiunii-pentru-investitiile-in-producerea-energiei-electrice-din-surse-regenerabile/",
+          "anchor": "confirmă sesiunea în comunicatul AFIR",
+          "explanation": "Verifică la instituția finanțatoare perioada sesiunii și eventualele actualizări publicate după lansare."
+        }
+      ]
+    },
+    "fonduri-europene-agricultura": {
+      "route": "/fonduri-europene-agricultura",
+      "file": "fonduri-europene-agricultura/index.html",
+      "replacedLinkCount": 7,
+      "title": "Continuă pregătirea investiției agricole",
+      "links": [
+        {
+          "href": "/dr12-afir",
+          "anchor": "verifică DR12 pentru tineri fermieri",
+          "explanation": "Compară exploatația, pragul SO, vârsta solicitantului și statutul consultativ al intervenției."
+        },
+        {
+          "href": "/dr14",
+          "anchor": "verifică DR14 pentru ferme mici",
+          "explanation": "Controlează intervalul SO, componenta, investiția și contribuția proprie prevăzute consultativ."
+        },
+        {
+          "href": "/consultanta-afir",
+          "anchor": "organizează consultanța pentru proiectul agricol",
+          "explanation": "Stabilește ordinea verificărilor pentru solicitant, fermă, program, buget și documentele de depunere."
+        },
+        {
+          "href": "/proiectare-fonduri-europene",
+          "anchor": "clarifică proiectarea construcțiilor agricole",
+          "explanation": "Identifică studiul, avizele și proiectul tehnic necesare halelor, spațiilor de depozitare sau modernizărilor."
+        }
+      ]
+    },
+    "fonduri-regionale": {
+      "route": "/fonduri-regionale",
+      "file": "fonduri-regionale/index.html",
+      "replacedLinkCount": 7,
+      "title": "Alege apelul și documentația potrivite",
+      "links": [
+        {
+          "href": "/por-adr-nord-est",
+          "anchor": "verifică hubul Programului Regional Nord-Est",
+          "explanation": "Separă regulile generale ale programului de condițiile fiecărui apel pentru firme sau beneficiari publici."
+        },
+        {
+          "href": "/fonduri-europene-nord-est",
+          "anchor": "compară finanțările disponibile în Nord-Est",
+          "explanation": "Orientează investiția către traseul regional, agricol, energetic sau național care merită analizat."
+        },
+        {
+          "href": "/consultanta-fonduri-europene",
+          "anchor": "verifică eligibilitatea pentru apelul regional",
+          "explanation": "Corelează solicitantul, localitatea, codul CAEN, bugetul și documentele cu ghidul selectat."
+        },
+        {
+          "href": "/proiectare-fonduri-europene",
+          "anchor": "stabilește documentația tehnică a investiției regionale",
+          "explanation": "Determină dacă investiția cere SF, DALI, avize, autorizație sau proiect tehnic înainte de depunere."
+        }
+      ]
+    },
+    "fonduri-europene-nord-est": {
+      "route": "/fonduri-europene-nord-est",
+      "file": "fonduri-europene-nord-est/index.html",
+      "replacedLinkCount": 9,
+      "title": "Continuă verificarea proiectului din Nord-Est",
+      "links": [
+        {
+          "href": "/por-adr-nord-est",
+          "anchor": "consultă Programul Regional Nord-Est",
+          "explanation": "Verifică județul, solicitantul și tipul apelului înainte de folosirea unor valori sau termene."
+        },
+        {
+          "href": "/investitii-modernizarea-microintreprinderilor-apel-2",
+          "anchor": "analizează separat Apelul 2 pentru microîntreprinderi",
+          "explanation": "Folosește condițiile sesiunii dedicate fără a le generaliza pentru întregul program regional."
+        },
+        {
+          "href": "/verificare-eligibilitate-fonduri-europene",
+          "anchor": "controlează CAEN-ul și amplasamentul investiției",
+          "explanation": "Controlează solicitantul, județul, activitatea, spațiul, bugetul și documentele pentru apelul ales."
+        },
+        {
+          "href": "/proiectare-fonduri-europene",
+          "anchor": "planifică SF-ul sau DALI pentru proiectul regional",
+          "explanation": "Corelează tema de proiectare, avizele, indicatorii și devizul cu cerințele investiției finanțate."
+        }
+      ]
+    },
+    "fonduri-europene-imm": {
+      "route": "/fonduri-europene-imm",
+      "file": "fonduri-europene-imm/index.html",
+      "replacedLinkCount": 8,
+      "title": "Alege serviciile necesare proiectului IMM",
+      "links": [
+        {
+          "href": "/por-adr-nord-est",
+          "anchor": "verifică apelurile regionale pentru IMM",
+          "explanation": "Identifică programul și apelul potrivite după regiune, dimensiunea firmei și investiție."
+        },
+        {
+          "href": "/digitalizare-imm",
+          "anchor": "compară finanțările pentru digitalizarea IMM",
+          "explanation": "Separă investițiile în procese și tehnologie de proiectele productive sau de construcții."
+        },
+        {
+          "href": "/consultanta-fonduri-europene",
+          "anchor": "pregătește eligibilitatea și cererea IMM",
+          "explanation": "Verifică solicitantul, programul, cofinanțarea, bugetul și documentele administrative necesare."
+        },
+        {
+          "href": "/proiectare-fonduri-europene",
+          "anchor": "definește proiectarea tehnică pentru investiția IMM",
+          "explanation": "Clarifică studiile, avizele, proiectul tehnic și devizul pentru spații, fluxuri și instalații."
+        }
+      ]
+    },
+    "fonduri-europene": {
+      "route": "/fonduri-europene",
+      "file": "fonduri-europene/index.html",
+      "replacedLinkCount": 15,
+      "title": "Servicii pentru pregătirea proiectului",
+      "links": [
+        {
+          "href": "/consultanta-fonduri-europene",
+          "anchor": "pregătește consultanța pentru finanțare",
+          "explanation": "Verifică programul, solicitantul, bugetul, documentele și traseul cererii de finanțare."
+        },
+        {
+          "href": "/verificare-eligibilitate-fonduri-europene",
+          "anchor": "testează eligibilitatea înainte de cheltuieli",
+          "explanation": "Controlează condițiile decisive înainte de comenzi, contracte sau documentații costisitoare."
+        },
+        {
+          "href": "/proiectare-fonduri-europene",
+          "anchor": "pregătește proiectarea investiției finanțate",
+          "explanation": "Stabilește studiile, avizele, proiectul tehnic și devizul cerute de investiția selectată."
+        },
+        {
+          "href": "/fonduri-europene-agricultura",
+          "anchor": "compară programele pentru investiții agricole",
+          "explanation": "Orientează fermele și procesatorii către intervenția care corespunde profilului și investiției."
+        }
+      ]
+    },
+    "consultanta-afir": {
+      "route": "/consultanta-afir",
+      "file": "consultanta-afir/index.html",
+      "replacedLinkCount": 11,
+      "title": "Continuă pregătirea dosarului AFIR",
+      "links": [
+        {
+          "href": "/dr12-afir",
+          "anchor": "verifică lansarea și actele DR12",
+          "explanation": "Controlează pragul SO, categoria solicitantului, documentele fermei și statutul consultativ."
+        },
+        {
+          "href": "/dr14",
+          "anchor": "verifică SO-ul și componenta DR14",
+          "explanation": "Corelează dimensiunea economică, sectorul, investiția și cofinanțarea fermei mici."
+        },
+        {
+          "href": "/proiectare-fonduri-europene",
+          "anchor": "organizează proiectarea pentru lucrările AFIR",
+          "explanation": "Identifică studiul de fezabilitate, avizele și proiectul tehnic pentru construcții sau modernizări."
+        },
+        {
+          "href": "/contact",
+          "anchor": "trimite datele exploatației pentru analiză",
+          "explanation": "Transmite documentele disponibile pentru delimitarea condițiilor confirmate și a riscurilor proiectului."
+        }
+      ]
+    },
+    "finantari-panouri-fotovoltaice": {
+      "route": "/finantari-panouri-fotovoltaice",
+      "file": "finantari-panouri-fotovoltaice/index.html",
+      "replacedLinkCount": 7,
+      "title": "Pregătește investiția fotovoltaică",
+      "links": [
+        {
+          "href": "/afir-autoconsum-agroalimentar",
+          "anchor": "verifică sesiunea AFIR pentru autoconsum",
+          "explanation": "Compară beneficiarul, consumul, stocarea și amplasamentul cu regulile Ghidului V7."
+        },
+        {
+          "href": "/fondul-de-modernizare",
+          "anchor": "compară apelurile Fondului pentru Modernizare",
+          "explanation": "Separă schema AFIR de celelalte trasee energetice după beneficiar și obiectiv."
+        },
+        {
+          "href": "/consultanta-fonduri-europene",
+          "anchor": "verifică programul și eligibilitatea energetică",
+          "explanation": "Controlează solicitantul, sursa de finanțare, bugetul și documentele administrative ale proiectului."
+        },
+        {
+          "href": "/proiectare-fonduri-europene",
+          "anchor": "dimensionează și proiectează sistemul fotovoltaic",
+          "explanation": "Leagă bilanțul energetic, amplasamentul, racordarea, stocarea și devizul de cerințele apelului."
+        }
+      ]
+    },
+    "investitii-modernizarea-microintreprinderilor-apel-2": {
+      "route": "/investitii-modernizarea-microintreprinderilor-apel-2",
+      "file": "investitii-modernizarea-microintreprinderilor-apel-2/index.html",
+      "replacedLinkCount": 10,
+      "title": "Continuă pregătirea pentru Apelul 2",
+      "links": [
+        {
+          "href": "/por-adr-nord-est",
+          "anchor": "revino la hubul Programului Regional Nord-Est",
+          "explanation": "Compară acest apel concret cu celelalte trasee ale programului fără a transfera automat valori."
+        },
+        {
+          "href": "/verificare-eligibilitate-fonduri-europene",
+          "anchor": "verifică solicitantul, CAEN-ul și amplasamentul",
+          "explanation": "Controlează condițiile eliminatorii și documentele de bază înainte de construirea bugetului."
+        },
+        {
+          "href": "/fonduri-europene-nord-est",
+          "anchor": "compară traseele de finanțare din Nord-Est",
+          "explanation": "Verifică alternativele regionale, agricole, energetice sau naționale pentru aceeași investiție."
+        },
+        {
+          "href": "/proiectare-fonduri-europene",
+          "anchor": "pregătește SF, DALI și devizul investiției",
+          "explanation": "Stabilește documentația tehnică potrivită pentru lucrări, instalații și fluxul operațional propus."
+        }
+      ]
+    }
+  }
+}

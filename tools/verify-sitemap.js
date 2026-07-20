@@ -189,16 +189,78 @@ function sitemapUrls() {
   return urls;
 }
 
+function parseRobotsGroups(text) {
+  const groups = [];
+  let current = null;
+  let hasDirectives = false;
+
+  for (const rawLine of text.split(/\r?\n/)) {
+    const line = rawLine.replace(/\s+#.*$/u, "").trim();
+    if (!line) continue;
+    const match = line.match(/^(User-agent|Allow|Disallow):\s*(.*)$/iu);
+    if (!match) continue;
+    const directive = match[1].toLowerCase();
+    const value = match[2].trim();
+
+    if (directive === "user-agent") {
+      if (!current || hasDirectives) {
+        current = { agents: [], rules: [] };
+        groups.push(current);
+        hasDirectives = false;
+      }
+      current.agents.push(value.toLowerCase());
+      continue;
+    }
+
+    if (!current) continue;
+    current.rules.push({ directive, value });
+    hasDirectives = true;
+  }
+
+  return groups;
+}
+
+function rulesForAgent(groups, agent) {
+  const normalized = agent.toLowerCase();
+  return groups
+    .filter((group) => group.agents.includes(normalized))
+    .flatMap((group) => group.rules);
+}
+
 function robotsRules() {
   if (!fs.existsSync(ROBOTS_PATH)) fail("robots.txt is missing.");
   const text = fs.readFileSync(ROBOTS_PATH, "utf8");
   if (!new RegExp(`^\\s*Sitemap:\\s*${SITE.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\/sitemap\\.xml\\s*$`, "im").test(text)) {
     fail("robots.txt must declare the canonical sitemap URL.", [`expected: Sitemap: ${SITE}/sitemap.xml`]);
   }
-  return text.split(/\r?\n/)
-    .map((line) => line.trim())
-    .filter((line) => /^Disallow:/i.test(line))
-    .map((line) => line.replace(/^Disallow:\s*/i, "").trim())
+
+  const groups = parseRobotsGroups(text);
+  const requiredSearchBots = ["oai-searchbot", "claude-searchbot"];
+  const requiredTrainingBots = ["gptbot", "claudebot", "anthropic-ai", "google-extended", "ccbot"];
+  const policyErrors = [];
+
+  for (const agent of requiredSearchBots) {
+    const rules = rulesForAgent(groups, agent);
+    if (!rules.some((rule) => rule.directive === "allow" && rule.value === "/")) {
+      policyErrors.push(`${agent} must be explicitly allowed at /`);
+    }
+    if (rules.some((rule) => rule.directive === "disallow" && rule.value === "/")) {
+      policyErrors.push(`${agent} must not be blocked at /`);
+    }
+  }
+
+  for (const agent of requiredTrainingBots) {
+    const rules = rulesForAgent(groups, agent);
+    if (!rules.some((rule) => rule.directive === "disallow" && rule.value === "/")) {
+      policyErrors.push(`${agent} must be blocked at /`);
+    }
+  }
+
+  if (policyErrors.length) fail("robots.txt does not match the AI search/training policy.", policyErrors);
+
+  return rulesForAgent(groups, "*")
+    .filter((rule) => rule.directive === "disallow")
+    .map((rule) => rule.value)
     .filter(Boolean);
 }
 

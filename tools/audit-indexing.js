@@ -4,6 +4,10 @@
 const fs = require("fs");
 const path = require("path");
 const cheerio = require("cheerio");
+const {
+  classificationCounts,
+  discoverHtmlDocuments
+} = require("./site-document-classifier");
 
 const ROOT = path.resolve(__dirname, "..");
 const SITE = "https://atelierdeconsultanta.ro";
@@ -13,6 +17,10 @@ const REDIRECTS_PATH = path.join(ROOT, "_redirects");
 const HEADERS_PATH = path.join(ROOT, "_headers");
 const REPORT_PATH = path.join(ROOT, "reports", "indexing-audit.json");
 const SKIP_SCHEMES = /^(?:mailto|tel|sms|javascript|data|blob|whatsapp):/i;
+const TRACE_CACHE = new Map();
+const HTML_CACHE = new Map();
+const PAGE_DATA_CACHE = new Map();
+const IDS_CACHE = new Map();
 const NON_PAGE_EXTENSIONS = new Set([
   ".avif",
   ".css",
@@ -119,6 +127,8 @@ function hasRedirect(chain) {
 }
 
 function trace(rawUrl) {
+  const cacheKey = new URL(rawUrl, SITE).href;
+  if (TRACE_CACHE.has(cacheKey)) return TRACE_CACHE.get(cacheKey);
   const chain = [];
   let current = new URL(rawUrl, SITE);
   const seen = new Set();
@@ -161,6 +171,7 @@ function trace(rawUrl) {
     break;
   }
 
+  TRACE_CACHE.set(cacheKey, chain);
   return chain;
 }
 
@@ -169,7 +180,9 @@ function finalStep(chain) {
 }
 
 function htmlForFile(file) {
-  return file ? readIfExists(path.join(ROOT, file)) : "";
+  if (!file) return "";
+  if (!HTML_CACHE.has(file)) HTML_CACHE.set(file, readIfExists(path.join(ROOT, file)));
+  return HTML_CACHE.get(file);
 }
 
 function extractCanonical($) {
@@ -184,10 +197,12 @@ function extractRobots($, pathname) {
 }
 
 function pageDataForFinal(final) {
+  const cacheKey = `${final.url || ""}|${final.file || ""}`;
+  if (PAGE_DATA_CACHE.has(cacheKey)) return PAGE_DATA_CACHE.get(cacheKey);
   const pathname = final.url ? new URL(final.url).pathname : "";
   const html = htmlForFile(final.file);
   const $ = cheerio.load(html, { decodeEntities: false });
-  return {
+  const data = {
     file: final.file || "",
     pathname,
     html,
@@ -198,6 +213,8 @@ function pageDataForFinal(final) {
     description: $('meta[name="description" i]').first().attr("content") || "",
     h1: $("h1").toArray().map((element) => $(element).text().replace(/\s+/g, " ").trim()),
   };
+  PAGE_DATA_CACHE.set(cacheKey, data);
+  return data;
 }
 
 function parseSitemapUrls() {
@@ -206,7 +223,21 @@ function parseSitemapUrls() {
 }
 
 function addIssue(issues, type, message, details = {}) {
-  issues.push({ type, message, ...details });
+  const issue = { type, message, ...details };
+  const key = [
+    type,
+    issue.url,
+    issue.sourceUrl,
+    issue.sourceFile,
+    issue.value,
+    issue.target,
+    issue.id,
+    issue.firstUrl,
+    issue.secondUrl
+  ].join("|");
+  if (issues.some((existing) => existing._dedupeKey === key)) return;
+  Object.defineProperty(issue, "_dedupeKey", { value: key, enumerable: false });
+  issues.push(issue);
 }
 
 function isCleanCanonicalUrl(url) {
@@ -369,7 +400,7 @@ function isPageLikePath(pathname) {
 
 function normalizeInternalLink(rawValue, sourceUrl) {
   const value = String(rawValue || "").replace(/&amp;/g, "&").trim();
-  if (!value || value === "#" || SKIP_SCHEMES.test(value)) return null;
+  if (!value || SKIP_SCHEMES.test(value)) return null;
   if (value.includes("${") || value.includes("{{")) return null;
 
   let parsed;
@@ -386,17 +417,44 @@ function normalizeInternalLink(rawValue, sourceUrl) {
 }
 
 function idsForHtml(html) {
+  if (IDS_CACHE.has(html)) return IDS_CACHE.get(html);
   const $ = cheerio.load(html, { decodeEntities: false });
   const ids = new Set();
   $('[id], a[name]').each((_, element) => {
     const id = $(element).attr("id") || $(element).attr("name");
     if (id) ids.add(id);
   });
+  IDS_CACHE.set(html, ids);
   return ids;
+}
+
+function decodedFragmentId(hash) {
+  try {
+    return decodeURIComponent(hash.slice(1));
+  } catch {
+    return "";
+  }
+}
+
+function interactiveFragmentMetadata($, element, value, sourceUrl) {
+  let parsed;
+  try {
+    parsed = new URL(value, sourceUrl);
+  } catch {
+    return null;
+  }
+  if (!String(value).includes("#")) return null;
+
+  const ariaControls = $(element).attr("aria-controls") || "";
+  const ariaHaspopup = $(element).attr("aria-haspopup") || "";
+  const dataInteractive = Object.keys(element.attribs || {}).some((name) => /^data-[a-z0-9-]*(?:open|toggle)$/i.test(name));
+  if (!ariaControls && !ariaHaspopup && !dataInteractive) return null;
+  return { ariaControls, ariaHaspopup };
 }
 
 function validateInternalLinks(sitemapSet, issues, pageRecords) {
   const byUrl = new Map(pageRecords.map((record) => [record.url, record]));
+  const fragmentStats = { anchorFragmentsChecked: 0, interactiveFragmentsChecked: 0 };
 
   for (const record of pageRecords) {
     const html = htmlForFile(record.file);
@@ -404,7 +462,12 @@ function validateInternalLinks(sitemapSet, issues, pageRecords) {
     const links = [];
 
     $("a[href], area[href]").each((_, element) => {
-      links.push({ attr: "href", value: $(element).attr("href") || "" });
+      const value = $(element).attr("href") || "";
+      links.push({
+        attr: "href",
+        value,
+        interactiveFragment: interactiveFragmentMetadata($, element, value, record.url),
+      });
     });
     $("form[action]").each((_, element) => {
       links.push({ attr: "action", value: $(element).attr("action") || "" });
@@ -495,23 +558,56 @@ function validateInternalLinks(sitemapSet, issues, pageRecords) {
           target: finalClean,
         });
       }
-      if (parsed.hash) {
+      if (value.includes("#")) {
         const targetRecord = byUrl.get(finalClean);
         const targetHtml = targetRecord ? htmlForFile(targetRecord.file) : data.html;
         const ids = idsForHtml(targetHtml);
-        const id = decodeURIComponent(parsed.hash.slice(1));
-        if (id && !ids.has(id)) {
-          addIssue(issues, "internal-missing-anchor", "Internal link points to a missing anchor.", {
-            sourceUrl: record.url,
-            sourceFile: record.file,
-            value,
-            target: finalClean,
-            id,
-          });
+        const id = parsed.hash ? decodedFragmentId(parsed.hash) : "";
+        const fragmentDetails = {
+          sourceUrl: record.url,
+          sourceFile: record.file,
+          value,
+          target: finalClean,
+          targetFile: targetRecord ? targetRecord.file : data.file,
+          id,
+        };
+        if (!id) {
+          addIssue(issues, "invalid-bare-fragment", "Internal link contains an empty or invalid bare fragment.", fragmentDetails);
+        } else if (link.interactiveFragment) {
+          fragmentStats.interactiveFragmentsChecked += 1;
+          const { ariaControls, ariaHaspopup } = link.interactiveFragment;
+          if (!ids.has(id)) {
+            addIssue(issues, "interactive-missing-target", "Interactive fragment points to a missing target in its destination document.", fragmentDetails);
+          }
+          if (ariaControls && ariaControls !== id) {
+            addIssue(issues, "interactive-control-mismatch", "Interactive fragment and aria-controls point to different targets.", {
+              ...fragmentDetails,
+              ariaControls,
+            });
+          }
+          if (ariaHaspopup.toLowerCase() === "dialog" && !ariaControls) {
+            addIssue(issues, "interactive-dialog-controls", "Dialog trigger must identify its target through aria-controls.", fragmentDetails);
+          }
+          if (ids.has(id) && ariaHaspopup.toLowerCase() === "dialog") {
+            const $target = cheerio.load(targetHtml, { decodeEntities: false });
+            const role = $target("[id]").filter((_, element) => $target(element).attr("id") === id).first().attr("role") || "";
+            if (role !== "dialog") {
+              addIssue(issues, "interactive-dialog-role", "Dialog trigger target must expose role=dialog.", {
+                ...fragmentDetails,
+                role,
+              });
+            }
+          }
+        } else {
+          fragmentStats.anchorFragmentsChecked += 1;
+          if (!ids.has(id)) {
+            addIssue(issues, "internal-missing-anchor", "Internal link points to a missing anchor in its destination document.", fragmentDetails);
+          }
         }
       }
     }
   }
+  return fragmentStats;
 }
 
 function main() {
@@ -519,6 +615,9 @@ function main() {
   const pageRecords = [];
   const sitemapUrls = parseSitemapUrls();
   const sitemapSet = new Set(sitemapUrls);
+  const sourceDocuments = discoverHtmlDocuments(ROOT);
+  const generatedDocuments = discoverHtmlDocuments(ROOT, { includeGenerated: true })
+    .filter((document) => document.category === "generated-output");
 
   if (!sitemapUrls.length) addIssue(issues, "sitemap-empty", "sitemap.xml has no URLs.");
   for (const url of sitemapUrls) {
@@ -535,15 +634,20 @@ function main() {
     }
   }
 
-  validateInternalLinks(sitemapSet, issues, pageRecords);
+  const fragmentStats = validateInternalLinks(sitemapSet, issues, pageRecords);
   validateOfficialGuidesResource(sitemapSet, issues);
 
   const report = {
     generatedAt: new Date().toISOString(),
     sitemapUrlCount: sitemapUrls.length,
     checkedPageCount: pageRecords.length,
+    ...fragmentStats,
     issueCount: issues.length,
     issues,
+    documentClassification: {
+      ...classificationCounts(sourceDocuments),
+      "generated-output": generatedDocuments.length
+    },
     canonicalUrls: sitemapUrls,
   };
 
@@ -551,6 +655,7 @@ function main() {
   fs.writeFileSync(REPORT_PATH, `${JSON.stringify(report, null, 2)}\n`, "utf8");
 
   console.log(`Indexing audit checked ${pageRecords.length} sitemap URLs and internal links from canonical pages.`);
+  console.log(`Document classification: ${Object.entries(report.documentClassification).map(([category, count]) => `${category}=${count}`).join(", ")}.`);
   console.log(`Report written to ${toPosix(path.relative(ROOT, REPORT_PATH))}.`);
   if (issues.length) {
     console.error(`Indexing audit failed with ${issues.length} issue(s).`);
@@ -563,4 +668,15 @@ function main() {
   console.log("Indexing audit passed.");
 }
 
-main();
+if (require.main === module) main();
+
+module.exports = {
+  addIssue,
+  duplicateValues,
+  idsForHtml,
+  interactiveFragmentMetadata,
+  normalizeInternalLink,
+  trace,
+  validateInternalLinks,
+  validateSitemapUrl
+};

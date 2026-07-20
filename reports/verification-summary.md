@@ -1,20 +1,23 @@
 # Verification Summary
 
-Generated: 2026-07-09T21:19:10.517Z
+Generated: 2026-07-13T11:53:48.915Z
 Mode: check
 
 ## SEO
 
-Files checked: 172
-Passed: 172
-Failed: 0
-Inline scripts checked: 270
+Files checked: 180
+Passed: 176
+Failed: 4
+Inline scripts checked: 108
 Inline script failures: 0
 
 ## Functional
 
-Checks: 22; passed: 22; failed: 0
+Skipped by CLI flag.
 
 ## Pages needing review
 
-- None.
+- SEO dr12-afir/index.html: relatedLinks
+- SEO dr14/index.html: relatedLinks
+- SEO partials/global-header.html: metaDescription, canonical, singleH1
+- SEO verificare-eligibilitate-fonduri-europene/index.html: relatedLinks

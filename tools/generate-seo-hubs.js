@@ -3,7 +3,9 @@ const path = require("path");
 
 const ROOT = path.resolve(__dirname, "..");
 const GLOBAL_HEADER = fs.readFileSync(path.join(ROOT, "partials", "global-header.html"), "utf8").trim();
-const TODAY = "2026-05-11";
+// Dată editorială stabilă a conținutului-sursă; nu se înlocuiește cu data buildului.
+const EDITORIAL_UPDATED_AT = "2026-05-11";
+const LAST_REVIEWED = "2026-07-13";
 const {
   SITE,
   buildPageMetadata,
@@ -19,13 +21,7 @@ const {
   websiteSchema
 } = require("./schema-helpers");
 const { designFamilyForSlug } = require("./design-family-map");
-const CLARITY_TRACKING_CODE = `  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "wnvzyco6rq");
-  </script>`;
+const ANALYTICS_EVENTS_SCRIPT = `  <script src="/assets/analytics-events.js" defer></script>`;
 const CANONICAL_ALIASES = new Map([
   ["/start-up-nation", "/start-up-nation-2026"],
   ["/consultanta-start-up-nation", "/consultanta-start-up-nation-2026"],
@@ -569,7 +565,7 @@ function schema(page, faq, metadata = metadataForPage(page)) {
       name: metadata.title,
       description: metadata.description,
       about: page.h1,
-      dateModified: TODAY
+      dateModified: EDITORIAL_UPDATED_AT
     }),
     breadcrumbSchema(breadcrumbItemsForPage(page)),
     faqPageSchema(faq.map((item) => ({ question: item.q, answer: item.a })), { minItems: 2 })
@@ -601,7 +597,7 @@ function pageHtml(page) {
   <meta name="twitter:card" content="summary_large_image" />
   <link rel="stylesheet" href="/assets/seo-hub.css" />
   <script type="application/ld+json">${schema(page, faq, metadata)}</script>
-${CLARITY_TRACKING_CODE}
+${ANALYTICS_EVENTS_SCRIPT}
 </head>
 <body class="page-family-${esc(family)}">
   ${page.internalNote ? `<!-- ${page.internalNote} -->\n  ` : ""}${GLOBAL_HEADER}

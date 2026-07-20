@@ -5,6 +5,7 @@ const fs = require("fs");
 const path = require("path");
 const cheerio = require("cheerio");
 const { sourcesForKeys } = require("./official-sources");
+const { designFamilyForSlug } = require("./design-family-map");
 
 const ROOT = path.resolve(__dirname, "..");
 const BANNERS_PATH = path.join(ROOT, "banners.json");
@@ -51,6 +52,7 @@ const FAMILY_BY_ROUTE = Object.freeze({
   "/femeia-antreprenor-2026": "startup",
   "/gal-afir": "gal",
   "/e-move": "energy",
+  "/fondul-modernizare-energie-regenerabila-2026": "energy",
   "/pocidif-21": "digital",
   "/pro-infra": "energy",
   "/start-up-nation-2026": "startup"
@@ -114,7 +116,7 @@ function bannerForRoute(route, bannersOrIndex = loadBanners()) {
 
 function familyForRoute(route) {
   const normalized = normalizeCtaLink(route);
-  const family = FAMILY_BY_ROUTE[normalized];
+  const family = FAMILY_BY_ROUTE[normalized] || designFamilyForSlug(normalized.slice(1));
   if (!family) throw new Error(`No program hero family configured for ${normalized}`);
   return family;
 }

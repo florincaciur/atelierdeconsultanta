@@ -198,20 +198,20 @@ function updateHome() {
 function updateAbout() {
   const file = "despre-faber/index.html";
   const $ = load(file);
-  $(".hero .eyebrow").first().text("Consultanță cu integritate și rezultate");
+  $(".hero .eyebrow").first().text("Consultanță și proiectare bazate pe documente");
   $(".hero h1").first().text("Despre FABER");
   $(".hero p").first().text("FABER este Atelier de Consultanță pentru fonduri europene și finanțări nerambursabile: o echipă care verifică eligibilitatea, explică riscurile și pregătește proiecte pentru firme, fermieri, IMM-uri, start-up-uri și organizații.");
   $(".hero-actions").first().html('<a class="btn btn-primary" href="/contact">Contactează-ne</a><a class="btn btn-secondary" href="/metodologie-verificare-eligibilitate">Vezi metodologia</a>');
-  $(".panel > p.intro").first().text("FABER combină consultanța practică pentru fonduri europene cu o regulă simplă: recomandările trebuie să fie documentabile. Valorile echipei sunt onestitatea, responsabilitatea și prudența, mai ales atunci când un proiect pare atractiv, dar are riscuri de eligibilitate, punctaj sau cofinanțare.");
+  $(".panel > p.intro").first().text("FABER verifică o investiție prin raportare la ghid, anexele apelului și documentele solicitantului. Analiza urmărește necorelările dintre activitate, locație, soluția tehnică, buget și sursa de cofinanțare înainte ca dosarul să fie redactat.");
   $("td").each((_, element) => {
     const text = $(element).text();
     if (/Se publica dupa confirmare|Date in curs de validare/i.test(text)) $(element).closest("tr").remove();
   });
-  if (!$("body").text().includes("Misiune si valori FABER")) {
+  if (!$("body").text().includes("Cum luăm decizia de continuare")) {
     $("h2").filter((_, el) => $(el).text().includes("Ce nu promite")).first().before(`
-      <h2>Misiune si valori FABER</h2>
-      <p>Misiunea FABER este sa transforme ideile de investitie in decizii mai clare: continuam, ajustam sau amanam pana cand documentele sustin proiectul. Onestitatea inseamna sa spunem cand un program nu se potriveste. Responsabilitatea inseamna sa legam bugetul de activitatea reala. Prudenta inseamna sa nu tratam punctajul ca sigur daca nu exista dovezi.</p>
-      <p>In proiecte anonimizate, FABER a ajutat beneficiari sa curete bugete de digitalizare prea generale, sa verifice SO pentru ferme mici, sa separe cheltuielile eligibile de cele neeligibile si sa pregateasca raspunsuri la clarificari fara promisiuni de aprobare garantata.</p>
+      <h2>Cum luăm decizia de continuare</h2>
+      <p>Decizia poate fi continuarea, ajustarea, amânarea sau oprirea pregătirii. Un CAEN neautorizat la locul investiției, un drept de folosință prea scurt, o capacitate tehnică nejustificată ori o contribuție proprie fără sursă demonstrabilă pot schimba recomandarea inițială.</p>
+      <p>Înainte de redactare, bugetul este legat de activitatea reală și de documentația tehnică. Cheltuielile care nu au temei în ghid, ofertele care descriu alte capacități și criteriile de punctaj fără dovezi sunt marcate pentru corectare sau eliminare.</p>
     `);
   }
   if (!$("body").text().includes("rezultatele vor fi actualizate")) {
@@ -219,11 +219,10 @@ function updateAbout() {
   }
   const faqContainer = $(".faq").first();
   const faqs = [
-    ["Cum a apărut FABER?", "FABER a apărut ca un atelier de consultanță orientat spre decizii prudente: eligibilitate verificată, program potrivit și dosar construit pe documente."],
-    ["De ce nu promiteți finanțare garantată?", "Pentru că aprobarea depinde de autoritatea finanțatoare, ghidul activ, punctaj, bugetul apelului și documentele beneficiarului."],
-    ["Ce valori ghidează colaborarea?", "Onestitatea, responsabilitatea și prudența: spunem ce se poate verifica, ce lipsește și ce risc trebuie clarificat înainte de depunere."],
-    ["Cu ce tipuri de proiecte lucrați?", "Lucrăm cu firme, IMM-uri, fermieri, start-up-uri și organizații care pregătesc investiții în agricultură, digitalizare, energie, producție sau servicii."],
-    ["Când actualizați rezultatele publice?", "Le actualizăm când există dovezi publicabile, acordul clientului și o metodologie clară pentru cifrele prezentate."]
+    ["Cum începe analiza unui proiect?", "Analiza începe cu forma solicitantului, activitatea, locația, investiția, bugetul, cofinanțarea și documentele disponibile."],
+    ["Ce documente sunt verificate mai întâi?", "În funcție de program, sunt controlate certificatul constatator, situațiile financiare, actele pentru amplasament, ofertele și documentele agricole sau tehnice."],
+    ["Cui se adresează serviciile?", "Serviciile se adresează firmelor, fermierilor, start-up-urilor și organizațiilor care pot lega investiția de un apel și de documentele cerute."],
+    ["Cum este marcat statutul unui program?", "Pagina indică dacă documentul este consultativ sau final și dacă apelul este anunțat, deschis ori închis, împreună cu data revizuirii."]
   ];
   dedupeVisibleFaqs($, faqContainer);
   const existingAboutFaqs = visibleFaqKeys($, faqContainer);

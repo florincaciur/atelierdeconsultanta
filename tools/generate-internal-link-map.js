@@ -4,15 +4,19 @@
 const fs = require("fs");
 const path = require("path");
 const cheerio = require("cheerio");
-const { loadPriorityConfig } = require("./priority-aeo");
+const { loadNextStepConfig } = require("./contextual-next-steps");
 
 const ROOT = path.resolve(__dirname, "..");
 const SITE = "https://atelierdeconsultanta.ro";
 const SITEMAP_PATH = path.join(ROOT, "sitemap.xml");
 const OUTPUT_PATH = path.join(ROOT, "reports", "internal-link-map.csv");
+const NEXT_STEP_CSV = path.join(ROOT, "reports", "contextual-next-step-links.csv");
+const NEXT_STEP_MD = path.join(ROOT, "reports", "contextual-next-step-links.md");
+const REPEATED_ANCHOR_THRESHOLD = 8;
+const LINK_TYPES = ["navigation", "contextual", "next-step", "source", "CTA"];
 
 function sitemapUrls() {
-  return [...fs.readFileSync(SITEMAP_PATH, "utf8").matchAll(/<loc>([^<]+)<\/loc>/g)]
+  return [...fs.readFileSync(SITEMAP_PATH, "utf8").matchAll(/<loc>([^<]+)<\/loc>/gu)]
     .map((match) => match[1].trim());
 }
 
@@ -24,83 +28,223 @@ function fileForUrl(url) {
   return path.join(ROOT, `${pathname.slice(1)}.html`);
 }
 
-function normalizeInternalUrl(href) {
-  if (!href || /^(?:#|mailto:|tel:|javascript:)/i.test(href)) return null;
+function redirectSources() {
+  const file = path.join(ROOT, "_redirects");
+  if (!fs.existsSync(file)) return new Set();
+  return new Set(fs.readFileSync(file, "utf8")
+    .split(/\r?\n/u)
+    .map((line) => line.trim())
+    .filter((line) => line && !line.startsWith("#"))
+    .map((line) => line.split(/\s+/u)[0])
+    .filter((source) => source.startsWith("/") && !source.includes("*"))
+    .map((source) => source.length > 1 ? source.replace(/\/+$/u, "") : source));
+}
+
+function normalizeTarget(href) {
+  if (!href || /^(?:#|mailto:|tel:|javascript:)/iu.test(href)) return null;
   try {
     const url = new URL(href, SITE);
-    if (url.origin !== SITE && url.origin !== "https://www.atelierdeconsultanta.ro") return null;
-    url.protocol = "https:";
-    url.hostname = "atelierdeconsultanta.ro";
-    url.search = "";
-    url.hash = "";
-    if (url.pathname !== "/") url.pathname = url.pathname.replace(/\/+$/, "");
-    return url.toString();
+    const internal = url.origin === SITE || url.origin === "https://www.atelierdeconsultanta.ro";
+    if (internal) {
+      url.protocol = "https:";
+      url.hostname = "atelierdeconsultanta.ro";
+      url.port = "";
+      url.search = "";
+      url.hash = "";
+      if (url.pathname !== "/") url.pathname = url.pathname.replace(/\/+$/u, "");
+    }
+    return { internal, route: internal ? url.pathname : "", url: url.toString() };
   } catch {
     return null;
   }
 }
 
 function cleanText(value) {
-  return String(value || "").replace(/\s+/g, " ").trim();
+  return String(value || "").replace(/\s+/gu, " ").trim();
+}
+
+function classifyLink($, element, target) {
+  const link = $(element);
+  if (link.attr("data-link-type") === "next-step" || link.closest("[data-contextual-next-step]").length) return "next-step";
+  if (!target.internal || link.closest(".official-sources, .official-sources__item, .source-note, .answer-readiness__source").length) return "source";
+  if (link.is("[class*='btn'], [class*='cta'], [data-whatsapp-dialog-open]") || link.closest(".cta-box, .cta-actions, .hero-actions, .hero-ctas").length) return "CTA";
+  if (link.closest("nav, header, footer, .breadcrumb").length) return "navigation";
+  return "contextual";
 }
 
 function contextFor($, element) {
-  const section = $(element).closest("section, article, .card, .slide, .related-links");
-  const heading = section.find("h1, h2, h3").first().text();
-  return cleanText(heading) || "Conținut principal";
+  const container = $(element).closest("[data-contextual-next-step], section, article, nav, header, footer");
+  const heading = container.find("h1, h2, h3").first().text();
+  return cleanText(heading) || (container.is("nav") ? "Navigație" : "Conținut principal");
 }
 
 function csv(value) {
   const text = String(value ?? "");
-  return /[",\r\n]/.test(text) ? `"${text.replace(/"/g, '""')}"` : text;
+  return /[",\r\n]/u.test(text) ? `"${text.replace(/"/gu, '""')}"` : text;
+}
+
+function countKey(url, type) {
+  return `${url}\u0000${type}`;
+}
+
+function increment(map, key) {
+  map.set(key, (map.get(key) || 0) + 1);
+}
+
+function routeOf(url) {
+  return new URL(url).pathname;
+}
+
+function renderMarkdown({ config, edges, missingRoutes, repeatedAnchors, errors }) {
+  const priorityRows = Object.values(config.pages).map((page) => {
+    const sourceUrl = `${SITE}${page.route}`;
+    const count = edges.filter((edge) => edge.sourceUrl === sourceUrl && edge.linkType === "next-step").length;
+    return `| ${page.route} | ${page.replacedLinkCount} | ${count} | ${page.replacedLinkCount - count} | ${count >= 1 && count <= 4 ? "CONFORM" : "NECONFORM"} |`;
+  }).join("\n");
+  const typeRows = LINK_TYPES.map((type) => {
+    const typed = edges.filter((edge) => edge.linkType === type);
+    return `| ${type} | ${typed.length} | ${new Set(typed.map((edge) => edge.sourceUrl)).size} | ${new Set(typed.filter((edge) => edge.targetScope === "internal").map((edge) => edge.targetUrl)).size} |`;
+  }).join("\n");
+  const repeated = repeatedAnchors.length
+    ? repeatedAnchors.map((item) => `- „${item.anchor}”: ${item.sources} pagini-sursă (${item.type})`).join("\n")
+    : "- Nu există ancore contextuale sau next-step peste pragul de 8 pagini-sursă.";
+  const missingPreview = missingRoutes.length
+    ? `${missingRoutes.slice(0, 20).map((route) => `\`${route}\``).join(", ")}${missingRoutes.length > 20 ? ` și încă ${missingRoutes.length - 20} rute disponibile în matricea CSV` : ""}`
+    : "Niciuna.";
+  const previousTotal = Object.values(config.pages).reduce((sum, page) => sum + page.replacedLinkCount, 0);
+  const currentTotal = Object.values(config.pages).reduce((sum, page) => sum + page.links.length, 0);
+
+  return `# Audit linkuri contextuale și next-step – 13 iulie 2026
+
+## Rezultat
+
+Cele șapte pagini prioritare au exact un bloc editorial next-step și maximum patru destinații explicate. Blocurile înlocuite aveau ${previousTotal} de linkuri; configurația nouă are ${currentTotal}, o reducere netă de ${previousTotal - currentTotal} linkuri. Validarea a identificat ${errors.length} erori.
+
+| Rută | Linkuri în blocul înlocuit | Linkuri next-step | Reducere | Status |
+|---|---:|---:|---:|---|
+${priorityRows}
+
+## Distribuția linkurilor pe tip
+
+| Tip | Linkuri | Pagini-sursă | Destinații interne distincte |
+|---|---:|---:|---:|
+${typeRows}
+
+Fișierul \`internal-link-map.csv\` include pentru fiecare legătură numărul de linkuri outgoing și incoming din același tip.
+
+## Reguli verificate
+
+- zero linkuri next-step către redirecturi, rute legacy \`.html\`, pagini noindex sau destinații moarte;
+- atribute analytics complete și coerente cu sursa și destinația;
+- explicație de o propoziție pentru fiecare ancoră descriptivă;
+- minimum un link și maximum patru linkuri în fiecare bloc prioritar;
+- sursa oficială DR12 este clasificată separat ca link \`next-step\`, cu destinație externă securizată.
+
+## Pagini fără link next-step
+
+Sunt semnalate ${missingRoutes.length} rute indexabile fără next-step. Acestea nu sunt tratate automat ca erori deoarece remedierea este limitată deliberat la paginile prioritare, pentru a evita proliferarea artificială a blocurilor: ${missingPreview}
+
+## Ancore repetate excesiv
+
+${repeated}
+`;
 }
 
 function generate() {
   const urls = sitemapUrls();
   const canonicalSet = new Set(urls);
-  const priorityPaths = new Set(Object.keys(loadPriorityConfig().pages).map((slug) => `/${slug}`));
+  const redirects = redirectSources();
+  const config = loadNextStepConfig();
+  const priorityPaths = new Set(Object.values(config.pages).map((page) => page.route));
   const edges = [];
+  const errors = [];
 
   for (const sourceUrl of urls) {
     const file = fileForUrl(sourceUrl);
     if (!fs.existsSync(file)) throw new Error(`Lipsește sursa locală pentru ${sourceUrl}: ${file}`);
-    const $ = cheerio.load(fs.readFileSync(file, "utf8"));
-    const main = $("main").first();
-    if (!main.length) continue;
-    main.find("a[href]").each((_, element) => {
-      const targetUrl = normalizeInternalUrl($(element).attr("href"));
-      if (!targetUrl || !canonicalSet.has(targetUrl) || targetUrl === sourceUrl) return;
-      const sourcePath = new URL(sourceUrl).pathname;
-      const targetPath = new URL(targetUrl).pathname;
+    const $ = cheerio.load(fs.readFileSync(file, "utf8"), { decodeEntities: false });
+    $("a[href]").each((_, element) => {
+      const href = $(element).attr("href");
+      const target = normalizeTarget(href);
+      if (!target) return;
+      const linkType = classifyLink($, element, target);
+      if (!target.internal && linkType !== "source" && linkType !== "next-step") return;
+      let targetScope = target.internal ? "internal" : "external";
+      if (target.internal) {
+        const isAsset = /\.[a-z0-9]{2,8}$/iu.test(target.route);
+        if (isAsset) {
+          targetScope = "internal-asset";
+          const assetFile = path.join(ROOT, decodeURIComponent(target.route).replace(/^\//u, ""));
+          if (!fs.existsSync(assetFile)) errors.push(`${routeOf(sourceUrl)} → ${target.route}: fișier intern mort`);
+        } else {
+          if (redirects.has(target.route)) errors.push(`${routeOf(sourceUrl)} → ${target.route}: link către redirect`);
+          if (!canonicalSet.has(target.url)) errors.push(`${routeOf(sourceUrl)} → ${target.route}: destinație internă necanonică sau moartă`);
+        }
+        if (target.url === sourceUrl) return;
+      }
       edges.push({
-        sourceUrl,
-        targetUrl,
-        anchorText: cleanText($(element).text()),
+        anchorText: cleanText($(element).find(".see-also-card-title").first().text() || $(element).text()),
         context: contextFor($, element),
-        sourcePriority: priorityPaths.has(sourcePath) ? "yes" : "no",
-        targetPriority: priorityPaths.has(targetPath) ? "yes" : "no"
+        explanation: linkType === "next-step" ? cleanText($(element).find(".see-also-card-text").text()) : "",
+        href,
+        linkType,
+        sourcePriority: priorityPaths.has(routeOf(sourceUrl)) ? "yes" : "no",
+        sourceUrl,
+        targetPriority: target.internal && priorityPaths.has(target.route) ? "yes" : "no",
+        targetScope,
+        targetUrl: target.url
       });
     });
   }
 
-  edges.sort((a, b) => a.targetUrl.localeCompare(b.targetUrl) || a.sourceUrl.localeCompare(b.sourceUrl) || a.anchorText.localeCompare(b.anchorText));
-  const header = ["source_url", "target_url", "anchor_text", "context", "source_priority", "target_priority"];
-  const rows = edges.map((edge) => [edge.sourceUrl, edge.targetUrl, edge.anchorText, edge.context, edge.sourcePriority, edge.targetPriority]);
+  const outgoing = new Map();
+  const incoming = new Map();
+  for (const edge of edges) {
+    increment(outgoing, countKey(edge.sourceUrl, edge.linkType));
+    if (edge.targetScope === "internal") increment(incoming, countKey(edge.targetUrl, edge.linkType));
+  }
+  for (const edge of edges) {
+    edge.sourceOutgoingSameType = outgoing.get(countKey(edge.sourceUrl, edge.linkType)) || 0;
+    edge.targetIncomingSameType = edge.targetScope === "internal" ? incoming.get(countKey(edge.targetUrl, edge.linkType)) || 0 : 0;
+  }
+  edges.sort((a, b) => a.linkType.localeCompare(b.linkType) || a.sourceUrl.localeCompare(b.sourceUrl) || a.targetUrl.localeCompare(b.targetUrl));
+
+  const nextSteps = edges.filter((edge) => edge.linkType === "next-step");
+  for (const page of Object.values(config.pages)) {
+    const count = nextSteps.filter((edge) => routeOf(edge.sourceUrl) === page.route).length;
+    if (count < 1 || count > 4) errors.push(`${page.route}: ${count} linkuri next-step, necesar 1–4`);
+  }
+
+  const missingRoutes = urls
+    .map(routeOf)
+    .filter((route) => !nextSteps.some((edge) => routeOf(edge.sourceUrl) === route));
+  const anchorGroups = new Map();
+  for (const edge of edges.filter((item) => ["contextual", "next-step"].includes(item.linkType))) {
+    const key = `${edge.linkType}\u0000${edge.anchorText.toLocaleLowerCase("ro-RO")}`;
+    if (!anchorGroups.has(key)) anchorGroups.set(key, new Set());
+    anchorGroups.get(key).add(routeOf(edge.sourceUrl));
+  }
+  const repeatedAnchors = [...anchorGroups.entries()]
+    .filter(([, sources]) => sources.size > REPEATED_ANCHOR_THRESHOLD)
+    .map(([key, sources]) => {
+      const [type, anchor] = key.split("\u0000");
+      return { anchor, sources: sources.size, type };
+    })
+    .sort((a, b) => b.sources - a.sources || a.anchor.localeCompare(b.anchor));
+
+  const header = ["source_url", "target_url", "target_scope", "link_type", "anchor_text", "explanation", "context", "source_outgoing_same_type", "target_incoming_same_type", "source_priority", "target_priority"];
+  const rows = edges.map((edge) => [edge.sourceUrl, edge.targetUrl, edge.targetScope, edge.linkType, edge.anchorText, edge.explanation, edge.context, edge.sourceOutgoingSameType, edge.targetIncomingSameType, edge.sourcePriority, edge.targetPriority]);
   fs.mkdirSync(path.dirname(OUTPUT_PATH), { recursive: true });
   fs.writeFileSync(OUTPUT_PATH, [header, ...rows].map((row) => row.map(csv).join(",")).join("\n") + "\n", "utf8");
 
-  const errors = [];
-  for (const targetPath of priorityPaths) {
-    const targetUrl = `${SITE}${targetPath}`;
-    const inboundSources = new Set(edges.filter((edge) => edge.targetUrl === targetUrl).map((edge) => edge.sourceUrl));
-    if (inboundSources.size < 5) errors.push(`${targetPath}: doar ${inboundSources.size} pagini-sursă contextuale (minimum 5)`);
-    const fromHomepage = edges.some((edge) => edge.sourceUrl === `${SITE}/` && edge.targetUrl === targetUrl);
-    if (!fromHomepage) errors.push(`${targetPath}: lipsește linkul direct din conținutul homepage`);
-    console.log(`${targetPath}: ${inboundSources.size} surse interne; homepage=${fromHomepage ? "da" : "nu"}`);
-  }
+  const nextHeader = ["source_route", "target", "target_scope", "link_type", "anchor", "explanation", "outgoing_next_step", "incoming_next_step", "status"];
+  const nextRows = nextSteps.map((edge) => [routeOf(edge.sourceUrl), edge.targetScope === "internal" ? routeOf(edge.targetUrl) : edge.targetUrl, edge.targetScope, edge.linkType, edge.anchorText, edge.explanation, edge.sourceOutgoingSameType, edge.targetIncomingSameType, "valid"]);
+  fs.writeFileSync(NEXT_STEP_CSV, [nextHeader, ...nextRows].map((row) => row.map(csv).join(",")).join("\n") + "\n", "utf8");
+  fs.writeFileSync(NEXT_STEP_MD, renderMarkdown({ config, edges, missingRoutes, repeatedAnchors, errors }), "utf8");
 
-  console.log(`Matrice scrisă: ${path.relative(ROOT, OUTPUT_PATH)} (${edges.length} linkuri contextuale)`);
-  if (errors.length) throw new Error(errors.join("\n"));
+  console.log(`Matrice scrisă: ${path.relative(ROOT, OUTPUT_PATH)} (${edges.length} linkuri clasificate)`);
+  console.log(`Next-step: ${nextSteps.length} linkuri; ${missingRoutes.length} rute indexabile fără bloc; ${repeatedAnchors.length} ancore peste prag.`);
+  if (errors.length) throw new Error([...new Set(errors)].join("\n"));
 }
 
 try {

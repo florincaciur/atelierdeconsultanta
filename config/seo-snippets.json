@@ -1,0 +1,262 @@
+{
+  "version": 1,
+  "prioritySource": "Google Search Console exports supplied on 2026-07-20 and the verified official programme sources",
+  "pages": [
+    {
+      "route": "/",
+      "primaryIntent": "serviciu de consultanță și proiectare pentru proiecte cu fonduri europene",
+      "primaryQuery": "consultanță fonduri europene",
+      "secondaryQueries": [
+        "proiectare fonduri europene",
+        "consultant fonduri europene",
+        "firmă consultanță fonduri europene"
+      ],
+      "title": "Consultanță și proiectare fonduri europene | FABER",
+      "description": "FABER oferă consultanță și proiectare pentru proiecte cu fonduri europene: eligibilitate, cereri de finanțare, documentații tehnice și implementare.",
+      "ogTitle": "Consultanță și proiectare pentru proiecte | FABER",
+      "ogDescription": "De la verificarea eligibilității la documentații tehnice și implementare, FABER sprijină pregătirea proiectelor pe baza regulilor aplicabile.",
+      "sourceOfTruth": [
+        "index.html",
+        "official-guides.json:fonduri-europene"
+      ],
+      "factualStatus": "evergreen_service_scope_verified",
+      "lastReviewed": "2026-07-20",
+      "notes": "Titlul actual era deja relevant; este păstrat pentru continuitate și pentru că diferențiază consultanța de proiectarea tehnică."
+    },
+    {
+      "route": "/verificare-eligibilitate-fonduri-europene",
+      "primaryIntent": "verificarea inițială a eligibilității solicitantului și investiției",
+      "primaryQuery": "verificare eligibilitate fonduri europene",
+      "secondaryQueries": [
+        "cum se verifică eligibilitatea",
+        "eligibilitate cod CAEN",
+        "verificare proiect fonduri europene"
+      ],
+      "title": "Verificare eligibilitate fonduri europene | FABER",
+      "description": "Verificăm solicitantul, codul CAEN, locația, investiția, bugetul, cofinanțarea și documentele înainte de alegerea programului.",
+      "ogTitle": "Verifică eligibilitatea proiectului | FABER",
+      "ogDescription": "Analizăm solicitantul, CAEN-ul, locația, investiția, bugetul, cofinanțarea și documentele înainte de alegerea unui program.",
+      "sourceOfTruth": [
+        "config/seo-programs.json:verificare-eligibilitate-fonduri-europene",
+        "official-guides.json:fonduri-europene"
+      ],
+      "factualStatus": "evergreen_service_scope_verified",
+      "lastReviewed": "2026-07-13",
+      "notes": "Nu promite eligibilitate sau aprobare; descrie exclusiv verificările efectuate înainte de alegerea programului."
+    },
+    {
+      "route": "/calculator-soc",
+      "primaryIntent": "calcul orientativ SO pentru încadrarea exploatației la intervenții AFIR",
+      "primaryQuery": "calculator SO AFIR",
+      "secondaryQueries": [
+        "calculator SOC",
+        "calcul SO DR12",
+        "calcul SO DR14",
+        "dimensiune economică exploatație"
+      ],
+      "title": "Calculator SO AFIR 2026 pentru DR12 și DR14 | FABER",
+      "description": "Calculează orientativ dimensiunea economică SO pentru exploatația vegetală sau zootehnică și verifică încadrarea pentru DR12 și DR14.",
+      "ogTitle": "Calculează SO pentru DR12 și DR14 | FABER",
+      "ogDescription": "Introdu datele exploatației vegetale sau zootehnice pentru un calcul SO orientativ, apoi verifică pragurile în ghidul AFIR aplicabil.",
+      "sourceOfTruth": [
+        "calculator-soc.html",
+        "official-guides.json:dr12",
+        "official-guides.json:dr14"
+      ],
+      "factualStatus": "orientative_calculator_active_afir_rules_require_confirmation",
+      "lastReviewed": "2026-07-13",
+      "notes": "Rezultatul este orientativ; coeficienții și pragurile se reconfirmă în ghidul activ DR12 sau DR14."
+    },
+    {
+      "route": "/femeia-antreprenor-2026",
+      "primaryIntent": "condițiile și pregătirea dosarului pentru programul național Femeia Antreprenor",
+      "primaryQuery": "Femeia Antreprenor 2026",
+      "secondaryQueries": [
+        "condiții Femeia Antreprenor",
+        "buget Femeia Antreprenor",
+        "punctaj Femeia Antreprenor"
+      ],
+      "title": "Femeia Antreprenor: condiții și documente | FABER",
+      "description": "Femeia Antreprenor: acționariat, CAEN, buget și documente de pregătit; condițiile și calendarul se confirmă în procedura ediției active.",
+      "ogTitle": "Femeia Antreprenor: condiții și documente | FABER",
+      "ogDescription": "Femeia Antreprenor: acționariat, CAEN, buget și documente de pregătit; condițiile și calendarul se confirmă în procedura ediției active.",
+      "sourceOfTruth": [
+        "config/seo-programs.json#programs",
+        "https://economie.gov.ro/pe-data-de-30-iulie-se-da-startul-inscrierilor-in-cadrul-programului-femeia-antreprenor/"
+      ],
+      "factualStatus": "unknown",
+      "lastReviewed": "2026-05-20",
+      "notes": "Program național al Ministerului Economiei; snippetul nu îl numește fonduri europene și nu publică valori neverificate pentru 2026."
+    },
+    {
+      "route": "/afir-autoconsum-agroalimentar",
+      "primaryIntent": "condițiile tehnice și documentele pentru schema AFIR de energie pentru autoconsum",
+      "primaryQuery": "AFIR Autoconsum 2026",
+      "secondaryQueries": [
+        "fotovoltaice AFIR autoconsum",
+        "stocare AFIR energie",
+        "70% autoconsum AFIR",
+        "ghid energie AFIR 2026"
+      ],
+      "title": "AFIR Autoconsum 2026: fotovoltaice, stocare, ghid | FABER",
+      "description": "AFIR Energie pentru ferme și procesatori: sesiune până la 14 august 2026, minimum 70% autoconsum, fotovoltaice, stocare, SF și documente.",
+      "ogTitle": "AFIR Autoconsum 2026: fotovoltaice, stocare, ghid | FABER",
+      "ogDescription": "AFIR Energie pentru ferme și procesatori: sesiune până la 14 august 2026, minimum 70% autoconsum, fotovoltaice, stocare, SF și documente.",
+      "sourceOfTruth": [
+        "config/seo-programs.json#programs",
+        "https://www.afir.ro/media/hkfp4w0v/ghidul-solicitantului-schem%C4%83-energie-autoconsum-v7-iunie-2026.pdf"
+      ],
+      "factualStatus": "open",
+      "lastReviewed": "2026-07-20",
+      "notes": "Sesiunea și plafoanele se raportează la Ghidul V7 și la comunicatul oficial AFIR; procentul de autoconsum și stocarea sunt explicate fără a promite eligibilitatea."
+    },
+    {
+      "route": "/dr12-afir",
+      "primaryIntent": "eligibilitate și documente pentru investițiile DR12 destinate tinerilor fermieri",
+      "primaryQuery": "DR12 AFIR 2026",
+      "secondaryQueries": [
+        "eligibilitate DR12",
+        "sprijin DR12",
+        "acte DR12",
+        "prag SO DR12"
+      ],
+      "title": "DR12 AFIR 2026: lansare, eligibilitate și acte | FABER",
+      "description": "DR12 pentru tineri fermieri: ghid consultativ, minimum 12.000 SO, până la 200.000 €, intensitate 65–80%, acte și statusul lansării.",
+      "ogTitle": "DR12 AFIR 2026: lansare, eligibilitate și acte | FABER",
+      "ogDescription": "DR12 pentru tineri fermieri: ghid consultativ, minimum 12.000 SO, până la 200.000 €, intensitate 65–80%, acte și statusul lansării.",
+      "sourceOfTruth": [
+        "config/seo-programs.json#programs",
+        "https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/"
+      ],
+      "factualStatus": "consultation",
+      "lastReviewed": "2026-07-20",
+      "notes": "Pragul de 12.000 SO este prezentat împreună cu statutul consultativ; procentele nu sunt înghesuite în snippet și rămân explicate în pagină."
+    },
+    {
+      "route": "/dr14",
+      "primaryIntent": "condiții, praguri SO și documente pentru ferme mici prin DR14",
+      "primaryQuery": "DR14 AFIR 2026",
+      "secondaryQueries": [
+        "DR14 ferme mici",
+        "praguri SO DR14",
+        "acte DR14",
+        "componente DR14"
+      ],
+      "title": "DR14 AFIR 2026: ferme mici, SO și finanțare | FABER",
+      "description": "DR14 pentru ferme mici: intervale SO, componente, până la 50.000 €, intensitate de până la 85%, acte și statutul ghidului consultativ.",
+      "ogTitle": "DR14 AFIR 2026: ferme mici, SO și finanțare | FABER",
+      "ogDescription": "DR14 pentru ferme mici: intervale SO, componente, până la 50.000 €, intensitate de până la 85%, acte și statutul ghidului consultativ.",
+      "sourceOfTruth": [
+        "config/seo-programs.json#programs",
+        "https://www.afir.ro/comunicare/utile/dezbatere-publica/"
+      ],
+      "factualStatus": "consultation",
+      "lastReviewed": "2026-07-20",
+      "notes": "Nu prezintă pragurile sectoriale și valorile consultative drept reguli definitive; statutul documentului este explicit."
+    },
+    {
+      "route": "/por-adr-nord-est",
+      "primaryIntent": "identificarea apelurilor regionale pentru IMM și microîntreprinderi din Nord-Est",
+      "primaryQuery": "Programul Regional Nord-Est IMM",
+      "secondaryQueries": [
+        "POR ADR Nord-Est",
+        "apeluri IMM Nord-Est",
+        "fonduri microîntreprinderi Nord-Est"
+      ],
+      "title": "Program Regional Nord-Est: finanțări IMM și apeluri | FABER",
+      "description": "Finanțări IMM în Nord-Est: verifică județul, codul CAEN, amplasamentul, SF/DALI, bugetul și actele; Apelul 2 are pagină separată.",
+      "ogTitle": "Program Regional Nord-Est: finanțări IMM și apeluri | FABER",
+      "ogDescription": "Finanțări IMM în Nord-Est: verifică județul, codul CAEN, amplasamentul, SF/DALI, bugetul și actele; Apelul 2 are pagină separată.",
+      "sourceOfTruth": [
+        "config/seo-programs.json#programs",
+        "https://regionordest.ro/"
+      ],
+      "factualStatus": "final",
+      "lastReviewed": "2026-07-20",
+      "notes": "Folosește denumirea actuală Programul Regional Nord-Est; POR ADR Nord-Est rămâne interogare secundară istorică."
+    },
+    {
+      "route": "/contact",
+      "primaryIntent": "contactarea FABER pentru o analiză inițială a proiectului",
+      "primaryQuery": "contact FABER",
+      "secondaryQueries": [
+        "contact consultant fonduri europene",
+        "trimite proiect FABER",
+        "verificare proiect contact"
+      ],
+      "title": "Contact FABER pentru eligibilitate și proiecte",
+      "description": "Trimite datele proiectului către FABER: solicitant, CAEN, localitate, investiție, buget, cofinanțare și documente disponibile pentru analiză.",
+      "ogTitle": "Trimite proiectul pentru o analiză inițială | FABER",
+      "ogDescription": "Spune-ne cine aplică, unde se face investiția, ce buget și documente există, pentru a clarifica pașii următori fără promisiuni de aprobare.",
+      "sourceOfTruth": [
+        "contact/index.html"
+      ],
+      "factualStatus": "operational_contact_process_verified",
+      "lastReviewed": "2026-07-13",
+      "notes": "Descrie datele necesare pentru analiză; nu promite termen de răspuns, eligibilitate sau aprobare."
+    },
+    {
+      "route": "/e-move",
+      "primaryIntent": "înțelegerea schemei e-MOVE RO pentru infrastructură de mobilitate electrică",
+      "primaryQuery": "e-MOVE RO stații de încărcare",
+      "secondaryQueries": [
+        "e-MOVE stocare",
+        "infrastructură încărcare electrică",
+        "energie regenerabilă e-MOVE"
+      ],
+      "title": "e-MOVE RO: stații de încărcare și condiții | FABER",
+      "description": "e-MOVE RO: stații de încărcare, energie și stocare conform variantei consultative; beneficiarii și calendarul așteaptă forma finală.",
+      "ogTitle": "e-MOVE RO: stații de încărcare și condiții | FABER",
+      "ogDescription": "e-MOVE RO: stații de încărcare, energie și stocare conform variantei consultative; beneficiarii și calendarul așteaptă forma finală.",
+      "sourceOfTruth": [
+        "config/seo-programs.json#programs",
+        "https://fonduri.mt.ro/transparenta/consultare-publica/fondul-pentru-modernizare/comunicat-fm-consultare-publica-ghidul-solicitantului-promovarea-infrastructurii-pentru-o-mobilitate-cu-emisii-zero-in-sprijinul-intreprinderilor-si-comunitatilor-e-move-ro"
+      ],
+      "factualStatus": "consultation",
+      "lastReviewed": "2026-05-27",
+      "notes": "Statutul de consultare este explicit; snippetul nu folosește valoarea maximă indicativă sau intensitatea ca reguli finale."
+    },
+    {
+      "route": "/despre-faber",
+      "primaryIntent": "evaluarea experienței și metodei de lucru FABER",
+      "primaryQuery": "despre FABER consultanță",
+      "secondaryQueries": [
+        "FABER Atelier de Consultanță",
+        "metodă consultanță FABER",
+        "cine este FABER"
+      ],
+      "title": "Despre FABER: consultanță prudentă pentru proiecte",
+      "description": "Cum verifică FABER eligibilitatea, programul, bugetul și documentele, cu surse oficiale, limite clare și fără promisiuni de aprobare.",
+      "ogTitle": "Cum lucrează FABER | Atelier de Consultanță",
+      "ogDescription": "Metoda FABER verifică documentele, sursele oficiale și riscurile care trebuie clarificate înainte de pregătirea dosarului.",
+      "sourceOfTruth": [
+        "despre-faber/index.html",
+        "config/editorial-pages.json"
+      ],
+      "factualStatus": "brand_methodology_copy_verified",
+      "lastReviewed": "2026-07-13",
+      "notes": "Diferențiatorul este prudența documentată, nu o afirmație de succes, premiu sau rată de aprobare."
+    },
+    {
+      "route": "/consultanta-fonduri-europene",
+      "primaryIntent": "contractarea serviciilor de consultanță pentru pregătirea și implementarea proiectelor",
+      "primaryQuery": "consultanță fonduri europene",
+      "secondaryQueries": [
+        "consultant fonduri europene firme",
+        "firmă consultanță fonduri europene",
+        "pregătire dosar fonduri europene"
+      ],
+      "title": "Consultanță fonduri europene pentru firme | FABER",
+      "description": "Consultanță pentru firme, fermieri și organizații: eligibilitate, program potrivit, buget, dosar, clarificări și suport în implementare.",
+      "ogTitle": "Consultanță de la eligibilitate la implementare | FABER",
+      "ogDescription": "FABER verifică eligibilitatea, compară programe și sprijină bugetul, dosarul, clarificările și implementarea pe baza documentelor disponibile.",
+      "sourceOfTruth": [
+        "config/seo-programs.json:consultanta-fonduri-europene",
+        "official-guides.json"
+      ],
+      "factualStatus": "evergreen_service_scope_verified",
+      "lastReviewed": "2026-07-13",
+      "notes": "Titlul comunică beneficiarul principal fără a exclude fermierii și organizațiile, menționate în descriere."
+    }
+  ]
+}

@@ -28,6 +28,7 @@ const {
 } = require("./sync-program-heroes");
 const { renderPocidifContent } = require("./pocidif-content");
 const { applyPriorityAeo } = require("./priority-aeo");
+const { applyContextualNextSteps } = require("./contextual-next-steps");
 const PROGRAM_BANNER_INDEX = createBannerIndex(loadBanners(BANNERS_PATH));
 const {
   editorialSchemaProperties,
@@ -39,17 +40,30 @@ const {
   renderOfficialSources,
   sourcesForKeys
 } = require("./official-sources");
+const {
+  hydrateProgramPage,
+  loadProgramConfig,
+  renderProgramFactualStatus
+} = require("./program-factual-governance");
+const {
+  syncBanners,
+  syncLlmsText
+} = require("./sync-program-factual-governance");
 const { designFamilyForSlug } = require("./design-family-map");
 const {
   SITE,
+  PAGE_KINDS,
+  articleSchema,
   buildPageMetadata,
   breadcrumbItemsForPath,
   breadcrumbSchema,
   canonicalUrl,
   faqPageSchema,
+  fundingProgramSchema,
   jsonLdGraph,
   normalizeCanonicalPath,
   organizationSchema,
+  pageKindForPath,
   serviceSchema,
   standardInternalLinksForPath,
   webApplicationSchema,
@@ -60,13 +74,8 @@ const {
   normalizeHtmlCopy,
   normalizeRomanianCopy
 } = require("./normalize-copy-ro");
-const CLARITY_TRACKING_CODE = `  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "wnvzyco6rq");
-  </script>`;
+const ANALYTICS_EVENTS_SCRIPT = `  <script src="/assets/analytics-events.js" defer></script>`;
+const PROGRAMS = loadProgramConfig().programs;
 
 const PILLAR_SLUGS = new Set([
   "consultanta-fonduri-europene",
@@ -798,80 +807,70 @@ function validatePage(page) {
 function schemaGraph(page, config, metadata = metadataForPage(page)) {
   const faq = faqsForPage(page);
   const editorial = getEditorialMetadata(page.slug);
+  const pageKind = pageKindForPath(slugPath(page), { type: page.type, schemaType: page.schemaType });
+  const dateModified = page.updatedAt || editorial?.updatedAt || config.updatedAt;
+  const datePublished = page.publishedAt || editorial?.publishedAt || config.updatedAt;
+  const factualProgram = page.factualGovernance || null;
   const pageNode = webPageSchema({
     type: page.schemaType === "CollectionPage" ? "CollectionPage" : "WebPage",
     url: metadata.canonicalUrl,
     name: metadata.title,
     description: metadata.description,
-    dateModified: page.updatedAt || config.updatedAt
+    datePublished,
+    dateModified
   });
 
   if (editorial) {
     Object.assign(pageNode, editorialSchemaProperties(editorial));
+    pageNode.datePublished = datePublished;
+    pageNode.dateModified = dateModified;
   }
 
   if (Array.isArray(page.sourceKeys) && page.sourceKeys.length) {
     pageNode.citation = officialSourceCitations(page.sourceKeys);
   }
-  if (isEditorialProgram(page)) {
-    pageNode.mainEntity = { "@id": `${canonical(page)}#service` };
-    pageNode.about = {
-      "@type": page.schemaType === "GovernmentService" ? "GovernmentService" : "Service",
-      name: page.programName || page.h1,
-      serviceType: page.category
-    };
-  }
+  if (factualProgram) pageNode.about = { "@id": `${canonical(page)}#funding-program` };
+  if (pageKind === PAGE_KINDS.ARTICLE) pageNode.mainEntity = { "@id": `${canonical(page)}#article` };
+  if (pageKind === PAGE_KINDS.SERVICE) pageNode.mainEntity = { "@id": `${canonical(page)}#service` };
+  if (pageKind === PAGE_KINDS.WEB_APPLICATION) pageNode.mainEntity = { "@id": `${canonical(page)}#app` };
 
   const graph = [
     organizationSchema(),
     websiteSchema(),
     pageNode,
     breadcrumbSchema(breadcrumbItemsForPage(page)),
+    factualProgram ? fundingProgramSchema(factualProgram) : null,
     faqPageSchema(faq, { minItems: 2 })
   ];
 
-  if (page.type !== "tools") {
-    const articleNode = {
-      "@type": "Article",
-      "@id": `${canonical(page)}#article`,
-      "mainEntityOfPage": { "@id": pageNode["@id"] },
-      "headline": publicText(page.h1 || page.title),
-      "description": publicText(metadata.description),
-      "inLanguage": "ro-RO",
-      "author": { "@id": `${SITE}/#organization` },
-      "publisher": { "@id": `${SITE}/#organization` },
-      "dateModified": page.updatedAt || config.updatedAt
-    };
-    if (editorial) Object.assign(articleNode, editorialSchemaProperties(editorial));
+  if (pageKind === PAGE_KINDS.ARTICLE) {
+    const articleNode = articleSchema({
+      url: metadata.canonicalUrl,
+      headline: publicText(page.h1 || page.title),
+      description: publicText(metadata.description),
+      author: editorial?.author || config.defaults.author,
+      reviewer: editorial?.reviewer,
+      datePublished,
+      dateModified
+    });
     if (Array.isArray(page.sourceKeys) && page.sourceKeys.length) {
       articleNode.citation = officialSourceCitations(page.sourceKeys);
     }
+    if (factualProgram) articleNode.about = { "@id": `${canonical(page)}#funding-program` };
     graph.push(articleNode);
   }
 
-  if (page.type === "program" || page.type === "service" || page.schemaType === "Service" || page.schemaType === "GovernmentService") {
+  if (pageKind === PAGE_KINDS.SERVICE) {
     const serviceNode = serviceSchema({
-      type: page.schemaType === "GovernmentService" ? "GovernmentService" : "Service",
       url: metadata.canonicalUrl,
       name: page.programName || page.h1,
       description: metadata.description,
       serviceType: page.category
     });
-    if (isEditorialProgram(page)) {
-      serviceNode.audience = (page.audience || []).slice(0, 4).map((item) => ({
-        "@type": "Audience",
-        audienceType: item
-      }));
-      serviceNode.potentialAction = {
-        "@type": "CommunicateAction",
-        name: "Trimite date pentru verificarea eligibilitatii",
-        target: `${SITE}/contact`
-      };
-    }
     graph.push(serviceNode);
   }
 
-  if (page.type === "tools") {
+  if (pageKind === PAGE_KINDS.WEB_APPLICATION) {
     graph.push(webApplicationSchema({
       url: metadata.canonicalUrl,
       name: "Instrumente fonduri europene",
@@ -1220,7 +1219,7 @@ function renderAfirAutoconsumAgroalimentarContent(page) {
       <section aria-labelledby="afir-raspuns-rapid">
         <h2 id="afir-raspuns-rapid">Răspuns rapid</h2>
         <p class="intro">${esc(page.quickAnswer)}</p>
-        <p class="source-note"><strong>Status document:</strong> Ghidul Solicitantului – Schema ENERGIE, Versiunea 7, este ghidul aprobat prin Ordinul MADR nr. 180/09.06.2026 și aplicabil sesiunii deschise între 15 iunie și 14 august 2026. Nu este prezentat ca simplă versiune consultativă. Ghidul și anexele pot primi rectificări, astfel că înainte de depunere se verifică forma disponibilă pe pagina AFIR și eventualele clarificări ulterioare. <strong>Ultima verificare:</strong> <time datetime="2026-07-13">13 iulie 2026</time>.</p>
+        <p class="source-note"><strong>Status document:</strong> Ghidul Solicitantului – Schema ENERGIE, Versiunea 7, este ghidul aprobat prin Ordinul MADR nr. 180/09.06.2026 și aplicabil sesiunii deschise între 15 iunie și 14 august 2026. Nu este prezentat ca simplă versiune consultativă. Ghidul și anexele pot primi rectificări, astfel că înainte de depunere se verifică forma disponibilă pe pagina AFIR și eventualele clarificări ulterioare. <strong>Ultima verificare:</strong> <time datetime="2026-07-20">20 iulie 2026</time>.</p>
         <div class="table-wrap">
           <table class="program-table">
             <thead><tr><th>Reper din Ghidul V7</th><th>Condiție</th></tr></thead>
@@ -2965,10 +2964,15 @@ ${officialSourcesHtml}
 }
 
 function pageHtml(page, config) {
+  page = hydrateProgramPage(page, PROGRAMS);
   const metadata = metadataForPage(page);
   const family = designFamilyFor(page);
   const route = slugPath(page);
   const programBanner = bannerForRoute(route, PROGRAM_BANNER_INDEX);
+  const factualProgram = page.factualGovernance || null;
+  const factualBodyAttributes = factualProgram
+    ? ` data-program-id="${escAttr(factualProgram.id)}" data-source-status="${escAttr(factualProgram.sourceStatus)}" data-reviewed-at="${escAttr(factualProgram.reviewedAt)}" data-factual-governance="config/seo-programs.json#programs"`
+    : "";
   const relatedCss = (page.related || []).length ? `\n  <link rel="stylesheet" href="/assets/see-also.css" />` : "";
   const toolCss = page.includeTools || page.includeDownloads ? `\n  <link rel="stylesheet" href="/assets/seo-tools.css" />` : "";
   const sourcesCss = (page.sourceKeys || []).length ? `\n  <link rel="stylesheet" href="/assets/official-sources.css" />` : "";
@@ -3032,16 +3036,17 @@ function pageHtml(page, config) {
   <noscript><link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/duotone/style.css" /></noscript>
   <link rel="stylesheet" href="/assets/seo-hub.css" />${extraCss}
   <script type="application/ld+json">${schemaGraph(page, config, metadata)}</script>${extraJs}
-${CLARITY_TRACKING_CODE}
+${ANALYTICS_EVENTS_SCRIPT}
   <link rel="stylesheet" href="/assets/design-profiles.css">
 ${programBanner ? "  <link rel=\"stylesheet\" href=\"/assets/program-heroes.css\">" : ""}
 </head>
-<body class="page-family-${esc(family)}">
+<body class="page-family-${esc(family)}"${factualBodyAttributes}>
   ${GLOBAL_HEADER}
   ${renderBreadcrumb(breadcrumbItemsForPage(page))}
   ${programHeroHtml}
   <main class="container">
     <article class="panel">
+${factualProgram ? renderProgramFactualStatus(factualProgram) : ""}
 ${page.hideFamilyCards ? "" : renderFamilyCards(page)}
 ${renderMainContent(page)}
 ${renderPocidifDiscoveryLink(page)}
@@ -3056,11 +3061,11 @@ ${renderPocidifDiscoveryLink(page)}
       </div>
     </section>
   </main>
-  <footer class="footer">© 2026 FABER - Atelier de Consultanta · <a href="/fonduri-europene">Fonduri europene</a> · <a href="/contact">Contact</a></footer>
+  <footer class="footer">© 2026 FABER - Atelier de Consultanță · <a href="/fonduri-europene">Fonduri europene</a> · <a href="/contact">Contact</a></footer>
 </body>
 </html>
 `;
-  return applyPriorityAeo(html, page.slug);
+  return applyContextualNextSteps(applyPriorityAeo(html, page.slug), page.slug);
 }
 
 function redirectFallbackHtml(page) {
@@ -3075,7 +3080,7 @@ function redirectFallbackHtml(page) {
   <link rel="canonical" href="${canonical(page)}" />
   <meta http-equiv="refresh" content="0; url=${target}" />
   <script>window.location.replace('${target}');</script>
-${CLARITY_TRACKING_CODE}
+${ANALYTICS_EVENTS_SCRIPT}
 </head>
 <body>
   <main style="font-family: Arial, sans-serif; max-width: 720px; margin: 12vh auto; padding: 32px; line-height: 1.6; color: #1a2540;">
@@ -3211,88 +3216,7 @@ function updateBlogJson(pages, config) {
 
 function updateBanners() {
   if (!fs.existsSync(BANNERS_PATH)) return;
-  const banners = readJson(BANNERS_PATH);
-  const wanted = [
-    {
-      id: "slide-micro-apel-2",
-      tag: "Microîntreprinderi",
-      title: "Modernizarea microîntreprinderilor\nApel 2",
-      description: "Pregătire pentru microîntreprinderi: regiune, CAEN, documente, buget, cheltuieli și punctaj.",
-      amount: "Finanțare: conform apelului activ",
-      ctaText: "Detalii program →",
-      ctaLink: "/investitii-modernizarea-microintreprinderilor-apel-2",
-      image: "",
-      altText: "Banner modernizarea microîntreprinderilor Apel 2",
-      icon: "ph-buildings",
-      order: 10,
-      active: true,
-      officialGuideKey: "por-ne"
-    },
-    {
-      id: "slide-fond-modernizare-regenerabila",
-      tag: "Energie regenerabilă",
-      title: "Fondul pentru Modernizare\nEnergie regenerabilă",
-      description: "Pagina pentru capacități noi de producere a energiei regenerabile: amplasament, avize, buget și depunere.",
-      amount: "Finanțare: conform ghidului apelului activ",
-      ctaText: "Detalii program →",
-      ctaLink: "/fondul-modernizare-energie-regenerabila-2026",
-      image: "",
-      altText: "Banner Fondul pentru Modernizare energie regenerabilă",
-      icon: "ph-sun",
-      order: 11,
-      active: true,
-      officialGuideKey: "fondul-modernizare"
-    },
-    {
-      id: "slide-apeluri-gal",
-      tag: "LEADER / GAL",
-      title: "Apeluri GAL\nFinanțări locale",
-      description: "Orientare prudentă pentru identificarea GAL-ului local, verificarea ghidului, a documentelor și a criteriilor locale.",
-      amount: "Finanțare: conform ghidului GAL activ",
-      ctaText: "Detalii GAL →",
-      ctaLink: "/apeluri-gal",
-      image: "",
-      altText: "Banner apeluri GAL LEADER",
-      icon: "ph-map-pin",
-      order: 12,
-      active: true,
-      officialGuideKey: "dr36-leader"
-    },
-    {
-      id: "slide-e-move",
-      tag: "Mobilitate electrică",
-      title: "e-MOVE RO\nStații de încărcare și energie regenerabilă",
-      description: "Program pentru infrastructura de mobilitate electrică. Verifică beneficiarul, amplasamentul, avizele, sursa de energie și ghidul activ înainte de depunere.",
-      amount: "Finanțare: conform ghidului oficial al apelului activ",
-      ctaText: "Detalii e-MOVE →",
-      ctaLink: "/e-move",
-      image: "",
-      altText: "Banner program e-MOVE RO stații de încărcare și energie regenerabilă",
-      icon: "ph-battery-charging",
-      order: 13,
-      active: true,
-      officialGuideKey: "emove"
-    },
-    {
-      id: "slide-gal-afir",
-      tag: "LEADER / GAL / AFIR",
-      title: "GAL-AFIR\nApeluri pentru beneficiari publici și privați",
-      description: "Finanțări locale prin Grupuri de Acțiune Locală. FABER scrie proiecte noi și poate prelua proiecte aflate în implementare.",
-      amount: "Finanțare: conform ghidului GAL activ",
-      ctaText: "Detalii GAL-AFIR →",
-      ctaLink: "/gal-afir",
-      image: "",
-      altText: "Banner GAL AFIR apeluri LEADER pentru beneficiari publici și privați",
-      icon: "ph-map-pin",
-      order: 14,
-      active: true,
-      officialGuideKey: "leader-gal"
-    }
-  ];
-  for (const banner of wanted) {
-    if (!banners.some((item) => item.id === banner.id)) banners.push(banner);
-  }
-  writeJson(BANNERS_PATH, banners);
+  writeJson(BANNERS_PATH, syncBanners(readJson(BANNERS_PATH), PROGRAMS));
 }
 
 function updateLlms(pages) {
@@ -3305,11 +3229,10 @@ function updateLlms(pages) {
     .join("\n")}\n\n## Structura pentru asistenti AI\n- Paginile importante includ intrebari in limbaj natural, raspunsuri scurte vizibile si schema FAQPage doar cand intrebarile sunt vizibile in pagina.\n- Pentru sume, procente, punctaje si conditii finale, informatia trebuie verificata in apelul activ.\n`;
   if (text.includes("Pagini noi pentru vizibilitate AI")) {
     text = text.replace(/\n## Pagini noi pentru vizibilitate AI si cautare vocala[\s\S]*?\n## Structura pentru asistenti AI[\s\S]*$/m, block);
-    fs.writeFileSync(LLMS_PATH, text, "utf8");
   } else {
     text = `${text.replace(/\s+$/g, "")}\n${block}`;
-    fs.writeFileSync(LLMS_PATH, text, "utf8");
   }
+  fs.writeFileSync(LLMS_PATH, syncLlmsText(text, PROGRAMS), "utf8");
 }
 
 function main() {
@@ -3318,7 +3241,9 @@ function main() {
   const onlySlugs = onlyArgument
     ? new Set(onlyArgument.slice("--only=".length).split(",").map((slug) => slug.trim()).filter(Boolean))
     : null;
-  const pages = (config.pages || []).filter((page) => !page.redirectTo && (!onlySlugs || onlySlugs.has(page.slug)));
+  const pages = (config.pages || [])
+    .filter((page) => !page.redirectTo && (!onlySlugs || onlySlugs.has(page.slug)))
+    .map((page) => hydrateProgramPage(page, PROGRAMS));
   if (onlySlugs && pages.length !== onlySlugs.size) {
     const found = new Set(pages.map((page) => page.slug));
     const missing = [...onlySlugs].filter((slug) => !found.has(slug));

@@ -1,0 +1,344 @@
+{
+  "generatedAt": "2026-07-20",
+  "results": [
+    {
+      "page": "home",
+      "viewport": {
+        "width": 320,
+        "height": 844
+      },
+      "screenshot": "reports\\priority-responsive-2026-07-20\\home-320.png",
+      "metrics": {
+        "viewportWidth": 320,
+        "scrollWidth": 320,
+        "pageHeight": 14230,
+        "h1Count": 1,
+        "h1WithinViewport": true,
+        "h1Overflow": "visible",
+        "nextStepCount": 0,
+        "nextStepRatio": null,
+        "sectionsAfterNextStep": null,
+        "projectDesignLinks": 0,
+        "homepageServicePaths": {
+          "consulting": true,
+          "projectDesign": true
+        }
+      },
+      "errors": []
+    },
+    {
+      "page": "afir-autoconsum",
+      "viewport": {
+        "width": 320,
+        "height": 844
+      },
+      "screenshot": "reports\\priority-responsive-2026-07-20\\afir-autoconsum-320.png",
+      "metrics": {
+        "viewportWidth": 320,
+        "scrollWidth": 320,
+        "pageHeight": 27908,
+        "h1Count": 1,
+        "h1WithinViewport": true,
+        "h1Overflow": "visible",
+        "nextStepCount": 1,
+        "nextStepRatio": 0.9468269626988677,
+        "sectionsAfterNextStep": 1,
+        "projectDesignLinks": 1,
+        "homepageServicePaths": null
+      },
+      "errors": []
+    },
+    {
+      "page": "dr12",
+      "viewport": {
+        "width": 320,
+        "height": 844
+      },
+      "screenshot": "reports\\priority-responsive-2026-07-20\\dr12-320.png",
+      "metrics": {
+        "viewportWidth": 320,
+        "scrollWidth": 320,
+        "pageHeight": 18596,
+        "h1Count": 1,
+        "h1WithinViewport": true,
+        "h1Overflow": "visible",
+        "nextStepCount": 1,
+        "nextStepRatio": 0.9229883106582061,
+        "sectionsAfterNextStep": 1,
+        "projectDesignLinks": 1,
+        "homepageServicePaths": null
+      },
+      "errors": []
+    },
+    {
+      "page": "dr14",
+      "viewport": {
+        "width": 320,
+        "height": 844
+      },
+      "screenshot": "reports\\priority-responsive-2026-07-20\\dr14-320.png",
+      "metrics": {
+        "viewportWidth": 320,
+        "scrollWidth": 320,
+        "pageHeight": 19916,
+        "h1Count": 1,
+        "h1WithinViewport": true,
+        "h1Overflow": "visible",
+        "nextStepCount": 1,
+        "nextStepRatio": 0.9303928060353485,
+        "sectionsAfterNextStep": 1,
+        "projectDesignLinks": 1,
+        "homepageServicePaths": null
+      },
+      "errors": []
+    },
+    {
+      "page": "por-nord-est",
+      "viewport": {
+        "width": 320,
+        "height": 844
+      },
+      "screenshot": "reports\\priority-responsive-2026-07-20\\por-nord-est-320.png",
+      "metrics": {
+        "viewportWidth": 320,
+        "scrollWidth": 320,
+        "pageHeight": 17372,
+        "h1Count": 1,
+        "h1WithinViewport": true,
+        "h1Overflow": "visible",
+        "nextStepCount": 1,
+        "nextStepRatio": 0.9189914085885332,
+        "sectionsAfterNextStep": 1,
+        "projectDesignLinks": 1,
+        "homepageServicePaths": null
+      },
+      "errors": []
+    },
+    {
+      "page": "home",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "reports\\priority-responsive-2026-07-20\\home-390.png",
+      "metrics": {
+        "viewportWidth": 390,
+        "scrollWidth": 390,
+        "pageHeight": 13592,
+        "h1Count": 1,
+        "h1WithinViewport": true,
+        "h1Overflow": "visible",
+        "nextStepCount": 0,
+        "nextStepRatio": null,
+        "sectionsAfterNextStep": null,
+        "projectDesignLinks": 0,
+        "homepageServicePaths": {
+          "consulting": true,
+          "projectDesign": true
+        }
+      },
+      "errors": []
+    },
+    {
+      "page": "afir-autoconsum",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "reports\\priority-responsive-2026-07-20\\afir-autoconsum-390.png",
+      "metrics": {
+        "viewportWidth": 390,
+        "scrollWidth": 390,
+        "pageHeight": 22093,
+        "h1Count": 1,
+        "h1WithinViewport": true,
+        "h1Overflow": "visible",
+        "nextStepCount": 1,
+        "nextStepRatio": 0.9400283743719731,
+        "sectionsAfterNextStep": 1,
+        "projectDesignLinks": 1,
+        "homepageServicePaths": null
+      },
+      "errors": []
+    },
+    {
+      "page": "dr12",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "reports\\priority-responsive-2026-07-20\\dr12-390.png",
+      "metrics": {
+        "viewportWidth": 390,
+        "scrollWidth": 390,
+        "pageHeight": 14907,
+        "h1Count": 1,
+        "h1WithinViewport": true,
+        "h1Overflow": "visible",
+        "nextStepCount": 1,
+        "nextStepRatio": 0.914771583819682,
+        "sectionsAfterNextStep": 1,
+        "projectDesignLinks": 1,
+        "homepageServicePaths": null
+      },
+      "errors": []
+    },
+    {
+      "page": "dr14",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "reports\\priority-responsive-2026-07-20\\dr14-390.png",
+      "metrics": {
+        "viewportWidth": 390,
+        "scrollWidth": 390,
+        "pageHeight": 16154,
+        "h1Count": 1,
+        "h1WithinViewport": true,
+        "h1Overflow": "visible",
+        "nextStepCount": 1,
+        "nextStepRatio": 0.9267934799430482,
+        "sectionsAfterNextStep": 1,
+        "projectDesignLinks": 1,
+        "homepageServicePaths": null
+      },
+      "errors": []
+    },
+    {
+      "page": "por-nord-est",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "reports\\priority-responsive-2026-07-20\\por-nord-est-390.png",
+      "metrics": {
+        "viewportWidth": 390,
+        "scrollWidth": 390,
+        "pageHeight": 14193,
+        "h1Count": 1,
+        "h1WithinViewport": true,
+        "h1Overflow": "visible",
+        "nextStepCount": 1,
+        "nextStepRatio": 0.9073993341788206,
+        "sectionsAfterNextStep": 1,
+        "projectDesignLinks": 1,
+        "homepageServicePaths": null
+      },
+      "errors": []
+    },
+    {
+      "page": "home",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "reports\\priority-responsive-2026-07-20\\home-1440.png",
+      "metrics": {
+        "viewportWidth": 1440,
+        "scrollWidth": 1440,
+        "pageHeight": 12101,
+        "h1Count": 1,
+        "h1WithinViewport": true,
+        "h1Overflow": "visible",
+        "nextStepCount": 0,
+        "nextStepRatio": null,
+        "sectionsAfterNextStep": null,
+        "projectDesignLinks": 0,
+        "homepageServicePaths": {
+          "consulting": true,
+          "projectDesign": true
+        }
+      },
+      "errors": []
+    },
+    {
+      "page": "afir-autoconsum",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "reports\\priority-responsive-2026-07-20\\afir-autoconsum-1440.png",
+      "metrics": {
+        "viewportWidth": 1440,
+        "scrollWidth": 1440,
+        "pageHeight": 10585,
+        "h1Count": 1,
+        "h1WithinViewport": true,
+        "h1Overflow": "visible",
+        "nextStepCount": 1,
+        "nextStepRatio": 0.9325962446858762,
+        "sectionsAfterNextStep": 1,
+        "projectDesignLinks": 1,
+        "homepageServicePaths": null
+      },
+      "errors": []
+    },
+    {
+      "page": "dr12",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "reports\\priority-responsive-2026-07-20\\dr12-1440.png",
+      "metrics": {
+        "viewportWidth": 1440,
+        "scrollWidth": 1440,
+        "pageHeight": 7551,
+        "h1Count": 1,
+        "h1WithinViewport": true,
+        "h1Overflow": "visible",
+        "nextStepCount": 1,
+        "nextStepRatio": 0.9082902926764667,
+        "sectionsAfterNextStep": 1,
+        "projectDesignLinks": 1,
+        "homepageServicePaths": null
+      },
+      "errors": []
+    },
+    {
+      "page": "dr14",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "reports\\priority-responsive-2026-07-20\\dr14-1440.png",
+      "metrics": {
+        "viewportWidth": 1440,
+        "scrollWidth": 1440,
+        "pageHeight": 8240,
+        "h1Count": 1,
+        "h1WithinViewport": true,
+        "h1Overflow": "visible",
+        "nextStepCount": 1,
+        "nextStepRatio": 0.9184655643203884,
+        "sectionsAfterNextStep": 1,
+        "projectDesignLinks": 1,
+        "homepageServicePaths": null
+      },
+      "errors": []
+    },
+    {
+      "page": "por-nord-est",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "reports\\priority-responsive-2026-07-20\\por-nord-est-1440.png",
+      "metrics": {
+        "viewportWidth": 1440,
+        "scrollWidth": 1440,
+        "pageHeight": 7369,
+        "h1Count": 1,
+        "h1WithinViewport": true,
+        "h1Overflow": "visible",
+        "nextStepCount": 1,
+        "nextStepRatio": 0.9057538336273578,
+        "sectionsAfterNextStep": 1,
+        "projectDesignLinks": 1,
+        "homepageServicePaths": null
+      },
+      "errors": []
+    }
+  ]
+}

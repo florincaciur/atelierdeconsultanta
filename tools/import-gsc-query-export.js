@@ -8,10 +8,12 @@ const zlib = require("zlib");
 const ROOT = path.resolve(__dirname, "..");
 const SITE = "https://atelierdeconsultanta.ro";
 const REPORT_DIR = path.join(ROOT, "reports");
+const SNIPPET_CONFIG_PATH = path.join(ROOT, "config", "seo-snippets.json");
 const DEFAULT_MIN_POSITION = 4;
 const DEFAULT_MAX_POSITION = 15;
 
 const ROUTE_HINTS = [
+  ["/", ["atelier de consultanta", "faber atelier", "faber consultanta"]],
   ["/consultanta-fonduri-europene", ["consultanta fonduri europene", "firma consultanta fonduri", "consultant fonduri", "depunere proiect"]],
   ["/fonduri-europene", ["fonduri europene", "programe fonduri", "program fonduri", "eligibilitate programe"]],
   ["/fonduri-europene-nerambursabile-2026", ["fonduri europene nerambursabile 2026", "fonduri europene 2026", "fonduri nerambursabile 2026"]],
@@ -43,8 +45,21 @@ const ROUTE_HINTS = [
   ["/cum-alegi-programul-potrivit-fonduri-europene-2026", ["cum aleg programul", "program potrivit fonduri"]],
   ["/intrebari-frecvente", ["intrebari frecvente fonduri", "faq fonduri"]],
   ["/surse-oficiale-fonduri-europene", ["surse oficiale fonduri", "ghid oficial fonduri"]],
-  ["/glosar-fonduri-europene", ["ce inseamna", "glosar fonduri"]]
+  ["/glosar-fonduri-europene", ["ce inseamna", "glosar fonduri"]],
+  ["/contact", ["contact faber", "contact consultant fonduri"]],
+  ["/despre-faber", ["despre faber", "cine este faber"]]
 ];
+
+function snippetRecommendations() {
+  if (!fs.existsSync(SNIPPET_CONFIG_PATH)) return new Map();
+  const config = JSON.parse(fs.readFileSync(SNIPPET_CONFIG_PATH, "utf8"));
+  return new Map((config.pages || []).map((page) => [page.route, {
+    title: page.title,
+    description: page.description
+  }]));
+}
+
+const SNIPPET_BY_ROUTE = snippetRecommendations();
 
 function usage() {
   console.error(`Usage:
@@ -263,11 +278,63 @@ function inferRoute(query) {
   return best.route ? { route: best.route, matchedBy: `query hint: ${best.term}` } : { route: "", matchedBy: "" };
 }
 
-function opportunityScore({ impressions, clicks, ctr, position }) {
-  const ctrRate = ctr > 1 ? ctr / 100 : ctr;
-  const positionWeight = Math.max(0, 16 - position) / 12;
-  const clickGap = Math.max(0.2, 1 - Math.min(0.8, ctrRate || 0));
-  return Math.round(impressions * positionWeight * clickGap * 100) / 100;
+function currentCtrRate(record) {
+  if (record.hasClicks && record.impressions > 0) return record.clicks / record.impressions;
+  if (record.ctrIsPercentage) return record.ctr / 100;
+  return record.ctr > 1 ? record.ctr / 100 : record.ctr;
+}
+
+function round(value, decimals = 2) {
+  const multiplier = 10 ** decimals;
+  return Math.round(value * multiplier) / multiplier;
+}
+
+function scoreOpportunityRecords(records) {
+  const withCtr = records.map((record) => ({
+    ...record,
+    currentCtrRate: Math.max(0, currentCtrRate(record))
+  }));
+
+  const benchmarked = withCtr.map((record, recordIndex) => {
+    const nearestPeers = withCtr
+      .map((peer, peerIndex) => ({ peer, peerIndex, distance: Math.abs(peer.position - record.position) }))
+      .filter(({ peerIndex }) => peerIndex !== recordIndex)
+      .sort((a, b) => a.distance - b.distance || b.peer.impressions - a.peer.impressions)
+      .slice(0, Math.min(10, Math.max(0, withCtr.length - 1)))
+      .map(({ peer }) => peer);
+    const peerImpressions = nearestPeers.reduce((sum, peer) => sum + peer.impressions, 0);
+    const peerCtrRate = peerImpressions > 0
+      ? nearestPeers.reduce((sum, peer) => sum + peer.currentCtrRate * peer.impressions, 0) / peerImpressions
+      : record.currentCtrRate;
+    const peerPosition = peerImpressions > 0
+      ? nearestPeers.reduce((sum, peer) => sum + peer.position * peer.impressions, 0) / peerImpressions
+      : record.position;
+    const ctrGapRate = Math.max(0, peerCtrRate - record.currentCtrRate);
+    const expectedClickGap = record.impressions * ctrGapRate;
+    const recommendation = SNIPPET_BY_ROUTE.get(record.route) || {};
+    return {
+      ...record,
+      currentCtrPct: round(record.currentCtrRate * 100),
+      peerCtrPct: round(peerCtrRate * 100),
+      ctrGapPp: round(ctrGapRate * 100),
+      expectedClickGap: round(expectedClickGap),
+      peerPosition: round(peerPosition),
+      peerCount: nearestPeers.length,
+      rawOpportunity: expectedClickGap,
+      benchmarkSource: nearestPeers.length
+        ? `${nearestPeers.length} rânduri cu pozițiile cele mai apropiate din același export, ponderate cu afișările`
+        : "fără alte rânduri comparabile în export",
+      recommendedTitle: recommendation.title || "",
+      recommendedDescription: recommendation.description || ""
+    };
+  });
+  const maxRawOpportunity = Math.max(0, ...benchmarked.map((record) => record.rawOpportunity));
+  return benchmarked
+    .map((record) => ({
+      ...record,
+      opportunity: maxRawOpportunity > 0 ? round((record.rawOpportunity / maxRawOpportunity) * 100) : 0
+    }))
+    .sort((a, b) => b.opportunity - a.opportunity || b.impressions - a.impressions);
 }
 
 function actionFor(route) {
@@ -296,7 +363,7 @@ function rowsToRecords(rows, options, redirects) {
     throw new Error(`Missing required columns. Found headers: ${headers.join(", ")}`);
   }
 
-  return rows.slice(1).map((row) => {
+  const records = rows.slice(1).map((row) => {
     const query = String(row[queryIndex] || "").trim();
     const page = options.page || (pageIndex >= 0 ? row[pageIndex] : "");
     const inferred = page ? { route: "", matchedBy: "" } : inferRoute(query);
@@ -311,6 +378,8 @@ function rowsToRecords(rows, options, redirects) {
       clicks,
       impressions,
       ctr,
+      ctrIsPercentage: ctrIndex >= 0 && String(row[ctrIndex] || "").includes("%"),
+      hasClicks: clicksIndex >= 0,
       position,
       matchedBy: page ? "page column" : inferred.matchedBy,
       action: actionFor(route)
@@ -321,10 +390,8 @@ function rowsToRecords(rows, options, redirects) {
     record.position >= options.minPosition &&
     record.position <= options.maxPosition &&
     record.impressions >= options.minImpressions
-  )).map((record) => ({
-    ...record,
-    opportunity: opportunityScore(record)
-  })).sort((a, b) => b.opportunity - a.opportunity || b.impressions - a.impressions);
+  ));
+  return scoreOpportunityRecords(records);
 }
 
 function rowsToPageRecords(rows, options, redirects) {
@@ -341,7 +408,7 @@ function rowsToPageRecords(rows, options, redirects) {
     throw new Error(`Missing page export columns. Found headers: ${headers.join(", ")}`);
   }
 
-  return rows.slice(1).map((row) => {
+  const records = rows.slice(1).map((row) => {
     const rawPage = String(row[pageIndex] || "").trim();
     const route = canonicalRoute(rawPage, redirects);
     const clicks = clicksIndex >= 0 ? parseNumber(row[clicksIndex]) : 0;
@@ -354,6 +421,8 @@ function rowsToPageRecords(rows, options, redirects) {
       clicks,
       impressions,
       ctr,
+      ctrIsPercentage: ctrIndex >= 0 && String(row[ctrIndex] || "").includes("%"),
+      hasClicks: clicksIndex >= 0,
       position,
       action: actionFor(route)
     };
@@ -362,10 +431,8 @@ function rowsToPageRecords(rows, options, redirects) {
     record.position >= options.minPosition &&
     record.position <= options.maxPosition &&
     record.impressions >= options.minImpressions
-  )).map((record) => ({
-    ...record,
-    opportunity: opportunityScore(record)
-  })).sort((a, b) => b.opportunity - a.opportunity || b.impressions - a.impressions);
+  ));
+  return scoreOpportunityRecords(records);
 }
 
 function csvCell(value) {
@@ -381,7 +448,12 @@ function writeReports(records, input) {
   const date = new Date().toISOString().slice(0, 10);
   const csvPath = path.join(REPORT_DIR, `gsc-query-priorities-${date}.csv`);
   const mdPath = path.join(REPORT_DIR, `gsc-query-priorities-${date}.md`);
-  const csvHeader = ["route", "query", "clicks", "impressions", "ctr", "position", "opportunity", "matched_by", "suggested_action"];
+  const csvHeader = [
+    "route", "query", "clicks", "impressions", "current_ctr_pct", "position",
+    "peer_ctr_pct", "ctr_gap_pp", "expected_click_gap", "peer_position", "peer_count",
+    "opportunity_score", "benchmark_source", "recommended_title", "recommended_description",
+    "matched_by", "suggested_action"
+  ];
   const csv = [
     csvHeader.map(csvCell).join(","),
     ...records.map((record) => [
@@ -389,9 +461,17 @@ function writeReports(records, input) {
       record.query,
       record.clicks,
       record.impressions,
-      record.ctr,
+      record.currentCtrPct,
       record.position,
+      record.peerCtrPct,
+      record.ctrGapPp,
+      record.expectedClickGap,
+      record.peerPosition,
+      record.peerCount,
       record.opportunity,
+      record.benchmarkSource,
+      record.recommendedTitle,
+      record.recommendedDescription,
       record.matchedBy,
       record.action
     ].map(csvCell).join(","))
@@ -419,7 +499,9 @@ Filter: average position ${DEFAULT_MIN_POSITION}-${DEFAULT_MAX_POSITION}
 
 - Rows kept: ${records.length}
 - Routes with opportunities: ${groups.length}
-- Ranking: opportunity score favors high impressions, low CTR, and average position 4-15.
+- Benchmark CTR: media ponderată cu afișările a maximum 10 rânduri din același export care au pozițiile cele mai apropiate.
+- Click gap: afișări × max(0, CTR benchmark − CTR actual).
+- Scor: 100 × click gap / cel mai mare click gap din export. Nu este folosit un CTR standard universal.
 
 ## Top routes
 
@@ -429,9 +511,9 @@ ${groups.map(([route, rows]) => `| ${mdCell(route)} | ${rows.length} | ${rows.re
 
 ## Top queries
 
-| Route | Query | Clicks | Impressions | CTR | Position | Opportunity | Action |
-| --- | --- | ---: | ---: | ---: | ---: | ---: | --- |
-${records.slice(0, 150).map((record) => `| ${mdCell(record.route)} | ${mdCell(record.query)} | ${record.clicks} | ${record.impressions} | ${record.ctr} | ${record.position} | ${record.opportunity} | ${mdCell(record.action)} |`).join("\n")}
+| Route | Query | Clicks | Impressions | CTR actual | CTR benchmark | Position | Click gap | Score | Title recomandat |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+${records.slice(0, 150).map((record) => `| ${mdCell(record.route)} | ${mdCell(record.query)} | ${record.clicks} | ${record.impressions} | ${record.currentCtrPct}% | ${record.peerCtrPct}% | ${record.position} | ${record.expectedClickGap} | ${record.opportunity} | ${mdCell(record.recommendedTitle)} |`).join("\n")}
 `;
   fs.writeFileSync(mdPath, md, "utf8");
   console.log(`Wrote ${path.relative(ROOT, csvPath)} and ${path.relative(ROOT, mdPath)}.`);
@@ -466,7 +548,12 @@ function writePerformanceReports({ queryRecords, pageRecords, rowsByName, input 
   const date = new Date().toISOString().slice(0, 10);
   const pageCsvPath = path.join(REPORT_DIR, `gsc-page-priorities-${date}.csv`);
   const combinedPath = path.join(REPORT_DIR, `gsc-performance-priorities-${date}.md`);
-  const pageCsvHeader = ["route", "raw_page", "clicks", "impressions", "ctr", "position", "opportunity", "suggested_action"];
+  const pageCsvHeader = [
+    "route", "raw_page", "clicks", "impressions", "current_ctr_pct", "position",
+    "peer_ctr_pct", "ctr_gap_pp", "expected_click_gap", "peer_position", "peer_count",
+    "opportunity_score", "benchmark_source", "recommended_title", "recommended_description",
+    "suggested_action"
+  ];
   const pageCsv = [
     pageCsvHeader.map(csvCell).join(","),
     ...pageRecords.map((record) => [
@@ -474,9 +561,17 @@ function writePerformanceReports({ queryRecords, pageRecords, rowsByName, input 
       record.rawPage,
       record.clicks,
       record.impressions,
-      record.ctr,
+      record.currentCtrPct,
       record.position,
+      record.peerCtrPct,
+      record.ctrGapPp,
+      record.expectedClickGap,
+      record.peerPosition,
+      record.peerCount,
       record.opportunity,
+      record.benchmarkSource,
+      record.recommendedTitle,
+      record.recommendedDescription,
       record.action
     ].map(csvCell).join(","))
   ].join("\n");
@@ -504,17 +599,23 @@ ${filterLines}
 - CTR: ${chartSummary.ctr}%
 - Average position: ${chartSummary.position}
 
+## CTR opportunity method
+
+- CTR-ul de comparație folosește maximum 10 rânduri cu pozițiile cele mai apropiate din același export, ponderate cu afișările.
+- Click gap = afișări × max(0, CTR benchmark − CTR actual).
+- Scorul 0–100 normalizează click gap-ul față de cea mai mare oportunitate din același export; nu presupune un CTR universal.
+
 ## Highest-priority pages
 
-| Route | Raw GSC page | Clicks | Impressions | CTR | Position | Opportunity | Action |
-| --- | --- | ---: | ---: | ---: | ---: | ---: | --- |
-${pageRecords.slice(0, 80).map((record) => `| ${mdCell(record.route)} | ${mdCell(record.rawPage)} | ${record.clicks} | ${record.impressions} | ${record.ctr} | ${record.position} | ${record.opportunity} | ${mdCell(record.action)} |`).join("\n")}
+| Route | Raw GSC page | Clicks | Impressions | CTR actual | CTR benchmark | Position | Click gap | Score | Title recomandat |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+${pageRecords.slice(0, 80).map((record) => `| ${mdCell(record.route)} | ${mdCell(record.rawPage)} | ${record.clicks} | ${record.impressions} | ${record.currentCtrPct}% | ${record.peerCtrPct}% | ${record.position} | ${record.expectedClickGap} | ${record.opportunity} | ${mdCell(record.recommendedTitle)} |`).join("\n")}
 
 ## Highest-priority queries
 
-| Route | Query | Clicks | Impressions | CTR | Position | Opportunity | Action |
-| --- | --- | ---: | ---: | ---: | ---: | ---: | --- |
-${queryRecords.slice(0, 120).map((record) => `| ${mdCell(record.route)} | ${mdCell(record.query)} | ${record.clicks} | ${record.impressions} | ${record.ctr} | ${record.position} | ${record.opportunity} | ${mdCell(record.action)} |`).join("\n")}
+| Route | Query | Clicks | Impressions | CTR actual | CTR benchmark | Position | Click gap | Score | Title recomandat |
+| --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | --- |
+${queryRecords.slice(0, 120).map((record) => `| ${mdCell(record.route)} | ${mdCell(record.query)} | ${record.clicks} | ${record.impressions} | ${record.currentCtrPct}% | ${record.peerCtrPct}% | ${record.position} | ${record.expectedClickGap} | ${record.opportunity} | ${mdCell(record.recommendedTitle)} |`).join("\n")}
 
 ## Devices
 
@@ -559,7 +660,17 @@ async function main() {
   writeReports(records, input);
 }
 
-main().catch((error) => {
-  console.error(error.message);
-  process.exitCode = 1;
-});
+if (require.main === module) {
+  main().catch((error) => {
+    console.error(error.message);
+    process.exitCode = 1;
+  });
+}
+
+module.exports = {
+  currentCtrRate,
+  inferRoute,
+  rowsToPageRecords,
+  rowsToRecords,
+  scoreOpportunityRecords
+};

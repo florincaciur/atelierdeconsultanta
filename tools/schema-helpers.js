@@ -10,12 +10,15 @@ const BRAND_ALTERNATE_NAMES = [
 ];
 const BRAND_DESCRIPTION = "FABER - Atelier de Consultanță ajută firme, fermieri, start-up-uri și IMM-uri să verifice eligibilitatea și să pregătească proiecte pentru fonduri europene și finanțări nerambursabile.";
 const ORGANIZATION_ID = `${SITE}/#organization`;
-const LOCAL_BUSINESS_ID = `${SITE}/#localbusiness`;
+const PROFESSIONAL_SERVICE_ID = `${SITE}/#professional-service`;
+const LOCAL_BUSINESS_ID = PROFESSIONAL_SERVICE_ID;
 const WEBSITE_ID = `${SITE}/#website`;
 const LOGO_URL = `${SITE}/favicon-192.png`;
 const IMAGE_URL = `${SITE}/og-image.jpg`;
 const EMAIL = "atelier.consultanta@gmail.com";
 const TELEPHONES = ["+40769828338", "+40753326229"];
+const LANGUAGE = "ro-RO";
+const AREA_SERVED_NAME = "România";
 const KNOWS_ABOUT = [
   "fonduri europene",
   "finanțări nerambursabile",
@@ -25,6 +28,32 @@ const KNOWS_ABOUT = [
   "Digitalizare IMM",
   "consultanță IMM"
 ];
+
+const FABER_ENTITY_CONFIG = Object.freeze({
+  site: SITE,
+  name: BRAND_NAME,
+  alternateNames: Object.freeze([...BRAND_ALTERNATE_NAMES]),
+  description: BRAND_DESCRIPTION,
+  ids: Object.freeze({
+    organization: ORGANIZATION_ID,
+    professionalService: PROFESSIONAL_SERVICE_ID,
+    website: WEBSITE_ID
+  }),
+  logo: LOGO_URL,
+  image: IMAGE_URL,
+  email: EMAIL,
+  telephones: Object.freeze([...TELEPHONES]),
+  areaServed: AREA_SERVED_NAME,
+  knowsAbout: Object.freeze([...KNOWS_ABOUT]),
+  language: LANGUAGE
+});
+
+const PAGE_KINDS = Object.freeze({
+  ARTICLE: "article",
+  SERVICE: "service",
+  WEB_APPLICATION: "web-application",
+  WEB_PAGE: "web-page"
+});
 
 function cleanText(value) {
   return String(value ?? "").replace(/\s+/g, " ").trim();
@@ -80,33 +109,33 @@ function buildPageMetadata(options = {}) {
 }
 
 const ROUTE_LABELS = new Map([
-  ["/", "Acasa"],
+  ["/", "Acasă"],
   ["/fonduri-europene", "Fonduri europene"],
-  ["/consultanta-fonduri-europene", "Consultanta fonduri europene"],
+  ["/consultanta-fonduri-europene", "Consultanță fonduri europene"],
   ["/verificare-eligibilitate-fonduri-europene", "Verificare eligibilitate"],
   ["/fonduri-europene-imm", "Fonduri europene IMM"],
-  ["/fonduri-europene-agricultura", "Fonduri europene agricultura"],
+  ["/fonduri-europene-agricultura", "Fonduri europene agricultură"],
   ["/fonduri-europene-digitalizare", "Fonduri europene digitalizare"],
   ["/fonduri-regionale", "Fonduri regionale"],
-  ["/programul-tranzitie-justa", "Programul Tranzitie Justa"],
-  ["/programul-tranzitie-justa-intrebari-documente", "Intrebari si documente PTJ"],
+  ["/programul-tranzitie-justa", "Programul Tranziție Justă"],
+  ["/programul-tranzitie-justa-intrebari-documente", "Întrebări și documente PTJ"],
   ["/fonduri-nerambursabile", "Fonduri nerambursabile"],
   ["/afir", "AFIR"],
-  ["/consultanta-afir", "Consultanta AFIR"],
+  ["/consultanta-afir", "Consultanță AFIR"],
   ["/dr12-afir", "DR 12 AFIR"],
   ["/dr14", "DR 14 AFIR"],
   ["/calculator-soc", "Calculator SO AFIR"],
   ["/start-up-nation-2026", "Start-Up Nation 2026"],
-  ["/consultanta-start-up-nation-2026", "Consultanta Start-Up Nation"],
+  ["/consultanta-start-up-nation-2026", "Consultanță Start-Up Nation"],
   ["/fonduri-europene-femei-antreprenor", "Fonduri pentru femei antreprenor"],
   ["/digitalizare-imm", "Digitalizare IMM"],
   ["/digitalizare-imm-pnrr", "Digitalizare IMM / PNRR"],
   ["/pnrr", "PNRR"],
-  ["/consultanta-pnrr-digitalizare", "Consultanta PNRR digitalizare"],
+  ["/consultanta-pnrr-digitalizare", "Consultanță PNRR digitalizare"],
   ["/pocidif-21", "PoCIDIF 2.1"],
   ["/fondul-de-modernizare", "Fondul de Modernizare"],
-  ["/fondul-modernizare-energie-regenerabila-2026", "Energie regenerabila 2026"],
-  ["/finantari-panouri-fotovoltaice", "Finantari panouri fotovoltaice"],
+  ["/fondul-modernizare-energie-regenerabila-2026", "Energie regenerabilă 2026"],
+  ["/finantari-panouri-fotovoltaice", "Finanțări panouri fotovoltaice"],
   ["/despre-faber", "Despre FABER"],
   ["/metodologie-verificare-eligibilitate", "Metodologie eligibilitate"],
   ["/surse-oficiale-fonduri-europene", "Surse oficiale"],
@@ -122,13 +151,13 @@ const CLUSTER_RULES = [
   { href: "/start-up-nation-2026", label: "Start-Up Nation 2026", pattern: /\/(?:start-up-nation|cod-caen-start-up-nation|consultanta-start-up-nation)/i },
   { href: "/fonduri-europene-digitalizare", label: "Digitalizare", pattern: /\/(?:digitalizare|pnrr|pocidif|granturi-digitalizare|cheltuieli-eligibile-digitalizare)/i },
   { href: "/fondul-de-modernizare", label: "Energie", pattern: /\/(?:fondul-de-modernizare|fondul-modernizare|finantari-panouri|autoconsum|pro-infra|e-move)/i },
-  { href: "/programul-tranzitie-justa", label: "Programul Tranzitie Justa", pattern: /\/(?:programul-tranzitie-justa-intrebari-documente)/i },
+  { href: "/programul-tranzitie-justa", label: "Programul Tranziție Justă", pattern: /\/(?:programul-tranzitie-justa-intrebari-documente)/i },
   { href: "/fonduri-regionale", label: "Fonduri regionale", pattern: /\/(?:programul-tranzitie-justa|fonduri-europene-nord-est|fonduri-europene-bucuresti|consultanta-fonduri-europene-bucuresti|por-adr-nord-est|investitii-modernizarea-microintreprinderilor)/i },
-  { href: "/consultanta-fonduri-europene", label: "Consultanta", pattern: /\/(?:consultanta|consultant-fonduri|firma-consultanta|cat-costa-consultanta|cum-alegi-consultant)/i },
-  { href: "/despre-faber", label: "Incredere si metodologie", pattern: /\/(?:despre-faber|metodologie|surse-oficiale|studii-de-caz|testimoniale|portofoliu|glosar)/i },
+  { href: "/consultanta-fonduri-europene", label: "Consultanță", pattern: /\/(?:consultanta|consultant-fonduri|firma-consultanta|cat-costa-consultanta|cum-alegi-consultant)/i },
+  { href: "/despre-faber", label: "Încredere și metodologie", pattern: /\/(?:despre-faber|metodologie|surse-oficiale|studii-de-caz|testimoniale|portofoliu|glosar)/i },
   { href: "/ghiduri", label: "Ghiduri", pattern: /\/(?:blog|ghiduri|resurse|intrebari|acte-necesare|greseli|cum-se|ce-acte|cand-merita|idei-afaceri)/i },
   { href: "/fonduri-europene-imm", label: "Fonduri europene IMM", pattern: /\/(?:fonduri-europene-imm|fonduri-europene-femei-antreprenor|femeia-antreprenor|fonduri-europene-nerambursabile-2026)/i },
-  { href: "/fonduri-europene-agricultura", label: "Agricultura", pattern: /\/(?:fonduri-europene-agricultura|fonduri-europene-caen\/0111)/i }
+  { href: "/fonduri-europene-agricultura", label: "Agricultură", pattern: /\/(?:fonduri-europene-agricultura|fonduri-europene-caen\/0111)/i }
 ];
 
 const INTERNAL_LINK_GROUPS = [
@@ -192,7 +221,7 @@ function parentClusterForPath(pathname) {
 
 function breadcrumbItemsForPath(pathname, currentName) {
   const clean = normalizeCanonicalPath(pathname);
-  const items = [{ name: "Acasa", item: canonicalUrl("/") }];
+  const items = [{ name: "Acasă", item: canonicalUrl("/") }];
   if (clean === "/") return items;
   const parent = parentClusterForPath(clean);
   if (parent) items.push({ name: parent.label, item: canonicalUrl(parent.href) });
@@ -283,6 +312,40 @@ function uniqueFaqItems(faqItems) {
   return unique;
 }
 
+function pageKindForPath(pathname, hints = {}) {
+  const route = normalizeCanonicalPath(pathname);
+  const type = cleanText(hints.type).toLowerCase();
+  const schemaType = cleanText(hints.schemaType).toLowerCase();
+  if (route === "/calculator-soc" || type === "tools" || schemaType === "webapplication") return PAGE_KINDS.WEB_APPLICATION;
+  if (type === "service" || (!type && schemaType === "service")) return PAGE_KINDS.SERVICE;
+  if (["article", "blog", "program"].includes(type) || ["article", "blogposting", "governmentservice"].includes(schemaType)) {
+    return PAGE_KINDS.ARTICLE;
+  }
+  if (/^\/(?:consultanta(?:-|$)|consultant-fonduri|firma-consultanta|verificare-eligibilitate|proiectare-fonduri|studiu-fezabilitate|management-proiecte|plan-de-afaceri-fonduri)/i.test(route)) {
+    return PAGE_KINDS.SERVICE;
+  }
+  if (/^\/(?:intrebari\/|fonduri-europene-caen\/|fonduri-europene-(?:bacau|bucuresti|iasi|suceava)$|programul-tranzitie-justa-intrebari-documente$)/i.test(route)) {
+    return PAGE_KINDS.ARTICLE;
+  }
+  return PAGE_KINDS.WEB_PAGE;
+}
+
+function areaServedSchema() {
+  return {
+    "@type": "Country",
+    name: AREA_SERVED_NAME
+  };
+}
+
+function contactPointsSchema() {
+  return TELEPHONES.map((telephone) => ({
+    "@type": "ContactPoint",
+    telephone,
+    contactType: "customer service",
+    availableLanguage: LANGUAGE
+  }));
+}
+
 function organizationSchema(options = {}) {
   const schema = {
     "@type": "Organization",
@@ -297,50 +360,40 @@ function organizationSchema(options = {}) {
     },
     image: IMAGE_URL,
     email: EMAIL,
-    areaServed: {
-      "@type": "Country",
-      name: "România"
-    },
-    contactPoint: TELEPHONES.map((telephone) => ({
-      "@type": "ContactPoint",
-      telephone,
-      contactType: "customer service",
-      availableLanguage: "ro-RO"
-    })),
+    areaServed: areaServedSchema(),
+    contactPoint: contactPointsSchema(),
     knowsAbout: KNOWS_ABOUT
   };
-
-  if (options.minimal) {
-    return {
-      "@type": "Organization",
-      "@id": ORGANIZATION_ID,
-      name: BRAND_NAME,
-      alternateName: BRAND_ALTERNATE_NAMES,
-      url: SITE,
-      description: BRAND_DESCRIPTION,
-      logo: { "@type": "ImageObject", url: LOGO_URL }
-    };
-  }
-
+  // `minimal` rămâne acceptat pentru compatibilitate, dar entitatea este
+  // intenționat identică peste tot: există o singură descriere canonică FABER.
+  void options;
   return schema;
 }
 
-function localBusinessSchema() {
+function professionalServiceSchema() {
   return {
-    "@type": ["LocalBusiness", "ProfessionalService"],
-    "@id": LOCAL_BUSINESS_ID,
+    "@type": "ProfessionalService",
+    "@id": PROFESSIONAL_SERVICE_ID,
     name: BRAND_NAME,
     url: SITE,
+    description: BRAND_DESCRIPTION,
+    logo: {
+      "@type": "ImageObject",
+      url: LOGO_URL
+    },
     email: EMAIL,
-    telephone: TELEPHONES[0],
+    telephone: [...TELEPHONES],
     openingHours: "Mo-Fr 09:00-18:00",
     image: IMAGE_URL,
-    areaServed: {
-      "@type": "Country",
-      name: "România"
-    },
+    areaServed: areaServedSchema(),
+    knowsAbout: [...KNOWS_ABOUT],
+    availableLanguage: LANGUAGE,
     parentOrganization: { "@id": ORGANIZATION_ID }
   };
+}
+
+function localBusinessSchema() {
+  return professionalServiceSchema();
 }
 
 function websiteSchema(options = {}) {
@@ -350,7 +403,7 @@ function websiteSchema(options = {}) {
     url: SITE,
     name: BRAND_NAME,
     publisher: { "@id": ORGANIZATION_ID },
-    inLanguage: "ro-RO"
+    inLanguage: LANGUAGE
   };
 
   if (options.searchUrl) {
@@ -373,7 +426,7 @@ function webPageSchema(options) {
     name: cleanText(options.name || options.title),
     description: cleanText(options.description),
     isPartOf: { "@id": WEBSITE_ID },
-    inLanguage: "ro-RO",
+    inLanguage: LANGUAGE,
     publisher: { "@id": ORGANIZATION_ID }
   };
 
@@ -388,7 +441,9 @@ function webPageSchema(options) {
 }
 
 function breadcrumbSchema(items) {
-  const cleanItems = (items || []).filter((item) => item && item.name && item.item);
+  const cleanItems = (items || [])
+    .filter((item) => item && item.name && item.item)
+    .slice(0, 3);
   if (!cleanItems.length) return null;
   return {
     "@type": "BreadcrumbList",
@@ -425,15 +480,16 @@ function blogPostingSchema(options) {
     headline: cleanText(options.headline || options.title),
     description: cleanText(options.description),
     author: personOrOrganization(options.author || BRAND_NAME),
-    publisher: organizationSchema({ minimal: true }),
+    publisher: { "@id": ORGANIZATION_ID },
     datePublished: options.datePublished,
     dateModified: options.dateModified || options.datePublished,
+    "@id": options.id || `${url}#${options.type === "Article" ? "article" : "blogposting"}`,
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": url
+      "@id": `${url}#webpage`
     },
     url,
-    inLanguage: "ro-RO"
+    inLanguage: LANGUAGE
   };
 
   if (options.reviewer) schema.reviewedBy = personOrOrganization(options.reviewer);
@@ -444,6 +500,10 @@ function blogPostingSchema(options) {
   return schema;
 }
 
+function articleSchema(options) {
+  return blogPostingSchema({ ...options, type: "Article" });
+}
+
 function serviceSchema(options) {
   return {
     "@type": options.type || "Service",
@@ -451,8 +511,9 @@ function serviceSchema(options) {
     name: cleanText(options.name),
     description: cleanText(options.description),
     provider: { "@id": ORGANIZATION_ID },
-    areaServed: "RO",
-    serviceType: cleanText(options.serviceType || options.category)
+    areaServed: areaServedSchema(),
+    serviceType: cleanText(options.serviceType || options.category),
+    inLanguage: LANGUAGE
   };
 }
 
@@ -465,6 +526,7 @@ function webApplicationSchema(options) {
     applicationCategory: options.applicationCategory || "FinanceApplication",
     operatingSystem: "Web",
     url: absoluteUrl(options.url || options.route),
+    inLanguage: LANGUAGE,
     offers: {
       "@type": "Offer",
       price: "0",
@@ -476,17 +538,97 @@ function webApplicationSchema(options) {
 
 function personOrOrganization(value) {
   if (value && typeof value === "object") return value;
+  const name = cleanText(value || BRAND_NAME);
+  const comparable = normalizeQuestion(name);
+  if (comparable === normalizeQuestion(BRAND_NAME) || comparable === "faber" || comparable === "atelier de consultanta") {
+    return { "@id": ORGANIZATION_ID };
+  }
   return {
     "@type": "Organization",
-    name: cleanText(value || BRAND_NAME)
+    name,
+    parentOrganization: { "@id": ORGANIZATION_ID }
   };
 }
 
+function fundingProgramSchema(program) {
+  if (!program || !program.route || !program.officialName) return null;
+  const url = canonicalUrl(program.route);
+  const additionalProperty = [];
+  const addProperty = (name, value) => {
+    if (value === null || value === undefined || value === "" || (Array.isArray(value) && !value.length)) return;
+    additionalProperty.push({
+      "@type": "PropertyValue",
+      name,
+      value: typeof value === "string" ? value : JSON.stringify(value)
+    });
+  };
+
+  addProperty("sourceStatus", program.sourceStatus);
+  addProperty("reviewedAt", program.reviewedAt);
+  addProperty("applicationStart", program.applicationStart);
+  addProperty("applicationEnd", program.applicationEnd);
+  addProperty("maximumGrant", program.maximumGrant);
+  addProperty("minimumGrant", program.minimumGrant);
+  addProperty("intensity", program.intensity);
+  addProperty("ownContribution", program.ownContribution);
+  addProperty("budget", program.budget);
+  addProperty("factualDisclaimer", program.factualDisclaimer);
+
+  const schema = {
+    "@type": "DefinedTerm",
+    "@id": `${url}#funding-program`,
+    name: cleanText(program.officialName),
+    alternateName: cleanText(program.shortName),
+    termCode: cleanText(program.id),
+    url,
+    sameAs: program.officialSourceUrl,
+    inDefinedTermSet: {
+      "@type": "DefinedTermSet",
+      name: cleanText(program.sourceDocumentName),
+      url: program.officialSourceUrl,
+      publisher: {
+        "@type": "Organization",
+        name: cleanText(program.authority)
+      }
+    },
+    subjectOf: {
+      "@type": "CreativeWork",
+      name: cleanText(program.sourceDocumentName),
+      url: program.officialSourceUrl,
+      dateModified: program.reviewedAt,
+      publisher: {
+        "@type": "Organization",
+        name: cleanText(program.authority)
+      }
+    },
+    additionalProperty
+  };
+  if (Array.isArray(program.eligibleApplicants) && program.eligibleApplicants.length) {
+    schema.audience = program.eligibleApplicants.map((name) => ({ "@type": "Audience", name: cleanText(name) }));
+  }
+  return schema;
+}
+
+function sortJsonValue(value) {
+  if (Array.isArray(value)) return value.map(sortJsonValue);
+  if (!value || typeof value !== "object") return value;
+  return Object.keys(value)
+    .sort((left, right) => left.localeCompare(right))
+    .reduce((result, key) => {
+      result[key] = sortJsonValue(value[key]);
+      return result;
+    }, {});
+}
+
+function serializeJsonLd(value) {
+  return JSON.stringify(sortJsonValue(value), null, 2);
+}
+
 function jsonLdGraph(nodes) {
-  return JSON.stringify({
+  return serializeJsonLd({
     "@context": "https://schema.org",
     "@graph": (nodes || []).filter(Boolean)
-  }, null, 2);
+  });
 }
 
 module.exports = {
@@ -494,27 +636,37 @@ module.exports = {
   BRAND_NAME,
   BRAND_ALTERNATE_NAMES,
   BRAND_DESCRIPTION,
+  FABER_ENTITY_CONFIG,
+  PAGE_KINDS,
   ORGANIZATION_ID,
+  PROFESSIONAL_SERVICE_ID,
   LOCAL_BUSINESS_ID,
   WEBSITE_ID,
   LOGO_URL,
   IMAGE_URL,
   EMAIL,
   TELEPHONES,
+  LANGUAGE,
+  AREA_SERVED_NAME,
   absoluteUrl,
+  articleSchema,
   buildPageMetadata,
   breadcrumbItemsForPath,
   breadcrumbSchema,
   canonicalUrl,
   faqPageSchema,
+  fundingProgramSchema,
   jsonLdGraph,
   localBusinessSchema,
+  professionalServiceSchema,
   normalizeCanonicalPath,
   parentClusterForPath,
+  pageKindForPath,
   normalizeQuestion,
   organizationSchema,
   routeLabel,
   serviceSchema,
+  serializeJsonLd,
   standardInternalLinksForPath,
   uniqueFaqItems,
   webApplicationSchema,

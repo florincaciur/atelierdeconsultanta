@@ -6,7 +6,7 @@ const path = require("path");
 
 const ROOT = path.resolve(__dirname, "..");
 const SITE = "https://atelierdeconsultanta.ro";
-const IMPLEMENTATION_DATE = "2026-07-13";
+const IMPLEMENTATION_DATE = "2026-07-20";
 const REQUIRED_PATHS = [
   "/dr12-afir",
   "/dr14",

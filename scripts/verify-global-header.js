@@ -13,6 +13,15 @@ const {
   partialSource
 } = require("../tools/sync-global-header");
 
+const SITE_ORIGIN = "https://atelierdeconsultanta.ro";
+const PRIMARY_NAVIGATION = [
+  { label: "Servicii", href: "/consultanta-fonduri-europene" },
+  { label: "Despre noi", href: "/despre-faber" },
+  { label: "Finanțări", href: "/fonduri-europene" },
+  { label: "Blog", href: "/blog" },
+];
+const WHATSAPP_DIALOG_FRAGMENT = "#eligibility-whatsapp-dialog";
+
 function count(text, token) {
   return text.split(token).length - 1;
 }
@@ -36,9 +45,84 @@ function equalSequence(left, right) {
   return left.length === right.length && left.every((value, index) => value === right[index]);
 }
 
+function htmlFileForRoute(href) {
+  const route = href.replace(/^\/+|\/+$/g, "");
+  if (!route) return "index.html";
+  const directoryIndex = path.join(route, "index.html");
+  if (fs.existsSync(path.join(ROOT, directoryIndex))) return directoryIndex;
+  return `${route}.html`;
+}
+
 function routeExists(href) {
-  const route = href.slice(1);
-  return fs.existsSync(path.join(ROOT, route, "index.html")) || fs.existsSync(path.join(ROOT, `${route}.html`));
+  return fs.existsSync(path.join(ROOT, htmlFileForRoute(href)));
+}
+
+function normalizedText($, element) {
+  return $(element).text().replace(/\s+/g, " ").trim();
+}
+
+function canonicalRouteErrors(routeLinks) {
+  const errors = [];
+  for (const href of [...new Set(routeLinks)]) {
+    if (!/^\/[a-z0-9-]+(?:\/[a-z0-9-]+)*$/.test(href)) {
+      errors.push(`rută necanonică în navigarea globală: ${href}`);
+      continue;
+    }
+    if (!routeExists(href)) {
+      errors.push(`ruta din navigarea globală nu are sursă HTML: ${href}`);
+      continue;
+    }
+    const targetFile = htmlFileForRoute(href);
+    const targetHtml = fs.readFileSync(path.join(ROOT, targetFile), "utf8");
+    const $target = cheerio.load(targetHtml, { decodeEntities: false });
+    const canonical = $target('link[rel="canonical" i]').first().attr("href") || "";
+    const expectedCanonical = `${SITE_ORIGIN}${href}`;
+    if (canonical !== expectedCanonical) {
+      errors.push(`ruta ${href} nu este auto-canonică: ${canonical || "canonical lipsă"}`);
+    }
+  }
+  return errors;
+}
+
+function primaryNavigationErrors($) {
+  const errors = [];
+  const desktopPrimary = $("#navbar .nav-links > a").slice(0, PRIMARY_NAVIGATION.length).toArray();
+  const mobilePrimary = $("#mobileMenu .mobile-links > a").slice(0, PRIMARY_NAVIGATION.length).toArray();
+
+  for (const [context, elements] of [["desktop", desktopPrimary], ["mobil", mobilePrimary]]) {
+    const actual = elements.map((element) => ({
+      label: normalizedText($, element),
+      href: $(element).attr("href") || "",
+    }));
+    if (JSON.stringify(actual) !== JSON.stringify(PRIMARY_NAVIGATION)) {
+      errors.push(`linkurile principale ${context} nu corespund destinațiilor canonice cerute`);
+    }
+  }
+
+  $("#navbar .nav-links a[href^='#'], #mobileMenu .mobile-links > a[href^='#']").each((_, element) => {
+    const href = $(element).attr("href") || "";
+    if (href !== WHATSAPP_DIALOG_FRAGMENT) {
+      errors.push(`fragment local nepermis în navigarea globală: ${href}`);
+      return;
+    }
+    const id = href.slice(1);
+    if ($(`[id="${id}"]`).length !== 1) errors.push(`ținta interactivă ${href} lipsește sau este duplicată`);
+    if ($(element).attr("aria-controls") !== id) errors.push(`controlul pentru ${href} nu declară aria-controls corect`);
+    if (!$(element).is("[data-whatsapp-dialog-open]")) errors.push(`controlul pentru ${href} nu este conectat la dialog`);
+  });
+
+  if ($(`${WHATSAPP_DIALOG_FRAGMENT}[role="dialog"]`).length !== 1) {
+    errors.push("fragmentul interactiv WhatsApp nu indică un dialog valid");
+  }
+  return errors;
+}
+
+function navigationParityErrors($) {
+  const desktopDestinations = hrefs($, "#navbar .nav-links a[href]");
+  const mobileDestinations = hrefs($, "#mobileMenu .mobile-links > a[href]");
+  return equalSequence(desktopDestinations, mobileDestinations)
+    ? []
+    : ["desktopul și meniul mobil nu au aceleași destinații în aceeași ordine"];
 }
 
 function canonicalMegaMenuErrors(megaLinks) {
@@ -77,6 +161,7 @@ function verifyStructure($, partialLinks, partialMobileLinks, partialMegaLinks) 
   if (!equalSequence(pageLinks, partialLinks)) errors.push("linkurile desktop diferă de partial");
   if (!equalSequence(pageMobileLinks, partialMobileLinks)) errors.push("linkurile mobile diferă de partial");
   if (!equalSequence(pageMegaLinks, partialMegaLinks)) errors.push("linkurile mega-menu diferă de partial");
+  errors.push(...navigationParityErrors($));
   return errors;
 }
 
@@ -113,11 +198,20 @@ async function verifyBehavior(partial, stylesheet, behavior) {
     if (!(await page.$eval("#dropdownBtn", (element) => element === document.activeElement))) throw new Error("Escape nu restaurează focusul pe butonul Programe");
     if (!(await page.$eval("#dropdownPanel", (element) => element.hidden))) throw new Error("Escape nu închide mega-menu-ul");
 
-    await page.click("#navbar [data-whatsapp-dialog-open]");
+    await page.focus(".nav-logo");
+    await page.keyboard.press("Tab");
+    if (await page.getAttribute(":focus", "href") !== "/consultanta-fonduri-europene") throw new Error("Tab nu ajunge la primul link principal desktop");
+
+    await page.focus("#navbar [data-whatsapp-dialog-open]");
+    await page.keyboard.press("Enter");
     if (await page.$eval("#eligibility-whatsapp-dialog", (element) => element.hidden)) throw new Error("CTA-ul desktop nu deschide dialogul WhatsApp");
     if (!(await page.$eval("[data-whatsapp-dialog-close]", (element) => element === document.activeElement))) throw new Error("dialogul nu mută focusul pe butonul de închidere");
     const whatsappHrefs = await page.$$eval("#eligibility-whatsapp-dialog .eligibility-whatsapp-options a", (links) => links.map((link) => link.href));
     if (!equalSequence(whatsappHrefs, ["https://wa.me/40769828338", "https://wa.me/40753326229"])) throw new Error("dialogul nu conține cele două numere WhatsApp");
+    await page.keyboard.press("Shift+Tab");
+    if (!(await page.$eval("#eligibility-whatsapp-dialog .eligibility-whatsapp-options a:last-child", (element) => element === document.activeElement))) throw new Error("focusul nu rămâne captiv în dialog la Shift+Tab");
+    await page.keyboard.press("Tab");
+    if (!(await page.$eval("[data-whatsapp-dialog-close]", (element) => element === document.activeElement))) throw new Error("focusul nu revine circular la începutul dialogului");
     await page.keyboard.press("Escape");
     if (!(await page.$eval("#eligibility-whatsapp-dialog", (element) => element.hidden))) throw new Error("Escape nu închide dialogul WhatsApp");
     if (!(await page.$eval("#navbar [data-whatsapp-dialog-open]", (element) => element === document.activeElement))) throw new Error("dialogul nu restaurează focusul pe CTA");
@@ -128,14 +222,21 @@ async function verifyBehavior(partial, stylesheet, behavior) {
     if (!(await page.$eval("#eligibility-whatsapp-dialog", (element) => element.hidden))) throw new Error("dialogul homepage nu se închide");
 
     await page.setViewportSize({ width: 375, height: 800 });
-    await page.click("#hamburgerBtn");
+    await page.focus("#hamburgerBtn");
+    await page.keyboard.press("Enter");
     if (!(await page.$eval("#mobileMenu", (element) => element.classList.contains("open")))) throw new Error("hamburgerul nu deschide meniul mobil");
     if (await page.getAttribute("#hamburgerBtn", "aria-expanded") !== "true") throw new Error("hamburgerul nu actualizează aria-expanded");
-    await page.click("#mobileMenu [data-whatsapp-dialog-open]");
+    await page.keyboard.press("Escape");
+    if (await page.$eval("#mobileMenu", (element) => element.classList.contains("open"))) throw new Error("Escape nu închide meniul mobil");
+    if (!(await page.$eval("#hamburgerBtn", (element) => element === document.activeElement))) throw new Error("Escape nu restaurează focusul pe hamburger");
+    await page.keyboard.press("Enter");
+    await page.focus("#mobileMenu [data-whatsapp-dialog-open]");
+    await page.keyboard.press("Enter");
     if (await page.$eval("#eligibility-whatsapp-dialog", (element) => element.hidden)) throw new Error("CTA-ul mobil nu deschide dialogul WhatsApp");
     if (await page.$eval("#mobileMenu", (element) => element.classList.contains("open"))) throw new Error("CTA-ul mobil nu închide meniul înainte de dialog");
-    await page.click("[data-whatsapp-dialog-close]");
+    await page.keyboard.press("Escape");
     if (!(await page.$eval("#eligibility-whatsapp-dialog", (element) => element.hidden))) throw new Error("butonul de închidere nu închide dialogul WhatsApp");
+    if (!(await page.$eval("#hamburgerBtn", (element) => element === document.activeElement))) throw new Error("dialogul mobil nu restaurează focusul pe hamburger");
   } finally {
     await browser.close();
   }
@@ -147,7 +248,14 @@ async function main() {
   const partialLinks = hrefs($partial, "#navbar a");
   const partialMobileLinks = hrefs($partial, "#mobileMenu a");
   const partialMegaLinks = hrefs($partial, "#dropdownPanel a.dropdown-item");
-  const errors = [...canonicalMegaMenuErrors(partialMegaLinks)];
+  const partialDesktopDestinations = hrefs($partial, "#navbar .nav-links a[href]");
+  const routeDestinations = partialDesktopDestinations.filter((href) => href.startsWith("/"));
+  const errors = [
+    ...canonicalMegaMenuErrors(partialMegaLinks),
+    ...canonicalRouteErrors(routeDestinations),
+    ...primaryNavigationErrors($partial),
+    ...navigationParityErrors($partial),
+  ];
 
   const stylesheet = fs.readFileSync(path.join(ROOT, "assets", "global-header.css"), "utf8");
   const behavior = fs.readFileSync(path.join(ROOT, "assets", "global-header.js"), "utf8");
@@ -192,7 +300,7 @@ async function main() {
   await verifyBehavior(partial, stylesheet, behavior);
 
   const indexFiles = files.filter((file) => path.posix.basename(file) === "index.html").length;
-  console.log(`Global header verification PASS: ${files.length} pagini HTML publice, ${indexFiles} index.html, ${partialMegaLinks.length} linkuri canonice în mega-menu; interacțiuni desktop/mobile validate în Chromium.`);
+  console.log(`Global header verification PASS: ${files.length} pagini HTML publice, ${indexFiles} index.html, ${routeDestinations.length} destinații canonice sincronizate desktop/mobil; dialogul WhatsApp și navigarea cu tastatura validate în Chromium.`);
 }
 
 main().catch((error) => {

@@ -1,151 +1,535 @@
 {
-  "lastVerified": "2026-07-13",
+  "lastReviewed": "2026-07-20",
   "author": "FABER - Atelier de Consultanță",
   "reviewer": "Echipa editorială FABER",
   "pages": {
+    "home": {
+      "route": "/",
+      "file": "index.html",
+      "layout": "standalone",
+      "beforeMarker": "<section id=\"carousel-section\"",
+      "sectionTitle": "Cum se stabilește eligibilitatea",
+      "directAnswer": "FABER verifică eligibilitatea firmelor, fermierilor, start-up-urilor și instituțiilor care pregătesc proiecte cu finanțare nerambursabilă. Analiza compară solicitantul, activitatea, amplasamentul, investiția, bugetul și documentele cu ghidul programului identificat. Informația de pe această pagină descrie metoda de lucru; condițiile, finanțarea și calendarul se confirmă în documentul oficial activ al fiecărui apel.",
+      "facts": [
+        {
+          "term": "Cine este eligibil?",
+          "description": "Beneficiarul se stabilește separat pentru fiecare apel: forma juridică, dimensiunea întreprinderii, activitatea, locația și istoricul trebuie să corespundă ghidului activ."
+        },
+        {
+          "term": "Care este finanțarea?",
+          "description": "Nu există o valoare universală. Grantul, plafonul și ajutorul aplicabil se preiau numai din ghidul și anexele programului ales."
+        },
+        {
+          "term": "Care este contribuția proprie?",
+          "description": "Contribuția rezultă din intensitatea ajutorului, cheltuielile neeligibile și costurile care depășesc plafoanele; sursa ei trebuie documentată."
+        },
+        {
+          "term": "Ce cheltuieli sunt eligibile?",
+          "description": "Sunt analizate doar costurile legate de obiectivul apelului, încadrate în categoriile permise și justificate tehnic și economic."
+        },
+        {
+          "term": "Ce documente sunt obligatorii?",
+          "description": "Setul minim include actele solicitantului, situațiile financiare sau evidențele exploatației, documentele amplasamentului, ofertele și anexele cerute de apel."
+        },
+        {
+          "term": "Care sunt criteriile de selecție?",
+          "description": "Punctajul se estimează numai pe criterii care pot fi susținute prin documente valabile la momentul prevăzut în ghid."
+        },
+        {
+          "term": "Când se depune?",
+          "description": "Perioada de depunere este cea din anunțul oficial al apelului; un calendar orientativ nu înlocuiește data și ora din platforma de depunere."
+        },
+        {
+          "term": "Ce statut are ghidul?",
+          "description": "Statutul diferă de la program la program. O versiune consultativă este folosită pentru pregătire, iar decizia de depunere se ia pe forma finală activă."
+        }
+      ],
+      "source": {
+        "document": "Ghidul solicitantului și anexele apelului selectat",
+        "institution": "MIPE, AFIR sau autoritatea de management competentă",
+        "status": "Statutul se verifică pentru fiecare apel; documentele consultative nu sunt tratate drept forme finale.",
+        "url": "https://mfe.gov.ro/"
+      }
+    },
+    "verificare-eligibilitate-fonduri-europene": {
+      "route": "/verificare-eligibilitate-fonduri-europene",
+      "sectionTitle": "Cum se stabilește eligibilitatea",
+      "directAnswer": "Verificarea eligibilității pentru fonduri europene se adresează firmelor, fermierilor și organizațiilor care au o investiție conturată, dar trebuie să aleagă sau să confirme programul potrivit. Sunt controlate solicitantul, codul CAEN, locația, bugetul, cofinanțarea și documentele. Concluzia este preliminară până la confruntarea cu ghidul final și anexele apelului activ.",
+      "facts": [
+        {
+          "term": "Cine este eligibil?",
+          "description": "Este eligibil numai solicitantul care îndeplinește cumulativ condițiile de formă juridică, activitate, locație, vechime și capacitate prevăzute de apelul analizat."
+        },
+        {
+          "term": "Care este finanțarea?",
+          "description": "Valoarea grantului nu poate fi stabilită înainte de identificarea apelului și a schemei de ajutor aplicabile proiectului."
+        },
+        {
+          "term": "Care este contribuția proprie?",
+          "description": "Se calculează din intensitatea sprijinului, cheltuielile neeligibile și diferențele peste plafoane și se verifică prin surse financiare documentabile."
+        },
+        {
+          "term": "Ce cheltuieli sunt eligibile?",
+          "description": "Fiecare cost se verifică după categorie, legătura cu activitatea finanțată, necesitate, momentul angajării și plafoanele din ghid."
+        },
+        {
+          "term": "Ce documente sunt obligatorii?",
+          "description": "Pentru controlul inițial sunt necesare datele firmei sau exploatației, certificatul constatator, situațiile financiare, actele locației și descrierea investiției."
+        },
+        {
+          "term": "Care sunt criteriile de selecție?",
+          "description": "Se estimează numai criteriile relevante apelului, iar punctele sunt păstrate în analiză doar când există documentul care le poate demonstra."
+        },
+        {
+          "term": "Când se depune?",
+          "description": "Depunerea este posibilă în intervalul anunțat de instituția finanțatoare; înainte de lansare poate fi pregătit dosarul, nu confirmată eligibilitatea finală."
+        },
+        {
+          "term": "Ce statut are ghidul?",
+          "description": "Analiza notează explicit dacă sursa este consultativă, aprobată sau activă și indică elementele care necesită reconfirmare."
+        }
+      ],
+      "source": {
+        "document": "Ghidul solicitantului și anexele apelului identificat",
+        "institution": "MIPE sau autoritatea de management a programului",
+        "status": "Sursa generală indică programele; condițiile devin aplicabile numai prin documentele oficiale ale apelului ales.",
+        "url": "https://mfe.gov.ro/"
+      }
+    },
+    "calculator-soc": {
+      "route": "/calculator-soc",
+      "file": "calculator-soc.html",
+      "layout": "standalone",
+      "afterHero": true,
+      "sectionTitle": "Datele esențiale pentru calculul SO",
+      "directAnswer": "Calculatorul SO AFIR estimează dimensiunea economică a exploatațiilor vegetale, zootehnice sau mixte interesate de DR12 și DR14. Fermierul introduce suprafețele și efectivele documentabile, iar rezultatul indică orientativ intervalul SO. Calculatorul nu confirmă eligibilitatea, finanțarea ori punctajul; coeficienții, pragurile și condițiile trebuie reconfirmate în ghidul AFIR aplicabil sesiunii.",
+      "facts": [
+        {
+          "term": "Cine poate folosi rezultatul?",
+          "description": "Fermierii și formele juridice agricole pot folosi totalul SO ca filtru inițial, înainte de verificarea condițiilor DR12 sau DR14."
+        },
+        {
+          "term": "Ce finanțare indică rezultatul?",
+          "description": "Calculatorul nu calculează grantul. Valoarea sprijinului aparține intervenției și se confirmă în ghidul aplicabil."
+        },
+        {
+          "term": "Care este contribuția proprie?",
+          "description": "Contribuția nu rezultă din SO; ea depinde de intensitatea sprijinului și de costurile eligibile și neeligibile ale proiectului."
+        },
+        {
+          "term": "Ce date intră în calcul?",
+          "description": "Se introduc suprafețele cultivate și efectivele existente pe categoriile disponibile, folosind date care pot fi susținute prin evidențele exploatației."
+        },
+        {
+          "term": "Ce documente sunt obligatorii?",
+          "description": "Pentru confirmare se compară rezultatul cu documentele APIA, ANSVSA sau ANZ și cu actele solicitantului și ale exploatației."
+        },
+        {
+          "term": "Influențează SO criteriile de selecție?",
+          "description": "SO poate stabili accesul într-un interval sau o componentă, dar punctajul depinde și de criteriile distincte din ghid."
+        },
+        {
+          "term": "Când se folosește calculul?",
+          "description": "Calculul este util înainte de alegerea intervenției și se reface dacă se schimbă structura documentată a exploatației până la depunere."
+        },
+        {
+          "term": "Ce statut au pragurile afișate?",
+          "description": "Pragurile prezentate sunt orientative până la confirmarea în versiunea finală și activă a ghidului DR12 sau DR14."
+        }
+      ],
+      "source": {
+        "document": "Ghidurile solicitantului DR12 și DR14 și coeficienții Standard Output aplicabili",
+        "institution": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
+        "status": "Ghiduri consultative la ultima verificare; rezultatul calculatorului rămâne orientativ.",
+        "url": "https://www.afir.ro/comunicare/utile/dezbatere-publica/"
+      },
+      "interpretation": "Un rezultat aflat foarte aproape de un prag trebuie verificat în evidențele exploatației înainte de alegerea programului. Aceasta este o interpretare de lucru FABER, nu o regulă oficială și nu modifică metoda de calcul publicată de AFIR."
+    },
     "dr12-afir": {
-      "quickAnswer": "DR12 AFIR sprijină investițiile exploatațiilor conduse de tineri fermieri și de fermieri de până la 45 de ani, în condițiile ghidului aplicabil. Înainte de pregătirea proiectului trebuie confirmate forma activă a ghidului, dimensiunea economică SO, sectorul, istoricul exploatației, investițiile propuse, punctajul și cofinanțarea. Calendarul, pragurile și documentele finale nu se deduc din variante consultative: ele se verifică în versiunea publicată de AFIR la data depunerii.",
-      "checks": [
-        "Versiunea și statusul ghidului DR12 publicat de AFIR.",
-        "Vârsta, rolul real și forma juridică a solicitantului.",
-        "Dimensiunea economică SO și sectorul exploatației.",
-        "Legătura dintre investiție, capacitatea fermei și obiectivele intervenției.",
-        "Pragul de calitate și punctajul susținut prin documente.",
-        "Cofinanțarea, cash-flow-ul și cheltuielile neeligibile."
+      "route": "/dr12-afir",
+      "sectionTitle": "Condițiile care trebuie verificate",
+      "directAnswer": "DR12 AFIR vizează investițiile exploatațiilor conduse de tineri fermieri și ale categoriilor de fermieri de până la 45 de ani descrise în documentație. Solicitantul trebuie să confirme forma juridică, controlul exploatației, minimumul SO, investiția, punctajul și cofinanțarea. La 20 iulie 2026, informațiile provin din ghidul consultativ, nu dintr-un ghid final de sesiune.",
+      "facts": [
+        {
+          "term": "Cine este eligibil?",
+          "description": "Ghidul consultativ include tineri fermieri sub 40 de ani, anumiți beneficiari sM 6.1 și fermieri instalați sub 45 de ani, cu control efectiv asupra exploatației."
+        },
+        {
+          "term": "Care este finanțarea?",
+          "description": "Documentul consultativ indică maximum 200.000 euro pentru un proiect, valoare care trebuie reconfirmată în ghidul final."
+        },
+        {
+          "term": "Care este contribuția proprie?",
+          "description": "Intensitatea consultativă este de până la 80% pentru tinerii fermieri eligibili și până la 65% pentru celelalte categorii; diferența și costurile neeligibile revin beneficiarului."
+        },
+        {
+          "term": "Ce cheltuieli sunt eligibile?",
+          "description": "Sunt analizate investițiile corporale și necorporale legate de consolidarea exploatației, în limitele categoriilor și plafoanelor din ghid."
+        },
+        {
+          "term": "Ce documente sunt obligatorii?",
+          "description": "Sunt necesare actele solicitantului, documentele APIA, ANSVSA sau ANZ, calculul SO, actele amplasamentului, ofertele și dovada cofinanțării."
+        },
+        {
+          "term": "Care sunt criteriile de selecție?",
+          "description": "Ghidul consultativ indică etape cu praguri de calitate, iar punctajul trebuie susținut prin documente valabile, fără suprascore."
+        },
+        {
+          "term": "Când se depune?",
+          "description": "Data nu este confirmată de versiunea consultativă; sesiunea și etapele se stabilesc prin ghidul final și nota oficială de lansare."
+        },
+        {
+          "term": "Ce statut are ghidul?",
+          "description": "Documentul analizat este ghid consultativ. Pragurile, intensitățile, anexele și calendarul pot fi modificate în forma finală."
+        }
       ],
-      "documents": [
-        "Documente de identificare și acte ONRC ale solicitantului.",
-        "Documente APIA, ANSVSA și ANZ aplicabile exploatației.",
-        "Calculul SO și evidențele pentru culturi sau efective.",
-        "Acte privind terenurile, clădirile și locul investiției.",
-        "Oferte, memoriu tehnic, buget și dovada cofinanțării."
-      ],
-      "risks": [
-        "Folosirea unei variante consultative ca și cum ar fi ghid final.",
-        "Suprascore fără documente care susțin criteriile declarate.",
-        "Neconcordanțe între SO, evidențele exploatației și investiție.",
-        "Buget subestimat sau cofinanțare indisponibilă la implementare."
-      ]
+      "source": {
+        "document": "Ghidul solicitantului DR-12 – variantă consultativă",
+        "institution": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
+        "status": "Variantă consultativă; informațiile sunt conform variantei consultative. Valorile și condițiile sunt conform variantei consultative și trebuie reconfirmate în ghidul final și în nota de lansare.",
+        "url": "https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/"
+      },
+      "interpretation": "Pragul SO deschide doar analiza; nu înlocuiește verificarea controlului efectiv, a istoricului exploatației și a legăturii dintre investiție și capacitatea fermei. Aceasta este interpretarea de lucru FABER, nu o condiție suplimentară față de ghid.",
+      "programId": "dr12-afir",
+      "lastReviewed": "2026-07-20"
     },
     "dr14": {
-      "quickAnswer": "DR14 AFIR este intervenția destinată investițiilor în ferme de mici dimensiuni, cu praguri SO diferențiate pe sectoare și componente care trebuie verificate în ghidul activ. Eligibilitatea nu rezultă doar din mărimea fermei: contează solicitantul, încadrarea sectorială, investiția, documentele exploatației, punctajul și capacitatea de cofinanțare. Data lansării, intervalele SO, intensitatea sprijinului și regulile de selecție se confirmă exclusiv în forma oficială aplicabilă sesiunii.",
-      "checks": [
-        "Statusul apelului și versiunea activă a ghidului DR14.",
-        "Intervalul SO aplicabil sectorului și componentei urmărite.",
-        "Forma solicitantului și istoricul exploatației.",
-        "Caracterul eligibil și proporțional al achizițiilor propuse.",
-        "Punctajul documentabil și evitarea condițiilor artificiale.",
-        "Cofinanțarea și calendarul realist al achizițiilor."
+      "route": "/dr14",
+      "sectionTitle": "Datele esențiale ale programului",
+      "directAnswer": "DR14 AFIR se adresează fermelor de mici dimensiuni încadrate în intervalele SO și componentele prevăzute de intervenție. Fermierul trebuie să verifice forma juridică, SO majoritar, componenta, investiția, documentele, punctajul și cofinanțarea. La 20 iulie 2026, valorile prezentate provin din ghidul consultativ și nu trebuie tratate ca reguli finale ale sesiunii.",
+      "facts": [
+        {
+          "term": "Cine este eligibil?",
+          "description": "Sunt vizate fermele mici organizate în formele juridice acceptate, cu dimensiunea economică și sectorul încadrate în componenta aleasă."
+        },
+        {
+          "term": "Care este finanțarea?",
+          "description": "Ghidul consultativ prevede maximum 50.000 euro pentru un proiect, sub rezerva confirmării în documentul final."
+        },
+        {
+          "term": "Care este contribuția proprie?",
+          "description": "Intensitatea consultativă este de până la 85% din costurile eligibile; beneficiarul acoperă diferența și toate costurile neeligibile."
+        },
+        {
+          "term": "Ce cheltuieli sunt eligibile?",
+          "description": "Pot fi analizate construcții, modernizări, utilaje, dotări, condiționare, depozitare și soluții digitale, în funcție de componentă și lista finală."
+        },
+        {
+          "term": "Ce documente sunt obligatorii?",
+          "description": "Dosarul pornește de la actele solicitantului, calculul SO, documentele APIA, ANSVSA sau ANZ, actele amplasamentului, ofertele și cofinanțarea."
+        },
+        {
+          "term": "Care sunt criteriile de selecție?",
+          "description": "Pragurile consultative diferă între componenta legumicolă și celelalte componente; fiecare punct trebuie să aibă suport documentar."
+        },
+        {
+          "term": "Când se depune?",
+          "description": "Consultarea nu confirmă data depunerii. Calendarul, etapele și alocările se publică prin documentele finale ale sesiunii."
+        },
+        {
+          "term": "Ce statut are ghidul?",
+          "description": "Ghidul este consultativ, iar intervalele SO, intensitatea, documentele și criteriile trebuie reconfirmate în forma aprobată."
+        }
       ],
-      "documents": [
-        "Acte de identificare, documente ONRC și certificate relevante.",
-        "Documente APIA, ANSVSA sau ANZ, după profilul fermei.",
-        "Calculul SO și evidențele culturilor ori efectivelor.",
-        "Acte de proprietate sau folosință pentru amplasament.",
-        "Oferte, justificări tehnice, buget și dovada cofinanțării."
-      ],
-      "risks": [
-        "Încadrarea fermei într-un interval SO greșit.",
-        "Condiții artificiale create pentru accesarea unei componente.",
-        "Achiziții disproporționate față de activitatea documentată.",
-        "Punctaj estimat pe criterii care nu pot fi demonstrate."
-      ]
+      "source": {
+        "document": "Ghidul solicitantului DR-14 – variantă consultativă",
+        "institution": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
+        "status": "Variantă consultativă; informațiile sunt conform variantei consultative. Valorile, intervalele SO și condițiile sunt conform variantei consultative și pot fi modificate în documentele finale.",
+        "url": "https://www.afir.ro/comunicare/utile/dezbatere-publica/"
+      },
+      "interpretation": "Încadrarea într-un interval SO nu rezolvă alegerea componentei. SO majoritar, investiția și documentele exploatației trebuie să indice aceeași activitate. Aceasta este interpretarea de lucru FABER și nu înlocuiește criteriile oficiale.",
+      "programId": "dr14-afir",
+      "lastReviewed": "2026-07-20"
     },
     "por-adr-nord-est": {
-      "quickAnswer": "Programul Regional Nord-Est 2021–2027 reunește apelurile gestionate de ADR Nord-Est pentru investiții regionale, inclusiv oportunități dedicate IMM-urilor și microîntreprinderilor din cele șase județe ale regiunii. Pagina oferă orientare generală, nu înlocuiește condițiile unui apel. Pentru fiecare proiect trebuie verificate apelul exact, localizarea, codul CAEN, situațiile financiare, dimensiunea întreprinderii, investiția și cofinanțarea. Apelul 2 pentru modernizarea microîntreprinderilor are propria pagină detaliată și propriile reguli.",
-      "checks": [
-        "Apelul exact și versiunea ghidului publicată de ADR Nord-Est.",
-        "Județul, localitatea și eligibilitatea amplasamentului.",
-        "Codul CAEN și autorizarea activității finanțate.",
-        "Categoria IMM și situațiile financiare ale solicitantului.",
-        "Lista cheltuielilor și legătura lor cu obiectivul apelului.",
-        "Cofinanțarea, ajutorul de stat și calendarul investiției."
+      "route": "/por-adr-nord-est",
+      "sectionTitle": "Condițiile care trebuie verificate",
+      "directAnswer": "Programul Regional Nord-Est 2021–2027 cuprinde apeluri pentru beneficiari publici și privați din județele Bacău, Botoșani, Iași, Neamț, Suceava și Vaslui. Pentru o firmă, eligibilitatea depinde de apelul exact, localitate, cod CAEN, dimensiunea întreprinderii, investiție și cofinanțare. Pagina este un hub informativ; regulile aplicabile sunt cele din ghidul final al apelului selectat.",
+      "facts": [
+        {
+          "term": "Cine este eligibil?",
+          "description": "Categoria beneficiarului diferă între apeluri; pentru firme se verifică dimensiunea IMM, sediul sau locația de implementare, activitatea și situațiile financiare."
+        },
+        {
+          "term": "Care este finanțarea?",
+          "description": "Programul nu are un grant unic. Valoarea minimă, maximă și alocarea se preiau din ghidul apelului concret."
+        },
+        {
+          "term": "Care este contribuția proprie?",
+          "description": "Intensitatea depinde de apel, tipul ajutorului, localitate și dimensiunea întreprinderii; costurile neeligibile sunt suportate integral de beneficiar."
+        },
+        {
+          "term": "Ce cheltuieli sunt eligibile?",
+          "description": "Echipamentele, lucrările, activele necorporale și serviciile pot fi acceptate numai dacă apar în lista apelului și susțin obiectivul investiției."
+        },
+        {
+          "term": "Ce documente sunt obligatorii?",
+          "description": "Se pregătesc actele ONRC, situațiile financiare, declarația IMM, actele amplasamentului, autorizarea CAEN, planul de afaceri, ofertele și documentația tehnică."
+        },
+        {
+          "term": "Care sunt criteriile de selecție?",
+          "description": "Criteriile diferă între apeluri și pot privi performanța financiară, inovarea, locurile de muncă, eficiența sau maturitatea; punctajul se dovedește documentar."
+        },
+        {
+          "term": "Când se depune?",
+          "description": "Fiecare apel are propriul calendar publicat de ADR Nord-Est; pagina de program nu confirmă automat existența unei sesiuni deschise."
+        },
+        {
+          "term": "Ce statut are ghidul?",
+          "description": "Programul regional este aprobat, dar condițiile proiectului provin din ghidul final și anexele apelului ales, nu din prezentarea generală."
+        }
       ],
-      "documents": [
-        "Acte ONRC și declarații privind categoria întreprinderii.",
-        "Situații financiare și documente fiscale solicitate de apel.",
-        "Documente pentru amplasament și autorizarea codului CAEN.",
-        "Plan de afaceri, oferte și documentații tehnice.",
-        "Dovada cofinanțării și declarațiile privind ajutorul de stat."
-      ],
-      "risks": [
-        "Confundarea hubului regional cu regulile unui apel concret.",
-        "Amplasament sau cod CAEN neeligibil pentru apelul selectat.",
-        "Date financiare care nu susțin categoria ori capacitatea solicitantului.",
-        "Buget necorelat cu activitatea și obiectivele regionale."
-      ]
+      "source": {
+        "document": "Programul Regional Nord-Est 2021–2027",
+        "institution": "ADR Nord-Est",
+        "status": "Document final. Programul este aprobat, dar valorile și calendarul se confirmă separat în documentele apelului activ.",
+        "url": "https://regionordest.ro/"
+      },
+      "interpretation": "Localitatea și codul CAEN pot exclude un proiect înaintea analizei bugetului. De aceea, hubul ajută la alegerea rutei, dar nu poate substitui matricea apelului. Aceasta este interpretarea FABER, nu o regulă suplimentară.",
+      "programId": "program-regional-nord-est",
+      "lastReviewed": "2026-07-20"
     },
     "afir-autoconsum-agroalimentar": {
-      "quickAnswer": "Schema AFIR pentru autoconsum finanțează capacități noi de producere a energiei solare pentru întreprinderi din agricultură și industria alimentară, precum și pentru OUAI sau FOUAI eligibile, cu sau fără stocare. Proiectul trebuie dimensionat pe consumul justificat și corelat cu punctele de consum și producție, amplasamentul, racordarea și datele istorice. Condițiile, plafoanele și documentele se confirmă în Ghidul Solicitantului Schema ENERGIE, versiunea activă, înainte de depunere.",
-      "checks": [
-        "Versiunea activă a Ghidului Solicitantului Schema ENERGIE.",
-        "Categoria beneficiarului și codurile CAEN relevante.",
-        "Datele istorice de consum și dimensionarea capacității.",
-        "Punctele de consum și producție și dreptul asupra amplasamentului.",
-        "Soluția de racordare sau justificarea configurației off-grid.",
-        "Studiul de fezabilitate, selecția și riscul supradimensionării."
+      "route": "/afir-autoconsum-agroalimentar",
+      "file": "afir-autoconsum-agroalimentar.html",
+      "sectionTitle": "Datele esențiale ale programului",
+      "directAnswer": "Schema AFIR Autoconsum Agroalimentar finanțează capacități solare noi, cu sau fără stocare, pentru întreprinderi agricole, întreprinderi din industria alimentară și OUAI sau FOUAI eligibile. Proiectul trebuie corelat cu autoconsumul, codul CAEN, amplasamentul și racordarea. Ghidul V7 este aprobat, iar sesiunea verificată este deschisă între 15 iunie și 14 august 2026.",
+      "facts": [
+        {
+          "term": "Cine este eligibil?",
+          "description": "Pot aplica întreprinderi din agricultură și industria alimentară, precum și OUAI sau FOUAI, dacă îndeplinesc toate condițiile Ghidului V7."
+        },
+        {
+          "term": "Care este finanțarea?",
+          "description": "Ghidul V7 prevede 650.000 euro/MW până la 1 MW inclusiv, 550.000 euro/MW peste 1 MW și maximum 20 milioane euro pe beneficiar."
+        },
+        {
+          "term": "Care este contribuția proprie?",
+          "description": "Schema poate acoperi până la 100% din costurile eligibile în limitele costului unitar; diferențele și cheltuielile neeligibile revin beneficiarului."
+        },
+        {
+          "term": "Ce cheltuieli sunt eligibile?",
+          "description": "Sunt vizate capacități noi solare, instalațiile aferente și, după caz, stocarea, numai în configurația și limitele tehnice acceptate de ghid."
+        },
+        {
+          "term": "Ce documente sunt obligatorii?",
+          "description": "Sunt necesare actele beneficiarului, dovezile CAEN, facturile și datele de consum, actele amplasamentului, studiul de fezabilitate, racordarea, ofertele și bugetul."
+        },
+        {
+          "term": "Care sunt criteriile de selecție?",
+          "description": "Proiectele sunt analizate după regulile Ghidului V7, inclusiv autoconsumul de minimum 70%, dimensionarea și criteriile tehnice și economice aplicabile."
+        },
+        {
+          "term": "Când se depune?",
+          "description": "Anunțul AFIR verificat indică sesiunea 15 iunie–14 august 2026, cu respectarea condițiilor platformei și a eventualelor actualizări oficiale."
+        },
+        {
+          "term": "Ce statut are ghidul?",
+          "description": "Ghidul V7 este aprobat prin OMADR nr. 180/9 iunie 2026 și este forma aplicabilă sesiunii indicate, nu o versiune consultativă."
+        }
       ],
-      "documents": [
-        "Acte ale beneficiarului și certificatele privind activitatea.",
-        "Facturi și curbe ori evidențe istorice de consum.",
-        "Acte pentru amplasament și punctele de consum sau producție.",
-        "Studiu de fezabilitate, avize și documentația de racordare.",
-        "Oferte, buget, plan de achiziții și documente de cofinanțare."
-      ],
-      "risks": [
-        "Capacitate supradimensionată față de autoconsumul demonstrabil.",
-        "Neconcordanțe între consum, amplasament și punctele declarate.",
-        "Pornirea achizițiilor înainte de momentul permis de schemă.",
-        "Costuri sau componente fără justificare tehnică și economică."
-      ]
+      "source": {
+        "document": "Ghidul Solicitantului Schema Energie Autoconsum V7 – iunie 2026",
+        "institution": "Ministerul Agriculturii și Dezvoltării Rurale / AFIR",
+        "status": "Apel deschis: 2026-06-15–2026-08-14. Informațiile sunt raportate la Ghidul V7 și sesiunea 15 iunie–14 august 2026; eventualele modificări se verifică la AFIR.",
+        "url": "https://www.afir.ro/media/hkfp4w0v/ghidul-solicitantului-schem%C4%83-energie-autoconsum-v7-iunie-2026.pdf"
+      },
+      "interpretation": "O putere instalată mai mare nu înseamnă automat un proiect mai bun: consumul istoric, extinderile justificate și punctele de consum trebuie să susțină dimensionarea. Aceasta este interpretarea tehnică FABER, nu o normă care modifică Ghidul V7.",
+      "programId": "afir-energie-autoconsum",
+      "lastReviewed": "2026-07-20"
     },
     "pro-infra": {
-      "quickAnswer": "PRO INFRA sprijină eficiența energetică a producătorilor de materii prime, materiale și produse necesare infrastructurii de transport. Investiția urmărește înlocuirea instalațiilor, utilajelor sau echipamentelor cu alternative mai eficiente, inclusiv electrificarea echipamentelor cu combustie internă, și presupune un sistem EMS. Eligibilitatea depinde de schema oficială, auditul energetic, analiza de oportunitate, efectul stimulativ, casarea echipamentelor înlocuite, indicatorii asumați și documentele tehnice; schema nu trebuie prezentată generic ca finanțare pentru fotovoltaice.",
-      "checks": [
-        "Încadrarea activității în producția necesară infrastructurii de transport.",
-        "Versiunea schemei și lipsa unei demarări premature a proiectului.",
-        "Auditul energetic și analiza de oportunitate.",
-        "Echipamentele înlocuite, soluția eficientă și obligația de casare.",
-        "Sistemul EMS și indicatorii de eficiență energetică.",
-        "Excluderile sectoriale și statutul de întreprindere în dificultate."
+      "route": "/pro-infra",
+      "file": "pro-infra.html",
+      "sectionTitle": "Condițiile care trebuie verificate",
+      "directAnswer": "PRO INFRA sprijină întreprinderile care produc materii prime, materiale sau produse necesare infrastructurii de transport și investesc în eficiență energetică. Sunt analizate activitatea productivă, auditul energetic, echipamentele înlocuite, sistemul EMS, efectul stimulativ și indicatorii. Schema este aprobată și consolidată; calendarul, anexele și procedura concretă de ofertare necesită ghidul apelului aplicabil.",
+      "facts": [
+        {
+          "term": "Cine este eligibil?",
+          "description": "Întreprinderea trebuie să demonstreze legătura directă dintre activitatea sa productivă și materiile prime, materialele sau produsele destinate infrastructurii de transport."
+        },
+        {
+          "term": "Care este finanțarea?",
+          "description": "Valoarea ajutorului rezultă din oferta concurențială și schema aplicabilă; plafonul concret al procedurii se confirmă în ghidul apelului."
+        },
+        {
+          "term": "Care este contribuția proprie?",
+          "description": "Beneficiarul acoperă diferența față de ajutor, costurile neeligibile și eventualele depășiri, din surse fără alt ajutor public pentru aceleași cheltuieli."
+        },
+        {
+          "term": "Ce cheltuieli sunt eligibile?",
+          "description": "Schema vizează înlocuirea instalațiilor, utilajelor sau echipamentelor cu soluții mai eficiente, electrificarea și componentele necesare sistemului EMS, în condițiile oficiale."
+        },
+        {
+          "term": "Ce documente sunt obligatorii?",
+          "description": "Dosarul tehnic include auditul energetic, analiza de oportunitate, fișele echipamentelor, planul EMS, ofertele, bugetul, indicatorii și actele întreprinderii."
+        },
+        {
+          "term": "Care sunt criteriile de selecție?",
+          "description": "Procedura evaluează economiile și indicatorii asumați, efectul stimulativ și condițiile schemei; grila concretă se preia din ghidul ofertării."
+        },
+        {
+          "term": "Când se depune?",
+          "description": "Schema aprobată nu este suficientă pentru a deduce termenul unei proceduri; depunerea se face numai în calendarul oficial al apelului."
+        },
+        {
+          "term": "Ce statut are ghidul?",
+          "description": "Schema PRO INFRA este aprobată prin Ordinul MTI nr. 2.292/2025 și consolidată la 12 februarie 2026; ghidul procedurii se confirmă separat."
+        }
       ],
-      "documents": [
-        "Acte ale întreprinderii și documente privind activitatea productivă.",
-        "Audit energetic și analiza de oportunitate.",
-        "Fișe tehnice pentru echipamentele existente și cele propuse.",
-        "Planul EMS, indicatorii și metodologia de monitorizare.",
-        "Oferte, buget, calendar și declarații privind efectul stimulativ."
-      ],
-      "risks": [
-        "Demararea investiției înainte de momentul permis.",
-        "Lipsa legăturii directe cu producția pentru infrastructura de transport.",
-        "Economii energetice sau indicatori insuficient fundamentați.",
-        "Neîndeplinirea obligațiilor privind EMS, casarea și monitorizarea."
-      ]
+      "source": {
+        "document": "Schema PRO INFRA – formă consolidată la 12 februarie 2026",
+        "institution": "Ministerul Transporturilor și Infrastructurii",
+        "status": "Document final. Schema este aprobată, dar un apel deschis și perioada de depunere se confirmă separat în documentele autorității.",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocumentAfis/306916"
+      },
+      "interpretation": "Achiziția unui echipament mai nou nu dovedește singură eficiența energetică. Efectul trebuie urmărit coerent în audit, analiza de oportunitate, EMS și indicatori. Aceasta este interpretarea FABER, nu o completare a schemei oficiale.",
+      "programId": "pro-infra",
+      "lastReviewed": "2026-07-13"
     },
     "pocidif-21": {
-      "quickAnswer": "PoCIDIF 2.1 vizează proiecte de cercetare, inovare și dezvoltare de tehnologii digitale realizate de IMM-uri din sectorul TIC, în limitele documentelor oficiale ale apelului. O investiție nu devine eligibilă doar pentru că include hardware sau software: trebuie demonstrată legătura cu activitățile de cercetare-dezvoltare, produsul ori serviciul digital, codul CAEN, indicatorii, proprietatea intelectuală și capacitatea de implementare. Bugetul, cofinanțarea, parteneriatele și punctajul se verifică în forma activă a ghidului și a anexelor.",
-      "checks": [
-        "Denumirea și versiunea oficială a apelului PoCIDIF 2.1.",
-        "Categoria IMM, codul CAEN și activitatea din sectorul TIC.",
-        "Caracterul de cercetare, inovare și dezvoltare al proiectului.",
-        "Legătura dintre hardware, software, servicii și produsul digital.",
-        "Regimul proprietății intelectuale și eventualele parteneriate.",
-        "Indicatorii, bugetul, cofinanțarea și punctajul documentabil."
+      "route": "/pocidif-21",
+      "sectionTitle": "Datele esențiale ale programului",
+      "directAnswer": "PoCIDIF 2.1 finanțează IMM-uri din sectorul TIC care dezvoltă prin cercetare, dezvoltare și inovare un serviciu, o aplicație sau un produs digital destinat pieței. Solicitantul trebuie să confirme codul CAEN, echipa, activitățile CDI, rezultatul inovator, bugetul, indicatorii și cofinanțarea. Ghidul și schema de ajutor sunt aprobate, iar clarificările oficiale fac parte din verificare.",
+      "facts": [
+        {
+          "term": "Cine este eligibil?",
+          "description": "Pot aplica microîntreprinderi și IMM-uri din sectorul TIC, inclusiv anumite întreprinderi nou-înființate, cu unul dintre codurile CAEN acceptate și capacitatea cerută."
+        },
+        {
+          "term": "Care este finanțarea?",
+          "description": "Ghidul aprobat stabilește minimum 200.000 euro și maximum 1,5 milioane euro pentru software inovator sau 3 milioane euro pentru produs hardware inovator."
+        },
+        {
+          "term": "Care este contribuția proprie?",
+          "description": "Contribuția diferă după tipul de activitate, categoria de ajutor, dimensiunea întreprinderii și regiune și se calculează pe fiecare categorie bugetară."
+        },
+        {
+          "term": "Ce cheltuieli sunt eligibile?",
+          "description": "Pot fi incluse activități CDI, active, servicii și costuri de introducere pe piață, dacă sunt legate de rezultatul inovator și încadrate în ajutorul corect."
+        },
+        {
+          "term": "Ce documente sunt obligatorii?",
+          "description": "Sunt necesare actele IMM, situațiile financiare, planul CDI și de afaceri, descrierea produsului, echipa, proprietatea intelectuală, ofertele, indicatorii și cofinanțarea."
+        },
+        {
+          "term": "Care sunt criteriile de selecție?",
+          "description": "Sunt evaluate inovarea, maturitatea, capacitatea echipei, piața, indicatorii și bugetul, conform grilei aprobate și clarificărilor oficiale."
+        },
+        {
+          "term": "Când se depune?",
+          "description": "Calendarul aplicabil este cel publicat pentru apel în MySMIS și în comunicările MIPE; pagina nu înlocuiește termenul oficial al platformei."
+        },
+        {
+          "term": "Ce statut are ghidul?",
+          "description": "Ghidul este aprobat prin Ordinul MIPE nr. 965/23.06.2026, iar schema prin Ordinul nr. 875/15.06.2026; se verifică și clarificările ulterioare."
+        }
       ],
-      "documents": [
-        "Acte ONRC și documente privind categoria IMM și codul CAEN.",
-        "Situații financiare și documente privind capacitatea solicitantului.",
-        "Planul de cercetare-dezvoltare și descrierea produsului digital.",
-        "Documente privind drepturile de proprietate intelectuală.",
-        "Oferte, buget, indicatori, parteneriate și dovada cofinanțării."
+      "source": {
+        "document": "Ghidul solicitantului PoCIDIF 2.1 aprobat prin Ordinul MIPE nr. 965/23.06.2026",
+        "institution": "Ministerul Investițiilor și Proiectelor Europene",
+        "status": "Document final. Ghidul este aprobat; perioada de depunere și eventualele actualizări se confirmă pe pagina oficială MIPE.",
+        "url": "https://mfe.gov.ro/ghiduri_pocidif/pocidif-ghidul-solicitantului-dezvoltarea-de-noi-servicii-aplicatii-produse-prin-inovare-si-adoptarea-de-tehnologii-avansate-2/"
+      },
+      "interpretation": "Un proiect centrat pe achiziții IT, fără activități CDI și fără un rezultat nou introdus pe piață, nu răspunde obiectivului apelului. Aceasta este interpretarea FABER a efectului practic al ghidului, nu o normă separată.",
+      "programId": "pocidif-21",
+      "lastReviewed": "2026-07-13"
+    },
+    "femeia-antreprenor-2026": {
+      "route": "/femeia-antreprenor-2026",
+      "file": "femeia-antreprenor-2026.html",
+      "sectionTitle": "Ce trebuie pregătit înainte de depunere",
+      "directAnswer": "Femeia Antreprenor este un program național pentru întreprinderi în care participarea femeilor îndeplinește condițiile stabilite prin procedura ediției. Pentru 2026, sursa oficială disponibilă în repository nu confirmă încă beneficiarii, grantul, contribuția, cheltuielile, punctajul sau calendarul. Firmele interesate pot verifica actele societății și investiția, dar trebuie să aștepte procedura finală înaintea unei concluzii de eligibilitate.",
+      "facts": [
+        {
+          "term": "Cine este eligibil?",
+          "description": "Categoria exactă de solicitant și condițiile privind asociatele, administrarea sau capitalul nu sunt confirmate pentru ediția 2026 fără procedura oficială finală."
+        },
+        {
+          "term": "Care este finanțarea?",
+          "description": "Valoarea grantului pentru 2026 nu este confirmată de sursa disponibilă și nu este preluată automat dintr-o ediție anterioară."
+        },
+        {
+          "term": "Care este contribuția proprie?",
+          "description": "Procentul și modul de dovedire a contribuției se vor stabili prin procedura 2026; orice estimare anterioară rămâne neconfirmată."
+        },
+        {
+          "term": "Ce cheltuieli sunt eligibile?",
+          "description": "Lista, plafoanele și momentul de la care costurile pot fi angajate necesită documentul final al ediției 2026."
+        },
+        {
+          "term": "Ce documente sunt obligatorii?",
+          "description": "Pot fi pregătite actul constitutiv actualizat, certificatul constatator, situațiile financiare, istoricul asociaților și administratorilor și descrierea investiției."
+        },
+        {
+          "term": "Care sunt criteriile de selecție?",
+          "description": "Grila și dovezile pentru punctaj nu sunt confirmate pentru 2026; criteriile din ediții anterioare nu trebuie prezentate ca active."
+        },
+        {
+          "term": "Când se depune?",
+          "description": "Nu există în sursa locală un calendar confirmat pentru ediția 2026; data va fi cea din anunțul și procedura oficială."
+        },
+        {
+          "term": "Ce statut are ghidul?",
+          "description": "Nu este disponibilă o procedură finală 2026 în sursa de adevăr a paginii. Informația care depinde de aceasta necesită confirmare."
+        }
       ],
-      "risks": [
-        "Proiect de simplă achiziție fără activitate de cercetare sau inovare.",
-        "Cod CAEN ori categorie de întreprindere neconforme cu apelul.",
-        "Indicatori, drepturi intelectuale sau parteneriate insuficient clarificate.",
-        "Cheltuieli tehnice fără legătură demonstrată cu rezultatul digital."
-      ]
+      "source": {
+        "document": "Comunicatul oficial privind ediția publicată a programului Femeia Antreprenor",
+        "institution": "Ministerul Economiei",
+        "status": "Statut de confirmat. Sursa disponibilă nu confirmă o ediție 2026; nu sunt publicate valori sau termene ca informații actuale.",
+        "url": "https://economie.gov.ro/pe-data-de-30-iulie-se-da-startul-inscrierilor-in-cadrul-programului-femeia-antreprenor/"
+      },
+      "programId": "femeia-antreprenor",
+      "lastReviewed": "2026-05-20"
+    },
+    "e-move": {
+      "route": "/e-move",
+      "sectionTitle": "Condițiile care trebuie verificate",
+      "directAnswer": "e-MOVE RO urmărește infrastructura de încărcare pentru mobilitate cu emisii zero, împreună cu producția regenerabilă și stocarea permise de documentație. Beneficiarul, amplasamentul, drepturile asupra terenului, racordarea, puterea, utilizarea și bugetul trebuie verificate înaintea proiectării. La 13 iulie 2026, sursa analizată este un ghid publicat în consultare, nu forma finală a apelului.",
+      "facts": [
+        {
+          "term": "Cine este eligibil?",
+          "description": "Categoriile finale de întreprinderi sau comunități și condițiile lor trebuie confirmate în ghidul aprobat; forma consultativă nu justifică o concluzie definitivă."
+        },
+        {
+          "term": "Care este finanțarea?",
+          "description": "Plafoanele și valorile din consultare nu sunt prezentate drept definitive; grantul se confirmă în ghidul final și schema aplicabilă."
+        },
+        {
+          "term": "Care este contribuția proprie?",
+          "description": "Intensitatea ajutorului, contribuția și costurile neeligibile se calculează numai după publicarea condițiilor finale pentru categoria beneficiarului."
+        },
+        {
+          "term": "Ce cheltuieli sunt eligibile?",
+          "description": "Forma consultativă vizează stații de încărcare, producție regenerabilă, stocare și lucrări sau servicii conexe, în limite care necesită confirmare."
+        },
+        {
+          "term": "Ce documente sunt obligatorii?",
+          "description": "Pregătirea tehnică pornește de la actele solicitantului și terenului, urbanism, acces, soluția de racordare, consum, dimensionare, oferte și buget."
+        },
+        {
+          "term": "Care sunt criteriile de selecție?",
+          "description": "Criteriile finale și punctajul nu se deduc din prezentarea programului; se verifică în grila aprobată și anexele apelului."
+        },
+        {
+          "term": "Când se depune?",
+          "description": "Consultarea publică nu reprezintă deschiderea apelului. Perioada de depunere trebuie anunțată oficial de MTI/DGPET."
+        },
+        {
+          "term": "Ce statut are ghidul?",
+          "description": "Ghidul folosit este consultativ. Beneficiarii, valorile, calendarul și anexele pot fi modificate înainte de aprobarea formei finale."
+        }
+      ],
+      "source": {
+        "document": "Ghidul solicitantului e-MOVE RO – variantă consultativă",
+        "institution": "Ministerul Transporturilor și Infrastructurii",
+        "status": "Variantă consultativă; informațiile sunt conform variantei consultative. Valorile și condițiile sunt conform variantei consultative; nu sunt prezentate drept reguli finale sau apel deschis.",
+        "url": "https://fonduri.mt.ro/transparenta/consultare-publica/fondul-pentru-modernizare/comunicat-fm-consultare-publica-ghidul-solicitantului-promovarea-infrastructurii-pentru-o-mobilitate-cu-emisii-zero-in-sprijinul-intreprinderilor-si-comunitatilor-e-move-ro"
+      },
+      "interpretation": "Un amplasament poate fi neimplementabil chiar dacă stațiile apar ca tip de investiție: dreptul asupra terenului, accesul și soluția de racordare trebuie să fie compatibile. Aceasta este interpretarea practică FABER, nu o regulă oficială suplimentară.",
+      "programId": "e-move-ro",
+      "lastReviewed": "2026-05-27"
     }
   }
 }

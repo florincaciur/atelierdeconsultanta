@@ -4,116 +4,142 @@
 const fs = require("fs");
 const path = require("path");
 const cheerio = require("cheerio");
-const { loadPriorityConfig } = require("../tools/priority-aeo");
+const { fileForPage, loadPriorityConfig } = require("../tools/priority-aeo");
+const {
+  ORGANIZATION_ID,
+  organizationSchema,
+  serializeJsonLd,
+  websiteSchema
+} = require("../tools/schema-helpers");
+const { normalizeJsonLdValue } = require("../tools/normalize-copy-ro");
+const {
+  SITE,
+  cleanText,
+  comparableText,
+  loadPageHints,
+  parseJsonLd,
+  typesOf,
+  visibleFaqItems
+} = require("../tools/structured-data-utils");
 
 const ROOT = path.resolve(__dirname, "..");
-const SITE = "https://atelierdeconsultanta.ro";
 const LIVE = process.argv.includes("--live");
 const officialUrls = new Set();
-
-function text(value) {
-  return String(value || "").replace(/\s+/g, " ").trim();
-}
+const STRUCTURED_DATA_PROGRAMS = new Set([
+  "dr12-afir",
+  "dr14",
+  "por-adr-nord-est",
+  "afir-autoconsum-agroalimentar",
+  "pro-infra",
+  "pocidif-21"
+]);
 
 function words(value) {
-  return text(value).split(/\s+/u).filter(Boolean).length;
+  return cleanText(value).split(/\s+/u).filter(Boolean).length;
 }
 
-function comparable(value) {
-  return text(value).normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+function hasType(node, type) {
+  return typesOf(node).includes(type);
 }
 
-function graphNodes($, errors, slug) {
-  const nodes = [];
-  $("script[type='application/ld+json']").each((_, script) => {
-    try {
-      const data = JSON.parse($(script).html());
-      if (Array.isArray(data)) nodes.push(...data);
-      else if (Array.isArray(data["@graph"])) nodes.push(...data["@graph"]);
-      else nodes.push(data);
-    } catch (error) {
-      errors.push(`${slug}: JSON-LD invalid (${error.message})`);
-    }
-  });
-  return nodes;
-}
-
-function types(node) {
-  return Array.isArray(node["@type"]) ? node["@type"] : [node["@type"]].filter(Boolean);
-}
-
-function validatePage(slug, config, errors) {
-  const file = path.join(ROOT, slug, "index.html");
-  const $ = cheerio.load(fs.readFileSync(file, "utf8"));
-  const canonical = `${SITE}/${slug}`;
+function validatePage(slug, page, config, hints, errors) {
+  const file = fileForPage(slug, page);
+  const $ = cheerio.load(fs.readFileSync(file, "utf8"), { decodeEntities: false });
+  const canonical = `${SITE}${page.route}`;
   const pageErrors = [];
-  const exactHeading = (label) => $("main h2").filter((_, element) => text($(element).text()) === label);
+  const exactHeading = (label) => $("main h2").filter((_, element) => cleanText($(element).text()) === label);
 
-  const quickHeadings = exactHeading("Răspuns rapid");
-  if (quickHeadings.length !== 1) pageErrors.push(`trebuie exact un H2 „Răspuns rapid”, găsite ${quickHeadings.length}`);
-  const quickText = text(quickHeadings.first().nextAll("p").first().text());
-  const quickWords = words(quickText);
-  if (quickWords < 60 || quickWords > 100) pageErrors.push(`răspunsul rapid are ${quickWords} cuvinte, necesar 60–100`);
+  const direct = $("main [data-answer-readiness-direct]");
+  if (direct.length !== 1) pageErrors.push(`trebuie exact un răspuns direct, găsite ${direct.length}`);
+  const directWords = words(direct.text());
+  if (directWords < 45 || directWords > 80) pageErrors.push(`răspunsul direct are ${directWords} cuvinte, necesar 45–80`);
+  if (exactHeading(page.sectionTitle).length !== 1) pageErrors.push(`lipsește H2-ul de intenție „${page.sectionTitle}”`);
+  const facts = $("main .answer-readiness__facts > div");
+  if (facts.length !== 8) pageErrors.push(`secțiunea operațională are ${facts.length} răspunsuri, necesar 8`);
+  const nearbySource = $("main .answer-readiness__source");
+  if (nearbySource.length !== 1 || nearbySource.find("a[href^='https://']").length !== 1) pageErrors.push("lipsește sursa oficială apropiată de răspunsul direct");
+  const reviewed = page.lastReviewed || config.lastReviewed || config.lastVerified;
+  if (!$(`main time[datetime='${reviewed}']`).length) pageErrors.push(`lipsește data vizibilă de revizuire ${reviewed}`);
 
-  const checks = exactHeading("Ce trebuie verificat").first().nextAll("ul").first().find(":scope > li");
-  if (checks.length < 5 || checks.length > 8) pageErrors.push(`„Ce trebuie verificat” are ${checks.length} elemente, necesar 5–8`);
-  if (exactHeading("Documente de pregătit").length !== 1) pageErrors.push("lipsește secțiunea „Documente de pregătit”");
-  if (exactHeading("Riscuri").length < 1) pageErrors.push("lipsește secțiunea „Riscuri”");
-  if (!$("main").text().includes("Verificator editorial")) pageErrors.push("lipsește verificatorul editorial vizibil");
-  if (!$(`main time[datetime='${config.lastVerified}']`).length) pageErrors.push(`lipsește data vizibilă ${config.lastVerified}`);
-  if (!$("main").text().includes(config.author)) pageErrors.push("lipsește autorul vizibil");
-
-  const sourceSections = $("main section").filter((_, element) => /Surse oficiale/i.test(text($(element).find("h2").first().text())));
+  const sourceSections = $("main section").filter((_, element) => /Surse oficiale/iu.test(cleanText($(element).find("h2").first().text())));
   const officialLinks = sourceSections.find("a[href^='https://']");
   if (!sourceSections.length || !officialLinks.length) pageErrors.push("lipsește secțiunea vizibilă cu surse oficiale HTTPS");
   officialLinks.each((_, element) => {
     try {
       const url = new URL($(element).attr("href"));
-      if (!url.hostname || /example\.(?:com|org)$/i.test(url.hostname)) pageErrors.push(`sursă oficială invalidă: ${url}`);
+      if (!url.hostname || /example\.(?:com|org)$/iu.test(url.hostname)) pageErrors.push(`sursă oficială invalidă: ${url}`);
       officialUrls.add(url.toString());
-    } catch { pageErrors.push(`link de sursă invalid: ${$(element).attr("href")}`); }
+    } catch {
+      pageErrors.push(`link de sursă invalid: ${$(element).attr("href")}`);
+    }
   });
 
-  const nodes = graphNodes($, pageErrors, slug);
-  const hasType = (type) => nodes.some((node) => types(node).includes(type));
-  for (const required of ["WebPage", "BreadcrumbList", "FAQPage", "Organization", "Article"]) {
-    if (!hasType(required)) pageErrors.push(`lipsește tipul schema ${required}`);
+  const blocks = parseJsonLd($);
+  for (const block of blocks) if (block.error) pageErrors.push(`JSON-LD invalid (${block.error})`);
+  if (blocks.length !== 1) pageErrors.push(`trebuie exact un bloc JSON-LD determinist, găsite ${blocks.length}`);
+  const nodes = blocks.flatMap((block) => block.nodes);
+  for (const required of ["WebPage", "WebSite", "BreadcrumbList", "FAQPage", "Organization", "Article"]) {
+    if (!nodes.some((node) => hasType(node, required))) pageErrors.push(`lipsește tipul schema ${required}`);
   }
-  if (nodes.some((node) => types(node).some((type) => ["AggregateRating", "Review", "Award"].includes(type)))) {
-    pageErrors.push("există rating, review sau premiu neverificat în schema");
+  for (const forbidden of ["GovernmentService", "Service", "WebApplication", "BlogPosting", "AggregateRating", "Review"]) {
+    if (nodes.some((node) => hasType(node, forbidden))) pageErrors.push(`tip schema nejustificat pe pagina editorială: ${forbidden}`);
   }
 
-  const webPage = nodes.find((node) => types(node).includes("WebPage"));
-  const article = nodes.find((node) => types(node).includes("Article"));
-  if (!webPage || webPage.dateModified !== config.lastVerified) pageErrors.push("WebPage.dateModified nu corespunde implementării");
+  const org = nodes.find((node) => node["@id"] === ORGANIZATION_ID);
+  if (!org || serializeJsonLd(org) !== serializeJsonLd(organizationSchema())) pageErrors.push("Organization FABER nu este identică sursei canonice");
+  const website = nodes.find((node) => hasType(node, "WebSite"));
+  if (!website || serializeJsonLd(website) !== serializeJsonLd(websiteSchema())) pageErrors.push("WebSite nu este identic sursei canonice");
+
+  const webPage = nodes.find((node) => hasType(node, "WebPage"));
+  const article = nodes.find((node) => hasType(node, "Article"));
+  const editorialDate = hints?.updatedAt;
+  if (!webPage || webPage.dateModified !== editorialDate) pageErrors.push(`WebPage.dateModified trebuie să fie data editorială ${editorialDate}`);
   if (!article?.author || !article?.publisher || !article?.mainEntityOfPage) pageErrors.push("Article trebuie să aibă author, publisher și mainEntityOfPage");
-  if (article && article.dateModified !== config.lastVerified) pageErrors.push("Article.dateModified nu corespunde implementării");
+  if (article && article.dateModified !== editorialDate) pageErrors.push(`Article.dateModified trebuie să fie data editorială ${editorialDate}`);
 
-  const faq = nodes.find((node) => types(node).includes("FAQPage"));
-  const schemaQuestions = (faq?.mainEntity || []).map((item) => text(item.name));
-  const visibleQuestions = $("main .faq-item h3, main section[id*='faq'] h3").map((_, element) => text($(element).text())).get();
-  const uniqueVisible = new Set(visibleQuestions.map(comparable));
-  if (!schemaQuestions.length) pageErrors.push("FAQPage nu conține întrebări");
-  for (const question of schemaQuestions) {
-    if (!uniqueVisible.has(comparable(question))) pageErrors.push(`FAQ schema fără întrebare vizibilă: ${question}`);
+  const visibleFaq = new Map(visibleFaqItems($).map((item) => [comparableText(item.question), comparableText(item.answer)]));
+  const faq = nodes.find((node) => hasType(node, "FAQPage"));
+  const schemaFaq = Array.isArray(faq?.mainEntity) ? faq.mainEntity : [];
+  if (!schemaFaq.length) pageErrors.push("FAQPage nu conține întrebări");
+  for (const item of schemaFaq) {
+    const question = cleanText(item.name);
+    const answer = cleanText(item.acceptedAnswer?.text);
+    const key = comparableText(question);
+    if (!visibleFaq.has(key)) pageErrors.push(`FAQ schema fără întrebare vizibilă: ${question}`);
+    else if (visibleFaq.get(key) !== comparableText(answer)) pageErrors.push(`FAQ schema cu răspuns diferit de cel vizibil: ${question}`);
   }
 
-  const canonicalHref = $("link[rel='canonical']").attr("href");
-  if (canonicalHref !== canonical) pageErrors.push(`canonical diferit: ${canonicalHref}`);
+  const breadcrumb = nodes.find((node) => hasType(node, "BreadcrumbList"));
+  const breadcrumbItems = breadcrumb?.itemListElement || [];
+  if (breadcrumbItems.length < 2 || breadcrumbItems.length > 3) pageErrors.push(`breadcrumb cu ${breadcrumbItems.length} niveluri, necesar 2–3`);
+  for (const item of breadcrumbItems) {
+    try {
+      const target = new URL(item.item);
+      if (target.origin !== SITE || target.hash || target.search || target.pathname.endsWith(".html")) pageErrors.push(`breadcrumb necanonic: ${item.item}`);
+    } catch {
+      pageErrors.push(`breadcrumb URL invalid: ${item.item}`);
+    }
+  }
+  if (breadcrumbItems.at(-1)?.item !== canonical) pageErrors.push("breadcrumb nu se încheie cu ruta canonică");
+
+  const normalized = normalizeJsonLdValue({ "@graph": nodes });
+  if (serializeJsonLd(normalized) !== serializeJsonLd({ "@graph": nodes })) pageErrors.push("există valori JSON-LD românești nenormalizate");
+  if ($("link[rel='canonical']").attr("href") !== canonical) pageErrors.push(`canonical diferit: ${$("link[rel='canonical']").attr("href")}`);
   if ($("h1").length !== 1) pageErrors.push(`număr H1 invalid: ${$("h1").length}`);
 
   if (pageErrors.length) errors.push(...pageErrors.map((error) => `${slug}: ${error}`));
   else console.log(`${slug}: structură semantică și date structurate valide`);
 }
 
-async function verifyLiveSources(errors) {
+async function verifyLiveSources(errors, warnings) {
   for (const url of officialUrls) {
     try {
       let response = await fetch(url, { method: "HEAD", redirect: "follow", signal: AbortSignal.timeout(20000) });
-      if (response.status === 405 || response.status === 403) {
+      if (response.status >= 400) {
         response = await fetch(url, { method: "GET", redirect: "follow", signal: AbortSignal.timeout(20000) });
       }
-      if (response.status >= 400) errors.push(`sursă oficială inaccesibilă HTTP ${response.status}: ${url}`);
+      if (response.status >= 500) warnings.push(`server oficial indisponibil temporar HTTP ${response.status}: ${url}`);
+      else if (response.status >= 400) errors.push(`sursă oficială inaccesibilă HTTP ${response.status}: ${url}`);
       else console.log(`sursă oficială HTTP ${response.status}: ${url}`);
     } catch (error) {
       errors.push(`sursă oficială inaccesibilă (${error.message}): ${url}`);
@@ -123,14 +149,18 @@ async function verifyLiveSources(errors) {
 
 async function main() {
   const config = loadPriorityConfig();
+  const hints = loadPageHints(ROOT);
   const errors = [];
-  for (const slug of Object.keys(config.pages)) validatePage(slug, config, errors);
-  if (LIVE && !errors.length) await verifyLiveSources(errors);
+  const warnings = [];
+  const pages = Object.entries(config.pages).filter(([slug]) => STRUCTURED_DATA_PROGRAMS.has(slug));
+  for (const [slug, page] of pages) validatePage(slug, page, config, hints.get(page.route), errors);
+  if (LIVE && !errors.length) await verifyLiveSources(errors, warnings);
+  for (const warning of warnings) console.warn(`Avertisment: ${warning}`);
   if (errors.length) {
     console.error(errors.map((error) => `- ${error}`).join("\n"));
     process.exit(1);
   }
-  console.log(`Date structurate valide pentru ${Object.keys(config.pages).length} pagini prioritare.`);
+  console.log(`Date structurate valide pentru ${pages.length} pagini prioritare${LIVE ? ", inclusiv sursele live" : ""}.`);
 }
 
 main().catch((error) => {

@@ -16,7 +16,7 @@ const routes = [
 
 const expected = {
   "/fonduri-regionale": {
-    title: "Fonduri regionale | ADR-uri România și programe regionale",
+    title: "Fonduri regionale 2021–2027 și ADR-uri | FABER",
     h1: "Programe regionale și ADR-uri din România",
     intro: /hub-ul național/i,
     links: ["/fonduri-europene-nord-est", "/por-adr-nord-est", "/investitii-modernizarea-microintreprinderilor-apel-2"]
@@ -28,13 +28,13 @@ const expected = {
     links: ["/fonduri-regionale", "/por-adr-nord-est", "/investitii-modernizarea-microintreprinderilor-apel-2"]
   },
   "/por-adr-nord-est": {
-    title: "Programul Regional Nord-Est: apeluri pentru IMM | FABER",
+    title: "Program Regional Nord-Est: finanțări IMM și apeluri | FABER",
     h1: "Programul Regional Nord-Est – finanțări pentru IMM și microîntreprinderi",
     intro: /POR ADR Nord-Est/,
     links: ["/fonduri-regionale", "/fonduri-europene-nord-est", "/investitii-modernizarea-microintreprinderilor-apel-2"]
   },
   "/investitii-modernizarea-microintreprinderilor-apel-2": {
-    title: "Investiții pentru modernizarea microîntreprinderilor – Apel 2 | FABER",
+    title: "Modernizarea microîntreprinderilor – Apel 2 | FABER",
     h1: "Investiții pentru modernizarea microîntreprinderilor – Apel 2 Nord-Est",
     intro: /Investiții pentru modernizarea microîntreprinderilor – Apel 2.*dedicată exclusiv/i,
     links: ["/fonduri-regionale", "/fonduri-europene-nord-est", "/por-adr-nord-est"]

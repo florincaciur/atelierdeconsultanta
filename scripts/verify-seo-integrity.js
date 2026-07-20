@@ -1,8 +1,21 @@
 const fs = require('fs');
 const path = require('path');
 const cheerio = require('cheerio');
+const {
+  DOCUMENT_CATEGORIES,
+  classificationCounts,
+  classifyHtmlFile,
+  discoverHtmlDocuments
+} = require('../tools/site-document-classifier');
+const {
+  comparableText,
+  graphNodes,
+  hasType,
+  visibleFaqItems
+} = require('../tools/structured-data-utils');
 
 const DEFAULT_RELATIVE_TARGET = path.join('atelierdeconsultanta', 'atelierdeconsultanta');
+const SITE = 'https://atelierdeconsultanta.ro';
 const EXCLUDED_DIRS = new Set([
   '.git',
   '.github',
@@ -17,6 +30,8 @@ const RELATED_SELECTOR = [
   '.vezi-si',
   '.vezi-si-section',
   '.related-links',
+  '.next-step-block',
+  '[data-contextual-next-step]',
   '[aria-labelledby*="vezi-si"]',
   '[id*="vezi-si"]',
 ].join(', ');
@@ -98,27 +113,9 @@ function toPosix(value) {
 }
 
 function walkHtmlFiles(root) {
-  const files = [];
-
-  function walk(dir) {
-    for (const entry of fs.readdirSync(dir, { withFileTypes: true })) {
-      const fullPath = path.join(dir, entry.name);
-      if (entry.isDirectory()) {
-        if (!EXCLUDED_DIRS.has(entry.name) && !entry.name.endsWith('_files')) {
-          walk(fullPath);
-        }
-        continue;
-      }
-      if (entry.isFile() && entry.name.toLowerCase().endsWith('.html')) {
-        if (!entry.name.startsWith('FABER')) {
-          files.push(fullPath);
-        }
-      }
-    }
-  }
-
-  walk(root);
-  return files.sort((a, b) => toPosix(a).localeCompare(toPosix(b)));
+  return discoverHtmlDocuments(root)
+    .filter((document) => !EXCLUDED_DIRS.has(document.relativePath.split('/')[0]))
+    .map((document) => document.filePath);
 }
 
 function status(pass, details = {}) {
