@@ -2,6 +2,7 @@
 "use strict";
 
 const { execFileSync } = require("child_process");
+const fs = require("fs");
 const path = require("path");
 
 const ROOT = path.resolve(__dirname, "..");
@@ -132,15 +133,18 @@ async function main() {
   const pages = new Map();
   for (const route of criticalRoutes) pages.set(route, await verifyHtml(route));
 
-  const expectedProgramSignals = new Map([
-    ["/dr12-afir", ["Consultare public", "2026-07-22", "AFIR"]],
-    ["/dr14", ["Consultare public", "2026-07-22", "AFIR"]],
-    ["/digitalizare-imm", ["Consultare public", "2026-07-22", "Ministerul Investi"]],
-    ["/pro-infra", ["Consultare public", "2026-07-22", "Ministerul Transporturilor"]],
-  ]);
-  for (const [route, signals] of expectedProgramSignals) {
-    const html = pages.get(route);
-    for (const signal of signals) if (!html.includes(signal)) throw new Error(`${route}: missing approved signal ${signal}`);
+  const registry = JSON.parse(fs.readFileSync(path.join(ROOT, "config", "seo-programs.json"), "utf8"));
+  for (const slug of ["dr12-afir", "dr14-afir", "digitalizare-imm", "pro-infra"]) {
+    const program = registry.programs.find((entry) => entry.slug === slug);
+    if (!program) throw new Error(`Program registry is missing ${slug}`);
+    const html = pages.get(program.pageUrl);
+    const expectedAttributes = [
+      `data-program-id="${program.slug}"`,
+      `data-program-status="${program.status}"`,
+      `data-verified-at="${program.verifiedAt}"`,
+      `data-source-url="${program.sourceUrl}"`,
+    ];
+    for (const signal of expectedAttributes) if (!html.includes(signal)) throw new Error(`${program.pageUrl}: missing approved registry signal ${signal}`);
   }
 
   const sitemapResponse = await request(`/sitemap.xml?t=${Date.now()}`);
