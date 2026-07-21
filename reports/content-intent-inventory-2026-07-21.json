@@ -5,13 +5,13 @@
   "source": "sitemap.xml + HTML local + registrele P0",
   "principle": "Un URL canonic are o singură intenție primară, un părinte și o micro-conversie distinctă.",
   "summary": {
-    "canonicalUrlCount": 93,
-    "inventoriedUrlCount": 93,
+    "canonicalUrlCount": 95,
+    "inventoriedUrlCount": 95,
     "byType": {
       "core": 3,
       "ghid": 34,
       "hub": 17,
-      "program": 14,
+      "program": 16,
       "instrument": 2,
       "serviciu": 17,
       "întrebare": 3,
@@ -20,16 +20,16 @@
     },
     "byIntent": {
       "comercială": 17,
-      "informațională": 59,
+      "informațională": 61,
       "navigațională": 14,
       "locală": 3
     },
     "byRecommendation": {
-      "keep": 69,
+      "keep": 71,
       "rewrite": 19,
       "merge": 5
     },
-    "blockedDecisionCount": 19
+    "blockedDecisionCount": 20
   },
   "rows": [
     {
@@ -49,7 +49,7 @@
       "microConversion": "cta_click către formularul de triere",
       "parent": "ROOT",
       "competingUrls": [],
-      "demonstrableUniqueValue": "37 subtitluri distincte, 9 FAQ și 4 linkuri externe în sursa HTML.",
+      "demonstrableUniqueValue": "39 subtitluri distincte, 9 FAQ și 4 linkuri externe în sursa HTML.",
       "recommendation": "keep",
       "recommendationTarget": null,
       "recommendationReason": "Rol distinct de core, cu o singură intenție primară și conversie proprie.",
@@ -59,7 +59,7 @@
       "evidence": {
         "title": "Consultanță și proiectare fonduri europene | FABER",
         "metaDescription": "FABER oferă consultanță și proiectare pentru proiecte cu fonduri europene: eligibilitate, cereri de finanțare, documentații tehnice și implementare.",
-        "headingCount": 37,
+        "headingCount": 39,
         "faqCount": 9,
         "externalLinkCount": 4,
         "interactiveControlCount": 30,
@@ -1083,6 +1083,43 @@
       }
     },
     {
+      "url": "https://atelierdeconsultanta.ro/digitalizare-imm",
+      "route": "/digitalizare-imm",
+      "sourceFile": "digitalizare-imm/index.html",
+      "sitemapFamily": "programs",
+      "type": "program",
+      "primaryAudience": "IMM-uri care planifică digitalizarea",
+      "mainQuestion": "Care este statutul verificat și ce trebuie analizat pentru „Digitalizarea IMM-urilor”?",
+      "queryCluster": "digitalizare IMM; digitalizare IMM 2026; eligibilitate și buget IT",
+      "primaryIntent": "informațională",
+      "h1": "Digitalizarea IMM-urilor",
+      "uniquePromise": "Centralizează statutul, sursa oficială și pașii de verificare pentru „Digitalizarea IMM-urilor”.",
+      "cta": "Verifică încadrarea proiectului",
+      "ctaTarget": "/contact?program=digitalizare-imm",
+      "microConversion": "cta_click:program_project_check",
+      "parent": "/fonduri-europene",
+      "competingUrls": [
+        "/granturi-digitalizare-imm"
+      ],
+      "demonstrableUniqueValue": "Înregistrare în registrul unic al programelor; 2 subtitluri, 1 FAQ și sursă: Ministerul Investițiilor și Proiectelor Europene.",
+      "recommendation": "keep",
+      "recommendationTarget": null,
+      "recommendationReason": "Rol distinct de program, cu o singură intenție primară și conversie proprie.",
+      "decisionState": "APROBARE_UMANĂ_NECESARĂ",
+      "owner": "Consultant programe + editor coordonator",
+      "nextReviewAt": "2026-09-20",
+      "evidence": {
+        "title": "Digitalizare IMM: apel închis și sursă MIPE | FABER",
+        "metaDescription": "Apelul Digitalizarea IMM-urilor este închis, verificat la 22.07.2026. Depunerea nu este deschisă; vezi Ordinul MIPE nr. 607/28.04.2026.",
+        "headingCount": 2,
+        "faqCount": 1,
+        "externalLinkCount": 1,
+        "interactiveControlCount": 0,
+        "governanceState": "public",
+        "programRegistryState": "public"
+      }
+    },
+    {
       "url": "https://atelierdeconsultanta.ro/digitalizare-imm-erp-crm-cloud",
       "route": "/digitalizare-imm-erp-crm-cloud",
       "sourceFile": "digitalizare-imm-erp-crm-cloud.html",
@@ -1909,7 +1946,7 @@
         "/digitalizare-imm-pnrr",
         "/pnrr-digitalizare-imm-cheltuieli-eligibile"
       ],
-      "demonstrableUniqueValue": "8 subtitluri distincte, 5 FAQ și 1 linkuri externe în sursa HTML.",
+      "demonstrableUniqueValue": "9 subtitluri distincte, 5 FAQ și 2 linkuri externe în sursa HTML.",
       "recommendation": "keep",
       "recommendationTarget": null,
       "recommendationReason": "Rol distinct de hub, cu o singură intenție primară și conversie proprie.",
@@ -1919,9 +1956,9 @@
       "evidence": {
         "title": "Fonduri europene pentru digitalizare - IMM, PNRR, software",
         "metaDescription": "Hub pentru fonduri de digitalizare: Digitalizare IMM, PNRR, software, securitate, cloud, buget, documente și consultanță.",
-        "headingCount": 8,
+        "headingCount": 9,
         "faqCount": 5,
-        "externalLinkCount": 1,
+        "externalLinkCount": 2,
         "interactiveControlCount": 5,
         "governanceState": "NEÎNREGISTRAT",
         "programRegistryState": "NU_ESTE_PROGRAM_ÎN_REGISTRU"
@@ -2198,7 +2235,7 @@
       "microConversion": "cta_click:project_check_how",
       "parent": "/fonduri-europene",
       "competingUrls": [],
-      "demonstrableUniqueValue": "10 subtitluri distincte, 6 FAQ și 3 linkuri externe în sursa HTML.",
+      "demonstrableUniqueValue": "11 subtitluri distincte, 6 FAQ și 4 linkuri externe în sursa HTML.",
       "recommendation": "keep",
       "recommendationTarget": null,
       "recommendationReason": "Rol distinct de hub, cu o singură intenție primară și conversie proprie.",
@@ -2208,9 +2245,9 @@
       "evidence": {
         "title": "Fonduri regionale 2021–2027 și ADR-uri | FABER",
         "metaDescription": "Programe regionale 2021–2027: identificarea ADR-ului, apelului, solicitantului, localizării, documentelor și sursei oficiale aplicabile.",
-        "headingCount": 10,
+        "headingCount": 11,
         "faqCount": 6,
-        "externalLinkCount": 3,
+        "externalLinkCount": 4,
         "interactiveControlCount": 5,
         "governanceState": "public",
         "programRegistryState": "public"
@@ -2866,6 +2903,41 @@
       }
     },
     {
+      "url": "https://atelierdeconsultanta.ro/pro-infra",
+      "route": "/pro-infra",
+      "sourceFile": "pro-infra/index.html",
+      "sitemapFamily": "programs",
+      "type": "program",
+      "primaryAudience": "Solicitanți și beneficiari potențiali",
+      "mainQuestion": "Care este statutul verificat și ce trebuie analizat pentru „PRO INFRA – eficiență energetică pentru producătorii din infrastructura de transport”?",
+      "queryCluster": "pro infra; PRO INFRA eficiență energetică pentru producătorii din infrastructura de",
+      "primaryIntent": "informațională",
+      "h1": "PRO INFRA – eficiență energetică pentru producătorii din infrastructura de transport",
+      "uniquePromise": "Centralizează statutul, sursa oficială și pașii de verificare pentru „PRO INFRA – eficiență energetică pentru producătorii din infrastructura de transport”.",
+      "cta": "Verifică încadrarea proiectului",
+      "ctaTarget": "/contact?program=pro-infra",
+      "microConversion": "cta_click:program_project_check",
+      "parent": "/fonduri-europene",
+      "competingUrls": [],
+      "demonstrableUniqueValue": "Înregistrare în registrul unic al programelor; 2 subtitluri, 1 FAQ și sursă: Ministerul Transporturilor și Infrastructurii.",
+      "recommendation": "keep",
+      "recommendationTarget": null,
+      "recommendationReason": "Rol distinct de program, cu o singură intenție primară și conversie proprie.",
+      "decisionState": "APROBAT_PENTRU_ARHITECTURĂ",
+      "owner": "Consultant programe + editor coordonator",
+      "nextReviewAt": "2026-09-20",
+      "evidence": {
+        "title": "PRO INFRA: schemă aprobată, apel nedeschis | FABER",
+        "metaDescription": "Schema PRO INFRA este aprobată și verificată la 22.07.2026. Depunerea nu este deschisă; vezi Ordinul MTI nr. 2.292/29.12.2025.",
+        "headingCount": 2,
+        "faqCount": 1,
+        "externalLinkCount": 1,
+        "interactiveControlCount": 0,
+        "governanceState": "public",
+        "programRegistryState": "public"
+      }
+    },
+    {
       "url": "https://atelierdeconsultanta.ro/programul-tranzitie-justa-intrebari-documente",
       "route": "/programul-tranzitie-justa-intrebari-documente",
       "sourceFile": "programul-tranzitie-justa-intrebari-documente/index.html",
@@ -3463,6 +3535,13 @@
       "requiredApproval": "SEO lead + owner de conținut aprobă decizia și migrarea"
     },
     {
+      "route": "/digitalizare-imm",
+      "decision": "keep",
+      "target": null,
+      "reason": "Rol distinct de program, cu o singură intenție primară și conversie proprie.",
+      "requiredApproval": "consultant FABER aprobă statutul programului; pagina țintă devine indexabilă; export backlink; conversii pe ambele URL-uri"
+    },
+    {
       "route": "/dr12-afir",
       "decision": "keep",
       "target": null,
@@ -3568,24 +3647,10 @@
       "requiredApproval": "owner aprobă rolul de serviciu; instrumentarea conversiilor live; eliminarea duplicatelor; export backlink"
     },
     {
-      "route": "/digitalizare-imm",
-      "decision": "în afara inventarului canonic",
-      "target": null,
-      "reason": "Pagina principală candidată este în pending_validation/noindex după P0; reintră în inventar numai după aprobarea factuală.",
-      "requiredApproval": "Aprobarea factuală/juridică/SEO indicată în poarta P0"
-    },
-    {
       "route": "/granturi-digitalizare-imm",
       "decision": "în afara inventarului canonic",
       "target": null,
       "reason": "Candidat de consolidare P0.09; decizia de redirect nu este aprobată.",
-      "requiredApproval": "Aprobarea factuală/juridică/SEO indicată în poarta P0"
-    },
-    {
-      "route": "/pro-infra",
-      "decision": "în afara inventarului canonic",
-      "target": null,
-      "reason": "Statusul, documentul și data sunt DE_VALIDAT_UMAN; pagina nu este în sitemap-ul canonic.",
       "requiredApproval": "Aprobarea factuală/juridică/SEO indicată în poarta P0"
     },
     {

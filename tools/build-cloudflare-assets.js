@@ -1,6 +1,7 @@
 const cp = require("child_process");
 const fs = require("fs");
 const path = require("path");
+const { collectSiteState } = require("./generate-sitemap");
 
 const ROOT = path.resolve(__dirname, "..");
 const OUT_DIR = path.join(ROOT, "dist");
@@ -189,6 +190,30 @@ function copyFile(relativePath) {
   fs.copyFileSync(source, target);
 }
 
+function gitCommit() {
+  const fromEnvironment = process.env.CF_PAGES_COMMIT_SHA || process.env.GITHUB_SHA || process.env.COMMIT_SHA;
+  if (/^[a-f0-9]{40}$/i.test(fromEnvironment || "")) return fromEnvironment.toLowerCase();
+  return cp.execFileSync("git", ["rev-parse", "HEAD"], { cwd: ROOT, encoding: "utf8" }).trim().toLowerCase();
+}
+
+function syncCanonicalHtmlAliases() {
+  let synchronized = 0;
+  for (const entry of collectSiteState().entries) {
+    if (entry.route === "/") continue;
+    const route = entry.route.replace(/^\/+|\/+$/g, "");
+    const canonicalSource = path.join(ROOT, entry.sourceFile);
+    const candidates = [
+      path.join(OUT_DIR, `${route}.html`),
+      path.join(OUT_DIR, route, "index.html"),
+    ].filter((candidate) => fs.existsSync(candidate));
+    for (const candidate of candidates) {
+      fs.copyFileSync(canonicalSource, candidate);
+      synchronized += 1;
+    }
+  }
+  return synchronized;
+}
+
 if (!OUT_DIR.startsWith(ROOT + path.sep)) {
   throw new Error(`Refusing to clean output outside repository: ${OUT_DIR}`);
 }
@@ -209,4 +234,10 @@ for (const route of CANONICAL_DIRECTORY_HTML_ROUTES) {
   }
 }
 
-console.log(`Cloudflare assets built in ${path.relative(ROOT, OUT_DIR)} (${files.length} files).`);
+const synchronizedAliases = syncCanonicalHtmlAliases();
+fs.writeFileSync(path.join(OUT_DIR, "release.json"), `${JSON.stringify({
+  commit: gitCommit(),
+  builtAt: new Date().toISOString(),
+}, null, 2)}\n`, "utf8");
+
+console.log(`Cloudflare assets built in ${path.relative(ROOT, OUT_DIR)} (${files.length} files; ${synchronizedAliases} canonical HTML aliases synchronized).`);

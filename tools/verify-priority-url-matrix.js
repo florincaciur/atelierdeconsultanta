@@ -13,8 +13,8 @@ const LIVE_HOST = "atelierdeconsultanta.ro";
 const PAGES = [
   { route: "/", file: "index.html", title: "Consultanță și proiectare fonduri europene | FABER", aliases: ["/index.html"] },
   { route: "/afir-autoconsum-agroalimentar", file: "afir-autoconsum-agroalimentar.html", title: "AFIR Autoconsum 2026: fotovoltaice, stocare, ghid | FABER" },
-  { route: "/dr12-afir", file: "dr12-afir/index.html", title: "DR12 AFIR 2026: lansare, eligibilitate și acte | FABER" },
-  { route: "/dr14", file: "dr14/index.html", title: "DR14 AFIR 2026: ferme mici, SO și finanțare | FABER" },
+  { route: "/dr12-afir", file: "dr12-afir/index.html", title: "DR 12 AFIR: ghid consultativ și condiții | FABER" },
+  { route: "/dr14", file: "dr14/index.html", title: "DR 14 AFIR: ghid consultativ și condiții | FABER" },
   { route: "/por-adr-nord-est", file: "por-adr-nord-est/index.html", title: "Program Regional Nord-Est: finanțări IMM și apeluri | FABER" }
 ];
 

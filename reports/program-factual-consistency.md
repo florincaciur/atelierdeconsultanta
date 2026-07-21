@@ -22,13 +22,13 @@ Auditul este local și determinist. Nu interoghează URL-urile oficiale, nu dedu
 | DR14 AFIR | consultare_publica | 2026-07-22 | — | — |
 | Start-Up Nation | calendar_estimativ | 2026-05-20 | — | — |
 | Femeia Antreprenor | calendar_estimativ | 2026-05-20 | — | — |
-| Digitalizare IMM | apel_inchis | DE_VALIDAT_UMAN | — | — |
+| Digitalizare IMM | apel_inchis | 2026-07-22 | — | — |
 | Modernizarea microîntreprinderilor – Apel 2 | consultare_publica | 2026-06-02 | — | — |
 | Fondul pentru Modernizare – autoconsum | calendar_estimativ | 2026-05-20 | — | — |
 | Fondul pentru Modernizare – energie regenerabilă | calendar_estimativ | 2026-05-20 | — | — |
 | AFIR Autoconsum Agroalimentar | apel_deschis | 2026-07-20 | 2026-06-15 | 2026-08-14 |
 | Autoconsum instituții publice | ghid_aprobat_nedeschis | 2026-05-20 | — | — |
-| PRO INFRA | ghid_aprobat_nedeschis | DE_VALIDAT_UMAN | — | — |
+| PRO INFRA | ghid_aprobat_nedeschis | 2026-07-22 | — | — |
 | Apeluri GAL | calendar_estimativ | 2026-05-26 | — | — |
 | GAL-AFIR / LEADER | ghid_aprobat_nedeschis | 2026-05-26 | — | — |
 | e-MOVE RO | consultare_publica | 2026-05-27 | — | — |

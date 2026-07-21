@@ -313,6 +313,39 @@ async function formProbe(baseUrl, cache, environment) {
   const page = await fetchText(baseUrl, "/contact", cache);
   const $ = cheerio.load(page.text);
   const errors = [];
+  if (environment === "production") {
+    const endpoint = environmentUrl(baseUrl, "/api/contact-triage");
+    const origin = new URL(baseUrl).origin;
+    for (const contactType of ["email", "phone"]) {
+      const payload = {
+        schema_version: "1.0.0",
+        lead_id: `qa-release-${contactType}-${Date.now()}`,
+        applicant_type: "societate",
+        location: "Iasi",
+        investment: "Verificare tehnica automata fara creare de lead",
+        email: contactType === "email" ? "qa-release-gate@example.invalid" : "",
+        phone: contactType === "phone" ? "0769000000" : "",
+        privacy_notice_acknowledged: true,
+        program_slug: "unknown",
+        contact_preference: contactType,
+        page_url: "/contact",
+        form_started_at: String(Date.now() - 5000),
+        website: "qa-release-gate",
+      };
+      try {
+        const response = await fetchWithTimeout(endpoint, {
+          method: "POST",
+          headers: { "content-type": "application/json", accept: "application/json", origin },
+          body: JSON.stringify(payload),
+        });
+        const body = await response.json().catch(() => ({}));
+        if (response.status !== 200 || body.success !== true) errors.push(`submit QA ${contactType}: HTTP ${response.status}, success=${body.success}`);
+      } catch (error) {
+        errors.push(`submit QA ${contactType}: ${error.message}`);
+      }
+    }
+    environment = "production-probed";
+  }
   const form = $("#contact-triage-form");
   if (page.status !== 200) errors.push(`contact HTTP ${page.status}`);
   if (form.length !== 1) errors.push("lipsește #contact-triage-form");

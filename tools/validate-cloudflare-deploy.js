@@ -1,5 +1,7 @@
 const fs = require("fs");
 const path = require("path");
+const cp = require("child_process");
+const { collectSiteState } = require("./generate-sitemap");
 
 const ROOT = path.resolve(__dirname, "..");
 const ALLOWED_STATUS_CODES = new Set(["200", "301", "302", "303", "307", "308"]);
@@ -153,6 +155,50 @@ function validateOfficialGuidesHeaders(file, errors) {
   }
 }
 
+function validateReleaseHeaders(file, errors) {
+  const parsed = parseHeaders(file);
+  errors.push(...parsed.errors);
+  const rule = parsed.rules.find((item) => item.pattern === "/release.json");
+  if (!rule) {
+    errors.push(`${file}: missing /release.json header rule`);
+    return;
+  }
+  const robots = rule.headers["x-robots-tag"] || "";
+  const contentType = rule.headers["content-type"] || "";
+  const cacheControl = rule.headers["cache-control"] || "";
+  if (!/\bnoindex\b/i.test(robots) || !/\bnofollow\b/i.test(robots)) errors.push(`${file}:${rule.lineNumber} /release.json must set X-Robots-Tag: noindex, nofollow`);
+  if (!/^application\/json\b/i.test(contentType)) errors.push(`${file}:${rule.lineNumber} /release.json must set Content-Type: application/json`);
+  if (!/\bno-store\b/i.test(cacheControl)) errors.push(`${file}:${rule.lineNumber} /release.json must set Cache-Control: no-store`);
+}
+
+function validateReleaseManifest(directory, errors) {
+  const file = path.join(directory, "release.json");
+  if (!fs.existsSync(file)) {
+    errors.push(`${path.relative(ROOT, file)} is missing`);
+    return;
+  }
+  try {
+    const release = JSON.parse(fs.readFileSync(file, "utf8"));
+    const expectedCommit = cp.execFileSync("git", ["rev-parse", "HEAD"], { cwd: ROOT, encoding: "utf8" }).trim().toLowerCase();
+    if (release.commit !== expectedCommit) errors.push(`${path.relative(ROOT, file)} commit ${release.commit || "missing"} differs from ${expectedCommit}`);
+    if (!Number.isFinite(Date.parse(release.builtAt))) errors.push(`${path.relative(ROOT, file)} builtAt is invalid`);
+  } catch (error) {
+    errors.push(`${path.relative(ROOT, file)} is invalid: ${error.message}`);
+  }
+}
+
+function validateCanonicalHtmlParity(directory, errors) {
+  for (const entry of collectSiteState().entries) {
+    if (entry.route === "/") continue;
+    const route = entry.route.replace(/^\/+|\/+$/g, "");
+    const expected = fs.readFileSync(path.join(ROOT, entry.sourceFile));
+    const candidates = [path.join(directory, `${route}.html`), path.join(directory, route, "index.html")].filter((candidate) => fs.existsSync(candidate));
+    for (const candidate of candidates) {
+      if (!expected.equals(fs.readFileSync(candidate))) errors.push(`${path.relative(ROOT, candidate)} differs from canonical source ${entry.sourceFile}`);
+    }
+  }
+}
+
 function assertCleanAssetDirectory(directory) {
   const normalized = directory.replace(/\\/g, "/").replace(/\/+$/, "");
   if (!normalized || normalized === "." || normalized === "./") {
@@ -204,6 +250,7 @@ if (!config.assets || !config.assets.directory) {
   assertCleanAssetDirectory(config.assets.directory);
   const distOfficialGuides = path.join(ROOT, config.assets.directory, "official-guides.json");
   const distHeaders = path.join(ROOT, config.assets.directory, "_headers");
+  const distDirectory = path.join(ROOT, config.assets.directory);
   if (fs.existsSync(path.join(ROOT, config.assets.directory)) && !fs.existsSync(distOfficialGuides)) {
     errors.push(`Deploy output is missing ${path.relative(ROOT, distOfficialGuides)}`);
   }
@@ -214,9 +261,15 @@ if (!config.assets || !config.assets.directory) {
       errors.push(`${path.relative(ROOT, distOfficialGuides)} is not valid JSON: ${error.message}`);
     }
   }
-  if (fs.existsSync(path.join(ROOT, config.assets.directory))) validateOfficialGuidesHeaders(distHeaders, errors);
+  if (fs.existsSync(distDirectory)) {
+    validateOfficialGuidesHeaders(distHeaders, errors);
+    validateReleaseHeaders(distHeaders, errors);
+    validateReleaseManifest(distDirectory, errors);
+    validateCanonicalHtmlParity(distDirectory, errors);
+  }
 }
 validateOfficialGuidesHeaders(path.join(ROOT, "_headers"), errors);
+validateReleaseHeaders(path.join(ROOT, "_headers"), errors);
 validateDomainSeoIntent(path.join(ROOT, "config", "cloudflare-domain-seo.json"), errors);
 validateDomainWorkerConfig(errors);
 

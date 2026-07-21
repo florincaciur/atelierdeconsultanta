@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-21T21:54:25.725Z",
+  "generatedAt": "2026-07-21T23:10:22.463Z",
   "targetRoutes": 10,
   "changedFiles": [
     "index.html",
@@ -1671,6 +1671,14 @@
       "after": "Cere o verificare inițială DR-14 Investiții în fermele de mici dimensiuni",
       "reason": "Lexic controlat P0.14",
       "sourceFile": "dr14/index.html"
+    },
+    {
+      "route": "/digitalizare-imm",
+      "location": "visible-copy",
+      "before": "Verifică eligibilitatea Digitalizarea IMM-urilor",
+      "after": "Cere o verificare inițială Digitalizarea IMM-urilor",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "digitalizare-imm/index.html"
     }
   ]
 }

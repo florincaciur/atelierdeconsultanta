@@ -68,13 +68,13 @@ Statusul folosește exclusiv taxonomia registrului: `apel_deschis`, `ghid_aproba
 | DR14 AFIR | `/dr14` | AFIR & agricultură — `/afir` | `public` | Da |
 | Start-Up Nation | `/start-up-nation-2026` | Antreprenoriat & GAL — `/fonduri-europene-imm` | `public` | Da |
 | Femeia Antreprenor | `/femeia-antreprenor-2026` | Antreprenoriat & GAL — `/fonduri-europene-imm` | `public` | Da |
-| Digitalizare IMM | `/digitalizare-imm` | Digitalizare & inovare — `/fonduri-europene-digitalizare` | `pending_validation` | Nu — validare umană în așteptare |
+| Digitalizare IMM | `/digitalizare-imm` | Digitalizare & inovare — `/fonduri-europene-digitalizare` | `public` | Da |
 | Modernizarea microîntreprinderilor – Apel 2 | `/investitii-modernizarea-microintreprinderilor-apel-2` | Regional / ADR — `/fonduri-regionale` | `public` | Da |
 | Fondul pentru Modernizare – autoconsum | `/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum` | Energie — `/finantari-panouri-fotovoltaice` | `public` | Da |
 | Fondul pentru Modernizare – energie regenerabilă | `/fondul-modernizare-energie-regenerabila-2026` | Energie — `/finantari-panouri-fotovoltaice` | `public` | Da |
 | AFIR Autoconsum Agroalimentar | `/afir-autoconsum-agroalimentar` | AFIR & agricultură — `/afir` | `public` | Da |
 | Autoconsum instituții publice | `/autoconsum-public-fotovoltaice-institutii-publice` | Energie — `/finantari-panouri-fotovoltaice` | `public` | Da |
-| PRO INFRA | `/pro-infra` | Regional / ADR — `/fonduri-regionale` | `pending_validation` | Nu — validare umană în așteptare |
+| PRO INFRA | `/pro-infra` | Regional / ADR — `/fonduri-regionale` | `public` | Da |
 | Apeluri GAL | `/apeluri-gal` | Antreprenoriat & GAL — `/fonduri-europene-imm` | `public` | Da |
 | GAL-AFIR / LEADER | `/gal-afir` | Antreprenoriat & GAL — `/fonduri-europene-imm` | `public` | Da |
 | e-MOVE RO | `/e-move` | Energie — `/finantari-panouri-fotovoltaice` | `public` | Da |
@@ -83,7 +83,7 @@ Statusul folosește exclusiv taxonomia registrului: `apel_deschis`, `ghid_aproba
 | Programul Tranziție Justă | `/programul-tranzitie-justa` | Regional / ADR — `/fonduri-regionale` | `pending_validation` | Nu — validare umană în așteptare |
 | Fondul pentru Modernizare | `/fondul-de-modernizare` | Energie — `/finantari-panouri-fotovoltaice` | `pending_validation` | Nu — validare umană în așteptare |
 
-Înregistrări excluse din cardurile publice până la validare: `digitalizare-imm`, `pro-infra`, `pnrr`, `programul-tranzitie-justa`, `fondul-de-modernizare`.
+Înregistrări excluse din cardurile publice până la validare: `pnrr`, `programul-tranzitie-justa`, `fondul-de-modernizare`.
 
 ## Wireframe funcțional
 

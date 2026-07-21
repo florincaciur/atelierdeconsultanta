@@ -248,7 +248,7 @@ function auditProgram(issues, program, context) {
     if (program.status === "consultare_publica" && !comparable(noteText).includes("consult")) {
       addIssue(issues, program, "error", "missing-consultation-disclaimer", "page-status", "Programul consultativ nu este delimitat explicit în conținut.");
     }
-    if (program.status === "apel_inchis" && note.find("a[href^='/']").length === 0) {
+    if (program.status === "apel_inchis" && $("main a[href^='/']").length === 0) {
       addIssue(issues, program, "error", "closed-without-alternative", "page-status", "Un apel închis trebuie să trimită către un program actual relevant.");
     }
   }

@@ -187,7 +187,7 @@
           "route": "/digitalizare-imm",
           "file": "digitalizare-imm/index.html",
           "render": false,
-          "publicationState": "pending_validation",
+          "publicationState": "public",
           "role": "canonical_program_hub",
           "intentId": "prepare_imm_digitalization_project",
           "primaryIntent": "Pregătirea unei investiții de digitalizare IMM și delimitarea programului oficial aplicabil.",

@@ -2,7 +2,7 @@
 
 - Suprafețe țintă: 10
 - Fișiere HTML actualizate la această rulare: 10
-- Fragmente documentate cumulativ: 207
+- Fragmente documentate cumulativ: 208
 - Migrare surse editoriale realizată: da
 - Textele juridice nu fac parte din corpusul rescris automat.
 - Statusurile și câmpurile factuale din registrul programelor sunt protejate.
@@ -216,3 +216,4 @@
 | / | index.html:visible-copy | Verifică eligibilitatea proiectului | Cere o verificare inițială a proiectului | Lexic controlat P0.14 |
 | /dr12-afir | dr12-afir/index.html:visible-copy | Verifică eligibilitatea DR-12 Investiții în consolidarea exploatațiilor tinerilor fermieri instalați și a fermierilor cu vârsta de până la 45 de ani | Cere o verificare inițială DR-12 Investiții în consolidarea exploatațiilor tinerilor fermieri instalați și a fermierilor cu vârsta de până la 45 de ani | Lexic controlat P0.14 |
 | /dr14 | dr14/index.html:visible-copy | Verifică eligibilitatea DR-14 Investiții în fermele de mici dimensiuni | Cere o verificare inițială DR-14 Investiții în fermele de mici dimensiuni | Lexic controlat P0.14 |
+| /digitalizare-imm | digitalizare-imm/index.html:visible-copy | Verifică eligibilitatea Digitalizarea IMM-urilor | Cere o verificare inițială Digitalizarea IMM-urilor | Lexic controlat P0.14 |

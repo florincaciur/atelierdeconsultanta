@@ -1,11 +1,11 @@
 {
-  "checkedAt": "2026-07-21T22:35:07.940Z",
+  "checkedAt": "2026-07-21T23:13:27.782Z",
   "requestedEnvironment": "local",
   "stagingDescription": "nerulat",
   "releaseDecision": "PASS",
   "summary": {
-    "pass": 10,
-    "fail": 2,
+    "pass": 11,
+    "fail": 1,
     "criticalBlockers": 0
   },
   "results": [
@@ -125,13 +125,13 @@
       "criterionId": "editorial",
       "criterion": "Zero etichete de șablon și forme de control fără diacritice",
       "environment": "local",
-      "status": "FAIL",
+      "status": "PASS",
       "severity": "high",
       "owner": "Editor coordonator",
       "urls": [
         "/sitemap.xml"
       ],
-      "evidence": "node:internal/modules/run_main:107 triggerUncaughtException( ^ AssertionError [ERR_ASSERTION]: editorial gate must inspect every canonical sitemap URL 95 !== 93 at file:///C:/Users/flori/Documents/GitHub/atelierdeconsultanta/tests/editorial-copy-contract.mjs:10:8 at ModuleJob.run (node:internal/modules/esm/module_job:430:25) at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:661:26) at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) { generatedMessage: false, code: 'ERR_ASSERTION', actual: 95, expected: 93, operator: 'strictEqual', diff: 'simple' } Node.js v24.14.1 | node:internal/modules/run_main:107 triggerUncaughtException( ^ AssertionError [ERR_ASSERTION]: absolute claims must be checked on every canonical URL 95 !== 93 at file:///C:",
+      "evidence": "Editorial copy contract passed: 95 canonical URLs, zero forbidden template labels or control-list forms. | Editorial terminology contract passed: 95 canonical URLs and 10 P0.14 surfaces.",
       "retest": "Reexecută verificarea editorial după remediere/aprobare."
     },
     {

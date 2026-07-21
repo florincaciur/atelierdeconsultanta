@@ -95,13 +95,18 @@ assert.match(eligibilityService, /Cum se desfășoară verificarea/u, "Serviciul
 
 const digitalMain = pages.find((page) => page.route === "/digitalizare-imm");
 const digitalDuplicate = pages.find((page) => page.route === "/granturi-digitalizare-imm");
-for (const page of [digitalMain, digitalDuplicate]) {
-  const html = fs.readFileSync(path.join(ROOT, page.file), "utf8");
-  const $ = cheerio.load(html, { decodeEntities: false });
-  assert.match($("meta[name='robots']").first().attr("content") || "", /noindex/i, `${page.route}: poarta factuală trebuie păstrată`);
-  assert.equal(page.render, false, `${page.route}: copy-ul nu trebuie publicat înaintea validării`);
-  assert.doesNotMatch(sitemapXml, new RegExp(`<loc>https://atelierdeconsultanta\\.ro${page.route}</loc>`, "u"), `${page.route}: pagina pending nu trebuie să intre în sitemap`);
-}
+const digitalMainHtml = fs.readFileSync(path.join(ROOT, digitalMain.file), "utf8");
+const digitalMainDocument = cheerio.load(digitalMainHtml, { decodeEntities: false });
+assert.doesNotMatch(digitalMainDocument("meta[name='robots']").first().attr("content") || "", /noindex/i, "/digitalizare-imm: pagina aprobată trebuie să fie indexabilă");
+assert.equal(digitalMain.publicationState, "public", "/digitalizare-imm: aprobarea factuală trebuie reflectată în cluster");
+assert.equal(digitalMain.render, false, "/digitalizare-imm: pagina rămâne randată din registrul programelor, nu din copy-ul clusterului");
+assert.match(sitemapXml, /<loc>https:\/\/atelierdeconsultanta\.ro\/digitalizare-imm<\/loc>/u, "/digitalizare-imm: pagina aprobată trebuie să intre în sitemap");
+
+const digitalDuplicateHtml = fs.readFileSync(path.join(ROOT, digitalDuplicate.file), "utf8");
+const digitalDuplicateDocument = cheerio.load(digitalDuplicateHtml, { decodeEntities: false });
+assert.match(digitalDuplicateDocument("meta[name='robots']").first().attr("content") || "", /noindex/i, "/granturi-digitalizare-imm: poarta factuală trebuie păstrată");
+assert.equal(digitalDuplicate.render, false, "/granturi-digitalizare-imm: copy-ul nu trebuie publicat înaintea deciziei de consolidare");
+assert.doesNotMatch(sitemapXml, /<loc>https:\/\/atelierdeconsultanta\.ro\/granturi-digitalizare-imm<\/loc>/u, "/granturi-digitalizare-imm: pagina pending nu trebuie să intre în sitemap");
 
 for (const redirect of config.redirects) {
   assert.equal(redirect.status, "APROBARE_UMANĂ_NECESARĂ", `${redirect.source}: redirect neaprobat`);

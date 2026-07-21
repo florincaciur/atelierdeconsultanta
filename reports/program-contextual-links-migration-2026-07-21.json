@@ -112,6 +112,32 @@
       ]
     },
     {
+      "programId": "digitalizare-imm",
+      "route": "/digitalizare-imm",
+      "file": "digitalizare-imm/index.html",
+      "removedManagedBlocks": 0,
+      "removedManagedLinks": 0,
+      "resultingRelations": [
+        "parent",
+        "instrument",
+        "comparison",
+        "conversion"
+      ]
+    },
+    {
+      "programId": "digitalizare-imm",
+      "route": "/digitalizare-imm",
+      "file": "digitalizare-imm.html",
+      "removedManagedBlocks": 0,
+      "removedManagedLinks": 0,
+      "resultingRelations": [
+        "parent",
+        "instrument",
+        "comparison",
+        "conversion"
+      ]
+    },
+    {
       "programId": "modernizare-microintreprinderi-ne-2",
       "route": "/investitii-modernizarea-microintreprinderilor-apel-2",
       "file": "investitii-modernizarea-microintreprinderilor-apel-2/index.html",
@@ -232,6 +258,32 @@
       "programId": "autoconsum-institutii-publice",
       "route": "/autoconsum-public-fotovoltaice-institutii-publice",
       "file": "autoconsum-public-fotovoltaice-institutii-publice.html",
+      "removedManagedBlocks": 0,
+      "removedManagedLinks": 0,
+      "resultingRelations": [
+        "parent",
+        "instrument",
+        "comparison",
+        "conversion"
+      ]
+    },
+    {
+      "programId": "pro-infra",
+      "route": "/pro-infra",
+      "file": "pro-infra/index.html",
+      "removedManagedBlocks": 0,
+      "removedManagedLinks": 0,
+      "resultingRelations": [
+        "parent",
+        "instrument",
+        "comparison",
+        "conversion"
+      ]
+    },
+    {
+      "programId": "pro-infra",
+      "route": "/pro-infra",
+      "file": "pro-infra.html",
       "removedManagedBlocks": 0,
       "removedManagedLinks": 0,
       "resultingRelations": [

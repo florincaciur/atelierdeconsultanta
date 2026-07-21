@@ -9,14 +9,14 @@ import { fileURLToPath } from "node:url";
 const require = createRequire(import.meta.url);
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const { evaluateGovernanceBlockers, parseRedirectRules } = require("../tools/p0-release-gate");
+const gateSource = fs.readFileSync(path.join(ROOT, "tools", "p0-release-gate.js"), "utf8");
 
 const config = JSON.parse(fs.readFileSync(path.join(ROOT, "config", "p0-release-gate.json"), "utf8"));
 assert.equal(config.criteria.length, 12, "P0.16 must cover all twelve acceptance criteria");
 assert.deepEqual(config.blockSeverities, ["critical"]);
 
 const blockers = evaluateGovernanceBlockers();
-assert(blockers.some((item) => item.criterionId === "program_status" && item.status === "FAIL"), "pending program status rows must block");
-for (const id of ["legal_identity", "contact_privacy", "robots"]) {
+for (const id of ["program_status", "legal_identity", "contact_privacy", "robots"]) {
   assert(!blockers.some((item) => item.criterionId === id), `${id} is approved and must not block`);
 }
 
@@ -31,5 +31,7 @@ for (const script of ["deploy", "deploy:pages", "deploy:contact-triage", "deploy
 }
 const wrangler = JSON.parse(fs.readFileSync(path.join(ROOT, "wrangler.jsonc"), "utf8"));
 assert(wrangler.build.command.startsWith("npm run gate:p0:deploy-guard &&"), "Cloudflare build must start with the P0 deployment guard");
+assert.match(gateSource, /website:\s*["']qa-release-gate["']/, "production form E2E must use the honeypot QA sink");
+assert.match(gateSource, /environment = ["']production-probed["']/, "production gate must record that the safe E2E probe ran");
 
 console.log(`P0 release gate contract passed: ${config.criteria.length} criteria and ${blockers.length} active governance blockers are enforced.`);

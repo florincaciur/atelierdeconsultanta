@@ -5,10 +5,11 @@ import { createRequire } from "node:module";
 
 const require = createRequire(import.meta.url);
 const { POLICY, TARGET_ROUTES, auditTerminology, rewriteTerminology, validOpenProgram } = require("../tools/editorial-terminology-governance");
+const { collectSiteState } = require("../tools/generate-sitemap");
 
 const audit = auditTerminology();
 assert.equal(TARGET_ROUTES.size, 10, "P0.14 must cover the ten named canonical surfaces");
-assert.equal(audit.canonicalCount, 93, "absolute claims must be checked on every canonical URL");
+assert.equal(audit.canonicalCount, collectSiteState().entries.length, "absolute claims must be checked on every canonical URL");
 assert.equal(audit.targetCount, 10, "contextual terminology must be checked on every P0.14 surface");
 assert.deepEqual(audit.issues, [], audit.issues.map((item) => `${item.route} [${item.rule}]: ${item.fragment}`).join("\n"));
 assert.equal(rewriteTerminology("Verifică eligibilitatea și cofinanțarea din ghidul activ."), "Cere o verificare inițială și contribuția proprie din documentul oficial aplicabil.");
