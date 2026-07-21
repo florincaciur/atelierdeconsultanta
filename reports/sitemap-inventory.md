@@ -6,10 +6,10 @@ Generatorul include numai rute locale 200, indexabile si self-canonical. `lastmo
 
 - URL-uri raportate in auditul initial: 102
 - URL-uri in baseline-ul repository la inceputul P0.11: 92
-- URL-uri incluse acum: 93
-- URL-uri cu lastmod editorial verificabil: 15
+- URL-uri incluse acum: 95
+- URL-uri cu lastmod editorial verificabil: 17
 - URL-uri fara lastmod (omis intentionat): 78
-- sitemap-programs.xml: 15 (Pagini de programe)
+- sitemap-programs.xml: 17 (Pagini de programe)
 - sitemap-guides.xml: 29 (Ghiduri si continut editorial)
 - sitemap-core.xml: 49 (Pagini core, servicii, instrumente si juridice)
 
@@ -17,7 +17,7 @@ Generatorul include numai rute locale 200, indexabile si self-canonical. `lastmo
 
 - duplicate_policy_pending_legal_consolidation: 1
 - missing_canonical: 2
-- noindex_meta: 71
+- noindex_meta: 67
 - noncanonical_file_variant: 2
 - redirect_source: 94
 
@@ -49,8 +49,6 @@ Generatorul include numai rute locale 200, indexabile si self-canonical. `lastmo
 | https://atelierdeconsultanta.ro/consultanta-start-up-nation-2026 | consultanta-start-up-nation/index.html | noindex_meta | - |
 | https://atelierdeconsultanta.ro/contact | contact.html | noindex_meta | - |
 | https://atelierdeconsultanta.ro/cum-alegi-consultant-fonduri-europene | cum-alegi-consultant-fonduri-europene.html | noindex_meta | - |
-| https://atelierdeconsultanta.ro/digitalizare-imm | digitalizare-imm.html | noindex_meta | - |
-| https://atelierdeconsultanta.ro/digitalizare-imm | digitalizare-imm/index.html | noindex_meta | - |
 | https://atelierdeconsultanta.ro/digitalizare-imm-pnrr | digitalizare-imm-pnrr.html | noindex_meta | - |
 | https://atelierdeconsultanta.ro/dr-12-afir-instalarea-tinerilor-fermieri | dr-12-afir-instalarea-tinerilor-fermieri.html | noindex_meta | - |
 | https://atelierdeconsultanta.ro/dr-14-afir-conditii-eligibilitate-greseli-frecvente | dr-14-afir-conditii-eligibilitate-greseli-frecvente.html | noindex_meta | - |
@@ -84,8 +82,6 @@ Generatorul include numai rute locale 200, indexabile si self-canonical. `lastmo
 | https://atelierdeconsultanta.ro/digitalizare-imm-pnrr | pnrr-digitalizare-imm.html | noindex_meta | - |
 | https://atelierdeconsultanta.ro/digitalizare-imm-pnrr | pnrr-digitalizare-imm/index.html | noindex_meta | - |
 | https://atelierdeconsultanta.ro/portofoliu | portofoliu/index.html | noindex_meta | - |
-| https://atelierdeconsultanta.ro/pro-infra | pro-infra.html | noindex_meta | - |
-| https://atelierdeconsultanta.ro/pro-infra | pro-infra/index.html | noindex_meta | - |
 | https://atelierdeconsultanta.ro/programul-tranzitie-justa | programul-tranzitie-justa/index.html | noindex_meta | - |
 | https://atelierdeconsultanta.ro/start-up-nation-2026 | start-up-nation.html | noindex_meta | - |
 | https://atelierdeconsultanta.ro/start-up-nation-2026 | start-up-nation/index.html | noindex_meta | - |

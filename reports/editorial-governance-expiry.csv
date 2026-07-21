@@ -5,7 +5,7 @@ route,contentType,governanceState,programStatus,verifiedAt,nextReviewAt,lastMean
 /autoconsum-public-fotovoltaice-institutii-publice,program,public,ghid_aprobat_nedeschis,2026-05-20,2026-07-19,2026-05-20,nu,da,nu,nu,expired_review
 /calculator-soc,tool,pending_validation,—,DE_VALIDAT_UMAN,DE_VALIDAT_UMAN,DE_VALIDAT_UMAN,da,nu,nu,nu,missing_source
 /cod-caen-start-up-nation-2026,guide,pending_validation,—,2026-05-20,2026-08-18,DE_VALIDAT_UMAN,nu,nu,nu,nu,—
-/digitalizare-imm,program,pending_validation,apel_inchis,DE_VALIDAT_UMAN,DE_VALIDAT_UMAN,DE_VALIDAT_UMAN,da,nu,nu,nu,missing_source
+/digitalizare-imm,program,public,apel_inchis,2026-07-22,2026-09-20,2026-07-22,nu,nu,nu,nu,—
 /dr12-afir,program,public,consultare_publica,2026-07-22,2026-09-20,2026-07-22,nu,nu,nu,nu,—
 /dr14,program,public,consultare_publica,2026-07-22,2026-09-20,2026-07-22,nu,nu,nu,nu,—
 /dr14-afir-ferme-mici,program,pending_validation,—,DE_VALIDAT_UMAN,DE_VALIDAT_UMAN,DE_VALIDAT_UMAN,da,nu,nu,nu,missing_source
@@ -22,7 +22,7 @@ route,contentType,governanceState,programStatus,verifiedAt,nextReviewAt,lastMean
 /pnrr,program,pending_validation,calendar_estimativ,DE_VALIDAT_UMAN,DE_VALIDAT_UMAN,DE_VALIDAT_UMAN,da,nu,nu,nu,missing_source
 /pocidif-21,program,public,ghid_aprobat_nedeschis,2026-07-13,2026-09-11,2026-07-13,nu,nu,nu,nu,—
 /por-adr-nord-est,program,public,ghid_aprobat_nedeschis,2026-07-20,2026-09-18,2026-07-20,nu,nu,nu,nu,—
-/pro-infra,program,pending_validation,ghid_aprobat_nedeschis,DE_VALIDAT_UMAN,DE_VALIDAT_UMAN,DE_VALIDAT_UMAN,da,nu,nu,nu,missing_source
+/pro-infra,program,public,ghid_aprobat_nedeschis,2026-07-22,2026-09-20,2026-07-22,nu,nu,nu,nu,—
 /programul-tranzitie-justa,program,pending_validation,calendar_estimativ,DE_VALIDAT_UMAN,DE_VALIDAT_UMAN,DE_VALIDAT_UMAN,da,nu,nu,nu,missing_source
 /resurse,guide,pending_validation,—,2026-05-20,2026-08-18,DE_VALIDAT_UMAN,nu,nu,nu,nu,—
 /start-up-nation-2026,program,public,calendar_estimativ,2026-05-20,2026-07-19,2026-05-20,nu,da,nu,nu,expired_review

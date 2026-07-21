@@ -357,5 +357,65 @@
     "verifiedAt": "2026-07-22",
     "isPrimaryFor": "dr14-afir",
     "sourceOfTruth": "config/seo-programs.json#programs"
+  },
+  "digitalizare": {
+    "programIds": [
+      "digitalizare-imm"
+    ],
+    "name": "Ordinul MIPE nr. 607/28.04.2026; modifică Ghidul aprobat prin Ordinul nr. 3185/2022",
+    "title": "Ordinul MIPE nr. 607/28.04.2026; modifică Ghidul aprobat prin Ordinul nr. 3185/2022",
+    "institution": "Ministerul Investițiilor și Proiectelor Europene",
+    "url": "https://mfe.gov.ro/pnrr-ordinul-nr-607-28-04-2026-pentru-modificarea-ghidului-solicitantului-digitalizarea-imm-urilor-grant-de-pana-la-100-000-euro-pe-intreprindere-care-sa-sprijine-imm-urile-in-adoptarea-tehnologii/",
+    "accessedAt": "2026-07-22",
+    "programStatus": "apel_inchis",
+    "statusLabel": "Apel închis – depunerea nu este deschisă",
+    "verifiedAt": "2026-07-22",
+    "isPrimaryFor": "digitalizare-imm",
+    "sourceOfTruth": "config/seo-programs.json#programs"
+  },
+  "digitalizare-pnrr": {
+    "programIds": [
+      "digitalizare-imm"
+    ],
+    "name": "Ordinul MIPE nr. 607/28.04.2026; modifică Ghidul aprobat prin Ordinul nr. 3185/2022",
+    "title": "Ordinul MIPE nr. 607/28.04.2026; modifică Ghidul aprobat prin Ordinul nr. 3185/2022",
+    "institution": "Ministerul Investițiilor și Proiectelor Europene",
+    "url": "https://mfe.gov.ro/pnrr-ordinul-nr-607-28-04-2026-pentru-modificarea-ghidului-solicitantului-digitalizarea-imm-urilor-grant-de-pana-la-100-000-euro-pe-intreprindere-care-sa-sprijine-imm-urile-in-adoptarea-tehnologii/",
+    "accessedAt": "2026-07-22",
+    "programStatus": "apel_inchis",
+    "statusLabel": "Apel închis – depunerea nu este deschisă",
+    "verifiedAt": "2026-07-22",
+    "isPrimaryFor": "digitalizare-imm",
+    "sourceOfTruth": "config/seo-programs.json#programs"
+  },
+  "pro-infra": {
+    "programIds": [
+      "pro-infra"
+    ],
+    "name": "Ordinul MTI nr. 2.292/29.12.2025, publicat în Monitorul Oficial nr. 20/14.01.2026; formă consolidată 12.02.2026",
+    "title": "Ordinul MTI nr. 2.292/29.12.2025, publicat în Monitorul Oficial nr. 20/14.01.2026; formă consolidată 12.02.2026",
+    "institution": "Ministerul Transporturilor și Infrastructurii",
+    "url": "https://legislatie.just.ro/Public/DetaliiDocument/306915",
+    "accessedAt": "2026-07-22",
+    "programStatus": "ghid_aprobat_nedeschis",
+    "statusLabel": "Schemă aprobată – depunerea nu este deschisă",
+    "verifiedAt": "2026-07-22",
+    "isPrimaryFor": "pro-infra",
+    "sourceOfTruth": "config/seo-programs.json#programs"
+  },
+  "pro-infra-order": {
+    "programIds": [
+      "pro-infra"
+    ],
+    "name": "Ordinul MTI nr. 2.292/29.12.2025, publicat în Monitorul Oficial nr. 20/14.01.2026; formă consolidată 12.02.2026",
+    "title": "Ordinul MTI nr. 2.292/29.12.2025, publicat în Monitorul Oficial nr. 20/14.01.2026; formă consolidată 12.02.2026",
+    "institution": "Ministerul Transporturilor și Infrastructurii",
+    "url": "https://legislatie.just.ro/Public/DetaliiDocument/306915",
+    "accessedAt": "2026-07-22",
+    "programStatus": "ghid_aprobat_nedeschis",
+    "statusLabel": "Schemă aprobată – depunerea nu este deschisă",
+    "verifiedAt": "2026-07-22",
+    "isPrimaryFor": "pro-infra",
+    "sourceOfTruth": "config/seo-programs.json#programs"
   }
 }

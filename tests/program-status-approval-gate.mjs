@@ -99,8 +99,11 @@ const missingValidator = structuredClone(approvalConfig);
 missingValidator.programs[0].validatorName = HUMAN_REVIEW;
 assert(validateApprovalRegistry(missingValidator, programs).some((error) => /numele consultantului|DE_VALIDAT_UMAN/iu.test(error)), "Aprobarea fără validator nominal trebuie respinsă");
 
-const prematurelyPublicPrograms = structuredClone(programs);
-prematurelyPublicPrograms.find((program) => program.slug === "pro-infra").publicationState = "public";
-assert(validateApprovalRegistry(approvalConfig, prematurelyPublicPrograms).some((error) => /public înainte/iu.test(error)), "Publicarea înainte de aprobarea FABER trebuie respinsă");
+const pendingApprovalConfig = structuredClone(approvalConfig);
+const pendingProInfra = pendingApprovalConfig.programs.find((program) => program.programId === "pro-infra");
+pendingProInfra.approvalState = "pending";
+pendingProInfra.validatorName = HUMAN_REVIEW;
+pendingProInfra.approvedAt = null;
+assert(validateApprovalRegistry(pendingApprovalConfig, programs).some((error) => /public înainte/iu.test(error)), "Publicarea înainte de aprobarea FABER trebuie respinsă");
 
 console.log("Poarta P0.02: rândurile aprobate sunt publice, cele disputate rămân blocate și validarea nominală este obligatorie.");

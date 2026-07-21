@@ -5,9 +5,9 @@ Data evaluării: **2026-07-21**. Registru: `config/editorial-governance.json`.
 ## Rezumat
 
 - Pagini guvernate: **32**
-- Pagini publice cu metadate complete: **15**
+- Pagini publice cu metadate complete: **17**
 - Verificări expirate: **5**
-- Surse lipsă/incomplete: **7**
+- Surse lipsă/incomplete: **5**
 - Reviewer lipsă: **0**
 - Contradicții program–pagină: **0**
 
@@ -23,7 +23,7 @@ O expirare produce warning intern și nu schimbă automat statusul, textul, `ver
 | `/autoconsum-public-fotovoltaice-institutii-publice` | program | public | ghid_aprobat_nedeschis | 2026-05-20 | 2026-07-19 | 2026-05-20 | nu | da | nu | nu |
 | `/calculator-soc` | tool | pending_validation | — | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | da | nu | nu | nu |
 | `/cod-caen-start-up-nation-2026` | guide | pending_validation | — | 2026-05-20 | 2026-08-18 | DE_VALIDAT_UMAN | nu | nu | nu | nu |
-| `/digitalizare-imm` | program | pending_validation | apel_inchis | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | da | nu | nu | nu |
+| `/digitalizare-imm` | program | public | apel_inchis | 2026-07-22 | 2026-09-20 | 2026-07-22 | nu | nu | nu | nu |
 | `/dr12-afir` | program | public | consultare_publica | 2026-07-22 | 2026-09-20 | 2026-07-22 | nu | nu | nu | nu |
 | `/dr14` | program | public | consultare_publica | 2026-07-22 | 2026-09-20 | 2026-07-22 | nu | nu | nu | nu |
 | `/dr14-afir-ferme-mici` | program | pending_validation | — | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | da | nu | nu | nu |
@@ -40,7 +40,7 @@ O expirare produce warning intern și nu schimbă automat statusul, textul, `ver
 | `/pnrr` | program | pending_validation | calendar_estimativ | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | da | nu | nu | nu |
 | `/pocidif-21` | program | public | ghid_aprobat_nedeschis | 2026-07-13 | 2026-09-11 | 2026-07-13 | nu | nu | nu | nu |
 | `/por-adr-nord-est` | program | public | ghid_aprobat_nedeschis | 2026-07-20 | 2026-09-18 | 2026-07-20 | nu | nu | nu | nu |
-| `/pro-infra` | program | pending_validation | ghid_aprobat_nedeschis | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | da | nu | nu | nu |
+| `/pro-infra` | program | public | ghid_aprobat_nedeschis | 2026-07-22 | 2026-09-20 | 2026-07-22 | nu | nu | nu | nu |
 | `/programul-tranzitie-justa` | program | pending_validation | calendar_estimativ | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | da | nu | nu | nu |
 | `/resurse` | guide | pending_validation | — | 2026-05-20 | 2026-08-18 | DE_VALIDAT_UMAN | nu | nu | nu | nu |
 | `/start-up-nation-2026` | program | public | calendar_estimativ | 2026-05-20 | 2026-07-19 | 2026-05-20 | nu | da | nu | nu |

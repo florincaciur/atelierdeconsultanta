@@ -198,19 +198,19 @@
       "route": "/digitalizare-imm",
       "contentType": "program",
       "programId": "digitalizare-imm",
-      "governanceState": "pending_validation",
+      "governanceState": "public",
       "author": "FABER – Atelier de Consultanță",
       "authorRole": "Autor organizațional",
       "reviewer": "Echipa editorială FABER",
       "reviewerRole": "Revizuire editorială și conformitate",
       "attributionType": "organization",
       "personalNameConsent": false,
-      "verifiedAt": "DE_VALIDAT_UMAN",
+      "verifiedAt": "2026-07-22",
       "officialSourceName": "Ministerul Investițiilor și Proiectelor Europene",
-      "officialSourceUrl": "DE_VALIDAT_UMAN",
-      "sourceVersion": "DE_VALIDAT_UMAN",
-      "nextReviewAt": "DE_VALIDAT_UMAN",
-      "lastMeaningfulUpdate": "DE_VALIDAT_UMAN",
+      "officialSourceUrl": "https://mfe.gov.ro/pnrr-ordinul-nr-607-28-04-2026-pentru-modificarea-ghidului-solicitantului-digitalizarea-imm-urilor-grant-de-pana-la-100-000-euro-pe-intreprindere-care-sa-sprijine-imm-urile-in-adoptarea-tehnologii/",
+      "sourceVersion": "Ordinul MIPE nr. 607/28.04.2026; modifică Ghidul aprobat prin Ordinul nr. 3185/2022",
+      "nextReviewAt": "2026-09-20",
+      "lastMeaningfulUpdate": "2026-07-22",
       "statusSnapshot": "apel_inchis",
       "changelog": [
         {
@@ -218,6 +218,12 @@
           "summary": "Migrare tehnică în registrul de guvernanță; data modificării editoriale substanțiale a rămas neschimbată.",
           "reviewer": "Echipa editorială FABER",
           "meaningful": false
+        },
+        {
+          "date": "2026-07-22",
+          "summary": "Statusul de apel închis și Ordinul MIPE nr. 607/28.04.2026 au fost validate; depunerea nu este deschisă.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": true
         }
       ]
     },
@@ -740,19 +746,19 @@
       "route": "/pro-infra",
       "contentType": "program",
       "programId": "pro-infra",
-      "governanceState": "pending_validation",
+      "governanceState": "public",
       "author": "FABER – Atelier de Consultanță",
       "authorRole": "Autor organizațional",
       "reviewer": "Echipa editorială FABER",
       "reviewerRole": "Revizuire editorială și conformitate",
       "attributionType": "organization",
       "personalNameConsent": false,
-      "verifiedAt": "DE_VALIDAT_UMAN",
+      "verifiedAt": "2026-07-22",
       "officialSourceName": "Ministerul Transporturilor și Infrastructurii",
-      "officialSourceUrl": "DE_VALIDAT_UMAN",
-      "sourceVersion": "DE_VALIDAT_UMAN",
-      "nextReviewAt": "DE_VALIDAT_UMAN",
-      "lastMeaningfulUpdate": "DE_VALIDAT_UMAN",
+      "officialSourceUrl": "https://legislatie.just.ro/Public/DetaliiDocument/306915",
+      "sourceVersion": "Ordinul MTI nr. 2.292/29.12.2025, publicat în Monitorul Oficial nr. 20/14.01.2026; formă consolidată 12.02.2026",
+      "nextReviewAt": "2026-09-20",
+      "lastMeaningfulUpdate": "2026-07-22",
       "statusSnapshot": "ghid_aprobat_nedeschis",
       "changelog": [
         {
@@ -760,6 +766,12 @@
           "summary": "Migrare tehnică în registrul de guvernanță; data modificării editoriale substanțiale a rămas neschimbată.",
           "reviewer": "Echipa editorială FABER",
           "meaningful": false
+        },
+        {
+          "date": "2026-07-22",
+          "summary": "Schema PRO INFRA aprobată și lipsa unui interval oficial de depunere deschis au fost validate.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": true
         }
       ]
     },

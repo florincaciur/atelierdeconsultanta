@@ -112,28 +112,28 @@
     },
     {
       "programId": "pro-infra",
-      "approvalState": "pending",
-      "validatorName": "DE_VALIDAT_UMAN",
-      "approvedAt": null,
+      "approvalState": "approved",
+      "validatorName": "Caciur Florin / Bogdan Iftode",
+      "approvedAt": "2026-07-22",
       "proposedStatus": "ghid_aprobat_nedeschis",
       "proposedStatusLabel": "Schemă aprobată – depunerea nu este deschisă",
       "proposedCopy": "Schemă aprobată – depunerea nu este deschisă — verificat la 2026-07-22. Depunerea nu este deschisă. Sursa: Ministerul Transporturilor și Infrastructurii, Schema PRO INFRA – formă consolidată la 12.02.2026.",
       "officialInstitution": "Ministerul Transporturilor și Infrastructurii",
       "officialDocument": "Schema de ajutor de stat privind sprijinirea investițiilor destinate îmbunătățirii eficienței energetice a activităților industriale — PRO INFRA",
-      "officialDocumentVersion": "Formă consolidată la 12.02.2026; Ordinul nr. 2.292/29.12.2025, modificat prin Ordinul nr. 101/12.02.2026",
+      "officialDocumentVersion": "Ordinul MTI nr. 2.292/29.12.2025, publicat în Monitorul Oficial nr. 20/14.01.2026; formă consolidată 12.02.2026",
       "officialDocumentDate": "2026-02-12",
       "documentCharacter": "schema_aprobata",
-      "officialUrl": "https://legislatie.just.ro/Public/DetaliiDocumentAfis/306916",
-      "additionalOfficialEvidence": [],
+      "officialUrl": "https://legislatie.just.ro/Public/DetaliiDocument/306915",
+      "additionalOfficialEvidence": [
+        "https://legislatie.just.ro/Public/DetaliiDocumentAfis/306916"
+      ],
       "applicationStart": null,
       "applicationEnd": null,
       "numericClaimsApproved": false,
       "observedBefore": "Homepage: card «Activ» cu 15.000.000 EUR și 100%, în timp ce meniul spunea schemă aprobată și pagina nu confirma un apel deschis.",
       "unresolved": [
-        "Taxonomia existentă nu are o valoare separată pentru «schemă aprobată»; ghid_aprobat_nedeschis este doar candidatul tehnic cel mai apropiat și necesită decizie umană.",
         "Nu a fost identificat în sursa oficială verificată un interval efectiv de depunere.",
-        "Plafonul și intensitatea rămân nepublicate până la confirmarea documentului operațional aplicabil apelului.",
-        "Numele validatorului și data aprobării sunt DE_VALIDAT_UMAN."
+        "Plafonul și intensitatea rămân nepublicate până la confirmarea documentului operațional aplicabil apelului."
       ],
       "publicationHoldUrls": [
         "/pro-infra"
@@ -147,30 +147,27 @@
     },
     {
       "programId": "digitalizare-imm",
-      "approvalState": "pending",
-      "validatorName": "DE_VALIDAT_UMAN",
-      "approvedAt": null,
+      "approvalState": "approved",
+      "validatorName": "Caciur Florin / Bogdan Iftode",
+      "approvedAt": "2026-07-22",
       "proposedStatus": "apel_inchis",
       "proposedStatusLabel": "Apel închis – depunerea nu este deschisă",
-      "proposedCopy": "Apel închis — verificat la 2026-07-22. Depunerea nu este deschisă. Sursa: MIPE, apelul PNRR Digitalizarea IMM-urilor, depunere 15.02.2023–30.06.2023; versiunea oficială curentă DE_VALIDAT_UMAN.",
+      "proposedCopy": "Apel închis — verificat la 2026-07-22. Depunerea nu este deschisă. Sursa: MIPE, Ordinul nr. 607/28.04.2026 pentru modificarea Ghidului Solicitantului Digitalizarea IMM-urilor.",
       "officialInstitution": "Ministerul Investițiilor și Proiectelor Europene",
-      "officialDocument": "Apelul de proiecte PNRR Digitalizarea IMM-urilor",
-      "officialDocumentVersion": "Interval efectiv de depunere comunicat oficial; versiunea curentă a ghidului DE_VALIDAT_UMAN",
-      "officialDocumentDate": "DE_VALIDAT_UMAN",
-      "documentCharacter": "apel_inchis_candidat",
-      "officialUrl": "https://diaspora.gov.ro/povesti/364-pnrr-mipe-a-dat-startul-apelului-de-proiecte-de-350-de-milioane-de-euro-pentru-digitalizarea-imm-urilor",
+      "officialDocument": "Ordinul nr. 607/28.04.2026 pentru modificarea Ghidului Solicitantului Digitalizarea IMM-urilor",
+      "officialDocumentVersion": "Ordinul MIPE nr. 607/28.04.2026; modifică Ghidul aprobat prin Ordinul nr. 3185/2022",
+      "officialDocumentDate": "2026-04-28",
+      "documentCharacter": "apel_inchis",
+      "officialUrl": "https://mfe.gov.ro/pnrr-ordinul-nr-607-28-04-2026-pentru-modificarea-ghidului-solicitantului-digitalizarea-imm-urilor-grant-de-pana-la-100-000-euro-pe-intreprindere-care-sa-sprijine-imm-urile-in-adoptarea-tehnologii/",
       "additionalOfficialEvidence": [
-        "https://diaspora.gov.ro/info/stiri-din-romania/316-a",
-        "https://mfinante.gov.ro/static/10/Mfp/transparenta/proiectbuget2025/Ministerul_Investitiilor_Proiectelor_Europene.pdf"
+        "https://mfe.gov.ro/wp-content/uploads/2026/04/c764c30d879b42963929b965d0c50bb0.pdf"
       ],
-      "applicationStart": "2023-02-15",
-      "applicationEnd": "2023-06-30",
+      "applicationStart": null,
+      "applicationEnd": null,
       "numericClaimsApproved": false,
       "observedBefore": "Homepage: card «Activ» cu 100.000 EUR și 90%; registrul/hubul folosea «calendar estimativ», iar apelul PNRR citat avea depunerea încheiată la 30.06.2023.",
       "unresolved": [
-        "Consultantul FABER trebuie să confirme versiunea oficială curentă a ghidului și delimitarea dintre apelul PNRR închis și pagina-hub Digitalizare IMM.",
-        "Valorile de pe homepage și paginile de program rămân nepublicate până la legarea lor de aceeași versiune oficială.",
-        "Numele validatorului și data aprobării sunt DE_VALIDAT_UMAN."
+        "Valorile numerice rămân nepublicate deoarece aprobarea confirmă statusul și documentul, nu cuantumul sau intensitatea sprijinului."
       ],
       "publicationHoldUrls": [
         "/digitalizare-imm",

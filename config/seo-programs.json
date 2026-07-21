@@ -341,24 +341,24 @@
       "family": "digitalizare",
       "status": "apel_inchis",
       "statusLabel": "Apel închis – depunerea nu este deschisă",
-      "publicationState": "pending_validation",
-      "verifiedAt": "DE_VALIDAT_UMAN",
+      "publicationState": "public",
+      "verifiedAt": "2026-07-22",
       "sourceName": "Ministerul Investițiilor și Proiectelor Europene",
-      "sourceUrl": "DE_VALIDAT_UMAN",
-      "sourceVersion": "DE_VALIDAT_UMAN",
+      "sourceUrl": "https://mfe.gov.ro/pnrr-ordinul-nr-607-28-04-2026-pentru-modificarea-ghidului-solicitantului-digitalizarea-imm-urilor-grant-de-pana-la-100-000-euro-pe-intreprindere-care-sa-sprijine-imm-urile-in-adoptarea-tehnologii/",
+      "sourceVersion": "Ordinul MIPE nr. 607/28.04.2026; modifică Ghidul aprobat prin Ordinul nr. 3185/2022",
       "sourceType": "official",
       "applicationStart": null,
       "applicationEnd": null,
       "grantSummary": null,
       "cofinancingSummary": null,
       "pageUrl": "/digitalizare-imm",
-      "lastMeaningfulUpdate": "DE_VALIDAT_UMAN",
+      "lastMeaningfulUpdate": "2026-07-22",
       "evergreenValue": true,
       "archivedNoindexDecision": null,
-      "cardSummary": "Statutul apelului Digitalizarea IMM-urilor și versiunea oficială curentă a documentului așteaptă confirmarea consultantului FABER.",
-      "metaTitle": "Digitalizare IMM – informații în validare editorială | FABER",
-      "metaDescription": "Paginile Digitalizare IMM sunt temporar în validare editorială. Statutul, perioada și valorile vor fi publicate numai după confirmarea umană.",
-      "editorialDisclaimer": "Nu publicați statutul, calendarul sau valorile înainte de confirmarea versiunii oficiale curente de către consultantul FABER.",
+      "cardSummary": "Apelul PNRR Digitalizarea IMM-urilor este închis; Ordinul MIPE nr. 607/28.04.2026 modifică implementarea proiectelor existente, nu deschide depunerea.",
+      "metaTitle": "Digitalizare IMM: apel închis și sursă MIPE | FABER",
+      "metaDescription": "Apelul Digitalizarea IMM-urilor este închis, verificat la 22.07.2026. Depunerea nu este deschisă; vezi Ordinul MIPE nr. 607/28.04.2026.",
+      "editorialDisclaimer": "Depunerea nu este deschisă. Ordinul MIPE nr. 607/28.04.2026 actualizează implementarea proiectelor existente și nu deschide un apel nou.",
       "eligibleApplicants": [],
       "keyConditions": [
         "Pagina este un hub; o finanțare actuală trebuie identificată și verificată separat."
@@ -374,22 +374,6 @@
         "icon": "ph-desktop",
         "image": "/assets/hero/hero-digital.webp",
         "beneficiary": null
-      },
-      "pendingValidation": {
-        "requestedFields": [
-          "status",
-          "sourceUrl",
-          "sourceVersion",
-          "verifiedAt",
-          "lastMeaningfulUpdate",
-          "validatorName"
-        ],
-        "candidateStatus": "apel_inchis",
-        "candidateSourceUrl": "https://diaspora.gov.ro/povesti/364-pnrr-mipe-a-dat-startul-apelului-de-proiecte-de-350-de-milioane-de-euro-pentru-digitalizarea-imm-urilor",
-        "candidateSourceVersion": "Apel PNRR Digitalizarea IMM-urilor; depunere 15.02.2023–30.06.2023; versiunea oficială curentă DE_VALIDAT_UMAN",
-        "candidateVerifiedAt": "2026-07-21",
-        "approvalRecord": "config/program-status-approvals.json#digitalizare-imm",
-        "note": "Apelul PNRR istoric apare închis, dar documentul oficial curent și delimitarea față de hub trebuie confirmate de consultantul FABER."
       },
       "discovery": {
         "parentHub": "/fonduri-europene-digitalizare",
@@ -734,24 +718,24 @@
       "family": "infrastructura",
       "status": "ghid_aprobat_nedeschis",
       "statusLabel": "Schemă aprobată – depunerea nu este deschisă",
-      "publicationState": "pending_validation",
-      "verifiedAt": "DE_VALIDAT_UMAN",
+      "publicationState": "public",
+      "verifiedAt": "2026-07-22",
       "sourceName": "Ministerul Transporturilor și Infrastructurii",
-      "sourceUrl": "DE_VALIDAT_UMAN",
-      "sourceVersion": "DE_VALIDAT_UMAN",
+      "sourceUrl": "https://legislatie.just.ro/Public/DetaliiDocument/306915",
+      "sourceVersion": "Ordinul MTI nr. 2.292/29.12.2025, publicat în Monitorul Oficial nr. 20/14.01.2026; formă consolidată 12.02.2026",
       "sourceType": "official",
       "applicationStart": null,
       "applicationEnd": null,
       "grantSummary": null,
       "cofinancingSummary": null,
       "pageUrl": "/pro-infra",
-      "lastMeaningfulUpdate": "DE_VALIDAT_UMAN",
+      "lastMeaningfulUpdate": "2026-07-22",
       "evergreenValue": true,
       "archivedNoindexDecision": null,
-      "cardSummary": "Statutul operațional, documentul și perioada de depunere PRO INFRA așteaptă confirmarea consultantului FABER.",
-      "metaTitle": "PRO INFRA – informații în validare editorială | FABER",
-      "metaDescription": "Pagina PRO INFRA este temporar în validare editorială. Statutul, documentul și valorile vor fi publicate numai după confirmarea umană.",
-      "editorialDisclaimer": "Nu publicați statutul operațional sau valorile înainte de confirmarea consultantului FABER.",
+      "cardSummary": "Schema PRO INFRA este aprobată, dar depunerea nu este deschisă și nu există un interval oficial de depunere publicat.",
+      "metaTitle": "PRO INFRA: schemă aprobată, apel nedeschis | FABER",
+      "metaDescription": "Schema PRO INFRA este aprobată și verificată la 22.07.2026. Depunerea nu este deschisă; vezi Ordinul MTI nr. 2.292/29.12.2025.",
+      "editorialDisclaimer": "Schema este aprobată, dar depunerea nu este deschisă. Valorile și calendarul apelului nu se publică până la apariția documentelor operaționale oficiale.",
       "eligibleApplicants": [],
       "keyConditions": [],
       "officialGuideKeys": [
@@ -765,26 +749,6 @@
         "icon": "ph-factory",
         "image": "/assets/hero/hero-solar.webp",
         "beneficiary": null
-      },
-      "pendingValidation": {
-        "requestedFields": [
-          "status",
-          "sourceUrl",
-          "sourceVersion",
-          "verifiedAt",
-          "lastMeaningfulUpdate",
-          "applicationStart",
-          "applicationEnd",
-          "grantSummary",
-          "cofinancingSummary",
-          "validatorName"
-        ],
-        "candidateStatus": "ghid_aprobat_nedeschis",
-        "candidateSourceUrl": "https://legislatie.just.ro/Public/DetaliiDocumentAfis/306916",
-        "candidateSourceVersion": "Schema PRO INFRA – formă consolidată la 12.02.2026",
-        "candidateVerifiedAt": "2026-07-21",
-        "approvalRecord": "config/program-status-approvals.json#pro-infra",
-        "note": "Sursa confirmă o schemă aprobată, nu un ghid și nu un apel deschis; intervalul de depunere rămâne DE_VALIDAT_UMAN."
       },
       "discovery": {
         "parentHub": "/fonduri-regionale",
@@ -2739,7 +2703,10 @@
           "label": "PoCIDIF 2.1"
         }
       ],
-      "sourceKeys": [],
+      "sourceKeys": [
+        "digitalizare",
+        "digitalizare-pnrr"
+      ],
       "heroIcon": "ph-duotone ph-desktop",
       "officialGuideKey": "digitalizare",
       "guideCtaLabel": "Ghid oficial",
@@ -6047,7 +6014,10 @@
           "Schema nu enumeră instalațiile fotovoltaice între costurile eligibile directe. Energia regenerabilă produsă la nivelul beneficiarului apare ca un criteriu de selecție, nu ca obiect principal al finanțării PRO INFRA."
         ]
       ],
-      "sourceKeys": [],
+      "sourceKeys": [
+        "pro-infra",
+        "pro-infra-order"
+      ],
       "slug": "pro-infra",
       "output": "pro-infra.html",
       "type": "program",
