@@ -150,9 +150,21 @@ async function main() {
   const sitemapResponse = await request(`/sitemap.xml?t=${Date.now()}`);
   const sitemap = await sitemapResponse.text();
   if (sitemapResponse.status !== 200) throw new Error(`sitemap.xml: HTTP ${sitemapResponse.status}`);
+  const sitemapDocuments = [sitemap];
+  if (/<sitemapindex\b/iu.test(sitemap)) {
+    const childUrls = [...sitemap.matchAll(/<loc>(https:\/\/atelierdeconsultanta\.ro\/[^<]+\.xml)<\/loc>/giu)].map((match) => match[1]);
+    if (!childUrls.length) throw new Error("sitemap.xml index does not reference any child sitemap");
+    for (const childUrl of childUrls) {
+      const childResponse = await request(`${new URL(childUrl).pathname}?t=${Date.now()}`);
+      const childXml = await childResponse.text();
+      if (childResponse.status !== 200) throw new Error(`${childUrl}: HTTP ${childResponse.status}`);
+      sitemapDocuments.push(childXml);
+    }
+  }
+  const sitemapCorpus = sitemapDocuments.join("\n");
   for (const route of criticalRoutes) {
     const url = new URL(route, ORIGIN).href;
-    if (!sitemap.includes(`<loc>${url}</loc>`)) throw new Error(`sitemap.xml is missing ${url}`);
+    if (!sitemapCorpus.includes(`<loc>${url}</loc>`)) throw new Error(`sitemap set is missing ${url}`);
   }
 
   const robotsResponse = await request(`/robots.txt?t=${Date.now()}`);
