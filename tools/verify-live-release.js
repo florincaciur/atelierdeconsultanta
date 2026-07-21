@@ -142,7 +142,7 @@ async function main() {
       `data-program-id="${program.slug}"`,
       `data-program-status="${program.status}"`,
       `data-verified-at="${program.verifiedAt}"`,
-      `data-source-url="${program.sourceUrl}"`,
+      `data-source-url="${program.sourceUrl.replace(/&/gu, "&amp;")}"`,
     ];
     for (const signal of expectedAttributes) if (!html.includes(signal)) throw new Error(`${program.pageUrl}: missing approved registry signal ${signal}`);
   }
