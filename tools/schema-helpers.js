@@ -1,6 +1,7 @@
 "use strict";
 
 const { canonicalContactIdentity } = require("./canonical-contact");
+const { breadcrumbItemsForRoute } = require("./breadcrumb-registry");
 
 const SITE = "https://atelierdeconsultanta.ro";
 const BRAND_NAME = "FABER - Atelier de Consultanță";
@@ -223,13 +224,7 @@ function parentClusterForPath(pathname) {
 }
 
 function breadcrumbItemsForPath(pathname, currentName) {
-  const clean = normalizeCanonicalPath(pathname);
-  const items = [{ name: "Acasă", item: canonicalUrl("/") }];
-  if (clean === "/") return items;
-  const parent = parentClusterForPath(clean);
-  if (parent) items.push({ name: parent.label, item: canonicalUrl(parent.href) });
-  items.push({ name: cleanText(currentName) || routeLabel(clean), item: canonicalUrl(clean) });
-  return items;
+  return breadcrumbItemsForRoute(pathname, currentName);
 }
 
 function normalizeLinkItem(item) {
@@ -448,7 +443,7 @@ function webPageSchema(options) {
 function breadcrumbSchema(items) {
   const cleanItems = (items || [])
     .filter((item) => item && item.name && item.item)
-    .slice(0, 3);
+    .slice(0, 6);
   if (!cleanItems.length) return null;
   return {
     "@type": "BreadcrumbList",

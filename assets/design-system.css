@@ -1,0 +1,385 @@
+/* FABER visual system P1.07 — scoped pilot. Canonical values: config/design-system.json. */
+body[data-design-system="p1_07"] {
+  --ds-color-background: #f6f3ed;
+  --ds-color-surface: #fff;
+  --ds-color-surface-muted: #eef2f6;
+  --ds-color-text: #18243a;
+  --ds-color-muted: #536176;
+  --ds-color-border: #7b899c;
+  --ds-color-navy: #0d1f3c;
+  --ds-color-accent: #b84716;
+  --ds-color-accent-hover: #91360f;
+  --ds-color-success: #12603a;
+  --ds-color-success-surface: #e7f5ed;
+  --ds-color-warning: #6b4300;
+  --ds-color-warning-surface: #fff2cc;
+  --ds-color-closed: #455163;
+  --ds-color-closed-surface: #edf0f4;
+  --ds-color-error: #a61b1b;
+  --ds-color-error-surface: #feecec;
+  --ds-color-focus: #0b63ce;
+  --ds-color-focus-dark: #ffd166;
+  --ds-space-1: .25rem;
+  --ds-space-2: .5rem;
+  --ds-space-3: .75rem;
+  --ds-space-4: 1rem;
+  --ds-space-6: 1.5rem;
+  --ds-space-8: 2rem;
+  --ds-space-12: 3rem;
+  --ds-space-16: 4rem;
+  --ds-space-24: 6rem;
+  --ds-radius-sm: .5rem;
+  --ds-radius-md: .75rem;
+  --ds-radius-lg: 1.125rem;
+  --ds-radius-pill: 999px;
+  --ds-shadow-sm: 0 2px 12px rgba(13, 31, 60, .08);
+  --ds-shadow-md: 0 12px 32px rgba(13, 31, 60, .12);
+  --ds-shadow-lg: 0 24px 56px rgba(13, 31, 60, .16);
+  --ds-container-text: 68ch;
+  --ds-container-content: 47.5rem;
+  --ds-container-wide: 73.75rem;
+  --ds-container-full: 80rem;
+  --ds-motion-fast: 140ms;
+  --ds-motion-standard: 200ms;
+  --ds-motion-easing: cubic-bezier(.2, 0, 0, 1);
+
+  /* Compatibility aliases keep the existing components on the same visual contract. */
+  --navy: var(--ds-color-navy);
+  --orange: var(--ds-color-accent);
+  --orange-dark: var(--ds-color-accent-hover);
+  --white: var(--ds-color-surface);
+  --gray-100: var(--ds-color-background);
+  --gray-200: #d7dee7;
+  --gray-600: var(--ds-color-muted);
+  --text-main: var(--ds-color-text);
+  --text-soft: var(--ds-color-muted);
+  --radius-sm: var(--ds-radius-sm);
+  --radius-md: var(--ds-radius-lg);
+  --shadow-sm: var(--ds-shadow-sm);
+  --shadow-md: var(--ds-shadow-md);
+
+  background: var(--ds-color-background);
+  color: var(--ds-color-text);
+  font-size: 17px;
+  line-height: 1.65;
+  text-rendering: optimizeLegibility;
+}
+
+body[data-design-system="p1_07"] :where(h1, h2, h3) {
+  color: var(--ds-color-navy);
+  font-weight: 850;
+  letter-spacing: -.025em;
+  text-wrap: balance;
+}
+
+body[data-design-system="p1_07"] h1 { font-size: clamp(2.35rem, 5vw, 3.5rem); line-height: 1.08; }
+body[data-design-system="p1_07"] h2 { font-size: clamp(1.8rem, 3.2vw, 2.5rem); line-height: 1.18; }
+body[data-design-system="p1_07"] h3 { font-size: clamp(1.2rem, 1.7vw, 1.45rem); line-height: 1.3; }
+
+body[data-design-system="p1_07"] :where(.intro, .section-subtitle, .hero > p, .post-excerpt, .contact-triage-heading > p),
+body[data-design-system="p1_07"] :where(.panel, .post-body, .core-content) > p {
+  max-width: var(--ds-container-text);
+}
+
+body[data-design-system="p1_07"] :where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+  outline: 3px solid var(--ds-color-focus);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 2px var(--ds-color-surface);
+}
+
+body[data-design-system="p1_07"] :where(#navbar, #mobileMenu, .hero, .homepage-decision-hero, .cta-box, .footer)
+  :where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
+  outline-color: var(--ds-color-focus-dark);
+  box-shadow: 0 0 0 2px var(--ds-color-navy);
+}
+
+body[data-design-system="p1_07"] :where(a, button, input, select, textarea, summary) {
+  transition-duration: var(--ds-motion-standard);
+  transition-timing-function: var(--ds-motion-easing);
+}
+
+/* One dominant dark hero; the content rhythm alternates between off-white and white surfaces. */
+body[data-design-system="p1_07"] main > :where(section, article):not(.homepage-decision-hero):nth-of-type(even),
+body[data-design-system="p1_07"] main.container > :where(section, article):nth-of-type(even) {
+  background-color: var(--ds-color-surface);
+}
+
+body[data-design-system="p1_07"] :where(.section, .panel, .contact-form-panel, .contact-note, .program-factual-status, .faq-item, .answer-readiness) {
+  border-radius: var(--ds-radius-lg);
+}
+
+/* Header */
+body[data-design-system="p1_07"] #navbar,
+body[data-design-system="p1_07"] #mobileMenu {
+  --navy: var(--ds-color-navy);
+  --orange: var(--ds-color-accent);
+  --orange-dark: var(--ds-color-accent-hover);
+  --radius-sm: var(--ds-radius-sm);
+  --radius-md: var(--ds-radius-md);
+}
+
+body[data-design-system="p1_07"] #navbar .nav-cta:active,
+body[data-design-system="p1_07"] #mobileMenu .mobile-cta:active {
+  background: #732b0c;
+  transform: translateY(1px);
+}
+
+/* Hero */
+body[data-design-system="p1_07"] :where(.hero, .homepage-decision-hero) {
+  color: #fff;
+}
+
+body[data-design-system="p1_07"] :where(.hero, .homepage-decision-hero) :where(h1, h2, h3) { color: #fff; }
+body[data-design-system="p1_07"] .hero > p { margin-inline: auto; }
+body[data-design-system="p1_07"] .homepage-hero__copy { max-width: 42.5rem; }
+
+/* Program cards */
+body[data-design-system="p1_07"] .finantare-card {
+  border: 1px solid #d7dee7;
+  border-radius: var(--ds-radius-lg);
+  background: var(--ds-color-surface);
+  box-shadow: var(--ds-shadow-sm);
+  transition: border-color var(--ds-motion-standard) var(--ds-motion-easing), box-shadow var(--ds-motion-standard) var(--ds-motion-easing), transform var(--ds-motion-standard) var(--ds-motion-easing);
+}
+
+body[data-design-system="p1_07"] .finantare-card:hover {
+  border-color: var(--ds-color-border);
+  box-shadow: var(--ds-shadow-md);
+  transform: translateY(-2px);
+}
+
+body[data-design-system="p1_07"] .finantare-card:active { transform: translateY(0); }
+
+/* Status badge: symbol + text + color. Text remains the authoritative registry label. */
+body[data-design-system="p1_07"] :where(.finantare-badge, .design-badge, [data-status-badge]) {
+  display: inline-flex;
+  min-height: 2rem;
+  align-items: center;
+  gap: var(--ds-space-2);
+  border: 1px solid currentColor;
+  border-radius: var(--ds-radius-pill);
+  padding: .3rem .7rem;
+  font-size: .82rem;
+  font-weight: 800;
+  line-height: 1.3;
+}
+
+body[data-design-system="p1_07"] [data-program-status="apel_deschis"] > .finantare-badge,
+body[data-design-system="p1_07"] [data-program-status="apel_deschis"] > [data-status-badge] {
+  background: var(--ds-color-success-surface);
+  color: var(--ds-color-success);
+}
+
+body[data-design-system="p1_07"] [data-program-status="apel_deschis"] > :where(.finantare-badge, [data-status-badge])::before { content: "●"; }
+
+body[data-design-system="p1_07"] :is([data-program-status="ghid_aprobat_nedeschis"], [data-program-status="consultare_publica"], [data-program-status="calendar_estimativ"]) > :where(.finantare-badge, [data-status-badge]) {
+  background: var(--ds-color-warning-surface);
+  color: var(--ds-color-warning);
+}
+
+body[data-design-system="p1_07"] :is([data-program-status="ghid_aprobat_nedeschis"], [data-program-status="consultare_publica"], [data-program-status="calendar_estimativ"]) > :where(.finantare-badge, [data-status-badge])::before { content: "◐"; }
+
+body[data-design-system="p1_07"] :is([data-program-status="apel_inchis"], [data-program-status="arhivat"]) > :where(.finantare-badge, [data-status-badge]) {
+  background: var(--ds-color-closed-surface);
+  color: var(--ds-color-closed);
+}
+
+body[data-design-system="p1_07"] :is([data-program-status="apel_inchis"], [data-program-status="arhivat"]) > :where(.finantare-badge, [data-status-badge])::before { content: "○"; }
+
+body[data-design-system="p1_07"] .program-factual-status {
+  position: relative;
+  max-width: var(--ds-container-wide);
+  margin: var(--ds-space-8) auto;
+  padding: var(--ds-space-6) var(--ds-space-8);
+  border: 1px solid #b7d7c3;
+  border-left: .375rem solid var(--ds-color-success);
+  background: var(--ds-color-success-surface);
+  color: var(--ds-color-text);
+  box-shadow: var(--ds-shadow-sm);
+}
+
+body[data-design-system="p1_07"] .program-factual-status::before {
+  content: "● " attr(data-status-label);
+  display: block;
+  margin-bottom: var(--ds-space-3);
+  color: var(--ds-color-success);
+  font-size: .9rem;
+  font-weight: 850;
+}
+
+body[data-design-system="p1_07"] .program-factual-status[data-program-status="consultare_publica"],
+body[data-design-system="p1_07"] .program-factual-status[data-program-status="ghid_aprobat_nedeschis"],
+body[data-design-system="p1_07"] .program-factual-status[data-program-status="calendar_estimativ"] {
+  border-color: #d7bd79;
+  border-left-color: var(--ds-color-warning);
+  background: var(--ds-color-warning-surface);
+}
+
+body[data-design-system="p1_07"] .program-factual-status[data-program-status="consultare_publica"]::before,
+body[data-design-system="p1_07"] .program-factual-status[data-program-status="ghid_aprobat_nedeschis"]::before,
+body[data-design-system="p1_07"] .program-factual-status[data-program-status="calendar_estimativ"]::before {
+  content: "◐ " attr(data-status-label);
+  color: var(--ds-color-warning);
+}
+
+/* Tables */
+body[data-design-system="p1_07"] .table-wrap {
+  border: 1px solid #d7dee7;
+  border-radius: var(--ds-radius-md);
+  box-shadow: var(--ds-shadow-sm);
+}
+
+body[data-design-system="p1_07"] :where(table, .program-table) { line-height: 1.55; }
+body[data-design-system="p1_07"] :where(table, .program-table) th { background: var(--ds-color-navy); color: #fff; }
+body[data-design-system="p1_07"] :where(table, .program-table) tbody tr:nth-child(even) { background: var(--ds-color-surface-muted); }
+body[data-design-system="p1_07"] :where(table, .program-table) :where(th, td) { border-color: #cbd4df; padding: .8rem 1rem; }
+
+/* Accordion and disclosure */
+body[data-design-system="p1_07"] details {
+  border-color: #cbd4df;
+  border-radius: var(--ds-radius-md);
+  background: var(--ds-color-surface);
+}
+
+body[data-design-system="p1_07"] details > summary {
+  min-height: 44px;
+  color: var(--ds-color-navy);
+  cursor: pointer;
+  font-weight: 800;
+}
+
+body[data-design-system="p1_07"] details[open] > summary { border-bottom-color: #cbd4df; }
+body[data-design-system="p1_07"] details > summary:hover { background: var(--ds-color-surface-muted); }
+
+/* Form */
+body[data-design-system="p1_07"] :where(input, select, textarea) {
+  min-height: 44px;
+  border: 1px solid var(--ds-color-border);
+  border-radius: var(--ds-radius-sm);
+  background: var(--ds-color-surface);
+  color: var(--ds-color-text);
+}
+
+body[data-design-system="p1_07"] textarea { min-height: 7rem; }
+body[data-design-system="p1_07"] input[type="checkbox"],
+body[data-design-system="p1_07"] input[type="radio"] {
+  width: 24px;
+  min-width: 24px;
+  height: 24px;
+  min-height: 24px;
+  margin: 0;
+}
+body[data-design-system="p1_07"] :where(input, select, textarea)::placeholder { color: #69768a; opacity: 1; }
+body[data-design-system="p1_07"] :where(input, select, textarea):hover { border-color: var(--ds-color-navy); }
+body[data-design-system="p1_07"] :where(input, select, textarea)[aria-invalid="true"],
+body[data-design-system="p1_07"] .has-error :where(input, select, textarea) {
+  border: 2px solid var(--ds-color-error);
+  background: var(--ds-color-error-surface);
+}
+
+body[data-design-system="p1_07"] :where(.error-message, .contact-form-alert, .contact-error-summary) { color: var(--ds-color-error); }
+body[data-design-system="p1_07"] .contact-form-alert,
+body[data-design-system="p1_07"] .contact-error-summary { border-color: var(--ds-color-error); background: var(--ds-color-error-surface); }
+
+/* CTA and interaction states */
+body[data-design-system="p1_07"] :where(.btn, .btn-primary, .btn-secondary, .btn-cta, button) {
+  min-height: 44px;
+  border-radius: var(--ds-radius-sm);
+}
+
+body[data-design-system="p1_07"] :where(.btn-primary, .btn-cta) {
+  border-color: var(--ds-color-accent);
+  background: var(--ds-color-accent);
+  color: #fff;
+  box-shadow: var(--ds-shadow-sm);
+}
+
+body[data-design-system="p1_07"] :where(.btn-primary, .btn-cta):hover {
+  border-color: var(--ds-color-accent-hover);
+  background: var(--ds-color-accent-hover);
+  color: #fff;
+}
+
+body[data-design-system="p1_07"] :where(.btn-primary, .btn-cta):active { background: #732b0c; transform: translateY(1px); }
+
+body[data-design-system="p1_07"] :where(.btn-secondary) {
+  border-color: var(--ds-color-border);
+  background: var(--ds-color-surface);
+  color: var(--ds-color-navy);
+}
+
+body[data-design-system="p1_07"] :where(.btn-secondary):hover { border-color: var(--ds-color-accent); color: var(--ds-color-accent-hover); }
+
+body[data-design-system="p1_07"] :where(button, .btn, .btn-primary, .btn-secondary, .btn-cta):disabled,
+body[data-design-system="p1_07"] :where(button, .btn, .btn-primary, .btn-secondary, .btn-cta)[aria-disabled="true"] {
+  border-color: #aeb7c4;
+  background: #dce1e7;
+  color: #455163;
+  box-shadow: none;
+  cursor: not-allowed;
+  opacity: .78;
+  transform: none;
+}
+
+body[data-design-system="p1_07"] :where(button, .btn, .btn-primary, .btn-secondary, .btn-cta)[aria-busy="true"],
+body[data-design-system="p1_07"] :where(button, .btn, .btn-primary, .btn-secondary, .btn-cta).is-loading {
+  cursor: progress;
+  opacity: .86;
+}
+
+body[data-design-system="p1_07"] :where(button, .btn, .btn-primary, .btn-secondary, .btn-cta)[aria-busy="true"]::after,
+body[data-design-system="p1_07"] :where(button, .btn, .btn-primary, .btn-secondary, .btn-cta).is-loading::after {
+  width: 1em;
+  height: 1em;
+  margin-left: .6em;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  content: "";
+  animation: ds-spin .75s linear infinite;
+}
+
+body[data-design-system="p1_07"] :where([aria-current="page"], [aria-pressed="true"], .is-active, .active) { text-decoration-thickness: .12em; }
+
+/* Breadcrumb */
+body[data-design-system="p1_07"] .breadcrumb {
+  max-width: var(--ds-container-wide);
+  color: var(--ds-color-muted);
+  font-size: .88rem;
+  line-height: 1.55;
+}
+
+body[data-design-system="p1_07"] .breadcrumb a { color: var(--ds-color-accent-hover); text-decoration: underline; text-underline-offset: .18em; }
+body[data-design-system="p1_07"] .breadcrumb li[aria-current="page"] { color: var(--ds-color-text); font-weight: 700; }
+
+/* Carousel */
+body[data-design-system="p1_07"] :where(.carousel-control, .carousel-nav button, .carousel-dot) { min-width: 44px; min-height: 44px; }
+body[data-design-system="p1_07"] :where(.carousel-dot[aria-current="true"], .carousel-dot.active) { background: var(--ds-color-accent); }
+
+/* Footer and optional sticky CTA contract */
+body[data-design-system="p1_07"] .footer { background: var(--ds-color-navy); color: #d9e0eb; }
+body[data-design-system="p1_07"] .footer a { color: var(--ds-color-focus-dark); text-decoration: underline; text-underline-offset: .18em; }
+body[data-design-system="p1_07"] :where(.sticky-cta, [data-sticky-cta]) { border-top: 1px solid #cbd4df; background: rgba(255, 255, 255, .96); box-shadow: 0 -8px 24px rgba(13, 31, 60, .12); }
+
+@keyframes ds-spin { to { transform: rotate(1turn); } }
+
+@media (max-width: 47.5rem) {
+  body[data-design-system="p1_07"] { font-size: 17px; }
+  body[data-design-system="p1_07"] h1 { font-size: clamp(2.25rem, 10vw, 2.625rem); }
+  body[data-design-system="p1_07"] h2 { font-size: clamp(1.65rem, 7vw, 2rem); }
+  body[data-design-system="p1_07"] :where(a, button, input, select, textarea, summary, [role="button"]) { min-height: 44px; }
+  body[data-design-system="p1_07"] input[type="checkbox"],
+  body[data-design-system="p1_07"] input[type="radio"] { min-height: 24px; }
+  body[data-design-system="p1_07"] .program-factual-status { margin-inline: var(--ds-space-4); padding: var(--ds-space-6); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body[data-design-system="p1_07"] *,
+  body[data-design-system="p1_07"] *::before,
+  body[data-design-system="p1_07"] *::after {
+    scroll-behavior: auto !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+}

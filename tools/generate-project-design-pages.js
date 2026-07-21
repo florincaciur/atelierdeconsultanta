@@ -18,6 +18,7 @@ const {
   webPageSchema,
   websiteSchema
 } = require("./schema-helpers");
+const { renderBreadcrumb: renderManagedBreadcrumb } = require("./sync-breadcrumbs");
 
 const pages = [
   {
@@ -228,7 +229,7 @@ function renderPage(page) {
 </head>
 <body class="page-family-service">
   ${GLOBAL_HEADER}
-  <div class="breadcrumb"><a href="/">Acasă</a> / <a href="/consultanta-fonduri-europene">Consultanță</a> / ${escapeHtml(page.h1)}</div>
+  ${renderManagedBreadcrumb(`/${page.slug}`, page.h1)}
   <header class="hero hero--image hero--service" data-design-family="service" style="--hero-image:url('/assets/hero/hero-business.webp')">
     <span class="hero-icon" aria-hidden="true"><i class="ph-duotone ph-ruler"></i></span>
     <span class="eyebrow design-badge design-badge--service">Serviciu FABER | analiză | documentație</span>

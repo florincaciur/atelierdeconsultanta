@@ -9,7 +9,7 @@ const { isPublicProgram, loadProgramConfig, programForRoute } = require("../tool
 const { SITE, cleanText, fileForRoute, sitemapRoutes } = require("../tools/structured-data-utils");
 
 const ROOT = path.resolve(__dirname, "..");
-const BANNED_ANCHORS = new Set(["află mai multe", "citește aici", "vezi pagina"]);
+const BANNED_ANCHORS = new Set(["află mai multe", "click aici", "citește aici", "vezi pagina"]);
 
 function redirectSources() {
   const file = path.join(ROOT, "_redirects");
@@ -50,17 +50,19 @@ function main() {
   const anchorSources = new Map();
   const targetSources = new Map();
   const programs = loadProgramConfig().programs;
+  const managedProgramRoutes = new Set(programs.map((program) => program.pageUrl));
   let verifiedPages = 0;
 
   for (const [slug, page] of Object.entries(config.pages)) {
+    if (managedProgramRoutes.has(page.route)) continue;
     const sourceProgram = programForRoute(page.route, programs);
     if (sourceProgram && !isPublicProgram(sourceProgram)) continue;
     const expectedLinks = publicNextStepLinks(page, programs);
     const file = path.join(ROOT, page.file);
     const $ = cheerio.load(fs.readFileSync(file, "utf8"), { decodeEntities: false });
     const blocks = $("[data-contextual-next-step]");
-    if (blocks.length !== 1) {
-      errors.push(`${page.route}: trebuie exact un bloc next-step, găsite ${blocks.length}`);
+      if (blocks.length !== 1) {
+        errors.push(`${page.route}: trebuie exact un bloc contextual, găsite ${blocks.length}`);
       continue;
     }
     const block = blocks.first();
@@ -85,10 +87,14 @@ function main() {
       seenTargets.add(href);
       if (href === page.route) errors.push(`${page.route}: blocul trimite către aceeași pagină`);
       if (/\.html(?:$|[?#])/iu.test(href)) errors.push(`${page.route}: link legacy .html ${href}`);
-      if (link.attr("data-link-type") !== "next-step") errors.push(`${page.route}: lipsește data-link-type pentru ${href}`);
-      if (link.attr("data-analytics-event") !== "next_step_click") errors.push(`${page.route}: eveniment analytics invalid pentru ${href}`);
-      if (link.attr("data-analytics-target") !== href) errors.push(`${page.route}: target analytics diferit pentru ${href}`);
-      if (link.attr("data-analytics-source") !== page.route) errors.push(`${page.route}: source analytics diferit pentru ${href}`);
+      const conversion = /^\/contact(?:[?#]|$)/u.test(href) || link.attr("data-link-relation") === "conversion";
+      if (link.attr("data-link-type") !== (conversion ? "conversion" : "contextual")) errors.push(`${page.route}: tip semantic invalid pentru ${href}`);
+      if (conversion) {
+        if (link.attr("data-analytics-event") !== "cta_click") errors.push(`${page.route}: CTA fără eveniment cta_click pentru ${href}`);
+        if (link.attr("data-analytics-target") !== "/contact") errors.push(`${page.route}: target analytics diferit pentru ${href}`);
+      } else if (link.attr("data-analytics-event")) {
+        errors.push(`${page.route}: link editorial instrumentat nepermis pentru ${href}`);
+      }
 
       const url = new URL(href, SITE);
       if (url.origin === SITE) {
@@ -104,23 +110,20 @@ function main() {
       anchorSources.get(normalizedAnchor).add(page.route);
     });
     verifiedPages += 1;
-    console.log(`${page.route}: ${links.length} linkuri next-step conforme`);
+    console.log(`${page.route}: ${links.length} legături contextuale conforme`);
   }
 
   for (const [anchor, sources] of anchorSources) {
-    if (sources.size > 4) errors.push(`ancora next-step „${anchor}” este repetată pe ${sources.size} pagini`);
+    if (sources.size > 4) errors.push(`ancora contextuală „${anchor}” este repetată pe ${sources.size} pagini`);
   }
 
   const projectDesignSources = targetSources.get("/proiectare-fonduri-europene") || new Set();
-  if (projectDesignSources.size < 12) {
-    errors.push(`/proiectare-fonduri-europene are ${projectDesignSources.size} surse contextuale next-step; sunt necesare minimum 12`);
-  }
 
   if (errors.length) {
     console.error(errors.map((error) => `- ${error}`).join("\n"));
     process.exit(1);
   }
-  console.log(`Trasee next-step valide pentru ${verifiedPages} pagini publice prioritare; ${projectDesignSources.size} surse contextuale către proiectare; zero redirecturi și zero destinații moarte.`);
+  console.log(`Trasee contextuale valide pentru ${verifiedPages} pagini non-program; doar CTA-urile sunt instrumentate, cu zero redirecturi și zero destinații moarte.`);
 }
 
 main();

@@ -33,6 +33,7 @@ const {
   normalizeRomanianCopy
 } = require("./normalize-copy-ro");
 const { designFamilyForSlug } = require("./design-family-map");
+const { renderBreadcrumb: renderManagedBreadcrumb } = require("./sync-breadcrumbs");
 const ANALYTICS_EVENTS_SCRIPT = `  <script src="/assets/analytics-events.js" defer></script>`;
 
 function publicText(value, fallback = "") {
@@ -199,12 +200,7 @@ function linkTo(href, label) {
 }
 
 function renderBreadcrumb(route, currentName) {
-  const items = breadcrumbItemsForPath(route, currentName);
-  return `<div class="breadcrumb">${items.map((item, index) => {
-    const label = esc(item.name);
-    if (index === items.length - 1) return label;
-    return `<a href="${cleanUrl(item.item)}">${label}</a>`;
-  }).join(" / ")}</div>`;
+  return renderManagedBreadcrumb(route, currentName);
 }
 
 function metadataForRoute({ title, description, route, h1, summary }) {

@@ -22,6 +22,7 @@ const {
   websiteSchema
 } = require("./schema-helpers");
 const { designFamilyForSlug } = require("./design-family-map");
+const { renderBreadcrumb: renderManagedBreadcrumb } = require("./sync-breadcrumbs");
 const ANALYTICS_EVENTS_SCRIPT = `  <script src="/assets/analytics-events.js" defer></script>`;
 const CANONICAL_ALIASES = new Map([
   ["/start-up-nation", "/start-up-nation-2026"],
@@ -518,12 +519,8 @@ function breadcrumbItemsForPage(page) {
   return breadcrumbItemsForPath(`/${page.slug}`, page.h1 || page.title);
 }
 
-function renderBreadcrumb(items) {
-  return `<div class="breadcrumb">${items.map((item, index) => {
-    const label = esc(item.name);
-    if (index === items.length - 1) return label;
-    return `<a href="${cleanHref(item.item)}">${label}</a>`;
-  }).join(" / ")}</div>`;
+function renderBreadcrumb(page) {
+  return renderManagedBreadcrumb(`/${page.slug}`, page.h1 || page.title);
 }
 
 function faqFor(page) {
@@ -602,7 +599,7 @@ ${ANALYTICS_EVENTS_SCRIPT}
 </head>
 <body class="page-family-${esc(family)}">
   ${page.internalNote ? `<!-- ${page.internalNote} -->\n  ` : ""}${GLOBAL_HEADER}
-  ${renderBreadcrumb(breadcrumbItemsForPage(page))}
+  ${renderBreadcrumb(page)}
   <header class="hero hero--${esc(family)}" data-design-family="${esc(family)}">
     <span class="hero-icon" aria-hidden="true"><i class="${esc(heroIcon)}"></i></span>
     <span class="eyebrow design-badge design-badge--${esc(family)}">${esc(designProfileFor(page)[0])}</span>

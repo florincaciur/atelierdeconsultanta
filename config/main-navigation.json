@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "generatedFor": "P1.02",
+  "desktopBreakpoint": 1180,
+  "primaryDestinations": [
+    {
+      "id": "servicii",
+      "label": "Servicii",
+      "items": [
+        { "label": "Analiză eligibilitate", "href": "/verificare-eligibilitate-fonduri-europene" },
+        { "label": "Consultanță", "href": "/consultanta-fonduri-europene" },
+        { "label": "Proiectare", "href": "/proiectare-fonduri-europene" },
+        { "label": "Implementare", "href": "/management-proiecte-fonduri-europene" }
+      ]
+    },
+    {
+      "id": "programe",
+      "label": "Programe",
+      "items": [
+        { "label": "AFIR & agricultură", "href": "/afir" },
+        { "label": "Regional / ADR", "href": "/fonduri-regionale" },
+        { "label": "Digitalizare & inovare", "href": "/fonduri-europene-digitalizare" },
+        { "label": "Energie", "href": "/finantari-panouri-fotovoltaice" },
+        { "label": "Antreprenoriat & GAL", "href": "/fonduri-europene-imm" }
+      ]
+    },
+    {
+      "id": "instrumente",
+      "label": "Instrumente",
+      "items": [
+        { "label": "Calculator SO", "href": "/calculator-soc" },
+        { "label": "Checklist-uri", "href": "/instrumente" },
+        { "label": "Comparații", "href": "/dr12-vs-dr14" }
+      ]
+    },
+    {
+      "id": "ghiduri",
+      "label": "Ghiduri",
+      "items": [
+        { "label": "Eligibilitate", "href": "/eligibilitate-fonduri-europene" },
+        { "label": "Documente", "href": "/acte-necesare-fonduri-europene-nerambursabile" },
+        { "label": "Cofinanțare", "href": "/cum-se-calculeaza-cofinantarea-fonduri-europene" },
+        { "label": "Glosar", "href": "/glosar-fonduri-europene" },
+        { "label": "Surse oficiale", "href": "/surse-oficiale-fonduri-europene" }
+      ]
+    },
+    {
+      "id": "despre-faber",
+      "label": "Despre FABER",
+      "items": [
+        { "label": "Echipa", "href": "/despre-faber" },
+        { "label": "Metodologie", "href": "/metodologie-verificare-eligibilitate" },
+        { "label": "Studii de caz", "href": "/studii-de-caz-fonduri-europene" },
+        { "label": "Date companie", "href": "/despre-faber#about-public-data" }
+      ]
+    },
+    {
+      "id": "contact",
+      "label": "Contact",
+      "href": "/contact"
+    }
+  ],
+  "cta": {
+    "label": "Începe verificarea proiectului",
+    "compactLabel": "Verifică proiectul",
+    "href": "/contact",
+    "analyticsId": "project_check_start"
+  },
+  "policy": {
+    "maxVisibleItemsPerGroup": 7,
+    "programStatusInNavigation": false,
+    "mobileTargetMinimumPx": 44,
+    "mobileUsesDisclosureButtons": true
+  }
+}

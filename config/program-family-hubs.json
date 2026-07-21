@@ -1,0 +1,239 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-07-21",
+  "urlConvention": {
+    "decision": "reuse_existing_canonical_routes",
+    "pattern": "Rutele canonice existente rămân neschimbate; familia este o proprietate editorială, nu un segment URL obligatoriu.",
+    "approvalRequiredForNewRoutes": true
+  },
+  "filters": {
+    "applicantTypes": {
+      "fermieri_agroalimentar": "Fermieri și sector agroalimentar",
+      "imm_micro": "IMM și microîntreprinderi",
+      "institutii_publice": "Instituții publice",
+      "beneficiari_gal": "Beneficiari din teritorii GAL",
+      "nespecificat": "Categoria se confirmă în ghid"
+    },
+    "regions": {
+      "national": "Național",
+      "nord_est": "Regiunea Nord-Est",
+      "regional": "Regional",
+      "local_gal": "Teritoriu GAL",
+      "nespecificat": "Regiunea se confirmă în ghid"
+    },
+    "investmentTypes": {
+      "agricultura": "Agricultură și dezvoltarea fermei",
+      "energie_autoconsum": "Energie pentru autoconsum",
+      "energie_regenerabila": "Producție de energie regenerabilă",
+      "digitalizare": "Digitalizare",
+      "inovare": "Cercetare și inovare",
+      "investitii_productive": "Investiții productive",
+      "antreprenoriat": "Pornirea sau dezvoltarea afacerii",
+      "mobilitate": "Mobilitate cu emisii reduse",
+      "infrastructura": "Infrastructură și eficiență energetică",
+      "dezvoltare_locala": "Dezvoltare locală prin GAL"
+    }
+  },
+  "hubs": [
+    {
+      "id": "afir-agricultura",
+      "route": "/afir",
+      "label": "AFIR & agricultură",
+      "h1": "Programe AFIR și finanțări pentru agricultură",
+      "intro": "Acest hub este destinat fermierilor, cooperativelor și întreprinderilor agroalimentare care caută o intervenție potrivită investiției lor. Compară direct programele după tipul solicitantului, aria vizată, investiție și stadiul oficial al apelului. Cardurile afișează numai informații susținute de registrul verificat; pentru încadrarea finală trebuie confruntate documentele exploatației, ghidul și anexele programului ales.",
+      "howToChoose": [
+        "Pornește de la forma solicitantului și documentele exploatației, nu de la valoarea finanțării.",
+        "Compară investiția cu obiectivele intervenției și cu dimensiunea economică documentabilă.",
+        "Verifică stadiul oficial și anexele înainte de oferte, contracte sau depunere."
+      ],
+      "faqs": [
+        {
+          "question": "Cum aleg între o intervenție AFIR și un apel GAL?",
+          "answer": "Verifică mai întâi localizarea proiectului, categoria solicitantului și dacă investiția este acoperită de un ghid național AFIR sau de strategia și apelul GAL din teritoriul respectiv."
+        },
+        {
+          "question": "Pot folosi rezultatul calculatorului SO ca dovadă de eligibilitate?",
+          "answer": "Nu. Calculul este un reper inițial; valorile introduse și încadrarea trebuie susținute de documentele exploatației și verificate conform ghidului intervenției."
+        },
+        {
+          "question": "Un ghid consultativ înseamnă că pot depune proiectul?",
+          "answer": "Nu. Un ghid consultativ prezintă condiții care se pot modifica, iar depunerea nu este deschisă până la publicarea intervalului oficial și activarea mecanismului de depunere."
+        },
+        {
+          "question": "Când trebuie analizată contribuția proprie?",
+          "answer": "Înainte de alegerea definitivă a investiției. Analiza include cheltuielile neeligibile, TVA unde este cazul, calendarul plăților și resursele necesare implementării."
+        },
+        {
+          "question": "Ce documente merită pregătite înainte de lansarea apelului?",
+          "answer": "Documentele solicitantului și exploatației, drepturile de folosință, datele pentru calculul economic și o descriere justificată a investiției pot fi ordonate din timp, fără a presupune condițiile finale."
+        }
+      ],
+      "relatedLinks": [
+        { "href": "/calculator-soc", "label": "Calculator SO" },
+        { "href": "/consultanta-afir", "label": "Consultanță AFIR" },
+        { "href": "/acte-necesare-fonduri-europene-nerambursabile", "label": "Ghid pentru documente" }
+      ]
+    },
+    {
+      "id": "regional-adr",
+      "route": "/fonduri-regionale",
+      "label": "Regional / ADR",
+      "h1": "Programe regionale și apeluri ADR",
+      "intro": "Hub-ul se adresează companiilor și organizațiilor care pregătesc investiții legate de o anumită regiune de dezvoltare. Filtrele separă apelurile după solicitant, regiune, investiție și stadiul verificat. Nu există un calendar sau un set unic de condiții pentru toate ADR-urile, de aceea fiecare card conduce la pagina programului, unde trebuie confirmate ghidul, localizarea și documentele aplicabile.",
+      "howToChoose": [
+        "Identifică regiunea și locul de implementare înainte de a compara apelurile.",
+        "Verifică dimensiunea întreprinderii, codul CAEN și dreptul asupra spațiului propus.",
+        "Separă programul regional general de apelul concret și de versiunea ghidului aferent."
+      ],
+      "faqs": [
+        {
+          "question": "Pot aplica într-o regiune diferită de sediul social?",
+          "answer": "Depinde de regulile apelului și de locul de implementare eligibil. Sediul, punctul de lucru și dreptul asupra locației trebuie verificate împreună în ghidul concret."
+        },
+        {
+          "question": "Toate ADR-urile folosesc aceleași condiții?",
+          "answer": "Nu. Programele au cadre comune, dar apelurile, calendarele, solicitanții eligibili, criteriile și anexele sunt publicate de autoritatea regională competentă."
+        },
+        {
+          "question": "Este suficient să aleg programul după județ?",
+          "answer": "Nu. Județul stabilește regiunea relevantă, dar alegerea depinde și de categoria solicitantului, activitate, investiție, localizare și stadiul oficial al apelului."
+        },
+        {
+          "question": "Când este necesar un SF sau DALI?",
+          "answer": "Necesitatea și forma documentației tehnico-economice depind de tipul investiției și de cerințele apelului. Verificarea trebuie făcută înainte de comandarea documentației."
+        },
+        {
+          "question": "Un calendar regional estimativ garantează lansarea?",
+          "answer": "Nu. Calendarul este un reper de planificare și nu înlocuiește ghidul aprobat, ordinul de lansare și intervalul oficial de depunere."
+        }
+      ],
+      "relatedLinks": [
+        { "href": "/por-adr-nord-est", "label": "Programul Regional Nord-Est" },
+        { "href": "/eligibilitate-fonduri-europene", "label": "Ghid de eligibilitate" },
+        { "href": "/acte-necesare-fonduri-europene-nerambursabile", "label": "Ghid pentru documente" }
+      ]
+    },
+    {
+      "id": "digitalizare-inovare",
+      "route": "/fonduri-europene-digitalizare",
+      "label": "Digitalizare & inovare",
+      "h1": "Programe pentru digitalizare și inovare",
+      "intro": "Acest hub ajută IMM-urile și organizațiile care analizează investiții în software, echipamente digitale, securitate, cercetare sau inovare. Programele pot fi filtrate după solicitant, acoperire, tipul investiției și statusul documentat. O listă de achiziții nu dovedește singură transformarea digitală: pagina programului trebuie folosită pentru a verifica obiectivele, activitatea eligibilă, indicatorii și versiunea oficială a sursei.",
+      "howToChoose": [
+        "Definește problema operațională și rezultatul măsurabil înainte de lista de echipamente sau licențe.",
+        "Verifică activitatea eligibilă, dimensiunea întreprinderii și legătura investiției cu fluxurile existente.",
+        "Folosește numai condițiile și intervalele susținute de documentul oficial indicat pe card."
+      ],
+      "faqs": [
+        {
+          "question": "Este eligibil orice software cumpărat de un IMM?",
+          "answer": "Nu. Soluția trebuie să fie permisă de apel, necesară obiectivelor proiectului și justificată prin activitatea, fluxurile și indicatorii solicitantului."
+        },
+        {
+          "question": "Pot include echipamente fără un plan de digitalizare?",
+          "answer": "Doar dacă ghidul permite și investiția este justificată. Echipamentele izolate, fără legătură cu procesele și rezultatele proiectului, pot fi dificil de susținut."
+        },
+        {
+          "question": "Ce diferență este între digitalizare și inovare?",
+          "answer": "Digitalizarea urmărește de regulă procese, date și tehnologii aplicate, iar inovarea poate include dezvoltare, cercetare sau rezultate noi. Încadrarea exactă aparține programului."
+        },
+        {
+          "question": "Pot reutiliza valorile unui apel de digitalizare în alt program?",
+          "answer": "Nu. Bugetele, procentele și cheltuielile trebuie legate de aceeași versiune oficială a documentului aplicabil programului analizat."
+        },
+        {
+          "question": "Ce pregătesc înainte de alegerea furnizorilor?",
+          "answer": "Descrie procesele actuale, nevoile, utilizatorii, integrarea, securitatea și rezultatele urmărite. Cerințele furnizorilor se clarifică după verificarea eligibilității investiției."
+        }
+      ],
+      "relatedLinks": [
+        { "href": "/digitalizare-imm", "label": "Digitalizare IMM" },
+        { "href": "/cheltuieli-eligibile-digitalizare-imm", "label": "Cheltuieli pentru digitalizare" },
+        { "href": "/instrumente", "label": "Instrumente de verificare" }
+      ]
+    },
+    {
+      "id": "energie",
+      "route": "/finantari-panouri-fotovoltaice",
+      "label": "Energie",
+      "h1": "Finanțări pentru energie și eficiență energetică",
+      "intro": "Hub-ul este pentru companii, ferme și instituții care evaluează investiții în autoconsum, producție regenerabilă, eficiență energetică sau mobilitate cu emisii reduse. Filtrele folosesc clasificarea și statusul din registrul verificat. Înainte de selectarea programului trebuie corelate consumul, amplasamentul, soluția tehnică, avizele, racordarea și capacitatea financiară; o ofertă comercială nu înlocuiește condițiile apelului oficial.",
+      "howToChoose": [
+        "Separă autoconsumul de producția pentru vânzare și documentează profilul real de consum.",
+        "Verifică amplasamentul, drepturile, racordarea și avizele înainte de dimensionarea finală.",
+        "Compară eligibilitatea tehnică și financiară numai în versiunea oficială indicată."
+      ],
+      "faqs": [
+        {
+          "question": "Autoconsumul și producția pentru vânzare folosesc aceleași programe?",
+          "answer": "Nu neapărat. Obiectivul, solicitantul, dimensionarea și regulile privind energia produsă diferă, iar încadrarea trebuie confirmată în documentul programului."
+        },
+        {
+          "question": "Pot porni proiectul doar de la o ofertă de panouri?",
+          "answer": "Nu este suficient. Sunt necesare date despre consum, amplasament, racordare, soluție tehnică, activitate și cerințele programului înainte de bugetul final."
+        },
+        {
+          "question": "Când verific dreptul asupra amplasamentului?",
+          "answer": "De la început. Forma și durata dreptului trebuie să acopere cerințele programului și obligațiile proiectului, nu doar perioada de instalare."
+        },
+        {
+          "question": "O economie estimată dovedește eligibilitatea investiției?",
+          "answer": "Nu. Estimarea economică ajută decizia, dar eligibilitatea depinde de solicitant, cheltuieli, parametri tehnici, documente și regulile apelului."
+        },
+        {
+          "question": "Pot combina eficiența energetică și producția regenerabilă?",
+          "answer": "Numai dacă programul permite, obiectivele sunt coerente și fiecare componentă este justificată tehnic și financiar în documentația solicitată."
+        }
+      ],
+      "relatedLinks": [
+        { "href": "/fondul-de-modernizare", "label": "Fondul pentru Modernizare" },
+        { "href": "/afir-autoconsum-agroalimentar", "label": "Autoconsum agroalimentar" },
+        { "href": "/cum-se-calculeaza-cofinantarea-fonduri-europene", "label": "Ghid despre contribuția proprie" }
+      ]
+    },
+    {
+      "id": "antreprenoriat-gal",
+      "route": "/fonduri-europene-imm",
+      "label": "Antreprenoriat & GAL",
+      "h1": "Programe pentru antreprenoriat și inițiative GAL",
+      "intro": "Acest hub este pentru antreprenori, microîntreprinderi și inițiative locale care compară programe de pornire, dezvoltare sau finanțare prin GAL. Filtrele arată numai programele publicabile și permit separarea solicitantului, teritoriului, investiției și statusului. Alegerea nu se face după denumirea programului: trebuie verificate vechimea firmei, activitatea, localizarea, strategia GAL, contribuția proprie și documentul oficial curent.",
+      "howToChoose": [
+        "Stabilește dacă proiectul pornește o activitate, dezvoltă o firmă existentă sau răspunde unei strategii GAL.",
+        "Verifică localizarea, vechimea solicitantului, activitatea și condițiile de menținere.",
+        "Nu confunda anunțul, calendarul estimativ și ghidul aprobat cu un apel deschis."
+      ],
+      "faqs": [
+        {
+          "question": "Un program pentru antreprenori este automat potrivit unei firme noi?",
+          "answer": "Nu. Definiția solicitantului, vechimea, activitatea, regiunea și condițiile programului trebuie verificate înainte de construirea planului și bugetului."
+        },
+        {
+          "question": "Cum aflu dacă localitatea mea aparține unui GAL?",
+          "answer": "Identifică Grupul de Acțiune Locală și verifică lista oficială a localităților din teritoriu, strategia locală și apelul publicat de acel GAL."
+        },
+        {
+          "question": "Toate apelurile GAL au aceleași condiții?",
+          "answer": "Nu. Fiecare apel derivă din strategia locală și poate avea solicitanți, investiții, criterii și calendare proprii, în limitele cadrului aplicabil."
+        },
+        {
+          "question": "Pot stabili bugetul înainte de publicarea ghidului?",
+          "answer": "Poți pregăti un scenariu orientativ, dar valorile și cheltuielile nu trebuie prezentate ca finale până când sunt susținute de documentul oficial aplicabil."
+        },
+        {
+          "question": "Ce verific înainte de a înființa o firmă pentru proiect?",
+          "answer": "Verifică dacă programul acceptă profilul propus, momentul înființării, activitatea, localizarea și obligațiile. O decizie juridică prematură poate restrânge opțiunile."
+        }
+      ],
+      "relatedLinks": [
+        { "href": "/apeluri-gal", "label": "Apeluri GAL" },
+        { "href": "/start-up-nation-2026", "label": "Start-Up Nation" },
+        { "href": "/cum-se-calculeaza-cofinantarea-fonduri-europene", "label": "Ghid despre contribuția proprie" },
+        { "href": "/consultant-fonduri-europene-imm", "label": "Consultanță pentru IMM" },
+        { "href": "/fonduri-europene-caen/0111-culturi-cereale", "label": "Repere CAEN pentru culturi agricole" },
+        { "href": "/fonduri-europene-caen/4321-instalatii-electrice", "label": "Repere CAEN pentru instalații electrice" },
+        { "href": "/fonduri-europene-caen/5610-restaurante", "label": "Repere CAEN pentru restaurante" },
+        { "href": "/fonduri-europene-caen/6201-dezvoltare-software", "label": "Repere CAEN pentru software" }
+      ]
+    }
+  ]
+}

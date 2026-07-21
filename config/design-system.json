@@ -1,0 +1,101 @@
+{
+  "version": "p1.07-v1",
+  "name": "FABER visual system",
+  "scopeAttribute": "data-design-system=\"p1_07\"",
+  "rolloutRoutes": [
+    "/",
+    "/contact",
+    "/afir-autoconsum-agroalimentar"
+  ],
+  "colors": {
+    "background": "#f6f3ed",
+    "surface": "#ffffff",
+    "surfaceMuted": "#eef2f6",
+    "text": "#18243a",
+    "muted": "#536176",
+    "border": "#7b899c",
+    "navy": "#0d1f3c",
+    "accent": "#b84716",
+    "accentHover": "#91360f",
+    "success": "#12603a",
+    "successSurface": "#e7f5ed",
+    "warning": "#6b4300",
+    "warningSurface": "#fff2cc",
+    "closed": "#455163",
+    "closedSurface": "#edf0f4",
+    "error": "#a61b1b",
+    "errorSurface": "#feecec",
+    "focus": "#0b63ce",
+    "focusOnDark": "#ffd166",
+    "white": "#ffffff"
+  },
+  "typography": {
+    "family": "Inter, -apple-system, BlinkMacSystemFont, \"Segoe UI\", Arial, sans-serif",
+    "bodyPx": 17,
+    "lineHeight": 1.65,
+    "h1": "clamp(2.35rem, 5vw, 3.5rem)",
+    "h2": "clamp(1.8rem, 3.2vw, 2.5rem)",
+    "h3": "clamp(1.2rem, 1.7vw, 1.45rem)",
+    "measure": "68ch"
+  },
+  "spacing": {
+    "1": "0.25rem",
+    "2": "0.5rem",
+    "3": "0.75rem",
+    "4": "1rem",
+    "6": "1.5rem",
+    "8": "2rem",
+    "12": "3rem",
+    "16": "4rem",
+    "24": "6rem"
+  },
+  "radius": {
+    "small": "0.5rem",
+    "medium": "0.75rem",
+    "large": "1.125rem",
+    "pill": "999px"
+  },
+  "shadow": {
+    "small": "0 2px 12px rgba(13, 31, 60, 0.08)",
+    "medium": "0 12px 32px rgba(13, 31, 60, 0.12)",
+    "large": "0 24px 56px rgba(13, 31, 60, 0.16)"
+  },
+  "containers": {
+    "text": "68ch",
+    "content": "47.5rem",
+    "wide": "73.75rem",
+    "full": "80rem"
+  },
+  "motion": {
+    "fast": "140ms",
+    "standard": "200ms",
+    "easing": "cubic-bezier(0.2, 0, 0, 1)"
+  },
+  "targets": {
+    "minimumPx": 24,
+    "mobilePreferredPx": 44
+  },
+  "contrastChecks": [
+    { "foreground": "text", "background": "background", "minimum": 4.5, "use": "text normal" },
+    { "foreground": "muted", "background": "background", "minimum": 4.5, "use": "text secundar" },
+    { "foreground": "border", "background": "surface", "minimum": 3, "use": "contur componentă" },
+    { "foreground": "white", "background": "accent", "minimum": 4.5, "use": "CTA primar" },
+    { "foreground": "white", "background": "accentHover", "minimum": 4.5, "use": "CTA hover/active" },
+    { "foreground": "success", "background": "successSurface", "minimum": 4.5, "use": "status apel deschis" },
+    { "foreground": "warning", "background": "warningSurface", "minimum": 4.5, "use": "status consultare/calendar" },
+    { "foreground": "closed", "background": "closedSurface", "minimum": 4.5, "use": "status închis/arhivat" },
+    { "foreground": "error", "background": "errorSurface", "minimum": 4.5, "use": "eroare" },
+    { "foreground": "focus", "background": "surface", "minimum": 3, "use": "focus pe fundal deschis" },
+    { "foreground": "focusOnDark", "background": "navy", "minimum": 3, "use": "focus pe fundal închis" },
+    { "foreground": "white", "background": "navy", "minimum": 4.5, "use": "text pe fundal închis" },
+    { "foreground": "accent", "background": "background", "minimum": 4.5, "use": "link/accent scurt" }
+  ],
+  "statusSymbols": {
+    "apel_deschis": "●",
+    "ghid_aprobat_nedeschis": "◐",
+    "consultare_publica": "◐",
+    "calendar_estimativ": "◐",
+    "apel_inchis": "○",
+    "arhivat": "○"
+  }
+}

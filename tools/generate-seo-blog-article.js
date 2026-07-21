@@ -13,6 +13,7 @@ const REPORT_DIR = path.join(ROOT, "reports");
 const {
   SITE,
   buildPageMetadata,
+  breadcrumbItemsForPath,
   breadcrumbSchema,
   blogPostingSchema,
   canonicalUrl,
@@ -23,6 +24,7 @@ const {
   webPageSchema,
   websiteSchema
 } = require("./schema-helpers");
+const { renderBreadcrumb: renderManagedBreadcrumb } = require("./sync-breadcrumbs");
 const WEB_ERROR =
   "Nu pot genera articol publicabil: lipsește accesul web necesar pentru verificarea surselor oficiale, a SERP-urilor și a semnalelor AI Search.";
 const ANALYTICS_EVENTS_SCRIPT = `  <script src="/assets/analytics-events.js" defer></script>`;
@@ -1280,6 +1282,7 @@ function buildArticle(config, research, sourceText, route, internalLinks) {
   const officialLinks = officialSources.slice(0, 4);
   const faq = faqItems(config);
   const readTime = 8;
+  const articleH1 = `${keyword}: ghid practic pentru ${program}`;
 
   const internalLinkHtml = internalLinks
     .map((link) => `<a href="${esc(link)}">${esc(anchorFor(link))}</a>`)
@@ -1323,11 +1326,7 @@ function buildArticle(config, research, sourceText, route, internalLinks) {
   });
   pageSchema.mainEntity = { "@id": `${canonical}#blogposting` };
 
-  const breadcrumbSchemaNode = breadcrumbSchema([
-    { name: "Acasă", item: `${SITE}/` },
-    { name: "Blog", item: `${SITE}/blog` },
-    { name: metadata.title, item: canonical }
-  ]);
+  const breadcrumbSchemaNode = breadcrumbSchema(breadcrumbItemsForPath(route, articleH1));
 
   const articleSchemas = [organizationSchema(), websiteSchema(), pageSchema, blogPosting, faqSchema, breadcrumbSchemaNode].filter(Boolean);
   return `<!DOCTYPE html>
@@ -1359,12 +1358,12 @@ ${ANALYTICS_EVENTS_SCRIPT}
 <body>
   ${GLOBAL_HEADER}
 
-  <div class="breadcrumb"><a href="/">Acasă</a> / <a href="/blog">Blog</a> / ${esc(config.titleSeo)}</div>
+  ${renderManagedBreadcrumb(route, articleH1)}
 
   <header class="post-hero">
     <span class="post-category">${esc(config.categorieBlog)}</span>
     <span class="post-icon" aria-hidden="true">${esc(config.icon)}</span>
-    <h1 class="post-title">${esc(keyword)}: ghid practic pentru ${esc(program)}</h1>
+    <h1 class="post-title">${esc(articleH1)}</h1>
     <p class="post-excerpt">${esc(config.metaDescription)}</p>
     <div class="post-meta">
       <span>📅 ${esc(formatRoDate(config.dataPublicarii))}</span>

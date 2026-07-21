@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-07-21",
+  "home": {
+    "route": "/",
+    "label": "Acasă"
+  },
+  "sections": {
+    "program": {
+      "route": "/fonduri-europene",
+      "parentLabel": "Programe"
+    },
+    "guide": {
+      "route": "/ghiduri",
+      "parentLabel": "Ghiduri"
+    },
+    "service": {
+      "route": "/consultanta-fonduri-europene",
+      "parentLabel": "Servicii"
+    },
+    "instrument": {
+      "route": "/instrumente",
+      "parentLabel": "Instrumente"
+    },
+    "about": {
+      "route": "/despre-faber",
+      "parentLabel": "Despre FABER"
+    }
+  },
+  "parents": {
+    "/fonduri-europene": "/",
+    "/afir": "/fonduri-europene",
+    "/fonduri-regionale": "/fonduri-europene",
+    "/fonduri-europene-digitalizare": "/fonduri-europene",
+    "/finantari-panouri-fotovoltaice": "/fonduri-europene",
+    "/fonduri-europene-imm": "/fonduri-europene",
+    "/fonduri-europene-agricultura": "/fonduri-europene",
+    "/ghiduri": "/",
+    "/resurse": "/ghiduri",
+    "/resurse-utile": "/ghiduri",
+    "/blog": "/ghiduri",
+    "/consultanta-fonduri-europene": "/",
+    "/instrumente": "/",
+    "/despre-faber": "/",
+    "/metodologie-verificare-eligibilitate": "/despre-faber",
+    "/studii-de-caz-fonduri-europene": "/despre-faber",
+    "/contact": "/"
+  },
+  "labels": {
+    "/fonduri-europene": "Programe",
+    "/afir": "AFIR & agricultură",
+    "/fonduri-regionale": "Regional / ADR",
+    "/fonduri-europene-digitalizare": "Digitalizare & inovare",
+    "/finantari-panouri-fotovoltaice": "Energie",
+    "/fonduri-europene-imm": "Antreprenoriat & GAL",
+    "/fonduri-europene-agricultura": "Agricultură",
+    "/ghiduri": "Ghiduri",
+    "/resurse": "Resurse",
+    "/resurse-utile": "Resurse utile",
+    "/blog": "Ghiduri și articole",
+    "/consultanta-fonduri-europene": "Consultanță fonduri europene",
+    "/instrumente": "Instrumente",
+    "/despre-faber": "Despre FABER",
+    "/metodologie-verificare-eligibilitate": "Metodologie",
+    "/studii-de-caz-fonduri-europene": "Studii de caz",
+    "/eligibilitate-fonduri-europene": "Eligibilitate fonduri europene",
+    "/verificare-eligibilitate-fonduri-europene": "Verificare eligibilitate",
+    "/dr12-afir": "DR 12",
+    "/dr14": "DR 14",
+    "/contact": "Contact",
+    "/politica-de-confidentialitate": "Politica de confidențialitate",
+    "/termeni-si-conditii": "Termeni și condiții"
+  },
+  "typeParents": {
+    "program": "/fonduri-europene",
+    "ghid": "/ghiduri",
+    "întrebare": "/ghiduri",
+    "serviciu": "/consultanta-fonduri-europene",
+    "instrument": "/instrumente",
+    "studiu_de_caz": "/despre-faber",
+    "legal": "/",
+    "core": "/"
+  }
+}

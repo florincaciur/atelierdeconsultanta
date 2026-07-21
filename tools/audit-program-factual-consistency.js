@@ -134,24 +134,9 @@ function auditNarrativeClaims(issues, program, $) {
 
 function auditHeader(issues, programs, header) {
   const $ = cheerio.load(header, { decodeEntities: false }, false);
-  for (const program of programs) {
-    const desktop = $(`#dropdownPanel a[href="${program.route}"]`);
-    const mobile = $(`#mobileMenu a[href="${program.route}"]`);
-    if (!desktop.length && !mobile.length) continue;
-    if (desktop.length !== 1 || mobile.length !== 1) {
-      addIssue(issues, program, "error", "navigation-parity", "navbar", "Programul trebuie să apară o singură dată în meniul desktop și o singură dată în meniul mobil.", "desktop=1; mobile=1", `desktop=${desktop.length}; mobile=${mobile.length}`);
-      continue;
-    }
-    compare(issues, program, "identity-mismatch", "navbar-desktop", program.id, desktop.attr("data-program-id"), "Navbarul desktop nu indică programul canonic.");
-    compare(issues, program, "status-mismatch", "navbar-desktop", program.status, desktop.attr("data-program-status"), "Statusul din navbar diferă de registru.");
-    compare(issues, program, "label-mismatch", "navbar-desktop", program.statusLabel, desktop.attr("data-status-label"), "Eticheta statusului din navbar diferă de registru.");
-    compare(issues, program, "freshness-mismatch", "navbar-desktop", program.verifiedAt, desktop.attr("data-verified-at"), "Data de verificare din navbar diferă de registru.");
-    compare(issues, program, "label-mismatch", "navbar-desktop", program.statusLabel, desktop.find(".d-label").text(), "Eticheta secundară din navbar diferă de registru.");
-    compare(issues, program, "label-mismatch", "navbar-mobile", program.shortName, mobile.text(), "Eticheta mobilă diferă de registru.");
-    const menuFinancial = financialClaimTokens(desktop.find(".d-label").text());
-    if (program.status === "consultare_publica" && menuFinancial.size) {
-      addIssue(issues, program, "error", "consultation-value-in-navbar", "navbar-desktop", "Navbarul nu trebuie să publice valori consultative.", "fără sume sau procente", [...menuFinancial].join("; "));
-    }
+  const factualNavigation = $("#navbar, #mobileMenu").find("[data-program-status], [data-status-label], [data-verified-at], [data-source-url]");
+  if (factualNavigation.length && programs.length) {
+    addIssue(issues, programs[0], "error", "program-fact-in-navbar", "navbar", "Navigarea P1.02 trebuie să indice numai familii de programe; statusul, data și sursa rămân în registru și pe pagina programului.", "zero atribute factuale", String(factualNavigation.length));
   }
 }
 

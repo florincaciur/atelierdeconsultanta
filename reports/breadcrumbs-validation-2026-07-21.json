@@ -1,0 +1,1019 @@
+{
+  "schemaVersion": 1,
+  "generatedFor": "P1.04",
+  "generatedAt": "2026-07-21",
+  "scope": "URL-uri canonice/indexabile din sitemap.xml",
+  "summary": {
+    "routeCount": 91,
+    "pass": 91,
+    "fail": 0,
+    "internalWithBreadcrumb": 90,
+    "maxDepth": 4
+  },
+  "results": [
+    {
+      "route": "/afir-autoconsum-agroalimentar",
+      "file": "afir-autoconsum-agroalimentar.html",
+      "status": "PASS",
+      "depth": 4,
+      "intermediates": [
+        "/",
+        "/fonduri-europene",
+        "/afir"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/apeluri-gal",
+      "file": "apeluri-gal/index.html",
+      "status": "PASS",
+      "depth": 4,
+      "intermediates": [
+        "/",
+        "/fonduri-europene",
+        "/fonduri-europene-imm"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/autoconsum-public-fotovoltaice-institutii-publice",
+      "file": "autoconsum-public-fotovoltaice-institutii-publice.html",
+      "status": "PASS",
+      "depth": 4,
+      "intermediates": [
+        "/",
+        "/fonduri-europene",
+        "/finantari-panouri-fotovoltaice"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/e-move",
+      "file": "e-move/index.html",
+      "status": "PASS",
+      "depth": 4,
+      "intermediates": [
+        "/",
+        "/fonduri-europene",
+        "/finantari-panouri-fotovoltaice"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/femeia-antreprenor-2026",
+      "file": "femeia-antreprenor-2026.html",
+      "status": "PASS",
+      "depth": 4,
+      "intermediates": [
+        "/",
+        "/fonduri-europene",
+        "/fonduri-europene-imm"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum",
+      "file": "fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum/index.html",
+      "status": "PASS",
+      "depth": 4,
+      "intermediates": [
+        "/",
+        "/fonduri-europene",
+        "/finantari-panouri-fotovoltaice"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/fondul-modernizare-energie-regenerabila-2026",
+      "file": "fondul-modernizare-energie-regenerabila-2026.html",
+      "status": "PASS",
+      "depth": 4,
+      "intermediates": [
+        "/",
+        "/fonduri-europene",
+        "/finantari-panouri-fotovoltaice"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/fonduri-regionale",
+      "file": "fonduri-regionale/index.html",
+      "status": "PASS",
+      "depth": 3,
+      "intermediates": [
+        "/",
+        "/fonduri-europene"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/gal-afir",
+      "file": "gal-afir/index.html",
+      "status": "PASS",
+      "depth": 4,
+      "intermediates": [
+        "/",
+        "/fonduri-europene",
+        "/fonduri-europene-imm"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/investitii-modernizarea-microintreprinderilor-apel-2",
+      "file": "investitii-modernizarea-microintreprinderilor-apel-2.html",
+      "status": "PASS",
+      "depth": 4,
+      "intermediates": [
+        "/",
+        "/fonduri-europene",
+        "/fonduri-regionale"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/pocidif-21",
+      "file": "pocidif-21/index.html",
+      "status": "PASS",
+      "depth": 4,
+      "intermediates": [
+        "/",
+        "/fonduri-europene",
+        "/fonduri-europene-digitalizare"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/por-adr-nord-est",
+      "file": "por-adr-nord-est/index.html",
+      "status": "PASS",
+      "depth": 4,
+      "intermediates": [
+        "/",
+        "/fonduri-europene",
+        "/fonduri-regionale"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/start-up-nation-2026",
+      "file": "start-up-nation-2026.html",
+      "status": "PASS",
+      "depth": 4,
+      "intermediates": [
+        "/",
+        "/fonduri-europene",
+        "/fonduri-europene-imm"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/blog",
+      "file": "blog/index.html",
+      "status": "PASS",
+      "depth": 3,
+      "intermediates": [
+        "/",
+        "/ghiduri"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/metodologie-verificare-eligibilitate",
+      "file": "metodologie-verificare-eligibilitate/index.html",
+      "status": "PASS",
+      "depth": 3,
+      "intermediates": [
+        "/",
+        "/despre-faber"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/surse-oficiale-fonduri-europene",
+      "file": "surse-oficiale-fonduri-europene/index.html",
+      "status": "PASS",
+      "depth": 3,
+      "intermediates": [
+        "/",
+        "/ghiduri"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/acte-necesare-fonduri-europene-nerambursabile",
+      "file": "acte-necesare-fonduri-europene-nerambursabile/index.html",
+      "status": "PASS",
+      "depth": 3,
+      "intermediates": [
+        "/",
+        "/ghiduri"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/blog-afir-fotovoltaice-ferme-2026",
+      "file": "blog-afir-fotovoltaice-ferme-2026.html",
+      "status": "PASS",
+      "depth": 3,
+      "intermediates": [
+        "/",
+        "/ghiduri"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/cat-costa-consultanta-fonduri-europene-ghid",
+      "file": "cat-costa-consultanta-fonduri-europene-ghid.html",
+      "status": "PASS",
+      "depth": 3,
+      "intermediates": [
+        "/",
+        "/ghiduri"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/cheltuieli-eligibile-digitalizare-imm",
+      "file": "cheltuieli-eligibile-digitalizare-imm.html",
+      "status": "PASS",
+      "depth": 3,
+      "intermediates": [
+        "/",
+        "/ghiduri"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/cheltuieli-eligibile-pocidif-21",
+      "file": "cheltuieli-eligibile-pocidif-21/index.html",
+      "status": "PASS",
+      "depth": 3,
+      "intermediates": [
+        "/",
+        "/ghiduri"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/cod-caen-start-up-nation-2026",
+      "file": "cod-caen-start-up-nation-2026/index.html",
+      "status": "PASS",
+      "depth": 3,
+      "intermediates": [
+        "/",
+        "/ghiduri"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/documente-punctaj-pocidif-21",
+      "file": "documente-punctaj-pocidif-21/index.html",
+      "status": "PASS",
+      "depth": 3,
+      "intermediates": [
+        "/",
+        "/ghiduri"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/femeia-antreprenor-2026-conditii-idei-afaceri",
+      "file": "femeia-antreprenor-2026-conditii-idei-afaceri.html",
+      "status": "PASS",
+      "depth": 3,
+      "intermediates": [
+        "/",
+        "/ghiduri"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/ghiduri",
+      "file": "ghiduri/index.html",
+      "status": "PASS",
+      "depth": 2,
+      "intermediates": [
+        "/"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/glosar-fonduri-europene",
+      "file": "glosar-fonduri-europene/index.html",
+      "status": "PASS",
+      "depth": 3,
+      "intermediates": [
+        "/",
+        "/ghiduri"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/greseli-fonduri-europene",
+      "file": "greseli-fonduri-europene/index.html",
+      "status": "PASS",
+      "depth": 3,
+      "intermediates": [
+        "/",
+        "/ghiduri"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/intrebari-frecvente",
+      "file": "intrebari-frecvente/index.html",
+      "status": "PASS",
+      "depth": 4,
+      "intermediates": [
+        "/",
+        "/ghiduri",
+        "/resurse"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm",
+      "file": "intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm/index.html",
+      "status": "PASS",
+      "depth": 3,
+      "intermediates": [
+        "/",
+        "/ghiduri"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/intrebari/ce-documente-sunt-necesare-pentru-dr12",
+      "file": "intrebari/ce-documente-sunt-necesare-pentru-dr12/index.html",
+      "status": "PASS",
+      "depth": 3,
+      "intermediates": [
+        "/",
+        "/ghiduri"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene",
+      "file": "intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene/index.html",
+      "status": "PASS",
+      "depth": 3,
+      "intermediates": [
+        "/",
+        "/ghiduri"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/pnrr-digitalizare-imm-cheltuieli-eligibile",
+      "file": "pnrr-digitalizare-imm-cheltuieli-eligibile.html",
+      "status": "PASS",
+      "depth": 3,
+      "intermediates": [
+        "/",
+        "/ghiduri"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/programul-tranzitie-justa-intrebari-documente",
+      "file": "programul-tranzitie-justa-intrebari-documente/index.html",
+      "status": "PASS",
+      "depth": 3,
+      "intermediates": [
+        "/",
+        "/ghiduri"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/resurse",
+      "file": "resurse/index.html",
+      "status": "PASS",
+      "depth": 3,
+      "intermediates": [
+        "/",
+        "/ghiduri"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/resurse-utile",
+      "file": "resurse-utile/index.html",
+      "status": "PASS",
+      "depth": 3,
+      "intermediates": [
+        "/",
+        "/ghiduri"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/start-up-nation-2026-cheltuieli-eligibile",
+      "file": "start-up-nation-2026-cheltuieli-eligibile/index.html",
+      "status": "PASS",
+      "depth": 3,
+      "intermediates": [
+        "/",
+        "/ghiduri"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/start-up-nation-2026-conditii",
+      "file": "start-up-nation-2026-conditii/index.html",
+      "status": "PASS",
+      "depth": 3,
+      "intermediates": [
+        "/",
+        "/ghiduri"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/start-up-nation-2026-idei-afaceri",
+      "file": "start-up-nation-2026-idei-afaceri/index.html",
+      "status": "PASS",
+      "depth": 3,
+      "intermediates": [
+        "/",
+        "/ghiduri"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/start-up-nation-2026-plan-de-afaceri",
+      "file": "start-up-nation-2026-plan-de-afaceri/index.html",
+      "status": "PASS",
+      "depth": 3,
+      "intermediates": [
+        "/",
+        "/consultanta-fonduri-europene"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/studii-de-caz-fonduri-europene",
+      "file": "studii-de-caz-fonduri-europene/index.html",
+      "status": "PASS",
+      "depth": 3,
+      "intermediates": [
+        "/",
+        "/despre-faber"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/termeni-si-conditii",
+      "file": "termeni-si-conditii.html",
+      "status": "PASS",
+      "depth": 2,
+      "intermediates": [
+        "/"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/webinarii",
+      "file": "webinarii/index.html",
+      "status": "PASS",
+      "depth": 4,
+      "intermediates": [
+        "/",
+        "/ghiduri",
+        "/resurse"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/",
+      "file": "index.html",
+      "status": "PASS",
+      "depth": 0,
+      "intermediates": [],
+      "issues": []
+    },
+    {
+      "route": "/consultanta-fonduri-europene",
+      "file": "consultanta-fonduri-europene/index.html",
+      "status": "PASS",
+      "depth": 2,
+      "intermediates": [
+        "/"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/fonduri-europene",
+      "file": "fonduri-europene/index.html",
+      "status": "PASS",
+      "depth": 2,
+      "intermediates": [
+        "/"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/despre-faber",
+      "file": "despre-faber/index.html",
+      "status": "PASS",
+      "depth": 2,
+      "intermediates": [
+        "/"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/afir",
+      "file": "afir/index.html",
+      "status": "PASS",
+      "depth": 3,
+      "intermediates": [
+        "/",
+        "/fonduri-europene"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/calculator-soc",
+      "file": "calculator-soc.html",
+      "status": "PASS",
+      "depth": 3,
+      "intermediates": [
+        "/",
+        "/instrumente"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/calendar-fonduri-europene",
+      "file": "calendar-fonduri-europene/index.html",
+      "status": "PASS",
+      "depth": 3,
+      "intermediates": [
+        "/",
+        "/instrumente"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/cand-merita-consultant-fonduri-europene",
+      "file": "cand-merita-consultant-fonduri-europene.html",
+      "status": "PASS",
+      "depth": 3,
+      "intermediates": [
+        "/",
+        "/consultanta-fonduri-europene"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/cat-costa-consultanta-fonduri-europene",
+      "file": "cat-costa-consultanta-fonduri-europene/index.html",
+      "status": "PASS",
+      "depth": 3,
+      "intermediates": [
+        "/",
+        "/consultanta-fonduri-europene"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/ce-acte-sunt-necesare-fonduri-europene",
+      "file": "ce-acte-sunt-necesare-fonduri-europene.html",
+      "status": "PASS",
+      "depth": 3,
+      "intermediates": [
+        "/",
+        "/ghiduri"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/consultant-fonduri-europene-imm",
+      "file": "consultant-fonduri-europene-imm/index.html",
+      "status": "PASS",
+      "depth": 3,
+      "intermediates": [
+        "/",
+        "/consultanta-fonduri-europene"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/consultanta-afir",
+      "file": "consultanta-afir/index.html",
+      "status": "PASS",
+      "depth": 3,
+      "intermediates": [
+        "/",
+        "/consultanta-fonduri-europene"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/consultanta-fonduri-europene-bucuresti",
+      "file": "consultanta-fonduri-europene-bucuresti/index.html",
+      "status": "PASS",
+      "depth": 3,
+      "intermediates": [
+        "/",
+        "/consultanta-fonduri-europene"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/consultanta-pnrr-digitalizare",
+      "file": "consultanta-pnrr-digitalizare/index.html",
+      "status": "PASS",
+      "depth": 3,
+      "intermediates": [
+        "/",
+        "/consultanta-fonduri-europene"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/consultanta-start-up-nation-2026",
+      "file": "consultanta-start-up-nation-2026/index.html",
+      "status": "PASS",
+      "depth": 3,
+      "intermediates": [
+        "/",
+        "/consultanta-fonduri-europene"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/contact",
+      "file": "contact/index.html",
+      "status": "PASS",
+      "depth": 2,
+      "intermediates": [
+        "/"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/cum-alegi-consultant-fonduri-europene",
+      "file": "cum-alegi-consultant-fonduri-europene/index.html",
+      "status": "PASS",
+      "depth": 3,
+      "intermediates": [
+        "/",
+        "/consultanta-fonduri-europene"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/cum-alegi-programul-potrivit-fonduri-europene-2026",
+      "file": "cum-alegi-programul-potrivit-fonduri-europene-2026.html",
+      "status": "PASS",
+      "depth": 3,
+      "intermediates": [
+        "/",
+        "/ghiduri"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/cum-se-calculeaza-cofinantarea-fonduri-europene",
+      "file": "cum-se-calculeaza-cofinantarea-fonduri-europene.html",
+      "status": "PASS",
+      "depth": 3,
+      "intermediates": [
+        "/",
+        "/ghiduri"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/cum-se-verifica-eligibilitatea-fonduri-europene",
+      "file": "cum-se-verifica-eligibilitatea-fonduri-europene.html",
+      "status": "PASS",
+      "depth": 3,
+      "intermediates": [
+        "/",
+        "/ghiduri"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/digitalizare-imm-erp-crm-cloud",
+      "file": "digitalizare-imm-erp-crm-cloud.html",
+      "status": "PASS",
+      "depth": 3,
+      "intermediates": [
+        "/",
+        "/consultanta-fonduri-europene"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/digitalizare-imm-pnrr",
+      "file": "digitalizare-imm-pnrr/index.html",
+      "status": "PASS",
+      "depth": 3,
+      "intermediates": [
+        "/",
+        "/ghiduri"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/dr12-vs-dr14",
+      "file": "dr12-vs-dr14.html",
+      "status": "PASS",
+      "depth": 3,
+      "intermediates": [
+        "/",
+        "/ghiduri"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/eligibilitate-fonduri-europene",
+      "file": "eligibilitate-fonduri-europene/index.html",
+      "status": "PASS",
+      "depth": 3,
+      "intermediates": [
+        "/",
+        "/ghiduri"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/eligibilitate-pocidif-21",
+      "file": "eligibilitate-pocidif-21/index.html",
+      "status": "PASS",
+      "depth": 3,
+      "intermediates": [
+        "/",
+        "/ghiduri"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/finantari-panouri-fotovoltaice",
+      "file": "finantari-panouri-fotovoltaice/index.html",
+      "status": "PASS",
+      "depth": 3,
+      "intermediates": [
+        "/",
+        "/fonduri-europene"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/firma-consultanta-fonduri-europene",
+      "file": "firma-consultanta-fonduri-europene/index.html",
+      "status": "PASS",
+      "depth": 3,
+      "intermediates": [
+        "/",
+        "/consultanta-fonduri-europene"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/fonduri-europene-agricultura",
+      "file": "fonduri-europene-agricultura/index.html",
+      "status": "PASS",
+      "depth": 3,
+      "intermediates": [
+        "/",
+        "/fonduri-europene"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/fonduri-europene-bucuresti",
+      "file": "fonduri-europene-bucuresti/index.html",
+      "status": "PASS",
+      "depth": 3,
+      "intermediates": [
+        "/",
+        "/ghiduri"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/fonduri-europene-caen/0111-culturi-cereale",
+      "file": "fonduri-europene-caen/0111-culturi-cereale/index.html",
+      "status": "PASS",
+      "depth": 3,
+      "intermediates": [
+        "/",
+        "/ghiduri"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/fonduri-europene-caen/4321-instalatii-electrice",
+      "file": "fonduri-europene-caen/4321-instalatii-electrice/index.html",
+      "status": "PASS",
+      "depth": 3,
+      "intermediates": [
+        "/",
+        "/ghiduri"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/fonduri-europene-caen/5610-restaurante",
+      "file": "fonduri-europene-caen/5610-restaurante/index.html",
+      "status": "PASS",
+      "depth": 3,
+      "intermediates": [
+        "/",
+        "/ghiduri"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/fonduri-europene-caen/6201-dezvoltare-software",
+      "file": "fonduri-europene-caen/6201-dezvoltare-software/index.html",
+      "status": "PASS",
+      "depth": 3,
+      "intermediates": [
+        "/",
+        "/ghiduri"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/fonduri-europene-digitalizare",
+      "file": "fonduri-europene-digitalizare/index.html",
+      "status": "PASS",
+      "depth": 3,
+      "intermediates": [
+        "/",
+        "/fonduri-europene"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/fonduri-europene-femei-antreprenor",
+      "file": "fonduri-europene-femei-antreprenor/index.html",
+      "status": "PASS",
+      "depth": 3,
+      "intermediates": [
+        "/",
+        "/fonduri-europene"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/fonduri-europene-imm",
+      "file": "fonduri-europene-imm/index.html",
+      "status": "PASS",
+      "depth": 3,
+      "intermediates": [
+        "/",
+        "/fonduri-europene"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/fonduri-europene-nerambursabile-2026",
+      "file": "fonduri-europene-nerambursabile-2026/index.html",
+      "status": "PASS",
+      "depth": 3,
+      "intermediates": [
+        "/",
+        "/ghiduri"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/fonduri-europene-nord-est",
+      "file": "fonduri-europene-nord-est/index.html",
+      "status": "PASS",
+      "depth": 3,
+      "intermediates": [
+        "/",
+        "/ghiduri"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/fonduri-nerambursabile",
+      "file": "fonduri-nerambursabile/index.html",
+      "status": "PASS",
+      "depth": 3,
+      "intermediates": [
+        "/",
+        "/ghiduri"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/fonduri-pentru-ferme",
+      "file": "fonduri-pentru-ferme/index.html",
+      "status": "PASS",
+      "depth": 3,
+      "intermediates": [
+        "/",
+        "/fonduri-europene"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/fonduri-pentru-utilaje-agricole",
+      "file": "fonduri-pentru-utilaje-agricole/index.html",
+      "status": "PASS",
+      "depth": 3,
+      "intermediates": [
+        "/",
+        "/ghiduri"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/idei-afaceri-fonduri-europene",
+      "file": "idei-afaceri-fonduri-europene.html",
+      "status": "PASS",
+      "depth": 3,
+      "intermediates": [
+        "/",
+        "/fonduri-europene"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/instrumente",
+      "file": "instrumente/index.html",
+      "status": "PASS",
+      "depth": 2,
+      "intermediates": [
+        "/"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/management-proiecte-fonduri-europene",
+      "file": "management-proiecte-fonduri-europene/index.html",
+      "status": "PASS",
+      "depth": 3,
+      "intermediates": [
+        "/",
+        "/consultanta-fonduri-europene"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/plan-de-afaceri-fonduri-europene",
+      "file": "plan-de-afaceri-fonduri-europene/index.html",
+      "status": "PASS",
+      "depth": 3,
+      "intermediates": [
+        "/",
+        "/consultanta-fonduri-europene"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/politica-de-confidentialitate",
+      "file": "politica-de-confidentialitate.html",
+      "status": "PASS",
+      "depth": 2,
+      "intermediates": [
+        "/"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/proiectare-fonduri-europene",
+      "file": "proiectare-fonduri-europene/index.html",
+      "status": "PASS",
+      "depth": 3,
+      "intermediates": [
+        "/",
+        "/consultanta-fonduri-europene"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/studiu-fezabilitate-fonduri-europene",
+      "file": "studiu-fezabilitate-fonduri-europene/index.html",
+      "status": "PASS",
+      "depth": 3,
+      "intermediates": [
+        "/",
+        "/consultanta-fonduri-europene"
+      ],
+      "issues": []
+    },
+    {
+      "route": "/verificare-eligibilitate-fonduri-europene",
+      "file": "verificare-eligibilitate-fonduri-europene/index.html",
+      "status": "PASS",
+      "depth": 3,
+      "intermediates": [
+        "/",
+        "/consultanta-fonduri-europene"
+      ],
+      "issues": []
+    }
+  ]
+}

@@ -53,20 +53,24 @@ function verifyNormalizer() {
   }
 }
 
-function verifyMegaMenuCoverage() {
+function verifyProgramNavigationSeparation() {
   const header = fs.readFileSync(path.join(ROOT, "partials", "global-header.html"), "utf8");
   const $ = cheerio.load(header, { decodeEntities: false }, false);
   const hrefs = $("#dropdownPanel a.dropdown-item").map((_, element) => $(element).attr("href")).get();
-  const expected = new Set(PROGRAM_ROUTES);
+  const navigation = JSON.parse(fs.readFileSync(path.join(ROOT, "config", "main-navigation.json"), "utf8"));
+  const expected = new Set(navigation.primaryDestinations.find((destination) => destination.id === "programe").items.map((item) => item.href));
   const actual = new Set(hrefs.map(normalizeCtaLink));
   for (const href of hrefs) {
     if (href !== normalizeCtaLink(href)) fail("mega-menu", `noncanonical program URL: ${href}`);
   }
   for (const route of expected) {
-    if (!actual.has(route)) fail("mega-menu", `${route} is configured but absent from the program mega-menu`);
+    if (!actual.has(route)) fail("mega-menu", `${route} is configured but absent from the program-family menu`);
   }
   for (const route of actual) {
-    if (!expected.has(route)) fail("mega-menu", `${route} has no synchronized program hero mapping`);
+    if (!expected.has(route)) fail("mega-menu", `${route} is not defined by config/main-navigation.json`);
+  }
+  if ($("#navbar [data-program-status], #mobileMenu [data-program-status], #navbar [data-status-label], #mobileMenu [data-status-label]").length) {
+    fail("mega-menu", "program status data must remain outside navigation");
   }
 }
 
@@ -194,7 +198,9 @@ async function verifyResponsivePages(routes, bannerIndex) {
         const page = await browser.newPage({ viewport });
         try {
           await page.goto(`${baseUrl}${route}/`, { waitUntil: "domcontentloaded" });
-          await page.locator("header.program-hero").waitFor({ state: "visible" });
+          await page.locator("header.program-hero").waitFor({ state: "visible" }).catch((error) => {
+            throw new Error(`${route} la ${viewport.width}px: hero-ul nu devine vizibil (${error.message})`);
+          });
           const result = await page.evaluate(({ expectedImage, mobile }) => {
             const root = document.documentElement;
             const hero = document.querySelector("header.program-hero");
@@ -234,8 +240,9 @@ async function verifyResponsivePages(routes, bannerIndex) {
       }
     }
 
-    const page = await browser.newPage({ viewport: { width: 1440, height: 900 } });
-    try {
+    if (routes.includes("/pro-infra")) {
+      const page = await browser.newPage({ viewport: { width: 1440, height: 900 } });
+      try {
       await page.goto(`${baseUrl}/pro-infra/`, { waitUntil: "domcontentloaded" });
       const signature = await page.locator("header.program-hero").evaluate((hero) => {
         const heroRect = hero.getBoundingClientRect();
@@ -266,8 +273,9 @@ async function verifyResponsivePages(routes, bannerIndex) {
       if (!approximate(signature.iconTop, 70) || !approximate(signature.h1Top, 192.1875) || !approximate(signature.actionsTop, 486.90625) || !approximate(signature.actionsWidth, 421.3125)) {
         fail("/pro-infra", `reference geometry changed: ${JSON.stringify(signature)}`);
       }
-    } finally {
-      await page.close();
+      } finally {
+        await page.close();
+      }
     }
   } finally {
     await browser.close();
@@ -277,8 +285,11 @@ async function verifyResponsivePages(routes, bannerIndex) {
 
 async function main() {
   verifyNormalizer();
-  verifyMegaMenuCoverage();
-  const routes = process.argv.includes("--priority") ? [...PRIORITY_ROUTES] : [...PROGRAM_ROUTES];
+  verifyProgramNavigationSeparation();
+  const registry = JSON.parse(fs.readFileSync(path.join(ROOT, "config", "seo-programs.json"), "utf8"));
+  const publicRoutes = new Set(registry.programs.filter((program) => program.publicationState === "public").map((program) => program.pageUrl));
+  const configuredRoutes = process.argv.includes("--priority") ? [...PRIORITY_ROUTES] : [...PROGRAM_ROUTES];
+  const routes = configuredRoutes.filter((route) => publicRoutes.has(route));
   const bannerIndex = createBannerIndex(loadBanners());
   for (const route of routes) verifyStaticPage(route, bannerIndex);
   verifyGenerator(routes);

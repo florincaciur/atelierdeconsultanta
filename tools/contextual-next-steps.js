@@ -39,8 +39,13 @@ function renderNextStepBlock(slug, config = loadNextStepConfig()) {
     : "next-step-block";
   const links = publicNextStepLinks(page).map((link) => {
     const external = /^https:\/\//u.test(link.href);
+    const relation = link.relation || (/^\/contact(?:[?#]|$)/u.test(link.href) ? "conversion" : "editorial");
+    const conversion = relation === "conversion";
+    const tracking = conversion
+      ? ` data-analytics-event="cta_click" data-analytics-component="contextual_cta" data-analytics-cta-id="${escapeHtml(slug)}_contextual_conversion" data-analytics-target="/contact" data-analytics-cta-view="true" data-analytics-copy-variant="default"`
+      : "";
     return `      <li class="see-also-card">
-        <a href="${escapeHtml(link.href)}"${external ? ' target="_blank" rel="noopener noreferrer"' : ""} data-link-type="next-step" data-analytics-event="next_step_click" data-analytics-target="${escapeHtml(link.href)}" data-analytics-source="${escapeHtml(page.route)}">
+        <a href="${escapeHtml(link.href)}"${external ? ' target="_blank" rel="noopener noreferrer"' : ""} data-link-type="${conversion ? "conversion" : "contextual"}" data-link-relation="${escapeHtml(relation)}"${tracking}>
           <span class="see-also-card-title">${escapeHtml(link.anchor)}</span>
           <span class="see-also-card-text">${escapeHtml(link.explanation)}</span>
         </a>
@@ -85,7 +90,9 @@ function applyContextualNextSteps(html, slug, config = loadNextStepConfig()) {
 
 function syncContextualNextSteps() {
   const config = loadNextStepConfig();
+  const managedProgramRoutes = new Set(loadProgramConfig().programs.map((program) => program.pageUrl));
   for (const [slug, page] of Object.entries(config.pages)) {
+    if (managedProgramRoutes.has(page.route)) continue;
     const program = programForRoute(page.route, loadProgramConfig().programs);
     if (program && !isPublicProgram(program)) continue;
     const file = path.join(ROOT, page.file);

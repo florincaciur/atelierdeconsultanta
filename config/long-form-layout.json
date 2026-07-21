@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "generatedFor": "P1.09",
+  "reportDate": "2026-07-21",
+  "wordThreshold": 1500,
+  "includedTypes": ["program", "ghid"],
+  "forcedRoutes": ["/"],
+  "pilotRoute": "/afir-autoconsum-agroalimentar",
+  "inventoryPath": "reports/content-intent-inventory-2026-07-21.json",
+  "reportPath": "reports/long-form-layout-inventory-2026-07-21.json",
+  "excludedTocHeadingPatterns": [
+    "^CTA:",
+    "^Solicit[ăa]",
+    "^Continu[ăa] cu traseul",
+    "^Guvernan[țt][ăa] editorial[ăa]"
+  ],
+  "secondarySectionPatterns": [
+    "^Achizi[țt]ii$",
+    "^Mecanisme de plat[ăa]$",
+    "^Resurse corelate$",
+    "^FAQ$",
+    "^Întreb[ăa]ri frecvente$"
+  ]
+}

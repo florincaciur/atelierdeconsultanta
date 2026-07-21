@@ -29,7 +29,9 @@
     "calculator_result_to_dr12",
     "calculator_result_to_dr14",
     "source_document_click",
-    "next_step_click"
+    "next_step_click",
+    "carousel_interaction",
+    "program_card_click"
   ]);
   var LEGACY_ALIASES = Object.freeze({
     eligibility_cta_click: "cta_click",

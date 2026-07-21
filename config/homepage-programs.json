@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-07-21",
+  "sourceOfTruth": "config/seo-programs.json#programs",
+  "featuredProgramSlugs": [
+    "afir-energie-autoconsum",
+    "program-regional-nord-est",
+    "pocidif-21",
+    "modernizare-microintreprinderi-ne-2",
+    "e-move-ro",
+    "gal-afir-leader"
+  ],
+  "carousel": {
+    "maximumItems": 6,
+    "autoRotate": false,
+    "allProgramsUrl": "/fonduri-europene"
+  },
+  "grid": {
+    "excludeWhenDiscoveryListedIsFalse": true,
+    "updateUrlFromFilters": false
+  }
+}

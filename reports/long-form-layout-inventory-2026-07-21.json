@@ -1,0 +1,312 @@
+{
+  "schemaVersion": 1,
+  "generatedFor": "P1.09",
+  "generatedAt": "2026-07-21",
+  "wordThreshold": 1500,
+  "pageCount": 27,
+  "byType": {
+    "core": 1,
+    "program": 9,
+    "ghid": 17
+  },
+  "pilotRoute": "/afir-autoconsum-agroalimentar",
+  "pages": [
+    {
+      "route": "/",
+      "type": "core",
+      "sourceFile": "index.html",
+      "wordCount": 2122,
+      "tocItemCount": 10,
+      "tableCount": 0,
+      "variant": "home",
+      "decisionActionAdded": false,
+      "contentActionCount": 2
+    },
+    {
+      "route": "/afir-autoconsum-agroalimentar",
+      "type": "program",
+      "sourceFile": "afir-autoconsum-agroalimentar/index.html",
+      "wordCount": 3304,
+      "tocItemCount": 16,
+      "tableCount": 1,
+      "variant": "rail",
+      "decisionActionAdded": true,
+      "contentActionCount": 3
+    },
+    {
+      "route": "/apeluri-gal",
+      "type": "program",
+      "sourceFile": "apeluri-gal/index.html",
+      "wordCount": 1947,
+      "tocItemCount": 14,
+      "tableCount": 4,
+      "variant": "rail",
+      "decisionActionAdded": true,
+      "contentActionCount": 3
+    },
+    {
+      "route": "/autoconsum-public-fotovoltaice-institutii-publice",
+      "type": "program",
+      "sourceFile": "autoconsum-public-fotovoltaice-institutii-publice/index.html",
+      "wordCount": 1631,
+      "tocItemCount": 15,
+      "tableCount": 4,
+      "variant": "rail",
+      "decisionActionAdded": true,
+      "contentActionCount": 3
+    },
+    {
+      "route": "/cheltuieli-eligibile-pocidif-21",
+      "type": "ghid",
+      "sourceFile": "cheltuieli-eligibile-pocidif-21/index.html",
+      "wordCount": 1785,
+      "tocItemCount": 16,
+      "tableCount": 0,
+      "variant": "rail",
+      "decisionActionAdded": false,
+      "contentActionCount": 1
+    },
+    {
+      "route": "/cod-caen-start-up-nation-2026",
+      "type": "ghid",
+      "sourceFile": "cod-caen-start-up-nation-2026/index.html",
+      "wordCount": 1739,
+      "tocItemCount": 15,
+      "tableCount": 4,
+      "variant": "rail",
+      "decisionActionAdded": false,
+      "contentActionCount": 1
+    },
+    {
+      "route": "/cum-alegi-programul-potrivit-fonduri-europene-2026",
+      "type": "ghid",
+      "sourceFile": "cum-alegi-programul-potrivit-fonduri-europene-2026.html",
+      "wordCount": 2017,
+      "tocItemCount": 9,
+      "tableCount": 1,
+      "variant": "rail",
+      "decisionActionAdded": false,
+      "contentActionCount": 1
+    },
+    {
+      "route": "/digitalizare-imm-pnrr",
+      "type": "ghid",
+      "sourceFile": "digitalizare-imm-pnrr/index.html",
+      "wordCount": 1539,
+      "tocItemCount": 14,
+      "tableCount": 4,
+      "variant": "rail",
+      "decisionActionAdded": false,
+      "contentActionCount": 2
+    },
+    {
+      "route": "/documente-punctaj-pocidif-21",
+      "type": "ghid",
+      "sourceFile": "documente-punctaj-pocidif-21/index.html",
+      "wordCount": 1717,
+      "tocItemCount": 16,
+      "tableCount": 0,
+      "variant": "rail",
+      "decisionActionAdded": false,
+      "contentActionCount": 1
+    },
+    {
+      "route": "/dr12-vs-dr14",
+      "type": "ghid",
+      "sourceFile": "dr12-vs-dr14.html",
+      "wordCount": 1975,
+      "tocItemCount": 19,
+      "tableCount": 3,
+      "variant": "rail",
+      "decisionActionAdded": false,
+      "contentActionCount": 2
+    },
+    {
+      "route": "/e-move",
+      "type": "program",
+      "sourceFile": "e-move/index.html",
+      "wordCount": 1586,
+      "tocItemCount": 17,
+      "tableCount": 5,
+      "variant": "rail",
+      "decisionActionAdded": true,
+      "contentActionCount": 3
+    },
+    {
+      "route": "/femeia-antreprenor-2026",
+      "type": "program",
+      "sourceFile": "femeia-antreprenor-2026/index.html",
+      "wordCount": 2005,
+      "tocItemCount": 17,
+      "tableCount": 4,
+      "variant": "rail",
+      "decisionActionAdded": true,
+      "contentActionCount": 3
+    },
+    {
+      "route": "/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum",
+      "type": "program",
+      "sourceFile": "fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum/index.html",
+      "wordCount": 1723,
+      "tocItemCount": 14,
+      "tableCount": 4,
+      "variant": "rail",
+      "decisionActionAdded": true,
+      "contentActionCount": 3
+    },
+    {
+      "route": "/fonduri-europene-bucuresti",
+      "type": "ghid",
+      "sourceFile": "fonduri-europene-bucuresti/index.html",
+      "wordCount": 1822,
+      "tocItemCount": 14,
+      "tableCount": 1,
+      "variant": "rail",
+      "decisionActionAdded": false,
+      "contentActionCount": 2
+    },
+    {
+      "route": "/fonduri-europene-caen/0111-culturi-cereale",
+      "type": "ghid",
+      "sourceFile": "fonduri-europene-caen/0111-culturi-cereale/index.html",
+      "wordCount": 1805,
+      "tocItemCount": 17,
+      "tableCount": 1,
+      "variant": "rail",
+      "decisionActionAdded": false,
+      "contentActionCount": 2
+    },
+    {
+      "route": "/fonduri-europene-caen/4321-instalatii-electrice",
+      "type": "ghid",
+      "sourceFile": "fonduri-europene-caen/4321-instalatii-electrice/index.html",
+      "wordCount": 1830,
+      "tocItemCount": 17,
+      "tableCount": 1,
+      "variant": "rail",
+      "decisionActionAdded": false,
+      "contentActionCount": 2
+    },
+    {
+      "route": "/fonduri-europene-caen/5610-restaurante",
+      "type": "ghid",
+      "sourceFile": "fonduri-europene-caen/5610-restaurante/index.html",
+      "wordCount": 1827,
+      "tocItemCount": 17,
+      "tableCount": 1,
+      "variant": "rail",
+      "decisionActionAdded": false,
+      "contentActionCount": 2
+    },
+    {
+      "route": "/fonduri-europene-caen/6201-dezvoltare-software",
+      "type": "ghid",
+      "sourceFile": "fonduri-europene-caen/6201-dezvoltare-software/index.html",
+      "wordCount": 1821,
+      "tocItemCount": 17,
+      "tableCount": 1,
+      "variant": "rail",
+      "decisionActionAdded": false,
+      "contentActionCount": 2
+    },
+    {
+      "route": "/fonduri-europene-nerambursabile-2026",
+      "type": "ghid",
+      "sourceFile": "fonduri-europene-nerambursabile-2026/index.html",
+      "wordCount": 1776,
+      "tocItemCount": 16,
+      "tableCount": 4,
+      "variant": "rail",
+      "decisionActionAdded": false,
+      "contentActionCount": 2
+    },
+    {
+      "route": "/fonduri-europene-nord-est",
+      "type": "ghid",
+      "sourceFile": "fonduri-europene-nord-est/index.html",
+      "wordCount": 2296,
+      "tocItemCount": 22,
+      "tableCount": 1,
+      "variant": "rail",
+      "decisionActionAdded": false,
+      "contentActionCount": 1
+    },
+    {
+      "route": "/fonduri-pentru-utilaje-agricole",
+      "type": "ghid",
+      "sourceFile": "fonduri-pentru-utilaje-agricole/index.html",
+      "wordCount": 1518,
+      "tocItemCount": 13,
+      "tableCount": 4,
+      "variant": "rail",
+      "decisionActionAdded": false,
+      "contentActionCount": 2
+    },
+    {
+      "route": "/gal-afir",
+      "type": "program",
+      "sourceFile": "gal-afir/index.html",
+      "wordCount": 1538,
+      "tocItemCount": 23,
+      "tableCount": 6,
+      "variant": "rail",
+      "decisionActionAdded": true,
+      "contentActionCount": 3
+    },
+    {
+      "route": "/pocidif-21",
+      "type": "program",
+      "sourceFile": "pocidif-21/index.html",
+      "wordCount": 2850,
+      "tocItemCount": 17,
+      "tableCount": 0,
+      "variant": "rail",
+      "decisionActionAdded": true,
+      "contentActionCount": 3
+    },
+    {
+      "route": "/por-adr-nord-est",
+      "type": "program",
+      "sourceFile": "por-adr-nord-est/index.html",
+      "wordCount": 1689,
+      "tocItemCount": 9,
+      "tableCount": 1,
+      "variant": "rail",
+      "decisionActionAdded": true,
+      "contentActionCount": 3
+    },
+    {
+      "route": "/start-up-nation-2026-cheltuieli-eligibile",
+      "type": "ghid",
+      "sourceFile": "start-up-nation-2026-cheltuieli-eligibile/index.html",
+      "wordCount": 1694,
+      "tocItemCount": 15,
+      "tableCount": 4,
+      "variant": "rail",
+      "decisionActionAdded": false,
+      "contentActionCount": 1
+    },
+    {
+      "route": "/start-up-nation-2026-conditii",
+      "type": "ghid",
+      "sourceFile": "start-up-nation-2026-conditii/index.html",
+      "wordCount": 1682,
+      "tocItemCount": 15,
+      "tableCount": 4,
+      "variant": "rail",
+      "decisionActionAdded": false,
+      "contentActionCount": 1
+    },
+    {
+      "route": "/start-up-nation-2026-idei-afaceri",
+      "type": "ghid",
+      "sourceFile": "start-up-nation-2026-idei-afaceri/index.html",
+      "wordCount": 1700,
+      "tocItemCount": 15,
+      "tableCount": 4,
+      "variant": "rail",
+      "decisionActionAdded": false,
+      "contentActionCount": 1
+    }
+  ]
+}

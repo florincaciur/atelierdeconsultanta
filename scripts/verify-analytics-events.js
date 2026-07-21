@@ -18,7 +18,9 @@ const EVENTS = new Set([
   "calculator_result_to_dr12",
   "calculator_result_to_dr14",
   "source_document_click",
-  "next_step_click"
+  "next_step_click",
+  "carousel_interaction",
+  "program_card_click"
 ]);
 const GENERATORS = [
   "tools/generate-program-pages.js",
@@ -109,8 +111,8 @@ function main() {
     if (!partial.includes(`data-analytics-event="${eventName}"`)) errors.push(`header: lipsește ${eventName}`);
   }
   const $partial = cheerio.load(partial, { decodeEntities: false });
-  if ($partial("#navbar [data-whatsapp-dialog-open][data-analytics-event='cta_click']").length !== 1) errors.push("header: CTA desktop neinstrumentat");
-  if ($partial("#mobileMenu [data-whatsapp-dialog-open][data-analytics-event='cta_click']").length !== 1) errors.push("header: CTA mobil neinstrumentat");
+  if ($partial("#navbar .nav-cta[data-analytics-event='cta_click'][data-analytics-cta-view='true']").length !== 1) errors.push("header: CTA desktop neinstrumentat");
+  if ($partial("#mobileMenu .mobile-cta[data-analytics-event='cta_click'][data-analytics-cta-view='true']").length !== 1) errors.push("header: CTA mobil neinstrumentat");
 
   const home = read("index.html");
   if (count(home, /FaberAnalytics\.formSubmitSuccess\(form\)/g) !== 2) errors.push("homepage: succesul server al formularelor nu este instrumentat exact o dată");

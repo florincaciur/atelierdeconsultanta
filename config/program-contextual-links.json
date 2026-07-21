@@ -1,0 +1,215 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-07-21",
+  "evidence": {
+    "gscPages": "reports/gsc-page-priorities-2026-06-01.csv",
+    "gscQueries": "reports/gsc-query-priorities-2026-06-01.csv",
+    "analytics": "config/funnel-analytics.json",
+    "removalPolicy": "Se înlocuiesc numai containerele automate .related-links și blocurile next-step gestionate; linkurile editoriale integrate în propoziții nu sunt eliminate fără date click-level."
+  },
+  "parents": {
+    "/fonduri-europene": {
+      "anchor": "revino la hubul programelor de finanțare",
+      "explanation": "Compară familiile de programe înainte de alegerea unei intervenții concrete."
+    },
+    "/afir": {
+      "anchor": "revino la hubul AFIR și agricultură",
+      "explanation": "Compară intervențiile agricole și traseele AFIR relevante pentru investiție."
+    },
+    "/fonduri-regionale": {
+      "anchor": "revino la programele Regional și ADR",
+      "explanation": "Separă regulile programului de condițiile apelului regional concret."
+    },
+    "/fonduri-europene-digitalizare": {
+      "anchor": "revino la programele de digitalizare și inovare",
+      "explanation": "Compară apelurile după solicitant, investiție și stadiul oficial verificat."
+    },
+    "/finantari-panouri-fotovoltaice": {
+      "anchor": "revino la programele pentru energie",
+      "explanation": "Compară finanțările pentru autoconsum, regenerabile și eficiență energetică."
+    },
+    "/fonduri-europene-imm": {
+      "anchor": "revino la programele pentru antreprenoriat și GAL",
+      "explanation": "Compară traseele pentru firme, start-up-uri și beneficiari din teritorii GAL."
+    }
+  },
+  "resources": {
+    "calculator_so": {
+      "href": "/calculator-soc",
+      "anchor": "calculează dimensiunea economică SO",
+      "explanation": "Obține un reper orientativ și verifică apoi valorile pe documentele exploatației."
+    },
+    "eligibility_check": {
+      "href": "/verificare-eligibilitate-fonduri-europene",
+      "anchor": "verifică criteriile inițiale de eligibilitate",
+      "explanation": "Controlează solicitantul, investiția și documentele înainte de pregătirea dosarului."
+    },
+    "dr12_vs_dr14": {
+      "href": "/dr12-vs-dr14",
+      "anchor": "compară condițiile DR 12 și DR 14",
+      "explanation": "Separă intervențiile după profilul solicitantului și dimensiunea economică a fermei."
+    },
+    "regional_nord_est": {
+      "href": "/fonduri-europene-nord-est",
+      "anchor": "compară traseele de finanțare din Nord-Est",
+      "explanation": "Diferențiază apelurile regionale de alternativele agricole, energetice sau naționale."
+    },
+    "startup_conditions": {
+      "href": "/start-up-nation-2026-conditii",
+      "anchor": "verifică ghidul despre condițiile Start-Up Nation",
+      "explanation": "Separă regulile programului de documentele și ipotezele folosite pentru pregătire."
+    },
+    "women_conditions": {
+      "href": "/femeia-antreprenor-2026-conditii-idei-afaceri",
+      "anchor": "compară condițiile și ideile de afaceri analizate",
+      "explanation": "Folosește ghidul complementar fără a presupune condiții care nu sunt încă oficiale."
+    },
+    "digital_costs": {
+      "href": "/cheltuieli-eligibile-digitalizare-imm",
+      "anchor": "verifică ghidul cheltuielilor pentru digitalizare",
+      "explanation": "Leagă software-ul, echipamentele și serviciile de obiectivele programului aplicabil."
+    },
+    "cofinancing_guide": {
+      "href": "/cum-se-calculeaza-cofinantarea-fonduri-europene",
+      "anchor": "calculează prudent contribuția proprie",
+      "explanation": "Include cheltuielile neeligibile, TVA-ul aplicabil și calendarul plăților proiectului."
+    },
+    "afir_photovoltaic_guide": {
+      "href": "/blog-afir-fotovoltaice-ferme-2026",
+      "anchor": "compară reperele pentru fotovoltaice în ferme",
+      "explanation": "Corelează autoconsumul, amplasamentul și documentația tehnică a investiției agricole."
+    },
+    "documents_guide": {
+      "href": "/acte-necesare-fonduri-europene-nerambursabile",
+      "anchor": "pregătește documentele de bază ale proiectului",
+      "explanation": "Ordonează actele solicitantului și investiției înainte de verificarea ghidului concret."
+    },
+    "gal_program": {
+      "href": "/gal-afir",
+      "anchor": "compară programul LEADER și traseul GAL-AFIR",
+      "explanation": "Verifică teritoriul, strategia locală și regulile apelului lansat de GAL."
+    },
+    "gal_calls": {
+      "href": "/apeluri-gal",
+      "anchor": "compară apelurile GAL și condițiile locale",
+      "explanation": "Identifică apelul concret și documentele publicate pentru teritoriul proiectului."
+    },
+    "pocidif_costs": {
+      "href": "/cheltuieli-eligibile-pocidif-21",
+      "anchor": "verifică cheltuielile analizate pentru PoCIDIF 2.1",
+      "explanation": "Corelează activitățile, costurile și rezultatele de cercetare sau inovare."
+    },
+    "pnrr_digital_guide": {
+      "href": "/digitalizare-imm-pnrr",
+      "anchor": "compară reperele PNRR pentru digitalizarea IMM",
+      "explanation": "Separă programul, investițiile și documentele versiunii oficiale aplicabile."
+    },
+    "ptj_documents": {
+      "href": "/programul-tranzitie-justa-intrebari-documente",
+      "anchor": "verifică întrebările și documentele pentru PTJ",
+      "explanation": "Corelează județul, solicitantul și investiția cu apelul concret al programului."
+    }
+  },
+  "programs": {
+    "program-regional-nord-est": {
+      "instrument": "eligibility_check",
+      "comparison": "regional_nord_est",
+      "conversionAnchor": "Verifică încadrarea în Programul Regional Nord-Est"
+    },
+    "fonduri-regionale": {
+      "instrument": "eligibility_check",
+      "comparison": "regional_nord_est",
+      "conversionAnchor": "Verifică programul regional potrivit proiectului"
+    },
+    "dr12-afir": {
+      "instrument": "calculator_so",
+      "comparison": "dr12_vs_dr14",
+      "conversionAnchor": "Verifică încadrarea în DR 12"
+    },
+    "dr14-afir": {
+      "instrument": "calculator_so",
+      "comparison": "dr12_vs_dr14",
+      "conversionAnchor": "Verifică încadrarea în DR 14"
+    },
+    "start-up-nation": {
+      "instrument": "eligibility_check",
+      "comparison": "startup_conditions",
+      "conversionAnchor": "Verifică proiectul pentru Start-Up Nation"
+    },
+    "femeia-antreprenor": {
+      "instrument": "eligibility_check",
+      "comparison": "women_conditions",
+      "conversionAnchor": "Verifică proiectul pentru Femeia Antreprenor"
+    },
+    "digitalizare-imm": {
+      "instrument": "eligibility_check",
+      "comparison": "digital_costs",
+      "conversionAnchor": "Verifică încadrarea proiectului de digitalizare"
+    },
+    "modernizare-microintreprinderi-ne-2": {
+      "instrument": "eligibility_check",
+      "comparison": "regional_nord_est",
+      "conversionAnchor": "Verifică încadrarea în Apelul 2 pentru microîntreprinderi"
+    },
+    "fondul-modernizare-autoconsum": {
+      "instrument": "eligibility_check",
+      "comparison": "cofinancing_guide",
+      "conversionAnchor": "Verifică proiectul de energie pentru autoconsum"
+    },
+    "fondul-modernizare-regenerabile": {
+      "instrument": "eligibility_check",
+      "comparison": "cofinancing_guide",
+      "conversionAnchor": "Verifică proiectul de producție regenerabilă"
+    },
+    "afir-energie-autoconsum": {
+      "instrument": "eligibility_check",
+      "comparison": "afir_photovoltaic_guide",
+      "conversionAnchor": "Verifică proiectul AFIR pentru autoconsum"
+    },
+    "autoconsum-institutii-publice": {
+      "instrument": "eligibility_check",
+      "comparison": "cofinancing_guide",
+      "conversionAnchor": "Verifică proiectul de autoconsum al instituției"
+    },
+    "pro-infra": {
+      "instrument": "eligibility_check",
+      "comparison": "documents_guide",
+      "conversionAnchor": "Verifică încadrarea proiectului în PRO INFRA"
+    },
+    "apeluri-gal": {
+      "instrument": "eligibility_check",
+      "comparison": "gal_program",
+      "conversionAnchor": "Verifică încadrarea proiectului în apelul GAL"
+    },
+    "gal-afir-leader": {
+      "instrument": "eligibility_check",
+      "comparison": "gal_calls",
+      "conversionAnchor": "Verifică proiectul pentru traseul GAL-AFIR"
+    },
+    "e-move-ro": {
+      "instrument": "eligibility_check",
+      "comparison": "cofinancing_guide",
+      "conversionAnchor": "Verifică încadrarea proiectului în e-MOVE RO"
+    },
+    "pocidif-21": {
+      "instrument": "eligibility_check",
+      "comparison": "pocidif_costs",
+      "conversionAnchor": "Verifică încadrarea proiectului în PoCIDIF 2.1"
+    },
+    "pnrr": {
+      "instrument": "eligibility_check",
+      "comparison": "pnrr_digital_guide",
+      "conversionAnchor": "Verifică programul PNRR potrivit investiției"
+    },
+    "programul-tranzitie-justa": {
+      "instrument": "eligibility_check",
+      "comparison": "ptj_documents",
+      "conversionAnchor": "Verifică încadrarea proiectului în PTJ"
+    },
+    "fondul-de-modernizare": {
+      "instrument": "eligibility_check",
+      "comparison": "cofinancing_guide",
+      "conversionAnchor": "Verifică schema potrivită din Fondul pentru Modernizare"
+    }
+  }
+}

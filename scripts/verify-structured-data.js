@@ -111,7 +111,7 @@ function validatePage(slug, page, config, hints, errors) {
 
   const breadcrumb = nodes.find((node) => hasType(node, "BreadcrumbList"));
   const breadcrumbItems = breadcrumb?.itemListElement || [];
-  if (breadcrumbItems.length < 2 || breadcrumbItems.length > 3) pageErrors.push(`breadcrumb cu ${breadcrumbItems.length} niveluri, necesar 2–3`);
+  if (breadcrumbItems.length < 2 || breadcrumbItems.length > 4) pageErrors.push(`breadcrumb cu ${breadcrumbItems.length} niveluri, necesar 2–4`);
   for (const item of breadcrumbItems) {
     try {
       const target = new URL(item.item);

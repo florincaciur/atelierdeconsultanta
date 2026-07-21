@@ -21,22 +21,8 @@ const PENDING_APPROVAL_HOLD_ROUTES = STATUS_APPROVALS
   .flatMap((row) => row.publicationHoldUrls)
   .map((route) => new URL(route, SITE_ORIGIN).pathname.replace(/\/$/, "") || "/");
 const ALL_PENDING_HOLD_ROUTES = [...new Set([...PENDING_PROGRAM_ROUTES, ...PENDING_APPROVAL_HOLD_ROUTES])];
-const PROGRAM_MENU_ROUTES = [
-  "/por-adr-nord-est",
-  "/fonduri-regionale",
-  "/dr12-afir",
-  "/afir-autoconsum-agroalimentar",
-  "/autoconsum-public-fotovoltaice-institutii-publice",
-  "/dr14",
-  "/digitalizare-imm",
-  "/femeia-antreprenor-2026",
-  "/gal-afir",
-  "/e-move",
-  "/pocidif-21",
-  "/pro-infra",
-  "/start-up-nation-2026"
-];
-const EXPECTED_PROGRAM_MENU_ROUTES = PROGRAM_MENU_ROUTES.filter((route) => !PENDING_PROGRAM_ROUTES.includes(route));
+const MAIN_NAVIGATION = JSON.parse(fs.readFileSync(path.join(ROOT, "config", "main-navigation.json"), "utf8"));
+const PROGRAM_FAMILY_ROUTES = MAIN_NAVIGATION.primaryDestinations.find((destination) => destination.id === "programe").items.map((item) => item.href);
 const EXPECTED_CANONICAL_URLS = 91;
 const { sitemapUrls } = require("../tools/sitemap-utils");
 const CONSOLIDATED_LOCAL_ROUTES = [
@@ -334,14 +320,14 @@ async function assertHomepageInteractions(baseUrl) {
     await page.locator("#dropdownBtn").click();
     assert.equal(await page.locator("#dropdownBtn").getAttribute("aria-expanded"), "true", "program menu should open");
     assert.equal(await page.locator("#dropdownPanel.open").count(), 1, "program menu panel should be visible");
-    assert.equal(await page.locator("#dropdownPanel a[href]").count(), EXPECTED_PROGRAM_MENU_ROUTES.length, "program menu should expose only registry-approved program links");
-    for (const route of EXPECTED_PROGRAM_MENU_ROUTES) {
-      assert.equal(await page.locator(`#dropdownPanel a[href="${route}"]`).count(), 1, `program menu should link ${route}`);
+    assert.equal(await page.locator("#dropdownPanel a[href]").count(), PROGRAM_FAMILY_ROUTES.length, "program menu should expose the approved program-family links");
+    for (const route of PROGRAM_FAMILY_ROUTES) {
+      assert.equal(await page.locator(`#dropdownPanel a[href="${route}"]`).count(), 1, `program family menu should link ${route}`);
     }
     for (const route of PENDING_PROGRAM_ROUTES) {
-      assert.equal(await page.locator(`#dropdownPanel a[href="${route}"]`).count(), 0, `program menu should hide pending route ${route}`);
+      assert.equal(await page.locator(`#dropdownPanel a[href="${route}"]`).count(), 0, `program family menu should not publish pending route ${route}`);
     }
-    assert.equal(await page.locator('#dropdownPanel a[href="/pocidif-21"]').count(), 1, "program menu should link PoCIDIF 2.1");
+    assert.equal(await page.locator("#navbar [data-program-status], #mobileMenu [data-program-status]").count(), 0, "navigation must not duplicate program statuses");
 
     const internalLinks = await page.$$eval(
       ".nav-links a[href], #dropdownPanel a[href], #mobileMenu a[href], #financing-grid a[href], a.btn-primary[href], a.btn-secondary[href]",

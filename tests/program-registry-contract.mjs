@@ -136,9 +136,14 @@ for (const program of publicPrograms) {
 
   const menuElements = header(`[data-program-id='${program.slug}']`).toArray();
   for (const element of menuElements) assertFacts(program, factsFromElement(header, element), "meniu desktop/mobil");
-  if (program.presentation?.hero) assert(homepage(`[data-hero-program-item][data-program-id='${program.slug}']`).length, `${program.slug}: lipsește din selectorul homepage configurat`);
   if (program.presentation?.carousel) assert(banners.some((banner) => banner.programId === program.slug), `${program.slug}: lipsește din caruselul configurat`);
 }
+
+const latestHomepageProgram = [...publicPrograms]
+  .sort((left, right) => right.verifiedAt.localeCompare(left.verifiedAt) || String(right.lastMeaningfulUpdate || "").localeCompare(String(left.lastMeaningfulUpdate || "")) || left.slug.localeCompare(right.slug, "ro"))[0];
+const latestHomepageNode = homepage("[data-homepage-hero-latest-program]");
+assert.equal(latestHomepageNode.length, 1, "homepage: trebuie un singur program verificat recent în hero");
+assertFacts(latestHomepageProgram, factsFromElement(homepage, latestHomepageNode.get(0)), "homepage hero compact");
 
 for (const program of programs.filter((item) => !isPublicProgram(item))) {
   assert.equal(header(`[data-program-id='${program.slug}']`).length, 0, `${program.slug}: pending_validation apare în meniu`);

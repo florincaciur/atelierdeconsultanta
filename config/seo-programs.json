@@ -1,7 +1,7 @@
 {
   "site": "https://atelierdeconsultanta.ro",
   "updatedAt": "2026-05-29",
-  "lastReviewed": "2026-07-20",
+  "lastReviewed": "2026-07-21",
   "defaults": {
     "author": "FABER - Atelier de Consultanță",
     "contactUrl": "/contact",
@@ -51,6 +51,19 @@
         "icon": "ph-buildings",
         "image": "/assets/hero/hero-local.webp",
         "beneficiary": null
+      },
+      "discovery": {
+        "parentHub": "/fonduri-regionale",
+        "applicantTypes": [
+          "nespecificat"
+        ],
+        "regions": [
+          "nord_est"
+        ],
+        "investmentTypes": [
+          "investitii_productive"
+        ],
+        "listed": true
       }
     },
     {
@@ -94,6 +107,19 @@
         "icon": "ph-file-text",
         "image": null,
         "beneficiary": null
+      },
+      "discovery": {
+        "parentHub": "/fonduri-regionale",
+        "applicantTypes": [
+          "nespecificat"
+        ],
+        "regions": [
+          "regional"
+        ],
+        "investmentTypes": [
+          "investitii_productive"
+        ],
+        "listed": false
       }
     },
     {
@@ -149,6 +175,19 @@
         "candidateVerifiedAt": "2026-07-21",
         "approvalRecord": "config/program-status-approvals.json#dr12-afir",
         "note": "Statusul, documentul și data trebuie confirmate nominal de un consultant FABER înainte de revenirea publicationState la public."
+      },
+      "discovery": {
+        "parentHub": "/afir",
+        "applicantTypes": [
+          "fermieri_agroalimentar"
+        ],
+        "regions": [
+          "national"
+        ],
+        "investmentTypes": [
+          "agricultura"
+        ],
+        "listed": true
       }
     },
     {
@@ -206,6 +245,19 @@
         "candidateVerifiedAt": "2026-07-21",
         "approvalRecord": "config/program-status-approvals.json#dr14-afir",
         "note": "Confirmare nominală FABER obligatorie; valorile consultative nu se publică înainte de aprobare."
+      },
+      "discovery": {
+        "parentHub": "/afir",
+        "applicantTypes": [
+          "fermieri_agroalimentar"
+        ],
+        "regions": [
+          "national"
+        ],
+        "investmentTypes": [
+          "agricultura"
+        ],
+        "listed": true
       }
     },
     {
@@ -247,6 +299,19 @@
         "icon": "ph-rocket-launch",
         "image": "/assets/hero/hero-business.webp",
         "beneficiary": null
+      },
+      "discovery": {
+        "parentHub": "/fonduri-europene-imm",
+        "applicantTypes": [
+          "imm_micro"
+        ],
+        "regions": [
+          "national"
+        ],
+        "investmentTypes": [
+          "antreprenoriat"
+        ],
+        "listed": true
       }
     },
     {
@@ -288,6 +353,19 @@
         "icon": "ph-user-circle",
         "image": "/assets/hero/hero-business.webp",
         "beneficiary": null
+      },
+      "discovery": {
+        "parentHub": "/fonduri-europene-imm",
+        "applicantTypes": [
+          "imm_micro"
+        ],
+        "regions": [
+          "national"
+        ],
+        "investmentTypes": [
+          "antreprenoriat"
+        ],
+        "listed": true
       }
     },
     {
@@ -346,6 +424,19 @@
         "candidateVerifiedAt": "2026-07-21",
         "approvalRecord": "config/program-status-approvals.json#digitalizare-imm",
         "note": "Apelul PNRR istoric apare închis, dar documentul oficial curent și delimitarea față de hub trebuie confirmate de consultantul FABER."
+      },
+      "discovery": {
+        "parentHub": "/fonduri-europene-digitalizare",
+        "applicantTypes": [
+          "imm_micro"
+        ],
+        "regions": [
+          "national"
+        ],
+        "investmentTypes": [
+          "digitalizare"
+        ],
+        "listed": true
       }
     },
     {
@@ -410,6 +501,19 @@
         "icon": "ph-buildings",
         "image": "/assets/hero/hero-local.webp",
         "beneficiary": null
+      },
+      "discovery": {
+        "parentHub": "/fonduri-regionale",
+        "applicantTypes": [
+          "imm_micro"
+        ],
+        "regions": [
+          "nord_est"
+        ],
+        "investmentTypes": [
+          "investitii_productive"
+        ],
+        "listed": true
       }
     },
     {
@@ -451,6 +555,19 @@
         "icon": "ph-file-text",
         "image": null,
         "beneficiary": null
+      },
+      "discovery": {
+        "parentHub": "/finantari-panouri-fotovoltaice",
+        "applicantTypes": [
+          "nespecificat"
+        ],
+        "regions": [
+          "national"
+        ],
+        "investmentTypes": [
+          "energie_autoconsum"
+        ],
+        "listed": true
       }
     },
     {
@@ -493,6 +610,19 @@
         "icon": "ph-sun",
         "image": "/assets/hero/hero-solar.webp",
         "beneficiary": null
+      },
+      "discovery": {
+        "parentHub": "/finantari-panouri-fotovoltaice",
+        "applicantTypes": [
+          "nespecificat"
+        ],
+        "regions": [
+          "national"
+        ],
+        "investmentTypes": [
+          "energie_regenerabila"
+        ],
+        "listed": true
       }
     },
     {
@@ -560,6 +690,19 @@
         "icon": "ph-sun",
         "image": "/assets/hero/hero-solar.webp",
         "beneficiary": null
+      },
+      "discovery": {
+        "parentHub": "/afir",
+        "applicantTypes": [
+          "fermieri_agroalimentar"
+        ],
+        "regions": [
+          "national"
+        ],
+        "investmentTypes": [
+          "energie_autoconsum"
+        ],
+        "listed": true
       }
     },
     {
@@ -603,6 +746,19 @@
         "icon": "ph-bank",
         "image": "/assets/hero/hero-solar.webp",
         "beneficiary": null
+      },
+      "discovery": {
+        "parentHub": "/finantari-panouri-fotovoltaice",
+        "applicantTypes": [
+          "institutii_publice"
+        ],
+        "regions": [
+          "national"
+        ],
+        "investmentTypes": [
+          "energie_autoconsum"
+        ],
+        "listed": true
       }
     },
     {
@@ -663,6 +819,19 @@
         "candidateVerifiedAt": "2026-07-21",
         "approvalRecord": "config/program-status-approvals.json#pro-infra",
         "note": "Sursa confirmă o schemă aprobată, nu un ghid și nu un apel deschis; intervalul de depunere rămâne DE_VALIDAT_UMAN."
+      },
+      "discovery": {
+        "parentHub": "/fonduri-regionale",
+        "applicantTypes": [
+          "nespecificat"
+        ],
+        "regions": [
+          "national"
+        ],
+        "investmentTypes": [
+          "infrastructura"
+        ],
+        "listed": true
       }
     },
     {
@@ -707,6 +876,19 @@
         "icon": "ph-map-pin",
         "image": "/assets/hero/hero-local.webp",
         "beneficiary": null
+      },
+      "discovery": {
+        "parentHub": "/fonduri-europene-imm",
+        "applicantTypes": [
+          "beneficiari_gal"
+        ],
+        "regions": [
+          "local_gal"
+        ],
+        "investmentTypes": [
+          "dezvoltare_locala"
+        ],
+        "listed": true
       }
     },
     {
@@ -751,6 +933,19 @@
         "icon": "ph-map-pin",
         "image": "/assets/hero/hero-local.webp",
         "beneficiary": null
+      },
+      "discovery": {
+        "parentHub": "/fonduri-europene-imm",
+        "applicantTypes": [
+          "beneficiari_gal"
+        ],
+        "regions": [
+          "local_gal"
+        ],
+        "investmentTypes": [
+          "dezvoltare_locala"
+        ],
+        "listed": true
       }
     },
     {
@@ -810,6 +1005,19 @@
         "icon": "ph-battery-charging",
         "image": "/assets/hero/hero-solar.webp",
         "beneficiary": null
+      },
+      "discovery": {
+        "parentHub": "/finantari-panouri-fotovoltaice",
+        "applicantTypes": [
+          "nespecificat"
+        ],
+        "regions": [
+          "national"
+        ],
+        "investmentTypes": [
+          "mobilitate"
+        ],
+        "listed": true
       }
     },
     {
@@ -889,6 +1097,20 @@
         "icon": "ph-duotone ph-circuitry",
         "image": "/assets/hero/hero-digital.webp",
         "beneficiary": null
+      },
+      "discovery": {
+        "parentHub": "/fonduri-europene-digitalizare",
+        "applicantTypes": [
+          "imm_micro"
+        ],
+        "regions": [
+          "national"
+        ],
+        "investmentTypes": [
+          "digitalizare",
+          "inovare"
+        ],
+        "listed": true
       }
     },
     {
@@ -938,6 +1160,19 @@
         ],
         "candidateSourceUrl": "https://mfe.gov.ro/pnrr/",
         "note": "Înregistrare creată dintr-o suprafață homepage care nu avea corespondent în registrul vechi."
+      },
+      "discovery": {
+        "parentHub": "/fonduri-europene-digitalizare",
+        "applicantTypes": [
+          "nespecificat"
+        ],
+        "regions": [
+          "national"
+        ],
+        "investmentTypes": [
+          "digitalizare"
+        ],
+        "listed": true
       }
     },
     {
@@ -987,6 +1222,19 @@
         ],
         "candidateSourceUrl": "DE_VALIDAT_UMAN",
         "note": "Înregistrare creată dintr-o suprafață homepage care nu avea corespondent în registrul vechi."
+      },
+      "discovery": {
+        "parentHub": "/fonduri-regionale",
+        "applicantTypes": [
+          "nespecificat"
+        ],
+        "regions": [
+          "regional"
+        ],
+        "investmentTypes": [
+          "investitii_productive"
+        ],
+        "listed": true
       }
     },
     {
@@ -1036,6 +1284,20 @@
         ],
         "candidateSourceUrl": "https://energie.gov.ro/category/fondul-pentru-modernizare/",
         "note": "Înregistrare creată dintr-o suprafață homepage care nu avea corespondent în registrul vechi."
+      },
+      "discovery": {
+        "parentHub": "/finantari-panouri-fotovoltaice",
+        "applicantTypes": [
+          "nespecificat"
+        ],
+        "regions": [
+          "national"
+        ],
+        "investmentTypes": [
+          "energie_autoconsum",
+          "energie_regenerabila"
+        ],
+        "listed": true
       }
     }
   ],

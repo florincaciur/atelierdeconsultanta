@@ -65,7 +65,11 @@ function cleanText(value) {
 
 function classifyLink($, element, target) {
   const link = $(element);
-  if (link.attr("data-link-type") === "next-step" || link.closest("[data-contextual-next-step]").length) return "next-step";
+  const declaredType = link.attr("data-link-type");
+  const relation = link.attr("data-link-relation");
+  if (declaredType === "conversion" || relation === "conversion") return "CTA";
+  if (declaredType === "contextual" || link.closest("[data-contextual-next-step], [data-program-contextual-links]").length) return "contextual";
+  if (declaredType === "next-step") return "next-step";
   if (!target.internal || link.closest(".official-sources, .official-sources__item, .source-note, .answer-readiness__source").length) return "source";
   if (link.is("[class*='btn'], [class*='cta'], [data-whatsapp-dialog-open]") || link.closest(".cta-box, .cta-actions, .hero-actions, .hero-ctas").length) return "CTA";
   if (link.closest("nav, header, footer, .breadcrumb").length) return "navigation";
@@ -96,33 +100,25 @@ function routeOf(url) {
 }
 
 function renderMarkdown({ config, edges, missingRoutes, repeatedAnchors, errors }) {
-  const priorityRows = Object.values(config.pages).map((page) => {
-    const sourceUrl = `${SITE}${page.route}`;
-    const count = edges.filter((edge) => edge.sourceUrl === sourceUrl && edge.linkType === "next-step").length;
-    return `| ${page.route} | ${page.replacedLinkCount} | ${count} | ${page.replacedLinkCount - count} | ${count >= 1 && count <= 4 ? "CONFORM" : "NECONFORM"} |`;
-  }).join("\n");
   const typeRows = LINK_TYPES.map((type) => {
     const typed = edges.filter((edge) => edge.linkType === type);
     return `| ${type} | ${typed.length} | ${new Set(typed.map((edge) => edge.sourceUrl)).size} | ${new Set(typed.filter((edge) => edge.targetScope === "internal").map((edge) => edge.targetUrl)).size} |`;
   }).join("\n");
   const repeated = repeatedAnchors.length
     ? repeatedAnchors.map((item) => `- „${item.anchor}”: ${item.sources} pagini-sursă (${item.type})`).join("\n")
-    : "- Nu există ancore contextuale sau next-step peste pragul de 8 pagini-sursă.";
+    : "- Nu există ancore contextuale peste pragul de 8 pagini-sursă.";
   const missingPreview = missingRoutes.length
     ? `${missingRoutes.slice(0, 20).map((route) => `\`${route}\``).join(", ")}${missingRoutes.length > 20 ? ` și încă ${missingRoutes.length - 20} rute disponibile în matricea CSV` : ""}`
     : "Niciuna.";
-  const previousTotal = Object.values(config.pages).reduce((sum, page) => sum + page.replacedLinkCount, 0);
-  const currentTotal = Object.values(config.pages).reduce((sum, page) => sum + page.links.length, 0);
+  const managed = edges.filter((edge) => edge.relationship);
+  const conversions = managed.filter((edge) => edge.relationship === "conversion");
+  const managedSources = new Set(managed.map((edge) => edge.sourceUrl)).size;
 
-  return `# Audit linkuri contextuale și next-step – 13 iulie 2026
+  return `# Audit legături interne contextuale – 21 iulie 2026
 
 ## Rezultat
 
-Cele șapte pagini prioritare au exact un bloc editorial next-step și maximum patru destinații explicate. Blocurile înlocuite aveau ${previousTotal} de linkuri; configurația nouă are ${currentTotal}, o reducere netă de ${previousTotal - currentTotal} linkuri. Validarea a identificat ${errors.length} erori.
-
-| Rută | Linkuri în blocul înlocuit | Linkuri next-step | Reducere | Status |
-|---|---:|---:|---:|---|
-${priorityRows}
+Matricea sitewide conține ${edges.length} legături clasificate. Dintre acestea, ${managed.length} sunt legături contextuale administrate pe ${managedSources} pagini, iar ${conversions.length} sunt CTA-uri de conversie. Validarea a identificat ${errors.length} erori.
 
 ## Distribuția linkurilor pe tip
 
@@ -134,15 +130,14 @@ Fișierul \`internal-link-map.csv\` include pentru fiecare legătură numărul d
 
 ## Reguli verificate
 
-- zero linkuri next-step către redirecturi, rute legacy \`.html\`, pagini noindex sau destinații moarte;
-- atribute analytics complete și coerente cu sursa și destinația;
-- explicație de o propoziție pentru fiecare ancoră descriptivă;
-- minimum un link și maximum patru linkuri în fiecare bloc prioritar;
-- sursa oficială DR12 este clasificată separat ca link \`next-step\`, cu destinație externă securizată.
+- zero legături contextuale administrate către redirecturi, rute legacy \`.html\`, pagini noindex sau destinații moarte;
+- tracking analytics numai pentru relația de conversie; legăturile editoriale nu emit evenimente CTA;
+- ancore descriptive, fără formulări generice precum „click aici”;
+- maximum patru relații pe pagina de program: părinte, instrument, comparație/ghid și conversie.
 
-## Pagini fără link next-step
+## Pagini fără legături contextuale administrate
 
-Sunt semnalate ${missingRoutes.length} rute indexabile fără next-step. Acestea nu sunt tratate automat ca erori deoarece remedierea este limitată deliberat la paginile prioritare, pentru a evita proliferarea artificială a blocurilor: ${missingPreview}
+Sunt semnalate ${missingRoutes.length} rute indexabile fără un bloc contextual administrat. Acestea nu sunt tratate automat ca erori: matricea nu generează automat „nori” de resurse pe fiecare pagină. Rute: ${missingPreview}
 
 ## Ancore repetate excesiv
 
@@ -178,16 +173,19 @@ function generate() {
           if (!fs.existsSync(assetFile)) errors.push(`${routeOf(sourceUrl)} → ${target.route}: fișier intern mort`);
         } else {
           if (redirects.has(target.route)) errors.push(`${routeOf(sourceUrl)} → ${target.route}: link către redirect`);
-          if (!canonicalSet.has(target.url)) errors.push(`${routeOf(sourceUrl)} → ${target.route}: destinație internă necanonică sau moartă`);
+          if (!canonicalSet.has(target.url) && !fs.existsSync(fileForUrl(target.url))) {
+            errors.push(`${routeOf(sourceUrl)} → ${target.route}: destinație internă moartă`);
+          }
         }
         if (target.url === sourceUrl) return;
       }
       edges.push({
         anchorText: cleanText($(element).find(".see-also-card-title").first().text() || $(element).text()),
         context: contextFor($, element),
-        explanation: linkType === "next-step" ? cleanText($(element).find(".see-also-card-text").text()) : "",
+        explanation: $(element).attr("data-link-relation") ? cleanText($(element).find(".see-also-card-text, .program-contextual-links__explanation").text()) : "",
         href,
         linkType,
+        relationship: $(element).attr("data-link-relation") || "",
         sourcePriority: priorityPaths.has(routeOf(sourceUrl)) ? "yes" : "no",
         sourceUrl,
         targetPriority: target.internal && priorityPaths.has(target.route) ? "yes" : "no",
@@ -209,8 +207,9 @@ function generate() {
   }
   edges.sort((a, b) => a.linkType.localeCompare(b.linkType) || a.sourceUrl.localeCompare(b.sourceUrl) || a.targetUrl.localeCompare(b.targetUrl));
 
-  const nextSteps = edges.filter((edge) => edge.linkType === "next-step");
+  const nextSteps = edges.filter((edge) => edge.relationship);
   for (const page of Object.values(config.pages)) {
+    if (!canonicalSet.has(`${SITE}${page.route}`)) continue;
     const count = nextSteps.filter((edge) => routeOf(edge.sourceUrl) === page.route).length;
     if (count < 1 || count > 4) errors.push(`${page.route}: ${count} linkuri next-step, necesar 1–4`);
   }
@@ -243,7 +242,7 @@ function generate() {
   fs.writeFileSync(NEXT_STEP_MD, renderMarkdown({ config, edges, missingRoutes, repeatedAnchors, errors }), "utf8");
 
   console.log(`Matrice scrisă: ${path.relative(ROOT, OUTPUT_PATH)} (${edges.length} linkuri clasificate)`);
-  console.log(`Next-step: ${nextSteps.length} linkuri; ${missingRoutes.length} rute indexabile fără bloc; ${repeatedAnchors.length} ancore peste prag.`);
+  console.log(`Contextuale administrate: ${nextSteps.length} legături; ${missingRoutes.length} rute indexabile fără bloc; ${repeatedAnchors.length} ancore peste prag.`);
   if (errors.length) throw new Error([...new Set(errors)].join("\n"));
 }
 

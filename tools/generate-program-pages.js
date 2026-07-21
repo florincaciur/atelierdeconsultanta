@@ -30,6 +30,7 @@ const {
 const { renderPocidifContent } = require("./pocidif-content");
 const { applyPriorityAeo } = require("./priority-aeo");
 const { applyContextualNextSteps } = require("./contextual-next-steps");
+const { renderBreadcrumb: renderManagedBreadcrumb } = require("./sync-breadcrumbs");
 const PROGRAM_BANNER_INDEX = createBannerIndex(loadBanners(BANNERS_PATH));
 const {
   editorialSchemaProperties,
@@ -342,12 +343,8 @@ function breadcrumbItemsForPage(page) {
   return breadcrumbItemsForPath(slugPath(page), page.h1 || page.title);
 }
 
-function renderBreadcrumb(items) {
-  return `<div class="breadcrumb">${items.map((item, index) => {
-    const label = esc(item.name);
-    if (index === items.length - 1) return label;
-    return `<a href="${cleanUrl(item.item)}">${label}</a>`;
-  }).join(" / ")}</div>`;
+function renderBreadcrumb(page) {
+  return renderManagedBreadcrumb(slugPath(page), page.h1 || page.title);
 }
 
 let bannerHeroImageByRoute = null;
@@ -3055,7 +3052,7 @@ ${programBanner ? "  <link rel=\"stylesheet\" href=\"/assets/program-heroes.css\
 </head>
 <body class="page-family-${esc(family)}"${factualBodyAttributes}>
   ${GLOBAL_HEADER}
-  ${renderBreadcrumb(breadcrumbItemsForPage(page))}
+  ${renderBreadcrumb(page)}
   ${programHeroHtml}
   <main class="container">
     <article class="panel">

@@ -119,7 +119,7 @@ function withTargetNewlines(text, eol) {
   return text.replace(/\r\n/g, "\n").replace(/\n/g, eol);
 }
 
-function synchronizeFile(relativePath, partial) {
+function synchronizeFile(relativePath, partial, options = {}) {
   const filePath = path.join(ROOT, ...relativePath.split("/"));
   const before = fs.readFileSync(filePath, "utf8");
   const eol = before.includes("\r\n") ? "\r\n" : "\n";
@@ -158,19 +158,25 @@ function synchronizeFile(relativePath, partial) {
   }
 
   if (after === before) return false;
-  fs.writeFileSync(filePath, after, "utf8");
+  if (!options.check) fs.writeFileSync(filePath, after, "utf8");
   return true;
 }
 
 function main() {
+  const check = process.argv.includes("--check");
   const partial = partialSource();
   const files = findPublicHtmlFiles();
   let changed = 0;
   for (const file of files) {
-    if (synchronizeFile(file, partial)) changed += 1;
+    if (synchronizeFile(file, partial, { check })) changed += 1;
   }
   const indexFiles = files.filter((file) => path.posix.basename(file) === "index.html").length;
-  console.log(`Global header sincronizat: ${changed} fișiere modificate, ${files.length} HTML publice verificate (${indexFiles} index.html).`);
+  if (check && changed) {
+    throw new Error(`Headerul global nu este sincronizat în ${changed} din ${files.length} fișiere HTML publice.`);
+  }
+  console.log(check
+    ? `PASS: header global sincronizat în ${files.length} HTML publice (${indexFiles} index.html).`
+    : `Global header sincronizat: ${changed} fișiere modificate, ${files.length} HTML publice verificate (${indexFiles} index.html).`);
 }
 
 if (require.main === module) main();
@@ -184,5 +190,6 @@ module.exports = {
   legacyRange,
   markedRange,
   partialSource,
-  removeHomepageLegacyBehavior
+  removeHomepageLegacyBehavior,
+  synchronizeFile
 };

@@ -1,7 +1,18 @@
 {
-  "generatedAt": "2026-07-21T11:41:48.271Z",
+  "generatedAt": "2026-07-21T15:44:48.442Z",
   "targetRoutes": 10,
-  "changedFiles": [],
+  "changedFiles": [
+    "index.html",
+    "despre-faber/index.html",
+    "contact/index.html",
+    "fonduri-europene/index.html",
+    "fonduri-europene-digitalizare/index.html",
+    "digitalizare-imm/index.html",
+    "eligibilitate-fonduri-europene/index.html",
+    "verificare-eligibilitate-fonduri-europene/index.html",
+    "dr12-afir/index.html",
+    "dr14/index.html"
+  ],
   "sourceMigrated": false,
   "sourceMigratedEver": true,
   "changes": [
@@ -1524,6 +1535,126 @@
       "after": "Cum se calculează contribuția proprie?",
       "reason": "Lexic controlat P0.14",
       "sourceFile": "verificare-eligibilitate-fonduri-europene/index.html"
+    },
+    {
+      "route": "/",
+      "location": "visible-copy",
+      "before": "Cofinanțare",
+      "after": "Contribuție proprie",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "index.html"
+    },
+    {
+      "route": "/despre-faber",
+      "location": "visible-copy",
+      "before": "Cofinanțare",
+      "after": "Contribuție proprie",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "despre-faber/index.html"
+    },
+    {
+      "route": "/contact",
+      "location": "visible-copy",
+      "before": "Cofinanțare",
+      "after": "Contribuție proprie",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "contact/index.html"
+    },
+    {
+      "route": "/fonduri-europene",
+      "location": "visible-copy",
+      "before": "Cofinanțare",
+      "after": "Contribuție proprie",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "fonduri-europene/index.html"
+    },
+    {
+      "route": "/fonduri-europene-digitalizare",
+      "location": "visible-copy",
+      "before": "Cofinanțare",
+      "after": "Contribuție proprie",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "fonduri-europene-digitalizare/index.html"
+    },
+    {
+      "route": "/fonduri-europene-digitalizare",
+      "location": "visible-copy",
+      "before": "Descrie procesele actuale, nevoile, utilizatorii, integrarea, securitatea și rezultatele urmărite. Cerințele furnizorilor se clarifică după verificarea eligibilității investiției.",
+      "after": "Descrie procesele actuale, nevoile, utilizatorii, integrarea, securitatea și rezultatele urmărite. Cerințele furnizorilor se clarifică după verificarea inițială a eligibilității investiției.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "fonduri-europene-digitalizare/index.html"
+    },
+    {
+      "route": "/fonduri-europene-digitalizare",
+      "location": "json-ld:$.@graph[4].mainEntity[4].acceptedAnswer.text",
+      "before": "Descrie procesele actuale, nevoile, utilizatorii, integrarea, securitatea și rezultatele urmărite. Cerințele furnizorilor se clarifică după verificarea eligibilității investiției.",
+      "after": "Descrie procesele actuale, nevoile, utilizatorii, integrarea, securitatea și rezultatele urmărite. Cerințele furnizorilor se clarifică după verificarea inițială a eligibilității investiției.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "fonduri-europene-digitalizare/index.html"
+    },
+    {
+      "route": "/digitalizare-imm",
+      "location": "visible-copy",
+      "before": "Cofinanțare",
+      "after": "Contribuție proprie",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "digitalizare-imm/index.html"
+    },
+    {
+      "route": "/eligibilitate-fonduri-europene",
+      "location": "visible-copy",
+      "before": "Cofinanțare",
+      "after": "Contribuție proprie",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "eligibilitate-fonduri-europene/index.html"
+    },
+    {
+      "route": "/verificare-eligibilitate-fonduri-europene",
+      "location": "visible-copy",
+      "before": "Cofinanțare",
+      "after": "Contribuție proprie",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "verificare-eligibilitate-fonduri-europene/index.html"
+    },
+    {
+      "route": "/dr12-afir",
+      "location": "visible-copy",
+      "before": "Cofinanțare",
+      "after": "Contribuție proprie",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "dr12-afir/index.html"
+    },
+    {
+      "route": "/dr14",
+      "location": "visible-copy",
+      "before": "Cofinanțare",
+      "after": "Contribuție proprie",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "dr14/index.html"
+    },
+    {
+      "route": "/verificare-eligibilitate-fonduri-europene",
+      "location": "json-ld:$.@graph[3].itemListElement[2].name",
+      "before": "Verificare eligibilitate",
+      "after": "Verificare inițială a eligibilității",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "verificare-eligibilitate-fonduri-europene/index.html"
+    },
+    {
+      "route": "/",
+      "location": "positioning",
+      "before": "Verificăm solicitantul, programul, punctajul, bugetul și documentele înainte de a începe dosarul. Concluzia poate fi: continuăm, ajustăm sau nu depunem acum.",
+      "after": "Verificare prudentă, documentată și interdisciplinară — consultanță și proiectare — înainte de dosar. Verificăm solicitantul, programul, punctajul, bugetul și documentele înainte de a începe dosarul. Concluzia poate fi: continuăm, ajustăm sau nu depunem acum.",
+      "reason": "Poziționare centrală FABER",
+      "sourceFile": "index.html"
+    },
+    {
+      "route": "/",
+      "location": "visible-copy",
+      "before": "Verifică eligibilitatea proiectului",
+      "after": "Cere o verificare inițială a proiectului",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "index.html"
     }
   ]
 }

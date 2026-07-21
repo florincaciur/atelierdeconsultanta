@@ -1,0 +1,951 @@
+{
+  "schemaVersion": 1,
+  "generatedFor": "P1.05",
+  "generatedAt": "2026-07-21",
+  "evidence": {
+    "gscPages": "reports/gsc-page-priorities-2026-06-01.csv",
+    "gscQueries": "reports/gsc-query-priorities-2026-06-01.csv",
+    "analytics": "config/funnel-analytics.json",
+    "removalPolicy": "Se înlocuiesc numai containerele automate .related-links și blocurile next-step gestionate; linkurile editoriale integrate în propoziții nu sunt eliminate fără date click-level."
+  },
+  "summary": {
+    "programs": 20,
+    "links": 80,
+    "trackedCtas": 20,
+    "editorialLinksWithoutTracking": 60,
+    "legacyCloudsRemaining": 0,
+    "relationCounts": {
+      "parent": 20,
+      "instrument": 20,
+      "comparison": 20,
+      "conversion": 20
+    },
+    "pass": 20,
+    "fail": 0
+  },
+  "routes": [
+    {
+      "route": "/por-adr-nord-est",
+      "programId": "program-regional-nord-est",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "route": "/fonduri-regionale",
+      "programId": "fonduri-regionale",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "route": "/dr12-afir",
+      "programId": "dr12-afir",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "route": "/dr14",
+      "programId": "dr14-afir",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "route": "/start-up-nation-2026",
+      "programId": "start-up-nation",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "route": "/femeia-antreprenor-2026",
+      "programId": "femeia-antreprenor",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "route": "/digitalizare-imm",
+      "programId": "digitalizare-imm",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "route": "/investitii-modernizarea-microintreprinderilor-apel-2",
+      "programId": "modernizare-microintreprinderi-ne-2",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "route": "/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum",
+      "programId": "fondul-modernizare-autoconsum",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "route": "/fondul-modernizare-energie-regenerabila-2026",
+      "programId": "fondul-modernizare-regenerabile",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "route": "/afir-autoconsum-agroalimentar",
+      "programId": "afir-energie-autoconsum",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "route": "/autoconsum-public-fotovoltaice-institutii-publice",
+      "programId": "autoconsum-institutii-publice",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "route": "/pro-infra",
+      "programId": "pro-infra",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "route": "/apeluri-gal",
+      "programId": "apeluri-gal",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "route": "/gal-afir",
+      "programId": "gal-afir-leader",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "route": "/e-move",
+      "programId": "e-move-ro",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "route": "/pocidif-21",
+      "programId": "pocidif-21",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "route": "/pnrr",
+      "programId": "pnrr",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "route": "/programul-tranzitie-justa",
+      "programId": "programul-tranzitie-justa",
+      "status": "PASS",
+      "issues": []
+    },
+    {
+      "route": "/fondul-de-modernizare",
+      "programId": "fondul-de-modernizare",
+      "status": "PASS",
+      "issues": []
+    }
+  ],
+  "rows": [
+    {
+      "source_url": "https://atelierdeconsultanta.ro/por-adr-nord-est",
+      "anchor": "revino la programele Regional și ADR",
+      "destination": "https://atelierdeconsultanta.ro/fonduri-regionale",
+      "relation": "parent",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 1 (link 15/18)",
+      "analytics_event": "—",
+      "source_state": "public"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/por-adr-nord-est",
+      "anchor": "verifică criteriile inițiale de eligibilitate",
+      "destination": "https://atelierdeconsultanta.ro/verificare-eligibilitate-fonduri-europene",
+      "relation": "instrument",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 2 (link 16/18)",
+      "analytics_event": "—",
+      "source_state": "public"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/por-adr-nord-est",
+      "anchor": "compară traseele de finanțare din Nord-Est",
+      "destination": "https://atelierdeconsultanta.ro/fonduri-europene-nord-est",
+      "relation": "comparison",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 3 (link 17/18)",
+      "analytics_event": "—",
+      "source_state": "public"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/por-adr-nord-est",
+      "anchor": "Verifică încadrarea în Programul Regional Nord-Est",
+      "destination": "https://atelierdeconsultanta.ro/contact?program=program-regional-nord-est",
+      "relation": "conversion",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 4 (link 18/18)",
+      "analytics_event": "cta_click",
+      "source_state": "public"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/fonduri-regionale",
+      "anchor": "revino la hubul programelor de finanțare",
+      "destination": "https://atelierdeconsultanta.ro/fonduri-europene",
+      "relation": "parent",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 1 (link 14/17)",
+      "analytics_event": "—",
+      "source_state": "public"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/fonduri-regionale",
+      "anchor": "verifică criteriile inițiale de eligibilitate",
+      "destination": "https://atelierdeconsultanta.ro/verificare-eligibilitate-fonduri-europene",
+      "relation": "instrument",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 2 (link 15/17)",
+      "analytics_event": "—",
+      "source_state": "public"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/fonduri-regionale",
+      "anchor": "compară traseele de finanțare din Nord-Est",
+      "destination": "https://atelierdeconsultanta.ro/fonduri-europene-nord-est",
+      "relation": "comparison",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 3 (link 16/17)",
+      "analytics_event": "—",
+      "source_state": "public"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/fonduri-regionale",
+      "anchor": "Verifică programul regional potrivit proiectului",
+      "destination": "https://atelierdeconsultanta.ro/contact?program=fonduri-regionale",
+      "relation": "conversion",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 4 (link 17/17)",
+      "analytics_event": "cta_click",
+      "source_state": "public"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/dr12-afir",
+      "anchor": "revino la hubul AFIR și agricultură",
+      "destination": "https://atelierdeconsultanta.ro/afir",
+      "relation": "parent",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 1 (link 1/4)",
+      "analytics_event": "—",
+      "source_state": "pending_validation"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/dr12-afir",
+      "anchor": "calculează dimensiunea economică SO",
+      "destination": "https://atelierdeconsultanta.ro/calculator-soc",
+      "relation": "instrument",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 2 (link 2/4)",
+      "analytics_event": "—",
+      "source_state": "pending_validation"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/dr12-afir",
+      "anchor": "compară condițiile DR 12 și DR 14",
+      "destination": "https://atelierdeconsultanta.ro/dr12-vs-dr14",
+      "relation": "comparison",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 3 (link 3/4)",
+      "analytics_event": "—",
+      "source_state": "pending_validation"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/dr12-afir",
+      "anchor": "Verifică încadrarea în DR 12",
+      "destination": "https://atelierdeconsultanta.ro/contact?program=dr12-afir",
+      "relation": "conversion",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 4 (link 4/4)",
+      "analytics_event": "cta_click",
+      "source_state": "pending_validation"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/dr14",
+      "anchor": "revino la hubul AFIR și agricultură",
+      "destination": "https://atelierdeconsultanta.ro/afir",
+      "relation": "parent",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 1 (link 1/4)",
+      "analytics_event": "—",
+      "source_state": "pending_validation"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/dr14",
+      "anchor": "calculează dimensiunea economică SO",
+      "destination": "https://atelierdeconsultanta.ro/calculator-soc",
+      "relation": "instrument",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 2 (link 2/4)",
+      "analytics_event": "—",
+      "source_state": "pending_validation"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/dr14",
+      "anchor": "compară condițiile DR 12 și DR 14",
+      "destination": "https://atelierdeconsultanta.ro/dr12-vs-dr14",
+      "relation": "comparison",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 3 (link 3/4)",
+      "analytics_event": "—",
+      "source_state": "pending_validation"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/dr14",
+      "anchor": "Verifică încadrarea în DR 14",
+      "destination": "https://atelierdeconsultanta.ro/contact?program=dr14-afir",
+      "relation": "conversion",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 4 (link 4/4)",
+      "analytics_event": "cta_click",
+      "source_state": "pending_validation"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/start-up-nation-2026",
+      "anchor": "revino la programele pentru antreprenoriat și GAL",
+      "destination": "https://atelierdeconsultanta.ro/fonduri-europene-imm",
+      "relation": "parent",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 1 (link 8/11)",
+      "analytics_event": "—",
+      "source_state": "public"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/start-up-nation-2026",
+      "anchor": "verifică criteriile inițiale de eligibilitate",
+      "destination": "https://atelierdeconsultanta.ro/verificare-eligibilitate-fonduri-europene",
+      "relation": "instrument",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 2 (link 9/11)",
+      "analytics_event": "—",
+      "source_state": "public"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/start-up-nation-2026",
+      "anchor": "verifică ghidul despre condițiile Start-Up Nation",
+      "destination": "https://atelierdeconsultanta.ro/start-up-nation-2026-conditii",
+      "relation": "comparison",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 3 (link 10/11)",
+      "analytics_event": "—",
+      "source_state": "public"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/start-up-nation-2026",
+      "anchor": "Verifică proiectul pentru Start-Up Nation",
+      "destination": "https://atelierdeconsultanta.ro/contact?program=start-up-nation",
+      "relation": "conversion",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 4 (link 11/11)",
+      "analytics_event": "cta_click",
+      "source_state": "public"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/femeia-antreprenor-2026",
+      "anchor": "revino la programele pentru antreprenoriat și GAL",
+      "destination": "https://atelierdeconsultanta.ro/fonduri-europene-imm",
+      "relation": "parent",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 1 (link 9/12)",
+      "analytics_event": "—",
+      "source_state": "public"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/femeia-antreprenor-2026",
+      "anchor": "verifică criteriile inițiale de eligibilitate",
+      "destination": "https://atelierdeconsultanta.ro/verificare-eligibilitate-fonduri-europene",
+      "relation": "instrument",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 2 (link 10/12)",
+      "analytics_event": "—",
+      "source_state": "public"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/femeia-antreprenor-2026",
+      "anchor": "compară condițiile și ideile de afaceri analizate",
+      "destination": "https://atelierdeconsultanta.ro/femeia-antreprenor-2026-conditii-idei-afaceri",
+      "relation": "comparison",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 3 (link 11/12)",
+      "analytics_event": "—",
+      "source_state": "public"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/femeia-antreprenor-2026",
+      "anchor": "Verifică proiectul pentru Femeia Antreprenor",
+      "destination": "https://atelierdeconsultanta.ro/contact?program=femeia-antreprenor",
+      "relation": "conversion",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 4 (link 12/12)",
+      "analytics_event": "cta_click",
+      "source_state": "public"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/digitalizare-imm",
+      "anchor": "revino la programele de digitalizare și inovare",
+      "destination": "https://atelierdeconsultanta.ro/fonduri-europene-digitalizare",
+      "relation": "parent",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 1 (link 1/4)",
+      "analytics_event": "—",
+      "source_state": "pending_validation"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/digitalizare-imm",
+      "anchor": "verifică criteriile inițiale de eligibilitate",
+      "destination": "https://atelierdeconsultanta.ro/verificare-eligibilitate-fonduri-europene",
+      "relation": "instrument",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 2 (link 2/4)",
+      "analytics_event": "—",
+      "source_state": "pending_validation"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/digitalizare-imm",
+      "anchor": "verifică ghidul cheltuielilor pentru digitalizare",
+      "destination": "https://atelierdeconsultanta.ro/cheltuieli-eligibile-digitalizare-imm",
+      "relation": "comparison",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 3 (link 3/4)",
+      "analytics_event": "—",
+      "source_state": "pending_validation"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/digitalizare-imm",
+      "anchor": "Verifică încadrarea proiectului de digitalizare",
+      "destination": "https://atelierdeconsultanta.ro/contact?program=digitalizare-imm",
+      "relation": "conversion",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 4 (link 4/4)",
+      "analytics_event": "cta_click",
+      "source_state": "pending_validation"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/investitii-modernizarea-microintreprinderilor-apel-2",
+      "anchor": "revino la programele Regional și ADR",
+      "destination": "https://atelierdeconsultanta.ro/fonduri-regionale",
+      "relation": "parent",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 1 (link 10/13)",
+      "analytics_event": "—",
+      "source_state": "public"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/investitii-modernizarea-microintreprinderilor-apel-2",
+      "anchor": "verifică criteriile inițiale de eligibilitate",
+      "destination": "https://atelierdeconsultanta.ro/verificare-eligibilitate-fonduri-europene",
+      "relation": "instrument",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 2 (link 11/13)",
+      "analytics_event": "—",
+      "source_state": "public"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/investitii-modernizarea-microintreprinderilor-apel-2",
+      "anchor": "compară traseele de finanțare din Nord-Est",
+      "destination": "https://atelierdeconsultanta.ro/fonduri-europene-nord-est",
+      "relation": "comparison",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 3 (link 12/13)",
+      "analytics_event": "—",
+      "source_state": "public"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/investitii-modernizarea-microintreprinderilor-apel-2",
+      "anchor": "Verifică încadrarea în Apelul 2 pentru microîntreprinderi",
+      "destination": "https://atelierdeconsultanta.ro/contact?program=modernizare-microintreprinderi-ne-2",
+      "relation": "conversion",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 4 (link 13/13)",
+      "analytics_event": "cta_click",
+      "source_state": "public"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum",
+      "anchor": "revino la programele pentru energie",
+      "destination": "https://atelierdeconsultanta.ro/finantari-panouri-fotovoltaice",
+      "relation": "parent",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 1 (link 8/11)",
+      "analytics_event": "—",
+      "source_state": "public"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum",
+      "anchor": "verifică criteriile inițiale de eligibilitate",
+      "destination": "https://atelierdeconsultanta.ro/verificare-eligibilitate-fonduri-europene",
+      "relation": "instrument",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 2 (link 9/11)",
+      "analytics_event": "—",
+      "source_state": "public"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum",
+      "anchor": "calculează prudent contribuția proprie",
+      "destination": "https://atelierdeconsultanta.ro/cum-se-calculeaza-cofinantarea-fonduri-europene",
+      "relation": "comparison",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 3 (link 10/11)",
+      "analytics_event": "—",
+      "source_state": "public"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum",
+      "anchor": "Verifică proiectul de energie pentru autoconsum",
+      "destination": "https://atelierdeconsultanta.ro/contact?program=fondul-modernizare-autoconsum",
+      "relation": "conversion",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 4 (link 11/11)",
+      "analytics_event": "cta_click",
+      "source_state": "public"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/fondul-modernizare-energie-regenerabila-2026",
+      "anchor": "revino la programele pentru energie",
+      "destination": "https://atelierdeconsultanta.ro/finantari-panouri-fotovoltaice",
+      "relation": "parent",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 1 (link 8/11)",
+      "analytics_event": "—",
+      "source_state": "public"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/fondul-modernizare-energie-regenerabila-2026",
+      "anchor": "verifică criteriile inițiale de eligibilitate",
+      "destination": "https://atelierdeconsultanta.ro/verificare-eligibilitate-fonduri-europene",
+      "relation": "instrument",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 2 (link 9/11)",
+      "analytics_event": "—",
+      "source_state": "public"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/fondul-modernizare-energie-regenerabila-2026",
+      "anchor": "calculează prudent contribuția proprie",
+      "destination": "https://atelierdeconsultanta.ro/cum-se-calculeaza-cofinantarea-fonduri-europene",
+      "relation": "comparison",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 3 (link 10/11)",
+      "analytics_event": "—",
+      "source_state": "public"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/fondul-modernizare-energie-regenerabila-2026",
+      "anchor": "Verifică proiectul de producție regenerabilă",
+      "destination": "https://atelierdeconsultanta.ro/contact?program=fondul-modernizare-regenerabile",
+      "relation": "conversion",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 4 (link 11/11)",
+      "analytics_event": "cta_click",
+      "source_state": "public"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/afir-autoconsum-agroalimentar",
+      "anchor": "revino la hubul AFIR și agricultură",
+      "destination": "https://atelierdeconsultanta.ro/afir",
+      "relation": "parent",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 1 (link 15/18)",
+      "analytics_event": "—",
+      "source_state": "public"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/afir-autoconsum-agroalimentar",
+      "anchor": "verifică criteriile inițiale de eligibilitate",
+      "destination": "https://atelierdeconsultanta.ro/verificare-eligibilitate-fonduri-europene",
+      "relation": "instrument",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 2 (link 16/18)",
+      "analytics_event": "—",
+      "source_state": "public"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/afir-autoconsum-agroalimentar",
+      "anchor": "compară reperele pentru fotovoltaice în ferme",
+      "destination": "https://atelierdeconsultanta.ro/blog-afir-fotovoltaice-ferme-2026",
+      "relation": "comparison",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 3 (link 17/18)",
+      "analytics_event": "—",
+      "source_state": "public"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/afir-autoconsum-agroalimentar",
+      "anchor": "Verifică proiectul AFIR pentru autoconsum",
+      "destination": "https://atelierdeconsultanta.ro/contact?program=afir-energie-autoconsum",
+      "relation": "conversion",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 4 (link 18/18)",
+      "analytics_event": "cta_click",
+      "source_state": "public"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/autoconsum-public-fotovoltaice-institutii-publice",
+      "anchor": "revino la programele pentru energie",
+      "destination": "https://atelierdeconsultanta.ro/finantari-panouri-fotovoltaice",
+      "relation": "parent",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 1 (link 8/11)",
+      "analytics_event": "—",
+      "source_state": "public"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/autoconsum-public-fotovoltaice-institutii-publice",
+      "anchor": "verifică criteriile inițiale de eligibilitate",
+      "destination": "https://atelierdeconsultanta.ro/verificare-eligibilitate-fonduri-europene",
+      "relation": "instrument",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 2 (link 9/11)",
+      "analytics_event": "—",
+      "source_state": "public"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/autoconsum-public-fotovoltaice-institutii-publice",
+      "anchor": "calculează prudent contribuția proprie",
+      "destination": "https://atelierdeconsultanta.ro/cum-se-calculeaza-cofinantarea-fonduri-europene",
+      "relation": "comparison",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 3 (link 10/11)",
+      "analytics_event": "—",
+      "source_state": "public"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/autoconsum-public-fotovoltaice-institutii-publice",
+      "anchor": "Verifică proiectul de autoconsum al instituției",
+      "destination": "https://atelierdeconsultanta.ro/contact?program=autoconsum-institutii-publice",
+      "relation": "conversion",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 4 (link 11/11)",
+      "analytics_event": "cta_click",
+      "source_state": "public"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/pro-infra",
+      "anchor": "revino la programele Regional și ADR",
+      "destination": "https://atelierdeconsultanta.ro/fonduri-regionale",
+      "relation": "parent",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 1 (link 1/4)",
+      "analytics_event": "—",
+      "source_state": "pending_validation"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/pro-infra",
+      "anchor": "verifică criteriile inițiale de eligibilitate",
+      "destination": "https://atelierdeconsultanta.ro/verificare-eligibilitate-fonduri-europene",
+      "relation": "instrument",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 2 (link 2/4)",
+      "analytics_event": "—",
+      "source_state": "pending_validation"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/pro-infra",
+      "anchor": "pregătește documentele de bază ale proiectului",
+      "destination": "https://atelierdeconsultanta.ro/acte-necesare-fonduri-europene-nerambursabile",
+      "relation": "comparison",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 3 (link 3/4)",
+      "analytics_event": "—",
+      "source_state": "pending_validation"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/pro-infra",
+      "anchor": "Verifică încadrarea proiectului în PRO INFRA",
+      "destination": "https://atelierdeconsultanta.ro/contact?program=pro-infra",
+      "relation": "conversion",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 4 (link 4/4)",
+      "analytics_event": "cta_click",
+      "source_state": "pending_validation"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/apeluri-gal",
+      "anchor": "revino la programele pentru antreprenoriat și GAL",
+      "destination": "https://atelierdeconsultanta.ro/fonduri-europene-imm",
+      "relation": "parent",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 1 (link 10/13)",
+      "analytics_event": "—",
+      "source_state": "public"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/apeluri-gal",
+      "anchor": "verifică criteriile inițiale de eligibilitate",
+      "destination": "https://atelierdeconsultanta.ro/verificare-eligibilitate-fonduri-europene",
+      "relation": "instrument",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 2 (link 11/13)",
+      "analytics_event": "—",
+      "source_state": "public"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/apeluri-gal",
+      "anchor": "compară programul LEADER și traseul GAL-AFIR",
+      "destination": "https://atelierdeconsultanta.ro/gal-afir",
+      "relation": "comparison",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 3 (link 12/13)",
+      "analytics_event": "—",
+      "source_state": "public"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/apeluri-gal",
+      "anchor": "Verifică încadrarea proiectului în apelul GAL",
+      "destination": "https://atelierdeconsultanta.ro/contact?program=apeluri-gal",
+      "relation": "conversion",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 4 (link 13/13)",
+      "analytics_event": "cta_click",
+      "source_state": "public"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/gal-afir",
+      "anchor": "revino la programele pentru antreprenoriat și GAL",
+      "destination": "https://atelierdeconsultanta.ro/fonduri-europene-imm",
+      "relation": "parent",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 1 (link 10/13)",
+      "analytics_event": "—",
+      "source_state": "public"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/gal-afir",
+      "anchor": "verifică criteriile inițiale de eligibilitate",
+      "destination": "https://atelierdeconsultanta.ro/verificare-eligibilitate-fonduri-europene",
+      "relation": "instrument",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 2 (link 11/13)",
+      "analytics_event": "—",
+      "source_state": "public"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/gal-afir",
+      "anchor": "compară apelurile GAL și condițiile locale",
+      "destination": "https://atelierdeconsultanta.ro/apeluri-gal",
+      "relation": "comparison",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 3 (link 12/13)",
+      "analytics_event": "—",
+      "source_state": "public"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/gal-afir",
+      "anchor": "Verifică proiectul pentru traseul GAL-AFIR",
+      "destination": "https://atelierdeconsultanta.ro/contact?program=gal-afir-leader",
+      "relation": "conversion",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 4 (link 13/13)",
+      "analytics_event": "cta_click",
+      "source_state": "public"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/e-move",
+      "anchor": "revino la programele pentru energie",
+      "destination": "https://atelierdeconsultanta.ro/finantari-panouri-fotovoltaice",
+      "relation": "parent",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 1 (link 9/12)",
+      "analytics_event": "—",
+      "source_state": "public"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/e-move",
+      "anchor": "verifică criteriile inițiale de eligibilitate",
+      "destination": "https://atelierdeconsultanta.ro/verificare-eligibilitate-fonduri-europene",
+      "relation": "instrument",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 2 (link 10/12)",
+      "analytics_event": "—",
+      "source_state": "public"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/e-move",
+      "anchor": "calculează prudent contribuția proprie",
+      "destination": "https://atelierdeconsultanta.ro/cum-se-calculeaza-cofinantarea-fonduri-europene",
+      "relation": "comparison",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 3 (link 11/12)",
+      "analytics_event": "—",
+      "source_state": "public"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/e-move",
+      "anchor": "Verifică încadrarea proiectului în e-MOVE RO",
+      "destination": "https://atelierdeconsultanta.ro/contact?program=e-move-ro",
+      "relation": "conversion",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 4 (link 12/12)",
+      "analytics_event": "cta_click",
+      "source_state": "public"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/pocidif-21",
+      "anchor": "revino la programele de digitalizare și inovare",
+      "destination": "https://atelierdeconsultanta.ro/fonduri-europene-digitalizare",
+      "relation": "parent",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 1 (link 16/19)",
+      "analytics_event": "—",
+      "source_state": "public"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/pocidif-21",
+      "anchor": "verifică criteriile inițiale de eligibilitate",
+      "destination": "https://atelierdeconsultanta.ro/verificare-eligibilitate-fonduri-europene",
+      "relation": "instrument",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 2 (link 17/19)",
+      "analytics_event": "—",
+      "source_state": "public"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/pocidif-21",
+      "anchor": "verifică cheltuielile analizate pentru PoCIDIF 2.1",
+      "destination": "https://atelierdeconsultanta.ro/cheltuieli-eligibile-pocidif-21",
+      "relation": "comparison",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 3 (link 18/19)",
+      "analytics_event": "—",
+      "source_state": "public"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/pocidif-21",
+      "anchor": "Verifică încadrarea proiectului în PoCIDIF 2.1",
+      "destination": "https://atelierdeconsultanta.ro/contact?program=pocidif-21",
+      "relation": "conversion",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 4 (link 19/19)",
+      "analytics_event": "cta_click",
+      "source_state": "public"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/pnrr",
+      "anchor": "revino la programele de digitalizare și inovare",
+      "destination": "https://atelierdeconsultanta.ro/fonduri-europene-digitalizare",
+      "relation": "parent",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 1 (link 1/4)",
+      "analytics_event": "—",
+      "source_state": "pending_validation"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/pnrr",
+      "anchor": "verifică criteriile inițiale de eligibilitate",
+      "destination": "https://atelierdeconsultanta.ro/verificare-eligibilitate-fonduri-europene",
+      "relation": "instrument",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 2 (link 2/4)",
+      "analytics_event": "—",
+      "source_state": "pending_validation"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/pnrr",
+      "anchor": "compară reperele PNRR pentru digitalizarea IMM",
+      "destination": "https://atelierdeconsultanta.ro/digitalizare-imm-pnrr",
+      "relation": "comparison",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 3 (link 3/4)",
+      "analytics_event": "—",
+      "source_state": "pending_validation"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/pnrr",
+      "anchor": "Verifică programul PNRR potrivit investiției",
+      "destination": "https://atelierdeconsultanta.ro/contact?program=pnrr",
+      "relation": "conversion",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 4 (link 4/4)",
+      "analytics_event": "cta_click",
+      "source_state": "pending_validation"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/programul-tranzitie-justa",
+      "anchor": "revino la programele Regional și ADR",
+      "destination": "https://atelierdeconsultanta.ro/fonduri-regionale",
+      "relation": "parent",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 1 (link 1/4)",
+      "analytics_event": "—",
+      "source_state": "pending_validation"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/programul-tranzitie-justa",
+      "anchor": "verifică criteriile inițiale de eligibilitate",
+      "destination": "https://atelierdeconsultanta.ro/verificare-eligibilitate-fonduri-europene",
+      "relation": "instrument",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 2 (link 2/4)",
+      "analytics_event": "—",
+      "source_state": "pending_validation"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/programul-tranzitie-justa",
+      "anchor": "verifică întrebările și documentele pentru PTJ",
+      "destination": "https://atelierdeconsultanta.ro/programul-tranzitie-justa-intrebari-documente",
+      "relation": "comparison",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 3 (link 3/4)",
+      "analytics_event": "—",
+      "source_state": "pending_validation"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/programul-tranzitie-justa",
+      "anchor": "Verifică încadrarea proiectului în PTJ",
+      "destination": "https://atelierdeconsultanta.ro/contact?program=programul-tranzitie-justa",
+      "relation": "conversion",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 4 (link 4/4)",
+      "analytics_event": "cta_click",
+      "source_state": "pending_validation"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/fondul-de-modernizare",
+      "anchor": "revino la programele pentru energie",
+      "destination": "https://atelierdeconsultanta.ro/finantari-panouri-fotovoltaice",
+      "relation": "parent",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 1 (link 1/4)",
+      "analytics_event": "—",
+      "source_state": "pending_validation"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/fondul-de-modernizare",
+      "anchor": "verifică criteriile inițiale de eligibilitate",
+      "destination": "https://atelierdeconsultanta.ro/verificare-eligibilitate-fonduri-europene",
+      "relation": "instrument",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 2 (link 2/4)",
+      "analytics_event": "—",
+      "source_state": "pending_validation"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/fondul-de-modernizare",
+      "anchor": "calculează prudent contribuția proprie",
+      "destination": "https://atelierdeconsultanta.ro/cum-se-calculeaza-cofinantarea-fonduri-europene",
+      "relation": "comparison",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 3 (link 3/4)",
+      "analytics_event": "—",
+      "source_state": "pending_validation"
+    },
+    {
+      "source_url": "https://atelierdeconsultanta.ro/fondul-de-modernizare",
+      "anchor": "Verifică schema potrivită din Fondul pentru Modernizare",
+      "destination": "https://atelierdeconsultanta.ro/contact?program=fondul-de-modernizare",
+      "relation": "conversion",
+      "target_status": "200_SELF_CANONICAL",
+      "position": "main > program-contextual-links > item 4 (link 4/4)",
+      "analytics_event": "cta_click",
+      "source_state": "pending_validation"
+    }
+  ],
+  "errors": []
+}

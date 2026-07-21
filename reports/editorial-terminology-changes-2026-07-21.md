@@ -1,8 +1,8 @@
 # Jurnal aplicare terminologie P0.14
 
 - Suprafețe țintă: 10
-- Fișiere HTML actualizate la această rulare: 0
-- Fragmente documentate cumulativ: 190
+- Fișiere HTML actualizate la această rulare: 10
+- Fragmente documentate cumulativ: 205
 - Migrare surse editoriale realizată: da
 - Textele juridice nu fac parte din corpusul rescris automat.
 - Statusurile și câmpurile factuale din registrul programelor sunt protejate.
@@ -199,3 +199,18 @@
 | /verificare-eligibilitate-fonduri-europene | verificare-eligibilitate-fonduri-europene/index.html:json-ld:$.@graph[4].description | Verificăm solicitantul, codul CAEN, locația, investiția, bugetul, cofinanțarea și documentele înainte de alegerea programului. | Verificăm solicitantul, codul CAEN, locația, investiția, bugetul, contribuția proprie și documentele înainte de alegerea programului. | Lexic controlat P0.14 |
 | /verificare-eligibilitate-fonduri-europene | verificare-eligibilitate-fonduri-europene/index.html:json-ld:$.@graph[4].name | Verificare eligibilitate pentru fonduri europene | Verificare inițială a eligibilității pentru fonduri europene | Lexic controlat P0.14 |
 | /verificare-eligibilitate-fonduri-europene | verificare-eligibilitate-fonduri-europene/index.html:json-ld:$.@graph[5].mainEntity[4].name | Cum se calculează cofinanțarea? | Cum se calculează contribuția proprie? | Lexic controlat P0.14 |
+| / | index.html:visible-copy | Cofinanțare | Contribuție proprie | Lexic controlat P0.14 |
+| /despre-faber | despre-faber/index.html:visible-copy | Cofinanțare | Contribuție proprie | Lexic controlat P0.14 |
+| /contact | contact/index.html:visible-copy | Cofinanțare | Contribuție proprie | Lexic controlat P0.14 |
+| /fonduri-europene | fonduri-europene/index.html:visible-copy | Cofinanțare | Contribuție proprie | Lexic controlat P0.14 |
+| /fonduri-europene-digitalizare | fonduri-europene-digitalizare/index.html:visible-copy | Cofinanțare | Contribuție proprie | Lexic controlat P0.14 |
+| /fonduri-europene-digitalizare | fonduri-europene-digitalizare/index.html:visible-copy | Descrie procesele actuale, nevoile, utilizatorii, integrarea, securitatea și rezultatele urmărite. Cerințele furnizorilor se clarifică după verificarea eligibilității investiției. | Descrie procesele actuale, nevoile, utilizatorii, integrarea, securitatea și rezultatele urmărite. Cerințele furnizorilor se clarifică după verificarea inițială a eligibilității investiției. | Lexic controlat P0.14 |
+| /fonduri-europene-digitalizare | fonduri-europene-digitalizare/index.html:json-ld:$.@graph[4].mainEntity[4].acceptedAnswer.text | Descrie procesele actuale, nevoile, utilizatorii, integrarea, securitatea și rezultatele urmărite. Cerințele furnizorilor se clarifică după verificarea eligibilității investiției. | Descrie procesele actuale, nevoile, utilizatorii, integrarea, securitatea și rezultatele urmărite. Cerințele furnizorilor se clarifică după verificarea inițială a eligibilității investiției. | Lexic controlat P0.14 |
+| /digitalizare-imm | digitalizare-imm/index.html:visible-copy | Cofinanțare | Contribuție proprie | Lexic controlat P0.14 |
+| /eligibilitate-fonduri-europene | eligibilitate-fonduri-europene/index.html:visible-copy | Cofinanțare | Contribuție proprie | Lexic controlat P0.14 |
+| /verificare-eligibilitate-fonduri-europene | verificare-eligibilitate-fonduri-europene/index.html:visible-copy | Cofinanțare | Contribuție proprie | Lexic controlat P0.14 |
+| /dr12-afir | dr12-afir/index.html:visible-copy | Cofinanțare | Contribuție proprie | Lexic controlat P0.14 |
+| /dr14 | dr14/index.html:visible-copy | Cofinanțare | Contribuție proprie | Lexic controlat P0.14 |
+| /verificare-eligibilitate-fonduri-europene | verificare-eligibilitate-fonduri-europene/index.html:json-ld:$.@graph[3].itemListElement[2].name | Verificare eligibilitate | Verificare inițială a eligibilității | Lexic controlat P0.14 |
+| / | index.html:positioning | Verificăm solicitantul, programul, punctajul, bugetul și documentele înainte de a începe dosarul. Concluzia poate fi: continuăm, ajustăm sau nu depunem acum. | Verificare prudentă, documentată și interdisciplinară — consultanță și proiectare — înainte de dosar. Verificăm solicitantul, programul, punctajul, bugetul și documentele înainte de a începe dosarul. Concluzia poate fi: continuăm, ajustăm sau nu depunem acum. | Poziționare centrală FABER |
+| / | index.html:visible-copy | Verifică eligibilitatea proiectului | Cere o verificare inițială a proiectului | Lexic controlat P0.14 |

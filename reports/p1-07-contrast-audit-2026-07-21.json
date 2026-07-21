@@ -1,0 +1,189 @@
+{
+  "generatedAt": "2026-07-21",
+  "version": "p1.07-v1",
+  "result": "PASS",
+  "contrast": [
+    {
+      "foreground": "text",
+      "background": "background",
+      "minimum": 4.5,
+      "use": "text normal",
+      "ratio": 14.02,
+      "pass": true
+    },
+    {
+      "foreground": "muted",
+      "background": "background",
+      "minimum": 4.5,
+      "use": "text secundar",
+      "ratio": 5.68,
+      "pass": true
+    },
+    {
+      "foreground": "border",
+      "background": "surface",
+      "minimum": 3,
+      "use": "contur componentă",
+      "ratio": 3.56,
+      "pass": true
+    },
+    {
+      "foreground": "white",
+      "background": "accent",
+      "minimum": 4.5,
+      "use": "CTA primar",
+      "ratio": 5.32,
+      "pass": true
+    },
+    {
+      "foreground": "white",
+      "background": "accentHover",
+      "minimum": 4.5,
+      "use": "CTA hover/active",
+      "ratio": 7.67,
+      "pass": true
+    },
+    {
+      "foreground": "success",
+      "background": "successSurface",
+      "minimum": 4.5,
+      "use": "status apel deschis",
+      "ratio": 6.77,
+      "pass": true
+    },
+    {
+      "foreground": "warning",
+      "background": "warningSurface",
+      "minimum": 4.5,
+      "use": "status consultare/calendar",
+      "ratio": 7.75,
+      "pass": true
+    },
+    {
+      "foreground": "closed",
+      "background": "closedSurface",
+      "minimum": 4.5,
+      "use": "status închis/arhivat",
+      "ratio": 7.04,
+      "pass": true
+    },
+    {
+      "foreground": "error",
+      "background": "errorSurface",
+      "minimum": 4.5,
+      "use": "eroare",
+      "ratio": 6.59,
+      "pass": true
+    },
+    {
+      "foreground": "focus",
+      "background": "surface",
+      "minimum": 3,
+      "use": "focus pe fundal deschis",
+      "ratio": 5.69,
+      "pass": true
+    },
+    {
+      "foreground": "focusOnDark",
+      "background": "navy",
+      "minimum": 3,
+      "use": "focus pe fundal închis",
+      "ratio": 11.39,
+      "pass": true
+    },
+    {
+      "foreground": "white",
+      "background": "navy",
+      "minimum": 4.5,
+      "use": "text pe fundal închis",
+      "ratio": 16.43,
+      "pass": true
+    },
+    {
+      "foreground": "accent",
+      "background": "background",
+      "minimum": 4.5,
+      "use": "link/accent scurt",
+      "ratio": 4.8,
+      "pass": true
+    }
+  ],
+  "pages": [
+    {
+      "route": "/",
+      "file": "index.html",
+      "scoped": true,
+      "stylesheet": "/assets/design-system.css?v=20260721-1",
+      "components": {
+        "header": 1,
+        "hero": 1,
+        "programCard": 0,
+        "statusBadge": 0,
+        "table": 0,
+        "accordion": 9,
+        "form": 2,
+        "cta": 5,
+        "breadcrumb": 0,
+        "carousel": 0,
+        "footer": 1,
+        "stickyCta": 0
+      }
+    },
+    {
+      "route": "/contact",
+      "file": "contact/index.html",
+      "scoped": true,
+      "stylesheet": "/assets/design-system.css?v=20260721-1",
+      "components": {
+        "header": 1,
+        "hero": 1,
+        "programCard": 0,
+        "statusBadge": 0,
+        "table": 0,
+        "accordion": 2,
+        "form": 1,
+        "cta": 10,
+        "breadcrumb": 1,
+        "carousel": 0,
+        "footer": 1,
+        "stickyCta": 0
+      }
+    },
+    {
+      "route": "/afir-autoconsum-agroalimentar",
+      "file": "afir-autoconsum-agroalimentar/index.html",
+      "scoped": true,
+      "stylesheet": "/assets/design-system.css?v=20260721-1",
+      "components": {
+        "header": 1,
+        "hero": 1,
+        "programCard": 0,
+        "statusBadge": 1,
+        "table": 1,
+        "accordion": 14,
+        "form": 0,
+        "cta": 5,
+        "breadcrumb": 1,
+        "carousel": 0,
+        "footer": 1,
+        "stickyCta": 0
+      }
+    }
+  ],
+  "contract": {
+    "scopedCss": true,
+    "body17px": true,
+    "lineHeight": true,
+    "measure68ch": true,
+    "responsiveHeadings": true,
+    "focusVisible": true,
+    "reducedMotion": true,
+    "mobileTarget44": true,
+    "loading": true,
+    "error": true,
+    "statusSymbols": true,
+    "stickyCtaContract": true
+  },
+  "componentNote": "stickyCta este definit în contract, dar nu este injectat deoarece lipsește din pilot; carousel apare numai pe homepage.",
+  "failures": []
+}

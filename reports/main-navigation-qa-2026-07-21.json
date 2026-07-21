@@ -1,0 +1,42 @@
+{
+  "generatedAt": "2026-07-21",
+  "config": "config/main-navigation.json",
+  "results": [
+    {
+      "width": 320,
+      "mode": "mobile",
+      "errors": [],
+      "screenshot": "reports/main-navigation-qa-2026-07-21/navigation-320-mobile.png"
+    },
+    {
+      "width": 360,
+      "mode": "mobile",
+      "errors": [],
+      "screenshot": "reports/main-navigation-qa-2026-07-21/navigation-360-mobile.png"
+    },
+    {
+      "width": 390,
+      "mode": "mobile",
+      "errors": [],
+      "screenshot": "reports/main-navigation-qa-2026-07-21/navigation-390-mobile.png"
+    },
+    {
+      "width": 768,
+      "mode": "mobile",
+      "errors": [],
+      "screenshot": "reports/main-navigation-qa-2026-07-21/navigation-768-mobile.png"
+    },
+    {
+      "width": 1024,
+      "mode": "mobile",
+      "errors": [],
+      "screenshot": "reports/main-navigation-qa-2026-07-21/navigation-1024-mobile.png"
+    },
+    {
+      "width": 1366,
+      "mode": "desktop",
+      "errors": [],
+      "screenshot": "reports/main-navigation-qa-2026-07-21/navigation-1366-desktop.png"
+    }
+  ]
+}

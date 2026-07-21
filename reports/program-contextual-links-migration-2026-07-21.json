@@ -1,0 +1,414 @@
+{
+  "generatedAt": "2026-07-21",
+  "evidence": {
+    "gscPages": "reports/gsc-page-priorities-2026-06-01.csv",
+    "gscQueries": "reports/gsc-query-priorities-2026-06-01.csv",
+    "analytics": "config/funnel-analytics.json",
+    "removalPolicy": "Se înlocuiesc numai containerele automate .related-links și blocurile next-step gestionate; linkurile editoriale integrate în propoziții nu sunt eliminate fără date click-level."
+  },
+  "files": [
+    {
+      "programId": "program-regional-nord-est",
+      "route": "/por-adr-nord-est",
+      "file": "por-adr-nord-est/index.html",
+      "removedManagedBlocks": 0,
+      "removedManagedLinks": 0,
+      "resultingRelations": [
+        "parent",
+        "instrument",
+        "comparison",
+        "conversion"
+      ]
+    },
+    {
+      "programId": "fonduri-regionale",
+      "route": "/fonduri-regionale",
+      "file": "fonduri-regionale/index.html",
+      "removedManagedBlocks": 0,
+      "removedManagedLinks": 0,
+      "resultingRelations": [
+        "parent",
+        "instrument",
+        "comparison",
+        "conversion"
+      ]
+    },
+    {
+      "programId": "dr12-afir",
+      "route": "/dr12-afir",
+      "file": "dr12-afir/index.html",
+      "removedManagedBlocks": 0,
+      "removedManagedLinks": 0,
+      "resultingRelations": [
+        "parent",
+        "instrument",
+        "comparison",
+        "conversion"
+      ]
+    },
+    {
+      "programId": "dr14-afir",
+      "route": "/dr14",
+      "file": "dr14/index.html",
+      "removedManagedBlocks": 0,
+      "removedManagedLinks": 0,
+      "resultingRelations": [
+        "parent",
+        "instrument",
+        "comparison",
+        "conversion"
+      ]
+    },
+    {
+      "programId": "start-up-nation",
+      "route": "/start-up-nation-2026",
+      "file": "start-up-nation-2026/index.html",
+      "removedManagedBlocks": 0,
+      "removedManagedLinks": 0,
+      "resultingRelations": [
+        "parent",
+        "instrument",
+        "comparison",
+        "conversion"
+      ]
+    },
+    {
+      "programId": "start-up-nation",
+      "route": "/start-up-nation-2026",
+      "file": "start-up-nation-2026.html",
+      "removedManagedBlocks": 0,
+      "removedManagedLinks": 0,
+      "resultingRelations": [
+        "parent",
+        "instrument",
+        "comparison",
+        "conversion"
+      ]
+    },
+    {
+      "programId": "femeia-antreprenor",
+      "route": "/femeia-antreprenor-2026",
+      "file": "femeia-antreprenor-2026/index.html",
+      "removedManagedBlocks": 0,
+      "removedManagedLinks": 0,
+      "resultingRelations": [
+        "parent",
+        "instrument",
+        "comparison",
+        "conversion"
+      ]
+    },
+    {
+      "programId": "femeia-antreprenor",
+      "route": "/femeia-antreprenor-2026",
+      "file": "femeia-antreprenor-2026.html",
+      "removedManagedBlocks": 0,
+      "removedManagedLinks": 0,
+      "resultingRelations": [
+        "parent",
+        "instrument",
+        "comparison",
+        "conversion"
+      ]
+    },
+    {
+      "programId": "digitalizare-imm",
+      "route": "/digitalizare-imm",
+      "file": "digitalizare-imm/index.html",
+      "removedManagedBlocks": 0,
+      "removedManagedLinks": 0,
+      "resultingRelations": [
+        "parent",
+        "instrument",
+        "comparison",
+        "conversion"
+      ]
+    },
+    {
+      "programId": "digitalizare-imm",
+      "route": "/digitalizare-imm",
+      "file": "digitalizare-imm.html",
+      "removedManagedBlocks": 0,
+      "removedManagedLinks": 0,
+      "resultingRelations": [
+        "parent",
+        "instrument",
+        "comparison",
+        "conversion"
+      ]
+    },
+    {
+      "programId": "modernizare-microintreprinderi-ne-2",
+      "route": "/investitii-modernizarea-microintreprinderilor-apel-2",
+      "file": "investitii-modernizarea-microintreprinderilor-apel-2/index.html",
+      "removedManagedBlocks": 0,
+      "removedManagedLinks": 0,
+      "resultingRelations": [
+        "parent",
+        "instrument",
+        "comparison",
+        "conversion"
+      ]
+    },
+    {
+      "programId": "modernizare-microintreprinderi-ne-2",
+      "route": "/investitii-modernizarea-microintreprinderilor-apel-2",
+      "file": "investitii-modernizarea-microintreprinderilor-apel-2.html",
+      "removedManagedBlocks": 0,
+      "removedManagedLinks": 0,
+      "resultingRelations": [
+        "parent",
+        "instrument",
+        "comparison",
+        "conversion"
+      ]
+    },
+    {
+      "programId": "fondul-modernizare-autoconsum",
+      "route": "/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum",
+      "file": "fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum/index.html",
+      "removedManagedBlocks": 0,
+      "removedManagedLinks": 0,
+      "resultingRelations": [
+        "parent",
+        "instrument",
+        "comparison",
+        "conversion"
+      ]
+    },
+    {
+      "programId": "fondul-modernizare-autoconsum",
+      "route": "/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum",
+      "file": "fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum.html",
+      "removedManagedBlocks": 0,
+      "removedManagedLinks": 0,
+      "resultingRelations": [
+        "parent",
+        "instrument",
+        "comparison",
+        "conversion"
+      ]
+    },
+    {
+      "programId": "fondul-modernizare-regenerabile",
+      "route": "/fondul-modernizare-energie-regenerabila-2026",
+      "file": "fondul-modernizare-energie-regenerabila-2026/index.html",
+      "removedManagedBlocks": 0,
+      "removedManagedLinks": 0,
+      "resultingRelations": [
+        "parent",
+        "instrument",
+        "comparison",
+        "conversion"
+      ]
+    },
+    {
+      "programId": "fondul-modernizare-regenerabile",
+      "route": "/fondul-modernizare-energie-regenerabila-2026",
+      "file": "fondul-modernizare-energie-regenerabila-2026.html",
+      "removedManagedBlocks": 0,
+      "removedManagedLinks": 0,
+      "resultingRelations": [
+        "parent",
+        "instrument",
+        "comparison",
+        "conversion"
+      ]
+    },
+    {
+      "programId": "afir-energie-autoconsum",
+      "route": "/afir-autoconsum-agroalimentar",
+      "file": "afir-autoconsum-agroalimentar/index.html",
+      "removedManagedBlocks": 0,
+      "removedManagedLinks": 0,
+      "resultingRelations": [
+        "parent",
+        "instrument",
+        "comparison",
+        "conversion"
+      ]
+    },
+    {
+      "programId": "afir-energie-autoconsum",
+      "route": "/afir-autoconsum-agroalimentar",
+      "file": "afir-autoconsum-agroalimentar.html",
+      "removedManagedBlocks": 0,
+      "removedManagedLinks": 0,
+      "resultingRelations": [
+        "parent",
+        "instrument",
+        "comparison",
+        "conversion"
+      ]
+    },
+    {
+      "programId": "autoconsum-institutii-publice",
+      "route": "/autoconsum-public-fotovoltaice-institutii-publice",
+      "file": "autoconsum-public-fotovoltaice-institutii-publice/index.html",
+      "removedManagedBlocks": 0,
+      "removedManagedLinks": 0,
+      "resultingRelations": [
+        "parent",
+        "instrument",
+        "comparison",
+        "conversion"
+      ]
+    },
+    {
+      "programId": "autoconsum-institutii-publice",
+      "route": "/autoconsum-public-fotovoltaice-institutii-publice",
+      "file": "autoconsum-public-fotovoltaice-institutii-publice.html",
+      "removedManagedBlocks": 0,
+      "removedManagedLinks": 0,
+      "resultingRelations": [
+        "parent",
+        "instrument",
+        "comparison",
+        "conversion"
+      ]
+    },
+    {
+      "programId": "pro-infra",
+      "route": "/pro-infra",
+      "file": "pro-infra/index.html",
+      "removedManagedBlocks": 0,
+      "removedManagedLinks": 0,
+      "resultingRelations": [
+        "parent",
+        "instrument",
+        "comparison",
+        "conversion"
+      ]
+    },
+    {
+      "programId": "pro-infra",
+      "route": "/pro-infra",
+      "file": "pro-infra.html",
+      "removedManagedBlocks": 0,
+      "removedManagedLinks": 0,
+      "resultingRelations": [
+        "parent",
+        "instrument",
+        "comparison",
+        "conversion"
+      ]
+    },
+    {
+      "programId": "apeluri-gal",
+      "route": "/apeluri-gal",
+      "file": "apeluri-gal/index.html",
+      "removedManagedBlocks": 0,
+      "removedManagedLinks": 0,
+      "resultingRelations": [
+        "parent",
+        "instrument",
+        "comparison",
+        "conversion"
+      ]
+    },
+    {
+      "programId": "gal-afir-leader",
+      "route": "/gal-afir",
+      "file": "gal-afir/index.html",
+      "removedManagedBlocks": 0,
+      "removedManagedLinks": 0,
+      "resultingRelations": [
+        "parent",
+        "instrument",
+        "comparison",
+        "conversion"
+      ]
+    },
+    {
+      "programId": "e-move-ro",
+      "route": "/e-move",
+      "file": "e-move/index.html",
+      "removedManagedBlocks": 0,
+      "removedManagedLinks": 0,
+      "resultingRelations": [
+        "parent",
+        "instrument",
+        "comparison",
+        "conversion"
+      ]
+    },
+    {
+      "programId": "pocidif-21",
+      "route": "/pocidif-21",
+      "file": "pocidif-21/index.html",
+      "removedManagedBlocks": 0,
+      "removedManagedLinks": 0,
+      "resultingRelations": [
+        "parent",
+        "instrument",
+        "comparison",
+        "conversion"
+      ]
+    },
+    {
+      "programId": "pnrr",
+      "route": "/pnrr",
+      "file": "pnrr/index.html",
+      "removedManagedBlocks": 0,
+      "removedManagedLinks": 0,
+      "resultingRelations": [
+        "parent",
+        "instrument",
+        "comparison",
+        "conversion"
+      ]
+    },
+    {
+      "programId": "pnrr",
+      "route": "/pnrr",
+      "file": "pnrr.html",
+      "removedManagedBlocks": 0,
+      "removedManagedLinks": 0,
+      "resultingRelations": [
+        "parent",
+        "instrument",
+        "comparison",
+        "conversion"
+      ]
+    },
+    {
+      "programId": "programul-tranzitie-justa",
+      "route": "/programul-tranzitie-justa",
+      "file": "programul-tranzitie-justa/index.html",
+      "removedManagedBlocks": 0,
+      "removedManagedLinks": 0,
+      "resultingRelations": [
+        "parent",
+        "instrument",
+        "comparison",
+        "conversion"
+      ]
+    },
+    {
+      "programId": "fondul-de-modernizare",
+      "route": "/fondul-de-modernizare",
+      "file": "fondul-de-modernizare/index.html",
+      "removedManagedBlocks": 0,
+      "removedManagedLinks": 0,
+      "resultingRelations": [
+        "parent",
+        "instrument",
+        "comparison",
+        "conversion"
+      ]
+    },
+    {
+      "programId": "fondul-de-modernizare",
+      "route": "/fondul-de-modernizare",
+      "file": "fondul-de-modernizare.html",
+      "removedManagedBlocks": 0,
+      "removedManagedLinks": 0,
+      "resultingRelations": [
+        "parent",
+        "instrument",
+        "comparison",
+        "conversion"
+      ]
+    }
+  ]
+}

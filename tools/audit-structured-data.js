@@ -166,14 +166,17 @@ function validateFaq($, nodes, issues) {
 
 function validateBreadcrumb(nodes, route, canonical, issues) {
   const breadcrumbs = nodes.filter((node) => hasType(node, "BreadcrumbList"));
+  if (route === "/") {
+    if (breadcrumbs.length) issues.push(`homepage publică ${breadcrumbs.length} BreadcrumbList fără echivalent vizibil; necesar 0`);
+    return;
+  }
   if (breadcrumbs.length !== 1) {
     issues.push(`BreadcrumbList: găsite ${breadcrumbs.length}, necesar exact 1`);
     return;
   }
   const items = breadcrumbs[0].itemListElement || [];
-  const expectedLength = route === "/" ? 1 : [2, 3];
-  if (route === "/" && items.length !== expectedLength) issues.push(`homepage breadcrumb are ${items.length} niveluri, necesar 1`);
-  if (route !== "/" && !expectedLength.includes(items.length)) issues.push(`breadcrumb are ${items.length} niveluri, necesar 2–3`);
+  const expectedLength = [2, 3, 4];
+  if (!expectedLength.includes(items.length)) issues.push(`breadcrumb are ${items.length} niveluri, necesar 2–4`);
   items.forEach((item, index) => {
     if (item.position !== index + 1) issues.push(`breadcrumb poziție invalidă la nivelul ${index + 1}`);
     if (!cleanText(item.name)) issues.push(`breadcrumb fără nume la nivelul ${index + 1}`);
