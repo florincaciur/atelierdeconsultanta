@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-07-21",
+  "siteOrigin": "https://atelierdeconsultanta.ro",
+  "sitemapUrl": "https://atelierdeconsultanta.ro/sitemap.xml",
+  "privatePaths": [
+    "/admin",
+    "/admin/",
+    "/api",
+    "/api/"
+  ],
+  "publicProbePaths": [
+    "/",
+    "/robots.txt",
+    "/sitemap.xml",
+    "/assets/home.min.css"
+  ],
+  "crawlers": [
+    {
+      "userAgent": "Googlebot",
+      "robotsGroup": "*",
+      "purpose": "căutare clasică",
+      "publicAccess": "allow",
+      "approval": "POLITICĂ_STANDARD",
+      "liveProbe": true
+    },
+    {
+      "userAgent": "bingbot",
+      "robotsGroup": "*",
+      "purpose": "căutare clasică",
+      "publicAccess": "allow",
+      "approval": "POLITICĂ_STANDARD",
+      "liveProbe": true
+    },
+    {
+      "userAgent": "OAI-SearchBot",
+      "robotsGroup": "OAI-SearchBot",
+      "purpose": "căutare și răspunsuri ChatGPT cu surse",
+      "publicAccess": "allow",
+      "approval": "APROBAT_PRIN_P0.15",
+      "liveProbe": true
+    },
+    {
+      "userAgent": "PerplexityBot",
+      "robotsGroup": "PerplexityBot",
+      "purpose": "căutare Perplexity",
+      "publicAccess": "allow",
+      "approval": "APROBAT_PRIN_P0.15",
+      "liveProbe": true
+    },
+    {
+      "userAgent": "Claude-SearchBot",
+      "robotsGroup": "Claude-SearchBot",
+      "purpose": "căutare și răspunsuri cu surse",
+      "publicAccess": "allow",
+      "approval": "REGULĂ_EXISTENTĂ_PĂSTRATĂ",
+      "liveProbe": false
+    },
+    {
+      "userAgent": "GPTBot",
+      "robotsGroup": "GPTBot",
+      "purpose": "antrenare OpenAI",
+      "publicAccess": "disallow",
+      "approval": "DE_VALIDAT_UMAN",
+      "changeInP015": false
+    },
+    {
+      "userAgent": "ClaudeBot",
+      "robotsGroup": "ClaudeBot",
+      "purpose": "antrenare Anthropic",
+      "publicAccess": "disallow",
+      "approval": "DE_VALIDAT_UMAN",
+      "changeInP015": false
+    },
+    {
+      "userAgent": "anthropic-ai",
+      "robotsGroup": "anthropic-ai",
+      "purpose": "utilizare AI Anthropic",
+      "publicAccess": "disallow",
+      "approval": "DE_VALIDAT_UMAN",
+      "changeInP015": false
+    },
+    {
+      "userAgent": "Google-Extended",
+      "robotsGroup": "Google-Extended",
+      "purpose": "utilizare pentru modele Google",
+      "publicAccess": "disallow",
+      "approval": "DE_VALIDAT_UMAN",
+      "changeInP015": false
+    },
+    {
+      "userAgent": "CCBot",
+      "robotsGroup": "CCBot",
+      "purpose": "Common Crawl / seturi de date",
+      "publicAccess": "disallow",
+      "approval": "DE_VALIDAT_UMAN",
+      "changeInP015": false
+    }
+  ],
+  "cloudflare": {
+    "configurationSource": "dashboard și Security Events",
+    "repositoryRuleFound": false,
+    "officialCrawlerLogReview": "DE_VALIDAT_UMAN",
+    "perplexityIpListUrl": "https://www.perplexity.com/perplexitybot.json",
+    "syntheticProbe": {
+      "date": "2026-07-21",
+      "result": "403_FROM_CLOUDFLARE_FOR_SPOOFED_USER_AGENT",
+      "interpretation": "Nu dovedește blocarea crawlerului oficial deoarece IP-ul probei nu aparține Perplexity."
+    },
+    "allowUserAgentOnlyException": false,
+    "changeApproval": "APROBARE_UMANĂ_NECESARĂ"
+  }
+}

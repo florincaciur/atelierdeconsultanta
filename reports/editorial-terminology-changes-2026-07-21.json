@@ -1,0 +1,1529 @@
+{
+  "generatedAt": "2026-07-21T11:41:48.271Z",
+  "targetRoutes": 10,
+  "changedFiles": [],
+  "sourceMigrated": false,
+  "sourceMigratedEver": true,
+  "changes": [
+    {
+      "route": "/dr12-afir",
+      "location": "pages.0.audience.2",
+      "before": "Solicitanți care pot susține cofinanțarea, calendarul de implementare și documentele APIA, ANSVSA, fiscale și juridice cerute de apel.",
+      "after": "Solicitanți care pot susține contribuția proprie, calendarul de implementare și documentele APIA, ANSVSA, fiscale și juridice cerute de apel.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/dr12-afir",
+      "location": "pages.0.eligibility.0",
+      "before": "Verifică vârstă și încadrarea în categoria de tânăr fermier la data stabilita de ghidul activ.",
+      "after": "Verifică vârstă și încadrarea în categoria de tânăr fermier la data stabilita de documentul oficial aplicabil.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/dr12-afir",
+      "location": "pages.0.mandatory.0",
+      "before": "Stabilirea formei juridice și verificarea eligibilității solicitantului înainte de construirea bugetului.",
+      "after": "Stabilirea formei juridice și verificarea inițială a eligibilității solicitantului înainte de construirea bugetului.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/dr12-afir",
+      "location": "pages.0.mandatory.2",
+      "before": "Buget separat pentru grant, cofinanțare, TVA, costuri neeligibile și rezerve de preț.",
+      "after": "Buget separat pentru grant, contribuție proprie, TVA, costuri neeligibile și rezerve de preț.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/dr12-afir",
+      "location": "pages.0.mandatory.4",
+      "before": "Respectarea perioadelor de implementare și monitorizare mentionate în ghidul activ.",
+      "after": "Respectarea perioadelor de implementare și monitorizare mentionate în documentul oficial aplicabil.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/dr12-afir",
+      "location": "pages.0.eligibleExpenses.1",
+      "before": "Constructii, modernizari sau dotări pentru activitatea agricolă, dacă sunt permise în ghidul activ.",
+      "after": "Constructii, modernizari sau dotări pentru activitatea agricolă, dacă sunt permise în documentul oficial aplicabil.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/dr12-afir",
+      "location": "pages.0.steps.2",
+      "before": "Structuram bugetul pe grant, cofinanțare, TVA și cheltuieli neeligibile.",
+      "after": "Structuram bugetul pe grant, contribuție proprie, TVA și cheltuieli neeligibile.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/dr12-afir",
+      "location": "pages.0.examples.2",
+      "before": "Fermă mixta care vrea investiții etapizate, cu buget realist și cofinanțare confirmata înainte de depunere.",
+      "after": "Fermă mixta care vrea investiții etapizate, cu buget realist și contribuție proprie confirmata înainte de depunere.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/dr12-afir",
+      "location": "pages.0.faq.1.1",
+      "before": "Nu. Documentul folosit pentru această pagină este versiunea consultativă. Regulile finale se confirmă numai în ghidul activ aprobat și în anexele sesiunii.",
+      "after": "Nu. Documentul folosit pentru această pagină este versiunea consultativă. Regulile finale se confirmă numai în documentul oficial aplicabil aprobat și în anexele sesiunii.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/dr12-afir",
+      "location": "pages.0.faq.4.1",
+      "before": "Se corelează înregistrările APIA, ANSVSA/DSVSA și ANZ, documentele de folosință, actele formei juridice și verificările ONRC, împreună cu documentația investiției și cofinanțarea.",
+      "after": "Se corelează înregistrările APIA, ANSVSA/DSVSA și ANZ, documentele de folosință, actele formei juridice și verificările ONRC, împreună cu documentația investiției și contribuția proprie.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/dr12-afir",
+      "location": "pages.0.related.4.label",
+      "before": "Verificare eligibilitate",
+      "after": "Verificare inițială a eligibilității",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/dr12-afir",
+      "location": "pages.0.applicantRows.0.1",
+      "before": "Tânăr fermier sau alta categorie eligibilă mentionata în ghidul activ.",
+      "after": "Tânăr fermier sau alta categorie eligibilă mentionata în documentul oficial aplicabil.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/dr12-afir",
+      "location": "pages.0.applicantRows.2.3",
+      "before": "Ghidul activ",
+      "after": "Documentul oficial aplicabil",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/dr12-afir",
+      "location": "pages.0.applicantRows.3.0",
+      "before": "Cofinanțare",
+      "after": "Contribuție proprie",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/dr12-afir",
+      "location": "pages.0.eligibleInvestmentRows.0.3",
+      "before": "Ghidul activ",
+      "after": "Documentul oficial aplicabil",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/dr12-afir",
+      "location": "pages.0.eligibleInvestmentRows.1.3",
+      "before": "Ghidul activ",
+      "after": "Documentul oficial aplicabil",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/dr12-afir",
+      "location": "pages.0.eligibleInvestmentRows.2.3",
+      "before": "Ghidul activ",
+      "after": "Documentul oficial aplicabil",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/dr12-afir",
+      "location": "pages.0.eligibleInvestmentRows.3.3",
+      "before": "Ghidul activ",
+      "after": "Documentul oficial aplicabil",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/dr12-afir",
+      "location": "pages.0.cofinancingTitle",
+      "before": "Finanțare și cofinanțare DR12",
+      "after": "Finanțare și contribuție proprie DR12",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/dr12-afir",
+      "location": "pages.0.documentRows.3.3",
+      "before": "Cofinanțare, TVA și costuri neeligibile estimate separat.",
+      "after": "Contribuție proprie, TVA și costuri neeligibile estimate separat.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/dr12-afir",
+      "location": "pages.0.commonMistakes.3",
+      "before": "Buget care ignora cofinanțarea, TVA sau costurile neeligibile.",
+      "after": "Buget care ignora contribuția proprie, TVA sau costurile neeligibile.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/dr12-afir",
+      "location": "pages.0.caseExample.checked",
+      "before": "Forma solicitantului, calcul SO, documente de folosință, oferte, cofinanțare și riscul de dublare cu alte programe",
+      "after": "Forma solicitantului, calcul SO, documente de folosință, oferte, contribuție proprie și riscul de dublare cu alte programe",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/dr12-afir",
+      "location": "pages.0.contentSections.2.title",
+      "before": "Cum tratam cofinanțarea și calendarul",
+      "after": "Cum tratam contribuția proprie și calendarul",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/dr12-afir",
+      "location": "pages.0.contentSections.2.body",
+      "before": "Grantul nu acopera automat toate costurile. Separarea grantului de cofinanțare, TVA, cheltuieli neeligibile și rezerve de preț trebuie facuta înainte de depunere. Calendarul trebuie comparat cu perioada de implementare și cu obligatiile de monitorizare ale apelului activ.",
+      "after": "Grantul nu acopera automat toate costurile. Separarea grantului de contribuție proprie, TVA, cheltuieli neeligibile și rezerve de preț trebuie facuta înainte de depunere. Calendarul trebuie comparat cu perioada de implementare și cu obligatiile de monitorizare ale apelului analizat.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/dr12-afir",
+      "location": "pages.0.contentSections.3.body",
+      "before": "Pagină folosește ghidul consultativ AFIR ca reper de lucru. Pentru decizia finală de aplicare verificam ghidul activ, anuntul sesiunii, anexele și eventualele clarificări publicate de autoritate.",
+      "after": "Pagină folosește ghidul consultativ AFIR ca reper de lucru. Pentru decizia finală de aplicare verificam documentul oficial aplicabil, anuntul sesiunii, anexele și eventualele clarificări publicate de autoritate.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/dr12-afir",
+      "location": "pages.0.decisionIntro",
+      "before": "DR12 merită pregătit când solicitantul și exploatația pot fi demonstrate documentar, investiția este proportionala cu activitatea agricolă, iar cofinanțarea este realistă.",
+      "after": "DR12 merită pregătit când solicitantul și exploatația pot fi demonstrate documentar, investiția este proportionala cu activitatea agricolă, iar contribuția proprie este realistă.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/dr12-afir",
+      "location": "pages.0.finalCtaText",
+      "before": "Analiza compară exploatația, documentele agricole, investiția și cofinanțarea cu ghidul consultativ. Condițiile de lansare și forma finală se reconfirmă în documentele AFIR active.",
+      "after": "Analiza compară exploatația, documentele agricole, investiția și contribuția proprie cu ghidul consultativ. Condițiile de lansare și forma finală se reconfirmă în documentele AFIR aplicabile.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/dr12-afir",
+      "location": "pages.0.heroPrimaryCta",
+      "before": "Verifică eligibilitatea fermei",
+      "after": "Cere verificarea inițială a fermei",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/dr12-afir",
+      "location": "pages.0.finalPrimaryCta",
+      "before": "Verifică eligibilitatea fermei tale cu un consultant FABER",
+      "after": "Cere o verificare inițială a fermei cu un consultant FABER",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/dr12-afir",
+      "location": "pages.0.inlineCtaText",
+      "before": "Trimite datele despre solicitant, vârstă, exploatație, documentele APIA/ANSVSA, investiție și cofinanțare. Verificarea separă condițiile din ghidul consultativ de cele care așteaptă ghidul final.",
+      "after": "Trimite datele despre solicitant, vârstă, exploatație, documentele APIA/ANSVSA, investiție și contribuție proprie. Verificarea separă condițiile din ghidul consultativ de cele care așteaptă ghidul final.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/dr12-afir",
+      "location": "pages.0.ctaText",
+      "before": "Verifică eligibilitatea fermei",
+      "after": "Cere verificarea inițială a fermei",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/dr14",
+      "location": "pages.1.audience.2",
+      "before": "Exploatatii care pot susține cofinanțarea și obligatiile asumate după semnarea contractului.",
+      "after": "Exploatatii care pot susține contribuția proprie și obligatiile asumate după semnarea contractului.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/dr14",
+      "location": "pages.1.eligibility.4",
+      "before": "Pregateste cofinanțarea și costurile neeligibile înainte de depunere.",
+      "after": "Pregateste contribuția proprie și costurile neeligibile înainte de depunere.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/dr14",
+      "location": "pages.1.mandatory.2",
+      "before": "Buget realist, cu TVA, cofinanțare și cheltuieli neeligibile tratate separat.",
+      "after": "Buget realist, cu TVA, contribuție proprie și cheltuieli neeligibile tratate separat.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/dr14",
+      "location": "pages.1.mandatory.4",
+      "before": "Respectarea conditiilor finale din ghidul activ, nu doar din forma consultativa.",
+      "after": "Respectarea conditiilor finale din documentul oficial aplicabil, nu doar din forma consultativa.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/dr14",
+      "location": "pages.1.steps.3",
+      "before": "Construim bugetul și scenariul de cofinanțare.",
+      "after": "Construim bugetul și scenariul de contribuție proprie.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/dr14",
+      "location": "pages.1.examples.2",
+      "before": "Fermă mixta care are nevoie de modernizare punctuala și poate acoperi cofinanțarea.",
+      "after": "Fermă mixta care are nevoie de modernizare punctuala și poate acoperi contribuția proprie.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/dr14",
+      "location": "pages.1.faq.4.1",
+      "before": "Introdu culturile și efectivele documentabile, verifică totalul și SO majoritar, apoi confruntă rezultatul cu intervalul sectorului din ghidul activ.",
+      "after": "Introdu culturile și efectivele documentabile, verifică totalul și SO majoritar, apoi confruntă rezultatul cu intervalul sectorului din documentul oficial aplicabil.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/dr14",
+      "location": "pages.1.related.4.label",
+      "before": "Verificare eligibilitate",
+      "after": "Verificare inițială a eligibilității",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/dr14",
+      "location": "pages.1.contentSections.1.body",
+      "before": "Intentia de modernizare nu este suficientă. Documentele pentru terenuri, animale, spații, forma juridică, autorizări, oferte și cofinanțare trebuie să confirme ca proiectul poate fi implementat și monitorizat.",
+      "after": "Intentia de modernizare nu este suficientă. Documentele pentru terenuri, animale, spații, forma juridică, autorizări, oferte și contribuție proprie trebuie să confirme ca proiectul poate fi implementat și monitorizat.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/dr14",
+      "location": "pages.1.contentSections.2.body",
+      "before": "Separarea grantului de cofinanțare, TVA și costuri neeligibile reduce riscul de blocaj după aprobare. Bugetul trebuie să explice fiecare echipament și fiecare serviciu prin nevoia fermei.",
+      "after": "Separarea grantului de contribuție proprie, TVA și costuri neeligibile reduce riscul de blocaj după aprobare. Bugetul trebuie să explice fiecare echipament și fiecare serviciu prin nevoia fermei.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/dr14",
+      "location": "pages.1.heroPrimaryCta",
+      "before": "Verifică eligibilitatea DR14",
+      "after": "Cere verificarea inițială pentru DR14",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/dr14",
+      "location": "pages.1.finalPrimaryCta",
+      "before": "Verifică eligibilitatea DR14",
+      "after": "Cere verificarea inițială pentru DR14",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/dr14",
+      "location": "pages.1.applicantRows.2.3",
+      "before": "Ghidul activ",
+      "after": "Documentul oficial aplicabil",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/dr14",
+      "location": "pages.1.applicantRows.3.0",
+      "before": "Cofinanțare",
+      "after": "Contribuție proprie",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/dr14",
+      "location": "pages.1.eligibleInvestmentRows.0.3",
+      "before": "Ghidul activ",
+      "after": "Documentul oficial aplicabil",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/dr14",
+      "location": "pages.1.eligibleInvestmentRows.1.3",
+      "before": "Ghidul activ",
+      "after": "Documentul oficial aplicabil",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/dr14",
+      "location": "pages.1.eligibleInvestmentRows.2.3",
+      "before": "Ghidul activ",
+      "after": "Documentul oficial aplicabil",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/dr14",
+      "location": "pages.1.eligibleInvestmentRows.3.3",
+      "before": "Ghidul activ",
+      "after": "Documentul oficial aplicabil",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/dr14",
+      "location": "pages.1.cofinancingTitle",
+      "before": "Finanțare și cofinanțare DR14",
+      "after": "Finanțare și contribuție proprie DR14",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/dr14",
+      "location": "pages.1.documentRows.3.3",
+      "before": "Cofinanțare, TVA și costuri neeligibile.",
+      "after": "Contribuție proprie, TVA și costuri neeligibile.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/dr14",
+      "location": "pages.1.decisionIntro",
+      "before": "DR14 este potrivit când fermă mica are documente clare, investiția este dimensionata corect și cofinanțarea este acoperita.",
+      "after": "DR14 este potrivit când fermă mica are documente clare, investiția este dimensionata corect și contribuția proprie este acoperita.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/dr14",
+      "location": "pages.1.ctaText",
+      "before": "Verifică eligibilitatea DR14",
+      "after": "Cere verificarea inițială pentru DR14",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/digitalizare-imm",
+      "location": "pages.5.faq.3.1",
+      "before": "Nu. Echipamentele trebuie să fie necesare proiectului și acceptate de ghidul apelului activ.",
+      "after": "Nu. Echipamentele trebuie să fie necesare proiectului și acceptate de documentul oficial al apelului analizat.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/digitalizare-imm",
+      "location": "pages.5.contentSections.2.paragraphs.0",
+      "before": "Un proiect de digitalizare se verifică prin procese reale: ERP, CRM, cloud, securitate, automatizari și indicatori. PNRR digitalizare și programele regionale pot avea reguli diferite, deci bugetul și cheltuielile trebuie separate pe apelul activ.",
+      "after": "Un proiect de digitalizare se verifică prin procese reale: ERP, CRM, cloud, securitate, automatizari și indicatori. PNRR digitalizare și programele regionale pot avea reguli diferite, deci bugetul și cheltuielile trebuie separate pe apelul analizat.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/digitalizare-imm",
+      "location": "pages.5.heroPrimaryCta",
+      "before": "Verifică eligibilitatea",
+      "after": "Cere o verificare inițială",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/digitalizare-imm",
+      "location": "pages.5.decisionClose",
+      "before": "Dacă documentele, bugetul sau condițiile nu se potrivesc, proiectul se ajustează înainte de depunere. Regulile finale se confirmă în ghidul activ, anexele apelului și sursele oficiale.",
+      "after": "Dacă documentele, bugetul sau condițiile nu se potrivesc, proiectul se ajustează înainte de depunere. Regulile finale se confirmă în documentul oficial aplicabil, anexele apelului și sursele oficiale.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/fonduri-europene",
+      "location": "pages.12.funding",
+      "before": "valorile difera pe program și se verifică în apelul activ.",
+      "after": "valorile difera pe program și se verifică în apelul analizat.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/fonduri-europene",
+      "location": "pages.12.eligibility.4",
+      "before": "cofinanțare",
+      "after": "contribuție proprie",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/fonduri-europene",
+      "location": "pages.12.steps.3",
+      "before": "calculează cofinanțarea",
+      "after": "calculează contribuția proprie",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/fonduri-europene",
+      "location": "pages.12.contentSections.0.paragraphs.1",
+      "before": "Pentru fiecare traseu, regulile finale se confirmă în ghidul activ, anexele apelului și comunicările autorității.",
+      "after": "Pentru fiecare traseu, regulile finale se confirmă în documentul oficial aplicabil, anexele apelului și comunicările autorității.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/fonduri-europene",
+      "location": "pages.12.contentSections.1.paragraphs.0",
+      "before": "Hub-ul central include acum și e-MOVE RO pentru mobilitate electrică, respectiv GAL-AFIR pentru apeluri LEADER dedicate beneficiarilor publici și privați. Fiecare program trebuie confirmat în ghidul activ și în sursele oficiale.",
+      "after": "Hub-ul central include acum și e-MOVE RO pentru mobilitate electrică, respectiv GAL-AFIR pentru apeluri LEADER dedicate beneficiarilor publici și privați. Fiecare program trebuie confirmat în documentul oficial aplicabil și în sursele oficiale.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/fonduri-europene",
+      "location": "pages.12.heroPrimaryCta",
+      "before": "Verifică eligibilitatea",
+      "after": "Cere o verificare inițială",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/fonduri-europene",
+      "location": "pages.12.decisionClose",
+      "before": "Dacă documentele, bugetul sau condițiile nu se potrivesc, proiectul se ajustează înainte de depunere. Regulile finale se confirmă în ghidul activ, anexele apelului și sursele oficiale.",
+      "after": "Dacă documentele, bugetul sau condițiile nu se potrivesc, proiectul se ajustează înainte de depunere. Regulile finale se confirmă în documentul oficial aplicabil, anexele apelului și sursele oficiale.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/fonduri-europene-digitalizare",
+      "location": "pages.15.funding",
+      "before": "valorile depind de apelul activ.",
+      "after": "valorile depind de apelul analizat.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/verificare-eligibilitate-fonduri-europene",
+      "location": "pages.21.title",
+      "before": "Verificare eligibilitate fonduri europene",
+      "after": "Verificare inițială a eligibilității fonduri europene",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/verificare-eligibilitate-fonduri-europene",
+      "location": "pages.21.description",
+      "before": "Verificare inițială pentru fonduri europene: firmă, CAEN, localitate, investiție, buget, cofinanțare, documente și program potrivit.",
+      "after": "Verificare inițială pentru fonduri europene: firmă, CAEN, localitate, investiție, buget, contribuție proprie, documente și program potrivit.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/verificare-eligibilitate-fonduri-europene",
+      "location": "pages.21.h1",
+      "before": "Verificare eligibilitate pentru fonduri europene",
+      "after": "Verificare inițială a eligibilității pentru fonduri europene",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/verificare-eligibilitate-fonduri-europene",
+      "location": "pages.21.quickAnswer",
+      "before": "Serviciul verifică dacă solicitantul și investiția au o potrivire realistă cu un program de finanțare. Sunt necesare forma juridică, CAEN-ul sau activitatea fermei, localitatea, bugetul, cofinanțarea și documentele existente. Rezultatul poate fi: continuăm pregătirea, ajustăm proiectul sau amânăm până când apar documente ori reguli mai clare.",
+      "after": "Serviciul verifică dacă solicitantul și investiția au o potrivire realistă cu un program de finanțare. Sunt necesare forma juridică, CAEN-ul sau activitatea fermei, localitatea, bugetul, contribuția proprie și documentele existente. Rezultatul poate fi: continuăm pregătirea, ajustăm proiectul sau amânăm până când apar documente ori reguli mai clare.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/verificare-eligibilitate-fonduri-europene",
+      "location": "pages.21.programName",
+      "before": "Verificare eligibilitate",
+      "after": "Verificare inițială a eligibilității",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/verificare-eligibilitate-fonduri-europene",
+      "location": "pages.21.faq.4.0",
+      "before": "Cum se calculează cofinanțarea?",
+      "after": "Cum se calculează contribuția proprie?",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/verificare-eligibilitate-fonduri-europene",
+      "location": "pages.21.contentSections.0.paragraphs.0",
+      "before": "Concluzia nu este o promisiune de aprobare. Este o filtrare pragmatică: proiectul poate merge mai departe, trebuie ajustat sau ar trebui amânat până când ghidul activ și documentele confirmă încadrarea.",
+      "after": "Concluzia nu este o promisiune de aprobare. Este o filtrare pragmatică: proiectul poate merge mai departe, trebuie ajustat sau ar trebui amânat până când documentul oficial aplicabil și documentele confirmă încadrarea.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/verificare-eligibilitate-fonduri-europene",
+      "location": "pages.21.contentSections.1.items.3",
+      "before": "investiția dorită, bugetul estimat și cofinanțarea disponibilă;",
+      "after": "investiția dorită, bugetul estimat și contribuția proprie disponibilă;",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/verificare-eligibilitate-fonduri-europene",
+      "location": "pages.21.heroPrimaryCta",
+      "before": "Verifică eligibilitatea",
+      "after": "Cere o verificare inițială",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/verificare-eligibilitate-fonduri-europene",
+      "location": "pages.21.decisionClose",
+      "before": "Dacă documentele, bugetul sau condițiile nu se potrivesc, proiectul se ajustează înainte de depunere. Regulile finale se confirmă în ghidul activ, anexele apelului și sursele oficiale.",
+      "after": "Dacă documentele, bugetul sau condițiile nu se potrivesc, proiectul se ajustează înainte de depunere. Regulile finale se confirmă în documentul oficial aplicabil, anexele apelului și sursele oficiale.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/eligibilitate-fonduri-europene",
+      "location": "pages.49.funding",
+      "before": "valorile, procentele și termenele se confirmă în ghidul apelului activ sau în documentele oficiale publicate pentru sesiunea respectiva.",
+      "after": "valorile, procentele și termenele se confirmă în documentul oficial al apelului analizat sau în documentele oficiale publicate pentru sesiunea respectiva.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/eligibilitate-fonduri-europene",
+      "location": "pages.49.eligibleExpenses.0",
+      "before": "costuri permise de programul activ",
+      "after": "costuri permise de programul analizat",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/eligibilitate-fonduri-europene",
+      "location": "pages.49.evaluation.4",
+      "before": "actualizare după ghidul activ",
+      "after": "actualizare după documentul oficial aplicabil",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/eligibilitate-fonduri-europene",
+      "location": "pages.49.examples.1",
+      "before": "un beneficiar poate schimba programul după verificarea eligibilității",
+      "after": "un beneficiar poate schimba programul după verificarea inițială a eligibilității",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/eligibilitate-fonduri-europene",
+      "location": "pages.49.faq.0.1",
+      "before": "Nu. Conținutul este orientativ și trebuie confirmat cu ghidul apelului activ și documentele solicitantului.",
+      "after": "Nu. Conținutul este orientativ și trebuie confirmat cu documentul oficial al apelului analizat și documentele solicitantului.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/eligibilitate-fonduri-europene",
+      "location": "pages.49.faq.3.1",
+      "before": "Prin verificarea eligibilității, a bugetului, a cheltuielilor neeligibile, a punctajului și a termenelor înainte de depunere.",
+      "after": "Prin verificarea inițială a eligibilității, a bugetului, a cheltuielilor neeligibile, a punctajului și a termenelor înainte de depunere.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/eligibilitate-fonduri-europene",
+      "location": "pages.49.description",
+      "before": "Hub despre eligibilitate: diferența dintre eligibilitate administrativă, tehnică și punctaj, documente, CAEN, cofinanțare și riscuri.",
+      "after": "Hub despre eligibilitate: diferența dintre eligibilitate administrativă, tehnică și punctaj, documente, CAEN, contribuție proprie și riscuri.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/eligibilitate-fonduri-europene",
+      "location": "pages.49.contentSections.0.tableRows.4.1",
+      "before": "cofinanțare, TVA, costuri neeligibile și cash-flow",
+      "after": "contribuție proprie, TVA, costuri neeligibile și cash-flow",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/eligibilitate-fonduri-europene",
+      "location": "pages.49.contentSections.0.links.0.label",
+      "before": "Solicită verificare eligibilitate",
+      "after": "Solicită verificare inițială",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/eligibilitate-fonduri-europene",
+      "location": "pages.49.heroPrimaryCta",
+      "before": "Verifică eligibilitatea",
+      "after": "Cere o verificare inițială",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/eligibilitate-fonduri-europene",
+      "location": "pages.49.decisionClose",
+      "before": "Dacă documentele, bugetul sau condițiile nu se potrivesc, proiectul se ajustează înainte de depunere. Regulile finale se confirmă în ghidul activ, anexele apelului și sursele oficiale.",
+      "after": "Dacă documentele, bugetul sau condițiile nu se potrivesc, proiectul se ajustează înainte de depunere. Regulile finale se confirmă în documentul oficial aplicabil, anexele apelului și sursele oficiale.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "config/seo-programs.json"
+    },
+    {
+      "route": "/",
+      "location": "metadata",
+      "before": "De la verificarea eligibilității la documentații tehnice și implementare, FABER sprijină pregătirea proiectelor pe baza regulilor aplicabile.",
+      "after": "De la verificarea inițială a eligibilității la documentații tehnice și implementare, FABER sprijină pregătirea proiectelor pe baza regulilor aplicabile.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "index.html"
+    },
+    {
+      "route": "/",
+      "location": "visible-copy",
+      "before": "Solicită verificare eligibilitate",
+      "after": "Solicită verificare inițială",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "index.html"
+    },
+    {
+      "route": "/",
+      "location": "visible-copy",
+      "before": "Compară beneficiarii, statutul apelului și documentele cerute; decizia de aplicare se ia numai pe ghidul activ.",
+      "after": "Compară beneficiarii, statutul apelului și documentele cerute; decizia de aplicare se ia numai pe documentul oficial aplicabil.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "index.html"
+    },
+    {
+      "route": "/",
+      "location": "visible-copy",
+      "before": "Verificăm solicitantul, codul CAEN, localitatea, activitatea, documentele disponibile, cofinanțarea și riscurile evidente înainte de recomandare.",
+      "after": "Verificăm solicitantul, codul CAEN, localitatea, activitatea, documentele disponibile, contribuția proprie și riscurile evidente înainte de recomandare.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "index.html"
+    },
+    {
+      "route": "/",
+      "location": "visible-copy",
+      "before": "Prima decizie este dacă proiectul poate continua în forma propusă. Un CAEN neautorizat, un drept de folosință prea scurt sau un buget fără cofinanțare pot opri pregătirea înainte de redactarea dosarului.",
+      "after": "Prima decizie este dacă proiectul poate continua în forma propusă. Un CAEN neautorizat, un drept de folosință prea scurt sau un buget fără contribuție proprie pot opri pregătirea înainte de redactarea dosarului.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "index.html"
+    },
+    {
+      "route": "/",
+      "location": "visible-copy",
+      "before": "Urmărim programe pentru firme, fermieri, start-up-uri, IMM-uri și instituții. Statusul, valorile și intensitățile se confirmă în ghidul apelului activ.",
+      "after": "Urmărim programe pentru firme, fermieri, start-up-uri, IMM-uri și instituții. Statusul, valorile și intensitățile se confirmă în documentul oficial al apelului analizat.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "index.html"
+    },
+    {
+      "route": "/",
+      "location": "visible-copy",
+      "before": "Verificarea eligibilității arată dacă merită pregătit dosarul, dar nu transformă proiectul într-o finanțare sigură. Ghidul activ, anexele și documentele beneficiarului decid direcția.",
+      "after": "Verificarea inițială a eligibilității arată dacă merită pregătit dosarul, dar nu transformă proiectul într-o finanțare sigură. Documentul oficial aplicabil, anexele și documentele beneficiarului decid direcția.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "index.html"
+    },
+    {
+      "route": "/",
+      "location": "visible-copy",
+      "before": "Solicitant, CAEN, spațiu și cofinanțare",
+      "after": "Solicitant, CAEN, spațiu și contribuție proprie",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "index.html"
+    },
+    {
+      "route": "/",
+      "location": "visible-copy",
+      "before": "Comparăm forma juridică, CAEN-ul sau activitatea agricolă, amplasamentul, investiția, bugetul și cofinanțarea cu cerințele apelului. O lipsă în documentele de spațiu sau în evidențele exploatației poate schimba programul recomandat.",
+      "after": "Comparăm forma juridică, CAEN-ul sau activitatea agricolă, amplasamentul, investiția, bugetul și contribuția proprie cu cerințele apelului. O lipsă în documentele de spațiu sau în evidențele exploatației poate schimba programul recomandat.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "index.html"
+    },
+    {
+      "route": "/",
+      "location": "visible-copy",
+      "before": "Cum verificam CAEN, documente, cofinanțare, punctaj și riscuri înainte de recomandare.",
+      "after": "Cum verificam CAEN, documente, contribuție proprie, punctaj și riscuri înainte de recomandare.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "index.html"
+    },
+    {
+      "route": "/",
+      "location": "visible-copy",
+      "before": "Termeni explicati simplu: eligibilitate, cofinanțare, punctaj, CAEN, IMM și ajutor de stat.",
+      "after": "Termeni explicati simplu: eligibilitate, contribuție proprie, punctaj, CAEN, IMM și ajutor de stat.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "index.html"
+    },
+    {
+      "route": "/",
+      "location": "visible-copy",
+      "before": "Verificare eligibilitate și program potrivit pentru firme din București.",
+      "after": "Verificare inițială a eligibilității și program potrivit pentru firme din București.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "index.html"
+    },
+    {
+      "route": "/",
+      "location": "visible-copy",
+      "before": "Verificare eligibilitate",
+      "after": "Verificare inițială a eligibilității",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "index.html"
+    },
+    {
+      "route": "/",
+      "location": "json-ld:$.@graph[5].mainEntity[3].acceptedAnswer.text",
+      "before": "Comparăm forma juridică, CAEN-ul sau activitatea agricolă, amplasamentul, investiția, bugetul și cofinanțarea cu cerințele apelului. O lipsă în documentele de spațiu sau în evidențele exploatației poate schimba programul recomandat.",
+      "after": "Comparăm forma juridică, CAEN-ul sau activitatea agricolă, amplasamentul, investiția, bugetul și contribuția proprie cu cerințele apelului. O lipsă în documentele de spațiu sau în evidențele exploatației poate schimba programul recomandat.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "index.html"
+    },
+    {
+      "route": "/fonduri-europene",
+      "location": "terminology-note",
+      "before": "[lipsea explicația]",
+      "after": "Pe acest site folosim «contribuție proprie» ca termen principal. În documentele oficiale pot apărea și «cofinanțare» sau «aport»; sensul și calculul se verifică în documentul aplicabil.",
+      "reason": "Explicație unică pentru sinonimele financiare",
+      "sourceFile": "fonduri-europene/index.html"
+    },
+    {
+      "route": "/fonduri-europene",
+      "location": "metadata",
+      "before": "Compară programe pentru firme, fermieri și instituții după solicitant, investiție, regiune, documente și cofinanțarea disponibilă.",
+      "after": "Compară programe pentru firme, fermieri și instituții după solicitant, investiție, regiune, documente și contribuția proprie disponibilă.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "fonduri-europene/index.html"
+    },
+    {
+      "route": "/fonduri-europene",
+      "location": "visible-copy",
+      "before": "Solicită verificare eligibilitate",
+      "after": "Solicită verificare inițială",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "fonduri-europene/index.html"
+    },
+    {
+      "route": "/fonduri-europene",
+      "location": "visible-copy",
+      "before": "confirmă statutul și ghidul activ.",
+      "after": "confirmă statutul și documentul oficial aplicabil.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "fonduri-europene/index.html"
+    },
+    {
+      "route": "/fonduri-europene",
+      "location": "json-ld:$.@graph[2].description",
+      "before": "Compară programe pentru firme, fermieri și instituții după solicitant, investiție, regiune, documente și cofinanțarea disponibilă.",
+      "after": "Compară programe pentru firme, fermieri și instituții după solicitant, investiție, regiune, documente și contribuția proprie disponibilă.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "fonduri-europene/index.html"
+    },
+    {
+      "route": "/despre-faber",
+      "location": "positioning",
+      "before": "Verificăm ce poate fi demonstrat, explicăm ce lipsește și pregătim proiectul numai după ce investiția poate fi legată de un program și de o sursă realistă de finanțare.",
+      "after": "Verificare prudentă, documentată și interdisciplinară — consultanță și proiectare — înainte de dosar. Verificăm ce poate fi demonstrat, explicăm ce lipsește și pregătim proiectul numai după ce investiția poate fi legată de un program și de o sursă realistă de finanțare.",
+      "reason": "Poziționare centrală FABER",
+      "sourceFile": "despre-faber/index.html"
+    },
+    {
+      "route": "/despre-faber",
+      "location": "visible-copy",
+      "before": "Solicită verificare eligibilitate",
+      "after": "Solicită verificare inițială",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "despre-faber/index.html"
+    },
+    {
+      "route": "/despre-faber",
+      "location": "visible-copy",
+      "before": "FABER este numele public al Atelier de Consultanță. Activitatea reunește verificarea eligibilității, pregătirea cererilor de finanțare și coordonarea documentațiilor tehnice necesare investițiilor. Nu publicăm rate de succes, volume de proiecte sau testimoniale fără dovadă și acord.",
+      "after": "FABER este numele public al Atelier de Consultanță. Activitatea reunește verificarea inițială a eligibilității, pregătirea cererilor de finanțare și coordonarea documentațiilor tehnice necesare investițiilor. Nu publicăm rate de succes, volume de proiecte sau testimoniale fără dovadă și acord.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "despre-faber/index.html"
+    },
+    {
+      "route": "/despre-faber",
+      "location": "visible-copy",
+      "before": "asigură cofinanțarea și cash-flow-ul;",
+      "after": "asigură contribuția proprie și cash-flow-ul;",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "despre-faber/index.html"
+    },
+    {
+      "route": "/despre-faber",
+      "location": "visible-copy",
+      "before": "Acte de firmă sau fermă, spațiu, oferte și sursa cofinanțării.",
+      "after": "Acte de firmă sau fermă, spațiu, oferte și sursa contribuției proprii.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "despre-faber/index.html"
+    },
+    {
+      "route": "/despre-faber",
+      "location": "visible-copy",
+      "before": "FABER este denumirea publică Atelier de Consultanță pentru servicii de consultanță, verificarea eligibilității și coordonarea documentațiilor pentru proiecte finanțate.",
+      "after": "FABER este denumirea publică Atelier de Consultanță pentru servicii de consultanță, verificarea inițială a eligibilității și coordonarea documentațiilor pentru proiecte finanțate.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "despre-faber/index.html"
+    },
+    {
+      "route": "/despre-faber",
+      "location": "json-ld:$.@graph[4].mainEntity[0].acceptedAnswer.text",
+      "before": "FABER este denumirea publică Atelier de Consultanță pentru servicii de consultanță, verificarea eligibilității și coordonarea documentațiilor pentru proiecte finanțate.",
+      "after": "FABER este denumirea publică Atelier de Consultanță pentru servicii de consultanță, verificarea inițială a eligibilității și coordonarea documentațiilor pentru proiecte finanțate.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "despre-faber/index.html"
+    },
+    {
+      "route": "/contact",
+      "location": "visible-copy",
+      "before": "Solicită verificare eligibilitate",
+      "after": "Solicită verificare inițială",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "contact/index.html"
+    },
+    {
+      "route": "/contact",
+      "location": "visible-copy",
+      "before": "Buget estimat / cofinanțare",
+      "after": "Buget estimat / contribuție proprie",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "contact/index.html"
+    },
+    {
+      "route": "/contact",
+      "location": "json-ld:$.@graph[4].mainEntity[0].acceptedAnswer.text",
+      "before": "Program vizat (opțional) Nu știu încă Programul Regional Nord-Est DR12 AFIR AFIR Autoconsum Agroalimentar Autoconsum instituții publice DR14 AFIR Digitalizare IMM Femeia Antreprenor PRO INFRA Start-Up Nation Modernizarea microîntreprinderilor – Apel 2 Fondul pentru Modernizare – energie regenerabilă Apeluri GAL e-MOVE RO GAL-AFIR / LEADER Fondul pentru Modernizare Fondul pentru Modernizare – autoconsum Fonduri regionale PNRR PoCIDIF 2.1 Programul Tranziție Justă CAEN sau dimensiune economică SO (opțional) Buget estimat / cofinanțare (opțional)",
+      "after": "Program vizat (opțional) Nu știu încă Programul Regional Nord-Est DR12 AFIR AFIR Autoconsum Agroalimentar Autoconsum instituții publice DR14 AFIR Digitalizare IMM Femeia Antreprenor PRO INFRA Start-Up Nation Modernizarea microîntreprinderilor – Apel 2 Fondul pentru Modernizare – energie regenerabilă Apeluri GAL e-MOVE RO GAL-AFIR / LEADER Fondul pentru Modernizare Fondul pentru Modernizare – autoconsum Fonduri regionale PNRR PoCIDIF 2.1 Programul Tranziție Justă CAEN sau dimensiune economică SO (opțional) Buget estimat / contribuție proprie (opțional)",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "contact/index.html"
+    },
+    {
+      "route": "/eligibilitate-fonduri-europene",
+      "location": "metadata",
+      "before": "Hub despre eligibilitate: diferența dintre eligibilitate administrativă, tehnică și punctaj, documente, CAEN, cofinanțare și riscuri.",
+      "after": "Hub despre eligibilitate: diferența dintre eligibilitate administrativă, tehnică și punctaj, documente, CAEN, contribuție proprie și riscuri.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "eligibilitate-fonduri-europene/index.html"
+    },
+    {
+      "route": "/eligibilitate-fonduri-europene",
+      "location": "visible-copy",
+      "before": "Solicită verificare eligibilitate",
+      "after": "Solicită verificare inițială",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "eligibilitate-fonduri-europene/index.html"
+    },
+    {
+      "route": "/eligibilitate-fonduri-europene",
+      "location": "visible-copy",
+      "before": "Hub despre eligibilitate: diferența dintre eligibilitate administrativă, tehnică și punctaj, documente, CAEN, cofinanțare și riscuri.",
+      "after": "Hub despre eligibilitate: diferența dintre eligibilitate administrativă, tehnică și punctaj, documente, CAEN, contribuție proprie și riscuri.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "eligibilitate-fonduri-europene/index.html"
+    },
+    {
+      "route": "/eligibilitate-fonduri-europene",
+      "location": "visible-copy",
+      "before": "Verifică eligibilitatea",
+      "after": "Cere o verificare inițială",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "eligibilitate-fonduri-europene/index.html"
+    },
+    {
+      "route": "/eligibilitate-fonduri-europene",
+      "location": "visible-copy",
+      "before": "valorile, procentele și termenele se confirmă în ghidul apelului activ sau în documentele oficiale publicate pentru sesiunea respectiva.",
+      "after": "valorile, procentele și termenele se confirmă în documentul oficial al apelului analizat sau în documentele oficiale publicate pentru sesiunea respectiva.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "eligibilitate-fonduri-europene/index.html"
+    },
+    {
+      "route": "/eligibilitate-fonduri-europene",
+      "location": "visible-copy",
+      "before": "verificare eligibilitate și discuție de consultanță",
+      "after": "verificare inițială a eligibilității și discuție de consultanță",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "eligibilitate-fonduri-europene/index.html"
+    },
+    {
+      "route": "/eligibilitate-fonduri-europene",
+      "location": "visible-copy",
+      "before": "Informațiile de pe această pagină sunt construite pentru orientare practică. Ele nu promit aprobare și nu înlocuiesc verificarea apelului activ, a anexelor și a grilei de selecție. Scopul este să poți pregăti o discuție serioasa despre eligibilitate și dosar.",
+      "after": "Informațiile de pe această pagină sunt construite pentru orientare practică. Ele nu promit aprobare și nu înlocuiesc verificarea apelului analizat, a anexelor și a grilei de selecție. Scopul este să poți pregăti o discuție serioasa despre eligibilitate și dosar.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "eligibilitate-fonduri-europene/index.html"
+    },
+    {
+      "route": "/eligibilitate-fonduri-europene",
+      "location": "visible-copy",
+      "before": "costuri permise de programul activ; servicii sau dotări justificate prin proiect; documente și resurse de pregătire; investiții care susțin obiectivele apelului",
+      "after": "costuri permise de programul analizat; servicii sau dotări justificate prin proiect; documente și resurse de pregătire; investiții care susțin obiectivele apelului",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "eligibilitate-fonduri-europene/index.html"
+    },
+    {
+      "route": "/eligibilitate-fonduri-europene",
+      "location": "visible-copy",
+      "before": "Dacă documentele, bugetul sau condițiile nu se potrivesc, proiectul se ajustează înainte de depunere. Regulile finale se confirmă în ghidul activ, anexele apelului și sursele oficiale.",
+      "after": "Dacă documentele, bugetul sau condițiile nu se potrivesc, proiectul se ajustează înainte de depunere. Regulile finale se confirmă în documentul oficial aplicabil, anexele apelului și sursele oficiale.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "eligibilitate-fonduri-europene/index.html"
+    },
+    {
+      "route": "/eligibilitate-fonduri-europene",
+      "location": "visible-copy",
+      "before": "cofinanțare, TVA, costuri neeligibile și cash-flow",
+      "after": "contribuție proprie, TVA, costuri neeligibile și cash-flow",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "eligibilitate-fonduri-europene/index.html"
+    },
+    {
+      "route": "/eligibilitate-fonduri-europene",
+      "location": "visible-copy",
+      "before": "costuri permise de programul activ",
+      "after": "costuri permise de programul analizat",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "eligibilitate-fonduri-europene/index.html"
+    },
+    {
+      "route": "/eligibilitate-fonduri-europene",
+      "location": "visible-copy",
+      "before": "Finanțare, cofinanțare și buget",
+      "after": "Finanțare, contribuție proprie și buget",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "eligibilitate-fonduri-europene/index.html"
+    },
+    {
+      "route": "/eligibilitate-fonduri-europene",
+      "location": "visible-copy",
+      "before": "valorile, procentele și termenele se confirmă în ghidul apelului activ sau în documentele oficiale publicate pentru sesiunea respectiva. Pentru o decizie realistă, bugetul trebuie impartit în cheltuieli eligibile, cheltuieli neeligibile, contribuție proprie, posibile diferențe de curs, costuri de implementare și rezerva pentru intarzieri.",
+      "after": "valorile, procentele și termenele se confirmă în documentul oficial al apelului analizat sau în documentele oficiale publicate pentru sesiunea respectiva. Pentru o decizie realistă, bugetul trebuie impartit în cheltuieli eligibile, cheltuieli neeligibile, contribuție proprie, posibile diferențe de curs, costuri de implementare și rezerva pentru intarzieri.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "eligibilitate-fonduri-europene/index.html"
+    },
+    {
+      "route": "/eligibilitate-fonduri-europene",
+      "location": "visible-copy",
+      "before": "Exemplu numeric de cofinanțare",
+      "after": "Exemplu numeric de contribuție proprie",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "eligibilitate-fonduri-europene/index.html"
+    },
+    {
+      "route": "/eligibilitate-fonduri-europene",
+      "location": "visible-copy",
+      "before": "procentul real se confirmă în ghidul activ",
+      "after": "procentul real se confirmă în documentul oficial aplicabil",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "eligibilitate-fonduri-europene/index.html"
+    },
+    {
+      "route": "/eligibilitate-fonduri-europene",
+      "location": "visible-copy",
+      "before": "actualizare după ghidul activ",
+      "after": "actualizare după documentul oficial aplicabil",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "eligibilitate-fonduri-europene/index.html"
+    },
+    {
+      "route": "/eligibilitate-fonduri-europene",
+      "location": "visible-copy",
+      "before": "un beneficiar poate schimba programul după verificarea eligibilității",
+      "after": "un beneficiar poate schimba programul după verificarea inițială a eligibilității",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "eligibilitate-fonduri-europene/index.html"
+    },
+    {
+      "route": "/eligibilitate-fonduri-europene",
+      "location": "visible-copy",
+      "before": "Nu. Conținutul este orientativ și trebuie confirmat cu ghidul apelului activ și documentele solicitantului.",
+      "after": "Nu. Conținutul este orientativ și trebuie confirmat cu documentul oficial al apelului analizat și documentele solicitantului.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "eligibilitate-fonduri-europene/index.html"
+    },
+    {
+      "route": "/eligibilitate-fonduri-europene",
+      "location": "visible-copy",
+      "before": "Prin verificarea eligibilității, a bugetului, a cheltuielilor neeligibile, a punctajului și a termenelor înainte de depunere.",
+      "after": "Prin verificarea inițială a eligibilității, a bugetului, a cheltuielilor neeligibile, a punctajului și a termenelor înainte de depunere.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "eligibilitate-fonduri-europene/index.html"
+    },
+    {
+      "route": "/eligibilitate-fonduri-europene",
+      "location": "visible-copy",
+      "before": "Porneste de la solicitant, cod CAEN, localitate, investiție, buget și documentele disponibile. Dacă una dintre aceste piese nu se potriveste cu apelul activ, proiectul trebuie ajustat înainte de depunere.",
+      "after": "Porneste de la solicitant, cod CAEN, localitate, investiție, buget și documentele disponibile. Dacă una dintre aceste piese nu se potriveste cu apelul analizat, proiectul trebuie ajustat înainte de depunere.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "eligibilitate-fonduri-europene/index.html"
+    },
+    {
+      "route": "/eligibilitate-fonduri-europene",
+      "location": "visible-copy",
+      "before": "Nu merită să aplici când nu poți dovedi eligibilitatea, când cheltuielile principale nu sunt permise, când cofinanțarea nu este acoperita sau când calendarul nu permite documente complete și verificabile.",
+      "after": "Nu merită să aplici când nu poți dovedi eligibilitatea, când cheltuielile principale nu sunt permise, când contribuția proprie nu este acoperita sau când calendarul nu permite documente complete și verificabile.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "eligibilitate-fonduri-europene/index.html"
+    },
+    {
+      "route": "/eligibilitate-fonduri-europene",
+      "location": "visible-copy",
+      "before": "Dacă proiectul implica sume, cheltuieli tehnice, condiții de vârstă, cod CAEN, amplasament sau cofinanțare, merită verificat înainte de depunere. O analiză inițială poate identifica rapid documentele lipsă și riscurile evidente.",
+      "after": "Dacă proiectul implica sume, cheltuieli tehnice, condiții de vârstă, cod CAEN, amplasament sau contribuție proprie, merită verificat înainte de depunere. O analiză inițială poate identifica rapid documentele lipsă și riscurile evidente.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "eligibilitate-fonduri-europene/index.html"
+    },
+    {
+      "route": "/eligibilitate-fonduri-europene",
+      "location": "visible-copy",
+      "before": "Verificare eligibilitate",
+      "after": "Verificare inițială a eligibilității",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "eligibilitate-fonduri-europene/index.html"
+    },
+    {
+      "route": "/eligibilitate-fonduri-europene",
+      "location": "json-ld:$.@graph[2].description",
+      "before": "Hub despre eligibilitate: diferența dintre eligibilitate administrativă, tehnică și punctaj, documente, CAEN, cofinanțare și riscuri.",
+      "after": "Hub despre eligibilitate: diferența dintre eligibilitate administrativă, tehnică și punctaj, documente, CAEN, contribuție proprie și riscuri.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "eligibilitate-fonduri-europene/index.html"
+    },
+    {
+      "route": "/eligibilitate-fonduri-europene",
+      "location": "json-ld:$.@graph[4].mainEntity[0].acceptedAnswer.text",
+      "before": "Nu. Conținutul este orientativ și trebuie confirmat cu ghidul apelului activ și documentele solicitantului.",
+      "after": "Nu. Conținutul este orientativ și trebuie confirmat cu documentul oficial al apelului analizat și documentele solicitantului.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "eligibilitate-fonduri-europene/index.html"
+    },
+    {
+      "route": "/eligibilitate-fonduri-europene",
+      "location": "json-ld:$.@graph[4].mainEntity[3].acceptedAnswer.text",
+      "before": "Prin verificarea eligibilității, a bugetului, a cheltuielilor neeligibile, a punctajului și a termenelor înainte de depunere.",
+      "after": "Prin verificarea inițială a eligibilității, a bugetului, a cheltuielilor neeligibile, a punctajului și a termenelor înainte de depunere.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "eligibilitate-fonduri-europene/index.html"
+    },
+    {
+      "route": "/eligibilitate-fonduri-europene",
+      "location": "json-ld:$.@graph[4].mainEntity[4].acceptedAnswer.text",
+      "before": "Porneste de la solicitant, cod CAEN, localitate, investiție, buget și documentele disponibile. Dacă una dintre aceste piese nu se potriveste cu apelul activ, proiectul trebuie ajustat înainte de depunere.",
+      "after": "Porneste de la solicitant, cod CAEN, localitate, investiție, buget și documentele disponibile. Dacă una dintre aceste piese nu se potriveste cu apelul analizat, proiectul trebuie ajustat înainte de depunere.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "eligibilitate-fonduri-europene/index.html"
+    },
+    {
+      "route": "/eligibilitate-fonduri-europene",
+      "location": "json-ld:$.@graph[4].mainEntity[5].acceptedAnswer.text",
+      "before": "Nu merită să aplici când nu poți dovedi eligibilitatea, când cheltuielile principale nu sunt permise, când cofinanțarea nu este acoperita sau când calendarul nu permite documente complete și verificabile.",
+      "after": "Nu merită să aplici când nu poți dovedi eligibilitatea, când cheltuielile principale nu sunt permise, când contribuția proprie nu este acoperita sau când calendarul nu permite documente complete și verificabile.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "eligibilitate-fonduri-europene/index.html"
+    },
+    {
+      "route": "/fonduri-europene-digitalizare",
+      "location": "visible-copy",
+      "before": "Solicită verificare eligibilitate",
+      "after": "Solicită verificare inițială",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "fonduri-europene-digitalizare/index.html"
+    },
+    {
+      "route": "/fonduri-europene-digitalizare",
+      "location": "visible-copy",
+      "before": "Verifică eligibilitatea pentru Fonduri europene pentru digitalizare",
+      "after": "Cere o verificare inițială pentru Fonduri europene pentru digitalizare",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "fonduri-europene-digitalizare/index.html"
+    },
+    {
+      "route": "/fonduri-europene-digitalizare",
+      "location": "visible-copy",
+      "before": "valorile depind de apelul activ.",
+      "after": "valorile depind de apelul analizat.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "fonduri-europene-digitalizare/index.html"
+    },
+    {
+      "route": "/fonduri-europene-digitalizare",
+      "location": "visible-copy",
+      "before": "verificare eligibilitate și discuție de consultanță",
+      "after": "verificare inițială a eligibilității și discuție de consultanță",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "fonduri-europene-digitalizare/index.html"
+    },
+    {
+      "route": "/fonduri-europene-digitalizare",
+      "location": "visible-copy",
+      "before": "Informațiile de pe această pagină sunt construite pentru orientare practică. Ele nu promit aprobare și nu înlocuiesc verificarea apelului activ, a anexelor și a grilei de selecție. Scopul este să poți pregăti o discuție serioasa despre eligibilitate și dosar.",
+      "after": "Informațiile de pe această pagină sunt construite pentru orientare practică. Ele nu promit aprobare și nu înlocuiesc verificarea apelului analizat, a anexelor și a grilei de selecție. Scopul este să poți pregăti o discuție serioasa despre eligibilitate și dosar.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "fonduri-europene-digitalizare/index.html"
+    },
+    {
+      "route": "/fonduri-europene-digitalizare",
+      "location": "visible-copy",
+      "before": "Dacă datele, documentele sau bugetul nu susțin proiectul, recomandarea prudentă este ajustarea sau amanarea depunerii. Regulile finale se confirmă în ghidul activ, anexele apelului și sursele oficiale.",
+      "after": "Dacă datele, documentele sau bugetul nu susțin proiectul, recomandarea prudentă este ajustarea sau amanarea depunerii. Regulile finale se confirmă în documentul oficial aplicabil, anexele apelului și sursele oficiale.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "fonduri-europene-digitalizare/index.html"
+    },
+    {
+      "route": "/fonduri-europene-digitalizare",
+      "location": "visible-copy",
+      "before": "Finanțare, cofinanțare și buget",
+      "after": "Finanțare, contribuție proprie și buget",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "fonduri-europene-digitalizare/index.html"
+    },
+    {
+      "route": "/fonduri-europene-digitalizare",
+      "location": "visible-copy",
+      "before": "valorile depind de apelul activ. Pentru o decizie realistă, bugetul trebuie impartit în cheltuieli eligibile, cheltuieli neeligibile, contribuție proprie, posibile diferențe de curs, costuri de implementare și rezerva pentru intarzieri.",
+      "after": "valorile depind de apelul analizat. Pentru o decizie realistă, bugetul trebuie impartit în cheltuieli eligibile, cheltuieli neeligibile, contribuție proprie, posibile diferențe de curs, costuri de implementare și rezerva pentru intarzieri.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "fonduri-europene-digitalizare/index.html"
+    },
+    {
+      "route": "/fonduri-europene-digitalizare",
+      "location": "visible-copy",
+      "before": "Exemplu numeric de cofinanțare",
+      "after": "Exemplu numeric de contribuție proprie",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "fonduri-europene-digitalizare/index.html"
+    },
+    {
+      "route": "/fonduri-europene-digitalizare",
+      "location": "visible-copy",
+      "before": "procentul real se confirmă în ghidul activ",
+      "after": "procentul real se confirmă în documentul oficial aplicabil",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "fonduri-europene-digitalizare/index.html"
+    },
+    {
+      "route": "/fonduri-europene-digitalizare",
+      "location": "visible-copy",
+      "before": "Porneste de la solicitant, cod CAEN, localitate, investiție, buget și documentele disponibile. Dacă una dintre aceste piese nu se potriveste cu apelul activ, proiectul trebuie ajustat înainte de depunere.",
+      "after": "Porneste de la solicitant, cod CAEN, localitate, investiție, buget și documentele disponibile. Dacă una dintre aceste piese nu se potriveste cu apelul analizat, proiectul trebuie ajustat înainte de depunere.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "fonduri-europene-digitalizare/index.html"
+    },
+    {
+      "route": "/fonduri-europene-digitalizare",
+      "location": "visible-copy",
+      "before": "Nu merită să aplici când nu poți dovedi eligibilitatea, când cheltuielile principale nu sunt permise, când cofinanțarea nu este acoperita sau când calendarul nu permite documente complete și verificabile.",
+      "after": "Nu merită să aplici când nu poți dovedi eligibilitatea, când cheltuielile principale nu sunt permise, când contribuția proprie nu este acoperita sau când calendarul nu permite documente complete și verificabile.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "fonduri-europene-digitalizare/index.html"
+    },
+    {
+      "route": "/fonduri-europene-digitalizare",
+      "location": "visible-copy",
+      "before": "De regula sunt necesare documente de firmă sau solicitant, documente pentru activitate și locație, date financiare, oferte, descrierea investiției și informații despre cofinanțare.",
+      "after": "De regula sunt necesare documente de firmă sau solicitant, documente pentru activitate și locație, date financiare, oferte, descrierea investiției și informații despre contribuție proprie.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "fonduri-europene-digitalizare/index.html"
+    },
+    {
+      "route": "/fonduri-europene-digitalizare",
+      "location": "visible-copy",
+      "before": "Dacă proiectul implica sume, cheltuieli tehnice, condiții de vârstă, cod CAEN, amplasament sau cofinanțare, merită verificat înainte de depunere. O analiză inițială poate identifica rapid documentele lipsă și riscurile evidente.",
+      "after": "Dacă proiectul implica sume, cheltuieli tehnice, condiții de vârstă, cod CAEN, amplasament sau contribuție proprie, merită verificat înainte de depunere. O analiză inițială poate identifica rapid documentele lipsă și riscurile evidente.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "fonduri-europene-digitalizare/index.html"
+    },
+    {
+      "route": "/fonduri-europene-digitalizare",
+      "location": "visible-copy",
+      "before": "Verifică eligibilitatea",
+      "after": "Cere o verificare inițială",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "fonduri-europene-digitalizare/index.html"
+    },
+    {
+      "route": "/fonduri-europene-digitalizare",
+      "location": "json-ld:$.@graph[4].mainEntity[4].acceptedAnswer.text",
+      "before": "Porneste de la solicitant, cod CAEN, localitate, investiție, buget și documentele disponibile. Dacă una dintre aceste piese nu se potriveste cu apelul activ, proiectul trebuie ajustat înainte de depunere.",
+      "after": "Porneste de la solicitant, cod CAEN, localitate, investiție, buget și documentele disponibile. Dacă una dintre aceste piese nu se potriveste cu apelul analizat, proiectul trebuie ajustat înainte de depunere.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "fonduri-europene-digitalizare/index.html"
+    },
+    {
+      "route": "/fonduri-europene-digitalizare",
+      "location": "json-ld:$.@graph[4].mainEntity[5].acceptedAnswer.text",
+      "before": "Nu merită să aplici când nu poți dovedi eligibilitatea, când cheltuielile principale nu sunt permise, când cofinanțarea nu este acoperita sau când calendarul nu permite documente complete și verificabile.",
+      "after": "Nu merită să aplici când nu poți dovedi eligibilitatea, când cheltuielile principale nu sunt permise, când contribuția proprie nu este acoperita sau când calendarul nu permite documente complete și verificabile.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "fonduri-europene-digitalizare/index.html"
+    },
+    {
+      "route": "/fonduri-europene-digitalizare",
+      "location": "json-ld:$.@graph[4].mainEntity[6].acceptedAnswer.text",
+      "before": "De regula sunt necesare documente de firmă sau solicitant, documente pentru activitate și locație, date financiare, oferte, descrierea investiției și informații despre cofinanțare.",
+      "after": "De regula sunt necesare documente de firmă sau solicitant, documente pentru activitate și locație, date financiare, oferte, descrierea investiției și informații despre contribuție proprie.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "fonduri-europene-digitalizare/index.html"
+    },
+    {
+      "route": "/verificare-eligibilitate-fonduri-europene",
+      "location": "title",
+      "before": "Verificare eligibilitate fonduri europene | FABER",
+      "after": "Verificare inițială a eligibilității fonduri europene | FABER",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "verificare-eligibilitate-fonduri-europene/index.html"
+    },
+    {
+      "route": "/verificare-eligibilitate-fonduri-europene",
+      "location": "metadata",
+      "before": "Verificăm solicitantul, codul CAEN, locația, investiția, bugetul, cofinanțarea și documentele înainte de alegerea programului.",
+      "after": "Verificăm solicitantul, codul CAEN, locația, investiția, bugetul, contribuția proprie și documentele înainte de alegerea programului.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "verificare-eligibilitate-fonduri-europene/index.html"
+    },
+    {
+      "route": "/verificare-eligibilitate-fonduri-europene",
+      "location": "metadata",
+      "before": "Verifică eligibilitatea proiectului | FABER",
+      "after": "Cere o verificare inițială a proiectului | FABER",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "verificare-eligibilitate-fonduri-europene/index.html"
+    },
+    {
+      "route": "/verificare-eligibilitate-fonduri-europene",
+      "location": "metadata",
+      "before": "Analizăm solicitantul, CAEN-ul, locația, investiția, bugetul, cofinanțarea și documentele înainte de alegerea unui program.",
+      "after": "Analizăm solicitantul, CAEN-ul, locația, investiția, bugetul, contribuția proprie și documentele înainte de alegerea unui program.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "verificare-eligibilitate-fonduri-europene/index.html"
+    },
+    {
+      "route": "/verificare-eligibilitate-fonduri-europene",
+      "location": "visible-copy",
+      "before": "Solicită verificare eligibilitate",
+      "after": "Solicită verificare inițială",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "verificare-eligibilitate-fonduri-europene/index.html"
+    },
+    {
+      "route": "/verificare-eligibilitate-fonduri-europene",
+      "location": "visible-copy",
+      "before": "/ Verificare eligibilitate pentru fonduri europene",
+      "after": "/ Verificare inițială a eligibilității pentru fonduri europene",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "verificare-eligibilitate-fonduri-europene/index.html"
+    },
+    {
+      "route": "/verificare-eligibilitate-fonduri-europene",
+      "location": "visible-copy",
+      "before": "Verificare eligibilitate pentru fonduri europene",
+      "after": "Verificare inițială a eligibilității pentru fonduri europene",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "verificare-eligibilitate-fonduri-europene/index.html"
+    },
+    {
+      "route": "/verificare-eligibilitate-fonduri-europene",
+      "location": "visible-copy",
+      "before": "Verificare inițială pentru fonduri europene: firmă, CAEN, localitate, investiție, buget, cofinanțare, documente și program potrivit.",
+      "after": "Verificare inițială pentru fonduri europene: firmă, CAEN, localitate, investiție, buget, contribuție proprie, documente și program potrivit.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "verificare-eligibilitate-fonduri-europene/index.html"
+    },
+    {
+      "route": "/verificare-eligibilitate-fonduri-europene",
+      "location": "visible-copy",
+      "before": "Verifică eligibilitatea",
+      "after": "Cere o verificare inițială",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "verificare-eligibilitate-fonduri-europene/index.html"
+    },
+    {
+      "route": "/verificare-eligibilitate-fonduri-europene",
+      "location": "visible-copy",
+      "before": "Verificarea eligibilității pentru fonduri europene se adresează firmelor, fermierilor și organizațiilor care au o investiție conturată, dar trebuie să aleagă sau să confirme programul potrivit. Sunt controlate solicitantul, codul CAEN, locația, bugetul, cofinanțarea și documentele. Concluzia este preliminară până la confruntarea cu ghidul final și anexele apelului activ.",
+      "after": "Verificarea inițială a eligibilității pentru fonduri europene se adresează firmelor, fermierilor și organizațiilor care au o investiție conturată, dar trebuie să aleagă sau să confirme programul potrivit. Sunt controlate solicitantul, codul CAEN, locația, bugetul, contribuția proprie și documentele. Concluzia este preliminară până la confruntarea cu ghidul final și anexele apelului analizat.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "verificare-eligibilitate-fonduri-europene/index.html"
+    },
+    {
+      "route": "/verificare-eligibilitate-fonduri-europene",
+      "location": "visible-copy",
+      "before": "Serviciul verifică dacă solicitantul și investiția au o potrivire realistă cu un program de finanțare. Sunt necesare forma juridică, CAEN-ul sau activitatea fermei, localitatea, bugetul, cofinanțarea și documentele existente. Rezultatul poate fi: continuăm pregătirea, ajustăm proiectul sau amânăm până când apar documente ori reguli mai clare.",
+      "after": "Serviciul verifică dacă solicitantul și investiția au o potrivire realistă cu un program de finanțare. Sunt necesare forma juridică, CAEN-ul sau activitatea fermei, localitatea, bugetul, contribuția proprie și documentele existente. Rezultatul poate fi: continuăm pregătirea, ajustăm proiectul sau amânăm până când apar documente ori reguli mai clare.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "verificare-eligibilitate-fonduri-europene/index.html"
+    },
+    {
+      "route": "/verificare-eligibilitate-fonduri-europene",
+      "location": "visible-copy",
+      "before": "Verificare eligibilitate",
+      "after": "Verificare inițială a eligibilității",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "verificare-eligibilitate-fonduri-europene/index.html"
+    },
+    {
+      "route": "/verificare-eligibilitate-fonduri-europene",
+      "location": "visible-copy",
+      "before": "concluzia inițială nu înlocuiește evaluarea autorității și nici ghidul apelului activ",
+      "after": "concluzia inițială nu înlocuiește evaluarea autorității și nici documentul oficial al apelului analizat",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "verificare-eligibilitate-fonduri-europene/index.html"
+    },
+    {
+      "route": "/verificare-eligibilitate-fonduri-europene",
+      "location": "visible-copy",
+      "before": "Verificarea începe înaintea listei de achiziții. Comparăm forma juridică, CAEN-ul sau activitatea agricolă, localitatea, dreptul asupra spațiului, bugetul și cofinanțarea cu regulile programului urmărit.",
+      "after": "Verificarea începe înaintea listei de achiziții. Comparăm forma juridică, CAEN-ul sau activitatea agricolă, localitatea, dreptul asupra spațiului, bugetul și contribuția proprie cu regulile programului urmărit.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "verificare-eligibilitate-fonduri-europene/index.html"
+    },
+    {
+      "route": "/verificare-eligibilitate-fonduri-europene",
+      "location": "visible-copy",
+      "before": "oferte comparabile, cheltuieli permise, TVA, cofinanțare și costuri neeligibile",
+      "after": "oferte comparabile, cheltuieli permise, TVA, contribuție proprie și costuri neeligibile",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "verificare-eligibilitate-fonduri-europene/index.html"
+    },
+    {
+      "route": "/verificare-eligibilitate-fonduri-europene",
+      "location": "visible-copy",
+      "before": "Dacă documentele, bugetul sau condițiile nu se potrivesc, proiectul se ajustează înainte de depunere. Regulile finale se confirmă în ghidul activ, anexele apelului și sursele oficiale.",
+      "after": "Dacă documentele, bugetul sau condițiile nu se potrivesc, proiectul se ajustează înainte de depunere. Regulile finale se confirmă în documentul oficial aplicabil, anexele apelului și sursele oficiale.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "verificare-eligibilitate-fonduri-europene/index.html"
+    },
+    {
+      "route": "/verificare-eligibilitate-fonduri-europene",
+      "location": "visible-copy",
+      "before": "Concluzia nu este o promisiune de aprobare. Este o filtrare pragmatică: proiectul poate merge mai departe, trebuie ajustat sau ar trebui amânat până când ghidul activ și documentele confirmă încadrarea.",
+      "after": "Concluzia nu este o promisiune de aprobare. Este o filtrare pragmatică: proiectul poate merge mai departe, trebuie ajustat sau ar trebui amânat până când documentul oficial aplicabil și documentele confirmă încadrarea.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "verificare-eligibilitate-fonduri-europene/index.html"
+    },
+    {
+      "route": "/verificare-eligibilitate-fonduri-europene",
+      "location": "visible-copy",
+      "before": "investiția dorită, bugetul estimat și cofinanțarea disponibilă;",
+      "after": "investiția dorită, bugetul estimat și contribuția proprie disponibilă;",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "verificare-eligibilitate-fonduri-europene/index.html"
+    },
+    {
+      "route": "/verificare-eligibilitate-fonduri-europene",
+      "location": "visible-copy",
+      "before": "solicitanți care pot documenta amplasamentul și cofinanțarea.",
+      "after": "solicitanți care pot documenta amplasamentul și contribuția proprie.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "verificare-eligibilitate-fonduri-europene/index.html"
+    },
+    {
+      "route": "/verificare-eligibilitate-fonduri-europene",
+      "location": "visible-copy",
+      "before": "bugetul și cofinanțarea;",
+      "after": "bugetul și contribuția proprie;",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "verificare-eligibilitate-fonduri-europene/index.html"
+    },
+    {
+      "route": "/verificare-eligibilitate-fonduri-europene",
+      "location": "visible-copy",
+      "before": "Finanțare, cofinanțare și buget",
+      "after": "Finanțare, contribuție proprie și buget",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "verificare-eligibilitate-fonduri-europene/index.html"
+    },
+    {
+      "route": "/verificare-eligibilitate-fonduri-europene",
+      "location": "visible-copy",
+      "before": "procentul din apelul activ",
+      "after": "procentul din apelul analizat",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "verificare-eligibilitate-fonduri-europene/index.html"
+    },
+    {
+      "route": "/verificare-eligibilitate-fonduri-europene",
+      "location": "visible-copy",
+      "before": "Cum se calculează cofinanțarea?",
+      "after": "Cum se calculează contribuția proprie?",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "verificare-eligibilitate-fonduri-europene/index.html"
+    },
+    {
+      "route": "/verificare-eligibilitate-fonduri-europene",
+      "location": "json-ld:$.@graph[2].description",
+      "before": "Verificăm solicitantul, codul CAEN, locația, investiția, bugetul, cofinanțarea și documentele înainte de alegerea programului.",
+      "after": "Verificăm solicitantul, codul CAEN, locația, investiția, bugetul, contribuția proprie și documentele înainte de alegerea programului.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "verificare-eligibilitate-fonduri-europene/index.html"
+    },
+    {
+      "route": "/verificare-eligibilitate-fonduri-europene",
+      "location": "json-ld:$.@graph[2].name",
+      "before": "Verificare eligibilitate pentru fonduri europene",
+      "after": "Verificare inițială a eligibilității pentru fonduri europene",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "verificare-eligibilitate-fonduri-europene/index.html"
+    },
+    {
+      "route": "/verificare-eligibilitate-fonduri-europene",
+      "location": "json-ld:$.@graph[3].itemListElement[2].name",
+      "before": "Verificare eligibilitate pentru fonduri europene",
+      "after": "Verificare inițială a eligibilității pentru fonduri europene",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "verificare-eligibilitate-fonduri-europene/index.html"
+    },
+    {
+      "route": "/verificare-eligibilitate-fonduri-europene",
+      "location": "json-ld:$.@graph[4].description",
+      "before": "Verificăm solicitantul, codul CAEN, locația, investiția, bugetul, cofinanțarea și documentele înainte de alegerea programului.",
+      "after": "Verificăm solicitantul, codul CAEN, locația, investiția, bugetul, contribuția proprie și documentele înainte de alegerea programului.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "verificare-eligibilitate-fonduri-europene/index.html"
+    },
+    {
+      "route": "/verificare-eligibilitate-fonduri-europene",
+      "location": "json-ld:$.@graph[4].name",
+      "before": "Verificare eligibilitate pentru fonduri europene",
+      "after": "Verificare inițială a eligibilității pentru fonduri europene",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "verificare-eligibilitate-fonduri-europene/index.html"
+    },
+    {
+      "route": "/verificare-eligibilitate-fonduri-europene",
+      "location": "json-ld:$.@graph[5].mainEntity[4].name",
+      "before": "Cum se calculează cofinanțarea?",
+      "after": "Cum se calculează contribuția proprie?",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "verificare-eligibilitate-fonduri-europene/index.html"
+    }
+  ]
+}

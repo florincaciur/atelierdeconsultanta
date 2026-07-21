@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://atelierdeconsultanta.ro/schemas/program-registry.schema.json",
+  "title": "Registrul unic al programelor FABER",
+  "type": "object",
+  "required": ["programs"],
+  "properties": {
+    "programs": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/program" }
+    }
+  },
+  "$defs": {
+    "dateOrPending": {
+      "anyOf": [
+        { "type": "string", "format": "date" },
+        { "const": "DE_VALIDAT_UMAN" },
+        { "type": "null" }
+      ]
+    },
+    "program": {
+      "type": "object",
+      "required": [
+        "slug",
+        "name",
+        "shortName",
+        "family",
+        "status",
+        "statusLabel",
+        "publicationState",
+        "verifiedAt",
+        "sourceName",
+        "sourceUrl",
+        "sourceVersion",
+        "applicationStart",
+        "applicationEnd",
+        "grantSummary",
+        "cofinancingSummary",
+        "pageUrl",
+        "lastMeaningfulUpdate",
+        "evergreenValue",
+        "archivedNoindexDecision"
+      ],
+      "properties": {
+        "slug": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+        "name": { "type": "string", "minLength": 1 },
+        "shortName": { "type": "string", "minLength": 1 },
+        "family": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+        "status": {
+          "enum": [
+            "apel_deschis",
+            "ghid_aprobat_nedeschis",
+            "consultare_publica",
+            "calendar_estimativ",
+            "apel_inchis",
+            "arhivat"
+          ]
+        },
+        "statusLabel": { "type": "string", "minLength": 1 },
+        "publicationState": { "enum": ["public", "pending_validation"] },
+        "verifiedAt": { "$ref": "#/$defs/dateOrPending" },
+        "sourceName": { "type": "string", "minLength": 1 },
+        "sourceUrl": { "type": "string", "minLength": 1 },
+        "sourceVersion": { "type": "string", "minLength": 1 },
+        "sourceType": { "const": "official" },
+        "applicationStart": { "$ref": "#/$defs/dateOrPending" },
+        "applicationEnd": { "$ref": "#/$defs/dateOrPending" },
+        "grantSummary": { "type": ["object", "null"] },
+        "cofinancingSummary": { "type": ["object", "null"] },
+        "pageUrl": { "type": "string", "pattern": "^/" },
+        "lastMeaningfulUpdate": { "$ref": "#/$defs/dateOrPending" },
+        "evergreenValue": { "type": "boolean" },
+        "archivedNoindexDecision": { "enum": ["index", "noindex", null] }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

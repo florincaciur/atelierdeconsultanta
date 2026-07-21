@@ -1,0 +1,40 @@
+{
+  "title": "FABER — funnel lead-uri programe",
+  "version": "1.0.0",
+  "steps": [
+    { "order": 1, "event": "cta_view", "metric": "events", "requires": ["cta_id"] },
+    { "order": 2, "event": "cta_click", "metric": "events", "requires": ["cta_id"] },
+    { "order": 3, "event": "form_start", "metric": "events", "requires": ["form_version"] },
+    { "order": 4, "event": "step_1_complete", "metric": "events", "requires": ["form_version", "step"] },
+    { "order": 5, "event": "form_submit", "metric": "distinct_lead_correlation_id", "requires": ["lead_correlation_id"] },
+    { "order": 6, "event": "qualified_lead", "metric": "distinct_lead_correlation_id", "requires": ["lead_correlation_id"] }
+  ],
+  "dimensions": [
+    "page_path",
+    "page_type",
+    "program_slug",
+    "program_family",
+    "cta_id",
+    "cta_copy_variant",
+    "form_version",
+    "device_category",
+    "source_channel",
+    "experiment_id"
+  ],
+  "filters": {
+    "default": [
+      "exclude analytics_debug sessions",
+      "include only allowlisted event names",
+      "require lead_correlation_id for form_submit and qualified_lead"
+    ],
+    "botView": "Apply provider bot/internal-traffic flags at report time; retain raw events."
+  },
+  "conversionFormula": "current_step / previous_step",
+  "activationState": "DE_VALIDAT_UMAN",
+  "activationRequires": [
+    "ANALYTICS_EVENT_FORWARD_URL secret",
+    "CRM_ANALYTICS_WEBHOOK_SECRET secret",
+    "CRM workflow mapping for qualified status",
+    "analytics destination dashboard credentials"
+  ]
+}

@@ -8,6 +8,10 @@
     {
       "pattern": "atelierdeconsultanta.ro/*",
       "zone_name": "atelierdeconsultanta.ro"
+    },
+    {
+      "pattern": "www.atelierdeconsultanta.ro/*",
+      "zone_name": "atelierdeconsultanta.ro"
     }
   ]
 }

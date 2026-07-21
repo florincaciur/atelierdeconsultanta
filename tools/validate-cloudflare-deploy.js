@@ -33,8 +33,12 @@ function validateDomainWorkerConfig(errors) {
   if (workerConfig.name !== "atelierdeconsultanta-domain-seo") errors.push("domain SEO worker name differs from the managed production worker");
   if (workerConfig.main !== "cloudflare/domain-seo-redirects.mjs") errors.push("domain SEO worker main file differs");
   if (workerConfig.workers_dev !== false) errors.push("domain SEO worker must not expose a workers.dev route");
-  const route = (workerConfig.routes || []).find((item) => item.pattern === "atelierdeconsultanta.ro/*");
-  if (!route || route.zone_name !== "atelierdeconsultanta.ro") errors.push("domain SEO worker must use the apex zone route");
+  const routePatterns = new Set((workerConfig.routes || [])
+    .filter((item) => item.zone_name === "atelierdeconsultanta.ro")
+    .map((item) => item.pattern));
+  for (const required of ["atelierdeconsultanta.ro/*", "www.atelierdeconsultanta.ro/*"]) {
+    if (!routePatterns.has(required)) errors.push(`domain SEO worker must cover ${required} in the apex zone`);
+  }
 }
 
 function validateDomainSeoIntent(file, errors) {

@@ -3,6 +3,7 @@
 
 const fs = require("fs");
 const path = require("path");
+const { sitemapUrls: readSitemapUrls } = require("../tools/sitemap-utils");
 
 const ROOT = path.resolve(__dirname, "..");
 const SITE = "https://atelierdeconsultanta.ro";
@@ -12,7 +13,7 @@ function read(file) {
 }
 
 function sitemapUrls() {
-  return [...read("sitemap.xml").matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1].trim());
+  return readSitemapUrls(ROOT);
 }
 
 function routeForUrl(url) {

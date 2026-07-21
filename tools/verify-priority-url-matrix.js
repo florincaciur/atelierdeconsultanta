@@ -4,6 +4,7 @@
 const fs = require("fs");
 const path = require("path");
 const cheerio = require("cheerio");
+const { sitemapUrls } = require("./sitemap-utils");
 
 const ROOT = path.resolve(__dirname, "..");
 const DIST = path.join(ROOT, "dist");
@@ -162,10 +163,10 @@ async function main() {
   if (!fs.existsSync(DIST)) errors.push("dist is missing; run npm run build");
   else for (const page of PAGES) compareStatic(page, errors);
 
-  const sitemap = fs.existsSync(path.join(ROOT, "sitemap.xml")) ? fs.readFileSync(path.join(ROOT, "sitemap.xml"), "utf8") : "";
+  const sitemap = new Set(fs.existsSync(path.join(ROOT, "sitemap.xml")) ? sitemapUrls(ROOT) : []);
   for (const page of PAGES) {
     const canonical = `${ORIGIN}${page.route}`;
-    if (!sitemap.includes(`<loc>${canonical}</loc>`)) errors.push(`${page.route}: canonical missing from sitemap`);
+    if (!sitemap.has(canonical)) errors.push(`${page.route}: canonical missing from sitemap`);
   }
 
   if (live) {

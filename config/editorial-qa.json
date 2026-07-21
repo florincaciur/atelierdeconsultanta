@@ -1,0 +1,52 @@
+{
+  "version": "p0.13-v1",
+  "forbiddenTemplateLabels": [
+    {
+      "id": "context-role",
+      "pattern": "^context(?:ul)? rol(?:ul)? paginii$",
+      "replacement": "Despre această pagină"
+    },
+    {
+      "id": "structured-update",
+      "pattern": "^actualizare(?:a)? informa(?:t|ț)iei? structurat(?:a|ă)$",
+      "replacement": "Surse și data verificării"
+    },
+    {
+      "id": "internal-path",
+      "pattern": "^leg(?:a|ă)turi(?:le)? traseu(?:lui)? intern clar$",
+      "replacement": "Resurse utile"
+    },
+    {
+      "id": "next-action",
+      "pattern": "^urm(?:a|ă)tor(?:ul|ea)? ac(?:t|ț)iune potrivit(?:a|ă)$",
+      "replacement": "Următorul pas"
+    },
+    {
+      "id": "short-answer",
+      "pattern": "^r(?:a|ă)spuns scurt$",
+      "replacement": "Ce trebuie să știi"
+    }
+  ],
+  "programTemplateLabels": [
+    {
+      "id": "program-short-summary",
+      "pattern": "^pe scurt$",
+      "replacement": "Ce trebuie să știi"
+    }
+  ],
+  "sourceFiles": [
+    "blog.json",
+    "config/seo-programs.json",
+    "config/seo-programmatic-pages.json",
+    "config/editorial-pages.json",
+    "config/priority-pages.json",
+    "config/contextual-next-steps.json",
+    "config/seo-snippets.json"
+  ],
+  "generatorFiles": [
+    "tools/apply-design-profiles.js",
+    "tools/generate-program-pages.js",
+    "tools/generate-programmatic-seo.js",
+    "tools/generate-seo-hubs.js"
+  ]
+}

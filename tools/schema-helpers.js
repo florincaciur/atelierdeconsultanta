@@ -1,5 +1,7 @@
 "use strict";
 
+const { canonicalContactIdentity } = require("./canonical-contact");
+
 const SITE = "https://atelierdeconsultanta.ro";
 const BRAND_NAME = "FABER - Atelier de Consultanță";
 const BRAND_ALTERNATE_NAMES = [
@@ -15,8 +17,9 @@ const LOCAL_BUSINESS_ID = PROFESSIONAL_SERVICE_ID;
 const WEBSITE_ID = `${SITE}/#website`;
 const LOGO_URL = `${SITE}/favicon-192.png`;
 const IMAGE_URL = `${SITE}/og-image.jpg`;
-const EMAIL = "atelier.consultanta@gmail.com";
-const TELEPHONES = ["+40769828338", "+40753326229"];
+const CANONICAL_CONTACT = canonicalContactIdentity();
+const EMAIL = CANONICAL_CONTACT.email?.value || null;
+const TELEPHONES = CANONICAL_CONTACT.phone ? [CANONICAL_CONTACT.phone.value] : [];
 const LANGUAGE = "ro-RO";
 const AREA_SERVED_NAME = "România";
 const KNOWS_ABOUT = [
@@ -359,11 +362,12 @@ function organizationSchema(options = {}) {
       url: LOGO_URL
     },
     image: IMAGE_URL,
-    email: EMAIL,
     areaServed: areaServedSchema(),
-    contactPoint: contactPointsSchema(),
     knowsAbout: KNOWS_ABOUT
   };
+  if (EMAIL) schema.email = EMAIL;
+  const contactPoints = contactPointsSchema();
+  if (contactPoints.length) schema.contactPoint = contactPoints;
   // `minimal` rămâne acceptat pentru compatibilitate, dar entitatea este
   // intenționat identică peste tot: există o singură descriere canonică FABER.
   void options;
@@ -371,7 +375,7 @@ function organizationSchema(options = {}) {
 }
 
 function professionalServiceSchema() {
-  return {
+  const schema = {
     "@type": "ProfessionalService",
     "@id": PROFESSIONAL_SERVICE_ID,
     name: BRAND_NAME,
@@ -381,8 +385,6 @@ function professionalServiceSchema() {
       "@type": "ImageObject",
       url: LOGO_URL
     },
-    email: EMAIL,
-    telephone: [...TELEPHONES],
     openingHours: "Mo-Fr 09:00-18:00",
     image: IMAGE_URL,
     areaServed: areaServedSchema(),
@@ -390,6 +392,9 @@ function professionalServiceSchema() {
     availableLanguage: LANGUAGE,
     parentOrganization: { "@id": ORGANIZATION_ID }
   };
+  if (EMAIL) schema.email = EMAIL;
+  if (TELEPHONES.length) schema.telephone = [...TELEPHONES];
+  return schema;
 }
 
 function localBusinessSchema() {
@@ -551,8 +556,8 @@ function personOrOrganization(value) {
 }
 
 function fundingProgramSchema(program) {
-  if (!program || !program.route || !program.officialName) return null;
-  const url = canonicalUrl(program.route);
+  if (!program || program.publicationState !== "public" || !program.pageUrl || !program.name) return null;
+  const url = canonicalUrl(program.pageUrl);
   const additionalProperty = [];
   const addProperty = (name, value) => {
     if (value === null || value === undefined || value === "" || (Array.isArray(value) && !value.length)) return;
@@ -563,42 +568,44 @@ function fundingProgramSchema(program) {
     });
   };
 
-  addProperty("sourceStatus", program.sourceStatus);
-  addProperty("reviewedAt", program.reviewedAt);
+  addProperty("status", program.status);
+  addProperty("statusLabel", program.statusLabel);
+  addProperty("verifiedAt", program.verifiedAt);
+  addProperty("sourceName", program.sourceName);
+  addProperty("sourceVersion", program.sourceVersion);
   addProperty("applicationStart", program.applicationStart);
   addProperty("applicationEnd", program.applicationEnd);
-  addProperty("maximumGrant", program.maximumGrant);
-  addProperty("minimumGrant", program.minimumGrant);
-  addProperty("intensity", program.intensity);
-  addProperty("ownContribution", program.ownContribution);
-  addProperty("budget", program.budget);
-  addProperty("factualDisclaimer", program.factualDisclaimer);
+  addProperty("grantSummary", program.grantSummary);
+  addProperty("cofinancingSummary", program.cofinancingSummary);
+  addProperty("pageUrl", program.pageUrl);
+  addProperty("lastMeaningfulUpdate", program.lastMeaningfulUpdate);
+  addProperty("editorialDisclaimer", program.editorialDisclaimer);
 
   const schema = {
     "@type": "DefinedTerm",
     "@id": `${url}#funding-program`,
-    name: cleanText(program.officialName),
+    name: cleanText(program.name),
     alternateName: cleanText(program.shortName),
-    termCode: cleanText(program.id),
+    termCode: cleanText(program.slug),
     url,
-    sameAs: program.officialSourceUrl,
+    sameAs: program.sourceUrl,
     inDefinedTermSet: {
       "@type": "DefinedTermSet",
-      name: cleanText(program.sourceDocumentName),
-      url: program.officialSourceUrl,
+      name: cleanText(program.sourceVersion),
+      url: program.sourceUrl,
       publisher: {
         "@type": "Organization",
-        name: cleanText(program.authority)
+        name: cleanText(program.sourceName)
       }
     },
     subjectOf: {
       "@type": "CreativeWork",
-      name: cleanText(program.sourceDocumentName),
-      url: program.officialSourceUrl,
-      dateModified: program.reviewedAt,
+      name: cleanText(program.sourceVersion),
+      url: program.sourceUrl,
+      dateModified: program.lastMeaningfulUpdate,
       publisher: {
         "@type": "Organization",
-        name: cleanText(program.authority)
+        name: cleanText(program.sourceName)
       }
     },
     additionalProperty

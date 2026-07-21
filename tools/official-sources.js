@@ -74,8 +74,9 @@ function normalizeOfficialSource(key, entry) {
     accessedAt: publicText(guide.accessedAt || guide.lastVerifiedAt),
     note: guide.note || "",
     programIds: Array.isArray(guide.programIds) ? guide.programIds : [],
-    sourceStatus: publicText(guide.sourceStatus),
-    reviewedAt: publicText(guide.reviewedAt || guide.accessedAt || guide.lastVerifiedAt)
+    programStatus: publicText(guide.programStatus),
+    statusLabel: publicText(guide.statusLabel),
+    verifiedAt: publicText(guide.verifiedAt || guide.accessedAt || guide.lastVerifiedAt)
   };
 
   source.isComplete = isHttpUrl(source.url)

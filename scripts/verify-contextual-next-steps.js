@@ -4,7 +4,8 @@
 const fs = require("fs");
 const path = require("path");
 const cheerio = require("cheerio");
-const { loadNextStepConfig } = require("../tools/contextual-next-steps");
+const { loadNextStepConfig, publicNextStepLinks } = require("../tools/contextual-next-steps");
+const { isPublicProgram, loadProgramConfig, programForRoute } = require("../tools/program-factual-governance");
 const { SITE, cleanText, fileForRoute, sitemapRoutes } = require("../tools/structured-data-utils");
 
 const ROOT = path.resolve(__dirname, "..");
@@ -48,8 +49,13 @@ function main() {
   const errors = [];
   const anchorSources = new Map();
   const targetSources = new Map();
+  const programs = loadProgramConfig().programs;
+  let verifiedPages = 0;
 
   for (const [slug, page] of Object.entries(config.pages)) {
+    const sourceProgram = programForRoute(page.route, programs);
+    if (sourceProgram && !isPublicProgram(sourceProgram)) continue;
+    const expectedLinks = publicNextStepLinks(page, programs);
     const file = path.join(ROOT, page.file);
     const $ = cheerio.load(fs.readFileSync(file, "utf8"), { decodeEntities: false });
     const blocks = $("[data-contextual-next-step]");
@@ -62,10 +68,10 @@ function main() {
     if (heading !== page.title) errors.push(`${page.route}: titlul blocului trebuie să fie „${page.title}”`);
     const links = block.children("ul").children("li").children("a");
     if (links.length < 1 || links.length > 4) errors.push(`${page.route}: blocul are ${links.length} linkuri; sunt permise 1–4`);
-    if (links.length !== page.links.length) errors.push(`${page.route}: HTML/config diferit (${links.length}/${page.links.length})`);
+    if (links.length !== expectedLinks.length) errors.push(`${page.route}: HTML/config public diferit (${links.length}/${expectedLinks.length})`);
     const seenTargets = new Set();
 
-    page.links.forEach((expected, index) => {
+    expectedLinks.forEach((expected, index) => {
       const link = links.eq(index);
       const href = link.attr("href") || "";
       const anchor = cleanText(link.find(".see-also-card-title").text());
@@ -97,6 +103,7 @@ function main() {
       if (!anchorSources.has(normalizedAnchor)) anchorSources.set(normalizedAnchor, new Set());
       anchorSources.get(normalizedAnchor).add(page.route);
     });
+    verifiedPages += 1;
     console.log(`${page.route}: ${links.length} linkuri next-step conforme`);
   }
 
@@ -113,7 +120,7 @@ function main() {
     console.error(errors.map((error) => `- ${error}`).join("\n"));
     process.exit(1);
   }
-  console.log(`Trasee next-step valide pentru ${Object.keys(config.pages).length} pagini prioritare; ${projectDesignSources.size} surse contextuale către proiectare; zero redirecturi și zero destinații moarte.`);
+  console.log(`Trasee next-step valide pentru ${verifiedPages} pagini publice prioritare; ${projectDesignSources.size} surse contextuale către proiectare; zero redirecturi și zero destinații moarte.`);
 }
 
 main();

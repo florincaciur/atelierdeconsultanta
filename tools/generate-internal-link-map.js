@@ -5,6 +5,7 @@ const fs = require("fs");
 const path = require("path");
 const cheerio = require("cheerio");
 const { loadNextStepConfig } = require("./contextual-next-steps");
+const { sitemapUrls: readSitemapUrls } = require("./sitemap-utils");
 
 const ROOT = path.resolve(__dirname, "..");
 const SITE = "https://atelierdeconsultanta.ro";
@@ -16,8 +17,7 @@ const REPEATED_ANCHOR_THRESHOLD = 8;
 const LINK_TYPES = ["navigation", "contextual", "next-step", "source", "CTA"];
 
 function sitemapUrls() {
-  return [...fs.readFileSync(SITEMAP_PATH, "utf8").matchAll(/<loc>([^<]+)<\/loc>/gu)]
-    .map((match) => match[1].trim());
+  return readSitemapUrls(ROOT);
 }
 
 function fileForUrl(url) {

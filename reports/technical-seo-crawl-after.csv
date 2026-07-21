@@ -1,0 +1,12 @@
+criterion,before_live,after_patch_predeploy,status,evidence
+sitemap_urls,102,91,resolved_deploy_required,"sitemap.xml + sitemap-core.xml + sitemap-programs.xml + sitemap-guides.xml"
+www_variants_without_direct_301,102,0,resolved_deploy_required,"tests/cloudflare-domain-seo-redirects.mjs"
+orphan_pages,10,0,resolved,"tests/technical-seo-contract.mjs"
+pages_deeper_than_3_clicks,not_reported,0,pass,"tests/technical-seo-contract.mjs"
+broken_or_redirected_internal_links,0,0,pass,"tools/audit-site-links.js + scripts/verify-redirect-map.js"
+redirect_loops_or_chains,0,0,pass,"scripts/verify-redirect-map.js"
+canonical_conflicts,0,0,pass,"scripts/verify-canonical-consistency.js"
+duplicate_title_h1_description,"0/0/0 in corrected live crawl; 1 generator H1 in local audit","0/0/0",resolved,"tests/technical-seo-contract.mjs"
+confirmed_404_soft404_5xx_missing_assets,0,0,pass,"reports/technical-seo-crawl-before.json"
+governed_internal_noindex_occurrences,29,29,approval_required,"reports/indexing-audit.json"
+gdpr_links_pending_sitemap_consolidation,7,7,legal_and_seo_approval_required,"reports/indexing-audit.json"

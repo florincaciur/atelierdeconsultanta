@@ -1,0 +1,206 @@
+{
+  "schemaVersion": 1,
+  "humanReviewToken": "DE_VALIDAT_UMAN",
+  "approvalState": "pending",
+  "publicationState": "blocked",
+  "notLegalOpinion": true,
+  "approvals": {
+    "businessDecision": {
+      "state": "pending",
+      "approvedBy": "DE_VALIDAT_UMAN",
+      "approvedAt": "DE_VALIDAT_UMAN",
+      "internalSource": "DE_VALIDAT_UMAN"
+    },
+    "legalReview": {
+      "state": "pending",
+      "approvedBy": "DE_VALIDAT_UMAN",
+      "approvedAt": "DE_VALIDAT_UMAN",
+      "internalSource": "DE_VALIDAT_UMAN",
+      "scope": "Termeni, Politica de confidențialitate, identificarea operatorului, contractantului și emitentului facturilor — DE_VALIDAT_UMAN"
+    },
+    "operationalEmailOwnerConfirmation": {
+      "state": "pending",
+      "approvedBy": "DE_VALIDAT_UMAN",
+      "approvedAt": "DE_VALIDAT_UMAN",
+      "internalSource": "DE_VALIDAT_UMAN"
+    }
+  },
+  "fields": {
+    "brandName": {
+      "label": "Brand public canonic",
+      "status": "pending",
+      "approvedValue": "DE_VALIDAT_UMAN",
+      "candidateValues": ["FABER – Atelier de Consultanță"],
+      "internalSource": "Brief P0.04 și utilizarea editorială existentă; nu reprezintă dovada denumirii juridice.",
+      "approvedBy": "DE_VALIDAT_UMAN",
+      "approvedAt": "DE_VALIDAT_UMAN",
+      "surfaces": ["footer", "contact", "about", "terms", "privacy", "automated_emails", "contracts_invoices", "jsonld_organization", "jsonld_professional_service", "google_business_profile", "bing_places"],
+      "notes": "Brandul trebuie separat explicit de entitatea juridică operatoare."
+    },
+    "websiteUrl": {
+      "label": "Website public canonic",
+      "status": "pending",
+      "approvedValue": "DE_VALIDAT_UMAN",
+      "candidateValues": ["https://atelierdeconsultanta.ro/"],
+      "internalSource": "Domeniul repository-ului și brief P0.04; confirmarea dreptului de utilizare rămâne internă.",
+      "approvedBy": "DE_VALIDAT_UMAN",
+      "approvedAt": "DE_VALIDAT_UMAN",
+      "surfaces": ["footer", "contact", "about", "terms", "privacy", "automated_emails", "contracts_invoices", "jsonld_organization", "jsonld_professional_service", "google_business_profile", "bing_places"],
+      "notes": "Confirmați entitatea care controlează domeniul și îl folosește comercial."
+    },
+    "legalName": {
+      "label": "Denumire juridică integrală",
+      "status": "pending",
+      "approvedValue": "DE_VALIDAT_UMAN",
+      "candidateValues": [],
+      "internalSource": "DE_VALIDAT_UMAN",
+      "approvedBy": "DE_VALIDAT_UMAN",
+      "approvedAt": "DE_VALIDAT_UMAN",
+      "surfaces": ["footer", "contact", "about", "terms", "privacy", "automated_emails", "contracts_invoices", "jsonld_organization", "jsonld_professional_service", "google_business_profile", "bing_places"],
+      "notes": "Nu se confundă cu brandul FABER."
+    },
+    "legalForm": {
+      "label": "Forma juridică",
+      "status": "pending",
+      "approvedValue": "DE_VALIDAT_UMAN",
+      "candidateValues": [],
+      "internalSource": "DE_VALIDAT_UMAN; Termenii folosesc formula neprobată «persoană juridică română».",
+      "approvedBy": "DE_VALIDAT_UMAN",
+      "approvedAt": "DE_VALIDAT_UMAN",
+      "surfaces": ["footer", "contact", "about", "terms", "privacy", "contracts_invoices", "jsonld_organization", "google_business_profile", "bing_places"],
+      "notes": "Selectați forma exactă din documentele entității."
+    },
+    "taxIdentifier": {
+      "label": "CUI/CIF",
+      "status": "pending",
+      "approvedValue": "DE_VALIDAT_UMAN",
+      "candidateValues": [],
+      "internalSource": "DE_VALIDAT_UMAN; repository-ul conține numai marcaje TODO_CLIENT_CUI.",
+      "approvedBy": "DE_VALIDAT_UMAN",
+      "approvedAt": "DE_VALIDAT_UMAN",
+      "surfaces": ["footer", "contact", "about", "terms", "privacy", "contracts_invoices", "jsonld_organization", "google_business_profile", "bing_places"],
+      "notes": "Introduceți valoarea exactă din documentul intern aprobat."
+    },
+    "tradeRegisterNumber": {
+      "label": "Număr Registrul Comerțului",
+      "status": "pending",
+      "approvedValue": "DE_VALIDAT_UMAN",
+      "candidateValues": [],
+      "internalSource": "DE_VALIDAT_UMAN",
+      "approvedBy": "DE_VALIDAT_UMAN",
+      "approvedAt": "DE_VALIDAT_UMAN",
+      "surfaces": ["footer", "contact", "about", "terms", "privacy", "contracts_invoices", "jsonld_organization", "google_business_profile", "bing_places"],
+      "notes": "Dacă nu este aplicabil, decidentul trebuie să aprobe explicit status=not_applicable și valoarea NU_SE_APLICA."
+    },
+    "registeredOffice": {
+      "label": "Sediu social",
+      "status": "pending",
+      "approvedValue": "DE_VALIDAT_UMAN",
+      "candidateValues": [],
+      "internalSource": "DE_VALIDAT_UMAN",
+      "approvedBy": "DE_VALIDAT_UMAN",
+      "approvedAt": "DE_VALIDAT_UMAN",
+      "surfaces": ["footer", "contact", "about", "terms", "privacy", "contracts_invoices", "jsonld_organization"],
+      "notes": "Confirmați separat dacă adresa poate fi publicată integral."
+    },
+    "publicWorkplaceAddress": {
+      "label": "Punct de lucru / adresă publică",
+      "status": "pending",
+      "approvedValue": "DE_VALIDAT_UMAN",
+      "candidateValues": [],
+      "internalSource": "DE_VALIDAT_UMAN",
+      "approvedBy": "DE_VALIDAT_UMAN",
+      "approvedAt": "DE_VALIDAT_UMAN",
+      "surfaces": ["footer", "contact", "about", "jsonld_professional_service", "google_business_profile", "bing_places"],
+      "notes": "Poate fi NU_SE_APLICA numai prin decizie explicită; nu copiați automat sediul social."
+    },
+    "personalDataController": {
+      "label": "Operator de date cu caracter personal",
+      "status": "pending",
+      "approvedValue": "DE_VALIDAT_UMAN",
+      "candidateValues": ["FABER – Atelier de Consultanță"],
+      "internalSource": "Paginile GDPR/confidențialitate folosesc brandul, fără identificarea entității juridice.",
+      "approvedBy": "DE_VALIDAT_UMAN",
+      "approvedAt": "DE_VALIDAT_UMAN",
+      "surfaces": ["contact", "privacy", "automated_emails", "contracts_invoices"],
+      "notes": "Juristul trebuie să confirme operatorul real și formularea legală."
+    },
+    "contractingEntity": {
+      "label": "Entitatea care emite contractele",
+      "status": "pending",
+      "approvedValue": "DE_VALIDAT_UMAN",
+      "candidateValues": [],
+      "internalSource": "DE_VALIDAT_UMAN; nu există șabloane de contract în repository.",
+      "approvedBy": "DE_VALIDAT_UMAN",
+      "approvedAt": "DE_VALIDAT_UMAN",
+      "surfaces": ["terms", "automated_emails", "contracts_invoices"],
+      "notes": "Confirmați chiar dacă valoarea coincide cu denumirea juridică."
+    },
+    "invoicingEntity": {
+      "label": "Entitatea care emite facturile",
+      "status": "pending",
+      "approvedValue": "DE_VALIDAT_UMAN",
+      "candidateValues": [],
+      "internalSource": "DE_VALIDAT_UMAN; facturile sunt în afara scope-ului repository-ului.",
+      "approvedBy": "DE_VALIDAT_UMAN",
+      "approvedAt": "DE_VALIDAT_UMAN",
+      "surfaces": ["terms", "automated_emails", "contracts_invoices"],
+      "notes": "Confirmați explicit entitatea, fără deducere din brand."
+    },
+    "publicPhone": {
+      "label": "Telefon public canonic",
+      "status": "pending",
+      "approvedValue": "DE_VALIDAT_UMAN",
+      "candidateValues": ["+40769828338", "+40753326229"],
+      "internalSource": "Contact, header/WhatsApp și tools/schema-helpers.js publică două numere; niciunul nu are aprobare internă atașată.",
+      "approvedBy": "DE_VALIDAT_UMAN",
+      "approvedAt": "DE_VALIDAT_UMAN",
+      "surfaces": ["footer", "contact", "about", "terms", "privacy", "automated_emails", "contracts_invoices", "jsonld_organization", "jsonld_professional_service", "google_business_profile", "bing_places"],
+      "notes": "Alegeți un număr canonic și precizați separat dacă al doilea rămâne canal WhatsApp."
+    },
+    "publicEmail": {
+      "label": "Email public canonic",
+      "status": "pending",
+      "approvedValue": "DE_VALIDAT_UMAN",
+      "candidateValues": ["atelier.consultanta@gmail.com"],
+      "internalSource": "Contact, formulare, pagini legale și tools/schema-helpers.js; existența în cod nu dovedește aprobarea proprietarului.",
+      "approvedBy": "DE_VALIDAT_UMAN",
+      "approvedAt": "DE_VALIDAT_UMAN",
+      "surfaces": ["footer", "contact", "about", "terms", "privacy", "automated_emails", "contracts_invoices", "jsonld_organization", "jsonld_professional_service", "google_business_profile", "bing_places"],
+      "notes": "Gmail poate fi aprobat numai împreună cu operationalEmailOwnerConfirmation=approved."
+    },
+    "officialProfileUrls": {
+      "label": "URL-uri profiluri oficiale",
+      "status": "pending",
+      "approvedValue": "DE_VALIDAT_UMAN",
+      "candidateValues": [],
+      "internalSource": "DE_VALIDAT_UMAN; nu au fost găsite profiluri sociale/locale oficiale confirmate în repository.",
+      "approvedBy": "DE_VALIDAT_UMAN",
+      "approvedAt": "DE_VALIDAT_UMAN",
+      "surfaces": ["footer", "contact", "about", "jsonld_organization", "jsonld_professional_service", "google_business_profile", "bing_places"],
+      "notes": "Furnizați numai URL-uri controlate oficial; dacă nu există, aprobați explicit NU_SE_APLICA."
+    },
+    "contactHours": {
+      "label": "Program de contact",
+      "status": "pending",
+      "approvedValue": "DE_VALIDAT_UMAN",
+      "candidateValues": ["Luni–vineri 09:00–18:00"],
+      "internalSource": "tools/schema-helpers.js publică Mo-Fr 09:00-18:00; nu există aprobare internă atașată.",
+      "approvedBy": "DE_VALIDAT_UMAN",
+      "approvedAt": "DE_VALIDAT_UMAN",
+      "surfaces": ["footer", "contact", "about", "automated_emails", "jsonld_professional_service", "google_business_profile", "bing_places"],
+      "notes": "Confirmați fusul orar și excepțiile relevante."
+    },
+    "serviceArea": {
+      "label": "Aria geografică deservită",
+      "status": "pending",
+      "approvedValue": "DE_VALIDAT_UMAN",
+      "candidateValues": ["România"],
+      "internalSource": "tools/schema-helpers.js și JSON-LD existent folosesc România; nu există decizie internă atașată.",
+      "approvedBy": "DE_VALIDAT_UMAN",
+      "approvedAt": "DE_VALIDAT_UMAN",
+      "surfaces": ["footer", "contact", "about", "automated_emails", "contracts_invoices", "jsonld_organization", "jsonld_professional_service", "google_business_profile", "bing_places"],
+      "notes": "Precizați dacă serviciile sunt naționale, regionale sau limitate după tipul proiectului."
+    }
+  }
+}

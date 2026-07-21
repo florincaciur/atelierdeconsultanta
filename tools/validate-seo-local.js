@@ -3,6 +3,7 @@
 
 const fs = require("fs");
 const path = require("path");
+const { sitemapUrls: readSitemapUrls } = require("./sitemap-utils");
 
 const ROOT = path.resolve(__dirname, "..");
 const SITE = "https://atelierdeconsultanta.ro";
@@ -74,7 +75,7 @@ function compileRedirectPattern(pattern) {
 }
 
 function parseSitemap() {
-  return [...read("sitemap.xml").matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]);
+  return readSitemapUrls(ROOT);
 }
 
 function parseHeaders() {

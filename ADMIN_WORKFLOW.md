@@ -1,5 +1,94 @@
 # ADMIN_WORKFLOW
 
+## Registrul unic al programelor
+
+Datele factuale despre programele de finanțare se modifică exclusiv în
+`config/seo-programs.json#programs`, conform `config/program-registry.schema.json`.
+`banners.json`, `official-guides.json`, meniul, homepage-ul, paginile și JSON-LD sunt
+consumatori generați și nu sunt surse editoriale.
+
+Flux obligatoriu înainte de publicare:
+
+1. Responsabilul editorial confirmă documentul oficial, versiunea și data verificării.
+2. Completează registrul și folosește numai unul dintre cele șase statusuri controlate.
+3. Rulează `npm run validate:program-registry` și `npm run sync:program-facts`.
+4. Rulează `npm run test:program-registry` și `npm run audit:program-facts`.
+
+O înregistrare `pending_validation` poate conține `DE_VALIDAT_UMAN`, dar nu este
+publicată în meniu, homepage, carusel sau JSON-LD. Pentru `status=arhivat`, `noindex`
+se aplică numai după completarea explicită a `archivedNoindexDecision=noindex` și
+numai dacă `evergreenValue=false`.
+
+## Aprobarea factuală P0.02
+
+DR12, DR14, PRO INFRA și Digitalizare IMM au o poartă nominală suplimentară în
+`config/program-status-approvals.json`. Cât timp `approvalState=pending`:
+
+1. `validatorName` rămâne `DE_VALIDAT_UMAN`;
+2. programul rămâne `publicationState=pending_validation` în registrul unic;
+3. valorile, calendarul și copy-ul candidat nu se publică;
+4. URL-urile din `publicationHoldUrls` păstrează mesajul neutru și `noindex, follow`.
+
+Consultantul FABER verifică documentul oficial curent, versiunea, caracterul final
+sau consultativ și intervalul efectiv. Abia apoi completează nominal validatorul și
+data aprobării, actualizează registrul unic și rulează:
+
+1. `npm run report:program-statuses`;
+2. `npm run validate:program-statuses`;
+3. `npm run sync:program-facts`;
+4. `npm run test:program-statuses`;
+5. `npm run build`.
+
+Raportul de aprobare este `reports/program-status-validation-2026-07-21.md`, iar
+istoricul corecțiilor este `reports/editorial-status-changelog-2026-07-21.md`.
+
+## Guvernanță editorială P0.03
+
+Metadatele de autor, reviewer, sursă, verificare, reverificare, modificare
+substanțială și changelog se editează în `config/editorial-governance.json`, conform
+`config/editorial-governance.schema.json`. Atribuirea implicită este organizațională;
+un nume personal poate deveni public numai cu `personalNameConsent=true`.
+
+Înainte de publicare rulează:
+
+1. `npm run validate:editorial-governance`;
+2. `npm run sync:editorial-governance`;
+3. `npm run test:editorial-governance`;
+4. `npm run build`.
+
+Filtrele din panoul Programe identifică sursa lipsă, verificarea expirată, reviewerul
+lipsă și contradicția program–pagină. Expirarea este doar un warning intern și
+blochează schimbarea statusului până la reverificare. `dateModified` și sitemap
+`lastmod` provin exclusiv din `lastMeaningfulUpdate`; build-ul, CSS-ul și operațiunile
+automate nu actualizează data. Procedura completă, de o pagină, este în
+`docs/procedura-guvernanta-editoriala.md`.
+
+## Identitate juridică și NAP P0.04
+
+Fișa unică este `config/legal-identity.json`, conform
+`config/legal-identity.schema.json`. Valorile observate în site sunt doar candidați
+și nu devin date canonice prin simpla lor existență în cod. Până la confirmarea
+decidentului și avizul juristului, `approvalState=pending` și
+`publicationState=blocked`.
+
+Flux obligatoriu:
+
+1. Decidentul completează pentru fiecare câmp valoarea, sursa internă, aprobatorul
+   și data aprobării.
+2. Pentru Registrul Comerțului, adresa publică sau profilurile inexistente, se poate
+   folosi `not_applicable` numai prin aprobare explicită.
+3. Dacă emailul aprobat este `atelier.consultanta@gmail.com`, proprietarul completează
+   separat `operationalEmailOwnerConfirmation=approved`.
+4. Juristul aprobă Termenii, politica de confidențialitate, operatorul de date,
+   contractantul și emitentul facturilor.
+5. Se rulează `npm run report:legal-identity`, `npm run validate:legal-identity` și
+   `npm run test:legal-identity`.
+
+Comenzile `npm run deploy` și `npm run deploy:pages` încep cu
+`validate:legal-identity:publish` și eșuează cât timp fișa nu este complet aprobată.
+Tabelul pentru decizie și inventarul suprafețelor sunt în
+`reports/legal-identity-approval.md`. Fișa și raportul nu constituie opinie juridică.
+
 ## Login și reset local
 
 Adminul este la `/admin/` și are `noindex,nofollow`. Autentificarea locală folosește o singură sursă de adevăr:

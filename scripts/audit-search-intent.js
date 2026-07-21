@@ -4,6 +4,7 @@
 const fs = require("fs");
 const path = require("path");
 const cheerio = require("cheerio");
+const { sitemapUrls: readSitemapUrls } = require("../tools/sitemap-utils");
 
 const ROOT = path.resolve(__dirname, "..");
 const SITE = "https://atelierdeconsultanta.ro";
@@ -91,7 +92,7 @@ function internalPath(raw) {
   }
 }
 
-const sitemapUrls = [...read("sitemap.xml").matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1].trim());
+const sitemapUrls = readSitemapUrls(ROOT);
 const pages = [];
 const outbound = new Map();
 

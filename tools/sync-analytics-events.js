@@ -6,6 +6,18 @@ const path = require("path");
 const { ROOT, findPublicHtmlFiles } = require("./sync-global-header");
 
 const ANALYTICS_SCRIPT = '<script src="/assets/analytics-events.js" defer></script>';
+const ATTRIBUTION_SCRIPT = '<script src="/assets/lead-attribution.js" defer></script>';
+const FUNNEL_EVENT_ALIASES = Object.freeze({
+  eligibility_cta_click: "cta_click",
+  contact_page_click: "cta_click",
+  whatsapp_number_click: "contact_whatsapp",
+  phone_click: "contact_phone",
+  email_click: "contact_email",
+  form_submit_success: "form_submit",
+  form_validation_error: "field_error"
+});
+const PROGRAMS = JSON.parse(fs.readFileSync(path.join(ROOT, "config", "seo-programs.json"), "utf8")).programs || [];
+const PROGRAM_FAMILIES = new Map(PROGRAMS.map((program) => [program.slug, program.family || ""]));
 const EXCLUDED_DIRECTORIES = new Set([
   ".git",
   "archive",
@@ -54,7 +66,9 @@ function stripInlineClarity(html) {
 }
 
 function removeAnalyticsScripts(html) {
-  return html.replace(/[ \t]*<script\b[^>]*\bsrc=["']\/assets\/analytics-events\.js(?:\?[^"']*)?["'][^>]*>[ \t]*<\/script>[ \t]*(?:\r?\n)?/gi, "");
+  return html
+    .replace(/[ \t]*<script\b[^>]*\bsrc=["']\/assets\/analytics-events\.js(?:\?[^"']*)?["'][^>]*>[ \t]*<\/script>[ \t]*(?:\r?\n)?/gi, "")
+    .replace(/[ \t]*<script\b[^>]*\bsrc=["']\/assets\/lead-attribution\.js(?:\?[^"']*)?["'][^>]*>[ \t]*<\/script>[ \t]*(?:\r?\n)?/gi, "");
 }
 
 function getAttribute(tag, name) {
@@ -80,6 +94,32 @@ function addAttributes(tag, attributes) {
   return tag.replace(/\s*\/?>$/, (closing) => `${additions}${closing.startsWith(" /") ? " />" : ">"}`);
 }
 
+function setAttribute(tag, name, value) {
+  const escaped = escapeAttribute(value);
+  const pattern = new RegExp(`(\\s${name}\\s*=\\s*)(?:"[^"]*"|'[^']*'|[^\\s>]+)`, "i");
+  if (pattern.test(tag)) return tag.replace(pattern, `$1"${escaped}"`);
+  return addAttributes(tag, { [name]: value });
+}
+
+function normalizeEventNames(tag) {
+  const current = getAttribute(tag, "data-analytics-event").trim();
+  if (!current) return tag;
+  const normalized = current
+    .split(/\s+/)
+    .filter(Boolean)
+    .map((name) => FUNNEL_EVENT_ALIASES[name] || name)
+    .filter((name, index, names) => names.indexOf(name) === index)
+    .join(" ");
+  let output = setAttribute(tag, "data-analytics-event", normalized);
+  if (normalized.split(/\s+/).includes("cta_click")) {
+    output = addAttributes(output, {
+      "data-analytics-cta-view": "true",
+      "data-analytics-copy-variant": "default"
+    });
+  }
+  return output;
+}
+
 function sanitizedExternalTarget(href) {
   try {
     const url = new URL(href);
@@ -91,21 +131,23 @@ function sanitizedExternalTarget(href) {
 }
 
 function annotateAnchor(tag) {
-  if (hasAttribute(tag, "data-analytics-event")) return tag;
+  if (hasAttribute(tag, "data-analytics-event")) return normalizeEventNames(tag);
   const href = getAttribute(tag, "href").trim();
   if (!href) return tag;
 
   if (hasAttribute(tag, "data-whatsapp-dialog-open")) {
     return addAttributes(tag, {
-      "data-analytics-event": "eligibility_cta_click",
+      "data-analytics-event": "cta_click",
       "data-analytics-component": "eligibility_cta",
-      "data-analytics-cta-id": "eligibility_whatsapp"
+      "data-analytics-cta-id": "eligibility_whatsapp",
+      "data-analytics-cta-view": "true",
+      "data-analytics-copy-variant": "default"
     });
   }
 
   if (/^https:\/\/(?:api\.)?wa\.me\//i.test(href)) {
     return addAttributes(tag, {
-      "data-analytics-event": "whatsapp_number_click",
+      "data-analytics-event": "contact_whatsapp",
       "data-analytics-component": "whatsapp_link",
       "data-analytics-cta-id": "whatsapp_contact"
     });
@@ -113,7 +155,7 @@ function annotateAnchor(tag) {
 
   if (/^tel:/i.test(href)) {
     return addAttributes(tag, {
-      "data-analytics-event": "phone_click",
+      "data-analytics-event": "contact_phone",
       "data-analytics-component": "contact_link",
       "data-analytics-cta-id": "phone_contact"
     });
@@ -121,7 +163,7 @@ function annotateAnchor(tag) {
 
   if (/^mailto:/i.test(href)) {
     return addAttributes(tag, {
-      "data-analytics-event": "email_click",
+      "data-analytics-event": "contact_email",
       "data-analytics-component": "contact_link",
       "data-analytics-cta-id": "email_contact"
     });
@@ -129,10 +171,12 @@ function annotateAnchor(tag) {
 
   if (/^\/contact(?:[?#].*)?$/.test(href)) {
     return addAttributes(tag, {
-      "data-analytics-event": "contact_page_click",
+      "data-analytics-event": "cta_click",
       "data-analytics-component": "contact_cta",
       "data-analytics-cta-id": "contact_page",
-      "data-analytics-target": "/contact"
+      "data-analytics-target": "/contact",
+      "data-analytics-cta-view": "true",
+      "data-analytics-copy-variant": "default"
     });
   }
 
@@ -162,6 +206,21 @@ function routeSlug(relativePath) {
   return normalized.replace(/\.html$/i, "").replace(/[^a-z0-9]+/gi, "_");
 }
 
+function annotateAnchors(html, relativePath) {
+  let contactCtaIndex = 0;
+  const route = routeSlug(relativePath);
+  return html.replace(/<a\b[^>]*>/gi, (tag) => {
+    let output = annotateAnchor(tag);
+    const events = getAttribute(output, "data-analytics-event").split(/\s+/);
+    const ctaId = getAttribute(output, "data-analytics-cta-id");
+    if (events.includes("cta_click") && (ctaId === "contact_page" || new RegExp(`^${route}_contact_[0-9]+$`).test(ctaId))) {
+      contactCtaIndex += 1;
+      output = setAttribute(output, "data-analytics-cta-id", `${route}_contact_${contactCtaIndex}`);
+    }
+    return output;
+  });
+}
+
 function annotateForms(html, relativePath) {
   let index = 0;
   return html.replace(/<form\b[^>]*>/gi, (tag) => {
@@ -172,8 +231,30 @@ function annotateForms(html, relativePath) {
     else if (!formId) formId = `${routeSlug(relativePath)}_form_${index}`;
     return addAttributes(tag, {
       "data-analytics-form": formId,
+      "data-analytics-form-version": formId === "contact_triage" ? "short_v1" : "legacy_v1",
       "data-analytics-component": "public_form",
       "data-clarity-mask": "true"
+    });
+  });
+}
+
+function pageTypeFor(relativePath, bodyTag) {
+  const route = relativePath.replace(/\\/g, "/").replace(/(?:\/index)?\.html$/i, "");
+  if (relativePath === "index.html") return "home";
+  if (route === "contact") return "contact";
+  if (getAttribute(bodyTag, "data-program-id")) return "program";
+  if (/calculator|instrumente|verificare-eligibilitate/.test(route)) return "tool";
+  if (/blog|ghid|intrebari|cheltuieli|documente|conditii|greseli/.test(route)) return "content";
+  return "page";
+}
+
+function annotateBody(html, relativePath) {
+  return html.replace(/<body\b[^>]*>/i, (tag) => {
+    const programSlug = getAttribute(tag, "data-program-id");
+    return addAttributes(tag, {
+      "data-analytics-page-type": pageTypeFor(relativePath, tag),
+      "data-analytics-program-slug": programSlug,
+      "data-analytics-program-family": PROGRAM_FAMILIES.get(programSlug) || ""
     });
   });
 }
@@ -182,10 +263,11 @@ function synchronizePublicHtml(html, relativePath) {
   const eol = html.includes("\r\n") ? "\r\n" : "\n";
   let output = stripInlineClarity(html);
   output = removeAnalyticsScripts(output);
-  output = output.replace(/<a\b[^>]*>/gi, annotateAnchor);
+  output = annotateAnchors(output, relativePath);
   output = annotateForms(output, relativePath);
+  output = annotateBody(output, relativePath);
   if (!/<\/head>/i.test(output)) throw new Error(`${relativePath}: lipsește </head>`);
-  return output.replace(/<\/head>/i, `  ${ANALYTICS_SCRIPT}${eol}</head>`);
+  return output.replace(/<\/head>/i, `  ${ATTRIBUTION_SCRIPT}${eol}  ${ANALYTICS_SCRIPT}${eol}</head>`);
 }
 
 function main() {
@@ -220,7 +302,10 @@ if (require.main === module) main();
 
 module.exports = {
   ANALYTICS_SCRIPT,
+  ATTRIBUTION_SCRIPT,
   annotateAnchor,
+  annotateAnchors,
+  annotateBody,
   annotateForms,
   listHtmlFiles,
   stripInlineClarity,

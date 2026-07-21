@@ -308,6 +308,31 @@
   outline: 3px solid rgba(184, 71, 22, 0.45);
   outline-offset: 3px;
 }
+
+.footer-contact-direct a {
+  align-items: center;
+  display: inline-flex;
+  min-height: 24px;
+  padding-inline: 2px;
+  text-underline-offset: 3px;
+}
+
+.footer-contact-direct a:focus-visible {
+  outline: 3px solid #0b63ce;
+  outline-offset: 3px;
+}
+
+@media (max-width: 720px) {
+  .footer-contact-direct {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 4px 10px;
+  }
+
+  .footer-contact-direct a {
+    min-height: 44px;
+  }
+}
 .eligibility-whatsapp-eyebrow {
   display: inline-flex;
   margin-bottom: 10px;

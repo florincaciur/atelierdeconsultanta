@@ -4,6 +4,7 @@
 const cp = require("child_process");
 const fs = require("fs");
 const path = require("path");
+const { readSitemapEntries, readSitemapEntriesFromReader } = require("./sitemap-utils");
 
 const ROOT = path.resolve(__dirname, "..");
 const HOST = "atelierdeconsultanta.ro";
@@ -102,18 +103,17 @@ function parseSitemapXml(xml) {
 }
 
 function currentSitemapEntries() {
-  const file = path.join(ROOT, "sitemap.xml");
-  return parseSitemapXml(fs.readFileSync(file, "utf8"));
+  return new Map(readSitemapEntries(ROOT).entries.map((entry) => [entry.url, entry.lastmod || ""]));
 }
 
 function previousSitemapEntries(ref) {
   try {
-    const xml = cp.execFileSync("git", ["show", `${ref}:sitemap.xml`], {
-      cwd: ROOT,
-      encoding: "utf8",
-      stdio: ["ignore", "pipe", "ignore"],
-    });
-    return parseSitemapXml(xml);
+    const parsed = readSitemapEntriesFromReader((file) => cp.execFileSync("git", ["show", `${ref}:${file}`], {
+        cwd: ROOT,
+        encoding: "utf8",
+        stdio: ["ignore", "pipe", "ignore"],
+      }), "sitemap.xml", SITE);
+    return new Map(parsed.entries.map((entry) => [entry.url, entry.lastmod || ""]));
   } catch {
     return null;
   }

@@ -6,6 +6,7 @@ const path = require("path");
 const cheerio = require("cheerio");
 const { sourcesForKeys } = require("./official-sources");
 const { designFamilyForSlug } = require("./design-family-map");
+const { isPublicProgram, loadProgramConfig, programForRoute } = require("./program-factual-governance");
 
 const ROOT = path.resolve(__dirname, "..");
 const BANNERS_PATH = path.join(ROOT, "banners.json");
@@ -167,17 +168,20 @@ function ensureHeroActions(route, banner, actionsHtml) {
   const eligibility = links.filter((_, element) => normalizeCtaLink($(element).attr("href")) === "/verificare-eligibilitate-fonduri-europene").first();
   const officialGuideKey = (banner.officialGuideKeys && banner.officialGuideKeys[normalizedRoute]) || banner.officialGuideKey;
   const officialSource = sourcesForKeys([officialGuideKey])[0];
-  if (!officialSource || !officialSource.isComplete || !/^https?:\/\//i.test(officialSource.url)) {
+  const officialUrl = officialSource?.isComplete && /^https?:\/\//i.test(officialSource.url)
+    ? officialSource.url
+    : String(banner.sourceUrl || "").trim();
+  if (!/^https?:\/\//i.test(officialUrl)) {
     throw new Error(`No complete official guide configured for ${normalizedRoute}`);
   }
-  const guide = links.filter((_, element) => $(element).attr("href") === officialSource.url).first();
+  const guide = links.filter((_, element) => $(element).attr("href") === officialUrl).first();
   const programName = String(banner.title || "programul").split(/\r?\n/, 1)[0].trim();
   const eligibilityHtml = eligibility.length
     ? $.html(eligibility)
     : `<a class="btn btn-primary" href="/verificare-eligibilitate-fonduri-europene">${escapeHtml(`Verifică eligibilitatea ${programName}`)}</a>`;
   const guideHtml = guide.length
     ? $.html(guide)
-    : `<a class="btn btn-secondary" href="${escapeHtml(officialSource.url)}" target="_blank" rel="noopener noreferrer">Ghid oficial</a>`;
+    : `<a class="btn btn-secondary" href="${escapeHtml(officialUrl)}" target="_blank" rel="noopener noreferrer">Sursă oficială</a>`;
   return `${eligibilityHtml}\n      ${guideHtml}`;
 }
 
@@ -229,16 +233,27 @@ function ensureProgramHeroCss(html) {
   return html.replace(/<\/head>/i, `  <link rel="stylesheet" href="${PROGRAM_HERO_CSS}">\n</head>`);
 }
 
-function syncPage(route, bannerIndex, { check = false } = {}) {
+function syncPage(route, bannerIndex, { check = false, program = null } = {}) {
   const normalizedRoute = normalizeCtaLink(route);
   const filePath = path.join(ROOT, normalizedRoute.slice(1), "index.html");
   if (!fs.existsSync(filePath)) throw new Error(`Missing public page: ${filePath}`);
   const banner = bannerForRoute(normalizedRoute, bannerIndex);
   if (!banner) throw new Error(`Missing banners.json mapping for ${normalizedRoute}`);
+  const pageBanner = program
+    ? {
+        ...banner,
+        title: program.name || banner.title,
+        tag: program.statusLabel || banner.tag,
+        description: program.cardSummary || banner.description,
+        officialGuideKey: program.officialGuideKeys?.[0] || banner.officialGuideKey,
+        sourceUrl: program.sourceUrl || banner.sourceUrl,
+        sourceVersion: program.sourceVersion || banner.sourceVersion
+      }
+    : banner;
   const before = fs.readFileSync(filePath, "utf8");
   const oldHero = findHeroBlock(before);
   const existing = extractExistingHero(oldHero);
-  const newHero = renderProgramHero({ route: normalizedRoute, banner, existing });
+  const newHero = renderProgramHero({ route: normalizedRoute, banner: pageBanner, existing });
   const after = ensureProgramHeroCss(before.replace(oldHero, newHero));
   const changed = after !== before;
   if (changed && !check) fs.writeFileSync(filePath, after, "utf8");
@@ -256,7 +271,15 @@ function main() {
   const argv = process.argv.slice(2);
   const check = argv.includes("--check");
   const bannerIndex = createBannerIndex();
-  const results = selectedRoutes(argv).map((route) => syncPage(route, bannerIndex, { check }));
+  const programs = loadProgramConfig().programs;
+  const routes = selectedRoutes(argv).filter((route) => {
+    const program = programForRoute(route, programs);
+    return !program || isPublicProgram(program);
+  });
+  const results = routes.map((route) => syncPage(route, bannerIndex, {
+    check,
+    program: programForRoute(route, programs)
+  }));
   const changed = results.filter((result) => result.changed);
   for (const result of results) {
     console.log(`${result.changed ? (check ? "OUTDATED" : "UPDATED") : "OK"} ${result.route} <- ${result.bannerId}`);

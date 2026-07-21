@@ -275,6 +275,7 @@ function auditSiteLinks(options = {}) {
   let anchorFragmentsChecked = 0;
 
   for (const link of links) {
+    if (link.kind === "form" && link.route.startsWith("/api/")) continue;
     const full = path.join(root, link.targetFile);
     if (!fs.existsSync(full)) {
       issues.push({ type: "missing-target", ...link, reason: "target local missing" });

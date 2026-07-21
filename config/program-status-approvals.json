@@ -1,0 +1,215 @@
+{
+  "schemaVersion": 1,
+  "researchDate": "2026-07-21",
+  "requiredValidatorRole": "Consultant FABER",
+  "publicationPolicy": "Niciun rând nu poate deveni public înainte de validarea nominală a statusului, documentului și datei.",
+  "programs": [
+    {
+      "programId": "dr12-afir",
+      "approvalState": "pending",
+      "validatorName": "DE_VALIDAT_UMAN",
+      "approvedAt": null,
+      "proposedStatus": "consultare_publica",
+      "proposedStatusLabel": "Ghid consultativ – depunerea nu este deschisă. Condițiile se pot modifica.",
+      "proposedCopy": "Ghid consultativ – depunerea nu este deschisă. Condițiile se pot modifica. — verificat la 2026-07-21. Depunerea nu este deschisă. Sursa: AFIR, Ghidul solicitantului DR-12 – versiunea consultativă, publicat la 19.03.2026.",
+      "officialInstitution": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
+      "officialDocument": "Ghidul solicitantului DR-12 – versiunea consultativă",
+      "officialDocumentVersion": "Versiune consultativă publicată la 19.03.2026",
+      "officialDocumentDate": "2026-03-19",
+      "documentCharacter": "consultativ",
+      "officialUrl": "https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/",
+      "additionalOfficialEvidence": [
+        "https://www.afir.ro/api/file?filename=Ghidul+Solicitantului+DR+12+-+versiunea+consultativ%C4%83&filetype=pdf&url=%2Fmedia%2Flm3fg4k1%2Fghidul-solicitantului-dr-12.pdf",
+        "https://www.afir.ro/comunicare/utile/dezbatere-publica/"
+      ],
+      "applicationStart": null,
+      "applicationEnd": null,
+      "numericClaimsApproved": false,
+      "observedBefore": "Homepage: card «Activ» cu 200.000 EUR și 80%/65%; meniu: «variantă consultativă»; paginile DR12 foloseau formulări nealiniate.",
+      "unresolved": [
+        "Consultantul FABER trebuie să confirme că nu există un document final sau un anunț ulterior care schimbă statusul.",
+        "Numele validatorului și data aprobării sunt DE_VALIDAT_UMAN."
+      ],
+      "publicationHoldUrls": [
+        "/dr12-afir",
+        "/dr-12-afir-instalarea-tinerilor-fermieri"
+      ],
+      "affectedUrls": [
+        "/",
+        "/admin",
+        "/afir",
+        "/calculator-soc",
+        "/consultanta-afir",
+        "/dr-12-afir-instalarea-tinerilor-fermieri",
+        "/dr12-afir",
+        "/dr12-afir-tineri-fermieri",
+        "/dr14",
+        "/dr14-afir-ferme-mici",
+        "/fonduri-europene",
+        "/fonduri-europene-agricultura",
+        "/fonduri-europene-caen/0111-culturi-cereale",
+        "/fonduri-europene-nerambursabile-2026",
+        "/fonduri-europene-nord-est",
+        "/fonduri-pentru-ferme",
+        "/fonduri-pentru-utilaje-agricole",
+        "/gal-afir",
+        "/ghiduri",
+        "/intrebari/ce-documente-sunt-necesare-pentru-dr12",
+        "/resurse",
+        "/resurse-utile",
+        "/studii-de-caz-fonduri-europene",
+        "/verificare-eligibilitate-fonduri-europene",
+        "/webinarii"
+      ]
+    },
+    {
+      "programId": "dr14-afir",
+      "approvalState": "pending",
+      "validatorName": "DE_VALIDAT_UMAN",
+      "approvedAt": null,
+      "proposedStatus": "consultare_publica",
+      "proposedStatusLabel": "Ghid consultativ – depunerea nu este deschisă. Condițiile se pot modifica.",
+      "proposedCopy": "Ghid consultativ – depunerea nu este deschisă. Condițiile se pot modifica. — verificat la 2026-07-21. Depunerea nu este deschisă. Sursa: AFIR, Ghidul solicitantului DR-14 – VARIANTA CONSULTATIVĂ, Sesiunea 2026; data documentului DE_VALIDAT_UMAN.",
+      "officialInstitution": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
+      "officialDocument": "Ghidul solicitantului DR-14 – VARIANTA CONSULTATIVĂ",
+      "officialDocumentVersion": "Sesiunea 2026",
+      "officialDocumentDate": "DE_VALIDAT_UMAN",
+      "documentCharacter": "consultativ",
+      "officialUrl": "https://www.afir.ro/api/file?filename=Ghidul+Solicitantului+DR-14+VARIANTA+CONSULTATIV%C4%82&filetype=pdf&url=%2Fmedia%2Fbkmpo5fo%2Fgs-consultativ-dr-14.pdf",
+      "additionalOfficialEvidence": [
+        "https://www.afir.ro/comunicare/utile/dezbatere-publica/"
+      ],
+      "applicationStart": null,
+      "applicationEnd": null,
+      "numericClaimsApproved": false,
+      "observedBefore": "Homepage: card «Activ» cu 50.000 EUR și 85%; meniu și pagină: variantă consultativă.",
+      "unresolved": [
+        "Data exactă a documentului și existența unei forme finale ulterioare sunt DE_VALIDAT_UMAN.",
+        "Valorile de 50.000 EUR și 85% rămân nepublicate până la confirmarea aceleiași versiuni oficiale.",
+        "Numele validatorului și data aprobării sunt DE_VALIDAT_UMAN."
+      ],
+      "publicationHoldUrls": [
+        "/dr14",
+        "/dr-14-afir-conditii-eligibilitate-greseli-frecvente"
+      ],
+      "affectedUrls": [
+        "/",
+        "/afir",
+        "/calculator-soc",
+        "/consultanta-afir",
+        "/dr-14-afir-conditii-eligibilitate-greseli-frecvente",
+        "/dr14",
+        "/dr14-afir-ferme-mici",
+        "/fonduri-europene",
+        "/fonduri-europene-agricultura",
+        "/fonduri-europene-caen/0111-culturi-cereale",
+        "/fonduri-europene-nord-est",
+        "/fonduri-pentru-ferme",
+        "/fonduri-pentru-utilaje-agricole",
+        "/gal-afir",
+        "/ghiduri",
+        "/intrebari/ce-documente-sunt-necesare-pentru-dr12",
+        "/resurse-utile",
+        "/studii-de-caz-fonduri-europene"
+      ]
+    },
+    {
+      "programId": "pro-infra",
+      "approvalState": "pending",
+      "validatorName": "DE_VALIDAT_UMAN",
+      "approvedAt": null,
+      "proposedStatus": "ghid_aprobat_nedeschis",
+      "proposedStatusLabel": "Schemă aprobată – depunerea nu este deschisă",
+      "proposedCopy": "Schemă aprobată – depunerea nu este deschisă — verificat la 2026-07-21. Depunerea nu este deschisă. Sursa: Ministerul Transporturilor și Infrastructurii, Schema PRO INFRA – formă consolidată la 12.02.2026.",
+      "officialInstitution": "Ministerul Transporturilor și Infrastructurii",
+      "officialDocument": "Schema de ajutor de stat privind sprijinirea investițiilor destinate îmbunătățirii eficienței energetice a activităților industriale — PRO INFRA",
+      "officialDocumentVersion": "Formă consolidată la 12.02.2026; Ordinul nr. 2.292/29.12.2025, modificat prin Ordinul nr. 101/12.02.2026",
+      "officialDocumentDate": "2026-02-12",
+      "documentCharacter": "schema_aprobata",
+      "officialUrl": "https://legislatie.just.ro/Public/DetaliiDocumentAfis/306916",
+      "additionalOfficialEvidence": [],
+      "applicationStart": null,
+      "applicationEnd": null,
+      "numericClaimsApproved": false,
+      "observedBefore": "Homepage: card «Activ» cu 15.000.000 EUR și 100%, în timp ce meniul spunea schemă aprobată și pagina nu confirma un apel deschis.",
+      "unresolved": [
+        "Taxonomia existentă nu are o valoare separată pentru «schemă aprobată»; ghid_aprobat_nedeschis este doar candidatul tehnic cel mai apropiat și necesită decizie umană.",
+        "Nu a fost identificat în sursa oficială verificată un interval efectiv de depunere.",
+        "Plafonul și intensitatea rămân nepublicate până la confirmarea documentului operațional aplicabil apelului.",
+        "Numele validatorului și data aprobării sunt DE_VALIDAT_UMAN."
+      ],
+      "publicationHoldUrls": [
+        "/pro-infra"
+      ],
+      "affectedUrls": [
+        "/",
+        "/fonduri-europene",
+        "/fonduri-europene-nerambursabile-2026",
+        "/pro-infra"
+      ]
+    },
+    {
+      "programId": "digitalizare-imm",
+      "approvalState": "pending",
+      "validatorName": "DE_VALIDAT_UMAN",
+      "approvedAt": null,
+      "proposedStatus": "apel_inchis",
+      "proposedStatusLabel": "Apel închis – depunerea nu este deschisă",
+      "proposedCopy": "Apel închis — verificat la 2026-07-21. Depunerea nu este deschisă. Sursa: MIPE, apelul PNRR Digitalizarea IMM-urilor, depunere 15.02.2023–30.06.2023; versiunea oficială curentă DE_VALIDAT_UMAN.",
+      "officialInstitution": "Ministerul Investițiilor și Proiectelor Europene",
+      "officialDocument": "Apelul de proiecte PNRR Digitalizarea IMM-urilor",
+      "officialDocumentVersion": "Interval efectiv de depunere comunicat oficial; versiunea curentă a ghidului DE_VALIDAT_UMAN",
+      "officialDocumentDate": "DE_VALIDAT_UMAN",
+      "documentCharacter": "apel_inchis_candidat",
+      "officialUrl": "https://diaspora.gov.ro/povesti/364-pnrr-mipe-a-dat-startul-apelului-de-proiecte-de-350-de-milioane-de-euro-pentru-digitalizarea-imm-urilor",
+      "additionalOfficialEvidence": [
+        "https://diaspora.gov.ro/info/stiri-din-romania/316-a",
+        "https://mfinante.gov.ro/static/10/Mfp/transparenta/proiectbuget2025/Ministerul_Investitiilor_Proiectelor_Europene.pdf"
+      ],
+      "applicationStart": "2023-02-15",
+      "applicationEnd": "2023-06-30",
+      "numericClaimsApproved": false,
+      "observedBefore": "Homepage: card «Activ» cu 100.000 EUR și 90%; registrul/hubul folosea «calendar estimativ», iar apelul PNRR citat avea depunerea încheiată la 30.06.2023.",
+      "unresolved": [
+        "Consultantul FABER trebuie să confirme versiunea oficială curentă a ghidului și delimitarea dintre apelul PNRR închis și pagina-hub Digitalizare IMM.",
+        "Valorile de pe homepage și paginile de program rămân nepublicate până la legarea lor de aceeași versiune oficială.",
+        "Numele validatorului și data aprobării sunt DE_VALIDAT_UMAN."
+      ],
+      "publicationHoldUrls": [
+        "/digitalizare-imm",
+        "/granturi-digitalizare-imm"
+      ],
+      "affectedUrls": [
+        "/",
+        "/blog",
+        "/cheltuieli-eligibile-pocidif-21",
+        "/consultant-fonduri-europene-imm",
+        "/consultanta-fonduri-europene-bucuresti",
+        "/consultanta-pnrr-digitalizare",
+        "/contact",
+        "/digitalizare-imm",
+        "/digitalizare-imm-pnrr",
+        "/dr-12-afir-instalarea-tinerilor-fermieri",
+        "/fonduri-europene",
+        "/fonduri-europene-bucuresti",
+        "/fonduri-europene-caen/4321-instalatii-electrice",
+        "/fonduri-europene-caen/6201-dezvoltare-software",
+        "/fonduri-europene-digitalizare",
+        "/fonduri-europene-nerambursabile-2026",
+        "/fonduri-europene-nord-est",
+        "/ghiduri",
+        "/granturi-digitalizare-imm",
+        "/idei-afaceri-fonduri-europene",
+        "/instrumente",
+        "/intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm",
+        "/intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene",
+        "/pnrr-digitalizare-imm-cheltuieli-eligibile",
+        "/pocidif-21",
+        "/resurse",
+        "/studii-de-caz-fonduri-europene",
+        "/verificare-eligibilitate-fonduri-europene",
+        "/webinarii"
+      ]
+    }
+  ]
+}

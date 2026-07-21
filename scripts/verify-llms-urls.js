@@ -3,6 +3,7 @@
 
 const fs = require("fs");
 const path = require("path");
+const { sitemapUrls } = require("../tools/sitemap-utils");
 
 const ROOT = path.resolve(__dirname, "..");
 const SITE = "https://atelierdeconsultanta.ro";
@@ -41,7 +42,7 @@ function redirectSources() {
 function main() {
   const errors = [];
   const llms = fs.readFileSync(path.join(ROOT, "llms.txt"), "utf8");
-  const sitemap = new Set([...fs.readFileSync(path.join(ROOT, "sitemap.xml"), "utf8").matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1].trim()));
+  const sitemap = new Set(sitemapUrls(ROOT));
   const redirects = redirectSources();
   const lines = llms.split(/\r?\n/);
   const urls = [];

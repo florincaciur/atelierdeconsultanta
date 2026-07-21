@@ -21,6 +21,18 @@ await expectRedirect(
   "https://atelierdeconsultanta.ro/?s=%7Bsearch_term_string%7D",
   "https://atelierdeconsultanta.ro/"
 );
+await expectRedirect(
+  "https://www.atelierdeconsultanta.ro/dr12-afir?utm_source=test",
+  "https://atelierdeconsultanta.ro/dr12-afir?utm_source=test"
+);
+await expectRedirect(
+  "http://www.atelierdeconsultanta.ro/dr12-afir",
+  "https://atelierdeconsultanta.ro/dr12-afir"
+);
+await expectRedirect(
+  "https://www.atelierdeconsultanta.ro/?s=%7Bsearch_term_string%7D",
+  "https://atelierdeconsultanta.ro/"
+);
 
 let originRequest;
 const originResponse = await handleRequest(

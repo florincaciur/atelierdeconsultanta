@@ -1,0 +1,985 @@
+{
+  "schemaVersion": 1,
+  "policy": {
+    "openCallReviewDays": 30,
+    "programReviewDays": 60,
+    "evergreenReviewDays": 90,
+    "humanReviewToken": "DE_VALIDAT_UMAN"
+  },
+  "records": [
+    {
+      "id": "acte-necesare-fonduri-europene-nerambursabile",
+      "route": "/acte-necesare-fonduri-europene-nerambursabile",
+      "contentType": "guide",
+      "programId": null,
+      "governanceState": "pending_validation",
+      "author": "FABER – Atelier de Consultanță",
+      "authorRole": "Autor organizațional",
+      "reviewer": "Echipa editorială FABER",
+      "reviewerRole": "Revizuire editorială și conformitate",
+      "attributionType": "organization",
+      "personalNameConsent": false,
+      "verifiedAt": "2026-05-20",
+      "officialSourceName": "MIPE",
+      "officialSourceUrl": "https://mfe.gov.ro/",
+      "sourceVersion": "Fonduri europene nerambursabile",
+      "nextReviewAt": "2026-08-18",
+      "lastMeaningfulUpdate": "DE_VALIDAT_UMAN",
+      "statusSnapshot": null,
+      "changelog": [
+        {
+          "date": "2026-07-21",
+          "summary": "Înregistrare migrată; ultima modificare editorială substanțială necesită confirmare umană.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": false
+        }
+      ]
+    },
+    {
+      "id": "afir-autoconsum-agroalimentar",
+      "route": "/afir-autoconsum-agroalimentar",
+      "contentType": "program",
+      "programId": "afir-energie-autoconsum",
+      "governanceState": "public",
+      "author": "FABER – Atelier de Consultanță",
+      "authorRole": "Autor organizațional",
+      "reviewer": "Echipa editorială FABER",
+      "reviewerRole": "Revizuire editorială și conformitate",
+      "attributionType": "organization",
+      "personalNameConsent": false,
+      "verifiedAt": "2026-07-20",
+      "officialSourceName": "Ministerul Agriculturii și Dezvoltării Rurale / AFIR",
+      "officialSourceUrl": "https://www.afir.ro/media/hkfp4w0v/ghidul-solicitantului-schem%C4%83-energie-autoconsum-v7-iunie-2026.pdf",
+      "sourceVersion": "Ghidul Solicitantului Schema Energie Autoconsum V7 – iunie 2026",
+      "nextReviewAt": "2026-08-19",
+      "lastMeaningfulUpdate": "2026-07-20",
+      "statusSnapshot": "apel_deschis",
+      "changelog": [
+        {
+          "date": "2026-07-20",
+          "summary": "Snapshot factual substanțial preluat din registrul unic al programului; istoricul anterior migrării nu a fost rescris.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": true
+        },
+        {
+          "date": "2026-07-21",
+          "summary": "Migrare tehnică în registrul de guvernanță; data modificării editoriale substanțiale a rămas neschimbată.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": false
+        }
+      ]
+    },
+    {
+      "id": "apeluri-gal",
+      "route": "/apeluri-gal",
+      "contentType": "program",
+      "programId": "apeluri-gal",
+      "governanceState": "public",
+      "author": "FABER – Atelier de Consultanță",
+      "authorRole": "Autor organizațional",
+      "reviewer": "Echipa editorială FABER",
+      "reviewerRole": "Revizuire editorială și conformitate",
+      "attributionType": "organization",
+      "personalNameConsent": false,
+      "verifiedAt": "2026-05-26",
+      "officialSourceName": "AFIR și Grupurile de Acțiune Locală",
+      "officialSourceUrl": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-36/",
+      "sourceVersion": "DR-36 LEADER și ghidurile locale ale GAL-urilor",
+      "nextReviewAt": "2026-07-25",
+      "lastMeaningfulUpdate": "2026-05-26",
+      "statusSnapshot": "calendar_estimativ",
+      "changelog": [
+        {
+          "date": "2026-05-26",
+          "summary": "Snapshot factual substanțial preluat din registrul unic al programului; istoricul anterior migrării nu a fost rescris.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": true
+        },
+        {
+          "date": "2026-07-21",
+          "summary": "Migrare tehnică în registrul de guvernanță; data modificării editoriale substanțiale a rămas neschimbată.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": false
+        }
+      ]
+    },
+    {
+      "id": "autoconsum-public-fotovoltaice-institutii-publice",
+      "route": "/autoconsum-public-fotovoltaice-institutii-publice",
+      "contentType": "program",
+      "programId": "autoconsum-institutii-publice",
+      "governanceState": "public",
+      "author": "FABER – Atelier de Consultanță",
+      "authorRole": "Autor organizațional",
+      "reviewer": "Echipa editorială FABER",
+      "reviewerRole": "Revizuire editorială și conformitate",
+      "attributionType": "organization",
+      "personalNameConsent": false,
+      "verifiedAt": "2026-05-20",
+      "officialSourceName": "Guvernul României / autoritatea finanțatoare competentă",
+      "officialSourceUrl": "https://legislatie.just.ro/public/DetaliiDocument/276306",
+      "sourceVersion": "Actul normativ privind autoconsumul pentru entități publice",
+      "nextReviewAt": "2026-07-19",
+      "lastMeaningfulUpdate": "2026-05-20",
+      "statusSnapshot": "ghid_aprobat_nedeschis",
+      "changelog": [
+        {
+          "date": "2026-05-20",
+          "summary": "Snapshot factual substanțial preluat din registrul unic al programului; istoricul anterior migrării nu a fost rescris.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": true
+        },
+        {
+          "date": "2026-07-21",
+          "summary": "Migrare tehnică în registrul de guvernanță; data modificării editoriale substanțiale a rămas neschimbată.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": false
+        }
+      ]
+    },
+    {
+      "id": "calculator-soc",
+      "route": "/calculator-soc",
+      "contentType": "tool",
+      "programId": null,
+      "governanceState": "pending_validation",
+      "author": "FABER – Atelier de Consultanță",
+      "authorRole": "Autor organizațional",
+      "reviewer": "Echipa editorială FABER",
+      "reviewerRole": "Revizuire editorială și conformitate",
+      "attributionType": "organization",
+      "personalNameConsent": false,
+      "verifiedAt": "DE_VALIDAT_UMAN",
+      "officialSourceName": "DE_VALIDAT_UMAN",
+      "officialSourceUrl": "DE_VALIDAT_UMAN",
+      "sourceVersion": "DE_VALIDAT_UMAN",
+      "nextReviewAt": "DE_VALIDAT_UMAN",
+      "lastMeaningfulUpdate": "DE_VALIDAT_UMAN",
+      "statusSnapshot": null,
+      "changelog": [
+        {
+          "date": "2026-07-21",
+          "summary": "Înregistrare migrată; ultima modificare editorială substanțială necesită confirmare umană.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": false
+        }
+      ]
+    },
+    {
+      "id": "cod-caen-start-up-nation-2026",
+      "route": "/cod-caen-start-up-nation-2026",
+      "contentType": "guide",
+      "programId": null,
+      "governanceState": "pending_validation",
+      "author": "FABER – Atelier de Consultanță",
+      "authorRole": "Autor organizațional",
+      "reviewer": "Echipa editorială FABER",
+      "reviewerRole": "Revizuire editorială și conformitate",
+      "attributionType": "organization",
+      "personalNameConsent": false,
+      "verifiedAt": "2026-05-20",
+      "officialSourceName": "Ministerul Economiei",
+      "officialSourceUrl": "https://economie.gov.ro/participa-la-definitivarea-procedurii-de-implementare-a-programului-de-succes-start-up-nation-editia-2024/",
+      "sourceVersion": "Procedura ediției 2024 publicată de Ministerul Economiei",
+      "nextReviewAt": "2026-08-18",
+      "lastMeaningfulUpdate": "DE_VALIDAT_UMAN",
+      "statusSnapshot": null,
+      "changelog": [
+        {
+          "date": "2026-07-21",
+          "summary": "Înregistrare migrată; ultima modificare editorială substanțială necesită confirmare umană.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": false
+        }
+      ]
+    },
+    {
+      "id": "digitalizare-imm",
+      "route": "/digitalizare-imm",
+      "contentType": "program",
+      "programId": "digitalizare-imm",
+      "governanceState": "pending_validation",
+      "author": "FABER – Atelier de Consultanță",
+      "authorRole": "Autor organizațional",
+      "reviewer": "Echipa editorială FABER",
+      "reviewerRole": "Revizuire editorială și conformitate",
+      "attributionType": "organization",
+      "personalNameConsent": false,
+      "verifiedAt": "DE_VALIDAT_UMAN",
+      "officialSourceName": "Ministerul Investițiilor și Proiectelor Europene",
+      "officialSourceUrl": "DE_VALIDAT_UMAN",
+      "sourceVersion": "DE_VALIDAT_UMAN",
+      "nextReviewAt": "DE_VALIDAT_UMAN",
+      "lastMeaningfulUpdate": "DE_VALIDAT_UMAN",
+      "statusSnapshot": "apel_inchis",
+      "changelog": [
+        {
+          "date": "2026-07-21",
+          "summary": "Migrare tehnică în registrul de guvernanță; data modificării editoriale substanțiale a rămas neschimbată.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": false
+        }
+      ]
+    },
+    {
+      "id": "dr12-afir",
+      "route": "/dr12-afir",
+      "contentType": "program",
+      "programId": "dr12-afir",
+      "governanceState": "pending_validation",
+      "author": "FABER – Atelier de Consultanță",
+      "authorRole": "Autor organizațional",
+      "reviewer": "Echipa editorială FABER",
+      "reviewerRole": "Revizuire editorială și conformitate",
+      "attributionType": "organization",
+      "personalNameConsent": false,
+      "verifiedAt": "DE_VALIDAT_UMAN",
+      "officialSourceName": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
+      "officialSourceUrl": "DE_VALIDAT_UMAN",
+      "sourceVersion": "DE_VALIDAT_UMAN",
+      "nextReviewAt": "DE_VALIDAT_UMAN",
+      "lastMeaningfulUpdate": "DE_VALIDAT_UMAN",
+      "statusSnapshot": "consultare_publica",
+      "changelog": [
+        {
+          "date": "2026-07-21",
+          "summary": "Migrare tehnică în registrul de guvernanță; data modificării editoriale substanțiale a rămas neschimbată.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": false
+        }
+      ]
+    },
+    {
+      "id": "dr14",
+      "route": "/dr14",
+      "contentType": "program",
+      "programId": "dr14-afir",
+      "governanceState": "pending_validation",
+      "author": "FABER – Atelier de Consultanță",
+      "authorRole": "Autor organizațional",
+      "reviewer": "Echipa editorială FABER",
+      "reviewerRole": "Revizuire editorială și conformitate",
+      "attributionType": "organization",
+      "personalNameConsent": false,
+      "verifiedAt": "DE_VALIDAT_UMAN",
+      "officialSourceName": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
+      "officialSourceUrl": "DE_VALIDAT_UMAN",
+      "sourceVersion": "DE_VALIDAT_UMAN",
+      "nextReviewAt": "DE_VALIDAT_UMAN",
+      "lastMeaningfulUpdate": "DE_VALIDAT_UMAN",
+      "statusSnapshot": "consultare_publica",
+      "changelog": [
+        {
+          "date": "2026-07-21",
+          "summary": "Migrare tehnică în registrul de guvernanță; data modificării editoriale substanțiale a rămas neschimbată.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": false
+        }
+      ]
+    },
+    {
+      "id": "dr14-afir-ferme-mici",
+      "route": "/dr14-afir-ferme-mici",
+      "contentType": "program",
+      "programId": null,
+      "governanceState": "pending_validation",
+      "author": "FABER – Atelier de Consultanță",
+      "authorRole": "Autor organizațional",
+      "reviewer": "Echipa editorială FABER",
+      "reviewerRole": "Revizuire editorială și conformitate",
+      "attributionType": "organization",
+      "personalNameConsent": false,
+      "verifiedAt": "DE_VALIDAT_UMAN",
+      "officialSourceName": "DE_VALIDAT_UMAN",
+      "officialSourceUrl": "DE_VALIDAT_UMAN",
+      "sourceVersion": "DE_VALIDAT_UMAN",
+      "nextReviewAt": "DE_VALIDAT_UMAN",
+      "lastMeaningfulUpdate": "DE_VALIDAT_UMAN",
+      "statusSnapshot": null,
+      "changelog": [
+        {
+          "date": "2026-07-21",
+          "summary": "Înregistrare migrată; ultima modificare editorială substanțială necesită confirmare umană.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": false
+        }
+      ]
+    },
+    {
+      "id": "e-move",
+      "route": "/e-move",
+      "contentType": "program",
+      "programId": "e-move-ro",
+      "governanceState": "public",
+      "author": "FABER – Atelier de Consultanță",
+      "authorRole": "Autor organizațional",
+      "reviewer": "Echipa editorială FABER",
+      "reviewerRole": "Revizuire editorială și conformitate",
+      "attributionType": "organization",
+      "personalNameConsent": false,
+      "verifiedAt": "2026-05-27",
+      "officialSourceName": "Ministerul Transporturilor și Infrastructurii",
+      "officialSourceUrl": "https://fonduri.mt.ro/transparenta/consultare-publica/fondul-pentru-modernizare/comunicat-fm-consultare-publica-ghidul-solicitantului-promovarea-infrastructurii-pentru-o-mobilitate-cu-emisii-zero-in-sprijinul-intreprinderilor-si-comunitatilor-e-move-ro",
+      "sourceVersion": "Ghidul solicitantului e-MOVE RO – variantă consultativă",
+      "nextReviewAt": "2026-07-26",
+      "lastMeaningfulUpdate": "2026-05-27",
+      "statusSnapshot": "consultare_publica",
+      "changelog": [
+        {
+          "date": "2026-05-27",
+          "summary": "Snapshot factual substanțial preluat din registrul unic al programului; istoricul anterior migrării nu a fost rescris.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": true
+        },
+        {
+          "date": "2026-07-21",
+          "summary": "Migrare tehnică în registrul de guvernanță; data modificării editoriale substanțiale a rămas neschimbată.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": false
+        }
+      ]
+    },
+    {
+      "id": "femeia-antreprenor-2026",
+      "route": "/femeia-antreprenor-2026",
+      "contentType": "program",
+      "programId": "femeia-antreprenor",
+      "governanceState": "public",
+      "author": "FABER – Atelier de Consultanță",
+      "authorRole": "Autor organizațional",
+      "reviewer": "Echipa editorială FABER",
+      "reviewerRole": "Revizuire editorială și conformitate",
+      "attributionType": "organization",
+      "personalNameConsent": false,
+      "verifiedAt": "2026-05-20",
+      "officialSourceName": "Ministerul Economiei",
+      "officialSourceUrl": "https://economie.gov.ro/pe-data-de-30-iulie-se-da-startul-inscrierilor-in-cadrul-programului-femeia-antreprenor/",
+      "sourceVersion": "Comunicatul oficial privind ediția publicată a programului Femeia Antreprenor",
+      "nextReviewAt": "2026-07-19",
+      "lastMeaningfulUpdate": "2026-05-20",
+      "statusSnapshot": "calendar_estimativ",
+      "changelog": [
+        {
+          "date": "2026-05-20",
+          "summary": "Snapshot factual substanțial preluat din registrul unic al programului; istoricul anterior migrării nu a fost rescris.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": true
+        },
+        {
+          "date": "2026-07-21",
+          "summary": "Migrare tehnică în registrul de guvernanță; data modificării editoriale substanțiale a rămas neschimbată.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": false
+        }
+      ]
+    },
+    {
+      "id": "fondul-de-modernizare",
+      "route": "/fondul-de-modernizare",
+      "contentType": "program",
+      "programId": "fondul-de-modernizare",
+      "governanceState": "pending_validation",
+      "author": "FABER – Atelier de Consultanță",
+      "authorRole": "Autor organizațional",
+      "reviewer": "Echipa editorială FABER",
+      "reviewerRole": "Revizuire editorială și conformitate",
+      "attributionType": "organization",
+      "personalNameConsent": false,
+      "verifiedAt": "DE_VALIDAT_UMAN",
+      "officialSourceName": "DE_VALIDAT_UMAN",
+      "officialSourceUrl": "DE_VALIDAT_UMAN",
+      "sourceVersion": "DE_VALIDAT_UMAN",
+      "nextReviewAt": "DE_VALIDAT_UMAN",
+      "lastMeaningfulUpdate": "DE_VALIDAT_UMAN",
+      "statusSnapshot": "calendar_estimativ",
+      "changelog": [
+        {
+          "date": "2026-07-21",
+          "summary": "Migrare tehnică în registrul de guvernanță; data modificării editoriale substanțiale a rămas neschimbată.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": false
+        }
+      ]
+    },
+    {
+      "id": "fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum",
+      "route": "/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum",
+      "contentType": "program",
+      "programId": "fondul-modernizare-autoconsum",
+      "governanceState": "public",
+      "author": "FABER – Atelier de Consultanță",
+      "authorRole": "Autor organizațional",
+      "reviewer": "Echipa editorială FABER",
+      "reviewerRole": "Revizuire editorială și conformitate",
+      "attributionType": "organization",
+      "personalNameConsent": false,
+      "verifiedAt": "2026-05-20",
+      "officialSourceName": "Ministerul Energiei",
+      "officialSourceUrl": "https://energie.gov.ro/category/fondul-pentru-modernizare/",
+      "sourceVersion": "Pagina oficială a Fondului pentru Modernizare",
+      "nextReviewAt": "2026-07-19",
+      "lastMeaningfulUpdate": "2026-05-20",
+      "statusSnapshot": "calendar_estimativ",
+      "changelog": [
+        {
+          "date": "2026-05-20",
+          "summary": "Snapshot factual substanțial preluat din registrul unic al programului; istoricul anterior migrării nu a fost rescris.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": true
+        },
+        {
+          "date": "2026-07-21",
+          "summary": "Migrare tehnică în registrul de guvernanță; data modificării editoriale substanțiale a rămas neschimbată.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": false
+        }
+      ]
+    },
+    {
+      "id": "fondul-modernizare-energie-regenerabila-2026",
+      "route": "/fondul-modernizare-energie-regenerabila-2026",
+      "contentType": "program",
+      "programId": "fondul-modernizare-regenerabile",
+      "governanceState": "public",
+      "author": "FABER – Atelier de Consultanță",
+      "authorRole": "Autor organizațional",
+      "reviewer": "Echipa editorială FABER",
+      "reviewerRole": "Revizuire editorială și conformitate",
+      "attributionType": "organization",
+      "personalNameConsent": false,
+      "verifiedAt": "2026-05-20",
+      "officialSourceName": "Ministerul Energiei",
+      "officialSourceUrl": "https://energie.gov.ro/category/fondul-pentru-modernizare/",
+      "sourceVersion": "Pagina oficială a Fondului pentru Modernizare",
+      "nextReviewAt": "2026-07-19",
+      "lastMeaningfulUpdate": "2026-05-20",
+      "statusSnapshot": "calendar_estimativ",
+      "changelog": [
+        {
+          "date": "2026-05-20",
+          "summary": "Snapshot factual substanțial preluat din registrul unic al programului; istoricul anterior migrării nu a fost rescris.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": true
+        },
+        {
+          "date": "2026-07-21",
+          "summary": "Migrare tehnică în registrul de guvernanță; data modificării editoriale substanțiale a rămas neschimbată.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": false
+        }
+      ]
+    },
+    {
+      "id": "fonduri-regionale",
+      "route": "/fonduri-regionale",
+      "contentType": "program",
+      "programId": "fonduri-regionale",
+      "governanceState": "public",
+      "author": "FABER – Atelier de Consultanță",
+      "authorRole": "Autor organizațional",
+      "reviewer": "Echipa editorială FABER",
+      "reviewerRole": "Revizuire editorială și conformitate",
+      "attributionType": "organization",
+      "personalNameConsent": false,
+      "verifiedAt": "2026-07-20",
+      "officialSourceName": "Autoritățile de management regionale",
+      "officialSourceUrl": "https://mfe.gov.ro/",
+      "sourceVersion": "Portalul oficial al fondurilor europene",
+      "nextReviewAt": "2026-09-18",
+      "lastMeaningfulUpdate": "2026-07-20",
+      "statusSnapshot": "calendar_estimativ",
+      "changelog": [
+        {
+          "date": "2026-07-20",
+          "summary": "Snapshot factual substanțial preluat din registrul unic al programului; istoricul anterior migrării nu a fost rescris.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": true
+        },
+        {
+          "date": "2026-07-21",
+          "summary": "Migrare tehnică în registrul de guvernanță; data modificării editoriale substanțiale a rămas neschimbată.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": false
+        }
+      ]
+    },
+    {
+      "id": "gal-afir",
+      "route": "/gal-afir",
+      "contentType": "program",
+      "programId": "gal-afir-leader",
+      "governanceState": "public",
+      "author": "FABER – Atelier de Consultanță",
+      "authorRole": "Autor organizațional",
+      "reviewer": "Echipa editorială FABER",
+      "reviewerRole": "Revizuire editorială și conformitate",
+      "attributionType": "organization",
+      "personalNameConsent": false,
+      "verifiedAt": "2026-05-26",
+      "officialSourceName": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
+      "officialSourceUrl": "https://www.afir.ro/finantare/leader/",
+      "sourceVersion": "Pagina oficială AFIR LEADER și documentele DR-36",
+      "nextReviewAt": "2026-07-25",
+      "lastMeaningfulUpdate": "2026-05-26",
+      "statusSnapshot": "ghid_aprobat_nedeschis",
+      "changelog": [
+        {
+          "date": "2026-05-26",
+          "summary": "Snapshot factual substanțial preluat din registrul unic al programului; istoricul anterior migrării nu a fost rescris.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": true
+        },
+        {
+          "date": "2026-07-21",
+          "summary": "Migrare tehnică în registrul de guvernanță; data modificării editoriale substanțiale a rămas neschimbată.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": false
+        }
+      ]
+    },
+    {
+      "id": "ghiduri",
+      "route": "/ghiduri",
+      "contentType": "guide",
+      "programId": null,
+      "governanceState": "pending_validation",
+      "author": "FABER – Atelier de Consultanță",
+      "authorRole": "Autor organizațional",
+      "reviewer": "Echipa editorială FABER",
+      "reviewerRole": "Revizuire editorială și conformitate",
+      "attributionType": "organization",
+      "personalNameConsent": false,
+      "verifiedAt": "2026-05-20",
+      "officialSourceName": "MIPE",
+      "officialSourceUrl": "https://mfe.gov.ro/",
+      "sourceVersion": "Fonduri europene nerambursabile",
+      "nextReviewAt": "2026-08-18",
+      "lastMeaningfulUpdate": "DE_VALIDAT_UMAN",
+      "statusSnapshot": null,
+      "changelog": [
+        {
+          "date": "2026-07-21",
+          "summary": "Înregistrare migrată; ultima modificare editorială substanțială necesită confirmare umană.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": false
+        }
+      ]
+    },
+    {
+      "id": "instrumente",
+      "route": "/instrumente",
+      "contentType": "tool",
+      "programId": null,
+      "governanceState": "pending_validation",
+      "author": "FABER – Atelier de Consultanță",
+      "authorRole": "Autor organizațional",
+      "reviewer": "Echipa editorială FABER",
+      "reviewerRole": "Revizuire editorială și conformitate",
+      "attributionType": "organization",
+      "personalNameConsent": false,
+      "verifiedAt": "2026-05-20",
+      "officialSourceName": "MIPE",
+      "officialSourceUrl": "https://mfe.gov.ro/",
+      "sourceVersion": "Fonduri europene nerambursabile",
+      "nextReviewAt": "2026-08-18",
+      "lastMeaningfulUpdate": "DE_VALIDAT_UMAN",
+      "statusSnapshot": null,
+      "changelog": [
+        {
+          "date": "2026-07-21",
+          "summary": "Înregistrare migrată; ultima modificare editorială substanțială necesită confirmare umană.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": false
+        }
+      ]
+    },
+    {
+      "id": "investitii-modernizarea-microintreprinderilor-apel-2",
+      "route": "/investitii-modernizarea-microintreprinderilor-apel-2",
+      "contentType": "program",
+      "programId": "modernizare-microintreprinderi-ne-2",
+      "governanceState": "public",
+      "author": "FABER – Atelier de Consultanță",
+      "authorRole": "Autor organizațional",
+      "reviewer": "Echipa editorială FABER",
+      "reviewerRole": "Revizuire editorială și conformitate",
+      "attributionType": "organization",
+      "personalNameConsent": false,
+      "verifiedAt": "2026-06-02",
+      "officialSourceName": "ADR Nord-Est",
+      "officialSourceUrl": "https://adrnordest.ro/comentariiGhid/P1Microintreprinderi/Apel2/",
+      "sourceVersion": "Ghidul solicitantului – Apel 2, variantă consultativă",
+      "nextReviewAt": "2026-08-01",
+      "lastMeaningfulUpdate": "2026-06-02",
+      "statusSnapshot": "consultare_publica",
+      "changelog": [
+        {
+          "date": "2026-06-02",
+          "summary": "Snapshot factual substanțial preluat din registrul unic al programului; istoricul anterior migrării nu a fost rescris.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": true
+        },
+        {
+          "date": "2026-07-21",
+          "summary": "Migrare tehnică în registrul de guvernanță; data modificării editoriale substanțiale a rămas neschimbată.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": false
+        }
+      ]
+    },
+    {
+      "id": "pnrr",
+      "route": "/pnrr",
+      "contentType": "program",
+      "programId": "pnrr",
+      "governanceState": "pending_validation",
+      "author": "FABER – Atelier de Consultanță",
+      "authorRole": "Autor organizațional",
+      "reviewer": "Echipa editorială FABER",
+      "reviewerRole": "Revizuire editorială și conformitate",
+      "attributionType": "organization",
+      "personalNameConsent": false,
+      "verifiedAt": "DE_VALIDAT_UMAN",
+      "officialSourceName": "DE_VALIDAT_UMAN",
+      "officialSourceUrl": "DE_VALIDAT_UMAN",
+      "sourceVersion": "DE_VALIDAT_UMAN",
+      "nextReviewAt": "DE_VALIDAT_UMAN",
+      "lastMeaningfulUpdate": "DE_VALIDAT_UMAN",
+      "statusSnapshot": "calendar_estimativ",
+      "changelog": [
+        {
+          "date": "2026-07-21",
+          "summary": "Migrare tehnică în registrul de guvernanță; data modificării editoriale substanțiale a rămas neschimbată.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": false
+        }
+      ]
+    },
+    {
+      "id": "pocidif-21",
+      "route": "/pocidif-21",
+      "contentType": "program",
+      "programId": "pocidif-21",
+      "governanceState": "public",
+      "author": "FABER – Atelier de Consultanță",
+      "authorRole": "Autor organizațional",
+      "reviewer": "Echipa editorială FABER",
+      "reviewerRole": "Revizuire editorială și conformitate",
+      "attributionType": "organization",
+      "personalNameConsent": false,
+      "verifiedAt": "2026-07-13",
+      "officialSourceName": "Ministerul Investițiilor și Proiectelor Europene",
+      "officialSourceUrl": "https://mfe.gov.ro/ghiduri_pocidif/pocidif-ghidul-solicitantului-dezvoltarea-de-noi-servicii-aplicatii-produse-prin-inovare-si-adoptarea-de-tehnologii-avansate-2/",
+      "sourceVersion": "Ghidul solicitantului PoCIDIF 2.1 aprobat prin Ordinul MIPE nr. 965/23.06.2026",
+      "nextReviewAt": "2026-09-11",
+      "lastMeaningfulUpdate": "2026-07-13",
+      "statusSnapshot": "ghid_aprobat_nedeschis",
+      "changelog": [
+        {
+          "date": "2026-07-13",
+          "summary": "Snapshot factual substanțial preluat din registrul unic al programului; istoricul anterior migrării nu a fost rescris.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": true
+        },
+        {
+          "date": "2026-07-21",
+          "summary": "Migrare tehnică în registrul de guvernanță; data modificării editoriale substanțiale a rămas neschimbată.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": false
+        }
+      ]
+    },
+    {
+      "id": "por-adr-nord-est",
+      "route": "/por-adr-nord-est",
+      "contentType": "program",
+      "programId": "program-regional-nord-est",
+      "governanceState": "public",
+      "author": "FABER – Atelier de Consultanță",
+      "authorRole": "Autor organizațional",
+      "reviewer": "Echipa editorială FABER",
+      "reviewerRole": "Revizuire editorială și conformitate",
+      "attributionType": "organization",
+      "personalNameConsent": false,
+      "verifiedAt": "2026-07-20",
+      "officialSourceName": "ADR Nord-Est",
+      "officialSourceUrl": "https://regionordest.ro/",
+      "sourceVersion": "Programul Regional Nord-Est 2021–2027",
+      "nextReviewAt": "2026-09-18",
+      "lastMeaningfulUpdate": "2026-07-20",
+      "statusSnapshot": "ghid_aprobat_nedeschis",
+      "changelog": [
+        {
+          "date": "2026-07-20",
+          "summary": "Snapshot factual substanțial preluat din registrul unic al programului; istoricul anterior migrării nu a fost rescris.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": true
+        },
+        {
+          "date": "2026-07-21",
+          "summary": "Migrare tehnică în registrul de guvernanță; data modificării editoriale substanțiale a rămas neschimbată.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": false
+        }
+      ]
+    },
+    {
+      "id": "pro-infra",
+      "route": "/pro-infra",
+      "contentType": "program",
+      "programId": "pro-infra",
+      "governanceState": "pending_validation",
+      "author": "FABER – Atelier de Consultanță",
+      "authorRole": "Autor organizațional",
+      "reviewer": "Echipa editorială FABER",
+      "reviewerRole": "Revizuire editorială și conformitate",
+      "attributionType": "organization",
+      "personalNameConsent": false,
+      "verifiedAt": "DE_VALIDAT_UMAN",
+      "officialSourceName": "Ministerul Transporturilor și Infrastructurii",
+      "officialSourceUrl": "DE_VALIDAT_UMAN",
+      "sourceVersion": "DE_VALIDAT_UMAN",
+      "nextReviewAt": "DE_VALIDAT_UMAN",
+      "lastMeaningfulUpdate": "DE_VALIDAT_UMAN",
+      "statusSnapshot": "ghid_aprobat_nedeschis",
+      "changelog": [
+        {
+          "date": "2026-07-21",
+          "summary": "Migrare tehnică în registrul de guvernanță; data modificării editoriale substanțiale a rămas neschimbată.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": false
+        }
+      ]
+    },
+    {
+      "id": "programul-tranzitie-justa",
+      "route": "/programul-tranzitie-justa",
+      "contentType": "program",
+      "programId": "programul-tranzitie-justa",
+      "governanceState": "pending_validation",
+      "author": "FABER – Atelier de Consultanță",
+      "authorRole": "Autor organizațional",
+      "reviewer": "Echipa editorială FABER",
+      "reviewerRole": "Revizuire editorială și conformitate",
+      "attributionType": "organization",
+      "personalNameConsent": false,
+      "verifiedAt": "DE_VALIDAT_UMAN",
+      "officialSourceName": "DE_VALIDAT_UMAN",
+      "officialSourceUrl": "DE_VALIDAT_UMAN",
+      "sourceVersion": "DE_VALIDAT_UMAN",
+      "nextReviewAt": "DE_VALIDAT_UMAN",
+      "lastMeaningfulUpdate": "DE_VALIDAT_UMAN",
+      "statusSnapshot": "calendar_estimativ",
+      "changelog": [
+        {
+          "date": "2026-07-21",
+          "summary": "Migrare tehnică în registrul de guvernanță; data modificării editoriale substanțiale a rămas neschimbată.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": false
+        }
+      ]
+    },
+    {
+      "id": "resurse",
+      "route": "/resurse",
+      "contentType": "guide",
+      "programId": null,
+      "governanceState": "pending_validation",
+      "author": "FABER – Atelier de Consultanță",
+      "authorRole": "Autor organizațional",
+      "reviewer": "Echipa editorială FABER",
+      "reviewerRole": "Revizuire editorială și conformitate",
+      "attributionType": "organization",
+      "personalNameConsent": false,
+      "verifiedAt": "2026-05-20",
+      "officialSourceName": "MIPE",
+      "officialSourceUrl": "https://mfe.gov.ro/",
+      "sourceVersion": "Fonduri europene nerambursabile",
+      "nextReviewAt": "2026-08-18",
+      "lastMeaningfulUpdate": "DE_VALIDAT_UMAN",
+      "statusSnapshot": null,
+      "changelog": [
+        {
+          "date": "2026-07-21",
+          "summary": "Înregistrare migrată; ultima modificare editorială substanțială necesită confirmare umană.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": false
+        }
+      ]
+    },
+    {
+      "id": "start-up-nation-2026",
+      "route": "/start-up-nation-2026",
+      "contentType": "program",
+      "programId": "start-up-nation",
+      "governanceState": "public",
+      "author": "FABER – Atelier de Consultanță",
+      "authorRole": "Autor organizațional",
+      "reviewer": "Echipa editorială FABER",
+      "reviewerRole": "Revizuire editorială și conformitate",
+      "attributionType": "organization",
+      "personalNameConsent": false,
+      "verifiedAt": "2026-05-20",
+      "officialSourceName": "Ministerul Economiei",
+      "officialSourceUrl": "https://economie.gov.ro/participa-la-definitivarea-procedurii-de-implementare-a-programului-de-succes-start-up-nation-editia-2024/",
+      "sourceVersion": "Procedura ediției 2024 publicată de Ministerul Economiei",
+      "nextReviewAt": "2026-07-19",
+      "lastMeaningfulUpdate": "2026-05-20",
+      "statusSnapshot": "calendar_estimativ",
+      "changelog": [
+        {
+          "date": "2026-05-20",
+          "summary": "Snapshot factual substanțial preluat din registrul unic al programului; istoricul anterior migrării nu a fost rescris.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": true
+        },
+        {
+          "date": "2026-07-21",
+          "summary": "Migrare tehnică în registrul de guvernanță; data modificării editoriale substanțiale a rămas neschimbată.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": false
+        }
+      ]
+    },
+    {
+      "id": "start-up-nation-2026-cheltuieli-eligibile",
+      "route": "/start-up-nation-2026-cheltuieli-eligibile",
+      "contentType": "guide",
+      "programId": null,
+      "governanceState": "pending_validation",
+      "author": "FABER – Atelier de Consultanță",
+      "authorRole": "Autor organizațional",
+      "reviewer": "Echipa editorială FABER",
+      "reviewerRole": "Revizuire editorială și conformitate",
+      "attributionType": "organization",
+      "personalNameConsent": false,
+      "verifiedAt": "2026-05-20",
+      "officialSourceName": "Ministerul Economiei",
+      "officialSourceUrl": "https://economie.gov.ro/participa-la-definitivarea-procedurii-de-implementare-a-programului-de-succes-start-up-nation-editia-2024/",
+      "sourceVersion": "Procedura ediției 2024 publicată de Ministerul Economiei",
+      "nextReviewAt": "2026-08-18",
+      "lastMeaningfulUpdate": "DE_VALIDAT_UMAN",
+      "statusSnapshot": null,
+      "changelog": [
+        {
+          "date": "2026-07-21",
+          "summary": "Înregistrare migrată; ultima modificare editorială substanțială necesită confirmare umană.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": false
+        }
+      ]
+    },
+    {
+      "id": "start-up-nation-2026-conditii",
+      "route": "/start-up-nation-2026-conditii",
+      "contentType": "guide",
+      "programId": null,
+      "governanceState": "pending_validation",
+      "author": "FABER – Atelier de Consultanță",
+      "authorRole": "Autor organizațional",
+      "reviewer": "Echipa editorială FABER",
+      "reviewerRole": "Revizuire editorială și conformitate",
+      "attributionType": "organization",
+      "personalNameConsent": false,
+      "verifiedAt": "2026-05-20",
+      "officialSourceName": "Ministerul Economiei",
+      "officialSourceUrl": "https://economie.gov.ro/participa-la-definitivarea-procedurii-de-implementare-a-programului-de-succes-start-up-nation-editia-2024/",
+      "sourceVersion": "Procedura ediției 2024 publicată de Ministerul Economiei",
+      "nextReviewAt": "2026-08-18",
+      "lastMeaningfulUpdate": "DE_VALIDAT_UMAN",
+      "statusSnapshot": null,
+      "changelog": [
+        {
+          "date": "2026-07-21",
+          "summary": "Înregistrare migrată; ultima modificare editorială substanțială necesită confirmare umană.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": false
+        }
+      ]
+    },
+    {
+      "id": "start-up-nation-2026-idei-afaceri",
+      "route": "/start-up-nation-2026-idei-afaceri",
+      "contentType": "guide",
+      "programId": null,
+      "governanceState": "pending_validation",
+      "author": "FABER – Atelier de Consultanță",
+      "authorRole": "Autor organizațional",
+      "reviewer": "Echipa editorială FABER",
+      "reviewerRole": "Revizuire editorială și conformitate",
+      "attributionType": "organization",
+      "personalNameConsent": false,
+      "verifiedAt": "2026-05-20",
+      "officialSourceName": "Ministerul Economiei",
+      "officialSourceUrl": "https://economie.gov.ro/participa-la-definitivarea-procedurii-de-implementare-a-programului-de-succes-start-up-nation-editia-2024/",
+      "sourceVersion": "Procedura ediției 2024 publicată de Ministerul Economiei",
+      "nextReviewAt": "2026-08-18",
+      "lastMeaningfulUpdate": "DE_VALIDAT_UMAN",
+      "statusSnapshot": null,
+      "changelog": [
+        {
+          "date": "2026-07-21",
+          "summary": "Înregistrare migrată; ultima modificare editorială substanțială necesită confirmare umană.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": false
+        }
+      ]
+    },
+    {
+      "id": "start-up-nation-2026-plan-de-afaceri",
+      "route": "/start-up-nation-2026-plan-de-afaceri",
+      "contentType": "guide",
+      "programId": null,
+      "governanceState": "pending_validation",
+      "author": "FABER – Atelier de Consultanță",
+      "authorRole": "Autor organizațional",
+      "reviewer": "Echipa editorială FABER",
+      "reviewerRole": "Revizuire editorială și conformitate",
+      "attributionType": "organization",
+      "personalNameConsent": false,
+      "verifiedAt": "2026-05-20",
+      "officialSourceName": "Ministerul Economiei",
+      "officialSourceUrl": "https://economie.gov.ro/participa-la-definitivarea-procedurii-de-implementare-a-programului-de-succes-start-up-nation-editia-2024/",
+      "sourceVersion": "Procedura ediției 2024 publicată de Ministerul Economiei",
+      "nextReviewAt": "2026-08-18",
+      "lastMeaningfulUpdate": "DE_VALIDAT_UMAN",
+      "statusSnapshot": null,
+      "changelog": [
+        {
+          "date": "2026-07-21",
+          "summary": "Înregistrare migrată; ultima modificare editorială substanțială necesită confirmare umană.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": false
+        }
+      ]
+    },
+    {
+      "id": "webinarii",
+      "route": "/webinarii",
+      "contentType": "guide",
+      "programId": null,
+      "governanceState": "pending_validation",
+      "author": "FABER – Atelier de Consultanță",
+      "authorRole": "Autor organizațional",
+      "reviewer": "Echipa editorială FABER",
+      "reviewerRole": "Revizuire editorială și conformitate",
+      "attributionType": "organization",
+      "personalNameConsent": false,
+      "verifiedAt": "2026-05-20",
+      "officialSourceName": "MIPE",
+      "officialSourceUrl": "https://mfe.gov.ro/",
+      "sourceVersion": "Fonduri europene nerambursabile",
+      "nextReviewAt": "2026-08-18",
+      "lastMeaningfulUpdate": "DE_VALIDAT_UMAN",
+      "statusSnapshot": null,
+      "changelog": [
+        {
+          "date": "2026-07-21",
+          "summary": "Înregistrare migrată; ultima modificare editorială substanțială necesită confirmare umană.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": false
+        }
+      ]
+    }
+  ]
+}

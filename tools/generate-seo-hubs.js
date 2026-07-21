@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const { normalizeHtmlCopy } = require("./normalize-copy-ro");
 
 const ROOT = path.resolve(__dirname, "..");
 const GLOBAL_HEADER = fs.readFileSync(path.join(ROOT, "partials", "global-header.html"), "utf8").trim();
@@ -79,7 +80,7 @@ function designProfileFor(page) {
     startup: ["Antreprenoriat | ghid | status oficial", "ph-duotone ph-rocket-launch", ["Eligibilitate", "CAEN", "Buget", "Plan afaceri"]],
     energy: ["Energie | autoconsum | avize", "ph-duotone ph-sun", ["Consum", "Avize", "Capacitate", "Buget"]],
     service: ["Serviciu FABER | proces | livrabile", "ph-duotone ph-magnifying-glass", ["Verificare", "Strategie", "Dosar", "Clarificari"]],
-    editorial: ["Ghid editorial | actualizat | surse citate", "ph-duotone ph-file-text", ["Pe scurt", "Ce verifici", "Greseli", "Pasi"]],
+    editorial: ["Ghid editorial | actualizat | surse citate", "ph-duotone ph-file-text", ["Ce trebuie să știi", "Ce verifici", "Greșeli", "Pași"]],
     trust: ["Dovada sociala | caz anonimizat | rezultat", "ph-duotone ph-bank", ["Beneficiar", "Problema", "Interventie", "Rezultat"]],
     cluster: ["FABER | resursa | actualizare", "ph-duotone ph-info", ["Program", "Solicitant", "Documente", "Riscuri"]]
   };
@@ -617,7 +618,7 @@ ${ANALYTICS_EVENTS_SCRIPT}
     <article class="panel">
       ${renderHubDesignCards(page)}
       <p class="intro">${esc(page.summary)}</p>
-      <h2>Pe scurt</h2>
+      <h2>Ce trebuie să știi</h2>
       <p>Pagina explică ce trebuie verificat înainte de pregătirea dosarului și trimite către resursele conexe deja publicate pe Atelier de Consultanță. Conținutul este informativ și nu înlocuiește ghidul oficial al programului de finanțare.</p>
       <div class="grid">
         <section class="mini-card">
@@ -657,7 +658,7 @@ const pagesToGenerate = pages.filter((page) => !REDIRECTED_PAGE_SLUGS.has(page.s
 for (const page of pagesToGenerate) {
   const dir = path.join(ROOT, page.slug);
   fs.mkdirSync(dir, { recursive: true });
-  fs.writeFileSync(path.join(dir, "index.html"), pageHtml(page), "utf8");
+  fs.writeFileSync(path.join(dir, "index.html"), normalizeHtmlCopy(pageHtml(page)), "utf8");
 }
 
 const existing = [
@@ -705,18 +706,7 @@ const sitemapUrls = [...existing, ...hubUrls].filter(([url]) => {
   return true;
 }).map(([url, priority]) => [cleanPath(url), priority]);
 
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${sitemapUrls.map(([url, priority]) => `  <url>
-    <loc>${SITE}${url}</loc>
-    <lastmod>${TODAY}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>${priority}</priority>
-  </url>`).join("\n")}
-</urlset>
-`;
-
-fs.writeFileSync(path.join(ROOT, "sitemap.xml"), sitemap, "utf8");
+require("./generate-sitemap").generate();
 
 const adminPath = path.join(ROOT, "admin", "index.html");
 if (fs.existsSync(adminPath)) {
@@ -730,4 +720,4 @@ ${sitemapUrls.map(([url, priority]) => `    ["${url}", "${priority}"]`).join(",\
   }
 }
 
-console.log(`Generated ${pages.length} SEO hub pages and sitemap.xml with ${sitemapUrls.length} URLs.`);
+console.log(`Generated ${pages.length} SEO hub pages and refreshed the governed sitemap index.`);

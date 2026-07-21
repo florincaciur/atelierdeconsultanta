@@ -4,6 +4,7 @@
 const fs = require("fs");
 const path = require("path");
 const cheerio = require("cheerio");
+const { sitemapUrls: readSitemapUrls } = require("../tools/sitemap-utils");
 
 const ROOT = path.resolve(__dirname, "..");
 const SITE = "https://atelierdeconsultanta.ro";
@@ -110,7 +111,7 @@ function traceRedirect(pathname, redirects, maxHops = 12) {
 }
 
 function sitemapUrls() {
-  return [...read("sitemap.xml").matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1].trim());
+  return readSitemapUrls(ROOT);
 }
 
 function walkHtml(directory = ROOT, files = []) {
@@ -204,6 +205,10 @@ function verifyDr12Support(sitemapSet, problems) {
   }
   const supportHtml = fs.readFileSync(supportFile, "utf8");
   const mainHtml = fs.readFileSync(mainFile, "utf8");
+  if (/\bnoindex\b/iu.test(extractRobots(supportHtml))) {
+    if (sitemapSet.has(`${SITE}${DR12_SUPPORT_ROUTE}`)) problems.push("Pending DR12 support article must stay out of sitemap while noindex");
+    return;
+  }
   const support = cheerio.load(supportHtml, { decodeEntities: false });
   const main = cheerio.load(mainHtml, { decodeEntities: false });
   const supportTitle = normalizeText(support("title").first().text());

@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "reportDate": "2026-07-21",
+  "productionBaseUrl": "https://atelierdeconsultanta.ro",
+  "stagingPolicy": "P0_STAGING_URL dacă este configurat; altfel build-ul dist servit local și raportat explicit ca staging tehnic.",
+  "blockSeverities": ["critical"],
+  "priorityPrograms": ["dr12-afir", "dr14-afir", "pro-infra", "digitalizare-imm"],
+  "priorityProgramUrls": {
+    "dr12-afir": ["/dr12-afir", "/dr-12-afir-instalarea-tinerilor-fermieri"],
+    "dr14-afir": ["/dr14", "/dr-14-afir-conditii-eligibilitate-greseli-frecvente"],
+    "pro-infra": ["/pro-infra"],
+    "digitalizare-imm": ["/digitalizare-imm", "/granturi-digitalizare-imm"]
+  },
+  "legalSurfaceUrls": [
+    "/despre-faber",
+    "/contact",
+    "/politica-de-confidentialitate",
+    "/termeni-si-conditii"
+  ],
+  "performance": {
+    "maxLcpMs": 2500,
+    "maxCls": 0.1,
+    "maxSyntheticInpMs": 200,
+    "majorLcpRegressionMs": 500,
+    "majorLcpRegressionRatio": 0.5,
+    "majorClsRegression": 0.05,
+    "routes": [
+      {"path": "/", "baselineLcpMs": 483.279, "baselineCls": 0.04291, "source": "reports/lighthouse-home.json"},
+      {"path": "/fonduri-europene", "baselineLcpMs": 364.7012, "baselineCls": 0.00001, "source": "reports/lighthouse-fonduri-europene.json"},
+      {"path": "/consultanta-fonduri-europene", "baselineLcpMs": 402.2069, "baselineCls": 0.000009, "source": "reports/lighthouse-consultanta-fonduri-europene.json"},
+      {"path": "/digitalizare-imm", "baselineLcpMs": 1203.238, "baselineCls": 0.00002, "source": "reports/lighthouse-digitalizare-imm.json"}
+    ],
+    "inpBaseline": "DE_VALIDAT_UMAN"
+  },
+  "criteria": [
+    {"id": "program_status", "label": "Statusuri programe fără contradicții și aprobate", "severity": "critical", "owner": "Consultant FABER + Content owner"},
+    {"id": "factual_sources", "label": "Afirmații numerice/status cu sursă și dată", "severity": "critical", "owner": "Consultant fonduri + Editor senior"},
+    {"id": "legal_identity", "label": "Identitate juridică și contact coerente", "severity": "critical", "owner": "Business owner + Jurist"},
+    {"id": "contact_privacy", "label": "Regulă telefon/email identică în formular și Privacy", "severity": "critical", "owner": "Jurist + Product owner"},
+    {"id": "form_flow", "label": "Formular email SAU telefon, fără pierdere de date", "severity": "critical", "owner": "Frontend + CRM owner"},
+    {"id": "analytics", "label": "Funnel fără PII și fără duplicate", "severity": "critical", "owner": "Analytics owner + Backend"},
+    {"id": "redirects", "label": "Redirecturi 301 într-un hop și target canonic", "severity": "critical", "owner": "SEO lead + Backend"},
+    {"id": "sitemap", "label": "Sitemap 200/indexabil/canonic și lastmod real", "severity": "critical", "owner": "Technical SEO"},
+    {"id": "editorial", "label": "Zero etichete de șablon și forme de control fără diacritice", "severity": "high", "owner": "Editor coordonator"},
+    {"id": "robots", "label": "OAI-SearchBot și politica GPTBot aprobată", "severity": "critical", "owner": "Business owner + Technical SEO"},
+    {"id": "accessibility", "label": "Tastatură, focus, zoom, reflow și submit mobil", "severity": "high", "owner": "Accessibility QA + Frontend"},
+    {"id": "performance", "label": "Fără regresii majore LCP, INP sau CLS", "severity": "high", "owner": "Frontend performance owner"}
+  ]
+}

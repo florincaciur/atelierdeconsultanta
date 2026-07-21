@@ -37,11 +37,6 @@
       "title": "Următorul pas util",
       "links": [
         {
-          "href": "/dr12-afir",
-          "anchor": "verifică condițiile DR12 pentru tineri fermieri",
-          "explanation": "Compară totalul SO cu beneficiarii, intensitatea și documentele din ghidul consultativ DR12."
-        },
-        {
           "href": "/dr14",
           "anchor": "verifică pragurile DR14 pentru ferme mici",
           "explanation": "Vezi cum influențează sectorul, SO majoritar și componenta analiza unei ferme mici."
@@ -55,34 +50,6 @@
           "href": "/verificare-eligibilitate-fonduri-europene",
           "anchor": "verifică documentele pentru eligibilitate",
           "explanation": "Corelează rezultatul calculatorului cu actele exploatației, investiția și ghidul aplicabil."
-        }
-      ]
-    },
-    "dr12-afir": {
-      "route": "/dr12-afir",
-      "file": "dr12-afir/index.html",
-      "replacedLinkCount": 7,
-      "title": "Continuă verificarea",
-      "links": [
-        {
-          "href": "/calculator-soc",
-          "anchor": "calculează dimensiunea economică SO",
-          "explanation": "Estimează totalul exploatației înainte de verificarea pragului și a sectorului DR12."
-        },
-        {
-          "href": "/proiectare-fonduri-europene",
-          "anchor": "pregătește proiectarea și actele tehnice DR12",
-          "explanation": "Clarifică studiul de fezabilitate, avizele și proiectarea pentru construcții, modernizări sau spații de depozitare."
-        },
-        {
-          "href": "/consultanta-afir",
-          "anchor": "pregătește traseul de consultanță AFIR",
-          "explanation": "Vezi cum sunt verificate exploatația, investiția, bugetul și documentele înainte de dosar."
-        },
-        {
-          "href": "https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/",
-          "anchor": "consultă documentația DR12 publicată de AFIR",
-          "explanation": "Confirmă în sursa instituției statutul consultativ și eventualele actualizări ale documentului."
         }
       ]
     },
@@ -133,7 +100,7 @@
         {
           "href": "/fonduri-regionale",
           "anchor": "identifică programul regional potrivit",
-          "explanation": "Compară logica programelor regionale înainte de alegerea unui apel și a documentației."
+          "explanation": "Compară logică programelor regionale înainte de alegerea unui apel și a documentației."
         },
         {
           "href": "/verificare-eligibilitate-fonduri-europene",
@@ -151,7 +118,7 @@
         {
           "href": "/femeia-antreprenor-2026-conditii-idei-afaceri",
           "anchor": "verifică condițiile și ideile de afaceri pentru 2026",
-          "explanation": "Separă informațiile confirmate de elementele care așteaptă procedura finală a ediției."
+          "explanation": "Separă informațiile confirmate de elementele care așteaptă procedură finală a ediției."
         },
         {
           "href": "/verificare-eligibilitate-fonduri-europene",
@@ -228,11 +195,6 @@
       "replacedLinkCount": 7,
       "title": "Continuă pregătirea investiției agricole",
       "links": [
-        {
-          "href": "/dr12-afir",
-          "anchor": "verifică DR12 pentru tineri fermieri",
-          "explanation": "Compară exploatația, pragul SO, vârsta solicitantului și statutul consultativ al intervenției."
-        },
         {
           "href": "/dr14",
           "anchor": "verifică DR14 pentru ferme mici",
@@ -369,11 +331,6 @@
       "title": "Continuă pregătirea dosarului AFIR",
       "links": [
         {
-          "href": "/dr12-afir",
-          "anchor": "verifică lansarea și actele DR12",
-          "explanation": "Controlează pragul SO, categoria solicitantului, documentele fermei și statutul consultativ."
-        },
-        {
           "href": "/dr14",
           "anchor": "verifică SO-ul și componenta DR14",
           "explanation": "Corelează dimensiunea economică, sectorul, investiția și cofinanțarea fermei mici."
@@ -400,11 +357,6 @@
           "href": "/afir-autoconsum-agroalimentar",
           "anchor": "verifică sesiunea AFIR pentru autoconsum",
           "explanation": "Compară beneficiarul, consumul, stocarea și amplasamentul cu regulile Ghidului V7."
-        },
-        {
-          "href": "/fondul-de-modernizare",
-          "anchor": "compară apelurile Fondului pentru Modernizare",
-          "explanation": "Separă schema AFIR de celelalte trasee energetice după beneficiar și obiectiv."
         },
         {
           "href": "/consultanta-fonduri-europene",

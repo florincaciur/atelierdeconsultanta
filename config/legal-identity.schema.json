@@ -1,0 +1,133 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://atelierdeconsultanta.ro/schemas/legal-identity.schema.json",
+  "title": "Fișa canonică de identitate juridică și NAP FABER",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "humanReviewToken",
+    "approvalState",
+    "publicationState",
+    "notLegalOpinion",
+    "approvals",
+    "fields"
+  ],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "humanReviewToken": { "const": "DE_VALIDAT_UMAN" },
+    "approvalState": { "enum": ["pending", "approved", "revoked"] },
+    "publicationState": { "enum": ["blocked", "approved"] },
+    "notLegalOpinion": { "const": true },
+    "approvals": {
+      "type": "object",
+      "required": ["businessDecision", "legalReview", "operationalEmailOwnerConfirmation"],
+      "properties": {
+        "businessDecision": { "$ref": "#/$defs/approval" },
+        "legalReview": {
+          "allOf": [
+            { "$ref": "#/$defs/approval" },
+            {
+              "type": "object",
+              "required": ["scope"],
+              "properties": { "scope": { "type": "string" } }
+            }
+          ]
+        },
+        "operationalEmailOwnerConfirmation": { "$ref": "#/$defs/approval" }
+      },
+      "additionalProperties": false
+    },
+    "fields": {
+      "type": "object",
+      "required": [
+        "brandName",
+        "websiteUrl",
+        "legalName",
+        "legalForm",
+        "taxIdentifier",
+        "tradeRegisterNumber",
+        "registeredOffice",
+        "publicWorkplaceAddress",
+        "personalDataController",
+        "contractingEntity",
+        "invoicingEntity",
+        "publicPhone",
+        "publicEmail",
+        "officialProfileUrls",
+        "contactHours",
+        "serviceArea"
+      ],
+      "additionalProperties": { "$ref": "#/$defs/field" }
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "dateOrPending": {
+      "oneOf": [
+        { "type": "string", "format": "date" },
+        { "const": "DE_VALIDAT_UMAN" }
+      ]
+    },
+    "approval": {
+      "type": "object",
+      "required": ["state", "approvedBy", "approvedAt", "internalSource"],
+      "properties": {
+        "state": { "enum": ["pending", "approved", "revoked", "not_applicable"] },
+        "approvedBy": { "type": "string" },
+        "approvedAt": { "$ref": "#/$defs/dateOrPending" },
+        "internalSource": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "field": {
+      "type": "object",
+      "required": [
+        "label",
+        "status",
+        "approvedValue",
+        "candidateValues",
+        "internalSource",
+        "approvedBy",
+        "approvedAt",
+        "surfaces",
+        "notes"
+      ],
+      "properties": {
+        "label": { "type": "string", "minLength": 2 },
+        "status": { "enum": ["pending", "approved", "revoked", "not_applicable"] },
+        "approvedValue": {
+          "oneOf": [
+            { "type": "string" },
+            { "type": "array", "items": { "type": "string" }, "uniqueItems": true }
+          ]
+        },
+        "candidateValues": { "type": "array", "items": { "type": "string" }, "uniqueItems": true },
+        "internalSource": { "type": "string" },
+        "approvedBy": { "type": "string" },
+        "approvedAt": { "$ref": "#/$defs/dateOrPending" },
+        "surfaces": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "footer",
+              "contact",
+              "about",
+              "terms",
+              "privacy",
+              "automated_emails",
+              "contracts_invoices",
+              "jsonld_organization",
+              "jsonld_professional_service",
+              "google_business_profile",
+              "bing_places"
+            ]
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "notes": { "type": "string" }
+      },
+      "additionalProperties": false
+    }
+  }
+}

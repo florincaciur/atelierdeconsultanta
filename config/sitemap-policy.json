@@ -1,0 +1,46 @@
+{
+  "version": "1.0.0",
+  "site": "https://atelierdeconsultanta.ro",
+  "indexFile": "sitemap.xml",
+  "reportedAuditUrlCount": 102,
+  "repositoryBaselineUrlCount": 92,
+  "suspiciousSharedLastmodThreshold": 20,
+  "families": [
+    {
+      "id": "programs",
+      "file": "sitemap-programs.xml",
+      "label": "Pagini de programe",
+      "governanceContentTypes": ["program"],
+      "pageTypes": ["program"]
+    },
+    {
+      "id": "guides",
+      "file": "sitemap-guides.xml",
+      "label": "Ghiduri si continut editorial",
+      "governanceContentTypes": ["guide"],
+      "pageTypes": ["content"],
+      "routePrefixes": [
+        "/blog",
+        "/ghiduri",
+        "/intrebari",
+        "/resurse",
+        "/surse-oficiale-",
+        "/glosar-",
+        "/metodologie-",
+        "/studii-de-caz"
+      ]
+    },
+    {
+      "id": "core",
+      "file": "sitemap-core.xml",
+      "label": "Pagini core, servicii, instrumente si juridice",
+      "fallback": true
+    }
+  ],
+  "excludedRoutes": {
+    "/gdpr": {
+      "reason": "duplicate_policy_pending_legal_consolidation",
+      "note": "Politica duplicata este omisa din sitemap; redirectul ramane conditionat de aprobarea juridica si SEO."
+    }
+  }
+}

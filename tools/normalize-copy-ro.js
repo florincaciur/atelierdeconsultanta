@@ -44,6 +44,10 @@ const ROMANIAN_COPY_REPLACEMENTS = [
   [/\brealistă\b/g, "realistă"],
   [/\brealista\b/g, "realistă"],
   [/\bprudenta\b/g, "prudentă"],
+  [/\bAceasta\b/g, "Această"],
+  [/\baceasta\b/g, "această"],
+  [/\bAgricultura\b/g, "Agricultură"],
+  [/\bagricultura\b/g, "agricultură"],
   [/\borientativa\b/g, "orientativă"],
   [/\butila\b/g, "utilă"],
   [/\bagricola\b/g, "agricolă"],
@@ -95,7 +99,11 @@ const ROMANIAN_COPY_REPLACEMENTS = [
   [/\bconditie\b/g, "condiție"],
   [/\bPregatire\b/g, "Pregătire"],
   [/\bpregatire\b/g, "pregătire"],
+  [/\bPregati\b/g, "Pregăti"],
+  [/\bpregati\b/g, "pregăti"],
   [/\bpregatirea\b/g, "pregătirea"],
+  [/\bPregatirea\b/g, "Pregătirea"],
+  [/\bincepe\b/g, "începe"],
   [/\bpregatirii\b/g, "pregătirii"],
   [/\bpregateste\b/g, "pregătește"],
   [/\bpregatesti\b/g, "pregătești"],
@@ -141,8 +149,6 @@ const ROMANIAN_COPY_REPLACEMENTS = [
   [/\bobtine\b/g, "obține"],
   [/\bobtinut\b/g, "obținut"],
   [/\bobtinere\b/g, "obținere"],
-  [/\bFirma\b/g, "Firmă"],
-  [/\bfirma\b/g, "firmă"],
   [/\bfermei\b/g, "fermei"],
   [/\bexploatatie\b/g, "exploatație"],
   [/\bexploatatia\b/g, "exploatația"],
@@ -197,8 +203,21 @@ const ROMANIAN_COPY_REPLACEMENTS = [
   [/\bsemnaturi\b/g, "semnături"],
   [/\bfisiere\b/g, "fișiere"],
   [/\bInformatii\b/g, "Informații"],
+  [/\bInformatiile\b/g, "Informațiile"],
   [/\binformatii\b/g, "informații"],
   [/\binformatiile\b/g, "informațiile"],
+  [/\bIncadrarea\b/g, "Încadrarea"],
+  [/\bincadrarea\b/g, "încadrarea"],
+  [/\bUrmatorul\b/g, "Următorul"],
+  [/\burmatorul\b/g, "următorul"],
+  [/\bUrmatoarea\b/g, "Următoarea"],
+  [/\burmatoarea\b/g, "următoarea"],
+  [/\bUrmatorii\b/g, "Următorii"],
+  [/\burmatorii\b/g, "următorii"],
+  [/\bUrmatoarele\b/g, "Următoarele"],
+  [/\burmatoarele\b/g, "următoarele"],
+  [/\bUrmator\b/g, "Următor"],
+  [/\burmator\b/g, "următor"],
   [/\braspuns\b/g, "răspuns"],
   [/\braspunsuri\b/g, "răspunsuri"],
   [/\braspunda\b/g, "răspundă"],
@@ -222,6 +241,170 @@ const ROMANIAN_COPY_REPLACEMENTS = [
   [/\bAceeasi\b/g, "Aceeași"],
   [/\baceeasi\b/g, "aceeași"],
   [/\bdiscutia\b/g, "discuția"],
+  [/\bDiscutie\b/g, "Discuție"],
+  [/\bdiscutie\b/g, "discuție"],
+  [/\bIntentie\b/g, "Intenție"],
+  [/\bintentie\b/g, "intenție"],
+  [/\bintentiei\b/g, "intenției"],
+  [/\bCautare\b/g, "Căutare"],
+  [/\bcautare\b/g, "căutare"],
+  [/\bStie\b/g, "Știe"],
+  [/\bstie\b/g, "știe"],
+  [/\bStim\b/g, "Știm"],
+  [/\bstim\b/g, "știm"],
+  [/\bfolosita\b/g, "folosită"],
+  [/\bfolosite\b/g, "folosite"],
+  [/\bInlocuieste\b/g, "Înlocuiește"],
+  [/\binlocuieste\b/g, "înlocuiește"],
+  [/\binlocuiesc\b/g, "înlocuiesc"],
+  [/\binlocui\b/g, "înlocui"],
+  [/\bContributie\b/g, "Contribuție"],
+  [/\bcontributie\b/g, "contribuție"],
+  [/\bcontributia\b/g, "contribuția"],
+  [/\bcontributiei\b/g, "contribuției"],
+  [/\bcontributii\b/g, "contribuții"],
+  [/\bcontinut\b/g, "conținut"],
+  [/\bcontinutul\b/g, "conținutul"],
+  [/\bSolicitanti\b/g, "Solicitanți"],
+  [/\bsolicitanti\b/g, "solicitanți"],
+  [/\bactivitatii\b/g, "activității"],
+  [/\bSpecificatii\b/g, "Specificații"],
+  [/\bspecificatii\b/g, "specificații"],
+  [/\bAmenajari\b/g, "Amenajări"],
+  [/\bamenajari\b/g, "amenajări"],
+  [/\bLucrari\b/g, "Lucrări"],
+  [/\blucrari\b/g, "lucrări"],
+  [/\bEnergetica\b/g, "Energetică"],
+  [/\benergetica\b/g, "energetică"],
+  [/\bImpreuna\b/g, "Împreună"],
+  [/\bimpreuna\b/g, "împreună"],
+  [/\bBuna\b/g, "Bună"],
+  [/\bbuna\b/g, "bună"],
+  [/\bcorecta\b/g, "corectă"],
+  [/\bincorecta\b/g, "incorectă"],
+  [/\bDiferente\b/g, "Diferențe"],
+  [/\bdiferente\b/g, "diferențe"],
+  [/\bmodificari\b/g, "modificări"],
+  [/\bjustificata\b/g, "justificată"],
+  [/\bincepute\b/g, "începute"],
+  [/\baparea\b/g, "apărea"],
+  [/\braspunsul\b/g, "răspunsul"],
+  [/\bRaspunsul\b/g, "Răspunsul"],
+  [/\bInlocuiesc\b/g, "Înlocuiesc"],
+  [/\breprezinta\b/g, "reprezintă"],
+  [/\bgenerala\b/g, "generală"],
+  [/\bresponsabila\b/g, "responsabilă"],
+  [/\bsuficienta\b/g, "suficientă"],
+  [/\bInterventia\b/g, "Intervenția"],
+  [/\binterventia\b/g, "intervenția"],
+  [/\baceleasi\b/g, "aceleași"],
+  [/\bincadreaza\b/g, "încadrează"],
+  [/\bdimensioneaza\b/g, "dimensionează"],
+  [/\bpregateasca\b/g, "pregătească"],
+  [/\brurala\b/g, "rurală"],
+  [/\bafecteaza\b/g, "afectează"],
+  [/\burmeaza\b/g, "urmează"],
+  [/\bprioritara\b/g, "prioritară"],
+  [/\bintreaga\b/g, "întreaga"],
+  [/\bOfera\b/g, "Oferă"],
+  [/\bofera\b/g, "oferă"],
+  [/\bDiferenta\b/g, "Diferența"],
+  [/\bdiferenta\b/g, "diferența"],
+  [/\bDoua\b/g, "Două"],
+  [/\bdoua\b/g, "două"],
+  [/\bcoerentei\b/g, "coerenței"],
+  [/\bgrupeaza\b/g, "grupează"],
+  [/\bverificarii\b/g, "verificării"],
+  [/\bincepi\b/g, "începi"],
+  [/\bcumparaturi\b/g, "cumpărături"],
+  [/\bsigura\b/g, "sigură"],
+  [/\burmarite\b/g, "urmărite"],
+  [/\bactualizata\b/g, "actualizată"],
+  [/\bInstitutie\b/g, "Instituție"],
+  [/\binstitutie\b/g, "instituție"],
+  [/\binstitutia\b/g, "instituția"],
+  [/\binstitutii\b/g, "instituții"],
+  [/\binstitutiile\b/g, "instituțiile"],
+  [/\bnecesara\b/g, "necesară"],
+  [/\bgestioneaza\b/g, "gestionează"],
+  [/\bdescarcate\b/g, "descărcate"],
+  [/\bcompleteaza\b/g, "completează"],
+  [/\binceputa\b/g, "începută"],
+  [/\bcontinuata\b/g, "continuată"],
+  [/\bnationala\b/g, "națională"],
+  [/\bnationale\b/g, "naționale"],
+  [/\btrateaza\b/g, "tratează"],
+  [/\barata\b/g, "arată"],
+  [/\bpastreaza\b/g, "păstrează"],
+  [/\bestimeaza\b/g, "estimează"],
+  [/\bconteaza\b/g, "contează"],
+  [/\brapida\b/g, "rapidă"],
+  [/\bPret\b/g, "Preț"],
+  [/\bpret\b/g, "preț"],
+  [/\blegata\b/g, "legată"],
+  [/\bimplementari\b/g, "implementări"],
+  [/\bmasurabile\b/g, "măsurabile"],
+  [/\bclarificarile\b/g, "clarificările"],
+  [/\bresponsabilitati\b/g, "responsabilități"],
+  [/\bsustina\b/g, "susțină"],
+  [/\bpiesa\b/g, "piesă"],
+  [/\bajustari\b/g, "ajustări"],
+  [/\blicente\b/g, "licențe"],
+  [/\bcompleta\b/g, "completă"],
+  [/\bcumparate\b/g, "cumpărate"],
+  [/\bnumarul\b/g, "numărul"],
+  [/\bjustificarii\b/g, "justificării"],
+  [/\binsuficienta\b/g, "insuficientă"],
+  [/\binformarii\b/g, "informării"],
+  [/\btraduca\b/g, "traducă"],
+  [/\bIntrebarile\b/g, "Întrebările"],
+  [/\bintrebarile\b/g, "întrebările"],
+  [/\braspunsurile\b/g, "răspunsurile"],
+  [/\bintr-un\b/g, "într-un"],
+  [/\bintr-o\b/g, "într-o"],
+  [/\boperational\b/g, "operațional"],
+  [/\baudienta\b/g, "audiența"],
+  [/\bprincipala\b/g, "principală"],
+  [/\beditia\b/g, "ediția"],
+  [/\btrimita\b/g, "trimită"],
+  [/\bparea\b/g, "părea"],
+  [/\bIntrebare\b/g, "Întrebare"],
+  [/\bintrebare\b/g, "întrebare"],
+  [/\binsa\b/g, "însă"],
+  [/\bsingura\b/g, "singură"],
+  [/\bplatit\b/g, "plătit"],
+  [/\bsanatoasa\b/g, "sănătoasă"],
+  [/\btesteaza\b/g, "testează"],
+  [/\bamanat\b/g, "amânat"],
+  [/\bevitam\b/g, "evităm"],
+  [/\bspecializata\b/g, "specializată"],
+  [/\bstabileste\b/g, "stabilește"],
+  [/\badauga\b/g, "adaugă"],
+  [/\bcalculeaza\b/g, "calculează"],
+  [/\banalizeaza\b/g, "analizează"],
+  [/\bajusteaza\b/g, "ajustează"],
+  [/\bdeconteaza\b/g, "decontează"],
+  [/\bcentralizeaza\b/g, "centralizează"],
+  [/\beligibila\b/g, "eligibilă"],
+  [/\bincompleta\b/g, "incompletă"],
+  [/\binformatia\b/g, "informația"],
+  [/\bSelectia\b/g, "Selecția"],
+  [/\bselectia\b/g, "selecția"],
+  [/\bconcreta\b/g, "concretă"],
+  [/\bautorizatii\b/g, "autorizații"],
+  [/\bdirecta\b/g, "directă"],
+  [/\balimentatie\b/g, "alimentație"],
+  [/\bschita\b/g, "schița"],
+  [/\bbucatarie\b/g, "bucătărie"],
+  [/\bsiguranta\b/g, "siguranță"],
+  [/\balimentara\b/g, "alimentară"],
+  [/\bspatiului\b/g, "spațiului"],
+  [/\bsanse\b/g, "șanse"],
+  [/\bcibernetica\b/g, "cibernetică"],
+  [/\bContinutul\b/g, "Conținutul"],
+  [/\bintrebarilor\b/g, "întrebărilor"],
+  [/\bcontine\b/g, "conține"],
+  [/\bincarcate\b/g, "încărcate"],
   [/\bajunga\b/g, "ajungă"],
   [/\bmentioneaza\b/g, "menționează"],
   [/\burmarit\b/g, "urmărit"],
@@ -280,6 +463,69 @@ function normalizeRomanianCopy(value) {
     (match) => match.replace(/schimbă$/, "schimba")
   );
   text = text.replace(/\b(pentru|fără) a schimbă(?=\s|[?!.,;:]|$)/gu, (match) => match.replace(/schimbă$/, "schimba"));
+  text = text.replace(/\b(Se|se)(\s+va)?\s+aplica(?=\s|[?!.,;:]|$)/gu, (_, prefix, future = "") => `${prefix}${future} aplică`);
+  text = text.replace(/\b(Cine|cine) aplica(?=\s|[?!.,;:]|$)/gu, (_, prefix) => `${prefix} aplică`);
+  text = text.replace(/\b(Se|se)(\s+va)?\s+confirma(?=\s|[?!.,;:]|$)/gu, (_, prefix, future = "") => `${prefix}${future} confirmă`);
+  text = text.replace(/\b(și|apoi) confirma(?=\s|[?!.,;:]|$)/gu, (_, prefix) => `${prefix} confirmă`);
+  text = text.replace(/\b(Se|se)(\s+va)?\s+identifica(?=\s|[?!.,;:]|$)/gu, (_, prefix, future = "") => `${prefix}${future} identifică`);
+  text = text.replace(/\b(nu|hub-ul|ghidul|planul|documentul|raportul) explica(?=\s|[?!.,;:]|$)/giu, (_, prefix) => `${prefix} explică`);
+  text = text.replace(/\b(pagina|pagină|calculatorul|istoricul|SO|ele) ajuta(?=\s|[?!.,;:]|$)/giu, (_, prefix) => `${prefix} ajută`);
+  text = text.replace(/\b(eroare|întrebare|intrebare|greșeală) frecventa(?=\s|[?!.,;:]|$)/giu, (_, prefix) => `${prefix} frecventă`);
+  text = text.replace(/\b(autoritatea|instituția|ministerul|DGPET|site-ul) publica(?=\s|[?!.,;:]|$)/giu, (_, prefix) => `${prefix} publică`);
+  text = text.replace(/\b(achiziție|consultare|dezbatere|pagină|sursă) publica(?=\s|[?!.,;:]|$)/giu, (_, prefix) => `${prefix} publică`);
+  text = text.replace(/\b(proiectul|aplicarea|pregătirea|pregatirea) merita(?=\s|[?!.,;:]|$)/giu, (_, prefix) => `${prefix} merită`);
+  text = text.replace(/\b(O|o) analiza(?=\s|[?!.,;:]|$)/gu, (_, prefix) => `${prefix} analiză`);
+  text = text.replace(/^(\s*)([^.!?\n]{2,140}) trebuie analizat ca o decizie de investiție/gu, "$1Tema „$2” trebuie analizată ca o decizie de investiție");
+  text = text.replace(/\b(Pagină|Pagina)(?=\s+(?:răspunde|ajută|este|include|oferă|trimite|insistă|rămâne|explică|centralizează|nu))/gu, "Pagina");
+  text = text.replace(/\bpagină(?=\s+(?:răspunde|ajută|este|include|oferă|trimite|insistă|rămâne|explică|centralizează|nu))/gu, "pagina");
+  text = text.replace(/\bPagină această\b/gu, "Pagina aceasta");
+  text = text.replace(/\b(pagină|pagina)\s+(programului|apelului|instituției|institutiei|serviciului|formularului)/gu, "pagina $2");
+  text = text.replace(/\b(această|o|fiecare) pagina\b/gu, "$1 pagină");
+  text = text.replace(/\bfirmă\s+(ta|are|vrea|trebuie|propune|deține|detine|poate)(?=\s|[?!.,;:]|$)/gu, "firma $1");
+  text = text.replace(/\b(această|o|fiecare) firma\b/gu, "$1 firmă");
+  text = text.replace(/(?<![Oo] )\bfermă(?=\s+(?:reală|poate|are|trebuie|propune|compară))/gu, "ferma");
+  text = text.replace(/\bplatformă\s+(de depunere|indicată|oficială)/gu, "platforma $1");
+  text = text.replace(/\b(o|fiecare) platforma\b/gu, "$1 platformă");
+  text = text.replace(/\bprocedură\s+(ediției|activă|o cere|permite|stabilește)/gu, "procedura $1");
+  text = text.replace(/\b(o|fiecare) procedura\b/gu, "$1 procedură");
+  text = text.replace(/\bRută(?=\s+(?:nu|principală|rămâne))/gu, "Ruta");
+  text = text.replace(/\brută\s+(principală|de program)(?=\s|[?!.,;:]|$)/gu, "ruta $1");
+  text = text.replace(/\b(o|fiecare) ruta\b/gu, "$1 rută");
+  text = text.replace(/\blogică\s+(ei|investiției|proiectului|programului|unei)/gu, "logica $1");
+  text = text.replace(/(?<!o )\blogică de\b/gu, "logica de");
+  text = text.replace(/\bmăsură\s+(locală|potrivită)/gu, "măsura $1");
+  text = text.replace(/\b(o|fiecare) măsura\b/gu, "$1 măsură");
+  text = text.replace(/\blipsă\s+(justificării|documentelor|dovezii|unui|unei)/gu, "lipsa $1");
+  text = text.replace(/\b(o|această|fiecare) metoda\b/gu, "$1 metodă");
+  text = text.replace(/\b(fiecare|o|această) componenta\b/gu, "$1 componentă");
+  text = text.replace(/\b(o|această) singură lista\b/gu, "$1 singură listă");
+  text = text.replace(/\b(faptul|automat) ca\b/gu, "$1 că");
+  text = text.replace(/\b(vrea|este|poate|trebuie|urmează|fără) sa\b/gu, "$1 să");
+  for (const [plain, accented] of [
+    ["aplica", "aplică"],
+    ["ajuta", "ajută"],
+    ["confirma", "confirmă"],
+    ["explica", "explică"],
+    ["identifica", "identifică"],
+    ["publica", "publică"],
+    ["continua", "continuă"],
+    ["evita", "evită"],
+    ["indica", "indică"],
+    ["insista", "insistă"],
+    ["justifica", "justifică"],
+    ["merita", "merită"],
+    ["separa", "separă"],
+    ["compara", "compară"]
+  ]) {
+    text = text.replace(new RegExp(`\\b${plain}(?![A-Za-zĂÂÎȘȚăâîșț])`, "gu"), accented);
+    text = text.replace(
+      new RegExp(`\\b(Pot|pot|Poate|poate|Putem|putem|Puteți|puteți|Va|va|Vor|vor|Ar|ar|pentru a|fără a|de a) ${accented}(?=\\s|[?!.,;:]|$)`, "gu"),
+      (match) => match.replace(accented, plain)
+    );
+  }
+  text = text.replace(/\bwebsite(?:-ul|ul)\b/giu, (match) => (/^[A-Z]/u.test(match) ? "Site-ul" : "site-ul"));
+  text = text.replace(/\bwebsite\b/giu, (match) => (/^[A-Z]/u.test(match) ? "Site" : "site"));
+  text = text.replace(/\b(un|acest|orice) site-ul\b/giu, "$1 site");
   return text;
 }
 

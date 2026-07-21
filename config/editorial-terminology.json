@@ -1,0 +1,104 @@
+{
+  "version": "p0.14-v1",
+  "positioning": "Verificare prudentă, documentată și interdisciplinară — consultanță și proiectare — înainte de dosar.",
+  "targetRoutes": [
+    "/",
+    "/despre-faber",
+    "/contact",
+    "/fonduri-europene",
+    "/fonduri-europene-digitalizare",
+    "/digitalizare-imm",
+    "/eligibilitate-fonduri-europene",
+    "/verificare-eligibilitate-fonduri-europene",
+    "/dr12-afir",
+    "/dr14"
+  ],
+  "legalRoutesExcludedFromAutomaticRewrite": [
+    "/politica-de-confidentialitate",
+    "/gdpr",
+    "/termeni-si-conditii"
+  ],
+  "preferredTerms": [
+    {
+      "preferred": "verificare inițială sau orientativă",
+      "avoid": ["eligibilitate garantată", "verifică eligibilitatea"],
+      "reason": "Concluzia depinde de documentele solicitantului și de versiunea oficială aplicabilă."
+    },
+    {
+      "preferred": "finanțare nerambursabilă",
+      "avoid": ["bani gratis"],
+      "reason": "Sprijinul implică reguli, contribuții, obligații și verificări."
+    },
+    {
+      "preferred": "contribuție proprie",
+      "avoid": ["cofinanțare ca termen principal", "aport ca termen principal"],
+      "reason": "Cofinanțare și aport sunt explicate o singură dată ca sinonime întâlnite în documente."
+    },
+    {
+      "preferred": "apel deschis — cu intervalul oficial de depunere",
+      "avoid": ["Activ", "apel activ", "program activ"],
+      "reason": "Deschiderea se afirmă numai din registrul verificat și cu interval oficial curent."
+    },
+    {
+      "preferred": "ghid consultativ; ghid aprobat, apel nedeschis; calendar estimativ",
+      "avoid": ["Activ"],
+      "reason": "Stările editoriale nu sunt echivalente cu depunerea deschisă."
+    },
+    {
+      "preferred": "document oficial verificat la [data]",
+      "avoid": ["ultima variantă", "ultima versiune"],
+      "reason": "Prospețimea trebuie susținută prin dată și versiune identificabilă."
+    },
+    {
+      "preferred": "listată în nomenclatorul AFIR",
+      "avoid": ["acreditată AFIR"],
+      "reason": "Listarea nu trebuie prezentată ca acreditare."
+    }
+  ],
+  "absoluteForbiddenPatterns": [
+    {
+      "id": "free-money",
+      "pattern": "\\bbani gratis\\b",
+      "message": "Folosește «finanțare nerambursabilă» și explică obligațiile."
+    },
+    {
+      "id": "guaranteed-eligibility",
+      "pattern": "\\beligibilitate garantat(?:ă|a)\\b",
+      "message": "Eligibilitatea nu poate fi garantată."
+    },
+    {
+      "id": "guaranteed-outcome",
+      "pattern": "\\b(?:garantăm|garantam|garantează|garanteaza|garantat(?:ă|a)?)\\s+(?:succesul|aprobarea|finanțarea|finantarea)\\b",
+      "message": "Nu publica promisiuni de rezultat."
+    },
+    {
+      "id": "afir-accreditation",
+      "pattern": "\\bacredit(?:at|ată|ata|are)\\s+(?:de\\s+)?AFIR\\b",
+      "message": "Dacă există dovadă, folosește «listată în nomenclatorul AFIR»."
+    },
+    {
+      "id": "unqualified-latest-document",
+      "pattern": "\\bultima\\s+(?:variantă|varianta|versiune)\\b",
+      "message": "Identifică documentul, versiunea și data verificării."
+    },
+    {
+      "id": "numeric-success-rate",
+      "pattern": "(?:\\b\\d{1,3}(?:[.,]\\d+)?%[^.]{0,50}rat(?:ă|a)\\s+de\\s+succes\\b|\\brat(?:ă|a)\\s+de\\s+succes[^.]{0,50}\\d{1,3}(?:[.,]\\d+)?%)",
+      "message": "Ratele de succes necesită metodologie și dovadă aprobate."
+    }
+  ],
+  "targetContextPatterns": [
+    {
+      "id": "generic-active-state",
+      "pattern": "\\b(?:apel(?:ul|uri)?|ghid(?:ul|uri)?|program(?:ul|e)?|document(?:ul)?\\s+oficial)\\s+activ(?:ă|a|e|i)?\\b",
+      "message": "Folosește statusul controlat sau «apelul/documentul analizat»."
+    },
+    {
+      "id": "unqualified-eligibility-cta",
+      "pattern": "\\b(?:verifică|verifica|solicită|solicita|cere)\\s+(?:o\\s+)?(?:verificare(?:a)?\\s+)?eligibilitat(?:ea|e|ii)\\b",
+      "message": "CTA-ul trebuie să spună «verificare inițială» sau «orientativă»."
+    }
+  ],
+  "contributionExplanation": "Pe acest site folosim «contribuție proprie» ca termen principal. În documentele oficiale pot apărea și «cofinanțare» sau «aport»; sensul și calculul se verifică în documentul aplicabil.",
+  "requiredPositioningRoutes": ["/", "/despre-faber"]
+}

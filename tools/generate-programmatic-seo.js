@@ -291,7 +291,7 @@ ${ANALYTICS_EVENTS_SCRIPT}
   </header>
   <main class="container">
     <article class="panel">
-      <h2>Raspuns scurt</h2>
+      <h2>Ce trebuie să știi</h2>
       <p class="intro">${esc(summary)}</p>
       ${body}
       <h2>Intrebari frecvente</h2>
@@ -578,7 +578,7 @@ function faqPage(item) {
     ["Cand trebuie actualizat raspunsul?", "Raspunsul trebuie actualizat cand se publica un ghid nou, apar clarificari oficiale sau documentele solicitantului schimba incadrarea."]
   ]);
   let body = `
-      <h2>Raspuns scurt</h2>
+      <h2>Ce trebuie să știi</h2>
       <p>${esc(item.answer)}</p>
       <h2>Ce inseamna in practica</h2>
       <p>Intrebarea trebuie verificata in contextul programului, solicitantului si investitiei. Aceeasi regula poate avea efecte diferite pentru o firma, o ferma sau o institutie publica.</p>
@@ -595,29 +595,10 @@ function faqPage(item) {
 }
 
 function updateSitemap(routes, updatedAt, excludedRoutes = []) {
-  const existing = fs.existsSync(SITEMAP)
-    ? [...fs.readFileSync(SITEMAP, "utf8").matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1].replace(SITE, ""))
-    : ["/"];
-  const seen = new Set();
-  const excluded = new Set(excludedRoutes.map(cleanUrl));
-  const all = [...existing, ...routes].map(cleanUrl).filter((route) => {
-    if (seen.has(route)) return false;
-    if (excluded.has(route)) return false;
-    if (route.includes("/admin") || route.includes("herambursabile") || route.includes("/index")) return false;
-    seen.add(route);
-    return true;
-  });
-  const xml = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${all.map((route) => `  <url>
-    <loc>${SITE}${route}</loc>
-    <lastmod>${updatedAt}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>${route.includes("/intrebari/") ? "0.6" : "0.7"}</priority>
-  </url>`).join("\n")}
-</urlset>
-`;
-  fs.writeFileSync(SITEMAP, xml, "utf8");
+  void routes;
+  void updatedAt;
+  void excludedRoutes;
+  require("./generate-sitemap").generate();
 }
 
 function main() {

@@ -86,7 +86,10 @@
       ],
       "factualStatus": "unknown",
       "lastReviewed": "2026-05-20",
-      "notes": "Program național al Ministerului Economiei; snippetul nu îl numește fonduri europene și nu publică valori neverificate pentru 2026."
+      "notes": "Program național al Ministerului Economiei; snippetul nu îl numește fonduri europene și nu publică valori neverificate pentru 2026.",
+      "publicationState": "public",
+      "programStatus": "calendar_estimativ",
+      "statusLabel": "Calendar estimativ – depunerea nu este confirmată"
     },
     {
       "route": "/afir-autoconsum-agroalimentar",
@@ -108,51 +111,10 @@
       ],
       "factualStatus": "open",
       "lastReviewed": "2026-07-20",
-      "notes": "Sesiunea și plafoanele se raportează la Ghidul V7 și la comunicatul oficial AFIR; procentul de autoconsum și stocarea sunt explicate fără a promite eligibilitatea."
-    },
-    {
-      "route": "/dr12-afir",
-      "primaryIntent": "eligibilitate și documente pentru investițiile DR12 destinate tinerilor fermieri",
-      "primaryQuery": "DR12 AFIR 2026",
-      "secondaryQueries": [
-        "eligibilitate DR12",
-        "sprijin DR12",
-        "acte DR12",
-        "prag SO DR12"
-      ],
-      "title": "DR12 AFIR 2026: lansare, eligibilitate și acte | FABER",
-      "description": "DR12 pentru tineri fermieri: ghid consultativ, minimum 12.000 SO, până la 200.000 €, intensitate 65–80%, acte și statusul lansării.",
-      "ogTitle": "DR12 AFIR 2026: lansare, eligibilitate și acte | FABER",
-      "ogDescription": "DR12 pentru tineri fermieri: ghid consultativ, minimum 12.000 SO, până la 200.000 €, intensitate 65–80%, acte și statusul lansării.",
-      "sourceOfTruth": [
-        "config/seo-programs.json#programs",
-        "https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/"
-      ],
-      "factualStatus": "consultation",
-      "lastReviewed": "2026-07-20",
-      "notes": "Pragul de 12.000 SO este prezentat împreună cu statutul consultativ; procentele nu sunt înghesuite în snippet și rămân explicate în pagină."
-    },
-    {
-      "route": "/dr14",
-      "primaryIntent": "condiții, praguri SO și documente pentru ferme mici prin DR14",
-      "primaryQuery": "DR14 AFIR 2026",
-      "secondaryQueries": [
-        "DR14 ferme mici",
-        "praguri SO DR14",
-        "acte DR14",
-        "componente DR14"
-      ],
-      "title": "DR14 AFIR 2026: ferme mici, SO și finanțare | FABER",
-      "description": "DR14 pentru ferme mici: intervale SO, componente, până la 50.000 €, intensitate de până la 85%, acte și statutul ghidului consultativ.",
-      "ogTitle": "DR14 AFIR 2026: ferme mici, SO și finanțare | FABER",
-      "ogDescription": "DR14 pentru ferme mici: intervale SO, componente, până la 50.000 €, intensitate de până la 85%, acte și statutul ghidului consultativ.",
-      "sourceOfTruth": [
-        "config/seo-programs.json#programs",
-        "https://www.afir.ro/comunicare/utile/dezbatere-publica/"
-      ],
-      "factualStatus": "consultation",
-      "lastReviewed": "2026-07-20",
-      "notes": "Nu prezintă pragurile sectoriale și valorile consultative drept reguli definitive; statutul documentului este explicit."
+      "notes": "Sesiunea și plafoanele se raportează la Ghidul V7 și la comunicatul oficial AFIR; procentul de autoconsum și stocarea sunt explicate fără a promite eligibilitatea.",
+      "publicationState": "public",
+      "programStatus": "apel_deschis",
+      "statusLabel": "Apel deschis"
     },
     {
       "route": "/por-adr-nord-est",
@@ -173,27 +135,31 @@
       ],
       "factualStatus": "final",
       "lastReviewed": "2026-07-20",
-      "notes": "Folosește denumirea actuală Programul Regional Nord-Est; POR ADR Nord-Est rămâne interogare secundară istorică."
+      "notes": "Folosește denumirea actuală Programul Regional Nord-Est; POR ADR Nord-Est rămâne interogare secundară istorică.",
+      "publicationState": "public",
+      "programStatus": "ghid_aprobat_nedeschis",
+      "statusLabel": "Ghid aprobat – depunerea nu este deschisă"
     },
     {
       "route": "/contact",
-      "primaryIntent": "contactarea FABER pentru o analiză inițială a proiectului",
+      "primaryIntent": "contactarea FABER pentru verificarea proiectului",
       "primaryQuery": "contact FABER",
       "secondaryQueries": [
         "contact consultant fonduri europene",
         "trimite proiect FABER",
-        "verificare proiect contact"
+        "verificare proiect"
       ],
-      "title": "Contact FABER pentru eligibilitate și proiecte",
-      "description": "Trimite datele proiectului către FABER: solicitant, CAEN, localitate, investiție, buget, cofinanțare și documente disponibile pentru analiză.",
-      "ogTitle": "Trimite proiectul pentru o analiză inițială | FABER",
-      "ogDescription": "Spune-ne cine aplică, unde se face investiția, ce buget și documente există, pentru a clarifica pașii următori fără promisiuni de aprobare.",
+      "title": "Contact FABER: trimite proiectul pentru verificare",
+      "description": "Trimite către FABER datele proiectului, bugetul și documentele disponibile pentru stabilirea programului și a verificărilor necesare.",
+      "ogTitle": "Trimite datele proiectului către FABER",
+      "ogDescription": "Spune-ne cine aplică, unde se face investiția și ce documente există pentru a delimita verificările necesare.",
       "sourceOfTruth": [
+        "tools/rebuild-core-pages.js",
         "contact/index.html"
       ],
       "factualStatus": "operational_contact_process_verified",
-      "lastReviewed": "2026-07-13",
-      "notes": "Descrie datele necesare pentru analiză; nu promite termen de răspuns, eligibilitate sau aprobare."
+      "lastReviewed": "2026-07-20",
+      "notes": "Titlul indică acțiunea și rezultatul realist al contactului fără a promite eligibilitate sau aprobare."
     },
     {
       "route": "/e-move",
@@ -214,49 +180,73 @@
       ],
       "factualStatus": "consultation",
       "lastReviewed": "2026-05-27",
-      "notes": "Statutul de consultare este explicit; snippetul nu folosește valoarea maximă indicativă sau intensitatea ca reguli finale."
+      "notes": "Statutul de consultare este explicit; snippetul nu folosește valoarea maximă indicativă sau intensitatea ca reguli finale.",
+      "publicationState": "public",
+      "programStatus": "consultare_publica",
+      "statusLabel": "Consultare publică – depunerea nu este deschisă"
     },
     {
       "route": "/despre-faber",
-      "primaryIntent": "evaluarea experienței și metodei de lucru FABER",
+      "primaryIntent": "evaluarea identității și metodei de lucru FABER",
       "primaryQuery": "despre FABER consultanță",
       "secondaryQueries": [
         "FABER Atelier de Consultanță",
         "metodă consultanță FABER",
         "cine este FABER"
       ],
-      "title": "Despre FABER: consultanță prudentă pentru proiecte",
-      "description": "Cum verifică FABER eligibilitatea, programul, bugetul și documentele, cu surse oficiale, limite clare și fără promisiuni de aprobare.",
-      "ogTitle": "Cum lucrează FABER | Atelier de Consultanță",
-      "ogDescription": "Metoda FABER verifică documentele, sursele oficiale și riscurile care trebuie clarificate înainte de pregătirea dosarului.",
+      "title": "Despre FABER: consultanță fără promisiuni de aprobare",
+      "description": "Vezi cum lucrează FABER: verificări pe documente, roluri clare și recomandări prudente pentru proiecte finanțate din fonduri europene.",
+      "ogTitle": "FABER: documente înainte de promisiuni",
+      "ogDescription": "Metoda de lucru FABER separă ce este confirmat, ce lipsește și ce trebuie corectat înainte de pregătirea unui proiect.",
       "sourceOfTruth": [
-        "despre-faber/index.html",
-        "config/editorial-pages.json"
+        "tools/rebuild-core-pages.js",
+        "despre-faber/index.html"
       ],
       "factualStatus": "brand_methodology_copy_verified",
-      "lastReviewed": "2026-07-13",
-      "notes": "Diferențiatorul este prudența documentată, nu o afirmație de succes, premiu sau rată de aprobare."
+      "lastReviewed": "2026-07-20",
+      "notes": "Titlul diferențiază FABER prin prudență fără a folosi rezultate sau experiență nedocumentate."
     },
     {
       "route": "/consultanta-fonduri-europene",
-      "primaryIntent": "contractarea serviciilor de consultanță pentru pregătirea și implementarea proiectelor",
+      "primaryIntent": "contractarea consultanței pentru verificarea și pregătirea proiectului",
       "primaryQuery": "consultanță fonduri europene",
       "secondaryQueries": [
-        "consultant fonduri europene firme",
-        "firmă consultanță fonduri europene",
+        "consultant fonduri europene",
+        "verificare eligibilitate",
         "pregătire dosar fonduri europene"
       ],
-      "title": "Consultanță fonduri europene pentru firme | FABER",
-      "description": "Consultanță pentru firme, fermieri și organizații: eligibilitate, program potrivit, buget, dosar, clarificări și suport în implementare.",
-      "ogTitle": "Consultanță de la eligibilitate la implementare | FABER",
-      "ogDescription": "FABER verifică eligibilitatea, compară programe și sprijină bugetul, dosarul, clarificările și implementarea pe baza documentelor disponibile.",
+      "title": "Consultanță fonduri europene: eligibilitate și dosar | FABER",
+      "description": "Verificăm solicitantul, programul, bugetul și documentele; pregătim cererea și clarificările numai după verificarea inițială a eligibilității.",
+      "ogTitle": "Consultanță pentru un proiect care poate fi susținut | FABER",
+      "ogDescription": "De la verificarea eligibilității la dosar și clarificări, fiecare etapă pornește din documentele reale ale solicitantului.",
       "sourceOfTruth": [
-        "config/seo-programs.json:consultanta-fonduri-europene",
-        "official-guides.json"
+        "tools/rebuild-core-pages.js",
+        "config/seo-programs.json:consultanta-fonduri-europene"
       ],
       "factualStatus": "evergreen_service_scope_verified",
-      "lastReviewed": "2026-07-13",
-      "notes": "Titlul comunică beneficiarul principal fără a exclude fermierii și organizațiile, menționate în descriere."
+      "lastReviewed": "2026-07-20",
+      "notes": "Titlul leagă interogarea principală de cele două decizii comerciale: eligibilitatea și dosarul."
+    },
+    {
+      "route": "/fonduri-europene",
+      "primaryIntent": "identificarea programelor de fonduri europene pentru investiție",
+      "primaryQuery": "fonduri europene 2026",
+      "secondaryQueries": [
+        "fonduri europene firme",
+        "fonduri europene fermieri",
+        "programe fonduri europene"
+      ],
+      "sourceOfTruth": [
+        "tools/rebuild-core-pages.js",
+        "fonduri-europene/index.html"
+      ],
+      "factualStatus": "programme_hub_routes_verified",
+      "notes": "Titlul folosește anul numai pentru hub; termenele și valorile rămân în paginile programelor.",
+      "title": "Fonduri europene 2026: programe pentru firme și fermieri",
+      "description": "Compară programe pentru firme, fermieri și instituții după solicitant, investiție, regiune, documente și contribuția proprie disponibilă.",
+      "ogTitle": "Găsește traseul potrivit pentru investiția ta | FABER",
+      "ogDescription": "Pornește de la beneficiar și investiție, apoi verifică programul, documentele și bugetul în pagina dedicată fiecărui apel.",
+      "lastReviewed": "2026-07-20"
     }
   ]
 }

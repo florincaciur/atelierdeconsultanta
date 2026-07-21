@@ -1,0 +1,67 @@
+name: P0 release gate
+
+on:
+  pull_request:
+    branches: [main, master]
+  workflow_dispatch:
+    inputs:
+      staging_url:
+        description: "HTTPS URL for the approved staging deployment"
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  local-acceptance:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:p0-release-gate
+      - run: npm run gate:p0:local
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: p0-release-gate-local
+          path: reports/p0-release-gate-*.{md,json}
+
+  staging-acceptance:
+    if: github.event_name == 'workflow_dispatch'
+    needs: local-acceptance
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      P0_STAGING_URL: ${{ inputs.staging_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: npm run gate:p0:staging
+
+  production-acceptance:
+    if: github.event_name == 'workflow_dispatch'
+    needs: staging-acceptance
+    environment: production
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: npm run gate:p0:production

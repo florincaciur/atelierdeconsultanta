@@ -1,0 +1,35 @@
+{
+  "label": "after-patch-predeploy",
+  "generatedAt": "2026-07-21T13:29:31+03:00",
+  "environment": "local-workspace-and-cloudflare-worker-test",
+  "productionVerifiedAfterDeploy": false,
+  "canonicalUrlCount": 91,
+  "orphanCount": 0,
+  "pagesDeeperThanThreeClicks": 0,
+  "brokenOrRedirectedInternalLinks": 0,
+  "redirectLoops": 0,
+  "redirectChains": 0,
+  "sitemapRedirects": 0,
+  "canonicalConflicts": 0,
+  "duplicateTitles": 0,
+  "duplicateH1": 0,
+  "duplicateMetaDescriptions": 0,
+  "blockingLocalIssueCount": 0,
+  "liveBefore": {
+    "sitemapUrlCount": 102,
+    "wwwVariantsWithoutDirect301": 102,
+    "orphanCount": 10
+  },
+  "governedSignals": {
+    "totalOccurrences": 36,
+    "internalLinksToIntentionalNoindex": 29,
+    "internalLinksToGdprExcludedPendingApproval": 7
+  },
+  "verification": {
+    "technicalSeoGate": "PASS",
+    "sitemapGate": "PASS",
+    "cloudflareValidation": "PASS",
+    "fullBuild": "PASS"
+  },
+  "requiredPostDeployCommand": "node tools/crawl-technical-seo.js --label=after-deploy --max-pages=500"
+}

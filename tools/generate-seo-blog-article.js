@@ -1832,20 +1832,9 @@ function updateBlogJson(config, route, validation, internalLinks) {
 }
 
 function updateSitemap(route, config) {
-  const file = path.join(ROOT, "sitemap.xml");
-  if (!fs.existsSync(file)) return false;
-  const url = absoluteUrl(route);
-  let xml = fs.readFileSync(file, "utf8");
-  if (xml.includes(`<loc>${url}</loc>`)) return true;
-  const entry = `  <url>
-    <loc>${url}</loc>
-    <lastmod>${config.dataActualizarii}</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-`;
-  xml = xml.replace("</urlset>", `${entry}</urlset>`);
-  fs.writeFileSync(file, xml, "utf8");
+  void route;
+  void config;
+  require("./generate-sitemap").generate();
   return true;
 }
 

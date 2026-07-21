@@ -7,6 +7,6 @@
     "not_found_handling": "404-page"
   },
   "build": {
-    "command": "node tools/build-cloudflare-assets.js && node tools/validate-cloudflare-deploy.js"
+    "command": "npm run gate:p0:deploy-guard && node tools/build-cloudflare-assets.js && node tools/validate-cloudflare-deploy.js"
   }
 }

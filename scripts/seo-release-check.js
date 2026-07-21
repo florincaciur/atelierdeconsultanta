@@ -4,6 +4,7 @@
 const fs = require("fs");
 const path = require("path");
 const { spawnSync } = require("child_process");
+const { sitemapUrls } = require("../tools/sitemap-utils");
 
 const ROOT = path.resolve(__dirname, "..");
 const NODE = process.execPath;
@@ -51,8 +52,7 @@ function run(executable, args, label) {
 
 function validateFeed() {
   const feedPath = path.join(ROOT, "feed.xml");
-  const sitemap = fs.readFileSync(path.join(ROOT, "sitemap.xml"), "utf8");
-  const sitemapUrls = new Set([...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1].trim()));
+  const canonicalUrls = new Set(sitemapUrls(ROOT));
   const feed = fs.readFileSync(feedPath, "utf8");
   if (!/<rss\b[^>]*version=["']2\.0["']/.test(feed) || !/<channel>/.test(feed)) {
     throw new Error("feed.xml is not an RSS 2.0 channel");
@@ -67,18 +67,17 @@ function validateFeed() {
       }
     }
     const link = item.match(/<link>([^<]+)<\/link>/)?.[1].trim();
-    if (!sitemapUrls.has(link)) throw new Error(`feed item ${index + 1} uses noncanonical link ${link}`);
+    if (!canonicalUrls.has(link)) throw new Error(`feed item ${index + 1} uses noncanonical link ${link}`);
   }
   console.log(`[seo:check] RSS PASS: ${items.length} canonical items.`);
 }
 
 function validateLlms() {
-  const sitemap = fs.readFileSync(path.join(ROOT, "sitemap.xml"), "utf8");
-  const sitemapUrls = new Set([...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1].trim()));
+  const canonicalUrls = new Set(sitemapUrls(ROOT));
   const llms = fs.readFileSync(path.join(ROOT, "llms.txt"), "utf8");
   const urls = [...llms.matchAll(/https:\/\/atelierdeconsultanta\.ro(?:\/[A-Za-z0-9_./-]*)?/g)].map((match) => match[0].replace(/[.,;]+$/, ""));
   for (const url of urls) {
-    if (!sitemapUrls.has(url)) throw new Error(`llms.txt contains URL outside sitemap: ${url}`);
+    if (!canonicalUrls.has(url)) throw new Error(`llms.txt contains URL outside sitemap: ${url}`);
     if (/\.html(?:$|[?#])|[?#]/.test(url)) throw new Error(`llms.txt contains legacy or parameter URL: ${url}`);
   }
   console.log(`[seo:check] llms.txt PASS: ${new Set(urls).size} canonical URLs.`);

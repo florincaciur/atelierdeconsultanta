@@ -146,7 +146,7 @@
           "@type": "Question",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Nu. Se publica doar rezultate confirmate și permise."
+            "text": "Nu. Se publică doar rezultate confirmate și permise."
           },
           "name": "Publicati rezultate garantate?"
         },
@@ -156,13 +156,13 @@
             "@type": "Answer",
             "text": "Domeniu, program, provocare, solutie, documente cheie și rezultat."
           },
-          "name": "Ce contine un studiu?"
+          "name": "Ce conține un studiu?"
         },
         {
           "@type": "Question",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Da, testimonialele se publica doar dacă sunt veridice și aprobate."
+            "text": "Da, testimonialele se publică doar dacă sunt veridice și aprobate."
           },
           "name": "Pot trimite un testimonial?"
         }
@@ -172,12 +172,12 @@
 }</script>
   <link rel="stylesheet" href="/assets/design-profiles.css">
 
+  <script src="/assets/lead-attribution.js" defer></script>
   <script src="/assets/analytics-events.js" defer></script>
 </head>
-<body class="page-family-trust">
-  <!-- GLOBAL_HEADER_START -->
-<link rel="stylesheet" href="/assets/global-header.css?v=20260713-2">
-<nav id="navbar" role="navigation" aria-label="Navigare principală" data-section-id="navbar" data-factual-governance="config/seo-programs.json#programs">
+<body class="page-family-trust" data-analytics-page-type="page">
+  <!-- GLOBAL_HEADER_START --><link rel="stylesheet" href="/assets/global-header.css?v=20260713-2">
+<nav id="navbar" role="navigation" aria-label="Navigare principală" data-section-id="navbar" data-program-registry="config/seo-programs.json#programs">
   <div class="nav-container">
 
     <a class="nav-logo" href="/" aria-label="FABER - Atelier de Consultanță, acasă" data-analytics-event="nav_click" data-analytics-component="desktop_nav" data-analytics-cta-id="home_logo" data-analytics-target="/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 44" width="240" height="44" aria-hidden="true">
@@ -200,75 +200,63 @@
         <div class="nav-dropdown-panel" id="dropdownPanel" aria-labelledby="dropdownBtn" role="menu" hidden="">
           <div class="dropdown-header">Programe de finanțare 2026</div>
 
-          <a href="/por-adr-nord-est" class="dropdown-item" role="menuitem" data-service-id="por-adr-ne" data-analytics-event="program_menu_click" data-analytics-component="desktop_program_menu" data-analytics-target="/por-adr-nord-est" data-analytics-program-category="regional" data-program-id="program-regional-nord-est" data-source-status="final" data-reviewed-at="2026-07-20">
+          <a href="/por-adr-nord-est" class="dropdown-item" role="menuitem" data-service-id="por-adr-ne" data-analytics-event="program_menu_click" data-analytics-component="desktop_program_menu" data-analytics-target="/por-adr-nord-est" data-analytics-program-category="regional" data-program-id="program-regional-nord-est" data-program-status="ghid_aprobat_nedeschis" data-status-label="Ghid aprobat – depunerea nu este deschisă" data-verified-at="2026-07-20" data-source-url="https://regionordest.ro/">
             <div class="d-icon" style="background:rgba(59,130,246,0.2)"><i class="ph-duotone ph-buildings" style="color:#93c5fd"></i></div>
-            <div class="d-text">POR ADR Nord-Est<div class="d-label">Apeluri regionale pentru IMM</div></div>
+            <div class="d-text">Programul Regional Nord-Est<div class="d-label">Ghid aprobat – depunerea nu este deschisă</div></div>
           </a>
 
-          <a href="/fonduri-regionale" class="dropdown-item" role="menuitem" data-service-id="fonduri-regionale" data-analytics-event="program_menu_click" data-analytics-component="desktop_program_menu" data-analytics-target="/fonduri-regionale" data-analytics-program-category="regional" data-program-id="fonduri-regionale" data-source-status="unknown" data-reviewed-at="2026-07-20">
+          <a href="/fonduri-regionale" class="dropdown-item" role="menuitem" data-service-id="fonduri-regionale" data-analytics-event="program_menu_click" data-analytics-component="desktop_program_menu" data-analytics-target="/fonduri-regionale" data-analytics-program-category="regional" data-program-id="fonduri-regionale" data-program-status="calendar_estimativ" data-status-label="Calendar estimativ – depunerea nu este confirmată" data-verified-at="2026-07-20" data-source-url="https://mfe.gov.ro/">
             <div class="d-icon" style="background:rgba(59,130,246,0.2)"><i class="ph-duotone ph-map-pin" style="color:#93c5fd"></i></div>
-            <div class="d-text">Fonduri regionale<div class="d-label">Programe administrate regional</div></div>
+            <div class="d-text">Fonduri regionale<div class="d-label">Calendar estimativ – depunerea nu este confirmată</div></div>
           </a>
 
-          <a href="/dr12-afir" class="dropdown-item" role="menuitem" data-service-id="dr12-afir" data-analytics-event="program_menu_click" data-analytics-component="desktop_program_menu" data-analytics-target="/dr12-afir" data-analytics-program-category="agriculture" data-program-id="dr12-afir" data-source-status="consultation" data-reviewed-at="2026-07-20">
-            <div class="d-icon" style="background:rgba(34,197,94,0.2)"><i class="ph-duotone ph-plant" style="color:#86efac"></i></div>
-            <div class="d-text">DR 12 / AFIR<div class="d-label">Tineri fermieri | variantă consultativă</div></div>
-          </a>
 
-          <a href="/afir-autoconsum-agroalimentar" class="dropdown-item" role="menuitem" data-service-id="afir-autoconsum" data-analytics-event="program_menu_click" data-analytics-component="desktop_program_menu" data-analytics-target="/afir-autoconsum-agroalimentar" data-analytics-program-category="agriculture_energy" data-program-id="afir-energie-autoconsum" data-source-status="open" data-reviewed-at="2026-07-20">
+
+          <a href="/afir-autoconsum-agroalimentar" class="dropdown-item" role="menuitem" data-service-id="afir-autoconsum" data-analytics-event="program_menu_click" data-analytics-component="desktop_program_menu" data-analytics-target="/afir-autoconsum-agroalimentar" data-analytics-program-category="agriculture_energy" data-program-id="afir-energie-autoconsum" data-program-status="apel_deschis" data-status-label="Apel deschis" data-verified-at="2026-07-20" data-source-url="https://www.afir.ro/media/hkfp4w0v/ghidul-solicitantului-schem%C4%83-energie-autoconsum-v7-iunie-2026.pdf">
             <div class="d-icon" style="background:rgba(234,179,8,0.2)"><i class="ph-duotone ph-sun" style="color:#fde68a"></i></div>
-            <div class="d-text">AFIR Autoconsum agroalimentar<div class="d-label">Apel deschis până la 14 august 2026</div></div>
+            <div class="d-text">AFIR Autoconsum Agroalimentar<div class="d-label">Apel deschis</div></div>
           </a>
 
-          <a href="/autoconsum-public-fotovoltaice-institutii-publice" class="dropdown-item" role="menuitem" data-service-id="autoconsum-pub" data-analytics-event="program_menu_click" data-analytics-component="desktop_program_menu" data-analytics-target="/autoconsum-public-fotovoltaice-institutii-publice" data-analytics-program-category="public_energy" data-program-id="autoconsum-institutii-publice" data-source-status="final" data-reviewed-at="2026-05-20">
+          <a href="/autoconsum-public-fotovoltaice-institutii-publice" class="dropdown-item" role="menuitem" data-service-id="autoconsum-pub" data-analytics-event="program_menu_click" data-analytics-component="desktop_program_menu" data-analytics-target="/autoconsum-public-fotovoltaice-institutii-publice" data-analytics-program-category="public_energy" data-program-id="autoconsum-institutii-publice" data-program-status="ghid_aprobat_nedeschis" data-status-label="Ghid aprobat – depunerea nu este deschisă" data-verified-at="2026-05-20" data-source-url="https://legislatie.just.ro/public/DetaliiDocument/276306">
             <div class="d-icon" style="background:rgba(139,92,246,0.2)"><i class="ph-duotone ph-bank" style="color:#c4b5fd"></i></div>
-            <div class="d-text">Autoconsum instituții publice<div class="d-label">Calendarul apelului se confirmă</div></div>
+            <div class="d-text">Autoconsum instituții publice<div class="d-label">Ghid aprobat – depunerea nu este deschisă</div></div>
           </a>
 
-          <a href="/dr14" class="dropdown-item" role="menuitem" data-service-id="dr14" data-analytics-event="program_menu_click" data-analytics-component="desktop_program_menu" data-analytics-target="/dr14" data-analytics-program-category="agriculture" data-program-id="dr14-afir" data-source-status="consultation" data-reviewed-at="2026-07-20">
-            <div class="d-icon" style="background:rgba(34,197,94,0.2)"><i class="ph-duotone ph-tractor" style="color:#86efac"></i></div>
-            <div class="d-text">DR 14 – Ferme mici<div class="d-label">Ferme mici | variantă consultativă</div></div>
-          </a>
 
-          <a href="/digitalizare-imm" class="dropdown-item" role="menuitem" data-service-id="digitalizare-imm" data-analytics-event="program_menu_click" data-analytics-component="desktop_program_menu" data-analytics-target="/digitalizare-imm" data-analytics-program-category="digitalization" data-program-id="digitalizare-imm" data-source-status="unknown" data-reviewed-at="2026-05-20">
-            <div class="d-icon" style="background:rgba(14,165,233,0.2)"><i class="ph-duotone ph-desktop" style="color:#7dd3fc"></i></div>
-            <div class="d-text">Digitalizare IMM<div class="d-label">Identifică apelul digital activ</div></div>
-          </a>
 
-          <a href="/femeia-antreprenor-2026" class="dropdown-item" role="menuitem" data-service-id="femeia-antreprenor" data-analytics-event="program_menu_click" data-analytics-component="desktop_program_menu" data-analytics-target="/femeia-antreprenor-2026" data-analytics-program-category="entrepreneurship" data-program-id="femeia-antreprenor" data-source-status="unknown" data-reviewed-at="2026-05-20">
+
+
+          <a href="/femeia-antreprenor-2026" class="dropdown-item" role="menuitem" data-service-id="femeia-antreprenor" data-analytics-event="program_menu_click" data-analytics-component="desktop_program_menu" data-analytics-target="/femeia-antreprenor-2026" data-analytics-program-category="entrepreneurship" data-program-id="femeia-antreprenor" data-program-status="calendar_estimativ" data-status-label="Calendar estimativ – depunerea nu este confirmată" data-verified-at="2026-05-20" data-source-url="https://economie.gov.ro/pe-data-de-30-iulie-se-da-startul-inscrierilor-in-cadrul-programului-femeia-antreprenor/">
             <div class="d-icon" style="background:rgba(236,72,153,0.2)"><i class="ph-duotone ph-user-circle" style="color:#f9a8d4"></i></div>
-            <div class="d-text">Femeia Antreprenor<div class="d-label">Ediția activă trebuie confirmată</div></div>
+            <div class="d-text">Femeia Antreprenor<div class="d-label">Calendar estimativ – depunerea nu este confirmată</div></div>
           </a>
 
-          <a href="/gal-afir" class="dropdown-item" role="menuitem" data-service-id="gal-afir" data-analytics-event="program_menu_click" data-analytics-component="desktop_program_menu" data-analytics-target="/gal-afir" data-analytics-program-category="local_development" data-program-id="gal-afir-leader" data-source-status="final" data-reviewed-at="2026-05-26">
+          <a href="/gal-afir" class="dropdown-item" role="menuitem" data-service-id="gal-afir" data-analytics-event="program_menu_click" data-analytics-component="desktop_program_menu" data-analytics-target="/gal-afir" data-analytics-program-category="local_development" data-program-id="gal-afir-leader" data-program-status="ghid_aprobat_nedeschis" data-status-label="Ghid aprobat – depunerea nu este deschisă" data-verified-at="2026-05-26" data-source-url="https://www.afir.ro/finantare/leader/">
             <div class="d-icon" style="background:rgba(34,197,94,0.2)">
               <i class="ph-duotone ph-map-pin" style="color:#86efac"></i>
             </div>
-            <div class="d-text">GAL-AFIR<div class="d-label">LEADER | verifică ghidul local</div></div>
+            <div class="d-text">GAL-AFIR / LEADER<div class="d-label">Ghid aprobat – depunerea nu este deschisă</div></div>
           </a>
 
-          <a href="/e-move" class="dropdown-item" role="menuitem" data-service-id="e-move" data-analytics-event="program_menu_click" data-analytics-component="desktop_program_menu" data-analytics-target="/e-move" data-analytics-program-category="electric_mobility" data-program-id="e-move-ro" data-source-status="consultation" data-reviewed-at="2026-05-27">
+          <a href="/e-move" class="dropdown-item" role="menuitem" data-service-id="e-move" data-analytics-event="program_menu_click" data-analytics-component="desktop_program_menu" data-analytics-target="/e-move" data-analytics-program-category="electric_mobility" data-program-id="e-move-ro" data-program-status="consultare_publica" data-status-label="Consultare publică – depunerea nu este deschisă" data-verified-at="2026-05-27" data-source-url="https://fonduri.mt.ro/transparenta/consultare-publica/fondul-pentru-modernizare/comunicat-fm-consultare-publica-ghidul-solicitantului-promovarea-infrastructurii-pentru-o-mobilitate-cu-emisii-zero-in-sprijinul-intreprinderilor-si-comunitatilor-e-move-ro">
             <div class="d-icon" style="background:rgba(14,165,233,0.2)">
               <i class="ph-duotone ph-battery-charging" style="color:#7dd3fc"></i>
             </div>
-            <div class="d-text">e-MOVE RO<div class="d-label">Stații de încărcare | consultativ</div></div>
+            <div class="d-text">e-MOVE RO<div class="d-label">Consultare publică – depunerea nu este deschisă</div></div>
           </a>
 
-          <a href="/pocidif-21" class="dropdown-item" role="menuitem" data-service-id="pocidif-21" data-analytics-event="program_menu_click" data-analytics-component="desktop_program_menu" data-analytics-target="/pocidif-21" data-analytics-program-category="digital_innovation" data-program-id="pocidif-21" data-source-status="final" data-reviewed-at="2026-07-13">
+          <a href="/pocidif-21" class="dropdown-item" role="menuitem" data-service-id="pocidif-21" data-analytics-event="program_menu_click" data-analytics-component="desktop_program_menu" data-analytics-target="/pocidif-21" data-analytics-program-category="digital_innovation" data-program-id="pocidif-21" data-program-status="ghid_aprobat_nedeschis" data-status-label="Ghid aprobat – depunerea nu este deschisă" data-verified-at="2026-07-13" data-source-url="https://mfe.gov.ro/ghiduri_pocidif/pocidif-ghidul-solicitantului-dezvoltarea-de-noi-servicii-aplicatii-produse-prin-inovare-si-adoptarea-de-tehnologii-avansate-2/">
             <div class="d-icon" style="background:rgba(99,102,241,0.2)">
               <i class="ph-duotone ph-circuitry" style="color:#c4b5fd"></i>
             </div>
-            <div class="d-text">PoCIDIF 2.1<div class="d-label">Inovare digitală | ghid aprobat</div></div>
+            <div class="d-text">PoCIDIF 2.1<div class="d-label">Ghid aprobat – depunerea nu este deschisă</div></div>
           </a>
 
-          <a href="/pro-infra" class="dropdown-item" role="menuitem" data-service-id="pro-infra" data-analytics-event="program_menu_click" data-analytics-component="desktop_program_menu" data-analytics-target="/pro-infra" data-analytics-program-category="infrastructure_production" data-program-id="pro-infra" data-source-status="final" data-reviewed-at="2026-07-13">
-            <div class="d-icon" style="background:rgba(251,146,60,0.2)"><i class="ph-duotone ph-factory" style="color:#fdba74"></i></div>
-            <div class="d-text">PRO INFRA<div class="d-label">Schemă aprobată | verifică apelul</div></div>
-          </a>
 
-          <a href="/start-up-nation-2026" class="dropdown-item" role="menuitem" data-service-id="startup-nation" data-analytics-event="program_menu_click" data-analytics-component="desktop_program_menu" data-analytics-target="/start-up-nation-2026" data-analytics-program-category="entrepreneurship" data-program-id="start-up-nation" data-source-status="unknown" data-reviewed-at="2026-05-20">
+
+          <a href="/start-up-nation-2026" class="dropdown-item" role="menuitem" data-service-id="startup-nation" data-analytics-event="program_menu_click" data-analytics-component="desktop_program_menu" data-analytics-target="/start-up-nation-2026" data-analytics-program-category="entrepreneurship" data-program-id="start-up-nation" data-program-status="calendar_estimativ" data-status-label="Calendar estimativ – depunerea nu este confirmată" data-verified-at="2026-05-20" data-source-url="https://economie.gov.ro/participa-la-definitivarea-procedurii-de-implementare-a-programului-de-succes-start-up-nation-editia-2024/">
             <div class="d-icon" style="background:rgba(139,92,246,0.2)"><i class="ph-duotone ph-rocket-launch" style="color:#a78bfa"></i></div>
-            <div class="d-text">Start-Up Nation<div class="d-label">Ediția activă trebuie confirmată</div></div>
+            <div class="d-text">Start-Up Nation<div class="d-label">Calendar estimativ – depunerea nu este confirmată</div></div>
           </a>
         </div>
       </div>
@@ -277,7 +265,7 @@
 
       <a href="/contact" class="nav-utility btn-secondary" data-analytics-event="nav_click" data-analytics-component="desktop_nav" data-analytics-cta-id="contact" data-analytics-target="/contact">Contact</a>
 
-        <a href="#eligibility-whatsapp-dialog" class="nav-cta btn-primary" data-whatsapp-dialog-open="" data-analytics-event="eligibility_cta_click" data-analytics-component="desktop_nav" data-analytics-cta-id="eligibility_whatsapp" aria-haspopup="dialog" aria-controls="eligibility-whatsapp-dialog">Solicită verificare eligibilitate</a>
+        <a href="#eligibility-whatsapp-dialog" class="nav-cta btn-primary" data-whatsapp-dialog-open="" data-analytics-event="cta_click" data-analytics-component="desktop_nav" data-analytics-cta-id="eligibility_whatsapp" data-analytics-cta-view="true" data-analytics-copy-variant="default" aria-haspopup="dialog" aria-controls="eligibility-whatsapp-dialog">Solicită verificare inițială</a>
     </div>
 
     <button class="hamburger" id="hamburgerBtn" type="button" aria-label="Deschide meniu" aria-expanded="false" aria-controls="mobileMenu" data-analytics-event="nav_click" data-analytics-component="mobile_menu_toggle" data-analytics-cta-id="mobile_menu_toggle">
@@ -294,22 +282,22 @@
     <a href="/fonduri-europene" onclick="closeMobileMenu()" data-analytics-event="nav_click" data-analytics-component="mobile_nav" data-analytics-cta-id="funding" data-analytics-target="/fonduri-europene">Finanțări</a>
     <a href="/blog" onclick="closeMobileMenu()" data-analytics-event="nav_click" data-analytics-component="mobile_nav" data-analytics-cta-id="blog" data-analytics-target="/blog">Blog</a>
     <div class="mobile-section-title">Programe de finanțare</div>
-    <a href="/por-adr-nord-est" data-analytics-event="program_menu_click" data-analytics-component="mobile_program_menu" data-analytics-target="/por-adr-nord-est" data-analytics-program-category="regional" data-program-id="program-regional-nord-est" data-source-status="final" data-reviewed-at="2026-07-20">POR ADR Nord-Est</a>
-    <a href="/fonduri-regionale" data-analytics-event="program_menu_click" data-analytics-component="mobile_program_menu" data-analytics-target="/fonduri-regionale" data-analytics-program-category="regional" data-program-id="fonduri-regionale" data-source-status="unknown" data-reviewed-at="2026-07-20">Fonduri regionale</a>
-    <a href="/dr12-afir" data-analytics-event="program_menu_click" data-analytics-component="mobile_program_menu" data-analytics-target="/dr12-afir" data-analytics-program-category="agriculture" data-program-id="dr12-afir" data-source-status="consultation" data-reviewed-at="2026-07-20">DR 12 / AFIR</a>
-    <a href="/afir-autoconsum-agroalimentar" data-analytics-event="program_menu_click" data-analytics-component="mobile_program_menu" data-analytics-target="/afir-autoconsum-agroalimentar" data-analytics-program-category="agriculture_energy" data-program-id="afir-energie-autoconsum" data-source-status="open" data-reviewed-at="2026-07-20">AFIR Autoconsum agroalimentar</a>
-    <a href="/autoconsum-public-fotovoltaice-institutii-publice" data-analytics-event="program_menu_click" data-analytics-component="mobile_program_menu" data-analytics-target="/autoconsum-public-fotovoltaice-institutii-publice" data-analytics-program-category="public_energy" data-program-id="autoconsum-institutii-publice" data-source-status="final" data-reviewed-at="2026-05-20">Autoconsum instituții publice</a>
-    <a href="/dr14" data-analytics-event="program_menu_click" data-analytics-component="mobile_program_menu" data-analytics-target="/dr14" data-analytics-program-category="agriculture" data-program-id="dr14-afir" data-source-status="consultation" data-reviewed-at="2026-07-20">DR 14 – Ferme mici</a>
-    <a href="/digitalizare-imm" data-analytics-event="program_menu_click" data-analytics-component="mobile_program_menu" data-analytics-target="/digitalizare-imm" data-analytics-program-category="digitalization" data-program-id="digitalizare-imm" data-source-status="unknown" data-reviewed-at="2026-05-20">Digitalizare IMM</a>
-    <a href="/femeia-antreprenor-2026" data-analytics-event="program_menu_click" data-analytics-component="mobile_program_menu" data-analytics-target="/femeia-antreprenor-2026" data-analytics-program-category="entrepreneurship" data-program-id="femeia-antreprenor" data-source-status="unknown" data-reviewed-at="2026-05-20">Femeia Antreprenor</a>
-    <a href="/gal-afir" data-analytics-event="program_menu_click" data-analytics-component="mobile_program_menu" data-analytics-target="/gal-afir" data-analytics-program-category="local_development" data-program-id="gal-afir-leader" data-source-status="final" data-reviewed-at="2026-05-26">GAL-AFIR</a>
-    <a href="/e-move" data-analytics-event="program_menu_click" data-analytics-component="mobile_program_menu" data-analytics-target="/e-move" data-analytics-program-category="electric_mobility" data-program-id="e-move-ro" data-source-status="consultation" data-reviewed-at="2026-05-27">e-MOVE RO</a>
-    <a href="/pocidif-21" data-analytics-event="program_menu_click" data-analytics-component="mobile_program_menu" data-analytics-target="/pocidif-21" data-analytics-program-category="digital_innovation" data-program-id="pocidif-21" data-source-status="final" data-reviewed-at="2026-07-13">PoCIDIF 2.1</a>
-    <a href="/pro-infra" data-analytics-event="program_menu_click" data-analytics-component="mobile_program_menu" data-analytics-target="/pro-infra" data-analytics-program-category="infrastructure_production" data-program-id="pro-infra" data-source-status="final" data-reviewed-at="2026-07-13">PRO INFRA</a>
-    <a href="/start-up-nation-2026" data-analytics-event="program_menu_click" data-analytics-component="mobile_program_menu" data-analytics-target="/start-up-nation-2026" data-analytics-program-category="entrepreneurship" data-program-id="start-up-nation" data-source-status="unknown" data-reviewed-at="2026-05-20">Start-Up Nation</a>
+    <a href="/por-adr-nord-est" data-analytics-event="program_menu_click" data-analytics-component="mobile_program_menu" data-analytics-target="/por-adr-nord-est" data-analytics-program-category="regional" data-program-id="program-regional-nord-est" data-program-status="ghid_aprobat_nedeschis" data-status-label="Ghid aprobat – depunerea nu este deschisă" data-verified-at="2026-07-20" data-source-url="https://regionordest.ro/">Programul Regional Nord-Est</a>
+    <a href="/fonduri-regionale" data-analytics-event="program_menu_click" data-analytics-component="mobile_program_menu" data-analytics-target="/fonduri-regionale" data-analytics-program-category="regional" data-program-id="fonduri-regionale" data-program-status="calendar_estimativ" data-status-label="Calendar estimativ – depunerea nu este confirmată" data-verified-at="2026-07-20" data-source-url="https://mfe.gov.ro/">Fonduri regionale</a>
+
+    <a href="/afir-autoconsum-agroalimentar" data-analytics-event="program_menu_click" data-analytics-component="mobile_program_menu" data-analytics-target="/afir-autoconsum-agroalimentar" data-analytics-program-category="agriculture_energy" data-program-id="afir-energie-autoconsum" data-program-status="apel_deschis" data-status-label="Apel deschis" data-verified-at="2026-07-20" data-source-url="https://www.afir.ro/media/hkfp4w0v/ghidul-solicitantului-schem%C4%83-energie-autoconsum-v7-iunie-2026.pdf">AFIR Autoconsum Agroalimentar</a>
+    <a href="/autoconsum-public-fotovoltaice-institutii-publice" data-analytics-event="program_menu_click" data-analytics-component="mobile_program_menu" data-analytics-target="/autoconsum-public-fotovoltaice-institutii-publice" data-analytics-program-category="public_energy" data-program-id="autoconsum-institutii-publice" data-program-status="ghid_aprobat_nedeschis" data-status-label="Ghid aprobat – depunerea nu este deschisă" data-verified-at="2026-05-20" data-source-url="https://legislatie.just.ro/public/DetaliiDocument/276306">Autoconsum instituții publice</a>
+
+
+    <a href="/femeia-antreprenor-2026" data-analytics-event="program_menu_click" data-analytics-component="mobile_program_menu" data-analytics-target="/femeia-antreprenor-2026" data-analytics-program-category="entrepreneurship" data-program-id="femeia-antreprenor" data-program-status="calendar_estimativ" data-status-label="Calendar estimativ – depunerea nu este confirmată" data-verified-at="2026-05-20" data-source-url="https://economie.gov.ro/pe-data-de-30-iulie-se-da-startul-inscrierilor-in-cadrul-programului-femeia-antreprenor/">Femeia Antreprenor</a>
+    <a href="/gal-afir" data-analytics-event="program_menu_click" data-analytics-component="mobile_program_menu" data-analytics-target="/gal-afir" data-analytics-program-category="local_development" data-program-id="gal-afir-leader" data-program-status="ghid_aprobat_nedeschis" data-status-label="Ghid aprobat – depunerea nu este deschisă" data-verified-at="2026-05-26" data-source-url="https://www.afir.ro/finantare/leader/">GAL-AFIR / LEADER</a>
+    <a href="/e-move" data-analytics-event="program_menu_click" data-analytics-component="mobile_program_menu" data-analytics-target="/e-move" data-analytics-program-category="electric_mobility" data-program-id="e-move-ro" data-program-status="consultare_publica" data-status-label="Consultare publică – depunerea nu este deschisă" data-verified-at="2026-05-27" data-source-url="https://fonduri.mt.ro/transparenta/consultare-publica/fondul-pentru-modernizare/comunicat-fm-consultare-publica-ghidul-solicitantului-promovarea-infrastructurii-pentru-o-mobilitate-cu-emisii-zero-in-sprijinul-intreprinderilor-si-comunitatilor-e-move-ro">e-MOVE RO</a>
+    <a href="/pocidif-21" data-analytics-event="program_menu_click" data-analytics-component="mobile_program_menu" data-analytics-target="/pocidif-21" data-analytics-program-category="digital_innovation" data-program-id="pocidif-21" data-program-status="ghid_aprobat_nedeschis" data-status-label="Ghid aprobat – depunerea nu este deschisă" data-verified-at="2026-07-13" data-source-url="https://mfe.gov.ro/ghiduri_pocidif/pocidif-ghidul-solicitantului-dezvoltarea-de-noi-servicii-aplicatii-produse-prin-inovare-si-adoptarea-de-tehnologii-avansate-2/">PoCIDIF 2.1</a>
+
+    <a href="/start-up-nation-2026" data-analytics-event="program_menu_click" data-analytics-component="mobile_program_menu" data-analytics-target="/start-up-nation-2026" data-analytics-program-category="entrepreneurship" data-program-id="start-up-nation" data-program-status="calendar_estimativ" data-status-label="Calendar estimativ – depunerea nu este confirmată" data-verified-at="2026-05-20" data-source-url="https://economie.gov.ro/participa-la-definitivarea-procedurii-de-implementare-a-programului-de-succes-start-up-nation-editia-2024/">Start-Up Nation</a>
     <a href="/calculator-soc" data-analytics-event="nav_click" data-analytics-component="mobile_nav" data-analytics-cta-id="calculator_soc" data-analytics-target="/calculator-soc">🧮 Calculator SOC</a>
     <a href="/contact" onclick="closeMobileMenu()" data-analytics-event="nav_click" data-analytics-component="mobile_nav" data-analytics-cta-id="contact" data-analytics-target="/contact">Contact</a>
-    <a href="#eligibility-whatsapp-dialog" class="mobile-cta btn-primary" data-whatsapp-dialog-open="" data-analytics-event="eligibility_cta_click" data-analytics-component="mobile_nav" data-analytics-cta-id="eligibility_whatsapp" aria-haspopup="dialog" aria-controls="eligibility-whatsapp-dialog">Solicită verificare eligibilitate</a>
+    <a href="#eligibility-whatsapp-dialog" class="mobile-cta btn-primary" data-whatsapp-dialog-open="" data-analytics-event="cta_click" data-analytics-component="mobile_nav" data-analytics-cta-id="eligibility_whatsapp" data-analytics-cta-view="true" data-analytics-copy-variant="default" aria-haspopup="dialog" aria-controls="eligibility-whatsapp-dialog">Solicită verificare inițială</a>
   </nav>
 </div>
 <div id="eligibility-whatsapp-dialog" class="eligibility-whatsapp-dialog" role="dialog" aria-modal="true" aria-labelledby="eligibility-whatsapp-title" hidden="">
@@ -319,11 +307,11 @@
     <h2 id="eligibility-whatsapp-title">Trimite mesaj prin WhatsApp</h2>
     <p>Alege numărul la care dorești să trimiți mesajul.</p>
     <div class="eligibility-whatsapp-options">
-      <a href="https://wa.me/40769828338" target="_blank" rel="noopener noreferrer" data-analytics-event="whatsapp_number_click" data-analytics-component="whatsapp_dialog" data-analytics-cta-id="whatsapp_option_a">
+      <a href="https://wa.me/40769828338" target="_blank" rel="noopener noreferrer" data-analytics-event="contact_whatsapp" data-analytics-component="whatsapp_dialog" data-analytics-cta-id="whatsapp_option_a">
         <span>WhatsApp</span>
         <strong>0769 828 338</strong>
       </a>
-      <a href="https://wa.me/40753326229" target="_blank" rel="noopener noreferrer" data-analytics-event="whatsapp_number_click" data-analytics-component="whatsapp_dialog" data-analytics-cta-id="whatsapp_option_b">
+      <a href="https://wa.me/40753326229" target="_blank" rel="noopener noreferrer" data-analytics-event="contact_whatsapp" data-analytics-component="whatsapp_dialog" data-analytics-cta-id="whatsapp_option_b">
         <span>WhatsApp</span>
         <strong>0753 326 229</strong>
       </a>
@@ -340,12 +328,12 @@
     <h1>Studii de caz pentru fonduri europene</h1>
     <p>Studii de caz anonimizate pentru proiecte cu fonduri europene: domeniu, provocare, solutie, documente și rezultate publicabile.</p>
     <div class="hero-actions">
-      <a class="btn btn-primary" href="/verificare-eligibilitate-fonduri-europene">Solicită o analiza similara</a>
+      <a class="btn btn-primary" href="/verificare-eligibilitate-fonduri-europene">Solicită o analiză similara</a>
       <a class="btn btn-secondary" href="https://mfe.gov.ro/" target="_blank" rel="noopener noreferrer" data-analytics-event="source_document_click" data-analytics-component="official_source" data-analytics-cta-id="source_document" data-analytics-target="https://mfe.gov.ro/">Vezi portofoliul</a>
     </div>
     <div class="hero-summary" aria-label="Rezumat vizual pentru Studii de caz">
       <span class="hero-summary__item"><strong>Beneficiar</strong><em>beneficiari care vor exemple</em></span>
-      <span class="hero-summary__item"><strong>Status</strong><em>nu se publica sume sau rezultate fără acord explicit.</em></span>
+      <span class="hero-summary__item"><strong>Status</strong><em>nu se publică sume sau rezultate fără acord explicit.</em></span>
       <span class="hero-summary__item"><strong>Documente</strong><em>domeniu; program</em></span>
       <span class="hero-summary__item"><strong>Risc</strong><em>nume fără acord</em></span>
     </div>
@@ -356,10 +344,10 @@
         <article class="mini-card design-card"><span class="design-card__badge">Beneficiar</span><h3>Beneficiar</h3><p>beneficiari care vor exemple; antreprenori care pregătesc proiecte</p></article>
         <article class="mini-card design-card"><span class="design-card__badge">Problema</span><h3>Problema</h3><p>încadrare, documente sau buget de clarificat</p></article>
         <article class="mini-card design-card"><span class="design-card__badge">Interventie</span><h3>Interventie</h3><p>analiza FABER pe documente și surse oficiale</p></article>
-        <article class="mini-card design-card"><span class="design-card__badge">Rezultat</span><h3>Rezultat</h3><p>decizie prudentă, ajustare sau pas urmator</p></article>
+        <article class="mini-card design-card"><span class="design-card__badge">Rezultat</span><h3>Rezultat</h3><p>decizie prudentă, ajustare sau pas următor</p></article>
       </section>
 
-      <p class="snippet-box">Studiile de caz FABER se publica doar când există materiale reale, anonimizare și acord pentru detaliile folosite. Până atunci, pagina stabileste structura unui caz publicabil: problema, analiza, documente, decizie și rezultat dovedit.</p>
+      <p class="snippet-box">Studiile de caz FABER se publică doar când există materiale reale, anonimizare și acord pentru detaliile folosite. Până atunci, pagina stabilește structura unui caz publicabil: problema, analiza, documente, decizie și rezultat dovedit.</p>
       <h2>Format pentru studii de caz validate</h2>
       <div class="case-grid">
         <article class="case-card">
@@ -380,36 +368,36 @@
         </article>
       </div>
       <h2>Cum sunt construite studiile de caz</h2>
-      <p>Un studiu de caz bun porneste de la problema, nu de la suma. Înainte de a discuta grantul, trebuie vazut dacă solicitantul poate demonstra eligibilitatea, dacă investiția are legătura cu activitatea și dacă documentele pot susține bugetul. Aceasta abordare ajuta beneficiarul să inteleaga ce trebuie rezolvat înainte de depunere.</p>
-      <p>În fiecare caz, FABER urmărește aceeași logica: solicitant, activitate, locație, buget, cofinanțare, cheltuieli, punctaj, documente și calendar. Dacă una dintre aceste piese este slabă, proiectul poate fi ajustat sau amanat. Un rezultat bun poate fi inclusiv decizia de a nu depune imediat, pentru ca evita costuri și asteptari nerealiste.</p>
-      <p>Un caz nu este publicat doar pentru ca seamana cu o situatie frecventa. Trebuie să existe o baza verificabila: ce program a fost analizat, ce documente au existat, ce decizie a fost luata și ce detalii pot fi facute publice. Aceasta regula pastreaza pagina utilă pentru cititori fără să transforme exemplele în reclame sau promisiuni.</p>
+      <p>Un studiu de caz bun porneste de la problema, nu de la suma. Înainte de a discuta grantul, trebuie vazut dacă solicitantul poate demonstra eligibilitatea, dacă investiția are legătura cu activitatea și dacă documentele pot susține bugetul. Această abordare ajută beneficiarul să inteleaga ce trebuie rezolvat înainte de depunere.</p>
+      <p>În fiecare caz, FABER urmărește aceeași logica: solicitant, activitate, locație, buget, cofinanțare, cheltuieli, punctaj, documente și calendar. Dacă una dintre aceste piese este slabă, proiectul poate fi ajustat sau amânat. Un rezultat bun poate fi inclusiv decizia de a nu depune imediat, pentru ca evită costuri și asteptari nerealiste.</p>
+      <p>Un caz nu este publicat doar pentru ca seamana cu o situatie frecventa. Trebuie să existe o baza verificabila: ce program a fost analizat, ce documente au existat, ce decizie a fost luata și ce detalii pot fi facute publice. Această regula păstrează pagina utilă pentru cititori fără să transforme exemplele în reclame sau promisiuni.</p>
       <h2>Lectii care se repeta în proiecte</h2>
       <ul>
-        <li>un cod CAEN potrivit nu ajuta dacă investiția nu este justificata operational;</li>
+        <li>un cod CAEN potrivit nu ajută dacă investiția nu este justificată operațional;</li>
         <li>o ofertă generica poate slabi un buget altfel bun;</li>
         <li>cofinanțarea trebuie confirmata înainte de depunere, nu după selecție;</li>
-        <li>punctajul se estimeaza doar pe criterii care pot fi dovedite;</li>
-        <li>clarificarile sunt mai usor de gestionat când dosarul a fost documentat ordonat.</li>
+        <li>punctajul se estimează doar pe criterii care pot fi dovedite;</li>
+        <li>clarificările sunt mai usor de gestionat când dosarul a fost documentat ordonat.</li>
       </ul>
-      <p>Aceste lectii sunt valabile pentru agricultura, digitalizare, energie și proiecte regionale. Diferenta este data de documentele specifice: o ferma are nevoie de date agricole și calcul SO, un IMM de digitalizare are nevoie de justificarea proceselor, iar un proiect energetic are nevoie de consum, avize și dimensionare.</p>
+      <p>Aceste lectii sunt valabile pentru agricultură, digitalizare, energie și proiecte regionale. Diferența este data de documentele specifice: o ferma are nevoie de date agricole și calcul SO, un IMM de digitalizare are nevoie de justificarea proceselor, iar un proiect energetic are nevoie de consum, avize și dimensionare.</p>
       <h2>Ce trimiți pentru un studiu aplicat pe cazul tau</h2>
-      <p>Pentru o discutie inițială, sunt utile datele solicitantului, codul CAEN sau descrierea fermei, localitatea investiției, bugetul estimat, lista de cheltuieli dorite, cofinanțarea disponibilă și documentele deja pregătite. Cu aceste informații, FABER poate indica ce program merita verificat și ce lipsește înainte de dosarul complet.</p>
-      <p>Dacă informațiile sunt incomplete, studiul de caz se opreste la nivel de lectie generala. Publicarea se face doar după ce forma finală nu mai expune date personale, contracte, furnizori sau cifre care pot identifica beneficiarul.</p>
+      <p>Pentru o discuție inițială, sunt utile datele solicitantului, codul CAEN sau descrierea fermei, localitatea investiției, bugetul estimat, lista de cheltuieli dorite, cofinanțarea disponibilă și documentele deja pregătite. Cu aceste informații, FABER poate indica ce program merită verificat și ce lipsește înainte de dosarul complet.</p>
+      <p>Dacă informațiile sunt incomplete, studiul de caz se opreste la nivel de lectie generală. Publicarea se face doar după ce forma finală nu mai expune date personale, contracte, furnizori sau cifre care pot identifica beneficiarul.</p>
 
       <h2>Metodologie de anonimizare și actualizare</h2>
-      <p>Înainte ca un exemplu să fie publicat, FABER elimina datele care pot identifica direct beneficiarul: nume, adresă exacta, furnizori, contracte, documente financiare și detalii comerciale sensibile. Dacă proiectul poate fi recunoscut usor prin combinatia dintre localitate, domeniu și valoare, informatia este agregata sau transformata intr-un interval orientativ.</p>
-      <p>Actualizarea se face când există un motiv real: ghid schimbat, apel nou, acord de publicare, rezultat documentat sau lectie relevanta pentru alti beneficiari. Nu completam paginile cu rezultate inventate și nu transformam feedbackul în promisiuni comerciale. Acolo unde o cifra nu poate fi dovedita, informatia rămâne nepublicata sau este explicata ca scenariu orientativ.</p>
+      <p>Înainte ca un exemplu să fie publicat, FABER elimina datele care pot identifica direct beneficiarul: nume, adresă exacta, furnizori, contracte, documente financiare și detalii comerciale sensibile. Dacă proiectul poate fi recunoscut usor prin combinatia dintre localitate, domeniu și valoare, informația este agregata sau transformata într-un interval orientativ.</p>
+      <p>Actualizarea se face când există un motiv real: ghid schimbat, apel nou, acord de publicare, rezultat documentat sau lectie relevanta pentru alti beneficiari. Nu completam paginile cu rezultate inventate și nu transformam feedbackul în promisiuni comerciale. Acolo unde o cifra nu poate fi dovedita, informația rămâne nepublicata sau este explicata ca scenariu orientativ.</p>
       <h2>Ce poți invata din aceste exemple</h2>
-      <p>Cel mai important lucru este ordinea verificarii. Un proiect solid incepe cu eligibilitatea solicitantului și continua cu documentele, investiția, bugetul și punctajul. Dacă se porneste direct de la suma maxima sau de la o lista de cumparaturi, apar frecvent blocaje: cheltuieli greu de justificat, cofinanțare insuficienta, documente pentru spațiu incomplete sau criterii de punctaj care nu pot fi susținute.</p>
-      <p>Exemplele trebuie folosite ca punct de orientare pentru discuția inițială. Pentru decizia finală, FABER verifică ghidul activ, anexele, clarificarile autorității și documentele concrete ale beneficiarului. Aceasta separare mentine pagina utilă fără să creeze asteptari false.</p>
-      <p>Un beneficiar poate folosi aceste pagini pentru a pregati întrebări mai bune: ce document lipsește, ce cheltuiala este sensibila, ce suma trebuie acoperita din surse proprii și ce criteriu de selecție merita verificat primul.</p>
+      <p>Cel mai important lucru este ordinea verificării. Un proiect solid începe cu eligibilitatea solicitantului și continuă cu documentele, investiția, bugetul și punctajul. Dacă se porneste direct de la suma maxima sau de la o lista de cumpărături, apar frecvent blocaje: cheltuieli greu de justificat, cofinanțare insuficientă, documente pentru spațiu incomplete sau criterii de punctaj care nu pot fi susținute.</p>
+      <p>Exemplele trebuie folosite ca punct de orientare pentru discuția inițială. Pentru decizia finală, FABER verifică ghidul activ, anexele, clarificările autorității și documentele concrete ale beneficiarului. Această separare mentine pagina utilă fără să creeze asteptari false.</p>
+      <p>Un beneficiar poate folosi aceste pagini pentru a pregăti întrebări mai bune: ce document lipsește, ce cheltuiala este sensibila, ce suma trebuie acoperita din surse proprii și ce criteriu de selecție merită verificat primul.</p>
       <section class="official-sources" aria-labelledby="studii-de-caz-official-sources">
         <h2 id="studii-de-caz-official-sources">Surse oficiale consultate</h2>
         <ul class="official-sources__list">
         <li class="official-sources__item" data-source-key="fonduri-europene">
           <a class="official-sources__title" href="https://mfe.gov.ro/" target="_blank" rel="noopener noreferrer" data-analytics-event="source_document_click" data-analytics-component="official_source" data-analytics-cta-id="source_document" data-analytics-target="https://mfe.gov.ro/">Fonduri europene nerambursabile</a>
           <dl class="official-sources__meta">
-            <div><dt>Institutie</dt><dd>MIPE</dd></div>
+            <div><dt>Instituție</dt><dd>MIPE</dd></div>
             <div><dt>Tip document</dt><dd>pagina program</dd></div>
             <div><dt>Verificat</dt><dd><time datetime="2026-05-20">20 mai 2026</time></dd></div>
             <div class="official-sources__url"><dt>URL</dt><dd><a href="https://mfe.gov.ro/" target="_blank" rel="noopener noreferrer" data-analytics-event="source_document_click" data-analytics-component="official_source" data-analytics-cta-id="source_document" data-analytics-target="https://mfe.gov.ro/">https://mfe.gov.ro/</a></dd></div>
@@ -420,14 +408,14 @@
       </section>
       <h2>Întrebări frecvente</h2>
       <section class="faq-item"><h3>De ce sunt anonimizate studiile?</h3><p>Pentru protectia clientilor și a datelor comerciale.</p></section>
-<section class="faq-item"><h3>Publicati rezultate garantate?</h3><p>Nu. Se publica doar rezultate confirmate și permise.</p></section>
-<section class="faq-item"><h3>Ce contine un studiu?</h3><p>Domeniu, program, provocare, solutie, documente cheie și rezultat.</p></section>
-<section class="faq-item"><h3>Pot trimite un testimonial?</h3><p>Da, testimonialele se publica doar dacă sunt veridice și aprobate.</p></section>
+<section class="faq-item"><h3>Publicati rezultate garantate?</h3><p>Nu. Se publică doar rezultate confirmate și permise.</p></section>
+<section class="faq-item"><h3>Ce conține un studiu?</h3><p>Domeniu, program, provocare, solutie, documente cheie și rezultat.</p></section>
+<section class="faq-item"><h3>Pot trimite un testimonial?</h3><p>Da, testimonialele se publică doar dacă sunt veridice și aprobate.</p></section>
 
       <div class="related-links"><a href="/metodologie-verificare-eligibilitate">Metodologie eligibilitate</a>
 <a href="/surse-oficiale-fonduri-europene">Surse oficiale</a>
 <a href="/despre-faber">Despre FABER</a>
-<a href="/contact" data-analytics-event="contact_page_click" data-analytics-component="contact_cta" data-analytics-cta-id="contact_page" data-analytics-target="/contact">Contact</a>
+<a href="/contact" data-analytics-event="cta_click" data-analytics-component="contact_cta" data-analytics-cta-id="studii_de_caz_contact_1" data-analytics-target="/contact" data-analytics-cta-view="true" data-analytics-copy-variant="default">Contact</a>
 <a href="/studii-de-caz-fonduri-europene">Studii de caz</a>
 <a href="/portofoliu">Portofoliu</a>
 <a href="/testimoniale">Testimoniale</a>
@@ -435,14 +423,15 @@
     </article>
     <section class="cta-box">
       <h2>Ai un caz asemanator?</h2>
-      <p>Trimite cateva detalii despre solicitant, localitate, cod CAEN, investiție și buget. Raspunsul inițial este orientativ și nu reprezinta promisiune de finanțare.</p>
+      <p>Trimite cateva detalii despre solicitant, localitate, cod CAEN, investiție și buget. Răspunsul inițial este orientativ și nu reprezintă promisiune de finanțare.</p>
       <div class="cta-actions">
-        <a class="btn btn-primary" href="/contact" data-analytics-event="contact_page_click" data-analytics-component="contact_cta" data-analytics-cta-id="contact_page" data-analytics-target="/contact">Solicită o analiza similara</a>
+        <a class="btn btn-primary" href="/contact" data-analytics-event="cta_click" data-analytics-component="contact_cta" data-analytics-cta-id="studii_de_caz_contact_2" data-analytics-target="/contact" data-analytics-cta-view="true" data-analytics-copy-variant="default">Solicită o analiză similara</a>
         <a class="btn btn-secondary" href="/consultanta-fonduri-europene">Vezi serviciile</a>
       </div>
     </section>
   </main>
-  <footer class="footer">© 2026 FABER - Atelier de Consultanță · <a href="/fonduri-europene">Fonduri europene</a> · <a href="/contact" data-analytics-event="contact_page_click" data-analytics-component="contact_cta" data-analytics-cta-id="contact_page" data-analytics-target="/contact">Contact</a></footer>
+  <footer class="footer">© 2026 FABER - Atelier de Consultanță · <a href="/fonduri-europene">Fonduri europene</a> · <a href="/contact" data-analytics-event="cta_click" data-analytics-component="contact_cta" data-analytics-cta-id="studii_de_caz_contact_3" data-analytics-target="/contact" data-analytics-cta-view="true" data-analytics-copy-variant="default">Contact</a><!-- CANONICAL_CONTACT_START --><!-- CANONICAL_CONTACT_END --></footer>
+
 
 
 </body></html>

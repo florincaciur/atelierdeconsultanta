@@ -4,6 +4,7 @@
 const cp = require("child_process");
 const fs = require("fs");
 const path = require("path");
+const { sitemapUrls: readSitemapUrls } = require("./sitemap-utils");
 
 const ROOT = path.resolve(__dirname, "..");
 const PUBLIC_DIR = fs.existsSync(path.join(ROOT, "dist")) ? path.join(ROOT, "dist") : ROOT;
@@ -182,8 +183,8 @@ function meta(file, pathname, headerRules) {
 }
 
 function sitemapUrls() {
-  const text = readIfExists(path.join(PUBLIC_DIR, "sitemap.xml"));
-  return new Set([...text.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]));
+  if (!fs.existsSync(path.join(PUBLIC_DIR, "sitemap.xml"))) return new Set();
+  return new Set(readSitemapUrls(PUBLIC_DIR));
 }
 
 function cleanAbsoluteUrl(rawUrl, { keepQuery = false } = {}) {

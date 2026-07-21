@@ -526,6 +526,63 @@
       gap: 18px;
     }
 
+    .governance-toolbar {
+      display: flex;
+      gap: 12px;
+      align-items: end;
+      flex-wrap: wrap;
+      margin: 18px 0;
+    }
+
+    .governance-toolbar .field-group {
+      min-width: min(100%, 320px);
+      margin: 0;
+    }
+
+    .governance-summary {
+      margin: 0 0 14px;
+      color: var(--gray-500);
+    }
+
+    .governance-card {
+      border: 1px solid var(--gray-200);
+      border-radius: 14px;
+      padding: 16px;
+      background: var(--white);
+    }
+
+    .governance-card--expired {
+      border-color: #d97706;
+      background: #fffbeb;
+    }
+
+    .governance-card h3 {
+      margin: 0 0 8px;
+      font-size: 1rem;
+      overflow-wrap: anywhere;
+    }
+
+    .governance-card p {
+      margin: 6px 0;
+    }
+
+    .governance-issues {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-top: 12px;
+    }
+
+    .governance-issue {
+      display: inline-flex;
+      border-radius: 999px;
+      padding: 4px 9px;
+      background: #fee2e2;
+      color: #991b1b;
+      font-size: .78rem;
+      font-weight: 700;
+    }
+
     .mini-card {
       padding: 18px;
       border: 1px solid var(--gray-100);
@@ -1200,20 +1257,14 @@
           <div class="card">
             <div class="card-title">
               <span>🖼️ Bannere carusel homepage</span>
-              <small>editare completă: titlu, descriere, CTA, imagine, ordine, status</small>
+              <small>date factuale generate exclusiv din registrul unic</small>
             </div>
 
             <div class="info-box">
-              Modificările sunt salvate local în memorie. Apasă <strong>🚀 Publică banners.json</strong> pentru a trimite
-              schimbările live pe site. Slide-urile cu <strong>Status: INACTIV</strong> nu apar în carusel.
-              Dacă toate sunt inactive, secțiunea de carusel este ascunsă automat.
-            </div>
-
-            <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px;align-items:center;">
-              <button class="btn btn-primary" onclick="addNewBanner()">+ Banner nou</button>
-              <button class="btn btn-secondary" onclick="loadBannersJson()">🔄 Reîncarcă din GitHub</button>
-              <button class="btn btn-secondary" onclick="exportBannersJson()">⬇️ Export JSON local</button>
-              <button class="btn btn-primary" onclick="publishBannersJson()" style="margin-left:auto;">🚀 Publică banners.json</button>
+              <strong>banners.json este un artefact generat și nu se editează direct.</strong>
+              Titlul, statusul, data verificării, sursa, grantul și cofinanțarea provin din
+              <code>config/seo-programs.json#programs</code>. După revizuirea registrului rulează
+              <code>npm run validate:program-registry</code> și <code>npm run sync:program-facts</code>.
             </div>
 
             <div class="status-msg" id="carouselPublishStatus"></div>
@@ -1225,17 +1276,39 @@
           <div class="card">
             <div class="card-title">
               <span>💶 Editor programe</span>
-              <small>sume, procente, deadline countdown</small>
+              <small>registru unic cu taxonomie și validare înainte de publicare</small>
             </div>
 
             <div class="info-box">
-              Acest editor modifică deadline-ul afișat și data din countdown. Pentru datele SEO folosește tab-ul „SEO pagini”.
+              Statusurile și valorile nu se mai editează în pagini, bannere sau ghiduri derivate.
+              Actualizează numai <code>config/seo-programs.json#programs</code>. Un program public necesită
+              <code>verifiedAt</code>, <code>sourceUrl</code> și <code>sourceVersion</code>; valorile numerice
+              sunt respinse fără sursă oficială. Înregistrările <code>DE_VALIDAT_UMAN</code> rămân în
+              <code>pending_validation</code> și nu apar pe site.
             </div>
 
-            <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px;align-items:center;">
-              <button class="btn btn-secondary" onclick="loadOfficialGuidesJson()">🔄 Reîncarcă linkuri ghid</button>
-              <button class="btn btn-primary" onclick="publishOfficialGuidesJson()" style="margin-left:auto;">🚀 Publică linkuri ghid</button>
+            <div class="warning-box">
+              Pentru DR12, responsabilul uman trebuie să confirme statusul, documentul și data înainte de publicare.
+              Lista completă se află în <code>reports/program-registry-human-validation.md</code>.
             </div>
+
+            <div class="governance-toolbar" aria-label="Filtre guvernanță editorială">
+              <div class="field-group">
+                <label class="field-label" for="editorialGovernanceFilter">Filtru editorial</label>
+                <select id="editorialGovernanceFilter">
+                  <option value="all">Toate paginile guvernate</option>
+                  <option value="missing_source">Sursă lipsă</option>
+                  <option value="expired_review">Verificare expirată</option>
+                  <option value="missing_reviewer">Reviewer lipsă</option>
+                  <option value="program_page_contradiction">Contradicție program–pagină</option>
+                </select>
+              </div>
+              <a class="btn btn-secondary" href="../reports/editorial-governance-expiry.md">Deschide raportul complet</a>
+              <a class="btn btn-secondary" href="../docs/procedura-guvernanta-editoriala.md">Procedura editorială</a>
+            </div>
+
+            <p class="governance-summary" id="editorialGovernanceSummary" role="status"></p>
+            <div id="editorialGovernanceGrid" class="programs-grid"></div>
 
             <div class="status-msg" id="officialGuidesStatus"></div>
             <div id="programsGrid" class="programs-grid"></div>
@@ -1531,4 +1604,88 @@
   <!-- PARTEA 3 / 4: JAVASCRIPT — CONFIG, AUTH, GITHUB, SEO, CONȚINUT, CARUSEL -->
 
 
+  <script>
+    (() => {
+      const labels = {
+        missing_source: "Sursă lipsă",
+        expired_review: "Verificare expirată",
+        missing_reviewer: "Reviewer lipsă",
+        program_page_contradiction: "Contradicție program–pagină"
+      };
+
+      const escapeHtml = (value) => String(value ?? "")
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;");
+
+      function governanceRecords() {
+        const node = document.getElementById("editorialGovernanceData");
+        if (!node) return [];
+        try {
+          return JSON.parse(node.textContent || "[]");
+        } catch (error) {
+          console.error("Registrul editorial nu poate fi citit", error);
+          return [];
+        }
+      }
+
+      function renderEditorialGovernance() {
+        const filter = document.getElementById("editorialGovernanceFilter")?.value || "all";
+        const grid = document.getElementById("editorialGovernanceGrid");
+        const summary = document.getElementById("editorialGovernanceSummary");
+        if (!grid || !summary) return;
+
+        const records = governanceRecords();
+        const visible = filter === "all"
+          ? records
+          : records.filter((record) => Array.isArray(record.issues) && record.issues.includes(filter));
+        const expiredCount = records.filter((record) => record.expired).length;
+        summary.textContent = `${visible.length} din ${records.length} pagini afișate. ${expiredCount} verificări expirate necesită revizuire internă.`;
+
+        grid.innerHTML = visible.map((record) => {
+          const issues = Array.isArray(record.issues) ? record.issues : [];
+          const badges = issues.length
+            ? issues.map((issue) => `<span class="governance-issue">${escapeHtml(labels[issue] || issue)}</span>`).join("")
+            : record.governanceState === "public"
+              ? '<span class="governance-issue" style="background:#dcfce7;color:#166534">Fără abatere curentă</span>'
+              : '<span class="governance-issue" style="background:#fef3c7;color:#92400e">Metadate în validare</span>';
+          const expiredWarning = record.expired
+            ? '<p><strong>Revizuire obligatorie înainte de schimbarea statusului.</strong> Alerta nu modifică automat textul sau data.</p>'
+            : "";
+          return `<article class="governance-card${record.expired ? " governance-card--expired" : ""}">
+            <h3><a href="..${escapeHtml(record.route)}">${escapeHtml(record.route)}</a></h3>
+            <p><strong>Tip:</strong> ${escapeHtml(record.contentType)} · <strong>Stare:</strong> ${escapeHtml(record.governanceState)}</p>
+            <p><strong>Verificat:</strong> ${escapeHtml(record.verifiedAt)} · <strong>Următoarea revizuire:</strong> ${escapeHtml(record.nextReviewAt)}</p>
+            <p><strong>Sursă:</strong> ${escapeHtml(record.officialSourceName)} · ${escapeHtml(record.sourceVersion)}</p>
+            <p><strong>Reviewer:</strong> ${escapeHtml(record.reviewer)}, ${escapeHtml(record.reviewerRole)}</p>
+            ${expiredWarning}
+            <div class="governance-issues">${badges}</div>
+          </article>`;
+        }).join("") || '<p class="info-box">Nicio pagină nu corespunde filtrului selectat.</p>';
+      }
+
+      function switchPanel(panel, trigger) {
+        document.querySelectorAll(".panel").forEach((item) => item.classList.remove("active"));
+        document.querySelectorAll(".nav-item").forEach((item) => item.classList.remove("active"));
+        document.getElementById(`panel-${panel}`)?.classList.add("active");
+        (trigger || document.querySelector(`[data-panel='${panel}']`))?.classList.add("active");
+        const title = (trigger || document.querySelector(`[data-panel='${panel}']`))?.textContent?.trim();
+        if (title) document.getElementById("topbarTitle").textContent = title;
+        if (panel === "programe") renderEditorialGovernance();
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        document.getElementById("editorialGovernanceFilter")?.addEventListener("change", renderEditorialGovernance);
+        renderEditorialGovernance();
+      });
+      window.renderEditorialGovernance = renderEditorialGovernance;
+      window.switchPanel = switchPanel;
+    })();
+  </script>
+
+
+<!-- EDITORIAL_GOVERNANCE_DATA_START -->
+<script id="editorialGovernanceData" type="application/json">[{"id":"acte-necesare-fonduri-europene-nerambursabile","route":"/acte-necesare-fonduri-europene-nerambursabile","contentType":"guide","governanceState":"pending_validation","programId":null,"programStatus":null,"verifiedAt":"2026-05-20","nextReviewAt":"2026-08-18","lastMeaningfulUpdate":"DE_VALIDAT_UMAN","officialSourceName":"MIPE","officialSourceUrl":"https://mfe.gov.ro/","sourceVersion":"Fonduri europene nerambursabile","reviewer":"Echipa editorială FABER","reviewerRole":"Revizuire editorială și conformitate","expired":false,"contradictions":[],"issues":[]},{"id":"afir-autoconsum-agroalimentar","route":"/afir-autoconsum-agroalimentar","contentType":"program","governanceState":"public","programId":"afir-energie-autoconsum","programStatus":"apel_deschis","verifiedAt":"2026-07-20","nextReviewAt":"2026-08-19","lastMeaningfulUpdate":"2026-07-20","officialSourceName":"Ministerul Agriculturii și Dezvoltării Rurale / AFIR","officialSourceUrl":"https://www.afir.ro/media/hkfp4w0v/ghidul-solicitantului-schem%C4%83-energie-autoconsum-v7-iunie-2026.pdf","sourceVersion":"Ghidul Solicitantului Schema Energie Autoconsum V7 – iunie 2026","reviewer":"Echipa editorială FABER","reviewerRole":"Revizuire editorială și conformitate","expired":false,"contradictions":[],"issues":[]},{"id":"apeluri-gal","route":"/apeluri-gal","contentType":"program","governanceState":"public","programId":"apeluri-gal","programStatus":"calendar_estimativ","verifiedAt":"2026-05-26","nextReviewAt":"2026-07-25","lastMeaningfulUpdate":"2026-05-26","officialSourceName":"AFIR și Grupurile de Acțiune Locală","officialSourceUrl":"https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-36/","sourceVersion":"DR-36 LEADER și ghidurile locale ale GAL-urilor","reviewer":"Echipa editorială FABER","reviewerRole":"Revizuire editorială și conformitate","expired":false,"contradictions":[],"issues":[]},{"id":"autoconsum-public-fotovoltaice-institutii-publice","route":"/autoconsum-public-fotovoltaice-institutii-publice","contentType":"program","governanceState":"public","programId":"autoconsum-institutii-publice","programStatus":"ghid_aprobat_nedeschis","verifiedAt":"2026-05-20","nextReviewAt":"2026-07-19","lastMeaningfulUpdate":"2026-05-20","officialSourceName":"Guvernul României / autoritatea finanțatoare competentă","officialSourceUrl":"https://legislatie.just.ro/public/DetaliiDocument/276306","sourceVersion":"Actul normativ privind autoconsumul pentru entități publice","reviewer":"Echipa editorială FABER","reviewerRole":"Revizuire editorială și conformitate","expired":true,"contradictions":[],"issues":["expired_review"]},{"id":"calculator-soc","route":"/calculator-soc","contentType":"tool","governanceState":"pending_validation","programId":null,"programStatus":null,"verifiedAt":"DE_VALIDAT_UMAN","nextReviewAt":"DE_VALIDAT_UMAN","lastMeaningfulUpdate":"DE_VALIDAT_UMAN","officialSourceName":"DE_VALIDAT_UMAN","officialSourceUrl":"DE_VALIDAT_UMAN","sourceVersion":"DE_VALIDAT_UMAN","reviewer":"Echipa editorială FABER","reviewerRole":"Revizuire editorială și conformitate","expired":false,"contradictions":[],"issues":["missing_source"]},{"id":"cod-caen-start-up-nation-2026","route":"/cod-caen-start-up-nation-2026","contentType":"guide","governanceState":"pending_validation","programId":null,"programStatus":null,"verifiedAt":"2026-05-20","nextReviewAt":"2026-08-18","lastMeaningfulUpdate":"DE_VALIDAT_UMAN","officialSourceName":"Ministerul Economiei","officialSourceUrl":"https://economie.gov.ro/participa-la-definitivarea-procedurii-de-implementare-a-programului-de-succes-start-up-nation-editia-2024/","sourceVersion":"Procedura ediției 2024 publicată de Ministerul Economiei","reviewer":"Echipa editorială FABER","reviewerRole":"Revizuire editorială și conformitate","expired":false,"contradictions":[],"issues":[]},{"id":"digitalizare-imm","route":"/digitalizare-imm","contentType":"program","governanceState":"pending_validation","programId":"digitalizare-imm","programStatus":"apel_inchis","verifiedAt":"DE_VALIDAT_UMAN","nextReviewAt":"DE_VALIDAT_UMAN","lastMeaningfulUpdate":"DE_VALIDAT_UMAN","officialSourceName":"Ministerul Investițiilor și Proiectelor Europene","officialSourceUrl":"DE_VALIDAT_UMAN","sourceVersion":"DE_VALIDAT_UMAN","reviewer":"Echipa editorială FABER","reviewerRole":"Revizuire editorială și conformitate","expired":false,"contradictions":[],"issues":["missing_source"]},{"id":"dr12-afir","route":"/dr12-afir","contentType":"program","governanceState":"pending_validation","programId":"dr12-afir","programStatus":"consultare_publica","verifiedAt":"DE_VALIDAT_UMAN","nextReviewAt":"DE_VALIDAT_UMAN","lastMeaningfulUpdate":"DE_VALIDAT_UMAN","officialSourceName":"Agenția pentru Finanțarea Investițiilor Rurale (AFIR)","officialSourceUrl":"DE_VALIDAT_UMAN","sourceVersion":"DE_VALIDAT_UMAN","reviewer":"Echipa editorială FABER","reviewerRole":"Revizuire editorială și conformitate","expired":false,"contradictions":[],"issues":["missing_source"]},{"id":"dr14","route":"/dr14","contentType":"program","governanceState":"pending_validation","programId":"dr14-afir","programStatus":"consultare_publica","verifiedAt":"DE_VALIDAT_UMAN","nextReviewAt":"DE_VALIDAT_UMAN","lastMeaningfulUpdate":"DE_VALIDAT_UMAN","officialSourceName":"Agenția pentru Finanțarea Investițiilor Rurale (AFIR)","officialSourceUrl":"DE_VALIDAT_UMAN","sourceVersion":"DE_VALIDAT_UMAN","reviewer":"Echipa editorială FABER","reviewerRole":"Revizuire editorială și conformitate","expired":false,"contradictions":[],"issues":["missing_source"]},{"id":"dr14-afir-ferme-mici","route":"/dr14-afir-ferme-mici","contentType":"program","governanceState":"pending_validation","programId":null,"programStatus":null,"verifiedAt":"DE_VALIDAT_UMAN","nextReviewAt":"DE_VALIDAT_UMAN","lastMeaningfulUpdate":"DE_VALIDAT_UMAN","officialSourceName":"DE_VALIDAT_UMAN","officialSourceUrl":"DE_VALIDAT_UMAN","sourceVersion":"DE_VALIDAT_UMAN","reviewer":"Echipa editorială FABER","reviewerRole":"Revizuire editorială și conformitate","expired":false,"contradictions":[],"issues":["missing_source"]},{"id":"e-move","route":"/e-move","contentType":"program","governanceState":"public","programId":"e-move-ro","programStatus":"consultare_publica","verifiedAt":"2026-05-27","nextReviewAt":"2026-07-26","lastMeaningfulUpdate":"2026-05-27","officialSourceName":"Ministerul Transporturilor și Infrastructurii","officialSourceUrl":"https://fonduri.mt.ro/transparenta/consultare-publica/fondul-pentru-modernizare/comunicat-fm-consultare-publica-ghidul-solicitantului-promovarea-infrastructurii-pentru-o-mobilitate-cu-emisii-zero-in-sprijinul-intreprinderilor-si-comunitatilor-e-move-ro","sourceVersion":"Ghidul solicitantului e-MOVE RO – variantă consultativă","reviewer":"Echipa editorială FABER","reviewerRole":"Revizuire editorială și conformitate","expired":false,"contradictions":[],"issues":[]},{"id":"femeia-antreprenor-2026","route":"/femeia-antreprenor-2026","contentType":"program","governanceState":"public","programId":"femeia-antreprenor","programStatus":"calendar_estimativ","verifiedAt":"2026-05-20","nextReviewAt":"2026-07-19","lastMeaningfulUpdate":"2026-05-20","officialSourceName":"Ministerul Economiei","officialSourceUrl":"https://economie.gov.ro/pe-data-de-30-iulie-se-da-startul-inscrierilor-in-cadrul-programului-femeia-antreprenor/","sourceVersion":"Comunicatul oficial privind ediția publicată a programului Femeia Antreprenor","reviewer":"Echipa editorială FABER","reviewerRole":"Revizuire editorială și conformitate","expired":true,"contradictions":[],"issues":["expired_review"]},{"id":"fondul-de-modernizare","route":"/fondul-de-modernizare","contentType":"program","governanceState":"pending_validation","programId":"fondul-de-modernizare","programStatus":"calendar_estimativ","verifiedAt":"DE_VALIDAT_UMAN","nextReviewAt":"DE_VALIDAT_UMAN","lastMeaningfulUpdate":"DE_VALIDAT_UMAN","officialSourceName":"DE_VALIDAT_UMAN","officialSourceUrl":"DE_VALIDAT_UMAN","sourceVersion":"DE_VALIDAT_UMAN","reviewer":"Echipa editorială FABER","reviewerRole":"Revizuire editorială și conformitate","expired":false,"contradictions":[],"issues":["missing_source"]},{"id":"fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum","route":"/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum","contentType":"program","governanceState":"public","programId":"fondul-modernizare-autoconsum","programStatus":"calendar_estimativ","verifiedAt":"2026-05-20","nextReviewAt":"2026-07-19","lastMeaningfulUpdate":"2026-05-20","officialSourceName":"Ministerul Energiei","officialSourceUrl":"https://energie.gov.ro/category/fondul-pentru-modernizare/","sourceVersion":"Pagina oficială a Fondului pentru Modernizare","reviewer":"Echipa editorială FABER","reviewerRole":"Revizuire editorială și conformitate","expired":true,"contradictions":[],"issues":["expired_review"]},{"id":"fondul-modernizare-energie-regenerabila-2026","route":"/fondul-modernizare-energie-regenerabila-2026","contentType":"program","governanceState":"public","programId":"fondul-modernizare-regenerabile","programStatus":"calendar_estimativ","verifiedAt":"2026-05-20","nextReviewAt":"2026-07-19","lastMeaningfulUpdate":"2026-05-20","officialSourceName":"Ministerul Energiei","officialSourceUrl":"https://energie.gov.ro/category/fondul-pentru-modernizare/","sourceVersion":"Pagina oficială a Fondului pentru Modernizare","reviewer":"Echipa editorială FABER","reviewerRole":"Revizuire editorială și conformitate","expired":true,"contradictions":[],"issues":["expired_review"]},{"id":"fonduri-regionale","route":"/fonduri-regionale","contentType":"program","governanceState":"public","programId":"fonduri-regionale","programStatus":"calendar_estimativ","verifiedAt":"2026-07-20","nextReviewAt":"2026-09-18","lastMeaningfulUpdate":"2026-07-20","officialSourceName":"Autoritățile de management regionale","officialSourceUrl":"https://mfe.gov.ro/","sourceVersion":"Portalul oficial al fondurilor europene","reviewer":"Echipa editorială FABER","reviewerRole":"Revizuire editorială și conformitate","expired":false,"contradictions":[],"issues":[]},{"id":"gal-afir","route":"/gal-afir","contentType":"program","governanceState":"public","programId":"gal-afir-leader","programStatus":"ghid_aprobat_nedeschis","verifiedAt":"2026-05-26","nextReviewAt":"2026-07-25","lastMeaningfulUpdate":"2026-05-26","officialSourceName":"Agenția pentru Finanțarea Investițiilor Rurale (AFIR)","officialSourceUrl":"https://www.afir.ro/finantare/leader/","sourceVersion":"Pagina oficială AFIR LEADER și documentele DR-36","reviewer":"Echipa editorială FABER","reviewerRole":"Revizuire editorială și conformitate","expired":false,"contradictions":[],"issues":[]},{"id":"ghiduri","route":"/ghiduri","contentType":"guide","governanceState":"pending_validation","programId":null,"programStatus":null,"verifiedAt":"2026-05-20","nextReviewAt":"2026-08-18","lastMeaningfulUpdate":"DE_VALIDAT_UMAN","officialSourceName":"MIPE","officialSourceUrl":"https://mfe.gov.ro/","sourceVersion":"Fonduri europene nerambursabile","reviewer":"Echipa editorială FABER","reviewerRole":"Revizuire editorială și conformitate","expired":false,"contradictions":[],"issues":[]},{"id":"instrumente","route":"/instrumente","contentType":"tool","governanceState":"pending_validation","programId":null,"programStatus":null,"verifiedAt":"2026-05-20","nextReviewAt":"2026-08-18","lastMeaningfulUpdate":"DE_VALIDAT_UMAN","officialSourceName":"MIPE","officialSourceUrl":"https://mfe.gov.ro/","sourceVersion":"Fonduri europene nerambursabile","reviewer":"Echipa editorială FABER","reviewerRole":"Revizuire editorială și conformitate","expired":false,"contradictions":[],"issues":[]},{"id":"investitii-modernizarea-microintreprinderilor-apel-2","route":"/investitii-modernizarea-microintreprinderilor-apel-2","contentType":"program","governanceState":"public","programId":"modernizare-microintreprinderi-ne-2","programStatus":"consultare_publica","verifiedAt":"2026-06-02","nextReviewAt":"2026-08-01","lastMeaningfulUpdate":"2026-06-02","officialSourceName":"ADR Nord-Est","officialSourceUrl":"https://adrnordest.ro/comentariiGhid/P1Microintreprinderi/Apel2/","sourceVersion":"Ghidul solicitantului – Apel 2, variantă consultativă","reviewer":"Echipa editorială FABER","reviewerRole":"Revizuire editorială și conformitate","expired":false,"contradictions":[],"issues":[]},{"id":"pnrr","route":"/pnrr","contentType":"program","governanceState":"pending_validation","programId":"pnrr","programStatus":"calendar_estimativ","verifiedAt":"DE_VALIDAT_UMAN","nextReviewAt":"DE_VALIDAT_UMAN","lastMeaningfulUpdate":"DE_VALIDAT_UMAN","officialSourceName":"DE_VALIDAT_UMAN","officialSourceUrl":"DE_VALIDAT_UMAN","sourceVersion":"DE_VALIDAT_UMAN","reviewer":"Echipa editorială FABER","reviewerRole":"Revizuire editorială și conformitate","expired":false,"contradictions":[],"issues":["missing_source"]},{"id":"pocidif-21","route":"/pocidif-21","contentType":"program","governanceState":"public","programId":"pocidif-21","programStatus":"ghid_aprobat_nedeschis","verifiedAt":"2026-07-13","nextReviewAt":"2026-09-11","lastMeaningfulUpdate":"2026-07-13","officialSourceName":"Ministerul Investițiilor și Proiectelor Europene","officialSourceUrl":"https://mfe.gov.ro/ghiduri_pocidif/pocidif-ghidul-solicitantului-dezvoltarea-de-noi-servicii-aplicatii-produse-prin-inovare-si-adoptarea-de-tehnologii-avansate-2/","sourceVersion":"Ghidul solicitantului PoCIDIF 2.1 aprobat prin Ordinul MIPE nr. 965/23.06.2026","reviewer":"Echipa editorială FABER","reviewerRole":"Revizuire editorială și conformitate","expired":false,"contradictions":[],"issues":[]},{"id":"por-adr-nord-est","route":"/por-adr-nord-est","contentType":"program","governanceState":"public","programId":"program-regional-nord-est","programStatus":"ghid_aprobat_nedeschis","verifiedAt":"2026-07-20","nextReviewAt":"2026-09-18","lastMeaningfulUpdate":"2026-07-20","officialSourceName":"ADR Nord-Est","officialSourceUrl":"https://regionordest.ro/","sourceVersion":"Programul Regional Nord-Est 2021–2027","reviewer":"Echipa editorială FABER","reviewerRole":"Revizuire editorială și conformitate","expired":false,"contradictions":[],"issues":[]},{"id":"pro-infra","route":"/pro-infra","contentType":"program","governanceState":"pending_validation","programId":"pro-infra","programStatus":"ghid_aprobat_nedeschis","verifiedAt":"DE_VALIDAT_UMAN","nextReviewAt":"DE_VALIDAT_UMAN","lastMeaningfulUpdate":"DE_VALIDAT_UMAN","officialSourceName":"Ministerul Transporturilor și Infrastructurii","officialSourceUrl":"DE_VALIDAT_UMAN","sourceVersion":"DE_VALIDAT_UMAN","reviewer":"Echipa editorială FABER","reviewerRole":"Revizuire editorială și conformitate","expired":false,"contradictions":[],"issues":["missing_source"]},{"id":"programul-tranzitie-justa","route":"/programul-tranzitie-justa","contentType":"program","governanceState":"pending_validation","programId":"programul-tranzitie-justa","programStatus":"calendar_estimativ","verifiedAt":"DE_VALIDAT_UMAN","nextReviewAt":"DE_VALIDAT_UMAN","lastMeaningfulUpdate":"DE_VALIDAT_UMAN","officialSourceName":"DE_VALIDAT_UMAN","officialSourceUrl":"DE_VALIDAT_UMAN","sourceVersion":"DE_VALIDAT_UMAN","reviewer":"Echipa editorială FABER","reviewerRole":"Revizuire editorială și conformitate","expired":false,"contradictions":[],"issues":["missing_source"]},{"id":"resurse","route":"/resurse","contentType":"guide","governanceState":"pending_validation","programId":null,"programStatus":null,"verifiedAt":"2026-05-20","nextReviewAt":"2026-08-18","lastMeaningfulUpdate":"DE_VALIDAT_UMAN","officialSourceName":"MIPE","officialSourceUrl":"https://mfe.gov.ro/","sourceVersion":"Fonduri europene nerambursabile","reviewer":"Echipa editorială FABER","reviewerRole":"Revizuire editorială și conformitate","expired":false,"contradictions":[],"issues":[]},{"id":"start-up-nation-2026","route":"/start-up-nation-2026","contentType":"program","governanceState":"public","programId":"start-up-nation","programStatus":"calendar_estimativ","verifiedAt":"2026-05-20","nextReviewAt":"2026-07-19","lastMeaningfulUpdate":"2026-05-20","officialSourceName":"Ministerul Economiei","officialSourceUrl":"https://economie.gov.ro/participa-la-definitivarea-procedurii-de-implementare-a-programului-de-succes-start-up-nation-editia-2024/","sourceVersion":"Procedura ediției 2024 publicată de Ministerul Economiei","reviewer":"Echipa editorială FABER","reviewerRole":"Revizuire editorială și conformitate","expired":true,"contradictions":[],"issues":["expired_review"]},{"id":"start-up-nation-2026-cheltuieli-eligibile","route":"/start-up-nation-2026-cheltuieli-eligibile","contentType":"guide","governanceState":"pending_validation","programId":null,"programStatus":null,"verifiedAt":"2026-05-20","nextReviewAt":"2026-08-18","lastMeaningfulUpdate":"DE_VALIDAT_UMAN","officialSourceName":"Ministerul Economiei","officialSourceUrl":"https://economie.gov.ro/participa-la-definitivarea-procedurii-de-implementare-a-programului-de-succes-start-up-nation-editia-2024/","sourceVersion":"Procedura ediției 2024 publicată de Ministerul Economiei","reviewer":"Echipa editorială FABER","reviewerRole":"Revizuire editorială și conformitate","expired":false,"contradictions":[],"issues":[]},{"id":"start-up-nation-2026-conditii","route":"/start-up-nation-2026-conditii","contentType":"guide","governanceState":"pending_validation","programId":null,"programStatus":null,"verifiedAt":"2026-05-20","nextReviewAt":"2026-08-18","lastMeaningfulUpdate":"DE_VALIDAT_UMAN","officialSourceName":"Ministerul Economiei","officialSourceUrl":"https://economie.gov.ro/participa-la-definitivarea-procedurii-de-implementare-a-programului-de-succes-start-up-nation-editia-2024/","sourceVersion":"Procedura ediției 2024 publicată de Ministerul Economiei","reviewer":"Echipa editorială FABER","reviewerRole":"Revizuire editorială și conformitate","expired":false,"contradictions":[],"issues":[]},{"id":"start-up-nation-2026-idei-afaceri","route":"/start-up-nation-2026-idei-afaceri","contentType":"guide","governanceState":"pending_validation","programId":null,"programStatus":null,"verifiedAt":"2026-05-20","nextReviewAt":"2026-08-18","lastMeaningfulUpdate":"DE_VALIDAT_UMAN","officialSourceName":"Ministerul Economiei","officialSourceUrl":"https://economie.gov.ro/participa-la-definitivarea-procedurii-de-implementare-a-programului-de-succes-start-up-nation-editia-2024/","sourceVersion":"Procedura ediției 2024 publicată de Ministerul Economiei","reviewer":"Echipa editorială FABER","reviewerRole":"Revizuire editorială și conformitate","expired":false,"contradictions":[],"issues":[]},{"id":"start-up-nation-2026-plan-de-afaceri","route":"/start-up-nation-2026-plan-de-afaceri","contentType":"guide","governanceState":"pending_validation","programId":null,"programStatus":null,"verifiedAt":"2026-05-20","nextReviewAt":"2026-08-18","lastMeaningfulUpdate":"DE_VALIDAT_UMAN","officialSourceName":"Ministerul Economiei","officialSourceUrl":"https://economie.gov.ro/participa-la-definitivarea-procedurii-de-implementare-a-programului-de-succes-start-up-nation-editia-2024/","sourceVersion":"Procedura ediției 2024 publicată de Ministerul Economiei","reviewer":"Echipa editorială FABER","reviewerRole":"Revizuire editorială și conformitate","expired":false,"contradictions":[],"issues":[]},{"id":"webinarii","route":"/webinarii","contentType":"guide","governanceState":"pending_validation","programId":null,"programStatus":null,"verifiedAt":"2026-05-20","nextReviewAt":"2026-08-18","lastMeaningfulUpdate":"DE_VALIDAT_UMAN","officialSourceName":"MIPE","officialSourceUrl":"https://mfe.gov.ro/","sourceVersion":"Fonduri europene nerambursabile","reviewer":"Echipa editorială FABER","reviewerRole":"Revizuire editorială și conformitate","expired":false,"contradictions":[],"issues":[]}]</script>
+<!-- EDITORIAL_GOVERNANCE_DATA_END -->
 </body></html>

@@ -4,6 +4,7 @@
 const fs = require("fs");
 const path = require("path");
 const cheerio = require("cheerio");
+const { sitemapUrls: readSitemapUrls } = require("../tools/sitemap-utils");
 
 const ROOT = path.resolve(__dirname, "..");
 const SITE = "https://atelierdeconsultanta.ro";
@@ -45,8 +46,14 @@ const rules = read("_redirects").split(/\r?\n/)
 
 const explicit = new Map(rules.filter((rule) => !rule.dynamic).map((rule) => [rule.source, rule]));
 const dynamic = rules.filter((rule) => rule.dynamic).map((rule) => ({ ...rule, regex: sourceRegex(rule.source) }));
-const sitemapUrls = [...read("sitemap.xml").matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1].trim());
+const sitemapUrls = readSitemapUrls(ROOT);
 const sitemapPaths = new Set(sitemapUrls.map((url) => new URL(url).pathname));
+const governancePath = path.join(ROOT, "config", "editorial-governance.json");
+const controlledNoindexTargets = fs.existsSync(governancePath)
+  ? new Set((JSON.parse(fs.readFileSync(governancePath, "utf8")).records || [])
+    .filter((record) => record.governanceState !== "public")
+    .map((record) => record.route))
+  : new Set();
 const errors = [];
 
 function matchingRule(pathname) {
@@ -75,7 +82,7 @@ for (const rule of rules) {
     if (!destinationFile) errors.push(`destinație inexistentă: ${rule.source} -> ${destination}`);
     else {
       const html = read(destinationFile);
-      if (/\bnoindex\b/i.test((html.match(/<meta[^>]+name=["']robots["'][^>]*>/i) || [""])[0])) {
+      if (/\bnoindex\b/i.test((html.match(/<meta[^>]+name=["']robots["'][^>]*>/i) || [""])[0]) && !controlledNoindexTargets.has(destination)) {
         errors.push(`destinație noindex: ${rule.source} -> ${destination}`);
       }
       const canonical = html.match(/<link[^>]+rel=["'][^"']*canonical[^"']*["'][^>]+href=["']([^"']+)["']/i)?.[1]

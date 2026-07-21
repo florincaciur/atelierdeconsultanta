@@ -55,7 +55,7 @@ function inspectPage(slug, page, config) {
   if (direct.length !== 1) errors.push(`trebuie exact un răspuns direct, găsite ${direct.length}`);
   if (directWords < 45 || directWords > 80) errors.push(`răspunsul direct are ${directWords} cuvinte; intervalul este 45–80`);
   if (direct.length && !direct.parent().children().first().is(direct)) errors.push("răspunsul direct nu este primul element editorial al secțiunii");
-  if (!/(consultativ|aprobat|final|activ|orientativ|hub informativ|metoda de lucru|nu confirmă)/iu.test(cleanText(direct.text()))) {
+  if (!/(deschis|aprobat|consultare|consultativ|estimativ|închis|arhivat|final|activ|orientativ|hub informativ|metoda de lucru|nu confirmă)/iu.test(cleanText(direct.text()))) {
     errors.push("răspunsul direct nu precizează statutul informației");
   }
 

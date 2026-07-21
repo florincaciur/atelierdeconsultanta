@@ -3,13 +3,42 @@ import fs from "node:fs";
 import fsp from "node:fs/promises";
 import http from "node:http";
 import path from "node:path";
+import { createRequire } from "node:module";
 import { fileURLToPath } from "node:url";
 import { chromium } from "playwright";
 
+const require = createRequire(import.meta.url);
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const DIST = path.join(ROOT, "dist");
 const SITE_ORIGIN = "https://atelierdeconsultanta.ro";
-const EXPECTED_CANONICAL_URLS = 102;
+const PROGRAM_REGISTRY = JSON.parse(fs.readFileSync(path.join(ROOT, "config", "seo-programs.json"), "utf8")).programs;
+const STATUS_APPROVALS = JSON.parse(fs.readFileSync(path.join(ROOT, "config", "program-status-approvals.json"), "utf8")).programs;
+const PENDING_PROGRAM_ROUTES = PROGRAM_REGISTRY
+  .filter((program) => program.publicationState !== "public")
+  .map((program) => new URL(program.pageUrl, SITE_ORIGIN).pathname.replace(/\/$/, "") || "/");
+const PENDING_APPROVAL_HOLD_ROUTES = STATUS_APPROVALS
+  .filter((row) => row.approvalState !== "approved")
+  .flatMap((row) => row.publicationHoldUrls)
+  .map((route) => new URL(route, SITE_ORIGIN).pathname.replace(/\/$/, "") || "/");
+const ALL_PENDING_HOLD_ROUTES = [...new Set([...PENDING_PROGRAM_ROUTES, ...PENDING_APPROVAL_HOLD_ROUTES])];
+const PROGRAM_MENU_ROUTES = [
+  "/por-adr-nord-est",
+  "/fonduri-regionale",
+  "/dr12-afir",
+  "/afir-autoconsum-agroalimentar",
+  "/autoconsum-public-fotovoltaice-institutii-publice",
+  "/dr14",
+  "/digitalizare-imm",
+  "/femeia-antreprenor-2026",
+  "/gal-afir",
+  "/e-move",
+  "/pocidif-21",
+  "/pro-infra",
+  "/start-up-nation-2026"
+];
+const EXPECTED_PROGRAM_MENU_ROUTES = PROGRAM_MENU_ROUTES.filter((route) => !PENDING_PROGRAM_ROUTES.includes(route));
+const EXPECTED_CANONICAL_URLS = 91;
+const { sitemapUrls } = require("../tools/sitemap-utils");
 const CONSOLIDATED_LOCAL_ROUTES = [
   "/fonduri-europene-bacau",
   "/consultanta-fonduri-europene-bacau",
@@ -33,14 +62,13 @@ const INDEXABLE_PROGRAM_ROUTES = [
   "/plan-de-afaceri-fonduri-europene",
   "/management-proiecte-fonduri-europene",
   "/resurse-utile",
-  "/dr12-afir",
   "/dr14",
   "/e-move",
   "/pro-infra",
   "/start-up-nation-2026",
   "/investitii-modernizarea-microintreprinderilor-apel-2",
   "/pocidif-21"
-];
+].filter((route) => !ALL_PENDING_HOLD_ROUTES.includes(route));
 const NOINDEX_TRUST_ROUTES = [
   "/portofoliu",
   "/testimoniale"
@@ -196,9 +224,8 @@ async function fetchManual(url) {
 }
 
 async function assertCanonicalRoutes(baseUrl) {
-  const sitemap = await fsp.readFile(path.join(ROOT, "sitemap.xml"), "utf8");
-  const paths = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => {
-    const url = new URL(match[1]);
+  const paths = sitemapUrls(ROOT).map((value) => {
+    const url = new URL(value);
     return url.pathname || "/";
   });
 
@@ -214,6 +241,12 @@ async function assertCanonicalRoutes(baseUrl) {
   }
   for (const routePath of INDEXABLE_PROGRAM_ROUTES) {
     assert(paths.includes(routePath), `${routePath} should be in sitemap as an indexable program page`);
+  }
+  for (const routePath of ALL_PENDING_HOLD_ROUTES) {
+    assert(!paths.includes(routePath), `${routePath} should stay out of sitemap while awaiting human validation`);
+    const response = await fetchManual(`${baseUrl}${routePath}`);
+    assert.equal(response.status, 200, `${routePath} should remain available for editorial validation`);
+    assert.match(await response.text(), /<meta\s+name=["']robots["']\s+content=["']noindex,\s*follow["']/i, `${routePath} should declare noindex, follow while pending validation`);
   }
 
   for (const routePath of NOINDEX_TRUST_ROUTES) {
@@ -301,7 +334,13 @@ async function assertHomepageInteractions(baseUrl) {
     await page.locator("#dropdownBtn").click();
     assert.equal(await page.locator("#dropdownBtn").getAttribute("aria-expanded"), "true", "program menu should open");
     assert.equal(await page.locator("#dropdownPanel.open").count(), 1, "program menu panel should be visible");
-    assert.equal(await page.locator("#dropdownPanel a[href]").count(), 13, "program menu should expose 13 program links");
+    assert.equal(await page.locator("#dropdownPanel a[href]").count(), EXPECTED_PROGRAM_MENU_ROUTES.length, "program menu should expose only registry-approved program links");
+    for (const route of EXPECTED_PROGRAM_MENU_ROUTES) {
+      assert.equal(await page.locator(`#dropdownPanel a[href="${route}"]`).count(), 1, `program menu should link ${route}`);
+    }
+    for (const route of PENDING_PROGRAM_ROUTES) {
+      assert.equal(await page.locator(`#dropdownPanel a[href="${route}"]`).count(), 0, `program menu should hide pending route ${route}`);
+    }
     assert.equal(await page.locator('#dropdownPanel a[href="/pocidif-21"]').count(), 1, "program menu should link PoCIDIF 2.1");
 
     const internalLinks = await page.$$eval(
@@ -341,7 +380,7 @@ async function assertHomepageInteractions(baseUrl) {
     assert.equal(gridDisplay, "grid", "program section should use a CSS grid");
     assert.equal(await page.locator("#finantare .carousel-btn, #finantare .card-carousel-btn").count(), 0, "program section should not expose carousel controls");
     const totalProgramCards = await page.locator("#financing-grid .finantare-card").count();
-    assert(totalProgramCards >= 10, "program grid should contain program cards");
+    assert(totalProgramCards >= 3, "program grid should contain at least one complete row of approved program cards");
     const initialVisibleCards = await page.$$eval("#financing-grid .finantare-card", (cards) =>
       cards.filter((card) => !card.hidden && getComputedStyle(card).display !== "none").length
     );

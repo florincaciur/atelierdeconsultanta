@@ -3,6 +3,7 @@
 
 const fs = require("fs");
 const path = require("path");
+const { isPublicProgram, loadProgramConfig, programForRoute } = require("./program-factual-governance");
 
 const ROOT = path.resolve(__dirname, "..");
 const CONFIG_PATH = path.join(ROOT, "config", "contextual-next-steps.json");
@@ -21,6 +22,14 @@ function loadNextStepConfig() {
   return JSON.parse(fs.readFileSync(CONFIG_PATH, "utf8"));
 }
 
+function publicNextStepLinks(page, programs = loadProgramConfig().programs) {
+  return (page.links || []).filter((link) => {
+    if (!String(link.href || "").startsWith("/")) return true;
+    const program = programForRoute(link.href, programs);
+    return !program || isPublicProgram(program);
+  });
+}
+
 function renderNextStepBlock(slug, config = loadNextStepConfig()) {
   const page = config.pages[slug];
   if (!page) return "";
@@ -28,7 +37,7 @@ function renderNextStepBlock(slug, config = loadNextStepConfig()) {
   const sectionClass = page.layout === "standalone"
     ? "vezi-si-section next-step-block"
     : "next-step-block";
-  const links = page.links.map((link) => {
+  const links = publicNextStepLinks(page).map((link) => {
     const external = /^https:\/\//u.test(link.href);
     return `      <li class="see-also-card">
         <a href="${escapeHtml(link.href)}"${external ? ' target="_blank" rel="noopener noreferrer"' : ""} data-link-type="next-step" data-analytics-event="next_step_click" data-analytics-target="${escapeHtml(link.href)}" data-analytics-source="${escapeHtml(page.route)}">
@@ -58,6 +67,10 @@ function replaceLast(html, pattern, replacement) {
 function applyContextualNextSteps(html, slug, config = loadNextStepConfig()) {
   const page = config.pages[slug];
   if (!page) return html;
+  const program = programForRoute(page.route, loadProgramConfig().programs);
+  if (program && !isPublicProgram(program)) {
+    return html.replace(/<!-- CONTEXTUAL_NEXT_STEP_START -->[\s\S]*?<!-- CONTEXTUAL_NEXT_STEP_END -->\s*/gu, "");
+  }
   const block = renderNextStepBlock(slug, config);
   const marked = /<!-- CONTEXTUAL_NEXT_STEP_START -->[\s\S]*?<!-- CONTEXTUAL_NEXT_STEP_END -->/u;
   if (marked.test(html)) return html.replace(marked, block);
@@ -73,6 +86,8 @@ function applyContextualNextSteps(html, slug, config = loadNextStepConfig()) {
 function syncContextualNextSteps() {
   const config = loadNextStepConfig();
   for (const [slug, page] of Object.entries(config.pages)) {
+    const program = programForRoute(page.route, loadProgramConfig().programs);
+    if (program && !isPublicProgram(program)) continue;
     const file = path.join(ROOT, page.file);
     const before = fs.readFileSync(file, "utf8");
     const after = applyContextualNextSteps(before, slug, config);
@@ -88,6 +103,7 @@ module.exports = {
   START,
   applyContextualNextSteps,
   loadNextStepConfig,
+  publicNextStepLinks,
   renderNextStepBlock,
   syncContextualNextSteps
 };

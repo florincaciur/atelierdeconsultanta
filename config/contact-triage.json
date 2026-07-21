@@ -1,0 +1,46 @@
+{
+  "payloadSchema": "./contact-triage-payload.schema.json",
+  "schemaVersion": "1.0.0",
+  "endpoint": "/api/contact-triage",
+  "transport": {
+    "kind": "cloudflare-worker-forward-adapter",
+    "destinationSecret": "CONTACT_FORM_FORWARD_URL",
+    "existingCanonicalContactTransport": "mailto",
+    "existingHomepageTransport": "formsubmit_ajax",
+    "crmDetectedInRepository": false,
+    "leadCorrelationField": "lead_id",
+    "qualifiedLeadWebhook": "/api/crm/qualified-lead",
+    "qualifiedLeadActivation": "DE_VALIDAT_UMAN"
+  },
+  "privacyNotice": {
+    "copyState": "pending_legal_approval",
+    "copy": "Confirm că am citit informarea privind prelucrarea datelor din Politica de confidențialitate.",
+    "marketingConsentIncluded": false,
+    "approvedBy": "DE_VALIDAT_UMAN",
+    "approvedAt": null,
+    "publicationBlockedBy": "config/legal-identity.json#legalReview"
+  },
+  "antiSpam": {
+    "honeypot": true,
+    "minimumCompletionMilliseconds": 1500,
+    "maximumPayloadBytes": 65536,
+    "sameOriginCheck": true,
+    "sensitiveAnalyticsFields": []
+  },
+  "attribution": {
+    "storage": "sessionStorage_first_touch",
+    "rawDestination": "CRM_only",
+    "analyticsDestination": "normalized_source_channel_only",
+    "fields": [
+      "utm_source",
+      "utm_medium",
+      "utm_campaign",
+      "utm_term",
+      "utm_content",
+      "landing_referrer",
+      "landing_page_path",
+      "program_slug",
+      "program_family"
+    ]
+  }
+}

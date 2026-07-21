@@ -207,7 +207,7 @@ function synchronizedGraph(html, route, hints) {
     ...preserved
   ].filter(Boolean);
 
-  return jsonLdGraph(nodes);
+  return jsonLdGraph(normalizeJsonLdValue(nodes));
 }
 
 function replaceScripts(html, serialized) {
@@ -225,22 +225,34 @@ function main() {
   const hints = loadPageHints(ROOT);
   const changed = [];
   for (const route of sitemapRoutes(ROOT)) {
-    const file = fileForRoute(ROOT, route);
-    if (!fs.existsSync(file)) throw new Error(`Lipsește fișierul pentru ruta indexabilă ${route}: ${file}`);
-    const html = fs.readFileSync(file, "utf8");
-    const $ = cheerio.load(html, { decodeEntities: false });
-    if (!$("script[type='application/ld+json']").length) throw new Error(`Lipsește JSON-LD pe ruta indexabilă ${route}`);
+    const primaryFile = fileForRoute(ROOT, route);
+    if (!fs.existsSync(primaryFile)) throw new Error(`Lipsește fișierul pentru ruta indexabilă ${route}: ${primaryFile}`);
+    const clean = route.replace(/^\//u, "");
+    const files = [...new Set([
+      primaryFile,
+      route === "/" ? primaryFile : path.join(ROOT, `${clean}.html`),
+      route === "/" ? primaryFile : path.join(ROOT, clean, "index.html")
+    ])].filter((file) => fs.existsSync(file));
+    for (const file of files) {
+      const html = fs.readFileSync(file, "utf8");
+      const $ = cheerio.load(html, { decodeEntities: false });
+      if ($("body").attr("data-publication-state") === "pending_validation") continue;
+      if (!$("script[type='application/ld+json']").length) {
+        if (file === primaryFile) throw new Error(`Lipsește JSON-LD pe ruta indexabilă ${route}: ${path.relative(ROOT, file)}`);
+        continue;
+      }
 
-    let serialized;
-    try {
-      serialized = synchronizedGraph(html, route, hints.get(route));
-    } catch (error) {
-      throw new Error(`${route}: ${error.message}`);
+      let serialized;
+      try {
+        serialized = synchronizedGraph(html, route, hints.get(route));
+      } catch (error) {
+        throw new Error(`${route}: ${error.message}`);
+      }
+      const next = replaceScripts(html, serialized);
+      if (next === html) continue;
+      changed.push(path.relative(ROOT, file).split(path.sep).join("/"));
+      if (!CHECK_ONLY) fs.writeFileSync(file, next, "utf8");
     }
-    const next = replaceScripts(html, serialized);
-    if (next === html) continue;
-    changed.push(path.relative(ROOT, file).split(path.sep).join("/"));
-    if (!CHECK_ONLY) fs.writeFileSync(file, next, "utf8");
   }
 
   if (CHECK_ONLY && changed.length) {

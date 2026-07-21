@@ -38,22 +38,7 @@
         "@type": "Country",
         "name": "România"
       },
-      "contactPoint": [
-        {
-          "@type": "ContactPoint",
-          "availableLanguage": "ro-RO",
-          "contactType": "customer service",
-          "telephone": "+40769828338"
-        },
-        {
-          "@type": "ContactPoint",
-          "availableLanguage": "ro-RO",
-          "contactType": "customer service",
-          "telephone": "+40753326229"
-        }
-      ],
       "description": "FABER - Atelier de Consultanță ajută firme, fermieri, start-up-uri și IMM-uri să verifice eligibilitatea și să pregătească proiecte pentru fonduri europene și finanțări nerambursabile.",
-      "email": "atelier.consultanta@gmail.com",
       "image": "https://atelierdeconsultanta.ro/og-image.jpg",
       "knowsAbout": [
         "fonduri europene",
@@ -87,6 +72,17 @@
       "about": {
         "@id": "https://atelierdeconsultanta.ro/pocidif-21#funding-program"
       },
+      "author": {
+        "@type": "Organization",
+        "name": "FABER – Atelier de Consultanță"
+      },
+      "citation": [
+        {
+          "@type": "CreativeWork",
+          "name": "Ministerul Investițiilor și Proiectelor Europene — Ghidul solicitantului PoCIDIF 2.1 aprobat prin Ordinul MIPE nr. 965/23.06.2026",
+          "url": "https://mfe.gov.ro/ghiduri_pocidif/pocidif-ghidul-solicitantului-dezvoltarea-de-noi-servicii-aplicatii-produse-prin-inovare-si-adoptarea-de-tehnologii-avansate-2/"
+        }
+      ],
       "dateModified": "2026-07-13",
       "datePublished": "2026-05-29",
       "description": "PoCIDIF 2.1 pentru IMM TIC: ghid aprobat, eligibilitate, CDI, software, hardware, indicatori, documente, buget și punctaj.",
@@ -97,9 +93,13 @@
       "mainEntity": {
         "@id": "https://atelierdeconsultanta.ro/pocidif-21#article"
       },
-      "name": "PoCIDIF 2.1 – inovare și tehnologii digitale pentru IMM din sectorul TIC",
+      "name": "PoCIDIF – Acțiunea 2.1 Dezvoltarea de noi servicii, aplicații și produse prin inovare și adoptarea de tehnologii avansate",
       "publisher": {
         "@id": "https://atelierdeconsultanta.ro/#organization"
+      },
+      "reviewedBy": {
+        "@type": "Organization",
+        "name": "Echipa editorială FABER"
       },
       "url": "https://atelierdeconsultanta.ro/pocidif-21"
     },
@@ -121,7 +121,7 @@
         {
           "@type": "ListItem",
           "item": "https://atelierdeconsultanta.ro/pocidif-21",
-          "name": "PoCIDIF 2.1 – inovare și tehnologii digitale pentru IMM din sectorul TIC",
+          "name": "PoCIDIF – Acțiunea 2.1 Dezvoltarea de noi servicii, aplicații și produse prin inovare și adoptarea de tehnologii avansate",
           "position": 3
         }
       ]
@@ -133,16 +133,13 @@
         "@id": "https://atelierdeconsultanta.ro/pocidif-21#funding-program"
       },
       "author": {
-        "@id": "https://atelierdeconsultanta.ro/#organization"
+        "@type": "Organization",
+        "name": "FABER – Atelier de Consultanță"
       },
       "citation": [
         {
           "@type": "CreativeWork",
-          "name": "PoCIDIF – Acțiunea 2.1: ghid aprobat, schemă și anexe",
-          "publisher": {
-            "@type": "Organization",
-            "name": "Ministerul Investițiilor și Proiectelor Europene"
-          },
+          "name": "Ministerul Investițiilor și Proiectelor Europene — Ghidul solicitantului PoCIDIF 2.1 aprobat prin Ordinul MIPE nr. 965/23.06.2026",
           "url": "https://mfe.gov.ro/ghiduri_pocidif/pocidif-ghidul-solicitantului-dezvoltarea-de-noi-servicii-aplicatii-produse-prin-inovare-si-adoptarea-de-tehnologii-avansate-2/"
         },
         {
@@ -185,6 +182,10 @@
       "publisher": {
         "@id": "https://atelierdeconsultanta.ro/#organization"
       },
+      "reviewedBy": {
+        "@type": "Organization",
+        "name": "Echipa editorială FABER"
+      },
       "url": "https://atelierdeconsultanta.ro/pocidif-21"
     },
     {
@@ -193,37 +194,52 @@
       "additionalProperty": [
         {
           "@type": "PropertyValue",
-          "name": "sourceStatus",
-          "value": "final"
+          "name": "status",
+          "value": "ghid_aprobat_nedeschis"
         },
         {
           "@type": "PropertyValue",
-          "name": "reviewedAt",
+          "name": "statusLabel",
+          "value": "Ghid aprobat – depunerea nu este deschisă"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "verifiedAt",
           "value": "2026-07-13"
         },
         {
           "@type": "PropertyValue",
-          "name": "maximumGrant",
-          "value": "{\"currency\":\"EUR\",\"variants\":[{\"amount\":1500000,\"scope\":\"soluție software inovatoare\"},{\"amount\":3000000,\"scope\":\"produs hardware inovator\"}]}"
+          "name": "sourceName",
+          "value": "Ministerul Investițiilor și Proiectelor Europene"
         },
         {
           "@type": "PropertyValue",
-          "name": "minimumGrant",
-          "value": "{\"amount\":200000,\"currency\":\"EUR\",\"unit\":\"proiect\"}"
+          "name": "sourceVersion",
+          "value": "Ghidul solicitantului PoCIDIF 2.1 aprobat prin Ordinul MIPE nr. 965/23.06.2026"
         },
         {
           "@type": "PropertyValue",
-          "name": "intensity",
-          "value": "[{\"rate\":75,\"scope\":\"ajutor regional, în funcție de categorie și regiune\"},{\"rate\":100,\"scope\":\"ajutor de minimis pentru cheltuielile încadrate\"}]"
+          "name": "grantSummary",
+          "value": "{\"minimum\":{\"amount\":200000,\"currency\":\"EUR\",\"unit\":\"proiect\"},\"maximum\":{\"currency\":\"EUR\",\"variants\":[{\"amount\":1500000,\"scope\":\"soluție software inovatoare\"},{\"amount\":3000000,\"scope\":\"produs hardware inovator\"}]},\"budget\":null}"
         },
         {
           "@type": "PropertyValue",
-          "name": "ownContribution",
-          "value": "Depinde de tipul ajutorului, dimensiunea întreprinderii, regiune și cheltuielile neeligibile."
+          "name": "cofinancingSummary",
+          "value": "{\"intensity\":[{\"rate\":75,\"scope\":\"ajutor regional, în funcție de categorie și regiune\"},{\"rate\":100,\"scope\":\"ajutor de minimis pentru cheltuielile încadrate\"}],\"ownContribution\":\"Depinde de tipul ajutorului, dimensiunea întreprinderii, regiune și cheltuielile neeligibile.\"}"
         },
         {
           "@type": "PropertyValue",
-          "name": "factualDisclaimer",
+          "name": "pageUrl",
+          "value": "/pocidif-21"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "lastMeaningfulUpdate",
+          "value": "2026-07-13"
+        },
+        {
+          "@type": "PropertyValue",
+          "name": "editorialDisclaimer",
           "value": "Ghidul este aprobat; perioada de depunere și eventualele actualizări se confirmă pe pagina oficială MIPE."
         }
       ],
@@ -297,9 +313,9 @@
           "@type": "Question",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Un website simplu nu este suficient. Proiectul trebuie să arate un serviciu, o aplicatie sau un produs digital cu noutate și rezultat masurabil."
+            "text": "Un site simplu nu este suficient. Proiectul trebuie să arate un serviciu, o aplicatie sau un produs digital cu noutate și rezultat masurabil."
           },
-          "name": "Este eligibil un website simplu?"
+          "name": "Este eligibil un site simplu?"
         },
         {
           "@type": "Question",
@@ -324,6 +340,14 @@
             "text": "Pregătește statutul IMM, certificatul constatator și CAEN, situațiile financiare, produsul propus, subdomeniul de specializare inteligentă, arhitectura, echipa, planul de afaceri, indicatorii, bugetul, ofertele și sursa cofinanțării."
           },
           "name": "Cum pregătesc analiza de eligibilitate?"
+        },
+        {
+          "@type": "Question",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "2026-07-21 — Migrare tehnică în registrul de guvernanță; data modificării editoriale substanțiale a rămas neschimbată. (Echipa editorială FABER) 2026-07-13 — Snapshot factual substanțial preluat din registrul unic al programului; istoricul anterior migrării nu a fost rescris. (Echipa editorială FABER)"
+          },
+          "name": "Istoric editorial"
         }
       ]
     }
@@ -331,12 +355,13 @@
 }</script>
   <link rel="stylesheet" href="/assets/design-profiles.css">
   <link rel="stylesheet" href="/assets/program-heroes.css">
+<link rel="stylesheet" href="/assets/editorial-governance.css">
+  <script src="/assets/lead-attribution.js" defer></script>
   <script src="/assets/analytics-events.js" defer></script>
 </head>
-<body class="page-family-digital" data-program-id="pocidif-21" data-source-status="final" data-reviewed-at="2026-07-13" data-factual-governance="config/seo-programs.json#programs">
-  <!-- GLOBAL_HEADER_START -->
-<link rel="stylesheet" href="/assets/global-header.css?v=20260713-2">
-<nav id="navbar" role="navigation" aria-label="Navigare principală" data-section-id="navbar" data-factual-governance="config/seo-programs.json#programs">
+<body class="page-family-digital" data-program-id="pocidif-21" data-analytics-page-type="program" data-analytics-program-slug="pocidif-21" data-analytics-program-family="digitalizare-inovare" data-publication-state="public" data-program-registry="config/seo-programs.json#programs" data-program-status="ghid_aprobat_nedeschis" data-status-label="Ghid aprobat – depunerea nu este deschisă" data-verified-at="2026-07-13" data-source-url="https://mfe.gov.ro/ghiduri_pocidif/pocidif-ghidul-solicitantului-dezvoltarea-de-noi-servicii-aplicatii-produse-prin-inovare-si-adoptarea-de-tehnologii-avansate-2/" data-editorial-record="pocidif-21" data-governance-state="public" data-editorial-verified-at="2026-07-13" data-next-review-at="2026-09-11" data-last-meaningful-update="2026-07-13">
+  <!-- GLOBAL_HEADER_START --><link rel="stylesheet" href="/assets/global-header.css?v=20260713-2">
+<nav id="navbar" role="navigation" aria-label="Navigare principală" data-section-id="navbar" data-program-registry="config/seo-programs.json#programs">
   <div class="nav-container">
 
     <a class="nav-logo" href="/" aria-label="FABER - Atelier de Consultanță, acasă" data-analytics-event="nav_click" data-analytics-component="desktop_nav" data-analytics-cta-id="home_logo" data-analytics-target="/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 44" width="240" height="44" aria-hidden="true">
@@ -359,75 +384,63 @@
         <div class="nav-dropdown-panel" id="dropdownPanel" aria-labelledby="dropdownBtn" role="menu" hidden="">
           <div class="dropdown-header">Programe de finanțare 2026</div>
 
-          <a href="/por-adr-nord-est" class="dropdown-item" role="menuitem" data-service-id="por-adr-ne" data-analytics-event="program_menu_click" data-analytics-component="desktop_program_menu" data-analytics-target="/por-adr-nord-est" data-analytics-program-category="regional" data-program-id="program-regional-nord-est" data-source-status="final" data-reviewed-at="2026-07-20">
+          <a href="/por-adr-nord-est" class="dropdown-item" role="menuitem" data-service-id="por-adr-ne" data-analytics-event="program_menu_click" data-analytics-component="desktop_program_menu" data-analytics-target="/por-adr-nord-est" data-analytics-program-category="regional" data-program-id="program-regional-nord-est" data-program-status="ghid_aprobat_nedeschis" data-status-label="Ghid aprobat – depunerea nu este deschisă" data-verified-at="2026-07-20" data-source-url="https://regionordest.ro/">
             <div class="d-icon" style="background:rgba(59,130,246,0.2)"><i class="ph-duotone ph-buildings" style="color:#93c5fd"></i></div>
-            <div class="d-text">POR ADR Nord-Est<div class="d-label">Apeluri regionale pentru IMM</div></div>
+            <div class="d-text">Programul Regional Nord-Est<div class="d-label">Ghid aprobat – depunerea nu este deschisă</div></div>
           </a>
 
-          <a href="/fonduri-regionale" class="dropdown-item" role="menuitem" data-service-id="fonduri-regionale" data-analytics-event="program_menu_click" data-analytics-component="desktop_program_menu" data-analytics-target="/fonduri-regionale" data-analytics-program-category="regional" data-program-id="fonduri-regionale" data-source-status="unknown" data-reviewed-at="2026-07-20">
+          <a href="/fonduri-regionale" class="dropdown-item" role="menuitem" data-service-id="fonduri-regionale" data-analytics-event="program_menu_click" data-analytics-component="desktop_program_menu" data-analytics-target="/fonduri-regionale" data-analytics-program-category="regional" data-program-id="fonduri-regionale" data-program-status="calendar_estimativ" data-status-label="Calendar estimativ – depunerea nu este confirmată" data-verified-at="2026-07-20" data-source-url="https://mfe.gov.ro/">
             <div class="d-icon" style="background:rgba(59,130,246,0.2)"><i class="ph-duotone ph-map-pin" style="color:#93c5fd"></i></div>
-            <div class="d-text">Fonduri regionale<div class="d-label">Programe administrate regional</div></div>
+            <div class="d-text">Fonduri regionale<div class="d-label">Calendar estimativ – depunerea nu este confirmată</div></div>
           </a>
 
-          <a href="/dr12-afir" class="dropdown-item" role="menuitem" data-service-id="dr12-afir" data-analytics-event="program_menu_click" data-analytics-component="desktop_program_menu" data-analytics-target="/dr12-afir" data-analytics-program-category="agriculture" data-program-id="dr12-afir" data-source-status="consultation" data-reviewed-at="2026-07-20">
-            <div class="d-icon" style="background:rgba(34,197,94,0.2)"><i class="ph-duotone ph-plant" style="color:#86efac"></i></div>
-            <div class="d-text">DR 12 / AFIR<div class="d-label">Tineri fermieri | variantă consultativă</div></div>
-          </a>
 
-          <a href="/afir-autoconsum-agroalimentar" class="dropdown-item" role="menuitem" data-service-id="afir-autoconsum" data-analytics-event="program_menu_click" data-analytics-component="desktop_program_menu" data-analytics-target="/afir-autoconsum-agroalimentar" data-analytics-program-category="agriculture_energy" data-program-id="afir-energie-autoconsum" data-source-status="open" data-reviewed-at="2026-07-20">
+
+          <a href="/afir-autoconsum-agroalimentar" class="dropdown-item" role="menuitem" data-service-id="afir-autoconsum" data-analytics-event="program_menu_click" data-analytics-component="desktop_program_menu" data-analytics-target="/afir-autoconsum-agroalimentar" data-analytics-program-category="agriculture_energy" data-program-id="afir-energie-autoconsum" data-program-status="apel_deschis" data-status-label="Apel deschis" data-verified-at="2026-07-20" data-source-url="https://www.afir.ro/media/hkfp4w0v/ghidul-solicitantului-schem%C4%83-energie-autoconsum-v7-iunie-2026.pdf">
             <div class="d-icon" style="background:rgba(234,179,8,0.2)"><i class="ph-duotone ph-sun" style="color:#fde68a"></i></div>
-            <div class="d-text">AFIR Autoconsum agroalimentar<div class="d-label">Apel deschis până la 14 august 2026</div></div>
+            <div class="d-text">AFIR Autoconsum Agroalimentar<div class="d-label">Apel deschis</div></div>
           </a>
 
-          <a href="/autoconsum-public-fotovoltaice-institutii-publice" class="dropdown-item" role="menuitem" data-service-id="autoconsum-pub" data-analytics-event="program_menu_click" data-analytics-component="desktop_program_menu" data-analytics-target="/autoconsum-public-fotovoltaice-institutii-publice" data-analytics-program-category="public_energy" data-program-id="autoconsum-institutii-publice" data-source-status="final" data-reviewed-at="2026-05-20">
+          <a href="/autoconsum-public-fotovoltaice-institutii-publice" class="dropdown-item" role="menuitem" data-service-id="autoconsum-pub" data-analytics-event="program_menu_click" data-analytics-component="desktop_program_menu" data-analytics-target="/autoconsum-public-fotovoltaice-institutii-publice" data-analytics-program-category="public_energy" data-program-id="autoconsum-institutii-publice" data-program-status="ghid_aprobat_nedeschis" data-status-label="Ghid aprobat – depunerea nu este deschisă" data-verified-at="2026-05-20" data-source-url="https://legislatie.just.ro/public/DetaliiDocument/276306">
             <div class="d-icon" style="background:rgba(139,92,246,0.2)"><i class="ph-duotone ph-bank" style="color:#c4b5fd"></i></div>
-            <div class="d-text">Autoconsum instituții publice<div class="d-label">Calendarul apelului se confirmă</div></div>
+            <div class="d-text">Autoconsum instituții publice<div class="d-label">Ghid aprobat – depunerea nu este deschisă</div></div>
           </a>
 
-          <a href="/dr14" class="dropdown-item" role="menuitem" data-service-id="dr14" data-analytics-event="program_menu_click" data-analytics-component="desktop_program_menu" data-analytics-target="/dr14" data-analytics-program-category="agriculture" data-program-id="dr14-afir" data-source-status="consultation" data-reviewed-at="2026-07-20">
-            <div class="d-icon" style="background:rgba(34,197,94,0.2)"><i class="ph-duotone ph-tractor" style="color:#86efac"></i></div>
-            <div class="d-text">DR 14 – Ferme mici<div class="d-label">Ferme mici | variantă consultativă</div></div>
-          </a>
 
-          <a href="/digitalizare-imm" class="dropdown-item" role="menuitem" data-service-id="digitalizare-imm" data-analytics-event="program_menu_click" data-analytics-component="desktop_program_menu" data-analytics-target="/digitalizare-imm" data-analytics-program-category="digitalization" data-program-id="digitalizare-imm" data-source-status="unknown" data-reviewed-at="2026-05-20">
-            <div class="d-icon" style="background:rgba(14,165,233,0.2)"><i class="ph-duotone ph-desktop" style="color:#7dd3fc"></i></div>
-            <div class="d-text">Digitalizare IMM<div class="d-label">Identifică apelul digital activ</div></div>
-          </a>
 
-          <a href="/femeia-antreprenor-2026" class="dropdown-item" role="menuitem" data-service-id="femeia-antreprenor" data-analytics-event="program_menu_click" data-analytics-component="desktop_program_menu" data-analytics-target="/femeia-antreprenor-2026" data-analytics-program-category="entrepreneurship" data-program-id="femeia-antreprenor" data-source-status="unknown" data-reviewed-at="2026-05-20">
+
+
+          <a href="/femeia-antreprenor-2026" class="dropdown-item" role="menuitem" data-service-id="femeia-antreprenor" data-analytics-event="program_menu_click" data-analytics-component="desktop_program_menu" data-analytics-target="/femeia-antreprenor-2026" data-analytics-program-category="entrepreneurship" data-program-id="femeia-antreprenor" data-program-status="calendar_estimativ" data-status-label="Calendar estimativ – depunerea nu este confirmată" data-verified-at="2026-05-20" data-source-url="https://economie.gov.ro/pe-data-de-30-iulie-se-da-startul-inscrierilor-in-cadrul-programului-femeia-antreprenor/">
             <div class="d-icon" style="background:rgba(236,72,153,0.2)"><i class="ph-duotone ph-user-circle" style="color:#f9a8d4"></i></div>
-            <div class="d-text">Femeia Antreprenor<div class="d-label">Ediția activă trebuie confirmată</div></div>
+            <div class="d-text">Femeia Antreprenor<div class="d-label">Calendar estimativ – depunerea nu este confirmată</div></div>
           </a>
 
-          <a href="/gal-afir" class="dropdown-item" role="menuitem" data-service-id="gal-afir" data-analytics-event="program_menu_click" data-analytics-component="desktop_program_menu" data-analytics-target="/gal-afir" data-analytics-program-category="local_development" data-program-id="gal-afir-leader" data-source-status="final" data-reviewed-at="2026-05-26">
+          <a href="/gal-afir" class="dropdown-item" role="menuitem" data-service-id="gal-afir" data-analytics-event="program_menu_click" data-analytics-component="desktop_program_menu" data-analytics-target="/gal-afir" data-analytics-program-category="local_development" data-program-id="gal-afir-leader" data-program-status="ghid_aprobat_nedeschis" data-status-label="Ghid aprobat – depunerea nu este deschisă" data-verified-at="2026-05-26" data-source-url="https://www.afir.ro/finantare/leader/">
             <div class="d-icon" style="background:rgba(34,197,94,0.2)">
               <i class="ph-duotone ph-map-pin" style="color:#86efac"></i>
             </div>
-            <div class="d-text">GAL-AFIR<div class="d-label">LEADER | verifică ghidul local</div></div>
+            <div class="d-text">GAL-AFIR / LEADER<div class="d-label">Ghid aprobat – depunerea nu este deschisă</div></div>
           </a>
 
-          <a href="/e-move" class="dropdown-item" role="menuitem" data-service-id="e-move" data-analytics-event="program_menu_click" data-analytics-component="desktop_program_menu" data-analytics-target="/e-move" data-analytics-program-category="electric_mobility" data-program-id="e-move-ro" data-source-status="consultation" data-reviewed-at="2026-05-27">
+          <a href="/e-move" class="dropdown-item" role="menuitem" data-service-id="e-move" data-analytics-event="program_menu_click" data-analytics-component="desktop_program_menu" data-analytics-target="/e-move" data-analytics-program-category="electric_mobility" data-program-id="e-move-ro" data-program-status="consultare_publica" data-status-label="Consultare publică – depunerea nu este deschisă" data-verified-at="2026-05-27" data-source-url="https://fonduri.mt.ro/transparenta/consultare-publica/fondul-pentru-modernizare/comunicat-fm-consultare-publica-ghidul-solicitantului-promovarea-infrastructurii-pentru-o-mobilitate-cu-emisii-zero-in-sprijinul-intreprinderilor-si-comunitatilor-e-move-ro">
             <div class="d-icon" style="background:rgba(14,165,233,0.2)">
               <i class="ph-duotone ph-battery-charging" style="color:#7dd3fc"></i>
             </div>
-            <div class="d-text">e-MOVE RO<div class="d-label">Stații de încărcare | consultativ</div></div>
+            <div class="d-text">e-MOVE RO<div class="d-label">Consultare publică – depunerea nu este deschisă</div></div>
           </a>
 
-          <a href="/pocidif-21" class="dropdown-item" role="menuitem" data-service-id="pocidif-21" data-analytics-event="program_menu_click" data-analytics-component="desktop_program_menu" data-analytics-target="/pocidif-21" data-analytics-program-category="digital_innovation" data-program-id="pocidif-21" data-source-status="final" data-reviewed-at="2026-07-13">
+          <a href="/pocidif-21" class="dropdown-item" role="menuitem" data-service-id="pocidif-21" data-analytics-event="program_menu_click" data-analytics-component="desktop_program_menu" data-analytics-target="/pocidif-21" data-analytics-program-category="digital_innovation" data-program-id="pocidif-21" data-program-status="ghid_aprobat_nedeschis" data-status-label="Ghid aprobat – depunerea nu este deschisă" data-verified-at="2026-07-13" data-source-url="https://mfe.gov.ro/ghiduri_pocidif/pocidif-ghidul-solicitantului-dezvoltarea-de-noi-servicii-aplicatii-produse-prin-inovare-si-adoptarea-de-tehnologii-avansate-2/">
             <div class="d-icon" style="background:rgba(99,102,241,0.2)">
               <i class="ph-duotone ph-circuitry" style="color:#c4b5fd"></i>
             </div>
-            <div class="d-text">PoCIDIF 2.1<div class="d-label">Inovare digitală | ghid aprobat</div></div>
+            <div class="d-text">PoCIDIF 2.1<div class="d-label">Ghid aprobat – depunerea nu este deschisă</div></div>
           </a>
 
-          <a href="/pro-infra" class="dropdown-item" role="menuitem" data-service-id="pro-infra" data-analytics-event="program_menu_click" data-analytics-component="desktop_program_menu" data-analytics-target="/pro-infra" data-analytics-program-category="infrastructure_production" data-program-id="pro-infra" data-source-status="final" data-reviewed-at="2026-07-13">
-            <div class="d-icon" style="background:rgba(251,146,60,0.2)"><i class="ph-duotone ph-factory" style="color:#fdba74"></i></div>
-            <div class="d-text">PRO INFRA<div class="d-label">Schemă aprobată | verifică apelul</div></div>
-          </a>
 
-          <a href="/start-up-nation-2026" class="dropdown-item" role="menuitem" data-service-id="startup-nation" data-analytics-event="program_menu_click" data-analytics-component="desktop_program_menu" data-analytics-target="/start-up-nation-2026" data-analytics-program-category="entrepreneurship" data-program-id="start-up-nation" data-source-status="unknown" data-reviewed-at="2026-05-20">
+
+          <a href="/start-up-nation-2026" class="dropdown-item" role="menuitem" data-service-id="startup-nation" data-analytics-event="program_menu_click" data-analytics-component="desktop_program_menu" data-analytics-target="/start-up-nation-2026" data-analytics-program-category="entrepreneurship" data-program-id="start-up-nation" data-program-status="calendar_estimativ" data-status-label="Calendar estimativ – depunerea nu este confirmată" data-verified-at="2026-05-20" data-source-url="https://economie.gov.ro/participa-la-definitivarea-procedurii-de-implementare-a-programului-de-succes-start-up-nation-editia-2024/">
             <div class="d-icon" style="background:rgba(139,92,246,0.2)"><i class="ph-duotone ph-rocket-launch" style="color:#a78bfa"></i></div>
-            <div class="d-text">Start-Up Nation<div class="d-label">Ediția activă trebuie confirmată</div></div>
+            <div class="d-text">Start-Up Nation<div class="d-label">Calendar estimativ – depunerea nu este confirmată</div></div>
           </a>
         </div>
       </div>
@@ -436,7 +449,7 @@
 
       <a href="/contact" class="nav-utility btn-secondary" data-analytics-event="nav_click" data-analytics-component="desktop_nav" data-analytics-cta-id="contact" data-analytics-target="/contact">Contact</a>
 
-        <a href="#eligibility-whatsapp-dialog" class="nav-cta btn-primary" data-whatsapp-dialog-open="" data-analytics-event="eligibility_cta_click" data-analytics-component="desktop_nav" data-analytics-cta-id="eligibility_whatsapp" aria-haspopup="dialog" aria-controls="eligibility-whatsapp-dialog">Solicită verificare eligibilitate</a>
+        <a href="#eligibility-whatsapp-dialog" class="nav-cta btn-primary" data-whatsapp-dialog-open="" data-analytics-event="cta_click" data-analytics-component="desktop_nav" data-analytics-cta-id="eligibility_whatsapp" data-analytics-cta-view="true" data-analytics-copy-variant="default" aria-haspopup="dialog" aria-controls="eligibility-whatsapp-dialog">Solicită verificare inițială</a>
     </div>
 
     <button class="hamburger" id="hamburgerBtn" type="button" aria-label="Deschide meniu" aria-expanded="false" aria-controls="mobileMenu" data-analytics-event="nav_click" data-analytics-component="mobile_menu_toggle" data-analytics-cta-id="mobile_menu_toggle">
@@ -453,22 +466,22 @@
     <a href="/fonduri-europene" onclick="closeMobileMenu()" data-analytics-event="nav_click" data-analytics-component="mobile_nav" data-analytics-cta-id="funding" data-analytics-target="/fonduri-europene">Finanțări</a>
     <a href="/blog" onclick="closeMobileMenu()" data-analytics-event="nav_click" data-analytics-component="mobile_nav" data-analytics-cta-id="blog" data-analytics-target="/blog">Blog</a>
     <div class="mobile-section-title">Programe de finanțare</div>
-    <a href="/por-adr-nord-est" data-analytics-event="program_menu_click" data-analytics-component="mobile_program_menu" data-analytics-target="/por-adr-nord-est" data-analytics-program-category="regional" data-program-id="program-regional-nord-est" data-source-status="final" data-reviewed-at="2026-07-20">POR ADR Nord-Est</a>
-    <a href="/fonduri-regionale" data-analytics-event="program_menu_click" data-analytics-component="mobile_program_menu" data-analytics-target="/fonduri-regionale" data-analytics-program-category="regional" data-program-id="fonduri-regionale" data-source-status="unknown" data-reviewed-at="2026-07-20">Fonduri regionale</a>
-    <a href="/dr12-afir" data-analytics-event="program_menu_click" data-analytics-component="mobile_program_menu" data-analytics-target="/dr12-afir" data-analytics-program-category="agriculture" data-program-id="dr12-afir" data-source-status="consultation" data-reviewed-at="2026-07-20">DR 12 / AFIR</a>
-    <a href="/afir-autoconsum-agroalimentar" data-analytics-event="program_menu_click" data-analytics-component="mobile_program_menu" data-analytics-target="/afir-autoconsum-agroalimentar" data-analytics-program-category="agriculture_energy" data-program-id="afir-energie-autoconsum" data-source-status="open" data-reviewed-at="2026-07-20">AFIR Autoconsum agroalimentar</a>
-    <a href="/autoconsum-public-fotovoltaice-institutii-publice" data-analytics-event="program_menu_click" data-analytics-component="mobile_program_menu" data-analytics-target="/autoconsum-public-fotovoltaice-institutii-publice" data-analytics-program-category="public_energy" data-program-id="autoconsum-institutii-publice" data-source-status="final" data-reviewed-at="2026-05-20">Autoconsum instituții publice</a>
-    <a href="/dr14" data-analytics-event="program_menu_click" data-analytics-component="mobile_program_menu" data-analytics-target="/dr14" data-analytics-program-category="agriculture" data-program-id="dr14-afir" data-source-status="consultation" data-reviewed-at="2026-07-20">DR 14 – Ferme mici</a>
-    <a href="/digitalizare-imm" data-analytics-event="program_menu_click" data-analytics-component="mobile_program_menu" data-analytics-target="/digitalizare-imm" data-analytics-program-category="digitalization" data-program-id="digitalizare-imm" data-source-status="unknown" data-reviewed-at="2026-05-20">Digitalizare IMM</a>
-    <a href="/femeia-antreprenor-2026" data-analytics-event="program_menu_click" data-analytics-component="mobile_program_menu" data-analytics-target="/femeia-antreprenor-2026" data-analytics-program-category="entrepreneurship" data-program-id="femeia-antreprenor" data-source-status="unknown" data-reviewed-at="2026-05-20">Femeia Antreprenor</a>
-    <a href="/gal-afir" data-analytics-event="program_menu_click" data-analytics-component="mobile_program_menu" data-analytics-target="/gal-afir" data-analytics-program-category="local_development" data-program-id="gal-afir-leader" data-source-status="final" data-reviewed-at="2026-05-26">GAL-AFIR</a>
-    <a href="/e-move" data-analytics-event="program_menu_click" data-analytics-component="mobile_program_menu" data-analytics-target="/e-move" data-analytics-program-category="electric_mobility" data-program-id="e-move-ro" data-source-status="consultation" data-reviewed-at="2026-05-27">e-MOVE RO</a>
-    <a href="/pocidif-21" data-analytics-event="program_menu_click" data-analytics-component="mobile_program_menu" data-analytics-target="/pocidif-21" data-analytics-program-category="digital_innovation" data-program-id="pocidif-21" data-source-status="final" data-reviewed-at="2026-07-13">PoCIDIF 2.1</a>
-    <a href="/pro-infra" data-analytics-event="program_menu_click" data-analytics-component="mobile_program_menu" data-analytics-target="/pro-infra" data-analytics-program-category="infrastructure_production" data-program-id="pro-infra" data-source-status="final" data-reviewed-at="2026-07-13">PRO INFRA</a>
-    <a href="/start-up-nation-2026" data-analytics-event="program_menu_click" data-analytics-component="mobile_program_menu" data-analytics-target="/start-up-nation-2026" data-analytics-program-category="entrepreneurship" data-program-id="start-up-nation" data-source-status="unknown" data-reviewed-at="2026-05-20">Start-Up Nation</a>
+    <a href="/por-adr-nord-est" data-analytics-event="program_menu_click" data-analytics-component="mobile_program_menu" data-analytics-target="/por-adr-nord-est" data-analytics-program-category="regional" data-program-id="program-regional-nord-est" data-program-status="ghid_aprobat_nedeschis" data-status-label="Ghid aprobat – depunerea nu este deschisă" data-verified-at="2026-07-20" data-source-url="https://regionordest.ro/">Programul Regional Nord-Est</a>
+    <a href="/fonduri-regionale" data-analytics-event="program_menu_click" data-analytics-component="mobile_program_menu" data-analytics-target="/fonduri-regionale" data-analytics-program-category="regional" data-program-id="fonduri-regionale" data-program-status="calendar_estimativ" data-status-label="Calendar estimativ – depunerea nu este confirmată" data-verified-at="2026-07-20" data-source-url="https://mfe.gov.ro/">Fonduri regionale</a>
+
+    <a href="/afir-autoconsum-agroalimentar" data-analytics-event="program_menu_click" data-analytics-component="mobile_program_menu" data-analytics-target="/afir-autoconsum-agroalimentar" data-analytics-program-category="agriculture_energy" data-program-id="afir-energie-autoconsum" data-program-status="apel_deschis" data-status-label="Apel deschis" data-verified-at="2026-07-20" data-source-url="https://www.afir.ro/media/hkfp4w0v/ghidul-solicitantului-schem%C4%83-energie-autoconsum-v7-iunie-2026.pdf">AFIR Autoconsum Agroalimentar</a>
+    <a href="/autoconsum-public-fotovoltaice-institutii-publice" data-analytics-event="program_menu_click" data-analytics-component="mobile_program_menu" data-analytics-target="/autoconsum-public-fotovoltaice-institutii-publice" data-analytics-program-category="public_energy" data-program-id="autoconsum-institutii-publice" data-program-status="ghid_aprobat_nedeschis" data-status-label="Ghid aprobat – depunerea nu este deschisă" data-verified-at="2026-05-20" data-source-url="https://legislatie.just.ro/public/DetaliiDocument/276306">Autoconsum instituții publice</a>
+
+
+    <a href="/femeia-antreprenor-2026" data-analytics-event="program_menu_click" data-analytics-component="mobile_program_menu" data-analytics-target="/femeia-antreprenor-2026" data-analytics-program-category="entrepreneurship" data-program-id="femeia-antreprenor" data-program-status="calendar_estimativ" data-status-label="Calendar estimativ – depunerea nu este confirmată" data-verified-at="2026-05-20" data-source-url="https://economie.gov.ro/pe-data-de-30-iulie-se-da-startul-inscrierilor-in-cadrul-programului-femeia-antreprenor/">Femeia Antreprenor</a>
+    <a href="/gal-afir" data-analytics-event="program_menu_click" data-analytics-component="mobile_program_menu" data-analytics-target="/gal-afir" data-analytics-program-category="local_development" data-program-id="gal-afir-leader" data-program-status="ghid_aprobat_nedeschis" data-status-label="Ghid aprobat – depunerea nu este deschisă" data-verified-at="2026-05-26" data-source-url="https://www.afir.ro/finantare/leader/">GAL-AFIR / LEADER</a>
+    <a href="/e-move" data-analytics-event="program_menu_click" data-analytics-component="mobile_program_menu" data-analytics-target="/e-move" data-analytics-program-category="electric_mobility" data-program-id="e-move-ro" data-program-status="consultare_publica" data-status-label="Consultare publică – depunerea nu este deschisă" data-verified-at="2026-05-27" data-source-url="https://fonduri.mt.ro/transparenta/consultare-publica/fondul-pentru-modernizare/comunicat-fm-consultare-publica-ghidul-solicitantului-promovarea-infrastructurii-pentru-o-mobilitate-cu-emisii-zero-in-sprijinul-intreprinderilor-si-comunitatilor-e-move-ro">e-MOVE RO</a>
+    <a href="/pocidif-21" data-analytics-event="program_menu_click" data-analytics-component="mobile_program_menu" data-analytics-target="/pocidif-21" data-analytics-program-category="digital_innovation" data-program-id="pocidif-21" data-program-status="ghid_aprobat_nedeschis" data-status-label="Ghid aprobat – depunerea nu este deschisă" data-verified-at="2026-07-13" data-source-url="https://mfe.gov.ro/ghiduri_pocidif/pocidif-ghidul-solicitantului-dezvoltarea-de-noi-servicii-aplicatii-produse-prin-inovare-si-adoptarea-de-tehnologii-avansate-2/">PoCIDIF 2.1</a>
+
+    <a href="/start-up-nation-2026" data-analytics-event="program_menu_click" data-analytics-component="mobile_program_menu" data-analytics-target="/start-up-nation-2026" data-analytics-program-category="entrepreneurship" data-program-id="start-up-nation" data-program-status="calendar_estimativ" data-status-label="Calendar estimativ – depunerea nu este confirmată" data-verified-at="2026-05-20" data-source-url="https://economie.gov.ro/participa-la-definitivarea-procedurii-de-implementare-a-programului-de-succes-start-up-nation-editia-2024/">Start-Up Nation</a>
     <a href="/calculator-soc" data-analytics-event="nav_click" data-analytics-component="mobile_nav" data-analytics-cta-id="calculator_soc" data-analytics-target="/calculator-soc">🧮 Calculator SOC</a>
     <a href="/contact" onclick="closeMobileMenu()" data-analytics-event="nav_click" data-analytics-component="mobile_nav" data-analytics-cta-id="contact" data-analytics-target="/contact">Contact</a>
-    <a href="#eligibility-whatsapp-dialog" class="mobile-cta btn-primary" data-whatsapp-dialog-open="" data-analytics-event="eligibility_cta_click" data-analytics-component="mobile_nav" data-analytics-cta-id="eligibility_whatsapp" aria-haspopup="dialog" aria-controls="eligibility-whatsapp-dialog">Solicită verificare eligibilitate</a>
+    <a href="#eligibility-whatsapp-dialog" class="mobile-cta btn-primary" data-whatsapp-dialog-open="" data-analytics-event="cta_click" data-analytics-component="mobile_nav" data-analytics-cta-id="eligibility_whatsapp" data-analytics-cta-view="true" data-analytics-copy-variant="default" aria-haspopup="dialog" aria-controls="eligibility-whatsapp-dialog">Solicită verificare inițială</a>
   </nav>
 </div>
 <div id="eligibility-whatsapp-dialog" class="eligibility-whatsapp-dialog" role="dialog" aria-modal="true" aria-labelledby="eligibility-whatsapp-title" hidden="">
@@ -478,11 +491,11 @@
     <h2 id="eligibility-whatsapp-title">Trimite mesaj prin WhatsApp</h2>
     <p>Alege numărul la care dorești să trimiți mesajul.</p>
     <div class="eligibility-whatsapp-options">
-      <a href="https://wa.me/40769828338" target="_blank" rel="noopener noreferrer" data-analytics-event="whatsapp_number_click" data-analytics-component="whatsapp_dialog" data-analytics-cta-id="whatsapp_option_a">
+      <a href="https://wa.me/40769828338" target="_blank" rel="noopener noreferrer" data-analytics-event="contact_whatsapp" data-analytics-component="whatsapp_dialog" data-analytics-cta-id="whatsapp_option_a">
         <span>WhatsApp</span>
         <strong>0769 828 338</strong>
       </a>
-      <a href="https://wa.me/40753326229" target="_blank" rel="noopener noreferrer" data-analytics-event="whatsapp_number_click" data-analytics-component="whatsapp_dialog" data-analytics-cta-id="whatsapp_option_b">
+      <a href="https://wa.me/40753326229" target="_blank" rel="noopener noreferrer" data-analytics-event="contact_whatsapp" data-analytics-component="whatsapp_dialog" data-analytics-cta-id="whatsapp_option_b">
         <span>WhatsApp</span>
         <strong>0753 326 229</strong>
       </a>
@@ -496,8 +509,8 @@
   <!-- PROGRAM_HERO_START -->
   <header class="hero hero--image hero--digital program-hero" data-design-family="digital" data-program-family="digital" data-program-route="/pocidif-21" data-banner-id="slide-pocidif-21" data-banner-image="/assets/hero/hero-digital.webp" style="--hero-image:url('/assets/hero/hero-digital.webp')">
     <span class="hero-icon" aria-hidden="true"><i class="ph-duotone ph-circuitry"></i></span>
-    <span class="eyebrow design-badge design-badge--digital">PNRR/MIPE | digitalizare | ghid verificat</span>
-    <h1>PoCIDIF 2.1 – inovare și tehnologii digitale pentru IMM din sectorul TIC</h1>
+    <span class="eyebrow design-badge design-badge--digital">Ghid aprobat – depunerea nu este deschisă</span>
+    <h1>PoCIDIF – Acțiunea 2.1 Dezvoltarea de noi servicii, aplicații și produse prin inovare și adoptarea de tehnologii avansate</h1>
     <p>PoCIDIF 2.1 pentru IMM TIC: ghid aprobat, eligibilitate, CDI, software, hardware, indicatori, documente, buget și punctaj.</p>
     <div class="hero-actions">
       <a class="btn btn-primary" href="/verificare-eligibilitate-fonduri-europene">Solicită analiză PoCIDIF</a>
@@ -509,7 +522,7 @@
     <article class="panel">
 <!-- ANSWER_READINESS_START -->
     <section class="answer-readiness" aria-labelledby="answer-readiness-pocidif-21-conditions">
-      <p data-answer-readiness-direct="" data-information-status="Document final. Ghidul este aprobat; perioada de depunere și eventualele actualizări se confirmă pe pagina oficială MIPE.">PoCIDIF 2.1 finanțează IMM-uri din sectorul TIC care dezvoltă prin cercetare, dezvoltare și inovare un serviciu, o aplicație sau un produs digital destinat pieței. Solicitantul trebuie să confirme codul CAEN, echipa, activitățile CDI, rezultatul inovator, bugetul, indicatorii și cofinanțarea. Ghidul și schema de ajutor sunt aprobate, iar clarificările oficiale fac parte din verificare.</p>
+      <p data-answer-readiness-direct="" data-information-status="Ghid aprobat – depunerea nu este deschisă. Ghidul este aprobat; perioada de depunere și eventualele actualizări se confirmă pe pagina oficială MIPE.">PoCIDIF 2.1 pentru IMM TIC: ghid aprobat, eligibilitate, CDI, software, hardware, indicatori, documente, buget și punctaj. Ghid aprobat – depunerea nu este deschisă. Finanțare conform sursei oficiale: 1.500.000 EUR (soluție software inovatoare) / 3.000.000 EUR (produs hardware inovator); intensitate 75% (ajutor regional, în funcție de categorie și regiune) / 100% (ajutor de minimis pentru cheltuielile încadrate); Depinde de tipul ajutorului, dimensiunea întreprinderii, regiune și cheltuielile neeligibile.</p>
 
       <h2 id="answer-readiness-pocidif-21-conditions">Datele esențiale ale programului</h2>
       <dl class="answer-readiness__facts" aria-labelledby="answer-readiness-pocidif-21-conditions">
@@ -519,11 +532,11 @@
           </div>
           <div>
             <dt>Care este finanțarea?</dt>
-            <dd>Ghidul aprobat stabilește minimum 200.000 euro și maximum 1,5 milioane euro pentru software inovator sau 3 milioane euro pentru produs hardware inovator.</dd>
+            <dd>Finanțare conform sursei oficiale: 1.500.000 EUR (soluție software inovatoare) / 3.000.000 EUR (produs hardware inovator); intensitate 75% (ajutor regional, în funcție de categorie și regiune) / 100% (ajutor de minimis pentru cheltuielile încadrate); Depinde de tipul ajutorului, dimensiunea întreprinderii, regiune și cheltuielile neeligibile.</dd>
           </div>
           <div>
             <dt>Care este contribuția proprie?</dt>
-            <dd>Contribuția diferă după tipul de activitate, categoria de ajutor, dimensiunea întreprinderii și regiune și se calculează pe fiecare categorie bugetară.</dd>
+            <dd>intensitate 75% (ajutor regional, în funcție de categorie și regiune) / 100% (ajutor de minimis pentru cheltuielile încadrate); Depinde de tipul ajutorului, dimensiunea întreprinderii, regiune și cheltuielile neeligibile.</dd>
           </div>
           <div>
             <dt>Ce cheltuieli sunt eligibile?</dt>
@@ -539,27 +552,28 @@
           </div>
           <div>
             <dt>Când se depune?</dt>
-            <dd>Calendarul aplicabil este cel publicat pentru apel în MySMIS și în comunicările MIPE; pagina nu înlocuiește termenul oficial al platformei.</dd>
+            <dd>Ghid aprobat – depunerea nu este deschisă</dd>
           </div>
           <div>
             <dt>Ce statut are ghidul?</dt>
-            <dd>Ghidul este aprobat prin Ordinul MIPE nr. 965/23.06.2026, iar schema prin Ordinul nr. 875/15.06.2026; se verifică și clarificările ulterioare.</dd>
+            <dd>Ghid aprobat – depunerea nu este deschisă.</dd>
           </div>
       </dl>
 
-      <p class="source-note answer-readiness__source"><strong>Sursă oficială:</strong> <a href="https://mfe.gov.ro/ghiduri_pocidif/pocidif-ghidul-solicitantului-dezvoltarea-de-noi-servicii-aplicatii-produse-prin-inovare-si-adoptarea-de-tehnologii-avansate-2/" target="_blank" rel="noopener noreferrer" data-analytics-event="source_document_click" data-analytics-component="official_source" data-analytics-cta-id="source_document" data-analytics-target="https://mfe.gov.ro/ghiduri_pocidif/pocidif-ghidul-solicitantului-dezvoltarea-de-noi-servicii-aplicatii-produse-prin-inovare-si-adoptarea-de-tehnologii-avansate-2/">Ghidul solicitantului PoCIDIF 2.1 aprobat prin Ordinul MIPE nr. 965/23.06.2026</a>. <strong>Instituție:</strong> Ministerul Investițiilor și Proiectelor Europene. <strong>Statut:</strong> Document final. Ghidul este aprobat; perioada de depunere și eventualele actualizări se confirmă pe pagina oficială MIPE. <strong>Ultima verificare:</strong> <time datetime="2026-07-13">13 iulie 2026</time>.</p>
+      <p class="source-note answer-readiness__source"><strong>Sursă oficială:</strong> <a href="https://mfe.gov.ro/ghiduri_pocidif/pocidif-ghidul-solicitantului-dezvoltarea-de-noi-servicii-aplicatii-produse-prin-inovare-si-adoptarea-de-tehnologii-avansate-2/" target="_blank" rel="noopener noreferrer" data-analytics-event="source_document_click" data-analytics-component="official_source" data-analytics-cta-id="source_document" data-analytics-target="https://mfe.gov.ro/ghiduri_pocidif/pocidif-ghidul-solicitantului-dezvoltarea-de-noi-servicii-aplicatii-produse-prin-inovare-si-adoptarea-de-tehnologii-avansate-2/">Ghidul solicitantului PoCIDIF 2.1 aprobat prin Ordinul MIPE nr. 965/23.06.2026</a>. <strong>Instituție:</strong> Ministerul Investițiilor și Proiectelor Europene. <strong>Statut:</strong> Ghid aprobat – depunerea nu este deschisă. Ghidul este aprobat; perioada de depunere și eventualele actualizări se confirmă pe pagina oficială MIPE. <strong>Ultima verificare:</strong> <time datetime="2026-07-13">13 iulie 2026</time>.</p>
 
       <aside aria-labelledby="answer-readiness-pocidif-21-interpretation">
         <h3 id="answer-readiness-pocidif-21-interpretation">Interpretarea FABER</h3>
-        <p>Un proiect centrat pe achiziții IT, fără activități CDI și fără un rezultat nou introdus pe piață, nu răspunde obiectivului apelului. Aceasta este interpretarea FABER a efectului practic al ghidului, nu o normă separată.</p>
+        <p>Un proiect centrat pe achiziții IT, fără activități CDI și fără un rezultat nou introdus pe piață, nu răspunde obiectivului apelului. Această este interpretarea FABER a efectului practic al ghidului, nu o normă separată.</p>
       </aside>
     </section>
 <!-- ANSWER_READINESS_END -->
 <!-- PROGRAM_FACTUAL_STATUS_START -->
-<section class="program-factual-status" aria-label="Statut factual al programului" data-program-id="pocidif-21" data-source-status="final" data-reviewed-at="2026-07-13">
-  <p><strong>Statutul informației:</strong> Document final. Ghidul este aprobat; perioada de depunere și eventualele actualizări se confirmă pe pagina oficială MIPE.</p>
-  <p>Finanțare conform sursei oficiale: 1.500.000 EUR (soluție software inovatoare) / 3.000.000 EUR (produs hardware inovator); intensitate 75% (ajutor regional, în funcție de categorie și regiune) / 100% (ajutor de minimis pentru cheltuielile încadrate)</p>
-  <p><strong>Sursă oficială:</strong> <a href="https://mfe.gov.ro/ghiduri_pocidif/pocidif-ghidul-solicitantului-dezvoltarea-de-noi-servicii-aplicatii-produse-prin-inovare-si-adoptarea-de-tehnologii-avansate-2/" target="_blank" rel="noopener noreferrer" data-analytics-event="source_document_click" data-analytics-component="program_factual_status" data-analytics-cta-id="official_source" data-analytics-program-category="pocidif-21">Ghidul solicitantului PoCIDIF 2.1 aprobat prin Ordinul MIPE nr. 965/23.06.2026</a>, Ministerul Investițiilor și Proiectelor Europene. Verificat la <time datetime="2026-07-13">2026-07-13</time>.</p>
+<section class="program-factual-status" aria-label="Statut factual al programului" data-program-id="pocidif-21" data-program-status="ghid_aprobat_nedeschis" data-status-label="Ghid aprobat – depunerea nu este deschisă" data-verified-at="2026-07-13" data-source-url="https://mfe.gov.ro/ghiduri_pocidif/pocidif-ghidul-solicitantului-dezvoltarea-de-noi-servicii-aplicatii-produse-prin-inovare-si-adoptarea-de-tehnologii-avansate-2/" data-publication-state="public">
+  <p><strong>Statut:</strong> Ghid aprobat – depunerea nu este deschisă. Ghidul este aprobat; perioada de depunere și eventualele actualizări se confirmă pe pagina oficială MIPE.</p>
+  <!-- applicationStart/applicationEnd=null -->
+  <p data-program-funding>Finanțare conform sursei oficiale: 1.500.000 EUR (soluție software inovatoare) / 3.000.000 EUR (produs hardware inovator); intensitate 75% (ajutor regional, în funcție de categorie și regiune) / 100% (ajutor de minimis pentru cheltuielile încadrate); Depinde de tipul ajutorului, dimensiunea întreprinderii, regiune și cheltuielile neeligibile.</p>
+  <p><strong>Sursă oficială:</strong> <a href="https://mfe.gov.ro/ghiduri_pocidif/pocidif-ghidul-solicitantului-dezvoltarea-de-noi-servicii-aplicatii-produse-prin-inovare-si-adoptarea-de-tehnologii-avansate-2/" target="_blank" rel="noopener noreferrer" data-analytics-event="source_document_click" data-analytics-component="program_factual_status" data-analytics-cta-id="official_source" data-analytics-program-category="pocidif-21">Ghidul solicitantului PoCIDIF 2.1 aprobat prin Ordinul MIPE nr. 965/23.06.2026</a>, Ministerul Investițiilor și Proiectelor Europene. Verificat la <time datetime="2026-07-13">2026-07-13</time>. Ultima actualizare relevantă: <time datetime="2026-07-13">2026-07-13</time>.</p>
 </section>
 <!-- PROGRAM_FACTUAL_STATUS_END -->
 <section aria-labelledby="pocidif-raspuns-rapid">
@@ -570,7 +584,7 @@
 
       <section aria-labelledby="pocidif-denumire">
         <h2 id="pocidif-denumire">Denumirea completă a programului</h2>
-        <p>PoCIDIF este <strong>Programul Creștere Inteligentă, Digitalizare și Instrumente Financiare 2021–2027</strong>. Pagina tratează apelul nr. 1 din Acțiunea 2.1 – „Dezvoltarea de noi servicii/aplicații/produse prin inovare și adoptarea de tehnologii avansate”, Prioritatea 2 – Digitalizare în administrația publică centrală și mediul de afaceri, obiectivul specific RSO1.1 privind dezvoltarea capacităților de cercetare și inovare și adoptarea tehnologiilor avansate.</p>
+        <p>PoCIDIF este <strong>Programul Creștere Inteligentă, Digitalizare și Instrumente Financiare 2021–2027</strong>. Pagină tratează apelul nr. 1 din Acțiunea 2.1 – „Dezvoltarea de noi servicii/aplicații/produse prin inovare și adoptarea de tehnologii avansate”, Prioritatea 2 – Digitalizare în administrația publică centrală și mediul de afaceri, obiectivul specific RSO1.1 privind dezvoltarea capacităților de cercetare și inovare și adoptarea tehnologiilor avansate.</p>
         <p>Acțiunea este finanțată din Fondul European pentru Dezvoltare Regională. Denumirea lungă contează: apelul nu este o schemă generală pentru digitalizarea internă a unei firme, ci o intervenție pentru IMM-uri TIC care creează un rezultat inovator destinat pieței.</p>
       </section>
 
@@ -666,7 +680,7 @@
       <section aria-labelledby="pocidif-greseli">
         <h2 id="pocidif-greseli">Greșeli</h2>
         <ul class="warning-list">
-          <li>proiectul este o achiziție IT sau un website, fără cercetare, inovare și rezultat comercializabil;</li>
+          <li>proiectul este o achiziție IT sau un site, fără cercetare, inovare și rezultat comercializabil;</li>
           <li>codul CAEN nu este dintre cele nouă coduri ori nu este autorizat la locația de implementare;</li>
           <li>firmă sau grupul depune mai multe proiecte ori solicită finanțare pentru o investiție deja finanțată;</li>
           <li>activitățile tehnice sunt externalizate integral și echipa proprie nu atinge pragul cerut;</li>
@@ -684,7 +698,7 @@
 <section class="faq-item"><h3>Care este intervalul grantului PoCIDIF 2.1?</h3><p>Ghidul aprobat stabilește o valoare minimă nerambursabilă de 200.000 euro. Maximul este 1.500.000 euro pentru o soluție software inovatoare și 3.000.000 euro pentru un produs hardware inovator, inclusiv ajutorul de minimis.</p></section>
 <section class="faq-item"><h3>Ce intensitate poate avea finanțarea?</h3><p>Nu există o intensitate unică. Rata se stabilește pentru fiecare categorie de cost în funcție de ajutorul aplicabil, dimensiunea întreprinderii și regiunea proiectului; ajutorul de minimis și ajutorul pentru întreprinderi nou-înființate au reguli distincte.</p></section>
 <section class="faq-item"><h3>Cine poate aplica?</h3><p>IMM-urile din sectorul TIC care au coduri CAEN potrivite, capacitate de implementare și un proiect digital inovator, nu doar o achiziție IT.</p></section>
-<section class="faq-item"><h3>Este eligibil un website simplu?</h3><p>Un website simplu nu este suficient. Proiectul trebuie să arate un serviciu, o aplicatie sau un produs digital cu noutate și rezultat masurabil.</p></section>
+<section class="faq-item"><h3>Este eligibil un site simplu?</h3><p>Un site simplu nu este suficient. Proiectul trebuie să arate un serviciu, o aplicatie sau un produs digital cu noutate și rezultat masurabil.</p></section>
 <section class="faq-item"><h3>Ce coduri CAEN sunt relevante?</h3><p>Ghidul aprobat indică 2611, 2612, 2630, 5821, 5829, 6210, 6220, 6290 și 6310. Codul folosit pentru finanțare trebuie să fie autorizat, inclusiv la fiecare locație de implementare, cel târziu în etapa cerută de ghid.</p></section>
 <section class="faq-item"><h3>Ce documente sunt sensibile?</h3><p>Descrierea tehnică, arhitectura, echipa, piata, drepturile asupra solutiei, bugetul, ofertele și separarea cheltuielilor pe tipuri de ajutor.</p></section>
 <section class="faq-item"><h3>Cum pregătesc analiza de eligibilitate?</h3><p>Pregătește statutul IMM, certificatul constatator și CAEN, situațiile financiare, produsul propus, subdomeniul de specializare inteligentă, arhitectura, echipa, planul de afaceri, indicatorii, bugetul, ofertele și sursa cofinanțării.</p></section>
@@ -696,17 +710,17 @@
         <li class="official-sources__item" data-source-key="pocidif-21">
           <a class="official-sources__title" href="https://mfe.gov.ro/ghiduri_pocidif/pocidif-ghidul-solicitantului-dezvoltarea-de-noi-servicii-aplicatii-produse-prin-inovare-si-adoptarea-de-tehnologii-avansate-2/" target="_blank" rel="noopener noreferrer" data-analytics-event="source_document_click" data-analytics-component="official_source" data-analytics-cta-id="source_document" data-analytics-target="https://mfe.gov.ro/ghiduri_pocidif/pocidif-ghidul-solicitantului-dezvoltarea-de-noi-servicii-aplicatii-produse-prin-inovare-si-adoptarea-de-tehnologii-avansate-2/">PoCIDIF – Acțiunea 2.1: ghid aprobat, schemă și anexe</a>
           <dl class="official-sources__meta">
-            <div><dt>Institutie</dt><dd>Ministerul Investițiilor și Proiectelor Europene</dd></div>
+            <div><dt>Instituție</dt><dd>Ministerul Investițiilor și Proiectelor Europene</dd></div>
             <div><dt>Tip document</dt><dd>pagină oficială cu ghid aprobat, schemă, anexe și întrebări-răspunsuri</dd></div>
             <div><dt>Verificat</dt><dd><time datetime="2026-07-13">13 iulie 2026</time></dd></div>
             <div class="official-sources__url"><dt>URL</dt><dd><a href="https://mfe.gov.ro/ghiduri_pocidif/pocidif-ghidul-solicitantului-dezvoltarea-de-noi-servicii-aplicatii-produse-prin-inovare-si-adoptarea-de-tehnologii-avansate-2/" target="_blank" rel="noopener noreferrer" data-analytics-event="source_document_click" data-analytics-component="official_source" data-analytics-cta-id="source_document" data-analytics-target="https://mfe.gov.ro/ghiduri_pocidif/pocidif-ghidul-solicitantului-dezvoltarea-de-noi-servicii-aplicatii-produse-prin-inovare-si-adoptarea-de-tehnologii-avansate-2/">https://mfe.gov.ro/ghiduri_pocidif/pocidif-ghidul-solicitantului-dezvoltarea-de-noi-servicii-aplicatii-produse-prin-inovare-și-adoptarea-de-tehnologii-avansate-2/</a></dd></div>
           </dl>
-          <p class="official-sources__note">Sursa editorială principală pentru Acțiunea 2.1. Pagina MIPE publică ghidul aprobat, anexele, schema de ajutor și tabelul de întrebări și răspunsuri.</p>
+          <p class="official-sources__note">Sursa editorială principală pentru Acțiunea 2.1. Pagină MIPE publică ghidul aprobat, anexele, schema de ajutor și tabelul de întrebări și răspunsuri.</p>
         </li>
         <li class="official-sources__item" data-source-key="pocidif-21-guide">
           <a class="official-sources__title" href="https://mfe.gov.ro/wp-content/uploads/2026/06/3b7daf66f17fdaad63fef93466d155e3-1.zip" target="_blank" rel="noopener noreferrer" data-analytics-event="source_document_click" data-analytics-component="official_source" data-analytics-cta-id="source_document" data-analytics-target="https://mfe.gov.ro/wp-content/uploads/2026/06/3b7daf66f17fdaad63fef93466d155e3-1.zip">Ghidul aprobat și anexele Acțiunii 2.1</a>
           <dl class="official-sources__meta">
-            <div><dt>Institutie</dt><dd>Ministerul Investițiilor și Proiectelor Europene</dd></div>
+            <div><dt>Instituție</dt><dd>Ministerul Investițiilor și Proiectelor Europene</dd></div>
             <div><dt>Tip document</dt><dd>ghid aprobat și 19 anexe</dd></div>
             <div><dt>Verificat</dt><dd><time datetime="2026-07-13">13 iulie 2026</time></dd></div>
             <div class="official-sources__url"><dt>URL</dt><dd><a href="https://mfe.gov.ro/wp-content/uploads/2026/06/3b7daf66f17fdaad63fef93466d155e3-1.zip" target="_blank" rel="noopener noreferrer" data-analytics-event="source_document_click" data-analytics-component="official_source" data-analytics-cta-id="source_document" data-analytics-target="https://mfe.gov.ro/wp-content/uploads/2026/06/3b7daf66f17fdaad63fef93466d155e3-1.zip">https://mfe.gov.ro/wp-content/uploads/2026/06/3b7daf66f17fdaad63fef93466d155e3-1.zip</a></dd></div>
@@ -716,7 +730,7 @@
         <li class="official-sources__item" data-source-key="pocidif-21-scheme">
           <a class="official-sources__title" href="https://mfe.gov.ro/wp-content/uploads/2026/06/d6bee3673c763582ff4b4fce5be59861.pdf" target="_blank" rel="noopener noreferrer" data-analytics-event="source_document_click" data-analytics-component="official_source" data-analytics-cta-id="source_document" data-analytics-target="https://mfe.gov.ro/wp-content/uploads/2026/06/d6bee3673c763582ff4b4fce5be59861.pdf">Schema de ajutor de stat și de minimis pentru Acțiunea 2.1</a>
           <dl class="official-sources__meta">
-            <div><dt>Institutie</dt><dd>Ministerul Investițiilor și Proiectelor Europene</dd></div>
+            <div><dt>Instituție</dt><dd>Ministerul Investițiilor și Proiectelor Europene</dd></div>
             <div><dt>Tip document</dt><dd>schemă de ajutor aprobată prin Ordinul MIPE nr. 875/15.06.2026</dd></div>
             <div><dt>Verificat</dt><dd><time datetime="2026-07-13">13 iulie 2026</time></dd></div>
             <div class="official-sources__url"><dt>URL</dt><dd><a href="https://mfe.gov.ro/wp-content/uploads/2026/06/d6bee3673c763582ff4b4fce5be59861.pdf" target="_blank" rel="noopener noreferrer" data-analytics-event="source_document_click" data-analytics-component="official_source" data-analytics-cta-id="source_document" data-analytics-target="https://mfe.gov.ro/wp-content/uploads/2026/06/d6bee3673c763582ff4b4fce5be59861.pdf">https://mfe.gov.ro/wp-content/uploads/2026/06/d6bee3673c763582ff4b4fce5be59861.pdf</a></dd></div>
@@ -726,7 +740,7 @@
         <li class="official-sources__item" data-source-key="pocidif-21-qa">
           <a class="official-sources__title" href="https://mfe.gov.ro/wp-content/uploads/2026/07/4b934c3ee5a4ddb2e0195e23d955c43b.docx" target="_blank" rel="noopener noreferrer" data-analytics-event="source_document_click" data-analytics-component="official_source" data-analytics-cta-id="source_document" data-analytics-target="https://mfe.gov.ro/wp-content/uploads/2026/07/4b934c3ee5a4ddb2e0195e23d955c43b.docx">Tabel de întrebări și răspunsuri după publicarea ghidului aprobat</a>
           <dl class="official-sources__meta">
-            <div><dt>Institutie</dt><dd>Ministerul Investițiilor și Proiectelor Europene</dd></div>
+            <div><dt>Instituție</dt><dd>Ministerul Investițiilor și Proiectelor Europene</dd></div>
             <div><dt>Tip document</dt><dd>clarificări oficiale</dd></div>
             <div><dt>Verificat</dt><dd><time datetime="2026-07-13">13 iulie 2026</time></dd></div>
             <div class="official-sources__url"><dt>URL</dt><dd><a href="https://mfe.gov.ro/wp-content/uploads/2026/07/4b934c3ee5a4ddb2e0195e23d955c43b.docx" target="_blank" rel="noopener noreferrer" data-analytics-event="source_document_click" data-analytics-component="official_source" data-analytics-cta-id="source_document" data-analytics-target="https://mfe.gov.ro/wp-content/uploads/2026/07/4b934c3ee5a4ddb2e0195e23d955c43b.docx">https://mfe.gov.ro/wp-content/uploads/2026/07/4b934c3ee5a4ddb2e0195e23d955c43b.docx</a></dd></div>
@@ -744,9 +758,9 @@
 
       <div class="related-links"><a href="/consultanta-pnrr-digitalizare">Consultanță PNRR digitalizare</a>
 <a href="/fonduri-europene-digitalizare">Fonduri europene digitalizare</a>
-<a href="/digitalizare-imm">Digitalizare IMM</a>
+
 <a href="/digitalizare-imm-pnrr">Digitalizare IMM / PNRR</a>
-<a href="/pnrr">PNRR</a>
+
 <a href="/fonduri-europene-imm">Fonduri europene IMM</a>
 <a href="/eligibilitate-pocidif-21">Eligibilitate PoCIDIF 2.1</a>
 <a href="/cheltuieli-eligibile-pocidif-21">Cheltuieli eligibile PoCIDIF 2.1</a>
@@ -756,14 +770,29 @@
     </article>
     <section class="cta-box">
       <h2>Solicită analiză eligibilitate pentru PoCIDIF 2.1</h2>
-      <p>Trimite informații despre IMM, coduri CAEN, produsul digital, echipa, buget și cofinanțare. Verificam dacă proiectul merita pregătit pentru PoCIDIF 2.1.</p>
+      <p>Trimite informații despre IMM, coduri CAEN, produsul digital, echipa, buget și cofinanțare. Verificam dacă proiectul merită pregătit pentru PoCIDIF 2.1.</p>
       <div class="cta-actions">
-        <a class="btn btn-primary" href="/contact" data-analytics-event="contact_page_click" data-analytics-component="contact_cta" data-analytics-cta-id="contact_page" data-analytics-target="/contact">Solicită analiză eligibilitate pentru PoCIDIF 2.1</a>
+        <a class="btn btn-primary" href="/contact" data-analytics-event="cta_click" data-analytics-component="contact_cta" data-analytics-cta-id="pocidif_21_contact_1" data-analytics-target="/contact" data-analytics-cta-view="true" data-analytics-copy-variant="default">Solicită analiză eligibilitate pentru PoCIDIF 2.1</a>
         <a class="btn btn-secondary" href="/consultanta-fonduri-europene">Vezi serviciile</a>
       </div>
     </section>
-  </main>
-  <footer class="footer">© 2026 FABER - Atelier de Consultanță · <a href="/fonduri-europene">Fonduri europene</a> · <a href="/contact" data-analytics-event="contact_page_click" data-analytics-component="contact_cta" data-analytics-cta-id="contact_page" data-analytics-target="/contact">Contact</a></footer>
+  <!-- EDITORIAL_GOVERNANCE_START -->
+<section class="editorial-governance" aria-label="Guvernanță editorială" data-editorial-record="pocidif-21" data-governance-state="public" data-next-review-at="2026-09-11">
+  <p class="editorial-governance__verified"><strong>Verificat la <time datetime="2026-07-13">2026-07-13</time> de Echipa editorială FABER, Revizuire editorială și conformitate.</strong></p>
+  <p>Autor: FABER – Atelier de Consultanță, Autor organizațional.</p>
+  <p>Sursa oficială: <a href="https://mfe.gov.ro/ghiduri_pocidif/pocidif-ghidul-solicitantului-dezvoltarea-de-noi-servicii-aplicatii-produse-prin-inovare-si-adoptarea-de-tehnologii-avansate-2/" target="_blank" rel="noopener noreferrer" data-analytics-event="source_document_click" data-analytics-component="editorial_governance" data-analytics-cta-id="official_source">Ministerul Investițiilor și Proiectelor Europene — Ghidul solicitantului PoCIDIF 2.1 aprobat prin Ordinul MIPE nr. 965/23.06.2026</a>.</p>
+  <p>Următoarea reverificare internă: <time datetime="2026-09-11">2026-09-11</time>. <a href="#editorial-changelog-pocidif-21">Vezi modificările</a>.</p>
+  <details id="editorial-changelog-pocidif-21" class="editorial-governance__changelog">
+    <summary>Istoric editorial</summary>
+    <ol>
+      <li><time datetime="2026-07-21">2026-07-21</time> — Migrare tehnică în registrul de guvernanță; data modificării editoriale substanțiale a rămas neschimbată. <span>(Echipa editorială FABER)</span></li>
+      <li><time datetime="2026-07-13">2026-07-13</time> — Snapshot factual substanțial preluat din registrul unic al programului; istoricul anterior migrării nu a fost rescris. <span>(Echipa editorială FABER)</span></li>
+    </ol>
+  </details>
+</section>
+<!-- EDITORIAL_GOVERNANCE_END -->
+</main>
+  <footer class="footer">© 2026 FABER - Atelier de Consultanță · <a href="/fonduri-europene">Fonduri europene</a> · <a href="/contact" data-analytics-event="cta_click" data-analytics-component="contact_cta" data-analytics-cta-id="pocidif_21_contact_2" data-analytics-target="/contact" data-analytics-cta-view="true" data-analytics-copy-variant="default">Contact</a><!-- CANONICAL_CONTACT_START --><!-- CANONICAL_CONTACT_END --></footer>
 
 
 </body></html>

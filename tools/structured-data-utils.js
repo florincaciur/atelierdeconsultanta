@@ -3,6 +3,7 @@
 const fs = require("fs");
 const path = require("path");
 const cheerio = require("cheerio");
+const { sitemapUrls: readSitemapUrls } = require("./sitemap-utils");
 
 const SITE = "https://atelierdeconsultanta.ro";
 
@@ -116,9 +117,8 @@ function visibleFaqItems($) {
 }
 
 function sitemapRoutes(root) {
-  const sitemap = fs.readFileSync(path.join(root, "sitemap.xml"), "utf8");
-  return [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/giu)]
-    .map((match) => new URL(match[1]))
+  return readSitemapUrls(root)
+    .map((value) => new URL(value))
     .filter((url) => url.origin === SITE)
     .map((url) => url.pathname === "/" ? "/" : url.pathname.replace(/\/$/u, ""));
 }

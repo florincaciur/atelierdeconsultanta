@@ -3,12 +3,12 @@
 
 const fs = require("fs");
 const path = require("path");
+const { sitemapUrls: readSitemapUrls } = require("./sitemap-utils");
 
 const ROOT = path.resolve(__dirname, "..");
 const SITE = "https://atelierdeconsultanta.ro";
 const INPUT = path.join(ROOT, "blog.json");
 const OUTPUT = path.join(ROOT, "feed.xml");
-const SITEMAP = path.join(ROOT, "sitemap.xml");
 const MAX_ITEMS = 50;
 
 function xml(value) {
@@ -21,8 +21,7 @@ function xml(value) {
 }
 
 function canonicalUrls() {
-  const source = fs.readFileSync(SITEMAP, "utf8");
-  return new Set([...source.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1].trim()));
+  return new Set(readSitemapUrls(ROOT));
 }
 
 function safeDate(post) {

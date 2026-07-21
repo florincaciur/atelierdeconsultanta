@@ -1,0 +1,71 @@
+{
+  "version": "1.0.0",
+  "clientDestination": "dataLayer + Microsoft Clarity",
+  "serverQualifiedLeadEndpoint": "/api/crm/qualified-lead",
+  "events": [
+    "cta_view",
+    "cta_click",
+    "form_start",
+    "step_1_complete",
+    "field_error",
+    "form_submit",
+    "contact_whatsapp",
+    "contact_phone",
+    "contact_email",
+    "qualified_lead"
+  ],
+  "payloadKeys": [
+    "page_path",
+    "page_type",
+    "cta_id",
+    "cta_copy_variant",
+    "program_slug",
+    "program_family",
+    "form_version",
+    "step",
+    "field_name_generic",
+    "device_category",
+    "source_channel",
+    "experiment_id",
+    "error_type",
+    "lead_correlation_id"
+  ],
+  "controlledExtensions": {
+    "error_type": "Necesar pentru diagnosticul field_error; nu conține valoarea câmpului.",
+    "lead_correlation_id": "UUID first-party aleator, necesar pentru legătura form_submit–qualified_lead; nu este identitate de persoană."
+  },
+  "formVersion": "short_v1",
+  "ctaVisibilityThreshold": 0.5,
+  "crmAttributionFields": [
+    "lead_id",
+    "program_slug",
+    "program_family",
+    "source_channel",
+    "utm_source",
+    "utm_medium",
+    "utm_campaign",
+    "utm_term",
+    "utm_content",
+    "landing_referrer",
+    "landing_page_path"
+  ],
+  "forbiddenAnalyticsData": [
+    "name",
+    "email",
+    "phone",
+    "investment",
+    "description",
+    "documents",
+    "field_value",
+    "raw_referrer",
+    "raw_utm"
+  ],
+  "dashboardFunnel": [
+    "cta_view",
+    "cta_click",
+    "form_start",
+    "step_1_complete",
+    "form_submit",
+    "qualified_lead"
+  ]
+}

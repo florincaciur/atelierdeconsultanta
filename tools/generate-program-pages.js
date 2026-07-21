@@ -3,6 +3,7 @@
 
 const fs = require("fs");
 const path = require("path");
+const { sitemapUrls: readSitemapUrls } = require("./sitemap-utils");
 
 const ROOT = path.resolve(__dirname, "..");
 const GLOBAL_HEADER = fs.readFileSync(path.join(ROOT, "partials", "global-header.html"), "utf8").trim();
@@ -271,7 +272,7 @@ const DESIGN_FAMILY_PROFILES = {
     badge: "Ghid editorial | actualizat | surse citate",
     icon: "ph-duotone ph-file-text",
     image: "/assets/hero/hero-business.webp",
-    cards: ["Pe scurt", "Ce verifici", "Greseli", "Pasi"],
+    cards: ["Ce trebuie să știi", "Ce verifici", "Greșeli", "Pași"],
     primary: "Verifica situatia ta",
     secondary: "Citeste ghidul"
   },
@@ -570,7 +571,7 @@ function renderFamilyCards(page) {
     Strategie: "program, punctaj, buget si calendar",
     Dosar: "documente, anexe, oferte si formulare",
     Clarificari: "raspunsuri si ajustari dupa evaluare",
-    "Pe scurt": page.quickAnswer || `rezumat pentru ${program}`,
+    "Ce trebuie să știi": page.quickAnswer || `rezumat pentru ${program}`,
     "Ce verifici": compactTextList(page.mandatory, "program, documente si investitie", 2),
     Greseli: compactTextList(page.commonMistakes || page.ineligibleExpenses, "presupuneri neverificate", 2),
     Pasi: compactTextList(page.steps, "verificare, buget, depunere", 2),
@@ -1720,7 +1721,7 @@ function renderMicroApel2Content(page) {
 
       <section aria-labelledby="apel2-proces-title">
         <h2 id="apel2-proces-title">Proces și calendar</h2>
-        <p>Calendarul real este cel publicat de ADR Nord-Est. Până la forma finală, pregătirea poate avansa pe datele firmei, buget, oferte și documente care nu depind de ultima versiune a ghidului.</p>
+        <p>Calendarul real este cel publicat de ADR Nord-Est. Până la forma finală, pregătirea poate avansa pe datele firmei, buget, oferte și documente de bază care pot fi pregătite înainte de publicarea formei oficiale a ghidului.</p>
         <ol class="process-list">
           <li><strong>Verificare inițială.</strong> Confirmăm solicitantul, regiunea, CAEN-ul, spațiul și ideea de investiție.</li>
           <li><strong>Buget și oferte.</strong> Separăm cheltuielile eligibile, cheltuielile neeligibile, TVA-ul, cofinanțarea și rezervele.</li>
@@ -1995,7 +1996,7 @@ function renderConsultantaPillarContent(page) {
     .join("\n");
 
   return `
-      <h2>Raspuns scurt</h2>
+      <h2>Ce trebuie să știi</h2>
       <p class="intro">FABER ajută firmele, fermierii și antreprenorii să decidă dacă un proiect merită pregătit pentru finanțare, ce program poate fi potrivit și ce riscuri trebuie clarificate înainte de dosar. Analiza pornește de la datele solicitantului, documente, buget și regulile apelului activ.</p>
 ${editorialHtml}
 
@@ -2910,8 +2911,8 @@ function renderMainContent(page) {
       <p class="intro">${esc(page.quickAnswer)}</p>
       ${renderTable(page)}
 ${editorialHtml}
-      <h2>Pe scurt</h2>
-      <p>${esc(page.programName)} trebuie analizat ca o decizie de investitie, nu doar ca o oportunitate de finantare. Inainte de orice buget, solicitantul trebuie sa verifice incadrarea, documentele, calendarul, costurile eligibile si riscurile care pot aparea la evaluare sau implementare.</p>
+      <h2>Ce trebuie să știi</h2>
+      <p>Tema „${esc(page.programName)}” trebuie analizată ca o decizie de investiție, nu doar ca o oportunitate de finanțare. Înainte de orice buget, solicitantul trebuie să verifice încadrarea, documentele, calendarul, costurile eligibile și riscurile care pot apărea la evaluare sau implementare.</p>
       <p>Informatiile de pe aceasta pagina sunt construite pentru orientare practica. Ele nu promit aprobare si nu inlocuiesc verificarea apelului activ, a anexelor si a grilei de selectie. Scopul este sa poti pregati o discutie serioasa despre eligibilitate si dosar.</p>
 ${renderDecisionMatrix(page)}
 ${keywordHtml}
@@ -2971,7 +2972,9 @@ function pageHtml(page, config) {
   const programBanner = bannerForRoute(route, PROGRAM_BANNER_INDEX);
   const factualProgram = page.factualGovernance || null;
   const factualBodyAttributes = factualProgram
-    ? ` data-program-id="${escAttr(factualProgram.id)}" data-source-status="${escAttr(factualProgram.sourceStatus)}" data-reviewed-at="${escAttr(factualProgram.reviewedAt)}" data-factual-governance="config/seo-programs.json#programs"`
+    ? factualProgram.publicationState === "public"
+      ? ` data-program-id="${escAttr(factualProgram.slug)}" data-program-status="${escAttr(factualProgram.status)}" data-status-label="${escAttr(factualProgram.statusLabel)}" data-verified-at="${escAttr(factualProgram.verifiedAt)}" data-source-url="${escAttr(factualProgram.sourceUrl)}" data-publication-state="public" data-program-registry="config/seo-programs.json#programs"`
+      : ` data-program-id="${escAttr(factualProgram.slug)}" data-publication-state="pending_validation" data-program-registry="config/seo-programs.json#programs"`
     : "";
   const relatedCss = (page.related || []).length ? `\n  <link rel="stylesheet" href="/assets/see-also.css" />` : "";
   const toolCss = page.includeTools || page.includeDownloads ? `\n  <link rel="stylesheet" href="/assets/seo-tools.css" />` : "";
@@ -3011,6 +3014,16 @@ function pageHtml(page, config) {
   const finalSecondaryLabel = page.finalSecondaryLabel || "Vezi serviciile";
   const hasTrustApprovalGate = page.type === "trust" && Object.prototype.hasOwnProperty.call(page, "approvedItemsCount");
   const robots = page.robots || (hasTrustApprovalGate && Number(page.approvedItemsCount) < 3 ? "noindex, follow" : "index, follow");
+  const programMainContent = page.publicationHold
+    ? `${renderProgramFactualStatus(factualProgram)}
+      <h1>${esc(factualProgram.shortName)}</h1>
+      <p>${esc(factualProgram.cardSummary)}</p>
+      <p>Responsabilul editorial trebuie să confirme statutul, documentul oficial și data verificării înainte de republicare.</p>`
+    : `${factualProgram ? renderProgramFactualStatus(factualProgram) : ""}
+${page.hideFamilyCards ? "" : renderFamilyCards(page)}
+${renderMainContent(page)}
+${renderPocidifDiscoveryLink(page)}
+      <div class="related-links">${links(standardInternalLinksForPath(slugPath(page), page.related))}</div>`;
   const html = `<!DOCTYPE html>
 <html lang="ro">
 <head>
@@ -3046,11 +3059,7 @@ ${programBanner ? "  <link rel=\"stylesheet\" href=\"/assets/program-heroes.css\
   ${programHeroHtml}
   <main class="container">
     <article class="panel">
-${factualProgram ? renderProgramFactualStatus(factualProgram) : ""}
-${page.hideFamilyCards ? "" : renderFamilyCards(page)}
-${renderMainContent(page)}
-${renderPocidifDiscoveryLink(page)}
-      <div class="related-links">${links(standardInternalLinksForPath(slugPath(page), page.related))}</div>
+${programMainContent}
     </article>
     <section class="cta-box">
       <h2>${esc(finalCtaTitle)}</h2>
@@ -3109,8 +3118,7 @@ function ensureFile(page, html, { writeLegacy = true } = {}) {
 
 function parseSitemapUrls() {
   if (!fs.existsSync(SITEMAP_PATH)) return [];
-  const xml = fs.readFileSync(SITEMAP_PATH, "utf8");
-  return [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]);
+  return readSitemapUrls(ROOT);
 }
 
 function htmlCandidatesForRoute(route) {

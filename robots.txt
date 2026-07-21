@@ -1,15 +1,31 @@
 User-agent: *
 Allow: /
+Disallow: /admin
 Disallow: /admin/
+Disallow: /api
+Disallow: /api/
 
 # Crawlere folosite pentru rezultate de căutare și răspunsuri cu surse.
 User-agent: OAI-SearchBot
 Allow: /
+Disallow: /admin
 Disallow: /admin/
+Disallow: /api
+Disallow: /api/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /admin
+Disallow: /admin/
+Disallow: /api
+Disallow: /api/
 
 User-agent: Claude-SearchBot
 Allow: /
+Disallow: /admin
 Disallow: /admin/
+Disallow: /api
+Disallow: /api/
 
 # Crawlere folosite pentru antrenare sau extinderea seturilor de date.
 User-agent: GPTBot

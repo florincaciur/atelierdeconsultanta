@@ -31,23 +31,11 @@ Acest fișier este o hartă editorială opțională pentru servicii terțe. URL-
 - https://atelierdeconsultanta.ro/afir
   Hub AFIR pentru DR12, DR14, GAL, calculator SO/SOC și investiții rurale.
 
-- https://atelierdeconsultanta.ro/dr12-afir
-  DR12 AFIR — variantă consultativă. Valorile și condițiile sunt conform variantei consultative și trebuie reconfirmate în ghidul final și în nota de lansare.
 
-- https://atelierdeconsultanta.ro/dr14
-  DR14 AFIR — variantă consultativă. Valorile, intervalele SO și condițiile sunt conform variantei consultative și pot fi modificate în documentele finale.
 
-- https://atelierdeconsultanta.ro/gal-afir
-  GAL-AFIR / LEADER — document final. Cadrul LEADER este oficial, dar statusul, valorile și termenele se stabilesc pentru fiecare apel GAL.
 
-- https://atelierdeconsultanta.ro/pnrr
-  Hub PNRR și legături către paginile aplicate.
 
-- https://atelierdeconsultanta.ro/digitalizare-imm
-  Digitalizare IMM — statut de confirmat. Nu este atribuit hubului un plafon sau un status de apel; fiecare finanțare digitală se verifică în sursa proprie.
 
-- https://atelierdeconsultanta.ro/pocidif-21
-  PoCIDIF 2.1 — document final. Ghidul este aprobat; perioada de depunere și eventualele actualizări se confirmă pe pagina oficială MIPE.
 
 - https://atelierdeconsultanta.ro/eligibilitate-pocidif-21
   Eligibilitatea PoCIDIF 2.1: tipuri de IMM, coduri CAEN, condiții financiare și parteneriate.
@@ -58,35 +46,15 @@ Acest fișier este o hartă editorială opțională pentru servicii terțe. URL-
 - https://atelierdeconsultanta.ro/documente-punctaj-pocidif-21
   Documentele, indicatorii, pragurile și grila de punctaj PoCIDIF 2.1.
 
-- https://atelierdeconsultanta.ro/fondul-de-modernizare
-  Hub pentru Fondul de Modernizare și investiții în energie.
 
-- https://atelierdeconsultanta.ro/afir-autoconsum-agroalimentar
-  AFIR Autoconsum Agroalimentar — apel deschis. Informațiile sunt raportate la Ghidul V7 și sesiunea 15 iunie–14 august 2026; eventualele modificări se verifică la AFIR.
 
-- https://atelierdeconsultanta.ro/autoconsum-public-fotovoltaice-institutii-publice
-  Autoconsum instituții publice — document final. Existența actului normativ nu confirmă un apel deschis; valorile și termenele se preiau numai din documentația sesiunii.
 
-- https://atelierdeconsultanta.ro/start-up-nation-2026
-  Start-Up Nation — statut de confirmat. Nu este disponibilă în repository o procedură oficială verificată pentru o ediție 2026; valorile istorice nu sunt proiectate asupra unei ediții viitoare.
 
-- https://atelierdeconsultanta.ro/femeia-antreprenor-2026
-  Femeia Antreprenor — statut de confirmat. Sursa disponibilă nu confirmă o ediție 2026; nu sunt publicate valori sau termene ca informații actuale.
 
-- https://atelierdeconsultanta.ro/programul-tranzitie-justa
-  Programul Tranziție Justă: regiune, solicitant, investiție și surse.
 
-- https://atelierdeconsultanta.ro/programul-tranzitie-justa-intrebari-documente
-  Întrebări, documente și verificări necesare pentru proiectele din Programul Tranziție Justă.
 
-- https://atelierdeconsultanta.ro/fonduri-regionale
-  Fonduri regionale — statut de confirmat. Nu există un plafon sau un calendar unic pentru toate regiunile; informația se confirmă în apelul selectat.
 
-- https://atelierdeconsultanta.ro/por-adr-nord-est
-  Programul Regional Nord-Est — document final. Programul este aprobat, dar valorile și calendarul se confirmă separat în documentele apelului activ.
 
-- https://atelierdeconsultanta.ro/pro-infra
-  PRO INFRA — document final. Schema este aprobată, dar un apel deschis și perioada de depunere se confirmă separat în documentele autorității.
 
 ## Încredere și metodologie
 
@@ -117,11 +85,7 @@ Acest fișier este o hartă editorială opțională pentru servicii terțe. URL-
 
 ## Pagini și instrumente suplimentare
 
-- https://atelierdeconsultanta.ro/investitii-modernizarea-microintreprinderilor-apel-2
-  Modernizarea microîntreprinderilor – Apel 2 — variantă consultativă. Valorile și condițiile sunt conform variantei consultative și trebuie reconfirmate în ghidul final și anexele apelului.
 
-- https://atelierdeconsultanta.ro/fondul-modernizare-energie-regenerabila-2026
-  Fondul pentru Modernizare – energie regenerabilă — statut de confirmat. Ruta nu confirmă prin ea însăși un apel 2026 deschis; calendarul și valorile se verifică în documentul oficial al sesiunii.
 
 - https://atelierdeconsultanta.ro/instrumente
   Instrumente interactive pentru verificarea inițială a proiectelor cu fonduri europene.
@@ -132,11 +96,7 @@ Acest fișier este o hartă editorială opțională pentru servicii terțe. URL-
 - https://atelierdeconsultanta.ro/webinarii
   Webinarii și evenimente despre fonduri europene, numai când există informații publicate.
 
-- https://atelierdeconsultanta.ro/apeluri-gal
-  Apeluri GAL — statut de confirmat. Nu există valori sau perioade universale; fiecare apel GAL se verifică în ghidul local publicat.
 
-- https://atelierdeconsultanta.ro/e-move
-  e-MOVE RO — variantă consultativă. Valorile și condițiile sunt conform variantei consultative; nu sunt prezentate drept reguli finale sau apel deschis.
 
 ## Structura pentru asistenți AI
 
@@ -146,13 +106,47 @@ Acest fișier este o hartă editorială opțională pentru servicii terțe. URL-
 <!-- PROGRAM_FACTUAL_GOVERNANCE_START -->
 ## Guvernanță factuală a programelor
 
-- Sursa de adevăr: config/seo-programs.json, câmpul programs.
-- Statusurile nu sunt deduse din disponibilitatea URL-ului; un document final nu este echivalent cu un apel deschis.
-- Valorile consultative sunt prezentate numai cu delimitarea explicită a statutului.
-- Ultima sincronizare a registrului: 2026-07-20
+- Sursa unică de adevăr: config/seo-programs.json#programs.
+- Statusurile și valorile nu sunt deduse din URL-uri sau din texte editoriale locale.
+- Înregistrările pending_validation sunt excluse din suprafețele publice.
+- Ultima verificare din registrul public: 2026-07-20
 
-### Alte pagini de program din registru
+- https://atelierdeconsultanta.ro/por-adr-nord-est
+  Programul Regional Nord-Est — Ghid aprobat – depunerea nu este deschisă. Programul este aprobat, dar valorile și calendarul se confirmă separat în documentele apelului activ.
+
+- https://atelierdeconsultanta.ro/fonduri-regionale
+  Fonduri regionale — Calendar estimativ – depunerea nu este confirmată. Nu există un plafon sau un calendar unic pentru toate regiunile; informația se confirmă în apelul selectat.
+
+- https://atelierdeconsultanta.ro/start-up-nation-2026
+  Start-Up Nation — Calendar estimativ – depunerea nu este confirmată. Nu este disponibilă în repository o procedură oficială verificată pentru o ediție 2026; valorile istorice nu sunt proiectate asupra unei ediții viitoare.
+
+- https://atelierdeconsultanta.ro/femeia-antreprenor-2026
+  Femeia Antreprenor — Calendar estimativ – depunerea nu este confirmată. Sursa disponibilă nu confirmă o ediție 2026; nu sunt publicate valori sau termene ca informații actuale.
+
+- https://atelierdeconsultanta.ro/investitii-modernizarea-microintreprinderilor-apel-2
+  Modernizarea microîntreprinderilor – Apel 2 — Consultare publică – depunerea nu este deschisă. Valorile și condițiile sunt conform variantei consultative și trebuie reconfirmate în ghidul final și anexele apelului.
 
 - https://atelierdeconsultanta.ro/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum
-  Fondul pentru Modernizare – autoconsum — statut de confirmat. Pagina program-cadru nu confirmă un apel deschis, valori sau termene; acestea se preiau din documentația sesiunii selectate.
+  Fondul pentru Modernizare – autoconsum — Calendar estimativ – depunerea nu este confirmată. Pagina program-cadru nu confirmă un apel deschis, valori sau termene; acestea se preiau din documentația sesiunii selectate.
+
+- https://atelierdeconsultanta.ro/fondul-modernizare-energie-regenerabila-2026
+  Fondul pentru Modernizare – energie regenerabilă — Calendar estimativ – depunerea nu este confirmată. Ruta nu confirmă prin ea însăși un apel 2026 deschis; calendarul și valorile se verifică în documentul oficial al sesiunii.
+
+- https://atelierdeconsultanta.ro/afir-autoconsum-agroalimentar
+  AFIR Autoconsum Agroalimentar — Apel deschis. Informațiile sunt raportate la Ghidul V7 și sesiunea 15 iunie–14 august 2026; eventualele modificări se verifică la AFIR.
+
+- https://atelierdeconsultanta.ro/autoconsum-public-fotovoltaice-institutii-publice
+  Autoconsum instituții publice — Ghid aprobat – depunerea nu este deschisă. Existența actului normativ nu confirmă un apel deschis; valorile și termenele se preiau numai din documentația sesiunii.
+
+- https://atelierdeconsultanta.ro/apeluri-gal
+  Apeluri GAL — Calendar estimativ – depunerea nu este confirmată. Nu există valori sau perioade universale; fiecare apel GAL se verifică în ghidul local publicat.
+
+- https://atelierdeconsultanta.ro/gal-afir
+  GAL-AFIR / LEADER — Ghid aprobat – depunerea nu este deschisă. Cadrul LEADER este oficial, dar statusul, valorile și termenele se stabilesc pentru fiecare apel GAL.
+
+- https://atelierdeconsultanta.ro/e-move
+  e-MOVE RO — Consultare publică – depunerea nu este deschisă. Valorile și condițiile sunt conform variantei consultative; nu sunt prezentate drept reguli finale sau apel deschis.
+
+- https://atelierdeconsultanta.ro/pocidif-21
+  PoCIDIF 2.1 — Ghid aprobat – depunerea nu este deschisă. Ghidul este aprobat; perioada de depunere și eventualele actualizări se confirmă pe pagina oficială MIPE.
 <!-- PROGRAM_FACTUAL_GOVERNANCE_END -->

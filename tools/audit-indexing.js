@@ -8,6 +8,7 @@ const {
   classificationCounts,
   discoverHtmlDocuments
 } = require("./site-document-classifier");
+const { sitemapUrls: readSitemapUrls } = require("./sitemap-utils");
 
 const ROOT = path.resolve(__dirname, "..");
 const SITE = "https://atelierdeconsultanta.ro";
@@ -218,8 +219,7 @@ function pageDataForFinal(final) {
 }
 
 function parseSitemapUrls() {
-  const xml = readIfExists(SITEMAP_PATH);
-  return [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1].trim());
+  return readSitemapUrls(ROOT);
 }
 
 function addIssue(issues, type, message, details = {}) {
@@ -480,6 +480,10 @@ function validateInternalLinks(sitemapSet, issues, pageRecords) {
       const { value, parsed } = normalized;
       const cleanUrl = normalizeAbsoluteUrl(parsed.href);
       const cleanPathname = new URL(cleanUrl).pathname;
+
+      // Worker-backed form/API endpoints are validated by their contract tests,
+      // not resolved as static HTML files by this indexing crawl.
+      if (parsed.pathname.startsWith("/api/")) continue;
 
       if (parsed.search) {
         addIssue(issues, "internal-query", "Internal page link uses query parameters instead of a clean canonical URL.", {

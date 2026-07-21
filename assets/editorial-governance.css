@@ -1,0 +1,57 @@
+.editorial-governance {
+  margin: 28px 0;
+  padding: 20px 22px;
+  border: 1px solid #d9e1ec;
+  border-left: 4px solid #b84716;
+  border-radius: 12px;
+  background: #fff;
+  color: #1a2540;
+  box-shadow: 0 4px 18px rgba(13, 31, 60, 0.08);
+}
+
+.editorial-governance p {
+  margin: 0 0 10px;
+}
+
+.editorial-governance p:last-child {
+  margin-bottom: 0;
+}
+
+.editorial-governance a {
+  color: #9d3a0f;
+  font-weight: 800;
+  text-underline-offset: 3px;
+}
+
+.editorial-governance__verified {
+  color: #0d1f3c;
+  font-size: 1rem;
+}
+
+.editorial-governance__changelog {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.editorial-governance__changelog summary {
+  cursor: pointer;
+  color: #0d1f3c;
+  font-weight: 900;
+}
+
+.editorial-governance__changelog ol {
+  margin: 12px 0 0;
+}
+
+.editorial-governance--pending {
+  border-left-color: #d97706;
+  background: #fffbeb;
+  color: #78350f;
+}
+
+@media (max-width: 640px) {
+  .editorial-governance {
+    padding: 17px 18px;
+  }
+}

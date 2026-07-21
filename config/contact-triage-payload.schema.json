@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://atelierdeconsultanta.ro/schemas/contact-triage-payload.schema.json",
+  "title": "Payload triere contact FABER",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "applicant_type",
+    "location",
+    "investment",
+    "privacy_notice_acknowledged"
+  ],
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "lead_id": { "type": "string", "maxLength": 100 },
+    "applicant_type": {
+      "enum": ["societate", "pfa_ii_if", "ferma_exploatatie", "startup", "ong", "institutie_publica", "alta"]
+    },
+    "location": { "type": "string", "minLength": 2, "maxLength": 120 },
+    "investment": { "type": "string", "minLength": 5, "maxLength": 300 },
+    "email": { "type": "string", "format": "email", "maxLength": 254 },
+    "phone": { "type": "string", "minLength": 7, "maxLength": 30 },
+    "privacy_notice_acknowledged": {
+      "oneOf": [
+        { "const": true },
+        { "enum": ["true", "1", "on", "yes"] }
+      ]
+    },
+    "program_slug": {
+      "anyOf": [
+        { "const": "unknown" },
+        { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$", "maxLength": 100 }
+      ]
+    },
+    "caen_or_so": { "type": "string", "maxLength": 120 },
+    "budget_estimate": { "type": "string", "maxLength": 160 },
+    "extended_description": { "type": "string", "maxLength": 3000 },
+    "documents_summary": { "type": "string", "maxLength": 1000 },
+    "expenses_summary": { "type": "string", "maxLength": 1500 },
+    "contact_preference": { "enum": ["no_preference", "email", "phone"] },
+    "page_url": { "type": "string", "pattern": "^/", "maxLength": 300 },
+    "referrer_path": { "type": "string", "maxLength": 300 },
+    "program_context": { "type": "string", "maxLength": 100 },
+    "program_family": { "type": "string", "maxLength": 100 },
+    "source_channel": { "type": "string", "maxLength": 80 },
+    "utm_source": { "type": "string", "maxLength": 160 },
+    "utm_medium": { "type": "string", "maxLength": 160 },
+    "utm_campaign": { "type": "string", "maxLength": 200 },
+    "utm_term": { "type": "string", "maxLength": 200 },
+    "utm_content": { "type": "string", "maxLength": 200 },
+    "landing_referrer": { "type": "string", "maxLength": 500 },
+    "landing_page_path": { "type": "string", "pattern": "^/", "maxLength": 300 },
+    "form_started_at": { "type": "string", "pattern": "^[0-9]{10,16}$" },
+    "website": { "type": "string", "maxLength": 0 }
+  },
+  "anyOf": [
+    { "required": ["email"], "properties": { "email": { "minLength": 3 } } },
+    { "required": ["phone"], "properties": { "phone": { "minLength": 7 } } }
+  ],
+  "additionalProperties": false
+}

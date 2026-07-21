@@ -56,7 +56,7 @@ const PROFILES = {
     secondary: "Vezi documentele"
   },
   editorial: {
-    items: [["Pe scurt", "raspuns rapid si prudent"], ["Ce verifici", "criterii si documente"], ["Surse", "ghiduri si reguli oficiale"], ["Pas urmator", "analiza pe situatia ta"]],
+    items: [["Ce trebuie să știi", "răspuns rapid și prudent"], ["Ce verifici", "criterii și documente"], ["Surse", "ghiduri și reguli oficiale"], ["Următorul pas", "analiză pentru situația ta"]],
     primary: "Verifica situatia ta",
     secondary: "Vezi resursele"
   },
@@ -86,14 +86,14 @@ const PROFILES = {
     secondary: "Inapoi la site"
   },
   generic: {
-    items: [["Context", "rolul paginii"], ["Actualizare", "informatie structurata"], ["Legaturi", "traseu intern clar"], ["Urmator", "actiune potrivita"]],
+    items: [["Scop", "informații relevante"], ["Verificare", "surse și data revizuirii"], ["Resurse", "legături utile"], ["Următorul pas", "acțiune recomandată"]],
     primary: "Vezi urmatorul pas",
     secondary: "Contact"
   }
 };
 
 const TOC_IDS = ["pe-scurt", "ce-verifici", "documente", "pasii-urmatori"];
-const TOC_LABELS = ["Pe scurt", "Ce verifici", "Documente", "Pasii urmatori"];
+const TOC_LABELS = ["Ce trebuie să știi", "Ce verifici", "Documente", "Pașii următori"];
 
 function existingFilesForSlug(slug) {
   const normalized = normalizeDesignSlug(slug);

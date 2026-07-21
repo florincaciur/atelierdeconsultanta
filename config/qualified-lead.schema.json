@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://atelierdeconsultanta.ro/schemas/qualified-lead.schema.json",
+  "title": "Eveniment CRM qualified_lead fără PII",
+  "type": "object",
+  "required": ["lead_correlation_id"],
+  "properties": {
+    "lead_correlation_id": { "type": "string", "pattern": "^[a-zA-Z0-9._:-]{8,100}$" },
+    "page_path": { "type": "string", "pattern": "^/", "maxLength": 300 },
+    "page_type": { "type": "string", "maxLength": 100 },
+    "program_slug": { "type": "string", "maxLength": 100 },
+    "program_family": { "type": "string", "maxLength": 100 },
+    "form_version": { "type": "string", "maxLength": 100 },
+    "source_channel": { "type": "string", "maxLength": 100 },
+    "experiment_id": { "type": "string", "maxLength": 100 }
+  },
+  "additionalProperties": false
+}
