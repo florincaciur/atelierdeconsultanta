@@ -28,6 +28,7 @@
     {
       "@id": "https://atelierdeconsultanta.ro/#organization",
       "@type": "Organization",
+      "address": "Sat Gorbănești, comuna Gorbănești, nr. 88, Str. Principală, județul Botoșani",
       "alternateName": [
         "FABER",
         "Atelier de Consultanță",
@@ -35,10 +36,25 @@
         "atelierdeconsultanta.ro"
       ],
       "areaServed": {
-        "@type": "Country",
-        "name": "România"
+        "@type": "AdministrativeArea",
+        "name": "Iași, Suceava, Bistrița-Năsăud, Botoșani, Bacău și Neamț"
       },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "availableLanguage": "ro-RO",
+          "contactType": "customer service",
+          "telephone": "+40769828338"
+        },
+        {
+          "@type": "ContactPoint",
+          "availableLanguage": "ro-RO",
+          "contactType": "customer service",
+          "telephone": "+40753326229"
+        }
+      ],
       "description": "FABER - Atelier de Consultanță ajută firme, fermieri, start-up-uri și IMM-uri să verifice eligibilitatea și să pregătească proiecte pentru fonduri europene și finanțări nerambursabile.",
+      "email": "atelier.consultanta@gmail.com",
       "image": "https://atelierdeconsultanta.ro/og-image.jpg",
       "knowsAbout": [
         "fonduri europene",
@@ -49,18 +65,23 @@
         "Digitalizare IMM",
         "consultanță IMM"
       ],
+      "legalName": "FABER PUBLISHING S.R.L.",
       "logo": {
         "@type": "ImageObject",
         "url": "https://atelierdeconsultanta.ro/favicon-192.png"
       },
-      "name": "FABER - Atelier de Consultanță",
+      "name": "FABER – Atelier de Consultanță",
+      "sameAs": [
+        "https://www.instagram.com/atelier.de.consultanta/"
+      ],
+      "taxID": "35339809",
       "url": "https://atelierdeconsultanta.ro"
     },
     {
       "@id": "https://atelierdeconsultanta.ro/#website",
       "@type": "WebSite",
       "inLanguage": "ro-RO",
-      "name": "FABER - Atelier de Consultanță",
+      "name": "FABER – Atelier de Consultanță",
       "publisher": {
         "@id": "https://atelierdeconsultanta.ro/#organization"
       },
@@ -380,20 +401,32 @@
       </div>
       <div class="program-family-filter">
         <label for="hub-filter-investment">Tip investiție</label>
-        <select id="hub-filter-investment" name="investitie" aria-controls="hub-program-list"><option value="">Toate investițiile</option><option value="energie_autoconsum">Energie pentru autoconsum</option></select>
+        <select id="hub-filter-investment" name="investitie" aria-controls="hub-program-list"><option value="">Toate investițiile</option><option value="agricultura">Agricultură și dezvoltarea fermei</option><option value="energie_autoconsum">Energie pentru autoconsum</option></select>
       </div>
       <div class="program-family-filter">
         <label for="hub-filter-status">Status</label>
-        <select id="hub-filter-status" name="status" aria-controls="hub-program-list"><option value="">Toate statusurile</option><option value="apel_deschis">Apel deschis</option></select>
+        <select id="hub-filter-status" name="status" aria-controls="hub-program-list"><option value="">Toate statusurile</option><option value="apel_deschis">Apel deschis</option><option value="consultare_publica">Ghid consultativ – depunerea nu este deschisă. Condițiile se pot modifica.</option></select>
       </div>
       <button class="btn btn-secondary program-family-filters__reset" type="button" data-program-filters-reset>Resetează filtrele</button>
     </div>
-    <p class="program-family-results-status" id="hub-filter-results" role="status" aria-live="polite" aria-atomic="true" data-program-results-status>1 program afișat.</p>
+    <p class="program-family-results-status" id="hub-filter-results" role="status" aria-live="polite" aria-atomic="true" data-program-results-status>3 programe afișate.</p>
   </section>
 
   <section class="program-family-results" aria-labelledby="program-family-results-title">
     <h2 id="program-family-results-title">Programe din familia AFIR &amp; agricultură</h2>
     <div class="program-family-grid" id="hub-program-list" data-program-list>
+      <article class="program-family-card" data-program-card data-program-id="dr12-afir" data-program-status="consultare_publica" data-status-label="Ghid consultativ – depunerea nu este deschisă. Condițiile se pot modifica." data-verified-at="2026-07-22" data-source-url="https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/" data-applicant-types="fermieri_agroalimentar" data-regions="national" data-investment-types="agricultura" data-status="consultare_publica">
+  <div class="program-family-card__body">
+    <h3><a href="/dr12-afir">DR12 AFIR</a></h3>
+    <p class="program-family-card__status"><strong>Ghid consultativ – depunerea nu este deschisă. Condițiile se pot modifica..</strong> Verificat la <time datetime="2026-07-22">22 iulie 2026</time>.</p>
+    <p><strong>Beneficiar:</strong> Categoria de beneficiar se confirmă în ghidul oficial indicat.</p>
+    <p>Ghidul DR 12 este consultativ; depunerea nu este deschisă, iar condițiile se pot modifica.</p>
+  </div>
+  <div class="program-family-card__footer">
+    <a class="program-family-card__source" href="https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/" target="_blank" rel="noopener noreferrer" data-analytics-event="source_document_click" data-analytics-component="program_family_card" data-analytics-cta-id="official_source" data-analytics-program-category="dr12-afir">Sursa oficială: Agenția pentru Finanțarea Investițiilor Rurale (AFIR)</a>
+    <a class="btn btn-primary" href="/dr12-afir" data-analytics-event="cta_click" data-analytics-component="program_family_card" data-analytics-cta-id="program_conditions_dr12-afir" data-analytics-program-category="dr12-afir" data-analytics-target="/dr12-afir" data-analytics-copy-variant="family_hub" data-analytics-cta-view="true">Vezi condițiile</a>
+  </div>
+</article>
       <article class="program-family-card" data-program-card data-program-id="afir-energie-autoconsum" data-program-status="apel_deschis" data-status-label="Apel deschis" data-verified-at="2026-07-20" data-source-url="https://www.afir.ro/media/hkfp4w0v/ghidul-solicitantului-schem%C4%83-energie-autoconsum-v7-iunie-2026.pdf" data-applicant-types="fermieri_agroalimentar" data-regions="national" data-investment-types="energie_autoconsum" data-status="apel_deschis">
   <div class="program-family-card__body">
     <h3><a href="/afir-autoconsum-agroalimentar">AFIR Autoconsum Agroalimentar</a></h3>
@@ -404,6 +437,18 @@
   <div class="program-family-card__footer">
     <a class="program-family-card__source" href="https://www.afir.ro/media/hkfp4w0v/ghidul-solicitantului-schem%C4%83-energie-autoconsum-v7-iunie-2026.pdf" target="_blank" rel="noopener noreferrer" data-analytics-event="source_document_click" data-analytics-component="program_family_card" data-analytics-cta-id="official_source" data-analytics-program-category="afir-energie-autoconsum">Sursa oficială: Ministerul Agriculturii și Dezvoltării Rurale / AFIR</a>
     <a class="btn btn-primary" href="/afir-autoconsum-agroalimentar" data-analytics-event="cta_click" data-analytics-component="program_family_card" data-analytics-cta-id="program_conditions_afir-energie-autoconsum" data-analytics-program-category="afir-energie-autoconsum" data-analytics-target="/afir-autoconsum-agroalimentar" data-analytics-copy-variant="family_hub" data-analytics-cta-view="true">Vezi condițiile</a>
+  </div>
+</article>
+      <article class="program-family-card" data-program-card data-program-id="dr14-afir" data-program-status="consultare_publica" data-status-label="Ghid consultativ – depunerea nu este deschisă. Condițiile se pot modifica." data-verified-at="2026-07-22" data-source-url="https://www.afir.ro/api/file?filename=Ghidul+Solicitantului+DR-14+VARIANTA+CONSULTATIV%C4%82&amp;filetype=pdf&amp;url=%2Fmedia%2Fbkmpo5fo%2Fgs-consultativ-dr-14.pdf" data-applicant-types="fermieri_agroalimentar" data-regions="national" data-investment-types="agricultura" data-status="consultare_publica">
+  <div class="program-family-card__body">
+    <h3><a href="/dr14">DR14 AFIR</a></h3>
+    <p class="program-family-card__status"><strong>Ghid consultativ – depunerea nu este deschisă. Condițiile se pot modifica..</strong> Verificat la <time datetime="2026-07-22">22 iulie 2026</time>.</p>
+    <p><strong>Beneficiar:</strong> Categoria de beneficiar se confirmă în ghidul oficial indicat.</p>
+    <p>Ghidul DR 14 este consultativ; depunerea nu este deschisă, iar condițiile se pot modifica.</p>
+  </div>
+  <div class="program-family-card__footer">
+    <a class="program-family-card__source" href="https://www.afir.ro/api/file?filename=Ghidul+Solicitantului+DR-14+VARIANTA+CONSULTATIV%C4%82&amp;filetype=pdf&amp;url=%2Fmedia%2Fbkmpo5fo%2Fgs-consultativ-dr-14.pdf" target="_blank" rel="noopener noreferrer" data-analytics-event="source_document_click" data-analytics-component="program_family_card" data-analytics-cta-id="official_source" data-analytics-program-category="dr14-afir">Sursa oficială: Agenția pentru Finanțarea Investițiilor Rurale (AFIR)</a>
+    <a class="btn btn-primary" href="/dr14" data-analytics-event="cta_click" data-analytics-component="program_family_card" data-analytics-cta-id="program_conditions_dr14-afir" data-analytics-program-category="dr14-afir" data-analytics-target="/dr14" data-analytics-copy-variant="family_hub" data-analytics-cta-view="true">Vezi condițiile</a>
   </div>
 </article>
     </div>
@@ -440,7 +485,7 @@
       <details class="faq-item"><summary><span>Ce documente merită pregătite înainte de lansarea apelului?</span></summary><p>Documentele solicitantului și exploatației, drepturile de folosință, datele pentru calculul economic și o descriere justificată a investiției pot fi ordonate din timp, fără a presupune condițiile finale.</p></details></div>
   </section>
 </main>
-  <footer class="footer">© 2026 FABER - Atelier de Consultanță · <a href="/fonduri-europene">Fonduri europene</a> · <a href="/contact" data-analytics-event="cta_click" data-analytics-component="contact_cta" data-analytics-cta-id="afir_contact_1" data-analytics-target="/contact" data-analytics-cta-view="true" data-analytics-copy-variant="default">Contact</a><!-- CANONICAL_CONTACT_START --><!-- CANONICAL_CONTACT_END --></footer>
+  <footer class="footer">© 2026 FABER - Atelier de Consultanță · <a href="/fonduri-europene">Fonduri europene</a> · <a href="/contact" data-analytics-event="cta_click" data-analytics-component="contact_cta" data-analytics-cta-id="afir_contact_1" data-analytics-target="/contact" data-analytics-cta-view="true" data-analytics-copy-variant="default">Contact</a><!-- CANONICAL_CONTACT_START --><span class="footer-contact-direct" aria-label="Contact direct"> · <a href="tel:+40769828338" data-analytics-event="contact_phone" data-analytics-component="contact_link" data-analytics-cta-id="phone_contact">0769 828 338</a> · <a href="tel:+40753326229" data-analytics-event="contact_phone" data-analytics-component="contact_link" data-analytics-cta-id="phone_contact">0753 326 229</a> · <a href="mailto:atelier.consultanta@gmail.com" data-analytics-event="contact_email" data-analytics-component="contact_link" data-analytics-cta-id="email_contact">atelier.consultanta@gmail.com</a></span><!-- CANONICAL_CONTACT_END --></footer>
 
 
 <script src="/assets/program-family-hubs.js?v=20260721-1" defer=""></script>

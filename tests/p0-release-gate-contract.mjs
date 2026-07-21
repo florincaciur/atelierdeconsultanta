@@ -15,8 +15,9 @@ assert.equal(config.criteria.length, 12, "P0.16 must cover all twelve acceptance
 assert.deepEqual(config.blockSeverities, ["critical"]);
 
 const blockers = evaluateGovernanceBlockers();
-for (const id of ["program_status", "legal_identity", "contact_privacy", "robots"]) {
-  assert(blockers.some((item) => item.criterionId === id && item.status === "FAIL"), `${id} must block while approval is pending`);
+assert(blockers.some((item) => item.criterionId === "program_status" && item.status === "FAIL"), "pending program status rows must block");
+for (const id of ["legal_identity", "contact_privacy", "robots"]) {
+  assert(!blockers.some((item) => item.criterionId === id), `${id} is approved and must not block`);
 }
 
 const rules = parseRedirectRules(fs.readFileSync(path.join(ROOT, "_redirects"), "utf8"));

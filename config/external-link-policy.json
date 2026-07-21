@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "approvedAt": "2026-07-22",
+  "approvedBy": "Caciur Florin",
+  "policy": "Linkurile editoriale externe trimit numai către instituții publice sau către canalele oficiale FABER aprobate. Domeniile comerciale terțe și referințele la competitori sunt interzise.",
+  "allowedExactHosts": [
+    "anpc.ro",
+    "adrnordest.ro",
+    "commission.europa.eu",
+    "ec.europa.eu",
+    "energie.gov.ro",
+    "economie.gov.ro",
+    "eur-lex.europa.eu",
+    "fonduri.mt.ro",
+    "funding-tenders.ec.europa.eu",
+    "gal.afir.ro",
+    "legislatie.just.ro",
+    "madr.ro",
+    "mfe.gov.ro",
+    "oportunitati-ue.gov.ro",
+    "regionordest.ro",
+    "so.afir.info",
+    "www.adr.gov.ro",
+    "www.adrnordest.ro",
+    "www.afir.ro",
+    "www.dataprotection.ro",
+    "www.instagram.com",
+    "www.madr.ro",
+    "wa.me"
+  ],
+  "allowedHostSuffixes": [
+    ".gov.ro",
+    ".europa.eu"
+  ],
+  "approvedChannelUrls": [
+    "https://www.instagram.com/atelier.de.consultanta/",
+    "https://wa.me/40769828338",
+    "https://wa.me/40753326229"
+  ],
+  "scanPolicy": {
+    "anchorsOnly": true,
+    "skipNoindexPages": true,
+    "requireHttps": true
+  }
+}

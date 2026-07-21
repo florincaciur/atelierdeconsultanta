@@ -2,9 +2,12 @@
 
 const { canonicalContactIdentity } = require("./canonical-contact");
 const { breadcrumbItemsForRoute } = require("./breadcrumb-registry");
+const { approvedIdentity, loadLegalIdentity } = require("./legal-identity-governance");
 
 const SITE = "https://atelierdeconsultanta.ro";
-const BRAND_NAME = "FABER - Atelier de Consultanță";
+const LEGAL_CONFIG = loadLegalIdentity();
+const LEGAL_IDENTITY = approvedIdentity(LEGAL_CONFIG) || {};
+const BRAND_NAME = LEGAL_IDENTITY.brandName || "FABER – Atelier de Consultanță";
 const BRAND_ALTERNATE_NAMES = [
   "FABER",
   "Atelier de Consultanță",
@@ -20,9 +23,9 @@ const LOGO_URL = `${SITE}/favicon-192.png`;
 const IMAGE_URL = `${SITE}/og-image.jpg`;
 const CANONICAL_CONTACT = canonicalContactIdentity();
 const EMAIL = CANONICAL_CONTACT.email?.value || null;
-const TELEPHONES = CANONICAL_CONTACT.phone ? [CANONICAL_CONTACT.phone.value] : [];
+const TELEPHONES = CANONICAL_CONTACT.phones.map((phone) => phone.value);
 const LANGUAGE = "ro-RO";
-const AREA_SERVED_NAME = "România";
+const AREA_SERVED_NAME = LEGAL_IDENTITY.serviceArea || "România";
 const KNOWS_ABOUT = [
   "fonduri europene",
   "finanțări nerambursabile",
@@ -330,7 +333,7 @@ function pageKindForPath(pathname, hints = {}) {
 
 function areaServedSchema() {
   return {
-    "@type": "Country",
+    "@type": "AdministrativeArea",
     name: AREA_SERVED_NAME
   };
 }
@@ -357,6 +360,10 @@ function organizationSchema(options = {}) {
       url: LOGO_URL
     },
     image: IMAGE_URL,
+    legalName: LEGAL_IDENTITY.legalName,
+    taxID: LEGAL_IDENTITY.taxIdentifier,
+    address: LEGAL_IDENTITY.registeredOffice,
+    sameAs: LEGAL_IDENTITY.officialProfileUrls,
     areaServed: areaServedSchema(),
     knowsAbout: KNOWS_ABOUT
   };
@@ -380,13 +387,14 @@ function professionalServiceSchema() {
       "@type": "ImageObject",
       url: LOGO_URL
     },
-    openingHours: "Mo-Fr 09:00-18:00",
+    openingHours: "Mo-Sa 08:00-18:00",
     image: IMAGE_URL,
     areaServed: areaServedSchema(),
     knowsAbout: [...KNOWS_ABOUT],
     availableLanguage: LANGUAGE,
     parentOrganization: { "@id": ORGANIZATION_ID }
   };
+  if (LEGAL_IDENTITY.publicWorkplaceAddress) schema.address = LEGAL_IDENTITY.publicWorkplaceAddress;
   if (EMAIL) schema.email = EMAIL;
   if (TELEPHONES.length) schema.telephone = [...TELEPHONES];
   return schema;

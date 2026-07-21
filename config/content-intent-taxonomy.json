@@ -114,8 +114,6 @@
   "blockedNonIndexableRoutes": [
     {"route": "/digitalizare-imm", "reason": "Pagina principală candidată este în pending_validation/noindex după P0; reintră în inventar numai după aprobarea factuală."},
     {"route": "/granturi-digitalizare-imm", "reason": "Candidat de consolidare P0.09; decizia de redirect nu este aprobată."},
-    {"route": "/dr12-afir", "reason": "Statusul, documentul și data sunt DE_VALIDAT_UMAN; pagina nu este în sitemap-ul canonic."},
-    {"route": "/dr14", "reason": "Statusul, documentul și data sunt DE_VALIDAT_UMAN; pagina nu este în sitemap-ul canonic."},
     {"route": "/pro-infra", "reason": "Statusul, documentul și data sunt DE_VALIDAT_UMAN; pagina nu este în sitemap-ul canonic."},
     {"route": "/gdpr", "reason": "Duplicat legal scos din sitemap; 301 rămâne condiționat de avizul juridic."}
   ]

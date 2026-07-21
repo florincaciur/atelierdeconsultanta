@@ -18,8 +18,8 @@ Auditul este local și determinist. Nu interoghează URL-urile oficiale, nu dedu
 |---|---|---:|---:|---:|
 | Programul Regional Nord-Est | ghid_aprobat_nedeschis | 2026-07-20 | — | — |
 | Fonduri regionale | calendar_estimativ | 2026-07-20 | — | — |
-| DR12 AFIR | consultare_publica | DE_VALIDAT_UMAN | — | — |
-| DR14 AFIR | consultare_publica | DE_VALIDAT_UMAN | — | — |
+| DR12 AFIR | consultare_publica | 2026-07-22 | — | — |
+| DR14 AFIR | consultare_publica | 2026-07-22 | — | — |
 | Start-Up Nation | calendar_estimativ | 2026-05-20 | — | — |
 | Femeia Antreprenor | calendar_estimativ | 2026-05-20 | — | — |
 | Digitalizare IMM | apel_inchis | DE_VALIDAT_UMAN | — | — |

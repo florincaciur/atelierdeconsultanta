@@ -75,10 +75,16 @@ async function verifyStaticAccessibility() {
   assert.equal(form.find("[data-final-submit] [data-submit-spinner]").length, 1);
 
   const legal = JSON.parse(await fsp.readFile(path.join(ROOT, "config", "legal-identity.json"), "utf8"));
-  const pendingMain = $("main").html() || "";
-  const pendingFooter = renderFooterContact(legal);
-  assert.doesNotMatch(pendingMain, /href="(?:tel:|mailto:atelier\.consultanta@gmail\.com)/iu, "pending direct contact must not render in main");
-  assert.doesNotMatch(pendingFooter, /tel:|mailto:/iu, "pending direct contact must not render in footer");
+  const publicMain = $("main").html() || "";
+  const publicFooter = renderFooterContact(legal);
+  assert.match(publicMain, /href="tel:\+40769828338"/u, "approved direct contact must render in main");
+  assert.match(publicFooter, /mailto:atelier\.consultanta@gmail\.com/iu, "approved direct contact must render in footer");
+
+  const pending = structuredClone(legal);
+  Object.assign(pending.approvals.businessDecision, { state: "pending", approvedBy: "DE_VALIDAT_UMAN", approvedAt: "DE_VALIDAT_UMAN", internalSource: "DE_VALIDAT_UMAN" });
+  for (const id of ["publicPhone", "publicEmail"]) Object.assign(pending.fields[id], { status: "pending", approvedValue: "DE_VALIDAT_UMAN", approvedBy: "DE_VALIDAT_UMAN", approvedAt: "DE_VALIDAT_UMAN" });
+  assert.doesNotMatch(renderContactChannels(pending), /tel:|mailto:/iu, "pending direct contact must not render in main");
+  assert.doesNotMatch(renderFooterContact(pending), /tel:|mailto:/iu, "pending direct contact must not render in footer");
 
   const approved = approvedContactFixture(legal);
   const approvedMain = renderContactChannels(approved);
@@ -91,7 +97,7 @@ async function verifyStaticAccessibility() {
   }
 
   const jsonLd = $("script[type='application/ld+json']").text();
-  assert.doesNotMatch(jsonLd, /atelier\.consultanta@gmail\.com|\+40769828338/u, "unapproved contact must not be present in contact-page JSON-LD");
+  assert.match(jsonLd, /atelier\.consultanta@gmail\.com|\+40769828338/u, "approved contact must be present in contact-page JSON-LD");
 }
 
 function contentType(filePath) {

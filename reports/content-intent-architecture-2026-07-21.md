@@ -3,7 +3,7 @@
 Data snapshot-ului: **2026-07-21**
 
 Sursă: sitemap-ul local generat după consolidările P0
-Acoperire: **91/91 URL-uri canonice/indexabile**
+Acoperire: **93/93 URL-uri canonice/indexabile**
 
 ## Rezumat
 
@@ -15,13 +15,13 @@ Acoperire: **91/91 URL-uri canonice/indexabile**
 - instrument: **2**
 - întrebare: **3**
 - legal: **2**
-- program: **12**
+- program: **14**
 - serviciu: **17**
 - studiu_de_caz: **1**
 
 ### Recomandări
 
-- keep: **67**
+- keep: **69**
 - merge: **5**
 - rewrite: **19**
 
@@ -64,6 +64,8 @@ graph TD
 | `/consultanta-fonduri-europene` | keep | — | Rol distinct de serviciu, cu o singură intenție primară și conversie proprie. | owner confirmă landing-ul comercial principal; export backlink; conversii CTA/form pe URL |
 | `/consultanta-fonduri-europene-bucuresti` | rewrite | — | Pagina locală/CAEN poate rămâne numai cu experiență, ofertă și conținut unic demonstrabil; necesită rescriere și validare. | Owner business confirmă experiența/oferta unică; SEO lead validează query și KPI |
 | `/cum-se-verifica-eligibilitatea-fonduri-europene` | merge | `/eligibilitate-fonduri-europene` | Intenția se suprapune cu /eligibilitate-fonduri-europene; se păstrează doar conținutul unic după aprobarea SEO/business. | SEO lead + owner de conținut aprobă decizia și migrarea |
+| `/dr12-afir` | keep | — | Rol distinct de program, cu o singură intenție primară și conversie proprie. | GSC Page+Query; export backlink pentru ambele URL-uri; conversii; aprobarea statusului DR12 |
+| `/dr14` | keep | — | Rol distinct de program, cu o singură intenție primară și conversie proprie. | export backlink; conversii; aprobarea statusului DR14; SEO lead |
 | `/eligibilitate-fonduri-europene` | rewrite | — | Rol distinct condiționat în harta P0.09; trebuie eliminată suprapunerea și aprobat KPI-ul propriu. | SEO lead aprobă rolul exclusiv educațional; eliminarea secțiunilor duplicate; GSC Page+Query; export backlink |
 | `/firma-consultanta-fonduri-europene` | merge | `/consultanta-fonduri-europene` | Intenția se suprapune cu /consultanta-fonduri-europene; se păstrează doar conținutul unic după aprobarea SEO/business. | comparare cu /cum-alegi-consultant-fonduri-europene; export backlink; conversii; aprobarea owner/SEO lead |
 | `/fonduri-europene` | keep | — | Rol distinct de hub, cu o singură intenție primară și conversie proprie. | SEO lead confirmă rolul de hub principal; export backlink pe URL exact; conversii pe URL |
@@ -79,8 +81,6 @@ graph TD
 | `/verificare-eligibilitate-fonduri-europene` | rewrite | — | Rol distinct condiționat în harta P0.09; trebuie eliminată suprapunerea și aprobat KPI-ul propriu. | owner aprobă rolul de serviciu; instrumentarea conversiilor live; eliminarea duplicatelor; export backlink |
 | `/digitalizare-imm` | în afara inventarului canonic | — | Pagina principală candidată este în pending_validation/noindex după P0; reintră în inventar numai după aprobarea factuală. | Aprobarea factuală/juridică/SEO indicată în poarta P0 |
 | `/granturi-digitalizare-imm` | în afara inventarului canonic | — | Candidat de consolidare P0.09; decizia de redirect nu este aprobată. | Aprobarea factuală/juridică/SEO indicată în poarta P0 |
-| `/dr12-afir` | în afara inventarului canonic | — | Statusul, documentul și data sunt DE_VALIDAT_UMAN; pagina nu este în sitemap-ul canonic. | Aprobarea factuală/juridică/SEO indicată în poarta P0 |
-| `/dr14` | în afara inventarului canonic | — | Statusul, documentul și data sunt DE_VALIDAT_UMAN; pagina nu este în sitemap-ul canonic. | Aprobarea factuală/juridică/SEO indicată în poarta P0 |
 | `/pro-infra` | în afara inventarului canonic | — | Statusul, documentul și data sunt DE_VALIDAT_UMAN; pagina nu este în sitemap-ul canonic. | Aprobarea factuală/juridică/SEO indicată în poarta P0 |
 | `/gdpr` | în afara inventarului canonic | — | Duplicat legal scos din sitemap; 301 rămâne condiționat de avizul juridic. | Aprobarea factuală/juridică/SEO indicată în poarta P0 |
 

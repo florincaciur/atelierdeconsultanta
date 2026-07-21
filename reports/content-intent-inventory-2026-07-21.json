@@ -5,13 +5,13 @@
   "source": "sitemap.xml + HTML local + registrele P0",
   "principle": "Un URL canonic are o singură intenție primară, un părinte și o micro-conversie distinctă.",
   "summary": {
-    "canonicalUrlCount": 91,
-    "inventoriedUrlCount": 91,
+    "canonicalUrlCount": 93,
+    "inventoriedUrlCount": 93,
     "byType": {
       "core": 3,
       "ghid": 34,
       "hub": 17,
-      "program": 12,
+      "program": 14,
       "instrument": 2,
       "serviciu": 17,
       "întrebare": 3,
@@ -20,16 +20,16 @@
     },
     "byIntent": {
       "comercială": 17,
-      "informațională": 57,
+      "informațională": 59,
       "navigațională": 14,
       "locală": 3
     },
     "byRecommendation": {
-      "keep": 67,
+      "keep": 69,
       "rewrite": 19,
       "merge": 5
     },
-    "blockedDecisionCount": 17
+    "blockedDecisionCount": 19
   },
   "rows": [
     {
@@ -49,7 +49,7 @@
       "microConversion": "cta_click către formularul de triere",
       "parent": "ROOT",
       "competingUrls": [],
-      "demonstrableUniqueValue": "35 subtitluri distincte, 9 FAQ și 4 linkuri externe în sursa HTML.",
+      "demonstrableUniqueValue": "37 subtitluri distincte, 9 FAQ și 4 linkuri externe în sursa HTML.",
       "recommendation": "keep",
       "recommendationTarget": null,
       "recommendationReason": "Rol distinct de core, cu o singură intenție primară și conversie proprie.",
@@ -59,7 +59,7 @@
       "evidence": {
         "title": "Consultanță și proiectare fonduri europene | FABER",
         "metaDescription": "FABER oferă consultanță și proiectare pentru proiecte cu fonduri europene: eligibilitate, cereri de finanțare, documentații tehnice și implementare.",
-        "headingCount": 35,
+        "headingCount": 37,
         "faqCount": 9,
         "externalLinkCount": 4,
         "interactiveControlCount": 30,
@@ -121,7 +121,7 @@
       "microConversion": "cta_click:project_check_how",
       "parent": "/fonduri-europene",
       "competingUrls": [],
-      "demonstrableUniqueValue": "8 subtitluri distincte, 5 FAQ și 1 linkuri externe în sursa HTML.",
+      "demonstrableUniqueValue": "10 subtitluri distincte, 5 FAQ și 3 linkuri externe în sursa HTML.",
       "recommendation": "keep",
       "recommendationTarget": null,
       "recommendationReason": "Rol distinct de hub, cu o singură intenție primară și conversie proprie.",
@@ -131,9 +131,9 @@
       "evidence": {
         "title": "AFIR | calculator SO, DR12, DR14 și GAL",
         "metaDescription": "Hub AFIR pentru fermieri: calculator SO/SOC, DR12, DR14, GAL-AFIR, autoconsum, documente agricole și rutare prudentă către program.",
-        "headingCount": 8,
+        "headingCount": 10,
         "faqCount": 5,
-        "externalLinkCount": 1,
+        "externalLinkCount": 3,
         "interactiveControlCount": 5,
         "governanceState": "NEÎNREGISTRAT",
         "programRegistryState": "NU_ESTE_PROGRAM_ÎN_REGISTRU"
@@ -879,11 +879,11 @@
       "h1": "Trimite proiectul. Îți spunem ce trebuie verificat.",
       "uniquePromise": "Orientează utilizatorul clar către oferta și următorul pas relevant pentru „Trimite proiectul. Îți spunem ce trebuie verificat.”.",
       "cta": "Trimite pasul 1",
-      "ctaTarget": "/",
+      "ctaTarget": "tel:+40769828338",
       "microConversion": "step_1_complete",
       "parent": "/",
       "competingUrls": [],
-      "demonstrableUniqueValue": "13 subtitluri distincte, 6 FAQ și 0 linkuri externe în sursa HTML.",
+      "demonstrableUniqueValue": "13 subtitluri distincte, 6 FAQ și 1 linkuri externe în sursa HTML.",
       "recommendation": "keep",
       "recommendationTarget": null,
       "recommendationReason": "Rol distinct de core, cu o singură intenție primară și conversie proprie.",
@@ -895,7 +895,7 @@
         "metaDescription": "Trimite către FABER datele proiectului, bugetul și documentele disponibile pentru stabilirea programului și a verificărilor necesare.",
         "headingCount": 13,
         "faqCount": 6,
-        "externalLinkCount": 0,
+        "externalLinkCount": 1,
         "interactiveControlCount": 37,
         "governanceState": "NEÎNREGISTRAT",
         "programRegistryState": "NU_ESTE_PROGRAM_ÎN_REGISTRU"
@@ -1064,7 +1064,7 @@
       "microConversion": "methodology_view",
       "parent": "/",
       "competingUrls": [],
-      "demonstrableUniqueValue": "18 subtitluri distincte, 6 FAQ și 0 linkuri externe în sursa HTML.",
+      "demonstrableUniqueValue": "19 subtitluri distincte, 6 FAQ și 1 linkuri externe în sursa HTML.",
       "recommendation": "rewrite",
       "recommendationTarget": null,
       "recommendationReason": "Rolul de core este util, dar promisiunea, query clusterul sau diferențierea față de URL-urile apropiate trebuie clarificate.",
@@ -1074,9 +1074,9 @@
       "evidence": {
         "title": "Despre FABER: consultanță fără promisiuni de aprobare",
         "metaDescription": "Vezi cum lucrează FABER: verificări pe documente, roluri clare și recomandări prudente pentru proiecte finanțate din fonduri europene.",
-        "headingCount": 18,
+        "headingCount": 19,
         "faqCount": 6,
-        "externalLinkCount": 0,
+        "externalLinkCount": 1,
         "interactiveControlCount": 0,
         "governanceState": "NEÎNREGISTRAT",
         "programRegistryState": "NU_ESTE_PROGRAM_ÎN_REGISTRU"
@@ -1198,6 +1198,43 @@
       }
     },
     {
+      "url": "https://atelierdeconsultanta.ro/dr12-afir",
+      "route": "/dr12-afir",
+      "sourceFile": "dr12-afir/index.html",
+      "sitemapFamily": "programs",
+      "type": "program",
+      "primaryAudience": "Fermieri și antreprenori agroalimentari",
+      "mainQuestion": "Care este statutul verificat și ce trebuie analizat pentru „DR-12 Investiții în consolidarea exploatațiilor tinerilor fermieri instalați și a fermierilor cu vârsta de până la 45 de ani”?",
+      "queryCluster": "dr12 AFIR; DR 12 lansare; ghid DR12; tineri fermieri",
+      "primaryIntent": "informațională",
+      "h1": "DR-12 Investiții în consolidarea exploatațiilor tinerilor fermieri instalați și a fermierilor cu vârsta de până la 45 de ani",
+      "uniquePromise": "Centralizează statutul, sursa oficială și pașii de verificare pentru „DR-12 Investiții în consolidarea exploatațiilor tinerilor fermieri instalați și a fermierilor cu vârsta de până la 45 de ani”.",
+      "cta": "Verifică încadrarea proiectului",
+      "ctaTarget": "/contact?program=dr12-afir",
+      "microConversion": "cta_click:program_project_check",
+      "parent": "/afir",
+      "competingUrls": [
+        "/dr-12-afir-instalarea-tinerilor-fermieri"
+      ],
+      "demonstrableUniqueValue": "Înregistrare în registrul unic al programelor; 2 subtitluri, 1 FAQ și sursă: Agenția pentru Finanțarea Investițiilor Rurale (AFIR).",
+      "recommendation": "keep",
+      "recommendationTarget": null,
+      "recommendationReason": "Rol distinct de program, cu o singură intenție primară și conversie proprie.",
+      "decisionState": "APROBARE_UMANĂ_NECESARĂ",
+      "owner": "Consultant programe + editor coordonator",
+      "nextReviewAt": "2026-09-20",
+      "evidence": {
+        "title": "DR 12 AFIR: ghid consultativ și condiții | FABER",
+        "metaDescription": "DR 12 are ghid consultativ, verificat la 22.07.2026. Depunerea nu este deschisă; vezi documentul AFIR și condițiile care trebuie urmărite.",
+        "headingCount": 2,
+        "faqCount": 1,
+        "externalLinkCount": 1,
+        "interactiveControlCount": 0,
+        "governanceState": "public",
+        "programRegistryState": "public"
+      }
+    },
+    {
       "url": "https://atelierdeconsultanta.ro/dr12-vs-dr14",
       "route": "/dr12-vs-dr14",
       "sourceFile": "dr12-vs-dr14.html",
@@ -1230,6 +1267,43 @@
         "interactiveControlCount": 12,
         "governanceState": "NEÎNREGISTRAT",
         "programRegistryState": "NU_ESTE_PROGRAM_ÎN_REGISTRU"
+      }
+    },
+    {
+      "url": "https://atelierdeconsultanta.ro/dr14",
+      "route": "/dr14",
+      "sourceFile": "dr14/index.html",
+      "sitemapFamily": "programs",
+      "type": "program",
+      "primaryAudience": "Fermieri și antreprenori agroalimentari",
+      "mainQuestion": "Care este statutul verificat și ce trebuie analizat pentru „DR-14 Investiții în fermele de mici dimensiuni”?",
+      "queryCluster": "dr14; DR14 AFIR 2026; ghidul solicitantului DR14",
+      "primaryIntent": "informațională",
+      "h1": "DR-14 Investiții în fermele de mici dimensiuni",
+      "uniquePromise": "Centralizează statutul, sursa oficială și pașii de verificare pentru „DR-14 Investiții în fermele de mici dimensiuni”.",
+      "cta": "Verifică încadrarea proiectului",
+      "ctaTarget": "/contact?program=dr14-afir",
+      "microConversion": "cta_click:program_project_check",
+      "parent": "/fonduri-europene",
+      "competingUrls": [
+        "/dr-14-afir-conditii-eligibilitate-greseli-frecvente"
+      ],
+      "demonstrableUniqueValue": "Înregistrare în registrul unic al programelor; 2 subtitluri, 1 FAQ și sursă: Agenția pentru Finanțarea Investițiilor Rurale (AFIR).",
+      "recommendation": "keep",
+      "recommendationTarget": null,
+      "recommendationReason": "Rol distinct de program, cu o singură intenție primară și conversie proprie.",
+      "decisionState": "APROBARE_UMANĂ_NECESARĂ",
+      "owner": "Consultant programe + editor coordonator",
+      "nextReviewAt": "2026-09-20",
+      "evidence": {
+        "title": "DR 14 AFIR: ghid consultativ și condiții | FABER",
+        "metaDescription": "DR 14 are ghid consultativ, verificat la 22.07.2026. Depunerea nu este deschisă; vezi documentul AFIR și condițiile de urmărit.",
+        "headingCount": 2,
+        "faqCount": 1,
+        "externalLinkCount": 1,
+        "interactiveControlCount": 0,
+        "governanceState": "public",
+        "programRegistryState": "public"
       }
     },
     {
@@ -2738,7 +2812,7 @@
       "competingUrls": [
         "/gdpr"
       ],
-      "demonstrableUniqueValue": "14 subtitluri distincte, 0 FAQ și 2 linkuri externe în sursa HTML.",
+      "demonstrableUniqueValue": "15 subtitluri distincte, 0 FAQ și 3 linkuri externe în sursa HTML.",
       "recommendation": "rewrite",
       "recommendationTarget": null,
       "recommendationReason": "Rolul de legal este util, dar promisiunea, query clusterul sau diferențierea față de URL-urile apropiate trebuie clarificate.",
@@ -2748,9 +2822,9 @@
       "evidence": {
         "title": "Politica de Confidențialitate | FABER",
         "metaDescription": "Politica de confidențialitate FABER – Atelier de Consultanță. Cum colectăm, utilizăm și protejăm datele tale personale.",
-        "headingCount": 14,
+        "headingCount": 15,
         "faqCount": 0,
-        "externalLinkCount": 2,
+        "externalLinkCount": 3,
         "interactiveControlCount": 0,
         "governanceState": "NEÎNREGISTRAT",
         "programRegistryState": "NU_ESTE_PROGRAM_ÎN_REGISTRU"
@@ -3266,7 +3340,7 @@
       "microConversion": "cta_click:email_contact",
       "parent": "/",
       "competingUrls": [],
-      "demonstrableUniqueValue": "13 subtitluri distincte, 0 FAQ și 3 linkuri externe în sursa HTML.",
+      "demonstrableUniqueValue": "14 subtitluri distincte, 0 FAQ și 4 linkuri externe în sursa HTML.",
       "recommendation": "rewrite",
       "recommendationTarget": null,
       "recommendationReason": "Rolul de legal este util, dar promisiunea, query clusterul sau diferențierea față de URL-urile apropiate trebuie clarificate.",
@@ -3276,9 +3350,9 @@
       "evidence": {
         "title": "Termeni și Condiții | FABER – Atelier de Consultanță",
         "metaDescription": "Termeni și condiții FABER – Atelier de Consultanță. Condițiile generale de utilizare a serviciilor noastre de consultanță în fonduri europene.",
-        "headingCount": 13,
+        "headingCount": 14,
         "faqCount": 0,
-        "externalLinkCount": 3,
+        "externalLinkCount": 4,
         "interactiveControlCount": 0,
         "governanceState": "NEÎNREGISTRAT",
         "programRegistryState": "NU_ESTE_PROGRAM_ÎN_REGISTRU"
@@ -3389,6 +3463,20 @@
       "requiredApproval": "SEO lead + owner de conținut aprobă decizia și migrarea"
     },
     {
+      "route": "/dr12-afir",
+      "decision": "keep",
+      "target": null,
+      "reason": "Rol distinct de program, cu o singură intenție primară și conversie proprie.",
+      "requiredApproval": "GSC Page+Query; export backlink pentru ambele URL-uri; conversii; aprobarea statusului DR12"
+    },
+    {
+      "route": "/dr14",
+      "decision": "keep",
+      "target": null,
+      "reason": "Rol distinct de program, cu o singură intenție primară și conversie proprie.",
+      "requiredApproval": "export backlink; conversii; aprobarea statusului DR14; SEO lead"
+    },
+    {
       "route": "/eligibilitate-fonduri-europene",
       "decision": "rewrite",
       "target": null,
@@ -3491,20 +3579,6 @@
       "decision": "în afara inventarului canonic",
       "target": null,
       "reason": "Candidat de consolidare P0.09; decizia de redirect nu este aprobată.",
-      "requiredApproval": "Aprobarea factuală/juridică/SEO indicată în poarta P0"
-    },
-    {
-      "route": "/dr12-afir",
-      "decision": "în afara inventarului canonic",
-      "target": null,
-      "reason": "Statusul, documentul și data sunt DE_VALIDAT_UMAN; pagina nu este în sitemap-ul canonic.",
-      "requiredApproval": "Aprobarea factuală/juridică/SEO indicată în poarta P0"
-    },
-    {
-      "route": "/dr14",
-      "decision": "în afara inventarului canonic",
-      "target": null,
-      "reason": "Statusul, documentul și data sunt DE_VALIDAT_UMAN; pagina nu este în sitemap-ul canonic.",
       "requiredApproval": "Aprobarea factuală/juridică/SEO indicată în poarta P0"
     },
     {

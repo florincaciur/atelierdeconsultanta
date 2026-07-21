@@ -167,6 +167,19 @@ function validateConfig(config) {
     if (!isIsoDate(approval.approvedAt) && approval.approvedAt !== HUMAN_REVIEW) errors.push(`approvals.${approvalId}: approvedAt invalid`);
     if (approval.state === "approved" && !approvalApproved(approval)) errors.push(`approvals.${approvalId}: aprobare incompletă`);
   }
+  const channels = config.approvedContactChannels;
+  if (!channels || typeof channels !== "object" || Array.isArray(channels)) {
+    errors.push("approvedContactChannels lipsește");
+  } else {
+    const validPhone = (value) => /^\+[1-9]\d{7,14}$/u.test(String(value || ""));
+    const additional = Array.isArray(channels.additionalPhones) ? channels.additionalPhones : [];
+    const whatsapp = Array.isArray(channels.whatsappPhones) ? channels.whatsappPhones : [];
+    const allPhones = [channels.primaryPhone, ...additional];
+    if (channels.primaryPhone !== config.fields?.publicPhone?.approvedValue) errors.push("telefonul primar diferă de publicPhone");
+    if (!allPhones.every(validPhone) || new Set(allPhones).size !== allPhones.length) errors.push("canalele telefonice trebuie să fie E.164 și unice");
+    if (!whatsapp.length || whatsapp.some((phone) => !allPhones.includes(phone))) errors.push("canalele WhatsApp trebuie să fie telefoane publice aprobate");
+    if (!isIsoDate(channels.approvedAt) || missing(channels.approvedBy) || missing(channels.internalSource)) errors.push("approvedContactChannels nu are aprobare nominală completă");
+  }
   if (config.publicationState === "approved" || config.approvalState === "approved") {
     errors.push(...publicationIssues(config).map((issue) => `publicare juridică nepermisă: ${issue}`));
   }

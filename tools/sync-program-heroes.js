@@ -223,8 +223,7 @@ function findHeroBlock(html) {
   const marked = html.match(/<!-- PROGRAM_HERO_START -->[\s\S]*?<!-- PROGRAM_HERO_END -->/);
   if (marked) return marked[0];
   const hero = html.match(/<header\b[^>]*class="[^"]*\bhero\b[^"]*"[^>]*>[\s\S]*?<\/header>/i);
-  if (!hero) throw new Error("Could not locate the page hero");
-  return hero[0];
+  return hero ? hero[0] : null;
 }
 
 function ensureProgramHeroCss(html) {
@@ -259,9 +258,13 @@ function syncPage(route, bannerIndex, { check = false, program = null } = {}) {
       }
     : banner;
   const oldHero = findHeroBlock(before);
-  const existing = extractExistingHero(oldHero);
+  const existing = oldHero ? extractExistingHero(oldHero) : { tag: "", title: "", description: "", actionsHtml: "" };
   const newHero = renderProgramHero({ route: normalizedRoute, banner: pageBanner, existing });
-  const after = ensureProgramHeroCss(before.replace(oldHero, newHero));
+  const withHero = oldHero
+    ? before.replace(oldHero, newHero)
+    : before.replace(/(<main\b[^>]*>)/iu, `$1\n${newHero}`);
+  if (!oldHero && withHero === before) throw new Error(`Could not insert the page hero for ${normalizedRoute}`);
+  const after = ensureProgramHeroCss(withHero);
   const changed = after !== before;
   if (changed && !check) fs.writeFileSync(filePath, after, "utf8");
   return { route: normalizedRoute, filePath, bannerId: banner.id, changed };

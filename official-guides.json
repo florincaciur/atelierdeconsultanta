@@ -327,5 +327,35 @@
     "statusLabel": "Calendar estimativ – depunerea nu este confirmată",
     "verifiedAt": "2026-07-20",
     "sourceOfTruth": "config/seo-programs.json#programs"
+  },
+  "dr12": {
+    "programIds": [
+      "dr12-afir"
+    ],
+    "name": "Versiune consultativă publicată la 19.03.2026",
+    "title": "Versiune consultativă publicată la 19.03.2026",
+    "institution": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
+    "url": "https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/",
+    "accessedAt": "2026-07-22",
+    "programStatus": "consultare_publica",
+    "statusLabel": "Ghid consultativ – depunerea nu este deschisă. Condițiile se pot modifica.",
+    "verifiedAt": "2026-07-22",
+    "isPrimaryFor": "dr12-afir",
+    "sourceOfTruth": "config/seo-programs.json#programs"
+  },
+  "dr14": {
+    "programIds": [
+      "dr14-afir"
+    ],
+    "name": "Varianta consultativă, Sesiunea 2026, arhivată de AFIR la 05.05.2026",
+    "title": "Varianta consultativă, Sesiunea 2026, arhivată de AFIR la 05.05.2026",
+    "institution": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
+    "url": "https://www.afir.ro/api/file?filename=Ghidul+Solicitantului+DR-14+VARIANTA+CONSULTATIV%C4%82&filetype=pdf&url=%2Fmedia%2Fbkmpo5fo%2Fgs-consultativ-dr-14.pdf",
+    "accessedAt": "2026-07-22",
+    "programStatus": "consultare_publica",
+    "statusLabel": "Ghid consultativ – depunerea nu este deschisă. Condițiile se pot modifica.",
+    "verifiedAt": "2026-07-22",
+    "isPrimaryFor": "dr14-afir",
+    "sourceOfTruth": "config/seo-programs.json#programs"
   }
 }

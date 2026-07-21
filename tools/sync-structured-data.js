@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 "use strict";
 
+require("./fs-write-retry");
+
 const fs = require("fs");
 const path = require("path");
 const cheerio = require("cheerio");

@@ -102,6 +102,7 @@ function isProtectedSourceValue(key, value) {
   const text = String(value || "").trim();
   if (!text) return true;
   if (/^(?:https?:|mailto:|tel:|\/)/iu.test(text)) return true;
+  if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/u.test(text)) return true;
   if (/^\d{4}-\d{2}-\d{2}(?:T.*)?$/u.test(text)) return true;
   if (/^[a-z0-9_.-]+(?:\/[a-z0-9_.-]+)*$/u.test(text) && !/\s/u.test(text)) return true;
   return false;
@@ -158,6 +159,7 @@ function normalizeDom($, context) {
 
   function normalizeValue(value, location) {
     if (/^https?:\/\/\S+$/iu.test(String(value || "").trim())) return value;
+    if (/^[^\s@]+@[^\s@]+\.[^\s@]+$/u.test(String(value || "").trim())) return value;
     const next = normalizeRomanianCopy(value);
     if (next === value) return value;
     addChange(changes, seen, {

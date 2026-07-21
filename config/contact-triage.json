@@ -13,11 +13,11 @@
     "qualifiedLeadActivation": "DE_VALIDAT_UMAN"
   },
   "privacyNotice": {
-    "copyState": "pending_legal_approval",
+    "copyState": "approved",
     "copy": "Confirm că am citit informarea privind prelucrarea datelor din Politica de confidențialitate.",
     "marketingConsentIncluded": false,
-    "approvedBy": "DE_VALIDAT_UMAN",
-    "approvedAt": null,
+    "approvedBy": "Caciur Florin",
+    "approvedAt": "2026-07-22",
     "publicationBlockedBy": "config/legal-identity.json#legalReview"
   },
   "antiSpam": {

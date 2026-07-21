@@ -5,9 +5,9 @@ Data evaluării: **2026-07-21**. Registru: `config/editorial-governance.json`.
 ## Rezumat
 
 - Pagini guvernate: **32**
-- Pagini publice cu metadate complete: **13**
+- Pagini publice cu metadate complete: **15**
 - Verificări expirate: **5**
-- Surse lipsă/incomplete: **9**
+- Surse lipsă/incomplete: **7**
 - Reviewer lipsă: **0**
 - Contradicții program–pagină: **0**
 
@@ -24,8 +24,8 @@ O expirare produce warning intern și nu schimbă automat statusul, textul, `ver
 | `/calculator-soc` | tool | pending_validation | — | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | da | nu | nu | nu |
 | `/cod-caen-start-up-nation-2026` | guide | pending_validation | — | 2026-05-20 | 2026-08-18 | DE_VALIDAT_UMAN | nu | nu | nu | nu |
 | `/digitalizare-imm` | program | pending_validation | apel_inchis | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | da | nu | nu | nu |
-| `/dr12-afir` | program | pending_validation | consultare_publica | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | da | nu | nu | nu |
-| `/dr14` | program | pending_validation | consultare_publica | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | da | nu | nu | nu |
+| `/dr12-afir` | program | public | consultare_publica | 2026-07-22 | 2026-09-20 | 2026-07-22 | nu | nu | nu | nu |
+| `/dr14` | program | public | consultare_publica | 2026-07-22 | 2026-09-20 | 2026-07-22 | nu | nu | nu | nu |
 | `/dr14-afir-ferme-mici` | program | pending_validation | — | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | da | nu | nu | nu |
 | `/e-move` | program | public | consultare_publica | 2026-05-27 | 2026-07-26 | 2026-05-27 | nu | nu | nu | nu |
 | `/femeia-antreprenor-2026` | program | public | calendar_estimativ | 2026-05-20 | 2026-07-19 | 2026-05-20 | nu | da | nu | nu |

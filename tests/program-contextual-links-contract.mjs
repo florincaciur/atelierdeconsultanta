@@ -29,11 +29,11 @@ assert.deepEqual(resolvedLinks(dr12, config).map(({ relation, href, anchor }) =>
 
 const audit = auditProgramContextualLinks();
 assert.equal(audit.errors.length, 0, audit.errors.join("\n"));
-assert.equal(audit.summary.programs, 20);
-assert.equal(audit.summary.links, 80);
-assert.equal(audit.summary.trackedCtas, 20);
-assert.equal(audit.summary.editorialLinksWithoutTracking, 60);
+assert.equal(audit.summary.programs, 15);
+assert.equal(audit.summary.links, 60);
+assert.equal(audit.summary.trackedCtas, 15);
+assert.equal(audit.summary.editorialLinksWithoutTracking, 45);
 assert.equal(audit.summary.legacyCloudsRemaining, 0);
-assert.deepEqual(audit.summary.relationCounts, { parent: 20, instrument: 20, comparison: 20, conversion: 20 });
+assert.deepEqual(audit.summary.relationCounts, { parent: 15, instrument: 15, comparison: 15, conversion: 15 });
 
-console.log("Program contextual links contract PASS: 20 programe, 80 relații, tracking exclusiv pe 20 CTA-uri.");
+console.log("Program contextual links contract PASS: 15 programe publice, 60 relații, tracking exclusiv pe 15 CTA-uri.");

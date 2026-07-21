@@ -49,33 +49,40 @@ for (const id of REQUIRED_PROGRAMS) {
   const row = approvalById.get(id);
   const program = programById.get(id);
   assert(row, `${id}: lipsește din tabelul de aprobare`);
-  assert.equal(row.approvalState, "pending", `${id}: nu poate fi aprobat automat`);
-  assert.equal(row.validatorName, HUMAN_REVIEW, `${id}: validatorul nu poate fi inventat`);
-  assert.equal(program.publicationState, "pending_validation", `${id}: registrul publică un rând neaprobat`);
-  assert.equal(program.grantSummary, null, `${id}: grantSummary este publicat înainte de aprobare`);
-  assert.equal(program.cofinancingSummary, null, `${id}: cofinancingSummary este publicat înainte de aprobare`);
-  assert.equal(header(`[data-program-id="${id}"]`).length, 0, `${id}: apare în meniul global`);
-  assert.equal(homepage(`[data-program-id="${id}"]`).length, 0, `${id}: apare pe homepage`);
-  assert(!banners.some((banner) => banner.programId === id), `${id}: apare în carusel`);
+  assert.equal(program.grantSummary, null, `${id}: grantSummary nu este aprobat numeric`);
+  assert.equal(program.cofinancingSummary, null, `${id}: cofinancingSummary nu este aprobat numeric`);
+  if (row.approvalState === "approved") {
+    assert.notEqual(row.validatorName, HUMAN_REVIEW, `${id}: aprobarea trebuie să fie nominală`);
+    assert.equal(program.publicationState, "public", `${id}: rândul aprobat trebuie publicat din registru`);
+    assert.equal(program.verifiedAt, approvalConfig.researchDate, `${id}: data publică diferă de aprobare`);
+    assert.equal(program.sourceUrl, row.officialUrl, `${id}: sursa publică diferă de aprobare`);
+    assert(homepage(`[data-program-id="${id}"][data-program-status="${program.status}"]`).length > 0, `${id}: lipsește din suprafața publică aprobată`);
+  } else {
+    assert.equal(row.validatorName, HUMAN_REVIEW, `${id}: un rând pending păstrează placeholderul controlat`);
+    assert.equal(program.publicationState, "pending_validation", `${id}: registrul publică un rând neaprobat`);
+    assert.equal(header(`[data-program-id="${id}"]`).length, 0, `${id}: apare în meniul global`);
+    assert.equal(homepage(`[data-program-id="${id}"]`).length, 0, `${id}: apare pe homepage`);
+    assert(!banners.some((banner) => banner.programId === id), `${id}: apare în carusel`);
 
-  for (const route of row.publicationHoldUrls) {
-    const files = filesForRoute(route);
-    assert(files.length, `${id}: lipsește ruta suspendată ${route}`);
-    for (const file of files) {
-      const $ = cheerio.load(fs.readFileSync(file, "utf8"), { decodeEntities: false });
-      assert.match($("meta[name='robots']").attr("content") || "", /noindex/iu, `${route}: nu are noindex`);
-      assert.equal($("body").attr("data-publication-state"), "pending_validation", `${route}: body nu este marcat pending_validation`);
-      assert.equal($("main.program-validation-hold").length, 1, `${route}: lipsește mesajul neutru de suspendare`);
-      assert.equal($(`[data-program-id="${id}"][data-program-status]`).length, 0, `${route}: publică un status candidat`);
-      assert.equal($("script[type='application/ld+json']").length, 0, `${route}: publică JSON-LD factual`);
-      assert(!$.html().includes(row.proposedCopy), `${route}: copy-ul candidat este publicat înainte de aprobare`);
+    for (const route of row.publicationHoldUrls) {
+      const files = filesForRoute(route);
+      assert(files.length, `${id}: lipsește ruta suspendată ${route}`);
+      for (const file of files) {
+        const $ = cheerio.load(fs.readFileSync(file, "utf8"), { decodeEntities: false });
+        assert.match($("meta[name='robots']").attr("content") || "", /noindex/iu, `${route}: nu are noindex`);
+        assert.equal($("body").attr("data-publication-state"), "pending_validation", `${route}: body nu este marcat pending_validation`);
+        assert.equal($("main.program-validation-hold").length, 1, `${route}: lipsește mesajul neutru de suspendare`);
+        assert.equal($(`[data-program-id="${id}"][data-program-status]`).length, 0, `${route}: publică un status candidat`);
+        assert.equal($("script[type='application/ld+json']").length, 0, `${route}: publică JSON-LD factual`);
+        assert(!$.html().includes(row.proposedCopy), `${route}: copy-ul candidat este publicat înainte de aprobare`);
+      }
     }
   }
 }
 
 for (const file of htmlFiles()) {
   const $ = cheerio.load(fs.readFileSync(file, "utf8"), { decodeEntities: false });
-  for (const id of REQUIRED_PROGRAMS) {
+  for (const id of REQUIRED_PROGRAMS.filter((programId) => approvalById.get(programId).approvalState === "pending")) {
     const program = programById.get(id);
     const route = program.pageUrl.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
     const hrefPattern = new RegExp(`^(?:https://atelierdeconsultanta\\.ro)?${route}/?$`, "i");
@@ -89,12 +96,11 @@ for (const file of htmlFiles()) {
 }
 
 const missingValidator = structuredClone(approvalConfig);
-missingValidator.programs[0].approvalState = "approved";
-missingValidator.programs[0].approvedAt = "2026-07-21";
+missingValidator.programs[0].validatorName = HUMAN_REVIEW;
 assert(validateApprovalRegistry(missingValidator, programs).some((error) => /numele consultantului|DE_VALIDAT_UMAN/iu.test(error)), "Aprobarea fără validator nominal trebuie respinsă");
 
 const prematurelyPublicPrograms = structuredClone(programs);
-prematurelyPublicPrograms.find((program) => program.slug === "dr12-afir").publicationState = "public";
+prematurelyPublicPrograms.find((program) => program.slug === "pro-infra").publicationState = "public";
 assert(validateApprovalRegistry(approvalConfig, prematurelyPublicPrograms).some((error) => /public înainte/iu.test(error)), "Publicarea înainte de aprobarea FABER trebuie respinsă");
 
-console.log("Poarta P0.02: 4 programe blocate, suprafețe factuale eliminate și validare nominală obligatorie.");
+console.log("Poarta P0.02: rândurile aprobate sunt publice, cele disputate rămân blocate și validarea nominală este obligatorie.");

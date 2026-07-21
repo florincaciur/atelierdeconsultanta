@@ -129,24 +129,24 @@
       "family": "afir-agricultura",
       "status": "consultare_publica",
       "statusLabel": "Ghid consultativ – depunerea nu este deschisă. Condițiile se pot modifica.",
-      "publicationState": "pending_validation",
-      "verifiedAt": "DE_VALIDAT_UMAN",
+      "publicationState": "public",
+      "verifiedAt": "2026-07-22",
       "sourceName": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
-      "sourceUrl": "DE_VALIDAT_UMAN",
-      "sourceVersion": "DE_VALIDAT_UMAN",
+      "sourceUrl": "https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/",
+      "sourceVersion": "Versiune consultativă publicată la 19.03.2026",
       "sourceType": "official",
       "applicationStart": null,
       "applicationEnd": null,
       "grantSummary": null,
       "cofinancingSummary": null,
       "pageUrl": "/dr12-afir",
-      "lastMeaningfulUpdate": "DE_VALIDAT_UMAN",
+      "lastMeaningfulUpdate": "2026-07-22",
       "evergreenValue": true,
       "archivedNoindexDecision": null,
-      "cardSummary": "Statutul, documentul și data de verificare pentru DR12 așteaptă confirmarea responsabilului editorial.",
-      "metaTitle": "DR12 AFIR – informații în validare editorială | FABER",
-      "metaDescription": "Pagina DR12 este temporar în validare editorială. Statutul, documentul oficial și data vor fi publicate numai după confirmarea umană.",
-      "editorialDisclaimer": "Nu publicați statutul, documentul, datele sau valorile înainte de confirmarea responsabilului editorial.",
+      "cardSummary": "Ghidul DR 12 este consultativ; depunerea nu este deschisă, iar condițiile se pot modifica.",
+      "metaTitle": "DR 12 AFIR: ghid consultativ și condiții | FABER",
+      "metaDescription": "DR 12 are ghid consultativ, verificat la 22.07.2026. Depunerea nu este deschisă; vezi documentul AFIR și condițiile care trebuie urmărite.",
+      "editorialDisclaimer": "Informația este bazată pe versiunea consultativă; condițiile se pot modifica înaintea ghidului final și a deschiderii apelului.",
       "eligibleApplicants": [],
       "keyConditions": [],
       "officialGuideKeys": [
@@ -159,22 +159,6 @@
         "icon": "ph-plant",
         "image": "/assets/hero/hero-agriculture.webp",
         "beneficiary": null
-      },
-      "pendingValidation": {
-        "requestedFields": [
-          "status",
-          "sourceUrl",
-          "sourceVersion",
-          "verifiedAt",
-          "lastMeaningfulUpdate",
-          "validatorName"
-        ],
-        "candidateStatus": "consultare_publica",
-        "candidateSourceUrl": "https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/",
-        "candidateSourceVersion": "Ghidul solicitantului DR-12 – versiunea consultativă, publicat la 19.03.2026",
-        "candidateVerifiedAt": "2026-07-21",
-        "approvalRecord": "config/program-status-approvals.json#dr12-afir",
-        "note": "Statusul, documentul și data trebuie confirmate nominal de un consultant FABER înainte de revenirea publicationState la public."
       },
       "discovery": {
         "parentHub": "/afir",
@@ -197,24 +181,24 @@
       "family": "afir-agricultura",
       "status": "consultare_publica",
       "statusLabel": "Ghid consultativ – depunerea nu este deschisă. Condițiile se pot modifica.",
-      "publicationState": "pending_validation",
-      "verifiedAt": "DE_VALIDAT_UMAN",
+      "publicationState": "public",
+      "verifiedAt": "2026-07-22",
       "sourceName": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
-      "sourceUrl": "DE_VALIDAT_UMAN",
-      "sourceVersion": "DE_VALIDAT_UMAN",
+      "sourceUrl": "https://www.afir.ro/api/file?filename=Ghidul+Solicitantului+DR-14+VARIANTA+CONSULTATIV%C4%82&filetype=pdf&url=%2Fmedia%2Fbkmpo5fo%2Fgs-consultativ-dr-14.pdf",
+      "sourceVersion": "Varianta consultativă, Sesiunea 2026, arhivată de AFIR la 05.05.2026",
       "sourceType": "official",
       "applicationStart": null,
       "applicationEnd": null,
       "grantSummary": null,
       "cofinancingSummary": null,
       "pageUrl": "/dr14",
-      "lastMeaningfulUpdate": "DE_VALIDAT_UMAN",
+      "lastMeaningfulUpdate": "2026-07-22",
       "evergreenValue": true,
       "archivedNoindexDecision": null,
-      "cardSummary": "Statutul, documentul și data de verificare pentru DR14 așteaptă confirmarea consultantului FABER.",
-      "metaTitle": "DR14 AFIR – informații în validare editorială | FABER",
-      "metaDescription": "Pagina DR14 este temporar în validare editorială. Statutul și documentul oficial vor fi publicate numai după confirmarea umană.",
-      "editorialDisclaimer": "Nu publicați statutul, documentul, datele sau valorile înainte de confirmarea consultantului FABER.",
+      "cardSummary": "Ghidul DR 14 este consultativ; depunerea nu este deschisă, iar condițiile se pot modifica.",
+      "metaTitle": "DR 14 AFIR: ghid consultativ și condiții | FABER",
+      "metaDescription": "DR 14 are ghid consultativ, verificat la 22.07.2026. Depunerea nu este deschisă; vezi documentul AFIR și condițiile de urmărit.",
+      "editorialDisclaimer": "Informația este bazată pe versiunea consultativă; condițiile se pot modifica înaintea ghidului final și a deschiderii apelului.",
       "eligibleApplicants": [],
       "keyConditions": [],
       "officialGuideKeys": [
@@ -227,24 +211,6 @@
         "icon": "ph-tractor",
         "image": "/assets/hero/hero-agriculture.webp",
         "beneficiary": null
-      },
-      "pendingValidation": {
-        "requestedFields": [
-          "status",
-          "sourceUrl",
-          "sourceVersion",
-          "verifiedAt",
-          "lastMeaningfulUpdate",
-          "grantSummary",
-          "cofinancingSummary",
-          "validatorName"
-        ],
-        "candidateStatus": "consultare_publica",
-        "candidateSourceUrl": "https://www.afir.ro/api/file?filename=Ghidul+Solicitantului+DR-14+VARIANTA+CONSULTATIV%C4%82&filetype=pdf&url=%2Fmedia%2Fbkmpo5fo%2Fgs-consultativ-dr-14.pdf",
-        "candidateSourceVersion": "Ghidul solicitantului DR-14 – VARIANTA CONSULTATIVĂ, Sesiunea 2026; data documentului DE_VALIDAT_UMAN",
-        "candidateVerifiedAt": "2026-07-21",
-        "approvalRecord": "config/program-status-approvals.json#dr14-afir",
-        "note": "Confirmare nominală FABER obligatorie; valorile consultative nu se publică înainte de aprobare."
       },
       "discovery": {
         "parentHub": "/afir",
@@ -1411,7 +1377,9 @@
           "label": "Verificare inițială a eligibilității"
         }
       ],
-      "sourceKeys": [],
+      "sourceKeys": [
+        "dr12"
+      ],
       "template": "editorial-program",
       "minWords": 1200,
       "minFaq": 8,
@@ -1672,7 +1640,9 @@
           "label": "Verificare inițială a eligibilității"
         }
       ],
-      "sourceKeys": [],
+      "sourceKeys": [
+        "dr14"
+      ],
       "heroIcon": "ph-duotone ph-seedling",
       "officialGuideKey": "dr14",
       "guideCtaLabel": "Ghid oficial",

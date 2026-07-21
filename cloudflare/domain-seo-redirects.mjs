@@ -227,7 +227,7 @@ function contactForwardPayload(payload, now = new Date()) {
     email: payload.email || "—",
     phone: payload.phone || "—",
     privacy_notice_acknowledged: "true",
-    privacy_notice_version: "pending_legal_approval",
+    privacy_notice_version: "approved_2026-07-22",
     program_slug: payload.program_slug,
     caen_or_so: payload.caen_or_so,
     budget_estimate: payload.budget_estimate,

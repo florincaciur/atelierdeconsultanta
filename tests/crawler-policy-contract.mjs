@@ -17,12 +17,14 @@ assert(perplexity, "PerplexityBot must have an explicit group");
 assert(gpt, "GPTBot must have an explicit group");
 assert(oai.rules.some((rule) => rule.directive === "allow" && rule.value === "/"));
 assert(perplexity.rules.some((rule) => rule.directive === "allow" && rule.value === "/"));
-assert(gpt.rules.some((rule) => rule.directive === "disallow" && rule.value === "/"));
+assert(gpt.rules.some((rule) => rule.directive === "allow" && rule.value === "/"));
+assert(!gpt.rules.some((rule) => rule.directive === "disallow" && rule.value === "/"));
 
-for (const crawler of policy.crawlers.filter((item) => item.purpose.includes("antrenare") || item.publicAccess === "disallow")) {
-  assert.equal(crawler.changeInP015, false, `${crawler.userAgent} training policy must not change in P0.15`);
+for (const crawler of policy.crawlers.filter((item) => item.userAgent !== "GPTBot" && (item.purpose.includes("antrenare") || item.publicAccess === "disallow"))) {
+  assert.equal(crawler.changeInP015, false, `${crawler.userAgent} training policy must not change without separate approval`);
 }
+assert.equal(policy.crawlers.find((item) => item.userAgent === "GPTBot")?.approval, "APROBAT_CACIUR_FLORIN_2026-07-22");
 assert.equal(policy.cloudflare.allowUserAgentOnlyException, false);
 assert.equal(policy.cloudflare.officialCrawlerLogReview, "DE_VALIDAT_UMAN");
 
-console.log("Crawler policy contract passed: OAI/Perplexity search allowed, GPTBot training blocked, private paths protected.");
+console.log("Crawler policy contract passed: OAI/Perplexity/GPTBot allowed by policy, private paths protected.");

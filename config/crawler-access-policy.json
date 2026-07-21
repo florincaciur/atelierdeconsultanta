@@ -60,9 +60,9 @@
       "userAgent": "GPTBot",
       "robotsGroup": "GPTBot",
       "purpose": "antrenare OpenAI",
-      "publicAccess": "disallow",
-      "approval": "DE_VALIDAT_UMAN",
-      "changeInP015": false
+      "publicAccess": "allow",
+      "approval": "APROBAT_CACIUR_FLORIN_2026-07-22",
+      "changeInP015": true
     },
     {
       "userAgent": "ClaudeBot",

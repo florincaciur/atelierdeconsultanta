@@ -144,7 +144,7 @@ async function verifyServerContract() {
   assert.equal(forwarded.length, 1);
   assert.equal(forwarded[0].body.email, "—");
   assert.equal(forwarded[0].body.phone, "0769828338");
-  assert.equal(forwarded[0].body.privacy_notice_version, "pending_legal_approval");
+  assert.equal(forwarded[0].body.privacy_notice_version, "approved_2026-07-22");
   assert.equal(forwarded[0].body.utm_source, "chatgpt.com", "raw ChatGPT UTM must be preserved in CRM payload");
   assert.equal(forwarded[0].body.landing_referrer, "https://chatgpt.com/");
   assert.equal(forwarded[0].body.program_family, "afir-agricultura");

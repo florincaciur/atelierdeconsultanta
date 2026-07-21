@@ -5,7 +5,7 @@ const fs = require("fs");
 const path = require("path");
 const cheerio = require("cheerio");
 const { parentForRoute } = require("./breadcrumb-registry");
-const { loadProgramConfig } = require("./program-factual-governance");
+const { isPublicProgram, loadProgramConfig } = require("./program-factual-governance");
 
 const ROOT = path.resolve(__dirname, "..");
 const CONFIG_PATH = path.join(ROOT, "config", "program-contextual-links.json");
@@ -145,10 +145,11 @@ function main() {
   const config = loadConfig();
   const programs = loadProgramConfig().programs;
   validateMatrix(programs, config);
+  const publicPrograms = programs.filter(isPublicProgram);
   const changed = [];
   const migration = [];
 
-  for (const program of programs) {
+  for (const program of publicPrograms) {
     for (const file of programFiles(program.pageUrl)) {
       const before = fs.readFileSync(file, "utf8");
       const counts = legacyCounts(before);
@@ -176,7 +177,7 @@ function main() {
   if (!CHECK) {
     fs.writeFileSync(REPORT_PATH, `${JSON.stringify({ generatedAt: "2026-07-21", evidence: config.evidence, files: migration }, null, 2)}\n`, "utf8");
   }
-  console.log(`Program contextual links ${CHECK ? "PASS" : "OK"}: ${programs.length} programe, ${migration.length} fișiere, ${changed.length} actualizate.`);
+  console.log(`Program contextual links ${CHECK ? "PASS" : "OK"}: ${publicPrograms.length} programe publice, ${migration.length} fișiere, ${changed.length} actualizate.`);
 }
 
 if (require.main === module) main();

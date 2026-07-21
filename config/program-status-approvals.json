@@ -1,17 +1,17 @@
 {
   "schemaVersion": 1,
-  "researchDate": "2026-07-21",
+  "researchDate": "2026-07-22",
   "requiredValidatorRole": "Consultant FABER",
   "publicationPolicy": "Niciun rând nu poate deveni public înainte de validarea nominală a statusului, documentului și datei.",
   "programs": [
     {
       "programId": "dr12-afir",
-      "approvalState": "pending",
-      "validatorName": "DE_VALIDAT_UMAN",
-      "approvedAt": null,
+      "approvalState": "approved",
+      "validatorName": "Caciur Florin / Bogdan Iftode",
+      "approvedAt": "2026-07-22",
       "proposedStatus": "consultare_publica",
       "proposedStatusLabel": "Ghid consultativ – depunerea nu este deschisă. Condițiile se pot modifica.",
-      "proposedCopy": "Ghid consultativ – depunerea nu este deschisă. Condițiile se pot modifica. — verificat la 2026-07-21. Depunerea nu este deschisă. Sursa: AFIR, Ghidul solicitantului DR-12 – versiunea consultativă, publicat la 19.03.2026.",
+      "proposedCopy": "Ghid consultativ – depunerea nu este deschisă. Condițiile se pot modifica. — verificat la 2026-07-22. Depunerea nu este deschisă. Sursa: AFIR, Ghidul solicitantului DR-12 – versiunea consultativă, publicat la 19.03.2026.",
       "officialInstitution": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
       "officialDocument": "Ghidul solicitantului DR-12 – versiunea consultativă",
       "officialDocumentVersion": "Versiune consultativă publicată la 19.03.2026",
@@ -27,8 +27,7 @@
       "numericClaimsApproved": false,
       "observedBefore": "Homepage: card «Activ» cu 200.000 EUR și 80%/65%; meniu: «variantă consultativă»; paginile DR12 foloseau formulări nealiniate.",
       "unresolved": [
-        "Consultantul FABER trebuie să confirme că nu există un document final sau un anunț ulterior care schimbă statusul.",
-        "Numele validatorului și data aprobării sunt DE_VALIDAT_UMAN."
+        "Valorile numerice rămân nepublicate deoarece aprobarea acoperă statutul și documentul, nu cuantumul sau intensitatea sprijinului."
       ],
       "publicationHoldUrls": [
         "/dr12-afir",
@@ -64,16 +63,16 @@
     },
     {
       "programId": "dr14-afir",
-      "approvalState": "pending",
-      "validatorName": "DE_VALIDAT_UMAN",
-      "approvedAt": null,
+      "approvalState": "approved",
+      "validatorName": "Caciur Florin / Bogdan Iftode",
+      "approvedAt": "2026-07-22",
       "proposedStatus": "consultare_publica",
       "proposedStatusLabel": "Ghid consultativ – depunerea nu este deschisă. Condițiile se pot modifica.",
-      "proposedCopy": "Ghid consultativ – depunerea nu este deschisă. Condițiile se pot modifica. — verificat la 2026-07-21. Depunerea nu este deschisă. Sursa: AFIR, Ghidul solicitantului DR-14 – VARIANTA CONSULTATIVĂ, Sesiunea 2026; data documentului DE_VALIDAT_UMAN.",
+      "proposedCopy": "Ghid consultativ – depunerea nu este deschisă. Condițiile se pot modifica. — verificat la 2026-07-22. Depunerea nu este deschisă. Sursa: AFIR, Ghidul solicitantului DR-14 – varianta consultativă, Sesiunea 2026, arhivată la 05.05.2026.",
       "officialInstitution": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
       "officialDocument": "Ghidul solicitantului DR-14 – VARIANTA CONSULTATIVĂ",
-      "officialDocumentVersion": "Sesiunea 2026",
-      "officialDocumentDate": "DE_VALIDAT_UMAN",
+      "officialDocumentVersion": "Varianta consultativă, Sesiunea 2026, arhivată de AFIR la 05.05.2026",
+      "officialDocumentDate": "2026-05-05",
       "documentCharacter": "consultativ",
       "officialUrl": "https://www.afir.ro/api/file?filename=Ghidul+Solicitantului+DR-14+VARIANTA+CONSULTATIV%C4%82&filetype=pdf&url=%2Fmedia%2Fbkmpo5fo%2Fgs-consultativ-dr-14.pdf",
       "additionalOfficialEvidence": [
@@ -84,9 +83,7 @@
       "numericClaimsApproved": false,
       "observedBefore": "Homepage: card «Activ» cu 50.000 EUR și 85%; meniu și pagină: variantă consultativă.",
       "unresolved": [
-        "Data exactă a documentului și existența unei forme finale ulterioare sunt DE_VALIDAT_UMAN.",
-        "Valorile de 50.000 EUR și 85% rămân nepublicate până la confirmarea aceleiași versiuni oficiale.",
-        "Numele validatorului și data aprobării sunt DE_VALIDAT_UMAN."
+        "Valorile de 50.000 EUR și 85% rămân nepublicate; aprobarea nu confirmă valorile numerice din versiunea consultativă."
       ],
       "publicationHoldUrls": [
         "/dr14",
@@ -120,7 +117,7 @@
       "approvedAt": null,
       "proposedStatus": "ghid_aprobat_nedeschis",
       "proposedStatusLabel": "Schemă aprobată – depunerea nu este deschisă",
-      "proposedCopy": "Schemă aprobată – depunerea nu este deschisă — verificat la 2026-07-21. Depunerea nu este deschisă. Sursa: Ministerul Transporturilor și Infrastructurii, Schema PRO INFRA – formă consolidată la 12.02.2026.",
+      "proposedCopy": "Schemă aprobată – depunerea nu este deschisă — verificat la 2026-07-22. Depunerea nu este deschisă. Sursa: Ministerul Transporturilor și Infrastructurii, Schema PRO INFRA – formă consolidată la 12.02.2026.",
       "officialInstitution": "Ministerul Transporturilor și Infrastructurii",
       "officialDocument": "Schema de ajutor de stat privind sprijinirea investițiilor destinate îmbunătățirii eficienței energetice a activităților industriale — PRO INFRA",
       "officialDocumentVersion": "Formă consolidată la 12.02.2026; Ordinul nr. 2.292/29.12.2025, modificat prin Ordinul nr. 101/12.02.2026",
@@ -155,7 +152,7 @@
       "approvedAt": null,
       "proposedStatus": "apel_inchis",
       "proposedStatusLabel": "Apel închis – depunerea nu este deschisă",
-      "proposedCopy": "Apel închis — verificat la 2026-07-21. Depunerea nu este deschisă. Sursa: MIPE, apelul PNRR Digitalizarea IMM-urilor, depunere 15.02.2023–30.06.2023; versiunea oficială curentă DE_VALIDAT_UMAN.",
+      "proposedCopy": "Apel închis — verificat la 2026-07-22. Depunerea nu este deschisă. Sursa: MIPE, apelul PNRR Digitalizarea IMM-urilor, depunere 15.02.2023–30.06.2023; versiunea oficială curentă DE_VALIDAT_UMAN.",
       "officialInstitution": "Ministerul Investițiilor și Proiectelor Europene",
       "officialDocument": "Apelul de proiecte PNRR Digitalizarea IMM-urilor",
       "officialDocumentVersion": "Interval efectiv de depunere comunicat oficial; versiunea curentă a ghidului DE_VALIDAT_UMAN",

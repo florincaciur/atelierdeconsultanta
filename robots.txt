@@ -27,9 +27,15 @@ Disallow: /admin/
 Disallow: /api
 Disallow: /api/
 
-# Crawlere folosite pentru antrenare sau extinderea seturilor de date.
+# GPTBot este permis prin decizia de business din 22.07.2026.
 User-agent: GPTBot
-Disallow: /
+Allow: /
+Disallow: /admin
+Disallow: /admin/
+Disallow: /api
+Disallow: /api/
+
+# Celelalte politici de antrenare rămân neschimbate până la o decizie separată.
 
 User-agent: ClaudeBot
 Disallow: /

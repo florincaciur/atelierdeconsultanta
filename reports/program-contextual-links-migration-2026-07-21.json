@@ -112,32 +112,6 @@
       ]
     },
     {
-      "programId": "digitalizare-imm",
-      "route": "/digitalizare-imm",
-      "file": "digitalizare-imm/index.html",
-      "removedManagedBlocks": 0,
-      "removedManagedLinks": 0,
-      "resultingRelations": [
-        "parent",
-        "instrument",
-        "comparison",
-        "conversion"
-      ]
-    },
-    {
-      "programId": "digitalizare-imm",
-      "route": "/digitalizare-imm",
-      "file": "digitalizare-imm.html",
-      "removedManagedBlocks": 0,
-      "removedManagedLinks": 0,
-      "resultingRelations": [
-        "parent",
-        "instrument",
-        "comparison",
-        "conversion"
-      ]
-    },
-    {
       "programId": "modernizare-microintreprinderi-ne-2",
       "route": "/investitii-modernizarea-microintreprinderilor-apel-2",
       "file": "investitii-modernizarea-microintreprinderilor-apel-2/index.html",
@@ -268,32 +242,6 @@
       ]
     },
     {
-      "programId": "pro-infra",
-      "route": "/pro-infra",
-      "file": "pro-infra/index.html",
-      "removedManagedBlocks": 0,
-      "removedManagedLinks": 0,
-      "resultingRelations": [
-        "parent",
-        "instrument",
-        "comparison",
-        "conversion"
-      ]
-    },
-    {
-      "programId": "pro-infra",
-      "route": "/pro-infra",
-      "file": "pro-infra.html",
-      "removedManagedBlocks": 0,
-      "removedManagedLinks": 0,
-      "resultingRelations": [
-        "parent",
-        "instrument",
-        "comparison",
-        "conversion"
-      ]
-    },
-    {
       "programId": "apeluri-gal",
       "route": "/apeluri-gal",
       "file": "apeluri-gal/index.html",
@@ -336,71 +284,6 @@
       "programId": "pocidif-21",
       "route": "/pocidif-21",
       "file": "pocidif-21/index.html",
-      "removedManagedBlocks": 0,
-      "removedManagedLinks": 0,
-      "resultingRelations": [
-        "parent",
-        "instrument",
-        "comparison",
-        "conversion"
-      ]
-    },
-    {
-      "programId": "pnrr",
-      "route": "/pnrr",
-      "file": "pnrr/index.html",
-      "removedManagedBlocks": 0,
-      "removedManagedLinks": 0,
-      "resultingRelations": [
-        "parent",
-        "instrument",
-        "comparison",
-        "conversion"
-      ]
-    },
-    {
-      "programId": "pnrr",
-      "route": "/pnrr",
-      "file": "pnrr.html",
-      "removedManagedBlocks": 0,
-      "removedManagedLinks": 0,
-      "resultingRelations": [
-        "parent",
-        "instrument",
-        "comparison",
-        "conversion"
-      ]
-    },
-    {
-      "programId": "programul-tranzitie-justa",
-      "route": "/programul-tranzitie-justa",
-      "file": "programul-tranzitie-justa/index.html",
-      "removedManagedBlocks": 0,
-      "removedManagedLinks": 0,
-      "resultingRelations": [
-        "parent",
-        "instrument",
-        "comparison",
-        "conversion"
-      ]
-    },
-    {
-      "programId": "fondul-de-modernizare",
-      "route": "/fondul-de-modernizare",
-      "file": "fondul-de-modernizare/index.html",
-      "removedManagedBlocks": 0,
-      "removedManagedLinks": 0,
-      "resultingRelations": [
-        "parent",
-        "instrument",
-        "comparison",
-        "conversion"
-      ]
-    },
-    {
-      "programId": "fondul-de-modernizare",
-      "route": "/fondul-de-modernizare",
-      "file": "fondul-de-modernizare.html",
       "removedManagedBlocks": 0,
       "removedManagedLinks": 0,
       "resultingRelations": [

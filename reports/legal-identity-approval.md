@@ -1,27 +1,27 @@
 # Fișă juridică și NAP — aprobare umană obligatorie
 
-Stare: **BLOCKED**. Această fișă este un instrument de colectare și control al datelor; **nu este opinie juridică**. Nicio valoare candidat nu este considerată aprobată.
+Stare: **APPROVED**. Această fișă este un instrument de colectare și control al datelor; **nu este opinie juridică**. Nicio valoare candidat nu este considerată aprobată.
 
 ## Tabel de aprobare
 
 | Câmp | Valoare aprobată | Sursă internă | Aprobat de | Data aprobării | Suprafețe unde apare |
 |---|---|---|---|---|---|
-| Brand public canonic | DE_VALIDAT_UMAN | Brief P0.04 și utilizarea editorială existentă; nu reprezintă dovada denumirii juridice. | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | Footer; Contact; Despre FABER; Termeni; Politica de confidențialitate/GDPR; Emailuri automate și formulare; Contracte/facturi; JSON-LD Organization; JSON-LD ProfessionalService; Google Business Profile; Bing Places |
-| Website public canonic | DE_VALIDAT_UMAN | Domeniul repository-ului și brief P0.04; confirmarea dreptului de utilizare rămâne internă. | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | Footer; Contact; Despre FABER; Termeni; Politica de confidențialitate/GDPR; Emailuri automate și formulare; Contracte/facturi; JSON-LD Organization; JSON-LD ProfessionalService; Google Business Profile; Bing Places |
-| Denumire juridică integrală | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | Footer; Contact; Despre FABER; Termeni; Politica de confidențialitate/GDPR; Emailuri automate și formulare; Contracte/facturi; JSON-LD Organization; JSON-LD ProfessionalService; Google Business Profile; Bing Places |
-| Forma juridică | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN; Termenii folosesc formula neprobată «persoană juridică română». | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | Footer; Contact; Despre FABER; Termeni; Politica de confidențialitate/GDPR; Contracte/facturi; JSON-LD Organization; Google Business Profile; Bing Places |
-| CUI/CIF | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN; repository-ul conține numai marcaje TODO_CLIENT_CUI. | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | Footer; Contact; Despre FABER; Termeni; Politica de confidențialitate/GDPR; Contracte/facturi; JSON-LD Organization; Google Business Profile; Bing Places |
-| Număr Registrul Comerțului | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | Footer; Contact; Despre FABER; Termeni; Politica de confidențialitate/GDPR; Contracte/facturi; JSON-LD Organization; Google Business Profile; Bing Places |
-| Sediu social | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | Footer; Contact; Despre FABER; Termeni; Politica de confidențialitate/GDPR; Contracte/facturi; JSON-LD Organization |
-| Punct de lucru / adresă publică | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | Footer; Contact; Despre FABER; JSON-LD ProfessionalService; Google Business Profile; Bing Places |
-| Operator de date cu caracter personal | DE_VALIDAT_UMAN | Paginile GDPR/confidențialitate folosesc brandul, fără identificarea entității juridice. | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | Contact; Politica de confidențialitate/GDPR; Emailuri automate și formulare; Contracte/facturi |
-| Entitatea care emite contractele | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN; nu există șabloane de contract în repository. | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | Termeni; Emailuri automate și formulare; Contracte/facturi |
-| Entitatea care emite facturile | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN; facturile sunt în afara scope-ului repository-ului. | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | Termeni; Emailuri automate și formulare; Contracte/facturi |
-| Telefon public canonic | DE_VALIDAT_UMAN | Contact, header/WhatsApp și tools/schema-helpers.js publică două numere; niciunul nu are aprobare internă atașată. | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | Footer; Contact; Despre FABER; Termeni; Politica de confidențialitate/GDPR; Emailuri automate și formulare; Contracte/facturi; JSON-LD Organization; JSON-LD ProfessionalService; Google Business Profile; Bing Places |
-| Email public canonic | DE_VALIDAT_UMAN | Contact, formulare, pagini legale și tools/schema-helpers.js; existența în cod nu dovedește aprobarea proprietarului. | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | Footer; Contact; Despre FABER; Termeni; Politica de confidențialitate/GDPR; Emailuri automate și formulare; Contracte/facturi; JSON-LD Organization; JSON-LD ProfessionalService; Google Business Profile; Bing Places |
-| URL-uri profiluri oficiale | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN; nu au fost găsite profiluri sociale/locale oficiale confirmate în repository. | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | Footer; Contact; Despre FABER; JSON-LD Organization; JSON-LD ProfessionalService; Google Business Profile; Bing Places |
-| Program de contact | DE_VALIDAT_UMAN | tools/schema-helpers.js publică Mo-Fr 09:00-18:00; nu există aprobare internă atașată. | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | Footer; Contact; Despre FABER; Emailuri automate și formulare; JSON-LD ProfessionalService; Google Business Profile; Bing Places |
-| Aria geografică deservită | DE_VALIDAT_UMAN | tools/schema-helpers.js și JSON-LD existent folosesc România; nu există decizie internă atașată. | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | Footer; Contact; Despre FABER; Emailuri automate și formulare; Contracte/facturi; JSON-LD Organization; JSON-LD ProfessionalService; Google Business Profile; Bing Places |
+| Brand public canonic | FABER – Atelier de Consultanță | Brief P0.04 și utilizarea editorială existentă; nu reprezintă dovada denumirii juridice. | Caciur Florin / Bogdan Iftode | 2026-07-22 | Footer; Contact; Despre FABER; Termeni; Politica de confidențialitate/GDPR; Emailuri automate și formulare; Contracte/facturi; JSON-LD Organization; JSON-LD ProfessionalService; Google Business Profile; Bing Places |
+| Website public canonic | https://atelierdeconsultanta.ro/ | Domeniul repository-ului și brief P0.04; confirmarea dreptului de utilizare rămâne internă. | Caciur Florin / Bogdan Iftode | 2026-07-22 | Footer; Contact; Despre FABER; Termeni; Politica de confidențialitate/GDPR; Emailuri automate și formulare; Contracte/facturi; JSON-LD Organization; JSON-LD ProfessionalService; Google Business Profile; Bing Places |
+| Denumire juridică integrală | FABER PUBLISHING S.R.L. | Contract de consultanță revizuit furnizat de beneficiar și confirmarea decidentului din 22.07.2026 | Caciur Florin / Bogdan Iftode | 2026-07-22 | Footer; Contact; Despre FABER; Termeni; Politica de confidențialitate/GDPR; Emailuri automate și formulare; Contracte/facturi; JSON-LD Organization; JSON-LD ProfessionalService; Google Business Profile; Bing Places |
+| Forma juridică | Societate cu răspundere limitată | Contract de consultanță revizuit și confirmarea decidentului din 22.07.2026 | Caciur Florin / Bogdan Iftode | 2026-07-22 | Footer; Contact; Despre FABER; Termeni; Politica de confidențialitate/GDPR; Contracte/facturi; JSON-LD Organization; Google Business Profile; Bing Places |
+| CUI/CIF | 35339809 | Contract de consultanță revizuit, pagina 1 | Caciur Florin / Bogdan Iftode | 2026-07-22 | Footer; Contact; Despre FABER; Termeni; Politica de confidențialitate/GDPR; Contracte/facturi; JSON-LD Organization; Google Business Profile; Bing Places |
+| Număr Registrul Comerțului | J2015000489070 | Contract de consultanță revizuit, pagina 1 | Caciur Florin / Bogdan Iftode | 2026-07-22 | Footer; Contact; Despre FABER; Termeni; Politica de confidențialitate/GDPR; Contracte/facturi; JSON-LD Organization; Google Business Profile; Bing Places |
+| Sediu social | Sat Gorbănești, comuna Gorbănești, nr. 88, Str. Principală, județul Botoșani | Contract de consultanță revizuit, pagina 1 | Caciur Florin / Bogdan Iftode | 2026-07-22 | Footer; Contact; Despre FABER; Termeni; Politica de confidențialitate/GDPR; Contracte/facturi; JSON-LD Organization |
+| Punct de lucru / adresă publică | Iași / Suceava | Confirmare explicită a decidentului din 22.07.2026 | Caciur Florin / Bogdan Iftode | 2026-07-22 | Footer; Contact; Despre FABER; JSON-LD ProfessionalService; Google Business Profile; Bing Places |
+| Operator de date cu caracter personal | Caciur Florin | Confirmare explicită în avizul juridic din 22.07.2026 | Caciur Florin | 2026-07-22 | Contact; Politica de confidențialitate/GDPR; Emailuri automate și formulare; Contracte/facturi |
+| Entitatea care emite contractele | FABER PUBLISHING S.R.L. | Contract de consultanță revizuit și confirmarea decidentului din 22.07.2026 | Caciur Florin / Bogdan Iftode | 2026-07-22 | Termeni; Emailuri automate și formulare; Contracte/facturi |
+| Entitatea care emite facturile | FABER PUBLISHING S.R.L. | Confirmare explicită a decidentului din 22.07.2026 | Caciur Florin / Bogdan Iftode | 2026-07-22 | Termeni; Emailuri automate și formulare; Contracte/facturi |
+| Telefon public canonic | +40769828338 | Confirmare explicită a decidentului din 22.07.2026; numărul secundar este confirmat și în contractul furnizat | Caciur Florin / Bogdan Iftode | 2026-07-22 | Footer; Contact; Despre FABER; Termeni; Politica de confidențialitate/GDPR; Emailuri automate și formulare; Contracte/facturi; JSON-LD Organization; JSON-LD ProfessionalService; Google Business Profile; Bing Places |
+| Email public canonic | atelier.consultanta@gmail.com | Confirmarea proprietarului din 22.07.2026 și contractul de consultanță revizuit | Caciur Florin / Bogdan Iftode | 2026-07-22 | Footer; Contact; Despre FABER; Termeni; Politica de confidențialitate/GDPR; Emailuri automate și formulare; Contracte/facturi; JSON-LD Organization; JSON-LD ProfessionalService; Google Business Profile; Bing Places |
+| URL-uri profiluri oficiale | https://www.instagram.com/atelier.de.consultanta/ | Confirmare explicită a decidentului din 22.07.2026 | Caciur Florin / Bogdan Iftode | 2026-07-22 | Footer; Contact; Despre FABER; JSON-LD Organization; JSON-LD ProfessionalService; Google Business Profile; Bing Places |
+| Program de contact | Luni–sâmbătă 08:00–18:00 | Confirmare explicită a decidentului din 22.07.2026 | Caciur Florin / Bogdan Iftode | 2026-07-22 | Footer; Contact; Despre FABER; Emailuri automate și formulare; JSON-LD ProfessionalService; Google Business Profile; Bing Places |
+| Aria geografică deservită | Iași, Suceava, Bistrița-Năsăud, Botoșani, Bacău și Neamț | Confirmare explicită a decidentului din 22.07.2026 | Caciur Florin / Bogdan Iftode | 2026-07-22 | Footer; Contact; Despre FABER; Emailuri automate și formulare; Contracte/facturi; JSON-LD Organization; JSON-LD ProfessionalService; Google Business Profile; Bing Places |
 
 ## Valori candidate neaprobate
 
@@ -32,34 +32,15 @@ Valorile de mai jos provin din brief sau din codul/site-ul existent. Ele nu treb
 | Brand public canonic | FABER – Atelier de Consultanță | Brandul trebuie separat explicit de entitatea juridică operatoare. |
 | Website public canonic | https://atelierdeconsultanta.ro/ | Confirmați entitatea care controlează domeniul și îl folosește comercial. |
 | Operator de date cu caracter personal | FABER – Atelier de Consultanță | Juristul trebuie să confirme operatorul real și formularea legală. |
-| Telefon public canonic | +40769828338; +40753326229 | Alegeți un număr canonic și precizați separat dacă al doilea rămâne canal WhatsApp. |
+| Telefon public canonic | +40769828338; +40753326229 | +40769828338 este numărul canonic; +40753326229 este al doilea canal telefonic și WhatsApp aprobat. |
 | Email public canonic | atelier.consultanta@gmail.com | Gmail poate fi aprobat numai împreună cu operationalEmailOwnerConfirmation=approved. |
+| URL-uri profiluri oficiale | https://www.instagram.com/atelier.de.consultanta/ | Furnizați numai URL-uri controlate oficial; dacă nu există, aprobați explicit NU_SE_APLICA. |
 | Program de contact | Luni–vineri 09:00–18:00 | Confirmați fusul orar și excepțiile relevante. |
 | Aria geografică deservită | România | Precizați dacă serviciile sunt naționale, regionale sau limitate după tipul proiectului. |
 
 ## Blocaje de publicare
 
-- decizia de business nu a închis fișa juridică
-- publicationState este blocked
-- brandName nu are valoare aprobată
-- websiteUrl nu are valoare aprobată
-- legalName nu are valoare aprobată
-- legalForm nu are valoare aprobată
-- taxIdentifier nu are valoare aprobată
-- tradeRegisterNumber nu are valoare aprobată
-- registeredOffice nu are valoare aprobată
-- publicWorkplaceAddress nu are valoare aprobată
-- personalDataController nu are valoare aprobată
-- contractingEntity nu are valoare aprobată
-- invoicingEntity nu are valoare aprobată
-- publicPhone nu are valoare aprobată
-- publicEmail nu are valoare aprobată
-- officialProfileUrls nu are valoare aprobată
-- contactHours nu are valoare aprobată
-- serviceArea nu are valoare aprobată
-- lipsește aprobarea explicită a decidentului
-- lipsește avizul juristului pentru textele legale
-- scope-ul avizului juridic nu este confirmat
+
 
 Deploy-ul site-ului este blocat prin `npm run validate:legal-identity:publish` până când toate blocajele sunt rezolvate. Gmail poate fi folosit drept adresă operațională numai dacă aprobarea separată a proprietarului este completată.
 

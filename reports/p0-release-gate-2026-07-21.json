@@ -1,12 +1,12 @@
 {
-  "checkedAt": "2026-07-21T17:59:19.634Z",
+  "checkedAt": "2026-07-21T21:57:37.919Z",
   "requestedEnvironment": "local",
   "stagingDescription": "nerulat",
   "releaseDecision": "BLOCKED",
   "summary": {
-    "pass": 7,
-    "fail": 5,
-    "criticalBlockers": 4
+    "pass": 10,
+    "fail": 2,
+    "criticalBlockers": 1
   },
   "results": [
     {
@@ -17,15 +17,11 @@
       "severity": "critical",
       "owner": "Consultant FABER + Content owner",
       "urls": [
-        "/dr12-afir",
-        "/dr-12-afir-instalarea-tinerilor-fermieri",
-        "/dr14",
-        "/dr-14-afir-conditii-eligibilitate-greseli-frecvente",
         "/pro-infra",
         "/digitalizare-imm",
         "/granturi-digitalizare-imm"
       ],
-      "evidence": "4 programe prioritare nu au validare nominală FABER: dr12-afir, dr14-afir, pro-infra, digitalizare-imm. Contract tehnic: PASS. Poarta P0.02: 4 programe blocate, suprafețe factuale eliminate și validare nominală obligatorie.",
+      "evidence": "2 programe prioritare nu au validare nominală FABER: pro-infra, digitalizare-imm. Contract tehnic: PASS. Poarta P0.02: rândurile aprobate sunt publice, cele disputate rămân blocate și validarea nominală este obligatorie.",
       "retest": "Consultantul FABER aprobă fiecare rând, apoi se rerulează gate-ul complet."
     },
     {
@@ -45,7 +41,7 @@
       "criterionId": "legal_identity",
       "criterion": "Identitate juridică și contact coerente",
       "environment": "local",
-      "status": "FAIL",
+      "status": "PASS",
       "severity": "critical",
       "owner": "Business owner + Jurist",
       "urls": [
@@ -54,22 +50,22 @@
         "/politica-de-confidentialitate",
         "/termeni-si-conditii"
       ],
-      "evidence": "Fișa juridică este blocked; avizul juridic este pending. Contract tehnic: PASS. Poartă identitate juridică: 16 câmpuri și 11 suprafețe rămân blocate până la aprobarea umană și avizul juristului.",
-      "retest": "Completați fișa canonică și avizul juridic fără a inventa valori, apoi rerulați gate-ul."
+      "evidence": "Poartă identitate juridică: 16 câmpuri și 11 suprafețe aprobate nominal.",
+      "retest": "Reexecută verificarea legal_identity după remediere/aprobare."
     },
     {
       "criterionId": "contact_privacy",
       "criterion": "Regulă telefon/email identică în formular și Privacy",
       "environment": "local",
-      "status": "FAIL",
+      "status": "PASS",
       "severity": "critical",
       "owner": "Jurist + Product owner",
       "urls": [
         "/contact",
         "/politica-de-confidentialitate"
       ],
-      "evidence": "Copy Privacy=pending_legal_approval; confirmare email operațional=pending. Contract tehnic: PASS. Contact triage validation PASS (structural).",
-      "retest": "Juristul aprobă regula email SAU telefon și proprietarul confirmă datele canonice."
+      "evidence": "Contact triage validation PASS (structural).",
+      "retest": "Reexecută verificarea contact_privacy după remediere/aprobare."
     },
     {
       "criterionId": "form_flow",
@@ -121,7 +117,7 @@
       "urls": [
         "/sitemap.xml"
       ],
-      "evidence": "Verified sitemap index with 91 canonical URLs; 13 verified lastmod values.",
+      "evidence": "Verified sitemap index with 93 canonical URLs; 15 verified lastmod values.",
       "retest": "Reexecută verificarea sitemap după remediere/aprobare."
     },
     {
@@ -134,21 +130,21 @@
       "urls": [
         "/sitemap.xml"
       ],
-      "evidence": "Editorial copy contract passed: 91 canonical URLs, zero forbidden template labels or control-list forms. | Editorial terminology contract passed: 91 canonical URLs and 10 P0.14 surfaces.",
+      "evidence": "Editorial copy contract passed: 93 canonical URLs, zero forbidden template labels or control-list forms. | Editorial terminology contract passed: 93 canonical URLs and 10 P0.14 surfaces.",
       "retest": "Reexecută verificarea editorial după remediere/aprobare."
     },
     {
       "criterionId": "robots",
       "criterion": "OAI-SearchBot și politica GPTBot aprobată",
       "environment": "local",
-      "status": "FAIL",
+      "status": "PASS",
       "severity": "critical",
       "owner": "Business owner + Technical SEO",
       "urls": [
         "/robots.txt"
       ],
-      "evidence": "Regula tehnică GPTBot este disallow, dar aprobarea de business este DE_VALIDAT_UMAN. Contract tehnic: PASS. Crawler policy contract passed: OAI/Perplexity search allowed, GPTBot training blocked, private paths protected.",
-      "retest": "Ownerul aprobă explicit politica GPTBot; nu modificați regula de training automat."
+      "evidence": "Crawler policy contract passed: OAI/Perplexity/GPTBot allowed by policy, private paths protected.",
+      "retest": "Reexecută verificarea robots după remediere/aprobare."
     },
     {
       "criterionId": "accessibility",

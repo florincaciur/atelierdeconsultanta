@@ -4,7 +4,7 @@
 const fs = require("fs");
 const path = require("path");
 const cheerio = require("cheerio");
-const { loadProgramConfig } = require("./program-factual-governance");
+const { isPublicProgram, loadProgramConfig } = require("./program-factual-governance");
 const { loadConfig, resolvedLinks } = require("./sync-program-contextual-links");
 const { SITE, fileForRoute, sitemapRoutes } = require("./structured-data-utils");
 
@@ -54,7 +54,7 @@ function validateTarget(href, sitemapSet, redirects) {
 
 function auditProgramContextualLinks() {
   const config = loadConfig();
-  const programs = loadProgramConfig().programs;
+  const programs = loadProgramConfig().programs.filter(isPublicProgram);
   const sitemapSet = new Set(sitemapRoutes(ROOT));
   const redirects = redirectSources();
   const errors = [];

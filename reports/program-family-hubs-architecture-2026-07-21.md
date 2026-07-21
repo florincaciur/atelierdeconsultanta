@@ -64,8 +64,8 @@ Statusul folosește exclusiv taxonomia registrului: `apel_deschis`, `ghid_aproba
 |---|---|---|---|---|
 | Programul Regional Nord-Est | `/por-adr-nord-est` | Regional / ADR — `/fonduri-regionale` | `public` | Da |
 | Fonduri regionale | `/fonduri-regionale` | Regional / ADR — `/fonduri-regionale` | `public` | Nu — pagina este chiar hub-ul |
-| DR12 AFIR | `/dr12-afir` | AFIR & agricultură — `/afir` | `pending_validation` | Nu — validare umană în așteptare |
-| DR14 AFIR | `/dr14` | AFIR & agricultură — `/afir` | `pending_validation` | Nu — validare umană în așteptare |
+| DR12 AFIR | `/dr12-afir` | AFIR & agricultură — `/afir` | `public` | Da |
+| DR14 AFIR | `/dr14` | AFIR & agricultură — `/afir` | `public` | Da |
 | Start-Up Nation | `/start-up-nation-2026` | Antreprenoriat & GAL — `/fonduri-europene-imm` | `public` | Da |
 | Femeia Antreprenor | `/femeia-antreprenor-2026` | Antreprenoriat & GAL — `/fonduri-europene-imm` | `public` | Da |
 | Digitalizare IMM | `/digitalizare-imm` | Digitalizare & inovare — `/fonduri-europene-digitalizare` | `pending_validation` | Nu — validare umană în așteptare |
@@ -83,7 +83,7 @@ Statusul folosește exclusiv taxonomia registrului: `apel_deschis`, `ghid_aproba
 | Programul Tranziție Justă | `/programul-tranzitie-justa` | Regional / ADR — `/fonduri-regionale` | `pending_validation` | Nu — validare umană în așteptare |
 | Fondul pentru Modernizare | `/fondul-de-modernizare` | Energie — `/finantari-panouri-fotovoltaice` | `pending_validation` | Nu — validare umană în așteptare |
 
-Înregistrări excluse din cardurile publice până la validare: `dr12-afir`, `dr14-afir`, `digitalizare-imm`, `pro-infra`, `pnrr`, `programul-tranzitie-justa`, `fondul-de-modernizare`.
+Înregistrări excluse din cardurile publice până la validare: `digitalizare-imm`, `pro-infra`, `pnrr`, `programul-tranzitie-justa`, `fondul-de-modernizare`.
 
 ## Wireframe funcțional
 

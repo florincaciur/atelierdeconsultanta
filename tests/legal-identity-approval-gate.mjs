@@ -23,22 +23,22 @@ const {
 } = require("../tools/legal-identity-governance");
 
 const config = loadLegalIdentity();
-assert.equal(config.publicationState, "blocked", "Fișa neaprobată trebuie să blocheze publicarea");
-assert.equal(config.approvalState, "pending", "Decizia de business nu poate fi presupusă");
+assert.equal(config.publicationState, "approved", "Fișa aprobată trebuie să permită publicarea");
+assert.equal(config.approvalState, "approved", "Decizia de business aprobată trebuie înregistrată");
 assert.equal(config.notLegalOpinion, true, "Livrabilul trebuie delimitat de o opinie juridică");
-assert.equal(isPublicationApproved(config), false, "Fișa DE_VALIDAT_UMAN nu poate deveni publicabilă");
-assert.equal(approvedIdentity(config), null, "Nu trebuie expusă o identitate canonică înainte de aprobare");
+assert.equal(isPublicationApproved(config), true, "Fișa complet aprobată trebuie să fie publicabilă");
+assert.equal(approvedIdentity(config).legalName, "FABER PUBLISHING S.R.L.");
 assert.deepEqual(Object.keys(config.fields).sort(), [...REQUIRED_FIELD_IDS].sort(), "Lista câmpurilor juridice trebuie să fie controlată");
 
 for (const [id, field] of Object.entries(config.fields)) {
-  assert.equal(field.status, "pending", `${id}: statusul inițial trebuie să rămână pending`);
-  assert.equal(field.approvedValue, HUMAN_REVIEW, `${id}: nu trebuie inventată o valoare aprobată`);
-  assert.equal(field.approvedBy, HUMAN_REVIEW, `${id}: aprobatorul nu poate fi dedus`);
-  assert.equal(field.approvedAt, HUMAN_REVIEW, `${id}: data aprobării nu poate fi dedusă`);
+  assert.equal(field.status, "approved", `${id}: câmpul aprobat trebuie să fie închis`);
+  assert.notEqual(field.approvedValue, HUMAN_REVIEW, `${id}: valoarea aprobată nu poate rămâne placeholder`);
+  assert.notEqual(field.approvedBy, HUMAN_REVIEW, `${id}: aprobatorul trebuie să fie nominal`);
+  assert.equal(field.approvedAt, "2026-07-22", `${id}: data aprobării trebuie să coincidă cu decizia`);
 }
 
 assert(config.fields.publicEmail.candidateValues.includes("atelier.consultanta@gmail.com"), "Gmail trebuie inventariat ca simplu candidat");
-assert.equal(config.approvals.operationalEmailOwnerConfirmation.state, "pending", "Gmail nu poate fi operațional fără confirmarea proprietarului");
+assert.equal(config.approvals.operationalEmailOwnerConfirmation.state, "approved", "Gmail operațional necesită confirmarea proprietarului");
 assert(config.fields.publicPhone.candidateValues.includes("+40769828338"), "Primul telefon existent trebuie inventariat");
 assert(config.fields.publicPhone.candidateValues.includes("+40753326229"), "Al doilea telefon existent trebuie inventariat");
 
@@ -60,8 +60,8 @@ const gate = spawnSync(process.execPath, [path.join(ROOT, "tools", "validate-leg
   cwd: ROOT,
   encoding: "utf8"
 });
-assert.notEqual(gate.status, 0, "Poarta de publicare trebuie să eșueze cât timp fișa este pending");
-assert.match(`${gate.stdout}\n${gate.stderr}`, /PUBLICARE BLOCATĂ/iu, "Eșecul trebuie să explice blocarea publicării");
+assert.equal(gate.status, 0, `${gate.stdout}\n${gate.stderr}`);
+assert.match(`${gate.stdout}\n${gate.stderr}`, /PUBLICARE APROBATĂ/iu, "Poarta trebuie să confirme aprobarea nominală");
 
 const values = {
   brandName: "Brand de test",
@@ -94,6 +94,14 @@ for (const id of REQUIRED_FIELD_IDS) {
     approvedAt: "2026-07-21"
   });
 }
+approved.approvedContactChannels = {
+  primaryPhone: values.publicPhone,
+  additionalPhones: [],
+  whatsappPhones: [values.publicPhone],
+  approvedBy: "Decident fixture",
+  approvedAt: "2026-07-21",
+  internalSource: "Fixture internă sintetică — nu se publică"
+};
 for (const id of ["businessDecision", "legalReview"]) {
   Object.assign(approved.approvals[id], {
     state: "approved",
@@ -108,6 +116,12 @@ assert.equal(isPublicationApproved(approved), true, "Poarta trebuie să se desch
 
 const gmailWithoutOwner = structuredClone(approved);
 gmailWithoutOwner.fields.publicEmail.approvedValue = "atelier.consultanta@gmail.com";
+Object.assign(gmailWithoutOwner.approvals.operationalEmailOwnerConfirmation, {
+  state: "pending",
+  approvedBy: HUMAN_REVIEW,
+  approvedAt: HUMAN_REVIEW,
+  internalSource: HUMAN_REVIEW
+});
 assert(publicationIssues(gmailWithoutOwner).some((issue) => /proprietarul.*Gmail/iu.test(issue)), "Gmail trebuie respins fără confirmarea proprietarului");
 Object.assign(gmailWithoutOwner.approvals.operationalEmailOwnerConfirmation, {
   state: "approved",
@@ -122,4 +136,4 @@ for (const deployScript of ["deploy", "deploy:pages"]) {
   assert(packageJson.scripts[deployScript].startsWith("npm run validate:legal-identity:publish &&"), `${deployScript} trebuie să înceapă cu poarta juridică`);
 }
 
-console.log(`Poartă identitate juridică: ${REQUIRED_FIELD_IDS.length} câmpuri și ${SURFACES.length} suprafețe rămân blocate până la aprobarea umană și avizul juristului.`);
+console.log(`Poartă identitate juridică: ${REQUIRED_FIELD_IDS.length} câmpuri și ${SURFACES.length} suprafețe aprobate nominal.`);

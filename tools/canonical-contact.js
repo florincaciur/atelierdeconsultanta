@@ -1,6 +1,6 @@
 "use strict";
 
-const { fieldApproved, loadLegalIdentity, HUMAN_REVIEW } = require("./legal-identity-governance");
+const { approvedIdentity, fieldApproved, loadLegalIdentity, HUMAN_REVIEW } = require("./legal-identity-governance");
 
 function escapeHtml(value) {
   return String(value ?? "")
@@ -35,13 +35,15 @@ function canonicalContactIdentity(config = loadLegalIdentity()) {
     || approvalApproved(config.approvals?.operationalEmailOwnerConfirmation);
   const emailApproved = businessApproved && fieldApproved(emailField) && emailOwnerApproved;
 
+  const approvedPhones = phoneApproved
+    ? [phoneField.approvedValue, ...(config.approvedContactChannels?.additionalPhones || [])]
+      .filter((value, index, values) => /^\+[1-9]\d{7,14}$/u.test(String(value)) && values.indexOf(value) === index)
+      .map((value) => ({ href: `tel:${value}`, value, display: formatPhoneDisplay(value) }))
+    : [];
   return {
     state: phoneApproved || emailApproved ? "partially_or_fully_approved" : "pending",
-    phone: phoneApproved ? {
-      href: `tel:${phoneField.approvedValue}`,
-      value: phoneField.approvedValue,
-      display: formatPhoneDisplay(phoneField.approvedValue)
-    } : null,
+    phone: approvedPhones[0] || null,
+    phones: approvedPhones,
     email: emailApproved ? {
       href: `mailto:${emailField.approvedValue}`,
       value: emailField.approvedValue,
@@ -61,8 +63,9 @@ function contactAnchor(contact, type, className = "") {
 function renderContactChannels(config = loadLegalIdentity()) {
   const contact = canonicalContactIdentity(config);
   const cards = [];
-  if (contact.phone) {
-    cards.push(`<a class="core-contact-channel" href="${escapeHtml(contact.phone.href)}"><strong>Telefon · ${escapeHtml(contact.phone.display)}</strong><span>Apelează direct folosind numărul public canonic confirmat.</span></a>`);
+  for (const [index, phone] of contact.phones.entries()) {
+    const label = index === 0 ? "Telefon principal" : "Telefon și WhatsApp";
+    cards.push(`<a class="core-contact-channel" href="${escapeHtml(phone.href)}"><strong>${label} · ${escapeHtml(phone.display)}</strong><span>Apelează direct folosind numărul public confirmat.</span></a>`);
   }
   if (contact.email) {
     cards.push(`<a class="core-contact-channel" href="${escapeHtml(contact.email.href)}"><strong>${escapeHtml(contact.email.display)}</strong><span>Trimite un email folosind adresa operațională confirmată.</span></a>`);
@@ -82,7 +85,7 @@ function renderContactChannels(config = loadLegalIdentity()) {
 function renderFooterContact(config = loadLegalIdentity()) {
   const contact = canonicalContactIdentity(config);
   const links = [];
-  if (contact.phone) links.push(contactAnchor(contact.phone, "phone"));
+  for (const phone of contact.phones) links.push(contactAnchor(phone, "phone"));
   if (contact.email) links.push(contactAnchor(contact.email, "email"));
   const content = links.length
     ? `<span class="footer-contact-direct" aria-label="Contact direct"> · ${links.join(" · ")}</span>`
@@ -90,9 +93,33 @@ function renderFooterContact(config = loadLegalIdentity()) {
   return `<!-- CANONICAL_CONTACT_START -->${content}<!-- CANONICAL_CONTACT_END -->`;
 }
 
+function renderLegalIdentityPanel(config = loadLegalIdentity()) {
+  const identity = approvedIdentity(config);
+  if (!identity) return "";
+  const contact = canonicalContactIdentity(config);
+  const phoneLinks = contact.phones.map((phone) => contactAnchor(phone, "phone")).join(" · ");
+  const profileLinks = identity.officialProfileUrls.map((url) => `<a href="${escapeHtml(url)}" rel="me noopener noreferrer">Instagram oficial</a>`).join(" · ");
+  return `<!-- CANONICAL_LEGAL_IDENTITY_START -->
+<section class="core-section canonical-legal-identity" aria-labelledby="canonical-legal-identity-title" data-canonical-legal-identity="approved">
+  <span class="core-kicker">Date aprobate la 22.07.2026</span>
+  <h2 id="canonical-legal-identity-title">Date juridice și de contact</h2>
+  <dl class="core-fact-strip">
+    <div><dt>Denumire juridică</dt><dd>${escapeHtml(identity.legalName)} · CUI ${escapeHtml(identity.taxIdentifier)} · ONRC ${escapeHtml(identity.tradeRegisterNumber)}</dd></div>
+    <div><dt>Sediu social</dt><dd>${escapeHtml(identity.registeredOffice)}</dd></div>
+    <div><dt>Puncte de lucru publice</dt><dd>${escapeHtml(identity.publicWorkplaceAddress)}</dd></div>
+    <div><dt>Operator date</dt><dd>${escapeHtml(identity.personalDataController)}</dd></div>
+    <div><dt>Contact</dt><dd>${phoneLinks} · ${contact.email ? contactAnchor(contact.email, "email") : ""}</dd></div>
+    <div><dt>Program și arie</dt><dd>${escapeHtml(identity.contactHours)} · ${escapeHtml(identity.serviceArea)}</dd></div>
+    <div><dt>Profil oficial</dt><dd>${profileLinks}</dd></div>
+  </dl>
+</section>
+<!-- CANONICAL_LEGAL_IDENTITY_END -->`;
+}
+
 module.exports = {
   canonicalContactIdentity,
   formatPhoneDisplay,
+  renderLegalIdentityPanel,
   renderContactChannels,
   renderFooterContact
 };

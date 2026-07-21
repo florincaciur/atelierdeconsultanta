@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-21T17:52:47.739Z",
+  "generatedAt": "2026-07-21T21:54:25.725Z",
   "targetRoutes": 10,
   "changedFiles": [
     "index.html",
@@ -1655,6 +1655,22 @@
       "after": "Cere o verificare inițială a proiectului",
       "reason": "Lexic controlat P0.14",
       "sourceFile": "index.html"
+    },
+    {
+      "route": "/dr12-afir",
+      "location": "visible-copy",
+      "before": "Verifică eligibilitatea DR-12 Investiții în consolidarea exploatațiilor tinerilor fermieri instalați și a fermierilor cu vârsta de până la 45 de ani",
+      "after": "Cere o verificare inițială DR-12 Investiții în consolidarea exploatațiilor tinerilor fermieri instalați și a fermierilor cu vârsta de până la 45 de ani",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "dr12-afir/index.html"
+    },
+    {
+      "route": "/dr14",
+      "location": "visible-copy",
+      "before": "Verifică eligibilitatea DR-14 Investiții în fermele de mici dimensiuni",
+      "after": "Cere o verificare inițială DR-14 Investiții în fermele de mici dimensiuni",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "dr14/index.html"
     }
   ]
 }

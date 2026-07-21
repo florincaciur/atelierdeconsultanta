@@ -2,7 +2,7 @@
 
 ## Stare
 
-Implementarea locală este completă tehnic, dar publicarea rămâne blocată de poarta juridică existentă. Textul de confirmare a citirii informării are starea `pending_legal_approval`; nu este consimțământ de marketing și nu trebuie publicat înainte de aviz.
+Implementarea este aprobată juridic la 22.07.2026 de Caciur Florin. Textul confirmă citirea informării, nu reprezintă consimțământ de marketing, iar regula operațională este email SAU telefon.
 
 ## Suprafețe și componente modificate
 

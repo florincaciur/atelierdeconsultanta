@@ -90,14 +90,14 @@ function evaluateGovernanceBlockers() {
     ));
   }
 
-  if (!gpt || gpt.publicAccess !== "disallow" || !String(gpt.approval || "").startsWith("APROBAT")) {
+  if (!gpt || gpt.publicAccess !== "allow" || !String(gpt.approval || "").startsWith("APROBAT")) {
     blockers.push(result(
       "robots",
       "local",
       "FAIL",
       `Regula tehnică GPTBot este ${gpt?.publicAccess || "missing"}, dar aprobarea de business este ${gpt?.approval || "missing"}.`,
       ["/robots.txt"],
-      { retest: "Ownerul aprobă explicit politica GPTBot; nu modificați regula de training automat." }
+      { retest: "Ownerul aprobă explicit politica GPTBot și regula tehnică trebuie să coincidă cu decizia." }
     ));
   }
   return blockers;
@@ -383,9 +383,10 @@ async function robotsProbe(baseUrl, cache) {
   const page = await fetchText(baseUrl, "/robots.txt", cache);
   if (page.status !== 200) return [`robots.txt HTTP ${page.status}`];
   const oai = /User-agent:\s*OAI-SearchBot[\s\S]*?Allow:\s*\//iu.test(page.text);
-  const gpt = /User-agent:\s*GPTBot[\s\S]*?Disallow:\s*\//iu.test(page.text);
+  const gpt = /User-agent:\s*GPTBot[\s\S]*?Allow:\s*\//iu.test(page.text)
+    && !/User-agent:\s*GPTBot[\s\S]*?Disallow:\s*\/[\r\n]/iu.test(page.text);
   const sitemap = /Sitemap:\s*https:\/\/atelierdeconsultanta\.ro\/sitemap\.xml/iu.test(page.text);
-  return [!oai && "OAI-SearchBot nu este permis", !gpt && "GPTBot nu este blocat", !sitemap && "declarația Sitemap lipsește"].filter(Boolean);
+  return [!oai && "OAI-SearchBot nu este permis", !gpt && "GPTBot nu este permis conform aprobării", !sitemap && "declarația Sitemap lipsește"].filter(Boolean);
 }
 
 async function accessibilityProbe(browser, baseUrl) {
@@ -498,7 +499,7 @@ async function environmentChecks(environment, baseUrl, options = {}) {
   results.push(result("redirects", environment, redirects.errors.length ? "FAIL" : "PASS", redirects.errors.length ? redirects.errors.slice(0, 12).join(" | ") : `${redirects.count} redirecturi verificate. ${redirects.evidence || "301 direct și target 200/self-canonical."}`, urls(["/_redirects"])));
   results.push(result("sitemap", environment, sitemap.errors.length ? "FAIL" : "PASS", sitemap.errors.length ? sitemap.errors.slice(0, 12).join(" | ") : `${sitemap.entries.length} URL-uri 200/indexabile/self-canonical; ${sitemap.lastmodCount} lastmod verificate.`, urls(["/sitemap.xml"])));
   results.push(result("editorial", environment, editorial.length ? "FAIL" : "PASS", editorial.length ? editorial.slice(0, 12).join(" | ") : `${sitemap.entries.length} URL-uri scanate fără etichete interzise.`, urls(["/sitemap.xml"])));
-  results.push(result("robots", environment, robots.length ? "FAIL" : "PASS", robots.length ? robots.join(" | ") : "OAI-SearchBot Allow, GPTBot Disallow și Sitemap prezente.", urls(["/robots.txt"])));
+  results.push(result("robots", environment, robots.length ? "FAIL" : "PASS", robots.length ? robots.join(" | ") : "OAI-SearchBot Allow, GPTBot Allow aprobat și Sitemap prezente.", urls(["/robots.txt"])));
   results.push(result("accessibility", environment, accessibility.length ? "FAIL" : "PASS", accessibility.length ? accessibility.join(" | ") : "Labels, reflow 320px, zoom 200%, target-uri și focus verificate în browser.", urls(["/contact"])));
   results.push(result("performance", environment, performance.errors.length ? "FAIL" : "PASS", `${performance.errors.join(" | ") || "Nicio regresie majoră."} Măsurători: ${JSON.stringify(performance.measurements)}`, urls(CONFIG.performance.routes.map((route) => route.path))));
   return results;

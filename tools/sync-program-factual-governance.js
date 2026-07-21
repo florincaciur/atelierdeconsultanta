@@ -105,7 +105,7 @@ function syncBanners(banners, programs) {
         programId: program.slug,
         title: program.name,
         tag: program.statusLabel,
-        description: program.cardSummary,
+        description: program.metaDescription,
         ctaText: previous.ctaText || "Detalii program",
         ctaLink: program.pageUrl,
         icon: program.presentation?.icon || previous.icon || "ph-file-text",
@@ -375,7 +375,20 @@ function pendingMain(program) {
     <h1>${escapeHtml(program.shortName)}</h1>
     <p>${escapeHtml(program.cardSummary)}</p>
     <p>Responsabilul editorial trebuie să confirme statutul, documentul oficial și data verificării înainte de republicare.</p>
-    <p><a href="/contact" data-analytics-event="contact_page_click" data-analytics-component="contact_cta" data-analytics-cta-id="contact_page" data-analytics-target="/contact">Contact FABER</a></p>
+    <p><a href="/contact" data-analytics-event="cta_click" data-analytics-component="contact_cta" data-analytics-cta-id="contact_page" data-analytics-target="/contact">Contact FABER</a></p>
+  </article>
+</main>`;
+}
+
+function restoredPublicMain(program) {
+  return `<main class="container program-page" id="main-content" tabindex="-1" data-program-id="${escapeHtml(program.slug)}" data-publication-state="public">
+  <article class="panel">
+    ${renderProgramFactualStatus(program)}
+    <h1>${escapeHtml(program.name)}</h1>
+    <p>${escapeHtml(program.cardSummary)}</p>
+    <p>${escapeHtml(program.editorialDisclaimer)}</p>
+    <p><a href="${escapeHtml(program.sourceUrl)}" target="_blank" rel="noopener noreferrer">Consultă documentul oficial</a></p>
+    <p><a href="/contact?program=${escapeHtml(program.slug)}" data-analytics-event="cta_click" data-analytics-component="program_page" data-analytics-cta-id="program_project_check" data-analytics-program-category="${escapeHtml(program.slug)}">Verifică încadrarea proiectului</a></p>
   </article>
 </main>`;
 }
@@ -417,8 +430,17 @@ function syncProgramHtml(source, program) {
     else output = output.replace(/<body\b[^>]*>/i, (tag) => `${tag}${eol}${main}`);
     return output;
   }
+  if (/<main\b[^>]*\bprogram-validation-hold\b[^>]*>[\s\S]*?<\/main>/i.test(output)) {
+    output = output.replace(/<main\b[^>]*\bprogram-validation-hold\b[^>]*>[\s\S]*?<\/main>/i, restoredPublicMain(program).replace(/\r?\n/g, eol));
+  }
   const archivedRobots = archivedRobotsDecision(program);
-  if (archivedRobots) output = replaceMeta(output, /<meta\b[^>]*\bname=["']robots["'][^>]*>/i, archivedRobots);
+  output = replaceMeta(output, /<meta\b[^>]*\bname=["']robots["'][^>]*>/i, archivedRobots || "index, follow");
+  if (!/<script\b[^>]*type=["']application\/ld\+json["']/i.test(output) && /<\/head>/i.test(output)) {
+    output = output.replace(/<\/head>/i, '  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[]}</script>\n</head>');
+  }
+  if (/<!-- PROGRAM_HERO_START -->[\s\S]*?<h1\b/iu.test(output)) {
+    output = output.replace(/(<article\b[^>]*>[\s\S]*?)<h1(\b[^>]*)>([\s\S]*?)<\/h1>/iu, "$1<h2$2>$3</h2>");
+  }
   const factualMode = templateMode ? "template-header" : "default";
   const block = renderProgramFactualStatus(program, { mode: factualMode }).replace(/\r?\n/g, eol);
   const marked = /<!-- PROGRAM_FACTUAL_STATUS_START -->[\s\S]*?<!-- PROGRAM_FACTUAL_STATUS_END -->/;
