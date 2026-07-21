@@ -208,6 +208,27 @@ function addBodyMetadata(html, type, words) {
 }
 
 function synchronizePage(source, row, programByRoute) {
+  if (/data-program-template-version=(?:"p1_11"|'p1_11')/i.test(source)) {
+    const $ = cheerio.load(source, { decodeEntities: false });
+    const route = normalizeRoute(row.route);
+    const tocItems = $("[data-program-template-toc] [data-long-form-toc-link]");
+    const words = countWords(removeInjected(source), route);
+    return {
+      html: source,
+      report: {
+        route,
+        type: row.type,
+        sourceFile: row.sourceFile,
+        wordCount: words,
+        tocItemCount: tocItems.length,
+        tableCount: $("main .long-form-table-region table").length,
+        variant: "rail",
+        decisionActionAdded: $(".long-form-decision-action[data-program-template-section='cta']").length === 1,
+        contentActionCount: $("main [data-analytics-event='cta_click']").length,
+        managedBy: "program-page-template"
+      }
+    };
+  }
   const clean = removeInjected(source);
   const route = normalizeRoute(row.route);
   const words = countWords(clean, route);

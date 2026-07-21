@@ -84,7 +84,7 @@ function renderProgramContextualLinks(program, config = loadConfig()) {
   }).join("\n");
 
   return `${START}
-  <section class="program-contextual-links" data-program-contextual-links data-program-id="${escapeHtml(program.slug)}" aria-labelledby="program-contextual-${escapeHtml(program.slug)}-title">
+  <section class="program-contextual-links" data-program-contextual-links="" data-program-id="${escapeHtml(program.slug)}" aria-labelledby="program-contextual-${escapeHtml(program.slug)}-title">
     <h2 id="program-contextual-${escapeHtml(program.slug)}-title">Continuă cu traseul potrivit</h2>
     <p>Patru legături intenționate: contextul programului, un instrument, un reper complementar și verificarea proiectului.</p>
     <ul class="program-contextual-links__list">

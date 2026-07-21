@@ -539,14 +539,14 @@
   <script src="/assets/long-form-layout.js?v=20260721-6" defer data-long-form-layout-script="p1_09"></script>
 </head>
 
-<body class="page-family-home" data-analytics-page-type="home" data-design-system="p1_07" data-long-form-page="true" data-long-form-type="core" data-long-form-word-count="2122">
+<body class="page-family-home" data-analytics-page-type="home" data-design-system="p1_07" data-long-form-page="true" data-long-form-type="core" data-long-form-word-count="2126">
   <!-- ✦ Skip link pentru accesibilitate ✦ -->
   <a class="skip-link" href="#main-content">Sari la conținut</a>
 
   <!-- ============================================================
        ✦ NAVBAR ✦
   ============================================================ -->
-  <!-- GLOBAL_HEADER_START --><link rel="stylesheet" href="/assets/global-header.css?v=20260721-1">
+  <!-- GLOBAL_HEADER_START --><link rel="stylesheet" href="/assets/global-header.css?v=20260721-3">
 <nav id="navbar" aria-label="Navigare principală" data-navigation-config="config/main-navigation.json">
   <div class="nav-container">
     <a class="nav-logo" href="/" aria-label="FABER – Atelier de Consultanță, acasă" data-analytics-event="nav_click" data-analytics-component="desktop_nav" data-analytics-cta-id="home_logo" data-analytics-target="/">
@@ -723,13 +723,13 @@
   </div>
 </div>
 <div class="global-header-spacer" aria-hidden="true"></div>
-<script src="/assets/global-header.js?v=20260721-1"></script>
+<script src="/assets/global-header.js?v=20260721-3"></script>
 <!-- GLOBAL_HEADER_END -->
 
   <!-- ============================================================
        ✦ CONȚINUT PRINCIPAL ✦
   ============================================================ -->
-  <main id="main-content" data-long-form-layout="home" data-long-form-content="true">
+  <main id="main-content" tabindex="-1" data-long-form-layout="home" data-long-form-content="true">
 
     <!-- HOMEPAGE_DECISION_HERO_START -->
     <!-- Copy P1.06 păstrat conform brief-ului; datele programului provin exclusiv din registrul unic. -->
@@ -1288,15 +1288,17 @@
           Înscrie-te și vei fi primul notificat când se lansează un program nou de finanțare — DR12, DR14, POR, Start-Up Nation și altele. <strong style="color:#f5a623;">Gratuit, fără spam.</strong>
         </p>
 
-        <div data-fs-error="" style="display:none;background:rgba(239,68,68,0.15);border:1px solid rgba(239,68,68,0.3);border-radius:12px;padding:16px 24px;color:#fca5a5;margin:0 auto 16px;max-width:520px;text-align:center;"></div>
+        <div data-fs-error="" role="alert" aria-live="polite" style="display:none;background:rgba(239,68,68,0.15);border:1px solid rgba(239,68,68,0.3);border-radius:12px;padding:16px 24px;color:#fca5a5;margin:0 auto 16px;max-width:520px;text-align:center;"></div>
 
         <form id="newsletterForm" onsubmit="handleNewsletterSubmit(event)" novalidate="" style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;max-width:520px;margin:0 auto 24px;" data-analytics-form="homepage_newsletter" data-analytics-component="public_form" data-clarity-mask="true" data-analytics-form-version="legacy_v1">
 
-          <input type="text" name="name" placeholder="Numele tău" required="" data-fs-field="" style="flex:1;min-width:160px;padding:15px 18px;border-radius:8px;border:1px solid rgba(255,255,255,0.2);background:rgba(255,255,255,0.08);color:white;font-size:0.95rem;font-family:'Inter',sans-serif;outline:none;transition:border-color 0.3s;" onfocus="this.style.borderColor='#b84716'" onblur="this.style.borderColor='rgba(255,255,255,0.2)'">
-          <span data-fs-error="name" style="display:none;color:#fca5a5;font-size:0.8rem;width:100%;text-align:left;padding-left:4px;"></span>
+          <label class="sr-only" for="newsletter-name">Numele tău</label>
+          <input id="newsletter-name" type="text" name="name" placeholder="Numele tău" required="" autocomplete="name" aria-describedby="newsletter-name-error" data-fs-field="" style="flex:1;min-width:160px;padding:15px 18px;border-radius:8px;border:1px solid rgba(255,255,255,0.2);background:rgba(255,255,255,0.08);color:white;font-size:0.95rem;font-family:'Inter',sans-serif;transition:border-color 0.3s;" onfocus="this.style.borderColor='#b84716'" onblur="this.style.borderColor='rgba(255,255,255,0.2)'">
+          <span id="newsletter-name-error" data-fs-error="name" style="display:none;color:#fca5a5;font-size:0.8rem;width:100%;text-align:left;padding-left:4px;"></span>
 
-          <input type="email" name="email" placeholder="Email-ul tău" required="" data-fs-field="" style="flex:2;min-width:200px;padding:15px 18px;border-radius:8px;border:1px solid rgba(255,255,255,0.2);background:rgba(255,255,255,0.08);color:white;font-size:0.95rem;font-family:'Inter',sans-serif;outline:none;transition:border-color 0.3s;" onfocus="this.style.borderColor='#b84716'" onblur="this.style.borderColor='rgba(255,255,255,0.2)'">
-          <span data-fs-error="email" style="display:none;color:#fca5a5;font-size:0.8rem;width:100%;text-align:left;padding-left:4px;"></span>
+          <label class="sr-only" for="newsletter-email">Email-ul tău</label>
+          <input id="newsletter-email" type="email" name="email" placeholder="Email-ul tău" required="" autocomplete="email" aria-describedby="newsletter-email-error" data-fs-field="" style="flex:2;min-width:200px;padding:15px 18px;border-radius:8px;border:1px solid rgba(255,255,255,0.2);background:rgba(255,255,255,0.08);color:white;font-size:0.95rem;font-family:'Inter',sans-serif;transition:border-color 0.3s;" onfocus="this.style.borderColor='#b84716'" onblur="this.style.borderColor='rgba(255,255,255,0.2)'">
+          <span id="newsletter-email-error" data-fs-error="email" style="display:none;color:#fca5a5;font-size:0.8rem;width:100%;text-align:left;padding-left:4px;"></span>
 
           <input type="hidden" name="interest" value="Toate programele FABER">
           <input type="hidden" name="_subject" value="Abonare newsletter FABER – Atelier de Consultanță">

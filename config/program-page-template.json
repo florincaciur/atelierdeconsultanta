@@ -1,0 +1,172 @@
+{
+  "$schema": "./program-page-template.schema.json",
+  "schemaVersion": 1,
+  "pilotRoute": "/afir-autoconsum-agroalimentar",
+  "pages": [
+    {
+      "programSlug": "afir-energie-autoconsum",
+      "route": "/afir-autoconsum-agroalimentar",
+      "editorialGovernanceRecordId": "afir-autoconsum-agroalimentar",
+      "directAnswer": "Schema AFIR pentru autoconsum se adresează întreprinderilor din agricultură și industria alimentară, precum și organizațiilor de îmbunătățiri funciare care pot demonstra un consum eligibil. Depunerea este deschisă în intervalul confirmat în registrul programului. Investiția trebuie să fie o capacitate solară nouă, cu sau fără stocare, dimensionată prin studiul de fezabilitate și corelată cu activitatea, amplasamentul și consumul justificat.",
+      "beneficiarySummary": "Întreprinderi din agricultură și industria alimentară, inclusiv formele eligibile prevăzute de ghid, precum și OUAI/FOUAI.",
+      "keyDocumentLabel": "Ghidul Solicitantului Schema Energie Autoconsum V7 – iunie 2026",
+      "eligibility": {
+        "intro": "Încadrarea începe cu identitatea solicitantului, activitatea care consumă energia și legătura documentată dintre locul de producție și punctele de consum. Titlul programului nu este suficient pentru o concluzie de eligibilitate.",
+        "paragraphs": [
+          "Pentru întreprinderile agricole și cele din industria alimentară, activitatea finanțată trebuie să fie reală, autorizabilă și reflectată coerent în actele societății, în studiul de fezabilitate și în consumul folosit la dimensionare. Ghidul include microîntreprinderi, întreprinderi mici, mijlocii și mari, precum și forme precum PFA, II, IF, cooperative și societăți agricole, în condițiile aplicabile fiecărei categorii.",
+          "OUAI și FOUAI urmează traseul documentar propriu organizațiilor de îmbunătățiri funciare. Proiectul trebuie să lege energia de activitatea eligibilă și să descrie clar cine deține, folosește și operează amplasamentul. Dacă documentele de folosință, planul de amplasament sau acordul proprietarului nu susțin investiția, analiza se oprește înainte de bugetare.",
+          "Pentru un consumator existent, studiul de fezabilitate folosește istoricul disponibil conform ghidului. Pentru activități sau consumatori viitori, estimarea nu se bazează doar pe o declarație: sunt necesare contracte, liste de echipamente, proiecte tehnice, bilanț energetic ori alte dovezi acceptate de documentul oficial. Producția estimată, consumul și funcționarea on-grid sau off-grid trebuie să formeze aceeași ipoteză tehnică."
+        ],
+        "items": [
+          "solicitantul aparține unei categorii prevăzute de Ghidul V7;",
+          "activitatea eligibilă și codurile CAEN sunt coerente cu energia autoconsumată;",
+          "dreptul asupra amplasamentului acoperă perioada cerută și permite realizarea investiției;",
+          "consumul istoric sau viitor poate fi demonstrat prin documente verificabile;",
+          "proiectul propune o capacitate nouă, măsurabilă și dimensionată pentru autoconsum."
+        ],
+        "sourceKeys": ["afir-autoconsum"]
+      },
+      "funding": {
+        "intro": "Bugetul se construiește numai după verificarea configurației tehnice și a listelor de eligibilitate. Faptul că o categorie apare în deviz nu o transformă automat în cheltuială eligibilă.",
+        "funded": [
+          "instalații și echipamente pentru capacități solare noi, cu sau fără stocare, în configurația acceptată de ghid;",
+          "construcții, instalații, montaj și punere în funcțiune direct legate de investiție;",
+          "echipamente noi, active necorporale și costuri tehnice numai în limitele și condițiile explicite ale documentului oficial;",
+          "stocarea împreună cu noua capacitate solară, dacă energia stocată și dimensionarea respectă cerințele schemei."
+        ],
+        "notFunded": [
+          "o investiție alcătuită numai din baterii sau simpla înlocuire a unei capacități existente;",
+          "TVA, terenuri, leasing, echipamente second-hand, operare și mentenanță, dacă rămân în categoriile neeligibile ale versiunii aplicabile;",
+          "costuri fără legătură directă cu activitatea eligibilă, consumul demonstrat sau amplasamentul proiectului;",
+          "diferențele peste costurile unitare și toate cheltuielile pe care ghidul sau contractul le lasă în sarcina beneficiarului."
+        ],
+        "paragraphs": [
+          "Sprijinul din registru reprezintă plafonul și intensitatea susținute de sursa oficială, nu un buget recomandat. Valoarea cerută trebuie să rezulte din capacitatea justificată, soluția aleasă, ofertele comparabile și contribuția disponibilă pentru costurile neacoperite. O configurație supradimensionată poate reduce punctajul, poate produce corecții sau poate face imposibilă respectarea indicatorilor în implementare și monitorizare."
+        ],
+        "sourceKeys": ["afir-autoconsum"]
+      },
+      "scoreAndRisk": {
+        "intro": "Selecția nu se rezumă la bifarea eligibilității. Proiectele sunt comparate, iar ipotezele tehnice și financiare trebuie să reziste atât evaluării, cât și implementării.",
+        "scoring": [
+          "ajutorul solicitat raportat la capacitatea instalată influențează substanțial ordonarea proiectelor;",
+          "procentul de autoconsum și soluția de stocare sunt analizate după criteriile și pragurile documentului oficial;",
+          "categoria activității solicitantului poate modifica punctajul, fără a înlocui verificarea celorlalte condiții;",
+          "un buget mai mic poate îmbunătăți poziția numai dacă proiectul rămâne complet și finanțabil din surse reale."
+        ],
+        "eliminatory": [
+          "solicitantul, activitatea sau amplasamentul nu se încadrează în condițiile ghidului;",
+          "capacitatea propusă nu este nouă, nu poate fi măsurată separat ori nu este legată de consumul eligibil;",
+          "documentele de proprietate sau folosință nu acoperă investiția și perioada cerută;",
+          "studiul de fezabilitate, facturile, cererea și bugetul descriu ipoteze incompatibile;",
+          "un angajament juridic obligatoriu ori începerea lucrărilor încalcă momentul permis de schemă."
+        ],
+        "risks": [
+          "supradimensionarea producției față de consumul justificat;",
+          "supraestimarea consumatorilor viitori fără documente și calendar realist;",
+          "confuzia dintre instalația de utilizare și lucrările de racordare la încadrarea costurilor;",
+          "lipsa lichidității pentru cheltuieli neeligibile, diferențe de preț și mecanismul de plată;",
+          "oferte sau specificații care nu permit compararea și verificarea caracterului rezonabil al costului."
+        ],
+        "paragraphs": [
+          "Un proiect poate fi eligibil și totuși să nu fie competitiv. Înainte de depunere, scenariul de punctaj trebuie testat împreună cu necesarul real de energie și cu sursa de cofinanțare. Reducerea artificială a ajutorului solicitat, fără resurse proprii sau fără eliminarea corectă a unor costuri, mută riscul din evaluare în implementare."
+        ],
+        "sourceKeys": ["afir-autoconsum"]
+      },
+      "documentsAndSteps": {
+        "intro": "Documentele trebuie să descrie aceeași investiție. O piesă existentă, dar contradictorie, poate fi mai riscantă decât un document identificat din timp ca lipsă.",
+        "documents": [
+          "cererea de finanțare, declarațiile și actele de identificare ale solicitantului;",
+          "certificatul constatator sau documentul specific OUAI/FOUAI, actul constitutiv și dovezile activității eligibile;",
+          "studiul de fezabilitate, analiza autoconsumului, schema electrică și justificarea soluției on-grid sau off-grid;",
+          "facturile și datele de consum ori dovezile documentate pentru consumatorii viitori;",
+          "actele amplasamentului, extrasul de carte funciară, planul și acordurile necesare;",
+          "bugetul, ofertele, hotărârea organului competent și dovada resurselor pentru costurile neacoperite."
+        ],
+        "steps": [
+          "Confirmă solicitantul, activitatea și amplasamentul înainte de a solicita oferte.",
+          "Construiește profilul de consum și separă consumul istoric de ipotezele pentru extinderi viitoare.",
+          "Compară soluțiile tehnice și dimensionează capacitatea prin studiul de fezabilitate.",
+          "Împarte bugetul în costuri eligibile, costuri neeligibile și diferențe peste limitele acceptate.",
+          "Rulează grila de eligibilitate și scenariul de punctaj pe același set de date.",
+          "Verifică forma finală a documentelor, semnăturile, valabilitatea și concordanța înainte de încărcare."
+        ],
+        "paragraphs": [
+          "Ordinea reduce munca refăcută. Dacă se pornește direct cu oferte și capacitatea maximă, proiectarea poate fi construită pe un consum care nu se poate demonstra. Dacă se pornește cu solicitantul, activitatea, actele amplasamentului și profilul de consum, soluția tehnică și bugetul pot fi ajustate înainte de asumarea unor costuri."
+        ],
+        "sourceKeys": ["afir-autoconsum"]
+      },
+      "consultantAnalysis": {
+        "intro": "Analiza FABER tratează ghidul ca regulă, iar documentele solicitantului ca probă. Concluzia este orientativă până când toate ipotezele de mai jos sunt confruntate cu documentele proiectului.",
+        "assumptions": [
+          "solicitantul desfășoară sau va desfășura legal activitatea care consumă energia;",
+          "amplasamentul poate găzdui soluția și poate fi folosit pe perioada cerută;",
+          "datele de consum sunt complete, iar extinderile viitoare au documente și termene credibile;",
+          "soluția tehnică poate fi autorizată, racordată sau operată off-grid în configurația analizată;",
+          "beneficiarul poate acoperi costurile neeligibile și diferențele care apar la contractare și achiziții."
+        ],
+        "conclusionChangingDocuments": [
+          "certificatul constatator și actele specifice formei de organizare;",
+          "ultimele facturi și curbele de consum, unde sunt disponibile;",
+          "actele de proprietate sau folosință, planul de amplasament și acordurile terților;",
+          "studiul de fezabilitate, avizele și soluția de racordare;",
+          "ofertele, devizul, situațiile financiare și dovada resurselor proprii."
+        ],
+        "limits": [
+          "analiza paginii nu înlocuiește evaluarea AFIR și nu garantează selectarea sau contractarea proiectului;",
+          "clarificările, rectificările și documentele publicate ulterior pot schimba interpretarea;",
+          "eligibilitatea unui cost se decide în contextul complet al proiectului și al contractului, nu numai după denumirea din ofertă;",
+          "concluzia trebuie refăcută când se schimbă solicitantul, amplasamentul, consumul, soluția tehnică sau bugetul."
+        ]
+      },
+      "sourceKeys": ["afir-autoconsum"],
+      "questions": [
+        {
+          "question": "Cine poate depune un proiect în această schemă?",
+          "answer": "Pot depune categoriile de întreprinderi din agricultură și industria alimentară și organizațiile de îmbunătățiri funciare prevăzute de Ghidul V7, dacă activitatea, amplasamentul, consumul și documentele proiectului îndeplinesc toate condițiile aplicabile.",
+          "sourceKeys": ["afir-autoconsum"]
+        },
+        {
+          "question": "Este deschisă depunerea?",
+          "answer": "Da, pentru intervalul afișat în registrul unic al programului. Data verificării și documentul oficial apar lângă titlu și în secțiunea de surse; înainte de transmitere trebuie verificată orice rectificare publicată ulterior de AFIR.",
+          "sourceKeys": ["afir-autoconsum"]
+        },
+        {
+          "question": "Cum se stabilește capacitatea sistemului fotovoltaic?",
+          "answer": "Capacitatea rezultă din studiul de fezabilitate, producția estimată, profilul de consum și documentele care susțin consumatorii existenți sau viitori. Plafonul financiar nu este o recomandare de dimensionare, iar o instalație mai mare poate deveni nejustificată.",
+          "sourceKeys": ["afir-autoconsum"]
+        },
+        {
+          "question": "Poate proiectul include baterii?",
+          "answer": "Da, stocarea poate însoți o capacitate solară nouă dacă respectă condițiile tehnice din ghid. Un proiect format numai din baterii nu este tratat ca investiție eligibilă în această schemă.",
+          "sourceKeys": ["afir-autoconsum"]
+        },
+        {
+          "question": "Ce se întâmplă dacă activitatea va crește după depunere?",
+          "answer": "Consumul viitor poate fi analizat numai cu dovezi coerente: contracte, echipamente, proiecte, termene și alte documente acceptate. O estimare generică nu este suficientă pentru dimensionarea capacității și poate schimba concluzia consultantului.",
+          "sourceKeys": ["afir-autoconsum"]
+        },
+        {
+          "question": "Sprijinul acoperă automat întregul proiect?",
+          "answer": "Nu. Intensitatea și plafonul din registru se aplică numai costurilor eligibile și limitelor documentului oficial. Diferențele de preț, cheltuielile neeligibile și costurile peste limite rămân în sarcina beneficiarului.",
+          "sourceKeys": ["afir-autoconsum"]
+        },
+        {
+          "question": "Pot începe lucrările înainte de depunere?",
+          "answer": "Lucrările și angajamentele juridice trebuie analizate în raport cu efectul stimulativ și momentul permis de schemă. Nu semna o comandă obligatorie și nu începe execuția înainte ca situația concretă să fie verificată în ghid și în documentele proiectului.",
+          "sourceKeys": ["afir-autoconsum"]
+        },
+        {
+          "question": "Ce poate schimba o concluzie inițial favorabilă?",
+          "answer": "O activitate neautorizabilă, un amplasament insuficient documentat, consumul care nu susține capacitatea, costurile încadrate greșit, lipsa resurselor proprii sau o clarificare oficială nouă pot transforma concluzia în ajustare ori amânare.",
+          "sourceKeys": ["afir-autoconsum"]
+        }
+      ],
+      "cta": {
+        "label": "Verifică proiectul",
+        "heading": "Verifică proiectul pentru AFIR Autoconsum",
+        "copy": "Trimite datele esențiale despre solicitant, amplasament, consum și investiție. Formularul pornește cu programul și tipul investiției precompletate, iar analiza rămâne orientativă până la verificarea documentelor.",
+        "investmentPrefill": "Capacitate solară pentru autoconsum, cu sau fără stocare"
+      }
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "auditId": "P1.10",
+  "standard": "WCAG 2.2 AA",
+  "routes": [
+    { "label": "Homepage", "path": "/", "file": "index.html", "type": "core" },
+    { "label": "Contact", "path": "/contact/", "file": "contact/index.html", "type": "form" },
+    { "label": "DR 12", "path": "/dr12-afir/", "file": "dr12-afir/index.html", "type": "program" },
+    { "label": "DR 14", "path": "/dr14/", "file": "dr14/index.html", "type": "program" },
+    { "label": "Calculator SO", "path": "/calculator-soc.html", "file": "calculator-soc.html", "type": "tool" },
+    { "label": "Despre FABER", "path": "/despre-faber/", "file": "despre-faber/index.html", "type": "core" },
+    { "label": "Hub AFIR", "path": "/afir/", "file": "afir/index.html", "type": "hub" }
+  ],
+  "viewports": [
+    { "width": 320, "height": 900, "orientation": "portrait" },
+    { "width": 360, "height": 800, "orientation": "portrait" },
+    { "width": 390, "height": 844, "orientation": "portrait" },
+    { "width": 768, "height": 1024, "orientation": "portrait" },
+    { "width": 1024, "height": 768, "orientation": "landscape" },
+    { "width": 1366, "height": 768, "orientation": "landscape" }
+  ],
+  "textResizePercent": 200,
+  "minimumTargetCssPx": 24,
+  "preferredMobileTargetCssPx": 44,
+  "manualScreenReader": {
+    "required": true,
+    "recommended": "NVDA + Firefox sau Chrome pe Windows",
+    "publicationState": "DE_VALIDAT_UMAN"
+  }
+}

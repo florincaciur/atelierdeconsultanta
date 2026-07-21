@@ -337,12 +337,20 @@ function escapeHtml(value) {
     .replace(/"/g, "&quot;");
 }
 
-function renderProgramFactualStatus(program) {
+function renderProgramFactualStatus(program, options = {}) {
   if (!program) return "";
   if (!isPublicProgram(program)) {
     return `<!-- PROGRAM_FACTUAL_STATUS_START -->
 <section class="program-factual-status program-factual-status--pending" aria-label="Informații în validare editorială" data-program-id="${escapeHtml(program.slug)}" data-publication-state="pending_validation">
   <p><strong>Publicare suspendată:</strong> statutul, documentul oficial, datele și valorile sunt în validare editorială și nu sunt publicate.</p>
+</section>
+<!-- PROGRAM_FACTUAL_STATUS_END -->`;
+  }
+  if (options.mode === "template-header") {
+    return `<!-- PROGRAM_FACTUAL_STATUS_START -->
+<section class="program-factual-status program-factual-status--template-header" aria-label="Statut și proveniență" data-program-id="${escapeHtml(program.slug)}" data-program-status="${escapeHtml(program.status)}" data-status-label="${escapeHtml(program.statusLabel)}" data-verified-at="${escapeHtml(program.verifiedAt)}" data-source-url="${escapeHtml(program.sourceUrl)}" data-publication-state="public">
+  <p><strong>${escapeHtml(statusStatement(program))}</strong></p>
+  <p>Verificat la <time datetime="${escapeHtml(program.verifiedAt)}">${escapeHtml(program.verifiedAt)}</time>. Sursa: <a href="${escapeHtml(program.sourceUrl)}" target="_blank" rel="noopener noreferrer" data-analytics-event="source_document_click" data-analytics-component="program_template_header" data-analytics-cta-id="official_source" data-analytics-program-category="${escapeHtml(program.slug)}">${escapeHtml(program.sourceName)} — ${escapeHtml(program.sourceVersion)}</a>.</p>
 </section>
 <!-- PROGRAM_FACTUAL_STATUS_END -->`;
   }

@@ -19,6 +19,7 @@ const CSS_URL = "/assets/editorial-governance.css";
 const ADMIN_PATH = path.join(ROOT, "admin", "index.html");
 const DATA_START = "<!-- EDITORIAL_GOVERNANCE_DATA_START -->";
 const DATA_END = "<!-- EDITORIAL_GOVERNANCE_DATA_END -->";
+const PROGRAM_TEMPLATE_SLOT = "<!-- PROGRAM_TEMPLATE_GOVERNANCE_SLOT -->";
 
 function escapeHtml(value) {
   return String(value ?? "")
@@ -106,6 +107,9 @@ function syncPageHtml(source, record) {
   });
   output = syncJsonLd(output, record);
   const block = renderEditorialGovernance(record);
+  if (output.includes(PROGRAM_TEMPLATE_SLOT)) {
+    return output.replace(PROGRAM_TEMPLATE_SLOT, `${PROGRAM_TEMPLATE_SLOT}\n${block}`);
+  }
   output = insertBeforeLast(output, /<\/main>/giu, block)
     || insertBeforeLast(output, /<\/body>/giu, block)
     || `${output}\n${block}\n`;
@@ -186,4 +190,4 @@ function main() {
 
 if (require.main === module) main();
 
-module.exports = { CSS_URL, dashboardPayload, filesForRoute, syncAdminHtml, syncJsonLd, syncPageHtml };
+module.exports = { CSS_URL, PROGRAM_TEMPLATE_SLOT, dashboardPayload, filesForRoute, syncAdminHtml, syncJsonLd, syncPageHtml };

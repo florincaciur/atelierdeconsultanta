@@ -26,8 +26,7 @@ const ROMANIAN_COPY_REPLACEMENTS = [
   [/\bmicrointreprinderi\b/g, "microîntreprinderi"],
   [/\bAcasa\b/g, "Acasă"],
   [/\bacasa\b/g, "acasă"],
-  [/\bSolicita\b/g, "Solicită"],
-  [/\bsolicita\b/g, "solicită"],
+  [/\bSolicita(?=\s+(?:verificarea|o verificare|analiza|oferta|detalii))\b/g, "Solicită"],
   [/\bSa(?=\s+(?:fie|poată|se|verifice|pregătească|depună))\b/g, "Să"],
   [/\b(?:ca|poate|trebuie|astfel încât) sa\b/g, (match) => match.replace(/sa$/, "să")],
   [/\bDaca\b/g, "Dacă"],
@@ -195,7 +194,7 @@ const ROMANIAN_COPY_REPLACEMENTS = [
   [/\bachizitii\b/g, "achiziții"],
   [/\bachizitie\b/g, "achiziție"],
   [/\bplati\b/g, "plăți"],
-  [/\bplata\b/g, "plată"],
+  [/\b(o|fiecare|această) plata\b/g, "$1 plată"],
   [/\braportari\b/g, "raportări"],
   [/\bobligatii\b/g, "obligații"],
   [/\bautorizari\b/g, "autorizări"],
@@ -223,7 +222,7 @@ const ROMANIAN_COPY_REPLACEMENTS = [
   [/\braspunda\b/g, "răspundă"],
   [/\braspunde\b/g, "răspunde"],
   [/\blipseste\b/g, "lipsește"],
-  [/\blipsa\b/g, "lipsă"],
+  [/\b(o|fiecare|această) lipsa\b/g, "$1 lipsă"],
   [/\bfoloseste\b/g, "folosește"],
   [/\bfolosesti\b/g, "folosești"],
   [/\bcauta\b/g, "caută"],
@@ -477,7 +476,7 @@ function normalizeRomanianCopy(value) {
   text = text.replace(/\b(O|o) analiza(?=\s|[?!.,;:]|$)/gu, (_, prefix) => `${prefix} analiză`);
   text = text.replace(/^(\s*)([^.!?\n]{2,140}) trebuie analizat ca o decizie de investiție/gu, "$1Tema „$2” trebuie analizată ca o decizie de investiție");
   text = text.replace(/\b(Pagină|Pagina)(?=\s+(?:răspunde|ajută|este|include|oferă|trimite|insistă|rămâne|explică|centralizează|nu))/gu, "Pagina");
-  text = text.replace(/\bpagină(?=\s+(?:răspunde|ajută|este|include|oferă|trimite|insistă|rămâne|explică|centralizează|nu))/gu, "pagina");
+  text = text.replace(/(^|[.!?]\s+)Pagină(?=\s+(?:răspunde|ajută|este|include|oferă|trimite|insistă|rămâne|explică|centralizează|nu))/gu, "$1Pagina");
   text = text.replace(/\bPagină această\b/gu, "Pagina aceasta");
   text = text.replace(/\b(pagină|pagina)\s+(programului|apelului|instituției|institutiei|serviciului|formularului)/gu, "pagina $2");
   text = text.replace(/\b(această|o|fiecare) pagina\b/gu, "$1 pagină");

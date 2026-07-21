@@ -1,0 +1,445 @@
+{
+  "version": "1.0.0",
+  "task": "P1.14",
+  "updatedAt": "2026-07-21",
+  "principle": "Un URL are o singură intenție primară; ghidul răspunde complet, iar serviciul descrie procesul și livrabilul.",
+  "clusters": [
+    {
+      "id": "fonduri",
+      "label": "Fonduri",
+      "routes": [
+        {
+          "route": "/fonduri-europene",
+          "file": "fonduri-europene/index.html",
+          "render": true,
+          "role": "hub",
+          "intentId": "discover_funding_route",
+          "primaryIntent": "Alegerea familiei de programe, a instrumentului și a următorului pas potrivit investiției.",
+          "queryCluster": ["fonduri europene", "programe de finanțare", "fonduri pentru firme și fermieri"],
+          "ownedTopics": ["familii_programe", "instrumente_orientare", "proces_alegere_program"],
+          "title": "Fonduri europene: programe și trasee de verificare | FABER",
+          "description": "Alege familia de programe după solicitant și investiție, apoi folosește instrumentele și ghidurile potrivite înainte de verificarea proiectului.",
+          "eyebrow": "Hub de orientare · programe · instrumente · proces",
+          "h1": "Fonduri europene: alege traseul potrivit investiției",
+          "heroDescription": "Pornește de la solicitant și investiție, nu de la o sumă promovată. Hubul te conduce către familia de programe, instrumentul și verificarea potrivite.",
+          "heroActions": [
+            {"href": "#familii-programe", "label": "Alege familia de programe", "kind": "primary"},
+            {"href": "/instrumente", "label": "Vezi instrumentele", "kind": "secondary"}
+          ],
+          "directAnswer": "Această pagină este punctul de orientare către familiile de programe, instrumentele de calcul și procesul de verificare. Nu reproduce condițiile fiecărui apel și nu publică sume sau termene generale. Alege profilul solicitantului și investiția, deschide pagina familiei relevante, apoi confirmă statusul și documentul oficial înainte de a pregăti bugetul sau dosarul.",
+          "terminologyNote": "Pe acest site folosim «contribuție proprie» ca termen principal. În documentele oficiale pot apărea și «cofinanțare» sau «aport»; sensul și calculul se verifică în documentul aplicabil.",
+          "sections": [
+            {
+              "id": "familii-programe",
+              "heading": "Alege familia de programe",
+              "intro": "O investiție poate fi eligibilă într-o singură familie, în mai multe sau în niciuna. Paginile de familie grupează programele fără să transfere condiții de la un apel la altul.",
+              "table": {
+                "headers": ["Familie", "Pentru ce pornești verificarea", "Destinație"],
+                "rows": [
+                  ["AFIR și agricultură", "Exploatații, procesare, utilaje și investiții rurale", {"href": "/afir", "label": "Vezi programele AFIR"}],
+                  ["Regional / ADR", "Investiții pentru firme și instituții, diferențiate regional", {"href": "/fonduri-regionale", "label": "Vezi programele regionale"}],
+                  ["Digitalizare și inovare", "Software, hardware, securitate, automatizare și CDI", {"href": "/fonduri-europene-digitalizare", "label": "Vezi familia Digitalizare"}],
+                  ["Energie", "Autoconsum, eficiență, stocare și infrastructură energetică", {"href": "/finantari-panouri-fotovoltaice", "label": "Vezi finanțările pentru energie"}],
+                  ["Antreprenoriat și GAL", "Firme noi, IMM-uri și apeluri locale LEADER", {"href": "/fonduri-europene-imm", "label": "Vezi programele pentru IMM"}]
+                ]
+              }
+            },
+            {
+              "id": "instrumente-orientare",
+              "heading": "Folosește instrumentul potrivit întrebării",
+              "items": [
+                {"title": "Dimensiunea economică a fermei", "text": "Folosește calculatorul numai ca estimare și verifică sursa coeficienților.", "href": "/calculator-soc", "label": "Calculează SO orientativ"},
+                {"title": "Calendarul programelor", "text": "Separă termenele oficiale de datele estimate sau de consultare.", "href": "/calendar-fonduri-europene", "label": "Consultă calendarul"},
+                {"title": "Contribuția și cash-flow-ul", "text": "Înțelege diferența dintre grant, contribuție proprie, costuri neeligibile și bani necesari până la plată.", "href": "/fonduri-nerambursabile", "label": "Citește ghidul financiar"}
+              ]
+            },
+            {
+              "id": "proces-alegere",
+              "heading": "De la idee la o decizie verificabilă",
+              "steps": [
+                "Descrie investiția și rezultatul urmărit, fără să pornești de la denumirea unui program.",
+                "Verifică solicitantul, activitatea, localitatea și documentele care pot demonstra situația reală.",
+                "Compară numai familiile și programele compatibile cu investiția.",
+                "Confirmă documentul oficial, statusul, calendarul și condițiile decisive.",
+                "Decide dacă proiectul continuă, se ajustează sau se amână."
+              ]
+            },
+            {
+              "id": "limitele-hubului",
+              "heading": "Ce nu stabilește acest hub",
+              "paragraphs": [
+                "Hubul nu declară un apel deschis, nu atribuie un procent de finanțare și nu estimează eligibilitatea unui solicitant. Aceste concluzii apar numai în pagina programului și în verificarea documentelor concrete.",
+                "Pentru criterii generale folosește ghidul de eligibilitate. Pentru analiza cazului tău folosește serviciul de verificare inițială."
+              ]
+            }
+          ],
+          "internalLinks": [
+            {"href": "/fonduri-nerambursabile", "label": "Înțelege grantul și cash-flow-ul"},
+            {"href": "/eligibilitate-fonduri-europene", "label": "Parcurge checklistul de eligibilitate"},
+            {"href": "/surse-oficiale-fonduri-europene", "label": "Consultă sursele oficiale"}
+          ],
+          "cta": {
+            "heading": "Ai o investiție, dar nu știi ce program să verifici?",
+            "text": "Trimite tipul solicitantului, localitatea, investiția și bugetul estimat. Prima concluzie este orientativă și poate recomanda continuarea, ajustarea sau amânarea.",
+            "href": "/verificare-eligibilitate-fonduri-europene",
+            "label": "Vezi procesul de verificare"
+          }
+        },
+        {
+          "route": "/fonduri-nerambursabile",
+          "file": "fonduri-nerambursabile/index.html",
+          "render": true,
+          "role": "guide",
+          "intentId": "understand_grant_cashflow_obligations",
+          "primaryIntent": "Explicarea grantului, contribuției proprii, cash-flow-ului, plăților și obligațiilor beneficiarului.",
+          "queryCluster": ["fonduri nerambursabile", "contribuție proprie", "cash-flow proiect", "rambursare grant"],
+          "ownedTopics": ["grant_vs_buget", "contributie_proprie", "cashflow_prefinantare_rambursare", "obligatii_beneficiar"],
+          "title": "Fonduri nerambursabile: grant, cash-flow și obligații | FABER",
+          "description": "Înțelege diferența dintre grant și bugetul total, contribuția proprie, cash-flow-ul, mecanismele de plată și obligațiile după contractare.",
+          "eyebrow": "Ghid financiar · grant · cash-flow · obligații",
+          "h1": "Fonduri nerambursabile: ce acoperă grantul și ce plătește beneficiarul",
+          "heroDescription": "Un proiect finanțat cere bani, documente și disciplină înainte și după contractare. Ghidul explică mecanismele financiare, nu listează programe.",
+          "heroActions": [
+            {"href": "#grant-buget-total", "label": "Înțelege bugetul proiectului", "kind": "primary"},
+            {"href": "/fonduri-europene", "label": "Vezi programele", "kind": "secondary"}
+          ],
+          "directAnswer": "Finanțarea nerambursabilă acoperă numai cheltuielile și procentul acceptate de program. Beneficiarul rămâne responsabil pentru contribuția proprie, cheltuielile neeligibile, diferențele de preț și, după caz, TVA sau finanțarea temporară a plăților. Mecanismul poate include avans, cereri de plată ori rambursare, dar regula exactă se confirmă în documentul oficial și în contractul proiectului.",
+          "sections": [
+            {
+              "id": "grant-buget-total",
+              "heading": "Grantul nu este același lucru cu bugetul proiectului",
+              "paragraphs": [
+                "Grantul este partea de finanțare publică acceptată pentru cheltuielile eligibile. Bugetul total poate include și contribuția beneficiarului, TVA, costuri neeligibile, diferențe peste plafoane și rezerve pentru implementare.",
+                "O valoare anunțată ca sprijin maxim nu spune cât numerar trebuie să poată mobiliza beneficiarul și nici ce costuri vor fi acceptate la plată."
+              ]
+            },
+            {
+              "id": "contributie-proprie",
+              "heading": "Contribuția proprie are mai multe componente",
+              "table": {
+                "headers": ["Componentă", "Ce reprezintă", "Ce verifici"],
+                "rows": [
+                  ["Contribuție la cheltuielile eligibile", "Partea din costurile acceptate care nu este acoperită de grant", "Intensitatea din documentul aplicabil"],
+                  ["Cheltuieli neeligibile", "Costuri necesare proiectului, dar neacceptate la finanțare", "Încadrarea fiecărei poziții și justificarea"],
+                  ["Diferențe de preț", "Sume peste valorile bugetate sau plafoanele acceptate", "Oferte actualizate și rezerva financiară"],
+                  ["TVA", "Tratamentul fiscal aplicabil solicitantului și programului", "Regula apelului și situația fiscală concretă"]
+                ]
+              }
+            },
+            {
+              "id": "cash-flow",
+              "heading": "Cash-flow-ul arată când trebuie să existe banii",
+              "paragraphs": [
+                "Eligibilitatea unei cheltuieli nu înseamnă că finanțatorul o plătește înaintea beneficiarului. Unele mecanisme cer plata furnizorului și rambursarea ulterioară; altele permit avans sau cereri de plată în condiții documentate.",
+                "Un scenariu prudent include termenele furnizorilor, verificarea cererilor, eventualele corecții, diferențele de curs și perioada în care creditul ori sursa proprie rămân blocate."
+              ],
+              "table": {
+                "headers": ["Mecanism", "Întrebarea decisivă", "Document de confirmat"],
+                "rows": [
+                  ["Avans / prefinanțare", "Ce condiții și garanții sunt necesare?", "Ghid, contract și instrucțiuni de plată"],
+                  ["Cerere de plată", "Cine plătește furnizorul și în ce termen?", "Procedura programului"],
+                  ["Rambursare", "Cât timp finanțează beneficiarul cheltuiala?", "Graficul proiectului și regulile de rambursare"]
+                ]
+              }
+            },
+            {
+              "id": "obligatii-beneficiar",
+              "heading": "Obligațiile continuă după semnarea contractului",
+              "items": [
+                "achiziții realizate prin procedura aplicabilă și documentate complet;",
+                "cheltuieli, livrări și plăți trasabile până la rezultatul asumat;",
+                "indicatori, active și locuri de muncă menținute când contractul le cere;",
+                "raportări și controale acceptate pe durata implementării și monitorizării;",
+                "corecții sau recuperări posibile când obligațiile nu sunt respectate."
+              ]
+            },
+            {
+              "id": "checklist-financiar",
+              "heading": "Checklist înainte de depunere",
+              "items": [
+                "Separă grantul estimat de bugetul total și de numerarul necesar.",
+                "Marchează fiecare cost ca eligibil, neeligibil sau încă neconfirmat.",
+                "Stabilește sursa contribuției proprii și a finanțării temporare.",
+                "Testează un scenariu cu prețuri mai mari și plăți întârziate.",
+                "Citește obligațiile de implementare și monitorizare înainte de contractare."
+              ]
+            }
+          ],
+          "internalLinks": [
+            {"href": "/fonduri-europene", "label": "Alege familia de programe"},
+            {"href": "/cum-se-calculeaza-cofinantarea-fonduri-europene", "label": "Vezi cum se calculează contribuția"},
+            {"href": "/eligibilitate-fonduri-europene", "label": "Verifică criteriile generale"}
+          ],
+          "cta": {
+            "heading": "Vrei să testezi dacă bugetul poate fi susținut?",
+            "text": "Pregătește investiția, ofertele disponibile, contribuția proprie și costurile pe care le consideri neeligibile. Verificarea nu înlocuiește documentul programului.",
+            "href": "/verificare-eligibilitate-fonduri-europene",
+            "label": "Vezi verificarea inițială"
+          }
+        }
+      ]
+    },
+    {
+      "id": "digitalizare",
+      "label": "Digitalizare",
+      "routes": [
+        {
+          "route": "/digitalizare-imm",
+          "file": "digitalizare-imm/index.html",
+          "render": false,
+          "publicationState": "pending_validation",
+          "role": "canonical_program_hub",
+          "intentId": "prepare_imm_digitalization_project",
+          "primaryIntent": "Pregătirea unei investiții de digitalizare IMM și delimitarea programului oficial aplicabil.",
+          "queryCluster": ["digitalizare IMM", "program digitalizare IMM", "proiect digitalizare firmă"],
+          "ownedTopics": ["obiective_digitalizare", "procese_si_indicatori", "program_oficial_aplicabil"],
+          "title": "Digitalizare IMM: proiect, procese și documente | FABER",
+          "description": "Pregătește proiectul de digitalizare pornind de la procese, indicatori și documente; statutul și valorile apar numai după validarea sursei oficiale.",
+          "eyebrow": "Pagină canonică · proiect de digitalizare IMM",
+          "h1": "Digitalizare IMM: de la problema operațională la proiect",
+          "heroDescription": "Pagina canonică va reuni pregătirea proiectului și programul oficial verificat, fără a confunda un apel istoric cu o finanțare deschisă.",
+          "directAnswer": "Un proiect de digitalizare IMM pornește de la procesele care trebuie îmbunătățite, datele disponibile și rezultatele măsurabile, nu de la o listă de echipamente. Pagina canonică va indica programul, statusul și documentul oficial numai după validarea lor. Până atunci, valorile, procentele și calendarul rămân nepublicate, iar pregătirea se limitează la nevoi, arhitectură și documente.",
+          "sections": [
+            {"id": "problema-obiectiv", "heading": "Definește problema înaintea soluției", "paragraphs": ["Descrie fluxul actual, blocajul, utilizatorii și datele implicate. Abia apoi compară soluțiile software, hardware, cloud sau securitate care pot produce rezultatul urmărit."]},
+            {"id": "dosar-digitalizare", "heading": "Ce trebuie pregătit", "items": ["harta proceselor și a sistemelor existente;", "cerințe funcționale și tehnice;", "indicatori care pot fi măsurați înainte și după proiect;", "oferte comparabile și justificarea dimensionării;", "documentele firmei, locațiilor și activităților vizate."]},
+            {"id": "separare-ghiduri", "heading": "Unde găsești detaliile", "paragraphs": ["Cheltuielile software și hardware sunt explicate în ghidul distinct. Statutul apelului, beneficiarii și calendarul vor rămâne numai în pagina canonică după aprobarea sursei."]}
+          ],
+          "internalLinks": [
+            {"href": "/cheltuieli-eligibile-digitalizare-imm", "label": "Analizează cheltuielile software și hardware"},
+            {"href": "/fonduri-europene-digitalizare", "label": "Compară familia Digitalizare și inovare"}
+          ],
+          "cta": {"heading": "Pregătește contextul investiției", "text": "Trimite procesele, sistemele existente, problema urmărită și bugetul orientativ. Nu este necesar să presupui că un apel este deschis.", "href": "/verificare-eligibilitate-fonduri-europene", "label": "Vezi procesul de verificare"}
+        },
+        {
+          "route": "/granturi-digitalizare-imm",
+          "file": "granturi-digitalizare-imm/index.html",
+          "render": false,
+          "publicationState": "pending_validation",
+          "role": "redirect_candidate",
+          "intentId": "duplicate_grants_variant_pending_merge",
+          "primaryIntent": "Variantă lexicală fără rol unic demonstrat; conținutul util se repartizează către pagina canonică și ghidul de cheltuieli.",
+          "queryCluster": ["granturi digitalizare IMM"],
+          "ownedTopics": [],
+          "migration": [
+            "Statutul, beneficiarii și documentul programului merg numai în /digitalizare-imm după validare.",
+            "Software, hardware, cloud, securitate și justificarea bugetului merg în /cheltuieli-eligibile-digitalizare-imm.",
+            "Blocurile generice despre eligibilitate, pași și CTA se elimină, nu se migrează."
+          ]
+        },
+        {
+          "route": "/cheltuieli-eligibile-digitalizare-imm",
+          "file": "cheltuieli-eligibile-digitalizare-imm.html",
+          "render": true,
+          "role": "guide",
+          "intentId": "evaluate_digitalization_expenses",
+          "primaryIntent": "Evaluarea necesității și justificării cheltuielilor software, hardware, cloud, securitate și servicii.",
+          "queryCluster": ["cheltuieli eligibile digitalizare IMM", "software digitalizare IMM", "hardware proiect digitalizare"],
+          "ownedTopics": ["software_hardware_cloud", "justificare_buget_it", "interoperabilitate_securitate"],
+          "title": "Cheltuieli pentru Digitalizare IMM: software și hardware | FABER",
+          "description": "Ghid pentru justificarea software-ului, hardware-ului, cloud-ului, securității și serviciilor într-un proiect de digitalizare IMM.",
+          "eyebrow": "Ghid distinct · cheltuieli și buget IT",
+          "h1": "Cheltuieli pentru Digitalizare IMM: ce justifici înainte de buget",
+          "heroDescription": "Ghidul răspunde întrebării despre cheltuieli și justificare. Nu declară că un apel este deschis și nu transferă valori din alte programe.",
+          "heroActions": [
+            {"href": "#categorii-cheltuieli", "label": "Compară cheltuielile", "kind": "primary"},
+            {"href": "/digitalizare-imm", "label": "Pagina Digitalizare IMM", "kind": "secondary"}
+          ],
+          "directAnswer": "Software-ul, hardware-ul, serviciile cloud, securitatea și consultanța tehnică pot avea sens numai când rezolvă un proces identificat și sunt permise de documentul programului analizat. Bugetul trebuie să lege fiecare cost de utilizatori, date, integrare, indicatori și operare. Lista de mai jos ajută la justificare, dar eligibilitatea finală se confirmă în ghidul și anexele apelului.",
+          "sections": [
+            {
+              "id": "categorii-cheltuieli",
+              "heading": "Compară cheltuielile după rolul în proiect",
+              "table": {
+                "headers": ["Categorie", "Întrebarea de justificare", "Risc frecvent"],
+                "rows": [
+                  ["Software și licențe", "Ce proces schimbă și câți utilizatori îl folosesc?", "Funcții cumpărate fără nevoie demonstrată"],
+                  ["Hardware", "Ce sarcină execută și de ce capacitatea este necesară?", "Supradimensionare sau echipamente fără legătură"],
+                  ["Cloud și servicii recurente", "Ce date, disponibilitate și perioadă sunt necesare?", "Costuri recurente neacoperite după proiect"],
+                  ["Securitate", "Ce riscuri și active protejează?", "Produse izolate, fără politici și responsabilități"],
+                  ["Integrare și servicii", "Ce sisteme și date sunt conectate și ce livrabil rămâne?", "Servicii descrise vag sau fără criterii de acceptanță"]
+                ]
+              }
+            },
+            {"id": "arhitectura", "heading": "Arhitectura trebuie să existe înaintea listei de achiziții", "paragraphs": ["Inventariază sistemele, datele, interfețele, utilizatorii și restricțiile de securitate. Ofertele devin comparabile numai după ce cerințele funcționale și tehnice sunt suficient de clare.", "Pentru fiecare poziție din buget indică legătura cu procesul, livrabilul, indicatorul și costul de operare după finalizarea proiectului."]},
+            {"id": "documente-buget", "heading": "Documente utile pentru verificarea bugetului", "items": ["descrierea procesului actual și a rezultatului urmărit;", "cerințe funcționale și tehnice;", "inventarul sistemelor și echipamentelor existente;", "oferte comparabile și ipotezele de dimensionare;", "plan de implementare, testare, instruire și acceptanță;", "estimarea costurilor recurente după proiect."]},
+            {"id": "limite-ghid", "heading": "Ce rămâne de confirmat în program", "paragraphs": ["Categoria de cheltuială, momentul achiziției, plafoanele, tratamentul serviciilor recurente și documentele obligatorii diferă între programe. Ghidul nu publică valori locale și nu numește un apel activ fără registru factual aprobat."]}
+          ],
+          "internalLinks": [
+            {"href": "/digitalizare-imm", "label": "Vezi pagina canonică Digitalizare IMM"},
+            {"href": "/fonduri-europene-digitalizare", "label": "Compară programele de digitalizare și inovare"},
+            {"href": "/verificare-eligibilitate-fonduri-europene", "label": "Vezi ce date intră în verificare"}
+          ],
+          "cta": {"heading": "Ai deja o listă de soluții sau oferte?", "text": "Trimite procesele, cerințele, ofertele și costurile recurente. Verificarea urmărește coerența bugetului și documentele care mai lipsesc.", "href": "/contact", "label": "Trimite contextul proiectului"}
+        }
+      ]
+    },
+    {
+      "id": "eligibilitate",
+      "label": "Eligibilitate",
+      "routes": [
+        {
+          "route": "/eligibilitate-fonduri-europene",
+          "file": "eligibilitate-fonduri-europene/index.html",
+          "render": true,
+          "role": "guide",
+          "intentId": "learn_eligibility_criteria",
+          "primaryIntent": "Înțelegerea criteriilor generale și autoevaluarea prin checklist, înaintea unui serviciu.",
+          "queryCluster": ["eligibilitate fonduri europene", "criterii eligibilitate", "checklist eligibilitate proiect"],
+          "ownedTopics": ["niveluri_eligibilitate", "checklist_autoevaluare", "criterii_eliminatorii_generale"],
+          "title": "Eligibilitate fonduri europene: criterii și checklist | FABER",
+          "description": "Verifică solicitantul, activitatea, locația, investiția, bugetul și documentele printr-un checklist general, înainte de analiza unui program concret.",
+          "eyebrow": "Ghid · criterii · checklist · autoevaluare",
+          "h1": "Eligibilitate pentru fonduri europene: criterii și checklist",
+          "heroDescription": "Ghidul explică ce trebuie verificat. Nu oferă un verdict pentru o firmă sau fermă și nu înlocuiește documentul programului.",
+          "heroActions": [
+            {"href": "#checklist-autoevaluare", "label": "Parcurge checklistul", "kind": "primary"},
+            {"href": "/verificare-eligibilitate-fonduri-europene", "label": "Vezi serviciul", "kind": "secondary"}
+          ],
+          "directAnswer": "Eligibilitatea se verifică simultan pentru solicitant, activitate, locație, investiție, buget, calendar și documente. Îndeplinirea condițiilor generale nu garantează punctajul sau finanțarea. Folosește checklistul pentru a identifica lipsurile, apoi compară situația concretă cu documentul oficial al programului. Dacă ai nevoie de un verdict documentat, ghidul conduce separat către serviciul de verificare inițială.",
+          "sections": [
+            {
+              "id": "niveluri-eligibilitate",
+              "heading": "Șase niveluri care trebuie să fie coerente",
+              "table": {
+                "headers": ["Nivel", "Întrebarea principală", "Dovadă tipică"],
+                "rows": [
+                  ["Solicitant", "Forma, dimensiunea și istoricul sunt acceptate?", "Acte, situații financiare, declarații"],
+                  ["Activitate", "Activitatea finanțată este permisă și demonstrabilă?", "CAEN, autorizare, evidențe ale exploatației"],
+                  ["Locație", "Regiunea și dreptul asupra amplasamentului sunt potrivite?", "Acte pentru teren, spațiu sau punct de lucru"],
+                  ["Investiție", "Cheltuielile servesc obiectivului programului?", "Descriere, proiectare, oferte, specificații"],
+                  ["Financiar", "Contribuția și cash-flow-ul pot fi susținute?", "Surse proprii, credit, buget și scenarii"],
+                  ["Calendar și documente", "Pot fi îndeplinite condițiile la momentul cerut?", "Avize, certificate, termene și versiunea documentului"]
+                ]
+              }
+            },
+            {
+              "id": "checklist-autoevaluare",
+              "heading": "Checklist de autoevaluare",
+              "items": [
+                "Pot identifica exact solicitantul și categoria sa în documentul programului?",
+                "Activitatea și investiția sunt compatibile și pot fi demonstrate?",
+                "Amplasamentul este eligibil și dreptul de folosință acoperă perioada cerută?",
+                "Cheltuielile principale sunt permise și justificate prin necesitate?",
+                "Contribuția proprie, costurile neeligibile și cash-flow-ul au surse realiste?",
+                "Documentele decisive pot fi obținute până la momentul cerut?",
+                "Punctajul estimat se bazează pe dovezi, nu pe intenții viitoare?"
+              ]
+            },
+            {
+              "id": "semnale-oprire",
+              "heading": "Semnale care cer oprirea sau ajustarea analizei",
+              "items": [
+                "documentul oficial ori versiunea aplicabilă nu pot fi identificate;",
+                "activitatea din acte nu susține investiția descrisă;",
+                "dreptul asupra locației este insuficient sau neclar;",
+                "bugetul depinde de cheltuieli interzise ori insuficient justificate;",
+                "punctajul depinde de documente inexistente;",
+                "sursele financiare nu acoperă contribuția și perioada până la plată."
+              ]
+            },
+            {
+              "id": "ghid-versus-serviciu",
+              "heading": "Ghidul explică; serviciul analizează cazul concret",
+              "paragraphs": ["Această pagină nu colectează date și nu emite un verdict. Serviciul separat descrie datele necesare, pașii verificării, livrabilul și limitele concluziei."]
+            }
+          ],
+          "internalLinks": [
+            {"href": "/fonduri-europene", "label": "Alege familia de programe"},
+            {"href": "/fonduri-nerambursabile", "label": "Înțelege contribuția și cash-flow-ul"},
+            {"href": "/metodologie-verificare-eligibilitate", "label": "Vezi metodologia de verificare"}
+          ],
+          "cta": {"heading": "Ai parcurs checklistul și vrei o concluzie pe documente?", "text": "Serviciul de verificare separă faptele confirmate, documentele lipsă și condițiile care pot schimba recomandarea.", "href": "/verificare-eligibilitate-fonduri-europene", "label": "Vezi serviciul de verificare"}
+        },
+        {
+          "route": "/verificare-eligibilitate-fonduri-europene",
+          "file": "verificare-eligibilitate-fonduri-europene/index.html",
+          "render": true,
+          "role": "service",
+          "intentId": "request_eligibility_review_service",
+          "primaryIntent": "Prezentarea procesului, datelor necesare, livrabilului și formularului pentru verificarea inițială.",
+          "queryCluster": ["serviciu verificare eligibilitate", "analiză proiect fonduri europene", "verificare inițială proiect"],
+          "ownedTopics": ["proces_serviciu", "date_necesare", "livrabil_verificare", "formular_contact"],
+          "title": "Verificare inițială eligibilitate proiecte | FABER",
+          "description": "Află ce date analizăm, cum se desfășoară verificarea inițială și ce concluzie documentată primești înainte de pregătirea dosarului.",
+          "eyebrow": "Serviciu · proces · livrabil · formular",
+          "h1": "Verificare inițială a eligibilității proiectului",
+          "heroDescription": "Analizăm solicitantul, investiția, programul și documentele înainte de asumarea costurilor unui dosar complet.",
+          "heroActions": [
+            {"href": "/contact", "label": "Începe verificarea proiectului", "kind": "primary"},
+            {"href": "/eligibilitate-fonduri-europene", "label": "Parcurge ghidul", "kind": "secondary"}
+          ],
+          "directAnswer": "Verificarea inițială compară situația solicitantului și investiția cu documentul oficial al programului analizat. Avem nevoie de forma juridică, activitate, localitate, buget, contribuție proprie și documentele disponibile. Livrabilul delimitează ce este confirmat, ce lipsește și ce poate schimba concluzia. Recomandarea poate fi să continuăm, să ajustăm proiectul sau să nu depunem acum.",
+          "sections": [
+            {
+              "id": "date-necesare",
+              "heading": "Datele necesare pentru prima analiză",
+              "table": {
+                "headers": ["Categorie", "Ce trimiți", "De ce contează"],
+                "rows": [
+                  ["Solicitant", "Formă juridică, dimensiune, vechime și date financiare relevante", "Stabilește categoria și restricțiile aplicabile"],
+                  ["Activitate", "CAEN, activitate reală sau datele exploatației", "Leagă solicitantul de investiție"],
+                  ["Locație", "Județ, localitate și dreptul asupra amplasamentului", "Confirmă teritoriul și perioada de folosință"],
+                  ["Investiție", "Descriere scurtă, capacitate și rezultate urmărite", "Permite compararea cu obiectivul programului"],
+                  ["Financiar", "Buget estimat și contribuție disponibilă", "Testează fezabilitatea și cash-flow-ul"],
+                  ["Documente", "Acte, evidențe, oferte sau avize existente", "Separă faptele de presupuneri"]
+                ]
+              }
+            },
+            {
+              "id": "proces-serviciu",
+              "heading": "Cum se desfășoară verificarea",
+              "steps": [
+                "Încadrăm solicitarea și identificăm documentul oficial care trebuie folosit.",
+                "Comparăm solicitantul, activitatea, locația, investiția și bugetul cu regulile decisive.",
+                "Marcăm documentele lipsă, contradicțiile și ipotezele care nu pot fi confirmate.",
+                "Estimăm prudent riscul și, când există dovezi suficiente, traseul următor.",
+                "Livrăm concluzia și lista de acțiuni înainte de redactarea dosarului."
+              ]
+            },
+            {
+              "id": "livrabil",
+              "heading": "Ce conține livrabilul",
+              "items": [
+                "programul și versiunea documentului folosit;",
+                "criteriile confirmate și dovezile analizate;",
+                "condițiile neconfirmate și documentele care lipsesc;",
+                "riscurile care pot schimba eligibilitatea, punctajul sau bugetul;",
+                "recomandarea: continuare, ajustare sau amânare;",
+                "următorii pași și responsabilitatea fiecărei părți."
+              ]
+            },
+            {
+              "id": "limite-serviciu",
+              "heading": "Ce nu promite verificarea",
+              "paragraphs": ["Verificarea inițială nu garantează eligibilitatea finală, punctajul, selecția sau contractarea. Autoritatea finanțatoare decide asupra proiectului, iar concluzia se poate schimba când apar documente noi, o altă versiune a ghidului sau modificări ale investiției."]
+            },
+            {
+              "id": "pregatire",
+              "heading": "Vrei să te pregătești înainte de contact?",
+              "paragraphs": ["Parcurge checklistul educațional de eligibilitate. El te ajută să identifici datele lipsă, fără să dubleze procesul și livrabilul acestui serviciu."]
+            }
+          ],
+          "internalLinks": [
+            {"href": "/eligibilitate-fonduri-europene", "label": "Parcurge ghidul și checklistul"},
+            {"href": "/metodologie-verificare-eligibilitate", "label": "Vezi metodologia FABER"},
+            {"href": "/politica-de-confidentialitate", "label": "Citește informarea despre date"}
+          ],
+          "cta": {"heading": "Trimite datele minime pentru verificare", "text": "Sunt suficiente tipul solicitantului, localitatea, investiția și emailul sau telefonul. Programul, bugetul și documentele suplimentare pot fi completate dacă le cunoști.", "href": "/contact", "label": "Începe verificarea proiectului"}
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/granturi-digitalizare-imm",
+      "target": "/digitalizare-imm",
+      "status": "APROBARE_UMANĂ_NECESARĂ",
+      "reason": "URL-ul nu are un rol unic demonstrat; target-ul este încă pending_validation și noindex.",
+      "contentMigration": [
+        "Faptele despre program către /digitalizare-imm după aprobarea factuală.",
+        "Explicațiile despre software, hardware, cloud și securitate către /cheltuieli-eligibile-digitalizare-imm.",
+        "Blocurile generice și CTA-urile duplicate se elimină."
+      ]
+    }
+  ]
+}

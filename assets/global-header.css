@@ -260,6 +260,37 @@
   #navbar *, #mobileMenu * { scroll-behavior: auto !important; transition-duration: .01ms !important; }
 }
 
+.global-skip-link {
+  align-items: center;
+  background: #b84716;
+  border: 2px solid #fff;
+  border-radius: .5rem;
+  color: #fff;
+  display: inline-flex;
+  font-weight: 800;
+  inset-inline-start: 1rem;
+  justify-content: center;
+  min-height: 44px;
+  padding: .65rem 1rem;
+  position: fixed;
+  text-decoration: none;
+  top: .5rem;
+  transform: translateY(-160%);
+  z-index: 10000;
+}
+
+.global-skip-link:focus-visible {
+  outline: 3px solid #f5a623;
+  outline-offset: 3px;
+  transform: translateY(0);
+}
+
+main#main-content:focus {
+  outline: 3px solid #f5a623;
+  outline-offset: -3px;
+  scroll-margin-top: 6rem;
+}
+
 .eligibility-whatsapp-dialog[hidden] { display: none !important; }
 .eligibility-whatsapp-dialog {
   position: fixed;

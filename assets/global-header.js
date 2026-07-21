@@ -4,6 +4,16 @@
   if (window.__globalHeaderInitialized) return;
   window.__globalHeaderInitialized = true;
 
+  Array.prototype.slice.call(document.querySelectorAll('a.skip-link[href="#main-content"]')).forEach(function (skipLink) {
+    skipLink.addEventListener("click", function () {
+      var target = document.getElementById("main-content");
+      if (!target) return;
+      window.requestAnimationFrame(function () {
+        target.focus({ preventScroll: true });
+      });
+    });
+  });
+
   var navbar = document.getElementById("navbar");
   var hamburgerBtn = document.getElementById("hamburgerBtn");
   var mobileMenu = document.getElementById("mobileMenu");

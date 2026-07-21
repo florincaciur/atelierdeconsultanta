@@ -1,0 +1,140 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://atelierdeconsultanta.ro/schemas/program-page-template.schema.json",
+  "title": "Conținut editorial pentru template-ul paginilor de program FABER",
+  "description": "Statusul, calendarul, valorile financiare și sursa primară nu sunt câmpuri editoriale locale; ele sunt rezolvate exclusiv din registrul unic config/seo-programs.json#programs. Autorul, revizorul și changelog-ul sunt rezolvate din config/editorial-governance.json.",
+  "type": "object",
+  "required": ["schemaVersion", "pilotRoute", "pages"],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "pilotRoute": { "type": "string", "pattern": "^/" },
+    "pages": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/page" }
+    }
+  },
+  "$defs": {
+    "sourceKeys": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "sourcedSection": {
+      "type": "object",
+      "required": ["sourceKeys"],
+      "properties": {
+        "intro": { "type": "string", "minLength": 1 },
+        "paragraphs": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+        "items": { "type": "array", "items": { "type": "string", "minLength": 1 } },
+        "sourceKeys": { "$ref": "#/$defs/sourceKeys" }
+      },
+      "additionalProperties": true
+    },
+    "question": {
+      "type": "object",
+      "required": ["question", "answer", "sourceKeys"],
+      "properties": {
+        "question": { "type": "string", "minLength": 8 },
+        "answer": { "type": "string", "minLength": 20 },
+        "sourceKeys": { "$ref": "#/$defs/sourceKeys" }
+      },
+      "additionalProperties": false
+    },
+    "page": {
+      "type": "object",
+      "required": [
+        "programSlug",
+        "route",
+        "editorialGovernanceRecordId",
+        "directAnswer",
+        "beneficiarySummary",
+        "keyDocumentLabel",
+        "eligibility",
+        "funding",
+        "scoreAndRisk",
+        "documentsAndSteps",
+        "consultantAnalysis",
+        "sourceKeys",
+        "questions",
+        "cta"
+      ],
+      "properties": {
+        "programSlug": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+        "route": { "type": "string", "pattern": "^/" },
+        "editorialGovernanceRecordId": { "type": "string", "minLength": 1 },
+        "directAnswer": { "type": "string", "minLength": 200, "maxLength": 700 },
+        "beneficiarySummary": { "type": "string", "minLength": 20 },
+        "keyDocumentLabel": { "type": "string", "minLength": 10 },
+        "eligibility": { "$ref": "#/$defs/sourcedSection" },
+        "funding": {
+          "allOf": [
+            { "$ref": "#/$defs/sourcedSection" },
+            {
+              "type": "object",
+              "required": ["funded", "notFunded"],
+              "properties": {
+                "funded": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 } },
+                "notFunded": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 } }
+              }
+            }
+          ]
+        },
+        "scoreAndRisk": {
+          "allOf": [
+            { "$ref": "#/$defs/sourcedSection" },
+            {
+              "type": "object",
+              "required": ["scoring", "eliminatory", "risks"],
+              "properties": {
+                "scoring": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 } },
+                "eliminatory": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 } },
+                "risks": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 } }
+              }
+            }
+          ]
+        },
+        "documentsAndSteps": {
+          "allOf": [
+            { "$ref": "#/$defs/sourcedSection" },
+            {
+              "type": "object",
+              "required": ["documents", "steps"],
+              "properties": {
+                "documents": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 } },
+                "steps": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 } }
+              }
+            }
+          ]
+        },
+        "consultantAnalysis": {
+          "type": "object",
+          "required": ["intro", "assumptions", "conclusionChangingDocuments", "limits"],
+          "properties": {
+            "intro": { "type": "string", "minLength": 20 },
+            "assumptions": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 } },
+            "conclusionChangingDocuments": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 } },
+            "limits": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 } }
+          },
+          "additionalProperties": false
+        },
+        "sourceKeys": { "$ref": "#/$defs/sourceKeys" },
+        "questions": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/question" } },
+        "cta": {
+          "type": "object",
+          "required": ["label", "heading", "copy", "investmentPrefill"],
+          "properties": {
+            "label": { "type": "string", "minLength": 3 },
+            "heading": { "type": "string", "minLength": 8 },
+            "copy": { "type": "string", "minLength": 20 },
+            "investmentPrefill": { "type": "string", "minLength": 5 }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

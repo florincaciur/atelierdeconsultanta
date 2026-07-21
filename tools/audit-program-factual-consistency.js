@@ -7,10 +7,12 @@ const cheerio = require("cheerio");
 const {
   ACTIVE_STATUSES,
   ROOT,
+  cofinancingSummaryText,
   daysSince,
   formatIntensity,
   formatMoneyValue,
   fundingSummary,
+  grantSummaryText,
   isPublicProgram,
   loadProgramConfig,
   statusLabel,
@@ -233,9 +235,15 @@ function auditProgram(issues, program, context) {
     compare(issues, program, "status-mismatch", "page-status", program.status, note.attr("data-program-status"), "Nota factuală are alt status.");
     compare(issues, program, "label-mismatch", "page-status", program.statusLabel, note.attr("data-status-label"), "Nota factuală are altă etichetă de status.");
     compare(issues, program, "source-mismatch", "page-status", program.officialSourceUrl, note.find("a[data-analytics-event='source_document_click']").attr("href"), "Sursa vizibilă diferă de config.");
+    const templateMode = $("body").attr("data-program-template-version") === "p1_11";
     const noteText = normalizeText(note.text());
-    for (const required of [statusStatement(program), fundingSummary(program), program.editorialDisclaimer].filter(Boolean)) {
-      if (!noteText.includes(required)) addIssue(issues, program, "error", "factual-note-mismatch", "page-status", "Nota factuală nu reproduce informația canonică.", required, noteText);
+    const factualSurfaceText = templateMode ? normalizeText($(".program-template").text()) : noteText;
+    const requiredFacts = templateMode
+      ? [statusStatement(program), grantSummaryText(program), cofinancingSummaryText(program), program.editorialDisclaimer]
+      : [statusStatement(program), fundingSummary(program), program.editorialDisclaimer];
+    for (const required of requiredFacts.filter(Boolean)) {
+      const targetText = required === statusStatement(program) ? noteText : factualSurfaceText;
+      if (!targetText.includes(required)) addIssue(issues, program, "error", "factual-note-mismatch", "page-status", "Suprafața factuală nu reproduce informația canonică.", required, targetText);
     }
     if (program.status === "consultare_publica" && !comparable(noteText).includes("consult")) {
       addIssue(issues, program, "error", "missing-consultation-disclaimer", "page-status", "Programul consultativ nu este delimitat explicit în conținut.");

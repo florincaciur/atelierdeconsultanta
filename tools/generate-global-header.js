@@ -8,7 +8,7 @@ const ROOT = path.resolve(__dirname, "..");
 const CONFIG_PATH = path.join(ROOT, "config", "main-navigation.json");
 const PARTIAL_PATH = path.join(ROOT, "partials", "global-header.html");
 const REPORT_PATH = path.join(ROOT, "reports", "main-navigation-sitemap-2026-07-21.md");
-const ASSET_VERSION = "20260721-1";
+const ASSET_VERSION = "20260721-3";
 
 function loadConfig() {
   return JSON.parse(fs.readFileSync(CONFIG_PATH, "utf8"));

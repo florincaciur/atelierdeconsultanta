@@ -119,6 +119,33 @@ function withTargetNewlines(text, eol) {
   return text.replace(/\r\n/g, "\n").replace(/\n/g, eol);
 }
 
+function ensureSkipNavigation(html, eol) {
+  const mainMatch = /<main\b[^>]*>/i.exec(html);
+  if (!mainMatch) return html;
+
+  let output = html;
+  let opening = mainMatch[0];
+  if (!/\sid=["']main-content["']/i.test(opening)) {
+    if (/\sid=["'][^"']+["']/i.test(opening)) {
+      throw new Error("Elementul <main> are un ID incompatibil cu skip link-ul global.");
+    }
+    opening = opening.replace(/>$/, ' id="main-content">');
+  }
+  if (!/\btabindex=["']-1["']/i.test(opening)) opening = opening.replace(/>$/, ' tabindex="-1">');
+  output = `${output.slice(0, mainMatch.index)}${opening}${output.slice(mainMatch.index + mainMatch[0].length)}`;
+
+  if (/<a\b[^>]*\bhref=["']#main-content["'][^>]*\bclass=["'][^"']*\bskip-link\b/i.test(output)
+    || /<a\b[^>]*\bclass=["'][^"']*\bskip-link\b[^"']*["'][^>]*\bhref=["']#main-content["']/i.test(output)) {
+    return output;
+  }
+
+  const body = /<body\b[^>]*>/i.exec(output);
+  if (!body) throw new Error("Documentul nu are <body> pentru skip link.");
+  const insertion = body.index + body[0].length;
+  const skipLink = '<a class="skip-link global-skip-link" href="#main-content">Sari la conținut</a>';
+  return `${output.slice(0, insertion)}${eol}${skipLink}${output.slice(insertion)}`;
+}
+
 function synchronizeFile(relativePath, partial, options = {}) {
   const filePath = path.join(ROOT, ...relativePath.split("/"));
   const before = fs.readFileSync(filePath, "utf8");
@@ -157,6 +184,8 @@ function synchronizeFile(relativePath, partial, options = {}) {
     }
   }
 
+  after = ensureSkipNavigation(after, eol);
+
   if (after === before) return false;
   if (!options.check) fs.writeFileSync(filePath, after, "utf8");
   return true;
@@ -191,5 +220,6 @@ module.exports = {
   markedRange,
   partialSource,
   removeHomepageLegacyBehavior,
+  ensureSkipNavigation,
   synchronizeFile
 };

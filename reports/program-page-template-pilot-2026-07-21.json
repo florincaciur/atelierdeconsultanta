@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "generatedFor": "P1.11",
+  "generatedAt": "2026-07-21",
+  "templateVersion": "p1_11",
+  "pilotRoute": "/afir-autoconsum-agroalimentar",
+  "pages": [
+    {
+      "route": "/afir-autoconsum-agroalimentar",
+      "file": "afir-autoconsum-agroalimentar/index.html",
+      "programSlug": "afir-energie-autoconsum",
+      "directAnswerWords": 58,
+      "editorialWordCount": 1502,
+      "tocIncluded": true,
+      "sourceCount": 1,
+      "questionCount": 8,
+      "openQuestionCount": 3,
+      "sectionOrder": [
+        "glance",
+        "eligibility",
+        "funding",
+        "scoreAndRisk",
+        "documentsAndSteps",
+        "consultantAnalysis",
+        "sources",
+        "questions",
+        "cta"
+      ],
+      "registryRef": "config/seo-programs.json#programs",
+      "governanceRef": "config/editorial-governance.json#afir-autoconsum-agroalimentar"
+    }
+  ]
+}

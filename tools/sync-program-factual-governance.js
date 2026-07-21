@@ -369,7 +369,7 @@ function replaceMeta(html, selectorPattern, value) {
 }
 
 function pendingMain(program) {
-  return `<main class="container program-validation-hold" data-program-id="${escapeHtml(program.slug)}" data-publication-state="pending_validation">
+  return `<main class="container program-validation-hold" id="main-content" tabindex="-1" data-program-id="${escapeHtml(program.slug)}" data-publication-state="pending_validation">
   <article class="panel">
     ${renderProgramFactualStatus(program)}
     <h1>${escapeHtml(program.shortName)}</h1>
@@ -383,14 +383,17 @@ function pendingMain(program) {
 function syncProgramHtml(source, program) {
   let output = source;
   const eol = source.includes("\r\n") ? "\r\n" : "\n";
+  const templateMode = /data-program-template-version=(?:"[^"]+"|'[^']+')/i.test(source);
   output = output.replace(/<title>[^<]*<\/title>/i, `<title>${escapeHtml(program.metaTitle)}</title>`);
   output = replaceMeta(output, /<meta\b[^>]*\bname=["']description["'][^>]*>/i, program.metaDescription);
   output = replaceMeta(output, /<meta\b[^>]*\bproperty=["']og:title["'][^>]*>/i, program.metaTitle);
   output = replaceMeta(output, /<meta\b[^>]*\bproperty=["']og:description["'][^>]*>/i, program.metaDescription);
   output = output.replace(/<body\b[^>]*>/i, (tag) => {
     let next = tag;
-    for (const attribute of ["data-source-status", "data-reviewed-at", "data-factual-governance", "data-program-registry", "data-program-status", "data-status-label", "data-verified-at", "data-source-url", "data-publication-state"]) {
-      next = removeTagAttribute(next, attribute);
+    if (!templateMode) {
+      for (const attribute of ["data-source-status", "data-reviewed-at", "data-factual-governance", "data-program-registry", "data-program-status", "data-status-label", "data-verified-at", "data-source-url", "data-publication-state"]) {
+        next = removeTagAttribute(next, attribute);
+      }
     }
     next = replaceTagAttribute(next, "data-program-id", program.slug);
     next = replaceTagAttribute(next, "data-publication-state", program.publicationState);
@@ -416,7 +419,8 @@ function syncProgramHtml(source, program) {
   }
   const archivedRobots = archivedRobotsDecision(program);
   if (archivedRobots) output = replaceMeta(output, /<meta\b[^>]*\bname=["']robots["'][^>]*>/i, archivedRobots);
-  const block = renderProgramFactualStatus(program).replace(/\r?\n/g, eol);
+  const factualMode = templateMode ? "template-header" : "default";
+  const block = renderProgramFactualStatus(program, { mode: factualMode }).replace(/\r?\n/g, eol);
   const marked = /<!-- PROGRAM_FACTUAL_STATUS_START -->[\s\S]*?<!-- PROGRAM_FACTUAL_STATUS_END -->/;
   if (marked.test(output)) return output.replace(marked, block);
   if (/<article\b[^>]*>/i.test(output)) return output.replace(/<article\b[^>]*>/i, (tag) => `${tag}${eol}${block}`);

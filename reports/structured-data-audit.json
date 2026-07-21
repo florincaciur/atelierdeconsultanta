@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-21T13:25:38.346Z",
+  "generatedAt": "2026-07-21T16:43:02.554Z",
   "summary": {
     "htmlFilesChecked": 180,
     "indexablePagesChecked": 91,
@@ -12,16 +12,16 @@
       "WebSite": 91,
       "WebPage": 131,
       "CreativeWork": 57,
+      "BreadcrumbList": 90,
+      "ListItem": 293,
       "Article": 40,
       "DefinedTerm": 41,
       "PropertyValue": 114,
       "Audience": 11,
       "DefinedTermSet": 14,
       "FAQPage": 81,
-      "Question": 555,
-      "Answer": 555,
-      "BreadcrumbList": 90,
-      "ListItem": 293,
+      "Question": 618,
+      "Answer": 618,
       "ItemList": 2,
       "Blog": 1,
       "LegalService": 2,
@@ -44,6 +44,8 @@
         "WebSite": 1,
         "WebPage": 2,
         "CreativeWork": 4,
+        "BreadcrumbList": 1,
+        "ListItem": 4,
         "Article": 1,
         "DefinedTerm": 1,
         "PropertyValue": 12,
@@ -51,9 +53,7 @@
         "DefinedTermSet": 1,
         "FAQPage": 1,
         "Question": 9,
-        "Answer": 9,
-        "BreadcrumbList": 1,
-        "ListItem": 4
+        "Answer": 9
       },
       "modified": [
         "2026-07-20",
@@ -72,16 +72,16 @@
         "WebSite": 1,
         "WebPage": 2,
         "CreativeWork": 4,
+        "BreadcrumbList": 1,
+        "ListItem": 4,
         "Article": 1,
         "DefinedTerm": 1,
         "PropertyValue": 8,
         "Audience": 1,
         "DefinedTermSet": 1,
         "FAQPage": 1,
-        "Question": 9,
-        "Answer": 9,
-        "BreadcrumbList": 1,
-        "ListItem": 4
+        "Question": 12,
+        "Answer": 12
       },
       "modified": [
         "2026-05-26",
@@ -102,6 +102,8 @@
         "WebSite": 1,
         "WebPage": 2,
         "CreativeWork": 3,
+        "BreadcrumbList": 1,
+        "ListItem": 4,
         "Article": 1,
         "DefinedTerm": 1,
         "PropertyValue": 8,
@@ -109,9 +111,7 @@
         "DefinedTermSet": 1,
         "FAQPage": 1,
         "Question": 9,
-        "Answer": 9,
-        "BreadcrumbList": 1,
-        "ListItem": 4
+        "Answer": 9
       },
       "modified": [
         "2026-05-20",
@@ -132,16 +132,16 @@
         "WebSite": 1,
         "WebPage": 2,
         "CreativeWork": 3,
+        "BreadcrumbList": 1,
+        "ListItem": 4,
         "Article": 1,
         "DefinedTerm": 1,
         "PropertyValue": 10,
         "Audience": 1,
         "DefinedTermSet": 1,
         "FAQPage": 1,
-        "Question": 9,
-        "Answer": 9,
-        "BreadcrumbList": 1,
-        "ListItem": 4
+        "Question": 12,
+        "Answer": 12
       },
       "modified": [
         "2026-05-27",
@@ -162,15 +162,15 @@
         "WebSite": 1,
         "WebPage": 2,
         "CreativeWork": 3,
+        "BreadcrumbList": 1,
+        "ListItem": 4,
         "Article": 1,
         "DefinedTerm": 1,
         "PropertyValue": 8,
         "DefinedTermSet": 1,
         "FAQPage": 1,
         "Question": 9,
-        "Answer": 9,
-        "BreadcrumbList": 1,
-        "ListItem": 4
+        "Answer": 9
       },
       "modified": [
         "2026-05-20",
@@ -191,15 +191,15 @@
         "WebSite": 1,
         "WebPage": 2,
         "CreativeWork": 3,
+        "BreadcrumbList": 1,
+        "ListItem": 4,
         "Article": 1,
         "DefinedTerm": 1,
         "PropertyValue": 8,
         "DefinedTermSet": 1,
         "FAQPage": 1,
-        "Question": 9,
-        "Answer": 9,
-        "BreadcrumbList": 1,
-        "ListItem": 4
+        "Question": 12,
+        "Answer": 12
       },
       "modified": [
         "2026-05-20",
@@ -220,15 +220,15 @@
         "WebSite": 1,
         "WebPage": 2,
         "CreativeWork": 3,
+        "BreadcrumbList": 1,
+        "ListItem": 4,
         "Article": 1,
         "DefinedTerm": 1,
         "PropertyValue": 8,
         "DefinedTermSet": 1,
         "FAQPage": 1,
         "Question": 7,
-        "Answer": 7,
-        "BreadcrumbList": 1,
-        "ListItem": 4
+        "Answer": 7
       },
       "modified": [
         "2026-05-20",
@@ -249,6 +249,8 @@
         "WebSite": 1,
         "WebPage": 1,
         "CreativeWork": 2,
+        "BreadcrumbList": 1,
+        "ListItem": 11,
         "DefinedTerm": 1,
         "PropertyValue": 8,
         "Audience": 1,
@@ -256,9 +258,7 @@
         "FAQPage": 1,
         "Question": 6,
         "Answer": 6,
-        "ItemList": 1,
-        "ListItem": 11,
-        "BreadcrumbList": 1
+        "ItemList": 1
       },
       "modified": [
         "2026-07-20"
@@ -276,16 +276,16 @@
         "WebSite": 1,
         "WebPage": 2,
         "CreativeWork": 4,
+        "BreadcrumbList": 1,
+        "ListItem": 4,
         "Article": 1,
         "DefinedTerm": 1,
         "PropertyValue": 8,
         "Audience": 1,
         "DefinedTermSet": 1,
         "FAQPage": 1,
-        "Question": 9,
-        "Answer": 9,
-        "BreadcrumbList": 1,
-        "ListItem": 4
+        "Question": 12,
+        "Answer": 12
       },
       "modified": [
         "2026-05-26",
@@ -306,6 +306,8 @@
         "WebSite": 1,
         "WebPage": 2,
         "CreativeWork": 3,
+        "BreadcrumbList": 1,
+        "ListItem": 4,
         "Article": 1,
         "DefinedTerm": 1,
         "PropertyValue": 10,
@@ -313,9 +315,7 @@
         "DefinedTermSet": 1,
         "FAQPage": 1,
         "Question": 9,
-        "Answer": 9,
-        "BreadcrumbList": 1,
-        "ListItem": 4
+        "Answer": 9
       },
       "modified": [
         "2026-06-02",
@@ -336,16 +336,16 @@
         "WebSite": 1,
         "WebPage": 2,
         "CreativeWork": 6,
+        "BreadcrumbList": 1,
+        "ListItem": 4,
         "Article": 1,
         "DefinedTerm": 1,
         "PropertyValue": 10,
         "Audience": 1,
         "DefinedTermSet": 1,
         "FAQPage": 1,
-        "Question": 9,
-        "Answer": 9,
-        "BreadcrumbList": 1,
-        "ListItem": 4
+        "Question": 12,
+        "Answer": 12
       },
       "modified": [
         "2026-07-13",
@@ -364,16 +364,16 @@
         "WebSite": 1,
         "WebPage": 2,
         "CreativeWork": 4,
+        "BreadcrumbList": 1,
+        "ListItem": 4,
         "Article": 1,
         "DefinedTerm": 1,
         "PropertyValue": 8,
         "Audience": 1,
         "DefinedTermSet": 1,
         "FAQPage": 1,
-        "Question": 9,
-        "Answer": 9,
-        "BreadcrumbList": 1,
-        "ListItem": 4
+        "Question": 12,
+        "Answer": 12
       },
       "modified": [
         "2026-07-20",
@@ -392,15 +392,15 @@
         "WebSite": 1,
         "WebPage": 2,
         "CreativeWork": 3,
+        "BreadcrumbList": 1,
+        "ListItem": 4,
         "Article": 1,
         "DefinedTerm": 1,
         "PropertyValue": 8,
         "DefinedTermSet": 1,
         "FAQPage": 1,
         "Question": 9,
-        "Answer": 9,
-        "BreadcrumbList": 1,
-        "ListItem": 4
+        "Answer": 9
       },
       "modified": [
         "2026-05-20",
@@ -420,12 +420,12 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 3,
         "FAQPage": 1,
         "Question": 5,
         "Answer": 5,
-        "Blog": 1,
-        "BreadcrumbList": 1,
-        "ListItem": 3
+        "Blog": 1
       },
       "modified": [],
       "issues": []
@@ -440,12 +440,12 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 2,
+        "BreadcrumbList": 1,
+        "ListItem": 3,
         "Article": 1,
         "FAQPage": 1,
         "Question": 3,
-        "Answer": 3,
-        "BreadcrumbList": 1,
-        "ListItem": 3
+        "Answer": 3
       },
       "modified": [
         "2026-05-27",
@@ -463,12 +463,12 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 12,
         "FAQPage": 1,
         "Question": 4,
         "Answer": 4,
-        "ItemList": 1,
-        "ListItem": 12,
-        "BreadcrumbList": 1
+        "ItemList": 1
       },
       "modified": [
         "2026-05-27"
@@ -485,11 +485,11 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 3,
         "FAQPage": 1,
         "Question": 4,
-        "Answer": 4,
-        "BreadcrumbList": 1,
-        "ListItem": 3
+        "Answer": 4
       },
       "modified": [],
       "issues": []
@@ -504,12 +504,12 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 2,
+        "BreadcrumbList": 1,
+        "ListItem": 3,
         "Article": 1,
         "FAQPage": 1,
         "Question": 5,
-        "Answer": 5,
-        "BreadcrumbList": 1,
-        "ListItem": 3
+        "Answer": 5
       },
       "modified": [
         "2026-05-26",
@@ -527,9 +527,9 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 2,
-        "Article": 1,
         "BreadcrumbList": 1,
-        "ListItem": 3
+        "ListItem": 3,
+        "Article": 1
       },
       "modified": [
         "2026-05-20",
@@ -547,9 +547,9 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 2,
-        "Article": 1,
         "BreadcrumbList": 1,
-        "ListItem": 3
+        "ListItem": 3,
+        "Article": 1
       },
       "modified": [
         "2026-06-11",
@@ -567,13 +567,13 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 2,
+        "BreadcrumbList": 1,
+        "ListItem": 3,
         "Article": 1,
         "CreativeWork": 4,
         "FAQPage": 1,
-        "Question": 6,
-        "Answer": 6,
-        "BreadcrumbList": 1,
-        "ListItem": 3
+        "Question": 9,
+        "Answer": 9
       },
       "modified": [
         "2026-07-13",
@@ -591,11 +591,11 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
-        "FAQPage": 1,
-        "Question": 8,
-        "Answer": 8,
         "BreadcrumbList": 1,
-        "ListItem": 3
+        "ListItem": 3,
+        "FAQPage": 1,
+        "Question": 11,
+        "Answer": 11
       },
       "modified": [],
       "issues": []
@@ -610,13 +610,13 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 2,
+        "BreadcrumbList": 1,
+        "ListItem": 3,
         "Article": 1,
         "CreativeWork": 4,
         "FAQPage": 1,
-        "Question": 6,
-        "Answer": 6,
-        "BreadcrumbList": 1,
-        "ListItem": 3
+        "Question": 9,
+        "Answer": 9
       },
       "modified": [
         "2026-07-13",
@@ -634,12 +634,12 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 2,
+        "BreadcrumbList": 1,
+        "ListItem": 3,
         "Article": 1,
         "FAQPage": 1,
         "Question": 3,
-        "Answer": 3,
-        "BreadcrumbList": 1,
-        "ListItem": 3
+        "Answer": 3
       },
       "modified": [
         "2026-06-11",
@@ -657,11 +657,11 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
         "FAQPage": 1,
         "Question": 7,
-        "Answer": 7,
-        "BreadcrumbList": 1,
-        "ListItem": 2
+        "Answer": 7
       },
       "modified": [],
       "issues": []
@@ -676,13 +676,13 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 3,
         "FAQPage": 1,
         "Question": 4,
         "Answer": 4,
         "DefinedTermSet": 1,
-        "DefinedTerm": 28,
-        "BreadcrumbList": 1,
-        "ListItem": 3
+        "DefinedTerm": 28
       },
       "modified": [
         "2026-05-20"
@@ -699,11 +699,11 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 3,
         "FAQPage": 1,
         "Question": 6,
-        "Answer": 6,
-        "BreadcrumbList": 1,
-        "ListItem": 3
+        "Answer": 6
       },
       "modified": [
         "2026-05-29"
@@ -720,11 +720,11 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 4,
         "FAQPage": 1,
         "Question": 6,
-        "Answer": 6,
-        "BreadcrumbList": 1,
-        "ListItem": 4
+        "Answer": 6
       },
       "modified": [
         "2026-05-29"
@@ -741,12 +741,12 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 2,
+        "BreadcrumbList": 1,
+        "ListItem": 3,
         "Article": 1,
         "FAQPage": 1,
         "Question": 11,
-        "Answer": 11,
-        "BreadcrumbList": 1,
-        "ListItem": 3
+        "Answer": 11
       },
       "modified": [
         "2026-05-20",
@@ -764,12 +764,12 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 2,
+        "BreadcrumbList": 1,
+        "ListItem": 3,
         "Article": 1,
         "FAQPage": 1,
         "Question": 11,
-        "Answer": 11,
-        "BreadcrumbList": 1,
-        "ListItem": 3
+        "Answer": 11
       },
       "modified": [
         "2026-05-20",
@@ -787,12 +787,12 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 2,
+        "BreadcrumbList": 1,
+        "ListItem": 3,
         "Article": 1,
         "FAQPage": 1,
         "Question": 11,
-        "Answer": 11,
-        "BreadcrumbList": 1,
-        "ListItem": 3
+        "Answer": 11
       },
       "modified": [
         "2026-05-20",
@@ -810,12 +810,12 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 2,
+        "BreadcrumbList": 1,
+        "ListItem": 3,
         "Article": 1,
         "FAQPage": 1,
         "Question": 3,
-        "Answer": 3,
-        "BreadcrumbList": 1,
-        "ListItem": 3
+        "Answer": 3
       },
       "modified": [
         "2026-05-21",
@@ -833,12 +833,12 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 2,
+        "BreadcrumbList": 1,
+        "ListItem": 3,
         "Article": 1,
         "FAQPage": 1,
         "Question": 6,
-        "Answer": 6,
-        "BreadcrumbList": 1,
-        "ListItem": 3
+        "Answer": 6
       },
       "modified": [
         "2026-06-11",
@@ -856,11 +856,11 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 3,
         "FAQPage": 1,
         "Question": 4,
-        "Answer": 4,
-        "BreadcrumbList": 1,
-        "ListItem": 3
+        "Answer": 4
       },
       "modified": [],
       "issues": []
@@ -893,11 +893,11 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
-        "FAQPage": 1,
-        "Question": 6,
-        "Answer": 6,
         "BreadcrumbList": 1,
-        "ListItem": 3
+        "ListItem": 3,
+        "FAQPage": 1,
+        "Question": 9,
+        "Answer": 9
       },
       "modified": [],
       "issues": []
@@ -912,11 +912,11 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
-        "FAQPage": 1,
-        "Question": 6,
-        "Answer": 6,
         "BreadcrumbList": 1,
-        "ListItem": 3
+        "ListItem": 3,
+        "FAQPage": 1,
+        "Question": 9,
+        "Answer": 9
       },
       "modified": [],
       "issues": []
@@ -931,11 +931,11 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
-        "FAQPage": 1,
-        "Question": 6,
-        "Answer": 6,
         "BreadcrumbList": 1,
-        "ListItem": 3
+        "ListItem": 3,
+        "FAQPage": 1,
+        "Question": 9,
+        "Answer": 9
       },
       "modified": [],
       "issues": []
@@ -950,11 +950,11 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 3,
         "FAQPage": 1,
         "Question": 6,
-        "Answer": 6,
-        "BreadcrumbList": 1,
-        "ListItem": 3
+        "Answer": 6
       },
       "modified": [],
       "issues": []
@@ -969,12 +969,12 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 2,
+        "BreadcrumbList": 1,
+        "ListItem": 3,
         "Article": 1,
         "FAQPage": 1,
         "Question": 5,
-        "Answer": 5,
-        "BreadcrumbList": 1,
-        "ListItem": 3
+        "Answer": 5
       },
       "modified": [
         "2026-05-20",
@@ -992,9 +992,9 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
-        "LegalService": 1,
         "BreadcrumbList": 1,
-        "ListItem": 2
+        "ListItem": 2,
+        "LegalService": 1
       },
       "modified": [
         "2026-05-26"
@@ -1011,11 +1011,11 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 4,
         "FAQPage": 1,
         "Question": 4,
-        "Answer": 4,
-        "BreadcrumbList": 1,
-        "ListItem": 4
+        "Answer": 4
       },
       "modified": [],
       "issues": []
@@ -1032,8 +1032,8 @@
         "ProfessionalService": 1,
         "WebPage": 1,
         "FAQPage": 1,
-        "Question": 6,
-        "Answer": 6
+        "Question": 8,
+        "Answer": 8
       },
       "modified": [],
       "issues": []
@@ -1048,12 +1048,12 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
         "Service": 1,
         "FAQPage": 1,
         "Question": 6,
-        "Answer": 6,
-        "BreadcrumbList": 1,
-        "ListItem": 2
+        "Answer": 6
       },
       "modified": [
         "2026-07-13"
@@ -1070,11 +1070,11 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
         "FAQPage": 1,
         "Question": 6,
-        "Answer": 6,
-        "BreadcrumbList": 1,
-        "ListItem": 2
+        "Answer": 6
       },
       "modified": [
         "2026-05-29"
@@ -1091,11 +1091,11 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
         "FAQPage": 1,
         "Question": 6,
-        "Answer": 6,
-        "BreadcrumbList": 1,
-        "ListItem": 2
+        "Answer": 6
       },
       "modified": [
         "2026-05-20"
@@ -1112,11 +1112,11 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 3,
         "FAQPage": 1,
         "Question": 5,
-        "Answer": 5,
-        "BreadcrumbList": 1,
-        "ListItem": 3
+        "Answer": 5
       },
       "modified": [
         "2026-05-29"
@@ -1133,13 +1133,13 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 3,
         "WebApplication": 1,
         "Offer": 1,
         "FAQPage": 1,
         "Question": 7,
-        "Answer": 7,
-        "BreadcrumbList": 1,
-        "ListItem": 3
+        "Answer": 7
       },
       "modified": [],
       "issues": []
@@ -1154,11 +1154,11 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 3,
         "FAQPage": 1,
         "Question": 6,
-        "Answer": 6,
-        "BreadcrumbList": 1,
-        "ListItem": 3
+        "Answer": 6
       },
       "modified": [
         "2026-05-29"
@@ -1175,9 +1175,9 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 2,
-        "Article": 1,
         "BreadcrumbList": 1,
-        "ListItem": 3
+        "ListItem": 3,
+        "Article": 1
       },
       "modified": [
         "2026-05-20",
@@ -1195,11 +1195,11 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 3,
         "FAQPage": 1,
         "Question": 6,
-        "Answer": 6,
-        "BreadcrumbList": 1,
-        "ListItem": 3
+        "Answer": 6
       },
       "modified": [
         "2026-05-29"
@@ -1216,9 +1216,9 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 2,
-        "Article": 1,
         "BreadcrumbList": 1,
-        "ListItem": 3
+        "ListItem": 3,
+        "Article": 1
       },
       "modified": [
         "2026-06-01",
@@ -1236,12 +1236,12 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 3,
         "Service": 1,
         "FAQPage": 1,
         "Question": 6,
-        "Answer": 6,
-        "BreadcrumbList": 1,
-        "ListItem": 3
+        "Answer": 6
       },
       "modified": [
         "2026-05-29"
@@ -1258,12 +1258,12 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 3,
         "Service": 1,
         "FAQPage": 1,
         "Question": 6,
-        "Answer": 6,
-        "BreadcrumbList": 1,
-        "ListItem": 3
+        "Answer": 6
       },
       "modified": [
         "2026-05-29"
@@ -1280,12 +1280,12 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 3,
         "Service": 1,
         "FAQPage": 1,
         "Question": 12,
-        "Answer": 12,
-        "BreadcrumbList": 1,
-        "ListItem": 3
+        "Answer": 12
       },
       "modified": [
         "2026-05-20"
@@ -1302,12 +1302,12 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 3,
         "Service": 1,
         "FAQPage": 1,
         "Question": 6,
-        "Answer": 6,
-        "BreadcrumbList": 1,
-        "ListItem": 3
+        "Answer": 6
       },
       "modified": [
         "2026-05-29"
@@ -1324,12 +1324,12 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 3,
         "Service": 1,
         "FAQPage": 1,
         "Question": 8,
-        "Answer": 8,
-        "BreadcrumbList": 1,
-        "ListItem": 3
+        "Answer": 8
       },
       "modified": [
         "2026-05-29"
@@ -1346,11 +1346,11 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
         "FAQPage": 1,
         "Question": 7,
-        "Answer": 7,
-        "BreadcrumbList": 1,
-        "ListItem": 2
+        "Answer": 7
       },
       "modified": [
         "2026-05-21"
@@ -1367,11 +1367,11 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 3,
         "FAQPage": 1,
         "Question": 6,
-        "Answer": 6,
-        "BreadcrumbList": 1,
-        "ListItem": 3
+        "Answer": 6
       },
       "modified": [
         "2026-05-29"
@@ -1388,12 +1388,12 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 2,
+        "BreadcrumbList": 1,
+        "ListItem": 3,
         "Article": 1,
         "FAQPage": 1,
-        "Question": 6,
-        "Answer": 6,
-        "BreadcrumbList": 1,
-        "ListItem": 3
+        "Question": 8,
+        "Answer": 8
       },
       "modified": [
         "2026-06-01",
@@ -1411,9 +1411,9 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 2,
-        "Article": 1,
         "BreadcrumbList": 1,
-        "ListItem": 3
+        "ListItem": 3,
+        "Article": 1
       },
       "modified": [
         "2026-05-20",
@@ -1431,9 +1431,9 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 2,
-        "Article": 1,
         "BreadcrumbList": 1,
-        "ListItem": 3
+        "ListItem": 3,
+        "Article": 1
       },
       "modified": [
         "2026-06-01",
@@ -1451,9 +1451,9 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 2,
-        "Article": 1,
         "BreadcrumbList": 1,
-        "ListItem": 3
+        "ListItem": 3,
+        "Article": 1
       },
       "modified": [
         "2026-06-11",
@@ -1471,11 +1471,11 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
-        "FAQPage": 1,
-        "Question": 6,
-        "Answer": 6,
         "BreadcrumbList": 1,
-        "ListItem": 3
+        "ListItem": 3,
+        "FAQPage": 1,
+        "Question": 9,
+        "Answer": 9
       },
       "modified": [
         "2026-05-29"
@@ -1492,12 +1492,12 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 2,
+        "BreadcrumbList": 1,
+        "ListItem": 3,
         "Article": 1,
         "FAQPage": 1,
-        "Question": 6,
-        "Answer": 6,
-        "BreadcrumbList": 1,
-        "ListItem": 3
+        "Question": 8,
+        "Answer": 8
       },
       "modified": [
         "2026-05-21",
@@ -1515,11 +1515,11 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 3,
         "FAQPage": 1,
         "Question": 6,
-        "Answer": 6,
-        "BreadcrumbList": 1,
-        "ListItem": 3
+        "Answer": 6
       },
       "modified": [
         "2026-05-29"
@@ -1536,13 +1536,13 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 2,
+        "BreadcrumbList": 1,
+        "ListItem": 3,
         "Article": 1,
         "CreativeWork": 4,
         "FAQPage": 1,
         "Question": 6,
-        "Answer": 6,
-        "BreadcrumbList": 1,
-        "ListItem": 3
+        "Answer": 6
       },
       "modified": [
         "2026-07-13",
@@ -1560,11 +1560,11 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 3,
         "FAQPage": 1,
         "Question": 5,
-        "Answer": 5,
-        "BreadcrumbList": 1,
-        "ListItem": 3
+        "Answer": 5
       },
       "modified": [
         "2026-05-29"
@@ -1581,12 +1581,12 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 3,
         "Service": 1,
         "FAQPage": 1,
         "Question": 6,
-        "Answer": 6,
-        "BreadcrumbList": 1,
-        "ListItem": 3
+        "Answer": 6
       },
       "modified": [
         "2026-05-29"
@@ -1603,11 +1603,11 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 3,
         "FAQPage": 1,
         "Question": 8,
-        "Answer": 8,
-        "BreadcrumbList": 1,
-        "ListItem": 3
+        "Answer": 8
       },
       "modified": [
         "2026-05-29"
@@ -1624,12 +1624,12 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 2,
+        "BreadcrumbList": 1,
+        "ListItem": 3,
         "Article": 1,
         "FAQPage": 1,
-        "Question": 12,
-        "Answer": 12,
-        "BreadcrumbList": 1,
-        "ListItem": 3
+        "Question": 14,
+        "Answer": 14
       },
       "modified": [
         "2026-05-20",
@@ -1647,12 +1647,12 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 2,
+        "BreadcrumbList": 1,
+        "ListItem": 3,
         "Article": 1,
         "FAQPage": 1,
-        "Question": 11,
-        "Answer": 11,
-        "BreadcrumbList": 1,
-        "ListItem": 3
+        "Question": 13,
+        "Answer": 13
       },
       "modified": [
         "2026-05-20",
@@ -1670,12 +1670,12 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 2,
+        "BreadcrumbList": 1,
+        "ListItem": 3,
         "Article": 1,
         "FAQPage": 1,
-        "Question": 11,
-        "Answer": 11,
-        "BreadcrumbList": 1,
-        "ListItem": 3
+        "Question": 13,
+        "Answer": 13
       },
       "modified": [
         "2026-05-20",
@@ -1693,12 +1693,12 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 2,
+        "BreadcrumbList": 1,
+        "ListItem": 3,
         "Article": 1,
         "FAQPage": 1,
-        "Question": 11,
-        "Answer": 11,
-        "BreadcrumbList": 1,
-        "ListItem": 3
+        "Question": 13,
+        "Answer": 13
       },
       "modified": [
         "2026-05-20",
@@ -1716,12 +1716,12 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 2,
+        "BreadcrumbList": 1,
+        "ListItem": 3,
         "Article": 1,
         "FAQPage": 1,
-        "Question": 11,
-        "Answer": 11,
-        "BreadcrumbList": 1,
-        "ListItem": 3
+        "Question": 13,
+        "Answer": 13
       },
       "modified": [
         "2026-05-20",
@@ -1739,11 +1739,11 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 3,
         "FAQPage": 1,
         "Question": 5,
-        "Answer": 5,
-        "BreadcrumbList": 1,
-        "ListItem": 3
+        "Answer": 5
       },
       "modified": [
         "2026-05-29"
@@ -1762,11 +1762,11 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 3,
         "FAQPage": 1,
         "Question": 6,
-        "Answer": 6,
-        "BreadcrumbList": 1,
-        "ListItem": 3
+        "Answer": 6
       },
       "modified": [
         "2026-05-29"
@@ -1783,11 +1783,11 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 3,
         "FAQPage": 1,
         "Question": 5,
-        "Answer": 5,
-        "BreadcrumbList": 1,
-        "ListItem": 3
+        "Answer": 5
       },
       "modified": [
         "2026-05-29"
@@ -1804,11 +1804,11 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
-        "FAQPage": 1,
-        "Question": 10,
-        "Answer": 10,
         "BreadcrumbList": 1,
-        "ListItem": 3
+        "ListItem": 3,
+        "FAQPage": 1,
+        "Question": 13,
+        "Answer": 13
       },
       "modified": [
         "2026-05-29"
@@ -1825,12 +1825,12 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 2,
+        "BreadcrumbList": 1,
+        "ListItem": 3,
         "Article": 1,
         "FAQPage": 1,
-        "Question": 11,
-        "Answer": 11,
-        "BreadcrumbList": 1,
-        "ListItem": 3
+        "Question": 13,
+        "Answer": 13
       },
       "modified": [
         "2026-06-19",
@@ -1848,11 +1848,11 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 3,
         "FAQPage": 1,
         "Question": 8,
-        "Answer": 8,
-        "BreadcrumbList": 1,
-        "ListItem": 3
+        "Answer": 8
       },
       "modified": [
         "2026-05-29"
@@ -1869,11 +1869,11 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 3,
         "FAQPage": 1,
         "Question": 6,
-        "Answer": 6,
-        "BreadcrumbList": 1,
-        "ListItem": 3
+        "Answer": 6
       },
       "modified": [
         "2026-05-29"
@@ -1890,11 +1890,11 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
-        "FAQPage": 1,
-        "Question": 6,
-        "Answer": 6,
         "BreadcrumbList": 1,
-        "ListItem": 3
+        "ListItem": 3,
+        "FAQPage": 1,
+        "Question": 9,
+        "Answer": 9
       },
       "modified": [
         "2026-05-29"
@@ -1911,12 +1911,12 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 2,
+        "BreadcrumbList": 1,
+        "ListItem": 3,
         "Article": 1,
         "FAQPage": 1,
         "Question": 4,
-        "Answer": 4,
-        "BreadcrumbList": 1,
-        "ListItem": 3
+        "Answer": 4
       },
       "modified": [
         "2026-05-21",
@@ -1934,13 +1934,13 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 2,
         "WebApplication": 1,
         "Offer": 1,
         "FAQPage": 1,
         "Question": 4,
-        "Answer": 4,
-        "BreadcrumbList": 1,
-        "ListItem": 2
+        "Answer": 4
       },
       "modified": [],
       "issues": []
@@ -1955,12 +1955,12 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 3,
         "Service": 1,
         "FAQPage": 1,
         "Question": 5,
-        "Answer": 5,
-        "BreadcrumbList": 1,
-        "ListItem": 3
+        "Answer": 5
       },
       "modified": [
         "2026-07-10"
@@ -1977,12 +1977,12 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 3,
         "Service": 1,
         "FAQPage": 1,
         "Question": 5,
-        "Answer": 5,
-        "BreadcrumbList": 1,
-        "ListItem": 3
+        "Answer": 5
       },
       "modified": [
         "2026-07-10"
@@ -1999,9 +1999,9 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
-        "LegalService": 1,
         "BreadcrumbList": 1,
-        "ListItem": 2
+        "ListItem": 2,
+        "LegalService": 1
       },
       "modified": [
         "2026-05-26"
@@ -2018,12 +2018,12 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 3,
         "Service": 1,
         "FAQPage": 1,
         "Question": 5,
-        "Answer": 5,
-        "BreadcrumbList": 1,
-        "ListItem": 3
+        "Answer": 5
       },
       "modified": [
         "2026-07-10"
@@ -2040,12 +2040,12 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 3,
         "Service": 1,
         "FAQPage": 1,
         "Question": 5,
-        "Answer": 5,
-        "BreadcrumbList": 1,
-        "ListItem": 3
+        "Answer": 5
       },
       "modified": [
         "2026-07-10"
@@ -2062,12 +2062,12 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 3,
         "Service": 1,
         "FAQPage": 1,
         "Question": 8,
-        "Answer": 8,
-        "BreadcrumbList": 1,
-        "ListItem": 3
+        "Answer": 8
       },
       "modified": [
         "2026-05-29"

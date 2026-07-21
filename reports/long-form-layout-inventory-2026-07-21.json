@@ -15,7 +15,7 @@
       "route": "/",
       "type": "core",
       "sourceFile": "index.html",
-      "wordCount": 2122,
+      "wordCount": 2126,
       "tocItemCount": 10,
       "tableCount": 0,
       "variant": "home",
@@ -26,12 +26,13 @@
       "route": "/afir-autoconsum-agroalimentar",
       "type": "program",
       "sourceFile": "afir-autoconsum-agroalimentar/index.html",
-      "wordCount": 3304,
-      "tocItemCount": 16,
+      "wordCount": 1962,
+      "tocItemCount": 7,
       "tableCount": 1,
       "variant": "rail",
       "decisionActionAdded": true,
-      "contentActionCount": 3
+      "contentActionCount": 3,
+      "managedBy": "program-page-template"
     },
     {
       "route": "/apeluri-gal",

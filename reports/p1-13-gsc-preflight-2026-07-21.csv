@@ -1,0 +1,15 @@
+route,window,clicks,impressions,ctr,position,canonical,indexable,in_sitemap,governance_state,decision
+/dr12-afir,28d,6,588,1.02%,7.71,yes,no,no,pending_validation,BLOCK_FACTUAL_AND_CANONICAL_APPROVAL
+/dr12-afir,last_3_months,35,1227,2.85%,7.83,yes,no,no,pending_validation,REFERENCE_ONLY_NOT_90D
+/dr14,28d,3,267,1.12%,8.18,yes,no,no,pending_validation,BLOCK_FACTUAL_AND_CANONICAL_APPROVAL
+/dr14,last_3_months,27,816,3.31%,7.75,yes,no,no,pending_validation,REFERENCE_ONLY_NOT_90D
+/gal-afir,28d,0,351,0%,6.06,yes,yes,yes,public,HOLD_FOR_QUERY_PAGE_EXPORT_NAVIGATIONAL_RISK
+/gal-afir,last_3_months,0,632,0%,5.99,yes,yes,yes,public,REFERENCE_ONLY_NOT_90D
+/calculator-soc,28d,7,2453,0.29%,8.16,yes,yes,yes,pending_validation,BLOCK_SOURCE_AND_VERSION_APPROVAL
+/calculator-soc,last_3_months,35,4526,0.77%,7.99,yes,yes,yes,pending_validation,REFERENCE_ONLY_NOT_90D
+/femeia-antreprenor-2026,28d,13,1004,1.29%,8.24,yes,yes,yes,public,BLOCK_EXPIRED_EDITORIAL_REVIEW
+/femeia-antreprenor-2026,last_3_months,42,1930,2.18%,8.29,yes,yes,yes,public,REFERENCE_ONLY_NOT_90D
+/por-adr-nord-est,28d,2,69,2.9%,7.51,yes,yes,yes,public,ELIGIBLE_AFTER_EXACT_90D_EXPORT
+/por-adr-nord-est,last_3_months,5,164,3.05%,7.32,yes,yes,yes,public,REFERENCE_ONLY_NOT_90D
+/afir-autoconsum-agroalimentar,28d,1,39,2.56%,13.49,yes,yes,yes,public,DEPRIORITIZE_OUTSIDE_CURRENT_POSITION_RANGE
+/afir-autoconsum-agroalimentar,last_3_months,2,68,2.94%,11.71,yes,yes,yes,public,REFERENCE_ONLY_NOT_90D
