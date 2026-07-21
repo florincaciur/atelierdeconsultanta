@@ -242,7 +242,7 @@
           "heroDescription": "Ghidul răspunde întrebării despre cheltuieli și justificare. Nu declară că un apel este deschis și nu transferă valori din alte programe.",
           "heroActions": [
             {"href": "#categorii-cheltuieli", "label": "Compară cheltuielile", "kind": "primary"},
-            {"href": "/digitalizare-imm", "label": "Pagina Digitalizare IMM", "kind": "secondary"}
+            {"href": "/fonduri-europene-digitalizare", "label": "Vezi familia Digitalizare", "kind": "secondary"}
           ],
           "directAnswer": "Software-ul, hardware-ul, serviciile cloud, securitatea și consultanța tehnică pot avea sens numai când rezolvă un proces identificat și sunt permise de documentul programului analizat. Bugetul trebuie să lege fiecare cost de utilizatori, date, integrare, indicatori și operare. Lista de mai jos ajută la justificare, dar eligibilitatea finală se confirmă în ghidul și anexele apelului.",
           "sections": [
@@ -265,8 +265,8 @@
             {"id": "limite-ghid", "heading": "Ce rămâne de confirmat în program", "paragraphs": ["Categoria de cheltuială, momentul achiziției, plafoanele, tratamentul serviciilor recurente și documentele obligatorii diferă între programe. Ghidul nu publică valori locale și nu numește un apel activ fără registru factual aprobat."]}
           ],
           "internalLinks": [
-            {"href": "/digitalizare-imm", "label": "Vezi pagina canonică Digitalizare IMM"},
             {"href": "/fonduri-europene-digitalizare", "label": "Compară programele de digitalizare și inovare"},
+            {"href": "/surse-oficiale-fonduri-europene", "label": "Consultă sursele oficiale"},
             {"href": "/verificare-eligibilitate-fonduri-europene", "label": "Vezi ce date intră în verificare"}
           ],
           "cta": {"heading": "Ai deja o listă de soluții sau oferte?", "text": "Trimite procesele, cerințele, ofertele și costurile recurente. Verificarea urmărește coerența bugetului și documentele care mai lipsesc.", "href": "/contact", "label": "Trimite contextul proiectului"}

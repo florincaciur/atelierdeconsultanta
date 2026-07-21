@@ -1,8 +1,7 @@
 # P1.07 — Raport de contrast și acoperire
 
-Rezultat: **PASS**
-
-Versiune: `p1.07-v1`
+Rezultat: **PASS**  
+Versiune: `p1.07-v1`  
 Data auditului: 2026-07-21
 
 ## Contrast WCAG

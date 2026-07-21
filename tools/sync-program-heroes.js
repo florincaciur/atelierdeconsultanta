@@ -237,6 +237,14 @@ function syncPage(route, bannerIndex, { check = false, program = null } = {}) {
   const normalizedRoute = normalizeCtaLink(route);
   const filePath = path.join(ROOT, normalizedRoute.slice(1), "index.html");
   if (!fs.existsSync(filePath)) throw new Error(`Missing public page: ${filePath}`);
+  const before = fs.readFileSync(filePath, "utf8");
+  // P1.11 owns the complete hero/status composition for pages migrated to the
+  // compact program template. Re-injecting the legacy hero actions here would
+  // be removed later by sync-program-page-template and make the build
+  // permanently non-idempotent.
+  if (/data-program-template(?:-version)?=/i.test(before)) {
+    return { route: normalizedRoute, filePath, bannerId: "program-page-template", changed: false, skipped: true };
+  }
   const banner = bannerForRoute(normalizedRoute, bannerIndex);
   if (!banner) throw new Error(`Missing banners.json mapping for ${normalizedRoute}`);
   const pageBanner = program
@@ -250,7 +258,6 @@ function syncPage(route, bannerIndex, { check = false, program = null } = {}) {
         sourceVersion: program.sourceVersion || banner.sourceVersion
       }
     : banner;
-  const before = fs.readFileSync(filePath, "utf8");
   const oldHero = findHeroBlock(before);
   const existing = extractExistingHero(oldHero);
   const newHero = renderProgramHero({ route: normalizedRoute, banner: pageBanner, existing });
@@ -282,7 +289,7 @@ function main() {
   }));
   const changed = results.filter((result) => result.changed);
   for (const result of results) {
-    console.log(`${result.changed ? (check ? "OUTDATED" : "UPDATED") : "OK"} ${result.route} <- ${result.bannerId}`);
+    console.log(`${result.skipped ? "SKIPPED_TEMPLATE" : result.changed ? (check ? "OUTDATED" : "UPDATED") : "OK"} ${result.route} <- ${result.bannerId}`);
   }
   console.log(`${results.length} program heroes checked; ${changed.length} ${check ? "outdated" : "updated"}.`);
   if (check && changed.length) process.exitCode = 1;

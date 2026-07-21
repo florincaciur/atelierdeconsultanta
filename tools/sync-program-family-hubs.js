@@ -164,7 +164,7 @@ function renderMain(hub, programs, filters, hubRecord = null) {
   const editorialRecord = loadEditorialGovernance().byRoute.get(hub.route);
   const editorialGovernance = editorialRecord ? `\n\n${renderEditorialGovernance(editorialRecord)}` : "";
 
-  return `<main class="container program-family-hub" data-program-family-hub="${esc(hub.id)}">
+  return `<main class="container program-family-hub" id="main-content" tabindex="-1" data-program-family-hub="${esc(hub.id)}">
   <section class="program-family-filter-panel" aria-labelledby="program-family-filter-title">
     <div class="program-family-filter-panel__heading">
       <div>

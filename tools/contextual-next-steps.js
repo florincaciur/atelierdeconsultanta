@@ -80,6 +80,11 @@ function applyContextualNextSteps(html, slug, config = loadNextStepConfig()) {
   const marked = /<!-- CONTEXTUAL_NEXT_STEP_START -->[\s\S]*?<!-- CONTEXTUAL_NEXT_STEP_END -->/u;
   if (marked.test(html)) return html.replace(marked, block);
 
+  // P1.14 pages own their related links and conversion CTA through the
+  // editorial-cluster registry. They intentionally no longer contain the
+  // legacy related-links placeholder expected by this generator.
+  if (/\bdata-editorial-cluster=/iu.test(html)) return html;
+
   const pattern = page.layout === "standalone"
     ? /<section\b[^>]*class="[^"]*\bvezi-si-section\b[^"]*"[^>]*>[\s\S]*?<\/section>/gu
     : /<div\b[^>]*class="[^"]*\brelated-links\b[^"]*"[^>]*>[\s\S]*?<\/div>/gu;
