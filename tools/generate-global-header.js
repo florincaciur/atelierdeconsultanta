@@ -9,7 +9,7 @@ const ROOT = path.resolve(__dirname, "..");
 const CONFIG_PATH = path.join(ROOT, "config", "main-navigation.json");
 const PARTIAL_PATH = path.join(ROOT, "partials", "global-header.html");
 const REPORT_PATH = path.join(ROOT, "reports", "main-navigation-sitemap-2026-07-21.md");
-const ASSET_VERSION = "20260722-5";
+const ASSET_VERSION = "20260722-6";
 
 function loadConfig() {
   return JSON.parse(fs.readFileSync(CONFIG_PATH, "utf8"));
@@ -180,8 +180,8 @@ function renderHeader(config = loadConfig(), programs = loadProgramConfig().prog
   <div class="nav-container">
     ${logo()}
     <div class="nav-links" data-desktop-navigation>
-${groups.map((group) => group.id === "programe" ? desktopProgramGroup(group, config, programs) : desktopGroup(group)).join("\n")}
 ${desktopHomepageToc(config)}
+${groups.map((group) => group.id === "programe" ? desktopProgramGroup(group, config, programs) : desktopGroup(group)).join("\n")}
       <a href="${escapeHtml(contact.href)}" class="nav-primary-link" data-nav-destination="contact" ${analyticsAttributes(contact, "desktop_nav", "contact")}>${escapeHtml(contact.label)}</a>
       <a href="${escapeHtml(cta.href)}" class="nav-cta" data-analytics-event="cta_click" data-analytics-component="desktop_nav" data-analytics-cta-id="${escapeHtml(cta.analyticsId)}_desktop" data-analytics-target="${escapeHtml(cta.href)}" data-analytics-cta-view="true" data-analytics-copy-variant="p1_02">${escapeHtml(cta.label)}</a>
     </div>
@@ -193,8 +193,8 @@ ${desktopHomepageToc(config)}
 </nav>
 <div id="mobileMenu" aria-label="Meniu principal mobil" hidden>
   <nav class="mobile-links" aria-label="Destinații principale">
-${groups.map((group) => group.id === "programe" ? mobileProgramGroup(group, config, programs) : mobileGroup(group)).join("\n")}
 ${mobileHomepageToc(config)}
+${groups.map((group) => group.id === "programe" ? mobileProgramGroup(group, config, programs) : mobileGroup(group)).join("\n")}
     <a href="${escapeHtml(contact.href)}" class="mobile-contact" data-nav-destination="contact" ${analyticsAttributes(contact, "mobile_nav", "contact")}>${escapeHtml(contact.label)}</a>
     <a href="${escapeHtml(cta.href)}" class="mobile-cta" data-analytics-event="cta_click" data-analytics-component="mobile_nav" data-analytics-cta-id="${escapeHtml(cta.analyticsId)}_mobile" data-analytics-target="${escapeHtml(cta.href)}" data-analytics-cta-view="true" data-analytics-copy-variant="p1_02">${escapeHtml(cta.label)}</a>
   </nav>

@@ -49,7 +49,7 @@
       "microConversion": "cta_click către formularul de triere",
       "parent": "ROOT",
       "competingUrls": [],
-      "demonstrableUniqueValue": "24 subtitluri distincte, 0 FAQ și 0 linkuri externe în sursa HTML.",
+      "demonstrableUniqueValue": "20 subtitluri distincte, 0 FAQ și 0 linkuri externe în sursa HTML.",
       "recommendation": "keep",
       "recommendationTarget": null,
       "recommendationReason": "Rol distinct de core, cu o singură intenție primară și conversie proprie.",
@@ -59,10 +59,10 @@
       "evidence": {
         "title": "Consultanță și proiectare fonduri europene | FABER",
         "metaDescription": "FABER oferă consultanță și proiectare pentru proiecte cu fonduri europene: eligibilitate, cereri de finanțare, documentații tehnice și implementare.",
-        "headingCount": 24,
+        "headingCount": 20,
         "faqCount": 0,
         "externalLinkCount": 0,
-        "interactiveControlCount": 2,
+        "interactiveControlCount": 15,
         "governanceState": "NEÎNREGISTRAT",
         "programRegistryState": "NU_ESTE_PROGRAM_ÎN_REGISTRU"
       }
@@ -1545,7 +1545,7 @@
       "microConversion": "cta_click:project_check_how",
       "parent": "/fonduri-europene",
       "competingUrls": [],
-      "demonstrableUniqueValue": "12 subtitluri distincte, 5 FAQ și 3 linkuri externe în sursa HTML.",
+      "demonstrableUniqueValue": "13 subtitluri distincte, 5 FAQ și 4 linkuri externe în sursa HTML.",
       "recommendation": "keep",
       "recommendationTarget": null,
       "recommendationReason": "Rol distinct de hub, cu o singură intenție primară și conversie proprie.",
@@ -1555,9 +1555,9 @@
       "evidence": {
         "title": "Finantari panouri fotovoltaice - autoconsum și energie",
         "metaDescription": "Finantari pentru panouri fotovoltaice: autoconsum, energie regenerabilă, Fondul pentru Modernizare, documente, buget și eligibilitate.",
-        "headingCount": 12,
+        "headingCount": 13,
         "faqCount": 5,
-        "externalLinkCount": 3,
+        "externalLinkCount": 4,
         "interactiveControlCount": 5,
         "governanceState": "NEÎNREGISTRAT",
         "programRegistryState": "NU_ESTE_PROGRAM_ÎN_REGISTRU"
@@ -2235,7 +2235,7 @@
       "microConversion": "cta_click:project_check_how",
       "parent": "/fonduri-europene",
       "competingUrls": [],
-      "demonstrableUniqueValue": "10 subtitluri distincte, 6 FAQ și 3 linkuri externe în sursa HTML.",
+      "demonstrableUniqueValue": "9 subtitluri distincte, 6 FAQ și 2 linkuri externe în sursa HTML.",
       "recommendation": "keep",
       "recommendationTarget": null,
       "recommendationReason": "Rol distinct de hub, cu o singură intenție primară și conversie proprie.",
@@ -2245,9 +2245,9 @@
       "evidence": {
         "title": "Fonduri regionale 2021–2027 și ADR-uri | FABER",
         "metaDescription": "Programe regionale 2021–2027: identificarea ADR-ului, apelului, solicitantului, localizării, documentelor și sursei oficiale aplicabile.",
-        "headingCount": 10,
+        "headingCount": 9,
         "faqCount": 6,
-        "externalLinkCount": 3,
+        "externalLinkCount": 2,
         "interactiveControlCount": 5,
         "governanceState": "public",
         "programRegistryState": "public"

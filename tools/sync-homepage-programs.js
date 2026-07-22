@@ -83,7 +83,6 @@ function renderPriorityCarousel(programs, bannersByProgram) {
   featured.forEach((program) => validateProgram(program, "carusel"));
   const total = featured.length;
   const slides = featured.map((program, index) => renderPrioritySlide(program, bannersByProgram.get(program.slug), index, total)).join("\n");
-  const hubLinks = HUBS.hubs.map((hub) => `          <a href="${esc(hub.route)}">${esc(hub.label)}</a>`).join("\n");
   return `${PRIORITY_START}
     <section id="priority-programs" aria-labelledby="priority-programs-title">
       <div class="program-explorer-header">
@@ -104,10 +103,6 @@ ${slides}
           <a class="priority-program-all" href="${esc(CONFIG.carousel.allProgramsUrl)}">Vezi toate programele</a>
         </div>
       </div>
-      <nav class="homepage-program-hubs" aria-label="Familii de programe">
-        <span>ExploreazÄƒ dupÄƒ familie:</span>
-${hubLinks}
-      </nav>
     </section>
 ${PRIORITY_END}`;
 }

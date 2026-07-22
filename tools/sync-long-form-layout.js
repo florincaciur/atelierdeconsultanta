@@ -50,8 +50,8 @@ function removeInjected(html) {
   return html
     .replace(new RegExp(`${TOC_START}[\\s\\S]*?${TOC_END}\\s*`, "g"), "")
     .replace(new RegExp(`${ACTION_START}[\\s\\S]*?${ACTION_END}\\s*`, "g"), "")
-    .replace(/[ \t]*<link\b[^>]*data-long-form-layout-style=["']p1_09["'][^>]*>/gi, "")
-    .replace(/[ \t]*<script\b[^>]*data-long-form-layout-script=["']p1_09["'][^>]*><\/script>/gi, "")
+    .replace(/[ \t]*<link\b[^>]*data-long-form-layout-style=["']p1_09["'][^>]*>[ \t]*(?:\r?\n)?/gi, "")
+    .replace(/[ \t]*<script\b[^>]*data-long-form-layout-script=["']p1_09["'][^>]*><\/script>[ \t]*(?:\r?\n)?/gi, "")
     .replace(/\s*<nav\b[^>]*class=["'][^"']*\barticle-toc\b[^"']*["'][^>]*>[\s\S]*?<\/nav>/gi, "")
     .replace(/<div class="long-form-table-region"[^>]*>\s*(<table\b[\s\S]*?<\/table>)\s*<\/div>/gi, "$1")
     .replace(/\sdata-long-form-page=(?:"[^"]*"|'[^']*')/gi, "")

@@ -40,6 +40,8 @@ const programBySlug = new Map(loadProgramConfig().programs.map((program) => [pro
 
 assert.equal(config.primaryDestinations.length, 6, "navigation must expose exactly six primary destinations");
 assert.equal(grouped.length, 5, "five primary destinations must use disclosure groups");
+assert.equal($("#navbar .nav-links").children().first().is("[data-homepage-navbar-toc]"), true, "homepage TOC must be first on desktop");
+assert.equal($("#mobileMenu .mobile-links").children().first().is("[data-homepage-navbar-toc]"), true, "homepage TOC must be first on mobile");
 assert.deepEqual(
   $("#navbar [data-nav-disclosure]:not([data-homepage-navbar-toc]) > button").map((_, element) => $(element).clone().children().remove().end().text().trim()).get(),
   expectedLabels.slice(0, 5),

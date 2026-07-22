@@ -32,16 +32,27 @@ try {
       carousels: document.querySelectorAll("main [data-priority-carousel]").length,
       sections: document.querySelectorAll("main > section").length,
       ctaBottom: document.querySelector("#hero .btn-primary")?.getBoundingClientRect().bottom,
-      tocOpen: document.querySelector("#nav-homepage-toc-trigger")?.getAttribute("aria-expanded") === "true"
+      tocOpen: document.querySelector("#nav-homepage-toc-trigger")?.getAttribute("aria-expanded") === "true",
+      familyDescription: document.querySelectorAll(".homepage-program-hubs").length,
+      methodVisible: Array.from(document.querySelectorAll("[data-homepage-method-frame]")).filter((node) => getComputedStyle(node).display !== "none").length,
+      explorerVisible: Array.from(document.querySelectorAll("[data-homepage-explorer-frame]")).filter((node) => getComputedStyle(node).display !== "none").length
     }));
     assert(metrics.overflow <= 0, `${viewport.width}px: scroll orizontal`);
     assert.equal(metrics.forms, 0);
     assert.equal(metrics.carousels, 1);
-    assert.equal(metrics.sections, 8);
+    assert.equal(metrics.sections, 5);
     assert.equal(metrics.tocOpen, false);
+    assert.equal(metrics.familyDescription, 0);
+    assert.equal(metrics.methodVisible, 1);
+    assert.equal(metrics.explorerVisible, 1);
     if (viewport.width === 390 || viewport.width === 1366) assert(metrics.ctaBottom <= viewport.height, `${viewport.width}px: CTA-ul principal este sub fold`);
     await page.locator("[data-priority-next]").click();
     assert.equal((await page.locator("[data-priority-counter]").textContent()).trim(), "2 din 6");
+    await page.locator("[data-homepage-method-next]").click();
+    assert.match((await page.locator("[data-homepage-method-status]").textContent()).trim(), /^Etapa 2 din 5:/);
+    await page.locator("[data-homepage-explorer-next]").click();
+    assert.match((await page.locator("[data-homepage-explorer-status]").textContent()).trim(), /^Secțiunea 2 din 4:/);
+    assert.equal(await page.locator("[data-homepage-explorer-frame]").evaluateAll((frames) => frames.filter((node) => getComputedStyle(node).display !== "none").length), 1);
     assert.deepEqual(consoleErrors, [], `${viewport.width}px: erori console`);
     await page.close();
   }

@@ -74,7 +74,7 @@ Statusul folosește exclusiv taxonomia registrului: `apel_deschis`, `ghid_aproba
 | Fondul pentru Modernizare – energie regenerabilă | `/fondul-modernizare-energie-regenerabila-2026` | Energie — `/finantari-panouri-fotovoltaice` | `public` | Da |
 | AFIR Autoconsum Agroalimentar | `/afir-autoconsum-agroalimentar` | AFIR & agricultură — `/afir` | `public` | Da |
 | Autoconsum instituții publice | `/autoconsum-public-fotovoltaice-institutii-publice` | Energie — `/finantari-panouri-fotovoltaice` | `public` | Da |
-| PRO INFRA | `/pro-infra` | Regional / ADR — `/fonduri-regionale` | `public` | Da |
+| PRO INFRA | `/pro-infra` | Energie — `/finantari-panouri-fotovoltaice` | `public` | Da |
 | Apeluri GAL | `/apeluri-gal` | Antreprenoriat & GAL — `/fonduri-europene-imm` | `public` | Da |
 | GAL-AFIR / LEADER | `/gal-afir` | Antreprenoriat & GAL — `/fonduri-europene-imm` | `public` | Da |
 | e-MOVE RO | `/e-move` | Energie — `/finantari-panouri-fotovoltaice` | `public` | Da |

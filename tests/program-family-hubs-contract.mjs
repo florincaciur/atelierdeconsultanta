@@ -25,6 +25,12 @@ const { programs } = loadProgramConfig();
 const homepage = cheerio.load(fs.readFileSync(path.join(ROOT, "index.html"), "utf8"), { decodeEntities: false });
 const hubDocuments = new Map();
 
+const proInfra = programs.find((program) => program.slug === "pro-infra");
+assert(proInfra, "PRO INFRA must exist in the program registry");
+assert.equal(proInfra.family, "energie", "PRO INFRA is a national energy-efficiency program, not a regional program");
+assert.equal(proInfra.discovery.parentHub, "/finantari-panouri-fotovoltaice", "PRO INFRA must be assigned to the Energy hub");
+assert.deepEqual(proInfra.discovery.regions, ["national"], "PRO INFRA coverage must remain explicitly national");
+
 function routeFile(route) {
   return path.join(ROOT, route.replace(/^\//u, ""), "index.html");
 }
@@ -64,6 +70,9 @@ for (const hub of hubConfig.hubs) {
   assert.equal($(".program-family-related a").length, hub.relatedLinks.length, `${hub.route}: relevant resources must match config`);
   assert.ok($("a[href='/verificare-eligibilitate-fonduri-europene']").length >= 1, `${hub.route}: project verification CTA is missing`);
 }
+
+assert.equal(hubDocuments.get("/fonduri-regionale")("[data-program-card][data-program-id='pro-infra']").length, 0, "PRO INFRA must not appear in the Regional / ADR hub");
+assert.equal(hubDocuments.get("/finantari-panouri-fotovoltaice")("[data-program-card][data-program-id='pro-infra'] .program-family-card__scope").text().includes("Național"), true, "PRO INFRA must be visibly labeled as national in the Energy hub");
 
 const hubRoutes = new Set(EXPECTED_HUB_ROUTES);
 for (const [dictionaryName, dictionary] of Object.entries(hubConfig.filters)) {

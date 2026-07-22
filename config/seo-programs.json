@@ -716,7 +716,7 @@
       "slug": "pro-infra",
       "name": "Schema de ajutor de stat PRO INFRA",
       "shortName": "PRO INFRA",
-      "family": "infrastructura",
+      "family": "energie",
       "status": "ghid_aprobat_nedeschis",
       "statusLabel": "Schemă aprobată – depunerea nu este deschisă",
       "publicationState": "public",
@@ -752,7 +752,7 @@
         "beneficiary": null
       },
       "discovery": {
-        "parentHub": "/fonduri-regionale",
+        "parentHub": "/finantari-panouri-fotovoltaice",
         "applicantTypes": [
           "nespecificat"
         ],

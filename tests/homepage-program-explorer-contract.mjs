@@ -47,10 +47,10 @@ slides.each((index, slide) => {
 });
 
 assert.equal($("[data-program-directory], [data-program-directory-card]").length, 0, "gridul complet trebuie mutat pe huburi, nu păstrat pe homepage");
-const hubConfig = JSON.parse(fs.readFileSync(path.join(ROOT, "config", "program-family-hubs.json"), "utf8"));
 const hubLinks = $(".homepage-program-hubs a");
-assert.equal(hubLinks.length, 5, "homepage-ul trebuie să trimită spre cele cinci huburi, fără al doilea carusel/grid");
-assert.deepEqual(hubLinks.map((_, link) => $(link).attr("href")).get(), hubConfig.hubs.map((hub) => hub.route));
+assert.equal(hubLinks.length, 0, "descrierea redundantă de familie trebuie eliminată");
+assert.equal($(".homepage-program-hubs").length, 0);
+assert(!$("main").text().includes("Explorează după familie"));
 
 assert.equal($("#carousel-section, #finantare, #financing-grid, #program-carousel-track").length, 0, "componentele repetitive vechi trebuie eliminate");
 assert(!html.includes("programCarouselState") && !html.includes("loadProgramCarousel"), "runtime-ul caruselului vechi trebuie eliminat");
@@ -62,4 +62,4 @@ assert(js.includes('toggleAttribute("inert"'), "slide-urile ascunse trebuie scoa
 assert(css.includes("min-height: 44px") && css.includes("touch-action: pan-y"), "targeturile mobile și gesturile touch trebuie definite");
 assert(css.includes("@media (max-width: 42rem)"), "lipsește reflow-ul mobil");
 
-console.log(`Homepage program explorer contract PASS: ${slides.length} priorități, un carusel și ${hubLinks.length} huburi.`);
+console.log(`Homepage program explorer contract PASS: ${slides.length} priorități, un carusel și zero descrieri redundante.`);

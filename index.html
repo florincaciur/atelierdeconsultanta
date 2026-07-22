@@ -169,15 +169,14 @@
   <link rel="preload" as="style" href="/assets/seo-plan-execution.css" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="/assets/see-also.css"><link rel="stylesheet" href="/assets/design-profiles.css?v=20260720-1"><link rel="stylesheet" href="/assets/seo-plan-execution.css"></noscript>
   <link rel="stylesheet" href="/assets/design-system.css?v=20260721-1" data-design-system-stylesheet="p1_07">
-<link rel="stylesheet" href="/assets/homepage-decision-flow.css?v=20260722-1" data-homepage-decision-flow-style="p1_21">
     <link rel="stylesheet" href="/assets/homepage-program-explorer.css?v=20260721-1" data-homepage-program-explorer-style="p1_08">
   <script src="/assets/homepage-program-explorer.js?v=20260721-1" defer data-homepage-program-explorer-script="p1_08"></script>
   <script src="/assets/lead-attribution.js" defer></script>
   <script src="/assets/analytics-events.js" defer></script>
   <link rel="stylesheet" href="/assets/contextual-cta.css?v=20260722-1">
   <script src="/assets/contextual-cta.js?v=20260722-1" defer></script>
-
-
+  <link rel="stylesheet" href="/assets/homepage-decision-flow.css?v=20260722-2" data-homepage-decision-flow-style="p1_22">
+  <script src="/assets/homepage-decision-flow.js?v=20260722-2" defer data-homepage-decision-flow-script="p1_22"></script>
   <style id="homepage-hero-critical-css">
 #hero.homepage-decision-hero {
   min-height: 0;
@@ -556,14 +555,14 @@
   <script src="/assets/long-form-layout.js?v=20260721-6" defer data-long-form-layout-script="p1_09"></script>
 </head>
 
-<body class="page-family-home" data-analytics-page-type="home" data-design-system="p1_07" data-long-form-page="true" data-long-form-type="core" data-long-form-word-count="411">
+<body class="page-family-home" data-analytics-page-type="home" data-design-system="p1_07" data-long-form-page="true" data-long-form-type="core" data-long-form-word-count="422">
   <!-- ✦ Skip link pentru accesibilitate ✦ -->
   <a class="skip-link" href="#main-content">Sari la conținut</a>
 
   <!-- ============================================================
        ✦ NAVBAR ✦
   ============================================================ -->
-  <!-- GLOBAL_HEADER_START --><link rel="stylesheet" href="/assets/global-header.css?v=20260722-5">
+  <!-- GLOBAL_HEADER_START --><link rel="stylesheet" href="/assets/global-header.css?v=20260722-6">
 <nav id="navbar" aria-label="Navigare principală" data-navigation-config="config/main-navigation.json">
   <div class="nav-container">
     <a class="nav-logo" href="/" aria-label="FABER – Atelier de Consultanță, acasă" data-analytics-event="nav_click" data-analytics-component="desktop_nav" data-analytics-cta-id="home_logo" data-analytics-target="/">
@@ -575,6 +574,19 @@
       </svg>
     </a>
     <div class="nav-links" data-desktop-navigation>
+      <div class="nav-dropdown homepage-navbar-toc" data-nav-disclosure data-nav-group="cuprins" data-homepage-navbar-toc hidden>
+        <button class="nav-dropdown-btn" type="button" id="nav-homepage-toc-trigger" aria-expanded="false" aria-controls="nav-homepage-toc-panel" data-analytics-event="nav_click" data-analytics-component="desktop_nav_disclosure" data-analytics-cta-id="nav_cuprins_toggle">
+          Cuprins <span class="arrow" aria-hidden="true"></span>
+        </button>
+        <div class="nav-dropdown-panel homepage-navbar-toc__panel" id="nav-homepage-toc-panel" aria-labelledby="nav-homepage-toc-trigger" hidden>
+          <p class="dropdown-header">Cuprins</p>
+          <nav aria-label="Cuprinsul paginii"><ol class="nav-submenu-list">          <li><a href="/#hero-programs-title" class="dropdown-item" data-homepage-toc-link aria-current="location" data-analytics-event="nav_click" data-analytics-component="desktop_homepage_toc" data-analytics-cta-id="nav_cuprins_hero_programs_title" data-analytics-target="/#hero-programs-title">Măsuri de finanțare</a></li>
+          <li><a href="/#homepage-method-title" class="dropdown-item" data-homepage-toc-link data-analytics-event="nav_click" data-analytics-component="desktop_homepage_toc" data-analytics-cta-id="nav_cuprins_homepage_method_title" data-analytics-target="/#homepage-method-title">Cum decidem dacă merită continuat</a></li>
+          <li><a href="/#priority-programs-title" class="dropdown-item" data-homepage-toc-link data-analytics-event="nav_click" data-analytics-component="desktop_homepage_toc" data-analytics-cta-id="nav_cuprins_priority_programs_title" data-analytics-target="/#priority-programs-title">Programe prioritare</a></li>
+          <li><a href="/#homepage-explorer-title" class="dropdown-item" data-homepage-toc-link data-analytics-event="nav_click" data-analytics-component="desktop_homepage_toc" data-analytics-cta-id="nav_cuprins_homepage_explorer_title" data-analytics-target="/#homepage-explorer-title">Servicii, instrumente și analiză</a></li>
+          <li><a href="/#homepage-contact-title" class="dropdown-item" data-homepage-toc-link data-analytics-event="nav_click" data-analytics-component="desktop_homepage_toc" data-analytics-cta-id="nav_cuprins_homepage_contact_title" data-analytics-target="/#homepage-contact-title">Următorul pas</a></li></ol></nav>
+        </div>
+      </div>
       <div class="nav-dropdown" data-nav-disclosure data-nav-group="servicii">
         <button class="nav-dropdown-btn" type="button" id="nav-servicii-trigger" aria-expanded="false" aria-controls="nav-servicii-panel"  data-analytics-event="nav_click" data-analytics-component="desktop_nav_disclosure" data-analytics-cta-id="nav_servicii_toggle">
           Servicii <span class="arrow" aria-hidden="true"></span>
@@ -662,22 +674,6 @@
           </ul>
         </div>
       </div>
-      <div class="nav-dropdown homepage-navbar-toc" data-nav-disclosure data-nav-group="cuprins" data-homepage-navbar-toc hidden>
-        <button class="nav-dropdown-btn" type="button" id="nav-homepage-toc-trigger" aria-expanded="false" aria-controls="nav-homepage-toc-panel" data-analytics-event="nav_click" data-analytics-component="desktop_nav_disclosure" data-analytics-cta-id="nav_cuprins_toggle">
-          Cuprins <span class="arrow" aria-hidden="true"></span>
-        </button>
-        <div class="nav-dropdown-panel homepage-navbar-toc__panel" id="nav-homepage-toc-panel" aria-labelledby="nav-homepage-toc-trigger" hidden>
-          <p class="dropdown-header">Cuprins</p>
-          <nav aria-label="Cuprinsul paginii"><ol class="nav-submenu-list">          <li><a href="/#hero-programs-title" class="dropdown-item" data-homepage-toc-link aria-current="location" data-analytics-event="nav_click" data-analytics-component="desktop_homepage_toc" data-analytics-cta-id="nav_cuprins_hero_programs_title" data-analytics-target="/#hero-programs-title">Măsuri de finanțare</a></li>
-          <li><a href="/#homepage-method-title" class="dropdown-item" data-homepage-toc-link data-analytics-event="nav_click" data-analytics-component="desktop_homepage_toc" data-analytics-cta-id="nav_cuprins_homepage_method_title" data-analytics-target="/#homepage-method-title">Cum decidem dacă merită continuat</a></li>
-          <li><a href="/#priority-programs-title" class="dropdown-item" data-homepage-toc-link data-analytics-event="nav_click" data-analytics-component="desktop_homepage_toc" data-analytics-cta-id="nav_cuprins_priority_programs_title" data-analytics-target="/#priority-programs-title">Programe prioritare</a></li>
-          <li><a href="/#homepage-services-title" class="dropdown-item" data-homepage-toc-link data-analytics-event="nav_click" data-analytics-component="desktop_homepage_toc" data-analytics-cta-id="nav_cuprins_homepage_services_title" data-analytics-target="/#homepage-services-title">Servicii</a></li>
-          <li><a href="/#homepage-tools-title" class="dropdown-item" data-homepage-toc-link data-analytics-event="nav_click" data-analytics-component="desktop_homepage_toc" data-analytics-cta-id="nav_cuprins_homepage_tools_title" data-analytics-target="/#homepage-tools-title">Instrumente și ghiduri</a></li>
-          <li><a href="/#homepage-proof-title" class="dropdown-item" data-homepage-toc-link data-analytics-event="nav_click" data-analytics-component="desktop_homepage_toc" data-analytics-cta-id="nav_cuprins_homepage_proof_title" data-analytics-target="/#homepage-proof-title">De ce FABER</a></li>
-          <li><a href="/#homepage-analysis-title" class="dropdown-item" data-homepage-toc-link data-analytics-event="nav_click" data-analytics-component="desktop_homepage_toc" data-analytics-cta-id="nav_cuprins_homepage_analysis_title" data-analytics-target="/#homepage-analysis-title">Analiza DR 12 vs DR 14</a></li>
-          <li><a href="/#homepage-contact-title" class="dropdown-item" data-homepage-toc-link data-analytics-event="nav_click" data-analytics-component="desktop_homepage_toc" data-analytics-cta-id="nav_cuprins_homepage_contact_title" data-analytics-target="/#homepage-contact-title">Contact</a></li></ol></nav>
-        </div>
-      </div>
       <a href="/contact" class="nav-primary-link" data-nav-destination="contact" data-analytics-event="nav_click" data-analytics-component="desktop_nav" data-analytics-cta-id="nav_contact_contact" data-analytics-target="/contact">Contact</a>
       <a href="/contact" class="nav-cta" data-analytics-event="cta_click" data-analytics-component="desktop_nav" data-analytics-cta-id="project_check_start_desktop" data-analytics-target="/contact" data-analytics-cta-view="true" data-analytics-copy-variant="p1_02">Începe verificarea proiectului</a>
     </div>
@@ -689,6 +685,16 @@
 </nav>
 <div id="mobileMenu" aria-label="Meniu principal mobil" hidden>
   <nav class="mobile-links" aria-label="Destinații principale">
+      <section class="mobile-disclosure mobile-homepage-toc" data-mobile-disclosure data-nav-group="cuprins" data-homepage-navbar-toc hidden>
+        <button class="mobile-disclosure-btn" type="button" id="mobile-homepage-toc-trigger" aria-expanded="false" aria-controls="mobile-homepage-toc-panel" data-analytics-event="nav_click" data-analytics-component="mobile_nav_disclosure" data-analytics-cta-id="nav_cuprins_toggle_mobile">
+          Cuprins <span class="arrow" aria-hidden="true"></span>
+        </button>
+        <div class="mobile-disclosure-panel" id="mobile-homepage-toc-panel" aria-labelledby="mobile-homepage-toc-trigger" hidden><ul>            <li><a href="/#hero-programs-title" data-homepage-toc-link-mobile data-analytics-event="nav_click" data-analytics-component="mobile_homepage_toc" data-analytics-cta-id="nav_cuprins_hero_programs_title" data-analytics-target="/#hero-programs-title">Măsuri de finanțare</a></li>
+            <li><a href="/#homepage-method-title" data-homepage-toc-link-mobile data-analytics-event="nav_click" data-analytics-component="mobile_homepage_toc" data-analytics-cta-id="nav_cuprins_homepage_method_title" data-analytics-target="/#homepage-method-title">Cum decidem dacă merită continuat</a></li>
+            <li><a href="/#priority-programs-title" data-homepage-toc-link-mobile data-analytics-event="nav_click" data-analytics-component="mobile_homepage_toc" data-analytics-cta-id="nav_cuprins_priority_programs_title" data-analytics-target="/#priority-programs-title">Programe prioritare</a></li>
+            <li><a href="/#homepage-explorer-title" data-homepage-toc-link-mobile data-analytics-event="nav_click" data-analytics-component="mobile_homepage_toc" data-analytics-cta-id="nav_cuprins_homepage_explorer_title" data-analytics-target="/#homepage-explorer-title">Servicii, instrumente și analiză</a></li>
+            <li><a href="/#homepage-contact-title" data-homepage-toc-link-mobile data-analytics-event="nav_click" data-analytics-component="mobile_homepage_toc" data-analytics-cta-id="nav_cuprins_homepage_contact_title" data-analytics-target="/#homepage-contact-title">Următorul pas</a></li></ul></div>
+      </section>
       <section class="mobile-disclosure" data-mobile-disclosure data-nav-group="servicii">
         <button class="mobile-disclosure-btn" type="button" id="mobile-servicii-trigger" aria-expanded="false" aria-controls="mobile-servicii-panel" data-analytics-event="nav_click" data-analytics-component="mobile_nav_disclosure" data-analytics-cta-id="nav_servicii_toggle_mobile">
           Servicii <span class="arrow" aria-hidden="true"></span>
@@ -760,19 +766,6 @@
           </ul>
         </div>
       </section>
-      <section class="mobile-disclosure mobile-homepage-toc" data-mobile-disclosure data-nav-group="cuprins" data-homepage-navbar-toc hidden>
-        <button class="mobile-disclosure-btn" type="button" id="mobile-homepage-toc-trigger" aria-expanded="false" aria-controls="mobile-homepage-toc-panel" data-analytics-event="nav_click" data-analytics-component="mobile_nav_disclosure" data-analytics-cta-id="nav_cuprins_toggle_mobile">
-          Cuprins <span class="arrow" aria-hidden="true"></span>
-        </button>
-        <div class="mobile-disclosure-panel" id="mobile-homepage-toc-panel" aria-labelledby="mobile-homepage-toc-trigger" hidden><ul>            <li><a href="/#hero-programs-title" data-homepage-toc-link-mobile data-analytics-event="nav_click" data-analytics-component="mobile_homepage_toc" data-analytics-cta-id="nav_cuprins_hero_programs_title" data-analytics-target="/#hero-programs-title">Măsuri de finanțare</a></li>
-            <li><a href="/#homepage-method-title" data-homepage-toc-link-mobile data-analytics-event="nav_click" data-analytics-component="mobile_homepage_toc" data-analytics-cta-id="nav_cuprins_homepage_method_title" data-analytics-target="/#homepage-method-title">Cum decidem dacă merită continuat</a></li>
-            <li><a href="/#priority-programs-title" data-homepage-toc-link-mobile data-analytics-event="nav_click" data-analytics-component="mobile_homepage_toc" data-analytics-cta-id="nav_cuprins_priority_programs_title" data-analytics-target="/#priority-programs-title">Programe prioritare</a></li>
-            <li><a href="/#homepage-services-title" data-homepage-toc-link-mobile data-analytics-event="nav_click" data-analytics-component="mobile_homepage_toc" data-analytics-cta-id="nav_cuprins_homepage_services_title" data-analytics-target="/#homepage-services-title">Servicii</a></li>
-            <li><a href="/#homepage-tools-title" data-homepage-toc-link-mobile data-analytics-event="nav_click" data-analytics-component="mobile_homepage_toc" data-analytics-cta-id="nav_cuprins_homepage_tools_title" data-analytics-target="/#homepage-tools-title">Instrumente și ghiduri</a></li>
-            <li><a href="/#homepage-proof-title" data-homepage-toc-link-mobile data-analytics-event="nav_click" data-analytics-component="mobile_homepage_toc" data-analytics-cta-id="nav_cuprins_homepage_proof_title" data-analytics-target="/#homepage-proof-title">De ce FABER</a></li>
-            <li><a href="/#homepage-analysis-title" data-homepage-toc-link-mobile data-analytics-event="nav_click" data-analytics-component="mobile_homepage_toc" data-analytics-cta-id="nav_cuprins_homepage_analysis_title" data-analytics-target="/#homepage-analysis-title">Analiza DR 12 vs DR 14</a></li>
-            <li><a href="/#homepage-contact-title" data-homepage-toc-link-mobile data-analytics-event="nav_click" data-analytics-component="mobile_homepage_toc" data-analytics-cta-id="nav_cuprins_homepage_contact_title" data-analytics-target="/#homepage-contact-title">Contact</a></li></ul></div>
-      </section>
     <a href="/contact" class="mobile-contact" data-nav-destination="contact" data-analytics-event="nav_click" data-analytics-component="mobile_nav" data-analytics-cta-id="nav_contact_contact" data-analytics-target="/contact">Contact</a>
     <a href="/contact" class="mobile-cta" data-analytics-event="cta_click" data-analytics-component="mobile_nav" data-analytics-cta-id="project_check_start_mobile" data-analytics-target="/contact" data-analytics-cta-view="true" data-analytics-copy-variant="p1_02">Începe verificarea proiectului</a>
   </nav>
@@ -790,7 +783,7 @@
   </div>
 </div>
 <div class="global-header-spacer" aria-hidden="true"></div>
-<script src="/assets/global-header.js?v=20260722-5"></script>
+<script src="/assets/global-header.js?v=20260722-6"></script>
 <!-- GLOBAL_HEADER_END -->
 
   <!-- ============================================================
@@ -836,7 +829,7 @@
               <li><a href="/dr12-afir" data-hero-program-item data-program-id="dr12-afir" data-program-status="consultare_publica" data-status-label="Ghid consultativ – depunerea nu este deschisă. Condițiile se pot modifica." data-verified-at="2026-07-22" data-source-url="https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/" data-title="DR12 AFIR" data-status="Ghid consultativ – depunerea nu este deschisă. Condițiile se pot modifica." data-analytics-event="program_card_click" data-analytics-component="homepage_hero_program_menu" data-analytics-cta-id="hero_program_dr12-afir" data-analytics-program-slug="dr12-afir" data-analytics-program-family="afir-agricultura">DR12 AFIR</a></li>
               <li><a href="/dr14" data-hero-program-item data-program-id="dr14-afir" data-program-status="consultare_publica" data-status-label="Ghid consultativ – depunerea nu este deschisă. Condițiile se pot modifica." data-verified-at="2026-07-22" data-source-url="https://www.afir.ro/api/file?filename=Ghidul+Solicitantului+DR-14+VARIANTA+CONSULTATIV%C4%82&amp;filetype=pdf&amp;url=%2Fmedia%2Fbkmpo5fo%2Fgs-consultativ-dr-14.pdf" data-title="DR14 AFIR" data-status="Ghid consultativ – depunerea nu este deschisă. Condițiile se pot modifica." data-analytics-event="program_card_click" data-analytics-component="homepage_hero_program_menu" data-analytics-cta-id="hero_program_dr14-afir" data-analytics-program-slug="dr14-afir" data-analytics-program-family="afir-agricultura">DR14 AFIR</a></li>
               <li><a href="/digitalizare-imm" data-hero-program-item data-program-id="digitalizare-imm" data-program-status="apel_inchis" data-status-label="Apel închis – depunerea nu este deschisă" data-verified-at="2026-07-22" data-source-url="https://mfe.gov.ro/pnrr-ordinul-nr-607-28-04-2026-pentru-modificarea-ghidului-solicitantului-digitalizarea-imm-urilor-grant-de-pana-la-100-000-euro-pe-intreprindere-care-sa-sprijine-imm-urile-in-adoptarea-tehnologii/" data-title="Digitalizare IMM" data-status="Apel închis – depunerea nu este deschisă" data-analytics-event="program_card_click" data-analytics-component="homepage_hero_program_menu" data-analytics-cta-id="hero_program_digitalizare-imm" data-analytics-program-slug="digitalizare-imm" data-analytics-program-family="digitalizare">Digitalizare IMM</a></li>
-              <li><a href="/pro-infra" data-hero-program-item data-program-id="pro-infra" data-program-status="ghid_aprobat_nedeschis" data-status-label="Schemă aprobată – depunerea nu este deschisă" data-verified-at="2026-07-22" data-source-url="https://legislatie.just.ro/Public/DetaliiDocument/306915" data-title="PRO INFRA" data-status="Schemă aprobată – depunerea nu este deschisă" data-analytics-event="program_card_click" data-analytics-component="homepage_hero_program_menu" data-analytics-cta-id="hero_program_pro-infra" data-analytics-program-slug="pro-infra" data-analytics-program-family="infrastructura">PRO INFRA</a></li>
+              <li><a href="/pro-infra" data-hero-program-item data-program-id="pro-infra" data-program-status="ghid_aprobat_nedeschis" data-status-label="Schemă aprobată – depunerea nu este deschisă" data-verified-at="2026-07-22" data-source-url="https://legislatie.just.ro/Public/DetaliiDocument/306915" data-title="PRO INFRA" data-status="Schemă aprobată – depunerea nu este deschisă" data-analytics-event="program_card_click" data-analytics-component="homepage_hero_program_menu" data-analytics-cta-id="hero_program_pro-infra" data-analytics-program-slug="pro-infra" data-analytics-program-family="energie">PRO INFRA</a></li>
               <li><a href="/afir-autoconsum-agroalimentar" data-hero-program-item data-program-id="afir-energie-autoconsum" data-program-status="apel_deschis" data-status-label="Apel deschis" data-verified-at="2026-07-20" data-source-url="https://www.afir.ro/media/hkfp4w0v/ghidul-solicitantului-schem%C4%83-energie-autoconsum-v7-iunie-2026.pdf" data-title="AFIR Autoconsum Agroalimentar" data-status="Apel deschis" data-analytics-event="program_card_click" data-analytics-component="homepage_hero_program_menu" data-analytics-cta-id="hero_program_afir-energie-autoconsum" data-analytics-program-slug="afir-energie-autoconsum" data-analytics-program-family="afir-energie">AFIR Autoconsum Agroalimentar</a></li>
             </ul>
           </div>
@@ -845,11 +838,52 @@
     </section>
 <!-- HOMEPAGE_DECISION_HERO_END -->
 <!-- P1_21_HOMEPAGE_FLOW_START -->
-<section id="homepage-method" class="homepage-flow-section" aria-labelledby="homepage-method-title"><div class="homepage-flow-inner"><header class="homepage-flow-heading"><span class="homepage-eyebrow">Metoda FABER</span><h2 id="homepage-method-title">Cum decidem dacă merită continuat</h2><p>Cinci verificări, în ordinea în care pot schimba decizia și bugetul proiectului.</p></header><ol class="homepage-method-list"><li class="homepage-method-step"><span class="homepage-method-number">01</span><strong>Solicitant</strong><p>Confirmăm forma, localitatea și activitatea care susține investiția.</p></li>
-<li class="homepage-method-step"><span class="homepage-method-number">02</span><strong>Program</strong><p>Comparăm proiectul cu scopul și statutul documentat al programului.</p></li>
-<li class="homepage-method-step"><span class="homepage-method-number">03</span><strong>Punctaj</strong><p>Identificăm criteriile, condițiile eliminatorii și documentele lipsă.</p></li>
-<li class="homepage-method-step"><span class="homepage-method-number">04</span><strong>Buget</strong><p>Separăm costurile eligibile, contribuția proprie și presiunea de cash-flow.</p></li>
-<li class="homepage-method-step"><span class="homepage-method-number">05</span><strong>Decizie</strong><p>Concluzia poate fi: continuăm, ajustăm sau nu depunem acum.</p></li></ol></div></section>
+<section id="homepage-method" class="homepage-flow-section homepage-method" aria-labelledby="homepage-method-title" data-homepage-method>
+  <div class="homepage-flow-inner homepage-method-layout">
+    <header class="homepage-flow-heading"><span class="homepage-eyebrow">Metoda FABER</span><h2 id="homepage-method-title">Cum decidem dacă merită continuat</h2><p>Cinci verificări, într-o singură secvență. Alege etapa sau glisează pentru a vedea următorul filtru de decizie.</p></header>
+    <div class="homepage-method-experience">
+      <svg class="homepage-method-svg" viewBox="0 0 640 140" aria-hidden="true" focusable="false">
+        <path class="homepage-method-route" d="M50 70 C105 24 130 24 185 70 S265 116 320 70 S400 24 455 70 S535 116 590 70"></path>
+        <g class="homepage-method-node is-active" data-homepage-method-node data-method-index="0" transform="translate(50 70)"><circle r="18"></circle><text text-anchor="middle" dy="5">1</text><title>Solicitant</title></g>
+<g class="homepage-method-node" data-homepage-method-node data-method-index="1" transform="translate(185 70)"><circle r="18"></circle><text text-anchor="middle" dy="5">2</text><title>Program</title></g>
+<g class="homepage-method-node" data-homepage-method-node data-method-index="2" transform="translate(320 70)"><circle r="18"></circle><text text-anchor="middle" dy="5">3</text><title>Punctaj</title></g>
+<g class="homepage-method-node" data-homepage-method-node data-method-index="3" transform="translate(455 70)"><circle r="18"></circle><text text-anchor="middle" dy="5">4</text><title>Buget</title></g>
+<g class="homepage-method-node" data-homepage-method-node data-method-index="4" transform="translate(590 70)"><circle r="18"></circle><text text-anchor="middle" dy="5">5</text><title>Decizie</title></g>
+        <g class="homepage-method-marker" data-homepage-method-marker><circle r="10"></circle><circle class="homepage-method-marker__pulse" r="18"></circle></g>
+      </svg>
+      <div class="homepage-method-frames" tabindex="0" aria-label="Etapele metodei FABER" data-homepage-method-viewport><article class="homepage-method-frame is-active" id="homepage-method-frame-1" role="tabpanel" aria-labelledby="homepage-method-tab-1" data-homepage-method-frame data-method-index="0">
+  <span class="homepage-method-frame__number">01</span>
+  <div><h3>Solicitant</h3><p>Confirmăm forma, localitatea și activitatea care susține investiția.</p></div>
+</article>
+<article class="homepage-method-frame" id="homepage-method-frame-2" role="tabpanel" aria-labelledby="homepage-method-tab-2" data-homepage-method-frame data-method-index="1">
+  <span class="homepage-method-frame__number">02</span>
+  <div><h3>Program</h3><p>Comparăm proiectul cu scopul și statutul documentat al programului.</p></div>
+</article>
+<article class="homepage-method-frame" id="homepage-method-frame-3" role="tabpanel" aria-labelledby="homepage-method-tab-3" data-homepage-method-frame data-method-index="2">
+  <span class="homepage-method-frame__number">03</span>
+  <div><h3>Punctaj</h3><p>Identificăm criteriile, condițiile eliminatorii și documentele lipsă.</p></div>
+</article>
+<article class="homepage-method-frame" id="homepage-method-frame-4" role="tabpanel" aria-labelledby="homepage-method-tab-4" data-homepage-method-frame data-method-index="3">
+  <span class="homepage-method-frame__number">04</span>
+  <div><h3>Buget</h3><p>Separăm costurile eligibile, contribuția proprie și presiunea de cash-flow.</p></div>
+</article>
+<article class="homepage-method-frame" id="homepage-method-frame-5" role="tabpanel" aria-labelledby="homepage-method-tab-5" data-homepage-method-frame data-method-index="4">
+  <span class="homepage-method-frame__number">05</span>
+  <div><h3>Decizie</h3><p>Concluzia poate fi: continuăm, ajustăm sau nu depunem acum.</p></div>
+</article></div>
+      <div class="homepage-method-controls">
+        <button type="button" class="homepage-sequence-arrow" aria-label="Etapa anterioară" data-homepage-method-previous><span aria-hidden="true">←</span></button>
+        <div class="homepage-method-tabs" role="tablist" aria-label="Alege etapa metodei"><button type="button" role="tab" id="homepage-method-tab-1" aria-controls="homepage-method-frame-1" aria-selected="true" data-homepage-method-tab data-method-index="0"><span>01</span><strong>Solicitant</strong></button>
+<button type="button" role="tab" id="homepage-method-tab-2" aria-controls="homepage-method-frame-2" aria-selected="false" tabindex="-1" data-homepage-method-tab data-method-index="1"><span>02</span><strong>Program</strong></button>
+<button type="button" role="tab" id="homepage-method-tab-3" aria-controls="homepage-method-frame-3" aria-selected="false" tabindex="-1" data-homepage-method-tab data-method-index="2"><span>03</span><strong>Punctaj</strong></button>
+<button type="button" role="tab" id="homepage-method-tab-4" aria-controls="homepage-method-frame-4" aria-selected="false" tabindex="-1" data-homepage-method-tab data-method-index="3"><span>04</span><strong>Buget</strong></button>
+<button type="button" role="tab" id="homepage-method-tab-5" aria-controls="homepage-method-frame-5" aria-selected="false" tabindex="-1" data-homepage-method-tab data-method-index="4"><span>05</span><strong>Decizie</strong></button></div>
+        <button type="button" class="homepage-sequence-arrow" aria-label="Etapa următoare" data-homepage-method-next><span aria-hidden="true">→</span></button>
+      </div>
+      <p class="homepage-sequence-status" role="status" aria-live="polite" aria-atomic="true" data-homepage-method-status>Etapa 1 din 5: Solicitant</p>
+    </div>
+  </div>
+</section>
 <!-- P1_08_PRIORITY_CAROUSEL_START -->
     <section id="priority-programs" aria-labelledby="priority-programs-title">
       <div class="program-explorer-header">
@@ -911,28 +945,59 @@
           <a class="priority-program-all" href="/fonduri-europene">Vezi toate programele</a>
         </div>
       </div>
-      <nav class="homepage-program-hubs" aria-label="Familii de programe">
-        <span>ExploreazÄƒ dupÄƒ familie:</span>
-          <a href="/afir">AFIR &amp; agricultură</a>
-          <a href="/fonduri-regionale">Regional / ADR</a>
-          <a href="/fonduri-europene-digitalizare">Digitalizare &amp; inovare</a>
-          <a href="/finantari-panouri-fotovoltaice">Energie</a>
-          <a href="/fonduri-europene-imm">Antreprenoriat &amp; GAL</a>
-      </nav>
     </section>
 <!-- P1_08_PRIORITY_CAROUSEL_END -->
-<section id="homepage-services" class="homepage-flow-section" aria-labelledby="homepage-services-title"><div class="homepage-flow-inner"><header class="homepage-flow-heading"><span class="homepage-eyebrow">Servicii</span><h2 id="homepage-services-title">De la verificare la implementare</h2><p>Patru roluri distincte, alese în funcție de stadiul proiectului.</p></header><div class="homepage-service-grid"><article class="homepage-card"><span class="homepage-eyebrow">Servicii</span><h3>Analiză eligibilitate</h3><p>Verificare inițială a solicitantului, investiției, amplasamentului și documentelor.</p><a href="/verificare-eligibilitate-fonduri-europene">Vezi analiza</a></article>
-<article class="homepage-card"><span class="homepage-eyebrow">Servicii</span><h3>Consultanță</h3><p>Alegerea programului și pregătirea cererii pe baza documentului aplicabil.</p><a href="/consultanta-fonduri-europene">Vezi consultanța</a></article>
-<article class="homepage-card"><span class="homepage-eyebrow">Servicii</span><h3>Proiectare</h3><p>Corelarea soluției tehnice cu bugetul, anexele și cerințele apelului.</p><a href="/proiectare-fonduri-europene">Vezi proiectarea</a></article>
-<article class="homepage-card"><span class="homepage-eyebrow">Servicii</span><h3>Implementare</h3><p>Urmărirea obligațiilor, achizițiilor, documentelor și clarificărilor proiectului.</p><a href="/management-proiecte-fonduri-europene">Vezi implementarea</a></article></div></div></section>
-<section id="homepage-tools" class="homepage-flow-section" aria-labelledby="homepage-tools-title"><div class="homepage-flow-inner"><header class="homepage-flow-heading"><span class="homepage-eyebrow">Instrumente și ghiduri</span><h2 id="homepage-tools-title">Pregătește datele înainte de discuție</h2><p>Un instrument și două ghiduri pentru întrebările care apar înaintea dosarului.</p></header><div class="homepage-tool-grid"><article class="homepage-card"><span class="homepage-eyebrow">Instrument</span><h3>Calculator SO</h3><p>Calculează orientativ dimensiunea economică și păstrează ipotezele folosite.</p><a href="/calculator-soc">Calculează SO</a></article>
-<article class="homepage-card"><span class="homepage-eyebrow">Ghid</span><h3>Checklist de eligibilitate</h3><p>Ordinea verificărilor înainte de alegerea programului și pregătirea ofertelor.</p><a href="/eligibilitate-fonduri-europene">Deschide checklist-ul</a></article>
-<article class="homepage-card"><span class="homepage-eyebrow">Ghid</span><h3>Documentele proiectului</h3><p>Repere pentru actele solicitantului, amplasamentului și investiției.</p><a href="/acte-necesare-fonduri-europene-nerambursabile">Vezi documentele</a></article></div></div></section>
-<section id="homepage-proof" class="homepage-flow-section" aria-labelledby="homepage-proof-title"><div class="homepage-flow-inner"><header class="homepage-flow-heading"><span class="homepage-eyebrow">De ce FABER</span><h2 id="homepage-proof-title">Decizii documentate, cu limite explicite</h2><p>Trei principii verificabile în modul în care publicăm și analizăm informația.</p></header><div class="homepage-proof-grid"><article class="homepage-proof-card"><h3>Statut și sursă vizibile</h3><p>Cardurile programelor afișează statutul, data verificării și sursa din registrul unic.</p></article>
-<article class="homepage-proof-card"><h3>Analiză înainte de dosar</h3><p>Solicitantul, programul, punctajul, bugetul și documentele sunt verificate împreună.</p></article>
-<article class="homepage-proof-card"><h3>Limite explicite</h3><p>Verificarea este orientativă; FABER nu promite aprobarea și nu transformă un ghid consultativ în apel deschis.</p></article></div></div></section>
-<section id="homepage-analysis" class="homepage-flow-section" aria-labelledby="homepage-analysis-title"><div class="homepage-flow-inner"><article class="homepage-analysis-card"><div><span class="homepage-eyebrow">Analiză comparativă</span><h2 id="homepage-analysis-title">DR 12 vs DR 14: cum diferă încadrarea și investiția</h2><p>Comparația separă obiectivul, documentele și riscurile celor două intervenții fără a trata ghidurile consultative ca apeluri deschise.</p></div><a class="homepage-flow-action" href="/dr12-vs-dr14">Citește analiza DR 12 vs DR 14</a></article></div></section>
-<section id="homepage-contact" class="homepage-flow-section" aria-labelledby="homepage-contact-title"><div class="homepage-flow-inner"><div><span class="homepage-eyebrow">Următorul pas</span><h2 id="homepage-contact-title">Spune-ne solicitantul, localitatea și investiția</h2><p>Prima etapă este o verificare orientativă. Nu este necesar să ai dosarul complet și nu promitem aprobarea.</p><div class="homepage-contact-direct" aria-label="Contact direct"><a href="tel:+40769828338" data-analytics-event="contact_phone" data-analytics-component="homepage_final_contact" data-analytics-cta-id="homepage_phone_1">0769 828 338</a><a href="tel:+40753326229" data-analytics-event="contact_phone" data-analytics-component="homepage_final_contact" data-analytics-cta-id="homepage_phone_2">0753 326 229</a><a href="mailto:atelier.consultanta@gmail.com" data-analytics-event="contact_email" data-analytics-component="homepage_final_contact" data-analytics-cta-id="homepage_email">atelier.consultanta@gmail.com</a></div></div><div class="homepage-contact-actions"><a class="homepage-flow-action" href="/contact?source_page=%2F" data-analytics-event="cta_click" data-analytics-component="homepage_final_cta" data-analytics-cta-id="homepage_final_project_check" data-analytics-target="/contact" data-analytics-cta-view="true" data-analytics-copy-variant="p1_21">Începe verificarea proiectului</a></div></div></section>
+<section id="homepage-explorer" class="homepage-flow-section homepage-explorer" aria-labelledby="homepage-explorer-title" data-homepage-explorer>
+  <div class="homepage-flow-inner">
+    <header class="homepage-flow-heading"><span class="homepage-eyebrow">Explorează FABER</span><h2 id="homepage-explorer-title">Alege informația de care ai nevoie</h2><p>Patru secțiuni într-un singur cadru interactiv. Folosește butoanele, tastatura sau glisarea stânga–dreapta.</p></header>
+    <div class="homepage-explorer-shell">
+      <div class="homepage-explorer-tabs" role="tablist" aria-label="Alege secțiunea"><button type="button" role="tab" id="homepage-explorer-tab-1" aria-controls="homepage-services" aria-selected="true" data-homepage-explorer-tab data-explorer-index="0"><span>01</span>Servicii</button>
+<button type="button" role="tab" id="homepage-explorer-tab-2" aria-controls="homepage-tools" aria-selected="false" tabindex="-1" data-homepage-explorer-tab data-explorer-index="1"><span>02</span>Instrumente</button>
+<button type="button" role="tab" id="homepage-explorer-tab-3" aria-controls="homepage-proof" aria-selected="false" tabindex="-1" data-homepage-explorer-tab data-explorer-index="2"><span>03</span>De ce FABER</button>
+<button type="button" role="tab" id="homepage-explorer-tab-4" aria-controls="homepage-analysis" aria-selected="false" tabindex="-1" data-homepage-explorer-tab data-explorer-index="3"><span>04</span>Comparație</button></div>
+      <svg class="homepage-explorer-svg" viewBox="0 0 620 110" aria-hidden="true" focusable="false">
+        <path d="M70 58 C130 10 170 106 230 58 S330 10 390 58 S490 106 550 58"></path>
+        <g class="homepage-explorer-node is-active" data-homepage-explorer-node data-explorer-index="0" transform="translate(70 58)"><circle r="17"></circle><text text-anchor="middle" dy="5">1</text><title>Servicii</title></g>
+<g class="homepage-explorer-node" data-homepage-explorer-node data-explorer-index="1" transform="translate(230 58)"><circle r="17"></circle><text text-anchor="middle" dy="5">2</text><title>Instrumente</title></g>
+<g class="homepage-explorer-node" data-homepage-explorer-node data-explorer-index="2" transform="translate(390 58)"><circle r="17"></circle><text text-anchor="middle" dy="5">3</text><title>De ce FABER</title></g>
+<g class="homepage-explorer-node" data-homepage-explorer-node data-explorer-index="3" transform="translate(550 58)"><circle r="17"></circle><text text-anchor="middle" dy="5">4</text><title>Comparație</title></g>
+        <g class="homepage-explorer-marker" data-homepage-explorer-marker><circle r="9"></circle><circle class="homepage-explorer-marker__pulse" r="17"></circle></g>
+      </svg>
+      <div class="homepage-explorer-viewport" tabindex="0" aria-label="Conținut selectat" data-homepage-explorer-viewport><article class="homepage-explorer-frame is-active" id="homepage-services" role="tabpanel" aria-labelledby="homepage-explorer-tab-1" data-homepage-explorer-frame data-explorer-index="0">
+  <header><span class="homepage-eyebrow">Servicii</span><h3>De la verificare la implementare</h3><p>Alege rolul potrivit stadiului proiectului, fără să parcurgi secțiuni repetitive.</p></header>
+  <div class="homepage-service-grid"><article class="homepage-card"><span class="homepage-eyebrow">Serviciu</span><span class="homepage-card-index" aria-hidden="true">01</span><h4>Analiză eligibilitate</h4><p>Verificare inițială a solicitantului, investiției, amplasamentului și documentelor.</p><a href="/verificare-eligibilitate-fonduri-europene">Vezi analiza</a></article>
+<article class="homepage-card"><span class="homepage-eyebrow">Serviciu</span><span class="homepage-card-index" aria-hidden="true">02</span><h4>Consultanță</h4><p>Alegerea programului și pregătirea cererii pe baza documentului aplicabil.</p><a href="/consultanta-fonduri-europene">Vezi consultanța</a></article>
+<article class="homepage-card"><span class="homepage-eyebrow">Serviciu</span><span class="homepage-card-index" aria-hidden="true">03</span><h4>Proiectare</h4><p>Corelarea soluției tehnice cu bugetul, anexele și cerințele apelului.</p><a href="/proiectare-fonduri-europene">Vezi proiectarea</a></article>
+<article class="homepage-card"><span class="homepage-eyebrow">Serviciu</span><span class="homepage-card-index" aria-hidden="true">04</span><h4>Implementare</h4><p>Urmărirea obligațiilor, achizițiilor, documentelor și clarificărilor proiectului.</p><a href="/management-proiecte-fonduri-europene">Vezi implementarea</a></article></div>
+</article>
+<article class="homepage-explorer-frame" id="homepage-tools" role="tabpanel" aria-labelledby="homepage-explorer-tab-2" data-homepage-explorer-frame data-explorer-index="1">
+  <header><span class="homepage-eyebrow">Instrumente și ghiduri</span><h3>Pregătește datele înainte de discuție</h3><p>Folosește un instrument și două ghiduri pentru întrebările care apar înaintea dosarului.</p></header>
+  <div class="homepage-tool-grid"><article class="homepage-card"><span class="homepage-eyebrow">Instrument</span><span class="homepage-card-index" aria-hidden="true">01</span><h4>Calculator SO</h4><p>Calculează orientativ dimensiunea economică și păstrează ipotezele folosite.</p><a href="/calculator-soc">Calculează SO</a></article>
+<article class="homepage-card"><span class="homepage-eyebrow">Ghid</span><span class="homepage-card-index" aria-hidden="true">02</span><h4>Checklist de eligibilitate</h4><p>Ordinea verificărilor înainte de alegerea programului și pregătirea ofertelor.</p><a href="/eligibilitate-fonduri-europene">Deschide checklist-ul</a></article>
+<article class="homepage-card"><span class="homepage-eyebrow">Ghid</span><span class="homepage-card-index" aria-hidden="true">03</span><h4>Documentele proiectului</h4><p>Repere pentru actele solicitantului, amplasamentului și investiției.</p><a href="/acte-necesare-fonduri-europene-nerambursabile">Vezi documentele</a></article></div>
+</article>
+<article class="homepage-explorer-frame" id="homepage-proof" role="tabpanel" aria-labelledby="homepage-explorer-tab-3" data-homepage-explorer-frame data-explorer-index="2">
+  <header><span class="homepage-eyebrow">De ce FABER</span><h3>Decizii documentate, cu limite explicite</h3><p>Trei principii verificabile în modul în care publicăm și analizăm informația.</p></header>
+  <div class="homepage-proof-grid"><article class="homepage-card"><span class="homepage-eyebrow">Principiu</span><span class="homepage-card-index" aria-hidden="true">01</span><h4>Statut și sursă vizibile</h4><p>Cardurile programelor afișează statutul, data verificării și sursa din registrul unic.</p></article>
+<article class="homepage-card"><span class="homepage-eyebrow">Principiu</span><span class="homepage-card-index" aria-hidden="true">02</span><h4>Analiză înainte de dosar</h4><p>Solicitantul, programul, punctajul, bugetul și documentele sunt verificate împreună.</p></article>
+<article class="homepage-card"><span class="homepage-eyebrow">Principiu</span><span class="homepage-card-index" aria-hidden="true">03</span><h4>Limite explicite</h4><p>Verificarea este orientativă; FABER nu promite aprobarea și nu transformă un ghid consultativ în apel deschis.</p></article></div>
+</article>
+<article class="homepage-explorer-frame" id="homepage-analysis" role="tabpanel" aria-labelledby="homepage-explorer-tab-4" data-homepage-explorer-frame data-explorer-index="3">
+  <header><span class="homepage-eyebrow">Analiză comparativă</span><h3>DR 12 vs DR 14: cum diferă încadrarea și investiția</h3><p>Comparația separă obiectivul, documentele și riscurile celor două intervenții fără a trata ghidurile consultative ca apeluri deschise.</p></header>
+  <a class="homepage-flow-action" href="/dr12-vs-dr14">Citește analiza DR 12 vs DR 14</a>
+</article></div>
+      <div class="homepage-explorer-controls">
+        <button type="button" class="homepage-sequence-arrow" aria-label="Secțiunea anterioară" data-homepage-explorer-previous><span aria-hidden="true">←</span></button>
+        <p class="homepage-sequence-status" role="status" aria-live="polite" aria-atomic="true" data-homepage-explorer-status>Secțiunea 1 din 4: Servicii</p>
+        <button type="button" class="homepage-sequence-arrow" aria-label="Secțiunea următoare" data-homepage-explorer-next><span aria-hidden="true">→</span></button>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="homepage-contact" class="homepage-flow-section" aria-labelledby="homepage-contact-title"><div class="homepage-flow-inner homepage-contact-card">
+    <div class="homepage-contact-copy"><span class="homepage-eyebrow">Următorul pas</span><h2 id="homepage-contact-title">Spune-ne solicitantul, localitatea și investiția</h2><p>Prima etapă este o verificare orientativă. Nu este necesar să ai dosarul complet și nu promitem aprobarea.</p><div class="homepage-contact-direct" aria-label="Contact direct"><a href="tel:+40769828338" data-analytics-event="contact_phone" data-analytics-component="homepage_final_contact" data-analytics-cta-id="homepage_phone_1"><span>Telefon</span><strong>0769 828 338</strong></a><a href="tel:+40753326229" data-analytics-event="contact_phone" data-analytics-component="homepage_final_contact" data-analytics-cta-id="homepage_phone_2"><span>Telefon</span><strong>0753 326 229</strong></a><a href="mailto:atelier.consultanta@gmail.com" data-analytics-event="contact_email" data-analytics-component="homepage_final_contact" data-analytics-cta-id="homepage_email"><span>Email</span><strong>atelier.consultanta@gmail.com</strong></a></div></div>
+    <div class="homepage-contact-actions"><span class="homepage-contact-actions__label">Începe cu datele esențiale</span><a class="homepage-flow-action" href="/contact?source_page=%2F" data-analytics-event="cta_click" data-analytics-component="homepage_final_cta" data-analytics-cta-id="homepage_final_project_check" data-analytics-target="/contact" data-analytics-cta-view="true" data-analytics-copy-variant="p1_22">Începe verificarea proiectului <span aria-hidden="true">→</span></a><a class="homepage-contact-secondary" href="/verificare-eligibilitate-fonduri-europene">Vezi ce date pregătești</a></div>
+  </div></section>
 <!-- P1_21_HOMEPAGE_FLOW_END -->
   </main>
 
