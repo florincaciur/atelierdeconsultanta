@@ -42,6 +42,7 @@ for (const page of report.pages) {
   assert.equal($("link[data-long-form-layout-style='p1_09']").length, 1, `${page.route}: CSS duplicat/lipsă`);
   assert.equal($("script[data-long-form-layout-script='p1_09']").length, 1, `${page.route}: JS duplicat/lipsă`);
   assert.equal($("[data-long-form-toc] summary").text().trim(), "Cuprins", `${page.route}: disclosure fără etichetă`);
+  assert.equal($("[data-long-form-toc] details[open]").length, 0, `${page.route}: cuprinsul trebuie să pornească închis ca dropdown`);
   assert.equal($("[data-long-form-toc] nav").attr("aria-label"), "Cuprinsul paginii");
 
   const links = $("[data-long-form-toc-link]");
@@ -101,7 +102,7 @@ assert(css.includes("overflow-x: auto") && css.includes("min-height: 44px"), "li
 assert(css.includes("@media (max-width: 63.99rem)"), "lipsește disclosure/reflow mobil");
 assert(css.includes(".long-form-secondary-detail") && css.includes("font-size: clamp(1.55rem"), "lipsește compactarea detaliilor secundare");
 assert(js.includes("IntersectionObserver") && js.includes('aria-current", "location"'), "starea secțiunii nu este actualizată");
-assert(js.includes('matchMedia("(max-width: 63.99rem)")') && js.includes('removeAttribute("open")'), "disclosure-ul mobil trebuie compactat fără a scoate conținutul din HTML");
+assert(js.includes('matchMedia("(max-width: 63.99rem)")') && js.includes('removeAttribute("open")'), "fallback-ul mobil trebuie să păstreze disclosure-ul compact");
 assert(js.includes('event.key !== "Enter"') && js.includes('event.key !== " "') && js.includes("disclosure.open = !disclosure.open"), "disclosure-ul trebuie activabil cu Enter și Spațiu");
 assert(!/link\.addEventListener\("click"[\s\S]{0,220}preventDefault/.test(js), "ancorele native nu trebuie interceptate");
 assert(homepage.includes("target.scrollIntoView") && homepage.includes("window.history.pushState"), "homepage-ul trebuie să păstreze ancora stabilă și scroll-margin-ul nativ");

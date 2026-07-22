@@ -124,12 +124,14 @@
     "dr12-afir": {
       "instrument": "calculator_so",
       "comparison": "dr12_vs_dr14",
-      "conversionAnchor": "Verifică încadrarea în DR 12"
+      "conversionAnchor": "Verifică încadrarea în DR 12",
+      "conversionMicrocopy": "Vom cere forma solicitantului, SO, județul și investiția."
     },
     "dr14-afir": {
       "instrument": "calculator_so",
       "comparison": "dr12_vs_dr14",
-      "conversionAnchor": "Verifică încadrarea în DR 14"
+      "conversionAnchor": "Verifică dacă ferma se încadrează în DR 14",
+      "conversionMicrocopy": "Concluzie orientativă pe documentele disponibile."
     },
     "start-up-nation": {
       "instrument": "eligibility_check",

@@ -135,7 +135,7 @@ function renderToc(items, variant) {
   const links = items.map((item, index) => `        <li><a href="#${escapeHtml(item.id)}" data-long-form-toc-link${index === 0 ? ' aria-current="location"' : ""}>${escapeHtml(item.label)}</a></li>`).join("\n");
   return `${TOC_START}
   <aside class="long-form-toc${variant === "home" ? " long-form-toc--home" : ""}" data-long-form-toc aria-label="Navigare în pagina lungă">
-    <details open>
+    <details>
       <summary>Cuprins</summary>
       <nav aria-label="Cuprinsul paginii">
         <ol>

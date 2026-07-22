@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "formVersion": "short_v1",
+  "secondary": {
+    "label": "Vezi ce date pregătești",
+    "href": "/verificare-eligibilitate-fonduri-europene"
+  },
+  "pages": [
+    {
+      "id": "homepage",
+      "route": "/",
+      "file": "index.html",
+      "primary": "Începe verificarea proiectului",
+      "microcopy": "Spune-ne solicitantul, localitatea și investiția. Prima etapă este o verificare orientativă; nu promitem aprobarea."
+    },
+    {
+      "id": "dr12",
+      "route": "/dr12-afir",
+      "file": "dr12-afir/index.html",
+      "programSlug": "dr12-afir",
+      "primary": "Verifică încadrarea în DR 12",
+      "microcopy": "Vom cere forma solicitantului, SO, județul și investiția."
+    },
+    {
+      "id": "dr14",
+      "route": "/dr14",
+      "file": "dr14/index.html",
+      "programSlug": "dr14-afir",
+      "primary": "Verifică dacă ferma se încadrează în DR 14",
+      "microcopy": "Concluzie orientativă pe documentele disponibile."
+    },
+    {
+      "id": "calculator-soc",
+      "route": "/calculator-soc",
+      "file": "calculator-soc.html",
+      "primary": "Folosește rezultatul pentru verificarea AFIR",
+      "microcopy": "Rezultatul calculatorului nu înlocuiește ghidul.",
+      "calculatorResult": true
+    },
+    {
+      "id": "ghid-documente",
+      "route": "/acte-necesare-fonduri-europene-nerambursabile",
+      "file": "acte-necesare-fonduri-europene-nerambursabile/index.html",
+      "primary": "Trimite lista documentelor disponibile",
+      "microcopy": "Nu este necesar să ai dosarul complet pentru prima triere."
+    }
+  ]
+}

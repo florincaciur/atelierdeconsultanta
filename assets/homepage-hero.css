@@ -30,6 +30,10 @@
   min-width: 0;
 }
 
+.homepage-decision-hero .hero-badge {
+  margin-bottom: 20px;
+}
+
 .homepage-decision-hero .hero-title {
   max-width: 760px;
   margin: 0 0 20px;
@@ -73,6 +77,36 @@
   background: rgba(255, 255, 255, 0.055);
   box-shadow: 0 22px 54px rgba(4, 12, 28, 0.25);
   backdrop-filter: blur(12px);
+}
+
+.hero-flow-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.hf-label {
+  fill: rgba(255, 255, 255, 0.82);
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.hf-line {
+  animation: homepageFlowDash 30s linear infinite;
+}
+
+@keyframes homepageFlowDash {
+  from { stroke-dashoffset: 520; }
+  to { stroke-dashoffset: 0; }
+}
+
+.hero-flow-caption {
+  margin: 8px 10px 6px;
+  color: rgba(255, 255, 255, 0.66);
+  font-size: 0.82rem;
+  line-height: 1.5;
+  text-align: center;
 }
 
 .homepage-hero__facts {
@@ -216,6 +250,11 @@
     padding: 5px;
   }
 
+  .hero-flow-caption {
+    margin: 6px 8px 8px;
+    font-size: 0.76rem;
+  }
+
   .homepage-hero__fact {
     grid-template-columns: 30px minmax(0, 1fr);
     gap: 10px;
@@ -232,6 +271,10 @@
   .homepage-decision-hero .btn-primary,
   .homepage-decision-hero .btn-secondary {
     transition: none;
+  }
+
+  .hf-line {
+    animation: none;
   }
 
   .homepage-decision-hero .btn-primary:hover,

@@ -237,17 +237,23 @@ textarea:focus-visible{
   border:1px solid #dbe4ef;
   border-radius:16px;
   box-shadow:0 12px 34px rgba(13,31,60,.08);
-  max-width:1120px;
+  max-width:1040px;
+  margin-inline:auto;
   padding:clamp(18px,2.2vw,24px);
+  text-align:center;
 }
 
 .answer-readiness--compact .answer-readiness__direct{
-  border-left:4px solid var(--design-orange);
+  max-width:68ch;
+  border-top:4px solid var(--design-orange);
+  border-radius:12px;
+  background:#f8fafc;
   color:var(--design-ink);
   font-size:clamp(1rem,1.3vw,1.075rem);
   line-height:1.65;
-  margin:0 0 18px;
-  padding:2px 0 2px 16px;
+  margin:0 auto 22px;
+  padding:18px clamp(16px,3vw,28px);
+  text-align:center;
 }
 
 .answer-readiness--compact h2{
@@ -261,6 +267,7 @@ textarea:focus-visible{
   border:1px solid #d8e1ec;
   border-radius:12px;
   overflow:clip;
+  text-align:left;
 }
 
 .answer-readiness__details > summary{

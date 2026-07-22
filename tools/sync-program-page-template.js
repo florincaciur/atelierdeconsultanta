@@ -125,7 +125,7 @@ function renderToc() {
     ["program-questions", "Întrebări reale"]
   ];
   return `<aside class="long-form-toc program-template__toc" data-long-form-toc data-program-template-toc aria-label="Navigare în pagina programului">
-    <details open>
+    <details>
       <summary>Cuprins</summary>
       <nav aria-label="Cuprinsul paginii">
         <ol>${items.map(([id, label], index) => `<li><a href="#${id}" data-long-form-toc-link${index === 0 ? ' aria-current="location"' : ""}>${label}</a></li>`).join("")}</ol>

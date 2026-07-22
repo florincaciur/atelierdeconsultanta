@@ -26,7 +26,7 @@ Data auditului: 2026-07-21
 
 | URL | Contract vizual | Componente prezente |
 |---|---|---|
-| / | PASS | header, hero, accordion, form, cta, footer |
+| / | PASS | header, hero, accordion, form, cta, footer, stickyCta |
 | /contact | PASS | header, hero, accordion, form, cta, breadcrumb, footer |
 | /afir-autoconsum-agroalimentar | PASS | header, hero, statusBadge, table, accordion, cta, breadcrumb, footer |
 

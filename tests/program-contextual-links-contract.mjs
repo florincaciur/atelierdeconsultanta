@@ -24,7 +24,7 @@ assert.deepEqual(resolvedLinks(dr12, config).map(({ relation, href, anchor }) =>
   { relation: "parent", href: "/afir", anchor: "revino la hubul AFIR și agricultură" },
   { relation: "instrument", href: "/calculator-soc", anchor: "calculează dimensiunea economică SO" },
   { relation: "comparison", href: "/dr12-vs-dr14", anchor: "compară condițiile DR 12 și DR 14" },
-  { relation: "conversion", href: "/contact?program=dr12-afir", anchor: "Verifică încadrarea în DR 12" }
+  { relation: "conversion", href: "/contact?program_slug=dr12-afir&source_page=%2Fdr12-afir", anchor: "Verifică încadrarea în DR 12" }
 ]);
 
 const audit = auditProgramContextualLinks();

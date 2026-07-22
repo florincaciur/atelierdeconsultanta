@@ -1,6 +1,6 @@
 # Raport de prospețime și guvernanță editorială
 
-Data evaluării: **2026-07-21**. Registru: `config/editorial-governance.json`.
+Data evaluării: **2026-07-22**. Registru: `config/editorial-governance.json`.
 
 ## Rezumat
 

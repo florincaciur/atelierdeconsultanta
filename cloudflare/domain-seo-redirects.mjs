@@ -112,6 +112,7 @@ export function validateContactPayload(input, now = Date.now()) {
     expenses_summary: clean(input.expenses_summary),
     contact_preference: clean(input.contact_preference) || "no_preference",
     page_url: clean(input.page_url) || "/contact",
+    source_page: clean(input.source_page) || "/",
     referrer_path: clean(input.referrer_path),
     program_context: clean(input.program_context),
     program_family: clean(input.program_family),
@@ -123,6 +124,7 @@ export function validateContactPayload(input, now = Date.now()) {
     utm_content: clean(input.utm_content),
     landing_referrer: clean(input.landing_referrer),
     landing_page_path: clean(input.landing_page_path),
+    calculator_so_result: clean(input.calculator_so_result),
     form_started_at: clean(input.form_started_at),
     website: clean(input.website)
   };
@@ -163,6 +165,9 @@ export function validateContactPayload(input, now = Date.now()) {
   if (!payload.page_url.startsWith("/") || payload.page_url.length > 300) {
     errors.push({ field: "page_url", label: "pagina sursă", code: "invalid_path" });
   }
+  if (!payload.source_page.startsWith("/") || payload.source_page.startsWith("//") || payload.source_page.length > 300 || /[?#]/u.test(payload.source_page)) {
+    errors.push({ field: "source_page", label: "pagina sursă contextuală", code: "invalid_path" });
+  }
   if (payload.referrer_path && (!payload.referrer_path.startsWith("/") || payload.referrer_path.length > 300)) {
     errors.push({ field: "referrer_path", label: "pagina anterioară", code: "invalid_path" });
   }
@@ -179,6 +184,9 @@ export function validateContactPayload(input, now = Date.now()) {
   lengthError(errors, "landing_referrer", "referrer inițial", payload.landing_referrer, 0, 500);
   if (payload.landing_page_path && (!payload.landing_page_path.startsWith("/") || payload.landing_page_path.length > 300)) {
     errors.push({ field: "landing_page_path", label: "pagina inițială", code: "invalid_path" });
+  }
+  if (payload.calculator_so_result && (!/^[1-9][0-9]{0,9}$/u.test(payload.calculator_so_result) || Number(payload.calculator_so_result) > 1000000000)) {
+    errors.push({ field: "calculator_so_result", label: "rezultat SO", code: "invalid_number" });
   }
   if (!["no_preference", "email", "phone"].includes(payload.contact_preference)) {
     errors.push({ field: "contact_preference", label: "preferință de contact", code: "invalid_choice" });
@@ -236,6 +244,7 @@ function contactForwardPayload(payload, now = new Date()) {
     expenses_summary: payload.expenses_summary || "—",
     contact_preference: payload.contact_preference,
     page_url: payload.page_url,
+    source_page: payload.source_page,
     referrer_path: payload.referrer_path || "—",
     program_context: payload.program_context || "—",
     program_family: payload.program_family || "—",
@@ -247,6 +256,7 @@ function contactForwardPayload(payload, now = new Date()) {
     utm_content: payload.utm_content || "—",
     landing_referrer: payload.landing_referrer || "—",
     landing_page_path: payload.landing_page_path || payload.page_url,
+    calculator_so_result: payload.calculator_so_result || "—",
     _subject: "Solicitare triere FABER",
     _template: "table"
   };

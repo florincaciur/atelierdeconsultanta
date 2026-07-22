@@ -40,6 +40,7 @@ function renderContactTriageLayout(programs, aliasesByProgram = {}) {
             <input type="hidden" name="lead_id" value="">
             <input type="hidden" name="form_started_at" value="">
             <input type="hidden" name="page_url" value="/contact">
+            <input type="hidden" name="source_page" value="">
             <input type="hidden" name="referrer_path" value="">
             <input type="hidden" name="program_context" value="">
             <input type="hidden" name="program_family" value="">
@@ -51,6 +52,7 @@ function renderContactTriageLayout(programs, aliasesByProgram = {}) {
             <input type="hidden" name="utm_content" value="">
             <input type="hidden" name="landing_referrer" value="">
             <input type="hidden" name="landing_page_path" value="">
+            <input type="hidden" name="calculator_so_result" value="">
 
             <div class="contact-honeypot" aria-hidden="true" hidden>
               <label for="contact-website">Nu completa acest câmp</label>

@@ -69,7 +69,8 @@
 #navbar .nav-dropdown-btn:hover,
 #navbar .nav-dropdown-btn[aria-expanded="true"],
 #navbar .nav-primary-link:hover,
-#navbar a[aria-current="page"] { color: var(--white); background: rgba(255, 255, 255, .11); }
+#navbar a[aria-current="page"]:not(.nav-logo) { color: var(--white); background: rgba(255, 255, 255, .11); }
+#navbar .nav-logo[aria-current="page"] { background: transparent; }
 
 #navbar .arrow,
 #mobileMenu .arrow {

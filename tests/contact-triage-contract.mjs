@@ -264,14 +264,20 @@ async function verifyBrowserFlow() {
   try {
     const page = await browser.newPage();
     await page.route(/^https?:\/\/(?!127\.0\.0\.1)/u, (route) => route.abort());
-    await page.goto(`${baseUrl}/contact?program=dr12-afir&utm_source=chatgpt.com&utm_medium=referral&utm_campaign=dr12_browser`, { waitUntil: "domcontentloaded" });
+    await page.goto(`${baseUrl}/contact?program_slug=dr12-afir&source_page=%2Fdr12-afir&so_result=12345&utm_source=chatgpt.com&utm_medium=referral&utm_campaign=dr12_browser`, { waitUntil: "domcontentloaded" });
     await page.waitForFunction(() => document.querySelector("#contact-triage-form")?.classList.contains("contact-triage--enhanced"));
     assert.equal(await page.isVisible('[data-form-step="1"]'), true);
     assert.equal(await page.isVisible('[data-form-step="2"]'), false);
     assert.equal(await page.inputValue("#contact-program"), "dr12-afir", "program query must prefill registry option");
+    assert.equal(await page.inputValue('[name="source_page"]'), "/dr12-afir");
+    assert.equal(await page.inputValue('[name="calculator_so_result"]'), "12345");
     assert.equal(await page.inputValue('[name="utm_source"]'), "chatgpt.com", "raw ChatGPT UTM must be retained for CRM");
     assert.equal(await page.inputValue('[name="source_channel"]'), "chatgpt", "analytics channel must be normalized");
     assert.equal(await page.inputValue('[name="program_family"]'), "afir-agricultura");
+    await page.reload({ waitUntil: "domcontentloaded" });
+    await page.waitForFunction(() => document.querySelector("#contact-triage-form")?.classList.contains("contact-triage--enhanced"));
+    assert.equal(await page.inputValue("#contact-program"), "dr12-afir", "program context must survive refresh through validated URL state");
+    assert.equal(await page.inputValue('[name="source_page"]'), "/dr12-afir", "source_page must survive refresh");
 
     await page.selectOption("#contact-applicant-type", "societate");
     await page.fill("#contact-location", "Iași, Pașcani");

@@ -243,6 +243,9 @@
     addSummaryRow("Email", valueOrDash(email));
     addSummaryRow("Telefon", valueOrDash(phone));
     addSummaryRow("Program vizat", selectedText(form.elements.program_slug));
+    if (form.elements.calculator_so_result && form.elements.calculator_so_result.value) {
+      addSummaryRow("Rezultat SO orientativ", form.elements.calculator_so_result.value + " SO");
+    }
     addSummaryRow("CAEN / SO", valueOrDash(form.elements.caen_or_so));
     addSummaryRow("Buget / cofinanțare", valueOrDash(form.elements.budget_estimate));
 
@@ -265,7 +268,9 @@
     var select = form.elements.program_slug;
     if (!select) return;
     var params = new URLSearchParams(window.location.search);
-    var requested = params.get("program") || params.get("programSlug") || "";
+    var requested = params.get("program_slug") || params.get("program") || params.get("programSlug") || "";
+    var requestedSource = params.get("source_page") || "";
+    var requestedSo = params.get("so_result") || "";
     var referrerPath = "";
 
     try {
@@ -299,6 +304,11 @@
       if (optional) optional.open = true;
     }
     setHidden("referrer_path", referrerPath);
+    var sourcePage = /^\/(?!\/)[^?#]{0,299}$/u.test(requestedSource) ? requestedSource : referrerPath;
+    setHidden("source_page", sourcePage || "/");
+    if (/^[1-9][0-9]{0,9}$/u.test(requestedSo) && Number(requestedSo) <= 1000000000) {
+      setHidden("calculator_so_result", requestedSo);
+    }
   }
 
   function syncProgramContext() {

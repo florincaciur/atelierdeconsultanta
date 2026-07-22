@@ -13,6 +13,19 @@ const ROOT = path.resolve(__dirname, "..");
 const DESIGN_CSS = '<link rel="stylesheet" href="/assets/design-profiles.css">';
 const FAMILY_HERO_CLASS = /\bhero--(?:home|afir|gal|digital|startup|energy|cluster|service|editorial|caen|trust|tool|contact|legal|generic)\b/g;
 const DESIGN_SYNC_EXCLUDED_SLUGS = new Set(["fonduri-europene-nord-est"]);
+const WRITE_RETRY_CODES = new Set(["UNKNOWN", "EBUSY", "EPERM", "EACCES"]);
+
+function writeFileWithRetry(file, content) {
+  for (let attempt = 0; attempt < 6; attempt += 1) {
+    try {
+      fs.writeFileSync(file, content, "utf8");
+      return;
+    } catch (error) {
+      if (!WRITE_RETRY_CODES.has(error.code) || attempt === 5) throw error;
+      Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, 40 * (attempt + 1));
+    }
+  }
+}
 
 const PROFILES = {
   home: {
@@ -208,7 +221,7 @@ function decorateFile(file, family) {
   html = addHeroActions(html, family);
   html = addArticleToc(html);
   html = normalizeHtmlCopy(html);
-  if (html !== before) fs.writeFileSync(file, html, "utf8");
+  if (html !== before) writeFileWithRetry(file, html);
   return html !== before;
 }
 
