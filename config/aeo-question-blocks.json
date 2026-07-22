@@ -1,0 +1,521 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-07-22",
+  "gscEvidence": {
+    "source": "reports/gsc-query-opportunities.csv",
+    "exportArchive": "atelierdeconsultanta.ro-Performance-on-Search-2026-07-12.zip",
+    "period": "2026-04-11/2026-07-10",
+    "note": "Exportul confirmă clusterele de întrebări, dar nu oferă pentru toate rândurile asocierea exactă query-pagină; mapping-ul URL este o decizie editorială documentată."
+  },
+  "pages": [
+    {
+      "route": "/dr12-afir",
+      "file": "dr12-afir/index.html",
+      "insertAfter": "<!-- PROGRAM_FACTUAL_STATUS_END -->",
+      "label": "Întrebări despre DR 12",
+      "questions": [
+        {
+          "id": "este-deschis-apelul-dr12",
+          "question": "Este deschis apelul DR 12?",
+          "answer": "Nu. La verificarea din 22 iulie 2026, AFIR publicase pentru DR 12 o versiune consultativă, iar depunerea proiectelor nu era deschisă. Documentul poate ajuta la pregătirea întrebărilor și a actelor, dar condițiile se pot modifica înaintea ghidului final. O estimare internă privind lansarea nu înlocuiește anunțul oficial al apelului.",
+          "evidenceTitle": "Ce înseamnă practic statutul consultativ",
+          "evidence": [
+            "nu există un interval oficial activ de depunere",
+            "condițiile și anexele trebuie reconfirmate în forma finală",
+            "pregătirea poate continua numai cu ipotezele marcate explicit"
+          ],
+          "selectionBasis": "GSC: „dr 12 afir lansare”, „dr 12 ghid final” și variante apropiate",
+          "sources": [
+            {
+              "name": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
+              "document": "Consultare publică pentru consolidarea exploatațiilor tinerilor fermieri",
+              "version": "Versiune consultativă publicată la 19.03.2026",
+              "url": "https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/",
+              "verifiedAt": "2026-07-22"
+            }
+          ],
+          "detailLinks": [
+            { "href": "/dr12-vs-dr14", "label": "Compară prudent DR 12 cu DR 14" }
+          ]
+        },
+        {
+          "id": "cheltuieli-neeligibile-dr12",
+          "question": "Ce cheltuieli nu sunt eligibile în DR 12?",
+          "answer": "Lista definitivă a cheltuielilor neeligibile nu poate fi publicată cât timp ghidul DR 12 este consultativ. În analiză sunt tratate ca risc costurile care nu apar în categoriile permise, nu susțin obiectivul investiției, nu pot fi documentate ori sunt angajate în afara regulilor și perioadelor acceptate. Fiecare poziție de buget trebuie reconfirmată în ghidul final și în anexele sale.",
+          "evidenceTitle": "Control minim pentru fiecare cost",
+          "evidence": [
+            "încadrare în categoria permisă de ghid",
+            "legătură demonstrabilă cu investiția și exploatația",
+            "documente, moment și plafon conforme formei finale"
+          ],
+          "selectionBasis": "Brief clienți + documentul oficial DR 12",
+          "sources": [
+            {
+              "name": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
+              "document": "Ghidul solicitantului DR 12 supus consultării publice",
+              "version": "Versiune consultativă publicată la 19.03.2026",
+              "url": "https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/",
+              "verifiedAt": "2026-07-22"
+            }
+          ],
+          "detailLinks": [
+            { "href": "/verificare-eligibilitate-fonduri-europene", "label": "Vezi cum verificăm bugetul și eligibilitatea" }
+          ]
+        },
+        {
+          "id": "documente-inainte-dr12",
+          "question": "Ce trebuie verificat înainte de pregătirea unui dosar DR 12?",
+          "answer": "Înaintea dosarului se compară forma solicitantului, vârsta și istoricul instalării, structura documentată a exploatației, dimensiunea economică SO, amplasamentul și investiția propusă. Rezultatul este orientativ până când ghidul final confirmă condițiile și documentele. O informație declarată, dar nesusținută de evidențele fermei, nu trebuie folosită pentru a promite încadrarea sau punctajul.",
+          "evidenceTitle": "Date care pot schimba concluzia",
+          "evidence": [
+            "actele solicitantului și istoricul instalării",
+            "evidențele exploatației folosite la calculul SO",
+            "dreptul asupra amplasamentului și lista investițiilor"
+          ],
+          "selectionBasis": "GSC: clusterul DR 12 + întrebări recurente din trierea FABER",
+          "sources": [
+            {
+              "name": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
+              "document": "Ghidul solicitantului DR 12 supus consultării publice",
+              "version": "Versiune consultativă publicată la 19.03.2026",
+              "url": "https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/",
+              "verifiedAt": "2026-07-22"
+            }
+          ],
+          "detailLinks": [
+            { "href": "/calculator-soc", "label": "Calculează orientativ dimensiunea economică SO" }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/dr14",
+      "file": "dr14/index.html",
+      "insertAfter": "<!-- PROGRAM_FACTUAL_STATUS_END -->",
+      "label": "Întrebări despre DR 14",
+      "questions": [
+        {
+          "id": "este-deschis-apelul-dr14",
+          "question": "Este deschis apelul DR 14?",
+          "answer": "Nu. La verificarea din 22 iulie 2026, documentul disponibil pentru DR 14 era varianta consultativă a ghidului, iar depunerea proiectelor nu era deschisă. Condițiile pot fi analizate pentru pregătire, însă nu trebuie prezentate ca reguli finale. Perioada de lansare va putea fi publicată numai după un anunț oficial AFIR cu intervalul efectiv.",
+          "evidenceTitle": "Ce rămâne de reconfirmat",
+          "evidence": [
+            "forma finală și anexele ghidului",
+            "intervalul oficial de depunere",
+            "condițiile, pragurile și valorile aplicabile sesiunii"
+          ],
+          "selectionBasis": "GSC: „dr14 afir 2026”, „dr 14 afir” și variante despre ghid",
+          "sources": [
+            {
+              "name": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
+              "document": "Ghidul solicitantului DR 14",
+              "version": "Varianta consultativă, sesiunea 2026, arhivată de AFIR la 05.05.2026",
+              "url": "https://www.afir.ro/api/file?filename=Ghidul+Solicitantului+DR-14+VARIANTA+CONSULTATIV%C4%82&filetype=pdf&url=%2Fmedia%2Fbkmpo5fo%2Fgs-consultativ-dr-14.pdf",
+              "verifiedAt": "2026-07-22"
+            }
+          ],
+          "detailLinks": [
+            { "href": "/dr12-vs-dr14", "label": "Vezi diferențele de analizat între DR 12 și DR 14" }
+          ]
+        },
+        {
+          "id": "so-incadrare-dr14",
+          "question": "Cum influențează SO încadrarea în DR 14?",
+          "answer": "SO exprimă dimensiunea economică a exploatației și este unul dintre elementele folosite la analiza încadrării, dar nu decide singur eligibilitatea pentru DR 14. Totalul trebuie calculat cu categoriile și coeficienții aplicabili și confruntat cu evidențele fermei. Forma solicitantului, amplasamentul, investiția, istoricul exploatației și celelalte condiții din ghid pot schimba concluzia.",
+          "evidenceTitle": "Verificări care însoțesc rezultatul SO",
+          "evidence": [
+            "suprafețe și efective documentabile",
+            "categoria corectă pentru fiecare cultură sau animal",
+            "toate condițiile cumulative din ghidul aplicabil"
+          ],
+          "selectionBasis": "GSC: clusterul DR 14 + clusterul Calculator SO",
+          "sources": [
+            {
+              "name": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
+              "document": "Ghidul solicitantului DR 14",
+              "version": "Varianta consultativă, sesiunea 2026, arhivată de AFIR la 05.05.2026",
+              "url": "https://www.afir.ro/api/file?filename=Ghidul+Solicitantului+DR-14+VARIANTA+CONSULTATIV%C4%82&filetype=pdf&url=%2Fmedia%2Fbkmpo5fo%2Fgs-consultativ-dr-14.pdf",
+              "verifiedAt": "2026-07-22"
+            }
+          ],
+          "detailLinks": [
+            { "href": "/calculator-soc", "label": "Calculează și verifică orientativ SO" }
+          ]
+        },
+        {
+          "id": "documente-schimba-dr14",
+          "question": "Ce documente pot schimba concluzia pentru DR 14?",
+          "answer": "Concluzia se poate schimba după verificarea actelor solicitantului, evidențelor agricole și zootehnice, documentelor amplasamentului, istoricului exploatației și listei investițiilor. Acestea trebuie să susțină aceleași suprafețe, efective și activități folosite în analiză. Pentru că ghidul este consultativ, setul final și momentul la care fiecare document trebuie să fie valabil se reconfirmă înainte de depunere.",
+          "evidenceTitle": "Documente de confruntat între ele",
+          "evidence": [
+            "actele solicitantului și ale exploatației",
+            "evidențele pentru suprafețe, culturi și animale",
+            "actele amplasamentului și documentele investiției"
+          ],
+          "selectionBasis": "Întrebări recurente din trierea FABER + documentul oficial DR 14",
+          "sources": [
+            {
+              "name": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
+              "document": "Ghidul solicitantului DR 14",
+              "version": "Varianta consultativă, sesiunea 2026, arhivată de AFIR la 05.05.2026",
+              "url": "https://www.afir.ro/api/file?filename=Ghidul+Solicitantului+DR-14+VARIANTA+CONSULTATIV%C4%82&filetype=pdf&url=%2Fmedia%2Fbkmpo5fo%2Fgs-consultativ-dr-14.pdf",
+              "verifiedAt": "2026-07-22"
+            }
+          ],
+          "detailLinks": [
+            { "href": "/verificare-eligibilitate-fonduri-europene", "label": "Vezi ce date pregătești pentru verificarea DR 14" }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/dr12-vs-dr14",
+      "file": "dr12-vs-dr14.html",
+      "insertAfter": "<article class=\"post-body\">",
+      "label": "Întrebări pentru comparația DR 12 și DR 14",
+      "questions": [
+        {
+          "id": "diferenta-dr12-dr14",
+          "question": "Care este diferența dintre DR 12 și DR 14?",
+          "answer": "În documentele consultative verificate la 22 iulie 2026, DR 12 urmărește consolidarea exploatațiilor tinerilor fermieri instalați și ale fermierilor de până la 45 de ani, iar DR 14 vizează investițiile în ferme de mici dimensiuni. Alegerea nu se face doar după SO: profilul solicitantului, istoricul exploatației, investiția și documentele pot schimba încadrarea. Niciun apel nu este deschis.",
+          "evidenceTitle": "Comparația pornește de la cinci controale",
+          "evidence": [
+            "profilul și istoricul solicitantului",
+            "dimensiunea economică și structura exploatației",
+            "amplasamentul, investiția și documentele disponibile"
+          ],
+          "selectionBasis": "GSC: clusterele DR 12 și DR 14 + întrebarea prioritară din brief",
+          "sources": [
+            {
+              "name": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
+              "document": "Ghidul solicitantului DR 12 supus consultării publice",
+              "version": "Versiune consultativă publicată la 19.03.2026",
+              "url": "https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/",
+              "verifiedAt": "2026-07-22"
+            },
+            {
+              "name": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
+              "document": "Ghidul solicitantului DR 14",
+              "version": "Varianta consultativă, sesiunea 2026, arhivată la 05.05.2026",
+              "url": "https://www.afir.ro/api/file?filename=Ghidul+Solicitantului+DR-14+VARIANTA+CONSULTATIV%C4%82&filetype=pdf&url=%2Fmedia%2Fbkmpo5fo%2Fgs-consultativ-dr-14.pdf",
+              "verifiedAt": "2026-07-22"
+            }
+          ],
+          "detailLinks": [
+            { "href": "/dr12-afir", "label": "Verifică statutul și condițiile DR 12" },
+            { "href": "/dr14", "label": "Verifică statutul și condițiile DR 14" }
+          ]
+        },
+        {
+          "id": "documente-comparatie-dr12-dr14",
+          "question": "Ce documente pot schimba comparația dintre DR 12 și DR 14?",
+          "answer": "Comparația se poate schimba atunci când actele nu confirmă istoricul solicitantului, suprafețele sau efectivele folosite la SO, dreptul asupra amplasamentului ori investiția declarată. De aceea, o discuție inițială nu este un verdict. Documentele exploatației trebuie confruntate cu fiecare ghid, iar diferențele dintre datele declarate și evidențele oficiale se clarifică înainte de alegerea intervenției.",
+          "evidenceTitle": "Ordinea utilă de verificare",
+          "evidence": [
+            "solicitant și istoric",
+            "exploatație, SO și amplasament",
+            "investiție, buget și documente justificative"
+          ],
+          "selectionBasis": "Întrebări recurente din trierea FABER + documentele oficiale DR 12/DR 14",
+          "sources": [
+            {
+              "name": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
+              "document": "Ghidul solicitantului DR 12 supus consultării publice",
+              "version": "Versiune consultativă publicată la 19.03.2026",
+              "url": "https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/",
+              "verifiedAt": "2026-07-22"
+            },
+            {
+              "name": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
+              "document": "Ghidul solicitantului DR 14",
+              "version": "Varianta consultativă, sesiunea 2026, arhivată la 05.05.2026",
+              "url": "https://www.afir.ro/api/file?filename=Ghidul+Solicitantului+DR-14+VARIANTA+CONSULTATIV%C4%82&filetype=pdf&url=%2Fmedia%2Fbkmpo5fo%2Fgs-consultativ-dr-14.pdf",
+              "verifiedAt": "2026-07-22"
+            }
+          ],
+          "detailLinks": [
+            { "href": "/calculator-soc", "label": "Verifică datele folosite în calculul SO" }
+          ]
+        },
+        {
+          "id": "so-alegere-program",
+          "question": "Poate fi ales programul doar după rezultatul SO?",
+          "answer": "Nu. SO măsoară dimensiunea economică a exploatației prin valorile standard asociate culturilor și animalelor, dar nu confirmă singur programul potrivit. Rezultatul trebuie corelat cu profilul solicitantului, condițiile intervenției, amplasamentul, investiția și documentele fermei. Pentru DR 12 și DR 14, pragurile și regulile aplicabile rămân de reconfirmat în forma finală a ghidurilor.",
+          "evidenceTitle": "SO este un filtru, nu verdictul",
+          "evidence": [
+            "arată dimensiunea economică orientativă",
+            "nu verifică toate condițiile solicitantului",
+            "nu confirmă deschiderea, finanțarea sau punctajul"
+          ],
+          "selectionBasis": "GSC: „calculator so”, „formula de calcul so” + întrebarea prioritară din brief",
+          "sources": [
+            {
+              "name": "Eurostat",
+              "document": "Standard output coefficients — definiție și date metodologice",
+              "version": "Pagina oficială a bazei de date agricole",
+              "url": "https://ec.europa.eu/eurostat/web/agriculture/database/additional-data",
+              "verifiedAt": "2026-07-22"
+            },
+            {
+              "name": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
+              "document": "Ghidurile consultative DR 12 și DR 14",
+              "version": "Versiunile consultative disponibile în 2026",
+              "url": "https://www.afir.ro/comunicare/utile/dezbatere-publica/",
+              "verifiedAt": "2026-07-22"
+            }
+          ],
+          "detailLinks": [
+            { "href": "/calculator-soc", "label": "Folosește calculatorul SO și citește limitele rezultatului" }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/calculator-soc",
+      "file": "calculator-soc.html",
+      "insertAfter": "<!-- ANSWER_READINESS_END -->",
+      "label": "Întrebări despre calculul SO",
+      "questions": [
+        {
+          "id": "calcul-so-documente",
+          "question": "Cum se calculează SO și ce documente îl dovedesc?",
+          "answer": "SO total se obține prin înmulțirea suprafeței sau a numărului de animale din fiecare categorie cu coeficientul Standard Output aplicabil, apoi prin însumarea rezultatelor. Calculul trebuie confruntat cu evidențele agricole și zootehnice cerute de ghid, nu doar cu date introduse manual. Coeficienții și documentele acceptate pentru o sesiune se reconfirmă în sursa AFIR aplicabilă.",
+          "evidenceTitle": "Metoda de control",
+          "evidence": [
+            "identifică fiecare cultură sau categorie de animale",
+            "aplică unitatea și coeficientul corespunzător",
+            "compară totalul cu evidențele exploatației"
+          ],
+          "selectionBasis": "GSC: „calculator so”, „formula de calcul so”, „coeficienți so” + întrebarea prioritară",
+          "sources": [
+            {
+              "name": "Eurostat",
+              "document": "Standard output coefficients — definiție și date metodologice",
+              "version": "Pagina oficială a bazei de date agricole",
+              "url": "https://ec.europa.eu/eurostat/web/agriculture/database/additional-data",
+              "verifiedAt": "2026-07-22"
+            },
+            {
+              "name": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
+              "document": "Ghidurile consultative DR 12 și DR 14",
+              "version": "Versiunile consultative disponibile în 2026",
+              "url": "https://www.afir.ro/comunicare/utile/dezbatere-publica/",
+              "verifiedAt": "2026-07-22"
+            }
+          ],
+          "detailLinks": [
+            { "href": "/calculator-soc#calculator", "label": "Introdu datele documentabile în calculator" }
+          ]
+        },
+        {
+          "id": "date-calcul-vegetal-animale",
+          "question": "Ce date intră în calculul SO pentru culturi și animale?",
+          "answer": "Pentru producția vegetală se folosesc suprafețele aferente categoriilor de culturi, iar pentru zootehnie se folosesc efectivele încadrate pe categoriile de animale prevăzute de coeficienți. O exploatație mixtă însumează componentele aplicabile. Nu trebuie dublate suprafețe sau efective și nu se introduc date viitoare ca și cum ar fi deja consemnate în evidențele fermei.",
+          "evidenceTitle": "Date de introdus prudent",
+          "evidence": [
+            "suprafața documentată pentru fiecare cultură",
+            "numărul documentat de animale pe categoria corectă",
+            "separarea situației existente de extinderea propusă"
+          ],
+          "selectionBasis": "GSC: „calculator so vegetal”, „calculator so animale” și variante apropiate",
+          "sources": [
+            {
+              "name": "Eurostat",
+              "document": "Standard output coefficients — definiție și date metodologice",
+              "version": "Pagina oficială a bazei de date agricole",
+              "url": "https://ec.europa.eu/eurostat/web/agriculture/database/additional-data",
+              "verifiedAt": "2026-07-22"
+            }
+          ],
+          "detailLinks": [
+            { "href": "/calculator-soc#calculator", "label": "Vezi categoriile disponibile în calculator" }
+          ]
+        },
+        {
+          "id": "rezultat-so-eligibilitate",
+          "question": "Rezultatul calculatorului SO confirmă eligibilitatea AFIR?",
+          "answer": "Nu. Calculatorul oferă o estimare a dimensiunii economice pe baza datelor introduse și a coeficienților implementați, dar nu verifică forma solicitantului, istoricul instalării, amplasamentul, toate documentele sau condițiile eliminatorii. Rezultatul trebuie verificat în evidențele exploatației și în ghidul intervenției. Un total aflat lângă un prag necesită un control documentar înaintea oricărei concluzii.",
+          "evidenceTitle": "Ce nu poate decide instrumentul",
+          "evidence": [
+            "eligibilitatea completă a solicitantului",
+            "punctajul, grantul sau contribuția proprie",
+            "valabilitatea documentelor la data depunerii"
+          ],
+          "selectionBasis": "GSC: clusterul Calculator SO + întrebări recurente din utilizarea instrumentului",
+          "sources": [
+            {
+              "name": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
+              "document": "Ghidurile consultative DR 12 și DR 14",
+              "version": "Versiunile consultative disponibile în 2026",
+              "url": "https://www.afir.ro/comunicare/utile/dezbatere-publica/",
+              "verifiedAt": "2026-07-22"
+            }
+          ],
+          "detailLinks": [
+            { "href": "/dr12-vs-dr14", "label": "Compară rezultatul cu celelalte condiții DR 12 și DR 14" }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/proiectare-fonduri-europene",
+      "file": "proiectare-fonduri-europene/index.html",
+      "insertAfter": "<article class=\"panel\">",
+      "label": "Întrebări despre documentația tehnică",
+      "questions": [
+        {
+          "id": "cand-sf-dali-proiect-tehnic",
+          "question": "Când este necesar SF, DALI sau proiect tehnic?",
+          "answer": "În cadrul HG 907/2016, studiul de fezabilitate fundamentează de regulă un obiectiv nou de investiții, DALI analizează intervențiile asupra unei construcții existente, iar proiectul tehnic dezvoltă soluția aprobată pentru execuție. Documentația necesară se stabilește totuși după natura lucrărilor, etapa proiectului, regimul beneficiarului și cerințele apelului. Încadrarea trebuie confirmată înaintea bugetării și depunerii.",
+          "evidenceTitle": "Întrebări de clarificat înainte de alegerea documentației",
+          "evidence": [
+            "este o investiție nouă sau o intervenție pe existent",
+            "ce etapă și ce aprobări sunt cerute",
+            "ce prevede ghidul solicitantului pentru proiectul concret"
+          ],
+          "selectionBasis": "Întrebarea prioritară din brief + cadrul legal oficial",
+          "sources": [
+            {
+              "name": "Portalul Legislativ al Ministerului Justiției",
+              "document": "HG nr. 907/2016 privind documentațiile tehnico-economice pentru investiții finanțate din fonduri publice",
+              "version": "Forma consolidată afișată de Portalul Legislativ",
+              "url": "https://legislatie.just.ro/Public/DetaliiDocumentAfis/185166",
+              "verifiedAt": "2026-07-22"
+            }
+          ],
+          "detailLinks": [
+            { "href": "/proiectare-fonduri-europene", "label": "Vezi etapele serviciului de proiectare" }
+          ]
+        },
+        {
+          "id": "cine-stabileste-documentatia",
+          "question": "Cine stabilește documentația tehnico-economică necesară?",
+          "answer": "Tipul documentației nu se alege doar după denumirea programului. Beneficiarul și proiectantul pornesc de la tema investiției, situația existentă, certificatul de urbanism și reglementările aplicabile, iar consultantul verifică cerințele ghidului și ale bugetului. Autoritatea competentă poate impune avize sau piese suplimentare. Decizia trebuie consemnată înainte ca soluția și costurile să fie considerate definitive.",
+          "evidenceTitle": "Roluri care trebuie coordonate",
+          "evidence": [
+            "beneficiarul definește nevoia și pune la dispoziție actele",
+            "proiectantul fundamentează soluția tehnică",
+            "consultantul corelează documentația cu ghidul și bugetul"
+          ],
+          "selectionBasis": "Întrebări recurente din discuțiile cu clienții + cadrul legal oficial",
+          "sources": [
+            {
+              "name": "Portalul Legislativ al Ministerului Justiției",
+              "document": "HG nr. 907/2016 privind documentațiile tehnico-economice pentru investiții finanțate din fonduri publice",
+              "version": "Forma consolidată afișată de Portalul Legislativ",
+              "url": "https://legislatie.just.ro/Public/DetaliiDocumentAfis/185166",
+              "verifiedAt": "2026-07-22"
+            }
+          ],
+          "detailLinks": [
+            { "href": "/verificare-eligibilitate-fonduri-europene", "label": "Vezi datele necesare pentru verificarea inițială" }
+          ]
+        },
+        {
+          "id": "buget-inainte-solutie-tehnica",
+          "question": "Poate fi finalizat bugetul înaintea soluției tehnice?",
+          "answer": "Un buget preliminar poate ajuta la triere, dar nu ar trebui tratat ca deviz final înainte ca soluția tehnică, cantitățile, amplasamentul și cerințele de autorizare să fie clarificate. În documentațiile reglementate de HG 907/2016, indicatorii și costurile sunt legați de scenariul tehnico-economic fundamentat. Ghidul apelului stabilește apoi ce costuri și limite pot intra în cererea de finanțare.",
+          "evidenceTitle": "Ce trebuie corelat înainte de închiderea bugetului",
+          "evidence": [
+            "soluția, cantitățile și lucrările necesare",
+            "devizul și categoriile de cheltuieli din ghid",
+            "costurile eligibile, neeligibile și sursele proprii"
+          ],
+          "selectionBasis": "Întrebări recurente din pregătirea proiectelor + cadrul legal oficial",
+          "sources": [
+            {
+              "name": "Portalul Legislativ al Ministerului Justiției",
+              "document": "HG nr. 907/2016 privind documentațiile tehnico-economice pentru investiții finanțate din fonduri publice",
+              "version": "Forma consolidată afișată de Portalul Legislativ",
+              "url": "https://legislatie.just.ro/Public/DetaliiDocumentAfis/185166",
+              "verifiedAt": "2026-07-22"
+            }
+          ],
+          "detailLinks": [
+            { "href": "/verificare-eligibilitate-fonduri-europene", "label": "Vezi cum corelăm investiția, bugetul și ghidul" }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/fonduri-europene-nerambursabile-2026",
+      "file": "fonduri-europene-nerambursabile-2026/index.html",
+      "insertAfter": "<article class=\"panel\">",
+      "label": "Întrebări despre contribuția proprie și cash-flow",
+      "questions": [
+        {
+          "id": "contributie-proprie-cash-flow",
+          "question": "Câtă contribuție proprie și ce cash-flow trebuie pregătite?",
+          "answer": "Nu există un procent universal. Contribuția proprie rezultă din intensitatea ajutorului aplicabil, partea eligibilă neacoperită, cheltuielile neeligibile, depășirile de plafon și taxele care nu sunt rambursabile. Cash-flow-ul trebuie să acopere și decalajul dintre plăți și rambursări. Valoarea se calculează numai după alegerea apelului, citirea ghidului și construirea bugetului proiectului.",
+          "evidenceTitle": "Componentele necesarului de finanțare",
+          "evidence": [
+            "contribuția la cheltuielile eligibile",
+            "costurile neeligibile și diferențele peste plafoane",
+            "capitalul temporar necesar până la rambursare"
+          ],
+          "selectionBasis": "Întrebarea prioritară din brief + practică de bugetare conform ghidului apelului",
+          "sources": [
+            {
+              "name": "Ministerul Investițiilor și Proiectelor Europene (MIPE)",
+              "document": "Ghidul solicitantului și anexele apelului selectat",
+              "version": "Versiunea aplicabilă se confirmă individual pentru fiecare apel",
+              "url": "https://mfe.gov.ro/",
+              "verifiedAt": "2026-07-22"
+            }
+          ],
+          "detailLinks": [
+            { "href": "/verificare-eligibilitate-fonduri-europene", "label": "Vezi datele necesare pentru verificarea bugetului" }
+          ]
+        },
+        {
+          "id": "costuri-din-surse-proprii",
+          "question": "Ce costuri trebuie acoperite din surse proprii?",
+          "answer": "Solicitantul pregătește din surse proprii cel puțin partea de cofinanțare stabilită de apel și toate costurile declarate neeligibile. Pot apărea și diferențe peste plafoane, cheltuieli realizate în momente nepermise sau costuri pe care ghidul nu le recunoaște. Lista exactă nu se deduce din procentul grantului; se construiește poziție cu poziție din buget și din regulile apelului ales.",
+          "evidenceTitle": "Trei coloane utile în buget",
+          "evidence": [
+            "eligibil și acoperit din finanțare",
+            "eligibil, dar acoperit prin contribuție proprie",
+            "neeligibil sau peste limita acceptată"
+          ],
+          "selectionBasis": "Întrebări recurente din discuțiile cu clienții + ghidurile oficiale ale apelurilor",
+          "sources": [
+            {
+              "name": "Ministerul Investițiilor și Proiectelor Europene (MIPE)",
+              "document": "Ghidul solicitantului și anexele apelului selectat",
+              "version": "Versiunea aplicabilă se confirmă individual pentru fiecare apel",
+              "url": "https://mfe.gov.ro/",
+              "verifiedAt": "2026-07-22"
+            }
+          ],
+          "detailLinks": [
+            { "href": "/fonduri-europene", "label": "Alege mai întâi familia de programe potrivită" }
+          ]
+        },
+        {
+          "id": "documentare-cofinantare",
+          "question": "Cum se documentează capacitatea de cofinanțare?",
+          "answer": "Capacitatea de cofinanțare se dovedește prin documentele acceptate explicit de ghidul apelului și la momentul cerut de acesta. În funcție de program, analiza poate lua în calcul disponibilul propriu, finanțarea bancară sau alte surse legale, dar niciun document nu trebuie presupus acceptat automat. Sursa, suma, costul finanțării și perioada de disponibilitate trebuie corelate cu bugetul și calendarul proiectului.",
+          "evidenceTitle": "Ce se verifică pentru fiecare sursă",
+          "evidence": [
+            "documentul permis de ghid și data lui",
+            "suma disponibilă și condițiile de utilizare",
+            "corelarea cu plățile, rambursările și perioada proiectului"
+          ],
+          "selectionBasis": "Întrebări recurente din trierea financiară + ghidurile oficiale ale apelurilor",
+          "sources": [
+            {
+              "name": "Ministerul Investițiilor și Proiectelor Europene (MIPE)",
+              "document": "Ghidul solicitantului și anexele apelului selectat",
+              "version": "Versiunea aplicabilă se confirmă individual pentru fiecare apel",
+              "url": "https://mfe.gov.ro/",
+              "verifiedAt": "2026-07-22"
+            }
+          ],
+          "detailLinks": [
+            { "href": "/verificare-eligibilitate-fonduri-europene", "label": "Vezi cum pregătești contextul proiectului pentru triere" }
+          ]
+        }
+      ]
+    }
+  ]
+}
