@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "route": "/dr12-vs-dr14",
+  "file": "dr12-vs-dr14.html",
+  "reviewedAt": "2026-07-22",
+  "title": "DR 12 vs DR 14: încadrare și investiții | FABER",
+  "metaDescription": "Compară prudent DR 12 și DR 14: profilul fermei, SO, investiția, documentele și riscurile. Ghiduri AFIR consultative verificate la 22.07.2026.",
+  "h1": "DR 12 vs DR 14: cum diferă încadrarea și investiția",
+  "directAnswer": "Comparația DR 12–DR 14 este utilă pentru a decide ce intervenție merită analizată înainte de dosar. În documentele consultative verificate la 22 iulie 2026, DR 12 privește consolidarea exploatațiilor tinerilor fermieri și a categoriilor prevăzute de intervenție, iar DR 14 investițiile în ferme mici. Alegerea depinde de solicitant, istoricul exploatației, SO, investiție și acte; niciun apel nu este deschis.",
+  "statusStatement": "Ghiduri consultative – depunerea nu este deschisă. Condițiile se pot modifica.",
+  "programs": [
+    {
+      "slug": "dr12-afir",
+      "shortName": "DR 12",
+      "sourceLabel": "Ghidul solicitantului DR 12, versiune consultativă publicată la 19.03.2026",
+      "sourceUrl": "https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/",
+      "guideUrl": "https://www.afir.ro/api/file?filename=Ghidul+Solicitantului+DR+12+-+versiunea+consultativ%C4%83&filetype=pdf&url=%2Fmedia%2Flm3fg4k1%2Fghidul-solicitantului-dr-12.pdf",
+      "canonicalUrl": "/dr12-afir"
+    },
+    {
+      "slug": "dr14-afir",
+      "shortName": "DR 14",
+      "sourceLabel": "Ghidul solicitantului DR 14, varianta consultativă, sesiunea 2026, arhivată la 05.05.2026",
+      "sourceUrl": "https://www.afir.ro/api/file?filename=Ghidul+Solicitantului+DR-14+VARIANTA+CONSULTATIV%C4%82&filetype=pdf&url=%2Fmedia%2Fbkmpo5fo%2Fgs-consultativ-dr-14.pdf",
+      "canonicalUrl": "/dr14"
+    }
+  ],
+  "comparisonRows": [
+    {
+      "label": "Beneficiar",
+      "dr12": "Fermieri șefi ai exploatației din categoriile descrise în ghidul consultativ pentru tineri fermieri și fermierii prevăzuți de intervenție. Profilul și istoricul se verifică documentar.",
+      "dr14": "Fermieri organizați juridic, cu excepția persoanelor fizice, care pregătesc investiții într-o fermă de mici dimensiuni și dovedesc încadrarea cerută."
+    },
+    {
+      "label": "Obiectiv",
+      "dr12": "Consolidarea și modernizarea exploatației pentru categoriile de fermieri cărora le este dedicată intervenția.",
+      "dr14": "Dezvoltarea și modernizarea fermelor de mici dimensiuni prin investiții proporționale cu activitatea documentată."
+    },
+    {
+      "label": "Instalare / dezvoltare",
+      "dr12": "Istoricul instalării, rolul de șef al exploatației și categoria solicitantului pot decide încadrarea; vârsta singură nu este suficientă.",
+      "dr14": "Analiza pornește de la ferma mică existentă și de la dezvoltarea propusă; DR 14 nu este prezentată în ghid ca intervenție de instalare a tinerilor fermieri."
+    },
+    {
+      "label": "SO",
+      "dr12": "SO este un filtru de încadrare și trebuie recalculat din date dovedibile. Pragurile consultative nu sunt publicate aici până la reconfirmarea umană și forma finală.",
+      "dr14": "Ferma trebuie încadrată ca dimensiune economică potrivit componentei analizate. Pragurile consultative nu sunt publicate aici până la reconfirmarea umană și forma finală."
+    },
+    {
+      "label": "Tip de investiție",
+      "dr12": "Ghidul consultativ include modernizări, construcții și dotări agricole, condiționare sau depozitare și utilaje, în limitele și componentele documentului aplicabil.",
+      "dr14": "Ghidul consultativ tratează investiții și cheltuieli eligibile pe componente de fermă mică; lista și demarcările se verifică pentru sectorul concret."
+    },
+    {
+      "label": "Sprijin",
+      "dr12": "Nu publicăm o sumă sau o intensitate în această comparație înainte ca valorile din ghidul consultativ să fie reconfirmate pentru forma aplicabilă.",
+      "dr14": "Nu publicăm o sumă sau o intensitate în această comparație înainte ca valorile din ghidul consultativ să fie reconfirmate pentru forma aplicabilă."
+    },
+    {
+      "label": "Contribuție proprie",
+      "dr12": "Se calculează numai după confirmarea intensității aplicabile, a cheltuielilor eligibile și a costurilor neeligibile; nu este publicată o valoare neverificată.",
+      "dr14": "Se calculează numai după confirmarea intensității aplicabile, a cheltuielilor eligibile și a costurilor neeligibile; nu este publicată o valoare neverificată."
+    },
+    {
+      "label": "Calendar",
+      "dr12": "Apel nedeschis. La 22.07.2026 nu este publicat un interval oficial de depunere; estimările interne FABER nu sunt calendar oficial.",
+      "dr14": "Apel nedeschis. La 22.07.2026 nu este publicat un interval oficial de depunere; estimările interne FABER nu sunt calendar oficial."
+    },
+    {
+      "label": "Documente-cheie",
+      "dr12": "Acte privind solicitantul și istoricul său, exploatația și SO, drepturile asupra amplasamentului, investiția, bugetul și documentația tehnică aplicabilă.",
+      "dr14": "Forma juridică, evidențele fermei și SO, drepturile de folosință, avizele, bugetul și studiul sau documentația tehnico-economică cerută proiectului."
+    },
+    {
+      "label": "Riscuri",
+      "dr12": "Profil sau istoric neconfirmat, SO inconsistent, investiție fără legătură cu exploatația, drepturi insuficiente și condiții modificate în ghidul final.",
+      "dr14": "Încadrare economică greșită, dublă finanțare sau demarcare incorectă, acte ori avize lipsă și condiții modificate în ghidul final."
+    }
+  ],
+  "pendingHumanValidation": [
+    "pragurile SO și regulile de încadrare din forma finală a fiecărui ghid",
+    "sumele, intensitățile și contribuția proprie aplicabile formei finale",
+    "categoriile finale de solicitanți și condițiile de instalare sau vechime",
+    "lista finală a cheltuielilor eligibile și neeligibile pe componentă",
+    "data deschiderii și intervalul oficial de depunere pentru fiecare apel"
+  ]
+}

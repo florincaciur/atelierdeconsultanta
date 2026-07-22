@@ -4,8 +4,8 @@ Data evaluării: **2026-07-22**. Registru: `config/editorial-governance.json`.
 
 ## Rezumat
 
-- Pagini guvernate: **32**
-- Pagini publice cu metadate complete: **17**
+- Pagini guvernate: **33**
+- Pagini publice cu metadate complete: **18**
 - Verificări expirate: **5**
 - Surse lipsă/incomplete: **5**
 - Reviewer lipsă: **0**
@@ -25,6 +25,7 @@ O expirare produce warning intern și nu schimbă automat statusul, textul, `ver
 | `/cod-caen-start-up-nation-2026` | guide | pending_validation | — | 2026-05-20 | 2026-08-18 | DE_VALIDAT_UMAN | nu | nu | nu | nu |
 | `/digitalizare-imm` | program | public | apel_inchis | 2026-07-22 | 2026-09-20 | 2026-07-22 | nu | nu | nu | nu |
 | `/dr12-afir` | program | public | consultare_publica | 2026-07-22 | 2026-09-20 | 2026-07-22 | nu | nu | nu | nu |
+| `/dr12-vs-dr14` | guide | public | — | 2026-07-22 | 2026-10-20 | 2026-07-22 | nu | nu | nu | nu |
 | `/dr14` | program | public | consultare_publica | 2026-07-22 | 2026-09-20 | 2026-07-22 | nu | nu | nu | nu |
 | `/dr14-afir-ferme-mici` | program | pending_validation | — | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | da | nu | nu | nu |
 | `/e-move` | program | public | consultare_publica | 2026-05-27 | 2026-07-26 | 2026-05-27 | nu | nu | nu | nu |

@@ -332,6 +332,7 @@ function pageKindForPath(pathname, hints = {}) {
   if (/^\/(?:intrebari\/|fonduri-europene-caen\/|fonduri-europene-(?:bacau|bucuresti|iasi|suceava)$|programul-tranzitie-justa-intrebari-documente$)/i.test(route)) {
     return PAGE_KINDS.ARTICLE;
   }
+  if (route === "/dr12-vs-dr14") return PAGE_KINDS.ARTICLE;
   if (/^\/blog-[^/]+$/iu.test(route)) return PAGE_KINDS.ARTICLE;
   return PAGE_KINDS.WEB_PAGE;
 }

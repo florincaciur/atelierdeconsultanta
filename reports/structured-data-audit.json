@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-22T01:30:08.694Z",
+  "generatedAt": "2026-07-22T08:53:24.209Z",
   "summary": {
     "htmlFilesChecked": 180,
     "indexablePagesChecked": 95,
@@ -11,18 +11,18 @@
       "PostalAddress": 95,
       "ImageObject": 95,
       "WebSite": 95,
-      "WebPage": 125,
-      "CreativeWork": 50,
+      "WebPage": 126,
+      "CreativeWork": 52,
       "BreadcrumbList": 94,
       "ListItem": 292,
-      "Article": 30,
+      "Article": 31,
       "DefinedTerm": 17,
       "PropertyValue": 146,
       "DefinedTermSet": 17,
       "Audience": 11,
-      "FAQPage": 77,
-      "Question": 590,
-      "Answer": 590,
+      "FAQPage": 76,
+      "Question": 546,
+      "Answer": 546,
       "Service": 12,
       "AdministrativeArea": 12,
       "WebApplication": 1
@@ -150,8 +150,8 @@
         "Audience": 3,
         "DefinedTermSet": 1,
         "FAQPage": 1,
-        "Question": 9,
-        "Answer": 9
+        "Question": 8,
+        "Answer": 8
       },
       "modified": [
         "2026-07-20",
@@ -179,8 +179,8 @@
         "Audience": 1,
         "DefinedTermSet": 1,
         "FAQPage": 1,
-        "Question": 12,
-        "Answer": 12
+        "Question": 10,
+        "Answer": 10
       },
       "modified": [
         "2026-05-26",
@@ -208,8 +208,8 @@
         "Audience": 1,
         "DefinedTermSet": 1,
         "FAQPage": 1,
-        "Question": 9,
-        "Answer": 9
+        "Question": 8,
+        "Answer": 8
       },
       "modified": [
         "2026-05-20",
@@ -237,8 +237,8 @@
         "Audience": 1,
         "DefinedTermSet": 1,
         "FAQPage": 1,
-        "Question": 12,
-        "Answer": 12
+        "Question": 10,
+        "Answer": 10
       },
       "modified": [
         "2026-05-27",
@@ -265,8 +265,8 @@
         "PropertyValue": 8,
         "DefinedTermSet": 1,
         "FAQPage": 1,
-        "Question": 9,
-        "Answer": 9
+        "Question": 8,
+        "Answer": 8
       },
       "modified": [
         "2026-05-20",
@@ -293,8 +293,8 @@
         "PropertyValue": 8,
         "DefinedTermSet": 1,
         "FAQPage": 1,
-        "Question": 12,
-        "Answer": 12
+        "Question": 10,
+        "Answer": 10
       },
       "modified": [
         "2026-05-20",
@@ -321,8 +321,8 @@
         "PropertyValue": 8,
         "DefinedTermSet": 1,
         "FAQPage": 1,
-        "Question": 7,
-        "Answer": 7
+        "Question": 6,
+        "Answer": 6
       },
       "modified": [
         "2026-05-20",
@@ -349,8 +349,8 @@
         "Audience": 1,
         "DefinedTermSet": 1,
         "FAQPage": 1,
-        "Question": 6,
-        "Answer": 6
+        "Question": 5,
+        "Answer": 5
       },
       "modified": [
         "2026-07-20"
@@ -377,8 +377,8 @@
         "Audience": 1,
         "DefinedTermSet": 1,
         "FAQPage": 1,
-        "Question": 12,
-        "Answer": 12
+        "Question": 10,
+        "Answer": 10
       },
       "modified": [
         "2026-05-26",
@@ -406,8 +406,8 @@
         "Audience": 1,
         "DefinedTermSet": 1,
         "FAQPage": 1,
-        "Question": 9,
-        "Answer": 9
+        "Question": 8,
+        "Answer": 8
       },
       "modified": [
         "2026-06-02",
@@ -435,8 +435,8 @@
         "Audience": 1,
         "DefinedTermSet": 1,
         "FAQPage": 1,
-        "Question": 12,
-        "Answer": 12
+        "Question": 10,
+        "Answer": 10
       },
       "modified": [
         "2026-07-13",
@@ -464,8 +464,8 @@
         "Audience": 1,
         "DefinedTermSet": 1,
         "FAQPage": 1,
-        "Question": 12,
-        "Answer": 12
+        "Question": 10,
+        "Answer": 10
       },
       "modified": [
         "2026-07-20",
@@ -492,8 +492,8 @@
         "PropertyValue": 8,
         "DefinedTermSet": 1,
         "FAQPage": 1,
-        "Question": 9,
-        "Answer": 9
+        "Question": 8,
+        "Answer": 8
       },
       "modified": [
         "2026-05-20",
@@ -651,8 +651,8 @@
         "ListItem": 3,
         "Article": 1,
         "FAQPage": 1,
-        "Question": 9,
-        "Answer": 9
+        "Question": 8,
+        "Answer": 8
       },
       "modified": [],
       "issues": []
@@ -671,8 +671,8 @@
         "BreadcrumbList": 1,
         "ListItem": 3,
         "FAQPage": 1,
-        "Question": 11,
-        "Answer": 11
+        "Question": 10,
+        "Answer": 10
       },
       "modified": [],
       "issues": []
@@ -692,10 +692,32 @@
         "ListItem": 3,
         "Article": 1,
         "FAQPage": 1,
-        "Question": 9,
-        "Answer": 9
+        "Question": 8,
+        "Answer": 8
       },
       "modified": [],
+      "issues": []
+    },
+    {
+      "file": "dr12-vs-dr14.html",
+      "route": "/dr12-vs-dr14",
+      "blocks": 1,
+      "types": {
+        "Organization": 1,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
+        "ImageObject": 1,
+        "WebSite": 1,
+        "WebPage": 2,
+        "CreativeWork": 2,
+        "BreadcrumbList": 1,
+        "ListItem": 3,
+        "Article": 1
+      },
+      "modified": [
+        "2026-07-22",
+        "2026-07-22"
+      ],
       "issues": []
     },
     {
@@ -953,8 +975,8 @@
         "BreadcrumbList": 1,
         "ListItem": 3,
         "FAQPage": 1,
-        "Question": 9,
-        "Answer": 9
+        "Question": 8,
+        "Answer": 8
       },
       "modified": [],
       "issues": []
@@ -973,8 +995,8 @@
         "BreadcrumbList": 1,
         "ListItem": 3,
         "FAQPage": 1,
-        "Question": 9,
-        "Answer": 9
+        "Question": 8,
+        "Answer": 8
       },
       "modified": [],
       "issues": []
@@ -993,8 +1015,8 @@
         "BreadcrumbList": 1,
         "ListItem": 3,
         "FAQPage": 1,
-        "Question": 9,
-        "Answer": 9
+        "Question": 8,
+        "Answer": 8
       },
       "modified": [],
       "issues": []
@@ -1088,8 +1110,8 @@
         "WebSite": 1,
         "WebPage": 1,
         "FAQPage": 1,
-        "Question": 8,
-        "Answer": 8
+        "Question": 7,
+        "Answer": 7
       },
       "modified": [],
       "issues": []
@@ -1432,8 +1454,8 @@
         "BreadcrumbList": 1,
         "ListItem": 3,
         "FAQPage": 1,
-        "Question": 8,
-        "Answer": 8
+        "Question": 7,
+        "Answer": 7
       },
       "modified": [],
       "issues": []
@@ -1492,26 +1514,6 @@
     {
       "file": "digitalizare-imm-pnrr/index.html",
       "route": "/digitalizare-imm-pnrr",
-      "blocks": 1,
-      "types": {
-        "Organization": 1,
-        "ProfessionalService": 1,
-        "PostalAddress": 1,
-        "ImageObject": 1,
-        "WebSite": 1,
-        "WebPage": 1,
-        "BreadcrumbList": 1,
-        "ListItem": 3,
-        "FAQPage": 1,
-        "Question": 9,
-        "Answer": 9
-      },
-      "modified": [],
-      "issues": []
-    },
-    {
-      "file": "dr12-vs-dr14.html",
-      "route": "/dr12-vs-dr14",
       "blocks": 1,
       "types": {
         "Organization": 1,
@@ -1644,8 +1646,8 @@
         "ListItem": 3,
         "Article": 1,
         "FAQPage": 1,
-        "Question": 14,
-        "Answer": 14
+        "Question": 13,
+        "Answer": 13
       },
       "modified": [],
       "issues": []
@@ -1665,8 +1667,8 @@
         "ListItem": 3,
         "Article": 1,
         "FAQPage": 1,
-        "Question": 13,
-        "Answer": 13
+        "Question": 12,
+        "Answer": 12
       },
       "modified": [],
       "issues": []
@@ -1686,8 +1688,8 @@
         "ListItem": 3,
         "Article": 1,
         "FAQPage": 1,
-        "Question": 13,
-        "Answer": 13
+        "Question": 12,
+        "Answer": 12
       },
       "modified": [],
       "issues": []
@@ -1707,8 +1709,8 @@
         "ListItem": 3,
         "Article": 1,
         "FAQPage": 1,
-        "Question": 13,
-        "Answer": 13
+        "Question": 12,
+        "Answer": 12
       },
       "modified": [],
       "issues": []
@@ -1728,8 +1730,8 @@
         "ListItem": 3,
         "Article": 1,
         "FAQPage": 1,
-        "Question": 13,
-        "Answer": 13
+        "Question": 12,
+        "Answer": 12
       },
       "modified": [],
       "issues": []
@@ -1808,8 +1810,8 @@
         "BreadcrumbList": 1,
         "ListItem": 3,
         "FAQPage": 1,
-        "Question": 13,
-        "Answer": 13
+        "Question": 12,
+        "Answer": 12
       },
       "modified": [],
       "issues": []
@@ -1829,8 +1831,8 @@
         "ListItem": 3,
         "Article": 1,
         "FAQPage": 1,
-        "Question": 13,
-        "Answer": 13
+        "Question": 12,
+        "Answer": 12
       },
       "modified": [],
       "issues": []
@@ -1886,8 +1888,8 @@
         "BreadcrumbList": 1,
         "ListItem": 3,
         "FAQPage": 1,
-        "Question": 9,
-        "Answer": 9
+        "Question": 8,
+        "Answer": 8
       },
       "modified": [],
       "issues": []

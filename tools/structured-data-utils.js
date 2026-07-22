@@ -98,7 +98,8 @@ function isHiddenFromUsers($, element) {
 function visibleFaqItems($) {
   const items = [];
   const seen = new Set();
-  const containers = $(".faq-item, details:not([data-non-faq]), [itemprop='mainEntity'][itemtype*='Question']");
+  const containers = $(".faq-item, details:not([data-non-faq]), [itemprop='mainEntity'][itemtype*='Question']")
+    .filter((_, container) => !$(container).closest("[data-long-form-toc], .editorial-governance").length);
 
   containers.each((_, container) => {
     if (isHiddenFromUsers($, container)) return;

@@ -1,0 +1,188 @@
+.expert-status-panel {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 0.85rem;
+  align-items: center;
+  max-width: 68ch;
+  margin: 0 0 1.5rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid rgba(184, 71, 22, 0.32);
+  border-radius: 0.8rem;
+  background: #fff7f2;
+}
+
+.expert-status-panel__icon {
+  display: inline-grid;
+  width: 2.5rem;
+  height: 2.5rem;
+  place-items: center;
+  border-radius: 999px;
+  background: #15335f;
+  color: #fff;
+  font-size: 1.15rem;
+  font-weight: 900;
+}
+
+.expert-status-panel p {
+  margin: 0;
+}
+
+.expert-direct-answer {
+  max-width: 68ch;
+  margin: 0 0 2rem;
+  padding: clamp(1.15rem, 3vw, 1.65rem);
+  border-left: 4px solid var(--ds-accent, #b84716);
+  border-radius: 0 0.8rem 0.8rem 0;
+  background: #f4f7fb;
+  color: #15233d;
+  font-size: clamp(1.05rem, 1.6vw, 1.18rem);
+  line-height: 1.65;
+}
+
+.expert-comparison-note,
+.expert-validation-note {
+  max-width: 68ch;
+  padding: 1rem 1.1rem;
+  border-radius: 0.75rem;
+  background: #edf3fa;
+}
+
+.expert-comparison-table th:first-child {
+  min-width: 10.5rem;
+}
+
+.expert-comparison-table th {
+  background: #102b52;
+  color: #fff;
+  vertical-align: top;
+}
+
+.expert-comparison-table td {
+  vertical-align: top;
+}
+
+.expert-comparison-table tbody th {
+  background: #f2f5f9;
+  color: #17233f;
+}
+
+.expert-source-ref {
+  display: block;
+  margin-top: 0.65rem;
+  color: #5b6472;
+  font-size: 0.78rem;
+  line-height: 1.4;
+}
+
+.expert-source-ref a {
+  color: #8f350f;
+  font-weight: 750;
+}
+
+.expert-guidance-grid,
+.expert-scenario-grid,
+.expert-source-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-block: 1rem 2rem;
+}
+
+.expert-guidance-card,
+.expert-scenario,
+.expert-source-card {
+  min-width: 0;
+  padding: 1.15rem;
+  border: 1px solid #d6dfeb;
+  border-radius: 0.85rem;
+  background: #fff;
+  box-shadow: 0 10px 28px rgba(14, 35, 67, 0.07);
+}
+
+.expert-guidance-card h3,
+.expert-scenario h3,
+.expert-source-card h3 {
+  margin-top: 0;
+  color: #102b52;
+}
+
+.expert-scenario-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.expert-scenario__label {
+  display: inline-flex;
+  margin-bottom: 0.75rem;
+  padding: 0.28rem 0.55rem;
+  border-radius: 999px;
+  background: #fff0e8;
+  color: #8f350f;
+  font-size: 0.78rem;
+  font-weight: 850;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.expert-document-list li,
+.expert-validation-note li {
+  margin-block: 0.45rem;
+}
+
+.expert-final-cta {
+  max-width: 68ch;
+  margin-top: 2rem;
+  padding: clamp(1.35rem, 3vw, 2rem);
+  border-radius: 1rem;
+  background: linear-gradient(135deg, #102b52, #193e70);
+  color: #fff;
+}
+
+.expert-final-cta h2,
+.expert-final-cta p {
+  color: inherit;
+}
+
+.expert-final-cta a {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.5rem;
+  padding: 0.78rem 1rem;
+  border-radius: 0.55rem;
+  background: #d95820;
+  color: #fff;
+  font-weight: 850;
+  text-decoration: none;
+}
+
+.expert-final-cta a:hover {
+  background: #bd4312;
+}
+
+.expert-final-cta a:focus-visible,
+.expert-source-card a:focus-visible,
+.expert-source-ref a:focus-visible {
+  outline: 3px solid #f5a623;
+  outline-offset: 3px;
+}
+
+@media (max-width: 56rem) {
+  .expert-guidance-grid,
+  .expert-scenario-grid,
+  .expert-source-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 30rem) {
+  .expert-status-panel {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .expert-final-cta a {
+    transition: none;
+  }
+}

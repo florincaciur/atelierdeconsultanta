@@ -262,6 +262,34 @@
       ]
     },
     {
+      "id": "dr12-vs-dr14",
+      "route": "/dr12-vs-dr14",
+      "contentType": "guide",
+      "programId": null,
+      "governanceState": "public",
+      "author": "FABER – Atelier de Consultanță",
+      "authorRole": "Autor organizațional",
+      "reviewer": "Echipa editorială FABER",
+      "reviewerRole": "Revizuire editorială și conformitate",
+      "attributionType": "organization",
+      "personalNameConsent": false,
+      "verifiedAt": "2026-07-22",
+      "officialSourceName": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
+      "officialSourceUrl": "https://www.afir.ro/comunicare/utile/dezbatere-publica/",
+      "sourceVersion": "Ghidurile consultative DR 12 publicat la 19.03.2026 și DR 14, sesiunea 2026, arhivat la 05.05.2026",
+      "nextReviewAt": "2026-10-20",
+      "lastMeaningfulUpdate": "2026-07-22",
+      "statusSnapshot": null,
+      "changelog": [
+        {
+          "date": "2026-07-22",
+          "summary": "Analiza comparativă DR 12–DR 14 a fost rescrisă pe documentele consultative AFIR; valorile care necesită reconfirmare au rămas nepublicate.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": true
+        }
+      ]
+    },
+    {
       "id": "dr14",
       "route": "/dr14",
       "contentType": "program",
