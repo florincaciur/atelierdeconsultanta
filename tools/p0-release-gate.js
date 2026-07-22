@@ -48,6 +48,47 @@ function parseRedirectRules(text) {
     .filter((rule) => Number.isFinite(rule.status) && rule.status >= 300 && rule.status < 400);
 }
 
+function crawlerDirectives(text, userAgent) {
+  const normalizedUserAgent = String(userAgent || "").trim().toLowerCase();
+  if (!normalizedUserAgent) return [];
+  const groups = [];
+  let activeAgents = [];
+  let activeDirectives = [];
+
+  const flush = () => {
+    if (activeAgents.length) groups.push({ agents: activeAgents, directives: activeDirectives });
+    activeAgents = [];
+    activeDirectives = [];
+  };
+
+  for (const rawLine of String(text || "").split(/\r?\n/u)) {
+    const line = rawLine.replace(/\s*#.*$/u, "").trim();
+    if (!line) continue;
+    const separator = line.indexOf(":");
+    if (separator < 0) continue;
+    const field = line.slice(0, separator).trim().toLowerCase();
+    const value = line.slice(separator + 1).trim();
+    if (field === "user-agent") {
+      if (activeDirectives.length) flush();
+      activeAgents.push(value.toLowerCase());
+      continue;
+    }
+    if (activeAgents.length) activeDirectives.push({ field, value });
+  }
+  flush();
+
+  return groups
+    .filter((group) => group.agents.includes(normalizedUserAgent))
+    .flatMap((group) => group.directives);
+}
+
+function crawlerAllowsPublicRoot(text, userAgent) {
+  const directives = crawlerDirectives(text, userAgent);
+  const allowsRoot = directives.some(({ field, value }) => field === "allow" && value === "/");
+  const blocksRoot = directives.some(({ field, value }) => field === "disallow" && value === "/");
+  return allowsRoot && !blocksRoot;
+}
+
 function evaluateGovernanceBlockers() {
   const approvals = readJson("config/program-status-approvals.json");
   const legal = readJson("config/legal-identity.json");
@@ -415,9 +456,8 @@ async function editorialProbe(baseUrl, cache, entries) {
 async function robotsProbe(baseUrl, cache) {
   const page = await fetchText(baseUrl, "/robots.txt", cache);
   if (page.status !== 200) return [`robots.txt HTTP ${page.status}`];
-  const oai = /User-agent:\s*OAI-SearchBot[\s\S]*?Allow:\s*\//iu.test(page.text);
-  const gpt = /User-agent:\s*GPTBot[\s\S]*?Allow:\s*\//iu.test(page.text)
-    && !/User-agent:\s*GPTBot[\s\S]*?Disallow:\s*\/[\r\n]/iu.test(page.text);
+  const oai = crawlerAllowsPublicRoot(page.text, "OAI-SearchBot");
+  const gpt = crawlerAllowsPublicRoot(page.text, "GPTBot");
   const sitemap = /Sitemap:\s*https:\/\/atelierdeconsultanta\.ro\/sitemap\.xml/iu.test(page.text);
   return [!oai && "OAI-SearchBot nu este permis", !gpt && "GPTBot nu este permis conform aprobării", !sitemap && "declarația Sitemap lipsește"].filter(Boolean);
 }
@@ -612,4 +652,4 @@ if (require.main === module) main().catch((error) => {
   process.exitCode = 1;
 });
 
-module.exports = { evaluateGovernanceBlockers, markdownReport, parseRedirectRules, result };
+module.exports = { crawlerAllowsPublicRoot, crawlerDirectives, evaluateGovernanceBlockers, markdownReport, parseRedirectRules, result };

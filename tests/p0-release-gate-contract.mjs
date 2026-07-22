@@ -8,7 +8,7 @@ import { fileURLToPath } from "node:url";
 
 const require = createRequire(import.meta.url);
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const { evaluateGovernanceBlockers, parseRedirectRules } = require("../tools/p0-release-gate");
+const { crawlerAllowsPublicRoot, crawlerDirectives, evaluateGovernanceBlockers, parseRedirectRules } = require("../tools/p0-release-gate");
 const gateSource = fs.readFileSync(path.join(ROOT, "tools", "p0-release-gate.js"), "utf8");
 
 const config = JSON.parse(fs.readFileSync(path.join(ROOT, "config", "p0-release-gate.json"), "utf8"));
@@ -23,6 +23,22 @@ for (const id of ["program_status", "legal_identity", "contact_privacy", "robots
 const rules = parseRedirectRules(fs.readFileSync(path.join(ROOT, "_redirects"), "utf8"));
 assert(rules.length > 0, "redirect registry must not be empty");
 assert(rules.every((rule) => rule.status === 301), "every controlled redirect must be 301");
+
+const robotsFixture = `User-agent: GPTBot
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+
+User-agent: ClaudeBot
+Disallow: /
+`;
+assert.equal(crawlerAllowsPublicRoot(robotsFixture, "GPTBot"), true, "a later crawler block must not override GPTBot Allow");
+assert.equal(crawlerAllowsPublicRoot(robotsFixture, "ClaudeBot"), false, "an explicit root Disallow must block that crawler");
+assert.deepEqual(
+  crawlerDirectives(robotsFixture, "GPTBot").map(({ field, value }) => `${field}:${value}`),
+  ["allow:/", "disallow:/admin/", "disallow:/api/"],
+  "crawler parsing must remain scoped to the requested User-agent group"
+);
 
 const packageJson = JSON.parse(fs.readFileSync(path.join(ROOT, "package.json"), "utf8"));
 for (const script of ["deploy", "deploy:pages", "deploy:contact-triage", "deploy:cloudflare-domain-worker"]) {

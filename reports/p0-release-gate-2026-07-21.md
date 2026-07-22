@@ -1,11 +1,11 @@
 # P0.16 — Release gate
 
-Data: 2026-07-22T01:30:02.277Z
+Data: 2026-07-22T12:23:57.256Z
 
 Decizie: **PASS**
 
-- PASS: 11
-- FAIL: 1
+- PASS: 21
+- FAIL: 2
 - Blocaje critice: 0
 - Staging: nerulat
 
@@ -17,12 +17,23 @@ Decizie: **PASS**
 | contact_privacy | local | **PASS** | critical | Jurist + Product owner | /contact<br>/politica-de-confidentialitate | Contact triage validation PASS (structural). | Reexecută verificarea contact_privacy după remediere/aprobare. |
 | form_flow | local | **PASS** | critical | Frontend + CRM owner | /contact<br>/api/contact-triage | Contact triage static contract PASS Contact triage server contract PASS Contact triage browser and no-JS flow PASS | Reexecută verificarea form_flow după remediere/aprobare. |
 | analytics | local | **PASS** | critical | Analytics owner + Backend | assets/analytics-events.js | Analytics browser checks passed: 9 sanitized events, 50% CTA threshold and server-confirmed submit. \| CRM funnel contract passed: authenticated qualified_lead forwarding contains only non-PII fields. | Reexecută verificarea analytics după remediere/aprobare. |
-| redirects | local | **PASS** | critical | SEO lead + Backend | _redirects | Redirect map PASS: 122 rules, 0 loops, 0 chains, 0 sitemap redirects, 0 internal links to redirects. \| Cloudflare domain SEO worker tests passed. | Reexecută verificarea redirects după remediere/aprobare. |
-| sitemap | local | **PASS** | critical | Technical SEO | /sitemap.xml | Verified sitemap index with 95 canonical URLs; 17 verified lastmod values. | Reexecută verificarea sitemap după remediere/aprobare. |
-| editorial | local | **PASS** | high | Editor coordonator | /sitemap.xml | Editorial copy contract passed: 95 canonical URLs, zero forbidden template labels or control-list forms. \| Editorial terminology contract passed: 95 canonical URLs and 10 P0.14 surfaces. | Reexecută verificarea editorial după remediere/aprobare. |
+| redirects | local | **PASS** | critical | SEO lead + Backend | _redirects | Redirect map PASS: 124 rules, 0 loops, 0 chains, 0 sitemap redirects, 0 internal links to redirects. \| Cloudflare domain SEO worker tests passed. | Reexecută verificarea redirects după remediere/aprobare. |
+| sitemap | local | **PASS** | critical | Technical SEO | /sitemap.xml | Verified sitemap index with 94 canonical URLs; 18 verified lastmod values. | Reexecută verificarea sitemap după remediere/aprobare. |
+| editorial | local | **PASS** | high | Editor coordonator | /sitemap.xml | Editorial copy contract passed: 94 canonical URLs, zero forbidden template labels or control-list forms. \| Editorial terminology contract passed: 94 canonical URLs and 10 P0.14 surfaces. | Reexecută verificarea editorial după remediere/aprobare. |
 | robots | local | **PASS** | critical | Business owner + Technical SEO | /robots.txt | Crawler policy contract passed: OAI/Perplexity/GPTBot allowed by policy, private paths protected. | Reexecută verificarea robots după remediere/aprobare. |
 | accessibility | local | **PASS** | high | Accessibility QA + Frontend | /contact | Contact accessibility static and canonical-contact contract PASS Contact accessibility error summary, focus, ARIA and keyboard order PASS Contact accessibility loading and double-submit prevention PASS Contact accessibility network retry and value preservation PASS Contact accessibility 320px reflow, 200% text zoom and target sizes PASS | Reexecută verificarea accessibility după remediere/aprobare. |
 | performance | local | **FAIL** | high | Frontend performance owner | /<br>/fonduri-europene<br>/consultanta-fonduri-europene<br>/digitalizare-imm | Baseline LCP/CLS prezent pentru 4 rute; baseline INP=DE_VALIDAT_UMAN. | Salvați un baseline INP aprobat înainte de deploy și comparați aceeași interacțiune/viewport. |
+| program_status | production | **PASS** | critical | Consultant FABER + Content owner | https://atelierdeconsultanta.ro/<br>https://atelierdeconsultanta.ro/dr12-afir<br>https://atelierdeconsultanta.ro/dr-12-afir-instalarea-tinerilor-fermieri<br>https://atelierdeconsultanta.ro/dr14<br>https://atelierdeconsultanta.ro/dr-14-afir-conditii-eligibilitate-greseli-frecvente<br>https://atelierdeconsultanta.ro/pro-infra<br>https://atelierdeconsultanta.ro/digitalizare-imm<br>https://atelierdeconsultanta.ro/granturi-digitalizare-imm | Suprafețele prioritare respectă starea de aprobare din registru. | Reexecută verificarea program_status după remediere/aprobare. |
+| legal_identity | production | **PASS** | critical | Business owner + Jurist | https://atelierdeconsultanta.ro/despre-faber<br>https://atelierdeconsultanta.ro/contact<br>https://atelierdeconsultanta.ro/politica-de-confidentialitate<br>https://atelierdeconsultanta.ro/termeni-si-conditii | Valorile tel/mailto sunt uniforme între suprafețele juridice verificate. | Reexecută verificarea legal_identity după remediere/aprobare. |
+| contact_privacy | production | **PASS** | critical | Jurist + Product owner | https://atelierdeconsultanta.ro/contact<br>https://atelierdeconsultanta.ro/politica-de-confidentialitate | Structura email SAU telefon și informarea Privacy coincid. | Reexecută verificarea contact_privacy după remediere/aprobare. |
+| form_flow | production | **PASS** | critical | Frontend + CRM owner | https://atelierdeconsultanta.ro/contact<br>https://atelierdeconsultanta.ro/api/contact-triage | Structura formularului în două etape este disponibilă; contractul local verifică submit și păstrarea datelor. | Reexecută verificarea form_flow după remediere/aprobare. |
+| analytics | production | **PASS** | critical | Analytics owner + Backend | https://atelierdeconsultanta.ro/assets/analytics-events.js | Asset-ul live conține evenimentele controlate și nu expune cheile PII interzise. | Reexecută verificarea analytics după remediere/aprobare. |
+| redirects | production | **PASS** | critical | SEO lead + Backend | https://atelierdeconsultanta.ro/_redirects | 115 redirecturi verificate. 301 direct și target 200/self-canonical. | Reexecută verificarea redirects după remediere/aprobare. |
+| sitemap | production | **PASS** | critical | Technical SEO | https://atelierdeconsultanta.ro/sitemap.xml | 94 URL-uri 200/indexabile/self-canonical; 18 lastmod verificate. | Reexecută verificarea sitemap după remediere/aprobare. |
+| editorial | production | **PASS** | high | Editor coordonator | https://atelierdeconsultanta.ro/sitemap.xml | 94 URL-uri scanate fără etichete interzise. | Reexecută verificarea editorial după remediere/aprobare. |
+| robots | production | **PASS** | critical | Business owner + Technical SEO | https://atelierdeconsultanta.ro/robots.txt | OAI-SearchBot Allow, GPTBot Allow aprobat și Sitemap prezente. | Reexecută verificarea robots după remediere/aprobare. |
+| accessibility | production | **PASS** | high | Accessibility QA + Frontend | https://atelierdeconsultanta.ro/contact | Labels, reflow 320px, zoom 200%, target-uri și focus verificate în browser. | Reexecută verificarea accessibility după remediere/aprobare. |
+| performance | production | **FAIL** | high | Frontend performance owner | https://atelierdeconsultanta.ro/<br>https://atelierdeconsultanta.ro/fonduri-europene<br>https://atelierdeconsultanta.ro/consultanta-fonduri-europene<br>https://atelierdeconsultanta.ro/digitalizare-imm | /consultanta-fonduri-europene: LCP 1000ms vs 402ms \| baseline INP de teren lipsește; comparația folosește numai pragul sintetic de 200ms Măsurători: [{"path":"/","lcpMs":512,"cls":0,"syntheticInpMs":22,"baselineLcpMs":483.279,"baselineCls":0.04291},{"path":"/fonduri-europene","lcpMs":564,"cls":0.00003,"syntheticInpMs":7,"baselineLcpMs":364.7012,"baselineCls":0.00001},{"path":"/consultanta-fonduri-europene","lcpMs":1000,"cls":0.00005,"syntheticInpMs":2,"baselineLcpMs":402.2069,"baselineCls":0.000009},{"path":"/digitalizare-imm","lcpMs":1080,"cls":0.00002,"syntheticInpMs":9,"baselineLcpMs":1203.238,"baselineCls":0.00002}] | Reexecută verificarea performance după remediere/aprobare. |
 
 ## Regula de lansare
 
