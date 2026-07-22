@@ -7,11 +7,8 @@ const fs = require("fs");
 const path = require("path");
 const cheerio = require("cheerio");
 const {
-  BRAND_NAME,
   ORGANIZATION_ID,
   PAGE_KINDS,
-  PROFESSIONAL_SERVICE_ID,
-  WEBSITE_ID,
   articleSchema,
   breadcrumbItemsForPath,
   breadcrumbSchema,
@@ -20,7 +17,6 @@ const {
   jsonLdGraph,
   organizationSchema,
   pageKindForPath,
-  professionalServiceSchema,
   serviceSchema,
   webApplicationSchema,
   webPageSchema,
@@ -46,7 +42,6 @@ const {
 
 const ROOT = path.resolve(__dirname, "..");
 const CHECK_ONLY = process.argv.includes("--check");
-const PAGE_TYPES = new Set(["WebPage", "AboutPage", "ContactPage", "CollectionPage", "ProfilePage", "FAQPage"]);
 const CONTENT_TYPES = new Set(["Article", "BlogPosting", "NewsArticle", "Service", "GovernmentService", "WebApplication"]);
 const PROGRAMS = loadProgramConfig().programs;
 
@@ -84,19 +79,15 @@ function firstContentNode(nodes) {
 }
 
 function inferPageKind(route, hints, nodes) {
-  const configured = pageKindForPath(route, hints || {});
-  if (configured !== PAGE_KINDS.WEB_PAGE) return configured;
-  if (nodes.some((node) => hasType(node, "Article") || hasType(node, "BlogPosting") || hasType(node, "NewsArticle"))) return PAGE_KINDS.ARTICLE;
-  return PAGE_KINDS.WEB_PAGE;
+  void nodes;
+  return pageKindForPath(route, hints || {});
 }
 
 function editorialDates(nodes, hints) {
-  const pageNode = nodes.find((node) => typesOf(node).some((type) => PAGE_TYPES.has(type) && type !== "FAQPage"));
-  const contentNode = nodes.find((node) => ["Article", "BlogPosting", "NewsArticle", "Service", "WebApplication"].some((type) => hasType(node, type)))
-    || firstContentNode(nodes);
+  void nodes;
   return {
-    datePublished: hints?.publishedAt || contentNode?.datePublished || pageNode?.datePublished,
-    dateModified: hints?.updatedAt || contentNode?.dateModified || pageNode?.dateModified
+    datePublished: hints?.publishedAt,
+    dateModified: hints?.updatedAt
   };
 }
 
@@ -107,14 +98,13 @@ function contentEntity(pageKind, options) {
       url: canonical,
       headline: existing?.headline || name,
       description,
-      author: existing?.author,
-      reviewer: existing?.reviewedBy,
-      datePublished: dates.datePublished || dates.dateModified,
-      dateModified: dates.dateModified || dates.datePublished
+      datePublished: dates.datePublished,
+      dateModified: dates.dateModified
     });
-    for (const key of ["about", "articleSection", "citation", "image", "keywords", "wordCount"]) {
+    for (const key of ["about", "articleSection", "image", "keywords", "wordCount"]) {
       if (existing?.[key] !== undefined) schema[key] = existing[key];
     }
+    if (Array.isArray(options.citation) && options.citation.length) schema.citation = options.citation;
     return schema;
   }
 
@@ -125,7 +115,7 @@ function contentEntity(pageKind, options) {
       description,
       serviceType: existing?.serviceType || existing?.category || "Consultanță pentru fonduri europene"
     });
-    if (existing?.offers) schema.offers = existing.offers;
+    if (Array.isArray(options.citation) && options.citation.length) schema.citation = options.citation;
     return schema;
   }
 
@@ -134,7 +124,8 @@ function contentEntity(pageKind, options) {
       url: canonical,
       name,
       description,
-      applicationCategory: existing?.applicationCategory || "FinanceApplication"
+      applicationCategory: "BusinessApplication",
+      citation: options.citation
     });
   }
 
@@ -167,9 +158,11 @@ function synchronizedGraph(html, route, hints) {
     name: title,
     description,
     datePublished: dates.datePublished,
-    dateModified: dates.dateModified
+    dateModified: dates.dateModified,
+    citation: hints?.citation
   });
-  const content = contentEntity(pageKind, { canonical, name: title, description, dates, existing: existingContent });
+  const content = contentEntity(pageKind, { canonical, name: title, description, dates, existing: existingContent, citation: hints?.citation });
+  if (content && Array.isArray(hints?.citation) && hints.citation.length && !content.citation) content.citation = hints.citation;
   if (content) pageNode.mainEntity = { "@id": content["@id"] };
   if (factualProgram) {
     const programId = `${canonical}#funding-program`;
@@ -182,31 +175,14 @@ function synchronizedGraph(html, route, hints) {
     ? faqPageSchema(visibleFaq.map((item) => [item.question, item.answer]), { minItems: 2 })
     : null;
 
-  const managed = (node) => {
-    const types = typesOf(node);
-    return isBrandedOrganization(node)
-      || node["@id"] === WEBSITE_ID
-      || node["@id"] === PROFESSIONAL_SERVICE_ID
-      || /#funding-program$/.test(String(node["@id"] || ""))
-      || types.includes("WebSite")
-      || types.includes("ProfessionalService")
-      || types.includes("LocalBusiness")
-      || types.includes("BreadcrumbList")
-      || types.includes("FAQPage")
-      || types.some((type) => PAGE_TYPES.has(type))
-      || types.some((type) => CONTENT_TYPES.has(type));
-  };
-  const preserved = normalizedNodes.filter((node) => !managed(node));
   const nodes = [
     organizationSchema(),
     websiteSchema(),
-    route === "/" ? professionalServiceSchema() : null,
     pageNode,
     breadcrumbSchema(breadcrumbItemsForPath(route, title)),
     content,
     factualProgram ? fundingProgramSchema(factualProgram) : null,
-    faq,
-    ...preserved
+    faq
   ].filter(Boolean);
 
   return jsonLdGraph(normalizeJsonLdValue(nodes));

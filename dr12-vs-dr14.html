@@ -25,44 +25,18 @@
   "@graph": [
     {
       "@id": "https://atelierdeconsultanta.ro/#organization",
-      "@type": "Organization",
-      "address": "Sat Gorbănești, comuna Gorbănești, nr. 88, Str. Principală, județul Botoșani",
-      "alternateName": [
-        "FABER",
-        "Atelier de Consultanță",
-        "Atelier de Consultanță FABER",
-        "atelierdeconsultanta.ro"
+      "@type": [
+        "Organization",
+        "ProfessionalService"
       ],
-      "areaServed": {
-        "@type": "AdministrativeArea",
-        "name": "Iași, Suceava, Bistrița-Năsăud, Botoșani, Bacău și Neamț"
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "RO",
+        "addressLocality": "Gorbănești",
+        "addressRegion": "Botoșani",
+        "streetAddress": "Str. Principală, nr. 88"
       },
-      "contactPoint": [
-        {
-          "@type": "ContactPoint",
-          "availableLanguage": "ro-RO",
-          "contactType": "customer service",
-          "telephone": "+40769828338"
-        },
-        {
-          "@type": "ContactPoint",
-          "availableLanguage": "ro-RO",
-          "contactType": "customer service",
-          "telephone": "+40753326229"
-        }
-      ],
-      "description": "FABER - Atelier de Consultanță ajută firme, fermieri, start-up-uri și IMM-uri să verifice eligibilitatea și să pregătească proiecte pentru fonduri europene și finanțări nerambursabile.",
       "email": "atelier.consultanta@gmail.com",
-      "image": "https://atelierdeconsultanta.ro/og-image.jpg",
-      "knowsAbout": [
-        "fonduri europene",
-        "finanțări nerambursabile",
-        "AFIR",
-        "PNRR",
-        "Start-Up Nation",
-        "Digitalizare IMM",
-        "consultanță IMM"
-      ],
       "legalName": "FABER PUBLISHING S.R.L.",
       "logo": {
         "@type": "ImageObject",
@@ -73,7 +47,8 @@
         "https://www.instagram.com/atelier.de.consultanta/"
       ],
       "taxID": "35339809",
-      "url": "https://atelierdeconsultanta.ro"
+      "telephone": "+40-769-828-338",
+      "url": "https://atelierdeconsultanta.ro/"
     },
     {
       "@id": "https://atelierdeconsultanta.ro/#website",
@@ -88,15 +63,10 @@
     {
       "@id": "https://atelierdeconsultanta.ro/dr12-vs-dr14#webpage",
       "@type": "WebPage",
-      "dateModified": "2026-05-21",
-      "datePublished": "2026-05-20",
       "description": "DR12 vs DR14: documente AFIR, SO/SOC, eligibilitate, investiții, cofinanțare și riscuri de verificat înainte de depunere.",
       "inLanguage": "ro-RO",
       "isPartOf": {
         "@id": "https://atelierdeconsultanta.ro/#website"
-      },
-      "mainEntity": {
-        "@id": "https://atelierdeconsultanta.ro/dr12-vs-dr14#article"
       },
       "name": "DR12 sau DR14: ce program AFIR se potrivește fermei?",
       "publisher": {
@@ -126,28 +96,6 @@
           "position": 3
         }
       ]
-    },
-    {
-      "@id": "https://atelierdeconsultanta.ro/dr12-vs-dr14#article",
-      "@type": "Article",
-      "author": {
-        "@id": "https://atelierdeconsultanta.ro/#organization"
-      },
-      "dateModified": "2026-05-21",
-      "datePublished": "2026-05-20",
-      "description": "DR12 vs DR14: documente AFIR, SO/SOC, eligibilitate, investiții, cofinanțare și riscuri de verificat înainte de depunere.",
-      "headline": "DR12 sau DR14: ce program AFIR se potrivește mai bine fermei tale?",
-      "image": "https://atelierdeconsultanta.ro/assets/hero/hero-agriculture.webp",
-      "inLanguage": "ro-RO",
-      "keywords": "DR12 vs DR14, DR12 sau DR14, DR 12 AFIR, DR 14 AFIR, program AFIR ferme",
-      "mainEntityOfPage": {
-        "@id": "https://atelierdeconsultanta.ro/dr12-vs-dr14#webpage",
-        "@type": "WebPage"
-      },
-      "publisher": {
-        "@id": "https://atelierdeconsultanta.ro/#organization"
-      },
-      "url": "https://atelierdeconsultanta.ro/dr12-vs-dr14"
     },
     {
       "@type": "FAQPage",
@@ -266,6 +214,8 @@
 
 
   <link rel="stylesheet" href="/assets/breadcrumbs.css">
+
+
 
 
 

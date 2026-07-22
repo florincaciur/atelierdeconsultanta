@@ -104,44 +104,18 @@
   "@graph": [
     {
       "@id": "https://atelierdeconsultanta.ro/#organization",
-      "@type": "Organization",
-      "address": "Sat Gorbănești, comuna Gorbănești, nr. 88, Str. Principală, județul Botoșani",
-      "alternateName": [
-        "FABER",
-        "Atelier de Consultanță",
-        "Atelier de Consultanță FABER",
-        "atelierdeconsultanta.ro"
+      "@type": [
+        "Organization",
+        "ProfessionalService"
       ],
-      "areaServed": {
-        "@type": "AdministrativeArea",
-        "name": "Iași, Suceava, Bistrița-Năsăud, Botoșani, Bacău și Neamț"
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "RO",
+        "addressLocality": "Gorbănești",
+        "addressRegion": "Botoșani",
+        "streetAddress": "Str. Principală, nr. 88"
       },
-      "contactPoint": [
-        {
-          "@type": "ContactPoint",
-          "availableLanguage": "ro-RO",
-          "contactType": "customer service",
-          "telephone": "+40769828338"
-        },
-        {
-          "@type": "ContactPoint",
-          "availableLanguage": "ro-RO",
-          "contactType": "customer service",
-          "telephone": "+40753326229"
-        }
-      ],
-      "description": "FABER - Atelier de Consultanță ajută firme, fermieri, start-up-uri și IMM-uri să verifice eligibilitatea și să pregătească proiecte pentru fonduri europene și finanțări nerambursabile.",
       "email": "atelier.consultanta@gmail.com",
-      "image": "https://atelierdeconsultanta.ro/og-image.jpg",
-      "knowsAbout": [
-        "fonduri europene",
-        "finanțări nerambursabile",
-        "AFIR",
-        "PNRR",
-        "Start-Up Nation",
-        "Digitalizare IMM",
-        "consultanță IMM"
-      ],
       "legalName": "FABER PUBLISHING S.R.L.",
       "logo": {
         "@type": "ImageObject",
@@ -152,7 +126,8 @@
         "https://www.instagram.com/atelier.de.consultanta/"
       ],
       "taxID": "35339809",
-      "url": "https://atelierdeconsultanta.ro"
+      "telephone": "+40-769-828-338",
+      "url": "https://atelierdeconsultanta.ro/"
     },
     {
       "@id": "https://atelierdeconsultanta.ro/#website",
@@ -167,7 +142,6 @@
     {
       "@id": "https://atelierdeconsultanta.ro/termeni-si-conditii#webpage",
       "@type": "WebPage",
-      "dateModified": "2026-05-26",
       "description": "Termeni și condiții FABER – Atelier de Consultanță. Condițiile generale de utilizare a serviciilor noastre de consultanță în fonduri europene.",
       "inLanguage": "ro-RO",
       "isPartOf": {
@@ -195,16 +169,6 @@
           "position": 2
         }
       ]
-    },
-    {
-      "@id": "https://atelierdeconsultanta.ro/termeni-si-conditii#legal-service",
-      "@type": "LegalService",
-      "areaServed": "RO",
-      "name": "Informare juridică FABER",
-      "provider": {
-        "@id": "https://atelierdeconsultanta.ro/#organization"
-      },
-      "serviceType": "Informare privind termeni, confidentialitate și protectia datelor"
     }
   ]
 }</script>
@@ -600,6 +564,8 @@
       </ul>
       <p>FABER – Atelier de Consultanță își rezervă dreptul de a modifica prezentele Termeni și Condiții. Modificările vor fi publicate pe site-ul și vor intra în vigoare la data publicării.</p>
     </section>
+
+
 
 
 

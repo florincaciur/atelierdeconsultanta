@@ -7,11 +7,9 @@ const cheerio = require("cheerio");
 const {
   ORGANIZATION_ID,
   PAGE_KINDS,
-  PROFESSIONAL_SERVICE_ID,
   WEBSITE_ID,
   organizationSchema,
   pageKindForPath,
-  professionalServiceSchema,
   serializeJsonLd,
   websiteSchema
 } = require("./schema-helpers");
@@ -34,6 +32,7 @@ const ROOT = path.resolve(__dirname, "..");
 const REPORT_PATH = path.join(ROOT, "reports", "structured-data-audit.json");
 const EXCLUDED_DIRS = new Set([".git", ".github", ".wrangler", "dist", "node_modules", "reports"]);
 const FORBIDDEN_TYPES = new Set(["AggregateRating", "Review", "GovernmentService", "BlogPosting", "NewsArticle"]);
+const FORBIDDEN_PROPERTIES = new Set(["aggregateRating", "review", "reviews", "award", "awards", "employee", "employees"]);
 const CONTENT_TYPES = new Set(["Article", "Service", "WebApplication"]);
 
 function bucharestIsoDate(date = new Date()) {
@@ -119,6 +118,52 @@ function collectDateIssues(nodes) {
   return issues;
 }
 
+function collectForbiddenPropertyIssues(value, pathLabel = "$") {
+  const issues = [];
+  if (Array.isArray(value)) {
+    value.forEach((item, index) => issues.push(...collectForbiddenPropertyIssues(item, `${pathLabel}[${index}]`)));
+    return issues;
+  }
+  if (!value || typeof value !== "object") return issues;
+  for (const [key, child] of Object.entries(value)) {
+    if (FORBIDDEN_PROPERTIES.has(key)) issues.push(`${pathLabel}.${key}: proprietate neverificabilă/nepermisă`);
+    issues.push(...collectForbiddenPropertyIssues(child, `${pathLabel}.${key}`));
+  }
+  return issues;
+}
+
+function validateArticleAttribution($, nodes, issues) {
+  for (const article of nodes.filter((node) => hasType(node, "Article"))) {
+    for (const [property, label] of [["author", "autor"], ["reviewedBy", "reviewer"]]) {
+      const value = article[property];
+      if (!value) continue;
+      if (!hasType(value, "Person") || !cleanText(value.name) || !/^https:\/\//iu.test(String(value.url || ""))) {
+        issues.push(`Article.${property}: ${label}ul trebuie să fie un profil Person real, nominal și vizibil`);
+        continue;
+      }
+      const visible = $(`a[href='${value.url}']`).filter((_, element) => comparableText($(element).text()).includes(comparableText(value.name)));
+      if (!visible.length) issues.push(`Article.${property}: profilul ${value.name} nu este vizibil în pagină`);
+    }
+  }
+}
+
+function validateWebApplication($, nodes, route, canonical, issues) {
+  const applications = nodes.filter((node) => hasType(node, "WebApplication"));
+  if (route !== "/calculator-soc" && applications.length) issues.push("WebApplication este permis numai pentru /calculator-soc");
+  if (route !== "/calculator-soc") return;
+  if (applications.length !== 1) {
+    issues.push(`Calculator SO: WebApplication găsite ${applications.length}, necesar exact 1`);
+    return;
+  }
+  const application = applications[0];
+  if (application.url !== canonical) issues.push(`WebApplication.url diferă de canonical: ${application.url}`);
+  if (application.name !== cleanText($("h1").first().text())) issues.push("WebApplication.name diferă de H1-ul vizibil");
+  if (application.description !== cleanText($("meta[name='description']").attr("content"))) issues.push("WebApplication.description diferă de meta description");
+  if (application.applicationCategory !== "BusinessApplication") issues.push("WebApplication.applicationCategory trebuie să descrie prudent un instrument business");
+  if (application.operatingSystem !== "Web") issues.push("WebApplication.operatingSystem trebuie să fie Web");
+  if (application.offers || application.aggregateRating || application.review) issues.push("WebApplication conține ofertă/rating/review neverificabil");
+}
+
 function brandedOrganization(node) {
   if (!hasType(node, "Organization")) return false;
   if (node["@id"] === ORGANIZATION_ID) return true;
@@ -126,21 +171,25 @@ function brandedOrganization(node) {
 }
 
 function validateEntity(nodes, route, issues) {
-  const organizations = nodes.filter(brandedOrganization);
-  if (organizations.length !== 1) issues.push(`Organization FABER: găsite ${organizations.length}, necesar exact 1`);
-  else if (serializeJsonLd(organizations[0]) !== serializeJsonLd(organizationSchema())) issues.push("Organization FABER diferă de sursa canonică");
+  const organizations = nodes.filter((node) => node?.["@id"] === ORGANIZATION_ID);
+  if (organizations.length !== 1) issues.push(`Entitate FABER: găsite ${organizations.length}, necesar exact 1`);
+  else {
+    if (!hasType(organizations[0], "Organization") || !hasType(organizations[0], "ProfessionalService")) {
+      issues.push("Entitatea FABER trebuie să combine Organization și ProfessionalService");
+    }
+    if (serializeJsonLd(organizations[0]) !== serializeJsonLd(organizationSchema())) issues.push("Entitatea FABER diferă de sursa juridică aprobată");
+  }
+
+  const competingEntities = nodes.filter((node) => {
+    return (hasType(node, "Organization") || hasType(node, "ProfessionalService")) && node?.["@id"] !== ORGANIZATION_ID;
+  });
+  if (competingEntities.length) issues.push(`entități FABER concurente: ${competingEntities.map((node) => node["@id"] || node.name || "fără @id").join(", ")}`);
 
   const websites = nodes.filter((node) => hasType(node, "WebSite") || node["@id"] === WEBSITE_ID);
   if (websites.length !== 1) issues.push(`WebSite: găsite ${websites.length}, necesar exact 1`);
   else if (serializeJsonLd(websites[0]) !== serializeJsonLd(websiteSchema())) issues.push("WebSite diferă de sursa canonică");
 
-  const professional = nodes.filter((node) => hasType(node, "ProfessionalService") || node["@id"] === PROFESSIONAL_SERVICE_ID);
-  if (route === "/") {
-    if (professional.length !== 1) issues.push(`ProfessionalService homepage: găsite ${professional.length}, necesar exact 1`);
-    else if (serializeJsonLd(professional[0]) !== serializeJsonLd(professionalServiceSchema())) issues.push("ProfessionalService diferă de sursa canonică");
-  } else if (professional.length) {
-    issues.push("ProfessionalService duplicat în afara homepage-ului");
-  }
+  void route;
 }
 
 function validateFaq($, nodes, issues) {
@@ -224,12 +273,27 @@ function auditIndexable(route, file, hints) {
   validateFaq($, nodes, issues);
   validateBreadcrumb(nodes, route, canonical, issues);
   validateTypes(nodes, route, hints, issues);
+  validateArticleAttribution($, nodes, issues);
+  validateWebApplication($, nodes, route, canonical, issues);
   issues.push(...collectDateIssues(nodes));
+  issues.push(...nodes.flatMap((node, index) => collectForbiddenPropertyIssues(node, `$[${index}]`)));
   issues.push(...nodes.flatMap((node, index) => collectLanguageIssues(node, `$[${index}]`)).slice(0, 20));
 
   const modified = nodes.map((node) => node.dateModified).filter(Boolean);
-  if (hints?.updatedAt && modified.some((date) => date !== hints.updatedAt)) {
-    issues.push(`dateModified nu corespunde datei editoriale ${hints.updatedAt}: ${[...new Set(modified)].join(", ")}`);
+  if (hints?.updatedAt) {
+    if (!modified.length) issues.push(`lipsește dateModified din lastMeaningfulUpdate ${hints.updatedAt}`);
+    if (modified.some((date) => date !== hints.updatedAt)) {
+      issues.push(`dateModified nu corespunde lastMeaningfulUpdate ${hints.updatedAt}: ${[...new Set(modified)].join(", ")}`);
+    }
+    const expectedSource = hints.citation?.[0]?.url;
+    const editorialNodes = nodes.filter((node) => hasType(node, "WebPage") || hasType(node, "Article"));
+    for (const node of editorialNodes) {
+      if (!Array.isArray(node.citation) || !node.citation.some((citation) => citation.url === expectedSource)) {
+        issues.push(`${typesOf(node).join("+")}: sursa oficială nu este sincronizată cu registrul editorial`);
+      }
+    }
+  } else if (modified.length) {
+    issues.push(`dateModified publicat fără lastMeaningfulUpdate verificat: ${[...new Set(modified)].join(", ")}`);
   }
   return { file: relative, route, blocks: blocks.length, types: collectTypes(nodes), modified, issues };
 }

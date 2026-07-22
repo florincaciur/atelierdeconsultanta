@@ -78,7 +78,7 @@ function validatePage(slug, page, config, hints, errors) {
   for (const block of blocks) if (block.error) pageErrors.push(`JSON-LD invalid (${block.error})`);
   if (blocks.length !== 1) pageErrors.push(`trebuie exact un bloc JSON-LD determinist, găsite ${blocks.length}`);
   const nodes = blocks.flatMap((block) => block.nodes);
-  for (const required of ["WebPage", "WebSite", "BreadcrumbList", "FAQPage", "Organization", "Article"]) {
+  for (const required of ["WebPage", "WebSite", "BreadcrumbList", "FAQPage", "Organization", "ProfessionalService", "Article"]) {
     if (!nodes.some((node) => hasType(node, required))) pageErrors.push(`lipsește tipul schema ${required}`);
   }
   for (const forbidden of ["GovernmentService", "Service", "WebApplication", "BlogPosting", "AggregateRating", "Review"]) {
@@ -94,7 +94,10 @@ function validatePage(slug, page, config, hints, errors) {
   const article = nodes.find((node) => hasType(node, "Article"));
   const editorialDate = hints?.updatedAt;
   if (!webPage || webPage.dateModified !== editorialDate) pageErrors.push(`WebPage.dateModified trebuie să fie data editorială ${editorialDate}`);
-  if (!article?.author || !article?.publisher || !article?.mainEntityOfPage) pageErrors.push("Article trebuie să aibă author, publisher și mainEntityOfPage");
+  if (!article?.publisher || !article?.mainEntityOfPage) pageErrors.push("Article trebuie să aibă publisher și mainEntityOfPage");
+  if (article?.author && article.author?.["@type"] !== "Person") pageErrors.push("Article.author poate fi publicat numai ca profil Person real și vizibil");
+  if (article?.reviewedBy && article.reviewedBy?.["@type"] !== "Person") pageErrors.push("Article.reviewedBy poate fi publicat numai ca profil Person real și vizibil");
+  if (article && !/Analiza consultantului/iu.test($("main").text())) pageErrors.push("Article este permis pe pagina de program numai când analiza consultantului este vizibilă");
   if (article && article.dateModified !== editorialDate) pageErrors.push(`Article.dateModified trebuie să fie data editorială ${editorialDate}`);
 
   const visibleFaq = new Map(visibleFaqItems($).map((item) => [comparableText(item.question), comparableText(item.answer)]));

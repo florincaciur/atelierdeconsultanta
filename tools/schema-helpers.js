@@ -16,7 +16,9 @@ const BRAND_ALTERNATE_NAMES = [
 ];
 const BRAND_DESCRIPTION = "FABER - Atelier de Consultanță ajută firme, fermieri, start-up-uri și IMM-uri să verifice eligibilitatea și să pregătească proiecte pentru fonduri europene și finanțări nerambursabile.";
 const ORGANIZATION_ID = `${SITE}/#organization`;
-const PROFESSIONAL_SERVICE_ID = `${SITE}/#professional-service`;
+// Organization și ProfessionalService descriu aceeași entitate juridică și
+// trebuie să folosească același identificator canonic.
+const PROFESSIONAL_SERVICE_ID = ORGANIZATION_ID;
 const LOCAL_BUSINESS_ID = PROFESSIONAL_SERVICE_ID;
 const WEBSITE_ID = `${SITE}/#website`;
 const LOGO_URL = `${SITE}/favicon-192.png`;
@@ -317,9 +319,11 @@ function pageKindForPath(pathname, hints = {}) {
   const route = normalizeCanonicalPath(pathname);
   const type = cleanText(hints.type).toLowerCase();
   const schemaType = cleanText(hints.schemaType).toLowerCase();
-  if (route === "/calculator-soc" || type === "tools" || schemaType === "webapplication") return PAGE_KINDS.WEB_APPLICATION;
+  if (route === "/calculator-soc") return PAGE_KINDS.WEB_APPLICATION;
+  if (route === "/instrumente") return PAGE_KINDS.WEB_PAGE;
+  if (schemaType === "webapplication") return PAGE_KINDS.WEB_APPLICATION;
   if (type === "service" || (!type && schemaType === "service")) return PAGE_KINDS.SERVICE;
-  if (["article", "blog", "program"].includes(type) || ["article", "blogposting", "governmentservice"].includes(schemaType)) {
+  if (["article", "blog", "program"].includes(type) || ["article", "blogposting"].includes(schemaType)) {
     return PAGE_KINDS.ARTICLE;
   }
   if (/^\/(?:consultanta(?:-|$)|consultant-fonduri|firma-consultanta|verificare-eligibilitate|proiectare-fonduri|studiu-fezabilitate|management-proiecte|plan-de-afaceri-fonduri)/i.test(route)) {
@@ -328,6 +332,7 @@ function pageKindForPath(pathname, hints = {}) {
   if (/^\/(?:intrebari\/|fonduri-europene-caen\/|fonduri-europene-(?:bacau|bucuresti|iasi|suceava)$|programul-tranzitie-justa-intrebari-documente$)/i.test(route)) {
     return PAGE_KINDS.ARTICLE;
   }
+  if (/^\/blog-[^/]+$/iu.test(route)) return PAGE_KINDS.ARTICLE;
   return PAGE_KINDS.WEB_PAGE;
 }
 
@@ -336,6 +341,35 @@ function areaServedSchema() {
     "@type": "AdministrativeArea",
     name: AREA_SERVED_NAME
   };
+}
+
+function approvedPostalAddress() {
+  const value = cleanText(LEGAL_IDENTITY.registeredOffice);
+  const parts = value.split(",").map((part) => cleanText(part)).filter(Boolean);
+  const locality = parts.find((part) => /^Sat\s+/iu.test(part))?.replace(/^Sat\s+/iu, "");
+  const number = parts.find((part) => /^nr\.\s*/iu.test(part));
+  const street = parts.find((part) => /^(?:Str\.|Strada)\s+/iu.test(part));
+  const region = parts.find((part) => /^județul\s+/iu.test(part))?.replace(/^județul\s+/iu, "");
+
+  if (!value || !locality || !number || !street || !region) {
+    throw new Error("Sediul aprobat nu poate fi transformat fără pierderi într-o adresă PostalAddress");
+  }
+
+  return {
+    "@type": "PostalAddress",
+    streetAddress: `${street}, ${number}`,
+    addressLocality: locality,
+    addressRegion: region,
+    addressCountry: "RO"
+  };
+}
+
+function schemaTelephone(value) {
+  const digits = String(value || "").replace(/\D/gu, "");
+  if (digits.length === 11 && digits.startsWith("40")) {
+    return `+40-${digits.slice(2, 5)}-${digits.slice(5, 8)}-${digits.slice(8)}`;
+  }
+  return value || undefined;
 }
 
 function contactPointsSchema() {
@@ -349,27 +383,25 @@ function contactPointsSchema() {
 
 function organizationSchema(options = {}) {
   const schema = {
-    "@type": "Organization",
+    "@type": ["Organization", "ProfessionalService"],
     "@id": ORGANIZATION_ID,
     name: BRAND_NAME,
-    alternateName: BRAND_ALTERNATE_NAMES,
-    url: SITE,
-    description: BRAND_DESCRIPTION,
+    legalName: LEGAL_IDENTITY.legalName,
+    url: `${SITE}/`,
+    email: EMAIL,
+    telephone: schemaTelephone(LEGAL_IDENTITY.publicPhone),
+    taxID: LEGAL_IDENTITY.taxIdentifier,
+    address: approvedPostalAddress(),
+    sameAs: LEGAL_IDENTITY.officialProfileUrls,
     logo: {
       "@type": "ImageObject",
       url: LOGO_URL
-    },
-    image: IMAGE_URL,
-    legalName: LEGAL_IDENTITY.legalName,
-    taxID: LEGAL_IDENTITY.taxIdentifier,
-    address: LEGAL_IDENTITY.registeredOffice,
-    sameAs: LEGAL_IDENTITY.officialProfileUrls,
-    areaServed: areaServedSchema(),
-    knowsAbout: KNOWS_ABOUT
+    }
   };
-  if (EMAIL) schema.email = EMAIL;
-  const contactPoints = contactPointsSchema();
-  if (contactPoints.length) schema.contactPoint = contactPoints;
+  for (const key of ["legalName", "email", "telephone", "taxID"]) {
+    if (!schema[key]) delete schema[key];
+  }
+  if (!Array.isArray(schema.sameAs) || !schema.sameAs.length) delete schema.sameAs;
   // `minimal` rămâne acceptat pentru compatibilitate, dar entitatea este
   // intenționat identică peste tot: există o singură descriere canonică FABER.
   void options;
@@ -377,27 +409,7 @@ function organizationSchema(options = {}) {
 }
 
 function professionalServiceSchema() {
-  const schema = {
-    "@type": "ProfessionalService",
-    "@id": PROFESSIONAL_SERVICE_ID,
-    name: BRAND_NAME,
-    url: SITE,
-    description: BRAND_DESCRIPTION,
-    logo: {
-      "@type": "ImageObject",
-      url: LOGO_URL
-    },
-    openingHours: "Mo-Sa 08:00-18:00",
-    image: IMAGE_URL,
-    areaServed: areaServedSchema(),
-    knowsAbout: [...KNOWS_ABOUT],
-    availableLanguage: LANGUAGE,
-    parentOrganization: { "@id": ORGANIZATION_ID }
-  };
-  if (LEGAL_IDENTITY.publicWorkplaceAddress) schema.address = LEGAL_IDENTITY.publicWorkplaceAddress;
-  if (EMAIL) schema.email = EMAIL;
-  if (TELEPHONES.length) schema.telephone = [...TELEPHONES];
-  return schema;
+  return organizationSchema();
 }
 
 function localBusinessSchema() {
@@ -487,10 +499,7 @@ function blogPostingSchema(options) {
     "@type": options.type || "BlogPosting",
     headline: cleanText(options.headline || options.title),
     description: cleanText(options.description),
-    author: personOrOrganization(options.author || BRAND_NAME),
     publisher: { "@id": ORGANIZATION_ID },
-    datePublished: options.datePublished,
-    dateModified: options.dateModified || options.datePublished,
     "@id": options.id || `${url}#${options.type === "Article" ? "article" : "blogposting"}`,
     mainEntityOfPage: {
       "@type": "WebPage",
@@ -500,6 +509,9 @@ function blogPostingSchema(options) {
     inLanguage: LANGUAGE
   };
 
+  if (options.datePublished) schema.datePublished = options.datePublished;
+  if (options.dateModified) schema.dateModified = options.dateModified;
+  if (options.author) schema.author = personOrOrganization(options.author);
   if (options.reviewer) schema.reviewedBy = personOrOrganization(options.reviewer);
   if (options.editor) schema.editor = personOrOrganization(options.editor);
   if (options.image) schema.image = /^https?:\/\//i.test(options.image) ? options.image : `${SITE}${options.image}`;
@@ -526,7 +538,7 @@ function serviceSchema(options) {
 }
 
 function webApplicationSchema(options) {
-  return {
+  const schema = {
     "@type": "WebApplication",
     "@id": `${absoluteUrl(options.url || options.route)}#app`,
     name: cleanText(options.name),
@@ -535,13 +547,10 @@ function webApplicationSchema(options) {
     operatingSystem: "Web",
     url: absoluteUrl(options.url || options.route),
     inLanguage: LANGUAGE,
-    offers: {
-      "@type": "Offer",
-      price: "0",
-      priceCurrency: "RON"
-    },
     provider: { "@id": ORGANIZATION_ID }
   };
+  if (Array.isArray(options.citation) && options.citation.length) schema.citation = options.citation;
+  return schema;
 }
 
 function personOrOrganization(value) {

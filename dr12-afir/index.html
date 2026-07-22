@@ -33,44 +33,18 @@
   "@graph": [
     {
       "@id": "https://atelierdeconsultanta.ro/#organization",
-      "@type": "Organization",
-      "address": "Sat Gorbănești, comuna Gorbănești, nr. 88, Str. Principală, județul Botoșani",
-      "alternateName": [
-        "FABER",
-        "Atelier de Consultanță",
-        "Atelier de Consultanță FABER",
-        "atelierdeconsultanta.ro"
+      "@type": [
+        "Organization",
+        "ProfessionalService"
       ],
-      "areaServed": {
-        "@type": "AdministrativeArea",
-        "name": "Iași, Suceava, Bistrița-Năsăud, Botoșani, Bacău și Neamț"
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "RO",
+        "addressLocality": "Gorbănești",
+        "addressRegion": "Botoșani",
+        "streetAddress": "Str. Principală, nr. 88"
       },
-      "contactPoint": [
-        {
-          "@type": "ContactPoint",
-          "availableLanguage": "ro-RO",
-          "contactType": "customer service",
-          "telephone": "+40769828338"
-        },
-        {
-          "@type": "ContactPoint",
-          "availableLanguage": "ro-RO",
-          "contactType": "customer service",
-          "telephone": "+40753326229"
-        }
-      ],
-      "description": "FABER - Atelier de Consultanță ajută firme, fermieri, start-up-uri și IMM-uri să verifice eligibilitatea și să pregătească proiecte pentru fonduri europene și finanțări nerambursabile.",
       "email": "atelier.consultanta@gmail.com",
-      "image": "https://atelierdeconsultanta.ro/og-image.jpg",
-      "knowsAbout": [
-        "fonduri europene",
-        "finanțări nerambursabile",
-        "AFIR",
-        "PNRR",
-        "Start-Up Nation",
-        "Digitalizare IMM",
-        "consultanță IMM"
-      ],
       "legalName": "FABER PUBLISHING S.R.L.",
       "logo": {
         "@type": "ImageObject",
@@ -81,7 +55,8 @@
         "https://www.instagram.com/atelier.de.consultanta/"
       ],
       "taxID": "35339809",
-      "url": "https://atelierdeconsultanta.ro"
+      "telephone": "+40-769-828-338",
+      "url": "https://atelierdeconsultanta.ro/"
     },
     {
       "@id": "https://atelierdeconsultanta.ro/#website",
@@ -99,7 +74,14 @@
       "about": {
         "@id": "https://atelierdeconsultanta.ro/dr12-afir#funding-program"
       },
-      "dateModified": "2026-07-20",
+      "citation": [
+        {
+          "@type": "CreativeWork",
+          "name": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR) — Versiune consultativă publicată la 19.03.2026",
+          "url": "https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/"
+        }
+      ],
+      "dateModified": "2026-07-22",
       "datePublished": "2026-05-19",
       "description": "DR 12 are ghid consultativ, verificat la 22.07.2026. Depunerea nu este deschisă; vezi documentul AFIR și condițiile care trebuie urmărite.",
       "inLanguage": "ro-RO",
@@ -150,9 +132,6 @@
       "about": {
         "@id": "https://atelierdeconsultanta.ro/dr12-afir#funding-program"
       },
-      "author": {
-        "@id": "https://atelierdeconsultanta.ro/#organization"
-      },
       "citation": [
         {
           "@type": "CreativeWork",
@@ -160,7 +139,7 @@
           "url": "https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/"
         }
       ],
-      "dateModified": "2026-07-20",
+      "dateModified": "2026-07-22",
       "datePublished": "2026-05-19",
       "description": "DR 12 are ghid consultativ, verificat la 22.07.2026. Depunerea nu este deschisă; vezi documentul AFIR și condițiile care trebuie urmărite.",
       "headline": "DR-12 Investiții în consolidarea exploatațiilor tinerilor fermieri instalați și a fermierilor cu vârsta de până la 45 de ani",
@@ -171,10 +150,6 @@
       },
       "publisher": {
         "@id": "https://atelierdeconsultanta.ro/#organization"
-      },
-      "reviewedBy": {
-        "@type": "Organization",
-        "name": "Echipa editorială FABER"
       },
       "url": "https://atelierdeconsultanta.ro/dr12-afir"
     },
@@ -477,6 +452,7 @@
     <p><a href="https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/" target="_blank" rel="noopener noreferrer" data-analytics-event="source_document_click" data-analytics-component="official_source" data-analytics-cta-id="source_document" data-analytics-target="https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/">Consultă documentul oficial</a></p>
     <p><a href="/contact?program_slug=dr12-afir&amp;source_page=%2Fdr12-afir" data-analytics-event="cta_click" data-analytics-component="program_page" data-analytics-cta-id="dr12_contextual_primary" data-analytics-program-category="dr12-afir" data-analytics-cta-view="true" data-analytics-copy-variant="p1_15" data-analytics-target="/contact" data-analytics-program-slug="dr12-afir">Verifică încadrarea în DR 12</a></p>
   </article>
+
 
 
 

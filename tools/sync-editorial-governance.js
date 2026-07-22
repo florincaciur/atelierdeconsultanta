@@ -45,14 +45,21 @@ function addEditorialProperties(node, record) {
   const eligible = ["WebPage", "CollectionPage", "Article", "BlogPosting", "TechArticle", "HowTo", "SoftwareApplication", "GovernmentService"]
     .some((type) => types.has(type));
   if (!eligible) return;
-  if (!isCompleteRecord(record)) {
-    delete node.dateModified;
-    delete node.reviewedBy;
-    return;
-  }
+  delete node.author;
+  delete node.reviewedBy;
+  delete node.dateModified;
+  delete node.citation;
+  if (!isCompleteRecord(record)) return;
   node.dateModified = record.lastMeaningfulUpdate;
-  node.author = { "@type": "Organization", name: record.author };
-  node.reviewedBy = { "@type": "Organization", name: record.reviewer };
+  // Profilurile Person nu sunt publicate până când numele, rolul, acordul și
+  // URL-ul profilului vizibil nu sunt aprobate împreună. Pentru atribuirea
+  // organizațională, publisher/provider indică deja entitatea canonică.
+  if (record.attributionType === "person" && record.personalNameConsent === true && record.authorProfileUrl) {
+    node.author = { "@type": "Person", name: record.author, url: record.authorProfileUrl };
+    if (record.reviewerProfileUrl) {
+      node.reviewedBy = { "@type": "Person", name: record.reviewer, url: record.reviewerProfileUrl };
+    }
+  }
   const citation = {
     "@type": "CreativeWork",
     name: `${record.officialSourceName} — ${record.sourceVersion}`,

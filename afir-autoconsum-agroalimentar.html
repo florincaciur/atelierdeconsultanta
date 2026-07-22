@@ -27,44 +27,18 @@
   "@graph": [
     {
       "@id": "https://atelierdeconsultanta.ro/#organization",
-      "@type": "Organization",
-      "address": "Sat Gorbănești, comuna Gorbănești, nr. 88, Str. Principală, județul Botoșani",
-      "alternateName": [
-        "FABER",
-        "Atelier de Consultanță",
-        "Atelier de Consultanță FABER",
-        "atelierdeconsultanta.ro"
+      "@type": [
+        "Organization",
+        "ProfessionalService"
       ],
-      "areaServed": {
-        "@type": "AdministrativeArea",
-        "name": "Iași, Suceava, Bistrița-Năsăud, Botoșani, Bacău și Neamț"
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "RO",
+        "addressLocality": "Gorbănești",
+        "addressRegion": "Botoșani",
+        "streetAddress": "Str. Principală, nr. 88"
       },
-      "contactPoint": [
-        {
-          "@type": "ContactPoint",
-          "availableLanguage": "ro-RO",
-          "contactType": "customer service",
-          "telephone": "+40769828338"
-        },
-        {
-          "@type": "ContactPoint",
-          "availableLanguage": "ro-RO",
-          "contactType": "customer service",
-          "telephone": "+40753326229"
-        }
-      ],
-      "description": "FABER - Atelier de Consultanță ajută firme, fermieri, start-up-uri și IMM-uri să verifice eligibilitatea și să pregătească proiecte pentru fonduri europene și finanțări nerambursabile.",
       "email": "atelier.consultanta@gmail.com",
-      "image": "https://atelierdeconsultanta.ro/og-image.jpg",
-      "knowsAbout": [
-        "fonduri europene",
-        "finanțări nerambursabile",
-        "AFIR",
-        "PNRR",
-        "Start-Up Nation",
-        "Digitalizare IMM",
-        "consultanță IMM"
-      ],
       "legalName": "FABER PUBLISHING S.R.L.",
       "logo": {
         "@type": "ImageObject",
@@ -75,7 +49,8 @@
         "https://www.instagram.com/atelier.de.consultanta/"
       ],
       "taxID": "35339809",
-      "url": "https://atelierdeconsultanta.ro"
+      "telephone": "+40-769-828-338",
+      "url": "https://atelierdeconsultanta.ro/"
     },
     {
       "@id": "https://atelierdeconsultanta.ro/#website",
@@ -93,6 +68,13 @@
       "about": {
         "@id": "https://atelierdeconsultanta.ro/afir-autoconsum-agroalimentar#funding-program"
       },
+      "citation": [
+        {
+          "@type": "CreativeWork",
+          "name": "Ministerul Agriculturii și Dezvoltării Rurale / AFIR — Ghidul Solicitantului Schema Energie Autoconsum V7 – iunie 2026",
+          "url": "https://www.afir.ro/media/hkfp4w0v/ghidul-solicitantului-schem%C4%83-energie-autoconsum-v7-iunie-2026.pdf"
+        }
+      ],
       "dateModified": "2026-07-20",
       "datePublished": "2026-05-29",
       "description": "AFIR Energie pentru ferme și procesatori: sesiune până la 14 august 2026, minimum 70% autoconsum, fotovoltaice, stocare, SF și documente.",
@@ -144,23 +126,11 @@
       "about": {
         "@id": "https://atelierdeconsultanta.ro/afir-autoconsum-agroalimentar#funding-program"
       },
-      "author": {
-        "@id": "https://atelierdeconsultanta.ro/#organization"
-      },
       "citation": [
         {
           "@type": "CreativeWork",
           "name": "Ministerul Agriculturii și Dezvoltării Rurale / AFIR — Ghidul Solicitantului Schema Energie Autoconsum V7 – iunie 2026",
           "url": "https://www.afir.ro/media/hkfp4w0v/ghidul-solicitantului-schem%C4%83-energie-autoconsum-v7-iunie-2026.pdf"
-        },
-        {
-          "@type": "CreativeWork",
-          "name": "Deschiderea sesiunii pentru investițiile în producerea energiei electrice din surse regenerabile",
-          "publisher": {
-            "@type": "Organization",
-            "name": "AFIR"
-          },
-          "url": "https://www.afir.ro/comunicate/deschiderea-sesiunii-pentru-investitiile-in-producerea-energiei-electrice-din-surse-regenerabile/"
         }
       ],
       "dateModified": "2026-07-20",
@@ -174,10 +144,6 @@
       },
       "publisher": {
         "@id": "https://atelierdeconsultanta.ro/#organization"
-      },
-      "reviewedBy": {
-        "@type": "Organization",
-        "name": "Echipa editorială FABER"
       },
       "url": "https://atelierdeconsultanta.ro/afir-autoconsum-agroalimentar"
     },
@@ -828,6 +794,7 @@
         <a class="btn btn-secondary" href="/consultanta-fonduri-europene">Vezi serviciile</a>
       </div>
     </section>
+
 
 
 

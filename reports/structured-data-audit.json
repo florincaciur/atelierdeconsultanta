@@ -1,49 +1,147 @@
 {
-  "generatedAt": "2026-07-21T16:43:02.554Z",
+  "generatedAt": "2026-07-22T01:30:08.694Z",
   "summary": {
     "htmlFilesChecked": 180,
-    "indexablePagesChecked": 91,
-    "filesWithIssues": 10,
+    "indexablePagesChecked": 95,
+    "filesWithIssues": 0,
     "organizationVariants": 1,
     "types": {
-      "Organization": 187,
-      "Country": 104,
-      "ImageObject": 92,
-      "WebSite": 91,
-      "WebPage": 131,
-      "CreativeWork": 57,
-      "BreadcrumbList": 90,
-      "ListItem": 293,
-      "Article": 40,
-      "DefinedTerm": 41,
-      "PropertyValue": 114,
+      "Organization": 129,
+      "ProfessionalService": 95,
+      "PostalAddress": 95,
+      "ImageObject": 95,
+      "WebSite": 95,
+      "WebPage": 125,
+      "CreativeWork": 50,
+      "BreadcrumbList": 94,
+      "ListItem": 292,
+      "Article": 30,
+      "DefinedTerm": 17,
+      "PropertyValue": 146,
+      "DefinedTermSet": 17,
       "Audience": 11,
-      "DefinedTermSet": 14,
-      "FAQPage": 81,
-      "Question": 618,
-      "Answer": 618,
-      "ItemList": 2,
-      "Blog": 1,
-      "LegalService": 2,
-      "ProfessionalService": 1,
+      "FAQPage": 77,
+      "Question": 590,
+      "Answer": 590,
       "Service": 12,
-      "WebApplication": 2,
-      "Offer": 2
+      "AdministrativeArea": 12,
+      "WebApplication": 1
     }
   },
   "globalIssues": [],
   "results": [
     {
+      "file": "digitalizare-imm.html",
+      "route": "/digitalizare-imm",
+      "blocks": 1,
+      "types": {
+        "Organization": 3,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
+        "ImageObject": 1,
+        "WebSite": 1,
+        "WebPage": 2,
+        "CreativeWork": 3,
+        "BreadcrumbList": 1,
+        "ListItem": 4,
+        "Article": 1,
+        "DefinedTerm": 1,
+        "PropertyValue": 8,
+        "DefinedTermSet": 1
+      },
+      "modified": [
+        "2026-07-22",
+        "2026-07-22"
+      ],
+      "issues": []
+    },
+    {
+      "file": "dr12-afir/index.html",
+      "route": "/dr12-afir",
+      "blocks": 1,
+      "types": {
+        "Organization": 3,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
+        "ImageObject": 1,
+        "WebSite": 1,
+        "WebPage": 2,
+        "CreativeWork": 3,
+        "BreadcrumbList": 1,
+        "ListItem": 4,
+        "Article": 1,
+        "DefinedTerm": 1,
+        "PropertyValue": 8,
+        "DefinedTermSet": 1
+      },
+      "modified": [
+        "2026-07-22",
+        "2026-07-22"
+      ],
+      "issues": []
+    },
+    {
+      "file": "dr14/index.html",
+      "route": "/dr14",
+      "blocks": 1,
+      "types": {
+        "Organization": 3,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
+        "ImageObject": 1,
+        "WebSite": 1,
+        "WebPage": 2,
+        "CreativeWork": 3,
+        "BreadcrumbList": 1,
+        "ListItem": 4,
+        "Article": 1,
+        "DefinedTerm": 1,
+        "PropertyValue": 8,
+        "DefinedTermSet": 1
+      },
+      "modified": [
+        "2026-07-22",
+        "2026-07-22"
+      ],
+      "issues": []
+    },
+    {
+      "file": "pro-infra.html",
+      "route": "/pro-infra",
+      "blocks": 1,
+      "types": {
+        "Organization": 3,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
+        "ImageObject": 1,
+        "WebSite": 1,
+        "WebPage": 2,
+        "CreativeWork": 3,
+        "BreadcrumbList": 1,
+        "ListItem": 4,
+        "Article": 1,
+        "DefinedTerm": 1,
+        "PropertyValue": 8,
+        "DefinedTermSet": 1
+      },
+      "modified": [
+        "2026-07-22",
+        "2026-07-22"
+      ],
+      "issues": []
+    },
+    {
       "file": "afir-autoconsum-agroalimentar.html",
       "route": "/afir-autoconsum-agroalimentar",
       "blocks": 1,
       "types": {
-        "Organization": 8,
-        "Country": 1,
+        "Organization": 3,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 2,
-        "CreativeWork": 4,
+        "CreativeWork": 3,
         "BreadcrumbList": 1,
         "ListItem": 4,
         "Article": 1,
@@ -66,12 +164,13 @@
       "route": "/apeluri-gal",
       "blocks": 1,
       "types": {
-        "Organization": 8,
-        "Country": 1,
+        "Organization": 3,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 2,
-        "CreativeWork": 4,
+        "CreativeWork": 3,
         "BreadcrumbList": 1,
         "ListItem": 4,
         "Article": 1,
@@ -87,17 +186,16 @@
         "2026-05-26",
         "2026-05-26"
       ],
-      "issues": [
-        "dateModified nu corespunde datei editoriale 2026-05-29: 2026-05-26"
-      ]
+      "issues": []
     },
     {
       "file": "autoconsum-public-fotovoltaice-institutii-publice.html",
       "route": "/autoconsum-public-fotovoltaice-institutii-publice",
       "blocks": 1,
       "types": {
-        "Organization": 7,
-        "Country": 1,
+        "Organization": 3,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 2,
@@ -117,17 +215,16 @@
         "2026-05-20",
         "2026-05-20"
       ],
-      "issues": [
-        "dateModified nu corespunde datei editoriale 2026-05-29: 2026-05-20"
-      ]
+      "issues": []
     },
     {
       "file": "e-move/index.html",
       "route": "/e-move",
       "blocks": 1,
       "types": {
-        "Organization": 7,
-        "Country": 1,
+        "Organization": 3,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 2,
@@ -147,17 +244,16 @@
         "2026-05-27",
         "2026-05-27"
       ],
-      "issues": [
-        "dateModified nu corespunde datei editoriale 2026-07-13: 2026-05-27"
-      ]
+      "issues": []
     },
     {
       "file": "femeia-antreprenor-2026.html",
       "route": "/femeia-antreprenor-2026",
       "blocks": 1,
       "types": {
-        "Organization": 7,
-        "Country": 1,
+        "Organization": 3,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 2,
@@ -176,17 +272,16 @@
         "2026-05-20",
         "2026-05-20"
       ],
-      "issues": [
-        "dateModified nu corespunde datei editoriale 2026-07-13: 2026-05-20"
-      ]
+      "issues": []
     },
     {
       "file": "fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum/index.html",
       "route": "/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum",
       "blocks": 1,
       "types": {
-        "Organization": 7,
-        "Country": 1,
+        "Organization": 3,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 2,
@@ -205,17 +300,16 @@
         "2026-05-20",
         "2026-05-20"
       ],
-      "issues": [
-        "dateModified nu corespunde datei editoriale 2026-05-29: 2026-05-20"
-      ]
+      "issues": []
     },
     {
       "file": "fondul-modernizare-energie-regenerabila-2026.html",
       "route": "/fondul-modernizare-energie-regenerabila-2026",
       "blocks": 1,
       "types": {
-        "Organization": 7,
-        "Country": 1,
+        "Organization": 3,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 2,
@@ -234,31 +328,29 @@
         "2026-05-20",
         "2026-05-20"
       ],
-      "issues": [
-        "dateModified nu corespunde datei editoriale 2026-05-29: 2026-05-20"
-      ]
+      "issues": []
     },
     {
       "file": "fonduri-regionale/index.html",
       "route": "/fonduri-regionale",
       "blocks": 1,
       "types": {
-        "Organization": 5,
-        "Country": 1,
+        "Organization": 3,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
         "CreativeWork": 2,
         "BreadcrumbList": 1,
-        "ListItem": 11,
+        "ListItem": 3,
         "DefinedTerm": 1,
         "PropertyValue": 8,
         "Audience": 1,
         "DefinedTermSet": 1,
         "FAQPage": 1,
         "Question": 6,
-        "Answer": 6,
-        "ItemList": 1
+        "Answer": 6
       },
       "modified": [
         "2026-07-20"
@@ -270,12 +362,13 @@
       "route": "/gal-afir",
       "blocks": 1,
       "types": {
-        "Organization": 8,
-        "Country": 1,
+        "Organization": 3,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 2,
-        "CreativeWork": 4,
+        "CreativeWork": 3,
         "BreadcrumbList": 1,
         "ListItem": 4,
         "Article": 1,
@@ -291,17 +384,16 @@
         "2026-05-26",
         "2026-05-26"
       ],
-      "issues": [
-        "dateModified nu corespunde datei editoriale 2026-05-29: 2026-05-26"
-      ]
+      "issues": []
     },
     {
       "file": "investitii-modernizarea-microintreprinderilor-apel-2.html",
       "route": "/investitii-modernizarea-microintreprinderilor-apel-2",
       "blocks": 1,
       "types": {
-        "Organization": 7,
-        "Country": 1,
+        "Organization": 3,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 2,
@@ -321,21 +413,20 @@
         "2026-06-02",
         "2026-06-02"
       ],
-      "issues": [
-        "dateModified nu corespunde datei editoriale 2026-06-11: 2026-06-02"
-      ]
+      "issues": []
     },
     {
       "file": "pocidif-21/index.html",
       "route": "/pocidif-21",
       "blocks": 1,
       "types": {
-        "Organization": 10,
-        "Country": 1,
+        "Organization": 3,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 2,
-        "CreativeWork": 6,
+        "CreativeWork": 3,
         "BreadcrumbList": 1,
         "ListItem": 4,
         "Article": 1,
@@ -358,12 +449,13 @@
       "route": "/por-adr-nord-est",
       "blocks": 1,
       "types": {
-        "Organization": 8,
-        "Country": 1,
+        "Organization": 3,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 2,
-        "CreativeWork": 4,
+        "CreativeWork": 3,
         "BreadcrumbList": 1,
         "ListItem": 4,
         "Article": 1,
@@ -386,8 +478,9 @@
       "route": "/start-up-nation-2026",
       "blocks": 1,
       "types": {
-        "Organization": 7,
-        "Country": 1,
+        "Organization": 3,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 2,
@@ -406,9 +499,7 @@
         "2026-05-20",
         "2026-05-20"
       ],
-      "issues": [
-        "dateModified nu corespunde datei editoriale 2026-06-11: 2026-05-20"
-      ]
+      "issues": []
     },
     {
       "file": "blog/index.html",
@@ -416,7 +507,8 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "Country": 1,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
@@ -424,8 +516,7 @@
         "ListItem": 3,
         "FAQPage": 1,
         "Question": 5,
-        "Answer": 5,
-        "Blog": 1
+        "Answer": 5
       },
       "modified": [],
       "issues": []
@@ -435,22 +526,19 @@
       "route": "/metodologie-verificare-eligibilitate",
       "blocks": 1,
       "types": {
-        "Organization": 2,
-        "Country": 1,
+        "Organization": 1,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
-        "WebPage": 2,
+        "WebPage": 1,
         "BreadcrumbList": 1,
         "ListItem": 3,
-        "Article": 1,
         "FAQPage": 1,
         "Question": 3,
         "Answer": 3
       },
-      "modified": [
-        "2026-05-27",
-        "2026-05-27"
-      ],
+      "modified": [],
       "issues": []
     },
     {
@@ -459,20 +547,18 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "Country": 1,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
         "BreadcrumbList": 1,
-        "ListItem": 12,
+        "ListItem": 3,
         "FAQPage": 1,
         "Question": 4,
-        "Answer": 4,
-        "ItemList": 1
+        "Answer": 4
       },
-      "modified": [
-        "2026-05-27"
-      ],
+      "modified": [],
       "issues": []
     },
     {
@@ -481,7 +567,8 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "Country": 1,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
@@ -500,7 +587,8 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "Country": 1,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 2,
@@ -511,10 +599,7 @@
         "Question": 5,
         "Answer": 5
       },
-      "modified": [
-        "2026-05-26",
-        "2026-05-26"
-      ],
+      "modified": [],
       "issues": []
     },
     {
@@ -523,18 +608,15 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "Country": 1,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
-        "WebPage": 2,
+        "WebPage": 1,
         "BreadcrumbList": 1,
-        "ListItem": 3,
-        "Article": 1
+        "ListItem": 3
       },
-      "modified": [
-        "2026-05-20",
-        "2026-05-20"
-      ],
+      "modified": [],
       "issues": []
     },
     {
@@ -543,18 +625,15 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "Country": 1,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
-        "WebPage": 2,
+        "WebPage": 1,
         "BreadcrumbList": 1,
-        "ListItem": 3,
-        "Article": 1
+        "ListItem": 3
       },
-      "modified": [
-        "2026-06-11",
-        "2026-06-11"
-      ],
+      "modified": [],
       "issues": []
     },
     {
@@ -562,23 +641,20 @@
       "route": "/cheltuieli-eligibile-pocidif-21",
       "blocks": 1,
       "types": {
-        "Organization": 5,
-        "Country": 1,
+        "Organization": 1,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 2,
         "BreadcrumbList": 1,
         "ListItem": 3,
         "Article": 1,
-        "CreativeWork": 4,
         "FAQPage": 1,
         "Question": 9,
         "Answer": 9
       },
-      "modified": [
-        "2026-07-13",
-        "2026-07-13"
-      ],
+      "modified": [],
       "issues": []
     },
     {
@@ -587,7 +663,8 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "Country": 1,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
@@ -605,23 +682,20 @@
       "route": "/documente-punctaj-pocidif-21",
       "blocks": 1,
       "types": {
-        "Organization": 5,
-        "Country": 1,
+        "Organization": 1,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 2,
         "BreadcrumbList": 1,
         "ListItem": 3,
         "Article": 1,
-        "CreativeWork": 4,
         "FAQPage": 1,
         "Question": 9,
         "Answer": 9
       },
-      "modified": [
-        "2026-07-13",
-        "2026-07-13"
-      ],
+      "modified": [],
       "issues": []
     },
     {
@@ -630,21 +704,18 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "Country": 1,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
-        "WebPage": 2,
+        "WebPage": 1,
         "BreadcrumbList": 1,
         "ListItem": 3,
-        "Article": 1,
         "FAQPage": 1,
         "Question": 3,
         "Answer": 3
       },
-      "modified": [
-        "2026-06-11",
-        "2026-06-11"
-      ],
+      "modified": [],
       "issues": []
     },
     {
@@ -653,7 +724,8 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "Country": 1,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
@@ -672,7 +744,8 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "Country": 1,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
@@ -680,13 +753,9 @@
         "ListItem": 3,
         "FAQPage": 1,
         "Question": 4,
-        "Answer": 4,
-        "DefinedTermSet": 1,
-        "DefinedTerm": 28
+        "Answer": 4
       },
-      "modified": [
-        "2026-05-20"
-      ],
+      "modified": [],
       "issues": []
     },
     {
@@ -695,7 +764,8 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "Country": 1,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
@@ -705,9 +775,7 @@
         "Question": 6,
         "Answer": 6
       },
-      "modified": [
-        "2026-05-29"
-      ],
+      "modified": [],
       "issues": []
     },
     {
@@ -716,7 +784,8 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "Country": 1,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
@@ -726,9 +795,7 @@
         "Question": 6,
         "Answer": 6
       },
-      "modified": [
-        "2026-05-29"
-      ],
+      "modified": [],
       "issues": []
     },
     {
@@ -737,7 +804,8 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "Country": 1,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 2,
@@ -748,10 +816,7 @@
         "Question": 11,
         "Answer": 11
       },
-      "modified": [
-        "2026-05-20",
-        "2026-05-20"
-      ],
+      "modified": [],
       "issues": []
     },
     {
@@ -760,7 +825,8 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "Country": 1,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 2,
@@ -771,10 +837,7 @@
         "Question": 11,
         "Answer": 11
       },
-      "modified": [
-        "2026-05-20",
-        "2026-05-20"
-      ],
+      "modified": [],
       "issues": []
     },
     {
@@ -783,7 +846,8 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "Country": 1,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 2,
@@ -794,10 +858,7 @@
         "Question": 11,
         "Answer": 11
       },
-      "modified": [
-        "2026-05-20",
-        "2026-05-20"
-      ],
+      "modified": [],
       "issues": []
     },
     {
@@ -806,21 +867,18 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "Country": 1,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
-        "WebPage": 2,
+        "WebPage": 1,
         "BreadcrumbList": 1,
         "ListItem": 3,
-        "Article": 1,
         "FAQPage": 1,
         "Question": 3,
         "Answer": 3
       },
-      "modified": [
-        "2026-05-21",
-        "2026-05-21"
-      ],
+      "modified": [],
       "issues": []
     },
     {
@@ -829,7 +887,8 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "Country": 1,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 2,
@@ -840,10 +899,7 @@
         "Question": 6,
         "Answer": 6
       },
-      "modified": [
-        "2026-06-11",
-        "2026-06-11"
-      ],
+      "modified": [],
       "issues": []
     },
     {
@@ -852,7 +908,8 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "Country": 1,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
@@ -871,16 +928,15 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "Country": 1,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
         "BreadcrumbList": 1,
         "ListItem": 3
       },
-      "modified": [
-        "2026-07-10"
-      ],
+      "modified": [],
       "issues": []
     },
     {
@@ -889,7 +945,8 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "Country": 1,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
@@ -908,7 +965,8 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "Country": 1,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
@@ -927,7 +985,8 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "Country": 1,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
@@ -946,7 +1005,8 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "Country": 1,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
@@ -965,21 +1025,18 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "Country": 1,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
-        "WebPage": 2,
+        "WebPage": 1,
         "BreadcrumbList": 1,
         "ListItem": 3,
-        "Article": 1,
         "FAQPage": 1,
         "Question": 5,
         "Answer": 5
       },
-      "modified": [
-        "2026-05-20",
-        "2026-05-20"
-      ],
+      "modified": [],
       "issues": []
     },
     {
@@ -988,17 +1045,15 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "Country": 1,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
         "BreadcrumbList": 1,
-        "ListItem": 2,
-        "LegalService": 1
+        "ListItem": 2
       },
-      "modified": [
-        "2026-05-26"
-      ],
+      "modified": [],
       "issues": []
     },
     {
@@ -1007,7 +1062,8 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "Country": 1,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
@@ -1026,10 +1082,10 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "Country": 2,
-        "ImageObject": 2,
-        "WebSite": 1,
         "ProfessionalService": 1,
+        "PostalAddress": 1,
+        "ImageObject": 1,
+        "WebSite": 1,
         "WebPage": 1,
         "FAQPage": 1,
         "Question": 8,
@@ -1044,20 +1100,20 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "Country": 2,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
         "BreadcrumbList": 1,
         "ListItem": 2,
         "Service": 1,
+        "AdministrativeArea": 1,
         "FAQPage": 1,
         "Question": 6,
         "Answer": 6
       },
-      "modified": [
-        "2026-07-13"
-      ],
+      "modified": [],
       "issues": []
     },
     {
@@ -1066,19 +1122,15 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "Country": 1,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
         "BreadcrumbList": 1,
-        "ListItem": 2,
-        "FAQPage": 1,
-        "Question": 6,
-        "Answer": 6
+        "ListItem": 2
       },
-      "modified": [
-        "2026-05-29"
-      ],
+      "modified": [],
       "issues": []
     },
     {
@@ -1087,7 +1139,8 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "Country": 1,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
@@ -1097,9 +1150,7 @@
         "Question": 6,
         "Answer": 6
       },
-      "modified": [
-        "2026-05-20"
-      ],
+      "modified": [],
       "issues": []
     },
     {
@@ -1108,7 +1159,8 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "Country": 1,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
@@ -1118,9 +1170,7 @@
         "Question": 5,
         "Answer": 5
       },
-      "modified": [
-        "2026-05-29"
-      ],
+      "modified": [],
       "issues": []
     },
     {
@@ -1129,14 +1179,14 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "Country": 1,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
         "BreadcrumbList": 1,
         "ListItem": 3,
         "WebApplication": 1,
-        "Offer": 1,
         "FAQPage": 1,
         "Question": 7,
         "Answer": 7
@@ -1150,7 +1200,8 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "Country": 1,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
@@ -1160,9 +1211,7 @@
         "Question": 6,
         "Answer": 6
       },
-      "modified": [
-        "2026-05-29"
-      ],
+      "modified": [],
       "issues": []
     },
     {
@@ -1171,18 +1220,15 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "Country": 1,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
-        "WebPage": 2,
+        "WebPage": 1,
         "BreadcrumbList": 1,
-        "ListItem": 3,
-        "Article": 1
+        "ListItem": 3
       },
-      "modified": [
-        "2026-05-20",
-        "2026-05-20"
-      ],
+      "modified": [],
       "issues": []
     },
     {
@@ -1191,7 +1237,8 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "Country": 1,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
@@ -1201,9 +1248,7 @@
         "Question": 6,
         "Answer": 6
       },
-      "modified": [
-        "2026-05-29"
-      ],
+      "modified": [],
       "issues": []
     },
     {
@@ -1212,18 +1257,15 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "Country": 1,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
-        "WebPage": 2,
+        "WebPage": 1,
         "BreadcrumbList": 1,
-        "ListItem": 3,
-        "Article": 1
+        "ListItem": 3
       },
-      "modified": [
-        "2026-06-01",
-        "2026-06-01"
-      ],
+      "modified": [],
       "issues": []
     },
     {
@@ -1232,20 +1274,20 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "Country": 2,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
         "BreadcrumbList": 1,
         "ListItem": 3,
         "Service": 1,
+        "AdministrativeArea": 1,
         "FAQPage": 1,
         "Question": 6,
         "Answer": 6
       },
-      "modified": [
-        "2026-05-29"
-      ],
+      "modified": [],
       "issues": []
     },
     {
@@ -1254,20 +1296,20 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "Country": 2,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
         "BreadcrumbList": 1,
         "ListItem": 3,
         "Service": 1,
+        "AdministrativeArea": 1,
         "FAQPage": 1,
         "Question": 6,
         "Answer": 6
       },
-      "modified": [
-        "2026-05-29"
-      ],
+      "modified": [],
       "issues": []
     },
     {
@@ -1276,20 +1318,20 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "Country": 2,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
         "BreadcrumbList": 1,
         "ListItem": 3,
         "Service": 1,
+        "AdministrativeArea": 1,
         "FAQPage": 1,
         "Question": 12,
         "Answer": 12
       },
-      "modified": [
-        "2026-05-20"
-      ],
+      "modified": [],
       "issues": []
     },
     {
@@ -1298,20 +1340,20 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "Country": 2,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
         "BreadcrumbList": 1,
         "ListItem": 3,
         "Service": 1,
+        "AdministrativeArea": 1,
         "FAQPage": 1,
         "Question": 6,
         "Answer": 6
       },
-      "modified": [
-        "2026-05-29"
-      ],
+      "modified": [],
       "issues": []
     },
     {
@@ -1320,20 +1362,20 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "Country": 2,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
         "BreadcrumbList": 1,
         "ListItem": 3,
         "Service": 1,
+        "AdministrativeArea": 1,
         "FAQPage": 1,
         "Question": 8,
         "Answer": 8
       },
-      "modified": [
-        "2026-05-29"
-      ],
+      "modified": [],
       "issues": []
     },
     {
@@ -1342,7 +1384,8 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "Country": 1,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
@@ -1352,9 +1395,7 @@
         "Question": 7,
         "Answer": 7
       },
-      "modified": [
-        "2026-05-21"
-      ],
+      "modified": [],
       "issues": []
     },
     {
@@ -1363,7 +1404,8 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "Country": 1,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
@@ -1373,9 +1415,7 @@
         "Question": 6,
         "Answer": 6
       },
-      "modified": [
-        "2026-05-29"
-      ],
+      "modified": [],
       "issues": []
     },
     {
@@ -1384,21 +1424,18 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "Country": 1,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
-        "WebPage": 2,
+        "WebPage": 1,
         "BreadcrumbList": 1,
         "ListItem": 3,
-        "Article": 1,
         "FAQPage": 1,
         "Question": 8,
         "Answer": 8
       },
-      "modified": [
-        "2026-06-01",
-        "2026-06-01"
-      ],
+      "modified": [],
       "issues": []
     },
     {
@@ -1407,18 +1444,15 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "Country": 1,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
-        "WebPage": 2,
+        "WebPage": 1,
         "BreadcrumbList": 1,
-        "ListItem": 3,
-        "Article": 1
+        "ListItem": 3
       },
-      "modified": [
-        "2026-05-20",
-        "2026-05-20"
-      ],
+      "modified": [],
       "issues": []
     },
     {
@@ -1427,18 +1461,15 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "Country": 1,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
-        "WebPage": 2,
+        "WebPage": 1,
         "BreadcrumbList": 1,
-        "ListItem": 3,
-        "Article": 1
+        "ListItem": 3
       },
-      "modified": [
-        "2026-06-01",
-        "2026-06-01"
-      ],
+      "modified": [],
       "issues": []
     },
     {
@@ -1447,18 +1478,15 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "Country": 1,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
-        "WebPage": 2,
+        "WebPage": 1,
         "BreadcrumbList": 1,
-        "ListItem": 3,
-        "Article": 1
+        "ListItem": 3
       },
-      "modified": [
-        "2026-06-11",
-        "2026-06-11"
-      ],
+      "modified": [],
       "issues": []
     },
     {
@@ -1467,7 +1495,8 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "Country": 1,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
@@ -1477,9 +1506,7 @@
         "Question": 9,
         "Answer": 9
       },
-      "modified": [
-        "2026-05-29"
-      ],
+      "modified": [],
       "issues": []
     },
     {
@@ -1488,21 +1515,18 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "Country": 1,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
-        "WebPage": 2,
+        "WebPage": 1,
         "BreadcrumbList": 1,
         "ListItem": 3,
-        "Article": 1,
         "FAQPage": 1,
         "Question": 8,
         "Answer": 8
       },
-      "modified": [
-        "2026-05-21",
-        "2026-05-21"
-      ],
+      "modified": [],
       "issues": []
     },
     {
@@ -1511,19 +1535,15 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "Country": 1,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
         "BreadcrumbList": 1,
-        "ListItem": 3,
-        "FAQPage": 1,
-        "Question": 6,
-        "Answer": 6
+        "ListItem": 3
       },
-      "modified": [
-        "2026-05-29"
-      ],
+      "modified": [],
       "issues": []
     },
     {
@@ -1531,23 +1551,20 @@
       "route": "/eligibilitate-pocidif-21",
       "blocks": 1,
       "types": {
-        "Organization": 5,
-        "Country": 1,
+        "Organization": 1,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 2,
         "BreadcrumbList": 1,
         "ListItem": 3,
         "Article": 1,
-        "CreativeWork": 4,
         "FAQPage": 1,
         "Question": 6,
         "Answer": 6
       },
-      "modified": [
-        "2026-07-13",
-        "2026-07-13"
-      ],
+      "modified": [],
       "issues": []
     },
     {
@@ -1556,7 +1573,8 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "Country": 1,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
@@ -1566,9 +1584,7 @@
         "Question": 5,
         "Answer": 5
       },
-      "modified": [
-        "2026-05-29"
-      ],
+      "modified": [],
       "issues": []
     },
     {
@@ -1577,20 +1593,20 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "Country": 2,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
         "BreadcrumbList": 1,
         "ListItem": 3,
         "Service": 1,
+        "AdministrativeArea": 1,
         "FAQPage": 1,
         "Question": 6,
         "Answer": 6
       },
-      "modified": [
-        "2026-05-29"
-      ],
+      "modified": [],
       "issues": []
     },
     {
@@ -1599,7 +1615,8 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "Country": 1,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
@@ -1609,9 +1626,7 @@
         "Question": 8,
         "Answer": 8
       },
-      "modified": [
-        "2026-05-29"
-      ],
+      "modified": [],
       "issues": []
     },
     {
@@ -1620,7 +1635,8 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "Country": 1,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 2,
@@ -1631,10 +1647,7 @@
         "Question": 14,
         "Answer": 14
       },
-      "modified": [
-        "2026-05-20",
-        "2026-05-20"
-      ],
+      "modified": [],
       "issues": []
     },
     {
@@ -1643,7 +1656,8 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "Country": 1,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 2,
@@ -1654,10 +1668,7 @@
         "Question": 13,
         "Answer": 13
       },
-      "modified": [
-        "2026-05-20",
-        "2026-05-20"
-      ],
+      "modified": [],
       "issues": []
     },
     {
@@ -1666,7 +1677,8 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "Country": 1,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 2,
@@ -1677,10 +1689,7 @@
         "Question": 13,
         "Answer": 13
       },
-      "modified": [
-        "2026-05-20",
-        "2026-05-20"
-      ],
+      "modified": [],
       "issues": []
     },
     {
@@ -1689,7 +1698,8 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "Country": 1,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 2,
@@ -1700,10 +1710,7 @@
         "Question": 13,
         "Answer": 13
       },
-      "modified": [
-        "2026-05-20",
-        "2026-05-20"
-      ],
+      "modified": [],
       "issues": []
     },
     {
@@ -1712,7 +1719,8 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "Country": 1,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 2,
@@ -1723,10 +1731,7 @@
         "Question": 13,
         "Answer": 13
       },
-      "modified": [
-        "2026-05-20",
-        "2026-05-20"
-      ],
+      "modified": [],
       "issues": []
     },
     {
@@ -1735,7 +1740,8 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "Country": 1,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
@@ -1745,12 +1751,8 @@
         "Question": 5,
         "Answer": 5
       },
-      "modified": [
-        "2026-05-29"
-      ],
-      "issues": [
-        "FAQ cu răspuns diferit de cel vizibil: 'Ce pregătesc înainte de alegerea furnizorilor?'"
-      ]
+      "modified": [],
+      "issues": []
     },
     {
       "file": "fonduri-europene-femei-antreprenor/index.html",
@@ -1758,7 +1760,8 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "Country": 1,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
@@ -1768,9 +1771,7 @@
         "Question": 6,
         "Answer": 6
       },
-      "modified": [
-        "2026-05-29"
-      ],
+      "modified": [],
       "issues": []
     },
     {
@@ -1779,7 +1780,8 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "Country": 1,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
@@ -1789,9 +1791,7 @@
         "Question": 5,
         "Answer": 5
       },
-      "modified": [
-        "2026-05-29"
-      ],
+      "modified": [],
       "issues": []
     },
     {
@@ -1800,7 +1800,8 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "Country": 1,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
@@ -1810,9 +1811,7 @@
         "Question": 13,
         "Answer": 13
       },
-      "modified": [
-        "2026-05-29"
-      ],
+      "modified": [],
       "issues": []
     },
     {
@@ -1821,7 +1820,8 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "Country": 1,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 2,
@@ -1832,10 +1832,7 @@
         "Question": 13,
         "Answer": 13
       },
-      "modified": [
-        "2026-06-19",
-        "2026-06-19"
-      ],
+      "modified": [],
       "issues": []
     },
     {
@@ -1844,19 +1841,15 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "Country": 1,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
         "BreadcrumbList": 1,
-        "ListItem": 3,
-        "FAQPage": 1,
-        "Question": 8,
-        "Answer": 8
+        "ListItem": 3
       },
-      "modified": [
-        "2026-05-29"
-      ],
+      "modified": [],
       "issues": []
     },
     {
@@ -1865,7 +1858,8 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "Country": 1,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
@@ -1875,9 +1869,7 @@
         "Question": 6,
         "Answer": 6
       },
-      "modified": [
-        "2026-05-29"
-      ],
+      "modified": [],
       "issues": []
     },
     {
@@ -1886,7 +1878,8 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "Country": 1,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
@@ -1896,9 +1889,7 @@
         "Question": 9,
         "Answer": 9
       },
-      "modified": [
-        "2026-05-29"
-      ],
+      "modified": [],
       "issues": []
     },
     {
@@ -1907,21 +1898,18 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "Country": 1,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
-        "WebPage": 2,
+        "WebPage": 1,
         "BreadcrumbList": 1,
         "ListItem": 3,
-        "Article": 1,
         "FAQPage": 1,
         "Question": 4,
         "Answer": 4
       },
-      "modified": [
-        "2026-05-21",
-        "2026-05-21"
-      ],
+      "modified": [],
       "issues": []
     },
     {
@@ -1930,14 +1918,13 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "Country": 1,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
         "BreadcrumbList": 1,
         "ListItem": 2,
-        "WebApplication": 1,
-        "Offer": 1,
         "FAQPage": 1,
         "Question": 4,
         "Answer": 4
@@ -1951,20 +1938,20 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "Country": 2,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
         "BreadcrumbList": 1,
         "ListItem": 3,
         "Service": 1,
+        "AdministrativeArea": 1,
         "FAQPage": 1,
         "Question": 5,
         "Answer": 5
       },
-      "modified": [
-        "2026-07-10"
-      ],
+      "modified": [],
       "issues": []
     },
     {
@@ -1973,20 +1960,20 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "Country": 2,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
         "BreadcrumbList": 1,
         "ListItem": 3,
         "Service": 1,
+        "AdministrativeArea": 1,
         "FAQPage": 1,
         "Question": 5,
         "Answer": 5
       },
-      "modified": [
-        "2026-07-10"
-      ],
+      "modified": [],
       "issues": []
     },
     {
@@ -1995,17 +1982,15 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "Country": 1,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
         "BreadcrumbList": 1,
-        "ListItem": 2,
-        "LegalService": 1
+        "ListItem": 2
       },
-      "modified": [
-        "2026-05-26"
-      ],
+      "modified": [],
       "issues": []
     },
     {
@@ -2014,20 +1999,20 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "Country": 2,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
         "BreadcrumbList": 1,
         "ListItem": 3,
         "Service": 1,
+        "AdministrativeArea": 1,
         "FAQPage": 1,
         "Question": 5,
         "Answer": 5
       },
-      "modified": [
-        "2026-07-10"
-      ],
+      "modified": [],
       "issues": []
     },
     {
@@ -2036,20 +2021,20 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "Country": 2,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
         "BreadcrumbList": 1,
         "ListItem": 3,
         "Service": 1,
+        "AdministrativeArea": 1,
         "FAQPage": 1,
         "Question": 5,
         "Answer": 5
       },
-      "modified": [
-        "2026-07-10"
-      ],
+      "modified": [],
       "issues": []
     },
     {
@@ -2058,20 +2043,17 @@
       "blocks": 1,
       "types": {
         "Organization": 1,
-        "Country": 2,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
         "BreadcrumbList": 1,
         "ListItem": 3,
         "Service": 1,
-        "FAQPage": 1,
-        "Question": 8,
-        "Answer": 8
+        "AdministrativeArea": 1
       },
-      "modified": [
-        "2026-05-29"
-      ],
+      "modified": [],
       "issues": []
     }
   ]

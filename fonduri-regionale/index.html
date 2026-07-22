@@ -362,44 +362,18 @@
   "@graph": [
     {
       "@id": "https://atelierdeconsultanta.ro/#organization",
-      "@type": "Organization",
-      "address": "Sat Gorbănești, comuna Gorbănești, nr. 88, Str. Principală, județul Botoșani",
-      "alternateName": [
-        "FABER",
-        "Atelier de Consultanță",
-        "Atelier de Consultanță FABER",
-        "atelierdeconsultanta.ro"
+      "@type": [
+        "Organization",
+        "ProfessionalService"
       ],
-      "areaServed": {
-        "@type": "AdministrativeArea",
-        "name": "Iași, Suceava, Bistrița-Năsăud, Botoșani, Bacău și Neamț"
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "RO",
+        "addressLocality": "Gorbănești",
+        "addressRegion": "Botoșani",
+        "streetAddress": "Str. Principală, nr. 88"
       },
-      "contactPoint": [
-        {
-          "@type": "ContactPoint",
-          "availableLanguage": "ro-RO",
-          "contactType": "customer service",
-          "telephone": "+40769828338"
-        },
-        {
-          "@type": "ContactPoint",
-          "availableLanguage": "ro-RO",
-          "contactType": "customer service",
-          "telephone": "+40753326229"
-        }
-      ],
-      "description": "FABER - Atelier de Consultanță ajută firme, fermieri, start-up-uri și IMM-uri să verifice eligibilitatea și să pregătească proiecte pentru fonduri europene și finanțări nerambursabile.",
       "email": "atelier.consultanta@gmail.com",
-      "image": "https://atelierdeconsultanta.ro/og-image.jpg",
-      "knowsAbout": [
-        "fonduri europene",
-        "finanțări nerambursabile",
-        "AFIR",
-        "PNRR",
-        "Start-Up Nation",
-        "Digitalizare IMM",
-        "consultanță IMM"
-      ],
       "legalName": "FABER PUBLISHING S.R.L.",
       "logo": {
         "@type": "ImageObject",
@@ -410,7 +384,8 @@
         "https://www.instagram.com/atelier.de.consultanta/"
       ],
       "taxID": "35339809",
-      "url": "https://atelierdeconsultanta.ro"
+      "telephone": "+40-769-828-338",
+      "url": "https://atelierdeconsultanta.ro/"
     },
     {
       "@id": "https://atelierdeconsultanta.ro/#website",
@@ -428,8 +403,14 @@
       "about": {
         "@id": "https://atelierdeconsultanta.ro/fonduri-regionale#funding-program"
       },
+      "citation": [
+        {
+          "@type": "CreativeWork",
+          "name": "Autoritățile de management regionale — Portalul oficial al fondurilor europene",
+          "url": "https://mfe.gov.ro/"
+        }
+      ],
       "dateModified": "2026-07-20",
-      "datePublished": "2026-06-02",
       "description": "Programe regionale 2021–2027: identificarea ADR-ului, apelului, solicitantului, localizării, documentelor și sursei oficiale aplicabile.",
       "inLanguage": "ro-RO",
       "isPartOf": {
@@ -592,61 +573,6 @@
           "name": "Istoric editorial"
         }
       ]
-    },
-    {
-      "@id": "https://atelierdeconsultanta.ro/fonduri-regionale#adr-regions",
-      "@type": "ItemList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "name": "Nord-Est",
-          "position": 1,
-          "url": "https://atelierdeconsultanta.ro/fonduri-regionale#nord-est"
-        },
-        {
-          "@type": "ListItem",
-          "name": "Sud-Est",
-          "position": 2,
-          "url": "https://atelierdeconsultanta.ro/fonduri-regionale#sud-est"
-        },
-        {
-          "@type": "ListItem",
-          "name": "Sud-Muntenia",
-          "position": 3,
-          "url": "https://atelierdeconsultanta.ro/fonduri-regionale#sud-muntenia"
-        },
-        {
-          "@type": "ListItem",
-          "name": "Sud-Vest Oltenia",
-          "position": 4,
-          "url": "https://atelierdeconsultanta.ro/fonduri-regionale#sud-vest-oltenia"
-        },
-        {
-          "@type": "ListItem",
-          "name": "Vest",
-          "position": 5,
-          "url": "https://atelierdeconsultanta.ro/fonduri-regionale#vest"
-        },
-        {
-          "@type": "ListItem",
-          "name": "Nord-Vest",
-          "position": 6,
-          "url": "https://atelierdeconsultanta.ro/fonduri-regionale#nord-vest"
-        },
-        {
-          "@type": "ListItem",
-          "name": "Centru",
-          "position": 7,
-          "url": "https://atelierdeconsultanta.ro/fonduri-regionale#centru"
-        },
-        {
-          "@type": "ListItem",
-          "name": "București-Ilfov",
-          "position": 8,
-          "url": "https://atelierdeconsultanta.ro/fonduri-regionale#bucuresti-ilfov"
-        }
-      ],
-      "name": "Regiunile de dezvoltare și ADR-urile din România"
     }
   ]
 }</script>

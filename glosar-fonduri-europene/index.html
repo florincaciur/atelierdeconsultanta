@@ -33,44 +33,18 @@
   "@graph": [
     {
       "@id": "https://atelierdeconsultanta.ro/#organization",
-      "@type": "Organization",
-      "address": "Sat Gorbănești, comuna Gorbănești, nr. 88, Str. Principală, județul Botoșani",
-      "alternateName": [
-        "FABER",
-        "Atelier de Consultanță",
-        "Atelier de Consultanță FABER",
-        "atelierdeconsultanta.ro"
+      "@type": [
+        "Organization",
+        "ProfessionalService"
       ],
-      "areaServed": {
-        "@type": "AdministrativeArea",
-        "name": "Iași, Suceava, Bistrița-Năsăud, Botoșani, Bacău și Neamț"
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "RO",
+        "addressLocality": "Gorbănești",
+        "addressRegion": "Botoșani",
+        "streetAddress": "Str. Principală, nr. 88"
       },
-      "contactPoint": [
-        {
-          "@type": "ContactPoint",
-          "availableLanguage": "ro-RO",
-          "contactType": "customer service",
-          "telephone": "+40769828338"
-        },
-        {
-          "@type": "ContactPoint",
-          "availableLanguage": "ro-RO",
-          "contactType": "customer service",
-          "telephone": "+40753326229"
-        }
-      ],
-      "description": "FABER - Atelier de Consultanță ajută firme, fermieri, start-up-uri și IMM-uri să verifice eligibilitatea și să pregătească proiecte pentru fonduri europene și finanțări nerambursabile.",
       "email": "atelier.consultanta@gmail.com",
-      "image": "https://atelierdeconsultanta.ro/og-image.jpg",
-      "knowsAbout": [
-        "fonduri europene",
-        "finanțări nerambursabile",
-        "AFIR",
-        "PNRR",
-        "Start-Up Nation",
-        "Digitalizare IMM",
-        "consultanță IMM"
-      ],
       "legalName": "FABER PUBLISHING S.R.L.",
       "logo": {
         "@type": "ImageObject",
@@ -81,7 +55,8 @@
         "https://www.instagram.com/atelier.de.consultanta/"
       ],
       "taxID": "35339809",
-      "url": "https://atelierdeconsultanta.ro"
+      "telephone": "+40-769-828-338",
+      "url": "https://atelierdeconsultanta.ro/"
     },
     {
       "@id": "https://atelierdeconsultanta.ro/#website",
@@ -96,8 +71,6 @@
     {
       "@id": "https://atelierdeconsultanta.ro/glosar-fonduri-europene#webpage",
       "@type": "WebPage",
-      "dateModified": "2026-05-20",
-      "datePublished": "2026-05-20",
       "description": "Glosar fonduri europene cu definitii scurte pentru solicitant, beneficiar, eligibilitate, cofinanțare, punctaj, CAEN, IMM, ajutor de minimis și ajutor de stat.",
       "inLanguage": "ro-RO",
       "isPartOf": {
@@ -168,154 +141,6 @@
           "name": "Pot cere o explicatie pe proiectul meu?"
         }
       ]
-    },
-    {
-      "@id": "https://atelierdeconsultanta.ro/glosar-fonduri-europene#terms",
-      "@type": "DefinedTermSet",
-      "hasDefinedTerm": [
-        {
-          "@type": "DefinedTerm",
-          "description": "Persoana sau entitatea care depune cererea de finanțare.",
-          "name": "solicitant"
-        },
-        {
-          "@type": "DefinedTerm",
-          "description": "Solicitantul care semneaza contractul de finanțare și implementeaza proiectul.",
-          "name": "beneficiar"
-        },
-        {
-          "@type": "DefinedTerm",
-          "description": "Potrivirea solicitantului, activității, investiției și documentelor cu regulile apelului.",
-          "name": "eligibilitate"
-        },
-        {
-          "@type": "DefinedTerm",
-          "description": "Partea din proiect acoperita din surse proprii sau alte surse acceptate.",
-          "name": "cofinanțare"
-        },
-        {
-          "@type": "DefinedTerm",
-          "description": "Costuri care pot fi finanțate conform ghidului apelului.",
-          "name": "cheltuieli eligibile"
-        },
-        {
-          "@type": "DefinedTerm",
-          "description": "Costuri care nu se decontează prin finanțare și rămân în sarcina beneficiarului.",
-          "name": "cheltuieli neeligibile"
-        },
-        {
-          "@type": "DefinedTerm",
-          "description": "Scorul calculat pe baza grilei de evaluare sau selecție.",
-          "name": "punctaj"
-        },
-        {
-          "@type": "DefinedTerm",
-          "description": "Lista criteriilor după care proiectul este analizat și punctat.",
-          "name": "grila de evaluare"
-        },
-        {
-          "@type": "DefinedTerm",
-          "description": "Documentul oficial care descrie regulile apelului de finanțare.",
-          "name": "ghidul solicitantului"
-        },
-        {
-          "@type": "DefinedTerm",
-          "description": "Perioada și cadrul în care se pot depune cereri de finanțare.",
-          "name": "apel de proiecte"
-        },
-        {
-          "@type": "DefinedTerm",
-          "description": "Acordul semnat intre beneficiar și autoritate după aprobarea proiectului.",
-          "name": "contract de finanțare"
-        },
-        {
-          "@type": "DefinedTerm",
-          "description": "Etapa în care proiectul aprobat este realizat și raportat.",
-          "name": "implementare"
-        },
-        {
-          "@type": "DefinedTerm",
-          "description": "Perioada în care se urmărește respectarea obligatiilor asumate prin proiect.",
-          "name": "monitorizare"
-        },
-        {
-          "@type": "DefinedTerm",
-          "description": "Indicator economic folosit în agricultură pentru dimensiunea exploatației.",
-          "name": "Standard Output / SO"
-        },
-        {
-          "@type": "DefinedTerm",
-          "description": "Termen asociat calculului dimensiunii economice, verificat după ghidul activ.",
-          "name": "SOC"
-        },
-        {
-          "@type": "DefinedTerm",
-          "description": "Grup de Acțiune Locală care aplică o strategie de dezvoltare locală.",
-          "name": "GAL"
-        },
-        {
-          "@type": "DefinedTerm",
-          "description": "Abordare de dezvoltare locală prin strategii GAL.",
-          "name": "LEADER"
-        },
-        {
-          "@type": "DefinedTerm",
-          "description": "Interventie LEADER asociata strategiilor GAL și documentelor AFIR aplicabile.",
-          "name": "DR36"
-        },
-        {
-          "@type": "DefinedTerm",
-          "description": "Program pentru infrastructura de mobilitate electrică, verificat prin sursa oficială activa.",
-          "name": "e-MOVE RO"
-        },
-        {
-          "@type": "DefinedTerm",
-          "description": "Optimizare pentru răspunsuri AI prin conținut clar, schema și surse oficiale.",
-          "name": "AIO"
-        },
-        {
-          "@type": "DefinedTerm",
-          "description": "Agentie pentru Dezvoltare Regionala care gestionează programe și apeluri regionale.",
-          "name": "ADR"
-        },
-        {
-          "@type": "DefinedTerm",
-          "description": "Codul care descrie activitatea economică a unei firme sau autorizarea relevanta.",
-          "name": "cod CAEN"
-        },
-        {
-          "@type": "DefinedTerm",
-          "description": "Intreprindere mica sau mijlocie, incadrata după regulile aplicabile programului.",
-          "name": "IMM"
-        },
-        {
-          "@type": "DefinedTerm",
-          "description": "Categorie de intreprindere de dimensiune redusa, definita de regulile programului și legislatia aplicabila.",
-          "name": "microintreprindere"
-        },
-        {
-          "@type": "DefinedTerm",
-          "description": "Sprijin public cu valoare limitata, acordat în condiții specifice.",
-          "name": "ajutor de minimis"
-        },
-        {
-          "@type": "DefinedTerm",
-          "description": "Sprijin public acordat unei activitati economice, supus regulilor de compatibilitate aplicabile.",
-          "name": "ajutor de stat"
-        },
-        {
-          "@type": "DefinedTerm",
-          "description": "Cadrul oficial care stabilește condițiile unui ajutor public pentru activitati economice.",
-          "name": "schema de ajutor de stat"
-        },
-        {
-          "@type": "DefinedTerm",
-          "description": "Concept folosit pentru cumulul ajutoarelor și legaturile dintre firme.",
-          "name": "intreprindere unica"
-        }
-      ],
-      "inDefinedTermSet": "https://atelierdeconsultanta.ro/glosar-fonduri-europene",
-      "name": "Glosar fonduri europene"
     }
   ]
 }</script>

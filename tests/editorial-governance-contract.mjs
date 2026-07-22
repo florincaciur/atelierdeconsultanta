@@ -89,8 +89,15 @@ for (const record of records) {
     assert(eligible.length, `${record.route}: pagina publică nu are un nod JSON-LD editorial eligibil`);
     for (const node of eligible) {
       assert.equal(node.dateModified, record.lastMeaningfulUpdate, `${record.route}: dateModified nu provine din lastMeaningfulUpdate`);
-      assert.equal(node.reviewedBy?.name, record.reviewer, `${record.route}: reviewer JSON-LD diferit`);
       assert(Array.isArray(node.citation) && node.citation.some((citation) => citation.url === record.officialSourceUrl), `${record.route}: sursa oficială lipsește din JSON-LD`);
+      if (record.attributionType === "person") {
+        assert.equal(record.personalNameConsent, true, `${record.route}: atribuirea Person necesită acord`);
+        assert.equal(node.author?.["@type"], "Person", `${record.route}: autorul nominal trebuie publicat ca Person`);
+        assert.equal(node.author?.url, record.authorProfileUrl, `${record.route}: profilul autorului diferă`);
+      } else {
+        assert.equal(node.author, undefined, `${record.route}: autor organizațional duplicat/neidentificabil în JSON-LD`);
+        assert.equal(node.reviewedBy, undefined, `${record.route}: reviewer organizațional nu trebuie transformat într-o persoană fictivă`);
+      }
     }
   } else {
     assert.equal(body.attr("data-editorial-verified-at"), undefined, `${record.route}: o dată neverificată a fost expusă în HTML`);
@@ -100,6 +107,7 @@ for (const record of records) {
     assert(!section.text().includes("Verificat la"), `${record.route}: pagina incompletă pretinde o verificare publică`);
     for (const node of eligible) {
       assert.equal(node.dateModified, undefined, `${record.route}: dateModified neverificat a rămas în JSON-LD`);
+      assert.equal(node.author, undefined, `${record.route}: autor neverificat a rămas în JSON-LD`);
       assert.equal(node.reviewedBy, undefined, `${record.route}: reviewer neverificat a rămas în JSON-LD`);
     }
   }

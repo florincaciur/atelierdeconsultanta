@@ -172,6 +172,33 @@ function loadPageHints(root) {
     });
   }
 
+  // dateModified, sursa și atribuirea nu se deduc din build sau dintr-un
+  // timestamp generic al colecției. Ele provin exclusiv din registrul de
+  // guvernanță editorială, când înregistrarea este publicabilă.
+  for (const [route, value] of hints) hints.set(route, { ...value, updatedAt: undefined });
+  const governancePath = path.join(root, "config", "editorial-governance.json");
+  if (fs.existsSync(governancePath)) {
+    const governance = JSON.parse(fs.readFileSync(governancePath, "utf8"));
+    for (const record of governance.records || []) {
+      const route = record.route === "/" ? "/" : `/${String(record.route || "").replace(/^\/+|\/+$/gu, "")}`;
+      const complete = record.governanceState === "public"
+        && /^\d{4}-\d{2}-\d{2}$/u.test(String(record.lastMeaningfulUpdate || ""))
+        && /^https:\/\//iu.test(String(record.officialSourceUrl || ""))
+        && !String(record.sourceVersion || "").includes("DE_VALIDAT_UMAN");
+      const current = hints.get(route) || {};
+      hints.set(route, {
+        ...current,
+        updatedAt: complete ? record.lastMeaningfulUpdate : undefined,
+        governance: complete ? record : undefined,
+        citation: complete ? [{
+          "@type": "CreativeWork",
+          name: `${record.officialSourceName} — ${record.sourceVersion}`,
+          url: record.officialSourceUrl
+        }] : []
+      });
+    }
+  }
+
   return hints;
 }
 

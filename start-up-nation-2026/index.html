@@ -27,44 +27,18 @@
   "@graph": [
     {
       "@id": "https://atelierdeconsultanta.ro/#organization",
-      "@type": "Organization",
-      "address": "Sat Gorbănești, comuna Gorbănești, nr. 88, Str. Principală, județul Botoșani",
-      "alternateName": [
-        "FABER",
-        "Atelier de Consultanță",
-        "Atelier de Consultanță FABER",
-        "atelierdeconsultanta.ro"
+      "@type": [
+        "Organization",
+        "ProfessionalService"
       ],
-      "areaServed": {
-        "@type": "AdministrativeArea",
-        "name": "Iași, Suceava, Bistrița-Năsăud, Botoșani, Bacău și Neamț"
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "RO",
+        "addressLocality": "Gorbănești",
+        "addressRegion": "Botoșani",
+        "streetAddress": "Str. Principală, nr. 88"
       },
-      "contactPoint": [
-        {
-          "@type": "ContactPoint",
-          "availableLanguage": "ro-RO",
-          "contactType": "customer service",
-          "telephone": "+40769828338"
-        },
-        {
-          "@type": "ContactPoint",
-          "availableLanguage": "ro-RO",
-          "contactType": "customer service",
-          "telephone": "+40753326229"
-        }
-      ],
-      "description": "FABER - Atelier de Consultanță ajută firme, fermieri, start-up-uri și IMM-uri să verifice eligibilitatea și să pregătească proiecte pentru fonduri europene și finanțări nerambursabile.",
       "email": "atelier.consultanta@gmail.com",
-      "image": "https://atelierdeconsultanta.ro/og-image.jpg",
-      "knowsAbout": [
-        "fonduri europene",
-        "finanțări nerambursabile",
-        "AFIR",
-        "PNRR",
-        "Start-Up Nation",
-        "Digitalizare IMM",
-        "consultanță IMM"
-      ],
       "legalName": "FABER PUBLISHING S.R.L.",
       "logo": {
         "@type": "ImageObject",
@@ -75,7 +49,8 @@
         "https://www.instagram.com/atelier.de.consultanta/"
       ],
       "taxID": "35339809",
-      "url": "https://atelierdeconsultanta.ro"
+      "telephone": "+40-769-828-338",
+      "url": "https://atelierdeconsultanta.ro/"
     },
     {
       "@id": "https://atelierdeconsultanta.ro/#website",
@@ -93,7 +68,14 @@
       "about": {
         "@id": "https://atelierdeconsultanta.ro/start-up-nation-2026#funding-program"
       },
-      "dateModified": "2026-06-11",
+      "citation": [
+        {
+          "@type": "CreativeWork",
+          "name": "Ministerul Economiei — Procedura ediției 2024 publicată de Ministerul Economiei",
+          "url": "https://economie.gov.ro/participa-la-definitivarea-procedurii-de-implementare-a-programului-de-succes-start-up-nation-editia-2024/"
+        }
+      ],
+      "dateModified": "2026-05-20",
       "datePublished": "2026-05-29",
       "description": "Start-Up Nation: pași de pregătire, CAEN, buget și documente; condițiile, valorile și calendarul se confirmă în procedura ediției active.",
       "inLanguage": "ro-RO",
@@ -144,9 +126,6 @@
       "about": {
         "@id": "https://atelierdeconsultanta.ro/start-up-nation-2026#funding-program"
       },
-      "author": {
-        "@id": "https://atelierdeconsultanta.ro/#organization"
-      },
       "citation": [
         {
           "@type": "CreativeWork",
@@ -154,7 +133,7 @@
           "url": "https://economie.gov.ro/participa-la-definitivarea-procedurii-de-implementare-a-programului-de-succes-start-up-nation-editia-2024/"
         }
       ],
-      "dateModified": "2026-06-11",
+      "dateModified": "2026-05-20",
       "datePublished": "2026-05-29",
       "description": "Start-Up Nation: pași de pregătire, CAEN, buget și documente; condițiile, valorile și calendarul se confirmă în procedura ediției active.",
       "headline": "Start-Up Nation 2026: ghid central pentru pregătirea dosarului",
@@ -165,10 +144,6 @@
       },
       "publisher": {
         "@id": "https://atelierdeconsultanta.ro/#organization"
-      },
-      "reviewedBy": {
-        "@type": "Organization",
-        "name": "Echipa editorială FABER"
       },
       "url": "https://atelierdeconsultanta.ro/start-up-nation-2026"
     },
@@ -684,6 +659,7 @@
         <a class="btn btn-secondary" href="/consultanta-start-up-nation-2026">Consultanță Start-Up Nation</a>
       </div>
     </section>
+
 
 
 
