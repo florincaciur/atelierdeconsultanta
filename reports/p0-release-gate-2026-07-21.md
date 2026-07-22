@@ -1,6 +1,6 @@
 # P0.16 — Release gate
 
-Data: 2026-07-22T12:23:57.256Z
+Data: 2026-07-22T12:35:12.282Z
 
 Decizie: **PASS**
 
@@ -33,7 +33,7 @@ Decizie: **PASS**
 | editorial | production | **PASS** | high | Editor coordonator | https://atelierdeconsultanta.ro/sitemap.xml | 94 URL-uri scanate fără etichete interzise. | Reexecută verificarea editorial după remediere/aprobare. |
 | robots | production | **PASS** | critical | Business owner + Technical SEO | https://atelierdeconsultanta.ro/robots.txt | OAI-SearchBot Allow, GPTBot Allow aprobat și Sitemap prezente. | Reexecută verificarea robots după remediere/aprobare. |
 | accessibility | production | **PASS** | high | Accessibility QA + Frontend | https://atelierdeconsultanta.ro/contact | Labels, reflow 320px, zoom 200%, target-uri și focus verificate în browser. | Reexecută verificarea accessibility după remediere/aprobare. |
-| performance | production | **FAIL** | high | Frontend performance owner | https://atelierdeconsultanta.ro/<br>https://atelierdeconsultanta.ro/fonduri-europene<br>https://atelierdeconsultanta.ro/consultanta-fonduri-europene<br>https://atelierdeconsultanta.ro/digitalizare-imm | /consultanta-fonduri-europene: LCP 1000ms vs 402ms \| baseline INP de teren lipsește; comparația folosește numai pragul sintetic de 200ms Măsurători: [{"path":"/","lcpMs":512,"cls":0,"syntheticInpMs":22,"baselineLcpMs":483.279,"baselineCls":0.04291},{"path":"/fonduri-europene","lcpMs":564,"cls":0.00003,"syntheticInpMs":7,"baselineLcpMs":364.7012,"baselineCls":0.00001},{"path":"/consultanta-fonduri-europene","lcpMs":1000,"cls":0.00005,"syntheticInpMs":2,"baselineLcpMs":402.2069,"baselineCls":0.000009},{"path":"/digitalizare-imm","lcpMs":1080,"cls":0.00002,"syntheticInpMs":9,"baselineLcpMs":1203.238,"baselineCls":0.00002}] | Reexecută verificarea performance după remediere/aprobare. |
+| performance | production | **FAIL** | high | Frontend performance owner | https://atelierdeconsultanta.ro/<br>https://atelierdeconsultanta.ro/fonduri-europene<br>https://atelierdeconsultanta.ro/consultanta-fonduri-europene<br>https://atelierdeconsultanta.ro/digitalizare-imm | baseline INP de teren lipsește; comparația folosește numai pragul sintetic de 200ms Măsurători: [{"path":"/","lcpMs":476,"cls":0,"syntheticInpMs":30,"baselineLcpMs":483.279,"baselineCls":0.04291},{"path":"/fonduri-europene","lcpMs":448,"cls":0.00003,"syntheticInpMs":12,"baselineLcpMs":364.7012,"baselineCls":0.00001},{"path":"/consultanta-fonduri-europene","lcpMs":420,"cls":0.00003,"syntheticInpMs":18,"baselineLcpMs":402.2069,"baselineCls":0.000009},{"path":"/digitalizare-imm","lcpMs":564,"cls":0.00003,"syntheticInpMs":10,"baselineLcpMs":1203.238,"baselineCls":0.00002}] | Reexecută verificarea performance după remediere/aprobare. |
 
 ## Regula de lansare
 

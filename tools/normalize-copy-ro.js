@@ -602,7 +602,8 @@ function normalizeJsonLdScripts(html) {
         return full;
       }
       const serialized = serializeJsonLd(normalizeJsonLdValue(parsed));
-      if (serialized === source) return full;
+      const comparableSource = source.replace(/\r\n?/gu, "\n");
+      if (serialized === comparableSource) return full;
       changed = true;
       return `${opening}${serialized}${closing}`;
     }

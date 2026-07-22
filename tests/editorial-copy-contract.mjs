@@ -6,6 +6,14 @@ import { createRequire } from "node:module";
 const require = createRequire(import.meta.url);
 const { auditEditorialCopy } = require("../tools/editorial-copy-governance");
 const { collectSiteState } = require("../tools/generate-sitemap");
+const { normalizeJsonLdScripts } = require("../tools/normalize-copy-ro");
+
+const crlfJsonLd = '<script type="application/ld+json">{\r\n  "@context": "https://schema.org",\r\n  "@type": "WebPage",\r\n  "name": "Pagină verificată"\r\n}</script>';
+assert.equal(
+  normalizeJsonLdScripts(crlfJsonLd).changed,
+  false,
+  "CRLF formatting alone must not trigger a JSON-LD editorial change"
+);
 
 const audit = auditEditorialCopy();
 assert.equal(audit.canonicalCount, collectSiteState().entries.length, "editorial gate must inspect every canonical sitemap URL");
