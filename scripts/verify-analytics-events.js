@@ -115,8 +115,15 @@ function main() {
   if ($partial("#mobileMenu .mobile-cta[data-analytics-event='cta_click'][data-analytics-cta-view='true']").length !== 1) errors.push("header: CTA mobil neinstrumentat");
 
   const home = read("index.html");
-  if (count(home, /FaberAnalytics\.formSubmitSuccess\(form\)/g) !== 2) errors.push("homepage: succesul server al formularelor nu este instrumentat exact o dată");
-  if (count(home, /FaberAnalytics\.formValidationError\(form\)/g) !== 2) errors.push("homepage: erorile formularelor nu sunt instrumentate exact o dată");
+  if (home.includes("<!-- P1_21_HOMEPAGE_FLOW_START -->")) {
+    const $home = cheerio.load(home, { decodeEntities: false });
+    if ($home("main form").length !== 0) errors.push("homepage P1.21: a rămas un formular concurent în main");
+    if (count(home, /FaberAnalytics\.formSubmitSuccess\(form\)/g) !== 0) errors.push("homepage P1.21: a rămas runtime de submit pentru un formular eliminat");
+    if (count(home, /FaberAnalytics\.formValidationError\(form\)/g) !== 0) errors.push("homepage P1.21: a rămas runtime de validare pentru un formular eliminat");
+  } else {
+    if (count(home, /FaberAnalytics\.formSubmitSuccess\(form\)/g) !== 2) errors.push("homepage: succesul server al formularelor nu este instrumentat exact o dată");
+    if (count(home, /FaberAnalytics\.formValidationError\(form\)/g) !== 2) errors.push("homepage: erorile formularelor nu sunt instrumentate exact o dată");
+  }
 
   const $contact = cheerio.load(read("contact/index.html"), { decodeEntities: false });
   const contactForm = $contact("#contact-triage-form");

@@ -246,6 +246,7 @@ ${searchSupport({
       ["/cat-costa-consultanta-fonduri-europene", "Costul consultanței"],
       ["/cat-costa-consultanta-fonduri-europene-ghid", "Ghid despre costuri"],
       ["/firma-consultanta-fonduri-europene", "Rolul firmei de consultanță"],
+      ["/consultanta-fonduri-europene-bucuresti", "Consultanță pentru proiecte în București"],
       ["/surse-oficiale-fonduri-europene", "Directorul FABER de surse"]
     ],
     note: "Condițiile variabile se confirmă în documentul oficial și anexele apelului analizat."

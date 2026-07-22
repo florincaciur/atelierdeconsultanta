@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-07-22",
+  "version": "p1_21",
+  "baseline": {
+    "source": "producție măsurată înainte de implementare la 2026-07-22",
+    "desktop": {
+      "viewport": "1366x768",
+      "documentHeight": 11458,
+      "mainLinks": 65,
+      "mainForms": 2,
+      "topLevelSections": 11,
+      "carouselLikeComponents": 3,
+      "primaryCtaBottom": 686
+    },
+    "mobile": {
+      "viewport": "390x844",
+      "documentHeight": 11772,
+      "mainLinks": 65,
+      "mainForms": 2,
+      "primaryCtaBottom": 703,
+      "horizontalOverflow": 0
+    },
+    "performance": {
+      "lcpMs": 483.279,
+      "cls": 0.04291,
+      "inp": "DE_VALIDAT_UMAN",
+      "source": "config/p0-release-gate.json#performance.routes[/]"
+    }
+  },
+  "conversionDecision": {
+    "entryType": "contact_cta",
+    "target": "/contact?source_page=%2F",
+    "reason": "Nu există în repo o comparație de conversie aprobată care să susțină un formular inline; homepage-ul păstrează CTA-uri către același formular scurt, fără formulare concurente în pagină."
+  },
+  "methodSteps": [
+    { "number": "01", "title": "Solicitant", "text": "Confirmăm forma, localitatea și activitatea care susține investiția." },
+    { "number": "02", "title": "Program", "text": "Comparăm proiectul cu scopul și statutul documentat al programului." },
+    { "number": "03", "title": "Punctaj", "text": "Identificăm criteriile, condițiile eliminatorii și documentele lipsă." },
+    { "number": "04", "title": "Buget", "text": "Separăm costurile eligibile, contribuția proprie și presiunea de cash-flow." },
+    { "number": "05", "title": "Decizie", "text": "Concluzia poate fi: continuăm, ajustăm sau nu depunem acum." }
+  ],
+  "services": [
+    { "title": "Analiză eligibilitate", "text": "Verificare inițială a solicitantului, investiției, amplasamentului și documentelor.", "href": "/verificare-eligibilitate-fonduri-europene", "label": "Vezi analiza" },
+    { "title": "Consultanță", "text": "Alegerea programului și pregătirea cererii pe baza documentului aplicabil.", "href": "/consultanta-fonduri-europene", "label": "Vezi consultanța" },
+    { "title": "Proiectare", "text": "Corelarea soluției tehnice cu bugetul, anexele și cerințele apelului.", "href": "/proiectare-fonduri-europene", "label": "Vezi proiectarea" },
+    { "title": "Implementare", "text": "Urmărirea obligațiilor, achizițiilor, documentelor și clarificărilor proiectului.", "href": "/management-proiecte-fonduri-europene", "label": "Vezi implementarea" }
+  ],
+  "tools": [
+    { "kind": "Instrument", "title": "Calculator SO", "text": "Calculează orientativ dimensiunea economică și păstrează ipotezele folosite.", "href": "/calculator-soc", "label": "Calculează SO" },
+    { "kind": "Ghid", "title": "Checklist de eligibilitate", "text": "Ordinea verificărilor înainte de alegerea programului și pregătirea ofertelor.", "href": "/eligibilitate-fonduri-europene", "label": "Deschide checklist-ul" },
+    { "kind": "Ghid", "title": "Documentele proiectului", "text": "Repere pentru actele solicitantului, amplasamentului și investiției.", "href": "/acte-necesare-fonduri-europene-nerambursabile", "label": "Vezi documentele" }
+  ],
+  "proofs": [
+    { "title": "Statut și sursă vizibile", "text": "Cardurile programelor afișează statutul, data verificării și sursa din registrul unic." },
+    { "title": "Analiză înainte de dosar", "text": "Solicitantul, programul, punctajul, bugetul și documentele sunt verificate împreună." },
+    { "title": "Limite explicite", "text": "Verificarea este orientativă; FABER nu promite aprobarea și nu transformă un ghid consultativ în apel deschis." }
+  ],
+  "recentAnalysis": {
+    "eyebrow": "Analiză verificată",
+    "title": "DR 12 vs DR 14: cum diferă încadrarea și investiția",
+    "text": "Comparația separă obiectivul, documentele și riscurile celor două intervenții fără a trata ghidurile consultative ca apeluri deschise.",
+    "href": "/dr12-vs-dr14",
+    "label": "Citește analiza DR 12 vs DR 14"
+  },
+  "contact": {
+    "title": "Spune-ne solicitantul, localitatea și investiția",
+    "text": "Prima etapă este o verificare orientativă. Nu este necesar să ai dosarul complet și nu promitem aprobarea.",
+    "primaryHref": "/contact?source_page=%2F",
+    "primaryLabel": "Începe verificarea proiectului",
+    "phones": [
+      { "href": "tel:+40769828338", "label": "0769 828 338" },
+      { "href": "tel:+40753326229", "label": "0753 326 229" }
+    ],
+    "email": { "href": "mailto:atelier.consultanta@gmail.com", "label": "atelier.consultanta@gmail.com" }
+  }
+}

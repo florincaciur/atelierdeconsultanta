@@ -46,27 +46,11 @@ slides.each((index, slide) => {
   }
 });
 
-assert.equal($("[data-program-directory]").length, 1, "lipsește gridul filtrabil");
-assert.equal($("[data-program-directory] [data-card-carousel]").length, 0, "gridul nu trebuie să fie carusel");
-for (const name of ["family", "status", "applicant"]) {
-  assert.equal($(`[data-program-filter-form] select[name='${name}']`).length, 1, `lipsește filtrul ${name}`);
-}
-assert.equal($("[data-program-filter-result]").attr("aria-live"), "polite");
-
-const expectedGridPrograms = programs.filter(isPublicProgram).filter((program) => program.discovery?.listed !== false);
-const cards = $("[data-program-directory-card]");
-assert.equal(cards.length, expectedGridPrograms.length, "gridul trebuie să conțină toate programele publicabile și listabile");
-cards.each((_, card) => {
-  const element = $(card);
-  const program = programs.find((entry) => entry.slug === element.attr("data-program-id"));
-  assert(program && isPublicProgram(program));
-  assert.equal(element.attr("data-program-status"), program.status);
-  assert.equal(element.attr("data-verified-at"), program.verifiedAt);
-  assert.equal(element.attr("data-source-url"), program.sourceUrl);
-  assert.equal(element.find("a").length, 1, `${program.slug}: cardul trebuie să aibă un singur link`);
-  assert.equal(element.find("a").text().trim(), "Vezi condițiile");
-  assert.equal(element.find("a").attr("data-analytics-event"), "program_card_click");
-});
+assert.equal($("[data-program-directory], [data-program-directory-card]").length, 0, "gridul complet trebuie mutat pe huburi, nu păstrat pe homepage");
+const hubConfig = JSON.parse(fs.readFileSync(path.join(ROOT, "config", "program-family-hubs.json"), "utf8"));
+const hubLinks = $(".homepage-program-hubs a");
+assert.equal(hubLinks.length, 5, "homepage-ul trebuie să trimită spre cele cinci huburi, fără al doilea carusel/grid");
+assert.deepEqual(hubLinks.map((_, link) => $(link).attr("href")).get(), hubConfig.hubs.map((hub) => hub.route));
 
 assert.equal($("#carousel-section, #finantare, #financing-grid, #program-carousel-track").length, 0, "componentele repetitive vechi trebuie eliminate");
 assert(!html.includes("programCarouselState") && !html.includes("loadProgramCarousel"), "runtime-ul caruselului vechi trebuie eliminat");
@@ -78,4 +62,4 @@ assert(js.includes('toggleAttribute("inert"'), "slide-urile ascunse trebuie scoa
 assert(css.includes("min-height: 44px") && css.includes("touch-action: pan-y"), "targeturile mobile și gesturile touch trebuie definite");
 assert(css.includes("@media (max-width: 42rem)"), "lipsește reflow-ul mobil");
 
-console.log(`Homepage program explorer contract PASS: ${slides.length} priorități și ${cards.length} carduri filtrabile.`);
+console.log(`Homepage program explorer contract PASS: ${slides.length} priorități, un carusel și ${hubLinks.length} huburi.`);

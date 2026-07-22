@@ -88,10 +88,10 @@ function syncHomepageHero(source, programs) {
   output = output
     .replace(/\s*<link rel="stylesheet" href="\/assets\/homepage-hero\.css[^>]*>/g, "")
     .replace(new RegExp(`\\s*<style id="${STYLE_ID}">[\\s\\S]*?<\\/style>`), "");
-  output = output.replace(
-    /(<style id="homepage-faq-expand-css">)/,
-    `  <style id="${STYLE_ID}">\n${criticalCss}\n  </style>\n  $1`
-  );
+  const criticalMarkup = `  <style id="${STYLE_ID}">\n${criticalCss}\n  </style>\n`;
+  output = /<style id="homepage-faq-expand-css">/.test(output)
+    ? output.replace(/(<style id="homepage-faq-expand-css">)/, `${criticalMarkup}  $1`)
+    : output.replace(/<\/head>/i, `${criticalMarkup}</head>`);
   return output;
 }
 

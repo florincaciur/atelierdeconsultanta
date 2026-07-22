@@ -49,7 +49,7 @@
       "microConversion": "cta_click către formularul de triere",
       "parent": "ROOT",
       "competingUrls": [],
-      "demonstrableUniqueValue": "39 subtitluri distincte, 9 FAQ și 3 linkuri externe în sursa HTML.",
+      "demonstrableUniqueValue": "23 subtitluri distincte, 1 FAQ și 0 linkuri externe în sursa HTML.",
       "recommendation": "keep",
       "recommendationTarget": null,
       "recommendationReason": "Rol distinct de core, cu o singură intenție primară și conversie proprie.",
@@ -59,10 +59,10 @@
       "evidence": {
         "title": "Consultanță și proiectare fonduri europene | FABER",
         "metaDescription": "FABER oferă consultanță și proiectare pentru proiecte cu fonduri europene: eligibilitate, cereri de finanțare, documentații tehnice și implementare.",
-        "headingCount": 39,
-        "faqCount": 9,
-        "externalLinkCount": 3,
-        "interactiveControlCount": 30,
+        "headingCount": 23,
+        "faqCount": 1,
+        "externalLinkCount": 0,
+        "interactiveControlCount": 2,
         "governanceState": "NEÎNREGISTRAT",
         "programRegistryState": "NU_ESTE_PROGRAM_ÎN_REGISTRU"
       }

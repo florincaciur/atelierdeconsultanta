@@ -14,6 +14,7 @@ const PRIORITY_START = "<!-- P1_08_PRIORITY_CAROUSEL_START -->";
 const PRIORITY_END = "<!-- P1_08_PRIORITY_CAROUSEL_END -->";
 const GRID_START = "<!-- P1_08_PROGRAM_GRID_START -->";
 const GRID_END = "<!-- P1_08_PROGRAM_GRID_END -->";
+const COMPACT_HOME_START = "<!-- P1_21_HOMEPAGE_FLOW_START -->";
 const CSS_LINK = '<link rel="stylesheet" href="/assets/homepage-program-explorer.css?v=20260721-1" data-homepage-program-explorer-style="p1_08">';
 const JS_LINK = '<script src="/assets/homepage-program-explorer.js?v=20260721-1" defer data-homepage-program-explorer-script="p1_08"></script>';
 const MONTHS = ["ianuarie", "februarie", "martie", "aprilie", "mai", "iunie", "iulie", "august", "septembrie", "octombrie", "noiembrie", "decembrie"];
@@ -82,6 +83,7 @@ function renderPriorityCarousel(programs, bannersByProgram) {
   featured.forEach((program) => validateProgram(program, "carusel"));
   const total = featured.length;
   const slides = featured.map((program, index) => renderPrioritySlide(program, bannersByProgram.get(program.slug), index, total)).join("\n");
+  const hubLinks = HUBS.hubs.map((hub) => `          <a href="${esc(hub.route)}">${esc(hub.label)}</a>`).join("\n");
   return `${PRIORITY_START}
     <section id="priority-programs" aria-labelledby="priority-programs-title">
       <div class="program-explorer-header">
@@ -102,6 +104,10 @@ ${slides}
           <a class="priority-program-all" href="${esc(CONFIG.carousel.allProgramsUrl)}">Vezi toate programele</a>
         </div>
       </div>
+      <nav class="homepage-program-hubs" aria-label="Familii de programe">
+        <span>ExploreazÄƒ dupÄƒ familie:</span>
+${hubLinks}
+      </nav>
     </section>
 ${PRIORITY_END}`;
 }
@@ -217,14 +223,18 @@ function syncHomepage(source, programs) {
     renderPriorityCarousel(programs, bannersByProgram),
     "carusel"
   );
-  output = replaceBlock(
-    output,
-    GRID_START,
-    GRID_END,
-    /<section\s+id="finantare"[\s\S]*?<\/section>/,
-    renderProgramGrid(programs),
-    "grid programe"
-  );
+  if (output.includes(COMPACT_HOME_START)) {
+    output = output.replace(new RegExp(`${GRID_START}[\\s\\S]*?${GRID_END}`), "");
+  } else {
+    output = replaceBlock(
+      output,
+      GRID_START,
+      GRID_END,
+      /<section\s+id="finantare"[\s\S]*?<\/section>/,
+      renderProgramGrid(programs),
+      "grid programe"
+    );
+  }
   return synchronizeAssets(removeLegacyCarouselRuntime(output));
 }
 

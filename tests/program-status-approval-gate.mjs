@@ -56,7 +56,11 @@ for (const id of REQUIRED_PROGRAMS) {
     assert.equal(program.publicationState, "public", `${id}: rândul aprobat trebuie publicat din registru`);
     assert.equal(program.verifiedAt, approvalConfig.researchDate, `${id}: data publică diferă de aprobare`);
     assert.equal(program.sourceUrl, row.officialUrl, `${id}: sursa publică diferă de aprobare`);
-    assert(homepage(`[data-program-id="${id}"][data-program-status="${program.status}"]`).length > 0, `${id}: lipsește din suprafața publică aprobată`);
+    const homepageSurfaces = homepage(`[data-program-id="${id}"][data-program-status]`);
+    homepageSurfaces.each((_, surface) => {
+      assert.equal(homepage(surface).attr("data-program-status"), program.status, `${id}: status homepage contradictoriu`);
+      assert.equal(homepage(surface).attr("data-verified-at"), program.verifiedAt, `${id}: data homepage contradictorie`);
+    });
   } else {
     assert.equal(row.validatorName, HUMAN_REVIEW, `${id}: un rând pending păstrează placeholderul controlat`);
     assert.equal(program.publicationState, "pending_validation", `${id}: registrul publică un rând neaprobat`);

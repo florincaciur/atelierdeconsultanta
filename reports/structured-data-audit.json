@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-22T09:52:52.032Z",
+  "generatedAt": "2026-07-22T10:36:48.754Z",
   "summary": {
     "htmlFilesChecked": 180,
     "indexablePagesChecked": 95,
@@ -20,9 +20,9 @@
       "PropertyValue": 146,
       "DefinedTermSet": 17,
       "Audience": 11,
-      "FAQPage": 76,
-      "Question": 546,
-      "Answer": 546,
+      "FAQPage": 75,
+      "Question": 539,
+      "Answer": 539,
       "Service": 12,
       "AdministrativeArea": 12,
       "WebApplication": 1
@@ -1108,10 +1108,7 @@
         "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
-        "WebPage": 1,
-        "FAQPage": 1,
-        "Question": 7,
-        "Answer": 7
+        "WebPage": 1
       },
       "modified": [],
       "issues": []
