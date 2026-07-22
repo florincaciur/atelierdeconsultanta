@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "p1_16",
+  "updatedAt": "2026-07-22",
+  "humanReviewToken": "DE_VALIDAT_UMAN",
+  "publicationPolicy": {
+    "missingFactsStayPrivate": true,
+    "noInventedPeopleOrExperience": true,
+    "noEvidenceClaimsWithoutDocumentsAndConsent": true,
+    "noAfirAccreditationClaim": true
+  },
+  "pendingValidations": [
+    {
+      "id": "team_profiles",
+      "status": "DE_VALIDAT_UMAN",
+      "required": [
+        "fotografie reală și drept de utilizare",
+        "nume",
+        "rol",
+        "specializări",
+        "experiență verificabilă",
+        "LinkedIn oficial, dacă există",
+        "acord pentru publicare",
+        "pagini de autor atribuite"
+      ],
+      "publicationState": "blocked"
+    },
+    {
+      "id": "case_studies_and_results",
+      "status": "DE_VALIDAT_UMAN",
+      "required": [
+        "documente justificative",
+        "metodă de calcul și perioadă",
+        "acordul beneficiarului",
+        "regulă de anonimizare",
+        "aprobarea formulării publice"
+      ],
+      "publicationState": "blocked"
+    },
+    {
+      "id": "afir_nomenclature_listing",
+      "status": "DE_VALIDAT_UMAN",
+      "required": [
+        "URL oficial AFIR",
+        "numele și versiunea documentului",
+        "data verificării",
+        "potrivirea exactă a entității juridice",
+        "aprobarea formulării listată în nomenclatorul orientativ AFIR"
+      ],
+      "publicationState": "blocked"
+    },
+    {
+      "id": "other_affiliations",
+      "status": "DE_VALIDAT_UMAN",
+      "required": [
+        "document oficial al organizației",
+        "perioada valabilității",
+        "entitatea afiliată",
+        "acord pentru publicare"
+      ],
+      "publicationState": "blocked"
+    }
+  ]
+}

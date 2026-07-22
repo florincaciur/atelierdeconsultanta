@@ -22,10 +22,10 @@ const META = {
     ogDescription: "De la verificarea eligibilității la dosar și clarificări, fiecare etapă pornește din documentele reale ale solicitantului."
   },
   "/despre-faber": {
-    title: "Despre FABER: consultanță fără promisiuni de aprobare",
-    description: "Vezi cum lucrează FABER: verificări pe documente, roluri clare și recomandări prudente pentru proiecte finanțate din fonduri europene.",
-    ogTitle: "FABER: documente înainte de promisiuni",
-    ogDescription: "Metoda de lucru FABER separă ce este confirmat, ce lipsește și ce trebuie corectat înainte de pregătirea unui proiect."
+    title: "Despre FABER: operator, metodă și limite",
+    description: "Află cine este operatorul FABER, cum este verificat un proiect, ce limite are consultanța și ce dovezi sunt necesare înainte de publicarea rezultatelor.",
+    ogTitle: "FABER: consultanță prudentă înainte de dosar",
+    ogDescription: "Entitatea juridică, metoda în cinci pași și limitele asumate public de FABER, prezentate din date aprobate și documente verificabile."
   },
   "/fonduri-europene": {
     title: "Fonduri europene 2026: programe pentru firme și fermieri",
@@ -258,98 +258,134 @@ ${searchSupport({
 function rewriteAbout() {
   const file = "despre-faber/index.html";
   const { before, $ } = load(file);
-  preparePage($, "/despre-faber", "trust", 450, 6);
+  preparePage($, "/despre-faber", "trust", 700, 6);
+  if (!$('link[href="/assets/about-faber.css?v=20260722-1"]').length) {
+    $("head").append('<link rel="stylesheet" href="/assets/about-faber.css?v=20260722-1">');
+  }
+  const bodyClasses = new Set(($('body').attr('class') || '').split(/\s+/u).filter(Boolean));
+  bodyClasses.add('about-page--p116');
+  $('body').attr('class', [...bodyClasses].join(' '));
+  $("meta[property='article:modified_time']").attr("content", "2026-07-22T00:00:00+03:00");
   setHero($, {
-    eyebrow: "FABER · Atelier de Consultanță",
-    h1: "Consultanță construită pe documente, nu pe promisiuni",
-    description: "Verificare prudentă, documentată și interdisciplinară — consultanță și proiectare — înainte de dosar. Verificăm ce poate fi demonstrat, explicăm ce lipsește și pregătim proiectul numai după ce investiția poate fi legată de un program și de o sursă realistă de finanțare.",
-    primary: { href: "/metodologie-verificare-eligibilitate", label: "Vezi metoda de lucru" },
-    secondary: { href: "/contact", label: "Discută proiectul" },
+    eyebrow: "Despre FABER · identitate, metodă și limite",
+    h1: "Consultanță prudentă înainte de dosar",
+    description: "Verificare prudentă, documentată și interdisciplinară — consultanță și proiectare — înainte de dosar.",
+    primary: { href: "/contact?source_page=%2Fdespre-faber", label: "Vezi dacă proiectul merită pregătit" },
+    secondary: { href: "/metodologie-verificare-eligibilitate", label: "Vezi metoda de lucru" },
     summary: [
-      ["Rol", "consultanță și coordonare de proiectare"],
-      ["Punct de plecare", "ghid, documente și investiție"],
-      ["Recomandare", "continuare, ajustare sau oprire"],
-      ["Publicare", "numai afirmații verificabile"]
+      ["Contractant", "FABER PUBLISHING S.R.L."],
+      ["Decizie", "continuăm, ajustăm sau amânăm"],
+      ["Verificare", "document oficial și acte ale solicitantului"],
+      ["Limită", "evaluarea aparține autorității finanțatoare"]
     ]
   });
 
   const context = contextualBlock(before);
   $("main").html(`
-    <article class="panel">
-      <section class="core-lead" aria-label="Ce este FABER">
-        <div class="core-lead__copy"><p>FABER este numele public al Atelier de Consultanță. Activitatea reunește verificarea inițială a eligibilității, pregătirea cererilor de finanțare și coordonarea documentațiilor tehnice necesare investițiilor. Nu publicăm rate de succes, volume de proiecte sau testimoniale fără dovadă și acord.</p></div>
+    <article class="panel about-p116">
+      <section class="core-lead about-intro" aria-label="Ce este FABER">
+        <div class="core-lead__copy"><p>FABER este brandul sub care FABER PUBLISHING S.R.L. oferă servicii de consultanță și coordonare a proiectării pentru investiții finanțate. Înainte de pregătirea unui dosar, comparăm situația solicitantului și investiția cu documentul oficial aplicabil. Concluzia poate fi să continuăm, să ajustăm proiectul sau să amânăm pregătirea.</p></div>
         <ul class="core-checklist">
-          <li>regulile sunt preluate din documentul oficial aplicabil;</li>
-          <li>punctajul este estimat numai pe dovezi disponibile;</li>
-          <li>bugetul este corelat cu investiția și proiectarea;</li>
-          <li>riscurile sunt explicate înainte de contractare.</li>
+          <li>regula programului este legată de sursa oficială;</li>
+          <li>punctajul orientativ pornește din documente disponibile;</li>
+          <li>bugetul și proiectarea sunt corelate cu investiția;</li>
+          <li>limitele și riscurile sunt explicate înainte de dosar.</li>
         </ul>
       </section>
 
-      <section class="core-section" aria-labelledby="about-principles">
-        <span class="core-kicker">Principii</span>
-        <h2 id="about-principles">Cum luăm o decizie responsabilă</h2>
-        <div class="core-card-grid">
-          <article class="core-card"><span class="core-card__index">01</span><h3>Verificăm înainte să recomandăm</h3><p>Forma solicitantului, activitatea, amplasamentul, bugetul și documentele sunt controlate înainte de alegerea programului.</p></article>
-          <article class="core-card"><span class="core-card__index">02</span><h3>Separăm certitudinea de ipoteză</h3><p>Marcăm condițiile confirmate, informațiile consultative și elementele care trebuie reverificate la publicarea ghidului final.</p></article>
-          <article class="core-card"><span class="core-card__index">03</span><h3>Spunem când proiectul trebuie oprit</h3><p>Dacă investiția nu poate fi susținută juridic, tehnic sau financiar, recomandarea nu este o depunere forțată.</p></article>
+<!-- CANONICAL_LEGAL_IDENTITY_SLOT -->
+
+      <section class="core-section about-team" aria-labelledby="about-team-title">
+        <span class="core-kicker">Oameni și responsabilitate</span>
+        <h2 id="about-team-title">Cine lucrează la proiect</h2>
+        <div class="about-team__layout">
+          <div>
+            <p class="core-section__intro">Pagina nu publică încă profiluri individuale. Numele, fotografia, rolul, specializările, experiența și profilul LinkedIn vor apărea numai după verificarea dovezilor și acordul explicit al persoanei.</p>
+            <p>Pentru fiecare colaborare, responsabilitățile trebuie delimitate în oferta și contractul aplicabile. Un profil public nu înlocuiește această delimitare și nu va fi completat cu experiență presupusă.</p>
+          </div>
+          <aside class="about-validation-card" aria-label="Criterii pentru publicarea unui profil">
+            <h3>Ce va conține un profil aprobat</h3>
+            <ul>
+              <li>fotografie reală și acord de publicare;</li>
+              <li>nume, rol și specializări confirmate;</li>
+              <li>experiență susținută de dovezi verificabile;</li>
+              <li>LinkedIn numai dacă profilul este oficial;</li>
+              <li>analize atribuite numai autorului real.</li>
+            </ul>
+          </aside>
         </div>
       </section>
 
-      <section class="core-section" aria-labelledby="about-work">
-        <span class="core-kicker">Colaborare</span>
-        <h2 id="about-work">Ce face FABER și ce rămâne la beneficiar</h2>
-        <div class="core-path-grid">
-          <div class="core-card"><h3>FABER</h3><ul><li>interpretează regulile apelului;</li><li>verifică documentele și necorelările;</li><li>pregătește livrabilele asumate;</li><li>semnalează riscurile de evaluare și implementare.</li></ul></div>
-          <div class="core-card"><h3>Beneficiarul</h3><ul><li>furnizează date complete și corecte;</li><li>confirmă investiția și furnizorii;</li><li>asigură contribuția proprie și cash-flow-ul;</li><li>își asumă declarațiile și deciziile comerciale.</li></ul></div>
-        </div>
-      </section>
-
-      <section class="core-section" aria-labelledby="about-route">
-        <span class="core-kicker">De la idee la decizie</span>
-        <h2 id="about-route">Cum începe un proiect</h2>
-        <ol class="core-steps">
-          <li><strong>Primim contextul.</strong><br>Solicitant, activitate, locație, investiție și buget.</li>
-          <li><strong>Verificăm dovezile.</strong><br>Acte de firmă sau fermă, spațiu, oferte și sursa contribuției proprii.</li>
-          <li><strong>Comparăm traseele.</strong><br>Programul potrivit, alternativa și riscurile fiecăruia.</li>
-          <li><strong>Delimităm colaborarea.</strong><br>Livrabile, responsabilități, termene și cost.</li>
+      <section class="core-section about-method" id="metoda-faber" aria-labelledby="about-method-title">
+        <span class="core-kicker">Metoda FABER</span>
+        <h2 id="about-method-title">De la triere la implementare</h2>
+        <p class="core-section__intro">Fiecare etapă are o decizie și un set de dovezi. Trecerea mai departe nu transformă o estimare în certitudine și nu transferă consultantului decizia autorității finanțatoare.</p>
+        <ol class="about-method-flow">
+          <li><span aria-hidden="true">01</span><strong>Triere</strong><p>Solicitantul, localitatea, investiția și canalul de contact conturează întrebările inițiale.</p></li>
+          <li><span aria-hidden="true">02</span><strong>Documente</strong><p>Actele disponibile sunt comparate cu ghidul, anexele și regulile oficiale aplicabile.</p></li>
+          <li><span aria-hidden="true">03</span><strong>Punctaj</strong><p>Criteriile sunt estimate prudent, iar ipotezele și dovezile lipsă sunt marcate separat.</p></li>
+          <li><span aria-hidden="true">04</span><strong>Dosar</strong><p>Livrabilele, responsabilitățile, bugetul și documentația tehnică sunt delimitate înainte de redactare.</p></li>
+          <li><span aria-hidden="true">05</span><strong>Clarificări și implementare</strong><p>După depunere, sprijinul continuă numai pentru etapele și obligațiile asumate contractual.</p></li>
         </ol>
       </section>
 
-      <section class="core-section" aria-labelledby="about-public-data">
-        <span class="core-kicker">Identitate publică</span>
-        <h2 id="about-public-data">Date consecvente pe întregul site</h2>
-        <div class="core-fact-strip">
-          <div><strong>Brand</strong><span>FABER · Atelier de Consultanță</span></div>
-          <div><strong>Contact</strong><span>atelier.consultanta@gmail.com · 0769 828 338 · 0753 326 229</span></div>
-          <div><strong>Domeniu</strong><span>atelierdeconsultanta.ro, folosit în canonical, sitemap și date structurate</span></div>
+      <section class="core-section about-limits" aria-labelledby="about-limits-title">
+        <span class="core-kicker">Limite asumate</span>
+        <h2 id="about-limits-title">Ce nu promite FABER</h2>
+        <div class="about-boundary-grid">
+          <article><h3>Nu promitem aprobarea</h3><p>Selecția depinde de autoritatea finanțatoare, documentele depuse, punctaj, bugetul apelului și verificările oficiale.</p></article>
+          <article><h3>Nu echivalăm o listare cu o acreditare</h3><p>O eventuală apariție într-un nomenclator nu înseamnă acreditare din partea AFIR și nu indică un clasament sau o recomandare instituțională.</p></article>
+          <article><h3>Nu publicăm rezultate neverificate</h3><p>Ratele de succes, valorile proiectelor, testimonialele și afirmațiile despre portofoliu cer documente, metodă de calcul și acord.</p></article>
         </div>
       </section>
 
-      <section class="core-callout" aria-labelledby="about-cta">
-        <div><h2 id="about-cta">Vrei să vezi cum se aplică metoda proiectului tău?</h2><p>Trimite datele de bază și documentele disponibile. Prima discuție stabilește ce trebuie verificat, nu promite un rezultat înainte de analiză.</p></div>
-        <div class="core-callout__actions"><a class="btn btn-primary" href="/contact">Trimite proiectul</a><a class="btn btn-secondary" href="/metodologie-verificare-eligibilitate">Citește metodologia</a></div>
+      <section class="core-section about-evidence" aria-labelledby="about-evidence-title">
+        <span class="core-kicker">Probe reale</span>
+        <h2 id="about-evidence-title">Ce considerăm dovadă publicabilă</h2>
+        <div class="about-evidence-grid">
+          <article><h3>Studiu de caz</h3><p>Context, documente care susțin afirmațiile, metodă de prezentare, acord și anonimizare acolo unde este necesar.</p></article>
+          <article><h3>Rezultat</h3><p>Programul și versiunea documentului, perioada de referință, baza de calcul și limitele comparației.</p></article>
+          <article><h3>Testimonial</h3><p>Acord explicit, identitate verificabilă și formulare care nu transformă experiența unui client într-o garanție.</p></article>
+        </div>
+        <p><a href="/studii-de-caz-fonduri-europene">Vezi politica de publicare a studiilor de caz</a></p>
+      </section>
+
+      <section class="core-section about-affiliations" aria-labelledby="about-affiliations-title">
+        <span class="core-kicker">Afilieri și listări</span>
+        <h2 id="about-affiliations-title">Formulări care cer confirmare oficială</h2>
+        <p>Pagina nu afirmă în prezent o afiliere sau o listare instituțională. Dacă prezența FABER într-un document oficial AFIR este confirmată, formularea acceptată va fi „listată în nomenclatorul orientativ AFIR”, însoțită de document și dată. Aceasta nu va fi prezentată ca acreditare, clasament sau recomandare.</p>
+      </section>
+
+      <nav class="about-resource-links" aria-label="Documente despre FABER">
+        <a href="/metodologie-verificare-eligibilitate"><strong>Metodologie</strong><span>Cum sunt verificate proiectele</span></a>
+        <a href="/studii-de-caz-fonduri-europene"><strong>Studii de caz</strong><span>Reguli pentru dovezi și acord</span></a>
+        <a href="/contact"><strong>Contact</strong><span>Date aprobate și formularul de triere</span></a>
+      </nav>
+
+      <section class="core-callout about-final-cta" aria-labelledby="about-cta">
+        <div><h2 id="about-cta">Ai o investiție pe care vrei să o verifici?</h2><p>Trimite forma solicitantului, localitatea și investiția. Prima etapă este orientativă și stabilește ce documente trebuie analizate.</p></div>
+        <div class="core-callout__actions"><a class="btn btn-primary" href="/contact?source_page=%2Fdespre-faber">Vezi dacă proiectul merită pregătit</a><a class="btn btn-secondary" href="/metodologie-verificare-eligibilitate">Vezi metoda de lucru</a></div>
       </section>
 
 ${context}
 ${searchSupport({
     id: "about-documentation",
-    title: "Întrebări și documente despre FABER",
-    intro: "Detaliile editoriale și răspunsurile de verificare sunt păstrate la final, separat de prezentarea echipei și a modului de colaborare.",
+    title: "Întrebări despre FABER",
+    intro: "Răspunsurile de mai jos completează identitatea, metoda și limitele prezentate pe pagină. Profilurile și rezultatele lipsă nu sunt înlocuite cu estimări.",
     faqs: [
-      ["Cine este FABER?", "FABER este denumirea publică Atelier de Consultanță pentru servicii de consultanță, verificarea inițială a eligibilității și coordonarea documentațiilor pentru proiecte finanțate."],
-      ["Ce servicii sunt oferite?", "Serviciile pot include verificarea inițială, alegerea programului, cererea, bugetul, anexele, clarificările, proiectarea și implementarea, în limitele ofertei acceptate."],
-      ["Cum este verificat un program?", "Sunt consultate ghidul, anexele, comunicările autorității și documentele solicitantului valabile pentru sesiunea analizată."],
+      ["Cine contractează serviciile FABER?", "Contractele și facturile sunt emise de FABER PUBLISHING S.R.L., conform datelor juridice aprobate și afișate pe această pagină."],
+      ["De ce nu apar încă profiluri de echipă?", "Nu există încă un set complet aprobat de fotografii, roluri, specializări, experiență verificabilă și acorduri de publicare. Până la validare, pagina nu inventează și nu publică profiluri incomplete."],
+      ["Cum este verificat un program?", "Sunt comparate documentul oficial, anexele și comunicările instituției cu situația și actele solicitantului relevante pentru investiția analizată."],
       ["De ce nu este promisă aprobarea?", "Aprobarea depinde de evaluarea autorității, bugetul apelului, punctaj, documente și respectarea tuturor condițiilor aplicabile."],
       ["Cum sunt publicate rezultatele sau testimonialele?", "Numai cu dovezi verificabile, o metodă de prezentare corectă și acordul persoanelor sau organizațiilor implicate."],
-      ["Când este refăcută analiza?", "Analiza se actualizează când se schimbă ghidul, investiția, documentele, bugetul sau situația solicitantului."]
+      ["Ce înseamnă o eventuală listare în nomenclatorul AFIR?", "O listare confirmată într-un nomenclator orientativ nu reprezintă acreditare, clasament sau recomandare instituțională."]
     ],
     sources: [
       ["/metodologie-verificare-eligibilitate", "Metodologia FABER"],
-      ["/surse-oficiale-fonduri-europene", "Surse oficiale"],
+      ["/studii-de-caz-fonduri-europene", "Studii de caz și dovezi"],
       ["/contact", "Date de contact"]
     ],
-    note: "Pagina nu conține afirmații numerice despre performanță sau portofoliu."
+    note: "Pagina nu publică profiluri individuale, afilieri sau afirmații numerice despre performanță fără documente și acord."
   })}
     </article>`);
 

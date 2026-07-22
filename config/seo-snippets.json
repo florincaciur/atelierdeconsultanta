@@ -194,10 +194,10 @@
         "metodă consultanță FABER",
         "cine este FABER"
       ],
-      "title": "Despre FABER: consultanță fără promisiuni de aprobare",
-      "description": "Vezi cum lucrează FABER: verificări pe documente, roluri clare și recomandări prudente pentru proiecte finanțate din fonduri europene.",
-      "ogTitle": "FABER: documente înainte de promisiuni",
-      "ogDescription": "Metoda de lucru FABER separă ce este confirmat, ce lipsește și ce trebuie corectat înainte de pregătirea unui proiect.",
+      "title": "Despre FABER: operator, metodă și limite",
+      "description": "Află cine este operatorul FABER, cum este verificat un proiect, ce limite are consultanța și ce dovezi sunt necesare înainte de publicarea rezultatelor.",
+      "ogTitle": "FABER: consultanță prudentă înainte de dosar",
+      "ogDescription": "Entitatea juridică, metoda în cinci pași și limitele asumate public de FABER, prezentate din date aprobate și documente verificabile.",
       "sourceOfTruth": [
         "tools/rebuild-core-pages.js",
         "despre-faber/index.html"

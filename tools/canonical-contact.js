@@ -93,16 +93,21 @@ function renderFooterContact(config = loadLegalIdentity()) {
   return `<!-- CANONICAL_CONTACT_START -->${content}<!-- CANONICAL_CONTACT_END -->`;
 }
 
-function renderLegalIdentityPanel(config = loadLegalIdentity()) {
+function renderLegalIdentityPanel(config = loadLegalIdentity(), options = {}) {
   const identity = approvedIdentity(config);
   if (!identity) return "";
   const contact = canonicalContactIdentity(config);
   const phoneLinks = contact.phones.map((phone) => contactAnchor(phone, "phone")).join(" · ");
   const profileLinks = identity.officialProfileUrls.map((url) => `<a href="${escapeHtml(url)}" rel="me noopener noreferrer">Instagram oficial</a>`).join(" · ");
+  const titleId = options.titleId || "canonical-legal-identity-title";
+  const title = options.title || "Date juridice și de contact";
+  const kicker = options.kicker || "Date aprobate la 22.07.2026";
+  const extraClass = options.className ? ` ${escapeHtml(options.className)}` : "";
+  const sectionId = options.sectionId ? ` id="${escapeHtml(options.sectionId)}"` : "";
   return `<!-- CANONICAL_LEGAL_IDENTITY_START -->
-<section class="core-section canonical-legal-identity" aria-labelledby="canonical-legal-identity-title" data-canonical-legal-identity="approved">
-  <span class="core-kicker">Date aprobate la 22.07.2026</span>
-  <h2 id="canonical-legal-identity-title">Date juridice și de contact</h2>
+<section${sectionId} class="core-section canonical-legal-identity${extraClass}" aria-labelledby="${escapeHtml(titleId)}" data-canonical-legal-identity="approved">
+  <span class="core-kicker">${escapeHtml(kicker)}</span>
+  <h2 id="${escapeHtml(titleId)}">${escapeHtml(title)}</h2>
   <dl class="core-fact-strip">
     <div><dt>Denumire juridică</dt><dd>${escapeHtml(identity.legalName)} · CUI ${escapeHtml(identity.taxIdentifier)} · ONRC ${escapeHtml(identity.tradeRegisterNumber)}</dd></div>
     <div><dt>Sediu social</dt><dd>${escapeHtml(identity.registeredOffice)}</dd></div>
