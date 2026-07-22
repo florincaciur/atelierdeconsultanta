@@ -18,6 +18,20 @@ const REPORT = path.join(ROOT, "reports", "main-navigation-qa-2026-07-21.json");
 const REPORT_MD = path.join(ROOT, "reports", "main-navigation-qa-2026-07-21.md");
 const VIEWPORTS = [320, 360, 390, 768, 1024, 1366];
 
+async function screenshotWithRetry(page, options, attempts = 3) {
+  let lastError;
+  for (let attempt = 1; attempt <= attempts; attempt += 1) {
+    try {
+      await page.screenshot(options);
+      return;
+    } catch (error) {
+      lastError = error;
+      if (attempt < attempts) await new Promise((resolve) => setTimeout(resolve, 150 * attempt));
+    }
+  }
+  throw lastError;
+}
+
 const $ = cheerio.load(partial, { decodeEntities: false }, false);
 const grouped = config.primaryDestinations.filter((destination) => destination.items);
 const expectedLabels = config.primaryDestinations.map(({ label }) => label);
@@ -120,7 +134,7 @@ try {
       assert.ok(overflow.scrollWidth <= overflow.viewport + 1, `${width}: horizontal overflow ${overflow.scrollWidth}/${overflow.viewport}`);
 
       const screenshot = path.join(OUTPUT, `navigation-${width}-${state.mode}.png`);
-      await page.screenshot({ path: screenshot, fullPage: false });
+      await screenshotWithRetry(page, { path: screenshot, fullPage: false });
       state.screenshot = path.relative(ROOT, screenshot).replaceAll("\\", "/");
 
       if (!desktop) {

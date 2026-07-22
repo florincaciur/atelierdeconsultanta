@@ -113,9 +113,17 @@ assert.doesNotMatch(calculator, /class="topbar"/u, "calculatorul păstrează nav
 assert.match(calculator, /--orange:#b84716/u, "calculatorul nu folosește accentul cu contrast AA");
 assert.match(calculator, /\.calc-wrapper\{[^}]*max-width:100%;min-width:0/u, "calculatorul nu este limitat la viewport");
 assert.match(calculator, /\.calc-section\{[^}]*overflow-x:auto/u, "tabelele calculatorului nu au overflow local controlat");
-assert.equal((calculator.match(/<caption class="sr-only">/gu) || []).length, 8, "toate tabelele calculatorului trebuie denumite");
-assert.match(calculator, /role="status" aria-live="polite" aria-atomic="true"/u, "rezultatul calculatorului nu este anunțat");
-for (const label of ["Categorie pentru", "Coeficient SO pentru", "Suprafață în hectare", "Număr de capete", "Șterge rândul din"]) {
+{
+  const $ = cheerio.load(calculator, { decodeEntities: false });
+  const calculatorTables = $("#calculator table");
+  assert.equal(calculatorTables.length, 4, "calculatorul trebuie să păstreze cele patru familii interactive");
+  calculatorTables.each((_, table) => {
+    assert.equal($(table).find("caption.sr-only").length, 1, "fiecare tabel interactiv trebuie denumit");
+    assert($(table).attr("aria-labelledby"), "fiecare tabel interactiv trebuie asociat titlului său");
+  });
+  assert.equal($("#calculator .calc-result[role='status'][aria-live='polite']").length, 1, "rezultatul calculatorului nu este anunțat");
+}
+for (const label of ["Categorie pentru", "Coeficient SOC oficial pentru", "Cantitate în", "Șterge rândul din"]) {
   assert(calculator.includes(label), `calculator: lipsește eticheta dinamică „${label}”`);
 }
 

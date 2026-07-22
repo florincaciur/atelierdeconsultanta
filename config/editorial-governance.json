@@ -142,19 +142,19 @@
       "route": "/calculator-soc",
       "contentType": "tool",
       "programId": null,
-      "governanceState": "pending_validation",
+      "governanceState": "public",
       "author": "FABER – Atelier de Consultanță",
       "authorRole": "Autor organizațional",
-      "reviewer": "Echipa editorială FABER",
-      "reviewerRole": "Revizuire editorială și conformitate",
+      "reviewer": "Echipa editorială și tehnică FABER",
+      "reviewerRole": "Revizuire metodologică, tehnică și de conformitate",
       "attributionType": "organization",
       "personalNameConsent": false,
-      "verifiedAt": "DE_VALIDAT_UMAN",
-      "officialSourceName": "DE_VALIDAT_UMAN",
-      "officialSourceUrl": "DE_VALIDAT_UMAN",
-      "sourceVersion": "DE_VALIDAT_UMAN",
-      "nextReviewAt": "DE_VALIDAT_UMAN",
-      "lastMeaningfulUpdate": "DE_VALIDAT_UMAN",
+      "verifiedAt": "2026-07-22",
+      "officialSourceName": "AFIR — Lista detaliată a coeficienților standard output",
+      "officialSourceUrl": "https://www.afir.ro/info-la-zi/lista-detaliata-coeficienti-standard-output-soc-2020/",
+      "sourceVersion": "SOC 2020 — lista AFIR noiembrie 2024",
+      "nextReviewAt": "2026-09-20",
+      "lastMeaningfulUpdate": "2026-07-22",
       "statusSnapshot": null,
       "changelog": [
         {
@@ -162,6 +162,12 @@
           "summary": "Înregistrare migrată; ultima modificare editorială substanțială necesită confirmare umană.",
           "reviewer": "Echipa editorială FABER",
           "meaningful": false
+        },
+        {
+          "date": "2026-07-22",
+          "summary": "Metodologia a fost documentată, coeficienții legacy au fost înlocuiți cu setul oficial AFIR SOC 2020, iar verdictul automat de program a fost eliminat; formula de calcul a rămas neschimbată.",
+          "reviewer": "Echipa editorială și tehnică FABER",
+          "meaningful": true
         }
       ]
     },

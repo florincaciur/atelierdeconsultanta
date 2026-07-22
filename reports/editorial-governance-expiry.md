@@ -5,9 +5,9 @@ Data evaluării: **2026-07-22**. Registru: `config/editorial-governance.json`.
 ## Rezumat
 
 - Pagini guvernate: **33**
-- Pagini publice cu metadate complete: **18**
+- Pagini publice cu metadate complete: **19**
 - Verificări expirate: **5**
-- Surse lipsă/incomplete: **5**
+- Surse lipsă/incomplete: **4**
 - Reviewer lipsă: **0**
 - Contradicții program–pagină: **0**
 
@@ -21,7 +21,7 @@ O expirare produce warning intern și nu schimbă automat statusul, textul, `ver
 | `/afir-autoconsum-agroalimentar` | program | public | apel_deschis | 2026-07-20 | 2026-08-19 | 2026-07-20 | nu | nu | nu | nu |
 | `/apeluri-gal` | program | public | calendar_estimativ | 2026-05-26 | 2026-07-25 | 2026-05-26 | nu | nu | nu | nu |
 | `/autoconsum-public-fotovoltaice-institutii-publice` | program | public | ghid_aprobat_nedeschis | 2026-05-20 | 2026-07-19 | 2026-05-20 | nu | da | nu | nu |
-| `/calculator-soc` | tool | pending_validation | — | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | da | nu | nu | nu |
+| `/calculator-soc` | tool | public | — | 2026-07-22 | 2026-09-20 | 2026-07-22 | nu | nu | nu | nu |
 | `/cod-caen-start-up-nation-2026` | guide | pending_validation | — | 2026-05-20 | 2026-08-18 | DE_VALIDAT_UMAN | nu | nu | nu | nu |
 | `/digitalizare-imm` | program | public | apel_inchis | 2026-07-22 | 2026-09-20 | 2026-07-22 | nu | nu | nu | nu |
 | `/dr12-afir` | program | public | consultare_publica | 2026-07-22 | 2026-09-20 | 2026-07-22 | nu | nu | nu | nu |

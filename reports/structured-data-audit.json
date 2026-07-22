@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-22T08:53:24.209Z",
+  "generatedAt": "2026-07-22T09:52:52.032Z",
   "summary": {
     "htmlFilesChecked": 180,
     "indexablePagesChecked": 95,
@@ -12,7 +12,7 @@
       "ImageObject": 95,
       "WebSite": 95,
       "WebPage": 126,
-      "CreativeWork": 52,
+      "CreativeWork": 54,
       "BreadcrumbList": 94,
       "ListItem": 292,
       "Article": 31,
@@ -1206,6 +1206,7 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
+        "CreativeWork": 2,
         "BreadcrumbList": 1,
         "ListItem": 3,
         "WebApplication": 1,
@@ -1213,7 +1214,9 @@
         "Question": 7,
         "Answer": 7
       },
-      "modified": [],
+      "modified": [
+        "2026-07-22"
+      ],
       "issues": []
     },
     {

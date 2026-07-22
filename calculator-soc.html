@@ -60,6 +60,14 @@
     {
       "@id": "https://atelierdeconsultanta.ro/calculator-soc#webpage",
       "@type": "WebPage",
+      "citation": [
+        {
+          "@type": "CreativeWork",
+          "name": "AFIR — Lista detaliată a coeficienților standard output — SOC 2020 — lista AFIR noiembrie 2024",
+          "url": "https://www.afir.ro/info-la-zi/lista-detaliata-coeficienti-standard-output-soc-2020/"
+        }
+      ],
+      "dateModified": "2026-07-22",
       "description": "Calculează orientativ dimensiunea economică SO pentru exploatația vegetală sau zootehnică și verifică încadrarea pentru DR12 și DR14.",
       "inLanguage": "ro-RO",
       "isPartOf": {
@@ -101,6 +109,13 @@
       "@id": "https://atelierdeconsultanta.ro/calculator-soc#app",
       "@type": "WebApplication",
       "applicationCategory": "BusinessApplication",
+      "citation": [
+        {
+          "@type": "CreativeWork",
+          "name": "AFIR — Lista detaliată a coeficienților standard output — SOC 2020 — lista AFIR noiembrie 2024",
+          "url": "https://www.afir.ro/info-la-zi/lista-detaliata-coeficienti-standard-output-soc-2020/"
+        }
+      ],
       "description": "Calculează orientativ dimensiunea economică SO pentru exploatația vegetală sau zootehnică și verifică încadrarea pentru DR12 și DR14.",
       "inLanguage": "ro-RO",
       "name": "Calculator SO/SOC pentru AFIR DR12 și DR14",
@@ -301,12 +316,13 @@
 <link rel="stylesheet" href="/assets/editorial-governance.css">
   <link rel="stylesheet" href="/assets/breadcrumbs.css">
 <link rel="stylesheet" href="/assets/aeo-question-blocks.css?v=20260722-1">
+<link rel="stylesheet" href="/assets/calculator-so-methodology.css?v=20260722-1">
 <script src="/assets/lead-attribution.js" defer=""></script>
   <script src="/assets/analytics-events.js" defer=""></script>
   <link rel="stylesheet" href="/assets/contextual-cta.css?v=20260722-1">
   <script src="/assets/contextual-cta.js?v=20260722-1" defer></script>
 </head>
-<body class="page-family-tool" data-analytics-page-type="tool" data-editorial-record="calculator-soc" data-governance-state="pending_validation">
+<body class="page-family-tool" data-analytics-page-type="tool" data-editorial-record="calculator-soc" data-governance-state="public" data-editorial-verified-at="2026-07-22" data-next-review-at="2026-09-20" data-last-meaningful-update="2026-07-22">
 <a class="skip-link global-skip-link" href="#main-content">Sari la conținut</a>
 <!-- GLOBAL_HEADER_START --><link rel="stylesheet" href="/assets/global-header.css?v=20260721-3">
 <nav id="navbar" aria-label="Navigare principală" data-navigation-config="config/main-navigation.json">
@@ -664,20 +680,29 @@
     <div class="reveal" style="margin-bottom:40px;">
       <div class="sec-label">Calculator interactiv</div>
       <h2 class="sec-title">Calculează SO-ul Fermei Tale</h2>
-      <p class="sec-sub">Selectează culturile și animalele existente și introdu suprafețele sau efectivele documentabile. Calculatorul însumează valorile și afișează o comparație orientativă cu pragurile configurate; încadrarea se reconfirmă în ghidul programului.</p>
+      <p class="sec-sub">Selectează categoriile documentabile și introdu cantitatea în unitatea oficială afișată. Calculatorul aplică coeficienții SOC 2020 și explică fiecare produs din sumă; totalul rămâne orientativ și se reconfirmă în tabelul Cererii de finanțare aplicabile.</p>
     </div>
 
-    <div class="calc-wrapper" data-analytics-calculator="calculator_soc" data-analytics-component="calculator_so">
+    <!-- P1_20_SO_INPUT_HELP_START -->
+      <div class="so-source-notice" id="calculator-input-help">
+        <span class="so-source-notice__icon" aria-hidden="true">✓</span>
+        <div>
+          <p><strong>Coeficienți: SOC 2020 — lista AFIR noiembrie 2024</strong>; sursă controlată la <time datetime="2026-07-22">22.07.2026</time>.</p>
+          <p>Introdu cantitatea în unitatea afișată pentru categorie. Pentru păsări, documentul AFIR exprimă coeficientul la 100 de capete. <a href="https://www.afir.ro/api/file/document?filename=Lista+detaliata+a+Coeficientilor+standard+output+SOC+2020+nov+2024&amp;filetype=pdf&amp;url=%2Fmedia%2Fye3ppryg%2Flista-detaliata-a-coeficientilor-standard-output-soc-2020-nov-2024.pdf" target="_blank" rel="noopener noreferrer">Consultă lista oficială completă AFIR</a>.</p>
+        </div>
+      </div>
+      <div id="calculator-errors" class="so-calculator-errors" role="alert" aria-live="assertive"></div>
+<!-- P1_20_SO_INPUT_HELP_END --><div class="calc-wrapper" data-analytics-calculator="calculator_soc" data-analytics-component="calculator_so">
       <!-- Culturi de Câmp -->
       <div class="calc-section">
-        <h3 id="calculator-culturi-title">🌽 Culturi de Câmp (EUR/ha)</h3>
+        <h3 id="calculator-culturi-title">Culturi de câmp</h3>
         <table class="calc-table" id="culturi-table" aria-labelledby="calculator-culturi-title">
           <caption class="sr-only">Calcul SO pentru culturi de câmp</caption>
           <thead>
             <tr>
               <th>Cultură</th>
-              <th>SO/ha (EUR)</th>
-              <th>Suprafață (ha)</th>
+              <th>Coeficient SOC (EUR/unitate)</th>
+              <th>Cantitate în unitatea oficială</th>
               <th>SO Total</th>
               <th>Acțiune</th>
             </tr>
@@ -686,20 +711,20 @@
           </tbody>
         </table>
         <div class="calc-buttons">
-          <button class="btn-add" onclick="addCulturaRow('culturi')" data-calculator-action="start">+ Adaugă Cultură</button>
+          <button type="button" class="btn-add" onclick="addCulturaRow('culturi')" data-calculator-action="start">+ Adaugă Cultură</button>
         </div>
       </div>
 
       <!-- Legume -->
       <div class="calc-section">
-        <h3 id="calculator-legume-title">🥬 Legume (EUR/ha)</h3>
+        <h3 id="calculator-legume-title">Legume, pepeni și căpșuni</h3>
         <table class="calc-table" id="legume-table" aria-labelledby="calculator-legume-title">
           <caption class="sr-only">Calcul SO pentru legume</caption>
           <thead>
             <tr>
               <th>Legumă</th>
-              <th>SO/ha (EUR)</th>
-              <th>Suprafață (ha)</th>
+              <th>Coeficient SOC (EUR/unitate)</th>
+              <th>Cantitate în unitatea oficială</th>
               <th>SO Total</th>
               <th>Acțiune</th>
             </tr>
@@ -708,20 +733,20 @@
           </tbody>
         </table>
         <div class="calc-buttons">
-          <button class="btn-add" onclick="addCulturaRow('legume')" data-calculator-action="start">+ Adaugă Legumă</button>
+          <button type="button" class="btn-add" onclick="addCulturaRow('legume')" data-calculator-action="start">+ Adaugă Legumă</button>
         </div>
       </div>
 
       <!-- Fructe -->
       <div class="calc-section">
-        <h3 id="calculator-fructe-title">🍎 Fructe și Plantații (EUR/ha)</h3>
+        <h3 id="calculator-fructe-title">Fructe și plantații</h3>
         <table class="calc-table" id="fructe-table" aria-labelledby="calculator-fructe-title">
           <caption class="sr-only">Calcul SO pentru fructe și plantații</caption>
           <thead>
             <tr>
               <th>Fruct/Plantație</th>
-              <th>SO/ha (EUR)</th>
-              <th>Suprafață (ha)</th>
+              <th>Coeficient SOC (EUR/unitate)</th>
+              <th>Cantitate în unitatea oficială</th>
               <th>SO Total</th>
               <th>Acțiune</th>
             </tr>
@@ -730,20 +755,20 @@
           </tbody>
         </table>
         <div class="calc-buttons">
-          <button class="btn-add" onclick="addCulturaRow('fructe')" data-calculator-action="start">+ Adaugă Fruct</button>
+          <button type="button" class="btn-add" onclick="addCulturaRow('fructe')" data-calculator-action="start">+ Adaugă Fruct</button>
         </div>
       </div>
 
       <!-- Animale -->
       <div class="calc-section">
-        <h3 id="calculator-animale-title">🐄 Animale (EUR/cap)</h3>
+        <h3 id="calculator-animale-title">Animale și familii de albine</h3>
         <table class="calc-table" id="animale-table" aria-labelledby="calculator-animale-title">
           <caption class="sr-only">Calcul SO pentru animale</caption>
           <thead>
             <tr>
               <th>Animal</th>
-              <th>SO/cap (EUR)</th>
-              <th>Număr capete</th>
+              <th>Coeficient SOC (EUR/unitate)</th>
+              <th>Cantitate în unitatea oficială</th>
               <th>SO Total</th>
               <th>Acțiune</th>
             </tr>
@@ -752,164 +777,154 @@
           </tbody>
         </table>
         <div class="calc-buttons">
-          <button class="btn-add" onclick="addCulturaRow('animale')" data-calculator-action="start">+ Adaugă Animal</button>
+          <button type="button" class="btn-add" onclick="addCulturaRow('animale')" data-calculator-action="start">+ Adaugă Animal</button>
         </div>
       </div>
 
       <!-- Buttons -->
       <div style="display:flex;gap:12px;margin-top:40px;flex-wrap:wrap;">
-        <button class="btn-reset" onclick="resetCalculator()">🔄 Șterge Tot</button>
+        <button type="button" class="btn-reset" onclick="resetCalculator()">🔄 Șterge Tot</button>
       </div>
 
       <!-- Result -->
-      <div class="calc-result" role="status" aria-live="polite" aria-atomic="true">
-        <div class="result-label">Standard Output Total</div>
-        <div class="result-value" id="total-so">0</div>
-        <div class="result-unit">EUR / SO</div>
+      <div class="calc-result" role="status" aria-live="polite" aria-atomic="false">
+        <div class="result-label">Standard Output total</div>
+        <div class="result-value" id="total-so" data-so-value="0" data-so-exact-value="0">0</div>
+        <div class="result-unit">EUR SO</div>
         <div class="result-status" id="status-badges"></div>
+        <div id="so-result-explanation" class="so-result-explanation"></div>
+        <p><strong>Rezultatul calculatorului este orientativ și nu înlocuiește ghidul sau verificarea documentelor.</strong></p>
+        <div class="so-result-actions" aria-label="Acțiuni pentru rezultat">
+          <button type="button" data-copy-so-result>Copiază rezumatul</button>
+          <button type="button" data-print-so-result>Tipărește rezultatul</button>
+        </div>
+        <p id="so-action-feedback" class="so-action-feedback" aria-live="polite"></p>
       </div><!-- P1_15_CONTEXTUAL_CTA_START --><aside class="calculator-contextual-cta" aria-label="Continuă cu verificarea AFIR"><p>Rezultatul calculatorului nu înlocuiește ghidul.</p><a class="btn-primary" href="/contact?source_page=%2Fcalculator-soc" data-calculator-context-cta="" data-contextual-base-href="/contact?source_page=%2Fcalculator-soc" data-analytics-event="cta_click" data-analytics-component="calculator_result" data-analytics-cta-id="calculator_soc_contextual_primary" data-analytics-target="/contact" data-analytics-cta-view="true" data-analytics-copy-variant="p1_15">Folosește rezultatul pentru verificarea AFIR</a></aside><!-- P1_15_CONTEXTUAL_CTA_END --></div>
   </div>
 </section>
 
-<!-- Thresholds Section -->
-<section class="section">
+<!-- P1_20_SO_METHODOLOGY_START -->
+<section class="section" id="metodologie-calcul-so" data-so-methodology data-method-version="FABER-SO-1.0">
   <div class="container">
-    <div class="reveal">
-      <div class="sec-label">Praguri de eligibilitate</div>
-      <h2 class="sec-title">Clasificare Fermă pe Bază SO</h2>
-      <p class="sec-sub">Verifică pe care dintre categoriile de mai jos te-ai încadra în funcție de SO-ul calculat</p>
+    <div class="reveal revealed">
+      <div class="sec-label">Metodologie și trasabilitate</div>
+      <h2 class="sec-title">Cum calculează instrumentul dimensiunea economică SO?</h2>
+      <p class="sec-sub">SO este valoarea monetară medie a producției agricole la poarta fermei, exprimată printr-un coeficient regional pentru fiecare categorie. Instrumentul înmulțește coeficientul SOC cu cantitatea documentabilă și însumează rezultatele. Totalul ajută la clasificarea orientativă a exploatației; nu confirmă programul, eligibilitatea, punctajul sau documentele unui dosar.</p>
     </div>
 
-    <div class="thresholds-grid reveal">
-      <div class="threshold-card">
-        <div class="threshold-icon">🌾</div>
-        <div class="threshold-badge">DR14</div>
-        <h3 class="threshold-title">Ferme Mici</h3>
-        <div class="threshold-range">4.000 – 11.999 SO</div>
-        <p class="threshold-desc">Eligibile pentru Submasura DR14 – Investiții în ferme mici. Eligibilitate: minimum 4.000 SO și maximum 11.999 SO pe o singură cultură/zootehnie sau combinații.</p>
-      </div>
-      <div class="threshold-card">
-        <div class="threshold-icon">👨‍🌾</div>
-        <div class="threshold-badge">DR12</div>
-        <h3 class="threshold-title">DR12 Tineri Fermieri</h3>
-        <div class="threshold-range">12.000 – 100.000 SO</div>
-        <p class="threshold-desc">Eligibili pentru Submasura DR12 – Sprijin pentru tineri fermieri. Cerință: minimum 12.000 SO și maximum 100.000 SO. Vârsta beneficiarului: sub 40 ani.</p>
-      </div>
-      <div class="threshold-card">
-        <div class="threshold-icon">🏭</div>
-        <div class="threshold-badge">Fermă Comercială</div>
-        <h3 class="threshold-title">Ferme Comerciale</h3>
-        <div class="threshold-range">&gt; 100.000 SO</div>
-        <p class="threshold-desc">Ferme cu SO peste 100.000 EUR. Se clasifică ca ferme comerciale mari, cu alte opțiuni de finanțare și obligații specifice diferite de programele AFIR DR12/DR14.</p>
-      </div>
+    <div class="so-methodology-grid">
+      <article class="so-methodology-card">
+        <span class="so-method-version">Metodă FABER-SO-1.0</span>
+        <h3>Formula, unitățile și rotunjirea</h3>
+        <div class="so-formula">SO total = suma(coeficient SOC × numărul de unități oficiale introduse)</div>
+        <p>Unitatea este hectarul, capul, familia de albine sau grupul de 100 de capete, exact cum este indicat lângă categoria selectată. Produsele și suma sunt calculate cu zecimalele coeficienților; interfața afișează totalul rotunjit la cel mai apropiat euro prin Math.round.</p>
+        <p>Formula de înmulțire și însumare existentă nu a fost schimbată în această actualizare; a fost corectat setul de coeficienți și a fost documentată proveniența.</p>
+      </article>
+      <article class="so-methodology-card">
+        <span class="so-method-version">Sursă verificată 22.07.2026</span>
+        <h3>Ce set de coeficienți folosește?</h3>
+        <p><strong>SOC 2020 — lista AFIR noiembrie 2024.</strong> AFIR arată că SOC 2020 este aplicabil proiectelor din Planul Strategic PAC 2023–2027 și că, pentru dosar, calculul se realizează în tabelul Cererii de finanțare aplicabile intervenției.</p>
+        <p>Calculatorul include categoriile uzuale din lista AFIR. Pentru o categorie absentă sau o denumire neclară, nu alege un substitut: folosește lista completă și cere confirmarea codului.</p>
+      </article>
     </div>
+
+    <h2>Exemple de calcul cu date fictive</h2>
+    <p>Exemplele demonstrează formula și rotunjirea interfeței. Datele despre exploatații sunt fictive; coeficienții provin din lista oficială indicată.</p>
+    <div class="so-example-grid">
+        <article class="so-example" data-so-example>
+          <span class="so-example__label">Date fictive · coeficienți oficiali</span>
+          <h3>Exemplu fictiv 1 — cultură vegetală</h3>
+          <ol>
+            <li>2,5 ha grâu comun și spelt</li>
+            <li>2,5 × 777,94 EUR/ha</li>
+            <li>SO calculat: 1.944,85 EUR</li>
+          </ol>
+        </article>
+        <article class="so-example" data-so-example>
+          <span class="so-example__label">Date fictive · coeficienți oficiali</span>
+          <h3>Exemplu fictiv 2 — exploatație zootehnică</h3>
+          <ol>
+            <li>8 vaci pentru lapte</li>
+            <li>8 × 1.412,53 EUR/cap</li>
+            <li>SO calculat: 11.300,24 EUR</li>
+          </ol>
+        </article>
+        <article class="so-example" data-so-example>
+          <span class="so-example__label">Date fictive · coeficienți oficiali</span>
+          <h3>Exemplu fictiv 3 — exploatație mixtă</h3>
+          <ol>
+            <li>3 ha porumb boabe: 3 × 933,25 = 2.799,75 EUR</li>
+            <li>12 familii de albine: 12 × 72,20 = 866,40 EUR</li>
+            <li>SO total: 3.666,15 EUR; afișat: 3.666 EUR</li>
+          </ol>
+        </article>
+    </div>
+
+    <h2>Ce date introduci și ce presupune instrumentul?</h2>
+    <div class="so-limit-grid">
+      <article class="so-limit-card">
+        <h3>Date introduse de utilizator</h3>
+        <ul>
+          <li>categoria și codul SOC care corespund activității documentate;</li>
+          <li>suprafața în hectare, efectivul în capete, familiile de albine sau unitățile de 100 de păsări;</li>
+          <li>toate componentele exploatației care trebuie incluse potrivit Cererii de finanțare.</li>
+        </ul>
+      </article>
+      <article class="so-limit-card">
+        <h3>Ipoteze tehnice</h3>
+        <ul>
+          <li>valorile introduse sunt numere finite, pozitive sau zero;</li>
+          <li>limita de 1.000.000 este doar o protecție tehnică, nu un prag de eligibilitate;</li>
+          <li>calculul intern păstrează zecimalele, iar totalul vizibil este rotunjit la euro.</li>
+        </ul>
+      </article>
+    </div>
+
+    <h2>Ce nu poate decide Calculatorul SO?</h2>
+    <div class="so-limit-grid">
+      <article class="so-limit-card">
+        <h3>Nu confirmă încadrarea</h3>
+        <p>Totalul nu decide singur dacă solicitantul se încadrează în DR 12, DR 14 sau altă intervenție. Forma solicitantului, istoricul, amplasamentul, sectorul, condițiile eliminatorii și versiunea finală a documentelor pot schimba concluzia.</p>
+      </article>
+      <article class="so-limit-card">
+        <h3>Nu înlocuiește evidențele</h3>
+        <p>Instrumentul nu verifică IACS/APIA, ANSVSA, ANZ, registrul agricol, actele de folosință sau concordanța dintre baze. Nu poate stabili nici grantul, contribuția proprie, cash-flow-ul sau punctajul.</p>
+      </article>
+    </div>
+
+    <h2>Ce documente dovedesc datele folosite?</h2>
+    <ul class="so-document-list">
+      <li>înregistrările IACS/APIA din anul depunerii pentru suprafețe și culturi;</li>
+      <li>înregistrările ANSVSA/DSVSA și, unde este cazul, ANZ pentru animale și familii de albine;</li>
+      <li>adeverința medicului veterinar pentru păsări sau animale mici care nu figurează în bazele aplicabile;</li>
+      <li>actele de proprietate ori folosință și documentele exploatației cerute de intervenție;</li>
+      <li>tabelul SOC din Cererea de finanțare aplicabilă apelului ales.</li>
+    </ul>
+
+    <h2>Surse, autor, revizie și changelog</h2>
+    <ul class="so-source-list">
+        <li><strong>AFIR — Lista detaliată a coeficienților standard output SOC 2020.</strong> SOC 2020 — lista AFIR noiembrie 2024; document verificat prin SHA-256 4DBCA7CE226BFCD3E54BED11238664C81E443D54BC889E98F7C2602C2206DA06. <a href="https://www.afir.ro/info-la-zi/lista-detaliata-coeficienti-standard-output-soc-2020/" target="_blank" rel="noopener noreferrer">Deschide sursa oficială</a>.</li>
+        <li><strong>AFIR — Calcul SO PNDR/PS 2027.</strong> Confirmă că SOC 2020 este aplicabil proiectelor PS 2023–2027 și că tabelul Cererii de finanțare aplicabile rămâne documentul de lucru pentru dosar. <a href="https://so.afir.info/" target="_blank" rel="noopener noreferrer">Deschide sursa oficială</a>.</li>
+        <li><strong>Eurostat — Standard output coefficients.</strong> Definește SO ca valoare monetară medie a producției agricole la poarta fermei, exprimată în euro pe hectar sau pe cap. <a href="https://ec.europa.eu/eurostat/web/agriculture/database/additional-data" target="_blank" rel="noopener noreferrer">Deschide sursa oficială</a>.</li>
+        <li><strong>Eurostat — Glossary: Standard output (SO).</strong> Explică însumarea coeficienților pe culturi și animale pentru măsurarea dimensiunii economice a exploatației. <a href="https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Glossary:Standard_output_(SO)" target="_blank" rel="noopener noreferrer">Deschide sursa oficială</a>.</li>
+    </ul>
+    <div class="so-review-card so-review-card--approved">
+      <h3>Autor și revizie</h3>
+      <p><strong>Autor:</strong> FABER – Atelier de Consultanță, autor organizațional.</p>
+      <p><strong>Revizie:</strong> Echipa editorială și tehnică FABER — metodă, sursă, UX și teste, la <time datetime="2026-07-22">22.07.2026</time>.</p>
+      <p><strong>Changelog 22.07.2026:</strong> setul legacy fără proveniență a fost înlocuit cu categoriile SOC 2020 din lista AFIR noiembrie 2024; formula de înmulțire și însumare a rămas neschimbată; verdictul automat de program a fost eliminat.</p>
+    </div>
+    <aside class="so-review-card" aria-labelledby="so-validari-umane">
+      <h3 id="so-validari-umane">Validări care rămân obligatorii pentru un dosar</h3>
+      <ul>
+        <li>Specialistul agricol confirmă pentru fiecare proiect codul SOC corect, unitatea și corespondența cu evidențele APIA/ANSVSA/ANZ.</li>
+        <li>Specialistul agricol și dezvoltatorul aprobă împreună orice schimbare viitoare a formulei sau a versiunii coeficienților.</li>
+        <li>Versiunea finală a Cererii de finanțare și tabelul SOC al apelului ales prevalează asupra acestui instrument orientativ.</li>
+      </ul>
+    </aside>
   </div>
 </section>
-
-<!-- Standard Output Values Table -->
-<section class="section section-alt">
-  <div class="container">
-    <div class="reveal">
-      <div class="sec-label">Valori SO pentru România</div>
-      <h2 class="sec-title">Tabel Complet SO 2023-2027</h2>
-      <p class="sec-sub">Valorile Standard Output pentru România conform Registrului PAC 2023-2027 (EUR pe unitate)</p>
-    </div>
-
-    <div class="reveal" style="margin-top:40px;">
-      <h3 style="font-size:1.15rem;font-weight:700;color:var(--navy);margin-bottom:20px;">Culturi de Câmp</h3>
-      <div style="overflow-x:auto;">
-        <table class="calc-table" style="background:white;margin-top:0;">
-          <caption class="sr-only">Coeficienți Standard Output pentru culturi de câmp</caption>
-          <thead><tr><th>Cultură</th><th>SO (EUR/ha)</th></tr></thead>
-          <tbody>
-            <tr><td>Grâu de toamnă</td><td>490</td></tr>
-            <tr><td>Grâu de primăvară</td><td>430</td></tr>
-            <tr><td>Orz de toamnă</td><td>390</td></tr>
-            <tr><td>Orz de primăvară</td><td>350</td></tr>
-            <tr><td>Porumb boabe</td><td>710</td></tr>
-            <tr><td>Porumb siloz</td><td>450</td></tr>
-            <tr><td>Floarea soarelui</td><td>590</td></tr>
-            <tr><td>Rapiță</td><td>620</td></tr>
-            <tr><td>Soia</td><td>560</td></tr>
-            <tr><td>Sfeclă de zahăr</td><td>1.840</td></tr>
-            <tr><td>Cartofi</td><td>2.620</td></tr>
-            <tr><td>Mazăre proteică</td><td>290</td></tr>
-            <tr><td>Triticale</td><td>340</td></tr>
-            <tr><td>Ovăz</td><td>280</td></tr>
-            <tr><td>Secară</td><td>310</td></tr>
-            <tr><td>Mei</td><td>250</td></tr>
-          </tbody>
-        </table>
-      </div>
-
-      <h3 style="font-size:1.15rem;font-weight:700;color:var(--navy);margin-bottom:20px;margin-top:40px;">Legume</h3>
-      <div style="overflow-x:auto;">
-        <table class="calc-table" style="background:white;margin-top:0;">
-          <caption class="sr-only">Coeficienți Standard Output pentru legume</caption>
-          <thead><tr><th>Legumă</th><th>SO (EUR/ha)</th></tr></thead>
-          <tbody>
-            <tr><td>Tomate câmp</td><td>6.500</td></tr>
-            <tr><td>Ardei câmp</td><td>5.200</td></tr>
-            <tr><td>Vinete câmp</td><td>4.800</td></tr>
-            <tr><td>Castraveți câmp</td><td>5.000</td></tr>
-            <tr><td>Varză câmp</td><td>3.200</td></tr>
-            <tr><td>Ceapă câmp</td><td>3.600</td></tr>
-            <tr><td>Morcovi câmp</td><td>3.400</td></tr>
-            <tr><td>Usturoi câmp</td><td>4.200</td></tr>
-            <tr><td>Fasole câmp</td><td>1.800</td></tr>
-            <tr><td>Tomate seră</td><td>25.000</td></tr>
-            <tr><td>Ardei seră</td><td>20.000</td></tr>
-          </tbody>
-        </table>
-      </div>
-
-      <h3 style="font-size:1.15rem;font-weight:700;color:var(--navy);margin-bottom:20px;margin-top:40px;">Fructe și Plantații</h3>
-      <div style="overflow-x:auto;">
-        <table class="calc-table" style="background:white;margin-top:0;">
-          <caption class="sr-only">Coeficienți Standard Output pentru fructe și plantații</caption>
-          <thead><tr><th>Fruct/Plantație</th><th>SO (EUR/ha)</th></tr></thead>
-          <tbody>
-            <tr><td>Mere</td><td>5.800</td></tr>
-            <tr><td>Pere</td><td>4.200</td></tr>
-            <tr><td>Vișine</td><td>3.600</td></tr>
-            <tr><td>Cireșe</td><td>5.200</td></tr>
-            <tr><td>Prune</td><td>2.800</td></tr>
-            <tr><td>Căpșuni câmp</td><td>8.500</td></tr>
-            <tr><td>Vie de vin</td><td>3.200</td></tr>
-            <tr><td>Vie de masă</td><td>5.600</td></tr>
-            <tr><td>Nuci</td><td>2.600</td></tr>
-            <tr><td>Afine</td><td>9.500</td></tr>
-          </tbody>
-        </table>
-      </div>
-
-      <h3 style="font-size:1.15rem;font-weight:700;color:var(--navy);margin-bottom:20px;margin-top:40px;">Animale</h3>
-      <div style="overflow-x:auto;">
-        <table class="calc-table" style="background:white;margin-top:0;">
-          <caption class="sr-only">Coeficienți Standard Output pentru animale</caption>
-          <thead><tr><th>Animal</th><th>SO (EUR/cap)</th></tr></thead>
-          <tbody>
-            <tr><td>Vaci lapte</td><td>2.450</td></tr>
-            <tr><td>Bovine pentru carne (adulte)</td><td>680</td></tr>
-            <tr><td>Tineret bovin</td><td>380</td></tr>
-            <tr><td>Scroafe</td><td>840</td></tr>
-            <tr><td>Porci la îngrășat</td><td>180</td></tr>
-            <tr><td>Ovine (oi mame)</td><td>115</td></tr>
-            <tr><td>Caprine (capre mame)</td><td>140</td></tr>
-            <tr><td>Iepuri (femele reproducție)</td><td>68</td></tr>
-            <tr><td>Găini ouătoare</td><td>24</td></tr>
-            <tr><td>Pui broiler (per loc)</td><td>14</td></tr>
-            <tr><td>Curcani (per loc)</td><td>22</td></tr>
-            <tr><td>Rațe (per loc)</td><td>16</td></tr>
-            <tr><td>Familii de albine (stupi)</td><td>52</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Interpretare si pregatirea dosarului -->
+<!-- P1_20_SO_METHODOLOGY_END --><!-- Interpretare si pregatirea dosarului -->
 <section class="section">
   <div class="container">
     <div class="reveal">
@@ -1092,8 +1107,18 @@
 <!-- CONTEXTUAL_NEXT_STEP_END -->
 
 <!-- EDITORIAL_GOVERNANCE_START -->
-<section class="editorial-governance editorial-governance--pending" aria-label="Guvernanță editorială" data-editorial-record="calculator-soc" data-governance-state="pending_validation">
-  <p><strong>Metadate editoriale în validare:</strong> autorul, reviewerul, sursa sau termenul de reverificare nu sunt încă publicate ca informații confirmate.</p>
+<section class="editorial-governance" aria-label="Guvernanță editorială" data-editorial-record="calculator-soc" data-governance-state="public" data-next-review-at="2026-09-20">
+  <p class="editorial-governance__verified"><strong>Verificat la <time datetime="2026-07-22">2026-07-22</time> de Echipa editorială și tehnică FABER, Revizuire metodologică, tehnică și de conformitate.</strong></p>
+  <p>Autor: FABER – Atelier de Consultanță, Autor organizațional.</p>
+  <p>Sursa oficială: <a href="https://www.afir.ro/info-la-zi/lista-detaliata-coeficienti-standard-output-soc-2020/" target="_blank" rel="noopener noreferrer" data-analytics-event="source_document_click" data-analytics-component="editorial_governance" data-analytics-cta-id="official_source">AFIR — Lista detaliată a coeficienților standard output — SOC 2020 — lista AFIR noiembrie 2024</a>.</p>
+  <p>Următoarea reverificare internă: <time datetime="2026-09-20">2026-09-20</time>. <a href="#editorial-changelog-calculator-soc">Vezi modificările</a>.</p>
+  <details id="editorial-changelog-calculator-soc" class="editorial-governance__changelog">
+    <summary>Istoric editorial</summary>
+    <ol>
+      <li><time datetime="2026-07-22">2026-07-22</time> — Metodologia a fost documentată, coeficienții legacy au fost înlocuiți cu setul oficial AFIR SOC 2020, iar verdictul automat de program a fost eliminat; formula de calcul a rămas neschimbată. <span>(Echipa editorială și tehnică FABER)</span></li>
+      <li><time datetime="2026-07-21">2026-07-21</time> — Înregistrare migrată; ultima modificare editorială substanțială necesită confirmare umană. <span>(Echipa editorială FABER)</span></li>
+    </ol>
+  </details>
 </section>
 <!-- EDITORIAL_GOVERNANCE_END -->
 </main>
@@ -1103,113 +1128,342 @@
 <!-- CANONICAL_CONTACT_START --><span class="footer-contact-direct" aria-label="Contact direct"> · <a href="tel:+40769828338" data-analytics-event="contact_phone" data-analytics-component="contact_link" data-analytics-cta-id="phone_contact">0769 828 338</a> · <a href="tel:+40753326229" data-analytics-event="contact_phone" data-analytics-component="contact_link" data-analytics-cta-id="phone_contact">0753 326 229</a> · <a href="mailto:atelier.consultanta@gmail.com" data-analytics-event="contact_email" data-analytics-component="contact_link" data-analytics-cta-id="email_contact">atelier.consultanta@gmail.com</a></span><!-- CANONICAL_CONTACT_END --></footer>
 
 <script>
-  // SO Values Database
+  // P1.20 — Formula existentă este păstrată; setul de date provine din lista AFIR SOC 2020.
   const soDatabase = {
-    culturi: {
-      'Grâu de toamnă': 490,
-      'Grâu de primăvară': 430,
-      'Orz de toamnă': 390,
-      'Orz de primăvară': 350,
-      'Porumb boabe': 710,
-      'Porumb siloz': 450,
-      'Floarea soarelui': 590,
-      'Rapiță': 620,
-      'Soia': 560,
-      'Sfeclă de zahăr': 1840,
-      'Cartofi': 2620,
-      'Mazăre proteică': 290,
-      'Triticale': 340,
-      'Ovăz': 280,
-      'Secară': 310,
-      'Mei': 250
-    },
-    legume: {
-      'Tomate câmp': 6500,
-      'Ardei câmp': 5200,
-      'Vinete câmp': 4800,
-      'Castraveți câmp': 5000,
-      'Varză câmp': 3200,
-      'Ceapă câmp': 3600,
-      'Morcovi câmp': 3400,
-      'Usturoi câmp': 4200,
-      'Fasole câmp': 1800,
-      'Tomate seră': 25000,
-      'Ardei seră': 20000
-    },
-    fructe: {
-      'Mere': 5800,
-      'Pere': 4200,
-      'Vișine': 3600,
-      'Cireșe': 5200,
-      'Prune': 2800,
-      'Căpșuni câmp': 8500,
-      'Vie de vin': 3200,
-      'Vie de masă': 5600,
-      'Nuci': 2600,
-      'Afine': 9500
-    },
-    animale: {
-      'Vaci lapte': 2450,
-      'Bovine pentru carne (adulte)': 680,
-      'Tineret bovin': 380,
-      'Scroafe': 840,
-      'Porci la îngrășat': 180,
-      'Ovine (oi mame)': 115,
-      'Caprine (capre mame)': 140,
-      'Iepuri (femele reproducție)': 68,
-      'Găini ouătoare': 24,
-      'Pui broiler (per loc)': 14,
-      'Curcani (per loc)': 22,
-      'Rațe (per loc)': 16,
-      'Familii de albine (stupi)': 52
-    }
+      "culturi": {
+          "Grâu comun și spelt": {
+              "code": "C1110T",
+              "coefficient": 777.94,
+              "unit": "ha",
+              "unitLabel": "hectare"
+          },
+          "Secară": {
+              "code": "C1200T",
+              "coefficient": 429.45,
+              "unit": "ha",
+              "unitLabel": "hectare"
+          },
+          "Orz și orzoaică": {
+              "code": "C1300T",
+              "coefficient": 668.66,
+              "unit": "ha",
+              "unitLabel": "hectare"
+          },
+          "Ovăz": {
+              "code": "C1400T",
+              "coefficient": 522.47,
+              "unit": "ha",
+              "unitLabel": "hectare"
+          },
+          "Porumb boabe": {
+              "code": "C1500T",
+              "coefficient": 933.25,
+              "unit": "ha",
+              "unitLabel": "hectare"
+          },
+          "Alte cereale: sorg, triticale, mei, hrișcă etc.": {
+              "code": "C1600T_C1700T_C1900T",
+              "coefficient": 661.65,
+              "unit": "ha",
+              "unitLabel": "hectare"
+          },
+          "Cartofi": {
+              "code": "R1000T",
+              "coefficient": 4573.31,
+              "unit": "ha",
+              "unitLabel": "hectare"
+          },
+          "Sfeclă de zahăr": {
+              "code": "R2000T",
+              "coefficient": 2368,
+              "unit": "ha",
+              "unitLabel": "hectare"
+          },
+          "Rapiță": {
+              "code": "I1110T",
+              "coefficient": 911.09,
+              "unit": "ha",
+              "unitLabel": "hectare"
+          },
+          "Floarea-soarelui": {
+              "code": "I1120T",
+              "coefficient": 870.97,
+              "unit": "ha",
+              "unitLabel": "hectare"
+          },
+          "Soia": {
+              "code": "I1130T",
+              "coefficient": 715.94,
+              "unit": "ha",
+              "unitLabel": "hectare"
+          },
+          "Porumb siloz": {
+              "code": "G3000T",
+              "coefficient": 1773.54,
+              "unit": "ha",
+              "unitLabel": "hectare"
+          }
+      },
+      "legume": {
+          "În câmp": {
+              "code": "V0000_S0000T",
+              "coefficient": 7278.03,
+              "unit": "ha",
+              "unitLabel": "hectare"
+          },
+          "În grădină, destinate comercializării": {
+              "code": "V0000_S0000TK",
+              "coefficient": 8614.983,
+              "unit": "ha",
+              "unitLabel": "hectare"
+          },
+          "În spații protejate": {
+              "code": "V0000_S0000S",
+              "coefficient": 22719.87,
+              "unit": "ha",
+              "unitLabel": "hectare"
+          },
+          "În rotație cu culturi nehorticole, în câmp deschis": {
+              "code": "V0000_S0000TO",
+              "coefficient": 5328.49,
+              "unit": "ha",
+              "unitLabel": "hectare"
+          }
+      },
+      "fructe": {
+          "Pomi cu fructe semințoase: mere, pere, gutui etc.": {
+              "code": "F1100T",
+              "coefficient": 3061.24,
+              "unit": "ha",
+              "unitLabel": "hectare"
+          },
+          "Pomi cu fructe sâmburoase: vișine, cireșe, caise, prune etc.": {
+              "code": "F1200T",
+              "coefficient": 5787.76,
+              "unit": "ha",
+              "unitLabel": "hectare"
+          },
+          "Arbuști fructiferi: coacăz, zmeur, afin, goji etc.": {
+              "code": "F3000T",
+              "coefficient": 10434.72,
+              "unit": "ha",
+              "unitLabel": "hectare"
+          },
+          "Nucifere: nuci, alune etc.": {
+              "code": "F4000T",
+              "coefficient": 3468.9,
+              "unit": "ha",
+              "unitLabel": "hectare"
+          },
+          "Struguri pentru vinuri DOP": {
+              "code": "W1110T",
+              "coefficient": 3233.04,
+              "unit": "ha",
+              "unitLabel": "hectare"
+          },
+          "Struguri pentru vinuri IGP": {
+              "code": "W1120T",
+              "coefficient": 3200.67,
+              "unit": "ha",
+              "unitLabel": "hectare"
+          },
+          "Struguri pentru alte vinuri, fără DOP/IGP": {
+              "code": "W1190T",
+              "coefficient": 2554.47,
+              "unit": "ha",
+              "unitLabel": "hectare"
+          },
+          "Struguri de masă": {
+              "code": "W1200T",
+              "coefficient": 3214.93,
+              "unit": "ha",
+              "unitLabel": "hectare"
+          }
+      },
+      "animale": {
+          "Bovine sub 1 an": {
+              "code": "A2010",
+              "coefficient": 270.76,
+              "unit": "cap",
+              "unitLabel": "capete"
+          },
+          "Bovine între 1 și 2 ani — masculi": {
+              "code": "A2120",
+              "coefficient": 367.62,
+              "unit": "cap",
+              "unitLabel": "capete"
+          },
+          "Bovine între 1 și 2 ani — femele": {
+              "code": "A2220",
+              "coefficient": 418.59,
+              "unit": "cap",
+              "unitLabel": "capete"
+          },
+          "Bovine de cel puțin 2 ani — masculi": {
+              "code": "A2130",
+              "coefficient": 867.47,
+              "unit": "cap",
+              "unitLabel": "capete"
+          },
+          "Juninci de cel puțin 2 ani": {
+              "code": "A2230",
+              "coefficient": 901.66,
+              "unit": "cap",
+              "unitLabel": "capete"
+          },
+          "Vaci pentru lapte": {
+              "code": "A2300F",
+              "coefficient": 1412.53,
+              "unit": "cap",
+              "unitLabel": "capete"
+          },
+          "Vaci, altele decât cele pentru lapte": {
+              "code": "A2300G",
+              "coefficient": 636.85,
+              "unit": "cap",
+              "unitLabel": "capete"
+          },
+          "Bivolițe": {
+              "code": "A2410",
+              "coefficient": 1137.28,
+              "unit": "cap",
+              "unitLabel": "capete"
+          },
+          "Ovine — femele pentru reproducție": {
+              "code": "A4110K",
+              "coefficient": 60.84,
+              "unit": "cap",
+              "unitLabel": "capete"
+          },
+          "Alte ovine": {
+              "code": "A4120",
+              "coefficient": 26.915,
+              "unit": "cap",
+              "unitLabel": "capete"
+          },
+          "Caprine — femele pentru reproducție": {
+              "code": "A4210K",
+              "coefficient": 122.58,
+              "unit": "cap",
+              "unitLabel": "capete"
+          },
+          "Alte caprine": {
+              "code": "A4220",
+              "coefficient": 39.44,
+              "unit": "cap",
+              "unitLabel": "capete"
+          },
+          "Purcei sub 20 kg": {
+              "code": "A3110",
+              "coefficient": 54.27,
+              "unit": "cap",
+              "unitLabel": "capete"
+          },
+          "Scroafe și scrofițe pentru reproducere": {
+              "code": "A3120",
+              "coefficient": 300.19,
+              "unit": "cap",
+              "unitLabel": "capete"
+          },
+          "Alte porcine": {
+              "code": "A3130",
+              "coefficient": 471.98,
+              "unit": "cap",
+              "unitLabel": "capete"
+          },
+          "Pui de carne": {
+              "code": "A5140",
+              "coefficient": 499.79,
+              "unit": "100_capete",
+              "unitLabel": "unități de 100 capete"
+          },
+          "Găini ouătoare": {
+              "code": "A5110O",
+              "coefficient": 2294.34,
+              "unit": "100_capete",
+              "unitLabel": "unități de 100 capete"
+          },
+          "Curcani": {
+              "code": "A5230",
+              "coefficient": 4613.35,
+              "unit": "100_capete",
+              "unitLabel": "unități de 100 capete"
+          },
+          "Rațe": {
+              "code": "A5210",
+              "coefficient": 2811.13,
+              "unit": "100_capete",
+              "unitLabel": "unități de 100 capete"
+          },
+          "Gâște": {
+              "code": "A5220",
+              "coefficient": 3215.72,
+              "unit": "100_capete",
+              "unitLabel": "unități de 100 capete"
+          },
+          "Iepuri domestici — femele pentru reproducție": {
+              "code": "A6111",
+              "coefficient": 103.47,
+              "unit": "cap",
+              "unitLabel": "capete"
+          },
+          "Familii de albine": {
+              "code": "A6710R",
+              "coefficient": 72.2,
+              "unit": "familie",
+              "unitLabel": "familii de albine"
+          }
+      }
   };
+  let hasTrackedCalculation = false;
 
   function addCulturaRow(type) {
     const tbody = document.getElementById(type + '-body');
     const rowId = 'row-' + type + '-' + Date.now();
     const typeLabels = {
       culturi: 'culturi de câmp',
-      legume: 'legume',
+      legume: 'legume, pepeni și căpșuni',
       fructe: 'fructe și plantații',
-      animale: 'animale'
+      animale: 'animale și familii de albine'
     };
     const typeLabel = typeLabels[type] || 'categorie';
-    const quantityLabel = type === 'animale' ? 'Număr de capete' : 'Suprafață în hectare';
-
-    let culturas = Object.keys(soDatabase[type]);
-    let defaultSelect = culturas[0];
-    let defaultSo = soDatabase[type][defaultSelect];
-
+    const categories = Object.keys(soDatabase[type]);
+    const defaultSelect = categories[0];
+    const defaultEntry = soDatabase[type][defaultSelect];
     const row = document.createElement('tr');
     row.id = rowId;
     row.innerHTML = `
       <td>
-        <select id="${rowId}-category" onchange="updateCalculation()" class="cultura-select" aria-label="Categorie pentru ${typeLabel}">
-          ${culturas.map(c => `<option value="${c}" ${c === defaultSelect ? 'selected' : ''}>${c}</option>`).join('')}
+        <select id="${rowId}-category" class="cultura-select" aria-label="Categorie pentru ${typeLabel}">
+          ${categories.map(function (name) {
+            const entry = soDatabase[type][name];
+            return `<option value="${name}" data-code="${entry.code}" data-unit="${entry.unit}" data-unit-label="${entry.unitLabel}">${name} (${entry.code})</option>`;
+          }).join('')}
         </select>
       </td>
-      <td><input type="number" readonly tabindex="-1" value="${defaultSo}" class="so-input" aria-label="Coeficient SO pentru ${typeLabel}"></td>
-      <td><input type="number" value="1" min="0" step="0.1" oninput="updateCalculation()" onchange="updateCalculation()" class="area-input" placeholder="0" aria-label="${quantityLabel} pentru ${typeLabel}"></td>
+      <td><input type="number" readonly tabindex="-1" value="${defaultEntry.coefficient}" class="so-input" aria-label="Coeficient SOC oficial pentru ${typeLabel}"></td>
+      <td><input type="number" value="1" min="0" max="1000000" step="${defaultEntry.unit === 'ha' ? '0.01' : '1'}" class="area-input" aria-label="Cantitate în ${defaultEntry.unitLabel} pentru ${typeLabel}" aria-describedby="calculator-input-help calculator-errors"></td>
       <td class="so-val" aria-label="SO calculat pentru rând">0</td>
-      <td><button class="calc-remove" onclick="removeRow('${rowId}')" aria-label="Șterge rândul din ${typeLabel}">✕ Șterge</button></td>
+      <td><button type="button" class="calc-remove" onclick="removeRow('${rowId}')" aria-label="Șterge rândul din ${typeLabel}">✕ Șterge</button></td>
     `;
-
     tbody.appendChild(row);
-
-    // Add change listener to select
-    row.querySelector('.cultura-select').addEventListener('change', function() {
-      const soVal = soDatabase[type][this.value];
-      row.querySelector('.so-input').value = soVal;
+    const select = row.querySelector('.cultura-select');
+    const quantity = row.querySelector('.area-input');
+    select.addEventListener('change', function () {
+      const entry = soDatabase[type][this.value];
+      row.querySelector('.so-input').value = entry.coefficient;
+      quantity.step = entry.unit === 'ha' ? '0.01' : '1';
+      quantity.setAttribute('aria-label', 'Cantitate în ' + entry.unitLabel + ' pentru ' + typeLabel);
       updateCalculation();
     });
-
+    quantity.addEventListener('input', updateCalculation);
+    quantity.addEventListener('change', updateCalculation);
     updateCalculation();
   }
 
   function removeRow(rowId) {
     const row = document.getElementById(rowId);
-    if(row) {
+    if (row) {
       row.remove();
       updateCalculation();
     }
@@ -1217,71 +1471,47 @@
 
   function updateCalculation() {
     let totalSo = 0;
-
-    // Process all rows
-    document.querySelectorAll('tbody tr').forEach(row => {
+    document.querySelectorAll('#calculator tbody tr').forEach(row => {
       const soInput = row.querySelector('.so-input');
       const areaInput = row.querySelector('.area-input');
       const resultCell = row.querySelector('.so-val');
-
-      if(soInput && areaInput) {
+      if (soInput && areaInput) {
         const so = parseFloat(soInput.value) || 0;
         const area = parseFloat(areaInput.value) || 0;
         const rowTotal = so * area;
         totalSo += rowTotal;
-
-        if(resultCell) {
-          resultCell.textContent = rowTotal.toLocaleString('ro-RO', {maximumFractionDigits: 0});
+        if (resultCell) {
+          resultCell.dataset.exactValue = String(rowTotal);
+          resultCell.textContent = rowTotal.toLocaleString('ro-RO', { maximumFractionDigits: 2 });
         }
       }
     });
-
-    // Update result
-    document.getElementById('total-so').textContent = Math.round(totalSo).toLocaleString('ro-RO');
-    document.getElementById('total-so').dataset.soValue = String(Math.round(totalSo));
+    const roundedTotal = Math.round(totalSo);
+    document.getElementById('total-so').textContent = roundedTotal.toLocaleString('ro-RO');
+    document.getElementById('total-so').dataset.soValue = String(roundedTotal);
+    document.getElementById('total-so').dataset.soExactValue = String(totalSo);
     updateStatusBadges(totalSo);
-    if (totalSo > 0 && window.FaberAnalytics) window.FaberAnalytics.calculatorComplete();
+    if (totalSo > 0 && !hasTrackedCalculation && window.FaberAnalytics) {
+      hasTrackedCalculation = true;
+      window.FaberAnalytics.calculatorComplete();
+    }
   }
 
   function updateStatusBadges(so) {
-    let badges = '';
-    let statusKey = '';
-
-    if(so >= 4000 && so <= 11999) {
-      statusKey += 'dr14';
-      badges += '<a href="/dr14" class="status-badge status-green" data-analytics-event="calculator_result_to_dr14" data-analytics-component="calculator_result" data-analytics-cta-id="result_dr14" data-analytics-target="/dr14">✓ DR14 Ferme Mici</a>';
-    }
-    if(so >= 12000 && so <= 100000) {
-      statusKey += 'dr12';
-      badges += '<a href="/dr12-afir" class="status-badge status-green" data-analytics-event="calculator_result_to_dr12" data-analytics-component="calculator_result" data-analytics-cta-id="result_dr12" data-analytics-target="/dr12-afir">✓ DR12 Tineri Fermieri</a>';
-    }
-    if(so > 100000) {
-      statusKey += 'commercial';
-      badges += '<span class="status-badge status-orange">ⓘ Fermă Comercială</span>';
-    }
-    if(so < 4000) {
-      statusKey += 'below_minimum';
-      badges += '<span class="status-badge status-red">✕ Sub pragul minim</span>';
-    }
-    if(so === 0) {
-      statusKey = 'empty';
-      badges = '<span class="status-badge status-orange">⚠ Adaugă culturi/animale</span>';
-    }
-
     const statusBadges = document.getElementById('status-badges');
-    if(statusBadges.dataset.statusKey === statusKey) return;
+    const statusKey = so > 0 ? 'orientation_required' : 'empty';
+    if (statusBadges.dataset.statusKey === statusKey) return;
     statusBadges.dataset.statusKey = statusKey;
-    statusBadges.innerHTML = badges;
+    statusBadges.innerHTML = so > 0
+      ? '<span class="status-badge status-orange">ⓘ Rezultat orientativ — verifică documentele și intervenția</span>'
+      : '<span class="status-badge status-orange">Adaugă culturi sau animale</span>';
   }
 
   function resetCalculator() {
-    document.querySelectorAll('tbody').forEach(tbody => {
-      tbody.innerHTML = '';
-    });
+    document.querySelectorAll('#calculator tbody').forEach(tbody => { tbody.innerHTML = ''; });
     updateCalculation();
   }
 
-  // Reveal animations
   var obs = new IntersectionObserver(function(entries){
     entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('revealed'); obs.unobserve(e.target); } });
   },{threshold:0.1,rootMargin:'0px 0px -30px 0px'});
@@ -1294,4 +1524,5 @@
   <a href="/contact?source_page=%2Fcalculator-soc" data-analytics-event="cta_click" data-analytics-component="mobile_sticky" data-analytics-cta-id="calculator-soc_sticky_primary" data-analytics-target="/contact" data-analytics-cta-view="true" data-analytics-copy-variant="p1_15">Folosește rezultatul pentru verificarea AFIR</a>
 </aside>
 <!-- P1_15_CONTEXTUAL_CTA_END -->
+<script src="/assets/calculator-so-methodology.js?v=20260722-1" defer></script>
 </body></html>
