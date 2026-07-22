@@ -1,7 +1,7 @@
 (function () {
   "use strict";
 
-  var toc = document.querySelector("[data-long-form-toc]");
+  var toc = document.querySelector("[data-long-form-toc]:not([hidden])");
   if (!toc) return;
 
   var disclosure = toc.querySelector("details");

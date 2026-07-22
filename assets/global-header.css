@@ -42,8 +42,17 @@
   padding: 0 22px;
 }
 
-#navbar .nav-logo { display: flex; flex: 0 1 190px; min-width: 150px; align-items: center; }
-#navbar .nav-logo svg { display: block; width: min(100%, 190px); height: auto; }
+#navbar .nav-logo {
+  display: flex;
+  flex: 0 1 209px;
+  min-width: 165px;
+  align-items: center;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+#navbar .nav-logo svg { display: block; width: min(100%, 209px); height: auto; overflow: visible; }
 #navbar .nav-logo:hover svg { transform: scale(1.02); }
 
 #navbar .nav-links { display: flex; align-items: center; justify-content: flex-end; gap: 2px; min-width: 0; }
@@ -105,6 +114,51 @@
 #navbar .nav-dropdown:nth-last-of-type(-n + 2) .nav-dropdown-panel { right: 0; left: auto; }
 #navbar .nav-dropdown-panel[hidden] { display: none; }
 #navbar .nav-dropdown-panel.open { opacity: 1; transform: translateY(0); }
+#navbar .nav-program-panel {
+  width: min(700px, calc(100vw - 32px));
+  padding: 14px;
+}
+#navbar .program-menu-columns {
+  display: grid;
+  grid-template-columns: minmax(190px, .72fr) minmax(330px, 1.28fr);
+  gap: 14px;
+}
+#navbar .program-menu-section { min-width: 0; }
+#navbar .program-menu-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#navbar .program-menu-link {
+  display: grid;
+  gap: 3px;
+  min-height: 58px;
+  align-content: center;
+  padding: 8px 10px;
+  border-radius: var(--radius-sm);
+  color: var(--white);
+  line-height: 1.25;
+}
+#navbar .program-menu-link:hover,
+#navbar .program-menu-link:focus-visible,
+#navbar .program-menu-link[aria-current="page"] { background: rgba(184, 71, 22, .27); }
+#navbar .program-menu-link span { font-size: .82rem; font-weight: 760; }
+#navbar .program-menu-link small { color: rgba(255, 255, 255, .65); font-size: .68rem; font-weight: 560; }
+#navbar .program-menu-all {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  gap: 8px;
+  margin: 8px 4px 0;
+  padding: 8px 10px;
+  color: var(--gold);
+  font-size: .82rem;
+  font-weight: 780;
+}
+#navbar .homepage-navbar-toc__panel { right: 0; left: auto; width: min(340px, calc(100vw - 32px)); }
 #navbar .dropdown-header {
   margin: 0 4px 6px;
   padding: 4px 8px 10px;
@@ -225,6 +279,17 @@
 #mobileMenu .mobile-disclosure-panel[hidden] { display: none; }
 #mobileMenu .mobile-disclosure-panel { padding: 2px 0 8px 12px; }
 #mobileMenu .mobile-disclosure-panel ul { display: grid; gap: 2px; margin: 0; padding: 0; list-style: none; }
+#mobileMenu .mobile-program-heading {
+  margin: 8px 14px 2px;
+  color: var(--gold);
+  font-size: .7rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+#mobileMenu .mobile-program-link { display: grid; gap: 3px; }
+#mobileMenu .mobile-program-link small { color: rgba(255,255,255,.62); font-size: .72rem; }
+#mobileMenu .mobile-program-all { display: inline-flex; min-height: 44px; align-items: center; margin: 4px 14px 10px; color: var(--gold); font-weight: 760; }
 #mobileMenu .mobile-disclosure-panel a {
   display: flex;
   min-height: 44px;
@@ -249,8 +314,8 @@
 
 @media (max-width: 480px) {
   #navbar .nav-container { gap: 8px; padding: 0 12px; }
-  #navbar .nav-logo { flex-basis: 126px; min-width: 112px; }
-  #navbar .nav-logo svg { width: 126px; }
+  #navbar .nav-logo { flex-basis: 139px; min-width: 123px; }
+  #navbar .nav-logo svg { width: 139px; }
   #navbar .nav-compact-cta { min-width: 74px; padding: 7px 8px; }
   #navbar .nav-compact-cta span { font-size: 0; }
   #navbar .nav-compact-cta span::after { content: "Verifică"; font-size: .74rem; }
@@ -348,6 +413,30 @@ main#main-content:focus {
 .eligibility-whatsapp-options span { font-size: .78rem; font-weight: 700; letter-spacing: .8px; text-transform: uppercase; }
 .eligibility-whatsapp-options strong { margin-top: 4px; font-size: 1.05rem; }
 .global-header-spacer { height: 72px; }
+
+.footer-contact-direct,
+.footer-contact-direct a {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+@media (max-width: 480px) {
+  .footer-contact-direct {
+    display: block;
+    max-width: 100%;
+    margin-top: 8px;
+  }
+
+  .contact-layout,
+  .contact-layout > *,
+  .contact-form,
+  .contact-form > *,
+  .form-grid,
+  .form-grid > * {
+    min-width: 0;
+    max-width: 100%;
+  }
+}
 
 @media (max-width: 768px) {
   .eligibility-whatsapp-card { padding: 32px 20px 22px; }

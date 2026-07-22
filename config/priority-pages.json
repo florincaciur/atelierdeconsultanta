@@ -146,22 +146,22 @@
       },
       "interpretation": "Un rezultat aflat foarte aproape de un prag trebuie verificat în evidențele exploatației înainte de alegerea programului. Această este o interpretare de lucru FABER, nu o regulă oficială și nu modifică metoda de calcul publicată de AFIR."
     },
-    "por-adr-nord-est": {
-      "route": "/por-adr-nord-est",
+    "investitii-modernizarea-microintreprinderilor-apel-2": {
+      "route": "/investitii-modernizarea-microintreprinderilor-apel-2",
       "sectionTitle": "Condițiile care trebuie verificate",
-      "directAnswer": "Finanțări IMM în Nord-Est: verifică județul, codul CAEN, amplasamentul, SF/DALI, bugetul și actele; Apelul 2 are pagină separată. Ghid aprobat – depunerea nu este deschisă. Informația a fost verificată la 2026-07-20 în Programul Regional Nord-Est 2021–2027, publicat de ADR Nord-Est; înainte de pregătirea dosarului, consultă sursa oficială pentru eligibilitate, documente și condițiile aplicabile.",
+      "directAnswer": "Apel 2 Nord-Est pentru microîntreprinderi: valori și intensitate conform variantei consultative, plus CAEN, amplasament și documente. Consultare publică – depunerea nu este deschisă. Finanțare conform documentului aflat în consultare: 100.000 EUR/proiect–300.000 EUR/proiect; intensitate 90% (maximum indicat în varianta consultativă); Diferența față de intensitatea aplicabilă și cheltuielile neeligibile.",
       "facts": [
         {
           "term": "Cine este eligibil?",
-          "description": "Categoria beneficiarului diferă între apeluri; pentru firme se verifică dimensiunea IMM, sediul sau locația de implementare, activitatea și situațiile financiare."
+          "description": "Sunt vizate microîntreprinderile care îndeplinesc cerințele regionale, de activitate și amplasament din varianta consultativă."
         },
         {
           "term": "Care este finanțarea?",
-          "description": "Registrul nu publică o valoare până când sursa oficială nu susține exact grantul."
+          "description": "Finanțare conform documentului aflat în consultare: 100.000 EUR/proiect–300.000 EUR/proiect; intensitate 90% (maximum indicat în varianta consultativă); Diferența față de intensitatea aplicabilă și cheltuielile neeligibile."
         },
         {
           "term": "Care este contribuția proprie?",
-          "description": "Registrul nu publică o cofinanțare până când sursa oficială nu susține exact valoarea."
+          "description": "intensitate 90% (maximum indicat în varianta consultativă); Diferența față de intensitatea aplicabilă și cheltuielile neeligibile."
         },
         {
           "term": "Ce cheltuieli sunt eligibile?",
@@ -177,22 +177,22 @@
         },
         {
           "term": "Când se depune?",
-          "description": "Ghid aprobat – depunerea nu este deschisă"
+          "description": "Consultare publică – depunerea nu este deschisă"
         },
         {
           "term": "Ce statut are ghidul?",
-          "description": "Ghid aprobat – depunerea nu este deschisă."
+          "description": "Consultare publică – depunerea nu este deschisă."
         }
       ],
       "source": {
-        "document": "Programul Regional Nord-Est 2021–2027",
+        "document": "Ghidul solicitantului – Apel 2, variantă consultativă",
         "institution": "ADR Nord-Est",
-        "status": "Ghid aprobat – depunerea nu este deschisă. Programul este aprobat, dar valorile și calendarul se confirmă separat în documentele apelului activ.",
-        "url": "https://regionordest.ro/"
+        "status": "Consultare publică – depunerea nu este deschisă. Valorile și condițiile sunt conform variantei consultative și trebuie reconfirmate în ghidul final și anexele apelului.",
+        "url": "https://adrnordest.ro/comentariiGhid/P1Microintreprinderi/Apel2/"
       },
-      "interpretation": "Localitatea și codul CAEN pot exclude un proiect înaintea analizei bugetului. De aceea, hubul ajută la alegerea rutei, dar nu poate substitui matricea apelului. Această este interpretarea FABER, nu o regulă suplimentară.",
-      "programId": "program-regional-nord-est",
-      "lastReviewed": "2026-07-20",
+      "interpretation": "Localitatea, codul CAEN și dreptul asupra spațiului pot exclude un proiect înaintea analizei bugetului. Interpretarea de lucru FABER nu adaugă o regulă suplimentară documentului oficial.",
+      "programId": "modernizare-microintreprinderi-ne-2",
+      "lastReviewed": "2026-06-02",
       "sourceOfTruth": "config/seo-programs.json#programs",
       "publicationState": "public"
     },

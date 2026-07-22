@@ -60,6 +60,30 @@
       "href": "/contact"
     }
   ],
+  "programMenu": {
+    "featuredProgramSlugs": [
+      "modernizare-microintreprinderi-ne-2",
+      "dr12-afir",
+      "dr14-afir",
+      "digitalizare-imm",
+      "pro-infra",
+      "afir-energie-autoconsum"
+    ],
+    "allPrograms": { "label": "Vezi toate programele", "href": "/fonduri-europene" }
+  },
+  "homepageToc": {
+    "label": "Cuprins",
+    "items": [
+      { "label": "Măsuri de finanțare", "href": "/#hero-programs-title" },
+      { "label": "Cum decidem dacă merită continuat", "href": "/#homepage-method-title" },
+      { "label": "Programe prioritare", "href": "/#priority-programs-title" },
+      { "label": "Servicii", "href": "/#homepage-services-title" },
+      { "label": "Instrumente și ghiduri", "href": "/#homepage-tools-title" },
+      { "label": "De ce FABER", "href": "/#homepage-proof-title" },
+      { "label": "Analiza DR 12 vs DR 14", "href": "/#homepage-analysis-title" },
+      { "label": "Contact", "href": "/#homepage-contact-title" }
+    ]
+  },
   "cta": {
     "label": "Începe verificarea proiectului",
     "compactLabel": "Verifică proiectul",

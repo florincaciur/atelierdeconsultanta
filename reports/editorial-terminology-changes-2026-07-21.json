@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-22T10:33:37.975Z",
+  "generatedAt": "2026-07-22T12:10:04.053Z",
   "targetRoutes": 10,
   "changedFiles": [
     "index.html",
@@ -1679,6 +1679,14 @@
       "after": "Cere o verificare inițială Digitalizarea IMM-urilor",
       "reason": "Lexic controlat P0.14",
       "sourceFile": "digitalizare-imm/index.html"
+    },
+    {
+      "route": "/",
+      "location": "positioning",
+      "before": "Analizăm proiectul înainte de pregătirea dosarului: forma solicitantului, activitatea sau exploatația, amplasamentul, investiția, bugetul și documentele. Stabilim ce program poate fi potrivit, ce condiții trebuie demonstrate și ce riscuri pot opri depunerea. Dacă proiectul continuă, corelăm cererea de finanțare cu anexele și documentația tehnică.",
+      "after": "Verificare prudentă, documentată și interdisciplinară — consultanță și proiectare — înainte de dosar. Analizăm proiectul înainte de pregătirea dosarului: forma solicitantului, activitatea sau exploatația, amplasamentul, investiția, bugetul și documentele. Stabilim ce program poate fi potrivit, ce condiții trebuie demonstrate și ce riscuri pot opri depunerea. Dacă proiectul continuă, corelăm cererea de finanțare cu anexele și documentația tehnică.",
+      "reason": "Poziționare centrală FABER",
+      "sourceFile": "index.html"
     }
   ]
 }

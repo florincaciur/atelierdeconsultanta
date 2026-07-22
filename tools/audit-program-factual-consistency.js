@@ -136,10 +136,17 @@ function auditNarrativeClaims(issues, program, $) {
 
 function auditHeader(issues, programs, header) {
   const $ = cheerio.load(header, { decodeEntities: false }, false);
-  const factualNavigation = $("#navbar, #mobileMenu").find("[data-program-status], [data-status-label], [data-verified-at], [data-source-url]");
-  if (factualNavigation.length && programs.length) {
-    addIssue(issues, programs[0], "error", "program-fact-in-navbar", "navbar", "Navigarea P1.02 trebuie să indice numai familii de programe; statusul, data și sursa rămân în registru și pe pagina programului.", "zero atribute factuale", String(factualNavigation.length));
-  }
+  const byId = new Map(programs.map((program) => [program.slug, program]));
+  $("#navbar, #mobileMenu").find("[data-program-id][data-program-status]").each((_, element) => {
+    const node = $(element);
+    const program = byId.get(node.attr("data-program-id"));
+    if (!program) return;
+    compare(issues, program, "status-mismatch", "navbar", program.status, node.attr("data-program-status"), "Statusul măsurii din navigare diferă de registru.");
+    compare(issues, program, "label-mismatch", "navbar", program.statusLabel, node.attr("data-status-label"), "Eticheta măsurii din navigare diferă de registru.");
+    compare(issues, program, "freshness-mismatch", "navbar", program.verifiedAt, node.attr("data-verified-at"), "Data măsurii din navigare diferă de registru.");
+    compare(issues, program, "source-mismatch", "navbar", program.sourceUrl, node.attr("data-source-url"), "Sursa măsurii din navigare diferă de registru.");
+    compare(issues, program, "route-mismatch", "navbar", program.pageUrl, node.attr("href"), "Destinația măsurii din navigare diferă de pagina canonică.");
+  });
 }
 
 function auditProgram(issues, program, context) {
@@ -167,6 +174,13 @@ function auditProgram(issues, program, context) {
       const nodes = jsonLdNodes($, issues, program);
       if (nodes.some((node) => hasType(node, "DefinedTerm") && String(node["@id"] || "").endsWith("#funding-program"))) addIssue(issues, program, "error", "pending-jsonld-published", "json-ld", "Programul în validare nu poate apărea în JSON-LD.", "absent", "present");
     }
+    return;
+  }
+
+  if (program.discovery?.redirectTarget) {
+    const url = `https://atelierdeconsultanta.ro${program.pageUrl}`;
+    if (llms.includes(url)) addIssue(issues, program, "error", "redirect-source-published", "llms.txt", "Sursa unui redirect nu poate rămâne în lista publică de programe.", "absent", url);
+    if (bannersByProgram.has(program.slug)) addIssue(issues, program, "error", "redirect-source-published", "banners.json", "Sursa unui redirect nu poate rămâne în carusel.", "absent", "present");
     return;
   }
 

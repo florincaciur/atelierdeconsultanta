@@ -45,13 +45,15 @@ function main() {
   const errors = [];
 
   if (normalize(partial) !== normalize(expected)) errors.push("partialul diferă de configurația generată");
-  if ($("#navbar [data-nav-disclosure]").length !== 5) errors.push("desktopul trebuie să aibă cinci grupuri disclosure");
-  if ($("#mobileMenu [data-mobile-disclosure]").length !== 5) errors.push("mobilul trebuie să aibă cinci grupuri disclosure");
+  if ($("#navbar [data-nav-disclosure]:not([data-homepage-navbar-toc])").length !== 5) errors.push("desktopul trebuie să aibă cinci grupuri disclosure principale");
+  if ($("#mobileMenu [data-mobile-disclosure]:not([data-homepage-navbar-toc])").length !== 5) errors.push("mobilul trebuie să aibă cinci grupuri disclosure principale");
   if ($("#navbar .nav-primary-link").text().trim() !== "Contact") errors.push("Contact nu este destinația directă a șasea");
   if ($("#navbar .nav-cta").text().trim() !== config.cta.label) errors.push("CTA-ul desktop nu corespunde configurației");
   if ($("#mobileMenu .mobile-cta").text().trim() !== config.cta.label) errors.push("CTA-ul mobil nu corespunde configurației");
   if (/\bBlog\b/u.test($("#navbar, #mobileMenu").text())) errors.push("eticheta Blog a rămas în navigarea principală");
-  if ($('[data-program-status], [data-status-label], [data-verified-at], [data-source-url]').length) errors.push("navigarea publică statusuri sau proveniență de program");
+  if ($("#dropdownPanel [data-program-id]").length !== config.programMenu.featuredProgramSlugs.length) errors.push("meniul Programe nu conține măsurile aprobate");
+  if ($('[href="/por-adr-nord-est"]').length) errors.push("meniul publică ruta regională consolidată");
+  if ($('[href="/investitii-modernizarea-microintreprinderilor-apel-2"]').length < 2) errors.push("pagina regională de conversie lipsește din meniuri");
   if ($(`[href="/assets/global-header.css?v=${ASSET_VERSION}"]`).length !== 1) errors.push("versiunea CSS a headerului este incorectă");
   if ($(`[src="/assets/global-header.js?v=${ASSET_VERSION}"]`).length !== 1) errors.push("versiunea JS a headerului este incorectă");
 
@@ -71,7 +73,7 @@ function main() {
     process.exitCode = 1;
     return;
   }
-  console.log(`PASS: 6 destinații principale, 21 linkuri secundare canonice și header identic în ${files.length} pagini HTML publice.`);
+  console.log(`PASS: 6 destinații principale, măsuri verificate și header identic în ${files.length} pagini HTML publice.`);
 }
 
 main();

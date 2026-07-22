@@ -7,7 +7,6 @@ const DIST = path.join(ROOT, "dist");
 const MAX_REDIRECTS = 10;
 
 const PROGRAM_ROUTES = [
-  "/por-adr-nord-est",
   "/fonduri-regionale",
   "/fonduri-europene-nord-est",
   "/investitii-modernizarea-microintreprinderilor-apel-2",

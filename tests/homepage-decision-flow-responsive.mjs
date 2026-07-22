@@ -32,7 +32,7 @@ try {
       carousels: document.querySelectorAll("main [data-priority-carousel]").length,
       sections: document.querySelectorAll("main > section").length,
       ctaBottom: document.querySelector("#hero .btn-primary")?.getBoundingClientRect().bottom,
-      tocOpen: document.querySelector(".long-form-toc details")?.open
+      tocOpen: document.querySelector("#nav-homepage-toc-trigger")?.getAttribute("aria-expanded") === "true"
     }));
     assert(metrics.overflow <= 0, `${viewport.width}px: scroll orizontal`);
     assert.equal(metrics.forms, 0);

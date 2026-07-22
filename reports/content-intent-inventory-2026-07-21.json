@@ -5,13 +5,13 @@
   "source": "sitemap.xml + HTML local + registrele P0",
   "principle": "Un URL canonic are o singură intenție primară, un părinte și o micro-conversie distinctă.",
   "summary": {
-    "canonicalUrlCount": 95,
-    "inventoriedUrlCount": 95,
+    "canonicalUrlCount": 94,
+    "inventoriedUrlCount": 94,
     "byType": {
       "core": 3,
       "ghid": 34,
       "hub": 17,
-      "program": 16,
+      "program": 15,
       "instrument": 2,
       "serviciu": 17,
       "întrebare": 3,
@@ -20,12 +20,12 @@
     },
     "byIntent": {
       "comercială": 17,
-      "informațională": 61,
+      "informațională": 60,
       "navigațională": 14,
       "locală": 3
     },
     "byRecommendation": {
-      "keep": 71,
+      "keep": 70,
       "rewrite": 19,
       "merge": 5
     },
@@ -49,7 +49,7 @@
       "microConversion": "cta_click către formularul de triere",
       "parent": "ROOT",
       "competingUrls": [],
-      "demonstrableUniqueValue": "23 subtitluri distincte, 1 FAQ și 0 linkuri externe în sursa HTML.",
+      "demonstrableUniqueValue": "24 subtitluri distincte, 0 FAQ și 0 linkuri externe în sursa HTML.",
       "recommendation": "keep",
       "recommendationTarget": null,
       "recommendationReason": "Rol distinct de core, cu o singură intenție primară și conversie proprie.",
@@ -59,8 +59,8 @@
       "evidence": {
         "title": "Consultanță și proiectare fonduri europene | FABER",
         "metaDescription": "FABER oferă consultanță și proiectare pentru proiecte cu fonduri europene: eligibilitate, cereri de finanțare, documentații tehnice și implementare.",
-        "headingCount": 23,
-        "faqCount": 1,
+        "headingCount": 24,
+        "faqCount": 0,
         "externalLinkCount": 0,
         "interactiveControlCount": 2,
         "governanceState": "NEÎNREGISTRAT",
@@ -315,7 +315,7 @@
         "headingCount": 10,
         "faqCount": 5,
         "externalLinkCount": 2,
-        "interactiveControlCount": 12,
+        "interactiveControlCount": 14,
         "governanceState": "NEÎNREGISTRAT",
         "programRegistryState": "NU_ESTE_PROGRAM_ÎN_REGISTRU"
       }
@@ -420,7 +420,7 @@
         "headingCount": 11,
         "faqCount": 0,
         "externalLinkCount": 6,
-        "interactiveControlCount": 12,
+        "interactiveControlCount": 14,
         "governanceState": "NEÎNREGISTRAT",
         "programRegistryState": "NU_ESTE_PROGRAM_ÎN_REGISTRU"
       }
@@ -494,7 +494,7 @@
         "headingCount": 11,
         "faqCount": 0,
         "externalLinkCount": 5,
-        "interactiveControlCount": 12,
+        "interactiveControlCount": 14,
         "governanceState": "NEÎNREGISTRAT",
         "programRegistryState": "NU_ESTE_PROGRAM_ÎN_REGISTRU"
       }
@@ -531,7 +531,7 @@
         "headingCount": 12,
         "faqCount": 0,
         "externalLinkCount": 6,
-        "interactiveControlCount": 12,
+        "interactiveControlCount": 14,
         "governanceState": "NEÎNREGISTRAT",
         "programRegistryState": "NU_ESTE_PROGRAM_ÎN_REGISTRU"
       }
@@ -571,7 +571,7 @@
         "headingCount": 8,
         "faqCount": 0,
         "externalLinkCount": 2,
-        "interactiveControlCount": 12,
+        "interactiveControlCount": 14,
         "governanceState": "NEÎNREGISTRAT",
         "programRegistryState": "NU_ESTE_PROGRAM_ÎN_REGISTRU"
       }
@@ -966,7 +966,7 @@
         "headingCount": 15,
         "faqCount": 6,
         "externalLinkCount": 2,
-        "interactiveControlCount": 12,
+        "interactiveControlCount": 14,
         "governanceState": "NEÎNREGISTRAT",
         "programRegistryState": "NU_ESTE_PROGRAM_ÎN_REGISTRU"
       }
@@ -1003,7 +1003,7 @@
         "headingCount": 11,
         "faqCount": 0,
         "externalLinkCount": 6,
-        "interactiveControlCount": 12,
+        "interactiveControlCount": 14,
         "governanceState": "NEÎNREGISTRAT",
         "programRegistryState": "NU_ESTE_PROGRAM_ÎN_REGISTRU"
       }
@@ -1042,7 +1042,7 @@
         "headingCount": 12,
         "faqCount": 0,
         "externalLinkCount": 6,
-        "interactiveControlCount": 12,
+        "interactiveControlCount": 14,
         "governanceState": "NEÎNREGISTRAT",
         "programRegistryState": "NU_ESTE_PROGRAM_ÎN_REGISTRU"
       }
@@ -1154,7 +1154,7 @@
         "headingCount": 12,
         "faqCount": 0,
         "externalLinkCount": 5,
-        "interactiveControlCount": 12,
+        "interactiveControlCount": 14,
         "governanceState": "NEÎNREGISTRAT",
         "programRegistryState": "NU_ESTE_PROGRAM_ÎN_REGISTRU"
       }
@@ -1301,7 +1301,7 @@
         "headingCount": 21,
         "faqCount": 2,
         "externalLinkCount": 7,
-        "interactiveControlCount": 12,
+        "interactiveControlCount": 14,
         "governanceState": "public",
         "programRegistryState": "NU_ESTE_PROGRAM_ÎN_REGISTRU"
       }
@@ -2235,7 +2235,7 @@
       "microConversion": "cta_click:project_check_how",
       "parent": "/fonduri-europene",
       "competingUrls": [],
-      "demonstrableUniqueValue": "11 subtitluri distincte, 6 FAQ și 4 linkuri externe în sursa HTML.",
+      "demonstrableUniqueValue": "10 subtitluri distincte, 6 FAQ și 3 linkuri externe în sursa HTML.",
       "recommendation": "keep",
       "recommendationTarget": null,
       "recommendationReason": "Rol distinct de hub, cu o singură intenție primară și conversie proprie.",
@@ -2245,9 +2245,9 @@
       "evidence": {
         "title": "Fonduri regionale 2021–2027 și ADR-uri | FABER",
         "metaDescription": "Programe regionale 2021–2027: identificarea ADR-ului, apelului, solicitantului, localizării, documentelor și sursei oficiale aplicabile.",
-        "headingCount": 11,
+        "headingCount": 10,
         "faqCount": 6,
-        "externalLinkCount": 4,
+        "externalLinkCount": 3,
         "interactiveControlCount": 5,
         "governanceState": "public",
         "programRegistryState": "public"
@@ -2618,17 +2618,17 @@
       "sitemapFamily": "programs",
       "type": "program",
       "primaryAudience": "Companii și entități cu investiții energetice",
-      "mainQuestion": "Care este statutul verificat și ce trebuie analizat pentru „Investiții pentru modernizarea microîntreprinderilor – Apel 2 Nord-Est”?",
-      "queryCluster": "investitii modernizarea microintreprinderilor apel 2; Investiții pentru modernizarea microîntreprinderilor Apel 2 Nord-Est",
+      "mainQuestion": "Care este statutul verificat și ce trebuie analizat pentru „Investiții pentru modernizarea microîntreprinderilor – Apel 2”?",
+      "queryCluster": "investitii modernizarea microintreprinderilor apel 2; Investiții pentru modernizarea microîntreprinderilor Apel 2",
       "primaryIntent": "informațională",
-      "h1": "Investiții pentru modernizarea microîntreprinderilor – Apel 2 Nord-Est",
-      "uniquePromise": "Centralizează statutul, sursa oficială și pașii de verificare pentru „Investiții pentru modernizarea microîntreprinderilor – Apel 2 Nord-Est”.",
-      "cta": "Solicită verificare eligibilitate pentru Apel 2",
-      "ctaTarget": "/contact",
-      "microConversion": "cta_click:investitii_modernizarea_microintreprinderilor_apel_2_contact_1",
+      "h1": "Investiții pentru modernizarea microîntreprinderilor – Apel 2",
+      "uniquePromise": "Centralizează statutul, sursa oficială și pașii de verificare pentru „Investiții pentru modernizarea microîntreprinderilor – Apel 2”.",
+      "cta": "Verifică proiectul",
+      "ctaTarget": "/contact?program=modernizare-microintreprinderi-ne-2",
+      "microConversion": "cta_click:modernizare-microintreprinderi-ne-2_long_form_decision",
       "parent": "/finantari-panouri-fotovoltaice",
       "competingUrls": [],
-      "demonstrableUniqueValue": "Înregistrare în registrul unic al programelor; 19 subtitluri, 8 FAQ și sursă: ADR Nord-Est.",
+      "demonstrableUniqueValue": "Înregistrare în registrul unic al programelor; 11 subtitluri, 12 FAQ și sursă: ADR Nord-Est.",
       "recommendation": "keep",
       "recommendationTarget": null,
       "recommendationReason": "Rol distinct de program, cu o singură intenție primară și conversie proprie.",
@@ -2638,8 +2638,8 @@
       "evidence": {
         "title": "Modernizarea microîntreprinderilor – Apel 2 | FABER",
         "metaDescription": "Apel 2 Nord-Est pentru microîntreprinderi: valori și intensitate conform variantei consultative, plus CAEN, amplasament și documente.",
-        "headingCount": 19,
-        "faqCount": 8,
+        "headingCount": 11,
+        "faqCount": 12,
         "externalLinkCount": 1,
         "interactiveControlCount": 0,
         "governanceState": "public",
@@ -2865,41 +2865,6 @@
         "interactiveControlCount": 0,
         "governanceState": "NEÎNREGISTRAT",
         "programRegistryState": "NU_ESTE_PROGRAM_ÎN_REGISTRU"
-      }
-    },
-    {
-      "url": "https://atelierdeconsultanta.ro/por-adr-nord-est",
-      "route": "/por-adr-nord-est",
-      "sourceFile": "por-adr-nord-est/index.html",
-      "sitemapFamily": "programs",
-      "type": "program",
-      "primaryAudience": "Solicitanți din regiunea vizată",
-      "mainQuestion": "Care este statutul verificat și ce trebuie analizat pentru „Programul Regional Nord-Est 2021–2027”?",
-      "queryCluster": "por adr nord est; Programul Regional Nord-Est 2021 2027",
-      "primaryIntent": "informațională",
-      "h1": "Programul Regional Nord-Est 2021–2027",
-      "uniquePromise": "Centralizează statutul, sursa oficială și pașii de verificare pentru „Programul Regional Nord-Est 2021–2027”.",
-      "cta": "Verifică proiectul",
-      "ctaTarget": "/contact?program=program-regional-nord-est",
-      "microConversion": "cta_click:program-regional-nord-est_long_form_decision",
-      "parent": "/fonduri-europene",
-      "competingUrls": [],
-      "demonstrableUniqueValue": "Înregistrare în registrul unic al programelor; 11 subtitluri, 12 FAQ și sursă: ADR Nord-Est.",
-      "recommendation": "keep",
-      "recommendationTarget": null,
-      "recommendationReason": "Rol distinct de program, cu o singură intenție primară și conversie proprie.",
-      "decisionState": "APROBAT_PENTRU_ARHITECTURĂ",
-      "owner": "Consultant programe + editor coordonator",
-      "nextReviewAt": "2026-09-18",
-      "evidence": {
-        "title": "Program Regional Nord-Est: finanțări IMM și apeluri | FABER",
-        "metaDescription": "Finanțări IMM în Nord-Est: verifică județul, codul CAEN, amplasamentul, SF/DALI, bugetul și actele; Apelul 2 are pagină separată.",
-        "headingCount": 11,
-        "faqCount": 12,
-        "externalLinkCount": 2,
-        "interactiveControlCount": 0,
-        "governanceState": "public",
-        "programRegistryState": "public"
       }
     },
     {

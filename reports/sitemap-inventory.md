@@ -6,10 +6,10 @@ Generatorul include numai rute locale 200, indexabile si self-canonical. `lastmo
 
 - URL-uri raportate in auditul initial: 102
 - URL-uri in baseline-ul repository la inceputul P0.11: 92
-- URL-uri incluse acum: 95
-- URL-uri cu lastmod editorial verificabil: 19
+- URL-uri incluse acum: 94
+- URL-uri cu lastmod editorial verificabil: 18
 - URL-uri fara lastmod (omis intentionat): 76
-- sitemap-programs.xml: 17 (Pagini de programe)
+- sitemap-programs.xml: 16 (Pagini de programe)
 - sitemap-guides.xml: 30 (Ghiduri si continut editorial)
 - sitemap-core.xml: 48 (Pagini core, servicii, instrumente si juridice)
 
@@ -19,7 +19,7 @@ Generatorul include numai rute locale 200, indexabile si self-canonical. `lastmo
 - missing_canonical: 2
 - noindex_meta: 67
 - noncanonical_file_variant: 2
-- redirect_source: 94
+- redirect_source: 96
 
 ## Lista excluderilor
 
@@ -177,8 +177,10 @@ Generatorul include numai rute locale 200, indexabile si self-canonical. `lastmo
 | https://atelierdeconsultanta.ro/digitalizare-imm-pnrr | _redirects | redirect_source | HTTP 301 |
 | https://atelierdeconsultanta.ro/digitalizare-imm-pnrr | _redirects | redirect_source | HTTP 301 |
 | https://atelierdeconsultanta.ro/pocidif-21 | _redirects | redirect_source | HTTP 301 |
-| https://atelierdeconsultanta.ro/por-adr-nord-est | _redirects | redirect_source | HTTP 301 |
-| https://atelierdeconsultanta.ro/por-adr-nord-est | _redirects | redirect_source | HTTP 301 |
+| https://atelierdeconsultanta.ro/por-adr-nord-est | por-adr-nord-est/index.html | redirect_source | - |
+| https://atelierdeconsultanta.ro/investitii-modernizarea-microintreprinderilor-apel-2 | _redirects | redirect_source | HTTP 301 |
+| https://atelierdeconsultanta.ro/investitii-modernizarea-microintreprinderilor-apel-2 | _redirects | redirect_source | HTTP 301 |
+| https://atelierdeconsultanta.ro/investitii-modernizarea-microintreprinderilor-apel-2 | _redirects | redirect_source | HTTP 301 |
 | https://atelierdeconsultanta.ro/pro-infra | _redirects | redirect_source | HTTP 301 |
 | https://atelierdeconsultanta.ro/start-up-nation-2026-idei-afaceri | _redirects | redirect_source | HTTP 301 |
 | https://atelierdeconsultanta.ro/start-up-nation-2026-idei-afaceri | _redirects | redirect_source | HTTP 301 |

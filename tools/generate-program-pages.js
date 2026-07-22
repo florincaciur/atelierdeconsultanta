@@ -1655,7 +1655,7 @@ function renderMicroApel2Content(page) {
 
   return `
       <p class="intro"><strong>Investiții pentru modernizarea microîntreprinderilor – Apel 2</strong> este pagina dedicată exclusiv acestei sesiuni din Programul Regional Nord-Est. Ea urmărește solicitantul, localizarea, codul CAEN, amplasamentul, situațiile financiare, cheltuielile și cofinanțarea necesare proiectului. În forma consultativă analizată, granturile sunt între 100.000 și 300.000 euro, cu intensitate maximă de 90%; valorile și condițiile se reconfirmă în documentele active ADR Nord-Est.</p>
-      <p class="note">Pentru cadrul general, celelalte apeluri și rolul autorității regionale, consultă <a href="/por-adr-nord-est">Programul Regional Nord-Est – finanțări pentru IMM și microîntreprinderi</a>. Pagina curentă nu este un hub general și rămâne limitată la Apelul 2.</p>
+      <p class="note">Apelul 2 aparține Programului Regional Nord-Est. Pagina curentă concentrează condițiile, documentele și traseul de verificare pentru această măsură de finanțare.</p>
 
       <section aria-labelledby="apel2-beneficii-title">
         <h2 id="apel2-beneficii-title">De ce merită analizat Apelul 2</h2>
@@ -2157,7 +2157,7 @@ ${editorialHtml}
         <a href="/dr14">DR 14 AFIR</a>
         <a href="/start-up-nation-2026">Start-Up Nation</a>
         <a href="/digitalizare-imm">Digitalizare IMM</a>
-        <a href="/por-adr-nord-est">POR / ADR Nord-Est</a>
+        <a href="/investitii-modernizarea-microintreprinderilor-apel-2">Modernizarea microîntreprinderilor – Apel 2</a>
         <a href="/fonduri-europene-agricultura">Fonduri europene agricultură</a>
         <a href="/fondul-de-modernizare">Fondul de Modernizare</a>
       </div>
@@ -2555,7 +2555,7 @@ ${renderDecisionMatrix(page)}
           <thead><tr><th>Beneficiar</th><th>Ghiduri de pornire</th><th>Intrebarea care decide urmatorul pas</th></tr></thead>
           <tbody>
             <tr><td>Fermier sau exploatatie agricola</td><td><a href="/afir">AFIR</a>, <a href="/dr12-afir">DR12</a>, <a href="/dr14">DR14</a>, <a href="/calculator-soc">calculator SO/SOC</a></td><td>Exploatatia si investitia pot fi dovedite prin documente coerente?</td></tr>
-            <tr><td>IMM existent</td><td><a href="/fonduri-europene-imm">fonduri IMM</a>, <a href="/digitalizare-imm">digitalizare</a>, <a href="/por-adr-nord-est">regional</a></td><td>Codul CAEN, localizarea si bugetul se potrivesc cu apelul activ?</td></tr>
+            <tr><td>IMM existent</td><td><a href="/fonduri-europene-imm">fonduri IMM</a>, <a href="/digitalizare-imm">digitalizare</a>, <a href="/investitii-modernizarea-microintreprinderilor-apel-2">regional</a></td><td>Codul CAEN, localizarea si bugetul se potrivesc cu apelul activ?</td></tr>
             <tr><td>Start-up</td><td><a href="/start-up-nation-2026">Start-Up Nation</a>, <a href="/cod-caen-start-up-nation-2026">cod CAEN</a>, <a href="/start-up-nation-2026-plan-de-afaceri">plan de afaceri</a></td><td>Activitatea, cofinantarea si cheltuielile pot fi sustinute realist?</td></tr>
             <tr><td>Proiect energetic</td><td><a href="/fondul-de-modernizare">Fondul de Modernizare</a>, <a href="/finantari-panouri-fotovoltaice">fotovoltaice</a>, <a href="/afir-autoconsum-agroalimentar">autoconsum agroalimentar</a></td><td>Consumul, amplasamentul, avizele si dimensionarea sunt documentate?</td></tr>
           </tbody>

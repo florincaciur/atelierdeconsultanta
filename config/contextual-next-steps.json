@@ -81,34 +81,6 @@
         }
       ]
     },
-    "por-adr-nord-est": {
-      "route": "/por-adr-nord-est",
-      "file": "por-adr-nord-est/index.html",
-      "replacedLinkCount": 10,
-      "title": "Următorul pas util",
-      "links": [
-        {
-          "href": "/investitii-modernizarea-microintreprinderilor-apel-2",
-          "anchor": "verifică Apelul 2 pentru microîntreprinderi",
-          "explanation": "Consultă pagina apelului concret dacă investiția urmărește modernizarea unei microîntreprinderi."
-        },
-        {
-          "href": "/proiectare-fonduri-europene",
-          "anchor": "verifică traseul SF, DALI și proiect tehnic",
-          "explanation": "Stabilește documentația tehnică necesară după tipul investiției, amplasament și cerințele apelului regional."
-        },
-        {
-          "href": "/fonduri-regionale",
-          "anchor": "identifică programul regional potrivit",
-          "explanation": "Compară logică programelor regionale înainte de alegerea unui apel și a documentației."
-        },
-        {
-          "href": "/verificare-eligibilitate-fonduri-europene",
-          "anchor": "verifică eligibilitatea investiției regionale",
-          "explanation": "Corelează județul, codul CAEN, amplasamentul, bugetul și actele firmei cu apelul ales."
-        }
-      ]
-    },
     "femeia-antreprenor-2026": {
       "route": "/femeia-antreprenor-2026",
       "file": "femeia-antreprenor-2026.html",
@@ -219,7 +191,7 @@
       "title": "Alege apelul și documentația potrivite",
       "links": [
         {
-          "href": "/por-adr-nord-est",
+          "href": "/investitii-modernizarea-microintreprinderilor-apel-2",
           "anchor": "verifică hubul Programului Regional Nord-Est",
           "explanation": "Separă regulile generale ale programului de condițiile fiecărui apel pentru firme sau beneficiari publici."
         },
@@ -247,7 +219,7 @@
       "title": "Continuă verificarea proiectului din Nord-Est",
       "links": [
         {
-          "href": "/por-adr-nord-est",
+          "href": "/investitii-modernizarea-microintreprinderilor-apel-2",
           "anchor": "consultă Programul Regional Nord-Est",
           "explanation": "Verifică județul, solicitantul și tipul apelului înainte de folosirea unor valori sau termene."
         },
@@ -275,7 +247,7 @@
       "title": "Alege serviciile necesare proiectului IMM",
       "links": [
         {
-          "href": "/por-adr-nord-est",
+          "href": "/investitii-modernizarea-microintreprinderilor-apel-2",
           "anchor": "verifică apelurile regionale pentru IMM",
           "explanation": "Identifică programul și apelul potrivite după regiune, dimensiunea firmei și investiție."
         },
@@ -377,7 +349,7 @@
       "title": "Continuă pregătirea pentru Apelul 2",
       "links": [
         {
-          "href": "/por-adr-nord-est",
+          "href": "/investitii-modernizarea-microintreprinderilor-apel-2",
           "anchor": "revino la hubul Programului Regional Nord-Est",
           "explanation": "Compară acest apel concret cu celelalte trasee ale programului fără a transfera automat valori."
         },

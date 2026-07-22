@@ -24,7 +24,9 @@ for (const file of generatedFiles) {
 
 const parsed = readSitemapEntries(ROOT, policy.indexFile, policy.site);
 assert.equal(parsed.documents.length, policy.families.length + 1, "the index must reference every and only the configured family sitemaps");
-assert.equal(parsed.entries.length, 95, "P0.11 canonical inventory changed; review and approve the new before/after count");
+assert.equal(parsed.entries.length, 94, "P0.11 canonical inventory changed; the approved POR consolidation must leave exactly 94 canonical URLs");
+assert(!parsed.entries.some((entry) => new URL(entry.url).pathname === "/por-adr-nord-est"), "approved POR source redirect must stay out of sitemap");
+assert(parsed.entries.some((entry) => new URL(entry.url).pathname === "/investitii-modernizarea-microintreprinderilor-apel-2"), "approved regional conversion target must remain in sitemap");
 assert.equal(new Set(parsed.entries.map((entry) => entry.url)).size, parsed.entries.length, "sitemap URLs must be unique");
 
 const familyFiles = new Set(policy.families.map((family) => family.file));

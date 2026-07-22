@@ -275,6 +275,9 @@ function auditSiteLinks(options = {}) {
   let anchorFragmentsChecked = 0;
 
   for (const link of links) {
+    const sourceRoute = new URL(sourceUrlForFile(link.sourceFile)).pathname.replace(/\/$/u, "") || "/";
+    const sourceRedirect = redirects.find((rule) => rule.status >= 300 && rule.status < 400 && redirectDestination(rule, sourceRoute));
+    if (sourceRedirect) continue;
     if (link.kind === "form" && link.route.startsWith("/api/")) continue;
     const full = path.join(root, link.targetFile);
     if (!fs.existsSync(full)) {

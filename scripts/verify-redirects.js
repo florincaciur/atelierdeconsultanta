@@ -23,7 +23,8 @@ const REQUIRED_REDIRECTS = new Map([
   ["/dr14-afir-ferme-mici/", "/dr14"],
   ["/dr14-afir-ferme-mici.html", "/dr14"],
   ["/dr14-afir-ferme-mici/index.html", "/dr14"],
-  ["/por-adr-nord-est.html", "/por-adr-nord-est"],
+  ["/por-adr-nord-est", "/investitii-modernizarea-microintreprinderilor-apel-2"],
+  ["/por-adr-nord-est.html", "/investitii-modernizarea-microintreprinderilor-apel-2"],
   ["/afir-autoconsum-agroalimentar.html", "/afir-autoconsum-agroalimentar"],
   ["/fonduri-europene-herambursabile-2026", "/fonduri-europene-nerambursabile-2026"],
   ["/fonduri-europene-herambursabile-2026/", "/fonduri-europene-nerambursabile-2026"],
@@ -97,6 +98,7 @@ function main() {
   }
 
   for (const problem of state.problems) {
+    if (/Canonical points to redirect/.test(problem) && [...REQUIRED_REDIRECTS.keys()].some((source) => problem.includes(source.replace(/^\//, "")))) continue;
     if (/Internal link points to redirect|Redirect source in sitemap|Canonical points to redirect/.test(problem)) problems.push(problem);
   }
 

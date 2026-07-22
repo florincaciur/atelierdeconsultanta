@@ -184,18 +184,10 @@ function insertToc(html, route, root, toc) {
     const insertionPoint = match.index + match[0].length;
     return `${html.slice(0, insertionPoint)}\n${toc}\n    ${html.slice(insertionPoint).replace(/^\s*/, "")}`;
   }
-  const heroMarker = "<!-- HOMEPAGE_DECISION_HERO_END -->";
-  let markerIndex = html.indexOf(heroMarker);
-  if (markerIndex < 0) {
-    const heroStart = html.search(/<section\b[^>]*id=["']hero["'][^>]*>/i);
-    const heroEnd = heroStart >= 0 ? html.indexOf("</section>", heroStart) : -1;
-    if (heroEnd < 0) throw new Error("home: secțiunea hero nu poate ancora cuprinsul.");
-    const heroInsertionPoint = heroEnd + "</section>".length;
-    html = `${html.slice(0, heroInsertionPoint)}\n${heroMarker}${html.slice(heroInsertionPoint)}`;
-    markerIndex = heroInsertionPoint + 1;
+  if (!/data-homepage-navbar-toc/i.test(html)) {
+    throw new Error("home: cuprinsul trebuie să existe în navbar, nu ca secțiune separată în hero.");
   }
-  const insertionPoint = markerIndex + heroMarker.length;
-  return `${html.slice(0, insertionPoint)}\n${toc}\n${html.slice(insertionPoint).replace(/^\s*/, "")}`;
+  return html;
 }
 
 function addAssets(html) {

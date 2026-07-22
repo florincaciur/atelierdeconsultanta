@@ -79,7 +79,6 @@ included,core,https://atelierdeconsultanta.ro/plan-de-afaceri-fonduri-europene,p
 included,guides,https://atelierdeconsultanta.ro/pnrr-digitalizare-imm-cheltuieli-eligibile,pnrr-digitalizare-imm-cheltuieli-eligibile.html,,,
 included,programs,https://atelierdeconsultanta.ro/pocidif-21,pocidif-21/index.html,2026-07-13,,
 included,core,https://atelierdeconsultanta.ro/politica-de-confidentialitate,politica-de-confidentialitate.html,,,
-included,programs,https://atelierdeconsultanta.ro/por-adr-nord-est,por-adr-nord-est/index.html,2026-07-20,,
 included,guides,https://atelierdeconsultanta.ro/programul-tranzitie-justa-intrebari-documente,programul-tranzitie-justa-intrebari-documente/index.html,,,
 included,core,https://atelierdeconsultanta.ro/proiectare-fonduri-europene,proiectare-fonduri-europene/index.html,,,
 included,guides,https://atelierdeconsultanta.ro/resurse,resurse/index.html,,,
@@ -246,8 +245,10 @@ excluded,,https://atelierdeconsultanta.ro/digitalizare-imm-pnrr,_redirects,,redi
 excluded,,https://atelierdeconsultanta.ro/digitalizare-imm-pnrr,_redirects,,redirect_source,HTTP 301
 excluded,,https://atelierdeconsultanta.ro/digitalizare-imm-pnrr,_redirects,,redirect_source,HTTP 301
 excluded,,https://atelierdeconsultanta.ro/pocidif-21,_redirects,,redirect_source,HTTP 301
-excluded,,https://atelierdeconsultanta.ro/por-adr-nord-est,_redirects,,redirect_source,HTTP 301
-excluded,,https://atelierdeconsultanta.ro/por-adr-nord-est,_redirects,,redirect_source,HTTP 301
+excluded,,https://atelierdeconsultanta.ro/por-adr-nord-est,por-adr-nord-est/index.html,,redirect_source,
+excluded,,https://atelierdeconsultanta.ro/investitii-modernizarea-microintreprinderilor-apel-2,_redirects,,redirect_source,HTTP 301
+excluded,,https://atelierdeconsultanta.ro/investitii-modernizarea-microintreprinderilor-apel-2,_redirects,,redirect_source,HTTP 301
+excluded,,https://atelierdeconsultanta.ro/investitii-modernizarea-microintreprinderilor-apel-2,_redirects,,redirect_source,HTTP 301
 excluded,,https://atelierdeconsultanta.ro/pro-infra,_redirects,,redirect_source,HTTP 301
 excluded,,https://atelierdeconsultanta.ro/start-up-nation-2026-idei-afaceri,_redirects,,redirect_source,HTTP 301
 excluded,,https://atelierdeconsultanta.ro/start-up-nation-2026-idei-afaceri,_redirects,,redirect_source,HTTP 301

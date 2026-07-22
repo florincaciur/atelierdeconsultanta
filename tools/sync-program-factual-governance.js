@@ -344,11 +344,13 @@ function syncLlmsText(source, programs) {
     const escaped = `https://atelierdeconsultanta.ro${program.pageUrl}`.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
     output = output.replace(new RegExp(`^[-*] [^\\r\\n]*${escaped}(?=\\s|$)[^\\r\\n]*(?:\\r?\\n  [^\\r\\n]*)?\\r?\\n?`, "gm"), "");
   }
-  const entries = programs
-    .filter(isPublicProgram)
+    const entries = programs
+      .filter((program) => isPublicProgram(program) && !program.discovery?.redirectTarget)
     .map((program) => `- https://atelierdeconsultanta.ro${program.pageUrl}\n  ${program.shortName} — ${program.statusLabel}. ${program.editorialDisclaimer || ""}`)
     .join("\n\n");
-  const latest = programs.filter(isPublicProgram).reduce((value, program) => program.verifiedAt > value ? program.verifiedAt : value, "0000-00-00");
+    const latest = programs
+      .filter((program) => isPublicProgram(program) && !program.discovery?.redirectTarget)
+      .reduce((value, program) => program.verifiedAt > value ? program.verifiedAt : value, "0000-00-00");
   const block = `${markerStart}\n## Guvernanță factuală a programelor\n\n- Sursa unică de adevăr: ${REGISTRY_REF}.\n- Statusurile și valorile nu sunt deduse din URL-uri sau din texte editoriale locale.\n- Înregistrările pending_validation sunt excluse din suprafețele publice.\n- Ultima verificare din registrul public: ${latest}\n\n${entries}\n${markerEnd}`;
   return `${output}\n\n${block}\n`;
 }

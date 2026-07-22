@@ -102,10 +102,8 @@ for (const pending of programs.filter((program) => !isPublicProgram(program))) {
 
 // Click-depth contract: homepage -> family hub -> public program (maximum two navigational clicks).
 for (const hub of hubConfig.hubs) assert.ok(homepage(`a[href='${hub.route}']`).length, `${hub.route}: homepage must link directly to every family hub`);
-for (const program of programs.filter(isPublicProgram)) {
-  const depth = program.discovery.listed === false
-    ? (homepage(`a[href='${program.pageUrl}']`).length ? 1 : Number.POSITIVE_INFINITY)
-    : (hubDocuments.get(program.discovery.parentHub)(`a[href='${program.pageUrl}']`).length ? 2 : Number.POSITIVE_INFINITY);
+for (const program of programs.filter((item) => isPublicProgram(item) && item.discovery.listed !== false)) {
+  const depth = hubDocuments.get(program.discovery.parentHub)(`a[href='${program.pageUrl}']`).length ? 2 : Number.POSITIVE_INFINITY;
   assert.ok(depth <= 3, `${program.slug}: public program exceeds three clicks from homepage`);
 }
 

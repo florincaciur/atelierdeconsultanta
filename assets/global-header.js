@@ -19,6 +19,17 @@
   var mobileMenu = document.getElementById("mobileMenu");
   if (!navbar || !hamburgerBtn || !mobileMenu) return;
 
+  var isHomepage = document.body.classList.contains("page-family-home");
+  Array.prototype.slice.call(document.querySelectorAll("[data-homepage-navbar-toc]")).forEach(function (toc) {
+    toc.hidden = !isHomepage;
+    if (isHomepage && toc.closest("#navbar")) {
+      toc.setAttribute("data-long-form-toc", "");
+      Array.prototype.slice.call(toc.querySelectorAll("[data-homepage-toc-link]")).forEach(function (link) {
+        link.setAttribute("data-long-form-toc-link", "");
+      });
+    }
+  });
+
   var desktopDisclosures = Array.prototype.slice.call(navbar.querySelectorAll("[data-nav-disclosure]"));
   var mobileDisclosures = Array.prototype.slice.call(mobileMenu.querySelectorAll("[data-mobile-disclosure]"));
   var eligibilityDialog = document.getElementById("eligibility-whatsapp-dialog");

@@ -111,11 +111,6 @@
     }
   },
   "programs": {
-    "program-regional-nord-est": {
-      "instrument": "eligibility_check",
-      "comparison": "regional_nord_est",
-      "conversionAnchor": "Verifică încadrarea în Programul Regional Nord-Est"
-    },
     "fonduri-regionale": {
       "instrument": "eligibility_check",
       "comparison": "regional_nord_est",

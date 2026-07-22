@@ -8,32 +8,6 @@
   },
   "files": [
     {
-      "programId": "program-regional-nord-est",
-      "route": "/por-adr-nord-est",
-      "file": "por-adr-nord-est/index.html",
-      "removedManagedBlocks": 0,
-      "removedManagedLinks": 0,
-      "resultingRelations": [
-        "parent",
-        "instrument",
-        "comparison",
-        "conversion"
-      ]
-    },
-    {
-      "programId": "fonduri-regionale",
-      "route": "/fonduri-regionale",
-      "file": "fonduri-regionale/index.html",
-      "removedManagedBlocks": 0,
-      "removedManagedLinks": 0,
-      "resultingRelations": [
-        "parent",
-        "instrument",
-        "comparison",
-        "conversion"
-      ]
-    },
-    {
       "programId": "dr12-afir",
       "route": "/dr12-afir",
       "file": "dr12-afir/index.html",

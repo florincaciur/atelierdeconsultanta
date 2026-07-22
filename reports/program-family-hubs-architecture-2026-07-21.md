@@ -62,7 +62,7 @@ Statusul folosește exclusiv taxonomia registrului: `apel_deschis`, `ghid_aproba
 
 | Program | Pagină | Hub părinte unic | Stare registru | Card public |
 |---|---|---|---|---|
-| Programul Regional Nord-Est | `/por-adr-nord-est` | Regional / ADR — `/fonduri-regionale` | `public` | Da |
+| Programul Regional Nord-Est | `/por-adr-nord-est` | Regional / ADR — `/fonduri-regionale` | `public` | Nu — pagina este chiar hub-ul |
 | Fonduri regionale | `/fonduri-regionale` | Regional / ADR — `/fonduri-regionale` | `public` | Nu — pagina este chiar hub-ul |
 | DR12 AFIR | `/dr12-afir` | AFIR & agricultură — `/afir` | `public` | Da |
 | DR14 AFIR | `/dr14` | AFIR & agricultură — `/afir` | `public` | Da |

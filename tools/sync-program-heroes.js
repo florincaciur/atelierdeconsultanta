@@ -13,7 +13,7 @@ const BANNERS_PATH = path.join(ROOT, "banners.json");
 const PROGRAM_HERO_CSS = "/assets/program-heroes.css";
 
 const PROGRAM_ROUTES = Object.freeze([
-  "/por-adr-nord-est",
+  "/investitii-modernizarea-microintreprinderilor-apel-2",
   "/fonduri-regionale",
   "/dr12-afir",
   "/afir-autoconsum-agroalimentar",
@@ -31,14 +31,14 @@ const PROGRAM_ROUTES = Object.freeze([
 const PRIORITY_ROUTES = Object.freeze([
   "/dr12-afir",
   "/dr14",
-  "/por-adr-nord-est",
+  "/investitii-modernizarea-microintreprinderilor-apel-2",
   "/afir-autoconsum-agroalimentar",
   "/pro-infra",
   "/pocidif-21"
 ]);
 
 const BANNER_ALIASES = Object.freeze({
-  "/fonduri-regionale": "/por-adr-nord-est"
+  "/fonduri-regionale": "/investitii-modernizarea-microintreprinderilor-apel-2"
 });
 
 const FAMILY_BY_ROUTE = Object.freeze({

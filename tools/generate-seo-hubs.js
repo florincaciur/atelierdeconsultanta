@@ -199,7 +199,7 @@ const pages = [
     audience: ["microîntreprinderi, întreprinderi mici și mijlocii", "firme cu investiții în utilaje, software, energie sau extindere", "antreprenori care vor o evaluare înainte de pregătirea dosarului"],
     checks: ["încadrarea IMM și datele financiare", "codul CAEN autorizat sau autorizabil", "cofinanțarea și capacitatea de implementare"],
     steps: ["stabilește investiția și obiectivele economice", "verifică programul regional sau național potrivit", "pregătește bugetul și documentele firmei", "corelează proiectul cu punctajul programului"],
-    links: [related.consultanta, related.nordest, related.digitalizare, related.startup, ["/por-adr-nord-est", "POR ADR Nord-Est"], related.eligibilitate],
+    links: [related.consultanta, related.nordest, related.digitalizare, related.startup, ["/investitii-modernizarea-microintreprinderilor-apel-2", "Modernizarea microîntreprinderilor – Apel 2"], related.eligibilitate],
   },
   {
     slug: "fonduri-europene-agricultura",
@@ -476,7 +476,7 @@ const pages = [
     audience: ["microîntreprinderi", "întreprinderi mici și mijlocii", "firme care vor să compare programe de finanțare"],
     checks: ["încadrarea IMM", "codul CAEN și istoricul financiar", "bugetul, contribuția proprie și documentele"],
     steps: ["transmite datele firmei", "descrie investiția", "verificăm programele potrivite", "pregătim lista de documente"],
-    links: [related.nordest, related.imm, related.consultanta, ["/por-adr-nord-est", "POR ADR Nord-Est"], related.digitalizare, related.contact],
+    links: [related.nordest, related.imm, related.consultanta, ["/investitii-modernizarea-microintreprinderilor-apel-2", "Modernizarea microîntreprinderilor – Apel 2"], related.digitalizare, related.contact],
   },
   {
     slug: "greseli-fonduri-europene",
@@ -673,7 +673,7 @@ const existing = [
   ["/fondul-de-modernizare", "0.8"],
   ["/afir-autoconsum-agroalimentar", "0.8"],
   ["/autoconsum-public-fotovoltaice-institutii-publice", "0.8"],
-  ["/por-adr-nord-est", "0.8"],
+  ["/investitii-modernizarea-microintreprinderilor-apel-2", "0.8"],
   ["/fonduri-europene-nord-est", "0.8"],
   ["/pro-infra", "0.8"],
   ["/calculator-soc", "0.8"],

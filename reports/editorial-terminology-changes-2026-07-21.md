@@ -2,7 +2,7 @@
 
 - Suprafețe țintă: 10
 - Fișiere HTML actualizate la această rulare: 10
-- Fragmente documentate cumulativ: 208
+- Fragmente documentate cumulativ: 209
 - Migrare surse editoriale realizată: da
 - Textele juridice nu fac parte din corpusul rescris automat.
 - Statusurile și câmpurile factuale din registrul programelor sunt protejate.
@@ -217,3 +217,4 @@
 | /dr12-afir | dr12-afir/index.html:visible-copy | Verifică eligibilitatea DR-12 Investiții în consolidarea exploatațiilor tinerilor fermieri instalați și a fermierilor cu vârsta de până la 45 de ani | Cere o verificare inițială DR-12 Investiții în consolidarea exploatațiilor tinerilor fermieri instalați și a fermierilor cu vârsta de până la 45 de ani | Lexic controlat P0.14 |
 | /dr14 | dr14/index.html:visible-copy | Verifică eligibilitatea DR-14 Investiții în fermele de mici dimensiuni | Cere o verificare inițială DR-14 Investiții în fermele de mici dimensiuni | Lexic controlat P0.14 |
 | /digitalizare-imm | digitalizare-imm/index.html:visible-copy | Verifică eligibilitatea Digitalizarea IMM-urilor | Cere o verificare inițială Digitalizarea IMM-urilor | Lexic controlat P0.14 |
+| / | index.html:positioning | Analizăm proiectul înainte de pregătirea dosarului: forma solicitantului, activitatea sau exploatația, amplasamentul, investiția, bugetul și documentele. Stabilim ce program poate fi potrivit, ce condiții trebuie demonstrate și ce riscuri pot opri depunerea. Dacă proiectul continuă, corelăm cererea de finanțare cu anexele și documentația tehnică. | Verificare prudentă, documentată și interdisciplinară — consultanță și proiectare — înainte de dosar. Analizăm proiectul înainte de pregătirea dosarului: forma solicitantului, activitatea sau exploatația, amplasamentul, investiția, bugetul și documentele. Stabilim ce program poate fi potrivit, ce condiții trebuie demonstrate și ce riscuri pot opri depunerea. Dacă proiectul continuă, corelăm cererea de finanțare cu anexele și documentația tehnică. | Poziționare centrală FABER |

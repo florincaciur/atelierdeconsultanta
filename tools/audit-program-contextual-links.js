@@ -54,7 +54,8 @@ function validateTarget(href, sitemapSet, redirects) {
 
 function auditProgramContextualLinks() {
   const config = loadConfig();
-  const programs = loadProgramConfig().programs.filter(isPublicProgram);
+  const programs = loadProgramConfig().programs
+    .filter((program) => isPublicProgram(program) && program.discovery?.listed !== false);
   const sitemapSet = new Set(sitemapRoutes(ROOT));
   const redirects = redirectSources();
   const errors = [];

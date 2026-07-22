@@ -11,6 +11,7 @@ const {
 const ROOT = path.resolve(__dirname, "..");
 const HOME = path.join(ROOT, "index.html");
 const STYLE_FILE = path.join(ROOT, "assets", "homepage-hero.css");
+const NAVIGATION_CONFIG = JSON.parse(fs.readFileSync(path.join(ROOT, "config", "main-navigation.json"), "utf8"));
 const CHECK_ONLY = process.argv.includes("--check");
 const START = "<!-- HOMEPAGE_DECISION_HERO_START -->";
 const END = "<!-- HOMEPAGE_DECISION_HERO_END -->";
@@ -40,7 +41,28 @@ function latestVerifiedProgram(programs) {
     ))[0];
 }
 
-function renderHero(program, publicCount) {
+function renderProgramMenu(programs) {
+  const bySlug = new Map(programs.map((program) => [program.slug, program]));
+  const featured = NAVIGATION_CONFIG.programMenu.featuredProgramSlugs.map((slug) => bySlug.get(slug));
+  if (featured.some((item) => !item || !isPublicProgram(item) || !hasOfficialSource(item))) {
+    throw new Error("Meniul interactiv din hero conține un program absent sau neverificat.");
+  }
+  const first = featured[0];
+  const items = featured.map((item, index) => `              <li><a href="${escapeHtml(item.pageUrl)}" data-hero-program-item data-program-id="${escapeHtml(item.slug)}" data-program-status="${escapeHtml(item.status)}" data-status-label="${escapeHtml(item.statusLabel)}" data-verified-at="${escapeHtml(item.verifiedAt)}" data-source-url="${escapeHtml(item.sourceUrl)}" data-title="${escapeHtml(item.shortName)}" data-status="${escapeHtml(item.statusLabel)}" data-analytics-event="program_card_click" data-analytics-component="homepage_hero_program_menu" data-analytics-cta-id="hero_program_${escapeHtml(item.slug)}" data-analytics-program-slug="${escapeHtml(item.slug)}" data-analytics-program-family="${escapeHtml(item.family)}"${index === 0 ? ' aria-current="true"' : ""}>${escapeHtml(item.shortName)}</a></li>`).join("\n");
+  return `<div class="hero-programs" data-hero-programs aria-labelledby="hero-programs-title">
+            <div class="hero-programs__heading"><h2 id="hero-programs-title">Măsuri de finanțare</h2><span data-hero-program-count>1 / ${featured.length}</span></div>
+            <div class="hero-program-spotlight" id="hero-program-spotlight" aria-live="polite">
+              <span data-hero-program-status>${escapeHtml(first.statusLabel)}</span>
+              <strong data-hero-program-title>${escapeHtml(first.shortName)}</strong>
+              <a href="${escapeHtml(first.pageUrl)}" data-hero-program-link>Vezi condițiile</a>
+            </div>
+            <ul class="hero-programs-list" aria-label="Alege o măsură de finanțare">
+${items}
+            </ul>
+          </div>`;
+}
+
+function renderHero(program, publicCount, programs) {
   if (!program) throw new Error("Registrul nu conține niciun program public cu sursă oficială completă.");
   return `${START}
     <!-- Copy-ul și traseul vizual au fost restaurate din bannerul FABER anterior; CTA-ul urmează contractul contextual P1.15. -->
@@ -49,12 +71,11 @@ function renderHero(program, publicCount) {
         <div class="homepage-hero__copy">
           <div class="hero-badge"><span class="dot" aria-hidden="true"></span>FABER pentru firme, fermieri, start-up-uri și IMM-uri</div>
           <h1 class="hero-title" id="homepage-hero-title">Consultanță și proiectare pentru proiecte <span class="gradient-text">cu fonduri europene</span></h1>
-          <p class="hero-subtitle">Verificare prudentă, documentată și interdisciplinară — consultanță și proiectare — înainte de dosar. Verificăm forma solicitantului, CAEN-ul sau exploatația, amplasamentul, bugetul și documentele înainte de alegerea programului. Pentru proiectele care continuă, corelăm cererea de finanțare cu anexele și documentația tehnică.</p>
+          <p class="hero-subtitle">Verificare prudentă, documentată și interdisciplinară — consultanță și proiectare — înainte de dosar. Analizăm forma solicitantului, activitatea sau exploatația, amplasamentul, investiția, bugetul și documentele. Stabilim ce program poate fi potrivit, ce condiții trebuie demonstrate și ce riscuri pot opri depunerea. Dacă proiectul continuă, corelăm cererea de finanțare cu anexele și documentația tehnică.</p>
           <div class="hero-ctas" aria-label="Acțiuni principale">
             <a href="/contact?source_page=%2F" class="btn-primary" data-contextual-hero-cta data-analytics-event="cta_click" data-analytics-component="homepage_hero" data-analytics-cta-id="homepage_hero_project_check" data-analytics-target="/contact" data-analytics-cta-view="true" data-analytics-copy-variant="p1_15">Începe verificarea proiectului</a>
             <a href="/verificare-eligibilitate-fonduri-europene" class="btn-secondary" data-analytics-event="cta_click" data-analytics-component="homepage_hero" data-analytics-cta-id="homepage_hero_prepare" data-analytics-target="/verificare-eligibilitate-fonduri-europene" data-analytics-cta-view="true" data-analytics-copy-variant="p1_15">Vezi ce date pregătești</a>
           </div>
-          <p class="homepage-hero__microcopy">Spune-ne solicitantul, localitatea și investiția. Prima etapă este o verificare orientativă; nu promitem aprobarea.</p>
         </div>
 
         <aside class="homepage-hero__panel hero-flow" aria-label="Traseul unui proiect de finanțare" data-homepage-hero-latest-program data-program-id="${escapeHtml(program.slug)}" data-program-status="${escapeHtml(program.status)}" data-status-label="${escapeHtml(program.statusLabel)}" data-verified-at="${escapeHtml(program.verifiedAt)}" data-source-url="${escapeHtml(program.sourceUrl)}" data-public-program-count="${publicCount}">
@@ -69,6 +90,7 @@ function renderHero(program, publicCount) {
             <g><circle cx="468" cy="96" r="22" fill="rgba(184,71,22,0.22)" stroke="#e8642a" stroke-width="1.6"></circle><path d="M459 104 v-7 h5 v7 M466 104 v-12 h5 v12 M473 104 v-9 h5 v9 M457 104 h23" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path><text x="468" y="138" text-anchor="middle" class="hf-label">Implementare</text></g>
           </svg>
           <p class="hero-flow-caption">Fiecare etapă trebuie susținută de documentele folosite în etapa următoare.</p>
+          ${renderProgramMenu(programs)}
         </aside>
       </div>
     </section>
@@ -78,7 +100,7 @@ ${END}`;
 function syncHomepageHero(source, programs) {
   const latest = latestVerifiedProgram(programs);
   const publicCount = programs.filter(isPublicProgram).length;
-  const hero = renderHero(latest, publicCount);
+  const hero = renderHero(latest, publicCount, programs);
   const marked = new RegExp(`${START}[\\s\\S]*?${END}`);
   let output = marked.test(source)
     ? source.replace(marked, hero)
@@ -87,11 +109,14 @@ function syncHomepageHero(source, programs) {
   const criticalCss = fs.readFileSync(STYLE_FILE, "utf8").trim();
   output = output
     .replace(/\s*<link rel="stylesheet" href="\/assets\/homepage-hero\.css[^>]*>/g, "")
+    .replace(/\s*<script\b[^>]*data-homepage-hero-script[^>]*><\/script>/gi, "")
     .replace(new RegExp(`\\s*<style id="${STYLE_ID}">[\\s\\S]*?<\\/style>`), "");
   const criticalMarkup = `  <style id="${STYLE_ID}">\n${criticalCss}\n  </style>\n`;
+  const runtimeMarkup = '  <script src="/assets/homepage-hero.js?v=20260722-2" defer data-homepage-hero-script="p1_21"></script>\n';
   output = /<style id="homepage-faq-expand-css">/.test(output)
     ? output.replace(/(<style id="homepage-faq-expand-css">)/, `${criticalMarkup}  $1`)
     : output.replace(/<\/head>/i, `${criticalMarkup}</head>`);
+  output = output.replace(/<\/head>/i, `${runtimeMarkup}</head>`);
   return output;
 }
 

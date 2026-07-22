@@ -117,28 +117,28 @@
       "statusLabel": "Apel deschis"
     },
     {
-      "route": "/por-adr-nord-est",
-      "primaryIntent": "identificarea apelurilor regionale pentru IMM și microîntreprinderi din Nord-Est",
-      "primaryQuery": "Programul Regional Nord-Est IMM",
+      "route": "/investitii-modernizarea-microintreprinderilor-apel-2",
+      "primaryIntent": "verificarea condițiilor Apelului 2 pentru modernizarea microîntreprinderilor din Nord-Est",
+      "primaryQuery": "modernizarea microîntreprinderilor Apel 2 Nord-Est",
       "secondaryQueries": [
         "POR ADR Nord-Est",
-        "apeluri IMM Nord-Est",
-        "fonduri microîntreprinderi Nord-Est"
+        "apel 2 microîntreprinderi Nord-Est",
+        "investiții microîntreprinderi ADR Nord-Est"
       ],
-      "title": "Program Regional Nord-Est: finanțări IMM și apeluri | FABER",
-      "description": "Finanțări IMM în Nord-Est: verifică județul, codul CAEN, amplasamentul, SF/DALI, bugetul și actele; Apelul 2 are pagină separată.",
-      "ogTitle": "Program Regional Nord-Est: finanțări IMM și apeluri | FABER",
-      "ogDescription": "Finanțări IMM în Nord-Est: verifică județul, codul CAEN, amplasamentul, SF/DALI, bugetul și actele; Apelul 2 are pagină separată.",
+      "title": "Modernizarea microîntreprinderilor – Apel 2 | FABER",
+      "description": "Apel 2 Nord-Est pentru microîntreprinderi: valori și intensitate conform variantei consultative, plus CAEN, amplasament și documente.",
+      "ogTitle": "Modernizarea microîntreprinderilor – Apel 2 | FABER",
+      "ogDescription": "Apel 2 Nord-Est pentru microîntreprinderi: valori și intensitate conform variantei consultative, plus CAEN, amplasament și documente.",
       "sourceOfTruth": [
         "config/seo-programs.json#programs",
-        "https://regionordest.ro/"
+        "https://adrnordest.ro/comentariiGhid/P1Microintreprinderi/Apel2/"
       ],
-      "factualStatus": "final",
-      "lastReviewed": "2026-07-20",
-      "notes": "Folosește denumirea actuală Programul Regional Nord-Est; POR ADR Nord-Est rămâne interogare secundară istorică.",
+      "factualStatus": "consultative",
+      "lastReviewed": "2026-06-02",
+      "notes": "Pagina concentrează Apelul 2; ruta istorică POR ADR Nord-Est redirecționează direct aici conform aprobării beneficiarului.",
       "publicationState": "public",
-      "programStatus": "ghid_aprobat_nedeschis",
-      "statusLabel": "Ghid aprobat – depunerea nu este deschisă"
+      "programStatus": "consultare_publica",
+      "statusLabel": "Consultare publică – depunerea nu este deschisă"
     },
     {
       "route": "/contact",

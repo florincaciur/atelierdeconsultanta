@@ -69,9 +69,18 @@
         }
       ],
       "relatedLinks": [
-        { "href": "/calculator-soc", "label": "Calculator SO" },
-        { "href": "/consultanta-afir", "label": "Consultanță AFIR" },
-        { "href": "/acte-necesare-fonduri-europene-nerambursabile", "label": "Ghid pentru documente" }
+        {
+          "href": "/calculator-soc",
+          "label": "Calculator SO"
+        },
+        {
+          "href": "/consultanta-afir",
+          "label": "Consultanță AFIR"
+        },
+        {
+          "href": "/acte-necesare-fonduri-europene-nerambursabile",
+          "label": "Ghid pentru documente"
+        }
       ]
     },
     {
@@ -108,10 +117,22 @@
         }
       ],
       "relatedLinks": [
-        { "href": "/por-adr-nord-est", "label": "Programul Regional Nord-Est" },
-        { "href": "/eligibilitate-fonduri-europene", "label": "Ghid de eligibilitate" },
-        { "href": "/acte-necesare-fonduri-europene-nerambursabile", "label": "Ghid pentru documente" },
-        { "href": "/programul-tranzitie-justa-intrebari-documente", "label": "Documente pentru Tranziție Justă" }
+        {
+          "href": "/investitii-modernizarea-microintreprinderilor-apel-2",
+          "label": "Modernizarea microîntreprinderilor – Apel 2"
+        },
+        {
+          "href": "/eligibilitate-fonduri-europene",
+          "label": "Ghid de eligibilitate"
+        },
+        {
+          "href": "/acte-necesare-fonduri-europene-nerambursabile",
+          "label": "Ghid pentru documente"
+        },
+        {
+          "href": "/programul-tranzitie-justa-intrebari-documente",
+          "label": "Documente pentru Tranziție Justă"
+        }
       ]
     },
     {
@@ -148,9 +169,18 @@
         }
       ],
       "relatedLinks": [
-        { "href": "/digitalizare-imm", "label": "Digitalizare IMM" },
-        { "href": "/cheltuieli-eligibile-digitalizare-imm", "label": "Cheltuieli pentru digitalizare" },
-        { "href": "/instrumente", "label": "Instrumente de verificare" }
+        {
+          "href": "/digitalizare-imm",
+          "label": "Digitalizare IMM"
+        },
+        {
+          "href": "/cheltuieli-eligibile-digitalizare-imm",
+          "label": "Cheltuieli pentru digitalizare"
+        },
+        {
+          "href": "/instrumente",
+          "label": "Instrumente de verificare"
+        }
       ]
     },
     {
@@ -187,9 +217,18 @@
         }
       ],
       "relatedLinks": [
-        { "href": "/fondul-de-modernizare", "label": "Fondul pentru Modernizare" },
-        { "href": "/afir-autoconsum-agroalimentar", "label": "Autoconsum agroalimentar" },
-        { "href": "/cum-se-calculeaza-cofinantarea-fonduri-europene", "label": "Ghid despre contribuția proprie" }
+        {
+          "href": "/fondul-de-modernizare",
+          "label": "Fondul pentru Modernizare"
+        },
+        {
+          "href": "/afir-autoconsum-agroalimentar",
+          "label": "Autoconsum agroalimentar"
+        },
+        {
+          "href": "/cum-se-calculeaza-cofinantarea-fonduri-europene",
+          "label": "Ghid despre contribuția proprie"
+        }
       ]
     },
     {
@@ -226,14 +265,38 @@
         }
       ],
       "relatedLinks": [
-        { "href": "/apeluri-gal", "label": "Apeluri GAL" },
-        { "href": "/start-up-nation-2026", "label": "Start-Up Nation" },
-        { "href": "/cum-se-calculeaza-cofinantarea-fonduri-europene", "label": "Ghid despre contribuția proprie" },
-        { "href": "/consultant-fonduri-europene-imm", "label": "Consultanță pentru IMM" },
-        { "href": "/fonduri-europene-caen/0111-culturi-cereale", "label": "Repere CAEN pentru culturi agricole" },
-        { "href": "/fonduri-europene-caen/4321-instalatii-electrice", "label": "Repere CAEN pentru instalații electrice" },
-        { "href": "/fonduri-europene-caen/5610-restaurante", "label": "Repere CAEN pentru restaurante" },
-        { "href": "/fonduri-europene-caen/6201-dezvoltare-software", "label": "Repere CAEN pentru software" }
+        {
+          "href": "/apeluri-gal",
+          "label": "Apeluri GAL"
+        },
+        {
+          "href": "/start-up-nation-2026",
+          "label": "Start-Up Nation"
+        },
+        {
+          "href": "/cum-se-calculeaza-cofinantarea-fonduri-europene",
+          "label": "Ghid despre contribuția proprie"
+        },
+        {
+          "href": "/consultant-fonduri-europene-imm",
+          "label": "Consultanță pentru IMM"
+        },
+        {
+          "href": "/fonduri-europene-caen/0111-culturi-cereale",
+          "label": "Repere CAEN pentru culturi agricole"
+        },
+        {
+          "href": "/fonduri-europene-caen/4321-instalatii-electrice",
+          "label": "Repere CAEN pentru instalații electrice"
+        },
+        {
+          "href": "/fonduri-europene-caen/5610-restaurante",
+          "label": "Repere CAEN pentru restaurante"
+        },
+        {
+          "href": "/fonduri-europene-caen/6201-dezvoltare-software",
+          "label": "Repere CAEN pentru software"
+        }
       ]
     }
   ]

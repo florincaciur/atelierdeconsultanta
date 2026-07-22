@@ -33,11 +33,11 @@
 </head>
 <body class="page-family-energy" data-program-id="fondul-de-modernizare" data-analytics-page-type="program" data-analytics-program-slug="fondul-de-modernizare" data-analytics-program-family="energie" data-publication-state="pending_validation" data-program-registry="config/seo-programs.json#programs" data-editorial-record="fondul-de-modernizare" data-governance-state="pending_validation">
 <a class="skip-link global-skip-link" href="#main-content">Sari la conținut</a>
-  <!-- GLOBAL_HEADER_START --><link rel="stylesheet" href="/assets/global-header.css?v=20260721-3">
+  <!-- GLOBAL_HEADER_START --><link rel="stylesheet" href="/assets/global-header.css?v=20260722-5">
 <nav id="navbar" aria-label="Navigare principală" data-navigation-config="config/main-navigation.json">
   <div class="nav-container">
     <a class="nav-logo" href="/" aria-label="FABER – Atelier de Consultanță, acasă" data-analytics-event="nav_click" data-analytics-component="desktop_nav" data-analytics-cta-id="home_logo" data-analytics-target="/">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 44" width="240" height="44" aria-hidden="true">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 44" width="264" height="48.4" aria-hidden="true">
         <text x="0" y="32" font-family="Georgia,'Times New Roman',serif" font-size="28" font-weight="700" fill="#b84716" letter-spacing="3">FABER</text>
         <path d="M118,22 L125,13 L132,22 L125,31 Z" fill="white" opacity="0.95"></path>
         <text x="138" y="18" font-family="'Inter','Helvetica Neue',sans-serif" font-size="10" font-weight="600" fill="white" letter-spacing="2">ATELIER de</text>
@@ -59,19 +59,35 @@
           </ul>
         </div>
       </div>
-      <div class="nav-dropdown" data-nav-disclosure data-nav-group="programe">
+      <div class="nav-dropdown nav-dropdown--programs" data-nav-disclosure data-nav-group="programe">
         <button class="nav-dropdown-btn" type="button" id="dropdownBtn" aria-expanded="false" aria-controls="dropdownPanel" data-nav-trigger-id="nav-programe-trigger" data-analytics-event="program_menu_click" data-analytics-component="desktop_nav_disclosure" data-analytics-cta-id="nav_programe_toggle">
           Programe <span class="arrow" aria-hidden="true"></span>
         </button>
-        <div class="nav-dropdown-panel" id="dropdownPanel" aria-labelledby="dropdownBtn" hidden>
-          <p class="dropdown-header">Programe</p>
-          <ul class="nav-submenu-list">
-          <li><a href="/afir" class="dropdown-item" data-analytics-event="nav_click" data-analytics-component="desktop_nav" data-analytics-cta-id="nav_programe_afir" data-analytics-target="/afir">AFIR &amp; agricultură</a></li>
-          <li><a href="/fonduri-regionale" class="dropdown-item" data-analytics-event="nav_click" data-analytics-component="desktop_nav" data-analytics-cta-id="nav_programe_fonduri_regionale" data-analytics-target="/fonduri-regionale">Regional / ADR</a></li>
-          <li><a href="/fonduri-europene-digitalizare" class="dropdown-item" data-analytics-event="nav_click" data-analytics-component="desktop_nav" data-analytics-cta-id="nav_programe_fonduri_europene_digitalizare" data-analytics-target="/fonduri-europene-digitalizare">Digitalizare &amp; inovare</a></li>
-          <li><a href="/finantari-panouri-fotovoltaice" class="dropdown-item" data-analytics-event="nav_click" data-analytics-component="desktop_nav" data-analytics-cta-id="nav_programe_finantari_panouri_fotovoltaice" data-analytics-target="/finantari-panouri-fotovoltaice">Energie</a></li>
-          <li><a href="/fonduri-europene-imm" class="dropdown-item" data-analytics-event="nav_click" data-analytics-component="desktop_nav" data-analytics-cta-id="nav_programe_fonduri_europene_imm" data-analytics-target="/fonduri-europene-imm">Antreprenoriat &amp; GAL</a></li>
-          </ul>
+        <div class="nav-dropdown-panel nav-program-panel" id="dropdownPanel" aria-labelledby="dropdownBtn" hidden>
+          <div class="program-menu-columns">
+            <section class="program-menu-section" aria-labelledby="program-menu-family-title">
+              <p class="dropdown-header" id="program-menu-family-title">Familii de programe</p>
+              <ul class="nav-submenu-list">
+              <li><a href="/afir" class="dropdown-item" data-analytics-event="nav_click" data-analytics-component="desktop_nav" data-analytics-cta-id="nav_programe_afir" data-analytics-target="/afir">AFIR &amp; agricultură</a></li>
+              <li><a href="/fonduri-regionale" class="dropdown-item" data-analytics-event="nav_click" data-analytics-component="desktop_nav" data-analytics-cta-id="nav_programe_fonduri_regionale" data-analytics-target="/fonduri-regionale">Regional / ADR</a></li>
+              <li><a href="/fonduri-europene-digitalizare" class="dropdown-item" data-analytics-event="nav_click" data-analytics-component="desktop_nav" data-analytics-cta-id="nav_programe_fonduri_europene_digitalizare" data-analytics-target="/fonduri-europene-digitalizare">Digitalizare &amp; inovare</a></li>
+              <li><a href="/finantari-panouri-fotovoltaice" class="dropdown-item" data-analytics-event="nav_click" data-analytics-component="desktop_nav" data-analytics-cta-id="nav_programe_finantari_panouri_fotovoltaice" data-analytics-target="/finantari-panouri-fotovoltaice">Energie</a></li>
+              <li><a href="/fonduri-europene-imm" class="dropdown-item" data-analytics-event="nav_click" data-analytics-component="desktop_nav" data-analytics-cta-id="nav_programe_fonduri_europene_imm" data-analytics-target="/fonduri-europene-imm">Antreprenoriat &amp; GAL</a></li>
+              </ul>
+            </section>
+            <section class="program-menu-section" aria-labelledby="program-menu-measures-title">
+              <p class="dropdown-header" id="program-menu-measures-title">Măsuri de finanțare</p>
+              <ul class="program-menu-list">
+              <li><a href="/investitii-modernizarea-microintreprinderilor-apel-2" class="program-menu-link" data-program-id="modernizare-microintreprinderi-ne-2" data-program-status="consultare_publica" data-status-label="Consultare publică – depunerea nu este deschisă" data-verified-at="2026-06-02" data-source-url="https://adrnordest.ro/comentariiGhid/P1Microintreprinderi/Apel2/" data-analytics-event="nav_click" data-analytics-component="desktop_nav_program" data-analytics-cta-id="nav_programe_investitii_modernizarea_microintreprinderilor_apel_2" data-analytics-target="/investitii-modernizarea-microintreprinderilor-apel-2"><span>Modernizarea microîntreprinderilor – Apel 2</span><small>Consultare publică – depunerea nu este deschisă</small></a></li>
+              <li><a href="/dr12-afir" class="program-menu-link" data-program-id="dr12-afir" data-program-status="consultare_publica" data-status-label="Ghid consultativ – depunerea nu este deschisă. Condițiile se pot modifica." data-verified-at="2026-07-22" data-source-url="https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/" data-analytics-event="nav_click" data-analytics-component="desktop_nav_program" data-analytics-cta-id="nav_programe_dr12_afir" data-analytics-target="/dr12-afir"><span>DR12 AFIR</span><small>Ghid consultativ – depunerea nu este deschisă. Condițiile se pot modifica.</small></a></li>
+              <li><a href="/dr14" class="program-menu-link" data-program-id="dr14-afir" data-program-status="consultare_publica" data-status-label="Ghid consultativ – depunerea nu este deschisă. Condițiile se pot modifica." data-verified-at="2026-07-22" data-source-url="https://www.afir.ro/api/file?filename=Ghidul+Solicitantului+DR-14+VARIANTA+CONSULTATIV%C4%82&amp;filetype=pdf&amp;url=%2Fmedia%2Fbkmpo5fo%2Fgs-consultativ-dr-14.pdf" data-analytics-event="nav_click" data-analytics-component="desktop_nav_program" data-analytics-cta-id="nav_programe_dr14" data-analytics-target="/dr14"><span>DR14 AFIR</span><small>Ghid consultativ – depunerea nu este deschisă. Condițiile se pot modifica.</small></a></li>
+              <li><a href="/digitalizare-imm" class="program-menu-link" data-program-id="digitalizare-imm" data-program-status="apel_inchis" data-status-label="Apel închis – depunerea nu este deschisă" data-verified-at="2026-07-22" data-source-url="https://mfe.gov.ro/pnrr-ordinul-nr-607-28-04-2026-pentru-modificarea-ghidului-solicitantului-digitalizarea-imm-urilor-grant-de-pana-la-100-000-euro-pe-intreprindere-care-sa-sprijine-imm-urile-in-adoptarea-tehnologii/" data-analytics-event="nav_click" data-analytics-component="desktop_nav_program" data-analytics-cta-id="nav_programe_digitalizare_imm" data-analytics-target="/digitalizare-imm"><span>Digitalizare IMM</span><small>Apel închis – depunerea nu este deschisă</small></a></li>
+              <li><a href="/pro-infra" class="program-menu-link" data-program-id="pro-infra" data-program-status="ghid_aprobat_nedeschis" data-status-label="Schemă aprobată – depunerea nu este deschisă" data-verified-at="2026-07-22" data-source-url="https://legislatie.just.ro/Public/DetaliiDocument/306915" data-analytics-event="nav_click" data-analytics-component="desktop_nav_program" data-analytics-cta-id="nav_programe_pro_infra" data-analytics-target="/pro-infra"><span>PRO INFRA</span><small>Schemă aprobată – depunerea nu este deschisă</small></a></li>
+              <li><a href="/afir-autoconsum-agroalimentar" class="program-menu-link" data-program-id="afir-energie-autoconsum" data-program-status="apel_deschis" data-status-label="Apel deschis" data-verified-at="2026-07-20" data-source-url="https://www.afir.ro/media/hkfp4w0v/ghidul-solicitantului-schem%C4%83-energie-autoconsum-v7-iunie-2026.pdf" data-analytics-event="nav_click" data-analytics-component="desktop_nav_program" data-analytics-cta-id="nav_programe_afir_autoconsum_agroalimentar" data-analytics-target="/afir-autoconsum-agroalimentar"><span>AFIR Autoconsum Agroalimentar</span><small>Apel deschis</small></a></li>
+              </ul>
+            </section>
+          </div>
+          <a class="program-menu-all" href="/fonduri-europene" data-analytics-event="nav_click" data-analytics-component="desktop_nav" data-analytics-cta-id="nav_programe_fonduri_europene" data-analytics-target="/fonduri-europene">Vezi toate programele <span aria-hidden="true">→</span></a>
         </div>
       </div>
       <div class="nav-dropdown" data-nav-disclosure data-nav-group="instrumente">
@@ -116,6 +132,22 @@
           </ul>
         </div>
       </div>
+      <div class="nav-dropdown homepage-navbar-toc" data-nav-disclosure data-nav-group="cuprins" data-homepage-navbar-toc hidden>
+        <button class="nav-dropdown-btn" type="button" id="nav-homepage-toc-trigger" aria-expanded="false" aria-controls="nav-homepage-toc-panel" data-analytics-event="nav_click" data-analytics-component="desktop_nav_disclosure" data-analytics-cta-id="nav_cuprins_toggle">
+          Cuprins <span class="arrow" aria-hidden="true"></span>
+        </button>
+        <div class="nav-dropdown-panel homepage-navbar-toc__panel" id="nav-homepage-toc-panel" aria-labelledby="nav-homepage-toc-trigger" hidden>
+          <p class="dropdown-header">Cuprins</p>
+          <nav aria-label="Cuprinsul paginii"><ol class="nav-submenu-list">          <li><a href="/#hero-programs-title" class="dropdown-item" data-homepage-toc-link aria-current="location" data-analytics-event="nav_click" data-analytics-component="desktop_homepage_toc" data-analytics-cta-id="nav_cuprins_hero_programs_title" data-analytics-target="/#hero-programs-title">Măsuri de finanțare</a></li>
+          <li><a href="/#homepage-method-title" class="dropdown-item" data-homepage-toc-link data-analytics-event="nav_click" data-analytics-component="desktop_homepage_toc" data-analytics-cta-id="nav_cuprins_homepage_method_title" data-analytics-target="/#homepage-method-title">Cum decidem dacă merită continuat</a></li>
+          <li><a href="/#priority-programs-title" class="dropdown-item" data-homepage-toc-link data-analytics-event="nav_click" data-analytics-component="desktop_homepage_toc" data-analytics-cta-id="nav_cuprins_priority_programs_title" data-analytics-target="/#priority-programs-title">Programe prioritare</a></li>
+          <li><a href="/#homepage-services-title" class="dropdown-item" data-homepage-toc-link data-analytics-event="nav_click" data-analytics-component="desktop_homepage_toc" data-analytics-cta-id="nav_cuprins_homepage_services_title" data-analytics-target="/#homepage-services-title">Servicii</a></li>
+          <li><a href="/#homepage-tools-title" class="dropdown-item" data-homepage-toc-link data-analytics-event="nav_click" data-analytics-component="desktop_homepage_toc" data-analytics-cta-id="nav_cuprins_homepage_tools_title" data-analytics-target="/#homepage-tools-title">Instrumente și ghiduri</a></li>
+          <li><a href="/#homepage-proof-title" class="dropdown-item" data-homepage-toc-link data-analytics-event="nav_click" data-analytics-component="desktop_homepage_toc" data-analytics-cta-id="nav_cuprins_homepage_proof_title" data-analytics-target="/#homepage-proof-title">De ce FABER</a></li>
+          <li><a href="/#homepage-analysis-title" class="dropdown-item" data-homepage-toc-link data-analytics-event="nav_click" data-analytics-component="desktop_homepage_toc" data-analytics-cta-id="nav_cuprins_homepage_analysis_title" data-analytics-target="/#homepage-analysis-title">Analiza DR 12 vs DR 14</a></li>
+          <li><a href="/#homepage-contact-title" class="dropdown-item" data-homepage-toc-link data-analytics-event="nav_click" data-analytics-component="desktop_homepage_toc" data-analytics-cta-id="nav_cuprins_homepage_contact_title" data-analytics-target="/#homepage-contact-title">Contact</a></li></ol></nav>
+        </div>
+      </div>
       <a href="/contact" class="nav-primary-link" data-nav-destination="contact" data-analytics-event="nav_click" data-analytics-component="desktop_nav" data-analytics-cta-id="nav_contact_contact" data-analytics-target="/contact">Contact</a>
       <a href="/contact" class="nav-cta" data-analytics-event="cta_click" data-analytics-component="desktop_nav" data-analytics-cta-id="project_check_start_desktop" data-analytics-target="/contact" data-analytics-cta-view="true" data-analytics-copy-variant="p1_02">Începe verificarea proiectului</a>
     </div>
@@ -140,18 +172,23 @@
           </ul>
         </div>
       </section>
-      <section class="mobile-disclosure" data-mobile-disclosure data-nav-group="programe">
+      <section class="mobile-disclosure mobile-disclosure--programs" data-mobile-disclosure data-nav-group="programe">
         <button class="mobile-disclosure-btn" type="button" id="mobile-programe-trigger" aria-expanded="false" aria-controls="mobile-programe-panel" data-analytics-event="program_menu_click" data-analytics-component="mobile_nav_disclosure" data-analytics-cta-id="nav_programe_toggle_mobile">
           Programe <span class="arrow" aria-hidden="true"></span>
         </button>
         <div class="mobile-disclosure-panel" id="mobile-programe-panel" aria-labelledby="mobile-programe-trigger" hidden>
-          <ul>
-            <li><a href="/afir" data-analytics-event="nav_click" data-analytics-component="mobile_nav" data-analytics-cta-id="nav_programe_afir" data-analytics-target="/afir">AFIR &amp; agricultură</a></li>
+          <p class="mobile-program-heading">Familii</p><ul>            <li><a href="/afir" data-analytics-event="nav_click" data-analytics-component="mobile_nav" data-analytics-cta-id="nav_programe_afir" data-analytics-target="/afir">AFIR &amp; agricultură</a></li>
             <li><a href="/fonduri-regionale" data-analytics-event="nav_click" data-analytics-component="mobile_nav" data-analytics-cta-id="nav_programe_fonduri_regionale" data-analytics-target="/fonduri-regionale">Regional / ADR</a></li>
             <li><a href="/fonduri-europene-digitalizare" data-analytics-event="nav_click" data-analytics-component="mobile_nav" data-analytics-cta-id="nav_programe_fonduri_europene_digitalizare" data-analytics-target="/fonduri-europene-digitalizare">Digitalizare &amp; inovare</a></li>
             <li><a href="/finantari-panouri-fotovoltaice" data-analytics-event="nav_click" data-analytics-component="mobile_nav" data-analytics-cta-id="nav_programe_finantari_panouri_fotovoltaice" data-analytics-target="/finantari-panouri-fotovoltaice">Energie</a></li>
-            <li><a href="/fonduri-europene-imm" data-analytics-event="nav_click" data-analytics-component="mobile_nav" data-analytics-cta-id="nav_programe_fonduri_europene_imm" data-analytics-target="/fonduri-europene-imm">Antreprenoriat &amp; GAL</a></li>
-          </ul>
+            <li><a href="/fonduri-europene-imm" data-analytics-event="nav_click" data-analytics-component="mobile_nav" data-analytics-cta-id="nav_programe_fonduri_europene_imm" data-analytics-target="/fonduri-europene-imm">Antreprenoriat &amp; GAL</a></li></ul>
+          <p class="mobile-program-heading">Măsuri de finanțare</p><ul class="mobile-program-list">            <li><a href="/investitii-modernizarea-microintreprinderilor-apel-2" class="mobile-program-link" data-program-id="modernizare-microintreprinderi-ne-2" data-program-status="consultare_publica" data-status-label="Consultare publică – depunerea nu este deschisă" data-verified-at="2026-06-02" data-source-url="https://adrnordest.ro/comentariiGhid/P1Microintreprinderi/Apel2/" data-analytics-event="nav_click" data-analytics-component="mobile_nav_program" data-analytics-cta-id="nav_programe_investitii_modernizarea_microintreprinderilor_apel_2" data-analytics-target="/investitii-modernizarea-microintreprinderilor-apel-2"><span>Modernizarea microîntreprinderilor – Apel 2</span><small>Consultare publică – depunerea nu este deschisă</small></a></li>
+            <li><a href="/dr12-afir" class="mobile-program-link" data-program-id="dr12-afir" data-program-status="consultare_publica" data-status-label="Ghid consultativ – depunerea nu este deschisă. Condițiile se pot modifica." data-verified-at="2026-07-22" data-source-url="https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/" data-analytics-event="nav_click" data-analytics-component="mobile_nav_program" data-analytics-cta-id="nav_programe_dr12_afir" data-analytics-target="/dr12-afir"><span>DR12 AFIR</span><small>Ghid consultativ – depunerea nu este deschisă. Condițiile se pot modifica.</small></a></li>
+            <li><a href="/dr14" class="mobile-program-link" data-program-id="dr14-afir" data-program-status="consultare_publica" data-status-label="Ghid consultativ – depunerea nu este deschisă. Condițiile se pot modifica." data-verified-at="2026-07-22" data-source-url="https://www.afir.ro/api/file?filename=Ghidul+Solicitantului+DR-14+VARIANTA+CONSULTATIV%C4%82&amp;filetype=pdf&amp;url=%2Fmedia%2Fbkmpo5fo%2Fgs-consultativ-dr-14.pdf" data-analytics-event="nav_click" data-analytics-component="mobile_nav_program" data-analytics-cta-id="nav_programe_dr14" data-analytics-target="/dr14"><span>DR14 AFIR</span><small>Ghid consultativ – depunerea nu este deschisă. Condițiile se pot modifica.</small></a></li>
+            <li><a href="/digitalizare-imm" class="mobile-program-link" data-program-id="digitalizare-imm" data-program-status="apel_inchis" data-status-label="Apel închis – depunerea nu este deschisă" data-verified-at="2026-07-22" data-source-url="https://mfe.gov.ro/pnrr-ordinul-nr-607-28-04-2026-pentru-modificarea-ghidului-solicitantului-digitalizarea-imm-urilor-grant-de-pana-la-100-000-euro-pe-intreprindere-care-sa-sprijine-imm-urile-in-adoptarea-tehnologii/" data-analytics-event="nav_click" data-analytics-component="mobile_nav_program" data-analytics-cta-id="nav_programe_digitalizare_imm" data-analytics-target="/digitalizare-imm"><span>Digitalizare IMM</span><small>Apel închis – depunerea nu este deschisă</small></a></li>
+            <li><a href="/pro-infra" class="mobile-program-link" data-program-id="pro-infra" data-program-status="ghid_aprobat_nedeschis" data-status-label="Schemă aprobată – depunerea nu este deschisă" data-verified-at="2026-07-22" data-source-url="https://legislatie.just.ro/Public/DetaliiDocument/306915" data-analytics-event="nav_click" data-analytics-component="mobile_nav_program" data-analytics-cta-id="nav_programe_pro_infra" data-analytics-target="/pro-infra"><span>PRO INFRA</span><small>Schemă aprobată – depunerea nu este deschisă</small></a></li>
+            <li><a href="/afir-autoconsum-agroalimentar" class="mobile-program-link" data-program-id="afir-energie-autoconsum" data-program-status="apel_deschis" data-status-label="Apel deschis" data-verified-at="2026-07-20" data-source-url="https://www.afir.ro/media/hkfp4w0v/ghidul-solicitantului-schem%C4%83-energie-autoconsum-v7-iunie-2026.pdf" data-analytics-event="nav_click" data-analytics-component="mobile_nav_program" data-analytics-cta-id="nav_programe_afir_autoconsum_agroalimentar" data-analytics-target="/afir-autoconsum-agroalimentar"><span>AFIR Autoconsum Agroalimentar</span><small>Apel deschis</small></a></li></ul>
+          <a class="mobile-program-all" href="/fonduri-europene" data-analytics-event="nav_click" data-analytics-component="mobile_nav" data-analytics-cta-id="nav_programe_fonduri_europene" data-analytics-target="/fonduri-europene">Vezi toate programele</a>
         </div>
       </section>
       <section class="mobile-disclosure" data-mobile-disclosure data-nav-group="instrumente">
@@ -193,6 +230,19 @@
           </ul>
         </div>
       </section>
+      <section class="mobile-disclosure mobile-homepage-toc" data-mobile-disclosure data-nav-group="cuprins" data-homepage-navbar-toc hidden>
+        <button class="mobile-disclosure-btn" type="button" id="mobile-homepage-toc-trigger" aria-expanded="false" aria-controls="mobile-homepage-toc-panel" data-analytics-event="nav_click" data-analytics-component="mobile_nav_disclosure" data-analytics-cta-id="nav_cuprins_toggle_mobile">
+          Cuprins <span class="arrow" aria-hidden="true"></span>
+        </button>
+        <div class="mobile-disclosure-panel" id="mobile-homepage-toc-panel" aria-labelledby="mobile-homepage-toc-trigger" hidden><ul>            <li><a href="/#hero-programs-title" data-homepage-toc-link-mobile data-analytics-event="nav_click" data-analytics-component="mobile_homepage_toc" data-analytics-cta-id="nav_cuprins_hero_programs_title" data-analytics-target="/#hero-programs-title">Măsuri de finanțare</a></li>
+            <li><a href="/#homepage-method-title" data-homepage-toc-link-mobile data-analytics-event="nav_click" data-analytics-component="mobile_homepage_toc" data-analytics-cta-id="nav_cuprins_homepage_method_title" data-analytics-target="/#homepage-method-title">Cum decidem dacă merită continuat</a></li>
+            <li><a href="/#priority-programs-title" data-homepage-toc-link-mobile data-analytics-event="nav_click" data-analytics-component="mobile_homepage_toc" data-analytics-cta-id="nav_cuprins_priority_programs_title" data-analytics-target="/#priority-programs-title">Programe prioritare</a></li>
+            <li><a href="/#homepage-services-title" data-homepage-toc-link-mobile data-analytics-event="nav_click" data-analytics-component="mobile_homepage_toc" data-analytics-cta-id="nav_cuprins_homepage_services_title" data-analytics-target="/#homepage-services-title">Servicii</a></li>
+            <li><a href="/#homepage-tools-title" data-homepage-toc-link-mobile data-analytics-event="nav_click" data-analytics-component="mobile_homepage_toc" data-analytics-cta-id="nav_cuprins_homepage_tools_title" data-analytics-target="/#homepage-tools-title">Instrumente și ghiduri</a></li>
+            <li><a href="/#homepage-proof-title" data-homepage-toc-link-mobile data-analytics-event="nav_click" data-analytics-component="mobile_homepage_toc" data-analytics-cta-id="nav_cuprins_homepage_proof_title" data-analytics-target="/#homepage-proof-title">De ce FABER</a></li>
+            <li><a href="/#homepage-analysis-title" data-homepage-toc-link-mobile data-analytics-event="nav_click" data-analytics-component="mobile_homepage_toc" data-analytics-cta-id="nav_cuprins_homepage_analysis_title" data-analytics-target="/#homepage-analysis-title">Analiza DR 12 vs DR 14</a></li>
+            <li><a href="/#homepage-contact-title" data-homepage-toc-link-mobile data-analytics-event="nav_click" data-analytics-component="mobile_homepage_toc" data-analytics-cta-id="nav_cuprins_homepage_contact_title" data-analytics-target="/#homepage-contact-title">Contact</a></li></ul></div>
+      </section>
     <a href="/contact" class="mobile-contact" data-nav-destination="contact" data-analytics-event="nav_click" data-analytics-component="mobile_nav" data-analytics-cta-id="nav_contact_contact" data-analytics-target="/contact">Contact</a>
     <a href="/contact" class="mobile-cta" data-analytics-event="cta_click" data-analytics-component="mobile_nav" data-analytics-cta-id="project_check_start_mobile" data-analytics-target="/contact" data-analytics-cta-view="true" data-analytics-copy-variant="p1_02">Începe verificarea proiectului</a>
   </nav>
@@ -210,7 +260,7 @@
   </div>
 </div>
 <div class="global-header-spacer" aria-hidden="true"></div>
-<script src="/assets/global-header.js?v=20260721-3"></script>
+<script src="/assets/global-header.js?v=20260722-5"></script>
 <!-- GLOBAL_HEADER_END -->
 <!-- BREADCRUMB_START -->
   <nav class="breadcrumb" aria-label="Breadcrumb" data-breadcrumb>

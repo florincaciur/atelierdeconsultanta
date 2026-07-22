@@ -143,9 +143,9 @@ function validateMatrix(programs, config) {
 
 function main() {
   const config = loadConfig();
-  const programs = loadProgramConfig().programs;
+  const programs = loadProgramConfig().programs.filter((program) => !program.discovery?.redirectTarget);
   validateMatrix(programs, config);
-  const publicPrograms = programs.filter(isPublicProgram);
+  const publicPrograms = programs.filter((program) => isPublicProgram(program) && program.discovery?.listed !== false);
   const changed = [];
   const migration = [];
 

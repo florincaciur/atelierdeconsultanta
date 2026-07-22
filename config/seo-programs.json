@@ -45,7 +45,7 @@
         "adr-ne-region"
       ],
       "presentation": {
-        "carousel": true,
+        "carousel": false,
         "hero": false,
         "order": 1,
         "icon": "ph-buildings",
@@ -63,7 +63,8 @@
         "investmentTypes": [
           "investitii_productive"
         ],
-        "listed": true
+        "listed": false,
+        "redirectTarget": "/investitii-modernizarea-microintreprinderilor-apel-2"
       }
     },
     {
@@ -3000,7 +3001,7 @@
           "label": "Fonduri europene Nord-Est"
         },
         {
-          "href": "/por-adr-nord-est",
+          "href": "/investitii-modernizarea-microintreprinderilor-apel-2",
           "label": "POR ADR Nord-Est"
         },
         {
@@ -3973,7 +3974,7 @@
         ]
       ],
       "related": [
-        "/por-adr-nord-est",
+        "/investitii-modernizarea-microintreprinderilor-apel-2",
         "/investitii-modernizarea-microintreprinderilor-apel-2",
         "/digitalizare-imm",
         "/start-up-nation-2026",
@@ -5756,7 +5757,7 @@
         "/fonduri-europene-nerambursabile-2026",
         "/start-up-nation-2026",
         "/digitalizare-imm",
-        "/por-adr-nord-est",
+        "/investitii-modernizarea-microintreprinderilor-apel-2",
         "/dr12-afir",
         "/dr14",
         "/firma-consultanta-fonduri-europene",

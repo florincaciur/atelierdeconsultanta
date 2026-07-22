@@ -174,7 +174,8 @@ generate();
 const sitemapAfterSecondBuild = fs.readFileSync(path.join(ROOT, "sitemap.xml"), "utf8");
 assert.equal(sitemapAfterSecondBuild, sitemapAfterFirstBuild, "Un build global repetat nu trebuie să modifice lastmod");
 const generatedLastmods = sitemapLastmods(ROOT);
-for (const record of records.filter(isCompleteRecord)) {
+for (const record of records.filter((item) => isCompleteRecord(item)
+  && !programById.get(item.programId)?.discovery?.redirectTarget)) {
   assert.equal(
     generatedLastmods.get(`https://atelierdeconsultanta.ro${record.route}`),
     record.lastMeaningfulUpdate,

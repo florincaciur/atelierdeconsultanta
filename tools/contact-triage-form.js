@@ -10,7 +10,7 @@ function escapeHtml(value) {
 
 function programOptions(programs, aliasesByProgram = {}) {
   const ordered = [...programs]
-    .filter((program) => program && program.slug && program.shortName && program.pageUrl)
+    .filter((program) => program && program.slug && program.shortName && program.pageUrl && program.discovery?.listed !== false)
     .sort((left, right) => {
       const leftOrder = Number(left.presentation?.order ?? 999);
       const rightOrder = Number(right.presentation?.order ?? 999);

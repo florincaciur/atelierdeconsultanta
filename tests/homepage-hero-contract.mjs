@@ -17,8 +17,8 @@ const latest = latestVerifiedProgram(programs);
 assert(latest && isPublicProgram(latest) && hasOfficialSource(latest), "programul recent trebuie să fie public și verificat oficial");
 assert.equal($("#hero.homepage-decision-hero").length, 1, "trebuie să existe exact un hero decizional");
 assert.equal($("#homepage-hero-title").text().trim(), "Consultanță și proiectare pentru proiecte cu fonduri europene", "H1 diferit de copy-ul restaurat");
-assert.match($("#hero .hero-subtitle").text().trim(), /^Verificare prudentă, documentată și interdisciplinară/u, "textul restaurat lipsește");
-assert.equal($("#hero .homepage-hero__microcopy").text().trim(), "Spune-ne solicitantul, localitatea și investiția. Prima etapă este o verificare orientativă; nu promitem aprobarea.", "microcopy contextual diferit");
+assert.match($("#hero .hero-subtitle").text().trim(), /^Verificare prudentă, documentată și interdisciplinară/u, "poziționarea profesională a hero-ului lipsește");
+assert.equal($("#hero .homepage-hero__microcopy").length, 0, "microcopy-ul redundant trebuie eliminat");
 
 const primary = $("#hero .hero-ctas a").eq(0);
 const secondary = $("#hero .hero-ctas a").eq(1);
@@ -36,6 +36,11 @@ for (const [name, cta] of [["principal", primary], ["secundar", secondary]]) {
 assert.equal($("#hero .hero-flow-svg").length, 1, "SVG-ul traseului FABER trebuie restaurat");
 assert.deepEqual($("#hero .hf-label").map((_, node) => $(node).text().trim()).get(), ["Idee", "Verificare", "Dosar", "Finanțare", "Implementare"]);
 assert.equal($("#hero .hero-flow-caption").text().trim(), "Fiecare etapă trebuie susținută de documentele folosite în etapa următoare.");
+assert.equal($("#hero [data-hero-programs]").length, 1, "meniul interactiv cu măsuri trebuie să fie sub SVG");
+assert.equal($("#hero [data-hero-program-item]").length, 6, "meniul interactiv trebuie să conțină șase măsuri verificate");
+assert.equal($("#hero .hero-flow-svg").nextAll("[data-hero-programs]").length, 1, "meniul măsurilor trebuie poziționat după SVG");
+assert.equal($("#hero [data-hero-program-item][href='/por-adr-nord-est']").length, 0, "ruta regională duplicată nu trebuie publicată în hero");
+assert.equal($("#hero [data-hero-program-item][href='/investitii-modernizarea-microintreprinderilor-apel-2']").length, 1, "pagina de conversie regională trebuie publicată în hero");
 const latestNode = $("#hero [data-homepage-hero-latest-program]");
 assert.equal(latestNode.attr("data-program-id"), latest.slug, "programul recent nu corespunde registrului");
 assert.equal(latestNode.attr("data-program-status"), latest.status, "statusul programului recent diferă");
@@ -44,6 +49,7 @@ assert.equal(latestNode.attr("data-source-url"), latest.sourceUrl, "sursa progra
 assert.equal(latestNode.attr("data-public-program-count"), String(programs.filter(isPublicProgram).length), "indicatorul registrului nu este calculat din sursa unică");
 assert.equal($("#homepage-hero-critical-css").length, 1, "stilurile critice ale hero-ului trebuie incluse inline");
 assert.equal($("link[href*='homepage-hero.css']").length, 0, "hero-ul nu trebuie să adauge o cerere CSS care blochează LCP");
+assert.equal($("script[data-homepage-hero-script]").length, 1, "runtime-ul accesibil al meniului de măsuri lipsește");
 
 assert.match(css, /font-size:\s*clamp\(3\.25rem,\s*4vw,\s*3\.5rem\)/, "lipsește intervalul desktop 52–56 px");
 assert.match(css, /font-size:\s*clamp\(2\.25rem,\s*9\.5vw,\s*2\.625rem\)/, "lipsește intervalul mobil 36–42 px");

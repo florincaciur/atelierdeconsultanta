@@ -31,7 +31,9 @@ assert.equal($("#homepage-contact .homepage-flow-action").attr("data-analytics-e
 assert.equal($("#homepage-contact .homepage-flow-action").attr("data-analytics-cta-view"), "true");
 assert.equal($("#homepage-contact a[href^='tel:']").length, 2);
 assert.equal($("#homepage-contact a[href^='mailto:']").length, 1);
-assert.equal($("main > aside.long-form-toc details:not([open])").length, 1, "cuprinsul trebuie să fie dropdown închis implicit");
+assert.equal($("main > aside.long-form-toc").length, 0, "cuprinsul nu trebuie să rămână o secțiune separată în main");
+assert.equal($("#navbar [data-homepage-navbar-toc]").length, 1, "cuprinsul trebuie integrat în navbar");
+assert.equal($("#navbar [data-homepage-navbar-toc]").attr("hidden"), "hidden", "cuprinsul navbar pornește ascuns până la inițializarea homepage-ului");
 assert.equal($("link[data-homepage-decision-flow-style='p1_21']").length, 1);
 assert(!/newsletterForm|id="contactForm"|id="blog"|id="testimoniale"/.test($("main").html()), "au rămas trasee vechi în main");
 assert(!/handleNewsletterSubmit|moveCardCarousel|fetch\('\/blog\.json'\)|modalOverlay|homepage-faq-toggle/.test(html), "runtime-ul componentelor eliminate trebuie șters, nu doar ascuns");

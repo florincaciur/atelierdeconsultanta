@@ -503,7 +503,7 @@ function regionalPage(item) {
   let body = `
       <h2>Rolul hub-ului regional Nord-Est</h2>
       <p>Această pagină grupează toate rutele de finanțare relevante pentru proiecte implementate în regiunea Nord-Est: Programul Regional administrat de ADR Nord-Est, intervențiile AFIR pentru agricultură și rural, programe naționale pentru IMM și antreprenoriat, digitalizare, energie și alte scheme sectoriale. Nu este pagina unui singur apel și nu presupune că orice proiect din regiune trebuie depus prin Programul Regional.</p>
-      <p>Pentru orientare națională folosește ${linkTo("/fonduri-regionale", "hub-ul programelor regionale și ADR-urilor")}. Pentru cadrul Programului Regional și apelurile destinate firmelor folosește ${linkTo("/por-adr-nord-est", "Programul Regional Nord-Est")}. Pentru condițiile unei singure sesiuni deschide ${linkTo("/investitii-modernizarea-microintreprinderilor-apel-2", "Investiții pentru modernizarea microîntreprinderilor – Apel 2")}.</p>
+      <p>Pentru orientare națională folosește ${linkTo("/fonduri-regionale", "hub-ul programelor regionale și ADR-urilor")}. Pentru condițiile măsurii destinate microîntreprinderilor folosește ${linkTo("/investitii-modernizarea-microintreprinderilor-apel-2", "Investiții pentru modernizarea microîntreprinderilor – Apel 2")}.</p>
       <h2>Judete acoperite</h2>
       <p>Pagina consolideaza intentiile locale pentru Regiunea ${esc(item.region)} si acopera orientativ judetele: ${esc(counties.join(", "))}. In locul unor pagini separate pentru fiecare oras, analiza porneste de la regiune, program, localizarea investitiei si documentele beneficiarului.</p>
       <h2>Programe relevante in Nord-Est</h2>
@@ -517,7 +517,7 @@ function regionalPage(item) {
           <tr><th>Tip beneficiar</th><th>Program posibil</th><th>Ce verificam</th><th>Link intern</th></tr>
         </thead>
         <tbody>
-          <tr><td>Microintreprindere din Nord-Est</td><td>Program Regional Nord-Est / POR</td><td>locatia investitiei, CAEN, vechime, buget, cofinantare</td><td>${linkTo("/por-adr-nord-est", "POR ADR Nord-Est")}</td></tr>
+          <tr><td>Microintreprindere din Nord-Est</td><td>Program Regional Nord-Est / POR</td><td>locatia investitiei, CAEN, vechime, buget, cofinantare</td><td>${linkTo("/investitii-modernizarea-microintreprinderilor-apel-2", "Modernizarea microîntreprinderilor – Apel 2")}</td></tr>
           <tr><td>IMM cu investitie productiva</td><td>Programe regionale sau scheme IMM</td><td>eligibilitate firma, cheltuieli, punctaj, documente pentru spatiu</td><td>${linkTo("/fonduri-europene-imm", "Fonduri IMM")}</td></tr>
           <tr><td>Ferma sau exploatatie agricola</td><td>AFIR, DR 12, DR 14 sau alte interventii PAC</td><td>SO, terenuri/animale, forma juridica, documente agricole</td><td>${linkTo("/afir", "AFIR")}</td></tr>
           <tr><td>Firma care vrea software sau automatizare</td><td>Digitalizare IMM, PNRR sau apeluri regionale</td><td>nevoia digitala, cheltuieli IT, indicatori, oferte</td><td>${linkTo("/fonduri-europene-digitalizare", "Digitalizare")}</td></tr>
@@ -557,7 +557,7 @@ function regionalPage(item) {
       summary: `Fondurile europene in ${item.region} se verifica dupa judet, localizarea investitiei, tipul beneficiarului si programul activ.`,
       body,
       faq,
-      related: item.related || ["/por-adr-nord-est", "/fonduri-europene-imm", "/consultanta-fonduri-europene", "/contact"]
+      related: item.related || ["/investitii-modernizarea-microintreprinderilor-apel-2", "/fonduri-europene-imm", "/consultanta-fonduri-europene", "/contact"]
     })
   };
 }

@@ -9,6 +9,7 @@ import { chromium } from "playwright";
 const require = createRequire(import.meta.url);
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const { ASSET_VERSION } = require("../tools/generate-global-header.js");
+const { loadProgramConfig } = require("../tools/program-factual-governance.js");
 const config = JSON.parse(fs.readFileSync(path.join(ROOT, "config", "main-navigation.json"), "utf8"));
 const partial = fs.readFileSync(path.join(ROOT, "partials", "global-header.html"), "utf8");
 const stylesheet = fs.readFileSync(path.join(ROOT, "assets", "global-header.css"), "utf8");
@@ -35,16 +36,17 @@ async function screenshotWithRetry(page, options, attempts = 3) {
 const $ = cheerio.load(partial, { decodeEntities: false }, false);
 const grouped = config.primaryDestinations.filter((destination) => destination.items);
 const expectedLabels = config.primaryDestinations.map(({ label }) => label);
+const programBySlug = new Map(loadProgramConfig().programs.map((program) => [program.slug, program]));
 
 assert.equal(config.primaryDestinations.length, 6, "navigation must expose exactly six primary destinations");
 assert.equal(grouped.length, 5, "five primary destinations must use disclosure groups");
 assert.deepEqual(
-  $("#navbar [data-nav-disclosure] > button").map((_, element) => $(element).clone().children().remove().end().text().trim()).get(),
+  $("#navbar [data-nav-disclosure]:not([data-homepage-navbar-toc]) > button").map((_, element) => $(element).clone().children().remove().end().text().trim()).get(),
   expectedLabels.slice(0, 5),
   "desktop labels must follow the approved order",
 );
 assert.deepEqual(
-  $("#mobileMenu [data-mobile-disclosure] > button").map((_, element) => $(element).clone().children().remove().end().text().trim()).get(),
+  $("#mobileMenu [data-mobile-disclosure]:not([data-homepage-navbar-toc]) > button").map((_, element) => $(element).clone().children().remove().end().text().trim()).get(),
   expectedLabels.slice(0, 5),
   "mobile labels must follow the approved order",
 );
@@ -52,7 +54,19 @@ assert.equal($("#navbar .nav-primary-link").text().trim(), "Contact", "Contact m
 assert.equal($("#navbar .nav-cta").text().trim(), config.cta.label, "desktop CTA copy must be canonical");
 assert.equal($("#mobileMenu .mobile-cta").text().trim(), config.cta.label, "mobile CTA copy must be canonical");
 assert.equal($("#navbar, #mobileMenu").text().includes("Blog"), false, "Blog label must be replaced by Ghiduri");
-assert.equal($("[data-program-status], [data-status-label], [data-verified-at], [data-source-url]").length, 0, "navigation must not duplicate program facts");
+assert.equal($("#dropdownPanel [data-program-id]").length, config.programMenu.featuredProgramSlugs.length, "desktop program menu must expose verified measures");
+assert.equal($("#mobile-programe-panel [data-program-id]").length, config.programMenu.featuredProgramSlugs.length, "mobile program menu must expose verified measures");
+$("[data-program-id]").each((_, element) => {
+  const item = $(element);
+  const program = programBySlug.get(item.attr("data-program-id"));
+  assert(program, `unknown program in navigation: ${item.attr("data-program-id")}`);
+  assert.equal(item.attr("data-program-status"), program.status, `${program.slug}: navigation status mismatch`);
+  assert.equal(item.attr("data-status-label"), program.statusLabel, `${program.slug}: navigation label mismatch`);
+  assert.equal(item.attr("data-verified-at"), program.verifiedAt, `${program.slug}: navigation verification date mismatch`);
+  assert.equal(item.attr("data-source-url"), program.sourceUrl, `${program.slug}: navigation source mismatch`);
+});
+assert.equal($("[href='/por-adr-nord-est']").length, 0, "deprecated regional route must not appear in navigation");
+assert($("[href='/investitii-modernizarea-microintreprinderilor-apel-2']").length >= 2, "approved regional conversion page must appear in desktop and mobile navigation");
 assert.equal($("#mobileMenu [data-mobile-disclosure] > a").length, 0, "mobile disclosure triggers must be buttons, not links");
 
 for (const group of grouped) {
