@@ -7,18 +7,17 @@ const { sitemapUrls } = require("../tools/sitemap-utils");
 
 const ROOT = path.resolve(__dirname, "..");
 const SITE = "https://atelierdeconsultanta.ro";
-const IMPLEMENTATION_DATE = "2026-07-20";
+const IMPLEMENTATION_DATE = "2026-07-28";
 const REQUIRED_PATHS = [
   "/dr12-afir",
   "/dr14",
-  "/por-adr-nord-est",
+  "/investitii-modernizarea-microintreprinderilor-apel-2",
   "/afir-autoconsum-agroalimentar",
   "/pro-infra",
   "/pocidif-21",
   "/fonduri-regionale",
   "/gal-afir",
   "/autoconsum-public-fotovoltaice-institutii-publice",
-  "/programul-tranzitie-justa",
   "/programul-tranzitie-justa-intrebari-documente",
   "/metodologie-verificare-eligibilitate",
   "/surse-oficiale-fonduri-europene"

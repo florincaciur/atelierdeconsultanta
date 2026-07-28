@@ -308,6 +308,7 @@ async function sitemapProbe(baseUrl, cache) {
 
 async function programProbe(baseUrl, cache) {
   const approvals = readJson("config/program-status-approvals.json");
+  const intentionalNoindex = new Set(readJson("config/content-intent-taxonomy.json").blockedNonIndexableRoutes.map((item) => item.route));
   const errors = [];
   const homepage = await fetchText(baseUrl, "/", cache);
   for (const row of approvals.programs) {
@@ -321,6 +322,10 @@ async function programProbe(baseUrl, cache) {
         if (!/noindex/iu.test($("meta[name='robots']").attr("content") || "")) errors.push(`${route}: pending fără noindex`);
         if ($("body").attr("data-publication-state") !== "pending_validation") errors.push(`${route}: lipsește pending_validation`);
         if ($(`[data-program-id="${row.programId}"][data-program-status]`).length) errors.push(`${route}: status candidat publicat`);
+      } else if (!intentionalNoindex.has(route)) {
+        if (/noindex/iu.test($("meta[name='robots']").attr("content") || "")) errors.push(`${route}: aprobat, dar rămas noindex`);
+        if ($("body").attr("data-publication-state") === "pending_validation") errors.push(`${route}: aprobat, dar rămas pending_validation`);
+        if ($("main.program-validation-hold").length) errors.push(`${route}: aprobat, dar mesajul de suspendare este încă public`);
       }
     }
   }
@@ -456,10 +461,13 @@ async function editorialProbe(baseUrl, cache, entries) {
 async function robotsProbe(baseUrl, cache) {
   const page = await fetchText(baseUrl, "/robots.txt", cache);
   if (page.status !== 200) return [`robots.txt HTTP ${page.status}`];
-  const oai = crawlerAllowsPublicRoot(page.text, "OAI-SearchBot");
-  const gpt = crawlerAllowsPublicRoot(page.text, "GPTBot");
+  const crawlerPolicy = readJson("config/crawler-access-policy.json");
+  const blocked = crawlerPolicy.crawlers
+    .filter((crawler) => crawler.publicAccess === "allow" && crawler.robotsGroup !== "*")
+    .filter((crawler) => !crawlerAllowsPublicRoot(page.text, crawler.robotsGroup))
+    .map((crawler) => crawler.robotsGroup);
   const sitemap = /Sitemap:\s*https:\/\/atelierdeconsultanta\.ro\/sitemap\.xml/iu.test(page.text);
-  return [!oai && "OAI-SearchBot nu este permis", !gpt && "GPTBot nu este permis conform aprobării", !sitemap && "declarația Sitemap lipsește"].filter(Boolean);
+  return [blocked.length && `crawler-e AI nepermise: ${blocked.join(", ")}`, !sitemap && "declarația Sitemap lipsește"].filter(Boolean);
 }
 
 async function accessibilityProbe(browser, baseUrl) {
@@ -572,7 +580,7 @@ async function environmentChecks(environment, baseUrl, options = {}) {
   results.push(result("redirects", environment, redirects.errors.length ? "FAIL" : "PASS", redirects.errors.length ? redirects.errors.slice(0, 12).join(" | ") : `${redirects.count} redirecturi verificate. ${redirects.evidence || "301 direct și target 200/self-canonical."}`, urls(["/_redirects"])));
   results.push(result("sitemap", environment, sitemap.errors.length ? "FAIL" : "PASS", sitemap.errors.length ? sitemap.errors.slice(0, 12).join(" | ") : `${sitemap.entries.length} URL-uri 200/indexabile/self-canonical; ${sitemap.lastmodCount} lastmod verificate.`, urls(["/sitemap.xml"])));
   results.push(result("editorial", environment, editorial.length ? "FAIL" : "PASS", editorial.length ? editorial.slice(0, 12).join(" | ") : `${sitemap.entries.length} URL-uri scanate fără etichete interzise.`, urls(["/sitemap.xml"])));
-  results.push(result("robots", environment, robots.length ? "FAIL" : "PASS", robots.length ? robots.join(" | ") : "OAI-SearchBot Allow, GPTBot Allow aprobat și Sitemap prezente.", urls(["/robots.txt"])));
+  results.push(result("robots", environment, robots.length ? "FAIL" : "PASS", robots.length ? robots.join(" | ") : "Crawler-ele AI aprobate au Allow public, zonele private rămân blocate și Sitemap este prezent.", urls(["/robots.txt"])));
   results.push(result("accessibility", environment, accessibility.length ? "FAIL" : "PASS", accessibility.length ? accessibility.join(" | ") : "Labels, reflow 320px, zoom 200%, target-uri și focus verificate în browser.", urls(["/contact"])));
   results.push(result("performance", environment, performance.errors.length ? "FAIL" : "PASS", `${performance.errors.join(" | ") || "Nicio regresie majoră."} Măsurători: ${JSON.stringify(performance.measurements)}`, urls(CONFIG.performance.routes.map((route) => route.path))));
   return results;

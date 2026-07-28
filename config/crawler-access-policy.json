@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-07-21",
+  "updatedAt": "2026-07-28",
   "siteOrigin": "https://atelierdeconsultanta.ro",
   "sitemapUrl": "https://atelierdeconsultanta.ro/sitemap.xml",
   "privatePaths": [
@@ -68,39 +68,55 @@
       "userAgent": "ClaudeBot",
       "robotsGroup": "ClaudeBot",
       "purpose": "antrenare Anthropic",
-      "publicAccess": "disallow",
-      "approval": "DE_VALIDAT_UMAN",
-      "changeInP015": false
+      "publicAccess": "allow",
+      "approval": "APROBAT_CACIUR_FLORIN_2026-07-28",
+      "liveProbe": true
     },
     {
       "userAgent": "anthropic-ai",
       "robotsGroup": "anthropic-ai",
       "purpose": "utilizare AI Anthropic",
-      "publicAccess": "disallow",
-      "approval": "DE_VALIDAT_UMAN",
-      "changeInP015": false
+      "publicAccess": "allow",
+      "approval": "APROBAT_CACIUR_FLORIN_2026-07-28",
+      "liveProbe": true
     },
     {
       "userAgent": "Google-Extended",
       "robotsGroup": "Google-Extended",
       "purpose": "utilizare pentru modele Google",
-      "publicAccess": "disallow",
-      "approval": "DE_VALIDAT_UMAN",
-      "changeInP015": false
+      "publicAccess": "allow",
+      "approval": "APROBAT_CACIUR_FLORIN_2026-07-28",
+      "liveProbe": true
     },
     {
       "userAgent": "CCBot",
       "robotsGroup": "CCBot",
       "purpose": "Common Crawl / seturi de date",
-      "publicAccess": "disallow",
-      "approval": "DE_VALIDAT_UMAN",
-      "changeInP015": false
+      "publicAccess": "allow",
+      "approval": "APROBAT_CACIUR_FLORIN_2026-07-28",
+      "liveProbe": true
+    },
+    {
+      "userAgent": "DeepSeekBot",
+      "robotsGroup": "DeepSeekBot",
+      "purpose": "crawler AI DeepSeek",
+      "publicAccess": "allow",
+      "approval": "APROBAT_CACIUR_FLORIN_2026-07-28",
+      "liveProbe": true
+    },
+    {
+      "userAgent": "DeepSeek-User",
+      "robotsGroup": "DeepSeek-User",
+      "purpose": "acces AI DeepSeek la cererea utilizatorului",
+      "publicAccess": "allow",
+      "approval": "APROBAT_CACIUR_FLORIN_2026-07-28",
+      "liveProbe": true
     }
   ],
   "cloudflare": {
     "configurationSource": "dashboard și Security Events",
     "repositoryRuleFound": false,
-    "officialCrawlerLogReview": "DE_VALIDAT_UMAN",
+    "officialCrawlerLogReview": "DE_VALIDAT_LIVE",
     "perplexityIpListUrl": "https://www.perplexity.com/perplexitybot.json",
     "syntheticProbe": {
       "date": "2026-07-21",
@@ -108,6 +124,6 @@
       "interpretation": "Nu dovedește blocarea crawlerului oficial deoarece IP-ul probei nu aparține Perplexity."
     },
     "allowUserAgentOnlyException": false,
-    "changeApproval": "APROBARE_UMANĂ_NECESARĂ"
+    "changeApproval": "APROBAT_CACIUR_FLORIN_2026-07-28"
   }
 }

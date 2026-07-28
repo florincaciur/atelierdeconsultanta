@@ -18,6 +18,11 @@ const {
 } = require("../tools/validate-program-status-approvals");
 
 const approvalConfig = JSON.parse(fs.readFileSync(APPROVALS_PATH, "utf8"));
+const intentionalNoindex = new Set(
+  JSON.parse(fs.readFileSync(path.join(ROOT, "config", "content-intent-taxonomy.json"), "utf8"))
+    .blockedNonIndexableRoutes
+    .map((item) => item.route)
+);
 const { programs } = loadProgramConfig();
 const programById = new Map(programs.map((program) => [program.slug, program]));
 const approvalById = new Map(approvalConfig.programs.map((row) => [row.programId, row]));
@@ -61,6 +66,19 @@ for (const id of REQUIRED_PROGRAMS) {
       assert.equal(homepage(surface).attr("data-program-status"), program.status, `${id}: status homepage contradictoriu`);
       assert.equal(homepage(surface).attr("data-verified-at"), program.verifiedAt, `${id}: data homepage contradictorie`);
     });
+    for (const route of row.publicationHoldUrls) {
+      if (intentionalNoindex.has(route)) continue;
+      const routeFiles = filesForRoute(route);
+      const indexFiles = routeFiles.filter((file) => file.endsWith(`${path.sep}index.html`));
+      const files = indexFiles.length ? indexFiles : routeFiles;
+      assert(files.length, `${id}: lipsește ruta aprobată ${route}`);
+      for (const file of files) {
+        const $ = cheerio.load(fs.readFileSync(file, "utf8"), { decodeEntities: false });
+        assert.doesNotMatch($("meta[name='robots']").attr("content") || "", /noindex/iu, `${route}: aprobarea a lăsat pagina noindex`);
+        assert.notEqual($("body").attr("data-publication-state"), "pending_validation", `${route}: aprobarea a lăsat body pending_validation`);
+        assert.equal($("main.program-validation-hold").length, 0, `${route}: aprobarea a lăsat mesajul de suspendare`);
+      }
+    }
   } else {
     assert.equal(row.validatorName, HUMAN_REVIEW, `${id}: un rând pending păstrează placeholderul controlat`);
     assert.equal(program.publicationState, "pending_validation", `${id}: registrul publică un rând neaprobat`);

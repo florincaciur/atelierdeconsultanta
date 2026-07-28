@@ -4,6 +4,7 @@
 const { execFileSync } = require("child_process");
 const fs = require("fs");
 const path = require("path");
+const { groupFor, parseRobots } = require("./crawler-policy");
 
 const ROOT = path.resolve(__dirname, "..");
 const ORIGIN = "https://atelierdeconsultanta.ro";
@@ -56,33 +57,13 @@ async function waitForCommit(expectedCommit, waitSeconds) {
   throw new Error(`Production did not reach commit ${expectedCommit}: ${last}`);
 }
 
-function robotsGroups(text) {
-  const groups = [];
-  let current = null;
-  for (const rawLine of text.split(/\r?\n/u)) {
-    const line = rawLine.replace(/#.*$/u, "").trim();
-    if (!line) continue;
-    const separator = line.indexOf(":");
-    if (separator < 0) continue;
-    const key = line.slice(0, separator).trim().toLowerCase();
-    const value = line.slice(separator + 1).trim();
-    if (key === "user-agent") {
-      current = { agent: value.toLowerCase(), rules: [] };
-      groups.push(current);
-    } else if (current && ["allow", "disallow"].includes(key)) {
-      current.rules.push({ key, value });
-    }
-  }
-  return groups;
-}
-
 function assertCrawlerPolicy(text, agent) {
-  const groups = robotsGroups(text).filter((group) => group.agent === agent.toLowerCase());
-  if (!groups.length) throw new Error(`robots.txt is missing ${agent}`);
-  const rules = groups.flatMap((group) => group.rules);
-  if (!rules.some((rule) => rule.key === "allow" && rule.value === "/")) throw new Error(`${agent} is not allowed on public pages`);
-  if (rules.some((rule) => rule.key === "disallow" && rule.value === "/")) throw new Error(`${agent} is blocked by a conflicting rule`);
-  if (!rules.some((rule) => rule.key === "disallow" && /^\/admin\/?$/u.test(rule.value))) throw new Error(`${agent} does not protect /admin`);
+  const group = groupFor(parseRobots(text), agent);
+  if (!group) throw new Error(`robots.txt is missing ${agent}`);
+  if (!group.rules.some((rule) => rule.directive === "allow" && rule.value === "/")) throw new Error(`${agent} is not allowed on public pages`);
+  if (group.rules.some((rule) => rule.directive === "disallow" && rule.value === "/")) throw new Error(`${agent} is blocked by a conflicting rule`);
+  if (!group.rules.some((rule) => rule.directive === "disallow" && /^\/admin\/?$/u.test(rule.value))) throw new Error(`${agent} does not protect /admin`);
+  if (!group.rules.some((rule) => rule.directive === "disallow" && /^\/api\/?$/u.test(rule.value))) throw new Error(`${agent} does not protect /api`);
 }
 
 async function safeFormProbe(contactType) {
@@ -170,7 +151,10 @@ async function main() {
   const robotsResponse = await request(`/robots.txt?t=${Date.now()}`);
   const robots = await robotsResponse.text();
   if (robotsResponse.status !== 200) throw new Error(`robots.txt: HTTP ${robotsResponse.status}`);
-  for (const agent of ["OAI-SearchBot", "GPTBot", "PerplexityBot"]) assertCrawlerPolicy(robots, agent);
+  const namedAgents = parseRobots(robots).groups.flatMap((group) => group.agents).filter((agent) => agent !== "*");
+  for (const agent of new Set(namedAgents)) {
+    assertCrawlerPolicy(robots, agent);
+  }
   const sitemapLines = robots.match(/^Sitemap:\s*https:\/\/atelierdeconsultanta\.ro\/sitemap\.xml\s*$/gimu) || [];
   if (sitemapLines.length !== 1) throw new Error(`robots.txt must contain exactly one canonical Sitemap declaration; found ${sitemapLines.length}`);
 

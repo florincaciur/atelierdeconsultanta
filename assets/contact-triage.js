@@ -268,6 +268,9 @@
     var select = form.elements.program_slug;
     if (!select) return;
     var params = new URLSearchParams(window.location.search);
+    if (!params.toString() && window.location.hash.length > 1) {
+      params = new URLSearchParams(window.location.hash.slice(1).replace(/^\?/, ""));
+    }
     var requested = params.get("program_slug") || params.get("program") || params.get("programSlug") || "";
     var requestedSource = params.get("source_page") || "";
     var requestedSo = params.get("so_result") || "";

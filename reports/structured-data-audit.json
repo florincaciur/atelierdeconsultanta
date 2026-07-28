@@ -1,28 +1,28 @@
 {
-  "generatedAt": "2026-07-22T12:13:22.360Z",
+  "generatedAt": "2026-07-28T20:50:08.212Z",
   "summary": {
     "htmlFilesChecked": 180,
-    "indexablePagesChecked": 94,
+    "indexablePagesChecked": 96,
     "filesWithIssues": 0,
     "organizationVariants": 1,
     "types": {
-      "Organization": 126,
-      "ProfessionalService": 94,
-      "PostalAddress": 94,
-      "ImageObject": 94,
-      "WebSite": 94,
-      "WebPage": 124,
+      "Organization": 128,
+      "ProfessionalService": 96,
+      "PostalAddress": 96,
+      "ImageObject": 96,
+      "WebSite": 96,
+      "WebPage": 126,
       "CreativeWork": 51,
-      "BreadcrumbList": 93,
-      "ListItem": 288,
+      "BreadcrumbList": 95,
+      "ListItem": 294,
       "Article": 30,
       "DefinedTerm": 16,
       "PropertyValue": 138,
       "DefinedTermSet": 16,
       "Audience": 10,
-      "FAQPage": 74,
-      "Question": 529,
-      "Answer": 529,
+      "FAQPage": 76,
+      "Question": 535,
+      "Answer": 535,
       "Service": 12,
       "AdministrativeArea": 12,
       "WebApplication": 1
@@ -215,6 +215,46 @@
         "2026-05-20",
         "2026-05-20"
       ],
+      "issues": []
+    },
+    {
+      "file": "dr-12-afir-instalarea-tinerilor-fermieri.html",
+      "route": "/dr-12-afir-instalarea-tinerilor-fermieri",
+      "blocks": 1,
+      "types": {
+        "Organization": 1,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
+        "ImageObject": 1,
+        "WebSite": 1,
+        "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 3,
+        "FAQPage": 1,
+        "Question": 3,
+        "Answer": 3
+      },
+      "modified": [],
+      "issues": []
+    },
+    {
+      "file": "dr-14-afir-conditii-eligibilitate-greseli-frecvente.html",
+      "route": "/dr-14-afir-conditii-eligibilitate-greseli-frecvente",
+      "blocks": 1,
+      "types": {
+        "Organization": 1,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
+        "ImageObject": 1,
+        "WebSite": 1,
+        "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 3,
+        "FAQPage": 1,
+        "Question": 3,
+        "Answer": 3
+      },
+      "modified": [],
       "issues": []
     },
     {

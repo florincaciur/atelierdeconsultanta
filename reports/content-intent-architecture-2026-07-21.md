@@ -3,7 +3,7 @@
 Data snapshot-ului: **2026-07-21**
 
 Sursă: sitemap-ul local generat după consolidările P0
-Acoperire: **94/94 URL-uri canonice/indexabile**
+Acoperire: **96/96 URL-uri canonice/indexabile**
 
 ## Rezumat
 
@@ -15,13 +15,13 @@ Acoperire: **94/94 URL-uri canonice/indexabile**
 - instrument: **2**
 - întrebare: **3**
 - legal: **2**
-- program: **15**
+- program: **17**
 - serviciu: **17**
 - studiu_de_caz: **1**
 
 ### Recomandări
 
-- keep: **70**
+- keep: **72**
 - merge: **5**
 - rewrite: **19**
 
@@ -65,6 +65,8 @@ graph TD
 | `/consultanta-fonduri-europene-bucuresti` | rewrite | — | Pagina locală/CAEN poate rămâne numai cu experiență, ofertă și conținut unic demonstrabil; necesită rescriere și validare. | Owner business confirmă experiența/oferta unică; SEO lead validează query și KPI |
 | `/cum-se-verifica-eligibilitatea-fonduri-europene` | merge | `/eligibilitate-fonduri-europene` | Intenția se suprapune cu /eligibilitate-fonduri-europene; se păstrează doar conținutul unic după aprobarea SEO/business. | SEO lead + owner de conținut aprobă decizia și migrarea |
 | `/digitalizare-imm` | keep | — | Rol distinct de program, cu o singură intenție primară și conversie proprie. | consultant FABER aprobă statutul programului; pagina țintă devine indexabilă; export backlink; conversii pe ambele URL-uri |
+| `/dr-12-afir-instalarea-tinerilor-fermieri` | keep | — | Rol distinct de program, cu o singură intenție primară și conversie proprie. | export backlink; GSC Page+Query; audit duplicare după aprobarea factuală; SEO lead |
+| `/dr-14-afir-conditii-eligibilitate-greseli-frecvente` | keep | — | Rol distinct de program, cu o singură intenție primară și conversie proprie. | export backlink; GSC Page+Query; conversii; SEO lead |
 | `/dr12-afir` | keep | — | Rol distinct de program, cu o singură intenție primară și conversie proprie. | GSC Page+Query; export backlink pentru ambele URL-uri; conversii; aprobarea statusului DR12 |
 | `/dr14` | keep | — | Rol distinct de program, cu o singură intenție primară și conversie proprie. | export backlink; conversii; aprobarea statusului DR14; SEO lead |
 | `/eligibilitate-fonduri-europene` | rewrite | — | Rol distinct condiționat în harta P0.09; trebuie eliminată suprapunerea și aprobat KPI-ul propriu. | SEO lead aprobă rolul exclusiv educațional; eliminarea secțiunilor duplicate; GSC Page+Query; export backlink |

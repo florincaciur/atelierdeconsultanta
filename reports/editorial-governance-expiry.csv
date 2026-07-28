@@ -1,7 +1,7 @@
 route,contentType,governanceState,programStatus,verifiedAt,nextReviewAt,lastMeaningfulUpdate,sourceMissing,reviewExpired,reviewerMissing,contradiction,issues
 /acte-necesare-fonduri-europene-nerambursabile,guide,pending_validation,—,2026-05-20,2026-08-18,DE_VALIDAT_UMAN,nu,nu,nu,nu,—
 /afir-autoconsum-agroalimentar,program,public,apel_deschis,2026-07-20,2026-08-19,2026-07-20,nu,nu,nu,nu,—
-/apeluri-gal,program,public,calendar_estimativ,2026-05-26,2026-07-25,2026-05-26,nu,nu,nu,nu,—
+/apeluri-gal,program,public,calendar_estimativ,2026-05-26,2026-07-25,2026-05-26,nu,da,nu,nu,expired_review
 /autoconsum-public-fotovoltaice-institutii-publice,program,public,ghid_aprobat_nedeschis,2026-05-20,2026-07-19,2026-05-20,nu,da,nu,nu,expired_review
 /calculator-soc,tool,public,—,2026-07-22,2026-09-20,2026-07-22,nu,nu,nu,nu,—
 /cod-caen-start-up-nation-2026,guide,pending_validation,—,2026-05-20,2026-08-18,DE_VALIDAT_UMAN,nu,nu,nu,nu,—
@@ -10,13 +10,13 @@ route,contentType,governanceState,programStatus,verifiedAt,nextReviewAt,lastMean
 /dr12-vs-dr14,guide,public,—,2026-07-22,2026-10-20,2026-07-22,nu,nu,nu,nu,—
 /dr14,program,public,consultare_publica,2026-07-22,2026-09-20,2026-07-22,nu,nu,nu,nu,—
 /dr14-afir-ferme-mici,program,pending_validation,—,DE_VALIDAT_UMAN,DE_VALIDAT_UMAN,DE_VALIDAT_UMAN,da,nu,nu,nu,missing_source
-/e-move,program,public,consultare_publica,2026-05-27,2026-07-26,2026-05-27,nu,nu,nu,nu,—
+/e-move,program,public,consultare_publica,2026-05-27,2026-07-26,2026-05-27,nu,da,nu,nu,expired_review
 /femeia-antreprenor-2026,program,public,calendar_estimativ,2026-05-20,2026-07-19,2026-05-20,nu,da,nu,nu,expired_review
 /fondul-de-modernizare,program,pending_validation,calendar_estimativ,DE_VALIDAT_UMAN,DE_VALIDAT_UMAN,DE_VALIDAT_UMAN,da,nu,nu,nu,missing_source
 /fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum,program,public,calendar_estimativ,2026-05-20,2026-07-19,2026-05-20,nu,da,nu,nu,expired_review
 /fondul-modernizare-energie-regenerabila-2026,program,public,calendar_estimativ,2026-05-20,2026-07-19,2026-05-20,nu,da,nu,nu,expired_review
 /fonduri-regionale,program,public,calendar_estimativ,2026-07-20,2026-09-18,2026-07-20,nu,nu,nu,nu,—
-/gal-afir,program,public,ghid_aprobat_nedeschis,2026-05-26,2026-07-25,2026-05-26,nu,nu,nu,nu,—
+/gal-afir,program,public,ghid_aprobat_nedeschis,2026-05-26,2026-07-25,2026-05-26,nu,da,nu,nu,expired_review
 /ghiduri,guide,pending_validation,—,2026-05-20,2026-08-18,DE_VALIDAT_UMAN,nu,nu,nu,nu,—
 /instrumente,tool,pending_validation,—,2026-05-20,2026-08-18,DE_VALIDAT_UMAN,nu,nu,nu,nu,—
 /investitii-modernizarea-microintreprinderilor-apel-2,program,public,consultare_publica,2026-06-02,2026-08-01,2026-06-02,nu,nu,nu,nu,—

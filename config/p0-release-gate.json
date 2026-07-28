@@ -42,7 +42,7 @@
     {"id": "redirects", "label": "Redirecturi 301 într-un hop și target canonic", "severity": "critical", "owner": "SEO lead + Backend"},
     {"id": "sitemap", "label": "Sitemap 200/indexabil/canonic și lastmod real", "severity": "critical", "owner": "Technical SEO"},
     {"id": "editorial", "label": "Zero etichete de șablon și forme de control fără diacritice", "severity": "high", "owner": "Editor coordonator"},
-    {"id": "robots", "label": "OAI-SearchBot și politica GPTBot aprobată", "severity": "critical", "owner": "Business owner + Technical SEO"},
+    {"id": "robots", "label": "Crawler-ele AI publice sunt permise, iar rutele private rămân protejate", "severity": "critical", "owner": "Business owner + Technical SEO"},
     {"id": "accessibility", "label": "Tastatură, focus, zoom, reflow și submit mobil", "severity": "high", "owner": "Accessibility QA + Frontend"},
     {"id": "performance", "label": "Fără regresii majore LCP, INP sau CLS", "severity": "high", "owner": "Frontend performance owner"}
   ]

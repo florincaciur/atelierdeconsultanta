@@ -39,6 +39,9 @@
     if (existing && existing.captured_at) return existing;
     var params;
     try { params = new URLSearchParams(window.location.search || ""); } catch (_) { params = null; }
+    if (params && !params.toString() && window.location.hash.length > 1) {
+      try { params = new URLSearchParams(window.location.hash.slice(1).replace(/^\?/, "")); } catch (_) {}
+    }
     var result = {
       utm_source: clean(params ? params.get("utm_source") || "" : "", 160),
       utm_medium: clean(params ? params.get("utm_medium") || "" : "", 160),

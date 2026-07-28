@@ -33,6 +33,24 @@ await expectRedirect(
   "https://www.atelierdeconsultanta.ro/?s=%7Bsearch_term_string%7D",
   "https://atelierdeconsultanta.ro/"
 );
+await expectRedirect(
+  "https://atelierdeconsultanta.ro/contact?program_slug=dr12-afir&source_page=%2Fdr12-afir&utm_source=chatgpt.com",
+  "https://atelierdeconsultanta.ro/contact#program_slug=dr12-afir&source_page=%2Fdr12-afir&utm_source=chatgpt.com"
+);
+await expectRedirect(
+  "http://www.atelierdeconsultanta.ro/contact?program_slug=dr14-afir",
+  "https://atelierdeconsultanta.ro/contact#program_slug=dr14-afir"
+);
+
+let contactPostReachedOrigin = false;
+await handleRequest(
+  new Request("https://atelierdeconsultanta.ro/contact?program_slug=dr12-afir", { method: "POST" }),
+  async () => {
+    contactPostReachedOrigin = true;
+    return new Response(null, { status: 204 });
+  }
+);
+assert.equal(contactPostReachedOrigin, true, "non-GET contact requests must not be converted to fragment redirects");
 
 let originRequest;
 const originResponse = await handleRequest(

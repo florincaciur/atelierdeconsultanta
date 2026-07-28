@@ -15,7 +15,20 @@ const PAGES = [
   { route: "/afir-autoconsum-agroalimentar", file: "afir-autoconsum-agroalimentar.html", title: "AFIR Autoconsum 2026: fotovoltaice, stocare, ghid | FABER" },
   { route: "/dr12-afir", file: "dr12-afir/index.html", title: "DR 12 AFIR: ghid consultativ și condiții | FABER" },
   { route: "/dr14", file: "dr14/index.html", title: "DR 14 AFIR: ghid consultativ și condiții | FABER" },
-  { route: "/por-adr-nord-est", file: "por-adr-nord-est/index.html", title: "Program Regional Nord-Est: finanțări IMM și apeluri | FABER" }
+  {
+    route: "/investitii-modernizarea-microintreprinderilor-apel-2",
+    file: "investitii-modernizarea-microintreprinderilor-apel-2/index.html",
+    title: "Modernizarea microîntreprinderilor – Apel 2 | FABER",
+    aliases: [
+      "/investitii-modernizarea-microintreprinderilor-apel-2.html",
+      "/investitii-modernizarea-microintreprinderilor-apel-2/",
+      "/investitii-modernizarea-microintreprinderilor-apel-2/index.html",
+      "/por-adr-nord-est",
+      "/por-adr-nord-est.html",
+      "/por-adr-nord-est/",
+      "/por-adr-nord-est/index.html"
+    ]
+  }
 ];
 
 function documentSignals(html) {

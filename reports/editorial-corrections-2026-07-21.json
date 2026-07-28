@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-21T11:08:37.879Z",
-  "canonicalUrlCount": 91,
+  "generatedAt": "2026-07-28T20:50:55.114Z",
+  "canonicalUrlCount": 96,
   "changes": [
     {
       "route": "/",
@@ -10531,6 +10531,14 @@
       "reason": "Diacritice și normă editorială română"
     },
     {
+      "route": "/dr-12-afir-instalarea-tinerilor-fermieri",
+      "sourceFile": "dr-12-afir-instalarea-tinerilor-fermieri.html",
+      "location": "legacy-summary",
+      "oldFragment": "Pe scurt Solicitantprofil, exploatație, documenteInvestițieutilaje, ferme sau autoconsumPunctajcriterii și riscuriGhidverificare în sursa oficială",
+      "newFragment": "[bloc eliminat]",
+      "reason": "Etichetă internă și rezumat generic redundant"
+    },
+    {
       "route": "/dr-14-afir-conditii-eligibilitate-greseli-frecvente",
       "sourceFile": "blog.json",
       "location": "posts.16.bannerAlt",
@@ -10609,6 +10617,14 @@
       "oldFragment": "DR 14 AFIR ferme mici | eligibilitate si greseli",
       "newFragment": "DR 14 AFIR ferme mici | eligibilitate și greșeli",
       "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/dr-14-afir-conditii-eligibilitate-greseli-frecvente",
+      "sourceFile": "dr-14-afir-conditii-eligibilitate-greseli-frecvente.html",
+      "location": "legacy-summary",
+      "oldFragment": "Pe scurt Solicitantprofil, exploatație, documenteInvestițieutilaje, ferme sau autoconsumPunctajcriterii și riscuriGhidverificare în sursa oficială",
+      "newFragment": "[bloc eliminat]",
+      "reason": "Etichetă internă și rezumat generic redundant"
     },
     {
       "route": "/dr12-afir-tineri-fermieri",

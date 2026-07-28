@@ -86,13 +86,14 @@ function validateRobots(actualUrls) {
     errors.push(`robots.txt must contain exactly one declaration: Sitemap: ${SITE}/sitemap.xml`);
   }
   const groups = parseRobotsGroups(text);
-  for (const agent of ["oai-searchbot", "claude-searchbot", "gptbot"]) {
+  const namedAgents = [...new Set(groups.flatMap((group) => group.agents).filter((agent) => agent !== "*"))];
+  for (const agent of namedAgents) {
     const rules = rulesForAgent(groups, agent);
     if (!rules.some((rule) => rule.directive === "allow" && rule.value === "/")) errors.push(`${agent} must be explicitly allowed at /`);
     if (rules.some((rule) => rule.directive === "disallow" && rule.value === "/")) errors.push(`${agent} must not be blocked at /`);
-  }
-  for (const agent of ["claudebot", "anthropic-ai", "google-extended", "ccbot"]) {
-    if (!rulesForAgent(groups, agent).some((rule) => rule.directive === "disallow" && rule.value === "/")) errors.push(`${agent} must be blocked at /`);
+    for (const privatePath of ["/admin", "/admin/", "/api", "/api/"]) {
+      if (!rules.some((rule) => rule.directive === "disallow" && rule.value === privatePath)) errors.push(`${agent} must protect ${privatePath}`);
+    }
   }
   const wildcardDisallows = rulesForAgent(groups, "*").filter((rule) => rule.directive === "disallow" && rule.value).map((rule) => rule.value);
   for (const url of actualUrls) {

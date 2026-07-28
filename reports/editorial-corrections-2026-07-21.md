@@ -1,9 +1,9 @@
 # Jurnal corectură editorială P0.13
 
-- URL-uri canonice procesate: 91
-- Fișiere HTML documentate: 87
+- URL-uri canonice procesate: 96
+- Fișiere HTML documentate: 89
 - Surse editoriale/CMS documentate: 6
-- Fragmente documentate: 3988
+- Fragmente documentate: 3990
 - URL-uri cu intervenții: 118
 - Valorile, procentele, datele, statusurile și câmpurile de proveniență sunt protejate de normalizator.
 - În paginile juridice s-au eliminat doar etichete interne și s-au corectat forme lingvistice; sensul juridic nu a fost rescris.
@@ -1326,6 +1326,7 @@
 | /dr-12-afir-instalarea-tinerilor-fermieri | blog.json:posts.17.seo.metaTitle | DR 12 AFIR tineri fermieri \| documente si riscuri | DR 12 AFIR tineri fermieri \| documente și riscuri | Diacritice și normă editorială română |
 | /dr-12-afir-instalarea-tinerilor-fermieri | blog.json:posts.17.seo.ogDescription | DR 12 AFIR pentru tineri fermieri: documente, SO/SOC, exploatatie, buget, cofinantare si riscuri de pregatit inainte de depunere. | DR 12 AFIR pentru tineri fermieri: documente, SO/SOC, exploatație, buget, cofinanțare și riscuri de pregătit înainte de depunere. | Diacritice și normă editorială română |
 | /dr-12-afir-instalarea-tinerilor-fermieri | blog.json:posts.17.seo.ogTitle | DR 12 AFIR tineri fermieri \| documente si riscuri | DR 12 AFIR tineri fermieri \| documente și riscuri | Diacritice și normă editorială română |
+| /dr-12-afir-instalarea-tinerilor-fermieri | dr-12-afir-instalarea-tinerilor-fermieri.html:legacy-summary | Pe scurt Solicitantprofil, exploatație, documenteInvestițieutilaje, ferme sau autoconsumPunctajcriterii și riscuriGhidverificare în sursa oficială | [bloc eliminat] | Etichetă internă și rezumat generic redundant |
 | /dr-14-afir-conditii-eligibilitate-greseli-frecvente | blog.json:posts.16.bannerAlt | Documente agricole si analiza AFIR pentru dr 14 afir | Documente agricole și analiza AFIR pentru dr 14 afir | Diacritice și normă editorială română |
 | /dr-14-afir-conditii-eligibilitate-greseli-frecvente | blog.json:posts.16.content | <p>Articol static publicat la /dr-14-afir-conditii-eligibilitate-greseli-frecvente.</p> | <p>Articol static publicat la /dr-14-afir-condiții-eligibilitate-greșeli-frecvente.</p> | Diacritice și normă editorială română |
 | /dr-14-afir-conditii-eligibilitate-greseli-frecvente | blog.json:posts.16.content | Articol static publicat la /dr-14-afir-conditii-eligibilitate-greseli-frecvente. | Articol static publicat la /dr-14-afir-condiții-eligibilitate-greșeli-frecvente. | Diacritice și normă editorială română |
@@ -1336,6 +1337,7 @@
 | /dr-14-afir-conditii-eligibilitate-greseli-frecvente | blog.json:posts.16.seo.metaTitle | DR 14 AFIR ferme mici \| eligibilitate si greseli | DR 14 AFIR ferme mici \| eligibilitate și greșeli | Diacritice și normă editorială română |
 | /dr-14-afir-conditii-eligibilitate-greseli-frecvente | blog.json:posts.16.seo.ogDescription | DR 14 AFIR pentru ferme mici: conditii de eligibilitate, documente, SO/SOC, cofinantare si greseli frecvente inainte de depunere. | DR 14 AFIR pentru ferme mici: condiții de eligibilitate, documente, SO/SOC, cofinanțare și greșeli frecvente înainte de depunere. | Diacritice și normă editorială română |
 | /dr-14-afir-conditii-eligibilitate-greseli-frecvente | blog.json:posts.16.seo.ogTitle | DR 14 AFIR ferme mici \| eligibilitate si greseli | DR 14 AFIR ferme mici \| eligibilitate și greșeli | Diacritice și normă editorială română |
+| /dr-14-afir-conditii-eligibilitate-greseli-frecvente | dr-14-afir-conditii-eligibilitate-greseli-frecvente.html:legacy-summary | Pe scurt Solicitantprofil, exploatație, documenteInvestițieutilaje, ferme sau autoconsumPunctajcriterii și riscuriGhidverificare în sursa oficială | [bloc eliminat] | Etichetă internă și rezumat generic redundant |
 | /dr12-afir-tineri-fermieri | blog.json:posts.5.bannerAlt | Documente agricole si analiza AFIR pentru DR12 AFIR tineri fermieri | Documente agricole și analiza AFIR pentru DR12 AFIR tineri fermieri | Diacritice și normă editorială română |
 | /dr12-afir-tineri-fermieri | blog.json:posts.5.excerpt | DR12 AFIR tineri fermieri: documente AFIR, SO/SOC, eligibilitate, investitii, cofinantare si riscuri de verificat inainte de depunere. | DR12 AFIR tineri fermieri: documente AFIR, SO/SOC, eligibilitate, investiții, cofinanțare și riscuri de verificat înainte de depunere. | Diacritice și normă editorială română |
 | /dr12-afir-tineri-fermieri | blog.json:posts.5.metaDescription | DR12 AFIR tineri fermieri: documente AFIR, SO/SOC, eligibilitate, investitii, cofinantare si riscuri de verificat inainte de depunere. | DR12 AFIR tineri fermieri: documente AFIR, SO/SOC, eligibilitate, investiții, cofinanțare și riscuri de verificat înainte de depunere. | Diacritice și normă editorială română |

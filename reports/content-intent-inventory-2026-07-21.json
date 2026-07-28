@@ -5,13 +5,13 @@
   "source": "sitemap.xml + HTML local + registrele P0",
   "principle": "Un URL canonic are o singură intenție primară, un părinte și o micro-conversie distinctă.",
   "summary": {
-    "canonicalUrlCount": 94,
-    "inventoriedUrlCount": 94,
+    "canonicalUrlCount": 96,
+    "inventoriedUrlCount": 96,
     "byType": {
       "core": 3,
       "ghid": 34,
       "hub": 17,
-      "program": 15,
+      "program": 17,
       "instrument": 2,
       "serviciu": 17,
       "întrebare": 3,
@@ -20,16 +20,16 @@
     },
     "byIntent": {
       "comercială": 17,
-      "informațională": 60,
+      "informațională": 62,
       "navigațională": 14,
       "locală": 3
     },
     "byRecommendation": {
-      "keep": 70,
+      "keep": 72,
       "rewrite": 19,
       "merge": 5
     },
-    "blockedDecisionCount": 20
+    "blockedDecisionCount": 22
   },
   "rows": [
     {
@@ -1229,6 +1229,80 @@
         "headingCount": 16,
         "faqCount": 9,
         "externalLinkCount": 4,
+        "interactiveControlCount": 0,
+        "governanceState": "NEÎNREGISTRAT",
+        "programRegistryState": "NU_ESTE_PROGRAM_ÎN_REGISTRU"
+      }
+    },
+    {
+      "url": "https://atelierdeconsultanta.ro/dr-12-afir-instalarea-tinerilor-fermieri",
+      "route": "/dr-12-afir-instalarea-tinerilor-fermieri",
+      "sourceFile": "dr-12-afir-instalarea-tinerilor-fermieri.html",
+      "sitemapFamily": "programs",
+      "type": "program",
+      "primaryAudience": "Fermieri și antreprenori agroalimentari",
+      "mainQuestion": "Care este statutul verificat și ce trebuie analizat pentru „DR12 AFIR și instalarea tinerilor fermieri: diferențe”?",
+      "queryCluster": "instalarea tinerilor fermieri; condiții DR12; documente și greșeli DR12",
+      "primaryIntent": "informațională",
+      "h1": "DR12 AFIR și instalarea tinerilor fermieri: diferențe",
+      "uniquePromise": "Centralizează statutul, sursa oficială și pașii de verificare pentru „DR12 AFIR și instalarea tinerilor fermieri: diferențe”.",
+      "cta": "Solicită verificare eligibilitate",
+      "ctaTarget": "/contact",
+      "microConversion": "cta_click:dr_12_afir_instalarea_tinerilor_fermieri_contact_2",
+      "parent": "/afir",
+      "competingUrls": [
+        "/dr12-afir"
+      ],
+      "demonstrableUniqueValue": "12 subtitluri distincte, 3 FAQ și 1 linkuri externe în sursa HTML.",
+      "recommendation": "keep",
+      "recommendationTarget": null,
+      "recommendationReason": "Rol distinct de program, cu o singură intenție primară și conversie proprie.",
+      "decisionState": "APROBARE_UMANĂ_NECESARĂ",
+      "owner": "Consultant programe + editor coordonator",
+      "nextReviewAt": "2026-08-20",
+      "evidence": {
+        "title": "DR12 AFIR și instalarea tinerilor fermieri: diferențe",
+        "metaDescription": "Diferențele dintre DR12 AFIR și intervențiile de instalare a tinerilor fermieri: scop, profilul solicitantului, momentul fermei și documentele de verificat.",
+        "headingCount": 12,
+        "faqCount": 3,
+        "externalLinkCount": 1,
+        "interactiveControlCount": 0,
+        "governanceState": "NEÎNREGISTRAT",
+        "programRegistryState": "NU_ESTE_PROGRAM_ÎN_REGISTRU"
+      }
+    },
+    {
+      "url": "https://atelierdeconsultanta.ro/dr-14-afir-conditii-eligibilitate-greseli-frecvente",
+      "route": "/dr-14-afir-conditii-eligibilitate-greseli-frecvente",
+      "sourceFile": "dr-14-afir-conditii-eligibilitate-greseli-frecvente.html",
+      "sitemapFamily": "programs",
+      "type": "program",
+      "primaryAudience": "Fermieri și antreprenori agroalimentari",
+      "mainQuestion": "Care este statutul verificat și ce trebuie analizat pentru „DR14 AFIR: condiții, eligibilitate și greșeli frecvente”?",
+      "queryCluster": "condiții DR14; eligibilitate DR14; greșeli DR14; documente ferme mici",
+      "primaryIntent": "informațională",
+      "h1": "DR14 AFIR: condiții, eligibilitate și greșeli frecvente",
+      "uniquePromise": "Centralizează statutul, sursa oficială și pașii de verificare pentru „DR14 AFIR: condiții, eligibilitate și greșeli frecvente”.",
+      "cta": "Verifică proiectul",
+      "ctaTarget": "/contact",
+      "microConversion": "service_or_form_click",
+      "parent": "/afir",
+      "competingUrls": [
+        "/dr14"
+      ],
+      "demonstrableUniqueValue": "11 subtitluri distincte, 3 FAQ și 1 linkuri externe în sursa HTML.",
+      "recommendation": "keep",
+      "recommendationTarget": null,
+      "recommendationReason": "Rol distinct de program, cu o singură intenție primară și conversie proprie.",
+      "decisionState": "APROBARE_UMANĂ_NECESARĂ",
+      "owner": "Consultant programe + editor coordonator",
+      "nextReviewAt": "2026-08-20",
+      "evidence": {
+        "title": "DR 14 AFIR ferme mici | eligibilitate și greșeli",
+        "metaDescription": "DR 14 AFIR pentru ferme mici: condiții de eligibilitate, documente, SO/SOC, cofinanțare și greșeli frecvente înainte de depunere.",
+        "headingCount": 11,
+        "faqCount": 3,
+        "externalLinkCount": 1,
         "interactiveControlCount": 0,
         "governanceState": "NEÎNREGISTRAT",
         "programRegistryState": "NU_ESTE_PROGRAM_ÎN_REGISTRU"
@@ -3409,7 +3483,7 @@
       "uniquePromise": "Explică livrabilul, limitele și traseul de lucru pentru „Verificare inițială a eligibilității proiectului”.",
       "cta": "Începe verificarea proiectului",
       "ctaTarget": "/contact",
-      "microConversion": "cta_click:request_eligibility_review_service",
+      "microConversion": "cta_click:verificare_eligibilitate_fonduri_europene_contact_2",
       "parent": "/consultanta-fonduri-europene",
       "competingUrls": [
         "/cum-se-verifica-eligibilitatea-fonduri-europene",
@@ -3505,6 +3579,20 @@
       "target": null,
       "reason": "Rol distinct de program, cu o singură intenție primară și conversie proprie.",
       "requiredApproval": "consultant FABER aprobă statutul programului; pagina țintă devine indexabilă; export backlink; conversii pe ambele URL-uri"
+    },
+    {
+      "route": "/dr-12-afir-instalarea-tinerilor-fermieri",
+      "decision": "keep",
+      "target": null,
+      "reason": "Rol distinct de program, cu o singură intenție primară și conversie proprie.",
+      "requiredApproval": "export backlink; GSC Page+Query; audit duplicare după aprobarea factuală; SEO lead"
+    },
+    {
+      "route": "/dr-14-afir-conditii-eligibilitate-greseli-frecvente",
+      "decision": "keep",
+      "target": null,
+      "reason": "Rol distinct de program, cu o singură intenție primară și conversie proprie.",
+      "requiredApproval": "export backlink; GSC Page+Query; conversii; SEO lead"
     },
     {
       "route": "/dr12-afir",

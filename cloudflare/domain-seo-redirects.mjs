@@ -2,6 +2,7 @@
 
 const CANONICAL_HOST = "atelierdeconsultanta.ro";
 const HSTS_VALUE = "max-age=15552000";
+const CONTACT_PAGE = "/contact";
 const CONTACT_ENDPOINT = "/api/contact-triage";
 const QUALIFIED_LEAD_ENDPOINT = "/api/crm/qualified-lead";
 const MAX_CONTACT_BODY_BYTES = 64 * 1024;
@@ -29,6 +30,16 @@ function permanentRedirect(destination) {
 function isLegacySearchPlaceholder(url) {
   return url.pathname === "/"
     && (url.searchParams.has("s") || /search_term_string/iu.test(url.search));
+}
+
+function isContactQuery(request, url) {
+  return (request.method === "GET" || request.method === "HEAD")
+    && url.pathname === CONTACT_PAGE
+    && url.search.length > 1;
+}
+
+function contactFragmentDestination(url) {
+  return `https://${CANONICAL_HOST}${CONTACT_PAGE}#${url.searchParams.toString()}`;
 }
 
 function secured(response) {
@@ -418,6 +429,12 @@ export async function handleRequest(request, originFetch = fetch, environment = 
   // one hop to the canonical homepage, without carrying the obsolete query.
   if (isLegacySearchPlaceholder(url)) {
     return permanentRedirect(`https://${CANONICAL_HOST}/`);
+  }
+
+  // Contact context remains available to the browser in the fragment, while
+  // crawlers receive one clean, parameter-free canonical document.
+  if (isContactQuery(request, url)) {
+    return permanentRedirect(contactFragmentDestination(url));
   }
 
   if (url.protocol === "http:") {
