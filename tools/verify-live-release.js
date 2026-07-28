@@ -92,7 +92,8 @@ async function safeFormProbe(contactType) {
 }
 
 async function verifyHtml(route) {
-  const response = await request(`${route}?live_release=${Date.now()}`);
+  const verificationRoute = route === "/contact" ? route : `${route}?live_release=${Date.now()}`;
+  const response = await request(verificationRoute);
   const html = await response.text();
   if (response.status !== 200) throw new Error(`${route}: HTTP ${response.status}`);
   const canonical = html.match(/<link\b[^>]*rel=["'][^"']*canonical[^"']*["'][^>]*href=["']([^"']+)["']/iu)?.[1]
