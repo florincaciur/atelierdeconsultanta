@@ -56,6 +56,8 @@ Exportul mai indică 101 pagini indexate și 98 neindexate. Excluderile intenți
 - Paginile și asset-urile publice sunt permise prin grupul `User-agent: *`.
 - `robots.txt` declară explicit familiile cunoscute OpenAI, Anthropic, Perplexity, Google, Apple, Common Crawl, Meta, Amazon, ByteDance, Mistral și DeepSeek, inclusiv crawlere de căutare, acces la cererea utilizatorului și antrenare.
 - `llms.txt` conține numai URL-uri canonice, indexabile și fără redirect; sitemap-ul conține 96 de URL-uri canonice.
+- În Cloudflare, politica veche `Block AI bots` este `Do not block (off)`, iar politicile noi pentru `Search`, `Agent` și `Training` sunt toate `Allow (do not block)`.
+- Verificarea live din 29 iulie 2026 a returnat `HTTP 200` pentru toate cele 30 de identități AI declarate explicit în `robots.txt`, inclusiv ChatGPT, GPTBot, Claude, Perplexity și DeepSeek.
 
 ## Criterii de acceptare
 

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-07-28",
+  "updatedAt": "2026-07-29",
   "siteOrigin": "https://atelierdeconsultanta.ro",
   "sitemapUrl": "https://atelierdeconsultanta.ro/sitemap.xml",
   "privatePaths": [
@@ -116,12 +116,12 @@
   "cloudflare": {
     "configurationSource": "dashboard și Security Events",
     "repositoryRuleFound": false,
-    "officialCrawlerLogReview": "DE_VALIDAT_LIVE",
+    "officialCrawlerLogReview": "POLITICI_CLOUDFLARE_ALLOW_CONFIRMATE_2026-07-29",
     "perplexityIpListUrl": "https://www.perplexity.com/perplexitybot.json",
     "syntheticProbe": {
-      "date": "2026-07-21",
-      "result": "403_FROM_CLOUDFLARE_FOR_SPOOFED_USER_AGENT",
-      "interpretation": "Nu dovedește blocarea crawlerului oficial deoarece IP-ul probei nu aparține Perplexity."
+      "date": "2026-07-29",
+      "result": "30_DIN_30_USER_AGENTS_HTTP_200",
+      "interpretation": "Toate grupurile AI declarate explicit în robots.txt au primit HTTP 200 pe pagina principală în testul live."
     },
     "allowUserAgentOnlyException": false,
     "changeApproval": "APROBAT_CACIUR_FLORIN_2026-07-28"
