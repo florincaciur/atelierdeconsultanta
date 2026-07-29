@@ -66,13 +66,13 @@ function renderPrioritySlide(program, banner, index, total) {
   const active = index === 0;
   const inert = active ? "" : " inert";
   const image = String(banner?.image || "/assets/hero/hero-business.webp").replace(/'/g, "%27");
-  return `          <article class="priority-program-slide${active ? " is-active" : ""}" role="group" aria-roledescription="slide" aria-label="${index + 1} din ${total}" data-priority-slide data-program-id="${esc(program.slug)}" data-program-family="${esc(program.family)}" data-program-status="${esc(program.status)}" data-status-label="${esc(program.statusLabel)}" data-verified-at="${esc(program.verifiedAt)}" data-source-url="${esc(program.sourceUrl)}" aria-hidden="${active ? "false" : "true"}"${inert} style="--program-image:url('${image}')">
+  return `          <div class="priority-program-slide${active ? " is-active" : ""}" role="group" aria-roledescription="slide" aria-label="${index + 1} din ${total}" data-priority-slide data-program-id="${esc(program.slug)}" data-program-family="${esc(program.family)}" data-program-status="${esc(program.status)}" data-status-label="${esc(program.statusLabel)}" data-verified-at="${esc(program.verifiedAt)}" data-source-url="${esc(program.sourceUrl)}" aria-hidden="${active ? "false" : "true"}"${inert} style="--program-image:url('${image}')">
             <span class="priority-program-status"><span aria-hidden="true">${statusSymbol(program.status)}</span><span>${esc(program.statusLabel)}</span></span>
             <h3>${esc(program.shortName)}</h3>
             <p>${esc(program.cardSummary)}</p>
             <p class="priority-program-date">Verificat la <time datetime="${esc(program.verifiedAt)}">${formatDateRo(program.verifiedAt)}</time>.</p>
             <a class="priority-program-link" href="${esc(program.pageUrl)}"${active ? "" : ' tabindex="-1"'} data-analytics-event="program_card_click" data-analytics-cta-id="priority_program_${esc(program.slug)}" data-analytics-program-slug="${esc(program.slug)}" data-analytics-program-family="${esc(program.family)}" data-analytics-target="${esc(program.pageUrl)}">Vezi condițiile</a>
-          </article>`;
+          </div>`;
 }
 
 function renderPriorityCarousel(programs, bannersByProgram) {

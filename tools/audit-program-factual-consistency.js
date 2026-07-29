@@ -163,7 +163,7 @@ function auditProgram(issues, program, context) {
     if (banner) addIssue(issues, program, "error", "pending-program-published", "banners.json", "Un program pending_validation nu poate apărea în carusel.", "absent", "present");
     const url = `https://atelierdeconsultanta.ro${program.pageUrl}`;
     const escapedUrl = url.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-    if (new RegExp(`${escapedUrl}(?=\\s|$)`, "m").test(llms)) addIssue(issues, program, "error", "pending-program-published", "llms.txt", "Un program pending_validation nu poate avea o intrare factuală publică.", "absent", url);
+    if (new RegExp(`${escapedUrl}(?=[)\\s]|$)`, "m").test(llms)) addIssue(issues, program, "error", "pending-program-published", "llms.txt", "Un program pending_validation nu poate avea o intrare factuală publică.", "absent", url);
     const file = programFile(program);
     if (fs.existsSync(file)) {
       const html = fs.readFileSync(file, "utf8");

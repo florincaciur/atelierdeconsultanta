@@ -31,10 +31,10 @@ function renderMethod() {
 
 function renderMethodExperience() {
   const tabs = CONFIG.methodSteps.map((step, index) => `<button type="button" role="tab" id="homepage-method-tab-${index + 1}" aria-controls="homepage-method-frame-${index + 1}" aria-selected="${index === 0 ? "true" : "false"}"${index === 0 ? "" : ' tabindex="-1"'} data-homepage-method-tab data-method-index="${index}"><span>${esc(step.number)}</span><strong>${esc(step.title)}</strong></button>`).join("\n");
-  const frames = CONFIG.methodSteps.map((step, index) => `<article class="homepage-method-frame${index === 0 ? " is-active" : ""}" id="homepage-method-frame-${index + 1}" role="tabpanel" aria-labelledby="homepage-method-tab-${index + 1}" data-homepage-method-frame data-method-index="${index}">
+  const frames = CONFIG.methodSteps.map((step, index) => `<div class="homepage-method-frame${index === 0 ? " is-active" : ""}" id="homepage-method-frame-${index + 1}" role="tabpanel" aria-labelledby="homepage-method-tab-${index + 1}" data-homepage-method-frame data-method-index="${index}">
   <span class="homepage-method-frame__number">${esc(step.number)}</span>
   <div><h3>${esc(step.title)}</h3><p>${esc(step.text)}</p></div>
-</article>`).join("\n");
+</div>`).join("\n");
   const nodes = CONFIG.methodSteps.map((step, index) => `<g class="homepage-method-node${index === 0 ? " is-active" : ""}" data-homepage-method-node data-method-index="${index}" transform="translate(${50 + index * 135} 70)"><circle r="18"></circle><text text-anchor="middle" dy="5">${index + 1}</text><title>${esc(step.title)}</title></g>`).join("\n");
   return `<section id="homepage-method" class="homepage-flow-section homepage-method" aria-labelledby="homepage-method-title" data-homepage-method>
   <div class="homepage-flow-inner homepage-method-layout">
@@ -98,10 +98,10 @@ function renderExplorer() {
     }
   ];
   const tabs = frames.map((frame, index) => `<button type="button" role="tab" id="homepage-explorer-tab-${index + 1}" aria-controls="${frame.id}" aria-selected="${index === 0 ? "true" : "false"}"${index === 0 ? "" : ' tabindex="-1"'} data-homepage-explorer-tab data-explorer-index="${index}"><span>0${index + 1}</span>${esc(frame.label)}</button>`).join("\n");
-  const panels = frames.map((frame, index) => `<article class="homepage-explorer-frame${index === 0 ? " is-active" : ""}" id="${frame.id}" role="tabpanel" aria-labelledby="homepage-explorer-tab-${index + 1}" data-homepage-explorer-frame data-explorer-index="${index}">
+  const panels = frames.map((frame, index) => `<div class="homepage-explorer-frame${index === 0 ? " is-active" : ""}" id="${frame.id}" role="tabpanel" aria-labelledby="homepage-explorer-tab-${index + 1}" data-homepage-explorer-frame data-explorer-index="${index}">
   <header><span class="homepage-eyebrow">${esc(frame.eyebrow)}</span><h3>${esc(frame.title)}</h3><p>${esc(frame.text)}</p></header>
   ${frame.content}
-</article>`).join("\n");
+</div>`).join("\n");
   const nodes = frames.map((frame, index) => `<g class="homepage-explorer-node${index === 0 ? " is-active" : ""}" data-homepage-explorer-node data-explorer-index="${index}" transform="translate(${70 + index * 160} 58)"><circle r="17"></circle><text text-anchor="middle" dy="5">${index + 1}</text><title>${esc(frame.label)}</title></g>`).join("\n");
   return `<section id="homepage-explorer" class="homepage-flow-section homepage-explorer" aria-labelledby="homepage-explorer-title" data-homepage-explorer>
   <div class="homepage-flow-inner">

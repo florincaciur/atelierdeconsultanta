@@ -21,6 +21,11 @@ assert.equal($("main [data-priority-carousel]").length, 1, "trebuie păstrat un 
 assert.equal($("main [data-card-carousel], main [data-program-directory]").length, 0, "componentele repetitive trebuie eliminate");
 assert.equal($("[data-homepage-method-frame]").length, 5);
 assert.equal($("[data-homepage-explorer-frame]").length, 4);
+assert.equal($("div[data-priority-slide][role='group']").length, 6, "slide-urile caruselului trebuie să folosească un element compatibil cu rolul group");
+assert.equal($("div[data-homepage-method-frame][role='tabpanel']").length, 5, "panourile metodei trebuie să folosească un element compatibil cu rolul tabpanel");
+assert.equal($("div[data-homepage-explorer-frame][role='tabpanel']").length, 4, "panourile explorerului trebuie să folosească un element compatibil cu rolul tabpanel");
+assert.equal($("article[role='tabpanel']").length, 0, "rolul tabpanel nu este permis pe elementul article");
+assert.equal($("article[role='group']").length, 0, "rolul group nu este permis pe elementul article");
 assert.equal($(".homepage-service-grid .homepage-card").length, 4);
 assert.equal($(".homepage-tool-grid .homepage-card").length, 3);
 assert.equal($(".homepage-proof-grid .homepage-card").length, 3);

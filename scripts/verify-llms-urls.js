@@ -7,7 +7,7 @@ const { sitemapUrls } = require("../tools/sitemap-utils");
 
 const ROOT = path.resolve(__dirname, "..");
 const SITE = "https://atelierdeconsultanta.ro";
-const IMPLEMENTATION_DATE = "2026-07-28";
+const IMPLEMENTATION_DATE = "2026-07-29";
 const REQUIRED_PATHS = [
   "/dr12-afir",
   "/dr14",
@@ -50,7 +50,9 @@ function main() {
   for (const [index, line] of lines.entries()) {
     const matches = line.match(/https:\/\/atelierdeconsultanta\.ro[^\s`)]+/g) || [];
     if (matches.length > 1) errors.push(`Linia ${index + 1} conține mai multe URL-uri.`);
-    if (matches.length === 1 && !/^\s*-\s+https:\/\//.test(line)) errors.push(`URL-ul de la linia ${index + 1} nu este pe o linie-bullet separată.`);
+    if (matches.length === 1 && !/^\s*-\s+\[[^\]]+\]\(https:\/\/atelierdeconsultanta\.ro[^\s)]+\)\s*$/.test(line)) {
+      errors.push(`URL-ul de la linia ${index + 1} nu este un link Markdown pe o linie-bullet separată.`);
+    }
     urls.push(...matches);
   }
 

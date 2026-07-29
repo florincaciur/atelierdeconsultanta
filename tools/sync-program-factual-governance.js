@@ -342,11 +342,11 @@ function syncLlmsText(source, programs) {
   let output = source.replace(markerPattern, "").replace(/\s+$/g, "");
   for (const program of programs) {
     const escaped = `https://atelierdeconsultanta.ro${program.pageUrl}`.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-    output = output.replace(new RegExp(`^[-*] [^\\r\\n]*${escaped}(?=\\s|$)[^\\r\\n]*(?:\\r?\\n  [^\\r\\n]*)?\\r?\\n?`, "gm"), "");
+    output = output.replace(new RegExp(`^[-*] [^\\r\\n]*${escaped}(?=[)\\s]|$)[^\\r\\n]*(?:\\r?\\n  [^\\r\\n]*)?\\r?\\n?`, "gm"), "");
   }
     const entries = programs
       .filter((program) => isPublicProgram(program) && !program.discovery?.redirectTarget)
-    .map((program) => `- https://atelierdeconsultanta.ro${program.pageUrl}\n  ${program.shortName} — ${program.statusLabel}. ${program.editorialDisclaimer || ""}`)
+    .map((program) => `- [${program.shortName}](https://atelierdeconsultanta.ro${program.pageUrl})\n  ${program.shortName} — ${program.statusLabel}. ${program.editorialDisclaimer || ""}`)
     .join("\n\n");
     const latest = programs
       .filter((program) => isPublicProgram(program) && !program.discovery?.redirectTarget)
