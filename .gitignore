@@ -11,3 +11,6 @@ node_modules/
 # Local browser-saved page exports.
 FABER*Fonduri Europene.html
 FABER*Fonduri Europene_files/
+
+# Local Codex workspace artifacts must never be published.
+.codex/
