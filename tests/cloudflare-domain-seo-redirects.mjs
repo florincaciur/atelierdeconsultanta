@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import fs from "node:fs";
 import { handleRequest } from "../cloudflare/domain-seo-redirects.mjs";
 
 async function expectRedirect(source, destination) {
@@ -54,6 +55,26 @@ await expectRedirect(
   "https://atelierdeconsultanta.ro/studii-de-caz-fonduri-europene"
 );
 await expectRedirect(
+  "http://www.atelierdeconsultanta.ro/por-adr-nord-est/index.html",
+  "https://atelierdeconsultanta.ro/investitii-modernizarea-microintreprinderilor-apel-2"
+);
+await expectRedirect(
+  "https://atelierdeconsultanta.ro/start-up-nation-2026-idei-afaceri-plan.html",
+  "https://atelierdeconsultanta.ro/start-up-nation-2026-idei-afaceri"
+);
+await expectRedirect(
+  "https://atelierdeconsultanta.ro/start-up-nation/",
+  "https://atelierdeconsultanta.ro/start-up-nation-2026"
+);
+await expectRedirect(
+  "https://atelierdeconsultanta.ro/consultanta-start-up-nation/",
+  "https://atelierdeconsultanta.ro/consultanta-start-up-nation-2026"
+);
+await expectRedirect(
+  "https://atelierdeconsultanta.ro/autoconsum-publici.html",
+  "https://atelierdeconsultanta.ro/autoconsum-public-fotovoltaice-institutii-publice"
+);
+await expectRedirect(
   "https://atelierdeconsultanta.ro/blog.html?post=blog-2",
   "https://atelierdeconsultanta.ro/blog"
 );
@@ -93,4 +114,20 @@ assert.equal(originResponse.status, 204);
 assert.equal(originRequest.url, "https://atelierdeconsultanta.ro/calendar-fonduri-europene");
 assert.equal(originResponse.headers.get("strict-transport-security"), "max-age=15552000");
 
-console.log("Cloudflare domain SEO worker tests passed.");
+const staticRedirects = fs.readFileSync(new URL("../_redirects", import.meta.url), "utf8")
+  .split(/\r?\n/u)
+  .map((line) => line.trim())
+  .filter((line) => line && !line.startsWith("#"))
+  .map((line) => {
+    const [source, destination, status] = line.split(/\s+/u);
+    return { source, destination, status: Number(status) };
+  })
+  .filter((rule) => rule.status === 301 && !/[\*:]/u.test(rule.source));
+for (const rule of staticRedirects) {
+  await expectRedirect(
+    new URL(rule.source, "https://atelierdeconsultanta.ro").href,
+    new URL(rule.destination, "https://atelierdeconsultanta.ro").href
+  );
+}
+
+console.log(`Cloudflare domain SEO worker tests passed (${staticRedirects.length} static redirects verified in one hop).`);

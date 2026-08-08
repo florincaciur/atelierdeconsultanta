@@ -309,6 +309,9 @@ async function sitemapProbe(baseUrl, cache) {
 async function programProbe(baseUrl, cache) {
   const approvals = readJson("config/program-status-approvals.json");
   const intentionalNoindex = new Set(readJson("config/content-intent-taxonomy.json").blockedNonIndexableRoutes.map((item) => item.route));
+  const approvedConsolidations = new Map(readJson("config/url-consolidation-candidates.json").rows
+    .filter((item) => item.recommendation === "MERGE_301_APPROVED" && item.target)
+    .map((item) => [item.url, item.target]));
   const errors = [];
   const homepage = await fetchText(baseUrl, "/", cache);
   for (const row of approvals.programs) {
@@ -317,6 +320,12 @@ async function programProbe(baseUrl, cache) {
     for (const route of row.publicationHoldUrls) {
       const page = await fetchText(baseUrl, route, cache);
       const $ = cheerio.load(page.text);
+      const consolidationTarget = approvedConsolidations.get(route);
+      if (consolidationTarget && page.status === 301) {
+        const actualTarget = new URL(page.headers.location || "", page.url).pathname;
+        if (actualTarget !== consolidationTarget) errors.push(`${route}: redirect aprobat către ${actualTarget || "missing"}, așteptat ${consolidationTarget}`);
+        continue;
+      }
       if (page.status !== 200) errors.push(`${route}: HTTP ${page.status}`);
       if (pending) {
         if (!/noindex/iu.test($("meta[name='robots']").attr("content") || "")) errors.push(`${route}: pending fără noindex`);

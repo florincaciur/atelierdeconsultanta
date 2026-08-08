@@ -8,6 +8,7 @@ const { groupFor, parseRobots } = require("./crawler-policy");
 
 const ROOT = path.resolve(__dirname, "..");
 const ORIGIN = "https://atelierdeconsultanta.ro";
+const CRAWLER_POLICY = JSON.parse(fs.readFileSync(path.join(ROOT, "config", "crawler-access-policy.json"), "utf8"));
 
 function argument(name, fallback = "") {
   const prefix = `--${name}=`;
@@ -62,8 +63,12 @@ function assertCrawlerPolicy(text, agent) {
   if (!group) throw new Error(`robots.txt is missing ${agent}`);
   if (!group.rules.some((rule) => rule.directive === "allow" && rule.value === "/")) throw new Error(`${agent} is not allowed on public pages`);
   if (group.rules.some((rule) => rule.directive === "disallow" && rule.value === "/")) throw new Error(`${agent} is blocked by a conflicting rule`);
-  if (!group.rules.some((rule) => rule.directive === "disallow" && /^\/admin\/?$/u.test(rule.value))) throw new Error(`${agent} does not protect /admin`);
-  if (!group.rules.some((rule) => rule.directive === "disallow" && /^\/api\/?$/u.test(rule.value))) throw new Error(`${agent} does not protect /api`);
+  for (const privatePath of CRAWLER_POLICY.privatePaths) {
+    if (!group.rules.some((rule) => rule.directive === "disallow" && rule.value === privatePath)) throw new Error(`${agent} does not protect ${privatePath}`);
+  }
+  for (const pathname of CRAWLER_POLICY.crawlableNoindexPaths || []) {
+    if (group.rules.some((rule) => rule.directive === "disallow" && rule.value === pathname)) throw new Error(`${agent} blocks crawlable noindex path ${pathname}`);
+  }
 }
 
 async function safeFormProbe(contactType) {

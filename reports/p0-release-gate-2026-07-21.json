@@ -1,11 +1,11 @@
 {
-  "checkedAt": "2026-07-22T12:35:12.282Z",
-  "requestedEnvironment": "production",
-  "stagingDescription": "nerulat",
+  "checkedAt": "2026-08-08T16:43:54.625Z",
+  "requestedEnvironment": "all",
+  "stagingDescription": "staging-local-dist (http://127.0.0.1:63313)",
   "releaseDecision": "PASS",
   "summary": {
-    "pass": 21,
-    "fail": 2,
+    "pass": 31,
+    "fail": 3,
     "criticalBlockers": 0
   },
   "results": [
@@ -105,7 +105,7 @@
       "urls": [
         "_redirects"
       ],
-      "evidence": "Redirect map PASS: 124 rules, 0 loops, 0 chains, 0 sitemap redirects, 0 internal links to redirects. | Cloudflare domain SEO worker tests passed.",
+      "evidence": "Redirect map PASS: 144 rules, 0 loops, 0 chains, 0 sitemap redirects, 0 internal links to redirects. | Cloudflare domain SEO worker tests passed (135 static redirects verified in one hop).",
       "retest": "Reexecută verificarea redirects după remediere/aprobare."
     },
     {
@@ -118,7 +118,7 @@
       "urls": [
         "/sitemap.xml"
       ],
-      "evidence": "Verified sitemap index with 94 canonical URLs; 18 verified lastmod values.",
+      "evidence": "Verified sitemap index with 96 canonical URLs; 18 verified lastmod values.",
       "retest": "Reexecută verificarea sitemap după remediere/aprobare."
     },
     {
@@ -131,12 +131,12 @@
       "urls": [
         "/sitemap.xml"
       ],
-      "evidence": "Editorial copy contract passed: 94 canonical URLs, zero forbidden template labels or control-list forms. | Editorial terminology contract passed: 94 canonical URLs and 10 P0.14 surfaces.",
+      "evidence": "Editorial copy contract passed: 96 canonical URLs, zero forbidden template labels or control-list forms. | Editorial terminology contract passed: 96 canonical URLs and 10 P0.14 surfaces.",
       "retest": "Reexecută verificarea editorial după remediere/aprobare."
     },
     {
       "criterionId": "robots",
-      "criterion": "OAI-SearchBot și politica GPTBot aprobată",
+      "criterion": "Crawler-ele AI publice sunt permise, iar rutele private rămân protejate",
       "environment": "local",
       "status": "PASS",
       "severity": "critical",
@@ -144,7 +144,7 @@
       "urls": [
         "/robots.txt"
       ],
-      "evidence": "Crawler policy contract passed: OAI/Perplexity/GPTBot allowed by policy, private paths protected.",
+      "evidence": "Crawler policy contract passed: 12 public crawler policies allowed, private paths protected.",
       "retest": "Reexecută verificarea robots după remediere/aprobare."
     },
     {
@@ -175,6 +175,164 @@
       ],
       "evidence": "Baseline LCP/CLS prezent pentru 4 rute; baseline INP=DE_VALIDAT_UMAN.",
       "retest": "Salvați un baseline INP aprobat înainte de deploy și comparați aceeași interacțiune/viewport."
+    },
+    {
+      "criterionId": "program_status",
+      "criterion": "Statusuri programe fără contradicții și aprobate",
+      "environment": "staging-local-dist",
+      "status": "PASS",
+      "severity": "critical",
+      "owner": "Consultant FABER + Content owner",
+      "urls": [
+        "http://127.0.0.1:63313/",
+        "http://127.0.0.1:63313/dr12-afir",
+        "http://127.0.0.1:63313/dr-12-afir-instalarea-tinerilor-fermieri",
+        "http://127.0.0.1:63313/dr14",
+        "http://127.0.0.1:63313/dr-14-afir-conditii-eligibilitate-greseli-frecvente",
+        "http://127.0.0.1:63313/pro-infra",
+        "http://127.0.0.1:63313/digitalizare-imm",
+        "http://127.0.0.1:63313/granturi-digitalizare-imm"
+      ],
+      "evidence": "Suprafețele prioritare respectă starea de aprobare din registru.",
+      "retest": "Reexecută verificarea program_status după remediere/aprobare."
+    },
+    {
+      "criterionId": "legal_identity",
+      "criterion": "Identitate juridică și contact coerente",
+      "environment": "staging-local-dist",
+      "status": "PASS",
+      "severity": "critical",
+      "owner": "Business owner + Jurist",
+      "urls": [
+        "http://127.0.0.1:63313/despre-faber",
+        "http://127.0.0.1:63313/contact",
+        "http://127.0.0.1:63313/politica-de-confidentialitate",
+        "http://127.0.0.1:63313/termeni-si-conditii"
+      ],
+      "evidence": "Valorile tel/mailto sunt uniforme între suprafețele juridice verificate.",
+      "retest": "Reexecută verificarea legal_identity după remediere/aprobare."
+    },
+    {
+      "criterionId": "contact_privacy",
+      "criterion": "Regulă telefon/email identică în formular și Privacy",
+      "environment": "staging-local-dist",
+      "status": "PASS",
+      "severity": "critical",
+      "owner": "Jurist + Product owner",
+      "urls": [
+        "http://127.0.0.1:63313/contact",
+        "http://127.0.0.1:63313/politica-de-confidentialitate"
+      ],
+      "evidence": "Structura email SAU telefon și informarea Privacy coincid.",
+      "retest": "Reexecută verificarea contact_privacy după remediere/aprobare."
+    },
+    {
+      "criterionId": "form_flow",
+      "criterion": "Formular email SAU telefon, fără pierdere de date",
+      "environment": "staging-local-dist",
+      "status": "PASS",
+      "severity": "critical",
+      "owner": "Frontend + CRM owner",
+      "urls": [
+        "http://127.0.0.1:63313/contact",
+        "http://127.0.0.1:63313/api/contact-triage"
+      ],
+      "evidence": "Structura formularului în două etape este disponibilă; contractul local verifică submit și păstrarea datelor.",
+      "retest": "Reexecută verificarea form_flow după remediere/aprobare."
+    },
+    {
+      "criterionId": "analytics",
+      "criterion": "Funnel fără PII și fără duplicate",
+      "environment": "staging-local-dist",
+      "status": "PASS",
+      "severity": "critical",
+      "owner": "Analytics owner + Backend",
+      "urls": [
+        "http://127.0.0.1:63313/assets/analytics-events.js"
+      ],
+      "evidence": "Asset-ul live conține evenimentele controlate și nu expune cheile PII interzise.",
+      "retest": "Reexecută verificarea analytics după remediere/aprobare."
+    },
+    {
+      "criterionId": "redirects",
+      "criterion": "Redirecturi 301 într-un hop și target canonic",
+      "environment": "staging-local-dist",
+      "status": "PASS",
+      "severity": "critical",
+      "owner": "SEO lead + Backend",
+      "urls": [
+        "http://127.0.0.1:63313/_redirects"
+      ],
+      "evidence": "135 redirecturi verificate. mapa și Worker-ul au trecut contractele locale; serverul static nu emulează edge redirects",
+      "retest": "Reexecută verificarea redirects după remediere/aprobare."
+    },
+    {
+      "criterionId": "sitemap",
+      "criterion": "Sitemap 200/indexabil/canonic și lastmod real",
+      "environment": "staging-local-dist",
+      "status": "PASS",
+      "severity": "critical",
+      "owner": "Technical SEO",
+      "urls": [
+        "http://127.0.0.1:63313/sitemap.xml"
+      ],
+      "evidence": "96 URL-uri 200/indexabile/self-canonical; 18 lastmod verificate.",
+      "retest": "Reexecută verificarea sitemap după remediere/aprobare."
+    },
+    {
+      "criterionId": "editorial",
+      "criterion": "Zero etichete de șablon și forme de control fără diacritice",
+      "environment": "staging-local-dist",
+      "status": "PASS",
+      "severity": "high",
+      "owner": "Editor coordonator",
+      "urls": [
+        "http://127.0.0.1:63313/sitemap.xml"
+      ],
+      "evidence": "96 URL-uri scanate fără etichete interzise.",
+      "retest": "Reexecută verificarea editorial după remediere/aprobare."
+    },
+    {
+      "criterionId": "robots",
+      "criterion": "Crawler-ele AI publice sunt permise, iar rutele private rămân protejate",
+      "environment": "staging-local-dist",
+      "status": "PASS",
+      "severity": "critical",
+      "owner": "Business owner + Technical SEO",
+      "urls": [
+        "http://127.0.0.1:63313/robots.txt"
+      ],
+      "evidence": "Crawler-ele AI aprobate au Allow public, zonele private rămân blocate și Sitemap este prezent.",
+      "retest": "Reexecută verificarea robots după remediere/aprobare."
+    },
+    {
+      "criterionId": "accessibility",
+      "criterion": "Tastatură, focus, zoom, reflow și submit mobil",
+      "environment": "staging-local-dist",
+      "status": "PASS",
+      "severity": "high",
+      "owner": "Accessibility QA + Frontend",
+      "urls": [
+        "http://127.0.0.1:63313/contact"
+      ],
+      "evidence": "Labels, reflow 320px, zoom 200%, target-uri și focus verificate în browser.",
+      "retest": "Reexecută verificarea accessibility după remediere/aprobare."
+    },
+    {
+      "criterionId": "performance",
+      "criterion": "Fără regresii majore LCP, INP sau CLS",
+      "environment": "staging-local-dist",
+      "status": "FAIL",
+      "severity": "high",
+      "owner": "Frontend performance owner",
+      "urls": [
+        "http://127.0.0.1:63313/",
+        "http://127.0.0.1:63313/fonduri-europene",
+        "http://127.0.0.1:63313/consultanta-fonduri-europene",
+        "http://127.0.0.1:63313/digitalizare-imm"
+      ],
+      "evidence": "baseline INP de teren lipsește; comparația folosește numai pragul sintetic de 200ms Măsurători: [{\"path\":\"/\",\"lcpMs\":124,\"cls\":0,\"syntheticInpMs\":30,\"baselineLcpMs\":483.279,\"baselineCls\":0.04291},{\"path\":\"/fonduri-europene\",\"lcpMs\":108,\"cls\":0.00006,\"syntheticInpMs\":14,\"baselineLcpMs\":364.7012,\"baselineCls\":0.00001},{\"path\":\"/consultanta-fonduri-europene\",\"lcpMs\":120,\"cls\":0.00005,\"syntheticInpMs\":15,\"baselineLcpMs\":402.2069,\"baselineCls\":0.000009},{\"path\":\"/digitalizare-imm\",\"lcpMs\":112,\"cls\":0.00005,\"syntheticInpMs\":4,\"baselineLcpMs\":1203.238,\"baselineCls\":0.00002}]",
+      "retest": "Reexecută verificarea performance după remediere/aprobare."
     },
     {
       "criterionId": "program_status",
@@ -263,7 +421,7 @@
       "urls": [
         "https://atelierdeconsultanta.ro/_redirects"
       ],
-      "evidence": "115 redirecturi verificate. 301 direct și target 200/self-canonical.",
+      "evidence": "135 redirecturi verificate. 301 direct și target 200/self-canonical.",
       "retest": "Reexecută verificarea redirects după remediere/aprobare."
     },
     {
@@ -276,7 +434,7 @@
       "urls": [
         "https://atelierdeconsultanta.ro/sitemap.xml"
       ],
-      "evidence": "94 URL-uri 200/indexabile/self-canonical; 18 lastmod verificate.",
+      "evidence": "96 URL-uri 200/indexabile/self-canonical; 18 lastmod verificate.",
       "retest": "Reexecută verificarea sitemap după remediere/aprobare."
     },
     {
@@ -289,12 +447,12 @@
       "urls": [
         "https://atelierdeconsultanta.ro/sitemap.xml"
       ],
-      "evidence": "94 URL-uri scanate fără etichete interzise.",
+      "evidence": "96 URL-uri scanate fără etichete interzise.",
       "retest": "Reexecută verificarea editorial după remediere/aprobare."
     },
     {
       "criterionId": "robots",
-      "criterion": "OAI-SearchBot și politica GPTBot aprobată",
+      "criterion": "Crawler-ele AI publice sunt permise, iar rutele private rămân protejate",
       "environment": "production",
       "status": "PASS",
       "severity": "critical",
@@ -302,7 +460,7 @@
       "urls": [
         "https://atelierdeconsultanta.ro/robots.txt"
       ],
-      "evidence": "OAI-SearchBot Allow, GPTBot Allow aprobat și Sitemap prezente.",
+      "evidence": "Crawler-ele AI aprobate au Allow public, zonele private rămân blocate și Sitemap este prezent.",
       "retest": "Reexecută verificarea robots după remediere/aprobare."
     },
     {
@@ -331,7 +489,7 @@
         "https://atelierdeconsultanta.ro/consultanta-fonduri-europene",
         "https://atelierdeconsultanta.ro/digitalizare-imm"
       ],
-      "evidence": "baseline INP de teren lipsește; comparația folosește numai pragul sintetic de 200ms Măsurători: [{\"path\":\"/\",\"lcpMs\":476,\"cls\":0,\"syntheticInpMs\":30,\"baselineLcpMs\":483.279,\"baselineCls\":0.04291},{\"path\":\"/fonduri-europene\",\"lcpMs\":448,\"cls\":0.00003,\"syntheticInpMs\":12,\"baselineLcpMs\":364.7012,\"baselineCls\":0.00001},{\"path\":\"/consultanta-fonduri-europene\",\"lcpMs\":420,\"cls\":0.00003,\"syntheticInpMs\":18,\"baselineLcpMs\":402.2069,\"baselineCls\":0.000009},{\"path\":\"/digitalizare-imm\",\"lcpMs\":564,\"cls\":0.00003,\"syntheticInpMs\":10,\"baselineLcpMs\":1203.238,\"baselineCls\":0.00002}]",
+      "evidence": "baseline INP de teren lipsește; comparația folosește numai pragul sintetic de 200ms Măsurători: [{\"path\":\"/\",\"lcpMs\":388,\"cls\":0,\"syntheticInpMs\":19,\"baselineLcpMs\":483.279,\"baselineCls\":0.04291},{\"path\":\"/fonduri-europene\",\"lcpMs\":512,\"cls\":0.00003,\"syntheticInpMs\":14,\"baselineLcpMs\":364.7012,\"baselineCls\":0.00001},{\"path\":\"/consultanta-fonduri-europene\",\"lcpMs\":404,\"cls\":0.00005,\"syntheticInpMs\":18,\"baselineLcpMs\":402.2069,\"baselineCls\":0.000009},{\"path\":\"/digitalizare-imm\",\"lcpMs\":408,\"cls\":0.00005,\"syntheticInpMs\":10,\"baselineLcpMs\":1203.238,\"baselineCls\":0.00002}]",
       "retest": "Reexecută verificarea performance după remediere/aprobare."
     }
   ]
