@@ -18,6 +18,7 @@ const {
 
 const ROOT = path.resolve(__dirname, "..");
 const ROBOTS_PATH = path.join(ROOT, "robots.txt");
+const CRAWLER_POLICY_PATH = path.join(ROOT, "config", "crawler-access-policy.json");
 const LLMS_PATH = path.join(ROOT, "llms.txt");
 const ALLOWED_LLMS_TECHNICAL_URLS = new Set([`${SITE}/robots.txt`, `${SITE}/sitemap.xml`]);
 
@@ -86,13 +87,17 @@ function validateRobots(actualUrls) {
     errors.push(`robots.txt must contain exactly one declaration: Sitemap: ${SITE}/sitemap.xml`);
   }
   const groups = parseRobotsGroups(text);
+  const crawlerPolicy = JSON.parse(fs.readFileSync(CRAWLER_POLICY_PATH, "utf8"));
   const namedAgents = [...new Set(groups.flatMap((group) => group.agents).filter((agent) => agent !== "*"))];
   for (const agent of namedAgents) {
     const rules = rulesForAgent(groups, agent);
     if (!rules.some((rule) => rule.directive === "allow" && rule.value === "/")) errors.push(`${agent} must be explicitly allowed at /`);
     if (rules.some((rule) => rule.directive === "disallow" && rule.value === "/")) errors.push(`${agent} must not be blocked at /`);
-    for (const privatePath of ["/admin", "/admin/", "/api", "/api/"]) {
+    for (const privatePath of crawlerPolicy.privatePaths) {
       if (!rules.some((rule) => rule.directive === "disallow" && rule.value === privatePath)) errors.push(`${agent} must protect ${privatePath}`);
+    }
+    for (const pathname of crawlerPolicy.crawlableNoindexPaths || []) {
+      if (rules.some((rule) => rule.directive === "disallow" && rule.value === pathname)) errors.push(`${agent} must crawl ${pathname} to observe noindex`);
     }
   }
   const wildcardDisallows = rulesForAgent(groups, "*").filter((rule) => rule.directive === "disallow" && rule.value).map((rule) => rule.value);

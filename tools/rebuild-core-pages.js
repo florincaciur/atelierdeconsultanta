@@ -271,7 +271,7 @@ function rewriteAbout() {
     eyebrow: "Despre FABER · identitate, metodă și limite",
     h1: "Consultanță prudentă înainte de dosar",
     description: "Verificare prudentă, documentată și interdisciplinară — consultanță și proiectare — înainte de dosar.",
-    primary: { href: "/contact?source_page=%2Fdespre-faber", label: "Vezi dacă proiectul merită pregătit" },
+    primary: { href: "/contact#source_page=%2Fdespre-faber", label: "Vezi dacă proiectul merită pregătit" },
     secondary: { href: "/metodologie-verificare-eligibilitate", label: "Vezi metoda de lucru" },
     summary: [
       ["Contractant", "FABER PUBLISHING S.R.L."],
@@ -365,7 +365,7 @@ function rewriteAbout() {
 
       <section class="core-callout about-final-cta" aria-labelledby="about-cta">
         <div><h2 id="about-cta">Ai o investiție pe care vrei să o verifici?</h2><p>Trimite forma solicitantului, localitatea și investiția. Prima etapă este orientativă și stabilește ce documente trebuie analizate.</p></div>
-        <div class="core-callout__actions"><a class="btn btn-primary" href="/contact?source_page=%2Fdespre-faber">Vezi dacă proiectul merită pregătit</a><a class="btn btn-secondary" href="/metodologie-verificare-eligibilitate">Vezi metoda de lucru</a></div>
+        <div class="core-callout__actions"><a class="btn btn-primary" href="/contact#source_page=%2Fdespre-faber">Vezi dacă proiectul merită pregătit</a><a class="btn btn-secondary" href="/metodologie-verificare-eligibilitate">Vezi metoda de lucru</a></div>
       </section>
 
 ${context}

@@ -30,6 +30,9 @@ for (const crawler of policy.crawlers) {
   for (const privatePath of policy.privatePaths) {
     assert(group.rules.some((rule) => rule.directive === "disallow" && rule.value === privatePath), `${crawler.userAgent} must keep ${privatePath} private`);
   }
+  for (const pathname of policy.crawlableNoindexPaths) {
+    assert(!group.rules.some((rule) => rule.directive === "disallow" && rule.value === pathname), `${crawler.userAgent} must crawl ${pathname} to observe noindex`);
+  }
 }
 for (const group of parsed.groups.filter((item) => item.agents.some((agent) => agent !== "*"))) {
   assert(group.rules.some((rule) => rule.directive === "allow" && rule.value === "/"), `${group.agents.join(", ")} must allow public crawling`);
@@ -37,7 +40,11 @@ for (const group of parsed.groups.filter((item) => item.agents.some((agent) => a
   for (const privatePath of policy.privatePaths) {
     assert(group.rules.some((rule) => rule.directive === "disallow" && rule.value === privatePath), `${group.agents.join(", ")} must keep ${privatePath} private`);
   }
+  for (const pathname of policy.crawlableNoindexPaths) {
+    assert(!group.rules.some((rule) => rule.directive === "disallow" && rule.value === pathname), `${group.agents.join(", ")} must crawl ${pathname} to observe noindex`);
+  }
 }
+assert.deepEqual(policy.crawlableNoindexPaths, ["/admin", "/admin/"]);
 assert.equal(policy.crawlers.find((item) => item.userAgent === "GPTBot")?.approval, "APROBAT_CACIUR_FLORIN_2026-07-22");
 assert.equal(policy.crawlers.find((item) => item.userAgent === "DeepSeekBot")?.approval, "APROBAT_CACIUR_FLORIN_2026-07-28");
 assert.equal(policy.cloudflare.allowUserAgentOnlyException, false);

@@ -24,7 +24,7 @@ const primary = $("#hero .hero-ctas a").eq(0);
 const secondary = $("#hero .hero-ctas a").eq(1);
 assert.equal($("#hero .hero-ctas a").length, 2, "hero-ul trebuie să aibă exact două CTA-uri");
 assert.equal(primary.text().trim(), "Începe verificarea proiectului");
-assert.equal(primary.attr("href"), "/contact?source_page=%2F");
+assert.equal(primary.attr("href"), "/contact#source_page=%2F");
 assert.equal(secondary.text().trim(), "Vezi ce date pregătești");
 assert.equal(secondary.attr("href"), "/verificare-eligibilitate-fonduri-europene");
 for (const [name, cta] of [["principal", primary], ["secundar", secondary]]) {

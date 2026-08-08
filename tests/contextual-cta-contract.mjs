@@ -25,9 +25,11 @@ for (const page of config.pages) {
   assert.equal($("link[href^='/assets/contextual-cta.css']").length, 1);
   assert.equal($("script[src^='/assets/contextual-cta.js']").length, 1);
   const url = new URL(primary.attr("href"), "https://atelierdeconsultanta.ro");
-  assert.deepEqual([...url.searchParams.keys()].sort(), page.programSlug ? ["program_slug", "source_page"] : ["source_page"]);
-  assert.equal(url.searchParams.get("source_page"), page.route);
-  if (page.programSlug) assert.equal(url.searchParams.get("program_slug"), page.programSlug);
+  const context = new URLSearchParams(url.hash.slice(1));
+  assert.equal(url.search, "");
+  assert.deepEqual([...context.keys()].sort(), page.programSlug ? ["program_slug", "source_page"] : ["source_page"]);
+  assert.equal(context.get("source_page"), page.route);
+  if (page.programSlug) assert.equal(context.get("program_slug"), page.programSlug);
 }
 
 const contact = cheerio.load(fs.readFileSync(path.join(ROOT, "contact", "index.html"), "utf8"));

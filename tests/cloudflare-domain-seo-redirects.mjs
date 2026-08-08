@@ -34,6 +34,30 @@ await expectRedirect(
   "https://atelierdeconsultanta.ro/"
 );
 await expectRedirect(
+  "http://www.atelierdeconsultanta.ro/pnrr.html?utm_source=gsc",
+  "https://atelierdeconsultanta.ro/digitalizare-imm-pnrr?utm_source=gsc"
+);
+await expectRedirect(
+  "https://atelierdeconsultanta.ro/granturi-digitalizare-imm/",
+  "https://atelierdeconsultanta.ro/digitalizare-imm"
+);
+await expectRedirect(
+  "https://atelierdeconsultanta.ro/fondul-de-modernizare/index.html",
+  "https://atelierdeconsultanta.ro/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum"
+);
+await expectRedirect(
+  "https://atelierdeconsultanta.ro/testimoniale.html",
+  "https://atelierdeconsultanta.ro/studii-de-caz-fonduri-europene"
+);
+await expectRedirect(
+  "https://atelierdeconsultanta.ro/portofoliu/",
+  "https://atelierdeconsultanta.ro/studii-de-caz-fonduri-europene"
+);
+await expectRedirect(
+  "https://atelierdeconsultanta.ro/blog.html?post=blog-2",
+  "https://atelierdeconsultanta.ro/blog"
+);
+await expectRedirect(
   "https://atelierdeconsultanta.ro/contact?program_slug=dr12-afir&source_page=%2Fdr12-afir&utm_source=chatgpt.com",
   "https://atelierdeconsultanta.ro/contact#program_slug=dr12-afir&source_page=%2Fdr12-afir&utm_source=chatgpt.com"
 );
@@ -52,16 +76,21 @@ await handleRequest(
 );
 assert.equal(contactPostReachedOrigin, true, "non-GET contact requests must not be converted to fragment redirects");
 
+await expectRedirect(
+  "https://atelierdeconsultanta.ro/calendar-fonduri-europene/",
+  "https://atelierdeconsultanta.ro/calendar-fonduri-europene"
+);
+
 let originRequest;
 const originResponse = await handleRequest(
-  new Request("https://atelierdeconsultanta.ro/calendar-fonduri-europene/"),
+  new Request("https://atelierdeconsultanta.ro/calendar-fonduri-europene"),
   async (request) => {
     originRequest = request;
     return new Response(null, { status: 204 });
   }
 );
 assert.equal(originResponse.status, 204);
-assert.equal(originRequest.url, "https://atelierdeconsultanta.ro/calendar-fonduri-europene/");
+assert.equal(originRequest.url, "https://atelierdeconsultanta.ro/calendar-fonduri-europene");
 assert.equal(originResponse.headers.get("strict-transport-security"), "max-age=15552000");
 
 console.log("Cloudflare domain SEO worker tests passed.");

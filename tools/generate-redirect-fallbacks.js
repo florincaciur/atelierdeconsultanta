@@ -39,15 +39,15 @@ const fallbacks = [
   ["fonduri-pentru-ferme.html", "/fonduri-pentru-ferme"],
   ["fonduri-pentru-utilaje-agricole.html", "/fonduri-pentru-utilaje-agricole"],
   ["ghiduri.html", "/ghiduri"],
-  ["granturi-digitalizare-imm.html", "/granturi-digitalizare-imm"],
+  ["granturi-digitalizare-imm.html", "/digitalizare-imm"],
   ["greseli-fonduri-europene.html", "/greseli-fonduri-europene"],
   ["intrebari-frecvente.html", "/intrebari-frecvente"],
-  ["pnrr.html", "/pnrr"],
+  ["pnrr.html", "/digitalizare-imm-pnrr"],
   ["pnrr-digitalizare-imm.html", "/digitalizare-imm-pnrr"],
   ["pnrr-digitalizare-imm/index.html", "/digitalizare-imm-pnrr"],
   ["por-adr-nord-est.html", "/por-adr-nord-est"],
   ["pro-infra.html", "/pro-infra"],
-  ["studii-de-caz.html", "/studii-de-caz"],
+  ["studii-de-caz.html", "/studii-de-caz-fonduri-europene"],
   ["start-up-nation-2026-cheltuieli-eligibile.html", "/start-up-nation-2026-cheltuieli-eligibile"],
   ["start-up-nation-2026-conditii.html", "/start-up-nation-2026-conditii"],
   ["start-up-nation-2026-idei-afaceri.html", "/start-up-nation-2026-idei-afaceri"],
@@ -56,7 +56,7 @@ const fallbacks = [
   ["autoconsum-publici.html", "/autoconsum-public-fotovoltaice-institutii-publice"],
   ["start-up-nation.html", "/start-up-nation-2026"],
   ["start-up-nation-2026-idei-afaceri-plan.html", "/start-up-nation-2026-idei-afaceri"],
-  ["testimoniale.html", "/testimoniale"],
+  ["testimoniale.html", "/studii-de-caz-fonduri-europene"],
 ];
 
 function titleFor(target) {

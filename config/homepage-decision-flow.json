@@ -30,7 +30,7 @@
   },
   "conversionDecision": {
     "entryType": "contact_cta",
-    "target": "/contact?source_page=%2F",
+    "target": "/contact#source_page=%2F",
     "reason": "Nu există în repo o comparație de conversie aprobată care să susțină un formular inline; homepage-ul păstrează CTA-uri către același formular scurt, fără formulare concurente în pagină."
   },
   "methodSteps": [
@@ -66,7 +66,7 @@
   "contact": {
     "title": "Spune-ne solicitantul, localitatea și investiția",
     "text": "Prima etapă este o verificare orientativă. Nu este necesar să ai dosarul complet și nu promitem aprobarea.",
-    "primaryHref": "/contact?source_page=%2F",
+    "primaryHref": "/contact#source_page=%2F",
     "primaryLabel": "Începe verificarea proiectului",
     "phones": [
       { "href": "tel:+40769828338", "label": "0769 828 338" },

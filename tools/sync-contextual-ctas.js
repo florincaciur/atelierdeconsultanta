@@ -21,7 +21,7 @@ function contactHref(page) {
   const params = new URLSearchParams();
   if (page.programSlug) params.set("program_slug", page.programSlug);
   params.set("source_page", page.route);
-  return `/contact?${params.toString()}`;
+  return `/contact#${params.toString()}`;
 }
 
 function tracking(cta, page, component) {

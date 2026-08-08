@@ -76,7 +76,7 @@ for (const href of ["/dr12-afir", "/dr14", "/calculator-soc"]) {
 
 const finalCta = $(".expert-final-cta a");
 assert.equal(finalCta.text().trim(), "Compară proiectul tău cu criteriile DR 12 și DR 14");
-assert.equal(finalCta.attr("href"), "/contact?source_page=%2Fdr12-vs-dr14");
+assert.equal(finalCta.attr("href"), "/contact#source_page=%2Fdr12-vs-dr14");
 assert.equal(finalCta.attr("data-analytics-event"), "cta_click");
 assert.equal(finalCta.attr("data-analytics-target"), "/contact");
 assert(!/[?&](?:email|phone|name|description)=/iu.test(finalCta.attr("href")), "CTA-ul nu poate expune PII în URL");

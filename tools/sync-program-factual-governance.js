@@ -390,7 +390,7 @@ function restoredPublicMain(program) {
     <p>${escapeHtml(program.cardSummary)}</p>
     <p>${escapeHtml(program.editorialDisclaimer)}</p>
     <p><a href="${escapeHtml(program.sourceUrl)}" target="_blank" rel="noopener noreferrer">Consultă documentul oficial</a></p>
-    <p><a href="/contact?program=${escapeHtml(program.slug)}" data-analytics-event="cta_click" data-analytics-component="program_page" data-analytics-cta-id="program_project_check" data-analytics-program-category="${escapeHtml(program.slug)}">Verifică încadrarea proiectului</a></p>
+    <p><a href="/contact#program=${escapeHtml(program.slug)}" data-analytics-event="cta_click" data-analytics-component="program_page" data-analytics-cta-id="program_project_check" data-analytics-program-category="${escapeHtml(program.slug)}">Verifică încadrarea proiectului</a></p>
   </article>
 </main>`;
 }

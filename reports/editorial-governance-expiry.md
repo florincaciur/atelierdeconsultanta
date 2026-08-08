@@ -1,12 +1,12 @@
 # Raport de prospețime și guvernanță editorială
 
-Data evaluării: **2026-07-28**. Registru: `config/editorial-governance.json`.
+Data evaluării: **2026-08-08**. Registru: `config/editorial-governance.json`.
 
 ## Rezumat
 
 - Pagini guvernate: **33**
 - Pagini publice cu metadate complete: **19**
-- Verificări expirate: **8**
+- Verificări expirate: **9**
 - Surse lipsă/incomplete: **4**
 - Reviewer lipsă: **0**
 - Contradicții program–pagină: **0**
@@ -37,7 +37,7 @@ O expirare produce warning intern și nu schimbă automat statusul, textul, `ver
 | `/gal-afir` | program | public | ghid_aprobat_nedeschis | 2026-05-26 | 2026-07-25 | 2026-05-26 | nu | da | nu | nu |
 | `/ghiduri` | guide | pending_validation | — | 2026-05-20 | 2026-08-18 | DE_VALIDAT_UMAN | nu | nu | nu | nu |
 | `/instrumente` | tool | pending_validation | — | 2026-05-20 | 2026-08-18 | DE_VALIDAT_UMAN | nu | nu | nu | nu |
-| `/investitii-modernizarea-microintreprinderilor-apel-2` | program | public | consultare_publica | 2026-06-02 | 2026-08-01 | 2026-06-02 | nu | nu | nu | nu |
+| `/investitii-modernizarea-microintreprinderilor-apel-2` | program | public | consultare_publica | 2026-06-02 | 2026-08-01 | 2026-06-02 | nu | da | nu | nu |
 | `/pnrr` | program | pending_validation | calendar_estimativ | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | da | nu | nu | nu |
 | `/pocidif-21` | program | public | ghid_aprobat_nedeschis | 2026-07-13 | 2026-09-11 | 2026-07-13 | nu | nu | nu | nu |
 | `/por-adr-nord-est` | program | public | ghid_aprobat_nedeschis | 2026-07-20 | 2026-09-18 | 2026-07-20 | nu | nu | nu | nu |

@@ -41,9 +41,31 @@ function groupFor(parsed, groupName) {
   return parsed.groups.find((group) => group.agents.some((agent) => agent.toLowerCase() === groupName.toLowerCase()));
 }
 
+function parseHeaders(text) {
+  const rules = [];
+  let current = null;
+  for (const sourceLine of text.split(/\r?\n/u)) {
+    if (!sourceLine.trim()) continue;
+    if (!/^\s/u.test(sourceLine)) {
+      current = { pattern: sourceLine.trim(), headers: [] };
+      rules.push(current);
+    } else if (current) {
+      current.headers.push(sourceLine.trim());
+    }
+  }
+  return rules;
+}
+
+function headerRuleMatchesPath(pattern, pathname) {
+  if (pattern === pathname) return true;
+  if (!pattern.endsWith("*")) return false;
+  return pathname.startsWith(pattern.slice(0, -1));
+}
+
 function validatePolicy() {
   const policy = JSON.parse(fs.readFileSync(path.join(ROOT, "config", "crawler-access-policy.json"), "utf8"));
   const robotsText = fs.readFileSync(path.join(ROOT, "robots.txt"), "utf8");
+  const headerRules = parseHeaders(fs.readFileSync(path.join(ROOT, "_headers"), "utf8"));
   const parsed = parseRobots(robotsText);
   const errors = [];
 
@@ -69,6 +91,11 @@ function validatePolicy() {
           errors.push(`${crawler.robotsGroup} trebuie să blocheze ${privatePath}`);
         }
       }
+      for (const pathname of policy.crawlableNoindexPaths || []) {
+        if (group.rules.some((rule) => rule.directive === "disallow" && rule.value === pathname)) {
+          errors.push(`${crawler.robotsGroup} nu poate bloca pagina crawlable noindex ${pathname}`);
+        }
+      }
     } else if (!group.rules.some((rule) => rule.directive === "disallow" && rule.value === "/")) {
       errors.push(`${crawler.robotsGroup} trebuie să păstreze Disallow: /`);
     }
@@ -82,7 +109,13 @@ function validatePolicy() {
     errors.push("Politica Cloudflare nu poate permite excepții bazate numai pe User-Agent");
   }
 
+  for (const pathname of policy.crawlableNoindexPaths || []) {
+    const protectedByNoindex = headerRules.some((rule) => headerRuleMatchesPath(rule.pattern, pathname)
+      && rule.headers.some((header) => /^x-robots-tag:\s*.*\bnoindex\b/iu.test(header)));
+    if (!protectedByNoindex) errors.push(`${pathname} trebuie să trimită X-Robots-Tag: noindex`);
+  }
+
   return { policy, parsed, errors };
 }
 
-module.exports = { ROOT, groupFor, parseRobots, validatePolicy };
+module.exports = { ROOT, groupFor, parseHeaders, parseRobots, validatePolicy };

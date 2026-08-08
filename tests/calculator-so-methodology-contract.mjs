@@ -83,9 +83,11 @@ assert.match(css, /\.so-source-list li\s*\{[\s\S]*?overflow-wrap:\s*anywhere/u, 
 const resultCta = $("[data-calculator-context-cta]");
 assert.equal(resultCta.text().trim(), "Folosește rezultatul pentru verificarea AFIR");
 const resultUrl = new URL(resultCta.attr("href"), "https://atelierdeconsultanta.ro");
+const resultContext = new URLSearchParams(resultUrl.hash.slice(1));
 assert.equal(resultUrl.pathname, "/contact");
-assert.equal(resultUrl.searchParams.get("source_page"), "/calculator-soc");
-for (const forbidden of ["email", "phone", "telefon", "name", "description"]) assert(!resultUrl.searchParams.has(forbidden));
+assert.equal(resultUrl.search, "");
+assert.equal(resultContext.get("source_page"), "/calculator-soc");
+for (const forbidden of ["email", "phone", "telefon", "name", "description"]) assert(!resultContext.has(forbidden));
 
 const record = governance.find((entry) => entry.id === "calculator-soc");
 assert(record, "înregistrarea editorială lipsește");

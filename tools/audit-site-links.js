@@ -18,6 +18,7 @@ const SITE_HOSTS = new Set(["atelierdeconsultanta.ro", "www.atelierdeconsultanta
 const TEXT_EXTENSIONS = new Set([".html", ".json", ".xml", ".txt"]);
 const INTERNAL_PATH_PREFIXES = ["tools/", "scripts/", "tests/", "config/", "reports/", "dist/"];
 const SKIP_PREFIXES = ["mailto:", "tel:", "sms:", "javascript:", "data:", "blob:", "whatsapp:"];
+const CONTACT_CONTEXT_KEYS = new Set(["program", "program_slug", "investment", "source_channel", "source_page", "calculator_so_result"]);
 const PROGRAM_ROUTES = [
   "dr12-afir", "dr14", "por-adr-nord-est", "fonduri-regionale", "fonduri-europene-nord-est",
   "investitii-modernizarea-microintreprinderilor-apel-2", "afir-autoconsum-agroalimentar",
@@ -187,6 +188,13 @@ function decodedFragmentId(hash, hasFragmentMarker = false) {
   }
 }
 
+function isContactContextFragment(link) {
+  if (link.route !== "/contact" || !link.hash || !link.hash.slice(1).includes("=")) return false;
+  const params = new URLSearchParams(link.hash.slice(1));
+  const keys = [...params.keys()];
+  return keys.length > 0 && keys.every((key) => CONTACT_CONTEXT_KEYS.has(key));
+}
+
 function targetData(root, file, cache) {
   if (cache.has(file)) return cache.get(file);
   const full = path.join(root, file);
@@ -291,7 +299,7 @@ function auditSiteLinks(options = {}) {
       if (redirect) issues.push({ type: "link-to-redirect", ...link, reason: `route redirects through _redirects:${redirect.line}` });
     }
 
-    if (!link.hasFragmentMarker) continue;
+    if (!link.hasFragmentMarker || isContactContextFragment(link)) continue;
     const id = decodedFragmentId(link.hash, link.hasFragmentMarker);
     const data = targetData(root, link.targetFile, targetCache);
     if (link.fragmentType === "interactive") interactiveFragmentsChecked += 1;

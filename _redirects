@@ -2,6 +2,30 @@
 # Specific legacy aliases stay above the global normalizers so every source resolves in one hop.
 /index.html / 301
 
+# GSC remediation (2026-08-08): consolidate public noindex placeholders and
+# unapproved trust aliases into the closest verified, indexable canonical page.
+# Every historical form is explicit so no source needs a second normalization hop.
+/pnrr https://atelierdeconsultanta.ro/digitalizare-imm-pnrr 301
+/pnrr/ https://atelierdeconsultanta.ro/digitalizare-imm-pnrr 301
+/pnrr.html https://atelierdeconsultanta.ro/digitalizare-imm-pnrr 301
+/pnrr/index.html https://atelierdeconsultanta.ro/digitalizare-imm-pnrr 301
+/granturi-digitalizare-imm https://atelierdeconsultanta.ro/digitalizare-imm 301
+/granturi-digitalizare-imm/ https://atelierdeconsultanta.ro/digitalizare-imm 301
+/granturi-digitalizare-imm.html https://atelierdeconsultanta.ro/digitalizare-imm 301
+/granturi-digitalizare-imm/index.html https://atelierdeconsultanta.ro/digitalizare-imm 301
+/fondul-de-modernizare https://atelierdeconsultanta.ro/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum 301
+/fondul-de-modernizare/ https://atelierdeconsultanta.ro/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum 301
+/fondul-de-modernizare.html https://atelierdeconsultanta.ro/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum 301
+/fondul-de-modernizare/index.html https://atelierdeconsultanta.ro/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum 301
+/testimoniale https://atelierdeconsultanta.ro/studii-de-caz-fonduri-europene 301
+/testimoniale/ https://atelierdeconsultanta.ro/studii-de-caz-fonduri-europene 301
+/testimoniale.html https://atelierdeconsultanta.ro/studii-de-caz-fonduri-europene 301
+/testimoniale/index.html https://atelierdeconsultanta.ro/studii-de-caz-fonduri-europene 301
+/portofoliu https://atelierdeconsultanta.ro/studii-de-caz-fonduri-europene 301
+/portofoliu/ https://atelierdeconsultanta.ro/studii-de-caz-fonduri-europene 301
+/portofoliu.html https://atelierdeconsultanta.ro/studii-de-caz-fonduri-europene 301
+/portofoliu/index.html https://atelierdeconsultanta.ro/studii-de-caz-fonduri-europene 301
+
 # GSC canonical consolidation: primary DR12, DR14, POR and AFIR program routes.
 /dr12-afir.html https://atelierdeconsultanta.ro/dr12-afir 301
 /dr12-afir/index.html https://atelierdeconsultanta.ro/dr12-afir 301

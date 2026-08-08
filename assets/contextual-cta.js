@@ -34,8 +34,11 @@
     var updateCalculatorLink = function () {
       var url = new URL(calculatorCta.getAttribute("data-contextual-base-href"), window.location.origin);
       var numeric = Number(total.dataset.soValue || 0);
-      if (Number.isFinite(numeric) && numeric > 0 && numeric <= 1000000000) url.searchParams.set("so_result", String(Math.round(numeric)));
-      calculatorCta.href = url.pathname + url.search;
+      var params = new URLSearchParams(url.hash.slice(1).replace(/^\?/, "") || url.search.slice(1));
+      if (Number.isFinite(numeric) && numeric > 0 && numeric <= 1000000000) params.set("so_result", String(Math.round(numeric)));
+      url.search = "";
+      url.hash = params.toString();
+      calculatorCta.href = url.pathname + url.hash;
     };
     updateCalculatorLink();
     new MutationObserver(updateCalculatorLink).observe(total, { childList: true, characterData: true, subtree: true, attributes: true, attributeFilter: ["data-so-value"] });

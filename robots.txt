@@ -1,13 +1,12 @@
 User-agent: *
 Allow: /
-Disallow: /admin
-Disallow: /admin/
 Disallow: /api
 Disallow: /api/
 
 # Crawler-ele AI publice, de căutare, răspuns și antrenare sunt permise.
 # Lista explicită acoperă token-urile cunoscute; crawler-ele noi sunt permise
-# prin grupul wildcard de mai sus. Zonele private rămân protejate.
+# prin grupul wildcard de mai sus. Endpointurile API rămân protejate, iar
+# paginile administrative crawlable trimit explicit noindex.
 User-agent: OAI-SearchBot
 User-agent: ChatGPT-User
 User-agent: GPTBot
@@ -39,8 +38,6 @@ User-agent: PetalBot
 User-agent: Timpibot
 User-agent: ImagesiftBot
 Allow: /
-Disallow: /admin
-Disallow: /admin/
 Disallow: /api
 Disallow: /api/
 

@@ -1,13 +1,15 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-07-29",
+  "updatedAt": "2026-08-08",
   "siteOrigin": "https://atelierdeconsultanta.ro",
   "sitemapUrl": "https://atelierdeconsultanta.ro/sitemap.xml",
   "privatePaths": [
-    "/admin",
-    "/admin/",
     "/api",
     "/api/"
+  ],
+  "crawlableNoindexPaths": [
+    "/admin",
+    "/admin/"
   ],
   "publicProbePaths": [
     "/",

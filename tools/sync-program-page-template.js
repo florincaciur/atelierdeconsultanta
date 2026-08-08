@@ -234,7 +234,7 @@ function renderCta(page, program) {
     investment: page.cta.investmentPrefill,
     source_channel: "program_page"
   }).toString();
-  const target = `/contact?${query}`;
+  const target = `/contact#${query}`;
   return `<!-- P1_09_DECISION_ACTION_START -->
   <aside class="long-form-decision-action program-template__cta" id="program-cta" data-program-template-section="cta" aria-labelledby="program-cta-title">
     <h2 id="program-cta-title">${escapeHtml(page.cta.heading)}</h2>

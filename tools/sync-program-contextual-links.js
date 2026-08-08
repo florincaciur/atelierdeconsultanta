@@ -51,7 +51,7 @@ function resolvedLinks(program, config = loadConfig()) {
     { relation: "comparison", ...comparison },
     {
       relation: "conversion",
-      href: `/contact?program_slug=${encodeURIComponent(program.slug)}&source_page=${encodeURIComponent(program.pageUrl)}`,
+      href: `/contact#program_slug=${encodeURIComponent(program.slug)}&source_page=${encodeURIComponent(program.pageUrl)}`,
       anchor: row.conversionAnchor,
       explanation: row.conversionMicrocopy || "Trimite contextul proiectului pentru o verificare inițială, fără promisiunea eligibilității."
     }

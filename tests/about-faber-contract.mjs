@@ -66,7 +66,7 @@ assert(!/garantăm (?:aprobarea|succesul)/iu.test(visible), "pagina conține o p
 assert(!/rat[ăe] de succes\s*[:–-]?\s*\d/iu.test(visible), "pagina publică o rată de succes neverificată");
 assert($("a[href='/metodologie-verificare-eligibilitate']").length > 0, "linkul spre metodologie lipsește");
 assert($("a[href='/studii-de-caz-fonduri-europene']").length > 0, "linkul spre studiile de caz lipsește");
-assert($("a[href='/contact']").length > 0 || $("a[href^='/contact?']").length > 0, "linkul spre Contact lipsește");
+assert($("a[href='/contact']").length > 0 || $("a[href^='/contact#']").length > 0, "linkul spre Contact lipsește");
 assert($("link[href='/assets/about-faber.css?v=20260722-1']").length === 1, "stylesheet-ul paginii lipsește sau este duplicat");
 
 for (const validation of governance.pendingValidations || []) {

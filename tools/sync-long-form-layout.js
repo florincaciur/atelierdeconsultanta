@@ -148,7 +148,7 @@ ${TOC_END}`;
 }
 
 function renderDecisionAction(program) {
-  const target = `/contact?program=${encodeURIComponent(program.slug)}`;
+  const target = `/contact#program=${encodeURIComponent(program.slug)}`;
   return `${ACTION_START}
       <aside class="long-form-decision-action" aria-label="Următorul pas după rezumat">
         <p><strong>Ai parcurs datele esențiale?</strong> Continuă cu o verificare orientativă a solicitantului, investiției, bugetului și documentelor.</p>

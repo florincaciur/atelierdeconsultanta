@@ -19,7 +19,7 @@ Generatorul include numai rute locale 200, indexabile si self-canonical. `lastmo
 - missing_canonical: 2
 - noindex_meta: 65
 - noncanonical_file_variant: 2
-- redirect_source: 96
+- redirect_source: 111
 
 ## Lista excluderilor
 
@@ -146,6 +146,9 @@ Generatorul include numai rute locale 200, indexabile si self-canonical. `lastmo
 | https://atelierdeconsultanta.ro/e-move | _redirects | redirect_source | HTTP 301 |
 | https://atelierdeconsultanta.ro/e-move | _redirects | redirect_source | HTTP 301 |
 | https://atelierdeconsultanta.ro/e-move | _redirects | redirect_source | HTTP 301 |
+| https://atelierdeconsultanta.ro/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum | _redirects | redirect_source | HTTP 301 |
+| https://atelierdeconsultanta.ro/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum | _redirects | redirect_source | HTTP 301 |
+| https://atelierdeconsultanta.ro/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum | _redirects | redirect_source | HTTP 301 |
 | https://atelierdeconsultanta.ro/fonduri-europene-nord-est | _redirects | redirect_source | HTTP 301 |
 | https://atelierdeconsultanta.ro/fonduri-europene-nord-est | _redirects | redirect_source | HTTP 301 |
 | https://atelierdeconsultanta.ro/fonduri-europene-nord-est | _redirects | redirect_source | HTTP 301 |
@@ -160,6 +163,9 @@ Generatorul include numai rute locale 200, indexabile si self-canonical. `lastmo
 | https://atelierdeconsultanta.ro/fonduri-europene-nord-est | _redirects | redirect_source | HTTP 301 |
 | https://atelierdeconsultanta.ro/gal-afir | _redirects | redirect_source | HTTP 301 |
 | https://atelierdeconsultanta.ro/gal-afir | _redirects | redirect_source | HTTP 301 |
+| https://atelierdeconsultanta.ro/digitalizare-imm | _redirects | redirect_source | HTTP 301 |
+| https://atelierdeconsultanta.ro/digitalizare-imm | _redirects | redirect_source | HTTP 301 |
+| https://atelierdeconsultanta.ro/digitalizare-imm | _redirects | redirect_source | HTTP 301 |
 | https://atelierdeconsultanta.ro/start-up-nation-2026-idei-afaceri | _redirects | redirect_source | HTTP 301 |
 | https://atelierdeconsultanta.ro/start-up-nation-2026-idei-afaceri | _redirects | redirect_source | HTTP 301 |
 | / | _redirects | redirect_source | HTTP 301 |
@@ -174,11 +180,17 @@ Generatorul include numai rute locale 200, indexabile si self-canonical. `lastmo
 | https://atelierdeconsultanta.ro/digitalizare-imm-pnrr | _redirects | redirect_source | HTTP 301 |
 | https://atelierdeconsultanta.ro/digitalizare-imm-pnrr | _redirects | redirect_source | HTTP 301 |
 | https://atelierdeconsultanta.ro/digitalizare-imm-pnrr | _redirects | redirect_source | HTTP 301 |
+| https://atelierdeconsultanta.ro/digitalizare-imm-pnrr | _redirects | redirect_source | HTTP 301 |
+| https://atelierdeconsultanta.ro/digitalizare-imm-pnrr | _redirects | redirect_source | HTTP 301 |
+| https://atelierdeconsultanta.ro/digitalizare-imm-pnrr | _redirects | redirect_source | HTTP 301 |
 | https://atelierdeconsultanta.ro/pocidif-21 | _redirects | redirect_source | HTTP 301 |
 | https://atelierdeconsultanta.ro/por-adr-nord-est | por-adr-nord-est/index.html | redirect_source | - |
 | https://atelierdeconsultanta.ro/investitii-modernizarea-microintreprinderilor-apel-2 | _redirects | redirect_source | HTTP 301 |
 | https://atelierdeconsultanta.ro/investitii-modernizarea-microintreprinderilor-apel-2 | _redirects | redirect_source | HTTP 301 |
 | https://atelierdeconsultanta.ro/investitii-modernizarea-microintreprinderilor-apel-2 | _redirects | redirect_source | HTTP 301 |
+| https://atelierdeconsultanta.ro/studii-de-caz-fonduri-europene | _redirects | redirect_source | HTTP 301 |
+| https://atelierdeconsultanta.ro/studii-de-caz-fonduri-europene | _redirects | redirect_source | HTTP 301 |
+| https://atelierdeconsultanta.ro/studii-de-caz-fonduri-europene | _redirects | redirect_source | HTTP 301 |
 | https://atelierdeconsultanta.ro/pro-infra | _redirects | redirect_source | HTTP 301 |
 | https://atelierdeconsultanta.ro/start-up-nation-2026-idei-afaceri | _redirects | redirect_source | HTTP 301 |
 | https://atelierdeconsultanta.ro/start-up-nation-2026-idei-afaceri | _redirects | redirect_source | HTTP 301 |
@@ -188,6 +200,9 @@ Generatorul include numai rute locale 200, indexabile si self-canonical. `lastmo
 | https://atelierdeconsultanta.ro/start-up-nation-2026-conditii | _redirects | redirect_source | HTTP 301 |
 | https://atelierdeconsultanta.ro/start-up-nation-2026-conditii | _redirects | redirect_source | HTTP 301 |
 | https://atelierdeconsultanta.ro/start-up-nation-2026-conditii | _redirects | redirect_source | HTTP 301 |
+| https://atelierdeconsultanta.ro/studii-de-caz-fonduri-europene | _redirects | redirect_source | HTTP 301 |
+| https://atelierdeconsultanta.ro/studii-de-caz-fonduri-europene | _redirects | redirect_source | HTTP 301 |
+| https://atelierdeconsultanta.ro/studii-de-caz-fonduri-europene | _redirects | redirect_source | HTTP 301 |
 | https://atelierdeconsultanta.ro/studii-de-caz-fonduri-europene | _redirects | redirect_source | HTTP 301 |
 | https://atelierdeconsultanta.ro/studii-de-caz-fonduri-europene | _redirects | redirect_source | HTTP 301 |
 | https://atelierdeconsultanta.ro/studii-de-caz-fonduri-europene | _redirects | redirect_source | HTTP 301 |

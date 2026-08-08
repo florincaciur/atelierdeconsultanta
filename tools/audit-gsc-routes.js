@@ -9,11 +9,11 @@ const { sitemapUrls: readSitemapUrls } = require("./sitemap-utils");
 const ROOT = path.resolve(__dirname, "..");
 const PUBLIC_DIR = fs.existsSync(path.join(ROOT, "dist")) ? path.join(ROOT, "dist") : ROOT;
 const SITE = "https://atelierdeconsultanta.ro";
-const REPORT_DATE = "2026-06-10";
-const SKIP_DIRS = new Set([".git", ".wrangler", "dist", "node_modules", "reports", "scripts", "tools"]);
+const REPORT_DATE = "2026-08-08";
+const SKIP_DIRS = new Set([".git", ".wrangler", "config", "dist", "node_modules", "reports", "scripts", "tools"]);
 const TEXT_EXTENSIONS = new Set([".html", ".json", ".js", ".xml", ".txt"]);
 
-const GSC_URLS = [
+const LEGACY_GSC_URLS = [
   "https://atelierdeconsultanta.ro/consultanta-start-up-nation-2026/",
   "https://atelierdeconsultanta.ro/firma-consultanta-fonduri-europene/",
   "https://atelierdeconsultanta.ro/consultanta-start-up-nation/",
@@ -54,6 +54,10 @@ const GSC_URLS = [
   "https://atelierdeconsultanta.ro/fonduri-europene-iasi",
   "https://atelierdeconsultanta.ro/consultanta-fonduri-europene-bacau",
 ];
+
+const GSC_SNAPSHOT_PATH = path.join(ROOT, "reports", "gsc-indexing-snapshot-2026-08-08.json");
+const GSC_SNAPSHOT = JSON.parse(fs.readFileSync(GSC_SNAPSHOT_PATH, "utf8"));
+const GSC_URLS = GSC_SNAPSHOT.categories.flatMap((category) => category.urls);
 
 function readIfExists(filePath) {
   return fs.existsSync(filePath) ? fs.readFileSync(filePath, "utf8") : "";
@@ -249,6 +253,7 @@ function localStatus(chain) {
 
 function intentFor(inputUrl, chain, finalUrl, canonical, xRobotsTag) {
   const parsed = new URL(inputUrl);
+  if (parsed.pathname === "/admin" || parsed.pathname === "/admin/") return "pagina administrativa crawlable noindex";
   if (parsed.pathname === "/official-guides.json") return "resursa tehnica neindexabila";
   if (parsed.search) return "pagina alternativa";
   if (/\bnoindex\b/i.test(xRobotsTag)) return "resursa tehnica neindexabila";
@@ -263,6 +268,9 @@ function intentFor(inputUrl, chain, finalUrl, canonical, xRobotsTag) {
 
 function actionFor(intent, inputUrl) {
   const parsed = new URL(inputUrl);
+  if (parsed.pathname === "/admin" || parsed.pathname === "/admin/") {
+    return "Permis in robots.txt pentru ca Google sa observe noindex; exclus din sitemap si protejat cu meta/X-Robots-Tag noindex.";
+  }
   if (parsed.pathname === "/official-guides.json") {
     return "Pastrat 200 ca JSON si marcat noindex, nofollow prin _headers; exclus din sitemap.";
   }
@@ -284,6 +292,11 @@ function resultFor({ inputUrl, chain, finalUrl, finalStatus, inSitemap, canonica
   if (new URL(inputUrl).pathname === "/official-guides.json") {
     if (finalStatus === 200 && /\bnoindex\b/i.test(xRobotsTag) && !inSitemap) return "PASS_TECHNICAL_NOINDEX";
     return "FAIL_TECHNICAL_RESOURCE";
+  }
+  if (["/admin", "/admin/"].includes(new URL(inputUrl).pathname)) {
+    const directives = [metaRobots, xRobotsTag].filter(Boolean).join("; ");
+    if (finalStatus === 200 && /\bnoindex\b/i.test(directives) && !inSitemap) return "PASS_CRAWLABLE_NOINDEX";
+    return "FAIL_ADMIN_NOINDEX";
   }
   if (/\bnoindex\b/i.test([metaRobots, xRobotsTag].filter(Boolean).join("; "))) return "FAIL_NOINDEX";
   if (!canonical) return "FAIL_CANONICAL_MISSING";
@@ -477,13 +490,13 @@ function writeReports(rows) {
   const canonicalRows = rows.filter((row) => row.result === "PASS_CANONICAL_200");
   const redirectRows = rows.filter((row) => row.result === "PASS_REDIRECT_TO_CANONICAL");
   const alternateRows = rows.filter((row) => row.result === "PASS_ALTERNATE_CANONICAL");
-  const noindexRows = rows.filter((row) => row.result === "PASS_TECHNICAL_NOINDEX");
+  const noindexRows = rows.filter((row) => ["PASS_TECHNICAL_NOINDEX", "PASS_CRAWLABLE_NOINDEX"].includes(row.result));
   const sitemapRows = rows.filter((row) => row.inSitemap);
   const nonSitemapRows = rows.filter((row) => !row.inSitemap);
   const failedRows = rows.filter((row) => row.result.startsWith("FAIL_"));
 
   const mdRows = [
-    "# Raport remediere indexare GSC - 2026-06-10",
+    "# Raport remediere indexare GSC - 2026-08-08",
     "",
     "## Rezumat",
     "",
@@ -498,6 +511,7 @@ function writeReports(rows) {
     "- URL-urile cu slash final, `.html` si `/index.html` sunt aliasuri istorice sau variante generate de structura statica; ele trebuie sa ramana 301 catre forma curata.",
     "- Unele URL-uri raportate de GSC sunt pagini canonice reale si trebuie sa raspunda 200 direct, cu self-canonical si prezenta in sitemap.",
     "- `/official-guides.json` este o resursa tehnica folosita de JavaScript, nu o pagina destinata indexarii; trebuie sa ramana 200, dar cu `X-Robots-Tag: noindex, nofollow`.",
+    "- `/admin` trebuie sa ramana crawlable, in afara sitemap-ului si marcat `noindex`; altfel Google raporteaza blocarea prin robots fara sa poata vedea directiva de indexare.",
     "- Query-urile istorice `/blog?post=blog-1`, `/blog?post=blog-2` si `/blog?post=blog-3` sunt variante alternative ale hubului `/blog`; sitemap-ul si linkurile interne SEO raman pe URL-ul curat.",
     "- Pentru rutele locale consolidate, cum sunt Iasi/Bacau/Suceava, redirectul catre `/fonduri-europene-nord-est` este intentionat si nu trebuie transformat in 200 fara continut local distinct.",
     "",
@@ -523,6 +537,7 @@ function writeReports(rows) {
     "- Canonicalele declarate pentru paginile HTML auditate sunt absolute si corespund URL-ului final.",
     "- `_redirects` pastreaza un singur hop pentru aliasurile auditate catre destinatia canonica.",
     "- `_headers` pastreaza regula pentru `/official-guides.json`: `Content-Type: application/json; charset=utf-8` si `X-Robots-Tag: noindex, nofollow`.",
+    "- `/admin` nu este blocat in `robots.txt`, dar trimite `X-Robots-Tag: noindex, nofollow` si meta robots echivalent.",
     "- Linkurile interne normale catre aliasurile auditate sunt eliminate sau raman zero in matrice.",
     "",
     "## Teste executate",

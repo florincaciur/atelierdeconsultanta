@@ -114,10 +114,12 @@ for (const page of config.pages) {
   const cta = $(".program-template__cta a");
   assert.equal(cta.text().trim(), page.cta.label);
   const ctaUrl = new URL(cta.attr("href"), "https://atelierdeconsultanta.ro");
+  const ctaContext = new URLSearchParams(ctaUrl.hash.slice(1));
   assert.equal(ctaUrl.pathname, "/contact");
-  assert.equal(ctaUrl.searchParams.get("program"), program.slug);
-  assert.equal(ctaUrl.searchParams.get("investment"), page.cta.investmentPrefill);
-  assert.equal(ctaUrl.searchParams.get("source_channel"), "program_page");
+  assert.equal(ctaUrl.search, "");
+  assert.equal(ctaContext.get("program"), program.slug);
+  assert.equal(ctaContext.get("investment"), page.cta.investmentPrefill);
+  assert.equal(ctaContext.get("source_channel"), "program_page");
 
   for (const field of FORBIDDEN_LOCAL_FACTS) assert.equal(Object.prototype.hasOwnProperty.call(page, field), false, `${page.route}: ${field} nu poate fi local`);
   for (const key of page.sourceKeys) {

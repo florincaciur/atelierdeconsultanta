@@ -10,6 +10,9 @@
 /admin/*
   X-Robots-Tag: noindex, nofollow
 
+/admin
+  X-Robots-Tag: noindex, nofollow
+
 /google8bbb9999c523a3bd.html
   X-Robots-Tag: noindex, nofollow
 

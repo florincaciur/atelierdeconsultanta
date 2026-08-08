@@ -50,11 +50,14 @@
       "primaryIntent": "variantă lexicală pentru granturi de digitalizare IMM",
       "queryCluster": "granturi digitalizare IMM; finanțare digitalizare; software ERP CRM cloud",
       "pageType": "ghid/program secundar",
-      "recommendation": "MERGE_301_CONDITIONAL",
+      "recommendation": "MERGE_301_APPROVED",
       "target": "/digitalizare-imm",
       "contentToMigrate": "Migrează secțiunile unice despre tipuri de grant, cheltuieli IT, ERP/CRM/cloud, exemple și FAQ validate; deduplică statutul, eligibilitatea și CTA-urile.",
       "risks": "Are 2 clicuri și poziție medie bună în exportul GSC; un 301 fără maparea query/backlink poate pierde vizibilitate. Ținta trebuie validată factual și scoasă din noindex înainte.",
-      "approvalBlockers": ["GSC Page+Query pentru ambele URL-uri", "export backlink", "ținta indexabilă", "aprobarea SEO lead și owner"]
+      "approvalBlockers": [],
+      "approvedAt": "2026-08-08",
+      "approvedBy": "Owner, prin solicitarea explicită de remediere și validare a tuturor exemplelor GSC",
+      "approvalEvidence": "GSC live: /granturi-digitalizare-imm este 200 noindex; /digitalizare-imm este 200, self-canonical, indexabil și prezent în sitemap."
     },
     {
       "group": "consultanta-comerciala",

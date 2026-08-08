@@ -7,6 +7,14 @@ const CONTACT_ENDPOINT = "/api/contact-triage";
 const QUALIFIED_LEAD_ENDPOINT = "/api/crm/qualified-lead";
 const MAX_CONTACT_BODY_BYTES = 64 * 1024;
 const MAX_ANALYTICS_BODY_BYTES = 16 * 1024;
+const RETIRED_PUBLIC_ROUTES = new Map([
+  ["/pnrr", "/digitalizare-imm-pnrr"],
+  ["/granturi-digitalizare-imm", "/digitalizare-imm"],
+  ["/fondul-de-modernizare", "/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum"],
+  ["/studii-de-caz", "/studii-de-caz-fonduri-europene"],
+  ["/testimoniale", "/studii-de-caz-fonduri-europene"],
+  ["/portofoliu", "/studii-de-caz-fonduri-europene"]
+]);
 const APPLICANT_TYPES = new Set([
   "societate",
   "pfa_ii_if",
@@ -40,6 +48,38 @@ function isContactQuery(request, url) {
 
 function contactFragmentDestination(url) {
   return `https://${CANONICAL_HOST}${CONTACT_PAGE}#${url.searchParams.toString()}`;
+}
+
+function normalizePublicPath(pathname) {
+  let output = pathname || "/";
+  output = output.replace(/\/index\.html$/iu, "");
+  output = output.replace(/\.html$/iu, "");
+  if (output !== "/") output = output.replace(/\/+$/u, "");
+  return output || "/";
+}
+
+function canonicalGetDestination(request, url) {
+  if (request.method !== "GET" && request.method !== "HEAD") return "";
+
+  const normalizedPath = normalizePublicPath(url.pathname);
+  const retiredTarget = RETIRED_PUBLIC_ROUTES.get(normalizedPath);
+  const legacyBlogQuery = normalizedPath === "/blog" && url.searchParams.has("post");
+  const targetPath = retiredTarget || normalizedPath;
+  const needsRedirect = url.protocol !== "https:"
+    || url.hostname !== CANONICAL_HOST
+    || url.port !== ""
+    || url.pathname !== targetPath
+    || legacyBlogQuery;
+  if (!needsRedirect) return "";
+
+  const destination = new URL(url.toString());
+  destination.protocol = "https:";
+  destination.hostname = CANONICAL_HOST;
+  destination.port = "";
+  destination.pathname = targetPath;
+  if (legacyBlogQuery) destination.search = "";
+  destination.hash = "";
+  return destination.toString();
 }
 
 function secured(response) {
@@ -437,19 +477,8 @@ export async function handleRequest(request, originFetch = fetch, environment = 
     return permanentRedirect(contactFragmentDestination(url));
   }
 
-  if (url.protocol === "http:") {
-    url.protocol = "https:";
-    url.hostname = CANONICAL_HOST;
-    url.port = "";
-    return permanentRedirect(url.toString());
-  }
-
-  if (url.hostname !== CANONICAL_HOST) {
-    url.protocol = "https:";
-    url.hostname = CANONICAL_HOST;
-    url.port = "";
-    return permanentRedirect(url.toString());
-  }
+  const canonicalDestination = canonicalGetDestination(request, url);
+  if (canonicalDestination) return permanentRedirect(canonicalDestination);
 
   if (url.hostname === CANONICAL_HOST && url.pathname === CONTACT_ENDPOINT) {
     return handleContactTriageRequest(request, {
