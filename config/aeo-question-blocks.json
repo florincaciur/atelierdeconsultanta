@@ -95,23 +95,23 @@
       "label": "Întrebări despre DR 14",
       "questions": [
         {
-          "id": "este-deschis-apelul-dr14",
-          "question": "Este deschis apelul DR 14?",
-          "answer": "Nu. La verificarea din 22 iulie 2026, documentul disponibil pentru DR 14 era varianta consultativă a ghidului, iar depunerea proiectelor nu era deschisă. Condițiile pot fi analizate pentru pregătire, însă nu trebuie prezentate ca reguli finale. Perioada de lansare va putea fi publicată numai după un anunț oficial AFIR cu intervalul efectiv.",
-          "evidenceTitle": "Ce rămâne de reconfirmat",
-          "evidence": [
-            "forma finală și anexele ghidului",
-            "intervalul oficial de depunere",
-            "condițiile, pragurile și valorile aplicabile sesiunii"
-          ],
+                          "id": "este-deschis-apelul-dr14",
+                          "question": "Este deschis apelul DR 14?",
+                          "answer": "Nu. AFIR a publicat la 6 august 2026 ghidul oficial final și anexele DR 14, însă nu a publicat încă intervalul oficial de depunere. Septembrie–octombrie 2026 este prezentat pe această pagină exclusiv ca perioadă estimativă de pregătire, până la anunțul de lansare AFIR.",
+                          "evidenceTitle": "Ce este confirmat și ce urmează",
+                          "evidence": [
+                                           "ghidul oficial final și anexele sunt publicate la 6 august 2026",
+                                           "intervalul oficial de depunere",
+                                           "alocarea și pragurile lunare aplicabile sesiunii"
+                                       ],
           "selectionBasis": "GSC: „dr14 afir 2026”, „dr 14 afir” și variante despre ghid",
           "sources": [
             {
               "name": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
               "document": "Ghidul solicitantului DR 14",
-              "version": "Varianta consultativă, sesiunea 2026, arhivată de AFIR la 05.05.2026",
-              "url": "https://www.afir.ro/api/file?filename=Ghidul+Solicitantului+DR-14+VARIANTA+CONSULTATIV%C4%82&filetype=pdf&url=%2Fmedia%2Fbkmpo5fo%2Fgs-consultativ-dr-14.pdf",
-              "verifiedAt": "2026-07-22"
+                                              "version": "Varianta finală, sesiunea 2026, publicată de AFIR la 06.08.2026",
+                                              "url": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-14/",
+                                              "verifiedAt": "2026-08-08"
             }
           ],
           "detailLinks": [
@@ -121,7 +121,7 @@
         {
           "id": "so-incadrare-dr14",
           "question": "Cum influențează SO încadrarea în DR 14?",
-          "answer": "SO exprimă dimensiunea economică a exploatației și este unul dintre elementele folosite la analiza încadrării, dar nu decide singur eligibilitatea pentru DR 14. Totalul trebuie calculat cu categoriile și coeficienții aplicabili și confruntat cu evidențele fermei. Forma solicitantului, amplasamentul, investiția, istoricul exploatației și celelalte condiții din ghid pot schimba concluzia.",
+                          "answer": "SO exprimă dimensiunea economică a exploatației. Intervalul general DR 14 este 4.000–11.999 SO; pragul minim este 2.000 SO pentru exploatațiile zootehnice cu rase autohtone și pentru floricultură, plante aromatice, medicinale și ornamentale, respectiv 2.300 SO pentru legumicultură. Încadrarea se verifică împreună cu SO majoritar și evidențele APIA/ANSVSA.",
           "evidenceTitle": "Verificări care însoțesc rezultatul SO",
           "evidence": [
             "suprafețe și efective documentabile",
@@ -133,9 +133,9 @@
             {
               "name": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
               "document": "Ghidul solicitantului DR 14",
-              "version": "Varianta consultativă, sesiunea 2026, arhivată de AFIR la 05.05.2026",
-              "url": "https://www.afir.ro/api/file?filename=Ghidul+Solicitantului+DR-14+VARIANTA+CONSULTATIV%C4%82&filetype=pdf&url=%2Fmedia%2Fbkmpo5fo%2Fgs-consultativ-dr-14.pdf",
-              "verifiedAt": "2026-07-22"
+                                              "version": "Varianta finală, sesiunea 2026, publicată de AFIR la 06.08.2026",
+                                              "url": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-14/",
+                                              "verifiedAt": "2026-08-08"
             }
           ],
           "detailLinks": [
@@ -145,7 +145,7 @@
         {
           "id": "documente-schimba-dr14",
           "question": "Ce documente pot schimba concluzia pentru DR 14?",
-          "answer": "Concluzia se poate schimba după verificarea actelor solicitantului, evidențelor agricole și zootehnice, documentelor amplasamentului, istoricului exploatației și listei investițiilor. Acestea trebuie să susțină aceleași suprafețe, efective și activități folosite în analiză. Pentru că ghidul este consultativ, setul final și momentul la care fiecare document trebuie să fie valabil se reconfirmă înainte de depunere.",
+                          "answer": "Concluzia se poate schimba după verificarea actelor solicitantului, evidențelor APIA/ANSVSA, documentelor amplasamentului, calculului SO, istoricului exploatației, ofertelor și sursei contribuției proprii. Documentele trebuie să susțină aceleași suprafețe, efective, activități și investiții folosite în cererea de finanțare. Pentru utilaje se verifică și proporționalitatea tehnică, iar pentru punctaj se păstrează documentele care probează fiecare criteriu selectat.",
           "evidenceTitle": "Documente de confruntat între ele",
           "evidence": [
             "actele solicitantului și ale exploatației",
@@ -157,9 +157,9 @@
             {
               "name": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
               "document": "Ghidul solicitantului DR 14",
-              "version": "Varianta consultativă, sesiunea 2026, arhivată de AFIR la 05.05.2026",
-              "url": "https://www.afir.ro/api/file?filename=Ghidul+Solicitantului+DR-14+VARIANTA+CONSULTATIV%C4%82&filetype=pdf&url=%2Fmedia%2Fbkmpo5fo%2Fgs-consultativ-dr-14.pdf",
-              "verifiedAt": "2026-07-22"
+                                              "version": "Varianta finală, sesiunea 2026, publicată de AFIR la 06.08.2026",
+                                              "url": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-14/",
+                                              "verifiedAt": "2026-08-08"
             }
           ],
           "detailLinks": [

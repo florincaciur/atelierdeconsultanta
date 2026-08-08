@@ -15,13 +15,13 @@ Data: **2026-07-22**. Acest changelog documentează corecțiile și blocajul edi
 
 ## dr14-afir
 
-- **Înainte (observat live):** Homepage: card «Activ» cu 50.000 EUR și 85%; meniu și pagină: variantă consultativă.
-- **Corecție candidat:** `consultare_publica` — Ghid consultativ – depunerea nu este deschisă. Condițiile se pot modifica.
+- **Înainte (observat live):** Pagina și suprafețele globale indicau în mod depășit o variantă consultativă, fără valorile confirmate în ghidul final.
+- **Corecție candidat:** `ghid_aprobat_nedeschis` — Ghid oficial, varianta finală – depunerea nu este deschisă
 - **Acțiune aplicată:** exclus din meniu, homepage, carusele, carduri factuale și JSON-LD; URL-urile prioritare au `noindex, follow` și mesaj neutru de suspendare.
 - **Valori:** eliminate cât timp `numericClaimsApproved=false`.
 - **Publicare finală:** blocată; validator Caciur Florin / Bogdan Iftode, aprobare `approved`.
-- **Copy pregătit pentru aprobare:** Ghid consultativ – depunerea nu este deschisă. Condițiile se pot modifica. — verificat la 2026-07-22. Depunerea nu este deschisă. Sursa: AFIR, Ghidul solicitantului DR-14 – varianta consultativă, Sesiunea 2026, arhivată la 05.05.2026.
-- **Sursă primară:** https://www.afir.ro/api/file?filename=Ghidul+Solicitantului+DR-14+VARIANTA+CONSULTATIV%C4%82&filetype=pdf&url=%2Fmedia%2Fbkmpo5fo%2Fgs-consultativ-dr-14.pdf
+- **Copy pregătit pentru aprobare:** Ghid oficial, varianta finală – verificat la 2026-08-08. Depunerea nu este deschisă. Sursa: AFIR, Ghidul Solicitantului DR 14 – varianta finală, publicat la 06.08.2026.
+- **Sursă primară:** https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-14/
 - **URL-uri afectate:** `/`, `/afir`, `/calculator-soc`, `/consultanta-afir`, `/dr-14-afir-conditii-eligibilitate-greseli-frecvente`, `/dr14`, `/dr14-afir-ferme-mici`, `/fonduri-europene`, `/fonduri-europene-agricultura`, `/fonduri-europene-caen/0111-culturi-cereale`, `/fonduri-europene-nord-est`, `/fonduri-pentru-ferme`, `/fonduri-pentru-utilaje-agricole`, `/gal-afir`, `/ghiduri`, `/intrebari/ce-documente-sunt-necesare-pentru-dr12`, `/resurse-utile`, `/studii-de-caz-fonduri-europene`.
 
 ## pro-infra

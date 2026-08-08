@@ -3,10 +3,10 @@
   "generatedFor": "P1.09",
   "generatedAt": "2026-07-21",
   "wordThreshold": 1500,
-  "pageCount": 27,
+  "pageCount": 28,
   "byType": {
     "core": 1,
-    "program": 9,
+    "program": 10,
     "ghid": 17
   },
   "pilotRoute": "/afir-autoconsum-agroalimentar",
@@ -115,12 +115,23 @@
       "route": "/dr12-vs-dr14",
       "type": "ghid",
       "sourceFile": "dr12-vs-dr14.html",
-      "wordCount": 1830,
+      "wordCount": 1906,
       "tocItemCount": 9,
       "tableCount": 1,
       "variant": "rail",
       "decisionActionAdded": false,
       "contentActionCount": 1
+    },
+    {
+      "route": "/dr14",
+      "type": "program",
+      "sourceFile": "dr14/index.html",
+      "wordCount": 2087,
+      "tocItemCount": 15,
+      "tableCount": 0,
+      "variant": "rail",
+      "decisionActionAdded": true,
+      "contentActionCount": 3
     },
     {
       "route": "/e-move",

@@ -255,7 +255,7 @@
       "changelog": [
         {
           "date": "2026-07-22",
-          "summary": "Statutul consultativ și sursa AFIR au fost validate; valorile numerice rămân nepublicate.",
+          "summary": "Sursa AFIR disponibilă la acel moment a fost validată; valorile numerice nu erau încă publicate în forma finală.",
           "reviewer": "Echipa editorială FABER",
           "meaningful": true
         },
@@ -279,14 +279,20 @@
       "reviewerRole": "Revizuire editorială și conformitate",
       "attributionType": "organization",
       "personalNameConsent": false,
-      "verifiedAt": "2026-07-22",
+      "verifiedAt": "2026-08-08",
       "officialSourceName": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
-      "officialSourceUrl": "https://www.afir.ro/comunicare/utile/dezbatere-publica/",
-      "sourceVersion": "Ghidurile consultative DR 12 publicat la 19.03.2026 și DR 14, sesiunea 2026, arhivat la 05.05.2026",
-      "nextReviewAt": "2026-10-20",
-      "lastMeaningfulUpdate": "2026-07-22",
+      "officialSourceUrl": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-14/",
+      "sourceVersion": "Ghidul consultativ DR 12 publicat la 19.03.2026 și Ghidul Solicitantului DR 14 – varianta finală, publicat la 06.08.2026",
+      "nextReviewAt": "2026-09-01",
+      "lastMeaningfulUpdate": "2026-08-08",
       "statusSnapshot": null,
       "changelog": [
+        {
+          "date": "2026-08-08",
+          "summary": "Analiza comparativă a fost actualizată după publicarea ghidului oficial final DR 14; valorile finale DR 14 sunt separate de condițiile DR 12 rămase în consultare.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": true
+        },
         {
           "date": "2026-07-22",
           "summary": "Analiza comparativă DR 12–DR 14 a fost rescrisă pe documentele consultative AFIR; valorile care necesită reconfirmare au rămas nepublicate.",
@@ -307,14 +313,20 @@
       "reviewerRole": "Revizuire editorială și conformitate",
       "attributionType": "organization",
       "personalNameConsent": false,
-      "verifiedAt": "2026-07-22",
+      "verifiedAt": "2026-08-08",
       "officialSourceName": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
-      "officialSourceUrl": "https://www.afir.ro/api/file?filename=Ghidul+Solicitantului+DR-14+VARIANTA+CONSULTATIV%C4%82&filetype=pdf&url=%2Fmedia%2Fbkmpo5fo%2Fgs-consultativ-dr-14.pdf",
-      "sourceVersion": "Varianta consultativă, Sesiunea 2026, arhivată de AFIR la 05.05.2026",
-      "nextReviewAt": "2026-09-20",
-      "lastMeaningfulUpdate": "2026-07-22",
-      "statusSnapshot": "consultare_publica",
+      "officialSourceUrl": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-14/",
+      "sourceVersion": "Ghidul Solicitantului DR 14 – varianta finală, Sesiunea 2026, publicat la 06.08.2026",
+      "nextReviewAt": "2026-09-01",
+      "lastMeaningfulUpdate": "2026-08-08",
+      "statusSnapshot": "ghid_aprobat_nedeschis",
       "changelog": [
+        {
+          "date": "2026-08-08",
+          "summary": "Pagina a fost reconciliată cu ghidul oficial final și anexele publicate de AFIR la 6 august 2026; valorile de maximum 50.000 EUR și 85% au fost validate, iar calendarul a rămas marcat separat ca estimare.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": true
+        },
         {
           "date": "2026-07-22",
           "summary": "Statutul consultativ și sursa AFIR au fost validate; valorile numerice rămân nepublicate.",

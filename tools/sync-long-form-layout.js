@@ -17,7 +17,7 @@ const TOC_END = "<!-- P1_09_LONG_FORM_TOC_END -->";
 const ACTION_START = "<!-- P1_09_DECISION_ACTION_START -->";
 const ACTION_END = "<!-- P1_09_DECISION_ACTION_END -->";
 const CSS_LINK = '<link rel="stylesheet" href="/assets/long-form-layout.css?v=20260721-6" data-long-form-layout-style="p1_09">';
-const JS_LINK = '<script src="/assets/long-form-layout.js?v=20260721-6" defer data-long-form-layout-script="p1_09"></script>';
+const JS_LINK = '<script src="/assets/long-form-layout.js?v=20260721-6" defer="" data-long-form-layout-script="p1_09"></script>';
 
 function escapeHtml(value) {
   return String(value ?? "")
@@ -132,9 +132,9 @@ function enhanceRegion(region, pageTitle, usedIds) {
 }
 
 function renderToc(items, variant) {
-  const links = items.map((item, index) => `        <li><a href="#${escapeHtml(item.id)}" data-long-form-toc-link${index === 0 ? ' aria-current="location"' : ""}>${escapeHtml(item.label)}</a></li>`).join("\n");
+  const links = items.map((item, index) => `        <li><a href="#${escapeHtml(item.id)}" data-long-form-toc-link=""${index === 0 ? ' aria-current="location"' : ""}>${escapeHtml(item.label)}</a></li>`).join("\n");
   return `${TOC_START}
-  <aside class="long-form-toc${variant === "home" ? " long-form-toc--home" : ""}" data-long-form-toc aria-label="Navigare în pagina lungă">
+  <aside class="long-form-toc${variant === "home" ? " long-form-toc--home" : ""}" data-long-form-toc="" aria-label="Navigare în pagina lungă">
     <details>
       <summary>Cuprins</summary>
       <nav aria-label="Cuprinsul paginii">

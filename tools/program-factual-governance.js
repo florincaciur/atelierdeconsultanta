@@ -308,6 +308,7 @@ function statusStatement(program) {
 function programSummary(program) {
   if (!program) return "";
   if (!isPublicProgram(program)) return program.cardSummary;
+  if (String(program.quickAnswer || "").trim()) return String(program.quickAnswer).trim();
   let summary = [program.cardSummary, statusStatement(program), fundingSummary(program)].filter(Boolean).join(" ");
   const wordCount = summary.trim().split(/\s+/u).filter(Boolean).length;
   if (wordCount < 45) {

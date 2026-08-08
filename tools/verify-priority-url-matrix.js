@@ -14,7 +14,7 @@ const PAGES = [
   { route: "/", file: "index.html", title: "Consultanță și proiectare fonduri europene | FABER", aliases: ["/index.html"] },
   { route: "/afir-autoconsum-agroalimentar", file: "afir-autoconsum-agroalimentar.html", title: "AFIR Autoconsum 2026: fotovoltaice, stocare, ghid | FABER" },
   { route: "/dr12-afir", file: "dr12-afir/index.html", title: "DR 12 AFIR: ghid consultativ și condiții | FABER" },
-  { route: "/dr14", file: "dr14/index.html", title: "DR 14 AFIR: ghid consultativ și condiții | FABER" },
+  { route: "/dr14", file: "dr14/index.html", title: "DR 14 AFIR 2026: 50.000 €, condiții și punctaj | FABER" },
   {
     route: "/investitii-modernizarea-microintreprinderilor-apel-2",
     file: "investitii-modernizarea-microintreprinderilor-apel-2/index.html",

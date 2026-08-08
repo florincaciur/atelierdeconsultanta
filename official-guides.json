@@ -347,14 +347,14 @@
     "programIds": [
       "dr14-afir"
     ],
-    "name": "Varianta consultativă, Sesiunea 2026, arhivată de AFIR la 05.05.2026",
-    "title": "Varianta consultativă, Sesiunea 2026, arhivată de AFIR la 05.05.2026",
+    "name": "Ghidul Solicitantului DR 14 – varianta finală, Sesiunea 2026, publicat la 06.08.2026",
+    "title": "Ghidul Solicitantului DR 14 – varianta finală, Sesiunea 2026, publicat la 06.08.2026",
     "institution": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
-    "url": "https://www.afir.ro/api/file?filename=Ghidul+Solicitantului+DR-14+VARIANTA+CONSULTATIV%C4%82&filetype=pdf&url=%2Fmedia%2Fbkmpo5fo%2Fgs-consultativ-dr-14.pdf",
-    "accessedAt": "2026-07-22",
-    "programStatus": "consultare_publica",
-    "statusLabel": "Ghid consultativ – depunerea nu este deschisă. Condițiile se pot modifica.",
-    "verifiedAt": "2026-07-22",
+    "url": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-14/",
+    "accessedAt": "2026-08-08",
+    "programStatus": "ghid_aprobat_nedeschis",
+    "statusLabel": "Ghid oficial, varianta finală – depunerea nu este deschisă",
+    "verifiedAt": "2026-08-08",
     "isPrimaryFor": "dr14-afir",
     "sourceOfTruth": "config/seo-programs.json#programs"
   },

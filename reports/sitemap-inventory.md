@@ -16,7 +16,7 @@ Generatorul include numai rute locale 200, indexabile si self-canonical. `lastmo
 ## Excluderi dupa motiv
 
 - duplicate_policy_pending_legal_consolidation: 1
-- missing_canonical: 2
+- missing_canonical: 3
 - noindex_meta: 65
 - noncanonical_file_variant: 2
 - redirect_source: 111
@@ -28,6 +28,7 @@ Generatorul include numai rute locale 200, indexabile si self-canonical. `lastmo
 | https://atelierdeconsultanta.ro/gdpr | gdpr.html | duplicate_policy_pending_legal_consolidation | Politica duplicata este omisa din sitemap; redirectul ramane conditionat de aprobarea juridica si SEO. |
 | /google8bbb9999c523a3bd | google8bbb9999c523a3bd.html | missing_canonical | - |
 | /partials/global-header | partials/global-header.html | missing_canonical | - |
+| /templates/dr14-final-content | templates/dr14-final-content.html | missing_canonical | - |
 | https://atelierdeconsultanta.ro/404 | 404.html | noindex_meta | - |
 | https://atelierdeconsultanta.ro/admin | admin/index.html | noindex_meta | - |
 | https://atelierdeconsultanta.ro/afir | afir.html | noindex_meta | - |

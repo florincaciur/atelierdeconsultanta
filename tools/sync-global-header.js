@@ -17,6 +17,7 @@ const EXCLUDED_DIRECTORIES = new Set([
   "partials",
   "rapoarte",
   "reports",
+  "templates",
   "test",
   "tests"
 ]);

@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-08-08T16:24:42.345Z",
+  "generatedAt": "2026-08-08T18:51:24.657Z",
   "summary": {
-    "htmlFilesChecked": 180,
+    "htmlFilesChecked": 181,
     "indexablePagesChecked": 96,
     "filesWithIssues": 0,
     "organizationVariants": 1,
@@ -17,12 +17,12 @@
       "ListItem": 294,
       "Article": 30,
       "DefinedTerm": 16,
-      "PropertyValue": 138,
+      "PropertyValue": 140,
       "DefinedTermSet": 16,
-      "Audience": 10,
-      "FAQPage": 76,
-      "Question": 535,
-      "Answer": 535,
+      "Audience": 12,
+      "FAQPage": 77,
+      "Question": 545,
+      "Answer": 545,
       "Service": 12,
       "AdministrativeArea": 12,
       "WebApplication": 1
@@ -96,12 +96,16 @@
         "ListItem": 4,
         "Article": 1,
         "DefinedTerm": 1,
-        "PropertyValue": 8,
-        "DefinedTermSet": 1
+        "PropertyValue": 10,
+        "Audience": 2,
+        "DefinedTermSet": 1,
+        "FAQPage": 1,
+        "Question": 10,
+        "Answer": 10
       },
       "modified": [
-        "2026-07-22",
-        "2026-07-22"
+        "2026-08-08",
+        "2026-08-08"
       ],
       "issues": []
     },
@@ -726,8 +730,8 @@
         "Article": 1
       },
       "modified": [
-        "2026-07-22",
-        "2026-07-22"
+        "2026-08-08",
+        "2026-08-08"
       ],
       "issues": []
     },

@@ -7,7 +7,7 @@ Data auditului: 2026-08-08
 - Programe în registrul canonic: 20
 - Erori: 0
 - Avertismente: 0
-- Statusuri: apel_deschis=1, apel_inchis=1, calendar_estimativ=9, consultare_publica=4, ghid_aprobat_nedeschis=5
+- Statusuri: apel_deschis=1, apel_inchis=1, calendar_estimativ=9, consultare_publica=3, ghid_aprobat_nedeschis=6
 - Mod strict pentru freshness: inactiv
 
 Auditul este local și determinist. Nu interoghează URL-urile oficiale, nu deduce statusul din răspunsuri HTTP și nu rescrie date factuale. Registrul aprobat din `config/seo-programs.json#programs` rămâne singura sursă de adevăr.
@@ -19,7 +19,7 @@ Auditul este local și determinist. Nu interoghează URL-urile oficiale, nu dedu
 | Programul Regional Nord-Est | ghid_aprobat_nedeschis | 2026-07-20 | — | — |
 | Fonduri regionale | calendar_estimativ | 2026-07-20 | — | — |
 | DR12 AFIR | consultare_publica | 2026-07-22 | — | — |
-| DR14 AFIR | consultare_publica | 2026-07-22 | — | — |
+| DR14 AFIR | ghid_aprobat_nedeschis | 2026-08-08 | — | — |
 | Start-Up Nation | calendar_estimativ | 2026-05-20 | — | — |
 | Femeia Antreprenor | calendar_estimativ | 2026-05-20 | — | — |
 | Digitalizare IMM | apel_inchis | 2026-07-22 | — | — |

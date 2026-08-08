@@ -49,14 +49,14 @@ assert.deepEqual(rows.map((_, row) => $(row).find("th").text().trim()).get(), co
 rows.each((_, row) => {
   const cells = $(row).find("td");
   assert.equal(cells.length, 2);
-  cells.each((__, cell) => {
+  cells.each((cellIndex, cell) => {
     assert($(cell).find(".expert-source-ref a").length === 1, "fiecare celulă comparativă trebuie să indice sursa");
-    assert.equal($(cell).find(".expert-source-ref time").attr("datetime"), config.reviewedAt);
+    assert.equal($(cell).find(".expert-source-ref time").attr("datetime"), config.programs[cellIndex].verifiedAt);
   });
 });
 
 const pageText = $(".post-container").text().replace(/\s+/gu, " ");
-for (const forbidden of ["200.000", "80%", "65%", "50.000", "85%", "4.000 SO", "11.999 SO"]) {
+for (const forbidden of ["200.000", "80%", "65%"]) {
   assert(!pageText.includes(forbidden), `valoare consultativă publicată fără reconfirmare: ${forbidden}`);
 }
 assert(!html.includes("DE_VALIDAT_UMAN"), "tokenul intern nu poate ajunge în pagina publică");
@@ -84,11 +84,16 @@ assert(!/[?&](?:email|phone|name|description)=/iu.test(finalCta.attr("href")), "
 for (const programConfig of config.programs) {
   const program = registry.find((entry) => entry.slug === programConfig.slug);
   assert(program, `${programConfig.slug}: lipsește din registru`);
-  assert.equal(program.status, "consultare_publica");
-  assert.equal(program.verifiedAt, config.reviewedAt);
+  assert.equal(program.status, programConfig.status);
+  assert.equal(program.verifiedAt, programConfig.verifiedAt);
   assert.equal(program.sourceUrl, programConfig.sourceUrl);
-  assert.equal(program.grantSummary, null);
-  assert.equal(program.cofinancingSummary, null);
+  if (programConfig.status === "consultare_publica") {
+    assert.equal(program.grantSummary, null);
+    assert.equal(program.cofinancingSummary, null);
+  } else {
+    assert.equal(program.grantSummary.maximum.amount, 50000);
+    assert(program.cofinancingSummary.intensity.some((item) => item.rate === 85));
+  }
   const sourceCard = $(`#source-${programConfig.slug}`);
   assert.equal(sourceCard.length, 1);
   assert(sourceCard.find(`a[href='${programConfig.sourceUrl}']`).length, `${programConfig.slug}: URL-ul oficial nu este vizibil`);
@@ -121,4 +126,4 @@ assert.equal($("link[href^='/assets/dr12-vs-dr14-expert.css']").length, 1);
 assert.equal($("[data-aeo-question-set]").length, 1);
 assert(!/Pe scurt/iu.test($(".post-container h2, .post-container h3").text()), "eticheta generică de șablon nu trebuie publicată");
 
-console.log(`P1.19 contract PASS: ${rows.length} criterii, ${scenarios.length} scenarii, ${countWords(directAnswer)} cuvinte în răspunsul direct și valori neconfirmate nepublicate.`);
+console.log(`P1.19 contract PASS: ${rows.length} criterii, ${scenarios.length} scenarii, ${countWords(directAnswer)} cuvinte în răspunsul direct, DR 14 final și valori DR 12 neconfirmate nepublicate.`);

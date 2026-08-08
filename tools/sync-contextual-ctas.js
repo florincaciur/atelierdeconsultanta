@@ -73,11 +73,14 @@ function setHeroCta($, page, config) {
 function syncProgramBodyCta($, page) {
   if (!page.programSlug) return;
   const links = $("a[href*='/contact']").filter((_, node) => !$(node).closest("#navbar, #mobileMenu, [data-sticky-cta], [data-program-contextual-links]").length);
+  let primaryIndex = 0;
   links.each((_, node) => {
     const link = $(node);
     if (!/verific|încadr/iu.test(link.text())) return;
+    primaryIndex += 1;
     link.attr("href", contactHref(page)).text(page.primary);
     tracking(link, page, "program_page");
+    link.attr("data-analytics-cta-id", `${page.id}_contextual_primary_${primaryIndex}`);
   });
 }
 

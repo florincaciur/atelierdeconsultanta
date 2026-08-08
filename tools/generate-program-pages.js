@@ -2730,6 +2730,11 @@ function renderDr14SearchIntentContent(page) {
     .map(([question, answer]) => `<section class="faq-item"><h3>${esc(question)}</h3><p>${esc(answer)}</p></section>`)
     .join("\n");
 
+  const finalTemplate = fs.readFileSync(path.join(ROOT, "templates", "dr14-final-content.html"), "utf8");
+  return finalTemplate
+    .replace("{{DR14_GENERATED_FAQ}}", faqHtml)
+    .replace("{{DR14_OFFICIAL_SOURCES}}", officialSourcesHtml);
+
   return `
       <section aria-labelledby="dr14-raspuns-rapid">
         <h2 id="dr14-raspuns-rapid">Răspuns rapid</h2>
@@ -2976,8 +2981,10 @@ function pageHtml(page, config) {
   const relatedCss = (page.related || []).length ? `\n  <link rel="stylesheet" href="/assets/see-also.css" />` : "";
   const toolCss = page.includeTools || page.includeDownloads ? `\n  <link rel="stylesheet" href="/assets/seo-tools.css" />` : "";
   const sourcesCss = (page.sourceKeys || []).length ? `\n  <link rel="stylesheet" href="/assets/official-sources.css" />` : "";
-  const extraCss = `${relatedCss}${toolCss}${sourcesCss}`;
-  const extraJs = page.includeTools ? `\n  <script src="/assets/seo-tools.js" defer></script>` : "";
+  const dr14Css = page.slug === "dr14" ? `\n  <link rel="stylesheet" href="/assets/dr14-final.css?v=20260808-1" />` : "";
+  const dr14Js = page.slug === "dr14" ? `\n  <script src="/assets/dr14-final.js?v=20260808-1" defer></script>` : "";
+  const extraCss = `${relatedCss}${toolCss}${sourcesCss}${dr14Css}`;
+  const extraJs = `${page.includeTools ? `\n  <script src="/assets/seo-tools.js" defer></script>` : ""}${dr14Js}`;
   const primaryCta = heroPrimaryCtaFor(page);
   const secondaryCta = heroSecondaryCta(page);
   const heroActionsHtml = renderHeroActions(page, primaryCta, secondaryCta);

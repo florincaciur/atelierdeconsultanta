@@ -110,7 +110,9 @@ function syncBanners(banners, programs) {
         ctaLink: program.pageUrl,
         icon: program.presentation?.icon || previous.icon || "ph-file-text",
         image: program.presentation?.image || previous.image || null,
+        pageTitle: program.presentation?.pageTitle || null,
         order: program.presentation?.order ?? previous.order ?? 999,
+        estimate: program.presentation?.estimate || null,
         active: true,
         programStatus: program.status,
         statusLabel: program.statusLabel,
@@ -307,8 +309,8 @@ function syncHomepageText(source, programs) {
     .filter((program) => isPublicProgram(program) && program.presentation?.carousel)
     .sort((left, right) => (left.presentation?.order || 999) - (right.presentation?.order || 999));
   let output = source.replace(
-    /<ul class="hero-programs-list">[\s\S]*?<\/ul>/,
-    `<ul class="hero-programs-list" data-program-registry="${REGISTRY_REF}">\n${homepageHeroList(programs)}\n            </ul>`
+    /<ul\b[^>]*class="[^"]*\bhero-programs-list\b[^"]*"[^>]*>[\s\S]*?<\/ul>/,
+    `<ul class="hero-programs-list" aria-label="Alege o măsură de finanțare" data-program-registry="${REGISTRY_REF}">\n${homepageHeroList(programs)}\n            </ul>`
   );
   if (heroPrograms.length) {
     const first = heroPrograms[0];

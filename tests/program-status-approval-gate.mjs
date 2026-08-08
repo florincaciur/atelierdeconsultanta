@@ -54,12 +54,14 @@ for (const id of REQUIRED_PROGRAMS) {
   const row = approvalById.get(id);
   const program = programById.get(id);
   assert(row, `${id}: lipsește din tabelul de aprobare`);
-  assert.equal(program.grantSummary, null, `${id}: grantSummary nu este aprobat numeric`);
-  assert.equal(program.cofinancingSummary, null, `${id}: cofinancingSummary nu este aprobat numeric`);
+  if (row.numericClaimsApproved !== true) {
+    assert.equal(program.grantSummary, null, `${id}: grantSummary nu este aprobat numeric`);
+    assert.equal(program.cofinancingSummary, null, `${id}: cofinancingSummary nu este aprobat numeric`);
+  }
   if (row.approvalState === "approved") {
     assert.notEqual(row.validatorName, HUMAN_REVIEW, `${id}: aprobarea trebuie să fie nominală`);
     assert.equal(program.publicationState, "public", `${id}: rândul aprobat trebuie publicat din registru`);
-    assert.equal(program.verifiedAt, approvalConfig.researchDate, `${id}: data publică diferă de aprobare`);
+    assert.equal(program.verifiedAt, row.verifiedAt || approvalConfig.researchDate, `${id}: data publică diferă de aprobare`);
     assert.equal(program.sourceUrl, row.officialUrl, `${id}: sursa publică diferă de aprobare`);
     const homepageSurfaces = homepage(`[data-program-id="${id}"][data-program-status]`);
     homepageSurfaces.each((_, surface) => {

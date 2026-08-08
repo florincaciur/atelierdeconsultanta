@@ -76,7 +76,9 @@ function validateApprovalRegistry(approvalConfig, programs) {
     if (!Array.isArray(row.unresolved) || !row.unresolved.length) errors.push(`${where}: unresolved trebuie să explice verificările umane rămase`);
     if (!Array.isArray(row.affectedUrls) || !row.affectedUrls.length) errors.push(`${where}: affectedUrls nu poate fi gol`);
     if (!Array.isArray(row.publicationHoldUrls) || !row.publicationHoldUrls.length) errors.push(`${where}: publicationHoldUrls nu poate fi gol`);
-    if (!row.proposedCopy.includes(`verificat la ${approvalConfig.researchDate}`)) errors.push(`${where}: proposedCopy nu conține data verificării`);
+    const rowVerifiedAt = row.verifiedAt || approvalConfig.researchDate;
+    if (!isIsoDate(rowVerifiedAt)) errors.push(`${where}: verifiedAt trebuie să fie o dată ISO când este furnizat`);
+    if (!row.proposedCopy.includes(`verificat la ${rowVerifiedAt}`)) errors.push(`${where}: proposedCopy nu conține data verificării`);
     if (!/Depunerea (?:este|nu este) deschisă\./u.test(row.proposedCopy)) errors.push(`${where}: proposedCopy nu declară explicit dacă depunerea este deschisă`);
     if (!row.proposedCopy.includes("Sursa:")) errors.push(`${where}: proposedCopy nu citează sursa`);
     if (row.documentCharacter === "consultativ" && !row.proposedStatusLabel.includes("Condițiile se pot modifica.")) {
@@ -114,7 +116,7 @@ function validateApprovalRegistry(approvalConfig, programs) {
       if (program && program.sourceName !== row.officialInstitution) errors.push(`${where}: instituția aprobată diferă de registrul unic`);
       if (program && program.sourceUrl !== row.officialUrl) errors.push(`${where}: URL-ul aprobat diferă de registrul unic`);
       if (program && program.sourceVersion !== row.officialDocumentVersion) errors.push(`${where}: versiunea aprobată diferă de registrul unic`);
-      if (program && program.verifiedAt !== approvalConfig.researchDate) errors.push(`${where}: data verificării aprobate diferă de registrul unic`);
+      if (program && program.verifiedAt !== rowVerifiedAt) errors.push(`${where}: data verificării aprobate diferă de registrul unic`);
       if (program && program.applicationStart !== row.applicationStart) errors.push(`${where}: applicationStart aprobat diferă de registrul unic`);
       if (program && program.applicationEnd !== row.applicationEnd) errors.push(`${where}: applicationEnd aprobat diferă de registrul unic`);
       if (program && (summaryHasValues(program.grantSummary) || summaryHasValues(program.cofinancingSummary)) && row.numericClaimsApproved !== true) {
@@ -141,7 +143,7 @@ function validationReport(config) {
     const dates = row.applicationStart || row.applicationEnd
       ? `${row.applicationStart || "—"}–${row.applicationEnd || "—"}`
       : "Depunerea nu este deschisă; interval neconfirmat";
-    return `| ${row.programId} | ${row.proposedStatus} | ${row.proposedStatusLabel.replace(/\|/g, "\\|")} | ${config.researchDate} | ${markdownLink(row.officialInstitution, row.officialUrl)} — ${row.officialDocumentVersion.replace(/\|/g, "\\|")} | ${dates} | ${row.validatorName} | ${row.approvalState} | ${row.affectedUrls.map((url) => `\`${url}\``).join(", ")} |`;
+    return `| ${row.programId} | ${row.proposedStatus} | ${row.proposedStatusLabel.replace(/\|/g, "\\|")} | ${row.verifiedAt || config.researchDate} | ${markdownLink(row.officialInstitution, row.officialUrl)} — ${row.officialDocumentVersion.replace(/\|/g, "\\|")} | ${dates} | ${row.validatorName} | ${row.approvalState} | ${row.affectedUrls.map((url) => `\`${url}\``).join(", ")} |`;
   }).join("\n");
   const details = config.programs.map((row) => `## ${row.programId}\n\n**Copy propus după aprobare:** ${row.proposedCopy}\n\n**Caracter document:** ${row.documentCharacter}. **Data documentului:** ${row.officialDocumentDate}. **Valori numerice aprobate:** ${row.numericClaimsApproved ? "da" : "nu"}.\n\n**Dovezi oficiale suplimentare:** ${row.additionalOfficialEvidence.length ? row.additionalOfficialEvidence.map((url, index) => markdownLink(`sursa ${index + 2}`, url)).join(", ") : "—"}.\n\n**DE_VALIDAT_UMAN:**\n\n${row.unresolved.map((item) => `- ${item}`).join("\n")}\n\n**URL-uri suspendate integral:** ${row.publicationHoldUrls.map((url) => `\`${url}\``).join(", ")}.`).join("\n\n");
   return `# P0.02 — Tabel de validare factuală\n\nData cercetării: **${config.researchDate}**. Rol de validare obligatoriu: **${config.requiredValidatorRole}**.\n\n> PUBLICARE OPRITĂ: toate cele patru rânduri sunt propuneri factuale, nu aprobări. Numele validatorului este \`${HUMAN_REVIEW}\`; copy-ul propus nu se publică până la aprobarea nominală FABER.\n\n| Program | Status propus | Formulare scurtă | Data verificării | Instituție, URL și versiune oficială | Interval depunere | Persoană care validează | Aprobare | Toate URL-urile afectate |\n|---|---|---|---|---|---|---|---|---|\n${rows}\n\nMeniul global este o suprafață afectată pe toate paginile; el este generat din registrul unic și exclude automat rândurile \`pending_validation\`. Menționarea editorială evergreen a numelui unui program nu publică status, calendar sau valori; cardurile, tabelele factuale, paginile prioritare și JSON-LD sunt însă blocate.\n\n${details}\n`;

@@ -2,16 +2,18 @@
   "schemaVersion": 1,
   "route": "/dr12-vs-dr14",
   "file": "dr12-vs-dr14.html",
-  "reviewedAt": "2026-07-22",
+  "reviewedAt": "2026-08-08",
   "title": "DR 12 vs DR 14: încadrare și investiții | FABER",
-  "metaDescription": "Compară prudent DR 12 și DR 14: profilul fermei, SO, investiția, documentele și riscurile. Ghiduri AFIR consultative verificate la 22.07.2026.",
+  "metaDescription": "Compară DR 12 și DR 14: profilul fermei, SO, investiția, documentele și riscurile. DR 14 are ghid oficial final publicat la 06.08.2026.",
   "h1": "DR 12 vs DR 14: cum diferă încadrarea și investiția",
-  "directAnswer": "Comparația DR 12–DR 14 este utilă pentru a decide ce intervenție merită analizată înainte de dosar. În documentele consultative verificate la 22 iulie 2026, DR 12 privește consolidarea exploatațiilor tinerilor fermieri și a categoriilor prevăzute de intervenție, iar DR 14 investițiile în ferme mici. Alegerea depinde de solicitant, istoricul exploatației, SO, investiție și acte; niciun apel nu este deschis.",
-  "statusStatement": "Ghiduri consultative – depunerea nu este deschisă. Condițiile se pot modifica.",
+  "directAnswer": "Comparația DR 12–DR 14 ajută la alegerea intervenției înainte de construirea dosarului. DR 12 are încă document consultativ, iar DR 14 are ghid oficial final publicat la 6 august 2026. DR 14 vizează fermele mici, cu praguri SO diferențiate și maximum 50.000 EUR/proiect; niciunul dintre cele două apeluri nu este deschis. Diferența se stabilește după profilul solicitantului, SO, investiție și documentele disponibile.",
+  "statusStatement": "DR 12 are ghid consultativ; DR 14 are ghid oficial final. Depunerea nu este deschisă pentru niciunul dintre apeluri.",
   "programs": [
     {
       "slug": "dr12-afir",
       "shortName": "DR 12",
+      "status": "consultare_publica",
+      "verifiedAt": "2026-07-22",
       "sourceLabel": "Ghidul solicitantului DR 12, versiune consultativă publicată la 19.03.2026",
       "sourceUrl": "https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/",
       "guideUrl": "https://www.afir.ro/api/file?filename=Ghidul+Solicitantului+DR+12+-+versiunea+consultativ%C4%83&filetype=pdf&url=%2Fmedia%2Flm3fg4k1%2Fghidul-solicitantului-dr-12.pdf",
@@ -20,8 +22,11 @@
     {
       "slug": "dr14-afir",
       "shortName": "DR 14",
-      "sourceLabel": "Ghidul solicitantului DR 14, varianta consultativă, sesiunea 2026, arhivată la 05.05.2026",
-      "sourceUrl": "https://www.afir.ro/api/file?filename=Ghidul+Solicitantului+DR-14+VARIANTA+CONSULTATIV%C4%82&filetype=pdf&url=%2Fmedia%2Fbkmpo5fo%2Fgs-consultativ-dr-14.pdf",
+      "status": "ghid_aprobat_nedeschis",
+      "verifiedAt": "2026-08-08",
+      "sourceLabel": "Ghidul Solicitantului DR 14, varianta finală, sesiunea 2026, publicat la 06.08.2026",
+      "sourceUrl": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-14/",
+      "guideUrl": "https://www.afir.ro/api/file?url=%2Fmedia%2Fgk1nhmzi%2Fghidul-solicitantului-dr-14.pdf&filename=Ghidul%20Solicitantului%20DR%2014&filetype=pdf",
       "canonicalUrl": "/dr14"
     }
   ],
@@ -44,27 +49,27 @@
     {
       "label": "SO",
       "dr12": "SO este un filtru de încadrare și trebuie recalculat din date dovedibile. Pragurile consultative nu sunt publicate aici până la reconfirmarea umană și forma finală.",
-      "dr14": "Ferma trebuie încadrată ca dimensiune economică potrivit componentei analizate. Pragurile consultative nu sunt publicate aici până la reconfirmarea umană și forma finală."
+      "dr14": "Intervalul general este 4.000–11.999 SO; pragul minim este 2.000 SO sau 2.300 SO pentru sectoarele prevăzute de ghidul oficial final. SO majoritar și evidențele APIA/ANSVSA decid încadrarea."
     },
     {
       "label": "Tip de investiție",
       "dr12": "Ghidul consultativ include modernizări, construcții și dotări agricole, condiționare sau depozitare și utilaje, în limitele și componentele documentului aplicabil.",
-      "dr14": "Ghidul consultativ tratează investiții și cheltuieli eligibile pe componente de fermă mică; lista și demarcările se verifică pentru sectorul concret."
+      "dr14": "Ghidul oficial final tratează investiții pe patru componente: legumicol, zootehnic, achiziții simple și național – alte sectoare. Un proiect se depune pe o singură componentă."
     },
     {
       "label": "Sprijin",
       "dr12": "Nu publicăm o sumă sau o intensitate în această comparație înainte ca valorile din ghidul consultativ să fie reconfirmate pentru forma aplicabilă.",
-      "dr14": "Nu publicăm o sumă sau o intensitate în această comparație înainte ca valorile din ghidul consultativ să fie reconfirmate pentru forma aplicabilă."
+      "dr14": "Maximum 50.000 EUR/proiect, cu o intensitate de maximum 85% din costurile eligibile, conform ghidului oficial final."
     },
     {
       "label": "Contribuție proprie",
       "dr12": "Se calculează numai după confirmarea intensității aplicabile, a cheltuielilor eligibile și a costurilor neeligibile; nu este publicată o valoare neverificată.",
-      "dr14": "Se calculează numai după confirmarea intensității aplicabile, a cheltuielilor eligibile și a costurilor neeligibile; nu este publicată o valoare neverificată."
+      "dr14": "Beneficiarul acoperă diferența eligibilă, cheltuielile neeligibile și orice sumă care depășește plafonul ajutorului public."
     },
     {
       "label": "Calendar",
       "dr12": "Apel nedeschis. La 22.07.2026 nu este publicat un interval oficial de depunere; estimările interne FABER nu sunt calendar oficial.",
-      "dr14": "Apel nedeschis. La 22.07.2026 nu este publicat un interval oficial de depunere; estimările interne FABER nu sunt calendar oficial."
+      "dr14": "Apel nedeschis. La 08.08.2026 nu este publicat un interval oficial de depunere; septembrie–octombrie 2026 rămâne o estimare de pregătire, nu calendar oficial."
     },
     {
       "label": "Documente-cheie",
@@ -74,14 +79,14 @@
     {
       "label": "Riscuri",
       "dr12": "Profil sau istoric neconfirmat, SO inconsistent, investiție fără legătură cu exploatația, drepturi insuficiente și condiții modificate în ghidul final.",
-      "dr14": "Încadrare economică greșită, dublă finanțare sau demarcare incorectă, acte ori avize lipsă și condiții modificate în ghidul final."
+      "dr14": "Încadrare economică greșită, dublă finanțare, alegerea componentei greșite, acte sau avize lipsă și investiții neproporționale cu exploatația."
     }
   ],
   "pendingHumanValidation": [
-    "pragurile SO și regulile de încadrare din forma finală a fiecărui ghid",
-    "sumele, intensitățile și contribuția proprie aplicabile formei finale",
+    "pragurile SO și regulile de încadrare din forma finală DR 12",
+    "sumele și intensitățile aplicabile formei finale DR 12",
     "categoriile finale de solicitanți și condițiile de instalare sau vechime",
-    "lista finală a cheltuielilor eligibile și neeligibile pe componentă",
+    "lista finală DR 12 a cheltuielilor eligibile și neeligibile pe componentă",
     "data deschiderii și intervalul oficial de depunere pentru fiecare apel"
   ]
 }

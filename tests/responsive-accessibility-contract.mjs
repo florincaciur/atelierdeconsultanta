@@ -67,7 +67,10 @@ for (const route of config.routes) {
   $("main input:not([type='hidden']):not([name='website']), main select, main textarea").each((_, control) => {
     const node = $(control);
     const id = node.attr("id");
-    assert(node.attr("aria-label") || (id && $(`label[for='${id}']`).length === 1), `${route.label}: control fără label (${id || control.tagName})`);
+    assert(
+      node.attr("aria-label") || node.closest("label").length === 1 || (id && $(`label[for='${id}']`).length === 1),
+      `${route.label}: control fără label (${id || control.tagName})`
+    );
   });
   $("a[href]").each((_, link) => {
     const node = $(link);

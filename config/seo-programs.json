@@ -180,28 +180,55 @@
       "name": "DR-14 Investiții în fermele de mici dimensiuni",
       "shortName": "DR14 AFIR",
       "family": "afir-agricultura",
-      "status": "consultare_publica",
-      "statusLabel": "Ghid consultativ – depunerea nu este deschisă. Condițiile se pot modifica.",
+      "status": "ghid_aprobat_nedeschis",
+      "statusLabel": "Ghid oficial, varianta finală – depunerea nu este deschisă",
       "publicationState": "public",
-      "verifiedAt": "2026-07-22",
+      "verifiedAt": "2026-08-08",
       "sourceName": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
-      "sourceUrl": "https://www.afir.ro/api/file?filename=Ghidul+Solicitantului+DR-14+VARIANTA+CONSULTATIV%C4%82&filetype=pdf&url=%2Fmedia%2Fbkmpo5fo%2Fgs-consultativ-dr-14.pdf",
-      "sourceVersion": "Varianta consultativă, Sesiunea 2026, arhivată de AFIR la 05.05.2026",
+      "sourceUrl": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-14/",
+      "sourceVersion": "Ghidul Solicitantului DR 14 – varianta finală, Sesiunea 2026, publicat la 06.08.2026",
       "sourceType": "official",
       "applicationStart": null,
       "applicationEnd": null,
-      "grantSummary": null,
-      "cofinancingSummary": null,
+      "grantSummary": {
+        "minimum": null,
+        "maximum": {
+          "amount": 50000,
+          "currency": "EUR",
+          "unit": "proiect"
+        },
+        "budget": null
+      },
+      "cofinancingSummary": {
+        "intensity": [
+          {
+            "rate": 85,
+            "scope": "maximum din costurile eligibile"
+          }
+        ],
+        "ownContribution": "Beneficiarul acoperă diferența eligibilă, cheltuielile neeligibile și orice sumă care depășește plafonul ajutorului public."
+      },
       "pageUrl": "/dr14",
-      "lastMeaningfulUpdate": "2026-07-22",
+      "lastMeaningfulUpdate": "2026-08-08",
       "evergreenValue": true,
       "archivedNoindexDecision": null,
-      "cardSummary": "Ghidul DR 14 este consultativ; depunerea nu este deschisă, iar condițiile se pot modifica.",
-      "metaTitle": "DR 14 AFIR: ghid consultativ și condiții | FABER",
-      "metaDescription": "DR 14 are ghid consultativ, verificat la 22.07.2026. Depunerea nu este deschisă; vezi documentul AFIR și condițiile de urmărit.",
-      "editorialDisclaimer": "Informația este bazată pe versiunea consultativă; condițiile se pot modifica înaintea ghidului final și a deschiderii apelului.",
-      "eligibleApplicants": [],
-      "keyConditions": [],
+      "cardSummary": "DR 14 are ghid oficial final: maximum 50.000 EUR/proiect, intensitate de până la 85%, praguri SO diferențiate și patru componente de investiții pentru ferme mici.",
+      "quickAnswer": "DR 14 finanțează investiții în fermele de mici dimensiuni, pe baza ghidului oficial final publicat de AFIR la 6 august 2026. Pot aplica fermierii, cu excepția persoanelor fizice, dacă exploatația și forma juridică îndeplinesc condițiile documentare. Intervalul general este 4.000–11.999 SO, cu praguri minime speciale de 2.000 SO sau 2.300 SO pentru sectoarele prevăzute de ghid. Ajutorul public ajunge la maximum 50.000 EUR/proiect și la cel mult 85% din costurile eligibile. Proiectul se depune pe o singură componentă: legumicol, zootehnic, achiziții simple sau național – alte sectoare. Depunerea nu este încă deschisă; septembrie–octombrie 2026 este o estimare de pregătire, nu un interval oficial AFIR.",
+      "metaTitle": "DR 14 AFIR 2026: 50.000 €, condiții și punctaj | FABER",
+      "metaDescription": "Ghid oficial DR 14, varianta finală: maximum 50.000 €, intensitate 85%, praguri SO, punctaj, investiții eligibile și dosarul fermei mici.",
+      "editorialDisclaimer": "Ghidul oficial final este publicat, însă AFIR nu a publicat încă intervalul oficial de depunere. Perioada septembrie–octombrie 2026 este o estimare de pregătire, nu calendar oficial.",
+      "eligibleApplicants": [
+        "Fermieri, cu excepția persoanelor fizice, constituiți într-o formă eligibilă și activi în România.",
+        "Exploatații agricole încadrate în pragul SO aplicabil sectorului și componentei alese."
+      ],
+      "keyConditions": [
+        "Dimensiune economică generală de 4.000–11.999 SO, cu praguri minime speciale de 2.000 SO sau 2.300 SO pentru sectoarele prevăzute în ghid.",
+        "Un singur proiect pe DR 14 și alegerea unei singure componente: legumicol, zootehnic, achiziții simple sau național – alte sectoare.",
+        "Ajutor public de maximum 50.000 EUR/proiect și intensitate de maximum 85% din costurile eligibile.",
+        "Investițiile secundare prevăzute de ghid se mențin sub 50% din valoarea eligibilă a proiectului.",
+        "Costurile generale sunt limitate la maximum 10% pentru proiectele cu lucrări și maximum 3% pentru proiectele cu achiziții simple.",
+        "Dimensiunea economică poate scădea cu maximum 15% în implementare, fără coborârea sub pragul minim eligibil."
+      ],
       "officialGuideKeys": [
         "dr14"
       ],
@@ -211,7 +238,12 @@
         "order": 5,
         "icon": "ph-tractor",
         "image": "/assets/hero/hero-agriculture.webp",
-        "beneficiary": null
+        "pageTitle": "DR 14 AFIR 2026 – investiții în fermele de mici dimensiuni",
+        "beneficiary": "Fermieri, cu excepția persoanelor fizice",
+        "estimate": {
+          "label": "perioadă estimativă de depuneri: septembrie-octombrie 2026",
+          "note": "Estimare de pregătire; intervalul oficial va fi anunțat de AFIR."
+        }
       },
       "discovery": {
         "parentHub": "/afir",
@@ -1506,8 +1538,8 @@
       "type": "program",
       "schemaType": "GovernmentService",
       "category": "AFIR",
-      "h1": "DR14 AFIR 2026 – investiții pentru fermele de mici dimensiuni",
-      "policyContribution": "programul sprijina fermele mici care au nevoie de modernizare, diversificare și cresterea capacitatii de a rămâne active pe piata.",
+      "h1": "DR 14 AFIR 2026 – investiții în fermele de mici dimensiuni",
+      "policyContribution": "Intervenția finanțează dezvoltarea fermelor mici prin investiții agricole proporționale cu dimensiunea și activitatea documentată a exploatației.",
       "audience": [
         "Ferme mici care pot demonstra activitate agricolă reală și documente coerente pentru exploatație.",
         "Solicitanți care au nevoie de utilaje, dotări sau investiții punctuale, nu de proiecte supradimensionate.",
@@ -1522,13 +1554,13 @@
       ],
       "mandatory": [
         "Calcul SO și documente suport pentru exploatație.",
-        "Forma juridică și activitate agricolă compatibile cu cerintele apelului.",
+        "Forma juridică și activitatea agricolă compatibile cu ghidul oficial final.",
         "Buget realist, cu TVA, contribuție proprie și cheltuieli neeligibile tratate separat.",
-        "Documente de proprietate sau folosință valabile pe perioada ceruta.",
-        "Respectarea conditiilor finale din documentul oficial aplicabil, nu doar din forma consultativa."
+        "Documente de proprietate sau folosință valabile pe perioada cerută.",
+        "Încadrarea într-o singură componentă și respectarea condițiilor finale publicate de AFIR."
       ],
       "eligibleExpenses": [
-        "Utilaje, echipamente și dotări agricole în limitele și condițiile ghidului activ.",
+        "Utilaje, echipamente și dotări agricole noi, în limitele și condițiile ghidului oficial final.",
         "Investiții pentru modernizarea activității fermei, când sunt justificate de exploatație.",
         "Documentatii, servicii și cheltuieli conexe eligibile potrivit apelului.",
         "Lucrări sau dotări permise explicit pentru tipul de fermă și obiectivul proiectului."
@@ -1541,7 +1573,7 @@
       ],
       "scoring": [
         "Punctajul se estimează numai pe criterii demonstrabile.",
-        "Bugetul și investiția trebuie să fie proportionale cu fermă mica.",
+        "Bugetul și investiția trebuie să fie proporționale cu ferma mică.",
         "Riscurile cresc când proiectul incearca sa forteze activitati care nu sunt documentate."
       ],
       "steps": [
@@ -1552,9 +1584,9 @@
         "Verificam ghidul final și anexele înainte de depunere."
       ],
       "evaluation": [
-        "Evaluatorul va urmari dacă fermă există documentar și dacă investiția este proportionala.",
-        "Ofertele, devizele și justificarile tehnice trebuie să explice clar necesitatea achizitiilor.",
-        "Conditiile consultative pot fi ajustate până la lansarea sesiunii."
+        "Evaluatorul verifică existența documentară a fermei și proporționalitatea investiției.",
+        "Ofertele, devizele și justificările tehnice trebuie să explice clar necesitatea achizițiilor.",
+        "Autopunctajul trebuie să atingă pragul etapei lunare: 80 de puncte în etapa I și minimum 40 de puncte în etapa II."
       ],
       "examples": [
         "Fermă vegetala mica ce solicită echipamente adaptate culturilor declarate și suprafetelor lucrate.",
@@ -1572,11 +1604,11 @@
         ],
         [
           "Care sunt cele patru componente DR14?",
-          "Ghidul consultativ enumeră legumicol, zootehnic, proiecte care propun doar achiziții simple și național-alte sectoare. Un solicitant depune pe o singură componentă."
+          "Ghidul oficial final enumeră componenta legumicolă, componenta zootehnică, proiectele care propun doar achiziții simple și componenta național – alte sectoare. Un solicitant depune pe o singură componentă."
         ],
         [
           "Ce înseamnă achiziții simple la DR14?",
-          "Proiectele care propun numai achiziții simple intră pe alocarea distinctă, indiferent de sectorul agricol, conform încadrării din ghidul consultativ."
+          "Proiectele care propun numai achiziții de bunuri și echipamente, fără lucrări de construcții-montaj, intră pe componenta distinctă, indiferent de sectorul agricol, cu respectarea încadrării din ghidul oficial final."
         ],
         [
           "Cum folosesc calculatorul SO pentru DR14?",
@@ -1625,8 +1657,8 @@
           "body": "Separarea grantului de contribuție proprie, TVA și costuri neeligibile reduce riscul de blocaj după aprobare. Bugetul trebuie să explice fiecare echipament și fiecare serviciu prin nevoia fermei."
         },
         {
-          "title": "Ce rămâne de confirmat",
-          "body": "Pagină folosește forma consultativa ca reper. Înainte de depunere verificam ghidul final, anexele, criteriile de selecție, calendarul și orice clarificare publicata de AFIR."
+          "title": "Ce rămâne de confirmat de AFIR",
+          "body": "Ghidul oficial final și anexele sunt publicate. Rămân de anunțat intervalul efectiv de depunere, alocarea și pragurile de calitate aferente sesiunii; acestea se verifică în anunțul oficial de lansare."
         },
         {
           "title": "Cum se decide dacă investiția este proportionala",
@@ -1637,7 +1669,7 @@
       "heroPrimaryCta": "Cere verificarea inițială pentru DR14",
       "finalPrimaryCta": "Cere verificarea inițială pentru DR14",
       "inlineCtaTitle": "Date pentru verificarea DR14",
-      "inlineCtaText": "Trimite dimensiunea economică, componenta vizată, documentele exploatației, investiția și bugetul. Pragurile și condițiile sunt raportate la ghidul consultativ și se reconfirmă în ghidul final.",
+      "inlineCtaText": "Trimite dimensiunea economică, componenta vizată, documentele exploatației, investiția și bugetul. Verificarea se raportează la ghidul oficial final și la anexele publicate de AFIR la 6 august 2026.",
       "decisionClose": "Dacă proiectul se bazeaza doar pe plafonul maxim sau pe date neconfirmate, trebuie refacut înainte de depunere.",
       "updatedAt": "2026-07-20",
       "template": "editorial-program",
@@ -1646,13 +1678,13 @@
       "applicantRows": [
         [
           "Solicitant",
-          "Fermă mica sau forma juridică eligibilă conform ghidului activ.",
-          "Incadrare, documente juridice și activitate agricolă reală.",
+          "Fermier, cu excepția persoanei fizice, constituit într-o formă eligibilă.",
+          "Încadrare, documente juridice și activitate agricolă reală.",
           "AFIR"
         ],
         [
           "Dimensiune",
-          "Exploatatie cu SO și date agricole verificabile.",
+          "Exploatație între 4.000 și 11.999 SO sau în pragul minim special aplicabil sectorului.",
           "Calcul SO și documente pentru culturi, animale sau spații.",
           "AFIR"
         ],
@@ -1664,7 +1696,7 @@
         ],
         [
           "Contribuție proprie",
-          "Partea proprie și costurile neeligibile rămân la beneficiar.",
+          "Grant de maximum 50.000 EUR și intensitate de maximum 85% din eligibil.",
           "TVA, rezerve și surse de finanțare.",
           "Bugetul proiectului"
         ]
@@ -1672,27 +1704,27 @@
       "eligibleInvestmentRows": [
         [
           "Utilaje și echipamente",
-          "Dotari agricole adaptate fermei mici.",
-          "Proportionalitate și eligibilitate expresa.",
-          "Documentul oficial aplicabil"
+          "Utilaje și echipamente agricole noi, adaptate fermei mici.",
+          "Proporționalitate, eligibilitate expresă și corelarea puterii tractorului prin Anexa 16.",
+          "Ghidul oficial final"
         ],
         [
           "Lucrări și amenajări",
           "Investiții permise pentru activitatea agricolă.",
           "Autorizatii și drepturi asupra amplasamentului.",
-          "Documentul oficial aplicabil"
+          "Ghidul oficial final"
         ],
         [
           "Servicii proiect",
-          "Documentatii și asistenta eligibilă.",
-          "Plafoane și momentul cheltuielii.",
-          "Documentul oficial aplicabil"
+          "Documentații și asistență eligibilă.",
+          "Maximum 10% cu lucrări de construcții-montaj și maximum 3% pentru achiziții simple.",
+          "Ghidul oficial final"
         ],
         [
           "Modernizare punctuala",
-          "Dotari care imbunatatesc fluxul fermei.",
-          "Sa nu fie doar inlocuire nejustificata.",
-          "Documentul oficial aplicabil"
+          "Dotări care îmbunătățesc fluxul fermei.",
+          "Să nu fie doar o înlocuire nejustificată.",
+          "Ghidul oficial final"
         ]
       ],
       "cofinancingTitle": "Finanțare și contribuție proprie DR14",
@@ -1741,7 +1773,7 @@
         ],
         [
           "5.",
-          "Revizuieste ghidul final imediat ce este publicat."
+          "Verifică anunțul de lansare pentru perioada și pragul lunar aplicabil."
         ]
       ],
       "commonMistakes": [
@@ -1750,7 +1782,7 @@
         "Oferte incomplete sau greu de comparat.",
         "Documente de teren, spațiu sau animale nevalabile.",
         "Ignorarea TVA și a costurilor neeligibile.",
-        "Aplicarea pe baza formei consultative fără verificarea ghidului activ."
+        "Confundarea perioadei estimate cu intervalul oficial de depunere."
       ],
       "decisionIntro": "DR14 este potrivit când fermă mica are documente clare, investiția este dimensionata corect și contribuția proprie este acoperita.",
       "ctaText": "Cere verificarea inițială pentru DR14",

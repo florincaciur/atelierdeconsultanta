@@ -45,7 +45,7 @@ function replaceFirst(html, pattern, replacement, label) {
 }
 
 function sourceRef(program) {
-  return `<span class="expert-source-ref">Sursă: <a href="#source-${escapeHtml(program.slug)}">${escapeHtml(program.shortName)}</a>, verificat la <time datetime="2026-07-22">22.07.2026</time>.</span>`;
+  return `<span class="expert-source-ref">Sursă: <a href="#source-${escapeHtml(program.slug)}">${escapeHtml(program.shortName)}</a>, verificat la <time datetime="${escapeHtml(program.verifiedAt)}">${escapeHtml(displayDate(program.verifiedAt))}</time>.</span>`;
 }
 
 function renderTable(config) {
@@ -100,8 +100,8 @@ ${toc}    <article class="post-body">
       <p class="expert-direct-answer" data-expert-direct-answer>${escapeHtml(config.directAnswer)}</p>
 <!-- P1_19_DIRECT_ANSWER_END -->${aeo}
       <h2 id="comparatie-documentata">Ce comparăm înainte de alegerea intervenției?</h2>
-      <p>DR 12 și DR 14 pot părea apropiate deoarece ambele privesc investiții agricole, dar pornesc de la logici diferite. Prima întrebare nu este care variantă afișează o valoare mai mare, ci dacă solicitantul, ferma și investiția pot fi susținute de documentele cerute. Tabelul separă faptele confirmate de elementele care trebuie reconfirmate în forma finală.</p>
-      <p class="expert-comparison-note"><strong>Cum se citește tabelul:</strong> fiecare celulă trimite la documentul AFIR folosit și la data verificării. Pentru SO, sprijin, contribuție și calendar nu publicăm valori finale cât timp registrul programelor le păstrează neconfirmate.</p>
+      <p>DR 12 și DR 14 pot părea apropiate deoarece ambele privesc investiții agricole, dar pornesc de la logici diferite. Prima întrebare nu este care variantă afișează o valoare mai mare, ci dacă solicitantul, ferma și investiția pot fi susținute de documentele cerute. Tabelul separă condițiile finale DR 14 de elementele DR 12 care trebuie reconfirmate după publicarea formei finale.</p>
+      <p class="expert-comparison-note"><strong>Cum se citește tabelul:</strong> fiecare celulă trimite la documentul AFIR folosit și la data verificării. Valorile DR 14 provin din ghidul oficial final; pentru DR 12 nu publicăm sume sau intensități finale cât timp registrul programului le păstrează neconfirmate.</p>
 ${renderTable(config)}
 
       <h2 id="orientare-dr12-dr14">Când merită analizat mai întâi fiecare program?</h2>
@@ -171,13 +171,14 @@ ${renderTable(config)}
           <p><strong>${escapeHtml(dr12.sourceLabel)}</strong></p>
           <p><a href="${escapeHtml(dr12.sourceUrl)}" target="_blank" rel="noopener noreferrer">Consultarea publică AFIR și documentele asociate</a></p>
           <p><a href="${escapeHtml(dr12.guideUrl)}" target="_blank" rel="noopener noreferrer">Deschide ghidul consultativ DR 12</a></p>
-          <p>Verificat la <time datetime="${escapeHtml(config.reviewedAt)}">${escapeHtml(displayDate(config.reviewedAt))}</time>.</p>
+          <p>Verificat la <time datetime="${escapeHtml(dr12.verifiedAt)}">${escapeHtml(displayDate(dr12.verifiedAt))}</time>.</p>
         </article>
         <article class="expert-source-card" id="source-${escapeHtml(dr14.slug)}">
           <h3>DR 14</h3>
           <p><strong>${escapeHtml(dr14.sourceLabel)}</strong></p>
-          <p><a href="${escapeHtml(dr14.sourceUrl)}" target="_blank" rel="noopener noreferrer">Deschide ghidul consultativ DR 14</a></p>
-          <p>Verificat la <time datetime="${escapeHtml(config.reviewedAt)}">${escapeHtml(displayDate(config.reviewedAt))}</time>.</p>
+          <p><a href="${escapeHtml(dr14.sourceUrl)}" target="_blank" rel="noopener noreferrer">Pagina oficială AFIR cu ghidul și anexele DR 14</a></p>
+          <p><a href="${escapeHtml(dr14.guideUrl)}" target="_blank" rel="noopener noreferrer">Deschide ghidul oficial final DR 14</a></p>
+          <p>Verificat la <time datetime="${escapeHtml(dr14.verifiedAt)}">${escapeHtml(displayDate(dr14.verifiedAt))}</time>.</p>
         </article>
       </div>
 
@@ -212,14 +213,14 @@ Revizie factuală și editorială: **${displayDate(config.reviewedAt)}**.
 - DR 12, document: ${config.programs[0].guideUrl}
 - DR 14: ${config.programs[1].sourceLabel} — ${config.programs[1].sourceUrl}
 
-## Valori nepublicate până la reconfirmare
+## Elemente DR 12 și calendare rămase de reconfirmat
 
 ${config.pendingHumanValidation.map((item) => `- DE_VALIDAT_UMAN — ${item}`).join("\n")}
 
 ## Decizia de publicare
 
-- statut publicat: ghiduri consultative; depunerea nu este deschisă;
-- valorile numerice din documentele consultative nu sunt prezentate ca valori finale;
+- statut publicat: DR 12 are ghid consultativ, iar DR 14 are ghid oficial final; depunerea nu este deschisă;
+- valorile finale DR 14 sunt publicate conform ghidului din 06.08.2026; valorile DR 12 rămân nepublicate până la reconfirmare;
 - scenariile sunt marcate explicit ca ipotetice și nu descriu clienți reali;
 - CTA-ul transmite numai \`source_page=/dr12-vs-dr14\`, fără PII în URL;
 - autorul și reviewerul sunt publicați organizațional; nu este publicat un nume personal fără acord.
@@ -241,11 +242,11 @@ function validateConfig(config, programs) {
       errors.push(`program inexistent în registru: ${program.slug}`);
       continue;
     }
-    if (registry.status !== "consultare_publica") errors.push(`${program.slug}: statusul registrului nu este consultare_publica`);
-    if (registry.verifiedAt !== config.reviewedAt) errors.push(`${program.slug}: verifiedAt diferă de revizia paginii`);
+    if (!program.status || registry.status !== program.status) errors.push(`${program.slug}: statusul local nu coincide cu registrul unic`);
+    if (!program.verifiedAt || registry.verifiedAt !== program.verifiedAt) errors.push(`${program.slug}: verifiedAt nu coincide cu registrul unic`);
     if (registry.sourceUrl !== program.sourceUrl) errors.push(`${program.slug}: sursa nu coincide cu registrul unic`);
     if (registry.applicationStart || registry.applicationEnd) errors.push(`${program.slug}: registrul indică nejustificat un interval de depunere`);
-    if (registry.grantSummary || registry.cofinancingSummary) errors.push(`${program.slug}: valorile numerice necesită un contract de publicare separat`);
+    if ((registry.grantSummary || registry.cofinancingSummary) && registry.status === "consultare_publica") errors.push(`${program.slug}: valorile numerice consultative necesită un contract de publicare separat`);
   }
   if (!Array.isArray(config.pendingHumanValidation) || config.pendingHumanValidation.length < 5) errors.push("lista de validări umane este incompletă");
   if (errors.length) throw new Error(`Config P1.19 invalid:\n- ${errors.join("\n- ")}`);
