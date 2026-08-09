@@ -54,8 +54,8 @@ function canonicalContactIdentity(config = loadLegalIdentity()) {
 
 function contactAnchor(contact, type, className = "") {
   const analytics = type === "phone"
-    ? ' data-analytics-event="phone_click" data-analytics-component="contact_link" data-analytics-cta-id="phone_contact"'
-    : ' data-analytics-event="email_click" data-analytics-component="contact_link" data-analytics-cta-id="email_contact"';
+    ? ' data-analytics-event="contact_phone" data-analytics-component="contact_link" data-analytics-cta-id="phone_contact"'
+    : ' data-analytics-event="contact_email" data-analytics-component="contact_link" data-analytics-cta-id="email_contact"';
   const classAttribute = className ? ` class="${escapeHtml(className)}"` : "";
   return `<a${classAttribute} href="${escapeHtml(contact.href)}"${analytics}>${escapeHtml(contact.display)}</a>`;
 }

@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-08-08T18:43:58.067Z",
+  "checkedAt": "2026-08-09T12:35:29.885Z",
   "requestedEnvironment": "local",
   "stagingDescription": "nerulat",
   "releaseDecision": "PASS",
@@ -35,7 +35,7 @@
       "urls": [
         "config/seo-programs.json"
       ],
-      "evidence": "Contract registru: 20 programe verificate pe meniu, homepage, carduri, pagini și JSON-LD.",
+      "evidence": "Contract registru: 24 programe verificate pe meniu, homepage, carduri, pagini și JSON-LD.",
       "retest": "Reexecută verificarea factual_sources după remediere/aprobare."
     },
     {
@@ -118,7 +118,7 @@
       "urls": [
         "/sitemap.xml"
       ],
-      "evidence": "Verified sitemap index with 96 canonical URLs; 18 verified lastmod values.",
+      "evidence": "Verified sitemap index with 100 canonical URLs; 22 verified lastmod values.",
       "retest": "Reexecută verificarea sitemap după remediere/aprobare."
     },
     {
@@ -131,7 +131,7 @@
       "urls": [
         "/sitemap.xml"
       ],
-      "evidence": "Editorial copy contract passed: 96 canonical URLs, zero forbidden template labels or control-list forms. | Editorial terminology contract passed: 96 canonical URLs and 10 P0.14 surfaces.",
+      "evidence": "Editorial copy contract passed: 100 canonical URLs, zero forbidden template labels or control-list forms. | Editorial terminology contract passed: 100 canonical URLs and 10 P0.14 surfaces.",
       "retest": "Reexecută verificarea editorial după remediere/aprobare."
     },
     {

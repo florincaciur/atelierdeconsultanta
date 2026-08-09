@@ -32,11 +32,12 @@ function synchronize(html, footerContact, legalIdentityPanel = "", aboutLegalIde
   let output = html.replace(BLOCK, "").replace(LEGAL_BLOCK, "");
   if (legalIdentityPanel && output.includes(ABOUT_LEGAL_SLOT)) {
     output = output.replace(
-      ABOUT_LEGAL_SLOT,
-      `${ABOUT_LEGAL_SLOT}\n${aboutLegalIdentityPanel || legalIdentityPanel}`
+      new RegExp(`${ABOUT_LEGAL_SLOT}\\s*`, "u"),
+      `${ABOUT_LEGAL_SLOT}\n${aboutLegalIdentityPanel || legalIdentityPanel}\n`
     );
   } else if (legalIdentityPanel && /<\/main>/iu.test(output)) {
-    output = output.replace(/<\/main>/iu, `${legalIdentityPanel}\n</main>`);
+    const mainEnd = output.search(/<\/main>/iu);
+    output = `${output.slice(0, mainEnd).trimEnd()}\n${legalIdentityPanel}\n${output.slice(mainEnd)}`;
   }
   if (!/<footer\b/iu.test(output)) return output;
   return output.replace(/<\/footer>/iu, `${footerContact}</footer>`);

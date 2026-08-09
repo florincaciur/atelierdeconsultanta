@@ -117,7 +117,12 @@ function syncStylesheet(html) {
 }
 
 function insertBeforeMainEnd(html, block) {
-  const index = html.toLocaleLowerCase("en-US").lastIndexOf("</main>");
+  const templateSlotIndex = html.indexOf("<!-- PROGRAM_TEMPLATE_GOVERNANCE_SLOT -->");
+  const governanceIndex = html.indexOf("<!-- EDITORIAL_GOVERNANCE_START -->");
+  const mainEndIndex = html.toLocaleLowerCase("en-US").lastIndexOf("</main>");
+  const index = templateSlotIndex < 0 && governanceIndex >= 0
+    ? governanceIndex
+    : mainEndIndex;
   if (index < 0) throw new Error("pagina nu conține </main>");
   return `${html.slice(0, index).replace(/\s+$/u, "")}\n${block}\n${html.slice(index)}`;
 }

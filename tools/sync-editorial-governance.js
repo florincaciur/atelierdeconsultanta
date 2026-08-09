@@ -89,7 +89,7 @@ function insertBeforeLast(html, pattern, block) {
   const matches = [...html.matchAll(pattern)];
   if (!matches.length) return null;
   const last = matches.at(-1);
-  return `${html.slice(0, last.index)}${block}\n${html.slice(last.index)}`;
+  return `${html.slice(0, last.index).trimEnd()}\n${block}\n${html.slice(last.index)}`;
 }
 
 function syncPageHtml(source, record) {
@@ -100,15 +100,16 @@ function syncPageHtml(source, record) {
   }
   output = output.replace(/<body\b[^>]*>/iu, (tag) => {
     let next = tag;
-    for (const attribute of ["data-editorial-record", "data-governance-state", "data-editorial-verified-at", "data-next-review-at", "data-last-meaningful-update"]) {
-      next = removeTagAttribute(next, attribute);
-    }
     next = replaceTagAttribute(next, "data-editorial-record", record.id);
     next = replaceTagAttribute(next, "data-governance-state", record.governanceState);
     if (isCompleteRecord(record)) {
       next = replaceTagAttribute(next, "data-editorial-verified-at", record.verifiedAt);
       next = replaceTagAttribute(next, "data-next-review-at", record.nextReviewAt);
       next = replaceTagAttribute(next, "data-last-meaningful-update", record.lastMeaningfulUpdate);
+    } else {
+      for (const attribute of ["data-editorial-verified-at", "data-next-review-at", "data-last-meaningful-update"]) {
+        next = removeTagAttribute(next, attribute);
+      }
     }
     return next;
   });
