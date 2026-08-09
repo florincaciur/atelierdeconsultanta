@@ -31,10 +31,14 @@ assert.deepEqual(resolvedLinks(dr12, config).map(({ relation, href, anchor }) =>
 const audit = auditProgramContextualLinks();
 assert.equal(audit.errors.length, 0, audit.errors.join("\n"));
 assert.equal(audit.summary.programs, 19);
-assert.equal(audit.summary.links, 76);
-assert.equal(audit.summary.trackedCtas, 19);
-assert.equal(audit.summary.editorialLinksWithoutTracking, 57);
+assert.equal(audit.summary.managedPrograms, 17);
+assert.equal(audit.summary.excludedPrograms, 2);
+assert.equal(audit.summary.links, 68);
+assert.equal(audit.summary.trackedCtas, 17);
+assert.equal(audit.summary.editorialLinksWithoutTracking, 51);
 assert.equal(audit.summary.legacyCloudsRemaining, 0);
-assert.deepEqual(audit.summary.relationCounts, { parent: 19, instrument: 19, comparison: 19, conversion: 19 });
+assert.deepEqual(audit.summary.relationCounts, { parent: 17, instrument: 17, comparison: 17, conversion: 17 });
+assert.deepEqual(config.excludedRoutes, ["/dr12-afir", "/investitii-modernizarea-microintreprinderilor-apel-2"]);
+assert.equal(audit.routes.filter((route) => route.excluded && route.status === "PASS").length, 2);
 
-console.log("Program contextual links contract PASS: 19 programe publice listate, 76 de relații, tracking exclusiv pe 19 CTA-uri.");
+console.log("Program contextual links contract PASS: 19 programe publice, 17 blocuri gestionate și 2 excluderi editoriale explicite.");

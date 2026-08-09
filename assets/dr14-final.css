@@ -231,7 +231,7 @@ body[data-program-id="dr14-afir"] .post-body {
 .dr14-calculator__input input[type="number"] { width: 100%; border: 0; padding: 1rem; color: var(--dr14-ink); font: inherit; font-size: 1.3rem; font-weight: 800; }
 .dr14-calculator__input > div span { padding: 1rem; background: #edf6f1; font-weight: 800; }
 .dr14-calculator__input input[type="range"] { width: 100%; margin-top: 1.2rem; accent-color: var(--dr14-green); }
-.dr14-calculator__results { display: grid; grid-template-columns: repeat(3, 1fr); gap: .75rem; }
+.dr14-calculator__results { display: grid; grid-template-columns: repeat(2, 1fr); gap: .75rem; }
 .dr14-calculator__results article { padding: 1rem; background: #f3f8f5; border-radius: 16px; }
 .dr14-calculator__results span { display: block; min-height: 2.4em; color: #61746c; font-size: .82rem; }
 .dr14-calculator__results strong { display: block; margin-top: .5rem; color: var(--dr14-green); font-size: 1.2rem; }
@@ -278,6 +278,18 @@ body[data-program-id="dr14-afir"] .post-body {
 .dr14-example dt { font-size: .82rem; opacity: .8; }
 .dr14-example dd { margin: .25rem 0 0; font-size: 1.2rem; font-weight: 800; }
 .dr14-example p { grid-column: 1/-1; margin: 0; color: rgba(255,255,255,.86); }
+
+body[data-program-id="dr14-afir"] .long-form-layout__content,
+body[data-program-id="dr14-afir"] .long-form-layout__content > article,
+body[data-program-id="dr14-afir"] .long-form-layout__content > article > *,
+body[data-program-id="dr14-afir"] .aeo-question-set,
+body[data-program-id="dr14-afir"] .aeo-question {
+  width: 100%;
+  max-width: none;
+  box-sizing: border-box;
+}
+
+body[data-program-id="dr14-afir"] .aeo-question-set { grid-template-columns: minmax(0, 1fr); }
 
 .dr14-source-actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-bottom: 1.25rem; }
 .dr14-faq { display: grid; grid-template-columns: 1fr 1fr; gap: .8rem; }

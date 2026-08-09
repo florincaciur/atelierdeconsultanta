@@ -164,6 +164,15 @@ function renderFundingOverview(page) {
       </section>`;
 }
 
+function renderEligibilityOverview(page) {
+  if (page.route !== "/verificare-eligibilitate-fonduri-europene") return "";
+  return `<section class="eligibility-overview" aria-labelledby="eligibility-overview-title">
+        <div class="eligibility-overview__copy"><p class="eligibility-overview__eyebrow">Flux de verificare</p><h2 id="eligibility-overview-title">O concluzie clară, construită din fapte verificabile</h2><p>Separăm informațiile confirmate de documentele lipsă și de ipotezele care pot schimba rezultatul.</p></div>
+        <ol class="eligibility-overview__steps"><li><span>01</span><strong>Încadrare</strong><small>solicitant, activitate și locație</small></li><li><span>02</span><strong>Control</strong><small>investiție, buget și documente</small></li><li><span>03</span><strong>Recomandare</strong><small>continuare, ajustare sau amânare</small></li></ol>
+        <svg class="eligibility-overview__svg" viewBox="0 0 640 180" role="img" aria-labelledby="eligibility-flow-title eligibility-flow-desc"><title id="eligibility-flow-title">Fluxul verificării inițiale</title><desc id="eligibility-flow-desc">Trei etape conectate: încadrare, control și recomandare.</desc><path class="eligibility-flow__path" d="M82 90H558" fill="none" stroke="#e5a348" stroke-width="5" stroke-linecap="round"/><g class="eligibility-flow__node"><circle cx="82" cy="90" r="34"/><text x="82" y="97">1</text></g><g class="eligibility-flow__node"><circle cx="320" cy="90" r="34"/><text x="320" y="97">2</text></g><g class="eligibility-flow__node"><circle cx="558" cy="90" r="34"/><text x="558" y="97">3</text></g></svg>
+      </section>`;
+}
+
 function renderArticle(page) {
   const related = (page.internalLinks || []).length
     ? `<nav class="editorial-cluster__related" aria-label="Continuă documentarea">
@@ -176,7 +185,7 @@ function renderArticle(page) {
       <section class="editorial-cluster__answer" aria-label="Răspuns direct">
         <p class="intro" data-direct-answer>${esc(page.directAnswer)}</p>
       </section>
-      ${renderFundingOverview(page)}
+      ${renderFundingOverview(page)}${renderEligibilityOverview(page)}
       ${(page.sections || []).map(renderSection).join("\n")}
       ${page.terminologyNote ? `<p data-terminology-note="own-contribution">${esc(page.terminologyNote)}</p>` : ""}
       <section class="editorial-cluster__source-note" aria-labelledby="${attr(page.intentId)}-sources">
@@ -233,6 +242,13 @@ function syncPage(page) {
     $("head").append('<link rel="stylesheet" href="/assets/site-refresh-2026.css?v=20260809-1">');
     $("body").addClass("funding-hub-refresh-2026");
   }
+  if (page.route === "/verificare-eligibilitate-fonduri-europene") {
+    $("head").find('link[href^="/assets/eligibility-refresh-2026.css"]').remove();
+    if (!$('link[href="/assets/eligibility-refresh-2026.css?v=20260810-2"]').length) {
+      $("head").append('<link rel="stylesheet" href="/assets/eligibility-refresh-2026.css?v=20260810-2">');
+    }
+    $("body").addClass("eligibility-refresh-2026");
+  }
 
   const hero = $("header.hero, .program-hero, .post-hero").first();
   if (!hero.length) throw new Error(`${page.route}: hero-ul nu a fost găsit`);
@@ -251,6 +267,10 @@ function syncPage(page) {
       hero.append(actions);
     }
     actions.html(page.heroActions.map((action) => `<a class="btn btn-${action.kind === "secondary" ? "secondary" : "primary"}" href="${attr(action.href)}">${esc(action.label)}</a>`).join(""));
+  }
+  if (page.route === "/verificare-eligibilitate-fonduri-europene") {
+    hero.find(".hero-summary, .eligibility-hero-flow").remove();
+    hero.append(`<svg class="eligibility-hero-flow" viewBox="0 0 520 360" aria-hidden="true" focusable="false"><rect class="eligibility-hero-flow__sheet" x="52" y="42" width="260" height="286" rx="28" fill="rgba(255,255,255,.14)" stroke="rgba(255,255,255,.24)"/><rect x="94" y="92" width="132" height="16" rx="8" fill="#e5a348"/><rect x="94" y="135" width="172" height="11" rx="5.5" fill="rgba(255,255,255,.32)"/><rect x="94" y="169" width="148" height="11" rx="5.5" fill="rgba(255,255,255,.22)"/><path class="eligibility-hero-flow__route" d="M137 270C214 228 265 280 339 193S429 127 473 83" fill="none" stroke="#e5a348" stroke-width="7" stroke-linecap="round"/><circle class="eligibility-hero-flow__node" cx="339" cy="193" r="16" fill="#fff"/><circle class="eligibility-hero-flow__node" cx="417" cy="119" r="13" fill="#e5a348"/><circle class="eligibility-hero-flow__node" cx="473" cy="83" r="19" fill="#fff"/><path d="m464 83 7 7 14-18" fill="none" stroke="#1f765d" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/></svg>`);
   }
 
   const article = $("main article.panel, article.post-body").first();

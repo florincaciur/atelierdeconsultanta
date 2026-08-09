@@ -45,6 +45,8 @@ assert.equal($("#so-result-explanation").length, 1, "lipsește explicația rezul
 assert.equal($("#so-program-suggestion").length, 1, "lipsește sugestia prudentă de program");
 assert.equal($("main").children().eq(1).attr("id"), "calculator", "calculatorul trebuie să urmeze imediat după banner");
 assert.equal($(".so-page-disclosure").length, 4, "fragmentele metodologice lungi trebuie restrânse în disclosure-uri native");
+assert.equal($("[data-so-card-carousel]").length, 2, "cele două secțiuni ample trebuie afișate ca carusele cu un singur card");
+assert.equal($("[data-so-collapsible-cards]").length, 1, "FAQ trebuie să afișeze primul card și să restrângă restul");
 assert.equal($("script[src^='/assets/calculator-so-methodology.js']").length, 1, "scriptul funcțional P1.20 trebuie încărcat exact o dată");
 assert($("[data-so-methodology]").text().includes("Formula de înmulțire și însumare existentă nu a fost schimbată"));
 assert($(".calc-result").text().includes(DISCLAIMER), "disclaimerul contractual trebuie să fie lângă rezultat");
@@ -79,6 +81,8 @@ for (const group of config.coefficientGroups) {
 assert(client.includes("MAX_TECHNICAL_QUANTITY = 1000000"), "limita tehnică trebuie declarată");
 assert(client.includes("navigator.clipboard.writeText"), "copierea trebuie implementată");
 assert(client.includes("window.print()"), "tipărirea trebuie implementată");
+assert(client.includes("initCardCarousel"), "caruselul accesibil pentru cardurile ample trebuie inițializat");
+assert(client.includes("initCollapsibleCards"), "grupurile de carduri trebuie să poată fi restrânse nativ");
 assert(!/\b(?:email|telefon|phone|nume)\b|name=/iu.test(client), "rezumatul calculatorului nu trebuie să prelucreze PII");
 assert(css.includes("@media print"), "lipsește stilul de tipărire");
 assert(css.includes("prefers-reduced-motion"), "interacțiunile trebuie să respecte reducerea mișcării");

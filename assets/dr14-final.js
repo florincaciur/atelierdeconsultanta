@@ -35,6 +35,7 @@
     var number = root.querySelector("[data-dr14-cost]");
     var range = root.querySelector("[data-dr14-cost-range]");
     var grantOutput = root.querySelector("[data-dr14-grant]");
+    var totalOutput = root.querySelector("[data-dr14-total]");
     var privateOutput = root.querySelector("[data-dr14-private]");
     var rateOutput = root.querySelector("[data-dr14-rate]");
     var message = root.querySelector("[data-dr14-cap-message]");
@@ -46,6 +47,7 @@
       if (source !== number) number.value = String(Math.round(cost));
       if (source !== range) range.value = String(Math.min(100000, Math.round(cost / 500) * 500));
       grantOutput.textContent = formatEur(grant);
+      totalOutput.textContent = formatEur(cost);
       privateOutput.textContent = formatEur(own);
       rateOutput.textContent = new Intl.NumberFormat("ro-RO", { maximumFractionDigits: 1 }).format(rate) + "%";
       message.textContent = grant >= 50000

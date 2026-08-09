@@ -4,10 +4,11 @@
   "reportDate": "2026-07-21",
   "wordThreshold": 1500,
   "includedTypes": ["program", "ghid"],
-  "forcedRoutes": ["/"],
+  "forcedRoutes": ["/", "/dr12-afir"],
   "tocExcludedRoutes": [
     "/dr14",
-    "/investitii-modernizarea-microintreprinderilor-apel-2"
+    "/investitii-modernizarea-microintreprinderilor-apel-2",
+    "/dr12-afir"
   ],
   "pilotRoute": "/afir-autoconsum-agroalimentar",
   "inventoryPath": "reports/content-intent-inventory-2026-07-21.json",

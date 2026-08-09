@@ -138,6 +138,10 @@ const CANONICAL_DIRECTORY_HTML_ROUTES = [
   "glosar-fonduri-europene",
 ];
 
+const CANONICAL_INDEX_SOURCE_OVERRIDES = new Set([
+  "investitii-modernizarea-microintreprinderilor-apel-2",
+]);
+
 function posixPath(value) {
   return value.split(path.sep).join("/");
 }
@@ -202,7 +206,9 @@ function syncCanonicalHtmlAliases() {
   for (const entry of collectSiteState().entries) {
     if (entry.route === "/") continue;
     const route = entry.route.replace(/^\/+|\/+$/g, "");
-    const canonicalSource = path.join(ROOT, entry.sourceFile);
+    const canonicalSource = CANONICAL_INDEX_SOURCE_OVERRIDES.has(route)
+      ? path.join(ROOT, route, "index.html")
+      : path.join(ROOT, entry.sourceFile);
     const candidates = [
       path.join(OUT_DIR, `${route}.html`),
       path.join(OUT_DIR, route, "index.html"),

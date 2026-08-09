@@ -156,7 +156,9 @@ function main() {
   const programs = allPrograms.filter((program) => !program.discovery?.redirectTarget);
   validateMatrix(programs, config);
   const publicPrograms = programs.filter((program) => isPublicProgram(program) && program.discovery?.listed !== false);
-  const publicProgramIds = new Set(publicPrograms.map((program) => program.slug));
+  const excludedRoutes = new Set(config.excludedRoutes || []);
+  const managedPrograms = publicPrograms.filter((program) => !excludedRoutes.has(program.pageUrl));
+  const managedProgramIds = new Set(managedPrograms.map((program) => program.slug));
   const changed = [];
   const migration = [];
 
@@ -164,7 +166,7 @@ function main() {
     for (const file of programFiles(program.pageUrl)) {
       const before = fs.readFileSync(file, "utf8");
       const counts = legacyCounts(before);
-      const after = publicProgramIds.has(program.slug)
+      const after = managedProgramIds.has(program.slug)
         ? synchronizedHtml(before, program, config)
         : removeStylesheet(removeManagedBlocks(before));
       if (after !== before) {
@@ -175,10 +177,11 @@ function main() {
         programId: program.slug,
         route: program.pageUrl,
         file: path.relative(ROOT, file).replace(/\\/gu, "/"),
-        eligible: publicProgramIds.has(program.slug),
+        eligible: managedProgramIds.has(program.slug),
+        excludedByEditorialDecision: excludedRoutes.has(program.pageUrl),
         removedManagedBlocks: counts.blocks,
         removedManagedLinks: counts.links,
-        resultingRelations: publicProgramIds.has(program.slug) ? resolvedLinks(program, config).map((link) => link.relation) : []
+        resultingRelations: managedProgramIds.has(program.slug) ? resolvedLinks(program, config).map((link) => link.relation) : []
       });
     }
   }
@@ -191,7 +194,7 @@ function main() {
   if (!CHECK) {
     fs.writeFileSync(REPORT_PATH, `${JSON.stringify({ generatedAt: "2026-07-21", evidence: config.evidence, files: migration }, null, 2)}\n`, "utf8");
   }
-  console.log(`Program contextual links ${CHECK ? "PASS" : "OK"}: ${publicPrograms.length} programe publice, ${migration.length} fișiere, ${changed.length} actualizate.`);
+  console.log(`Program contextual links ${CHECK ? "PASS" : "OK"}: ${publicPrograms.length} programe publice, ${managedPrograms.length} cu bloc contextual, ${excludedRoutes.size} excluse editorial, ${migration.length} fișiere, ${changed.length} actualizate.`);
 }
 
 if (require.main === module) main();

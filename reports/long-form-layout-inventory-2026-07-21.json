@@ -3,10 +3,10 @@
   "generatedFor": "P1.09",
   "generatedAt": "2026-07-21",
   "wordThreshold": 1500,
-  "pageCount": 28,
+  "pageCount": 29,
   "byType": {
     "core": 1,
-    "program": 10,
+    "program": 11,
     "ghid": 17
   },
   "pilotRoute": "/afir-autoconsum-agroalimentar",
@@ -112,6 +112,17 @@
       "contentActionCount": 1
     },
     {
+      "route": "/dr12-afir",
+      "type": "program",
+      "sourceFile": "dr12-afir/index.html",
+      "wordCount": 560,
+      "tocItemCount": 0,
+      "tableCount": 0,
+      "variant": "wide",
+      "decisionActionAdded": true,
+      "contentActionCount": 4
+    },
+    {
       "route": "/dr12-vs-dr14",
       "type": "ghid",
       "sourceFile": "dr12-vs-dr14.html",
@@ -126,7 +137,7 @@
       "route": "/dr14",
       "type": "program",
       "sourceFile": "dr14/index.html",
-      "wordCount": 2087,
+      "wordCount": 2097,
       "tocItemCount": 0,
       "tableCount": 0,
       "variant": "wide",
@@ -269,12 +280,12 @@
       "route": "/investitii-modernizarea-microintreprinderilor-apel-2",
       "type": "program",
       "sourceFile": "investitii-modernizarea-microintreprinderilor-apel-2/index.html",
-      "wordCount": 1554,
+      "wordCount": 1519,
       "tocItemCount": 0,
       "tableCount": 0,
       "variant": "wide",
       "decisionActionAdded": true,
-      "contentActionCount": 3
+      "contentActionCount": 2
     },
     {
       "route": "/pocidif-21",

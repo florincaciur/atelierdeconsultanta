@@ -56,6 +56,8 @@ function auditProgramContextualLinks() {
   const config = loadConfig();
   const programs = loadProgramConfig().programs
     .filter((program) => isPublicProgram(program) && program.discovery?.listed !== false);
+  const excludedRoutes = new Set(config.excludedRoutes || []);
+  const managedPrograms = programs.filter((program) => !excludedRoutes.has(program.pageUrl));
   const sitemapSet = new Set(sitemapRoutes(ROOT));
   const redirects = redirectSources();
   const errors = [];
@@ -72,6 +74,14 @@ function auditProgramContextualLinks() {
     }
     const $ = cheerio.load(fs.readFileSync(file, "utf8"));
     const block = $("main [data-program-contextual-links]");
+    if (excludedRoutes.has(program.pageUrl)) {
+      if (block.length) routeIssues.push(`blocuri contextuale: ${block.length}, necesar 0 pentru ruta exclusa editorial`);
+      if ($("link[href='/assets/program-contextual-links.css']").length) routeIssues.push("stylesheet contextual prezent pe ruta exclusa editorial");
+      if ($("main .related-links, main [data-contextual-next-step]").length) routeIssues.push("au ramas containere automate legacy");
+      routeResults.push({ route: program.pageUrl, programId: program.slug, status: routeIssues.length ? "FAIL" : "PASS", excluded: true, issues: [...new Set(routeIssues)] });
+      errors.push(...routeIssues.map((issue) => `${program.pageUrl}: ${issue}`));
+      continue;
+    }
     if (block.length !== 1) routeIssues.push(`blocuri contextuale: ${block.length}, necesar 1`);
     if ($("main .related-links, main [data-contextual-next-step]").length) routeIssues.push("au rămas containere automate legacy");
     const actual = block.find(".program-contextual-links__list > li > a");
@@ -132,6 +142,8 @@ function auditProgramContextualLinks() {
     evidence: config.evidence,
     summary: {
       programs: programs.length,
+      managedPrograms: managedPrograms.length,
+      excludedPrograms: excludedRoutes.size,
       links: rows.length,
       trackedCtas: rows.filter((row) => row.analytics_event === "cta_click").length,
       editorialLinksWithoutTracking: rows.filter((row) => row.relation !== "conversion" && row.analytics_event === "—").length,

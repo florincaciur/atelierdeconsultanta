@@ -1,6 +1,10 @@
 {
   "schemaVersion": 1,
   "reviewedAt": "2026-07-21",
+  "excludedRoutes": [
+    "/dr12-afir",
+    "/investitii-modernizarea-microintreprinderilor-apel-2"
+  ],
   "evidence": {
     "gscPages": "reports/gsc-page-priorities-2026-06-01.csv",
     "gscQueries": "reports/gsc-query-priorities-2026-06-01.csv",

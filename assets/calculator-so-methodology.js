@@ -101,6 +101,77 @@
     setFeedback("Rezumatul calculului a fost copiat. Nu conține date personale.");
   }
 
+  function initCardCarousel(root) {
+    var cards = Array.prototype.slice.call(root.children).filter(function (node) {
+      return node.classList && node.classList.contains("content-card");
+    });
+    if (cards.length < 2 || root.classList.contains("so-card-carousel")) return;
+    var label = root.getAttribute("data-so-carousel-label") || "Carduri informative";
+    var current = 0;
+    var controls = document.createElement("div");
+    var previous = document.createElement("button");
+    var next = document.createElement("button");
+    var counter = document.createElement("span");
+    root.classList.add("so-card-carousel");
+    root.setAttribute("role", "region");
+    root.setAttribute("aria-roledescription", "carusel");
+    root.setAttribute("aria-label", label);
+    controls.className = "so-card-carousel__controls";
+    previous.type = "button";
+    previous.className = "so-card-carousel__button";
+    previous.setAttribute("aria-label", "Cardul anterior");
+    previous.textContent = "←";
+    next.type = "button";
+    next.className = "so-card-carousel__button";
+    next.setAttribute("aria-label", "Cardul următor");
+    next.textContent = "→";
+    counter.className = "so-card-carousel__counter";
+    counter.setAttribute("aria-live", "polite");
+    controls.append(previous, counter, next);
+    root.appendChild(controls);
+
+    function show(index, focusCard) {
+      current = (index + cards.length) % cards.length;
+      cards.forEach(function (card, cardIndex) {
+        var active = cardIndex === current;
+        card.hidden = !active;
+        card.setAttribute("aria-hidden", String(!active));
+        card.setAttribute("role", "group");
+        card.setAttribute("aria-roledescription", "slide");
+        card.setAttribute("aria-label", (cardIndex + 1) + " din " + cards.length);
+        card.tabIndex = active ? 0 : -1;
+      });
+      counter.textContent = (current + 1) + " / " + cards.length;
+      if (focusCard) cards[current].focus();
+    }
+    previous.addEventListener("click", function () { show(current - 1, true); });
+    next.addEventListener("click", function () { show(current + 1, true); });
+    root.addEventListener("keydown", function (event) {
+      if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;
+      event.preventDefault();
+      show(current + (event.key === "ArrowRight" ? 1 : -1), true);
+    });
+    show(0, false);
+  }
+
+  function initCollapsibleCards(root) {
+    if (root.classList.contains("so-collapsible-cards")) return;
+    var cards = Array.prototype.slice.call(root.children).filter(function (node) {
+      return node.matches && node.matches("article");
+    });
+    if (cards.length < 2) return;
+    var details = document.createElement("details");
+    var summary = document.createElement("summary");
+    var panel = document.createElement("div");
+    root.classList.add("so-collapsible-cards");
+    details.className = "so-card-disclosure";
+    panel.className = "so-card-disclosure__panel";
+    summary.textContent = "Vezi încă " + (cards.length - 1) + (cards.length === 2 ? " card" : " carduri");
+    cards.slice(1).forEach(function (card) { panel.appendChild(card); });
+    details.append(summary, panel);
+    root.appendChild(details);
+  }
+
   document.addEventListener("input", function (event) {
     if (!event.target.classList?.contains("area-input")) return;
     sanitizeInput(event.target);
@@ -134,4 +205,6 @@
 
   validateAll();
   updateExplanation();
+  document.querySelectorAll("[data-so-card-carousel]").forEach(initCardCarousel);
+  document.querySelectorAll("[data-so-collapsible-cards], [data-aeo-route='/calculator-soc']").forEach(initCollapsibleCards);
 })();
