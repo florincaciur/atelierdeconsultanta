@@ -5,6 +5,10 @@
   "wordThreshold": 1500,
   "includedTypes": ["program", "ghid"],
   "forcedRoutes": ["/"],
+  "tocExcludedRoutes": [
+    "/dr14",
+    "/investitii-modernizarea-microintreprinderilor-apel-2"
+  ],
   "pilotRoute": "/afir-autoconsum-agroalimentar",
   "inventoryPath": "reports/content-intent-inventory-2026-07-21.json",
   "reportPath": "reports/long-form-layout-inventory-2026-07-21.json",

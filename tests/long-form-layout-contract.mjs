@@ -38,11 +38,12 @@ for (const page of report.pages) {
   assert.equal(root.attr("data-long-form-layout"), page.variant, `${page.route}: variantă greșită`);
   assert.equal(root.attr("data-long-form-content"), "true", `${page.route}: containerul editorial nu este marcat`);
   const toc = $("[data-long-form-toc]");
-  assert.equal(toc.length, page.route === "/" ? 0 : 1, `${page.route}: număr incorect de cuprinsuri`);
+  const tocExcluded = CONFIG.tocExcludedRoutes.includes(page.route);
+  assert.equal(toc.length, page.route === "/" || tocExcluded ? 0 : 1, `${page.route}: număr incorect de cuprinsuri`);
   assert.equal($(".article-toc").length, 0, `${page.route}: cuprinsul vechi duplicat trebuie eliminat`);
   assert.equal($("link[data-long-form-layout-style='p1_09']").length, 1, `${page.route}: CSS duplicat/lipsă`);
   assert.equal($("script[data-long-form-layout-script='p1_09']").length, 1, `${page.route}: JS duplicat/lipsă`);
-  if (page.route !== "/") {
+  if (page.route !== "/" && !tocExcluded) {
     assert.equal($("[data-long-form-toc] summary").text().trim(), "Cuprins", `${page.route}: disclosure fără etichetă`);
     assert.equal($("[data-long-form-toc] details[open]").length, 0, `${page.route}: cuprinsul trebuie să pornească închis ca dropdown`);
     assert.equal(toc.find("nav").attr("aria-label"), "Cuprinsul paginii");

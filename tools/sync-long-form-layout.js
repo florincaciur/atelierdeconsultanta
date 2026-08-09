@@ -167,7 +167,7 @@ function locateRoot(html, route) {
     : (/<main\b[^>]*>/i.test(html) ? /<main\b[^>]*>/i : /<div\b[^>]*class=["'][^"']*\bpost-container\b[^"']*["'][^>]*>/i);
   const match = pattern.exec(html);
   if (!match) throw new Error(`${route}: nu există container editorial principal.`);
-  const variant = route === "/" ? "home" : "rail";
+  const variant = route === "/" ? "home" : (CONFIG.tocExcludedRoutes.includes(route) ? "wide" : "rail");
   const start = match.index;
   const contentStart = start + match[0].length;
   const contentEnd = route === "/" || match[0].toLowerCase().startsWith("<main")
@@ -234,7 +234,7 @@ function synchronizePage(source, row, programByRoute) {
 
   let output = `${clean.slice(0, root.contentStart)}${enhanced.output}${clean.slice(root.contentEnd)}`;
   output = output.replace(root.pattern, (tag) => addAttributes(tag, `data-long-form-layout="${root.variant}" data-long-form-content="true"`));
-  output = insertToc(output, route, root, renderToc(enhanced.items, root.variant));
+  if (root.variant !== "wide") output = insertToc(output, route, root, renderToc(enhanced.items, root.variant));
 
   const program = programByRoute.get(route);
   if (row.type === "program" && program) {
@@ -256,7 +256,7 @@ function synchronizePage(source, row, programByRoute) {
       type: row.type,
       sourceFile: row.sourceFile,
       wordCount: words,
-      tocItemCount: enhanced.items.length,
+      tocItemCount: root.variant === "wide" ? 0 : enhanced.items.length,
       tableCount: enhanced.tableCount,
       variant: root.variant,
       decisionActionAdded: Boolean(row.type === "program" && program),

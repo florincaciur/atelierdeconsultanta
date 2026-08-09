@@ -18,5 +18,74 @@ html:has(body.contact-refresh-2026){overflow-x:clip}
 @keyframes contactDash{to{stroke-dashoffset:-220}}@keyframes contactTravel{to{offset-distance:100%}}@keyframes contactPulse{50%{transform:translateY(-7px)}}@keyframes fundingPulse{50%{transform:scale(1.08)}}@keyframes fundingRise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
 @media(max-width:900px){.contact-refresh-2026 .contact-visual-intro,.contact-refresh-2026 .contact-triage-layout,.funding-overview{grid-template-columns:1fr}.contact-refresh-2026 .contact-triage-aside{position:static}.contact-refresh-2026 .core-steps,.funding-hub-refresh-2026 .editorial-cluster__steps{grid-template-columns:1fr 1fr}.funding-program-grid{grid-template-columns:1fr 1fr}.funding-overview__svg{max-width:520px;margin:auto}}
 @media(max-width:600px){.contact-refresh-2026 main{width:calc(100% - 24px)}.contact-refresh-2026 .contact-visual-intro{padding:26px 20px}.contact-refresh-2026 .contact-route-svg{margin-top:-20px}.contact-refresh-2026 .core-steps,.funding-hub-refresh-2026 .editorial-cluster__steps,.funding-program-grid{grid-template-columns:1fr}.contact-refresh-2026 .core-steps li{min-height:0}.funding-hub-refresh-2026 .editorial-cluster{width:calc(100% - 24px)}.funding-hub-refresh-2026 .editorial-cluster__answer{margin-top:-32px;padding:24px 20px}.funding-overview{padding:28px 18px}.funding-program-card{min-height:84px}.funding-hub-refresh-2026 .editorial-cluster__section{padding:25px 20px}}
+
+/* Funding hub 2026: one coherent responsive composition for every editorial block. */
+.funding-hub-refresh-2026 .editorial-cluster {
+  grid-template-areas:
+    "answer answer answer answer answer answer answer answer answer answer answer answer"
+    "overview overview overview overview overview overview overview overview overview overview overview overview"
+    "families families families families families families families families families families families families"
+    "instruments instruments instruments instruments instruments instruments limits limits limits limits limits limits"
+    "process process process process process process process process process process process process"
+    "terminology terminology terminology terminology terminology terminology terminology terminology terminology terminology terminology terminology"
+    "sources sources sources sources sources sources related related related related related related"
+    "cta cta cta cta cta cta cta cta cta cta cta cta";
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: clamp(1rem, 2.2vw, 1.65rem);
+}
+
+.funding-hub-refresh-2026 .editorial-cluster > * {
+  min-width: 0;
+  max-width: none;
+}
+
+.funding-hub-refresh-2026 .editorial-cluster__answer { grid-area: answer; }
+.funding-hub-refresh-2026 .funding-overview { grid-area: overview; }
+.funding-hub-refresh-2026 #familii-programe { grid-area: families; }
+.funding-hub-refresh-2026 #instrumente-orientare { grid-area: instruments; }
+.funding-hub-refresh-2026 #proces-alegere { grid-area: process; }
+.funding-hub-refresh-2026 #limitele-hubului { grid-area: limits; }
+.funding-hub-refresh-2026 [data-terminology-note] { grid-area: terminology; }
+.funding-hub-refresh-2026 .editorial-cluster__source-note { grid-area: sources; }
+.funding-hub-refresh-2026 .editorial-cluster__related { grid-area: related; }
+.funding-hub-refresh-2026 .editorial-cluster__cta { grid-area: cta; }
+
+.funding-hub-refresh-2026 #instrumente-orientare,
+.funding-hub-refresh-2026 #limitele-hubului,
+.funding-hub-refresh-2026 .editorial-cluster__source-note,
+.funding-hub-refresh-2026 .editorial-cluster__related {
+  height: 100%;
+}
+
+.funding-hub-refresh-2026 .editorial-cluster__list,
+.funding-hub-refresh-2026 .editorial-cluster__related ul {
+  gap: 0.9rem;
+  margin-bottom: 0;
+}
+
+.funding-hub-refresh-2026 [data-terminology-note] {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  border-left: 4px solid var(--refresh-gold);
+  border-radius: 0 12px 12px 0;
+  background: var(--refresh-paper);
+}
+
+@media (max-width: 56.25rem) {
+  .funding-hub-refresh-2026 .editorial-cluster {
+    grid-template-areas:
+      "answer"
+      "overview"
+      "families"
+      "instruments"
+      "limits"
+      "process"
+      "terminology"
+      "sources"
+      "related"
+      "cta";
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
 @media(max-width:600px){.contact-refresh-2026 .core-contact-channels{padding:20px 16px}.contact-refresh-2026 .core-fact-strip{grid-template-columns:minmax(0,1fr)}}
 @media(prefers-reduced-motion:reduce){.contact-route-svg__path,.contact-route-svg__node--two,.contact-route-svg__traveler,.funding-svg__pulse,.funding-program-card{animation:none!important}}

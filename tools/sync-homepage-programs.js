@@ -15,8 +15,8 @@ const PRIORITY_END = "<!-- P1_08_PRIORITY_CAROUSEL_END -->";
 const GRID_START = "<!-- P1_08_PROGRAM_GRID_START -->";
 const GRID_END = "<!-- P1_08_PROGRAM_GRID_END -->";
 const COMPACT_HOME_START = "<!-- P1_21_HOMEPAGE_FLOW_START -->";
-const CSS_LINK = '<link rel="stylesheet" href="/assets/homepage-program-explorer.css?v=20260721-1" data-homepage-program-explorer-style="p1_08">';
-const JS_LINK = '<script src="/assets/homepage-program-explorer.js?v=20260721-1" defer data-homepage-program-explorer-script="p1_08"></script>';
+const CSS_LINK = '<link rel="stylesheet" href="/assets/homepage-program-explorer.css?v=20260809-2" data-homepage-program-explorer-style="p1_08">';
+const JS_LINK = '<script src="/assets/homepage-program-explorer.js?v=20260809-2" defer data-homepage-program-explorer-script="p1_08"></script>';
 const MONTHS = ["ianuarie", "februarie", "martie", "aprilie", "mai", "iunie", "iulie", "august", "septembrie", "octombrie", "noiembrie", "decembrie"];
 const STATUS_FILTER_LABELS = {
   apel_deschis: "Apel deschis",
@@ -77,8 +77,8 @@ function renderPrioritySlide(program, banner, index, total) {
 
 function renderPriorityCarousel(programs, bannersByProgram) {
   const featured = CONFIG.featuredProgramSlugs.map((slug) => programs.find((program) => program.slug === slug));
-  if (!featured.length || featured.length > CONFIG.carousel.maximumItems || featured.length > 6) {
-    throw new Error(`Caruselul trebuie să conțină între 1 și 6 programe; găsite ${featured.length}.`);
+  if (!featured.length || featured.length > CONFIG.carousel.maximumItems || featured.length > 24) {
+    throw new Error(`Caruselul trebuie să conțină între 1 și 24 de programe; găsite ${featured.length}.`);
   }
   featured.forEach((program) => validateProgram(program, "carusel"));
   const total = featured.length;
@@ -86,9 +86,9 @@ function renderPriorityCarousel(programs, bannersByProgram) {
   return `${PRIORITY_START}
     <section id="priority-programs" aria-labelledby="priority-programs-title">
       <div class="program-explorer-header">
-        <span class="section-label">Selecție editorială</span>
-        <h2 id="priority-programs-title">Programe prioritare</h2>
-        <p>Maximum șase programe urmărite editorial, fără rotire automată. Statutul și data verificării provin din registrul unic.</p>
+        <span class="section-label">Catalog public</span>
+        <h2 id="priority-programs-title">Toate programele de finanțare urmărite</h2>
+        <p>Fiecare program public are propriul banner, fără rotire automată. Statutul și data verificării provin din registrul unic.</p>
       </div>
       <div class="priority-program-carousel" data-priority-carousel data-carousel-count="${total}">
         <button class="priority-program-control priority-program-control--previous" type="button" aria-label="Programul anterior" data-priority-previous data-analytics-event="carousel_interaction" data-analytics-cta-id="priority_carousel_previous"><span aria-hidden="true">←</span></button>

@@ -8,9 +8,28 @@
   },
   "files": [
     {
+      "programId": "program-regional-nord-est",
+      "route": "/por-adr-nord-est",
+      "file": "por-adr-nord-est/index.html",
+      "eligible": false,
+      "removedManagedBlocks": 0,
+      "removedManagedLinks": 0,
+      "resultingRelations": []
+    },
+    {
+      "programId": "fonduri-regionale",
+      "route": "/fonduri-regionale",
+      "file": "fonduri-regionale/index.html",
+      "eligible": false,
+      "removedManagedBlocks": 0,
+      "removedManagedLinks": 0,
+      "resultingRelations": []
+    },
+    {
       "programId": "dr12-afir",
       "route": "/dr12-afir",
       "file": "dr12-afir/index.html",
+      "eligible": true,
       "removedManagedBlocks": 0,
       "removedManagedLinks": 0,
       "resultingRelations": [
@@ -24,6 +43,7 @@
       "programId": "dr14-afir",
       "route": "/dr14",
       "file": "dr14/index.html",
+      "eligible": true,
       "removedManagedBlocks": 0,
       "removedManagedLinks": 0,
       "resultingRelations": [
@@ -37,6 +57,7 @@
       "programId": "start-up-nation",
       "route": "/start-up-nation-2026",
       "file": "start-up-nation-2026/index.html",
+      "eligible": true,
       "removedManagedBlocks": 0,
       "removedManagedLinks": 0,
       "resultingRelations": [
@@ -50,6 +71,7 @@
       "programId": "start-up-nation",
       "route": "/start-up-nation-2026",
       "file": "start-up-nation-2026.html",
+      "eligible": true,
       "removedManagedBlocks": 0,
       "removedManagedLinks": 0,
       "resultingRelations": [
@@ -63,6 +85,7 @@
       "programId": "femeia-antreprenor",
       "route": "/femeia-antreprenor-2026",
       "file": "femeia-antreprenor-2026/index.html",
+      "eligible": true,
       "removedManagedBlocks": 0,
       "removedManagedLinks": 0,
       "resultingRelations": [
@@ -76,6 +99,7 @@
       "programId": "femeia-antreprenor",
       "route": "/femeia-antreprenor-2026",
       "file": "femeia-antreprenor-2026.html",
+      "eligible": true,
       "removedManagedBlocks": 0,
       "removedManagedLinks": 0,
       "resultingRelations": [
@@ -89,6 +113,7 @@
       "programId": "digitalizare-imm",
       "route": "/digitalizare-imm",
       "file": "digitalizare-imm/index.html",
+      "eligible": true,
       "removedManagedBlocks": 0,
       "removedManagedLinks": 0,
       "resultingRelations": [
@@ -102,6 +127,7 @@
       "programId": "digitalizare-imm",
       "route": "/digitalizare-imm",
       "file": "digitalizare-imm.html",
+      "eligible": true,
       "removedManagedBlocks": 0,
       "removedManagedLinks": 0,
       "resultingRelations": [
@@ -115,6 +141,7 @@
       "programId": "modernizare-microintreprinderi-ne-2",
       "route": "/investitii-modernizarea-microintreprinderilor-apel-2",
       "file": "investitii-modernizarea-microintreprinderilor-apel-2/index.html",
+      "eligible": true,
       "removedManagedBlocks": 0,
       "removedManagedLinks": 0,
       "resultingRelations": [
@@ -128,6 +155,7 @@
       "programId": "modernizare-microintreprinderi-ne-2",
       "route": "/investitii-modernizarea-microintreprinderilor-apel-2",
       "file": "investitii-modernizarea-microintreprinderilor-apel-2.html",
+      "eligible": true,
       "removedManagedBlocks": 0,
       "removedManagedLinks": 0,
       "resultingRelations": [
@@ -141,6 +169,7 @@
       "programId": "fondul-modernizare-autoconsum",
       "route": "/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum",
       "file": "fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum/index.html",
+      "eligible": true,
       "removedManagedBlocks": 0,
       "removedManagedLinks": 0,
       "resultingRelations": [
@@ -154,6 +183,7 @@
       "programId": "fondul-modernizare-autoconsum",
       "route": "/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum",
       "file": "fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum.html",
+      "eligible": true,
       "removedManagedBlocks": 0,
       "removedManagedLinks": 0,
       "resultingRelations": [
@@ -167,6 +197,7 @@
       "programId": "fondul-modernizare-regenerabile",
       "route": "/fondul-modernizare-energie-regenerabila-2026",
       "file": "fondul-modernizare-energie-regenerabila-2026/index.html",
+      "eligible": true,
       "removedManagedBlocks": 0,
       "removedManagedLinks": 0,
       "resultingRelations": [
@@ -180,6 +211,7 @@
       "programId": "fondul-modernizare-regenerabile",
       "route": "/fondul-modernizare-energie-regenerabila-2026",
       "file": "fondul-modernizare-energie-regenerabila-2026.html",
+      "eligible": true,
       "removedManagedBlocks": 0,
       "removedManagedLinks": 0,
       "resultingRelations": [
@@ -193,6 +225,7 @@
       "programId": "afir-energie-autoconsum",
       "route": "/afir-autoconsum-agroalimentar",
       "file": "afir-autoconsum-agroalimentar/index.html",
+      "eligible": true,
       "removedManagedBlocks": 0,
       "removedManagedLinks": 0,
       "resultingRelations": [
@@ -206,6 +239,7 @@
       "programId": "afir-energie-autoconsum",
       "route": "/afir-autoconsum-agroalimentar",
       "file": "afir-autoconsum-agroalimentar.html",
+      "eligible": true,
       "removedManagedBlocks": 0,
       "removedManagedLinks": 0,
       "resultingRelations": [
@@ -219,6 +253,7 @@
       "programId": "autoconsum-institutii-publice",
       "route": "/autoconsum-public-fotovoltaice-institutii-publice",
       "file": "autoconsum-public-fotovoltaice-institutii-publice/index.html",
+      "eligible": true,
       "removedManagedBlocks": 0,
       "removedManagedLinks": 0,
       "resultingRelations": [
@@ -232,6 +267,7 @@
       "programId": "autoconsum-institutii-publice",
       "route": "/autoconsum-public-fotovoltaice-institutii-publice",
       "file": "autoconsum-public-fotovoltaice-institutii-publice.html",
+      "eligible": true,
       "removedManagedBlocks": 0,
       "removedManagedLinks": 0,
       "resultingRelations": [
@@ -245,6 +281,7 @@
       "programId": "pro-infra",
       "route": "/pro-infra",
       "file": "pro-infra/index.html",
+      "eligible": true,
       "removedManagedBlocks": 0,
       "removedManagedLinks": 0,
       "resultingRelations": [
@@ -258,6 +295,7 @@
       "programId": "pro-infra",
       "route": "/pro-infra",
       "file": "pro-infra.html",
+      "eligible": true,
       "removedManagedBlocks": 0,
       "removedManagedLinks": 0,
       "resultingRelations": [
@@ -271,6 +309,7 @@
       "programId": "apeluri-gal",
       "route": "/apeluri-gal",
       "file": "apeluri-gal/index.html",
+      "eligible": true,
       "removedManagedBlocks": 0,
       "removedManagedLinks": 0,
       "resultingRelations": [
@@ -284,6 +323,7 @@
       "programId": "gal-afir-leader",
       "route": "/gal-afir",
       "file": "gal-afir/index.html",
+      "eligible": true,
       "removedManagedBlocks": 0,
       "removedManagedLinks": 0,
       "resultingRelations": [
@@ -297,6 +337,7 @@
       "programId": "e-move-ro",
       "route": "/e-move",
       "file": "e-move/index.html",
+      "eligible": true,
       "removedManagedBlocks": 0,
       "removedManagedLinks": 0,
       "resultingRelations": [
@@ -310,6 +351,7 @@
       "programId": "pocidif-21",
       "route": "/pocidif-21",
       "file": "pocidif-21/index.html",
+      "eligible": true,
       "removedManagedBlocks": 0,
       "removedManagedLinks": 0,
       "resultingRelations": [
@@ -320,9 +362,28 @@
       ]
     },
     {
+      "programId": "pnrr",
+      "route": "/pnrr",
+      "file": "pnrr/index.html",
+      "eligible": false,
+      "removedManagedBlocks": 0,
+      "removedManagedLinks": 0,
+      "resultingRelations": []
+    },
+    {
+      "programId": "pnrr",
+      "route": "/pnrr",
+      "file": "pnrr.html",
+      "eligible": false,
+      "removedManagedBlocks": 0,
+      "removedManagedLinks": 0,
+      "resultingRelations": []
+    },
+    {
       "programId": "diaspora-investeste-acasa",
       "route": "/diaspora-investeste-acasa",
       "file": "diaspora-investeste-acasa/index.html",
+      "eligible": true,
       "removedManagedBlocks": 0,
       "removedManagedLinks": 0,
       "resultingRelations": [
@@ -336,6 +397,7 @@
       "programId": "e-drive",
       "route": "/e-drive",
       "file": "e-drive/index.html",
+      "eligible": true,
       "removedManagedBlocks": 0,
       "removedManagedLinks": 0,
       "resultingRelations": [
@@ -349,6 +411,7 @@
       "programId": "e-mobility-ro",
       "route": "/e-mobility",
       "file": "e-mobility/index.html",
+      "eligible": true,
       "removedManagedBlocks": 0,
       "removedManagedLinks": 0,
       "resultingRelations": [
@@ -362,6 +425,7 @@
       "programId": "fondul-modernizare-pc1-stocare",
       "route": "/fondul-modernizare-pc1-stocare",
       "file": "fondul-modernizare-pc1-stocare/index.html",
+      "eligible": true,
       "removedManagedBlocks": 0,
       "removedManagedLinks": 0,
       "resultingRelations": [
@@ -370,6 +434,33 @@
         "comparison",
         "conversion"
       ]
+    },
+    {
+      "programId": "programul-tranzitie-justa",
+      "route": "/programul-tranzitie-justa",
+      "file": "programul-tranzitie-justa/index.html",
+      "eligible": false,
+      "removedManagedBlocks": 0,
+      "removedManagedLinks": 0,
+      "resultingRelations": []
+    },
+    {
+      "programId": "fondul-de-modernizare",
+      "route": "/fondul-de-modernizare",
+      "file": "fondul-de-modernizare/index.html",
+      "eligible": false,
+      "removedManagedBlocks": 0,
+      "removedManagedLinks": 0,
+      "resultingRelations": []
+    },
+    {
+      "programId": "fondul-de-modernizare",
+      "route": "/fondul-de-modernizare",
+      "file": "fondul-de-modernizare.html",
+      "eligible": false,
+      "removedManagedBlocks": 0,
+      "removedManagedLinks": 0,
+      "resultingRelations": []
     }
   ]
 }

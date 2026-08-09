@@ -13,11 +13,13 @@ const css = fs.readFileSync(path.join(ROOT, "assets", "homepage-program-explorer
 const js = fs.readFileSync(path.join(ROOT, "assets", "homepage-program-explorer.js"), "utf8");
 const { programs } = loadProgramConfig();
 const $ = cheerio.load(html, { decodeEntities: false });
+const expectedPrograms = programs.filter((program) => isPublicProgram(program) && program.discovery?.listed !== false && !program.discovery?.redirectTarget);
 
 assert.equal($("[data-priority-carousel]").length, 1, "trebuie să existe un singur carusel de programe");
 const slides = $("[data-priority-slide]");
-assert(slides.length > 0 && slides.length <= 6, "caruselul trebuie să aibă maximum șase slide-uri");
+assert.equal(slides.length, expectedPrograms.length, "caruselul trebuie să includă fiecare program public și listat");
 assert.deepEqual(slides.map((_, slide) => $(slide).attr("data-program-id")).get(), config.featuredProgramSlugs, "ordinea trebuie să urmeze selecția editorială");
+assert.deepEqual(new Set(config.featuredProgramSlugs), new Set(expectedPrograms.map((program) => program.slug)), "configurația caruselului trebuie să acopere toate programele publice și listate");
 assert.equal(config.carousel.autoRotate, false, "auto-rotirea trebuie dezactivată editorial");
 assert(!/setInterval|autoPlay|autoplay/i.test(js), "JS-ul nu trebuie să implementeze auto-rotire");
 assert.equal($("[data-priority-previous]").attr("aria-label"), "Programul anterior");
@@ -59,6 +61,7 @@ assert.equal($('script[data-homepage-program-explorer-script="p1_08"]').length, 
 assert(js.includes('"carousel_interaction"') && js.includes('"program_card_click"') === false, "carousel_interaction trebuie emis din JS, iar clickurile cardurilor rămân declarative");
 assert(js.includes("ArrowLeft") && js.includes("ArrowRight") && js.includes("pointerdown") && js.includes("pointerup"), "lipsesc controalele tastatură/touch");
 assert(js.includes('toggleAttribute("inert"'), "slide-urile ascunse trebuie scoase din focus");
+assert(js.includes("slides.length > 24") && !js.includes("slides.length > 6"), "runtime-ul trebuie să accepte catalogul complet de programe");
 assert(css.includes("min-height: 44px") && css.includes("touch-action: pan-y"), "targeturile mobile și gesturile touch trebuie definite");
 assert(css.includes("@media (max-width: 42rem)"), "lipsește reflow-ul mobil");
 

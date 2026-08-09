@@ -3,15 +3,28 @@
   "reviewedAt": "2026-07-21",
   "sourceOfTruth": "config/seo-programs.json#programs",
   "featuredProgramSlugs": [
-    "afir-energie-autoconsum",
     "dr12-afir",
     "dr14-afir",
-    "pocidif-21",
+    "afir-energie-autoconsum",
+    "autoconsum-institutii-publice",
+    "digitalizare-imm",
+    "femeia-antreprenor",
+    "pro-infra",
+    "start-up-nation",
     "modernizare-microintreprinderi-ne-2",
-    "e-move-ro"
+    "fondul-modernizare-regenerabile",
+    "apeluri-gal",
+    "e-move-ro",
+    "gal-afir-leader",
+    "fondul-modernizare-autoconsum",
+    "diaspora-investeste-acasa",
+    "e-drive",
+    "e-mobility-ro",
+    "fondul-modernizare-pc1-stocare",
+    "pocidif-21"
   ],
   "carousel": {
-    "maximumItems": 6,
+    "maximumItems": 24,
     "autoRotate": false,
     "allProgramsUrl": "/fonduri-europene"
   },

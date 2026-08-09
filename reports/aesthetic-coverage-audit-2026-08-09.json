@@ -1,0 +1,1177 @@
+{
+  "generatedAt": "2026-08-09",
+  "method": "Clasificare reproductibilă după integrarea în sistemele vizuale comune și componentele responsive prezente în HTML.",
+  "summary": {
+    "pages": 100,
+    "current": 33,
+    "baselineOnly": 63,
+    "needsFullRefresh": 4
+  },
+  "pages": [
+    {
+      "route": "/digitalizare-imm",
+      "file": "digitalizare-imm.html",
+      "bodyClass": "page-family-digital",
+      "status": "current",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css",
+        "program-heroes.css"
+      ],
+      "recommendation": null
+    },
+    {
+      "route": "/dr12-afir",
+      "file": "dr12-afir/index.html",
+      "bodyClass": "page-family-afir",
+      "status": "current",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css",
+        "program-heroes.css"
+      ],
+      "recommendation": null
+    },
+    {
+      "route": "/dr14",
+      "file": "dr14/index.html",
+      "bodyClass": "page-family-afir",
+      "status": "current",
+      "bespokeSignals": [
+        "dr14-final.css"
+      ],
+      "baselineSignals": [
+        "design-profiles.css",
+        "long-form-layout.css",
+        "program-heroes.css"
+      ],
+      "recommendation": null
+    },
+    {
+      "route": "/pro-infra",
+      "file": "pro-infra.html",
+      "bodyClass": "page-family-energy",
+      "status": "current",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css",
+        "program-heroes.css"
+      ],
+      "recommendation": null
+    },
+    {
+      "route": "/afir-autoconsum-agroalimentar",
+      "file": "afir-autoconsum-agroalimentar.html",
+      "bodyClass": "page-family-afir",
+      "status": "current",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-system.css",
+        "design-profiles.css",
+        "program-heroes.css"
+      ],
+      "recommendation": null
+    },
+    {
+      "route": "/apeluri-gal",
+      "file": "apeluri-gal/index.html",
+      "bodyClass": "page-family-gal",
+      "status": "current",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css",
+        "long-form-layout.css",
+        "program-heroes.css"
+      ],
+      "recommendation": null
+    },
+    {
+      "route": "/autoconsum-public-fotovoltaice-institutii-publice",
+      "file": "autoconsum-public-fotovoltaice-institutii-publice.html",
+      "bodyClass": "page-family-energy",
+      "status": "current",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css",
+        "program-heroes.css"
+      ],
+      "recommendation": null
+    },
+    {
+      "route": "/diaspora-investeste-acasa",
+      "file": "diaspora-investeste-acasa/index.html",
+      "bodyClass": "program-showcase-page page-family-program",
+      "status": "current",
+      "bespokeSignals": [
+        "program-showcase-2026.css"
+      ],
+      "baselineSignals": [],
+      "recommendation": null
+    },
+    {
+      "route": "/dr-12-afir-instalarea-tinerilor-fermieri",
+      "file": "dr-12-afir-instalarea-tinerilor-fermieri.html",
+      "bodyClass": "page-family-afir",
+      "status": "current",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css"
+      ],
+      "recommendation": null
+    },
+    {
+      "route": "/dr-14-afir-conditii-eligibilitate-greseli-frecvente",
+      "file": "dr-14-afir-conditii-eligibilitate-greseli-frecvente.html",
+      "bodyClass": "page-family-afir",
+      "status": "current",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css"
+      ],
+      "recommendation": null
+    },
+    {
+      "route": "/e-drive",
+      "file": "e-drive/index.html",
+      "bodyClass": "program-showcase-page page-family-program",
+      "status": "current",
+      "bespokeSignals": [
+        "program-showcase-2026.css"
+      ],
+      "baselineSignals": [],
+      "recommendation": null
+    },
+    {
+      "route": "/e-mobility",
+      "file": "e-mobility/index.html",
+      "bodyClass": "program-showcase-page page-family-program",
+      "status": "current",
+      "bespokeSignals": [
+        "program-showcase-2026.css"
+      ],
+      "baselineSignals": [],
+      "recommendation": null
+    },
+    {
+      "route": "/e-move",
+      "file": "e-move/index.html",
+      "bodyClass": "page-family-energy",
+      "status": "current",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css",
+        "long-form-layout.css",
+        "program-heroes.css"
+      ],
+      "recommendation": null
+    },
+    {
+      "route": "/femeia-antreprenor-2026",
+      "file": "femeia-antreprenor-2026.html",
+      "bodyClass": "page-family-startup",
+      "status": "current",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css",
+        "program-heroes.css"
+      ],
+      "recommendation": null
+    },
+    {
+      "route": "/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum",
+      "file": "fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum/index.html",
+      "bodyClass": "page-family-energy",
+      "status": "current",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css",
+        "long-form-layout.css"
+      ],
+      "recommendation": null
+    },
+    {
+      "route": "/fondul-modernizare-energie-regenerabila-2026",
+      "file": "fondul-modernizare-energie-regenerabila-2026.html",
+      "bodyClass": "page-family-energy",
+      "status": "current",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css",
+        "program-heroes.css"
+      ],
+      "recommendation": null
+    },
+    {
+      "route": "/fondul-modernizare-pc1-stocare",
+      "file": "fondul-modernizare-pc1-stocare/index.html",
+      "bodyClass": "program-showcase-page page-family-program",
+      "status": "current",
+      "bespokeSignals": [
+        "program-showcase-2026.css"
+      ],
+      "baselineSignals": [],
+      "recommendation": null
+    },
+    {
+      "route": "/fonduri-regionale",
+      "file": "fonduri-regionale/index.html",
+      "bodyClass": "page-family-cluster",
+      "status": "current",
+      "bespokeSignals": [
+        "program-family-hubs.css"
+      ],
+      "baselineSignals": [
+        "design-profiles.css",
+        "program-heroes.css"
+      ],
+      "recommendation": null
+    },
+    {
+      "route": "/gal-afir",
+      "file": "gal-afir/index.html",
+      "bodyClass": "page-family-gal",
+      "status": "current",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css",
+        "long-form-layout.css",
+        "program-heroes.css"
+      ],
+      "recommendation": null
+    },
+    {
+      "route": "/investitii-modernizarea-microintreprinderilor-apel-2",
+      "file": "investitii-modernizarea-microintreprinderilor-apel-2.html",
+      "bodyClass": "page-family-generic",
+      "status": "current",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css",
+        "program-heroes.css"
+      ],
+      "recommendation": null
+    },
+    {
+      "route": "/pocidif-21",
+      "file": "pocidif-21/index.html",
+      "bodyClass": "page-family-digital",
+      "status": "current",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css",
+        "long-form-layout.css",
+        "program-heroes.css"
+      ],
+      "recommendation": null
+    },
+    {
+      "route": "/start-up-nation-2026",
+      "file": "start-up-nation-2026.html",
+      "bodyClass": "page-family-startup",
+      "status": "current",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css",
+        "program-heroes.css"
+      ],
+      "recommendation": null
+    },
+    {
+      "route": "/blog",
+      "file": "blog/index.html",
+      "bodyClass": "page-family-editorial",
+      "status": "baseline_only",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css"
+      ],
+      "recommendation": "Adaugă rezumat vizual, cuprins compact doar când este util, exemple în carduri și o încheiere cu pașii următori."
+    },
+    {
+      "route": "/metodologie-verificare-eligibilitate",
+      "file": "metodologie-verificare-eligibilitate/index.html",
+      "bodyClass": "page-family-service",
+      "status": "baseline_only",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css"
+      ],
+      "recommendation": "Unifică hero-ul, beneficiile, etapele și CTA-ul într-o grilă de servicii cu ritm vertical și carduri egale."
+    },
+    {
+      "route": "/surse-oficiale-fonduri-europene",
+      "file": "surse-oficiale-fonduri-europene/index.html",
+      "bodyClass": "page-family-cluster",
+      "status": "baseline_only",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css"
+      ],
+      "recommendation": "Transformă lista de destinații într-un hub vizual cu filtre/carduri uniforme, stare factuală și ierarhie clară pe mobil."
+    },
+    {
+      "route": "/acte-necesare-fonduri-europene-nerambursabile",
+      "file": "acte-necesare-fonduri-europene-nerambursabile/index.html",
+      "bodyClass": "page-family-editorial",
+      "status": "baseline_only",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css"
+      ],
+      "recommendation": "Adaugă rezumat vizual, cuprins compact doar când este util, exemple în carduri și o încheiere cu pașii următori."
+    },
+    {
+      "route": "/blog-afir-fotovoltaice-ferme-2026",
+      "file": "blog-afir-fotovoltaice-ferme-2026.html",
+      "bodyClass": "page-family-afir",
+      "status": "baseline_only",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css"
+      ],
+      "recommendation": "Aplică sistemul vizual actual: container coerent, tipografie de lectură, carduri egale, spațiere responsive și CTA final clar."
+    },
+    {
+      "route": "/cat-costa-consultanta-fonduri-europene-ghid",
+      "file": "cat-costa-consultanta-fonduri-europene-ghid.html",
+      "bodyClass": "page-family-editorial",
+      "status": "baseline_only",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css"
+      ],
+      "recommendation": "Adaugă rezumat vizual, cuprins compact doar când este util, exemple în carduri și o încheiere cu pașii următori."
+    },
+    {
+      "route": "/cheltuieli-eligibile-digitalizare-imm",
+      "file": "cheltuieli-eligibile-digitalizare-imm.html",
+      "bodyClass": "page-family-digital",
+      "status": "baseline_only",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css",
+        "editorial-clusters.css"
+      ],
+      "recommendation": "Aplică sistemul vizual actual: container coerent, tipografie de lectură, carduri egale, spațiere responsive și CTA final clar."
+    },
+    {
+      "route": "/cheltuieli-eligibile-pocidif-21",
+      "file": "cheltuieli-eligibile-pocidif-21/index.html",
+      "bodyClass": "page-family-digital",
+      "status": "baseline_only",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css",
+        "long-form-layout.css"
+      ],
+      "recommendation": "Aplică sistemul vizual actual: container coerent, tipografie de lectură, carduri egale, spațiere responsive și CTA final clar."
+    },
+    {
+      "route": "/cod-caen-start-up-nation-2026",
+      "file": "cod-caen-start-up-nation-2026/index.html",
+      "bodyClass": "page-family-caen",
+      "status": "baseline_only",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css",
+        "long-form-layout.css"
+      ],
+      "recommendation": "Adaugă rezumat vizual, cuprins compact doar când este util, exemple în carduri și o încheiere cu pașii următori."
+    },
+    {
+      "route": "/documente-punctaj-pocidif-21",
+      "file": "documente-punctaj-pocidif-21/index.html",
+      "bodyClass": "page-family-digital",
+      "status": "baseline_only",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css",
+        "long-form-layout.css"
+      ],
+      "recommendation": "Aplică sistemul vizual actual: container coerent, tipografie de lectură, carduri egale, spațiere responsive și CTA final clar."
+    },
+    {
+      "route": "/dr12-vs-dr14",
+      "file": "dr12-vs-dr14.html",
+      "bodyClass": "page-family-afir",
+      "status": "baseline_only",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css",
+        "long-form-layout.css"
+      ],
+      "recommendation": "Aplică sistemul vizual actual: container coerent, tipografie de lectură, carduri egale, spațiere responsive și CTA final clar."
+    },
+    {
+      "route": "/femeia-antreprenor-2026-conditii-idei-afaceri",
+      "file": "femeia-antreprenor-2026-conditii-idei-afaceri.html",
+      "bodyClass": "page-family-startup",
+      "status": "baseline_only",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css"
+      ],
+      "recommendation": "Aplică sistemul vizual actual: container coerent, tipografie de lectură, carduri egale, spațiere responsive și CTA final clar."
+    },
+    {
+      "route": "/ghiduri",
+      "file": "ghiduri/index.html",
+      "bodyClass": "page-family-editorial",
+      "status": "baseline_only",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css"
+      ],
+      "recommendation": "Adaugă rezumat vizual, cuprins compact doar când este util, exemple în carduri și o încheiere cu pașii următori."
+    },
+    {
+      "route": "/glosar-fonduri-europene",
+      "file": "glosar-fonduri-europene/index.html",
+      "bodyClass": "page-family-editorial",
+      "status": "baseline_only",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css"
+      ],
+      "recommendation": "Adaugă rezumat vizual, cuprins compact doar când este util, exemple în carduri și o încheiere cu pașii următori."
+    },
+    {
+      "route": "/greseli-fonduri-europene",
+      "file": "greseli-fonduri-europene/index.html",
+      "bodyClass": "page-family-editorial",
+      "status": "baseline_only",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css"
+      ],
+      "recommendation": "Adaugă rezumat vizual, cuprins compact doar când este util, exemple în carduri și o încheiere cu pașii următori."
+    },
+    {
+      "route": "/intrebari-frecvente",
+      "file": "intrebari-frecvente/index.html",
+      "bodyClass": "page-family-editorial",
+      "status": "baseline_only",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css"
+      ],
+      "recommendation": "Adaugă rezumat vizual, cuprins compact doar când este util, exemple în carduri și o încheiere cu pașii următori."
+    },
+    {
+      "route": "/intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm",
+      "file": "intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm/index.html",
+      "bodyClass": "page-family-editorial",
+      "status": "needs_full_refresh",
+      "bespokeSignals": [],
+      "baselineSignals": [],
+      "recommendation": "Aplică un șablon answer-first: răspuns direct, card de dovezi, pași și întrebări conexe; elimină spațiile mari dintre blocurile scurte."
+    },
+    {
+      "route": "/intrebari/ce-documente-sunt-necesare-pentru-dr12",
+      "file": "intrebari/ce-documente-sunt-necesare-pentru-dr12/index.html",
+      "bodyClass": "page-family-editorial",
+      "status": "needs_full_refresh",
+      "bespokeSignals": [],
+      "baselineSignals": [],
+      "recommendation": "Aplică un șablon answer-first: răspuns direct, card de dovezi, pași și întrebări conexe; elimină spațiile mari dintre blocurile scurte."
+    },
+    {
+      "route": "/intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene",
+      "file": "intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene/index.html",
+      "bodyClass": "page-family-editorial",
+      "status": "needs_full_refresh",
+      "bespokeSignals": [],
+      "baselineSignals": [],
+      "recommendation": "Aplică un șablon answer-first: răspuns direct, card de dovezi, pași și întrebări conexe; elimină spațiile mari dintre blocurile scurte."
+    },
+    {
+      "route": "/pnrr-digitalizare-imm-cheltuieli-eligibile",
+      "file": "pnrr-digitalizare-imm-cheltuieli-eligibile.html",
+      "bodyClass": "page-family-digital",
+      "status": "baseline_only",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css"
+      ],
+      "recommendation": "Aplică sistemul vizual actual: container coerent, tipografie de lectură, carduri egale, spațiere responsive și CTA final clar."
+    },
+    {
+      "route": "/programul-tranzitie-justa-intrebari-documente",
+      "file": "programul-tranzitie-justa-intrebari-documente/index.html",
+      "bodyClass": "page-family-cluster",
+      "status": "baseline_only",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css"
+      ],
+      "recommendation": "Transformă lista de destinații într-un hub vizual cu filtre/carduri uniforme, stare factuală și ierarhie clară pe mobil."
+    },
+    {
+      "route": "/resurse",
+      "file": "resurse/index.html",
+      "bodyClass": "page-family-editorial",
+      "status": "baseline_only",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css"
+      ],
+      "recommendation": "Adaugă rezumat vizual, cuprins compact doar când este util, exemple în carduri și o încheiere cu pașii următori."
+    },
+    {
+      "route": "/resurse-utile",
+      "file": "resurse-utile/index.html",
+      "bodyClass": "page-family-editorial",
+      "status": "baseline_only",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css"
+      ],
+      "recommendation": "Adaugă rezumat vizual, cuprins compact doar când este util, exemple în carduri și o încheiere cu pașii următori."
+    },
+    {
+      "route": "/start-up-nation-2026-cheltuieli-eligibile",
+      "file": "start-up-nation-2026-cheltuieli-eligibile/index.html",
+      "bodyClass": "page-family-startup",
+      "status": "baseline_only",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css",
+        "long-form-layout.css"
+      ],
+      "recommendation": "Aplică sistemul vizual actual: container coerent, tipografie de lectură, carduri egale, spațiere responsive și CTA final clar."
+    },
+    {
+      "route": "/start-up-nation-2026-conditii",
+      "file": "start-up-nation-2026-conditii/index.html",
+      "bodyClass": "page-family-startup",
+      "status": "baseline_only",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css",
+        "long-form-layout.css"
+      ],
+      "recommendation": "Aplică sistemul vizual actual: container coerent, tipografie de lectură, carduri egale, spațiere responsive și CTA final clar."
+    },
+    {
+      "route": "/start-up-nation-2026-idei-afaceri",
+      "file": "start-up-nation-2026-idei-afaceri/index.html",
+      "bodyClass": "page-family-startup",
+      "status": "baseline_only",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css",
+        "long-form-layout.css"
+      ],
+      "recommendation": "Aplică sistemul vizual actual: container coerent, tipografie de lectură, carduri egale, spațiere responsive și CTA final clar."
+    },
+    {
+      "route": "/start-up-nation-2026-plan-de-afaceri",
+      "file": "start-up-nation-2026-plan-de-afaceri/index.html",
+      "bodyClass": "page-family-startup",
+      "status": "baseline_only",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css"
+      ],
+      "recommendation": "Aplică sistemul vizual actual: container coerent, tipografie de lectură, carduri egale, spațiere responsive și CTA final clar."
+    },
+    {
+      "route": "/studii-de-caz-fonduri-europene",
+      "file": "studii-de-caz-fonduri-europene/index.html",
+      "bodyClass": "page-family-trust",
+      "status": "baseline_only",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css"
+      ],
+      "recommendation": "Aplică sistemul vizual actual: container coerent, tipografie de lectură, carduri egale, spațiere responsive și CTA final clar."
+    },
+    {
+      "route": "/termeni-si-conditii",
+      "file": "termeni-si-conditii.html",
+      "bodyClass": "page-family-legal",
+      "status": "baseline_only",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css"
+      ],
+      "recommendation": "Păstrează sobrietatea juridică, dar îmbunătățește măsura textului, navigarea pe secțiuni și contrastul notelor."
+    },
+    {
+      "route": "/webinarii",
+      "file": "webinarii/index.html",
+      "bodyClass": "page-family-generic",
+      "status": "baseline_only",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css"
+      ],
+      "recommendation": "Aplică sistemul vizual actual: container coerent, tipografie de lectură, carduri egale, spațiere responsive și CTA final clar."
+    },
+    {
+      "route": "/",
+      "file": "index.html",
+      "bodyClass": "page-family-home",
+      "status": "current",
+      "bespokeSignals": [
+        "homepage-decision-flow.css"
+      ],
+      "baselineSignals": [
+        "design-system.css",
+        "long-form-layout.css"
+      ],
+      "recommendation": null
+    },
+    {
+      "route": "/consultanta-fonduri-europene",
+      "file": "consultanta-fonduri-europene/index.html",
+      "bodyClass": "core-page core-page--service page-family-service",
+      "status": "current",
+      "bespokeSignals": [
+        "core-pages.css"
+      ],
+      "baselineSignals": [
+        "design-profiles.css"
+      ],
+      "recommendation": null
+    },
+    {
+      "route": "/fonduri-europene",
+      "file": "fonduri-europene/index.html",
+      "bodyClass": "core-page funding-hub-refresh-2026 core-page--hub page-family-cluster",
+      "status": "current",
+      "bespokeSignals": [
+        "site-refresh-2026.css",
+        "core-pages.css"
+      ],
+      "baselineSignals": [
+        "design-profiles.css",
+        "editorial-clusters.css"
+      ],
+      "recommendation": null
+    },
+    {
+      "route": "/despre-faber",
+      "file": "despre-faber/index.html",
+      "bodyClass": "core-page about-page--p116 core-page--trust page-family-generic",
+      "status": "current",
+      "bespokeSignals": [
+        "core-pages.css",
+        "about-faber.css"
+      ],
+      "baselineSignals": [
+        "design-profiles.css"
+      ],
+      "recommendation": null
+    },
+    {
+      "route": "/afir",
+      "file": "afir/index.html",
+      "bodyClass": "page-family-afir",
+      "status": "current",
+      "bespokeSignals": [
+        "program-family-hubs.css"
+      ],
+      "baselineSignals": [
+        "design-profiles.css"
+      ],
+      "recommendation": null
+    },
+    {
+      "route": "/calculator-soc",
+      "file": "calculator-soc.html",
+      "bodyClass": "calculator-refresh-2026 page-family-tool",
+      "status": "current",
+      "bespokeSignals": [
+        "calculator-so-methodology.css"
+      ],
+      "baselineSignals": [
+        "design-profiles.css"
+      ],
+      "recommendation": null
+    },
+    {
+      "route": "/calendar-fonduri-europene",
+      "file": "calendar-fonduri-europene/index.html",
+      "bodyClass": "page-family-editorial",
+      "status": "baseline_only",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css"
+      ],
+      "recommendation": "Adaugă rezumat vizual, cuprins compact doar când este util, exemple în carduri și o încheiere cu pașii următori."
+    },
+    {
+      "route": "/cand-merita-consultant-fonduri-europene",
+      "file": "cand-merita-consultant-fonduri-europene.html",
+      "bodyClass": "page-family-editorial",
+      "status": "baseline_only",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css"
+      ],
+      "recommendation": "Adaugă rezumat vizual, cuprins compact doar când este util, exemple în carduri și o încheiere cu pașii următori."
+    },
+    {
+      "route": "/cat-costa-consultanta-fonduri-europene",
+      "file": "cat-costa-consultanta-fonduri-europene/index.html",
+      "bodyClass": "page-family-editorial",
+      "status": "baseline_only",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css"
+      ],
+      "recommendation": "Adaugă rezumat vizual, cuprins compact doar când este util, exemple în carduri și o încheiere cu pașii următori."
+    },
+    {
+      "route": "/ce-acte-sunt-necesare-fonduri-europene",
+      "file": "ce-acte-sunt-necesare-fonduri-europene.html",
+      "bodyClass": "page-family-editorial",
+      "status": "baseline_only",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css"
+      ],
+      "recommendation": "Adaugă rezumat vizual, cuprins compact doar când este util, exemple în carduri și o încheiere cu pașii următori."
+    },
+    {
+      "route": "/consultant-fonduri-europene-imm",
+      "file": "consultant-fonduri-europene-imm/index.html",
+      "bodyClass": "page-family-service",
+      "status": "baseline_only",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css"
+      ],
+      "recommendation": "Unifică hero-ul, beneficiile, etapele și CTA-ul într-o grilă de servicii cu ritm vertical și carduri egale."
+    },
+    {
+      "route": "/consultanta-afir",
+      "file": "consultanta-afir/index.html",
+      "bodyClass": "page-family-afir",
+      "status": "baseline_only",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css"
+      ],
+      "recommendation": "Aplică sistemul vizual actual: container coerent, tipografie de lectură, carduri egale, spațiere responsive și CTA final clar."
+    },
+    {
+      "route": "/consultanta-fonduri-europene-bucuresti",
+      "file": "consultanta-fonduri-europene-bucuresti/index.html",
+      "bodyClass": "page-family-service",
+      "status": "needs_full_refresh",
+      "bespokeSignals": [],
+      "baselineSignals": [],
+      "recommendation": "Unifică hero-ul, beneficiile, etapele și CTA-ul într-o grilă de servicii cu ritm vertical și carduri egale."
+    },
+    {
+      "route": "/consultanta-pnrr-digitalizare",
+      "file": "consultanta-pnrr-digitalizare/index.html",
+      "bodyClass": "page-family-digital",
+      "status": "baseline_only",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css"
+      ],
+      "recommendation": "Aplică sistemul vizual actual: container coerent, tipografie de lectură, carduri egale, spațiere responsive și CTA final clar."
+    },
+    {
+      "route": "/consultanta-start-up-nation-2026",
+      "file": "consultanta-start-up-nation-2026/index.html",
+      "bodyClass": "page-family-startup",
+      "status": "baseline_only",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css"
+      ],
+      "recommendation": "Aplică sistemul vizual actual: container coerent, tipografie de lectură, carduri egale, spațiere responsive și CTA final clar."
+    },
+    {
+      "route": "/contact",
+      "file": "contact/index.html",
+      "bodyClass": "core-page contact-refresh-2026 core-page--contact page-family-contact",
+      "status": "current",
+      "bespokeSignals": [
+        "site-refresh-2026.css",
+        "core-pages.css"
+      ],
+      "baselineSignals": [
+        "design-system.css",
+        "design-profiles.css"
+      ],
+      "recommendation": null
+    },
+    {
+      "route": "/cum-alegi-consultant-fonduri-europene",
+      "file": "cum-alegi-consultant-fonduri-europene/index.html",
+      "bodyClass": "page-family-editorial",
+      "status": "baseline_only",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css"
+      ],
+      "recommendation": "Adaugă rezumat vizual, cuprins compact doar când este util, exemple în carduri și o încheiere cu pașii următori."
+    },
+    {
+      "route": "/cum-alegi-programul-potrivit-fonduri-europene-2026",
+      "file": "cum-alegi-programul-potrivit-fonduri-europene-2026.html",
+      "bodyClass": "page-family-editorial",
+      "status": "baseline_only",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css",
+        "long-form-layout.css"
+      ],
+      "recommendation": "Adaugă rezumat vizual, cuprins compact doar când este util, exemple în carduri și o încheiere cu pașii următori."
+    },
+    {
+      "route": "/cum-se-calculeaza-cofinantarea-fonduri-europene",
+      "file": "cum-se-calculeaza-cofinantarea-fonduri-europene.html",
+      "bodyClass": "page-family-editorial",
+      "status": "baseline_only",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css"
+      ],
+      "recommendation": "Adaugă rezumat vizual, cuprins compact doar când este util, exemple în carduri și o încheiere cu pașii următori."
+    },
+    {
+      "route": "/cum-se-verifica-eligibilitatea-fonduri-europene",
+      "file": "cum-se-verifica-eligibilitatea-fonduri-europene.html",
+      "bodyClass": "page-family-editorial",
+      "status": "baseline_only",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css"
+      ],
+      "recommendation": "Adaugă rezumat vizual, cuprins compact doar când este util, exemple în carduri și o încheiere cu pașii următori."
+    },
+    {
+      "route": "/digitalizare-imm-erp-crm-cloud",
+      "file": "digitalizare-imm-erp-crm-cloud.html",
+      "bodyClass": "page-family-digital",
+      "status": "baseline_only",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css"
+      ],
+      "recommendation": "Aplică sistemul vizual actual: container coerent, tipografie de lectură, carduri egale, spațiere responsive și CTA final clar."
+    },
+    {
+      "route": "/digitalizare-imm-pnrr",
+      "file": "digitalizare-imm-pnrr/index.html",
+      "bodyClass": "page-family-digital",
+      "status": "baseline_only",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css",
+        "long-form-layout.css"
+      ],
+      "recommendation": "Aplică sistemul vizual actual: container coerent, tipografie de lectură, carduri egale, spațiere responsive și CTA final clar."
+    },
+    {
+      "route": "/eligibilitate-fonduri-europene",
+      "file": "eligibilitate-fonduri-europene/index.html",
+      "bodyClass": "page-family-service",
+      "status": "baseline_only",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css",
+        "editorial-clusters.css"
+      ],
+      "recommendation": "Unifică hero-ul, beneficiile, etapele și CTA-ul într-o grilă de servicii cu ritm vertical și carduri egale."
+    },
+    {
+      "route": "/eligibilitate-pocidif-21",
+      "file": "eligibilitate-pocidif-21/index.html",
+      "bodyClass": "page-family-digital",
+      "status": "baseline_only",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css"
+      ],
+      "recommendation": "Aplică sistemul vizual actual: container coerent, tipografie de lectură, carduri egale, spațiere responsive și CTA final clar."
+    },
+    {
+      "route": "/finantari-panouri-fotovoltaice",
+      "file": "finantari-panouri-fotovoltaice/index.html",
+      "bodyClass": "page-family-energy",
+      "status": "current",
+      "bespokeSignals": [
+        "program-family-hubs.css"
+      ],
+      "baselineSignals": [
+        "design-profiles.css"
+      ],
+      "recommendation": null
+    },
+    {
+      "route": "/firma-consultanta-fonduri-europene",
+      "file": "firma-consultanta-fonduri-europene/index.html",
+      "bodyClass": "page-family-service",
+      "status": "baseline_only",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css"
+      ],
+      "recommendation": "Unifică hero-ul, beneficiile, etapele și CTA-ul într-o grilă de servicii cu ritm vertical și carduri egale."
+    },
+    {
+      "route": "/fonduri-europene-agricultura",
+      "file": "fonduri-europene-agricultura/index.html",
+      "bodyClass": "page-family-cluster",
+      "status": "baseline_only",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css"
+      ],
+      "recommendation": "Transformă lista de destinații într-un hub vizual cu filtre/carduri uniforme, stare factuală și ierarhie clară pe mobil."
+    },
+    {
+      "route": "/fonduri-europene-bucuresti",
+      "file": "fonduri-europene-bucuresti/index.html",
+      "bodyClass": "page-family-cluster",
+      "status": "baseline_only",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "long-form-layout.css"
+      ],
+      "recommendation": "Transformă lista de destinații într-un hub vizual cu filtre/carduri uniforme, stare factuală și ierarhie clară pe mobil."
+    },
+    {
+      "route": "/fonduri-europene-caen/0111-culturi-cereale",
+      "file": "fonduri-europene-caen/0111-culturi-cereale/index.html",
+      "bodyClass": "page-family-caen",
+      "status": "baseline_only",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css",
+        "long-form-layout.css"
+      ],
+      "recommendation": "Adaugă rezumat vizual, cuprins compact doar când este util, exemple în carduri și o încheiere cu pașii următori."
+    },
+    {
+      "route": "/fonduri-europene-caen/4321-instalatii-electrice",
+      "file": "fonduri-europene-caen/4321-instalatii-electrice/index.html",
+      "bodyClass": "page-family-caen",
+      "status": "baseline_only",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css",
+        "long-form-layout.css"
+      ],
+      "recommendation": "Adaugă rezumat vizual, cuprins compact doar când este util, exemple în carduri și o încheiere cu pașii următori."
+    },
+    {
+      "route": "/fonduri-europene-caen/5610-restaurante",
+      "file": "fonduri-europene-caen/5610-restaurante/index.html",
+      "bodyClass": "page-family-caen",
+      "status": "baseline_only",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css",
+        "long-form-layout.css"
+      ],
+      "recommendation": "Adaugă rezumat vizual, cuprins compact doar când este util, exemple în carduri și o încheiere cu pașii următori."
+    },
+    {
+      "route": "/fonduri-europene-caen/6201-dezvoltare-software",
+      "file": "fonduri-europene-caen/6201-dezvoltare-software/index.html",
+      "bodyClass": "page-family-caen",
+      "status": "baseline_only",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css",
+        "long-form-layout.css"
+      ],
+      "recommendation": "Adaugă rezumat vizual, cuprins compact doar când este util, exemple în carduri și o încheiere cu pașii următori."
+    },
+    {
+      "route": "/fonduri-europene-digitalizare",
+      "file": "fonduri-europene-digitalizare/index.html",
+      "bodyClass": "page-family-digital",
+      "status": "current",
+      "bespokeSignals": [
+        "program-family-hubs.css"
+      ],
+      "baselineSignals": [
+        "design-profiles.css"
+      ],
+      "recommendation": null
+    },
+    {
+      "route": "/fonduri-europene-femei-antreprenor",
+      "file": "fonduri-europene-femei-antreprenor/index.html",
+      "bodyClass": "page-family-startup",
+      "status": "baseline_only",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css"
+      ],
+      "recommendation": "Aplică sistemul vizual actual: container coerent, tipografie de lectură, carduri egale, spațiere responsive și CTA final clar."
+    },
+    {
+      "route": "/fonduri-europene-imm",
+      "file": "fonduri-europene-imm/index.html",
+      "bodyClass": "page-family-cluster",
+      "status": "current",
+      "bespokeSignals": [
+        "program-family-hubs.css"
+      ],
+      "baselineSignals": [
+        "design-profiles.css"
+      ],
+      "recommendation": null
+    },
+    {
+      "route": "/fonduri-europene-nerambursabile-2026",
+      "file": "fonduri-europene-nerambursabile-2026/index.html",
+      "bodyClass": "page-family-cluster",
+      "status": "baseline_only",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css",
+        "long-form-layout.css"
+      ],
+      "recommendation": "Transformă lista de destinații într-un hub vizual cu filtre/carduri uniforme, stare factuală și ierarhie clară pe mobil."
+    },
+    {
+      "route": "/fonduri-europene-nord-est",
+      "file": "fonduri-europene-nord-est/index.html",
+      "bodyClass": "page-family-cluster",
+      "status": "baseline_only",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "long-form-layout.css"
+      ],
+      "recommendation": "Transformă lista de destinații într-un hub vizual cu filtre/carduri uniforme, stare factuală și ierarhie clară pe mobil."
+    },
+    {
+      "route": "/fonduri-nerambursabile",
+      "file": "fonduri-nerambursabile/index.html",
+      "bodyClass": "page-family-cluster",
+      "status": "baseline_only",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css",
+        "editorial-clusters.css"
+      ],
+      "recommendation": "Transformă lista de destinații într-un hub vizual cu filtre/carduri uniforme, stare factuală și ierarhie clară pe mobil."
+    },
+    {
+      "route": "/fonduri-pentru-ferme",
+      "file": "fonduri-pentru-ferme/index.html",
+      "bodyClass": "page-family-afir",
+      "status": "baseline_only",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css"
+      ],
+      "recommendation": "Aplică sistemul vizual actual: container coerent, tipografie de lectură, carduri egale, spațiere responsive și CTA final clar."
+    },
+    {
+      "route": "/fonduri-pentru-utilaje-agricole",
+      "file": "fonduri-pentru-utilaje-agricole/index.html",
+      "bodyClass": "page-family-afir",
+      "status": "baseline_only",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css",
+        "long-form-layout.css"
+      ],
+      "recommendation": "Aplică sistemul vizual actual: container coerent, tipografie de lectură, carduri egale, spațiere responsive și CTA final clar."
+    },
+    {
+      "route": "/idei-afaceri-fonduri-europene",
+      "file": "idei-afaceri-fonduri-europene.html",
+      "bodyClass": "page-family-editorial",
+      "status": "baseline_only",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css"
+      ],
+      "recommendation": "Adaugă rezumat vizual, cuprins compact doar când este util, exemple în carduri și o încheiere cu pașii următori."
+    },
+    {
+      "route": "/instrumente",
+      "file": "instrumente/index.html",
+      "bodyClass": "page-family-tool",
+      "status": "baseline_only",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css"
+      ],
+      "recommendation": "Aplică sistemul vizual actual: container coerent, tipografie de lectură, carduri egale, spațiere responsive și CTA final clar."
+    },
+    {
+      "route": "/management-proiecte-fonduri-europene",
+      "file": "management-proiecte-fonduri-europene/index.html",
+      "bodyClass": "page-family-service",
+      "status": "baseline_only",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css"
+      ],
+      "recommendation": "Unifică hero-ul, beneficiile, etapele și CTA-ul într-o grilă de servicii cu ritm vertical și carduri egale."
+    },
+    {
+      "route": "/plan-de-afaceri-fonduri-europene",
+      "file": "plan-de-afaceri-fonduri-europene/index.html",
+      "bodyClass": "page-family-service",
+      "status": "baseline_only",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css"
+      ],
+      "recommendation": "Unifică hero-ul, beneficiile, etapele și CTA-ul într-o grilă de servicii cu ritm vertical și carduri egale."
+    },
+    {
+      "route": "/politica-de-confidentialitate",
+      "file": "politica-de-confidentialitate.html",
+      "bodyClass": "page-family-legal",
+      "status": "baseline_only",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css"
+      ],
+      "recommendation": "Păstrează sobrietatea juridică, dar îmbunătățește măsura textului, navigarea pe secțiuni și contrastul notelor."
+    },
+    {
+      "route": "/proiectare-fonduri-europene",
+      "file": "proiectare-fonduri-europene/index.html",
+      "bodyClass": "projectare-refresh-2026 page-family-service",
+      "status": "current",
+      "bespokeSignals": [
+        "projectare-refresh-2026.css"
+      ],
+      "baselineSignals": [
+        "design-profiles.css"
+      ],
+      "recommendation": null
+    },
+    {
+      "route": "/studiu-fezabilitate-fonduri-europene",
+      "file": "studiu-fezabilitate-fonduri-europene/index.html",
+      "bodyClass": "page-family-service",
+      "status": "baseline_only",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css"
+      ],
+      "recommendation": "Unifică hero-ul, beneficiile, etapele și CTA-ul într-o grilă de servicii cu ritm vertical și carduri egale."
+    },
+    {
+      "route": "/verificare-eligibilitate-fonduri-europene",
+      "file": "verificare-eligibilitate-fonduri-europene/index.html",
+      "bodyClass": "page-family-service",
+      "status": "baseline_only",
+      "bespokeSignals": [],
+      "baselineSignals": [
+        "design-profiles.css",
+        "editorial-clusters.css"
+      ],
+      "recommendation": "Unifică hero-ul, beneficiile, etapele și CTA-ul într-o grilă de servicii cu ritm vertical și carduri egale."
+    }
+  ]
+}

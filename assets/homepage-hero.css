@@ -192,6 +192,21 @@
   line-height: 1.25;
 }
 
+.homepage-decision-hero .hero-programs-list .hp-tag {
+  display: none;
+}
+
+.homepage-decision-hero .hero-programs-list .hp-name {
+  display: -webkit-box;
+  overflow: hidden;
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
 .hero-programs-list a:hover,
 .hero-programs-list a[aria-current="true"] {
   border-color: rgba(245, 166, 35, 0.44);

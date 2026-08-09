@@ -116,6 +116,10 @@ function syncStylesheet(html) {
   return withoutDuplicates.replace(/<\/head>/iu, `  ${STYLESHEET}\n</head>`);
 }
 
+function removeStylesheet(html) {
+  return html.replace(/\s*<link\b[^>]*href=["']\/assets\/program-contextual-links\.css["'][^>]*>\s*/giu, "\n");
+}
+
 function insertBeforeMainEnd(html, block) {
   const templateSlotIndex = html.indexOf("<!-- PROGRAM_TEMPLATE_GOVERNANCE_SLOT -->");
   const governanceIndex = html.indexOf("<!-- EDITORIAL_GOVERNANCE_START -->");
@@ -148,17 +152,21 @@ function validateMatrix(programs, config) {
 
 function main() {
   const config = loadConfig();
-  const programs = loadProgramConfig().programs.filter((program) => !program.discovery?.redirectTarget);
+  const allPrograms = loadProgramConfig().programs;
+  const programs = allPrograms.filter((program) => !program.discovery?.redirectTarget);
   validateMatrix(programs, config);
   const publicPrograms = programs.filter((program) => isPublicProgram(program) && program.discovery?.listed !== false);
+  const publicProgramIds = new Set(publicPrograms.map((program) => program.slug));
   const changed = [];
   const migration = [];
 
-  for (const program of publicPrograms) {
+  for (const program of allPrograms) {
     for (const file of programFiles(program.pageUrl)) {
       const before = fs.readFileSync(file, "utf8");
       const counts = legacyCounts(before);
-      const after = synchronizedHtml(before, program, config);
+      const after = publicProgramIds.has(program.slug)
+        ? synchronizedHtml(before, program, config)
+        : removeStylesheet(removeManagedBlocks(before));
       if (after !== before) {
         changed.push(path.relative(ROOT, file).replace(/\\/gu, "/"));
         if (!CHECK) fs.writeFileSync(file, after, "utf8");
@@ -167,9 +175,10 @@ function main() {
         programId: program.slug,
         route: program.pageUrl,
         file: path.relative(ROOT, file).replace(/\\/gu, "/"),
+        eligible: publicProgramIds.has(program.slug),
         removedManagedBlocks: counts.blocks,
         removedManagedLinks: counts.links,
-        resultingRelations: resolvedLinks(program, config).map((link) => link.relation)
+        resultingRelations: publicProgramIds.has(program.slug) ? resolvedLinks(program, config).map((link) => link.relation) : []
       });
     }
   }
@@ -191,6 +200,8 @@ module.exports = {
   loadConfig,
   renderProgramContextualLinks,
   resolvedLinks,
+  removeManagedBlocks,
+  removeStylesheet,
   synchronizedHtml,
   validateMatrix
 };

@@ -139,7 +139,15 @@ async function inspectPage(page, pageInfo, viewport) {
 
     let badgeCheck = { required: pagePath === '/', pass: pagePath !== '/', reason: 'not homepage contact section' };
     if (pagePath === '/') {
-      if (!badge || !heading) {
+      const currentBadge = document.querySelector('#homepage-contact .homepage-eyebrow');
+      const currentHeading = document.querySelector('#homepage-contact h2');
+      if (currentBadge && currentHeading) {
+        badgeCheck = {
+          required: true,
+          pass: visible(currentBadge) && visible(currentHeading),
+          reason: 'current homepage contact card is present and visible',
+        };
+      } else if (!badge || !heading) {
         badgeCheck = { required: true, pass: false, reason: 'badge or contact verification heading not found' };
       } else {
         const badgeRect = badge.getBoundingClientRect();

@@ -293,7 +293,7 @@
       ],
       "presentation": {
         "carousel": true,
-        "hero": true,
+        "hero": false,
         "order": 9,
         "icon": "ph-rocket-launch",
         "image": "/assets/hero/hero-business.webp",
@@ -532,11 +532,11 @@
         "fondul-modernizare"
       ],
       "presentation": {
-        "carousel": false,
+        "carousel": true,
         "hero": false,
-        "order": 999,
-        "icon": "ph-file-text",
-        "image": null,
+        "order": 15,
+        "icon": "ph-solar-panel",
+        "image": "/assets/hero/hero-solar.webp",
         "beneficiary": null
       },
       "discovery": {
@@ -777,7 +777,7 @@
       ],
       "presentation": {
         "carousel": true,
-        "hero": true,
+        "hero": false,
         "order": 8,
         "icon": "ph-factory",
         "image": "/assets/hero/hero-solar.webp",
@@ -1055,7 +1055,7 @@
       ],
       "presentation": {
         "carousel": true,
-        "hero": true,
+        "hero": false,
         "order": 999,
         "icon": "ph-duotone ph-circuitry",
         "image": "/assets/hero/hero-digital.webp",
@@ -1193,11 +1193,11 @@
         "diaspora-investeste-acasa"
       ],
       "presentation": {
-        "carousel": false,
+        "carousel": true,
         "hero": true,
         "order": 21,
         "icon": "ph-house-line",
-        "image": "/assets/hero/hero-regional.webp",
+        "image": "/assets/hero/hero-local.webp",
         "beneficiary": "români din diaspora care înființează o întreprindere în România"
       },
       "discovery": {
@@ -1271,7 +1271,7 @@
         "e-drive"
       ],
       "presentation": {
-        "carousel": false,
+        "carousel": true,
         "hero": true,
         "order": 22,
         "icon": "ph-bus",
@@ -1344,7 +1344,7 @@
         "e-mobility-ro"
       ],
       "presentation": {
-        "carousel": false,
+        "carousel": true,
         "hero": true,
         "order": 23,
         "icon": "ph-charging-station",
@@ -1422,7 +1422,7 @@
         "fm-pc1-stocare"
       ],
       "presentation": {
-        "carousel": false,
+        "carousel": true,
         "hero": true,
         "order": 24,
         "icon": "ph-battery-high",

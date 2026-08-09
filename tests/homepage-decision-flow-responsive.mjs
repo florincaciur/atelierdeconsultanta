@@ -5,6 +5,7 @@ import path from "node:path";
 import { chromium } from "playwright";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
+const homepagePrograms = JSON.parse(fs.readFileSync(path.join(ROOT, "config", "homepage-programs.json"), "utf8"));
 const MIME = { ".html": "text/html; charset=utf-8", ".css": "text/css", ".js": "text/javascript", ".json": "application/json", ".svg": "image/svg+xml", ".webp": "image/webp", ".png": "image/png" };
 const server = http.createServer((request, response) => {
   let pathname = decodeURIComponent(new URL(request.url, "http://localhost").pathname);
@@ -24,7 +25,11 @@ try {
   for (const viewport of [{ width: 320, height: 720 }, { width: 390, height: 844 }, { width: 768, height: 900 }, { width: 1366, height: 768 }]) {
     const page = await browser.newPage({ viewport });
     const consoleErrors = [];
-    page.on("console", (message) => { if (message.type() === "error") consoleErrors.push(message.text()); });
+    page.on("console", (message) => {
+      if (message.type() !== "error") return;
+      const location = message.location().url || "inline";
+      consoleErrors.push(`${message.text()} (${location})`);
+    });
     await page.goto(baseUrl, { waitUntil: "domcontentloaded" });
     await page.locator("[data-priority-carousel]").waitFor({ state: "visible" });
     const metrics = await page.evaluate(() => ({
@@ -48,7 +53,7 @@ try {
     assert.equal(metrics.explorerVisible, 1);
     if (viewport.width === 390 || viewport.width === 1366) assert(metrics.ctaBottom <= viewport.height, `${viewport.width}px: CTA-ul principal este sub fold`);
     await page.locator("[data-priority-next]").click();
-    assert.equal((await page.locator("[data-priority-counter]").textContent()).trim(), "2 din 6");
+    assert.equal((await page.locator("[data-priority-counter]").textContent()).trim(), `2 din ${homepagePrograms.featuredProgramSlugs.length}`);
     await page.locator("[data-homepage-method-next]").click();
     assert.match((await page.locator("[data-homepage-method-status]").textContent()).trim(), /^Etapa 2 din 5:/);
     await page.locator("[data-homepage-explorer-next]").click();

@@ -34,7 +34,7 @@
     var index = 0;
     var pointerStart = null;
 
-    if (!trackElement || !viewport || !slides.length || slides.length > 6) return;
+    if (!trackElement || !viewport || !slides.length || slides.length > 24) return;
 
     function activeProgram() {
       return slides[index] || null;

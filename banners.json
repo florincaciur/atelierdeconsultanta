@@ -438,6 +438,218 @@
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
   {
+    "id": "slide-fondul-modernizare-autoconsum",
+    "programId": "fondul-modernizare-autoconsum",
+    "title": "Fondul pentru Modernizare – energie și autoconsum",
+    "tag": "Calendar estimativ – depunerea nu este confirmată",
+    "description": "Proiecte de energie și autoconsum prin Fondul pentru Modernizare: consum, capacitate, racordare, avize, buget și documente oficiale.",
+    "ctaText": "Detalii program",
+    "ctaLink": "/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum",
+    "icon": "ph-solar-panel",
+    "image": "/assets/hero/hero-solar.webp",
+    "pageTitle": null,
+    "order": 15,
+    "estimate": null,
+    "active": true,
+    "programStatus": "calendar_estimativ",
+    "statusLabel": "Calendar estimativ – depunerea nu este confirmată",
+    "verifiedAt": "2026-05-20",
+    "sourceName": "Ministerul Energiei",
+    "sourceUrl": "https://energie.gov.ro/category/fondul-pentru-modernizare/",
+    "sourceVersion": "Pagina oficială a Fondului pentru Modernizare",
+    "applicationStart": null,
+    "applicationEnd": null,
+    "grantSummary": null,
+    "cofinancingSummary": null,
+    "fundingSummary": null,
+    "officialGuideKey": "fondul-modernizare",
+    "sourceOfTruth": "config/seo-programs.json#programs"
+  },
+  {
+    "id": "slide-diaspora-investeste-acasa",
+    "programId": "diaspora-investeste-acasa",
+    "title": "Diaspora Investește Acasă",
+    "tag": "Program anunțat – mecanismul de aplicare nu este publicat",
+    "description": "Diaspora Investește Acasă: beneficiari, finanțare anunțată, contribuție proprie și ce documente pot fi pregătite înaintea procedurii oficiale.",
+    "ctaText": "Detalii program",
+    "ctaLink": "/diaspora-investeste-acasa",
+    "icon": "ph-house-line",
+    "image": "/assets/hero/hero-local.webp",
+    "pageTitle": null,
+    "order": 21,
+    "estimate": null,
+    "active": true,
+    "programStatus": "calendar_estimativ",
+    "statusLabel": "Program anunțat – mecanismul de aplicare nu este publicat",
+    "verifiedAt": "2026-08-09",
+    "sourceName": "Departamentul pentru Românii de Pretutindeni",
+    "sourceUrl": "https://diaspora.gov.ro/info/stiri-din-romania/761-investeste-acasa.html",
+    "sourceVersion": "Comunicare oficială din 27.05.2026 privind programul guvernamental",
+    "applicationStart": null,
+    "applicationEnd": null,
+    "grantSummary": {
+      "minimum": null,
+      "maximum": {
+        "amount": 200000,
+        "currency": "EUR",
+        "unit": "întreprindere"
+      },
+      "budget": {
+        "amount": 100000000,
+        "currency": "EUR"
+      }
+    },
+    "cofinancingSummary": {
+      "intensity": [
+        {
+          "rate": 60,
+          "scope": "maximum din creditul de investiții, conform comunicării oficiale"
+        }
+      ],
+      "ownContribution": "Minimum 10%; minimum 5% pentru persoanele cu vârsta sub 35 de ani, conform comunicării oficiale."
+    },
+    "fundingSummary": "Finanțare conform sursei oficiale: 200.000 EUR/întreprindere; buget 100.000.000 EUR; intensitate 60% (maximum din creditul de investiții, conform comunicării oficiale); Minimum 10%; minimum 5% pentru persoanele cu vârsta sub 35 de ani, conform comunicării oficiale.",
+    "officialGuideKey": "diaspora-investeste-acasa",
+    "sourceOfTruth": "config/seo-programs.json#programs"
+  },
+  {
+    "id": "slide-e-drive",
+    "programId": "e-drive",
+    "title": "Programul e-DRIVE",
+    "tag": "Schemă aprobată – depunerea nu este deschisă",
+    "description": "Programul e-DRIVE: măsuri de ajutor, beneficiari, vehicule eligibile, plafoane și obligații, explicate pe baza ordinului oficial.",
+    "ctaText": "Detalii program",
+    "ctaLink": "/e-drive",
+    "icon": "ph-bus",
+    "image": "/assets/hero/hero-solar.webp",
+    "pageTitle": null,
+    "order": 22,
+    "estimate": null,
+    "active": true,
+    "programStatus": "ghid_aprobat_nedeschis",
+    "statusLabel": "Schemă aprobată – depunerea nu este deschisă",
+    "verifiedAt": "2026-08-09",
+    "sourceName": "Ministerul Transporturilor și Infrastructurii / Portal Legislativ",
+    "sourceUrl": "https://legislatie.just.ro/Public/DetaliiDocumentAfis/306913",
+    "sourceVersion": "Ordinul MTI nr. 2.291/29.12.2025, publicat în Monitorul Oficial nr. 14/13.01.2026; modificat prin Ordinul nr. 100/12.02.2026",
+    "applicationStart": null,
+    "applicationEnd": null,
+    "grantSummary": {
+      "minimum": null,
+      "maximum": {
+        "amount": 4000000,
+        "currency": "EUR",
+        "unit": "beneficiar, în cadrul măsurii competitive"
+      },
+      "budget": {
+        "amount": 50000000,
+        "currency": "EUR"
+      }
+    },
+    "cofinancingSummary": {
+      "intensity": [
+        {
+          "rate": 100,
+          "scope": "maximum, în limitele schemei și ale costului eligibil aplicabil"
+        }
+      ],
+      "ownContribution": "Diferența neacoperită de ajutor, costurile neeligibile și orice diferență față de costul de referință aplicabil."
+    },
+    "fundingSummary": "Finanțare conform sursei oficiale: 4.000.000 EUR/beneficiar, în cadrul măsurii competitive; buget 50.000.000 EUR; intensitate 100% (maximum, în limitele schemei și ale costului eligibil aplicabil); Diferența neacoperită de ajutor, costurile neeligibile și orice diferență față de costul de referință aplicabil.",
+    "officialGuideKey": "e-drive",
+    "sourceOfTruth": "config/seo-programs.json#programs"
+  },
+  {
+    "id": "slide-e-mobility-ro",
+    "programId": "e-mobility-ro",
+    "title": "Programul e-Mobility RO",
+    "tag": "Schemă aprobată – depunerea nu este deschisă",
+    "description": "Programul e-Mobility RO: amplasamente, solicitanți, investiții eligibile și buget, consolidat din actele normative oficiale.",
+    "ctaText": "Detalii program",
+    "ctaLink": "/e-mobility",
+    "icon": "ph-charging-station",
+    "image": "/assets/hero/hero-solar.webp",
+    "pageTitle": null,
+    "order": 23,
+    "estimate": null,
+    "active": true,
+    "programStatus": "ghid_aprobat_nedeschis",
+    "statusLabel": "Schemă aprobată – depunerea nu este deschisă",
+    "verifiedAt": "2026-08-09",
+    "sourceName": "Ministerul Transporturilor și Infrastructurii / Portal Legislativ",
+    "sourceUrl": "https://legislatie.just.ro/Public/DetaliiDocumentAfis/301389",
+    "sourceVersion": "Ordinul MTI nr. 1.319/12.08.2025 și schema de ajutor de stat e-Mobility RO",
+    "applicationStart": null,
+    "applicationEnd": null,
+    "grantSummary": {
+      "minimum": null,
+      "maximum": null,
+      "budget": {
+        "amount": 299000000,
+        "currency": "EUR"
+      }
+    },
+    "cofinancingSummary": {
+      "intensity": [
+        {
+          "rate": 100,
+          "scope": "maximum posibil prin procedura competitivă, în condițiile schemei"
+        }
+      ],
+      "ownContribution": "Diferența rezultată din oferta competitivă, costurile neeligibile și eventualele depășiri ale limitelor aplicabile."
+    },
+    "fundingSummary": "Finanțare conform sursei oficiale: buget 299.000.000 EUR; intensitate 100% (maximum posibil prin procedura competitivă, în condițiile schemei); Diferența rezultată din oferta competitivă, costurile neeligibile și eventualele depășiri ale limitelor aplicabile.",
+    "officialGuideKey": "e-mobility-ro",
+    "sourceOfTruth": "config/seo-programs.json#programs"
+  },
+  {
+    "id": "slide-fondul-modernizare-pc1-stocare",
+    "programId": "fondul-modernizare-pc1-stocare",
+    "title": "Fondul pentru Modernizare – PC1 Stocare stand-alone",
+    "tag": "Ghid în consultare – depunerea nu este deschisă",
+    "description": "Fondul pentru Modernizare PC1: beneficiari, baterii stand-alone, buget și plafoane din documentația oficială de consultare.",
+    "ctaText": "Detalii program",
+    "ctaLink": "/fondul-modernizare-pc1-stocare",
+    "icon": "ph-battery-high",
+    "image": "/assets/hero/hero-solar.webp",
+    "pageTitle": null,
+    "order": 24,
+    "estimate": null,
+    "active": true,
+    "programStatus": "consultare_publica",
+    "statusLabel": "Ghid în consultare – depunerea nu este deschisă",
+    "verifiedAt": "2026-08-09",
+    "sourceName": "Ministerul Energiei",
+    "sourceUrl": "https://energie.gov.ro/category/fondul-pentru-modernizare/",
+    "sourceVersion": "Documentația PC1 pentru capacități de stocare stand-alone publicată în consultare la 21.05.2026",
+    "applicationStart": null,
+    "applicationEnd": null,
+    "grantSummary": {
+      "minimum": null,
+      "maximum": {
+        "amount": 15000000,
+        "currency": "EUR",
+        "unit": "întreprindere"
+      },
+      "budget": {
+        "amount": 150000000,
+        "currency": "EUR"
+      }
+    },
+    "cofinancingSummary": {
+      "intensity": [
+        {
+          "rate": 100,
+          "scope": "maximum propus în documentația de consultare, în limita costului eligibil și a competiției"
+        }
+      ],
+      "ownContribution": "Costurile neeligibile, depășirile plafonului și diferența rezultată din regulile finale ori din procedura competitivă."
+    },
+    "fundingSummary": "Finanțare conform documentului aflat în consultare: 15.000.000 EUR/întreprindere; buget 150.000.000 EUR; intensitate 100% (maximum propus în documentația de consultare, în limita costului eligibil și a competiției); Costurile neeligibile, depășirile plafonului și diferența rezultată din regulile finale ori din procedura competitivă.",
+    "officialGuideKey": "fm-pc1-stocare",
+    "sourceOfTruth": "config/seo-programs.json#programs"
+  },
+  {
     "id": "slide-pocidif-21",
     "programId": "pocidif-21",
     "title": "PoCIDIF – Acțiunea 2.1 Dezvoltarea de noi servicii, aplicații și produse prin inovare și adoptarea de tehnologii avansate",

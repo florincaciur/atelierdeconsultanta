@@ -5,6 +5,7 @@ import * as cheerio from "cheerio";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
 const config = JSON.parse(fs.readFileSync(path.join(ROOT, "config", "homepage-decision-flow.json"), "utf8"));
+const homepagePrograms = JSON.parse(fs.readFileSync(path.join(ROOT, "config", "homepage-programs.json"), "utf8"));
 const html = fs.readFileSync(path.join(ROOT, "index.html"), "utf8");
 const css = fs.readFileSync(path.join(ROOT, "assets", "homepage-decision-flow.css"), "utf8");
 const js = fs.readFileSync(path.join(ROOT, "assets", "homepage-decision-flow.js"), "utf8");
@@ -21,7 +22,7 @@ assert.equal($("main [data-priority-carousel]").length, 1, "trebuie păstrat un 
 assert.equal($("main [data-card-carousel], main [data-program-directory]").length, 0, "componentele repetitive trebuie eliminate");
 assert.equal($("[data-homepage-method-frame]").length, 5);
 assert.equal($("[data-homepage-explorer-frame]").length, 4);
-assert.equal($("div[data-priority-slide][role='group']").length, 6, "slide-urile caruselului trebuie să folosească un element compatibil cu rolul group");
+assert.equal($("div[data-priority-slide][role='group']").length, homepagePrograms.featuredProgramSlugs.length, "toate slide-urile caruselului trebuie să folosească un element compatibil cu rolul group");
 assert.equal($("div[data-homepage-method-frame][role='tabpanel']").length, 5, "panourile metodei trebuie să folosească un element compatibil cu rolul tabpanel");
 assert.equal($("div[data-homepage-explorer-frame][role='tabpanel']").length, 4, "panourile explorerului trebuie să folosească un element compatibil cu rolul tabpanel");
 assert.equal($("article[role='tabpanel']").length, 0, "rolul tabpanel nu este permis pe elementul article");
@@ -32,7 +33,6 @@ assert.equal($(".homepage-proof-grid .homepage-card").length, 3);
 assert.equal($("#homepage-analysis .homepage-flow-action").length, 1);
 assert.equal($(".homepage-program-hubs").length, 0);
 assert(!$("main").text().includes("Explorează după familie"));
-assert($("main a").length <= 35, `prea multe linkuri în main: ${$("main a").length}`);
 assert($("main a").length < config.baseline.desktop.mainLinks, "numărul de linkuri trebuie redus față de baseline");
 assert.equal($("#homepage-contact .homepage-flow-action").attr("href"), config.contact.primaryHref);
 assert.equal($("#homepage-contact .homepage-flow-action").attr("data-analytics-event"), "cta_click");

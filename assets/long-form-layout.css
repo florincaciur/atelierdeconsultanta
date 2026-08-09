@@ -20,6 +20,27 @@
   min-width: 0;
 }
 
+[data-long-form-layout="wide"] {
+  display: block;
+}
+
+[data-long-form-layout="wide"] > article.panel {
+  width: 100%;
+  max-width: none;
+  padding: clamp(1.35rem, 3vw, 2.5rem);
+}
+
+body[data-program-id="dr14-afir"] [data-long-form-layout="wide"] :where(p, ul, ol, blockquote, dl),
+body[data-program-id="modernizare-microintreprinderi-ne-2"] [data-long-form-layout="wide"] :where(p, ul, ol, blockquote, dl) {
+  max-inline-size: 76ch;
+}
+
+body[data-program-id="dr14-afir"] [data-long-form-layout="wide"] :where(p, li, dd),
+body[data-program-id="modernizare-microintreprinderi-ne-2"] [data-long-form-layout="wide"] :where(p, li, dd) {
+  font-size: clamp(1rem, 0.97rem + 0.12vw, 1.075rem);
+  line-height: 1.72;
+}
+
 .long-form-toc {
   position: sticky;
   top: var(--long-form-header-offset);

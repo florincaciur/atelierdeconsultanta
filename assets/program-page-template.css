@@ -25,12 +25,27 @@
 }
 
 .program-template {
-  max-inline-size: 72rem;
+  max-inline-size: 76rem;
   margin-inline: auto;
 }
 
+body[data-program-id="afir-energie-autoconsum"] main[data-long-form-layout="rail"] {
+  display: block;
+}
+
+body[data-program-id="afir-energie-autoconsum"] .program-template {
+  width: 100%;
+  max-inline-size: 76rem;
+  padding: clamp(1.25rem, 3vw, 2.4rem);
+}
+
+body[data-program-id="afir-energie-autoconsum"] .program-template :where(p, li, dd) {
+  font-size: clamp(1rem, 0.97rem + 0.12vw, 1.075rem);
+  line-height: 1.72;
+}
+
 .program-template__direct-answer {
-  max-inline-size: 68ch;
+  max-inline-size: 76ch;
   margin: 0;
   padding: clamp(1.1rem, 2.5vw, 1.6rem);
   border-inline-start: 0.35rem solid var(--color-accent, #d86920);
@@ -43,8 +58,8 @@
 }
 
 .program-template__section {
-  max-inline-size: 68ch;
-  margin-block: clamp(2.25rem, 5vw, 4.25rem);
+  max-inline-size: 76ch;
+  margin-block: clamp(2rem, 4vw, 3.5rem);
   scroll-margin-top: 7rem;
 }
 
@@ -107,12 +122,12 @@
 }
 
 .program-template__toc {
-  max-inline-size: 68ch;
+  max-inline-size: 76ch;
   margin-block: 2rem;
 }
 
 .program-template__disclaimer {
-  max-inline-size: 68ch;
+  max-inline-size: 76ch;
   margin-block: 2rem;
   padding: 1rem 1.125rem;
   border: 1px solid var(--color-warning, #8a5a00);
@@ -231,7 +246,7 @@
 }
 
 .program-template__cta {
-  max-inline-size: 68ch;
+  max-inline-size: 76ch;
   margin-block: clamp(2.5rem, 6vw, 5rem) 1rem;
   scroll-margin-top: 7rem;
 }
