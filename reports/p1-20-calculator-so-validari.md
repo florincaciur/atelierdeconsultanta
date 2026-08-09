@@ -16,7 +16,7 @@ Versiune coeficienți: **SOC 2020 — lista AFIR noiembrie 2024**
 - 46 categorii SOC documentate prin cod, coeficient și unitate;
 - formula existentă `coeficient × cantitate` și însumarea nu au fost schimbate;
 - totalul este calculat cu zecimale și afișat prin `Math.round`;
-- verdictul automat DR 12/DR 14 a fost eliminat deoarece SO nu decide singur programul;
+- rezultatul oferă o sugestie prudentă de program, fără verdict automat de eligibilitate;
 - rezultatul are explicație pe rând, copiere și tipărire fără PII;
 - CTA transmite numai `source_page` și `so_result` numeric validat.
 

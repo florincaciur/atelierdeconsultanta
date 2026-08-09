@@ -9,7 +9,7 @@ const ROOT = path.resolve(__dirname, "..");
 const CONFIG_PATH = path.join(ROOT, "config", "main-navigation.json");
 const PARTIAL_PATH = path.join(ROOT, "partials", "global-header.html");
 const REPORT_PATH = path.join(ROOT, "reports", "main-navigation-sitemap-2026-07-21.md");
-const ASSET_VERSION = "20260722-6";
+const ASSET_VERSION = "20260809-1";
 
 function loadConfig() {
   return JSON.parse(fs.readFileSync(CONFIG_PATH, "utf8"));
@@ -88,18 +88,8 @@ ${measures}
       </div>`;
 }
 
-function desktopHomepageToc(config) {
-  const toc = config.homepageToc;
-  const items = toc.items.map((item, index) => `          <li><a href="${escapeHtml(item.href)}" class="dropdown-item" data-homepage-toc-link${index === 0 ? ' aria-current="location"' : ""} ${analyticsAttributes(item, "desktop_homepage_toc", "cuprins")}>${escapeHtml(item.label)}</a></li>`).join("\n");
-  return `      <div class="nav-dropdown homepage-navbar-toc" data-nav-disclosure data-nav-group="cuprins" data-homepage-navbar-toc hidden>
-        <button class="nav-dropdown-btn" type="button" id="nav-homepage-toc-trigger" aria-expanded="false" aria-controls="nav-homepage-toc-panel" data-analytics-event="nav_click" data-analytics-component="desktop_nav_disclosure" data-analytics-cta-id="nav_cuprins_toggle">
-          ${escapeHtml(toc.label)} <span class="arrow" aria-hidden="true"></span>
-        </button>
-        <div class="nav-dropdown-panel homepage-navbar-toc__panel" id="nav-homepage-toc-panel" aria-labelledby="nav-homepage-toc-trigger" hidden>
-          <p class="dropdown-header">${escapeHtml(toc.label)}</p>
-          <nav aria-label="Cuprinsul paginii"><ol class="nav-submenu-list">${items}</ol></nav>
-        </div>
-      </div>`;
+function desktopDirect(item) {
+  return `      <a href="${escapeHtml(item.href)}" class="nav-primary-link" data-nav-destination="${escapeHtml(item.id)}" ${analyticsAttributes(item, "desktop_nav", item.id)}>${escapeHtml(item.label)}</a>`;
 }
 
 function mobileGroup(group) {
@@ -134,15 +124,8 @@ function mobileProgramGroup(group, config, programs) {
       </section>`;
 }
 
-function mobileHomepageToc(config) {
-  const toc = config.homepageToc;
-  const items = toc.items.map((item) => `            <li><a href="${escapeHtml(item.href)}" data-homepage-toc-link-mobile ${analyticsAttributes(item, "mobile_homepage_toc", "cuprins")}>${escapeHtml(item.label)}</a></li>`).join("\n");
-  return `      <section class="mobile-disclosure mobile-homepage-toc" data-mobile-disclosure data-nav-group="cuprins" data-homepage-navbar-toc hidden>
-        <button class="mobile-disclosure-btn" type="button" id="mobile-homepage-toc-trigger" aria-expanded="false" aria-controls="mobile-homepage-toc-panel" data-analytics-event="nav_click" data-analytics-component="mobile_nav_disclosure" data-analytics-cta-id="nav_cuprins_toggle_mobile">
-          ${escapeHtml(toc.label)} <span class="arrow" aria-hidden="true"></span>
-        </button>
-        <div class="mobile-disclosure-panel" id="mobile-homepage-toc-panel" aria-labelledby="mobile-homepage-toc-trigger" hidden><ul>${items}</ul></div>
-      </section>`;
+function mobileDirect(item) {
+  return `    <a href="${escapeHtml(item.href)}" class="mobile-contact mobile-primary-link" data-nav-destination="${escapeHtml(item.id)}" ${analyticsAttributes(item, "mobile_nav", item.id)}>${escapeHtml(item.label)}</a>`;
 }
 
 function logo() {
@@ -172,17 +155,15 @@ function whatsappDialog() {
 }
 
 function renderHeader(config = loadConfig(), programs = loadProgramConfig().programs) {
-  const groups = config.primaryDestinations.filter((item) => Array.isArray(item.items));
-  const contact = config.primaryDestinations.find((item) => item.id === "contact");
   const cta = config.cta;
   return `<!-- GLOBAL_HEADER_START --><link rel="stylesheet" href="/assets/global-header.css?v=${ASSET_VERSION}">
 <nav id="navbar" aria-label="Navigare principală" data-navigation-config="config/main-navigation.json">
   <div class="nav-container">
     ${logo()}
     <div class="nav-links" data-desktop-navigation>
-${desktopHomepageToc(config)}
-${groups.map((group) => group.id === "programe" ? desktopProgramGroup(group, config, programs) : desktopGroup(group)).join("\n")}
-      <a href="${escapeHtml(contact.href)}" class="nav-primary-link" data-nav-destination="contact" ${analyticsAttributes(contact, "desktop_nav", "contact")}>${escapeHtml(contact.label)}</a>
+${config.primaryDestinations.map((item) => Array.isArray(item.items)
+    ? (item.id === "programe" ? desktopProgramGroup(item, config, programs) : desktopGroup(item))
+    : desktopDirect(item)).join("\n")}
       <a href="${escapeHtml(cta.href)}" class="nav-cta" data-analytics-event="cta_click" data-analytics-component="desktop_nav" data-analytics-cta-id="${escapeHtml(cta.analyticsId)}_desktop" data-analytics-target="${escapeHtml(cta.href)}" data-analytics-cta-view="true" data-analytics-copy-variant="p1_02">${escapeHtml(cta.label)}</a>
     </div>
     <div class="nav-mobile-actions">
@@ -193,9 +174,9 @@ ${groups.map((group) => group.id === "programe" ? desktopProgramGroup(group, con
 </nav>
 <div id="mobileMenu" aria-label="Meniu principal mobil" hidden>
   <nav class="mobile-links" aria-label="Destinații principale">
-${mobileHomepageToc(config)}
-${groups.map((group) => group.id === "programe" ? mobileProgramGroup(group, config, programs) : mobileGroup(group)).join("\n")}
-    <a href="${escapeHtml(contact.href)}" class="mobile-contact" data-nav-destination="contact" ${analyticsAttributes(contact, "mobile_nav", "contact")}>${escapeHtml(contact.label)}</a>
+${config.primaryDestinations.map((item) => Array.isArray(item.items)
+    ? (item.id === "programe" ? mobileProgramGroup(item, config, programs) : mobileGroup(item))
+    : mobileDirect(item)).join("\n")}
     <a href="${escapeHtml(cta.href)}" class="mobile-cta" data-analytics-event="cta_click" data-analytics-component="mobile_nav" data-analytics-cta-id="${escapeHtml(cta.analyticsId)}_mobile" data-analytics-target="${escapeHtml(cta.href)}" data-analytics-cta-view="true" data-analytics-copy-variant="p1_02">${escapeHtml(cta.label)}</a>
   </nav>
 </div>
@@ -221,10 +202,10 @@ CTA separat: **${config.cta.label}** → \`${config.cta.href}\`
 |---|---|---|
 ${rows}
 
-` + "```mermaid\ngraph TD\n  NAV[\"Navigare principală\"] --> S[\"Servicii\"]\n  NAV --> P[\"Programe\"]\n  NAV --> I[\"Instrumente\"]\n  NAV --> G[\"Ghiduri\"]\n  NAV --> D[\"Despre FABER\"]\n  NAV --> C[\"Contact\"]\n  NAV -. CTA separat .-> V[\"Începe verificarea proiectului\"]\n```\n" + `
+` + "```mermaid\ngraph TD\n  NAV[\"Navigare principală\"] --> S[\"Servicii\"]\n  NAV --> P[\"Programe\"]\n  NAV --> SO[\"Calculator SO\"]\n  NAV --> D[\"Despre FABER\"]\n  NAV --> C[\"Contact\"]\n  NAV -. CTA separat .-> V[\"Începe verificarea proiectului\"]\n```\n" + `
 ## Reguli
 
-- Desktop: cinci disclosure-uri semantice, Contact direct și CTA separat.
+- Desktop: trei disclosure-uri semantice, Calculator SO și Contact ca linkuri directe, plus CTA separat.
 - Mobil: butoane disclosure reale cu \`aria-expanded\`; linkurile nu deschid accidental grupurile.
 - Maximum ${config.policy.maxVisibleItemsPerGroup} linkuri vizibile în fiecare grup.
 - Navigarea nu conține statusuri, etichete de status, date de verificare sau valori de program.
@@ -246,7 +227,7 @@ function run({ check = false } = {}) {
     }
   }
   if (stale.length) throw new Error(`Headerul generat este expirat: ${stale.join(", ")}`);
-  console.log(`${check ? "PASS" : "GENERATED"}: 6 destinații principale, ${config.primaryDestinations.filter((item) => item.items).reduce((sum, item) => sum + item.items.length, 0)} linkuri secundare, CTA separat.`);
+  console.log(`${check ? "PASS" : "GENERATED"}: ${config.primaryDestinations.length} destinații principale, ${config.primaryDestinations.filter((item) => item.items).reduce((sum, item) => sum + item.items.length, 0)} linkuri secundare, CTA separat.`);
 }
 
 if (require.main === module) {

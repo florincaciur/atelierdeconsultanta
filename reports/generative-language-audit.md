@@ -1,9 +1,12 @@
 # Audit editorial al limbajului generativ
 
-Generat: 2026-07-13T10:13:14.931Z
-Pagini indexabile analizate: 102
-Pagini cu observații: 15
-Observații totale: 16
+Generat: 2026-08-09T12:28:49.412Z
+
+Pagini indexabile analizate: 100
+
+Pagini cu observații: 22
+
+Observații totale: 28
 
 Instrumentul raportează formulările și tiparele; nu modifică HTML-ul. Fragmentele sunt păstrate integral în CSV și în secțiunile de mai jos.
 
@@ -11,23 +14,57 @@ Instrumentul raportează formulările și tiparele; nu modifică HTML-ul. Fragme
 
 | Severitate | Număr |
 | --- | ---: |
-| medie | 10 |
-| scăzută | 6 |
+| scăzută | 7 |
+| medie | 21 |
 
 ## Distribuție după categorie
 
 | Categorie | Număr |
 | --- | ---: |
-| concluzie_repetitivă | 5 |
-| propoziții_simetrice | 4 |
-| început_repetat_de_paragraf | 2 |
-| liniuțe_lungi_excesive | 2 |
+| concluzie_repetitivă | 15 |
+| liniuțe_lungi_excesive | 4 |
+| început_repetat_de_paragraf | 3 |
+| propoziții_simetrice | 3 |
 | enumerare_abstractă | 2 |
 | promisiune_exhaustivă | 1 |
 
+## /
+
+### 1. liniuțe_lungi_excesive — severitate scăzută
+
+- Fișier: `index.html`
+- Fragment exact:
+
+> Verificare prudentă, documentată și interdisciplinară — consultanță și proiectare — înainte de dosar. Analizăm forma solicitantului, activitatea sau exploatația, amplasamentul, investiția, bugetul și documentele. Stabilim ce program poate fi potrivit, ce condiții trebuie demonstrate și ce riscuri pot opri depunerea. Dacă proiectul continuă, corelăm cererea de finanțare cu anexele și documentația tehnică.
+
+- Motiv: Paragraful folosește 2 liniuțe lungi și comprimă explicații care ar trebui delimitate procedural.
+- Recomandare: Împarte ideea în propoziții directe sau într-o listă de criterii, fără a schimba ierarhia vizuală.
+
+## /afir-autoconsum-agroalimentar
+
+### 1. liniuțe_lungi_excesive — severitate scăzută
+
+- Fișier: `afir-autoconsum-agroalimentar.html`
+- Fragment exact:
+
+> Ghidul V7 separă trei categorii de solicitanți. Prima include întreprinderile din sectorul agricol — microîntreprinderi, întreprinderi mici, mijlocii și mari, inclusiv PFA, II și IF — precum și cooperative agricole, societăți cooperative agricole și societăți agricole care dețin active fizice de producție și/sau procesare a produselor agroalimentare. A doua categorie cuprinde întreprinderile din industria alimentară, legal constituite și înregistrate la ONRC.
+
+- Motiv: Paragraful folosește 2 liniuțe lungi și comprimă explicații care ar trebui delimitate procedural.
+- Recomandare: Împarte ideea în propoziții directe sau într-o listă de criterii, fără a schimba ierarhia vizuală.
+
 ## /apeluri-gal
 
-### 1. început_repetat_de_paragraf — severitate medie
+### 1. concluzie_repetitivă — severitate medie
+
+- Fișier: `apeluri-gal/index.html`
+- Fragment exact:
+
+> Sursa oficială: AFIR și Grupurile de Acțiune Locală — DR-36 LEADER și ghidurile locale ale GAL-urilor.
+
+- Motiv: Concluzia reia vocabularul introducerii (69% suprapunere) fără o decizie sau un pas nou.
+- Recomandare: Încheie cu documentul care trebuie verificat, o limită factuală sau următorul pas procedural.
+
+### 2. început_repetat_de_paragraf — severitate medie
 
 - Fișier: `apeluri-gal/index.html`
 - Fragment exact:
@@ -37,7 +74,7 @@ Instrumentul raportează formulările și tiparele; nu modifică HTML-ul. Fragme
 - Motiv: Trei paragrafe succesive încep cu aceeași structură, semn al unei redactări mecanice.
 - Recomandare: Reordonează paragrafele după criteriu, dovadă și consecință; variază începutul numai când logica o cere.
 
-### 2. promisiune_exhaustivă — severitate medie
+### 3. promisiune_exhaustivă — severitate medie
 
 - Fișier: `apeluri-gal/index.html`
 - Fragment exact:
@@ -46,6 +83,18 @@ Instrumentul raportează formulările și tiparele; nu modifică HTML-ul. Fragme
 
 - Motiv: Promite exhaustivitate fără să poată acoperi toate versiunile și clarificările oficiale. Expresie detectată: „Ghid complet”.
 - Recomandare: Precizează versiunea documentului și subiectele efectiv acoperite.
+
+## /autoconsum-public-fotovoltaice-institutii-publice
+
+### 1. concluzie_repetitivă — severitate medie
+
+- Fișier: `autoconsum-public-fotovoltaice-institutii-publice.html`
+- Fragment exact:
+
+> Sursa oficială: Guvernul României / autoritatea finanțatoare competentă — Actul normativ privind autoconsumul pentru entități publice.
+
+- Motiv: Concluzia reia vocabularul introducerii (72% suprapunere) fără o decizie sau un pas nou.
+- Recomandare: Încheie cu documentul care trebuie verificat, o limită factuală sau următorul pas procedural.
 
 ## /blog
 
@@ -59,26 +108,17 @@ Instrumentul raportează formulările și tiparele; nu modifică HTML-ul. Fragme
 - Motiv: Paragraful folosește 2 liniuțe lungi și comprimă explicații care ar trebui delimitate procedural.
 - Recomandare: Împarte ideea în propoziții directe sau într-o listă de criterii, fără a schimba ierarhia vizuală.
 
-## Remediere editorială manuală
+## /calculator-soc
 
-După audit au fost rescrise manual numai paginile prioritare de mai jos. Instrumentul a fost rulat din nou după remediere; niciuna dintre aceste rute nu mai are observații, iar scanarea completă are zero constatări cu severitate ridicată.
+### 1. liniuțe_lungi_excesive — severitate scăzută
 
-| Rută | Intervenție editorială principală |
-| --- | --- |
-| `/` | Introducere bazată pe verificarea solicitantului, CAEN, amplasament, buget și documente; servicii și FAQ delimitate concret. |
-| `/verificare-eligibilitate-fonduri-europene` | Criterii, documente, necorelări și consecințele actelor lipsă; eliminate exemplele financiare universale. |
-| `/calculator-soc` | Rolul coeficienților și al documentelor agricole; scenarii marcate drept metodă, nu rezultate ale clienților. |
-| `/consultanta-fonduri-europene` | Etape contractuale, limite, riscuri și surse; eliminate pragurile și procentele generice. |
-| `/dr12-afir` | Ghid consultativ separat de condițiile finale; beneficiari, SO, acte, riscuri și sursă AFIR. |
-| `/dr14` | Statut consultativ, praguri SO pe componente, proporționalitatea investiției și documentele fermei. |
-| `/por-adr-nord-est` | Hub regional separat de apelurile concrete; localizare, CAEN, matrice și documente, fără termen de răspuns inventat. |
-| `/afir-autoconsum-agroalimentar` | Apel deschis și Ghid V7, consum, amplasament, soluție tehnică și consecințele necorelării. |
-| `/femeia-antreprenor-2026` | Program național, fără clasificare europeană; condițiile ediției 2026 marcate ca neconfirmate până la procedura finală. |
-| `/e-move` | Ghid consultativ, racordare, drept asupra amplasamentului, operare și condiții care așteaptă forma finală. |
-| `/despre-faber` | Metodă, limite și date publice verificabile; eliminate afirmațiile despre rezultate și proiecte anonimizate. |
-| `/metodologie-verificare-eligibilitate` | Matrice criteriu–dovadă–statut–risc, exemple de necorelare și efectul documentelor lipsă. |
+- Fișier: `calculator-soc.html`
+- Fragment exact:
 
-Excepțiile sunt acceptate numai în `config/generative-language-exceptions.json`, pentru `official_name` sau `verbatim_quote`, cu rută, categorie, fragment exact, motiv și sursă.
+> Sursa oficială: AFIR — Lista detaliată a coeficienților standard output — SOC 2020 — lista AFIR noiembrie 2024.
+
+- Motiv: Paragraful folosește 3 liniuțe lungi și comprimă explicații care ar trebui delimitate procedural.
+- Recomandare: Împarte ideea în propoziții directe sau într-o listă de criterii, fără a schimba ierarhia vizuală.
 
 ## /cheltuieli-eligibile-pocidif-21
 
@@ -92,17 +132,73 @@ Excepțiile sunt acceptate numai în `config/generative-language-exceptions.json
 - Motiv: Paragraful acumulează concepte abstracte, dar nu indică un criteriu, un document, o limită sau un exemplu verificabil.
 - Recomandare: Păstrează numai ideile necesare și leagă fiecare afirmație de un criteriu, document sau exemplu de necorelare.
 
-## /dr12-vs-dr14
+## /digitalizare-imm
 
-### 1. propoziții_simetrice — severitate scăzută
+### 1. concluzie_repetitivă — severitate medie
 
-- Fișier: `dr12-vs-dr14.html`
+- Fișier: `digitalizare-imm.html`
 - Fragment exact:
 
-> Dacă rezultatul comparatiei este DR12, urmatorul pas este verificarea rolului solicitantului, a exploatației și a planului de dezvoltare. Dacă rezultatul este DR14, urmatorul pas este verificarea fermei mici, a investiției proportionale și a capacitatii de implementare. Dacă rezultatul este "inca nu", atunci proiectul are nevoie de documente sau de asteptarea ghidului activ.
+> Depunerea nu este deschisă. Ordinul MIPE nr. 607/28.04.2026 actualizează implementarea proiectelor existente și nu deschide un apel nou.
 
-- Motiv: Trei propoziții din același paragraf pornesc cu aceeași structură și creează un ritm mecanic.
-- Recomandare: Grupează informația după decizia practică, nu după o structură sintactică repetată.
+- Motiv: Concluzia reia vocabularul introducerii (87% suprapunere) fără o decizie sau un pas nou.
+- Recomandare: Încheie cu documentul care trebuie verificat, o limită factuală sau următorul pas procedural.
+
+### 2. concluzie_repetitivă — severitate medie
+
+- Fișier: `digitalizare-imm.html`
+- Fragment exact:
+
+> Sursa oficială: Ministerul Investițiilor și Proiectelor Europene — Ordinul MIPE nr. 607/28.04.2026; modifică Ghidul aprobat prin Ordinul nr. 3185/2022.
+
+- Motiv: Concluzia reia vocabularul introducerii (79% suprapunere) fără o decizie sau un pas nou.
+- Recomandare: Încheie cu documentul care trebuie verificat, o limită factuală sau următorul pas procedural.
+
+## /digitalizare-imm-erp-crm-cloud
+
+### 1. început_repetat_de_paragraf — severitate medie
+
+- Fișier: `digitalizare-imm-erp-crm-cloud.html`
+- Fragment exact:
+
+> ERP, CRM, cloud și echipamentele IT se justifică prin procese, utilizatori și rezultate. Eligibilitatea depinde de ghidul apelului. ERP-ul, CRM-ul și cloud-ul trebuie explicate prin procese reale, nu prin jargon IT. Oferta trebuie să arate ce se livrează, ce problemă rezolvă, cum se implementează și cum se leagă de activitatea firmei. ERP, CRM, cloud și echipamente IT pot fi eligibile în anumite condiții, dar fiecare apel are propriile reguli. Ghidul activ decide ce se poate include și ce documente sunt necesare.
+
+- Motiv: Trei paragrafe succesive încep cu aceeași structură, semn al unei redactări mecanice.
+- Recomandare: Reordonează paragrafele după criteriu, dovadă și consecință; variază începutul numai când logica o cere.
+
+## /dr12-afir
+
+### 1. concluzie_repetitivă — severitate medie
+
+- Fișier: `dr12-afir/index.html`
+- Fragment exact:
+
+> Informația este bazată pe versiunea consultativă; condițiile se pot modifica înaintea ghidului final și a deschiderii apelului.
+
+- Motiv: Concluzia reia vocabularul introducerii (71% suprapunere) fără o decizie sau un pas nou.
+- Recomandare: Încheie cu documentul care trebuie verificat, o limită factuală sau următorul pas procedural.
+
+### 2. concluzie_repetitivă — severitate medie
+
+- Fișier: `dr12-afir/index.html`
+- Fragment exact:
+
+> Sursa oficială: Agenția pentru Finanțarea Investițiilor Rurale (AFIR) — Versiune consultativă publicată la 19.03.2026.
+
+- Motiv: Concluzia reia vocabularul introducerii (73% suprapunere) fără o decizie sau un pas nou.
+- Recomandare: Încheie cu documentul care trebuie verificat, o limită factuală sau următorul pas procedural.
+
+## /dr14
+
+### 1. concluzie_repetitivă — severitate medie
+
+- Fișier: `dr14/index.html`
+- Fragment exact:
+
+> Sursa oficială: Agenția pentru Finanțarea Investițiilor Rurale (AFIR) — Ghidul Solicitantului DR 14 – varianta finală, Sesiunea 2026, publicat la 06.08.2026.
+
+- Motiv: Concluzia reia vocabularul introducerii (78% suprapunere) fără o decizie sau un pas nou.
+- Recomandare: Încheie cu documentul care trebuie verificat, o limită factuală sau următorul pas procedural.
 
 ## /fonduri-europene-caen/4321-instalatii-electrice
 
@@ -111,7 +207,7 @@ Excepțiile sunt acceptate numai în `config/generative-language-exceptions.json
 - Fișier: `fonduri-europene-caen/4321-instalatii-electrice/index.html`
 - Fragment exact:
 
-> programe regionale pentru IMM; Fondul pentru Modernizare, dacă solicitantul și proiectul se incadreaza; Digitalizare IMM
+> programe regionale pentru IMM; Fondul pentru Modernizare, dacă solicitantul și proiectul se încadrează; Digitalizare IMM
 
 - Motiv: Concluzia reia vocabularul introducerii (100% suprapunere) fără o decizie sau un pas nou.
 - Recomandare: Încheie cu documentul care trebuie verificat, o limită factuală sau următorul pas procedural.
@@ -123,7 +219,7 @@ Excepțiile sunt acceptate numai în `config/generative-language-exceptions.json
 - Fișier: `fonduri-europene-caen/5610-restaurante/index.html`
 - Fragment exact:
 
-> programe regionale pentru IMM; Start-Up Nation; eficiență energetica și digitalizare, dacă apelul permite
+> programe regionale pentru IMM; Start-Up Nation; eficiență energetică și digitalizare, dacă apelul permite
 
 - Motiv: Concluzia reia vocabularul introducerii (100% suprapunere) fără o decizie sau un pas nou.
 - Recomandare: Încheie cu documentul care trebuie verificat, o limită factuală sau următorul pas procedural.
@@ -135,14 +231,24 @@ Excepțiile sunt acceptate numai în `config/generative-language-exceptions.json
 - Fișier: `fonduri-europene-nord-est/index.html`
 - Fragment exact:
 
-> Un proiect din Iași, Suceava, Bacău, Botosani, Neamt sau Vaslui nu intra automat intr-un program regional. Dacă investiția este agricolă sau rurala, AFIR poate fi ruta principala. Dacă investiția este digitalizare, energie sau antreprenoriat, poate fi mai potrivit un program national. Dacă investiția este productiva pentru o microintreprindere sau IMM local, merita verificat Programul Regional Nord-Est și apelurile active.
+> Un proiect din Iași, Suceava, Bacău, Botosani, Neamt sau Vaslui nu intra automat într-un program regional. Dacă investiția este agricolă sau rurală, AFIR poate fi ruta principală. Dacă investiția este digitalizare, energie sau antreprenoriat, poate fi mai potrivit un program national. Dacă investiția este productiva pentru o microintreprindere sau IMM local, merită verificat Programul Regional Nord-Est și apelurile active.
 
 - Motiv: Trei propoziții din același paragraf pornesc cu aceeași structură și creează un ritm mecanic.
 - Recomandare: Grupează informația după decizia practică, nu după o structură sintactică repetată.
 
 ## /gal-afir
 
-### 1. început_repetat_de_paragraf — severitate medie
+### 1. concluzie_repetitivă — severitate medie
+
+- Fișier: `gal-afir/index.html`
+- Fragment exact:
+
+> Sursa oficială: Agenția pentru Finanțarea Investițiilor Rurale (AFIR) — Pagina oficială AFIR LEADER și documentele DR-36.
+
+- Motiv: Concluzia reia vocabularul introducerii (67% suprapunere) fără o decizie sau un pas nou.
+- Recomandare: Încheie cu documentul care trebuie verificat, o limită factuală sau următorul pas procedural.
+
+### 2. început_repetat_de_paragraf — severitate medie
 
 - Fișier: `gal-afir/index.html`
 - Fragment exact:
@@ -159,7 +265,7 @@ Excepțiile sunt acceptate numai în `config/generative-language-exceptions.json
 - Fișier: `ghiduri/index.html`
 - Fragment exact:
 
-> Un fermier are nevoie de documente diferite față de un IMM din servicii sau față de un start-up. De aceea, resursele trebuie citite prin filtrul beneficiarului, nu doar prin titlul programului. O pagina despre agricultura trebuie să ajungă la SO/SOC, acte de folosință și investiții agricole. O pagina despre digitalizare trebuie să ajungă la procese, hardware, software, securitate și indicatori. O pagina despre programe regionale trebuie să verifice regiunea, codul CAEN, punctul de lucru și cheltuielile productive.
+> Un fermier are nevoie de documente diferite față de un IMM din servicii sau față de un start-up. De aceea, resursele trebuie citite prin filtrul beneficiarului, nu doar prin titlul programului. O pagină despre agricultură trebuie să ajungă la SO/SOC, acte de folosință și investiții agricole. O pagină despre digitalizare trebuie să ajungă la procese, hardware, software, securitate și indicatori. O pagină despre programe regionale trebuie să verifice regiunea, codul CAEN, punctul de lucru și cheltuielile productive.
 
 - Motiv: Trei propoziții din același paragraf pornesc cu aceeași structură și creează un ritm mecanic.
 - Recomandare: Grupează informația după decizia practică, nu după o structură sintactică repetată.
@@ -171,7 +277,7 @@ Excepțiile sunt acceptate numai în `config/generative-language-exceptions.json
 - Fișier: `intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm/index.html`
 - Fragment exact:
 
-> Pot fi eligibile software, echipamente IT, servicii cloud, securitate cibernetica, implementare și instruire, dacă sunt permise de apel și justificate prin proiect.
+> Pot fi eligibile software, echipamente IT, servicii cloud, securitate cibernetică, implementare și instruire, dacă sunt permise de apel și justificate prin proiect.
 
 - Motiv: Concluzia reia vocabularul introducerii (100% suprapunere) fără o decizie sau un pas nou.
 - Recomandare: Încheie cu documentul care trebuie verificat, o limită factuală sau următorul pas procedural.
@@ -195,7 +301,7 @@ Excepțiile sunt acceptate numai în `config/generative-language-exceptions.json
 - Fișier: `intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene/index.html`
 - Fragment exact:
 
-> Cofinantarea se calculeaza pornind de la valoarea eligibila, procentul nerambursabil și cheltuielile neeligibile, care trebuie acoperite separat de beneficiar.
+> Cofinantarea se calculează pornind de la valoarea eligibilă, procentul nerambursabil și cheltuielile neeligibile, care trebuie acoperite separat de beneficiar.
 
 - Motiv: Concluzia reia vocabularul introducerii (100% suprapunere) fără o decizie sau un pas nou.
 - Recomandare: Încheie cu documentul care trebuie verificat, o limită factuală sau următorul pas procedural.
@@ -226,12 +332,22 @@ Excepțiile sunt acceptate numai în `config/generative-language-exceptions.json
 
 ## /pro-infra
 
-### 1. liniuțe_lungi_excesive — severitate scăzută
+### 1. concluzie_repetitivă — severitate medie
 
-- Fișier: `pro-infra/index.html`
+- Fișier: `pro-infra.html`
 - Fragment exact:
 
-> PRO INFRA sprijină investițiile care cresc eficiența energetică a capacităților industriale folosite pentru producerea materiilor prime, materialelor și produselor necesare proiectelor de infrastructură de transport. Schema face parte din programul-cheie 9 al Fondului pentru Modernizare — eficiență energetică în transporturi — și urmărește reducerea consumului de energie și a emisiilor de gaze cu efect de seră în procesele de producție.
+> Schema este aprobată, dar depunerea nu este deschisă. Valorile și calendarul apelului nu se publică până la apariția documentelor operaționale oficiale.
 
-- Motiv: Paragraful folosește 2 liniuțe lungi și comprimă explicații care ar trebui delimitate procedural.
-- Recomandare: Împarte ideea în propoziții directe sau într-o listă de criterii, fără a schimba ierarhia vizuală.
+- Motiv: Concluzia reia vocabularul introducerii (93% suprapunere) fără o decizie sau un pas nou.
+- Recomandare: Încheie cu documentul care trebuie verificat, o limită factuală sau următorul pas procedural.
+
+### 2. concluzie_repetitivă — severitate medie
+
+- Fișier: `pro-infra.html`
+- Fragment exact:
+
+> Sursa oficială: Ministerul Transporturilor și Infrastructurii — Ordinul MTI nr. 2.292/29.12.2025, publicat în Monitorul Oficial nr. 20/14.01.2026; formă consolidată 12.02.2026.
+
+- Motiv: Concluzia reia vocabularul introducerii (79% suprapunere) fără o decizie sau un pas nou.
+- Recomandare: Încheie cu documentul care trebuie verificat, o limită factuală sau următorul pas procedural.

@@ -9,8 +9,8 @@ const path = require("path");
 const ROOT = path.resolve(__dirname, "..");
 const CONFIG_PATH = path.join(ROOT, "config", "calculator-so-methodology.json");
 const REPORT_PATH = path.join(ROOT, "reports", "p1-20-calculator-so-validari.md");
-const STYLE_HREF = "/assets/calculator-so-methodology.css?v=20260722-1";
-const SCRIPT_SRC = "/assets/calculator-so-methodology.js?v=20260722-1";
+const STYLE_HREF = "/assets/calculator-so-methodology.css?v=20260809-1";
+const SCRIPT_SRC = "/assets/calculator-so-methodology.js?v=20260809-1";
 const METHOD_START = "<!-- P1_20_SO_METHODOLOGY_START -->";
 const METHOD_END = "<!-- P1_20_SO_METHODOLOGY_END -->";
 const INPUT_START = "<!-- P1_20_SO_INPUT_HELP_START -->";
@@ -134,14 +134,21 @@ function renderMethodology(config) {
       </article>
     </div>
 
-    <h2>Exemple de calcul cu date fictive</h2>
-    <p>Exemplele demonstrează formula și rotunjirea interfeței. Datele despre exploatații sunt fictive; coeficienții provin din lista oficială indicată.</p>
-    <div class="so-example-grid">
+    <div class="so-disclosures">
+    <details class="so-page-disclosure">
+      <summary>Exemple de calcul cu date fictive <span aria-hidden="true"></span></summary>
+      <div class="so-page-disclosure__body">
+      <p>Exemplele demonstrează formula și rotunjirea interfeței. Datele despre exploatații sunt fictive; coeficienții provin din lista oficială indicată.</p>
+      <div class="so-example-grid">
 ${renderExamples(config)}
-    </div>
+      </div></div>
+    </details>
 
-    <h2>Ce date introduci și ce presupune instrumentul?</h2>
-    <div class="so-limit-grid">
+    <details class="so-page-disclosure">
+      <summary>Datele introduse, ipotezele și limitele instrumentului <span aria-hidden="true"></span></summary>
+      <div class="so-page-disclosure__body">
+      <h2>Ce date introduci și ce presupune instrumentul?</h2>
+      <div class="so-limit-grid">
       <article class="so-limit-card">
         <h3>Date introduse de utilizator</h3>
         <ul>
@@ -158,10 +165,10 @@ ${renderExamples(config)}
           <li>calculul intern păstrează zecimalele, iar totalul vizibil este rotunjit la euro.</li>
         </ul>
       </article>
-    </div>
+      </div>
 
     <h2>Ce nu poate decide Calculatorul SO?</h2>
-    <div class="so-limit-grid">
+      <div class="so-limit-grid">
       <article class="so-limit-card">
         <h3>Nu confirmă încadrarea</h3>
         <p>Totalul nu decide singur dacă solicitantul se încadrează în DR 12, DR 14 sau altă intervenție. Forma solicitantului, istoricul, amplasamentul, sectorul, condițiile eliminatorii și versiunea finală a documentelor pot schimba concluzia.</p>
@@ -170,33 +177,39 @@ ${renderExamples(config)}
         <h3>Nu înlocuiește evidențele</h3>
         <p>Instrumentul nu verifică IACS/APIA, ANSVSA, ANZ, registrul agricol, actele de folosință sau concordanța dintre baze. Nu poate stabili nici grantul, contribuția proprie, cash-flow-ul sau punctajul.</p>
       </article>
-    </div>
+      </div></div>
+    </details>
 
-    <h2>Ce documente dovedesc datele folosite?</h2>
-    <ul class="so-document-list">
+    <details class="so-page-disclosure">
+      <summary>Documentele care dovedesc datele folosite <span aria-hidden="true"></span></summary>
+      <div class="so-page-disclosure__body"><ul class="so-document-list">
       <li>înregistrările IACS/APIA din anul depunerii pentru suprafețe și culturi;</li>
       <li>înregistrările ANSVSA/DSVSA și, unde este cazul, ANZ pentru animale și familii de albine;</li>
       <li>adeverința medicului veterinar pentru păsări sau animale mici care nu figurează în bazele aplicabile;</li>
       <li>actele de proprietate ori folosință și documentele exploatației cerute de intervenție;</li>
       <li>tabelul SOC din Cererea de finanțare aplicabilă apelului ales.</li>
-    </ul>
+      </ul></div>
+    </details>
 
-    <h2>Surse, autor, revizie și changelog</h2>
-    <ul class="so-source-list">
+    <details class="so-page-disclosure">
+      <summary>Surse, autor, revizie și istoric <span aria-hidden="true"></span></summary>
+      <div class="so-page-disclosure__body"><ul class="so-source-list">
 ${renderSources(config)}
-    </ul>
+      </ul>
     <div class="so-review-card so-review-card--approved">
       <h3>Autor și revizie</h3>
       <p><strong>Autor:</strong> FABER – Atelier de Consultanță, autor organizațional.</p>
       <p><strong>Revizie:</strong> Echipa editorială și tehnică FABER — metodă, sursă, UX și teste, la <time datetime="${escapeHtml(config.reviewedAt)}">${escapeHtml(displayDate(config.reviewedAt))}</time>.</p>
-      <p><strong>Changelog ${escapeHtml(displayDate(config.reviewedAt))}:</strong> setul legacy fără proveniență a fost înlocuit cu categoriile SOC 2020 din lista AFIR noiembrie 2024; formula de înmulțire și însumare a rămas neschimbată; verdictul automat de program a fost eliminat.</p>
+      <p><strong>Changelog ${escapeHtml(displayDate(config.reviewedAt))}:</strong> setul legacy fără proveniență a fost înlocuit cu categoriile SOC 2020 din lista AFIR noiembrie 2024; formula a rămas neschimbată; rezultatul oferă numai o sugestie prudentă de program, care necesită verificarea documentelor.</p>
     </div>
     <aside class="so-review-card" aria-labelledby="so-validari-umane">
       <h3 id="so-validari-umane">Validări care rămân obligatorii pentru un dosar</h3>
       <ul>
 ${config.pendingHumanValidation.map((item) => `        <li>${escapeHtml(item)}</li>`).join("\n")}
       </ul>
-    </aside>
+      </aside></div>
+    </details>
+    </div>
   </div>
 </section>
 ${METHOD_END}`;
@@ -303,12 +316,18 @@ function renderCalculatorScript(config) {
 
   function updateStatusBadges(so) {
     const statusBadges = document.getElementById('status-badges');
-    const statusKey = so > 0 ? 'orientation_required' : 'empty';
+    const suggestion = document.getElementById('so-program-suggestion');
+    const statusKey = so <= 0 ? 'empty' : so < 2000 ? 'below_reference' : so < 12000 ? 'dr14_reference' : 'dr12_reference';
     if (statusBadges.dataset.statusKey === statusKey) return;
     statusBadges.dataset.statusKey = statusKey;
     statusBadges.innerHTML = so > 0
       ? '<span class="status-badge status-orange">ⓘ Rezultat orientativ — verifică documentele și intervenția</span>'
       : '<span class="status-badge status-orange">Adaugă culturi sau animale</span>';
+    if (!suggestion) return;
+    if (so <= 0) suggestion.innerHTML = '<strong>Sugestia de program va apărea după introducerea datelor.</strong><span>Calculatorul nu poate stabili eligibilitatea fără total și fără documentele exploatației.</span>';
+    else if (so < 2000) suggestion.innerHTML = '<strong>Reper de verificat: total sub pragurile uzuale DR 14.</strong><span>Verifică unitățile, categoriile și toate componentele exploatației; rezultatul nu exclude alte intervenții.</span>';
+    else if (so < 12000) suggestion.innerHTML = '<strong>Program de verificat cu prioritate: <a href="/dr14">DR 14 – Ferme mici</a>.</strong><span>Pragul minim diferă în funcție de sector, iar SO singur nu confirmă solicitantul, punctajul sau eligibilitatea.</span>';
+    else suggestion.innerHTML = '<strong>Programe de verificat: <a href="/dr12-afir">DR 12</a> sau o altă intervenție AFIR.</strong><span>DR 14 vizează ferme până la 11.999 EUR SO; pentru DR 12 trebuie verificate separat profilul fermierului și toate condițiile ghidului.</span>';
   }
 
   function resetCalculator() {
@@ -331,6 +350,7 @@ function renderResult() {
         <div class="result-value" id="total-so" data-so-value="0" data-so-exact-value="0">0</div>
         <div class="result-unit">EUR SO</div>
         <div class="result-status" id="status-badges"></div>
+        <div id="so-program-suggestion" class="so-program-suggestion" aria-live="polite"></div>
         <div id="so-result-explanation" class="so-result-explanation"></div>
         <p><strong>${escapeHtml(DISCLAIMER)}</strong></p>
         <div class="so-result-actions" aria-label="Acțiuni pentru rezultat">
@@ -361,7 +381,7 @@ Versiune coeficienți: **${config.source.version}**
 - ${count} categorii SOC documentate prin cod, coeficient și unitate;
 - formula existentă \`coeficient × cantitate\` și însumarea nu au fost schimbate;
 - totalul este calculat cu zecimale și afișat prin \`Math.round\`;
-- verdictul automat DR 12/DR 14 a fost eliminat deoarece SO nu decide singur programul;
+- rezultatul oferă o sugestie prudentă de program, fără verdict automat de eligibilitate;
 - rezultatul are explicație pe rând, copiere și tipărire fără PII;
 - CTA transmite numai \`source_page\` și \`so_result\` numeric validat.
 
@@ -379,10 +399,14 @@ Aceste puncte nu blochează publicarea metodologiei și a coeficienților oficia
 
 function synchronize(html, config) {
   let next = html.replace(
-    /<script\b[^>]*\bsrc=["']\/assets\/calculator-so-methodology\.js\?v=20260722-1["'][^>]*><\/script>\r?\n?/gu,
+    /<script\b[^>]*\bsrc=["']\/assets\/calculator-so-methodology\.js\?v=[^"']+["'][^>]*><\/script>\r?\n?/gu,
     ""
   );
-  if (!next.includes(STYLE_HREF)) next = next.replace("</head>", `  <link rel="stylesheet" href="${STYLE_HREF}">\n</head>`);
+  next = next.replace(/^[ \t]*<link\b[^>]*href=["']\/assets\/calculator-so-methodology\.css\?v=[^"']+["'][^>]*>\r?\n?/gmu, "");
+  next = next.replace("</head>", `  <link rel="stylesheet" href="${STYLE_HREF}">\n</head>`);
+  next = next.replace(/<body\b([^>]*)>/u, (tag, attributes) => /calculator-refresh-2026/u.test(attributes)
+    ? tag
+    : `<body${attributes.replace(/class=["']([^"']*)["']/u, (full, classes) => `class="${classes} calculator-refresh-2026"`)}>`);
 
   next = replaceManaged(
     next,
@@ -427,6 +451,12 @@ function synchronize(html, config) {
     );
 
   next = next.replace("</body>", `<script src="${SCRIPT_SRC}" defer></script>\n</body>`);
+
+  const calculatorPattern = /<!-- Calculator -->\s*<section\b[^>]*\bid=["']calculator["'][^>]*>[\s\S]*?<\/section>/u;
+  const calculatorBlock = next.match(calculatorPattern)?.[0];
+  if (!calculatorBlock) throw new Error("Nu poate fi mutat calculatorul imediat după banner.");
+  next = next.replace(calculatorPattern, "");
+  next = next.replace(/<\/header>\s*/u, `</header>\n${calculatorBlock.trim()}\n`);
 
   return next;
 }

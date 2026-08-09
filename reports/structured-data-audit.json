@@ -1,28 +1,28 @@
 {
-  "generatedAt": "2026-08-08T18:51:24.657Z",
+  "generatedAt": "2026-08-09T12:23:23.713Z",
   "summary": {
-    "htmlFilesChecked": 181,
-    "indexablePagesChecked": 96,
+    "htmlFilesChecked": 185,
+    "indexablePagesChecked": 100,
     "filesWithIssues": 0,
     "organizationVariants": 1,
     "types": {
-      "Organization": 128,
-      "ProfessionalService": 96,
-      "PostalAddress": 96,
-      "ImageObject": 96,
-      "WebSite": 96,
-      "WebPage": 126,
-      "CreativeWork": 51,
-      "BreadcrumbList": 95,
-      "ListItem": 294,
+      "Organization": 140,
+      "ProfessionalService": 100,
+      "PostalAddress": 100,
+      "ImageObject": 100,
+      "WebSite": 100,
+      "WebPage": 130,
+      "CreativeWork": 59,
+      "BreadcrumbList": 99,
+      "ListItem": 310,
       "Article": 30,
-      "DefinedTerm": 16,
-      "PropertyValue": 140,
-      "DefinedTermSet": 16,
-      "Audience": 12,
-      "FAQPage": 77,
-      "Question": 545,
-      "Answer": 545,
+      "DefinedTerm": 20,
+      "PropertyValue": 180,
+      "DefinedTermSet": 20,
+      "Audience": 16,
+      "FAQPage": 81,
+      "Question": 589,
+      "Answer": 589,
       "Service": 12,
       "AdministrativeArea": 12,
       "WebApplication": 1
@@ -222,6 +222,33 @@
       "issues": []
     },
     {
+      "file": "diaspora-investeste-acasa/index.html",
+      "route": "/diaspora-investeste-acasa",
+      "blocks": 1,
+      "types": {
+        "Organization": 3,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
+        "ImageObject": 1,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 2,
+        "BreadcrumbList": 1,
+        "ListItem": 4,
+        "DefinedTerm": 1,
+        "PropertyValue": 10,
+        "Audience": 1,
+        "DefinedTermSet": 1,
+        "FAQPage": 1,
+        "Question": 10,
+        "Answer": 10
+      },
+      "modified": [
+        "2026-05-27"
+      ],
+      "issues": []
+    },
+    {
       "file": "dr-12-afir-instalarea-tinerilor-fermieri.html",
       "route": "/dr-12-afir-instalarea-tinerilor-fermieri",
       "blocks": 1,
@@ -259,6 +286,60 @@
         "Answer": 3
       },
       "modified": [],
+      "issues": []
+    },
+    {
+      "file": "e-drive/index.html",
+      "route": "/e-drive",
+      "blocks": 1,
+      "types": {
+        "Organization": 3,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
+        "ImageObject": 1,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 2,
+        "BreadcrumbList": 1,
+        "ListItem": 4,
+        "DefinedTerm": 1,
+        "PropertyValue": 10,
+        "Audience": 1,
+        "DefinedTermSet": 1,
+        "FAQPage": 1,
+        "Question": 10,
+        "Answer": 10
+      },
+      "modified": [
+        "2026-02-12"
+      ],
+      "issues": []
+    },
+    {
+      "file": "e-mobility/index.html",
+      "route": "/e-mobility",
+      "blocks": 1,
+      "types": {
+        "Organization": 3,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
+        "ImageObject": 1,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 2,
+        "BreadcrumbList": 1,
+        "ListItem": 4,
+        "DefinedTerm": 1,
+        "PropertyValue": 10,
+        "Audience": 1,
+        "DefinedTermSet": 1,
+        "FAQPage": 1,
+        "Question": 10,
+        "Answer": 10
+      },
+      "modified": [
+        "2025-08-12"
+      ],
       "issues": []
     },
     {
@@ -371,6 +452,33 @@
       "modified": [
         "2026-05-20",
         "2026-05-20"
+      ],
+      "issues": []
+    },
+    {
+      "file": "fondul-modernizare-pc1-stocare/index.html",
+      "route": "/fondul-modernizare-pc1-stocare",
+      "blocks": 1,
+      "types": {
+        "Organization": 3,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
+        "ImageObject": 1,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 2,
+        "BreadcrumbList": 1,
+        "ListItem": 4,
+        "DefinedTerm": 1,
+        "PropertyValue": 10,
+        "Audience": 1,
+        "DefinedTermSet": 1,
+        "FAQPage": 1,
+        "Question": 10,
+        "Answer": 10
+      },
+      "modified": [
+        "2026-05-21"
       ],
       "issues": []
     },
@@ -1223,8 +1331,8 @@
         "ListItem": 3,
         "WebApplication": 1,
         "FAQPage": 1,
-        "Question": 7,
-        "Answer": 7
+        "Question": 11,
+        "Answer": 11
       },
       "modified": [
         "2026-07-22"

@@ -38,24 +38,23 @@ const grouped = config.primaryDestinations.filter((destination) => destination.i
 const expectedLabels = config.primaryDestinations.map(({ label }) => label);
 const programBySlug = new Map(loadProgramConfig().programs.map((program) => [program.slug, program]));
 
-assert.equal(config.primaryDestinations.length, 6, "navigation must expose exactly six primary destinations");
-assert.equal(grouped.length, 5, "five primary destinations must use disclosure groups");
-assert.equal($("#navbar .nav-links").children().first().is("[data-homepage-navbar-toc]"), true, "homepage TOC must be first on desktop");
-assert.equal($("#mobileMenu .mobile-links").children().first().is("[data-homepage-navbar-toc]"), true, "homepage TOC must be first on mobile");
+assert.equal(config.primaryDestinations.length, 5, "navigation must expose exactly five primary destinations");
+assert.equal(grouped.length, 3, "three primary destinations must use disclosure groups");
+assert.equal($("[data-homepage-navbar-toc]").length, 0, "homepage TOC must not be exposed in navigation");
 assert.deepEqual(
-  $("#navbar [data-nav-disclosure]:not([data-homepage-navbar-toc]) > button").map((_, element) => $(element).clone().children().remove().end().text().trim()).get(),
-  expectedLabels.slice(0, 5),
+  $("#navbar [data-nav-disclosure] > button").map((_, element) => $(element).clone().children().remove().end().text().trim()).get(),
+  grouped.map(({ label }) => label),
   "desktop labels must follow the approved order",
 );
 assert.deepEqual(
-  $("#mobileMenu [data-mobile-disclosure]:not([data-homepage-navbar-toc]) > button").map((_, element) => $(element).clone().children().remove().end().text().trim()).get(),
-  expectedLabels.slice(0, 5),
+  $("#mobileMenu [data-mobile-disclosure] > button").map((_, element) => $(element).clone().children().remove().end().text().trim()).get(),
+  grouped.map(({ label }) => label),
   "mobile labels must follow the approved order",
 );
-assert.equal($("#navbar .nav-primary-link").text().trim(), "Contact", "Contact must be the sixth direct destination");
+assert.deepEqual($("#navbar .nav-primary-link").map((_, element) => $(element).text().trim()).get(), ["Calculator SO", "Contact"], "Calculator SO and Contact must be direct destinations");
 assert.equal($("#navbar .nav-cta").text().trim(), config.cta.label, "desktop CTA copy must be canonical");
 assert.equal($("#mobileMenu .mobile-cta").text().trim(), config.cta.label, "mobile CTA copy must be canonical");
-assert.equal($("#navbar, #mobileMenu").text().includes("Blog"), false, "Blog label must be replaced by Ghiduri");
+assert.equal(/\b(?:Instrumente|Ghiduri|Cuprins)\b/u.test($("#navbar, #mobileMenu").text()), false, "removed navigation labels must stay absent");
 assert.equal($("#dropdownPanel [data-program-id]").length, config.programMenu.featuredProgramSlugs.length, "desktop program menu must expose verified measures");
 assert.equal($("#mobile-programe-panel [data-program-id]").length, config.programMenu.featuredProgramSlugs.length, "mobile program menu must expose verified measures");
 $("[data-program-id]").each((_, element) => {

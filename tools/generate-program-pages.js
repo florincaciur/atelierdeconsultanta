@@ -2981,7 +2981,7 @@ function pageHtml(page, config) {
   const relatedCss = (page.related || []).length ? `\n  <link rel="stylesheet" href="/assets/see-also.css" />` : "";
   const toolCss = page.includeTools || page.includeDownloads ? `\n  <link rel="stylesheet" href="/assets/seo-tools.css" />` : "";
   const sourcesCss = (page.sourceKeys || []).length ? `\n  <link rel="stylesheet" href="/assets/official-sources.css" />` : "";
-  const dr14Css = page.slug === "dr14" ? `\n  <link rel="stylesheet" href="/assets/dr14-final.css?v=20260808-1" />` : "";
+  const dr14Css = page.slug === "dr14" ? `\n  <link rel="stylesheet" href="/assets/dr14-final.css?v=20260809-1" />` : "";
   const dr14Js = page.slug === "dr14" ? `\n  <script src="/assets/dr14-final.js?v=20260808-1" defer></script>` : "";
   const extraCss = `${relatedCss}${toolCss}${sourcesCss}${dr14Css}`;
   const extraJs = `${page.includeTools ? `\n  <script src="/assets/seo-tools.js" defer></script>` : ""}${dr14Js}`;

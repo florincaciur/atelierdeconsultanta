@@ -5,13 +5,13 @@
   "source": "sitemap.xml + HTML local + registrele P0",
   "principle": "Un URL canonic are o singură intenție primară, un părinte și o micro-conversie distinctă.",
   "summary": {
-    "canonicalUrlCount": 96,
-    "inventoriedUrlCount": 96,
+    "canonicalUrlCount": 100,
+    "inventoriedUrlCount": 100,
     "byType": {
       "core": 3,
       "ghid": 34,
       "hub": 17,
-      "program": 17,
+      "program": 21,
       "instrument": 2,
       "serviciu": 17,
       "întrebare": 3,
@@ -20,12 +20,12 @@
     },
     "byIntent": {
       "comercială": 17,
-      "informațională": 62,
+      "informațională": 66,
       "navigațională": 14,
       "locală": 3
     },
     "byRecommendation": {
-      "keep": 72,
+      "keep": 76,
       "rewrite": 19,
       "merge": 5
     },
@@ -315,7 +315,7 @@
         "headingCount": 10,
         "faqCount": 5,
         "externalLinkCount": 2,
-        "interactiveControlCount": 14,
+        "interactiveControlCount": 8,
         "governanceState": "NEÎNREGISTRAT",
         "programRegistryState": "NU_ESTE_PROGRAM_ÎN_REGISTRU"
       }
@@ -337,7 +337,7 @@
       "microConversion": "calculation_complete",
       "parent": "/instrumente",
       "competingUrls": [],
-      "demonstrableUniqueValue": "7 controale interactive, 57 subtitluri explicative și 6 linkuri externe.",
+      "demonstrableUniqueValue": "7 controale interactive, 54 subtitluri explicative și 6 linkuri externe.",
       "recommendation": "keep",
       "recommendationTarget": null,
       "recommendationReason": "Rol distinct de instrument, cu o singură intenție primară și conversie proprie.",
@@ -347,7 +347,7 @@
       "evidence": {
         "title": "Calculator SO AFIR 2026 pentru DR12 și DR14 | FABER",
         "metaDescription": "Calculează orientativ dimensiunea economică SO pentru exploatația vegetală sau zootehnică și verifică încadrarea pentru DR12 și DR14.",
-        "headingCount": 57,
+        "headingCount": 54,
         "faqCount": 7,
         "externalLinkCount": 6,
         "interactiveControlCount": 7,
@@ -420,7 +420,7 @@
         "headingCount": 11,
         "faqCount": 0,
         "externalLinkCount": 6,
-        "interactiveControlCount": 14,
+        "interactiveControlCount": 8,
         "governanceState": "NEÎNREGISTRAT",
         "programRegistryState": "NU_ESTE_PROGRAM_ÎN_REGISTRU"
       }
@@ -494,7 +494,7 @@
         "headingCount": 11,
         "faqCount": 0,
         "externalLinkCount": 5,
-        "interactiveControlCount": 14,
+        "interactiveControlCount": 8,
         "governanceState": "NEÎNREGISTRAT",
         "programRegistryState": "NU_ESTE_PROGRAM_ÎN_REGISTRU"
       }
@@ -531,7 +531,7 @@
         "headingCount": 12,
         "faqCount": 0,
         "externalLinkCount": 6,
-        "interactiveControlCount": 14,
+        "interactiveControlCount": 8,
         "governanceState": "NEÎNREGISTRAT",
         "programRegistryState": "NU_ESTE_PROGRAM_ÎN_REGISTRU"
       }
@@ -571,7 +571,7 @@
         "headingCount": 8,
         "faqCount": 0,
         "externalLinkCount": 2,
-        "interactiveControlCount": 14,
+        "interactiveControlCount": 8,
         "governanceState": "NEÎNREGISTRAT",
         "programRegistryState": "NU_ESTE_PROGRAM_ÎN_REGISTRU"
       }
@@ -883,7 +883,7 @@
       "microConversion": "step_1_complete",
       "parent": "/",
       "competingUrls": [],
-      "demonstrableUniqueValue": "13 subtitluri distincte, 6 FAQ și 1 linkuri externe în sursa HTML.",
+      "demonstrableUniqueValue": "14 subtitluri distincte, 6 FAQ și 1 linkuri externe în sursa HTML.",
       "recommendation": "keep",
       "recommendationTarget": null,
       "recommendationReason": "Rol distinct de core, cu o singură intenție primară și conversie proprie.",
@@ -893,7 +893,7 @@
       "evidence": {
         "title": "Contact FABER: trimite proiectul pentru verificare",
         "metaDescription": "Trimite către FABER datele proiectului, bugetul și documentele disponibile pentru stabilirea programului și a verificărilor necesare.",
-        "headingCount": 13,
+        "headingCount": 14,
         "faqCount": 6,
         "externalLinkCount": 1,
         "interactiveControlCount": 39,
@@ -966,7 +966,7 @@
         "headingCount": 15,
         "faqCount": 6,
         "externalLinkCount": 2,
-        "interactiveControlCount": 14,
+        "interactiveControlCount": 8,
         "governanceState": "NEÎNREGISTRAT",
         "programRegistryState": "NU_ESTE_PROGRAM_ÎN_REGISTRU"
       }
@@ -1003,7 +1003,7 @@
         "headingCount": 11,
         "faqCount": 0,
         "externalLinkCount": 6,
-        "interactiveControlCount": 14,
+        "interactiveControlCount": 8,
         "governanceState": "NEÎNREGISTRAT",
         "programRegistryState": "NU_ESTE_PROGRAM_ÎN_REGISTRU"
       }
@@ -1042,7 +1042,7 @@
         "headingCount": 12,
         "faqCount": 0,
         "externalLinkCount": 6,
-        "interactiveControlCount": 14,
+        "interactiveControlCount": 8,
         "governanceState": "NEÎNREGISTRAT",
         "programRegistryState": "NU_ESTE_PROGRAM_ÎN_REGISTRU"
       }
@@ -1080,6 +1080,41 @@
         "interactiveControlCount": 0,
         "governanceState": "NEÎNREGISTRAT",
         "programRegistryState": "NU_ESTE_PROGRAM_ÎN_REGISTRU"
+      }
+    },
+    {
+      "url": "https://atelierdeconsultanta.ro/diaspora-investeste-acasa",
+      "route": "/diaspora-investeste-acasa",
+      "sourceFile": "diaspora-investeste-acasa/index.html",
+      "sitemapFamily": "programs",
+      "type": "program",
+      "primaryAudience": "Solicitanți și beneficiari potențiali",
+      "mainQuestion": "Care este statutul verificat și ce trebuie analizat pentru „Diaspora Investește Acasă”?",
+      "queryCluster": "diaspora investeste acasa; Diaspora Investește Acasă",
+      "primaryIntent": "informațională",
+      "h1": "Diaspora Investește Acasă",
+      "uniquePromise": "Centralizează statutul, sursa oficială și pașii de verificare pentru „Diaspora Investește Acasă”.",
+      "cta": "Verifică proiectul",
+      "ctaTarget": "/contact#program_slug=diaspora-investeste-acasa",
+      "microConversion": "cta_click:diaspora_investeste_acasa_contact_1",
+      "parent": "/fonduri-europene",
+      "competingUrls": [],
+      "demonstrableUniqueValue": "Înregistrare în registrul unic al programelor; 14 subtitluri, 11 FAQ și sursă: Departamentul pentru Românii de Pretutindeni.",
+      "recommendation": "keep",
+      "recommendationTarget": null,
+      "recommendationReason": "Rol distinct de program, cu o singură intenție primară și conversie proprie.",
+      "decisionState": "APROBAT_PENTRU_ARHITECTURĂ",
+      "owner": "Consultant programe + editor coordonator",
+      "nextReviewAt": "2026-09-08",
+      "evidence": {
+        "title": "Diaspora Investește Acasă: condiții anunțate | FABER",
+        "metaDescription": "Diaspora Investește Acasă: beneficiari, finanțare anunțată, contribuție proprie și ce documente pot fi pregătite înaintea procedurii oficiale.",
+        "headingCount": 14,
+        "faqCount": 11,
+        "externalLinkCount": 2,
+        "interactiveControlCount": 0,
+        "governanceState": "public",
+        "programRegistryState": "public"
       }
     },
     {
@@ -1154,7 +1189,7 @@
         "headingCount": 12,
         "faqCount": 0,
         "externalLinkCount": 5,
-        "interactiveControlCount": 14,
+        "interactiveControlCount": 8,
         "governanceState": "NEÎNREGISTRAT",
         "programRegistryState": "NU_ESTE_PROGRAM_ÎN_REGISTRU"
       }
@@ -1375,7 +1410,7 @@
         "headingCount": 21,
         "faqCount": 2,
         "externalLinkCount": 9,
-        "interactiveControlCount": 14,
+        "interactiveControlCount": 8,
         "governanceState": "public",
         "programRegistryState": "NU_ESTE_PROGRAM_ÎN_REGISTRU"
       }
@@ -1413,6 +1448,76 @@
         "faqCount": 16,
         "externalLinkCount": 2,
         "interactiveControlCount": 23,
+        "governanceState": "public",
+        "programRegistryState": "public"
+      }
+    },
+    {
+      "url": "https://atelierdeconsultanta.ro/e-drive",
+      "route": "/e-drive",
+      "sourceFile": "e-drive/index.html",
+      "sitemapFamily": "programs",
+      "type": "program",
+      "primaryAudience": "Solicitanți și beneficiari potențiali",
+      "mainQuestion": "Care este statutul verificat și ce trebuie analizat pentru „Programul e-DRIVE”?",
+      "queryCluster": "e drive; Programul e-DRIVE",
+      "primaryIntent": "informațională",
+      "h1": "Programul e-DRIVE",
+      "uniquePromise": "Centralizează statutul, sursa oficială și pașii de verificare pentru „Programul e-DRIVE”.",
+      "cta": "Verifică proiectul",
+      "ctaTarget": "/contact#program_slug=e-drive",
+      "microConversion": "cta_click:e_drive_contact_1",
+      "parent": "/fonduri-europene",
+      "competingUrls": [],
+      "demonstrableUniqueValue": "Înregistrare în registrul unic al programelor; 14 subtitluri, 11 FAQ și sursă: Ministerul Transporturilor și Infrastructurii / Portal Legislativ.",
+      "recommendation": "keep",
+      "recommendationTarget": null,
+      "recommendationReason": "Rol distinct de program, cu o singură intenție primară și conversie proprie.",
+      "decisionState": "APROBAT_PENTRU_ARHITECTURĂ",
+      "owner": "Consultant programe + editor coordonator",
+      "nextReviewAt": "2026-09-08",
+      "evidence": {
+        "title": "e-DRIVE: vehicule electrice pentru transport | FABER",
+        "metaDescription": "Programul e-DRIVE: măsuri de ajutor, beneficiari, vehicule eligibile, plafoane și obligații, explicate pe baza ordinului oficial.",
+        "headingCount": 14,
+        "faqCount": 11,
+        "externalLinkCount": 2,
+        "interactiveControlCount": 0,
+        "governanceState": "public",
+        "programRegistryState": "public"
+      }
+    },
+    {
+      "url": "https://atelierdeconsultanta.ro/e-mobility",
+      "route": "/e-mobility",
+      "sourceFile": "e-mobility/index.html",
+      "sitemapFamily": "programs",
+      "type": "program",
+      "primaryAudience": "Solicitanți și beneficiari potențiali",
+      "mainQuestion": "Care este statutul verificat și ce trebuie analizat pentru „Programul e-Mobility RO”?",
+      "queryCluster": "e mobility; Programul e-Mobility RO",
+      "primaryIntent": "informațională",
+      "h1": "Programul e-Mobility RO",
+      "uniquePromise": "Centralizează statutul, sursa oficială și pașii de verificare pentru „Programul e-Mobility RO”.",
+      "cta": "Verifică proiectul",
+      "ctaTarget": "/contact#program_slug=e-mobility-ro",
+      "microConversion": "cta_click:e_mobility_contact_1",
+      "parent": "/fonduri-europene",
+      "competingUrls": [],
+      "demonstrableUniqueValue": "Înregistrare în registrul unic al programelor; 14 subtitluri, 11 FAQ și sursă: Ministerul Transporturilor și Infrastructurii / Portal Legislativ.",
+      "recommendation": "keep",
+      "recommendationTarget": null,
+      "recommendationReason": "Rol distinct de program, cu o singură intenție primară și conversie proprie.",
+      "decisionState": "APROBAT_PENTRU_ARHITECTURĂ",
+      "owner": "Consultant programe + editor coordonator",
+      "nextReviewAt": "2026-09-08",
+      "evidence": {
+        "title": "e-Mobility RO: stații de reîncărcare | FABER",
+        "metaDescription": "Programul e-Mobility RO: amplasamente, solicitanți, investiții eligibile și buget, consolidat din actele normative oficiale.",
+        "headingCount": 14,
+        "faqCount": 11,
+        "externalLinkCount": 2,
+        "interactiveControlCount": 0,
         "governanceState": "public",
         "programRegistryState": "public"
       }
@@ -1619,7 +1724,7 @@
       "microConversion": "cta_click:project_check_how",
       "parent": "/fonduri-europene",
       "competingUrls": [],
-      "demonstrableUniqueValue": "13 subtitluri distincte, 5 FAQ și 4 linkuri externe în sursa HTML.",
+      "demonstrableUniqueValue": "16 subtitluri distincte, 5 FAQ și 6 linkuri externe în sursa HTML.",
       "recommendation": "keep",
       "recommendationTarget": null,
       "recommendationReason": "Rol distinct de hub, cu o singură intenție primară și conversie proprie.",
@@ -1629,9 +1734,9 @@
       "evidence": {
         "title": "Finantari panouri fotovoltaice - autoconsum și energie",
         "metaDescription": "Finantari pentru panouri fotovoltaice: autoconsum, energie regenerabilă, Fondul pentru Modernizare, documente, buget și eligibilitate.",
-        "headingCount": 13,
+        "headingCount": 16,
         "faqCount": 5,
-        "externalLinkCount": 4,
+        "externalLinkCount": 6,
         "interactiveControlCount": 5,
         "governanceState": "NEÎNREGISTRAT",
         "programRegistryState": "NU_ESTE_PROGRAM_ÎN_REGISTRU"
@@ -1749,6 +1854,41 @@
       }
     },
     {
+      "url": "https://atelierdeconsultanta.ro/fondul-modernizare-pc1-stocare",
+      "route": "/fondul-modernizare-pc1-stocare",
+      "sourceFile": "fondul-modernizare-pc1-stocare/index.html",
+      "sitemapFamily": "programs",
+      "type": "program",
+      "primaryAudience": "Companii și entități cu investiții energetice",
+      "mainQuestion": "Care este statutul verificat și ce trebuie analizat pentru „Fondul pentru Modernizare – PC1 Stocare stand-alone”?",
+      "queryCluster": "fondul modernizare pc1 stocare; Fondul pentru Modernizare PC1 Stocare stand-alone",
+      "primaryIntent": "informațională",
+      "h1": "Fondul pentru Modernizare – PC1 Stocare stand-alone",
+      "uniquePromise": "Centralizează statutul, sursa oficială și pașii de verificare pentru „Fondul pentru Modernizare – PC1 Stocare stand-alone”.",
+      "cta": "Verifică proiectul",
+      "ctaTarget": "/contact#program_slug=fondul-modernizare-pc1-stocare",
+      "microConversion": "cta_click:fondul_modernizare_pc1_stocare_contact_1",
+      "parent": "/finantari-panouri-fotovoltaice",
+      "competingUrls": [],
+      "demonstrableUniqueValue": "Înregistrare în registrul unic al programelor; 14 subtitluri, 11 FAQ și sursă: Ministerul Energiei.",
+      "recommendation": "keep",
+      "recommendationTarget": null,
+      "recommendationReason": "Rol distinct de program, cu o singură intenție primară și conversie proprie.",
+      "decisionState": "APROBAT_PENTRU_ARHITECTURĂ",
+      "owner": "Consultant programe + editor coordonator",
+      "nextReviewAt": "2026-09-08",
+      "evidence": {
+        "title": "PC1 stocare stand-alone: consultare | FABER",
+        "metaDescription": "Fondul pentru Modernizare PC1: beneficiari, baterii stand-alone, buget și plafoane din documentația oficială de consultare.",
+        "headingCount": 14,
+        "faqCount": 11,
+        "externalLinkCount": 2,
+        "interactiveControlCount": 0,
+        "governanceState": "public",
+        "programRegistryState": "public"
+      }
+    },
+    {
       "url": "https://atelierdeconsultanta.ro/fonduri-europene",
       "route": "/fonduri-europene",
       "sourceFile": "fonduri-europene/index.html",
@@ -1768,7 +1908,7 @@
         "/fonduri-europene-nerambursabile-2026",
         "/fonduri-nerambursabile"
       ],
-      "demonstrableUniqueValue": "7 subtitluri distincte, 0 FAQ și 0 linkuri externe în sursa HTML.",
+      "demonstrableUniqueValue": "8 subtitluri distincte, 0 FAQ și 0 linkuri externe în sursa HTML.",
       "recommendation": "keep",
       "recommendationTarget": null,
       "recommendationReason": "Rol distinct de hub, cu o singură intenție primară și conversie proprie.",
@@ -1778,7 +1918,7 @@
       "evidence": {
         "title": "Fonduri europene: programe și trasee de verificare | FABER",
         "metaDescription": "Alege familia de programe după solicitant și investiție, apoi folosește instrumentele și ghidurile potrivite înainte de verificarea proiectului.",
-        "headingCount": 7,
+        "headingCount": 8,
         "faqCount": 0,
         "externalLinkCount": 0,
         "interactiveControlCount": 0,
@@ -2093,7 +2233,7 @@
       "microConversion": "cta_click:project_check_how",
       "parent": "/fonduri-europene",
       "competingUrls": [],
-      "demonstrableUniqueValue": "12 subtitluri distincte, 5 FAQ și 4 linkuri externe în sursa HTML.",
+      "demonstrableUniqueValue": "13 subtitluri distincte, 5 FAQ și 5 linkuri externe în sursa HTML.",
       "recommendation": "keep",
       "recommendationTarget": null,
       "recommendationReason": "Rol distinct de hub, cu o singură intenție primară și conversie proprie.",
@@ -2103,9 +2243,9 @@
       "evidence": {
         "title": "Fonduri europene pentru IMM-uri - investiții, digitalizare, energie",
         "metaDescription": "Ghid pentru IMM-uri care caută fonduri europene: programe regionale, digitalizare, energie, Start-Up Nation, documente și eligibilitate.",
-        "headingCount": 12,
+        "headingCount": 13,
         "faqCount": 5,
-        "externalLinkCount": 4,
+        "externalLinkCount": 5,
         "interactiveControlCount": 5,
         "governanceState": "NEÎNREGISTRAT",
         "programRegistryState": "NU_ESTE_PROGRAM_ÎN_REGISTRU"

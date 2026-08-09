@@ -507,6 +507,19 @@ function outputsFor(report) {
   ]);
 }
 
+function writeFileWithRetry(file, content) {
+  const pause = new Int32Array(new SharedArrayBuffer(4));
+  for (let attempt = 1; attempt <= 5; attempt += 1) {
+    try {
+      fs.writeFileSync(file, content, "utf8");
+      return;
+    } catch (error) {
+      if (attempt === 5 || !["EACCES", "EBUSY", "EPERM", "UNKNOWN"].includes(error.code)) throw error;
+      Atomics.wait(pause, 0, 0, attempt * 60);
+    }
+  }
+}
+
 function run({ check = false } = {}) {
   const report = makeReport();
   const outputs = outputsFor(report);
@@ -516,7 +529,7 @@ function run({ check = false } = {}) {
       if (!fs.existsSync(file) || fs.readFileSync(file, "utf8") !== content) stale.push(path.relative(ROOT, file));
     } else {
       fs.mkdirSync(path.dirname(file), { recursive: true });
-      fs.writeFileSync(file, content, "utf8");
+      writeFileWithRetry(file, content);
     }
   }
   if (stale.length) throw new Error(`Inventarul P1.01 este absent sau expirat: ${stale.join(", ")}. Rulează npm run generate:content-intent-inventory.`);

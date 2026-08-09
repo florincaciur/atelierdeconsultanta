@@ -24,7 +24,10 @@ for (const file of generatedFiles) {
 
 const parsed = readSitemapEntries(ROOT, policy.indexFile, policy.site);
 assert.equal(parsed.documents.length, policy.families.length + 1, "the index must reference every and only the configured family sitemaps");
-assert.equal(parsed.entries.length, 96, "canonical inventory must include the two approved DR12/DR14 pages restored from a stale publication hold");
+assert.equal(parsed.entries.length, 100, "canonical inventory must include the four consolidated 2026 program pages");
+for (const route of ["/diaspora-investeste-acasa", "/e-drive", "/e-mobility", "/fondul-modernizare-pc1-stocare"]) {
+  assert(parsed.entries.some((entry) => new URL(entry.url).pathname === route), `${route}: consolidated program page must remain discoverable`);
+}
 assert(!parsed.entries.some((entry) => new URL(entry.url).pathname === "/por-adr-nord-est"), "approved POR source redirect must stay out of sitemap");
 assert(parsed.entries.some((entry) => new URL(entry.url).pathname === "/investitii-modernizarea-microintreprinderilor-apel-2"), "approved regional conversion target must remain in sitemap");
 for (const route of [

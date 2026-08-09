@@ -12,6 +12,12 @@ const CONFIG_PATH = path.join(ROOT, "config", "editorial-clusters.json");
 const CSS_HREF = "/assets/editorial-clusters.css?v=20260721-1";
 const CHECK_ONLY = process.argv.includes("--check");
 const PAGE_HINTS = loadPageHints(ROOT);
+const FEATURED_FUNDING_SLUGS = [
+  "dr12-afir", "dr14-afir", "modernizare-microintreprinderi-ne-2",
+  "afir-energie-autoconsum", "e-move-ro", "diaspora-investeste-acasa",
+  "e-drive", "e-mobility-ro", "fondul-modernizare-pc1-stocare"
+];
+const PROGRAM_REGISTRY = JSON.parse(fs.readFileSync(path.join(ROOT, "config", "seo-programs.json"), "utf8")).programs;
 
 function readJson(file) {
   return JSON.parse(fs.readFileSync(file, "utf8"));
@@ -138,6 +144,26 @@ function renderSection(section) {
       </section>`;
 }
 
+function renderFundingOverview(page) {
+  if (page.route !== "/fonduri-europene") return "";
+  const bySlug = new Map(PROGRAM_REGISTRY.map((program) => [program.slug, program]));
+  const cards = FEATURED_FUNDING_SLUGS.map((slug, index) => {
+    const program = bySlug.get(slug);
+    if (!program || program.publicationState !== "public") throw new Error(`${page.route}: programul ${slug} nu este public`);
+    return `<a class="funding-program-card" href="${attr(program.pageUrl)}" data-program-id="${attr(program.slug)}" style="--card-delay:${index * 55}ms">
+          <span class="funding-program-card__index">${String(index + 1).padStart(2, "0")}</span>
+          <strong>${esc(program.shortName)}</strong>
+          <small>${esc(program.statusLabel)}</small>
+          <span class="funding-program-card__arrow" aria-hidden="true">→</span>
+        </a>`;
+  }).join("");
+  return `<section class="funding-overview" aria-labelledby="funding-overview-title">
+        <div class="funding-overview__copy"><p class="funding-overview__eyebrow">Hartă de orientare 2026</p><h2 id="funding-overview-title">Nouă trasee de finanțare, organizate după investiție</h2><p>Pornește de la tipul investiției și deschide pagina programului pentru statut, sursa oficială și condițiile care trebuie demonstrate.</p></div>
+        <svg class="funding-overview__svg" viewBox="0 0 580 300" role="img" aria-labelledby="funding-svg-title funding-svg-desc"><title id="funding-svg-title">Hartă vizuală a traseelor de finanțare</title><desc id="funding-svg-desc">Un nucleu central conectează domeniul agricol, firmele, energia și mobilitatea.</desc><g fill="none" stroke="rgba(255,255,255,.28)" stroke-width="2"><path d="M290 150L78 72M290 150L84 236M290 150L500 64M290 150L506 238"/><circle cx="290" cy="150" r="68"/></g><g class="funding-svg__pulse"><circle cx="290" cy="150" r="36" fill="#b84716"/><text x="290" y="155" text-anchor="middle">PROIECT</text></g><g class="funding-svg__label"><circle cx="78" cy="72" r="33"/><text x="78" y="77" text-anchor="middle">AFIR</text><circle cx="84" cy="236" r="33"/><text x="84" y="241" text-anchor="middle">IMM</text><circle cx="500" cy="64" r="33"/><text x="500" y="69" text-anchor="middle">ENERGIE</text><circle cx="506" cy="238" r="33"/><text x="506" y="243" text-anchor="middle">MOBILITATE</text></g></svg>
+        <div class="funding-program-grid">${cards}</div>
+      </section>`;
+}
+
 function renderArticle(page) {
   const related = (page.internalLinks || []).length
     ? `<nav class="editorial-cluster__related" aria-label="Continuă documentarea">
@@ -150,6 +176,7 @@ function renderArticle(page) {
       <section class="editorial-cluster__answer" aria-label="Răspuns direct">
         <p class="intro" data-direct-answer>${esc(page.directAnswer)}</p>
       </section>
+      ${renderFundingOverview(page)}
       ${(page.sections || []).map(renderSection).join("\n")}
       ${page.terminologyNote ? `<p data-terminology-note="own-contribution">${esc(page.terminologyNote)}</p>` : ""}
       <section class="editorial-cluster__source-note" aria-labelledby="${attr(page.intentId)}-sources">
@@ -202,6 +229,10 @@ function syncPage(page) {
   canonical.attr("href", `https://atelierdeconsultanta.ro${page.route}`);
 
   if (!$(`link[href='${CSS_HREF}']`).length) $("head").append(`<link rel="stylesheet" href="${CSS_HREF}">`);
+  if (page.route === "/fonduri-europene" && !$('link[href="/assets/site-refresh-2026.css?v=20260809-1"]').length) {
+    $("head").append('<link rel="stylesheet" href="/assets/site-refresh-2026.css?v=20260809-1">');
+    $("body").addClass("funding-hub-refresh-2026");
+  }
 
   const hero = $("header.hero, .program-hero, .post-hero").first();
   if (!hero.length) throw new Error(`${page.route}: hero-ul nu a fost găsit`);

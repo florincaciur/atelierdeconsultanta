@@ -38,7 +38,25 @@ body[data-program-id="dr14-afir"] .program-hero {
 }
 
 body[data-program-id="dr14-afir"] .post-container {
-  max-width: 1220px;
+  max-width: 1120px;
+}
+
+body[data-program-id="dr14-afir"] .design-card-grid--afir {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 1rem 0 2.4rem;
+}
+
+body[data-program-id="dr14-afir"] .design-card-grid--afir .design-card {
+  min-height: 170px;
+  padding: 1.45rem;
+  border-radius: 18px;
+}
+
+body[data-program-id="dr14-afir"] .design-card-grid--afir .design-card p {
+  max-width: 62ch;
+  font-size: .94rem;
+  line-height: 1.65;
 }
 
 body[data-program-id="dr14-afir"] .post-body {
@@ -184,8 +202,8 @@ body[data-program-id="dr14-afir"] .post-body {
 .dr14-tabs__panel p, .dr14-tabs__panel li { color: #50645c; line-height: 1.65; }
 .dr14-tabs__panel ul { margin: 0; padding: 1.2rem 1.2rem 1.2rem 2.3rem; background: var(--dr14-cream); border-radius: 18px; }
 
-.dr14-so-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
-.dr14-so-grid article { padding: 1.25rem; background: rgba(255, 255, 255, .88); border: 1px solid var(--dr14-line); border-radius: 18px; }
+.dr14-so-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+.dr14-so-grid article { min-height: 170px; padding: 1.5rem; background: rgba(255, 255, 255, .88); border: 1px solid var(--dr14-line); border-radius: 18px; }
 .dr14-so-grid strong { display: block; margin: .45rem 0 .65rem; font-size: 1.25rem; }
 .dr14-so-grid p { margin: 0; color: #5a6e66; font-size: .9rem; line-height: 1.55; }
 .dr14-note { margin-top: 1rem; padding: 1rem 1.15rem; background: #fff; border-left: 4px solid var(--dr14-gold); border-radius: 12px; color: #4e645b; }
@@ -292,6 +310,7 @@ body[data-program-id="dr14-afir"] .post-body {
   .program-hero__estimate { padding: .8rem; }
   .dr14-intro, .dr14-section, .dr14-facts, .dr14-final-cta { margin: 2.6rem 0; }
   .dr14-section--tint, .dr14-section--dark, .dr14-section--sources { margin-inline: -.75rem; border-radius: 22px; }
+  body[data-program-id="dr14-afir"] .design-card-grid--afir,
   .dr14-facts, .dr14-so-grid, .dr14-eligibility-grid, .dr14-faq { grid-template-columns: 1fr; }
   .dr14-facts article + article { border-left: 0; border-top: 1px solid var(--dr14-line); }
   .dr14-tabs__list, .dr14-score__switcher { grid-template-columns: 1fr 1fr; }

@@ -417,5 +417,65 @@
     "verifiedAt": "2026-07-22",
     "isPrimaryFor": "pro-infra",
     "sourceOfTruth": "config/seo-programs.json#programs"
+  },
+  "diaspora-investeste-acasa": {
+    "programIds": [
+      "diaspora-investeste-acasa"
+    ],
+    "name": "Comunicare oficială din 27.05.2026 privind programul guvernamental",
+    "title": "Comunicare oficială din 27.05.2026 privind programul guvernamental",
+    "institution": "Departamentul pentru Românii de Pretutindeni",
+    "url": "https://diaspora.gov.ro/info/stiri-din-romania/761-investeste-acasa.html",
+    "accessedAt": "2026-08-09",
+    "programStatus": "calendar_estimativ",
+    "statusLabel": "Program anunțat – mecanismul de aplicare nu este publicat",
+    "verifiedAt": "2026-08-09",
+    "isPrimaryFor": "diaspora-investeste-acasa",
+    "sourceOfTruth": "config/seo-programs.json#programs"
+  },
+  "e-drive": {
+    "programIds": [
+      "e-drive"
+    ],
+    "name": "Ordinul MTI nr. 2.291/29.12.2025, publicat în Monitorul Oficial nr. 14/13.01.2026; modificat prin Ordinul nr. 100/12.02.2026",
+    "title": "Ordinul MTI nr. 2.291/29.12.2025, publicat în Monitorul Oficial nr. 14/13.01.2026; modificat prin Ordinul nr. 100/12.02.2026",
+    "institution": "Ministerul Transporturilor și Infrastructurii / Portal Legislativ",
+    "url": "https://legislatie.just.ro/Public/DetaliiDocumentAfis/306913",
+    "accessedAt": "2026-08-09",
+    "programStatus": "ghid_aprobat_nedeschis",
+    "statusLabel": "Schemă aprobată – depunerea nu este deschisă",
+    "verifiedAt": "2026-08-09",
+    "isPrimaryFor": "e-drive",
+    "sourceOfTruth": "config/seo-programs.json#programs"
+  },
+  "e-mobility-ro": {
+    "programIds": [
+      "e-mobility-ro"
+    ],
+    "name": "Ordinul MTI nr. 1.319/12.08.2025 și schema de ajutor de stat e-Mobility RO",
+    "title": "Ordinul MTI nr. 1.319/12.08.2025 și schema de ajutor de stat e-Mobility RO",
+    "institution": "Ministerul Transporturilor și Infrastructurii / Portal Legislativ",
+    "url": "https://legislatie.just.ro/Public/DetaliiDocumentAfis/301389",
+    "accessedAt": "2026-08-09",
+    "programStatus": "ghid_aprobat_nedeschis",
+    "statusLabel": "Schemă aprobată – depunerea nu este deschisă",
+    "verifiedAt": "2026-08-09",
+    "isPrimaryFor": "e-mobility-ro",
+    "sourceOfTruth": "config/seo-programs.json#programs"
+  },
+  "fm-pc1-stocare": {
+    "programIds": [
+      "fondul-modernizare-pc1-stocare"
+    ],
+    "name": "Documentația PC1 pentru capacități de stocare stand-alone publicată în consultare la 21.05.2026",
+    "title": "Documentația PC1 pentru capacități de stocare stand-alone publicată în consultare la 21.05.2026",
+    "institution": "Ministerul Energiei",
+    "url": "https://energie.gov.ro/category/fondul-pentru-modernizare/",
+    "accessedAt": "2026-08-09",
+    "programStatus": "consultare_publica",
+    "statusLabel": "Ghid în consultare – depunerea nu este deschisă",
+    "verifiedAt": "2026-08-09",
+    "isPrimaryFor": "fondul-modernizare-pc1-stocare",
+    "sourceOfTruth": "config/seo-programs.json#programs"
   }
 }

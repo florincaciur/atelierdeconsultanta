@@ -509,6 +509,10 @@ function rewriteContact() {
   if (!$('script[src="/assets/contact-triage.js?v=20260721-1"]').length) {
     $("head").append('<script src="/assets/contact-triage.js?v=20260721-1" defer></script>');
   }
+  if (!$('link[href="/assets/site-refresh-2026.css?v=20260809-1"]').length) {
+    $("head").append('<link rel="stylesheet" href="/assets/site-refresh-2026.css?v=20260809-1">');
+  }
+  $("body").addClass("contact-refresh-2026");
   setHero($, {
     eyebrow: "Contact FABER · datele proiectului",
     h1: "Trimite proiectul. Îți spunem ce trebuie verificat.",
@@ -533,6 +537,25 @@ function rewriteContact() {
   const contactChannels = renderContactChannels(loadLegalIdentity());
 
   $("main").html(`
+    <section class="contact-visual-intro" aria-labelledby="contact-visual-title">
+      <div class="contact-visual-intro__copy">
+        <span class="core-kicker">Un singur mesaj, un traseu clar</span>
+        <h2 id="contact-visual-title">De la ideea de investiție la întrebările care decid proiectul</h2>
+        <p>Formularul scurt ne ajută să încadrăm solicitantul, amplasamentul și investiția. Nu trebuie să alegi singur programul și nu trebuie să completezi date pe care încă nu le ai.</p>
+        <ul><li>date esențiale în primul pas;</li><li>detalii și documente numai dacă sunt disponibile;</li><li>canal de răspuns ales de tine.</li></ul>
+      </div>
+      <svg class="contact-route-svg" viewBox="0 0 620 390" role="img" aria-labelledby="contact-route-title contact-route-desc">
+        <title id="contact-route-title">Traseul solicitării către o concluzie de verificare</title>
+        <desc id="contact-route-desc">Ideea, solicitantul și investiția sunt organizate într-un traseu de verificare documentată.</desc>
+        <defs><linearGradient id="contact-route-gradient" x1="0" x2="1"><stop stop-color="#f5a623"/><stop offset="1" stop-color="#b84716"/></linearGradient></defs>
+        <path class="contact-route-svg__path" d="M62 274 C132 82 275 90 320 192 S475 334 558 118" fill="none" stroke="rgba(255,255,255,.28)" stroke-width="3" stroke-dasharray="8 11"/>
+        <g class="contact-route-svg__node"><circle cx="62" cy="274" r="42"/><path d="M50 274h24M62 262v24"/><text x="62" y="335">Idee</text></g>
+        <g class="contact-route-svg__node contact-route-svg__node--two"><circle cx="320" cy="192" r="48"/><path d="M300 192l13 13 28-31"/><text x="320" y="259">Verificare</text></g>
+        <g class="contact-route-svg__node contact-route-svg__node--three"><circle cx="558" cy="118" r="42"/><path d="M542 120l11 11 22-29"/><text x="558" y="179">Direcție</text></g>
+        <circle class="contact-route-svg__traveler" cx="62" cy="274" r="9"/>
+      </svg>
+    </section>
+
     ${layout}
 
     ${contactChannels}

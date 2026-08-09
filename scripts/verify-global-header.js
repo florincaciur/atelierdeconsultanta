@@ -45,12 +45,12 @@ function main() {
   const errors = [];
 
   if (normalize(partial) !== normalize(expected)) errors.push("partialul diferă de configurația generată");
-  if ($("#navbar [data-nav-disclosure]:not([data-homepage-navbar-toc])").length !== 5) errors.push("desktopul trebuie să aibă cinci grupuri disclosure principale");
-  if ($("#mobileMenu [data-mobile-disclosure]:not([data-homepage-navbar-toc])").length !== 5) errors.push("mobilul trebuie să aibă cinci grupuri disclosure principale");
-  if ($("#navbar .nav-primary-link").text().trim() !== "Contact") errors.push("Contact nu este destinația directă a șasea");
+  if ($("#navbar [data-nav-disclosure]").length !== 3) errors.push("desktopul trebuie să aibă trei grupuri disclosure principale");
+  if ($("#mobileMenu [data-mobile-disclosure]").length !== 3) errors.push("mobilul trebuie să aibă trei grupuri disclosure principale");
+  if ($("#navbar .nav-primary-link").map((_, el) => $(el).text().trim()).get().join("|") !== "Calculator SO|Contact") errors.push("Calculator SO și Contact trebuie să fie destinații directe");
   if ($("#navbar .nav-cta").text().trim() !== config.cta.label) errors.push("CTA-ul desktop nu corespunde configurației");
   if ($("#mobileMenu .mobile-cta").text().trim() !== config.cta.label) errors.push("CTA-ul mobil nu corespunde configurației");
-  if (/\bBlog\b/u.test($("#navbar, #mobileMenu").text())) errors.push("eticheta Blog a rămas în navigarea principală");
+  if (/\b(?:Instrumente|Ghiduri|Cuprins)\b/u.test($("#navbar, #mobileMenu").text())) errors.push("o etichetă eliminată a rămas în navigarea principală");
   if ($("#dropdownPanel [data-program-id]").length !== config.programMenu.featuredProgramSlugs.length) errors.push("meniul Programe nu conține măsurile aprobate");
   if ($('[href="/por-adr-nord-est"]').length) errors.push("meniul publică ruta regională consolidată");
   if ($('[href="/investitii-modernizarea-microintreprinderilor-apel-2"]').length < 2) errors.push("pagina regională de conversie lipsește din meniuri");
@@ -73,7 +73,7 @@ function main() {
     process.exitCode = 1;
     return;
   }
-  console.log(`PASS: 6 destinații principale, măsuri verificate și header identic în ${files.length} pagini HTML publice.`);
+  console.log(`PASS: 5 destinații principale, măsuri verificate și header identic în ${files.length} pagini HTML publice.`);
 }
 
 main();

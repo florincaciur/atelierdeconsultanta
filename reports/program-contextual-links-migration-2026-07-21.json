@@ -318,6 +318,58 @@
         "comparison",
         "conversion"
       ]
+    },
+    {
+      "programId": "diaspora-investeste-acasa",
+      "route": "/diaspora-investeste-acasa",
+      "file": "diaspora-investeste-acasa/index.html",
+      "removedManagedBlocks": 0,
+      "removedManagedLinks": 0,
+      "resultingRelations": [
+        "parent",
+        "instrument",
+        "comparison",
+        "conversion"
+      ]
+    },
+    {
+      "programId": "e-drive",
+      "route": "/e-drive",
+      "file": "e-drive/index.html",
+      "removedManagedBlocks": 0,
+      "removedManagedLinks": 0,
+      "resultingRelations": [
+        "parent",
+        "instrument",
+        "comparison",
+        "conversion"
+      ]
+    },
+    {
+      "programId": "e-mobility-ro",
+      "route": "/e-mobility",
+      "file": "e-mobility/index.html",
+      "removedManagedBlocks": 0,
+      "removedManagedLinks": 0,
+      "resultingRelations": [
+        "parent",
+        "instrument",
+        "comparison",
+        "conversion"
+      ]
+    },
+    {
+      "programId": "fondul-modernizare-pc1-stocare",
+      "route": "/fondul-modernizare-pc1-stocare",
+      "file": "fondul-modernizare-pc1-stocare/index.html",
+      "removedManagedBlocks": 0,
+      "removedManagedLinks": 0,
+      "resultingRelations": [
+        "parent",
+        "instrument",
+        "comparison",
+        "conversion"
+      ]
     }
   ]
 }

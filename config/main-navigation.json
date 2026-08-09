@@ -25,24 +25,9 @@
       ]
     },
     {
-      "id": "instrumente",
-      "label": "Instrumente",
-      "items": [
-        { "label": "Calculator SO", "href": "/calculator-soc" },
-        { "label": "Checklist-uri", "href": "/instrumente" },
-        { "label": "Comparații", "href": "/dr12-vs-dr14" }
-      ]
-    },
-    {
-      "id": "ghiduri",
-      "label": "Ghiduri",
-      "items": [
-        { "label": "Eligibilitate", "href": "/eligibilitate-fonduri-europene" },
-        { "label": "Documente", "href": "/acte-necesare-fonduri-europene-nerambursabile" },
-        { "label": "Cofinanțare", "href": "/cum-se-calculeaza-cofinantarea-fonduri-europene" },
-        { "label": "Glosar", "href": "/glosar-fonduri-europene" },
-        { "label": "Surse oficiale", "href": "/surse-oficiale-fonduri-europene" }
-      ]
+      "id": "calculator-soc",
+      "label": "Calculator SO",
+      "href": "/calculator-soc"
     },
     {
       "id": "despre-faber",
@@ -67,19 +52,24 @@
       "dr14-afir",
       "digitalizare-imm",
       "pro-infra",
-      "afir-energie-autoconsum"
+      "afir-energie-autoconsum",
+      "diaspora-investeste-acasa",
+      "e-drive",
+      "e-mobility-ro",
+      "fondul-modernizare-pc1-stocare"
+    ],
+    "homepageProgramSlugs": [
+      "modernizare-microintreprinderi-ne-2",
+      "dr12-afir",
+      "dr14-afir",
+      "afir-energie-autoconsum",
+      "e-move-ro",
+      "diaspora-investeste-acasa",
+      "e-drive",
+      "e-mobility-ro",
+      "fondul-modernizare-pc1-stocare"
     ],
     "allPrograms": { "label": "Vezi toate programele", "href": "/fonduri-europene" }
-  },
-  "homepageToc": {
-    "label": "Cuprins",
-    "items": [
-      { "label": "Măsuri de finanțare", "href": "/#hero-programs-title" },
-      { "label": "Cum decidem dacă merită continuat", "href": "/#homepage-method-title" },
-      { "label": "Programe prioritare", "href": "/#priority-programs-title" },
-      { "label": "Servicii, instrumente și analiză", "href": "/#homepage-explorer-title" },
-      { "label": "Următorul pas", "href": "/#homepage-contact-title" }
-    ]
   },
   "cta": {
     "label": "Începe verificarea proiectului",
@@ -88,7 +78,7 @@
     "analyticsId": "project_check_start"
   },
   "policy": {
-    "maxVisibleItemsPerGroup": 7,
+    "maxVisibleItemsPerGroup": 12,
     "programStatusInNavigation": false,
     "mobileTargetMinimumPx": 44,
     "mobileUsesDisclosureButtons": true

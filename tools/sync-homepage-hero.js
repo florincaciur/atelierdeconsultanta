@@ -43,7 +43,8 @@ function latestVerifiedProgram(programs) {
 
 function renderProgramMenu(programs) {
   const bySlug = new Map(programs.map((program) => [program.slug, program]));
-  const featured = NAVIGATION_CONFIG.programMenu.featuredProgramSlugs.map((slug) => bySlug.get(slug));
+  const homepageSlugs = NAVIGATION_CONFIG.programMenu.homepageProgramSlugs || NAVIGATION_CONFIG.programMenu.featuredProgramSlugs;
+  const featured = homepageSlugs.map((slug) => bySlug.get(slug));
   if (featured.some((item) => !item || !isPublicProgram(item) || !hasOfficialSource(item))) {
     throw new Error("Meniul interactiv din hero conține un program absent sau neverificat.");
   }

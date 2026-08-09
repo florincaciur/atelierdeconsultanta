@@ -184,9 +184,6 @@ function insertToc(html, route, root, toc) {
     const insertionPoint = match.index + match[0].length;
     return `${html.slice(0, insertionPoint)}\n${toc}\n    ${html.slice(insertionPoint).replace(/^\s*/, "")}`;
   }
-  if (!/data-homepage-navbar-toc/i.test(html)) {
-    throw new Error("home: cuprinsul trebuie să existe în navbar, nu ca secțiune separată în hero.");
-  }
   return html;
 }
 

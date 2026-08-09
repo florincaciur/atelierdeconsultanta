@@ -7,6 +7,7 @@
   var explanation = document.getElementById("so-result-explanation");
   var feedback = document.getElementById("so-action-feedback");
   var total = document.getElementById("total-so");
+  var programSuggestion = document.getElementById("so-program-suggestion");
 
   function rows() {
     return Array.prototype.slice.call(document.querySelectorAll("#calculator tbody tr"));
@@ -78,6 +79,7 @@
       lines.push(meta.name + ": " + quantity + " " + meta.unitLabel + " × " + coefficient + " EUR = " + (quantity * coefficient).toFixed(2) + " EUR SO");
     });
     lines.push("Total afișat: " + (total ? total.textContent.trim() : "0") + " EUR SO", disclaimer);
+    if (programSuggestion && programSuggestion.textContent.trim()) lines.push("Orientare program: " + programSuggestion.textContent.trim());
     return lines.join("\n");
   }
 

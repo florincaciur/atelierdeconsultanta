@@ -1,13 +1,13 @@
 # Audit de consistență factuală a programelor
 
-Data auditului: 2026-08-08
+Data auditului: 2026-08-09
 
 ## Rezultat
 
-- Programe în registrul canonic: 20
+- Programe în registrul canonic: 24
 - Erori: 0
 - Avertismente: 0
-- Statusuri: apel_deschis=1, apel_inchis=1, calendar_estimativ=9, consultare_publica=3, ghid_aprobat_nedeschis=6
+- Statusuri: apel_deschis=1, apel_inchis=1, calendar_estimativ=10, consultare_publica=4, ghid_aprobat_nedeschis=8
 - Mod strict pentru freshness: inactiv
 
 Auditul este local și determinist. Nu interoghează URL-urile oficiale, nu deduce statusul din răspunsuri HTTP și nu rescrie date factuale. Registrul aprobat din `config/seo-programs.json#programs` rămâne singura sursă de adevăr.
@@ -34,6 +34,10 @@ Auditul este local și determinist. Nu interoghează URL-urile oficiale, nu dedu
 | e-MOVE RO | consultare_publica | 2026-05-27 | — | — |
 | PoCIDIF 2.1 | ghid_aprobat_nedeschis | 2026-07-13 | — | — |
 | PNRR | calendar_estimativ | DE_VALIDAT_UMAN | — | — |
+| Diaspora Investește Acasă | calendar_estimativ | 2026-08-09 | — | — |
+| e-DRIVE | ghid_aprobat_nedeschis | 2026-08-09 | — | — |
+| e-Mobility RO | ghid_aprobat_nedeschis | 2026-08-09 | — | — |
+| PC1 Stocare stand-alone | consultare_publica | 2026-08-09 | — | — |
 | Programul Tranziție Justă | calendar_estimativ | DE_VALIDAT_UMAN | — | — |
 | Fondul pentru Modernizare | calendar_estimativ | DE_VALIDAT_UMAN | — | — |
 

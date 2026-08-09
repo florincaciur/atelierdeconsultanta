@@ -244,8 +244,22 @@ async function verifyRetryAndPreservedValues(browser, fixture) {
 
 async function verifyReflowAndTargets(browser, baseUrl) {
   const page = await preparePage(browser, baseUrl, { width: 320, height: 900 });
-  const noOverflow = await page.evaluate(() => document.documentElement.scrollWidth <= document.documentElement.clientWidth + 1);
-  assert.equal(noOverflow, true, "320px viewport must not have horizontal page scrolling");
+  const reflow = await page.evaluate(() => ({
+    clientWidth: document.documentElement.clientWidth,
+    scrollWidth: document.documentElement.scrollWidth,
+    offenders: [...document.querySelectorAll("body *")]
+      .map((element) => {
+        const rect = element.getBoundingClientRect();
+        return { tag: element.tagName, id: element.id, className: element.className, left: rect.left, right: rect.right, width: rect.width };
+      })
+      .filter(({ left, right }) => left < -1 || right > document.documentElement.clientWidth + 1)
+      .slice(0, 12)
+  }));
+  assert.equal(
+    reflow.scrollWidth <= reflow.clientWidth + 1,
+    true,
+    `320px viewport must not have horizontal page scrolling: ${JSON.stringify(reflow)}`
+  );
 
   const smallTargets = await page.locator("#contact-triage-form button, #contact-triage-form input:not([type='hidden']), #contact-triage-form select, #contact-triage-form textarea, #contact-triage-form summary").evaluateAll((elements) => (
     elements.filter((element) => {

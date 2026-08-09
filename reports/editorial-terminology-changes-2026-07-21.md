@@ -1,7 +1,7 @@
 # Jurnal aplicare terminologie P0.14
 
 - Suprafețe țintă: 10
-- Fișiere HTML actualizate la această rulare: 10
+- Fișiere HTML actualizate la această rulare: 2
 - Fragmente documentate cumulativ: 216
 - Migrare surse editoriale realizată: da
 - Textele juridice nu fac parte din corpusul rescris automat.

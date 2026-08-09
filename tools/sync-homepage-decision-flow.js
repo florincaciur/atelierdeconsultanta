@@ -193,6 +193,10 @@ function removeLegacyRuntime(source) {
 
 function synchronize(source, programs) {
   if (!source.includes(HERO_END) || !/<\/main>/i.test(source)) throw new Error("Homepage-ul nu are limitele necesare pentru fluxul P1.21.");
+  // The homepage is touched by both legacy CRLF generators and newer LF generators.
+  // Keep this owned asset block on LF so repeated pipeline runs cannot oscillate only
+  // because an adjacent generator emitted a different newline sequence.
+  const newline = "\n";
   const toc = source.match(/<!-- P1_09_LONG_FORM_TOC_START -->[\s\S]*?<!-- P1_09_LONG_FORM_TOC_END -->/);
   const preservedToc = toc ? `\n${toc[0]}` : "";
   let output = source.replace(new RegExp(`${HERO_END}[\\s\\S]*?<\\/main>`, "i"), `${HERO_END}${preservedToc}\n${renderFlow(programs)}\n  </main>`);
@@ -200,13 +204,13 @@ function synchronize(source, programs) {
     .replace(/\s*<style id="homepage-faq-expand-css">[\s\S]*?<\/style>/gi, "")
     .replace(/\s*<script>\s*\/\* Homepage FAQ progressive disclosure[\s\S]*?<\/script>/gi, "");
   output = output
-    .replace(/\s*<link\b[^>]*data-homepage-decision-flow-style=["'][^"']+["'][^>]*>/gi, "")
-    .replace(/\s*<script\b[^>]*data-homepage-decision-flow-script=["'][^"']+["'][^>]*><\/script>/gi, "");
-  const homepageHeroStyle = /(?=\s*<style\b[^>]*id=["']homepage-hero-critical-css["'][^>]*>)/i;
-  const longFormAsset = /(?=\s*<link\b[^>]*data-long-form-layout-style=["'][^"']+["'][^>]*>)/i;
-  if (homepageHeroStyle.test(output)) output = output.replace(homepageHeroStyle, `\n  ${STYLE}\n  ${SCRIPT}`);
-  else if (longFormAsset.test(output)) output = output.replace(longFormAsset, `\n  ${STYLE}\n  ${SCRIPT}`);
-  else output = output.replace(/<\/head>/i, `  ${STYLE}\n  ${SCRIPT}\n</head>`);
+    .replace(/^[ \t]*<link\b[^>]*data-homepage-decision-flow-style=["'][^"']+["'][^>]*>\r?\n?/gim, "")
+    .replace(/^[ \t]*<script\b[^>]*data-homepage-decision-flow-script=["'][^"']+["'][^>]*><\/script>\r?\n?/gim, "");
+  const homepageHeroStyle = /\s*(?=<style\b[^>]*id=["']homepage-hero-critical-css["'][^>]*>)/i;
+  const longFormAsset = /\s*(?=<link\b[^>]*data-long-form-layout-style=["'][^"']+["'][^>]*>)/i;
+  if (homepageHeroStyle.test(output)) output = output.replace(homepageHeroStyle, `${newline}  ${STYLE}${newline}  ${SCRIPT}${newline}  `);
+  else if (longFormAsset.test(output)) output = output.replace(longFormAsset, `${newline}  ${STYLE}${newline}  ${SCRIPT}${newline}  `);
+  else output = output.replace(/<\/head>/i, `  ${STYLE}${newline}  ${SCRIPT}${newline}</head>`);
   return removeLegacyRuntime(output);
 }
 
@@ -215,7 +219,13 @@ function main() {
   const before = fs.readFileSync(HOME, "utf8");
   const after = synchronize(before, programs);
   if (CHECK_ONLY) {
-    if (after !== before) throw new Error("Homepage-ul P1.21 nu este sincronizat. Rulează npm run sync:homepage-decision-flow.");
+    if (after !== before) {
+      let mismatch = 0;
+      while (mismatch < before.length && mismatch < after.length && before[mismatch] === after[mismatch]) mismatch += 1;
+      const contextStart = Math.max(0, mismatch - 90);
+      const describe = (value) => value.slice(contextStart, mismatch + 180).replace(/\r/g, "\\r").replace(/\n/g, "\\n");
+      throw new Error(`Homepage-ul P1.21 nu este sincronizat la caracterul ${mismatch}. IN=${describe(before)} OUT=${describe(after)}`);
+    }
     console.log("Homepage decision flow sync PASS.");
     return;
   }

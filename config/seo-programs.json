@@ -1139,6 +1139,311 @@
       }
     },
     {
+      "slug": "diaspora-investeste-acasa",
+      "name": "Diaspora Investește Acasă",
+      "shortName": "Diaspora Investește Acasă",
+      "family": "antreprenoriat",
+      "status": "calendar_estimativ",
+      "statusLabel": "Program anunțat – mecanismul de aplicare nu este publicat",
+      "publicationState": "public",
+      "verifiedAt": "2026-08-09",
+      "sourceName": "Departamentul pentru Românii de Pretutindeni",
+      "sourceUrl": "https://diaspora.gov.ro/info/stiri-din-romania/761-investeste-acasa.html",
+      "sourceVersion": "Comunicare oficială din 27.05.2026 privind programul guvernamental",
+      "sourceType": "official",
+      "applicationStart": null,
+      "applicationEnd": null,
+      "grantSummary": {
+        "minimum": null,
+        "maximum": {
+          "amount": 200000,
+          "currency": "EUR",
+          "unit": "întreprindere"
+        },
+        "budget": {
+          "amount": 100000000,
+          "currency": "EUR"
+        }
+      },
+      "cofinancingSummary": {
+        "intensity": [
+          {
+            "rate": 60,
+            "scope": "maximum din creditul de investiții, conform comunicării oficiale"
+          }
+        ],
+        "ownContribution": "Minimum 10%; minimum 5% pentru persoanele cu vârsta sub 35 de ani, conform comunicării oficiale."
+      },
+      "pageUrl": "/diaspora-investeste-acasa",
+      "lastMeaningfulUpdate": "2026-05-27",
+      "evergreenValue": true,
+      "archivedNoindexDecision": null,
+      "cardSummary": "Program anunțat pentru întreprinderi nou-înființate de români din diaspora; procedura și calendarul de aplicare nu sunt încă publicate.",
+      "metaTitle": "Diaspora Investește Acasă: condiții anunțate | FABER",
+      "metaDescription": "Diaspora Investește Acasă: beneficiari, finanțare anunțată, contribuție proprie și ce documente pot fi pregătite înaintea procedurii oficiale.",
+      "editorialDisclaimer": "Programul este prezentat pe baza comunicării oficiale; procedura, calendarul și criteriile complete de aplicare nu sunt încă publicate.",
+      "eligibleApplicants": [
+        "Întreprinderi nou-înființate, deținute majoritar de cetățeni români cu domiciliul sau reședința în străinătate"
+      ],
+      "keyConditions": [
+        "Investiția va fi creditată prin mecanismul anunțat, cu o contribuție proprie minimă.",
+        "Eligibilitatea finală va depinde de procedura și documentele oficiale care urmează să fie publicate."
+      ],
+      "officialGuideKeys": [
+        "diaspora-investeste-acasa"
+      ],
+      "presentation": {
+        "carousel": false,
+        "hero": true,
+        "order": 21,
+        "icon": "ph-house-line",
+        "image": "/assets/hero/hero-regional.webp",
+        "beneficiary": "români din diaspora care înființează o întreprindere în România"
+      },
+      "discovery": {
+        "parentHub": "/fonduri-europene-imm",
+        "applicantTypes": [
+          "nespecificat"
+        ],
+        "regions": [
+          "national"
+        ],
+        "investmentTypes": [
+          "investitii_productive",
+          "antreprenoriat"
+        ],
+        "listed": true
+      }
+    },
+    {
+      "slug": "e-drive",
+      "name": "Programul e-DRIVE",
+      "shortName": "e-DRIVE",
+      "family": "mobilitate-energie",
+      "status": "ghid_aprobat_nedeschis",
+      "statusLabel": "Schemă aprobată – depunerea nu este deschisă",
+      "publicationState": "public",
+      "verifiedAt": "2026-08-09",
+      "sourceName": "Ministerul Transporturilor și Infrastructurii / Portal Legislativ",
+      "sourceUrl": "https://legislatie.just.ro/Public/DetaliiDocumentAfis/306913",
+      "sourceVersion": "Ordinul MTI nr. 2.291/29.12.2025, publicat în Monitorul Oficial nr. 14/13.01.2026; modificat prin Ordinul nr. 100/12.02.2026",
+      "sourceType": "official",
+      "applicationStart": null,
+      "applicationEnd": null,
+      "grantSummary": {
+        "minimum": null,
+        "maximum": {
+          "amount": 4000000,
+          "currency": "EUR",
+          "unit": "beneficiar, în cadrul măsurii competitive"
+        },
+        "budget": {
+          "amount": 50000000,
+          "currency": "EUR"
+        }
+      },
+      "cofinancingSummary": {
+        "intensity": [
+          {
+            "rate": 100,
+            "scope": "maximum, în limitele schemei și ale costului eligibil aplicabil"
+          }
+        ],
+        "ownContribution": "Diferența neacoperită de ajutor, costurile neeligibile și orice diferență față de costul de referință aplicabil."
+      },
+      "pageUrl": "/e-drive",
+      "lastMeaningfulUpdate": "2026-02-12",
+      "evergreenValue": true,
+      "archivedNoindexDecision": null,
+      "cardSummary": "Schemă aprobată pentru vehicule electrice utilizate în transportul rutier de persoane; calendarul depunerii nu este publicat.",
+      "metaTitle": "e-DRIVE: vehicule electrice pentru transport | FABER",
+      "metaDescription": "Programul e-DRIVE: măsuri de ajutor, beneficiari, vehicule eligibile, plafoane și obligații, explicate pe baza ordinului oficial.",
+      "editorialDisclaimer": "Existența schemei aprobate nu înseamnă că depunerea este deschisă. Calendarul și procedura operațională trebuie confirmate oficial.",
+      "eligibleApplicants": [
+        "Operatori economici care desfășoară transport rutier de persoane în condițiile schemei"
+      ],
+      "keyConditions": [
+        "Sunt vizate vehicule exclusiv electrice din categoriile prevăzute de schemă.",
+        "Pentru fiecare vehicul finanțat se aplică obligația de casare prevăzută în ordin și menținerea investiției pe perioada stabilită.",
+        "Măsura 1 aplică plafonul de minimis de 300.000 EUR pe întreprindere unică."
+      ],
+      "officialGuideKeys": [
+        "e-drive"
+      ],
+      "presentation": {
+        "carousel": false,
+        "hero": true,
+        "order": 22,
+        "icon": "ph-bus",
+        "image": "/assets/hero/hero-solar.webp",
+        "beneficiary": "operatori de transport rutier de persoane"
+      },
+      "discovery": {
+        "parentHub": "/finantari-panouri-fotovoltaice",
+        "applicantTypes": [
+          "nespecificat"
+        ],
+        "regions": [
+          "national"
+        ],
+        "investmentTypes": [
+          "mobilitate"
+        ],
+        "listed": true
+      }
+    },
+    {
+      "slug": "e-mobility-ro",
+      "name": "Programul e-Mobility RO",
+      "shortName": "e-Mobility RO",
+      "family": "mobilitate-energie",
+      "status": "ghid_aprobat_nedeschis",
+      "statusLabel": "Schemă aprobată – depunerea nu este deschisă",
+      "publicationState": "public",
+      "verifiedAt": "2026-08-09",
+      "sourceName": "Ministerul Transporturilor și Infrastructurii / Portal Legislativ",
+      "sourceUrl": "https://legislatie.just.ro/Public/DetaliiDocumentAfis/301389",
+      "sourceVersion": "Ordinul MTI nr. 1.319/12.08.2025 și schema de ajutor de stat e-Mobility RO",
+      "sourceType": "official",
+      "applicationStart": null,
+      "applicationEnd": null,
+      "grantSummary": {
+        "minimum": null,
+        "maximum": null,
+        "budget": {
+          "amount": 299000000,
+          "currency": "EUR"
+        }
+      },
+      "cofinancingSummary": {
+        "intensity": [
+          {
+            "rate": 100,
+            "scope": "maximum posibil prin procedura competitivă, în condițiile schemei"
+          }
+        ],
+        "ownContribution": "Diferența rezultată din oferta competitivă, costurile neeligibile și eventualele depășiri ale limitelor aplicabile."
+      },
+      "pageUrl": "/e-mobility",
+      "lastMeaningfulUpdate": "2025-08-12",
+      "evergreenValue": true,
+      "archivedNoindexDecision": null,
+      "cardSummary": "Schemă aprobată pentru infrastructură de reîncărcare de-a lungul rețelei rutiere; depunerea nu este deschisă.",
+      "metaTitle": "e-Mobility RO: stații de reîncărcare | FABER",
+      "metaDescription": "Programul e-Mobility RO: amplasamente, solicitanți, investiții eligibile și buget, consolidat din actele normative oficiale.",
+      "editorialDisclaimer": "Pagina explică schema aprobată; nu afirmă existența unui apel deschis sau a unui calendar neconfirmat.",
+      "eligibleApplicants": [
+        "Microîntreprinderi, întreprinderi mici, mijlocii și mari care îndeplinesc condițiile schemei"
+      ],
+      "keyConditions": [
+        "Infrastructura trebuie amplasată pe autostrăzi, drumuri expres ori drumuri naționale sau în proximitatea admisă a unei ieșiri TEN-T.",
+        "Proiectul poate include infrastructură de reîncărcare și, în condițiile schemei, producție regenerabilă și stocare asociată.",
+        "Un beneficiar nu poate primi mai mult de 40% din bugetul total al schemei."
+      ],
+      "officialGuideKeys": [
+        "e-mobility-ro"
+      ],
+      "presentation": {
+        "carousel": false,
+        "hero": true,
+        "order": 23,
+        "icon": "ph-charging-station",
+        "image": "/assets/hero/hero-solar.webp",
+        "beneficiary": "întreprinderi care dezvoltă infrastructură publică de reîncărcare"
+      },
+      "discovery": {
+        "parentHub": "/finantari-panouri-fotovoltaice",
+        "applicantTypes": [
+          "nespecificat"
+        ],
+        "regions": [
+          "national"
+        ],
+        "investmentTypes": [
+          "mobilitate",
+          "energie_regenerabila"
+        ],
+        "listed": true
+      }
+    },
+    {
+      "slug": "fondul-modernizare-pc1-stocare",
+      "name": "Fondul pentru Modernizare – PC1 Stocare stand-alone",
+      "shortName": "PC1 Stocare stand-alone",
+      "family": "energie",
+      "status": "consultare_publica",
+      "statusLabel": "Ghid în consultare – depunerea nu este deschisă",
+      "publicationState": "public",
+      "verifiedAt": "2026-08-09",
+      "sourceName": "Ministerul Energiei",
+      "sourceUrl": "https://energie.gov.ro/category/fondul-pentru-modernizare/",
+      "sourceVersion": "Documentația PC1 pentru capacități de stocare stand-alone publicată în consultare la 21.05.2026",
+      "sourceType": "official",
+      "applicationStart": null,
+      "applicationEnd": null,
+      "grantSummary": {
+        "minimum": null,
+        "maximum": {
+          "amount": 15000000,
+          "currency": "EUR",
+          "unit": "întreprindere"
+        },
+        "budget": {
+          "amount": 150000000,
+          "currency": "EUR"
+        }
+      },
+      "cofinancingSummary": {
+        "intensity": [
+          {
+            "rate": 100,
+            "scope": "maximum propus în documentația de consultare, în limita costului eligibil și a competiției"
+          }
+        ],
+        "ownContribution": "Costurile neeligibile, depășirile plafonului și diferența rezultată din regulile finale ori din procedura competitivă."
+      },
+      "pageUrl": "/fondul-modernizare-pc1-stocare",
+      "lastMeaningfulUpdate": "2026-05-21",
+      "evergreenValue": true,
+      "archivedNoindexDecision": null,
+      "cardSummary": "Documentație în consultare pentru baterii stand-alone racordate la rețea; regulile și calendarul final nu sunt încă confirmate.",
+      "metaTitle": "PC1 stocare stand-alone: consultare | FABER",
+      "metaDescription": "Fondul pentru Modernizare PC1: beneficiari, baterii stand-alone, buget și plafoane din documentația oficială de consultare.",
+      "editorialDisclaimer": "Valorile și condițiile provin din documentația de consultare și se pot modifica înaintea aprobării formei finale.",
+      "eligibleApplicants": [
+        "Microîntreprinderi, IMM-uri și întreprinderi mari, inclusiv întreprinderi nou-înființate, în condițiile documentației de consultare"
+      ],
+      "keyConditions": [
+        "Investiția vizează capacități de stocare stand-alone racordate la rețea.",
+        "Solicitantul și activitatea trebuie să respecte domeniul energetic și condițiile formei finale a ghidului.",
+        "Documentația de consultare propune un plafon al ajutorului de 69.000 EUR/MWh."
+      ],
+      "officialGuideKeys": [
+        "fm-pc1-stocare"
+      ],
+      "presentation": {
+        "carousel": false,
+        "hero": true,
+        "order": 24,
+        "icon": "ph-battery-high",
+        "image": "/assets/hero/hero-solar.webp",
+        "beneficiary": "întreprinderi care dezvoltă capacități de stocare stand-alone"
+      },
+      "discovery": {
+        "parentHub": "/finantari-panouri-fotovoltaice",
+        "applicantTypes": [
+          "nespecificat"
+        ],
+        "regions": [
+          "national"
+        ],
+        "investmentTypes": [
+          "energie_regenerabila"
+        ],
+        "listed": true
+      }
+    },
+    {
       "slug": "programul-tranzitie-justa",
       "name": "Programul Tranziție Justă",
       "shortName": "Programul Tranziție Justă",

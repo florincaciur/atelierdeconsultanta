@@ -1,11 +1,11 @@
 # Raport de prospețime și guvernanță editorială
 
-Data evaluării: **2026-08-08**. Registru: `config/editorial-governance.json`.
+Data evaluării: **2026-08-09**. Registru: `config/editorial-governance.json`.
 
 ## Rezumat
 
-- Pagini guvernate: **33**
-- Pagini publice cu metadate complete: **19**
+- Pagini guvernate: **37**
+- Pagini publice cu metadate complete: **23**
 - Verificări expirate: **9**
 - Surse lipsă/incomplete: **4**
 - Reviewer lipsă: **0**
@@ -50,6 +50,10 @@ O expirare produce warning intern și nu schimbă automat statusul, textul, `ver
 | `/start-up-nation-2026-idei-afaceri` | guide | pending_validation | — | 2026-05-20 | 2026-08-18 | DE_VALIDAT_UMAN | nu | nu | nu | nu |
 | `/start-up-nation-2026-plan-de-afaceri` | guide | pending_validation | — | 2026-05-20 | 2026-08-18 | DE_VALIDAT_UMAN | nu | nu | nu | nu |
 | `/webinarii` | guide | pending_validation | — | 2026-05-20 | 2026-08-18 | DE_VALIDAT_UMAN | nu | nu | nu | nu |
+| `/diaspora-investeste-acasa` | program | public | calendar_estimativ | 2026-08-09 | 2026-09-08 | 2026-05-27 | nu | nu | nu | nu |
+| `/e-drive` | program | public | ghid_aprobat_nedeschis | 2026-08-09 | 2026-09-08 | 2026-02-12 | nu | nu | nu | nu |
+| `/e-mobility` | program | public | ghid_aprobat_nedeschis | 2026-08-09 | 2026-09-08 | 2025-08-12 | nu | nu | nu | nu |
+| `/fondul-modernizare-pc1-stocare` | program | public | consultare_publica | 2026-08-09 | 2026-09-08 | 2026-05-21 | nu | nu | nu | nu |
 
 ## Reguli de prospețime
 

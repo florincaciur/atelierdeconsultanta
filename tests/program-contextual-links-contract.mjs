@@ -16,7 +16,7 @@ const allPrograms = loadProgramConfig().programs;
 const programs = allPrograms.filter((program) => !program.discovery?.redirectTarget);
 const config = loadConfig();
 validateMatrix(programs, config);
-assert.equal(allPrograms.length, 20, "registrul trebuie să conțină 20 de programe");
+assert.equal(allPrograms.length, 24, "registrul trebuie să conțină 24 de programe");
 assert.ok(fs.existsSync(path.join(ROOT, config.evidence.gscPages)), "lipsește dovada GSC pe pagini");
 assert.ok(fs.existsSync(path.join(ROOT, config.evidence.gscQueries)), "lipsește dovada GSC pe query-uri");
 
@@ -30,11 +30,11 @@ assert.deepEqual(resolvedLinks(dr12, config).map(({ relation, href, anchor }) =>
 
 const audit = auditProgramContextualLinks();
 assert.equal(audit.errors.length, 0, audit.errors.join("\n"));
-assert.equal(audit.summary.programs, 15);
-assert.equal(audit.summary.links, 60);
-assert.equal(audit.summary.trackedCtas, 15);
-assert.equal(audit.summary.editorialLinksWithoutTracking, 45);
+assert.equal(audit.summary.programs, 19);
+assert.equal(audit.summary.links, 76);
+assert.equal(audit.summary.trackedCtas, 19);
+assert.equal(audit.summary.editorialLinksWithoutTracking, 57);
 assert.equal(audit.summary.legacyCloudsRemaining, 0);
-assert.deepEqual(audit.summary.relationCounts, { parent: 15, instrument: 15, comparison: 15, conversion: 15 });
+assert.deepEqual(audit.summary.relationCounts, { parent: 19, instrument: 19, comparison: 19, conversion: 19 });
 
-console.log("Program contextual links contract PASS: 15 programe publice listate, 60 de relații, tracking exclusiv pe 15 CTA-uri.");
+console.log("Program contextual links contract PASS: 19 programe publice listate, 76 de relații, tracking exclusiv pe 19 CTA-uri.");

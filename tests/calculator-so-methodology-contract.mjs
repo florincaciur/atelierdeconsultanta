@@ -42,6 +42,9 @@ assert.equal($("#calculator-errors[role='alert']").length, 1, "validarea are reg
 assert.equal($("[data-copy-so-result]").length, 1, "lipsește copierea rezultatului");
 assert.equal($("[data-print-so-result]").length, 1, "lipsește tipărirea rezultatului");
 assert.equal($("#so-result-explanation").length, 1, "lipsește explicația rezultatului");
+assert.equal($("#so-program-suggestion").length, 1, "lipsește sugestia prudentă de program");
+assert.equal($("main").children().eq(1).attr("id"), "calculator", "calculatorul trebuie să urmeze imediat după banner");
+assert.equal($(".so-page-disclosure").length, 4, "fragmentele metodologice lungi trebuie restrânse în disclosure-uri native");
 assert.equal($("script[src^='/assets/calculator-so-methodology.js']").length, 1, "scriptul funcțional P1.20 trebuie încărcat exact o dată");
 assert($("[data-so-methodology]").text().includes("Formula de înmulțire și însumare existentă nu a fost schimbată"));
 assert($(".calc-result").text().includes(DISCLAIMER), "disclaimerul contractual trebuie să fie lângă rezultat");
@@ -58,6 +61,7 @@ assert(calculatorScript, "scriptul calculatorului lipsește");
 assert(calculatorScript.includes("const rowTotal = so * area;"), "formula de înmulțire a fost modificată");
 assert(calculatorScript.includes("totalSo += rowTotal;"), "formula de însumare a fost modificată");
 assert(calculatorScript.includes("const roundedTotal = Math.round(totalSo);"), "regula de rotunjire trebuie să fie explicită");
+assert(calculatorScript.includes("so < 2000") && calculatorScript.includes("so < 12000"), "orientarea prudentă DR 14/DR 12 trebuie să folosească reperele explicite");
 assert(calculatorScript.includes("!hasTrackedCalculation"), "evenimentul calculatorului trebuie deduplicat");
 const embeddedDataMatch = calculatorScript.match(/const soDatabase = ([\s\S]*?);\n\s*let hasTrackedCalculation/u);
 assert(embeddedDataMatch, "setul de coeficienți nu poate fi extras din implementare");

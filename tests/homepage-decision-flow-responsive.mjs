@@ -25,7 +25,8 @@ try {
     const page = await browser.newPage({ viewport });
     const consoleErrors = [];
     page.on("console", (message) => { if (message.type() === "error") consoleErrors.push(message.text()); });
-    await page.goto(baseUrl, { waitUntil: "networkidle" });
+    await page.goto(baseUrl, { waitUntil: "domcontentloaded" });
+    await page.locator("[data-priority-carousel]").waitFor({ state: "visible" });
     const metrics = await page.evaluate(() => ({
       overflow: document.documentElement.scrollWidth - document.documentElement.clientWidth,
       forms: document.querySelectorAll("main form").length,
