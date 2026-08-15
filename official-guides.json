@@ -100,36 +100,36 @@
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
   "afir-autoconsum": {
-    "name": "Ghidul Solicitantului Schema Energie Autoconsum V7 – iunie 2026",
-    "title": "Ghidul Solicitantului Schema Energie Autoconsum V7 – iunie 2026",
+    "name": "Anunțul AFIR din 15.06.2026 pentru sesiunea 15 iunie–14 august 2026",
+    "title": "Anunțul AFIR din 15.06.2026 pentru sesiunea 15 iunie–14 august 2026",
     "institution": "Ministerul Agriculturii și Dezvoltării Rurale / AFIR",
     "documentType": "ghid aprobat prin OMADR nr. 180/09.06.2026",
-    "url": "https://www.afir.ro/media/hkfp4w0v/ghidul-solicitantului-schem%C4%83-energie-autoconsum-v7-iunie-2026.pdf",
-    "accessedAt": "2026-07-20",
+    "url": "https://www.afir.ro/comunicate/deschiderea-sesiunii-pentru-investitiile-in-producerea-energiei-electrice-din-surse-regenerabile/",
+    "accessedAt": "2026-08-15",
     "note": "Versiunea 7 aplicabilă celei de-a treia sesiuni din 2026; documentul aprobat înlocuiește ca reper editorial versiunea publicată anterior în consultare.",
     "programIds": [
       "afir-energie-autoconsum"
     ],
     "isPrimaryFor": "afir-energie-autoconsum",
-    "programStatus": "apel_deschis",
-    "statusLabel": "Apel deschis",
-    "verifiedAt": "2026-07-20",
+    "programStatus": "apel_inchis",
+    "statusLabel": "Apel închis – sesiunea s-a încheiat la 14 august 2026",
+    "verifiedAt": "2026-08-15",
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
   "afir-autoconsum-session-2026": {
-    "name": "Ghidul Solicitantului Schema Energie Autoconsum V7 – iunie 2026",
-    "title": "Ghidul Solicitantului Schema Energie Autoconsum V7 – iunie 2026",
+    "name": "Anunțul AFIR din 15.06.2026 pentru sesiunea 15 iunie–14 august 2026",
+    "title": "Anunțul AFIR din 15.06.2026 pentru sesiunea 15 iunie–14 august 2026",
     "institution": "Ministerul Agriculturii și Dezvoltării Rurale / AFIR",
     "documentType": "anunț oficial de lansare",
-    "url": "https://www.afir.ro/media/hkfp4w0v/ghidul-solicitantului-schem%C4%83-energie-autoconsum-v7-iunie-2026.pdf",
-    "accessedAt": "2026-07-20",
+    "url": "https://www.afir.ro/comunicate/deschiderea-sesiunii-pentru-investitiile-in-producerea-energiei-electrice-din-surse-regenerabile/",
+    "accessedAt": "2026-08-15",
     "note": "Confirmă sesiunea 15 iunie–14 august 2026, alocarea de 265 milioane euro și caracterul aplicabil al Ghidului V7.",
     "programIds": [
       "afir-energie-autoconsum"
     ],
-    "programStatus": "apel_deschis",
-    "statusLabel": "Apel deschis",
-    "verifiedAt": "2026-07-20",
+    "programStatus": "apel_inchis",
+    "statusLabel": "Apel închis – sesiunea s-a încheiat la 14 august 2026",
+    "verifiedAt": "2026-08-15",
     "isPrimaryFor": "afir-energie-autoconsum",
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
@@ -347,14 +347,14 @@
     "programIds": [
       "dr14-afir"
     ],
-    "name": "Ghidul Solicitantului DR 14 – varianta finală, Sesiunea 2026, publicat la 06.08.2026",
-    "title": "Ghidul Solicitantului DR 14 – varianta finală, Sesiunea 2026, publicat la 06.08.2026",
+    "name": "Anunțul A1.2/01/2026 pentru sesiunea DR 14, publicat la 14.08.2026",
+    "title": "Anunțul A1.2/01/2026 pentru sesiunea DR 14, publicat la 14.08.2026",
     "institution": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
-    "url": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-14/",
-    "accessedAt": "2026-08-08",
+    "url": "https://www.afir.ro/instrumente/sesiuni/sesiuni-primire-proiecte/",
+    "accessedAt": "2026-08-15",
     "programStatus": "ghid_aprobat_nedeschis",
-    "statusLabel": "Ghid oficial, varianta finală – depunerea nu este deschisă",
-    "verifiedAt": "2026-08-08",
+    "statusLabel": "Sesiune lansată – depuneri 1 septembrie–31 octombrie 2026",
+    "verifiedAt": "2026-08-15",
     "isPrimaryFor": "dr14-afir",
     "sourceOfTruth": "config/seo-programs.json#programs"
   },

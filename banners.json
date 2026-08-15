@@ -4,12 +4,12 @@
     "programId": "dr12-afir",
     "title": "DR-12 Investiții în consolidarea exploatațiilor tinerilor fermieri instalați și a fermierilor cu vârsta de până la 45 de ani",
     "tag": "Ghid consultativ – depunerea nu este deschisă. Condițiile se pot modifica.",
-    "description": "DR 12 are ghid consultativ, verificat la 22.07.2026. Depunerea nu este deschisă; vezi documentul AFIR și condițiile care trebuie urmărite.",
+    "description": "DR 12 este în etapa ghidului consultativ. Verifică profilul fermierului, SO, actele exploatației și investiția pentru a pregăti dosarul înaintea lansării.",
     "ctaText": "Detalii program",
     "ctaLink": "/dr12-afir",
     "icon": "ph-plant",
     "image": "/assets/hero/hero-agriculture.webp",
-    "pageTitle": null,
+    "pageTitle": "DR 12 AFIR 2026 – investiții pentru tineri fermieri și fermieri până la 45 de ani",
     "order": 2,
     "estimate": null,
     "active": true,
@@ -31,8 +31,8 @@
     "id": "slide-afir-autoconsum",
     "programId": "afir-energie-autoconsum",
     "title": "Schema de ajutor privind sprijinirea investițiilor în noi capacități de producere a energiei electrice din surse regenerabile pentru autoconsumul întreprinderilor din agricultură și industria alimentară",
-    "tag": "Apel deschis",
-    "description": "AFIR Energie pentru ferme și procesatori: sesiune până la 14 august 2026, minimum 70% autoconsum, fotovoltaice, stocare, SF și documente.",
+    "tag": "Apel închis – sesiunea s-a încheiat la 14 august 2026",
+    "description": "Sesiunea AFIR Energie 2026 s-a încheiat la 14 august. Vezi regulile pentru autoconsum, fotovoltaice, stocare, studiu de fezabilitate și documente.",
     "ctaText": "Detalii program →",
     "ctaLink": "/afir-autoconsum-agroalimentar",
     "icon": "ph-sun",
@@ -41,12 +41,12 @@
     "order": 3,
     "estimate": null,
     "active": true,
-    "programStatus": "apel_deschis",
-    "statusLabel": "Apel deschis",
-    "verifiedAt": "2026-07-20",
+    "programStatus": "apel_inchis",
+    "statusLabel": "Apel închis – sesiunea s-a încheiat la 14 august 2026",
+    "verifiedAt": "2026-08-15",
     "sourceName": "Ministerul Agriculturii și Dezvoltării Rurale / AFIR",
-    "sourceUrl": "https://www.afir.ro/media/hkfp4w0v/ghidul-solicitantului-schem%C4%83-energie-autoconsum-v7-iunie-2026.pdf",
-    "sourceVersion": "Ghidul Solicitantului Schema Energie Autoconsum V7 – iunie 2026",
+    "sourceUrl": "https://www.afir.ro/comunicate/deschiderea-sesiunii-pentru-investitiile-in-producerea-energiei-electrice-din-surse-regenerabile/",
+    "sourceVersion": "Anunțul AFIR din 15.06.2026 pentru sesiunea 15 iunie–14 august 2026",
     "applicationStart": "2026-06-15",
     "applicationEnd": "2026-08-14",
     "grantSummary": {
@@ -70,7 +70,7 @@
       ],
       "ownContribution": "Diferențele peste costurile unitare și cheltuielile neeligibile."
     },
-    "fundingSummary": "Finanțare conform sursei oficiale: 20.000.000 EUR/beneficiar; buget 265.000.000 EUR; intensitate 100% (costuri eligibile în limitele costului unitar); Diferențele peste costurile unitare și cheltuielile neeligibile.",
+    "fundingSummary": "Valori istorice conform sursei oficiale: 20.000.000 EUR/beneficiar; buget 265.000.000 EUR; intensitate 100% (costuri eligibile în limitele costului unitar); Diferențele peste costurile unitare și cheltuielile neeligibile.",
     "officialGuideKey": "afir-autoconsum",
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
@@ -106,27 +106,24 @@
     "id": "slide-dr14-afir",
     "programId": "dr14-afir",
     "title": "DR-14 Investiții în fermele de mici dimensiuni",
-    "tag": "Ghid oficial, varianta finală – depunerea nu este deschisă",
-    "description": "Ghid oficial DR 14, varianta finală: maximum 50.000 €, intensitate 85%, praguri SO, punctaj, investiții eligibile și dosarul fermei mici.",
+    "tag": "Sesiune lansată – depuneri 1 septembrie–31 octombrie 2026",
+    "description": "Sesiunea DR 14 este lansată: depuneri 1 septembrie–31 octombrie 2026, buget 108 mil. €, grant de maximum 50.000 € și intensitate de până la 85%.",
     "ctaText": "Detalii program",
     "ctaLink": "/dr14",
     "icon": "ph-tractor",
     "image": "/assets/hero/hero-agriculture.webp",
     "pageTitle": "DR 14 AFIR 2026 – investiții în fermele de mici dimensiuni",
     "order": 5,
-    "estimate": {
-      "label": "perioadă estimativă de depuneri: septembrie-octombrie 2026",
-      "note": "Estimare de pregătire; intervalul oficial va fi anunțat de AFIR."
-    },
+    "estimate": null,
     "active": true,
     "programStatus": "ghid_aprobat_nedeschis",
-    "statusLabel": "Ghid oficial, varianta finală – depunerea nu este deschisă",
-    "verifiedAt": "2026-08-08",
+    "statusLabel": "Sesiune lansată – depuneri 1 septembrie–31 octombrie 2026",
+    "verifiedAt": "2026-08-15",
     "sourceName": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
-    "sourceUrl": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-14/",
-    "sourceVersion": "Ghidul Solicitantului DR 14 – varianta finală, Sesiunea 2026, publicat la 06.08.2026",
-    "applicationStart": null,
-    "applicationEnd": null,
+    "sourceUrl": "https://www.afir.ro/instrumente/sesiuni/sesiuni-primire-proiecte/",
+    "sourceVersion": "Anunțul A1.2/01/2026 pentru sesiunea DR 14, publicat la 14.08.2026",
+    "applicationStart": "2026-09-01",
+    "applicationEnd": "2026-10-31",
     "grantSummary": {
       "minimum": null,
       "maximum": {
@@ -134,7 +131,10 @@
         "currency": "EUR",
         "unit": "proiect"
       },
-      "budget": null
+      "budget": {
+        "amount": 108000000,
+        "currency": "EUR"
+      }
     },
     "cofinancingSummary": {
       "intensity": [
@@ -145,7 +145,7 @@
       ],
       "ownContribution": "Beneficiarul acoperă diferența eligibilă, cheltuielile neeligibile și orice sumă care depășește plafonul ajutorului public."
     },
-    "fundingSummary": "Finanțare conform sursei oficiale: 50.000 EUR/proiect; intensitate 85% (maximum din costurile eligibile); Beneficiarul acoperă diferența eligibilă, cheltuielile neeligibile și orice sumă care depășește plafonul ajutorului public.",
+    "fundingSummary": "Finanțare conform sursei oficiale: 50.000 EUR/proiect; buget 108.000.000 EUR; intensitate 85% (maximum din costurile eligibile); Beneficiarul acoperă diferența eligibilă, cheltuielile neeligibile și orice sumă care depășește plafonul ajutorului public.",
     "officialGuideKey": "dr14",
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
@@ -266,7 +266,7 @@
     "programId": "modernizare-microintreprinderi-ne-2",
     "title": "Investiții pentru modernizarea microîntreprinderilor – Apel 2",
     "tag": "Consultare publică – depunerea nu este deschisă",
-    "description": "Apel 2 Nord-Est pentru microîntreprinderi: valori și intensitate conform variantei consultative, plus CAEN, amplasament și documente.",
+    "description": "Apelul 2 Nord-Est este programat pentru microîntreprinderi: grant consultativ 100.000–300.000 €, intensitate de până la 90%, CAEN, amplasament și acte.",
     "ctaText": "Detalii program →",
     "ctaLink": "/investitii-modernizarea-microintreprinderilor-apel-2",
     "icon": "ph-buildings",

@@ -2,7 +2,7 @@
 
 - Suprafețe țintă: 10
 - Fișiere HTML actualizate la această rulare: 2
-- Fragmente documentate cumulativ: 216
+- Fragmente documentate cumulativ: 217
 - Migrare surse editoriale realizată: da
 - Textele juridice nu fac parte din corpusul rescris automat.
 - Statusurile și câmpurile factuale din registrul programelor sunt protejate.
@@ -225,3 +225,4 @@
 | /dr14 | dr14/index.html:visible-copy | Verifică eligibilitatea DR 14 | Cere o verificare inițială DR 14 | Lexic controlat P0.14 |
 | /dr14 | dr14/index.html:json-ld:$.@graph[6].mainEntity[7].acceptedAnswer.text | Sursa cofinanțării se dovedește la contractare, în termenul și prin documentele solicitate de AFIR. La depunere, bugetul și declarațiile trebuie totuși să trateze realist partea proprie și costurile neeligibile. | Sursa contribuției proprii se dovedește la contractare, în termenul și prin documentele solicitate de AFIR. La depunere, bugetul și declarațiile trebuie totuși să trateze realist partea proprie și costurile neeligibile. | Lexic controlat P0.14 |
 | /dr14 | dr14/index.html:json-ld:$.@graph[6].mainEntity[7].name | Când trebuie dovedită cofinanțarea? | Când trebuie dovedită contribuția proprie? | Lexic controlat P0.14 |
+| /dr12-afir | dr12-afir/index.html:visible-copy | Amplasament, lucrări sau dotări, buget și capacitatea de cofinanțare. | Amplasament, lucrări sau dotări, buget și capacitatea de contribuție proprie. | Lexic controlat P0.14 |

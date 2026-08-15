@@ -79,7 +79,8 @@ for (const page of config.pages) {
   const directWords = countWords(direct.text());
   assert.equal(direct.length, 1);
   assert(directWords >= 50 && directWords <= 80, `${page.route}: răspunsul direct are ${directWords} cuvinte`);
-  assert(direct.text().includes("Depunerea este deschisă"), `${page.route}: răspunsul direct nu spune dacă depunerea este deschisă`);
+  const expectedSubmissionState = program.status === "apel_deschis" ? "Depunerea este deschisă" : "Depunerea nu este deschisă";
+  assert(direct.text().includes(expectedSubmissionState), `${page.route}: răspunsul direct nu declară corect starea depunerii`);
 
   const actualOrder = $("[data-program-template-section]").map((_, node) => $(node).attr("data-program-template-section")).get();
   assert.deepEqual(actualOrder, ["glance", ...SECTION_ORDER], `${page.route}: ordinea obligatorie a secțiunilor este încălcată`);
@@ -94,7 +95,11 @@ for (const page of config.pages) {
     assert.equal(section.find(":scope > .program-template__source-note a[data-source-key]").length > 0, true, `${page.route}: ${id} nu are sursă apropiată`);
   }
   assert.equal($(".program-template__disclaimer").length, 1, `${page.route}: trebuie un singur disclaimer`);
-  assert.equal((template.text().match(/eventualele modificări se verifică la AFIR/giu) || []).length, 1, `${page.route}: disclaimer duplicat`);
+  assert.equal(
+    $(".program-template__disclaimer").text().replace(/\s+/gu, " ").trim(),
+    `Important: ${program.editorialDisclaimer}`,
+    `${page.route}: disclaimerul nu corespunde registrului unic`
+  );
   assert.equal(/\bPe scurt\b/iu.test(template.text()), false, `${page.route}: eticheta generică a rămas în template`);
 
   const questions = $("#program-questions details.faq-item");

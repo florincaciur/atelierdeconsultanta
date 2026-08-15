@@ -205,12 +205,17 @@ function renderProgramHero({ route, banner, existing = {}, actionsHtml }) {
   if (!finalActions) throw new Error(`Missing hero actions for ${normalizedRoute}`);
   const image = banner.image;
   if (!image || !String(image).startsWith("/")) throw new Error(`Invalid banner image for ${normalizedRoute}`);
-  const estimate = banner.estimate && banner.estimate.label
-    ? `<aside class="program-hero__estimate" aria-label="Calendar estimativ" data-program-estimate="true">
-      <strong>${escapeHtml(banner.estimate.label)}</strong>
-      ${banner.estimate.note ? `<span>${escapeHtml(banner.estimate.note)}</span>` : ""}
+  const calendar = banner.calendar && banner.calendar.label
+    ? `<aside class="program-hero__estimate program-hero__calendar" aria-label="Calendar oficial" data-program-calendar="official">
+      <strong>${escapeHtml(banner.calendar.label)}</strong>
+      ${banner.calendar.note ? `<span>${escapeHtml(banner.calendar.note)}</span>` : ""}
     </aside>`
-    : "";
+    : banner.estimate && banner.estimate.label
+      ? `<aside class="program-hero__estimate" aria-label="Calendar estimativ" data-program-estimate="true">
+        <strong>${escapeHtml(banner.estimate.label)}</strong>
+        ${banner.estimate.note ? `<span>${escapeHtml(banner.estimate.note)}</span>` : ""}
+      </aside>`
+      : "";
 
   return `<!-- PROGRAM_HERO_START -->
   <header class="hero hero--image hero--${escapeHtml(family)} program-hero" data-design-family="${escapeHtml(family)}" data-program-family="${escapeHtml(family)}" data-program-route="${escapeHtml(normalizedRoute)}" data-banner-id="${escapeHtml(banner.id)}" data-banner-image="${escapeHtml(image)}" style="--hero-image:url('${escapeHtml(image)}')">
@@ -218,7 +223,7 @@ function renderProgramHero({ route, banner, existing = {}, actionsHtml }) {
     <span class="eyebrow design-badge design-badge--${escapeHtml(family)}">${escapeHtml(content.tag)}</span>
     <h1>${isProInfra ? escapeHtml(content.title) : renderTitle(content.title)}</h1>
     <p>${escapeHtml(content.description)}</p>
-    ${estimate}
+    ${calendar}
     <div class="hero-actions">
       ${finalActions}
     </div>
@@ -262,6 +267,7 @@ function syncPage(route, bannerIndex, { check = false, program = null } = {}) {
         officialGuideKey: program.officialGuideKeys?.[0] || banner.officialGuideKey,
         sourceUrl: program.sourceUrl || banner.sourceUrl,
         sourceVersion: program.sourceVersion || banner.sourceVersion,
+        calendar: program.presentation?.calendar || banner.calendar,
         estimate: program.presentation?.estimate || banner.estimate
       }
     : banner;

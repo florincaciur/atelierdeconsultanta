@@ -17,6 +17,14 @@ const START = "<!-- HOMEPAGE_DECISION_HERO_START -->";
 const END = "<!-- HOMEPAGE_DECISION_HERO_END -->";
 const STYLE_ID = "homepage-hero-critical-css";
 const MONTHS = ["ianuarie", "februarie", "martie", "aprilie", "mai", "iunie", "iulie", "august", "septembrie", "octombrie", "noiembrie", "decembrie"];
+const HERO_STATUS_PRIORITY = {
+  apel_deschis: 0,
+  ghid_aprobat_nedeschis: 1,
+  consultare_publica: 2,
+  calendar_estimativ: 3,
+  apel_inchis: 4,
+  arhivat: 5
+};
 
 function escapeHtml(value) {
   return String(value ?? "")
@@ -35,7 +43,8 @@ function latestVerifiedProgram(programs) {
   return programs
     .filter((program) => isPublicProgram(program) && hasOfficialSource(program))
     .sort((left, right) => (
-      right.verifiedAt.localeCompare(left.verifiedAt)
+      (HERO_STATUS_PRIORITY[left.status] ?? 99) - (HERO_STATUS_PRIORITY[right.status] ?? 99)
+      || right.verifiedAt.localeCompare(left.verifiedAt)
       || String(right.lastMeaningfulUpdate || "").localeCompare(String(left.lastMeaningfulUpdate || ""))
       || left.slug.localeCompare(right.slug, "ro")
     ))[0];

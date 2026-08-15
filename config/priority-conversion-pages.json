@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "pages": [
+    {
+      "id": "dr14",
+      "file": "dr14/index.html",
+      "route": "/dr14",
+      "programSlug": "dr14-afir",
+      "family": "afir",
+      "eyebrow": "Sesiune lansată · analiză înainte de contract",
+      "title": "Transformă datele fermei într-o decizie clară pentru DR 14",
+      "lead": "Calendarul este scurt, iar componenta se poate închide anticipat. Înaintea contractării verificăm documentele care susțin încadrarea, punctajul și bugetul.",
+      "steps": [
+        ["Profilul fermei", "Forma juridică, localitatea, APIA/ANSVSA și calculul SO."],
+        ["Componenta și punctajul", "Investiția, componenta corectă și numai criteriile care pot fi probate."],
+        ["Bugetul și actele", "Oferte, contribuție proprie, amplasament și documentele încă lipsă."]
+      ],
+      "primaryLabel": "Cere trierea inițială DR 14",
+      "secondaryLabel": "Calculează orientativ SO",
+      "secondaryHref": "/calculator-soc",
+      "note": "Trierea este orientativă și nu garantează eligibilitatea, punctajul, contractarea sau finanțarea."
+    },
+    {
+      "id": "dr12",
+      "file": "dr12-afir/index.html",
+      "route": "/dr12-afir",
+      "programSlug": "dr12-afir",
+      "family": "afir",
+      "eyebrow": "Pregătire înaintea ghidului final",
+      "title": "Verifică din timp dacă profilul fermei susține DR 12",
+      "lead": "DR 12 rămâne în etapa ghidului consultativ. Folosește perioada de pregătire pentru a separa condițiile dovedibile de cele care trebuie reconfirmate la lansare.",
+      "steps": [
+        ["Profil și istoric", "Vârsta, instalarea, rolul de șef al exploatației și forma juridică."],
+        ["Exploatația", "SO, suprafețe, efective, sector și documentele care susțin datele."],
+        ["Investiția", "Amplasament, lucrări sau dotări, buget și capacitatea de contribuție proprie."]
+      ],
+      "primaryLabel": "Cere trierea inițială DR 12",
+      "secondaryLabel": "Compară DR 12 cu DR 14",
+      "secondaryHref": "/dr12-vs-dr14",
+      "note": "Analiza folosește documentul consultativ; condițiile se pot modifica și nu garantăm eligibilitatea sau finanțarea."
+    },
+    {
+      "id": "micro-apel-2",
+      "file": "investitii-modernizarea-microintreprinderilor-apel-2/index.html",
+      "route": "/investitii-modernizarea-microintreprinderilor-apel-2",
+      "programSlug": "modernizare-microintreprinderi-ne-2",
+      "family": "micro",
+      "eyebrow": "Apel programat · pregătire documentară",
+      "title": "Testează firma și investiția înaintea formei finale a Apelului 2",
+      "lead": "Valorile sunt încă cele din documentația consultativă. Prima analiză urmărește regiunea, activitatea, amplasamentul și bugetul, fără a prezenta condițiile drept definitive.",
+      "steps": [
+        ["Firma și regiunea", "CUI, dimensiunea întreprinderii, localitatea și punctul de lucru vizat."],
+        ["CAEN și investiția", "Activitatea reală, codul CAEN, lista de dotări și eventualele lucrări."],
+        ["Buget și capacitate", "Valoarea proiectului, contribuția proprie, cash-flow și actele spațiului."]
+      ],
+      "primaryLabel": "Cere trierea inițială pentru Apelul 2",
+      "secondaryLabel": "Vezi sursa ADR Nord-Est",
+      "secondaryHref": "https://adrnordest.ro/comentariiGhid/P1Microintreprinderi/Apel2/",
+      "note": "Trierea este orientativă; ghidul final poate modifica valorile și condițiile, iar finanțarea nu poate fi garantată."
+    }
+  ]
+}

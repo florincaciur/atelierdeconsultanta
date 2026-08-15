@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-09T21:58:40.155Z",
+  "generatedAt": "2026-08-15T12:55:14.536Z",
   "targetRoutes": 10,
   "changedFiles": [
     "fonduri-europene-digitalizare/index.html",
@@ -1735,6 +1735,14 @@
       "after": "Când trebuie dovedită contribuția proprie?",
       "reason": "Lexic controlat P0.14",
       "sourceFile": "dr14/index.html"
+    },
+    {
+      "route": "/dr12-afir",
+      "location": "visible-copy",
+      "before": "Amplasament, lucrări sau dotări, buget și capacitatea de cofinanțare.",
+      "after": "Amplasament, lucrări sau dotări, buget și capacitatea de contribuție proprie.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "dr12-afir/index.html"
     }
   ]
 }

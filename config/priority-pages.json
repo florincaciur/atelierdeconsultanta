@@ -200,7 +200,7 @@
       "route": "/afir-autoconsum-agroalimentar",
       "file": "afir-autoconsum-agroalimentar.html",
       "sectionTitle": "Datele esențiale ale programului",
-      "directAnswer": "AFIR Energie pentru ferme și procesatori: sesiune până la 14 august 2026, minimum 70% autoconsum, fotovoltaice, stocare, SF și documente. Apel deschis: 2026-06-15–2026-08-14. Finanțare conform sursei oficiale: 20.000.000 EUR/beneficiar; buget 265.000.000 EUR; intensitate 100% (costuri eligibile în limitele costului unitar); Diferențele peste costurile unitare și cheltuielile neeligibile.",
+      "directAnswer": "Sesiunea AFIR Energie 2026 s-a încheiat la 14 august. Pagina rămâne utilă pentru regulile sesiunii, minimum 70% autoconsum, fotovoltaice, stocare, SF și documente. Apel închis – sesiunea s-a încheiat la 14 august 2026. Valori istorice conform sursei oficiale: 20.000.000 EUR/beneficiar; buget 265.000.000 EUR; intensitate 100% (costuri eligibile în limitele costului unitar); Diferențele peste costurile unitare și cheltuielile neeligibile.",
       "facts": [
         {
           "term": "Cine este eligibil?",
@@ -208,7 +208,7 @@
         },
         {
           "term": "Care este finanțarea?",
-          "description": "Finanțare conform sursei oficiale: 20.000.000 EUR/beneficiar; buget 265.000.000 EUR; intensitate 100% (costuri eligibile în limitele costului unitar); Diferențele peste costurile unitare și cheltuielile neeligibile."
+          "description": "Valori istorice conform sursei oficiale: 20.000.000 EUR/beneficiar; buget 265.000.000 EUR; intensitate 100% (costuri eligibile în limitele costului unitar); Diferențele peste costurile unitare și cheltuielile neeligibile."
         },
         {
           "term": "Care este contribuția proprie?",
@@ -232,18 +232,18 @@
         },
         {
           "term": "Ce statut are ghidul?",
-          "description": "Apel deschis: 2026-06-15–2026-08-14."
+          "description": "Apel închis – sesiunea s-a încheiat la 14 august 2026."
         }
       ],
       "source": {
-        "document": "Ghidul Solicitantului Schema Energie Autoconsum V7 – iunie 2026",
+        "document": "Anunțul AFIR din 15.06.2026 pentru sesiunea 15 iunie–14 august 2026",
         "institution": "Ministerul Agriculturii și Dezvoltării Rurale / AFIR",
-        "status": "Apel deschis: 2026-06-15–2026-08-14. Informațiile sunt raportate la Ghidul V7 și sesiunea 15 iunie–14 august 2026; eventualele modificări se verifică la AFIR.",
-        "url": "https://www.afir.ro/media/hkfp4w0v/ghidul-solicitantului-schem%C4%83-energie-autoconsum-v7-iunie-2026.pdf"
+        "status": "Apel închis – sesiunea s-a încheiat la 14 august 2026. Sesiunea 15 iunie–14 august 2026 este închisă. Informațiile rămân raportate la Ghidul V7; o sesiune viitoare se verifică separat la AFIR.",
+        "url": "https://www.afir.ro/comunicate/deschiderea-sesiunii-pentru-investitiile-in-producerea-energiei-electrice-din-surse-regenerabile/"
       },
       "interpretation": "O putere instalată mai mare nu înseamnă automat un proiect mai bun: consumul istoric, extinderile justificate și punctele de consum trebuie să susțină dimensionarea. Această este interpretarea tehnică FABER, nu o normă care modifică Ghidul V7.",
       "programId": "afir-energie-autoconsum",
-      "lastReviewed": "2026-07-20",
+      "lastReviewed": "2026-08-15",
       "sourceOfTruth": "config/seo-programs.json#programs",
       "publicationState": "public"
     },

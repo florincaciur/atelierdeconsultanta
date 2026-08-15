@@ -14,3 +14,9 @@ FABER*Fonduri Europene_files/
 
 # Local Codex workspace artifacts must never be published.
 .codex/
+
+# Generated visual/performance audit artifacts are reproducible and are not website assets.
+/reports/**/*.png
+/docs/section-cleanup-*.png
+/reports/lighthouse-*.json
+/reports/p1-06-lighthouse-*.json

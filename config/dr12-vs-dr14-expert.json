@@ -2,12 +2,12 @@
   "schemaVersion": 1,
   "route": "/dr12-vs-dr14",
   "file": "dr12-vs-dr14.html",
-  "reviewedAt": "2026-08-08",
+  "reviewedAt": "2026-08-15",
   "title": "DR 12 vs DR 14: încadrare și investiții | FABER",
-  "metaDescription": "Compară DR 12 și DR 14: profilul fermei, SO, investiția, documentele și riscurile. DR 14 are ghid oficial final publicat la 06.08.2026.",
+  "metaDescription": "Compară DR 12 și DR 14: profil, SO, investiții și acte. DR 14 are sesiunea lansată, cu depuneri între 1 septembrie și 31 octombrie 2026.",
   "h1": "DR 12 vs DR 14: cum diferă încadrarea și investiția",
-  "directAnswer": "Comparația DR 12–DR 14 ajută la alegerea intervenției înainte de construirea dosarului. DR 12 are încă document consultativ, iar DR 14 are ghid oficial final publicat la 6 august 2026. DR 14 vizează fermele mici, cu praguri SO diferențiate și maximum 50.000 EUR/proiect; niciunul dintre cele două apeluri nu este deschis. Diferența se stabilește după profilul solicitantului, SO, investiție și documentele disponibile.",
-  "statusStatement": "DR 12 are ghid consultativ; DR 14 are ghid oficial final. Depunerea nu este deschisă pentru niciunul dintre apeluri.",
+  "directAnswer": "Comparația DR 12–DR 14 ajută la alegerea intervenției înainte de construirea dosarului. DR 12 păstrează documentul consultativ și nu are sesiune deschisă. Pentru DR 14, AFIR a lansat sesiunea: depunerile sunt programate între 1 septembrie și 31 octombrie 2026. DR 14 vizează ferme mici, cu praguri SO diferențiate și maximum 50.000 EUR/proiect. Alegerea corectă depinde de profil, SO, investiție și documentele disponibile.",
+  "statusStatement": "DR 12 are ghid consultativ, iar depunerea nu este deschisă. DR 14 are sesiunea lansată; depunerea se deschide la 1 septembrie 2026, ora 09:00, și este programată până la 31 octombrie 2026, ora 16:00.",
   "programs": [
     {
       "slug": "dr12-afir",
@@ -23,9 +23,9 @@
       "slug": "dr14-afir",
       "shortName": "DR 14",
       "status": "ghid_aprobat_nedeschis",
-      "verifiedAt": "2026-08-08",
-      "sourceLabel": "Ghidul Solicitantului DR 14, varianta finală, sesiunea 2026, publicat la 06.08.2026",
-      "sourceUrl": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-14/",
+      "verifiedAt": "2026-08-15",
+      "sourceLabel": "Anunțul AFIR A1.2/01/2026 pentru sesiunea DR 14, publicat la 14.08.2026",
+      "sourceUrl": "https://www.afir.ro/instrumente/sesiuni/sesiuni-primire-proiecte/",
       "guideUrl": "https://www.afir.ro/api/file?url=%2Fmedia%2Fgk1nhmzi%2Fghidul-solicitantului-dr-14.pdf&filename=Ghidul%20Solicitantului%20DR%2014&filetype=pdf",
       "canonicalUrl": "/dr14"
     }
@@ -69,7 +69,7 @@
     {
       "label": "Calendar",
       "dr12": "Apel nedeschis. La 22.07.2026 nu este publicat un interval oficial de depunere; estimările interne FABER nu sunt calendar oficial.",
-      "dr14": "Apel nedeschis. La 08.08.2026 nu este publicat un interval oficial de depunere; septembrie–octombrie 2026 rămâne o estimare de pregătire, nu calendar oficial."
+      "dr14": "Sesiune lansată. Depunerile sunt programate oficial între 1 septembrie 2026, ora 09:00, și 31 octombrie 2026, ora 16:00; o componentă se poate închide anticipat în condițiile anunțului AFIR."
     },
     {
       "label": "Documente-cheie",
@@ -87,6 +87,7 @@
     "sumele și intensitățile aplicabile formei finale DR 12",
     "categoriile finale de solicitanți și condițiile de instalare sau vechime",
     "lista finală DR 12 a cheltuielilor eligibile și neeligibile pe componentă",
-    "data deschiderii și intervalul oficial de depunere pentru fiecare apel"
+    "data deschiderii și intervalul oficial de depunere pentru DR 12",
+    "eventualele erate, clarificări și închideri anticipate pentru sesiunea DR 14"
   ]
 }

@@ -102,19 +102,19 @@
         "ghid energie AFIR 2026"
       ],
       "title": "AFIR Autoconsum 2026: fotovoltaice, stocare, ghid | FABER",
-      "description": "AFIR Energie pentru ferme și procesatori: sesiune până la 14 august 2026, minimum 70% autoconsum, fotovoltaice, stocare, SF și documente.",
+      "description": "Sesiunea AFIR Energie 2026 s-a încheiat la 14 august. Vezi regulile pentru autoconsum, fotovoltaice, stocare, studiu de fezabilitate și documente.",
       "ogTitle": "AFIR Autoconsum 2026: fotovoltaice, stocare, ghid | FABER",
-      "ogDescription": "AFIR Energie pentru ferme și procesatori: sesiune până la 14 august 2026, minimum 70% autoconsum, fotovoltaice, stocare, SF și documente.",
+      "ogDescription": "Sesiunea AFIR Energie 2026 s-a încheiat la 14 august. Vezi regulile pentru autoconsum, fotovoltaice, stocare, studiu de fezabilitate și documente.",
       "sourceOfTruth": [
         "config/seo-programs.json#programs",
-        "https://www.afir.ro/media/hkfp4w0v/ghidul-solicitantului-schem%C4%83-energie-autoconsum-v7-iunie-2026.pdf"
+        "https://www.afir.ro/comunicate/deschiderea-sesiunii-pentru-investitiile-in-producerea-energiei-electrice-din-surse-regenerabile/"
       ],
       "factualStatus": "open",
-      "lastReviewed": "2026-07-20",
+      "lastReviewed": "2026-08-15",
       "notes": "Sesiunea și plafoanele se raportează la Ghidul V7 și la comunicatul oficial AFIR; procentul de autoconsum și stocarea sunt explicate fără a promite eligibilitatea.",
       "publicationState": "public",
-      "programStatus": "apel_deschis",
-      "statusLabel": "Apel deschis"
+      "programStatus": "apel_inchis",
+      "statusLabel": "Apel închis – sesiunea s-a încheiat la 14 august 2026"
     },
     {
       "route": "/investitii-modernizarea-microintreprinderilor-apel-2",
@@ -125,10 +125,10 @@
         "apel 2 microîntreprinderi Nord-Est",
         "investiții microîntreprinderi ADR Nord-Est"
       ],
-      "title": "Modernizarea microîntreprinderilor – Apel 2 | FABER",
-      "description": "Apel 2 Nord-Est pentru microîntreprinderi: valori și intensitate conform variantei consultative, plus CAEN, amplasament și documente.",
-      "ogTitle": "Modernizarea microîntreprinderilor – Apel 2 | FABER",
-      "ogDescription": "Apel 2 Nord-Est pentru microîntreprinderi: valori și intensitate conform variantei consultative, plus CAEN, amplasament și documente.",
+      "title": "Modernizarea microîntreprinderilor – Apel 2 Nord-Est | FABER",
+      "description": "Apelul 2 Nord-Est este programat pentru microîntreprinderi: grant consultativ 100.000–300.000 €, intensitate de până la 90%, CAEN, amplasament și acte.",
+      "ogTitle": "Modernizarea microîntreprinderilor – Apel 2 Nord-Est | FABER",
+      "ogDescription": "Apelul 2 Nord-Est este programat pentru microîntreprinderi: grant consultativ 100.000–300.000 €, intensitate de până la 90%, CAEN, amplasament și acte.",
       "sourceOfTruth": [
         "config/seo-programs.json#programs",
         "https://adrnordest.ro/comentariiGhid/P1Microintreprinderi/Apel2/"

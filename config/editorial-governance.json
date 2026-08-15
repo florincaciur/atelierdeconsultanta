@@ -47,14 +47,20 @@
       "reviewerRole": "Revizuire editorială și conformitate",
       "attributionType": "organization",
       "personalNameConsent": false,
-      "verifiedAt": "2026-07-20",
+      "verifiedAt": "2026-08-15",
       "officialSourceName": "Ministerul Agriculturii și Dezvoltării Rurale / AFIR",
-      "officialSourceUrl": "https://www.afir.ro/media/hkfp4w0v/ghidul-solicitantului-schem%C4%83-energie-autoconsum-v7-iunie-2026.pdf",
-      "sourceVersion": "Ghidul Solicitantului Schema Energie Autoconsum V7 – iunie 2026",
-      "nextReviewAt": "2026-08-19",
-      "lastMeaningfulUpdate": "2026-07-20",
-      "statusSnapshot": "apel_deschis",
+      "officialSourceUrl": "https://www.afir.ro/comunicate/deschiderea-sesiunii-pentru-investitiile-in-producerea-energiei-electrice-din-surse-regenerabile/",
+      "sourceVersion": "Anunțul AFIR din 15.06.2026 pentru sesiunea 15 iunie–14 august 2026",
+      "nextReviewAt": "2026-09-14",
+      "lastMeaningfulUpdate": "2026-08-15",
+      "statusSnapshot": "apel_inchis",
       "changelog": [
+        {
+          "date": "2026-08-15",
+          "summary": "Statutul a fost actualizat după termenul oficial de 14 august 2026; sesiunea este închisă, iar pagina rămâne documentație pentru această rundă.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": true
+        },
         {
           "date": "2026-07-20",
           "summary": "Snapshot factual substanțial preluat din registrul unic al programului; istoricul anterior migrării nu a fost rescris.",
@@ -279,14 +285,20 @@
       "reviewerRole": "Revizuire editorială și conformitate",
       "attributionType": "organization",
       "personalNameConsent": false,
-      "verifiedAt": "2026-08-08",
+      "verifiedAt": "2026-08-15",
       "officialSourceName": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
-      "officialSourceUrl": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-14/",
-      "sourceVersion": "Ghidul consultativ DR 12 publicat la 19.03.2026 și Ghidul Solicitantului DR 14 – varianta finală, publicat la 06.08.2026",
+      "officialSourceUrl": "https://www.afir.ro/instrumente/sesiuni/sesiuni-primire-proiecte/",
+      "sourceVersion": "Ghidul consultativ DR 12 din 19.03.2026 și Anunțul AFIR A1.2/01/2026 pentru sesiunea DR 14 din 14.08.2026",
       "nextReviewAt": "2026-09-01",
-      "lastMeaningfulUpdate": "2026-08-08",
+      "lastMeaningfulUpdate": "2026-08-15",
       "statusSnapshot": null,
       "changelog": [
+        {
+          "date": "2026-08-15",
+          "summary": "Comparația a fost actualizată cu lansarea sesiunii DR 14 și calendarul oficial; DR 12 rămâne separat în etapa consultativă.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": true
+        },
         {
           "date": "2026-08-08",
           "summary": "Analiza comparativă a fost actualizată după publicarea ghidului oficial final DR 14; valorile finale DR 14 sunt separate de condițiile DR 12 rămase în consultare.",
@@ -313,14 +325,20 @@
       "reviewerRole": "Revizuire editorială și conformitate",
       "attributionType": "organization",
       "personalNameConsent": false,
-      "verifiedAt": "2026-08-08",
+      "verifiedAt": "2026-08-15",
       "officialSourceName": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
-      "officialSourceUrl": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-14/",
-      "sourceVersion": "Ghidul Solicitantului DR 14 – varianta finală, Sesiunea 2026, publicat la 06.08.2026",
+      "officialSourceUrl": "https://www.afir.ro/instrumente/sesiuni/sesiuni-primire-proiecte/",
+      "sourceVersion": "Anunțul A1.2/01/2026 pentru sesiunea DR 14, publicat la 14.08.2026",
       "nextReviewAt": "2026-09-01",
-      "lastMeaningfulUpdate": "2026-08-08",
+      "lastMeaningfulUpdate": "2026-08-15",
       "statusSnapshot": "ghid_aprobat_nedeschis",
       "changelog": [
+        {
+          "date": "2026-08-15",
+          "summary": "Sesiunea DR 14 a fost reconciliată cu anunțul AFIR A1.2/01/2026: calendar 1 septembrie–31 octombrie 2026, buget 108 milioane EUR și praguri lunare 80/40 puncte.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": true
+        },
         {
           "date": "2026-08-08",
           "summary": "Pagina a fost reconciliată cu ghidul oficial final și anexele publicate de AFIR la 6 august 2026; valorile de maximum 50.000 EUR și 85% au fost validate, iar calendarul a rămas marcat separat ca estimare.",

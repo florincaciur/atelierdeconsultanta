@@ -1,6 +1,6 @@
 # Raport de prospețime și guvernanță editorială
 
-Data evaluării: **2026-08-09**. Registru: `config/editorial-governance.json`.
+Data evaluării: **2026-08-15**. Registru: `config/editorial-governance.json`.
 
 ## Rezumat
 
@@ -18,15 +18,15 @@ O expirare produce warning intern și nu schimbă automat statusul, textul, `ver
 | Rută | Tip | Guvernanță | Status program | Verificat | Reverificare | Modificare substanțială | Sursă lipsă | Expirat | Reviewer lipsă | Contradicție |
 |---|---|---|---|---|---|---|---|---|---|---|
 | `/acte-necesare-fonduri-europene-nerambursabile` | guide | pending_validation | — | 2026-05-20 | 2026-08-18 | DE_VALIDAT_UMAN | nu | nu | nu | nu |
-| `/afir-autoconsum-agroalimentar` | program | public | apel_deschis | 2026-07-20 | 2026-08-19 | 2026-07-20 | nu | nu | nu | nu |
+| `/afir-autoconsum-agroalimentar` | program | public | apel_inchis | 2026-08-15 | 2026-09-14 | 2026-08-15 | nu | nu | nu | nu |
 | `/apeluri-gal` | program | public | calendar_estimativ | 2026-05-26 | 2026-07-25 | 2026-05-26 | nu | da | nu | nu |
 | `/autoconsum-public-fotovoltaice-institutii-publice` | program | public | ghid_aprobat_nedeschis | 2026-05-20 | 2026-07-19 | 2026-05-20 | nu | da | nu | nu |
 | `/calculator-soc` | tool | public | — | 2026-07-22 | 2026-09-20 | 2026-07-22 | nu | nu | nu | nu |
 | `/cod-caen-start-up-nation-2026` | guide | pending_validation | — | 2026-05-20 | 2026-08-18 | DE_VALIDAT_UMAN | nu | nu | nu | nu |
 | `/digitalizare-imm` | program | public | apel_inchis | 2026-07-22 | 2026-09-20 | 2026-07-22 | nu | nu | nu | nu |
 | `/dr12-afir` | program | public | consultare_publica | 2026-07-22 | 2026-09-20 | 2026-07-22 | nu | nu | nu | nu |
-| `/dr12-vs-dr14` | guide | public | — | 2026-08-08 | 2026-09-01 | 2026-08-08 | nu | nu | nu | nu |
-| `/dr14` | program | public | ghid_aprobat_nedeschis | 2026-08-08 | 2026-09-01 | 2026-08-08 | nu | nu | nu | nu |
+| `/dr12-vs-dr14` | guide | public | — | 2026-08-15 | 2026-09-01 | 2026-08-15 | nu | nu | nu | nu |
+| `/dr14` | program | public | ghid_aprobat_nedeschis | 2026-08-15 | 2026-09-01 | 2026-08-15 | nu | nu | nu | nu |
 | `/dr14-afir-ferme-mici` | program | pending_validation | — | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | da | nu | nu | nu |
 | `/e-move` | program | public | consultare_publica | 2026-05-27 | 2026-07-26 | 2026-05-27 | nu | da | nu | nu |
 | `/femeia-antreprenor-2026` | program | public | calendar_estimativ | 2026-05-20 | 2026-07-19 | 2026-05-20 | nu | da | nu | nu |

@@ -32,18 +32,26 @@ for (const page of report.pages) {
   const html = fs.readFileSync(path.join(ROOT, page.sourceFile), "utf8");
   const $ = cheerio.load(html, { decodeEntities: false });
   const root = page.variant === "home" ? $("main").first() : ($("main").first().length ? $("main").first() : $(".post-container").first());
+  const managedByProgramTemplate = page.managedBy === "program-page-template";
+  const advertisedWordCount = Number($("body").attr("data-long-form-word-count"));
+  const expectedLongFormState = managedByProgramTemplate
+    ? advertisedWordCount > CONFIG.wordThreshold
+    : true;
 
-  assert.equal($("body[data-long-form-page='true']").length, 1, `${page.route}: lipsește metadata layout`);
+  assert.equal($("body").attr("data-long-form-page"), String(expectedLongFormState), `${page.route}: metadata layout greșită`);
   assert.equal($("body").attr("data-long-form-type"), page.type, `${page.route}: tip greșit`);
   assert.equal(root.attr("data-long-form-layout"), page.variant, `${page.route}: variantă greșită`);
   assert.equal(root.attr("data-long-form-content"), "true", `${page.route}: containerul editorial nu este marcat`);
   const toc = $("[data-long-form-toc]");
   const tocExcluded = CONFIG.tocExcludedRoutes.includes(page.route);
-  assert.equal(toc.length, page.route === "/" || tocExcluded ? 0 : 1, `${page.route}: număr incorect de cuprinsuri`);
+  const expectsToc = managedByProgramTemplate
+    ? expectedLongFormState
+    : page.route !== "/" && !tocExcluded;
+  assert.equal(toc.length, expectsToc ? 1 : 0, `${page.route}: număr incorect de cuprinsuri`);
   assert.equal($(".article-toc").length, 0, `${page.route}: cuprinsul vechi duplicat trebuie eliminat`);
   assert.equal($("link[data-long-form-layout-style='p1_09']").length, 1, `${page.route}: CSS duplicat/lipsă`);
   assert.equal($("script[data-long-form-layout-script='p1_09']").length, 1, `${page.route}: JS duplicat/lipsă`);
-  if (page.route !== "/" && !tocExcluded) {
+  if (expectsToc) {
     assert.equal($("[data-long-form-toc] summary").text().trim(), "Cuprins", `${page.route}: disclosure fără etichetă`);
     assert.equal($("[data-long-form-toc] details[open]").length, 0, `${page.route}: cuprinsul trebuie să pornească închis ca dropdown`);
     assert.equal(toc.find("nav").attr("aria-label"), "Cuprinsul paginii");

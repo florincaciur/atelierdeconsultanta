@@ -213,14 +213,14 @@ Revizie factuală și editorială: **${displayDate(config.reviewedAt)}**.
 - DR 12, document: ${config.programs[0].guideUrl}
 - DR 14: ${config.programs[1].sourceLabel} — ${config.programs[1].sourceUrl}
 
-## Elemente DR 12 și calendare rămase de reconfirmat
+## Elemente DR 12 și actualizări rămase de reconfirmat
 
 ${config.pendingHumanValidation.map((item) => `- DE_VALIDAT_UMAN — ${item}`).join("\n")}
 
 ## Decizia de publicare
 
-- statut publicat: DR 12 are ghid consultativ, iar DR 14 are ghid oficial final; depunerea nu este deschisă;
-- valorile finale DR 14 sunt publicate conform ghidului din 06.08.2026; valorile DR 12 rămân nepublicate până la reconfirmare;
+- statut publicat: DR 12 are ghid consultativ, iar DR 14 are sesiunea lansată cu depuneri programate din 01.09.2026;
+- valorile finale DR 14 și calendarul sesiunii sunt publicate conform documentelor AFIR; valorile DR 12 rămân nepublicate până la reconfirmare;
 - scenariile sunt marcate explicit ca ipotetice și nu descriu clienți reali;
 - CTA-ul transmite numai \`source_page=/dr12-vs-dr14\`, fără PII în URL;
 - autorul și reviewerul sunt publicați organizațional; nu este publicat un nume personal fără acord.
@@ -245,7 +245,18 @@ function validateConfig(config, programs) {
     if (!program.status || registry.status !== program.status) errors.push(`${program.slug}: statusul local nu coincide cu registrul unic`);
     if (!program.verifiedAt || registry.verifiedAt !== program.verifiedAt) errors.push(`${program.slug}: verifiedAt nu coincide cu registrul unic`);
     if (registry.sourceUrl !== program.sourceUrl) errors.push(`${program.slug}: sursa nu coincide cu registrul unic`);
-    if (registry.applicationStart || registry.applicationEnd) errors.push(`${program.slug}: registrul indică nejustificat un interval de depunere`);
+    const hasApplicationDates = Boolean(registry.applicationStart || registry.applicationEnd);
+    if (hasApplicationDates) {
+      const completeInterval = /^\d{4}-\d{2}-\d{2}$/u.test(registry.applicationStart || "")
+        && /^\d{4}-\d{2}-\d{2}$/u.test(registry.applicationEnd || "");
+      const scheduledNotOpen = registry.status === "ghid_aprobat_nedeschis"
+        && completeInterval
+        && registry.applicationStart > config.reviewedAt
+        && /anunț|sesiun/iu.test(`${registry.sourceVersion} ${registry.statusLabel}`);
+      if (!scheduledNotOpen && registry.status !== "apel_deschis") {
+        errors.push(`${program.slug}: intervalul de depunere nu este justificat de status și sursa oficială`);
+      }
+    }
     if ((registry.grantSummary || registry.cofinancingSummary) && registry.status === "consultare_publica") errors.push(`${program.slug}: valorile numerice consultative necesită un contract de publicare separat`);
   }
   if (!Array.isArray(config.pendingHumanValidation) || config.pendingHumanValidation.length < 5) errors.push("lista de validări umane este incompletă");

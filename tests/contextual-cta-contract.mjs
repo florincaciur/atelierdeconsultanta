@@ -10,7 +10,7 @@ const { contactHref, loadConfig } = require("../tools/sync-contextual-ctas");
 const { validateContactPayload } = await import("../cloudflare/domain-seo-redirects.mjs");
 const config = loadConfig();
 
-assert.equal(config.pages.length, 5);
+assert.equal(config.pages.length, 6);
 for (const page of config.pages) {
   const html = fs.readFileSync(path.join(ROOT, page.file), "utf8");
   const $ = cheerio.load(html, { decodeEntities: false });
@@ -70,4 +70,4 @@ const client = fs.readFileSync(path.join(ROOT, "assets", "contextual-cta.js"), "
 assert(client.includes("IntersectionObserver") && client.includes("dataset.soValue"), "sticky CTA sau rezultatul SO nu sunt sincronizate");
 assert(!/email|phone|name=/iu.test(client), "assetul CTA nu trebuie să citească PII");
 
-console.log("Contextual CTA contract PASS: 5 suprafețe, context validat, sticky mobil și rezultat SO non-PII.");
+console.log(`Contextual CTA contract PASS: ${config.pages.length} suprafețe, context validat, sticky mobil și rezultat SO non-PII.`);

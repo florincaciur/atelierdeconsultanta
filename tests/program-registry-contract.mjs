@@ -17,6 +17,7 @@ const {
   loadProgramConfig,
   validateProgram
 } = require("../tools/program-factual-governance");
+const { latestVerifiedProgram } = require("../tools/sync-homepage-hero");
 const { fileForRoute } = require("../tools/structured-data-utils");
 
 const { programs, publicPrograms } = loadProgramConfig();
@@ -139,8 +140,7 @@ for (const program of publicPrograms) {
   if (program.presentation?.carousel) assert(banners.some((banner) => banner.programId === program.slug), `${program.slug}: lipsește din caruselul configurat`);
 }
 
-const latestHomepageProgram = [...publicPrograms]
-  .sort((left, right) => right.verifiedAt.localeCompare(left.verifiedAt) || String(right.lastMeaningfulUpdate || "").localeCompare(String(left.lastMeaningfulUpdate || "")) || left.slug.localeCompare(right.slug, "ro"))[0];
+const latestHomepageProgram = latestVerifiedProgram(publicPrograms);
 const latestHomepageNode = homepage("[data-homepage-hero-latest-program]");
 assert.equal(latestHomepageNode.length, 1, "homepage: trebuie un singur program verificat recent în hero");
 assertFacts(latestHomepageProgram, factsFromElement(homepage, latestHomepageNode.get(0)), "homepage hero compact");

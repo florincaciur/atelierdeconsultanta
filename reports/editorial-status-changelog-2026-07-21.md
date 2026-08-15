@@ -16,12 +16,12 @@ Data: **2026-07-22**. Acest changelog documentează corecțiile și blocajul edi
 ## dr14-afir
 
 - **Înainte (observat live):** Pagina și suprafețele globale indicau în mod depășit o variantă consultativă, fără valorile confirmate în ghidul final.
-- **Corecție candidat:** `ghid_aprobat_nedeschis` — Ghid oficial, varianta finală – depunerea nu este deschisă
+- **Corecție candidat:** `ghid_aprobat_nedeschis` — Sesiune lansată – depuneri 1 septembrie–31 octombrie 2026
 - **Acțiune aplicată:** exclus din meniu, homepage, carusele, carduri factuale și JSON-LD; URL-urile prioritare au `noindex, follow` și mesaj neutru de suspendare.
 - **Valori:** eliminate cât timp `numericClaimsApproved=false`.
 - **Publicare finală:** blocată; validator Caciur Florin / Bogdan Iftode, aprobare `approved`.
-- **Copy pregătit pentru aprobare:** Ghid oficial, varianta finală – verificat la 2026-08-08. Depunerea nu este deschisă. Sursa: AFIR, Ghidul Solicitantului DR 14 – varianta finală, publicat la 06.08.2026.
-- **Sursă primară:** https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-14/
+- **Copy pregătit pentru aprobare:** Sesiune DR 14 lansată – verificat la 2026-08-15. Depunerea nu este deschisă. Sursa: AFIR, Anunțul A1.2/01/2026 publicat la 14.08.2026; depunerile sunt programate între 01.09.2026, ora 09:00, și 31.10.2026, ora 16:00.
+- **Sursă primară:** https://www.afir.ro/instrumente/sesiuni/sesiuni-primire-proiecte/
 - **URL-uri afectate:** `/`, `/afir`, `/calculator-soc`, `/consultanta-afir`, `/dr-14-afir-conditii-eligibilitate-greseli-frecvente`, `/dr14`, `/dr14-afir-ferme-mici`, `/fonduri-europene`, `/fonduri-europene-agricultura`, `/fonduri-europene-caen/0111-culturi-cereale`, `/fonduri-europene-nord-est`, `/fonduri-pentru-ferme`, `/fonduri-pentru-utilaje-agricole`, `/gal-afir`, `/ghiduri`, `/intrebari/ce-documente-sunt-necesare-pentru-dr12`, `/resurse-utile`, `/studii-de-caz-fonduri-europene`.
 
 ## pro-infra

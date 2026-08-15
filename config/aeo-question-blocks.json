@@ -97,21 +97,21 @@
         {
                           "id": "este-deschis-apelul-dr14",
                           "question": "Este deschis apelul DR 14?",
-                          "answer": "Nu. AFIR a publicat la 6 august 2026 ghidul oficial final și anexele DR 14, însă nu a publicat încă intervalul oficial de depunere. Septembrie–octombrie 2026 este prezentat pe această pagină exclusiv ca perioadă estimativă de pregătire, până la anunțul de lansare AFIR.",
-                          "evidenceTitle": "Ce este confirmat și ce urmează",
-                          "evidence": [
-                                           "ghidul oficial final și anexele sunt publicate la 6 august 2026",
-                                           "intervalul oficial de depunere",
-                                           "alocarea și pragurile lunare aplicabile sesiunii"
+          "answer": "Nu încă. AFIR a lansat sesiunea DR 14, dar portalul de depunere se deschide la 1 septembrie 2026, ora 09:00. Termenul anunțat este 31 octombrie 2026, ora 16:00. Bugetul este de 108 milioane EUR, pragul de calitate este 80 de puncte în septembrie și 40 de puncte în octombrie, iar o componentă se poate închide anticipat când solicitările ating cel puțin 150% din alocare, cu excepția primelor cinci zile ale etapei.",
+          "evidenceTitle": "Calendarul și condițiile oficiale ale sesiunii",
+          "evidence": [
+            "depuneri programate între 1 septembrie, ora 09:00, și 31 octombrie, ora 16:00",
+            "buget total de 108 milioane EUR, împărțit pe patru componente",
+            "praguri de calitate de 80 de puncte în septembrie și 40 de puncte în octombrie"
                                        ],
           "selectionBasis": "GSC: „dr14 afir 2026”, „dr 14 afir” și variante despre ghid",
           "sources": [
             {
               "name": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
-              "document": "Ghidul solicitantului DR 14",
-                                              "version": "Varianta finală, sesiunea 2026, publicată de AFIR la 06.08.2026",
-                                              "url": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-14/",
-                                              "verifiedAt": "2026-08-08"
+              "document": "Anunțul cererii de proiecte DR 14",
+              "version": "Anunțul A1.2/01/2026, publicat de AFIR la 14.08.2026",
+              "url": "https://www.afir.ro/instrumente/sesiuni/sesiuni-primire-proiecte/",
+              "verifiedAt": "2026-08-15"
             }
           ],
           "detailLinks": [
@@ -135,7 +135,7 @@
               "document": "Ghidul solicitantului DR 14",
                                               "version": "Varianta finală, sesiunea 2026, publicată de AFIR la 06.08.2026",
                                               "url": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-14/",
-                                              "verifiedAt": "2026-08-08"
+              "verifiedAt": "2026-08-15"
             }
           ],
           "detailLinks": [
@@ -159,7 +159,7 @@
               "document": "Ghidul solicitantului DR 14",
                                               "version": "Varianta finală, sesiunea 2026, publicată de AFIR la 06.08.2026",
                                               "url": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-14/",
-                                              "verifiedAt": "2026-08-08"
+              "verifiedAt": "2026-08-15"
             }
           ],
           "detailLinks": [
