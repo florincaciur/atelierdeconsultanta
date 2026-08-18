@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 "use strict";
 
-const cp = require("child_process");
 const fs = require("fs");
 const path = require("path");
 const { sitemapUrls: readSitemapUrls } = require("./sitemap-utils");
@@ -9,10 +8,7 @@ const { sitemapUrls: readSitemapUrls } = require("./sitemap-utils");
 const ROOT = path.resolve(__dirname, "..");
 const PUBLIC_DIR = fs.existsSync(path.join(ROOT, "dist")) ? path.join(ROOT, "dist") : ROOT;
 const SITE = "https://atelierdeconsultanta.ro";
-const REPORT_DATE = "2026-08-08";
-const SKIP_DIRS = new Set([".git", ".wrangler", "config", "dist", "node_modules", "reports", "scripts", "tools"]);
-const TEXT_EXTENSIONS = new Set([".html", ".json", ".js", ".xml", ".txt"]);
-
+const REPORT_DATE = new Date().toISOString().slice(0, 10);
 const LEGACY_GSC_URLS = [
   "https://atelierdeconsultanta.ro/consultanta-start-up-nation-2026/",
   "https://atelierdeconsultanta.ro/firma-consultanta-fonduri-europene/",
@@ -58,6 +54,10 @@ const LEGACY_GSC_URLS = [
 const GSC_SNAPSHOT_PATH = path.join(ROOT, "reports", "gsc-indexing-snapshot-2026-08-08.json");
 const GSC_SNAPSHOT = JSON.parse(fs.readFileSync(GSC_SNAPSHOT_PATH, "utf8"));
 const GSC_URLS = GSC_SNAPSHOT.categories.flatMap((category) => category.urls);
+const GSC_VALIDATION_PATH = path.join(ROOT, "reports", "gsc-page-with-redirect-validation-2026-08-18.json");
+const GSC_VALIDATION = fs.existsSync(GSC_VALIDATION_PATH)
+  ? JSON.parse(fs.readFileSync(GSC_VALIDATION_PATH, "utf8"))
+  : null;
 
 function readIfExists(filePath) {
   return fs.existsSync(filePath) ? fs.readFileSync(filePath, "utf8") : "";
@@ -201,6 +201,13 @@ function cleanAbsoluteUrl(rawUrl, { keepQuery = false } = {}) {
   return parsed.href;
 }
 
+function exactAbsoluteUrl(rawUrl, { keepQuery = true } = {}) {
+  const parsed = new URL(rawUrl, SITE);
+  parsed.hash = "";
+  if (!keepQuery) parsed.search = "";
+  return parsed.href;
+}
+
 function redirectChainText(chain) {
   return chain
     .map((step) => step.to ? `${step.url} -> ${step.to} [${step.status}]` : `${step.url} [${step.status}]`)
@@ -286,16 +293,20 @@ function actionFor(intent, inputUrl) {
   return "Documentat ca alternativa intentionata; forma canonica ramane URL-ul final declarat.";
 }
 
-function resultFor({ inputUrl, chain, finalUrl, finalStatus, inSitemap, canonical, metaRobots, xRobotsTag }) {
+function resultFor({ inputUrl, chain, live, finalUrl, finalStatus, inputInSitemap, internalLinkCount, canonical, metaRobots, xRobotsTag }) {
   if (chain.some((step) => step.status === "LOOP")) return "FAIL_REDIRECT_LOOP";
+  if (live.some((step) => step.status === "LOOP")) return "FAIL_LIVE_REDIRECT_LOOP";
+  if (live.some((step) => String(step.status).startsWith("ERROR"))) return "FAIL_LIVE_FETCH";
+  if (live.filter((step) => Number(step.status) >= 300 && Number(step.status) < 400).length > 1) return "FAIL_LIVE_REDIRECT_CHAIN";
+  if (Number(live[live.length - 1]?.status) !== 200) return "FAIL_LIVE_FINAL_STATUS";
   if (finalStatus === 404) return "FAIL_404";
   if (new URL(inputUrl).pathname === "/official-guides.json") {
-    if (finalStatus === 200 && /\bnoindex\b/i.test(xRobotsTag) && !inSitemap) return "PASS_TECHNICAL_NOINDEX";
+    if (finalStatus === 200 && /\bnoindex\b/i.test(xRobotsTag) && !inputInSitemap) return "PASS_TECHNICAL_NOINDEX";
     return "FAIL_TECHNICAL_RESOURCE";
   }
   if (["/admin", "/admin/"].includes(new URL(inputUrl).pathname)) {
     const directives = [metaRobots, xRobotsTag].filter(Boolean).join("; ");
-    if (finalStatus === 200 && /\bnoindex\b/i.test(directives) && !inSitemap) return "PASS_CRAWLABLE_NOINDEX";
+    if (finalStatus === 200 && /\bnoindex\b/i.test(directives) && !inputInSitemap) return "PASS_CRAWLABLE_NOINDEX";
     return "FAIL_ADMIN_NOINDEX";
   }
   if (/\bnoindex\b/i.test([metaRobots, xRobotsTag].filter(Boolean).join("; "))) return "FAIL_NOINDEX";
@@ -309,24 +320,14 @@ function resultFor({ inputUrl, chain, finalUrl, finalStatus, inSitemap, canonica
   const redirected = chain.some((step) => Number(step.status) >= 300 && Number(step.status) < 400);
   const inputIsCanonical = inputNoQuery === canonicalClean && inputWithQuery === canonicalClean;
 
-  if (!inputIsCanonical && inSitemap && finalWithQuery === inputWithQuery) return "FAIL_SITEMAP_DUPLICATE";
+  if (redirected && inputInSitemap) return "FAIL_REDIRECT_IN_SITEMAP";
+  if (redirected && internalLinkCount > 0) return "FAIL_INTERNAL_LINKS_TO_REDIRECT";
+  if (!inputIsCanonical && inputInSitemap && finalWithQuery === inputWithQuery) return "FAIL_SITEMAP_DUPLICATE";
   if (redirected && finalNoQuery === canonicalClean) return "PASS_REDIRECT_TO_CANONICAL";
   if (!redirected && finalNoQuery === canonicalClean && inputIsCanonical) return "PASS_CANONICAL_200";
   if (!redirected && finalNoQuery === canonicalClean && !inputIsCanonical) return "PASS_ALTERNATE_CANONICAL";
-  if (!redirected && canonicalClean !== finalNoQuery && !inSitemap) return "PASS_ALTERNATE_CANONICAL";
+  if (!redirected && canonicalClean !== finalNoQuery && !inputInSitemap) return "PASS_ALTERNATE_CANONICAL";
   return "FAIL_CANONICAL_MISMATCH";
-}
-
-function trackedTextFiles() {
-  try {
-    return cp.execFileSync("git", ["ls-files", "-z"], { cwd: ROOT, encoding: "utf8" })
-      .split("\0")
-      .filter(Boolean)
-      .filter((file) => !SKIP_DIRS.has(file.split("/")[0]))
-      .filter((file) => TEXT_EXTENSIONS.has(path.extname(file).toLowerCase()));
-  } catch {
-    return [];
-  }
 }
 
 function internalReferenceValues(file, text) {
@@ -345,11 +346,13 @@ function internalReferenceValues(file, text) {
   return values;
 }
 
-function internalLinkCounts() {
+function internalLinkCounts(sitemap) {
   const counts = new Map();
-  for (const file of trackedTextFiles()) {
-    if (file === "_redirects" || file === "_headers") continue;
-    const text = readIfExists(path.join(ROOT, file));
+  for (const sitemapUrl of sitemap) {
+    const pathname = new URL(sitemapUrl).pathname;
+    const file = fileForPath(pathname);
+    if (!file) continue;
+    const text = textOf(file);
     for (const ref of internalReferenceValues(file, text)) {
       let parsed;
       try {
@@ -359,7 +362,7 @@ function internalLinkCounts() {
       }
       if (parsed.hostname !== "atelierdeconsultanta.ro") continue;
       parsed.hash = "";
-      const key = parsed.pathname + parsed.search;
+      const key = parsed.origin + parsed.pathname + parsed.search;
       counts.set(key, (counts.get(key) || 0) + 1);
     }
   }
@@ -461,7 +464,8 @@ function writeReports(rows) {
     "canonical declarat",
     "meta robots",
     "X-Robots-Tag",
-    "prezent in sitemap",
+    "URL GSC prezent in sitemap",
+    "destinatie finala prezenta in sitemap",
     "numar linkuri interne catre URL",
     "intentie",
     "actiunea aplicata",
@@ -479,7 +483,8 @@ function writeReports(rows) {
       row.canonical,
       row.metaRobots,
       row.xRobotsTag,
-      row.inSitemap ? "yes" : "no",
+      row.inputInSitemap ? "yes" : "no",
+      row.finalInSitemap ? "yes" : "no",
       row.internalLinkCount,
       row.intent,
       row.action,
@@ -491,20 +496,21 @@ function writeReports(rows) {
   const redirectRows = rows.filter((row) => row.result === "PASS_REDIRECT_TO_CANONICAL");
   const alternateRows = rows.filter((row) => row.result === "PASS_ALTERNATE_CANONICAL");
   const noindexRows = rows.filter((row) => ["PASS_TECHNICAL_NOINDEX", "PASS_CRAWLABLE_NOINDEX"].includes(row.result));
-  const sitemapRows = rows.filter((row) => row.inSitemap);
-  const nonSitemapRows = rows.filter((row) => !row.inSitemap);
+  const sitemapRows = rows.filter((row) => row.inputInSitemap);
+  const nonSitemapRows = rows.filter((row) => !row.inputInSitemap);
   const failedRows = rows.filter((row) => row.result.startsWith("FAIL_"));
 
   const mdRows = [
-    "# Raport remediere indexare GSC - 2026-08-08",
+    `# Raport remediere indexare GSC - ${REPORT_DATE}`,
     "",
     "## Rezumat",
     "",
     "- Conventia canonica verificata: `https://atelierdeconsultanta.ro`, fara `www`, fara `.html`, fara `/index.html`, fara slash final in afara de homepage.",
     `- Matrice CSV: \`reports/gsc-indexing-fix-${REPORT_DATE}.csv\`.`,
+    `- Snapshot URL sursa: \`${toPosix(path.relative(ROOT, GSC_SNAPSHOT_PATH))}\`, capturat la ${GSC_SNAPSHOT.capturedAt}.`,
     `- Director public auditat: \`${toPosix(path.relative(ROOT, PUBLIC_DIR)) || "."}\`.`,
     `- Randuri auditate: ${rows.length}; randuri locale PASS: ${rows.length - failedRows.length}; randuri locale FAIL: ${failedRows.length}.`,
-    `- Sitemap: ${sitemapRows.length} URL-uri din matrice sunt canonice/indexabile si prezente in sitemap; ${nonSitemapRows.length} sunt excluse intentionat.`,
+    `- Sitemap: ${sitemapRows.length} URL-uri raportate de GSC sunt prezente direct in sitemap; ${nonSitemapRows.length} sunt absente (aliasuri, alternative sau resurse excluse intentionat).`,
     "",
     "## Cauze identificate",
     "",
@@ -563,12 +569,18 @@ function writeReports(rows) {
     "",
     "## Google Search Console",
     "",
-    "A. URL-uri pentru care se poate apasa `Validate fix`:",
+    ...(GSC_VALIDATION ? [
+      `- Captura de validare din ${GSC_VALIDATION.capturedAt}: **${GSC_VALIDATION.passedExamples} passed**, **${GSC_VALIDATION.failedExamples} failed**, ${GSC_VALIDATION.totalValidationExamples} exemple in total.`,
+      `- Validarea a inceput la ${GSC_VALIDATION.validationStartedAt} si a trecut in starea ${GSC_VALIDATION.validationStatus} la ${GSC_VALIDATION.validationFailedAt}.`,
+      "",
+    ] : []),
+    "A. Aliasuri intentionate din `Page with redirect`:",
     "",
-    "- `Page with redirect` pentru aliasurile `.html`, slash final si `/index.html` care ajung intr-un singur 301 la forma canonica.",
-    "- `Alternate page with proper canonical tag` pentru vechile variante FAQ/CAEN dupa ce GSC vede formele curate self-canonical.",
+    "- Nu se reporneste `Validate fix` doar pentru a elimina aliasurile `.html`, slash final, `/index.html`, HTTP sau vechile sluguri. Cat timp redirectul 301 este intentionat, GSC poate marca validarea `Failed` chiar daca implementarea este corecta.",
+    "- Se verifica destinatia canonica: raspuns 200 direct, self-canonical, indexabila si prezenta in sitemap. Aliasul ramane in afara sitemap-ului si a linkurilor interne.",
+    "- `Validate fix` se reporneste numai daca URL-ul trebuia sa devina pagina canonica 200 sau daca a existat o bucla, un lant ori o destinatie invalida care a fost reparata.",
     "",
-    "B. URL-uri de inspectat individual si apoi `Request indexing`:",
+    "B. URL-uri canonice de inspectat individual si apoi `Request indexing`:",
     "",
     "- `https://atelierdeconsultanta.ro/fonduri-europene-bucuresti`",
     "- `https://atelierdeconsultanta.ro/consultanta-fonduri-europene-bucuresti`",
@@ -595,7 +607,7 @@ function writeReports(rows) {
     `Local pass rows: ${rows.filter((row) => row.result.startsWith("PASS_")).length}`,
     "",
     "| " + columns.map(mdCell).join(" | ") + " |",
-    "|---|---:|---|---|---|---|---|---|:---:|---:|---|---|---|",
+    "|---|---:|---|---|---|---|---|---|:---:|:---:|---:|---|---|---|",
     ...rows.map((row) => `| ${[
       row.inputUrl,
       row.localStatus,
@@ -605,7 +617,8 @@ function writeReports(rows) {
       row.canonical,
       row.metaRobots,
       row.xRobotsTag,
-      row.inSitemap ? "yes" : "no",
+      row.inputInSitemap ? "yes" : "no",
+      row.finalInSitemap ? "yes" : "no",
       row.internalLinkCount,
       row.intent,
       row.action,
@@ -625,7 +638,7 @@ async function main() {
   const redirects = parseRedirects();
   const headerRules = parseHeaders();
   const sitemap = sitemapUrls();
-  const counts = internalLinkCounts();
+  const counts = internalLinkCounts(sitemap);
   const uniqueUrls = [...new Set(GSC_URLS)];
 
   const rows = await mapLimit(uniqueUrls, 6, async (inputUrl) => {
@@ -635,23 +648,28 @@ async function main() {
     const finalPath = finalUrl ? new URL(finalUrl).pathname : "";
     const data = meta(final.file, finalPath, headerRules);
     const finalStatus = final.status;
-    const finalSitemapUrl = finalUrl ? cleanAbsoluteUrl(finalUrl, { keepQuery: true }) : "";
-    const inSitemap = finalSitemapUrl ? sitemap.has(finalSitemapUrl) : false;
+    const inputSitemapUrl = exactAbsoluteUrl(inputUrl);
+    const finalSitemapUrl = finalUrl ? exactAbsoluteUrl(finalUrl) : "";
+    const inputInSitemap = sitemap.has(inputSitemapUrl);
+    const finalInSitemap = finalSitemapUrl ? sitemap.has(finalSitemapUrl) : false;
     const live = await liveTrace(inputUrl);
     const liveFinal = live[live.length - 1] || {};
     const intent = intentFor(inputUrl, chain, finalUrl, data.canonical, data.xRobotsTag);
+    const parsed = new URL(inputUrl);
+    const countKey = parsed.origin + parsed.pathname + parsed.search;
+    const internalLinkCount = counts.get(countKey) || 0;
     const result = resultFor({
       inputUrl,
       chain,
+      live,
       finalUrl,
       finalStatus,
-      inSitemap,
+      inputInSitemap,
+      internalLinkCount,
       canonical: data.canonical,
       metaRobots: data.metaRobots,
       xRobotsTag: data.xRobotsTag,
     });
-    const parsed = new URL(inputUrl);
-    const countKey = parsed.pathname + parsed.search;
 
     return {
       inputUrl,
@@ -663,8 +681,9 @@ async function main() {
       canonical: data.canonical,
       metaRobots: data.metaRobots,
       xRobotsTag: data.xRobotsTag,
-      inSitemap,
-      internalLinkCount: counts.get(countKey) || 0,
+      inputInSitemap,
+      finalInSitemap,
+      internalLinkCount,
       intent,
       action: actionFor(intent, inputUrl),
       result,

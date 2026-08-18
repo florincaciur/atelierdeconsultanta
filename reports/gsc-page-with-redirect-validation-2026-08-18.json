@@ -1,0 +1,17 @@
+{
+  "property": "sc-domain:atelierdeconsultanta.ro",
+  "capturedAt": "2026-08-18",
+  "issue": "Page with redirect",
+  "validationStatus": "Failed",
+  "validationStartedAt": "2026-08-09",
+  "validationFailedAt": "2026-08-11",
+  "passedExamples": 49,
+  "failedExamples": 32,
+  "totalValidationExamples": 81,
+  "evidence": [
+    "codex-clipboard-3b4be03a-8400-4374-babe-f88fd1d8f443.png",
+    "codex-clipboard-b35d49f1-8587-4bcf-a40d-fa61b3eaeb6b.png"
+  ],
+  "interpretation": "The failed examples remain intentional canonical aliases. They must keep one permanent redirect to a final 200 self-canonical URL and must not be present in sitemaps or internal links. A failed GSC validation is expected while those aliases continue to redirect and is not, by itself, a redirect defect.",
+  "recommendedGscAction": "Do not restart Validate fix for intentional aliases. Inspect and request indexing only for the clean canonical destination when needed. Restart validation only for a URL that should return 200 directly but still redirects."
+}

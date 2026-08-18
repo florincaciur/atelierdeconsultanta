@@ -149,7 +149,7 @@
     "audit:gsc-routes": "node tools/audit-gsc-routes.js",
     "report:url-consolidation": "node tools/audit-url-consolidation.js",
     "validate:url-consolidation": "node tools/audit-url-consolidation.js --check && node tests/url-consolidation-approval-gate.mjs",
-    "verify:gsc-registry": "node tools/validate-gsc-example-registry.js && node tools/validate-gsc-indexing-snapshot.js",
+    "verify:gsc-registry": "node tools/validate-gsc-example-registry.js && node tools/validate-gsc-indexing-snapshot.js && node tools/validate-gsc-page-with-redirect-validation.js",
     "verify:llms-urls": "node scripts/verify-llms-urls.js",
     "verify:priority-urls": "node tools/verify-priority-url-matrix.js",
     "verify:priority-urls:live": "node tools/verify-priority-url-matrix.js --live",
