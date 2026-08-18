@@ -80,15 +80,15 @@ Statusul folosește exclusiv taxonomia registrului: `apel_deschis`, `ghid_aproba
 | GAL-AFIR / LEADER | `/gal-afir` | Antreprenoriat & GAL — `/fonduri-europene-imm` | `public` | Da |
 | e-MOVE RO | `/e-move` | Energie — `/finantari-panouri-fotovoltaice` | `public` | Da |
 | PoCIDIF 2.1 | `/pocidif-21` | Digitalizare & inovare — `/fonduri-europene-digitalizare` | `public` | Da |
-| PNRR | `/pnrr` | Digitalizare & inovare — `/fonduri-europene-digitalizare` | `pending_validation` | Nu — validare umană în așteptare |
+| PNRR | `/pnrr` | Digitalizare & inovare — `/fonduri-europene-digitalizare` | `public` | Da |
 | Diaspora Investește Acasă | `/diaspora-investeste-acasa` | Antreprenoriat & GAL — `/fonduri-europene-imm` | `public` | Da |
 | e-DRIVE | `/e-drive` | Energie — `/finantari-panouri-fotovoltaice` | `public` | Da |
 | e-Mobility RO | `/e-mobility` | Energie — `/finantari-panouri-fotovoltaice` | `public` | Da |
 | PC1 Stocare stand-alone | `/fondul-modernizare-pc1-stocare` | Energie — `/finantari-panouri-fotovoltaice` | `public` | Da |
-| Programul Tranziție Justă | `/programul-tranzitie-justa` | Regional / ADR — `/fonduri-regionale` | `pending_validation` | Nu — validare umană în așteptare |
-| Fondul pentru Modernizare | `/fondul-de-modernizare` | Energie — `/finantari-panouri-fotovoltaice` | `pending_validation` | Nu — validare umană în așteptare |
+| Programul Tranziție Justă | `/programul-tranzitie-justa` | Regional / ADR — `/fonduri-regionale` | `public` | Da |
+| Fondul pentru Modernizare | `/fondul-de-modernizare` | Energie — `/finantari-panouri-fotovoltaice` | `public` | Da |
 
-Înregistrări excluse din cardurile publice până la validare: `pnrr`, `programul-tranzitie-justa`, `fondul-de-modernizare`.
+Înregistrări excluse din cardurile publice până la validare: .
 
 ## Wireframe funcțional
 

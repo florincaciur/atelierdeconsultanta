@@ -9,13 +9,12 @@ import * as cheerio from "cheerio";
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const SITE = "https://atelierdeconsultanta.ro";
 const consolidations = new Map([
-  ["/pnrr", "/digitalizare-imm-pnrr"],
   ["/granturi-digitalizare-imm", "/digitalizare-imm"],
-  ["/fondul-de-modernizare", "/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum"],
   ["/studii-de-caz", "/studii-de-caz-fonduri-europene"],
   ["/testimoniale", "/studii-de-caz-fonduri-europene"],
   ["/portofoliu", "/studii-de-caz-fonduri-europene"]
 ]);
+const restoredProgramRoutes = ["/pnrr", "/fondul-de-modernizare"];
 
 function parseRedirects(text) {
   return new Map(text.split(/\r?\n/u)
@@ -65,6 +64,23 @@ for (const [source, target] of consolidations) {
   const $ = cheerio.load(html);
   assert.doesNotMatch($("meta[name='robots']").first().attr("content") || "index, follow", /\bnoindex\b/iu, `${target}: destinație noindex`);
   assert.equal(new URL($("link[rel='canonical']").first().attr("href") || "", SITE).pathname, target, `${target}: canonical incorect`);
+}
+
+for (const route of restoredProgramRoutes) {
+  assert.equal(redirects.get(route), undefined, `${route}: pagina-cadru restaurată nu trebuie redirecționată`);
+  assert.match(sitemapText, new RegExp(`<loc>${SITE}${route.replace(/[.*+?^${}()|[\]\\]/gu, "\\$&")}</loc>`, "u"), `${route}: pagina-cadru lipsește din sitemap`);
+  const candidates = canonicalFile(route);
+  let html = "";
+  for (const candidate of candidates) {
+    try {
+      html = await fs.readFile(candidate, "utf8");
+      break;
+    } catch {}
+  }
+  assert.ok(html, `${route}: fișier canonic inexistent`);
+  const $ = cheerio.load(html);
+  assert.doesNotMatch($("meta[name='robots']").first().attr("content") || "index, follow", /\bnoindex\b/iu, `${route}: pagina-cadru este noindex`);
+  assert.equal(new URL($("link[rel='canonical']").first().attr("href") || "", SITE).pathname, route, `${route}: canonical incorect`);
 }
 
 const retired = new Set(consolidations.keys());

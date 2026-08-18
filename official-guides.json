@@ -1,102 +1,102 @@
 {
   "adr-ne-program": {
-    "name": "Programul Regional Nord-Est 2021–2027",
-    "title": "Programul Regional Nord-Est 2021–2027",
-    "institution": "ADR Nord-Est",
+    "name": "Registrul oficial al apelurilor Programului Regional Nord-Est, verificat la 18.08.2026",
+    "title": "Registrul oficial al apelurilor Programului Regional Nord-Est, verificat la 18.08.2026",
+    "institution": "Autoritatea de Management pentru Programul Regional Nord-Est",
     "documentType": "portal oficial al programului",
-    "url": "https://regionordest.ro/",
-    "accessedAt": "2026-07-20",
+    "url": "https://regionordest.ro/apeluri-de-proiecte/",
+    "accessedAt": "2026-08-18",
     "note": "Sursa generala pentru program, calendar si apelurile administrate regional.",
     "programIds": [
       "program-regional-nord-est"
     ],
     "isPrimaryFor": "program-regional-nord-est",
-    "programStatus": "ghid_aprobat_nedeschis",
-    "statusLabel": "Ghid aprobat – depunerea nu este deschisă",
-    "verifiedAt": "2026-07-20",
+    "programStatus": "calendar_estimativ",
+    "statusLabel": "Program activ – statutul și calendarul diferă pentru fiecare apel",
+    "verifiedAt": "2026-08-18",
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
   "adr-ne-region": {
-    "name": "Programul Regional Nord-Est 2021–2027",
-    "title": "Programul Regional Nord-Est 2021–2027",
-    "institution": "ADR Nord-Est",
+    "name": "Registrul oficial al apelurilor Programului Regional Nord-Est, verificat la 18.08.2026",
+    "title": "Registrul oficial al apelurilor Programului Regional Nord-Est, verificat la 18.08.2026",
+    "institution": "Autoritatea de Management pentru Programul Regional Nord-Est",
     "documentType": "pagina institutionala",
-    "url": "https://regionordest.ro/",
-    "accessedAt": "2026-07-20",
+    "url": "https://regionordest.ro/apeluri-de-proiecte/",
+    "accessedAt": "2026-08-18",
     "note": "Sursa oficiala pentru judetele Regiunii Nord-Est.",
     "programIds": [
       "program-regional-nord-est"
     ],
-    "programStatus": "ghid_aprobat_nedeschis",
-    "statusLabel": "Ghid aprobat – depunerea nu este deschisă",
-    "verifiedAt": "2026-07-20",
+    "programStatus": "calendar_estimativ",
+    "statusLabel": "Program activ – statutul și calendarul diferă pentru fiecare apel",
+    "verifiedAt": "2026-08-18",
     "isPrimaryFor": "program-regional-nord-est",
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
   "por-ne": {
-    "name": "Ghidul solicitantului – Apel 2, variantă consultativă",
-    "title": "Ghidul solicitantului – Apel 2, variantă consultativă",
-    "institution": "ADR Nord-Est",
+    "name": "Apel 2 – consultare publică închisă; 30.01.2026–13.03.2026",
+    "title": "Apel 2 – consultare publică închisă; 30.01.2026–13.03.2026",
+    "institution": "Autoritatea de Management pentru Programul Regional Nord-Est",
     "documentType": "ghid in consultare / pagina oficiala",
-    "url": "https://adrnordest.ro/comentariiGhid/P1Microintreprinderi/Apel2/",
-    "accessedAt": "2026-06-02",
+    "url": "https://regionordest.ro/apel-proiect/p1-investitii-pentru-modernizarea-microintreprinderilor-apel-2/",
+    "accessedAt": "2026-08-18",
     "note": "Sinteza foloseste ghidul consultativ din 30 ianuarie 2026 furnizat in arhiva oficiala; forma finala si clarificarile se verifica pe pagina ADR Nord-Est.",
     "programIds": [
       "modernizare-microintreprinderi-ne-2"
     ],
     "programStatus": "consultare_publica",
-    "statusLabel": "Consultare publică – depunerea nu este deschisă",
-    "verifiedAt": "2026-06-02",
+    "statusLabel": "Consultare publică închisă – apelul nu este deschis",
+    "verifiedAt": "2026-08-18",
     "isPrimaryFor": "modernizare-microintreprinderi-ne-2",
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
   "por-ne-apel-2": {
-    "name": "Ghidul solicitantului – Apel 2, variantă consultativă",
-    "title": "Ghidul solicitantului – Apel 2, variantă consultativă",
-    "institution": "ADR Nord-Est",
+    "name": "Apel 2 – consultare publică închisă; 30.01.2026–13.03.2026",
+    "title": "Apel 2 – consultare publică închisă; 30.01.2026–13.03.2026",
+    "institution": "Autoritatea de Management pentru Programul Regional Nord-Est",
     "documentType": "ghid in consultare / pagina oficiala",
-    "url": "https://adrnordest.ro/comentariiGhid/P1Microintreprinderi/Apel2/",
-    "accessedAt": "2026-06-02",
+    "url": "https://regionordest.ro/apel-proiect/p1-investitii-pentru-modernizarea-microintreprinderilor-apel-2/",
+    "accessedAt": "2026-08-18",
     "note": "Sinteza foloseste ghidul consultativ din 30 ianuarie 2026 furnizat in arhiva oficiala; forma finala si clarificarile se verifica pe pagina ADR Nord-Est.",
     "programIds": [
       "modernizare-microintreprinderi-ne-2"
     ],
     "isPrimaryFor": "modernizare-microintreprinderi-ne-2",
     "programStatus": "consultare_publica",
-    "statusLabel": "Consultare publică – depunerea nu este deschisă",
-    "verifiedAt": "2026-06-02",
+    "statusLabel": "Consultare publică închisă – apelul nu este deschis",
+    "verifiedAt": "2026-08-18",
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
   "femeia": {
-    "name": "Comunicatul oficial privind ediția publicată a programului Femeia Antreprenor",
-    "title": "Comunicatul oficial privind ediția publicată a programului Femeia Antreprenor",
-    "institution": "Ministerul Economiei",
+    "name": "Femeia Antreprenor 2024 – ordinea finală la evaluare",
+    "title": "Femeia Antreprenor 2024 – ordinea finală la evaluare",
+    "institution": "Ministerul Economiei – platforma oficială MINIMIS",
     "documentType": "comunicat",
-    "url": "https://economie.gov.ro/pe-data-de-30-iulie-se-da-startul-inscrierilor-in-cadrul-programului-femeia-antreprenor/",
-    "accessedAt": "2026-05-20",
+    "url": "https://minimis.imm.gov.ro/fa2024/ordine_evaluare",
+    "accessedAt": "2026-08-18",
     "programIds": [
       "femeia-antreprenor"
     ],
     "isPrimaryFor": "femeia-antreprenor",
-    "programStatus": "calendar_estimativ",
-    "statusLabel": "Calendar estimativ – depunerea nu este confirmată",
-    "verifiedAt": "2026-05-20",
+    "programStatus": "apel_inchis",
+    "statusLabel": "Apel 2024 închis – este publicată ordinea finală la evaluare",
+    "verifiedAt": "2026-08-18",
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
   "startup": {
-    "name": "Procedura ediției 2024 publicată de Ministerul Economiei",
-    "title": "Procedura ediției 2024 publicată de Ministerul Economiei",
-    "institution": "Ministerul Economiei",
+    "name": "Start-Up Nation 2024 – transparența înscrierilor persoanelor juridice; ultima înscriere la 29.05.2026, ora 20:00",
+    "title": "Start-Up Nation 2024 – transparența înscrierilor persoanelor juridice; ultima înscriere la 29.05.2026, ora 20:00",
+    "institution": "Ministerul Economiei – platforma oficială MINIMIS",
     "documentType": "procedura",
-    "url": "https://economie.gov.ro/participa-la-definitivarea-procedurii-de-implementare-a-programului-de-succes-start-up-nation-editia-2024/",
-    "accessedAt": "2026-05-20",
+    "url": "https://minimis.imm.gov.ro/sn2024/transparenta_persoane_juridice",
+    "accessedAt": "2026-08-18",
     "programIds": [
       "start-up-nation"
     ],
     "isPrimaryFor": "start-up-nation",
-    "programStatus": "calendar_estimativ",
-    "statusLabel": "Calendar estimativ – depunerea nu este confirmată",
-    "verifiedAt": "2026-05-20",
+    "programStatus": "apel_inchis",
+    "statusLabel": "Apel închis – înscrierile persoanelor juridice s-au încheiat la 29 mai 2026, ora 20:00",
+    "verifiedAt": "2026-08-18",
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
   "afir-autoconsum": {
@@ -105,7 +105,7 @@
     "institution": "Ministerul Agriculturii și Dezvoltării Rurale / AFIR",
     "documentType": "ghid aprobat prin OMADR nr. 180/09.06.2026",
     "url": "https://www.afir.ro/comunicate/deschiderea-sesiunii-pentru-investitiile-in-producerea-energiei-electrice-din-surse-regenerabile/",
-    "accessedAt": "2026-08-15",
+    "accessedAt": "2026-08-18",
     "note": "Versiunea 7 aplicabilă celei de-a treia sesiuni din 2026; documentul aprobat înlocuiește ca reper editorial versiunea publicată anterior în consultare.",
     "programIds": [
       "afir-energie-autoconsum"
@@ -113,7 +113,7 @@
     "isPrimaryFor": "afir-energie-autoconsum",
     "programStatus": "apel_inchis",
     "statusLabel": "Apel închis – sesiunea s-a încheiat la 14 august 2026",
-    "verifiedAt": "2026-08-15",
+    "verifiedAt": "2026-08-18",
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
   "afir-autoconsum-session-2026": {
@@ -122,64 +122,64 @@
     "institution": "Ministerul Agriculturii și Dezvoltării Rurale / AFIR",
     "documentType": "anunț oficial de lansare",
     "url": "https://www.afir.ro/comunicate/deschiderea-sesiunii-pentru-investitiile-in-producerea-energiei-electrice-din-surse-regenerabile/",
-    "accessedAt": "2026-08-15",
+    "accessedAt": "2026-08-18",
     "note": "Confirmă sesiunea 15 iunie–14 august 2026, alocarea de 265 milioane euro și caracterul aplicabil al Ghidului V7.",
     "programIds": [
       "afir-energie-autoconsum"
     ],
     "programStatus": "apel_inchis",
     "statusLabel": "Apel închis – sesiunea s-a încheiat la 14 august 2026",
-    "verifiedAt": "2026-08-15",
+    "verifiedAt": "2026-08-18",
     "isPrimaryFor": "afir-energie-autoconsum",
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
   "autoconsum-publici": {
-    "name": "Actul normativ privind autoconsumul pentru entități publice",
-    "title": "Actul normativ privind autoconsumul pentru entități publice",
-    "institution": "Guvernul României / autoritatea finanțatoare competentă",
+    "name": "MySMIS2021: apelul de autoconsum din surse regenerabile pentru entități publice este marcat FINALIZAT",
+    "title": "MySMIS2021: apelul de autoconsum din surse regenerabile pentru entități publice este marcat FINALIZAT",
+    "institution": "Ministerul Investițiilor și Proiectelor Europene – MySMIS2021",
     "documentType": "act normativ",
-    "url": "https://legislatie.just.ro/public/DetaliiDocument/276306",
-    "accessedAt": "2026-05-20",
+    "url": "https://resurse.mysmis2021.gov.ro/ords/repo_bo/r/mysmis-2021/finantari-programe-2021-2027",
+    "accessedAt": "2026-08-18",
     "programIds": [
       "autoconsum-institutii-publice"
     ],
     "isPrimaryFor": "autoconsum-institutii-publice",
-    "programStatus": "ghid_aprobat_nedeschis",
-    "statusLabel": "Ghid aprobat – depunerea nu este deschisă",
-    "verifiedAt": "2026-05-20",
+    "programStatus": "apel_inchis",
+    "statusLabel": "Apel finalizat în MySMIS – depunerea nu este deschisă",
+    "verifiedAt": "2026-08-18",
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
   "fondul-modernizare": {
-    "name": "Pagina oficială a Fondului pentru Modernizare",
-    "title": "Pagina oficială a Fondului pentru Modernizare",
-    "institution": "Ministerul Energiei",
+    "name": "MySMIS2021: apelurile pentru capacități regenerabile destinate autoconsumului sunt marcate FINALIZAT",
+    "title": "MySMIS2021: apelurile pentru capacități regenerabile destinate autoconsumului sunt marcate FINALIZAT",
+    "institution": "Ministerul Investițiilor și Proiectelor Europene – MySMIS2021",
     "documentType": "pagina program",
-    "url": "https://energie.gov.ro/category/fondul-pentru-modernizare/",
-    "accessedAt": "2026-05-20",
+    "url": "https://resurse.mysmis2021.gov.ro/ords/repo_bo/r/mysmis-2021/finantari-programe-2021-2027",
+    "accessedAt": "2026-08-18",
     "programIds": [
       "fondul-modernizare-autoconsum",
       "fondul-modernizare-regenerabile"
     ],
     "isPrimaryFor": "fondul-modernizare-autoconsum",
-    "programStatus": "calendar_estimativ",
-    "statusLabel": "Calendar estimativ – depunerea nu este confirmată",
-    "verifiedAt": "2026-05-20",
+    "programStatus": "apel_inchis",
+    "statusLabel": "Apeluri finalizate în MySMIS – depunerea nu este deschisă",
+    "verifiedAt": "2026-08-18",
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
   "fondul-modernizare-regenerabile": {
-    "name": "Pagina oficială a Fondului pentru Modernizare",
-    "title": "Pagina oficială a Fondului pentru Modernizare",
-    "institution": "Ministerul Energiei",
+    "name": "MySMIS2021: apelurile pentru noi capacități din surse regenerabile sunt marcate FINALIZAT",
+    "title": "MySMIS2021: apelurile pentru noi capacități din surse regenerabile sunt marcate FINALIZAT",
+    "institution": "Ministerul Investițiilor și Proiectelor Europene – MySMIS2021",
     "documentType": "pagina program",
-    "url": "https://energie.gov.ro/category/fondul-pentru-modernizare/",
-    "accessedAt": "2026-05-20",
+    "url": "https://resurse.mysmis2021.gov.ro/ords/repo_bo/r/mysmis-2021/finantari-programe-2021-2027",
+    "accessedAt": "2026-08-18",
     "programIds": [
       "fondul-modernizare-regenerabile"
     ],
     "isPrimaryFor": "fondul-modernizare-regenerabile",
-    "programStatus": "calendar_estimativ",
-    "statusLabel": "Calendar estimativ – depunerea nu este confirmată",
-    "verifiedAt": "2026-05-20",
+    "programStatus": "apel_inchis",
+    "statusLabel": "Apeluri finalizate în MySMIS – depunerea nu este deschisă",
+    "verifiedAt": "2026-08-18",
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
   "fonduri-europene": {
@@ -191,54 +191,54 @@
     "accessedAt": "2026-05-20"
   },
   "leader-gal": {
-    "name": "Pagina oficială AFIR LEADER și documentele DR-36",
-    "title": "Pagina oficială AFIR LEADER și documentele DR-36",
-    "institution": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
+    "name": "Platforma AFIR GAL publică apeluri locale cu termene distincte; verificat la 18.08.2026",
+    "title": "Platforma AFIR GAL publică apeluri locale cu termene distincte; verificat la 18.08.2026",
+    "institution": "Platforma oficială AFIR pentru Grupurile de Acțiune Locală",
     "documentType": "pagina program",
-    "url": "https://www.afir.ro/finantare/leader/",
-    "accessedAt": "2026-05-26",
+    "url": "https://gal.afir.ro/",
+    "accessedAt": "2026-08-18",
     "programIds": [
       "apeluri-gal",
       "gal-afir-leader"
     ],
     "isPrimaryFor": "gal-afir-leader",
-    "programStatus": "ghid_aprobat_nedeschis",
-    "statusLabel": "Ghid aprobat – depunerea nu este deschisă",
-    "verifiedAt": "2026-05-26",
+    "programStatus": "calendar_estimativ",
+    "statusLabel": "Apeluri locale active – statutul și termenul se verifică pentru fiecare GAL",
+    "verifiedAt": "2026-08-18",
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
   "dr36-leader": {
-    "name": "DR-36 LEADER și ghidurile locale ale GAL-urilor",
-    "title": "DR-36 LEADER și ghidurile locale ale GAL-urilor",
-    "institution": "AFIR și Grupurile de Acțiune Locală",
+    "name": "Platforma AFIR GAL publică apeluri locale cu termene distincte; verificat la 18.08.2026",
+    "title": "Platforma AFIR GAL publică apeluri locale cu termene distincte; verificat la 18.08.2026",
+    "institution": "Platforma oficială AFIR pentru Grupurile de Acțiune Locală",
     "documentType": "ghid si anexe",
-    "url": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-36/",
-    "accessedAt": "2026-05-26",
+    "url": "https://gal.afir.ro/",
+    "accessedAt": "2026-08-18",
     "programIds": [
       "apeluri-gal",
       "gal-afir-leader"
     ],
     "isPrimaryFor": "apeluri-gal",
     "programStatus": "calendar_estimativ",
-    "statusLabel": "Calendar estimativ – depunerea nu este confirmată",
-    "verifiedAt": "2026-05-26",
+    "statusLabel": "Apeluri locale active – statutul și termenul se verifică pentru fiecare GAL",
+    "verifiedAt": "2026-08-18",
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
   "emove": {
-    "name": "Ghidul solicitantului e-MOVE RO – variantă consultativă",
-    "title": "Ghidul solicitantului e-MOVE RO – variantă consultativă",
-    "institution": "Ministerul Transporturilor și Infrastructurii",
+    "name": "Ordinul MTI nr. 755/06.08.2026 pentru actualizarea schemei e-MOVE RO, în vigoare din 10.08.2026",
+    "title": "Ordinul MTI nr. 755/06.08.2026 pentru actualizarea schemei e-MOVE RO, în vigoare din 10.08.2026",
+    "institution": "Ministerul Transporturilor și Infrastructurii / Portal Legislativ",
     "documentType": "ghid publicat spre consultare publica / schema de ajutor de stat / comunicat oficial",
-    "url": "https://fonduri.mt.ro/transparenta/consultare-publica/fondul-pentru-modernizare/comunicat-fm-consultare-publica-ghidul-solicitantului-promovarea-infrastructurii-pentru-o-mobilitate-cu-emisii-zero-in-sprijinul-intreprinderilor-si-comunitatilor-e-move-ro",
-    "accessedAt": "2026-05-27",
+    "url": "https://legislatie.just.ro/Public/DetaliiDocument/313320",
+    "accessedAt": "2026-08-18",
     "note": "Pagina oficiala DGPET/MTI publica ghidul e-MOVE RO spre consultare si trimite la schema de ajutor de stat; ghidul final sau reviziile ulterioare trebuie confirmate in sursa oficiala inainte de depunere.",
     "programIds": [
       "e-move-ro"
     ],
     "isPrimaryFor": "e-move-ro",
-    "programStatus": "consultare_publica",
-    "statusLabel": "Consultare publică – depunerea nu este deschisă",
-    "verifiedAt": "2026-05-27",
+    "programStatus": "ghid_aprobat_nedeschis",
+    "statusLabel": "Schemă actualizată – depunerea nu este deschisă",
+    "verifiedAt": "2026-08-18",
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
   "pocidif-21": {
@@ -249,15 +249,15 @@
     "documentType": "pagină oficială cu ghid aprobat, schemă, anexe și întrebări-răspunsuri",
     "publisher": "Ministerul Investițiilor și Proiectelor Europene",
     "version": "Ghid aprobat prin Ordinul MIPE nr. 965/23.06.2026",
-    "accessedAt": "2026-07-13",
+    "accessedAt": "2026-08-18",
     "note": "Sursa editorială principală pentru Acțiunea 2.1. Pagina MIPE publică ghidul aprobat, anexele, schema de ajutor și tabelul de întrebări și răspunsuri.",
     "programIds": [
       "pocidif-21"
     ],
     "isPrimaryFor": "pocidif-21",
-    "programStatus": "ghid_aprobat_nedeschis",
-    "statusLabel": "Ghid aprobat – depunerea nu este deschisă",
-    "verifiedAt": "2026-07-13",
+    "programStatus": "apel_deschis",
+    "statusLabel": "Apel deschis – depuneri 30 iunie–30 septembrie 2026",
+    "verifiedAt": "2026-08-18",
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
   "pocidif-21-guide": {
@@ -267,14 +267,14 @@
     "institution": "Ministerul Investițiilor și Proiectelor Europene",
     "documentType": "ghid aprobat și 19 anexe",
     "version": "Aprobat prin Ordinul MIPE nr. 965/23.06.2026",
-    "accessedAt": "2026-07-13",
+    "accessedAt": "2026-08-18",
     "note": "Conține condițiile finale privind solicitanții, CAEN, parteneriatele, activitățile, cheltuielile, indicatorii, documentele și grila de evaluare.",
     "programIds": [
       "pocidif-21"
     ],
-    "programStatus": "ghid_aprobat_nedeschis",
-    "statusLabel": "Ghid aprobat – depunerea nu este deschisă",
-    "verifiedAt": "2026-07-13",
+    "programStatus": "apel_deschis",
+    "statusLabel": "Apel deschis – depuneri 30 iunie–30 septembrie 2026",
+    "verifiedAt": "2026-08-18",
     "isPrimaryFor": "pocidif-21",
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
@@ -284,14 +284,14 @@
     "url": "https://mfe.gov.ro/ghiduri_pocidif/pocidif-ghidul-solicitantului-dezvoltarea-de-noi-servicii-aplicatii-produse-prin-inovare-si-adoptarea-de-tehnologii-avansate-2/",
     "institution": "Ministerul Investițiilor și Proiectelor Europene",
     "documentType": "schemă de ajutor aprobată prin Ordinul MIPE nr. 875/15.06.2026",
-    "accessedAt": "2026-07-13",
+    "accessedAt": "2026-08-18",
     "note": "Sursa oficială pentru tipurile de ajutor, intensități, cumul și condițiile de acordare.",
     "programIds": [
       "pocidif-21"
     ],
-    "programStatus": "ghid_aprobat_nedeschis",
-    "statusLabel": "Ghid aprobat – depunerea nu este deschisă",
-    "verifiedAt": "2026-07-13",
+    "programStatus": "apel_deschis",
+    "statusLabel": "Apel deschis – depuneri 30 iunie–30 septembrie 2026",
+    "verifiedAt": "2026-08-18",
     "isPrimaryFor": "pocidif-21",
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
@@ -302,14 +302,14 @@
     "institution": "Ministerul Investițiilor și Proiectelor Europene",
     "documentType": "clarificări oficiale",
     "version": "09.07.2026",
-    "accessedAt": "2026-07-13",
+    "accessedAt": "2026-08-18",
     "note": "Clarificări oficiale publicate după aprobarea ghidului; documentul completează lectura ghidului și anexelor.",
     "programIds": [
       "pocidif-21"
     ],
-    "programStatus": "ghid_aprobat_nedeschis",
-    "statusLabel": "Ghid aprobat – depunerea nu este deschisă",
-    "verifiedAt": "2026-07-13",
+    "programStatus": "apel_deschis",
+    "statusLabel": "Apel deschis – depuneri 30 iunie–30 septembrie 2026",
+    "verifiedAt": "2026-08-18",
     "isPrimaryFor": "pocidif-21",
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
@@ -317,29 +317,29 @@
     "programIds": [
       "fonduri-regionale"
     ],
-    "name": "Portalul oficial al fondurilor europene",
-    "title": "Portalul oficial al fondurilor europene",
-    "institution": "Autoritățile de management regionale",
-    "url": "https://mfe.gov.ro/",
-    "accessedAt": "2026-07-20",
+    "name": "Registrul oficial MySMIS2021 al apelurilor validate 2021–2027",
+    "title": "Registrul oficial MySMIS2021 al apelurilor validate 2021–2027",
+    "institution": "Ministerul Investițiilor și Proiectelor Europene – MySMIS2021",
+    "url": "https://resurse.mysmis2021.gov.ro/ords/repo_bo/r/mysmis-2021/finantari-programe-2021-2027",
+    "accessedAt": "2026-08-18",
     "isPrimaryFor": "fonduri-regionale",
     "programStatus": "calendar_estimativ",
-    "statusLabel": "Calendar estimativ – depunerea nu este confirmată",
-    "verifiedAt": "2026-07-20",
+    "statusLabel": "Programe active – statutul și calendarul se verifică pentru fiecare apel",
+    "verifiedAt": "2026-08-18",
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
   "dr12": {
     "programIds": [
       "dr12-afir"
     ],
-    "name": "Versiune consultativă publicată la 19.03.2026",
-    "title": "Versiune consultativă publicată la 19.03.2026",
+    "name": "Versiune consultativă publicată la 19.03.2026; termenul pentru observații s-a încheiat la 30.03.2026",
+    "title": "Versiune consultativă publicată la 19.03.2026; termenul pentru observații s-a încheiat la 30.03.2026",
     "institution": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
     "url": "https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/",
-    "accessedAt": "2026-07-22",
+    "accessedAt": "2026-08-18",
     "programStatus": "consultare_publica",
-    "statusLabel": "Ghid consultativ – depunerea nu este deschisă. Condițiile se pot modifica.",
-    "verifiedAt": "2026-07-22",
+    "statusLabel": "Ghid consultativ publicat – consultarea s-a încheiat; depunerea nu este deschisă. Condițiile se pot modifica.",
+    "verifiedAt": "2026-08-18",
     "isPrimaryFor": "dr12-afir",
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
@@ -351,10 +351,10 @@
     "title": "Anunțul A1.2/01/2026 pentru sesiunea DR 14, publicat la 14.08.2026",
     "institution": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
     "url": "https://www.afir.ro/instrumente/sesiuni/sesiuni-primire-proiecte/",
-    "accessedAt": "2026-08-15",
+    "accessedAt": "2026-08-18",
     "programStatus": "ghid_aprobat_nedeschis",
-    "statusLabel": "Sesiune lansată – depuneri 1 septembrie–31 octombrie 2026",
-    "verifiedAt": "2026-08-15",
+    "statusLabel": "Sesiune anunțată – depuneri 1 septembrie–31 octombrie 2026",
+    "verifiedAt": "2026-08-18",
     "isPrimaryFor": "dr14-afir",
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
@@ -362,15 +362,15 @@
     "programIds": [
       "dr18-afir"
     ],
-    "name": "Ghidul solicitantului DR-18 – versiunea consultativă, sesiunea 2026",
-    "title": "Ghidul solicitantului DR-18 – versiunea consultativă, sesiunea 2026",
+    "name": "Anunțul A1.2/01/2026 pentru sesiunea DR 18, publicat la 14.08.2026",
+    "title": "Anunțul A1.2/01/2026 pentru sesiunea DR 18, publicat la 14.08.2026",
     "institution": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
     "documentType": "Ghidul solicitantului – versiune consultativă",
-    "url": "https://www.afir.ro/api/file?filename=Ghidul+solicitantului+DR+18+-+versiunea+consultativ%C4%83&filetype=pdf&url=%2Fmedia%2F4v0mpvi1%2Fghidul-solicitantului-dr-18-versiunea-consultativ%C4%83.pdf",
+    "url": "https://www.afir.ro/instrumente/sesiuni/sesiuni-primire-proiecte/",
     "accessedAt": "2026-08-18",
     "note": "Documentul este consultativ; calendarul, alocarea și pragurile lunare se confirmă în anunțul sesiunii.",
-    "programStatus": "consultare_publica",
-    "statusLabel": "Ghid consultativ – depunerea nu este deschisă. Condițiile se pot modifica.",
+    "programStatus": "ghid_aprobat_nedeschis",
+    "statusLabel": "Sesiune anunțată – depuneri 1 septembrie–31 octombrie 2026",
     "verifiedAt": "2026-08-18",
     "isPrimaryFor": "dr18-afir",
     "sourceOfTruth": "config/seo-programs.json#programs"
@@ -383,10 +383,10 @@
     "title": "Ordinul MIPE nr. 607/28.04.2026; modifică Ghidul aprobat prin Ordinul nr. 3185/2022",
     "institution": "Ministerul Investițiilor și Proiectelor Europene",
     "url": "https://mfe.gov.ro/pnrr-ordinul-nr-607-28-04-2026-pentru-modificarea-ghidului-solicitantului-digitalizarea-imm-urilor-grant-de-pana-la-100-000-euro-pe-intreprindere-care-sa-sprijine-imm-urile-in-adoptarea-tehnologii/",
-    "accessedAt": "2026-07-22",
+    "accessedAt": "2026-08-18",
     "programStatus": "apel_inchis",
     "statusLabel": "Apel închis – depunerea nu este deschisă",
-    "verifiedAt": "2026-07-22",
+    "verifiedAt": "2026-08-18",
     "isPrimaryFor": "digitalizare-imm",
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
@@ -398,10 +398,10 @@
     "title": "Ordinul MIPE nr. 607/28.04.2026; modifică Ghidul aprobat prin Ordinul nr. 3185/2022",
     "institution": "Ministerul Investițiilor și Proiectelor Europene",
     "url": "https://mfe.gov.ro/pnrr-ordinul-nr-607-28-04-2026-pentru-modificarea-ghidului-solicitantului-digitalizarea-imm-urilor-grant-de-pana-la-100-000-euro-pe-intreprindere-care-sa-sprijine-imm-urile-in-adoptarea-tehnologii/",
-    "accessedAt": "2026-07-22",
+    "accessedAt": "2026-08-18",
     "programStatus": "apel_inchis",
     "statusLabel": "Apel închis – depunerea nu este deschisă",
-    "verifiedAt": "2026-07-22",
+    "verifiedAt": "2026-08-18",
     "isPrimaryFor": "digitalizare-imm",
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
@@ -409,14 +409,14 @@
     "programIds": [
       "pro-infra"
     ],
-    "name": "Ordinul MTI nr. 2.292/29.12.2025, publicat în Monitorul Oficial nr. 20/14.01.2026; formă consolidată 12.02.2026",
-    "title": "Ordinul MTI nr. 2.292/29.12.2025, publicat în Monitorul Oficial nr. 20/14.01.2026; formă consolidată 12.02.2026",
+    "name": "Ordinul MTI nr. 2.292/29.12.2025, publicat în Monitorul Oficial nr. 20/14.01.2026; schemă în proces de revizuire anunțat de MTI în martie 2026",
+    "title": "Ordinul MTI nr. 2.292/29.12.2025, publicat în Monitorul Oficial nr. 20/14.01.2026; schemă în proces de revizuire anunțat de MTI în martie 2026",
     "institution": "Ministerul Transporturilor și Infrastructurii",
     "url": "https://legislatie.just.ro/Public/DetaliiDocument/306915",
-    "accessedAt": "2026-07-22",
+    "accessedAt": "2026-08-18",
     "programStatus": "ghid_aprobat_nedeschis",
-    "statusLabel": "Schemă aprobată – depunerea nu este deschisă",
-    "verifiedAt": "2026-07-22",
+    "statusLabel": "Schemă aprobată, în revizuire – depunerea nu este deschisă",
+    "verifiedAt": "2026-08-18",
     "isPrimaryFor": "pro-infra",
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
@@ -424,14 +424,14 @@
     "programIds": [
       "pro-infra"
     ],
-    "name": "Ordinul MTI nr. 2.292/29.12.2025, publicat în Monitorul Oficial nr. 20/14.01.2026; formă consolidată 12.02.2026",
-    "title": "Ordinul MTI nr. 2.292/29.12.2025, publicat în Monitorul Oficial nr. 20/14.01.2026; formă consolidată 12.02.2026",
+    "name": "Ordinul MTI nr. 2.292/29.12.2025, publicat în Monitorul Oficial nr. 20/14.01.2026; schemă în proces de revizuire anunțat de MTI în martie 2026",
+    "title": "Ordinul MTI nr. 2.292/29.12.2025, publicat în Monitorul Oficial nr. 20/14.01.2026; schemă în proces de revizuire anunțat de MTI în martie 2026",
     "institution": "Ministerul Transporturilor și Infrastructurii",
     "url": "https://legislatie.just.ro/Public/DetaliiDocument/306915",
-    "accessedAt": "2026-07-22",
+    "accessedAt": "2026-08-18",
     "programStatus": "ghid_aprobat_nedeschis",
-    "statusLabel": "Schemă aprobată – depunerea nu este deschisă",
-    "verifiedAt": "2026-07-22",
+    "statusLabel": "Schemă aprobată, în revizuire – depunerea nu este deschisă",
+    "verifiedAt": "2026-08-18",
     "isPrimaryFor": "pro-infra",
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
@@ -443,10 +443,10 @@
     "title": "Comunicare oficială din 27.05.2026 privind programul guvernamental",
     "institution": "Departamentul pentru Românii de Pretutindeni",
     "url": "https://diaspora.gov.ro/info/stiri-din-romania/761-investeste-acasa.html",
-    "accessedAt": "2026-08-09",
+    "accessedAt": "2026-08-18",
     "programStatus": "calendar_estimativ",
     "statusLabel": "Program anunțat – mecanismul de aplicare nu este publicat",
-    "verifiedAt": "2026-08-09",
+    "verifiedAt": "2026-08-18",
     "isPrimaryFor": "diaspora-investeste-acasa",
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
@@ -454,14 +454,14 @@
     "programIds": [
       "e-drive"
     ],
-    "name": "Ordinul MTI nr. 2.291/29.12.2025, publicat în Monitorul Oficial nr. 14/13.01.2026; modificat prin Ordinul nr. 100/12.02.2026",
-    "title": "Ordinul MTI nr. 2.291/29.12.2025, publicat în Monitorul Oficial nr. 14/13.01.2026; modificat prin Ordinul nr. 100/12.02.2026",
+    "name": "Ordinul MTI nr. 742/03.08.2026 pentru actualizarea schemei e-DRIVE, în vigoare din 07.08.2026",
+    "title": "Ordinul MTI nr. 742/03.08.2026 pentru actualizarea schemei e-DRIVE, în vigoare din 07.08.2026",
     "institution": "Ministerul Transporturilor și Infrastructurii / Portal Legislativ",
-    "url": "https://legislatie.just.ro/Public/DetaliiDocumentAfis/306913",
-    "accessedAt": "2026-08-09",
+    "url": "https://legislatie.just.ro/Public/DetaliiDocument/313289",
+    "accessedAt": "2026-08-18",
     "programStatus": "ghid_aprobat_nedeschis",
-    "statusLabel": "Schemă aprobată – depunerea nu este deschisă",
-    "verifiedAt": "2026-08-09",
+    "statusLabel": "Schemă actualizată – depunerea nu este deschisă",
+    "verifiedAt": "2026-08-18",
     "isPrimaryFor": "e-drive",
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
@@ -469,14 +469,14 @@
     "programIds": [
       "e-mobility-ro"
     ],
-    "name": "Ordinul MTI nr. 1.319/12.08.2025 și schema de ajutor de stat e-Mobility RO",
-    "title": "Ordinul MTI nr. 1.319/12.08.2025 și schema de ajutor de stat e-Mobility RO",
+    "name": "Ordinul MTI nr. 746/05.08.2026 pentru actualizarea schemei e-Mobility RO, în vigoare din 07.08.2026",
+    "title": "Ordinul MTI nr. 746/05.08.2026 pentru actualizarea schemei e-Mobility RO, în vigoare din 07.08.2026",
     "institution": "Ministerul Transporturilor și Infrastructurii / Portal Legislativ",
-    "url": "https://legislatie.just.ro/Public/DetaliiDocumentAfis/301389",
-    "accessedAt": "2026-08-09",
+    "url": "https://legislatie.just.ro/Public/DetaliiDocument/313291",
+    "accessedAt": "2026-08-18",
     "programStatus": "ghid_aprobat_nedeschis",
-    "statusLabel": "Schemă aprobată – depunerea nu este deschisă",
-    "verifiedAt": "2026-08-09",
+    "statusLabel": "Schemă actualizată – depunerea nu este deschisă",
+    "verifiedAt": "2026-08-18",
     "isPrimaryFor": "e-mobility-ro",
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
@@ -484,15 +484,60 @@
     "programIds": [
       "fondul-modernizare-pc1-stocare"
     ],
-    "name": "Documentația PC1 pentru capacități de stocare stand-alone publicată în consultare la 21.05.2026",
-    "title": "Documentația PC1 pentru capacități de stocare stand-alone publicată în consultare la 21.05.2026",
-    "institution": "Ministerul Energiei",
-    "url": "https://energie.gov.ro/category/fondul-pentru-modernizare/",
-    "accessedAt": "2026-08-09",
-    "programStatus": "consultare_publica",
-    "statusLabel": "Ghid în consultare – depunerea nu este deschisă",
-    "verifiedAt": "2026-08-09",
+    "name": "Ordinul Ministerului Energiei nr. 915/17.08.2026 pentru aprobarea ghidului solicitantului PC1 Stocare stand-alone",
+    "title": "Ordinul Ministerului Energiei nr. 915/17.08.2026 pentru aprobarea ghidului solicitantului PC1 Stocare stand-alone",
+    "institution": "Ministerul Energiei / Portal Legislativ",
+    "url": "https://legislatie.just.ro/Public/DetaliiDocument/313464",
+    "accessedAt": "2026-08-18",
+    "programStatus": "ghid_aprobat_nedeschis",
+    "statusLabel": "Ghid aprobat la 17 august 2026 – perioada de depunere nu este anunțată",
+    "verifiedAt": "2026-08-18",
     "isPrimaryFor": "fondul-modernizare-pc1-stocare",
+    "sourceOfTruth": "config/seo-programs.json#programs"
+  },
+  "pnrr-dashboard": {
+    "programIds": [
+      "pnrr"
+    ],
+    "name": "Tabloul de bord oficial PNRR; program în implementare, cu situație distinctă pe componente și apeluri",
+    "title": "Tabloul de bord oficial PNRR; program în implementare, cu situație distinctă pe componente și apeluri",
+    "institution": "Ministerul Investițiilor și Proiectelor Europene – tabloul de bord PNRR",
+    "url": "https://pnrr.fonduri-ue.ro/ords/pnrr/r/dashboard-status-pnrr/home",
+    "accessedAt": "2026-08-18",
+    "programStatus": "calendar_estimativ",
+    "statusLabel": "Program în implementare – statutul se verifică pentru fiecare componentă și apel",
+    "verifiedAt": "2026-08-18",
+    "isPrimaryFor": "pnrr",
+    "sourceOfTruth": "config/seo-programs.json#programs"
+  },
+  "ptj-mysmis": {
+    "programIds": [
+      "programul-tranzitie-justa"
+    ],
+    "name": "Catalogul oficial al finanțărilor 2021–2027; Programul Tranziție Justă are statut distinct pentru fiecare apel",
+    "title": "Catalogul oficial al finanțărilor 2021–2027; Programul Tranziție Justă are statut distinct pentru fiecare apel",
+    "institution": "Ministerul Investițiilor și Proiectelor Europene – MySMIS2021",
+    "url": "https://resurse.mysmis2021.gov.ro/ords/repo_bo/r/mysmis-2021/finantari-programe-2021-2027",
+    "accessedAt": "2026-08-18",
+    "programStatus": "calendar_estimativ",
+    "statusLabel": "Program în implementare – statutul se verifică pentru fiecare apel în MySMIS",
+    "verifiedAt": "2026-08-18",
+    "isPrimaryFor": "programul-tranzitie-justa",
+    "sourceOfTruth": "config/seo-programs.json#programs"
+  },
+  "fondul-modernizare-mysmis": {
+    "programIds": [
+      "fondul-de-modernizare"
+    ],
+    "name": "Catalogul oficial al finanțărilor 2021–2027; Fondul pentru Modernizare are statut distinct pentru fiecare apel",
+    "title": "Catalogul oficial al finanțărilor 2021–2027; Fondul pentru Modernizare are statut distinct pentru fiecare apel",
+    "institution": "Ministerul Investițiilor și Proiectelor Europene – MySMIS2021",
+    "url": "https://resurse.mysmis2021.gov.ro/ords/repo_bo/r/mysmis-2021/finantari-programe-2021-2027",
+    "accessedAt": "2026-08-18",
+    "programStatus": "calendar_estimativ",
+    "statusLabel": "Program în implementare – statutul se verifică pentru fiecare apel în MySMIS",
+    "verifiedAt": "2026-08-18",
+    "isPrimaryFor": "fondul-de-modernizare",
     "sourceOfTruth": "config/seo-programs.json#programs"
   }
 }

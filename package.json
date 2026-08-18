@@ -17,6 +17,7 @@
     "migrate:editorial-governance": "node scripts/migrate-editorial-governance.js",
     "report:editorial-governance": "node tools/validate-editorial-governance.js",
     "validate:editorial-governance": "node tools/validate-editorial-governance.js --check-report",
+    "sync:editorial-program-statuses": "node tools/sync-editorial-program-statuses.js",
     "sync:editorial-governance": "node tools/sync-editorial-governance.js",
     "check:editorial-governance-sync": "node tools/sync-editorial-governance.js --check",
     "test:editorial-governance": "node tests/editorial-governance-contract.mjs",

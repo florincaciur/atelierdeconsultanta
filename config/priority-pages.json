@@ -149,7 +149,7 @@
     "investitii-modernizarea-microintreprinderilor-apel-2": {
       "route": "/investitii-modernizarea-microintreprinderilor-apel-2",
       "sectionTitle": "Condițiile care trebuie verificate",
-      "directAnswer": "Apel 2 Nord-Est pentru microîntreprinderi: valori și intensitate conform variantei consultative, plus CAEN, amplasament și documente. Consultare publică – depunerea nu este deschisă. Finanțare conform documentului aflat în consultare: 100.000 EUR/proiect–300.000 EUR/proiect; intensitate 90% (maximum indicat în varianta consultativă); Diferența față de intensitatea aplicabilă și cheltuielile neeligibile.",
+      "directAnswer": "Apel 2 Nord-Est pentru microîntreprinderi: valori și intensitate conform variantei consultative, plus CAEN, amplasament și documente. Consultare publică închisă – apelul nu este deschis. Finanțare conform documentului aflat în consultare: 100.000 EUR/proiect–300.000 EUR/proiect; intensitate 90% (maximum indicat în varianta consultativă); Diferența față de intensitatea aplicabilă și cheltuielile neeligibile.",
       "facts": [
         {
           "term": "Cine este eligibil?",
@@ -177,22 +177,22 @@
         },
         {
           "term": "Când se depune?",
-          "description": "Consultare publică – depunerea nu este deschisă"
+          "description": "Consultare publică închisă – apelul nu este deschis"
         },
         {
           "term": "Ce statut are ghidul?",
-          "description": "Consultare publică – depunerea nu este deschisă."
+          "description": "Consultare publică închisă – apelul nu este deschis."
         }
       ],
       "source": {
-        "document": "Ghidul solicitantului – Apel 2, variantă consultativă",
-        "institution": "ADR Nord-Est",
-        "status": "Consultare publică – depunerea nu este deschisă. Valorile și condițiile sunt conform variantei consultative și trebuie reconfirmate în ghidul final și anexele apelului.",
-        "url": "https://adrnordest.ro/comentariiGhid/P1Microintreprinderi/Apel2/"
+        "document": "Apel 2 – consultare publică închisă; 30.01.2026–13.03.2026",
+        "institution": "Autoritatea de Management pentru Programul Regional Nord-Est",
+        "status": "Consultare publică închisă – apelul nu este deschis. Valorile și condițiile sunt conform variantei consultative și trebuie reconfirmate în ghidul final și anexele apelului.",
+        "url": "https://regionordest.ro/apel-proiect/p1-investitii-pentru-modernizarea-microintreprinderilor-apel-2/"
       },
       "interpretation": "Localitatea, codul CAEN și dreptul asupra spațiului pot exclude un proiect înaintea analizei bugetului. Interpretarea de lucru FABER nu adaugă o regulă suplimentară documentului oficial.",
       "programId": "modernizare-microintreprinderi-ne-2",
-      "lastReviewed": "2026-06-02",
+      "lastReviewed": "2026-08-18",
       "sourceOfTruth": "config/seo-programs.json#programs",
       "publicationState": "public"
     },
@@ -243,14 +243,14 @@
       },
       "interpretation": "O putere instalată mai mare nu înseamnă automat un proiect mai bun: consumul istoric, extinderile justificate și punctele de consum trebuie să susțină dimensionarea. Această este interpretarea tehnică FABER, nu o normă care modifică Ghidul V7.",
       "programId": "afir-energie-autoconsum",
-      "lastReviewed": "2026-08-15",
+      "lastReviewed": "2026-08-18",
       "sourceOfTruth": "config/seo-programs.json#programs",
       "publicationState": "public"
     },
     "pocidif-21": {
       "route": "/pocidif-21",
       "sectionTitle": "Datele esențiale ale programului",
-      "directAnswer": "PoCIDIF 2.1 pentru IMM TIC: ghid aprobat, eligibilitate, CDI, software, hardware, indicatori, documente, buget și punctaj. Ghid aprobat – depunerea nu este deschisă. Finanțare conform sursei oficiale: 1.500.000 EUR (soluție software inovatoare) / 3.000.000 EUR (produs hardware inovator); intensitate 75% (ajutor regional, în funcție de categorie și regiune) / 100% (ajutor de minimis pentru cheltuielile încadrate); Depinde de tipul ajutorului, dimensiunea întreprinderii, regiune și cheltuielile neeligibile.",
+      "directAnswer": "PoCIDIF 2.1 este deschis pentru IMM TIC în perioada 30 iunie–30 septembrie 2026: inovare, software, hardware, CDI și introducere pe piață. Apel deschis – depuneri 30 iunie–30 septembrie 2026: 2026-06-30–2026-09-30. Finanțare conform sursei oficiale: 1.500.000 EUR (soluție software inovatoare) / 3.000.000 EUR (produs hardware inovator); intensitate 75% (ajutor regional, în funcție de categorie și regiune) / 100% (ajutor de minimis pentru cheltuielile încadrate); Depinde de tipul ajutorului, dimensiunea întreprinderii, regiune și cheltuielile neeligibile.",
       "facts": [
         {
           "term": "Cine este eligibil?",
@@ -278,22 +278,22 @@
         },
         {
           "term": "Când se depune?",
-          "description": "Ghid aprobat – depunerea nu este deschisă"
+          "description": "Perioada confirmată este 2026-06-30–2026-09-30."
         },
         {
           "term": "Ce statut are ghidul?",
-          "description": "Ghid aprobat – depunerea nu este deschisă."
+          "description": "Apel deschis – depuneri 30 iunie–30 septembrie 2026: 2026-06-30–2026-09-30."
         }
       ],
       "source": {
         "document": "Ghidul solicitantului PoCIDIF 2.1 aprobat prin Ordinul MIPE nr. 965/23.06.2026",
         "institution": "Ministerul Investițiilor și Proiectelor Europene",
-        "status": "Ghid aprobat – depunerea nu este deschisă. Ghidul este aprobat; perioada de depunere și eventualele actualizări se confirmă pe pagina oficială MIPE.",
+        "status": "Apel deschis – depuneri 30 iunie–30 septembrie 2026: 2026-06-30–2026-09-30. Apelul este deschis în intervalul 30.06–30.09.2026. Înainte de transmitere, eventualele corrigenda și starea apelului se reconfirmă pe pagina oficială MIPE și în MySMIS2021.",
         "url": "https://mfe.gov.ro/ghiduri_pocidif/pocidif-ghidul-solicitantului-dezvoltarea-de-noi-servicii-aplicatii-produse-prin-inovare-si-adoptarea-de-tehnologii-avansate-2/"
       },
       "interpretation": "Un proiect centrat pe achiziții IT, fără activități CDI și fără un rezultat nou introdus pe piață, nu răspunde obiectivului apelului. Această este interpretarea FABER a efectului practic al ghidului, nu o normă separată.",
       "programId": "pocidif-21",
-      "lastReviewed": "2026-07-13",
+      "lastReviewed": "2026-08-18",
       "sourceOfTruth": "config/seo-programs.json#programs",
       "publicationState": "public"
     },
@@ -301,7 +301,7 @@
       "route": "/femeia-antreprenor-2026",
       "file": "femeia-antreprenor-2026.html",
       "sectionTitle": "Ce trebuie pregătit înainte de depunere",
-      "directAnswer": "Femeia Antreprenor: acționariat, CAEN, buget și documente de pregătit; condițiile și calendarul se confirmă în procedura ediției active. Calendar estimativ – depunerea nu este confirmată. Informația a fost verificată la 2026-05-20 în Comunicatul oficial privind ediția publicată a programului Femeia Antreprenor, publicat de Ministerul Economiei; înainte de pregătirea dosarului, consultă sursa oficială pentru eligibilitate, documente și condițiile aplicabile.",
+      "directAnswer": "Femeia Antreprenor 2024: apelul este închis, iar platforma oficială publică ordinea finală la evaluare. Apel 2024 închis – este publicată ordinea finală la evaluare. Informația a fost verificată la 2026-08-18 în Femeia Antreprenor 2024 – ordinea finală la evaluare, publicat de Ministerul Economiei – platforma oficială MINIMIS; înainte de pregătirea dosarului, consultă sursa oficială pentru eligibilitate, documente și condițiile aplicabile.",
       "facts": [
         {
           "term": "Cine este eligibil?",
@@ -329,28 +329,28 @@
         },
         {
           "term": "Când se depune?",
-          "description": "Calendar estimativ – depunerea nu este confirmată"
+          "description": "Apel 2024 închis – este publicată ordinea finală la evaluare"
         },
         {
           "term": "Ce statut are ghidul?",
-          "description": "Calendar estimativ – depunerea nu este confirmată."
+          "description": "Apel 2024 închis – este publicată ordinea finală la evaluare."
         }
       ],
       "source": {
-        "document": "Comunicatul oficial privind ediția publicată a programului Femeia Antreprenor",
-        "institution": "Ministerul Economiei",
-        "status": "Calendar estimativ – depunerea nu este confirmată. Sursa disponibilă nu confirmă o ediție 2026; nu sunt publicate valori sau termene ca informații actuale.",
-        "url": "https://economie.gov.ro/pe-data-de-30-iulie-se-da-startul-inscrierilor-in-cadrul-programului-femeia-antreprenor/"
+        "document": "Femeia Antreprenor 2024 – ordinea finală la evaluare",
+        "institution": "Ministerul Economiei – platforma oficială MINIMIS",
+        "status": "Apel 2024 închis – este publicată ordinea finală la evaluare. Pagina nu prezintă o ediție nouă drept deschisă înaintea unui anunț și a unei proceduri oficiale.",
+        "url": "https://minimis.imm.gov.ro/fa2024/ordine_evaluare"
       },
       "programId": "femeia-antreprenor",
-      "lastReviewed": "2026-05-20",
+      "lastReviewed": "2026-08-18",
       "sourceOfTruth": "config/seo-programs.json#programs",
       "publicationState": "public"
     },
     "e-move": {
       "route": "/e-move",
       "sectionTitle": "Condițiile care trebuie verificate",
-      "directAnswer": "e-MOVE RO: stații de încărcare, energie și stocare conform variantei consultative; beneficiarii și calendarul așteaptă forma finală. Consultare publică – depunerea nu este deschisă. Finanțare conform documentului aflat în consultare: 25.000.000 EUR/beneficiar; intensitate 100% (maximum indicat în varianta consultativă); Diferența față de ajutorul aplicabil și cheltuielile neeligibile.",
+      "directAnswer": "Schema e-MOVE RO a fost actualizată în august 2026; depunerea nu este deschisă și nu există un calendar operațional publicat. Schemă actualizată – depunerea nu este deschisă. Finanțare conform sursei oficiale: 25.000.000 EUR/beneficiar; intensitate 100% (maximum, în condițiile schemei actualizate și ale procedurii competitive); Diferența față de ajutorul aplicabil și cheltuielile neeligibile.",
       "facts": [
         {
           "term": "Cine este eligibil?",
@@ -358,11 +358,11 @@
         },
         {
           "term": "Care este finanțarea?",
-          "description": "Finanțare conform documentului aflat în consultare: 25.000.000 EUR/beneficiar; intensitate 100% (maximum indicat în varianta consultativă); Diferența față de ajutorul aplicabil și cheltuielile neeligibile."
+          "description": "Finanțare conform sursei oficiale: 25.000.000 EUR/beneficiar; intensitate 100% (maximum, în condițiile schemei actualizate și ale procedurii competitive); Diferența față de ajutorul aplicabil și cheltuielile neeligibile."
         },
         {
           "term": "Care este contribuția proprie?",
-          "description": "intensitate 100% (maximum indicat în varianta consultativă); Diferența față de ajutorul aplicabil și cheltuielile neeligibile."
+          "description": "intensitate 100% (maximum, în condițiile schemei actualizate și ale procedurii competitive); Diferența față de ajutorul aplicabil și cheltuielile neeligibile."
         },
         {
           "term": "Ce cheltuieli sunt eligibile?",
@@ -378,22 +378,22 @@
         },
         {
           "term": "Când se depune?",
-          "description": "Consultare publică – depunerea nu este deschisă"
+          "description": "Schemă actualizată – depunerea nu este deschisă"
         },
         {
           "term": "Ce statut are ghidul?",
-          "description": "Consultare publică – depunerea nu este deschisă."
+          "description": "Schemă actualizată – depunerea nu este deschisă."
         }
       ],
       "source": {
-        "document": "Ghidul solicitantului e-MOVE RO – variantă consultativă",
-        "institution": "Ministerul Transporturilor și Infrastructurii",
-        "status": "Consultare publică – depunerea nu este deschisă. Valorile și condițiile sunt conform variantei consultative; nu sunt prezentate drept reguli finale sau apel deschis.",
-        "url": "https://fonduri.mt.ro/transparenta/consultare-publica/fondul-pentru-modernizare/comunicat-fm-consultare-publica-ghidul-solicitantului-promovarea-infrastructurii-pentru-o-mobilitate-cu-emisii-zero-in-sprijinul-intreprinderilor-si-comunitatilor-e-move-ro"
+        "document": "Ordinul MTI nr. 755/06.08.2026 pentru actualizarea schemei e-MOVE RO, în vigoare din 10.08.2026",
+        "institution": "Ministerul Transporturilor și Infrastructurii / Portal Legislativ",
+        "status": "Schemă actualizată – depunerea nu este deschisă. Schema este actualizată, dar depunerea nu este deschisă. Calendarul și procedura operațională se confirmă numai din documentele oficiale viitoare.",
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/313320"
       },
       "interpretation": "Un amplasament poate fi neimplementabil chiar dacă stațiile apar ca tip de investiție: dreptul asupra terenului, accesul și soluția de racordare trebuie să fie compatibile. Această este interpretarea practică FABER, nu o regulă oficială suplimentară.",
       "programId": "e-move-ro",
-      "lastReviewed": "2026-05-27",
+      "lastReviewed": "2026-08-18",
       "sourceOfTruth": "config/seo-programs.json#programs",
       "publicationState": "public"
     }

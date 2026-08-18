@@ -1,24 +1,24 @@
 {
-  "generatedAt": "2026-08-18T09:46:26.909Z",
+  "generatedAt": "2026-08-18T13:22:42.475Z",
   "summary": {
     "htmlFilesChecked": 188,
-    "indexablePagesChecked": 101,
+    "indexablePagesChecked": 104,
     "filesWithIssues": 0,
     "organizationVariants": 1,
     "types": {
-      "Organization": 143,
-      "ProfessionalService": 101,
-      "PostalAddress": 101,
-      "ImageObject": 101,
-      "WebSite": 101,
-      "WebPage": 132,
-      "CreativeWork": 62,
-      "BreadcrumbList": 100,
-      "ListItem": 314,
+      "Organization": 152,
+      "ProfessionalService": 104,
+      "PostalAddress": 104,
+      "ImageObject": 104,
+      "WebSite": 104,
+      "WebPage": 135,
+      "CreativeWork": 68,
+      "BreadcrumbList": 103,
+      "ListItem": 326,
       "Article": 31,
-      "DefinedTerm": 21,
-      "PropertyValue": 192,
-      "DefinedTermSet": 21,
+      "DefinedTerm": 24,
+      "PropertyValue": 221,
+      "DefinedTermSet": 24,
       "FAQPage": 85,
       "Question": 625,
       "Answer": 625,
@@ -81,8 +81,8 @@
         "Answer": 7
       },
       "modified": [
-        "2026-07-22",
-        "2026-07-22"
+        "2026-08-18",
+        "2026-08-18"
       ],
       "issues": []
     },
@@ -138,8 +138,8 @@
         "Answer": 9
       },
       "modified": [
-        "2026-07-22",
-        "2026-07-22"
+        "2026-08-18",
+        "2026-08-18"
       ],
       "issues": []
     },
@@ -196,8 +196,8 @@
         "Answer": 10
       },
       "modified": [
-        "2026-05-26",
-        "2026-05-26"
+        "2026-08-18",
+        "2026-08-18"
       ],
       "issues": []
     },
@@ -225,8 +225,8 @@
         "Answer": 8
       },
       "modified": [
-        "2026-05-20",
-        "2026-05-20"
+        "2026-08-18",
+        "2026-08-18"
       ],
       "issues": []
     },
@@ -313,7 +313,7 @@
         "ListItem": 4,
         "Article": 1,
         "DefinedTerm": 1,
-        "PropertyValue": 10,
+        "PropertyValue": 12,
         "Audience": 3,
         "DefinedTermSet": 1,
         "FAQPage": 1,
@@ -349,7 +349,7 @@
         "Answer": 10
       },
       "modified": [
-        "2026-02-12"
+        "2026-08-07"
       ],
       "issues": []
     },
@@ -376,7 +376,7 @@
         "Answer": 10
       },
       "modified": [
-        "2025-08-12"
+        "2026-08-07"
       ],
       "issues": []
     },
@@ -404,8 +404,8 @@
         "Answer": 10
       },
       "modified": [
-        "2026-05-27",
-        "2026-05-27"
+        "2026-08-10",
+        "2026-08-10"
       ],
       "issues": []
     },
@@ -432,8 +432,31 @@
         "Answer": 8
       },
       "modified": [
-        "2026-05-20",
-        "2026-05-20"
+        "2026-08-18",
+        "2026-08-18"
+      ],
+      "issues": []
+    },
+    {
+      "file": "fondul-de-modernizare/index.html",
+      "route": "/fondul-de-modernizare",
+      "blocks": 1,
+      "types": {
+        "Organization": 3,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
+        "ImageObject": 1,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 2,
+        "BreadcrumbList": 1,
+        "ListItem": 4,
+        "DefinedTerm": 1,
+        "PropertyValue": 8,
+        "DefinedTermSet": 1
+      },
+      "modified": [
+        "2026-08-18"
       ],
       "issues": []
     },
@@ -460,8 +483,8 @@
         "Answer": 10
       },
       "modified": [
-        "2026-05-20",
-        "2026-05-20"
+        "2026-08-18",
+        "2026-08-18"
       ],
       "issues": []
     },
@@ -488,8 +511,8 @@
         "Answer": 6
       },
       "modified": [
-        "2026-05-20",
-        "2026-05-20"
+        "2026-08-18",
+        "2026-08-18"
       ],
       "issues": []
     },
@@ -516,7 +539,7 @@
         "Answer": 10
       },
       "modified": [
-        "2026-05-21"
+        "2026-08-17"
       ],
       "issues": []
     },
@@ -543,7 +566,7 @@
         "Answer": 5
       },
       "modified": [
-        "2026-07-20"
+        "2026-08-18"
       ],
       "issues": []
     },
@@ -571,8 +594,8 @@
         "Answer": 10
       },
       "modified": [
-        "2026-05-26",
-        "2026-05-26"
+        "2026-08-18",
+        "2026-08-18"
       ],
       "issues": []
     },
@@ -600,8 +623,31 @@
         "Answer": 8
       },
       "modified": [
-        "2026-06-02",
-        "2026-06-02"
+        "2026-08-18",
+        "2026-08-18"
+      ],
+      "issues": []
+    },
+    {
+      "file": "pnrr/index.html",
+      "route": "/pnrr",
+      "blocks": 1,
+      "types": {
+        "Organization": 3,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
+        "ImageObject": 1,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 2,
+        "BreadcrumbList": 1,
+        "ListItem": 4,
+        "DefinedTerm": 1,
+        "PropertyValue": 8,
+        "DefinedTermSet": 1
+      },
+      "modified": [
+        "2026-08-18"
       ],
       "issues": []
     },
@@ -621,7 +667,7 @@
         "ListItem": 4,
         "Article": 1,
         "DefinedTerm": 1,
-        "PropertyValue": 10,
+        "PropertyValue": 12,
         "Audience": 1,
         "DefinedTermSet": 1,
         "FAQPage": 1,
@@ -629,8 +675,31 @@
         "Answer": 10
       },
       "modified": [
-        "2026-07-13",
-        "2026-07-13"
+        "2026-08-18",
+        "2026-08-18"
+      ],
+      "issues": []
+    },
+    {
+      "file": "programul-tranzitie-justa/index.html",
+      "route": "/programul-tranzitie-justa",
+      "blocks": 1,
+      "types": {
+        "Organization": 3,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
+        "ImageObject": 1,
+        "WebSite": 1,
+        "WebPage": 1,
+        "CreativeWork": 2,
+        "BreadcrumbList": 1,
+        "ListItem": 4,
+        "DefinedTerm": 1,
+        "PropertyValue": 8,
+        "DefinedTermSet": 1
+      },
+      "modified": [
+        "2026-08-18"
       ],
       "issues": []
     },
@@ -650,15 +719,15 @@
         "ListItem": 4,
         "Article": 1,
         "DefinedTerm": 1,
-        "PropertyValue": 8,
+        "PropertyValue": 9,
         "DefinedTermSet": 1,
         "FAQPage": 1,
         "Question": 8,
         "Answer": 8
       },
       "modified": [
-        "2026-05-20",
-        "2026-05-20"
+        "2026-05-29",
+        "2026-05-29"
       ],
       "issues": []
     },
@@ -876,8 +945,8 @@
         "Article": 1
       },
       "modified": [
-        "2026-08-15",
-        "2026-08-15"
+        "2026-08-18",
+        "2026-08-18"
       ],
       "issues": []
     },

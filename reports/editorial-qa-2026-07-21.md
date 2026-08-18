@@ -1,6 +1,6 @@
 # Raport QA editorial P0.13
 
-- URL-uri publice și indexabile verificate: 101
+- URL-uri publice și indexabile verificate: 104
 - Apariții rămase: 0
 - Etichete interne/blocuri legacy rămase: 0
 - Forme din lista de control care necesită normalizare: 0

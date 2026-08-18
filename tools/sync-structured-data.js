@@ -202,7 +202,11 @@ function replaceScripts(html, serialized) {
 function main() {
   const hints = loadPageHints(ROOT);
   const changed = [];
-  for (const route of sitemapRoutes(ROOT)) {
+  const routes = [...new Set([
+    ...sitemapRoutes(ROOT),
+    ...PROGRAMS.filter((program) => program.publicationState === "public").map((program) => program.pageUrl)
+  ])].sort((left, right) => left.localeCompare(right));
+  for (const route of routes) {
     const primaryFile = fileForRoute(ROOT, route);
     if (!fs.existsSync(primaryFile)) throw new Error(`Lipsește fișierul pentru ruta indexabilă ${route}: ${primaryFile}`);
     const clean = route.replace(/^\//u, "");
@@ -238,7 +242,7 @@ function main() {
     process.exitCode = 1;
     return;
   }
-  console.log(`${CHECK_ONLY ? "Verificate" : "Sincronizate"} ${sitemapRoutes(ROOT).length} pagini indexabile; ${changed.length} ${CHECK_ONLY ? "neconforme" : "actualizate"}.`);
+  console.log(`${CHECK_ONLY ? "Verificate" : "Sincronizate"} ${routes.length} pagini indexabile sau pagini publice de program; ${changed.length} ${CHECK_ONLY ? "neconforme" : "actualizate"}.`);
 }
 
 if (require.main === module) main();

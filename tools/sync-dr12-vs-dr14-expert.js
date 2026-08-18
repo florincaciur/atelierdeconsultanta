@@ -269,7 +269,13 @@ function synchronize(source, config) {
     toc: managedBlock(source, TOC_START, TOC_END),
     governance: managedBlock(source, GOVERNANCE_START, GOVERNANCE_END)
   };
-  let output = source;
+  // The long-form synchronizer may place the managed TOC directly under <main>,
+  // while this generator owns the editorial container. Remove every existing
+  // occurrence before reinserting the single preserved block in that container.
+  let output = source.replace(
+    /<!-- P1_09_LONG_FORM_TOC_START -->[\s\S]*?<!-- P1_09_LONG_FORM_TOC_END -->\s*/giu,
+    ""
+  );
   output = replaceFirst(output, /<title>[\s\S]*?<\/title>/iu, `<title>${escapeHtml(config.title)}</title>`, "title");
   output = replaceFirst(output, /<meta\s+name=["']description["'][^>]*>/iu, `<meta name="description" content="${escapeHtml(config.metaDescription)}">`, "meta description");
   output = replaceFirst(output, /<meta\s+property=["']og:title["'][^>]*>/iu, `<meta property="og:title" content="${escapeHtml(config.title)}">`, "og:title");

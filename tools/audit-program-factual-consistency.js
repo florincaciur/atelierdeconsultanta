@@ -217,7 +217,9 @@ function auditProgram(issues, program, context) {
   if (llmsIndex === -1) addIssue(issues, program, "error", "missing-llms-entry", "llms.txt", "Programul lipsește din llms.txt.", url, "absent");
   else {
     const lines = llms.split(/\r?\n/);
-    const lineIndex = lines.findIndex((line) => line.includes(url));
+    const escapedUrl = url.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    const exactUrl = new RegExp(`${escapedUrl}(?=[)\\s]|$)`);
+    const lineIndex = lines.findIndex((line) => exactUrl.test(line));
     const llmsFragment = [lines[lineIndex], /^\s{2}\S/.test(lines[lineIndex + 1] || "") ? lines[lineIndex + 1] : ""].filter(Boolean).join("\n");
     if (!comparable(llmsFragment).includes(comparable(program.statusLabel))) addIssue(issues, program, "error", "status-mismatch", "llms.txt", "Statusul programului lipsește sau diferă în llms.txt.", program.statusLabel, llmsFragment);
   }

@@ -1,27 +1,27 @@
 # Audit integral de integritate vizuală și accesibilitate
 
-Generat: 2026-08-18T09:50:55.999Z
+Generat: 2026-08-18T13:23:41.946Z
 
-- URL-uri canonice: **101**
+- URL-uri canonice: **104**
 - Viewport-uri: **4** (320, 390, 768 și 1365 px)
-- Verificări de pagină: **404**
-- Verificări trecute: **404**
+- Verificări de pagină: **416**
+- Verificări trecute: **416**
 - Verificări eșuate: **0**
 
 | Control | Trecut | Eșuat |
 |---|---:|---:|
-| http | 404 | 0 |
-| metadata | 404 | 0 |
-| landmarks | 404 | 0 |
-| language | 404 | 0 |
-| skipLink | 404 | 0 |
-| imageAlternatives | 404 | 0 |
-| controlsNamed | 404 | 0 |
-| uniqueIds | 404 | 0 |
-| noHorizontalOverflow | 404 | 0 |
-| noClippedText | 404 | 0 |
-| noWatermarks | 404 | 0 |
-| noConsoleErrors | 404 | 0 |
+| http | 416 | 0 |
+| metadata | 416 | 0 |
+| landmarks | 416 | 0 |
+| language | 416 | 0 |
+| skipLink | 416 | 0 |
+| imageAlternatives | 416 | 0 |
+| controlsNamed | 416 | 0 |
+| uniqueIds | 416 | 0 |
+| noHorizontalOverflow | 416 | 0 |
+| noClippedText | 416 | 0 |
+| noWatermarks | 416 | 0 |
+| noConsoleErrors | 416 | 0 |
 
 ## Abateri
 

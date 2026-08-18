@@ -6,26 +6,29 @@ Generatorul include numai rute locale 200, indexabile si self-canonical. `lastmo
 
 - URL-uri raportate in auditul initial: 102
 - URL-uri in baseline-ul repository la inceputul P0.11: 92
-- URL-uri incluse acum: 101
-- URL-uri cu lastmod editorial verificabil: 23
+- URL-uri incluse acum: 104
+- URL-uri cu lastmod editorial verificabil: 26
 - URL-uri fara lastmod (omis intentionat): 78
-- sitemap-programs.xml: 23 (Pagini de programe)
+- sitemap-programs.xml: 26 (Pagini de programe)
 - sitemap-guides.xml: 30 (Ghiduri si continut editorial)
 - sitemap-core.xml: 48 (Pagini core, servicii, instrumente si juridice)
 
 ## Excluderi dupa motiv
 
 - duplicate_policy_pending_legal_consolidation: 1
+- meta_refresh: 2
 - missing_canonical: 4
-- noindex_meta: 65
+- noindex_meta: 60
 - noncanonical_file_variant: 2
-- redirect_source: 111
+- redirect_source: 105
 
 ## Lista excluderilor
 
 | Ruta/URL | Fisier sursa | Motiv | Detaliu |
 |---|---|---|---|
 | https://atelierdeconsultanta.ro/gdpr | gdpr.html | duplicate_policy_pending_legal_consolidation | Politica duplicata este omisa din sitemap; redirectul ramane conditionat de aprobarea juridica si SEO. |
+| https://atelierdeconsultanta.ro/fondul-de-modernizare | fondul-de-modernizare.html | meta_refresh | - |
+| https://atelierdeconsultanta.ro/pnrr | pnrr.html | meta_refresh | - |
 | /google8bbb9999c523a3bd | google8bbb9999c523a3bd.html | missing_canonical | - |
 | /partials/global-header | partials/global-header.html | missing_canonical | - |
 | /templates/dr14-final-content | templates/dr14-final-content.html | missing_canonical | - |
@@ -56,8 +59,6 @@ Generatorul include numai rute locale 200, indexabile si self-canonical. `lastmo
 | https://atelierdeconsultanta.ro/eligibilitate-fonduri-europene | eligibilitate-fonduri-europene.html | noindex_meta | - |
 | https://atelierdeconsultanta.ro/finantari-panouri-fotovoltaice | finantari-panouri-fotovoltaice.html | noindex_meta | - |
 | https://atelierdeconsultanta.ro/firma-consultanta-fonduri-europene | firma-consultanta-fonduri-europene.html | noindex_meta | - |
-| https://atelierdeconsultanta.ro/fondul-de-modernizare | fondul-de-modernizare.html | noindex_meta | - |
-| https://atelierdeconsultanta.ro/fondul-de-modernizare | fondul-de-modernizare/index.html | noindex_meta | - |
 | https://atelierdeconsultanta.ro/fonduri-europene | fonduri-europene.html | noindex_meta | - |
 | https://atelierdeconsultanta.ro/fonduri-europene-agricultura | fonduri-europene-agricultura.html | noindex_meta | - |
 | https://atelierdeconsultanta.ro/fonduri-europene-nord-est | fonduri-europene-bacau/index.html | noindex_meta | - |
@@ -77,12 +78,9 @@ Generatorul include numai rute locale 200, indexabile si self-canonical. `lastmo
 | https://atelierdeconsultanta.ro/granturi-digitalizare-imm | granturi-digitalizare-imm/index.html | noindex_meta | - |
 | https://atelierdeconsultanta.ro/greseli-fonduri-europene | greseli-fonduri-europene.html | noindex_meta | - |
 | https://atelierdeconsultanta.ro/intrebari-frecvente | intrebari-frecvente.html | noindex_meta | - |
-| https://atelierdeconsultanta.ro/pnrr | pnrr.html | noindex_meta | - |
-| https://atelierdeconsultanta.ro/pnrr | pnrr/index.html | noindex_meta | - |
 | https://atelierdeconsultanta.ro/digitalizare-imm-pnrr | pnrr-digitalizare-imm.html | noindex_meta | - |
 | https://atelierdeconsultanta.ro/digitalizare-imm-pnrr | pnrr-digitalizare-imm/index.html | noindex_meta | - |
 | https://atelierdeconsultanta.ro/portofoliu | portofoliu/index.html | noindex_meta | - |
-| https://atelierdeconsultanta.ro/programul-tranzitie-justa | programul-tranzitie-justa/index.html | noindex_meta | - |
 | https://atelierdeconsultanta.ro/start-up-nation-2026 | start-up-nation.html | noindex_meta | - |
 | https://atelierdeconsultanta.ro/start-up-nation-2026 | start-up-nation/index.html | noindex_meta | - |
 | https://atelierdeconsultanta.ro/start-up-nation-2026-cheltuieli-eligibile | start-up-nation-2026-cheltuieli-eligibile.html | noindex_meta | - |
@@ -148,9 +146,6 @@ Generatorul include numai rute locale 200, indexabile si self-canonical. `lastmo
 | https://atelierdeconsultanta.ro/e-move | _redirects | redirect_source | HTTP 301 |
 | https://atelierdeconsultanta.ro/e-move | _redirects | redirect_source | HTTP 301 |
 | https://atelierdeconsultanta.ro/e-move | _redirects | redirect_source | HTTP 301 |
-| https://atelierdeconsultanta.ro/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum | _redirects | redirect_source | HTTP 301 |
-| https://atelierdeconsultanta.ro/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum | _redirects | redirect_source | HTTP 301 |
-| https://atelierdeconsultanta.ro/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum | _redirects | redirect_source | HTTP 301 |
 | https://atelierdeconsultanta.ro/fonduri-europene-nord-est | _redirects | redirect_source | HTTP 301 |
 | https://atelierdeconsultanta.ro/fonduri-europene-nord-est | _redirects | redirect_source | HTTP 301 |
 | https://atelierdeconsultanta.ro/fonduri-europene-nord-est | _redirects | redirect_source | HTTP 301 |
@@ -179,9 +174,6 @@ Generatorul include numai rute locale 200, indexabile si self-canonical. `lastmo
 | https://atelierdeconsultanta.ro/gal-afir | _redirects | redirect_source | HTTP 301 |
 | https://atelierdeconsultanta.ro/start-up-nation-2026-plan-de-afaceri | _redirects | redirect_source | HTTP 301 |
 | https://atelierdeconsultanta.ro/start-up-nation-2026-plan-de-afaceri | _redirects | redirect_source | HTTP 301 |
-| https://atelierdeconsultanta.ro/digitalizare-imm-pnrr | _redirects | redirect_source | HTTP 301 |
-| https://atelierdeconsultanta.ro/digitalizare-imm-pnrr | _redirects | redirect_source | HTTP 301 |
-| https://atelierdeconsultanta.ro/digitalizare-imm-pnrr | _redirects | redirect_source | HTTP 301 |
 | https://atelierdeconsultanta.ro/digitalizare-imm-pnrr | _redirects | redirect_source | HTTP 301 |
 | https://atelierdeconsultanta.ro/digitalizare-imm-pnrr | _redirects | redirect_source | HTTP 301 |
 | https://atelierdeconsultanta.ro/digitalizare-imm-pnrr | _redirects | redirect_source | HTTP 301 |

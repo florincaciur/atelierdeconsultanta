@@ -3,7 +3,7 @@
 Data snapshot-ului: **2026-07-21**
 
 Sursă: sitemap-ul local generat după consolidările P0
-Acoperire: **101/101 URL-uri canonice/indexabile**
+Acoperire: **104/104 URL-uri canonice/indexabile**
 
 ## Rezumat
 
@@ -15,13 +15,13 @@ Acoperire: **101/101 URL-uri canonice/indexabile**
 - instrument: **2**
 - întrebare: **3**
 - legal: **2**
-- program: **22**
+- program: **25**
 - serviciu: **17**
 - studiu_de_caz: **1**
 
 ### Recomandări
 
-- keep: **77**
+- keep: **80**
 - merge: **5**
 - rewrite: **19**
 

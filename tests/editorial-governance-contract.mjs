@@ -145,13 +145,16 @@ assert(
   "Validarea trebuie să respingă un nume personal fără acord"
 );
 
-const expired = records.find((record) => record.programId && reviewExpired(record, TODAY));
-assert(expired, "Fixture: raportul trebuie să conțină cel puțin o revizuire de program expirată");
+const expiredConfig = structuredClone(config);
+const expired = expiredConfig.records.find((record) => record.programId);
+assert(expired, "Fixture: trebuie să existe cel puțin o pagină de program guvernată");
+expired.nextReviewAt = "2026-08-17";
+assert(reviewExpired(expired, TODAY), "Fixture: revizuirea simulată trebuie să fie expirată");
 const changedPrograms = structuredClone(programs);
 const changedProgram = changedPrograms.find((program) => program.slug === expired.programId);
 changedProgram.status = changedProgram.status === "apel_inchis" ? "calendar_estimativ" : "apel_inchis";
 assert(
-  validateGovernance(config, changedPrograms, TODAY).some((error) => /reînnoită înaintea schimbării|revizuirea trebuie/iu.test(error)),
+  validateGovernance(expiredConfig, changedPrograms, TODAY).some((error) => /reînnoită înaintea schimbării|revizuirea trebuie/iu.test(error)),
   "Schimbarea statusului după expirare trebuie blocată până la reverificare"
 );
 

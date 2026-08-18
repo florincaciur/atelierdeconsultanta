@@ -1,12 +1,14 @@
 {
-  "generatedAt": "2026-08-18T09:46:44.317Z",
-  "canonicalCount": 101,
+  "generatedAt": "2026-08-18T13:15:23.221Z",
+  "canonicalCount": 104,
   "targetCount": 10,
   "absoluteIssueCount": 0,
   "contextualIssueCount": 0,
   "requirementIssueCount": 0,
   "sourceIssueCount": 0,
-  "openProgramsChecked": [],
+  "openProgramsChecked": [
+    "pocidif-21"
+  ],
   "issues": [],
   "issueCount": 0
 }

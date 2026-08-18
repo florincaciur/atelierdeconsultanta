@@ -421,21 +421,31 @@
       "programId": "pnrr",
       "route": "/pnrr",
       "file": "pnrr/index.html",
-      "eligible": false,
+      "eligible": true,
       "excludedByEditorialDecision": false,
       "removedManagedBlocks": 0,
       "removedManagedLinks": 0,
-      "resultingRelations": []
+      "resultingRelations": [
+        "parent",
+        "instrument",
+        "comparison",
+        "conversion"
+      ]
     },
     {
       "programId": "pnrr",
       "route": "/pnrr",
       "file": "pnrr.html",
-      "eligible": false,
+      "eligible": true,
       "excludedByEditorialDecision": false,
       "removedManagedBlocks": 0,
       "removedManagedLinks": 0,
-      "resultingRelations": []
+      "resultingRelations": [
+        "parent",
+        "instrument",
+        "comparison",
+        "conversion"
+      ]
     },
     {
       "programId": "diaspora-investeste-acasa",
@@ -501,31 +511,46 @@
       "programId": "programul-tranzitie-justa",
       "route": "/programul-tranzitie-justa",
       "file": "programul-tranzitie-justa/index.html",
-      "eligible": false,
+      "eligible": true,
       "excludedByEditorialDecision": false,
       "removedManagedBlocks": 0,
       "removedManagedLinks": 0,
-      "resultingRelations": []
+      "resultingRelations": [
+        "parent",
+        "instrument",
+        "comparison",
+        "conversion"
+      ]
     },
     {
       "programId": "fondul-de-modernizare",
       "route": "/fondul-de-modernizare",
       "file": "fondul-de-modernizare/index.html",
-      "eligible": false,
+      "eligible": true,
       "excludedByEditorialDecision": false,
       "removedManagedBlocks": 0,
       "removedManagedLinks": 0,
-      "resultingRelations": []
+      "resultingRelations": [
+        "parent",
+        "instrument",
+        "comparison",
+        "conversion"
+      ]
     },
     {
       "programId": "fondul-de-modernizare",
       "route": "/fondul-de-modernizare",
       "file": "fondul-de-modernizare.html",
-      "eligible": false,
+      "eligible": true,
       "excludedByEditorialDecision": false,
       "removedManagedBlocks": 0,
       "removedManagedLinks": 0,
-      "resultingRelations": []
+      "resultingRelations": [
+        "parent",
+        "instrument",
+        "comparison",
+        "conversion"
+      ]
     }
   ]
 }

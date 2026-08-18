@@ -76,20 +76,20 @@
         "buget Femeia Antreprenor",
         "punctaj Femeia Antreprenor"
       ],
-      "title": "Femeia Antreprenor: condiții și documente | FABER",
-      "description": "Femeia Antreprenor: acționariat, CAEN, buget și documente de pregătit; condițiile și calendarul se confirmă în procedura ediției active.",
-      "ogTitle": "Femeia Antreprenor: condiții și documente | FABER",
-      "ogDescription": "Femeia Antreprenor: acționariat, CAEN, buget și documente de pregătit; condițiile și calendarul se confirmă în procedura ediției active.",
+      "title": "Femeia Antreprenor: apel 2024 închis | FABER",
+      "description": "Femeia Antreprenor 2024 este închis; platforma oficială MINIMIS publică ordinea finală la evaluare. O ediție nouă se confirmă separat.",
+      "ogTitle": "Femeia Antreprenor: apel 2024 închis | FABER",
+      "ogDescription": "Femeia Antreprenor 2024 este închis; platforma oficială MINIMIS publică ordinea finală la evaluare. O ediție nouă se confirmă separat.",
       "sourceOfTruth": [
         "config/seo-programs.json#programs",
-        "https://economie.gov.ro/pe-data-de-30-iulie-se-da-startul-inscrierilor-in-cadrul-programului-femeia-antreprenor/"
+        "https://minimis.imm.gov.ro/fa2024/ordine_evaluare"
       ],
       "factualStatus": "unknown",
-      "lastReviewed": "2026-05-20",
+      "lastReviewed": "2026-08-18",
       "notes": "Program național al Ministerului Economiei; snippetul nu îl numește fonduri europene și nu publică valori neverificate pentru 2026.",
       "publicationState": "public",
-      "programStatus": "calendar_estimativ",
-      "statusLabel": "Calendar estimativ – depunerea nu este confirmată"
+      "programStatus": "apel_inchis",
+      "statusLabel": "Apel 2024 închis – este publicată ordinea finală la evaluare"
     },
     {
       "route": "/afir-autoconsum-agroalimentar",
@@ -110,7 +110,7 @@
         "https://www.afir.ro/comunicate/deschiderea-sesiunii-pentru-investitiile-in-producerea-energiei-electrice-din-surse-regenerabile/"
       ],
       "factualStatus": "open",
-      "lastReviewed": "2026-08-15",
+      "lastReviewed": "2026-08-18",
       "notes": "Sesiunea și plafoanele se raportează la Ghidul V7 și la comunicatul oficial AFIR; procentul de autoconsum și stocarea sunt explicate fără a promite eligibilitatea.",
       "publicationState": "public",
       "programStatus": "apel_inchis",
@@ -131,14 +131,14 @@
       "ogDescription": "Apelul 2 Nord-Est este programat pentru microîntreprinderi: grant consultativ 100.000–300.000 €, intensitate de până la 90%, CAEN, amplasament și acte.",
       "sourceOfTruth": [
         "config/seo-programs.json#programs",
-        "https://adrnordest.ro/comentariiGhid/P1Microintreprinderi/Apel2/"
+        "https://regionordest.ro/apel-proiect/p1-investitii-pentru-modernizarea-microintreprinderilor-apel-2/"
       ],
       "factualStatus": "consultative",
-      "lastReviewed": "2026-06-02",
+      "lastReviewed": "2026-08-18",
       "notes": "Pagina concentrează Apelul 2; ruta istorică POR ADR Nord-Est redirecționează direct aici conform aprobării beneficiarului.",
       "publicationState": "public",
       "programStatus": "consultare_publica",
-      "statusLabel": "Consultare publică – depunerea nu este deschisă"
+      "statusLabel": "Consultare publică închisă – apelul nu este deschis"
     },
     {
       "route": "/contact",
@@ -171,19 +171,19 @@
         "energie regenerabilă e-MOVE"
       ],
       "title": "e-MOVE RO: stații de încărcare și condiții | FABER",
-      "description": "e-MOVE RO: stații de încărcare, energie și stocare conform variantei consultative; beneficiarii și calendarul așteaptă forma finală.",
+      "description": "e-MOVE RO: schema actualizată pentru infrastructură de încărcare, energie și stocare; depunerea nu este deschisă.",
       "ogTitle": "e-MOVE RO: stații de încărcare și condiții | FABER",
-      "ogDescription": "e-MOVE RO: stații de încărcare, energie și stocare conform variantei consultative; beneficiarii și calendarul așteaptă forma finală.",
+      "ogDescription": "e-MOVE RO: schema actualizată pentru infrastructură de încărcare, energie și stocare; depunerea nu este deschisă.",
       "sourceOfTruth": [
         "config/seo-programs.json#programs",
-        "https://fonduri.mt.ro/transparenta/consultare-publica/fondul-pentru-modernizare/comunicat-fm-consultare-publica-ghidul-solicitantului-promovarea-infrastructurii-pentru-o-mobilitate-cu-emisii-zero-in-sprijinul-intreprinderilor-si-comunitatilor-e-move-ro"
+        "https://legislatie.just.ro/Public/DetaliiDocument/313320"
       ],
       "factualStatus": "consultation",
-      "lastReviewed": "2026-05-27",
+      "lastReviewed": "2026-08-18",
       "notes": "Statutul de consultare este explicit; snippetul nu folosește valoarea maximă indicativă sau intensitatea ca reguli finale.",
       "publicationState": "public",
-      "programStatus": "consultare_publica",
-      "statusLabel": "Consultare publică – depunerea nu este deschisă"
+      "programStatus": "ghid_aprobat_nedeschis",
+      "statusLabel": "Schemă actualizată – depunerea nu este deschisă"
     },
     {
       "route": "/despre-faber",
