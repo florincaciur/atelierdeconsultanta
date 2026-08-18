@@ -36,7 +36,7 @@ await expectRedirect(
 );
 await expectRedirect(
   "http://www.atelierdeconsultanta.ro/pnrr.html?utm_source=gsc",
-  "https://atelierdeconsultanta.ro/digitalizare-imm-pnrr?utm_source=gsc"
+  "https://atelierdeconsultanta.ro/pnrr?utm_source=gsc"
 );
 await expectRedirect(
   "https://atelierdeconsultanta.ro/granturi-digitalizare-imm/",
@@ -44,7 +44,7 @@ await expectRedirect(
 );
 await expectRedirect(
   "https://atelierdeconsultanta.ro/fondul-de-modernizare/index.html",
-  "https://atelierdeconsultanta.ro/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum"
+  "https://atelierdeconsultanta.ro/fondul-de-modernizare"
 );
 await expectRedirect(
   "https://atelierdeconsultanta.ro/testimoniale.html",

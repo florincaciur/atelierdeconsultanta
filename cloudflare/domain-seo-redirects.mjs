@@ -8,9 +8,7 @@ const QUALIFIED_LEAD_ENDPOINT = "/api/crm/qualified-lead";
 const MAX_CONTACT_BODY_BYTES = 64 * 1024;
 const MAX_ANALYTICS_BODY_BYTES = 16 * 1024;
 const RETIRED_PUBLIC_ROUTES = new Map([
-  ["/pnrr", "/digitalizare-imm-pnrr"],
   ["/granturi-digitalizare-imm", "/digitalizare-imm"],
-  ["/fondul-de-modernizare", "/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum"],
   ["/studii-de-caz", "/studii-de-caz-fonduri-europene"],
   ["/testimoniale", "/studii-de-caz-fonduri-europene"],
   ["/portofoliu", "/studii-de-caz-fonduri-europene"],
