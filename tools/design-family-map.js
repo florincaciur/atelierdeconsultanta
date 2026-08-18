@@ -11,6 +11,7 @@ const DESIGN_FAMILY_BY_SLUG = Object.freeze({
   "digitalizare-imm": "digital",
   "dr12-afir": "afir",
   "dr14": "afir",
+  "dr18": "afir",
   "fonduri-europene": "cluster",
   "start-up-nation-2026": "startup",
   "blog": "editorial",

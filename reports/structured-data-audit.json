@@ -1,28 +1,28 @@
 {
-  "generatedAt": "2026-08-15T12:57:22.686Z",
+  "generatedAt": "2026-08-18T09:46:26.909Z",
   "summary": {
-    "htmlFilesChecked": 185,
-    "indexablePagesChecked": 100,
+    "htmlFilesChecked": 188,
+    "indexablePagesChecked": 101,
     "filesWithIssues": 0,
     "organizationVariants": 1,
     "types": {
-      "Organization": 140,
-      "ProfessionalService": 100,
-      "PostalAddress": 100,
-      "ImageObject": 100,
-      "WebSite": 100,
-      "WebPage": 130,
-      "CreativeWork": 59,
-      "BreadcrumbList": 99,
-      "ListItem": 310,
-      "Article": 30,
-      "DefinedTerm": 20,
-      "PropertyValue": 182,
-      "DefinedTermSet": 20,
-      "Audience": 16,
-      "FAQPage": 81,
-      "Question": 589,
-      "Answer": 589,
+      "Organization": 143,
+      "ProfessionalService": 101,
+      "PostalAddress": 101,
+      "ImageObject": 101,
+      "WebSite": 101,
+      "WebPage": 132,
+      "CreativeWork": 62,
+      "BreadcrumbList": 100,
+      "ListItem": 314,
+      "Article": 31,
+      "DefinedTerm": 21,
+      "PropertyValue": 192,
+      "DefinedTermSet": 21,
+      "FAQPage": 85,
+      "Question": 625,
+      "Answer": 625,
+      "Audience": 19,
       "Service": 12,
       "AdministrativeArea": 12,
       "WebApplication": 1
@@ -47,7 +47,10 @@
         "Article": 1,
         "DefinedTerm": 1,
         "PropertyValue": 8,
-        "DefinedTermSet": 1
+        "DefinedTermSet": 1,
+        "FAQPage": 1,
+        "Question": 9,
+        "Answer": 9
       },
       "modified": [
         "2026-07-22",
@@ -56,7 +59,7 @@
       "issues": []
     },
     {
-      "file": "dr12-afir/index.html",
+      "file": "dr12-afir.html",
       "route": "/dr12-afir",
       "blocks": 1,
       "types": {
@@ -72,7 +75,10 @@
         "Article": 1,
         "DefinedTerm": 1,
         "PropertyValue": 8,
-        "DefinedTermSet": 1
+        "DefinedTermSet": 1,
+        "FAQPage": 1,
+        "Question": 7,
+        "Answer": 7
       },
       "modified": [
         "2026-07-22",
@@ -81,7 +87,7 @@
       "issues": []
     },
     {
-      "file": "dr14/index.html",
+      "file": "dr14.html",
       "route": "/dr14",
       "blocks": 1,
       "types": {
@@ -110,7 +116,7 @@
       "issues": []
     },
     {
-      "file": "pro-infra.html",
+      "file": "pro-infra/index.html",
       "route": "/pro-infra",
       "blocks": 1,
       "types": {
@@ -126,7 +132,10 @@
         "Article": 1,
         "DefinedTerm": 1,
         "PropertyValue": 8,
-        "DefinedTermSet": 1
+        "DefinedTermSet": 1,
+        "FAQPage": 1,
+        "Question": 9,
+        "Answer": 9
       },
       "modified": [
         "2026-07-22",
@@ -286,6 +295,35 @@
         "Answer": 3
       },
       "modified": [],
+      "issues": []
+    },
+    {
+      "file": "dr18/index.html",
+      "route": "/dr18",
+      "blocks": 1,
+      "types": {
+        "Organization": 3,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
+        "ImageObject": 1,
+        "WebSite": 1,
+        "WebPage": 2,
+        "CreativeWork": 3,
+        "BreadcrumbList": 1,
+        "ListItem": 4,
+        "Article": 1,
+        "DefinedTerm": 1,
+        "PropertyValue": 10,
+        "Audience": 3,
+        "DefinedTermSet": 1,
+        "FAQPage": 1,
+        "Question": 11,
+        "Answer": 11
+      },
+      "modified": [
+        "2026-08-18",
+        "2026-08-18"
+      ],
       "issues": []
     },
     {

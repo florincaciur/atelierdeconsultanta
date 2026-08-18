@@ -20,6 +20,7 @@ const PAGES = [
   { slug: "afir-autoconsum", path: "/afir-autoconsum-agroalimentar.html", finalNextStep: true },
   { slug: "dr12", path: "/dr12-afir/index.html", finalNextStep: true },
   { slug: "dr14", path: "/dr14/index.html", finalNextStep: true },
+  { slug: "dr18", path: "/dr18/index.html", finalNextStep: true },
   { slug: "por-nord-est", path: "/por-adr-nord-est/index.html", finalNextStep: true }
 ];
 
@@ -74,9 +75,6 @@ async function main() {
           const h1 = document.querySelector("h1");
           const h1Rect = h1?.getBoundingClientRect();
           const nextStep = document.querySelector("[data-contextual-next-step]");
-          const answerReadiness = document.querySelector(".answer-readiness--compact");
-          const answerDetails = answerReadiness?.querySelector(".answer-readiness__details");
-          const directAnswer = answerReadiness?.querySelector("[data-answer-readiness-direct]");
           const sections = [...document.querySelectorAll("main section")];
           const nextStepIndex = nextStep ? sections.indexOf(nextStep) : -1;
           const nextStepTop = nextStep ? nextStep.getBoundingClientRect().top + window.scrollY : null;
@@ -92,13 +90,13 @@ async function main() {
             nextStepRatio: nextStepTop === null ? null : nextStepTop / root.scrollHeight,
             sectionsAfterNextStep: nextStepIndex < 0 ? null : sections.length - nextStepIndex - 1,
             projectDesignLinks: document.querySelectorAll("[data-contextual-next-step] a[href='/proiectare-fonduri-europene']").length,
-            compactAnswer: !expectNextStep ? {
-              count: document.querySelectorAll(".answer-readiness--compact").length,
-              height: answerReadiness?.getBoundingClientRect().height || 0,
-              detailsOpen: Boolean(answerDetails?.open),
-              directAnswerVisible: Boolean(directAnswer && directAnswer.getBoundingClientRect().height > 0),
-              factCount: answerDetails?.querySelectorAll(".answer-readiness__facts > div").length || 0,
-              sourceCount: answerDetails?.querySelectorAll(".answer-readiness__source").length || 0
+            homepageFlow: !expectNextStep ? {
+              heroCount: document.querySelectorAll(".homepage-decision-hero").length,
+              methodCount: document.querySelectorAll("[data-homepage-method]").length,
+              methodTabs: document.querySelectorAll("[data-homepage-method-tab]").length,
+              explorerCount: document.querySelectorAll("[data-homepage-explorer]").length,
+              explorerTabs: document.querySelectorAll("[data-homepage-explorer-tab]").length,
+              contactCount: document.querySelectorAll("#homepage-contact").length
             } : null,
             homepageServicePaths: !expectNextStep ? {
               consulting: serviceTargets.has("/consultanta-fonduri-europene"),
@@ -111,8 +109,8 @@ async function main() {
         const screenshot = path.join(OUTPUT, `${spec.slug}-${viewport.width}.png`);
         await page.screenshot({ path: screenshot, fullPage: false });
         if (spec.slug === "home") {
-          await page.locator(".answer-readiness--compact").screenshot({
-            path: path.join(OUTPUT, `home-answer-readiness-${viewport.width}.png`)
+          await page.locator(".homepage-decision-hero").screenshot({
+            path: path.join(OUTPUT, `home-decision-hero-${viewport.width}.png`)
           });
         }
         const errors = [];
@@ -127,15 +125,9 @@ async function main() {
           if (!metrics.homepageServicePaths?.consulting || !metrics.homepageServicePaths?.projectDesign) {
             errors.push("homepage does not expose both consulting and project-design paths");
           }
-          if (metrics.compactAnswer?.count !== 1 || metrics.compactAnswer.detailsOpen || !metrics.compactAnswer?.directAnswerVisible) {
-            errors.push("homepage compact answer is missing, expanded by default or lacks a visible direct answer");
-          }
-          if (metrics.compactAnswer?.factCount !== 8 || metrics.compactAnswer?.sourceCount !== 1) {
-            errors.push("homepage compact answer does not keep all facts and its source in the HTML");
-          }
-          const maxCompactHeight = viewport.width <= 390 ? 460 : 330;
-          if (metrics.compactAnswer?.height > maxCompactHeight) {
-            errors.push(`homepage compact answer is too tall ${Math.round(metrics.compactAnswer.height)}/${maxCompactHeight}`);
+          const flow = metrics.homepageFlow;
+          if (!flow || flow.heroCount !== 1 || flow.methodCount !== 1 || flow.methodTabs !== 5 || flow.explorerCount !== 1 || flow.explorerTabs !== 4 || flow.contactCount !== 1) {
+            errors.push("homepage decision flow is incomplete or duplicated");
           }
         }
         if (consoleErrors.length) errors.push(`console errors: ${consoleErrors.join(" | ")}`);

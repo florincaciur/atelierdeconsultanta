@@ -16,6 +16,7 @@ const LLMS_PATH = path.join(ROOT, "llms.txt");
 const CANONICAL_DIRECTORY_ONLY_SLUGS = new Set([
   "dr12-afir",
   "dr14",
+  "dr18",
   "por-adr-nord-est",
   "afir-autoconsum-agroalimentar",
   "pro-infra",
@@ -86,6 +87,7 @@ const PILLAR_SLUGS = new Set([
   "fonduri-europene-nerambursabile-2026",
   "dr12-afir",
   "dr14",
+  "dr18",
   "digitalizare-imm",
   "femeia-antreprenor-2026",
   "start-up-nation-2026",
@@ -118,6 +120,7 @@ const SECONDARY_SLUGS = new Set([
 const KEYWORDS_BY_SLUG = {
   "consultanta-fonduri-europene": ["consultanță fonduri europene", "firmă consultanță fonduri europene", "consultant fonduri europene", "verificare eligibilitate fonduri europene", "cost consultanță fonduri europene", "dosar fonduri europene"],
   "verificare-eligibilitate-fonduri-europene": ["verificare eligibilitate fonduri europene", "eligibilitate fonduri europene 2026", "eligibilitate DR12", "eligibilitate DR14", "verificare cod CAEN fonduri europene"],
+  "dr18": ["DR 18 AFIR", "DR 18 2026", "ghid DR 18", "floricultură fonduri europene", "plante medicinale finanțare", "plante aromatice AFIR"],
   "fonduri-europene-nerambursabile-2026": ["fonduri europene nerambursabile 2026", "fonduri europene 2026 pentru tineri", "fonduri europene 2026 rural non agricol", "program fonduri europene 2026", "fonduri europene 2026 pentru femei"],
   "dr12-afir": ["dr 12 afir lansare", "dr 12 ghid final", "dr12 afir", "afir dr 12", "ghid dr 12 afir"],
   "dr14": ["dr14", "dr14 afir", "dr14 afir 2026", "dr 14 conditii", "când se lansează dr 14", "ghidul solicitantului dr 14"],
@@ -369,7 +372,7 @@ function fallbackHeroImageFor(page) {
   const text = pageText(page);
   if (page.slug === "e-move") return "/assets/hero/hero-solar.webp";
   if (page.slug === "gal-afir") return "/assets/hero/hero-local.webp";
-  if (/afir|dr12|dr14|agricultur|ferme|utilaje/.test(text)) return "/assets/hero/hero-agriculture.webp";
+  if (/afir|dr12|dr14|dr18|agricultur|ferme|utilaje|floricultur/.test(text)) return "/assets/hero/hero-agriculture.webp";
   if (/fotovoltaic|energie|modernizare|autoconsum|infra/.test(text)) return "/assets/hero/hero-solar.webp";
   if (/digitalizare|pnrr|software|instrumente/.test(text)) return "/assets/hero/hero-digital.webp";
   if (/local|nord-est|bacau|iasi|suceava|bucuresti/.test(text)) return "/assets/hero/hero-local.webp";
@@ -939,8 +942,7 @@ function renderDr12AfirContent(page) {
         <h2 id="dr12-finantare-intensitate">Finan&#539;are &#537;i intensitate</h2>
         <p>Finan&#539;area trebuie privit&#259; ca parte dintr-un plan de ferm&#259;, nu ca o list&#259; de achizi&#539;ii. Grantul poate reduce presiunea pe investi&#539;ie, dar beneficiarul trebuie s&#259; aib&#259; cofinan&#539;are, documente coerente &#537;i capacitate de implementare.</p>
         <ul>
-          <li><strong>Grant orientativ:</strong> forma consultativ&#259; analizat&#259; men&#539;ioneaz&#259; p&#226;n&#259; la 200.000 euro/proiect; valoarea final&#259; se confirm&#259; &#238;n ghidul activ.</li>
-          <li><strong>Intensitate:</strong> sprijinul poate ajunge orientativ la 80% pentru tineri fermieri &#537;i la 65% pentru alte categorii eligibile, dac&#259; apelul activ p&#259;streaz&#259; aceste condi&#539;ii.</li>
+          <li><strong>Valori &#537;i intensitate:</strong> FABER nu public&#259; pragurile financiare din forma consultativ&#259; p&#226;n&#259; la aprobarea lor editorial&#259; pe baza documentului opera&#539;ional aplicabil apelului.</li>
           <li><strong>Partea proprie:</strong> cofinan&#539;area, TVA-ul, diferen&#539;ele de pre&#539; &#537;i cheltuielile neeligibile trebuie calculate separat de grant.</li>
           <li><strong>Investi&#539;ie propor&#539;ional&#259;:</strong> utilajele, dot&#259;rile sau construc&#539;iile trebuie s&#259; fie potrivite cu suprafa&#539;a, efectivele, fluxul de lucru &#537;i obiectivul exploata&#539;iei.</li>
           <li><strong>Reguli finale:</strong> contractarea, cererile de plat&#259;, rambursarea &#537;i monitorizarea se fac dup&#259; regulile AFIR publicate pentru sesiunea deschis&#259;.</li>
@@ -1382,7 +1384,7 @@ function renderProInfraEfficiencyContent(page) {
       <section aria-labelledby="pro-infra-scop">
         <h2 id="pro-infra-scop">Scopul schemei</h2>
         <p>PRO INFRA sprijină investițiile care cresc eficiența energetică a capacităților industriale folosite pentru producerea materiilor prime, materialelor și produselor necesare proiectelor de infrastructură de transport. Schema face parte din programul-cheie 9 al Fondului pentru Modernizare — eficiență energetică în transporturi — și urmărește reducerea consumului de energie și a emisiilor de gaze cu efect de seră în procesele de producție.</p>
-        <p>Ajutorul nu finanțează o extindere industrială generică și nici o linie generală de „energie verde”. Investiția trebuie să înlocuiască active existente cu tehnologii moderne, eficiente energetic și cu emisii reduse, iar beneficiarul trebuie să măsoare rezultatul energetic pe conturul proiectului. Schema consolidată prevede granturi de maximum 15 milioane euro pe beneficiar și o intensitate de maximum 100% din cheltuielile eligibile, acordate prin procedură de ofertare concurențială.</p>
+        <p>Ajutorul nu finanțează o extindere industrială generică și nici o linie generală de „energie verde”. Investiția trebuie să înlocuiască active existente cu tehnologii moderne, eficiente energetic și cu emisii reduse, iar beneficiarul trebuie să măsoare rezultatul energetic pe conturul proiectului. Plafonul și intensitatea nu sunt publicate de FABER până la confirmarea lor în documentul operațional aplicabil apelului; schema descrie mecanismul de ajutor și procedura de ofertare concurențială.</p>
       </section>
 
       <section aria-labelledby="pro-infra-legatura-productie">
@@ -2618,7 +2620,7 @@ function renderDr12SearchIntentContent(page) {
   return `
       <section aria-labelledby="dr12-raspuns-rapid">
         <h2 id="dr12-raspuns-rapid">Răspuns rapid</h2>
-        <p class="intro">DR12 AFIR 2026 este intervenția pentru investiții în consolidarea exploatațiilor tinerilor fermieri instalați și ale fermierilor instalați cu vârsta de până la 45 de ani. Ghidul DR 12 AFIR disponibil în documentația proiectului este o versiune consultativă, nu ghidul final. El indică o dimensiune economică de minimum 12.000 euro SO, un sprijin public de maximum 200.000 euro/proiect și două intensități maxime: 80% pentru tinerii fermieri care îndeplinesc condițiile specifice și 65% pentru celelalte categorii eligibile. O dată de lansare nu se deduce din consultare. Sesiunea, etapele lunare, alocarea și termenele se confirmă exclusiv prin ghidul activ și nota oficială de lansare.</p>
+        <p class="intro">DR12 AFIR 2026 este intervenția pentru investiții în consolidarea exploatațiilor tinerilor fermieri instalați și ale fermierilor instalați cu vârsta de până la 45 de ani. Ghidul DR 12 AFIR disponibil în documentația proiectului este o versiune consultativă, nu ghidul final. Pragul economic, plafonul și intensitățile nu sunt publicate de FABER până la aprobarea lor editorială pe baza documentului operațional aplicabil apelului. O dată de lansare nu se deduce din consultare. Sesiunea, etapele lunare, alocarea și termenele se confirmă exclusiv prin ghidul activ și nota oficială de lansare.</p>
         <p>Căutările „dr12 afir”, „afir dr 12”, „ghid dr 12 afir”, „dr 12 ghid final” și „dr 12 afir lansare” se referă la aceeași intervenție; răspunsurile de mai jos separă explicit informațiile consultative de regulile care vor fi confirmate în apelul activ.</p>
       </section>
 
@@ -2642,7 +2644,7 @@ function renderDr12SearchIntentContent(page) {
 
       <section aria-labelledby="dr12-so-minim">
         <h2 id="dr12-so-minim">Pragul minim SO</h2>
-        <p>Investiția trebuie realizată într-o fermă cu dimensiunea economică de minimum 12.000 euro SO la momentul depunerii. Calculul folosește coeficienții SOC 2020 din cererea de finanțare și datele documentabile pentru suprafețe, culturi și efective.</p>
+        <p>Investiția trebuie realizată într-o fermă care respectă dimensiunea economică minimă prevăzută de documentele apelului. Valoarea pragului nu este publicată de FABER până la aprobarea ei editorială. Calculul folosește coeficienții SOC din cererea de finanțare și datele documentabile pentru suprafețe, culturi și efective.</p>
         <p>Suprafețele se corelează cu IACS-APIA, iar efectivele care nu pot fi înregistrate acolo se verifică în registrele ANSVSA/DSVSA, ANZ sau prin documentele circumscripției veterinare, după caz. Un calcul realizat fără aceleași date în documentele oficiale poate schimba eligibilitatea și punctajul.</p>
       </section>
 
@@ -2654,17 +2656,7 @@ function renderDr12SearchIntentContent(page) {
 
       <section aria-labelledby="dr12-intensitate">
         <h2 id="dr12-intensitate">Intensitatea sprijinului</h2>
-        <div class="table-wrap">
-          <table class="program-table">
-            <thead><tr><th>Categorie</th><th>Intensitate maximă consultativă</th><th>Condiție-cheie</th></tr></thead>
-            <tbody>
-              <tr><td>Tineri fermieri</td><td>80% din costurile eligibile</td><td>Până la 40 de ani înainte de împlinirea vârstei de 41 de ani, competențe profesionale și calitatea de șef al exploatației.</td></tr>
-              <tr><td>Celelalte categorii eligibile</td><td>65% din costurile eligibile</td><td>Îndeplinirea condițiilor specifice categoriei și ale proiectului.</td></tr>
-              <tr><td>Plafon proiect</td><td>Maximum 200.000 euro</td><td>Sprijin public nerambursabil per proiect, conform variantei consultative.</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <p>Procentele se aplică numai cheltuielilor eligibile. Contribuția privată, cheltuielile neeligibile și tratamentul TVA se calculează separat și se confirmă în documentele sesiunii active.</p>
+        <p>Intensitatea și plafonul diferă în funcție de categoria solicitantului și de regulile apelului. FABER le va publica după validarea documentului operațional aplicabil. Contribuția privată, cheltuielile neeligibile și tratamentul TVA se calculează separat și se confirmă în documentele sesiunii active.</p>
       </section>
 
       <section aria-labelledby="dr12-investitii">
@@ -2686,8 +2678,8 @@ function renderDr12SearchIntentContent(page) {
 
       <section aria-labelledby="dr12-cofinantare">
         <h2 id="dr12-cofinantare">Cofinanțare</h2>
-        <p>Beneficiarul adaugă contribuția privată la sprijinul public și suportă integral cheltuielile neeligibile. Pentru proiectele cu intensitate de 80%, diferența eligibilă pornește de la 20%; pentru intensitatea de 65%, diferența pornește de la 35%. Calculul real include și TVA-ul după regimul fiscal aplicabil, diferențe de preț și rezerva de numerar pentru implementare.</p>
-        <p>Ghidul consultativ cere dovada cofinanțării private prin extras de cont și/sau contract de credit. Dacă se folosește extrasul de cont, acesta este însoțit de angajamentul privind destinația a minimum 50% din disponibilul prezentat, conform regulilor descrise în document. Cerința exactă se reconfirmă la contractare în versiunea activă.</p>
+        <p>Beneficiarul adaugă contribuția privată la sprijinul public și suportă integral cheltuielile neeligibile. Calculul real include și TVA-ul după regimul fiscal aplicabil, diferențe de preț și rezerva de numerar pentru implementare.</p>
+        <p>Ghidul consultativ cere dovada cofinanțării private prin documentele financiare admise. Cerința exactă, inclusiv forma dovezii și eventualele angajamente asociate, se reconfirmă la contractare în versiunea activă.</p>
       </section>
 
       <section aria-labelledby="dr12-punctaj">
@@ -2700,8 +2692,8 @@ function renderDr12SearchIntentContent(page) {
         <h2 id="dr12-greseli">Greșeli</h2>
         <ul class="warning-list">
           <li>prezentarea ghidului consultativ ca ghid final sau presupunerea unei date de lansare;</li>
-          <li>calcul SO sub 12.000 sau necorelat cu APIA, ANSVSA, ANZ și documentele de folosință;</li>
-          <li>confundarea limitei de vârstă pentru categoria solicitantului cu limita pentru intensitatea de 80%;</li>
+          <li>calcul SO sub pragul aplicabil sau necorelat cu APIA, ANSVSA, ANZ și documentele de folosință;</li>
+          <li>confundarea limitei de vârstă pentru categoria solicitantului cu regulile intensității sprijinului;</li>
           <li>alegerea greșită între sector zootehnic și alte sectoare;</li>
           <li>utilaje supradimensionate față de suprafețe, efective și parcul existent;</li>
           <li>prescoring optimist, fără documente pentru fiecare criteriu;</li>
@@ -2718,9 +2710,9 @@ function renderDr12SearchIntentContent(page) {
 ${officialSourcesHtml}
 
       <section aria-labelledby="dr12-cta">
-        <h2 id="dr12-cta">CTA: verifică eligibilitatea DR12</h2>
-        <p>Pregătește vârsta și forma solicitantului, situația APIA/ANSVSA/ANZ, calculul SO, componenta proiectului, lista investițiilor și sursa cofinanțării. Verificarea pornește de la documente și de la ghidul activ, nu de la plafonul maxim.</p>
-        <p><a class="btn btn-primary" href="/verificare-eligibilitate-fonduri-europene">Solicită verificarea eligibilității DR12</a></p>
+        <h2 id="dr12-cta">Cere verificarea inițială pentru DR12</h2>
+        <p>Pregătește vârsta și forma solicitantului, situația APIA/ANSVSA/ANZ, calculul SO, componenta proiectului, lista investițiilor și sursa contribuției proprii. Verificarea pornește de la documente și de la documentul oficial aplicabil, nu de la plafonul maxim.</p>
+        <p><a class="btn btn-primary" href="/verificare-eligibilitate-fonduri-europene">Solicită verificarea inițială pentru DR12</a></p>
       </section>`;
 }
 
@@ -2852,10 +2844,16 @@ function renderDr14SearchIntentContent(page) {
 ${officialSourcesHtml}
 
       <section aria-labelledby="dr14-cta">
-        <h2 id="dr14-cta">CTA: verifică eligibilitatea DR14</h2>
-        <p>Trimite forma solicitantului, culturile și efectivele, calculul SO, documentele APIA/ANSVSA/ANZ, componenta dorită, lista achizițiilor și sursa cofinanțării. Analiza se raportează la ghidul activ înainte de orice concluzie finală.</p>
-        <p><a class="btn btn-primary" href="/verificare-eligibilitate-fonduri-europene">Solicită verificarea eligibilității DR14</a></p>
+        <h2 id="dr14-cta">Cere verificarea inițială pentru DR14</h2>
+        <p>Trimite forma solicitantului, culturile și efectivele, calculul SO, documentele APIA/ANSVSA/ANZ, componenta dorită, lista achizițiilor și sursa contribuției proprii. Analiza se raportează la documentul oficial aplicabil înainte de orice concluzie finală.</p>
+        <p><a class="btn btn-primary" href="/verificare-eligibilitate-fonduri-europene">Solicită verificarea inițială pentru DR14</a></p>
       </section>`;
+}
+
+function renderDr18SearchIntentContent(page) {
+  const officialSourcesHtml = renderOfficialSources(page.sourceKeys, { id: `${page.slug}-official-sources` });
+  const finalTemplate = fs.readFileSync(path.join(ROOT, "templates", "dr18-final-content.html"), "utf8");
+  return finalTemplate.replace("{{DR18_OFFICIAL_SOURCES}}", officialSourcesHtml);
 }
 
 function renderMainContent(page) {
@@ -2866,6 +2864,9 @@ function renderMainContent(page) {
   }
   if (page.slug === "dr14") {
     return renderDr14SearchIntentContent(page);
+  }
+  if (page.slug === "dr18") {
+    return renderDr18SearchIntentContent(page);
   }
   if (page.slug === "fondul-modernizare-energie-regenerabila-2026") {
     return renderFondModernizareRegenerabilaContent(page);
@@ -2981,7 +2982,7 @@ function pageHtml(page, config) {
   const relatedCss = (page.related || []).length ? `\n  <link rel="stylesheet" href="/assets/see-also.css" />` : "";
   const toolCss = page.includeTools || page.includeDownloads ? `\n  <link rel="stylesheet" href="/assets/seo-tools.css" />` : "";
   const sourcesCss = (page.sourceKeys || []).length ? `\n  <link rel="stylesheet" href="/assets/official-sources.css" />` : "";
-  const dr14Css = page.slug === "dr14" ? `\n  <link rel="stylesheet" href="/assets/dr14-final.css?v=20260809-1" />` : "";
+  const dr14Css = ["dr14", "dr18"].includes(page.slug) ? `\n  <link rel="stylesheet" href="/assets/dr14-final.css?v=20260818-1" />` : "";
   const dr14Js = page.slug === "dr14" ? `\n  <script src="/assets/dr14-final.js?v=20260808-1" defer></script>` : "";
   const extraCss = `${relatedCss}${toolCss}${sourcesCss}${dr14Css}`;
   const extraJs = `${page.includeTools ? `\n  <script src="/assets/seo-tools.js" defer></script>` : ""}${dr14Js}`;
@@ -3061,7 +3062,7 @@ ${programBanner ? "  <link rel=\"stylesheet\" href=\"/assets/program-heroes.css\
   ${GLOBAL_HEADER}
   ${renderBreadcrumb(page)}
   ${programHeroHtml}
-  <main class="container">
+  <main class="container" id="main-content" tabindex="-1">
     <article class="panel">
 ${programMainContent}
     </article>
@@ -3263,7 +3264,7 @@ function main() {
   }
   for (const page of pages) {
     validatePage(page);
-    ensureFile(page, pageHtml(page, config), { writeLegacy: !onlySlugs });
+    ensureFile(page, pageHtml(page, config), { writeLegacy: true });
   }
   if (onlySlugs) {
     console.log(`Generated ${pages.length} selected canonical SEO page(s): ${[...onlySlugs].join(", ")}.`);

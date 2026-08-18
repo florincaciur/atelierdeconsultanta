@@ -16,11 +16,13 @@ const {
 const { loadEditorialGovernance } = require("./editorial-governance");
 const { PROGRAM_TEMPLATE_SLOT, syncPageHtml: syncEditorialGovernance } = require("./sync-editorial-governance");
 const { synchronizedHtml: syncBreadcrumbs } = require("./sync-breadcrumbs");
+const { synchronize: syncProgramVisual } = require("./sync-program-visuals");
 
 const CONFIG_PATH = path.join(ROOT, "config", "program-page-template.json");
 const GUIDES_PATH = path.join(ROOT, "official-guides.json");
 const REPORT_PATH = path.join(ROOT, "reports", "program-page-template-pilot-2026-07-21.json");
 const CSS_URL = "/assets/program-page-template.css?v=20260721-1";
+const PROGRAM_VISUAL_CSS_URL = "/assets/program-visuals.css?v=20260818-1";
 const TEMPLATE_VERSION = "p1_11";
 const CHECK_ONLY = process.argv.includes("--check");
 const FORBIDDEN_LOCAL_FACTS = ["status", "statusLabel", "verifiedAt", "sourceUrl", "sourceVersion", "applicationStart", "applicationEnd", "grantSummary", "cofinancingSummary"];
@@ -366,11 +368,13 @@ function synchronizePage(source, page, program, guides, record) {
   article.html(renderArticle(page, program, guides, wordCount));
   syncTemplateStructuredData($, page, program);
   if (!$(`link[href^="/assets/program-page-template.css"]`).length) $("head").append(`<link rel="stylesheet" href="${CSS_URL}" data-program-page-template-style="${TEMPLATE_VERSION}">`);
+  if (!$(`link[href^="/assets/program-visuals.css"]`).length) $("head").append(`<link rel="stylesheet" href="${PROGRAM_VISUAL_CSS_URL}">`);
 
   let output = $.html();
   if (globalHeader) output = output.replace(/<!-- GLOBAL_HEADER_START -->[\s\S]*?<!-- GLOBAL_HEADER_END -->/i, globalHeader);
   output = syncBreadcrumbs(output, normalizeRoute(page.route));
   output = syncEditorialGovernance(output, record);
+  output = syncProgramVisual(output, normalizeRoute(page.route));
   return { html: output, wordCount, hasToc: wordCount > 1500 };
 }
 

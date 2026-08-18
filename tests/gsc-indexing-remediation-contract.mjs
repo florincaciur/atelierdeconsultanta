@@ -1,5 +1,6 @@
 import assert from "node:assert/strict";
 import cp from "node:child_process";
+import fsSync from "node:fs";
 import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -30,7 +31,7 @@ function publicHtmlFiles() {
   return cp.execFileSync("git", ["ls-files", "-z", "*.html"], { cwd: ROOT, encoding: "utf8" })
     .split("\0")
     .filter(Boolean)
-    .filter((file) => !file.startsWith("dist/"));
+    .filter((file) => !file.startsWith("dist/") && fsSync.existsSync(path.join(ROOT, file)));
 }
 
 function canonicalFile(route) {

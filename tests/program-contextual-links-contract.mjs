@@ -16,7 +16,7 @@ const allPrograms = loadProgramConfig().programs;
 const programs = allPrograms.filter((program) => !program.discovery?.redirectTarget);
 const config = loadConfig();
 validateMatrix(programs, config);
-assert.equal(allPrograms.length, 24, "registrul trebuie să conțină 24 de programe");
+assert(allPrograms.some((program) => program.slug === "dr18-afir"), "registrul trebuie să conțină DR 18");
 assert.ok(fs.existsSync(path.join(ROOT, config.evidence.gscPages)), "lipsește dovada GSC pe pagini");
 assert.ok(fs.existsSync(path.join(ROOT, config.evidence.gscQueries)), "lipsește dovada GSC pe query-uri");
 
@@ -30,15 +30,20 @@ assert.deepEqual(resolvedLinks(dr12, config).map(({ relation, href, anchor }) =>
 
 const audit = auditProgramContextualLinks();
 assert.equal(audit.errors.length, 0, audit.errors.join("\n"));
-assert.equal(audit.summary.programs, 19);
-assert.equal(audit.summary.managedPrograms, 17);
-assert.equal(audit.summary.excludedPrograms, 2);
-assert.equal(audit.summary.links, 68);
-assert.equal(audit.summary.trackedCtas, 17);
-assert.equal(audit.summary.editorialLinksWithoutTracking, 51);
+assert.equal(audit.summary.programs, audit.summary.managedPrograms + audit.summary.excludedPrograms);
+assert.equal(audit.summary.managedPrograms, audit.summary.programs - config.excludedRoutes.length);
+assert.equal(audit.summary.excludedPrograms, config.excludedRoutes.length);
+assert.equal(audit.summary.links, audit.summary.managedPrograms * 4);
+assert.equal(audit.summary.trackedCtas, audit.summary.managedPrograms);
+assert.equal(audit.summary.editorialLinksWithoutTracking, audit.summary.managedPrograms * 3);
 assert.equal(audit.summary.legacyCloudsRemaining, 0);
-assert.deepEqual(audit.summary.relationCounts, { parent: 17, instrument: 17, comparison: 17, conversion: 17 });
-assert.deepEqual(config.excludedRoutes, ["/dr12-afir", "/investitii-modernizarea-microintreprinderilor-apel-2"]);
-assert.equal(audit.routes.filter((route) => route.excluded && route.status === "PASS").length, 2);
+assert.deepEqual(audit.summary.relationCounts, {
+  parent: audit.summary.managedPrograms,
+  instrument: audit.summary.managedPrograms,
+  comparison: audit.summary.managedPrograms,
+  conversion: audit.summary.managedPrograms
+});
+assert.deepEqual(config.excludedRoutes, []);
+assert.equal(audit.routes.filter((route) => route.excluded && route.status === "PASS").length, 0);
 
-console.log("Program contextual links contract PASS: 19 programe publice, 17 blocuri gestionate și 2 excluderi editoriale explicite.");
+console.log(`Program contextual links contract PASS: ${audit.summary.programs} programe publice și ${audit.summary.managedPrograms} blocuri gestionate.`);

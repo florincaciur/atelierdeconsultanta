@@ -358,6 +358,23 @@
     "isPrimaryFor": "dr14-afir",
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
+  "dr18": {
+    "programIds": [
+      "dr18-afir"
+    ],
+    "name": "Ghidul solicitantului DR-18 – versiunea consultativă, sesiunea 2026",
+    "title": "Ghidul solicitantului DR-18 – versiunea consultativă, sesiunea 2026",
+    "institution": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
+    "documentType": "Ghidul solicitantului – versiune consultativă",
+    "url": "https://www.afir.ro/api/file?filename=Ghidul+solicitantului+DR+18+-+versiunea+consultativ%C4%83&filetype=pdf&url=%2Fmedia%2F4v0mpvi1%2Fghidul-solicitantului-dr-18-versiunea-consultativ%C4%83.pdf",
+    "accessedAt": "2026-08-18",
+    "note": "Documentul este consultativ; calendarul, alocarea și pragurile lunare se confirmă în anunțul sesiunii.",
+    "programStatus": "consultare_publica",
+    "statusLabel": "Ghid consultativ – depunerea nu este deschisă. Condițiile se pot modifica.",
+    "verifiedAt": "2026-08-18",
+    "isPrimaryFor": "dr18-afir",
+    "sourceOfTruth": "config/seo-programs.json#programs"
+  },
   "digitalizare": {
     "programIds": [
       "digitalizare-imm"

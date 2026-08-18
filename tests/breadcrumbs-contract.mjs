@@ -48,7 +48,7 @@ for (const fixture of fixtures) {
 assert.deepEqual(breadcrumbRouteEntries("/"), [], "homepage nu trebuie să aibă breadcrumb");
 
 const audit = auditBreadcrumbs(ROOT);
-assert.equal(audit.summary.routeCount, 100, "auditul trebuie să acopere inventarul canonic/indexabil");
+assert.equal(audit.summary.routeCount, 101, "auditul trebuie să acopere inventarul canonic/indexabil, inclusiv DR18");
 assert.equal(audit.summary.fail, 0, audit.results
   .filter((result) => result.status === "FAIL")
   .map((result) => `${result.route}: ${result.issues.join("; ")}`)

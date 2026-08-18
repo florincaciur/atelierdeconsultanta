@@ -9,8 +9,10 @@ const {
 } = require('../tools/site-document-classifier');
 const {
   comparableText,
+  fileForRoute,
   graphNodes,
   hasType,
+  sitemapRoutes,
   visibleFaqItems
 } = require('../tools/structured-data-utils');
 
@@ -30,6 +32,10 @@ const RELATED_SELECTOR = [
   '.vezi-si',
   '.vezi-si-section',
   '.related-links',
+  '.program-contextual-links',
+  '.editorial-cluster__related',
+  '.program-family-related',
+  '.expert-final-cta',
   '.next-step-block',
   '[data-contextual-next-step]',
   '[aria-labelledby*="vezi-si"]',
@@ -113,9 +119,7 @@ function toPosix(value) {
 }
 
 function walkHtmlFiles(root) {
-  return discoverHtmlDocuments(root)
-    .filter((document) => !EXCLUDED_DIRS.has(document.relativePath.split('/')[0]))
-    .map((document) => document.filePath);
+  return [...new Set(sitemapRoutes(root).map((route) => fileForRoute(root, route)))];
 }
 
 function status(pass, details = {}) {

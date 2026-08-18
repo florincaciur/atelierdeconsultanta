@@ -66,6 +66,7 @@ Statusul folosește exclusiv taxonomia registrului: `apel_deschis`, `ghid_aproba
 | Fonduri regionale | `/fonduri-regionale` | Regional / ADR — `/fonduri-regionale` | `public` | Nu — pagina este chiar hub-ul |
 | DR12 AFIR | `/dr12-afir` | AFIR & agricultură — `/afir` | `public` | Da |
 | DR14 AFIR | `/dr14` | AFIR & agricultură — `/afir` | `public` | Da |
+| DR18 AFIR | `/dr18` | AFIR & agricultură — `/afir` | `public` | Da |
 | Start-Up Nation | `/start-up-nation-2026` | Antreprenoriat & GAL — `/fonduri-europene-imm` | `public` | Da |
 | Femeia Antreprenor | `/femeia-antreprenor-2026` | Antreprenoriat & GAL — `/fonduri-europene-imm` | `public` | Da |
 | Digitalizare IMM | `/digitalizare-imm` | Digitalizare & inovare — `/fonduri-europene-digitalizare` | `public` | Da |

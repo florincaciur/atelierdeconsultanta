@@ -104,6 +104,24 @@ function enhanceRegion(region, pageTitle, usedIds) {
     return `<details class="long-form-secondary-detail long-form-secondary-section"><summary>${title}</summary><div class="long-form-secondary-detail__body">${body.trim()}</div></details>`;
   });
 
+  // Keep the first authored heading ID stable and give every later duplicate a
+  // deterministic unique ID before the TOC is assembled. Excluded headings
+  // also participate, because duplicate IDs break fragment navigation and ARIA.
+  const headingIds = new Set();
+  output = output.replace(/<h2\b([^>]*)>([\s\S]*?)<\/h2>/gi, (full, attrs, inner) => {
+    const idMatch = attrs.match(/\bid=["']([^"']+)["']/i);
+    if (!idMatch) return full;
+    const currentId = idMatch[1];
+    if (!headingIds.has(currentId)) {
+      headingIds.add(currentId);
+      return full;
+    }
+    const label = stripMarkup(inner);
+    const replacementId = uniqueId(`sectiune-${slugify(label || currentId)}`, usedIds);
+    headingIds.add(replacementId);
+    return `<h2${attrs.replace(idMatch[0], `id="${replacementId}"`)}>${inner}</h2>`;
+  });
+
   output = output.replace(/<h2\b([^>]*)>([\s\S]*?)<\/h2>/gi, (full, attrs, inner) => {
     const label = stripMarkup(inner);
     if (!label || isExcludedHeading(label)) return full;

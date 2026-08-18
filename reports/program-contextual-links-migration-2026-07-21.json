@@ -31,16 +31,66 @@
       "programId": "dr12-afir",
       "route": "/dr12-afir",
       "file": "dr12-afir/index.html",
-      "eligible": false,
-      "excludedByEditorialDecision": true,
+      "eligible": true,
+      "excludedByEditorialDecision": false,
       "removedManagedBlocks": 0,
       "removedManagedLinks": 0,
-      "resultingRelations": []
+      "resultingRelations": [
+        "parent",
+        "instrument",
+        "comparison",
+        "conversion"
+      ]
+    },
+    {
+      "programId": "dr12-afir",
+      "route": "/dr12-afir",
+      "file": "dr12-afir.html",
+      "eligible": true,
+      "excludedByEditorialDecision": false,
+      "removedManagedBlocks": 0,
+      "removedManagedLinks": 0,
+      "resultingRelations": [
+        "parent",
+        "instrument",
+        "comparison",
+        "conversion"
+      ]
     },
     {
       "programId": "dr14-afir",
       "route": "/dr14",
       "file": "dr14/index.html",
+      "eligible": true,
+      "excludedByEditorialDecision": false,
+      "removedManagedBlocks": 0,
+      "removedManagedLinks": 0,
+      "resultingRelations": [
+        "parent",
+        "instrument",
+        "comparison",
+        "conversion"
+      ]
+    },
+    {
+      "programId": "dr14-afir",
+      "route": "/dr14",
+      "file": "dr14.html",
+      "eligible": true,
+      "excludedByEditorialDecision": false,
+      "removedManagedBlocks": 0,
+      "removedManagedLinks": 0,
+      "resultingRelations": [
+        "parent",
+        "instrument",
+        "comparison",
+        "conversion"
+      ]
+    },
+    {
+      "programId": "dr18-afir",
+      "route": "/dr18",
+      "file": "dr18/index.html",
       "eligible": true,
       "excludedByEditorialDecision": false,
       "removedManagedBlocks": 0,
@@ -146,21 +196,31 @@
       "programId": "modernizare-microintreprinderi-ne-2",
       "route": "/investitii-modernizarea-microintreprinderilor-apel-2",
       "file": "investitii-modernizarea-microintreprinderilor-apel-2/index.html",
-      "eligible": false,
-      "excludedByEditorialDecision": true,
+      "eligible": true,
+      "excludedByEditorialDecision": false,
       "removedManagedBlocks": 0,
       "removedManagedLinks": 0,
-      "resultingRelations": []
+      "resultingRelations": [
+        "parent",
+        "instrument",
+        "comparison",
+        "conversion"
+      ]
     },
     {
       "programId": "modernizare-microintreprinderi-ne-2",
       "route": "/investitii-modernizarea-microintreprinderilor-apel-2",
       "file": "investitii-modernizarea-microintreprinderilor-apel-2.html",
-      "eligible": false,
-      "excludedByEditorialDecision": true,
+      "eligible": true,
+      "excludedByEditorialDecision": false,
       "removedManagedBlocks": 0,
       "removedManagedLinks": 0,
-      "resultingRelations": []
+      "resultingRelations": [
+        "parent",
+        "instrument",
+        "comparison",
+        "conversion"
+      ]
     },
     {
       "programId": "fondul-modernizare-autoconsum",
@@ -286,21 +346,6 @@
       "programId": "pro-infra",
       "route": "/pro-infra",
       "file": "pro-infra/index.html",
-      "eligible": true,
-      "excludedByEditorialDecision": false,
-      "removedManagedBlocks": 0,
-      "removedManagedLinks": 0,
-      "resultingRelations": [
-        "parent",
-        "instrument",
-        "comparison",
-        "conversion"
-      ]
-    },
-    {
-      "programId": "pro-infra",
-      "route": "/pro-infra",
-      "file": "pro-infra.html",
       "eligible": true,
       "excludedByEditorialDecision": false,
       "removedManagedBlocks": 0,

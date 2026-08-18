@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-15T12:55:14.536Z",
+  "generatedAt": "2026-08-18T09:44:21.597Z",
   "targetRoutes": 10,
   "changedFiles": [
     "fonduri-europene-digitalizare/index.html",
@@ -1743,6 +1743,230 @@
       "after": "Amplasament, lucrări sau dotări, buget și capacitatea de contribuție proprie.",
       "reason": "Lexic controlat P0.14",
       "sourceFile": "dr12-afir/index.html"
+    },
+    {
+      "route": "/fonduri-europene-digitalizare",
+      "location": "visible-copy",
+      "before": "Nu merită sa aplici când nu poți dovedi eligibilitatea, când cheltuielile principale nu sunt permise, când cofinanțarea nu este acoperita sau când calendarul nu permite documente complete și verificabile.",
+      "after": "Nu merită sa aplici când nu poți dovedi eligibilitatea, când cheltuielile principale nu sunt permise, când contribuția proprie nu este acoperita sau când calendarul nu permite documente complete și verificabile.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "fonduri-europene-digitalizare/index.html"
+    },
+    {
+      "route": "/fonduri-europene-digitalizare",
+      "location": "visible-copy",
+      "before": "De regula sunt necesare documente de firma sau solicitant, documente pentru activitate și locație, date financiare, oferte, descrierea investiției și informații despre cofinanțare.",
+      "after": "De regula sunt necesare documente de firma sau solicitant, documente pentru activitate și locație, date financiare, oferte, descrierea investiției și informații despre contribuție proprie.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "fonduri-europene-digitalizare/index.html"
+    },
+    {
+      "route": "/fonduri-europene-digitalizare",
+      "location": "visible-copy",
+      "before": "Dacă proiectul implica sume, cheltuieli tehnice, condiții de vârstă, cod CAEN, amplasament sau cofinanțare, merită verificat înainte de depunere. O analiză inițială poate identifica rapid documentele lipsa și riscurile evidente.",
+      "after": "Dacă proiectul implica sume, cheltuieli tehnice, condiții de vârstă, cod CAEN, amplasament sau contribuție proprie, merită verificat înainte de depunere. O analiză inițială poate identifica rapid documentele lipsa și riscurile evidente.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "fonduri-europene-digitalizare/index.html"
+    },
+    {
+      "route": "/fonduri-europene-digitalizare",
+      "location": "json-ld:$.@graph[4].mainEntity[5].acceptedAnswer.text",
+      "before": "Nu merită sa aplici când nu poți dovedi eligibilitatea, când cheltuielile principale nu sunt permise, când cofinanțarea nu este acoperita sau când calendarul nu permite documente complete și verificabile.",
+      "after": "Nu merită sa aplici când nu poți dovedi eligibilitatea, când cheltuielile principale nu sunt permise, când contribuția proprie nu este acoperita sau când calendarul nu permite documente complete și verificabile.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "fonduri-europene-digitalizare/index.html"
+    },
+    {
+      "route": "/fonduri-europene-digitalizare",
+      "location": "json-ld:$.@graph[4].mainEntity[6].acceptedAnswer.text",
+      "before": "De regula sunt necesare documente de firma sau solicitant, documente pentru activitate și locație, date financiare, oferte, descrierea investiției și informații despre cofinanțare.",
+      "after": "De regula sunt necesare documente de firma sau solicitant, documente pentru activitate și locație, date financiare, oferte, descrierea investiției și informații despre contribuție proprie.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "fonduri-europene-digitalizare/index.html"
+    },
+    {
+      "route": "/digitalizare-imm",
+      "location": "visible-copy",
+      "before": "Finanțare, cofinanțare și buget",
+      "after": "Finanțare, contribuție proprie și buget",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "digitalizare-imm/index.html"
+    },
+    {
+      "route": "/digitalizare-imm",
+      "location": "visible-copy",
+      "before": "Exemplu numeric de cofinanțare",
+      "after": "Exemplu numeric de contribuție proprie",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "digitalizare-imm/index.html"
+    },
+    {
+      "route": "/digitalizare-imm",
+      "location": "visible-copy",
+      "before": "verificare eligibilitate și discuție de consultanță",
+      "after": "verificare inițială a eligibilității și discuție de consultanță",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "digitalizare-imm/index.html"
+    },
+    {
+      "route": "/digitalizare-imm",
+      "location": "visible-copy",
+      "before": "Informațiile de pe această pagină sunt construite pentru orientare practică. Ele nu promit aprobare și nu înlocuiesc verificarea apelului activ, a anexelor și a grilei de selecție. Scopul este să poți pregăti o discuție serioasa despre eligibilitate și dosar.",
+      "after": "Informațiile de pe această pagină sunt construite pentru orientare practică. Ele nu promit aprobare și nu înlocuiesc verificarea apelului analizat, a anexelor și a grilei de selecție. Scopul este să poți pregăti o discuție serioasa despre eligibilitate și dosar.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "digitalizare-imm/index.html"
+    },
+    {
+      "route": "/digitalizare-imm",
+      "location": "visible-copy",
+      "before": "Pagina răspunde natural întrebărilor pe care le au beneficiarii când compară programe, documente, bugete și servicii de consultanță. Formularea rămâne orientativă și trebuie verificată cu ghidul apelului activ.",
+      "after": "Pagina răspunde natural întrebărilor pe care le au beneficiarii când compară programe, documente, bugete și servicii de consultanță. Formularea rămâne orientativă și trebuie verificată cu documentul oficial al apelului analizat.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "digitalizare-imm/index.html"
+    },
+    {
+      "route": "/digitalizare-imm",
+      "location": "visible-copy",
+      "before": "procentul real se confirmă în ghidul activ",
+      "after": "procentul real se confirmă în documentul oficial aplicabil",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "digitalizare-imm/index.html"
+    },
+    {
+      "route": "/digitalizare-imm",
+      "location": "visible-copy",
+      "before": "Porneste de la solicitant, cod CAEN, localitate, investiție, buget și documentele disponibile. Dacă una dintre aceste piese nu se potriveste cu apelul activ, proiectul trebuie ajustat înainte de depunere.",
+      "after": "Porneste de la solicitant, cod CAEN, localitate, investiție, buget și documentele disponibile. Dacă una dintre aceste piese nu se potriveste cu apelul analizat, proiectul trebuie ajustat înainte de depunere.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "digitalizare-imm/index.html"
+    },
+    {
+      "route": "/digitalizare-imm",
+      "location": "visible-copy",
+      "before": "Nu merită sa aplici când nu poți dovedi eligibilitatea, când cheltuielile principale nu sunt permise, când cofinanțarea nu este acoperita sau când calendarul nu permite documente complete și verificabile.",
+      "after": "Nu merită sa aplici când nu poți dovedi eligibilitatea, când cheltuielile principale nu sunt permise, când contribuția proprie nu este acoperita sau când calendarul nu permite documente complete și verificabile.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "digitalizare-imm/index.html"
+    },
+    {
+      "route": "/digitalizare-imm",
+      "location": "visible-copy",
+      "before": "De regula sunt necesare documente de firma sau solicitant, documente pentru activitate și locație, date financiare, oferte, descrierea investiției și informații despre cofinanțare.",
+      "after": "De regula sunt necesare documente de firma sau solicitant, documente pentru activitate și locație, date financiare, oferte, descrierea investiției și informații despre contribuție proprie.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "digitalizare-imm/index.html"
+    },
+    {
+      "route": "/digitalizare-imm",
+      "location": "visible-copy",
+      "before": "Dacă proiectul implica sume, cheltuieli tehnice, condiții de vârstă, cod CAEN, amplasament sau cofinanțare, merită verificat înainte de depunere. O analiză inițială poate identifica rapid documentele lipsa și riscurile evidente.",
+      "after": "Dacă proiectul implica sume, cheltuieli tehnice, condiții de vârstă, cod CAEN, amplasament sau contribuție proprie, merită verificat înainte de depunere. O analiză inițială poate identifica rapid documentele lipsa și riscurile evidente.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "digitalizare-imm/index.html"
+    },
+    {
+      "route": "/digitalizare-imm",
+      "location": "json-ld:$.@graph[5].mainEntity[5].acceptedAnswer.text",
+      "before": "Porneste de la solicitant, cod CAEN, localitate, investiție, buget și documentele disponibile. Dacă una dintre aceste piese nu se potriveste cu apelul activ, proiectul trebuie ajustat înainte de depunere.",
+      "after": "Porneste de la solicitant, cod CAEN, localitate, investiție, buget și documentele disponibile. Dacă una dintre aceste piese nu se potriveste cu apelul analizat, proiectul trebuie ajustat înainte de depunere.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "digitalizare-imm/index.html"
+    },
+    {
+      "route": "/digitalizare-imm",
+      "location": "json-ld:$.@graph[5].mainEntity[6].acceptedAnswer.text",
+      "before": "Nu merită sa aplici când nu poți dovedi eligibilitatea, când cheltuielile principale nu sunt permise, când cofinanțarea nu este acoperita sau când calendarul nu permite documente complete și verificabile.",
+      "after": "Nu merită sa aplici când nu poți dovedi eligibilitatea, când cheltuielile principale nu sunt permise, când contribuția proprie nu este acoperita sau când calendarul nu permite documente complete și verificabile.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "digitalizare-imm/index.html"
+    },
+    {
+      "route": "/digitalizare-imm",
+      "location": "json-ld:$.@graph[5].mainEntity[7].acceptedAnswer.text",
+      "before": "De regula sunt necesare documente de firma sau solicitant, documente pentru activitate și locație, date financiare, oferte, descrierea investiției și informații despre cofinanțare.",
+      "after": "De regula sunt necesare documente de firma sau solicitant, documente pentru activitate și locație, date financiare, oferte, descrierea investiției și informații despre contribuție proprie.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "digitalizare-imm/index.html"
+    },
+    {
+      "route": "/dr12-afir",
+      "location": "visible-copy",
+      "before": "DR12 AFIR 2026 este intervenția pentru investiții în consolidarea exploatațiilor tinerilor fermieri instalați și ale fermierilor instalați cu vârsta de până la 45 de ani. Ghidul DR 12 AFIR disponibil în documentația proiectului este o versiune consultativă, nu ghidul final. El indică o dimensiune economică de minimum 12.000 euro SO, un sprijin public de maximum 200.000 euro/proiect și două intensități maxime: 80% pentru tinerii fermieri care îndeplinesc condițiile specifice și 65% pentru celelalte categorii eligibile. O dată de lansare nu se deduce din consultare. Sesiunea, etapele lunare, alocarea și termenele se confirmă exclusiv prin ghidul activ și nota oficială de lansare.",
+      "after": "DR12 AFIR 2026 este intervenția pentru investiții în consolidarea exploatațiilor tinerilor fermieri instalați și ale fermierilor instalați cu vârsta de până la 45 de ani. Ghidul DR 12 AFIR disponibil în documentația proiectului este o versiune consultativă, nu ghidul final. El indică o dimensiune economică de minimum 12.000 euro SO, un sprijin public de maximum 200.000 euro/proiect și două intensități maxime: 80% pentru tinerii fermieri care îndeplinesc condițiile specifice și 65% pentru celelalte categorii eligibile. O dată de lansare nu se deduce din consultare. Sesiunea, etapele lunare, alocarea și termenele se confirmă exclusiv prin documentul oficial aplicabil și nota oficială de lansare.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "dr12-afir/index.html"
+    },
+    {
+      "route": "/dr12-afir",
+      "location": "visible-copy",
+      "before": "Căutările „dr12 afir”, „afir dr 12”, „ghid dr 12 afir”, „dr 12 ghid final” și „dr 12 afir lansare” se referă la aceeași intervenție; răspunsurile de mai jos separă explicit informațiile consultative de regulile care vor fi confirmate în apelul activ.",
+      "after": "Căutările „dr12 afir”, „afir dr 12”, „ghid dr 12 afir”, „dr 12 ghid final” și „dr 12 afir lansare” se referă la aceeași intervenție; răspunsurile de mai jos separă explicit informațiile consultative de regulile care vor fi confirmate în apelul analizat.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "dr12-afir/index.html"
+    },
+    {
+      "route": "/dr12-afir",
+      "location": "visible-copy",
+      "before": "Solicitantul trebuie să fie șef al exploatației și să exercite controlul efectiv. Persoanele fizice neautorizate nu sunt eligibile. Ghidul include PFA, întreprindere individuală, întreprindere familială și SRL în condițiile detaliate pentru asociat, administrator și control. Încadrarea juridică și profesională se reconfirmă în ghidul activ.",
+      "after": "Solicitantul trebuie să fie șef al exploatației și să exercite controlul efectiv. Persoanele fizice neautorizate nu sunt eligibile. Ghidul include PFA, întreprindere individuală, întreprindere familială și SRL în condițiile detaliate pentru asociat, administrator și control. Încadrarea juridică și profesională se reconfirmă în documentul oficial aplicabil.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "dr12-afir/index.html"
+    },
+    {
+      "route": "/dr12-afir",
+      "location": "visible-copy",
+      "before": "Ghidul consultativ cere dovada cofinanțării private prin extras de cont și/sau contract de credit. Dacă se folosește extrasul de cont, acesta este însoțit de angajamentul privind destinația a minimum 50% din disponibilul prezentat, conform regulilor descrise în document. Cerința exactă se reconfirmă la contractare în versiunea activă.",
+      "after": "Ghidul consultativ cere dovada contribuției proprii private prin extras de cont și/sau contract de credit. Dacă se folosește extrasul de cont, acesta este însoțit de angajamentul privind destinația a minimum 50% din disponibilul prezentat, conform regulilor descrise în document. Cerința exactă se reconfirmă la contractare în versiunea activă.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "dr12-afir/index.html"
+    },
+    {
+      "route": "/dr12-afir",
+      "location": "visible-copy",
+      "before": "cofinanțare, TVA și cheltuieli neeligibile neacoperite;",
+      "after": "contribuție proprie, TVA și cheltuieli neeligibile neacoperite;",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "dr12-afir/index.html"
+    },
+    {
+      "route": "/dr12-afir",
+      "location": "visible-copy",
+      "before": "Pregătește vârsta și forma solicitantului, situația APIA/ANSVSA/ANZ, calculul SO, componenta proiectului, lista investițiilor și sursa cofinanțării. Verificarea pornește de la documente și de la ghidul activ, nu de la plafonul maxim.",
+      "after": "Pregătește vârsta și forma solicitantului, situația APIA/ANSVSA/ANZ, calculul SO, componenta proiectului, lista investițiilor și sursa contribuției proprii. Verificarea pornește de la documente și de la documentul oficial aplicabil, nu de la plafonul maxim.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "dr12-afir/index.html"
+    },
+    {
+      "route": "/dr12-afir",
+      "location": "visible-copy",
+      "before": "Solicită verificarea eligibilității DR12",
+      "after": "Solicită verificarea inițială a eligibilității DR12",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "dr12-afir/index.html"
+    },
+    {
+      "route": "/dr12-afir",
+      "location": "visible-copy",
+      "before": "DR12 AFIR 2026 este intervenția pentru investiții în consolidarea exploatațiilor tinerilor fermieri instalați și ale fermierilor instalați cu vârsta de până la 45 de ani. Ghidul DR 12 AFIR disponibil în documentația proiectului este o versiune consultativă, nu ghidul final. Pragul economic, plafonul și intensitățile nu sunt publicate de FABER până la aprobarea lor editorială pe baza documentului operațional aplicabil apelului. O dată de lansare nu se deduce din consultare. Sesiunea, etapele lunare, alocarea și termenele se confirmă exclusiv prin ghidul activ și nota oficială de lansare.",
+      "after": "DR12 AFIR 2026 este intervenția pentru investiții în consolidarea exploatațiilor tinerilor fermieri instalați și ale fermierilor instalați cu vârsta de până la 45 de ani. Ghidul DR 12 AFIR disponibil în documentația proiectului este o versiune consultativă, nu ghidul final. Pragul economic, plafonul și intensitățile nu sunt publicate de FABER până la aprobarea lor editorială pe baza documentului operațional aplicabil apelului. O dată de lansare nu se deduce din consultare. Sesiunea, etapele lunare, alocarea și termenele se confirmă exclusiv prin documentul oficial aplicabil și nota oficială de lansare.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "dr12-afir/index.html"
+    },
+    {
+      "route": "/dr12-afir",
+      "location": "visible-copy",
+      "before": "Ghidul consultativ cere dovada cofinanțării private prin documentele financiare admise. Cerința exactă, inclusiv forma dovezii și eventualele angajamente asociate, se reconfirmă la contractare în versiunea activă.",
+      "after": "Ghidul consultativ cere dovada contribuției proprii private prin documentele financiare admise. Cerința exactă, inclusiv forma dovezii și eventualele angajamente asociate, se reconfirmă la contractare în versiunea activă.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "dr12-afir/index.html"
+    },
+    {
+      "route": "/dr14",
+      "location": "json-ld:$.@graph[5].mainEntity[1].name",
+      "before": "Ce finanțare și cofinanțare are DR14 AFIR?",
+      "after": "Ce finanțare și contribuție proprie are DR14 AFIR?",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "dr14/index.html"
     }
   ]
 }

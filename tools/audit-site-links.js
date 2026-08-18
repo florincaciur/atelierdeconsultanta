@@ -40,6 +40,7 @@ function trackedFiles(root = DEFAULT_ROOT) {
     })
       .split("\0")
       .filter(Boolean)
+      .filter((file) => fs.existsSync(path.join(root, file)))
       .filter(isAuditFile)
       .filter((file) => TEXT_EXTENSIONS.has(path.extname(file).toLowerCase()));
   } catch {

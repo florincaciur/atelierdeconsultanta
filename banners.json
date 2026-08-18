@@ -150,6 +150,54 @@
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
   {
+    "id": "slide-dr18-afir",
+    "programId": "dr18-afir",
+    "title": "DR-18 Investiții în floricultură, plante medicinale și aromatice",
+    "tag": "Ghid consultativ – depunerea nu este deschisă. Condițiile se pot modifica.",
+    "description": "Ghid consultativ DR 18: beneficiari, minimum 2.000 SO, grant de maximum 100.000 €, intensitate 85%/65%, investiții eligibile și punctaj.",
+    "ctaText": "Detalii program",
+    "ctaLink": "/dr18",
+    "icon": "ph-flower-lotus",
+    "image": "/assets/hero/hero-agriculture.webp",
+    "pageTitle": "DR 18 AFIR 2026 – investiții în floricultură, plante medicinale și aromatice",
+    "order": 6,
+    "estimate": null,
+    "active": true,
+    "programStatus": "consultare_publica",
+    "statusLabel": "Ghid consultativ – depunerea nu este deschisă. Condițiile se pot modifica.",
+    "verifiedAt": "2026-08-18",
+    "sourceName": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
+    "sourceUrl": "https://www.afir.ro/api/file?filename=Ghidul+solicitantului+DR+18+-+versiunea+consultativ%C4%83&filetype=pdf&url=%2Fmedia%2F4v0mpvi1%2Fghidul-solicitantului-dr-18-versiunea-consultativ%C4%83.pdf",
+    "sourceVersion": "Ghidul solicitantului DR-18 – versiunea consultativă, sesiunea 2026",
+    "applicationStart": null,
+    "applicationEnd": null,
+    "grantSummary": {
+      "minimum": null,
+      "maximum": {
+        "amount": 100000,
+        "currency": "EUR",
+        "unit": "proiect"
+      },
+      "budget": null
+    },
+    "cofinancingSummary": {
+      "intensity": [
+        {
+          "rate": 85,
+          "scope": "maximum pentru exploatații de 2.000–11.999 SO"
+        },
+        {
+          "rate": 65,
+          "scope": "maximum pentru exploatații de minimum 12.000 SO"
+        }
+      ],
+      "ownContribution": "Beneficiarul acoperă diferența eligibilă, cheltuielile neeligibile, TVA potrivit regimului fiscal și orice depășire de cost."
+    },
+    "fundingSummary": "Finanțare conform documentului aflat în consultare: 100.000 EUR/proiect; intensitate 85% (maximum pentru exploatații de 2.000–11.999 SO) / 65% (maximum pentru exploatații de minimum 12.000 SO); Beneficiarul acoperă diferența eligibilă, cheltuielile neeligibile, TVA potrivit regimului fiscal și orice depășire de cost.",
+    "officialGuideKey": "dr18",
+    "sourceOfTruth": "config/seo-programs.json#programs"
+  },
+  {
     "id": "slide-digitalizare-imm",
     "programId": "digitalizare-imm",
     "title": "Digitalizarea IMM-urilor",

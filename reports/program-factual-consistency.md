@@ -1,13 +1,13 @@
 # Audit de consistență factuală a programelor
 
-Data auditului: 2026-08-15
+Data auditului: 2026-08-18
 
 ## Rezultat
 
-- Programe în registrul canonic: 24
+- Programe în registrul canonic: 25
 - Erori: 0
 - Avertismente: 0
-- Statusuri: apel_inchis=2, calendar_estimativ=10, consultare_publica=4, ghid_aprobat_nedeschis=8
+- Statusuri: apel_inchis=2, calendar_estimativ=10, consultare_publica=5, ghid_aprobat_nedeschis=8
 - Mod strict pentru freshness: inactiv
 
 Auditul este local și determinist. Nu interoghează URL-urile oficiale, nu deduce statusul din răspunsuri HTTP și nu rescrie date factuale. Registrul aprobat din `config/seo-programs.json#programs` rămâne singura sursă de adevăr.
@@ -20,6 +20,7 @@ Auditul este local și determinist. Nu interoghează URL-urile oficiale, nu dedu
 | Fonduri regionale | calendar_estimativ | 2026-07-20 | — | — |
 | DR12 AFIR | consultare_publica | 2026-07-22 | — | — |
 | DR14 AFIR | ghid_aprobat_nedeschis | 2026-08-15 | 2026-09-01 | 2026-10-31 |
+| DR18 AFIR | consultare_publica | 2026-08-18 | — | — |
 | Start-Up Nation | calendar_estimativ | 2026-05-20 | — | — |
 | Femeia Antreprenor | calendar_estimativ | 2026-05-20 | — | — |
 | Digitalizare IMM | apel_inchis | 2026-07-22 | — | — |

@@ -1,10 +1,11 @@
 {
   "schemaVersion": 1,
-  "reviewedAt": "2026-07-21",
+  "reviewedAt": "2026-08-18",
   "sourceOfTruth": "config/seo-programs.json#programs",
   "featuredProgramSlugs": [
     "dr12-afir",
     "dr14-afir",
+    "dr18-afir",
     "afir-energie-autoconsum",
     "autoconsum-institutii-publice",
     "digitalizare-imm",

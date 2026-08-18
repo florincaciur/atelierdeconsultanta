@@ -75,7 +75,7 @@ function propertyMap(node) {
 }
 
 function financialClaimTokens(value) {
-  const text = String(value || "").toLocaleLowerCase("ro-RO");
+  const text = String(value || "").replace(/https?:\/\/\S+/giu, " ").toLocaleLowerCase("ro-RO");
   const tokens = new Set();
   const money = /((?:\d{1,3}(?:[.\s]\d{3})+|\d+)(?:,\d+)?)\s*(eur|euro|€|lei|ron)(?:\s*\/\s*(mw|proiect|beneficiar|fermă))?/giu;
   const millions = /(\d+(?:[,.]\d+)?)\s*(?:milioane?|mil\.?|m)\s*(eur|euro|€|lei|ron)/giu;

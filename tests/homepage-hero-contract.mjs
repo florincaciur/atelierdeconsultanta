@@ -13,6 +13,8 @@ const css = fs.readFileSync(path.join(ROOT, "assets", "homepage-hero.css"), "utf
 const $ = cheerio.load(html, { decodeEntities: false });
 const { programs } = loadProgramConfig();
 const latest = latestVerifiedProgram(programs);
+const navigation = JSON.parse(fs.readFileSync(path.join(ROOT, "config", "main-navigation.json"), "utf8"));
+const homepageProgramSlugs = navigation.programMenu.homepageProgramSlugs || navigation.programMenu.featuredProgramSlugs;
 
 assert(latest && isPublicProgram(latest) && hasOfficialSource(latest), "programul recent trebuie să fie public și verificat oficial");
 assert.equal($("#hero.homepage-decision-hero").length, 1, "trebuie să existe exact un hero decizional");
@@ -37,8 +39,9 @@ assert.equal($("#hero .hero-flow-svg").length, 1, "SVG-ul traseului FABER trebui
 assert.deepEqual($("#hero .hf-label").map((_, node) => $(node).text().trim()).get(), ["Idee", "Verificare", "Dosar", "Finanțare", "Implementare"]);
 assert.equal($("#hero .hero-flow-caption").text().trim(), "Fiecare etapă trebuie susținută de documentele folosite în etapa următoare.");
 assert.equal($("#hero [data-hero-programs]").length, 1, "meniul interactiv cu măsuri trebuie să fie sub SVG");
-assert.equal($("#hero [data-hero-program-item]").length, 9, "meniul interactiv trebuie să conțină nouă măsuri verificate");
+assert.equal($("#hero [data-hero-program-item]").length, homepageProgramSlugs.length, "meniul interactiv trebuie să corespundă configurației măsurilor verificate");
 assert.equal($("#hero [data-hero-program-item][href='/dr14']").length, 1, "DR 14 trebuie publicat în meniul hero");
+assert.equal($("#hero [data-hero-program-item][href='/dr18']").length, 1, "DR 18 trebuie publicat în meniul hero");
 assert.equal($("#hero [data-hero-program-item][href='/e-drive']").length, 1, "e-DRIVE trebuie publicat în meniul hero");
 assert.equal($("#hero .hero-flow-svg").nextAll("[data-hero-programs]").length, 1, "meniul măsurilor trebuie poziționat după SVG");
 assert.equal($("#hero [data-hero-program-item][href='/por-adr-nord-est']").length, 0, "ruta regională duplicată nu trebuie publicată în hero");

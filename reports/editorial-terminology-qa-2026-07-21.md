@@ -1,6 +1,6 @@
 # Raport QA terminologie și ton P0.14
 
-- URL-uri canonice verificate pentru afirmații interzise: 100
+- URL-uri canonice verificate pentru afirmații interzise: 101
 - Suprafețe P0.14 verificate contextual: 10
 - Probleme absolute: 0
 - Probleme contextuale: 0

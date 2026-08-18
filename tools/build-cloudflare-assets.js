@@ -171,7 +171,8 @@ function trackedFiles() {
       .execFileSync("git", ["ls-files", "-z", "--cached", "--others", "--exclude-standard"], { cwd: ROOT })
       .toString("utf8")
       .split("\0")
-      .filter(Boolean);
+      .filter(Boolean)
+      .filter((relativePath) => fs.existsSync(path.join(ROOT, relativePath)));
   } catch {
     const result = [];
     function walk(dir) {

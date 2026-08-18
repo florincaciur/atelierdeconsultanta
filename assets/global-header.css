@@ -357,6 +357,10 @@ main#main-content:focus {
   scroll-margin-top: 6rem;
 }
 
+main :where(a, p, li, dd, dt, h1, h2, h3, h4) {
+  overflow-wrap: anywhere;
+}
+
 .eligibility-whatsapp-dialog[hidden] { display: none !important; }
 .eligibility-whatsapp-dialog {
   position: fixed;

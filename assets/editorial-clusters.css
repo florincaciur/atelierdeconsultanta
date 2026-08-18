@@ -1,6 +1,14 @@
 .editorial-cluster {
   display: grid;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
   gap: clamp(2rem, 4vw, 3.5rem);
+}
+
+.editorial-cluster > * {
+  max-width: 100%;
+  min-width: 0;
 }
 
 .editorial-cluster__answer {

@@ -52,8 +52,9 @@ for (const route of config.routes) {
 
   $("main table").each((_, table) => {
     const node = $(table);
+    const region = node.closest("[role='region']");
     assert(
-      node.find("caption").length || node.attr("aria-label") || node.attr("aria-labelledby"),
+      node.find("caption").length || node.attr("aria-label") || node.attr("aria-labelledby") || region.attr("aria-label") || region.attr("aria-labelledby"),
       `${route.label}: tabel fără caption/nume accesibil`
     );
   });

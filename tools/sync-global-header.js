@@ -120,6 +120,13 @@ function withTargetNewlines(text, eol) {
   return text.replace(/\r\n/g, "\n").replace(/\n/g, eol);
 }
 
+function removeDuplicateHeaderStylesheets(html) {
+  const range = markedRange(html);
+  if (!range) return html;
+  const stylesheet = /<link\b(?=[^>]*\brel=["']stylesheet["'])(?=[^>]*\bhref=["']\/assets\/global-header\.css(?:\?[^"']*)?["'])[^>]*>\s*/giu;
+  return `${html.slice(0, range.start).replace(stylesheet, "")}${html.slice(range.start, range.end)}${html.slice(range.end).replace(stylesheet, "")}`;
+}
+
 function ensureSkipNavigation(html, eol) {
   const mainMatch = /<main\b[^>]*>/i.exec(html);
   if (!mainMatch) return html;
@@ -185,6 +192,7 @@ function synchronizeFile(relativePath, partial, options = {}) {
     }
   }
 
+  after = removeDuplicateHeaderStylesheets(after);
   after = ensureSkipNavigation(after, eol);
 
   if (after === before) return false;
@@ -221,6 +229,7 @@ module.exports = {
   markedRange,
   partialSource,
   removeHomepageLegacyBehavior,
+  removeDuplicateHeaderStylesheets,
   ensureSkipNavigation,
   synchronizeFile
 };

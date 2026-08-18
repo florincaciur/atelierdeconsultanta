@@ -360,6 +360,34 @@
       ]
     },
     {
+      "id": "dr18",
+      "route": "/dr18",
+      "contentType": "program",
+      "programId": "dr18-afir",
+      "governanceState": "public",
+      "author": "FABER – Atelier de Consultanță",
+      "authorRole": "Autor organizațional",
+      "reviewer": "Echipa editorială FABER",
+      "reviewerRole": "Revizuire editorială și conformitate",
+      "attributionType": "organization",
+      "personalNameConsent": false,
+      "verifiedAt": "2026-08-18",
+      "officialSourceName": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
+      "officialSourceUrl": "https://www.afir.ro/api/file?filename=Ghidul+solicitantului+DR+18+-+versiunea+consultativ%C4%83&filetype=pdf&url=%2Fmedia%2F4v0mpvi1%2Fghidul-solicitantului-dr-18-versiunea-consultativ%C4%83.pdf",
+      "sourceVersion": "Ghidul solicitantului DR-18 – versiunea consultativă, sesiunea 2026",
+      "nextReviewAt": "2026-09-17",
+      "lastMeaningfulUpdate": "2026-08-18",
+      "statusSnapshot": "consultare_publica",
+      "changelog": [
+        {
+          "date": "2026-08-18",
+          "summary": "Pagina DR 18 a fost creată din ghidul solicitantului atașat, cu statut consultativ, valori, condiții, investiții și grilă de selecție trasabile la document.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": true
+        }
+      ]
+    },
+    {
       "id": "dr14-afir-ferme-mici",
       "route": "/dr14-afir-ferme-mici",
       "contentType": "program",

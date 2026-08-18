@@ -214,7 +214,7 @@
     a:hover { text-decoration: underline; }
 
     /* ── NAV ── */
-    nav { background: var(--navy); padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 68px; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 16px rgba(0,0,0,0.18); }
+    .article-legacy-nav { background: var(--navy); padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 68px; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 16px rgba(0,0,0,0.18); }
     /* ✦ NAV LOGO — SVG inline FABER ✦ */
     .nav-logo { display: flex; align-items: center; }
     .nav-logo svg { height: 38px; width: auto; }
@@ -242,7 +242,9 @@
 
     /* ── MAIN LAYOUT ── */
     .article-layout { max-width: 1100px; margin: 0 auto; padding: 3rem 1.5rem; display: grid; grid-template-columns: 1fr 320px; gap: 3rem; align-items: start; }
-    @media (max-width: 900px) { .article-layout { grid-template-columns: 1fr; } .sidebar { order: -1; } }
+    @media (max-width: 900px) { .article-layout { grid-template-columns: minmax(0, 1fr); } .sidebar { order: -1; } }
+    .article-layout, .article-layout > *, .article-content, .sidebar { min-width: 0; max-width: 100%; }
+    .article-content a, .sidebar a { overflow-wrap: anywhere; }
 
     /* ── CONȚINUT ARTICOL ── */
     .article-content { max-width: 720px; }
@@ -325,10 +327,11 @@
   <link rel="stylesheet" href="/assets/design-profiles.css">
 
   <link rel="stylesheet" href="/assets/seo-plan-execution.css">  <link rel="stylesheet" href="/assets/breadcrumbs.css">
-  <script src="/assets/lead-attribution.js" defer></script>
-  <script src="/assets/analytics-events.js" defer></script>
+  <script src="/assets/lead-attribution.js" defer=""></script>
+  <script src="/assets/analytics-events.js" defer=""></script>
 </head>
-<body class="page-family-afir" data-analytics-page-type="content">
+<body class="page-family-afir" data-analytics-page-type="content"><a class="skip-link global-skip-link" href="#main-content">Sari la conținut</a>
+
 <!-- GLOBAL_HEADER_START --><link rel="stylesheet" href="/assets/global-header.css?v=20260809-1">
 <nav id="navbar" aria-label="Navigare principală" data-navigation-config="config/main-navigation.json">
   <div class="nav-container">
@@ -377,6 +380,7 @@
               <li><a href="/investitii-modernizarea-microintreprinderilor-apel-2" class="program-menu-link" data-program-id="modernizare-microintreprinderi-ne-2" data-program-status="consultare_publica" data-status-label="Consultare publică – depunerea nu este deschisă" data-verified-at="2026-06-02" data-source-url="https://adrnordest.ro/comentariiGhid/P1Microintreprinderi/Apel2/" data-analytics-event="nav_click" data-analytics-component="desktop_nav_program" data-analytics-cta-id="nav_programe_investitii_modernizarea_microintreprinderilor_apel_2" data-analytics-target="/investitii-modernizarea-microintreprinderilor-apel-2"><span>Modernizarea microîntreprinderilor – Apel 2</span><small>Consultare publică – depunerea nu este deschisă</small></a></li>
               <li><a href="/dr12-afir" class="program-menu-link" data-program-id="dr12-afir" data-program-status="consultare_publica" data-status-label="Ghid consultativ – depunerea nu este deschisă. Condițiile se pot modifica." data-verified-at="2026-07-22" data-source-url="https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/" data-analytics-event="nav_click" data-analytics-component="desktop_nav_program" data-analytics-cta-id="nav_programe_dr12_afir" data-analytics-target="/dr12-afir"><span>DR12 AFIR</span><small>Ghid consultativ – depunerea nu este deschisă. Condițiile se pot modifica.</small></a></li>
               <li><a href="/dr14" class="program-menu-link" data-program-id="dr14-afir" data-program-status="ghid_aprobat_nedeschis" data-status-label="Sesiune lansată – depuneri 1 septembrie–31 octombrie 2026" data-verified-at="2026-08-15" data-source-url="https://www.afir.ro/instrumente/sesiuni/sesiuni-primire-proiecte/" data-analytics-event="nav_click" data-analytics-component="desktop_nav_program" data-analytics-cta-id="nav_programe_dr14" data-analytics-target="/dr14"><span>DR14 AFIR</span><small>Sesiune lansată – depuneri 1 septembrie–31 octombrie 2026</small></a></li>
+              <li><a href="/dr18" class="program-menu-link" data-program-id="dr18-afir" data-program-status="consultare_publica" data-status-label="Ghid consultativ – depunerea nu este deschisă. Condițiile se pot modifica." data-verified-at="2026-08-18" data-source-url="https://www.afir.ro/api/file?filename=Ghidul+solicitantului+DR+18+-+versiunea+consultativ%C4%83&amp;filetype=pdf&amp;url=%2Fmedia%2F4v0mpvi1%2Fghidul-solicitantului-dr-18-versiunea-consultativ%C4%83.pdf" data-analytics-event="nav_click" data-analytics-component="desktop_nav_program" data-analytics-cta-id="nav_programe_dr18" data-analytics-target="/dr18"><span>DR18 AFIR</span><small>Ghid consultativ – depunerea nu este deschisă. Condițiile se pot modifica.</small></a></li>
               <li><a href="/digitalizare-imm" class="program-menu-link" data-program-id="digitalizare-imm" data-program-status="apel_inchis" data-status-label="Apel închis – depunerea nu este deschisă" data-verified-at="2026-07-22" data-source-url="https://mfe.gov.ro/pnrr-ordinul-nr-607-28-04-2026-pentru-modificarea-ghidului-solicitantului-digitalizarea-imm-urilor-grant-de-pana-la-100-000-euro-pe-intreprindere-care-sa-sprijine-imm-urile-in-adoptarea-tehnologii/" data-analytics-event="nav_click" data-analytics-component="desktop_nav_program" data-analytics-cta-id="nav_programe_digitalizare_imm" data-analytics-target="/digitalizare-imm"><span>Digitalizare IMM</span><small>Apel închis – depunerea nu este deschisă</small></a></li>
               <li><a href="/pro-infra" class="program-menu-link" data-program-id="pro-infra" data-program-status="ghid_aprobat_nedeschis" data-status-label="Schemă aprobată – depunerea nu este deschisă" data-verified-at="2026-07-22" data-source-url="https://legislatie.just.ro/Public/DetaliiDocument/306915" data-analytics-event="nav_click" data-analytics-component="desktop_nav_program" data-analytics-cta-id="nav_programe_pro_infra" data-analytics-target="/pro-infra"><span>PRO INFRA</span><small>Schemă aprobată – depunerea nu este deschisă</small></a></li>
               <li><a href="/afir-autoconsum-agroalimentar" class="program-menu-link" data-program-id="afir-energie-autoconsum" data-program-status="apel_inchis" data-status-label="Apel închis – sesiunea s-a încheiat la 14 august 2026" data-verified-at="2026-08-15" data-source-url="https://www.afir.ro/comunicate/deschiderea-sesiunii-pentru-investitiile-in-producerea-energiei-electrice-din-surse-regenerabile/" data-analytics-event="nav_click" data-analytics-component="desktop_nav_program" data-analytics-cta-id="nav_programe_afir_autoconsum_agroalimentar" data-analytics-target="/afir-autoconsum-agroalimentar"><span>AFIR Autoconsum Agroalimentar</span><small>Apel închis – sesiunea s-a încheiat la 14 august 2026</small></a></li>
@@ -442,6 +446,7 @@
           <p class="mobile-program-heading">Măsuri de finanțare</p><ul class="mobile-program-list">            <li><a href="/investitii-modernizarea-microintreprinderilor-apel-2" class="mobile-program-link" data-program-id="modernizare-microintreprinderi-ne-2" data-program-status="consultare_publica" data-status-label="Consultare publică – depunerea nu este deschisă" data-verified-at="2026-06-02" data-source-url="https://adrnordest.ro/comentariiGhid/P1Microintreprinderi/Apel2/" data-analytics-event="nav_click" data-analytics-component="mobile_nav_program" data-analytics-cta-id="nav_programe_investitii_modernizarea_microintreprinderilor_apel_2" data-analytics-target="/investitii-modernizarea-microintreprinderilor-apel-2"><span>Modernizarea microîntreprinderilor – Apel 2</span><small>Consultare publică – depunerea nu este deschisă</small></a></li>
             <li><a href="/dr12-afir" class="mobile-program-link" data-program-id="dr12-afir" data-program-status="consultare_publica" data-status-label="Ghid consultativ – depunerea nu este deschisă. Condițiile se pot modifica." data-verified-at="2026-07-22" data-source-url="https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/" data-analytics-event="nav_click" data-analytics-component="mobile_nav_program" data-analytics-cta-id="nav_programe_dr12_afir" data-analytics-target="/dr12-afir"><span>DR12 AFIR</span><small>Ghid consultativ – depunerea nu este deschisă. Condițiile se pot modifica.</small></a></li>
             <li><a href="/dr14" class="mobile-program-link" data-program-id="dr14-afir" data-program-status="ghid_aprobat_nedeschis" data-status-label="Sesiune lansată – depuneri 1 septembrie–31 octombrie 2026" data-verified-at="2026-08-15" data-source-url="https://www.afir.ro/instrumente/sesiuni/sesiuni-primire-proiecte/" data-analytics-event="nav_click" data-analytics-component="mobile_nav_program" data-analytics-cta-id="nav_programe_dr14" data-analytics-target="/dr14"><span>DR14 AFIR</span><small>Sesiune lansată – depuneri 1 septembrie–31 octombrie 2026</small></a></li>
+            <li><a href="/dr18" class="mobile-program-link" data-program-id="dr18-afir" data-program-status="consultare_publica" data-status-label="Ghid consultativ – depunerea nu este deschisă. Condițiile se pot modifica." data-verified-at="2026-08-18" data-source-url="https://www.afir.ro/api/file?filename=Ghidul+solicitantului+DR+18+-+versiunea+consultativ%C4%83&amp;filetype=pdf&amp;url=%2Fmedia%2F4v0mpvi1%2Fghidul-solicitantului-dr-18-versiunea-consultativ%C4%83.pdf" data-analytics-event="nav_click" data-analytics-component="mobile_nav_program" data-analytics-cta-id="nav_programe_dr18" data-analytics-target="/dr18"><span>DR18 AFIR</span><small>Ghid consultativ – depunerea nu este deschisă. Condițiile se pot modifica.</small></a></li>
             <li><a href="/digitalizare-imm" class="mobile-program-link" data-program-id="digitalizare-imm" data-program-status="apel_inchis" data-status-label="Apel închis – depunerea nu este deschisă" data-verified-at="2026-07-22" data-source-url="https://mfe.gov.ro/pnrr-ordinul-nr-607-28-04-2026-pentru-modificarea-ghidului-solicitantului-digitalizarea-imm-urilor-grant-de-pana-la-100-000-euro-pe-intreprindere-care-sa-sprijine-imm-urile-in-adoptarea-tehnologii/" data-analytics-event="nav_click" data-analytics-component="mobile_nav_program" data-analytics-cta-id="nav_programe_digitalizare_imm" data-analytics-target="/digitalizare-imm"><span>Digitalizare IMM</span><small>Apel închis – depunerea nu este deschisă</small></a></li>
             <li><a href="/pro-infra" class="mobile-program-link" data-program-id="pro-infra" data-program-status="ghid_aprobat_nedeschis" data-status-label="Schemă aprobată – depunerea nu este deschisă" data-verified-at="2026-07-22" data-source-url="https://legislatie.just.ro/Public/DetaliiDocument/306915" data-analytics-event="nav_click" data-analytics-component="mobile_nav_program" data-analytics-cta-id="nav_programe_pro_infra" data-analytics-target="/pro-infra"><span>PRO INFRA</span><small>Schemă aprobată – depunerea nu este deschisă</small></a></li>
             <li><a href="/afir-autoconsum-agroalimentar" class="mobile-program-link" data-program-id="afir-energie-autoconsum" data-program-status="apel_inchis" data-status-label="Apel închis – sesiunea s-a încheiat la 14 august 2026" data-verified-at="2026-08-15" data-source-url="https://www.afir.ro/comunicate/deschiderea-sesiunii-pentru-investitiile-in-producerea-energiei-electrice-din-surse-regenerabile/" data-analytics-event="nav_click" data-analytics-component="mobile_nav_program" data-analytics-cta-id="nav_programe_afir_autoconsum_agroalimentar" data-analytics-target="/afir-autoconsum-agroalimentar"><span>AFIR Autoconsum Agroalimentar</span><small>Apel închis – sesiunea s-a încheiat la 14 august 2026</small></a></li>
@@ -486,7 +491,7 @@
 <script src="/assets/global-header.js?v=20260809-1"></script>
 <!-- GLOBAL_HEADER_END -->
 <!-- BREADCRUMB_START -->
-  <nav class="breadcrumb" aria-label="Breadcrumb" data-breadcrumb>
+  <nav class="breadcrumb" aria-label="Breadcrumb" data-breadcrumb="">
     <ol>
       <li><a href="/">Acasă</a></li>
       <li><a href="/ghiduri">Ghiduri</a></li>
@@ -495,26 +500,8 @@
   </nav>
 <!-- BREADCRUMB_END -->
 
-<!-- ── NAVIGARE ── -->
-<nav>
-  <!-- ✦ Logo SVG FABER în blog article nav ✦ -->
-  <a class="nav-logo" href="/" aria-label="FABER - Atelier de Consultanță, acasă"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 44" width="240" height="44" aria-hidden="true">
-          <text x="0" y="32" font-family="Georgia,'Times New Roman',serif" font-size="28" font-weight="700" fill="#b84716" letter-spacing="3">FABER</text>
-          <path d="M118,22 L125,13 L132,22 L125,31 Z" fill="white" opacity="0.95"></path>
-          <text x="138" y="18" font-family="'Inter','Helvetica Neue',sans-serif" font-size="10" font-weight="600" fill="white" letter-spacing="2">ATELIER de</text>
-          <text x="138" y="33" font-family="'Inter','Helvetica Neue',sans-serif" font-size="10" font-weight="600" fill="white" letter-spacing="2">CONSULTANȚĂ</text>
-        </svg></a>
-  <div class="nav-links">
-    <a href="/">Acasă</a>
-    <a href="/ghiduri">Ghiduri</a>
-    <a href="/afir-autoconsum-agroalimentar">AFIR Fotovoltaice</a>
-
-    <a href="/contact" class="nav-cta btn-primary" data-analytics-event="cta_click" data-analytics-component="contact_cta" data-analytics-cta-id="blog_afir_fotovoltaice_ferme_2026_contact_1" data-analytics-target="/contact" data-analytics-cta-view="true" data-analytics-copy-variant="default">Solicită verificare eligibilitate</a>
-  </div>
-</nav>
-
 <!-- ── HERO ARTICOL ── -->
-<section class="article-hero hero--afir" data-design-family="afir">
+<main id="main-content" tabindex="-1"><section class="article-hero hero--afir" data-design-family="afir">
 <div class="article-tag">Fonduri Agricole · AFIR</div>
   <h1>AFIR fotovoltaice pentru ferme: autoconsum și verificări</h1>
   <div class="article-meta">
@@ -524,13 +511,10 @@
   </div>
 
     <div class="hero-actions">
-      <a class="btn-primary" href="/contact" data-analytics-event="cta_click" data-analytics-component="contact_cta" data-analytics-cta-id="blog_afir_fotovoltaice_ferme_2026_contact_2" data-analytics-target="/contact" data-analytics-cta-view="true" data-analytics-copy-variant="default">Verifică eligibilitatea</a>
+      <a class="btn-primary" href="/contact" data-analytics-event="cta_click" data-analytics-component="contact_cta" data-analytics-cta-id="blog_afir_fotovoltaice_ferme_2026_contact_1" data-analytics-target="/contact" data-analytics-cta-view="true" data-analytics-copy-variant="default">Verifică eligibilitatea</a>
       <a class="btn-secondary" href="/resurse">Vezi sursa oficială</a>
     </div>
-</section>
-
-<!-- ── LAYOUT PRINCIPAL ── -->
-<div class="article-layout">
+</section><div class="article-layout">
 
   <!-- ── CONȚINUT ── -->
   <article class="article-content">
@@ -703,10 +687,7 @@
 
   </aside>
 
-</div>
-
-<!-- ── FOOTER ── -->
-  <section class="vezi-si-section" aria-labelledby="vezi-si-title">
+</div><section class="vezi-si-section" aria-labelledby="vezi-si-title">
     <h2 id="vezi-si-title">Vezi și</h2>
     <ul class="vezi-si see-also-grid">
     <li class="see-also-card"><a href="/fonduri-europene"><span class="see-also-card-title">Fonduri europene</span><span class="see-also-card-text">Hub central pentru programe, eligibilitate, ghiduri și resurse utile.</span></a></li>
@@ -715,11 +696,19 @@
     <li class="see-also-card"><a href="/consultanta-pnrr-digitalizare"><span class="see-also-card-title">Consultanță PNRR și digitalizare</span><span class="see-also-card-text">Sprijin pentru proiecte PNRR, digitalizare IMM și bugete IT.</span></a></li>
     <li class="see-also-card"><a href="/start-up-nation-2026"><span class="see-also-card-title">Start-Up Nation</span><span class="see-also-card-text">Condiții, cheltuieli, idei și pași pentru Start-Up Nation.</span></a></li>
   </ul>
-  </section>
+  </section></main>
+
+<!-- ── LAYOUT PRINCIPAL ── -->
+
+
+<!-- ── FOOTER ── -->
+
 
 <footer>
   <p>© 2026 <a href="/">FABER – Atelier de Consultanță</a> · <a href="/politica-de-confidentialitate">Politica de Confidențialitate</a> · <a href="/gdpr">GDPR</a></p>
 <!-- CANONICAL_CONTACT_START --><span class="footer-contact-direct" aria-label="Contact direct"> · <a href="tel:+40769828338" data-analytics-event="contact_phone" data-analytics-component="contact_link" data-analytics-cta-id="phone_contact">0769 828 338</a> · <a href="tel:+40753326229" data-analytics-event="contact_phone" data-analytics-component="contact_link" data-analytics-cta-id="phone_contact">0753 326 229</a> · <a href="mailto:atelier.consultanta@gmail.com" data-analytics-event="contact_email" data-analytics-component="contact_link" data-analytics-cta-id="email_contact">atelier.consultanta@gmail.com</a></span><!-- CANONICAL_CONTACT_END --></footer>
+
+
 
 
 

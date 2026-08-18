@@ -1,10 +1,7 @@
 {
   "schemaVersion": 1,
   "reviewedAt": "2026-07-21",
-  "excludedRoutes": [
-    "/dr12-afir",
-    "/investitii-modernizarea-microintreprinderilor-apel-2"
-  ],
+  "excludedRoutes": [],
   "evidence": {
     "gscPages": "reports/gsc-page-priorities-2026-06-01.csv",
     "gscQueries": "reports/gsc-query-priorities-2026-06-01.csv",
@@ -131,6 +128,12 @@
       "comparison": "dr12_vs_dr14",
       "conversionAnchor": "Verifică dacă ferma se încadrează în DR 14",
       "conversionMicrocopy": "Concluzie orientativă pe documentele disponibile."
+    },
+    "dr18-afir": {
+      "instrument": "calculator_so",
+      "comparison": "documents_guide",
+      "conversionAnchor": "Verifică încadrarea în DR 18",
+      "conversionMicrocopy": "Vom cere forma solicitantului, culturile, calculul SO, investiția și criteriile de punctaj urmărite."
     },
     "start-up-nation": {
       "instrument": "eligibility_check",

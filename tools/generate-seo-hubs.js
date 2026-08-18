@@ -223,7 +223,7 @@ const pages = [
     audience: ["IMM-uri care vor software de gestiune sau automatizare", "firme care pregătesc investiții în cloud, securitate sau echipamente IT", "beneficiari care au nevoie să justifice transformarea digitală"],
     checks: ["nevoia de business și indicatorii digitali", "eligibilitatea software-ului, hardware-ului și serviciilor", "ofertele și specificațiile tehnice"],
     steps: ["cartografiază procesele actuale", "definește rezultatul digital urmărit", "verifică ghidul și cheltuielile eligibile", "pregătește dosarul cu justificări clare"],
-    links: [related.pnrr, ["/digitalizare-imm", "Digitalizare IMM"], ["/digitalizare-imm-pnrr", "Digitalizare IMM / PNRR"], ["/granturi-digitalizare-imm", "Granturi digitalizare IMM"], ["/consultanta-pnrr-digitalizare", "Consultanță PNRR digitalizare"]],
+    links: [related.pnrr, ["/digitalizare-imm", "Digitalizare IMM"], ["/digitalizare-imm-pnrr", "Digitalizare IMM / PNRR"], ["/consultanta-pnrr-digitalizare", "Consultanță PNRR digitalizare"]],
   },
   {
     slug: "fonduri-europene-femei-antreprenor",

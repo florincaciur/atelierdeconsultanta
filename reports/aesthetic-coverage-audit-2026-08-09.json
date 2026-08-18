@@ -28,6 +28,7 @@
       "bespokeSignals": [],
       "baselineSignals": [
         "design-profiles.css",
+        "long-form-layout.css",
         "program-heroes.css"
       ],
       "recommendation": null
@@ -1164,7 +1165,7 @@
     {
       "route": "/verificare-eligibilitate-fonduri-europene",
       "file": "verificare-eligibilitate-fonduri-europene/index.html",
-      "bodyClass": "page-family-service",
+      "bodyClass": "eligibility-refresh-2026 page-family-service",
       "status": "baseline_only",
       "bespokeSignals": [],
       "baselineSignals": [

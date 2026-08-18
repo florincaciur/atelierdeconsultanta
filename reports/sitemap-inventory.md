@@ -6,17 +6,17 @@ Generatorul include numai rute locale 200, indexabile si self-canonical. `lastmo
 
 - URL-uri raportate in auditul initial: 102
 - URL-uri in baseline-ul repository la inceputul P0.11: 92
-- URL-uri incluse acum: 100
-- URL-uri cu lastmod editorial verificabil: 22
+- URL-uri incluse acum: 101
+- URL-uri cu lastmod editorial verificabil: 23
 - URL-uri fara lastmod (omis intentionat): 78
-- sitemap-programs.xml: 22 (Pagini de programe)
+- sitemap-programs.xml: 23 (Pagini de programe)
 - sitemap-guides.xml: 30 (Ghiduri si continut editorial)
 - sitemap-core.xml: 48 (Pagini core, servicii, instrumente si juridice)
 
 ## Excluderi dupa motiv
 
 - duplicate_policy_pending_legal_consolidation: 1
-- missing_canonical: 3
+- missing_canonical: 4
 - noindex_meta: 65
 - noncanonical_file_variant: 2
 - redirect_source: 111
@@ -29,6 +29,7 @@ Generatorul include numai rute locale 200, indexabile si self-canonical. `lastmo
 | /google8bbb9999c523a3bd | google8bbb9999c523a3bd.html | missing_canonical | - |
 | /partials/global-header | partials/global-header.html | missing_canonical | - |
 | /templates/dr14-final-content | templates/dr14-final-content.html | missing_canonical | - |
+| /templates/dr18-final-content | templates/dr18-final-content.html | missing_canonical | - |
 | https://atelierdeconsultanta.ro/404 | 404.html | noindex_meta | - |
 | https://atelierdeconsultanta.ro/admin | admin/index.html | noindex_meta | - |
 | https://atelierdeconsultanta.ro/afir | afir.html | noindex_meta | - |

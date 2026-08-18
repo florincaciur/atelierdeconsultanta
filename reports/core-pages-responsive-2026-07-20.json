@@ -10,12 +10,13 @@
       "metrics": {
         "viewportWidth": 320,
         "scrollWidth": 320,
-        "pageHeight": 7050,
+        "pageHeight": 7125,
         "h1Count": 1,
         "h1WithinViewport": true,
         "corePageCount": 1,
         "supportCount": 1,
-        "supportRatio": 0.9076063829787234,
+        "editorialClusterCount": 0,
+        "supportRatio": 0.9010350877192983,
         "detailsOpen": false,
         "faqCount": 6,
         "contactFormCount": 0,
@@ -24,7 +25,8 @@
       "expanded": {
         "open": true,
         "allFaqVisible": true,
-        "overflow": false
+        "overflow": false,
+        "applicable": true
       },
       "screenshot": "reports\\core-pages-responsive-2026-07-20\\consultanta-320.png",
       "errors": []
@@ -38,12 +40,13 @@
       "metrics": {
         "viewportWidth": 320,
         "scrollWidth": 320,
-        "pageHeight": 6556,
+        "pageHeight": 10786,
         "h1Count": 1,
         "h1WithinViewport": true,
         "corePageCount": 1,
         "supportCount": 1,
-        "supportRatio": 0.901781288133008,
+        "editorialClusterCount": 0,
+        "supportRatio": 0.9356051826441684,
         "detailsOpen": false,
         "faqCount": 6,
         "contactFormCount": 0,
@@ -52,7 +55,8 @@
       "expanded": {
         "open": true,
         "allFaqVisible": true,
-        "overflow": false
+        "overflow": false,
+        "applicable": true
       },
       "screenshot": "reports\\core-pages-responsive-2026-07-20\\despre-faber-320.png",
       "errors": []
@@ -66,21 +70,23 @@
       "metrics": {
         "viewportWidth": 320,
         "scrollWidth": 320,
-        "pageHeight": 7892,
+        "pageHeight": 9185,
         "h1Count": 1,
         "h1WithinViewport": true,
         "corePageCount": 1,
-        "supportCount": 1,
-        "supportRatio": 0.9146168588443994,
+        "supportCount": 0,
+        "editorialClusterCount": 1,
+        "supportRatio": 0,
         "detailsOpen": false,
-        "faqCount": 6,
+        "faqCount": 0,
         "contactFormCount": 0,
         "cssLoaded": true
       },
       "expanded": {
-        "open": true,
+        "open": false,
         "allFaqVisible": true,
-        "overflow": false
+        "overflow": false,
+        "applicable": false
       },
       "screenshot": "reports\\core-pages-responsive-2026-07-20\\fonduri-europene-320.png",
       "errors": []
@@ -94,12 +100,13 @@
       "metrics": {
         "viewportWidth": 320,
         "scrollWidth": 320,
-        "pageHeight": 4983,
+        "pageHeight": 8597,
         "h1Count": 1,
         "h1WithinViewport": true,
         "corePageCount": 1,
         "supportCount": 1,
-        "supportRatio": 0.896701911499097,
+        "editorialClusterCount": 0,
+        "supportRatio": 0.7653414708619286,
         "detailsOpen": false,
         "faqCount": 6,
         "contactFormCount": 1,
@@ -108,7 +115,8 @@
       "expanded": {
         "open": true,
         "allFaqVisible": true,
-        "overflow": false
+        "overflow": false,
+        "applicable": true
       },
       "screenshot": "reports\\core-pages-responsive-2026-07-20\\contact-320.png",
       "errors": []
@@ -122,12 +130,13 @@
       "metrics": {
         "viewportWidth": 390,
         "scrollWidth": 390,
-        "pageHeight": 6105,
+        "pageHeight": 6202,
         "h1Count": 1,
         "h1WithinViewport": true,
         "corePageCount": 1,
         "supportCount": 1,
-        "supportRatio": 0.9070997133497134,
+        "editorialClusterCount": 0,
+        "supportRatio": 0.8998206223798775,
         "detailsOpen": false,
         "faqCount": 6,
         "contactFormCount": 0,
@@ -136,7 +145,8 @@
       "expanded": {
         "open": true,
         "allFaqVisible": true,
-        "overflow": false
+        "overflow": false,
+        "applicable": true
       },
       "screenshot": "reports\\core-pages-responsive-2026-07-20\\consultanta-390.png",
       "errors": []
@@ -150,12 +160,13 @@
       "metrics": {
         "viewportWidth": 390,
         "scrollWidth": 390,
-        "pageHeight": 5729,
+        "pageHeight": 8944,
         "h1Count": 1,
         "h1WithinViewport": true,
         "corePageCount": 1,
         "supportCount": 1,
-        "supportRatio": 0.9015835006109268,
+        "editorialClusterCount": 0,
+        "supportRatio": 0.9342279041815742,
         "detailsOpen": false,
         "faqCount": 6,
         "contactFormCount": 0,
@@ -164,7 +175,8 @@
       "expanded": {
         "open": true,
         "allFaqVisible": true,
-        "overflow": false
+        "overflow": false,
+        "applicable": true
       },
       "screenshot": "reports\\core-pages-responsive-2026-07-20\\despre-faber-390.png",
       "errors": []
@@ -178,21 +190,23 @@
       "metrics": {
         "viewportWidth": 390,
         "scrollWidth": 390,
-        "pageHeight": 6801,
+        "pageHeight": 7933,
         "h1Count": 1,
         "h1WithinViewport": true,
         "corePageCount": 1,
-        "supportCount": 1,
-        "supportRatio": 0.9170985884428761,
+        "supportCount": 0,
+        "editorialClusterCount": 1,
+        "supportRatio": 0,
         "detailsOpen": false,
-        "faqCount": 6,
+        "faqCount": 0,
         "contactFormCount": 0,
         "cssLoaded": true
       },
       "expanded": {
-        "open": true,
+        "open": false,
         "allFaqVisible": true,
-        "overflow": false
+        "overflow": false,
+        "applicable": false
       },
       "screenshot": "reports\\core-pages-responsive-2026-07-20\\fonduri-europene-390.png",
       "errors": []
@@ -206,12 +220,13 @@
       "metrics": {
         "viewportWidth": 390,
         "scrollWidth": 390,
-        "pageHeight": 4576,
+        "pageHeight": 7534,
         "h1Count": 1,
         "h1WithinViewport": true,
         "corePageCount": 1,
         "supportCount": 1,
-        "supportRatio": 0.8934556654283217,
+        "editorialClusterCount": 0,
+        "supportRatio": 0.7681344571276878,
         "detailsOpen": false,
         "faqCount": 6,
         "contactFormCount": 1,
@@ -220,7 +235,8 @@
       "expanded": {
         "open": true,
         "allFaqVisible": true,
-        "overflow": false
+        "overflow": false,
+        "applicable": true
       },
       "screenshot": "reports\\core-pages-responsive-2026-07-20\\contact-390.png",
       "errors": []
@@ -234,12 +250,13 @@
       "metrics": {
         "viewportWidth": 1440,
         "scrollWidth": 1440,
-        "pageHeight": 3740,
+        "pageHeight": 3764,
         "h1Count": 1,
         "h1WithinViewport": true,
         "corePageCount": 1,
         "supportCount": 1,
-        "supportRatio": 0.862454044117647,
+        "editorialClusterCount": 0,
+        "supportRatio": 0.8634805061105207,
         "detailsOpen": false,
         "faqCount": 6,
         "contactFormCount": 0,
@@ -248,7 +265,8 @@
       "expanded": {
         "open": true,
         "allFaqVisible": true,
-        "overflow": false
+        "overflow": false,
+        "applicable": true
       },
       "screenshot": "reports\\core-pages-responsive-2026-07-20\\consultanta-1440.png",
       "errors": []
@@ -262,12 +280,13 @@
       "metrics": {
         "viewportWidth": 1440,
         "scrollWidth": 1440,
-        "pageHeight": 3492,
+        "pageHeight": 5403,
         "h1Count": 1,
         "h1WithinViewport": true,
         "corePageCount": 1,
         "supportCount": 1,
-        "supportRatio": 0.8575359750859106,
+        "editorialClusterCount": 0,
+        "supportRatio": 0.9080256339070887,
         "detailsOpen": false,
         "faqCount": 6,
         "contactFormCount": 0,
@@ -276,7 +295,8 @@
       "expanded": {
         "open": true,
         "allFaqVisible": true,
-        "overflow": false
+        "overflow": false,
+        "applicable": true
       },
       "screenshot": "reports\\core-pages-responsive-2026-07-20\\despre-faber-1440.png",
       "errors": []
@@ -290,21 +310,23 @@
       "metrics": {
         "viewportWidth": 1440,
         "scrollWidth": 1440,
-        "pageHeight": 3813,
+        "pageHeight": 4872,
         "h1Count": 1,
         "h1WithinViewport": true,
         "corePageCount": 1,
-        "supportCount": 1,
-        "supportRatio": 0.8695498950957251,
+        "supportCount": 0,
+        "editorialClusterCount": 1,
+        "supportRatio": 0,
         "detailsOpen": false,
-        "faqCount": 6,
+        "faqCount": 0,
         "contactFormCount": 0,
         "cssLoaded": true
       },
       "expanded": {
-        "open": true,
+        "open": false,
         "allFaqVisible": true,
-        "overflow": false
+        "overflow": false,
+        "applicable": false
       },
       "screenshot": "reports\\core-pages-responsive-2026-07-20\\fonduri-europene-1440.png",
       "errors": []
@@ -318,12 +340,13 @@
       "metrics": {
         "viewportWidth": 1440,
         "scrollWidth": 1440,
-        "pageHeight": 2636,
+        "pageHeight": 4384,
         "h1Count": 1,
         "h1WithinViewport": true,
         "corePageCount": 1,
         "supportCount": 1,
-        "supportRatio": 0.8465300170713201,
+        "editorialClusterCount": 0,
+        "supportRatio": 0.7496685390054745,
         "detailsOpen": false,
         "faqCount": 6,
         "contactFormCount": 1,
@@ -332,7 +355,8 @@
       "expanded": {
         "open": true,
         "allFaqVisible": true,
-        "overflow": false
+        "overflow": false,
+        "applicable": true
       },
       "screenshot": "reports\\core-pages-responsive-2026-07-20\\contact-1440.png",
       "errors": []

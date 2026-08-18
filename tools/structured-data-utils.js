@@ -20,7 +20,6 @@ const CANONICAL_ROOT_HTML_ROUTES = new Set([
   "dr14",
   "digitalizare-imm",
   "femeia-antreprenor-2026",
-  "pro-infra",
   "start-up-nation-2026",
   "calculator-soc"
 ]);

@@ -19,6 +19,7 @@ const PROGRAM_ROUTES = Object.freeze([
   "/afir-autoconsum-agroalimentar",
   "/autoconsum-public-fotovoltaice-institutii-publice",
   "/dr14",
+  "/dr18",
   "/digitalizare-imm",
   "/femeia-antreprenor-2026",
   "/gal-afir",
@@ -31,6 +32,7 @@ const PROGRAM_ROUTES = Object.freeze([
 const PRIORITY_ROUTES = Object.freeze([
   "/dr12-afir",
   "/dr14",
+  "/dr18",
   "/investitii-modernizarea-microintreprinderilor-apel-2",
   "/afir-autoconsum-agroalimentar",
   "/pro-infra",
@@ -49,6 +51,7 @@ const FAMILY_BY_ROUTE = Object.freeze({
   "/afir-autoconsum-agroalimentar": "energy",
   "/autoconsum-public-fotovoltaice-institutii-publice": "energy",
   "/dr14": "afir",
+  "/dr18": "afir",
   "/digitalizare-imm": "digital",
   "/femeia-antreprenor-2026": "startup",
   "/gal-afir": "gal",

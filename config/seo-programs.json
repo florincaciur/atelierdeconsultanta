@@ -145,6 +145,7 @@
       "evergreenValue": true,
       "archivedNoindexDecision": null,
       "cardSummary": "Ghidul DR 12 este consultativ; depunerea nu este deschisă, iar condițiile se pot modifica.",
+      "quickAnswer": "DR 12 este intervenția AFIR aflată în etapa ghidului consultativ pentru consolidarea exploatațiilor tinerilor fermieri instalați și a fermierilor cu vârsta de până la 45 de ani. Depunerea nu este deschisă, iar regulile se pot modifica înaintea versiunii finale. Verificarea pornește de la profilul și vârsta solicitantului, forma juridică, istoricul instalării, dimensiunea economică SO, înregistrările APIA, ANSVSA sau ANZ și drepturile asupra exploatației. Investițiile, contribuția proprie, punctajul și documentele trebuie corelate cu sectorul și componenta potrivită. Calendarul, alocarea, pragurile lunare și condițiile definitive se confirmă numai după publicarea ghidului final și a anunțului oficial al sesiunii de către AFIR, înainte de depunere.",
       "metaTitle": "DR 12 AFIR 2026: eligibilitate și pregătirea dosarului | FABER",
       "metaDescription": "DR 12 este în etapa ghidului consultativ. Verifică profilul fermierului, SO, actele exploatației și investiția pentru a pregăti dosarul înaintea lansării.",
       "editorialDisclaimer": "Informația este bazată pe versiunea consultativă; condițiile se pot modifica înaintea ghidului final și a deschiderii apelului.",
@@ -249,6 +250,100 @@
         "calendar": {
           "label": "Depuneri: 1 septembrie–31 octombrie 2026",
           "note": "Calendar oficial AFIR; sesiunea se poate opri anticipat în condițiile anunțului."
+        }
+      },
+      "discovery": {
+        "parentHub": "/afir",
+        "applicantTypes": [
+          "fermieri_agroalimentar"
+        ],
+        "regions": [
+          "national"
+        ],
+        "investmentTypes": [
+          "agricultura"
+        ],
+        "listed": true
+      }
+    },
+    {
+      "slug": "dr18-afir",
+      "name": "DR-18 Investiții în floricultură, plante medicinale și aromatice",
+      "shortName": "DR18 AFIR",
+      "family": "afir-agricultura",
+      "status": "consultare_publica",
+      "statusLabel": "Ghid consultativ – depunerea nu este deschisă. Condițiile se pot modifica.",
+      "publicationState": "public",
+      "verifiedAt": "2026-08-18",
+      "sourceName": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
+      "sourceUrl": "https://www.afir.ro/api/file?filename=Ghidul+solicitantului+DR+18+-+versiunea+consultativ%C4%83&filetype=pdf&url=%2Fmedia%2F4v0mpvi1%2Fghidul-solicitantului-dr-18-versiunea-consultativ%C4%83.pdf",
+      "sourceVersion": "Ghidul solicitantului DR-18 – versiunea consultativă, sesiunea 2026",
+      "sourceType": "official",
+      "applicationStart": null,
+      "applicationEnd": null,
+      "grantSummary": {
+        "minimum": null,
+        "maximum": {
+          "amount": 100000,
+          "currency": "EUR",
+          "unit": "proiect"
+        },
+        "budget": null
+      },
+      "cofinancingSummary": {
+        "intensity": [
+          {
+            "rate": 85,
+            "scope": "maximum pentru exploatații de 2.000–11.999 SO"
+          },
+          {
+            "rate": 65,
+            "scope": "maximum pentru exploatații de minimum 12.000 SO"
+          }
+        ],
+        "ownContribution": "Beneficiarul acoperă diferența eligibilă, cheltuielile neeligibile, TVA potrivit regimului fiscal și orice depășire de cost."
+      },
+      "pageUrl": "/dr18",
+      "lastMeaningfulUpdate": "2026-08-18",
+      "evergreenValue": true,
+      "archivedNoindexDecision": null,
+      "cardSummary": "DR 18 este în consultare publică: maximum 100.000 EUR/proiect și intensitate de până la 85% pentru investiții în floricultură, plante medicinale, aromatice și ornamentale.",
+      "quickAnswer": "DR 18 este intervenția AFIR pentru investiții în floricultură, plante medicinale, aromatice și ornamentale. Ghidul atașat este consultativ, iar depunerea nu este deschisă; calendarul, alocarea și pragurile lunare vor fi stabilite prin anunțul sesiunii. Pot aplica fermieri organizați juridic, cooperative și grupuri sau organizații de producători, cu exploatații de minimum 2.000 SO și înregistrări agricole coerente. Sprijinul public este de maximum 100.000 EUR/proiect. Intensitatea ajunge la 85% pentru exploatații între 2.000 și 11.999 SO și la 65% de la 12.000 SO. Sunt vizate spațiile protejate, echipamentele, condiționarea, depozitarea, procesarea secundară, digitalizarea și investițiile secundare permise de ghid. Punctajul maxim este 100; fiecare criteriu trebuie demonstrat cu documente.",
+      "metaTitle": "DR 18 AFIR 2026: condiții, punctaj și maximum 100.000 € | FABER",
+      "metaDescription": "Ghid consultativ DR 18: beneficiari, minimum 2.000 SO, grant de maximum 100.000 €, intensitate 85%/65%, investiții eligibile și punctaj.",
+      "editorialDisclaimer": "Informația provine din ghidul DR-18 atașat, în versiune consultativă. Depunerea nu este deschisă, iar calendarul, alocarea și pragurile lunare se confirmă numai în anunțul oficial al sesiunii.",
+      "eligibleApplicants": [
+        "Fermieri organizați juridic, cu excepția persoanelor fizice.",
+        "Cooperative agricole și societăți cooperative care deservesc interesele membrilor fermieri.",
+        "Grupuri și organizații de producători recunoscute de MADR."
+      ],
+      "keyConditions": [
+        "Dimensiune economică de minimum 2.000 SO, calculată cu coeficienții SOC 2020.",
+        "Solicitantul figurează înaintea depunerii în APIA, ANSVSA și/sau ANZ, după caz, pe aceeași formă juridică.",
+        "Ajutor public de maximum 100.000 EUR/proiect; intensitate de maximum 85% pentru 2.000–11.999 SO și 65% de la 12.000 SO.",
+        "Dimensiunea economică poate scădea cu maximum 15% în implementare, fără a coborî sub 2.000 SO.",
+        "Condiționarea, depozitarea și procesarea folosesc în proporție de minimum 50% producția proprie sau a membrilor și rămân activități secundare.",
+        "Energia regenerabilă este dimensionată pentru autoconsum și nu urmărește statutul de prosumator.",
+        "Costurile generale sunt limitate la 10% pentru proiecte cu lucrări și la 3% pentru achiziții simple.",
+        "Cheltuielile de marketing sunt limitate la maximum 5% din valoarea eligibilă.",
+        "Pentru costuri de peste 15.000 EUR sunt necesare minimum două oferte; până la 15.000 EUR este acceptată o ofertă sau un printscreen verificabil.",
+        "Criteriul pentru spații protejate folosește ponderile peste 50%, 25–50% și 15–25%; energia regenerabilă punctată reprezintă minimum 2% din eligibil.",
+        "Un proiect nu poate dubla finanțarea și respectă demarcarea față de DR 14, DR 22, DR 25 și intervențiile energetice."
+      ],
+      "officialGuideKeys": [
+        "dr18"
+      ],
+      "presentation": {
+        "carousel": true,
+        "hero": true,
+        "order": 6,
+        "icon": "ph-flower-lotus",
+        "image": "/assets/hero/hero-agriculture.webp",
+        "pageTitle": "DR 18 AFIR 2026 – investiții în floricultură, plante medicinale și aromatice",
+        "beneficiary": "Fermieri organizați juridic, cooperative și grupuri de producători",
+        "calendar": {
+          "label": "Depunerea nu este deschisă",
+          "note": "Ghid consultativ; calendarul și pragurile lunare vor fi publicate separat de AFIR."
         }
       },
       "discovery": {
@@ -772,6 +867,7 @@
       "evergreenValue": true,
       "archivedNoindexDecision": null,
       "cardSummary": "Schema PRO INFRA este aprobată, dar depunerea nu este deschisă și nu există un interval oficial de depunere publicat.",
+      "quickAnswer": "PRO INFRA este o schemă aprobată pentru investiții care îmbunătățesc eficiența energetică a operatorilor vizați din infrastructura de transport. Depunerea nu este deschisă și nu există un calendar operațional oficial publicat, astfel că pagina separă prevederile schemei de condițiile unui apel viitor. Pregătirea pornește de la categoria solicitantului, activitatea eligibilă, consumurile și situația energetică inițială, amplasament, investiția propusă și economiile ce pot fi demonstrate. Echipamentele, lucrările, electrificarea și sistemele de monitorizare trebuie justificate tehnic, bugetate coerent și corelate cu indicatorii. Valorile, termenele, anexele și mecanismul de depunere se confirmă numai în documentele operaționale publicate de autoritatea competentă, înainte de aplicare.",
       "metaTitle": "PRO INFRA: schemă aprobată, apel nedeschis | FABER",
       "metaDescription": "Schema PRO INFRA este aprobată și verificată la 22.07.2026. Depunerea nu este deschisă; vezi Ordinul MTI nr. 2.292/29.12.2025.",
       "editorialDisclaimer": "Schema este aprobată, dar depunerea nu este deschisă. Valorile și calendarul apelului nu se publică până la apariția documentelor operaționale oficiale.",
@@ -2102,6 +2198,161 @@
       "factualGovernanceRef": "#/programs/dr14-afir"
     },
     {
+      "slug": "dr18",
+      "output": "dr18.html",
+      "redirects": [
+        "/dr18.html",
+        "/dr18/index.html",
+        "/dr18-afir",
+        "/dr18-afir/",
+        "/dr18-afir.html",
+        "/dr-18-afir",
+        "/dr-18-afir/",
+        "/dr-18-afir.html"
+      ],
+      "type": "program",
+      "schemaType": "GovernmentService",
+      "template": "editorial-program",
+      "category": "AFIR",
+      "h1": "DR 18 AFIR 2026 – investiții în floricultură, plante medicinale și aromatice",
+      "policyContribution": "Intervenția sprijină investițiile din floricultură și producția de plante medicinale, aromatice și ornamentale, inclusiv modernizarea, condiționarea și valorificarea secundară la nivelul exploatației.",
+      "audience": [
+        "fermieri organizați juridic care activează în floricultură sau cultivă plante medicinale, aromatice ori ornamentale",
+        "cooperative agricole și societăți cooperative care deservesc interesele membrilor fermieri",
+        "grupuri și organizații de producători recunoscute de MADR"
+      ],
+      "eligibility": [
+        "exploatația are minimum 2.000 SO și este înregistrată în evidențele agricole aplicabile",
+        "solicitantul folosește aceeași formă juridică în APIA, ANSVSA sau ANZ și în cererea de finanțare",
+        "investiția aparține sectoarelor DR 18 și este dimensionată pentru activitatea documentată",
+        "cofinanțarea și cheltuielile neeligibile pot fi acoperite din surse demonstrabile"
+      ],
+      "mandatory": [
+        "calcul SO pe baza coeficienților SOC 2020 și documente suport",
+        "documente juridice și agricole pe aceeași formă de organizare",
+        "drepturi valabile asupra terenurilor, spațiilor și amplasamentului",
+        "oferte independente și justificări tehnice pentru investițiile propuse",
+        "surse pentru contribuția proprie, TVA și costurile neeligibile"
+      ],
+      "eligibleExpenses": [
+        "spații protejate, echipamente și dotări pentru producția floricolă și culturile eligibile",
+        "condiționare, depozitare, procesare secundară și comercializare secundară la nivelul fermei",
+        "digitalizare, agricultură de precizie și active necorporale legate de proiect",
+        "irigații, energie regenerabilă pentru autoconsum și investiții de mediu, ca elemente secundare în condițiile ghidului"
+      ],
+      "ineligibleExpenses": [
+        "bunuri și echipamente second-hand",
+        "terenuri, clădiri existente, animale, plante anuale și drepturi de producție sau de plată",
+        "transport de persoane, cap tractor, UTV și vehicule nespecializate de marfă",
+        "TVA recuperabilă, costuri dublu finanțate și cheltuieli începute nepermis de devreme"
+      ],
+      "scoring": [
+        "agricultură ecologică poate aduce maximum 20 de puncte",
+        "spațiile protejate pot aduce maximum 25 de puncte",
+        "investițiile moderne, de mediu și eficiență a resurselor pot aduce maximum 35 de puncte",
+        "apartenența la o formă asociativă economică poate aduce 20 de puncte"
+      ],
+      "steps": [
+        "verifică forma solicitantului, registrele agricole și dimensiunea SO",
+        "încadrează investiția și separă componentele principale de cele secundare",
+        "simulează punctajul numai pe criterii documentabile",
+        "construiește bugetul cu contribuția proprie, TVA și rezervă",
+        "reconfirmă ghidul, anexele și anunțul sesiunii înainte de depunere"
+      ],
+      "evaluation": [
+        "coerența dintre registre, SO, suprafețe, culturi și forma juridică",
+        "eligibilitatea, proporționalitatea și legătura fiecărei cheltuieli cu exploatația",
+        "documentele care susțin punctajul și evitarea dublei finanțări sau a condițiilor artificiale"
+      ],
+      "examples": [
+        "exploatație floricolă care construiește sau modernizează spații protejate și instalează irigații eficiente",
+        "producător de plante medicinale care adaugă condiționare, depozitare și procesare secundară",
+        "cooperativă care investește în echipamente comune pentru producția membrilor eligibili"
+      ],
+      "faq": [
+        [
+          "Este deschisă depunerea DR 18?",
+          "Nu. Documentul analizat este versiunea consultativă; calendarul și pragurile lunare vor fi publicate separat prin anunțul sesiunii."
+        ],
+        [
+          "Care este finanțarea maximă DR 18?",
+          "Ghidul consultativ prevede un ajutor public de maximum 100.000 EUR pentru un proiect."
+        ],
+        [
+          "Care este intensitatea sprijinului?",
+          "Maximum 85% pentru exploatații de 2.000–11.999 SO și maximum 65% pentru exploatații de minimum 12.000 SO."
+        ],
+        [
+          "Cine poate aplica la DR 18?",
+          "Fermieri organizați juridic, cooperative și societăți cooperative care deservesc membri fermieri, precum și grupuri sau organizații de producători recunoscute de MADR. Persoanele fizice nu sunt eligibile."
+        ],
+        [
+          "Ce dimensiune economică este necesară?",
+          "Exploatația trebuie să aibă minimum 2.000 SO. În implementare poate scădea cu cel mult 15%, fără să coboare sub pragul minim."
+        ],
+        [
+          "Pot fi finanțate solarii sau sere?",
+          "Da, spațiile protejate pot fi eligibile dacă respectă cerințele tehnice din ghid, inclusiv structura, folia UV, ventilarea și irigarea obligatorie."
+        ],
+        [
+          "Sunt eligibile energia regenerabilă și irigațiile?",
+          "Pot fi incluse ca investiții secundare în condițiile ghidului. Energia se dimensionează pentru autoconsum, fără statut de prosumator, iar irigațiile trebuie să respecte regulile de eficiență și apă."
+        ],
+        [
+          "Cum se calculează punctajul?",
+          "Punctajul maxim este 100: maximum 20 pentru agricultură ecologică, 25 pentru spații protejate, 35 pentru modernizare, mediu și resurse și 20 pentru asociere economică."
+        ]
+      ],
+      "related": [
+        {
+          "href": "/afir",
+          "label": "Programe și consultanță AFIR"
+        },
+        {
+          "href": "/calculator-soc",
+          "label": "Calculator SO"
+        },
+        {
+          "href": "/verificare-eligibilitate-fonduri-europene",
+          "label": "Verificare eligibilitate"
+        },
+        {
+          "href": "/dr14",
+          "label": "Compară cu DR 14"
+        }
+      ],
+      "sourceKeys": [
+        "dr18"
+      ],
+      "heroIcon": "ph-flower-lotus",
+      "officialGuideKey": "dr18",
+      "guideCtaLabel": "Vezi ghidul consultativ DR 18",
+      "contentSections": 12,
+      "finalCtaText": "Trimite forma juridică, culturile, calculul SO, amplasamentul, investițiile și bugetul pentru o verificare raportată la versiunea activă a ghidului.",
+      "heroPrimaryCta": "Cere verificarea inițială pentru DR 18",
+      "finalPrimaryCta": "Cere verificarea inițială pentru DR 18",
+      "inlineCtaTitle": "Verifică proiectul înainte de oferte",
+      "inlineCtaText": "SO, sectorul, punctajul și componentele secundare trebuie să descrie aceeași investiție.",
+      "decisionClose": "DR 18 este potrivit când exploatația și investiția sunt documentate coerent, punctajul este demonstrabil și contribuția proprie este acoperită.",
+      "updatedAt": "2026-08-18",
+      "minWords": 1600,
+      "minFaq": 8,
+      "commonMistakes": [
+        "prezentarea ghidului consultativ drept apel deschis sau ghid final",
+        "calcul SO sub 2.000 sau necorelat cu registrele agricole",
+        "confundarea intensității de 85% cu regula aplicabilă oricărei dimensiuni economice",
+        "investiții secundare care devin activitatea principală a proiectului",
+        "energie dimensionată pentru vânzare, nu pentru autoconsum",
+        "oferte insuficiente, necomparabile sau de la furnizori dependenți",
+        "punctaj declarat fără documentele ecologice, tehnice sau asociative",
+        "dublă finanțare ori demarcare neclară față de DR 14 și alte intervenții"
+      ],
+      "ctaText": "Cere verificarea inițială pentru DR 18",
+      "secondaryCtaText": "Calculează dimensiunea SO",
+      "programId": "dr18-afir",
+      "factualGovernanceRef": "#/programs/dr18-afir"
+    },
+    {
       "slug": "dr14-afir-ferme-mici",
       "output": "dr14-afir-ferme-mici.html",
       "redirectTo": "/dr14",
@@ -2205,7 +2456,7 @@
           "Investiția supradimensionată față de fermă, documentele nealiniate și cofinanțarea tratată superficial."
         ],
         [
-          "Poate FABER verifică eligibilitatea?",
+          "Poate FABER să verifice eligibilitatea?",
           "Da. Verificarea pornește de la datele fermei, documente, SO/SOC, investiție, buget și ghidul activ, fără promisiune de aprobare."
         ]
       ],

@@ -555,7 +555,7 @@ button:focus-visible,
 .program-table td {
   color: var(--text-soft);
 }
-@media (max-width: 640px) {
+@media (max-width: 900px) {
   .program-table {
     min-width: 0;
     table-layout: fixed;

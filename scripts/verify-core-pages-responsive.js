@@ -77,6 +77,7 @@ async function main() {
             h1WithinViewport: Boolean(h1Rect && h1Rect.left >= -2 && h1Rect.right <= innerWidth + 2),
             corePageCount: document.querySelectorAll("body.core-page").length,
             supportCount: document.querySelectorAll(".core-search-support").length,
+            editorialClusterCount: document.querySelectorAll(".editorial-cluster").length,
             supportRatio: support ? (support.getBoundingClientRect().top + scrollY) / pageHeight : 0,
             detailsOpen: Boolean(details?.open),
             faqCount: support?.querySelectorAll(".faq-item").length || 0,
@@ -90,18 +91,24 @@ async function main() {
         if (metrics.scrollWidth > metrics.viewportWidth + 1) errors.push(`horizontal overflow ${metrics.scrollWidth}/${metrics.viewportWidth}`);
         if (metrics.h1Count !== 1 || !metrics.h1WithinViewport) errors.push("H1 missing or clipped");
         if (metrics.corePageCount !== 1 || !metrics.cssLoaded) errors.push("core page stylesheet missing");
-        if (metrics.supportCount !== 1 || metrics.detailsOpen || metrics.faqCount !== 6) errors.push("footer documentation structure invalid");
-        if (metrics.supportRatio < .68) errors.push(`documentation starts too early (${metrics.supportRatio.toFixed(2)})`);
+        const usesDocumentationDisclosure = slug !== "fonduri-europene";
+        if (usesDocumentationDisclosure && (metrics.supportCount !== 1 || metrics.detailsOpen || metrics.faqCount !== 6)) errors.push("footer documentation structure invalid");
+        if (usesDocumentationDisclosure && metrics.supportRatio < .68) errors.push(`documentation starts too early (${metrics.supportRatio.toFixed(2)})`);
+        if (!usesDocumentationDisclosure && metrics.editorialClusterCount !== 1) errors.push("funding hub editorial structure invalid");
         if (slug === "contact" && metrics.contactFormCount !== 1) errors.push("contact form missing");
 
-        await page.locator(".core-search-details > summary").click();
-        const expanded = await page.evaluate(() => ({
-          open: document.querySelector(".core-search-details")?.open,
-          allFaqVisible: [...document.querySelectorAll(".core-search-support .faq-item")].every((item) => item.getBoundingClientRect().height > 0),
-          overflow: document.documentElement.scrollWidth > innerWidth
-        }));
-        if (!expanded.open || !expanded.allFaqVisible || expanded.overflow) errors.push("expanded documentation is inaccessible or causes overflow");
-        await page.locator(".core-search-details > summary").click();
+        let expanded = { open: false, allFaqVisible: true, overflow: false, applicable: false };
+        if (usesDocumentationDisclosure) {
+          await page.locator(".core-search-details > summary").click();
+          expanded = await page.evaluate(() => ({
+            open: document.querySelector(".core-search-details")?.open,
+            allFaqVisible: [...document.querySelectorAll(".core-search-support .faq-item")].every((item) => item.getBoundingClientRect().height > 0),
+            overflow: document.documentElement.scrollWidth > innerWidth,
+            applicable: true
+          }));
+          if (!expanded.open || !expanded.allFaqVisible || expanded.overflow) errors.push("expanded documentation is inaccessible or causes overflow");
+          await page.locator(".core-search-details > summary").click();
+        }
 
         const screenshot = path.join(OUTPUT, `${slug}-${viewport.width}.png`);
         await page.screenshot({ path: screenshot, fullPage: false });

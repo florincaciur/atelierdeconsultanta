@@ -39,6 +39,7 @@
     var privateOutput = root.querySelector("[data-dr14-private]");
     var rateOutput = root.querySelector("[data-dr14-rate]");
     var message = root.querySelector("[data-dr14-cap-message]");
+    if (!number || !range || !grantOutput || !totalOutput || !privateOutput || !rateOutput || !message) return;
     function render(raw, source) {
       var cost = Math.max(0, Math.min(500000, Number(raw) || 0));
       var grant = Math.min(cost * .85, 50000);
