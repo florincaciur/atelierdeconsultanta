@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-08-09T12:35:29.885Z",
+  "checkedAt": "2026-08-18T13:36:43.498Z",
   "requestedEnvironment": "local",
   "stagingDescription": "nerulat",
   "releaseDecision": "PASS",
@@ -35,7 +35,7 @@
       "urls": [
         "config/seo-programs.json"
       ],
-      "evidence": "Contract registru: 24 programe verificate pe meniu, homepage, carduri, pagini și JSON-LD.",
+      "evidence": "Contract registru: 25 programe verificate pe meniu, homepage, carduri, pagini și JSON-LD.",
       "retest": "Reexecută verificarea factual_sources după remediere/aprobare."
     },
     {
@@ -105,7 +105,7 @@
       "urls": [
         "_redirects"
       ],
-      "evidence": "Redirect map PASS: 144 rules, 0 loops, 0 chains, 0 sitemap redirects, 0 internal links to redirects. | Cloudflare domain SEO worker tests passed (135 static redirects verified in one hop).",
+      "evidence": "Redirect map PASS: 136 rules, 0 loops, 0 chains, 0 sitemap redirects, 0 internal links to redirects. | Cloudflare domain SEO worker tests passed (127 static redirects verified in one hop).",
       "retest": "Reexecută verificarea redirects după remediere/aprobare."
     },
     {
@@ -118,7 +118,7 @@
       "urls": [
         "/sitemap.xml"
       ],
-      "evidence": "Verified sitemap index with 100 canonical URLs; 22 verified lastmod values.",
+      "evidence": "Verified sitemap index with 104 canonical URLs; 26 verified lastmod values.",
       "retest": "Reexecută verificarea sitemap după remediere/aprobare."
     },
     {
@@ -131,7 +131,7 @@
       "urls": [
         "/sitemap.xml"
       ],
-      "evidence": "Editorial copy contract passed: 100 canonical URLs, zero forbidden template labels or control-list forms. | Editorial terminology contract passed: 100 canonical URLs and 10 P0.14 surfaces.",
+      "evidence": "Editorial copy contract passed: 104 canonical URLs, zero forbidden template labels or control-list forms. | Editorial terminology contract passed: 104 canonical URLs and 10 P0.14 surfaces.",
       "retest": "Reexecută verificarea editorial după remediere/aprobare."
     },
     {
