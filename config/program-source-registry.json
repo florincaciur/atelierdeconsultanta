@@ -1,0 +1,179 @@
+{
+  "schemaVersion": 1,
+  "registryReviewDate": "2026-08-22",
+  "factualSnapshotDate": "2026-08-18",
+  "programRegistry": "config/seo-programs.json#programs",
+  "sourceCatalog": "official-guides.json",
+  "approvalRegistry": "config/program-status-approvals.json",
+  "missingEvidencePolicy": "Un rol fără referință este afișat ca neidentificat separat în sursele oficiale înregistrate; golul nu dovedește inexistența documentului și nu poate fi completat prin presupunere.",
+  "supplementalSources": {
+    "afir-dr18-guide-annexes": {
+      "title": "Detalii și anexe DR-18",
+      "authority": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
+      "documentType": "ghid final și anexe",
+      "url": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-18/",
+      "publishedAt": "2026-08-04",
+      "verifiedAt": "2026-08-22"
+    },
+    "afir-energy-program": {
+      "title": "Schema de Energie",
+      "authority": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
+      "documentType": "pagină oficială program",
+      "url": "https://www.afir.ro/finantare/finantare-in-agricultura/schema-de-energie/",
+      "publishedAt": null,
+      "verifiedAt": "2026-08-22"
+    },
+    "afir-energy-guide-annexes": {
+      "title": "Detalii și Anexe Schemă ENERGIE — Ghidul solicitantului V7 și documentele sesiunii 2026",
+      "authority": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
+      "documentType": "ghid final și anexe",
+      "url": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-schema-energie/",
+      "publishedAt": "2026-06-09",
+      "verifiedAt": "2026-08-22"
+    },
+    "afir-energy-session-2026": {
+      "title": "265 de milioane de euro pentru sesiunea Schema de Energie — 15.06.2026–14.08.2026",
+      "authority": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
+      "documentType": "anunț oficial de sesiune",
+      "url": "https://www.afir.ro/comunicate/265-de-milioane-de-euro-pentru-investitii-in-producerea-energiei-electrice/",
+      "publishedAt": "2026-06-09",
+      "verifiedAt": "2026-08-22"
+    },
+    "afir-energy-clarification-2026": {
+      "title": "Măsuri AFIR pentru indisponibilitatea sistemului ANCPI — completare",
+      "authority": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
+      "documentType": "clarificare oficială de sesiune",
+      "url": "https://www.afir.ro/comunicate/masuri-afir-pentru-atenuarea-efectelor-provocate-de-indisponibilitatea-sistemului-ancpi-completare/",
+      "publishedAt": "2026-07-29",
+      "verifiedAt": "2026-08-22"
+    }
+  },
+  "programs": [
+    {
+      "programId": "program-regional-nord-est",
+      "roles": { "programPage": [{ "ref": "program", "label": "Registrul oficial al apelurilor Programului Regional Nord-Est" }], "guide": [], "annexes": [], "schemeOrder": [], "sessionAnnouncement": [], "corrigenda": [], "clarifications": [] },
+      "notes": "Pagină agregată. Statutul și calendarul trebuie verificate pentru fiecare apel; o stare de apel nu se propagă asupra întregului program."
+    },
+    {
+      "programId": "fonduri-regionale",
+      "roles": { "programPage": [{ "ref": "program", "label": "Catalogul oficial MySMIS2021 al finanțărilor 2021–2027" }], "guide": [], "annexes": [], "schemeOrder": [], "sessionAnnouncement": [], "corrigenda": [], "clarifications": [] },
+      "notes": "Pagină agregată pentru programe regionale; ghidurile și sesiunile se urmăresc la nivelul apelului selectat."
+    },
+    {
+      "programId": "dr12-afir",
+      "roles": { "programPage": [{ "ref": "program", "label": "Comunicarea AFIR privind consultarea DR-12" }], "guide": [{ "ref": "approval:evidence:0", "label": "Ghidul solicitantului DR-12 — versiunea consultativă (PDF AFIR)" }], "annexes": [], "schemeOrder": [], "sessionAnnouncement": [], "corrigenda": [], "clarifications": [] },
+      "notes": "Documentul înregistrat este consultativ; termenul pentru observații este încheiat și nu există dovadă de sesiune deschisă."
+    },
+    {
+      "programId": "dr14-afir",
+      "roles": { "programPage": [{ "ref": "program", "label": "Pagina AFIR pentru sesiuni de primire proiecte" }], "guide": [{ "ref": "approval:evidence:1", "label": "Detalii și documentație DR-14 (AFIR)" }], "annexes": [{ "ref": "approval:evidence:1", "label": "Detalii și anexe DR-14 (AFIR)" }], "schemeOrder": [], "sessionAnnouncement": [{ "ref": "guide:dr14", "label": "Anunțul cererii de proiecte DR-14, publicat la 14.08.2026" }], "corrigenda": [], "clarifications": [] },
+      "notes": "Sesiune programată 01.09.2026–31.10.2026. Eventualele erate, clarificări, suspendări sau închideri anticipate trebuie urmărite separat."
+    },
+    {
+      "programId": "dr18-afir",
+      "roles": { "programPage": [{ "ref": "program", "label": "Pagina AFIR pentru sesiuni de primire proiecte" }], "guide": [{ "ref": "registry:afir-dr18-guide-annexes", "label": "Ghidul final DR-18" }], "annexes": [{ "ref": "registry:afir-dr18-guide-annexes", "label": "Anexele DR-18" }], "schemeOrder": [], "sessionAnnouncement": [{ "ref": "guide:dr18", "label": "Anunțul cererii de proiecte DR-18, publicat la 14.08.2026" }], "corrigenda": [], "clarifications": [] },
+      "notes": "Sesiune programată 01.09.2026–31.10.2026. Ghidul final și anexele au pagină oficială separată de anunțul sesiunii."
+    },
+    {
+      "programId": "start-up-nation",
+      "roles": { "programPage": [{ "ref": "program", "label": "Transparența înscrierilor Start-Up Nation 2024 — MINIMIS" }], "guide": [{ "ref": "guide:startup", "label": "Procedura oficială referită de registru" }], "annexes": [], "schemeOrder": [], "sessionAnnouncement": [], "corrigenda": [], "clarifications": [] },
+      "notes": "Depunerea persoanelor juridice este închisă. Registrul nu consemnează separat finalizarea întregii proceduri."
+    },
+    {
+      "programId": "femeia-antreprenor",
+      "roles": { "programPage": [{ "ref": "program", "label": "Ordinea finală la evaluare Femeia Antreprenor 2024 — MINIMIS" }], "guide": [], "annexes": [], "schemeOrder": [], "sessionAnnouncement": [], "corrigenda": [], "clarifications": [] },
+      "notes": "Ordinea finală la evaluare dovedește o etapă ulterioară depunerii, nu finalizarea integrală a programului."
+    },
+    {
+      "programId": "digitalizare-imm",
+      "roles": { "programPage": [{ "ref": "program", "label": "Pagina MIPE pentru Ordinul nr. 607/28.04.2026" }], "guide": [{ "ref": "guide:digitalizare", "label": "Ghidul Digitalizarea IMM-urilor, modificat prin Ordinul nr. 607/2026" }], "annexes": [], "schemeOrder": [{ "ref": "approval:evidence:0", "label": "Ordinul MIPE nr. 607/28.04.2026 (PDF oficial)" }], "sessionAnnouncement": [], "corrigenda": [], "clarifications": [] },
+      "notes": "Apel închis. Modificarea ghidului nu constituie dovadă pentru o sesiune nouă ori redeschisă."
+    },
+    {
+      "programId": "modernizare-microintreprinderi-ne-2",
+      "roles": { "programPage": [{ "ref": "program", "label": "Pagina oficială ADR Nord-Est pentru Apelul 2" }], "guide": [{ "ref": "guide:por-ne-apel-2", "label": "Ghidul publicat în consultare pentru Apelul 2" }], "annexes": [], "schemeOrder": [], "sessionAnnouncement": [], "corrigenda": [], "clarifications": [] },
+      "notes": "Consultarea 30.01.2026–13.03.2026 este închisă; forma finală și o eventuală sesiune trebuie confirmate separat."
+    },
+    {
+      "programId": "fondul-modernizare-autoconsum",
+      "roles": { "programPage": [{ "ref": "program", "label": "Catalogul oficial MySMIS2021" }], "guide": [], "annexes": [], "schemeOrder": [], "sessionAnnouncement": [], "corrigenda": [], "clarifications": [] },
+      "notes": "Apelurile înregistrate sunt marcate FINALIZAT în MySMIS; documentația fiecărei ediții nu este separată în catalogul local de surse."
+    },
+    {
+      "programId": "fondul-modernizare-regenerabile",
+      "roles": { "programPage": [{ "ref": "program", "label": "Catalogul oficial MySMIS2021" }], "guide": [], "annexes": [], "schemeOrder": [], "sessionAnnouncement": [], "corrigenda": [], "clarifications": [] },
+      "notes": "Apelurile înregistrate sunt marcate FINALIZAT în MySMIS; documentația fiecărei ediții nu este separată în catalogul local de surse."
+    },
+    {
+      "programId": "afir-energie-autoconsum",
+      "roles": { "programPage": [{ "ref": "registry:afir-energy-program", "label": "Pagina oficială Schema de Energie" }], "guide": [{ "ref": "registry:afir-energy-guide-annexes", "label": "Ghidul solicitantului Schema Energie Autoconsum V7" }], "annexes": [{ "ref": "registry:afir-energy-guide-annexes", "label": "Anexele Schemei de Energie pentru sesiunea 2026" }], "schemeOrder": [{ "ref": "registry:afir-energy-guide-annexes", "label": "Ghidul aprobat prin OMADR nr. 180/09.06.2026" }], "sessionAnnouncement": [{ "ref": "registry:afir-energy-session-2026", "label": "Anunțul oficial AFIR pentru sesiunea 15.06.2026–14.08.2026" }], "corrigenda": [], "clarifications": [{ "ref": "registry:afir-energy-clarification-2026", "label": "Clarificarea AFIR din 29.07.2026 privind documentele cadastrale" }] },
+      "latestOfficialUpdateRef": { "ref": "registry:afir-energy-clarification-2026", "label": "Clarificarea AFIR pentru sesiunea Schema de Energie 2026" },
+      "notes": "Fereastra de depunere este închisă; închiderea sesiunii nu este echivalată cu finalizarea întregii proceduri. URL-ul principal din registry-ul operațional a răspuns 404 la auditul live din 22.08.2026; sursele stabile de mai sus sunt verificate, iar migrarea URL-ului în toate suprafețele publice rămâne în afara Task 02."
+    },
+    {
+      "programId": "autoconsum-institutii-publice",
+      "roles": { "programPage": [{ "ref": "program", "label": "Catalogul oficial MySMIS2021" }], "guide": [], "annexes": [], "schemeOrder": [{ "ref": "guide:autoconsum-publici", "label": "Referința oficială MySMIS pentru apelul destinat entităților publice" }], "sessionAnnouncement": [], "corrigenda": [], "clarifications": [] },
+      "notes": "Apelul este marcat FINALIZAT în MySMIS; registry-ul local nu separă actul normativ de pagina catalogului."
+    },
+    {
+      "programId": "pro-infra",
+      "roles": { "programPage": [{ "ref": "program", "label": "Schema PRO INFRA în Portalul Legislativ" }], "guide": [], "annexes": [], "schemeOrder": [{ "ref": "guide:pro-infra-order", "label": "Ordinul MTI nr. 2.292/29.12.2025 și schema PRO INFRA" }], "sessionAnnouncement": [], "corrigenda": [], "clarifications": [] },
+      "notes": "Schema este aprobată și consemnată ca fiind în revizuire; nu este înregistrat un interval efectiv de depunere."
+    },
+    {
+      "programId": "apeluri-gal",
+      "roles": { "programPage": [{ "ref": "program", "label": "Platforma oficială AFIR GAL" }], "guide": [{ "ref": "guide:dr36-leader", "label": "Ghidurile și anexele DR-36/LEADER, prin platforma AFIR GAL" }], "annexes": [{ "ref": "guide:dr36-leader", "label": "Anexele DR-36/LEADER, prin platforma AFIR GAL" }], "schemeOrder": [], "sessionAnnouncement": [], "corrigenda": [], "clarifications": [] },
+      "notes": "Fiecare GAL are sesiuni distincte. La verificarea live din 22.08.2026, pagina agregată afișa 0 anunțuri și 0 apeluri în derulare; starea paginii rămâne UNCONFIRMED, nu OPEN."
+    },
+    {
+      "programId": "gal-afir-leader",
+      "roles": { "programPage": [{ "ref": "program", "label": "Platforma oficială AFIR GAL" }], "guide": [{ "ref": "guide:dr36-leader", "label": "Ghidurile și anexele DR-36/LEADER, prin platforma AFIR GAL" }], "annexes": [{ "ref": "guide:dr36-leader", "label": "Anexele DR-36/LEADER, prin platforma AFIR GAL" }], "schemeOrder": [], "sessionAnnouncement": [], "corrigenda": [], "clarifications": [] },
+      "notes": "Fiecare GAL are sesiuni distincte. La verificarea live din 22.08.2026, pagina agregată afișa 0 anunțuri și 0 apeluri în derulare; starea paginii rămâne UNCONFIRMED, nu OPEN."
+    },
+    {
+      "programId": "e-move-ro",
+      "roles": { "programPage": [{ "ref": "program", "label": "Schema e-MOVE RO în Portalul Legislativ" }], "guide": [{ "ref": "guide:emove", "label": "Ghidul e-MOVE RO publicat spre consultare, referit de sursa oficială" }], "annexes": [], "schemeOrder": [{ "ref": "guide:emove", "label": "Ordinul MTI nr. 755/06.08.2026 pentru actualizarea schemei e-MOVE RO" }], "sessionAnnouncement": [], "corrigenda": [], "clarifications": [] },
+      "notes": "Schema actualizată și ghidul consultativ nu dovedesc deschiderea unei sesiuni."
+    },
+    {
+      "programId": "pocidif-21",
+      "roles": { "programPage": [{ "ref": "program", "label": "Pagina oficială MIPE pentru Acțiunea PoCIDIF 2.1" }], "guide": [{ "ref": "guide:pocidif-21-guide", "label": "Ghidul solicitantului aprobat prin Ordinul MIPE nr. 965/23.06.2026" }], "annexes": [{ "ref": "guide:pocidif-21-guide", "label": "Pachetul oficial de 19 anexe" }], "schemeOrder": [{ "ref": "guide:pocidif-21-scheme", "label": "Schema de ajutor aprobată prin Ordinul MIPE nr. 875/15.06.2026" }], "sessionAnnouncement": [{ "ref": "guide:pocidif-21", "label": "Pagina oficială care publică sesiunea 30.06.2026–30.09.2026" }], "corrigenda": [], "clarifications": [{ "ref": "guide:pocidif-21-qa", "label": "Clarificări oficiale publicate la 09.07.2026" }] },
+      "notes": "OPEN este valabil numai cât fereastra oficială rămâne curentă și nu apare o suspendare, închidere anticipată sau corrigendă."
+    },
+    {
+      "programId": "pnrr",
+      "roles": { "programPage": [{ "ref": "program", "label": "Tabloul de bord oficial PNRR" }], "guide": [], "annexes": [], "schemeOrder": [], "sessionAnnouncement": [], "corrigenda": [], "clarifications": [] },
+      "notes": "Pagină agregată. Implementarea PNRR nu implică o sesiune de depunere deschisă pentru toate componentele."
+    },
+    {
+      "programId": "diaspora-investeste-acasa",
+      "roles": { "programPage": [{ "ref": "program", "label": "Comunicarea oficială «Investește Acasă»" }], "guide": [], "annexes": [], "schemeOrder": [], "sessionAnnouncement": [], "corrigenda": [], "clarifications": [] },
+      "notes": "Program anunțat; mecanismul de aplicare, documentația și sesiunea nu sunt înregistrate."
+    },
+    {
+      "programId": "e-drive",
+      "roles": { "programPage": [{ "ref": "program", "label": "Schema e-DRIVE în Portalul Legislativ" }], "guide": [], "annexes": [], "schemeOrder": [{ "ref": "guide:e-drive", "label": "Ordinul MTI nr. 742/03.08.2026 pentru actualizarea schemei e-DRIVE" }], "sessionAnnouncement": [], "corrigenda": [], "clarifications": [] },
+      "notes": "Actualizarea schemei nu constituie dovadă de sesiune deschisă."
+    },
+    {
+      "programId": "e-mobility-ro",
+      "roles": { "programPage": [{ "ref": "program", "label": "Schema e-Mobility RO în Portalul Legislativ" }], "guide": [], "annexes": [], "schemeOrder": [{ "ref": "guide:e-mobility-ro", "label": "Ordinul MTI nr. 746/05.08.2026 pentru actualizarea schemei e-Mobility RO" }], "sessionAnnouncement": [], "corrigenda": [], "clarifications": [] },
+      "notes": "Actualizarea schemei nu constituie dovadă de sesiune deschisă."
+    },
+    {
+      "programId": "fondul-modernizare-pc1-stocare",
+      "roles": { "programPage": [{ "ref": "program", "label": "Ordinul de aprobare PC1 Stocare stand-alone în Portalul Legislativ" }], "guide": [{ "ref": "guide:fm-pc1-stocare", "label": "Ghidul solicitantului PC1 Stocare stand-alone, aprobat la 17.08.2026" }], "annexes": [], "schemeOrder": [{ "ref": "guide:fm-pc1-stocare", "label": "Ordinul Ministerului Energiei nr. 915/17.08.2026" }], "sessionAnnouncement": [], "corrigenda": [], "clarifications": [] },
+      "notes": "Ghid final aprobat; perioada de depunere nu este anunțată și starea nu poate fi OPEN."
+    },
+    {
+      "programId": "programul-tranzitie-justa",
+      "roles": { "programPage": [{ "ref": "program", "label": "Catalogul oficial MySMIS2021" }], "guide": [], "annexes": [], "schemeOrder": [], "sessionAnnouncement": [], "corrigenda": [], "clarifications": [] },
+      "notes": "Pagină agregată. Starea se stabilește separat pentru fiecare apel al programului."
+    },
+    {
+      "programId": "fondul-de-modernizare",
+      "roles": { "programPage": [{ "ref": "program", "label": "Catalogul oficial MySMIS2021" }], "guide": [], "annexes": [], "schemeOrder": [], "sessionAnnouncement": [], "corrigenda": [], "clarifications": [] },
+      "notes": "Pagină agregată. Starea se stabilește separat pentru fiecare apel al Fondului pentru Modernizare."
+    }
+  ]
+}

@@ -1,0 +1,285 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-08-22",
+  "technicalVocabulary": "uppercase_english",
+  "applicationPolicy": "Depunerea este prezentată ca posibilă exclusiv pentru OPEN; toate celelalte stări au acceptsApplications=false.",
+  "statuses": [
+    {
+      "id": "ANNOUNCED",
+      "definition": "Instituția competentă a anunțat oficial intenția, programul sau viitorul apel, dar documentația operațională și fereastra de depunere nu sunt încă publicate complet.",
+      "evidenceRequired": [
+        "comunicat, program de lucru sau anunț publicat de autoritatea competentă",
+        "identificarea fără echivoc a programului ori a apelului anunțat"
+      ],
+      "acceptsApplications": false,
+      "publicLabel": "Program anunțat — depunerea nu este deschisă",
+      "forbiddenWording": [
+        "apel deschis",
+        "finanțare disponibilă acum",
+        "poți depune",
+        "deadline confirmat"
+      ],
+      "validTransitions": ["PREPARATION", "PUBLIC_CONSULTATION", "CONSULTATIVE_GUIDE", "CANCELLED", "UNCONFIRMED"]
+    },
+    {
+      "id": "PREPARATION",
+      "definition": "Autoritatea a confirmat că mecanismul sau documentația este în pregătire, fără o consultare publică activă, ghid final ori sesiune deschisă dovedită.",
+      "evidenceRequired": [
+        "calendar, program de lucru sau comunicare oficială care indică pregătirea",
+        "absența unei dovezi mai noi pentru consultare, programare sau deschidere"
+      ],
+      "acceptsApplications": false,
+      "publicLabel": "În pregătire — depunerea nu este deschisă",
+      "forbiddenWording": [
+        "apel deschis",
+        "ghid final",
+        "schema garantează finanțarea",
+        "data lansării este certă"
+      ],
+      "validTransitions": ["PUBLIC_CONSULTATION", "CONSULTATIVE_GUIDE", "FINAL_GUIDE", "CANCELLED", "UNCONFIRMED"]
+    },
+    {
+      "id": "PUBLIC_CONSULTATION",
+      "definition": "Autoritatea primește oficial observații asupra unui proiect de document într-o perioadă de consultare încă activă; trimiterea observațiilor nu este depunere de proiect.",
+      "evidenceRequired": [
+        "pagină oficială de consultare publică",
+        "document supus consultării și interval de consultare care include data curentă"
+      ],
+      "acceptsApplications": false,
+      "publicLabel": "În consultare publică — depunerea nu este deschisă",
+      "forbiddenWording": [
+        "apel deschis",
+        "depuneri deschise",
+        "condiții finale",
+        "ghid aprobat"
+      ],
+      "validTransitions": ["CONSULTATIVE_GUIDE", "FINAL_GUIDE", "PREPARATION", "CANCELLED", "UNCONFIRMED"]
+    },
+    {
+      "id": "CONSULTATIVE_GUIDE",
+      "definition": "Există un ghid explicit consultativ sau draft; perioada de consultare poate fi activă ori închisă, însă condițiile nu sunt finale.",
+      "evidenceRequired": [
+        "ghid oficial marcat consultativ, draft sau publicat pentru observații",
+        "versiunea și data documentului"
+      ],
+      "acceptsApplications": false,
+      "publicLabel": "Ghid consultativ publicat — depunerea nu este deschisă",
+      "forbiddenWording": [
+        "ghid final",
+        "condiții definitive",
+        "apel deschis",
+        "eligibilitate garantată"
+      ],
+      "validTransitions": ["PUBLIC_CONSULTATION", "FINAL_GUIDE", "PREPARATION", "CANCELLED", "UNCONFIRMED"]
+    },
+    {
+      "id": "FINAL_GUIDE",
+      "definition": "Ghidul final a fost aprobat ori publicat oficial, dar nu există încă dovadă suficientă că o sesiune de depunere este deschisă.",
+      "evidenceRequired": [
+        "ghid final oficial și actul de aprobare, dacă există",
+        "versiunea și data aplicabile",
+        "verificare separată a lipsei unei sesiuni deschise"
+      ],
+      "acceptsApplications": false,
+      "publicLabel": "Ghid final publicat — depunerea nu este deschisă",
+      "forbiddenWording": [
+        "apel deschis",
+        "poți depune acum",
+        "schema este deschisă",
+        "depuneri active"
+      ],
+      "validTransitions": ["APPROVED_SCHEME", "SCHEDULED", "OPEN", "SUSPENDED", "CANCELLED", "UNCONFIRMED"]
+    },
+    {
+      "id": "APPROVED_SCHEME",
+      "definition": "Schema de ajutor, ordinul sau cadrul juridic a fost aprobat, fără ca aprobarea să constituie singură dovadă de deschidere a unei sesiuni.",
+      "evidenceRequired": [
+        "act normativ, ordin sau schemă publicată de emitent ori în Portalul Legislativ/Monitorul Oficial",
+        "numărul, data și versiunea actului aplicabil",
+        "verificare separată a lipsei unei sesiuni deschise"
+      ],
+      "acceptsApplications": false,
+      "publicLabel": "Schemă aprobată — depunerea nu este deschisă",
+      "forbiddenWording": [
+        "apel deschis",
+        "poți aplica acum",
+        "depuneri active",
+        "aprobarea schemei deschide automat apelul"
+      ],
+      "validTransitions": ["PUBLIC_CONSULTATION", "FINAL_GUIDE", "SCHEDULED", "OPEN", "SUSPENDED", "CANCELLED", "UNCONFIRMED"]
+    },
+    {
+      "id": "SCHEDULED",
+      "definition": "Autoritatea a confirmat oficial o fereastră viitoare de depunere, iar data curentă este anterioară începerii; simpla trecere a timpului nu promovează automat starea la OPEN.",
+      "evidenceRequired": [
+        "anunț oficial de sesiune sau pagină oficială echivalentă",
+        "dată de început viitoare și dată de sfârșit confirmate",
+        "identificarea apelului și a autorității"
+      ],
+      "acceptsApplications": false,
+      "publicLabel": "Apel programat — depuneri între {startDate} și {endDate}",
+      "forbiddenWording": [
+        "apel deschis",
+        "depuneri active",
+        "poți depune acum",
+        "calendar estimativ"
+      ],
+      "validTransitions": ["OPEN", "SUSPENDED", "CANCELLED", "FINAL_GUIDE", "UNCONFIRMED"]
+    },
+    {
+      "id": "OPEN",
+      "definition": "Sesiunea acceptă depuneri la data curentă, conform unei dovezi oficiale aplicabile și unei ferestre confirmate neexpirate.",
+      "evidenceRequired": [
+        "anunț oficial de lansare, platformă oficială de depunere sau pagină oficială care confirmă sesiunea",
+        "data curentă inclusă între începutul și sfârșitul oficial",
+        "verificarea corrigenda, prelungirilor, suspendărilor și închiderilor anticipate"
+      ],
+      "acceptsApplications": true,
+      "publicLabel": "Apel deschis — depuneri până la {endDate}",
+      "forbiddenWording": [
+        "termen nelimitat",
+        "finanțare garantată",
+        "prelungit fără corrigendă sau comunicat oficial"
+      ],
+      "validTransitions": ["CLOSED", "SUSPENDED", "CANCELLED", "UNCONFIRMED"]
+    },
+    {
+      "id": "CLOSED",
+      "definition": "Fereastra de depunere s-a încheiat ori sesiunea a fost închisă; evaluarea, contractarea sau implementarea pot continua.",
+      "evidenceRequired": [
+        "termen oficial depășit fără prelungire sau comunicare oficială de închidere",
+        "verificarea eventualelor redeschideri și prelungiri"
+      ],
+      "acceptsApplications": false,
+      "publicLabel": "Apel închis — depunerea nu este deschisă",
+      "forbiddenWording": [
+        "apel deschis",
+        "poți depune",
+        "program finalizat",
+        "proiecte aprobate"
+      ],
+      "validTransitions": ["OPEN", "COMPLETED", "CANCELLED", "UNCONFIRMED"]
+    },
+    {
+      "id": "SUSPENDED",
+      "definition": "Autoritatea a suspendat oficial și temporar sesiunea sau procedura; depunerea nu este permisă până la o reluare expresă.",
+      "evidenceRequired": [
+        "comunicat, decizie sau mesaj al platformei oficiale care declară suspendarea",
+        "data efectului și sfera suspendării"
+      ],
+      "acceptsApplications": false,
+      "publicLabel": "Apel suspendat — depunerea nu este disponibilă",
+      "forbiddenWording": [
+        "apel deschis",
+        "pauză tehnică neconfirmată",
+        "se va relua la {date} fără dovadă oficială",
+        "poți depune"
+      ],
+      "validTransitions": ["OPEN", "CLOSED", "CANCELLED", "UNCONFIRMED"]
+    },
+    {
+      "id": "CANCELLED",
+      "definition": "Autoritatea a anulat oficial apelul, sesiunea sau procedura identificată; o relansare ulterioară este tratată ca proces nou.",
+      "evidenceRequired": [
+        "act, decizie sau comunicat oficial de anulare",
+        "identificarea exactă a apelului afectat și data anulării"
+      ],
+      "acceptsApplications": false,
+      "publicLabel": "Apel anulat — depunerea nu este deschisă",
+      "forbiddenWording": [
+        "apel închis",
+        "apel deschis",
+        "suspendat temporar",
+        "relansare sigură"
+      ],
+      "validTransitions": ["ANNOUNCED", "PREPARATION", "UNCONFIRMED"]
+    },
+    {
+      "id": "COMPLETED",
+      "definition": "Autoritatea marchează procedura ori apelul ca finalizat sau există dovadă oficială că etapele relevante s-au încheiat; această stare este mai puternică decât simpla închidere a depunerii.",
+      "evidenceRequired": [
+        "status oficial FINALIZAT/COMPLETED sau document oficial de finalizare",
+        "identificarea exactă a apelului ori ediției finalizate"
+      ],
+      "acceptsApplications": false,
+      "publicLabel": "Apel finalizat — depunerea nu este deschisă",
+      "forbiddenWording": [
+        "apel deschis",
+        "poți depune",
+        "program desființat",
+        "o nouă ediție este sigură"
+      ],
+      "validTransitions": ["ANNOUNCED", "PREPARATION", "SCHEDULED", "UNCONFIRMED"]
+    },
+    {
+      "id": "UNCONFIRMED",
+      "definition": "Dovada este insuficientă, contradictorie, expirată sau are o granularitate diferită de pagina evaluată; platforma nu afirmă un stadiu cert până la reverificare.",
+      "evidenceRequired": [
+        "consemnarea surselor verificate și a informației lipsă ori contradictorii",
+        "o nouă verificare în sursa primară înainte de atribuirea oricărei stări certe"
+      ],
+      "acceptsApplications": false,
+      "publicLabel": "Status neconfirmat — verifică sursa oficială",
+      "forbiddenWording": [
+        "apel deschis",
+        "apel închis cu certitudine",
+        "deadline confirmat",
+        "eligibilitate confirmată"
+      ],
+      "validTransitions": ["ANNOUNCED", "PREPARATION", "PUBLIC_CONSULTATION", "CONSULTATIVE_GUIDE", "FINAL_GUIDE", "APPROVED_SCHEME", "SCHEDULED", "OPEN", "CLOSED", "SUSPENDED", "CANCELLED", "COMPLETED"]
+    }
+  ],
+  "legacyCompatibility": {
+    "calendar_estimativ": {
+      "possibleCanonicalStatuses": ["ANNOUNCED", "PREPARATION", "SCHEDULED", "UNCONFIRMED"],
+      "rule": "Nu are mapare implicită la OPEN; se decide după granularitatea paginii și dovada oficială."
+    },
+    "consultare_publica": {
+      "possibleCanonicalStatuses": ["PUBLIC_CONSULTATION", "CONSULTATIVE_GUIDE", "UNCONFIRMED"],
+      "rule": "PUBLIC_CONSULTATION numai cât intervalul de consultare este activ; după închidere, un draft rămas public este CONSULTATIVE_GUIDE."
+    },
+    "ghid_aprobat_nedeschis": {
+      "possibleCanonicalStatuses": ["FINAL_GUIDE", "APPROVED_SCHEME", "SCHEDULED", "UNCONFIRMED"],
+      "rule": "Tipul documentului și existența unei ferestre viitoare confirmate decid starea; nu se promovează la OPEN."
+    },
+    "apel_deschis": {
+      "possibleCanonicalStatuses": ["OPEN", "UNCONFIRMED"],
+      "rule": "OPEN numai cu dovadă oficială de sesiune și fereastră curentă; o dovadă expirată sau contradictorie devine UNCONFIRMED."
+    },
+    "apel_inchis": {
+      "possibleCanonicalStatuses": ["CLOSED", "COMPLETED", "CANCELLED", "UNCONFIRMED"],
+      "rule": "CLOSED descrie doar depunerea încheiată; COMPLETED și CANCELLED cer dovezi oficiale distincte."
+    },
+    "arhivat": {
+      "possibleCanonicalStatuses": ["CLOSED", "COMPLETED", "CANCELLED", "UNCONFIRMED"],
+      "rule": "Arhivarea este o decizie editorială/indexare, nu un stadiu factual; pagina se clasifică după ultima dovadă oficială."
+    }
+  },
+  "programAssignments": {
+    "program-regional-nord-est": { "canonicalStatus": "UNCONFIRMED", "scope": "umbrella_program", "rationale": "Apelurile au stări și calendare distincte; pagina agregată nu poate moșteni o singură stare de apel." },
+    "fonduri-regionale": { "canonicalStatus": "UNCONFIRMED", "scope": "umbrella_program", "rationale": "Catalogul agregă programe și apeluri cu stări diferite." },
+    "dr12-afir": { "canonicalStatus": "CONSULTATIVE_GUIDE", "scope": "program_call", "rationale": "Ghidul este consultativ, iar intervalul de consultare este încheiat; depunerea nu este deschisă." },
+    "dr14-afir": { "canonicalStatus": "SCHEDULED", "scope": "session", "rationale": "Anunțul oficial indică o fereastră viitoare 01.09.2026–31.10.2026." },
+    "dr18-afir": { "canonicalStatus": "SCHEDULED", "scope": "session", "rationale": "Anunțul oficial indică o fereastră viitoare 01.09.2026–31.10.2026." },
+    "start-up-nation": { "canonicalStatus": "CLOSED", "scope": "edition", "rationale": "Înscrierile persoanelor juridice s-au încheiat; registry-ul nu consemnează finalizarea întregii proceduri." },
+    "femeia-antreprenor": { "canonicalStatus": "CLOSED", "scope": "edition", "rationale": "Depunerea ediției 2024 este închisă, iar ordinea finală la evaluare nu dovedește finalizarea întregii proceduri." },
+    "digitalizare-imm": { "canonicalStatus": "CLOSED", "scope": "program_call", "rationale": "Registry-ul confirmă depunerea închisă, fără o dovadă distinctă de finalizare." },
+    "modernizare-microintreprinderi-ne-2": { "canonicalStatus": "CONSULTATIVE_GUIDE", "scope": "program_call", "rationale": "Consultarea s-a încheiat, iar forma înregistrată este ghidul consultativ; apelul nu este deschis." },
+    "fondul-modernizare-autoconsum": { "canonicalStatus": "COMPLETED", "scope": "program_call", "rationale": "MySMIS marchează apelurile înregistrate drept FINALIZAT." },
+    "fondul-modernizare-regenerabile": { "canonicalStatus": "COMPLETED", "scope": "program_call", "rationale": "MySMIS marchează apelurile înregistrate drept FINALIZAT." },
+    "afir-energie-autoconsum": { "canonicalStatus": "CLOSED", "scope": "session", "rationale": "Sesiunea 15.06.2026–14.08.2026 s-a încheiat; nu există în registry o dovadă distinctă de finalizare a procedurii." },
+    "autoconsum-institutii-publice": { "canonicalStatus": "COMPLETED", "scope": "program_call", "rationale": "MySMIS marchează apelul drept FINALIZAT." },
+    "pro-infra": { "canonicalStatus": "APPROVED_SCHEME", "scope": "scheme", "rationale": "Schema este aprobată și în revizuire, fără fereastră oficială de depunere." },
+    "apeluri-gal": { "canonicalStatus": "UNCONFIRMED", "scope": "umbrella_program", "rationale": "Fiecare GAL are propriul apel și termen; starea agregată nu poate fi prezentată drept OPEN." },
+    "gal-afir-leader": { "canonicalStatus": "UNCONFIRMED", "scope": "umbrella_program", "rationale": "Fiecare GAL are propriul apel și termen; starea agregată nu poate fi prezentată drept OPEN." },
+    "e-move-ro": { "canonicalStatus": "APPROVED_SCHEME", "scope": "scheme", "rationale": "Actul înregistrat actualizează schema; nu există dovadă de sesiune deschisă." },
+    "pocidif-21": { "canonicalStatus": "OPEN", "scope": "session", "rationale": "Pagina oficială înregistrată confirmă sesiunea 30.06.2026–30.09.2026, iar fereastra include data verificării." },
+    "pnrr": { "canonicalStatus": "UNCONFIRMED", "scope": "umbrella_program", "rationale": "Componentele și apelurile PNRR au stări distincte; implementarea programului nu înseamnă depunere deschisă." },
+    "diaspora-investeste-acasa": { "canonicalStatus": "ANNOUNCED", "scope": "program", "rationale": "Există comunicare oficială despre program, dar mecanismul de aplicare nu este publicat." },
+    "e-drive": { "canonicalStatus": "APPROVED_SCHEME", "scope": "scheme", "rationale": "Actul înregistrat actualizează schema; nu există dovadă de sesiune deschisă." },
+    "e-mobility-ro": { "canonicalStatus": "APPROVED_SCHEME", "scope": "scheme", "rationale": "Actul înregistrat actualizează schema; nu există dovadă de sesiune deschisă." },
+    "fondul-modernizare-pc1-stocare": { "canonicalStatus": "FINAL_GUIDE", "scope": "program_call", "rationale": "Ghidul final este aprobat, iar perioada de depunere nu este anunțată." },
+    "programul-tranzitie-justa": { "canonicalStatus": "UNCONFIRMED", "scope": "umbrella_program", "rationale": "Apelurile din program au stări distincte în MySMIS." },
+    "fondul-de-modernizare": { "canonicalStatus": "UNCONFIRMED", "scope": "umbrella_program", "rationale": "Apelurile Fondului pentru Modernizare au stări distincte în MySMIS." }
+  }
+}
