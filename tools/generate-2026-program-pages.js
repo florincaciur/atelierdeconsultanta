@@ -103,7 +103,7 @@ function renderPage(program, content) {
   <meta property="og:type" content="website"><meta property="og:locale" content="ro_RO"><meta property="og:title" content="${e(program.metaTitle)}"><meta property="og:description" content="${e(program.metaDescription)}"><meta property="og:url" content="${canonical}"><meta property="og:image" content="${SITE}/og-image.jpg"><meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="/assets/seo-hub.css"><link rel="stylesheet" href="/assets/program-showcase-2026.css?v=20260809-1">
   <script type="application/ld+json">${JSON.stringify(schema).replace(/</g, "\\u003c")}</script>
-</head><body class="program-showcase-page page-family-program" data-page-type="program" data-program-id="${e(program.slug)}">
+</head><body class="program-showcase-page page-family-program" data-page-type="program" data-program-id="${e(program.id)}">
 ${HEADER}
 <main>
   <section class="program-hero" aria-labelledby="program-title">

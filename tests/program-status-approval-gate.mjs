@@ -24,7 +24,7 @@ const intentionalNoindex = new Set(
     .map((item) => item.route)
 );
 const { programs } = loadProgramConfig();
-const programById = new Map(programs.map((program) => [program.slug, program]));
+const programById = new Map(programs.map((program) => [program.id, program]));
 const approvalById = new Map(approvalConfig.programs.map((row) => [row.programId, row]));
 const banners = JSON.parse(fs.readFileSync(path.join(ROOT, "banners.json"), "utf8"));
 const header = cheerio.load(fs.readFileSync(path.join(ROOT, "partials", "global-header.html"), "utf8"), { decodeEntities: false });

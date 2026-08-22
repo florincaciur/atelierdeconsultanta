@@ -4,6 +4,8 @@ Data inspecției: **21 august 2026**
 Task: **00 — baseline complet și freeze de arhitectură**
 Commit inspectat înainte de modificări: `1e0bed69eb1f8f7bbdaf2321d37066d7b1fcbe51` (`main`, `origin/main`, `origin/master` după `git fetch origin --prune`)
 
+Actualizare controlată: **22 august 2026, Task 03 — registru unic pentru programele de finanțare**. Secțiunea „Arhitectura după Task 03” documentează diferențele față de baseline-ul istoric.
+
 Acest document descrie starea observată, nu propune o migrare. În Task 00 nu s-au schimbat rute, conținut public, statusuri, componente, stiluri, build sau deployment.
 
 ## Rezumat executiv
@@ -72,7 +74,7 @@ Conținutul critic pentru indexare este prezent în HTML-ul inițial al rutelor 
 | Aprobare status | `config/program-status-approvals.json` | 4 programe cu aprobare nominală: DR12, DR14, PRO INFRA, Digitalizare IMM |
 | Surse oficiale | `official-guides.json` | 34 intrări; artefact sincronizat, consumat și la runtime |
 | Bannere | `banners.json` | 23 bannere active; toate declară `sourceOfTruth=config/seo-programs.json#programs` |
-| Homepage programe | `config/homepage-programs.json` | 23 ID-uri prezentate; carusel fără autorotire |
+| Homepage programe | `config/seo-programs.json#programs[*].presentation` | Includerea și ordinea celor 23 de programe provin din registry; `homepage-programs.json` păstrează numai comportamentul componentei |
 | Familii/catalog | `config/program-family-hubs.json` | 5 huburi și taxonomii pentru solicitant/regiune/investiție |
 | Guvernanță editorială | `config/editorial-governance.json` | 38 înregistrări: 27 publice, 11 `pending_validation` |
 | Metadata editorială veche | `config/editorial-pages.json` | 6 înregistrări; paralelă cu guvernanța nouă |
@@ -295,11 +297,11 @@ Invarianta este păstrarea structurii semantice: breadcrumb, H1 unic, status fac
 
 | Domeniu | Candidat de păstrat |
 |---|---|
-| Fapte/status program | `config/seo-programs.json#programs`, cu aprobare în `program-status-approvals.json` |
+| Identitate/fapte/status program | `config/seo-programs.json#programs`; taxonomia definește vocabularul, iar approval registry păstrează dovada aprobării |
 | Conținut pagină | `config/seo-programs.json#pages`, până la o consolidare explicită a showcase/pilot |
 | Surse oficiale publice | Derivate din registry în `official-guides.json`; registry-ul rămâne autoritatea factuală |
-| Homepage/carousel | Lista editorială din `homepage-programs.json`; faptele din registry |
-| Familie/catalog | `program-family-hubs.json` + `program.discovery` |
+| Homepage/carousel/nav | `program.presentation`; config-urile componentelor păstrează numai comportament și copy de componentă |
+| Familie/catalog | `program.discovery`; `program-family-hubs.json` păstrează taxonomia și conținutul huburilor, nu liste de programe |
 | Metadata/entități | `schema-helpers.js` + `editorial-governance.json` pentru freshness |
 | Canonical inventory | `collectSiteState()` din `generate-sitemap.js`, nu liste manuale noi |
 | Header/nav | `main-navigation.json` → `partials/global-header.html` |
@@ -348,3 +350,19 @@ Până la o decizie explicită, taskurile următoare trebuie să păstreze:
 10. `release.json` ca dovadă a SHA-ului live.
 
 Orice remediere trebuie să reducă sursele paralele fără a rescrie simultan arhitectura, designul și conținutul.
+
+## Arhitectura după Task 03
+
+`config/seo-programs.json#programs` este registrul logic unic pentru fiecare program. Înregistrarea conține explicit `id` stabil, `slug`, `pageUrl` canonical, identitate editorială, statusul canonic și compatibilitatea legacy, justificarea statusului, faptele financiare disponibile, taxonomia de discovery, decizia de indexare, rolurile surselor oficiale și selecțiile pentru banner/catalog/hero/navigare.
+
+Maparea semantică păstrează convențiile existente: `name` este denumirea oficială, `shortName`/`presentation.pageTitle` acoperă numele de afișare, `sourceName` este autoritatea, `grantSummary` conține grantul și bugetul disponibile, `cofinancingSummary` conține intensitatea/contribuția, `eligibleApplicants` rezumă solicitanții, iar `discovery.regions`, `presentation.carousel` și `discovery.listed` reprezintă regiunea, `bannerEnabled` și `catalogEnabled`. Schema acceptă opțional `displayName`, `acronym`, `fund`, `documentStage`, `extensionData`, `officialSourceUpdatedAt`, `nextReviewAt`, `caenApplicability`, `soRequirement`, `eligibleApplicantSummary` și `relatedProgramIds`; lipsa unei informații oficiale nu obligă publicarea unui placeholder.
+
+Config-urile complementare nu mai atribuie fapte per program:
+
+- `program-status-taxonomy.json` definește cele 13 stări și tranzițiile, fără `programAssignments`;
+- `program-source-registry.json` este catalog pentru surse oficiale suplimentare, fără listă paralelă de programe;
+- `homepage-programs.json` păstrează numai comportamentul caruselului/gridului;
+- `main-navigation.json` păstrează structura navigării, nu liste de ID-uri de program;
+- `banners.json`, HTML-ul homepage, headerul global, family hubs, paginile programelor, JSON-LD, ghidurile și `llms.txt` sunt outputs materializate din registry și sunt controlate prin sync/check.
+
+Schema `config/program-registry.schema.json`, validatorul `tools/program-factual-governance.js` și reconcilierea din `tools/validate-program-registry.js` impun unicitatea ID/slug/canonical, taxonomia de status, validitatea relațiilor, paritatea registry–pagină–banner și dovada de sesiune pentru `OPEN`. Programul regional retras din catalog este declarat explicit `indexable=false`; celelalte înregistrări indexabile trebuie să aibă pagină canonical 200 cu același `data-program-id`.

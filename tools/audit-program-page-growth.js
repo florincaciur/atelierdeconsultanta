@@ -59,7 +59,7 @@ function audit(program, sitemap) {
   const structured = schemaText(schemas);
   const officialVisible = $(`a[href='${program.sourceUrl}']`).length > 0;
   const officialStructured = structured.includes(program.sourceUrl);
-  const statusNode = $(`[data-program-id='${program.slug}'][data-program-status]`).first();
+  const statusNode = $(`[data-program-id='${program.id}'][data-program-status]`).first();
   const statusMatches = statusNode.length > 0
     && statusNode.attr("data-program-status") === program.status
     && statusNode.attr("data-verified-at") === program.verifiedAt;

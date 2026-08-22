@@ -7,6 +7,7 @@ const cheerio = require("cheerio");
 const {
   ROOT,
   archivedRobotsDecision,
+  carouselPrograms,
   cofinancingSummaryText,
   fundingSummary,
   isPublicProgram,
@@ -49,8 +50,8 @@ function syncSeoConfig(config, programs) {
     if (page.redirectTo) continue;
     const program = byRoute.get(`/${page.slug}`);
     if (!program) continue;
-    page.programId = program.slug;
-    page.factualGovernanceRef = `#/programs/${program.slug}`;
+    page.programId = program.id;
+    page.factualGovernanceRef = `#/programs/${program.id}`;
     for (const key of ["programName", "title", "description", "funding", "programStatus", "applicationWindow", "quickAnswer", "cofinancingRows"]) {
       delete page[key];
     }
@@ -76,7 +77,7 @@ function syncGuides(guides, programs) {
     const primary = linkedPrograms.find((program) => program.officialGuideKeys?.[0] === key) || linkedPrograms[0];
     guides[key] = {
       ...(typeof guides[key] === "object" ? guides[key] : {}),
-      programIds: [...new Set(linkedPrograms.map((program) => program.slug))],
+      programIds: [...new Set(linkedPrograms.map((program) => program.id))],
       name: primary.sourceVersion,
       title: primary.sourceVersion,
       institution: primary.sourceName,
@@ -85,7 +86,7 @@ function syncGuides(guides, programs) {
       programStatus: primary.status,
       statusLabel: primary.statusLabel,
       verifiedAt: primary.verifiedAt,
-      isPrimaryFor: primary.slug,
+      isPrimaryFor: primary.id,
       sourceOfTruth: REGISTRY_REF
     };
     delete guides[key].sourceStatus;
@@ -96,13 +97,12 @@ function syncGuides(guides, programs) {
 
 function syncBanners(banners, programs) {
   const existing = new Map((banners || []).filter((banner) => banner.programId).map((banner) => [banner.programId, banner]));
-  return programs
-    .filter((program) => isPublicProgram(program) && program.presentation?.carousel)
+  return carouselPrograms(programs)
     .map((program) => {
-      const previous = existing.get(program.slug) || {};
+      const previous = existing.get(program.id) || {};
       return {
-        id: previous.id || `slide-${program.slug}`,
-        programId: program.slug,
+        id: previous.id || `slide-${program.id}`,
+        programId: program.id,
         title: program.name,
         tag: program.statusLabel,
         description: program.metaDescription,
@@ -111,7 +111,7 @@ function syncBanners(banners, programs) {
         icon: program.presentation?.icon || previous.icon || "ph-file-text",
         image: program.presentation?.image || previous.image || null,
         pageTitle: program.presentation?.pageTitle || null,
-        order: program.presentation?.order ?? previous.order ?? 999,
+        order: program.presentation.carouselOrder,
         estimate: program.presentation?.estimate || null,
         active: true,
         programStatus: program.status,
@@ -128,8 +128,7 @@ function syncBanners(banners, programs) {
         officialGuideKey: program.officialGuideKeys?.[0] || null,
         sourceOfTruth: REGISTRY_REF
       };
-    })
-    .sort((left, right) => (left.order || 999) - (right.order || 999));
+    });
 }
 
 function syncPriority(priority, programs) {
@@ -140,7 +139,7 @@ function syncPriority(priority, programs) {
       delete priority.pages[key];
       continue;
     }
-    page.programId = program.slug;
+    page.programId = program.id;
     page.sourceOfTruth = REGISTRY_REF;
     page.publicationState = "public";
     page.directAnswer = programSummary(program);
@@ -213,7 +212,7 @@ function syncHeaderText(source, programs) {
         return;
       }
       anchor
-        .attr("data-program-id", program.slug)
+        .attr("data-program-id", program.id)
         .attr("data-program-status", program.status)
         .attr("data-status-label", program.statusLabel)
         .attr("data-verified-at", program.verifiedAt)
@@ -246,14 +245,14 @@ function homepageHeroList(programs) {
   return programs
     .filter((program) => isPublicProgram(program) && program.presentation?.hero)
     .sort((left, right) => (left.presentation?.order || 999) - (right.presentation?.order || 999))
-    .map((program, index) => `              <li><a href="${escapeHtml(program.pageUrl)}" data-hero-program-item data-program-id="${escapeHtml(program.slug)}" data-program-status="${escapeHtml(program.status)}" data-status-label="${escapeHtml(program.statusLabel)}" data-verified-at="${escapeHtml(program.verifiedAt)}" data-source-url="${escapeHtml(program.sourceUrl)}" data-status="${escapeHtml(program.statusLabel)}" data-title="${escapeHtml(program.shortName)}" data-desc="${escapeHtml(program.cardSummary)}"${index === 0 ? " aria-current=\"true\"" : ""}><span class="hp-name">${escapeHtml(program.shortName)}</span><span class="hp-tag">${escapeHtml(program.statusLabel)}</span></a></li>`)
+    .map((program, index) => `              <li><a href="${escapeHtml(program.pageUrl)}" data-hero-program-item data-program-id="${escapeHtml(program.id)}" data-program-status="${escapeHtml(program.status)}" data-status-label="${escapeHtml(program.statusLabel)}" data-verified-at="${escapeHtml(program.verifiedAt)}" data-source-url="${escapeHtml(program.sourceUrl)}" data-status="${escapeHtml(program.statusLabel)}" data-title="${escapeHtml(program.shortName)}" data-desc="${escapeHtml(program.cardSummary)}"${index === 0 ? " aria-current=\"true\"" : ""}><span class="hp-name">${escapeHtml(program.shortName)}</span><span class="hp-tag">${escapeHtml(program.statusLabel)}</span></a></li>`)
     .join("\n");
 }
 
 function renderHomepageSlide(program) {
   const image = program.presentation?.image || (/afir|agricultur/i.test(program.family) ? "/assets/hero/hero-agriculture.webp" : "/assets/hero/hero-business.webp");
   const funding = fundingSummary(program);
-  return `<article class="program-slide hero hero--image is-active" style="--hero-image:url('${escapeHtml(image)}')" data-slide-id="slide-${escapeHtml(program.slug)}" data-program-id="${escapeHtml(program.slug)}" data-program-status="${escapeHtml(program.status)}" data-status-label="${escapeHtml(program.statusLabel)}" data-verified-at="${escapeHtml(program.verifiedAt)}" data-source-url="${escapeHtml(program.sourceUrl)}" aria-hidden="false">
+  return `<article class="program-slide hero hero--image is-active" style="--hero-image:url('${escapeHtml(image)}')" data-slide-id="slide-${escapeHtml(program.id)}" data-program-id="${escapeHtml(program.id)}" data-program-status="${escapeHtml(program.status)}" data-status-label="${escapeHtml(program.statusLabel)}" data-verified-at="${escapeHtml(program.verifiedAt)}" data-source-url="${escapeHtml(program.sourceUrl)}" aria-hidden="false">
               <span class="hero-icon" aria-hidden="true"><i class="ph-duotone ${escapeHtml(program.presentation?.icon || "ph-file-text")}"></i></span>
               <span class="eyebrow">${escapeHtml(program.statusLabel)}</span>
               <h3>${escapeHtml(program.name)}</h3>
@@ -274,7 +273,7 @@ function syncHomepageCard(fragment, programs) {
   const program = programForRoute(route, programs);
   if (!program || !isPublicProgram(program)) return "";
   card
-    .attr("data-program-id", program.slug)
+    .attr("data-program-id", program.id)
     .attr("data-program-status", program.status)
     .attr("data-status-label", program.statusLabel)
     .attr("data-verified-at", program.verifiedAt)
@@ -373,7 +372,7 @@ function replaceMeta(html, selectorPattern, value) {
 }
 
 function pendingMain(program) {
-  return `<main class="container program-validation-hold" id="main-content" tabindex="-1" data-program-id="${escapeHtml(program.slug)}" data-publication-state="pending_validation">
+  return `<main class="container program-validation-hold" id="main-content" tabindex="-1" data-program-id="${escapeHtml(program.id)}" data-publication-state="pending_validation">
   <article class="panel">
     ${renderProgramFactualStatus(program)}
     <h1>${escapeHtml(program.shortName)}</h1>
@@ -385,7 +384,7 @@ function pendingMain(program) {
 }
 
 function restoredPublicMain(program) {
-  return `<main class="container program-page" id="main-content" tabindex="-1" data-program-id="${escapeHtml(program.slug)}" data-publication-state="public">
+  return `<main class="container program-page" id="main-content" tabindex="-1" data-program-id="${escapeHtml(program.id)}" data-publication-state="public">
   <article class="panel">
     ${renderProgramFactualStatus(program)}
     <h1>${escapeHtml(program.name)}</h1>
@@ -412,7 +411,7 @@ function syncProgramHtml(source, program) {
         next = removeTagAttribute(next, attribute);
       }
     }
-    next = replaceTagAttribute(next, "data-program-id", program.slug);
+    next = replaceTagAttribute(next, "data-program-id", program.id);
     next = replaceTagAttribute(next, "data-publication-state", program.publicationState);
     next = replaceTagAttribute(next, "data-program-registry", REGISTRY_REF);
     if (isPublicProgram(program)) {
@@ -465,7 +464,7 @@ function programHtmlUpdates(programs, approvalConfig = { programs: [] }) {
   const seen = new Set();
   const holdsByProgram = new Map((approvalConfig.programs || []).map((row) => [row.programId, row]));
   for (const program of programs) {
-    const approval = holdsByProgram.get(program.slug);
+    const approval = holdsByProgram.get(program.id);
     const routes = new Set([program.pageUrl]);
     if (!isPublicProgram(program) && approval?.approvalState === "pending") {
       for (const route of approval.publicationHoldUrls || []) routes.add(route);
@@ -498,7 +497,7 @@ function syncPendingProgramSurfaces(source, programs) {
   const $ = cheerio.load(source, { decodeEntities: false });
   let changed = false;
   for (const program of pending) {
-    const idSelector = `[data-program-id="${program.slug}"]`;
+    const idSelector = `[data-program-id="${program.id}"]`;
     $(idSelector).each((_, element) => {
       const item = $(element);
       if (item.is("body, main.program-validation-hold") || item.closest("main.program-validation-hold").length) return;
@@ -534,7 +533,7 @@ function programHandledFiles(programs, approvalConfig = { programs: [] }) {
   const approvalById = new Map((approvalConfig.programs || []).map((row) => [row.programId, row]));
   for (const program of programs) {
     const routes = new Set([program.pageUrl]);
-    const approval = approvalById.get(program.slug);
+    const approval = approvalById.get(program.id);
     if (!isPublicProgram(program) && approval?.approvalState === "pending") {
       for (const route of approval.publicationHoldUrls || []) routes.add(route);
     }
@@ -569,8 +568,9 @@ function main() {
     updateJsonFile(FILES.banners, (value) => syncBanners(value, programs)),
     updateJsonFile(FILES.priority, (value) => syncPriority(value, programs)),
     updateJsonFile(FILES.snippets, (value) => syncSnippets(value, programs)),
-    textUpdate(FILES.header, (value) => syncHeaderText(value, programs)),
-    textUpdate(FILES.homepage, (value) => syncPendingProgramSurfaces(syncHomepageText(value, programs), programs)),
+    // Headerul și homepage-ul au generatoare dedicate care consumă același
+    // registry. Nu le reserializăm aici, deoarece cele două ownership-uri ar
+    // produce outputs concurente pentru aceleași componente.
     textUpdate(FILES.llms, (value) => syncLlmsText(value, programs)),
     ...pendingSurfaceUpdates(programs, approvalConfig),
     ...programHtmlUpdates(programs, approvalConfig)

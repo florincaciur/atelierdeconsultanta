@@ -136,7 +136,7 @@ function auditNarrativeClaims(issues, program, $) {
 
 function auditHeader(issues, programs, header) {
   const $ = cheerio.load(header, { decodeEntities: false }, false);
-  const byId = new Map(programs.map((program) => [program.slug, program]));
+  const byId = new Map(programs.map((program) => [program.id, program]));
   $("#navbar, #mobileMenu").find("[data-program-id][data-program-status]").each((_, element) => {
     const node = $(element);
     const program = byId.get(node.attr("data-program-id"));
@@ -159,7 +159,7 @@ function auditProgram(issues, program, context) {
   }
 
   if (!isPublicProgram(program)) {
-    const banner = bannersByProgram.get(program.slug);
+    const banner = bannersByProgram.get(program.id);
     if (banner) addIssue(issues, program, "error", "pending-program-published", "banners.json", "Un program pending_validation nu poate apărea în carusel.", "absent", "present");
     const url = `https://atelierdeconsultanta.ro${program.pageUrl}`;
     const escapedUrl = url.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
@@ -170,7 +170,7 @@ function auditProgram(issues, program, context) {
       const $ = cheerio.load(html, { decodeEntities: false });
       compare(issues, program, "publication-state-mismatch", "page-html", "pending_validation", $("body").attr("data-publication-state"), "Pagina în validare nu este marcată corect.");
       if (!/noindex/iu.test($("meta[name='robots']").attr("content") || "")) addIssue(issues, program, "error", "pending-page-indexable", "page-html", "Pagina în validare trebuie scoasă temporar din indexare.", "noindex", $("meta[name='robots']").attr("content"));
-      if ($(`[data-program-id='${program.slug}'][data-program-status]`).length || $("main [data-program-funding]").length) addIssue(issues, program, "error", "pending-fact-published", "page-html", "Pagina în validare publică încă status sau valori.", "absent", "present");
+      if ($(`[data-program-id='${program.id}'][data-program-status]`).length || $("main [data-program-funding]").length) addIssue(issues, program, "error", "pending-fact-published", "page-html", "Pagina în validare publică încă status sau valori.", "absent", "present");
       const nodes = jsonLdNodes($, issues, program);
       if (nodes.some((node) => hasType(node, "DefinedTerm") && String(node["@id"] || "").endsWith("#funding-program"))) addIssue(issues, program, "error", "pending-jsonld-published", "json-ld", "Programul în validare nu poate apărea în JSON-LD.", "absent", "present");
     }
@@ -180,7 +180,7 @@ function auditProgram(issues, program, context) {
   if (program.discovery?.redirectTarget) {
     const url = `https://atelierdeconsultanta.ro${program.pageUrl}`;
     if (llms.includes(url)) addIssue(issues, program, "error", "redirect-source-published", "llms.txt", "Sursa unui redirect nu poate rămâne în lista publică de programe.", "absent", url);
-    if (bannersByProgram.has(program.slug)) addIssue(issues, program, "error", "redirect-source-published", "banners.json", "Sursa unui redirect nu poate rămâne în carusel.", "absent", "present");
+    if (bannersByProgram.has(program.id)) addIssue(issues, program, "error", "redirect-source-published", "banners.json", "Sursa unui redirect nu poate rămâne în carusel.", "absent", "present");
     return;
   }
 

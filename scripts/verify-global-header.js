@@ -5,6 +5,7 @@ const fs = require("fs");
 const path = require("path");
 const cheerio = require("cheerio");
 const { ASSET_VERSION, loadConfig, renderHeader } = require("../tools/generate-global-header");
+const { loadProgramConfig, navigationPrograms } = require("../tools/program-factual-governance");
 const { END, ROOT, START, findPublicHtmlFiles, partialSource } = require("../tools/sync-global-header");
 
 const SITE = "https://atelierdeconsultanta.ro";
@@ -39,6 +40,7 @@ function validateCanonicalRoute(errors, href) {
 
 function main() {
   const config = loadConfig();
+  const approvedProgramCount = navigationPrograms(loadProgramConfig().programs).length;
   const partial = partialSource();
   const expected = renderHeader(config);
   const $ = cheerio.load(partial, { decodeEntities: false }, false);
@@ -51,7 +53,7 @@ function main() {
   if ($("#navbar .nav-cta").text().trim() !== config.cta.label) errors.push("CTA-ul desktop nu corespunde configurației");
   if ($("#mobileMenu .mobile-cta").text().trim() !== config.cta.label) errors.push("CTA-ul mobil nu corespunde configurației");
   if (/\b(?:Instrumente|Ghiduri|Cuprins)\b/u.test($("#navbar, #mobileMenu").text())) errors.push("o etichetă eliminată a rămas în navigarea principală");
-  if ($("#dropdownPanel [data-program-id]").length !== config.programMenu.featuredProgramSlugs.length) errors.push("meniul Programe nu conține măsurile aprobate");
+  if ($("#dropdownPanel [data-program-id]").length !== approvedProgramCount) errors.push("meniul Programe nu conține măsurile aprobate");
   if ($('[href="/por-adr-nord-est"]').length) errors.push("meniul publică ruta regională consolidată");
   if ($('[href="/investitii-modernizarea-microintreprinderilor-apel-2"]').length < 2) errors.push("pagina regională de conversie lipsește din meniuri");
   if ($(`[href="/assets/global-header.css?v=${ASSET_VERSION}"]`).length !== 1) errors.push("versiunea CSS a headerului este incorectă");

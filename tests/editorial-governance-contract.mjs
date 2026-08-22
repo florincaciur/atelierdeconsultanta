@@ -40,7 +40,7 @@ const {
 const { sitemapLastmods } = require("../tools/sitemap-utils");
 
 const { config, programs, records } = loadEditorialGovernance();
-const programById = new Map(programs.map((program) => [program.slug, program]));
+const programById = new Map(programs.map((program) => [program.id, program]));
 const recordByRoute = new Map(records.map((record) => [record.route, record]));
 
 function schemaNodes($) {
@@ -151,7 +151,7 @@ assert(expired, "Fixture: trebuie să existe cel puțin o pagină de program guv
 expired.nextReviewAt = "2026-08-17";
 assert(reviewExpired(expired, TODAY), "Fixture: revizuirea simulată trebuie să fie expirată");
 const changedPrograms = structuredClone(programs);
-const changedProgram = changedPrograms.find((program) => program.slug === expired.programId);
+const changedProgram = changedPrograms.find((program) => program.id === expired.programId);
 changedProgram.status = changedProgram.status === "apel_inchis" ? "calendar_estimativ" : "apel_inchis";
 assert(
   validateGovernance(expiredConfig, changedPrograms, TODAY).some((error) => /reînnoită înaintea schimbării|revizuirea trebuie/iu.test(error)),

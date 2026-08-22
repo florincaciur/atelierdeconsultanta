@@ -7,21 +7,48 @@
       "id": "servicii",
       "label": "Servicii",
       "items": [
-        { "label": "Analiză eligibilitate", "href": "/verificare-eligibilitate-fonduri-europene" },
-        { "label": "Consultanță", "href": "/consultanta-fonduri-europene" },
-        { "label": "Proiectare", "href": "/proiectare-fonduri-europene" },
-        { "label": "Implementare", "href": "/management-proiecte-fonduri-europene" }
+        {
+          "label": "Analiză eligibilitate",
+          "href": "/verificare-eligibilitate-fonduri-europene"
+        },
+        {
+          "label": "Consultanță",
+          "href": "/consultanta-fonduri-europene"
+        },
+        {
+          "label": "Proiectare",
+          "href": "/proiectare-fonduri-europene"
+        },
+        {
+          "label": "Implementare",
+          "href": "/management-proiecte-fonduri-europene"
+        }
       ]
     },
     {
       "id": "programe",
       "label": "Programe",
       "items": [
-        { "label": "AFIR & agricultură", "href": "/afir" },
-        { "label": "Regional / ADR", "href": "/fonduri-regionale" },
-        { "label": "Digitalizare & inovare", "href": "/fonduri-europene-digitalizare" },
-        { "label": "Energie", "href": "/finantari-panouri-fotovoltaice" },
-        { "label": "Antreprenoriat & GAL", "href": "/fonduri-europene-imm" }
+        {
+          "label": "AFIR & agricultură",
+          "href": "/afir"
+        },
+        {
+          "label": "Regional / ADR",
+          "href": "/fonduri-regionale"
+        },
+        {
+          "label": "Digitalizare & inovare",
+          "href": "/fonduri-europene-digitalizare"
+        },
+        {
+          "label": "Energie",
+          "href": "/finantari-panouri-fotovoltaice"
+        },
+        {
+          "label": "Antreprenoriat & GAL",
+          "href": "/fonduri-europene-imm"
+        }
       ]
     },
     {
@@ -33,10 +60,22 @@
       "id": "despre-faber",
       "label": "Despre FABER",
       "items": [
-        { "label": "Echipa", "href": "/despre-faber" },
-        { "label": "Metodologie", "href": "/metodologie-verificare-eligibilitate" },
-        { "label": "Studii de caz", "href": "/studii-de-caz-fonduri-europene" },
-        { "label": "Date companie", "href": "/despre-faber#about-public-data" }
+        {
+          "label": "Echipa",
+          "href": "/despre-faber"
+        },
+        {
+          "label": "Metodologie",
+          "href": "/metodologie-verificare-eligibilitate"
+        },
+        {
+          "label": "Studii de caz",
+          "href": "/studii-de-caz-fonduri-europene"
+        },
+        {
+          "label": "Date companie",
+          "href": "/despre-faber#about-public-data"
+        }
       ]
     },
     {
@@ -46,32 +85,10 @@
     }
   ],
   "programMenu": {
-    "featuredProgramSlugs": [
-      "modernizare-microintreprinderi-ne-2",
-      "dr12-afir",
-      "dr14-afir",
-      "dr18-afir",
-      "digitalizare-imm",
-      "pro-infra",
-      "afir-energie-autoconsum",
-      "diaspora-investeste-acasa",
-      "e-drive",
-      "e-mobility-ro",
-      "fondul-modernizare-pc1-stocare"
-    ],
-    "homepageProgramSlugs": [
-      "modernizare-microintreprinderi-ne-2",
-      "dr12-afir",
-      "dr14-afir",
-      "dr18-afir",
-      "afir-energie-autoconsum",
-      "e-move-ro",
-      "diaspora-investeste-acasa",
-      "e-drive",
-      "e-mobility-ro",
-      "fondul-modernizare-pc1-stocare"
-    ],
-    "allPrograms": { "label": "Vezi toate programele", "href": "/fonduri-europene" }
+    "allPrograms": {
+      "label": "Vezi toate programele",
+      "href": "/fonduri-europene"
+    }
   },
   "cta": {
     "label": "Începe verificarea proiectului",

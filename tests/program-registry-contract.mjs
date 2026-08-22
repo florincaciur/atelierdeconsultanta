@@ -11,20 +11,28 @@ const require = createRequire(import.meta.url);
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
 const {
+  CANONICAL_PROGRAM_STATUSES,
   PROGRAM_STATUSES,
   fundingSummary,
   isPublicProgram,
   loadProgramConfig,
-  validateProgram
+  validateProgram,
+  validateProgramRelationships
 } = require("../tools/program-factual-governance");
+const { registrySurfaceErrors } = require("../tools/validate-program-registry");
 const { latestVerifiedProgram } = require("../tools/sync-homepage-hero");
 const { fileForRoute } = require("../tools/structured-data-utils");
 
 const { programs, publicPrograms } = loadProgramConfig();
-const bySlug = new Map(programs.map((program) => [program.slug, program]));
+const byId = new Map(programs.map((program) => [program.id, program]));
 const header = cheerio.load(fs.readFileSync(path.join(ROOT, "partials", "global-header.html"), "utf8"), { decodeEntities: false });
 const homepage = cheerio.load(fs.readFileSync(path.join(ROOT, "index.html"), "utf8"), { decodeEntities: false });
 const banners = JSON.parse(fs.readFileSync(path.join(ROOT, "banners.json"), "utf8"));
+
+assert.equal(new Set(programs.map((program) => program.id)).size, programs.length, "ID-urile stabile trebuie să fie unice");
+assert.equal(new Set(programs.map((program) => program.slug)).size, programs.length, "Slugurile trebuie să fie unice");
+assert.equal(new Set(programs.map((program) => program.pageUrl)).size, programs.length, "Canonicalele programelor trebuie să fie unice");
+assert.deepEqual(registrySurfaceErrors(programs), [], "Registry/pagini/bannere trebuie reconciliate");
 
 function factsFromElement($, element) {
   return {
@@ -38,7 +46,7 @@ function factsFromElement($, element) {
 
 function expectedFacts(program) {
   return {
-    slug: program.slug,
+    slug: program.id,
     status: program.status,
     statusLabel: program.statusLabel,
     verifiedAt: program.verifiedAt,
@@ -75,20 +83,20 @@ assert.equal(PROGRAM_STATUSES.length, 6, "Taxonomia de status nu poate primi val
 
 for (const element of header("[data-program-id]").toArray()) {
   const slug = header(element).attr("data-program-id");
-  const program = bySlug.get(slug);
+  const program = byId.get(slug);
   assert(program && isPublicProgram(program), `Meniul publică un program absent sau neverificat: ${slug}`);
   assertFacts(program, factsFromElement(header, element), "meniu");
 }
 
 for (const element of homepage("[data-program-id][data-program-status]").toArray()) {
   const slug = homepage(element).attr("data-program-id");
-  const program = bySlug.get(slug);
+  const program = byId.get(slug);
   assert(program && isPublicProgram(program), `Homepage publică un program absent sau neverificat: ${slug}`);
   assertFacts(program, factsFromElement(homepage, element), "homepage/card");
 }
 
 for (const banner of banners) {
-  const program = bySlug.get(banner.programId);
+  const program = byId.get(banner.programId);
   assert(program && isPublicProgram(program), `Caruselul publică un program absent sau neverificat: ${banner.programId}`);
   assert.deepEqual(
     {
@@ -135,9 +143,9 @@ for (const program of publicPrograms) {
   assert.equal(properties.has("grantSummary"), program.grantSummary !== null, `${program.slug}: grantSummary JSON-LD publicat incorect`);
   assert.equal(properties.has("cofinancingSummary"), program.cofinancingSummary !== null, `${program.slug}: cofinancingSummary JSON-LD publicat incorect`);
 
-  const menuElements = header(`[data-program-id='${program.slug}']`).toArray();
+  const menuElements = header(`[data-program-id='${program.id}']`).toArray();
   for (const element of menuElements) assertFacts(program, factsFromElement(header, element), "meniu desktop/mobil");
-  if (program.presentation?.carousel) assert(banners.some((banner) => banner.programId === program.slug), `${program.slug}: lipsește din caruselul configurat`);
+  if (program.presentation?.carousel) assert(banners.some((banner) => banner.programId === program.id), `${program.slug}: lipsește din caruselul configurat`);
 }
 
 const latestHomepageProgram = latestVerifiedProgram(publicPrograms);
@@ -146,15 +154,15 @@ assert.equal(latestHomepageNode.length, 1, "homepage: trebuie un singur program 
 assertFacts(latestHomepageProgram, factsFromElement(homepage, latestHomepageNode.get(0)), "homepage hero compact");
 
 for (const program of programs.filter((item) => !isPublicProgram(item))) {
-  assert.equal(header(`[data-program-id='${program.slug}']`).length, 0, `${program.slug}: pending_validation apare în meniu`);
-  assert.equal(homepage(`[data-program-id='${program.slug}']`).length, 0, `${program.slug}: pending_validation apare pe homepage`);
-  assert(!banners.some((banner) => banner.programId === program.slug), `${program.slug}: pending_validation apare în carusel`);
+  assert.equal(header(`[data-program-id='${program.id}']`).length, 0, `${program.slug}: pending_validation apare în meniu`);
+  assert.equal(homepage(`[data-program-id='${program.id}']`).length, 0, `${program.slug}: pending_validation apare pe homepage`);
+  assert(!banners.some((banner) => banner.programId === program.id), `${program.slug}: pending_validation apare în carusel`);
   const file = fileForRoute(ROOT, program.pageUrl);
   if (!fs.existsSync(file)) continue;
   const $ = cheerio.load(fs.readFileSync(file, "utf8"), { decodeEntities: false });
   assert.equal($("body").attr("data-publication-state"), "pending_validation", `${program.slug}: pagina pending nu este marcată`);
   assert.match($("meta[name='robots']").attr("content") || "", /noindex/iu, `${program.slug}: pagina pending este indexabilă`);
-  assert.equal($(`[data-program-id='${program.slug}'][data-program-status]`).length, 0, `${program.slug}: pagina pending publică status factual`);
+  assert.equal($(`[data-program-id='${program.id}'][data-program-status]`).length, 0, `${program.slug}: pagina pending publică status factual`);
   assert.equal($("main [data-program-funding]").length, 0, `${program.slug}: pagina pending publică valori factuale`);
   assert(!jsonLdNodes($).some((node) => String(node?.["@id"] || "").endsWith("#funding-program")), `${program.slug}: pagina pending publică JSON-LD factual`);
 }
@@ -171,6 +179,27 @@ assert(validateProgram(missingSourceVersion).some((error) => /sourceVersion|surs
 const invalidStatus = structuredClone(canonical);
 invalidStatus.status = "activ";
 assert(validateProgram(invalidStatus).some((error) => /status invalid/iu.test(error)), "Un status editorial local trebuie respins");
+const invalidCanonicalStatus = structuredClone(canonical);
+invalidCanonicalStatus.canonicalStatus = "ACTIVE";
+assert(validateProgram(invalidCanonicalStatus).some((error) => /canonicalStatus invalid/iu.test(error)), "Un status canonic din afara taxonomiei trebuie respins");
+assert.equal(CANONICAL_PROGRAM_STATUSES.length, 13, "Taxonomia canonică trebuie să aibă exact 13 stări");
+const openWithoutSessionEvidence = structuredClone(programs.find((program) => program.canonicalStatus === "OPEN"));
+openWithoutSessionEvidence.officialSources.roles.sessionAnnouncement = [];
+assert(validateProgram(openWithoutSessionEvidence).some((error) => /OPEN.*dovadă.*sesiune/iu.test(error)), "OPEN fără dovadă de sesiune trebuie respins");
+const malformedSourceReference = structuredClone(canonical);
+malformedSourceReference.officialSources.roles.programPage = [{ ref: "program" }];
+assert(validateProgram(malformedSourceReference).some((error) => /officialSources.*programPage.*ref.*label/iu.test(error)), "O referință oficială fără label trebuie respinsă");
+const missingRelatedId = structuredClone(programs);
+missingRelatedId[0].relatedProgramIds = ["program-inexistent"];
+assert(validateProgramRelationships(missingRelatedId).some((error) => /relatedProgramIds.*inexistent/iu.test(error)), "Un relatedProgramId inexistent trebuie respins");
+const duplicateCanonical = structuredClone(programs);
+duplicateCanonical[1].pageUrl = duplicateCanonical[0].pageUrl;
+assert(validateProgramRelationships(duplicateCanonical).some((error) => /pageUrl duplicat/iu.test(error)), "Un canonical duplicat trebuie respins");
+const registryWithoutPage = structuredClone(programs);
+registryWithoutPage.find((program) => program.indexable).pageUrl = "/program-fara-pagina";
+assert(registrySurfaceErrors(registryWithoutPage).some((error) => /fără pagină canonical/iu.test(error)), "Un program indexabil fără pagină trebuie respins");
+const pageWithoutRegistry = programs.filter((program) => program.id !== "dr12-afir");
+assert(registrySurfaceErrors(pageWithoutRegistry).some((error) => /pagină de program fără înregistrare validă/iu.test(error)), "O pagină de program fără registry trebuie respinsă");
 const numericWithoutSource = structuredClone(publicPrograms.find((program) => program.grantSummary) || canonical);
 numericWithoutSource.sourceUrl = "DE_VALIDAT_UMAN";
 assert(validateProgram(numericWithoutSource).some((error) => /sursă oficială|numerice/iu.test(error)), "Valorile numerice fără sursă oficială trebuie respinse");

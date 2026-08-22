@@ -265,7 +265,6 @@ function buildInventory() {
   const publicEntries = [...state.entries, ...indexablePolicyExclusions]
     .sort((left, right) => left.route.localeCompare(right.route));
   const seo = readJson("config/seo-programs.json");
-  const homepage = readJson("config/homepage-programs.json");
   const families = readJson("config/program-family-hubs.json");
   const navigation = readJson("config/main-navigation.json");
   const banners = readJson("banners.json");
@@ -285,7 +284,7 @@ function buildInventory() {
   const programsByRoute = new Map();
   const programsBySlug = new Map();
   for (const program of seo.programs) {
-    programsBySlug.set(program.slug, program);
+    programsBySlug.set(program.id, program);
     const route = cleanRoute(program.pageUrl);
     if (!programsByRoute.has(route)) programsByRoute.set(route, []);
     programsByRoute.get(route).push(program);
@@ -401,28 +400,28 @@ function buildInventory() {
   const orphanRoutes = routes.filter((route) => route.route !== "/" && route.incomingCount === 0);
   const sitemapWithoutRoute = [...sitemapRoutes].filter((route) => !routeSet.has(route));
   const routesWithoutSitemap = routes.filter((route) => !route.sitemap);
-  const listedPrograms = seo.programs.filter((program) => program.publicationState === "public" && program.discovery?.listed !== false);
+  const bannerPrograms = seo.programs.filter((program) => program.publicationState === "public" && program.presentation?.carousel);
   const bannerIds = new Set(banners.filter((banner) => banner.active !== false).map((banner) => banner.programId));
-  const featuredIds = new Set(homepage.featuredProgramSlugs || []);
+  const featuredIds = new Set(seo.programs.filter((program) => program.presentation?.carousel).map((program) => program.id));
   const programReconciliation = seo.programs.map((program) => {
     const route = cleanRoute(program.pageUrl);
     const resolvedRoute = resolveRedirectRoute(route, redirectByCleanRoute);
-    const matchingBanners = banners.filter((banner) => banner.programId === program.slug && banner.active !== false);
-    const matchingPages = seo.pages.filter((page) => page.programId === program.slug);
+    const matchingBanners = banners.filter((banner) => banner.programId === program.id && banner.active !== false);
+    const matchingPages = seo.pages.filter((page) => page.programId === program.id);
     const issues = [];
     if (resolvedRoute !== route) issues.push(`pageUrl redirectează la ${resolvedRoute}`);
-    if (program.discovery?.listed !== false && !matchingBanners.length) issues.push("listat fără banner");
+    if (program.presentation?.carousel && !matchingBanners.length) issues.push("banner activat fără banner materializat");
     if (matchingBanners.some((banner) => cleanRoute(banner.ctaLink) !== resolvedRoute)) issues.push("banner spre altă rută");
     if (!routeSet.has(resolvedRoute)) issues.push("fără rută canonical 200");
     return {
-      id: program.slug,
+      id: program.id,
       name: program.name,
       pageUrl: route,
       resolvedRoute,
       family: program.family,
       status: program.status,
       listed: program.discovery?.listed !== false,
-      homepage: featuredIds.has(program.slug),
+      homepage: featuredIds.has(program.id),
       banners: matchingBanners.map((banner) => banner.id),
       pageDefinitions: matchingPages.map((page) => page.slug),
       issues,
@@ -472,7 +471,6 @@ function buildInventory() {
   return {
     state,
     seo,
-    homepage,
     families,
     navigation,
     banners,
@@ -484,6 +482,7 @@ function buildInventory() {
     publicFragments,
     technicalRoutes,
     canonicalDuplicates: canonicalDuplicateGroups(),
+    duplicateProgramIds: duplicateValues(seo.programs, (program) => program.id),
     duplicateProgramSlugs: duplicateValues(seo.programs, (program) => program.slug),
     duplicatePageSlugs: duplicateValues(seo.pages, (page) => page.slug),
     duplicateBannerIds: duplicateValues(banners, (banner) => banner.id),
@@ -491,7 +490,7 @@ function buildInventory() {
     orphanRoutes,
     sitemapWithoutRoute,
     routesWithoutSitemap,
-    listedWithoutBanner: listedPrograms.filter((program) => !bannerIds.has(program.slug)),
+    listedWithoutBanner: bannerPrograms.filter((program) => !bannerIds.has(program.id)),
     bannerWithoutProgram: banners.filter((banner) => banner.active !== false && !programsBySlug.has(banner.programId)),
   };
 }
@@ -501,6 +500,7 @@ function validateInventory(inventory) {
   if (!inventory.routes.length) errors.push("Inventarul canonical este gol.");
   if (inventory.duplicatePublishedCanonicals.length) errors.push("Canonical duplicat în setul publicat.");
   if (duplicateValues(inventory.routes, (route) => route.route).length) errors.push("Rută duplicată în setul publicat.");
+  if (inventory.duplicateProgramIds.length) errors.push("ID stabil de program duplicat.");
   if (inventory.duplicateProgramSlugs.length) errors.push("Slug de program duplicat.");
   if (inventory.duplicatePageSlugs.length) errors.push("Slug de pagină duplicat.");
   if (inventory.duplicateBannerIds.length) errors.push("ID de banner duplicat.");
@@ -681,7 +681,7 @@ function renderInventory(inventory, live) {
     "",
     "Diferențe de suprafață:",
     "",
-    "- Cele 23 programe `listed=true` apar în `homepage-programs.json` și au câte un banner activ; nu există banner fără program și nici program listat fără banner.",
+    "- Cele 23 programe `listed=true` au `presentation.carousel=true` în registrul unic și câte un banner generat activ; nu există banner fără program și nici program listat fără banner.",
     "- `program-regional-nord-est` și `fonduri-regionale` au `listed=false`; primul folosește `/por-adr-nord-est`, care redirecționează la pagina Apelului 2, iar al doilea este hubul canonical `/fonduri-regionale`.",
     "- Sitemap-ul `programs` conține 26 URL-uri: cele 23 programe listate, hubul `/fonduri-regionale` și două ghiduri DR12/DR14 clasificate editorial în familia sitemap `programs`.",
     "",

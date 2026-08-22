@@ -119,7 +119,7 @@ function resolveSourceReference(reference, program, data) {
     const key = ref.slice("guide:".length);
     const guide = data.guides[key];
     if (!guide) throw new Error(`${program.slug}: referință inexistentă ${ref}`);
-    if (Array.isArray(guide.programIds) && guide.programIds.length && !guide.programIds.includes(program.slug)) {
+    if (Array.isArray(guide.programIds) && guide.programIds.length && !guide.programIds.includes(program.id)) {
       throw new Error(`${program.slug}: ${ref} aparține altui program`);
     }
     source = {
@@ -141,7 +141,7 @@ function resolveSourceReference(reference, program, data) {
       updatedAt: registrySource.publishedAt || null
     };
   } else if (ref === "approval:official" || ref.startsWith("approval:evidence:")) {
-    const approval = data.approvals.find((item) => item.programId === program.slug);
+    const approval = data.approvals.find((item) => item.programId === program.id);
     if (!approval) throw new Error(`${program.slug}: ${ref} nu are înregistrare de aprobare`);
     if (ref === "approval:official") {
       source = {
@@ -178,11 +178,10 @@ function validateData(data) {
   const errors = [];
   const statusIds = data.taxonomy.statuses.map((status) => status.id);
   const statusSet = new Set(statusIds);
-  const programIds = data.programs.map((program) => program.slug);
-  const sourceProgramIds = data.sourceRegistry.programs.map((program) => program.programId);
-  const assignmentIds = Object.keys(data.taxonomy.programAssignments);
+  const programIds = data.programs.map((program) => program.id);
 
-  if (data.taxonomy.schemaVersion !== 1) errors.push("Taxonomia trebuie să aibă schemaVersion=1.");
+  if (data.taxonomy.schemaVersion !== 2) errors.push("Taxonomia trebuie să aibă schemaVersion=2.");
+  if (data.sourceRegistry.schemaVersion !== 2) errors.push("Catalogul suplimentar de surse trebuie să aibă schemaVersion=2.");
   if (!isIsoDate(data.taxonomy.reviewedAt)) errors.push("Taxonomia trebuie să aibă reviewedAt ISO.");
   if (!sameMembers(statusIds, EXPECTED_STATUS_IDS) || statusSet.size !== EXPECTED_STATUS_IDS.length) {
     errors.push(`Taxonomia trebuie să conțină exact: ${EXPECTED_STATUS_IDS.join(", ")}.`);
@@ -227,10 +226,7 @@ function validateData(data) {
     if (!String(mapping.rule || "").trim()) errors.push(`${legacyId}: regula de compatibilitate lipsește.`);
   }
 
-  if (!sameMembers(assignmentIds, programIds)) errors.push("Atribuirile canonice nu acoperă exact programele din seo-programs.json.");
-  if (!sameMembers(sourceProgramIds, programIds) || new Set(sourceProgramIds).size !== programIds.length) {
-    errors.push("Registrul de surse nu acoperă o singură dată fiecare program din seo-programs.json.");
-  }
+  if (new Set(programIds).size !== programIds.length) errors.push("ID-urile programelor trebuie să fie unice.");
 
   for (const [key, source] of Object.entries(data.sourceRegistry.supplementalSources || {})) {
     if (!String(source.title || "").trim()) errors.push(`supplementalSources.${key}: title lipsește.`);
@@ -241,12 +237,11 @@ function validateData(data) {
     if (source.publishedAt !== null && !isIsoDate(source.publishedAt)) errors.push(`supplementalSources.${key}: publishedAt invalid.`);
   }
 
-  const sourceEntryById = new Map(data.sourceRegistry.programs.map((entry) => [entry.programId, entry]));
   for (const program of data.programs) {
-    const assignment = data.taxonomy.programAssignments[program.slug];
-    const sourceEntry = sourceEntryById.get(program.slug);
+    const assignment = program;
+    const sourceEntry = program.officialSources;
     if (!assignment || !statusSet.has(assignment.canonicalStatus)) errors.push(`${program.slug}: atribuire canonică invalidă.`);
-    if (!assignment?.scope || !assignment?.rationale) errors.push(`${program.slug}: scope/rationale lipsă.`);
+    if (!assignment?.statusScope || !assignment?.statusRationale) errors.push(`${program.slug}: statusScope/statusRationale lipsă.`);
     if (program.sourceType !== "official" || !isOfficialUrl(program.sourceUrl)) errors.push(`${program.slug}: sursa principală nu este URL oficial HTTPS permis.`);
     if (!isIsoDate(program.verifiedAt)) errors.push(`${program.slug}: verifiedAt invalid.`);
     if (!sourceEntry || !sourceEntry.roles) continue;
@@ -331,13 +326,13 @@ function publicLabelForProgram(program, assignment, statuses) {
 function renderStatusTaxonomy(data) {
   const statuses = statusById(data);
   const programRows = data.programs.map((program) => {
-    const assignment = data.taxonomy.programAssignments[program.slug];
-    return `| \`${program.slug}\` | \`${program.status}\` | \`${assignment.canonicalStatus}\` | ${markdown(publicLabelForProgram(program, assignment, statuses))} | ${markdown(assignment.scope)} | ${markdown(assignment.rationale)} |`;
+    const assignment = program;
+    return `| \`${program.id}\` | \`${program.status}\` | \`${assignment.canonicalStatus}\` | ${markdown(publicLabelForProgram(program, assignment, statuses))} | ${markdown(assignment.statusScope)} | ${markdown(assignment.statusRationale)} |`;
   });
   const lines = [
     "# Taxonomia unică de status FABER",
     "",
-    `Revizie semantică: **${data.taxonomy.reviewedAt}**. Config canonic: \`config/program-status-taxonomy.json\`. Acest document este generat de \`tools/generate-status-governance-docs.js\` și nu este o pagină publică.`,
+    `Revizie semantică: **${data.taxonomy.reviewedAt}**. Definiții canonice: \`config/program-status-taxonomy.json\`; atribuiri per program: \`config/seo-programs.json#programs[*].canonicalStatus\`. Acest document este generat de \`tools/generate-status-governance-docs.js\` și nu este o pagină publică.`,
     "",
     "## Contractul mecanismului",
     "",
@@ -391,7 +386,7 @@ function renderStatusTaxonomy(data) {
     "",
     "## Compatibilitatea cu taxonomia legacy",
     "",
-    "Valorile de mai jos sunt citite încă de suprafețele publice existente. Ele nu sunt stări canonice și nu au mapare optimistă implicită. Normalizarea folosește atribuirea explicită per program din config până la migrarea controlată a consumatorilor.",
+    "Valorile de mai jos sunt citite încă de suprafețele publice existente. Ele nu sunt stări canonice și nu au mapare optimistă implicită. Normalizarea folosește atribuirea explicită din fiecare înregistrare de program până la migrarea controlată a consumatorilor.",
     "",
     "| Status legacy | Stări canonice posibile | Regulă de normalizare |",
     "|---|---|---|",
@@ -411,7 +406,7 @@ function renderStatusTaxonomy(data) {
     "",
     "## Limita Task 02",
     "",
-    "Acest task introduce contractul canonic, normalizarea documentată și verificarea automată. Nu migrează în masă HTML-ul, bannerele sau celelalte consumatoare ale câmpului legacy `status`; acea migrare trebuie făcută într-un task separat, cu sincronizare și verificare de regresie pe toate suprafețele.",
+    "Contractul canonic și rolurile surselor sunt păstrate în înregistrarea unică a programului. HTML-ul, bannerele și celelalte suprafețe continuă să consume temporar codul operațional legacy `status`, dar nu îi mai păstrează atribuirea într-un config concurent.",
   );
   return `${lines.join("\n")}\n`;
 }
@@ -429,12 +424,10 @@ function renderReferences(references, program, data) {
 }
 
 function renderSourceRegistry(data) {
-  const assignments = data.taxonomy.programAssignments;
-  const sourceEntries = new Map(data.sourceRegistry.programs.map((entry) => [entry.programId, entry]));
   const lines = [
     "# Registrul surselor oficiale FABER",
     "",
-    `Snapshot factual al programelor: **${data.sourceRegistry.factualSnapshotDate}**. Revizia structurii registrului: **${data.sourceRegistry.registryReviewDate}**. Config de roluri: \`config/program-source-registry.json\`; catalog documente: \`official-guides.json\`; registru programe: \`config/seo-programs.json#programs\`. Document generat de \`tools/generate-status-governance-docs.js\`.`,
+    `Snapshot factual al programelor: **${data.sourceRegistry.factualSnapshotDate}**. Revizia structurii registrului: **${data.sourceRegistry.registryReviewDate}**. Rolurile per program: \`config/seo-programs.json#programs[*].officialSources\`; surse suplimentare: \`config/program-source-registry.json#supplementalSources\`; catalog documente: \`official-guides.json\`. Document generat de \`tools/generate-status-governance-docs.js\`.`,
     "",
     "## Reguli de audit",
     "",
@@ -448,22 +441,22 @@ function renderSourceRegistry(data) {
     "",
     "| Stable program ID | Autoritate | Status canonic | Ultima actualizare oficială înregistrată | Verificat |",
     "|---|---|---|---|---|",
-    ...data.programs.map((program) => `| \`${program.slug}\` | ${markdown(program.sourceName)} | \`${assignments[program.slug].canonicalStatus}\` | ${markdown(program.lastMeaningfulUpdate || "—")} | ${program.verifiedAt} |`),
+    ...data.programs.map((program) => `| \`${program.id}\` | ${markdown(program.sourceName)} | \`${program.canonicalStatus}\` | ${markdown(program.lastMeaningfulUpdate || "—")} | ${program.verifiedAt} |`),
     ""
   ];
 
   for (const program of data.programs) {
-    const entry = sourceEntries.get(program.slug);
+    const entry = program.officialSources;
     const latest = resolveSourceReference(entry.latestOfficialUpdateRef || { ref: "program" }, program, data);
     const latestDate = latest.updatedAt || program.lastMeaningfulUpdate || "—";
     lines.push(
-      `## \`${program.slug}\` — ${program.name}`,
+      `## \`${program.id}\` — ${program.name}`,
       "",
       "| Câmp | Valoare auditabilă |",
       "|---|---|",
-      `| Stable program ID | \`${program.slug}\` |`,
+      `| Stable program ID | \`${program.id}\` |`,
       `| Authority | ${markdown(program.sourceName)} |`,
-      `| Status canonic snapshot | \`${assignments[program.slug].canonicalStatus}\` |`,
+      `| Status canonic snapshot | \`${program.canonicalStatus}\` |`,
       ...SOURCE_ROLES.map((role) => `| ${SOURCE_ROLE_LABELS[role]} | ${renderReferences(entry.roles[role], program, data)} |`),
       `| Latest official update | ${latestDate} — ${link(latest.label, latest.url)} (\`${latest.ref}\`) |`,
       `| Verification date | ${program.verifiedAt} |`,
@@ -477,7 +470,7 @@ function renderSourceRegistry(data) {
   lines.push(
     "## Goluri cunoscute și regulă de completare",
     "",
-    "Multe pagini-umbrelă și câteva ediții istorice au în prezent doar un catalog oficial sau o pagină de stare, fără URL-uri distincte pentru toate rolurile documentare. Aceste goluri sunt vizibile în fiecare fișă. Completarea lor cere un document oficial verificat, adăugat mai întâi în `official-guides.json` sau în registrul de aprobări și apoi referit din `config/program-source-registry.json`; nu se folosesc agregatoare ori alte firme de consultanță drept source-of-truth.",
+    "Multe pagini-umbrelă și câteva ediții istorice au în prezent doar un catalog oficial sau o pagină de stare, fără URL-uri distincte pentru toate rolurile documentare. Aceste goluri sunt vizibile în fiecare fișă. Completarea lor cere un document oficial verificat, adăugat mai întâi în `official-guides.json`, în catalogul suplimentar sau în registrul de aprobări și apoi referit din `config/seo-programs.json`; nu se folosesc agregatoare ori alte firme de consultanță drept source-of-truth.",
   );
   return `${lines.join("\n")}\n`;
 }

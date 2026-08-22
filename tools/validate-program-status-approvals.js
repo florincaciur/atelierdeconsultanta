@@ -38,7 +38,7 @@ function containsHumanReview(value) {
 function validateApprovalRegistry(approvalConfig, programs) {
   const errors = [];
   const rows = Array.isArray(approvalConfig?.programs) ? approvalConfig.programs : [];
-  const programById = new Map(programs.map((program) => [program.slug, program]));
+  const programById = new Map(programs.map((program) => [program.id, program]));
   const approvalById = new Map();
 
   if (approvalConfig?.schemaVersion !== 1) errors.push("schemaVersion trebuie să fie 1");

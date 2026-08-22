@@ -4,7 +4,7 @@ Data inventarului: **2026-08-22**.
 
 Generator: `tools/generate-route-inventory.js`. Autoritatea pentru setul canonical este `collectSiteState()` din generatorul de sitemap; aceasta este reconciliată cu toate fișierele HTML, registrele, homepage-ul, bannerele, navigația, footerul, sitemap-urile, redirecturile și suprafețele copiate de build.
 
-Snapshot live: **2026-08-22**, release `3bc2eede4297c3d748713615c49884280066c8ea`, sitemap live **104 URL-uri**. Diferențe live→repo: **0**; repo→live: **1**.
+Snapshot live: nu a fost cerut la această regenerare; vezi ultima secțiune versionată sau rulează `npm run generate:route-inventory`.
 
 ## Rezumat verificabil
 
@@ -135,7 +135,7 @@ Lipsa unei rute standalone nu este tratată automat ca defect atunci când supra
 | [`/fonduri-europene-femei-antreprenor`](https://atelierdeconsultanta.ro/fonduri-europene-femei-antreprenor)<br><small>https://atelierdeconsultanta.ro/fonduri-europene-femei-antreprenor</small> | `fonduri-europene-femei-antreprenor/index.html` | hub | 200 / da | Fonduri europene pentru femei antreprenor \| hub IMM | Fonduri europene pentru femei antreprenor: hub de orientare | self | da | nu/nu | 1 | BreadcrumbList, FAQPage, Organization, ProfessionalService, WebPage, WebSite | da | 6/6 | page:fonduri-europene-femei-antreprenor | — | — | rută publică/indexabilă |
 | [`/fonduri-europene-imm`](https://atelierdeconsultanta.ro/fonduri-europene-imm)<br><small>https://atelierdeconsultanta.ro/fonduri-europene-imm</small> | `fonduri-europene-imm/index.html` | hub | 200 / da | Fonduri europene pentru IMM-uri - investiții, digitalizare, energie | Programe pentru antreprenoriat și inițiative GAL | self | da | da/nu | 104 | BreadcrumbList, FAQPage, Organization, ProfessionalService, WebPage, WebSite | da | 5/5 | page:fonduri-europene-imm | — | hub:antreprenoriat-gal | rută publică/indexabilă |
 | [`/fonduri-europene-nerambursabile-2026`](https://atelierdeconsultanta.ro/fonduri-europene-nerambursabile-2026)<br><small>https://atelierdeconsultanta.ro/fonduri-europene-nerambursabile-2026</small> | `fonduri-europene-nerambursabile-2026/index.html` | hub | 200 / da | Fonduri europene nerambursabile 2026 | Fonduri europene nerambursabile 2026 | self | da | nu/nu | 3 | BreadcrumbList, FAQPage, Organization, ProfessionalService, WebPage, WebSite | da | 13/12 | page:fonduri-europene-nerambursabile-2026 | — | — | rută publică/indexabilă |
-| [`/fonduri-europene-nord-est`](https://atelierdeconsultanta.ro/fonduri-europene-nord-est)<br><small>https://atelierdeconsultanta.ro/fonduri-europene-nord-est</small> | `fonduri-europene-nord-est/index.html` | landing local | 200 / da | Fonduri europene Nord-Est: programe regionale, AFIR și IMM \| FABER | Fonduri europene în regiunea Nord-Est | self | da | nu/nu | 2 | Article, BreadcrumbList, FAQPage, Organization, ProfessionalService, WebPage, WebSite | da | 13/12 | — | — | — | rută publică/indexabilă |
+| [`/fonduri-europene-nord-est`](https://atelierdeconsultanta.ro/fonduri-europene-nord-est)<br><small>https://atelierdeconsultanta.ro/fonduri-europene-nord-est</small> | `fonduri-europene-nord-est/index.html` | landing local | 200 / da | Fonduri europene Nord-Est: programe regionale, AFIR și IMM \| FABER | Fonduri europene în regiunea Nord-Est | self | da | nu/nu | 3 | Article, BreadcrumbList, FAQPage, Organization, ProfessionalService, WebPage, WebSite | da | 13/12 | — | — | — | rută publică/indexabilă |
 | [`/fonduri-nerambursabile`](https://atelierdeconsultanta.ro/fonduri-nerambursabile)<br><small>https://atelierdeconsultanta.ro/fonduri-nerambursabile</small> | `fonduri-nerambursabile/index.html` | hub | 200 / da | Fonduri nerambursabile: grant, cash-flow și obligații \| FABER | Fonduri nerambursabile: ce acoperă grantul și ce plătește beneficiarul | self | da | nu/da | 4 | BreadcrumbList, Organization, ProfessionalService, WebPage, WebSite | da | 0/0 | page:fonduri-nerambursabile | — | — | rută publică/indexabilă |
 | [`/fonduri-pentru-ferme`](https://atelierdeconsultanta.ro/fonduri-pentru-ferme)<br><small>https://atelierdeconsultanta.ro/fonduri-pentru-ferme</small> | `fonduri-pentru-ferme/index.html` | hub | 200 / da | Fonduri pentru ferme - AFIR, DR12, DR14 și utilaje | Fonduri pentru ferme | self | da | nu/nu | 2 | BreadcrumbList, FAQPage, Organization, ProfessionalService, WebPage, WebSite | da | 6/6 | page:fonduri-pentru-ferme | — | — | rută publică/indexabilă |
 | [`/fonduri-pentru-utilaje-agricole`](https://atelierdeconsultanta.ro/fonduri-pentru-utilaje-agricole)<br><small>https://atelierdeconsultanta.ro/fonduri-pentru-utilaje-agricole</small> | `fonduri-pentru-utilaje-agricole/index.html` | hub | 200 / da | Fonduri pentru utilaje agricole - eligibilitate și buget | Fonduri pentru utilaje agricole | self | da | nu/nu | 2 | BreadcrumbList, FAQPage, Organization, ProfessionalService, WebPage, WebSite | da | 9/8 | page:fonduri-pentru-utilaje-agricole | — | — | rută publică/indexabilă |
@@ -237,7 +237,7 @@ Toate cele 19 entități istorice au corespondent în registry-ul curent. Nu a f
 
 Diferențe de suprafață:
 
-- Cele 23 programe `listed=true` apar în `homepage-programs.json` și au câte un banner activ; nu există banner fără program și nici program listat fără banner.
+- Cele 23 programe `listed=true` au `presentation.carousel=true` în registrul unic și câte un banner generat activ; nu există banner fără program și nici program listat fără banner.
 - `program-regional-nord-est` și `fonduri-regionale` au `listed=false`; primul folosește `/por-adr-nord-est`, care redirecționează la pagina Apelului 2, iar al doilea este hubul canonical `/fonduri-regionale`.
 - Sitemap-ul `programs` conține 26 URL-uri: cele 23 programe listate, hubul `/fonduri-regionale` și două ghiduri DR12/DR14 clasificate editorial în familia sitemap `programs`.
 
@@ -510,32 +510,7 @@ Activele CSS/JS/imagini nu sunt enumerate individual; tabelul include endpointur
 
 ## Verificare live
 
-- `/release.json`: commit `3bc2eede4297c3d748713615c49884280066c8ea`, build `2026-08-21T21:23:12.504Z`.
-- Sitemap live: **104** URL-uri; numai live: **0**; numai repo: **1**.
-- Numai live: `—`; numai în suprafața publică repo: `/gdpr`.
-
-| Rută verificată | HTTP live | Location | X-Robots-Tag |
-|---|---:|---|---|
-| `/` | 200 | — | — |
-| `/verificare-eligibilitate-fonduri-europene` | 200 | — | — |
-| `/consultanta-fonduri-europene` | 200 | — | — |
-| `/proiectare-fonduri-europene` | 200 | — | — |
-| `/management-proiecte-fonduri-europene` | 200 | — | — |
-| `/calculator-soc` | 200 | — | — |
-| `/contact` | 200 | — | — |
-| `/despre-faber` | 200 | — | — |
-| `/metodologie-verificare-eligibilitate` | 200 | — | — |
-| `/studii-de-caz-fonduri-europene` | 200 | — | — |
-| `/gdpr` | 200 | — | — |
-| `/politica-de-confidentialitate` | 200 | — | — |
-| `/termeni-si-conditii` | 200 | — | — |
-| `/admin` | 200 | — | noindex, nofollow |
-| `/404` | 200 | — | noindex, nofollow |
-| `/partials/global-header` | 200 | — | — |
-| `/templates/dr14-final-content` | 200 | — | — |
-| `/templates/dr18-final-content` | 200 | — | — |
-| `/start-up-nation` | 301 | https://atelierdeconsultanta.ro/start-up-nation-2026 | — |
-| `/definitely-missing-route-task-01` | 404 | — | — |
+Nu s-a executat verificarea live în această regenerare.
 
 ## Probleme și priorități rămase (fără remediere în Task 01)
 

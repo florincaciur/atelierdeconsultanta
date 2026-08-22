@@ -2,7 +2,7 @@
 
 const fs = require("fs");
 const path = require("path");
-const { isPublicProgram, loadProgramConfig } = require("./program-factual-governance");
+const { carouselPrograms, isPublicProgram, loadProgramConfig } = require("./program-factual-governance");
 
 const ROOT = path.resolve(__dirname, "..");
 const HOME = path.join(ROOT, "index.html");
@@ -66,7 +66,7 @@ function renderPrioritySlide(program, banner, index, total) {
   const active = index === 0;
   const inert = active ? "" : " inert";
   const image = String(banner?.image || "/assets/hero/hero-business.webp").replace(/'/g, "%27");
-  return `          <div class="priority-program-slide${active ? " is-active" : ""}" role="group" aria-roledescription="slide" aria-label="${index + 1} din ${total}" data-priority-slide data-program-id="${esc(program.slug)}" data-program-family="${esc(program.family)}" data-program-status="${esc(program.status)}" data-status-label="${esc(program.statusLabel)}" data-verified-at="${esc(program.verifiedAt)}" data-source-url="${esc(program.sourceUrl)}" aria-hidden="${active ? "false" : "true"}"${inert} style="--program-image:url('${image}')">
+  return `          <div class="priority-program-slide${active ? " is-active" : ""}" role="group" aria-roledescription="slide" aria-label="${index + 1} din ${total}" data-priority-slide data-program-id="${esc(program.id)}" data-program-family="${esc(program.family)}" data-program-status="${esc(program.status)}" data-status-label="${esc(program.statusLabel)}" data-verified-at="${esc(program.verifiedAt)}" data-source-url="${esc(program.sourceUrl)}" aria-hidden="${active ? "false" : "true"}"${inert} style="--program-image:url('${image}')">
             <span class="priority-program-status"><span aria-hidden="true">${statusSymbol(program.status)}</span><span>${esc(program.statusLabel)}</span></span>
             <h3>${esc(program.shortName)}</h3>
             <p>${esc(program.cardSummary)}</p>
@@ -76,13 +76,13 @@ function renderPrioritySlide(program, banner, index, total) {
 }
 
 function renderPriorityCarousel(programs, bannersByProgram) {
-  const featured = CONFIG.featuredProgramSlugs.map((slug) => programs.find((program) => program.slug === slug));
+  const featured = carouselPrograms(programs);
   if (!featured.length || featured.length > CONFIG.carousel.maximumItems || featured.length > 24) {
     throw new Error(`Caruselul trebuie să conțină între 1 și 24 de programe; găsite ${featured.length}.`);
   }
   featured.forEach((program) => validateProgram(program, "carusel"));
   const total = featured.length;
-  const slides = featured.map((program, index) => renderPrioritySlide(program, bannersByProgram.get(program.slug), index, total)).join("\n");
+  const slides = featured.map((program, index) => renderPrioritySlide(program, bannersByProgram.get(program.id), index, total)).join("\n");
   return `${PRIORITY_START}
     <section id="priority-programs" aria-labelledby="priority-programs-title">
       <div class="program-explorer-header">
@@ -117,7 +117,7 @@ function renderGridCard(program) {
   if (!hub) throw new Error(`grid: ${program.slug} nu are hub valid.`);
   const applicants = program.discovery.applicantTypes;
   const applicantLabels = applicants.map((key) => HUBS.filters.applicantTypes[key]).filter(Boolean);
-  return `        <article class="program-directory-card" data-program-directory-card data-program-id="${esc(program.slug)}" data-program-family="${esc(program.family)}" data-filter-family="${esc(hub.id)}" data-filter-applicants="${esc(applicants.join(" "))}" data-program-status="${esc(program.status)}" data-status-label="${esc(program.statusLabel)}" data-verified-at="${esc(program.verifiedAt)}" data-source-url="${esc(program.sourceUrl)}">
+  return `        <article class="program-directory-card" data-program-directory-card data-program-id="${esc(program.id)}" data-program-family="${esc(program.family)}" data-filter-family="${esc(hub.id)}" data-filter-applicants="${esc(applicants.join(" "))}" data-program-status="${esc(program.status)}" data-status-label="${esc(program.statusLabel)}" data-verified-at="${esc(program.verifiedAt)}" data-source-url="${esc(program.sourceUrl)}">
           <span class="program-directory-status"><span aria-hidden="true">${statusSymbol(program.status)}</span><span>${esc(program.statusLabel)}</span></span>
           <h3>${esc(program.shortName)}</h3>
           <p>${esc(program.cardSummary)}</p>
@@ -243,7 +243,7 @@ function main() {
     return;
   }
   if (after !== before) fs.writeFileSync(HOME, after, "utf8");
-  console.log(`Homepage program explorer sincronizat: ${CONFIG.featuredProgramSlugs.length} priorități editoriale.`);
+  console.log(`Homepage program explorer sincronizat: ${carouselPrograms(programs).length} priorități editoriale din registrul unic.`);
 }
 
 if (require.main === module) main();

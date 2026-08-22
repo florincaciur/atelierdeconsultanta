@@ -1,6 +1,6 @@
 # Taxonomia unică de status FABER
 
-Revizie semantică: **2026-08-22**. Config canonic: `config/program-status-taxonomy.json`. Acest document este generat de `tools/generate-status-governance-docs.js` și nu este o pagină publică.
+Revizie semantică: **2026-08-22**. Definiții canonice: `config/program-status-taxonomy.json`; atribuiri per program: `config/seo-programs.json#programs[*].canonicalStatus`. Acest document este generat de `tools/generate-status-governance-docs.js` și nu este o pagină publică.
 
 ## Contractul mecanismului
 
@@ -267,7 +267,7 @@ Placeholder-ele `{startDate}` și `{endDate}` se înlocuiesc numai cu date absol
 
 ## Compatibilitatea cu taxonomia legacy
 
-Valorile de mai jos sunt citite încă de suprafețele publice existente. Ele nu sunt stări canonice și nu au mapare optimistă implicită. Normalizarea folosește atribuirea explicită per program din config până la migrarea controlată a consumatorilor.
+Valorile de mai jos sunt citite încă de suprafețele publice existente. Ele nu sunt stări canonice și nu au mapare optimistă implicită. Normalizarea folosește atribuirea explicită din fiecare înregistrare de program până la migrarea controlată a consumatorilor.
 
 | Status legacy | Stări canonice posibile | Regulă de normalizare |
 |---|---|---|
@@ -316,4 +316,4 @@ Maparea de mai jos folosește snapshot-ul factual verificat în registry la **20
 
 ## Limita Task 02
 
-Acest task introduce contractul canonic, normalizarea documentată și verificarea automată. Nu migrează în masă HTML-ul, bannerele sau celelalte consumatoare ale câmpului legacy `status`; acea migrare trebuie făcută într-un task separat, cu sincronizare și verificare de regresie pe toate suprafețele.
+Contractul canonic și rolurile surselor sunt păstrate în înregistrarea unică a programului. HTML-ul, bannerele și celelalte suprafețe continuă să consume temporar codul operațional legacy `status`, dar nu îi mai păstrează atribuirea într-un config concurent.

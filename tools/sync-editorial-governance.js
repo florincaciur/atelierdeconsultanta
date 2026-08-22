@@ -131,7 +131,7 @@ function filesForRoute(route) {
 }
 
 function dashboardPayload(records, programs, today) {
-  const programById = new Map(programs.map((program) => [program.slug, program]));
+  const programById = new Map(programs.map((program) => [program.id, program]));
   return records.map((record) => {
     const program = record.programId ? programById.get(record.programId) : null;
     return {

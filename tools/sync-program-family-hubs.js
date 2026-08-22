@@ -4,7 +4,6 @@
 const fs = require("fs");
 const path = require("path");
 const { loadNextStepConfig, renderNextStepBlock } = require("./contextual-next-steps");
-const { renderProgramContextualLinks } = require("./sync-program-contextual-links");
 const { loadEditorialGovernance, renderEditorialGovernance } = require("./editorial-governance");
 const {
   PROGRAM_STATUSES,
@@ -128,7 +127,7 @@ function coverageText(program, filters) {
 
 function renderCard(program, filters) {
   const discovery = program.discovery;
-  return `<article class="program-family-card" data-program-card data-program-id="${esc(program.slug)}" data-program-status="${esc(program.status)}" data-status-label="${esc(program.statusLabel)}" data-verified-at="${esc(program.verifiedAt)}" data-source-url="${esc(program.sourceUrl)}" data-applicant-types="${esc(discovery.applicantTypes.join(" "))}" data-regions="${esc(discovery.regions.join(" "))}" data-investment-types="${esc(discovery.investmentTypes.join(" "))}" data-status="${esc(program.status)}">
+  return `<article class="program-family-card" data-program-card data-program-id="${esc(program.id)}" data-program-status="${esc(program.status)}" data-status-label="${esc(program.statusLabel)}" data-verified-at="${esc(program.verifiedAt)}" data-source-url="${esc(program.sourceUrl)}" data-applicant-types="${esc(discovery.applicantTypes.join(" "))}" data-regions="${esc(discovery.regions.join(" "))}" data-investment-types="${esc(discovery.investmentTypes.join(" "))}" data-status="${esc(program.status)}">
   <div class="program-family-card__body">
     <h3><a href="${esc(program.pageUrl)}">${esc(program.shortName || program.name)}</a></h3>
     <p class="program-family-card__status"><strong>${esc(statusStatement(program))}</strong> Verificat la <time datetime="${esc(program.verifiedAt)}">${esc(dateLabel(program.verifiedAt))}</time>.</p>
@@ -168,7 +167,6 @@ function renderMain(hub, programs, filters, hubRecord = null) {
   const nextStepConfig = loadNextStepConfig();
   const nextStepSlug = Object.keys(nextStepConfig.pages).find((slug) => nextStepConfig.pages[slug].route === hub.route);
   const contextualNextStep = !hubRecord && nextStepSlug ? `\n\n${renderNextStepBlock(nextStepSlug, nextStepConfig)}` : "";
-  const programContextualLinks = hubRecord ? `\n${renderProgramContextualLinks(hubRecord)}` : "";
   const editorialRecord = loadEditorialGovernance().byRoute.get(hub.route);
   const editorialGovernance = editorialRecord ? `\n\n${renderEditorialGovernance(editorialRecord)}` : "";
 
@@ -235,7 +233,7 @@ function renderMain(hub, programs, filters, hubRecord = null) {
   <section class="program-family-faq" aria-labelledby="program-family-faq-title">
     <h2 id="program-family-faq-title">Întrebări frecvente despre ${esc(hub.label)}</h2>
     <div class="program-family-faq__list">${hub.faqs.map((item) => `<details class="faq-item"><summary><span>${esc(item.question)}</span></summary><p>${esc(item.answer)}</p></details>`).join("\n      ")}</div>
-  </section>${editorialGovernance}${programContextualLinks}
+  </section>${editorialGovernance}
 </main>`;
 }
 
@@ -247,12 +245,17 @@ function injectAsset(html, element, marker, closingTag) {
 function synchronizeHtml(html, hub, programs, filters) {
   const heroPattern = /(<header\b[^>]*\bclass=["'][^"']*\bhero\b[^"']*["'][^>]*>)[\s\S]*?<\/header>/iu;
   const mainPattern = /<main\b[^>]*>[\s\S]*?<\/main>/iu;
+  const preservedProgramVisual = html.match(/<!--\s*PROGRAM_VISUAL_START\s*-->[\s\S]*?<!--\s*PROGRAM_VISUAL_END\s*-->/iu)?.[0] || "";
   if (!heroPattern.test(html)) throw new Error(`${hub.route}: nu a fost găsit hero-ul.`);
   if (!mainPattern.test(html)) throw new Error(`${hub.route}: nu a fost găsit elementul main.`);
 
   let next = html.replace(heroPattern, `$1${renderHero(hub)}\n  </header>`);
   const hubRecord = loadProgramConfig().programs.find((program) => program.pageUrl === hub.route && program.discovery?.listed === false) || null;
-  next = next.replace(mainPattern, renderMain(hub, programs, filters, hubRecord));
+  let main = renderMain(hub, programs, filters, hubRecord);
+  if (preservedProgramVisual) {
+    main = main.replace(/(<main\b[^>]*>)\n {2}/iu, `$1\n${preservedProgramVisual}\n\n`);
+  }
+  next = next.replace(mainPattern, main);
   next = injectAsset(next, `  <link rel="stylesheet" href="/assets/program-family-hubs.css?v=${ASSET_VERSION}" />`, "/assets/program-family-hubs.css", "</head>");
   next = injectAsset(next, `<script src="/assets/program-family-hubs.js?v=${ASSET_VERSION}" defer></script>`, "/assets/program-family-hubs.js", "</body>");
   return next;

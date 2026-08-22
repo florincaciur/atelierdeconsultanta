@@ -32,8 +32,8 @@ for (const program of publicPrograms) {
 
   assert.equal(canonical, `${SITE}${program.pageUrl}`, `${program.slug}: canonical incorect`);
   assert(sitemap.has(program.pageUrl), `${program.slug}: pagina lipsește din sitemap`);
-  assert(bannerIds.has(program.slug), `${program.slug}: banner absent`);
-  assert(carouselIds.has(program.slug), `${program.slug}: slide absent din carusel`);
+  assert(bannerIds.has(program.id), `${program.slug}: banner absent`);
+  assert(carouselIds.has(program.id), `${program.slug}: slide absent din carusel`);
   assert(!watermarkPattern.test(visibleText), `${program.slug}: urmă de răspuns generativ în conținutul vizibil`);
 }
 

@@ -6,15 +6,14 @@ import * as cheerio from "cheerio";
 
 const require = createRequire(import.meta.url);
 const ROOT = path.resolve(import.meta.dirname, "..");
-const { hasOfficialSource, isPublicProgram, loadProgramConfig } = require("../tools/program-factual-governance");
+const { hasOfficialSource, homepageHeroPrograms, isPublicProgram, loadProgramConfig } = require("../tools/program-factual-governance");
 const { latestVerifiedProgram } = require("../tools/sync-homepage-hero");
 const html = fs.readFileSync(path.join(ROOT, "index.html"), "utf8");
 const css = fs.readFileSync(path.join(ROOT, "assets", "homepage-hero.css"), "utf8");
 const $ = cheerio.load(html, { decodeEntities: false });
 const { programs } = loadProgramConfig();
 const latest = latestVerifiedProgram(programs);
-const navigation = JSON.parse(fs.readFileSync(path.join(ROOT, "config", "main-navigation.json"), "utf8"));
-const homepageProgramSlugs = navigation.programMenu.homepageProgramSlugs || navigation.programMenu.featuredProgramSlugs;
+const homepagePrograms = homepageHeroPrograms(programs);
 
 assert(latest && isPublicProgram(latest) && hasOfficialSource(latest), "programul recent trebuie să fie public și verificat oficial");
 assert.equal($("#hero.homepage-decision-hero").length, 1, "trebuie să existe exact un hero decizional");
@@ -39,7 +38,7 @@ assert.equal($("#hero .hero-flow-svg").length, 1, "SVG-ul traseului FABER trebui
 assert.deepEqual($("#hero .hf-label").map((_, node) => $(node).text().trim()).get(), ["Idee", "Verificare", "Dosar", "Finanțare", "Implementare"]);
 assert.equal($("#hero .hero-flow-caption").text().trim(), "Fiecare etapă trebuie susținută de documentele folosite în etapa următoare.");
 assert.equal($("#hero [data-hero-programs]").length, 1, "meniul interactiv cu măsuri trebuie să fie sub SVG");
-assert.equal($("#hero [data-hero-program-item]").length, homepageProgramSlugs.length, "meniul interactiv trebuie să corespundă configurației măsurilor verificate");
+assert.equal($("#hero [data-hero-program-item]").length, homepagePrograms.length, "meniul interactiv trebuie să corespundă selecției din registrul unic");
 assert.equal($("#hero [data-hero-program-item][href='/dr14']").length, 1, "DR 14 trebuie publicat în meniul hero");
 assert.equal($("#hero [data-hero-program-item][href='/dr18']").length, 1, "DR 18 trebuie publicat în meniul hero");
 assert.equal($("#hero [data-hero-program-item][href='/e-drive']").length, 1, "e-DRIVE trebuie publicat în meniul hero");
@@ -47,7 +46,7 @@ assert.equal($("#hero .hero-flow-svg").nextAll("[data-hero-programs]").length, 1
 assert.equal($("#hero [data-hero-program-item][href='/por-adr-nord-est']").length, 0, "ruta regională duplicată nu trebuie publicată în hero");
 assert.equal($("#hero [data-hero-program-item][href='/investitii-modernizarea-microintreprinderilor-apel-2']").length, 1, "pagina de conversie regională trebuie publicată în hero");
 const latestNode = $("#hero [data-homepage-hero-latest-program]");
-assert.equal(latestNode.attr("data-program-id"), latest.slug, "programul recent nu corespunde registrului");
+assert.equal(latestNode.attr("data-program-id"), latest.id, "programul recent nu corespunde registrului");
 assert.equal(latestNode.attr("data-program-status"), latest.status, "statusul programului recent diferă");
 assert.equal(latestNode.attr("data-verified-at"), latest.verifiedAt, "data programului recent diferă");
 assert.equal(latestNode.attr("data-source-url"), latest.sourceUrl, "sursa programului recent diferă");

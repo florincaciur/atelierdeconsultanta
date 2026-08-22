@@ -14,15 +14,43 @@ const PROGRAM_STATUSES = Object.freeze([
   "apel_inchis",
   "arhivat"
 ]);
+const CANONICAL_PROGRAM_STATUSES = Object.freeze([
+  "ANNOUNCED",
+  "PREPARATION",
+  "PUBLIC_CONSULTATION",
+  "CONSULTATIVE_GUIDE",
+  "FINAL_GUIDE",
+  "APPROVED_SCHEME",
+  "SCHEDULED",
+  "OPEN",
+  "CLOSED",
+  "SUSPENDED",
+  "CANCELLED",
+  "COMPLETED",
+  "UNCONFIRMED"
+]);
+const OFFICIAL_SOURCE_ROLES = Object.freeze([
+  "programPage",
+  "guide",
+  "annexes",
+  "schemeOrder",
+  "sessionAnnouncement",
+  "corrigenda",
+  "clarifications"
+]);
 const SOURCE_STATUSES = PROGRAM_STATUSES;
 const ACTIVE_STATUSES = new Set(["apel_deschis"]);
 const PUBLICATION_STATES = Object.freeze(["public", "pending_validation"]);
 const REQUIRED_FIELDS = Object.freeze([
+  "id",
   "slug",
   "name",
   "shortName",
   "family",
   "status",
+  "canonicalStatus",
+  "statusScope",
+  "statusRationale",
   "statusLabel",
   "publicationState",
   "verifiedAt",
@@ -36,10 +64,11 @@ const REQUIRED_FIELDS = Object.freeze([
   "pageUrl",
   "lastMeaningfulUpdate",
   "evergreenValue",
-  "archivedNoindexDecision"
+  "archivedNoindexDecision",
+  "indexable",
+  "officialSources"
 ]);
 const LEGACY_FIELDS = Object.freeze([
-  "id",
   "route",
   "officialName",
   "authority",
@@ -129,12 +158,14 @@ function validateProgram(program, index = -1) {
   for (const field of LEGACY_FIELDS) {
     if (Object.prototype.hasOwnProperty.call(program, field)) errors.push(`${location}: câmpul legacy ${field} este interzis; folosește schema registrului unic`);
   }
-  for (const field of ["slug", "name", "shortName", "family", "statusLabel", "sourceName", "sourceUrl", "sourceVersion", "pageUrl"]) {
+  for (const field of ["id", "slug", "name", "shortName", "family", "statusLabel", "statusScope", "statusRationale", "sourceName", "sourceUrl", "sourceVersion", "pageUrl"]) {
     if (!String(program[field] ?? "").trim()) errors.push(`${location}: ${field} nu poate fi gol`);
   }
+  if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(String(program.id || ""))) errors.push(`${location}: id stabil invalid (${program.id})`);
   if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(String(program.slug || ""))) errors.push(`${location}: slug invalid (${program.slug})`);
   if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(String(program.family || ""))) errors.push(`${location}: family invalid (${program.family})`);
   if (!PROGRAM_STATUSES.includes(program.status)) errors.push(`${location}: status invalid (${program.status})`);
+  if (!CANONICAL_PROGRAM_STATUSES.includes(program.canonicalStatus)) errors.push(`${location}: canonicalStatus invalid (${program.canonicalStatus})`);
   if (!PUBLICATION_STATES.includes(program.publicationState)) errors.push(`${location}: publicationState invalid (${program.publicationState})`);
   if (normalizeRoute(program.pageUrl) !== program.pageUrl) errors.push(`${location}: pageUrl nu este canonic (${program.pageUrl})`);
   for (const field of ["applicationStart", "applicationEnd"]) {
@@ -148,6 +179,15 @@ function validateProgram(program, index = -1) {
   }
   if (program.status === "apel_deschis" && (!isIsoDate(program.applicationStart, { nullable: false }) || !isIsoDate(program.applicationEnd, { nullable: false }))) {
     errors.push(`${location}: un apel_deschis trebuie să aibă applicationStart și applicationEnd confirmate`);
+  }
+  if (program.canonicalStatus === "OPEN") {
+    if (!hasOfficialSource(program)) errors.push(`${location}: OPEN necesită o sursă oficială completă`);
+    if (!isIsoDate(program.applicationStart, { nullable: false }) || !isIsoDate(program.applicationEnd, { nullable: false })) {
+      errors.push(`${location}: OPEN necesită applicationStart și applicationEnd confirmate`);
+    }
+    if (!program.officialSources?.roles?.sessionAnnouncement?.length) {
+      errors.push(`${location}: OPEN necesită dovadă oficială de sesiune`);
+    }
   }
   if (program.grantSummary !== null && (typeof program.grantSummary !== "object" || Array.isArray(program.grantSummary))) {
     errors.push(`${location}: grantSummary trebuie să fie obiect sau null`);
@@ -172,6 +212,7 @@ function validateProgram(program, index = -1) {
     }
   }
   if (typeof program.evergreenValue !== "boolean") errors.push(`${location}: evergreenValue trebuie să fie boolean`);
+  if (typeof program.indexable !== "boolean") errors.push(`${location}: indexable trebuie să fie boolean`);
   if (![null, "index", "noindex"].includes(program.archivedNoindexDecision)) errors.push(`${location}: archivedNoindexDecision invalid`);
   if (program.status !== "arhivat" && program.archivedNoindexDecision === "noindex") {
     errors.push(`${location}: noindex editorial este permis prin acest câmp numai pentru status=arhivat`);
@@ -182,6 +223,65 @@ function validateProgram(program, index = -1) {
   if (!Array.isArray(program.eligibleApplicants)) errors.push(`${location}: eligibleApplicants trebuie să fie listă`);
   if (!Array.isArray(program.keyConditions)) errors.push(`${location}: keyConditions trebuie să fie listă`);
   if (!Array.isArray(program.officialGuideKeys)) errors.push(`${location}: officialGuideKeys trebuie să fie listă`);
+  if (!program.officialSources || typeof program.officialSources !== "object" || Array.isArray(program.officialSources)) {
+    errors.push(`${location}: officialSources trebuie să fie obiect`);
+  } else {
+    if (!String(program.officialSources.notes || "").trim()) errors.push(`${location}: officialSources.notes nu poate fi gol`);
+    for (const role of OFFICIAL_SOURCE_ROLES) {
+      const references = program.officialSources.roles?.[role];
+      if (!Array.isArray(references)) {
+        errors.push(`${location}: officialSources.roles.${role} trebuie să fie listă`);
+        continue;
+      }
+      for (const [referenceIndex, reference] of references.entries()) {
+        const validString = typeof reference === "string" && reference.trim();
+        const validObject = reference && typeof reference === "object" && !Array.isArray(reference)
+          && String(reference.ref || "").trim() && String(reference.label || "").trim();
+        if (!validString && !validObject) {
+          errors.push(`${location}: officialSources.roles.${role}[${referenceIndex}] trebuie să fie ref text sau obiect { ref, label }`);
+        }
+      }
+    }
+    const latestReference = program.officialSources.latestOfficialUpdateRef;
+    if (latestReference !== undefined) {
+      const validString = typeof latestReference === "string" && latestReference.trim();
+      const validObject = latestReference && typeof latestReference === "object" && !Array.isArray(latestReference)
+        && String(latestReference.ref || "").trim() && String(latestReference.label || "").trim();
+      if (!validString && !validObject) errors.push(`${location}: officialSources.latestOfficialUpdateRef trebuie să fie ref text sau obiect { ref, label }`);
+    }
+  }
+  if (program.relatedProgramIds !== undefined && !Array.isArray(program.relatedProgramIds)) {
+    errors.push(`${location}: relatedProgramIds trebuie să fie listă`);
+  }
+  for (const field of ["officialSourceUpdatedAt", "nextReviewAt"]) {
+    if (program[field] !== undefined && !isIsoDate(program[field]) && !isPending(program[field])) {
+      errors.push(`${location}: ${field} trebuie să fie dată ISO, null sau ${HUMAN_REVIEW}`);
+    }
+  }
+  for (const field of ["displayName", "acronym", "fund", "documentStage", "eligibleApplicantSummary"]) {
+    if (program[field] !== undefined && program[field] !== null && typeof program[field] !== "string") {
+      errors.push(`${location}: ${field} trebuie să fie text sau null`);
+    }
+  }
+  if (program.extensionData !== undefined && program.extensionData !== null && (typeof program.extensionData !== "object" || Array.isArray(program.extensionData))) {
+    errors.push(`${location}: extensionData trebuie să fie obiect sau null`);
+  }
+  if (!program.presentation || typeof program.presentation !== "object") errors.push(`${location}: presentation trebuie să fie obiect`);
+  if (typeof program.presentation?.carousel !== "boolean") errors.push(`${location}: presentation.carousel trebuie să fie boolean`);
+  if (typeof program.presentation?.hero !== "boolean") errors.push(`${location}: presentation.hero trebuie să fie boolean`);
+  for (const field of ["carouselOrder", "heroOrder", "navigationOrder"]) {
+    if (program.presentation?.[field] !== undefined && (!Number.isInteger(program.presentation[field]) || program.presentation[field] < 1)) {
+      errors.push(`${location}: presentation.${field} trebuie să fie întreg pozitiv`);
+    }
+  }
+  if (program.presentation?.carousel !== Number.isInteger(program.presentation?.carouselOrder)) {
+    errors.push(`${location}: presentation.carousel și carouselOrder trebuie declarate împreună`);
+  }
+  if (program.presentation?.hero !== Number.isInteger(program.presentation?.heroOrder)) {
+    errors.push(`${location}: presentation.hero și heroOrder trebuie declarate împreună`);
+  }
+  if (!program.discovery || typeof program.discovery !== "object") errors.push(`${location}: discovery trebuie să fie obiect`);
+  if (typeof program.discovery?.listed !== "boolean") errors.push(`${location}: discovery.listed trebuie să fie boolean`);
   return errors;
 }
 
@@ -191,7 +291,6 @@ function defineAlias(program, name, getter) {
 }
 
 function decorateProgram(program) {
-  defineAlias(program, "id", () => program.slug);
   defineAlias(program, "route", () => program.pageUrl);
   defineAlias(program, "officialName", () => program.name);
   defineAlias(program, "authority", () => program.sourceName);
@@ -210,18 +309,35 @@ function decorateProgram(program) {
   return program;
 }
 
-function loadProgramConfig(file = CONFIG_PATH) {
-  const config = readJson(file);
-  const rawPrograms = Array.isArray(config.programs) ? config.programs : [];
-  const errors = rawPrograms.flatMap(validateProgram);
+function validateProgramRelationships(rawPrograms) {
+  const errors = [];
+  const ids = new Set();
   const slugs = new Set();
   const routes = new Set();
   for (const program of rawPrograms) {
+    if (ids.has(program.id)) errors.push(`id stabil duplicat: ${program.id}`);
     if (slugs.has(program.slug)) errors.push(`slug duplicat: ${program.slug}`);
     if (routes.has(program.pageUrl)) errors.push(`pageUrl duplicat: ${program.pageUrl}`);
+    ids.add(program.id);
     slugs.add(program.slug);
     routes.add(program.pageUrl);
   }
+  for (const program of rawPrograms) {
+    for (const relatedId of program.relatedProgramIds || []) {
+      if (!ids.has(relatedId)) errors.push(`${program.id}: relatedProgramIds conține ID inexistent (${relatedId})`);
+      if (relatedId === program.id) errors.push(`${program.id}: relatedProgramIds nu poate conține propriul ID`);
+    }
+  }
+  return errors;
+}
+
+function loadProgramConfig(file = CONFIG_PATH) {
+  const config = readJson(file);
+  const rawPrograms = Array.isArray(config.programs) ? config.programs : [];
+  const errors = [
+    ...rawPrograms.flatMap(validateProgram),
+    ...validateProgramRelationships(rawPrograms)
+  ];
   if (errors.length) throw new Error(`Registrul factual este invalid:\n- ${errors.join("\n- ")}`);
   const programs = rawPrograms.map(decorateProgram);
   return { config, programs, publicPrograms: programs.filter(isPublicProgram) };
@@ -229,9 +345,31 @@ function loadProgramConfig(file = CONFIG_PATH) {
 
 function programIndexes(programs = loadProgramConfig().programs) {
   return {
-    byId: new Map(programs.map((program) => [program.slug, program])),
+    byId: new Map(programs.map((program) => [program.id, program])),
+    bySlug: new Map(programs.map((program) => [program.slug, program])),
     byRoute: new Map(programs.map((program) => [normalizeRoute(program.pageUrl), program]))
   };
+}
+
+function programsForPresentation(programs, field) {
+  return programs
+    .filter((program) => isPublicProgram(program) && Number.isInteger(program.presentation?.[field]))
+    .sort((left, right) => left.presentation[field] - right.presentation[field] || left.id.localeCompare(right.id, "ro"));
+}
+
+function carouselPrograms(programs) {
+  return programsForPresentation(
+    programs.filter((program) => program.presentation?.carousel && program.discovery?.listed !== false && !program.discovery?.redirectTarget),
+    "carouselOrder"
+  );
+}
+
+function homepageHeroPrograms(programs) {
+  return programsForPresentation(programs.filter((program) => program.presentation?.hero), "heroOrder");
+}
+
+function navigationPrograms(programs) {
+  return programsForPresentation(programs, "navigationOrder");
 }
 
 function programForRoute(route, programs) {
@@ -342,14 +480,14 @@ function renderProgramFactualStatus(program, options = {}) {
   if (!program) return "";
   if (!isPublicProgram(program)) {
     return `<!-- PROGRAM_FACTUAL_STATUS_START -->
-<section class="program-factual-status program-factual-status--pending" aria-label="Informații în validare editorială" data-program-id="${escapeHtml(program.slug)}" data-publication-state="pending_validation">
+<section class="program-factual-status program-factual-status--pending" aria-label="Informații în validare editorială" data-program-id="${escapeHtml(program.id)}" data-publication-state="pending_validation">
   <p><strong>Publicare suspendată:</strong> statutul, documentul oficial, datele și valorile sunt în validare editorială și nu sunt publicate.</p>
 </section>
 <!-- PROGRAM_FACTUAL_STATUS_END -->`;
   }
   if (options.mode === "template-header") {
     return `<!-- PROGRAM_FACTUAL_STATUS_START -->
-<section class="program-factual-status program-factual-status--template-header" aria-label="Statut și proveniență" data-program-id="${escapeHtml(program.slug)}" data-program-status="${escapeHtml(program.status)}" data-status-label="${escapeHtml(program.statusLabel)}" data-verified-at="${escapeHtml(program.verifiedAt)}" data-source-url="${escapeHtml(program.sourceUrl)}" data-publication-state="public">
+<section class="program-factual-status program-factual-status--template-header" aria-label="Statut și proveniență" data-program-id="${escapeHtml(program.id)}" data-program-status="${escapeHtml(program.status)}" data-status-label="${escapeHtml(program.statusLabel)}" data-verified-at="${escapeHtml(program.verifiedAt)}" data-source-url="${escapeHtml(program.sourceUrl)}" data-publication-state="public">
   <p><strong>${escapeHtml(statusStatement(program))}</strong></p>
   <p>Verificat la <time datetime="${escapeHtml(program.verifiedAt)}">${escapeHtml(program.verifiedAt)}</time>. Sursa: <a href="${escapeHtml(program.sourceUrl)}" target="_blank" rel="noopener noreferrer" data-analytics-event="source_document_click" data-analytics-component="program_template_header" data-analytics-cta-id="official_source" data-analytics-program-category="${escapeHtml(program.slug)}">${escapeHtml(program.sourceName)} — ${escapeHtml(program.sourceVersion)}</a>.</p>
 </section>
@@ -363,7 +501,7 @@ function renderProgramFactualStatus(program, options = {}) {
     ? ` Ultima actualizare relevantă: <time datetime="${escapeHtml(program.lastMeaningfulUpdate)}">${escapeHtml(program.lastMeaningfulUpdate)}</time>.`
     : "";
   return `<!-- PROGRAM_FACTUAL_STATUS_START -->
-<section class="program-factual-status" aria-label="Statut factual al programului" data-program-id="${escapeHtml(program.slug)}" data-program-status="${escapeHtml(program.status)}" data-status-label="${escapeHtml(program.statusLabel)}" data-verified-at="${escapeHtml(program.verifiedAt)}" data-source-url="${escapeHtml(program.sourceUrl)}" data-publication-state="public">
+<section class="program-factual-status" aria-label="Statut factual al programului" data-program-id="${escapeHtml(program.id)}" data-program-status="${escapeHtml(program.status)}" data-status-label="${escapeHtml(program.statusLabel)}" data-verified-at="${escapeHtml(program.verifiedAt)}" data-source-url="${escapeHtml(program.sourceUrl)}" data-publication-state="public">
   <p><strong>Statut:</strong> ${escapeHtml(statusStatement(program))} ${escapeHtml(program.editorialDisclaimer || "")}</p>
   ${application}
   ${funding ? `<p data-program-funding>${escapeHtml(funding)}</p>` : "<!-- grantSummary/cofinancingSummary=null; nicio valoare publicată -->"}
@@ -386,7 +524,7 @@ function hydrateProgramPage(page, programs) {
   const robots = pending ? "noindex, follow" : (archivedRobotsDecision(program) || page.robots);
   return {
     ...page,
-    programId: program.slug,
+    programId: program.id,
     programName: program.shortName,
     title: program.metaTitle,
     description: program.metaDescription,
@@ -408,15 +546,18 @@ function daysSince(date, now = new Date()) {
 
 module.exports = {
   ACTIVE_STATUSES,
+  CANONICAL_PROGRAM_STATUSES,
   CONFIG_PATH,
   DEFAULT_STATUS_LABELS,
   HUMAN_REVIEW,
+  OFFICIAL_SOURCE_ROLES,
   PROGRAM_STATUSES,
   PUBLICATION_STATES,
   REQUIRED_FIELDS,
   ROOT,
   SOURCE_STATUSES,
   archivedRobotsDecision,
+  carouselPrograms,
   cofinancingSummaryText,
   daysSince,
   factualFaq,
@@ -425,10 +566,12 @@ module.exports = {
   fundingSummary,
   grantSummaryText,
   hasOfficialSource,
+  homepageHeroPrograms,
   hydrateProgramPage,
   isOfficialUrl,
   isPublicProgram,
   loadProgramConfig,
+  navigationPrograms,
   normalizeRoute,
   programForPage,
   programForRoute,
@@ -438,5 +581,6 @@ module.exports = {
   statusLabel,
   statusStatement,
   summaryHasValues,
-  validateProgram
+  validateProgram,
+  validateProgramRelationships
 };

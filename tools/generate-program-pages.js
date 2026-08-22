@@ -2976,8 +2976,8 @@ function pageHtml(page, config) {
   const factualProgram = page.factualGovernance || null;
   const factualBodyAttributes = factualProgram
     ? factualProgram.publicationState === "public"
-      ? ` data-program-id="${escAttr(factualProgram.slug)}" data-program-status="${escAttr(factualProgram.status)}" data-status-label="${escAttr(factualProgram.statusLabel)}" data-verified-at="${escAttr(factualProgram.verifiedAt)}" data-source-url="${escAttr(factualProgram.sourceUrl)}" data-publication-state="public" data-program-registry="config/seo-programs.json#programs"`
-      : ` data-program-id="${escAttr(factualProgram.slug)}" data-publication-state="pending_validation" data-program-registry="config/seo-programs.json#programs"`
+      ? ` data-program-id="${escAttr(factualProgram.id)}" data-program-status="${escAttr(factualProgram.status)}" data-status-label="${escAttr(factualProgram.statusLabel)}" data-verified-at="${escAttr(factualProgram.verifiedAt)}" data-source-url="${escAttr(factualProgram.sourceUrl)}" data-publication-state="public" data-program-registry="config/seo-programs.json#programs"`
+      : ` data-program-id="${escAttr(factualProgram.id)}" data-publication-state="pending_validation" data-program-registry="config/seo-programs.json#programs"`
     : "";
   const relatedCss = (page.related || []).length ? `\n  <link rel="stylesheet" href="/assets/see-also.css" />` : "";
   const toolCss = page.includeTools || page.includeDownloads ? `\n  <link rel="stylesheet" href="/assets/seo-tools.css" />` : "";

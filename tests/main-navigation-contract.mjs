@@ -9,7 +9,7 @@ import { chromium } from "playwright";
 const require = createRequire(import.meta.url);
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const { ASSET_VERSION } = require("../tools/generate-global-header.js");
-const { loadProgramConfig } = require("../tools/program-factual-governance.js");
+const { loadProgramConfig, navigationPrograms } = require("../tools/program-factual-governance.js");
 const config = JSON.parse(fs.readFileSync(path.join(ROOT, "config", "main-navigation.json"), "utf8"));
 const partial = fs.readFileSync(path.join(ROOT, "partials", "global-header.html"), "utf8");
 const stylesheet = fs.readFileSync(path.join(ROOT, "assets", "global-header.css"), "utf8");
@@ -36,7 +36,8 @@ async function screenshotWithRetry(page, options, attempts = 3) {
 const $ = cheerio.load(partial, { decodeEntities: false }, false);
 const grouped = config.primaryDestinations.filter((destination) => destination.items);
 const expectedLabels = config.primaryDestinations.map(({ label }) => label);
-const programBySlug = new Map(loadProgramConfig().programs.map((program) => [program.slug, program]));
+const programBySlug = new Map(loadProgramConfig().programs.map((program) => [program.id, program]));
+const expectedNavigationPrograms = navigationPrograms([...programBySlug.values()]);
 
 assert.equal(config.primaryDestinations.length, 5, "navigation must expose exactly five primary destinations");
 assert.equal(grouped.length, 3, "three primary destinations must use disclosure groups");
@@ -55,8 +56,8 @@ assert.deepEqual($("#navbar .nav-primary-link").map((_, element) => $(element).t
 assert.equal($("#navbar .nav-cta").text().trim(), config.cta.label, "desktop CTA copy must be canonical");
 assert.equal($("#mobileMenu .mobile-cta").text().trim(), config.cta.label, "mobile CTA copy must be canonical");
 assert.equal(/\b(?:Instrumente|Ghiduri|Cuprins)\b/u.test($("#navbar, #mobileMenu").text()), false, "removed navigation labels must stay absent");
-assert.equal($("#dropdownPanel [data-program-id]").length, config.programMenu.featuredProgramSlugs.length, "desktop program menu must expose verified measures");
-assert.equal($("#mobile-programe-panel [data-program-id]").length, config.programMenu.featuredProgramSlugs.length, "mobile program menu must expose verified measures");
+assert.equal($("#dropdownPanel [data-program-id]").length, expectedNavigationPrograms.length, "desktop program menu must expose verified measures");
+assert.equal($("#mobile-programe-panel [data-program-id]").length, expectedNavigationPrograms.length, "mobile program menu must expose verified measures");
 $("[data-program-id]").each((_, element) => {
   const item = $(element);
   const program = programBySlug.get(item.attr("data-program-id"));

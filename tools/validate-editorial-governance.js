@@ -23,7 +23,7 @@ function csvCell(value) {
 
 function reportData(today = new Date().toISOString().slice(0, 10)) {
   const { config, programs, records } = loadEditorialGovernance();
-  const programById = new Map(programs.map((program) => [program.slug, program]));
+  const programById = new Map(programs.map((program) => [program.id, program]));
   const rows = records.map((record) => {
     const program = record.programId ? programById.get(record.programId) : null;
     const issues = recordIssues(record, program, today);

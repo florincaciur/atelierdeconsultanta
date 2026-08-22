@@ -126,7 +126,7 @@ async function main() {
     if (!program) throw new Error(`Program registry is missing ${slug}`);
     const html = pages.get(program.pageUrl);
     const expectedAttributes = [
-      `data-program-id="${program.slug}"`,
+      `data-program-id="${program.id}"`,
       `data-program-status="${program.status}"`,
       `data-verified-at="${program.verifiedAt}"`,
       `data-source-url="${program.sourceUrl.replace(/&/gu, "&amp;")}"`,

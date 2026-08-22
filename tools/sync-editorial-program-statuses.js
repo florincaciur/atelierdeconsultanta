@@ -82,7 +82,7 @@ function main() {
   const before = fs.readFileSync(GOVERNANCE_PATH, "utf8");
   const config = JSON.parse(before);
   const { programs } = loadProgramConfig();
-  const byId = new Map(programs.map((program) => [program.slug, program]));
+  const byId = new Map(programs.map((program) => [program.id, program]));
   let changed = 0;
 
   for (const record of config.records || []) {

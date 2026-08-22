@@ -150,7 +150,7 @@ function renderFundingOverview(page) {
   const cards = FEATURED_FUNDING_SLUGS.map((slug, index) => {
     const program = bySlug.get(slug);
     if (!program || program.publicationState !== "public") throw new Error(`${page.route}: programul ${slug} nu este public`);
-    return `<a class="funding-program-card" href="${attr(program.pageUrl)}" data-program-id="${attr(program.slug)}" style="--card-delay:${index * 55}ms">
+    return `<a class="funding-program-card" href="${attr(program.pageUrl)}" data-program-id="${attr(program.id)}" style="--card-delay:${index * 55}ms">
           <span class="funding-program-card__index">${String(index + 1).padStart(2, "0")}</span>
           <strong>${esc(program.shortName)}</strong>
           <small>${esc(program.statusLabel)}</small>

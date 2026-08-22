@@ -1,11 +1,14 @@
 import assert from "node:assert/strict";
 import fs from "node:fs";
 import path from "node:path";
+import { createRequire } from "node:module";
 import * as cheerio from "cheerio";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
+const require = createRequire(import.meta.url);
+const { carouselPrograms, loadProgramConfig } = require("../tools/program-factual-governance");
 const config = JSON.parse(fs.readFileSync(path.join(ROOT, "config", "homepage-decision-flow.json"), "utf8"));
-const homepagePrograms = JSON.parse(fs.readFileSync(path.join(ROOT, "config", "homepage-programs.json"), "utf8"));
+const homepagePrograms = carouselPrograms(loadProgramConfig().programs);
 const html = fs.readFileSync(path.join(ROOT, "index.html"), "utf8");
 const css = fs.readFileSync(path.join(ROOT, "assets", "homepage-decision-flow.css"), "utf8");
 const js = fs.readFileSync(path.join(ROOT, "assets", "homepage-decision-flow.js"), "utf8");
@@ -22,7 +25,7 @@ assert.equal($("main [data-priority-carousel]").length, 1, "trebuie păstrat un 
 assert.equal($("main [data-card-carousel], main [data-program-directory]").length, 0, "componentele repetitive trebuie eliminate");
 assert.equal($("[data-homepage-method-frame]").length, 5);
 assert.equal($("[data-homepage-explorer-frame]").length, 4);
-assert.equal($("div[data-priority-slide][role='group']").length, homepagePrograms.featuredProgramSlugs.length, "toate slide-urile caruselului trebuie să folosească un element compatibil cu rolul group");
+assert.equal($("div[data-priority-slide][role='group']").length, homepagePrograms.length, "toate slide-urile caruselului trebuie să folosească un element compatibil cu rolul group");
 assert.equal($("div[data-homepage-method-frame][role='tabpanel']").length, 5, "panourile metodei trebuie să folosească un element compatibil cu rolul tabpanel");
 assert.equal($("div[data-homepage-explorer-frame][role='tabpanel']").length, 4, "panourile explorerului trebuie să folosească un element compatibil cu rolul tabpanel");
 assert.equal($("article[role='tabpanel']").length, 0, "rolul tabpanel nu este permis pe elementul article");

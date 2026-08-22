@@ -88,7 +88,7 @@ for (const program of programs) {
   }
 
   const $hub = hubDocuments.get(discovery.parentHub);
-  const card = $hub(`[data-program-card][data-program-id='${program.slug}']`);
+  const card = $hub(`[data-program-card][data-program-id='${program.id}']`);
   const shouldList = isPublicProgram(program) && discovery.listed !== false;
   assert.equal(card.length, shouldList ? 1 : 0, `${program.slug}: public card visibility contradicts publication state`);
   if (!shouldList) continue;
@@ -106,7 +106,7 @@ for (const program of programs) {
 }
 
 for (const pending of programs.filter((program) => !isPublicProgram(program))) {
-  for (const $hub of hubDocuments.values()) assert.equal($hub(`[data-program-id='${pending.slug}']`).length, 0, `${pending.slug}: pending program leaked into a public hub`);
+  for (const $hub of hubDocuments.values()) assert.equal($hub(`[data-program-id='${pending.id}']`).length, 0, `${pending.slug}: pending program leaked into a public hub`);
 }
 
 // Click-depth contract: homepage -> family hub -> public program (maximum two navigational clicks).

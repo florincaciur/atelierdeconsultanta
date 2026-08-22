@@ -22,8 +22,7 @@ const {
 const data = loadData();
 const documents = buildDocuments(data);
 const statusById = new Map(data.taxonomy.statuses.map((status) => [status.id, status]));
-const programsById = new Map(data.programs.map((program) => [program.slug, program]));
-const sourceEntryById = new Map(data.sourceRegistry.programs.map((entry) => [entry.programId, entry]));
+const programsById = new Map(data.programs.map((program) => [program.id, program]));
 
 assert.deepEqual(validateData(data), [], "Configurațiile taxonomiei și registrului de surse trebuie să fie valide.");
 assert.deepEqual(data.taxonomy.statuses.map((status) => status.id), EXPECTED_STATUS_IDS, "Taxonomia trebuie să păstreze exact cele 13 stări canonice și ordinea reviewable.");
@@ -35,27 +34,26 @@ assert.equal(statusById.get("APPROVED_SCHEME").acceptsApplications, false, "APPR
 assert.match(statusById.get("SCHEDULED").publicLabel, /\{startDate\}.*\{endDate\}/, "SCHEDULED trebuie să afișeze fereastra oficială viitoare.");
 assert.match(statusById.get("UNCONFIRMED").publicLabel, /neconfirmat/i, "UNCONFIRMED nu poate fi prezentat drept fapt cert.");
 
-assert.equal(Object.keys(data.taxonomy.programAssignments).length, data.programs.length, "Fiecare program trebuie să aibă o singură atribuire canonică.");
-assert.equal(data.sourceRegistry.programs.length, data.programs.length, "Fiecare program trebuie să aibă o fișă de surse.");
-assert.equal(data.taxonomy.programAssignments["dr14-afir"].canonicalStatus, "SCHEDULED");
-assert.equal(data.taxonomy.programAssignments["dr18-afir"].canonicalStatus, "SCHEDULED");
-assert.equal(data.taxonomy.programAssignments["pocidif-21"].canonicalStatus, "OPEN");
-assert.equal(data.taxonomy.programAssignments["pro-infra"].canonicalStatus, "APPROVED_SCHEME");
-assert.equal(data.taxonomy.programAssignments["fondul-modernizare-pc1-stocare"].canonicalStatus, "FINAL_GUIDE");
-assert.equal(data.taxonomy.programAssignments["dr12-afir"].canonicalStatus, "CONSULTATIVE_GUIDE");
+assert.equal(programsById.size, data.programs.length, "Fiecare program trebuie să aibă un singur ID stabil.");
+assert.equal(programsById.get("dr14-afir").canonicalStatus, "SCHEDULED");
+assert.equal(programsById.get("dr18-afir").canonicalStatus, "SCHEDULED");
+assert.equal(programsById.get("pocidif-21").canonicalStatus, "OPEN");
+assert.equal(programsById.get("pro-infra").canonicalStatus, "APPROVED_SCHEME");
+assert.equal(programsById.get("fondul-modernizare-pc1-stocare").canonicalStatus, "FINAL_GUIDE");
+assert.equal(programsById.get("dr12-afir").canonicalStatus, "CONSULTATIVE_GUIDE");
 
 for (const id of ["program-regional-nord-est", "fonduri-regionale", "apeluri-gal", "gal-afir-leader", "pnrr", "programul-tranzitie-justa", "fondul-de-modernizare"]) {
-  assert.equal(data.taxonomy.programAssignments[id].canonicalStatus, "UNCONFIRMED", `${id} este pagină-umbrelă și nu poate moșteni OPEN de la un apel.`);
+  assert.equal(programsById.get(id).canonicalStatus, "UNCONFIRMED", `${id} este pagină-umbrelă și nu poate moșteni OPEN de la un apel.`);
 }
 
 for (const program of data.programs) {
-  const assignment = data.taxonomy.programAssignments[program.slug];
-  const sourceEntry = sourceEntryById.get(program.slug);
+  const assignment = program;
+  const sourceEntry = program.officialSources;
   assert.ok(sourceEntry, `${program.slug} trebuie să existe în registrul de surse.`);
   assert.deepEqual(Object.keys(sourceEntry.roles), SOURCE_ROLES, `${program.slug} trebuie să declare toate rolurile oficiale în ordinea standard.`);
   assert.ok(sourceEntry.roles.programPage.length > 0, `${program.slug} trebuie să aibă pagină oficială.`);
-  assert.ok(documents.status.includes(`| \`${program.slug}\` |`), `${program.slug} trebuie să apară în maparea taxonomiei.`);
-  assert.ok(documents.sources.includes(`## \`${program.slug}\` —`), `${program.slug} trebuie să aibă fișă în registrul oficial.`);
+  assert.ok(documents.status.includes(`| \`${program.id}\` |`), `${program.id} trebuie să apară în maparea taxonomiei.`);
+  assert.ok(documents.sources.includes(`## \`${program.id}\` —`), `${program.id} trebuie să aibă fișă în registrul oficial.`);
   assert.ok(documents.sources.includes(program.sourceUrl), `${program.slug} trebuie să includă URL-ul oficial principal.`);
 
   for (const role of SOURCE_ROLES) {

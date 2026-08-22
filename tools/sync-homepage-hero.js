@@ -4,6 +4,7 @@ const fs = require("fs");
 const path = require("path");
 const {
   hasOfficialSource,
+  homepageHeroPrograms,
   isPublicProgram,
   loadProgramConfig
 } = require("./program-factual-governance");
@@ -11,7 +12,6 @@ const {
 const ROOT = path.resolve(__dirname, "..");
 const HOME = path.join(ROOT, "index.html");
 const STYLE_FILE = path.join(ROOT, "assets", "homepage-hero.css");
-const NAVIGATION_CONFIG = JSON.parse(fs.readFileSync(path.join(ROOT, "config", "main-navigation.json"), "utf8"));
 const CHECK_ONLY = process.argv.includes("--check");
 const START = "<!-- HOMEPAGE_DECISION_HERO_START -->";
 const END = "<!-- HOMEPAGE_DECISION_HERO_END -->";
@@ -51,14 +51,12 @@ function latestVerifiedProgram(programs) {
 }
 
 function renderProgramMenu(programs) {
-  const bySlug = new Map(programs.map((program) => [program.slug, program]));
-  const homepageSlugs = NAVIGATION_CONFIG.programMenu.homepageProgramSlugs || NAVIGATION_CONFIG.programMenu.featuredProgramSlugs;
-  const featured = homepageSlugs.map((slug) => bySlug.get(slug));
+  const featured = homepageHeroPrograms(programs);
   if (featured.some((item) => !item || !isPublicProgram(item) || !hasOfficialSource(item))) {
     throw new Error("Meniul interactiv din hero conține un program absent sau neverificat.");
   }
   const first = featured[0];
-  const items = featured.map((item, index) => `              <li><a href="${escapeHtml(item.pageUrl)}" data-hero-program-item data-program-id="${escapeHtml(item.slug)}" data-program-status="${escapeHtml(item.status)}" data-status-label="${escapeHtml(item.statusLabel)}" data-verified-at="${escapeHtml(item.verifiedAt)}" data-source-url="${escapeHtml(item.sourceUrl)}" data-title="${escapeHtml(item.shortName)}" data-status="${escapeHtml(item.statusLabel)}" data-analytics-event="program_card_click" data-analytics-component="homepage_hero_program_menu" data-analytics-cta-id="hero_program_${escapeHtml(item.slug)}" data-analytics-program-slug="${escapeHtml(item.slug)}" data-analytics-program-family="${escapeHtml(item.family)}"${index === 0 ? ' aria-current="true"' : ""}>${escapeHtml(item.shortName)}</a></li>`).join("\n");
+  const items = featured.map((item, index) => `              <li><a href="${escapeHtml(item.pageUrl)}" data-hero-program-item data-program-id="${escapeHtml(item.id)}" data-program-status="${escapeHtml(item.status)}" data-status-label="${escapeHtml(item.statusLabel)}" data-verified-at="${escapeHtml(item.verifiedAt)}" data-source-url="${escapeHtml(item.sourceUrl)}" data-title="${escapeHtml(item.shortName)}" data-status="${escapeHtml(item.statusLabel)}" data-analytics-event="program_card_click" data-analytics-component="homepage_hero_program_menu" data-analytics-cta-id="hero_program_${escapeHtml(item.slug)}" data-analytics-program-slug="${escapeHtml(item.slug)}" data-analytics-program-family="${escapeHtml(item.family)}"${index === 0 ? ' aria-current="true"' : ""}>${escapeHtml(item.shortName)}</a></li>`).join("\n");
   return `<div class="hero-programs" data-hero-programs aria-labelledby="hero-programs-title">
             <div class="hero-programs__heading"><h2 id="hero-programs-title">Măsuri de finanțare</h2><span data-hero-program-count>1 / ${featured.length}</span></div>
             <div class="hero-program-spotlight" id="hero-program-spotlight" aria-live="polite">
@@ -88,7 +86,7 @@ function renderHero(program, publicCount, programs) {
           </div>
         </div>
 
-        <aside class="homepage-hero__panel hero-flow" aria-label="Traseul unui proiect de finanțare" data-homepage-hero-latest-program data-program-id="${escapeHtml(program.slug)}" data-program-status="${escapeHtml(program.status)}" data-status-label="${escapeHtml(program.statusLabel)}" data-verified-at="${escapeHtml(program.verifiedAt)}" data-source-url="${escapeHtml(program.sourceUrl)}" data-public-program-count="${publicCount}">
+        <aside class="homepage-hero__panel hero-flow" aria-label="Traseul unui proiect de finanțare" data-homepage-hero-latest-program data-program-id="${escapeHtml(program.id)}" data-program-status="${escapeHtml(program.status)}" data-status-label="${escapeHtml(program.statusLabel)}" data-verified-at="${escapeHtml(program.verifiedAt)}" data-source-url="${escapeHtml(program.sourceUrl)}" data-public-program-count="${publicCount}">
           <svg class="hero-flow-svg" viewBox="0 0 520 240" role="img" aria-labelledby="hero-flow-title hero-flow-desc" focusable="false">
             <title id="hero-flow-title">Traseul unui proiect de finanțare</title>
             <desc id="hero-flow-desc">Etapele unui proiect: idee, verificare a eligibilității, pregătirea dosarului, finanțare și implementare.</desc>

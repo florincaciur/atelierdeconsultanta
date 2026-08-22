@@ -6,7 +6,7 @@ import * as cheerio from "cheerio";
 
 const require = createRequire(import.meta.url);
 const ROOT = path.resolve(import.meta.dirname, "..");
-const { isPublicProgram, loadProgramConfig } = require("../tools/program-factual-governance");
+const { carouselPrograms, isPublicProgram, loadProgramConfig } = require("../tools/program-factual-governance");
 const config = JSON.parse(fs.readFileSync(path.join(ROOT, "config", "homepage-programs.json"), "utf8"));
 const html = fs.readFileSync(path.join(ROOT, "index.html"), "utf8");
 const css = fs.readFileSync(path.join(ROOT, "assets", "homepage-program-explorer.css"), "utf8");
@@ -14,12 +14,13 @@ const js = fs.readFileSync(path.join(ROOT, "assets", "homepage-program-explorer.
 const { programs } = loadProgramConfig();
 const $ = cheerio.load(html, { decodeEntities: false });
 const expectedPrograms = programs.filter((program) => isPublicProgram(program) && program.discovery?.listed !== false && !program.discovery?.redirectTarget);
+const expectedCarousel = carouselPrograms(programs);
 
 assert.equal($("[data-priority-carousel]").length, 1, "trebuie să existe un singur carusel de programe");
 const slides = $("[data-priority-slide]");
 assert.equal(slides.length, expectedPrograms.length, "caruselul trebuie să includă fiecare program public și listat");
-assert.deepEqual(slides.map((_, slide) => $(slide).attr("data-program-id")).get(), config.featuredProgramSlugs, "ordinea trebuie să urmeze selecția editorială");
-assert.deepEqual(new Set(config.featuredProgramSlugs), new Set(expectedPrograms.map((program) => program.slug)), "configurația caruselului trebuie să acopere toate programele publice și listate");
+assert.deepEqual(slides.map((_, slide) => $(slide).attr("data-program-id")).get(), expectedCarousel.map((program) => program.id), "ordinea trebuie să provină din registrul unic");
+assert.deepEqual(new Set(expectedCarousel.map((program) => program.id)), new Set(expectedPrograms.map((program) => program.id)), "flagurile caruselului trebuie să acopere toate programele publice și listate");
 assert.equal(config.carousel.autoRotate, false, "auto-rotirea trebuie dezactivată editorial");
 assert(!/setInterval|autoPlay|autoplay/i.test(js), "JS-ul nu trebuie să implementeze auto-rotire");
 assert.equal($("[data-priority-previous]").attr("aria-label"), "Programul anterior");

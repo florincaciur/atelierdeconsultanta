@@ -1,6 +1,6 @@
 # Registrul surselor oficiale FABER
 
-Snapshot factual al programelor: **2026-08-18**. Revizia structurii registrului: **2026-08-22**. Config de roluri: `config/program-source-registry.json`; catalog documente: `official-guides.json`; registru programe: `config/seo-programs.json#programs`. Document generat de `tools/generate-status-governance-docs.js`.
+Snapshot factual al programelor: **2026-08-18**. Revizia structurii registrului: **2026-08-22**. Rolurile per program: `config/seo-programs.json#programs[*].officialSources`; surse suplimentare: `config/program-source-registry.json#supplementalSources`; catalog documente: `official-guides.json`. Document generat de `tools/generate-status-governance-docs.js`.
 
 ## Reguli de audit
 
@@ -542,4 +542,4 @@ Snapshot factual al programelor: **2026-08-18**. Revizia structurii registrului:
 
 ## Goluri cunoscute și regulă de completare
 
-Multe pagini-umbrelă și câteva ediții istorice au în prezent doar un catalog oficial sau o pagină de stare, fără URL-uri distincte pentru toate rolurile documentare. Aceste goluri sunt vizibile în fiecare fișă. Completarea lor cere un document oficial verificat, adăugat mai întâi în `official-guides.json` sau în registrul de aprobări și apoi referit din `config/program-source-registry.json`; nu se folosesc agregatoare ori alte firme de consultanță drept source-of-truth.
+Multe pagini-umbrelă și câteva ediții istorice au în prezent doar un catalog oficial sau o pagină de stare, fără URL-uri distincte pentru toate rolurile documentare. Aceste goluri sunt vizibile în fiecare fișă. Completarea lor cere un document oficial verificat, adăugat mai întâi în `official-guides.json`, în catalogul suplimentar sau în registrul de aprobări și apoi referit din `config/seo-programs.json`; nu se folosesc agregatoare ori alte firme de consultanță drept source-of-truth.

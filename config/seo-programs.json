@@ -10,11 +10,15 @@
   },
   "programs": [
     {
+      "id": "program-regional-nord-est",
       "slug": "program-regional-nord-est",
       "name": "Programul Regional Nord-Est 2021–2027",
       "shortName": "Programul Regional Nord-Est",
       "family": "regional-adr",
       "status": "calendar_estimativ",
+      "canonicalStatus": "UNCONFIRMED",
+      "statusScope": "umbrella_program",
+      "statusRationale": "Apelurile au stări și calendare distincte; pagina agregată nu poate moșteni o singură stare de apel.",
       "statusLabel": "Program activ – statutul și calendarul diferă pentru fiecare apel",
       "publicationState": "public",
       "verifiedAt": "2026-08-18",
@@ -30,6 +34,7 @@
       "lastMeaningfulUpdate": "2026-08-18",
       "evergreenValue": true,
       "archivedNoindexDecision": null,
+      "indexable": false,
       "cardSummary": "Finanțări IMM în Nord-Est: verifică județul, codul CAEN, amplasamentul, SF/DALI, bugetul și actele; Apelul 2 are pagină separată.",
       "metaTitle": "Program Regional Nord-Est: finanțări IMM și apeluri | FABER",
       "metaDescription": "Finanțări IMM în Nord-Est: verifică județul, codul CAEN, amplasamentul, SF/DALI, bugetul și actele; Apelul 2 are pagină separată.",
@@ -44,6 +49,23 @@
         "adr-ne-program",
         "adr-ne-region"
       ],
+      "officialSources": {
+        "roles": {
+          "programPage": [
+            {
+              "ref": "program",
+              "label": "Registrul oficial al apelurilor Programului Regional Nord-Est"
+            }
+          ],
+          "guide": [],
+          "annexes": [],
+          "schemeOrder": [],
+          "sessionAnnouncement": [],
+          "corrigenda": [],
+          "clarifications": []
+        },
+        "notes": "Pagină agregată. Statutul și calendarul trebuie verificate pentru fiecare apel; o stare de apel nu se propagă asupra întregului program."
+      },
       "presentation": {
         "carousel": false,
         "hero": false,
@@ -68,11 +90,15 @@
       }
     },
     {
+      "id": "fonduri-regionale",
       "slug": "fonduri-regionale",
       "name": "Programele regionale 2021–2027",
       "shortName": "Fonduri regionale",
       "family": "regional-adr",
       "status": "calendar_estimativ",
+      "canonicalStatus": "UNCONFIRMED",
+      "statusScope": "umbrella_program",
+      "statusRationale": "Catalogul agregă programe și apeluri cu stări diferite.",
       "statusLabel": "Programe active – statutul și calendarul se verifică pentru fiecare apel",
       "publicationState": "public",
       "verifiedAt": "2026-08-18",
@@ -88,6 +114,7 @@
       "lastMeaningfulUpdate": "2026-08-18",
       "evergreenValue": true,
       "archivedNoindexDecision": null,
+      "indexable": true,
       "cardSummary": "Programe regionale 2021–2027: identificarea ADR-ului, apelului, solicitantului, localizării, documentelor și sursei oficiale aplicabile.",
       "metaTitle": "Fonduri regionale 2021–2027 și ADR-uri | FABER",
       "metaDescription": "Programe regionale 2021–2027: identificarea ADR-ului, apelului, solicitantului, localizării, documentelor și sursei oficiale aplicabile.",
@@ -101,6 +128,23 @@
       "officialGuideKeys": [
         "fonduri-regionale"
       ],
+      "officialSources": {
+        "roles": {
+          "programPage": [
+            {
+              "ref": "program",
+              "label": "Catalogul oficial MySMIS2021 al finanțărilor 2021–2027"
+            }
+          ],
+          "guide": [],
+          "annexes": [],
+          "schemeOrder": [],
+          "sessionAnnouncement": [],
+          "corrigenda": [],
+          "clarifications": []
+        },
+        "notes": "Pagină agregată pentru programe regionale; ghidurile și sesiunile se urmăresc la nivelul apelului selectat."
+      },
       "presentation": {
         "carousel": false,
         "hero": false,
@@ -124,11 +168,15 @@
       }
     },
     {
+      "id": "dr12-afir",
       "slug": "dr12-afir",
       "name": "DR-12 Investiții în consolidarea exploatațiilor tinerilor fermieri instalați și a fermierilor cu vârsta de până la 45 de ani",
       "shortName": "DR12 AFIR",
       "family": "afir-agricultura",
       "status": "consultare_publica",
+      "canonicalStatus": "CONSULTATIVE_GUIDE",
+      "statusScope": "program_call",
+      "statusRationale": "Ghidul este consultativ, iar intervalul de consultare este încheiat; depunerea nu este deschisă.",
       "statusLabel": "Ghid consultativ publicat – consultarea s-a încheiat; depunerea nu este deschisă. Condițiile se pot modifica.",
       "publicationState": "public",
       "verifiedAt": "2026-08-18",
@@ -144,6 +192,7 @@
       "lastMeaningfulUpdate": "2026-08-18",
       "evergreenValue": true,
       "archivedNoindexDecision": null,
+      "indexable": true,
       "cardSummary": "Ghidul DR 12 este consultativ; depunerea nu este deschisă, iar condițiile se pot modifica.",
       "quickAnswer": "DR 12 este intervenția AFIR aflată în etapa ghidului consultativ pentru consolidarea exploatațiilor tinerilor fermieri instalați și a fermierilor cu vârsta de până la 45 de ani. Depunerea nu este deschisă, iar regulile se pot modifica înaintea versiunii finale. Verificarea pornește de la profilul și vârsta solicitantului, forma juridică, istoricul instalării, dimensiunea economică SO, înregistrările APIA, ANSVSA sau ANZ și drepturile asupra exploatației. Investițiile, contribuția proprie, punctajul și documentele trebuie corelate cu sectorul și componenta potrivită. Calendarul, alocarea, pragurile lunare și condițiile definitive se confirmă numai după publicarea ghidului final și a anunțului oficial al sesiunii de către AFIR, înainte de depunere.",
       "metaTitle": "DR 12 AFIR 2026: eligibilitate și pregătirea dosarului | FABER",
@@ -154,6 +203,28 @@
       "officialGuideKeys": [
         "dr12"
       ],
+      "officialSources": {
+        "roles": {
+          "programPage": [
+            {
+              "ref": "program",
+              "label": "Comunicarea AFIR privind consultarea DR-12"
+            }
+          ],
+          "guide": [
+            {
+              "ref": "approval:evidence:0",
+              "label": "Ghidul solicitantului DR-12 — versiunea consultativă (PDF AFIR)"
+            }
+          ],
+          "annexes": [],
+          "schemeOrder": [],
+          "sessionAnnouncement": [],
+          "corrigenda": [],
+          "clarifications": []
+        },
+        "notes": "Documentul înregistrat este consultativ; termenul pentru observații este încheiat și nu există dovadă de sesiune deschisă."
+      },
       "presentation": {
         "carousel": true,
         "hero": true,
@@ -161,7 +232,10 @@
         "icon": "ph-plant",
         "image": "/assets/hero/hero-agriculture.webp",
         "beneficiary": null,
-        "pageTitle": "DR 12 AFIR 2026 – investiții pentru tineri fermieri și fermieri până la 45 de ani"
+        "pageTitle": "DR 12 AFIR 2026 – investiții pentru tineri fermieri și fermieri până la 45 de ani",
+        "carouselOrder": 1,
+        "heroOrder": 2,
+        "navigationOrder": 2
       },
       "discovery": {
         "parentHub": "/afir",
@@ -178,11 +252,15 @@
       }
     },
     {
+      "id": "dr14-afir",
       "slug": "dr14-afir",
       "name": "DR-14 Investiții în fermele de mici dimensiuni",
       "shortName": "DR14 AFIR",
       "family": "afir-agricultura",
       "status": "ghid_aprobat_nedeschis",
+      "canonicalStatus": "SCHEDULED",
+      "statusScope": "session",
+      "statusRationale": "Anunțul oficial indică o fereastră viitoare 01.09.2026–31.10.2026.",
       "statusLabel": "Sesiune anunțată – depuneri 1 septembrie–31 octombrie 2026",
       "publicationState": "public",
       "verifiedAt": "2026-08-18",
@@ -217,6 +295,7 @@
       "lastMeaningfulUpdate": "2026-08-15",
       "evergreenValue": true,
       "archivedNoindexDecision": null,
+      "indexable": true,
       "cardSummary": "Sesiunea DR 14 este lansată: depuneri 1 septembrie–31 octombrie 2026, buget 108 milioane EUR, maximum 50.000 EUR/proiect și intensitate de până la 85%.",
       "quickAnswer": "AFIR a lansat sesiunea DR 14 pentru perioada 1 septembrie 2026, ora 09:00–31 octombrie 2026, ora 16:00. Bugetul total este de 108 milioane EUR, împărțit între zootehnie, legumicultură, alte sectoare și achiziții simple. Pot aplica fermierii, cu excepția persoanelor fizice, dacă exploatația și forma juridică îndeplinesc condițiile documentare. Intervalul general este 4.000–11.999 SO, cu praguri minime speciale de 2.000 SO sau 2.300 SO pentru sectoarele prevăzute de ghid. Ajutorul public ajunge la maximum 50.000 EUR/proiect și la cel mult 85% din costurile eligibile. Pragul de calitate este 80 de puncte în septembrie și 40 de puncte în octombrie. Depunerea se poate opri anticipat când solicitările unei componente ating cel puțin 150% din alocare, cu excepția primelor cinci zile calendaristice ale fiecărei etape.",
       "metaTitle": "DR 14 AFIR 2026: depuneri 1 sept.–31 oct., 50.000 € | FABER",
@@ -239,6 +318,38 @@
       "officialGuideKeys": [
         "dr14"
       ],
+      "officialSources": {
+        "roles": {
+          "programPage": [
+            {
+              "ref": "program",
+              "label": "Pagina AFIR pentru sesiuni de primire proiecte"
+            }
+          ],
+          "guide": [
+            {
+              "ref": "approval:evidence:1",
+              "label": "Detalii și documentație DR-14 (AFIR)"
+            }
+          ],
+          "annexes": [
+            {
+              "ref": "approval:evidence:1",
+              "label": "Detalii și anexe DR-14 (AFIR)"
+            }
+          ],
+          "schemeOrder": [],
+          "sessionAnnouncement": [
+            {
+              "ref": "guide:dr14",
+              "label": "Anunțul cererii de proiecte DR-14, publicat la 14.08.2026"
+            }
+          ],
+          "corrigenda": [],
+          "clarifications": []
+        },
+        "notes": "Sesiune programată 01.09.2026–31.10.2026. Eventualele erate, clarificări, suspendări sau închideri anticipate trebuie urmărite separat."
+      },
       "presentation": {
         "carousel": true,
         "hero": true,
@@ -250,7 +361,10 @@
         "calendar": {
           "label": "Depuneri: 1 septembrie–31 octombrie 2026",
           "note": "Calendar oficial AFIR; sesiunea se poate opri anticipat în condițiile anunțului."
-        }
+        },
+        "carouselOrder": 2,
+        "heroOrder": 3,
+        "navigationOrder": 3
       },
       "discovery": {
         "parentHub": "/afir",
@@ -267,11 +381,15 @@
       }
     },
     {
+      "id": "dr18-afir",
       "slug": "dr18-afir",
       "name": "DR-18 Investiții în floricultură, plante medicinale și aromatice",
       "shortName": "DR18 AFIR",
       "family": "afir-agricultura",
       "status": "ghid_aprobat_nedeschis",
+      "canonicalStatus": "SCHEDULED",
+      "statusScope": "session",
+      "statusRationale": "Anunțul oficial indică o fereastră viitoare 01.09.2026–31.10.2026.",
       "statusLabel": "Sesiune anunțată – depuneri 1 septembrie–31 octombrie 2026",
       "publicationState": "public",
       "verifiedAt": "2026-08-18",
@@ -307,6 +425,7 @@
       "lastMeaningfulUpdate": "2026-08-18",
       "evergreenValue": true,
       "archivedNoindexDecision": null,
+      "indexable": true,
       "cardSummary": "Sesiunea DR 18 este anunțată pentru 1 septembrie–31 octombrie 2026: maximum 100.000 EUR/proiect pentru floricultură, plante medicinale, aromatice și ornamentale.",
       "quickAnswer": "DR 18 este intervenția AFIR pentru investiții în floricultură, plante medicinale, aromatice și ornamentale. AFIR a anunțat sesiunea 1 septembrie–31 octombrie 2026; depunerea nu este încă deschisă și se poate opri anticipat conform regulilor anunțului. Pot aplica fermieri organizați juridic, cooperative și grupuri sau organizații de producători, cu exploatații de minimum 2.000 SO și înregistrări agricole coerente. Sprijinul public este de maximum 100.000 EUR/proiect. Intensitatea ajunge la 85% pentru exploatații între 2.000 și 11.999 SO și la 65% de la 12.000 SO. Sunt vizate spațiile protejate, echipamentele, condiționarea, depozitarea, procesarea secundară, digitalizarea și investițiile secundare permise de ghid. Punctajul maxim este 100; fiecare criteriu trebuie demonstrat cu documente.",
       "metaTitle": "DR 18 AFIR: sesiune 1 septembrie–31 octombrie 2026 | FABER",
@@ -333,6 +452,38 @@
       "officialGuideKeys": [
         "dr18"
       ],
+      "officialSources": {
+        "roles": {
+          "programPage": [
+            {
+              "ref": "program",
+              "label": "Pagina AFIR pentru sesiuni de primire proiecte"
+            }
+          ],
+          "guide": [
+            {
+              "ref": "registry:afir-dr18-guide-annexes",
+              "label": "Ghidul final DR-18"
+            }
+          ],
+          "annexes": [
+            {
+              "ref": "registry:afir-dr18-guide-annexes",
+              "label": "Anexele DR-18"
+            }
+          ],
+          "schemeOrder": [],
+          "sessionAnnouncement": [
+            {
+              "ref": "guide:dr18",
+              "label": "Anunțul cererii de proiecte DR-18, publicat la 14.08.2026"
+            }
+          ],
+          "corrigenda": [],
+          "clarifications": []
+        },
+        "notes": "Sesiune programată 01.09.2026–31.10.2026. Ghidul final și anexele au pagină oficială separată de anunțul sesiunii."
+      },
       "presentation": {
         "carousel": true,
         "hero": true,
@@ -344,7 +495,10 @@
         "calendar": {
           "label": "1 septembrie–31 octombrie 2026",
           "note": "Sesiune anunțată de AFIR; depunerea nu este încă deschisă și se poate opri anticipat."
-        }
+        },
+        "carouselOrder": 3,
+        "heroOrder": 4,
+        "navigationOrder": 4
       },
       "discovery": {
         "parentHub": "/afir",
@@ -361,11 +515,15 @@
       }
     },
     {
+      "id": "start-up-nation",
       "slug": "start-up-nation",
       "name": "Programul Start-Up Nation",
       "shortName": "Start-Up Nation",
       "family": "antreprenoriat",
       "status": "apel_inchis",
+      "canonicalStatus": "CLOSED",
+      "statusScope": "edition",
+      "statusRationale": "Înscrierile persoanelor juridice s-au încheiat; registry-ul nu consemnează finalizarea întregii proceduri.",
       "statusLabel": "Apel închis – înscrierile persoanelor juridice s-au încheiat la 29 mai 2026, ora 20:00",
       "publicationState": "public",
       "verifiedAt": "2026-08-18",
@@ -381,6 +539,7 @@
       "lastMeaningfulUpdate": "2026-05-29",
       "evergreenValue": true,
       "archivedNoindexDecision": null,
+      "indexable": true,
       "cardSummary": "Start-Up Nation 2024: înscrierile persoanelor juridice s-au încheiat la 29 mai 2026; o sesiune nouă se publică numai prin anunț oficial.",
       "metaTitle": "Start-Up Nation: apel închis la 29 mai 2026 | FABER",
       "metaDescription": "Start-Up Nation 2024: apelul pentru persoane juridice s-a închis la 29 mai 2026, ora 20:00. Verifică platforma oficială înaintea unei sesiuni noi.",
@@ -392,13 +551,36 @@
       "officialGuideKeys": [
         "startup"
       ],
+      "officialSources": {
+        "roles": {
+          "programPage": [
+            {
+              "ref": "program",
+              "label": "Transparența înscrierilor Start-Up Nation 2024 — MINIMIS"
+            }
+          ],
+          "guide": [
+            {
+              "ref": "guide:startup",
+              "label": "Procedura oficială referită de registru"
+            }
+          ],
+          "annexes": [],
+          "schemeOrder": [],
+          "sessionAnnouncement": [],
+          "corrigenda": [],
+          "clarifications": []
+        },
+        "notes": "Depunerea persoanelor juridice este închisă. Registrul nu consemnează separat finalizarea întregii proceduri."
+      },
       "presentation": {
         "carousel": true,
         "hero": false,
         "order": 9,
         "icon": "ph-rocket-launch",
         "image": "/assets/hero/hero-business.webp",
-        "beneficiary": null
+        "beneficiary": null,
+        "carouselOrder": 9
       },
       "discovery": {
         "parentHub": "/fonduri-europene-imm",
@@ -415,11 +597,15 @@
       }
     },
     {
+      "id": "femeia-antreprenor",
       "slug": "femeia-antreprenor",
       "name": "Programul Femeia Antreprenor",
       "shortName": "Femeia Antreprenor",
       "family": "antreprenoriat",
       "status": "apel_inchis",
+      "canonicalStatus": "CLOSED",
+      "statusScope": "edition",
+      "statusRationale": "Depunerea ediției 2024 este închisă, iar ordinea finală la evaluare nu dovedește finalizarea întregii proceduri.",
       "statusLabel": "Apel 2024 închis – este publicată ordinea finală la evaluare",
       "publicationState": "public",
       "verifiedAt": "2026-08-18",
@@ -435,6 +621,7 @@
       "lastMeaningfulUpdate": "2026-08-18",
       "evergreenValue": true,
       "archivedNoindexDecision": null,
+      "indexable": true,
       "cardSummary": "Femeia Antreprenor 2024: apelul este închis, iar platforma oficială publică ordinea finală la evaluare.",
       "metaTitle": "Femeia Antreprenor: apel 2024 închis | FABER",
       "metaDescription": "Femeia Antreprenor 2024 este închis; platforma oficială MINIMIS publică ordinea finală la evaluare. O ediție nouă se confirmă separat.",
@@ -446,13 +633,31 @@
       "officialGuideKeys": [
         "femeia"
       ],
+      "officialSources": {
+        "roles": {
+          "programPage": [
+            {
+              "ref": "program",
+              "label": "Ordinea finală la evaluare Femeia Antreprenor 2024 — MINIMIS"
+            }
+          ],
+          "guide": [],
+          "annexes": [],
+          "schemeOrder": [],
+          "sessionAnnouncement": [],
+          "corrigenda": [],
+          "clarifications": []
+        },
+        "notes": "Ordinea finală la evaluare dovedește o etapă ulterioară depunerii, nu finalizarea integrală a programului."
+      },
       "presentation": {
         "carousel": true,
         "hero": false,
         "order": 7,
         "icon": "ph-user-circle",
         "image": "/assets/hero/hero-business.webp",
-        "beneficiary": null
+        "beneficiary": null,
+        "carouselOrder": 7
       },
       "discovery": {
         "parentHub": "/fonduri-europene-imm",
@@ -469,11 +674,15 @@
       }
     },
     {
+      "id": "digitalizare-imm",
       "slug": "digitalizare-imm",
       "name": "Digitalizarea IMM-urilor",
       "shortName": "Digitalizare IMM",
       "family": "digitalizare",
       "status": "apel_inchis",
+      "canonicalStatus": "CLOSED",
+      "statusScope": "program_call",
+      "statusRationale": "Registry-ul confirmă depunerea închisă, fără o dovadă distinctă de finalizare.",
       "statusLabel": "Apel închis – depunerea nu este deschisă",
       "publicationState": "public",
       "verifiedAt": "2026-08-18",
@@ -489,6 +698,7 @@
       "lastMeaningfulUpdate": "2026-07-22",
       "evergreenValue": true,
       "archivedNoindexDecision": null,
+      "indexable": true,
       "cardSummary": "Apelul PNRR Digitalizarea IMM-urilor este închis; Ordinul MIPE nr. 607/28.04.2026 modifică implementarea proiectelor existente, nu deschide depunerea.",
       "metaTitle": "Digitalizare IMM: apel închis și sursă MIPE | FABER",
       "metaDescription": "Apelul Digitalizarea IMM-urilor este închis, verificat la 18.08.2026. Depunerea nu este deschisă; vezi Ordinul MIPE nr. 607/28.04.2026.",
@@ -501,13 +711,42 @@
         "digitalizare",
         "digitalizare-pnrr"
       ],
+      "officialSources": {
+        "roles": {
+          "programPage": [
+            {
+              "ref": "program",
+              "label": "Pagina MIPE pentru Ordinul nr. 607/28.04.2026"
+            }
+          ],
+          "guide": [
+            {
+              "ref": "guide:digitalizare",
+              "label": "Ghidul Digitalizarea IMM-urilor, modificat prin Ordinul nr. 607/2026"
+            }
+          ],
+          "annexes": [],
+          "schemeOrder": [
+            {
+              "ref": "approval:evidence:0",
+              "label": "Ordinul MIPE nr. 607/28.04.2026 (PDF oficial)"
+            }
+          ],
+          "sessionAnnouncement": [],
+          "corrigenda": [],
+          "clarifications": []
+        },
+        "notes": "Apel închis. Modificarea ghidului nu constituie dovadă pentru o sesiune nouă ori redeschisă."
+      },
       "presentation": {
         "carousel": true,
         "hero": false,
         "order": 6,
         "icon": "ph-desktop",
         "image": "/assets/hero/hero-digital.webp",
-        "beneficiary": null
+        "beneficiary": null,
+        "carouselOrder": 6,
+        "navigationOrder": 5
       },
       "discovery": {
         "parentHub": "/fonduri-europene-digitalizare",
@@ -524,11 +763,15 @@
       }
     },
     {
+      "id": "modernizare-microintreprinderi-ne-2",
       "slug": "modernizare-microintreprinderi-ne-2",
       "name": "Investiții pentru modernizarea microîntreprinderilor – Apel 2",
       "shortName": "Modernizarea microîntreprinderilor – Apel 2",
       "family": "regional-adr",
       "status": "consultare_publica",
+      "canonicalStatus": "CONSULTATIVE_GUIDE",
+      "statusScope": "program_call",
+      "statusRationale": "Consultarea s-a încheiat, iar forma înregistrată este ghidul consultativ; apelul nu este deschis.",
       "statusLabel": "Consultare publică închisă – apelul nu este deschis",
       "publicationState": "public",
       "verifiedAt": "2026-08-18",
@@ -564,6 +807,7 @@
       "lastMeaningfulUpdate": "2026-08-18",
       "evergreenValue": true,
       "archivedNoindexDecision": null,
+      "indexable": true,
       "cardSummary": "Apel 2 Nord-Est pentru microîntreprinderi: valori și intensitate conform variantei consultative, plus CAEN, amplasament și documente.",
       "metaTitle": "Modernizarea microîntreprinderilor – Apel 2 Nord-Est | FABER",
       "metaDescription": "Apelul 2 Nord-Est este programat pentru microîntreprinderi: grant consultativ 100.000–300.000 €, intensitate de până la 90%, CAEN, amplasament și acte.",
@@ -578,13 +822,38 @@
         "por-ne-apel-2",
         "por-ne"
       ],
+      "officialSources": {
+        "roles": {
+          "programPage": [
+            {
+              "ref": "program",
+              "label": "Pagina oficială ADR Nord-Est pentru Apelul 2"
+            }
+          ],
+          "guide": [
+            {
+              "ref": "guide:por-ne-apel-2",
+              "label": "Ghidul publicat în consultare pentru Apelul 2"
+            }
+          ],
+          "annexes": [],
+          "schemeOrder": [],
+          "sessionAnnouncement": [],
+          "corrigenda": [],
+          "clarifications": []
+        },
+        "notes": "Consultarea 30.01.2026–13.03.2026 este închisă; forma finală și o eventuală sesiune trebuie confirmate separat."
+      },
       "presentation": {
         "carousel": true,
         "hero": true,
         "order": 10,
         "icon": "ph-buildings",
         "image": "/assets/hero/hero-local.webp",
-        "beneficiary": null
+        "beneficiary": null,
+        "carouselOrder": 10,
+        "heroOrder": 1,
+        "navigationOrder": 1
       },
       "discovery": {
         "parentHub": "/fonduri-regionale",
@@ -601,11 +870,15 @@
       }
     },
     {
+      "id": "fondul-modernizare-autoconsum",
       "slug": "fondul-modernizare-autoconsum",
       "name": "Fondul pentru Modernizare – energie și autoconsum",
       "shortName": "Fondul pentru Modernizare – autoconsum",
       "family": "energie",
       "status": "apel_inchis",
+      "canonicalStatus": "COMPLETED",
+      "statusScope": "program_call",
+      "statusRationale": "MySMIS marchează apelurile înregistrate drept FINALIZAT.",
       "statusLabel": "Apeluri finalizate în MySMIS – depunerea nu este deschisă",
       "publicationState": "public",
       "verifiedAt": "2026-08-18",
@@ -621,6 +894,7 @@
       "lastMeaningfulUpdate": "2026-08-18",
       "evergreenValue": true,
       "archivedNoindexDecision": null,
+      "indexable": true,
       "cardSummary": "Proiecte de energie și autoconsum prin Fondul pentru Modernizare: consum, capacitate, racordare, avize, buget și documente oficiale.",
       "metaTitle": "Fondul pentru Modernizare: energie și autoconsum",
       "metaDescription": "Proiecte de energie și autoconsum prin Fondul pentru Modernizare: consum, capacitate, racordare, avize, buget și documente oficiale.",
@@ -632,13 +906,31 @@
       "officialGuideKeys": [
         "fondul-modernizare"
       ],
+      "officialSources": {
+        "roles": {
+          "programPage": [
+            {
+              "ref": "program",
+              "label": "Catalogul oficial MySMIS2021"
+            }
+          ],
+          "guide": [],
+          "annexes": [],
+          "schemeOrder": [],
+          "sessionAnnouncement": [],
+          "corrigenda": [],
+          "clarifications": []
+        },
+        "notes": "Apelurile înregistrate sunt marcate FINALIZAT în MySMIS; documentația fiecărei ediții nu este separată în catalogul local de surse."
+      },
       "presentation": {
         "carousel": true,
         "hero": false,
         "order": 15,
         "icon": "ph-solar-panel",
         "image": "/assets/hero/hero-solar.webp",
-        "beneficiary": null
+        "beneficiary": null,
+        "carouselOrder": 15
       },
       "discovery": {
         "parentHub": "/finantari-panouri-fotovoltaice",
@@ -655,11 +947,15 @@
       }
     },
     {
+      "id": "fondul-modernizare-regenerabile",
       "slug": "fondul-modernizare-regenerabile",
       "name": "Fondul pentru Modernizare – energie regenerabilă",
       "shortName": "Fondul pentru Modernizare – energie regenerabilă",
       "family": "energie",
       "status": "apel_inchis",
+      "canonicalStatus": "COMPLETED",
+      "statusScope": "program_call",
+      "statusRationale": "MySMIS marchează apelurile înregistrate drept FINALIZAT.",
       "statusLabel": "Apeluri finalizate în MySMIS – depunerea nu este deschisă",
       "publicationState": "public",
       "verifiedAt": "2026-08-18",
@@ -675,6 +971,7 @@
       "lastMeaningfulUpdate": "2026-08-18",
       "evergreenValue": true,
       "archivedNoindexDecision": null,
+      "indexable": true,
       "cardSummary": "Fondul pentru Modernizare și energia regenerabilă: solicitant, capacitate, racordare, avize și buget, cu verificarea apelului oficial activ.",
       "metaTitle": "Fondul pentru Modernizare: energie regenerabilă",
       "metaDescription": "Fondul pentru Modernizare și energia regenerabilă: solicitant, capacitate, racordare, avize și buget, cu verificarea apelului oficial activ.",
@@ -687,13 +984,31 @@
         "fondul-modernizare-regenerabile",
         "fondul-modernizare"
       ],
+      "officialSources": {
+        "roles": {
+          "programPage": [
+            {
+              "ref": "program",
+              "label": "Catalogul oficial MySMIS2021"
+            }
+          ],
+          "guide": [],
+          "annexes": [],
+          "schemeOrder": [],
+          "sessionAnnouncement": [],
+          "corrigenda": [],
+          "clarifications": []
+        },
+        "notes": "Apelurile înregistrate sunt marcate FINALIZAT în MySMIS; documentația fiecărei ediții nu este separată în catalogul local de surse."
+      },
       "presentation": {
         "carousel": true,
         "hero": false,
         "order": 11,
         "icon": "ph-sun",
         "image": "/assets/hero/hero-solar.webp",
-        "beneficiary": null
+        "beneficiary": null,
+        "carouselOrder": 11
       },
       "discovery": {
         "parentHub": "/finantari-panouri-fotovoltaice",
@@ -710,11 +1025,15 @@
       }
     },
     {
+      "id": "afir-energie-autoconsum",
       "slug": "afir-energie-autoconsum",
       "name": "Schema de ajutor privind sprijinirea investițiilor în noi capacități de producere a energiei electrice din surse regenerabile pentru autoconsumul întreprinderilor din agricultură și industria alimentară",
       "shortName": "AFIR Autoconsum Agroalimentar",
       "family": "afir-energie",
       "status": "apel_inchis",
+      "canonicalStatus": "CLOSED",
+      "statusScope": "session",
+      "statusRationale": "Sesiunea 15.06.2026–14.08.2026 s-a încheiat; nu există în registry o dovadă distinctă de finalizare a procedurii.",
       "statusLabel": "Apel închis – sesiunea s-a încheiat la 14 august 2026",
       "publicationState": "public",
       "verifiedAt": "2026-08-18",
@@ -749,6 +1068,7 @@
       "lastMeaningfulUpdate": "2026-08-15",
       "evergreenValue": true,
       "archivedNoindexDecision": null,
+      "indexable": true,
       "cardSummary": "Sesiunea AFIR Energie 2026 s-a încheiat la 14 august. Pagina rămâne utilă pentru regulile sesiunii, minimum 70% autoconsum, fotovoltaice, stocare, SF și documente.",
       "metaTitle": "AFIR Autoconsum 2026: fotovoltaice, stocare, ghid | FABER",
       "metaDescription": "Sesiunea AFIR Energie 2026 s-a încheiat la 14 august. Vezi regulile pentru autoconsum, fotovoltaice, stocare, studiu de fezabilitate și documente.",
@@ -767,13 +1087,62 @@
         "afir-autoconsum",
         "afir-autoconsum-session-2026"
       ],
+      "officialSources": {
+        "roles": {
+          "programPage": [
+            {
+              "ref": "registry:afir-energy-program",
+              "label": "Pagina oficială Schema de Energie"
+            }
+          ],
+          "guide": [
+            {
+              "ref": "registry:afir-energy-guide-annexes",
+              "label": "Ghidul solicitantului Schema Energie Autoconsum V7"
+            }
+          ],
+          "annexes": [
+            {
+              "ref": "registry:afir-energy-guide-annexes",
+              "label": "Anexele Schemei de Energie pentru sesiunea 2026"
+            }
+          ],
+          "schemeOrder": [
+            {
+              "ref": "registry:afir-energy-guide-annexes",
+              "label": "Ghidul aprobat prin OMADR nr. 180/09.06.2026"
+            }
+          ],
+          "sessionAnnouncement": [
+            {
+              "ref": "registry:afir-energy-session-2026",
+              "label": "Anunțul oficial AFIR pentru sesiunea 15.06.2026–14.08.2026"
+            }
+          ],
+          "corrigenda": [],
+          "clarifications": [
+            {
+              "ref": "registry:afir-energy-clarification-2026",
+              "label": "Clarificarea AFIR din 29.07.2026 privind documentele cadastrale"
+            }
+          ]
+        },
+        "latestOfficialUpdateRef": {
+          "ref": "registry:afir-energy-clarification-2026",
+          "label": "Clarificarea AFIR pentru sesiunea Schema de Energie 2026"
+        },
+        "notes": "Fereastra de depunere este închisă; închiderea sesiunii nu este echivalată cu finalizarea întregii proceduri. URL-ul principal din registry-ul operațional a răspuns 404 la auditul live din 22.08.2026; sursele stabile de mai sus sunt verificate, iar migrarea URL-ului în toate suprafețele publice rămâne în afara Task 02."
+      },
       "presentation": {
         "carousel": true,
         "hero": true,
         "order": 3,
         "icon": "ph-sun",
         "image": "/assets/hero/hero-solar.webp",
-        "beneficiary": null
+        "beneficiary": null,
+        "carouselOrder": 4,
+        "heroOrder": 5,
+        "navigationOrder": 7
       },
       "discovery": {
         "parentHub": "/afir",
@@ -790,11 +1159,15 @@
       }
     },
     {
+      "id": "autoconsum-institutii-publice",
       "slug": "autoconsum-institutii-publice",
       "name": "Autoconsum din surse regenerabile pentru instituții publice",
       "shortName": "Autoconsum instituții publice",
       "family": "energie-public",
       "status": "apel_inchis",
+      "canonicalStatus": "COMPLETED",
+      "statusScope": "program_call",
+      "statusRationale": "MySMIS marchează apelul drept FINALIZAT.",
       "statusLabel": "Apel finalizat în MySMIS – depunerea nu este deschisă",
       "publicationState": "public",
       "verifiedAt": "2026-08-18",
@@ -810,6 +1183,7 @@
       "lastMeaningfulUpdate": "2026-08-18",
       "evergreenValue": true,
       "archivedNoindexDecision": null,
+      "indexable": true,
       "cardSummary": "Autoconsum fotovoltaic pentru instituții publice: solicitant, consum, amplasament, drepturi, hotărâri, avize și documentele apelului.",
       "metaTitle": "Autoconsum pentru instituții publice | FABER",
       "metaDescription": "Autoconsum fotovoltaic pentru instituții publice: solicitant, consum, amplasament, drepturi, hotărâri, avize și documentele apelului.",
@@ -823,13 +1197,36 @@
       "officialGuideKeys": [
         "autoconsum-publici"
       ],
+      "officialSources": {
+        "roles": {
+          "programPage": [
+            {
+              "ref": "program",
+              "label": "Catalogul oficial MySMIS2021"
+            }
+          ],
+          "guide": [],
+          "annexes": [],
+          "schemeOrder": [
+            {
+              "ref": "guide:autoconsum-publici",
+              "label": "Referința oficială MySMIS pentru apelul destinat entităților publice"
+            }
+          ],
+          "sessionAnnouncement": [],
+          "corrigenda": [],
+          "clarifications": []
+        },
+        "notes": "Apelul este marcat FINALIZAT în MySMIS; registry-ul local nu separă actul normativ de pagina catalogului."
+      },
       "presentation": {
         "carousel": true,
         "hero": false,
         "order": 4,
         "icon": "ph-bank",
         "image": "/assets/hero/hero-solar.webp",
-        "beneficiary": null
+        "beneficiary": null,
+        "carouselOrder": 5
       },
       "discovery": {
         "parentHub": "/finantari-panouri-fotovoltaice",
@@ -846,11 +1243,15 @@
       }
     },
     {
+      "id": "pro-infra",
       "slug": "pro-infra",
       "name": "Schema de ajutor de stat PRO INFRA",
       "shortName": "PRO INFRA",
       "family": "energie",
       "status": "ghid_aprobat_nedeschis",
+      "canonicalStatus": "APPROVED_SCHEME",
+      "statusScope": "scheme",
+      "statusRationale": "Schema este aprobată și în revizuire, fără fereastră oficială de depunere.",
       "statusLabel": "Schemă aprobată, în revizuire – depunerea nu este deschisă",
       "publicationState": "public",
       "verifiedAt": "2026-08-18",
@@ -866,6 +1267,7 @@
       "lastMeaningfulUpdate": "2026-08-18",
       "evergreenValue": true,
       "archivedNoindexDecision": null,
+      "indexable": true,
       "cardSummary": "Schema PRO INFRA este aprobată și se află în revizuire; depunerea nu este deschisă și nu există un interval oficial publicat.",
       "quickAnswer": "PRO INFRA este o schemă aprobată pentru investiții care îmbunătățesc eficiența energetică a operatorilor vizați din infrastructura de transport. Depunerea nu este deschisă și nu există un calendar operațional oficial publicat, astfel că pagina separă prevederile schemei de condițiile unui apel viitor. Pregătirea pornește de la categoria solicitantului, activitatea eligibilă, consumurile și situația energetică inițială, amplasament, investiția propusă și economiile ce pot fi demonstrate. Echipamentele, lucrările, electrificarea și sistemele de monitorizare trebuie justificate tehnic, bugetate coerent și corelate cu indicatorii. Valorile, termenele, anexele și mecanismul de depunere se confirmă numai în documentele operaționale publicate de autoritatea competentă, înainte de aplicare.",
       "metaTitle": "PRO INFRA: schemă aprobată, apel nedeschis | FABER",
@@ -877,13 +1279,37 @@
         "pro-infra",
         "pro-infra-order"
       ],
+      "officialSources": {
+        "roles": {
+          "programPage": [
+            {
+              "ref": "program",
+              "label": "Schema PRO INFRA în Portalul Legislativ"
+            }
+          ],
+          "guide": [],
+          "annexes": [],
+          "schemeOrder": [
+            {
+              "ref": "guide:pro-infra-order",
+              "label": "Ordinul MTI nr. 2.292/29.12.2025 și schema PRO INFRA"
+            }
+          ],
+          "sessionAnnouncement": [],
+          "corrigenda": [],
+          "clarifications": []
+        },
+        "notes": "Schema este aprobată și consemnată ca fiind în revizuire; nu este înregistrat un interval efectiv de depunere."
+      },
       "presentation": {
         "carousel": true,
         "hero": false,
         "order": 8,
         "icon": "ph-factory",
         "image": "/assets/hero/hero-solar.webp",
-        "beneficiary": null
+        "beneficiary": null,
+        "carouselOrder": 8,
+        "navigationOrder": 6
       },
       "discovery": {
         "parentHub": "/finantari-panouri-fotovoltaice",
@@ -900,11 +1326,15 @@
       }
     },
     {
+      "id": "apeluri-gal",
       "slug": "apeluri-gal",
       "name": "Apeluri locale LEADER prin Grupuri de Acțiune Locală",
       "shortName": "Apeluri GAL",
       "family": "afir-leader",
       "status": "calendar_estimativ",
+      "canonicalStatus": "UNCONFIRMED",
+      "statusScope": "umbrella_program",
+      "statusRationale": "Fiecare GAL are propriul apel și termen; starea agregată nu poate fi prezentată drept OPEN.",
       "statusLabel": "Apeluri locale active – statutul și termenul se verifică pentru fiecare GAL",
       "publicationState": "public",
       "verifiedAt": "2026-08-18",
@@ -920,6 +1350,7 @@
       "lastMeaningfulUpdate": "2026-08-18",
       "evergreenValue": true,
       "archivedNoindexDecision": null,
+      "indexable": true,
       "cardSummary": "Platforma AFIR publică apeluri GAL active, cu teritorii, intervenții și termene distincte; apelul potrivit trebuie verificat local.",
       "metaTitle": "Apeluri GAL: ghid local, criterii și documente",
       "metaDescription": "Platforma AFIR publică apeluri GAL active. Verifică teritoriul, intervenția, beneficiarul și termenul direct în apelul local oficial.",
@@ -934,13 +1365,41 @@
         "dr36-leader",
         "leader-gal"
       ],
+      "officialSources": {
+        "roles": {
+          "programPage": [
+            {
+              "ref": "program",
+              "label": "Platforma oficială AFIR GAL"
+            }
+          ],
+          "guide": [
+            {
+              "ref": "guide:dr36-leader",
+              "label": "Ghidurile și anexele DR-36/LEADER, prin platforma AFIR GAL"
+            }
+          ],
+          "annexes": [
+            {
+              "ref": "guide:dr36-leader",
+              "label": "Anexele DR-36/LEADER, prin platforma AFIR GAL"
+            }
+          ],
+          "schemeOrder": [],
+          "sessionAnnouncement": [],
+          "corrigenda": [],
+          "clarifications": []
+        },
+        "notes": "Fiecare GAL are sesiuni distincte. La verificarea live din 22.08.2026, pagina agregată afișa 0 anunțuri și 0 apeluri în derulare; starea paginii rămâne UNCONFIRMED, nu OPEN."
+      },
       "presentation": {
         "carousel": true,
         "hero": false,
         "order": 12,
         "icon": "ph-map-pin",
         "image": "/assets/hero/hero-local.webp",
-        "beneficiary": null
+        "beneficiary": null,
+        "carouselOrder": 12
       },
       "discovery": {
         "parentHub": "/fonduri-europene-imm",
@@ -957,11 +1416,15 @@
       }
     },
     {
+      "id": "gal-afir-leader",
       "slug": "gal-afir-leader",
       "name": "LEADER / DR-36 prin Grupuri de Acțiune Locală",
       "shortName": "GAL-AFIR / LEADER",
       "family": "afir-leader",
       "status": "calendar_estimativ",
+      "canonicalStatus": "UNCONFIRMED",
+      "statusScope": "umbrella_program",
+      "statusRationale": "Fiecare GAL are propriul apel și termen; starea agregată nu poate fi prezentată drept OPEN.",
       "statusLabel": "Apeluri locale active – statutul și termenul se verifică pentru fiecare GAL",
       "publicationState": "public",
       "verifiedAt": "2026-08-18",
@@ -977,6 +1440,7 @@
       "lastMeaningfulUpdate": "2026-08-18",
       "evergreenValue": true,
       "archivedNoindexDecision": null,
+      "indexable": true,
       "cardSummary": "Platforma AFIR publică apeluri locale active în cadrul LEADER/DR-36, fiecare cu teritoriu, condiții și termen propriu.",
       "metaTitle": "GAL-AFIR: proiecte LEADER și implementare",
       "metaDescription": "Platforma AFIR publică apeluri locale active în cadrul LEADER/DR-36. Verifică GAL-ul, intervenția și termenul apelului relevant.",
@@ -991,13 +1455,41 @@
         "leader-gal",
         "dr36-leader"
       ],
+      "officialSources": {
+        "roles": {
+          "programPage": [
+            {
+              "ref": "program",
+              "label": "Platforma oficială AFIR GAL"
+            }
+          ],
+          "guide": [
+            {
+              "ref": "guide:dr36-leader",
+              "label": "Ghidurile și anexele DR-36/LEADER, prin platforma AFIR GAL"
+            }
+          ],
+          "annexes": [
+            {
+              "ref": "guide:dr36-leader",
+              "label": "Anexele DR-36/LEADER, prin platforma AFIR GAL"
+            }
+          ],
+          "schemeOrder": [],
+          "sessionAnnouncement": [],
+          "corrigenda": [],
+          "clarifications": []
+        },
+        "notes": "Fiecare GAL are sesiuni distincte. La verificarea live din 22.08.2026, pagina agregată afișa 0 anunțuri și 0 apeluri în derulare; starea paginii rămâne UNCONFIRMED, nu OPEN."
+      },
       "presentation": {
         "carousel": true,
         "hero": false,
         "order": 14,
         "icon": "ph-map-pin",
         "image": "/assets/hero/hero-local.webp",
-        "beneficiary": null
+        "beneficiary": null,
+        "carouselOrder": 14
       },
       "discovery": {
         "parentHub": "/fonduri-europene-imm",
@@ -1014,11 +1506,15 @@
       }
     },
     {
+      "id": "e-move-ro",
       "slug": "e-move-ro",
       "name": "Programul e-MOVE RO",
       "shortName": "e-MOVE RO",
       "family": "mobilitate-energie",
       "status": "ghid_aprobat_nedeschis",
+      "canonicalStatus": "APPROVED_SCHEME",
+      "statusScope": "scheme",
+      "statusRationale": "Actul înregistrat actualizează schema; nu există dovadă de sesiune deschisă.",
       "statusLabel": "Schemă actualizată – depunerea nu este deschisă",
       "publicationState": "public",
       "verifiedAt": "2026-08-18",
@@ -1050,6 +1546,7 @@
       "lastMeaningfulUpdate": "2026-08-10",
       "evergreenValue": true,
       "archivedNoindexDecision": null,
+      "indexable": true,
       "cardSummary": "Schema e-MOVE RO a fost actualizată în august 2026; depunerea nu este deschisă și nu există un calendar operațional publicat.",
       "metaTitle": "e-MOVE RO: stații de încărcare și condiții | FABER",
       "metaDescription": "e-MOVE RO: schema actualizată pentru infrastructură de încărcare, energie și stocare; depunerea nu este deschisă.",
@@ -1063,13 +1560,42 @@
       "officialGuideKeys": [
         "emove"
       ],
+      "officialSources": {
+        "roles": {
+          "programPage": [
+            {
+              "ref": "program",
+              "label": "Schema e-MOVE RO în Portalul Legislativ"
+            }
+          ],
+          "guide": [
+            {
+              "ref": "guide:emove",
+              "label": "Ghidul e-MOVE RO publicat spre consultare, referit de sursa oficială"
+            }
+          ],
+          "annexes": [],
+          "schemeOrder": [
+            {
+              "ref": "guide:emove",
+              "label": "Ordinul MTI nr. 755/06.08.2026 pentru actualizarea schemei e-MOVE RO"
+            }
+          ],
+          "sessionAnnouncement": [],
+          "corrigenda": [],
+          "clarifications": []
+        },
+        "notes": "Schema actualizată și ghidul consultativ nu dovedesc deschiderea unei sesiuni."
+      },
       "presentation": {
         "carousel": true,
         "hero": true,
         "order": 13,
         "icon": "ph-battery-charging",
         "image": "/assets/hero/hero-solar.webp",
-        "beneficiary": null
+        "beneficiary": null,
+        "carouselOrder": 13,
+        "heroOrder": 6
       },
       "discovery": {
         "parentHub": "/finantari-panouri-fotovoltaice",
@@ -1086,11 +1612,15 @@
       }
     },
     {
+      "id": "pocidif-21",
       "slug": "pocidif-21",
       "name": "PoCIDIF – Acțiunea 2.1 Dezvoltarea de noi servicii, aplicații și produse prin inovare și adoptarea de tehnologii avansate",
       "shortName": "PoCIDIF 2.1",
       "family": "digitalizare-inovare",
       "status": "apel_deschis",
+      "canonicalStatus": "OPEN",
+      "statusScope": "session",
+      "statusRationale": "Pagina oficială înregistrată confirmă sesiunea 30.06.2026–30.09.2026, iar fereastra include data verificării.",
       "statusLabel": "Apel deschis – depuneri 30 iunie–30 septembrie 2026",
       "publicationState": "public",
       "verifiedAt": "2026-08-18",
@@ -1138,6 +1668,7 @@
       "lastMeaningfulUpdate": "2026-08-18",
       "evergreenValue": true,
       "archivedNoindexDecision": null,
+      "indexable": true,
       "cardSummary": "PoCIDIF 2.1 este deschis pentru IMM TIC în perioada 30 iunie–30 septembrie 2026: inovare, software, hardware, CDI și introducere pe piață.",
       "metaTitle": "PoCIDIF 2.1: inovare digitală pentru IMM TIC | FABER",
       "metaDescription": "PoCIDIF 2.1 este deschis până la 30 septembrie 2026 pentru IMM TIC: eligibilitate, inovare, software, hardware, CDI și punctaj.",
@@ -1155,13 +1686,56 @@
         "pocidif-21-scheme",
         "pocidif-21-qa"
       ],
+      "officialSources": {
+        "roles": {
+          "programPage": [
+            {
+              "ref": "program",
+              "label": "Pagina oficială MIPE pentru Acțiunea PoCIDIF 2.1"
+            }
+          ],
+          "guide": [
+            {
+              "ref": "guide:pocidif-21-guide",
+              "label": "Ghidul solicitantului aprobat prin Ordinul MIPE nr. 965/23.06.2026"
+            }
+          ],
+          "annexes": [
+            {
+              "ref": "guide:pocidif-21-guide",
+              "label": "Pachetul oficial de 19 anexe"
+            }
+          ],
+          "schemeOrder": [
+            {
+              "ref": "guide:pocidif-21-scheme",
+              "label": "Schema de ajutor aprobată prin Ordinul MIPE nr. 875/15.06.2026"
+            }
+          ],
+          "sessionAnnouncement": [
+            {
+              "ref": "guide:pocidif-21",
+              "label": "Pagina oficială care publică sesiunea 30.06.2026–30.09.2026"
+            }
+          ],
+          "corrigenda": [],
+          "clarifications": [
+            {
+              "ref": "guide:pocidif-21-qa",
+              "label": "Clarificări oficiale publicate la 09.07.2026"
+            }
+          ]
+        },
+        "notes": "OPEN este valabil numai cât fereastra oficială rămâne curentă și nu apare o suspendare, închidere anticipată sau corrigendă."
+      },
       "presentation": {
         "carousel": true,
         "hero": false,
         "order": 999,
         "icon": "ph-duotone ph-circuitry",
         "image": "/assets/hero/hero-digital.webp",
-        "beneficiary": null
+        "beneficiary": null,
+        "carouselOrder": 20
       },
       "discovery": {
         "parentHub": "/fonduri-europene-digitalizare",
@@ -1179,11 +1753,15 @@
       }
     },
     {
+      "id": "pnrr",
       "slug": "pnrr",
       "name": "Planul Național de Redresare și Reziliență",
       "shortName": "PNRR",
       "family": "pnrr",
       "status": "calendar_estimativ",
+      "canonicalStatus": "UNCONFIRMED",
+      "statusScope": "umbrella_program",
+      "statusRationale": "Componentele și apelurile PNRR au stări distincte; implementarea programului nu înseamnă depunere deschisă.",
       "statusLabel": "Program în implementare – statutul se verifică pentru fiecare componentă și apel",
       "publicationState": "public",
       "verifiedAt": "2026-08-18",
@@ -1199,6 +1777,7 @@
       "lastMeaningfulUpdate": "2026-08-18",
       "evergreenValue": true,
       "archivedNoindexDecision": null,
+      "indexable": true,
       "cardSummary": "PNRR este în implementare; deschiderea, închiderea și stadiul finanțărilor se verifică separat pentru fiecare componentă și apel.",
       "metaTitle": "PNRR: componente, apeluri și stadiul implementării | FABER",
       "metaDescription": "PNRR este în implementare. Verifică statutul fiecărei componente și al fiecărui apel în tabloul de bord oficial înainte de pregătirea proiectului.",
@@ -1208,13 +1787,31 @@
       "officialGuideKeys": [
         "pnrr-dashboard"
       ],
+      "officialSources": {
+        "roles": {
+          "programPage": [
+            {
+              "ref": "program",
+              "label": "Tabloul de bord oficial PNRR"
+            }
+          ],
+          "guide": [],
+          "annexes": [],
+          "schemeOrder": [],
+          "sessionAnnouncement": [],
+          "corrigenda": [],
+          "clarifications": []
+        },
+        "notes": "Pagină agregată. Implementarea PNRR nu implică o sesiune de depunere deschisă pentru toate componentele."
+      },
       "presentation": {
         "carousel": true,
         "hero": false,
         "order": 25,
         "icon": "ph-chart-line-up",
         "image": "/assets/hero/hero-digital.webp",
-        "beneficiary": null
+        "beneficiary": null,
+        "carouselOrder": 21
       },
       "discovery": {
         "parentHub": "/fonduri-europene-digitalizare",
@@ -1231,11 +1828,15 @@
       }
     },
     {
+      "id": "diaspora-investeste-acasa",
       "slug": "diaspora-investeste-acasa",
       "name": "Diaspora Investește Acasă",
       "shortName": "Diaspora Investește Acasă",
       "family": "antreprenoriat",
       "status": "calendar_estimativ",
+      "canonicalStatus": "ANNOUNCED",
+      "statusScope": "program",
+      "statusRationale": "Există comunicare oficială despre program, dar mecanismul de aplicare nu este publicat.",
       "statusLabel": "Program anunțat – mecanismul de aplicare nu este publicat",
       "publicationState": "public",
       "verifiedAt": "2026-08-18",
@@ -1270,6 +1871,7 @@
       "lastMeaningfulUpdate": "2026-05-27",
       "evergreenValue": true,
       "archivedNoindexDecision": null,
+      "indexable": true,
       "cardSummary": "Program anunțat pentru întreprinderi nou-înființate de români din diaspora; procedura și calendarul de aplicare nu sunt încă publicate.",
       "metaTitle": "Diaspora Investește Acasă: condiții anunțate | FABER",
       "metaDescription": "Diaspora Investește Acasă: beneficiari, finanțare anunțată, contribuție proprie și ce documente pot fi pregătite înaintea procedurii oficiale.",
@@ -1284,13 +1886,33 @@
       "officialGuideKeys": [
         "diaspora-investeste-acasa"
       ],
+      "officialSources": {
+        "roles": {
+          "programPage": [
+            {
+              "ref": "program",
+              "label": "Comunicarea oficială «Investește Acasă»"
+            }
+          ],
+          "guide": [],
+          "annexes": [],
+          "schemeOrder": [],
+          "sessionAnnouncement": [],
+          "corrigenda": [],
+          "clarifications": []
+        },
+        "notes": "Program anunțat; mecanismul de aplicare, documentația și sesiunea nu sunt înregistrate."
+      },
       "presentation": {
         "carousel": true,
         "hero": true,
         "order": 21,
         "icon": "ph-house-line",
         "image": "/assets/hero/hero-local.webp",
-        "beneficiary": "români din diaspora care înființează o întreprindere în România"
+        "beneficiary": "români din diaspora care înființează o întreprindere în România",
+        "carouselOrder": 16,
+        "heroOrder": 7,
+        "navigationOrder": 8
       },
       "discovery": {
         "parentHub": "/fonduri-europene-imm",
@@ -1308,11 +1930,15 @@
       }
     },
     {
+      "id": "e-drive",
       "slug": "e-drive",
       "name": "Programul e-DRIVE",
       "shortName": "e-DRIVE",
       "family": "mobilitate-energie",
       "status": "ghid_aprobat_nedeschis",
+      "canonicalStatus": "APPROVED_SCHEME",
+      "statusScope": "scheme",
+      "statusRationale": "Actul înregistrat actualizează schema; nu există dovadă de sesiune deschisă.",
       "statusLabel": "Schemă actualizată – depunerea nu este deschisă",
       "publicationState": "public",
       "verifiedAt": "2026-08-18",
@@ -1347,6 +1973,7 @@
       "lastMeaningfulUpdate": "2026-08-07",
       "evergreenValue": true,
       "archivedNoindexDecision": null,
+      "indexable": true,
       "cardSummary": "Schema e-DRIVE pentru vehicule electrice utilizate în transportul rutier de persoane a fost actualizată; calendarul depunerii nu este publicat.",
       "metaTitle": "e-DRIVE: vehicule electrice pentru transport | FABER",
       "metaDescription": "Programul e-DRIVE: schemă actualizată pentru vehicule electrice, beneficiari, plafoane și obligații; depunerea nu este deschisă.",
@@ -1362,13 +1989,38 @@
       "officialGuideKeys": [
         "e-drive"
       ],
+      "officialSources": {
+        "roles": {
+          "programPage": [
+            {
+              "ref": "program",
+              "label": "Schema e-DRIVE în Portalul Legislativ"
+            }
+          ],
+          "guide": [],
+          "annexes": [],
+          "schemeOrder": [
+            {
+              "ref": "guide:e-drive",
+              "label": "Ordinul MTI nr. 742/03.08.2026 pentru actualizarea schemei e-DRIVE"
+            }
+          ],
+          "sessionAnnouncement": [],
+          "corrigenda": [],
+          "clarifications": []
+        },
+        "notes": "Actualizarea schemei nu constituie dovadă de sesiune deschisă."
+      },
       "presentation": {
         "carousel": true,
         "hero": true,
         "order": 22,
         "icon": "ph-bus",
         "image": "/assets/hero/hero-solar.webp",
-        "beneficiary": "operatori de transport rutier de persoane"
+        "beneficiary": "operatori de transport rutier de persoane",
+        "carouselOrder": 17,
+        "heroOrder": 8,
+        "navigationOrder": 9
       },
       "discovery": {
         "parentHub": "/finantari-panouri-fotovoltaice",
@@ -1385,11 +2037,15 @@
       }
     },
     {
+      "id": "e-mobility-ro",
       "slug": "e-mobility-ro",
       "name": "Programul e-Mobility RO",
       "shortName": "e-Mobility RO",
       "family": "mobilitate-energie",
       "status": "ghid_aprobat_nedeschis",
+      "canonicalStatus": "APPROVED_SCHEME",
+      "statusScope": "scheme",
+      "statusRationale": "Actul înregistrat actualizează schema; nu există dovadă de sesiune deschisă.",
       "statusLabel": "Schemă actualizată – depunerea nu este deschisă",
       "publicationState": "public",
       "verifiedAt": "2026-08-18",
@@ -1420,6 +2076,7 @@
       "lastMeaningfulUpdate": "2026-08-07",
       "evergreenValue": true,
       "archivedNoindexDecision": null,
+      "indexable": true,
       "cardSummary": "Schema e-Mobility RO pentru infrastructură de reîncărcare de-a lungul rețelei rutiere a fost actualizată; depunerea nu este deschisă.",
       "metaTitle": "e-Mobility RO: stații de reîncărcare | FABER",
       "metaDescription": "e-Mobility RO: schemă actualizată pentru stații de reîncărcare, amplasamente, solicitanți și buget; depunerea nu este deschisă.",
@@ -1435,13 +2092,38 @@
       "officialGuideKeys": [
         "e-mobility-ro"
       ],
+      "officialSources": {
+        "roles": {
+          "programPage": [
+            {
+              "ref": "program",
+              "label": "Schema e-Mobility RO în Portalul Legislativ"
+            }
+          ],
+          "guide": [],
+          "annexes": [],
+          "schemeOrder": [
+            {
+              "ref": "guide:e-mobility-ro",
+              "label": "Ordinul MTI nr. 746/05.08.2026 pentru actualizarea schemei e-Mobility RO"
+            }
+          ],
+          "sessionAnnouncement": [],
+          "corrigenda": [],
+          "clarifications": []
+        },
+        "notes": "Actualizarea schemei nu constituie dovadă de sesiune deschisă."
+      },
       "presentation": {
         "carousel": true,
         "hero": true,
         "order": 23,
         "icon": "ph-charging-station",
         "image": "/assets/hero/hero-solar.webp",
-        "beneficiary": "întreprinderi care dezvoltă infrastructură publică de reîncărcare"
+        "beneficiary": "întreprinderi care dezvoltă infrastructură publică de reîncărcare",
+        "carouselOrder": 18,
+        "heroOrder": 9,
+        "navigationOrder": 10
       },
       "discovery": {
         "parentHub": "/finantari-panouri-fotovoltaice",
@@ -1459,11 +2141,15 @@
       }
     },
     {
+      "id": "fondul-modernizare-pc1-stocare",
       "slug": "fondul-modernizare-pc1-stocare",
       "name": "Fondul pentru Modernizare – PC1 Stocare stand-alone",
       "shortName": "PC1 Stocare stand-alone",
       "family": "energie",
       "status": "ghid_aprobat_nedeschis",
+      "canonicalStatus": "FINAL_GUIDE",
+      "statusScope": "program_call",
+      "statusRationale": "Ghidul final este aprobat, iar perioada de depunere nu este anunțată.",
       "statusLabel": "Ghid aprobat la 17 august 2026 – perioada de depunere nu este anunțată",
       "publicationState": "public",
       "verifiedAt": "2026-08-18",
@@ -1498,6 +2184,7 @@
       "lastMeaningfulUpdate": "2026-08-17",
       "evergreenValue": true,
       "archivedNoindexDecision": null,
+      "indexable": true,
       "cardSummary": "Ghid aprobat pentru baterii stand-alone racordate la rețea; perioada de depunere nu este încă anunțată oficial.",
       "metaTitle": "PC1 stocare stand-alone: ghid aprobat | FABER",
       "metaDescription": "Fondul pentru Modernizare PC1: ghid aprobat pentru baterii stand-alone, beneficiari, buget și plafoane; depunerea nu este încă anunțată.",
@@ -1513,13 +2200,43 @@
       "officialGuideKeys": [
         "fm-pc1-stocare"
       ],
+      "officialSources": {
+        "roles": {
+          "programPage": [
+            {
+              "ref": "program",
+              "label": "Ordinul de aprobare PC1 Stocare stand-alone în Portalul Legislativ"
+            }
+          ],
+          "guide": [
+            {
+              "ref": "guide:fm-pc1-stocare",
+              "label": "Ghidul solicitantului PC1 Stocare stand-alone, aprobat la 17.08.2026"
+            }
+          ],
+          "annexes": [],
+          "schemeOrder": [
+            {
+              "ref": "guide:fm-pc1-stocare",
+              "label": "Ordinul Ministerului Energiei nr. 915/17.08.2026"
+            }
+          ],
+          "sessionAnnouncement": [],
+          "corrigenda": [],
+          "clarifications": []
+        },
+        "notes": "Ghid final aprobat; perioada de depunere nu este anunțată și starea nu poate fi OPEN."
+      },
       "presentation": {
         "carousel": true,
         "hero": true,
         "order": 24,
         "icon": "ph-battery-high",
         "image": "/assets/hero/hero-solar.webp",
-        "beneficiary": "întreprinderi care dezvoltă capacități de stocare stand-alone"
+        "beneficiary": "întreprinderi care dezvoltă capacități de stocare stand-alone",
+        "carouselOrder": 19,
+        "heroOrder": 10,
+        "navigationOrder": 11
       },
       "discovery": {
         "parentHub": "/finantari-panouri-fotovoltaice",
@@ -1536,11 +2253,15 @@
       }
     },
     {
+      "id": "programul-tranzitie-justa",
       "slug": "programul-tranzitie-justa",
       "name": "Programul Tranziție Justă",
       "shortName": "Programul Tranziție Justă",
       "family": "tranzitie-justa",
       "status": "calendar_estimativ",
+      "canonicalStatus": "UNCONFIRMED",
+      "statusScope": "umbrella_program",
+      "statusRationale": "Apelurile din program au stări distincte în MySMIS.",
       "statusLabel": "Program în implementare – statutul se verifică pentru fiecare apel în MySMIS",
       "publicationState": "public",
       "verifiedAt": "2026-08-18",
@@ -1556,6 +2277,7 @@
       "lastMeaningfulUpdate": "2026-08-18",
       "evergreenValue": true,
       "archivedNoindexDecision": null,
+      "indexable": true,
       "cardSummary": "Programul Tranziție Justă este în implementare; starea depunerilor diferă pe județ, prioritate și apel și se verifică în MySMIS2021.",
       "metaTitle": "Programul Tranziție Justă: apeluri și statut | FABER",
       "metaDescription": "Programul Tranziție Justă este în implementare. Verifică în MySMIS2021 statutul apelului, județul, beneficiarii și perioada de depunere.",
@@ -1565,13 +2287,31 @@
       "officialGuideKeys": [
         "ptj-mysmis"
       ],
+      "officialSources": {
+        "roles": {
+          "programPage": [
+            {
+              "ref": "program",
+              "label": "Catalogul oficial MySMIS2021"
+            }
+          ],
+          "guide": [],
+          "annexes": [],
+          "schemeOrder": [],
+          "sessionAnnouncement": [],
+          "corrigenda": [],
+          "clarifications": []
+        },
+        "notes": "Pagină agregată. Starea se stabilește separat pentru fiecare apel al programului."
+      },
       "presentation": {
         "carousel": true,
         "hero": false,
         "order": 26,
         "icon": "ph-factory",
         "image": "/assets/hero/hero-local.webp",
-        "beneficiary": null
+        "beneficiary": null,
+        "carouselOrder": 22
       },
       "discovery": {
         "parentHub": "/fonduri-regionale",
@@ -1588,11 +2328,15 @@
       }
     },
     {
+      "id": "fondul-de-modernizare",
       "slug": "fondul-de-modernizare",
       "name": "Fondul pentru Modernizare",
       "shortName": "Fondul pentru Modernizare",
       "family": "energie",
       "status": "calendar_estimativ",
+      "canonicalStatus": "UNCONFIRMED",
+      "statusScope": "umbrella_program",
+      "statusRationale": "Apelurile Fondului pentru Modernizare au stări distincte în MySMIS.",
       "statusLabel": "Program în implementare – statutul se verifică pentru fiecare apel în MySMIS",
       "publicationState": "public",
       "verifiedAt": "2026-08-18",
@@ -1608,6 +2352,7 @@
       "lastMeaningfulUpdate": "2026-08-18",
       "evergreenValue": true,
       "archivedNoindexDecision": null,
+      "indexable": true,
       "cardSummary": "Fondul pentru Modernizare este în implementare; starea depunerilor diferă pentru fiecare apel și se verifică în MySMIS2021.",
       "metaTitle": "Fondul pentru Modernizare: apeluri și statut | FABER",
       "metaDescription": "Fondul pentru Modernizare este în implementare. Verifică în MySMIS2021 statutul, beneficiarii și perioada fiecărui apel de energie.",
@@ -1617,13 +2362,31 @@
       "officialGuideKeys": [
         "fondul-modernizare-mysmis"
       ],
+      "officialSources": {
+        "roles": {
+          "programPage": [
+            {
+              "ref": "program",
+              "label": "Catalogul oficial MySMIS2021"
+            }
+          ],
+          "guide": [],
+          "annexes": [],
+          "schemeOrder": [],
+          "sessionAnnouncement": [],
+          "corrigenda": [],
+          "clarifications": []
+        },
+        "notes": "Pagină agregată. Starea se stabilește separat pentru fiecare apel al Fondului pentru Modernizare."
+      },
       "presentation": {
         "carousel": true,
         "hero": false,
         "order": 27,
         "icon": "ph-sun",
         "image": "/assets/hero/hero-solar.webp",
-        "beneficiary": null
+        "beneficiary": null,
+        "carouselOrder": 23
       },
       "discovery": {
         "parentHub": "/finantari-panouri-fotovoltaice",

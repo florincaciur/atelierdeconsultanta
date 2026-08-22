@@ -78,7 +78,7 @@ function auditProgramContextualLinks() {
       if (block.length) routeIssues.push(`blocuri contextuale: ${block.length}, necesar 0 pentru ruta exclusa editorial`);
       if ($("link[href='/assets/program-contextual-links.css']").length) routeIssues.push("stylesheet contextual prezent pe ruta exclusa editorial");
       if ($("main .related-links, main [data-contextual-next-step]").length) routeIssues.push("au ramas containere automate legacy");
-      routeResults.push({ route: program.pageUrl, programId: program.slug, status: routeIssues.length ? "FAIL" : "PASS", excluded: true, issues: [...new Set(routeIssues)] });
+      routeResults.push({ route: program.pageUrl, programId: program.id, status: routeIssues.length ? "FAIL" : "PASS", excluded: true, issues: [...new Set(routeIssues)] });
       errors.push(...routeIssues.map((issue) => `${program.pageUrl}: ${issue}`));
       continue;
     }
@@ -130,7 +130,7 @@ function auditProgramContextualLinks() {
     const uniqueTargets = new Set(actual.toArray().map((element) => $(element).attr("href")));
     if (uniqueTargets.size !== actual.length) routeIssues.push("destinații duplicate în bloc");
     if (!$("link[href='/assets/program-contextual-links.css']").length) routeIssues.push("stylesheet lipsă");
-    routeResults.push({ route: program.pageUrl, programId: program.slug, status: routeIssues.length ? "FAIL" : "PASS", issues: [...new Set(routeIssues)] });
+    routeResults.push({ route: program.pageUrl, programId: program.id, status: routeIssues.length ? "FAIL" : "PASS", issues: [...new Set(routeIssues)] });
     errors.push(...routeIssues.map((issue) => `${program.pageUrl}: ${issue}`));
   }
 

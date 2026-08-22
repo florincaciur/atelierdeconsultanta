@@ -2,10 +2,13 @@ import assert from "node:assert/strict";
 import fs from "node:fs";
 import http from "node:http";
 import path from "node:path";
+import { createRequire } from "node:module";
 import { chromium } from "playwright";
 
 const ROOT = path.resolve(import.meta.dirname, "..");
-const homepagePrograms = JSON.parse(fs.readFileSync(path.join(ROOT, "config", "homepage-programs.json"), "utf8"));
+const require = createRequire(import.meta.url);
+const { carouselPrograms, loadProgramConfig } = require("../tools/program-factual-governance");
+const homepagePrograms = carouselPrograms(loadProgramConfig().programs);
 const MIME = { ".html": "text/html; charset=utf-8", ".css": "text/css", ".js": "text/javascript", ".json": "application/json", ".svg": "image/svg+xml", ".webp": "image/webp", ".png": "image/png" };
 const server = http.createServer((request, response) => {
   let pathname = decodeURIComponent(new URL(request.url, "http://localhost").pathname);
@@ -53,7 +56,7 @@ try {
     assert.equal(metrics.explorerVisible, 1);
     if (viewport.width === 390 || viewport.width === 1366) assert(metrics.ctaBottom <= viewport.height, `${viewport.width}px: CTA-ul principal este sub fold`);
     await page.locator("[data-priority-next]").click();
-    assert.equal((await page.locator("[data-priority-counter]").textContent()).trim(), `2 din ${homepagePrograms.featuredProgramSlugs.length}`);
+    assert.equal((await page.locator("[data-priority-counter]").textContent()).trim(), `2 din ${homepagePrograms.length}`);
     await page.locator("[data-homepage-method-next]").click();
     assert.match((await page.locator("[data-homepage-method-status]").textContent()).trim(), /^Etapa 2 din 5:/);
     await page.locator("[data-homepage-explorer-next]").click();

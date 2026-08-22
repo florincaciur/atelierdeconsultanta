@@ -199,7 +199,7 @@ function validateGovernance(config, programs, today = new Date().toISOString().s
   if (!Number.isInteger(policy.programReviewDays) || policy.programReviewDays < 30 || policy.programReviewDays > 60) errors.push("programReviewDays trebuie să fie între 30 și 60");
   if (!Number.isInteger(policy.evergreenReviewDays) || policy.evergreenReviewDays < 60 || policy.evergreenReviewDays > 90) errors.push("evergreenReviewDays trebuie să fie între 60 și 90");
   const records = Array.isArray(config?.records) ? config.records : [];
-  const programById = new Map(programs.map((program) => [program.slug, program]));
+  const programById = new Map(programs.map((program) => [program.id, program]));
   const context = { policy, programById, today };
   const ids = new Set();
   const routes = new Set();

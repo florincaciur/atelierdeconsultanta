@@ -3,7 +3,7 @@
 
 const fs = require("fs");
 const path = require("path");
-const { loadProgramConfig } = require("./program-factual-governance");
+const { loadProgramConfig, navigationPrograms } = require("./program-factual-governance");
 
 const ROOT = path.resolve(__dirname, "..");
 const CONFIG_PATH = path.join(ROOT, "config", "main-navigation.json");
@@ -28,16 +28,15 @@ function analyticsAttributes(item, component, groupId) {
 }
 
 function programFactsAttributes(program) {
-  return `data-program-id="${escapeHtml(program.slug)}" data-program-status="${escapeHtml(program.status)}" data-status-label="${escapeHtml(program.statusLabel)}" data-verified-at="${escapeHtml(program.verifiedAt)}" data-source-url="${escapeHtml(program.sourceUrl)}"`;
+  return `data-program-id="${escapeHtml(program.id)}" data-program-status="${escapeHtml(program.status)}" data-status-label="${escapeHtml(program.statusLabel)}" data-verified-at="${escapeHtml(program.verifiedAt)}" data-source-url="${escapeHtml(program.sourceUrl)}"`;
 }
 
 function featuredPrograms(config, programs) {
-  const bySlug = new Map(programs.map((program) => [program.slug, program]));
-  return (config.programMenu?.featuredProgramSlugs || []).map((slug) => {
-    const program = bySlug.get(slug);
-    if (!program || program.publicationState !== "public") throw new Error(`Programul de navigare ${slug} lipsește sau nu este public.`);
-    return program;
-  });
+  const featured = navigationPrograms(programs);
+  if (featured.some((program) => program.publicationState !== "public")) {
+    throw new Error("Selecția de navigare conține un program care nu este public.");
+  }
+  return featured;
 }
 
 function desktopGroup(group) {

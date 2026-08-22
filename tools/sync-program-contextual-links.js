@@ -36,7 +36,7 @@ function programFiles(route) {
 }
 
 function resolvedLinks(program, config = loadConfig()) {
-  const row = config.programs?.[program.slug];
+  const row = config.programs?.[program.id];
   if (!row) throw new Error(`${program.slug}: lipsește din matricea program-contextual-links`);
   const parentRoute = parentForRoute(program.pageUrl);
   const parent = config.parents?.[parentRoute];
@@ -84,7 +84,7 @@ function renderProgramContextualLinks(program, config = loadConfig()) {
   }).join("\n");
 
   return `${START}
-  <section class="program-contextual-links" data-program-contextual-links="" data-program-id="${escapeHtml(program.slug)}" aria-labelledby="program-contextual-${escapeHtml(program.slug)}-title">
+  <section class="program-contextual-links" data-program-contextual-links="" data-program-id="${escapeHtml(program.id)}" aria-labelledby="program-contextual-${escapeHtml(program.slug)}-title">
     <h2 id="program-contextual-${escapeHtml(program.slug)}-title">Continuă cu traseul potrivit</h2>
     <p>Patru legături intenționate: contextul programului, un instrument, un reper complementar și verificarea proiectului.</p>
     <ul class="program-contextual-links__list">
@@ -138,7 +138,7 @@ function synchronizedHtml(html, program, config = loadConfig()) {
 }
 
 function validateMatrix(programs, config) {
-  const programIds = new Set(programs.map((program) => program.slug));
+  const programIds = new Set(programs.map((program) => program.id));
   const matrixIds = new Set(Object.keys(config.programs || {}));
   const missing = [...programIds].filter((id) => !matrixIds.has(id));
   const unknown = [...matrixIds].filter((id) => !programIds.has(id));
@@ -158,7 +158,7 @@ function main() {
   const publicPrograms = programs.filter((program) => isPublicProgram(program) && program.discovery?.listed !== false);
   const excludedRoutes = new Set(config.excludedRoutes || []);
   const managedPrograms = publicPrograms.filter((program) => !excludedRoutes.has(program.pageUrl));
-  const managedProgramIds = new Set(managedPrograms.map((program) => program.slug));
+  const managedProgramIds = new Set(managedPrograms.map((program) => program.id));
   const changed = [];
   const migration = [];
 
@@ -166,7 +166,7 @@ function main() {
     for (const file of programFiles(program.pageUrl)) {
       const before = fs.readFileSync(file, "utf8");
       const counts = legacyCounts(before);
-      const after = managedProgramIds.has(program.slug)
+      const after = managedProgramIds.has(program.id)
         ? synchronizedHtml(before, program, config)
         : removeStylesheet(removeManagedBlocks(before));
       if (after !== before) {
@@ -174,14 +174,14 @@ function main() {
         if (!CHECK) fs.writeFileSync(file, after, "utf8");
       }
       migration.push({
-        programId: program.slug,
+        programId: program.id,
         route: program.pageUrl,
         file: path.relative(ROOT, file).replace(/\\/gu, "/"),
-        eligible: managedProgramIds.has(program.slug),
+        eligible: managedProgramIds.has(program.id),
         excludedByEditorialDecision: excludedRoutes.has(program.pageUrl),
         removedManagedBlocks: counts.blocks,
         removedManagedLinks: counts.links,
-        resultingRelations: managedProgramIds.has(program.slug) ? resolvedLinks(program, config).map((link) => link.relation) : []
+        resultingRelations: managedProgramIds.has(program.id) ? resolvedLinks(program, config).map((link) => link.relation) : []
       });
     }
   }
