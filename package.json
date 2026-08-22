@@ -118,6 +118,8 @@
     "apply:contextual-next-steps": "node tools/contextual-next-steps.js",
     "generate:lead-magnets": "node tools/generate-lead-magnets.js",
     "generate:sitemap": "node tools/generate-sitemap.js",
+    "generate:route-inventory": "node tools/generate-route-inventory.js --live",
+    "test:route-inventory": "node tools/generate-route-inventory.js --check && node tests/route-inventory-contract.mjs",
     "generate:content-intent-inventory": "npm run sync:contextual-ctas && node tools/generate-content-intent-inventory.js",
     "test:content-intent-inventory": "node tools/generate-content-intent-inventory.js --check && node tests/content-intent-inventory-contract.mjs",
     "generate:feed": "node tools/generate-feed.js",
