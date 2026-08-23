@@ -10,6 +10,7 @@ const require = createRequire(import.meta.url);
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const {
   EXPECTED_STATUS_IDS,
+  FACTUAL_FIELD_LABELS,
   LEGACY_STATUS_IDS,
   SOURCE_ROLES,
   buildDocuments,
@@ -35,6 +36,7 @@ assert.match(statusById.get("SCHEDULED").publicLabel, /\{startDate\}.*\{endDate\
 assert.match(statusById.get("UNCONFIRMED").publicLabel, /neconfirmat/i, "UNCONFIRMED nu poate fi prezentat drept fapt cert.");
 
 assert.equal(programsById.size, data.programs.length, "Fiecare program trebuie să aibă un singur ID stabil.");
+assert.equal(FACTUAL_FIELD_LABELS.length, 32, "Auditul trebuie să păstreze exact cele 32 de categorii factuale Task 04.");
 assert.equal(programsById.get("dr14-afir").canonicalStatus, "SCHEDULED");
 assert.equal(programsById.get("dr18-afir").canonicalStatus, "SCHEDULED");
 assert.equal(programsById.get("pocidif-21").canonicalStatus, "OPEN");
@@ -55,6 +57,10 @@ for (const program of data.programs) {
   assert.ok(documents.status.includes(`| \`${program.id}\` |`), `${program.id} trebuie să apară în maparea taxonomiei.`);
   assert.ok(documents.sources.includes(`## \`${program.id}\` —`), `${program.id} trebuie să aibă fișă în registrul oficial.`);
   assert.ok(documents.sources.includes(program.sourceUrl), `${program.slug} trebuie să includă URL-ul oficial principal.`);
+  assert.equal(program.verifiedAt, data.sourceRegistry.factualSnapshotDate, `${program.slug} trebuie reverificat în snapshot-ul curent.`);
+  for (const field of FACTUAL_FIELD_LABELS) {
+    assert.ok(documents.sources.includes(`| ${field} |`), `${program.slug}: categoria factuală ${field} lipsește.`);
+  }
 
   for (const role of SOURCE_ROLES) {
     for (const reference of sourceEntry.roles[role]) {
@@ -75,10 +81,15 @@ assert.equal(data.taxonomy.reviewedAt <= programsById.get("pocidif-21").applicat
 assert.equal(programsById.get("dr14-afir").applicationStart > data.taxonomy.reviewedAt, true, "SCHEDULED trebuie să fie în viitor.");
 assert.equal(programsById.get("dr18-afir").applicationStart > data.taxonomy.reviewedAt, true, "SCHEDULED trebuie să fie în viitor.");
 
-for (const field of ["Stable program ID", "Authority", "Pagină oficială program/apel", "Ghid", "Anexe", "Schemă / ordin", "Anunț sesiune", "Corrigenda / erate", "Clarificări", "Latest official update", "Verification date", "Sursă primară în registry-ul operațional", "Notes"]) {
+for (const field of ["Stable program ID", "Pagină oficială program/apel", "Ghid", "Anexe", "Schemă / ordin", "Anunț sesiune", "Corrigenda / erate", "Clarificări", "Sursă primară în registry-ul operațional", "Notes"]) {
   assert.ok(documents.sources.includes(`| ${field} |`), `Câmpul obligatoriu ${field} trebuie să existe.`);
 }
 assert.match(documents.status, /CLOSED.*COMPLETED.*poate rămâne indexabilă/s, "Paginile închise cu valoare SEO trebuie să poată fi păstrate.");
+assert.match(documents.sources, /Documentația oficială publicată și verificată la 23\.08\.2026 nu stabilește încă această informație\./, "Golurile factuale trebuie explicate explicit, fără placeholder.");
+for (const field of ["Program", "Câmp", "Before", "After", "Sursă", "Verificat", "Motiv"]) {
+  assert.ok(documents.sources.includes(field), `Jurnalul factual trebuie să includă ${field}.`);
+}
+assert.equal(data.factualChanges.length, 4, "Reverificarea Task 04 trebuie să documenteze cele patru corecții factuale.");
 assert.doesNotMatch(documents.status + documents.sources, /\b(?:TODO|TBD|TODO_SURSA_OFICIALA)\b/, "Documentele nu pot publica placeholder-e.");
 assert.deepEqual(checkDocuments(documents), [], "Documentele versionate trebuie să fie sincronizate exact cu configurațiile.");
 assert.ok(fs.existsSync(path.join(ROOT, "docs", "faber-remediation", "STATUS_TAXONOMY.md")));

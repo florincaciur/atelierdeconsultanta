@@ -54,6 +54,40 @@ const SOURCE_ROLE_LABELS = Object.freeze({
   corrigenda: "Corrigenda / erate",
   clarifications: "Clarificări"
 });
+const FACTUAL_FIELD_LABELS = Object.freeze([
+  "Denumire oficială",
+  "Acronim",
+  "Autoritate",
+  "Fond / program",
+  "Temei / document",
+  "Stadiu",
+  "Sesiune",
+  "Data deschiderii",
+  "Deadline",
+  "Prelungiri",
+  "Buget",
+  "Grant minim",
+  "Grant maxim",
+  "Intensitate",
+  "Cofinanțare",
+  "Beneficiari",
+  "Regiune",
+  "CAEN",
+  "Prag SO",
+  "Investiții",
+  "Cheltuieli eligibile",
+  "Cheltuieli neeligibile",
+  "Condiții critice",
+  "Documente",
+  "Indicatori",
+  "Selecție / punctaj",
+  "Ajutor de stat / de minimis",
+  "Implementare",
+  "Monitorizare",
+  "Surse oficiale",
+  "Latest official update",
+  "verifiedAt"
+]);
 const OFFICIAL_HOST_SUFFIXES = Object.freeze([
   "gov.ro",
   "afir.ro",
@@ -76,6 +110,7 @@ function loadData() {
     taxonomy,
     sourceRegistry,
     programs: programConfig.programs || [],
+    factualChanges: programConfig.factualChanges || [],
     guides,
     approvals: approvalConfig.programs || []
   };
@@ -113,7 +148,7 @@ function resolveSourceReference(reference, program, data) {
       url: program.sourceUrl,
       authority: program.sourceName,
       verifiedAt: program.verifiedAt,
-      updatedAt: program.lastMeaningfulUpdate
+      updatedAt: program.officialSourceUpdatedAt || program.lastMeaningfulUpdate
     };
   } else if (ref.startsWith("guide:")) {
     const key = ref.slice("guide:".length);
@@ -183,6 +218,7 @@ function validateData(data) {
   if (data.taxonomy.schemaVersion !== 2) errors.push("Taxonomia trebuie să aibă schemaVersion=2.");
   if (data.sourceRegistry.schemaVersion !== 2) errors.push("Catalogul suplimentar de surse trebuie să aibă schemaVersion=2.");
   if (!isIsoDate(data.taxonomy.reviewedAt)) errors.push("Taxonomia trebuie să aibă reviewedAt ISO.");
+  if (!isIsoDate(data.sourceRegistry.factualSnapshotDate)) errors.push("Snapshot-ul factual trebuie să fie dată ISO.");
   if (!sameMembers(statusIds, EXPECTED_STATUS_IDS) || statusSet.size !== EXPECTED_STATUS_IDS.length) {
     errors.push(`Taxonomia trebuie să conțină exact: ${EXPECTED_STATUS_IDS.join(", ")}.`);
   }
@@ -244,6 +280,9 @@ function validateData(data) {
     if (!assignment?.statusScope || !assignment?.statusRationale) errors.push(`${program.slug}: statusScope/statusRationale lipsă.`);
     if (program.sourceType !== "official" || !isOfficialUrl(program.sourceUrl)) errors.push(`${program.slug}: sursa principală nu este URL oficial HTTPS permis.`);
     if (!isIsoDate(program.verifiedAt)) errors.push(`${program.slug}: verifiedAt invalid.`);
+    if (program.verifiedAt !== data.sourceRegistry.factualSnapshotDate) {
+      errors.push(`${program.slug}: verifiedAt trebuie să coincidă cu snapshot-ul factual curent.`);
+    }
     if (!sourceEntry || !sourceEntry.roles) continue;
     if (!String(sourceEntry.notes || "").trim()) errors.push(`${program.slug}: notes lipsește din registrul de surse.`);
     for (const role of SOURCE_ROLES) {
@@ -293,6 +332,15 @@ function validateData(data) {
       if (!data.guides[key]) errors.push(`${program.slug}: cheia officialGuideKeys ${key} lipsește din official-guides.json.`);
     }
   }
+  for (const [index, change] of data.factualChanges.entries()) {
+    const location = `factualChanges[${index}]`;
+    if (!programIds.includes(change.programId)) errors.push(`${location}: programId inexistent.`);
+    for (const field of ["field", "before", "after", "sourceLabel", "reason"]) {
+      if (!String(change[field] || "").trim()) errors.push(`${location}: ${field} lipsește.`);
+    }
+    if (!isOfficialUrl(change.sourceUrl)) errors.push(`${location}: sourceUrl nu este URL oficial permis.`);
+    if (!isIsoDate(change.verifiedAt)) errors.push(`${location}: verifiedAt invalid.`);
+  }
   return errors;
 }
 
@@ -301,6 +349,86 @@ function markdown(value) {
     .replace(/\|/g, "\\|")
     .replace(/\r?\n/g, " ")
     .trim() || "—";
+}
+
+function missingOfficialInformation(program) {
+  return `Documentația oficială publicată și verificată la ${formatDate(program.verifiedAt)} nu stabilește încă această informație.`;
+}
+
+function formatScalar(value) {
+  if (value === null || value === undefined || value === "") return "";
+  if (typeof value === "string" || typeof value === "number") return String(value);
+  if (Array.isArray(value)) return value.map(formatScalar).filter(Boolean).join("; ");
+  if (typeof value === "object") {
+    if (Number.isFinite(value.amount)) {
+      const amount = new Intl.NumberFormat("ro-RO").format(value.amount);
+      return [amount, value.currency, value.unit ? `/ ${value.unit}` : ""].filter(Boolean).join(" ");
+    }
+    return Object.entries(value)
+      .map(([key, item]) => `${key}: ${formatScalar(item)}`)
+      .filter((item) => !item.endsWith(": "))
+      .join("; ");
+  }
+  return String(value);
+}
+
+function factualValue(program, value) {
+  const formatted = formatScalar(value).trim();
+  return markdown(formatted || missingOfficialInformation(program));
+}
+
+function allOfficialReferences(program, data) {
+  const references = SOURCE_ROLES.flatMap((role) => program.officialSources.roles[role]);
+  const seen = new Set();
+  return references
+    .map((reference) => resolveSourceReference(reference, program, data))
+    .filter((source) => !seen.has(source.url) && seen.add(source.url));
+}
+
+function factualFieldRows(program, data) {
+  const sources = allOfficialReferences(program, data);
+  const documents = sources.map((source) => link(source.label, source.url)).join("<br>");
+  const sessions = (program.officialSources.roles.sessionAnnouncement || []);
+  const session = sessions.length ? renderReferences(sessions, program, data) : "";
+  const latest = resolveSourceReference(program.officialSources.latestOfficialUpdateRef || { ref: "program" }, program, data);
+  const regionLabels = { national: "Național", nord_est: "Regiunea Nord-Est", local: "Local, la nivelul GAL selectat" };
+  const regions = (program.discovery?.regions || []).map((region) => regionLabels[region] || region.replaceAll("_", " "));
+  const review = program.factualReview || {};
+  const values = [
+    program.name,
+    program.acronym,
+    program.sourceName,
+    program.fund,
+    `${program.sourceVersion} — ${link("document oficial", program.sourceUrl)}`,
+    `${program.canonicalStatus} — ${program.statusLabel}`,
+    session || review.session,
+    program.applicationStart ? formatDate(program.applicationStart) : null,
+    program.applicationEnd ? formatDate(program.applicationEnd) : null,
+    program.extensionData || review.extensions,
+    program.grantSummary?.budget,
+    program.grantSummary?.minimum,
+    program.grantSummary?.maximum,
+    program.cofinancingSummary?.intensity,
+    program.cofinancingSummary?.ownContribution,
+    program.eligibleApplicantSummary || program.eligibleApplicants,
+    regions,
+    program.caenApplicability,
+    program.soRequirement,
+    review.investments,
+    review.eligibleExpenses,
+    review.ineligibleExpenses,
+    program.keyConditions,
+    documents,
+    review.indicators,
+    review.selection,
+    review.stateAid,
+    review.implementation,
+    review.monitoring,
+    documents,
+    `${latest.updatedAt || program.lastMeaningfulUpdate || "—"} — ${link(latest.label, latest.url)}`,
+    program.verifiedAt
+  ];
+  return FACTUAL_FIELD_LABELS.map((label, index) => `| ${label} | ${factualValue(program, values[index])} |`);
 }
 
 function link(label, url) {
@@ -436,6 +564,7 @@ function renderSourceRegistry(data) {
     "- Un câmp neidentificat este un gol explicit al registry-ului, nu afirmația că documentul nu există. Golul nu poate susține o stare mai optimistă.",
     "- `Latest official update` înseamnă ultima actualizare consemnată în snapshot-ul versionat, nu o garanție că instituția nu a publicat ulterior alt document.",
     "- URL-ul accesibil nu este singur dovadă de `OPEN`; sunt obligatorii identificarea sesiunii, fereastra curentă și controlul actualizărilor ulterioare.",
+    `- Cele ${FACTUAL_FIELD_LABELS.length} de categorii solicitate sunt documentate pentru fiecare program. Când sursa oficială verificată nu stabilește un câmp, fișa publică exact golul factual, fără completări speculative.`,
     "",
     "## Acoperire",
     "",
@@ -447,25 +576,29 @@ function renderSourceRegistry(data) {
 
   for (const program of data.programs) {
     const entry = program.officialSources;
-    const latest = resolveSourceReference(entry.latestOfficialUpdateRef || { ref: "program" }, program, data);
-    const latestDate = latest.updatedAt || program.lastMeaningfulUpdate || "—";
     lines.push(
       `## \`${program.id}\` — ${program.name}`,
       "",
       "| Câmp | Valoare auditabilă |",
       "|---|---|",
       `| Stable program ID | \`${program.id}\` |`,
-      `| Authority | ${markdown(program.sourceName)} |`,
-      `| Status canonic snapshot | \`${program.canonicalStatus}\` |`,
+      ...factualFieldRows(program, data),
       ...SOURCE_ROLES.map((role) => `| ${SOURCE_ROLE_LABELS[role]} | ${renderReferences(entry.roles[role], program, data)} |`),
-      `| Latest official update | ${latestDate} — ${link(latest.label, latest.url)} (\`${latest.ref}\`) |`,
-      `| Verification date | ${program.verifiedAt} |`,
       `| Sursă primară în registry-ul operațional | ${link(program.sourceVersion, program.sourceUrl)} (verificat ${program.verifiedAt}) |`,
       `| Chei surse repo | ${(program.officialGuideKeys || []).map((key) => `\`${key}\``).join(", ") || "—"} |`,
       `| Notes | ${markdown(entry.notes)} |`,
       ""
     );
   }
+
+  lines.push(
+    "## Jurnalul schimbărilor factuale din reverificare",
+    "",
+    "| Program | Câmp | Before | After | Sursă | Verificat | Motiv |",
+    "|---|---|---|---|---|---|---|",
+    ...data.factualChanges.map((change) => `| \`${change.programId}\` | ${markdown(change.field)} | ${markdown(change.before)} | ${markdown(change.after)} | ${link(change.sourceLabel, change.sourceUrl)} | ${change.verifiedAt} | ${markdown(change.reason)} |`),
+    ""
+  );
 
   lines.push(
     "## Goluri cunoscute și regulă de completare",
@@ -524,6 +657,7 @@ if (require.main === module) main();
 
 module.exports = {
   EXPECTED_STATUS_IDS,
+  FACTUAL_FIELD_LABELS,
   LEGACY_STATUS_IDS,
   SOURCE_ROLES,
   buildDocuments,

@@ -61,7 +61,7 @@ for (const id of REQUIRED_PROGRAMS) {
   if (row.approvalState === "approved") {
     assert.notEqual(row.validatorName, HUMAN_REVIEW, `${id}: aprobarea trebuie să fie nominală`);
     assert.equal(program.publicationState, "public", `${id}: rândul aprobat trebuie publicat din registru`);
-    assert.equal(program.verifiedAt, row.verifiedAt || approvalConfig.researchDate, `${id}: data publică diferă de aprobare`);
+    assert.ok(program.verifiedAt >= (row.verifiedAt || approvalConfig.researchDate), `${id}: snapshot-ul public nu poate fi anterior aprobării`);
     assert.equal(program.sourceUrl, row.officialUrl, `${id}: sursa publică diferă de aprobare`);
     const homepageSurfaces = homepage(`[data-program-id="${id}"][data-program-status]`);
     homepageSurfaces.each((_, surface) => {

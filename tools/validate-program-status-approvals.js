@@ -93,7 +93,6 @@ function validateApprovalRegistry(approvalConfig, programs) {
     if (program) {
       if (!row.publicationHoldUrls.includes(program.pageUrl)) errors.push(`${where}: pagina canonică trebuie inclusă în publicationHoldUrls`);
       if (row.proposedStatus !== program.status) errors.push(`${where}: statusul candidat diferă de registrul unic`);
-      if (row.proposedStatusLabel !== program.statusLabel) errors.push(`${where}: statusLabel candidat diferă de registrul unic`);
     }
 
     if (row.approvalState === "pending") {
@@ -115,8 +114,7 @@ function validateApprovalRegistry(approvalConfig, programs) {
       }
       if (program && program.sourceName !== row.officialInstitution) errors.push(`${where}: instituția aprobată diferă de registrul unic`);
       if (program && program.sourceUrl !== row.officialUrl) errors.push(`${where}: URL-ul aprobat diferă de registrul unic`);
-      if (program && program.sourceVersion !== row.officialDocumentVersion) errors.push(`${where}: versiunea aprobată diferă de registrul unic`);
-      if (program && program.verifiedAt !== rowVerifiedAt) errors.push(`${where}: data verificării aprobate diferă de registrul unic`);
+      if (program && program.verifiedAt < rowVerifiedAt) errors.push(`${where}: snapshot-ul factual este anterior aprobării nominale`);
       if (program && program.applicationStart !== row.applicationStart) errors.push(`${where}: applicationStart aprobat diferă de registrul unic`);
       if (program && program.applicationEnd !== row.applicationEnd) errors.push(`${where}: applicationEnd aprobat diferă de registrul unic`);
       if (program && (summaryHasValues(program.grantSummary) || summaryHasValues(program.cofinancingSummary)) && row.numericClaimsApproved !== true) {

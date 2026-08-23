@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "registryReviewDate": "2026-08-22",
-  "factualSnapshotDate": "2026-08-18",
+  "registryReviewDate": "2026-08-23",
+  "factualSnapshotDate": "2026-08-23",
   "programRegistry": "config/seo-programs.json#programs",
   "sourceCatalog": "official-guides.json",
   "approvalRegistry": "config/program-status-approvals.json",
@@ -13,7 +13,7 @@
       "documentType": "ghid final și anexe",
       "url": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-18/",
       "publishedAt": "2026-08-04",
-      "verifiedAt": "2026-08-22"
+      "verifiedAt": "2026-08-23"
     },
     "afir-energy-program": {
       "title": "Schema de Energie",
@@ -21,7 +21,7 @@
       "documentType": "pagină oficială program",
       "url": "https://www.afir.ro/finantare/finantare-in-agricultura/schema-de-energie/",
       "publishedAt": null,
-      "verifiedAt": "2026-08-22"
+      "verifiedAt": "2026-08-23"
     },
     "afir-energy-guide-annexes": {
       "title": "Detalii și Anexe Schemă ENERGIE — Ghidul solicitantului V7 și documentele sesiunii 2026",
@@ -29,7 +29,7 @@
       "documentType": "ghid final și anexe",
       "url": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-schema-energie/",
       "publishedAt": "2026-06-09",
-      "verifiedAt": "2026-08-22"
+      "verifiedAt": "2026-08-23"
     },
     "afir-energy-session-2026": {
       "title": "265 de milioane de euro pentru sesiunea Schema de Energie — 15.06.2026–14.08.2026",
@@ -37,7 +37,7 @@
       "documentType": "anunț oficial de sesiune",
       "url": "https://www.afir.ro/comunicate/265-de-milioane-de-euro-pentru-investitii-in-producerea-energiei-electrice/",
       "publishedAt": "2026-06-09",
-      "verifiedAt": "2026-08-22"
+      "verifiedAt": "2026-08-23"
     },
     "afir-energy-clarification-2026": {
       "title": "Măsuri AFIR pentru indisponibilitatea sistemului ANCPI — completare",

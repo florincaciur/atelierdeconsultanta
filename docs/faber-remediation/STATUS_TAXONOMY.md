@@ -1,6 +1,6 @@
 # Taxonomia unică de status FABER
 
-Revizie semantică: **2026-08-22**. Definiții canonice: `config/program-status-taxonomy.json`; atribuiri per program: `config/seo-programs.json#programs[*].canonicalStatus`. Acest document este generat de `tools/generate-status-governance-docs.js` și nu este o pagină publică.
+Revizie semantică: **2026-08-23**. Definiții canonice: `config/program-status-taxonomy.json`; atribuiri per program: `config/seo-programs.json#programs[*].canonicalStatus`. Acest document este generat de `tools/generate-status-governance-docs.js` și nu este o pagină publică.
 
 ## Contractul mecanismului
 
@@ -280,7 +280,7 @@ Valorile de mai jos sunt citite încă de suprafețele publice existente. Ele nu
 
 ## Maparea snapshot-ului curent
 
-Maparea de mai jos folosește snapshot-ul factual verificat în registry la **2026-08-18**. Ea definește semantica, fără a rescrie încă toate paginile, bannerele sau artefactele materializate.
+Maparea de mai jos folosește snapshot-ul factual verificat în registry la **2026-08-23**. Ea definește semantica, fără a rescrie încă toate paginile, bannerele sau artefactele materializate.
 
 | Stable program ID | Status legacy | Status canonic | Label public recomandat | Scope | Motiv |
 |---|---|---|---|---|---|
@@ -297,7 +297,7 @@ Maparea de mai jos folosește snapshot-ul factual verificat în registry la **20
 | `fondul-modernizare-regenerabile` | `apel_inchis` | `COMPLETED` | Apel finalizat — depunerea nu este deschisă | program_call | MySMIS marchează apelurile înregistrate drept FINALIZAT. |
 | `afir-energie-autoconsum` | `apel_inchis` | `CLOSED` | Apel închis — depunerea nu este deschisă | session | Sesiunea 15.06.2026–14.08.2026 s-a încheiat; nu există în registry o dovadă distinctă de finalizare a procedurii. |
 | `autoconsum-institutii-publice` | `apel_inchis` | `COMPLETED` | Apel finalizat — depunerea nu este deschisă | program_call | MySMIS marchează apelul drept FINALIZAT. |
-| `pro-infra` | `ghid_aprobat_nedeschis` | `APPROVED_SCHEME` | Schemă aprobată — depunerea nu este deschisă | scheme | Schema este aprobată și în revizuire, fără fereastră oficială de depunere. |
+| `pro-infra` | `ghid_aprobat_nedeschis` | `APPROVED_SCHEME` | Schemă aprobată — depunerea nu este deschisă | scheme | Schema este aprobată prin Ordinul MTI nr. 2.292/29.12.2025 și modificată prin Ordinul nr. 101/12.02.2026, fără fereastră oficială de depunere. |
 | `apeluri-gal` | `calendar_estimativ` | `UNCONFIRMED` | Status neconfirmat — verifică sursa oficială | umbrella_program | Fiecare GAL are propriul apel și termen; starea agregată nu poate fi prezentată drept OPEN. |
 | `gal-afir-leader` | `calendar_estimativ` | `UNCONFIRMED` | Status neconfirmat — verifică sursa oficială | umbrella_program | Fiecare GAL are propriul apel și termen; starea agregată nu poate fi prezentată drept OPEN. |
 | `e-move-ro` | `ghid_aprobat_nedeschis` | `APPROVED_SCHEME` | Schemă aprobată — depunerea nu este deschisă | scheme | Actul înregistrat actualizează schema; nu există dovadă de sesiune deschisă. |

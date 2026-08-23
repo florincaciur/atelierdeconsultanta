@@ -8,6 +8,24 @@
     "programs": {
       "type": "array",
       "items": { "$ref": "#/$defs/program" }
+    },
+    "factualChanges": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["programId", "field", "before", "after", "sourceLabel", "sourceUrl", "verifiedAt", "reason"],
+        "properties": {
+          "programId": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+          "field": { "type": "string", "minLength": 1 },
+          "before": { "type": "string", "minLength": 1 },
+          "after": { "type": "string", "minLength": 1 },
+          "sourceLabel": { "type": "string", "minLength": 1 },
+          "sourceUrl": { "type": "string", "format": "uri" },
+          "verifiedAt": { "type": "string", "format": "date" },
+          "reason": { "type": "string", "minLength": 1 }
+        },
+        "additionalProperties": false
+      }
     }
   },
   "$defs": {
