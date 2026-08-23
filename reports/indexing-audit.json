@@ -1,319 +1,44 @@
 {
-  "generatedAt": "2026-07-21T10:29:13.628Z",
-  "sitemapUrlCount": 91,
-  "checkedPageCount": 91,
-  "anchorFragmentsChecked": 111,
-  "interactiveFragmentsChecked": 183,
-  "issueCount": 36,
-  "issues": [
-    {
-      "type": "internal-noindex",
-      "message": "Internal page link points to a noindex URL.",
-      "sourceUrl": "https://atelierdeconsultanta.ro/afir-autoconsum-agroalimentar",
-      "sourceFile": "afir-autoconsum-agroalimentar/index.html",
-      "value": "/fondul-de-modernizare",
-      "robots": "noindex, follow"
-    },
-    {
-      "type": "internal-noindex",
-      "message": "Internal page link points to a noindex URL.",
-      "sourceUrl": "https://atelierdeconsultanta.ro/autoconsum-public-fotovoltaice-institutii-publice",
-      "sourceFile": "autoconsum-public-fotovoltaice-institutii-publice/index.html",
-      "value": "/fondul-de-modernizare",
-      "robots": "noindex, follow"
-    },
-    {
-      "type": "internal-noindex",
-      "message": "Internal page link points to a noindex URL.",
-      "sourceUrl": "https://atelierdeconsultanta.ro/e-move",
-      "sourceFile": "e-move/index.html",
-      "value": "/fondul-de-modernizare",
-      "robots": "noindex, follow"
-    },
-    {
-      "type": "internal-noindex",
-      "message": "Internal page link points to a noindex URL.",
-      "sourceUrl": "https://atelierdeconsultanta.ro/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum",
-      "sourceFile": "fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum/index.html",
-      "value": "/fondul-de-modernizare",
-      "robots": "noindex, follow"
-    },
-    {
-      "type": "internal-noindex",
-      "message": "Internal page link points to a noindex URL.",
-      "sourceUrl": "https://atelierdeconsultanta.ro/fondul-modernizare-energie-regenerabila-2026",
-      "sourceFile": "fondul-modernizare-energie-regenerabila-2026/index.html",
-      "value": "/fondul-de-modernizare",
-      "robots": "noindex, follow"
-    },
-    {
-      "type": "internal-noindex",
-      "message": "Internal page link points to a noindex URL.",
-      "sourceUrl": "https://atelierdeconsultanta.ro/fonduri-regionale",
-      "sourceFile": "fonduri-regionale/index.html",
-      "value": "/programul-tranzitie-justa",
-      "robots": "noindex, follow"
-    },
-    {
-      "type": "internal-noindex",
-      "message": "Internal page link points to a noindex URL.",
-      "sourceUrl": "https://atelierdeconsultanta.ro/blog",
-      "sourceFile": "blog/index.html",
-      "value": "/dr12-afir",
-      "robots": "noindex, follow"
-    },
-    {
-      "type": "internal-noindex",
-      "message": "Internal page link points to a noindex URL.",
-      "sourceUrl": "https://atelierdeconsultanta.ro/blog",
-      "sourceFile": "blog/index.html",
-      "value": "/dr14",
-      "robots": "noindex, follow"
-    },
-    {
-      "type": "internal-noindex",
-      "message": "Internal page link points to a noindex URL.",
-      "sourceUrl": "https://atelierdeconsultanta.ro/blog",
-      "sourceFile": "blog/index.html",
-      "value": "/digitalizare-imm",
-      "robots": "noindex, follow"
-    },
-    {
-      "type": "internal-noindex",
-      "message": "Internal page link points to a noindex URL.",
-      "sourceUrl": "https://atelierdeconsultanta.ro/blog",
-      "sourceFile": "blog/index.html",
-      "value": "/fondul-de-modernizare",
-      "robots": "noindex, follow"
-    },
-    {
-      "type": "internal-noindex",
-      "message": "Internal page link points to a noindex URL.",
-      "sourceUrl": "https://atelierdeconsultanta.ro/blog",
-      "sourceFile": "blog/index.html",
-      "value": "/dr-14-afir-conditii-eligibilitate-greseli-frecvente",
-      "robots": "noindex, follow"
-    },
-    {
-      "type": "internal-noindex",
-      "message": "Internal page link points to a noindex URL.",
-      "sourceUrl": "https://atelierdeconsultanta.ro/blog",
-      "sourceFile": "blog/index.html",
-      "value": "/dr-12-afir-instalarea-tinerilor-fermieri",
-      "robots": "noindex, follow"
-    },
-    {
-      "type": "internal-target-not-in-sitemap",
-      "message": "Internal link points to an indexable page missing from sitemap.",
-      "sourceUrl": "https://atelierdeconsultanta.ro/blog",
-      "sourceFile": "blog/index.html",
-      "value": "/gdpr",
-      "target": "https://atelierdeconsultanta.ro/gdpr"
-    },
-    {
-      "type": "internal-noindex",
-      "message": "Internal page link points to a noindex URL.",
-      "sourceUrl": "https://atelierdeconsultanta.ro/blog-afir-fotovoltaice-ferme-2026",
-      "sourceFile": "blog-afir-fotovoltaice-ferme-2026.html",
-      "value": "/dr12-afir",
-      "robots": "noindex, follow"
-    },
-    {
-      "type": "internal-noindex",
-      "message": "Internal page link points to a noindex URL.",
-      "sourceUrl": "https://atelierdeconsultanta.ro/blog-afir-fotovoltaice-ferme-2026",
-      "sourceFile": "blog-afir-fotovoltaice-ferme-2026.html",
-      "value": "/digitalizare-imm",
-      "robots": "noindex, follow"
-    },
-    {
-      "type": "internal-target-not-in-sitemap",
-      "message": "Internal link points to an indexable page missing from sitemap.",
-      "sourceUrl": "https://atelierdeconsultanta.ro/blog-afir-fotovoltaice-ferme-2026",
-      "sourceFile": "blog-afir-fotovoltaice-ferme-2026.html",
-      "value": "/gdpr",
-      "target": "https://atelierdeconsultanta.ro/gdpr"
-    },
-    {
-      "type": "internal-noindex",
-      "message": "Internal page link points to a noindex URL.",
-      "sourceUrl": "https://atelierdeconsultanta.ro/cheltuieli-eligibile-digitalizare-imm",
-      "sourceFile": "cheltuieli-eligibile-digitalizare-imm.html",
-      "value": "/digitalizare-imm",
-      "robots": "noindex, follow"
-    },
-    {
-      "type": "internal-noindex",
-      "message": "Internal page link points to a noindex URL.",
-      "sourceUrl": "https://atelierdeconsultanta.ro/cheltuieli-eligibile-digitalizare-imm",
-      "sourceFile": "cheltuieli-eligibile-digitalizare-imm.html",
-      "value": "/granturi-digitalizare-imm",
-      "robots": "noindex, follow"
-    },
-    {
-      "type": "internal-noindex",
-      "message": "Internal page link points to a noindex URL.",
-      "sourceUrl": "https://atelierdeconsultanta.ro/programul-tranzitie-justa-intrebari-documente",
-      "sourceFile": "programul-tranzitie-justa-intrebari-documente/index.html",
-      "value": "/programul-tranzitie-justa",
-      "robots": "noindex, follow"
-    },
-    {
-      "type": "internal-noindex",
-      "message": "Internal page link points to a noindex URL.",
-      "sourceUrl": "https://atelierdeconsultanta.ro/resurse-utile",
-      "sourceFile": "resurse-utile/index.html",
-      "value": "/fondul-de-modernizare",
-      "robots": "noindex, follow"
-    },
-    {
-      "type": "internal-target-not-in-sitemap",
-      "message": "Internal link points to an indexable page missing from sitemap.",
-      "sourceUrl": "https://atelierdeconsultanta.ro/termeni-si-conditii",
-      "sourceFile": "termeni-si-conditii.html",
-      "value": "/gdpr",
-      "target": "https://atelierdeconsultanta.ro/gdpr"
-    },
-    {
-      "type": "internal-target-not-in-sitemap",
-      "message": "Internal link points to an indexable page missing from sitemap.",
-      "sourceUrl": "https://atelierdeconsultanta.ro/",
-      "sourceFile": "index.html",
-      "value": "/gdpr",
-      "target": "https://atelierdeconsultanta.ro/gdpr"
-    },
-    {
-      "type": "internal-noindex",
-      "message": "Internal page link points to a noindex URL.",
-      "sourceUrl": "https://atelierdeconsultanta.ro/afir",
-      "sourceFile": "afir/index.html",
-      "value": "/dr14",
-      "robots": "noindex, follow"
-    },
-    {
-      "type": "internal-target-not-in-sitemap",
-      "message": "Internal link points to an indexable page missing from sitemap.",
-      "sourceUrl": "https://atelierdeconsultanta.ro/calculator-soc",
-      "sourceFile": "calculator-soc.html",
-      "value": "/gdpr",
-      "target": "https://atelierdeconsultanta.ro/gdpr"
-    },
-    {
-      "type": "internal-noindex",
-      "message": "Internal page link points to a noindex URL.",
-      "sourceUrl": "https://atelierdeconsultanta.ro/consultanta-pnrr-digitalizare",
-      "sourceFile": "consultanta-pnrr-digitalizare/index.html",
-      "value": "/granturi-digitalizare-imm",
-      "robots": "noindex, follow"
-    },
-    {
-      "type": "internal-noindex",
-      "message": "Internal page link points to a noindex URL.",
-      "sourceUrl": "https://atelierdeconsultanta.ro/cum-alegi-programul-potrivit-fonduri-europene-2026",
-      "sourceFile": "cum-alegi-programul-potrivit-fonduri-europene-2026.html",
-      "value": "/dr12-afir",
-      "robots": "noindex, follow"
-    },
-    {
-      "type": "internal-noindex",
-      "message": "Internal page link points to a noindex URL.",
-      "sourceUrl": "https://atelierdeconsultanta.ro/cum-alegi-programul-potrivit-fonduri-europene-2026",
-      "sourceFile": "cum-alegi-programul-potrivit-fonduri-europene-2026.html",
-      "value": "/dr14",
-      "robots": "noindex, follow"
-    },
-    {
-      "type": "internal-target-not-in-sitemap",
-      "message": "Internal link points to an indexable page missing from sitemap.",
-      "sourceUrl": "https://atelierdeconsultanta.ro/cum-alegi-programul-potrivit-fonduri-europene-2026",
-      "sourceFile": "cum-alegi-programul-potrivit-fonduri-europene-2026.html",
-      "value": "/gdpr",
-      "target": "https://atelierdeconsultanta.ro/gdpr"
-    },
-    {
-      "type": "internal-noindex",
-      "message": "Internal page link points to a noindex URL.",
-      "sourceUrl": "https://atelierdeconsultanta.ro/digitalizare-imm-erp-crm-cloud",
-      "sourceFile": "digitalizare-imm-erp-crm-cloud.html",
-      "value": "/digitalizare-imm",
-      "robots": "noindex, follow"
-    },
-    {
-      "type": "internal-noindex",
-      "message": "Internal page link points to a noindex URL.",
-      "sourceUrl": "https://atelierdeconsultanta.ro/digitalizare-imm-erp-crm-cloud",
-      "sourceFile": "digitalizare-imm-erp-crm-cloud.html",
-      "value": "/granturi-digitalizare-imm",
-      "robots": "noindex, follow"
-    },
-    {
-      "type": "internal-noindex",
-      "message": "Internal page link points to a noindex URL.",
-      "sourceUrl": "https://atelierdeconsultanta.ro/digitalizare-imm-pnrr",
-      "sourceFile": "digitalizare-imm-pnrr/index.html",
-      "value": "/granturi-digitalizare-imm",
-      "robots": "noindex, follow"
-    },
-    {
-      "type": "internal-noindex",
-      "message": "Internal page link points to a noindex URL.",
-      "sourceUrl": "https://atelierdeconsultanta.ro/dr12-vs-dr14",
-      "sourceFile": "dr12-vs-dr14.html",
-      "value": "/dr12-afir",
-      "robots": "noindex, follow"
-    },
-    {
-      "type": "internal-noindex",
-      "message": "Internal page link points to a noindex URL.",
-      "sourceUrl": "https://atelierdeconsultanta.ro/dr12-vs-dr14",
-      "sourceFile": "dr12-vs-dr14.html",
-      "value": "/dr14",
-      "robots": "noindex, follow"
-    },
-    {
-      "type": "internal-noindex",
-      "message": "Internal page link points to a noindex URL.",
-      "sourceUrl": "https://atelierdeconsultanta.ro/finantari-panouri-fotovoltaice",
-      "sourceFile": "finantari-panouri-fotovoltaice/index.html",
-      "value": "/fondul-de-modernizare",
-      "robots": "noindex, follow"
-    },
-    {
-      "type": "internal-noindex",
-      "message": "Internal page link points to a noindex URL.",
-      "sourceUrl": "https://atelierdeconsultanta.ro/fonduri-europene-digitalizare",
-      "sourceFile": "fonduri-europene-digitalizare/index.html",
-      "value": "/granturi-digitalizare-imm",
-      "robots": "noindex, follow"
-    },
-    {
-      "type": "internal-target-not-in-sitemap",
-      "message": "Internal link points to an indexable page missing from sitemap.",
-      "sourceUrl": "https://atelierdeconsultanta.ro/politica-de-confidentialitate",
-      "sourceFile": "politica-de-confidentialitate.html",
-      "value": "/gdpr",
-      "target": "https://atelierdeconsultanta.ro/gdpr"
-    }
-  ],
+  "generatedAt": "2026-08-23T19:46:55.854Z",
+  "sitemapUrlCount": 104,
+  "checkedPageCount": 104,
+  "anchorFragmentsChecked": 846,
+  "interactiveFragmentsChecked": 0,
+  "functionalFragmentsChecked": 72,
+  "issueCount": 0,
+  "issues": [],
   "documentClassification": {
-    "public-page": 179,
+    "public-page": 185,
     "partial": 1,
-    "template": 0,
-    "generated-output": 136
+    "template": 2,
+    "generated-output": 143
   },
   "canonicalUrls": [
+    "https://atelierdeconsultanta.ro/digitalizare-imm",
+    "https://atelierdeconsultanta.ro/dr12-afir",
+    "https://atelierdeconsultanta.ro/dr14",
+    "https://atelierdeconsultanta.ro/pro-infra",
     "https://atelierdeconsultanta.ro/afir-autoconsum-agroalimentar",
     "https://atelierdeconsultanta.ro/apeluri-gal",
     "https://atelierdeconsultanta.ro/autoconsum-public-fotovoltaice-institutii-publice",
+    "https://atelierdeconsultanta.ro/diaspora-investeste-acasa",
+    "https://atelierdeconsultanta.ro/dr-12-afir-instalarea-tinerilor-fermieri",
+    "https://atelierdeconsultanta.ro/dr-14-afir-conditii-eligibilitate-greseli-frecvente",
+    "https://atelierdeconsultanta.ro/dr18",
+    "https://atelierdeconsultanta.ro/e-drive",
+    "https://atelierdeconsultanta.ro/e-mobility",
     "https://atelierdeconsultanta.ro/e-move",
     "https://atelierdeconsultanta.ro/femeia-antreprenor-2026",
+    "https://atelierdeconsultanta.ro/fondul-de-modernizare",
     "https://atelierdeconsultanta.ro/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum",
     "https://atelierdeconsultanta.ro/fondul-modernizare-energie-regenerabila-2026",
+    "https://atelierdeconsultanta.ro/fondul-modernizare-pc1-stocare",
     "https://atelierdeconsultanta.ro/fonduri-regionale",
     "https://atelierdeconsultanta.ro/gal-afir",
     "https://atelierdeconsultanta.ro/investitii-modernizarea-microintreprinderilor-apel-2",
+    "https://atelierdeconsultanta.ro/pnrr",
     "https://atelierdeconsultanta.ro/pocidif-21",
-    "https://atelierdeconsultanta.ro/por-adr-nord-est",
+    "https://atelierdeconsultanta.ro/programul-tranzitie-justa",
     "https://atelierdeconsultanta.ro/start-up-nation-2026",
     "https://atelierdeconsultanta.ro/blog",
     "https://atelierdeconsultanta.ro/metodologie-verificare-eligibilitate",
@@ -325,6 +50,7 @@
     "https://atelierdeconsultanta.ro/cheltuieli-eligibile-pocidif-21",
     "https://atelierdeconsultanta.ro/cod-caen-start-up-nation-2026",
     "https://atelierdeconsultanta.ro/documente-punctaj-pocidif-21",
+    "https://atelierdeconsultanta.ro/dr12-vs-dr14",
     "https://atelierdeconsultanta.ro/femeia-antreprenor-2026-conditii-idei-afaceri",
     "https://atelierdeconsultanta.ro/ghiduri",
     "https://atelierdeconsultanta.ro/glosar-fonduri-europene",
@@ -366,7 +92,6 @@
     "https://atelierdeconsultanta.ro/cum-se-verifica-eligibilitatea-fonduri-europene",
     "https://atelierdeconsultanta.ro/digitalizare-imm-erp-crm-cloud",
     "https://atelierdeconsultanta.ro/digitalizare-imm-pnrr",
-    "https://atelierdeconsultanta.ro/dr12-vs-dr14",
     "https://atelierdeconsultanta.ro/eligibilitate-fonduri-europene",
     "https://atelierdeconsultanta.ro/eligibilitate-pocidif-21",
     "https://atelierdeconsultanta.ro/finantari-panouri-fotovoltaice",

@@ -51,7 +51,11 @@ const LEGACY_GSC_URLS = [
   "https://atelierdeconsultanta.ro/consultanta-fonduri-europene-bacau",
 ];
 
-const GSC_SNAPSHOT_PATH = path.join(ROOT, "reports", "gsc-indexing-snapshot-2026-08-08.json");
+const GSC_SNAPSHOT_PATHS = fs.readdirSync(path.join(ROOT, "reports"))
+  .filter((file) => /^gsc-indexing-snapshot-\d{4}-\d{2}-\d{2}\.json$/u.test(file))
+  .sort()
+  .map((file) => path.join(ROOT, "reports", file));
+const GSC_SNAPSHOT_PATH = GSC_SNAPSHOT_PATHS.at(-1);
 const GSC_SNAPSHOT = JSON.parse(fs.readFileSync(GSC_SNAPSHOT_PATH, "utf8"));
 const GSC_VALIDATION_PATH = fs.readdirSync(path.join(ROOT, "reports"))
   .filter((file) => /^gsc-page-with-redirect-validation-\d{4}-\d{2}-\d{2}\.json$/u.test(file))
@@ -68,8 +72,34 @@ const GSC_VALIDATION_ROWS = GSC_VALIDATION
     ]
   : [];
 const GSC_VALIDATION_STATES = new Map(GSC_VALIDATION_ROWS.map((row) => [row.url, row.validationState]));
+
+function snapshotExamples(snapshotPath, category) {
+  if (Array.isArray(category.examples)) return category.examples;
+  if (Array.isArray(category.urls)) return category.urls.map((url) => ({ url }));
+  if (!category.examplesFrom) return [];
+  const sourcePath = path.resolve(path.dirname(snapshotPath), category.examplesFrom);
+  const source = JSON.parse(fs.readFileSync(sourcePath, "utf8"));
+  return [
+    ...(source.pending || []).map((row) => ({ ...row, validationState: "Pending" })),
+    ...(source.failed || []).map((row) => ({ ...row, validationState: "Failed" })),
+  ];
+}
+
+function snapshotRows(snapshotPath) {
+  const snapshot = JSON.parse(fs.readFileSync(snapshotPath, "utf8"));
+  return snapshot.categories.flatMap((category) => snapshotExamples(snapshotPath, category).map((example) => ({
+    ...example,
+    reason: category.reason,
+    categoryValidation: category.validation,
+    capturedAt: snapshot.capturedAt,
+  })));
+}
+
+const GSC_SNAPSHOT_ROWS = GSC_SNAPSHOT_PATHS.flatMap(snapshotRows);
+const CURRENT_GSC_ROWS = snapshotRows(GSC_SNAPSHOT_PATH);
+const CURRENT_GSC_BY_URL = new Map(CURRENT_GSC_ROWS.map((row) => [row.url, row]));
 const GSC_URLS = [
-  ...GSC_SNAPSHOT.categories.flatMap((category) => category.urls),
+  ...GSC_SNAPSHOT_ROWS.map((row) => row.url),
   ...GSC_VALIDATION_ROWS.map((row) => row.url),
 ];
 
@@ -155,7 +185,7 @@ function fileForPath(pathname) {
   if (!clean) candidates.push("index.html");
   else if (pathname.endsWith("/")) candidates.push(path.posix.join(clean, "index.html"));
   else if (path.posix.extname(clean)) candidates.push(clean);
-  else candidates.push(`${clean}.html`, path.posix.join(clean, "index.html"));
+  else candidates.push(path.posix.join(clean, "index.html"), `${clean}.html`);
   return candidates.find((candidate) => fs.existsSync(path.join(PUBLIC_DIR, candidate))) || "";
 }
 
@@ -386,18 +416,29 @@ function internalLinkCounts(sitemap) {
   return counts;
 }
 
-async function fetchWithTimeout(url) {
-  const controller = new AbortController();
-  const timeout = setTimeout(() => controller.abort(), 12000);
-  try {
-    return await fetch(url, {
-      redirect: "manual",
-      signal: controller.signal,
-      headers: { "user-agent": "FABER-GSC-audit/2026-06-10" },
-    });
-  } finally {
-    clearTimeout(timeout);
+async function fetchWithTimeout(url, attempts = 3) {
+  let lastError;
+
+  for (let attempt = 1; attempt <= attempts; attempt += 1) {
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 15000);
+    try {
+      return await fetch(url, {
+        redirect: "manual",
+        signal: controller.signal,
+        headers: { "user-agent": "FABER-GSC-audit/2026-06-10" },
+      });
+    } catch (error) {
+      lastError = error;
+      if (attempt < attempts) {
+        await new Promise((resolve) => setTimeout(resolve, attempt * 350));
+      }
+    } finally {
+      clearTimeout(timeout);
+    }
   }
+
+  throw lastError;
 }
 
 async function liveTrace(rawUrl) {
@@ -474,7 +515,9 @@ function writeReports(rows) {
 
   const columns = [
     "URL raportat de GSC",
-    "stare validare GSC",
+    "categorie GSC",
+    "stare GSC",
+    "ultima accesare Google",
     "statut local",
     "statut live",
     "lant de redirect",
@@ -496,7 +539,9 @@ function writeReports(rows) {
     columns.map(csvCell).join(","),
     ...rows.map((row) => [
       row.inputUrl,
+      row.gscReason,
       row.validationState,
+      row.lastCrawled,
       row.localStatus,
       row.liveStatus,
       row.redirectChain,
@@ -522,6 +567,11 @@ function writeReports(rows) {
   const sitemapRows = rows.filter((row) => row.inputInSitemap);
   const nonSitemapRows = rows.filter((row) => !row.inputInSitemap);
   const failedRows = rows.filter((row) => row.result.startsWith("FAIL_"));
+  const currentRows = rows.filter((row) => CURRENT_GSC_BY_URL.has(row.inputUrl));
+  const historicRows = rows.filter((row) => !CURRENT_GSC_BY_URL.has(row.inputUrl));
+  const categorySummary = GSC_SNAPSHOT.categories
+    .map((category) => `${category.reason}: ${category.affectedPages} (${category.validation})`)
+    .join("; ");
 
   const mdRows = [
     `# Raport remediere indexare GSC - ${REPORT_DATE}`,
@@ -533,7 +583,8 @@ function writeReports(rows) {
     `- Snapshot URL sursa: \`${toPosix(path.relative(ROOT, GSC_SNAPSHOT_PATH))}\`, capturat la ${GSC_SNAPSHOT.capturedAt}.`,
     `- Validare curenta sursa: \`${toPosix(path.relative(ROOT, GSC_VALIDATION_PATH))}\`, capturata la ${GSC_VALIDATION?.capturedAt || "n/a"}.`,
     `- Director public auditat: \`${toPosix(path.relative(ROOT, PUBLIC_DIR)) || "."}\`.`,
-    `- Randuri auditate: ${rows.length}; randuri locale PASS: ${rows.length - failedRows.length}; randuri locale FAIL: ${failedRows.length}.`,
+    `- Randuri auditate: ${rows.length}; exemple GSC curente: ${currentRows.length}; exemple istorice suplimentare: ${historicRows.length}.`,
+    `- Rezultat tehnic: ${rows.length - failedRows.length} PASS; ${failedRows.length} FAIL.`,
     `- Sitemap: ${sitemapRows.length} URL-uri raportate de GSC sunt prezente direct in sitemap; ${nonSitemapRows.length} sunt absente (aliasuri, alternative sau resurse excluse intentionat).`,
     "",
     "## Cauze identificate",
@@ -588,6 +639,8 @@ function writeReports(rows) {
     "",
     "## Google Search Console",
     "",
+    `- Snapshot complet din ${GSC_SNAPSHOT.capturedAt}, actualizat de GSC la ${GSC_SNAPSHOT.gscLastUpdate}: **${GSC_SNAPSHOT.notIndexedTotal} URL-uri** in opt categorii.`,
+    `- Categorii: ${categorySummary}.`,
     ...(GSC_VALIDATION ? [
       `- Captura de validare din ${GSC_VALIDATION.capturedAt}: **${GSC_VALIDATION.pendingExamples} pending**, **${GSC_VALIDATION.failedExamples} failed**, ${GSC_VALIDATION.totalValidationExamples} exemple in total.`,
       `- Validarea a inceput la ${GSC_VALIDATION.validationStartedAt} si a trecut in starea ${GSC_VALIDATION.validationStatus} la ${GSC_VALIDATION.validationFailedAt}.`,
@@ -601,18 +654,18 @@ function writeReports(rows) {
     "",
     "B. URL-uri canonice de inspectat individual si apoi `Request indexing`:",
     "",
-    "- `https://atelierdeconsultanta.ro/fonduri-europene-bucuresti`",
-    "- `https://atelierdeconsultanta.ro/consultanta-fonduri-europene-bucuresti`",
-    "- `https://atelierdeconsultanta.ro/pnrr`",
-    "- `https://atelierdeconsultanta.ro/intrebari/ce-documente-sunt-necesare-pentru-dr12`",
-    "- `https://atelierdeconsultanta.ro/intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene`",
-    "- `https://atelierdeconsultanta.ro/intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm`",
-    "- cele patru rute CAEN curate din sitemap.",
+    "- `https://atelierdeconsultanta.ro/start-up-nation-2026-plan-de-afaceri`",
+    "- `https://atelierdeconsultanta.ro/cheltuieli-eligibile-pocidif-21`",
+    "- `https://atelierdeconsultanta.ro/documente-punctaj-pocidif-21`",
+    "- `https://atelierdeconsultanta.ro/dr18`",
+    "- `https://atelierdeconsultanta.ro/eligibilitate-pocidif-21`",
+    "- `https://atelierdeconsultanta.ro/resurse-utile`.",
     "",
     "C. Excluderi intentionate pentru care nu se forteaza indexarea:",
     "",
     "- `/official-guides.json` ramane resursa tehnica 200 noindex.",
-    "- `/blog?post=blog-1`, `/blog?post=blog-2`, `/blog?post=blog-3` raman variante query ale `/blog`.",
+    "- `/admin` ramane crawlable, dar noindex si absent din sitemap.",
+    "- Query-urile `/blog?post=*` raman variante ale hubului canonic `/blog`.",
     "- Aliasurile cu `.html`, slash final si `/index.html` raman redirecturi 301.",
     "",
     "D. Observatie:",
@@ -629,7 +682,9 @@ function writeReports(rows) {
     `|${columns.map(() => "---").join("|")}|`,
     ...rows.map((row) => `| ${[
       row.inputUrl,
+      row.gscReason,
       row.validationState,
+      row.lastCrawled,
       row.localStatus,
       row.liveStatus,
       row.redirectChain.replace(/ \| /g, "<br>"),
@@ -663,7 +718,8 @@ async function main() {
   const counts = internalLinkCounts(sitemap);
   const uniqueUrls = [...new Set(GSC_URLS)];
 
-  const rows = await mapLimit(uniqueUrls, 6, async (inputUrl) => {
+  const rows = await mapLimit(uniqueUrls, 4, async (inputUrl) => {
+    const currentGsc = CURRENT_GSC_BY_URL.get(inputUrl);
     const chain = trace(inputUrl, redirects);
     const final = chain[chain.length - 1] || {};
     const finalUrl = final.url || "";
@@ -695,7 +751,9 @@ async function main() {
 
     return {
       inputUrl,
-      validationState: GSC_VALIDATION_STATES.get(inputUrl) || "Snapshot istoric",
+      gscReason: currentGsc?.reason || "Snapshot istoric",
+      validationState: GSC_VALIDATION_STATES.get(inputUrl) || currentGsc?.categoryValidation || "Snapshot istoric",
+      lastCrawled: currentGsc?.lastCrawled || "N/A",
       localStatus: localStatus(chain),
       liveStatus: `${liveFinal.status || "ERR"}${live.length > 1 ? ` after ${live.length - 1} redirect(s)` : " direct"}`,
       redirectChain: redirectChainText(chain),
@@ -719,7 +777,7 @@ async function main() {
 
   const failures = rows.filter((row) => row.result.startsWith("FAIL_"));
   if (failures.length) {
-    console.error(`GSC route audit found ${failures.length} local failure(s).`);
+    console.error(`GSC route audit found ${failures.length} failure(s).`);
     process.exitCode = 1;
   }
 }

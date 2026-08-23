@@ -16,12 +16,15 @@ const HOSTS = new Set(["atelierdeconsultanta.ro", "www.atelierdeconsultanta.ro"]
 const SITEMAP_PATH = path.join(ROOT, "sitemap.xml");
 const REDIRECTS_PATH = path.join(ROOT, "_redirects");
 const HEADERS_PATH = path.join(ROOT, "_headers");
+const SITEMAP_POLICY_PATH = path.join(ROOT, "config", "sitemap-policy.json");
 const REPORT_PATH = path.join(ROOT, "reports", "indexing-audit.json");
 const SKIP_SCHEMES = /^(?:mailto|tel|sms|javascript|data|blob|whatsapp):/i;
 const TRACE_CACHE = new Map();
 const HTML_CACHE = new Map();
 const PAGE_DATA_CACHE = new Map();
 const IDS_CACHE = new Map();
+const SITEMAP_POLICY = JSON.parse(readIfExists(SITEMAP_POLICY_PATH) || "{}");
+const SITEMAP_EXCLUDED_ROUTES = new Set(Object.keys(SITEMAP_POLICY.excludedRoutes || {}));
 const NON_PAGE_EXTENSIONS = new Set([
   ".avif",
   ".css",
@@ -436,6 +439,14 @@ function decodedFragmentId(hash) {
   }
 }
 
+function isFunctionalContactFragment(parsed) {
+  if (parsed.pathname !== "/contact" || !parsed.hash) return false;
+  const value = decodedFragmentId(parsed.hash);
+  if (!value) return false;
+  const params = new URLSearchParams(value);
+  return params.has("program") || params.has("program_slug") || params.has("source_page");
+}
+
 function interactiveFragmentMetadata($, element, value, sourceUrl) {
   let parsed;
   try {
@@ -454,7 +465,7 @@ function interactiveFragmentMetadata($, element, value, sourceUrl) {
 
 function validateInternalLinks(sitemapSet, issues, pageRecords) {
   const byUrl = new Map(pageRecords.map((record) => [record.url, record]));
-  const fragmentStats = { anchorFragmentsChecked: 0, interactiveFragmentsChecked: 0 };
+  const fragmentStats = { anchorFragmentsChecked: 0, interactiveFragmentsChecked: 0, functionalFragmentsChecked: 0 };
 
   for (const record of pageRecords) {
     const html = htmlForFile(record.file);
@@ -554,7 +565,8 @@ function validateInternalLinks(sitemapSet, issues, pageRecords) {
           expected: finalClean,
         });
       }
-      if (!sitemapSet.has(finalClean) && !/\bnoindex\b/i.test(data.robots)) {
+      const governedSitemapExclusion = SITEMAP_EXCLUDED_ROUTES.has(new URL(finalClean).pathname);
+      if (!sitemapSet.has(finalClean) && !/\bnoindex\b/i.test(data.robots) && !governedSitemapExclusion) {
         addIssue(issues, "internal-target-not-in-sitemap", "Internal link points to an indexable page missing from sitemap.", {
           sourceUrl: record.url,
           sourceFile: record.file,
@@ -577,6 +589,8 @@ function validateInternalLinks(sitemapSet, issues, pageRecords) {
         };
         if (!id) {
           addIssue(issues, "invalid-bare-fragment", "Internal link contains an empty or invalid bare fragment.", fragmentDetails);
+        } else if (isFunctionalContactFragment(parsed)) {
+          fragmentStats.functionalFragmentsChecked += 1;
         } else if (link.interactiveFragment) {
           fragmentStats.interactiveFragmentsChecked += 1;
           const { ariaControls, ariaHaspopup } = link.interactiveFragment;
