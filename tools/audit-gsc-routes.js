@@ -53,11 +53,25 @@ const LEGACY_GSC_URLS = [
 
 const GSC_SNAPSHOT_PATH = path.join(ROOT, "reports", "gsc-indexing-snapshot-2026-08-08.json");
 const GSC_SNAPSHOT = JSON.parse(fs.readFileSync(GSC_SNAPSHOT_PATH, "utf8"));
-const GSC_URLS = GSC_SNAPSHOT.categories.flatMap((category) => category.urls);
-const GSC_VALIDATION_PATH = path.join(ROOT, "reports", "gsc-page-with-redirect-validation-2026-08-18.json");
+const GSC_VALIDATION_PATH = fs.readdirSync(path.join(ROOT, "reports"))
+  .filter((file) => /^gsc-page-with-redirect-validation-\d{4}-\d{2}-\d{2}\.json$/u.test(file))
+  .sort()
+  .map((file) => path.join(ROOT, "reports", file))
+  .at(-1);
 const GSC_VALIDATION = fs.existsSync(GSC_VALIDATION_PATH)
   ? JSON.parse(fs.readFileSync(GSC_VALIDATION_PATH, "utf8"))
   : null;
+const GSC_VALIDATION_ROWS = GSC_VALIDATION
+  ? [
+      ...(GSC_VALIDATION.pending || []).map((row) => ({ ...row, validationState: "Pending" })),
+      ...(GSC_VALIDATION.failed || []).map((row) => ({ ...row, validationState: "Failed" })),
+    ]
+  : [];
+const GSC_VALIDATION_STATES = new Map(GSC_VALIDATION_ROWS.map((row) => [row.url, row.validationState]));
+const GSC_URLS = [
+  ...GSC_SNAPSHOT.categories.flatMap((category) => category.urls),
+  ...GSC_VALIDATION_ROWS.map((row) => row.url),
+];
 
 function readIfExists(filePath) {
   return fs.existsSync(filePath) ? fs.readFileSync(filePath, "utf8") : "";
@@ -298,7 +312,10 @@ function resultFor({ inputUrl, chain, live, finalUrl, finalStatus, inputInSitema
   if (live.some((step) => step.status === "LOOP")) return "FAIL_LIVE_REDIRECT_LOOP";
   if (live.some((step) => String(step.status).startsWith("ERROR"))) return "FAIL_LIVE_FETCH";
   if (live.filter((step) => Number(step.status) >= 300 && Number(step.status) < 400).length > 1) return "FAIL_LIVE_REDIRECT_CHAIN";
+  if (live.some((step) => [302, 303, 307].includes(Number(step.status)))) return "FAIL_LIVE_TEMPORARY_REDIRECT";
   if (Number(live[live.length - 1]?.status) !== 200) return "FAIL_LIVE_FINAL_STATUS";
+  const liveFinalUrl = live[live.length - 1]?.url || "";
+  if (canonical && cleanAbsoluteUrl(liveFinalUrl) !== cleanAbsoluteUrl(canonical)) return "FAIL_LIVE_CANONICAL_MISMATCH";
   if (finalStatus === 404) return "FAIL_404";
   if (new URL(inputUrl).pathname === "/official-guides.json") {
     if (finalStatus === 200 && /\bnoindex\b/i.test(xRobotsTag) && !inputInSitemap) return "PASS_TECHNICAL_NOINDEX";
@@ -457,10 +474,13 @@ function writeReports(rows) {
 
   const columns = [
     "URL raportat de GSC",
+    "stare validare GSC",
     "statut local",
     "statut live",
     "lant de redirect",
+    "lant de redirect live",
     "URL final",
+    "URL final live",
     "canonical declarat",
     "meta robots",
     "X-Robots-Tag",
@@ -476,10 +496,13 @@ function writeReports(rows) {
     columns.map(csvCell).join(","),
     ...rows.map((row) => [
       row.inputUrl,
+      row.validationState,
       row.localStatus,
       row.liveStatus,
       row.redirectChain,
+      row.liveRedirectChain,
       row.finalUrl,
+      row.liveFinalUrl,
       row.canonical,
       row.metaRobots,
       row.xRobotsTag,
@@ -508,6 +531,7 @@ function writeReports(rows) {
     "- Conventia canonica verificata: `https://atelierdeconsultanta.ro`, fara `www`, fara `.html`, fara `/index.html`, fara slash final in afara de homepage.",
     `- Matrice CSV: \`reports/gsc-indexing-fix-${REPORT_DATE}.csv\`.`,
     `- Snapshot URL sursa: \`${toPosix(path.relative(ROOT, GSC_SNAPSHOT_PATH))}\`, capturat la ${GSC_SNAPSHOT.capturedAt}.`,
+    `- Validare curenta sursa: \`${toPosix(path.relative(ROOT, GSC_VALIDATION_PATH))}\`, capturata la ${GSC_VALIDATION?.capturedAt || "n/a"}.`,
     `- Director public auditat: \`${toPosix(path.relative(ROOT, PUBLIC_DIR)) || "."}\`.`,
     `- Randuri auditate: ${rows.length}; randuri locale PASS: ${rows.length - failedRows.length}; randuri locale FAIL: ${failedRows.length}.`,
     `- Sitemap: ${sitemapRows.length} URL-uri raportate de GSC sunt prezente direct in sitemap; ${nonSitemapRows.length} sunt absente (aliasuri, alternative sau resurse excluse intentionat).`,
@@ -546,19 +570,14 @@ function writeReports(rows) {
     "- `/admin` nu este blocat in `robots.txt`, dar trimite `X-Robots-Tag: noindex, nofollow` si meta robots echivalent.",
     "- Linkurile interne normale catre aliasurile auditate sunt eliminate sau raman zero in matrice.",
     "",
-    "## Teste executate",
+    "## Porti de verificare",
     "",
-    "- `npm ci` - PASS in rularea finala obligatorie.",
-    "- `npm run build` - PASS in rularea finala obligatorie.",
-    "- `npm run verify:sitemap` - PASS in rularea finala obligatorie.",
-    "- `npm run verify:seo-local` - PASS in rularea finala obligatorie.",
-    "- `npm run verify:seo` - PASS in rularea finala obligatorie.",
-    "- `npm run verify:all` - PASS in rularea finala obligatorie.",
-    "- `npm run validate:cloudflare` - PASS in rularea finala obligatorie.",
-    "- `npm run audit:program-routes` - PASS in rularea finala obligatorie.",
-    "- `npm run audit:gsc-routes` - PASS; acest raport este output-ul comenzii.",
-    "- `npm run test:functional` - PASS in rularea finala obligatorie.",
-    "- `node tools/audit-indexing.js` - PASS in rularea finala suplimentara.",
+    "- `npm run verify:gsc-registry` valideaza integral snapshot-ul curent Pending/Failed.",
+    "- `npm run test:gsc-indexing-remediation` blocheaza buildul cand snapshot-ul este incomplet sau consolidarile SEO regreseaza.",
+    "- `npm run test:technical-seo` verifica sitemap, canonicale, linkuri interne si redirecturile Cloudflare.",
+    "- `npm run build` produce directorul Cloudflare `dist` numai dupa trecerea contractelor proiectului.",
+    "- `npm run validate:cloudflare` si `npm run verify:cloudflare-domain-worker` valideaza configuratia si workerul prin dry-run.",
+    "- `npm run audit:gsc-routes` - PASS; acest raport este output-ul comenzii si include probe HTTP live.",
     "",
     "## Verificare locala si live",
     "",
@@ -570,7 +589,7 @@ function writeReports(rows) {
     "## Google Search Console",
     "",
     ...(GSC_VALIDATION ? [
-      `- Captura de validare din ${GSC_VALIDATION.capturedAt}: **${GSC_VALIDATION.passedExamples} passed**, **${GSC_VALIDATION.failedExamples} failed**, ${GSC_VALIDATION.totalValidationExamples} exemple in total.`,
+      `- Captura de validare din ${GSC_VALIDATION.capturedAt}: **${GSC_VALIDATION.pendingExamples} pending**, **${GSC_VALIDATION.failedExamples} failed**, ${GSC_VALIDATION.totalValidationExamples} exemple in total.`,
       `- Validarea a inceput la ${GSC_VALIDATION.validationStartedAt} si a trecut in starea ${GSC_VALIDATION.validationStatus} la ${GSC_VALIDATION.validationFailedAt}.`,
       "",
     ] : []),
@@ -607,13 +626,16 @@ function writeReports(rows) {
     `Local pass rows: ${rows.filter((row) => row.result.startsWith("PASS_")).length}`,
     "",
     "| " + columns.map(mdCell).join(" | ") + " |",
-    "|---|---:|---|---|---|---|---|---|:---:|:---:|---:|---|---|---|",
+    `|${columns.map(() => "---").join("|")}|`,
     ...rows.map((row) => `| ${[
       row.inputUrl,
+      row.validationState,
       row.localStatus,
       row.liveStatus,
       row.redirectChain.replace(/ \| /g, "<br>"),
+      row.liveRedirectChain.replace(/ \| /g, "<br>"),
       row.finalUrl,
+      row.liveFinalUrl,
       row.canonical,
       row.metaRobots,
       row.xRobotsTag,
@@ -673,11 +695,13 @@ async function main() {
 
     return {
       inputUrl,
+      validationState: GSC_VALIDATION_STATES.get(inputUrl) || "Snapshot istoric",
       localStatus: localStatus(chain),
       liveStatus: `${liveFinal.status || "ERR"}${live.length > 1 ? ` after ${live.length - 1} redirect(s)` : " direct"}`,
       redirectChain: redirectChainText(chain),
       liveRedirectChain: redirectChainText(live),
       finalUrl,
+      liveFinalUrl: liveFinal.url || "",
       canonical: data.canonical,
       metaRobots: data.metaRobots,
       xRobotsTag: data.xRobotsTag,

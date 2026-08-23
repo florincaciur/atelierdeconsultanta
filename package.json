@@ -131,7 +131,7 @@
     "verify:sitemap:live": "node tools/verify-sitemap.js --live",
     "test:sitemap": "node tools/verify-sitemap.js && node tests/sitemap-contract.mjs",
     "crawl:technical-seo": "node tools/crawl-technical-seo.js --label=live",
-    "test:gsc-indexing-remediation": "node tests/gsc-indexing-remediation-contract.mjs",
+    "test:gsc-indexing-remediation": "node tools/validate-gsc-page-with-redirect-validation.js && node tests/gsc-indexing-remediation-contract.mjs",
     "sync:accessibility-landmarks": "npm run sync:global-header && node tools/sync-accessibility-landmarks.js",
     "test:accessibility-landmarks": "node tools/sync-accessibility-landmarks.js --check && node tests/accessibility-landmarks-contract.mjs",
     "test:technical-seo": "node tools/sync-accessibility-landmarks.js && node tests/accessibility-landmarks-contract.mjs && node tools/sync-program-visuals.js && node tests/program-visuals-contract.mjs && node tools/verify-sitemap.js && node tools/audit-site-links.js && node scripts/verify-redirect-map.js && node scripts/verify-canonical-consistency.js && node tests/cloudflare-domain-seo-redirects.mjs && npm run test:gsc-indexing-remediation && node tests/technical-seo-contract.mjs",

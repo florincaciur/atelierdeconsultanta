@@ -550,7 +550,7 @@
       "uniquePromise": "Răspunde complet la întrebarea principală despre „Cheltuieli pentru Digitalizare IMM: ce justifici înainte de buget” înainte de CTA.",
       "cta": "Trimite contextul proiectului",
       "ctaTarget": "/contact",
-      "microConversion": "cta_click:cheltuieli_eligibile_digitalizare_imm_contact_1",
+      "microConversion": "cta_click:evaluate_digitalization_expenses",
       "parent": "/fonduri-europene-digitalizare",
       "competingUrls": [
         "/digitalizare-imm-erp-crm-cloud",
@@ -1355,9 +1355,9 @@
       "primaryIntent": "informațională",
       "h1": "DR 12 AFIR 2026 – investiții pentru tineri fermieri și fermieri până la 45 de ani",
       "uniquePromise": "Centralizează statutul, sursa oficială și pașii de verificare pentru „DR 12 AFIR 2026 – investiții pentru tineri fermieri și fermieri până la 45 de ani”.",
-      "cta": "Verifică încadrarea în DR 12",
-      "ctaTarget": "/contact#program_slug=dr12-afir&source_page=%2Fdr12-afir",
-      "microConversion": "cta_click:dr12_contextual_primary_2",
+      "cta": "Verifică proiectul",
+      "ctaTarget": "/contact#program=dr12-afir",
+      "microConversion": "cta_click:dr12-afir_long_form_decision",
       "parent": "/afir",
       "competingUrls": [
         "/dr-12-afir-instalarea-tinerilor-fermieri"
@@ -1427,9 +1427,9 @@
       "primaryIntent": "informațională",
       "h1": "DR 14 AFIR 2026 – investiții în fermele de mici dimensiuni",
       "uniquePromise": "Centralizează statutul, sursa oficială și pașii de verificare pentru „DR 14 AFIR 2026 – investiții în fermele de mici dimensiuni”.",
-      "cta": "Verifică dacă ferma se încadrează în DR 14",
-      "ctaTarget": "/contact#program_slug=dr14-afir&source_page=%2Fdr14",
-      "microConversion": "cta_click:dr14_contextual_primary_2",
+      "cta": "Verifică proiectul",
+      "ctaTarget": "/contact#program=dr14-afir",
+      "microConversion": "cta_click:dr14-afir_long_form_decision",
       "parent": "/fonduri-europene",
       "competingUrls": [
         "/dr-14-afir-conditii-eligibilitate-greseli-frecvente"
@@ -1516,7 +1516,7 @@
         "metaDescription": "Programul e-DRIVE: schemă actualizată pentru vehicule electrice, beneficiari, plafoane și obligații; depunerea nu este deschisă.",
         "headingCount": 14,
         "faqCount": 11,
-        "externalLinkCount": 3,
+        "externalLinkCount": 2,
         "interactiveControlCount": 0,
         "governanceState": "public",
         "programRegistryState": "public"
@@ -1551,7 +1551,7 @@
         "metaDescription": "e-Mobility RO: schemă actualizată pentru stații de reîncărcare, amplasamente, solicitanți și buget; depunerea nu este deschisă.",
         "headingCount": 14,
         "faqCount": 11,
-        "externalLinkCount": 3,
+        "externalLinkCount": 2,
         "interactiveControlCount": 0,
         "governanceState": "public",
         "programRegistryState": "public"
@@ -1952,7 +1952,7 @@
         "metaDescription": "Fondul pentru Modernizare PC1: ghid aprobat pentru baterii stand-alone, beneficiari, buget și plafoane; depunerea nu este încă anunțată.",
         "headingCount": 14,
         "faqCount": 11,
-        "externalLinkCount": 3,
+        "externalLinkCount": 2,
         "interactiveControlCount": 0,
         "governanceState": "public",
         "programRegistryState": "public"
@@ -2907,9 +2907,9 @@
       "primaryIntent": "informațională",
       "h1": "Investiții pentru modernizarea microîntreprinderilor – Apel 2",
       "uniquePromise": "Centralizează statutul, sursa oficială și pașii de verificare pentru „Investiții pentru modernizarea microîntreprinderilor – Apel 2”.",
-      "cta": "Verifică firma și investiția pentru Apelul 2",
-      "ctaTarget": "/contact#program_slug=modernizare-microintreprinderi-ne-2&source_page=%2Finvestitii-modernizarea-microintreprinderilor-apel-2",
-      "microConversion": "cta_click:modernizare-microintreprinderi-ne-2_contextual_primary_2",
+      "cta": "Verifică proiectul",
+      "ctaTarget": "/contact#program=modernizare-microintreprinderi-ne-2",
+      "microConversion": "cta_click:modernizare-microintreprinderi-ne-2_long_form_decision",
       "parent": "/finantari-panouri-fotovoltaice",
       "competingUrls": [],
       "demonstrableUniqueValue": "Înregistrare în registrul unic al programelor; 13 subtitluri, 11 FAQ și sursă: Autoritatea de Management pentru Programul Regional Nord-Est.",
@@ -3763,7 +3763,7 @@
       "uniquePromise": "Explică livrabilul, limitele și traseul de lucru pentru „Verificare inițială a eligibilității proiectului”.",
       "cta": "Începe verificarea proiectului",
       "ctaTarget": "/contact",
-      "microConversion": "cta_click:verificare_eligibilitate_fonduri_europene_contact_2",
+      "microConversion": "cta_click:request_eligibility_review_service",
       "parent": "/consultanta-fonduri-europene",
       "competingUrls": [
         "/cum-se-verifica-eligibilitatea-fonduri-europene",
