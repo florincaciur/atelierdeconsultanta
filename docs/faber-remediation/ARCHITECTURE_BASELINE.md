@@ -401,3 +401,33 @@ Contractul `tests/cloudflare-edge-contract.mjs` este inclus în `test:technical-
 | Production branch/Git integration | NEEDS_CONFIRMATION | Repo-ul verifică `main` prin workflow și SHA live, dar proiectul/branch control din dashboard nu este versionat. Confirmă `main` ca producție și fără preview branch expus pe domeniul canonical. |
 
 Mecanismul disponibil în acest mediu este: contract repository, Wrangler pentru Workers/routes/deployment și probe live de status/headere. Tokenul OAuth disponibil nu expune configurația WAF/bot/cache dashboard, deci aceste controale nu sunt declarate PASS prin inferență.
+
+## Audit final Task 13 — HTML crawlable, prerender și paritate fără cloaking
+
+Audit: 24 august 2026. Arhitectura rămâne statică/SSG: Node materializează paginile înainte de deploy, `dist/` este publicat de Cloudflare Static Assets, iar workerul de domeniu nu randează conținut editorial și nu selectează conținut după user-agent sau identitatea botului. Nu a fost introdus SSR, un framework nou, dynamic rendering ori o ramură dedicată crawlerelor.
+
+Contractul `tests/prerender-critical-content-contract.mjs` pornește în mod local un server HTTP și compară trei reprezentări pentru fiecare rută: răspunsul `fetch()` fără browser, DOM-ul Chromium cu JavaScript dezactivat și DOM-ul Chromium după rularea JavaScriptului. Modul implicit verifică sursele selectate de `fileForRoute()`, `--dist` verifică exact aliasurile materializate pentru Cloudflare, iar `--live` verifică producția după deploy.
+
+### Scope verificat
+
+| Grup | Rute | Observație |
+|---|---:|---|
+| Homepage | 1 | `/` |
+| Pagini publice de program | 24 | Derivate din registry; sunt excluse numai înregistrările care declară explicit `discovery.redirectTarget`. |
+| Huburi de familie | 5 | Derivate din `program-family-hubs.json`; `/fonduri-regionale` este și pagină de program, deci apare o singură dată în total. |
+| Servicii | 7 | Derivate din `seo-programs.json#pages` cu `type=service`, fără redirecturi. |
+| Instrument, contact și despre | 3 | `/calculator-soc`, `/contact`, `/despre-faber`. |
+| Legal | 3 | `/gdpr`, `/politica-de-confidentialitate`, `/termeni-si-conditii`. |
+| **Total unic** | **42** | Inventarul este derivat și are assertion explicit pentru schimbări viitoare de scope. |
+
+Pentru toate cele 42 de rute, testul cere status HTTP 200 și `text/html`, un singur H1, titlu și rezumat answer-first în HTML, breadcrumb vizibil pe fiecare rută non-homepage, întrebări FAQ vizibile pentru fiecare întrebare FAQPage, precum și paritate exactă pentru surse oficiale, linkuri interne de program și înregistrări de status. Paginile de program mai verifică titlul, eticheta de status, sursa oficială și valorile de finanțare/cofinanțare derivate din registru. Huburile trebuie să includă în HTML toate cardurile, linkurile canonice și sursele familiei. Contact, Despre, Termeni și Privacy trebuie să includă denumirea juridică și CUI-ul aprobate.
+
+Homepage conține în HTML toate cele 23 de slide-uri configurate în registry, în ordinea declarată, cu ID, status, titlu și link canonical. Slide-urile inactive folosesc `aria-hidden`, `inert` și control de focus pentru UX, dar nu sunt create la click și nu depind de hidratare pentru a fi descoperite în răspunsul HTML.
+
+### Diferențe intenționate după rularea JavaScriptului
+
+JavaScript modifică numai stare de interfață: slide activ/inert în carusel, vizibilitatea cardurilor după filtrarea huburilor, controalele de extindere pentru carduri lungi, validarea/submisiunea progresivă a formularului și rezultatul calculat după introducerea datelor în calculatorul SO. Aceste diferențe nu adaugă și nu înlocuiesc H1, răspunsul inițial, breadcrumbul, FAQ-ul factual, sursele oficiale, identitatea de contact, statusurile, valorile-cheie sau linkurile canonice ale programelor.
+
+Auditul a găsit două forme ale aceluiași gol. `/gdpr` nu avea breadcrumb vizibil, deși schema BreadcrumbList exista. În plus, sursele root și directory sunt încă divergente pe câteva rute legacy, iar `dist` folosește sursa declarată de inventarul sitemap; cinci dintre aceste surse de deploy nu aveau breadcrumb, deși fișierul root verificat local îl avea. Sincronizatorul nativ procesează acum atât sursa aleasă de `fileForRoute()`, cât și sursa efectiv materializată în deploy. Au fost sincronizate aliasurile pentru Autoconsum instituții publice, Femeia Antreprenor, Fondul pentru energie regenerabilă, Modernizarea microîntreprinderilor și Start-Up Nation. Serializarea atributului boolean și newline-urile păstrează forma fișierului urmărit, evitând rescrieri fără diferență semantică.
+
+Hubul `/blog` și îmbunătățirea opțională din `official-guides.js` rămân dependențe CSR secundare documentate în baseline și în `T00-028`; ele nu fac parte din scope-ul Task 13. Articolele canonice și sursele/statusurile programelor din scope rămân materializate în HTML. Contractul scanează JavaScriptul public, scripturile inline ale rutelor și workerul de domeniu și interzice ramuri bazate pe `user-agent`, nume de crawleri ori `cf.client.bot` pentru rendering.
