@@ -103,6 +103,7 @@ function renderHubHeroSummary(page) {
 function renderHubDesignCards(page) {
   const [badge, , cards] = designProfileFor(page);
   return `<section class="design-card-grid design-card-grid--${esc(designFamilyFor(page))}" aria-label="${esc(badge)}">
+        <h2 class="design-card-grid__title">Repere pentru verificare</h2>
         ${cards.map((label, index) => `<article class="mini-card design-card"><span class="design-card__badge">${esc(label)}</span><h3>${esc(label)}</h3><p>${esc((page.checks || page.steps || page.audience || [page.summary])[index] || page.summary)}</p></article>`).join("\n        ")}
       </section>`;
 }

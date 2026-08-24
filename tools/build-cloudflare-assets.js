@@ -2,6 +2,9 @@ const cp = require("child_process");
 const fs = require("fs");
 const path = require("path");
 const { collectSiteState } = require("./generate-sitemap");
+const { auditSite } = require("./on-page-seo-audit");
+const { syncSite } = require("./sync-on-page-seo");
+const { fileForRoute } = require("./structured-data-utils");
 
 const ROOT = path.resolve(__dirname, "..");
 const OUT_DIR = path.join(ROOT, "dist");
@@ -138,10 +141,6 @@ const CANONICAL_DIRECTORY_HTML_ROUTES = [
   "glosar-fonduri-europene",
 ];
 
-const CANONICAL_INDEX_SOURCE_OVERRIDES = new Set([
-  "investitii-modernizarea-microintreprinderilor-apel-2",
-]);
-
 function posixPath(value) {
   return value.split(path.sep).join("/");
 }
@@ -207,9 +206,7 @@ function syncCanonicalHtmlAliases() {
   for (const entry of collectSiteState().entries) {
     if (entry.route === "/") continue;
     const route = entry.route.replace(/^\/+|\/+$/g, "");
-    const canonicalSource = CANONICAL_INDEX_SOURCE_OVERRIDES.has(route)
-      ? path.join(ROOT, route, "index.html")
-      : path.join(ROOT, entry.sourceFile);
+    const canonicalSource = fileForRoute(ROOT, entry.route);
     const candidates = [
       path.join(OUT_DIR, `${route}.html`),
       path.join(OUT_DIR, route, "index.html"),
@@ -224,6 +221,15 @@ function syncCanonicalHtmlAliases() {
 
 if (!OUT_DIR.startsWith(ROOT + path.sep)) {
   throw new Error(`Refusing to clean output outside repository: ${OUT_DIR}`);
+}
+
+syncSite(ROOT);
+const onPageAudit = auditSite(ROOT);
+if (onPageAudit.errorCount) {
+  const details = onPageAudit.pages
+    .filter((page) => page.errors.length)
+    .flatMap((page) => page.errors.map((error) => `${page.route}: ${error}`));
+  throw new Error(`On-page SEO audit failed before Cloudflare build:\n- ${[...onPageAudit.globalErrors, ...details].join("\n- ")}`);
 }
 
 fs.rmSync(OUT_DIR, { recursive: true, force: true, maxRetries: 5, retryDelay: 100 });

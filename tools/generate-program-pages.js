@@ -590,6 +590,7 @@ function renderFamilyCards(page) {
     "Urmator pas": "verificare concreta pe cazul tau"
   };
   return `<section class="design-card-grid design-card-grid--${esc(family)}" aria-label="Repere vizuale ${esc(program)}">
+        <h2 class="design-card-grid__title">Repere pentru verificare</h2>
         ${labels.map((label) => `<article class="mini-card design-card"><span class="design-card__badge">${esc(label)}</span><h3>${esc(label)}</h3><p>${esc(detailByLabel[label] || `Verificare pentru ${program}`)}</p></article>`).join("\n        ")}
       </section>`;
 }

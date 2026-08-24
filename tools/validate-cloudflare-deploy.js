@@ -2,6 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const cp = require("child_process");
 const { collectSiteState } = require("./generate-sitemap");
+const { fileForRoute } = require("./structured-data-utils");
 
 const ROOT = path.resolve(__dirname, "..");
 const ALLOWED_STATUS_CODES = new Set(["200", "301", "302", "303", "307", "308"]);
@@ -201,10 +202,11 @@ function validateCanonicalHtmlParity(directory, errors) {
   for (const entry of collectSiteState().entries) {
     if (entry.route === "/") continue;
     const route = entry.route.replace(/^\/+|\/+$/g, "");
-    const expected = fs.readFileSync(path.join(ROOT, entry.sourceFile));
+    const canonicalSource = fileForRoute(ROOT, entry.route);
+    const expected = fs.readFileSync(canonicalSource);
     const candidates = [path.join(directory, `${route}.html`), path.join(directory, route, "index.html")].filter((candidate) => fs.existsSync(candidate));
     for (const candidate of candidates) {
-      if (!expected.equals(fs.readFileSync(candidate))) errors.push(`${path.relative(ROOT, candidate)} differs from canonical source ${entry.sourceFile}`);
+      if (!expected.equals(fs.readFileSync(candidate))) errors.push(`${path.relative(ROOT, candidate)} differs from canonical source ${path.relative(ROOT, canonicalSource)}`);
     }
   }
 }

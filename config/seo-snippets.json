@@ -14,7 +14,7 @@
       "title": "Consultanță și proiectare fonduri europene | FABER",
       "description": "FABER oferă consultanță și proiectare pentru proiecte cu fonduri europene: eligibilitate, cereri de finanțare, documentații tehnice și implementare.",
       "ogTitle": "Consultanță și proiectare pentru proiecte | FABER",
-      "ogDescription": "De la verificarea eligibilității la documentații tehnice și implementare, FABER sprijină pregătirea proiectelor pe baza regulilor aplicabile.",
+      "ogDescription": "De la verificarea inițială a eligibilității la documentații tehnice și implementare, FABER sprijină pregătirea proiectelor pe baza regulilor aplicabile.",
       "sourceOfTruth": [
         "index.html",
         "official-guides.json:fonduri-europene"
@@ -26,16 +26,16 @@
     {
       "route": "/verificare-eligibilitate-fonduri-europene",
       "primaryIntent": "verificarea inițială a eligibilității solicitantului și investiției",
-      "primaryQuery": "verificare eligibilitate fonduri europene",
+      "primaryQuery": "verificare inițială eligibilitate proiecte",
       "secondaryQueries": [
         "cum se verifică eligibilitatea",
         "eligibilitate cod CAEN",
         "verificare proiect fonduri europene"
       ],
-      "title": "Verificare eligibilitate fonduri europene | FABER",
-      "description": "Verificăm solicitantul, codul CAEN, locația, investiția, bugetul, cofinanțarea și documentele înainte de alegerea programului.",
-      "ogTitle": "Verifică eligibilitatea proiectului | FABER",
-      "ogDescription": "Analizăm solicitantul, CAEN-ul, locația, investiția, bugetul, cofinanțarea și documentele înainte de alegerea unui program.",
+      "title": "Verificare inițială eligibilitate proiecte | FABER",
+      "description": "Află ce date analizăm, cum se desfășoară verificarea inițială și ce concluzie documentată primești înainte de pregătirea dosarului.",
+      "ogTitle": "Verificare inițială eligibilitate proiecte | FABER",
+      "ogDescription": "Află ce date analizăm, cum se desfășoară verificarea inițială și ce concluzie documentată primești înainte de pregătirea dosarului.",
       "sourceOfTruth": [
         "config/seo-programs.json:verificare-eligibilitate-fonduri-europene",
         "official-guides.json:fonduri-europene"
@@ -230,22 +230,22 @@
     {
       "route": "/fonduri-europene",
       "primaryIntent": "identificarea programelor de fonduri europene pentru investiție",
-      "primaryQuery": "fonduri europene 2026",
+      "primaryQuery": "fonduri europene",
       "secondaryQueries": [
         "fonduri europene firme",
         "fonduri europene fermieri",
         "programe fonduri europene"
       ],
       "sourceOfTruth": [
-        "tools/rebuild-core-pages.js",
+        "config/editorial-clusters.json",
         "fonduri-europene/index.html"
       ],
       "factualStatus": "programme_hub_routes_verified",
-      "notes": "Titlul folosește anul numai pentru hub; termenele și valorile rămân în paginile programelor.",
-      "title": "Fonduri europene 2026: programe pentru firme și fermieri",
-      "description": "Compară programe pentru firme, fermieri și instituții după solicitant, investiție, regiune, documente și contribuția proprie disponibilă.",
-      "ogTitle": "Găsește traseul potrivit pentru investiția ta | FABER",
-      "ogDescription": "Pornește de la beneficiar și investiție, apoi verifică programul, documentele și bugetul în pagina dedicată fiecărui apel.",
+      "notes": "Hub evergreen fără an sau statut de apel; metadata urmează sursa editorială guvernată.",
+      "title": "Fonduri europene: programe și trasee de verificare | FABER",
+      "description": "Alege familia de programe după solicitant și investiție, apoi folosește instrumentele și ghidurile potrivite înainte de verificarea proiectului.",
+      "ogTitle": "Fonduri europene: programe și trasee de verificare | FABER",
+      "ogDescription": "Alege familia de programe după solicitant și investiție, apoi folosește instrumentele și ghidurile potrivite înainte de verificarea proiectului.",
       "lastReviewed": "2026-07-20"
     }
   ]

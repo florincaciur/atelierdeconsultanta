@@ -42,20 +42,6 @@ function comparable(value) {
     .trim();
 }
 
-function estimateTitleWidthPx(value) {
-  let width = 0;
-  for (const original of cleanText(value)) {
-    const char = original.normalize("NFD")[0] || original;
-    if (/\s/u.test(char)) width += 4.2;
-    else if (/[ilI1|.,:;'`]/u.test(char)) width += 4.5;
-    else if (/[mwMW@%&]/u.test(char)) width += 12.2;
-    else if (/[A-Z0-9]/u.test(char)) width += 9.4;
-    else if (/[-–—/]/u.test(char)) width += 5.8;
-    else width += 8.2;
-  }
-  return Math.round(width);
-}
-
 function intentCoverage(title, primaryQuery) {
   const titleWords = new Set(comparable(title).split(/\s+/u).filter(Boolean));
   const queryWords = comparable(primaryQuery)
@@ -128,14 +114,6 @@ function validateConfig(config) {
       }
     }
 
-    const titleLength = cleanText(page.title).length;
-    const titleWidth = estimateTitleWidthPx(page.title);
-    const descriptionLength = cleanText(page.description).length;
-    if (titleLength > 65) errors.push(`${label}: titlu excesiv de lung (${titleLength} caractere)`);
-    if (titleWidth > 600) errors.push(`${label}: titlu prea lat (aprox. ${titleWidth}px)`);
-    if (titleLength < 45 || titleLength > 60) warnings.push(`${label}: titlu în afara intervalului recomandat 45–60 (${titleLength})`);
-    if (descriptionLength > 165) errors.push(`${label}: descriere excesiv de lungă (${descriptionLength} caractere)`);
-    if (descriptionLength < 120) warnings.push(`${label}: descriere sub 120 caractere (${descriptionLength})`);
     if (intentCoverage(page.title, page.primaryQuery) < 0.6) errors.push(`${label}: titlul nu include suficient intenția principală '${page.primaryQuery}'`);
 
     for (const [field, value] of [["title", page.title], ["description", page.description], ["ogTitle", page.ogTitle], ["ogDescription", page.ogDescription]]) {
@@ -170,7 +148,6 @@ function validateHtml(config) {
     metrics.push({
       route: page.route,
       titleCharacters: cleanText(page.title).length,
-      estimatedTitleWidthPx: estimateTitleWidthPx(page.title),
       descriptionCharacters: cleanText(page.description).length
     });
   }
@@ -190,7 +167,7 @@ function main() {
   }
   console.log(`SEO snippets valide pentru ${config.pages.length} rute prioritare.`);
   for (const metric of htmlResult.metrics) {
-    console.log(`${metric.route}: title ${metric.titleCharacters} caractere / ~${metric.estimatedTitleWidthPx}px; description ${metric.descriptionCharacters} caractere`);
+    console.log(`${metric.route}: title ${metric.titleCharacters} caractere; description ${metric.descriptionCharacters} caractere`);
   }
 }
 
@@ -198,7 +175,6 @@ if (require.main === module) main();
 
 module.exports = {
   cleanText,
-  estimateTitleWidthPx,
   metadataFromHtml,
   validateConfig,
   validateHtml
