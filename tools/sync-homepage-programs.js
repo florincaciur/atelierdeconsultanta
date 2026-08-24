@@ -90,7 +90,7 @@ function renderPriorityCarousel(programs) {
       <div class="program-explorer-header">
         <span class="section-label">Catalog public</span>
         <h2 id="priority-programs-title">Toate programele de finanțare urmărite</h2>
-        <p>Fiecare program public are propriul banner, fără rotire automată. Statutul și data verificării provin din registrul unic.</p>
+        <p>Fiecare program public are propriul banner, fără rotire automată. Statutul, data verificării și sursa aplicabilă sunt materializate din registrul unic, actualizat după consultarea surselor oficiale.</p>
       </div>
       <div class="priority-program-carousel" data-priority-carousel data-carousel-count="${total}">
         <button class="priority-program-control priority-program-control--previous" type="button" aria-label="Programul anterior" data-priority-previous data-analytics-event="carousel_interaction" data-analytics-cta-id="priority_carousel_previous"><span aria-hidden="true">←</span></button>
@@ -234,16 +234,20 @@ function syncHomepage(source, programs) {
   return synchronizeAssets(removeLegacyCarouselRuntime(output));
 }
 
+function sameText(left, right) {
+  return left.replace(/\r\n/g, "\n") === right.replace(/\r\n/g, "\n");
+}
+
 function main() {
   const { programs } = loadProgramConfig();
   const before = fs.readFileSync(HOME, "utf8");
   const after = syncHomepage(before, programs);
   if (CHECK_ONLY) {
-    if (after !== before) throw new Error("Homepage program explorer nu este sincronizat. Rulează npm run sync:homepage-programs.");
+    if (!sameText(after, before)) throw new Error("Homepage program explorer nu este sincronizat. Rulează npm run sync:homepage-programs.");
     console.log("Homepage program explorer sync PASS.");
     return;
   }
-  if (after !== before) fs.writeFileSync(HOME, after, "utf8");
+  if (!sameText(after, before)) fs.writeFileSync(HOME, after, "utf8");
   console.log(`Homepage program explorer sincronizat: ${carouselPrograms(programs).length} priorități editoriale din registrul unic.`);
 }
 

@@ -18,7 +18,7 @@ const homepagePrograms = homepageHeroPrograms(programs);
 assert(latest && isPublicProgram(latest) && hasOfficialSource(latest), "programul recent trebuie să fie public și verificat oficial");
 assert.equal($("#hero.homepage-decision-hero").length, 1, "trebuie să existe exact un hero decizional");
 assert.equal($("#homepage-hero-title").text().trim(), "Consultanță și proiectare pentru proiecte cu fonduri europene", "H1 diferit de copy-ul restaurat");
-assert.match($("#hero .hero-subtitle").text().trim(), /^Verificare prudentă, documentată și interdisciplinară/u, "poziționarea profesională a hero-ului lipsește");
+assert.match($("#hero .hero-subtitle").text().trim(), /^FABER – Atelier de Consultanță sprijină/u, "identitatea și rolul FABER lipsesc din hero");
 assert.equal($("#hero .homepage-hero__microcopy").length, 0, "microcopy-ul redundant trebuie eliminat");
 
 const primary = $("#hero .hero-ctas a").eq(0);

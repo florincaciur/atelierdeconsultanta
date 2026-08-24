@@ -77,9 +77,9 @@ function renderHero(program, publicCount, programs) {
     <section id="hero" class="homepage-decision-hero" data-section-id="hero" aria-labelledby="homepage-hero-title" data-homepage-hero-version="p1_15">
       <div class="homepage-hero__inner">
         <div class="homepage-hero__copy">
-          <div class="hero-badge"><span class="dot" aria-hidden="true"></span>FABER pentru firme, fermieri, start-up-uri și IMM-uri</div>
+          <div class="hero-badge"><span class="dot" aria-hidden="true"></span>FABER pentru firme, fermieri, start-up-uri, IMM-uri și instituții publice</div>
           <h1 class="hero-title" id="homepage-hero-title">Consultanță și proiectare pentru proiecte <span class="gradient-text">cu fonduri europene</span></h1>
-          <p class="hero-subtitle">Verificare prudentă, documentată și interdisciplinară — consultanță și proiectare — înainte de dosar. Analizăm forma solicitantului, activitatea sau exploatația, amplasamentul, investiția, bugetul și documentele. Stabilim ce program poate fi potrivit, ce condiții trebuie demonstrate și ce riscuri pot opri depunerea. Dacă proiectul continuă, corelăm cererea de finanțare cu anexele și documentația tehnică.</p>
+          <p class="hero-subtitle">FABER – Atelier de Consultanță sprijină firme, fermieri, start-up-uri, IMM-uri și instituții publice în proiecte cu fonduri europene. Consultanța clarifică eligibilitatea, programul, cererea și documentele; proiectarea corelează soluția tehnică, bugetul și anexele. Verificăm solicitantul, investiția și sursele oficiale înainte de dosar, apoi putem sprijini pregătirea și implementarea, fără promisiunea aprobării finanțării.</p>
           <div class="hero-ctas" aria-label="Acțiuni principale">
             <a href="/contact#source_page=%2F" class="btn-primary" data-contextual-hero-cta data-analytics-event="cta_click" data-analytics-component="homepage_hero" data-analytics-cta-id="homepage_hero_project_check" data-analytics-target="/contact" data-analytics-cta-view="true" data-analytics-copy-variant="p1_15">Începe verificarea proiectului</a>
             <a href="/verificare-eligibilitate-fonduri-europene" class="btn-secondary" data-analytics-event="cta_click" data-analytics-component="homepage_hero" data-analytics-cta-id="homepage_hero_prepare" data-analytics-target="/verificare-eligibilitate-fonduri-europene" data-analytics-cta-view="true" data-analytics-copy-variant="p1_15">Vezi ce date pregătești</a>
@@ -128,16 +128,20 @@ function syncHomepageHero(source, programs) {
   return output;
 }
 
+function sameText(left, right) {
+  return left.replace(/\r\n/g, "\n") === right.replace(/\r\n/g, "\n");
+}
+
 function main() {
   const { programs } = loadProgramConfig();
   const before = fs.readFileSync(HOME, "utf8");
   const after = syncHomepageHero(before, programs);
   if (CHECK_ONLY) {
-    if (after !== before) throw new Error("Hero-ul homepage nu este sincronizat. Rulează npm run sync:homepage-hero.");
+    if (!sameText(after, before)) throw new Error("Hero-ul homepage nu este sincronizat. Rulează npm run sync:homepage-hero.");
     console.log("Homepage hero sync PASS.");
     return;
   }
-  if (after !== before) fs.writeFileSync(HOME, after, "utf8");
+  if (!sameText(after, before)) fs.writeFileSync(HOME, after, "utf8");
   const latest = latestVerifiedProgram(programs);
   console.log(`Homepage hero sincronizat: ${latest.slug}, verificat la ${latest.verifiedAt}.`);
 }

@@ -8,7 +8,6 @@ const { renderPriorityCarousel } = require("./sync-homepage-programs");
 const ROOT = path.resolve(__dirname, "..");
 const HOME = path.join(ROOT, "index.html");
 const CONFIG = JSON.parse(fs.readFileSync(path.join(ROOT, "config", "homepage-decision-flow.json"), "utf8"));
-const BANNERS = JSON.parse(fs.readFileSync(path.join(ROOT, "banners.json"), "utf8"));
 const CHECK_ONLY = process.argv.includes("--check");
 const HERO_END = "<!-- HOMEPAGE_DECISION_HERO_END -->";
 const START = "<!-- P1_21_HOMEPAGE_FLOW_START -->";
@@ -68,8 +67,8 @@ function renderExplorer() {
       id: "homepage-services",
       label: "Servicii",
       eyebrow: "Servicii",
-      title: "De la verificare la implementare",
-      text: "Alege rolul potrivit stadiului proiectului, fără să parcurgi secțiuni repetitive.",
+      title: "Patru servicii, roluri distincte",
+      text: "Alege analiza, consultanța, proiectarea sau implementarea potrivită stadiului proiectului.",
       content: `<div class="homepage-service-grid">${CONFIG.services.map((item, index) => renderExplorerCard(item, "Serviciu", index)).join("\n")}</div>`
     },
     {
@@ -84,8 +83,8 @@ function renderExplorer() {
       id: "homepage-proof",
       label: "De ce FABER",
       eyebrow: "De ce FABER",
-      title: "Decizii documentate, cu limite explicite",
-      text: "Trei principii verificabile în modul în care publicăm și analizăm informația.",
+      title: "Metodologie și surse, nu promisiuni",
+      text: "Află cine este FABER, cum verificăm statutul programelor și care sunt limitele analizei.",
       content: `<div class="homepage-proof-grid">${CONFIG.proofs.map((item, index) => renderExplorerCard(item, "Principiu", index)).join("\n")}</div>`
     },
     {
@@ -105,7 +104,7 @@ function renderExplorer() {
   const nodes = frames.map((frame, index) => `<g class="homepage-explorer-node${index === 0 ? " is-active" : ""}" data-homepage-explorer-node data-explorer-index="${index}" transform="translate(${70 + index * 160} 58)"><circle r="17"></circle><text text-anchor="middle" dy="5">${index + 1}</text><title>${esc(frame.label)}</title></g>`).join("\n");
   return `<section id="homepage-explorer" class="homepage-flow-section homepage-explorer" aria-labelledby="homepage-explorer-title" data-homepage-explorer>
   <div class="homepage-flow-inner">
-    ${heading("Explorează FABER", "homepage-explorer-title", "Alege informația de care ai nevoie", "Patru secțiuni într-un singur cadru interactiv. Folosește butoanele, tastatura sau glisarea stânga–dreapta.")}
+    ${heading("Servicii, instrumente și verificare", "homepage-explorer-title", "Ce oferă FABER și cum verifică informația", "Vezi serviciile, instrumentele de pregătire, metodologia și o comparație de programe într-un singur cadru interactiv.")}
     <div class="homepage-explorer-shell">
       <div class="homepage-explorer-tabs" role="tablist" aria-label="Alege secțiunea">${tabs}</div>
       <svg class="homepage-explorer-svg" viewBox="0 0 620 110" aria-hidden="true" focusable="false">
@@ -155,8 +154,7 @@ function renderContact() {
 }
 
 function renderFlow(programs) {
-  const banners = new Map(BANNERS.map((banner) => [banner.programId, banner]));
-  return `${START}\n${renderMethodExperience()}\n${renderPriorityCarousel(programs, banners)}\n${renderExplorer()}\n${renderContactExperience()}\n${END}`;
+  return `${START}\n${renderMethodExperience()}\n${renderPriorityCarousel(programs)}\n${renderExplorer()}\n${renderContactExperience()}\n${END}`;
 }
 
 function removeLegacyRuntime(source) {
@@ -214,12 +212,16 @@ function synchronize(source, programs) {
   return removeLegacyRuntime(output);
 }
 
+function sameText(left, right) {
+  return left.replace(/\r\n/g, "\n") === right.replace(/\r\n/g, "\n");
+}
+
 function main() {
   const { programs } = loadProgramConfig();
   const before = fs.readFileSync(HOME, "utf8");
   const after = synchronize(before, programs);
   if (CHECK_ONLY) {
-    if (after !== before) {
+    if (!sameText(after, before)) {
       let mismatch = 0;
       while (mismatch < before.length && mismatch < after.length && before[mismatch] === after[mismatch]) mismatch += 1;
       const contextStart = Math.max(0, mismatch - 90);
@@ -229,7 +231,7 @@ function main() {
     console.log("Homepage decision flow sync PASS.");
     return;
   }
-  if (after !== before) fs.writeFileSync(HOME, after, "utf8");
+  if (!sameText(after, before)) fs.writeFileSync(HOME, after, "utf8");
   console.log("Homepage P1.21 sincronizat: un singur traseu, zero formulare inline, un carusel.");
 }
 
