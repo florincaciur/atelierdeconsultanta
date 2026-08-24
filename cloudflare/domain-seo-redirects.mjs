@@ -5,6 +5,7 @@ const HSTS_VALUE = "max-age=15552000";
 const CONTACT_PAGE = "/contact";
 const CONTACT_ENDPOINT = "/api/contact-triage";
 const QUALIFIED_LEAD_ENDPOINT = "/api/crm/qualified-lead";
+const INTENTIONAL_NOT_FOUND_PATH = "/__faber-intentional-not-found__";
 const MAX_CONTACT_BODY_BYTES = 64 * 1024;
 const MAX_ANALYTICS_BODY_BYTES = 16 * 1024;
 const RETIRED_PUBLIC_ROUTES = new Map([
@@ -108,6 +109,31 @@ function canonicalGetDestination(request, url) {
   if (legacyBlogQuery) destination.search = "";
   destination.hash = "";
   return destination.toString();
+}
+
+function isPublicNotFoundDocument(request, url) {
+  return (request.method === "GET" || request.method === "HEAD")
+    && normalizePublicPath(url.pathname) === "/404";
+}
+
+async function publicNotFoundResponse(request, url, originFetch) {
+  const originUrl = new URL(url.toString());
+  originUrl.protocol = "https:";
+  originUrl.hostname = CANONICAL_HOST;
+  originUrl.port = "";
+  originUrl.pathname = INTENTIONAL_NOT_FOUND_PATH;
+  originUrl.search = "";
+  originUrl.hash = "";
+  const originResponse = await originFetch(new Request(originUrl, {
+    method: request.method,
+    headers: request.headers,
+    redirect: "manual"
+  }));
+  return secured(new Response(originResponse.body, {
+    status: 404,
+    statusText: "Not Found",
+    headers: originResponse.headers
+  }));
 }
 
 function secured(response) {
@@ -507,6 +533,13 @@ export async function handleRequest(request, originFetch = fetch, environment = 
 
   const canonicalDestination = canonicalGetDestination(request, url);
   if (canonicalDestination) return permanentRedirect(canonicalDestination);
+
+  // Cloudflare static assets expose 404.html as the extensionless /404 asset
+  // with status 200. Resolve that public path through the custom 404 fallback
+  // and force the correct status instead of publishing a soft-404 document.
+  if (isPublicNotFoundDocument(request, url)) {
+    return publicNotFoundResponse(request, url, originFetch);
+  }
 
   if (url.hostname === CANONICAL_HOST && url.pathname === CONTACT_ENDPOINT) {
     return handleContactTriageRequest(request, {
