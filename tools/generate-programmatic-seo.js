@@ -9,7 +9,7 @@ const GLOBAL_HEADER = fs.readFileSync(path.join(ROOT, "partials", "global-header
 const CONFIG = path.join(ROOT, "config", "seo-programmatic-pages.json");
 const SITEMAP = path.join(ROOT, "sitemap.xml");
 const PROGRAMMATIC_MIN_WORDS = 1100;
-const PROGRAMMATIC_MIN_FAQ = 5;
+const { normalizeFaqPairs } = require("./faq-governance");
 const {
   SITE,
   PAGE_KINDS,
@@ -158,13 +158,7 @@ function normalizeFaqEntries(faq) {
 }
 
 function configuredFaq(item, fallback) {
-  const seen = new Set();
-  return [...normalizeFaqEntries(item?.faq), ...fallback].filter(([question]) => {
-    const key = String(question || "").trim().toLowerCase();
-    if (!key || seen.has(key)) return false;
-    seen.add(key);
-    return true;
-  });
+  return normalizeFaqPairs([...normalizeFaqEntries(item?.faq), ...fallback]);
 }
 
 function appendConfiguredBody(body, item) {
@@ -263,7 +257,7 @@ function html({ title, description, h1, route, category, summary, body, faq, rel
   <meta name="robots" content="index, follow" />
   <meta name="seo-depth" content="true" />
   <meta name="seo-min-words" content="${PROGRAMMATIC_MIN_WORDS}" />
-  <meta name="seo-min-faq" content="${PROGRAMMATIC_MIN_FAQ}" />
+  <meta name="seo-min-faq" content="${faq.length}" />
   <link rel="canonical" href="${metadata.canonicalUrl}" />
   <meta property="og:url" content="${metadata.ogUrl}" />
   <link rel="stylesheet" href="/assets/seo-hub.css" />

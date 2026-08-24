@@ -7,6 +7,7 @@ const path = require("path");
 const cheerio = require("cheerio");
 const { collectSiteState, parseRedirectRules } = require("./generate-sitemap");
 const { readSitemapEntries, readSitemapEntriesFromReader } = require("./sitemap-utils");
+const { visibleFaqItems } = require("./structured-data-utils");
 
 const ROOT = path.resolve(__dirname, "..");
 const SITE = "https://atelierdeconsultanta.ro";
@@ -136,7 +137,7 @@ function inspectHtml(relativePath) {
       invalidJsonLd += 1;
     }
   });
-  const visibleFaqCount = $("details, .faq-item, .faq-card, .faq-entry, [data-faq-item]").length;
+  const visibleFaqCount = visibleFaqItems($).length;
   const canonical = $("link[rel~='canonical']").first().attr("href") || "";
   const body = $("body");
   return {
@@ -652,7 +653,7 @@ function renderInventory(inventory, live) {
     "",
     "## Inventarul rutelor canonical 200/indexabile",
     "",
-    "`Incoming` este numărul de rute canonical distincte care trimit intern către destinație. `Nav/Footer` arată dacă destinația apare în componentele globale. `FAQ v/s` reprezintă numărul aproximativ de blocuri vizibile / entități `mainEntity` din FAQPage.",
+    "`Incoming` este numărul de rute canonical distincte care trimit intern către destinație. `Nav/Footer` arată dacă destinația apare în componentele globale. `FAQ v/s` reprezintă numărul exact de întrebări FAQ vizibile / entități `mainEntity` din FAQPage; acordeoanele auxiliare nu sunt numărate ca FAQ.",
     "",
     "| Rută / canonical URL | Sursă rută | Tip | HTTP / index | Title | H1 | Canonical declarat | Sitemap | Nav/Footer | Incoming | Structured data | Breadcrumb | FAQ v/s | Registry | Banner | Familie | Status / note |",
     "|---|---|---|---|---|---|---|---|---|---:|---|---|---:|---|---|---|---|",

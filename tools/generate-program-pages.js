@@ -53,6 +53,7 @@ const {
   syncLlmsText
 } = require("./sync-program-factual-governance");
 const { designFamilyForSlug } = require("./design-family-map");
+const { normalizeFaqPairs } = require("./faq-governance");
 const {
   SITE,
   PAGE_KINDS,
@@ -727,51 +728,18 @@ function minWordsForPage(page) {
   return 900;
 }
 
-function minFaqForPage(page) {
-  if (isEditorialProgram(page)) {
-    if (Number(page.minFaq) > 0) return Number(page.minFaq);
-    if (PILLAR_SLUGS.has(page.slug)) return 10;
-    return Math.min(6, Math.max(2, (page.faq || []).length || 2));
-  }
-  if (Number(page.minFaq) > 0) return Number(page.minFaq);
-  if (PILLAR_SLUGS.has(page.slug)) return 10;
-  if (SECONDARY_SLUGS.has(page.slug)) return 6;
-  if (page.type === "program" || page.type === "hub" || page.type === "service") return 8;
-  return 4;
-}
-
 function keywordsForPage(page) {
   return page.keywords || KEYWORDS_BY_SLUG[page.slug] || [];
 }
 
 function faqsForPage(page) {
-  const faq = Array.isArray(page.faq) ? [...page.faq] : [];
-  const programName = page.programName || page.h1 || "program";
-  const keyword = keywordsForPage(page)[0] || programName;
-  const minimumFaq = minFaqForPage(page);
-  const additions = [
-    [`Cum verific daca ${programName} este potrivit pentru proiectul meu?`, `Porneste de la solicitant, cod CAEN, localitate, investitie, buget si documentele disponibile. Daca una dintre aceste piese nu se potriveste cu apelul activ, proiectul trebuie ajustat inainte de depunere.`],
-    [`Cand nu merita sa aplic pentru ${programName}?`, `Nu merita sa aplici cand nu poti dovedi eligibilitatea, cand cheltuielile principale nu sunt permise, cand cofinantarea nu este acoperita sau cand calendarul nu permite documente complete si verificabile.`],
-    [`Ce documente trebuie pregatite pentru ${programName}?`, "De regula sunt necesare documente de firma sau solicitant, documente pentru activitate si locatie, date financiare, oferte, descrierea investitiei si informatii despre cofinantare."],
-    [`Cum se verifica un cod CAEN pentru ${programName}?`, "Codul CAEN se verifica prin certificatul constatator, activitatea reala, autorizarea necesara, lista de coduri eligibile a apelului si legatura directa dintre investitie si activitatea finantata."],
-    [`Ce cheltuieli sunt sensibile la evaluare pentru ${programName}?`, "Sunt sensibile cheltuielile greu de justificat, activele supradimensionate, serviciile descrise vag, achizitiile incepute prea devreme si costurile care nu au legatura directa cu obiectivele proiectului."],
-    [`Cum tratez cofinantarea si cheltuielile neeligibile pentru ${programName}?`, "Cofinantarea si cheltuielile neeligibile trebuie estimate separat de grant. Include rezerve pentru TVA, diferente de pret, costuri neacoperite si intarzieri in rambursare."],
-    [`Ce greseli duc frecvent la respingere sau clarificari pentru ${programName}?`, "Apar probleme cand documentele sunt expirate, ofertele sunt incomplete, bugetul nu se leaga de activitate, punctajul este estimat optimist sau solicitantul nu poate sustine implementarea."],
-    [`Cum folosesc informatiile despre ${programName} in 2026?`, "Foloseste informatiile ca filtru initial si confirma intotdeauna regulile in apelul activ. Programele pot schimba praguri, documente, punctaje si termene de la o sesiune la alta."],
-    [`Ce rol are consultanta pentru ${keyword}?`, `Consultanta ajuta la trierea programului, verificarea documentelor, structurarea bugetului, pregatirea raspunsurilor la clarificari si reducerea riscurilor, dar nu poate garanta aprobarea finantarii.`],
-    [`Cat de repede trebuie inceputa pregatirea dosarului pentru ${programName}?`, "Pregatirea trebuie inceputa inainte de deschiderea efectiva a apelului, mai ales daca sunt necesare oferte, documente pentru spatiu, autorizatii, calcule de punctaj sau clarificari privind solicitantul."]
-  ];
-  if (faq.length >= minimumFaq) return faq;
-  const seen = new Set(faq.map(([question]) => String(question).toLowerCase()));
-  for (const item of additions) {
-    const key = item[0].toLowerCase();
-    if (!seen.has(key)) {
-      faq.push(item);
-      seen.add(key);
-    }
-    if (faq.length >= minimumFaq) break;
-  }
-  return faq;
+  return normalizeFaqPairs(page.faq);
+}
+
+function stripEmptyFaqMarkup(html) {
+  return html
+    .replace(/\s*<section\b([^>]*)>\s*<h2\b([^>]*)>(?:FAQ|Intrebari frecvente|Întrebări frecvente|&#206;ntreb&#259;ri frecvente)<\/h2>\s*<\/section>/giu, "")
+    .replace(/\s*<h2\b[^>]*>(?:FAQ|Intrebari frecvente|Întrebări frecvente)<\/h2>\s*(?=<h2\b|<\/article>|<\/main>)/giu, "");
 }
 
 function renderKeywordIntent(page) {
@@ -3040,7 +3008,7 @@ ${renderPocidifDiscoveryLink(page)}
   <meta name="robots" content="${escAttr(robots)}" />
   <meta name="seo-depth" content="true" />
   <meta name="seo-min-words" content="${minWordsForPage(page)}" />
-  <meta name="seo-min-faq" content="${minFaqForPage(page)}" />
+  <meta name="seo-min-faq" content="${faqsForPage(page).length}" />
   <link rel="canonical" href="${metadata.canonicalUrl}" />
   <link rel="icon" type="image/png" href="/favicon.png" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -3079,7 +3047,7 @@ ${programMainContent}
 </body>
 </html>
 `;
-  return applyContextualNextSteps(applyPriorityAeo(html, page.slug), page.slug);
+  return applyContextualNextSteps(applyPriorityAeo(stripEmptyFaqMarkup(html), page.slug), page.slug);
 }
 
 function redirectFallbackHtml(page) {

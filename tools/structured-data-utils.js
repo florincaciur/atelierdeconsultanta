@@ -94,26 +94,33 @@ function isHiddenFromUsers($, element) {
   });
 }
 
-function visibleFaqItems($) {
+function visibleFaqCandidates($) {
   const items = [];
-  const seen = new Set();
   const containers = $(".faq-item, details:not([data-non-faq]), [itemprop='mainEntity'][itemtype*='Question']")
     .filter((_, container) => !$(container).closest("[data-long-form-toc], .editorial-governance").length);
 
   containers.each((_, container) => {
     if (isHiddenFromUsers($, container)) return;
-    const questionElement = $(container)
-      .find("[itemprop='name'], .faq-q, summary, h3, h4")
+    let questionElement = $(container)
+      .children("[itemprop='name'], .faq-q, summary, h3, h4")
       .first();
+    if (!questionElement.length && $(container).is("[itemprop='mainEntity'][itemtype*='Question']")) {
+      questionElement = $(container).find("[itemprop='name'], .faq-q, summary, h3, h4").first();
+    }
     const question = cleanText(questionElement.text());
+    // A <details> element is not automatically a FAQ. Requiring an actual
+    // question keeps source accordions and section wrappers out of FAQPage.
+    if (!/[?？]$/u.test(question)) return;
     const answer = answerTextForContainer($, container, questionElement.get(0));
-    const key = comparableText(question);
-    if (!key || !answer || seen.has(key)) return;
-    seen.add(key);
-    items.push({ question, answer });
+    if (!answer) return;
+    items.push({ question, answer, element: container });
   });
 
   return items;
+}
+
+function visibleFaqItems($) {
+  return visibleFaqCandidates($).map(({ question, answer }) => ({ question, answer }));
 }
 
 function sitemapRoutes(root) {
@@ -214,6 +221,7 @@ module.exports = {
   routeForFile,
   sitemapRoutes,
   typesOf,
+  visibleFaqCandidates,
   visibleFaqItems,
   isHiddenFromUsers
 };

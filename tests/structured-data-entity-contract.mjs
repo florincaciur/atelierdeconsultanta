@@ -140,13 +140,14 @@ for (const route of routes) {
     assert.equal(applications.length, 0, `${route}: WebApplication este permis numai pe Calculator SO`);
   }
 
-  const visibleFaq = new Map(visibleFaqItems($).map((item) => [comparableText(item.question), comparableText(item.answer)]));
-  for (const faq of nodes.filter((node) => hasType(node, "FAQPage"))) {
-    for (const item of faq.mainEntity || []) {
-      const key = comparableText(item.name);
-      assert(visibleFaq.has(key), `${route}: FAQPage conține o întrebare nevizibilă`);
-      assert.equal(comparableText(item.acceptedAnswer?.text), visibleFaq.get(key), `${route}: răspunsul FAQPage diferă de HTML`);
-    }
+  const visibleFaq = visibleFaqItems($);
+  const faqNodes = nodes.filter((node) => hasType(node, "FAQPage"));
+  assert.equal(faqNodes.length, visibleFaq.length >= 2 ? 1 : 0, `${route}: FAQPage trebuie să existe numai pentru un FAQ vizibil real`);
+  const schemaFaq = faqNodes[0]?.mainEntity || [];
+  assert.equal(schemaFaq.length, visibleFaq.length, `${route}: numărul întrebărilor FAQPage diferă de HTML`);
+  for (const [index, item] of schemaFaq.entries()) {
+    assert.equal(comparableText(item.name), comparableText(visibleFaq[index].question), `${route}: întrebarea FAQPage ${index + 1} diferă sau este în altă ordine`);
+    assert.equal(comparableText(item.acceptedAnswer?.text), comparableText(visibleFaq[index].answer), `${route}: răspunsul FAQPage ${index + 1} diferă de HTML`);
   }
 }
 

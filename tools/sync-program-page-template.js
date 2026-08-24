@@ -17,6 +17,7 @@ const { loadEditorialGovernance } = require("./editorial-governance");
 const { PROGRAM_TEMPLATE_SLOT, syncPageHtml: syncEditorialGovernance } = require("./sync-editorial-governance");
 const { synchronizedHtml: syncBreadcrumbs } = require("./sync-breadcrumbs");
 const { synchronize: syncProgramVisual } = require("./sync-program-visuals");
+const { synchronizeFaqHtml } = require("./faq-governance");
 
 const CONFIG_PATH = path.join(ROOT, "config", "program-page-template.json");
 const GUIDES_PATH = path.join(ROOT, "official-guides.json");
@@ -291,7 +292,7 @@ function renderArticle(page, program, guides, wordCount) {
   <p class="program-template__direct-answer" data-answer-readiness-direct data-information-status="${escapeHtml(statusStatement(program))}">${escapeHtml(page.directAnswer)}</p>
   ${renderGlance(page, program, guides)}
   <!-- ANSWER_READINESS_END -->
-  ${hasToc ? renderToc() : ""}
+${hasToc ? renderToc() : ""}
   <aside class="program-template__disclaimer" aria-label="Limită editorială"><strong>Important:</strong> ${escapeHtml(program.editorialDisclaimer)}</aside>
   ${renderEligibility(page.eligibility, guides)}
   ${renderFunding(page.funding, guides)}
@@ -344,6 +345,7 @@ function cleanLegacyInjection(source) {
 }
 
 function synchronizePage(source, page, program, guides, record) {
+  const newline = source.includes("\r\n") ? "\r\n" : "\n";
   const clean = cleanLegacyInjection(source);
   const globalHeader = clean.match(/<!-- GLOBAL_HEADER_START -->[\s\S]*?<!-- GLOBAL_HEADER_END -->/i)?.[0] || "";
   const wordCount = countWords(editorialText(page));
@@ -375,6 +377,8 @@ function synchronizePage(source, page, program, guides, record) {
   output = syncBreadcrumbs(output, normalizeRoute(page.route));
   output = syncEditorialGovernance(output, record);
   output = syncProgramVisual(output, normalizeRoute(page.route));
+  output = synchronizeFaqHtml(output).html;
+  output = output.replace(/\r?\n/gu, newline);
   return { html: output, wordCount, hasToc: wordCount > 1500 };
 }
 

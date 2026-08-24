@@ -193,22 +193,32 @@ function validateEntity(nodes, route, issues) {
 }
 
 function validateFaq($, nodes, issues) {
-  const visible = new Map(visibleFaqItems($).map((item) => [comparableText(item.question), comparableText(item.answer)]));
+  const visible = visibleFaqItems($);
   const faqNodes = nodes.filter((node) => hasType(node, "FAQPage"));
   if (faqNodes.length > 1) issues.push(`FAQPage duplicat: ${faqNodes.length}`);
+  if (visible.length >= 2 && faqNodes.length !== 1) issues.push(`FAQ vizibil cu ${visible.length} întrebări, dar FAQPage găsite: ${faqNodes.length}`);
+  if (visible.length < 2 && faqNodes.length) issues.push("FAQPage fără minimum două întrebări FAQ vizibile reale");
+  const visibleSeen = new Set();
+  for (const item of visible) {
+    const key = comparableText(item.question);
+    if (visibleSeen.has(key)) issues.push(`FAQ vizibil duplicat: '${item.question}'`);
+    visibleSeen.add(key);
+  }
   for (const faq of faqNodes) {
     const entities = Array.isArray(faq.mainEntity) ? faq.mainEntity : [];
     if (!entities.length) issues.push("FAQPage fără întrebări");
+    if (entities.length !== visible.length) issues.push(`FAQPage are ${entities.length} întrebări, HTML are ${visible.length}`);
     const seen = new Set();
-    for (const entity of entities) {
+    for (const [index, entity] of entities.entries()) {
       const question = cleanText(entity.name || entity.question);
       const answer = cleanText(entity.acceptedAnswer?.text || entity.answer);
       const key = comparableText(question);
       if (!key || !answer) issues.push(`FAQ incomplet: '${question || "întrebare goală"}'`);
       if (seen.has(key)) issues.push(`FAQ duplicat: '${question}'`);
       seen.add(key);
-      if (!visible.has(key)) issues.push(`FAQ fără întrebare vizibilă: '${question}'`);
-      else if (visible.get(key) !== comparableText(answer)) issues.push(`FAQ cu răspuns diferit de cel vizibil: '${question}'`);
+      if (!visible[index]) issues.push(`FAQ fără întrebare vizibilă: '${question}'`);
+      else if (key !== comparableText(visible[index].question)) issues.push(`FAQ în altă ordine sau cu întrebare diferită la poziția ${index + 1}`);
+      else if (comparableText(visible[index].answer) !== comparableText(answer)) issues.push(`FAQ cu răspuns diferit de cel vizibil: '${question}'`);
     }
   }
 }
