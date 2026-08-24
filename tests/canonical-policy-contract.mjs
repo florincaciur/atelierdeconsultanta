@@ -44,6 +44,7 @@ for (const route of inventory.routes) {
   assert.equal(parsed.port, "", `${route.route}: canonical port explicit`);
   assert.equal(parsed.search, "", `${route.route}: canonical cu query string`);
   assert.equal(parsed.hash, "", `${route.route}: canonical cu fragment`);
+  assert.equal(parsed.pathname, parsed.pathname.toLowerCase(), `${route.route}: path-ul canonical trebuie să fie lowercase`);
   if (parsed.pathname !== "/") {
     assert.doesNotMatch(parsed.pathname, /(?:\/$|\.html$|\/index\.html$)/iu, `${route.route}: formă canonical necurată`);
   }

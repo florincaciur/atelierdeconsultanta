@@ -44,6 +44,6 @@ Panoul `/admin/` nu este autoritatea pentru faptele programelor și nu trebuie f
 
 ## Politica URL și canonical
 
-Hostul canonical este `https://atelierdeconsultanta.ro`. Rutele indexabile folosesc forma curată fără `www`, query string, `.html`, `/index.html` sau slash final, cu excepția homepage-ului `/`. Autoritatea pentru setul public este inventarul generat de `tools/generate-route-inventory.js`; `_redirects` și workerul de domeniu păstrează aliasurile istorice prin 301 direct.
+Hostul canonical este `https://atelierdeconsultanta.ro`. Rutele indexabile folosesc forma curată lowercase, fără `www`, query string, `.html`, `/index.html` sau slash final, cu excepția homepage-ului `/`. Path-urile sunt case-sensitive: o variantă cu majuscule nu este un URL alternativ și poate răspunde 404. Autoritatea pentru setul public este inventarul generat de `tools/generate-route-inventory.js`; `_redirects` și workerul de domeniu păstrează aliasurile istorice prin 301 direct.
 
 Definițiile din `config/seo-programs.json#pages` care indică rute retrase trebuie să declare `redirectTo`. Artefactele HTML păstrate ca fallback folosesc canonicalul destinației și nu devin surse publice concurente. Rulează `npm run test:canonical-policy` după orice schimbare de rutare, canonical, robots, sitemap sau host.

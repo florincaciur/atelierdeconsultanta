@@ -81,6 +81,9 @@ for (const url of urls) {
   if (parsed.protocol !== "https:" || parsed.hostname !== "atelierdeconsultanta.ro" || parsed.port || parsed.search || parsed.hash) {
     errors.push(`${url}: URL-ul din inventar nu este canonical HTTPS curat`);
   }
+  if (parsed.pathname !== parsed.pathname.toLowerCase()) {
+    errors.push(`${url}: path-ul canonical trebuie să folosească exclusiv litere mici`);
+  }
   if (parsed.pathname !== "/" && (parsed.pathname.endsWith("/") || parsed.pathname.endsWith(".html") || parsed.pathname.endsWith("/index.html"))) {
     errors.push(`${url}: forma canonical nu respectă politica fără slash final, .html sau /index.html`);
   }
