@@ -27,6 +27,47 @@ function loadConfig() {
   return JSON.parse(fs.readFileSync(CONFIG_PATH, "utf8"));
 }
 
+function intersection(left = [], right = []) {
+  const rightSet = new Set(right);
+  return left.filter((value) => rightSet.has(value));
+}
+
+function relatedPrograms(program, programs = loadProgramConfig().programs) {
+  const parentHub = program.discovery?.parentHub;
+  const parentRoute = parentForRoute(program.pageUrl);
+  if (!parentHub) return [];
+  return programs
+    .filter((candidate) => candidate.id !== program.id
+      && isPublicProgram(candidate)
+      && !candidate.discovery?.redirectTarget
+      && candidate.pageUrl !== parentRoute
+      && candidate.discovery?.parentHub === parentHub)
+    .map((candidate) => ({
+      candidate,
+      score: (intersection(program.discovery?.investmentTypes, candidate.discovery?.investmentTypes).length * 4)
+        + (intersection(program.discovery?.applicantTypes, candidate.discovery?.applicantTypes).length * 2)
+        + intersection(program.discovery?.regions, candidate.discovery?.regions).length
+    }))
+    .sort((left, right) => right.score - left.score
+      || (left.candidate.presentation?.navigationOrder ?? Number.MAX_SAFE_INTEGER) - (right.candidate.presentation?.navigationOrder ?? Number.MAX_SAFE_INTEGER)
+      || left.candidate.name.localeCompare(right.candidate.name, "ro"))
+    .slice(0, 4)
+    .map(({ candidate }) => ({
+      relation: "related",
+      href: candidate.pageUrl,
+      programId: candidate.id,
+      anchor: `compară cu ${candidate.shortName}`,
+      explanation: `Program din aceeași familie; compară solicitantul, investiția, stadiul oficial și documentele aplicabile.`
+    }));
+}
+
+function relevantService(program, config) {
+  const key = config.serviceByProgram?.[program.id] || config.serviceByParent?.[program.discovery?.parentHub];
+  const service = config.services?.[key];
+  if (!service) throw new Error(`${program.slug}: serviciul relevant nu poate fi derivat`);
+  return { relation: "service", ...service };
+}
+
 function programFiles(route) {
   const clean = String(route || "").replace(/^\/+|\/+$/gu, "");
   return [...new Set([
@@ -35,23 +76,31 @@ function programFiles(route) {
   ])].filter((file) => fs.existsSync(file));
 }
 
-function resolvedLinks(program, config = loadConfig()) {
+function resolvedLinks(program, config = loadConfig(), programs = loadProgramConfig().programs) {
   const row = config.programs?.[program.id];
   if (!row) throw new Error(`${program.slug}: lipsește din matricea program-contextual-links`);
   const parentRoute = parentForRoute(program.pageUrl);
   const parent = config.parents?.[parentRoute];
   if (!parent) throw new Error(`${program.slug}: părintele ${parentRoute || "lipsește"} nu are copy în matrice`);
   const instrument = config.resources?.[row.instrument];
-  const comparison = config.resources?.[row.comparison];
-  if (!instrument || !comparison) throw new Error(`${program.slug}: instrument sau comparație nedefinită`);
+  if (!instrument) throw new Error(`${program.slug}: instrument nedefinit`);
+  const related = relatedPrograms(program, programs);
+  const service = relevantService(program, config);
+  const reserved = new Set([parentRoute, ...related.map((link) => link.href), service.href, instrument.href]);
+  const guideKey = [row.comparison, config.fallbackGuide]
+    .find((key) => config.resources?.[key] && !reserved.has(config.resources[key].href));
+  const guide = config.resources?.[guideKey];
+  if (!guide) throw new Error(`${program.slug}: ghid relevant nedefinit sau duplicat`);
 
   return [
     { relation: "parent", href: parentRoute, ...parent },
+    ...related,
+    service,
     { relation: "instrument", ...instrument },
-    { relation: "comparison", ...comparison },
+    { relation: "guide", ...guide },
     {
       relation: "conversion",
-      href: `/contact#program_slug=${encodeURIComponent(program.slug)}&source_page=${encodeURIComponent(program.pageUrl)}`,
+      href: `/contact#program_slug=${encodeURIComponent(row.contactProgramSlug || program.slug)}&source_page=${encodeURIComponent(program.pageUrl)}`,
       anchor: row.conversionAnchor,
       explanation: row.conversionMicrocopy || "Trimite contextul proiectului pentru o verificare inițială, fără promisiunea eligibilității."
     }
@@ -60,9 +109,11 @@ function resolvedLinks(program, config = loadConfig()) {
 
 function relationLabel(relation) {
   return {
-    parent: "Părinte",
+    parent: "Familie",
+    related: "Program asociat",
+    service: "Serviciu relevant",
     instrument: "Instrument",
-    comparison: "Ghid sau comparație",
+    guide: "Ghid relevant",
     conversion: "Următorul pas"
   }[relation] || relation;
 }
@@ -74,8 +125,9 @@ function renderProgramContextualLinks(program, config = loadConfig()) {
     const tracking = isConversion
       ? ` data-analytics-event="cta_click" data-analytics-component="program_contextual_cta" data-analytics-cta-id="${escapeHtml(program.slug)}_contextual_conversion" data-analytics-target="/contact" data-analytics-program-slug="${escapeHtml(program.slug)}" data-analytics-program-family="${escapeHtml(program.family)}" data-analytics-cta-view="true" data-analytics-copy-variant="default"`
       : "";
+    const targetProgram = link.programId ? ` data-target-program-id="${escapeHtml(link.programId)}"` : "";
     return `      <li>
-        <a class="program-contextual-links__link" href="${escapeHtml(link.href)}" data-link-type="${isConversion ? "conversion" : "contextual"}" data-link-relation="${escapeHtml(link.relation)}"${tracking}>
+        <a class="program-contextual-links__link" href="${escapeHtml(link.href)}" data-link-type="${isConversion ? "conversion" : "contextual"}" data-link-relation="${escapeHtml(link.relation)}"${targetProgram}${tracking}>
           <span class="program-contextual-links__relation">${escapeHtml(relationLabel(link.relation))}</span>
           <span class="program-contextual-links__anchor">${escapeHtml(link.anchor)}</span>
           <span class="program-contextual-links__explanation">${escapeHtml(link.explanation)}</span>
@@ -86,7 +138,7 @@ function renderProgramContextualLinks(program, config = loadConfig()) {
   return `${START}
   <section class="program-contextual-links" data-program-contextual-links="" data-program-id="${escapeHtml(program.id)}" aria-labelledby="program-contextual-${escapeHtml(program.slug)}-title">
     <h2 id="program-contextual-${escapeHtml(program.slug)}-title">Continuă cu traseul potrivit</h2>
-    <p>Patru legături intenționate: contextul programului, un instrument, un reper complementar și verificarea proiectului.</p>
+    <p>Compară familia și programele apropiate, apoi folosește serviciul, instrumentul și ghidul relevante înainte de verificarea proiectului.</p>
     <ul class="program-contextual-links__list">
 ${items}
     </ul>
@@ -144,8 +196,20 @@ function validateMatrix(programs, config) {
   const unknown = [...matrixIds].filter((id) => !programIds.has(id));
   if (missing.length || unknown.length) throw new Error(`Matrice incompletă: lipsesc [${missing.join(", ")}], necunoscute [${unknown.join(", ")}]`);
   for (const program of programs) {
-    const links = resolvedLinks(program, config);
-    if (links.length !== 4) throw new Error(`${program.slug}: sunt necesare exact patru relații`);
+    const links = resolvedLinks(program, config, programs);
+    const related = links.filter((link) => link.relation === "related");
+    const availableRelated = programs.filter((candidate) => candidate.id !== program.id
+      && isPublicProgram(candidate)
+      && !candidate.discovery?.redirectTarget
+      && candidate.pageUrl !== parentForRoute(program.pageUrl)
+      && candidate.discovery?.parentHub === program.discovery?.parentHub).length;
+    const expectedRelated = Math.min(4, availableRelated);
+    if (related.length !== expectedRelated || (availableRelated >= 2 && related.length < 2)) {
+      throw new Error(`${program.slug}: ${related.length} programe asociate, necesar ${expectedRelated}`);
+    }
+    for (const relation of ["parent", "service", "instrument", "guide", "conversion"]) {
+      if (links.filter((link) => link.relation === relation).length !== 1) throw new Error(`${program.slug}: relația ${relation} trebuie să fie unică`);
+    }
     if (new Set(links.map((link) => link.href)).size !== links.length) throw new Error(`${program.slug}: destinații duplicate`);
   }
 }
@@ -153,9 +217,9 @@ function validateMatrix(programs, config) {
 function main() {
   const config = loadConfig();
   const allPrograms = loadProgramConfig().programs;
-  const programs = allPrograms.filter((program) => !program.discovery?.redirectTarget);
+  const programs = allPrograms.filter((program) => isPublicProgram(program) && !program.discovery?.redirectTarget);
   validateMatrix(programs, config);
-  const publicPrograms = programs.filter((program) => isPublicProgram(program) && program.discovery?.listed !== false);
+  const publicPrograms = programs;
   const excludedRoutes = new Set(config.excludedRoutes || []);
   const managedPrograms = publicPrograms.filter((program) => !excludedRoutes.has(program.pageUrl));
   const managedProgramIds = new Set(managedPrograms.map((program) => program.id));
