@@ -431,3 +431,25 @@ JavaScript modifică numai stare de interfață: slide activ/inert în carusel, 
 Auditul a găsit două forme ale aceluiași gol. `/gdpr` nu avea breadcrumb vizibil, deși schema BreadcrumbList exista. În plus, sursele root și directory sunt încă divergente pe câteva rute legacy, iar `dist` folosește sursa declarată de inventarul sitemap; cinci dintre aceste surse de deploy nu aveau breadcrumb, deși fișierul root verificat local îl avea. Sincronizatorul nativ procesează acum atât sursa aleasă de `fileForRoute()`, cât și sursa efectiv materializată în deploy. Au fost sincronizate aliasurile pentru Autoconsum instituții publice, Femeia Antreprenor, Fondul pentru energie regenerabilă, Modernizarea microîntreprinderilor și Start-Up Nation. Serializarea atributului boolean și newline-urile păstrează forma fișierului urmărit, evitând rescrieri fără diferență semantică.
 
 Hubul `/blog` și îmbunătățirea opțională din `official-guides.js` rămân dependențe CSR secundare documentate în baseline și în `T00-028`; ele nu fac parte din scope-ul Task 13. Articolele canonice și sursele/statusurile programelor din scope rămân materializate în HTML. Contractul scanează JavaScriptul public, scripturile inline ale rutelor și workerul de domeniu și interzice ramuri bazate pe `user-agent`, nume de crawleri ori `cf.client.bot` pentru rendering.
+
+## Audit final Task 14 — breadcrumbs vizibile și BreadcrumbList coerent
+
+Audit: 24 august 2026. Ierarhia este derivată din inventarul stabil de 105 rute, registrul celor 24 de programe publice și cele cinci familii aprobate. Nu au fost create rute, redirecturi sau niveluri artificiale. Homepage-ul rămâne fără breadcrumb vizibil și fără `BreadcrumbList`.
+
+Auditul inițial a identificat două divergențe. Rădăcina publică `/resurse` și hubul `/ghiduri` erau inversate față de ierarhia aprobată în content-intent inventory: breadcrumb-ul afișa `Acasă → Ghiduri → Resurse`. În plus, cele patru pagini showcase `/diaspora-investeste-acasa`, `/e-drive`, `/e-mobility` și `/fondul-modernizare-pc1-stocare` păstrau un al doilea `nav.program-breadcrumbs` lângă breadcrumb-ul standard. Registrul unic publică acum `Acasă → Resurse → pagină` pentru ghiduri/articole/întrebări, păstrează huburile `/ghiduri`, `/blog`, `/resurse-utile`, `/intrebari-frecvente` și `/webinarii` sub `/resurse`, iar sincronizatorul elimină orice variantă legacy singulară sau plurală.
+
+### Contractul de ierarhie
+
+| Suprafață | Ierarhie verificată | Scope derivat |
+|---|---|---:|
+| Programe | `Acasă → Programe → Familie → Program` | 24 programe publice |
+| Familii | `Acasă → Programe → Familie` | 5 huburi |
+| Servicii | `Acasă → Servicii → Serviciu` | 17 rute din inventarul de intenție |
+| Ghiduri / articole / întrebări | `Acasă → Resurse → Pagină` | 34 ghiduri + 3 întrebări |
+| Instrumente | `Acasă → Instrumente → Instrument` | calculator SO și calendar |
+| Despre | `Acasă → Despre FABER → Subpagină` | metodologie și studii de caz |
+| Legal / contact | traseu direct din homepage | 3 pagini legale + contact |
+
+Auditul verifică fiecare document JSON-LD ca JSON parseable, exact un `BreadcrumbList`, poziții consecutive și unice, `ListItem`, nume și URL identice cu breadcrumb-ul vizibil, current page fără self-link și cu `aria-current="page"`, linkuri intermediare canonical directe, părinți 200/self-canonical/indexabili, zero surse de redirect și stylesheet-ul comun. Ruta `/gdpr`, exclusă intenționat numai din sitemap, este inclusă prin inventarul public și nu mai rămâne în afara gate-ului.
+
+Rezultatul local este 105/105 rute și 114 surse canonical/deploy conforme. Output-ul Cloudflare verifică separat 105/105 rute și 110 reprezentări HTML fizice. Contractul live rulează aceleași invariante pe URL-urile canonice după publicare.

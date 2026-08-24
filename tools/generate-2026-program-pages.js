@@ -3,6 +3,7 @@
 
 const fs = require("fs");
 const path = require("path");
+const { synchronizedHtml } = require("./sync-breadcrumbs");
 
 const ROOT = path.resolve(__dirname, "..");
 const SITE = "https://atelierdeconsultanta.ro";
@@ -129,6 +130,10 @@ ${HEADER}
 </body></html>`;
 }
 
+function renderSynchronizedPage(program, content) {
+  return synchronizedHtml(`${renderPage(program, content)}\n`, program.pageUrl);
+}
+
 function run({ check = false } = {}) {
   const bySlug = new Map(REGISTRY.map((program) => [program.slug, program]));
   const stale = [];
@@ -136,7 +141,7 @@ function run({ check = false } = {}) {
     const program = bySlug.get(slug);
     if (!program || program.publicationState !== "public") throw new Error(`${slug}: program public lipsă din registru.`);
     const output = path.join(ROOT, program.pageUrl.slice(1), "index.html");
-    const html = `${renderPage(program, content)}\n`;
+    const html = renderSynchronizedPage(program, content);
     if (check) {
       if (!fs.existsSync(output) || fs.readFileSync(output, "utf8") !== html) stale.push(path.relative(ROOT, output));
     } else {
@@ -153,4 +158,4 @@ if (require.main === module) {
   catch (error) { console.error(`FAIL: ${error.message}`); process.exitCode = 1; }
 }
 
-module.exports = { PAGE_CONTENT, renderPage, run };
+module.exports = { PAGE_CONTENT, renderPage, renderSynchronizedPage, run };

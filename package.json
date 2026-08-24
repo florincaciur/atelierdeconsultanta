@@ -82,6 +82,8 @@
     "sync:breadcrumbs": "node tools/sync-breadcrumbs.js",
     "audit:breadcrumbs": "node tools/audit-breadcrumbs.js",
     "test:breadcrumbs": "node tools/sync-breadcrumbs.js --check && node tools/audit-breadcrumbs.js --check --no-report && node tests/breadcrumbs-contract.mjs",
+    "test:breadcrumbs:dist": "node tools/audit-breadcrumbs.js --check --no-report --dist && node tests/breadcrumbs-contract.mjs --dist",
+    "audit:breadcrumbs:live": "node tests/breadcrumbs-contract.mjs --live",
     "sync:program-contextual-links": "node tools/sync-program-contextual-links.js",
     "audit:program-contextual-links": "node tools/audit-program-contextual-links.js",
     "test:program-contextual-links": "node tools/sync-program-contextual-links.js --check && node tools/audit-program-contextual-links.js --check --no-report && node tests/program-contextual-links-contract.mjs",

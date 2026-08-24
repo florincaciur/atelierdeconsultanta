@@ -9,12 +9,12 @@ const cheerio = require("cheerio");
 const {
   breadcrumbItemsForRoute,
   breadcrumbRouteEntries,
-  knownRoutes,
   normalizeRoute
 } = require("./breadcrumb-registry");
 const { breadcrumbSchema, serializeJsonLd } = require("./schema-helpers");
 const { collectSiteState } = require("./generate-sitemap");
-const { fileForRoute, graphNodes, hasType, sitemapRoutes } = require("./structured-data-utils");
+const { buildInventory } = require("./generate-route-inventory");
+const { fileForRoute, graphNodes, hasType } = require("./structured-data-utils");
 
 const ROOT = path.resolve(__dirname, "..");
 const CHECK = process.argv.includes("--check");
@@ -50,8 +50,8 @@ function renderBreadcrumb(route, currentName) {
 function removeExistingVisibleBreadcrumb(html) {
   return html
     .replace(new RegExp(`${START}[\\s\\S]*?${END}`, "giu"), "")
-    .replace(/\s*<nav\b[^>]*(?:data-breadcrumb|class=["'][^"']*\bbreadcrumb\b[^"']*["'])[^>]*>[\s\S]*?<\/nav>\s*/iu, "\n")
-    .replace(/\s*<div\b[^>]*class=["'][^"']*\bbreadcrumb\b[^"']*["'][^>]*>[\s\S]*?<\/div>\s*/iu, "\n");
+    .replace(/\s*<nav\b[^>]*(?:data-breadcrumb|class=["'][^"']*\bbreadcrumbs?\b[^"']*["'])[^>]*>[\s\S]*?<\/nav>\s*/giu, "\n")
+    .replace(/\s*<div\b[^>]*class=["'][^"']*\bbreadcrumbs?\b[^"']*["'][^>]*>[\s\S]*?<\/div>\s*/giu, "\n");
 }
 
 function insertVisibleBreadcrumb(html, markup) {
@@ -69,7 +69,9 @@ function insertVisibleBreadcrumb(html, markup) {
 function syncVisibleBreadcrumb(html, markup) {
   const managedPattern = new RegExp(`${START}[\\s\\S]*?${END}`, "giu");
   if (markup && managedPattern.test(html)) {
-    return html.replace(new RegExp(`${START}[\\s\\S]*?${END}`, "giu"), markup);
+    const slot = "<!-- BREADCRUMB_SLOT -->";
+    const withSlot = html.replace(new RegExp(`${START}[\\s\\S]*?${END}`, "giu"), slot);
+    return removeExistingVisibleBreadcrumb(withSlot).replace(slot, markup);
   }
   return insertVisibleBreadcrumb(removeExistingVisibleBreadcrumb(html), markup);
 }
@@ -137,14 +139,20 @@ function synchronizedHtml(source, route) {
 
 function main() {
   const siteState = collectSiteState();
+  const inventory = buildInventory();
   const deployedSourceByRoute = new Map(siteState.entries.map((entry) => [entry.route, path.join(ROOT, entry.sourceFile)]));
-  const routes = [...new Set([...sitemapRoutes(ROOT), ...knownRoutes()])].sort();
+  const sourceByRoute = new Map(inventory.routes.map((entry) => [entry.route, path.join(ROOT, entry.sourceFile)]));
+  const routes = inventory.routes.map((entry) => entry.route);
   const changed = [];
   const skipped = [];
   let checked = 0;
 
   for (const route of routes) {
-    const files = [...new Set([fileForRoute(ROOT, route), deployedSourceByRoute.get(route)].filter(Boolean))];
+    const files = [...new Set([
+      fileForRoute(ROOT, route),
+      sourceByRoute.get(route),
+      deployedSourceByRoute.get(route)
+    ].filter(Boolean))];
     for (const file of files) {
       if (!fs.existsSync(file)) {
         skipped.push(`${route}: fișier inexistent`);

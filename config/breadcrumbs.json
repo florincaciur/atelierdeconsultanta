@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "reviewedAt": "2026-07-21",
+  "reviewedAt": "2026-08-24",
   "home": {
     "route": "/",
     "label": "Acasă"
@@ -11,8 +11,8 @@
       "parentLabel": "Programe"
     },
     "guide": {
-      "route": "/ghiduri",
-      "parentLabel": "Ghiduri"
+      "route": "/resurse",
+      "parentLabel": "Resurse"
     },
     "service": {
       "route": "/consultanta-fonduri-europene",
@@ -35,10 +35,12 @@
     "/finantari-panouri-fotovoltaice": "/fonduri-europene",
     "/fonduri-europene-imm": "/fonduri-europene",
     "/fonduri-europene-agricultura": "/fonduri-europene",
-    "/ghiduri": "/",
-    "/resurse": "/ghiduri",
-    "/resurse-utile": "/ghiduri",
-    "/blog": "/ghiduri",
+    "/resurse": "/",
+    "/ghiduri": "/resurse",
+    "/resurse-utile": "/resurse",
+    "/blog": "/resurse",
+    "/intrebari-frecvente": "/resurse",
+    "/webinarii": "/resurse",
     "/consultanta-fonduri-europene": "/",
     "/instrumente": "/",
     "/despre-faber": "/",
@@ -75,8 +77,8 @@
   },
   "typeParents": {
     "program": "/fonduri-europene",
-    "ghid": "/ghiduri",
-    "întrebare": "/ghiduri",
+    "ghid": "/resurse",
+    "întrebare": "/resurse",
     "serviciu": "/consultanta-fonduri-europene",
     "instrument": "/instrumente",
     "studiu_de_caz": "/despre-faber",
