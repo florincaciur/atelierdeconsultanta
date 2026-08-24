@@ -3,17 +3,13 @@
 
 const fs = require("fs");
 const path = require("path");
-const { sitemapUrls: readSitemapUrls } = require("../tools/sitemap-utils");
+const { buildInventory, validateInventory } = require("../tools/generate-route-inventory");
 
 const ROOT = path.resolve(__dirname, "..");
 const SITE = "https://atelierdeconsultanta.ro";
 
 function read(file) {
   return fs.readFileSync(path.join(ROOT, file), "utf8");
-}
-
-function sitemapUrls() {
-  return readSitemapUrls(ROOT);
 }
 
 function routeForUrl(url) {
@@ -66,20 +62,27 @@ function parseRedirectSources() {
 }
 
 const errors = [];
-const urls = sitemapUrls();
-const sitemapSet = new Set(urls);
+const inventory = buildInventory();
+errors.push(...validateInventory(inventory).map((error) => `inventar rute: ${error}`));
+const urls = inventory.routes.map((route) => route.canonicalUrl);
+const canonicalSet = new Set(urls);
 const redirectSources = parseRedirectSources();
+
+if (canonicalSet.size !== urls.length) errors.push("inventarul conține URL-uri canonical duplicate");
 
 for (const url of urls) {
   let parsed;
   try {
     parsed = new URL(url);
   } catch {
-    errors.push(`${url}: URL invalid în sitemap`);
+    errors.push(`${url}: URL invalid în inventarul rutelor`);
     continue;
   }
-  if (parsed.protocol !== "https:" || parsed.hostname !== "atelierdeconsultanta.ro" || parsed.search || parsed.hash) {
-    errors.push(`${url}: URL-ul din sitemap nu este canonical HTTPS curat`);
+  if (parsed.protocol !== "https:" || parsed.hostname !== "atelierdeconsultanta.ro" || parsed.port || parsed.search || parsed.hash) {
+    errors.push(`${url}: URL-ul din inventar nu este canonical HTTPS curat`);
+  }
+  if (parsed.pathname !== "/" && (parsed.pathname.endsWith("/") || parsed.pathname.endsWith(".html") || parsed.pathname.endsWith("/index.html"))) {
+    errors.push(`${url}: forma canonical nu respectă politica fără slash final, .html sau /index.html`);
   }
   const file = htmlForUrl(url);
   if (!file) {
@@ -107,7 +110,7 @@ for (const url of urls) {
     errors.push(`${url}: canonicalul trebuie să fie HTTPS pe atelierdeconsultanta.ro`);
   }
   if (canonical !== url) errors.push(`${url}: canonical diferit: ${canonical}`);
-  if (!sitemapSet.has(canonical)) errors.push(`${url}: canonicalul nu există în sitemap`);
+  if (!canonicalSet.has(canonical)) errors.push(`${url}: canonicalul nu există în inventarul stabil de rute`);
   if (!htmlForUrl(canonical)) errors.push(`${url}: canonicalul indică o destinație locală inexistentă`);
   const canonicalPath = canonicalUrl.pathname === "/" ? "/" : canonicalUrl.pathname.replace(/\/+$/, "");
   if (redirectSources.has(canonicalPath)) errors.push(`${url}: canonicalul este sursă de redirect`);
@@ -122,4 +125,4 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log(`Canonical consistency PASS: ${urls.length} indexable pages.`);
+console.log(`Canonical consistency PASS: ${urls.length} indexable routes from the stable route inventory.`);

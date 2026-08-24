@@ -112,7 +112,7 @@
     "^/fonduri-europene-bucuresti$"
   ],
   "blockedNonIndexableRoutes": [
-    {"route": "/granturi-digitalizare-imm", "reason": "Candidat de consolidare P0.09; decizia de redirect nu este aprobată."},
+    {"route": "/granturi-digitalizare-imm", "reason": "Alias legacy neindexabil; 301 direct aprobat către /digitalizare-imm."},
     {"route": "/gdpr", "reason": "Duplicat legal scos din sitemap; 301 rămâne condiționat de avizul juridic."}
   ]
 }

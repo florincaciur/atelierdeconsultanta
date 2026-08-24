@@ -41,3 +41,9 @@ Fluxul sigur de modificare este:
 `config/homepage-programs.json` păstrează doar comportamentul componentei (limită, autorotire, linkul către catalog și reguli de grid). `config/program-status-taxonomy.json` definește vocabularul de status, iar atribuirea canonică este în fiecare program. `config/program-source-registry.json` păstrează numai catalogul surselor oficiale suplimentare; rolurile surselor fiecărui program sunt în înregistrarea sa.
 
 Panoul `/admin/` nu este autoritatea pentru faptele programelor și nu trebuie folosit pentru publicarea directă a unui `banners.json` independent.
+
+## Politica URL și canonical
+
+Hostul canonical este `https://atelierdeconsultanta.ro`. Rutele indexabile folosesc forma curată fără `www`, query string, `.html`, `/index.html` sau slash final, cu excepția homepage-ului `/`. Autoritatea pentru setul public este inventarul generat de `tools/generate-route-inventory.js`; `_redirects` și workerul de domeniu păstrează aliasurile istorice prin 301 direct.
+
+Definițiile din `config/seo-programs.json#pages` care indică rute retrase trebuie să declare `redirectTo`. Artefactele HTML păstrate ca fallback folosesc canonicalul destinației și nu devin surse publice concurente. Rulează `npm run test:canonical-policy` după orice schimbare de rutare, canonical, robots, sitemap sau host.

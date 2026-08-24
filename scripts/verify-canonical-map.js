@@ -265,8 +265,17 @@ function localCanonicalAudit() {
     problems.push("/dr14-afir-ferme-mici remains in llms.txt");
   }
   const config = JSON.parse(read("config/seo-programs.json"));
-  const retiredDr14 = (config.pages || []).find((page) => page.slug === "dr14-afir-ferme-mici");
-  if (!retiredDr14 || retiredDr14.redirectTo !== "/dr14") problems.push("Program generator does not retire /dr14-afir-ferme-mici to /dr14");
+  for (const page of config.pages || []) {
+    const source = `/${page.slug}`;
+    const trace = traceRedirect(source, redirects);
+    if (!trace.chain.length) continue;
+    const declaredTarget = page.redirectTo ? destinationPath(page.redirectTo) : "";
+    if (!declaredTarget) {
+      problems.push(`Redirected page definition is not retired in the generator: ${source} -> ${trace.finalPath}`);
+    } else if (declaredTarget !== trace.finalPath) {
+      problems.push(`Redirected page definition has a conflicting target: ${source} -> ${declaredTarget}, expected ${trace.finalPath}`);
+    }
+  }
   const blog = JSON.parse(read("blog.json"));
   if ((blog.posts || []).some((post) => post.slug === "dr14-afir-ferme-mici" && post.published !== false)) {
     problems.push("Retired DR14 alias remains published in blog.json");

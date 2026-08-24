@@ -4188,6 +4188,7 @@
     {
       "slug": "por-adr-nord-est",
       "output": "por-adr-nord-est.html",
+      "redirectTo": "/investitii-modernizarea-microintreprinderilor-apel-2",
       "type": "program",
       "schemaType": "GovernmentService",
       "category": "Program regional",
@@ -6201,6 +6202,7 @@
     {
       "slug": "studii-de-caz",
       "output": "studii-de-caz/index.html",
+      "redirectTo": "/studii-de-caz-fonduri-europene",
       "type": "trust",
       "approvedItemsCount": 0,
       "robots": "noindex, follow",
@@ -6553,6 +6555,7 @@
     {
       "slug": "portofoliu",
       "output": "portofoliu/index.html",
+      "redirectTo": "/studii-de-caz-fonduri-europene",
       "type": "trust",
       "approvedItemsCount": 0,
       "robots": "noindex, follow",
@@ -6658,6 +6661,7 @@
     {
       "slug": "testimoniale",
       "output": "testimoniale/index.html",
+      "redirectTo": "/studii-de-caz-fonduri-europene",
       "type": "trust",
       "approvedItemsCount": 0,
       "robots": "noindex, follow",
@@ -9253,6 +9257,7 @@
       ],
       "slug": "granturi-digitalizare-imm",
       "output": "granturi-digitalizare-imm/index.html",
+      "redirectTo": "/digitalizare-imm",
       "type": "hub",
       "schemaType": "WebPage",
       "category": "Granturi digitalizare",
