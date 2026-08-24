@@ -7,6 +7,7 @@ const { loadNextStepConfig, renderNextStepBlock } = require("./contextual-next-s
 const { loadEditorialGovernance, renderEditorialGovernance } = require("./editorial-governance");
 const {
   PROGRAM_STATUSES,
+  catalogPrograms,
   hasOfficialSource,
   isPublicProgram,
   loadProgramConfig,
@@ -127,7 +128,7 @@ function coverageText(program, filters) {
 
 function renderCard(program, filters) {
   const discovery = program.discovery;
-  return `<article class="program-family-card" data-program-card data-program-id="${esc(program.id)}" data-program-status="${esc(program.status)}" data-status-label="${esc(program.statusLabel)}" data-verified-at="${esc(program.verifiedAt)}" data-source-url="${esc(program.sourceUrl)}" data-applicant-types="${esc(discovery.applicantTypes.join(" "))}" data-regions="${esc(discovery.regions.join(" "))}" data-investment-types="${esc(discovery.investmentTypes.join(" "))}" data-status="${esc(program.status)}">
+  return `<article class="program-family-card" data-program-card="" data-program-id="${esc(program.id)}" data-program-status="${esc(program.status)}" data-status-label="${esc(program.statusLabel)}" data-verified-at="${esc(program.verifiedAt)}" data-source-url="${esc(program.sourceUrl)}" data-applicant-types="${esc(discovery.applicantTypes.join(" "))}" data-regions="${esc(discovery.regions.join(" "))}" data-investment-types="${esc(discovery.investmentTypes.join(" "))}" data-status="${esc(program.status)}">
   <div class="program-family-card__body">
     <h3><a href="${esc(program.pageUrl)}">${esc(program.shortName || program.name)}</a></h3>
     <p class="program-family-card__status"><strong>${esc(statusStatement(program))}</strong> Verificat la <time datetime="${esc(program.verifiedAt)}">${esc(dateLabel(program.verifiedAt))}</time>.</p>
@@ -168,7 +169,7 @@ function renderMain(hub, programs, filters, hubRecord = null) {
   const nextStepSlug = Object.keys(nextStepConfig.pages).find((slug) => nextStepConfig.pages[slug].route === hub.route);
   const contextualNextStep = !hubRecord && nextStepSlug ? `\n\n${renderNextStepBlock(nextStepSlug, nextStepConfig)}` : "";
   const editorialRecord = loadEditorialGovernance().byRoute.get(hub.route);
-  const editorialGovernance = editorialRecord ? `\n\n${renderEditorialGovernance(editorialRecord)}` : "";
+  const editorialGovernance = editorialRecord ? `\n${renderEditorialGovernance(editorialRecord)}` : "";
 
   return `<main class="container program-family-hub" id="main-content" tabindex="-1" data-program-family-hub="${esc(hub.id)}">
   <section class="program-family-filter-panel" aria-labelledby="program-family-filter-title">
@@ -179,7 +180,7 @@ function renderMain(hub, programs, filters, hubRecord = null) {
       </div>
       <p>Filtrele schimbă numai lista vizibilă. Combinația este păstrată în URL-ul paginii, dar nu creează pagini indexabile separate.</p>
     </div>
-    <div class="program-family-filters" data-program-hub-filters role="group" aria-label="Filtrează programele">
+    <div class="program-family-filters" data-program-hub-filters="" role="group" aria-label="Filtrează programele">
       <div class="program-family-filter">
         <label for="hub-filter-applicant">Tip solicitant</label>
         <select id="hub-filter-applicant" name="solicitant" aria-controls="hub-program-list">${optionMarkup(applicantTypes, filters.applicantTypes, "Toți solicitanții")}</select>
@@ -196,17 +197,17 @@ function renderMain(hub, programs, filters, hubRecord = null) {
         <label for="hub-filter-status">Status</label>
         <select id="hub-filter-status" name="status" aria-controls="hub-program-list">${optionMarkup(statuses, statusLabels, "Toate statusurile")}</select>
       </div>
-      <button class="btn btn-secondary program-family-filters__reset" type="button" data-program-filters-reset>Resetează filtrele</button>
+      <button class="btn btn-secondary program-family-filters__reset" type="button" data-program-filters-reset="">Resetează filtrele</button>
     </div>
-    <p class="program-family-results-status" id="hub-filter-results" role="status" aria-live="polite" aria-atomic="true" data-program-results-status>${esc(countLabel)}.</p>
+    <p class="program-family-results-status" id="hub-filter-results" role="status" aria-live="polite" aria-atomic="true" data-program-results-status="">${esc(countLabel)}.</p>
   </section>${factualContext}
 
   <section class="program-family-results" aria-labelledby="program-family-results-title">
     <h2 id="program-family-results-title">Programe din familia ${esc(hub.label)}</h2>
-    <div class="program-family-grid" id="hub-program-list" data-program-list>
+    <div class="program-family-grid" id="hub-program-list" data-program-list="">
       ${programs.map((program) => renderCard(program, filters)).join("\n      ")}
     </div>
-    <div class="program-family-empty" data-program-empty hidden>
+    <div class="program-family-empty" data-program-empty="" hidden="">
       <h3>Niciun program nu corespunde filtrelor selectate</h3>
       <p>Resetează un filtru sau trimite contextul proiectului pentru o verificare inițială.</p>
     </div>
@@ -221,7 +222,7 @@ function renderMain(hub, programs, filters, hubRecord = null) {
     <aside class="program-family-how__cta" aria-label="Verificarea proiectului">
       <h3>Ai un proiect concret?</h3>
       <p>Trimite tipul solicitantului, localitatea și investiția. Răspunsul inițial este orientativ și pornește de la documentele disponibile.</p>
-      <a class="btn btn-primary" href="${PROJECT_CHECK_URL}" data-content-primary-cta data-analytics-event="cta_click" data-analytics-component="program_family_hub" data-analytics-cta-id="project_check_how" data-analytics-target="${PROJECT_CHECK_URL}" data-analytics-copy-variant="family_hub" data-analytics-cta-view="true">Începe verificarea proiectului</a>
+      <a class="btn btn-primary" href="${PROJECT_CHECK_URL}" data-content-primary-cta="" data-analytics-event="cta_click" data-analytics-component="program_family_hub" data-analytics-cta-id="project_check_how" data-analytics-target="${PROJECT_CHECK_URL}" data-analytics-copy-variant="family_hub" data-analytics-cta-view="true">Începe verificarea proiectului</a>
     </aside>
   </section>${contextualNextStep}
 
@@ -261,19 +262,26 @@ function synchronizeHtml(html, hub, programs, filters) {
   return next;
 }
 
+function preserveLineEndings(rendered, original) {
+  return original.includes("\r\n")
+    ? rendered.replace(/\r?\n/gu, "\r\n")
+    : rendered.replace(/\r\n/gu, "\n");
+}
+
 function main() {
   const data = loadData();
   validate(data);
+  const catalog = catalogPrograms(data.programs);
   const changed = [];
   const counts = [];
   for (const hub of data.hubs.hubs) {
-    const programs = data.programs
-      .filter((program) => program.discovery.parentHub === hub.route && program.discovery.listed !== false && isPublicProgram(program))
+    const programs = catalog
+      .filter((program) => program.discovery.parentHub === hub.route)
       .sort((left, right) => (left.presentation?.order ?? 999) - (right.presentation?.order ?? 999) || left.name.localeCompare(right.name, "ro"));
     counts.push(`${hub.route}: ${programs.length}`);
     for (const file of routeFiles(hub.route)) {
       const html = fs.readFileSync(file, "utf8");
-      const next = synchronizeHtml(html, hub, programs, data.hubs.filters);
+      const next = preserveLineEndings(synchronizeHtml(html, hub, programs, data.hubs.filters), html);
       if (next === html) continue;
       changed.push(path.relative(ROOT, file).split(path.sep).join("/"));
       if (!CHECK_ONLY) fs.writeFileSync(file, next, "utf8");
@@ -290,4 +298,4 @@ function main() {
 
 if (require.main === module) main();
 
-module.exports = { loadData, renderMain, synchronizeHtml, validate };
+module.exports = { loadData, preserveLineEndings, renderMain, synchronizeHtml, validate };

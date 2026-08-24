@@ -28,7 +28,7 @@ Sursa unică pentru identitatea, statusul, sursele și includerea programelor pe
 - `presentation.carousel=true` și `presentation.carouselOrder` controlează includerea și ordinea în carusel;
 - `presentation.hero=true` și `presentation.heroOrder` controlează selectorul din hero;
 - `presentation.navigationOrder` controlează măsurile din navigarea globală;
-- `discovery.listed=true` controlează includerea în catalog și family hubs;
+- `discovery.listed=true` este echivalentul repo pentru `catalogEnabled=true` și controlează includerea în catalog și family hubs; selecția este centralizată în `catalogPrograms()`;
 - `banners.json`, `partials/global-header.html`, `index.html` și paginile programelor sunt artefacte materializate și nu se editează ca surse factuale independente.
 
 Fluxul sigur de modificare este:

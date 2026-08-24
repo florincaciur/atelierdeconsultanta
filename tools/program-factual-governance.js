@@ -282,6 +282,9 @@ function validateProgram(program, index = -1) {
   }
   if (!program.discovery || typeof program.discovery !== "object") errors.push(`${location}: discovery trebuie să fie obiect`);
   if (typeof program.discovery?.listed !== "boolean") errors.push(`${location}: discovery.listed trebuie să fie boolean`);
+  if (program.discovery?.listed === true && program.discovery?.redirectTarget) {
+    errors.push(`${location}: un program listat în catalog nu poate declara discovery.redirectTarget`);
+  }
   return errors;
 }
 
@@ -357,9 +360,17 @@ function programsForPresentation(programs, field) {
     .sort((left, right) => left.presentation[field] - right.presentation[field] || left.id.localeCompare(right.id, "ro"));
 }
 
+function catalogPrograms(programs) {
+  return programs.filter((program) => (
+    isPublicProgram(program)
+    && program.discovery?.listed === true
+    && !program.discovery?.redirectTarget
+  ));
+}
+
 function carouselPrograms(programs) {
   return programsForPresentation(
-    programs.filter((program) => program.presentation?.carousel && program.discovery?.listed !== false && !program.discovery?.redirectTarget),
+    catalogPrograms(programs).filter((program) => program.presentation?.carousel),
     "carouselOrder"
   );
 }
@@ -440,7 +451,8 @@ function statusLabel(statusOrProgram) {
 function statusStatement(program) {
   if (!program || !isPublicProgram(program)) return "Informații în validare editorială.";
   if (program.status === "apel_deschis") return `${program.statusLabel}: ${program.applicationStart}–${program.applicationEnd}.`;
-  return `${program.statusLabel}.`;
+  const label = String(program.statusLabel || "").trim();
+  return /[.!?]$/u.test(label) ? label : `${label}.`;
 }
 
 function programSummary(program) {
@@ -557,6 +569,7 @@ module.exports = {
   ROOT,
   SOURCE_STATUSES,
   archivedRobotsDecision,
+  catalogPrograms,
   carouselPrograms,
   cofinancingSummaryText,
   daysSince,

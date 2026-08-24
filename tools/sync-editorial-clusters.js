@@ -4,6 +4,7 @@
 const fs = require("fs");
 const path = require("path");
 const cheerio = require("cheerio");
+const { catalogPrograms, loadProgramConfig } = require("./program-factual-governance");
 const { synchronizedGraph } = require("./sync-structured-data");
 const { loadPageHints } = require("./structured-data-utils");
 
@@ -12,12 +13,10 @@ const CONFIG_PATH = path.join(ROOT, "config", "editorial-clusters.json");
 const CSS_HREF = "/assets/editorial-clusters.css?v=20260721-1";
 const CHECK_ONLY = process.argv.includes("--check");
 const PAGE_HINTS = loadPageHints(ROOT);
-const FEATURED_FUNDING_SLUGS = [
-  "dr12-afir", "dr14-afir", "modernizare-microintreprinderi-ne-2",
-  "afir-energie-autoconsum", "e-move-ro", "diaspora-investeste-acasa",
-  "e-drive", "e-mobility-ro", "fondul-modernizare-pc1-stocare"
-];
-const PROGRAM_REGISTRY = JSON.parse(fs.readFileSync(path.join(ROOT, "config", "seo-programs.json"), "utf8")).programs;
+const TARGET_ROUTE = process.argv.find((value) => value.startsWith("--route="))?.slice("--route=".length) || "";
+const PROGRAM_REGISTRY = loadProgramConfig().programs;
+const FAMILY_CONFIG = JSON.parse(fs.readFileSync(path.join(ROOT, "config", "program-family-hubs.json"), "utf8"));
+const FAMILY_BY_ROUTE = new Map(FAMILY_CONFIG.hubs.map((hub) => [hub.route, hub]));
 
 function readJson(file) {
   return JSON.parse(fs.readFileSync(file, "utf8"));
@@ -146,11 +145,11 @@ function renderSection(section) {
 
 function renderFundingOverview(page) {
   if (page.route !== "/fonduri-europene") return "";
-  const bySlug = new Map(PROGRAM_REGISTRY.map((program) => [program.slug, program]));
-  const cards = FEATURED_FUNDING_SLUGS.map((slug, index) => {
-    const program = bySlug.get(slug);
-    if (!program || program.publicationState !== "public") throw new Error(`${page.route}: programul ${slug} nu este public`);
-    return `<a class="funding-program-card" href="${attr(program.pageUrl)}" data-program-id="${attr(program.id)}" style="--card-delay:${index * 55}ms">
+  const programs = catalogPrograms(PROGRAM_REGISTRY);
+  const cards = programs.map((program, index) => {
+    const family = FAMILY_BY_ROUTE.get(program.discovery.parentHub);
+    if (!family) throw new Error(`${page.route}: programul ${program.slug} nu are familie validă`);
+    return `<a class="funding-program-card" href="${attr(program.pageUrl)}" data-program-catalog-entry data-program-id="${attr(program.id)}" data-program-slug="${attr(program.slug)}" data-family-id="${attr(family.id)}" data-program-status="${attr(program.status)}" data-status-label="${attr(program.statusLabel)}" data-verified-at="${attr(program.verifiedAt)}" data-source-url="${attr(program.sourceUrl)}" style="--card-delay:${index * 55}ms">
           <span class="funding-program-card__index">${String(index + 1).padStart(2, "0")}</span>
           <strong>${esc(program.shortName)}</strong>
           <small>${esc(program.statusLabel)}</small>
@@ -158,7 +157,7 @@ function renderFundingOverview(page) {
         </a>`;
   }).join("");
   return `<section class="funding-overview" aria-labelledby="funding-overview-title">
-        <div class="funding-overview__copy"><p class="funding-overview__eyebrow">Hartă de orientare 2026</p><h2 id="funding-overview-title">Nouă trasee de finanțare, organizate după investiție</h2><p>Pornește de la tipul investiției și deschide pagina programului pentru statut, sursa oficială și condițiile care trebuie demonstrate.</p></div>
+        <div class="funding-overview__copy"><p class="funding-overview__eyebrow">Catalog public din registrul verificat</p><h2 id="funding-overview-title"><span data-program-catalog-count>${programs.length}</span> programe de finanțare, organizate pe familii</h2><p>Pornește de la tipul investiției și deschide pagina programului pentru statut, sursa oficială și condițiile care trebuie demonstrate.</p></div>
         <svg class="funding-overview__svg" viewBox="0 0 580 300" role="img" aria-labelledby="funding-svg-title funding-svg-desc"><title id="funding-svg-title">Hartă vizuală a traseelor de finanțare</title><desc id="funding-svg-desc">Un nucleu central conectează domeniul agricol, firmele, energia și mobilitatea.</desc><g fill="none" stroke="rgba(255,255,255,.28)" stroke-width="2"><path d="M290 150L78 72M290 150L84 236M290 150L500 64M290 150L506 238"/><circle cx="290" cy="150" r="68"/></g><g class="funding-svg__pulse"><circle cx="290" cy="150" r="36" fill="#b84716"/><text x="290" y="155" text-anchor="middle">PROIECT</text></g><g class="funding-svg__label"><circle cx="78" cy="72" r="33"/><text x="78" y="77" text-anchor="middle">AFIR</text><circle cx="84" cy="236" r="33"/><text x="84" y="241" text-anchor="middle">IMM</text><circle cx="500" cy="64" r="33"/><text x="500" y="69" text-anchor="middle">ENERGIE</text><circle cx="506" cy="238" r="33"/><text x="506" y="243" text-anchor="middle">MOBILITATE</text></g></svg>
         <div class="funding-program-grid">${cards}</div>
       </section>`;
@@ -288,7 +287,11 @@ function syncPage(page) {
 function main() {
   const config = readJson(CONFIG_PATH);
   validate(config);
-  const publicPages = routeEntries(config).filter((page) => page.render);
+  let publicPages = routeEntries(config).filter((page) => page.render);
+  if (TARGET_ROUTE) {
+    publicPages = publicPages.filter((page) => page.route === TARGET_ROUTE);
+    if (!publicPages.length) throw new Error(`Ruta editorială nu există sau nu este publicabilă: ${TARGET_ROUTE}`);
+  }
   const results = publicPages.map(syncPage);
   const changed = results.filter((result) => result.changed);
   if (CHECK_ONLY && changed.length) {
