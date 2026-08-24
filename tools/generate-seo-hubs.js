@@ -566,7 +566,7 @@ function schema(page, faq, metadata = metadataForPage(page)) {
       dateModified: EDITORIAL_UPDATED_AT
     }),
     breadcrumbSchema(breadcrumbItemsForPage(page)),
-    faqPageSchema(faq.map((item) => ({ question: item.q, answer: item.a })), { minItems: 2 })
+    faqPageSchema(faq.map((item) => ({ question: item.q, answer: item.a })), { minItems: 2, url: metadata.canonicalUrl })
   ]);
 }
 

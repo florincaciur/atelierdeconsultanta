@@ -20,6 +20,7 @@ const {
   validateProgramRelationships
 } = require("../tools/program-factual-governance");
 const { registrySurfaceErrors } = require("../tools/validate-program-registry");
+const { incentiveStatusForProgram } = require("../tools/schema-helpers");
 const { latestVerifiedProgram } = require("../tools/sync-homepage-hero");
 const { fileForRoute } = require("../tools/structured-data-utils");
 
@@ -65,10 +66,6 @@ function jsonLdNodes($) {
     nodes.push(...(Array.isArray(value?.["@graph"]) ? value["@graph"] : [value]));
   });
   return nodes;
-}
-
-function propertyMap(node) {
-  return new Map((node?.additionalProperty || []).map((item) => [item.name, String(item.value ?? "")]));
 }
 
 for (const status of [
@@ -134,14 +131,16 @@ for (const program of publicPrograms) {
 
   const programNode = jsonLdNodes($).find((node) => String(node?.["@id"] || "") === `https://atelierdeconsultanta.ro${program.pageUrl}#funding-program`);
   assert(programNode, `${program.slug}: lipsește programul din JSON-LD`);
-  const properties = propertyMap(programNode);
+  assert.equal(programNode["@type"], "FinancialIncentive", `${program.slug}: programul trebuie să folosească tipul oficial FinancialIncentive`);
   assert.equal(programNode.name, program.name, `${program.slug}: nume JSON-LD diferit`);
-  assert.equal(programNode.sameAs, program.sourceUrl, `${program.slug}: sursă JSON-LD diferită`);
-  assert.equal(properties.get("status"), program.status, `${program.slug}: status JSON-LD diferit`);
-  assert.equal(properties.get("statusLabel"), program.statusLabel, `${program.slug}: statusLabel JSON-LD diferit`);
-  assert.equal(properties.get("verifiedAt"), program.verifiedAt, `${program.slug}: verifiedAt JSON-LD diferit`);
-  assert.equal(properties.has("grantSummary"), program.grantSummary !== null, `${program.slug}: grantSummary JSON-LD publicat incorect`);
-  assert.equal(properties.has("cofinancingSummary"), program.cofinancingSummary !== null, `${program.slug}: cofinancingSummary JSON-LD publicat incorect`);
+  assert.equal(programNode.description, program.statusLabel, `${program.slug}: statusLabel JSON-LD diferit`);
+  assert.equal(programNode.subjectOf?.url, program.sourceUrl, `${program.slug}: sursă JSON-LD diferită`);
+  assert.equal(programNode.provider?.name, program.sourceName, `${program.slug}: autoritate JSON-LD diferită`);
+  assert.equal(programNode.incentiveStatus, incentiveStatusForProgram(program), `${program.slug}: status Schema.org diferit`);
+  assert.equal(programNode.validFrom, program.applicationStart || undefined, `${program.slug}: applicationStart JSON-LD diferit`);
+  assert.equal(programNode.validThrough, program.applicationEnd || undefined, `${program.slug}: applicationEnd JSON-LD diferit`);
+  assert.equal(programNode.sameAs, undefined, `${program.slug}: sursa documentară nu poate fi sameAs`);
+  assert.equal(programNode.additionalProperty, undefined, `${program.slug}: programul nu poate publica proprietăți Schema.org neacceptate`);
 
   const menuElements = header(`[data-program-id='${program.id}']`).toArray();
   for (const element of menuElements) assertFacts(program, factsFromElement(header, element), "meniu desktop/mobil");

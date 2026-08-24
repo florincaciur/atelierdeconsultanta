@@ -809,7 +809,7 @@ function schemaGraph(page, config, metadata = metadataForPage(page)) {
     pageNode,
     breadcrumbSchema(breadcrumbItemsForPage(page)),
     factualProgram ? fundingProgramSchema(factualProgram) : null,
-    faqPageSchema(faq, { minItems: 2 })
+    faqPageSchema(faq, { minItems: 2, url: canonical(page) })
   ];
 
   if (pageKind === PAGE_KINDS.ARTICLE) {

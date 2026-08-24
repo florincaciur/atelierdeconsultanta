@@ -96,7 +96,7 @@ function contentEntity(pageKind, options) {
   if (pageKind === PAGE_KINDS.ARTICLE) {
     const schema = articleSchema({
       url: canonical,
-      headline: existing?.headline || name,
+      headline: name,
       description,
       datePublished: dates.datePublished,
       dateModified: dates.dateModified
@@ -132,6 +132,18 @@ function contentEntity(pageKind, options) {
   return null;
 }
 
+function citationGraph(canonical, citations, factualProgram) {
+  const definitions = [];
+  const references = [];
+  for (const [index, citation] of (citations || []).entries()) {
+    const programSource = factualProgram && citation?.url === factualProgram.sourceUrl;
+    const id = programSource ? `${canonical}#official-source` : `${canonical}#citation-${index + 1}`;
+    references.push({ "@id": id });
+    if (!programSource) definitions.push({ ...citation, "@id": id });
+  }
+  return { definitions, references };
+}
+
 function synchronizedGraph(html, route, hints) {
   const $ = cheerio.load(html, { decodeEntities: false });
   const scripts = $("script[type='application/ld+json']");
@@ -152,6 +164,7 @@ function synchronizedGraph(html, route, hints) {
     ? normalizedNodes.find((node) => hasType(node, "Article") || hasType(node, "BlogPosting") || hasType(node, "NewsArticle"))
     : firstContentNode(normalizedNodes);
   const factualProgram = programForRoute(route, PROGRAMS);
+  const citations = citationGraph(canonical, hints?.citation, factualProgram);
 
   const pageNode = webPageSchema({
     url: canonical,
@@ -159,10 +172,10 @@ function synchronizedGraph(html, route, hints) {
     description,
     datePublished: dates.datePublished,
     dateModified: dates.dateModified,
-    citation: hints?.citation
+    citation: citations.references
   });
-  const content = contentEntity(pageKind, { canonical, name: title, description, dates, existing: existingContent, citation: hints?.citation });
-  if (content && Array.isArray(hints?.citation) && hints.citation.length && !content.citation) content.citation = hints.citation;
+  const content = contentEntity(pageKind, { canonical, name: title, description, dates, existing: existingContent, citation: citations.references });
+  if (content && citations.references.length && !content.citation) content.citation = citations.references;
   if (content) pageNode.mainEntity = { "@id": content["@id"] };
   if (factualProgram) {
     const programId = `${canonical}#funding-program`;
@@ -172,7 +185,7 @@ function synchronizedGraph(html, route, hints) {
 
   const visibleFaq = visibleFaqItems($);
   const faq = visibleFaq.length >= 2
-    ? faqPageSchema(visibleFaq.map((item) => [item.question, item.answer]), { minItems: 2 })
+    ? faqPageSchema(visibleFaq.map((item) => [item.question, item.answer]), { minItems: 2, url: canonical })
     : null;
 
   const nodes = [
@@ -181,6 +194,7 @@ function synchronizedGraph(html, route, hints) {
     pageNode,
     breadcrumbSchema(breadcrumbItemsForPath(route, title)),
     content,
+    ...citations.definitions,
     factualProgram ? fundingProgramSchema(factualProgram) : null,
     faq
   ].filter(Boolean);
@@ -190,11 +204,12 @@ function synchronizedGraph(html, route, hints) {
 
 function replaceScripts(html, serialized) {
   let replaced = false;
+  const documentSerialized = html.includes("\r\n") ? serialized.replace(/\n/gu, "\r\n") : serialized;
   const output = html.replace(/<script\b[^>]*\btype=["']application\/ld\+json["'][^>]*>[\s\S]*?<\/script>/giu, (full) => {
     if (replaced) return "";
     replaced = true;
     const opening = full.match(/^<script\b[^>]*>/iu)?.[0] || '<script type="application/ld+json">';
-    return `${opening}${serialized}</script>`;
+    return `${opening}${documentSerialized}</script>`;
   });
   return output.replace(/[ \t]+$/gmu, "");
 }

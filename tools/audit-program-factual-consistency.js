@@ -18,6 +18,7 @@ const {
   statusLabel,
   statusStatement
 } = require("./program-factual-governance");
+const { incentiveStatusForProgram } = require("./schema-helpers");
 const { graphNodes, hasType } = require("./structured-data-utils");
 
 const REPORT_MD = path.join(ROOT, "reports", "program-factual-consistency.md");
@@ -68,10 +69,6 @@ function jsonLdNodes($, issues, program) {
     }
   });
   return nodes;
-}
-
-function propertyMap(node) {
-  return new Map((node?.additionalProperty || []).map((item) => [item.name, String(item.value ?? "")]));
 }
 
 function financialClaimTokens(value) {
@@ -172,7 +169,7 @@ function auditProgram(issues, program, context) {
       if (!/noindex/iu.test($("meta[name='robots']").attr("content") || "")) addIssue(issues, program, "error", "pending-page-indexable", "page-html", "Pagina în validare trebuie scoasă temporar din indexare.", "noindex", $("meta[name='robots']").attr("content"));
       if ($(`[data-program-id='${program.id}'][data-program-status]`).length || $("main [data-program-funding]").length) addIssue(issues, program, "error", "pending-fact-published", "page-html", "Pagina în validare publică încă status sau valori.", "absent", "present");
       const nodes = jsonLdNodes($, issues, program);
-      if (nodes.some((node) => hasType(node, "DefinedTerm") && String(node["@id"] || "").endsWith("#funding-program"))) addIssue(issues, program, "error", "pending-jsonld-published", "json-ld", "Programul în validare nu poate apărea în JSON-LD.", "absent", "present");
+      if (nodes.some((node) => hasType(node, "FinancialIncentive") && String(node["@id"] || "").endsWith("#funding-program"))) addIssue(issues, program, "error", "pending-jsonld-published", "json-ld", "Programul în validare nu poate apărea în JSON-LD.", "absent", "present");
     }
     return;
   }
@@ -270,15 +267,16 @@ function auditProgram(issues, program, context) {
   }
 
   const nodes = jsonLdNodes($, issues, program);
-  const programNode = nodes.find((node) => hasType(node, "DefinedTerm") && node["@id"] === `https://atelierdeconsultanta.ro${program.route}#funding-program`);
-  if (!programNode) addIssue(issues, program, "error", "missing-program-jsonld", "json-ld", "Lipsește entitatea factuală DefinedTerm a programului.");
+  const programNode = nodes.find((node) => hasType(node, "FinancialIncentive") && node["@id"] === `https://atelierdeconsultanta.ro${program.route}#funding-program`);
+  if (!programNode) addIssue(issues, program, "error", "missing-program-jsonld", "json-ld", "Lipsește entitatea factuală FinancialIncentive a programului.");
   else {
     compare(issues, program, "identity-mismatch", "json-ld", program.officialName, programNode.name, "Numele programului din JSON-LD diferă de config.");
-    compare(issues, program, "source-mismatch", "json-ld", program.officialSourceUrl, programNode.sameAs, "Sursa programului din JSON-LD diferă de config.");
-    const properties = propertyMap(programNode);
-    compare(issues, program, "status-mismatch", "json-ld", program.status, properties.get("status"), "Statusul JSON-LD diferă de registru.");
-    compare(issues, program, "label-mismatch", "json-ld", program.statusLabel, properties.get("statusLabel"), "Eticheta JSON-LD diferă de registru.");
-    compare(issues, program, "freshness-mismatch", "json-ld", program.verifiedAt, properties.get("verifiedAt"), "Data JSON-LD diferă de registru.");
+    compare(issues, program, "source-mismatch", "json-ld", program.officialSourceUrl, programNode.subjectOf?.url, "Sursa oficială a programului din JSON-LD diferă de config.");
+    compare(issues, program, "authority-mismatch", "json-ld", program.sourceName, programNode.provider?.name, "Autoritatea programului din JSON-LD diferă de config.");
+    compare(issues, program, "label-mismatch", "json-ld", program.statusLabel, programNode.description, "Eticheta JSON-LD diferă de registru.");
+    compare(issues, program, "status-mismatch", "json-ld", incentiveStatusForProgram(program), programNode.incentiveStatus, "Statusul Schema.org al stimulentului diferă de registru.");
+    compare(issues, program, "date-mismatch", "json-ld", program.applicationStart, programNode.validFrom, "Data de început JSON-LD diferă de registru.");
+    compare(issues, program, "date-mismatch", "json-ld", program.applicationEnd, programNode.validThrough, "Data de final JSON-LD diferă de registru.");
   }
   auditNarrativeClaims(issues, program, $);
 }

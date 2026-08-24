@@ -82,13 +82,13 @@ function audit(program, sitemap) {
   const metaFact = /\d|consultativ|deschis|lansat|programat/iu.test(meta);
 
   if (h1Count !== 1) integrityErrors.push(`${program.pageUrl}: ${h1Count} H1`);
-  if (canonical !== expectedCanonical) integrityErrors.push(`${program.pageUrl}: canonical diferit (${canonical || "lipsește"})`);
-  if (/noindex/iu.test(robots)) integrityErrors.push(`${program.pageUrl}: program public marcat noindex`);
+  if (!redirectTarget && canonical !== expectedCanonical) integrityErrors.push(`${program.pageUrl}: canonical diferit (${canonical || "lipsește"})`);
+  if (!redirectTarget && /noindex/iu.test(robots)) integrityErrors.push(`${program.pageUrl}: program public marcat noindex`);
   if (!statusMatches) integrityErrors.push(`${program.pageUrl}: statusul sau data nu coincid cu registrul`);
   if (!schemas.length) integrityErrors.push(`${program.pageUrl}: JSON-LD lipsește`);
 
   const seo = cap((title.length >= 35 && title.length <= 68 ? 20 : 8) + (meta.length >= 105 && meta.length <= 180 ? 20 : 8) + (h1Count === 1 ? 20 : 0) + (canonical === expectedCanonical ? 20 : 0) + (!/noindex/iu.test(robots) ? 10 : 0) + (wordCount >= 500 ? 10 : 4));
-  const aeo = cap((directAnswers ? 30 : 0) + (faqSchema ? 30 : 10) + (h2Count >= 4 ? 20 : 8) + (structured.includes('"DefinedTerm"') ? 20 : 0));
+  const aeo = cap((directAnswers ? 30 : 0) + (faqSchema ? 30 : 10) + (h2Count >= 4 ? 20 : 8) + (structured.includes('"FinancialIncentive"') ? 20 : 0));
   const geo = cap((officialVisible ? 30 : 0) + (officialStructured ? 30 : 0) + (sourceTime ? 20 : 0) + (structured.includes('"citation"') ? 20 : 0));
   const traditional = cap((canonical === expectedCanonical ? 25 : 0) + (h1Count === 1 ? 25 : 0) + (!/noindex/iu.test(robots) ? 20 : 0) + (discoverable ? 20 : 0) + (wordCount >= 500 ? 10 : 4));
   const visibility = cap((discoverable ? 30 : 0) + (breadcrumb ? 20 : 0) + (ogComplete ? 20 : 0) + (statusMatches ? 30 : 0));

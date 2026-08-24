@@ -454,8 +454,10 @@ function webPageSchema(options) {
   if (options.datePublished) schema.datePublished = options.datePublished;
   if (options.dateModified) schema.dateModified = options.dateModified;
   if (options.about) schema.about = options.about;
-  if (options.author) schema.author = personOrOrganization(options.author);
-  if (options.reviewer) schema.reviewedBy = personOrOrganization(options.reviewer);
+  const author = personOrOrganization(options.author);
+  const reviewer = personOrOrganization(options.reviewer);
+  if (author) schema.author = author;
+  if (reviewer) schema.reviewedBy = reviewer;
   if (Array.isArray(options.citation) && options.citation.length) schema.citation = options.citation;
 
   return schema;
@@ -466,8 +468,10 @@ function breadcrumbSchema(items) {
     .filter((item) => item && item.name && item.item)
     .slice(0, 6);
   if (!cleanItems.length) return null;
+  const currentUrl = absoluteUrl(cleanItems.at(-1).item);
   return {
     "@type": "BreadcrumbList",
+    "@id": `${currentUrl}#breadcrumb`,
     itemListElement: cleanItems.map((item, index) => ({
       "@type": "ListItem",
       position: index + 1,
@@ -481,7 +485,7 @@ function faqPageSchema(faqItems, options = {}) {
   const items = uniqueFaqItems(faqItems);
   const minItems = Number(options.minItems || 1);
   if (items.length < minItems) return null;
-  return {
+  const schema = {
     "@type": "FAQPage",
     mainEntity: items.map((item) => ({
       "@type": "Question",
@@ -492,6 +496,8 @@ function faqPageSchema(faqItems, options = {}) {
       }
     }))
   };
+  if (options.url || options.route) schema["@id"] = `${absoluteUrl(options.url || options.route)}#faq`;
+  return schema;
 }
 
 function blogPostingSchema(options) {
@@ -502,19 +508,19 @@ function blogPostingSchema(options) {
     description: cleanText(options.description),
     publisher: { "@id": ORGANIZATION_ID },
     "@id": options.id || `${url}#${options.type === "Article" ? "article" : "blogposting"}`,
-    mainEntityOfPage: {
-      "@type": "WebPage",
-      "@id": `${url}#webpage`
-    },
+    mainEntityOfPage: { "@id": `${url}#webpage` },
     url,
     inLanguage: LANGUAGE
   };
 
   if (options.datePublished) schema.datePublished = options.datePublished;
   if (options.dateModified) schema.dateModified = options.dateModified;
-  if (options.author) schema.author = personOrOrganization(options.author);
-  if (options.reviewer) schema.reviewedBy = personOrOrganization(options.reviewer);
-  if (options.editor) schema.editor = personOrOrganization(options.editor);
+  const author = personOrOrganization(options.author);
+  const reviewer = personOrOrganization(options.reviewer);
+  const editor = personOrOrganization(options.editor);
+  if (author) schema.author = author;
+  if (reviewer) schema.reviewedBy = reviewer;
+  if (editor) schema.editor = editor;
   if (options.image) schema.image = /^https?:\/\//i.test(options.image) ? options.image : `${SITE}${options.image}`;
   if (options.keywords) schema.keywords = Array.isArray(options.keywords) ? options.keywords.join(", ") : options.keywords;
 
@@ -555,77 +561,82 @@ function webApplicationSchema(options) {
 }
 
 function personOrOrganization(value) {
-  if (value && typeof value === "object") return value;
-  const name = cleanText(value || BRAND_NAME);
+  if (!value) return null;
+  if (value && typeof value === "object") {
+    if (value["@id"] === ORGANIZATION_ID) return { "@id": ORGANIZATION_ID };
+    const types = Array.isArray(value["@type"]) ? value["@type"] : [value["@type"]];
+    const name = cleanText(value.name);
+    const url = String(value.url || "").trim();
+    if (types.includes("Person") && name && /^https:\/\//iu.test(url)) {
+      return {
+        "@type": "Person",
+        "@id": String(value["@id"] || url),
+        name,
+        url
+      };
+    }
+    return null;
+  }
+  const name = cleanText(value);
   const comparable = normalizeQuestion(name);
-  if (comparable === normalizeQuestion(BRAND_NAME) || comparable === "faber" || comparable === "atelier de consultanta") {
+  if (comparable.includes("faber") || comparable === "atelier de consultanta") {
     return { "@id": ORGANIZATION_ID };
   }
-  return {
-    "@type": "Organization",
-    name,
-    parentOrganization: { "@id": ORGANIZATION_ID }
-  };
+  return null;
+}
+
+const INCENTIVE_STATUS_BY_CANONICAL_STATUS = Object.freeze({
+  ANNOUNCED: "IncentiveStatusInDevelopment",
+  PREPARATION: "IncentiveStatusInDevelopment",
+  PUBLIC_CONSULTATION: "IncentiveStatusInDevelopment",
+  CONSULTATIVE_GUIDE: "IncentiveStatusInDevelopment",
+  FINAL_GUIDE: "IncentiveStatusInDevelopment",
+  APPROVED_SCHEME: "IncentiveStatusInDevelopment",
+  SCHEDULED: "IncentiveStatusInDevelopment",
+  OPEN: "IncentiveStatusActive",
+  CLOSED: "IncentiveStatusRetired",
+  SUSPENDED: "IncentiveStatusOnHold",
+  CANCELLED: "IncentiveStatusRetired",
+  COMPLETED: "IncentiveStatusRetired"
+});
+
+function incentiveStatusForProgram(program) {
+  const member = INCENTIVE_STATUS_BY_CANONICAL_STATUS[program?.canonicalStatus];
+  return member ? `https://schema.org/${member}` : undefined;
 }
 
 function fundingProgramSchema(program) {
   if (!program || program.publicationState !== "public" || !program.pageUrl || !program.name) return null;
   const url = canonicalUrl(program.pageUrl);
-  const additionalProperty = [];
-  const addProperty = (name, value) => {
-    if (value === null || value === undefined || value === "" || (Array.isArray(value) && !value.length)) return;
-    additionalProperty.push({
-      "@type": "PropertyValue",
-      name,
-      value: typeof value === "string" ? value : JSON.stringify(value)
-    });
-  };
-
-  addProperty("status", program.status);
-  addProperty("statusLabel", program.statusLabel);
-  addProperty("verifiedAt", program.verifiedAt);
-  addProperty("sourceName", program.sourceName);
-  addProperty("sourceVersion", program.sourceVersion);
-  addProperty("applicationStart", program.applicationStart);
-  addProperty("applicationEnd", program.applicationEnd);
-  addProperty("grantSummary", program.grantSummary);
-  addProperty("cofinancingSummary", program.cofinancingSummary);
-  addProperty("pageUrl", program.pageUrl);
-  addProperty("lastMeaningfulUpdate", program.lastMeaningfulUpdate);
-  addProperty("editorialDisclaimer", program.editorialDisclaimer);
+  const authorityId = `${url}#program-authority`;
+  const sourceId = `${url}#official-source`;
 
   const schema = {
-    "@type": "DefinedTerm",
+    "@type": "FinancialIncentive",
     "@id": `${url}#funding-program`,
     name: cleanText(program.name),
     alternateName: cleanText(program.shortName),
-    termCode: cleanText(program.slug),
+    description: cleanText(program.statusLabel),
+    identifier: cleanText(program.slug),
     url,
-    sameAs: program.sourceUrl,
-    inDefinedTermSet: {
-      "@type": "DefinedTermSet",
-      name: cleanText(program.sourceVersion),
-      url: program.sourceUrl,
-      publisher: {
-        "@type": "Organization",
-        name: cleanText(program.sourceName)
-      }
+    mainEntityOfPage: { "@id": `${url}#webpage` },
+    provider: {
+      "@type": "Organization",
+      "@id": authorityId,
+      name: cleanText(program.sourceName)
     },
     subjectOf: {
       "@type": "CreativeWork",
+      "@id": sourceId,
       name: cleanText(program.sourceVersion),
       url: program.sourceUrl,
-      dateModified: program.lastMeaningfulUpdate,
-      publisher: {
-        "@type": "Organization",
-        name: cleanText(program.sourceName)
-      }
-    },
-    additionalProperty
+      publisher: { "@id": authorityId }
+    }
   };
-  if (Array.isArray(program.eligibleApplicants) && program.eligibleApplicants.length) {
-    schema.audience = program.eligibleApplicants.map((name) => ({ "@type": "Audience", name: cleanText(name) }));
-  }
+  const incentiveStatus = incentiveStatusForProgram(program);
+  if (incentiveStatus) schema.incentiveStatus = incentiveStatus;
+  if (program.applicationStart) schema.validFrom = program.applicationStart;
+  if (program.applicationEnd) schema.validThrough = program.applicationEnd;
   return schema;
 }
 
@@ -676,6 +687,7 @@ module.exports = {
   canonicalUrl,
   faqPageSchema,
   fundingProgramSchema,
+  incentiveStatusForProgram,
   jsonLdGraph,
   localBusinessSchema,
   professionalServiceSchema,

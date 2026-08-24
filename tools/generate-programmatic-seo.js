@@ -239,7 +239,7 @@ function schema(title, description, route, faq, updatedAt = "2026-05-20", metada
     pageNode,
     breadcrumbSchema(breadcrumbItemsForPath(route, currentName)),
     contentNode,
-    faqPageSchema(faq, { minItems: 2 })
+    faqPageSchema(faq, { minItems: 2, url: metadata.canonicalUrl })
   ]);
 }
 

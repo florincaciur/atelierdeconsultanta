@@ -152,7 +152,8 @@ function appendFaqNode(data, faq) {
 function synchronizeFaqSchema(html) {
   const $ = cheerio.load(html, { decodeEntities: false, sourceCodeLocationInfo: true });
   const visible = visibleFaqItems($);
-  const faq = faqPageSchema(visible.map((item) => [item.question, item.answer]), { minItems: 2 });
+  const canonical = $("link[rel='canonical']").first().attr("href");
+  const faq = faqPageSchema(visible.map((item) => [item.question, item.answer]), { minItems: 2, url: canonical });
   const scripts = $("script[type='application/ld+json']").toArray();
   const parsed = [];
   let preferred = -1;
