@@ -76,7 +76,16 @@ for (const record of records) {
   assert.equal(body.attr("data-governance-state"), record.governanceState, `${record.route}: stare editorială diferită în HTML`);
   assert(section.length, `${record.route}: lipsește componenta editorială vizibilă`);
 
-  const eligible = schemaNodes($).filter(eligibleNode);
+  const structuredNodes = schemaNodes($);
+  const nodeById = new Map();
+  const indexNode = (value) => {
+    if (Array.isArray(value)) return value.forEach(indexNode);
+    if (!value || typeof value !== "object") return;
+    if (value["@id"]) nodeById.set(value["@id"], value);
+    Object.values(value).forEach(indexNode);
+  };
+  indexNode(structuredNodes);
+  const eligible = structuredNodes.filter(eligibleNode);
   if (isCompleteRecord(record)) {
     assert.equal(body.attr("data-editorial-verified-at"), record.verifiedAt, `${record.route}: verifiedAt diferă în HTML`);
     assert.equal(body.attr("data-next-review-at"), record.nextReviewAt, `${record.route}: nextReviewAt diferă în HTML`);
@@ -89,7 +98,10 @@ for (const record of records) {
     assert(eligible.length, `${record.route}: pagina publică nu are un nod JSON-LD editorial eligibil`);
     for (const node of eligible) {
       assert.equal(node.dateModified, record.lastMeaningfulUpdate, `${record.route}: dateModified nu provine din lastMeaningfulUpdate`);
-      assert(Array.isArray(node.citation) && node.citation.some((citation) => citation.url === record.officialSourceUrl), `${record.route}: sursa oficială lipsește din JSON-LD`);
+      assert(Array.isArray(node.citation) && node.citation.some((citation) => {
+        const resolved = citation?.["@id"] ? nodeById.get(citation["@id"]) : citation;
+        return resolved?.url === record.officialSourceUrl;
+      }), `${record.route}: sursa oficială lipsește din JSON-LD`);
       if (record.attributionType === "person") {
         assert.equal(record.personalNameConsent, true, `${record.route}: atribuirea Person necesită acord`);
         assert.equal(node.author?.["@type"], "Person", `${record.route}: autorul nominal trebuie publicat ca Person`);

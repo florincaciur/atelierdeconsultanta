@@ -17,6 +17,7 @@ const {
   checkDocuments,
   loadData,
   resolveSourceReference,
+  sameDocumentContent,
   validateData
 } = require("../tools/generate-status-governance-docs.js");
 
@@ -91,6 +92,8 @@ for (const field of ["Program", "Câmp", "Before", "After", "Sursă", "Verificat
 }
 assert.equal(data.factualChanges.length, 4, "Reverificarea Task 04 trebuie să documenteze cele patru corecții factuale.");
 assert.doesNotMatch(documents.status + documents.sources, /\b(?:TODO|TBD|TODO_SURSA_OFICIALA)\b/, "Documentele nu pot publica placeholder-e.");
+assert.equal(sameDocumentContent("linie 1\r\nlinie 2\r\n", "linie 1\nlinie 2\n"), true, "Verificarea documentelor trebuie să accepte CRLF și LF ca același conținut.");
+assert.equal(sameDocumentContent("linie 1\n", "linie diferită\n"), false, "Verificarea documentelor trebuie să detecteze diferențele reale de conținut.");
 assert.deepEqual(checkDocuments(documents), [], "Documentele versionate trebuie să fie sincronizate exact cu configurațiile.");
 assert.ok(fs.existsSync(path.join(ROOT, "docs", "faber-remediation", "STATUS_TAXONOMY.md")));
 assert.ok(fs.existsSync(path.join(ROOT, "docs", "faber-remediation", "OFFICIAL_SOURCE_REGISTRY.md")));

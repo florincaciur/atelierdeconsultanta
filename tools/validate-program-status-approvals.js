@@ -16,6 +16,11 @@ const {
 const APPROVALS_PATH = path.join(ROOT, "config", "program-status-approvals.json");
 const VALIDATION_REPORT_PATH = path.join(ROOT, "reports", "program-status-validation-2026-07-21.md");
 const CHANGELOG_PATH = path.join(ROOT, "reports", "editorial-status-changelog-2026-07-21.md");
+
+function sameTextContent(actual, expected) {
+  const normalize = (value) => String(value).replace(/\r\n?/gu, "\n");
+  return normalize(actual) === normalize(expected);
+}
 const REQUIRED_PROGRAMS = Object.freeze(["dr12-afir", "dr14-afir", "pro-infra", "digitalizare-imm"]);
 const APPROVAL_STATES = new Set(["pending", "approved"]);
 
@@ -155,7 +160,7 @@ function editorialChangelog(config) {
 function writeOrCheck(file, content, check) {
   if (check) {
     const current = fs.existsSync(file) ? fs.readFileSync(file, "utf8") : "";
-    if (current !== content) throw new Error(`Raport nesincronizat: ${path.relative(ROOT, file)}`);
+    if (!sameTextContent(current, content)) throw new Error(`Raport nesincronizat: ${path.relative(ROOT, file)}`);
     return;
   }
   fs.mkdirSync(path.dirname(file), { recursive: true });

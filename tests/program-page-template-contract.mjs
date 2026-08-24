@@ -135,12 +135,21 @@ for (const page of config.pages) {
   assert.equal($("#program-sources .editorial-governance__changelog").length, 1, `${page.route}: changelog-ul vizibil lipsește`);
 
   const nodes = jsonLdNodes($);
+  const nodeById = new Map();
+  const indexNode = (value) => {
+    if (Array.isArray(value)) return value.forEach(indexNode);
+    if (!value || typeof value !== "object") return;
+    if (value["@id"]) nodeById.set(value["@id"], value);
+    Object.values(value).forEach(indexNode);
+  };
+  indexNode(nodes);
   const article = nodes.find((node) => hasType(node, "Article"));
   assert(article, `${page.route}: Article lipsește deși conținutul vizibil este editorial`);
   assert.equal(article.headline, $(".program-hero h1").text().trim(), `${page.route}: Article nu corespunde H1-ului vizibil`);
-  assert.equal(article.description, direct.text().trim(), `${page.route}: Article nu corespunde răspunsului vizibil`);
+  assert.equal(article.description, $("meta[name='description']").attr("content"), `${page.route}: Article nu corespunde descrierii editoriale a paginii`);
   assert.equal(article.dateModified, program.lastMeaningfulUpdate, `${page.route}: dateModified nu vine din lastMeaningfulUpdate`);
-  assert.equal(article.citation?.[0]?.url, program.sourceUrl, `${page.route}: citation nu indică sursa registrului`);
+  const articleCitation = article.citation?.[0]?.["@id"] ? nodeById.get(article.citation[0]["@id"]) : article.citation?.[0];
+  assert.equal(articleCitation?.url, program.sourceUrl, `${page.route}: citation nu indică sursa registrului`);
 
   const breadcrumb = nodes.find((node) => hasType(node, "BreadcrumbList"));
   assert(breadcrumb, `${page.route}: BreadcrumbList lipsește`);

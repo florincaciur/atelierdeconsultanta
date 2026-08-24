@@ -65,6 +65,9 @@ const GSC_VALIDATION_PATH = fs.readdirSync(path.join(ROOT, "reports"))
 const GSC_VALIDATION = fs.existsSync(GSC_VALIDATION_PATH)
   ? JSON.parse(fs.readFileSync(GSC_VALIDATION_PATH, "utf8"))
   : null;
+const GSC_VALIDATION_IS_CURRENT = Boolean(
+  GSC_VALIDATION && GSC_VALIDATION.capturedAt >= GSC_SNAPSHOT.capturedAt
+);
 const GSC_VALIDATION_ROWS = GSC_VALIDATION
   ? [
       ...(GSC_VALIDATION.pending || []).map((row) => ({ ...row, validationState: "Pending" })),
@@ -581,7 +584,7 @@ function writeReports(rows) {
     "- Conventia canonica verificata: `https://atelierdeconsultanta.ro`, fara `www`, fara `.html`, fara `/index.html`, fara slash final in afara de homepage.",
     `- Matrice CSV: \`reports/gsc-indexing-fix-${REPORT_DATE}.csv\`.`,
     `- Snapshot URL sursa: \`${toPosix(path.relative(ROOT, GSC_SNAPSHOT_PATH))}\`, capturat la ${GSC_SNAPSHOT.capturedAt}.`,
-    `- Validare curenta sursa: \`${toPosix(path.relative(ROOT, GSC_VALIDATION_PATH))}\`, capturata la ${GSC_VALIDATION?.capturedAt || "n/a"}.`,
+    `- Validare detaliata sursa (${GSC_VALIDATION_IS_CURRENT ? "curenta" : "istorica"}): \`${toPosix(path.relative(ROOT, GSC_VALIDATION_PATH))}\`, capturata la ${GSC_VALIDATION?.capturedAt || "n/a"}.`,
     `- Director public auditat: \`${toPosix(path.relative(ROOT, PUBLIC_DIR)) || "."}\`.`,
     `- Randuri auditate: ${rows.length}; exemple GSC curente: ${currentRows.length}; exemple istorice suplimentare: ${historicRows.length}.`,
     `- Rezultat tehnic: ${rows.length - failedRows.length} PASS; ${failedRows.length} FAIL.`,
@@ -642,8 +645,8 @@ function writeReports(rows) {
     `- Snapshot complet din ${GSC_SNAPSHOT.capturedAt}, actualizat de GSC la ${GSC_SNAPSHOT.gscLastUpdate}: **${GSC_SNAPSHOT.notIndexedTotal} URL-uri** in opt categorii.`,
     `- Categorii: ${categorySummary}.`,
     ...(GSC_VALIDATION ? [
-      `- Captura de validare din ${GSC_VALIDATION.capturedAt}: **${GSC_VALIDATION.pendingExamples} pending**, **${GSC_VALIDATION.failedExamples} failed**, ${GSC_VALIDATION.totalValidationExamples} exemple in total.`,
-      `- Validarea a inceput la ${GSC_VALIDATION.validationStartedAt} si a trecut in starea ${GSC_VALIDATION.validationStatus} la ${GSC_VALIDATION.validationFailedAt}.`,
+      `- Captura detaliata ${GSC_VALIDATION_IS_CURRENT ? "curenta" : "istorica"} din ${GSC_VALIDATION.capturedAt}: **${GSC_VALIDATION.pendingExamples} pending**, **${GSC_VALIDATION.failedExamples} failed**, ${GSC_VALIDATION.totalValidationExamples} exemple in total.`,
+      `- In acea captura, validarea a inceput la ${GSC_VALIDATION.validationStartedAt} si a trecut in starea ${GSC_VALIDATION.validationStatus} la ${GSC_VALIDATION.validationFailedAt}; starea curenta ramane cea din snapshot-ul complet ${GSC_SNAPSHOT.capturedAt}.`,
       "",
     ] : []),
     "A. Aliasuri intentionate din `Page with redirect`:",
@@ -752,7 +755,7 @@ async function main() {
     return {
       inputUrl,
       gscReason: currentGsc?.reason || "Snapshot istoric",
-      validationState: GSC_VALIDATION_STATES.get(inputUrl) || currentGsc?.categoryValidation || "Snapshot istoric",
+      validationState: (GSC_VALIDATION_IS_CURRENT ? GSC_VALIDATION_STATES.get(inputUrl) : "") || currentGsc?.categoryValidation || "Snapshot istoric",
       lastCrawled: currentGsc?.lastCrawled || "N/A",
       localStatus: localStatus(chain),
       liveStatus: `${liveFinal.status || "ERR"}${live.length > 1 ? ` after ${live.length - 1} redirect(s)` : " direct"}`,

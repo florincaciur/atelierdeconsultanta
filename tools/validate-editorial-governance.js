@@ -16,6 +16,11 @@ const {
 const REPORT_PATH = path.join(ROOT, "reports", "editorial-governance-expiry.md");
 const CSV_PATH = path.join(ROOT, "reports", "editorial-governance-expiry.csv");
 
+function sameTextContent(actual, expected) {
+  const normalize = (value) => String(value).replace(/\r\n?/gu, "\n");
+  return normalize(actual) === normalize(expected);
+}
+
 function csvCell(value) {
   const text = String(value ?? "");
   return /[",\r\n]/u.test(text) ? `"${text.replace(/"/gu, '""')}"` : text;
@@ -62,7 +67,7 @@ function csvReport(data) {
 function writeOrCheck(file, content, check) {
   if (check) {
     const current = fs.existsSync(file) ? fs.readFileSync(file, "utf8") : "";
-    if (current !== content) throw new Error(`Raport nesincronizat: ${path.relative(ROOT, file)}`);
+    if (!sameTextContent(current, content)) throw new Error(`Raport nesincronizat: ${path.relative(ROOT, file)}`);
     return;
   }
   fs.mkdirSync(path.dirname(file), { recursive: true });

@@ -11,6 +11,11 @@ const CONFIG_PATH = path.join(ROOT, "config", "about-faber-governance.json");
 const REPORT_PATH = path.join(ROOT, "reports", "about-faber-p1-16.md");
 const CHECK = process.argv.includes("--check");
 
+function sameTextContent(actual, expected) {
+  const normalize = (value) => String(value).replace(/\r\n?/gu, "\n");
+  return normalize(actual) === normalize(expected);
+}
+
 function loadConfig() {
   return JSON.parse(fs.readFileSync(CONFIG_PATH, "utf8"));
 }
@@ -113,11 +118,11 @@ function main() {
 
   const expected = renderReport(config);
   const actual = fs.existsSync(REPORT_PATH) ? fs.readFileSync(REPORT_PATH, "utf8") : "";
-  if (CHECK && actual !== expected) {
+  if (CHECK && !sameTextContent(actual, expected)) {
     console.error("About FABER governance FAILED: raportul este absent sau nesincronizat.");
     process.exit(1);
   }
-  if (!CHECK && actual !== expected) {
+  if (!CHECK && !sameTextContent(actual, expected)) {
     fs.mkdirSync(path.dirname(REPORT_PATH), { recursive: true });
     fs.writeFileSync(REPORT_PATH, expected, "utf8");
   }

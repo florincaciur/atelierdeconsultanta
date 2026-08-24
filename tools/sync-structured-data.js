@@ -137,7 +137,9 @@ function citationGraph(canonical, citations, factualProgram) {
   const references = [];
   for (const [index, citation] of (citations || []).entries()) {
     const programSource = factualProgram && citation?.url === factualProgram.sourceUrl;
-    const id = programSource ? `${canonical}#official-source` : `${canonical}#citation-${index + 1}`;
+    const id = programSource
+      ? `${SITE}${factualProgram.pageUrl}#official-source`
+      : `${canonical}#citation-${index + 1}`;
     references.push({ "@id": id });
     if (!programSource) definitions.push({ ...citation, "@id": id });
   }
@@ -178,7 +180,7 @@ function synchronizedGraph(html, route, hints) {
   if (content && citations.references.length && !content.citation) content.citation = citations.references;
   if (content) pageNode.mainEntity = { "@id": content["@id"] };
   if (factualProgram) {
-    const programId = `${canonical}#funding-program`;
+    const programId = `${SITE}${factualProgram.pageUrl}#funding-program`;
     pageNode.about = { "@id": programId };
     if (content) content.about = { "@id": programId };
   }

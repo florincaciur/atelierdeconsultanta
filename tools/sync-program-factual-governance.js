@@ -438,7 +438,8 @@ function syncProgramHtml(source, program) {
     output = output.replace(/<main\b[^>]*\bprogram-validation-hold\b[^>]*>[\s\S]*?<\/main>/i, restoredPublicMain(program).replace(/\r?\n/g, eol));
   }
   const archivedRobots = archivedRobotsDecision(program);
-  output = replaceMeta(output, /<meta\b[^>]*\bname=["']robots["'][^>]*>/i, archivedRobots || "index, follow");
+  const robots = program.indexable === false ? "noindex, follow" : (archivedRobots || "index, follow");
+  output = replaceMeta(output, /<meta\b[^>]*\bname=["']robots["'][^>]*>/i, robots);
   if (!/<script\b[^>]*type=["']application\/ld\+json["']/i.test(output) && /<\/head>/i.test(output)) {
     output = output.replace(/<\/head>/i, '  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[]}</script>\n</head>');
   }

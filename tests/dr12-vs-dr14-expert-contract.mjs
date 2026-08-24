@@ -23,6 +23,18 @@ function hasType(node, type) {
   return (Array.isArray(node?.["@type"]) ? node["@type"] : [node?.["@type"]]).includes(type);
 }
 
+function indexJsonLdNodes(values) {
+  const byId = new Map();
+  const visit = (value) => {
+    if (Array.isArray(value)) return value.forEach(visit);
+    if (!value || typeof value !== "object") return;
+    if (value["@id"]) byId.set(value["@id"], value);
+    Object.values(value).forEach(visit);
+  };
+  visit(values);
+  return byId;
+}
+
 assert.equal($("link[rel='canonical']").attr("href"), "https://atelierdeconsultanta.ro/dr12-vs-dr14");
 assert.equal($("title").text(), config.title);
 assert.equal($("meta[name='description']").attr("content"), config.metaDescription);
@@ -119,7 +131,15 @@ const article = nodes.find((node) => hasType(node, "Article"));
 assert(article, "analiza reală trebuie descrisă ca Article");
 assert.equal(article.headline, config.h1);
 assert.equal(article.dateModified, config.reviewedAt);
-assert(Array.isArray(article.citation) && article.citation.some((citation) => citation.url === governanceRecord.officialSourceUrl), "Article trebuie să citeze sursa oficială din guvernanță");
+const nodeById = indexJsonLdNodes(nodes);
+const articleCitations = Array.isArray(article.citation) ? article.citation : [];
+assert(
+  articleCitations.some((citation) => {
+    const resolved = citation?.["@id"] ? nodeById.get(citation["@id"]) : citation;
+    return resolved?.url === governanceRecord.officialSourceUrl;
+  }),
+  "Article trebuie să citeze sursa oficială din guvernanță"
+);
 assert.equal(nodes.filter((node) => hasType(node, "FAQPage")).length, 0, "FAQPage nu trebuie generat automat pentru blocurile AEO");
 
 assert.equal($("link[href^='/assets/dr12-vs-dr14-expert.css']").length, 1);

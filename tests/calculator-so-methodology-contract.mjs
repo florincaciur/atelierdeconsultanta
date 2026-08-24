@@ -21,6 +21,18 @@ function hasType(node, type) {
   return (Array.isArray(node?.["@type"]) ? node["@type"] : [node?.["@type"]]).includes(type);
 }
 
+function indexJsonLdNodes(values) {
+  const byId = new Map();
+  const visit = (value) => {
+    if (Array.isArray(value)) return value.forEach(visit);
+    if (!value || typeof value !== "object") return;
+    if (value["@id"]) byId.set(value["@id"], value);
+    Object.values(value).forEach(visit);
+  };
+  visit(values);
+  return byId;
+}
+
 const coefficientEntries = config.coefficientGroups.flatMap((group) => group.entries);
 const byCode = new Map(coefficientEntries.map((entry) => [entry.code, entry]));
 assert.equal(coefficientEntries.length, 46, "setul publicat trebuie să conțină cele 46 de categorii selectate");
@@ -107,11 +119,16 @@ assert.equal(record.sourceVersion, config.source.version);
 assert.equal(record.personalNameConsent, false);
 assert($(".editorial-governance[data-editorial-record='calculator-soc']").text().includes(record.reviewer), "reviewerul organizațional trebuie să fie vizibil");
 
-const webApps = nodes().filter((node) => hasType(node, "WebApplication"));
+const structuredNodes = nodes();
+const nodeById = indexJsonLdNodes(structuredNodes);
+const webApps = structuredNodes.filter((node) => hasType(node, "WebApplication"));
 assert.equal(webApps.length, 1, "Calculatorul trebuie să aibă exact un WebApplication");
 assert.equal(webApps[0].url, "https://atelierdeconsultanta.ro/calculator-soc");
 assert.equal(webApps[0].name, $("h1").first().text().trim());
-assert(Array.isArray(webApps[0].citation) && webApps[0].citation.some((citation) => citation.url === config.source.pageUrl), "WebApplication trebuie să citeze sursa oficială sincronizată");
+assert(Array.isArray(webApps[0].citation) && webApps[0].citation.some((citation) => {
+  const resolved = citation?.["@id"] ? nodeById.get(citation["@id"]) : citation;
+  return resolved?.url === config.source.pageUrl;
+}), "WebApplication trebuie să citeze sursa oficială sincronizată");
 assert(!webApps[0].offers && !webApps[0].aggregateRating && !webApps[0].review, "schema nu poate conține afirmații neverificabile");
 
 for (const link of $("[data-so-methodology] a[href^='http']").toArray()) {
