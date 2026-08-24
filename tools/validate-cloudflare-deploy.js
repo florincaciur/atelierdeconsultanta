@@ -65,6 +65,16 @@ function validateDomainSeoIntent(file, errors) {
   if (config.deploymentState === "active_cloudflare_worker_route" && config.hsts?.enabled !== true) errors.push(`${file}: active domain worker must enable the verified HSTS policy`);
   if (config.hsts?.enableOnlyAfterHttpRedirectVerification !== true) errors.push(`${file}: HSTS must be gated by live HTTPS verification`);
   if (config.hsts?.preload !== false) errors.push(`${file}: HSTS preload must remain disabled initially`);
+  const declaredRoutes = new Set(config.worker?.routes || []);
+  for (const required of ["atelierdeconsultanta.ro/*", "www.atelierdeconsultanta.ro/*"]) {
+    if (!declaredRoutes.has(required)) errors.push(`${file}: worker intent must cover ${required}`);
+  }
+  if (config.cachePolicy?.preserveExplicitOriginPolicy !== true) errors.push(`${file}: domain middleware must preserve explicit public origin cache policies`);
+  if (config.cachePolicy?.defaultWhenMissing !== "no-store") errors.push(`${file}: responses without an explicit cache policy must default to no-store`);
+  for (const endpoint of ["/api/contact-triage", "/api/crm/qualified-lead", "/release.json"]) {
+    if (!config.cachePolicy?.neverCache?.includes(endpoint)) errors.push(`${file}: cache policy must keep ${endpoint} out of shared/browser caches`);
+  }
+  if (config.dashboardReview?.status !== "NEEDS_CONFIRMATION") errors.push(`${file}: dashboard-only WAF/bot/cache settings must not be represented as repository-verified`);
 }
 
 function parseRedirects(file) {

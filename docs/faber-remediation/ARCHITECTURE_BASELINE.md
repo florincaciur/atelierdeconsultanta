@@ -366,3 +366,38 @@ Config-urile complementare nu mai atribuie fapte per program:
 - `banners.json`, HTML-ul homepage, headerul global, family hubs, paginile programelor, JSON-LD, ghidurile și `llms.txt` sunt outputs materializate din registry și sunt controlate prin sync/check.
 
 Schema `config/program-registry.schema.json`, validatorul `tools/program-factual-governance.js` și reconcilierea din `tools/validate-program-registry.js` impun unicitatea ID/slug/canonical, taxonomia de status, validitatea relațiilor, paritatea registry–pagină–banner și dovada de sesiune pentru `OPEN`. Programul regional retras din catalog este declarat explicit `indexable=false`; celelalte înregistrări indexabile trebuie să aibă pagină canonical 200 cu același `data-program-id`.
+
+## Audit final Task 12 — Cloudflare, WAF, cache și crawler access
+
+Audit: 24 august 2026. Scope-ul păstrează arhitectura statică, cele două Workers existente, toate URL-urile canonice și politica crawler aprobată în Task 11. Nu au fost create excepții globale pentru boți, nu a fost dezactivată nicio protecție și nu a fost introdus cache pentru formulare sau răspunsuri personalizate.
+
+### Dovedit din repository și runtime
+
+| Suprafață | Dovadă | Verdict |
+|---|---|---|
+| HTTPS, apex/www și formă URL | `wrangler.redirects.jsonc` acoperă apex și www; workerul normalizează HTTP, www, slash final, `.html`, `/index.html` și aliasurile legacy cu 301 direct; probele live confirmă un singur hop. | PASS |
+| Worker static și 404 | `wrangler.jsonc` publică exclusiv `dist`, cu `html_handling: drop-trailing-slash` și `not_found_handling: 404-page`; workerul de domeniu păstrează statusul 404 și aplică `X-Robots-Tag: noindex, follow`. | PASS |
+| Cache public | Workerul de domeniu păstrează `Cache-Control` explicit al originului. Activele cu nume mutabile folosesc 24 h + revalidare; `robots.txt`, sitemap-urile și `llms.txt` folosesc 1 h; HTML-ul static păstrează revalidarea originului. | PASS după deploy Task 12 |
+| Fără cache privat/dinamic | Lipsa unei politici explicite, API-urile, metodele non-GET/HEAD, cererile autorizate, răspunsurile cu `Set-Cookie`, 404 și `release.json` sunt `no-store`. Contractul simulează inclusiv un origin care încearcă să trimită `public` pe un răspuns personalizat. | PASS |
+| Content-Type și compresie | Probe live: HTML `text/html`, CSS `text/css`, robots `text/plain`, sitemap `application/xml`, JSON `application/json`; Cloudflare negociază gzip pentru resursele text verificate. | PASS |
+| Antete de securitate | Workerul aplică HSTS 6 luni fără includeSubDomains/preload, `nosniff`, `Referrer-Policy: strict-origin-when-cross-origin` și `X-Frame-Options: SAMEORIGIN`, inclusiv pe redirecturi și API. CSP nu a fost adăugat fără audit de compatibilitate pentru scripturile inline/analytics. | PASS pentru baseline-ul versionat |
+| Crawl public | Contractele Task 11 păstrează sitemap-ul canonical, 104 URL-uri indexabile, activele crawlable, robots și `llms.txt`; probele sintetice nu au primit challenge pe suprafețele publice verificate. | PASS pentru acces HTTP sintetic |
+| Deploy observabil | Wrangler autentifică contul și poate enumera deploymenturile workerului de domeniu; `/release.json` rămâne dovada exactă deploy–commit pentru workerul static. Versiunile tranzitorii nu sunt desired state în config. | PASS cu dovadă CLI/live |
+
+Defectul găsit de Task 12 era în middleware: după `fetch(request)`, workerul rescria toate răspunsurile cu `Cache-Control: no-store`. Astfel, inclusiv CSS, robots și sitemap aveau live `CF-Cache-Status: HIT` la subrequest, dar browserul primea `no-store`. Remedierea păstrează politica publică explicită a originului și eșuează sigur la `no-store` pentru orice răspuns fără o decizie explicită. Politica veche de un an cu `immutable` a fost redusă deoarece numele activelor nu sunt toate content-addressed.
+
+Contractul `tests/cloudflare-edge-contract.mjs` este inclus în `test:technical-seo` și în dry-run-ul workerului de domeniu. El verifică headerele publice, HTML-ul revalidabil, redirecturile, 404, API-ul, `Set-Cookie`, Authorization, POST, rutele Wrangler și setările statice 404/trailing slash.
+
+### Necesită verificare în dashboard Cloudflare
+
+| Control | Stare | Verificare cerută |
+|---|---|---|
+| WAF Managed Rules și excepții | NEEDS_CONFIRMATION | Confirmă ruleset-urile active și că nu există skip/allow global. Păstrează protecția; pentru fals pozitiv folosește numai o excepție îngustă, bazată pe evenimentul și regula identificate. |
+| Bot Fight Mode/Super Bot Fight Mode | NEEDS_CONFIRMATION | Confirmă acțiunile pentru trafic automat și Verified bots. Nu trata simplul user-agent drept identitate verificată și nu permite toate crawlerele. |
+| Verified bots și crawlere oficiale | NEEDS_CONFIRMATION | Verifică Security Events/Logs cu identitatea Cloudflare (`cf.client.bot`/Verified bot), nu doar probe sintetice. |
+| AI Crawl Control/Managed robots.txt | NEEDS_CONFIRMATION | Confirmă că nu injectează o politică opusă fișierului `robots.txt` versionat și deciziilor Task 11. |
+| Cache Rules/Cache Response Rules | NEEDS_CONFIRMATION | Confirmă că nu suprascriu `no-store` pentru `/api/*`, formulare, răspunsuri cu cookie, 404 sau `release.json`; nu folosi Cache Everything pe aceste suprafețe. |
+| Always Use HTTPS și Redirect Rules | NEEDS_CONFIRMATION | Probe live dovedesc rezultatul într-un hop; dashboardul trebuie verificat pentru reguli duplicate, inactive sau concurente. |
+| Production branch/Git integration | NEEDS_CONFIRMATION | Repo-ul verifică `main` prin workflow și SHA live, dar proiectul/branch control din dashboard nu este versionat. Confirmă `main` ca producție și fără preview branch expus pe domeniul canonical. |
+
+Mecanismul disponibil în acest mediu este: contract repository, Wrangler pentru Workers/routes/deployment și probe live de status/headere. Tokenul OAuth disponibil nu expune configurația WAF/bot/cache dashboard, deci aceste controale nu sunt declarate PASS prin inferență.

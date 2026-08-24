@@ -1,12 +1,15 @@
 {
-  "lastReviewed": "2026-07-20",
+  "lastReviewed": "2026-08-24",
   "canonicalOrigin": "https://atelierdeconsultanta.ro",
   "deploymentState": "active_cloudflare_worker_route",
   "worker": {
     "name": "atelierdeconsultanta-domain-seo",
-    "route": "atelierdeconsultanta.ro/*",
-    "deployedAt": "2026-07-20",
-    "versionId": "1afc947a-8944-4446-b466-0d535030f77f"
+    "routes": [
+      "atelierdeconsultanta.ro/*",
+      "www.atelierdeconsultanta.ro/*"
+    ],
+    "deployedAt": "2026-08-24",
+    "versionEvidence": "Use Wrangler deployment output and live response probes; version IDs are deployment evidence, not desired configuration."
   },
   "httpRedirect": {
     "enabled": true,
@@ -30,5 +33,34 @@
     "includeSubDomains": false,
     "preload": false,
     "initialMaxAgeSeconds": 15552000
+  },
+  "cachePolicy": {
+    "preserveExplicitOriginPolicy": true,
+    "defaultWhenMissing": "no-store",
+    "mutableStaticAssets": "public, max-age=86400, must-revalidate",
+    "crawlerFiles": "public, max-age=3600",
+    "neverCache": [
+      "/api/contact-triage",
+      "/api/crm/qualified-lead",
+      "/release.json",
+      "404 responses",
+      "responses with Set-Cookie",
+      "authorized requests",
+      "non-GET/HEAD requests"
+    ]
+  },
+  "dashboardReview": {
+    "status": "NEEDS_CONFIRMATION",
+    "reason": "WAF, bot traffic settings, Cache Rules and dashboard redirect toggles are not versioned in this repository and are not exposed by the available Wrangler OAuth scopes.",
+    "verificationMechanism": "Repository contracts plus live status/header probes; confirm dashboard-only settings in Cloudflare Security and Caching before changing them.",
+    "settings": [
+      "WAF managed rules and exceptions",
+      "Bot Fight Mode or Super Bot Fight Mode actions",
+      "Verified bot handling",
+      "AI Crawl Control and Managed robots.txt",
+      "Cache Rules and Cache Response Rules",
+      "Always Use HTTPS and dashboard Redirect Rules",
+      "production branch and Git integration controls"
+    ]
   }
 }

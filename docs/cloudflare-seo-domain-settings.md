@@ -1,10 +1,10 @@
 # Setări Cloudflare pentru protocol și HSTS
 
-Aceste setări sunt la nivelul zonei Cloudflare și nu pot fi impuse prin `_redirects` într-un deploy de active statice. La verificarea din 20 iulie 2026, `http://atelierdeconsultanta.ro/` răspundea `200`, deși paginile declară canonical HTTPS.
+Aceste setări sunt împărțite între configurația versionată a celor două Workers și controale de zonă care există numai în dashboard/API. La verificarea din 24 august 2026, `http://atelierdeconsultanta.ro/` răspundea cu un singur `301` către HTTPS apex, iar variantele `www`, trailing slash, `.html` și `/index.html` erau normalizate într-un singur hop.
 
 Repository-ul include și alternativa operațională `cloudflare/domain-seo-redirects.mjs`, configurată separat prin `wrangler.redirects.jsonc`. Worker-ul rulează ca proxy transparent în fața origin-ului existent, aplică numai redirecturile de protocol și SearchAction, iar pentru toate celelalte cereri folosește `fetch(request)` către origin. Configurația separată evită înlocuirea accidentală a deploy-ului de active statice.
 
-Această alternativă a fost publicată la 20 iulie 2026 pe ruta `atelierdeconsultanta.ro/*`. Versiunea verificată live este `1afc947a-8944-4446-b466-0d535030f77f`. Testul repository/build/live este verde pentru toate cele cinci pagini prioritare.
+Workerul este activ pe ambele rute, `atelierdeconsultanta.ro/*` și `www.atelierdeconsultanta.ro/*`. ID-urile de versiune sunt dovezi tranzitorii din Wrangler și nu sunt păstrate ca desired state în config; commitul live este verificat prin `/release.json`.
 
 ## 1. Redirect HTTP către HTTPS
 
@@ -53,11 +53,23 @@ Activează HSTS numai după ce testul HTTP/HTTPS este verde și după inventarie
 
 Fișierul `robots.txt` permite explicit `OAI-SearchBot` și `Claude-SearchBot` pentru descoperirea în produse de căutare și blochează crawlerele de training declarate. Dacă **AI Crawl Control** sau **Managed robots.txt** este activ în Cloudflare, politica din dashboard trebuie să păstreze aceleași decizii; conținutul injectat de Cloudflare nu trebuie să inverseze regulile repository-ului.
 
-## 4. Închiderea operațiunii
+Nu dezactiva WAF-ul și nu crea o regulă globală de allow/skip pentru toate user-agent-urile de crawler. Dacă un crawler legitim este blocat, verifică mai întâi identitatea Cloudflare `Verified bot` și evenimentul de securitate, apoi limitează orice excepție la regula, ruta și produsul care produc falsul pozitiv. Un test cu user-agent sintetic verifică accesul HTTP, nu identitatea oficială a botului.
+
+## 4. Cache și răspunsuri dinamice
+
+- workerul de domeniu păstrează politica `Cache-Control` explicită primită de la workerul de active;
+- activele cu nume mutabile folosesc `public, max-age=86400, must-revalidate`, fără `immutable` pe un an;
+- `robots.txt`, sitemap-urile și `llms.txt` folosesc o fereastră de o oră;
+- răspunsurile fără politică explicită eșuează sigur la `no-store`;
+- API-urile, formularele, cererile autorizate, metodele non-GET/HEAD, răspunsurile cu `Set-Cookie`, `release.json` și 404 nu se cache-uiesc.
+
+Cache Rules/Cache Response Rules din dashboard pot avea precedență față de headerele origin și trebuie confirmate separat. Nu crea `Cache Everything` pentru `/api/*`, răspunsuri personalizate sau formulare.
+
+## 5. Închiderea operațiunii
 
 După deploy și validarea live:
 
-1. schimbă `deploymentState` din `config/cloudflare-domain-seo.json` numai după confirmarea efectivă din zonă;
+1. păstrează `deploymentState` activ numai cât timp rutele pot fi confirmate prin Wrangler și probe live;
 2. trimite sitemap-ul actualizat în GSC;
 3. rulează IndexNow pentru URL-urile modificate;
 4. solicită indexarea celor cinci pagini prioritare;

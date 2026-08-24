@@ -55,13 +55,13 @@ const APPLICANT_TYPES = new Set([
 ]);
 
 function permanentRedirect(destination) {
-  return new Response(null, {
+  return secured(new Response(null, {
     status: 301,
     headers: {
       location: destination,
       "cache-control": "public, max-age=3600"
     }
-  });
+  }));
 }
 
 function isLegacySearchPlaceholder(url) {
@@ -136,12 +136,20 @@ async function publicNotFoundResponse(request, url, originFetch) {
   }));
 }
 
-function secured(response) {
+function secured(response, { forceNoStore = false } = {}) {
   const output = new Response(response.body, response);
   output.headers.set("strict-transport-security", HSTS_VALUE);
   output.headers.set("x-content-type-options", "nosniff");
-  output.headers.set("cache-control", "no-store");
-  if (output.status === 404) output.headers.set("x-robots-tag", "noindex, follow");
+  output.headers.set("referrer-policy", "strict-origin-when-cross-origin");
+  output.headers.set("x-frame-options", "SAMEORIGIN");
+  if (output.status === 404 || forceNoStore || output.headers.has("set-cookie")) {
+    output.headers.set("cache-control", "no-store");
+    output.headers.set("x-robots-tag", "noindex, follow");
+  } else if (!output.headers.has("cache-control")) {
+    // Worker-generated and personalized responses are never cached. Public
+    // static responses keep the explicit policy supplied by the asset origin.
+    output.headers.set("cache-control", "no-store");
+  }
   return output;
 }
 
@@ -560,7 +568,10 @@ export async function handleRequest(request, originFetch = fetch, environment = 
   }
 
   const response = await originFetch(request);
-  return secured(response);
+  return secured(response, {
+    forceNoStore: !["GET", "HEAD"].includes(request.method)
+      || request.headers.has("authorization")
+  });
 }
 
 export default {
