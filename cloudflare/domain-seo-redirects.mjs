@@ -141,6 +141,7 @@ function secured(response) {
   output.headers.set("strict-transport-security", HSTS_VALUE);
   output.headers.set("x-content-type-options", "nosniff");
   output.headers.set("cache-control", "no-store");
+  if (output.status === 404) output.headers.set("x-robots-tag", "noindex, follow");
   return output;
 }
 

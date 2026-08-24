@@ -49,3 +49,11 @@ Hostul canonical este `https://atelierdeconsultanta.ro`. Rutele indexabile folos
 Definițiile din `config/seo-programs.json#pages` care indică rute retrase trebuie să declare `redirectTo`. Artefactele HTML păstrate ca fallback folosesc canonicalul destinației și nu devin surse publice concurente. Rulează `npm run test:canonical-policy` după orice schimbare de rutare, canonical, robots, sitemap sau host.
 
 Toate mutările legacy sunt 301 directe către o destinație semantică indexabilă; nu există fallback global 404 către homepage. Rutele necunoscute și `/404` trebuie să emită HTTP 404, iar documentul `404.html` rămâne `noindex, follow`, fără canonical. Rulează `npm run test:redirect-policy` după orice schimbare a grafului de redirect sau a fallback-ului 404.
+
+## Sitemap, crawling și suprafețe pentru asistenți
+
+`sitemap.xml` publică numai URL-uri canonice, indexabile și servite 200. Politica de includere este în `config/sitemap-policy.json`; `lastmod` provine exclusiv din `lastMeaningfulUpdate` editorial verificat, nu din data build-ului. `robots.txt` permite suprafețele publice și activele de randare, protejează endpointurile `/api` și declară un singur sitemap canonical.
+
+Pentru paginile HTML, meta robots și `X-Robots-Tag` nu trebuie să se contrazică. Răspunsurile 404 sunt `noindex, follow`, iar `/admin` rămâne crawlable `noindex` pentru ca directiva să poată fi observată. Preferințele crawlerelor AI sunt aprobate în `config/crawler-access-policy.json` și nu se schimbă implicit.
+
+`llms.txt` este o hartă editorială opțională și selectivă, nu o copie a site-ului. Linkurile sale trebuie să fie canonice, indexabile și prezente în sitemap; data de actualizare urmărește ultima verificare a programelor publice din registry. După orice schimbare a acestor suprafețe rulează `npm run test:sitemap`, `npm run test:crawler-policy` și `npm run verify:llms-urls`.

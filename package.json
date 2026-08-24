@@ -141,7 +141,7 @@
     "test:accessibility-landmarks": "node tools/sync-accessibility-landmarks.js --check && node tests/accessibility-landmarks-contract.mjs",
     "test:technical-seo": "node tools/sync-accessibility-landmarks.js && node tests/accessibility-landmarks-contract.mjs && node tools/sync-program-visuals.js && node tests/program-visuals-contract.mjs && node tools/verify-sitemap.js && node tools/audit-site-links.js && npm run test:redirect-policy && npm run test:canonical-policy && npm run test:gsc-indexing-remediation && node tests/technical-seo-contract.mjs",
     "audit:crawlers:live": "node tools/audit-crawler-access.js --live",
-    "test:crawler-policy": "node tests/crawler-policy-contract.mjs",
+    "test:crawler-policy": "node tests/crawler-policy-contract.mjs && node tests/crawler-surface-contract.mjs && node scripts/verify-llms-urls.js",
     "test:p0-release-gate": "node tests/p0-release-gate-contract.mjs",
     "gate:p0": "node tools/p0-release-gate.js --environment=all",
     "gate:p0:local": "node tools/p0-release-gate.js --environment=local",

@@ -4,10 +4,10 @@
 const fs = require("fs");
 const path = require("path");
 const { sitemapUrls } = require("../tools/sitemap-utils");
+const { isPublicProgram, loadProgramConfig } = require("../tools/program-factual-governance");
 
 const ROOT = path.resolve(__dirname, "..");
 const SITE = "https://atelierdeconsultanta.ro";
-const IMPLEMENTATION_DATE = "2026-07-29";
 const REQUIRED_PATHS = [
   "/dr12-afir",
   "/dr14",
@@ -41,12 +41,22 @@ function redirectSources() {
 function main() {
   const errors = [];
   const llms = fs.readFileSync(path.join(ROOT, "llms.txt"), "utf8");
+  const programs = loadProgramConfig().programs;
+  const latestVerification = programs
+    .filter((program) => isPublicProgram(program) && !program.discovery?.redirectTarget)
+    .reduce((latest, program) => program.verifiedAt > latest ? program.verifiedAt : latest, "0000-00-00");
   const sitemap = new Set(sitemapUrls(ROOT));
   const redirects = redirectSources();
   const lines = llms.split(/\r?\n/);
   const urls = [];
 
-  if (!llms.includes(`Ultima actualizare: ${IMPLEMENTATION_DATE}`)) errors.push(`Data llms.txt trebuie să fie ${IMPLEMENTATION_DATE}.`);
+  if (!llms.includes(`Ultima actualizare: ${latestVerification}`)) {
+    errors.push(`Data llms.txt trebuie să urmeze ultima verificare publică din registry: ${latestVerification}.`);
+  }
+  if (!llms.includes(`Ultima verificare din registrul public: ${latestVerification}`)) {
+    errors.push(`Blocul factual llms.txt trebuie să indice verificarea ${latestVerification}.`);
+  }
+  if (/<(?:html|head|body|main|article)\b/iu.test(llms)) errors.push("llms.txt nu trebuie să copieze documente HTML ale site-ului.");
   for (const [index, line] of lines.entries()) {
     const matches = line.match(/https:\/\/atelierdeconsultanta\.ro[^\s`)]+/g) || [];
     if (matches.length > 1) errors.push(`Linia ${index + 1} conține mai multe URL-uri.`);
@@ -81,6 +91,7 @@ function main() {
   for (const pathname of REQUIRED_PATHS) {
     if (!unique.has(`${SITE}${pathname}`)) errors.push(`URL prioritar lipsă din llms.txt: ${pathname}`);
   }
+  if (unique.size >= sitemap.size) errors.push("llms.txt trebuie să rămână o selecție editorială, nu o duplicare a sitemap-ului.");
 
   if (errors.length) {
     console.error(errors.map((error) => `- ${error}`).join("\n"));

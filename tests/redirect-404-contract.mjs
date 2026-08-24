@@ -50,6 +50,7 @@ const direct404 = await handleRequest(new Request(`${SITE}/404`), async (request
 });
 assert.equal(direct404.status, 404, "/404 trebuie să emită HTTP 404, nu soft-404 200");
 assert.equal(direct404.headers.get("location"), null, "/404 nu trebuie redirectat la homepage");
+assert.equal(direct404.headers.get("x-robots-tag"), "noindex, follow", "/404 trebuie să aibă X-Robots-Tag coerent cu meta robots");
 assert.equal(new URL(direct404OriginUrl).pathname, "/__faber-intentional-not-found__", "/404 trebuie rezolvat prin fallback-ul origin 404");
 assert.doesNotMatch(await direct404.text(), /rel=["'][^"']*canonical/iu, "răspunsul /404 nu trebuie să conțină canonical");
 
@@ -60,6 +61,7 @@ const unknown = await handleRequest(new Request(`${SITE}/__task10-unknown-route_
 });
 assert.equal(unknown.status, 404, "o rută necunoscută trebuie să păstreze statusul 404 al origin-ului");
 assert.equal(unknown.headers.get("location"), null, "o rută necunoscută nu trebuie redirectată la homepage");
+assert.equal(unknown.headers.get("x-robots-tag"), "noindex, follow", "orice 404 trebuie protejat prin X-Robots-Tag");
 assert.equal(new URL(unknownOriginUrl).pathname, "/__task10-unknown-route__", "workerul nu trebuie să rescrie o rută necunoscută curată");
 assert.doesNotMatch(await unknown.text(), /rel=["'][^"']*canonical/iu, "răspunsul rutei necunoscute nu trebuie să conțină canonical");
 

@@ -352,6 +352,7 @@ function syncLlmsText(source, programs) {
     const latest = programs
       .filter((program) => isPublicProgram(program) && !program.discovery?.redirectTarget)
       .reduce((value, program) => program.verifiedAt > value ? program.verifiedAt : value, "0000-00-00");
+  output = output.replace(/^Ultima actualizare:\s*\d{4}-\d{2}-\d{2}\s*$/mu, `Ultima actualizare: ${latest}`);
   const block = `${markerStart}\n## Guvernanță factuală a programelor\n\n- Sursa unică de adevăr: ${REGISTRY_REF}.\n- Statusurile și valorile nu sunt deduse din URL-uri sau din texte editoriale locale.\n- Înregistrările pending_validation sunt excluse din suprafețele publice.\n- Ultima verificare din registrul public: ${latest}\n\n${entries}\n${markerEnd}`;
   return `${output}\n\n${block}\n`;
 }

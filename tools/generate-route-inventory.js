@@ -579,7 +579,7 @@ function requiredSurfaceRows() {
     ["ANPC", "https://anpc.ro și https://anpc.ro/ce-este-sal", "linkuri externe în homepage/GDPR/Terms; nu există rută locală /anpc"],
     ["Articole/ghiduri", "/blog; /ghiduri și rutele article/guide din inventar", "HTML canonical pre-randat + blog.json"],
     ["Landing pages locale", "/fonduri-europene-nord-est; /fonduri-europene-bucuresti", "Iași/Suceava/Bacău sunt aliasuri 301 către Nord-Est"],
-    ["404", "fallback pentru orice rută inexistentă", "ruta explicită /404 răspunde 200/noindex; un URL inexistent răspunde 404"],
+    ["404", "fallback pentru orice rută inexistentă", "ruta explicită /404 și orice URL inexistent răspund 404/noindex"],
   ];
 }
 
@@ -719,7 +719,7 @@ function renderInventory(inventory, live) {
     "",
     "| Rută | Sursă | HTTP | Indexabilitate | Metadata/schema | Problemă |",
     "|---|---|---:|---|---|---|",
-    "| `/404` | `404.html` | 200 când este cerut explicit; 404 ca fallback pentru URL inexistent | nu (meta + X-Robots-Tag) | title/H1/canonical `/404`, fără sitemap | Comportament intenționat; testul real de 404 folosește o rută inexistentă. |",
+    "| `/404` | `404.html` | 404 explicit și ca fallback pentru URL inexistent | nu (meta + X-Robots-Tag) | title/H1, fără canonical și fără sitemap | Comportament intenționat; workerul păstrează navigația utilă și emite `noindex, follow`. |",
     "| `/admin` | `admin/index.html` | 200 | nu (meta + X-Robots-Tag) | title/H1, fără sitemap | Panou client-side public; nu este o zonă autentificată server-side. Necesită review separat de securitate/operare. |",
     ...inventory.publicFragments.map((item) => `| \`${markdown(item.route)}\` | \`${markdown(item.sourceFile)}\` | ${item.expectedHttp} | ${markdown(item.indexable)} | lipsesc canonical/metadata/schema de pagină | ${markdown(item.issue)} |`),
     "",
@@ -770,7 +770,7 @@ function renderInventory(inventory, live) {
     "- **P1 existent:** validatorul SEO raportează linkuri interne către surse de redirect (`T00-017`).",
     "- **P1:** `/admin` este o suprafață publică protejată doar prin UI/localStorage, nu o zonă autentificată server-side; rolul ei operațional și expunerea trebuie revizuite separat.",
     "- **P2:** `/cookies`, `/echipa`, `/date-companie` și `/anpc` nu există ca rute standalone; conținutul/destinația există în paginile canonical sau extern și nu justifică automat URL-uri noi.",
-    "- **P2:** forma explicită `/404` răspunde 200, în timp ce fallback-ul real răspunde corect 404; documentația/testele trebuie să folosească o rută inexistentă pentru status.",
+    "- **Rezolvat în Task 10–11:** forma explicită `/404` și fallback-ul necunoscut răspund 404, fără canonical și cu meta/X-Robots-Tag `noindex, follow` coerente.",
     "",
     "## Verificarea automată adăugată",
     "",
