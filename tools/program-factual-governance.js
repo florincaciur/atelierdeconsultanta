@@ -5,6 +5,7 @@ const path = require("path");
 
 const ROOT = path.resolve(__dirname, "..");
 const CONFIG_PATH = path.join(ROOT, "config", "seo-programs.json");
+const PROGRAM_FAMILY_CONFIG_PATH = path.join(ROOT, "config", "program-family-hubs.json");
 const HUMAN_REVIEW = "DE_VALIDAT_UMAN";
 const PROGRAM_STATUSES = Object.freeze([
   "apel_deschis",
@@ -415,6 +416,46 @@ function formatIntensity(value) {
   return value.map((item) => `${formatNumber(item.rate)}%${item.scope ? ` (${item.scope})` : ""}`).join(" / ");
 }
 
+function formatDateRo(value) {
+  if (!isIsoDate(value, { nullable: false })) return "";
+  return new Intl.DateTimeFormat("ro-RO", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+    timeZone: "UTC"
+  }).format(new Date(`${value}T00:00:00Z`));
+}
+
+function applicantSummaryText(program) {
+  const explicit = String(program?.eligibleApplicantSummary || "").trim();
+  if (explicit) return explicit;
+  const labels = readJson(PROGRAM_FAMILY_CONFIG_PATH).filters?.applicantTypes || {};
+  const values = (program?.discovery?.applicantTypes || [])
+    .map((key) => labels[key])
+    .filter(Boolean)
+    .map((label) => label
+      .replace(/\bIMM\b/gu, "întreprinderi mici și mijlocii (IMM)")
+      .replace(/\bGAL\b/gu, "grupuri de acțiune locală (GAL)"));
+  return values.join(", ") || "Categoria solicitantului se confirmă în documentul oficial aplicabil.";
+}
+
+function grantAnswerText(program) {
+  return grantSummaryText(program) || "Nicio valoare publicată în registrul verificat pentru această pagină; valoarea se confirmă în documentele apelului aplicabil.";
+}
+
+function contributionAnswerText(program) {
+  return cofinancingSummaryText(program) || "Nicio intensitate sau contribuție publicată în registrul verificat pentru această pagină; condițiile se confirmă în documentele apelului aplicabil.";
+}
+
+function applicationWindowText(program) {
+  if (program?.applicationStart && program?.applicationEnd) {
+    return `${formatDateRo(program.applicationStart)} – ${formatDateRo(program.applicationEnd)}`;
+  }
+  if (program?.applicationStart) return `Începere: ${formatDateRo(program.applicationStart)}; termenul final nu este publicat.`;
+  if (program?.applicationEnd) return `Termen: ${formatDateRo(program.applicationEnd)}`;
+  return "Niciun termen de depunere publicat în registrul verificat pentru această pagină.";
+}
+
 function grantSummaryText(program) {
   if (!isPublicProgram(program) || !summaryHasValues(program.grantSummary)) return "";
   const minimum = formatMoneyValue(program.grantSummary.minimum);
@@ -505,19 +546,30 @@ function renderProgramFactualStatus(program, options = {}) {
 </section>
 <!-- PROGRAM_FACTUAL_STATUS_END -->`;
   }
-  const funding = fundingSummary(program);
-  const application = program.applicationStart || program.applicationEnd
-    ? `<p><strong>Perioadă de depunere:</strong> ${escapeHtml(program.applicationStart || "—")}–${escapeHtml(program.applicationEnd || "—")}.</p>`
-    : "<!-- applicationStart/applicationEnd=null -->";
+  const grant = grantAnswerText(program);
+  const contribution = contributionAnswerText(program);
+  const application = applicationWindowText(program);
+  const applicationMarkup = program.applicationStart && program.applicationEnd
+    ? `<time datetime="${escapeHtml(program.applicationStart)}">${escapeHtml(formatDateRo(program.applicationStart))}</time> – <time datetime="${escapeHtml(program.applicationEnd)}">${escapeHtml(formatDateRo(program.applicationEnd))}</time>`
+    : program.applicationStart
+      ? `<time datetime="${escapeHtml(program.applicationStart)}">${escapeHtml(formatDateRo(program.applicationStart))}</time>; termenul final nu este publicat.`
+      : program.applicationEnd
+        ? `<time datetime="${escapeHtml(program.applicationEnd)}">${escapeHtml(formatDateRo(program.applicationEnd))}</time>`
+        : escapeHtml(application);
   const meaningful = isIsoDate(program.lastMeaningfulUpdate, { nullable: false })
     ? ` Ultima actualizare relevantă: <time datetime="${escapeHtml(program.lastMeaningfulUpdate)}">${escapeHtml(program.lastMeaningfulUpdate)}</time>.`
     : "";
   return `<!-- PROGRAM_FACTUAL_STATUS_START -->
-<section class="program-factual-status" aria-label="Statut factual al programului" data-program-id="${escapeHtml(program.id)}" data-program-status="${escapeHtml(program.status)}" data-status-label="${escapeHtml(program.statusLabel)}" data-verified-at="${escapeHtml(program.verifiedAt)}" data-source-url="${escapeHtml(program.sourceUrl)}" data-publication-state="public">
-  <p><strong>Statut:</strong> ${escapeHtml(statusStatement(program))} ${escapeHtml(program.editorialDisclaimer || "")}</p>
-  ${application}
-  ${funding ? `<p data-program-funding>${escapeHtml(funding)}</p>` : "<!-- grantSummary/cofinancingSummary=null; nicio valoare publicată -->"}
-  <p><strong>Sursă oficială:</strong> <a href="${escapeHtml(program.sourceUrl)}" target="_blank" rel="noopener noreferrer" data-analytics-event="source_document_click" data-analytics-component="program_factual_status" data-analytics-cta-id="official_source" data-analytics-program-category="${escapeHtml(program.slug)}">${escapeHtml(program.sourceVersion)}</a>, ${escapeHtml(program.sourceName)}. Verificat la <time datetime="${escapeHtml(program.verifiedAt)}">${escapeHtml(program.verifiedAt)}</time>.${meaningful}</p>
+<section class="program-factual-status" aria-label="Răspuns direct și date esențiale ale programului" data-aeo-program-summary data-program-id="${escapeHtml(program.id)}" data-program-status="${escapeHtml(program.status)}" data-status-label="${escapeHtml(program.statusLabel)}" data-verified-at="${escapeHtml(program.verifiedAt)}" data-source-url="${escapeHtml(program.sourceUrl)}" data-publication-state="public">
+  <p data-aeo-primary-answer data-aeo-direct-answer data-answer-field="status"><strong>Statut:</strong> ${escapeHtml(statusStatement(program))} ${escapeHtml(program.editorialDisclaimer || "")}</p>
+  <dl class="program-factual-status__facts" aria-label="Cine poate aplica, finanțare, contribuție, termen și data verificării">
+    <div data-answer-field="applicant"><dt>Cine poate aplica</dt><dd>${escapeHtml(applicantSummaryText(program))}</dd></div>
+    <div data-answer-field="grant"><dt>Grant / valoare</dt><dd${program.grantSummary ? " data-program-grant" : ""}>${escapeHtml(grant)}</dd></div>
+    <div data-answer-field="contribution"><dt>Intensitate / contribuție</dt><dd${program.cofinancingSummary ? " data-program-contribution" : ""}>${escapeHtml(contribution)}</dd></div>
+    <div data-answer-field="deadline"><dt>Perioadă de depunere / termen</dt><dd>${applicationMarkup}</dd></div>
+    <div data-answer-field="verifiedAt"><dt>Verificat la</dt><dd><time datetime="${escapeHtml(program.verifiedAt)}">${escapeHtml(formatDateRo(program.verifiedAt))}</time></dd></div>
+  </dl>
+  <p class="program-factual-status__source"><strong>Sursă oficială:</strong> <a href="${escapeHtml(program.sourceUrl)}" target="_blank" rel="noopener noreferrer" data-analytics-event="source_document_click" data-analytics-component="program_factual_status" data-analytics-cta-id="official_source" data-analytics-program-category="${escapeHtml(program.slug)}">${escapeHtml(program.sourceVersion)}</a>, ${escapeHtml(program.sourceName)}.${meaningful}</p>
 </section>
 <!-- PROGRAM_FACTUAL_STATUS_END -->`;
 }
@@ -569,14 +621,19 @@ module.exports = {
   ROOT,
   SOURCE_STATUSES,
   archivedRobotsDecision,
+  applicantSummaryText,
+  applicationWindowText,
   catalogPrograms,
   carouselPrograms,
   cofinancingSummaryText,
+  contributionAnswerText,
   daysSince,
   factualFaq,
   formatIntensity,
+  formatDateRo,
   formatMoneyValue,
   fundingSummary,
+  grantAnswerText,
   grantSummaryText,
   hasOfficialSource,
   homepageHeroPrograms,

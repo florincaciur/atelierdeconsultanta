@@ -85,7 +85,7 @@ for (const page of config.pages) {
   const actualOrder = $("[data-program-template-section]").map((_, node) => $(node).attr("data-program-template-section")).get();
   assert.deepEqual(actualOrder, ["glance", ...SECTION_ORDER], `${page.route}: ordinea obligatorie a secțiunilor este încălcată`);
   assert.equal($("#program-glance-title").text().trim(), "La o privire");
-  assert.deepEqual($("#program-glance-title").closest("section").find("th").map((_, node) => $(node).text().trim()).get(), ["Beneficiar", "Sprijin", "Contribuție proprie", "Calendar", "Document-cheie"]);
+  assert.deepEqual($("#program-glance-title").closest("section").find("th").map((_, node) => $(node).text().trim()).get(), ["Beneficiar", "Sprijin", "Contribuție proprie", "Calendar", "Verificat la", "Document-cheie"]);
   $("#program-glance-title").closest("section").find("tr").each((_, row) => {
     assert.equal($(row).find("a[data-source-key]").length, 1, `${page.route}: fiecare valoare din tabel trebuie să aibă sursa alăturată`);
   });

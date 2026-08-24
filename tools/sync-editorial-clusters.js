@@ -182,7 +182,7 @@ function renderArticle(page) {
 
   return `<div class="editorial-cluster" data-cluster="${attr(page.clusterId)}" data-intent-id="${attr(page.intentId)}">
       <section class="editorial-cluster__answer" aria-label="Răspuns direct">
-        <p class="intro" data-direct-answer>${esc(page.directAnswer)}</p>
+        <p class="intro" data-direct-answer${page.role === "service" ? "" : ' data-aeo-primary-answer="" data-aeo-direct-answer=""'}>${esc(page.directAnswer)}</p>
       </section>
       ${renderFundingOverview(page)}${renderEligibilityOverview(page)}
       ${(page.sections || []).map(renderSection).join("\n")}
@@ -259,6 +259,7 @@ function syncPage(page) {
       ? hero.children("p").first()
       : hero.find("p").first();
   heroDescription.text(page.heroDescription);
+  if (page.role === "service") heroDescription.attr("data-aeo-primary-answer", "").attr("data-aeo-direct-answer", "");
   if (Array.isArray(page.heroActions) && page.heroActions.length) {
     let actions = hero.find(".hero-actions").first();
     if (!actions.length) {

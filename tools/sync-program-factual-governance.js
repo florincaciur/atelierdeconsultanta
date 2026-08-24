@@ -401,6 +401,9 @@ function syncProgramHtml(source, program) {
   let output = source;
   const eol = source.includes("\r\n") ? "\r\n" : "\n";
   const templateMode = /data-program-template-version=(?:"[^"]+"|'[^']+')/i.test(source);
+  if (!templateMode) {
+    output = output.replace(/<!-- ANSWER_READINESS_START -->[\s\S]*?<!-- ANSWER_READINESS_END -->\s*/gi, "");
+  }
   output = output.replace(/<title>[^<]*<\/title>/i, `<title>${escapeHtml(program.metaTitle)}</title>`);
   output = replaceMeta(output, /<meta\b[^>]*\bname=["']description["'][^>]*>/i, program.metaDescription);
   output = replaceMeta(output, /<meta\b[^>]*\bproperty=["']og:title["'][^>]*>/i, program.metaTitle);

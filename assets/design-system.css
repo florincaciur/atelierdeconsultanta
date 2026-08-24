@@ -227,6 +227,30 @@ body[data-design-system="p1_07"] .program-factual-status::before {
   font-weight: 850;
 }
 
+body[data-design-system="p1_07"] .program-factual-status__facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+  gap: var(--ds-space-3) var(--ds-space-6);
+  margin: var(--ds-space-5) 0;
+}
+
+body[data-design-system="p1_07"] .program-factual-status__facts > div {
+  padding-block: var(--ds-space-3);
+  border-block-start: 1px solid color-mix(in srgb, currentColor 18%, transparent);
+}
+
+body[data-design-system="p1_07"] .program-factual-status__facts dt {
+  font-weight: 800;
+}
+
+body[data-design-system="p1_07"] .program-factual-status__facts dd {
+  margin: var(--ds-space-2) 0 0;
+}
+
+body[data-design-system="p1_07"] .program-factual-status__source {
+  margin-block-end: 0;
+}
+
 body[data-design-system="p1_07"] .program-factual-status[data-program-status="consultare_publica"],
 body[data-design-system="p1_07"] .program-factual-status[data-program-status="ghid_aprobat_nedeschis"],
 body[data-design-system="p1_07"] .program-factual-status[data-program-status="calendar_estimativ"] {

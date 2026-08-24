@@ -148,7 +148,7 @@ function renderHero(hub) {
     <span class="hero-icon" aria-hidden="true"><i class="${esc(HUB_ICONS[hub.id] || "ph-duotone ph-folders")}"></i></span>
     <span class="eyebrow design-badge">Programe · ${esc(hub.label)}</span>
     <h1>${esc(hub.h1)}</h1>
-    <p>${esc(hub.intro)}</p>
+    <p data-aeo-primary-answer="" data-aeo-direct-answer="">${esc(hub.intro)}</p>
     <div class="hero-actions">
       <a class="btn btn-primary" href="${PROJECT_CHECK_URL}" data-analytics-event="cta_click" data-analytics-component="program_family_hub" data-analytics-cta-id="project_check" data-analytics-target="${PROJECT_CHECK_URL}" data-analytics-copy-variant="family_hub" data-analytics-cta-view="true">Începe verificarea proiectului</a>
       <a class="btn btn-secondary" href="#cum-alegi">Cum alegi programul</a>

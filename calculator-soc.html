@@ -324,11 +324,11 @@
   <script src="/assets/analytics-events.js" defer=""></script>
   <link rel="stylesheet" href="/assets/contextual-cta.css?v=20260722-1">
   <script src="/assets/contextual-cta.js?v=20260722-1" defer=""></script>
-  <link rel="stylesheet" href="/assets/calculator-so-methodology.css?v=20260810-1">
   <meta property="og:image" content="https://atelierdeconsultanta.ro/og-image.jpg">
   <meta property="og:image:alt" content="Calculator SO/SOC pentru AFIR DR12 și DR14 — FABER">
   <meta name="twitter:image" content="https://atelierdeconsultanta.ro/og-image.jpg">
   <meta name="twitter:image:alt" content="Calculator SO/SOC pentru AFIR DR12 și DR14 — FABER">
+  <link rel="stylesheet" href="/assets/calculator-so-methodology.css?v=20260810-1">
 </head>
 <body class="calculator-refresh-2026 page-family-tool" data-analytics-page-type="tool" data-editorial-record="calculator-soc" data-governance-state="public" data-editorial-verified-at="2026-07-22" data-next-review-at="2026-09-20" data-last-meaningful-update="2026-07-22">
 <a class="skip-link global-skip-link" href="#main-content">Sari la conținut</a>
@@ -507,7 +507,7 @@
   <div class="hero-inner">
     <div class="hero-tag">🌾 Calculator Agricol</div>
     <h1>Calculator SO/SOC pentru AFIR DR12 și DR14</h1>
-    <p class="hero-sub">Calculează orientativ dimensiunea economică a fermei pentru culturi, animale sau exploatații mixte. Rezultatul nu confirmă eligibilitatea finală și trebuie verificat în documentele APIA, ANSVSA, ANZ și în ghidul activ.</p>
+    <p class="hero-sub" data-aeo-primary-answer="" data-aeo-direct-answer="">Calculează orientativ dimensiunea economică a fermei pentru culturi, animale sau exploatații mixte. Rezultatul nu confirmă eligibilitatea finală și trebuie verificat în documentele APIA, ANSVSA, ANZ și în ghidul activ.</p>
   </div>
 
     <div class="hero-actions">
@@ -637,8 +637,8 @@
         <div id="so-result-explanation" class="so-result-explanation"></div>
         <p><strong>Rezultatul calculatorului este orientativ și nu înlocuiește ghidul sau verificarea documentelor.</strong></p>
         <div class="so-result-actions" aria-label="Acțiuni pentru rezultat">
-          <button type="button" data-copy-so-result="">Copiază rezumatul</button>
-          <button type="button" data-print-so-result="">Tipărește rezultatul</button>
+          <button type="button" data-copy-so-result>Copiază rezumatul</button>
+          <button type="button" data-print-so-result>Tipărește rezultatul</button>
         </div>
         <p id="so-action-feedback" class="so-action-feedback" aria-live="polite"></p>
       </div><!-- P1_15_CONTEXTUAL_CTA_START --><aside class="calculator-contextual-cta" aria-label="Continuă cu verificarea AFIR"><p>Rezultatul calculatorului nu înlocuiește ghidul.</p><a class="btn-primary" href="/contact#source_page=%2Fcalculator-soc" data-calculator-context-cta="" data-contextual-base-href="/contact#source_page=%2Fcalculator-soc" data-analytics-event="cta_click" data-analytics-component="calculator_result" data-analytics-cta-id="calculator_soc_contextual_primary" data-analytics-target="/contact" data-analytics-cta-view="true" data-analytics-copy-variant="p1_15">Folosește rezultatul pentru verificarea AFIR</a></aside><!-- P1_15_CONTEXTUAL_CTA_END --></div>
@@ -685,7 +685,7 @@
           </div>
       </dl>
 
-      <p class="source-note answer-readiness__source"><strong>Sursă oficială:</strong> <a href="https://www.afir.ro/comunicare/utile/dezbatere-publica/" target="_blank" rel="noopener noreferrer" data-analytics-event="source_document_click" data-analytics-component="official_source" data-analytics-cta-id="source_document" data-analytics-target="https://www.afir.ro/comunicare/utile/dezbatere-publica/">Ghidurile solicitantului DR12 și DR14 și coeficienții Standard Output aplicabili</a>. <strong>Instituție:</strong> Agenția pentru Finanțarea Investițiilor Rurale (AFIR). <strong>Statut:</strong> Ghiduri consultative la ultima verificare; rezultatul calculatorului rămâne orientativ. <strong>Ultima verificare:</strong> <time datetime="2026-07-20">20 iulie 2026</time>.</p>
+      <p class="source-note answer-readiness__source"><strong>Sursă oficială:</strong> <a href="https://www.afir.ro/comunicare/utile/dezbatere-publica/" target="_blank" rel="noopener noreferrer">Ghidurile solicitantului DR12 și DR14 și coeficienții Standard Output aplicabili</a>. <strong>Instituție:</strong> Agenția pentru Finanțarea Investițiilor Rurale (AFIR). <strong>Statut:</strong> Ghiduri consultative la ultima verificare; rezultatul calculatorului rămâne orientativ. <strong>Ultima verificare:</strong> <time datetime="2026-07-20">20 iulie 2026</time>.</p>
 
       <aside aria-labelledby="answer-readiness-calculator-soc-interpretation">
         <h3 id="answer-readiness-calculator-soc-interpretation">Interpretarea FABER</h3>
@@ -794,7 +794,7 @@
 
 
 <!-- P1_20_SO_METHODOLOGY_START -->
-<section class="section" id="metodologie-calcul-so" data-so-methodology="" data-method-version="FABER-SO-1.0">
+<section class="section" id="metodologie-calcul-so" data-so-methodology data-method-version="FABER-SO-1.0">
   <div class="container">
     <div class="reveal revealed">
       <div class="sec-label">Metodologie și trasabilitate</div>
@@ -824,7 +824,7 @@
       <div class="so-page-disclosure__body">
       <p>Exemplele demonstrează formula și rotunjirea interfeței. Datele despre exploatații sunt fictive; coeficienții provin din lista oficială indicată.</p>
       <div class="so-example-grid">
-        <article class="so-example" data-so-example="">
+        <article class="so-example" data-so-example>
           <span class="so-example__label">Date fictive · coeficienți oficiali</span>
           <h3>Exemplu fictiv 1 — cultură vegetală</h3>
           <ol>
@@ -833,7 +833,7 @@
             <li>SO calculat: 1.944,85 EUR</li>
           </ol>
         </article>
-        <article class="so-example" data-so-example="">
+        <article class="so-example" data-so-example>
           <span class="so-example__label">Date fictive · coeficienți oficiali</span>
           <h3>Exemplu fictiv 2 — exploatație zootehnică</h3>
           <ol>
@@ -842,7 +842,7 @@
             <li>SO calculat: 11.300,24 EUR</li>
           </ol>
         </article>
-        <article class="so-example" data-so-example="">
+        <article class="so-example" data-so-example>
           <span class="so-example__label">Date fictive · coeficienți oficiali</span>
           <h3>Exemplu fictiv 3 — exploatație mixtă</h3>
           <ol>
@@ -1533,5 +1533,5 @@
   <a href="/contact#source_page=%2Fcalculator-soc" data-analytics-event="cta_click" data-analytics-component="mobile_sticky" data-analytics-cta-id="calculator-soc_sticky_primary" data-analytics-target="/contact" data-analytics-cta-view="true" data-analytics-copy-variant="p1_15">Folosește rezultatul pentru verificarea AFIR</a>
 </aside>
 <!-- P1_15_CONTEXTUAL_CTA_END -->
-<script src="/assets/calculator-so-methodology.js?v=20260810-1" defer=""></script>
+<script src="/assets/calculator-so-methodology.js?v=20260810-1" defer></script>
 </body></html>

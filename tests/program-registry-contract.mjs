@@ -13,7 +13,9 @@ const ROOT = path.resolve(__dirname, "..");
 const {
   CANONICAL_PROGRAM_STATUSES,
   PROGRAM_STATUSES,
+  cofinancingSummaryText,
   fundingSummary,
+  grantSummaryText,
   isPublicProgram,
   loadProgramConfig,
   validateProgram,
@@ -124,10 +126,15 @@ for (const program of publicPrograms) {
   assert(factual.length, `${program.slug}: lipsește componenta factuală vizibilă`);
   assertFacts(program, factsFromElement($, factual.get(0)), "componenta factuală");
   assert.equal(factual.find("a[data-analytics-event='source_document_click']").attr("href"), program.sourceUrl, `${program.slug}: link oficial diferit`);
-  assert.equal(factual.find("time").first().attr("datetime"), program.verifiedAt, `${program.slug}: data vizibilă diferă`);
-  const expectedFunding = fundingSummary(program);
-  assert.equal(Boolean(factual.find("[data-program-funding]").length), Boolean(expectedFunding), `${program.slug}: grantSummary/cofinancingSummary este afișat incorect`);
-  if (expectedFunding) assert.equal(factual.find("[data-program-funding]").text().trim(), expectedFunding, `${program.slug}: rezumat financiar diferit`);
+  assert.equal($("[data-aeo-program-summary] [data-answer-field='verifiedAt'] time").first().attr("datetime"), program.verifiedAt, `${program.slug}: data vizibilă diferă`);
+  const summary = $("[data-aeo-program-summary]").first();
+  assert(summary.length, `${program.slug}: lipsește rezumatul semantic answer-first`);
+  const expectedGrant = grantSummaryText(program);
+  const expectedContribution = cofinancingSummaryText(program);
+  assert.equal(Boolean(summary.find("[data-program-grant]").length), Boolean(expectedGrant), `${program.slug}: grantSummary este afișat incorect`);
+  assert.equal(Boolean(summary.find("[data-program-contribution]").length), Boolean(expectedContribution), `${program.slug}: cofinancingSummary este afișat incorect`);
+  if (expectedGrant) assert(summary.find("[data-program-grant]").text().includes(expectedGrant), `${program.slug}: grantSummary diferă`);
+  if (expectedContribution) assert(summary.find("[data-program-contribution]").text().includes(expectedContribution), `${program.slug}: cofinancingSummary diferă`);
 
   const programNode = jsonLdNodes($).find((node) => String(node?.["@id"] || "") === `https://atelierdeconsultanta.ro${program.pageUrl}#funding-program`);
   assert(programNode, `${program.slug}: lipsește programul din JSON-LD`);
@@ -162,7 +169,7 @@ for (const program of programs.filter((item) => !isPublicProgram(item))) {
   assert.equal($("body").attr("data-publication-state"), "pending_validation", `${program.slug}: pagina pending nu este marcată`);
   assert.match($("meta[name='robots']").attr("content") || "", /noindex/iu, `${program.slug}: pagina pending este indexabilă`);
   assert.equal($(`[data-program-id='${program.id}'][data-program-status]`).length, 0, `${program.slug}: pagina pending publică status factual`);
-  assert.equal($("main [data-program-funding]").length, 0, `${program.slug}: pagina pending publică valori factuale`);
+  assert.equal($("main [data-program-grant], main [data-program-contribution]").length, 0, `${program.slug}: pagina pending publică valori factuale`);
   assert(!jsonLdNodes($).some((node) => String(node?.["@id"] || "").endsWith("#funding-program")), `${program.slug}: pagina pending publică JSON-LD factual`);
 }
 

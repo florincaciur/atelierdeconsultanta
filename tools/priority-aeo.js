@@ -144,6 +144,7 @@ function applyPriorityAeo(html, slug, config = loadPriorityConfig()) {
   if (!page) return html;
   let output = removeExistingBlock(html);
   output = renameLegacyQuickAnswer(output);
+  if (page.programId || page.route === "/" || page.route === "/verificare-eligibilitate-fonduri-europene") return output;
   if (slug === "calculator-soc") {
     output = removeCompactCalculatorSummaries(output);
     output = ensureCalculatorMain(output);
