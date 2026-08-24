@@ -85,6 +85,7 @@ assert.match(headersFile, /\/assets\/\*[\s\S]*?Cache-Control: public, max-age=86
 assert.doesNotMatch(headersFile, /Cache-Control:\s*public[^\r\n]*immutable/iu, "non-content-addressed public files must not be immutable for one year");
 assert.match(headersFile, /\/robots\.txt[\s\S]*?Cache-Control: public, max-age=3600/u);
 assert.match(headersFile, /\/sitemap\.xml[\s\S]*?Cache-Control: public, max-age=3600/u);
+assert.match(headersFile, /\/sitemap-\*\.xml[\s\S]*?Cache-Control: public, max-age=3600/u);
 assert.match(headersFile, /\/release\.json[\s\S]*?Cache-Control: no-store/u);
 
 const domainConfig = JSON.parse(fs.readFileSync(new URL("../wrangler.redirects.jsonc", import.meta.url), "utf8"));

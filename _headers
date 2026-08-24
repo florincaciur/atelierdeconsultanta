@@ -20,14 +20,6 @@
   X-Robots-Tag: noindex, nofollow
   Cache-Control: public, max-age=86400, must-revalidate
 
-/*.css
-  X-Robots-Tag: noindex, nofollow
-  Cache-Control: public, max-age=86400, must-revalidate
-
-/*.js
-  X-Robots-Tag: noindex, nofollow
-  Cache-Control: public, max-age=86400, must-revalidate
-
 /*.png
   Cache-Control: public, max-age=86400, must-revalidate
 
@@ -57,6 +49,10 @@
   Cache-Control: public, max-age=3600
 
 /sitemap.xml
+  X-Robots-Tag: noindex, nofollow
+  Cache-Control: public, max-age=3600
+
+/sitemap-*.xml
   X-Robots-Tag: noindex, nofollow
   Cache-Control: public, max-age=3600
 
