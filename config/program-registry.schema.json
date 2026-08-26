@@ -134,7 +134,20 @@
         "sourceType": { "const": "official" },
         "applicationStart": { "$ref": "#/$defs/dateOrPending" },
         "applicationEnd": { "$ref": "#/$defs/dateOrPending" },
-        "extensionData": { "type": ["object", "null"] },
+        "consultationStart": { "$ref": "#/$defs/dateOrPending", "description": "Începutul consultării, separat de sesiunea de depunere." },
+        "consultationEnd": { "$ref": "#/$defs/dateOrPending", "description": "Termenul pentru observații în consultarea publică, numai din dovadă oficială." },
+        "extensionData": {
+          "description": "Ultima prelungire documentată. Nu actualizează automat applicationEnd sau statusul.",
+          "type": ["object", "null"],
+          "required": ["originalEnd", "extendedEnd", "sourceRef", "verifiedAt"],
+          "properties": {
+            "originalEnd": { "type": "string", "format": "date" },
+            "extendedEnd": { "type": "string", "format": "date" },
+            "sourceRef": { "$ref": "#/$defs/sourceReference", "description": "Referință atribuită programului în corrigenda sau sessionAnnouncement." },
+            "verifiedAt": { "type": "string", "format": "date" }
+          },
+          "additionalProperties": false
+        },
         "grantSummary": { "type": ["object", "null"] },
         "cofinancingSummary": { "type": ["object", "null"] },
         "pageUrl": { "type": "string", "pattern": "^/" },

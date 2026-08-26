@@ -42,6 +42,12 @@ Fluxul sigur de modificare este:
 
 Panoul `/admin/` nu este autoritatea pentru faptele programelor și nu trebuie folosit pentru publicarea directă a unui `banners.json` independent.
 
+### Audit automat al statusurilor expirate
+
+`npm run audit:funding-status` verifică registrul față de data curentă UTC, fără să modifice fapte, statusuri sau date editoriale. Un `OPEN` expirat ori fără dovezi oficiale produce exit code 1; avertismentele acestui audit nu produc un cod de ieșire nenul. Politica existentă este de 30 de zile pentru `OPEN` și 60 pentru celelalte programe.
+
+`npm run test:funding-status` verifică fixture-urile, prelungirile și comportamentul read-only. Ambele comenzi rulează înainte de `npm run build` și în workflow-ul dedicat la push/PR și zilnic. `npm run audit:funding-status -- --report` păstrează rapoarte interne JSON/Markdown; `--today=YYYY-MM-DD` permite reproducerea unui audit. Reguli, coduri de ieșire și pași de reverificare: [procedura auditului](docs/faber-remediation/STALE_FUNDING_AUDIT_TASK22.md).
+
 ## Politica URL și canonical
 
 Hostul canonical este `https://atelierdeconsultanta.ro`. Rutele indexabile folosesc forma curată lowercase, fără `www`, query string, `.html`, `/index.html` sau slash final, cu excepția homepage-ului `/`. Path-urile sunt case-sensitive: o variantă cu majuscule nu este un URL alternativ și poate răspunde 404. Autoritatea pentru setul public este inventarul generat de `tools/generate-route-inventory.js`; `_redirects` și workerul de domeniu păstrează aliasurile istorice prin 301 direct.

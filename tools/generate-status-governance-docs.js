@@ -667,6 +667,7 @@ module.exports = {
   SOURCE_ROLES,
   buildDocuments,
   checkDocuments,
+  isOfficialUrl,
   loadData,
   resolveSourceReference,
   sameDocumentContent,
