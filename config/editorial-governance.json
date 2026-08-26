@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "policy": {
     "openCallReviewDays": 30,
     "programReviewDays": 60,
@@ -33,7 +33,9 @@
           "reviewer": "Echipa editorială FABER",
           "meaningful": false
         }
-      ]
+      ],
+      "datePublished": "DE_VALIDAT_UMAN",
+      "officialSourceUpdatedAt": "DE_VALIDAT_UMAN"
     },
     {
       "id": "afir-autoconsum-agroalimentar",
@@ -85,7 +87,9 @@
           "reviewer": "Echipa editorială FABER",
           "meaningful": false
         }
-      ]
+      ],
+      "datePublished": "DE_VALIDAT_UMAN",
+      "officialSourceUpdatedAt": "DE_VALIDAT_UMAN"
     },
     {
       "id": "apeluri-gal",
@@ -137,7 +141,9 @@
           "reviewer": "Echipa editorială FABER",
           "meaningful": false
         }
-      ]
+      ],
+      "datePublished": "DE_VALIDAT_UMAN",
+      "officialSourceUpdatedAt": "DE_VALIDAT_UMAN"
     },
     {
       "id": "autoconsum-public-fotovoltaice-institutii-publice",
@@ -183,7 +189,9 @@
           "reviewer": "Echipa editorială FABER",
           "meaningful": false
         }
-      ]
+      ],
+      "datePublished": "DE_VALIDAT_UMAN",
+      "officialSourceUpdatedAt": "DE_VALIDAT_UMAN"
     },
     {
       "id": "calculator-soc",
@@ -217,7 +225,9 @@
           "reviewer": "Echipa editorială și tehnică FABER",
           "meaningful": true
         }
-      ]
+      ],
+      "datePublished": "DE_VALIDAT_UMAN",
+      "officialSourceUpdatedAt": "DE_VALIDAT_UMAN"
     },
     {
       "id": "cod-caen-start-up-nation-2026",
@@ -245,7 +255,9 @@
           "reviewer": "Echipa editorială FABER",
           "meaningful": false
         }
-      ]
+      ],
+      "datePublished": "DE_VALIDAT_UMAN",
+      "officialSourceUpdatedAt": "DE_VALIDAT_UMAN"
     },
     {
       "id": "digitalizare-imm",
@@ -291,7 +303,9 @@
           "reviewer": "Echipa editorială FABER",
           "meaningful": true
         }
-      ]
+      ],
+      "datePublished": "DE_VALIDAT_UMAN",
+      "officialSourceUpdatedAt": "DE_VALIDAT_UMAN"
     },
     {
       "id": "dr12-afir",
@@ -337,7 +351,9 @@
           "reviewer": "Echipa editorială FABER",
           "meaningful": false
         }
-      ]
+      ],
+      "datePublished": "2026-05-19",
+      "officialSourceUpdatedAt": "DE_VALIDAT_UMAN"
     },
     {
       "id": "dr12-vs-dr14",
@@ -389,7 +405,9 @@
           "reviewer": "Echipa editorială FABER",
           "meaningful": true
         }
-      ]
+      ],
+      "datePublished": "DE_VALIDAT_UMAN",
+      "officialSourceUpdatedAt": "DE_VALIDAT_UMAN"
     },
     {
       "id": "dr14",
@@ -447,7 +465,9 @@
           "reviewer": "Echipa editorială FABER",
           "meaningful": false
         }
-      ]
+      ],
+      "datePublished": "DE_VALIDAT_UMAN",
+      "officialSourceUpdatedAt": "DE_VALIDAT_UMAN"
     },
     {
       "id": "dr18",
@@ -487,7 +507,9 @@
           "reviewer": "Echipa editorială FABER",
           "meaningful": true
         }
-      ]
+      ],
+      "datePublished": "DE_VALIDAT_UMAN",
+      "officialSourceUpdatedAt": "DE_VALIDAT_UMAN"
     },
     {
       "id": "dr14-afir-ferme-mici",
@@ -515,7 +537,9 @@
           "reviewer": "Echipa editorială FABER",
           "meaningful": false
         }
-      ]
+      ],
+      "datePublished": "DE_VALIDAT_UMAN",
+      "officialSourceUpdatedAt": "DE_VALIDAT_UMAN"
     },
     {
       "id": "e-move",
@@ -561,7 +585,9 @@
           "reviewer": "Echipa editorială FABER",
           "meaningful": false
         }
-      ]
+      ],
+      "datePublished": "DE_VALIDAT_UMAN",
+      "officialSourceUpdatedAt": "DE_VALIDAT_UMAN"
     },
     {
       "id": "femeia-antreprenor-2026",
@@ -607,7 +633,9 @@
           "reviewer": "Echipa editorială FABER",
           "meaningful": false
         }
-      ]
+      ],
+      "datePublished": "DE_VALIDAT_UMAN",
+      "officialSourceUpdatedAt": "DE_VALIDAT_UMAN"
     },
     {
       "id": "fondul-de-modernizare",
@@ -647,7 +675,9 @@
           "reviewer": "Echipa editorială FABER",
           "meaningful": false
         }
-      ]
+      ],
+      "datePublished": "DE_VALIDAT_UMAN",
+      "officialSourceUpdatedAt": "DE_VALIDAT_UMAN"
     },
     {
       "id": "fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum",
@@ -693,7 +723,9 @@
           "reviewer": "Echipa editorială FABER",
           "meaningful": false
         }
-      ]
+      ],
+      "datePublished": "DE_VALIDAT_UMAN",
+      "officialSourceUpdatedAt": "DE_VALIDAT_UMAN"
     },
     {
       "id": "fondul-modernizare-energie-regenerabila-2026",
@@ -739,7 +771,9 @@
           "reviewer": "Echipa editorială FABER",
           "meaningful": false
         }
-      ]
+      ],
+      "datePublished": "DE_VALIDAT_UMAN",
+      "officialSourceUpdatedAt": "DE_VALIDAT_UMAN"
     },
     {
       "id": "fonduri-regionale",
@@ -785,7 +819,9 @@
           "reviewer": "Echipa editorială FABER",
           "meaningful": false
         }
-      ]
+      ],
+      "datePublished": "DE_VALIDAT_UMAN",
+      "officialSourceUpdatedAt": "DE_VALIDAT_UMAN"
     },
     {
       "id": "gal-afir",
@@ -837,7 +873,9 @@
           "reviewer": "Echipa editorială FABER",
           "meaningful": false
         }
-      ]
+      ],
+      "datePublished": "DE_VALIDAT_UMAN",
+      "officialSourceUpdatedAt": "DE_VALIDAT_UMAN"
     },
     {
       "id": "ghiduri",
@@ -865,7 +903,9 @@
           "reviewer": "Echipa editorială FABER",
           "meaningful": false
         }
-      ]
+      ],
+      "datePublished": "DE_VALIDAT_UMAN",
+      "officialSourceUpdatedAt": "DE_VALIDAT_UMAN"
     },
     {
       "id": "instrumente",
@@ -893,7 +933,9 @@
           "reviewer": "Echipa editorială FABER",
           "meaningful": false
         }
-      ]
+      ],
+      "datePublished": "DE_VALIDAT_UMAN",
+      "officialSourceUpdatedAt": "DE_VALIDAT_UMAN"
     },
     {
       "id": "investitii-modernizarea-microintreprinderilor-apel-2",
@@ -939,7 +981,9 @@
           "reviewer": "Echipa editorială FABER",
           "meaningful": false
         }
-      ]
+      ],
+      "datePublished": "DE_VALIDAT_UMAN",
+      "officialSourceUpdatedAt": "DE_VALIDAT_UMAN"
     },
     {
       "id": "pnrr",
@@ -979,7 +1023,9 @@
           "reviewer": "Echipa editorială FABER",
           "meaningful": false
         }
-      ]
+      ],
+      "datePublished": "DE_VALIDAT_UMAN",
+      "officialSourceUpdatedAt": "DE_VALIDAT_UMAN"
     },
     {
       "id": "pocidif-21",
@@ -1025,7 +1071,9 @@
           "reviewer": "Echipa editorială FABER",
           "meaningful": false
         }
-      ]
+      ],
+      "datePublished": "DE_VALIDAT_UMAN",
+      "officialSourceUpdatedAt": "DE_VALIDAT_UMAN"
     },
     {
       "id": "por-adr-nord-est",
@@ -1071,7 +1119,9 @@
           "reviewer": "Echipa editorială FABER",
           "meaningful": false
         }
-      ]
+      ],
+      "datePublished": "DE_VALIDAT_UMAN",
+      "officialSourceUpdatedAt": "DE_VALIDAT_UMAN"
     },
     {
       "id": "pro-infra",
@@ -1123,7 +1173,9 @@
           "reviewer": "Echipa editorială FABER",
           "meaningful": true
         }
-      ]
+      ],
+      "datePublished": "DE_VALIDAT_UMAN",
+      "officialSourceUpdatedAt": "2026-02-12"
     },
     {
       "id": "programul-tranzitie-justa",
@@ -1163,7 +1215,9 @@
           "reviewer": "Echipa editorială FABER",
           "meaningful": false
         }
-      ]
+      ],
+      "datePublished": "DE_VALIDAT_UMAN",
+      "officialSourceUpdatedAt": "DE_VALIDAT_UMAN"
     },
     {
       "id": "resurse",
@@ -1191,7 +1245,9 @@
           "reviewer": "Echipa editorială FABER",
           "meaningful": false
         }
-      ]
+      ],
+      "datePublished": "DE_VALIDAT_UMAN",
+      "officialSourceUpdatedAt": "DE_VALIDAT_UMAN"
     },
     {
       "id": "start-up-nation-2026",
@@ -1237,7 +1293,9 @@
           "reviewer": "Echipa editorială FABER",
           "meaningful": false
         }
-      ]
+      ],
+      "datePublished": "DE_VALIDAT_UMAN",
+      "officialSourceUpdatedAt": "DE_VALIDAT_UMAN"
     },
     {
       "id": "start-up-nation-2026-cheltuieli-eligibile",
@@ -1265,7 +1323,9 @@
           "reviewer": "Echipa editorială FABER",
           "meaningful": false
         }
-      ]
+      ],
+      "datePublished": "DE_VALIDAT_UMAN",
+      "officialSourceUpdatedAt": "DE_VALIDAT_UMAN"
     },
     {
       "id": "start-up-nation-2026-conditii",
@@ -1293,7 +1353,9 @@
           "reviewer": "Echipa editorială FABER",
           "meaningful": false
         }
-      ]
+      ],
+      "datePublished": "DE_VALIDAT_UMAN",
+      "officialSourceUpdatedAt": "DE_VALIDAT_UMAN"
     },
     {
       "id": "start-up-nation-2026-idei-afaceri",
@@ -1321,7 +1383,9 @@
           "reviewer": "Echipa editorială FABER",
           "meaningful": false
         }
-      ]
+      ],
+      "datePublished": "DE_VALIDAT_UMAN",
+      "officialSourceUpdatedAt": "DE_VALIDAT_UMAN"
     },
     {
       "id": "start-up-nation-2026-plan-de-afaceri",
@@ -1349,7 +1413,9 @@
           "reviewer": "Echipa editorială FABER",
           "meaningful": false
         }
-      ]
+      ],
+      "datePublished": "DE_VALIDAT_UMAN",
+      "officialSourceUpdatedAt": "DE_VALIDAT_UMAN"
     },
     {
       "id": "webinarii",
@@ -1377,7 +1443,9 @@
           "reviewer": "Echipa editorială FABER",
           "meaningful": false
         }
-      ]
+      ],
+      "datePublished": "DE_VALIDAT_UMAN",
+      "officialSourceUpdatedAt": "DE_VALIDAT_UMAN"
     },
     {
       "id": "diaspora-investeste-acasa",
@@ -1417,7 +1485,9 @@
           "reviewer": "Echipa editorială FABER",
           "meaningful": true
         }
-      ]
+      ],
+      "datePublished": "DE_VALIDAT_UMAN",
+      "officialSourceUpdatedAt": "DE_VALIDAT_UMAN"
     },
     {
       "id": "e-drive",
@@ -1457,7 +1527,9 @@
           "reviewer": "Echipa editorială FABER",
           "meaningful": true
         }
-      ]
+      ],
+      "datePublished": "DE_VALIDAT_UMAN",
+      "officialSourceUpdatedAt": "DE_VALIDAT_UMAN"
     },
     {
       "id": "e-mobility-ro",
@@ -1497,7 +1569,9 @@
           "reviewer": "Echipa editorială FABER",
           "meaningful": true
         }
-      ]
+      ],
+      "datePublished": "DE_VALIDAT_UMAN",
+      "officialSourceUpdatedAt": "DE_VALIDAT_UMAN"
     },
     {
       "id": "fondul-modernizare-pc1-stocare",
@@ -1537,7 +1611,9 @@
           "reviewer": "Echipa editorială FABER",
           "meaningful": true
         }
-      ]
+      ],
+      "datePublished": "DE_VALIDAT_UMAN",
+      "officialSourceUpdatedAt": "DE_VALIDAT_UMAN"
     }
   ]
 }

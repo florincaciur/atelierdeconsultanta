@@ -176,6 +176,7 @@ for (const route of routes) {
     assert.notEqual(incentive.provider?.["@id"], ORGANIZATION_ID, `${route}: FABER nu poate fi autoritatea programului`);
     assert.equal(incentive.subjectOf?.["@id"], `${canonical}#official-source`, `${route}: sursa oficială nu are @id stabil`);
     assert.equal(incentive.subjectOf?.url, program.sourceUrl, `${route}: sursa oficială diferă de registru`);
+    assert.equal(incentive.subjectOf?.dateModified, program.officialSourceUpdatedAt, `${route}: data actualizării sursei oficiale diferă de registru`);
     assert(pureReference(incentive.subjectOf?.publisher, authorityId), `${route}: sursa oficială nu referă autoritatea`);
     assert.equal(incentive.incentiveStatus, incentiveStatusForProgram(program), `${route}: incentiveStatus diferă de registru`);
     assert.equal(incentive.validFrom, program.applicationStart || undefined, `${route}: validFrom diferă de registru`);
@@ -187,6 +188,7 @@ for (const route of routes) {
   }
 
   const expectedModified = hints.get(route)?.updatedAt;
+  const expectedPublished = hints.get(route)?.publishedAt;
   const dated = nodes.filter((node) => node.dateModified);
   modifiedCount += dated.length ? 1 : 0;
   if (expectedModified) {
@@ -198,6 +200,9 @@ for (const route of routes) {
     }
   } else {
     assert.equal(dated.length, 0, `${route}: dateModified publicat fără modificare editorială verificabilă`);
+  }
+  for (const node of nodes.filter((item) => hasType(item, "WebPage") || hasType(item, "Article"))) {
+    assert.equal(node.datePublished, expectedPublished, `${route}: datePublished nu provine din data editorială confirmată`);
   }
 
   for (const article of nodes.filter((node) => hasType(node, "Article"))) {

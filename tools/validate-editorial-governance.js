@@ -37,7 +37,9 @@ function reportData(today = new Date().toISOString().slice(0, 10)) {
       contentType: record.contentType,
       governanceState: record.governanceState,
       programStatus: program?.status || "—",
+      datePublished: record.datePublished,
       verifiedAt: record.verifiedAt,
+      officialSourceUpdatedAt: record.officialSourceUpdatedAt,
       nextReviewAt: record.nextReviewAt,
       lastMeaningfulUpdate: record.lastMeaningfulUpdate,
       sourceMissing: sourceMissing(record) ? "da" : "nu",
@@ -55,12 +57,39 @@ function markdownReport(data) {
   const missingSources = data.rows.filter((row) => row.sourceMissing === "da");
   const missingReviewers = data.rows.filter((row) => row.reviewerMissing === "da");
   const contradictions = data.rows.filter((row) => row.contradiction !== "nu");
-  const rows = data.rows.map((row) => `| \`${row.route}\` | ${row.contentType} | ${row.governanceState} | ${row.programStatus} | ${row.verifiedAt} | ${row.nextReviewAt} | ${row.lastMeaningfulUpdate} | ${row.sourceMissing} | ${row.reviewExpired} | ${row.reviewerMissing} | ${row.contradiction.replace(/\|/gu, "\\|")} |`).join("\n");
-  return `# Raport de prospețime și guvernanță editorială\n\nData evaluării: **${data.today}**. Registru: \`config/editorial-governance.json\`.\n\n## Rezumat\n\n- Pagini guvernate: **${data.records.length}**\n- Pagini publice cu metadate complete: **${data.records.filter((record) => record.governanceState === "public").length}**\n- Verificări expirate: **${expired.length}**\n- Surse lipsă/incomplete: **${missingSources.length}**\n- Reviewer lipsă: **${missingReviewers.length}**\n- Contradicții program–pagină: **${contradictions.length}**\n\nO expirare produce warning intern și nu schimbă automat statusul, textul, \`verifiedAt\`, \`dateModified\` sau \`lastmod\`. Un status de program expirat nu poate fi schimbat până când reviewerul reînnoiește verificarea și \`nextReviewAt\`.\n\n## Înregistrări\n\n| Rută | Tip | Guvernanță | Status program | Verificat | Reverificare | Modificare substanțială | Sursă lipsă | Expirat | Reviewer lipsă | Contradicție |\n|---|---|---|---|---|---|---|---|---|---|---|\n${rows}\n\n## Reguli de prospețime\n\n- Apel deschis: maximum **${data.config.policy.openCallReviewDays} zile**.\n- Altă pagină de program: maximum **${data.config.policy.programReviewDays} zile**.\n- Ghid sau instrument evergreen: maximum **${data.config.policy.evergreenReviewDays} zile**.\n- Nicio alertă nu rescrie automat conținutul sau datele editoriale.\n`;
+  const rows = data.rows.map((row) => `| \`${row.route}\` | ${row.contentType} | ${row.governanceState} | ${row.programStatus} | ${row.datePublished} | ${row.lastMeaningfulUpdate} | ${row.verifiedAt} | ${row.officialSourceUpdatedAt} | ${row.nextReviewAt} | ${row.sourceMissing} | ${row.reviewExpired} | ${row.reviewerMissing} | ${row.contradiction.replace(/\|/gu, "\\|")} |`).join("\n");
+  return `# Raport de prospețime și guvernanță editorială
+
+Data evaluării: **${data.today}**. Registru: \`config/editorial-governance.json\`.
+
+## Rezumat
+
+- Pagini guvernate: **${data.records.length}**
+- Pagini publice cu metadate complete: **${data.records.filter((record) => record.governanceState === "public").length}**
+- Verificări expirate: **${expired.length}**
+- Surse lipsă/incomplete: **${missingSources.length}**
+- Reviewer lipsă: **${missingReviewers.length}**
+- Contradicții program–pagină: **${contradictions.length}**
+
+O expirare produce warning intern și nu schimbă automat statusul, textul, \`verifiedAt\`, \`dateModified\` sau \`lastmod\`. \`nextReviewAt\` rămâne intern. Un apel deschis expirat este blocat până la reverificare.
+
+## Înregistrări
+
+| Rută | Tip | Guvernanță | Status program | Publicat | Modificat editorial | Verificat | Sursă actualizată | Reverificare internă | Sursă lipsă | Expirat | Reviewer lipsă | Contradicție |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+${rows}
+
+## Reguli de prospețime
+
+- Apel deschis: maximum **${data.config.policy.openCallReviewDays} zile**.
+- Altă pagină de program: maximum **${data.config.policy.programReviewDays} zile**.
+- Ghid sau instrument evergreen: maximum **${data.config.policy.evergreenReviewDays} zile**.
+- Nicio alertă și niciun build nu rescriu automat datele editoriale.
+`;
 }
 
 function csvReport(data) {
-  const headers = ["route", "contentType", "governanceState", "programStatus", "verifiedAt", "nextReviewAt", "lastMeaningfulUpdate", "sourceMissing", "reviewExpired", "reviewerMissing", "contradiction", "issues"];
+  const headers = ["route", "contentType", "governanceState", "programStatus", "datePublished", "lastMeaningfulUpdate", "verifiedAt", "officialSourceUpdatedAt", "nextReviewAt", "sourceMissing", "reviewExpired", "reviewerMissing", "contradiction", "issues"];
   return `${headers.join(",")}\n${data.rows.map((row) => headers.map((header) => csvCell(row[header])).join(",")).join("\n")}\n`;
 }
 

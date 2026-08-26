@@ -264,7 +264,9 @@ function validateProgramEntity($, nodes, route, canonical, issues) {
     issues.push("FinancialIncentive.subjectOf nu descrie sursa oficială din registru");
   }
   if (!isPureReference(incentive.subjectOf?.publisher, authorityId)) issues.push("Sursa oficială nu referă autoritatea distinctă");
-  if (incentive.subjectOf?.dateModified) issues.push("Sursa oficială nu poate primi data editorială FABER ca dateModified");
+  if (incentive.subjectOf?.dateModified !== program.officialSourceUpdatedAt) {
+    issues.push("Sursa oficială are dateModified diferit de officialSourceUpdatedAt din registru");
+  }
   if (incentive.incentiveStatus !== incentiveStatusForProgram(program)) issues.push("FinancialIncentive.incentiveStatus diferă de statusul canonic controlat");
   if (incentive.validFrom !== (program.applicationStart || undefined)) issues.push("FinancialIncentive.validFrom diferă de registru");
   if (incentive.validThrough !== (program.applicationEnd || undefined)) issues.push("FinancialIncentive.validThrough diferă de registru");

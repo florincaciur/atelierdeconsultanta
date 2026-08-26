@@ -634,6 +634,9 @@ function fundingProgramSchema(program) {
     }
   };
   const incentiveStatus = incentiveStatusForProgram(program);
+  if (/^\d{4}-\d{2}-\d{2}$/u.test(String(program.officialSourceUpdatedAt || ""))) {
+    schema.subjectOf.dateModified = program.officialSourceUpdatedAt;
+  }
   if (incentiveStatus) schema.incentiveStatus = incentiveStatus;
   if (program.applicationStart) schema.validFrom = program.applicationStart;
   if (program.applicationEnd) schema.validThrough = program.applicationEnd;

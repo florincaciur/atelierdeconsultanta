@@ -160,7 +160,7 @@ function loadPageHints(root) {
       type: page.type,
       schemaType: page.schemaType,
       updatedAt: page.updatedAt || editorial?.updatedAt || programs.updatedAt,
-      publishedAt: page.publishedAt || editorial?.publishedAt || programs.updatedAt,
+      publishedAt: page.publishedAt || editorial?.publishedAt,
       lastReviewed: page.lastReviewed || page.lastVerifiedAt || editorial?.lastVerifiedAt || programs.lastReviewed
     });
   }
@@ -174,14 +174,15 @@ function loadPageHints(root) {
       type: page.type || "article",
       schemaType: page.schemaType || "Article",
       updatedAt: page.updatedAt || programmatic.updatedAt,
-      publishedAt: page.publishedAt || programmatic.updatedAt,
+      publishedAt: page.publishedAt,
       lastReviewed: page.lastReviewed || programmatic.lastReviewed
     });
   }
 
-  // dateModified, sursa și atribuirea nu se deduc din build sau dintr-un
-  // timestamp generic al colecției. Ele provin exclusiv din registrul de
-  // guvernanță editorială, când înregistrarea este publicabilă.
+  // Pentru rutele guvernate, datePublished/dateModified, sursa și atribuirea
+  // nu se deduc din build sau dintr-un timestamp generic al colecției. Ele
+  // provin exclusiv din registrul editorial și pot rămâne nepublicate până la
+  // confirmarea unei date reale.
   for (const [route, value] of hints) hints.set(route, { ...value, updatedAt: undefined });
   const governancePath = path.join(root, "config", "editorial-governance.json");
   if (fs.existsSync(governancePath)) {
@@ -195,12 +196,18 @@ function loadPageHints(root) {
       const current = hints.get(route) || {};
       hints.set(route, {
         ...current,
+        publishedAt: complete && /^\d{4}-\d{2}-\d{2}$/u.test(String(record.datePublished || ""))
+          ? record.datePublished
+          : undefined,
         updatedAt: complete ? record.lastMeaningfulUpdate : undefined,
         governance: complete ? record : undefined,
         citation: complete ? [{
           "@type": "CreativeWork",
           name: `${record.officialSourceName} — ${record.sourceVersion}`,
-          url: record.officialSourceUrl
+          url: record.officialSourceUrl,
+          ...(/^\d{4}-\d{2}-\d{2}$/u.test(String(record.officialSourceUpdatedAt || ""))
+            ? { dateModified: record.officialSourceUpdatedAt }
+            : {})
         }] : []
       });
     }

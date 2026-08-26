@@ -32,7 +32,7 @@ const {
   reviewExpired,
   validateGovernance
 } = require("../tools/editorial-governance");
-const { filesForRoute } = require("../tools/sync-editorial-governance");
+const { filesForRoute, syncPageHtml } = require("../tools/sync-editorial-governance");
 const {
   generate,
   lastmodForFile
@@ -88,20 +88,32 @@ for (const record of records) {
   const eligible = structuredNodes.filter(eligibleNode);
   if (isCompleteRecord(record)) {
     assert.equal(body.attr("data-editorial-verified-at"), record.verifiedAt, `${record.route}: verifiedAt diferă în HTML`);
-    assert.equal(body.attr("data-next-review-at"), record.nextReviewAt, `${record.route}: nextReviewAt diferă în HTML`);
-    assert.equal(body.attr("data-last-meaningful-update"), record.lastMeaningfulUpdate, `${record.route}: lastMeaningfulUpdate diferă în HTML`);
+    assert.equal(body.attr("data-date-modified"), record.lastMeaningfulUpdate, `${record.route}: dateModified diferă în HTML`);
+    assert.equal(body.attr("data-date-published"), isIsoDate(record.datePublished) ? record.datePublished : undefined, `${record.route}: datePublished diferă în HTML`);
+    assert.equal(body.attr("data-official-source-updated-at"), isIsoDate(record.officialSourceUpdatedAt) ? record.officialSourceUpdatedAt : undefined, `${record.route}: officialSourceUpdatedAt diferă în HTML`);
+    assert.equal(body.attr("data-next-review-at"), undefined, `${record.route}: nextReviewAt intern a fost expus în HTML`);
+    assert.equal(body.attr("data-last-meaningful-update"), undefined, `${record.route}: atributul editorial legacy nu a fost eliminat`);
     assert(section.text().includes(`Verificat la ${record.verifiedAt}`), `${record.route}: lipsește data vizibilă de verificare`);
-    assert(section.text().includes(record.reviewer), `${record.route}: lipsește reviewerul vizibil`);
-    assert(section.text().includes(record.reviewerRole), `${record.route}: lipsește rolul reviewerului`);
+    assert(section.text().includes(`Actualizat editorial la ${record.lastMeaningfulUpdate}`), `${record.route}: lipsește dateModified vizibil`);
+    assert(section.text().includes("Publisher: FABER – Atelier de Consultanță"), `${record.route}: publisherul real nu este vizibil`);
+    assert(!section.text().includes(record.reviewer), `${record.route}: reviewerul fără profil confirmat a fost publicat`);
+    assert(!section.text().includes(record.reviewerRole), `${record.route}: rolul reviewerului fără confirmare a fost publicat`);
+    assert.equal(section.text().includes(`Publicat la ${record.datePublished}`), isIsoDate(record.datePublished), `${record.route}: vizibilitatea datePublished este incorectă`);
+    assert.equal(section.text().includes(`Sursa oficială a fost actualizată la ${record.officialSourceUpdatedAt}`), isIsoDate(record.officialSourceUpdatedAt), `${record.route}: vizibilitatea officialSourceUpdatedAt este incorectă`);
+    assert(!section.text().includes(record.nextReviewAt), `${record.route}: nextReviewAt intern apare în conținutul public`);
     assert.equal(section.find("a[data-analytics-event='source_document_click']").attr("href"), record.officialSourceUrl, `${record.route}: sursa vizibilă diferă`);
     assert(section.find("details.editorial-governance__changelog").length, `${record.route}: lipsește linkul/istoricul «Vezi modificările»`);
     assert(eligible.length, `${record.route}: pagina publică nu are un nod JSON-LD editorial eligibil`);
     for (const node of eligible) {
       assert.equal(node.dateModified, record.lastMeaningfulUpdate, `${record.route}: dateModified nu provine din lastMeaningfulUpdate`);
+      assert.equal(node.datePublished, isIsoDate(record.datePublished) ? record.datePublished : undefined, `${record.route}: datePublished nu provine exclusiv din registrul editorial`);
       assert(Array.isArray(node.citation) && node.citation.some((citation) => {
         const resolved = citation?.["@id"] ? nodeById.get(citation["@id"]) : citation;
         return resolved?.url === record.officialSourceUrl;
       }), `${record.route}: sursa oficială lipsește din JSON-LD`);
+      const officialCitation = node.citation.map((citation) => citation?.["@id"] ? nodeById.get(citation["@id"]) : citation)
+        .find((citation) => citation?.url === record.officialSourceUrl);
+      assert.equal(officialCitation?.dateModified, isIsoDate(record.officialSourceUpdatedAt) ? record.officialSourceUpdatedAt : undefined, `${record.route}: officialSourceUpdatedAt a fost confundat în schema sursei`);
       if (record.attributionType === "person") {
         assert.equal(record.personalNameConsent, true, `${record.route}: atribuirea Person necesită acord`);
         assert.equal(node.author?.["@type"], "Person", `${record.route}: autorul nominal trebuie publicat ca Person`);
@@ -114,11 +126,15 @@ for (const record of records) {
   } else {
     assert.equal(body.attr("data-editorial-verified-at"), undefined, `${record.route}: o dată neverificată a fost expusă în HTML`);
     assert.equal(body.attr("data-next-review-at"), undefined, `${record.route}: un termen neverificat a fost expus în HTML`);
+    assert.equal(body.attr("data-date-published"), undefined, `${record.route}: datePublished neverificat a fost expus în HTML`);
+    assert.equal(body.attr("data-date-modified"), undefined, `${record.route}: dateModified neverificat a fost expus în HTML`);
+    assert.equal(body.attr("data-official-source-updated-at"), undefined, `${record.route}: officialSourceUpdatedAt neverificat a fost expus în HTML`);
     assert.equal(body.attr("data-last-meaningful-update"), undefined, `${record.route}: o actualizare neverificată a fost expusă în HTML`);
     assert(!section.text().includes(HUMAN_REVIEW), `${record.route}: tokenul intern a fost afișat utilizatorului`);
     assert(!section.text().includes("Verificat la"), `${record.route}: pagina incompletă pretinde o verificare publică`);
     for (const node of eligible) {
       assert.equal(node.dateModified, undefined, `${record.route}: dateModified neverificat a rămas în JSON-LD`);
+      assert.equal(node.datePublished, undefined, `${record.route}: datePublished neverificat a rămas în JSON-LD`);
       assert.equal(node.author, undefined, `${record.route}: autor neverificat a rămas în JSON-LD`);
       assert.equal(node.reviewedBy, undefined, `${record.route}: reviewer neverificat a rămas în JSON-LD`);
     }
@@ -135,6 +151,17 @@ for (const record of records) {
         : config.policy.evergreenReviewDays;
     assert(daysBetween(record.verifiedAt, record.nextReviewAt) <= maximum, `${record.route}: termenul de reverificare depășește ${maximum} zile`);
   }
+}
+
+const openPrograms = programs.filter((program) => program.status === "apel_deschis");
+assert(openPrograms.length, "Fixture: trebuie să existe cel puțin un apel deschis pentru politica de prospețime");
+for (const program of openPrograms) {
+  const record = recordByRoute.get(program.pageUrl);
+  assert(record && isCompleteRecord(record), `${program.slug}: apelul deschis nu are guvernanță publicabilă`);
+  assert(isIsoDate(record.verifiedAt), `${program.slug}: verifiedAt invalid pentru apelul deschis`);
+  assert(isIsoDate(record.nextReviewAt), `${program.slug}: nextReviewAt invalid pentru apelul deschis`);
+  assert(daysBetween(record.verifiedAt, record.nextReviewAt) <= config.policy.openCallReviewDays, `${program.slug}: politica de reverificare depășește ${config.policy.openCallReviewDays} zile`);
+  assert(!reviewExpired(record, TODAY), `${program.slug}: apelul deschis are verificarea expirată`);
 }
 
 const complete = records.find(isCompleteRecord);
@@ -157,6 +184,23 @@ assert(
   "Validarea trebuie să respingă un nume personal fără acord"
 );
 
+const publicationOrderConfig = structuredClone(config);
+const publicationOrderRecord = publicationOrderConfig.records.find((record) => isCompleteRecord(record));
+publicationOrderRecord.datePublished = "2099-01-01";
+assert(
+  validateGovernance(publicationOrderConfig, programs, TODAY).some((error) => /datePublished nu poate fi după dateModified/iu.test(error)),
+  "Validarea trebuie să separe data publicării de modificarea editorială"
+);
+
+const sourceDateConfig = structuredClone(config);
+const sourceDateRecord = sourceDateConfig.records.find((record) => isCompleteRecord(record) && !record.programId);
+assert(sourceDateRecord, "Fixture: este necesară o pagină publică fără program pentru testul sursei");
+sourceDateRecord.officialSourceUpdatedAt = "2099-01-01";
+assert(
+  validateGovernance(sourceDateConfig, programs, TODAY).some((error) => /officialSourceUpdatedAt nu poate fi după verifiedAt/iu.test(error)),
+  "Validarea trebuie să separe actualizarea sursei de reverificare"
+);
+
 const expiredConfig = structuredClone(config);
 const expired = expiredConfig.records.find((record) => record.programId);
 assert(expired, "Fixture: trebuie să existe cel puțin o pagină de program guvernată");
@@ -170,8 +214,26 @@ assert(
   "Schimbarea statusului după expirare trebuie blocată până la reverificare"
 );
 
+const staleOpenConfig = structuredClone(config);
+const openProgram = programs.find((program) => program.status === "apel_deschis");
+const staleOpen = staleOpenConfig.records.find((record) => record.programId === openProgram.id);
+const yesterday = new Date(`${TODAY}T00:00:00Z`);
+yesterday.setUTCDate(yesterday.getUTCDate() - 1);
+staleOpen.nextReviewAt = yesterday.toISOString().slice(0, 10);
+assert(
+  validateGovernance(staleOpenConfig, programs, TODAY).some((error) => /apel deschis nu poate rămâne public/iu.test(error)),
+  "Un apel deschis nu poate depăși termenul intern de reverificare"
+);
+
 const sampleFile = filesForRoute(complete.route).find((file) => fs.existsSync(file));
 const sampleUrl = `https://atelierdeconsultanta.ro${complete.route}`;
+const sampleSource = fs.readFileSync(sampleFile, "utf8");
+const firstEditorialBuild = syncPageHtml(sampleSource, complete);
+const secondEditorialBuild = syncPageHtml(firstEditorialBuild, complete);
+assert.equal(secondEditorialBuild, firstEditorialBuild, "Un build repetat nu trebuie să modifice metadatele editoriale");
+for (const node of schemaNodes(cheerio.load(secondEditorialBuild, { decodeEntities: false })).filter(eligibleNode)) {
+  assert.equal(node.dateModified, complete.lastMeaningfulUpdate, "Timestamp-ul buildului nu poate deveni dateModified");
+}
 assert.equal(
   lastmodForFile(sampleFile, sampleUrl, new Map([[sampleUrl, "2020-01-02"]]), new Map()),
   null,

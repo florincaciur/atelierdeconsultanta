@@ -28,6 +28,14 @@ Acest fișier conține numai informații interne sau aprobări care nu pot fi de
 
 **De ce este necesară:** fără probe nu pot fi publicate cifre, rezultate, testimoniale sau claims despre experiența FABER.
 
+## 3A. Proveniență editorială istorică
+
+**Stare observată:** registrul poate demonstra `dateModified`, `verifiedAt` și istoricul material pentru paginile guvernate, dar prima dată de publicare nu este documentată pentru majoritatea rutelor. Numele persoanelor care au îndeplinit rolurile de autor/reviewer nu au profiluri publice aprobate. Data unui commit, data buildului și etichetele generice de workflow nu sunt folosite drept substitut.
+
+**Confirmare necesară:** pentru fiecare rută, prima dată de publicare susținută de CMS/arhivă; separat, numele și rolul real al autorului/reviewerului, acordul de publicare și URL-ul profilului vizibil. Pentru sursele oficiale, furnizați data actualizării numai când documentul sau registrul instituției o indică explicit.
+
+**De ce este necesară:** fără aceste dovezi, `datePublished` și `officialSourceUpdatedAt` rămân interne ca `DE_VALIDAT_UMAN`, iar author/reviewer nominal nu este publicat în conținut sau JSON-LD.
+
 ## 4. Afilieri și referințe AFIR
 
 **Stare observată:** `afir_nomenclature_listing` și `other_affiliations` sunt blocate.

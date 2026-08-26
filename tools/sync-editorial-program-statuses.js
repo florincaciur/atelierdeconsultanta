@@ -3,7 +3,7 @@
 
 const fs = require("fs");
 const path = require("path");
-const { ROOT, isPublicProgram, loadProgramConfig } = require("./program-factual-governance");
+const { HUMAN_REVIEW, ROOT, isPublicProgram, loadProgramConfig } = require("./program-factual-governance");
 
 const GOVERNANCE_PATH = path.join(ROOT, "config", "editorial-governance.json");
 const CHECK = process.argv.includes("--check");
@@ -18,6 +18,7 @@ function syncRecord(record, program, policy) {
   const before = JSON.stringify({
     governanceState: record.governanceState,
     verifiedAt: record.verifiedAt,
+    officialSourceUpdatedAt: record.officialSourceUpdatedAt,
     officialSourceName: record.officialSourceName,
     officialSourceUrl: record.officialSourceUrl,
     sourceVersion: record.sourceVersion,
@@ -27,6 +28,7 @@ function syncRecord(record, program, policy) {
 
   record.governanceState = isPublicProgram(program) ? "public" : "pending_validation";
   record.verifiedAt = program.verifiedAt;
+  record.officialSourceUpdatedAt = program.officialSourceUpdatedAt || HUMAN_REVIEW;
   record.officialSourceName = program.sourceName;
   record.officialSourceUrl = program.sourceUrl;
   record.sourceVersion = program.sourceVersion;
@@ -40,6 +42,7 @@ function syncRecord(record, program, policy) {
   const after = JSON.stringify({
     governanceState: record.governanceState,
     verifiedAt: record.verifiedAt,
+    officialSourceUpdatedAt: record.officialSourceUpdatedAt,
     officialSourceName: record.officialSourceName,
     officialSourceUrl: record.officialSourceUrl,
     sourceVersion: record.sourceVersion,
