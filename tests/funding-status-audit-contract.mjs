@@ -149,7 +149,7 @@ if (isDate(openEnd)) {
 }
 for (const args of [["--today=2026-02-30"], ["--today="], ["--format=unknown"], ["--unknown"], ["--today=2026-08-26", "--today=2026-08-27"]]) assert.equal(cli(args).status, 2);
 assert.deepEqual(hashes(), before, "CLI-ul nu poate actualiza facts, HTML, verifiedAt sau sitemap/lastmod.");
-assert.equal(require("../package.json").scripts.prebuild, "npm run test:funding-status && npm run audit:funding-status && npm run test:brand-entity");
+assert.equal(require("../package.json").scripts.prebuild, "npm run test:funding-status && npm run audit:funding-status && npm run test:brand-entity && npm run test:trust-evidence");
 const workflow = fs.readFileSync(path.join(ROOT, ".github/workflows/funding-status-audit.yml"), "utf8");
 assert.match(workflow, /contents: read/);
 assert.match(workflow, /cron:/);

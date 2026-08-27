@@ -9,6 +9,14 @@
     "noEvidenceClaimsWithoutDocumentsAndConsent": true,
     "noAfirAccreditationClaim": true
   },
+  "trustEvidencePolicy": {
+    "reviewedAt": "2026-08-27",
+    "publicationState": "methodology_only",
+    "publicCaseStudies": 0,
+    "publicTestimonials": 0,
+    "reviewSchemaAllowed": false,
+    "principle": "Mai puține dovezi reale sunt preferabile unui volum artificial."
+  },
   "pendingValidations": [
     {
       "id": "team_profiles",
@@ -30,10 +38,31 @@
       "status": "DE_VALIDAT_UMAN",
       "required": [
         "documente justificative",
-        "metodă de calcul și perioadă",
-        "acordul beneficiarului",
+        "beneficiarul poate fi publicat",
+        "sector",
+        "program",
+        "serviciu FABER",
+        "investiție",
+        "etapă",
+        "rezultat verificabil",
+        "valoare publicabilă",
+        "locație publicabilă",
+        "permisiune pentru nume și logo",
+        "metodă de calcul și perioadă pentru orice valoare",
         "regulă de anonimizare",
         "aprobarea formulării publice"
+      ],
+      "publicationState": "blocked"
+    },
+    {
+      "id": "testimonials",
+      "status": "DE_VALIDAT_UMAN",
+      "required": [
+        "text aprobat",
+        "autor",
+        "funcție",
+        "companie",
+        "permisiune de publicare"
       ],
       "publicationState": "blocked"
     },
