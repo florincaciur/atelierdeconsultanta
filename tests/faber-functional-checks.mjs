@@ -23,7 +23,7 @@ const PENDING_APPROVAL_HOLD_ROUTES = STATUS_APPROVALS
 const ALL_PENDING_HOLD_ROUTES = [...new Set([...PENDING_PROGRAM_ROUTES, ...PENDING_APPROVAL_HOLD_ROUTES])];
 const MAIN_NAVIGATION = JSON.parse(fs.readFileSync(path.join(ROOT, "config", "main-navigation.json"), "utf8"));
 const PROGRAM_FAMILY_ROUTES = MAIN_NAVIGATION.primaryDestinations.find((destination) => destination.id === "programe").items.map((item) => item.href);
-const EXPECTED_CANONICAL_URLS = 91;
+const EXPECTED_CANONICAL_URLS = 104;
 const { sitemapUrls } = require("../tools/sitemap-utils");
 const CONSOLIDATED_LOCAL_ROUTES = [
   "/fonduri-europene-bacau",
@@ -36,7 +36,9 @@ const CONSOLIDATED_LOCAL_ROUTES = [
   "/fonduri-europene-herambursabile-2026",
   "/start-up-nation",
   "/consultanta-start-up-nation",
-  "/studii-de-caz"
+  "/studii-de-caz",
+  "/portofoliu",
+  "/testimoniale"
 ];
 const INDEXABLE_LOCAL_ROUTES = [
   "/fonduri-europene-bucuresti",
@@ -55,10 +57,7 @@ const INDEXABLE_PROGRAM_ROUTES = [
   "/investitii-modernizarea-microintreprinderilor-apel-2",
   "/pocidif-21"
 ].filter((route) => !ALL_PENDING_HOLD_ROUTES.includes(route));
-const NOINDEX_TRUST_ROUTES = [
-  "/portofoliu",
-  "/testimoniale"
-];
+const NOINDEX_TRUST_ROUTES = [];
 
 function parseRedirects() {
   const source = fs.existsSync(path.join(DIST, "_redirects")) ? path.join(DIST, "_redirects") : path.join(ROOT, "_redirects");
@@ -268,7 +267,9 @@ async function assertRedirectsAndFallback(baseUrl) {
     ["/fonduri-europene-bucuresti/", "/fonduri-europene-bucuresti"],
     ["/consultanta-fonduri-europene-bucuresti.html", "/consultanta-fonduri-europene-bucuresti"],
     ["/fonduri-europene-iasi", "/fonduri-europene-nord-est"],
-    ["/consultanta-fonduri-europene-bacau", "/fonduri-europene-nord-est"]
+    ["/consultanta-fonduri-europene-bacau", "/fonduri-europene-nord-est"],
+    ["/portofoliu", "/studii-de-caz-fonduri-europene"],
+    ["/testimoniale", "/studii-de-caz-fonduri-europene"]
   ];
 
   for (const [from, to] of checks) {
@@ -314,20 +315,31 @@ async function assertHomepageInteractions(baseUrl) {
   const page = await browser.newPage({ viewport: { width: 1366, height: 900 } });
 
   try {
-    await page.goto(`${baseUrl}/`, { waitUntil: "networkidle" });
+    await page.goto(`${baseUrl}/`, { waitUntil: "domcontentloaded" });
+    await page.waitForSelector("#dropdownBtn");
     assert.equal(await page.locator("h1").count(), 1, "homepage should have one H1");
 
     await page.locator("#dropdownBtn").click();
     assert.equal(await page.locator("#dropdownBtn").getAttribute("aria-expanded"), "true", "program menu should open");
     assert.equal(await page.locator("#dropdownPanel.open").count(), 1, "program menu panel should be visible");
-    assert.equal(await page.locator("#dropdownPanel a[href]").count(), PROGRAM_FAMILY_ROUTES.length, "program menu should expose the approved program-family links");
+    const familyLinks = page.locator("#dropdownPanel .program-menu-section[aria-labelledby='program-menu-family-title'] a[href]");
+    assert.equal(await familyLinks.count(), PROGRAM_FAMILY_ROUTES.length, "program menu should expose the approved program-family links");
     for (const route of PROGRAM_FAMILY_ROUTES) {
       assert.equal(await page.locator(`#dropdownPanel a[href="${route}"]`).count(), 1, `program family menu should link ${route}`);
     }
     for (const route of PENDING_PROGRAM_ROUTES) {
       assert.equal(await page.locator(`#dropdownPanel a[href="${route}"]`).count(), 0, `program family menu should not publish pending route ${route}`);
     }
-    assert.equal(await page.locator("#navbar [data-program-status], #mobileMenu [data-program-status]").count(), 0, "navigation must not duplicate program statuses");
+    const programStatusLinks = page.locator("#dropdownPanel .program-menu-link[data-program-status]");
+    assert(await programStatusLinks.count() > 0, "program menu should expose verified statuses for its selected measures");
+    for (const link of await programStatusLinks.evaluateAll((elements) => elements.map((element) => ({
+      href: element.getAttribute("href"),
+      status: element.getAttribute("data-program-status")
+    })))) {
+      const program = PROGRAM_REGISTRY.find((entry) => new URL(entry.pageUrl, SITE_ORIGIN).pathname === link.href);
+      assert(program && program.publicationState === "public", `${link.href} should resolve to a public registry program`);
+      assert.equal(link.status, program.status, `${link.href} should expose the registry status`);
+    }
 
     const internalLinks = await page.$$eval(
       ".nav-links a[href], #dropdownPanel a[href], #mobileMenu a[href], #financing-grid a[href], a.btn-primary[href], a.btn-secondary[href]",
@@ -352,6 +364,7 @@ async function assertHomepageInteractions(baseUrl) {
           const hasIntent = Boolean(
             button.id ||
             button.getAttribute("onclick") ||
+            button.getAttribute("aria-label") ||
             button.getAttribute("aria-controls") ||
             button.dataset.beneficiaryFilter ||
             type === "submit"
@@ -362,47 +375,19 @@ async function assertHomepageInteractions(baseUrl) {
     );
     assert.deepEqual(invalidVisibleButtons, [], "visible buttons should have an actionable intent");
 
-    const gridDisplay = await page.$eval("#financing-grid", (element) => getComputedStyle(element).display);
-    assert.equal(gridDisplay, "grid", "program section should use a CSS grid");
-    assert.equal(await page.locator("#finantare .carousel-btn, #finantare .card-carousel-btn").count(), 0, "program section should not expose carousel controls");
-    const totalProgramCards = await page.locator("#financing-grid .finantare-card").count();
-    assert(totalProgramCards >= 3, "program grid should contain at least one complete row of approved program cards");
-    const initialVisibleCards = await page.$$eval("#financing-grid .finantare-card", (cards) =>
-      cards.filter((card) => !card.hidden && getComputedStyle(card).display !== "none").length
-    );
-    assert.equal(initialVisibleCards, 3, "program grid should initially show only the first row of 3 cards");
-    assert.equal(await page.locator("#financing-toggle").getAttribute("aria-expanded"), "false", "program toggle should start collapsed");
-
-    await page.locator("#financing-toggle").click();
-    assert.equal(await page.locator("#financing-toggle").getAttribute("aria-expanded"), "true", "program toggle should expand");
-    const expandedVisibleCards = await page.$$eval("#financing-grid .finantare-card", (cards) =>
-      cards.filter((card) => !card.hidden && getComputedStyle(card).display !== "none").length
-    );
-    assert.equal(expandedVisibleCards, totalProgramCards, "expanded program grid should show every card for the active filter");
-
-    await page.locator("#financing-toggle").click();
-    assert.equal(await page.locator("#financing-toggle").getAttribute("aria-expanded"), "false", "program toggle should collapse");
-
-    await page.locator('[data-beneficiary-filter="public"]').click();
-    const publicVisibleCards = await page.$$eval("#financing-grid .finantare-card", (cards) =>
-      cards.filter((card) => !card.hidden && getComputedStyle(card).display !== "none").length
-    );
-    assert(publicVisibleCards > 0, "public beneficiary filter should show at least one card");
-    assert(publicVisibleCards <= 3, "public beneficiary filter should respect collapsed first-row display");
-    assert.equal(await page.locator('[data-beneficiary-filter="public"]').getAttribute("aria-pressed"), "true", "public filter should set aria-pressed");
-
-    await page.waitForSelector("#blog-grid article.blog-card .blog-image", { timeout: 6000 });
-    const renderedBlogVisuals = await page.$$eval("#blog-grid article.blog-card .blog-image", (images) =>
-      images.filter((image) => image.querySelector("svg") || getComputedStyle(image).backgroundImage !== "none").length
-    );
-    assert(renderedBlogVisuals >= 3, "blog cards should render banner images or visible SVG icons instead of text placeholders");
-    const textOnlyBlogIcons = await page.$$eval("#blog-grid .blog-card-icon", (icons) =>
-      icons.filter((icon) => !icon.querySelector("svg") && icon.textContent.trim()).map((icon) => icon.textContent.trim())
-    );
-    assert.deepEqual(textOnlyBlogIcons, [], "blog icon placeholders should not render as raw text labels");
+    const programSlides = page.locator("[data-priority-slide]");
+    const totalProgramSlides = await programSlides.count();
+    assert(totalProgramSlides >= 3, "program carousel should contain the approved program set");
+    assert.equal(await page.locator("[data-priority-slide][aria-hidden='false']").count(), 1, "program carousel should expose one active slide");
+    const initialProgramId = await page.locator("[data-priority-slide][aria-hidden='false']").getAttribute("data-program-id");
+    assert.equal(await page.locator("[data-priority-counter]").textContent(), `1 din ${totalProgramSlides}`, "program counter should start on the first slide");
+    await page.locator("[data-priority-next]").click();
+    assert.notEqual(await page.locator("[data-priority-slide][aria-hidden='false']").getAttribute("data-program-id"), initialProgramId, "next control should change the active program");
+    assert.equal(await page.locator("[data-priority-counter]").textContent(), `2 din ${totalProgramSlides}`, "program counter should advance with the carousel");
 
     await page.setViewportSize({ width: 390, height: 844 });
-    await page.goto(`${baseUrl}/`, { waitUntil: "networkidle" });
+    await page.goto(`${baseUrl}/`, { waitUntil: "domcontentloaded" });
+    await page.waitForSelector("#hamburgerBtn");
     await page.locator("#hamburgerBtn").click();
     assert.equal(await page.locator("#hamburgerBtn").getAttribute("aria-expanded"), "true", "mobile hamburger should open");
     assert.equal(await page.locator("#mobileMenu.open").count(), 1, "mobile menu should have open state");

@@ -22,6 +22,7 @@ const LEGAL_SURFACES = new Set([
   "despre-faber/index.html",
   "contact.html",
   "contact/index.html",
+  "gdpr.html",
   "politica-de-confidentialitate.html",
   "politica-de-confidentialitate/index.html",
   "termeni-si-conditii.html",

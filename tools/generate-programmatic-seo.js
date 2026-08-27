@@ -295,7 +295,7 @@ ${ANALYTICS_EVENTS_SCRIPT}
       <div class="cta-actions"><a class="btn btn-primary" href="/contact">Trimite datele proiectului</a></div>
     </section>
   </main>
-  <footer class="footer">© 2026 FABER - Atelier de Consultanță</footer>
+  <footer class="footer">© 2026 FABER – Atelier de Consultanță</footer>
 </body>
 </html>
 `;

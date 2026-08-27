@@ -100,7 +100,7 @@ for (const route of routes) {
   assert.deepEqual(entityNodes[0], organizationSchema(), `${route}: entitatea FABER diferă de registrul juridic aprobat`);
   assert(hasType(entityNodes[0], "Organization") && hasType(entityNodes[0], "ProfessionalService"), `${route}: tipurile entității nu sunt reunite`);
   assert.equal(entityNodes[0].legalName, "FABER PUBLISHING S.R.L.", `${route}: legalName neaprobat`);
-  assert.equal(entityNodes[0].telephone, "+40-769-828-338", `${route}: telefon canonic diferit`);
+  assert.deepEqual(entityNodes[0].telephone, ["+40-769-828-338", "+40-753-326-229"], `${route}: telefoane canonice diferite`);
   assert.equal(entityNodes[0].address?.["@type"], "PostalAddress", `${route}: adresa nu este PostalAddress`);
 
   const websites = nodes.filter((node) => node?.["@id"] === WEBSITE_ID);

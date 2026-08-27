@@ -35,10 +35,10 @@ const {
   graphNodes,
   hasType,
   loadPageHints,
-  sitemapRoutes,
   typesOf,
   visibleFaqItems
 } = require("./structured-data-utils");
+const { buildInventory } = require("./generate-route-inventory");
 
 const ROOT = path.resolve(__dirname, "..");
 const CHECK_ONLY = process.argv.includes("--check");
@@ -219,10 +219,10 @@ function replaceScripts(html, serialized) {
 function main() {
   const hints = loadPageHints(ROOT);
   const changed = [];
-  const routes = [...new Set([
-    ...sitemapRoutes(ROOT),
-    ...PROGRAMS.filter((program) => program.publicationState === "public").map((program) => program.pageUrl)
-  ])].sort((left, right) => left.localeCompare(right));
+  const routes = buildInventory().routes
+    .filter((route) => route.indexable)
+    .map((route) => route.route)
+    .sort((left, right) => left.localeCompare(right));
   for (const route of routes) {
     const primaryFile = fileForRoute(ROOT, route);
     if (!fs.existsSync(primaryFile)) throw new Error(`Lipsește fișierul pentru ruta indexabilă ${route}: ${primaryFile}`);

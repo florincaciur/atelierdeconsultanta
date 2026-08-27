@@ -3044,7 +3044,7 @@ ${programMainContent}
       </div>
     </section>
   </main>
-  <footer class="footer">© 2026 FABER - Atelier de Consultanță · <a href="/fonduri-europene">Fonduri europene</a> · <a href="/contact">Contact</a></footer>
+  <footer class="footer">© 2026 FABER – Atelier de Consultanță · <a href="/fonduri-europene">Fonduri europene</a> · <a href="/contact">Contact</a></footer>
 </body>
 </html>
 `;

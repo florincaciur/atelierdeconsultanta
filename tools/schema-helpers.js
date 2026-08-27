@@ -14,7 +14,7 @@ const BRAND_ALTERNATE_NAMES = [
   "Atelier de Consultanță FABER",
   "atelierdeconsultanta.ro"
 ];
-const BRAND_DESCRIPTION = "FABER - Atelier de Consultanță ajută firme, fermieri, start-up-uri și IMM-uri să verifice eligibilitatea și să pregătească proiecte pentru fonduri europene și finanțări nerambursabile.";
+const BRAND_DESCRIPTION = `${BRAND_NAME} ajută firme, fermieri, start-up-uri și IMM-uri să verifice eligibilitatea și să pregătească proiecte pentru fonduri europene și finanțări nerambursabile.`;
 const ORGANIZATION_ID = `${SITE}/#organization`;
 // Organization și ProfessionalService descriu aceeași entitate juridică și
 // trebuie să folosească același identificator canonic.
@@ -390,7 +390,7 @@ function organizationSchema(options = {}) {
     legalName: LEGAL_IDENTITY.legalName,
     url: `${SITE}/`,
     email: EMAIL,
-    telephone: schemaTelephone(LEGAL_IDENTITY.publicPhone),
+    telephone: TELEPHONES.map(schemaTelephone),
     taxID: LEGAL_IDENTITY.taxIdentifier,
     address: approvedPostalAddress(),
     sameAs: LEGAL_IDENTITY.officialProfileUrls,

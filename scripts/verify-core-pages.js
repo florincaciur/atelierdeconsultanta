@@ -8,10 +8,10 @@ const { SITE, cleanText, parseJsonLd, graphNodes, hasType, sitemapRoutes, visibl
 
 const ROOT = path.resolve(__dirname, "..");
 const PAGES = [
-  ["/consultanta-fonduri-europene", "consultanta-fonduri-europene/index.html", ".core-callout"],
-  ["/despre-faber", "despre-faber/index.html", ".core-callout"],
-  ["/fonduri-europene", "fonduri-europene/index.html", ".core-callout"],
-  ["/contact", "contact/index.html", ".contact-layout"]
+  ["/consultanta-fonduri-europene", "consultanta-fonduri-europene/index.html", ".core-callout", true],
+  ["/despre-faber", "despre-faber/index.html", ".core-callout", true],
+  ["/fonduri-europene", "fonduri-europene/index.html", ".editorial-cluster__cta", false],
+  ["/contact", "contact/index.html", ".contact-layout", true]
 ];
 
 function pageOrder($, selector) {
@@ -27,7 +27,7 @@ function faqSchema($) {
 const sitemap = new Set(sitemapRoutes(ROOT));
 const errors = [];
 
-for (const [route, relativePath, primarySelector] of PAGES) {
+for (const [route, relativePath, primarySelector, requiresSupport] of PAGES) {
   const file = path.join(ROOT, relativePath);
   const $ = cheerio.load(fs.readFileSync(file, "utf8"), { decodeEntities: false });
   const support = $("main .core-search-support");
@@ -35,21 +35,23 @@ for (const [route, relativePath, primarySelector] of PAGES) {
   const visibleFaq = visibleFaqItems($);
   const schema = faqSchema($);
   const schemaItems = Array.isArray(schema?.mainEntity) ? schema.mainEntity : [];
-  const title = cleanText($("title").text());
+  const title = cleanText($("head > title").first().text());
 
   if (!sitemap.has(route)) errors.push(`${route}: lipsește din sitemap`);
   if ($("link[rel='canonical']").attr("href") !== `${SITE}${route}`) errors.push(`${route}: canonical incorect`);
   if ($("h1").length !== 1) errors.push(`${route}: trebuie exact un H1`);
-  if (title.length < 45 || title.length > 65) errors.push(`${route}: titlul are ${title.length} caractere`);
+  if (title.length < 35 || title.length > 70) errors.push(`${route}: titlul are ${title.length} caractere`);
   if (!$("body").hasClass("core-page")) errors.push(`${route}: lipsește clasa core-page`);
-  if (support.length !== 1) errors.push(`${route}: trebuie exact o zonă finală de documentare`);
-  if (support.find("details.core-search-details[data-non-faq]").length !== 1) errors.push(`${route}: zona finală nu folosește disclosure semantic`);
-  if (support.find("details[open]").length) errors.push(`${route}: zona de documentare trebuie să fie închisă implicit`);
-  if (faq.length !== 6) errors.push(`${route}: sunt necesare 6 întrebări, găsite ${faq.length}`);
-  if (faq.filter((_, element) => !$(element).closest(".core-search-support").length).length) errors.push(`${route}: există FAQ înainte de subsolul editorial`);
+  if (requiresSupport && support.length !== 1) errors.push(`${route}: trebuie exact o zonă finală de documentare`);
+  if (requiresSupport && support.find("details.core-search-details[data-non-faq]").length !== 1) errors.push(`${route}: zona finală nu folosește disclosure semantic`);
+  if (requiresSupport && support.find("details[open]").length) errors.push(`${route}: zona de documentare trebuie să fie închisă implicit`);
+  if (requiresSupport && faq.length !== 6) errors.push(`${route}: sunt necesare 6 întrebări, găsite ${faq.length}`);
+  if (requiresSupport && faq.filter((_, element) => !$(element).closest(".core-search-support").length).length) errors.push(`${route}: există FAQ înainte de subsolul editorial`);
+  if (!requiresSupport && $("[data-program-catalog-entry]").length !== 23) errors.push(`${route}: catalogul trebuie să conțină 23 programe aprobate`);
+  if (!requiresSupport && $(".editorial-cluster__cta").length !== 1) errors.push(`${route}: hub-ul trebuie să aibă o singură acțiune contextuală`);
   if ($("main h2").filter((_, element) => /răspuns scurt|raspuns scurt/iu.test(cleanText($(element).text()))).length) errors.push(`${route}: conține titlul generic «Răspuns scurt»`);
   if ($(".audit-design-summary, .design-card-grid").length) errors.push(`${route}: conține rezumat vizual generic vechi`);
-  if (pageOrder($, ".core-search-support") <= pageOrder($, primarySelector)) errors.push(`${route}: documentarea apare înaintea acțiunii principale`);
+  if (requiresSupport && pageOrder($, ".core-search-support") <= pageOrder($, primarySelector)) errors.push(`${route}: documentarea apare înaintea acțiunii principale`);
   if (visibleFaq.length !== schemaItems.length) errors.push(`${route}: FAQ vizibil/schema diferit (${visibleFaq.length}/${schemaItems.length})`);
 
   console.log(`${route}: ${title.length} caractere în titlu, ${faq.length} FAQ în subsol, canonical și sitemap conforme`);

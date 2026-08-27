@@ -645,7 +645,7 @@ ${ANALYTICS_EVENTS_SCRIPT}
       </div>
     </section>
   </main>
-  <footer class="footer">© 2026 FABER - Atelier de Consultanță · <a href="${cleanHref("/fonduri-europene")}">Fonduri europene</a> · <a href="${cleanHref("/contact")}">Contact</a></footer>
+  <footer class="footer">© 2026 FABER – Atelier de Consultanță · <a href="${cleanHref("/fonduri-europene")}">Fonduri europene</a> · <a href="${cleanHref("/contact")}">Contact</a></footer>
 </body>
 </html>
 `;
