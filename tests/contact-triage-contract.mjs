@@ -68,7 +68,7 @@ async function verifyStaticContract() {
   assert.equal(form.attr("action"), "/api/contact-triage");
   assert.equal(form.attr("method"), "post");
   assert.equal(form.attr("data-clarity-mask"), "true");
-  assert.equal(form.attr("data-legal-copy-state"), "pending_validation");
+  assert.equal(form.attr("data-legal-copy-state"), "approved");
   assert.match($("[data-form-step='1']").text(), /Pasul 1 din 2/u);
   assert.match($("[data-form-step='1']").text(), /60–90 secunde/u);
   assert.match($("[data-form-step='2']").text(), /Pasul 2 din 2/u);
@@ -76,6 +76,7 @@ async function verifyStaticContract() {
   assert.equal($("[name='location'][required]").length, 1);
   assert.equal($("[name='investment'][required]").length, 1);
   assert.equal($("[name='privacy_notice_acknowledged'][required]").length, 1);
+  assert.equal($("[name='privacy_notice_acknowledged'][checked]").length, 0, "privacy acknowledgment must not be preselected");
   assert.equal(form.find("[required]").length, 4, "only three direct answers plus the notice acknowledgment use native required");
   assert.equal($("[name='email'][required]").length, 0, "email must not be required individually");
   assert.equal($("[name='phone'][required]").length, 0, "phone must not be required individually");
@@ -87,6 +88,8 @@ async function verifyStaticContract() {
   assert.match($("[data-form-summary]").text(), /Rezumat înainte de trimitere/u);
   assert.match($("[data-form-success]").text(), /nu promite un termen de răspuns/iu);
   assert.doesNotMatch($(".consent-label").text(), /marketing|sunt de acord/iu);
+  assert.match($("[data-legal-copy-note]").text(), /nu reprezintă acord/iu);
+  assert.match($("[data-legal-copy-note]").text(), /newsletter|marketing/iu);
   assert.equal($('script[src^="/assets/contact-triage.js"]').length, 1);
   assert.equal($('link[href^="/assets/contact-triage.css"]').length, 1);
 
@@ -94,6 +97,9 @@ async function verifyStaticContract() {
   assert.equal(schema.properties.schema_version.const, "1.0.0");
   assert.equal(schema.anyOf.length, 2, "schema must express email OR phone");
   assert(!schema.required.includes("email") && !schema.required.includes("phone"));
+  const contactConfig = JSON.parse(await fsp.readFile(path.join(ROOT, "config", "contact-triage.json"), "utf8"));
+  assert.equal(contactConfig.privacyNotice.copyState, "approved");
+  assert.equal(contactConfig.privacyNotice.marketingConsentIncluded, false);
   const packageJson = JSON.parse(await fsp.readFile(path.join(ROOT, "package.json"), "utf8"));
   assert.match(packageJson.scripts["deploy:cloudflare-domain-worker"], /validate:contact-triage:publish/u);
   assert.match(packageJson.scripts["deploy:contact-triage"], /wrangler deploy --config wrangler\.redirects\.jsonc/u);

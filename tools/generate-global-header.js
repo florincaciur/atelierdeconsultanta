@@ -3,6 +3,7 @@
 
 const fs = require("fs");
 const path = require("path");
+const { canonicalContactIdentity } = require("./canonical-contact");
 const { loadProgramConfig, navigationPrograms } = require("./program-factual-governance");
 
 const ROOT = path.resolve(__dirname, "..");
@@ -138,7 +139,12 @@ function logo() {
     </a>`;
 }
 
-function whatsappDialog() {
+function whatsappDialog(contact = canonicalContactIdentity()) {
+  if (!contact.whatsappPhones.length) throw new Error("Registrul juridic nu conține niciun număr WhatsApp aprobat.");
+  const options = contact.whatsappPhones.map((phone, index) => {
+    const optionId = String.fromCharCode("a".charCodeAt(0) + index);
+    return `      <a href="${escapeHtml(phone.whatsappHref)}" target="_blank" rel="noopener noreferrer" data-analytics-event="contact_whatsapp" data-analytics-component="whatsapp_dialog" data-analytics-cta-id="whatsapp_option_${optionId}"><span>WhatsApp</span><strong>${escapeHtml(phone.display)}</strong></a>`;
+  }).join("\n");
   return `<div id="eligibility-whatsapp-dialog" class="eligibility-whatsapp-dialog" role="dialog" aria-modal="true" aria-labelledby="eligibility-whatsapp-title" hidden>
   <div class="eligibility-whatsapp-card" role="document">
     <button type="button" class="eligibility-whatsapp-close" data-whatsapp-dialog-close aria-label="Închide fereastra">×</button>
@@ -146,8 +152,7 @@ function whatsappDialog() {
     <h2 id="eligibility-whatsapp-title">Trimite mesaj prin WhatsApp</h2>
     <p>Alege numărul la care dorești să trimiți mesajul.</p>
     <div class="eligibility-whatsapp-options">
-      <a href="https://wa.me/40769828338" target="_blank" rel="noopener noreferrer" data-analytics-event="contact_whatsapp" data-analytics-component="whatsapp_dialog" data-analytics-cta-id="whatsapp_option_a"><span>WhatsApp</span><strong>0769 828 338</strong></a>
-      <a href="https://wa.me/40753326229" target="_blank" rel="noopener noreferrer" data-analytics-event="contact_whatsapp" data-analytics-component="whatsapp_dialog" data-analytics-cta-id="whatsapp_option_b"><span>WhatsApp</span><strong>0753 326 229</strong></a>
+${options}
     </div>
   </div>
 </div>`;
@@ -238,4 +243,4 @@ if (require.main === module) {
   }
 }
 
-module.exports = { ASSET_VERSION, CONFIG_PATH, PARTIAL_PATH, loadConfig, renderHeader, renderReport, run };
+module.exports = { ASSET_VERSION, CONFIG_PATH, PARTIAL_PATH, loadConfig, renderHeader, renderReport, run, whatsappDialog };

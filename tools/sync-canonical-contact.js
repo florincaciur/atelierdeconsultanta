@@ -29,6 +29,10 @@ const LEGAL_SURFACES = new Set([
   "termeni-si-conditii/index.html"
 ]);
 
+function normalizedLineEndings(text) {
+  return text.replace(/\r\n/gu, "\n");
+}
+
 function synchronize(html, footerContact, legalIdentityPanel = "", aboutLegalIdentityPanel = "") {
   let output = html.replace(BLOCK, "").replace(LEGAL_BLOCK, "");
   if (legalIdentityPanel && output.includes(ABOUT_LEGAL_SLOT)) {
@@ -69,7 +73,7 @@ function main() {
       LEGAL_SURFACES.has(relativePath) ? selectedLegalPanel : "",
       selectedLegalPanel
     );
-    if (before === after) continue;
+    if (normalizedLineEndings(before) === normalizedLineEndings(after)) continue;
     changed.push(relativePath);
     if (!CHECK) fs.writeFileSync(file, after, "utf8");
   }
