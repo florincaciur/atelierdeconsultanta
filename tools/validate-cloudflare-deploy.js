@@ -223,7 +223,7 @@ function assertCleanAssetDirectory(directory) {
   }
 
   if (fs.existsSync(fullPath)) {
-    for (const forbidden of [".codex", ".git", ".github", ".wrangler", "tools", "scripts", "config"]) {
+    for (const forbidden of [".codex", ".git", ".github", ".wrangler", "tools", "scripts", "config", "outreach"]) {
       const candidate = path.join(fullPath, forbidden);
       if (fs.existsSync(candidate)) {
         throw new Error(`Deploy output contains internal path: ${path.relative(ROOT, candidate)}`);

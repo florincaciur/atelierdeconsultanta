@@ -92,6 +92,8 @@
     "sync:dr12-vs-dr14-expert": "node tools/sync-dr12-vs-dr14-expert.js",
     "test:dr12-vs-dr14-expert": "node tests/dr12-vs-dr14-expert-contract.mjs",
     "test:dr14-final": "node tests/dr14-final-page-contract.mjs",
+    "test:micro-apel-2-scorer": "node tests/micro-apel-2-scorer-contract.mjs",
+    "test:micro-apel-2-visual": "node tests/micro-apel-2-visual.mjs",
     "generate:2026-program-pages": "node tools/generate-2026-program-pages.js",
     "test:2026-program-pages": "node tools/generate-2026-program-pages.js --check",
     "sync:calculator-so-methodology": "node tools/sync-calculator-so-methodology.js",

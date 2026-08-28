@@ -100,7 +100,7 @@ function auditNarrativeClaims(issues, program, $) {
     ...(program.keyConditions || [])
   ].filter(Boolean).join(" "));
   const content = $("main, header.hero").clone();
-  content.find("script,style,nav,.program-factual-status,[data-factual-example]").remove();
+  content.find("script,style,nav,.program-factual-status,[data-factual-example],[data-program-card]").remove();
   const sentences = normalizeText(content.text()).split(/(?<=[.!?])\s+/u);
   const claimSignal = /(finanț|grant|sprijin|intensitat|contribuț|nerambursabil|plafon|maxim|până la|între)/iu;
   for (const sentence of sentences) {

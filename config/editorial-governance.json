@@ -949,14 +949,20 @@
       "reviewerRole": "Revizuire editorială și conformitate",
       "attributionType": "organization",
       "personalNameConsent": false,
-      "verifiedAt": "2026-08-23",
+      "verifiedAt": "2026-08-28",
       "officialSourceName": "Autoritatea de Management pentru Programul Regional Nord-Est",
-      "officialSourceUrl": "https://regionordest.ro/apel-proiect/p1-investitii-pentru-modernizarea-microintreprinderilor-apel-2/",
-      "sourceVersion": "Apel 2 – consultare publică închisă; 30.01.2026–13.03.2026",
-      "nextReviewAt": "2026-10-22",
-      "lastMeaningfulUpdate": "2026-08-18",
-      "statusSnapshot": "consultare_publica",
+      "officialSourceUrl": "https://regionordest.ro/prioritatea-1/modernizare-microintreprinderi/",
+      "sourceVersion": "Ghidul final și anexele publicate la 27.08.2026; cod apel PR/NE/2026/P1/RSO1.3/2/1",
+      "nextReviewAt": "2026-09-28",
+      "lastMeaningfulUpdate": "2026-08-28",
+      "statusSnapshot": "ghid_aprobat_nedeschis",
       "changelog": [
+        {
+          "date": "2026-08-28",
+          "summary": "Pagina a fost actualizată integral după ghidul final publicat la 27.08.2026: statut, calendar, buget, eligibilitate, cheltuieli, documente și grila de punctaj.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": true
+        },
         {
           "date": "2026-08-23",
           "summary": "Statutul Modernizarea microîntreprinderilor – Apel 2 a fost reverificat în sursa oficială; nu a fost identificată o schimbare editorială substanțială suplimentară.",

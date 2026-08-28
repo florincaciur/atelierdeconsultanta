@@ -779,19 +779,19 @@
       "shortName": "Modernizarea microîntreprinderilor – Apel 2",
       "fund": "Programul Regional Nord-Est 2021–2027",
       "family": "regional-adr",
-      "status": "consultare_publica",
-      "canonicalStatus": "CONSULTATIVE_GUIDE",
+      "status": "ghid_aprobat_nedeschis",
+      "canonicalStatus": "SCHEDULED",
       "statusScope": "program_call",
-      "statusRationale": "Consultarea s-a încheiat, iar forma înregistrată este ghidul consultativ; apelul nu este deschis.",
-      "statusLabel": "Consultare publică închisă – apelul nu este deschis",
+      "statusRationale": "Ghidul final și anexele au fost publicate la 27.08.2026, iar fereastra oficială de depunere este 28.09.2026, ora 14:00–28.10.2026, ora 14:00.",
+      "statusLabel": "Apel lansat – depuneri 28 septembrie–28 octombrie 2026",
       "publicationState": "public",
-      "verifiedAt": "2026-08-23",
+      "verifiedAt": "2026-08-28",
       "sourceName": "Autoritatea de Management pentru Programul Regional Nord-Est",
-      "sourceUrl": "https://regionordest.ro/apel-proiect/p1-investitii-pentru-modernizarea-microintreprinderilor-apel-2/",
-      "sourceVersion": "Apel 2 – consultare publică închisă; 30.01.2026–13.03.2026",
+      "sourceUrl": "https://regionordest.ro/prioritatea-1/modernizare-microintreprinderi/",
+      "sourceVersion": "Ghidul final și anexele publicate la 27.08.2026; cod apel PR/NE/2026/P1/RSO1.3/2/1",
       "sourceType": "official",
-      "applicationStart": null,
-      "applicationEnd": null,
+      "applicationStart": "2026-09-28",
+      "applicationEnd": "2026-10-28",
       "grantSummary": {
         "minimum": {
           "amount": 100000,
@@ -803,31 +803,44 @@
           "currency": "EUR",
           "unit": "proiect"
         },
-        "budget": null
+        "budget": {
+          "amount": 20370738.4,
+          "currency": "EUR"
+        }
       },
       "cofinancingSummary": {
         "intensity": [
           {
             "rate": 90,
-            "scope": "maximum indicat în varianta consultativă"
+            "scope": "maximum din cheltuielile eligibile"
           }
         ],
-        "ownContribution": "Diferența față de intensitatea aplicabilă și cheltuielile neeligibile."
+        "ownContribution": "Minimum 10% din cheltuielile eligibile, plus toate cheltuielile neeligibile; o contribuție eligibilă mai mare este punctată."
       },
       "pageUrl": "/investitii-modernizarea-microintreprinderilor-apel-2",
-      "lastMeaningfulUpdate": "2026-08-18",
+      "lastMeaningfulUpdate": "2026-08-28",
       "evergreenValue": true,
       "archivedNoindexDecision": null,
       "indexable": true,
-      "cardSummary": "Apel 2 Nord-Est pentru microîntreprinderi: valori și intensitate conform variantei consultative, plus CAEN, amplasament și documente.",
-      "metaTitle": "Modernizarea microîntreprinderilor – Apel 2 Nord-Est | FABER",
-      "metaDescription": "Apelul 2 Nord-Est este programat pentru microîntreprinderi: grant consultativ 100.000–300.000 €, intensitate de până la 90%, CAEN, amplasament și acte.",
-      "editorialDisclaimer": "Valorile și condițiile sunt conform variantei consultative și trebuie reconfirmate în ghidul final și anexele apelului.",
+      "cardSummary": "Apel lansat pentru microîntreprinderile din Nord-Est: depuneri 28 septembrie–28 octombrie 2026, grant 100.000–300.000 EUR și prag minim 70 de puncte.",
+      "quickAnswer": "ADR Nord-Est a publicat ghidul final pentru Apelul 2, cu depuneri în MySMIS2021 între 28 septembrie 2026, ora 14:00, și 28 octombrie 2026, ora 14:00. Grantul este de 100.000–300.000 EUR, intensitatea maximă de 90%, iar contribuția proprie eligibilă de minimum 10%. Microîntreprinderile eligibile trebuie să implementeze investiția în Nord-Est și să includă active corporale. Pragul este 70 de puncte, fără garanția finanțării.",
+      "metaTitle": "Modernizarea microîntreprinderilor Apel 2 Nord-Est | FABER",
+      "metaDescription": "Apel 2 Nord-Est: depuneri 28.09–28.10.2026, grant 100.000–300.000 €, contribuție minimă 10%, condiții și simulator de punctaj după grila finală.",
+      "editorialDisclaimer": "Simulatorul este orientativ și reproduce grila finală publicată la 27.08.2026. Punctajul oficial, eligibilitatea și finanțarea sunt stabilite exclusiv de AM PR Nord-Est în evaluare și în limita bugetului.",
       "eligibleApplicants": [
-        "Microîntreprinderi care îndeplinesc condițiile regionale, de activitate și amplasament"
+        "Societăți constituite în baza Legii nr. 31/1990 care se încadrează în categoria microîntreprinderilor",
+        "Solicitanți cu sediul social în regiunea Nord-Est sau cu angajamentul de a-l înregistra în regiune până la prima plată a ajutorului"
       ],
       "keyConditions": [
-        "Localizarea în regiunea Nord-Est, codul CAEN, dreptul asupra spațiului și situațiile financiare se verifică documentar."
+        "Investiția se realizează în județele Bacău, Botoșani, Iași, Neamț, Suceava sau Vaslui, în mediul urban ori rural.",
+        "Solicitantul respectă definiția microîntreprinderii: maximum 9 salariați și cifră de afaceri anuală netă sau active totale de maximum 2 milioane EUR, inclusiv după agregarea întreprinderilor partenere și legate.",
+        "Solicitantul a desfășurat activitate cel puțin un an fiscal integral, a fost înființat cel târziu la 03.01.2025, nu a avut activitatea suspendată în 2025 sau 2026 și a avut profit din exploatare pozitiv în 2025.",
+        "Numărul mediu de salariați în 2025 este de minimum 1, conform bazei de date ANAF.",
+        "Cel puțin un cod CAEN Rev. 3 vizat este inclus în Anexa 5, iar achiziția de mijloace fixe corporale este obligatorie.",
+        "Finanțarea nerambursabilă este de 100.000–300.000 EUR, contribuția proprie eligibilă este de minimum 10%, iar plafonul de minimis al întreprinderii unice trebuie respectat.",
+        "Cheltuielile indirecte sunt eligibile în limita unei rate forfetare de maximum 7% din costurile directe eligibile.",
+        "Grila punctează contribuția proprie până la pragul de 30% și rata profitabilității până la pragul de 6%, conform formulelor din Anexa 10.",
+        "Proiectul trebuie să obțină minimum 70 de puncte și să nu primească 0 la subcriteriile eliminatorii prevăzute de grilă."
       ],
       "officialGuideKeys": [
         "por-ne-apel-2",
@@ -844,16 +857,26 @@
           "guide": [
             {
               "ref": "guide:por-ne-apel-2",
-              "label": "Ghidul publicat în consultare pentru Apelul 2"
+              "label": "Ghidul final și anexele Apelului 2, publicate la 27.08.2026"
             }
           ],
-          "annexes": [],
+          "annexes": [
+            {
+              "ref": "guide:por-ne-apel-2",
+              "label": "Anexele finale, inclusiv lista CAEN și grila de evaluare"
+            }
+          ],
           "schemeOrder": [],
-          "sessionAnnouncement": [],
+          "sessionAnnouncement": [
+            {
+              "ref": "program",
+              "label": "Anunțul oficial: depuneri 28.09.2026–28.10.2026"
+            }
+          ],
           "corrigenda": [],
           "clarifications": []
         },
-        "notes": "Consultarea 30.01.2026–13.03.2026 este închisă; forma finală și o eventuală sesiune trebuie confirmate separat."
+        "notes": "Apelul este lansat, cu o fereastră viitoare de depunere. Se verifică pagina oficială pentru eventuale corrigenda, clarificări sau modificări înainte de transmitere."
       },
       "presentation": {
         "carousel": true,
@@ -861,7 +884,11 @@
         "order": 10,
         "icon": "ph-buildings",
         "image": "/assets/hero/hero-local.webp",
-        "beneficiary": null,
+        "beneficiary": "Microîntreprinderi din regiunea Nord-Est",
+        "calendar": {
+          "label": "Depuneri: 28 septembrie–28 octombrie 2026",
+          "note": "Interval oficial MySMIS2021, zilnic până la ora-limită indicată în ghid."
+        },
         "carouselOrder": 10,
         "heroOrder": 1,
         "navigationOrder": 1
@@ -4321,50 +4348,50 @@
       "type": "program",
       "schemaType": "GovernmentService",
       "category": "Fonduri regionale",
-      "h1": "Investiții pentru modernizarea microîntreprinderilor – Apel 2 Nord-Est",
-      "policyContribution": "apelul susține investiții productive, modernizare, competitivitate regionala și cresterea capacitatii firmelor mici de a livra servicii sau produse mai bune.",
+      "h1": "Modernizarea microîntreprinderilor – Apel 2 Nord-Est: ghid final și punctaj",
+      "policyContribution": "Apelul sprijină investițiile productive, noile tehnologii, automatizarea, marketingul, brandingul și digitalizarea microîntreprinderilor din regiunea Nord-Est.",
       "audience": [
-        "Microîntreprinderi cu sediu sau punct de lucru relevant în regiunea Nord-Est.",
-        "Firme care modernizeaza activitatea existenta prin echipamente, dotări sau servicii permise de apel.",
-        "Solicitanți care pot demonstra cod CAEN, autorizare, spațiu, cofinanțare și capacitate de implementare."
+        "Societăți constituite în baza Legii nr. 31/1990 care se încadrează în categoria microîntreprinderilor.",
+        "Firme cu sediul social și investiția în regiunea Nord-Est, în mediul urban sau rural, în condițiile ghidului.",
+        "Solicitanți cu minimum un salariat în 2025, profit din exploatare pozitiv în 2025 și cel puțin un an fiscal integral de activitate."
       ],
       "eligibility": [
-        "Verifică încadrarea ca microintreprindere și datele financiare relevante.",
-        "Confirma localizarea investiției în regiunea Nord-Est și dreptul asupra spațiului.",
-        "Analizeaza codul CAEN și autorizarea la sediu, punct de lucru sau terti, după caz.",
-        "Coreleaza cheltuielile cu activitatea și obiectivele apelului regional.",
-        "Confirma ghidul activ, anexele și grila ADR Nord-Est înainte de depunere."
+        "Verifică încadrarea ca microîntreprindere, inclusiv întreprinderile partenere și legate.",
+        "Confirmă sediul social și localizarea investiției în regiunea Nord-Est, precum și dreptul asupra spațiului.",
+        "Verifică profitul din exploatare pozitiv în 2025, minimum un salariat mediu și lipsa suspendării activității în 2025–2026.",
+        "Identifică în Anexa 5 codul CAEN Rev. 3 vizat și codul predominant al investiției.",
+        "Asigură includerea obligatorie a mijloacelor fixe corporale și respectarea pragului minim de 70 de puncte."
       ],
       "mandatory": [
-        "Statut de microintreprindere verificat prin date juridice și financiare.",
-        "Sediu, punct de lucru sau investiție localizata corect în regiunea Nord-Est.",
-        "Cod CAEN eligibil și autorizat conform cerintelor apelului.",
-        "Buget separat pentru grant, cofinanțare, TVA și cheltuieli neeligibile.",
-        "Documente pentru spațiu, oferte, plan de investiții și capacitate de implementare."
+        "Statut de microîntreprindere verificat prin datele juridice și financiare ale întreprinderii unice.",
+        "Sediu social și investiție în Bacău, Botoșani, Iași, Neamț, Suceava sau Vaslui.",
+        "Cod CAEN eligibil din Anexa 5 și achiziție obligatorie de echipamente sau alte mijloace fixe corporale.",
+        "Finanțare nerambursabilă de 100.000–300.000 EUR, contribuție proprie eligibilă de minimum 10% și plafon de minimis disponibil.",
+        "Declarația unică, Anexa 8, Declarația de minimis și, pentru proiectele cu lucrări, devizul general depuse complet."
       ],
       "eligibleExpenses": [
-        "Echipamente, utilaje și dotări pentru modernizarea activității eligibile.",
-        "Investiții în spații, amenajări sau active necorporale, dacă sunt permise de ghid.",
-        "Digitalizare, eficiență sau alte componente acceptate în apelul activ.",
-        "Servicii și documentatii eligibile în limitele programului regional."
+        "Echipamente tehnologice, utilaje, instalații, mobilier, birotică și echipamente informatice încadrate ca mijloace fixe.",
+        "Construirea, extinderea sau modernizarea spațiilor de producție ori prestări servicii și utilitățile aferente.",
+        "Brevete, licențe, mărci, software, marketing, branding și digitalizare pentru valorificarea produselor sau serviciilor.",
+        "Sisteme regenerabile pentru eficientizarea activității și cheltuieli indirecte de maximum 7% din costurile directe eligibile."
       ],
       "ineligibleExpenses": [
         "Investiții localizate în afara regiunii eligibile pentru apel.",
-        "Coduri CAEN neeligibile sau neautorizate potrivit cerintelor.",
-        "Cheltuieli fără legătura cu activitatea modernizata.",
-        "Achizitii începute înainte de momentul permis de ghid."
+        "Coduri CAEN care nu apar în Anexa 5 sau proiecte fără achiziția obligatorie de mijloace fixe corporale.",
+        "Echipamente second-hand, autovehicule și mijloace de transport, cu excepția clasei 2.3.6 din HG nr. 2139/2004.",
+        "Investiții demarate înainte de depunere, inclusiv comandă fermă de bunuri sau începerea lucrărilor."
       ],
       "scoring": [
-        "Criteriile regionale pot favoriza proiecte cu impact economic, modernizare reală și buget coerent.",
-        "Punctajul trebuie estimat după grila activa, nu după ghiduri anterioare.",
-        "Localizarea, CAEN-ul și capacitatea firmei sunt filtre de risc."
+        "Grila finală are 100 de puncte: 23 pentru contribuția la obiectiv, 64 pentru calitate, maturitate și sustenabilitate și 13 pentru buget.",
+        "Pragul minim este 70 de puncte; atingerea lui nu garantează finanțarea, deoarece proiectele sunt ierarhizate competitiv.",
+        "Codul CAEN neeligibil, localizarea investiției în afara Nord-Est, lipsa anexelor, înființarea după 03.01.2025, lipsa salariaților sau cash-flow-ul negativ pot conduce la respingere."
       ],
       "steps": [
         "Verificam microintreprinderea și localizarea investiției.",
         "Analizam codul CAEN, autorizarea și istoricul activității.",
         "Definim lista de echipamente, dotări și servicii permise.",
         "Construim bugetul și documentele pentru spațiu și cofinanțare.",
-        "Actualizam dosarul după ghidul final ADR Nord-Est."
+        "Depunem exclusiv în MySMIS2021 între 28.09.2026, ora 14:00, și 28.10.2026, ora 14:00."
       ],
       "evaluation": [
         "Evaluatorul va urmari încadrarea regionala, eligibilitatea firmei și coerenta investiției.",
@@ -4378,24 +4405,24 @@
       ],
       "faq": [
         [
-          "Este apelul national?",
+          "Este apelul național?",
           "Nu. Programul este regional și trebuie verificată localizarea investiției în regiunea Nord-Est."
         ],
         [
           "Cine poate aplica?",
-          "Microintreprinderile care indeplinesc condițiile ghidului activ, inclusiv localizarea, CAEN-ul și documentele financiare."
+          "Societățile constituite potrivit Legii nr. 31/1990 care se încadrează ca microîntreprinderi și îndeplinesc condițiile finale de activitate, sediu, amplasament și situație financiară."
         ],
         [
           "Ce verific prima data?",
-          "Statutul de microintreprindere, regiunea, codul CAEN, autorizarea activității și spațiul investiției."
+          "Statutul de microîntreprindere, sediul și investiția în Nord-Est, profitul din exploatare 2025, minimum un salariat și codul CAEN Rev. 3 din Anexa 5."
         ],
         [
           "Sunt eligibile echipamentele?",
-          "Da, dacă sunt permise de ghid, legate de activitatea eligibilă și justificate prin proiect."
+          "Da. Achiziția de echipamente sau alte mijloace fixe corporale este obligatorie, iar fiecare cost trebuie să fie eligibil, necesar și legat de activitatea finanțată."
         ],
         [
           "Ce documente sunt sensibile?",
-          "Certificatul constatator, autorizarea CAEN, documentele pentru spațiu, situațiile financiare, ofertele și cofinanțarea."
+          "Declarația unică, devizul general când există lucrări, Anexa 8 cu minimum două surse de preț, Declarația de minimis și dovezile criteriilor de punctaj."
         ],
         [
           "Consultanță poate garanta aprobarea?",
@@ -4439,23 +4466,23 @@
       "contentSections": [
         {
           "title": "De ce localizarea este primul filtru",
-          "body": "Apelul este regional. Înainte de echipamente și buget verificam dacă firmă, punctul de lucru și investiția se încadrează în Nord-Est și dacă documentele pentru spațiu acopera perioada ceruta de ghid."
+          "body": "Apelul este regional. Sediul social și toate locurile de implementare trebuie corelate cu regiunea Nord-Est. Grila acordă 3 puncte pentru Botoșani sau Vaslui, 2 puncte pentru Bacău, Neamț sau Suceava și 0 puncte când intervine județul Iași; o locație de implementare din afara regiunii conduce la respingere."
         },
         {
-          "title": "Cum verificam CAEN-ul și activitatea",
-          "body": "Codul CAEN trebuie să fie eligibil și autorizat în forma ceruta de apel. Echipamentele trebuie să serveasca activitatea finanțată, iar descrierea proiectului trebuie să arate modernizarea reală a microintreprinderii."
+          "title": "Cum verificăm CAEN-ul și activitatea",
+          "body": "Codul CAEN Rev. 3 trebuie să apară în Anexa 5. Dacă proiectul vizează mai multe coduri, ele trebuie să se completeze, iar codul predominant este cel cu cea mai mare pondere valorică. Includerea unui cod neeligibil în proiect conduce la 0 puncte și respingere."
         },
         {
           "title": "Cum pregătim bugetul",
-          "body": "Bugetul se construiește pe nevoi reale: echipamente, dotări, servicii, TVA, cofinanțare și costuri neeligibile. Pentru fiecare achiziție cerem oferte și justificari comparabile."
+          "body": "Bugetul se construiește pe nevoi reale: echipamente, dotări, lucrări, servicii, TVA, contribuție proprie și costuri neeligibile. Anexa 8 trebuie să indice pentru fiecare element cel puțin două surse distincte și verificabile, iar costurile încadrate greșit sau insuficient fundamentate reduc punctajul."
         },
         {
-          "title": "Ce rămâne de confirmat",
-          "body": "Forma consultativa este utilă pentru pregătire, dar condițiile finale, lista CAEN, cheltuielile și grila se confirmă în documentele active ale ADR Nord-Est."
+          "title": "Calendarul și selecția competitivă",
+          "body": "Ghidul final a fost publicat la 27 august 2026. Cererile se transmit prin MySMIS2021 între 28 septembrie 2026, ora 14:00, și 28 octombrie 2026, ora 14:00. Toate proiectele sunt evaluate și ierarhizate descrescător după punctaj, în limita bugetului de 20.370.738,40 EUR."
         },
         {
           "title": "Cum se verifică localizarea proiectului",
-          "body": "Pentru acest apel regional, localizarea nu este un detaliu administrativ. Firmă trebuie să poată demonstra ca investiția se realizeaza în regiunea Nord-Est, ca spațiul este disponibil pe perioada ceruta și ca activitatea finanțată poate functiona acolo. Verificam certificatul constatator, punctul de lucru, contractul de inchiriere sau proprietate, autorizarea CAEN și legătura dintre echipamente și spațiu. Dacă aceste elemente nu sunt rezolvate, proiectul poate fi respins chiar dacă bugetul pare corect."
+          "body": "Pentru acest apel regional, localizarea nu este un detaliu administrativ. Firma trebuie să demonstreze că investiția se realizează în Nord-Est și că spațiul este adecvat, racordat la utilitățile necesare, liber de alți utilizatori și accesibil direct. Dreptul asupra imobilului trebuie să acopere implementarea și cei 3 ani de durabilitate."
         },
         {
           "title": "Modernizare reală, nu lista de cumpărături",
@@ -4466,7 +4493,7 @@
           "body": "Pe langa eligibilitatea regionala, microintreprinderea trebuie să arate ca poate gestiona proiectul după aprobare. Situatiile financiare, disponibilitatile pentru cofinanțare, fluxul de numerar și capacitatea de a suporta TVA-ul sau costurile neeligibile sunt verificate înainte de depunere. Dacă aceste elemente nu sunt clare, proiectul poate ajunge în blocaj la contractare sau implementare."
         }
       ],
-      "updatedAt": "2026-06-11",
+      "updatedAt": "2026-08-28",
       "template": "editorial-program",
       "minWords": 1200,
       "minFaq": 8,

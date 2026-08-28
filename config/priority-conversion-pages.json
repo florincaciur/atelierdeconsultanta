@@ -45,18 +45,18 @@
       "route": "/investitii-modernizarea-microintreprinderilor-apel-2",
       "programSlug": "modernizare-microintreprinderi-ne-2",
       "family": "micro",
-      "eyebrow": "Apel programat · pregătire documentară",
-      "title": "Testează firma și investiția înaintea formei finale a Apelului 2",
-      "lead": "Valorile sunt încă cele din documentația consultativă. Prima analiză urmărește regiunea, activitatea, amplasamentul și bugetul, fără a prezenta condițiile drept definitive.",
+      "eyebrow": "Apel lansat · depuneri 28.09–28.10.2026",
+      "title": "Calculează punctajul și verifică filtrele eliminatorii ale Apelului 2",
+      "lead": "Ghidul final este publicat. Prima analiză urmărește încadrarea firmei, CAEN-ul Rev. 3, localizarea, datele ANAF, contribuția proprie și documentele care susțin punctajul.",
       "steps": [
-        ["Firma și regiunea", "CUI, dimensiunea întreprinderii, localitatea și punctul de lucru vizat."],
-        ["CAEN și investiția", "Activitatea reală, codul CAEN, lista de dotări și eventualele lucrări."],
-        ["Buget și capacitate", "Valoarea proiectului, contribuția proprie, cash-flow și actele spațiului."]
+        ["Firma și regiunea", "Microîntreprindere, sediu social și loc de implementare în Nord-Est, minimum un salariat și profit din exploatare pozitiv."],
+        ["CAEN și punctaj", "Cod CAEN Rev. 3 din Anexa 5, date ANAF 2023–2025 și criterii eliminatorii."],
+        ["Buget și documente", "Grant 100.000–300.000 EUR, contribuție proprie, cash-flow, anexele obligatorii și două surse de preț."]
       ],
       "primaryLabel": "Cere trierea inițială pentru Apelul 2",
-      "secondaryLabel": "Vezi sursa ADR Nord-Est",
-      "secondaryHref": "https://adrnordest.ro/comentariiGhid/P1Microintreprinderi/Apel2/",
-      "note": "Trierea este orientativă; ghidul final poate modifica valorile și condițiile, iar finanțarea nu poate fi garantată."
+      "secondaryLabel": "Deschide simulatorul de punctaj",
+      "secondaryHref": "#simulator-punctaj-apel-2",
+      "note": "Simulatorul este orientativ; atingerea punctajului minim nu garantează finanțarea. Punctajul oficial, eligibilitatea și ierarhizarea sunt stabilite exclusiv de AM PR Nord-Est."
     }
   ]
 }

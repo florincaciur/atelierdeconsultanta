@@ -313,8 +313,8 @@
     "id": "slide-micro-apel-2",
     "programId": "modernizare-microintreprinderi-ne-2",
     "title": "Investiții pentru modernizarea microîntreprinderilor – Apel 2",
-    "tag": "Consultare publică închisă – apelul nu este deschis",
-    "description": "Apelul 2 Nord-Est este programat pentru microîntreprinderi: grant consultativ 100.000–300.000 €, intensitate de până la 90%, CAEN, amplasament și acte.",
+    "tag": "Apel lansat – depuneri 28 septembrie–28 octombrie 2026",
+    "description": "Apel 2 Nord-Est: depuneri 28.09–28.10.2026, grant 100.000–300.000 €, contribuție minimă 10%, condiții și simulator de punctaj după grila finală.",
     "ctaText": "Detalii program →",
     "ctaLink": "/investitii-modernizarea-microintreprinderilor-apel-2",
     "icon": "ph-buildings",
@@ -323,14 +323,14 @@
     "order": 10,
     "estimate": null,
     "active": true,
-    "programStatus": "consultare_publica",
-    "statusLabel": "Consultare publică închisă – apelul nu este deschis",
-    "verifiedAt": "2026-08-23",
+    "programStatus": "ghid_aprobat_nedeschis",
+    "statusLabel": "Apel lansat – depuneri 28 septembrie–28 octombrie 2026",
+    "verifiedAt": "2026-08-28",
     "sourceName": "Autoritatea de Management pentru Programul Regional Nord-Est",
-    "sourceUrl": "https://regionordest.ro/apel-proiect/p1-investitii-pentru-modernizarea-microintreprinderilor-apel-2/",
-    "sourceVersion": "Apel 2 – consultare publică închisă; 30.01.2026–13.03.2026",
-    "applicationStart": null,
-    "applicationEnd": null,
+    "sourceUrl": "https://regionordest.ro/prioritatea-1/modernizare-microintreprinderi/",
+    "sourceVersion": "Ghidul final și anexele publicate la 27.08.2026; cod apel PR/NE/2026/P1/RSO1.3/2/1",
+    "applicationStart": "2026-09-28",
+    "applicationEnd": "2026-10-28",
     "grantSummary": {
       "minimum": {
         "amount": 100000,
@@ -342,18 +342,21 @@
         "currency": "EUR",
         "unit": "proiect"
       },
-      "budget": null
+      "budget": {
+        "amount": 20370738.4,
+        "currency": "EUR"
+      }
     },
     "cofinancingSummary": {
       "intensity": [
         {
           "rate": 90,
-          "scope": "maximum indicat în varianta consultativă"
+          "scope": "maximum din cheltuielile eligibile"
         }
       ],
-      "ownContribution": "Diferența față de intensitatea aplicabilă și cheltuielile neeligibile."
+      "ownContribution": "Minimum 10% din cheltuielile eligibile, plus toate cheltuielile neeligibile; o contribuție eligibilă mai mare este punctată."
     },
-    "fundingSummary": "Finanțare conform documentului aflat în consultare: 100.000 EUR/proiect–300.000 EUR/proiect; intensitate 90% (maximum indicat în varianta consultativă); Diferența față de intensitatea aplicabilă și cheltuielile neeligibile.",
+    "fundingSummary": "Finanțare conform sursei oficiale: 100.000 EUR/proiect–300.000 EUR/proiect; buget 20.370.738,4 EUR; intensitate 90% (maximum din cheltuielile eligibile); Minimum 10% din cheltuielile eligibile, plus toate cheltuielile neeligibile; o contribuție eligibilă mai mare este punctată.",
     "officialGuideKey": "por-ne-apel-2",
     "sourceOfTruth": "config/seo-programs.json#programs"
   },

@@ -17,6 +17,7 @@ const EXCLUDED_DIRS = new Set([
   "config",
   "dist",
   "node_modules",
+  "outreach",
   "reports",
   "scripts",
   "tools",

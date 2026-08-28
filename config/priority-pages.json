@@ -149,50 +149,50 @@
     "investitii-modernizarea-microintreprinderilor-apel-2": {
       "route": "/investitii-modernizarea-microintreprinderilor-apel-2",
       "sectionTitle": "Condițiile care trebuie verificate",
-      "directAnswer": "Apel 2 Nord-Est pentru microîntreprinderi: valori și intensitate conform variantei consultative, plus CAEN, amplasament și documente. Consultare publică închisă – apelul nu este deschis. Finanțare conform documentului aflat în consultare: 100.000 EUR/proiect–300.000 EUR/proiect; intensitate 90% (maximum indicat în varianta consultativă); Diferența față de intensitatea aplicabilă și cheltuielile neeligibile.",
+      "directAnswer": "ADR Nord-Est a publicat ghidul final pentru Apelul 2, cu depuneri în MySMIS2021 între 28 septembrie 2026, ora 14:00, și 28 octombrie 2026, ora 14:00. Grantul este de 100.000–300.000 EUR, intensitatea maximă de 90%, iar contribuția proprie eligibilă de minimum 10%. Microîntreprinderile eligibile trebuie să implementeze investiția în Nord-Est și să includă active corporale. Pragul este 70 de puncte, fără garanția finanțării.",
       "facts": [
         {
           "term": "Cine este eligibil?",
-          "description": "Sunt vizate microîntreprinderile care îndeplinesc cerințele regionale, de activitate și amplasament din varianta consultativă."
+          "description": "Pot aplica societăți constituite potrivit Legii nr. 31/1990 care se încadrează ca microîntreprinderi și respectă condițiile privind sediul social, activitatea, profitul din exploatare, salariații și amplasamentul din regiunea Nord-Est."
         },
         {
           "term": "Care este finanțarea?",
-          "description": "Finanțare conform documentului aflat în consultare: 100.000 EUR/proiect–300.000 EUR/proiect; intensitate 90% (maximum indicat în varianta consultativă); Diferența față de intensitatea aplicabilă și cheltuielile neeligibile."
+          "description": "Finanțare conform sursei oficiale: 100.000 EUR/proiect–300.000 EUR/proiect; buget 20.370.738,4 EUR; intensitate 90% (maximum din cheltuielile eligibile); Minimum 10% din cheltuielile eligibile, plus toate cheltuielile neeligibile; o contribuție eligibilă mai mare este punctată."
         },
         {
           "term": "Care este contribuția proprie?",
-          "description": "intensitate 90% (maximum indicat în varianta consultativă); Diferența față de intensitatea aplicabilă și cheltuielile neeligibile."
+          "description": "intensitate 90% (maximum din cheltuielile eligibile); Minimum 10% din cheltuielile eligibile, plus toate cheltuielile neeligibile; o contribuție eligibilă mai mare este punctată."
         },
         {
           "term": "Ce cheltuieli sunt eligibile?",
-          "description": "Echipamentele, lucrările, activele necorporale și serviciile pot fi acceptate numai dacă apar în lista apelului și susțin obiectivul investiției."
+          "description": "Sunt eligibile, în condițiile ghidului, echipamentele și mijloacele fixe obligatorii, lucrările, activele necorporale, marketingul, brandingul, digitalizarea și sistemele regenerabile; cheltuielile indirecte sunt limitate la maximum 7% din costurile directe eligibile."
         },
         {
           "term": "Ce documente sunt obligatorii?",
-          "description": "Se pregătesc actele ONRC, situațiile financiare, declarația IMM, actele amplasamentului, autorizarea CAEN, planul de afaceri, ofertele și documentația tehnică."
+          "description": "La depunere sunt obligatorii Declarația unică, devizul general când există lucrări, Anexa 8 cu minimum două surse distincte pentru fiecare cost, Declarația de minimis și toate dovezile de punctaj. Lipsa unei anexe obligatorii nu se remediază prin clarificări."
         },
         {
           "term": "Care sunt criteriile de selecție?",
-          "description": "Criteriile diferă între apeluri și pot privi performanța financiară, inovarea, locurile de muncă, eficiența sau maturitatea; punctajul se dovedește documentar."
+          "description": "Grila finală totalizează 100 de puncte: 23 pentru contribuția la obiectiv, 64 pentru calitate, maturitate și sustenabilitate și 13 pentru buget. Pragul minim este 70 de puncte, fără garanția finanțării."
         },
         {
           "term": "Când se depune?",
-          "description": "Consultare publică închisă – apelul nu este deschis"
+          "description": "Perioada confirmată este 2026-09-28–2026-10-28."
         },
         {
           "term": "Ce statut are ghidul?",
-          "description": "Consultare publică închisă – apelul nu este deschis."
+          "description": "Apel lansat – depuneri 28 septembrie–28 octombrie 2026."
         }
       ],
       "source": {
-        "document": "Apel 2 – consultare publică închisă; 30.01.2026–13.03.2026",
+        "document": "Ghidul final și anexele publicate la 27.08.2026; cod apel PR/NE/2026/P1/RSO1.3/2/1",
         "institution": "Autoritatea de Management pentru Programul Regional Nord-Est",
-        "status": "Consultare publică închisă – apelul nu este deschis. Valorile și condițiile sunt conform variantei consultative și trebuie reconfirmate în ghidul final și anexele apelului.",
-        "url": "https://regionordest.ro/apel-proiect/p1-investitii-pentru-modernizarea-microintreprinderilor-apel-2/"
+        "status": "Apel lansat – depuneri 28 septembrie–28 octombrie 2026. Simulatorul este orientativ și reproduce grila finală publicată la 27.08.2026. Punctajul oficial, eligibilitatea și finanțarea sunt stabilite exclusiv de AM PR Nord-Est în evaluare și în limita bugetului.",
+        "url": "https://regionordest.ro/prioritatea-1/modernizare-microintreprinderi/"
       },
       "interpretation": "Localitatea, codul CAEN și dreptul asupra spațiului pot exclude un proiect înaintea analizei bugetului. Interpretarea de lucru FABER nu adaugă o regulă suplimentară documentului oficial.",
       "programId": "modernizare-microintreprinderi-ne-2",
-      "lastReviewed": "2026-08-23",
+      "lastReviewed": "2026-08-28",
       "sourceOfTruth": "config/seo-programs.json#programs",
       "publicationState": "public"
     },

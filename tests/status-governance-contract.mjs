@@ -58,7 +58,7 @@ for (const program of data.programs) {
   assert.ok(documents.status.includes(`| \`${program.id}\` |`), `${program.id} trebuie să apară în maparea taxonomiei.`);
   assert.ok(documents.sources.includes(`## \`${program.id}\` —`), `${program.id} trebuie să aibă fișă în registrul oficial.`);
   assert.ok(documents.sources.includes(program.sourceUrl), `${program.slug} trebuie să includă URL-ul oficial principal.`);
-  assert.equal(program.verifiedAt, data.sourceRegistry.factualSnapshotDate, `${program.slug} trebuie reverificat în snapshot-ul curent.`);
+  assert.ok(program.verifiedAt >= data.sourceRegistry.factualSnapshotDate, `${program.slug} trebuie verificat cel puțin la data snapshot-ului factual de bază.`);
   for (const field of FACTUAL_FIELD_LABELS) {
     assert.ok(documents.sources.includes(`| ${field} |`), `${program.slug}: categoria factuală ${field} lipsește.`);
   }
