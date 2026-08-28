@@ -1,13 +1,13 @@
 # Registrul surselor oficiale FABER
 
-Snapshot factual al programelor: **2026-08-23**. Revizia structurii registrului: **2026-08-23**. Rolurile per program: `config/seo-programs.json#programs[*].officialSources`; surse suplimentare: `config/program-source-registry.json#supplementalSources`; catalog documente: `official-guides.json`. Document generat de `tools/generate-status-governance-docs.js`.
+Snapshot factual de bază al programelor: **2026-08-23**. Fiecare înregistrare poate avea o reverificare mai nouă, publicată în câmpul `verifiedAt`. Revizia structurii registrului: **2026-08-28**. Rolurile per program: `config/seo-programs.json#programs[*].officialSources`; surse suplimentare: `config/program-source-registry.json#supplementalSources`; catalog documente: `official-guides.json`. Document generat de `tools/generate-status-governance-docs.js`.
 
 ## Reguli de audit
 
 - Sunt acceptate numai surse primare ale autorității competente, Portalului Legislativ/Monitorului Oficial ori platformelor publice oficiale.
 - `Pagină oficială` este punctul stabil de pornire; `ghid`, `anexe`, `schemă/ordin`, `anunț sesiune`, `corrigenda` și `clarificări` sunt roluri distincte și nu se substituie reciproc.
 - Un câmp neidentificat este un gol explicit al registry-ului, nu afirmația că documentul nu există. Golul nu poate susține o stare mai optimistă.
-- `Latest official update` înseamnă ultima actualizare consemnată în snapshot-ul versionat, nu o garanție că instituția nu a publicat ulterior alt document.
+- `Latest official update` înseamnă ultima actualizare consemnată pentru program la data lui `verifiedAt`, nu o garanție că instituția nu a publicat ulterior alt document.
 - URL-ul accesibil nu este singur dovadă de `OPEN`; sunt obligatorii identificarea sesiunii, fereastra curentă și controlul actualizărilor ulterioare.
 - Cele 32 de categorii solicitate sunt documentate pentru fiecare program. Când sursa oficială verificată nu stabilește un câmp, fișa publică exact golul factual, fără completări speculative.
 
@@ -23,7 +23,7 @@ Snapshot factual al programelor: **2026-08-23**. Revizia structurii registrului:
 | `start-up-nation` | Ministerul Economiei – platforma oficială MINIMIS | `CLOSED` | 2026-05-29 | 2026-08-23 |
 | `femeia-antreprenor` | Ministerul Economiei – platforma oficială MINIMIS | `CLOSED` | 2026-08-18 | 2026-08-23 |
 | `digitalizare-imm` | Ministerul Investițiilor și Proiectelor Europene | `CLOSED` | 2026-07-22 | 2026-08-23 |
-| `modernizare-microintreprinderi-ne-2` | Autoritatea de Management pentru Programul Regional Nord-Est | `CONSULTATIVE_GUIDE` | 2026-08-18 | 2026-08-23 |
+| `modernizare-microintreprinderi-ne-2` | Autoritatea de Management pentru Programul Regional Nord-Est | `SCHEDULED` | 2026-08-28 | 2026-08-28 |
 | `fondul-modernizare-autoconsum` | Ministerul Investițiilor și Proiectelor Europene – MySMIS2021 | `COMPLETED` | 2026-08-18 | 2026-08-23 |
 | `fondul-modernizare-regenerabile` | Ministerul Investițiilor și Proiectelor Europene – MySMIS2021 | `COMPLETED` | 2026-08-18 | 2026-08-23 |
 | `afir-energie-autoconsum` | Ministerul Agriculturii și Dezvoltării Rurale / AFIR | `CLOSED` | 2026-08-15 | 2026-08-23 |
@@ -431,47 +431,47 @@ Snapshot factual al programelor: **2026-08-23**. Revizia structurii registrului:
 |---|---|
 | Stable program ID | `modernizare-microintreprinderi-ne-2` |
 | Denumire oficială | Investiții pentru modernizarea microîntreprinderilor – Apel 2 |
-| Acronim | Documentația oficială publicată și verificată la 23.08.2026 nu stabilește încă această informație. |
+| Acronim | Documentația oficială publicată și verificată la 28.08.2026 nu stabilește încă această informație. |
 | Autoritate | Autoritatea de Management pentru Programul Regional Nord-Est |
 | Fond / program | Programul Regional Nord-Est 2021–2027 |
-| Temei / document | Apel 2 – consultare publică închisă; 30.01.2026–13.03.2026 — [document oficial](https://regionordest.ro/apel-proiect/p1-investitii-pentru-modernizarea-microintreprinderilor-apel-2/) |
-| Stadiu | CONSULTATIVE_GUIDE — Consultare publică închisă – apelul nu este deschis |
-| Sesiune | Documentația oficială publicată și verificată la 23.08.2026 nu stabilește încă această informație. |
-| Data deschiderii | Documentația oficială publicată și verificată la 23.08.2026 nu stabilește încă această informație. |
-| Deadline | Documentația oficială publicată și verificată la 23.08.2026 nu stabilește încă această informație. |
-| Prelungiri | Documentația oficială publicată și verificată la 23.08.2026 nu stabilește încă această informație. |
-| Buget | Documentația oficială publicată și verificată la 23.08.2026 nu stabilește încă această informație. |
+| Temei / document | Ghidul final și anexele publicate la 27.08.2026; cod apel PR/NE/2026/P1/RSO1.3/2/1 — [document oficial](https://regionordest.ro/prioritatea-1/modernizare-microintreprinderi/) |
+| Stadiu | SCHEDULED — Apel lansat – depuneri 28 septembrie–28 octombrie 2026 |
+| Sesiune | [Anunțul oficial: depuneri 28.09.2026–28.10.2026](https://regionordest.ro/prioritatea-1/modernizare-microintreprinderi/) (`program`, verificat 2026-08-28) |
+| Data deschiderii | 28.09.2026 |
+| Deadline | 28.10.2026 |
+| Prelungiri | Documentația oficială publicată și verificată la 28.08.2026 nu stabilește încă această informație. |
+| Buget | 20.370.738,4 EUR |
 | Grant minim | 100.000 EUR / proiect |
 | Grant maxim | 300.000 EUR / proiect |
-| Intensitate | rate: 90; scope: maximum indicat în varianta consultativă |
-| Cofinanțare | Diferența față de intensitatea aplicabilă și cheltuielile neeligibile. |
-| Beneficiari | Microîntreprinderi care îndeplinesc condițiile regionale, de activitate și amplasament |
+| Intensitate | rate: 90; scope: maximum din cheltuielile eligibile |
+| Cofinanțare | Minimum 10% din cheltuielile eligibile, plus toate cheltuielile neeligibile; o contribuție eligibilă mai mare este punctată. |
+| Beneficiari | Societăți constituite în baza Legii nr. 31/1990 care se încadrează în categoria microîntreprinderilor; Solicitanți cu sediul social în regiunea Nord-Est sau cu angajamentul de a-l înregistra în regiune până la prima plată a ajutorului |
 | Regiune | Regiunea Nord-Est |
-| CAEN | Documentația oficială publicată și verificată la 23.08.2026 nu stabilește încă această informație. |
-| Prag SO | Documentația oficială publicată și verificată la 23.08.2026 nu stabilește încă această informație. |
-| Investiții | Documentația oficială publicată și verificată la 23.08.2026 nu stabilește încă această informație. |
-| Cheltuieli eligibile | Documentația oficială publicată și verificată la 23.08.2026 nu stabilește încă această informație. |
-| Cheltuieli neeligibile | Documentația oficială publicată și verificată la 23.08.2026 nu stabilește încă această informație. |
-| Condiții critice | Localizarea în regiunea Nord-Est, codul CAEN, dreptul asupra spațiului și situațiile financiare se verifică documentar. |
-| Documente | [Pagina oficială ADR Nord-Est pentru Apelul 2](https://regionordest.ro/apel-proiect/p1-investitii-pentru-modernizarea-microintreprinderilor-apel-2/) |
-| Indicatori | Documentația oficială publicată și verificată la 23.08.2026 nu stabilește încă această informație. |
-| Selecție / punctaj | Documentația oficială publicată și verificată la 23.08.2026 nu stabilește încă această informație. |
-| Ajutor de stat / de minimis | Documentația oficială publicată și verificată la 23.08.2026 nu stabilește încă această informație. |
-| Implementare | Documentația oficială publicată și verificată la 23.08.2026 nu stabilește încă această informație. |
-| Monitorizare | Documentația oficială publicată și verificată la 23.08.2026 nu stabilește încă această informație. |
-| Surse oficiale | [Pagina oficială ADR Nord-Est pentru Apelul 2](https://regionordest.ro/apel-proiect/p1-investitii-pentru-modernizarea-microintreprinderilor-apel-2/) |
-| Latest official update | 2026-08-18 — [Apel 2 – consultare publică închisă; 30.01.2026–13.03.2026](https://regionordest.ro/apel-proiect/p1-investitii-pentru-modernizarea-microintreprinderilor-apel-2/) |
-| verifiedAt | 2026-08-23 |
-| Pagină oficială program/apel | [Pagina oficială ADR Nord-Est pentru Apelul 2](https://regionordest.ro/apel-proiect/p1-investitii-pentru-modernizarea-microintreprinderilor-apel-2/) (`program`, verificat 2026-08-23) |
-| Ghid | [Ghidul publicat în consultare pentru Apelul 2](https://regionordest.ro/apel-proiect/p1-investitii-pentru-modernizarea-microintreprinderilor-apel-2/) (`guide:por-ne-apel-2`, verificat 2026-08-23) |
-| Anexe | — Neidentificat separat în sursele oficiale înregistrate la 2026-08-23; nu se presupune inexistența documentului. |
-| Schemă / ordin | — Neidentificat separat în sursele oficiale înregistrate la 2026-08-23; nu se presupune inexistența documentului. |
-| Anunț sesiune | — Neidentificat separat în sursele oficiale înregistrate la 2026-08-23; nu se presupune inexistența documentului. |
-| Corrigenda / erate | — Neidentificat separat în sursele oficiale înregistrate la 2026-08-23; nu se presupune inexistența documentului. |
-| Clarificări | — Neidentificat separat în sursele oficiale înregistrate la 2026-08-23; nu se presupune inexistența documentului. |
-| Sursă primară în registry-ul operațional | [Apel 2 – consultare publică închisă; 30.01.2026–13.03.2026](https://regionordest.ro/apel-proiect/p1-investitii-pentru-modernizarea-microintreprinderilor-apel-2/) (verificat 2026-08-23) |
+| CAEN | Documentația oficială publicată și verificată la 28.08.2026 nu stabilește încă această informație. |
+| Prag SO | Documentația oficială publicată și verificată la 28.08.2026 nu stabilește încă această informație. |
+| Investiții | Documentația oficială publicată și verificată la 28.08.2026 nu stabilește încă această informație. |
+| Cheltuieli eligibile | Documentația oficială publicată și verificată la 28.08.2026 nu stabilește încă această informație. |
+| Cheltuieli neeligibile | Documentația oficială publicată și verificată la 28.08.2026 nu stabilește încă această informație. |
+| Condiții critice | Investiția se realizează în județele Bacău, Botoșani, Iași, Neamț, Suceava sau Vaslui, în mediul urban ori rural.; Solicitantul respectă definiția microîntreprinderii: maximum 9 salariați și cifră de afaceri anuală netă sau active totale de maximum 2 milioane EUR, inclusiv după agregarea întreprinderilor partenere și legate.; Solicitantul a desfășurat activitate cel puțin un an fiscal integral, a fost înființat cel târziu la 03.01.2025, nu a avut activitatea suspendată în 2025 sau 2026 și a avut profit din exploatare pozitiv în 2025.; Numărul mediu de salariați în 2025 este de minimum 1, conform bazei de date ANAF.; Cel puțin un cod CAEN Rev. 3 vizat este inclus în Anexa 5, iar achiziția de mijloace fixe corporale este obligatorie.; Finanțarea nerambursabilă este de 100.000–300.000 EUR, contribuția proprie eligibilă este de minimum 10%, iar plafonul de minimis al întreprinderii unice trebuie respectat.; Cheltuielile indirecte sunt eligibile în limita unei rate forfetare de maximum 7% din costurile directe eligibile.; Grila punctează contribuția proprie până la pragul de 30% și rata profitabilității până la pragul de 6%, conform formulelor din Anexa 10.; Proiectul trebuie să obțină minimum 70 de puncte și să nu primească 0 la subcriteriile eliminatorii prevăzute de grilă. |
+| Documente | [Pagina oficială ADR Nord-Est pentru Apelul 2](https://regionordest.ro/prioritatea-1/modernizare-microintreprinderi/) |
+| Indicatori | Documentația oficială publicată și verificată la 28.08.2026 nu stabilește încă această informație. |
+| Selecție / punctaj | Documentația oficială publicată și verificată la 28.08.2026 nu stabilește încă această informație. |
+| Ajutor de stat / de minimis | Documentația oficială publicată și verificată la 28.08.2026 nu stabilește încă această informație. |
+| Implementare | Documentația oficială publicată și verificată la 28.08.2026 nu stabilește încă această informație. |
+| Monitorizare | Documentația oficială publicată și verificată la 28.08.2026 nu stabilește încă această informație. |
+| Surse oficiale | [Pagina oficială ADR Nord-Est pentru Apelul 2](https://regionordest.ro/prioritatea-1/modernizare-microintreprinderi/) |
+| Latest official update | 2026-08-28 — [Ghidul final și anexele publicate la 27.08.2026; cod apel PR/NE/2026/P1/RSO1.3/2/1](https://regionordest.ro/prioritatea-1/modernizare-microintreprinderi/) |
+| verifiedAt | 2026-08-28 |
+| Pagină oficială program/apel | [Pagina oficială ADR Nord-Est pentru Apelul 2](https://regionordest.ro/prioritatea-1/modernizare-microintreprinderi/) (`program`, verificat 2026-08-28) |
+| Ghid | [Ghidul final și anexele Apelului 2, publicate la 27.08.2026](https://regionordest.ro/prioritatea-1/modernizare-microintreprinderi/) (`guide:por-ne-apel-2`, verificat 2026-08-28) |
+| Anexe | [Anexele finale, inclusiv lista CAEN și grila de evaluare](https://regionordest.ro/prioritatea-1/modernizare-microintreprinderi/) (`guide:por-ne-apel-2`, verificat 2026-08-28) |
+| Schemă / ordin | — Neidentificat separat în sursele oficiale înregistrate la 2026-08-28; nu se presupune inexistența documentului. |
+| Anunț sesiune | [Anunțul oficial: depuneri 28.09.2026–28.10.2026](https://regionordest.ro/prioritatea-1/modernizare-microintreprinderi/) (`program`, verificat 2026-08-28) |
+| Corrigenda / erate | — Neidentificat separat în sursele oficiale înregistrate la 2026-08-28; nu se presupune inexistența documentului. |
+| Clarificări | — Neidentificat separat în sursele oficiale înregistrate la 2026-08-28; nu se presupune inexistența documentului. |
+| Sursă primară în registry-ul operațional | [Ghidul final și anexele publicate la 27.08.2026; cod apel PR/NE/2026/P1/RSO1.3/2/1](https://regionordest.ro/prioritatea-1/modernizare-microintreprinderi/) (verificat 2026-08-28) |
 | Chei surse repo | `por-ne-apel-2`, `por-ne` |
-| Notes | Consultarea 30.01.2026–13.03.2026 este închisă; forma finală și o eventuală sesiune trebuie confirmate separat. |
+| Notes | Apelul este lansat, cu o fereastră viitoare de depunere. Se verifică pagina oficială pentru eventuale corrigenda, clarificări sau modificări înainte de transmitere. |
 
 ## `fondul-modernizare-autoconsum` — Fondul pentru Modernizare – energie și autoconsum
 

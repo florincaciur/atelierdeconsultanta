@@ -34,37 +34,37 @@
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
   "por-ne": {
-    "name": "Apel 2 – consultare publică închisă; 30.01.2026–13.03.2026",
-    "title": "Apel 2 – consultare publică închisă; 30.01.2026–13.03.2026",
+    "name": "Ghidul final și anexele publicate la 27.08.2026; cod apel PR/NE/2026/P1/RSO1.3/2/1",
+    "title": "Ghidul final și anexele publicate la 27.08.2026; cod apel PR/NE/2026/P1/RSO1.3/2/1",
     "institution": "Autoritatea de Management pentru Programul Regional Nord-Est",
-    "documentType": "ghid in consultare / pagina oficiala",
-    "url": "https://regionordest.ro/apel-proiect/p1-investitii-pentru-modernizarea-microintreprinderilor-apel-2/",
-    "accessedAt": "2026-08-23",
-    "note": "Sinteza foloseste ghidul consultativ din 30 ianuarie 2026 furnizat in arhiva oficiala; forma finala si clarificarile se verifica pe pagina ADR Nord-Est.",
+    "documentType": "arhivă oficială cu ghid final și 20 de anexe",
+    "url": "https://regionordest.ro/prioritatea-1/modernizare-microintreprinderi/",
+    "accessedAt": "2026-08-28",
+    "note": "Arhiva include ghidul final, Anexa 5 cu lista CAEN Rev. 3 și Anexa 10 cu grila de evaluare tehnică și financiară.",
     "programIds": [
       "modernizare-microintreprinderi-ne-2"
     ],
-    "programStatus": "consultare_publica",
-    "statusLabel": "Consultare publică închisă – apelul nu este deschis",
-    "verifiedAt": "2026-08-23",
+    "programStatus": "ghid_aprobat_nedeschis",
+    "statusLabel": "Apel lansat – depuneri 28 septembrie–28 octombrie 2026",
+    "verifiedAt": "2026-08-28",
     "isPrimaryFor": "modernizare-microintreprinderi-ne-2",
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
   "por-ne-apel-2": {
-    "name": "Apel 2 – consultare publică închisă; 30.01.2026–13.03.2026",
-    "title": "Apel 2 – consultare publică închisă; 30.01.2026–13.03.2026",
+    "name": "Ghidul final și anexele publicate la 27.08.2026; cod apel PR/NE/2026/P1/RSO1.3/2/1",
+    "title": "Ghidul final și anexele publicate la 27.08.2026; cod apel PR/NE/2026/P1/RSO1.3/2/1",
     "institution": "Autoritatea de Management pentru Programul Regional Nord-Est",
-    "documentType": "ghid in consultare / pagina oficiala",
-    "url": "https://regionordest.ro/apel-proiect/p1-investitii-pentru-modernizarea-microintreprinderilor-apel-2/",
-    "accessedAt": "2026-08-23",
-    "note": "Sinteza foloseste ghidul consultativ din 30 ianuarie 2026 furnizat in arhiva oficiala; forma finala si clarificarile se verifica pe pagina ADR Nord-Est.",
+    "documentType": "pagină oficială de apel și anunț de lansare",
+    "url": "https://regionordest.ro/prioritatea-1/modernizare-microintreprinderi/",
+    "accessedAt": "2026-08-28",
+    "note": "Pagina oficială confirmă publicarea ghidului final la 27 august 2026, perioada de depunere, bugetul, grantul și instrumentul ADR de autoevaluare.",
     "programIds": [
       "modernizare-microintreprinderi-ne-2"
     ],
     "isPrimaryFor": "modernizare-microintreprinderi-ne-2",
-    "programStatus": "consultare_publica",
-    "statusLabel": "Consultare publică închisă – apelul nu este deschis",
-    "verifiedAt": "2026-08-23",
+    "programStatus": "ghid_aprobat_nedeschis",
+    "statusLabel": "Apel lansat – depuneri 28 septembrie–28 octombrie 2026",
+    "verifiedAt": "2026-08-28",
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
   "femeia": {

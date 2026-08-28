@@ -280,7 +280,7 @@ Valorile de mai jos sunt citite încă de suprafețele publice existente. Ele nu
 
 ## Maparea snapshot-ului curent
 
-Maparea de mai jos folosește snapshot-ul factual verificat în registry la **2026-08-23**. Ea definește semantica, fără a rescrie încă toate paginile, bannerele sau artefactele materializate.
+Maparea de mai jos folosește snapshot-ul factual de bază verificat în registry la **2026-08-23**. Înregistrările pot avea o reverificare ulterioară, indicată individual prin `verifiedAt`.
 
 | Stable program ID | Status legacy | Status canonic | Label public recomandat | Scope | Motiv |
 |---|---|---|---|---|---|
@@ -292,7 +292,7 @@ Maparea de mai jos folosește snapshot-ul factual verificat în registry la **20
 | `start-up-nation` | `apel_inchis` | `CLOSED` | Apel închis — depunerea nu este deschisă | edition | Înscrierile persoanelor juridice s-au încheiat; registry-ul nu consemnează finalizarea întregii proceduri. |
 | `femeia-antreprenor` | `apel_inchis` | `CLOSED` | Apel închis — depunerea nu este deschisă | edition | Depunerea ediției 2024 este închisă, iar ordinea finală la evaluare nu dovedește finalizarea întregii proceduri. |
 | `digitalizare-imm` | `apel_inchis` | `CLOSED` | Apel închis — depunerea nu este deschisă | program_call | Registry-ul confirmă depunerea închisă, fără o dovadă distinctă de finalizare. |
-| `modernizare-microintreprinderi-ne-2` | `consultare_publica` | `CONSULTATIVE_GUIDE` | Ghid consultativ publicat — depunerea nu este deschisă | program_call | Consultarea s-a încheiat, iar forma înregistrată este ghidul consultativ; apelul nu este deschis. |
+| `modernizare-microintreprinderi-ne-2` | `ghid_aprobat_nedeschis` | `SCHEDULED` | Apel programat — depuneri între 28.09.2026 și 28.10.2026 | program_call | Ghidul final și anexele au fost publicate la 27.08.2026, iar fereastra oficială de depunere este 28.09.2026, ora 14:00–28.10.2026, ora 14:00. |
 | `fondul-modernizare-autoconsum` | `apel_inchis` | `COMPLETED` | Apel finalizat — depunerea nu este deschisă | program_call | MySMIS marchează apelurile înregistrate drept FINALIZAT. |
 | `fondul-modernizare-regenerabile` | `apel_inchis` | `COMPLETED` | Apel finalizat — depunerea nu este deschisă | program_call | MySMIS marchează apelurile înregistrate drept FINALIZAT. |
 | `afir-energie-autoconsum` | `apel_inchis` | `CLOSED` | Apel închis — depunerea nu este deschisă | session | Sesiunea 15.06.2026–14.08.2026 s-a încheiat; nu există în registry o dovadă distinctă de finalizare a procedurii. |

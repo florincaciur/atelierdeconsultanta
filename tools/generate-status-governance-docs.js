@@ -280,8 +280,8 @@ function validateData(data) {
     if (!assignment?.statusScope || !assignment?.statusRationale) errors.push(`${program.slug}: statusScope/statusRationale lipsă.`);
     if (program.sourceType !== "official" || !isOfficialUrl(program.sourceUrl)) errors.push(`${program.slug}: sursa principală nu este URL oficial HTTPS permis.`);
     if (!isIsoDate(program.verifiedAt)) errors.push(`${program.slug}: verifiedAt invalid.`);
-    if (program.verifiedAt !== data.sourceRegistry.factualSnapshotDate) {
-      errors.push(`${program.slug}: verifiedAt trebuie să coincidă cu snapshot-ul factual curent.`);
+    if (program.verifiedAt < data.sourceRegistry.factualSnapshotDate) {
+      errors.push(`${program.slug}: verifiedAt nu poate fi anterior snapshot-ului factual de bază.`);
     }
     if (!sourceEntry || !sourceEntry.roles) continue;
     if (!String(sourceEntry.notes || "").trim()) errors.push(`${program.slug}: notes lipsește din registrul de surse.`);
@@ -522,7 +522,7 @@ function renderStatusTaxonomy(data) {
     "",
     "## Maparea snapshot-ului curent",
     "",
-    `Maparea de mai jos folosește snapshot-ul factual verificat în registry la **${data.sourceRegistry.factualSnapshotDate}**. Ea definește semantica, fără a rescrie încă toate paginile, bannerele sau artefactele materializate.`,
+    `Maparea de mai jos folosește snapshot-ul factual de bază verificat în registry la **${data.sourceRegistry.factualSnapshotDate}**. Înregistrările pot avea o reverificare ulterioară, indicată individual prin \`verifiedAt\`.`,
     "",
     "| Stable program ID | Status legacy | Status canonic | Label public recomandat | Scope | Motiv |",
     "|---|---|---|---|---|---|",
@@ -555,14 +555,14 @@ function renderSourceRegistry(data) {
   const lines = [
     "# Registrul surselor oficiale FABER",
     "",
-    `Snapshot factual al programelor: **${data.sourceRegistry.factualSnapshotDate}**. Revizia structurii registrului: **${data.sourceRegistry.registryReviewDate}**. Rolurile per program: \`config/seo-programs.json#programs[*].officialSources\`; surse suplimentare: \`config/program-source-registry.json#supplementalSources\`; catalog documente: \`official-guides.json\`. Document generat de \`tools/generate-status-governance-docs.js\`.`,
+    `Snapshot factual de bază al programelor: **${data.sourceRegistry.factualSnapshotDate}**. Fiecare înregistrare poate avea o reverificare mai nouă, publicată în câmpul \`verifiedAt\`. Revizia structurii registrului: **${data.sourceRegistry.registryReviewDate}**. Rolurile per program: \`config/seo-programs.json#programs[*].officialSources\`; surse suplimentare: \`config/program-source-registry.json#supplementalSources\`; catalog documente: \`official-guides.json\`. Document generat de \`tools/generate-status-governance-docs.js\`.`,
     "",
     "## Reguli de audit",
     "",
     "- Sunt acceptate numai surse primare ale autorității competente, Portalului Legislativ/Monitorului Oficial ori platformelor publice oficiale.",
     "- `Pagină oficială` este punctul stabil de pornire; `ghid`, `anexe`, `schemă/ordin`, `anunț sesiune`, `corrigenda` și `clarificări` sunt roluri distincte și nu se substituie reciproc.",
     "- Un câmp neidentificat este un gol explicit al registry-ului, nu afirmația că documentul nu există. Golul nu poate susține o stare mai optimistă.",
-    "- `Latest official update` înseamnă ultima actualizare consemnată în snapshot-ul versionat, nu o garanție că instituția nu a publicat ulterior alt document.",
+    "- `Latest official update` înseamnă ultima actualizare consemnată pentru program la data lui `verifiedAt`, nu o garanție că instituția nu a publicat ulterior alt document.",
     "- URL-ul accesibil nu este singur dovadă de `OPEN`; sunt obligatorii identificarea sesiunii, fereastra curentă și controlul actualizărilor ulterioare.",
     `- Cele ${FACTUAL_FIELD_LABELS.length} de categorii solicitate sunt documentate pentru fiecare program. Când sursa oficială verificată nu stabilește un câmp, fișa publică exact golul factual, fără completări speculative.`,
     "",

@@ -125,20 +125,20 @@
         "apel 2 microîntreprinderi Nord-Est",
         "investiții microîntreprinderi ADR Nord-Est"
       ],
-      "title": "Modernizarea microîntreprinderilor – Apel 2 Nord-Est | FABER",
-      "description": "Apelul 2 Nord-Est este programat pentru microîntreprinderi: grant consultativ 100.000–300.000 €, intensitate de până la 90%, CAEN, amplasament și acte.",
-      "ogTitle": "Modernizarea microîntreprinderilor – Apel 2 Nord-Est | FABER",
-      "ogDescription": "Apelul 2 Nord-Est este programat pentru microîntreprinderi: grant consultativ 100.000–300.000 €, intensitate de până la 90%, CAEN, amplasament și acte.",
+      "title": "Modernizarea microîntreprinderilor Apel 2 Nord-Est | FABER",
+      "description": "Apel 2 Nord-Est: depuneri 28.09–28.10.2026, grant 100.000–300.000 €, contribuție minimă 10%, condiții și simulator de punctaj după grila finală.",
+      "ogTitle": "Modernizarea microîntreprinderilor Apel 2 Nord-Est | FABER",
+      "ogDescription": "Apel 2 Nord-Est: depuneri 28.09–28.10.2026, grant 100.000–300.000 €, contribuție minimă 10%, condiții și simulator de punctaj după grila finală.",
       "sourceOfTruth": [
         "config/seo-programs.json#programs",
-        "https://regionordest.ro/apel-proiect/p1-investitii-pentru-modernizarea-microintreprinderilor-apel-2/"
+        "https://regionordest.ro/prioritatea-1/modernizare-microintreprinderi/"
       ],
-      "factualStatus": "consultative",
-      "lastReviewed": "2026-08-23",
+      "factualStatus": "scheduled",
+      "lastReviewed": "2026-08-28",
       "notes": "Pagina concentrează Apelul 2; ruta istorică POR ADR Nord-Est redirecționează direct aici conform aprobării beneficiarului.",
       "publicationState": "public",
-      "programStatus": "consultare_publica",
-      "statusLabel": "Consultare publică închisă – apelul nu este deschis"
+      "programStatus": "ghid_aprobat_nedeschis",
+      "statusLabel": "Apel lansat – depuneri 28 septembrie–28 octombrie 2026"
     },
     {
       "route": "/contact",

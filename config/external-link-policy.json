@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "approvedAt": "2026-08-18",
+  "approvedAt": "2026-08-28",
   "approvedBy": "Caciur Florin",
   "policy": "Linkurile editoriale externe trimit numai către instituții publice sau către canalele oficiale FABER aprobate. Domeniile comerciale terțe și referințele la competitori sunt interzise.",
   "allowedExactHosts": [
@@ -17,6 +17,7 @@
     "legislatie.just.ro",
     "madr.ro",
     "mfe.gov.ro",
+    "ne.myadr.ro",
     "oportunitati-ue.gov.ro",
     "pnrr.fonduri-ue.ro",
     "regionordest.ro",
