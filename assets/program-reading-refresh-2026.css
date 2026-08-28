@@ -53,8 +53,8 @@ body[data-program-id="dr12-afir"] article.panel > section:not(.program-factual-s
   box-shadow: 0 16px 42px rgba(16, 40, 70, .06);
 }
 
-body[data-program-id="modernizare-microintreprinderi-ne-2"] article.panel > section:nth-of-type(even):not(.program-factual-status),
-body[data-program-id="dr12-afir"] article.panel > section:nth-of-type(even):not(.program-factual-status) {
+body[data-program-id="modernizare-microintreprinderi-ne-2"] article.panel > section:nth-of-type(even):not(.program-factual-status):not(.program-reading-overview),
+body[data-program-id="dr12-afir"] article.panel > section:nth-of-type(even):not(.program-factual-status):not(.program-reading-overview) {
   background: linear-gradient(145deg, #fff 0%, var(--reading-soft) 100%);
 }
 

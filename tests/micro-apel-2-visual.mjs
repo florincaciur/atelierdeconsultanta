@@ -59,6 +59,8 @@ try {
       const results = document.querySelector(".micro2-results");
       const simulator = document.querySelector(".micro2-simulator");
       const panel = document.querySelector("main .panel");
+      const overview = document.querySelector(".program-reading-overview");
+      const overviewHeading = overview?.querySelector("h2");
       const formRect = form?.getBoundingClientRect();
       const resultsRect = results?.getBoundingClientRect();
       const bounds = (node) => {
@@ -72,6 +74,8 @@ try {
         resultsBounds: bounds(results),
         simulatorBounds: bounds(simulator),
         panelBounds: bounds(panel),
+        overviewBackground: overview ? getComputedStyle(overview).backgroundImage : "",
+        overviewHeadingColor: overviewHeading ? getComputedStyle(overviewHeading).color : "",
         formWithinViewport: Boolean(formRect && formRect.left >= -1 && formRect.right <= window.innerWidth + 1),
         resultsWithinViewport: Boolean(resultsRect && resultsRect.left >= -1 && resultsRect.right <= window.innerWidth + 1)
       };
@@ -82,6 +86,8 @@ try {
     assert.ok(layout.overflow <= 1, `${viewport.name}: pagina are scroll orizontal de ${layout.overflow}px`);
     assert.equal(layout.formWithinViewport, true, `${viewport.name}: formularul depășește viewport-ul (${JSON.stringify(layout)})`);
     assert.equal(layout.resultsWithinViewport, true, `${viewport.name}: rezultatul depășește viewport-ul (${JSON.stringify(layout.resultsBounds)})`);
+    assert.match(layout.overviewBackground, /rgb\(16, 40, 70\).*rgb\(23, 61, 98\)/u, `${viewport.name}: fundalul închis al hărții de parcurgere a fost suprascris (${layout.overviewBackground})`);
+    assert.equal(layout.overviewHeadingColor, "rgb(255, 255, 255)", `${viewport.name}: titlul hărții nu mai folosește text alb pe fundalul închis`);
 
     await page.evaluate(() => {
       const form = document.querySelector("[data-micro-apel-2-form]");
