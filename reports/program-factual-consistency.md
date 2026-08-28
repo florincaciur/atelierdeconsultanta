@@ -18,9 +18,9 @@ Auditul este local și determinist. Nu interoghează URL-urile oficiale, nu dedu
 |---|---|---:|---:|---:|
 | Programul Regional Nord-Est | calendar_estimativ | 2026-08-23 | — | — |
 | Fonduri regionale | calendar_estimativ | 2026-08-23 | — | — |
-| DR12 AFIR | consultare_publica | 2026-08-23 | — | — |
-| DR14 AFIR | ghid_aprobat_nedeschis | 2026-08-23 | 2026-09-01 | 2026-10-31 |
-| DR18 AFIR | ghid_aprobat_nedeschis | 2026-08-23 | 2026-09-01 | 2026-10-31 |
+| DR12 AFIR | consultare_publica | 2026-08-28 | — | — |
+| DR14 AFIR | ghid_aprobat_nedeschis | 2026-08-28 | 2026-09-01 | 2026-10-31 |
+| DR18 AFIR | ghid_aprobat_nedeschis | 2026-08-28 | 2026-09-01 | 2026-10-31 |
 | Start-Up Nation | apel_inchis | 2026-08-23 | — | 2026-05-29 |
 | Femeia Antreprenor | apel_inchis | 2026-08-23 | — | — |
 | Digitalizare IMM | apel_inchis | 2026-08-23 | — | — |
@@ -35,10 +35,10 @@ Auditul este local și determinist. Nu interoghează URL-urile oficiale, nu dedu
 | e-MOVE RO | ghid_aprobat_nedeschis | 2026-08-23 | — | — |
 | PoCIDIF 2.1 | apel_deschis | 2026-08-23 | 2026-06-30 | 2026-09-30 |
 | PNRR | calendar_estimativ | 2026-08-23 | — | — |
-| Diaspora Investește Acasă | calendar_estimativ | 2026-08-23 | — | — |
-| e-DRIVE | ghid_aprobat_nedeschis | 2026-08-23 | — | — |
+| Diaspora Investește Acasă | calendar_estimativ | 2026-08-28 | — | — |
+| e-DRIVE | ghid_aprobat_nedeschis | 2026-08-28 | — | — |
 | e-Mobility RO | ghid_aprobat_nedeschis | 2026-08-23 | — | — |
-| PC1 Stocare stand-alone | ghid_aprobat_nedeschis | 2026-08-23 | — | — |
+| PC1 Stocare stand-alone | ghid_aprobat_nedeschis | 2026-08-28 | — | — |
 | Programul Tranziție Justă | calendar_estimativ | 2026-08-23 | — | — |
 | Fondul pentru Modernizare | calendar_estimativ | 2026-08-23 | — | — |
 
