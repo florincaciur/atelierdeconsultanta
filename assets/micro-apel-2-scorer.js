@@ -277,6 +277,7 @@
     const meter = root.querySelector("[data-score-meter]");
     const list = root.querySelector("[data-score-breakdown]");
     const alerts = root.querySelector("[data-score-alerts]");
+    const alertCount = root.querySelector("[data-score-alert-count]");
 
     score.textContent = formatPoints(result.estimatedTotal);
     objective.textContent = formatPoints(result.objectivePoints) + " / " + result.objectiveMax;
@@ -306,6 +307,10 @@
 
     const entries = result.rejections.map(function (message) { return { type: "danger", message: message }; })
       .concat(result.warnings.map(function (message) { return { type: "warning", message: message }; }));
+    if (alertCount) {
+      alertCount.textContent = String(entries.length);
+      alertCount.setAttribute("aria-label", entries.length + (entries.length === 1 ? " avertisment" : " avertismente"));
+    }
     alerts.innerHTML = entries.map(function (entry) {
       return '<li data-alert="' + entry.type + '">' + entry.message + '</li>';
     }).join("");

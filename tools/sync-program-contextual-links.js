@@ -137,11 +137,21 @@ function renderProgramContextualLinks(program, config = loadConfig()) {
 
   return `${START}
   <section class="program-contextual-links" data-program-contextual-links="" data-program-id="${escapeHtml(program.id)}" aria-labelledby="program-contextual-${escapeHtml(program.slug)}-title">
-    <h2 id="program-contextual-${escapeHtml(program.slug)}-title">Continuă cu traseul potrivit</h2>
-    <p>Compară familia și programele apropiate, apoi folosește serviciul, instrumentul și ghidul relevante înainte de verificarea proiectului.</p>
-    <ul class="program-contextual-links__list">
+    <details class="program-contextual-links__disclosure" data-non-faq="">
+      <summary>
+        <span class="program-contextual-links__summary-copy">
+          <span class="program-contextual-links__summary-title" id="program-contextual-${escapeHtml(program.slug)}-title" role="heading" aria-level="2">Continuă cu traseul potrivit</span>
+          <span class="program-contextual-links__summary-hint">${links.length} resurse relevante · extinde secțiunea</span>
+        </span>
+        <span class="program-contextual-links__summary-action" aria-hidden="true">Vezi opțiunile</span>
+      </summary>
+      <div class="program-contextual-links__body">
+        <p>Compară familia și programele apropiate, apoi folosește serviciul, instrumentul și ghidul relevante înainte de verificarea proiectului.</p>
+        <ul class="program-contextual-links__list">
 ${items}
-    </ul>
+        </ul>
+      </div>
+    </details>
   </section>
 ${END}`;
 }

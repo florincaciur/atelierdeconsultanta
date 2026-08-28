@@ -206,10 +206,10 @@ CTA separat: **${config.cta.label}** → \`${config.cta.href}\`
 |---|---|---|
 ${rows}
 
-` + "```mermaid\ngraph TD\n  NAV[\"Navigare principală\"] --> S[\"Servicii\"]\n  NAV --> P[\"Programe\"]\n  NAV --> SO[\"Calculator SO\"]\n  NAV --> D[\"Despre FABER\"]\n  NAV --> C[\"Contact\"]\n  NAV -. CTA separat .-> V[\"Începe verificarea proiectului\"]\n```\n" + `
+` + "```mermaid\ngraph TD\n  NAV[\"Navigare principală\"] --> S[\"Servicii\"]\n  NAV --> P[\"Programe\"]\n  NAV --> CALC[\"Calculatoare\"]\n  CALC --> MICRO[\"Punctaj POR Micro – Apelul 2\"]\n  CALC --> SO[\"Calculator SO\"]\n  CALC --> DR14[\"Punctaj DR 14\"]\n  NAV --> D[\"Despre FABER\"]\n  NAV --> C[\"Contact\"]\n  NAV -. CTA separat .-> V[\"Începe verificarea proiectului\"]\n```\n" + `
 ## Reguli
 
-- Desktop: trei disclosure-uri semantice, Calculator SO și Contact ca linkuri directe, plus CTA separat.
+- Desktop: patru disclosure-uri semantice, inclusiv meniul Calculatoare, Contact ca link direct și CTA separat.
 - Mobil: butoane disclosure reale cu \`aria-expanded\`; linkurile nu deschid accidental grupurile.
 - Maximum ${config.policy.maxVisibleItemsPerGroup} linkuri vizibile în fiecare grup.
 - Navigarea nu conține statusuri, etichete de status, date de verificare sau valori de program.

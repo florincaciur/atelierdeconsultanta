@@ -230,22 +230,22 @@
     {
       "route": "/fonduri-europene",
       "primaryIntent": "identificarea programelor de fonduri europene pentru investiție",
-      "primaryQuery": "fonduri europene",
+      "primaryQuery": "fonduri europene 2026",
       "secondaryQueries": [
         "fonduri europene firme",
         "fonduri europene fermieri",
         "programe fonduri europene"
       ],
       "sourceOfTruth": [
-        "config/editorial-clusters.json",
+        "tools/rebuild-core-pages.js",
         "fonduri-europene/index.html"
       ],
       "factualStatus": "programme_hub_routes_verified",
-      "notes": "Hub evergreen fără an sau statut de apel; metadata urmează sursa editorială guvernată.",
-      "title": "Fonduri europene: programe și trasee de verificare | FABER",
-      "description": "Alege familia de programe după solicitant și investiție, apoi folosește instrumentele și ghidurile potrivite înainte de verificarea proiectului.",
-      "ogTitle": "Fonduri europene: programe și trasee de verificare | FABER",
-      "ogDescription": "Alege familia de programe după solicitant și investiție, apoi folosește instrumentele și ghidurile potrivite înainte de verificarea proiectului.",
+      "notes": "Titlul folosește anul numai pentru hub; termenele și valorile rămân în paginile programelor.",
+      "title": "Fonduri europene 2026: programe pentru firme și fermieri",
+      "description": "Compară programe pentru firme, fermieri și instituții după solicitant, investiție, regiune, documente și contribuția proprie disponibilă.",
+      "ogTitle": "Găsește traseul potrivit pentru investiția ta | FABER",
+      "ogDescription": "Pornește de la beneficiar și investiție, apoi verifică programul, documentele și bugetul în pagina dedicată fiecărui apel.",
       "lastReviewed": "2026-07-20"
     }
   ]

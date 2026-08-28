@@ -266,7 +266,7 @@ body:is([data-program-id="dr14-afir"], [data-program-id="dr18-afir"]) .post-body
 .dr14-dossier summary::-webkit-details-marker { display: none; }
 .dr14-dossier summary > span { display: grid; place-items: center; width: 2.2rem; height: 2.2rem; flex: 0 0 auto; color: #fff; background: var(--dr14-green); border-radius: 50%; }
 .dr14-dossier summary div { display: grid; gap: .15rem; }
-.dr14-dossier summary small { color: #6b7e76; font-weight: 500; }
+.dr14-dossier summary small { color: #53685f; font-weight: 500; }
 .dr14-dossier__content { display: grid; gap: .75rem; padding: 0 1rem 1rem 4.1rem; }
 .dr14-dossier__content label { display: flex; gap: .7rem; align-items: flex-start; line-height: 1.5; }
 .dr14-dossier__content input { width: 1.15rem; height: 1.15rem; margin-top: .15rem; flex: 0 0 auto; accent-color: var(--dr14-green); }

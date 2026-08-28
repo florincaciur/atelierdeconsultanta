@@ -10,7 +10,7 @@ const { isPublicProgram, loadProgramConfig, programForRoute } = require("./progr
 
 const ROOT = path.resolve(__dirname, "..");
 const BANNERS_PATH = path.join(ROOT, "banners.json");
-const PROGRAM_HERO_CSS = "/assets/program-heroes.css";
+const PROGRAM_HERO_CSS = "/assets/program-heroes.css?v=20260828-1";
 
 const PROGRAM_ROUTES = Object.freeze([
   "/investitii-modernizarea-microintreprinderilor-apel-2",
@@ -243,6 +243,8 @@ function findHeroBlock(html) {
 
 function ensureProgramHeroCss(html) {
   if (html.includes(`href="${PROGRAM_HERO_CSS}"`) || html.includes(`href='${PROGRAM_HERO_CSS}'`)) return html;
+  const existing = /<link\b[^>]*href=["']\/assets\/program-heroes\.css(?:\?[^"']*)?["'][^>]*>/iu;
+  if (existing.test(html)) return html.replace(existing, `<link rel="stylesheet" href="${PROGRAM_HERO_CSS}">`);
   if (!/<\/head>/i.test(html)) throw new Error("Missing </head>");
   return html.replace(/<\/head>/i, `  <link rel="stylesheet" href="${PROGRAM_HERO_CSS}">\n</head>`);
 }

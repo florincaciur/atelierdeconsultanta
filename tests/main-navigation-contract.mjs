@@ -40,7 +40,7 @@ const programBySlug = new Map(loadProgramConfig().programs.map((program) => [pro
 const expectedNavigationPrograms = navigationPrograms([...programBySlug.values()]);
 
 assert.equal(config.primaryDestinations.length, 5, "navigation must expose exactly five primary destinations");
-assert.equal(grouped.length, 3, "three primary destinations must use disclosure groups");
+assert.equal(grouped.length, 4, "four primary destinations must use disclosure groups");
 assert.equal($("[data-homepage-navbar-toc]").length, 0, "homepage TOC must not be exposed in navigation");
 assert.deepEqual(
   $("#navbar [data-nav-disclosure] > button").map((_, element) => $(element).clone().children().remove().end().text().trim()).get(),
@@ -52,7 +52,17 @@ assert.deepEqual(
   grouped.map(({ label }) => label),
   "mobile labels must follow the approved order",
 );
-assert.deepEqual($("#navbar .nav-primary-link").map((_, element) => $(element).text().trim()).get(), ["Calculator SO", "Contact"], "Calculator SO and Contact must be direct destinations");
+assert.deepEqual($("#navbar .nav-primary-link").map((_, element) => $(element).text().trim()).get(), ["Contact"], "Contact must remain the only direct navigation destination");
+assert.deepEqual(
+  $("#nav-calculatoare-panel a").map((_, element) => ({ label: $(element).text().trim(), href: $(element).attr("href") })).get(),
+  [
+    { label: "Calculator punctaj POR Micro – Apelul 2", href: "/investitii-modernizarea-microintreprinderilor-apel-2#simulator-punctaj-apel-2" },
+    { label: "Calculator SO", href: "/calculator-soc" },
+    { label: "Calculator punctaj DR 14", href: "/dr14#dr14-punctaj" }
+  ],
+  "calculator disclosure must expose the three approved tools in order",
+);
+assert.equal($("#mobile-calculatoare-panel a").length, 3, "mobile calculator disclosure must expose all three tools");
 assert.equal($("#navbar .nav-cta").text().trim(), config.cta.label, "desktop CTA copy must be canonical");
 assert.equal($("#mobileMenu .mobile-cta").text().trim(), config.cta.label, "mobile CTA copy must be canonical");
 assert.equal(/\b(?:Instrumente|Ghiduri|Cuprins)\b/u.test($("#navbar, #mobileMenu").text()), false, "removed navigation labels must stay absent");

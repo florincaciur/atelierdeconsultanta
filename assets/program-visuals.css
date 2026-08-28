@@ -22,12 +22,14 @@
 
 .program-visual__copy strong { font-size: clamp(1.05rem, 2vw, 1.35rem); }
 .program-visual__copy span { color: #526b61; font-size: .9rem; }
-.program-visual svg { display: block; width: 100%; height: auto; }
+.program-visual__canvas { width: 100%; min-width: 0; }
+.program-visual svg { display: block; width: 100%; max-width: 100%; height: auto; overflow: visible; }
+.program-visual__svg--mobile { display: none !important; }
 .program-visual__track { stroke-dasharray: 10 12; animation: program-visual-track 8s linear infinite; }
-.program-visual__marker { animation: program-visual-pulse 2.8s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
-.program-visual__marker:nth-of-type(2) { animation-delay: .45s; }
-.program-visual__marker:nth-of-type(3) { animation-delay: .9s; }
-.program-visual__marker:nth-of-type(4) { animation-delay: 1.35s; }
+.program-visual__marker circle { animation: program-visual-pulse 2.8s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+.program-visual__marker:nth-of-type(2) circle { animation-delay: .45s; }
+.program-visual__marker:nth-of-type(3) circle { animation-delay: .9s; }
+.program-visual__marker:nth-of-type(4) circle { animation-delay: 1.35s; }
 
 @keyframes program-visual-track { to { stroke-dashoffset: -88; } }
 @keyframes program-visual-pulse { 0%, 100% { transform: scale(.94); } 50% { transform: scale(1.07); } }
@@ -35,7 +37,54 @@
 @media (max-width: 520px) {
   .program-visual { width: calc(100% - 1rem); padding: .85rem; border-radius: 18px; }
   .program-visual__copy { display: grid; }
-  .program-visual svg text { font-size: 12px; }
+  .program-visual__svg--desktop { display: none !important; }
+  .program-visual__svg--mobile { display: block !important; width: min(100%, 320px); margin: 0 auto; }
+}
+
+/* Integritate comună pentru toate rutele din sitemap-programs.xml. */
+body[data-program-id] main,
+body[data-program-id] main :where(section, article, aside, figure, form, fieldset, div) {
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+body[data-program-id] main :where(h1, h2, h3, h4, p, li, a, label, summary, dt, dd, strong, small) {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+body[data-program-id] main :where(svg, img, video, canvas) {
+  max-width: 100%;
+}
+
+body[data-program-id] main svg {
+  height: auto;
+  shape-rendering: geometricPrecision;
+  text-rendering: optimizeLegibility;
+}
+
+body[data-program-id] main :where(input, select, textarea, button) {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+body.program-showcase-page main .program-section:not(.program-section--source) .section-kicker,
+body.program-showcase-page main .program-card__number {
+  color: #8f340f;
+}
+
+body[data-program-id] main.post-container .post-body a:not(.btn):not(.btn-primary):not(.btn-secondary):not(.btn-cta),
+body[data-program-id] main.post-container .editorial-meta__sources a {
+  color: #9d3a0f;
+}
+
+body[data-program-id] main.post-container .editorial-meta :where(dt, .editorial-meta__source-date) {
+  color: #52617a;
+}
+
+body[data-program-id] main .official-sources__meta dt {
+  color: #52617a;
 }
 
 @media (prefers-reduced-motion: reduce) {

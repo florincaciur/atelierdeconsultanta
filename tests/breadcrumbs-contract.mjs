@@ -166,7 +166,7 @@ if (LIVE) {
   const root = USE_DIST ? DIST : ROOT;
   const audit = auditBreadcrumbs(root, { deployment: USE_DIST });
   assert.equal(audit.summary.routeCount, 105, "auditul trebuie să acopere toate rutele publice, inclusiv /gdpr");
-  if (!USE_DIST) assert.equal(audit.summary.sourceCount, 114, "auditul local trebuie să acopere sursele canonical și sursele efective de deploy");
+  if (!USE_DIST) assert.equal(audit.summary.sourceCount, 113, "auditul local trebuie să acopere sursele canonical și sursele efective de deploy");
   assert.equal(audit.summary.fail, 0, audit.results
     .filter((result) => result.status === "FAIL")
     .map((result) => `${result.route}: ${result.issues.join("; ")}`)

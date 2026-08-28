@@ -18,9 +18,8 @@ Generatorul include numai rute locale 200, indexabile si self-canonical. `lastmo
 - duplicate_policy_pending_legal_consolidation: 1
 - meta_refresh: 2
 - missing_canonical: 4
-- noindex_meta: 60
-- noncanonical_file_variant: 2
-- redirect_source: 105
+- noindex_meta: 63
+- redirect_source: 104
 
 ## Lista excluderilor
 
@@ -33,7 +32,7 @@ Generatorul include numai rute locale 200, indexabile si self-canonical. `lastmo
 | /partials/global-header | partials/global-header.html | missing_canonical | - |
 | /templates/dr14-final-content | templates/dr14-final-content.html | missing_canonical | - |
 | /templates/dr18-final-content | templates/dr18-final-content.html | missing_canonical | - |
-| https://atelierdeconsultanta.ro/404 | 404.html | noindex_meta | - |
+| /404 | 404.html | noindex_meta | - |
 | https://atelierdeconsultanta.ro/admin | admin/index.html | noindex_meta | - |
 | https://atelierdeconsultanta.ro/afir | afir.html | noindex_meta | - |
 | https://atelierdeconsultanta.ro/autoconsum-public-fotovoltaice-institutii-publice | autoconsum-publici.html | noindex_meta | - |
@@ -56,6 +55,8 @@ Generatorul include numai rute locale 200, indexabile si self-canonical. `lastmo
 | https://atelierdeconsultanta.ro/cum-alegi-consultant-fonduri-europene | cum-alegi-consultant-fonduri-europene.html | noindex_meta | - |
 | https://atelierdeconsultanta.ro/digitalizare-imm-pnrr | digitalizare-imm-pnrr.html | noindex_meta | - |
 | https://atelierdeconsultanta.ro/dr12-afir | dr12-afir-tineri-fermieri.html | noindex_meta | - |
+| https://atelierdeconsultanta.ro/dr14 | dr14-afir-ferme-mici.html | noindex_meta | - |
+| https://atelierdeconsultanta.ro/dr14 | dr14-afir-ferme-mici/index.html | noindex_meta | - |
 | https://atelierdeconsultanta.ro/eligibilitate-fonduri-europene | eligibilitate-fonduri-europene.html | noindex_meta | - |
 | https://atelierdeconsultanta.ro/finantari-panouri-fotovoltaice | finantari-panouri-fotovoltaice.html | noindex_meta | - |
 | https://atelierdeconsultanta.ro/firma-consultanta-fonduri-europene | firma-consultanta-fonduri-europene.html | noindex_meta | - |
@@ -74,13 +75,14 @@ Generatorul include numai rute locale 200, indexabile si self-canonical. `lastmo
 | https://atelierdeconsultanta.ro/fonduri-pentru-ferme | fonduri-pentru-ferme.html | noindex_meta | - |
 | https://atelierdeconsultanta.ro/fonduri-pentru-utilaje-agricole | fonduri-pentru-utilaje-agricole.html | noindex_meta | - |
 | https://atelierdeconsultanta.ro/ghiduri | ghiduri.html | noindex_meta | - |
-| https://atelierdeconsultanta.ro/granturi-digitalizare-imm | granturi-digitalizare-imm.html | noindex_meta | - |
-| https://atelierdeconsultanta.ro/granturi-digitalizare-imm | granturi-digitalizare-imm/index.html | noindex_meta | - |
+| https://atelierdeconsultanta.ro/digitalizare-imm | granturi-digitalizare-imm.html | noindex_meta | - |
+| https://atelierdeconsultanta.ro/digitalizare-imm | granturi-digitalizare-imm/index.html | noindex_meta | - |
 | https://atelierdeconsultanta.ro/greseli-fonduri-europene | greseli-fonduri-europene.html | noindex_meta | - |
 | https://atelierdeconsultanta.ro/intrebari-frecvente | intrebari-frecvente.html | noindex_meta | - |
 | https://atelierdeconsultanta.ro/digitalizare-imm-pnrr | pnrr-digitalizare-imm.html | noindex_meta | - |
 | https://atelierdeconsultanta.ro/digitalizare-imm-pnrr | pnrr-digitalizare-imm/index.html | noindex_meta | - |
-| https://atelierdeconsultanta.ro/portofoliu | portofoliu/index.html | noindex_meta | - |
+| https://atelierdeconsultanta.ro/investitii-modernizarea-microintreprinderilor-apel-2 | por-adr-nord-est/index.html | noindex_meta | - |
+| https://atelierdeconsultanta.ro/studii-de-caz-fonduri-europene | portofoliu/index.html | noindex_meta | - |
 | https://atelierdeconsultanta.ro/start-up-nation-2026 | start-up-nation.html | noindex_meta | - |
 | https://atelierdeconsultanta.ro/start-up-nation-2026 | start-up-nation/index.html | noindex_meta | - |
 | https://atelierdeconsultanta.ro/start-up-nation-2026-cheltuieli-eligibile | start-up-nation-2026-cheltuieli-eligibile.html | noindex_meta | - |
@@ -91,10 +93,8 @@ Generatorul include numai rute locale 200, indexabile si self-canonical. `lastmo
 | https://atelierdeconsultanta.ro/start-up-nation-2026-conditii | startup-nation-2026-conditii.html | noindex_meta | - |
 | https://atelierdeconsultanta.ro/studii-de-caz-fonduri-europene | studii-de-caz.html | noindex_meta | - |
 | https://atelierdeconsultanta.ro/studii-de-caz-fonduri-europene | studii-de-caz/index.html | noindex_meta | - |
-| https://atelierdeconsultanta.ro/testimoniale | testimoniale.html | noindex_meta | - |
-| https://atelierdeconsultanta.ro/testimoniale | testimoniale/index.html | noindex_meta | - |
-| https://atelierdeconsultanta.ro/dr14 | dr14-afir-ferme-mici.html | noncanonical_file_variant | canonical route: /dr14 |
-| https://atelierdeconsultanta.ro/dr14 | dr14-afir-ferme-mici/index.html | noncanonical_file_variant | canonical route: /dr14 |
+| https://atelierdeconsultanta.ro/studii-de-caz-fonduri-europene | testimoniale.html | noindex_meta | - |
+| https://atelierdeconsultanta.ro/studii-de-caz-fonduri-europene | testimoniale/index.html | noindex_meta | - |
 | https://atelierdeconsultanta.ro/afir-autoconsum-agroalimentar | _redirects | redirect_source | HTTP 301 |
 | https://atelierdeconsultanta.ro/afir-autoconsum-agroalimentar | _redirects | redirect_source | HTTP 301 |
 | https://atelierdeconsultanta.ro/autoconsum-public-fotovoltaice-institutii-publice | _redirects | redirect_source | HTTP 301 |
@@ -178,7 +178,6 @@ Generatorul include numai rute locale 200, indexabile si self-canonical. `lastmo
 | https://atelierdeconsultanta.ro/digitalizare-imm-pnrr | _redirects | redirect_source | HTTP 301 |
 | https://atelierdeconsultanta.ro/digitalizare-imm-pnrr | _redirects | redirect_source | HTTP 301 |
 | https://atelierdeconsultanta.ro/pocidif-21 | _redirects | redirect_source | HTTP 301 |
-| https://atelierdeconsultanta.ro/por-adr-nord-est | por-adr-nord-est/index.html | redirect_source | - |
 | https://atelierdeconsultanta.ro/investitii-modernizarea-microintreprinderilor-apel-2 | _redirects | redirect_source | HTTP 301 |
 | https://atelierdeconsultanta.ro/investitii-modernizarea-microintreprinderilor-apel-2 | _redirects | redirect_source | HTTP 301 |
 | https://atelierdeconsultanta.ro/investitii-modernizarea-microintreprinderilor-apel-2 | _redirects | redirect_source | HTTP 301 |

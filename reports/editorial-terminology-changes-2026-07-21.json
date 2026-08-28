@@ -1,8 +1,7 @@
 {
-  "generatedAt": "2026-08-23T19:36:42.283Z",
+  "generatedAt": "2026-08-28T09:47:41.084Z",
   "targetRoutes": 10,
   "changedFiles": [
-    "fonduri-europene-digitalizare/index.html",
     "verificare-eligibilitate-fonduri-europene/index.html"
   ],
   "sourceMigrated": false,
@@ -1967,6 +1966,14 @@
       "after": "Ce finanțare și contribuție proprie are DR14 AFIR?",
       "reason": "Lexic controlat P0.14",
       "sourceFile": "dr14/index.html"
+    },
+    {
+      "route": "/",
+      "location": "positioning",
+      "before": "FABER – Atelier de Consultanță sprijină firme, fermieri, start-up-uri, IMM-uri și instituții publice în proiecte cu fonduri europene. Consultanța clarifică eligibilitatea, programul, cererea și documentele; proiectarea corelează soluția tehnică, bugetul și anexele. Verificăm solicitantul, investiția și sursele oficiale înainte de dosar, apoi putem sprijini pregătirea și implementarea, fără promisiunea aprobării finanțării.",
+      "after": "Verificare prudentă, documentată și interdisciplinară — consultanță și proiectare — înainte de dosar. FABER – Atelier de Consultanță sprijină firme, fermieri, start-up-uri, IMM-uri și instituții publice în proiecte cu fonduri europene. Consultanța clarifică eligibilitatea, programul, cererea și documentele; proiectarea corelează soluția tehnică, bugetul și anexele. Verificăm solicitantul, investiția și sursele oficiale înainte de dosar, apoi putem sprijini pregătirea și implementarea, fără promisiunea aprobării finanțării.",
+      "reason": "Poziționare centrală FABER",
+      "sourceFile": "index.html"
     }
   ]
 }

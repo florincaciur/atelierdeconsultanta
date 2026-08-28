@@ -1,13 +1,13 @@
 # Audit de consistență factuală a programelor
 
-Data auditului: 2026-08-23
+Data auditului: 2026-08-28
 
 ## Rezultat
 
 - Programe în registrul canonic: 25
 - Erori: 0
 - Avertismente: 0
-- Statusuri: apel_deschis=1, apel_inchis=7, calendar_estimativ=8, consultare_publica=2, ghid_aprobat_nedeschis=7
+- Statusuri: apel_deschis=1, apel_inchis=7, calendar_estimativ=8, consultare_publica=1, ghid_aprobat_nedeschis=8
 - Mod strict pentru freshness: inactiv
 
 Auditul este local și determinist. Nu interoghează URL-urile oficiale, nu deduce statusul din răspunsuri HTTP și nu rescrie date factuale. Registrul aprobat din `config/seo-programs.json#programs` rămâne singura sursă de adevăr.
@@ -24,7 +24,7 @@ Auditul este local și determinist. Nu interoghează URL-urile oficiale, nu dedu
 | Start-Up Nation | apel_inchis | 2026-08-23 | — | 2026-05-29 |
 | Femeia Antreprenor | apel_inchis | 2026-08-23 | — | — |
 | Digitalizare IMM | apel_inchis | 2026-08-23 | — | — |
-| Modernizarea microîntreprinderilor – Apel 2 | consultare_publica | 2026-08-23 | — | — |
+| Modernizarea microîntreprinderilor – Apel 2 | ghid_aprobat_nedeschis | 2026-08-28 | 2026-09-28 | 2026-10-28 |
 | Fondul pentru Modernizare – autoconsum | apel_inchis | 2026-08-23 | — | — |
 | Fondul pentru Modernizare – energie regenerabilă | apel_inchis | 2026-08-23 | — | — |
 | AFIR Autoconsum Agroalimentar | apel_inchis | 2026-08-23 | 2026-06-15 | 2026-08-14 |

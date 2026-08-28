@@ -1,6 +1,6 @@
 # Audit integral de integritate vizuală și accesibilitate
 
-Generat: 2026-08-18T13:23:41.946Z
+Generat: 2026-08-28T09:37:43.001Z
 
 - URL-uri canonice: **104**
 - Viewport-uri: **4** (320, 390, 768 și 1365 px)
