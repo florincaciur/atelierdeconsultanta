@@ -1,10 +1,13 @@
 import assert from "node:assert/strict";
 import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 import { createRequire } from "node:module";
 
 const require = createRequire(import.meta.url);
 const cheerio = require("cheerio");
 const scorer = require("../assets/micro-apel-2-scorer.js");
+const { fileForRoute } = require("../tools/structured-data-utils.js");
 
 assert.equal(scorer.scoreCaen("6210").points, 6, "CAEN 6210 must receive 6 points");
 assert.equal(scorer.scoreCaen("9999").rejection, true, "A code missing from Annex 5 must be eliminatory");
@@ -47,6 +50,8 @@ assert.equal(perfect.estimatedTotal, 100, "A maximum pre-assessment must total 1
 assert.equal(perfect.rejections.length, 0, "A fully compliant scenario must not trigger a rejection warning");
 
 const pageHtml = fs.readFileSync(new URL("../investitii-modernizarea-microintreprinderilor-apel-2/index.html", import.meta.url), "utf8");
+const repositoryRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+assert.match(fileForRoute(repositoryRoot, "/investitii-modernizarea-microintreprinderilor-apel-2").replace(/\\/gu, "/"), /investitii-modernizarea-microintreprinderilor-apel-2\/index\.html$/u, "The authored directory index must remain the canonical deploy source");
 const $ = cheerio.load(pageHtml);
 const title = $("head > title").first().text().trim();
 const directAnswer = $("[data-aeo-primary-answer], [data-answer-readiness-direct]").first().text().trim();

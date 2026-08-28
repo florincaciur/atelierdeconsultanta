@@ -24,6 +24,12 @@ const CANONICAL_ROOT_HTML_ROUTES = new Set([
   "calculator-soc"
 ]);
 
+// This route is authored in the directory index. The root .html file is a
+// legacy deploy alias and must never become the source of canonical content.
+const CANONICAL_DIRECTORY_SOURCE_ROUTES = new Set([
+  "investitii-modernizarea-microintreprinderilor-apel-2"
+]);
+
 function cleanText(value) {
   return String(value || "").replace(/\s+/gu, " ").trim();
 }
@@ -135,6 +141,7 @@ function fileForRoute(root, route) {
   const relative = decodeURIComponent(route.replace(/^\//u, ""));
   const directoryIndex = path.join(root, relative, "index.html");
   const direct = path.join(root, `${relative}.html`);
+  if (CANONICAL_DIRECTORY_SOURCE_ROUTES.has(relative) && fs.existsSync(directoryIndex)) return directoryIndex;
   if (CANONICAL_ROOT_HTML_ROUTES.has(relative) && fs.existsSync(direct)) return direct;
   if (fs.existsSync(directoryIndex)) return directoryIndex;
   if (fs.existsSync(direct)) return direct;
