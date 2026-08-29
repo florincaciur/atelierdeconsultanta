@@ -37,7 +37,7 @@ Bing recomandă sitemap-uri cu `lastmod` corect și IndexNow pentru descoperirea
 
 ## Remedieri aplicate în această versiune
 
-- Linkurile interne și externe au fost reinventariate automat: 16.566 legături locale, 79 URL-uri externe și 1.041 fragmente.
+- Linkurile interne și externe au fost reinventariate automat: 16.806 legături locale, 80 URL-uri externe și 1.041 fragmente.
 - Referința ANPC SAL care răspundea 404 a fost înlocuită cu pagina oficială actuală `https://anpc.ro/sal/`; formularea veche despre SOL a fost eliminată.
 - Sursele oficiale rămân vizibile, descriptive și corelate cu `citation`/`subjectOf`, autoritatea publică și data ultimei verificări în datele structurate.
 - Paginile păstrează răspunsul direct, titluri ierarhice, tabele/FAQ unde sunt utile, canonicale curate, legături contextuale și dată editorială verificată.
