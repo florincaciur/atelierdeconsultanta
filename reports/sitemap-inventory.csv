@@ -108,6 +108,7 @@ excluded,,https://atelierdeconsultanta.ro/fondul-de-modernizare,fondul-de-modern
 excluded,,https://atelierdeconsultanta.ro/pnrr,pnrr.html,,meta_refresh,
 excluded,,/google8bbb9999c523a3bd,google8bbb9999c523a3bd.html,,missing_canonical,
 excluded,,/partials/global-header,partials/global-header.html,,missing_canonical,
+excluded,,/partials/preferred-source,partials/preferred-source.html,,missing_canonical,
 excluded,,/templates/dr14-final-content,templates/dr14-final-content.html,,missing_canonical,
 excluded,,/templates/dr18-final-content,templates/dr18-final-content.html,,missing_canonical,
 excluded,,/404,404.html,,noindex_meta,

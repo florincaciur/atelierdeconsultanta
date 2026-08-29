@@ -4,3 +4,248 @@
 @media(max-width:600px){.program-hero{padding:44px 20px 68px}.program-hero h1{font-size:clamp(2.4rem,13vw,4rem)}.program-hero__visual{margin-top:0}.program-orbit{max-height:300px}.program-metrics{width:calc(100% - 24px)}.program-metrics div{padding:18px 14px}.program-section{width:calc(100% - 32px);padding:64px 0}.program-section--soft,.program-section--source{width:100%;padding-right:16px;padding-left:16px}.program-fit-grid{grid-template-columns:1fr}.program-final-cta{width:calc(100% - 32px);margin-bottom:48px}.program-final-cta .program-button{width:100%}}
 @media(prefers-reduced-motion:reduce){.orbit-path,.orbit-dot{animation:none}.program-card{opacity:1;transform:none;transition:none}.program-button{transition:none}}
 .program-section--fit{grid-template-columns:minmax(230px,.58fr) minmax(0,1.42fr);gap:clamp(28px,4vw,48px);width:min(1040px,calc(100% - 40px));padding:clamp(64px,7vw,88px) 0}.program-section--fit h2{font-size:clamp(1.95rem,3.2vw,3rem)}.program-section--fit .fit-card{padding:clamp(20px,2.5vw,26px)}.program-section--fit .fit-card h3{margin-bottom:18px;font-size:1.3rem}.program-section--fit .fit-card ul{gap:12px}@media(max-width:900px){.program-section--fit{grid-template-columns:1fr;gap:22px}}@media(max-width:600px){.program-section--fit{width:calc(100% - 32px);padding:56px 0}.program-section--fit .program-fit-grid{grid-template-columns:1fr}}
+
+/* Parcurs interactiv: traseu SVG aliniat dinamic cu centrele celor patru pași. */
+.program-section--journey {
+  grid-template-columns: minmax(330px, .82fr) minmax(0, 1.18fr);
+  gap: clamp(40px, 5vw, 64px);
+  align-items: center;
+  padding: clamp(68px, 8vw, 104px) 0;
+}
+
+.program-section--journey .section-heading {
+  max-width: 430px;
+}
+
+.program-section--journey .section-heading > p:last-child {
+  max-width: 38ch;
+  margin: 22px 0 0;
+  color: var(--ps-muted);
+  font-size: .96rem;
+}
+
+.program-journey {
+  --journey-progress: 0;
+  position: relative;
+  min-width: 0;
+  padding: 18px;
+  overflow: hidden;
+  border: 1px solid #dbe4ec;
+  border-radius: 26px;
+  background:
+    radial-gradient(circle at 94% 4%, rgba(245, 166, 35, .13), transparent 30%),
+    linear-gradient(145deg, #f7fafc 0%, #fff 72%);
+  box-shadow: 0 20px 48px rgba(11, 31, 58, .09);
+}
+
+.program-journey__rail {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.program-journey__track,
+.program-journey__progress {
+  fill: none;
+  vector-effect: non-scaling-stroke;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.program-journey__track {
+  stroke: #d6e0e9;
+  stroke-width: 2;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  transition: stroke-dashoffset .9s cubic-bezier(.2, .7, .2, 1);
+}
+
+.program-journey.is-visible .program-journey__track {
+  stroke-dashoffset: 0;
+}
+
+.program-journey__progress {
+  stroke: var(--ps-orange);
+  stroke-width: 3;
+  stroke-dasharray: 1;
+  stroke-dashoffset: calc(1 - var(--journey-progress));
+  filter: drop-shadow(0 0 5px rgba(184, 71, 22, .28));
+  transition: stroke-dashoffset .55s cubic-bezier(.2, .75, .2, 1);
+}
+
+.program-section--journey .program-steps {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+}
+
+.program-section--journey .program-steps li,
+.program-section--journey .program-steps li:not(:last-child) {
+  display: block;
+  grid-template-columns: none;
+  gap: 0;
+  align-items: initial;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.program-step {
+  display: grid;
+  grid-template-columns: 56px minmax(0, 1fr);
+  gap: 20px;
+  align-items: center;
+  width: 100%;
+  min-height: 88px;
+  padding: 12px 18px 12px 10px;
+  border: 1px solid transparent;
+  border-radius: 18px;
+  color: var(--ps-ink);
+  background: transparent;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: transform .24s ease, border-color .24s ease, background .24s ease, box-shadow .24s ease;
+}
+
+.program-step:hover,
+.program-step:focus-visible,
+.program-step[aria-current="step"] {
+  transform: translateY(-1px);
+  border-color: #dbe4ec;
+  background: rgba(255, 255, 255, .94);
+  box-shadow: 0 12px 28px rgba(11, 31, 58, .08);
+}
+
+.program-step:focus-visible {
+  outline: 3px solid rgba(184, 71, 22, .3);
+  outline-offset: 2px;
+}
+
+.program-section--journey .program-step__number {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  margin: 0;
+  border: 4px solid #f8fafc;
+  border-radius: 50%;
+  color: #fff;
+  background: var(--ps-navy);
+  box-shadow: 0 0 0 1px #cfdbe5;
+  font-size: .92rem;
+  font-weight: 850;
+  transition: transform .24s ease, background .24s ease, box-shadow .24s ease;
+}
+
+.program-step:hover .program-step__number,
+.program-step:focus-visible .program-step__number,
+.program-step[aria-current="step"] .program-step__number {
+  transform: scale(1.08);
+  background: var(--ps-orange);
+  box-shadow: 0 0 0 1px rgba(184, 71, 22, .35), 0 0 0 8px rgba(184, 71, 22, .1);
+}
+
+.program-section--journey .program-step__copy {
+  display: block;
+  width: auto;
+  height: auto;
+  place-items: initial;
+  margin: 0;
+  border-radius: 0;
+  color: #273d58;
+  background: transparent;
+  font-size: clamp(.94rem, 1.35vw, 1.03rem);
+  font-weight: 610;
+  line-height: 1.55;
+}
+
+.program-journey__hint {
+  position: relative;
+  z-index: 1;
+  margin: 12px 12px 2px 86px;
+  color: #69788a;
+  font-size: .72rem;
+  line-height: 1.45;
+}
+
+@media (max-width: 900px) {
+  .program-section--journey {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    align-items: start;
+  }
+
+  .program-section--journey .section-heading,
+  .program-section--journey .section-heading > p:last-child {
+    max-width: 680px;
+  }
+}
+
+@media (max-width: 600px) {
+  .program-section--journey {
+    width: calc(100% - 32px);
+    padding: 58px 0;
+  }
+
+  .program-section--journey h2 {
+    font-size: clamp(2rem, 11vw, 3rem);
+  }
+
+  .program-journey {
+    padding: 12px;
+    border-radius: 20px;
+  }
+
+  .program-step {
+    grid-template-columns: 48px minmax(0, 1fr);
+    gap: 14px;
+    min-height: 84px;
+    padding: 10px 8px 10px 4px;
+    border-radius: 15px;
+  }
+
+  .program-step:hover,
+  .program-step:focus-visible,
+  .program-step[aria-current="step"] {
+    transform: none;
+  }
+
+  .program-section--journey .program-step__number {
+    width: 42px;
+    height: 42px;
+    border-width: 3px;
+  }
+
+  .program-section--journey .program-step__copy {
+    font-size: .9rem;
+    line-height: 1.48;
+  }
+
+  .program-journey__hint {
+    margin: 10px 8px 2px 66px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .program-journey__track,
+  .program-journey__progress,
+  .program-step,
+  .program-step__number {
+    transition: none;
+  }
+
+  .program-journey__track {
+    stroke-dashoffset: 0;
+  }
+}

@@ -127,6 +127,10 @@ for (const program of publicPrograms) {
   if ($("body").hasClass("program-showcase-page")) {
     assert.equal(factual.closest(".fit-card").length, 0, `${program.slug}: rezumatul factual nu poate fi încadrat într-un card de filtrare`);
     assert.equal(factual.prev(".program-section--answer").length, 1, `${program.slug}: rezumatul factual trebuie să urmeze răspunsul editorial`);
+    const journey = $("[data-program-journey]");
+    assert.equal(journey.length, 1, `${program.slug}: lipsește parcursul interactiv`);
+    assert.equal(journey.find("[data-journey-step]").length, 4, `${program.slug}: parcursul trebuie să conțină patru pași accesibili`);
+    assert.equal(journey.find("svg[data-journey-svg] path").length, 2, `${program.slug}: traseul SVG trebuie să conțină linia de bază și progresul`);
   }
   assertFacts(program, factsFromElement($, factual.get(0)), "componenta factuală");
   assert.equal(factual.find("a[data-analytics-event='source_document_click']").attr("href"), program.sourceUrl, `${program.slug}: link oficial diferit`);

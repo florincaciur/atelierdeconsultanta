@@ -188,7 +188,11 @@ try {
         const errors = [];
         const runtimeErrors = [];
         const onPageError = (error) => runtimeErrors.push(error.message);
-        const onConsole = (message) => { if (message.type() === "error" && !/favicon\.ico/iu.test(message.text())) runtimeErrors.push(message.text()); };
+        const onConsole = (message) => {
+          const text = message.text();
+          const googlePreferredSourceReportOnly = /Framing 'https:\/\/news\.google\.com\/'.*report-only Content Security Policy directive: "frame-ancestors 'self'"/iu.test(text);
+          if (message.type() === "error" && !/favicon\.ico/iu.test(text) && !googlePreferredSourceReportOnly) runtimeErrors.push(text);
+        };
         page.on("pageerror", onPageError);
         page.on("console", onConsole);
         const response = await page.goto(`http://127.0.0.1:${port}${route}`, { waitUntil: "domcontentloaded", timeout: 25000 });

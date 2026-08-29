@@ -577,7 +577,7 @@ function requiredSurfaceRows() {
     ["Privacy", "/politica-de-confidentialitate", "rută proprie"],
     ["Cookies", "/politica-de-confidentialitate#cookies", "secțiune; nu există rută /cookies"],
     ["Terms", "/termeni-si-conditii", "rută proprie"],
-    ["ANPC", "https://anpc.ro și https://anpc.ro/ce-este-sal", "linkuri externe în homepage/GDPR/Terms; nu există rută locală /anpc"],
+    ["ANPC", "https://anpc.ro și https://anpc.ro/sal/", "linkuri externe în homepage/GDPR/Terms; nu există rută locală /anpc"],
     ["Articole/ghiduri", "/blog; /ghiduri și rutele article/guide din inventar", "HTML canonical pre-randat + blog.json"],
     ["Landing pages locale", "/fonduri-europene-nord-est; /fonduri-europene-bucuresti", "Iași/Suceava/Bacău sunt aliasuri 301 către Nord-Est"],
     ["404", "fallback pentru orice rută inexistentă", "ruta explicită /404 și orice URL inexistent răspund 404/noindex"],

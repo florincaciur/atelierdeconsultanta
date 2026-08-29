@@ -17,7 +17,7 @@ Generatorul include numai rute locale 200, indexabile si self-canonical. `lastmo
 
 - duplicate_policy_pending_legal_consolidation: 1
 - meta_refresh: 2
-- missing_canonical: 4
+- missing_canonical: 5
 - noindex_meta: 63
 - redirect_source: 104
 
@@ -30,6 +30,7 @@ Generatorul include numai rute locale 200, indexabile si self-canonical. `lastmo
 | https://atelierdeconsultanta.ro/pnrr | pnrr.html | meta_refresh | - |
 | /google8bbb9999c523a3bd | google8bbb9999c523a3bd.html | missing_canonical | - |
 | /partials/global-header | partials/global-header.html | missing_canonical | - |
+| /partials/preferred-source | partials/preferred-source.html | missing_canonical | - |
 | /templates/dr14-final-content | templates/dr14-final-content.html | missing_canonical | - |
 | /templates/dr18-final-content | templates/dr18-final-content.html | missing_canonical | - |
 | /404 | 404.html | noindex_meta | - |
