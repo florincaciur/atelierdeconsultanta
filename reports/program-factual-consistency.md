@@ -1,6 +1,6 @@
 # Audit de consistență factuală a programelor
 
-Data auditului: 2026-08-28
+Data auditului: 2026-08-29
 
 ## Rezultat
 
@@ -16,31 +16,31 @@ Auditul este local și determinist. Nu interoghează URL-urile oficiale, nu dedu
 
 | Program | Status | Verificat | Început | Sfârșit |
 |---|---|---:|---:|---:|
-| Programul Regional Nord-Est | calendar_estimativ | 2026-08-23 | — | — |
-| Fonduri regionale | calendar_estimativ | 2026-08-23 | — | — |
-| DR12 AFIR | consultare_publica | 2026-08-28 | — | — |
-| DR14 AFIR | ghid_aprobat_nedeschis | 2026-08-28 | 2026-09-01 | 2026-10-31 |
-| DR18 AFIR | ghid_aprobat_nedeschis | 2026-08-28 | 2026-09-01 | 2026-10-31 |
-| Start-Up Nation | apel_inchis | 2026-08-23 | — | 2026-05-29 |
-| Femeia Antreprenor | apel_inchis | 2026-08-23 | — | — |
-| Digitalizare IMM | apel_inchis | 2026-08-23 | — | — |
-| Modernizarea microîntreprinderilor – Apel 2 | ghid_aprobat_nedeschis | 2026-08-28 | 2026-09-28 | 2026-10-28 |
-| Fondul pentru Modernizare – autoconsum | apel_inchis | 2026-08-23 | — | — |
-| Fondul pentru Modernizare – energie regenerabilă | apel_inchis | 2026-08-23 | — | — |
-| AFIR Autoconsum Agroalimentar | apel_inchis | 2026-08-23 | 2026-06-15 | 2026-08-14 |
-| Autoconsum instituții publice | apel_inchis | 2026-08-23 | — | — |
-| PRO INFRA | ghid_aprobat_nedeschis | 2026-08-23 | — | — |
-| Apeluri GAL | calendar_estimativ | 2026-08-23 | — | — |
-| GAL-AFIR / LEADER | calendar_estimativ | 2026-08-23 | — | — |
-| e-MOVE RO | ghid_aprobat_nedeschis | 2026-08-23 | — | — |
-| PoCIDIF 2.1 | apel_deschis | 2026-08-23 | 2026-06-30 | 2026-09-30 |
+| Programul Regional Nord-Est | calendar_estimativ | 2026-08-29 | — | — |
+| Fonduri regionale | calendar_estimativ | 2026-08-29 | — | — |
+| DR12 AFIR | consultare_publica | 2026-08-29 | — | — |
+| DR14 AFIR | ghid_aprobat_nedeschis | 2026-08-29 | 2026-09-01 | 2026-10-31 |
+| DR18 AFIR | ghid_aprobat_nedeschis | 2026-08-29 | 2026-09-01 | 2026-10-31 |
+| Start-Up Nation | apel_inchis | 2026-08-29 | — | 2026-05-29 |
+| Femeia Antreprenor | apel_inchis | 2026-08-29 | — | — |
+| Digitalizare IMM | apel_inchis | 2026-08-29 | — | — |
+| Modernizarea microîntreprinderilor – Apel 2 | ghid_aprobat_nedeschis | 2026-08-29 | 2026-09-28 | 2026-10-28 |
+| Fondul pentru Modernizare – autoconsum | apel_inchis | 2026-08-29 | — | — |
+| Fondul pentru Modernizare – energie regenerabilă | apel_inchis | 2026-08-29 | — | — |
+| AFIR Autoconsum Agroalimentar | apel_inchis | 2026-08-29 | 2026-06-15 | 2026-08-14 |
+| Autoconsum instituții publice | apel_inchis | 2026-08-29 | — | — |
+| PRO INFRA | ghid_aprobat_nedeschis | 2026-08-29 | — | — |
+| Apeluri GAL | calendar_estimativ | 2026-08-29 | — | — |
+| GAL-AFIR / LEADER | calendar_estimativ | 2026-08-29 | — | — |
+| e-MOVE RO | ghid_aprobat_nedeschis | 2026-08-29 | — | — |
+| PoCIDIF 2.1 | apel_deschis | 2026-08-29 | 2026-06-30 | 2026-09-30 |
 | PNRR | calendar_estimativ | 2026-08-23 | — | — |
-| Diaspora Investește Acasă | calendar_estimativ | 2026-08-28 | — | — |
-| e-DRIVE | ghid_aprobat_nedeschis | 2026-08-28 | — | — |
-| e-Mobility RO | ghid_aprobat_nedeschis | 2026-08-23 | — | — |
-| PC1 Stocare stand-alone | ghid_aprobat_nedeschis | 2026-08-28 | — | — |
-| Programul Tranziție Justă | calendar_estimativ | 2026-08-23 | — | — |
-| Fondul pentru Modernizare | calendar_estimativ | 2026-08-23 | — | — |
+| Diaspora Investește Acasă | calendar_estimativ | 2026-08-29 | — | — |
+| e-DRIVE | ghid_aprobat_nedeschis | 2026-08-29 | — | — |
+| e-Mobility RO | ghid_aprobat_nedeschis | 2026-08-29 | — | — |
+| PC1 Stocare stand-alone | ghid_aprobat_nedeschis | 2026-08-29 | — | — |
+| Programul Tranziție Justă | calendar_estimativ | 2026-08-29 | — | — |
+| Fondul pentru Modernizare | calendar_estimativ | 2026-08-29 | — | — |
 
 ## Verificări efectuate
 

@@ -124,6 +124,10 @@ for (const program of publicPrograms) {
   assert.equal($("body").attr("data-publication-state"), "public", `${program.slug}: publicationState greșit pe pagină`);
   const factual = $(".program-factual-status[data-program-id]").first();
   assert(factual.length, `${program.slug}: lipsește componenta factuală vizibilă`);
+  if ($("body").hasClass("program-showcase-page")) {
+    assert.equal(factual.closest(".fit-card").length, 0, `${program.slug}: rezumatul factual nu poate fi încadrat într-un card de filtrare`);
+    assert.equal(factual.prev(".program-section--answer").length, 1, `${program.slug}: rezumatul factual trebuie să urmeze răspunsul editorial`);
+  }
   assertFacts(program, factsFromElement($, factual.get(0)), "componenta factuală");
   assert.equal(factual.find("a[data-analytics-event='source_document_click']").attr("href"), program.sourceUrl, `${program.slug}: link oficial diferit`);
   assert.equal($("[data-aeo-program-summary] [data-answer-field='verifiedAt'] time").first().attr("datetime"), program.verifiedAt, `${program.slug}: data vizibilă diferă`);

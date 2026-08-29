@@ -192,7 +192,7 @@
       },
       "interpretation": "Localitatea, codul CAEN și dreptul asupra spațiului pot exclude un proiect înaintea analizei bugetului. Interpretarea de lucru FABER nu adaugă o regulă suplimentară documentului oficial.",
       "programId": "modernizare-microintreprinderi-ne-2",
-      "lastReviewed": "2026-08-28",
+      "lastReviewed": "2026-08-29",
       "sourceOfTruth": "config/seo-programs.json#programs",
       "publicationState": "public"
     },
@@ -243,7 +243,7 @@
       },
       "interpretation": "O putere instalată mai mare nu înseamnă automat un proiect mai bun: consumul istoric, extinderile justificate și punctele de consum trebuie să susțină dimensionarea. Această este interpretarea tehnică FABER, nu o normă care modifică Ghidul V7.",
       "programId": "afir-energie-autoconsum",
-      "lastReviewed": "2026-08-23",
+      "lastReviewed": "2026-08-29",
       "sourceOfTruth": "config/seo-programs.json#programs",
       "publicationState": "public"
     },
@@ -293,7 +293,7 @@
       },
       "interpretation": "Un proiect centrat pe achiziții IT, fără activități CDI și fără un rezultat nou introdus pe piață, nu răspunde obiectivului apelului. Această este interpretarea FABER a efectului practic al ghidului, nu o normă separată.",
       "programId": "pocidif-21",
-      "lastReviewed": "2026-08-23",
+      "lastReviewed": "2026-08-29",
       "sourceOfTruth": "config/seo-programs.json#programs",
       "publicationState": "public"
     },
@@ -301,7 +301,7 @@
       "route": "/femeia-antreprenor-2026",
       "file": "femeia-antreprenor-2026.html",
       "sectionTitle": "Ce trebuie pregătit înainte de depunere",
-      "directAnswer": "Femeia Antreprenor 2024: apelul este închis, iar platforma oficială publică ordinea finală la evaluare. Apel 2024 închis – este publicată ordinea finală la evaluare. Informația a fost verificată la 2026-08-23 în Femeia Antreprenor 2024 – ordinea finală la evaluare, publicat de Ministerul Economiei – platforma oficială MINIMIS; înainte de pregătirea dosarului, consultă sursa oficială pentru eligibilitate, documente și condițiile aplicabile.",
+      "directAnswer": "Femeia Antreprenor 2024: apelul este închis, iar platforma oficială publică ordinea finală la evaluare. Apel 2024 închis – este publicată ordinea finală la evaluare. Informația a fost verificată la 2026-08-29 în Femeia Antreprenor 2024 – ordinea finală la evaluare, publicat de Ministerul Economiei – platforma oficială MINIMIS; înainte de pregătirea dosarului, consultă sursa oficială pentru eligibilitate, documente și condițiile aplicabile.",
       "facts": [
         {
           "term": "Cine este eligibil?",
@@ -343,7 +343,7 @@
         "url": "https://minimis.imm.gov.ro/fa2024/ordine_evaluare"
       },
       "programId": "femeia-antreprenor",
-      "lastReviewed": "2026-08-23",
+      "lastReviewed": "2026-08-29",
       "sourceOfTruth": "config/seo-programs.json#programs",
       "publicationState": "public"
     },
@@ -393,7 +393,7 @@
       },
       "interpretation": "Un amplasament poate fi neimplementabil chiar dacă stațiile apar ca tip de investiție: dreptul asupra terenului, accesul și soluția de racordare trebuie să fie compatibile. Această este interpretarea practică FABER, nu o regulă oficială suplimentară.",
       "programId": "e-move-ro",
-      "lastReviewed": "2026-08-23",
+      "lastReviewed": "2026-08-29",
       "sourceOfTruth": "config/seo-programs.json#programs",
       "publicationState": "public"
     }

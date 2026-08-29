@@ -11,7 +11,7 @@ const { sitemapUrls } = require("./sitemap-utils");
 
 const ROOT = path.resolve(__dirname, "..");
 const CHECK_ONLY = process.argv.includes("--check");
-const STYLE_HREF = "/assets/program-visuals.css?v=20260828-1";
+const STYLE_HREF = "/assets/program-visuals.css?v=20260829-1";
 const START = "PROGRAM_VISUAL_START";
 const END = "PROGRAM_VISUAL_END";
 

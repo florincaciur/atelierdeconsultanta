@@ -452,6 +452,17 @@ function syncProgramHtml(source, program) {
   const factualMode = templateMode ? "template-header" : "default";
   const block = renderProgramFactualStatus(program, { mode: factualMode }).replace(/\r?\n/g, eol);
   const marked = /<!-- PROGRAM_FACTUAL_STATUS_START -->[\s\S]*?<!-- PROGRAM_FACTUAL_STATUS_END -->/;
+  const showcaseMode = /<body\b[^>]*class=["'][^"']*\bprogram-showcase-page\b/i.test(output);
+  if (showcaseMode) {
+    // Paginile editoriale 2026 conțin articole în cardurile de filtrare. Inserarea
+    // generică în primul <article> muta rezumatul factual în primul card și îl
+    // îngusta la jumătate de coloană. Îl păstrăm ca secțiune autonomă, imediat
+    // după răspunsul editorial, indiferent de poziția unei versiuni deja marcate.
+    output = output.replace(marked, "");
+    const answerSection = /(<section\b[^>]*\bprogram-section--answer\b[^>]*>[\s\S]*?<\/section>)/i;
+    if (answerSection.test(output)) return output.replace(answerSection, `$1${eol}${block}`);
+    if (/<main\b[^>]*>/i.test(output)) return output.replace(/<main\b[^>]*>/i, (tag) => `${tag}${eol}${block}`);
+  }
   if (marked.test(output)) return output.replace(marked, block);
   if (/<article\b[^>]*>/i.test(output)) return output.replace(/<article\b[^>]*>/i, (tag) => `${tag}${eol}${block}`);
   if (/<main\b[^>]*>/i.test(output)) return output.replace(/<main\b[^>]*>/i, (tag) => `${tag}${eol}${block}`);

@@ -41,6 +41,100 @@
   .program-visual__svg--mobile { display: block !important; width: min(100%, 320px); margin: 0 auto; }
 }
 
+/* Rezumat factual comun: compact, scanabil și lizibil pe toate familiile de pagini. */
+body[data-program-id] main .program-factual-status:not(.program-factual-status--template-header) {
+  display: block;
+  width: 100%;
+  margin: 0 0 clamp(1.5rem, 4vw, 2.5rem);
+  overflow: hidden;
+  color: #17283f;
+  background: #fff;
+  border: 1px solid #d9e2ea;
+  border-radius: 20px;
+  box-shadow: 0 16px 38px rgba(11, 31, 58, .08);
+}
+
+body.program-showcase-page main > .program-factual-status:not(.program-factual-status--template-header) {
+  width: min(1040px, calc(100% - 40px));
+  margin: clamp(2.25rem, 5vw, 4rem) auto 0;
+}
+
+body[data-program-id] main .program-factual-status:not(.program-factual-status--template-header) > p:first-of-type {
+  margin: 0;
+  padding: clamp(1rem, 2.5vw, 1.35rem) clamp(1rem, 3vw, 1.5rem);
+  color: #102846;
+  background: linear-gradient(100deg, #f4f8fb 0%, #fffaf2 100%);
+  border-left: 5px solid #b84716;
+  font-size: clamp(.96rem, 1.6vw, 1.06rem);
+  line-height: 1.6;
+}
+
+body[data-program-id] main .program-factual-status[data-program-status="apel_deschis"]:not(.program-factual-status--template-header) > p:first-of-type {
+  border-left-color: #1f6d50;
+  background: linear-gradient(100deg, #eef8f3 0%, #fffaf2 100%);
+}
+
+body[data-program-id] main .program-factual-status__facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr));
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+}
+
+body[data-program-id] main .program-factual-status__facts > div {
+  min-width: 0;
+  padding: 1rem clamp(.9rem, 2vw, 1.25rem);
+  border-top: 1px solid #e4eaf0;
+  border-right: 1px solid #e4eaf0;
+}
+
+body[data-program-id] main .program-factual-status__facts dt {
+  margin: 0 0 .4rem;
+  color: #59697b;
+  font-size: .7rem;
+  font-weight: 800;
+  letter-spacing: .075em;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
+body[data-program-id] main .program-factual-status__facts dd {
+  margin: 0;
+  color: #17283f;
+  font-size: .92rem;
+  font-weight: 650;
+  line-height: 1.5;
+}
+
+body[data-program-id] main .program-factual-status__source {
+  margin: 0;
+  padding: .9rem clamp(1rem, 3vw, 1.5rem);
+  color: #52617a;
+  background: #f8fafc;
+  border-top: 1px solid #dfe6ed;
+  font-size: .8rem;
+  line-height: 1.55;
+}
+
+body[data-program-id] main .program-factual-status__source a {
+  color: #84300f;
+  font-weight: 750;
+  text-underline-offset: .16em;
+}
+
+@media (max-width: 600px) {
+  body.program-showcase-page main > .program-factual-status:not(.program-factual-status--template-header) {
+    width: calc(100% - 32px);
+    margin-top: 2rem;
+    border-radius: 16px;
+  }
+
+  body[data-program-id] main .program-factual-status__facts { grid-template-columns: 1fr; }
+  body[data-program-id] main .program-factual-status__facts > div { border-right: 0; }
+}
+
 /* Integritate comună pentru toate rutele din sitemap-programs.xml. */
 body[data-program-id] main,
 body[data-program-id] main :where(section, article, aside, figure, form, fieldset, div) {
