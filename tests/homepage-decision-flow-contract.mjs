@@ -30,6 +30,7 @@ assert.equal($("link[data-home-contact-style]").length, 1);
 assert.equal($("main [data-priority-carousel]").length, 1, "trebuie păstrat un singur carusel principal");
 assert.equal($("main [data-card-carousel], main [data-program-directory]").length, 0, "componentele repetitive trebuie eliminate");
 assert.equal($("[data-homepage-method-frame]").length, 5);
+assert.equal($("[data-homepage-method-indicator]").length, 1, "etapa activă trebuie marcată de o singură placă mobilă");
 assert.equal($("[data-homepage-explorer-frame]").length, 4);
 assert.equal($("div[data-priority-slide][role='group']").length, homepagePrograms.length, "toate slide-urile caruselului trebuie să folosească un element compatibil cu rolul group");
 assert.equal($("div[data-homepage-method-frame][role='tabpanel']").length, 5, "panourile metodei trebuie să folosească un element compatibil cu rolul tabpanel");
@@ -57,6 +58,8 @@ assert(!/handleNewsletterSubmit|moveCardCarousel|fetch\('\/blog\.json'\)|modalOv
 assert(css.includes("min-height: 44px") && css.includes(":focus-visible"), "lipsesc targeturile/focusul accesibil");
 assert(css.includes("@media (max-width: 30rem)") && css.includes("prefers-reduced-motion"), "lipsesc reflow-ul/reduced motion");
 assert(js.includes("pointerdown") && js.includes("pointerup") && js.includes("ArrowRight"));
+assert(js.includes('pointerenter') && js.includes('event.pointerType !== "mouse"'), "cursorul trebuie să poată selecta etapa indicată");
+assert(js.includes('indicator.dataset.activeIndex = String(activeIndex)'), "placa mobilă trebuie sincronizată cu indexul activ");
 assert(js.includes('toggleAttribute("inert"'));
 
 console.log(`Homepage decision flow PASS: ${$("main a").length} linkuri, un formular, un carusel, cinci secțiuni.`);

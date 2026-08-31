@@ -16,4 +16,4 @@ http.createServer((req, res) => {
   if (!file) { res.writeHead(404).end("Not found"); return; }
   res.writeHead(200, { "Content-Type": mime[path.extname(file)] || "application/octet-stream", "Cache-Control": "no-store" });
   fs.createReadStream(file).pipe(res);
-}).listen(4173, "127.0.0.1", () => console.log(`FABER preview: http://127.0.0.1:4173 (${root})`));
+}).listen(Number(process.env.PORT || 4173), "127.0.0.1", () => console.log(`FABER preview: http://127.0.0.1:${process.env.PORT || 4173} (${root})`));

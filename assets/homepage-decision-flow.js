@@ -8,6 +8,8 @@
     const frames = Array.from(root.querySelectorAll(options.frameSelector));
     const nodes = Array.from(root.querySelectorAll(options.nodeSelector));
     const marker = root.querySelector(options.markerSelector);
+    const indicator = options.indicatorSelector ? root.querySelector(options.indicatorSelector) : null;
+    const tablist = tabs[0]?.parentElement || null;
     const viewport = root.querySelector(options.viewportSelector);
     const status = root.querySelector(options.statusSelector);
     const previous = root.querySelector(options.previousSelector);
@@ -17,8 +19,17 @@
 
     let activeIndex = 0;
     let pointerStart = null;
+    let pointerTimer = null;
 
     const labelAt = (index) => options.labels[index] || tabs[index].textContent.trim();
+
+    function positionIndicator() {
+      if (!indicator) return;
+      const activeTab = tabs[activeIndex];
+      indicator.style.width = `${activeTab.offsetWidth}px`;
+      indicator.style.transform = `translate3d(${activeTab.offsetLeft}px, 0, 0)`;
+      indicator.dataset.activeIndex = String(activeIndex);
+    }
 
     function reportInteraction(direction) {
       if (!window.FaberAnalytics || typeof window.FaberAnalytics.track !== "function") return;
@@ -45,6 +56,8 @@
       tabs.forEach((tab, index) => {
         const active = index === activeIndex;
         tab.setAttribute("aria-selected", active ? "true" : "false");
+        tab.toggleAttribute("aria-current", active);
+        if (active) tab.setAttribute("aria-current", "step");
         tab.tabIndex = active ? 0 : -1;
       });
 
@@ -54,6 +67,12 @@
         const point = options.markerPoints[activeIndex];
         marker.style.transform = `translate(${point.x}px, ${point.y}px)`;
       }
+
+      root.dataset.activeIndex = String(activeIndex);
+      positionIndicator();
+      root.querySelectorAll(".im-method-sculpture .im-slab").forEach((slab, index) => {
+        slab.classList.toggle("is-active", index === activeIndex);
+      });
 
       if (status) {
         status.setAttribute("aria-live", config.announce ? "polite" : "off");
@@ -73,6 +92,12 @@
 
     tabs.forEach((tab, index) => {
       tab.addEventListener("click", () => update(index, { interaction: "tab" }));
+      tab.addEventListener("pointerenter", (event) => {
+        if (event.pointerType !== "mouse" || index === activeIndex) return;
+        window.clearTimeout(pointerTimer);
+        pointerTimer = window.setTimeout(() => update(index), 160);
+      });
+      tab.addEventListener("pointerleave", () => window.clearTimeout(pointerTimer));
       tab.addEventListener("keydown", (event) => {
         if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
         event.preventDefault();
@@ -116,6 +141,10 @@
       pointerStart = null;
     });
 
+    if (indicator && tablist && "ResizeObserver" in window) {
+      new window.ResizeObserver(() => window.requestAnimationFrame(positionIndicator)).observe(tablist);
+    }
+
     root.classList.add("is-enhanced");
     update(0, { announce: false });
   }
@@ -126,6 +155,7 @@
       frameSelector: "[data-homepage-method-frame]",
       nodeSelector: "[data-homepage-method-node]",
       markerSelector: "[data-homepage-method-marker]",
+      indicatorSelector: "[data-homepage-method-indicator]",
       viewportSelector: "[data-homepage-method-viewport]",
       statusSelector: "[data-homepage-method-status]",
       previousSelector: "[data-homepage-method-previous]",

@@ -14,8 +14,8 @@ const CHECK_ONLY = process.argv.includes("--check");
 const HERO_END = "<!-- HOMEPAGE_DECISION_HERO_END -->";
 const START = "<!-- P1_21_HOMEPAGE_FLOW_START -->";
 const END = "<!-- P1_21_HOMEPAGE_FLOW_END -->";
-const STYLE = '<link rel="stylesheet" href="/assets/homepage-decision-flow.css?v=20260722-2" data-homepage-decision-flow-style="p1_22">';
-const SCRIPT = '<script src="/assets/homepage-decision-flow.js?v=20260831-1" defer data-homepage-decision-flow-script="p1_22"></script>';
+const STYLE = '<link rel="stylesheet" href="/assets/homepage-decision-flow.css?v=20260831-4" data-homepage-decision-flow-style="p1_22">';
+const SCRIPT = '<script src="/assets/homepage-decision-flow.js?v=20260831-4" defer="" data-homepage-decision-flow-script="p1_22"></script>';
 const FORM_ASSETS = '<link rel="stylesheet" href="/assets/contact-triage.css?v=20260831-3" data-home-contact-style>\n  <script src="/assets/contact-triage.js?v=20260831-3" defer data-home-contact-script></script>';
 
 function esc(value) {
@@ -32,13 +32,13 @@ function renderMethod() {
 }
 
 function renderMethodExperience() {
-  const tabs = CONFIG.methodSteps.map((step, index) => `<button type="button" role="tab" id="homepage-method-tab-${index + 1}" aria-controls="homepage-method-frame-${index + 1}" aria-selected="${index === 0 ? "true" : "false"}"${index === 0 ? "" : ' tabindex="-1"'} data-homepage-method-tab data-method-index="${index}"><span>${esc(step.number)}</span><strong>${esc(step.title)}</strong></button>`).join("\n");
-  const frames = CONFIG.methodSteps.map((step, index) => `<div class="homepage-method-frame${index === 0 ? " is-active" : ""}" id="homepage-method-frame-${index + 1}" role="tabpanel" aria-labelledby="homepage-method-tab-${index + 1}" data-homepage-method-frame data-method-index="${index}">
+  const tabs = CONFIG.methodSteps.map((step, index) => `<button type="button" role="tab" id="homepage-method-tab-${index + 1}" aria-controls="homepage-method-frame-${index + 1}" aria-selected="${index === 0 ? "true" : "false"}"${index === 0 ? "" : ' tabindex="-1"'} data-homepage-method-tab="" data-method-index="${index}"><span>${esc(step.number)}</span><strong>${esc(step.title)}</strong></button>`).join("\n");
+  const frames = CONFIG.methodSteps.map((step, index) => `<div class="homepage-method-frame${index === 0 ? " is-active" : ""}" id="homepage-method-frame-${index + 1}" role="tabpanel" aria-labelledby="homepage-method-tab-${index + 1}" data-homepage-method-frame="" data-method-index="${index}">
   <span class="homepage-method-frame__number">${esc(step.number)}</span>
   <div><h3>${esc(step.title)}</h3><p>${esc(step.text)}</p></div>
 </div>`).join("\n");
-  const nodes = CONFIG.methodSteps.map((step, index) => `<g class="homepage-method-node${index === 0 ? " is-active" : ""}" data-homepage-method-node data-method-index="${index}" transform="translate(${50 + index * 135} 70)"><circle r="18"></circle><text text-anchor="middle" dy="5">${index + 1}</text><title>${esc(step.title)}</title></g>`).join("\n");
-  return `<section id="homepage-method" class="homepage-flow-section homepage-method" aria-labelledby="homepage-method-title" data-homepage-method>
+  const nodes = CONFIG.methodSteps.map((step, index) => `<g class="homepage-method-node${index === 0 ? " is-active" : ""}" data-homepage-method-node="" data-method-index="${index}" transform="translate(${50 + index * 135} 70)"><circle r="18"></circle><text text-anchor="middle" dy="5">${index + 1}</text><title>${esc(step.title)}</title></g>`).join("\n");
+  return `<section id="homepage-method" class="homepage-flow-section homepage-method" aria-labelledby="homepage-method-title" data-homepage-method="">
   <div class="homepage-flow-inner homepage-method-layout">
     ${heading("Metoda FABER", "homepage-method-title", "Cum decidem dacă merită continuat", "Cinci verificări, într-o singură secvență. Alege etapa sau glisează pentru a vedea următorul filtru de decizie.")}
     <div class="homepage-method-experience">
@@ -46,15 +46,15 @@ function renderMethodExperience() {
       <svg class="homepage-method-svg" viewBox="0 0 640 140" aria-hidden="true" focusable="false">
         <path class="homepage-method-route" d="M50 70 C105 24 130 24 185 70 S265 116 320 70 S400 24 455 70 S535 116 590 70"></path>
         ${nodes}
-        <g class="homepage-method-marker" data-homepage-method-marker><circle r="10"></circle><circle class="homepage-method-marker__pulse" r="18"></circle></g>
+        <g class="homepage-method-marker" data-homepage-method-marker=""><circle r="10"></circle><circle class="homepage-method-marker__pulse" r="18"></circle></g>
       </svg>
-      <div class="homepage-method-frames" tabindex="0" aria-label="Etapele metodei FABER" data-homepage-method-viewport>${frames}</div>
+      <div class="homepage-method-frames" tabindex="0" aria-label="Etapele metodei FABER" data-homepage-method-viewport="">${frames}</div>
       <div class="homepage-method-controls">
-        <button type="button" class="homepage-sequence-arrow" aria-label="Etapa anterioară" data-homepage-method-previous><span aria-hidden="true">←</span></button>
-        <div class="homepage-method-tabs" role="tablist" aria-label="Alege etapa metodei">${tabs}</div>
-        <button type="button" class="homepage-sequence-arrow" aria-label="Etapa următoare" data-homepage-method-next><span aria-hidden="true">→</span></button>
+        <button type="button" class="homepage-sequence-arrow" aria-label="Etapa anterioară" data-homepage-method-previous=""><span aria-hidden="true">←</span></button>
+        <div class="homepage-method-tabs" role="tablist" aria-label="Alege etapa metodei"><span class="homepage-method-tabs__indicator" aria-hidden="true" data-homepage-method-indicator=""></span>${tabs}</div>
+        <button type="button" class="homepage-sequence-arrow" aria-label="Etapa următoare" data-homepage-method-next=""><span aria-hidden="true">→</span></button>
       </div>
-      <p class="homepage-sequence-status" role="status" aria-live="polite" aria-atomic="true" data-homepage-method-status>Etapa 1 din ${CONFIG.methodSteps.length}: ${esc(CONFIG.methodSteps[0].title)}</p>
+      <p class="homepage-sequence-status" role="status" aria-live="polite" aria-atomic="true" data-homepage-method-status="">Etapa 1 din ${CONFIG.methodSteps.length}: ${esc(CONFIG.methodSteps[0].title)}</p>
     </div>
   </div>
 </section>`;
@@ -108,7 +108,7 @@ function renderExplorer() {
   const nodes = frames.map((frame, index) => `<g class="homepage-explorer-node${index === 0 ? " is-active" : ""}" data-homepage-explorer-node data-explorer-index="${index}" transform="translate(${70 + index * 160} 58)"><circle r="17"></circle><text text-anchor="middle" dy="5">${index + 1}</text><title>${esc(frame.label)}</title></g>`).join("\n");
   return `<section id="homepage-explorer" class="homepage-flow-section homepage-explorer" aria-labelledby="homepage-explorer-title" data-homepage-explorer>
   <div class="homepage-flow-inner">
-    ${heading("Servicii, instrumente și verificare", "homepage-explorer-title", "Ce oferă FABER și cum verifică informația", "Vezi serviciile, instrumentele de pregătire, metodologia și o comparație de programe într-un singur cadru interactiv.")}
+    ${heading("Servicii, instrumente și verificare", "homepage-explorer-title", "Alege informația de care ai nevoie", "Servicii pentru proiectul tău, instrumente de pregătire, surse oficiale și comparații între programe.")}
     <div class="homepage-explorer-shell">
       <div class="homepage-explorer-tabs" role="tablist" aria-label="Alege secțiunea">${tabs}</div>
       <svg class="homepage-explorer-svg" viewBox="0 0 620 110" aria-hidden="true" focusable="false">
@@ -157,8 +157,12 @@ function renderContact() {
   return `<section id="homepage-contact" class="homepage-flow-section" aria-labelledby="homepage-contact-title"><div class="homepage-flow-inner"><div><span class="homepage-eyebrow">Următorul pas</span><h2 id="homepage-contact-title">${esc(item.title)}</h2><p>${esc(item.text)}</p><div class="homepage-contact-direct" aria-label="Contact direct">${phones}<a href="${esc(item.email.href)}" data-analytics-event="contact_email" data-analytics-component="homepage_final_contact" data-analytics-cta-id="homepage_email">${esc(item.email.label)}</a></div></div><div class="homepage-contact-actions"><a class="homepage-flow-action" href="${esc(item.primaryHref)}" data-analytics-event="cta_click" data-analytics-component="homepage_final_cta" data-analytics-cta-id="homepage_final_project_check" data-analytics-target="/contact" data-analytics-cta-view="true" data-analytics-copy-variant="p1_21">${esc(item.primaryLabel)}</a></div></div></section>`;
 }
 
+function normalizeOwnedBooleanAttributes(markup) {
+  return markup.replace(/\s((?:data-[a-z0-9-]+|hidden|inert))(?=[\s>])/giu, ' $1=""');
+}
+
 function renderFlow(programs) {
-  return `${START}\n${renderMethodExperience()}\n${renderPriorityCarousel(programs)}\n${renderExplorer()}\n${renderContactExperience(programs)}\n${END}`;
+  return normalizeOwnedBooleanAttributes(`${START}\n${renderMethodExperience()}\n${renderPriorityCarousel(programs)}\n${renderExplorer()}\n${renderContactExperience(programs)}\n${END}`);
 }
 
 function removeLegacyRuntime(source) {

@@ -85,6 +85,11 @@ try {
     });
     await page.locator("[data-homepage-method-next]").click();
     assert.match((await page.locator("[data-homepage-method-status]").textContent()).trim(), /^Etapa 2 din 5:/);
+    assert.equal(await page.locator("[data-homepage-method]").getAttribute("data-active-index"), "1");
+    assert.equal(await page.locator("[data-homepage-method-indicator]").getAttribute("data-active-index"), "1");
+    assert.equal(await page.locator("[data-homepage-method-tab][aria-selected='true']").getAttribute("data-method-index"), "1");
+    assert.equal(await page.locator(".im-method-sculpture .im-slab.is-active").count(), 1);
+    assert.equal(await page.locator(".im-method-sculpture .im-slab.is-active span").textContent(), "02");
     await page.locator("[data-homepage-explorer-next]").click();
     assert.match((await page.locator("[data-homepage-explorer-status]").textContent()).trim(), /^Secțiunea 2 din 4:/);
     assert.equal(await page.locator("[data-homepage-explorer-frame]").evaluateAll((frames) => frames.filter((node) => getComputedStyle(node).display !== "none").length), 1);
@@ -100,6 +105,7 @@ try {
           scrollTo({ top: start + travel * fraction, behavior: "instant" });
         }, progress);
         await page.waitForFunction((index) => document.querySelector(`[data-homepage-method-tab][data-method-index="${index}"]`).getAttribute("aria-selected") === "true", expected);
+        assert.equal(await page.locator(".im-method-sculpture .im-slab.is-active span").textContent(), String(expected + 1).padStart(2, "0"));
         const pinnedTop = await page.locator(".homepage-method-layout").evaluate(node => node.getBoundingClientRect().top);
         assert(Math.abs(pinnedTop - 80) < 2, "metoda trebuie să rămână vizibilă la scroll");
       }

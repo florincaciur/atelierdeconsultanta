@@ -78,7 +78,7 @@ function renderHero(program, publicCount, programs) {
   if (!program) throw new Error("Registrul nu conține niciun program public cu sursă oficială completă.");
   const hero = `${START}
     <!-- Măsurile provin din registrul public; ilustrațiile conceptuale se schimbă la hover, focus și atingere. -->
-    <section id="hero" class="homepage-decision-hero" data-section-id="hero" aria-labelledby="homepage-hero-title" data-homepage-hero-version="p1_15">
+    <section id="hero" class="homepage-decision-hero" data-section-id="hero" aria-labelledby="homepage-hero-title" data-homepage-hero-version="p1_15" data-homepage-revision="immersive-20260831-4">
       <div class="homepage-hero__inner">
         <div class="homepage-hero__copy">
           <div class="hero-badge"><span class="dot" aria-hidden="true"></span>FABER pentru firme, fermieri, start-up-uri, IMM-uri și instituții publice</div>
@@ -114,7 +114,7 @@ function syncHomepageHero(source, programs) {
     .replace(/\s*<script\b[^>]*data-homepage-hero-script[^>]*><\/script>/gi, "")
     .replace(new RegExp(`\\s*<style id="${STYLE_ID}">[\\s\\S]*?<\\/style>`), "");
   const criticalMarkup = `  <style id="${STYLE_ID}">\n${criticalCss}\n  </style>\n`;
-  const runtimeMarkup = '  <script src="/assets/homepage-hero.js?v=20260831-3" defer data-homepage-hero-script="p1_21"></script>\n';
+  const runtimeMarkup = '  <script src="/assets/homepage-hero.js?v=20260831-4" defer data-homepage-hero-script="p1_21"></script>\n';
   output = /<style id="homepage-faq-expand-css">/.test(output)
     ? output.replace(/(<style id="homepage-faq-expand-css">)/, `${criticalMarkup}  $1`)
     : output.replace(/<\/head>/i, `${criticalMarkup}</head>`);
@@ -122,7 +122,7 @@ function syncHomepageHero(source, programs) {
   output = output.replace(/\s*<link\b[^>]*data-immersive-style[^>]*>/gi, "")
     .replace(/\s*<script\b[^>]*data-immersive-script[^>]*><\/script>/gi, "")
     .replace(/<!-- IMMERSIVE_CONTROLS_START -->[\s\S]*?<!-- IMMERSIVE_CONTROLS_END -->\r?\n?/g, "")
-    .replace(/<\/head>/i, '  <link rel="stylesheet" href="/assets/immersive-home.css?v=20260831-3" data-immersive-style>\n  <script src="/assets/immersive-home.js?v=20260831-3" defer data-immersive-script></script>\n</head>')
+    .replace(/<\/head>/i, '  <link rel="stylesheet" href="/assets/immersive-home.css?v=20260831-4" data-immersive-style>\n  <script src="/assets/immersive-home.js?v=20260831-4" defer data-immersive-script></script>\n</head>')
     .replace(/<\/body>/i, `<!-- IMMERSIVE_CONTROLS_START -->${renderImmersiveControls()}<!-- IMMERSIVE_CONTROLS_END -->\n</body>`);
   return output;
 }

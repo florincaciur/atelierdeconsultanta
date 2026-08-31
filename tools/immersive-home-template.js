@@ -9,7 +9,7 @@ function renderSculpture(className = "") {
     <div class="im-orbit im-orbit--one"></div><div class="im-orbit im-orbit--two"></div>
     <div class="im-sculpture-shadow"></div>
     <div class="im-sculpture-core">
-      <div class="im-slab im-slab--1"><span>01</span></div>
+      <div class="im-slab im-slab--1 is-active"><span>01</span></div>
       <div class="im-slab im-slab--2"><span>02</span></div>
       <div class="im-slab im-slab--3"><span>03</span></div>
       <div class="im-slab im-slab--4"><span>04</span></div>

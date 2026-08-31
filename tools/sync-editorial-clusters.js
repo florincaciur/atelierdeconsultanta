@@ -100,6 +100,14 @@ function setMeta($, selector, value, attributes = {}) {
   element.attr("content", value);
 }
 
+function normalizedHtmlSerialization(value) {
+  return value
+    .replace(/\s((?:data-[a-z0-9-]+|google-add-preferred-source-btn|async|defer|hidden|inert))(?=[\s>])/giu, ' $1=""')
+    .replace(/[ \t]{2,}(?=data-analytics-)/gu, " ")
+    .replace(/\n[ \t]*\n(?=[ \t]*<\/body>)/gu, "\n")
+    .trimEnd();
+}
+
 function renderCell(cell) {
   if (cell && typeof cell === "object" && cell.href) {
     return `<a href="${attr(cell.href)}">${esc(cell.label || cell.href)}</a>`;
@@ -223,9 +231,13 @@ function syncPage(page) {
 
   $("title").first().text(page.title);
   setMeta($, "meta[name='description']", page.description, { name: "description" });
-  setMeta($, "meta[property='og:title']", page.title, { property: "og:title" });
-  setMeta($, "meta[property='og:description']", page.description, { property: "og:description" });
+  const socialTitle = page.ogTitle || page.title;
+  const socialDescription = page.ogDescription || page.description;
+  setMeta($, "meta[property='og:title']", socialTitle, { property: "og:title" });
+  setMeta($, "meta[property='og:description']", socialDescription, { property: "og:description" });
   setMeta($, "meta[property='og:url']", `https://atelierdeconsultanta.ro${page.route}`, { property: "og:url" });
+  if (page.ogTitle) setMeta($, "meta[name='twitter:title']", socialTitle, { name: "twitter:title" });
+  if (page.ogDescription) setMeta($, "meta[name='twitter:description']", socialDescription, { name: "twitter:description" });
   setMeta($, "meta[name='seo-min-words']", "400", { name: "seo-min-words" });
   setMeta($, "meta[name='seo-min-faq']", "0", { name: "seo-min-faq" });
 
@@ -280,7 +292,7 @@ function syncPage(page) {
   $("body").attr("data-editorial-cluster", page.clusterId).attr("data-primary-intent", page.intentId);
 
   const after = synchronizeStructuredData($.html(), page.route);
-  if (after === before) return { changed: false, file: page.file };
+  if (normalizedHtmlSerialization(after) === normalizedHtmlSerialization(before)) return { changed: false, file: page.file };
   if (!CHECK_ONLY) fs.writeFileSync(file, after, "utf8");
   return { changed: true, file: page.file };
 }

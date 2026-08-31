@@ -202,7 +202,28 @@
 }
 
 .homepage-method-tabs {
+  position: relative;
   grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.homepage-method-tabs__indicator {
+  position: absolute;
+  z-index: 0;
+  inset-block: 0;
+  left: 0;
+  display: none;
+  width: 0;
+  pointer-events: none;
+  border: 1px solid #9d3a0f;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #c94a13, #a63c11);
+  box-shadow: 0 9px 20px rgba(166, 60, 17, .24);
+  transform: translate3d(0, 0, 0);
+  transition: width 300ms cubic-bezier(.2, .8, .2, 1), transform 300ms cubic-bezier(.2, .8, .2, 1);
+}
+
+.homepage-method.is-enhanced .homepage-method-tabs__indicator {
+  display: block;
 }
 
 .homepage-method-tabs button,
@@ -217,12 +238,15 @@
 }
 
 .homepage-method-tabs button {
+  position: relative;
+  z-index: 1;
   display: grid;
   justify-items: center;
   gap: .1rem;
   padding: .45rem .3rem;
   border-radius: 10px;
   font-size: .76rem;
+  transition: border-color 180ms ease, color 180ms ease, transform 180ms ease;
 }
 
 .homepage-method-tabs button span,
@@ -236,6 +260,24 @@
   border-color: #c94a13;
   background: #fff2e8;
   box-shadow: inset 0 -3px 0 #c94a13;
+}
+
+.homepage-method.is-enhanced .homepage-method-tabs button[aria-selected="true"] {
+  border-color: transparent;
+  background: transparent;
+  color: #fff;
+  box-shadow: none;
+}
+
+.homepage-method.is-enhanced .homepage-method-tabs button[aria-selected="true"] span,
+.homepage-method.is-enhanced .homepage-method-tabs button[aria-selected="true"] strong {
+  color: #fff;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .homepage-method-tabs button:hover {
+    transform: translateY(-1px);
+  }
 }
 
 .homepage-sequence-arrow {
