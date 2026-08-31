@@ -1,11 +1,11 @@
 {
-  "checkedAt": "2026-08-24T15:41:23.587Z",
+  "checkedAt": "2026-08-31T23:31:07.425Z",
   "requestedEnvironment": "local",
   "stagingDescription": "nerulat",
   "releaseDecision": "PASS",
   "summary": {
-    "pass": 10,
-    "fail": 2,
+    "pass": 11,
+    "fail": 1,
     "criticalBlockers": 0
   },
   "results": [
@@ -125,13 +125,13 @@
       "criterionId": "editorial",
       "criterion": "Zero etichete de șablon și forme de control fără diacritice",
       "environment": "local",
-      "status": "FAIL",
+      "status": "PASS",
       "severity": "high",
       "owner": "Editor coordonator",
       "urls": [
         "/sitemap.xml"
       ],
-      "evidence": "Editorial copy contract passed: 104 canonical URLs, zero forbidden template labels or control-list forms. | node:internal/modules/run_main:107 triggerUncaughtException( ^ AssertionError [ERR_ASSERTION]: / [positioning-missing]: Verificare prudentă, documentată și interdisciplinară — consultanță și proiectare — înainte de dosar. + actual - expected + [ + { + fragment: 'Verificare prudentă, documentată și interdisciplinară — consultanță și proiectare — înainte de dosar.', + message: 'Poziționarea centrală lipsește.', + route: '/', + rule: 'positioning-missing', + scope: 'requirement', + sourceFile: 'index.html' + } + ] - [] at file:///C:/Users/flori/AppData/Local/Temp/atelierdeconsultanta-task17-release/tests/editorial-terminology-contract.mjs:14:8 at ModuleJob.run (node:internal/modules/esm",
+      "evidence": "Editorial copy contract passed: 104 canonical URLs, zero forbidden template labels or control-list forms. | Editorial terminology contract passed: 104 canonical URLs and 10 P0.14 surfaces.",
       "retest": "Reexecută verificarea editorial după remediere/aprobare."
     },
     {

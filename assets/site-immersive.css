@@ -1,0 +1,95 @@
+/* FABER site-wide visual layer. It adds motion and focus without hiding or
+   replacing indexable content. Homepage composition remains independently scoped. */
+body[data-site-immersive] {
+  --site-im-navy: var(--design-navy, #0d1f3c);
+  --site-im-orange: var(--design-orange, #b84716);
+  --site-im-paper: #fff;
+  --site-im-soft: var(--design-soft, #f8f9fb);
+  --site-im-line: var(--design-line, #e8edf5);
+  --site-im-ease: cubic-bezier(.22, .68, 0, 1.01);
+}
+
+.site-immersive-progress {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 10050;
+  width: 100%;
+  height: 3px;
+  pointer-events: none;
+  transform: scaleX(var(--site-reading-progress, 0));
+  transform-origin: left center;
+  background: linear-gradient(90deg, #f5a623, var(--site-im-orange));
+  box-shadow: 0 1px 8px rgba(184, 71, 22, .24);
+}
+
+body[data-site-immersive]:not(.page-family-home) main {
+  position: relative;
+  isolation: isolate;
+}
+
+body[data-site-immersive]:not(.page-family-home) main > :is(header.hero, section.hero, .hero, .page-hero) {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+body[data-site-immersive]:not(.page-family-home) main > :is(header.hero, section.hero, .hero, .page-hero)::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: clamp(-120px, -8vw, -48px);
+  right: clamp(-110px, -5vw, -30px);
+  width: clamp(190px, 28vw, 440px);
+  aspect-ratio: 1;
+  border: 1px solid rgba(184, 71, 22, .15);
+  border-radius: 50%;
+  background: repeating-radial-gradient(circle, transparent 0 22px, rgba(184, 71, 22, .045) 23px 24px);
+  animation: site-immersive-orbit 24s linear infinite;
+  pointer-events: none;
+}
+
+body[data-site-immersive] [data-site-reveal].is-visible {
+  animation: site-immersive-rise .7s var(--site-im-ease) both;
+}
+
+body[data-site-immersive]:not(.page-family-home) main :is(.card, .service-card, .article-card, .tool-card, .program-card, .trust-card, .editorial-card) {
+  transition: transform .35s var(--site-im-ease), border-color .25s ease, box-shadow .35s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  body[data-site-immersive]:not(.page-family-home) main :is(.card, .service-card, .article-card, .tool-card, .program-card, .trust-card, .editorial-card):hover {
+    transform: translateY(-5px);
+    border-color: rgba(184, 71, 22, .32);
+    box-shadow: 0 20px 46px rgba(13, 31, 60, .1);
+  }
+}
+
+body[data-site-immersive] :is(a, button, summary, input, select, textarea):focus-visible {
+  outline: 3px solid var(--site-im-orange);
+  outline-offset: 4px;
+}
+
+body[data-site-immersive]:not(.page-family-home) main > :is(section, article) > :is(h2, header h2):first-child {
+  text-wrap: balance;
+}
+
+@keyframes site-immersive-rise {
+  from { opacity: .25; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes site-immersive-orbit { to { transform: rotate(360deg); } }
+
+@media (max-width: 640px) {
+  .site-immersive-progress { height: 2px; }
+  body[data-site-immersive]:not(.page-family-home) main > :is(header.hero, section.hero, .hero, .page-hero)::after { opacity: .72; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-immersive-progress,
+  body[data-site-immersive] [data-site-reveal].is-visible,
+  body[data-site-immersive]:not(.page-family-home) main > :is(header.hero, section.hero, .hero, .page-hero)::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

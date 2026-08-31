@@ -209,6 +209,11 @@ body.page-family-home #homepage-contact p { color: var(--design-ink, #1a2540); f
   .im-motion-on #homepage-method.im-scroll-enabled { height: 340svh; }
   .im-motion-on #homepage-method.im-scroll-enabled .homepage-method-layout { position: sticky; top: 80px; min-height: 0; height: calc(100svh - 80px); padding-block: 28px; }
 }
+@media (min-width: 1160px) and (max-height: 800px) {
+  /* Keep the primary action inside the initial viewport on common laptops,
+     while preserving the full answer-first introduction above it. */
+  #hero.im-hero .im-about { margin-bottom: 16px; }
+}
 @media (min-width: 1600px) { #hero.im-hero .homepage-hero__inner { padding-top: 3vh; } .im-sculpture-core { width: 260px; height: 260px; } }
 @media (max-width: 1150px) {
   #hero.im-hero .hero-title { font-size: 4.8vw; }

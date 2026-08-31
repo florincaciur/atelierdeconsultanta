@@ -49,7 +49,7 @@
       "microConversion": "cta_click către formularul de triere",
       "parent": "ROOT",
       "competingUrls": [],
-      "demonstrableUniqueValue": "37 subtitluri distincte, 0 FAQ și 0 linkuri externe în sursa HTML.",
+      "demonstrableUniqueValue": "41 subtitluri distincte, 2 FAQ și 0 linkuri externe în sursa HTML.",
       "recommendation": "keep",
       "recommendationTarget": null,
       "recommendationReason": "Rol distinct de core, cu o singură intenție primară și conversie proprie.",
@@ -59,10 +59,10 @@
       "evidence": {
         "title": "Consultanță și proiectare fonduri europene | FABER",
         "metaDescription": "FABER oferă consultanță și proiectare pentru proiecte cu fonduri europene: eligibilitate, cereri de finanțare, documentații tehnice și implementare.",
-        "headingCount": 37,
-        "faqCount": 0,
+        "headingCount": 41,
+        "faqCount": 2,
         "externalLinkCount": 0,
-        "interactiveControlCount": 15,
+        "interactiveControlCount": 54,
         "governanceState": "NEÎNREGISTRAT",
         "programRegistryState": "NU_ESTE_PROGRAM_ÎN_REGISTRU"
       }
@@ -169,7 +169,7 @@
         "headingCount": 20,
         "faqCount": 10,
         "externalLinkCount": 1,
-        "interactiveControlCount": 0,
+        "interactiveControlCount": 4,
         "governanceState": "public",
         "programRegistryState": "public"
       }
@@ -206,7 +206,7 @@
         "headingCount": 23,
         "faqCount": 9,
         "externalLinkCount": 3,
-        "interactiveControlCount": 0,
+        "interactiveControlCount": 4,
         "governanceState": "public",
         "programRegistryState": "public"
       }
@@ -241,7 +241,7 @@
         "headingCount": 19,
         "faqCount": 9,
         "externalLinkCount": 2,
-        "interactiveControlCount": 0,
+        "interactiveControlCount": 4,
         "governanceState": "public",
         "programRegistryState": "public"
       }
@@ -1112,7 +1112,7 @@
         "headingCount": 13,
         "faqCount": 12,
         "externalLinkCount": 2,
-        "interactiveControlCount": 4,
+        "interactiveControlCount": 8,
         "governanceState": "public",
         "programRegistryState": "public"
       }
@@ -1149,7 +1149,7 @@
         "headingCount": 22,
         "faqCount": 9,
         "externalLinkCount": 1,
-        "interactiveControlCount": 0,
+        "interactiveControlCount": 4,
         "governanceState": "public",
         "programRegistryState": "public"
       }
@@ -1301,7 +1301,7 @@
         "headingCount": 12,
         "faqCount": 3,
         "externalLinkCount": 1,
-        "interactiveControlCount": 0,
+        "interactiveControlCount": 4,
         "governanceState": "NEÎNREGISTRAT",
         "programRegistryState": "NU_ESTE_PROGRAM_ÎN_REGISTRU"
       }
@@ -1325,7 +1325,7 @@
       "competingUrls": [
         "/dr14"
       ],
-      "demonstrableUniqueValue": "11 subtitluri distincte, 3 FAQ și 1 linkuri externe în sursa HTML.",
+      "demonstrableUniqueValue": "11 subtitluri distincte, 3 FAQ și 2 linkuri externe în sursa HTML.",
       "recommendation": "keep",
       "recommendationTarget": null,
       "recommendationReason": "Rol distinct de program, cu o singură intenție primară și conversie proprie.",
@@ -1337,8 +1337,8 @@
         "metaDescription": "DR 14 AFIR pentru ferme mici: condiții de eligibilitate, documente, SO/SOC, cofinanțare și greșeli frecvente înainte de depunere.",
         "headingCount": 11,
         "faqCount": 3,
-        "externalLinkCount": 1,
-        "interactiveControlCount": 0,
+        "externalLinkCount": 2,
+        "interactiveControlCount": 4,
         "governanceState": "NEÎNREGISTRAT",
         "programRegistryState": "NU_ESTE_PROGRAM_ÎN_REGISTRU"
       }
@@ -1355,9 +1355,9 @@
       "primaryIntent": "informațională",
       "h1": "DR 12 AFIR 2026 – investiții pentru tineri fermieri și fermieri până la 45 de ani",
       "uniquePromise": "Centralizează statutul, sursa oficială și pașii de verificare pentru „DR 12 AFIR 2026 – investiții pentru tineri fermieri și fermieri până la 45 de ani”.",
-      "cta": "Verifică proiectul",
-      "ctaTarget": "/contact#program=dr12-afir",
-      "microConversion": "cta_click:dr12-afir_long_form_decision",
+      "cta": "Verifică încadrarea în DR 12",
+      "ctaTarget": "/contact#program_slug=dr12-afir&source_page=%2Fdr12-afir",
+      "microConversion": "cta_click:dr12_contextual_primary_2",
       "parent": "/afir",
       "competingUrls": [
         "/dr-12-afir-instalarea-tinerilor-fermieri"
@@ -1375,7 +1375,7 @@
         "headingCount": 21,
         "faqCount": 10,
         "externalLinkCount": 1,
-        "interactiveControlCount": 0,
+        "interactiveControlCount": 4,
         "governanceState": "public",
         "programRegistryState": "public"
       }
@@ -1397,7 +1397,7 @@
       "microConversion": "cta_click:dr12_vs_dr14_compare_project",
       "parent": "/fonduri-europene-agricultura",
       "competingUrls": [],
-      "demonstrableUniqueValue": "21 subtitluri distincte, 2 FAQ și 8 linkuri externe în sursa HTML.",
+      "demonstrableUniqueValue": "20 subtitluri distincte, 2 FAQ și 7 linkuri externe în sursa HTML.",
       "recommendation": "keep",
       "recommendationTarget": null,
       "recommendationReason": "Rol distinct de ghid, cu o singură intenție primară și conversie proprie.",
@@ -1407,9 +1407,9 @@
       "evidence": {
         "title": "DR 12 vs DR 14: încadrare și investiții | FABER",
         "metaDescription": "Compară DR 12 și DR 14: profil, SO, investiții și acte. DR 14 are sesiunea lansată, cu depuneri între 1 septembrie și 31 octombrie 2026.",
-        "headingCount": 21,
+        "headingCount": 20,
         "faqCount": 2,
-        "externalLinkCount": 8,
+        "externalLinkCount": 7,
         "interactiveControlCount": 0,
         "governanceState": "public",
         "programRegistryState": "NU_ESTE_PROGRAM_ÎN_REGISTRU"
@@ -1427,9 +1427,9 @@
       "primaryIntent": "informațională",
       "h1": "DR 14 AFIR 2026 – investiții în fermele de mici dimensiuni",
       "uniquePromise": "Centralizează statutul, sursa oficială și pașii de verificare pentru „DR 14 AFIR 2026 – investiții în fermele de mici dimensiuni”.",
-      "cta": "Verifică proiectul",
-      "ctaTarget": "/contact#program=dr14-afir",
-      "microConversion": "cta_click:dr14-afir_long_form_decision",
+      "cta": "Verifică dacă ferma se încadrează în DR 14",
+      "ctaTarget": "/contact#program_slug=dr14-afir&source_page=%2Fdr14",
+      "microConversion": "cta_click:dr14_contextual_primary_2",
       "parent": "/fonduri-europene",
       "competingUrls": [
         "/dr-14-afir-conditii-eligibilitate-greseli-frecvente"
@@ -1447,7 +1447,7 @@
         "headingCount": 30,
         "faqCount": 16,
         "externalLinkCount": 2,
-        "interactiveControlCount": 23,
+        "interactiveControlCount": 27,
         "governanceState": "public",
         "programRegistryState": "public"
       }
@@ -1482,7 +1482,7 @@
         "headingCount": 26,
         "faqCount": 18,
         "externalLinkCount": 2,
-        "interactiveControlCount": 0,
+        "interactiveControlCount": 4,
         "governanceState": "public",
         "programRegistryState": "public"
       }
@@ -1517,7 +1517,7 @@
         "headingCount": 13,
         "faqCount": 13,
         "externalLinkCount": 2,
-        "interactiveControlCount": 4,
+        "interactiveControlCount": 8,
         "governanceState": "public",
         "programRegistryState": "public"
       }
@@ -1552,7 +1552,7 @@
         "headingCount": 13,
         "faqCount": 12,
         "externalLinkCount": 2,
-        "interactiveControlCount": 4,
+        "interactiveControlCount": 8,
         "governanceState": "public",
         "programRegistryState": "public"
       }
@@ -1587,7 +1587,7 @@
         "headingCount": 21,
         "faqCount": 13,
         "externalLinkCount": 2,
-        "interactiveControlCount": 0,
+        "interactiveControlCount": 4,
         "governanceState": "public",
         "programRegistryState": "public"
       }
@@ -1699,7 +1699,7 @@
         "headingCount": 20,
         "faqCount": 13,
         "externalLinkCount": 2,
-        "interactiveControlCount": 0,
+        "interactiveControlCount": 4,
         "governanceState": "public",
         "programRegistryState": "public"
       }
@@ -1844,7 +1844,7 @@
         "headingCount": 0,
         "faqCount": 2,
         "externalLinkCount": 1,
-        "interactiveControlCount": 0,
+        "interactiveControlCount": 4,
         "governanceState": "public",
         "programRegistryState": "public"
       }
@@ -1881,7 +1881,7 @@
         "headingCount": 23,
         "faqCount": 9,
         "externalLinkCount": 2,
-        "interactiveControlCount": 0,
+        "interactiveControlCount": 4,
         "governanceState": "public",
         "programRegistryState": "public"
       }
@@ -1918,7 +1918,7 @@
         "headingCount": 14,
         "faqCount": 6,
         "externalLinkCount": 2,
-        "interactiveControlCount": 0,
+        "interactiveControlCount": 4,
         "governanceState": "public",
         "programRegistryState": "public"
       }
@@ -1953,7 +1953,7 @@
         "headingCount": 13,
         "faqCount": 12,
         "externalLinkCount": 2,
-        "interactiveControlCount": 4,
+        "interactiveControlCount": 8,
         "governanceState": "public",
         "programRegistryState": "public"
       }
@@ -2532,7 +2532,7 @@
         "headingCount": 9,
         "faqCount": 7,
         "externalLinkCount": 2,
-        "interactiveControlCount": 5,
+        "interactiveControlCount": 9,
         "governanceState": "public",
         "programRegistryState": "public"
       }
@@ -2569,7 +2569,7 @@
         "headingCount": 28,
         "faqCount": 13,
         "externalLinkCount": 3,
-        "interactiveControlCount": 0,
+        "interactiveControlCount": 4,
         "governanceState": "public",
         "programRegistryState": "public"
       }
@@ -2907,9 +2907,9 @@
       "primaryIntent": "informațională",
       "h1": "Investiții pentru modernizarea microîntreprinderilor – Apel 2",
       "uniquePromise": "Centralizează statutul, sursa oficială și pașii de verificare pentru „Investiții pentru modernizarea microîntreprinderilor – Apel 2”.",
-      "cta": "Verifică proiectul",
-      "ctaTarget": "/contact#program=modernizare-microintreprinderi-ne-2",
-      "microConversion": "cta_click:modernizare-microintreprinderi-ne-2_long_form_decision",
+      "cta": "Verifică firma și investiția pentru Apelul 2",
+      "ctaTarget": "/contact#program_slug=modernizare-microintreprinderi-ne-2&source_page=%2Finvestitii-modernizarea-microintreprinderilor-apel-2",
+      "microConversion": "cta_click:modernizare-microintreprinderi-ne-2_contextual_primary_2",
       "parent": "/finantari-panouri-fotovoltaice",
       "competingUrls": [],
       "demonstrableUniqueValue": "Înregistrare în registrul unic al programelor; 17 subtitluri, 13 FAQ și sursă: Autoritatea de Management pentru Programul Regional Nord-Est.",
@@ -2925,7 +2925,7 @@
         "headingCount": 17,
         "faqCount": 13,
         "externalLinkCount": 3,
-        "interactiveControlCount": 23,
+        "interactiveControlCount": 27,
         "governanceState": "public",
         "programRegistryState": "public"
       }
@@ -3069,7 +3069,7 @@
         "headingCount": 0,
         "faqCount": 2,
         "externalLinkCount": 1,
-        "interactiveControlCount": 0,
+        "interactiveControlCount": 4,
         "governanceState": "public",
         "programRegistryState": "public"
       }
@@ -3144,7 +3144,7 @@
         "headingCount": 18,
         "faqCount": 13,
         "externalLinkCount": 4,
-        "interactiveControlCount": 0,
+        "interactiveControlCount": 4,
         "governanceState": "public",
         "programRegistryState": "public"
       }
@@ -3216,7 +3216,7 @@
         "headingCount": 18,
         "faqCount": 12,
         "externalLinkCount": 1,
-        "interactiveControlCount": 0,
+        "interactiveControlCount": 4,
         "governanceState": "public",
         "programRegistryState": "public"
       }
@@ -3251,7 +3251,7 @@
         "headingCount": 0,
         "faqCount": 2,
         "externalLinkCount": 1,
-        "interactiveControlCount": 0,
+        "interactiveControlCount": 4,
         "governanceState": "public",
         "programRegistryState": "public"
       }
@@ -3440,7 +3440,7 @@
         "headingCount": 16,
         "faqCount": 13,
         "externalLinkCount": 2,
-        "interactiveControlCount": 0,
+        "interactiveControlCount": 4,
         "governanceState": "public",
         "programRegistryState": "public"
       }
@@ -3726,7 +3726,7 @@
       "primaryIntent": "navigațională",
       "h1": "Termeni și Condiții",
       "uniquePromise": "Prezintă versiunea aprobată și regulile aplicabile pentru „Termeni și Condiții”.",
-      "cta": "atelier.consultanta@gmail.com",
+      "cta": "atelier.consultanță@gmail.com",
       "ctaTarget": "mailto:atelier.consultanta@gmail.com",
       "microConversion": "cta_click:email_contact",
       "parent": "/",

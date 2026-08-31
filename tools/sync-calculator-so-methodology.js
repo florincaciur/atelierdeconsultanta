@@ -430,7 +430,10 @@ function synchronize(html, config) {
   if (!resultPattern.test(next)) throw new Error("Nu poate fi identificat rezultatul calculatorului.");
   next = next.replace(resultPattern, renderResult());
 
-  const scriptPattern = /<script>\s*\/\/ (?:SO Values Database|P1\.20 — Formula existentă este păstrată; setul de date provine din lista AFIR SOC 2020\.)[\s\S]*?<\/script>(?=\s*<!-- P1_15_CONTEXTUAL_CTA_START -->)/u;
+  // Other build-managed scripts (for example the site-wide visual layer) may
+  // sit between the inline calculator and the contextual CTA. The calculator
+  // is identified by its own stable preamble, not by incidental adjacency.
+  const scriptPattern = /<script>\s*\/\/ (?:SO Values Database|P1\.20 — Formula existentă este păstrată; setul de date provine din lista AFIR SOC 2020\.)[\s\S]*?<\/script>/u;
   if (!scriptPattern.test(next)) throw new Error("Nu poate fi identificat scriptul calculatorului.");
   next = next.replace(scriptPattern, renderCalculatorScript(config));
 
