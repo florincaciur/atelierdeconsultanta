@@ -59,6 +59,9 @@ try {
     assert.equal((await page.locator("[data-priority-counter]").textContent()).trim(), `2 din ${homepagePrograms.length}`);
     await page.locator("[data-homepage-method-next]").click();
     assert.match((await page.locator("[data-homepage-method-status]").textContent()).trim(), /^Etapa 2 din 5:/);
+    assert.equal(await page.locator("[data-homepage-method]").getAttribute("data-active-index"), "1");
+    assert.equal(await page.locator("[data-homepage-method-indicator]").getAttribute("data-active-index"), "1");
+    assert.equal(await page.locator("[data-homepage-method-tab][aria-selected='true']").getAttribute("data-method-index"), "1");
     await page.locator("[data-homepage-explorer-next]").click();
     assert.match((await page.locator("[data-homepage-explorer-status]").textContent()).trim(), /^Secțiunea 2 din 4:/);
     assert.equal(await page.locator("[data-homepage-explorer-frame]").evaluateAll((frames) => frames.filter((node) => getComputedStyle(node).display !== "none").length), 1);

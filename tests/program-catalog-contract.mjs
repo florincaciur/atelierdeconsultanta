@@ -15,6 +15,10 @@ const CATALOG_FILE = path.join(ROOT, "fonduri-europene", "index.html");
 const { catalogPrograms, loadProgramConfig } = require("../tools/program-factual-governance");
 const { fileForRoute, hasType, parseJsonLd } = require("../tools/structured-data-utils");
 const familyConfig = JSON.parse(fs.readFileSync(path.join(ROOT, "config", "program-family-hubs.json"), "utf8"));
+const editorialConfig = JSON.parse(fs.readFileSync(path.join(ROOT, "config", "editorial-clusters.json"), "utf8"));
+const catalogEditorial = editorialConfig.clusters
+  .flatMap((cluster) => cluster.routes)
+  .find((page) => page.route === CATALOG_ROUTE);
 const programs = loadProgramConfig().programs;
 const expected = catalogPrograms(programs);
 const expectedById = new Map(expected.map((program) => [program.id, program]));
@@ -31,8 +35,8 @@ const title = $("head > title").text().trim();
 const description = $("meta[name='description']").attr("content") || "";
 assert.ok(title.length >= 30 && title.length <= 70, "title catalog invalid");
 assert.ok(description.length >= 100 && description.length <= 170, "description catalog invalidă");
-assert.equal($("meta[property='og:title']").attr("content"), title);
-assert.equal($("meta[property='og:description']").attr("content"), description);
+assert.equal($("meta[property='og:title']").attr("content"), catalogEditorial?.ogTitle || title);
+assert.equal($("meta[property='og:description']").attr("content"), catalogEditorial?.ogDescription || description);
 assert.equal(new URL($("meta[property='og:url']").attr("content"), SITE).pathname, CATALOG_ROUTE);
 const jsonLd = parseJsonLd($);
 assert.ok(jsonLd.length && jsonLd.every((block) => !block.error), "JSON-LD catalog invalid");
