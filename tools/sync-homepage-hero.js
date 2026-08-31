@@ -2,6 +2,7 @@
 
 const fs = require("fs");
 const path = require("path");
+const { immersiveHero, renderImmersiveControls } = require("./immersive-home-template");
 const {
   hasOfficialSource,
   homepageHeroPrograms,
@@ -72,7 +73,7 @@ ${items}
 
 function renderHero(program, publicCount, programs) {
   if (!program) throw new Error("Registrul nu conține niciun program public cu sursă oficială completă.");
-  return `${START}
+  const hero = `${START}
     <!-- Copy-ul și traseul vizual au fost restaurate din bannerul FABER anterior; CTA-ul urmează contractul contextual P1.15. -->
     <section id="hero" class="homepage-decision-hero" data-section-id="hero" aria-labelledby="homepage-hero-title" data-homepage-hero-version="p1_15">
       <div class="homepage-hero__inner">
@@ -103,6 +104,7 @@ function renderHero(program, publicCount, programs) {
       </div>
     </section>
 ${END}`;
+  return immersiveHero(hero);
 }
 
 function syncHomepageHero(source, programs) {
@@ -125,6 +127,11 @@ function syncHomepageHero(source, programs) {
     ? output.replace(/(<style id="homepage-faq-expand-css">)/, `${criticalMarkup}  $1`)
     : output.replace(/<\/head>/i, `${criticalMarkup}</head>`);
   output = output.replace(/<\/head>/i, `${runtimeMarkup}</head>`);
+  output = output.replace(/\s*<link\b[^>]*data-immersive-style[^>]*>/gi, "")
+    .replace(/\s*<script\b[^>]*data-immersive-script[^>]*><\/script>/gi, "")
+    .replace(/<!-- IMMERSIVE_CONTROLS_START -->[\s\S]*?<!-- IMMERSIVE_CONTROLS_END -->\r?\n?/g, "")
+    .replace(/<\/head>/i, '  <link rel="stylesheet" href="/assets/immersive-home.css?v=20260831-1" data-immersive-style>\n  <script src="/assets/immersive-home.js?v=20260831-1" defer data-immersive-script></script>\n</head>')
+    .replace(/<\/body>/i, `<!-- IMMERSIVE_CONTROLS_START -->${renderImmersiveControls()}<!-- IMMERSIVE_CONTROLS_END -->\n</body>`);
   return output;
 }
 

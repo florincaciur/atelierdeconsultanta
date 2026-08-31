@@ -55,12 +55,16 @@
         marker.style.transform = `translate(${point.x}px, ${point.y}px)`;
       }
 
-      if (status && config.announce) {
+      if (status) {
+        status.setAttribute("aria-live", config.announce ? "polite" : "off");
         status.textContent = `${options.statusLabel} ${activeIndex + 1} din ${frames.length}: ${labelAt(activeIndex)}`;
       }
 
       if (config.focusTab) tabs[activeIndex].focus({ preventScroll: true });
       if (config.interaction) reportInteraction(config.interaction);
+      root.dispatchEvent(new CustomEvent("faber:sequence-change", {
+        detail: { index: activeIndex, interaction: config.interaction }
+      }));
     }
 
     function move(delta, interaction) {
@@ -80,6 +84,12 @@
 
     previous?.addEventListener("click", () => move(-1, "previous"));
     next?.addEventListener("click", () => move(1, "next"));
+
+    root.addEventListener("faber:sequence-select", (event) => {
+      const index = event.detail?.index;
+      if (!Number.isInteger(index) || index < 0 || index >= frames.length) return;
+      update(index, { announce: false, interaction: "" });
+    });
 
     viewport.addEventListener("keydown", (event) => {
       if (event.key !== "ArrowLeft" && event.key !== "ArrowRight") return;

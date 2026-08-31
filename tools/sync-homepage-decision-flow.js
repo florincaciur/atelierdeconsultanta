@@ -2,6 +2,7 @@
 
 const fs = require("fs");
 const path = require("path");
+const { renderSculpture } = require("./immersive-home-template");
 const { loadProgramConfig } = require("./program-factual-governance");
 const { renderPriorityCarousel } = require("./sync-homepage-programs");
 
@@ -13,7 +14,7 @@ const HERO_END = "<!-- HOMEPAGE_DECISION_HERO_END -->";
 const START = "<!-- P1_21_HOMEPAGE_FLOW_START -->";
 const END = "<!-- P1_21_HOMEPAGE_FLOW_END -->";
 const STYLE = '<link rel="stylesheet" href="/assets/homepage-decision-flow.css?v=20260722-2" data-homepage-decision-flow-style="p1_22">';
-const SCRIPT = '<script src="/assets/homepage-decision-flow.js?v=20260722-2" defer data-homepage-decision-flow-script="p1_22"></script>';
+const SCRIPT = '<script src="/assets/homepage-decision-flow.js?v=20260831-1" defer data-homepage-decision-flow-script="p1_22"></script>';
 
 function esc(value) {
   return String(value ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
@@ -39,6 +40,7 @@ function renderMethodExperience() {
   <div class="homepage-flow-inner homepage-method-layout">
     ${heading("Metoda FABER", "homepage-method-title", "Cum decidem dacă merită continuat", "Cinci verificări, într-o singură secvență. Alege etapa sau glisează pentru a vedea următorul filtru de decizie.")}
     <div class="homepage-method-experience">
+      ${renderSculpture("im-method-sculpture")}
       <svg class="homepage-method-svg" viewBox="0 0 640 140" aria-hidden="true" focusable="false">
         <path class="homepage-method-route" d="M50 70 C105 24 130 24 185 70 S265 116 320 70 S400 24 455 70 S535 116 590 70"></path>
         ${nodes}

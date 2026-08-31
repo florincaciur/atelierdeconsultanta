@@ -57,17 +57,59 @@ try {
     if (viewport.width === 390 || viewport.width === 1366) assert(metrics.ctaBottom <= viewport.height, `${viewport.width}px: CTA-ul principal este sub fold`);
     await page.locator("[data-priority-next]").click();
     assert.equal((await page.locator("[data-priority-counter]").textContent()).trim(), `2 din ${homepagePrograms.length}`);
+    // Scrolling back from the catalogue now enters the last method stage.
+    // Select a known starting stage before testing the manual next control.
+    await page.locator("#homepage-method-tab-1").click();
+    await page.waitForFunction(() => {
+      const method = document.querySelector("#homepage-method");
+      if (!method.classList.contains("im-scroll-enabled")) return true;
+      const travel = method.offsetHeight - (innerHeight - 80);
+      return Math.abs(method.getBoundingClientRect().top - (80 - travel * .06)) < 5;
+    });
     await page.locator("[data-homepage-method-next]").click();
     assert.match((await page.locator("[data-homepage-method-status]").textContent()).trim(), /^Etapa 2 din 5:/);
     await page.locator("[data-homepage-explorer-next]").click();
     assert.match((await page.locator("[data-homepage-explorer-status]").textContent()).trim(), /^Secțiunea 2 din 4:/);
     assert.equal(await page.locator("[data-homepage-explorer-frame]").evaluateAll((frames) => frames.filter((node) => getComputedStyle(node).display !== "none").length), 1);
+    if (viewport.width === 1366) {
+      // A reload clears any in-flight manual scroll; native scrolling must
+      // move the sequence in both directions while the content stays pinned.
+      await page.reload({ waitUntil: "domcontentloaded" });
+      for (const [progress, expected] of [[.7, 3], [.25, 1]]) {
+        await page.evaluate((fraction) => {
+          const method = document.querySelector("#homepage-method");
+          const start = scrollY + method.getBoundingClientRect().top - 80;
+          const travel = method.offsetHeight - (innerHeight - 80);
+          scrollTo({ top: start + travel * fraction, behavior: "instant" });
+        }, progress);
+        await page.waitForFunction((index) => document.querySelector(`[data-homepage-method-tab][data-method-index="${index}"]`).getAttribute("aria-selected") === "true", expected);
+        const pinnedTop = await page.locator(".homepage-method-layout").evaluate(node => node.getBoundingClientRect().top);
+        assert(Math.abs(pinnedTop - 80) < 2, "metoda trebuie să rămână vizibilă la scroll");
+      }
+      await page.locator("[data-im-motion]").click();
+      assert.equal(await page.locator("[data-im-motion]").getAttribute("aria-pressed"), "true");
+      assert.equal(await page.locator("#homepage-method").evaluate(node => node.classList.contains("im-scroll-enabled")), false);
+      await page.reload({ waitUntil: "domcontentloaded" });
+      assert.equal(await page.locator("[data-im-motion]").getAttribute("aria-pressed"), "true", "preferința trebuie păstrată");
+      await page.locator("[data-im-motion]").click();
+      await page.emulateMedia({ reducedMotion: "reduce" });
+      await page.waitForFunction(() => document.documentElement.classList.contains("im-motion-off"));
+      assert.equal(await page.locator("#homepage-method").evaluate(node => node.classList.contains("im-scroll-enabled")), false);
+    }
     assert.deepEqual(consoleErrors, [], `${viewport.width}px: erori console`);
     await page.close();
   }
+  const noScriptPage = await browser.newPage({ javaScriptEnabled: false, viewport: { width: 390, height: 844 } });
+  await noScriptPage.goto(baseUrl, { waitUntil: "load" });
+  assert.equal(await noScriptPage.locator("#hero .btn-primary").isVisible(), true);
+  assert.equal(await noScriptPage.locator("[data-im-motion]").isVisible(), false);
+  assert.equal(await noScriptPage.locator(".im-sector-options").isVisible(), false);
+  assert.equal(await noScriptPage.locator("[data-homepage-method-frame]").evaluateAll(nodes => nodes.filter(node => getComputedStyle(node).display !== "none").length), 5);
+  assert.equal(await noScriptPage.locator("[data-homepage-explorer-frame]").evaluateAll(nodes => nodes.filter(node => getComputedStyle(node).display !== "none").length), 4);
+  await noScriptPage.close();
 } finally {
   await browser.close();
   await new Promise((resolve) => server.close(resolve));
 }
 
-console.log("Homepage responsive PASS: 320, 390, 768 și 1366 px, fără overflow și cu carusel funcțional.");
+console.log("Homepage responsive PASS: 320, 390, 768 și 1366 px; carusel, scroll în ambele sensuri, mișcare redusă, preferință persistentă și fallback fără JavaScript.");
