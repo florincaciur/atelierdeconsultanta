@@ -88,4 +88,8 @@ Testele inițiale sunt în `reports/immersive-design/verification.md`; verifică
 
 ## Starea publicării
 
-Implementarea nu a fost trimisă în producție. Verificarea suplimentară a publicării a trecut 21 de controale, fără erori critice, dar a păstrat două rezultate FAIL pentru aceeași lipsă preexistentă: valoarea INP de referință aprobată. Nu au fost schimbate configurațiile de aprobare. Înainte de deploy sunt necesare acceptarea designului și rezolvarea cerinței de performanță conform regulii P0 existente; vezi [raportul complet](../reports/immersive-design/publication-preflight.md).
+Versiunea de publicare din 31 august este `immersive-20260831-4`: tabel cu zece ilustrații, cinci plăci sincronizate cu etapa activă și formularul final. Designul și publicarea au fost cerute explicit de beneficiar. Sursa corectă a fost proiectul separat `atelierdeconsultanta-main`, nu copia mai veche din proiectul GitHub. Ramura de publicare integrează această sursă cu remediile deja existente pe origin.
+
+`verify-live-release.js` verifică această revizie, conținutul complet din main, cele zece scene, formularul și nouă resurse CSS/JS, atât la URL-ul obișnuit, cât și fără cache. Un build reușit sau simpla schimbare a manifestului nu mai sunt suficiente pentru confirmare.
+
+Raportul [preflight inițial](../reports/immersive-design/publication-preflight.md) rămâne istoric. Lipsa preexistentă a baseline-ului INP real nu este rezolvată sau transformată în PASS: responsabilul este Frontend performance owner; retestul necesar este obținerea unei măsurători de teren aprobate, cu sursa, perioada și dispozitivul documentate, apoi repetarea comparației. Testele sintetice nu o înlocuiesc. Configurația gate-ului (blocare pentru severity critical) și aprobările nu au fost modificate.

@@ -181,7 +181,7 @@ async function main() {
 
   await safeFormProbe("email");
   await safeFormProbe("phone");
-  console.log(`Live release verified: ${release.commit} (homepage ${homepage.revision}, exact main content and 3 CSS/JS assets, ordinary and cache-busted URL, ${criticalRoutes.length} canonical pages, sitemap, crawler policy, email/phone form probes).`);
+  console.log(`Live release verified: ${release.commit} (homepage ${homepage.revision}, 10 program scenes, request form, exact main content and ${homepage.assets.length} CSS/JS assets, ordinary and cache-busted URL, ${criticalRoutes.length} canonical pages, sitemap, crawler policy, email/phone form probes).`);
 }
 
 main().catch((error) => {

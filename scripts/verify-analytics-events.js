@@ -117,7 +117,7 @@ function main() {
   const home = read("index.html");
   if (home.includes("<!-- P1_21_HOMEPAGE_FLOW_START -->")) {
     const $home = cheerio.load(home, { decodeEntities: false });
-    if ($home("main form").length !== 0) errors.push("homepage P1.21: a rămas un formular concurent în main");
+    if ($home("main form").length !== 1 || $home("#homepage-contact #contact-triage-form[data-analytics-form='contact_triage']").length !== 1) errors.push("homepage imersiv: trebuie să existe exclusiv formularul comun de solicitări în secțiunea finală");
     if (count(home, /FaberAnalytics\.formSubmitSuccess\(form\)/g) !== 0) errors.push("homepage P1.21: a rămas runtime de submit pentru un formular eliminat");
     if (count(home, /FaberAnalytics\.formValidationError\(form\)/g) !== 0) errors.push("homepage P1.21: a rămas runtime de validare pentru un formular eliminat");
   } else {

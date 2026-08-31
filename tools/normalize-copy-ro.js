@@ -452,6 +452,8 @@ function normalizeRomanianCopy(value) {
   for (const [pattern, replacement] of ROMANIAN_COPY_REPLACEMENTS) {
     text = text.replace(pattern, replacement);
   }
+  // The negative imperative uses the infinitive, not the adjective "completă".
+  text = text.replace(/\b(Nu|nu) completă(?=\s|[?!.,;:]|$)/gu, "$1 completa");
   text = text.replace(
     /\b(Pot|pot|Poți|poți|Poate|poate|Putem|putem|Puteți|puteți|Vor|vor|Va|va|Ar|ar) verifică(?=\s|[?!.,;:]|$)/gu,
     (match) => match.replace(/verifică$/, "verifica")

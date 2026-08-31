@@ -158,6 +158,18 @@ try {
   assert.equal(await formPage.evaluate(() => document.documentElement.scrollWidth <= document.documentElement.clientWidth), true);
   await formPage.close();
 
+  const hoverPage = await browser.newPage({ viewport: { width: 1366, height: 900 }, reducedMotion: "reduce" });
+  await hoverPage.route(/^https?:\/\/(?!127\.0\.0\.1)/u, route => route.abort());
+  await hoverPage.goto(baseUrl, { waitUntil: "domcontentloaded" });
+  for (let index = 0; index < 5; index += 1) {
+    await hoverPage.locator("[data-homepage-method-tab]").nth(index).hover();
+    await hoverPage.waitForFunction(expected => document.querySelector("[data-homepage-method]").dataset.activeIndex === String(expected), index);
+    assert.equal(await hoverPage.locator(".im-method-sculpture .im-slab.is-active").count(), 1);
+    assert.equal(await hoverPage.locator(".im-method-sculpture .im-slab.is-active span").textContent(), String(index + 1).padStart(2, "0"));
+    assert.match(await hoverPage.locator(".im-slab.is-active").evaluate(node => getComputedStyle(node).backgroundImage), /linear-gradient/);
+  }
+  await hoverPage.close();
+
   const noScriptPage = await browser.newPage({ javaScriptEnabled: false, viewport: { width: 390, height: 844 } });
   await noScriptPage.goto(baseUrl, { waitUntil: "load" });
   assert.equal(await noScriptPage.locator("#hero .btn-primary").isVisible(), true);
