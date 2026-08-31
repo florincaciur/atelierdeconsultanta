@@ -5,12 +5,10 @@
   const hero = document.querySelector("#hero.im-hero");
   if (!hero) return;
   const method = document.querySelector("[data-homepage-method]");
-  const scene = document.querySelector("[data-im-scene]");
   const progress = document.querySelector("[data-im-progress]");
   const toggle = document.querySelector("[data-im-motion]");
   const motionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
   const pinQuery = window.matchMedia("(min-width: 1000px) and (min-height: 700px)");
-  const pointerQuery = window.matchMedia("(hover: hover) and (pointer: fine)");
   const chapters = Array.from(document.querySelectorAll(".im-chapters a"));
   const sections = chapters.map(link => document.querySelector(link.getAttribute("href"))).filter(Boolean);
   let optedOut = false;
@@ -23,28 +21,6 @@
   let revealObserver = null;
   const clamp = (value, min = 0, max = 1) => Math.max(min, Math.min(max, value));
   try { optedOut = localStorage.getItem("faber-motion") === "off"; } catch (_) { /* Storage is optional. */ }
-
-  const domains = {
-    business: { text: "Explorează finanțările pentru afacerea ta", href: "/fonduri-europene-imm", color: "#c65c38" },
-    agriculture: { text: "Explorează finanțările pentru agricultură", href: "/fonduri-europene-agricultura", color: "#6d8655" },
-    energy: { text: "Explorează investițiile în energie", href: "/fondul-de-modernizare", color: "#be852c" },
-    digital: { text: "Explorează finanțările pentru digitalizare", href: "/fonduri-europene-digitalizare", color: "#577c8b" }
-  };
-  const sectorButtons = Array.from(document.querySelectorAll("[data-im-sector]"));
-  const sectorOptions = document.querySelector(".im-sector-options");
-  if (sectorOptions) sectorOptions.hidden = false;
-  sectorButtons.forEach(button => {
-    button.addEventListener("click", () => {
-      const domain = domains[button.dataset.imSector];
-      if (!domain) return;
-      sectorButtons.forEach(item => item.setAttribute("aria-pressed", String(item === button)));
-      scene.style.setProperty("--scene-accent", domain.color);
-      scene.dataset.sector = button.dataset.imSector;
-      document.querySelector("[data-im-sector-link]").href = domain.href;
-      document.querySelector("[data-im-sector-text]").textContent = domain.text;
-      document.querySelector("[data-im-sector-status]").textContent = `${button.textContent}. ${domain.text}.`;
-    });
-  });
 
   function requestFrame() {
     if (!frame && !document.hidden) frame = window.requestAnimationFrame(render);
@@ -68,8 +44,6 @@
       lastChapter = activeChapter;
     }
     if (paused) return;
-    const heroRect = hero.getBoundingClientRect();
-    if (heroRect.bottom >= 0) hero.style.setProperty("--im-hero-progress", clamp(-heroRect.top / heroRect.height).toFixed(4));
     if (!method || !pinQuery.matches) return;
     const rect = method.getBoundingClientRect();
     const distance = rect.height - (viewport - 80);
@@ -144,12 +118,6 @@
     hint.textContent = "Derulează în jos sau în sus pentru a parcurge etapele.";
     heading?.append(hint);
   }
-  scene?.addEventListener("pointermove", event => {
-    if (paused || !pointerQuery.matches) return;
-    const rect = scene.getBoundingClientRect();
-    scene.style.setProperty("--im-tilt", `${clamp((event.clientX - rect.left) / rect.width, 0, 1) * 10 - 5}deg`);
-  }, { passive: true });
-  scene?.addEventListener("pointerleave", () => scene.style.setProperty("--im-tilt", "0deg"));
   toggle?.addEventListener("click", () => {
     // The system preference always wins; the user can only add a stricter one.
     optedOut = !paused;

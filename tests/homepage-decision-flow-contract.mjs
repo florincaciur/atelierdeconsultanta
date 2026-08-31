@@ -20,7 +20,13 @@ assert.equal($("main h1").length, 1, "homepage-ul trebuie să aibă un singur H1
 assert.deepEqual($("main > section").map((_, node) => $(node).attr("id")).get(), [
   "hero", "homepage-method", "priority-programs", "homepage-explorer", "homepage-contact"
 ]);
-assert.equal($("main form").length, 0, "homepage-ul nu trebuie să păstreze formulare concurente");
+assert.equal($("main form").length, 1, "beneficiarul a cerut un singur formular de solicitări la final");
+assert.equal($("#homepage-contact #contact-triage-form").attr("action"), "/api/contact-triage");
+assert.equal($("#contact-triage-form [name='page_url']").attr("value"), "/");
+assert.equal($("#contact-triage-form [name='source_page']").attr("value"), "/");
+assert(html.indexOf('id="contact-triage-form"') < html.indexOf('<!-- PREFERRED_SOURCE_START -->'), "formularul trebuie să apară înaintea butonului Google");
+assert.equal($("script[data-home-contact-script]").length, 1);
+assert.equal($("link[data-home-contact-style]").length, 1);
 assert.equal($("main [data-priority-carousel]").length, 1, "trebuie păstrat un singur carusel principal");
 assert.equal($("main [data-card-carousel], main [data-program-directory]").length, 0, "componentele repetitive trebuie eliminate");
 assert.equal($("[data-homepage-method-frame]").length, 5);
@@ -53,4 +59,4 @@ assert(css.includes("@media (max-width: 30rem)") && css.includes("prefers-reduce
 assert(js.includes("pointerdown") && js.includes("pointerup") && js.includes("ArrowRight"));
 assert(js.includes('toggleAttribute("inert"'));
 
-console.log(`Homepage decision flow PASS: ${$("main a").length} linkuri, zero formulare, un carusel, cinci secțiuni.`);
+console.log(`Homepage decision flow PASS: ${$("main a").length} linkuri, un formular, un carusel, cinci secțiuni.`);

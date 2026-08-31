@@ -3,6 +3,7 @@
 const fs = require("fs");
 const path = require("path");
 const { renderSculpture } = require("./immersive-home-template");
+const { renderContactTriageLayout } = require("./contact-triage-form");
 const { loadProgramConfig } = require("./program-factual-governance");
 const { renderPriorityCarousel } = require("./sync-homepage-programs");
 
@@ -15,6 +16,7 @@ const START = "<!-- P1_21_HOMEPAGE_FLOW_START -->";
 const END = "<!-- P1_21_HOMEPAGE_FLOW_END -->";
 const STYLE = '<link rel="stylesheet" href="/assets/homepage-decision-flow.css?v=20260722-2" data-homepage-decision-flow-style="p1_22">';
 const SCRIPT = '<script src="/assets/homepage-decision-flow.js?v=20260831-1" defer data-homepage-decision-flow-script="p1_22"></script>';
+const FORM_ASSETS = '<link rel="stylesheet" href="/assets/contact-triage.css?v=20260831-3" data-home-contact-style>\n  <script src="/assets/contact-triage.js?v=20260831-3" defer data-home-contact-script></script>';
 
 function esc(value) {
   return String(value ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
@@ -125,13 +127,13 @@ function renderExplorer() {
 </section>`;
 }
 
-function renderContactExperience() {
+function renderContactExperience(programs) {
   const item = CONFIG.contact;
   const phones = item.phones.map((phone, index) => `<a href="${esc(phone.href)}" data-analytics-event="contact_phone" data-analytics-component="homepage_final_contact" data-analytics-cta-id="homepage_phone_${index + 1}"><span>Telefon</span><strong>${esc(phone.label)}</strong></a>`).join("");
   return `<section id="homepage-contact" class="homepage-flow-section" aria-labelledby="homepage-contact-title"><div class="homepage-flow-inner homepage-contact-card">
     <div class="homepage-contact-copy"><span class="homepage-eyebrow">Următorul pas</span><h2 id="homepage-contact-title">${esc(item.title)}</h2><p>${esc(item.text)}</p><div class="homepage-contact-direct" aria-label="Contact direct">${phones}<a href="${esc(item.email.href)}" data-analytics-event="contact_email" data-analytics-component="homepage_final_contact" data-analytics-cta-id="homepage_email"><span>Email</span><strong>${esc(item.email.label)}</strong></a></div></div>
     <div class="homepage-contact-actions"><span class="homepage-contact-actions__label">Începe cu datele esențiale</span><a class="homepage-flow-action" href="${esc(item.primaryHref)}" data-analytics-event="cta_click" data-analytics-component="homepage_final_cta" data-analytics-cta-id="homepage_final_project_check" data-analytics-target="/contact" data-analytics-cta-view="true" data-analytics-copy-variant="p1_22">${esc(item.primaryLabel)} <span aria-hidden="true">→</span></a><a class="homepage-contact-secondary" href="/verificare-eligibilitate-fonduri-europene">Vezi ce date pregătești</a></div>
-  </div></section>`;
+  </div><div class="homepage-flow-inner im-contact-form-wrap">${renderContactTriageLayout(programs, {}, { pagePath: "/" })}</div></section>`;
 }
 
 function renderCardSection(id, eyebrow, title, text, items, gridClass) {
@@ -156,7 +158,7 @@ function renderContact() {
 }
 
 function renderFlow(programs) {
-  return `${START}\n${renderMethodExperience()}\n${renderPriorityCarousel(programs)}\n${renderExplorer()}\n${renderContactExperience()}\n${END}`;
+  return `${START}\n${renderMethodExperience()}\n${renderPriorityCarousel(programs)}\n${renderExplorer()}\n${renderContactExperience(programs)}\n${END}`;
 }
 
 function removeLegacyRuntime(source) {
@@ -200,6 +202,8 @@ function synchronize(source, programs) {
   const toc = source.match(/<!-- P1_09_LONG_FORM_TOC_START -->[\s\S]*?<!-- P1_09_LONG_FORM_TOC_END -->/);
   const preservedToc = toc ? `\n${toc[0]}` : "";
   let output = source.replace(new RegExp(`${HERO_END}[\\s\\S]*?<\\/main>`, "i"), `${HERO_END}${preservedToc}\n${renderFlow(programs)}\n  </main>`);
+  output = output.replace(/\s*<link\b[^>]*data-home-contact-style[^>]*>/gi, "")
+    .replace(/\s*<script\b[^>]*data-home-contact-script[^>]*><\/script>/gi, "");
   output = output
     .replace(/\s*<style id="homepage-faq-expand-css">[\s\S]*?<\/style>/gi, "")
     .replace(/\s*<script>\s*\/\* Homepage FAQ progressive disclosure[\s\S]*?<\/script>/gi, "");
@@ -208,9 +212,9 @@ function synchronize(source, programs) {
     .replace(/^[ \t]*<script\b[^>]*data-homepage-decision-flow-script=["'][^"']+["'][^>]*><\/script>\r?\n?/gim, "");
   const homepageHeroStyle = /\s*(?=<style\b[^>]*id=["']homepage-hero-critical-css["'][^>]*>)/i;
   const longFormAsset = /\s*(?=<link\b[^>]*data-long-form-layout-style=["'][^"']+["'][^>]*>)/i;
-  if (homepageHeroStyle.test(output)) output = output.replace(homepageHeroStyle, `${newline}  ${STYLE}${newline}  ${SCRIPT}${newline}  `);
-  else if (longFormAsset.test(output)) output = output.replace(longFormAsset, `${newline}  ${STYLE}${newline}  ${SCRIPT}${newline}  `);
-  else output = output.replace(/<\/head>/i, `  ${STYLE}${newline}  ${SCRIPT}${newline}</head>`);
+  if (homepageHeroStyle.test(output)) output = output.replace(homepageHeroStyle, `${newline}  ${STYLE}${newline}  ${SCRIPT}${newline}  ${FORM_ASSETS}${newline}  `);
+  else if (longFormAsset.test(output)) output = output.replace(longFormAsset, `${newline}  ${STYLE}${newline}  ${SCRIPT}${newline}  ${FORM_ASSETS}${newline}  `);
+  else output = output.replace(/<\/head>/i, `  ${STYLE}${newline}  ${SCRIPT}${newline}  ${FORM_ASSETS}${newline}</head>`);
   return removeLegacyRuntime(output);
 }
 
@@ -234,7 +238,7 @@ function main() {
     return;
   }
   if (!sameText(after, before)) fs.writeFileSync(HOME, after, "utf8");
-  console.log("Homepage P1.21 sincronizat: un singur traseu, zero formulare inline, un carusel.");
+  console.log("Homepage sincronizat: un singur traseu, un formular de solicitări, un carusel.");
 }
 
 if (require.main === module) main();

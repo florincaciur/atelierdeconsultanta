@@ -55,13 +55,13 @@ function programOptions(programs, aliasesByProgram = {}) {
   }).join("\n");
 }
 
-function renderContactTriageLayout(programs, aliasesByProgram = {}) {
+function renderContactTriageLayout(programs, aliasesByProgram = {}, { pagePath = "/contact" } = {}) {
   const privacy = approvedPrivacyNotice();
   return `
       <div class="contact-layout contact-triage-layout">
         <section class="contact-form-panel" aria-labelledby="contact-form-title">
           <div class="contact-triage-heading">
-            <span class="core-kicker">Triage inițial</span>
+            <span class="core-kicker">${pagePath === '/' ? 'Solicitare inițială' : 'Triage inițial'}</span>
             <h2 id="contact-form-title">Spune-ne pe scurt ce vrei să realizezi</h2>
             <p id="contact-form-intro">Pasul 1 cere patru răspunsuri operaționale și confirmarea citirii informării. Detaliile din pasul 2 sunt opționale.</p>
           </div>
@@ -70,8 +70,8 @@ function renderContactTriageLayout(programs, aliasesByProgram = {}) {
             <input type="hidden" name="schema_version" value="1.0.0">
             <input type="hidden" name="lead_id" value="">
             <input type="hidden" name="form_started_at" value="">
-            <input type="hidden" name="page_url" value="/contact">
-            <input type="hidden" name="source_page" value="">
+            <input type="hidden" name="page_url" value="${escapeHtml(pagePath)}">
+            <input type="hidden" name="source_page" value="${pagePath === '/' ? '/' : ''}">
             <input type="hidden" name="referrer_path" value="">
             <input type="hidden" name="program_context" value="">
             <input type="hidden" name="program_family" value="">

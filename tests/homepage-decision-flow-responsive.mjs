@@ -38,6 +38,7 @@ try {
     const metrics = await page.evaluate(() => ({
       overflow: document.documentElement.scrollWidth - document.documentElement.clientWidth,
       forms: document.querySelectorAll("main form").length,
+      scrollY: window.scrollY,
       carousels: document.querySelectorAll("main [data-priority-carousel]").length,
       sections: document.querySelectorAll("main > section").length,
       ctaBottom: document.querySelector("#hero .btn-primary")?.getBoundingClientRect().bottom,
@@ -47,14 +48,30 @@ try {
       explorerVisible: Array.from(document.querySelectorAll("[data-homepage-explorer-frame]")).filter((node) => getComputedStyle(node).display !== "none").length
     }));
     assert(metrics.overflow <= 0, `${viewport.width}px: scroll orizontal`);
-    assert.equal(metrics.forms, 0);
+    assert.equal(metrics.forms, 1);
+    assert.equal(metrics.scrollY, 0, "formularul integrat nu trebuie să mute pagina la încărcare");
     assert.equal(metrics.carousels, 1);
     assert.equal(metrics.sections, 5);
     assert.equal(metrics.tocOpen, false);
     assert.equal(metrics.familyDescription, 0);
     assert.equal(metrics.methodVisible, 1);
     assert.equal(metrics.explorerVisible, 1);
+    const sceneFits = await page.locator('.hero-program-scene.is-active svg').evaluate(node => node.getBoundingClientRect().height <= node.parentElement.getBoundingClientRect().height + 1);
+    assert(sceneFits, `${viewport.width}px: ilustrația trebuie să încapă integral în cadru`);
     if (viewport.width === 390 || viewport.width === 1366) assert(metrics.ctaBottom <= viewport.height, `${viewport.width}px: CTA-ul principal este sub fold`);
+    const choices = page.locator("[data-hero-program-item]");
+    for (let index = 0; index < await choices.count(); index++) {
+      const choice = choices.nth(index);
+      await choice.hover();
+      const id = await choice.getAttribute("data-program-id");
+      assert.equal(await page.locator("[data-program-scene]:not([hidden])").count(), 1);
+      assert.equal(await page.locator("[data-program-scene]:not([hidden])").getAttribute("data-program-scene"), id);
+      assert.equal(await page.locator("[data-hero-program-link]").getAttribute("href"), await choice.getAttribute("href"));
+    }
+    await choices.nth(0).click();
+    assert.equal(new URL(page.url()).pathname, "/", "selectarea unei măsuri trebuie să arate previzualizarea fără navigare");
+    await choices.nth(0).press("ArrowRight");
+    assert.equal(await choices.nth(1).getAttribute("aria-pressed"), "true");
     await page.locator("[data-priority-next]").click();
     assert.equal((await page.locator("[data-priority-counter]").textContent()).trim(), `2 din ${homepagePrograms.length}`);
     // Scrolling back from the catalogue now enters the last method stage.
@@ -99,11 +116,48 @@ try {
     assert.deepEqual(consoleErrors, [], `${viewport.width}px: erori console`);
     await page.close();
   }
+  const formPage = await browser.newPage({ viewport: { width: 390, height: 844 }, hasTouch: true, isMobile: true });
+  const submissions = [];
+  await formPage.route(/^https?:\/\/(?!127\.0\.0\.1)/u, route => route.abort());
+  await formPage.route("**/api/contact-triage", async route => {
+    submissions.push(route.request().postData());
+    await route.fulfill({ status: submissions.length === 1 ? 503 : 200, contentType: "application/json", body: JSON.stringify(submissions.length === 1 ? { success: false, message: "Eroare simulată pentru verificarea reîncercării." } : { success: true, leadId: "homepage-test-only" }) });
+  });
+  await formPage.goto(baseUrl, { waitUntil: "domcontentloaded" });
+  assert.equal(await formPage.locator('.contact-no-js-submit').isVisible(), false, "submit-ul de rezervă nu trebuie să dubleze fluxul cu JavaScript");
+  await formPage.locator('[data-hero-program-item][data-program-id="e-drive"]').tap();
+  assert.equal(await formPage.locator('[data-program-scene]:not([hidden])').getAttribute('data-program-scene'), 'e-drive', "atingerea selectează scena fără a deschide pagina programului");
+  assert.equal(new URL(formPage.url()).pathname, "/");
+  await formPage.locator('[data-action="review-short"]').click();
+  assert.equal(await formPage.locator('[data-error-summary]').isVisible(), true);
+  assert.equal(submissions.length, 0, "formularul incomplet nu se trimite");
+  await formPage.locator('#contact-applicant-type').selectOption('societate');
+  await formPage.locator('#contact-location').fill('Test local');
+  await formPage.locator('#contact-investment').fill('Verificare locală a formularului, date fictive.');
+  await formPage.locator('#contact-email').fill('qa@example.invalid');
+  await formPage.locator('#privacy-notice-acknowledged').check();
+  await formPage.locator('[data-action="add-details"]').click();
+  await formPage.locator('#contact-description').fill('Detaliu păstrat între etape.');
+  await formPage.locator('[data-action="back-to-step-1"]').click();
+  assert.equal(await formPage.locator('#contact-email').inputValue(), 'qa@example.invalid');
+  await formPage.locator('[data-action="review-short"]').click();
+  await formPage.locator('[data-final-submit]').click();
+  await formPage.locator('[data-retry-submit]').waitFor({ state: 'visible' });
+  assert.equal(await formPage.locator('#contact-email').inputValue(), 'qa@example.invalid');
+  await formPage.locator('[data-retry-submit]').click();
+  await formPage.locator('[data-form-success]').waitFor({ state: 'visible' });
+  assert.equal(submissions.length, 2);
+  assert.match(submissions[0], /name="page_url"\r\n\r\n\/\r\n/);
+  assert.match(submissions[0], /name="source_page"\r\n\r\n\/\r\n/);
+  assert.equal(await formPage.evaluate(() => document.documentElement.scrollWidth <= document.documentElement.clientWidth), true);
+  await formPage.close();
+
   const noScriptPage = await browser.newPage({ javaScriptEnabled: false, viewport: { width: 390, height: 844 } });
   await noScriptPage.goto(baseUrl, { waitUntil: "load" });
   assert.equal(await noScriptPage.locator("#hero .btn-primary").isVisible(), true);
   assert.equal(await noScriptPage.locator("[data-im-motion]").isVisible(), false);
-  assert.equal(await noScriptPage.locator(".im-sector-options").isVisible(), false);
+  assert.equal(await noScriptPage.locator("[data-hero-program-item]").first().getAttribute("role"), null, "fără JavaScript măsurile rămân linkuri obișnuite");
+  assert.equal(await noScriptPage.locator("#contact-triage-form [data-form-step='2']").isVisible(), true);
   assert.equal(await noScriptPage.locator("[data-homepage-method-frame]").evaluateAll(nodes => nodes.filter(node => getComputedStyle(node).display !== "none").length), 5);
   assert.equal(await noScriptPage.locator("[data-homepage-explorer-frame]").evaluateAll(nodes => nodes.filter(node => getComputedStyle(node).display !== "none").length), 4);
   await noScriptPage.close();

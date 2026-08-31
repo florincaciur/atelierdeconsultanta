@@ -22,29 +22,12 @@ function renderSculpture(className = "") {
 }
 
 function immersiveHero(hero) {
-  const scene = `<div class="im-hero-scene" data-im-scene>
-    <div class="im-scene-caption"><span class="im-small-dot"></span> Construim pornind de la ideea ta <span>↗</span></div>
-    ${renderSculpture()}
-    <div class="im-sector-picker">
-      <span class="im-overline" id="im-sector-label">Ce vrei să dezvolți?</span>
-      <div class="im-sector-options" role="group" aria-labelledby="im-sector-label" hidden>
-        <button type="button" data-im-sector="business" aria-pressed="true">Afacere</button>
-        <button type="button" data-im-sector="agriculture" aria-pressed="false">Agricultură</button>
-        <button type="button" data-im-sector="energy" aria-pressed="false">Energie</button>
-        <button type="button" data-im-sector="digital" aria-pressed="false">Digitalizare</button>
-      </div>
-      <a class="im-sector-link" data-im-sector-link href="/fonduri-europene-imm"><span data-im-sector-text>Explorează finanțările pentru afacerea ta</span><span aria-hidden="true">↗</span></a>
-      <span class="im-sr-only" role="status" data-im-sector-status></span>
-    </div>
-  </div>`;
   let result = hero.replace('class="homepage-decision-hero"', 'class="homepage-decision-hero im-hero"');
   result = result.replace('<div class="hero-badge"><span class="dot" aria-hidden="true"></span>FABER pentru firme, fermieri, start-up-uri, IMM-uri și instituții publice</div>', '<div class="hero-badge"><span class="dot" aria-hidden="true"></span>Atelierul în care ideile prind contur</div>');
   result = result.replace(/(<p class="hero-subtitle"[\s\S]*?<\/p>)/, (detail) => {
     const expanded = detail.replace('class="hero-subtitle"', 'class="im-detail-copy"').replace(/ data-aeo-(?:primary|direct)-answer=""/g, "");
     return '<p class="hero-subtitle im-lead" data-aeo-primary-answer="" data-aeo-direct-answer="">FABER – Atelier de Consultanță sprijină proiecte cu fonduri europene, de la verificarea inițială a eligibilității la documentație și implementare. Fără promisiunea aprobării finanțării. ' + positioning + '</p><details class="im-about"><summary>Ce facem pentru proiectul tău <span aria-hidden="true">+</span></summary>' + expanded + '</details>';
   });
-  result = result.replace('\n\n        <aside', `\n\n        ${scene}\n        <details class="im-program-drawer"><summary><span>Măsuri de finanțare & traseul proiectului</span><span aria-hidden="true">+</span></summary>\n        <aside`);
-  result = result.replace('</aside>\n      </div>', '</aside></details>\n      </div>');
   result = result.replace('    </section>', `      <div class="im-hero-bottom"><a href="#homepage-method" class="im-scroll-link"><span class="im-scroll-icon" aria-hidden="true">↓</span> Derulează. Descoperă. Construiește.</a><span>De la întrebare la un plan documentat.</span><span class="im-edition">FABER — 01 / 05</span></div>\n    </section>`);
   return result;
 }

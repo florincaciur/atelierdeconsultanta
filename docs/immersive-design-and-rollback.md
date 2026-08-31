@@ -4,15 +4,18 @@ Implementare pe ramura `codex/immersive-faber`. Site-ul public nu a fost modific
 
 ## Ce se schimbă
 
-- Pagina principală: paletă crem / grafit / teracotă, tipografie amplă și o compoziție volumetrică originală, realizată în CSS.
-- Obiectul reacționează la mișcarea cursorului și la scroll. Cele cinci straturi se reunesc pe parcursul metodei FABER.
+- Pagina principală folosește paleta comună a site-ului: bleumarin `#0d1f3c`, portocaliu `#b84716`, alb și nuanțele neutre din `assets/design-profiles.css`. Header-ul păstrează stilurile comune paginilor interioare.
+- Prima secțiune afișează deschis tabelul celor zece măsuri din registru. Fiecare are o ilustrație animată reprezentativă, selectată la hover, focus, click sau atingere; linkul „Vezi condițiile” deschide pagina măsurii. Roadmap-ul SVG și sculptura inițială au fost înlocuite conform feedback-ului beneficiarului.
+- Cele cinci straturi volumetrice rămân în secțiunea metodei FABER și se reunesc pe parcursul scroll-ului.
 - Pe desktop (minimum 1000 × 700 px), secțiunea metodei rămâne în ecran și trece prin cele cinci verificări în funcție de poziția scroll-ului, în ambele sensuri. Nu se interceptează rotița, touch-ul sau tastele de scroll.
-- Selector pentru afaceri, agricultură, energie și digitalizare, cu legături către paginile existente. Alegerea este o navigare după domeniu, nu un verdict de eligibilitate.
+- Formularul de solicitări este integrat la finalul paginii, înaintea componentei Google. Reutilizează fluxul și endpoint-ul existent, fără colectare sau destinații noi. Încărcarea homepage-ului nu mută automat utilizatorul la formular.
 - Indicator de progres, navigare între secțiuni și apariții discrete ale conținutului.
 - Pe telefon și tabletă se păstrează scroll-ul obișnuit, butoanele, glisarea și navigarea cu tastatura.
 - Buton pentru oprirea animațiilor, preferință păstrată local și respectarea `prefers-reduced-motion`. Fără JavaScript, conținutul și legăturile principale rămân disponibile.
 
 Registrul programelor, cele 23 de bannere, sursele oficiale, datele de verificare, contactul, calculatoarele și URL-urile existente sunt păstrate. Detaliile ample din hero se deschid explicit. Nu s-au copiat imagini sau cod din proiectul Evora; acesta a fost reper pentru mișcare și compoziție.
+
+Printscreen-ul menționat în feedback nu a fost disponibil în conversație; tabelul a fost recuperat din sursa homepage-ului păstrată în Git.
 
 ## Previzualizare locală
 
@@ -38,6 +41,7 @@ Directorul de backup este **în afara site-ului**, astfel încât arhivele nu su
 | `source-before-immersive.zip` | Copia proiectului local inițial, mai vechi decât site-ul live |
 | `repository-before-immersive.bundle` | Istoricul proiectului local inițial |
 | `SHA256SUMS.txt` | Sume de control pentru arhive și copia HTML |
+| `immersive-v1-before-feedback.zip` | Prima variantă imersivă, înaintea reviziei cerute; etichetă `backup/immersive-v1-before-feedback-2026-08-31`, commit `c948ec2` |
 
 Punctul de restaurare al versiunii actualizate este:
 
@@ -74,11 +78,13 @@ Restaurarea completă readuce și conținutul la acest moment. Dacă programele 
 
 - `assets/immersive-home.css`: prezentarea, componentele volumetrice și breakpoint-urile.
 - `assets/immersive-home.js`: scroll, selector, navigare și preferința de mișcare.
+- `tools/hero-program-scenes.js` și `assets/homepage-hero.js`: cele zece ilustrații și selecția măsurii; faptele rămân în registru.
+- `tools/contact-triage-form.js` și `assets/contact-triage.js`: formularul comun pentru homepage și Contact.
 - `tools/immersive-home-template.js`: markup-ul prezentării.
 - Generatorii existenți `sync-homepage-hero.js` și `sync-homepage-decision-flow.js` includ noua prezentare. Rebuild-ul nu o elimină.
 - `tests/homepage-decision-flow-responsive.mjs`: verificări la 320, 390, 768 și 1366 px, scroll înainte/înapoi, controale manuale, mișcare redusă, preferință persistentă și fallback fără JavaScript.
 
-Testele și observațiile finale sunt în `reports/immersive-design/verification.md`. Nu există dependințe frontend noi, modele 3D externe sau video obligatoriu pentru afișarea paginii.
+Testele inițiale sunt în `reports/immersive-design/verification.md`; verificările reviziei sunt în `reports/immersive-design/revision-client-2026-08-31.md`. Nu există dependințe frontend noi, modele 3D externe sau video obligatoriu pentru afișarea paginii.
 
 ## Starea publicării
 

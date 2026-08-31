@@ -1,5 +1,7 @@
 # Verificare design imersiv — 31 august 2026
 
+Acest raport descrie prima variantă. Tabelul, formularul și paleta au fost revizuite ulterior conform feedback-ului; vezi [verificările reviziei](revision-client-2026-08-31.md).
+
 ## Rezultat verificat
 
 Implementarea este integrată în generatorii paginii principale, pe ramura `codex/immersive-faber`. Previzualizare: `http://127.0.0.1:4173/`. Nu s-a făcut push sau deploy în producție.

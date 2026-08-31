@@ -35,7 +35,7 @@
   }
 
   function scrollBehavior() {
-    return window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth";
+    return document.documentElement.classList.contains("im-motion-off") || (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) ? "auto" : "smooth";
   }
 
   function scrollToPanel(element) {
@@ -70,13 +70,13 @@
     if (errorSummaryList) errorSummaryList.textContent = "";
   }
 
-  function showOnly(section) {
+  function showOnly(section, shouldScroll) {
     [stepOne, stepTwo, summary].forEach(function (item) {
       if (item) item.hidden = item !== section;
     });
     clearAlert();
     clearErrorSummary();
-    scrollToPanel(section);
+    if (shouldScroll !== false) scrollToPanel(section);
   }
 
   function setFieldError(field, message) {
@@ -394,7 +394,7 @@
   document.addEventListener("faber:attribution-ready", syncAttribution, { once: true });
   document.addEventListener("faber:analytics-ready", syncAttribution, { once: true });
   syncAttribution();
-  showOnly(stepOne);
+  showOnly(stepOne, !form.closest("#homepage-contact"));
 
   [email, phone].forEach(function (field) {
     field.addEventListener("input", function () {
