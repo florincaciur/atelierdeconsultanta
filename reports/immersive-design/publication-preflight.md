@@ -24,6 +24,8 @@ Scriptul afișează decizia globală „PASS” deoarece numai severitatea criti
 
 Aceste valori se încadrează în pragurile configurate. Proba folosește un browser headless la 390 × 844 px și un server local, limitează cererile externe, apoi măsoară timpul până la două cadre de animație după un click sintetic. Câmpul denumit `syntheticInpMs` în script **nu reprezintă INP real de teren** și nu validează toate interacțiunile. Nu se poate deduce performanța clienților din producție sau o îmbunătățire procentuală față de rapoartele istorice din aceste rezultate.
 
+Pe 31 august 2026 s-a încercat și citirea datelor publice prin PageSpeed Insights API pentru homepage, cu strategia mobil. Serviciul a răspuns HTTP 429 (`RESOURCE_EXHAUSTED`, cotă API depășită), fără `loadingExperience` sau `originLoadingExperience`. Această eroare nu dovedește că site-ul nu are date INP și nu permite completarea valorii de referință. Nu s-au schimbat chei, cote sau aprobări și nu s-a introdus o valoare estimată. Pentru continuare este necesar un raport de teren accesibil și validarea responsabilului.
+
 ## Corecții editoriale limitate
 
 Controlul pachetului a identificat trei titluri generice preexistente. Au fost înlocuite numai titlurile, fără schimbarea informațiilor despre finanțare, a linkurilor sau a identificatorilor:
