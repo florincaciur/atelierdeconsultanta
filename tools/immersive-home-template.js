@@ -1,5 +1,7 @@
 "use strict";
 
+const { positioning } = require("../config/editorial-terminology.json");
+
 // This presentation layer is called by the existing homepage generator. The
 // program registry, attribution, links and structured data stay authoritative.
 function renderSculpture(className = "") {
@@ -39,7 +41,7 @@ function immersiveHero(hero) {
   result = result.replace('<div class="hero-badge"><span class="dot" aria-hidden="true"></span>FABER pentru firme, fermieri, start-up-uri, IMM-uri și instituții publice</div>', '<div class="hero-badge"><span class="dot" aria-hidden="true"></span>Atelierul în care ideile prind contur</div>');
   result = result.replace(/(<p class="hero-subtitle"[\s\S]*?<\/p>)/, (detail) => {
     const expanded = detail.replace('class="hero-subtitle"', 'class="im-detail-copy"').replace(/ data-aeo-(?:primary|direct)-answer=""/g, "");
-    return '<p class="hero-subtitle im-lead" data-aeo-primary-answer="" data-aeo-direct-answer="">FABER – Atelier de Consultanță sprijină proiecte cu fonduri europene, de la verificarea eligibilității la documentație și implementare. Fără promisiunea aprobării finanțării.</p><details class="im-about"><summary>Ce facem pentru proiectul tău <span aria-hidden="true">+</span></summary>' + expanded + '</details>';
+    return '<p class="hero-subtitle im-lead" data-aeo-primary-answer="" data-aeo-direct-answer="">FABER – Atelier de Consultanță sprijină proiecte cu fonduri europene, de la verificarea inițială a eligibilității la documentație și implementare. Fără promisiunea aprobării finanțării. ' + positioning + '</p><details class="im-about"><summary>Ce facem pentru proiectul tău <span aria-hidden="true">+</span></summary>' + expanded + '</details>';
   });
   result = result.replace('\n\n        <aside', `\n\n        ${scene}\n        <details class="im-program-drawer"><summary><span>Măsuri de finanțare & traseul proiectului</span><span aria-hidden="true">+</span></summary>\n        <aside`);
   result = result.replace('</aside>\n      </div>', '</aside></details>\n      </div>');

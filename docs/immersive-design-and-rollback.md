@@ -79,3 +79,7 @@ Restaurarea completă readuce și conținutul la acest moment. Dacă programele 
 - `tests/homepage-decision-flow-responsive.mjs`: verificări la 320, 390, 768 și 1366 px, scroll înainte/înapoi, controale manuale, mișcare redusă, preferință persistentă și fallback fără JavaScript.
 
 Testele și observațiile finale sunt în `reports/immersive-design/verification.md`. Nu există dependințe frontend noi, modele 3D externe sau video obligatoriu pentru afișarea paginii.
+
+## Starea publicării
+
+Implementarea nu a fost trimisă în producție. Verificarea suplimentară a publicării a trecut 21 de controale, fără erori critice, dar a păstrat două rezultate FAIL pentru aceeași lipsă preexistentă: valoarea INP de referință aprobată. Nu au fost schimbate configurațiile de aprobare. Înainte de deploy sunt necesare acceptarea designului și rezolvarea cerinței de performanță conform regulii P0 existente; vezi [raportul complet](../reports/immersive-design/publication-preflight.md).

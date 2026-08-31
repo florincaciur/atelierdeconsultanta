@@ -51,4 +51,4 @@ Bundle-ul backup a trecut `git bundle verify` și conține istoric complet. Titl
 
 În proiectul utilizatorului există copii HTML salvate din browser, ignorate de Git, pe care unele verificatoare vechi le tratează ca pagini publice; acestea nu au fost modificate sau șterse. Pachetul public `dist` le exclude. Pentru o nouă rulare integrală sau publicare, folosește checkout-ul curat, nu exporturile locale de browser.
 
-Această verificare locală nu măsoară impactul real asupra conversiilor, INP sau performanței utilizatorilor din producție. Acestea se urmăresc după o publicare aprobată. Preferințele de design se pot evalua în previzualizare înainte de înlocuirea site-ului public.
+Această verificare locală nu măsoară impactul real asupra conversiilor, INP sau performanței utilizatorilor din producție. Controlul suplimentar de publicare a confirmat că lipsește valoarea INP de referință aprobată cerută de configurația existentă. Detaliile, limitele măsurătorilor sintetice și pașii rămași sunt în [raportul de publicare](publication-preflight.md). Preferințele de design se pot evalua în previzualizare înainte de înlocuirea site-ului public.
