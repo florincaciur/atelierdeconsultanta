@@ -73,13 +73,16 @@ ${items}
 function renderHero(program, publicCount, programs) {
   if (!program) throw new Error("Registrul nu conține niciun program public cu sursă oficială completă.");
   return `${START}
-    <!-- Copy-ul și traseul vizual au fost restaurate din bannerul FABER anterior; CTA-ul urmează contractul contextual P1.15. -->
-    <section id="hero" class="homepage-decision-hero" data-section-id="hero" aria-labelledby="homepage-hero-title" data-homepage-hero-version="p1_15">
+    <section id="hero" class="homepage-decision-hero" data-section-id="hero" aria-labelledby="homepage-hero-title" data-homepage-hero-version="p1_15" data-homepage-revision="20260831-2">
       <div class="homepage-hero__inner">
         <div class="homepage-hero__copy">
           <div class="hero-badge"><span class="dot" aria-hidden="true"></span>FABER pentru firme, fermieri, start-up-uri, IMM-uri și instituții publice</div>
           <h1 class="hero-title" id="homepage-hero-title">Consultanță și proiectare pentru proiecte <span class="gradient-text">cu fonduri europene</span></h1>
-          <p class="hero-subtitle" data-aeo-primary-answer="" data-aeo-direct-answer="">FABER – Atelier de Consultanță sprijină firme, fermieri, start-up-uri, IMM-uri și instituții publice în proiecte cu fonduri europene. Consultanța clarifică eligibilitatea, programul, cererea și documentele; proiectarea corelează soluția tehnică, bugetul și anexele. Verificăm solicitantul, investiția și sursele oficiale înainte de dosar, apoi putem sprijini pregătirea și implementarea, fără promisiunea aprobării finanțării.</p>
+          <div class="hero-subtitle" data-aeo-primary-answer="" data-aeo-direct-answer="">
+            <p class="hero-subtitle__intro">FABER – Atelier de Consultanță sprijină firme, fermieri, start-up-uri, IMM-uri și instituții publice în proiecte cu fonduri europene. <span class="hero-subtitle__positioning">Verificare prudentă, documentată și interdisciplinară — consultanță și proiectare — înainte de dosar.</span></p>
+            <p><strong>Consultanța</strong> clarifică eligibilitatea, programul, cererea și documentele; <strong>proiectarea</strong> corelează soluția tehnică, bugetul și anexele.</p>
+            <p>Verificăm solicitantul, investiția și sursele oficiale înainte de dosar, apoi putem sprijini pregătirea și implementarea, <strong>fără promisiunea aprobării finanțării.</strong></p>
+          </div>
           <div class="hero-ctas" aria-label="Acțiuni principale">
             <a href="/contact#source_page=%2F" class="btn-primary" data-contextual-hero-cta data-analytics-event="cta_click" data-analytics-component="homepage_hero" data-analytics-cta-id="homepage_hero_project_check" data-analytics-target="/contact" data-analytics-cta-view="true" data-analytics-copy-variant="p1_15">Începe verificarea proiectului</a>
             <a href="/verificare-eligibilitate-fonduri-europene" class="btn-secondary" data-analytics-event="cta_click" data-analytics-component="homepage_hero" data-analytics-cta-id="homepage_hero_prepare" data-analytics-target="/verificare-eligibilitate-fonduri-europene" data-analytics-cta-view="true" data-analytics-copy-variant="p1_15">Vezi ce date pregătești</a>

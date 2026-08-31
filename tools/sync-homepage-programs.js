@@ -90,7 +90,7 @@ function renderPriorityCarousel(programs) {
       <div class="program-explorer-header">
         <span class="section-label">Catalog public</span>
         <h2 id="priority-programs-title">Toate programele de finanțare urmărite</h2>
-        <p>Fiecare program public are propriul banner, fără rotire automată. Statutul, data verificării și sursa aplicabilă sunt materializate din registrul unic, actualizat după consultarea surselor oficiale.</p>
+        <p>Compară programele după scopul investiției și statutul depunerii. Pe pagina fiecărui program găsești condițiile, data verificării și sursa oficială.</p>
       </div>
       <div class="priority-program-carousel" data-priority-carousel data-carousel-count="${total}">
         <button class="priority-program-control priority-program-control--previous" type="button" aria-label="Programul anterior" data-priority-previous data-analytics-event="carousel_interaction" data-analytics-cta-id="priority_carousel_previous"><span aria-hidden="true">←</span></button>
@@ -106,7 +106,7 @@ ${slides}
         </div>
       </div>
     </section>
-${PRIORITY_END}`;
+${PRIORITY_END}`.replace(/\s((?:data-[a-z0-9-]+|hidden|inert))(?=[\s>])/giu, ' $1=""');
 }
 
 function option(value, label) {

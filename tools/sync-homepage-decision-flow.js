@@ -12,8 +12,8 @@ const CHECK_ONLY = process.argv.includes("--check");
 const HERO_END = "<!-- HOMEPAGE_DECISION_HERO_END -->";
 const START = "<!-- P1_21_HOMEPAGE_FLOW_START -->";
 const END = "<!-- P1_21_HOMEPAGE_FLOW_END -->";
-const STYLE = '<link rel="stylesheet" href="/assets/homepage-decision-flow.css?v=20260831-1" data-homepage-decision-flow-style="p1_22">';
-const SCRIPT = '<script src="/assets/homepage-decision-flow.js?v=20260831-1" defer="" data-homepage-decision-flow-script="p1_22"></script>';
+const STYLE = '<link rel="stylesheet" href="/assets/homepage-decision-flow.css?v=20260831-2" data-homepage-decision-flow-style="p1_22">';
+const SCRIPT = '<script src="/assets/homepage-decision-flow.js?v=20260831-2" defer="" data-homepage-decision-flow-script="p1_22"></script>';
 
 function esc(value) {
   return String(value ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
@@ -104,7 +104,7 @@ function renderExplorer() {
   const nodes = frames.map((frame, index) => `<g class="homepage-explorer-node${index === 0 ? " is-active" : ""}" data-homepage-explorer-node data-explorer-index="${index}" transform="translate(${70 + index * 160} 58)"><circle r="17"></circle><text text-anchor="middle" dy="5">${index + 1}</text><title>${esc(frame.label)}</title></g>`).join("\n");
   return `<section id="homepage-explorer" class="homepage-flow-section homepage-explorer" aria-labelledby="homepage-explorer-title" data-homepage-explorer>
   <div class="homepage-flow-inner">
-    ${heading("Servicii, instrumente și verificare", "homepage-explorer-title", "Ce oferă FABER și cum verifică informația", "Vezi serviciile, instrumentele de pregătire, metodologia și o comparație de programe într-un singur cadru interactiv.")}
+    ${heading("Servicii, instrumente și verificare", "homepage-explorer-title", "Alege informația de care ai nevoie", "Servicii pentru proiectul tău, instrumente de pregătire, surse oficiale și comparații între programe.")}
     <div class="homepage-explorer-shell">
       <div class="homepage-explorer-tabs" role="tablist" aria-label="Alege secțiunea">${tabs}</div>
       <svg class="homepage-explorer-svg" viewBox="0 0 620 110" aria-hidden="true" focusable="false">

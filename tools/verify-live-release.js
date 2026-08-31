@@ -5,6 +5,7 @@ const { execFileSync } = require("child_process");
 const fs = require("fs");
 const path = require("path");
 const { groupFor, parseRobots } = require("./crawler-policy");
+const { assetDigest, verifyHomepageContent } = require("./homepage-release-contract");
 
 const ROOT = path.resolve(__dirname, "..");
 const ORIGIN = "https://atelierdeconsultanta.ro";
@@ -120,6 +121,20 @@ async function main() {
   const pages = new Map();
   for (const route of criticalRoutes) pages.set(route, await verifyHtml(route));
 
+  const homepageSource = fs.readFileSync(path.join(ROOT, "index.html"), "utf8");
+  const homepage = verifyHomepageContent(pages.get("/"), homepageSource);
+  // Also check the ordinary URL visitors use, not only a cache-busted response.
+  const ordinaryHomepage = await request("/");
+  if (ordinaryHomepage.status !== 200) throw new Error(`Homepage: HTTP ${ordinaryHomepage.status}`);
+  verifyHomepageContent(await ordinaryHomepage.text(), homepageSource);
+  for (const assetUrl of homepage.assets) {
+    const response = await request(assetUrl);
+    const localAsset = path.join(ROOT, new URL(assetUrl, ORIGIN).pathname);
+    if (response.status !== 200 || assetDigest(await response.text()) !== assetDigest(fs.readFileSync(localAsset, "utf8"))) {
+      throw new Error(`Homepage: CSS/JS publicat diferit de commit: ${assetUrl}`);
+    }
+  }
+
   const registry = JSON.parse(fs.readFileSync(path.join(ROOT, "config", "seo-programs.json"), "utf8"));
   for (const slug of ["dr12-afir", "dr14-afir", "digitalizare-imm", "pro-infra"]) {
     const program = registry.programs.find((entry) => entry.slug === slug);
@@ -166,7 +181,7 @@ async function main() {
 
   await safeFormProbe("email");
   await safeFormProbe("phone");
-  console.log(`Live release verified: ${release.commit} (${criticalRoutes.length} canonical pages, sitemap, crawler policy, email/phone form probes).`);
+  console.log(`Live release verified: ${release.commit} (homepage ${homepage.revision}, exact main content and 3 CSS/JS assets, ordinary and cache-busted URL, ${criticalRoutes.length} canonical pages, sitemap, crawler policy, email/phone form probes).`);
 }
 
 main().catch((error) => {

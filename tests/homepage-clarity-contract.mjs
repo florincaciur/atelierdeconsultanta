@@ -8,6 +8,7 @@ const require = createRequire(import.meta.url);
 const ROOT = path.resolve(import.meta.dirname, "..");
 const { carouselPrograms, loadProgramConfig } = require("../tools/program-factual-governance");
 const { fileForRoute } = require("../tools/structured-data-utils");
+const { assetDigest, verifyHomepageContent } = require("../tools/homepage-release-contract");
 const config = JSON.parse(fs.readFileSync(path.join(ROOT, "config", "homepage-decision-flow.json"), "utf8"));
 const html = fs.readFileSync(path.join(ROOT, "index.html"), "utf8");
 const $ = cheerio.load(html, { decodeEntities: false });
@@ -21,8 +22,12 @@ assert.match(heroText, /Consultanța clarifică eligibilitatea, programul, cerer
 assert.match(heroText, /sursele oficiale înainte de dosar/u, "metoda de verificare nu este vizibilă de la început");
 assert.match(heroText, /pregătirea și implementarea, fără promisiunea aprobării finanțării/u, "traseul și limita serviciului nu sunt explicite");
 assert.match($("#homepage-method").text(), /Verificăm în sursa oficială scopul și statutul programului/u);
-assert.equal($("#homepage-explorer-title").text().trim(), "Ce oferă FABER și cum verifică informația");
-assert.equal(config.reviewedAt, "2026-08-24", "revizia copy-ului homepage trebuie datată");
+assert.equal($("#homepage-explorer-title").text().trim(), "Alege informația de care ai nevoie");
+assert.equal($("#homepage-contact-title").text().trim(), "Spune-ne solicitantul, localitatea și investiția");
+assert.equal(config.reviewedAt, "2026-08-31", "revizia copy-ului homepage trebuie datată");
+assert.equal($("#hero").attr("data-homepage-revision"), "20260831-2", "build-ul trebuie să păstreze noul homepage");
+assert.equal($("#hero .hero-subtitle > p").length, 3, "introducerea trebuie să rămână împărțită în trei paragrafe lizibile");
+assert.equal($("#hero .hero-subtitle__positioning").text().trim(), "Verificare prudentă, documentată și interdisciplinară — consultanță și proiectare — înainte de dosar.", "poziționarea trebuie inclusă de generator, fără rescrierea paragrafelor în timpul build-ului");
 
 const requiredLinks = [
   "/verificare-eligibilitate-fonduri-europene",
@@ -67,5 +72,13 @@ assert.equal($("meta[property='og:title']").attr("content"), "Consultanță și 
 assert.equal($("meta[property='og:url']").attr("content"), "https://atelierdeconsultanta.ro/");
 assert.equal($("script[type='application/ld+json']").length > 0, true, "lipsește JSON-LD");
 $("script[type='application/ld+json']").each((_, script) => assert.doesNotThrow(() => JSON.parse($(script).text()), "JSON-LD invalid"));
+
+assert.equal(verifyHomepageContent(html, html).revision, "20260831-2");
+assert.throws(() => verifyHomepageContent(html.replace("20260831-2\"", "old\""), html));
+assert.throws(() => verifyHomepageContent(html.replace("Alege informația de care ai nevoie", "Ce oferă FABER și cum verifică informația"), html));
+assert.throws(() => verifyHomepageContent(html.replace("data-homepage-method-indicator", "data-old-indicator"), html));
+assert.throws(() => verifyHomepageContent(html.replace("homepage-decision-flow.js?v=20260831-2", "homepage-decision-flow.js?v=20260831-1"), html));
+assert.throws(() => verifyHomepageContent(html.replace(".hero-subtitle__positioning {", ".old-hero-positioning {"), html));
+assert.equal(assetDigest("a\r\nb"), assetDigest("a\nb"), "hash-ul trebuie să fie portabil între Windows și Cloudflare");
 
 console.log(`Homepage clarity PASS: identitate, 5 publicuri, 4 servicii, 3 instrumente, metodologie, ${slides.length} programe și contact.`);
