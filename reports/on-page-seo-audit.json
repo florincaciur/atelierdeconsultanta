@@ -1,5 +1,5 @@
 {
-  "auditedAt": "2026-08-29T11:55:19.084Z",
+  "auditedAt": "2026-09-01T22:03:45.853Z",
   "routes": 104,
   "programRoutes": 24,
   "pages": [
@@ -520,14 +520,14 @@
     },
     {
       "route": "/femeia-antreprenor-2026",
-      "title": "Femeia Antreprenor: apel 2024 închis | FABER",
-      "description": "Femeia Antreprenor 2024 este închis; platforma oficială MINIMIS publică ordinea finală la evaluare. O ediție nouă se confirmă separat.",
+      "title": "Femeia Antreprenor 2026: status oficial | FABER",
+      "description": "Femeia Antreprenor 2026 nu are încă o procedură confirmată. Vezi statusul oficial, ce documente poți pregăti și sursa MINIMIS 2024.",
       "canonical": "https://atelierdeconsultanta.ro/femeia-antreprenor-2026",
       "robots": "index, follow",
-      "ogTitle": "Femeia Antreprenor: apel 2024 închis | FABER",
-      "ogDescription": "Femeia Antreprenor 2024 este închis; platforma oficială MINIMIS publică ordinea finală la evaluare. O ediție nouă se confirmă separat.",
+      "ogTitle": "Femeia Antreprenor 2026: status oficial | FABER",
+      "ogDescription": "Femeia Antreprenor 2026 nu are încă o procedură confirmată. Vezi statusul oficial, ce documente poți pregăti și sursa MINIMIS 2024.",
       "ogImage": "https://atelierdeconsultanta.ro/og-image.jpg",
-      "h1": "Femeia Antreprenor2026",
+      "h1": "Femeia Antreprenor 2026 — ediție neconfirmată",
       "headingLevels": [
         1,
         2,
@@ -549,7 +549,11 @@
         2,
         2,
         2,
-        2,
+        3,
+        3,
+        3,
+        3,
+        3,
         3,
         3,
         3,
@@ -705,14 +709,14 @@
     },
     {
       "route": "/gal-afir",
-      "title": "GAL-AFIR: proiecte LEADER și implementare",
-      "description": "Platforma AFIR publică apeluri locale active în cadrul LEADER/DR-36. Verifică GAL-ul, intervenția și termenul apelului relevant.",
+      "title": "GAL AFIR 2026: apeluri DR-36 și verificare | FABER",
+      "description": "Verifică GAL-ul competent, apelul local DR-36, teritoriul, beneficiarul, documentele și termenul direct în platforma oficială AFIR GAL.",
       "canonical": "https://atelierdeconsultanta.ro/gal-afir",
       "robots": "index, follow",
-      "ogTitle": "GAL-AFIR: proiecte LEADER și implementare",
-      "ogDescription": "Platforma AFIR publică apeluri locale active în cadrul LEADER/DR-36. Verifică GAL-ul, intervenția și termenul apelului relevant.",
+      "ogTitle": "GAL AFIR 2026: apeluri DR-36 și verificare | FABER",
+      "ogDescription": "Verifică GAL-ul competent, apelul local DR-36, teritoriul, beneficiarul, documentele și termenul direct în platforma oficială AFIR GAL.",
       "ogImage": "https://atelierdeconsultanta.ro/og-image.jpg",
-      "h1": "LEADER / DR-36 prin Grupuri de Acțiune Locală",
+      "h1": "GAL AFIR / DR-36 prin Grupuri de Acțiune Locală",
       "headingLevels": [
         1,
         2,
@@ -790,7 +794,7 @@
       "ogTitle": "PNRR: componente, apeluri și stadiul implementării | FABER",
       "ogDescription": "PNRR este în implementare. Verifică statutul fiecărei componente și al fiecărui apel în tabloul de bord oficial înainte de pregătirea proiectului.",
       "ogImage": "https://atelierdeconsultanta.ro/og-image.jpg",
-      "h1": "Planul Național de Redresare și Reziliență",
+      "h1": "PNRR",
       "headingLevels": [
         1
       ],
@@ -997,11 +1001,11 @@
     {
       "route": "/acte-necesare-fonduri-europene-nerambursabile",
       "title": "Acte necesare pentru fonduri europene - checklist dosar",
-      "description": "Lista de acte necesare pentru fonduri europene: documente firmă, financiare, tehnice, spațiu, oferte, declaratii și greșeli de evitat.",
+      "description": "Lista de acte necesare pentru fonduri europene: documente firmă, financiare, tehnice, spațiu, oferte, declarații și greșeli de evitat.",
       "canonical": "https://atelierdeconsultanta.ro/acte-necesare-fonduri-europene-nerambursabile",
       "robots": "index, follow",
       "ogTitle": "Acte necesare pentru fonduri europene - checklist dosar",
-      "ogDescription": "Lista de acte necesare pentru fonduri europene: documente firmă, financiare, tehnice, spațiu, oferte, declaratii și greșeli de evitat.",
+      "ogDescription": "Lista de acte necesare pentru fonduri europene: documente firmă, financiare, tehnice, spațiu, oferte, declarații și greșeli de evitat.",
       "ogImage": "https://atelierdeconsultanta.ro/og-image.jpg",
       "h1": "Acte necesare pentru fonduri europene nerambursabile",
       "headingLevels": [
@@ -1452,11 +1456,11 @@
     {
       "route": "/intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm",
       "title": "Raspuns rapid: Ce cheltuieli sunt eligibile la Digitalizare IMM?",
-      "description": "Raspuns rapid pentru întrebarea \"Ce cheltuieli sunt eligibile la Digitalizare IMM?\": Pot fi eligibile software, echipamente IT, servicii cloud, securitate cibernetică, implementare și instruire, dacă sunt ...",
+      "description": "Pot fi eligibile software, echipamente IT, servicii cloud, securitate cibernetică, implementare și instruire, dacă sunt permise de apel și justificate…",
       "canonical": "https://atelierdeconsultanta.ro/intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm",
       "robots": "index, follow",
       "ogTitle": "Raspuns rapid: Ce cheltuieli sunt eligibile la Digitalizare IMM?",
-      "ogDescription": "Raspuns rapid pentru întrebarea \"Ce cheltuieli sunt eligibile la Digitalizare IMM?\": Pot fi eligibile software, echipamente IT, servicii cloud, securitate cibernetică, implementare și instruire, dacă sunt ...",
+      "ogDescription": "Pot fi eligibile software, echipamente IT, servicii cloud, securitate cibernetică, implementare și instruire, dacă sunt permise de apel și justificate…",
       "ogImage": "https://atelierdeconsultanta.ro/og-image.jpg",
       "h1": "Raspuns rapid: Ce cheltuieli sunt eligibile la Digitalizare IMM?",
       "headingLevels": [
@@ -1490,11 +1494,11 @@
     {
       "route": "/intrebari/ce-documente-sunt-necesare-pentru-dr12",
       "title": "Raspuns rapid: Ce documente sunt necesare pentru DR12?",
-      "description": "Raspuns rapid pentru întrebarea \"Ce documente sunt necesare pentru DR12?\": Pentru DR12 sunt importante documentele solicitantului, exploatației, calculul SO, actele privind terenurile sau animale...",
+      "description": "Pentru DR12 sunt importante documentele solicitantului, exploatației, calculul SO, actele privind terenurile sau animalele, ofertele, bugetul și…",
       "canonical": "https://atelierdeconsultanta.ro/intrebari/ce-documente-sunt-necesare-pentru-dr12",
       "robots": "index, follow",
       "ogTitle": "Raspuns rapid: Ce documente sunt necesare pentru DR12?",
-      "ogDescription": "Raspuns rapid pentru întrebarea \"Ce documente sunt necesare pentru DR12?\": Pentru DR12 sunt importante documentele solicitantului, exploatației, calculul SO, actele privind terenurile sau animale...",
+      "ogDescription": "Pentru DR12 sunt importante documentele solicitantului, exploatației, calculul SO, actele privind terenurile sau animalele, ofertele, bugetul și…",
       "ogImage": "https://atelierdeconsultanta.ro/og-image.jpg",
       "h1": "Raspuns rapid: Ce documente sunt necesare pentru DR12?",
       "headingLevels": [
@@ -1528,11 +1532,11 @@
     {
       "route": "/intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene",
       "title": "Raspuns rapid: Cum se calculează cofinanțarea la fonduri europene?",
-      "description": "Raspuns rapid pentru întrebarea \"Cum se calculează cofinanțarea la fonduri europene?\": Cofinantarea se calculează pornind de la valoarea eligibilă, procentul nerambursabil și cheltuielile neeligibile, care t...",
+      "description": "Cofinantarea se calculează pornind de la valoarea eligibilă, procentul nerambursabil și cheltuielile neeligibile, care trebuie acoperite separat de…",
       "canonical": "https://atelierdeconsultanta.ro/intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene",
       "robots": "index, follow",
       "ogTitle": "Raspuns rapid: Cum se calculează cofinanțarea la fonduri europene?",
-      "ogDescription": "Raspuns rapid pentru întrebarea \"Cum se calculează cofinanțarea la fonduri europene?\": Cofinantarea se calculează pornind de la valoarea eligibilă, procentul nerambursabil și cheltuielile neeligibile, care t...",
+      "ogDescription": "Cofinantarea se calculează pornind de la valoarea eligibilă, procentul nerambursabil și cheltuielile neeligibile, care trebuie acoperite separat de…",
       "ogImage": "https://atelierdeconsultanta.ro/og-image.jpg",
       "h1": "Raspuns rapid: Cum se calculează cofinanțarea la fonduri europene?",
       "headingLevels": [
@@ -2016,6 +2020,7 @@
         4,
         4,
         3,
+        2,
         2
       ],
       "file": "index.html",
@@ -2058,12 +2063,12 @@
     },
     {
       "route": "/fonduri-europene",
-      "title": "Fonduri europene: programe și trasee de verificare | FABER",
-      "description": "Alege familia de programe după solicitant și investiție, apoi folosește instrumentele și ghidurile potrivite înainte de verificarea proiectului.",
+      "title": "Fonduri europene 2026: programe pentru firme și fermieri",
+      "description": "Compară programe pentru firme, fermieri și instituții după solicitant, investiție, regiune, documente și contribuția proprie disponibilă.",
       "canonical": "https://atelierdeconsultanta.ro/fonduri-europene",
       "robots": "index, follow",
-      "ogTitle": "Fonduri europene: programe și trasee de verificare | FABER",
-      "ogDescription": "Alege familia de programe după solicitant și investiție, apoi folosește instrumentele și ghidurile potrivite înainte de verificarea proiectului.",
+      "ogTitle": "Găsește traseul potrivit pentru investiția ta | FABER",
+      "ogDescription": "Pornește de la beneficiar și investiție, apoi verifică programul, documentele și bugetul în pagina dedicată fiecărui apel.",
       "ogImage": "https://atelierdeconsultanta.ro/og-image.jpg",
       "h1": "Fonduri europene: alege traseul potrivit investiției",
       "headingLevels": [

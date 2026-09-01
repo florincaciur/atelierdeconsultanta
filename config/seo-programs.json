@@ -611,7 +611,7 @@
     {
       "id": "femeia-antreprenor",
       "slug": "femeia-antreprenor",
-      "name": "Programul Femeia Antreprenor",
+      "name": "Femeia Antreprenor 2026 — ediție neconfirmată",
       "shortName": "Femeia Antreprenor",
       "family": "antreprenoriat",
       "status": "apel_inchis",
@@ -630,13 +630,14 @@
       "grantSummary": null,
       "cofinancingSummary": null,
       "pageUrl": "/femeia-antreprenor-2026",
-      "lastMeaningfulUpdate": "2026-08-18",
+      "lastMeaningfulUpdate": "2026-09-02",
       "evergreenValue": true,
       "archivedNoindexDecision": null,
       "indexable": true,
       "cardSummary": "Femeia Antreprenor 2024: apelul este închis, iar platforma oficială publică ordinea finală la evaluare.",
-      "metaTitle": "Femeia Antreprenor: apel 2024 închis | FABER",
-      "metaDescription": "Femeia Antreprenor 2024 este închis; platforma oficială MINIMIS publică ordinea finală la evaluare. O ediție nouă se confirmă separat.",
+      "metaTitle": "Femeia Antreprenor 2026: status oficial | FABER",
+      "metaDescription": "Femeia Antreprenor 2026 nu are încă o procedură confirmată. Vezi statusul oficial, ce documente poți pregăti și sursa MINIMIS 2024.",
+      "quickAnswer": "La 2 septembrie 2026, FABER nu prezintă Femeia Antreprenor 2026 drept apel deschis: în sursa oficială disponibilă nu există o procedură finală și un calendar confirmat pentru o ediție 2026. Ediția 2024 este închisă, iar platforma MINIMIS publică ordinea finală la evaluare. Până la un anunț oficial nou, pot fi pregătite actele societății, structura asociaților și administratorilor, codul CAEN, descrierea investiției, bugetul și ofertele preliminare. Valoarea grantului, contribuția proprie, cheltuielile eligibile, punctajul și perioada de depunere nu trebuie preluate din ediții vechi ca reguli active. Decizia de pregătire se actualizează numai după publicarea procedurii și anexelor oficiale, înainte de orice angajament financiar important.",
       "editorialDisclaimer": "Pagina nu prezintă o ediție nouă drept deschisă înaintea unui anunț și a unei proceduri oficiale.",
       "eligibleApplicants": [],
       "keyConditions": [
@@ -1468,7 +1469,7 @@
     {
       "id": "gal-afir-leader",
       "slug": "gal-afir-leader",
-      "name": "LEADER / DR-36 prin Grupuri de Acțiune Locală",
+      "name": "GAL AFIR / DR-36 prin Grupuri de Acțiune Locală",
       "shortName": "GAL-AFIR / LEADER",
       "acronym": "LEADER / DR-36",
       "fund": "Planul Strategic PAC 2023–2027 / FEADR",
@@ -1477,7 +1478,7 @@
       "canonicalStatus": "UNCONFIRMED",
       "statusScope": "umbrella_program",
       "statusRationale": "Fiecare GAL are propriul apel și termen; starea agregată nu poate fi prezentată drept OPEN.",
-      "statusLabel": "Apeluri locale active – statutul și termenul se verifică pentru fiecare GAL",
+      "statusLabel": "Apelurile și termenele se verifică separat pentru fiecare GAL",
       "publicationState": "public",
       "verifiedAt": "2026-08-29",
       "sourceName": "Platforma oficială AFIR pentru Grupurile de Acțiune Locală",
@@ -1489,13 +1490,14 @@
       "grantSummary": null,
       "cofinancingSummary": null,
       "pageUrl": "/gal-afir",
-      "lastMeaningfulUpdate": "2026-08-18",
+      "lastMeaningfulUpdate": "2026-09-02",
       "evergreenValue": true,
       "archivedNoindexDecision": null,
       "indexable": true,
-      "cardSummary": "Platforma AFIR publică apeluri locale active în cadrul LEADER/DR-36, fiecare cu teritoriu, condiții și termen propriu.",
-      "metaTitle": "GAL-AFIR: proiecte LEADER și implementare",
-      "metaDescription": "Platforma AFIR publică apeluri locale active în cadrul LEADER/DR-36. Verifică GAL-ul, intervenția și termenul apelului relevant.",
+      "cardSummary": "Platforma AFIR centralizează informațiile GAL/LEADER; teritoriul, condițiile și termenul se verifică în apelul local relevant.",
+      "metaTitle": "GAL AFIR 2026: apeluri DR-36 și verificare | FABER",
+      "metaDescription": "Verifică GAL-ul competent, apelul local DR-36, teritoriul, beneficiarul, documentele și termenul direct în platforma oficială AFIR GAL.",
+      "quickAnswer": "GAL AFIR / DR-36 nu este un singur apel național cu aceleași condiții pentru toți solicitanții. Fiecare Grup de Acțiune Locală publică sesiuni proprii, pentru un teritoriu delimitat, cu beneficiari, investiții, punctaje, bugete, documente și termene distincte. Primul pas este identificarea GAL-ului care acoperă localitatea investiției, apoi verificarea apelului și anexelor în platforma oficială AFIR GAL. O regulă, o sumă sau un termen de la un GAL nu se transferă automat la altul. FABER poate verifica încadrarea solicitantului și poate sprijini pregătirea ori implementarea, dar existența paginii-cadru nu confirmă că există un apel activ pentru localitatea și proiectul analizat la momentul verificării.",
       "editorialDisclaimer": "Cadrul LEADER are apeluri locale cu statut, valori și termene distincte. Existența unor apeluri active nu confirmă eligibilitatea într-un anumit teritoriu.",
       "eligibleApplicants": [
         "Beneficiari publici și privați definiți de intervenția și ghidul GAL"
@@ -3899,6 +3901,7 @@
       "schemaType": "GovernmentService",
       "category": "Antreprenoriat feminin",
       "h1": "Femeia Antreprenor 2026: program, eligibilitate și dosar",
+      "hideCofinancingExample": true,
       "hideHeroSummary": true,
       "hideFamilyCards": true,
       "policyContribution": "programul incurajeaza antreprenoriatul feminin și investițiile în firme conduse sau detinute de femei, cu accent pe dezvoltare economică realistă.",
@@ -3907,7 +3910,7 @@
         "antreprenoare care pregătesc investiții și documentele societății înaintea publicării procedurii finale",
         "IMM-uri care compară acest program național cu alte surse de finanțare"
       ],
-      "updatedAt": "2026-07-13",
+      "updatedAt": "2026-09-02",
       "eligibility": [
         "structura firmei trebuie să respecte condițiile programului",
         "activitatea propusa trebuie să fie eligibilă",
@@ -10567,7 +10570,8 @@
       "type": "program",
       "schemaType": "GovernmentService",
       "category": "LEADER / GAL / AFIR",
-      "h1": "GAL-AFIR: proiecte LEADER publice și private",
+      "h1": "GAL AFIR / DR-36: apeluri și eligibilitate locală",
+      "hideCofinancingExample": true,
       "heroIcon": "ph-duotone ph-map-pin",
       "policyContribution": "intervenția LEADER sprijina dezvoltarea locală prin strategii GAL, iar proiectele trebuie să răspundă nevoilor din teritoriu și să respecte procedurile AFIR și ghidul local activ.",
       "audience": [
@@ -10704,7 +10708,23 @@
       ],
       "contentSections": [
         {
-          "title": "Ce trebuie să știi",
+          "title": "Unde verifici GAL-ul și apelul local",
+          "paragraphs": [
+            "Intră în platforma oficială AFIR GAL, identifică GAL-ul care acoperă localitatea investiției, apoi deschide apelul local și anexele sale. Nu transfera automat condițiile, sumele sau termenele de la un GAL la altul: fiecare sesiune are propriile reguli și propriul calendar."
+          ],
+          "links": [
+            {
+              "href": "https://gal.afir.ro/",
+              "label": "Verifică platforma oficială AFIR GAL"
+            },
+            {
+              "href": "/apeluri-gal",
+              "label": "Vezi ghidul FABER pentru apeluri GAL"
+            }
+          ]
+        },
+        {
+          "title": "GAL AFIR: verificare rapidă a apelului local",
           "tableRows": [
             [
               "Beneficiari publici",
@@ -10749,7 +10769,7 @@
           ]
         },
         {
-          "title": "Documente necesare",
+          "title": "Documente de pregătit pentru apelul local",
           "paragraphs": [
             "Documentele pot include acte solicitant, documente de localizare, buget, oferte, hotarari sau declarații, documente tehnice și anexe GAL/AFIR. Lista exacta se verifică în ghidul activ."
           ]

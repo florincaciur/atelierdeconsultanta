@@ -678,9 +678,15 @@
       "officialSourceUrl": "https://minimis.imm.gov.ro/fa2024/ordine_evaluare",
       "sourceVersion": "Femeia Antreprenor 2024 – ordinea finală la evaluare",
       "nextReviewAt": "2026-10-28",
-      "lastMeaningfulUpdate": "2026-08-18",
+      "lastMeaningfulUpdate": "2026-09-02",
       "statusSnapshot": "apel_inchis",
       "changelog": [
+        {
+          "date": "2026-09-02",
+          "summary": "Răspunsul direct și metadatele au fost clarificate pentru a separa explicit ediția 2026 neconfirmată de ediția 2024 închisă.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": true
+        },
         {
           "date": "2026-08-29",
           "summary": "Statutul Femeia Antreprenor a fost reverificat în sursa oficială; nu a fost identificată o schimbare editorială substanțială suplimentară.",
@@ -942,9 +948,15 @@
       "officialSourceUrl": "https://gal.afir.ro/",
       "sourceVersion": "Platforma AFIR GAL publică apeluri locale cu termene distincte; verificat la 29.08.2026",
       "nextReviewAt": "2026-10-28",
-      "lastMeaningfulUpdate": "2026-08-18",
+      "lastMeaningfulUpdate": "2026-09-02",
       "statusSnapshot": "calendar_estimativ",
       "changelog": [
+        {
+          "date": "2026-09-02",
+          "summary": "Pagina a primit un traseu de verificare către platforma AFIR GAL și un răspuns direct care delimitează regulile fiecărui apel local.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": true
+        },
         {
           "date": "2026-08-29",
           "summary": "Statutul GAL-AFIR / LEADER a fost reverificat în sursa oficială; nu a fost identificată o schimbare editorială substanțială suplimentară.",

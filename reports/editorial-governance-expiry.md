@@ -30,12 +30,12 @@ O expirare produce warning intern și nu schimbă automat statusul, textul, `ver
 | `/dr18` | program | public | ghid_aprobat_nedeschis | DE_VALIDAT_UMAN | 2026-08-28 | 2026-08-29 | DE_VALIDAT_UMAN | 2026-10-28 | nu | nu | nu | nu |
 | `/dr14-afir-ferme-mici` | program | pending_validation | — | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | da | nu | nu | nu |
 | `/e-move` | program | public | ghid_aprobat_nedeschis | DE_VALIDAT_UMAN | 2026-08-10 | 2026-08-29 | DE_VALIDAT_UMAN | 2026-10-28 | nu | nu | nu | nu |
-| `/femeia-antreprenor-2026` | program | public | apel_inchis | DE_VALIDAT_UMAN | 2026-08-18 | 2026-08-29 | DE_VALIDAT_UMAN | 2026-10-28 | nu | nu | nu | nu |
+| `/femeia-antreprenor-2026` | program | public | apel_inchis | DE_VALIDAT_UMAN | 2026-09-02 | 2026-08-29 | DE_VALIDAT_UMAN | 2026-10-28 | nu | nu | nu | nu |
 | `/fondul-de-modernizare` | program | public | calendar_estimativ | DE_VALIDAT_UMAN | 2026-08-18 | 2026-08-29 | DE_VALIDAT_UMAN | 2026-10-28 | nu | nu | nu | nu |
 | `/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum` | program | public | apel_inchis | DE_VALIDAT_UMAN | 2026-08-18 | 2026-08-29 | DE_VALIDAT_UMAN | 2026-10-28 | nu | nu | nu | nu |
 | `/fondul-modernizare-energie-regenerabila-2026` | program | public | apel_inchis | DE_VALIDAT_UMAN | 2026-08-18 | 2026-08-29 | DE_VALIDAT_UMAN | 2026-10-28 | nu | nu | nu | nu |
 | `/fonduri-regionale` | program | public | calendar_estimativ | DE_VALIDAT_UMAN | 2026-08-18 | 2026-08-29 | DE_VALIDAT_UMAN | 2026-10-28 | nu | nu | nu | nu |
-| `/gal-afir` | program | public | calendar_estimativ | DE_VALIDAT_UMAN | 2026-08-18 | 2026-08-29 | DE_VALIDAT_UMAN | 2026-10-28 | nu | nu | nu | nu |
+| `/gal-afir` | program | public | calendar_estimativ | DE_VALIDAT_UMAN | 2026-09-02 | 2026-08-29 | DE_VALIDAT_UMAN | 2026-10-28 | nu | nu | nu | nu |
 | `/ghiduri` | guide | pending_validation | — | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | 2026-05-20 | DE_VALIDAT_UMAN | 2026-08-18 | nu | da | nu | nu |
 | `/instrumente` | tool | pending_validation | — | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | 2026-05-20 | DE_VALIDAT_UMAN | 2026-08-18 | nu | da | nu | nu |
 | `/investitii-modernizarea-microintreprinderilor-apel-2` | program | public | ghid_aprobat_nedeschis | DE_VALIDAT_UMAN | 2026-08-28 | 2026-08-29 | DE_VALIDAT_UMAN | 2026-10-28 | nu | nu | nu | nu |

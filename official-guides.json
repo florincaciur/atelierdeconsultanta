@@ -203,7 +203,7 @@
     ],
     "isPrimaryFor": "gal-afir-leader",
     "programStatus": "calendar_estimativ",
-    "statusLabel": "Apeluri locale active – statutul și termenul se verifică pentru fiecare GAL",
+    "statusLabel": "Apelurile și termenele se verifică separat pentru fiecare GAL",
     "verifiedAt": "2026-08-29",
     "sourceOfTruth": "config/seo-programs.json#programs"
   },

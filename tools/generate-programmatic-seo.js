@@ -259,7 +259,18 @@ function html({ title, description, h1, route, category, summary, body, faq, rel
   <meta name="seo-min-words" content="${PROGRAMMATIC_MIN_WORDS}" />
   <meta name="seo-min-faq" content="${faq.length}" />
   <link rel="canonical" href="${metadata.canonicalUrl}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ro_RO" />
+  <meta property="og:title" content="${esc(metadata.title)}" />
+  <meta property="og:description" content="${esc(metadata.description)}" />
   <meta property="og:url" content="${metadata.ogUrl}" />
+  <meta property="og:image" content="${SITE}/og-image.jpg" />
+  <meta property="og:image:alt" content="${esc(h1)} — FABER" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="${esc(metadata.title)}" />
+  <meta name="twitter:description" content="${esc(metadata.description)}" />
+  <meta name="twitter:image" content="${SITE}/og-image.jpg" />
+  <meta name="twitter:image:alt" content="${esc(h1)} — FABER" />
   <link rel="stylesheet" href="/assets/seo-hub.css" />
   <link rel="stylesheet" href="/assets/see-also.css" />
   <script type="application/ld+json">${schema(title, description, route, faq, updatedAt, metadata, h1)}</script>
@@ -559,7 +570,10 @@ function regionalPage(item) {
 function faqPage(item) {
   const route = `/intrebari/${item.slug}`;
   const title = `Raspuns rapid: ${item.question}`;
-  const description = `Raspuns rapid pentru intrebarea "${item.question}": ${item.answer.slice(0, 120)}...`;
+  const answer = publicText(item.answer);
+  const description = answer.length <= 155
+    ? answer
+    : `${answer.slice(0, 152).replace(/\s+\S*$/u, "").trim()}…`;
   const faq = configuredFaq(item, [
     [item.question, item.answer],
     ["Ce trebuie verificat inainte de aplicare?", "Solicitantul, programul, documentele, bugetul, cheltuielile eligibile si regulile apelului activ."],

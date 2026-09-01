@@ -1761,6 +1761,7 @@ function renderCalendarTable(page) {
 }
 
 function renderCofinancingExample(page) {
+  if (page.hideCofinancingExample === true) return "";
   const rows = Array.isArray(page.cofinancingRows) && page.cofinancingRows.length
     ? page.cofinancingRows
     : [
@@ -3018,7 +3019,12 @@ ${renderPocidifDiscoveryLink(page)}
   <meta property="og:url" content="${metadata.ogUrl}" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="${SITE}/og-image.jpg" />
+  <meta property="og:image:alt" content="${esc(page.h1)} — FABER" />
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="${esc(metadata.title)}" />
+  <meta name="twitter:description" content="${esc(metadata.description)}" />
+  <meta name="twitter:image" content="${SITE}/og-image.jpg" />
+  <meta name="twitter:image:alt" content="${esc(page.h1)} — FABER" />
   <link rel="preload" as="style" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/duotone/style.css" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript><link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/duotone/style.css" /></noscript>
   <link rel="stylesheet" href="/assets/seo-hub.css" />${extraCss}

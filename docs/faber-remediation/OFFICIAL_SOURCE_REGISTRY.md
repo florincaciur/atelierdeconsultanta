@@ -21,7 +21,7 @@ Snapshot factual de bază al programelor: **2026-08-23**. Fiecare înregistrare 
 | `dr14-afir` | Agenția pentru Finanțarea Investițiilor Rurale (AFIR) | `SCHEDULED` | 2026-08-15 | 2026-08-29 |
 | `dr18-afir` | Agenția pentru Finanțarea Investițiilor Rurale (AFIR) | `SCHEDULED` | 2026-08-28 | 2026-08-29 |
 | `start-up-nation` | Ministerul Economiei – platforma oficială MINIMIS | `CLOSED` | 2026-05-29 | 2026-08-29 |
-| `femeia-antreprenor` | Ministerul Economiei – platforma oficială MINIMIS | `CLOSED` | 2026-08-18 | 2026-08-29 |
+| `femeia-antreprenor` | Ministerul Economiei – platforma oficială MINIMIS | `CLOSED` | 2026-09-02 | 2026-08-29 |
 | `digitalizare-imm` | Ministerul Investițiilor și Proiectelor Europene | `CLOSED` | 2026-07-22 | 2026-08-29 |
 | `modernizare-microintreprinderi-ne-2` | Autoritatea de Management pentru Programul Regional Nord-Est | `SCHEDULED` | 2026-08-28 | 2026-08-29 |
 | `fondul-modernizare-autoconsum` | Ministerul Investițiilor și Proiectelor Europene – MySMIS2021 | `COMPLETED` | 2026-08-18 | 2026-08-29 |
@@ -30,7 +30,7 @@ Snapshot factual de bază al programelor: **2026-08-23**. Fiecare înregistrare 
 | `autoconsum-institutii-publice` | Ministerul Investițiilor și Proiectelor Europene – MySMIS2021 | `COMPLETED` | 2026-08-18 | 2026-08-29 |
 | `pro-infra` | Ministerul Transporturilor și Infrastructurii | `APPROVED_SCHEME` | 2026-08-18 | 2026-08-29 |
 | `apeluri-gal` | Platforma oficială AFIR pentru Grupurile de Acțiune Locală | `UNCONFIRMED` | 2026-08-18 | 2026-08-29 |
-| `gal-afir-leader` | Platforma oficială AFIR pentru Grupurile de Acțiune Locală | `UNCONFIRMED` | 2026-08-18 | 2026-08-29 |
+| `gal-afir-leader` | Platforma oficială AFIR pentru Grupurile de Acțiune Locală | `UNCONFIRMED` | 2026-09-02 | 2026-08-29 |
 | `e-move-ro` | Ministerul Transporturilor și Infrastructurii / Portal Legislativ | `APPROVED_SCHEME` | 2026-08-10 | 2026-08-29 |
 | `pocidif-21` | Ministerul Investițiilor și Proiectelor Europene | `OPEN` | 2026-08-18 | 2026-08-29 |
 | `pnrr` | Ministerul Investițiilor și Proiectelor Europene – tabloul de bord PNRR | `UNCONFIRMED` | 2026-08-18 | 2026-08-23 |
@@ -329,12 +329,12 @@ Snapshot factual de bază al programelor: **2026-08-23**. Fiecare înregistrare 
 | Chei surse repo | `startup` |
 | Notes | Depunerea persoanelor juridice este închisă. Registrul nu consemnează separat finalizarea întregii proceduri. |
 
-## `femeia-antreprenor` — Programul Femeia Antreprenor
+## `femeia-antreprenor` — Femeia Antreprenor 2026 — ediție neconfirmată
 
 | Câmp | Valoare auditabilă |
 |---|---|
 | Stable program ID | `femeia-antreprenor` |
-| Denumire oficială | Programul Femeia Antreprenor |
+| Denumire oficială | Femeia Antreprenor 2026 — ediție neconfirmată |
 | Acronim | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
 | Autoritate | Ministerul Economiei – platforma oficială MINIMIS |
 | Fond / program | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
@@ -364,7 +364,7 @@ Snapshot factual de bază al programelor: **2026-08-23**. Fiecare înregistrare 
 | Implementare | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
 | Monitorizare | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
 | Surse oficiale | [Ordinea finală la evaluare Femeia Antreprenor 2024 — MINIMIS](https://minimis.imm.gov.ro/fa2024/ordine_evaluare) |
-| Latest official update | 2026-08-18 — [Femeia Antreprenor 2024 – ordinea finală la evaluare](https://minimis.imm.gov.ro/fa2024/ordine_evaluare) |
+| Latest official update | 2026-09-02 — [Femeia Antreprenor 2024 – ordinea finală la evaluare](https://minimis.imm.gov.ro/fa2024/ordine_evaluare) |
 | verifiedAt | 2026-08-29 |
 | Pagină oficială program/apel | [Ordinea finală la evaluare Femeia Antreprenor 2024 — MINIMIS](https://minimis.imm.gov.ro/fa2024/ordine_evaluare) (`program`, verificat 2026-08-29) |
 | Ghid | — Neidentificat separat în sursele oficiale înregistrate la 2026-08-29; nu se presupune inexistența documentului. |
@@ -761,17 +761,17 @@ Snapshot factual de bază al programelor: **2026-08-23**. Fiecare înregistrare 
 | Chei surse repo | `dr36-leader`, `leader-gal` |
 | Notes | Fiecare GAL are sesiuni distincte. La verificarea live din 22.08.2026, pagina agregată afișa 0 anunțuri și 0 apeluri în derulare; starea paginii rămâne UNCONFIRMED, nu OPEN. |
 
-## `gal-afir-leader` — LEADER / DR-36 prin Grupuri de Acțiune Locală
+## `gal-afir-leader` — GAL AFIR / DR-36 prin Grupuri de Acțiune Locală
 
 | Câmp | Valoare auditabilă |
 |---|---|
 | Stable program ID | `gal-afir-leader` |
-| Denumire oficială | LEADER / DR-36 prin Grupuri de Acțiune Locală |
+| Denumire oficială | GAL AFIR / DR-36 prin Grupuri de Acțiune Locală |
 | Acronim | LEADER / DR-36 |
 | Autoritate | Platforma oficială AFIR pentru Grupurile de Acțiune Locală |
 | Fond / program | Planul Strategic PAC 2023–2027 / FEADR |
 | Temei / document | Platforma AFIR GAL publică apeluri locale cu termene distincte; verificat la 29.08.2026 — [document oficial](https://gal.afir.ro/) |
-| Stadiu | UNCONFIRMED — Apeluri locale active – statutul și termenul se verifică pentru fiecare GAL |
+| Stadiu | UNCONFIRMED — Apelurile și termenele se verifică separat pentru fiecare GAL |
 | Sesiune | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
 | Data deschiderii | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
 | Deadline | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
@@ -796,7 +796,7 @@ Snapshot factual de bază al programelor: **2026-08-23**. Fiecare înregistrare 
 | Implementare | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
 | Monitorizare | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
 | Surse oficiale | [Platforma oficială AFIR GAL](https://gal.afir.ro/) |
-| Latest official update | 2026-08-18 — [Platforma AFIR GAL publică apeluri locale cu termene distincte; verificat la 29.08.2026](https://gal.afir.ro/) |
+| Latest official update | 2026-09-02 — [Platforma AFIR GAL publică apeluri locale cu termene distincte; verificat la 29.08.2026](https://gal.afir.ro/) |
 | verifiedAt | 2026-08-29 |
 | Pagină oficială program/apel | [Platforma oficială AFIR GAL](https://gal.afir.ro/) (`program`, verificat 2026-08-29) |
 | Ghid | [Ghidurile și anexele DR-36/LEADER, prin platforma AFIR GAL](https://gal.afir.ro/) (`guide:dr36-leader`, verificat 2026-08-29) |

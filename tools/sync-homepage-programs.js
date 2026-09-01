@@ -193,14 +193,17 @@ function replaceBlock(source, start, end, legacyPattern, markup, label) {
 
 function synchronizeAssets(source) {
   let output = source
-    .replace(/\s*<link\b[^>]*href=["']\/assets\/program-carousel\.css[^>]*>/gi, "")
-    .replace(/\s*<link\b[^>]*data-homepage-program-explorer-style=["']p1_08["'][^>]*>/gi, "")
-    .replace(/\s*<script\b[^>]*data-homepage-program-explorer-script=["']p1_08["'][^>]*><\/script>/gi, "");
+    .replace(/^[ \t]*<link\b[^>]*href=["']\/assets\/program-carousel\.css[^>]*>\r?\n?/gim, "")
+    .replace(/^[ \t]*<link\b[^>]*data-homepage-program-explorer-style=["']p1_08["'][^>]*>\r?\n?/gim, "")
+    .replace(/^[ \t]*<script\b[^>]*data-homepage-program-explorer-script=["']p1_08["'][^>]*><\/script>\r?\n?/gim, "");
+  // Normalize the three adjacent lines together. Other homepage generators
+  // may move head assets, but they must not change indentation or require a
+  // second synchronization pass.
   const insertion = `  ${CSS_LINK}\n  ${JS_LINK}\n`;
   if (/<script\b[^>]*src=["']\/assets\/lead-attribution\.js[^>]*>/i.test(output)) {
-    return output.replace(/(<script\b[^>]*src=["']\/assets\/lead-attribution\.js[^>]*>)/i, `${insertion}  $1`);
+    return output.replace(/^[ \t]*(<script\b[^>]*src=["']\/assets\/lead-attribution\.js[^>]*>)/im, `${insertion}  $1`);
   }
-  return output.replace(/<\/head>/i, `${insertion}</head>`);
+  return output.replace(/^[ \t]*<\/head>/im, `${insertion}</head>`);
 }
 
 function removeLegacyCarouselRuntime(source) {

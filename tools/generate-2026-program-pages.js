@@ -106,7 +106,8 @@ function renderPage(program, content) {
   <title>${e(program.metaTitle)}</title><meta name="description" content="${e(program.metaDescription)}">
   <meta name="robots" content="index, follow"><meta name="seo-depth" content="true"><meta name="seo-min-words" content="700"><meta name="seo-min-faq" content="6">
   <link rel="canonical" href="${canonical}"><link rel="icon" href="/favicon.png">
-  <meta property="og:type" content="website"><meta property="og:locale" content="ro_RO"><meta property="og:title" content="${e(program.metaTitle)}"><meta property="og:description" content="${e(program.metaDescription)}"><meta property="og:url" content="${canonical}"><meta property="og:image" content="${SITE}/og-image.jpg"><meta name="twitter:card" content="summary_large_image">
+  <meta property="og:type" content="website"><meta property="og:locale" content="ro_RO"><meta property="og:title" content="${e(program.metaTitle)}"><meta property="og:description" content="${e(program.metaDescription)}"><meta property="og:url" content="${canonical}"><meta property="og:image" content="${SITE}/og-image.jpg"><meta property="og:image:alt" content="${e(`${program.shortName} — FABER`)}">
+  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${e(program.metaTitle)}"><meta name="twitter:description" content="${e(program.metaDescription)}"><meta name="twitter:image" content="${SITE}/og-image.jpg"><meta name="twitter:image:alt" content="${e(`${program.shortName} — FABER`)}">
   <link rel="stylesheet" href="/assets/seo-hub.css"><link rel="stylesheet" href="/assets/program-showcase-2026.css?v=20260829-2">
   <script type="application/ld+json">${JSON.stringify(schema).replace(/</g, "\\u003c")}</script>
 </head><body class="program-showcase-page page-family-program" data-page-type="program" data-program-id="${e(program.id)}">

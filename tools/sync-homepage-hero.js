@@ -127,7 +127,10 @@ function syncHomepageHero(source, programs) {
     .replace(/\s*<link rel="stylesheet" href="\/assets\/homepage-hero\.css[^>]*>/g, "")
     .replace(/\s*<script\b[^>]*data-homepage-hero-script[^>]*><\/script>/gi, "")
     .replace(new RegExp(`\\s*<style id="${STYLE_ID}">[\\s\\S]*?<\\/style>`), "");
-  const criticalMarkup = `  <style id="${STYLE_ID}">\n${criticalCss}\n  </style>\n`;
+  // Keep the managed block left-aligned. Other homepage generators normalize
+  // head assets to this form, so a later --check must not oscillate on two
+  // insignificant spaces before the opening tag.
+  const criticalMarkup = `<style id="${STYLE_ID}">\n${criticalCss}\n  </style>\n`;
   const runtimeMarkup = '  <script src="/assets/homepage-hero.js?v=20260901-5" defer data-homepage-hero-script="p1_21"></script>\n';
   output = /<style id="homepage-faq-expand-css">/.test(output)
     ? output.replace(/(<style id="homepage-faq-expand-css">)/, `${criticalMarkup}  $1`)

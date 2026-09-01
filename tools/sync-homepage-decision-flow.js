@@ -219,11 +219,11 @@ function synchronize(source, programs) {
     .replace(/^[ \t]*<script\b[^>]*data-homepage-decision-flow-script=["'][^"']+["'][^>]*><\/script>\r?\n?/gim, "");
   const homepageHeroStyle = /\s*(?=<style\b[^>]*id=["']homepage-hero-critical-css["'][^>]*>)/i;
   const longFormAsset = /\s*(?=<link\b[^>]*data-long-form-layout-style=["'][^"']+["'][^>]*>)/i;
-  // Keep the flow assets before the long-form bundle when it exists. The hero
-  // generator can move its critical CSS later in the head, so using that block
-  // as the primary anchor made the two generators oscillate between builds.
-  if (longFormAsset.test(output)) output = output.replace(longFormAsset, `${newline}  ${STYLE}${newline}  ${SCRIPT}${newline}  ${FORM_ASSETS}${newline}  `);
-  else if (homepageHeroStyle.test(output)) output = output.replace(homepageHeroStyle, `${newline}  ${STYLE}${newline}  ${SCRIPT}${newline}  ${FORM_ASSETS}${newline}  `);
+  // The hero generator owns the critical block's final position. Anchoring the
+  // flow assets immediately before it makes both generators converge even
+  // when the long-form bundle is also present on the homepage.
+  if (homepageHeroStyle.test(output)) output = output.replace(homepageHeroStyle, `${newline}  ${STYLE}${newline}  ${SCRIPT}${newline}  ${FORM_ASSETS}${newline}  `);
+  else if (longFormAsset.test(output)) output = output.replace(longFormAsset, `${newline}  ${STYLE}${newline}  ${SCRIPT}${newline}  ${FORM_ASSETS}${newline}  `);
   else output = output.replace(/<\/head>/i, `  ${STYLE}${newline}  ${SCRIPT}${newline}  ${FORM_ASSETS}${newline}</head>`);
   return removeLegacyRuntime(output);
 }

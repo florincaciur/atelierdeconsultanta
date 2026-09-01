@@ -32,9 +32,15 @@ const KNOWS_ABOUT = [
   "fonduri europene",
   "finanțări nerambursabile",
   "AFIR",
+  "DR 12 AFIR",
+  "DR 14 AFIR",
+  "GAL AFIR și LEADER / DR-36",
+  "calculator dimensiune economică SO",
   "PNRR",
   "Start-Up Nation",
   "Digitalizare IMM",
+  "Programul Regional Nord-Est",
+  "proiectare și implementare fonduri europene",
   "consultanță IMM"
 ];
 
