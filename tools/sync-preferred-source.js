@@ -118,7 +118,13 @@ function synchronizeFile(relativePath, partial, options = {}) {
 
   const headStart = /<head\b[^>]*>/i.exec(after);
   if (!headStart) throw new Error(`${relativePath}: lipsește <head>.`);
-  const headInsertion = headStart.index + headStart[0].length;
+  const googleTag = /<!-- Google tag \(gtag\.js\) -->[\s\S]*?<!-- \/Google tag \(gtag\.js\) -->/i.exec(after);
+  // Keep Preferred Sources after the Google tag when it is present. Both
+  // synchronizers then converge on the same order instead of moving their
+  // managed block to the first position in <head> on every build.
+  const headInsertion = googleTag && googleTag.index > headStart.index
+    ? googleTag.index + googleTag[0].length
+    : headStart.index + headStart[0].length;
   const headTail = after.slice(headInsertion)
     .replace(/^(?:[ \t]*\r?\n)+/, "")
     .replace(/^[ \t]+(?=<)/, "");
