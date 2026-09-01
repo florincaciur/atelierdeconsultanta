@@ -45,7 +45,9 @@ try {
       tocOpen: document.querySelector("#nav-homepage-toc-trigger")?.getAttribute("aria-expanded") === "true",
       familyDescription: document.querySelectorAll(".homepage-program-hubs").length,
       methodVisible: Array.from(document.querySelectorAll("[data-homepage-method-frame]")).filter((node) => getComputedStyle(node).display !== "none").length,
-      explorerVisible: Array.from(document.querySelectorAll("[data-homepage-explorer-frame]")).filter((node) => getComputedStyle(node).display !== "none").length
+      explorerVisible: Array.from(document.querySelectorAll("[data-homepage-explorer-frame]")).filter((node) => getComputedStyle(node).display !== "none").length,
+      sectionHeights: Array.from(document.querySelectorAll("#main-content > section")).map((section) => ({ id: section.id, height: Math.round(section.getBoundingClientRect().height) })),
+      contactFormOpen: document.querySelector(".im-contact-disclosure")?.open
     }));
     assert(metrics.overflow <= 0, `${viewport.width}px: scroll orizontal`);
     assert.equal(metrics.forms, 1);
@@ -56,6 +58,10 @@ try {
     assert.equal(metrics.familyDescription, 0);
     assert.equal(metrics.methodVisible, 1);
     assert.equal(metrics.explorerVisible, 1);
+    assert.equal(metrics.contactFormOpen, false, "formularul trebuie să fie restrâns implicit");
+    if (viewport.width === 1366) {
+      for (const section of metrics.sectionHeights) assert(section.height <= viewport.height * 1.1, `${section.id}: cadrul depășește o înălțime de ecran (${section.height}px)`);
+    }
     const sceneFits = await page.locator('.hero-program-scene.is-active svg').evaluate(node => node.getBoundingClientRect().height <= node.parentElement.getBoundingClientRect().height + 1);
     assert(sceneFits, `${viewport.width}px: ilustrația trebuie să încapă integral în cadru`);
     if (viewport.width === 390 || viewport.width === 1366) assert(metrics.ctaBottom <= viewport.height, `${viewport.width}px: CTA-ul principal este sub fold`);
@@ -74,15 +80,8 @@ try {
     assert.equal(await choices.nth(1).getAttribute("aria-pressed"), "true");
     await page.locator("[data-priority-next]").click();
     assert.equal((await page.locator("[data-priority-counter]").textContent()).trim(), `2 din ${homepagePrograms.length}`);
-    // Scrolling back from the catalogue now enters the last method stage.
-    // Select a known starting stage before testing the manual next control.
+    // Etapele se schimbă în același cadru; pagina nu mai creează un scroll artificial.
     await page.locator("#homepage-method-tab-1").click();
-    await page.waitForFunction(() => {
-      const method = document.querySelector("#homepage-method");
-      if (!method.classList.contains("im-scroll-enabled")) return true;
-      const travel = method.offsetHeight - (innerHeight - 80);
-      return Math.abs(method.getBoundingClientRect().top - (80 - travel * .06)) < 5;
-    });
     await page.locator("[data-homepage-method-next]").click();
     assert.match((await page.locator("[data-homepage-method-status]").textContent()).trim(), /^Etapa 2 din 5:/);
     assert.equal(await page.locator("[data-homepage-method]").getAttribute("data-active-index"), "1");
@@ -94,21 +93,7 @@ try {
     assert.match((await page.locator("[data-homepage-explorer-status]").textContent()).trim(), /^Secțiunea 2 din 4:/);
     assert.equal(await page.locator("[data-homepage-explorer-frame]").evaluateAll((frames) => frames.filter((node) => getComputedStyle(node).display !== "none").length), 1);
     if (viewport.width === 1366) {
-      // A reload clears any in-flight manual scroll; native scrolling must
-      // move the sequence in both directions while the content stays pinned.
-      await page.reload({ waitUntil: "domcontentloaded" });
-      for (const [progress, expected] of [[.7, 3], [.25, 1]]) {
-        await page.evaluate((fraction) => {
-          const method = document.querySelector("#homepage-method");
-          const start = scrollY + method.getBoundingClientRect().top - 80;
-          const travel = method.offsetHeight - (innerHeight - 80);
-          scrollTo({ top: start + travel * fraction, behavior: "instant" });
-        }, progress);
-        await page.waitForFunction((index) => document.querySelector(`[data-homepage-method-tab][data-method-index="${index}"]`).getAttribute("aria-selected") === "true", expected);
-        assert.equal(await page.locator(".im-method-sculpture .im-slab.is-active span").textContent(), String(expected + 1).padStart(2, "0"));
-        const pinnedTop = await page.locator(".homepage-method-layout").evaluate(node => node.getBoundingClientRect().top);
-        assert(Math.abs(pinnedTop - 80) < 2, "metoda trebuie să rămână vizibilă la scroll");
-      }
+      assert.equal(await page.locator("#homepage-method").evaluate(node => node.classList.contains("im-scroll-enabled")), false, "metoda nu trebuie să creeze scroll artificial");
       await page.locator("[data-im-motion]").click();
       assert.equal(await page.locator("[data-im-motion]").getAttribute("aria-pressed"), "true");
       assert.equal(await page.locator("#homepage-method").evaluate(node => node.classList.contains("im-scroll-enabled")), false);
@@ -130,6 +115,7 @@ try {
     await route.fulfill({ status: submissions.length === 1 ? 503 : 200, contentType: "application/json", body: JSON.stringify(submissions.length === 1 ? { success: false, message: "Eroare simulată pentru verificarea reîncercării." } : { success: true, leadId: "homepage-test-only" }) });
   });
   await formPage.goto(baseUrl, { waitUntil: "domcontentloaded" });
+  await formPage.locator(".im-contact-disclosure > summary").click();
   assert.equal(await formPage.locator('.contact-no-js-submit').isVisible(), false, "submit-ul de rezervă nu trebuie să dubleze fluxul cu JavaScript");
   await formPage.locator('[data-hero-program-item][data-program-id="e-drive"]').tap();
   assert.equal(await formPage.locator('[data-program-scene]:not([hidden])').getAttribute('data-program-scene'), 'e-drive', "atingerea selectează scena fără a deschide pagina programului");
@@ -175,7 +161,7 @@ try {
   assert.equal(await noScriptPage.locator("#hero .btn-primary").isVisible(), true);
   assert.equal(await noScriptPage.locator("[data-im-motion]").isVisible(), false);
   assert.equal(await noScriptPage.locator("[data-hero-program-item]").first().getAttribute("role"), null, "fără JavaScript măsurile rămân linkuri obișnuite");
-  assert.equal(await noScriptPage.locator("#contact-triage-form [data-form-step='2']").isVisible(), true);
+  assert.equal(await noScriptPage.locator("#contact-triage-form").count(), 1, "formularul trebuie să rămână în HTML fără JavaScript");
   assert.equal(await noScriptPage.locator("[data-homepage-method-frame]").evaluateAll(nodes => nodes.filter(node => getComputedStyle(node).display !== "none").length), 5);
   assert.equal(await noScriptPage.locator("[data-homepage-explorer-frame]").evaluateAll(nodes => nodes.filter(node => getComputedStyle(node).display !== "none").length), 4);
   await noScriptPage.close();
@@ -184,4 +170,4 @@ try {
   await new Promise((resolve) => server.close(resolve));
 }
 
-console.log("Homepage responsive PASS: 320, 390, 768 și 1366 px; carusel, scroll în ambele sensuri, mișcare redusă, preferință persistentă și fallback fără JavaScript.");
+console.log("Homepage responsive PASS: 320, 390, 768 și 1366 px; cinci cadre compacte, animație mobilă, mișcare redusă, preferință persistentă și fallback fără JavaScript.");

@@ -92,7 +92,7 @@ async function inspect(page, route, viewport) {
     document.querySelectorAll("main details").forEach((detail) => { detail.open = true; });
 
     const clippedText = [];
-    for (const element of document.querySelectorAll("main h1,main h2,main h3,main h4,main p,main li,main a,main button,main label,main summary,main dt,main dd,main strong,main small")) {
+    for (const element of document.querySelectorAll("main h1,main h2,main h3,main h4,main p,main li,main a,main button,main label,main summary,main dt,main dd,main strong,main small,[data-program-visual] h1,[data-program-visual] h2,[data-program-visual] h3,[data-program-visual] p,[data-program-visual] a,[data-program-visual] button,[data-program-visual] strong,[data-program-visual] small")) {
       if (!visible(element) || intentionalScroller(element) || element.closest("[aria-hidden='true']")) continue;
       const style = getComputedStyle(element);
       const widthClipped = element.scrollWidth > element.clientWidth + 2 && ["hidden", "clip"].includes(style.overflowX);
@@ -102,7 +102,7 @@ async function inspect(page, route, viewport) {
     }
 
     const outsideViewport = [];
-    for (const element of document.querySelectorAll("main :where(section,article,aside,figure,form,fieldset,h1,h2,h3,p,a,button,svg,img)")) {
+    for (const element of document.querySelectorAll("main :where(section,article,aside,figure,form,fieldset,h1,h2,h3,p,a,button,svg,img),[data-program-visual],[data-program-visual] :where(h1,h2,h3,p,a,button,svg,img)")) {
       if (!visible(element) || intentionalScroller(element) || element.closest("[aria-hidden='true']")) continue;
       const rect = element.getBoundingClientRect();
       if (rect.left < -2 || rect.right > innerWidth + 2) outsideViewport.push({ tag: element.tagName.toLowerCase(), className: String(element.className || "").slice(0, 90), text: label(element), left: Math.round(rect.left), right: Math.round(rect.right) });
@@ -110,7 +110,7 @@ async function inspect(page, route, viewport) {
     }
 
     const svgIssues = [];
-    const visibleSvgs = [...document.querySelectorAll("main svg")].filter(visible);
+    const visibleSvgs = [...document.querySelectorAll("main svg,[data-program-visual] svg")].filter(visible);
     for (const svg of visibleSvgs) {
       const rect = svg.getBoundingClientRect();
       const viewBox = (svg.getAttribute("viewBox") || "").trim().split(/\s+/u).map(Number);
@@ -129,7 +129,7 @@ async function inspect(page, route, viewport) {
 
     const contrastIssues = [];
     let contrastChecks = 0;
-    for (const element of document.querySelectorAll("main h1,main h2,main h3,main h4,main p,main li,main a,main button,main label,main summary,main dt,main dd,main span,main strong,main small,main .program-card__number")) {
+    for (const element of document.querySelectorAll("main h1,main h2,main h3,main h4,main p,main li,main a,main button,main label,main summary,main dt,main dd,main span,main strong,main small,main .program-card__number,[data-program-visual] h1,[data-program-visual] h2,[data-program-visual] h3,[data-program-visual] p,[data-program-visual] a,[data-program-visual] button,[data-program-visual] span,[data-program-visual] strong,[data-program-visual] small")) {
       if (!visible(element) || element.closest("svg,[aria-hidden='true']") || intentionalScroller(element)) continue;
       const directText = [...element.childNodes].filter((node) => node.nodeType === Node.TEXT_NODE).map((node) => node.textContent || "").join(" ").trim();
       if (!directText) continue;

@@ -20,6 +20,11 @@
     let activeIndex = 0;
     let pointerStart = null;
     let pointerTimer = null;
+    let autoTimer = null;
+    let autoVisible = false;
+    let autoStopped = false;
+    const mobileQuery = window.matchMedia("(max-width: 999px)");
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
     const labelAt = (index) => options.labels[index] || tabs[index].textContent.trim();
 
@@ -32,6 +37,11 @@
     }
 
     function reportInteraction(direction) {
+      if (direction && direction !== "auto") {
+        autoStopped = true;
+        window.clearTimeout(autoTimer);
+      }
+      if (direction === "auto") return;
       if (!window.FaberAnalytics || typeof window.FaberAnalytics.track !== "function") return;
       window.FaberAnalytics.track("carousel_interaction", {
         cta_id: options.analyticsId,
@@ -39,6 +49,14 @@
         step: direction,
         field_name_generic: `frame_${activeIndex + 1}`
       });
+    }
+
+    function scheduleAuto() {
+      window.clearTimeout(autoTimer);
+      if (!options.autoCycle || !autoVisible || autoStopped || !mobileQuery.matches || reducedMotion.matches || document.hidden) return;
+      autoTimer = window.setTimeout(() => {
+        update(activeIndex + 1, { announce: false, interaction: "auto" });
+      }, 3600);
     }
 
     function update(nextIndex, settings) {
@@ -84,6 +102,7 @@
       root.dispatchEvent(new CustomEvent("faber:sequence-change", {
         detail: { index: activeIndex, interaction: config.interaction }
       }));
+      scheduleAuto();
     }
 
     function move(delta, interaction) {
@@ -124,6 +143,8 @@
 
     viewport.addEventListener("pointerdown", (event) => {
       if (event.pointerType === "mouse" && event.button !== 0) return;
+      autoStopped = true;
+      window.clearTimeout(autoTimer);
       pointerStart = { id: event.pointerId, x: event.clientX, y: event.clientY };
       viewport.setPointerCapture?.(event.pointerId);
     });
@@ -145,6 +166,20 @@
       new window.ResizeObserver(() => window.requestAnimationFrame(positionIndicator)).observe(tablist);
     }
 
+    if (options.autoCycle && "IntersectionObserver" in window) {
+      new window.IntersectionObserver((entries) => {
+        autoVisible = Boolean(entries[0]?.isIntersecting);
+        scheduleAuto();
+      }, { threshold: .45 }).observe(root);
+      mobileQuery.addEventListener("change", scheduleAuto);
+      reducedMotion.addEventListener("change", scheduleAuto);
+      document.addEventListener("visibilitychange", scheduleAuto);
+      root.addEventListener("focusin", () => {
+        autoStopped = true;
+        window.clearTimeout(autoTimer);
+      }, { once: true });
+    }
+
     root.classList.add("is-enhanced");
     update(0, { announce: false });
   }
@@ -162,6 +197,7 @@
       nextSelector: "[data-homepage-method-next]",
       statusLabel: "Etapa",
       analyticsId: "homepage_method",
+      autoCycle: true,
       labels: ["Solicitant", "Program", "Punctaj", "Buget", "Decizie"],
       markerPoints: [50, 185, 320, 455, 590].map((x) => ({ x, y: 70 }))
     }));

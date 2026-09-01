@@ -29,7 +29,7 @@ for (const route of routes()) {
   assert.equal($("link[rel='canonical']").length, 1, `${route}: canonical invalid`);
   assert.equal($("main").length, 1, `${route}: trebuie să existe exact un main`);
   if (programSet.has(route)) {
-    const visual = $("main [data-program-visual='immersive-verification']");
+    const visual = $("[data-program-visual='immersive-verification']");
     assert.equal(visual.length, 1, `${route}: bannerul imersiv de program lipsește sau este duplicat`);
     assert.equal(visual.find("[data-program-step]").length, 4, `${route}: traseul interactiv trebuie să aibă patru repere`);
     const source = visual.find(".program-visual__footer a[href^='https://']");

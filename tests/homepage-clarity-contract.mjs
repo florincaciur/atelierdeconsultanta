@@ -25,13 +25,14 @@ assert.match($("#homepage-method").text(), /Verificăm în sursa oficială scopu
 assert.equal($("#homepage-explorer-title").text().trim(), "Alege informația de care ai nevoie");
 assert.equal($("#homepage-contact-title").text().trim(), "Spune-ne solicitantul, localitatea și investiția");
 assert.equal(config.reviewedAt, "2026-08-31", "revizia copy-ului homepage trebuie datată");
-assert.equal($("#hero.im-hero").attr("data-homepage-revision"), "immersive-20260831-4", "build-ul trebuie să păstreze designul imersiv construit azi");
+assert.equal($("#hero.im-hero").attr("data-homepage-revision"), "immersive-20260901-5", "build-ul trebuie să păstreze designul imersiv construit azi");
 assert.equal($("#hero .im-lead").length, 1, "introducerea imersivă trebuie să rămână compactă");
 assert.equal($("#hero .im-about .im-detail-copy").length, 1, "explicația completă rămâne în HTML și poate fi extinsă");
 assert.match($("#hero .im-lead").text(), /Verificare prudentă, documentată și interdisciplinară — consultanță și proiectare — înainte de dosar\./u);
 assert.equal($("[data-program-scene]").length, 10);
 assert.equal($(".im-method-sculpture .im-slab").length, 5);
 assert.equal($("#homepage-contact #contact-triage-form").length, 1);
+assert.equal($("#homepage-contact .im-contact-disclosure").attr("open"), undefined, "formularul trebuie să fie restrâns implicit pentru a păstra al cincilea cadru compact");
 
 const requiredLinks = [
   "/verificare-eligibilitate-fonduri-europene",
@@ -77,12 +78,12 @@ assert.equal($("meta[property='og:url']").attr("content"), "https://atelierdecon
 assert.equal($("script[type='application/ld+json']").length > 0, true, "lipsește JSON-LD");
 $("script[type='application/ld+json']").each((_, script) => assert.doesNotThrow(() => JSON.parse($(script).text()), "JSON-LD invalid"));
 
-assert.equal(verifyHomepageContent(html, html).revision, "immersive-20260831-4");
+assert.equal(verifyHomepageContent(html, html).revision, "immersive-20260901-5");
 assert.equal(verifyHomepageContent(html, html).assets.length, 9);
-assert.throws(() => verifyHomepageContent(html.replace("immersive-20260831-4\"", "old\""), html));
+assert.throws(() => verifyHomepageContent(html.replace("immersive-20260901-5\"", "old\""), html));
 assert.throws(() => verifyHomepageContent(html.replace("Alege informația de care ai nevoie", "Ce oferă FABER și cum verifică informația"), html));
 assert.throws(() => verifyHomepageContent(html.replace("data-homepage-method-indicator", "data-old-indicator"), html));
-assert.throws(() => verifyHomepageContent(html.replace("homepage-decision-flow.js?v=20260831-4", "homepage-decision-flow.js?v=20260831-1"), html));
+assert.throws(() => verifyHomepageContent(html.replace("homepage-decision-flow.js?v=20260901-5", "homepage-decision-flow.js?v=20260901-1"), html));
 assert.throws(() => verifyHomepageContent(html.replace("data-program-scene=", "data-old-scene="), html));
 assert.throws(() => verifyHomepageContent(html.replace("data-immersive-style", "data-old-style"), html));
 assert.throws(() => verifyHomepageContent(html.replace('id="contact-triage-form"', 'id="old-form"'), html));

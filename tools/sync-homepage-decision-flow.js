@@ -14,9 +14,9 @@ const CHECK_ONLY = process.argv.includes("--check");
 const HERO_END = "<!-- HOMEPAGE_DECISION_HERO_END -->";
 const START = "<!-- P1_21_HOMEPAGE_FLOW_START -->";
 const END = "<!-- P1_21_HOMEPAGE_FLOW_END -->";
-const STYLE = '<link rel="stylesheet" href="/assets/homepage-decision-flow.css?v=20260831-4" data-homepage-decision-flow-style="p1_22">';
-const SCRIPT = '<script src="/assets/homepage-decision-flow.js?v=20260831-4" defer="" data-homepage-decision-flow-script="p1_22"></script>';
-const FORM_ASSETS = '<link rel="stylesheet" href="/assets/contact-triage.css?v=20260831-3" data-home-contact-style>\n  <script src="/assets/contact-triage.js?v=20260831-3" defer data-home-contact-script></script>';
+const STYLE = '<link rel="stylesheet" href="/assets/homepage-decision-flow.css?v=20260901-5" data-homepage-decision-flow-style="p1_22">';
+const SCRIPT = '<script src="/assets/homepage-decision-flow.js?v=20260901-5" defer="" data-homepage-decision-flow-script="p1_22"></script>';
+const FORM_ASSETS = '<link rel="stylesheet" href="/assets/contact-triage.css?v=20260831-3" data-home-contact-style="">\n  <script src="/assets/contact-triage.js?v=20260831-3" defer="" data-home-contact-script=""></script>';
 
 function esc(value) {
   return String(value ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
@@ -133,7 +133,7 @@ function renderContactExperience(programs) {
   return `<section id="homepage-contact" class="homepage-flow-section" aria-labelledby="homepage-contact-title"><div class="homepage-flow-inner homepage-contact-card">
     <div class="homepage-contact-copy"><span class="homepage-eyebrow">Următorul pas</span><h2 id="homepage-contact-title">${esc(item.title)}</h2><p>${esc(item.text)}</p><div class="homepage-contact-direct" aria-label="Contact direct">${phones}<a href="${esc(item.email.href)}" data-analytics-event="contact_email" data-analytics-component="homepage_final_contact" data-analytics-cta-id="homepage_email"><span>Email</span><strong>${esc(item.email.label)}</strong></a></div></div>
     <div class="homepage-contact-actions"><span class="homepage-contact-actions__label">Începe cu datele esențiale</span><a class="homepage-flow-action" href="${esc(item.primaryHref)}" data-analytics-event="cta_click" data-analytics-component="homepage_final_cta" data-analytics-cta-id="homepage_final_project_check" data-analytics-target="/contact" data-analytics-cta-view="true" data-analytics-copy-variant="p1_22">${esc(item.primaryLabel)} <span aria-hidden="true">→</span></a><a class="homepage-contact-secondary" href="/verificare-eligibilitate-fonduri-europene">Vezi ce date pregătești</a></div>
-  </div><div class="homepage-flow-inner im-contact-form-wrap">${renderContactTriageLayout(programs, {}, { pagePath: "/" })}</div></section>`;
+  </div><details class="homepage-flow-inner im-contact-disclosure"><summary><span><strong>Trimite datele proiectului</strong><small>Formular scurt · răspuns după verificarea informațiilor transmise</small></span><span aria-hidden="true">Deschide formularul</span></summary><div class="im-contact-form-wrap">${renderContactTriageLayout(programs, {}, { pagePath: "/" })}</div></details></section>`;
 }
 
 function renderCardSection(id, eyebrow, title, text, items, gridClass) {
@@ -158,7 +158,10 @@ function renderContact() {
 }
 
 function normalizeOwnedBooleanAttributes(markup) {
-  return markup.replace(/\s((?:data-[a-z0-9-]+|hidden|inert))(?=[\s>])/giu, ' $1=""');
+  return markup.replace(
+    /\s((?:data-[a-z0-9-]+|allowfullscreen|async|autofocus|autoplay|checked|controls|default|defer|disabled|formnovalidate|hidden|inert|ismap|itemscope|loop|multiple|muted|nomodule|novalidate|open|playsinline|readonly|required|reversed|selected))(?=[\s>])/giu,
+    ' $1=""'
+  );
 }
 
 function renderFlow(programs) {
@@ -216,8 +219,11 @@ function synchronize(source, programs) {
     .replace(/^[ \t]*<script\b[^>]*data-homepage-decision-flow-script=["'][^"']+["'][^>]*><\/script>\r?\n?/gim, "");
   const homepageHeroStyle = /\s*(?=<style\b[^>]*id=["']homepage-hero-critical-css["'][^>]*>)/i;
   const longFormAsset = /\s*(?=<link\b[^>]*data-long-form-layout-style=["'][^"']+["'][^>]*>)/i;
-  if (homepageHeroStyle.test(output)) output = output.replace(homepageHeroStyle, `${newline}  ${STYLE}${newline}  ${SCRIPT}${newline}  ${FORM_ASSETS}${newline}  `);
-  else if (longFormAsset.test(output)) output = output.replace(longFormAsset, `${newline}  ${STYLE}${newline}  ${SCRIPT}${newline}  ${FORM_ASSETS}${newline}  `);
+  // Keep the flow assets before the long-form bundle when it exists. The hero
+  // generator can move its critical CSS later in the head, so using that block
+  // as the primary anchor made the two generators oscillate between builds.
+  if (longFormAsset.test(output)) output = output.replace(longFormAsset, `${newline}  ${STYLE}${newline}  ${SCRIPT}${newline}  ${FORM_ASSETS}${newline}  `);
+  else if (homepageHeroStyle.test(output)) output = output.replace(homepageHeroStyle, `${newline}  ${STYLE}${newline}  ${SCRIPT}${newline}  ${FORM_ASSETS}${newline}  `);
   else output = output.replace(/<\/head>/i, `  ${STYLE}${newline}  ${SCRIPT}${newline}  ${FORM_ASSETS}${newline}</head>`);
   return removeLegacyRuntime(output);
 }

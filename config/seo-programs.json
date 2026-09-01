@@ -2696,7 +2696,7 @@
           "Solicitant",
           "Beneficiar și consultant",
           "La verificarea inițială și depunere.",
-          "Acte juridice, fiscale și declaratii."
+          "Acte juridice, fiscale și declarații."
         ],
         [
           "Exploatatie",
@@ -2741,7 +2741,7 @@
       ],
       "commonMistakes": [
         "Calcul SO facut fără documentele care susțin culturile sau efectivele declarate.",
-        "Utilaje prea mari pentru exploatația existenta sau pentru activitatea propusa.",
+        "Utilaje prea mari pentru exploatația existentă sau pentru activitatea propusa.",
         "Documente pentru teren, animale sau spații care expira înainte de perioada ceruta.",
         "Buget care ignora contribuția proprie, TVA sau costurile neeligibile.",
         "Punctaj estimat pe intentii, nu pe criterii demonstrabile.",
@@ -2759,8 +2759,8 @@
       "guideCtaLabel": "Sursa AFIR",
       "contentSections": [
         {
-          "title": "Cum verificam eligibilitatea pentru DR12",
-          "body": "Incepem cu solicitantul și cu exploatația, nu cu lista de cumpărături. Varsta, istoricul instalarii, forma juridică, dimensiunea economică și documentele APIA sau ANSVSA stabilesc dacă proiectul poate intra în analiza. Abia apoi verificam utilajele, constructiile, dotările și serviciile care pot fi incluse în buget."
+          "title": "Cum verificăm eligibilitatea pentru DR12",
+          "body": "Incepem cu solicitantul și cu exploatația, nu cu lista de cumpărături. Varsta, istoricul instalarii, forma juridică, dimensiunea economică și documentele APIA sau ANSVSA stabilesc dacă proiectul poate intra în analiza. Abia apoi verificăm utilajele, constructiile, dotările și serviciile care pot fi incluse în buget."
         },
         {
           "title": "De ce este important calculul SO",
@@ -2772,7 +2772,7 @@
         },
         {
           "title": "Rolul surselor oficiale",
-          "body": "Pagină folosește ghidul consultativ AFIR ca reper de lucru. Pentru decizia finală de aplicare verificam documentul oficial aplicabil, anuntul sesiunii, anexele și eventualele clarificări publicate de autoritate."
+          "body": "Pagină folosește ghidul consultativ AFIR ca reper de lucru. Pentru decizia finală de aplicare verificăm documentul oficial aplicabil, anuntul sesiunii, anexele și eventualele clarificări publicate de autoritate."
         }
       ],
       "decisionIntro": "DR12 merită pregătit când solicitantul și exploatația pot fi demonstrate documentar, investiția este proportionala cu activitatea agricolă, iar contribuția proprie este realistă.",
@@ -2834,7 +2834,7 @@
         "Riscurile cresc când proiectul incearca sa forteze activitati care nu sunt documentate."
       ],
       "steps": [
-        "Calculam dimensiunea economică și verificam încadrarea fermei.",
+        "Calculam dimensiunea economică și verificăm încadrarea fermei.",
         "Stabilim investițiile permise și eliminam costurile fragile.",
         "Pregatim documentele pentru solicitant, exploatație și amplasament.",
         "Construim bugetul și scenariul de contribuție proprie.",
@@ -2847,7 +2847,7 @@
       ],
       "examples": [
         "Fermă vegetala mica ce solicită echipamente adaptate culturilor declarate și suprafetelor lucrate.",
-        "Exploatatie zootehnica mica ce pregătește dotări legate de cresterea și ingrijirea animalelor.",
+        "Exploatatie zootehnica mica ce pregătește dotări legate de creșterea și ingrijirea animalelor.",
         "Fermă mixta care are nevoie de modernizare punctuala și poate acoperi contribuția proprie."
       ],
       "faq": [
@@ -2919,7 +2919,7 @@
         },
         {
           "title": "Cum se decide dacă investiția este proportionala",
-          "body": "Pentru DR14 nu este suficient ca solicitantul sa se incadreze formal ca fermă mica. Analiza trebuie să arate ca utilajele, dotările sau lucrarile cerute pot fi folosite de exploatația existenta și ca nu genereaza capacitati greu de justificat. În practică verificam suprafețele, efectivele, fluxul de lucru, sezonul agricol, operatorii disponibili și costurile de exploatare după achiziție. Dacă investiția depaseste nevoia reală, proiectul trebuie redus sau mutat către un apel mai potrivit."
+          "body": "Pentru DR14 nu este suficient ca solicitantul sa se încadreze formal ca fermă mica. Analiza trebuie să arate ca utilajele, dotările sau lucrările cerute pot fi folosite de exploatația existentă și ca nu generează capacități greu de justificat. În practică verificăm suprafețele, efectivele, fluxul de lucru, sezonul agricol, operatorii disponibili și costurile de exploatare după achiziție. Dacă investiția depășește nevoia reală, proiectul trebuie redus sau mutat către un apel mai potrivit."
         }
       ],
       "finalCtaText": "Verifică documentele exploatației și proporționalitatea investiției înainte de construirea bugetului DR14.",
@@ -2990,7 +2990,7 @@
           "Solicitant",
           "Beneficiar",
           "La verificare și depunere.",
-          "Acte juridice, fiscale și declaratii."
+          "Acte juridice, fiscale și declarații."
         ],
         [
           "Exploatatie",
@@ -3753,7 +3753,7 @@
           "Firmă și solicitant",
           "Beneficiar",
           "La verificarea inițială.",
-          "Acte juridice, fiscale, declaratii și date reprezentant."
+          "Acte juridice, fiscale, declarații și date reprezentant."
         ],
         [
           "Activitate",
@@ -3861,7 +3861,7 @@
         },
         {
           "title": "Ce rămâne de verificat în ghidul activ",
-          "body": "Pentru o sesiune noua verificam bugetul, pilonii, beneficiarii, codurile CAEN, cheltuielile, locurile de munca, calendarul, forma aportului propriu și obligatiile de monitorizare."
+          "body": "Pentru o sesiune noua verificăm bugetul, pilonii, beneficiarii, codurile CAEN, cheltuielile, locurile de munca, calendarul, forma aportului propriu și obligatiile de monitorizare."
         }
       ],
       "finalCtaText": "Verifică scenariul Start-Up Nation",
@@ -4056,7 +4056,7 @@
       "h1": "Digitalizare IMM: hub pentru proiecte, buget IT și consultanță",
       "hideHeroSummary": true,
       "hideFamilyCards": true,
-      "policyContribution": "programul susține transformarea digitala a IMM-urilor, automatizarea proceselor, cresterea eficientei și utilizarea unor instrumente digitale măsurabile.",
+      "policyContribution": "programul susține transformarea digitala a IMM-urilor, automatizarea proceselor, creșterea eficientei și utilizarea unor instrumente digitale măsurabile.",
       "audience": [
         "IMM-uri care vor ERP, CRM, e-commerce, cloud sau securitate",
         "firme care trebuie să digitalizeze procese reale",
@@ -4234,7 +4234,7 @@
         "antreprenori care trebuie să confirme codul CAEN și locația investiției"
       ],
       "eligibility": [
-        "firma trebuie să se incadreze ca microintreprindere",
+        "firma trebuie să se încadreze ca microintreprindere",
         "locația investiției trebuie să fie în regiunea eligibilă",
         "codul CAEN și activitatea trebuie să respecte apelul",
         "situatia financiara și ajutoarele primite trebuie verificate"
@@ -4401,7 +4401,7 @@
         "Depunem exclusiv în MySMIS2021 între 28.09.2026, ora 14:00, și 28.10.2026, ora 14:00."
       ],
       "evaluation": [
-        "Evaluatorul va urmari încadrarea regionala, eligibilitatea firmei și coerenta investiției.",
+        "Evaluatorul va urmari încadrarea regională, eligibilitatea firmei și coerenta investiției.",
         "Codul CAEN și autorizarea trebuie să fie compatibile cu activitatea finanțată.",
         "Bugetul trebuie să arate modernizare reală, nu doar inlocuiri greu de justificat."
       ],
@@ -4493,11 +4493,11 @@
         },
         {
           "title": "Modernizare reală, nu lista de cumpărături",
-          "body": "Un dosar solid explică de ce achizitiile schimbă capacitatea firmei, calitatea serviciului sau procesul operațional. Pentru fiecare echipament notam rolul în activitate, situatia existenta, rezultatul asteptat și documentul care susține necesitatea. Această abordare reduce riscul ca evaluatorul sa vada proiectul ca pe o lista de cumpărături fără impact regional. Bugetul rămâne separat pe grant, cofinanțare, TVA, cheltuieli neeligibile și rezerve."
+          "body": "Un dosar solid explică de ce achizitiile schimbă capacitatea firmei, calitatea serviciului sau procesul operațional. Pentru fiecare echipament notam rolul în activitate, situatia existentă, rezultatul asteptat și documentul care susține necesitatea. Această abordare reduce riscul ca evaluatorul sa vada proiectul ca pe o lista de cumpărături fără impact regional. Bugetul rămâne separat pe grant, cofinanțare, TVA, cheltuieli neeligibile și rezerve."
         },
         {
           "title": "Documentele financiare și capacitatea de implementare",
-          "body": "Pe langa eligibilitatea regionala, microintreprinderea trebuie să arate ca poate gestiona proiectul după aprobare. Situatiile financiare, disponibilitatile pentru cofinanțare, fluxul de numerar și capacitatea de a suporta TVA-ul sau costurile neeligibile sunt verificate înainte de depunere. Dacă aceste elemente nu sunt clare, proiectul poate ajunge în blocaj la contractare sau implementare."
+          "body": "Pe langa eligibilitatea regională, microintreprinderea trebuie să arate ca poate gestiona proiectul după aprobare. Situatiile financiare, disponibilitățile pentru cofinanțare, fluxul de numerar și capacitatea de a suporta TVA-ul sau costurile neeligibile sunt verificate înainte de depunere. Dacă aceste elemente nu sunt clare, proiectul poate ajunge în blocaj la contractare sau implementare."
         }
       ],
       "updatedAt": "2026-08-28",
@@ -4615,9 +4615,9 @@
       ],
       "decisionIntro": "Apelul este potrivit pentru microîntreprinderi din Nord-Est care au CAEN eligibil, spațiu clar și o investiție de modernizare bine justificată.",
       "decisionClose": "Dacă localizarea sau autorizarea nu sunt rezolvate, proiectul trebuie amânat sau redimensionat.",
-      "ctaText": "Verifică eligibilitatea regionala",
+      "ctaText": "Verifică eligibilitatea regională",
       "secondaryCtaText": "Analizeaza CAEN-ul și spațiul",
-      "heroPrimaryCta": "Verifică eligibilitatea regionala",
+      "heroPrimaryCta": "Verifică eligibilitatea regională",
       "finalCtaTitle": "Solicită verificare eligibilitate pentru Apel 2",
       "finalPrimaryCta": "Solicită verificare eligibilitate pentru Apel 2",
       "finalCtaText": "Trimite datele firmei, codul CAEN, localitatea investiției și lista de achiziții. Te ajutăm să clarifici eligibilitatea, bugetul, documentele lipsă și pașii de pregătire.",
@@ -4635,12 +4635,12 @@
       "h1": "Fondul de Modernizare: proiecte de fotovoltaice și autoconsum",
       "policyContribution": "programul susține tranzitia energetică, productia de energie regenerabilă, autoconsumul și reducerea presiunii costurilor energetice pentru beneficiari eligibili.",
       "audience": [
-        "firme și organizatii care pregătesc investiții în energie",
+        "firme și organizații care pregătesc investiții în energie",
         "beneficiari care au consum documentabil",
         "proiecte cu fotovoltaice, stocare sau componente tehnice permise"
       ],
       "eligibility": [
-        "beneficiarul trebuie să se incadreze în categoria apelului",
+        "beneficiarul trebuie să se încadreze în categoria apelului",
         "amplasamentul și dreptul de folosință trebuie documentate",
         "capacitatea propusa trebuie justificată",
         "racordarea, avizele și consumul trebuie analizate"
@@ -4660,7 +4660,7 @@
         "echipamente de monitorizare"
       ],
       "ineligibleExpenses": [
-        "capacitati nejustificate prin consum sau scop",
+        "capacități nejustificate prin consum sau scop",
         "lucrări fără avize necesare",
         "achiziții începute înainte de momentul permis",
         "costuri excluse de apel",
@@ -4765,14 +4765,14 @@
       "schemaType": "GovernmentService",
       "category": "Energie",
       "h1": "Fondul pentru Modernizare 2026 – Energie regenerabilă: Ghid pentru investitori",
-      "policyContribution": "apelul susține noi capacitati de producere a energiei electrice din surse regenerabile și contribuie la obiectivele de tranzitie energetică.",
+      "policyContribution": "apelul susține noi capacități de producere a energiei electrice din surse regenerabile și contribuie la obiectivele de tranziție energetică.",
       "minWords": 900,
       "minFaq": 6,
       "hideFamilyCards": true,
       "audience": [
-        "beneficiari care pregătesc capacitati noi de producție",
+        "beneficiari care pregătesc capacități noi de producție",
         "firme cu proiecte fotovoltaice sau regenerabile",
-        "organizatii care trebuie să documenteze amplasamentul și racordarea"
+        "organizații care trebuie să documenteze amplasamentul și racordarea"
       ],
       "eligibility": [
         "beneficiar eligibil conform apelului",
@@ -4796,7 +4796,7 @@
         "componente auxiliare permise"
       ],
       "ineligibleExpenses": [
-        "capacitati fără drept de amplasament",
+        "capacități fără drept de amplasament",
         "cheltuieli nepermise de apel",
         "costuri operationale",
         "achiziții premature",
@@ -5797,7 +5797,7 @@
       "policyContribution": "PNRR pune accent pe tinte, jaloane, termene și implementare verificabila.",
       "audience": [
         "IMM-uri",
-        "organizatii eligibile",
+        "organizații eligibile",
         "beneficiari cu proiecte digitale"
       ],
       "eligibility": [
@@ -6391,7 +6391,7 @@
       "examples": [
         "verificare DR12",
         "verificare Digitalizare IMM",
-        "verificare microintreprindere regionala"
+        "verificare microintreprindere regională"
       ],
       "faq": [
         [
@@ -6470,9 +6470,9 @@
       "schemaType": "WebPage",
       "category": "Documente",
       "title": "Acte necesare pentru fonduri europene - checklist dosar",
-      "description": "Lista de acte necesare pentru fonduri europene: documente firmă, financiare, tehnice, spațiu, oferte, declaratii și greșeli de evitat.",
+      "description": "Lista de acte necesare pentru fonduri europene: documente firmă, financiare, tehnice, spațiu, oferte, declarații și greșeli de evitat.",
       "h1": "Acte necesare pentru fonduri europene nerambursabile",
-      "quickAnswer": "Ce acte sunt necesare pentru fonduri europene? De obicei ai nevoie de documente de firmă, financiare, tehnice, spațiu, oferte și declaratii specifice.",
+      "quickAnswer": "Ce acte sunt necesare pentru fonduri europene? De obicei ai nevoie de documente de firmă, financiare, tehnice, spațiu, oferte și declarații specifice.",
       "programName": "Acte necesare fonduri europene",
       "policyContribution": "pagina ajută beneficiarii să pregătească documentele înainte de termenele de depunere.",
       "funding": "nu se aplică.",
@@ -6528,7 +6528,7 @@
       "faq": [
         [
           "Ce documente sunt cerute frecvent?",
-          "Documente de firmă, fiscale, financiare, spațiu, oferte, declaratii și documente tehnice."
+          "Documente de firmă, fiscale, financiare, spațiu, oferte, declarații și documente tehnice."
         ],
         [
           "Documentele expira?",
@@ -6568,7 +6568,7 @@
             ],
             [
               "Beneficiar privat",
-              "certificat constatator, situații financiare, declaratii, documente pentru spațiu, oferte, buget și dovada capacitatii de cofinanțare"
+              "certificat constatator, situații financiare, declarații, documente pentru spațiu, oferte, buget și dovada capacității de cofinanțare"
             ],
             [
               "Fermier",
@@ -7088,7 +7088,7 @@
         "fermieri și beneficiari care compară AFIR, digitalizare și energie"
       ],
       "eligibility": [
-        "solicitantul trebuie să se incadreze în regulile apelului activ",
+        "solicitantul trebuie să se încadreze în regulile apelului activ",
         "activitatea și codul CAEN trebuie să fie compatibile cu investiția",
         "locația, documentele și bugetul trebuie să poată fi dovedite"
       ],
@@ -7262,7 +7262,7 @@
         "IMM-uri, ferme și beneficiari de energie verde"
       ],
       "eligibility": [
-        "solicitantul trebuie să se incadreze în regulile apelului activ",
+        "solicitantul trebuie să se încadreze în regulile apelului activ",
         "activitatea și codul CAEN trebuie să fie compatibile cu investiția",
         "locația, documentele și bugetul trebuie să poată fi dovedite"
       ],
@@ -7415,7 +7415,7 @@
       ],
       "examples": [
         "Producator care modernizeaza o linie pentru materiale sau componente folosite în lucrări de infrastructura de transport.",
-        "Companie care introduce echipamente industriale pentru cresterea capacitatii și calitatii producției relevante.",
+        "Companie care introduce echipamente industriale pentru creșterea capacității și calității producției relevante.",
         "Investiție într-un amplasament cu utilitati, acces și autorizații pregătite din timp."
       ],
       "faq": [
@@ -7501,7 +7501,7 @@
         },
         {
           "title": "Ce rămâne de verificat",
-          "body": "Pagină folosește forma consultativa ca reper. Valorile, intensitatea, beneficiarii, cheltuielile și calendarul se valideaza în ghidul activ înainte de depunere."
+          "body": "Pagină folosește forma consultativa ca reper. Valorile, intensitatea, beneficiarii, cheltuielile și calendarul se validează în ghidul activ înainte de depunere."
         },
         {
           "title": "Cum se demonstreaza legătura cu infrastructura de transport",
@@ -7509,10 +7509,10 @@
         },
         {
           "title": "Verificari operationale pentru proiecte mari",
-          "body": "Pentru bugete mari verificam dacă amplasamentul poate primi echipamentele, dacă utilitatile sunt disponibile, dacă instalarea intra în calendar și dacă personalul poate opera linia propusa. Ofertele trebuie să fie comparabile și suficient de detaliate pentru a justifica preturile. Când există lucrări, autorizații sau avize, acestea se tratează ca riscuri de calendar, nu ca formalitati. Proiectul trebuie să ramana implementabil după semnarea contractului."
+          "body": "Pentru bugete mari verificăm dacă amplasamentul poate primi echipamentele, dacă utilitatile sunt disponibile, dacă instalarea intra în calendar și dacă personalul poate opera linia propusa. Ofertele trebuie să fie comparabile și suficient de detaliate pentru a justifica preturile. Când există lucrări, autorizații sau avize, acestea se tratează ca riscuri de calendar, nu ca formalitati. Proiectul trebuie să ramana implementabil după semnarea contractului."
         },
         {
-          "title": "Ce verificam după aprobarea investiției",
+          "title": "Ce verificăm după aprobarea investiției",
           "body": "Analiza nu se opreste la eligibilitate. Pentru un proiect PRO INFRA solid trebuie explicat modul în care capacitatea noua rămâne operațională după implementare: personal, mentenanta, furnizori, flux de producție, clienti vizati și proceduri interne pentru urmarirea rezultatelor. Aceste elemente ajută beneficiarul sa demonstreze ca investiția este sustenabila, nu doar cumparata din grant."
         }
       ],
@@ -7559,7 +7559,7 @@
         ],
         [
           "Linii de producție",
-          "Fluxuri și instalații pentru cresterea capacitatii.",
+          "Fluxuri și instalații pentru creșterea capacității.",
           "Capacitate, instalare și exploatare.",
           "Ghidul activ"
         ],
@@ -7582,7 +7582,7 @@
           "Solicitant",
           "Beneficiar",
           "La verificarea inițială.",
-          "Acte juridice, fiscale, coduri CAEN și declaratii."
+          "Acte juridice, fiscale, coduri CAEN și declarații."
         ],
         [
           "Amplasament",
@@ -7648,7 +7648,7 @@
         "solicitanți care vor să verifice eligibilitatea înainte de depunere"
       ],
       "eligibility": [
-        "solicitantul trebuie să se incadreze în regulile apelului activ",
+        "solicitantul trebuie să se încadreze în regulile apelului activ",
         "activitatea și codul CAEN trebuie să fie compatibile cu investiția",
         "locația, documentele și bugetul trebuie să poată fi dovedite"
       ],
@@ -7736,7 +7736,7 @@
         "solicitanți care vor să verifice eligibilitatea înainte de depunere"
       ],
       "eligibility": [
-        "solicitantul trebuie să se incadreze în regulile apelului activ",
+        "solicitantul trebuie să se încadreze în regulile apelului activ",
         "activitatea și codul CAEN trebuie să fie compatibile cu investiția",
         "locația, documentele și bugetul trebuie să poată fi dovedite"
       ],
@@ -7843,7 +7843,7 @@
         "solicitanți care vor să verifice eligibilitatea înainte de depunere"
       ],
       "eligibility": [
-        "solicitantul trebuie să se incadreze în regulile apelului activ",
+        "solicitantul trebuie să se încadreze în regulile apelului activ",
         "activitatea și codul CAEN trebuie să fie compatibile cu investiția",
         "locația, documentele și bugetul trebuie să poată fi dovedite"
       ],
@@ -7988,7 +7988,7 @@
         "solicitanți care vor să verifice eligibilitatea înainte de depunere"
       ],
       "eligibility": [
-        "solicitantul trebuie să se incadreze în regulile apelului activ",
+        "solicitantul trebuie să se încadreze în regulile apelului activ",
         "activitatea și codul CAEN trebuie să fie compatibile cu investiția",
         "locația, documentele și bugetul trebuie să poată fi dovedite"
       ],
@@ -8127,7 +8127,7 @@
         "solicitanți care vor să verifice eligibilitatea înainte de depunere"
       ],
       "eligibility": [
-        "solicitantul trebuie să se incadreze în regulile apelului activ",
+        "solicitantul trebuie să se încadreze în regulile apelului activ",
         "activitatea și codul CAEN trebuie să fie compatibile cu investiția",
         "locația, documentele și bugetul trebuie să poată fi dovedite"
       ],
@@ -8258,7 +8258,7 @@
         "solicitanți care vor să verifice eligibilitatea înainte de depunere"
       ],
       "eligibility": [
-        "solicitantul trebuie să se incadreze în regulile apelului activ",
+        "solicitantul trebuie să se încadreze în regulile apelului activ",
         "activitatea și codul CAEN trebuie să fie compatibile cu investiția",
         "locația, documentele și bugetul trebuie să poată fi dovedite"
       ],
@@ -8397,7 +8397,7 @@
         "solicitanți care vor să verifice eligibilitatea înainte de depunere"
       ],
       "eligibility": [
-        "solicitantul trebuie să se incadreze în regulile apelului activ",
+        "solicitantul trebuie să se încadreze în regulile apelului activ",
         "activitatea și codul CAEN trebuie să fie compatibile cu investiția",
         "locația, documentele și bugetul trebuie să poată fi dovedite"
       ],
@@ -8536,7 +8536,7 @@
         "solicitanți care vor să verifice eligibilitatea înainte de depunere"
       ],
       "eligibility": [
-        "solicitantul trebuie să se incadreze în regulile apelului activ",
+        "solicitantul trebuie să se încadreze în regulile apelului activ",
         "activitatea și codul CAEN trebuie să fie compatibile cu investiția",
         "locația, documentele și bugetul trebuie să poată fi dovedite"
       ],
@@ -8617,7 +8617,7 @@
           "tableRows": [
             [
               "CAEN și activitate",
-              "verificam dacă investiția poate fi legată de activitatea reală și autorizabila"
+              "verificăm dacă investiția poate fi legată de activitatea reală și autorizabila"
             ],
             [
               "Buget și cheltuieli",
@@ -8703,7 +8703,7 @@
         "solicitanți care vor să verifice eligibilitatea înainte de depunere"
       ],
       "eligibility": [
-        "solicitantul trebuie să se incadreze în regulile apelului activ",
+        "solicitantul trebuie să se încadreze în regulile apelului activ",
         "activitatea și codul CAEN trebuie să fie compatibile cu investiția",
         "locația, documentele și bugetul trebuie să poată fi dovedite"
       ],
@@ -8796,7 +8796,7 @@
         "solicitanți care vor să verifice eligibilitatea înainte de depunere"
       ],
       "eligibility": [
-        "solicitantul trebuie să se incadreze în regulile apelului activ",
+        "solicitantul trebuie să se încadreze în regulile apelului activ",
         "activitatea și codul CAEN trebuie să fie compatibile cu investiția",
         "locația, documentele și bugetul trebuie să poată fi dovedite"
       ],
@@ -8906,7 +8906,7 @@
         "solicitanți care vor să verifice eligibilitatea înainte de depunere"
       ],
       "eligibility": [
-        "solicitantul trebuie să se incadreze în regulile apelului activ",
+        "solicitantul trebuie să se încadreze în regulile apelului activ",
         "activitatea și codul CAEN trebuie să fie compatibile cu investiția",
         "locația, documentele și bugetul trebuie să poată fi dovedite"
       ],
@@ -9017,7 +9017,7 @@
         "solicitanți care vor să verifice eligibilitatea înainte de depunere"
       ],
       "eligibility": [
-        "solicitantul trebuie să se incadreze în regulile apelului activ",
+        "solicitantul trebuie să se încadreze în regulile apelului activ",
         "activitatea și codul CAEN trebuie să fie compatibile cu investiția",
         "locația, documentele și bugetul trebuie să poată fi dovedite"
       ],
@@ -9099,7 +9099,7 @@
         "solicitanți care vor să verifice eligibilitatea înainte de depunere"
       ],
       "eligibility": [
-        "solicitantul trebuie să se incadreze în regulile apelului activ",
+        "solicitantul trebuie să se încadreze în regulile apelului activ",
         "activitatea și codul CAEN trebuie să fie compatibile cu investiția",
         "locația, documentele și bugetul trebuie să poată fi dovedite"
       ],
@@ -9206,7 +9206,7 @@
         "solicitanți care vor să verifice eligibilitatea înainte de depunere"
       ],
       "eligibility": [
-        "solicitantul trebuie să se incadreze în regulile apelului activ",
+        "solicitantul trebuie să se încadreze în regulile apelului activ",
         "activitatea și codul CAEN trebuie să fie compatibile cu investiția",
         "locația, documentele și bugetul trebuie să poată fi dovedite"
       ],
@@ -9290,7 +9290,7 @@
         "solicitanți care vor să verifice eligibilitatea înainte de depunere"
       ],
       "eligibility": [
-        "solicitantul trebuie să se incadreze în regulile apelului activ",
+        "solicitantul trebuie să se încadreze în regulile apelului activ",
         "activitatea și codul CAEN trebuie să fie compatibile cu investiția",
         "locația, documentele și bugetul trebuie să poată fi dovedite"
       ],
@@ -9756,7 +9756,7 @@
           "tableRows": [
             [
               "Solicitant",
-              "forma juridică, vechime, dimensiune, datorii și declaratii"
+              "forma juridică, vechime, dimensiune, datorii și declarații"
             ],
             [
               "Activitate",
@@ -10180,7 +10180,7 @@
         "beneficiari care trebuie să confirme încadrarea localitatii în strategia GAL"
       ],
       "eligibility": [
-        "solicitantul trebuie să fie în teritoriul GAL și să se incadreze în măsura locală",
+        "solicitantul trebuie să fie în teritoriul GAL și să se încadreze în măsura locală",
         "investiția trebuie să respecte strategia de dezvoltare locală și ghidul apelului",
         "documentele, codul CAEN sau activitatea trebuie să susțină proiectul propus"
       ],
@@ -10426,11 +10426,11 @@
         },
         {
           "title": "Întrebări tehnice înainte de alegerea locatiei",
-          "body": "La e-MOVE RO amplasamentul trebuie testat prin întrebări foarte concrete: cine folosește statia, ce putere este disponibilă, ce distanță există până la punctul de racordare, cine detine terenul și ce restrictii urbanistice sau de mediu pot apărea. Pentru proiectele care includ producție regenerabilă verificam dacă energia poate fi consumata sau gestionata în mod coerent. Aceste răspunsuri influenteaza bugetul, calendarul, autorizatiile și riscul de implementare."
+          "body": "La e-MOVE RO amplasamentul trebuie testat prin întrebări foarte concrete: cine folosește statia, ce putere este disponibilă, ce distanță există până la punctul de racordare, cine detine terenul și ce restrictii urbanistice sau de mediu pot apărea. Pentru proiectele care includ producție regenerabilă verificăm dacă energia poate fi consumata sau gestionata în mod coerent. Aceste răspunsuri influenteaza bugetul, calendarul, autorizatiile și riscul de implementare."
         },
         {
           "title": "Bugetul trebuie legat de folosirea infrastructurii",
-          "body": "Pentru e-MOVE, bugetul nu se valideaza doar prin preturi. Trebuie aratat cine folosește infrastructura, ce capacitate este necesară, cum se intretin statiile și ce costuri rămân la beneficiar după finalizare."
+          "body": "Pentru e-MOVE, bugetul nu se validează doar prin preturi. Trebuie aratat cine folosește infrastructura, ce capacitate este necesară, cum se intretin statiile și ce costuri rămân la beneficiar după finalizare."
         }
       ],
       "applicantRows": [
@@ -10751,7 +10751,7 @@
         {
           "title": "Documente necesare",
           "paragraphs": [
-            "Documentele pot include acte solicitant, documente de localizare, buget, oferte, hotarari sau declaratii, documente tehnice și anexe GAL/AFIR. Lista exacta se verifică în ghidul activ."
+            "Documentele pot include acte solicitant, documente de localizare, buget, oferte, hotarari sau declarații, documente tehnice și anexe GAL/AFIR. Lista exacta se verifică în ghidul activ."
           ]
         },
         {
@@ -10769,7 +10769,7 @@
         {
           "title": "Scriem proiecte GAL și preluam proiecte în implementare",
           "paragraphs": [
-            "FABER poate sprijini beneficiarii publici și privați în pregătirea proiectelor GAL, de la verificarea eligibilității până la buget, documente, cerere de finanțare și clarificări. Pentru proiectele deja contractate, putem analiza documentatia existenta și putem prelua suportul de implementare, inclusiv achiziții, cereri de plată, raportări și răspunsuri la solicitarile GAL sau AFIR, în limitele contractului și ale procedurilor aplicabile."
+            "FABER poate sprijini beneficiarii publici și privați în pregătirea proiectelor GAL, de la verificarea eligibilității până la buget, documente, cerere de finanțare și clarificări. Pentru proiectele deja contractate, putem analiza documentatia existentă și putem prelua suportul de implementare, inclusiv achiziții, cereri de plată, raportări și răspunsuri la solicitarile GAL sau AFIR, în limitele contractului și ale procedurilor aplicabile."
           ]
         },
         {
@@ -10971,7 +10971,7 @@
         "Demonstreaza ca proiectul dezvolta un produs, serviciu sau aplicatie digitala cu componenta inovatoare.",
         "Confirma nivelul de maturitate, echipa, drepturile asupra solutiei și capacitatea de implementare.",
         "Separa cheltuielile pentru ajutor regional de cele de minimis, dacă ghidul cere această structura.",
-        "Valideaza bugetul, intensitatile și calendarul în ghidul activ PoCIDIF."
+        "Validează bugetul, intensitățile și calendarul în ghidul activ PoCIDIF."
       ],
       "eligibleExpenses": [
         "Dezvoltare software, aplicatii, servicii digitale și produse bazate pe tehnologii avansate, în limitele ghidului.",
@@ -11152,7 +11152,7 @@
         },
         {
           "title": "Cum tratam ajutorul regional și minimis",
-          "body": "Pentru fiecare cheltuiala verificam încadrarea în categoria corectă, intensitatea aplicabila, TVA-ul, costurile neeligibile și contribuția proprie. Separarea incorectă poate genera clarificări sau reducerea bugetului."
+          "body": "Pentru fiecare cheltuiala verificăm încadrarea în categoria corectă, intensitatea aplicabila, TVA-ul, costurile neeligibile și contribuția proprie. Separarea incorectă poate genera clarificări sau reducerea bugetului."
         },
         {
           "title": "Ce rămâne de confirmat",

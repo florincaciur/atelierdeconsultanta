@@ -20,14 +20,35 @@ const scenes = {
   "fondul-modernizare-pc1-stocare": battery(105, 99) + battery(181, 78) + battery(257, 99) + '<path class="pv-flow" d="M143 229h152m-76-7v-20"/><g class="pv-float"><path class="pv-bolt" d="m221 16-33 40h24l-10 26 35-41h-24Z"/></g>'
 };
 
+const familyScenes = {
+  agriculture: house + plant + '<path class="pv-field" d="m74 226 272-12m-239 28 205-12"/>',
+  digital: '<g class="pv-rise"><path class="pv-building" d="M105 92h210v119H105Z"/><path class="pv-glass" d="M126 115h63v43h-63Zm84 0h84v22h-84Zm0 38h84v37h-84Z"/><path class="pv-accent" d="M91 211h238v19H91Z"/></g><g class="pv-orbit"><circle cx="102" cy="74" r="10"/><circle cx="329" cy="72" r="8"/><path class="pv-flow" d="M112 74h207M102 84v34m227-38v38"/></g>',
+  energy: sun + panels + '<path class="pv-flow" d="M149 211v24h129v-47"/>',
+  mobility: scenes["e-mobility-ro"],
+  regional: scenes["modernizare-microintreprinderi-ne-2"],
+  entrepreneur: house + '<g class="pv-rise"><path class="pv-accent" d="M107 125h83l-8-35h-67Z"/><path class="pv-building" d="M113 125h72v76h-72Z"/><path class="pv-glass" d="M130 144h38v26h-38Z"/></g>' + plant,
+  generic: '<g class="pv-rise"><path class="pv-building" d="M119 74h174l35 35v114H119Z"/><path class="pv-glass" d="M145 112h117v15H145Zm0 34h117v15H145Zm0 34h80v15h-80Z"/><path class="pv-accent" d="M293 74v36h35Z"/></g>'
+};
+
+function sceneArtwork(program = {}) {
+  if (scenes[program.id]) return scenes[program.id];
+  const family = String(program.family || "");
+  if (/afir|agricultur|leader/iu.test(family)) return familyScenes.agriculture;
+  if (/mobilitate/iu.test(family)) return familyScenes.mobility;
+  if (/energie/iu.test(family)) return familyScenes.energy;
+  if (/digital|pnrr/iu.test(family)) return familyScenes.digital;
+  if (/regional|tranzitie/iu.test(family)) return familyScenes.regional;
+  if (/antrepren/iu.test(family)) return familyScenes.entrepreneur;
+  return familyScenes.generic;
+}
+
 function renderProgramScenes(programs) {
   return `<div class="hero-program-visuals" id="hero-program-visuals" aria-hidden="true">
     <div class="hero-program-gridfloor"></div>
     ${programs.map((program, index) => `<div class="hero-program-scene${index === 0 ? ' is-active' : ''}" data-program-scene="${program.id}"${index ? ' hidden' : ''}>
-      <svg viewBox="0 0 420 270" focusable="false"><ellipse class="pv-shadow" cx="213" cy="231" rx="142" ry="18"/><path class="pv-platform" d="m55 216 149-51 158 51-150 48Z"/>${scenes[program.id] || scenes["modernizare-microintreprinderi-ne-2"]}</svg>
+      <svg viewBox="0 0 420 270" focusable="false"><ellipse class="pv-shadow" cx="213" cy="231" rx="142" ry="18"/><path class="pv-platform" d="m55 216 149-51 158 51-150 48Z"/>${sceneArtwork(program)}</svg>
     </div>`).join("\n")}
-    <span class="hero-program-visual-note">ILUSTRAȚIE CONCEPTUALĂ</span>
   </div>`;
 }
 
-module.exports = { renderProgramScenes };
+module.exports = { renderProgramScenes, sceneArtwork };

@@ -445,10 +445,35 @@ const ROMANIAN_COPY_REPLACEMENTS = [
   [/\bBacau\b/g, "Bacău"],
   [/\bBucuresti\b/g, "București"],
   [/\bRomania\b/g, "România"],
+  [/\borganizatii\b/g, "organizații"],
+  [/\bintensitatile\b/g, "intensitățile"],
+  [/\bcapacitati\b/g, "capacități"],
+  [/\bcapacitatii\b/g, "capacității"],
+  [/\bregionala\b/g, "regională"],
+  [/\bdeclaratii\b/g, "declarații"],
+  [/\btranzitie\b/g, "tranziție"],
+  [/\bcresterea\b/g, "creșterea"],
+  [/\bcalitatii\b/g, "calității"],
+  [/\bincadreze\b/g, "încadreze"],
+  [/\blucrarile\b/g, "lucrările"],
+  [/\bexistenta\b/g, "existentă"],
+  [/\bgenereaza\b/g, "generează"],
+  [/\bverificam\b/g, "verificăm"],
+  [/\bdepaseste\b/g, "depășește"],
+  [/\bdisponibilitatile\b/g, "disponibilitățile"],
+  [/\bimpartit\b/g, "împărțit"],
+  [/\bintarzieri\b/g, "întârzieri"],
+  [/\badreseaza\b/g, "adresează"],
+  [/\bValideaza\b/g, "Validează"],
+  [/\bvalideaza\b/g, "validează"],
 ];
 
 function normalizeRomanianCopy(value) {
-  let text = String(value ?? "");
+  const protectedValues = [];
+  let text = String(value ?? "").replace(/(?:https?:\/\/|mailto:)?[^\s<>@]+@[^\s<>@]+\.[^\s<>@]+/giu, (match) => {
+    protectedValues.push(match);
+    return `__FABER_PROTECTED_${protectedValues.length - 1}__`;
+  });
   for (const [pattern, replacement] of ROMANIAN_COPY_REPLACEMENTS) {
     text = text.replace(pattern, replacement);
   }
@@ -527,7 +552,7 @@ function normalizeRomanianCopy(value) {
   text = text.replace(/\bwebsite(?:-ul|ul)\b/giu, (match) => (/^[A-Z]/u.test(match) ? "Site-ul" : "site-ul"));
   text = text.replace(/\bwebsite\b/giu, (match) => (/^[A-Z]/u.test(match) ? "Site" : "site"));
   text = text.replace(/\b(un|acest|orice) site-ul\b/giu, "$1 site");
-  return text;
+  return text.replace(/__FABER_PROTECTED_(\d+)__/gu, (_, index) => protectedValues[Number(index)] || "");
 }
 
 const JSON_LD_PROTECTED_KEYS = new Set([

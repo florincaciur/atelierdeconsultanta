@@ -153,8 +153,8 @@ function extractExistingHero(fragment) {
   const hero = $("header.hero").first();
   if (!hero.length) throw new Error("Hero header not found");
   const actions = hero.find(".hero-actions").first();
-  if (!actions.length || actions.find("a").length < 2) {
-    throw new Error("Program hero must retain eligibility and official-guide CTAs");
+  if (!actions.length || !actions.find("a[href^='/verificare-eligibilitate-fonduri-europene']").length) {
+    throw new Error("Program hero must retain the eligibility CTA");
   }
   return {
     tag: hero.find(".design-badge").first().text().trim(),

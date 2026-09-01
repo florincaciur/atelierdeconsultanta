@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-28T20:50:55.114Z",
-  "canonicalUrlCount": 96,
+  "generatedAt": "2026-09-01T01:46:06.565Z",
+  "canonicalUrlCount": 104,
   "changes": [
     {
       "route": "/",
@@ -384,6 +384,38 @@
       "location": "pages.22.steps.3",
       "oldFragment": "completeaza anexe",
       "newFragment": "completează anexe",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/acte-necesare-fonduri-europene-nerambursabile",
+      "sourceFile": "config/seo-programs.json",
+      "location": "pages.23.contentSections.0.tableRows.1.1",
+      "oldFragment": "certificat constatator, situații financiare, declaratii, documente pentru spațiu, oferte, buget și dovada capacitatii de cofinanțare",
+      "newFragment": "certificat constatator, situații financiare, declarații, documente pentru spațiu, oferte, buget și dovada capacității de cofinanțare",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/acte-necesare-fonduri-europene-nerambursabile",
+      "sourceFile": "config/seo-programs.json",
+      "location": "pages.23.description",
+      "oldFragment": "Lista de acte necesare pentru fonduri europene: documente firmă, financiare, tehnice, spațiu, oferte, declaratii și greșeli de evitat.",
+      "newFragment": "Lista de acte necesare pentru fonduri europene: documente firmă, financiare, tehnice, spațiu, oferte, declarații și greșeli de evitat.",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/acte-necesare-fonduri-europene-nerambursabile",
+      "sourceFile": "config/seo-programs.json",
+      "location": "pages.23.faq.0.1",
+      "oldFragment": "Documente de firmă, fiscale, financiare, spațiu, oferte, declaratii și documente tehnice.",
+      "newFragment": "Documente de firmă, fiscale, financiare, spațiu, oferte, declarații și documente tehnice.",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/acte-necesare-fonduri-europene-nerambursabile",
+      "sourceFile": "config/seo-programs.json",
+      "location": "pages.23.quickAnswer",
+      "oldFragment": "Ce acte sunt necesare pentru fonduri europene? De obicei ai nevoie de documente de firmă, financiare, tehnice, spațiu, oferte și declaratii specifice.",
+      "newFragment": "Ce acte sunt necesare pentru fonduri europene? De obicei ai nevoie de documente de firmă, financiare, tehnice, spațiu, oferte și declarații specifice.",
       "reason": "Diacritice și normă editorială română"
     },
     {
@@ -1659,6 +1691,14 @@
       "reason": "Diacritice și normă editorială română"
     },
     {
+      "route": "/apeluri-gal",
+      "sourceFile": "config/seo-programs.json",
+      "location": "pages.55.eligibility.0",
+      "oldFragment": "solicitantul trebuie să fie în teritoriul GAL și să se incadreze în măsura locală",
+      "newFragment": "solicitantul trebuie să fie în teritoriul GAL și să se încadreze în măsura locală",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
       "route": "/autoconsum-public-fotovoltaice-institutii-publice",
       "sourceFile": "autoconsum-public-fotovoltaice-institutii-publice/index.html",
       "location": "json-ld",
@@ -2295,7 +2335,7 @@
       "sourceFile": "config/seo-programmatic-pages.json",
       "location": "localPages.2.body",
       "oldFragment": "Pentru Bacău, recomandarea editoriala este sa nu se publice continut local subtire. Dacă nu există o regula teritoriala, o sursa oficială sau un exemplu local verificabil, pagina regionala sau pagina de consultanță gene…",
-      "newFragment": "Pentru Bacău, recomandarea editoriala este să nu se publice conținut local subtire. Dacă nu există o regula teritoriala, o sursa oficială sau un exemplu local verificabil, pagină regionala sau pagină de consultanță gene…",
+      "newFragment": "Pentru Bacău, recomandarea editoriala este să nu se publice conținut local subtire. Dacă nu există o regula teritoriala, o sursa oficială sau un exemplu local verificabil, pagină regională sau pagină de consultanță gene…",
       "reason": "Diacritice și normă editorială română"
     },
     {
@@ -2711,7 +2751,7 @@
       "sourceFile": "config/seo-programmatic-pages.json",
       "location": "localPages.3.body",
       "oldFragment": "Pentru București, recomandarea editoriala este sa nu se publice continut local subtire. Dacă nu există o regula teritoriala, o sursa oficială sau un exemplu local verificabil, pagina regionala sau pagina de consultanță …",
-      "newFragment": "Pentru București, recomandarea editoriala este să nu se publice conținut local subtire. Dacă nu există o regula teritoriala, o sursa oficială sau un exemplu local verificabil, pagină regionala sau pagină de consultanță …",
+      "newFragment": "Pentru București, recomandarea editoriala este să nu se publice conținut local subtire. Dacă nu există o regula teritoriala, o sursa oficială sau un exemplu local verificabil, pagină regională sau pagină de consultanță …",
       "reason": "Diacritice și normă editorială română"
     },
     {
@@ -4502,6 +4542,14 @@
       "route": "/ce-documente-sunt-necesare-pentru-dr12",
       "sourceFile": "config/seo-programmatic-pages.json",
       "location": "faqPages.0.body",
+      "oldFragment": "buget, cofinanțare și declaratii cerute de ghid",
+      "newFragment": "buget, cofinanțare și declarații cerute de ghid",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/ce-documente-sunt-necesare-pentru-dr12",
+      "sourceFile": "config/seo-programmatic-pages.json",
+      "location": "faqPages.0.body",
       "oldFragment": "calculeaza SO",
       "newFragment": "calculează SO",
       "reason": "Diacritice și normă editorială română"
@@ -5451,6 +5499,14 @@
       "reason": "Diacritice și normă editorială română"
     },
     {
+      "route": "/cod-caen-start-up-nation-2026",
+      "sourceFile": "config/seo-programs.json",
+      "location": "pages.38.eligibility.0",
+      "oldFragment": "solicitantul trebuie să se incadreze în regulile apelului activ",
+      "newFragment": "solicitantul trebuie să se încadreze în regulile apelului activ",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
       "route": "/cod-caen-startup-nation",
       "sourceFile": "blog.json",
       "location": "posts.1.excerpt",
@@ -5608,6 +5664,14 @@
       "location": "pages.32.steps.3",
       "oldFragment": "estimeaza cofinanțarea",
       "newFragment": "estimează cofinanțarea",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/consultant-fonduri-europene-imm",
+      "sourceFile": "config/seo-programs.json",
+      "location": "pages.33.eligibility.0",
+      "oldFragment": "solicitantul trebuie să se incadreze în regulile apelului activ",
+      "newFragment": "solicitantul trebuie să se încadreze în regulile apelului activ",
       "reason": "Diacritice și normă editorială română"
     },
     {
@@ -6128,6 +6192,14 @@
       "location": "pages.39.steps.3",
       "oldFragment": "estimeaza cofinanțarea",
       "newFragment": "estimează cofinanțarea",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/consultanta-afir",
+      "sourceFile": "config/seo-programs.json",
+      "location": "pages.40.eligibility.0",
+      "oldFragment": "solicitantul trebuie să se incadreze în regulile apelului activ",
+      "newFragment": "solicitantul trebuie să se încadreze în regulile apelului activ",
       "reason": "Diacritice și normă editorială română"
     },
     {
@@ -6971,6 +7043,14 @@
       "reason": "Diacritice și normă editorială română"
     },
     {
+      "route": "/consultanta-fonduri-europene",
+      "sourceFile": "config/seo-programs.json",
+      "location": "pages.29.eligibility.0",
+      "oldFragment": "solicitantul trebuie să se incadreze în regulile apelului activ",
+      "newFragment": "solicitantul trebuie să se încadreze în regulile apelului activ",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
       "route": "/consultanta-pnrr-digitalizare",
       "sourceFile": "config/seo-programs.json",
       "location": "pages.40.audience.1",
@@ -7096,6 +7176,14 @@
       "location": "pages.40.steps.3",
       "oldFragment": "estimeaza cofinanțarea",
       "newFragment": "estimează cofinanțarea",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/consultanta-pnrr-digitalizare",
+      "sourceFile": "config/seo-programs.json",
+      "location": "pages.41.eligibility.0",
+      "oldFragment": "solicitantul trebuie să se incadreze în regulile apelului activ",
+      "newFragment": "solicitantul trebuie să se încadreze în regulile apelului activ",
       "reason": "Diacritice și normă editorială română"
     },
     {
@@ -7664,6 +7752,22 @@
       "location": "pages.38.steps.3",
       "oldFragment": "estimeaza cofinanțarea",
       "newFragment": "estimează cofinanțarea",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/consultanta-start-up-nation-2026",
+      "sourceFile": "config/seo-programs.json",
+      "location": "pages.39.contentSections.0.tableRows.0.1",
+      "oldFragment": "verificam dacă investiția poate fi legată de activitatea reală și autorizabila",
+      "newFragment": "verificăm dacă investiția poate fi legată de activitatea reală și autorizabila",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/consultanta-start-up-nation-2026",
+      "sourceFile": "config/seo-programs.json",
+      "location": "pages.39.eligibility.0",
+      "oldFragment": "solicitantul trebuie să se incadreze în regulile apelului activ",
+      "newFragment": "solicitantul trebuie să se încadreze în regulile apelului activ",
       "reason": "Diacritice și normă editorială română"
     },
     {
@@ -9812,6 +9916,14 @@
     },
     {
       "route": "/digitalizare-imm-pnrr",
+      "sourceFile": "config/seo-programs.json",
+      "location": "pages.42.eligibility.0",
+      "oldFragment": "solicitantul trebuie să se incadreze în regulile apelului activ",
+      "newFragment": "solicitantul trebuie să se încadreze în regulile apelului activ",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/digitalizare-imm-pnrr",
       "sourceFile": "digitalizare-imm-pnrr/index.html",
       "location": "json-ld",
       "oldFragment": "Text JSON-LD fără normalizarea editorială curentă",
@@ -10419,6 +10531,14 @@
       "reason": "Diacritice și normă editorială română"
     },
     {
+      "route": "/digitalizare-imm",
+      "sourceFile": "config/seo-programs.json",
+      "location": "pages.6.policyContribution",
+      "oldFragment": "programul susține transformarea digitala a IMM-urilor, automatizarea proceselor, cresterea eficientei și utilizarea unor instrumente digitale măsurabile.",
+      "newFragment": "programul susține transformarea digitala a IMM-urilor, automatizarea proceselor, creșterea eficientei și utilizarea unor instrumente digitale măsurabile.",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
       "route": "/documente-punctaj-pocidif-21",
       "sourceFile": "config/seo-programs.json",
       "location": "pages.60.related.0.label",
@@ -10797,6 +10917,14 @@
     {
       "route": "/dr12-afir",
       "sourceFile": "config/seo-programs.json",
+      "location": "pages.0.commonMistakes.1",
+      "oldFragment": "Utilaje prea mari pentru exploatația existenta sau pentru activitatea propusa.",
+      "newFragment": "Utilaje prea mari pentru exploatația existentă sau pentru activitatea propusa.",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/dr12-afir",
+      "sourceFile": "config/seo-programs.json",
       "location": "pages.0.commonMistakes.5",
       "oldFragment": "Achizitii sau angajamente incepute înainte de momentul permis.",
       "newFragment": "Achizitii sau angajamente începute înainte de momentul permis.",
@@ -10808,6 +10936,14 @@
       "location": "pages.0.contentSections.0.body",
       "oldFragment": "Incepem cu solicitantul și cu exploatația, nu cu lista de cumparaturi. Varsta, istoricul instalarii, forma juridică, dimensiunea economică și documentele APIA sau ANSVSA stabilesc dacă proiectul poate intra în analiza. …",
       "newFragment": "Incepem cu solicitantul și cu exploatația, nu cu lista de cumpărături. Varsta, istoricul instalarii, forma juridică, dimensiunea economică și documentele APIA sau ANSVSA stabilesc dacă proiectul poate intra în analiza. …",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/dr12-afir",
+      "sourceFile": "config/seo-programs.json",
+      "location": "pages.0.contentSections.0.title",
+      "oldFragment": "Cum verificam eligibilitatea pentru DR12",
+      "newFragment": "Cum verificăm eligibilitatea pentru DR12",
       "reason": "Diacritice și normă editorială română"
     },
     {
@@ -10837,9 +10973,25 @@
     {
       "route": "/dr12-afir",
       "sourceFile": "config/seo-programs.json",
+      "location": "pages.0.contentSections.3.body",
+      "oldFragment": "Pagină folosește ghidul consultativ AFIR ca reper de lucru. Pentru decizia finală de aplicare verificam documentul oficial aplicabil, anuntul sesiunii, anexele și eventualele clarificări publicate de autoritate.",
+      "newFragment": "Pagină folosește ghidul consultativ AFIR ca reper de lucru. Pentru decizia finală de aplicare verificăm documentul oficial aplicabil, anuntul sesiunii, anexele și eventualele clarificări publicate de autoritate.",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/dr12-afir",
+      "sourceFile": "config/seo-programs.json",
       "location": "pages.0.decisionIntro",
       "oldFragment": "DR12 merita pregătit când solicitantul și exploatația pot fi demonstrate documentar, investiția este proportionala cu activitatea agricolă, iar cofinanțarea este realistă.",
       "newFragment": "DR12 merită pregătit când solicitantul și exploatația pot fi demonstrate documentar, investiția este proportionala cu activitatea agricolă, iar cofinanțarea este realistă.",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/dr12-afir",
+      "sourceFile": "config/seo-programs.json",
+      "location": "pages.0.documentRows.0.3",
+      "oldFragment": "Acte juridice, fiscale și declaratii.",
+      "newFragment": "Acte juridice, fiscale și declarații.",
       "reason": "Diacritice și normă editorială română"
     },
     {
@@ -11575,7 +11727,7 @@
       "sourceFile": "config/seo-programs.json",
       "location": "pages.1.contentSections.4.body",
       "oldFragment": "Pentru DR14 nu este suficient ca solicitantul sa se incadreze formal ca ferma mica. Analiza trebuie să arate ca utilajele, dotările sau lucrarile cerute pot fi folosite de exploatația existenta și ca nu genereaza capaci…",
-      "newFragment": "Pentru DR14 nu este suficient ca solicitantul sa se incadreze formal ca fermă mica. Analiza trebuie să arate ca utilajele, dotările sau lucrarile cerute pot fi folosite de exploatația existenta și ca nu genereaza capaci…",
+      "newFragment": "Pentru DR14 nu este suficient ca solicitantul sa se încadreze formal ca fermă mica. Analiza trebuie să arate ca utilajele, dotările sau lucrările cerute pot fi folosite de exploatația existentă și ca nu generează capaci…",
       "reason": "Diacritice și normă editorială română"
     },
     {
@@ -11584,6 +11736,14 @@
       "location": "pages.1.decisionIntro",
       "oldFragment": "DR14 este potrivit când ferma mica are documente clare, investiția este dimensionata corect și cofinanțarea este acoperita.",
       "newFragment": "DR14 este potrivit când fermă mica are documente clare, investiția este dimensionata corect și cofinanțarea este acoperita.",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/dr14",
+      "sourceFile": "config/seo-programs.json",
+      "location": "pages.1.documentRows.0.3",
+      "oldFragment": "Acte juridice, fiscale și declaratii.",
+      "newFragment": "Acte juridice, fiscale și declarații.",
       "reason": "Diacritice și normă editorială română"
     },
     {
@@ -11637,6 +11797,14 @@
     {
       "route": "/dr14",
       "sourceFile": "config/seo-programs.json",
+      "location": "pages.1.examples.1",
+      "oldFragment": "Exploatatie zootehnica mica ce pregătește dotări legate de cresterea și ingrijirea animalelor.",
+      "newFragment": "Exploatatie zootehnica mica ce pregătește dotări legate de creșterea și ingrijirea animalelor.",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/dr14",
+      "sourceFile": "config/seo-programs.json",
       "location": "pages.1.examples.2",
       "oldFragment": "Ferma mixta care are nevoie de modernizare punctuala și poate acoperi cofinanțarea.",
       "newFragment": "Fermă mixta care are nevoie de modernizare punctuala și poate acoperi cofinanțarea.",
@@ -11680,6 +11848,14 @@
       "location": "pages.1.scoring.1",
       "oldFragment": "Bugetul și investiția trebuie să fie proportionale cu ferma mica.",
       "newFragment": "Bugetul și investiția trebuie să fie proportionale cu fermă mica.",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/dr14",
+      "sourceFile": "config/seo-programs.json",
+      "location": "pages.1.steps.0",
+      "oldFragment": "Calculam dimensiunea economică și verificam încadrarea fermei.",
+      "newFragment": "Calculam dimensiunea economică și verificăm încadrarea fermei.",
       "reason": "Diacritice și normă editorială română"
     },
     {
@@ -12052,6 +12228,14 @@
     },
     {
       "route": "/e-move",
+      "sourceFile": "config/seo-programs.json",
+      "location": "pages.56.contentSections.5.body",
+      "oldFragment": "Pentru e-MOVE, bugetul nu se valideaza doar prin preturi. Trebuie aratat cine folosește infrastructura, ce capacitate este necesară, cum se intretin statiile și ce costuri rămân la beneficiar după finalizare.",
+      "newFragment": "Pentru e-MOVE, bugetul nu se validează doar prin preturi. Trebuie aratat cine folosește infrastructura, ce capacitate este necesară, cum se intretin statiile și ce costuri rămân la beneficiar după finalizare.",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/e-move",
       "sourceFile": "e-move/index.html",
       "location": "visible-copy",
       "oldFragment": "Categorie eligibila potrivit submasurii și ghidului activ.",
@@ -12224,6 +12408,14 @@
       "location": "pages.49.steps.4",
       "oldFragment": "decide dacă aplicarea merita continuata",
       "newFragment": "decide dacă aplicarea merită continuată",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/eligibilitate-fonduri-europene",
+      "sourceFile": "config/seo-programs.json",
+      "location": "pages.50.contentSections.0.tableRows.0.1",
+      "oldFragment": "forma juridică, vechime, dimensiune, datorii și declaratii",
+      "newFragment": "forma juridică, vechime, dimensiune, datorii și declarații",
       "reason": "Diacritice și normă editorială română"
     },
     {
@@ -13644,6 +13836,14 @@
     },
     {
       "route": "/firma-consultanta-fonduri-europene",
+      "sourceFile": "config/seo-programs.json",
+      "location": "pages.32.eligibility.0",
+      "oldFragment": "solicitantul trebuie să se incadreze în regulile apelului activ",
+      "newFragment": "solicitantul trebuie să se încadreze în regulile apelului activ",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/firma-consultanta-fonduri-europene",
       "sourceFile": "firma-consultanta-fonduri-europene/index.html",
       "location": "json-ld",
       "oldFragment": "Text JSON-LD fără normalizarea editorială curentă",
@@ -14176,6 +14376,30 @@
       "location": "pages.8.steps.2",
       "oldFragment": "stabileste soluția tehnică",
       "newFragment": "stabilește soluția tehnică",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum",
+      "sourceFile": "config/seo-programs.json",
+      "location": "pages.9.audience.0",
+      "oldFragment": "firme și organizatii care pregătesc investiții în energie",
+      "newFragment": "firme și organizații care pregătesc investiții în energie",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum",
+      "sourceFile": "config/seo-programs.json",
+      "location": "pages.9.eligibility.0",
+      "oldFragment": "beneficiarul trebuie să se incadreze în categoria apelului",
+      "newFragment": "beneficiarul trebuie să se încadreze în categoria apelului",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum",
+      "sourceFile": "config/seo-programs.json",
+      "location": "pages.9.ineligibleExpenses.0",
+      "oldFragment": "capacitati nejustificate prin consum sau scop",
+      "newFragment": "capacități nejustificate prin consum sau scop",
       "reason": "Diacritice și normă editorială română"
     },
     {
@@ -14768,6 +14992,46 @@
       "location": "posts.29.seo.ogTitle",
       "oldFragment": "Fondul pentru Modernizare - energie regenerabila | ghid energie",
       "newFragment": "Fondul pentru Modernizare - energie regenerabilă | ghid energie",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/fondul-modernizare-energie-regenerabila-2026",
+      "sourceFile": "blog.json",
+      "location": "posts.29.title",
+      "oldFragment": "Fondul pentru Modernizare: capacitati noi de producere a energiei regenerabile",
+      "newFragment": "Fondul pentru Modernizare: capacități noi de producere a energiei regenerabile",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/fondul-modernizare-energie-regenerabila-2026",
+      "sourceFile": "config/seo-programs.json",
+      "location": "pages.10.audience.0",
+      "oldFragment": "beneficiari care pregătesc capacitati noi de producție",
+      "newFragment": "beneficiari care pregătesc capacități noi de producție",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/fondul-modernizare-energie-regenerabila-2026",
+      "sourceFile": "config/seo-programs.json",
+      "location": "pages.10.audience.2",
+      "oldFragment": "organizatii care trebuie să documenteze amplasamentul și racordarea",
+      "newFragment": "organizații care trebuie să documenteze amplasamentul și racordarea",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/fondul-modernizare-energie-regenerabila-2026",
+      "sourceFile": "config/seo-programs.json",
+      "location": "pages.10.ineligibleExpenses.0",
+      "oldFragment": "capacitati fără drept de amplasament",
+      "newFragment": "capacități fără drept de amplasament",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/fondul-modernizare-energie-regenerabila-2026",
+      "sourceFile": "config/seo-programs.json",
+      "location": "pages.10.policyContribution",
+      "oldFragment": "apelul susține noi capacitati de producere a energiei electrice din surse regenerabile și contribuie la obiectivele de tranzitie energetică.",
+      "newFragment": "apelul susține noi capacități de producere a energiei electrice din surse regenerabile și contribuie la obiectivele de tranziție energetică.",
       "reason": "Diacritice și normă editorială română"
     },
     {
@@ -17444,6 +17708,14 @@
     },
     {
       "route": "/fonduri-europene-femei-antreprenor",
+      "sourceFile": "config/seo-programs.json",
+      "location": "pages.44.eligibility.0",
+      "oldFragment": "solicitantul trebuie să se incadreze în regulile apelului activ",
+      "newFragment": "solicitantul trebuie să se încadreze în regulile apelului activ",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/fonduri-europene-femei-antreprenor",
       "sourceFile": "fonduri-europene-femei-antreprenor/index.html",
       "location": "json-ld",
       "oldFragment": "Text JSON-LD fără normalizarea editorială curentă",
@@ -18332,6 +18604,14 @@
     },
     {
       "route": "/fonduri-europene-nerambursabile-2026",
+      "sourceFile": "config/seo-programs.json",
+      "location": "pages.30.eligibility.0",
+      "oldFragment": "solicitantul trebuie să se incadreze în regulile apelului activ",
+      "newFragment": "solicitantul trebuie să se încadreze în regulile apelului activ",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/fonduri-europene-nerambursabile-2026",
       "sourceFile": "fonduri-europene-nerambursabile-2026/index.html",
       "location": "json-ld",
       "oldFragment": "Text JSON-LD fără normalizarea editorială curentă",
@@ -18839,7 +19119,7 @@
       "sourceFile": "config/seo-programmatic-pages.json",
       "location": "regionalPages.0.body",
       "oldFragment": "Pagina regionala trimite către pagini canonice pentru consultanță fonduri europene, POR ADR Nord-Est și verificare eligibilitate, astfel incat utilizatorul sa nu intre intr-un lant de rute locale duplicat.",
-      "newFragment": "Pagină regionala trimite către pagini canonice pentru consultanță fonduri europene, POR ADR Nord-Est și verificare eligibilitate, astfel incat utilizatorul sa nu intre într-un lant de rute locale duplicat.",
+      "newFragment": "Pagină regională trimite către pagini canonice pentru consultanță fonduri europene, POR ADR Nord-Est și verificare eligibilitate, astfel incat utilizatorul sa nu intre într-un lant de rute locale duplicat.",
       "reason": "Diacritice și normă editorială română"
     },
     {
@@ -18863,7 +19143,7 @@
       "sourceFile": "config/seo-programmatic-pages.json",
       "location": "regionalPages.0.body",
       "oldFragment": "Regiunea Nord-Est include judetele Iași, Suceava, Bacău, Botosani, Neamt, Vaslui și cere o analiza pe tip de program: regional, AFIR, national, digitalizare sau energie. Pagina regionala consolideaza intentiile locale ș…",
-      "newFragment": "Regiunea Nord-Est include judetele Iași, Suceava, Bacău, Botosani, Neamt, Vaslui și cere o analiză pe tip de program: regional, AFIR, national, digitalizare sau energie. Pagină regionala consolideaza intentiile locale ș…",
+      "newFragment": "Regiunea Nord-Est include judetele Iași, Suceava, Bacău, Botosani, Neamt, Vaslui și cere o analiză pe tip de program: regional, AFIR, national, digitalizare sau energie. Pagină regională consolideaza intentiile locale ș…",
       "reason": "Diacritice și normă editorială română"
     },
     {
@@ -18935,7 +19215,15 @@
       "sourceFile": "config/seo-programmatic-pages.json",
       "location": "regionalPages.0.faq.3.answer",
       "oldFragment": "Pentru ca fără date locale distincte ar crea continut duplicat; pagina regionala răspunde mai bine intentiei comune.",
-      "newFragment": "Pentru ca fără date locale distincte ar crea conținut duplicat; pagină regionala răspunde mai bine intenției comune.",
+      "newFragment": "Pentru ca fără date locale distincte ar crea conținut duplicat; pagină regională răspunde mai bine intenției comune.",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/fonduri-europene-nord-est",
+      "sourceFile": "config/seo-programmatic-pages.json",
+      "location": "regionalPages.0.faq.4.question",
+      "oldFragment": "Ce documente trimit pentru analiza regionala?",
+      "newFragment": "Ce documente trimit pentru analiza regională?",
       "reason": "Diacritice și normă editorială română"
     },
     {
@@ -19876,6 +20164,14 @@
     },
     {
       "route": "/fonduri-pentru-ferme",
+      "sourceFile": "config/seo-programs.json",
+      "location": "pages.45.eligibility.0",
+      "oldFragment": "solicitantul trebuie să se incadreze în regulile apelului activ",
+      "newFragment": "solicitantul trebuie să se încadreze în regulile apelului activ",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/fonduri-pentru-ferme",
       "sourceFile": "fonduri-pentru-ferme/index.html",
       "location": "json-ld",
       "oldFragment": "Text JSON-LD fără normalizarea editorială curentă",
@@ -20376,6 +20672,14 @@
       "location": "pages.45.steps.3",
       "oldFragment": "estimeaza cofinanțarea",
       "newFragment": "estimează cofinanțarea",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/fonduri-pentru-utilaje-agricole",
+      "sourceFile": "config/seo-programs.json",
+      "location": "pages.46.eligibility.0",
+      "oldFragment": "solicitantul trebuie să se incadreze în regulile apelului activ",
+      "newFragment": "solicitantul trebuie să se încadreze în regulile apelului activ",
       "reason": "Diacritice și normă editorială română"
     },
     {
@@ -21240,6 +21544,14 @@
       "location": "pages.56.steps.2",
       "oldFragment": "calculeaza punctajul și bugetul",
       "newFragment": "calculează punctajul și bugetul",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/gal-afir",
+      "sourceFile": "config/seo-programs.json",
+      "location": "pages.57.contentSections.5.paragraphs.0",
+      "oldFragment": "Documentele pot include acte solicitant, documente de localizare, buget, oferte, hotarari sau declaratii, documente tehnice și anexe GAL/AFIR. Lista exacta se verifică în ghidul activ.",
+      "newFragment": "Documentele pot include acte solicitant, documente de localizare, buget, oferte, hotarari sau declarații, documente tehnice și anexe GAL/AFIR. Lista exacta se verifică în ghidul activ.",
       "reason": "Diacritice și normă editorială română"
     },
     {
@@ -22179,6 +22491,14 @@
       "reason": "Diacritice și normă editorială română"
     },
     {
+      "route": "/granturi-digitalizare-imm",
+      "sourceFile": "config/seo-programs.json",
+      "location": "pages.43.eligibility.0",
+      "oldFragment": "solicitantul trebuie să se incadreze în regulile apelului activ",
+      "newFragment": "solicitantul trebuie să se încadreze în regulile apelului activ",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
       "route": "/greseli-fonduri-europene",
       "sourceFile": "config/seo-programs.json",
       "location": "pages.52.audience.0",
@@ -22751,7 +23071,7 @@
       "sourceFile": "config/seo-programmatic-pages.json",
       "location": "localPages.0.body",
       "oldFragment": "Pentru Iași, recomandarea editoriala este sa nu se publice continut local subtire. Dacă nu există o regula teritoriala, o sursa oficială sau un exemplu local verificabil, pagina regionala sau pagina de consultanță gener…",
-      "newFragment": "Pentru Iași, recomandarea editoriala este să nu se publice conținut local subtire. Dacă nu există o regula teritoriala, o sursa oficială sau un exemplu local verificabil, pagină regionala sau pagină de consultanță gener…",
+      "newFragment": "Pentru Iași, recomandarea editoriala este să nu se publice conținut local subtire. Dacă nu există o regula teritoriala, o sursa oficială sau un exemplu local verificabil, pagină regională sau pagină de consultanță gener…",
       "reason": "Diacritice și normă editorială română"
     },
     {
@@ -22904,6 +23224,14 @@
       "location": "caenPages.2.body",
       "oldFragment": "Documentele nu trebuie privite separat. Certificatul constatator, documentele pentru spațiu sau teren, ofertele, situațiile financiare și descrierea investiției trebuie să sustina aceeași poveste. Când o piesa lipsește …",
       "newFragment": "Documentele nu trebuie privite separat. Certificatul constatator, documentele pentru spațiu sau teren, ofertele, situațiile financiare și descrierea investiției trebuie să susțină aceeași poveste. Când o piesă lipsește …",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/instalatii-electrice",
+      "sourceFile": "config/seo-programmatic-pages.json",
+      "location": "caenPages.2.body",
+      "oldFragment": "echipamente fără legătura cu lucrarile prestate",
+      "newFragment": "echipamente fără legătura cu lucrările prestate",
       "reason": "Diacritice și normă editorială română"
     },
     {
@@ -25236,6 +25564,46 @@
     },
     {
       "route": "/investitii-modernizarea-microintreprinderilor-apel-2",
+      "sourceFile": "config/seo-programs.json",
+      "location": "pages.8.contentSections.5.body",
+      "oldFragment": "Un dosar solid explică de ce achizitiile schimbă capacitatea firmei, calitatea serviciului sau procesul operațional. Pentru fiecare echipament notam rolul în activitate, situatia existenta, rezultatul asteptat și docume…",
+      "newFragment": "Un dosar solid explică de ce achizitiile schimbă capacitatea firmei, calitatea serviciului sau procesul operațional. Pentru fiecare echipament notam rolul în activitate, situatia existentă, rezultatul asteptat și docume…",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/investitii-modernizarea-microintreprinderilor-apel-2",
+      "sourceFile": "config/seo-programs.json",
+      "location": "pages.8.contentSections.6.body",
+      "oldFragment": "Pe langa eligibilitatea regionala, microintreprinderea trebuie să arate ca poate gestiona proiectul după aprobare. Situatiile financiare, disponibilitatile pentru cofinanțare, fluxul de numerar și capacitatea de a supor…",
+      "newFragment": "Pe langa eligibilitatea regională, microintreprinderea trebuie să arate ca poate gestiona proiectul după aprobare. Situatiile financiare, disponibilitățile pentru cofinanțare, fluxul de numerar și capacitatea de a supor…",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/investitii-modernizarea-microintreprinderilor-apel-2",
+      "sourceFile": "config/seo-programs.json",
+      "location": "pages.8.ctaText",
+      "oldFragment": "Verifică eligibilitatea regionala",
+      "newFragment": "Verifică eligibilitatea regională",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/investitii-modernizarea-microintreprinderilor-apel-2",
+      "sourceFile": "config/seo-programs.json",
+      "location": "pages.8.evaluation.0",
+      "oldFragment": "Evaluatorul va urmari încadrarea regionala, eligibilitatea firmei și coerenta investiției.",
+      "newFragment": "Evaluatorul va urmari încadrarea regională, eligibilitatea firmei și coerenta investiției.",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/investitii-modernizarea-microintreprinderilor-apel-2",
+      "sourceFile": "config/seo-programs.json",
+      "location": "pages.8.heroPrimaryCta",
+      "oldFragment": "Verifică eligibilitatea regionala",
+      "newFragment": "Verifică eligibilitatea regională",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/investitii-modernizarea-microintreprinderilor-apel-2",
       "sourceFile": "investitii-modernizarea-microintreprinderilor-apel-2/index.html",
       "location": "json-ld",
       "oldFragment": "Text JSON-LD fără normalizarea editorială curentă",
@@ -25536,6 +25904,14 @@
       "location": "pages.17.h1",
       "oldFragment": "PNRR: pagina-cadru pentru apeluri și digitalizare",
       "newFragment": "PNRR: pagină-cadru pentru apeluri și digitalizare",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/pnrr",
+      "sourceFile": "config/seo-programs.json",
+      "location": "pages.18.audience.1",
+      "oldFragment": "organizatii eligibile",
+      "newFragment": "organizații eligibile",
       "reason": "Diacritice și normă editorială română"
     },
     {
@@ -25852,6 +26228,22 @@
     },
     {
       "route": "/pocidif-21",
+      "sourceFile": "config/seo-programs.json",
+      "location": "pages.58.contentSections.2.body",
+      "oldFragment": "Pentru fiecare cheltuiala verificam încadrarea în categoria corectă, intensitatea aplicabila, TVA-ul, costurile neeligibile și contribuția proprie. Separarea incorectă poate genera clarificări sau reducerea bugetului.",
+      "newFragment": "Pentru fiecare cheltuiala verificăm încadrarea în categoria corectă, intensitatea aplicabila, TVA-ul, costurile neeligibile și contribuția proprie. Separarea incorectă poate genera clarificări sau reducerea bugetului.",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/pocidif-21",
+      "sourceFile": "config/seo-programs.json",
+      "location": "pages.58.eligibility.4",
+      "oldFragment": "Valideaza bugetul, intensitatile și calendarul în ghidul activ PoCIDIF.",
+      "newFragment": "Validează bugetul, intensitățile și calendarul în ghidul activ PoCIDIF.",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/pocidif-21",
       "sourceFile": "pocidif-21/index.html",
       "location": "json-ld",
       "oldFragment": "Text JSON-LD fără normalizarea editorială curentă",
@@ -26087,7 +26479,7 @@
       "sourceFile": "blog.json",
       "location": "posts.27.faq.2.answer",
       "oldFragment": "Sunt necesare documente de firma, financiare, documente pentru spatiu, oferte, declaratii si anexele specifice apelului.",
-      "newFragment": "Sunt necesare documente de firma, financiare, documente pentru spațiu, oferte, declaratii și anexele specifice apelului.",
+      "newFragment": "Sunt necesare documente de firma, financiare, documente pentru spațiu, oferte, declarații și anexele specifice apelului.",
       "reason": "Diacritice și normă editorială română"
     },
     {
@@ -26232,6 +26624,14 @@
       "location": "pages.6.steps.4",
       "oldFragment": "completeaza cererea și anexele",
       "newFragment": "completează cererea și anexele",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/por-adr-nord-est",
+      "sourceFile": "config/seo-programs.json",
+      "location": "pages.7.eligibility.0",
+      "oldFragment": "firma trebuie să se incadreze ca microintreprindere",
+      "newFragment": "firma trebuie să se încadreze ca microintreprindere",
       "reason": "Diacritice și normă editorială română"
     },
     {
@@ -26511,7 +26911,7 @@
       "sourceFile": "blog.json",
       "location": "posts.32.faq.9.answer",
       "oldFragment": "Cofinantarea si cheltuielile neeligibile trebuie estimate separat de grant. Include rezerve pentru TVA, diferente de pret, costuri neacoperite si intarzieri in rambursare.",
-      "newFragment": "Cofinantarea și cheltuielile neeligibile trebuie estimate separat de grant. Include rezerve pentru TVA, diferențe de preț, costuri neacoperite și intarzieri în rambursare.",
+      "newFragment": "Cofinantarea și cheltuielile neeligibile trebuie estimate separat de grant. Include rezerve pentru TVA, diferențe de preț, costuri neacoperite și întârzieri în rambursare.",
       "reason": "Diacritice și normă editorială română"
     },
     {
@@ -26792,6 +27192,54 @@
       "location": "pages.30.steps.3",
       "oldFragment": "Construim bugetul pe echipamente, lucrari, servicii și costuri neeligibile.",
       "newFragment": "Construim bugetul pe echipamente, lucrări, servicii și costuri neeligibile.",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/pro-infra",
+      "sourceFile": "config/seo-programs.json",
+      "location": "pages.31.contentSections.3.body",
+      "oldFragment": "Pagină folosește forma consultativa ca reper. Valorile, intensitatea, beneficiarii, cheltuielile și calendarul se valideaza în ghidul activ înainte de depunere.",
+      "newFragment": "Pagină folosește forma consultativa ca reper. Valorile, intensitatea, beneficiarii, cheltuielile și calendarul se validează în ghidul activ înainte de depunere.",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/pro-infra",
+      "sourceFile": "config/seo-programs.json",
+      "location": "pages.31.contentSections.5.body",
+      "oldFragment": "Pentru bugete mari verificam dacă amplasamentul poate primi echipamentele, dacă utilitatile sunt disponibile, dacă instalarea intra în calendar și dacă personalul poate opera linia propusa. Ofertele trebuie să fie compa…",
+      "newFragment": "Pentru bugete mari verificăm dacă amplasamentul poate primi echipamentele, dacă utilitatile sunt disponibile, dacă instalarea intra în calendar și dacă personalul poate opera linia propusa. Ofertele trebuie să fie compa…",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/pro-infra",
+      "sourceFile": "config/seo-programs.json",
+      "location": "pages.31.contentSections.6.title",
+      "oldFragment": "Ce verificam după aprobarea investiției",
+      "newFragment": "Ce verificăm după aprobarea investiției",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/pro-infra",
+      "sourceFile": "config/seo-programs.json",
+      "location": "pages.31.documentRows.0.3",
+      "oldFragment": "Acte juridice, fiscale, coduri CAEN și declaratii.",
+      "newFragment": "Acte juridice, fiscale, coduri CAEN și declarații.",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/pro-infra",
+      "sourceFile": "config/seo-programs.json",
+      "location": "pages.31.eligibleInvestmentRows.1.1",
+      "oldFragment": "Fluxuri și instalații pentru cresterea capacitatii.",
+      "newFragment": "Fluxuri și instalații pentru creșterea capacității.",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/pro-infra",
+      "sourceFile": "config/seo-programs.json",
+      "location": "pages.31.examples.1",
+      "oldFragment": "Companie care introduce echipamente industriale pentru cresterea capacitatii și calitatii producției relevante.",
+      "newFragment": "Companie care introduce echipamente industriale pentru creșterea capacității și calității producției relevante.",
       "reason": "Diacritice și normă editorială română"
     },
     {
@@ -27612,6 +28060,14 @@
     },
     {
       "route": "/start-up-nation-2026-cheltuieli-eligibile",
+      "sourceFile": "config/seo-programs.json",
+      "location": "pages.35.eligibility.0",
+      "oldFragment": "solicitantul trebuie să se incadreze în regulile apelului activ",
+      "newFragment": "solicitantul trebuie să se încadreze în regulile apelului activ",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/start-up-nation-2026-cheltuieli-eligibile",
       "sourceFile": "start-up-nation-2026-cheltuieli-eligibile/index.html",
       "location": "json-ld",
       "oldFragment": "Text JSON-LD fără normalizarea editorială curentă",
@@ -28200,6 +28656,14 @@
       "location": "pages.33.steps.3",
       "oldFragment": "estimeaza cofinanțarea",
       "newFragment": "estimează cofinanțarea",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/start-up-nation-2026-conditii",
+      "sourceFile": "config/seo-programs.json",
+      "location": "pages.34.eligibility.0",
+      "oldFragment": "solicitantul trebuie să se incadreze în regulile apelului activ",
+      "newFragment": "solicitantul trebuie să se încadreze în regulile apelului activ",
       "reason": "Diacritice și normă editorială română"
     },
     {
@@ -28820,6 +29284,14 @@
     },
     {
       "route": "/start-up-nation-2026-idei-afaceri",
+      "sourceFile": "config/seo-programs.json",
+      "location": "pages.36.eligibility.0",
+      "oldFragment": "solicitantul trebuie să se incadreze în regulile apelului activ",
+      "newFragment": "solicitantul trebuie să se încadreze în regulile apelului activ",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/start-up-nation-2026-idei-afaceri",
       "sourceFile": "start-up-nation-2026-idei-afaceri/index.html",
       "location": "json-ld",
       "oldFragment": "Text JSON-LD fără normalizarea editorială curentă",
@@ -29400,6 +29872,14 @@
       "location": "pages.36.steps.3",
       "oldFragment": "estimeaza cofinanțarea",
       "newFragment": "estimează cofinanțarea",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/start-up-nation-2026-plan-de-afaceri",
+      "sourceFile": "config/seo-programs.json",
+      "location": "pages.37.eligibility.0",
+      "oldFragment": "solicitantul trebuie să se incadreze în regulile apelului activ",
+      "newFragment": "solicitantul trebuie să se încadreze în regulile apelului activ",
       "reason": "Diacritice și normă editorială română"
     },
     {
@@ -30184,6 +30664,22 @@
       "location": "pages.3.scoring.2",
       "oldFragment": "Un plan bun explica piata, bugetul și implementarea, nu doar indeplineste formularul.",
       "newFragment": "Un plan bun explică piata, bugetul și implementarea, nu doar indeplineste formularul.",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/start-up-nation-2026",
+      "sourceFile": "config/seo-programs.json",
+      "location": "pages.4.contentSections.4.body",
+      "oldFragment": "Pentru o sesiune noua verificam bugetul, pilonii, beneficiarii, codurile CAEN, cheltuielile, locurile de munca, calendarul, forma aportului propriu și obligatiile de monitorizare.",
+      "newFragment": "Pentru o sesiune noua verificăm bugetul, pilonii, beneficiarii, codurile CAEN, cheltuielile, locurile de munca, calendarul, forma aportului propriu și obligatiile de monitorizare.",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/start-up-nation-2026",
+      "sourceFile": "config/seo-programs.json",
+      "location": "pages.4.documentRows.0.3",
+      "oldFragment": "Acte juridice, fiscale, declaratii și date reprezentant.",
+      "newFragment": "Acte juridice, fiscale, declarații și date reprezentant.",
       "reason": "Diacritice și normă editorială română"
     },
     {
@@ -30991,7 +31487,7 @@
       "sourceFile": "config/seo-programmatic-pages.json",
       "location": "localPages.1.body",
       "oldFragment": "Pentru Suceava, recomandarea editoriala este sa nu se publice continut local subtire. Dacă nu există o regula teritoriala, o sursa oficială sau un exemplu local verificabil, pagina regionala sau pagina de consultanță ge…",
-      "newFragment": "Pentru Suceava, recomandarea editoriala este să nu se publice conținut local subtire. Dacă nu există o regula teritoriala, o sursa oficială sau un exemplu local verificabil, pagină regionala sau pagină de consultanță ge…",
+      "newFragment": "Pentru Suceava, recomandarea editoriala este să nu se publice conținut local subtire. Dacă nu există o regula teritoriala, o sursa oficială sau un exemplu local verificabil, pagină regională sau pagină de consultanță ge…",
       "reason": "Diacritice și normă editorială română"
     },
     {
@@ -31384,6 +31880,14 @@
       "location": "pages.21.steps.2",
       "oldFragment": "completeaza documente",
       "newFragment": "completează documente",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/verificare-eligibilitate-fonduri-europene",
+      "sourceFile": "config/seo-programs.json",
+      "location": "pages.22.examples.2",
+      "oldFragment": "verificare microintreprindere regionala",
+      "newFragment": "verificare microintreprindere regională",
       "reason": "Diacritice și normă editorială română"
     },
     {

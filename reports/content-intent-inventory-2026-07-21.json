@@ -49,7 +49,7 @@
       "microConversion": "cta_click către formularul de triere",
       "parent": "ROOT",
       "competingUrls": [],
-      "demonstrableUniqueValue": "41 subtitluri distincte, 2 FAQ și 0 linkuri externe în sursa HTML.",
+      "demonstrableUniqueValue": "41 subtitluri distincte, 3 FAQ și 0 linkuri externe în sursa HTML.",
       "recommendation": "keep",
       "recommendationTarget": null,
       "recommendationReason": "Rol distinct de core, cu o singură intenție primară și conversie proprie.",
@@ -60,7 +60,7 @@
         "title": "Consultanță și proiectare fonduri europene | FABER",
         "metaDescription": "FABER oferă consultanță și proiectare pentru proiecte cu fonduri europene: eligibilitate, cereri de finanțare, documentații tehnice și implementare.",
         "headingCount": 41,
-        "faqCount": 2,
+        "faqCount": 3,
         "externalLinkCount": 0,
         "interactiveControlCount": 54,
         "governanceState": "NEÎNREGISTRAT",
@@ -95,7 +95,7 @@
       "nextReviewAt": "2026-08-18",
       "evidence": {
         "title": "Acte necesare pentru fonduri europene - checklist dosar",
-        "metaDescription": "Lista de acte necesare pentru fonduri europene: documente firmă, financiare, tehnice, spațiu, oferte, declaratii și greșeli de evitat.",
+        "metaDescription": "Lista de acte necesare pentru fonduri europene: documente firmă, financiare, tehnice, spațiu, oferte, declarații și greșeli de evitat.",
         "headingCount": 30,
         "faqCount": 4,
         "externalLinkCount": 1,
@@ -169,7 +169,7 @@
         "headingCount": 20,
         "faqCount": 10,
         "externalLinkCount": 1,
-        "interactiveControlCount": 4,
+        "interactiveControlCount": 0,
         "governanceState": "public",
         "programRegistryState": "public"
       }
@@ -206,7 +206,7 @@
         "headingCount": 23,
         "faqCount": 9,
         "externalLinkCount": 3,
-        "interactiveControlCount": 4,
+        "interactiveControlCount": 0,
         "governanceState": "public",
         "programRegistryState": "public"
       }
@@ -241,7 +241,7 @@
         "headingCount": 19,
         "faqCount": 9,
         "externalLinkCount": 2,
-        "interactiveControlCount": 4,
+        "interactiveControlCount": 0,
         "governanceState": "public",
         "programRegistryState": "public"
       }
@@ -1149,7 +1149,7 @@
         "headingCount": 22,
         "faqCount": 9,
         "externalLinkCount": 1,
-        "interactiveControlCount": 4,
+        "interactiveControlCount": 0,
         "governanceState": "public",
         "programRegistryState": "public"
       }
@@ -1301,7 +1301,7 @@
         "headingCount": 12,
         "faqCount": 3,
         "externalLinkCount": 1,
-        "interactiveControlCount": 4,
+        "interactiveControlCount": 0,
         "governanceState": "NEÎNREGISTRAT",
         "programRegistryState": "NU_ESTE_PROGRAM_ÎN_REGISTRU"
       }
@@ -1325,7 +1325,7 @@
       "competingUrls": [
         "/dr14"
       ],
-      "demonstrableUniqueValue": "11 subtitluri distincte, 3 FAQ și 2 linkuri externe în sursa HTML.",
+      "demonstrableUniqueValue": "11 subtitluri distincte, 3 FAQ și 1 linkuri externe în sursa HTML.",
       "recommendation": "keep",
       "recommendationTarget": null,
       "recommendationReason": "Rol distinct de program, cu o singură intenție primară și conversie proprie.",
@@ -1337,8 +1337,8 @@
         "metaDescription": "DR 14 AFIR pentru ferme mici: condiții de eligibilitate, documente, SO/SOC, cofinanțare și greșeli frecvente înainte de depunere.",
         "headingCount": 11,
         "faqCount": 3,
-        "externalLinkCount": 2,
-        "interactiveControlCount": 4,
+        "externalLinkCount": 1,
+        "interactiveControlCount": 0,
         "governanceState": "NEÎNREGISTRAT",
         "programRegistryState": "NU_ESTE_PROGRAM_ÎN_REGISTRU"
       }
@@ -1375,7 +1375,7 @@
         "headingCount": 21,
         "faqCount": 10,
         "externalLinkCount": 1,
-        "interactiveControlCount": 4,
+        "interactiveControlCount": 0,
         "governanceState": "public",
         "programRegistryState": "public"
       }
@@ -1397,7 +1397,7 @@
       "microConversion": "cta_click:dr12_vs_dr14_compare_project",
       "parent": "/fonduri-europene-agricultura",
       "competingUrls": [],
-      "demonstrableUniqueValue": "20 subtitluri distincte, 2 FAQ și 7 linkuri externe în sursa HTML.",
+      "demonstrableUniqueValue": "21 subtitluri distincte, 2 FAQ și 8 linkuri externe în sursa HTML.",
       "recommendation": "keep",
       "recommendationTarget": null,
       "recommendationReason": "Rol distinct de ghid, cu o singură intenție primară și conversie proprie.",
@@ -1407,9 +1407,9 @@
       "evidence": {
         "title": "DR 12 vs DR 14: încadrare și investiții | FABER",
         "metaDescription": "Compară DR 12 și DR 14: profil, SO, investiții și acte. DR 14 are sesiunea lansată, cu depuneri între 1 septembrie și 31 octombrie 2026.",
-        "headingCount": 20,
+        "headingCount": 21,
         "faqCount": 2,
-        "externalLinkCount": 7,
+        "externalLinkCount": 8,
         "interactiveControlCount": 0,
         "governanceState": "public",
         "programRegistryState": "NU_ESTE_PROGRAM_ÎN_REGISTRU"
@@ -1447,7 +1447,7 @@
         "headingCount": 30,
         "faqCount": 16,
         "externalLinkCount": 2,
-        "interactiveControlCount": 27,
+        "interactiveControlCount": 23,
         "governanceState": "public",
         "programRegistryState": "public"
       }
@@ -1482,7 +1482,7 @@
         "headingCount": 26,
         "faqCount": 18,
         "externalLinkCount": 2,
-        "interactiveControlCount": 4,
+        "interactiveControlCount": 0,
         "governanceState": "public",
         "programRegistryState": "public"
       }
@@ -1587,7 +1587,7 @@
         "headingCount": 21,
         "faqCount": 13,
         "externalLinkCount": 2,
-        "interactiveControlCount": 4,
+        "interactiveControlCount": 0,
         "governanceState": "public",
         "programRegistryState": "public"
       }
@@ -1699,7 +1699,7 @@
         "headingCount": 20,
         "faqCount": 13,
         "externalLinkCount": 2,
-        "interactiveControlCount": 4,
+        "interactiveControlCount": 0,
         "governanceState": "public",
         "programRegistryState": "public"
       }
@@ -1827,8 +1827,8 @@
       "h1": "Fondul pentru Modernizare",
       "uniquePromise": "Centralizează statutul, sursa oficială și pașii de verificare pentru „Fondul pentru Modernizare”.",
       "cta": "Verifică încadrarea proiectului",
-      "ctaTarget": "/contact#program=fondul-de-modernizare",
-      "microConversion": "cta_click:program_project_check",
+      "ctaTarget": "/contact#program_slug=fondul-de-modernizare&source_page=%2Ffondul-de-modernizare",
+      "microConversion": "cta_click:fondul_de_modernizare_contact_1",
       "parent": "/finantari-panouri-fotovoltaice",
       "competingUrls": [],
       "demonstrableUniqueValue": "Înregistrare în registrul unic al programelor; 0 subtitluri, 2 FAQ și sursă: Ministerul Investițiilor și Proiectelor Europene – MySMIS2021.",
@@ -1881,7 +1881,7 @@
         "headingCount": 23,
         "faqCount": 9,
         "externalLinkCount": 2,
-        "interactiveControlCount": 4,
+        "interactiveControlCount": 0,
         "governanceState": "public",
         "programRegistryState": "public"
       }
@@ -1918,7 +1918,7 @@
         "headingCount": 14,
         "faqCount": 6,
         "externalLinkCount": 2,
-        "interactiveControlCount": 4,
+        "interactiveControlCount": 0,
         "governanceState": "public",
         "programRegistryState": "public"
       }
@@ -2532,7 +2532,7 @@
         "headingCount": 9,
         "faqCount": 7,
         "externalLinkCount": 2,
-        "interactiveControlCount": 9,
+        "interactiveControlCount": 5,
         "governanceState": "public",
         "programRegistryState": "public"
       }
@@ -2569,7 +2569,7 @@
         "headingCount": 28,
         "faqCount": 13,
         "externalLinkCount": 3,
-        "interactiveControlCount": 4,
+        "interactiveControlCount": 0,
         "governanceState": "public",
         "programRegistryState": "public"
       }
@@ -2925,7 +2925,7 @@
         "headingCount": 17,
         "faqCount": 13,
         "externalLinkCount": 3,
-        "interactiveControlCount": 27,
+        "interactiveControlCount": 23,
         "governanceState": "public",
         "programRegistryState": "public"
       }
@@ -3046,14 +3046,14 @@
       "sitemapFamily": "programs",
       "type": "program",
       "primaryAudience": "Solicitanți și beneficiari potențiali",
-      "mainQuestion": "Care este statutul verificat și ce trebuie analizat pentru „Planul Național de Redresare și Reziliență”?",
-      "queryCluster": "pnrr; Planul Național de Redresare și Reziliență",
+      "mainQuestion": "Care este statutul verificat și ce trebuie analizat pentru „PNRR”?",
+      "queryCluster": "pnrr; PNRR",
       "primaryIntent": "informațională",
-      "h1": "Planul Național de Redresare și Reziliență",
-      "uniquePromise": "Centralizează statutul, sursa oficială și pașii de verificare pentru „Planul Național de Redresare și Reziliență”.",
+      "h1": "PNRR",
+      "uniquePromise": "Centralizează statutul, sursa oficială și pașii de verificare pentru „PNRR”.",
       "cta": "Verifică încadrarea proiectului",
-      "ctaTarget": "/contact#program=pnrr",
-      "microConversion": "cta_click:program_project_check",
+      "ctaTarget": "/contact#program_slug=pnrr&source_page=%2Fpnrr",
+      "microConversion": "cta_click:pnrr_contact_1",
       "parent": "/fonduri-europene",
       "competingUrls": [],
       "demonstrableUniqueValue": "Înregistrare în registrul unic al programelor; 0 subtitluri, 2 FAQ și sursă: Ministerul Investițiilor și Proiectelor Europene – tabloul de bord PNRR.",
@@ -3144,7 +3144,7 @@
         "headingCount": 18,
         "faqCount": 13,
         "externalLinkCount": 4,
-        "interactiveControlCount": 4,
+        "interactiveControlCount": 0,
         "governanceState": "public",
         "programRegistryState": "public"
       }
@@ -3216,7 +3216,7 @@
         "headingCount": 18,
         "faqCount": 12,
         "externalLinkCount": 1,
-        "interactiveControlCount": 4,
+        "interactiveControlCount": 0,
         "governanceState": "public",
         "programRegistryState": "public"
       }
@@ -3234,8 +3234,8 @@
       "h1": "Programul Tranziție Justă",
       "uniquePromise": "Centralizează statutul, sursa oficială și pașii de verificare pentru „Programul Tranziție Justă”.",
       "cta": "Verifică încadrarea proiectului",
-      "ctaTarget": "/contact#program=programul-tranzitie-justa",
-      "microConversion": "cta_click:program_project_check",
+      "ctaTarget": "/contact#program_slug=programul-tranzitie-justa&source_page=%2Fprogramul-tranzitie-justa",
+      "microConversion": "cta_click:programul_tranzitie_justa_contact_1",
       "parent": "/fonduri-europene",
       "competingUrls": [],
       "demonstrableUniqueValue": "Înregistrare în registrul unic al programelor; 0 subtitluri, 2 FAQ și sursă: Ministerul Investițiilor și Proiectelor Europene – MySMIS2021.",
@@ -3416,9 +3416,9 @@
       "primaryIntent": "informațională",
       "h1": "Programul Start-Up Nation",
       "uniquePromise": "Centralizează statutul, sursa oficială și pașii de verificare pentru „Programul Start-Up Nation”.",
-      "cta": "Verifică proiectul",
-      "ctaTarget": "/contact#program=start-up-nation",
-      "microConversion": "cta_click:start-up-nation_long_form_decision",
+      "cta": "Verifică scenariul Start-Up Nation",
+      "ctaTarget": "/contact",
+      "microConversion": "cta_click:start_up_nation_2026_contact_1",
       "parent": "/fonduri-europene-imm",
       "competingUrls": [
         "/consultanta-start-up-nation-2026",
@@ -3427,7 +3427,7 @@
         "/start-up-nation-2026-idei-afaceri",
         "/start-up-nation-2026-plan-de-afaceri"
       ],
-      "demonstrableUniqueValue": "Înregistrare în registrul unic al programelor; 16 subtitluri, 13 FAQ și sursă: Ministerul Economiei – platforma oficială MINIMIS.",
+      "demonstrableUniqueValue": "Înregistrare în registrul unic al programelor; 16 subtitluri, 12 FAQ și sursă: Ministerul Economiei – platforma oficială MINIMIS.",
       "recommendation": "keep",
       "recommendationTarget": null,
       "recommendationReason": "Rol distinct de program, cu o singură intenție primară și conversie proprie.",
@@ -3438,9 +3438,9 @@
         "title": "Start-Up Nation: apel închis la 29 mai 2026 | FABER",
         "metaDescription": "Start-Up Nation 2024: apelul pentru persoane juridice s-a închis la 29 mai 2026, ora 20:00. Verifică platforma oficială înaintea unei sesiuni noi.",
         "headingCount": 16,
-        "faqCount": 13,
+        "faqCount": 12,
         "externalLinkCount": 2,
-        "interactiveControlCount": 4,
+        "interactiveControlCount": 0,
         "governanceState": "public",
         "programRegistryState": "public"
       }
@@ -3726,7 +3726,7 @@
       "primaryIntent": "navigațională",
       "h1": "Termeni și Condiții",
       "uniquePromise": "Prezintă versiunea aprobată și regulile aplicabile pentru „Termeni și Condiții”.",
-      "cta": "atelier.consultanță@gmail.com",
+      "cta": "atelier.consultanta@gmail.com",
       "ctaTarget": "mailto:atelier.consultanta@gmail.com",
       "microConversion": "cta_click:email_contact",
       "parent": "/",
