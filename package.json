@@ -149,6 +149,8 @@
     "audit:aesthetic-coverage": "node tools/audit-aesthetic-coverage.js",
     "test:design-system": "node tools/sync-design-system-pilot.js --check && node tools/audit-design-system.js --check --no-report && node tests/design-system-contract.mjs",
     "apply:analytics-events": "node tools/sync-analytics-events.js",
+    "apply:google-tag": "node tools/sync-google-tag.js",
+    "verify:google-tag": "node tools/sync-google-tag.js --check",
     "verify:analytics": "node scripts/verify-analytics-events.js && node tests/analytics-events-checks.mjs && node tests/crm-funnel-contract.mjs",
     "test:funnel-analytics": "node tests/analytics-events-checks.mjs && node tests/crm-funnel-contract.mjs",
     "audit:internal-links": "node tools/generate-internal-link-map.js",

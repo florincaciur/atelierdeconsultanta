@@ -6,6 +6,7 @@ require("./fs-write-retry");
 const fs = require("fs");
 const path = require("path");
 const { ROOT, findPublicHtmlFiles } = require("./sync-global-header");
+const { synchronizeGoogleTag } = require("./sync-google-tag");
 
 const ANALYTICS_SCRIPT = '<script src="/assets/analytics-events.js" defer></script>';
 const ATTRIBUTION_SCRIPT = '<script src="/assets/lead-attribution.js" defer></script>';
@@ -263,7 +264,7 @@ function annotateBody(html, relativePath) {
 
 function synchronizePublicHtml(html, relativePath) {
   const eol = html.includes("\r\n") ? "\r\n" : "\n";
-  let output = stripInlineClarity(html);
+  let output = synchronizeGoogleTag(stripInlineClarity(html), relativePath);
   output = removeAnalyticsScripts(output);
   output = annotateAnchors(output, relativePath);
   output = annotateForms(output, relativePath);
