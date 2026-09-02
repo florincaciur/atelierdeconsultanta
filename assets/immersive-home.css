@@ -467,6 +467,9 @@ body.page-family-home #homepage-contact .im-contact-form-wrap { margin: 0; paddi
 .hero-program-scene .pv-panels { fill: #244a6b; stroke: #a7c6dd; }
 .hero-program-scene .pv-glint { fill: #ffffff33; stroke: none; }
 .hero-program-scene :is(.pv-grow, .pv-sprout) { fill: #759bb5; stroke: #cee0ee; }
+.hero-program-scene .pv-field-bed { fill: #2f604d; stroke: #759bb5; }
+.hero-program-scene .pv-furrows { fill: none; stroke: #a7c6dd; opacity: .72; }
+.hero-program-scene .pv-crops { fill: none; stroke: #d7e9be; }
 .hero-program-scene .pv-wheels { fill: #102a46; stroke: #bccfdf; }
 .hero-program-scene .pv-wheels circle:nth-last-child(-n+2) { fill: #d8e9f7; }
 .hero-program-scene .pv-flow { stroke: #f5a623; stroke-dasharray: 6 9; fill: none; }

@@ -13,6 +13,9 @@ const css = fs.readFileSync(path.join(ROOT, "assets", "program-visuals.css"), "u
 assert.match(css, /prefers-reduced-motion:\s*reduce/, "Stilul graficelor trebuie să respecte reducerea mișcării");
 assert.match(css, /body\[data-program-id\][\s\S]*max-width:\s*100%/, "Paginile de program trebuie să limiteze graficele și conținutul la lățimea disponibilă");
 assert.match(css, /program-visual__svg--mobile/, "Graficul comun trebuie să aibă o compoziție mobilă distinctă și lizibilă");
+assert.match(css, /program-hero--immersive\.program-visual[\s\S]*min-height:\s*0/, "Bannerul comun nu trebuie să ocupe artificial înălțimea viewportului");
+assert.match(css, /gap:\s*0\s+clamp\(/, "Elementele textului nu trebuie separate de spațierea coloanelor");
+assert.match(css, /program-hero__visual--immersive[\s\S]*align-self:\s*center/, "Animația trebuie să rămână compactă și centrată vertical");
 
 for (const route of routes()) {
   const file = fileForRoute(ROOT, route);
@@ -45,6 +48,10 @@ for (const route of routes()) {
     assert.equal($(element).find(".program-visual__svg--desktop").length, 1, `${route}: lipsește compoziția SVG desktop`);
     assert.equal($(element).find(".program-visual__svg--mobile").length, 1, `${route}: lipsește compoziția SVG mobilă`);
   });
+  if (route === "/dr14") {
+    assert.equal(banner.find(".pv-tractor").length, 2, `${route}: tractorul trebuie redat în compozițiile desktop și mobilă`);
+    assert.equal(banner.find(".pv-field-bed").length, 2, `${route}: tractorul trebuie așezat pe un câmp în ambele compoziții`);
+  }
 }
 
 console.log(`Contract grafice program: ${routes().length} rute conforme.`);

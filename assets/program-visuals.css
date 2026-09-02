@@ -8,11 +8,11 @@
   grid-template-columns: minmax(0, .92fr) minmax(360px, 1.08fr) !important;
   grid-auto-flow: row;
   align-items: center !important;
-  gap: clamp(1.4rem, 4vw, 4rem) !important;
+  gap: 0 clamp(1.4rem, 3vw, 3rem) !important;
   width: min(1240px, calc(100% - 2rem)) !important;
-  min-height: clamp(500px, 66svh, 650px);
-  margin: clamp(1rem, 3vw, 2.5rem) auto !important;
-  padding: clamp(1.4rem, 4vw, 3.4rem) !important;
+  min-height: 0 !important;
+  margin: clamp(.75rem, 2vw, 1.5rem) auto !important;
+  padding: clamp(1.35rem, 3vw, 2.5rem) !important;
   overflow: hidden !important;
   position: relative;
   isolation: isolate;
@@ -112,11 +112,15 @@
 }
 
 .program-hero__visual--immersive {
-  align-self: stretch;
+  align-self: center;
+  justify-self: end;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 100%;
+  max-width: 560px !important;
   padding: clamp(.7rem, 2vw, 1.25rem);
+  transform: translateY(-.4rem);
   background: rgba(5, 19, 37, .34);
   border: 1px solid rgba(255,255,255,.14);
   border-radius: 16px;
@@ -137,6 +141,9 @@
 .program-visual__svg .pv-panels { fill: #244a6b; stroke: #a7c6dd; }
 .program-visual__svg .pv-glint { fill: #ffffff33; stroke: none; }
 .program-visual__svg :is(.pv-grow, .pv-sprout) { fill: #759bb5; stroke: #cee0ee; }
+.program-visual__svg .pv-field-bed { fill: #2f604d; stroke: #759bb5; }
+.program-visual__svg .pv-furrows { fill: none; stroke: #a7c6dd; opacity: .72; }
+.program-visual__svg .pv-crops { fill: none; stroke: #d7e9be; }
 .program-visual__svg .pv-wheels { fill: #102a46; stroke: #bccfdf; }
 .program-visual__svg .pv-wheels circle:nth-last-child(-n+2) { fill: #d8e9f7; }
 .program-visual__svg .pv-flow { stroke: #f5a623; stroke-dasharray: 6 9; fill: none; }
@@ -175,7 +182,7 @@
     min-height: 0;
     padding: clamp(1.25rem, 5vw, 2.5rem) !important;
   }
-  .program-hero--immersive .program-hero__visual { grid-column: 1; grid-row: auto; }
+  .program-hero--immersive .program-hero__visual { grid-column: 1; grid-row: auto; justify-self: center; transform: none; }
   .program-hero--immersive :is(h1, .post-title) { max-width: 18ch; }
 }
 

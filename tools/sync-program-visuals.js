@@ -11,7 +11,7 @@ const { sceneArtwork } = require("./hero-program-scenes");
 
 const ROOT = path.resolve(__dirname, "..");
 const CHECK_ONLY = process.argv.includes("--check");
-const STYLE_HREF = "/assets/program-visuals.css?v=20260901-2";
+const STYLE_HREF = "/assets/program-visuals.css?v=20260902-1";
 const START = "PROGRAM_VISUAL_START";
 const END = "PROGRAM_VISUAL_END";
 const PROGRAMS = JSON.parse(fs.readFileSync(path.join(ROOT, "config", "seo-programs.json"), "utf8")).programs;
@@ -59,9 +59,12 @@ function familyLabel(family) {
 
 function sceneSvg(id, record, variant) {
   const title = record.shortName || record.name;
+  const description = record.id === "dr14-afir"
+    ? "Un tractor animat traversează un câmp cultivat, în stilul vizual al programelor FABER."
+    : "Compoziție simbolică pentru domeniul programului și traseul de verificare: solicitant, investiție, buget și sursă oficială.";
   return `<svg class="program-visual__svg program-visual__svg--${variant}" viewBox="0 0 420 270" role="img" aria-labelledby="${id}-${variant}-title ${id}-${variant}-desc" preserveAspectRatio="xMidYMid meet">
       <title id="${id}-${variant}-title">Reper vizual pentru ${escapeHtml(title)}</title>
-      <desc id="${id}-${variant}-desc">Compoziție simbolică pentru domeniul programului și traseul de verificare: solicitant, investiție, buget și sursă oficială.</desc>
+      <desc id="${id}-${variant}-desc">${escapeHtml(description)}</desc>
       <ellipse class="pv-shadow" cx="213" cy="231" rx="142" ry="18"/>
       <path class="pv-platform" d="m55 216 149-51 158 51-150 48Z"/>
       ${sceneArtwork(record)}

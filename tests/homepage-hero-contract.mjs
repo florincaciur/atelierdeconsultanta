@@ -39,6 +39,8 @@ assert.deepEqual($("#hero [data-program-scene]").map((_, node) => $(node).attr("
 assert.equal($("#hero [data-hero-programs]").length, 1, "tabelul cu măsuri trebuie să fie unic și vizibil în hero");
 assert.equal($("#hero [data-hero-program-item]").length, homepagePrograms.length, "meniul interactiv trebuie să corespundă selecției din registrul unic");
 assert.equal($("#hero [data-hero-program-item][href='/dr14']").length, 1, "DR 14 trebuie publicat în meniul hero");
+assert.equal($("#hero [data-program-scene='dr14-afir'] .pv-tractor").length, 1, "Scena DR 14 din homepage trebuie să includă tractorul animat");
+assert.equal($("#hero [data-program-scene='dr14-afir'] .pv-field-bed").length, 1, "Scena DR 14 din homepage trebuie să includă un câmp");
 assert.equal($("#hero [data-hero-program-item][href='/dr18']").length, 1, "DR 18 trebuie publicat în meniul hero");
 assert.equal($("#hero [data-hero-program-item][href='/e-drive']").length, 1, "e-DRIVE trebuie publicat în meniul hero");
 assert.equal($("#hero [data-hero-programs]").parents("details").length, 0, "tabelul nu trebuie ascuns într-un acordeon");
