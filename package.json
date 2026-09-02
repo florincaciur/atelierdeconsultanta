@@ -198,7 +198,7 @@
     "verify:seo-local": "node tools/validate-seo-local.js",
     "verify:seo": "node scripts/verify-seo-integrity.js .",
     "verify:visual": "node scripts/visual-integrity-check.js",
-    "verify:functional": "node verify-and-fix.js",
+    "verify:functional": "node verify-and-fix.js --functional-only",
     "verify:all": "npm run check:copy && npm run generate:sitemap && npm run verify:sitemap && node verify-and-fix.js && node scripts/verify-seo-integrity.js . && node tools/audit-site-links.js && npm run audit:program-facts",
     "fix:all": "node verify-and-fix.js --apply",
     "build": "node tools/generate-2026-program-pages.js && node tools/run-build.js",

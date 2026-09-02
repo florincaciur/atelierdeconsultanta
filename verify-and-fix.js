@@ -12,6 +12,7 @@ const REPORT_DIR = path.join(ROOT, "reports");
 const SCREENSHOT_DIR = path.join(REPORT_DIR, "functional-screenshots");
 const APPLY = process.argv.includes("--apply");
 const SKIP_FUNCTIONAL = process.argv.includes("--skip-functional");
+const FUNCTIONAL_ONLY = process.argv.includes("--functional-only");
 
 const EXCLUDED_DIRS = new Set([".git", ".github", ".wrangler", "dist", "node_modules", "reports"]);
 const NON_CONTENT_FILES = new Set(["404.html", "admin/index.html"]);
@@ -727,16 +728,20 @@ async function inspectPage(page, baseUrl, pageInfo) {
 async function testContactForm(page, baseUrl) {
   const result = { name: "contact-form", pass: false, message: "" };
   await page.goto(`${baseUrl}/`, { waitUntil: "commit", timeout: 10000 });
-  await page.waitForSelector("#contactForm", { timeout: 8000 });
-  await page.fill("#contact-name", "Test Verificare");
+  await page.click("#homepage-contact .im-contact-disclosure > summary");
+  await page.waitForSelector("#contact-triage-form", { timeout: 8000 });
+  await page.selectOption("#contact-applicant-type", "societate");
+  await page.fill("#contact-location", "Iași");
+  await page.fill("#contact-investment", "Digitalizarea proceselor interne");
   await page.fill("#contact-email", "test@example.com");
-  await page.fill("#contact-message", "Mesaj de test pentru verificare functionala.");
-  await page.check("#gdpr-consent");
-  await page.click("#contactForm button[type='submit']");
-  await page.waitForSelector("#formSuccess.show, .form-success.show, #formSuccess:visible", { timeout: 8000 });
-  const visible = await page.locator("#formSuccess").isVisible();
+  await page.check("#privacy-notice-acknowledged");
+  await page.click('#contact-triage-form [data-action="review-short"]');
+  await page.waitForSelector('#contact-triage-form [data-form-summary]:not([hidden])', { timeout: 8000 });
+  await page.click('#contact-triage-form [data-final-submit]');
+  await page.waitForSelector("[data-form-success]:not([hidden])", { timeout: 8000 });
+  const visible = await page.locator("[data-form-success]").isVisible();
   result.pass = visible;
-  result.message = visible ? "success message visible" : "success message missing";
+  result.message = visible ? "triage summary and success message visible" : "success message missing";
   return result;
 }
 
@@ -759,7 +764,8 @@ async function testDr14Score(page, baseUrl) {
   const result = { name: "dr14-score", pass: false, message: "" };
   await page.goto(`${baseUrl}/dr14`, { waitUntil: "commit", timeout: 10000 });
   await page.waitForSelector("[data-score-total]", { timeout: 8000 });
-  await page.check('input[name="dr14-mountain"]');
+  await page.waitForSelector("[data-score-criteria] select", { timeout: 8000 });
+  await page.locator("[data-score-criteria] select").first().selectOption({ index: 1 });
   await page.waitForFunction(() => Number(document.querySelector("[data-score-total]")?.textContent.replace(",", ".") || "0") > 0, null, { timeout: 8000 });
   const total = await page.textContent("[data-score-total]");
   result.pass = Number(String(total).replace(",", ".")) > 0;
@@ -772,6 +778,14 @@ async function setupPage(browser, allowFormSubmit = false) {
   page.setDefaultTimeout(10000);
   await page.route("**/*", (route) => {
     const requestUrl = new URL(route.request().url());
+    if (allowFormSubmit && requestUrl.pathname === "/api/contact-triage" && route.request().method() === "POST") {
+      route.fulfill({
+        status: 200,
+        contentType: "application/json",
+        body: JSON.stringify({ success: true, leadId: "functional-test-lead" }),
+      });
+      return;
+    }
     if (requestUrl.hostname === "127.0.0.1" || requestUrl.hostname === "localhost") {
       route.continue();
       return;
@@ -870,6 +884,15 @@ function writeSummary(seoReport, functionalReport) {
 
 async function main() {
   await fsp.mkdir(REPORT_DIR, { recursive: true });
+  if (FUNCTIONAL_ONLY) {
+    const functionalReport = await runFunctionalValidation();
+    fs.writeFileSync(path.join(REPORT_DIR, "functional-validation.json"), `${JSON.stringify(functionalReport, null, 2)}\n`, "utf8");
+    console.log(`Mode: ${functionalReport.mode}`);
+    console.log(`Functional checks: ${functionalReport.summary.checked}; failed: ${functionalReport.summary.failed}`);
+    console.log("Report written to reports/functional-validation.json");
+    if (functionalReport.summary.failed) process.exitCode = 1;
+    return;
+  }
   const htmlFiles = walkHtmlFiles(ROOT);
   const changes = htmlFiles.map((filePath) => updateHtml(filePath, ROOT)).filter((item) => item.changed);
   const results = htmlFiles.map((filePath) => parseHtml(filePath, ROOT));

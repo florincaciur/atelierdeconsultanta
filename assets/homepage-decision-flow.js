@@ -63,10 +63,13 @@
       const config = Object.assign({ announce: true, focusTab: false, interaction: "" }, settings);
       activeIndex = wrapIndex(nextIndex, frames.length);
 
+      const preserveMethodFrames = root.hasAttribute("data-homepage-method");
       frames.forEach((frame, index) => {
         const active = index === activeIndex;
         frame.classList.toggle("is-active", active);
-        frame.hidden = !active;
+        // Layer method frames in one stable grid cell so outgoing and incoming
+        // states can cross-fade without changing the section height.
+        frame.hidden = preserveMethodFrames ? false : !active;
         frame.setAttribute("aria-hidden", active ? "false" : "true");
         frame.toggleAttribute("inert", !active);
       });

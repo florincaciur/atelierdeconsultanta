@@ -18,6 +18,20 @@ const HEAD_END = "SITE_IMMERSIVE_HEAD_END";
 const BODY_START = "SITE_IMMERSIVE_SCRIPT_START";
 const BODY_END = "SITE_IMMERSIVE_SCRIPT_END";
 
+function canonicalLayerPresent(html) {
+  const headBlocks = html.match(new RegExp(`<!--\\s*${HEAD_START}\\s*-->[\\s\\S]*?<!--\\s*${HEAD_END}\\s*-->`, "giu")) || [];
+  const bodyBlocks = html.match(new RegExp(`<!--\\s*${BODY_START}\\s*-->[\\s\\S]*?<!--\\s*${BODY_END}\\s*-->`, "giu")) || [];
+  const styles = html.match(/<link\b[^>]*href=["']\/assets\/site-immersive\.css(?:\?[^"']*)?["'][^>]*>/giu) || [];
+  const scripts = html.match(/<script\b[^>]*src=["']\/assets\/site-immersive\.js(?:\?[^"']*)?["'][^>]*>\s*<\/script>/giu) || [];
+  return headBlocks.length === 1
+    && bodyBlocks.length === 1
+    && styles.length === 1
+    && scripts.length === 1
+    && headBlocks[0].includes(`href="${CSS_HREF}"`)
+    && bodyBlocks[0].includes(`src="${JS_SRC}"`)
+    && /<body\b[^>]*\bdata-site-immersive=["']faber-20260901["']/iu.test(html);
+}
+
 function routes() {
   return sitemapUrls(ROOT)
     .map((value) => new URL(value).pathname.replace(/\/$/, "") || "/");
@@ -26,6 +40,10 @@ function routes() {
 function synchronizePass(html, route) {
   const eol = html.includes("\r\n") ? "\r\n" : "\n";
   const signatureBefore = seoSignature(html);
+  // Asset generators may append analytics scripts after this visual block.
+  // Its position inside head/body is irrelevant; preserve an already unique,
+  // canonical block instead of creating noisy site-wide reorder diffs.
+  if (canonicalLayerPresent(html)) return html;
   let current = html
     .replace(new RegExp(`\\s*<!--\\s*${HEAD_START}\\s*-->[\\s\\S]*?<!--\\s*${HEAD_END}\\s*-->\\s*`, "giu"), eol)
     .replace(new RegExp(`\\s*<!--\\s*${BODY_START}\\s*-->[\\s\\S]*?<!--\\s*${BODY_END}\\s*-->\\s*`, "giu"), eol)

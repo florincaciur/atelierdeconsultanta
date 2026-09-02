@@ -15,7 +15,7 @@ const HERO_END = "<!-- HOMEPAGE_DECISION_HERO_END -->";
 const START = "<!-- P1_21_HOMEPAGE_FLOW_START -->";
 const END = "<!-- P1_21_HOMEPAGE_FLOW_END -->";
 const STYLE = '<link rel="stylesheet" href="/assets/homepage-decision-flow.css?v=20260901-5" data-homepage-decision-flow-style="p1_22">';
-const SCRIPT = '<script src="/assets/homepage-decision-flow.js?v=20260901-5" defer="" data-homepage-decision-flow-script="p1_22"></script>';
+const SCRIPT = '<script src="/assets/homepage-decision-flow.js?v=20260902-2" defer="" data-homepage-decision-flow-script="p1_22"></script>';
 const FORM_ASSETS = '<link rel="stylesheet" href="/assets/contact-triage.css?v=20260831-3" data-home-contact-style="">\n  <script src="/assets/contact-triage.js?v=20260831-3" defer="" data-home-contact-script=""></script>';
 
 function esc(value) {

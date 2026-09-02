@@ -44,7 +44,10 @@ try {
       ctaBottom: document.querySelector("#hero .btn-primary")?.getBoundingClientRect().bottom,
       tocOpen: document.querySelector("#nav-homepage-toc-trigger")?.getAttribute("aria-expanded") === "true",
       familyDescription: document.querySelectorAll(".homepage-program-hubs").length,
-      methodVisible: Array.from(document.querySelectorAll("[data-homepage-method-frame]")).filter((node) => getComputedStyle(node).display !== "none").length,
+      methodVisible: Array.from(document.querySelectorAll("[data-homepage-method-frame]")).filter((node) => {
+        const style = getComputedStyle(node);
+        return style.display !== "none" && Number.parseFloat(style.opacity) > .01;
+      }).length,
       explorerVisible: Array.from(document.querySelectorAll("[data-homepage-explorer-frame]")).filter((node) => getComputedStyle(node).display !== "none").length,
       sectionHeights: Array.from(document.querySelectorAll("#main-content > section")).map((section) => ({ id: section.id, height: Math.round(section.getBoundingClientRect().height) })),
       contactFormOpen: document.querySelector(".im-contact-disclosure")?.open
@@ -89,6 +92,23 @@ try {
     assert.equal(await page.locator("[data-homepage-method-tab][aria-selected='true']").getAttribute("data-method-index"), "1");
     assert.equal(await page.locator(".im-method-sculpture .im-slab.is-active").count(), 1);
     assert.equal(await page.locator(".im-method-sculpture .im-slab.is-active span").textContent(), "02");
+    const methodTransition = await page.locator("[data-homepage-method]").evaluate((root) => {
+      const frames = Array.from(root.querySelectorAll("[data-homepage-method-frame]"));
+      const slabs = Array.from(root.querySelectorAll(".im-method-sculpture .im-slab"));
+      return {
+        unhiddenFrames: frames.filter((frame) => !frame.hidden).length,
+        visibleFrames: frames.filter((frame) => Number.parseFloat(getComputedStyle(frame).opacity) > .01).length,
+        frameTransition: getComputedStyle(frames[0]).transitionDuration,
+        sculptureTransition: getComputedStyle(slabs[0]).transitionDuration,
+        sparkTransform: getComputedStyle(root.querySelector(".im-method-sculpture .im-spark")).transform
+      };
+    });
+    assert.equal(methodTransition.unhiddenFrames, 5, "cadrele trebuie păstrate în aceeași scenă pentru cross-fade");
+    assert.match(methodTransition.frameTransition, /0\.(?:38|52)s/, "cross-fade-ul dintre etape trebuie să aibă durată vizibilă");
+    assert.match(methodTransition.sculptureTransition, /0\.(?:45|62)s/, "sculptura trebuie să tranziteze între etape");
+    assert.notEqual(methodTransition.sparkTransform, "none", "accentul sculpturii trebuie poziționat pe etapa activă");
+    await page.waitForTimeout(560);
+    assert.equal(await page.locator("[data-homepage-method-frame]").evaluateAll((frames) => frames.filter((frame) => Number.parseFloat(getComputedStyle(frame).opacity) > .01).length), 1);
     await page.locator("[data-homepage-explorer-next]").click();
     assert.match((await page.locator("[data-homepage-explorer-status]").textContent()).trim(), /^Secțiunea 2 din 4:/);
     assert.equal(await page.locator("[data-homepage-explorer-frame]").evaluateAll((frames) => frames.filter((node) => getComputedStyle(node).display !== "none").length), 1);
@@ -116,6 +136,18 @@ try {
   });
   await formPage.goto(baseUrl, { waitUntil: "domcontentloaded" });
   await formPage.locator(".im-contact-disclosure > summary").click();
+  const contactColors = await formPage.locator("#homepage-contact").evaluate((root) => ({
+    formHeading: getComputedStyle(root.querySelector(".contact-triage-heading h2")).color,
+    formIntro: getComputedStyle(root.querySelector(".contact-triage-heading p")).color,
+    noteList: getComputedStyle(root.querySelector(".contact-note ul")).color,
+    notePrivacy: getComputedStyle(root.querySelector(".contact-note__privacy")).color
+  }));
+  assert.deepEqual(contactColors, {
+    formHeading: "rgb(13, 31, 60)",
+    formIntro: "rgb(75, 88, 112)",
+    noteList: "rgb(220, 230, 242)",
+    notePrivacy: "rgb(255, 255, 255)"
+  }, "textele formularului și notei trebuie să păstreze contrastul pe fundalurile lor");
   assert.equal(await formPage.locator('.contact-no-js-submit').isVisible(), false, "submit-ul de rezervă nu trebuie să dubleze fluxul cu JavaScript");
   await formPage.locator('[data-hero-program-item][data-program-id="e-drive"]').tap();
   assert.equal(await formPage.locator('[data-program-scene]:not([hidden])').getAttribute('data-program-scene'), 'e-drive', "atingerea selectează scena fără a deschide pagina programului");

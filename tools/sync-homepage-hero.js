@@ -78,7 +78,7 @@ function renderHero(program, publicCount, programs) {
   if (!program) throw new Error("Registrul nu conține niciun program public cu sursă oficială completă.");
   const hero = `${START}
     <!-- Măsurile provin din registrul public; ilustrațiile conceptuale se schimbă la hover, focus și atingere. -->
-    <section id="hero" class="homepage-decision-hero" data-section-id="hero" aria-labelledby="homepage-hero-title" data-homepage-hero-version="p1_15" data-homepage-revision="immersive-20260901-5">
+    <section id="hero" class="homepage-decision-hero" data-section-id="hero" aria-labelledby="homepage-hero-title" data-homepage-hero-version="p1_15" data-homepage-revision="immersive-20260902-2">
       <div class="homepage-hero__inner">
         <div class="homepage-hero__copy">
           <div class="hero-badge"><span class="dot" aria-hidden="true"></span>FABER pentru firme, fermieri, start-up-uri, IMM-uri și instituții publice</div>
@@ -139,7 +139,7 @@ function syncHomepageHero(source, programs) {
   output = output.replace(/\s*<link\b[^>]*data-immersive-style[^>]*>/gi, "")
     .replace(/\s*<script\b[^>]*data-immersive-script[^>]*><\/script>/gi, "")
     .replace(/<!-- IMMERSIVE_CONTROLS_START -->[\s\S]*?<!-- IMMERSIVE_CONTROLS_END -->\r?\n?/g, "")
-    .replace(/<\/head>/i, '  <link rel="stylesheet" href="/assets/immersive-home.css?v=20260902-1" data-immersive-style>\n  <script src="/assets/immersive-home.js?v=20260901-5" defer data-immersive-script></script>\n</head>')
+    .replace(/<\/head>/i, '  <link rel="stylesheet" href="/assets/immersive-home.css?v=20260902-2" data-immersive-style>\n  <script src="/assets/immersive-home.js?v=20260901-5" defer data-immersive-script></script>\n</head>')
     .replace(/<\/body>/i, `<!-- IMMERSIVE_CONTROLS_START -->${renderImmersiveControls()}<!-- IMMERSIVE_CONTROLS_END -->\n</body>`);
   // The global immersive layer owns the final head/body slots. Keeping its
   // managed blocks last makes both generators converge in either run order.

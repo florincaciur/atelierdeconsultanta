@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-07-09T21:19:10.516Z",
+  "generatedAt": "2026-09-02T12:26:03.887Z",
   "mode": "check",
-  "baseUrl": "http://127.0.0.1:57967",
+  "baseUrl": "http://127.0.0.1:53652",
   "summary": {
     "checked": 22,
     "passed": 22,
@@ -14,9 +14,9 @@
       "pass": true,
       "errors": [],
       "dom": {
-        "title": "FABER | Consultanță fonduri europene",
+        "title": "Consultanță și proiectare fonduri europene | FABER",
         "h1Count": 1,
-        "seeAlsoCards": 17,
+        "seeAlsoCards": 0,
         "programCluster": 0,
         "overflow": 0
       },
@@ -28,9 +28,9 @@
       "pass": true,
       "errors": [],
       "dom": {
-        "title": "Contact FABER | verificare eligibilitate",
+        "title": "Contact FABER: trimite proiectul pentru verificare",
         "h1Count": 1,
-        "seeAlsoCards": 3,
+        "seeAlsoCards": 0,
         "programCluster": 0,
         "overflow": 0
       },
@@ -42,7 +42,7 @@
       "pass": true,
       "errors": [],
       "dom": {
-        "title": "Fonduri europene pentru firme și fermieri",
+        "title": "Fonduri europene 2026: programe pentru firme și fermieri",
         "h1Count": 1,
         "seeAlsoCards": 0,
         "programCluster": 0,
@@ -56,7 +56,7 @@
       "pass": true,
       "errors": [],
       "dom": {
-        "title": "Consultanță fonduri europene | FABER",
+        "title": "Consultanță fonduri europene: eligibilitate și dosar | FABER",
         "h1Count": 1,
         "seeAlsoCards": 0,
         "programCluster": 0,
@@ -98,7 +98,7 @@
       "pass": true,
       "errors": [],
       "dom": {
-        "title": "Start-Up Nation 2026 | ghid Start-Up Nation",
+        "title": "Start-Up Nation: apel închis la 29 mai 2026 | FABER",
         "h1Count": 1,
         "seeAlsoCards": 0,
         "programCluster": 0,
@@ -112,7 +112,7 @@
       "pass": true,
       "errors": [],
       "dom": {
-        "title": "POR ADR Nord-Est pentru microîntreprinderi",
+        "title": "Program Regional Nord-Est: finanțări IMM și apeluri | FABER",
         "h1Count": 1,
         "seeAlsoCards": 0,
         "programCluster": 0,
@@ -126,9 +126,9 @@
       "pass": true,
       "errors": [],
       "dom": {
-        "title": "Fonduri europene Nord-Est | Iași, Suceava, Bacău, Botosani, Neamt, Vaslui",
+        "title": "Fonduri europene Nord-Est: programe regionale, AFIR și IMM | FABER",
         "h1Count": 1,
-        "seeAlsoCards": 0,
+        "seeAlsoCards": 4,
         "programCluster": 0,
         "overflow": 0
       },
@@ -140,7 +140,7 @@
       "pass": true,
       "errors": [],
       "dom": {
-        "title": "DR12 AFIR | consolidarea exploatatiilor tinerilor fermieri",
+        "title": "DR 12 AFIR 2026: eligibilitate și pregătirea dosarului | FABER",
         "h1Count": 1,
         "seeAlsoCards": 0,
         "programCluster": 0,
@@ -154,7 +154,7 @@
       "pass": true,
       "errors": [],
       "dom": {
-        "title": "AFIR autoconsum agroalimentar | panouri fotovoltaice și fonduri AFIR",
+        "title": "AFIR Autoconsum 2026: fotovoltaice, stocare, ghid | FABER",
         "h1Count": 1,
         "seeAlsoCards": 0,
         "programCluster": 0,
@@ -168,7 +168,7 @@
       "pass": true,
       "errors": [],
       "dom": {
-        "title": "Autoconsum public fotovoltaice | ghid energie",
+        "title": "Autoconsum pentru instituții publice | FABER",
         "h1Count": 1,
         "seeAlsoCards": 0,
         "programCluster": 0,
@@ -182,7 +182,7 @@
       "pass": true,
       "errors": [],
       "dom": {
-        "title": "DR 14 AFIR | ghid AFIR",
+        "title": "DR 14 AFIR 2026: ghid final, 50.000 € și depunere | FABER",
         "h1Count": 1,
         "seeAlsoCards": 0,
         "programCluster": 0,
@@ -196,7 +196,7 @@
       "pass": true,
       "errors": [],
       "dom": {
-        "title": "Digitalizare IMM | ghid digitalizare",
+        "title": "Digitalizare IMM: apel închis și sursă MIPE | FABER",
         "h1Count": 1,
         "seeAlsoCards": 0,
         "programCluster": 0,
@@ -210,7 +210,7 @@
       "pass": true,
       "errors": [],
       "dom": {
-        "title": "Femeia Antreprenor 2026 | ghid FABER",
+        "title": "Femeia Antreprenor 2026: status oficial | FABER",
         "h1Count": 1,
         "seeAlsoCards": 0,
         "programCluster": 0,
@@ -224,7 +224,7 @@
       "pass": true,
       "errors": [],
       "dom": {
-        "title": "PRO INFRA 2026 | ghid FABER",
+        "title": "PRO INFRA: schemă aprobată, apel nedeschis | FABER",
         "h1Count": 1,
         "seeAlsoCards": 0,
         "programCluster": 0,
@@ -238,10 +238,10 @@
       "pass": true,
       "errors": [],
       "dom": {
-        "title": "calculator SO AFIR | ghid AFIR",
+        "title": "Calculator SO AFIR 2026 pentru DR12 și DR14 | FABER",
         "h1Count": 1,
-        "seeAlsoCards": 5,
-        "programCluster": 1,
+        "seeAlsoCards": 3,
+        "programCluster": 0,
         "overflow": 0
       },
       "screenshot": "reports/functional-screenshots/calculator-soc.png"
@@ -252,7 +252,7 @@
       "pass": true,
       "errors": [],
       "dom": {
-        "title": "Fondul de Modernizare | hub energie și apeluri",
+        "title": "Fondul pentru Modernizare: apeluri și statut | FABER",
         "h1Count": 1,
         "seeAlsoCards": 0,
         "programCluster": 0,
@@ -279,12 +279,12 @@
     {
       "name": "contact-form",
       "pass": true,
-      "message": "success message visible"
+      "message": "triage summary and success message visible"
     },
     {
       "name": "calculator-so",
       "pass": true,
-      "message": "total SO: 490"
+      "message": "total SO: 778"
     },
     {
       "name": "dr14-score",

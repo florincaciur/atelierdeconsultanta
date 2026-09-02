@@ -126,6 +126,35 @@ body.page-family-home #homepage-method { background: var(--design-navy, #0d1f3c)
 .im-method-scroll-hint { font: 10px/1.8 Consolas, monospace; color: #c5d0df; margin-top: 35px; display: flex; align-items: center; gap: 14px; }
 .im-method-scroll-hint::before { content: '↕'; font-size: 25px; color: #f5a623; }
 
+/* Keep all five method states in one stable stage so changes can cross-fade. */
+.homepage-method.is-enhanced .homepage-method-frames { display: grid; }
+.homepage-method.is-enhanced .homepage-method-frame {
+  grid-area: 1 / 1;
+  display: grid;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate3d(18px, 8px, 0) scale(.985);
+}
+.homepage-method.is-enhanced .homepage-method-frame.is-active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate3d(0, 0, 0) scale(1);
+}
+.im-motion-on .homepage-method.is-enhanced .homepage-method-frame {
+  transition: opacity .38s var(--im-motion), transform .52s var(--im-motion);
+}
+.im-motion-on .homepage-method.is-enhanced .homepage-method-frame.is-active { transition-delay: 0s; }
+.im-method-sculpture .im-sculpture-core { transition: transform .68s var(--im-motion); }
+.im-method-sculpture .im-slab { transition: background .45s, border-color .45s, box-shadow .45s, transform .62s var(--im-motion); }
+.im-method-sculpture .im-spark {
+  transform: translateZ(-73px);
+  transition: transform .62s var(--im-motion), background .45s, box-shadow .45s;
+}
+.homepage-method[data-active-index="1"] .im-method-sculpture .im-spark { transform: translateZ(-23px); }
+.homepage-method[data-active-index="2"] .im-method-sculpture .im-spark { transform: translateZ(27px); }
+.homepage-method[data-active-index="3"] .im-method-sculpture .im-spark { transform: translateZ(77px); }
+.homepage-method[data-active-index="4"] .im-method-sculpture .im-spark { transform: translateZ(127px); }
+
 /* Program catalogue */
 body.page-family-home #priority-programs { background: var(--design-soft, #f8f9fb); padding: 100px clamp(24px,5.5vw,96px); }
 .page-family-home #priority-programs .program-explorer-header { max-width: 1440px; text-align: left; margin-bottom: 40px; }
@@ -436,8 +465,12 @@ body.page-family-home #homepage-contact .im-contact-form-wrap { margin: 0; paddi
   body.page-family-home #main-content > section { min-height: 100svh; box-sizing: border-box; }
   body.page-family-home #homepage-method { overflow: hidden; }
   .page-family-home #homepage-method .homepage-method-layout { min-height: 100svh; padding-block: 76px 44px; }
-  .im-method-sculpture .im-slab { transition: background .45s, border-color .45s, transform .55s var(--im-motion); }
   body.page-family-home #homepage-contact .im-contact-disclosure { margin-top: 1rem; }
+}
+
+.im-motion-off .homepage-method.is-enhanced .homepage-method-frame,
+.im-motion-off .im-method-sculpture :is(.im-sculpture-core, .im-slab, .im-spark) {
+  transition: none;
 }
 
 /* The opening table uses the same navy / orange tokens as interior pages. */
@@ -526,9 +559,12 @@ body.page-family-home #homepage-contact :is(.contact-triage-heading h2, .contact
 body.page-family-home #homepage-contact .error-message { color: #9b2c11; font-size: 13px; }
 body.page-family-home #homepage-contact .contact-note h2 { font-size: 26px; line-height: 1.25; letter-spacing: -.03em; }
 #homepage-contact .contact-note { position: sticky; top: 110px; padding-top: 20px; border-top: 3px solid var(--design-orange); }
-#homepage-contact .contact-note ul { list-style: disc; padding-left: 20px; color: var(--design-muted); font-size: 14px; line-height: 1.75; margin: 20px 0; }
+#homepage-contact .contact-note ul { list-style: disc; padding-left: 20px; color: #dce6f2; font-size: 14px; line-height: 1.75; margin: 20px 0; }
 #homepage-contact .contact-note li { margin: 8px 0; }
-#homepage-contact .contact-note__privacy { font-size: 13px; }
+#homepage-contact .contact-note li::marker { color: #f5a623; }
+#homepage-contact .contact-note__privacy { border-top-color: rgba(220,230,242,.55); color: #fff; font-size: 13px; }
+body.page-family-home #homepage-contact .contact-form-panel :is(.contact-triage-heading h2, .contact-success h2) { color: var(--design-navy, #0d1f3c); }
+body.page-family-home #homepage-contact .contact-form-panel :is(.contact-triage-heading p, .contact-form-step > p, .contact-success p) { color: #4b5870; }
 @media (max-width: 999px) {
   #hero.im-hero .homepage-hero__inner { grid-template-columns: 1fr; }
   #hero.im-hero .homepage-hero__panel { max-width: 700px; justify-self: center; }
