@@ -10,7 +10,7 @@ const ROOT = path.resolve(__dirname, "..");
 const CONFIG_PATH = path.join(ROOT, "config", "main-navigation.json");
 const PARTIAL_PATH = path.join(ROOT, "partials", "global-header.html");
 const REPORT_PATH = path.join(ROOT, "reports", "main-navigation-sitemap-2026-07-21.md");
-const ASSET_VERSION = "20260906-1";
+const ASSET_VERSION = "20260906-2";
 
 function loadConfig() {
   return JSON.parse(fs.readFileSync(CONFIG_PATH, "utf8"));
@@ -130,7 +130,7 @@ function mobileDirect(item) {
 
 function logo() {
   return `<a class="nav-logo" href="/" aria-label="FABER – Atelier de Consultanță, acasă" data-analytics-event="nav_click" data-analytics-component="desktop_nav" data-analytics-cta-id="home_logo" data-analytics-target="/">
-      <img class="faber-brand-logo" src="/assets/faber-navbar-20260906.jpg" alt="FABER – Atelier de Consultanță" width="1000" height="175" decoding="async" fetchpriority="high">
+      <picture class="faber-brand-picture"><source media="(max-width: 600px)" srcset="/assets/faber-navbar-vector-compact.svg"><img class="faber-brand-logo" src="/assets/faber-navbar-vector.svg" alt="FABER – Atelier de Consultanță" width="995" height="155" decoding="async" fetchpriority="high"></picture>
     </a>`;
 }
 

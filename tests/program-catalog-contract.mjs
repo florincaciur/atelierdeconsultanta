@@ -102,8 +102,8 @@ try {
     const consoleErrors = [];
     page.on("console", (message) => { if (message.type() === "error") consoleErrors.push(message.text()); });
     await page.route("http://catalog.test/**", (route) => {
-      if (new URL(route.request().url()).pathname === "/assets/faber-navbar-20260906.jpg") {
-        return route.fulfill({ status: 200, contentType: "image/jpeg", body: fs.readFileSync(path.join(ROOT, "assets/faber-navbar-20260906.jpg")) });
+      if (/^\/assets\/faber-navbar-vector(?:-compact)?\.svg$/.test(new URL(route.request().url()).pathname)) {
+        return route.fulfill({ status: 200, contentType: "image/svg+xml", body: fs.readFileSync(path.join(ROOT, new URL(route.request().url()).pathname)) });
       }
       return route.request().resourceType() === "document"
         ? route.fulfill({ status: 200, contentType: "text/html; charset=utf-8", body: browserDocument.html() })

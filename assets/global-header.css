@@ -52,16 +52,13 @@
   background: transparent;
   box-shadow: none;
 }
-/* The supplied JPEG is white on near-white. Display the original bytes with
-   contrast against the navy header; no redraw or changed brand lettering. */
+#navbar .faber-brand-picture { display: block; width: 100%; }
 #navbar .faber-brand-logo {
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 1000 / 175;
+  aspect-ratio: 995 / 155;
   object-fit: contain;
-  filter: brightness(.51) contrast(80);
-  mix-blend-mode: screen;
 }
 #navbar .nav-logo:focus-visible { outline: 2px solid #fff; outline-offset: 5px; border-radius: 3px; }
 
@@ -322,9 +319,13 @@
   #navbar .hamburger { display: flex; }
 }
 
+@media (max-width: 600px) {
+  #navbar .nav-logo { flex-basis: 205px; }
+  #navbar .faber-brand-logo { aspect-ratio: 580 / 180; }
+}
 @media (max-width: 480px) {
   #navbar .nav-container { gap: 8px; padding: 0 12px; }
-  #navbar .nav-logo { flex-basis: clamp(170px, calc(100vw - 150px), 264px); min-width: 0; }
+  #navbar .nav-logo { flex-basis: clamp(170px, calc(100vw - 150px), 205px); min-width: 0; }
   #navbar .nav-compact-cta { min-width: 50px; padding: 7px 5px; }
   #navbar .nav-compact-cta span { font-size: 0; }
   #navbar .nav-compact-cta span::after { content: "Verifică"; font-size: .74rem; }
