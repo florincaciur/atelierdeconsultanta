@@ -1,12 +1,12 @@
 # P1.19 — Validări pentru „DR 12 vs DR 14”
 
-Revizie factuală și editorială: **29.08.2026**.
+Revizie factuală și editorială: **06.09.2026**.
 
 ## Surse oficiale folosite
 
 - DR 12: Ghidul solicitantului DR 12, versiune consultativă publicată la 19.03.2026 — https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/
 - DR 12, document: https://www.afir.ro/api/file?filename=Ghidul+Solicitantului+DR+12+-+versiunea+consultativ%C4%83&filetype=pdf&url=%2Fmedia%2Flm3fg4k1%2Fghidul-solicitantului-dr-12.pdf
-- DR 14: Anunțul AFIR A1.2/01/2026 pentru sesiunea DR 14, publicat la 14.08.2026 — https://www.afir.ro/instrumente/sesiuni/sesiuni-primire-proiecte/
+- DR 14: Anunțul AFIR A1.2/01/2026 pentru sesiunea DR 14, publicat la 14.08.2026 — https://depunerepspac.afir.ro/Sesiune/Lista
 
 ## Elemente DR 12 și actualizări rămase de reconfirmat
 

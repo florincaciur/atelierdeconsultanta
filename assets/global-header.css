@@ -44,16 +44,26 @@
 
 #navbar .nav-logo {
   display: flex;
-  flex: 0 1 209px;
-  min-width: 165px;
+  flex: 0 0 290px;
+  min-width: 0;
   align-items: center;
   padding: 0;
   border: 0;
   background: transparent;
   box-shadow: none;
 }
-#navbar .nav-logo svg { display: block; width: min(100%, 209px); height: auto; overflow: visible; }
-#navbar .nav-logo:hover svg { transform: scale(1.02); }
+/* The supplied JPEG is white on near-white. Display the original bytes with
+   contrast against the navy header; no redraw or changed brand lettering. */
+#navbar .faber-brand-logo {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1000 / 175;
+  object-fit: contain;
+  filter: brightness(.51) contrast(80);
+  mix-blend-mode: screen;
+}
+#navbar .nav-logo:focus-visible { outline: 2px solid #fff; outline-offset: 5px; border-radius: 3px; }
 
 #navbar .nav-links { display: flex; align-items: center; justify-content: flex-end; gap: 2px; min-width: 0; }
 #navbar .nav-dropdown { position: relative; }
@@ -314,9 +324,8 @@
 
 @media (max-width: 480px) {
   #navbar .nav-container { gap: 8px; padding: 0 12px; }
-  #navbar .nav-logo { flex-basis: 139px; min-width: 123px; }
-  #navbar .nav-logo svg { width: 139px; }
-  #navbar .nav-compact-cta { min-width: 74px; padding: 7px 8px; }
+  #navbar .nav-logo { flex-basis: clamp(170px, calc(100vw - 150px), 264px); min-width: 0; }
+  #navbar .nav-compact-cta { min-width: 50px; padding: 7px 5px; }
   #navbar .nav-compact-cta span { font-size: 0; }
   #navbar .nav-compact-cta span::after { content: "Verifică"; font-size: .74rem; }
   #mobileMenu { padding-right: 12px; padding-left: 12px; }

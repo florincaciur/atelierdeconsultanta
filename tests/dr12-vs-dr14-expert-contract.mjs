@@ -69,11 +69,11 @@ rows.each((_, row) => {
 });
 
 const pageText = $(".post-container").text().replace(/\s+/gu, " ");
-for (const forbidden of ["200.000", "80%", "65%"]) {
-  assert(!pageText.includes(forbidden), `valoare consultativă publicată fără reconfirmare: ${forbidden}`);
+for (const value of ["200.000", "80%", "65%"]) {
+  assert(pageText.includes(value), `Lipsește valoarea consultativă documentată: ${value}`);
 }
 assert(!html.includes("DE_VALIDAT_UMAN"), "tokenul intern nu poate ajunge în pagina publică");
-assert.match($("[data-comparison-row='Sprijin']").text(), /Nu publicăm/iu);
+assert.match($("[data-comparison-row='Sprijin']").text(), /Ghid consultativ/iu);
 assert.match($("[data-comparison-row='Calendar']").text(), /Apel nedeschis/iu);
 
 const scenarios = $("[data-hypothetical='true']");
@@ -101,8 +101,9 @@ for (const programConfig of config.programs) {
   assert.equal(program.verifiedAt, programConfig.verifiedAt);
   assert.equal(program.sourceUrl, programConfig.sourceUrl);
   if (programConfig.status === "consultare_publica") {
-    assert.equal(program.grantSummary, null);
-    assert.equal(program.cofinancingSummary, null);
+    assert.equal(program.fundingBasis, "consultative");
+    assert.match(program.grantSummary.maximum.unit, /consultativ/);
+    assert(program.cofinancingSummary.intensity.every(item => /consultativ/.test(item.scope)));
   } else {
     assert.equal(program.grantSummary.maximum.amount, 50000);
     assert(program.cofinancingSummary.intensity.some((item) => item.rate === 85));

@@ -10,7 +10,7 @@ const ROOT = path.resolve(__dirname, "..");
 const CONFIG_PATH = path.join(ROOT, "config", "main-navigation.json");
 const PARTIAL_PATH = path.join(ROOT, "partials", "global-header.html");
 const REPORT_PATH = path.join(ROOT, "reports", "main-navigation-sitemap-2026-07-21.md");
-const ASSET_VERSION = "20260809-1";
+const ASSET_VERSION = "20260906-1";
 
 function loadConfig() {
   return JSON.parse(fs.readFileSync(CONFIG_PATH, "utf8"));
@@ -130,12 +130,7 @@ function mobileDirect(item) {
 
 function logo() {
   return `<a class="nav-logo" href="/" aria-label="FABER – Atelier de Consultanță, acasă" data-analytics-event="nav_click" data-analytics-component="desktop_nav" data-analytics-cta-id="home_logo" data-analytics-target="/">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 44" width="264" height="48.4" aria-hidden="true">
-        <text x="0" y="32" font-family="Georgia,'Times New Roman',serif" font-size="28" font-weight="700" fill="#b84716" letter-spacing="3">FABER</text>
-        <path d="M118,22 L125,13 L132,22 L125,31 Z" fill="white" opacity="0.95"></path>
-        <text x="138" y="18" font-family="'Inter','Helvetica Neue',sans-serif" font-size="10" font-weight="600" fill="white" letter-spacing="2">ATELIER de</text>
-        <text x="138" y="33" font-family="'Inter','Helvetica Neue',sans-serif" font-size="10" font-weight="600" fill="white" letter-spacing="2">CONSULTANȚĂ</text>
-      </svg>
+      <img class="faber-brand-logo" src="/assets/faber-navbar-20260906.jpg" alt="FABER – Atelier de Consultanță" width="1000" height="175" decoding="async" fetchpriority="high">
     </a>`;
 }
 

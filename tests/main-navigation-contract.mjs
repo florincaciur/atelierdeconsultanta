@@ -99,12 +99,24 @@ const results = [];
 try {
   for (const width of VIEWPORTS) {
     const page = await browser.newPage({ viewport: { width, height: 820 } });
-    await page.route("http://atelier.test/**", (route) => route.fulfill({ status: 200, contentType: "text/html; charset=utf-8", body: documentHtml }));
+    await page.route("http://atelier.test/**", (route) => {
+      if (new URL(route.request().url()).pathname === "/assets/faber-navbar-20260906.jpg") {
+        return route.fulfill({ status: 200, contentType: "image/jpeg", body: fs.readFileSync(path.join(ROOT, "assets/faber-navbar-20260906.jpg")) });
+      }
+      return route.fulfill({ status: 200, contentType: "text/html; charset=utf-8", body: documentHtml });
+    });
     await page.goto("http://atelier.test/consultanta-fonduri-europene", { waitUntil: "domcontentloaded" });
 
     const desktop = width >= config.desktopBreakpoint;
     const state = { width, mode: desktop ? "desktop" : "mobile", errors: [], screenshot: "" };
     try {
+      const logo = page.locator("#navbar .faber-brand-logo");
+      await logo.evaluate((image) => image.decode());
+      const logoBox = await logo.boundingBox();
+      assert.ok(logoBox && logoBox.width >= 165 && logoBox.x >= 0 && logoBox.x + logoBox.width <= width, `${width}: logo must be loaded, readable and fully inside viewport`);
+      assert.equal(await logo.getAttribute("alt"), "FABER – Atelier de Consultanță");
+      const nextControl = await page.locator(desktop ? "#nav-servicii-trigger" : "#hamburgerBtn").boundingBox();
+      assert.ok(nextControl && logoBox.x + logoBox.width <= nextControl.x, `${width}: logo must not overlap navigation controls`);
       const desktopDisplay = await page.locator("#navbar .nav-links").evaluate((element) => getComputedStyle(element).display);
       const hamburgerDisplay = await page.locator("#hamburgerBtn").evaluate((element) => getComputedStyle(element).display);
       assert.equal(desktopDisplay !== "none", desktop, `${width}: desktop navigation visibility`);

@@ -6,7 +6,7 @@
 - Probleme contextuale: 0
 - Cerințe structurale lipsă: 0
 - Probleme în sursele editoriale: 0
-- Statusuri «apel deschis» controlate verificate: 1
+- Statusuri «apel deschis» controlate verificate: 3
 - Rezultat: **PASS**
 
 Nu au fost detectate promisiuni nepermise, statusuri generice sau abateri de la lexicul controlat.

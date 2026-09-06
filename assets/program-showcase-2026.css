@@ -249,3 +249,12 @@
     stroke-dashoffset: 0;
   }
 }
+/* Program rules remain readable and keyboard-scrollable on narrow screens. */
+.program-comparison-scroll { max-width: 100%; overflow-x: auto; border: 1px solid #cbd5e1; border-radius: 12px; background: #fff; }
+.program-comparison-scroll:focus-visible { outline: 3px solid #b84716; outline-offset: 3px; }
+.program-comparison table { width: 100%; border-collapse: collapse; color: #172b46; font-size: .95rem; line-height: 1.6; }
+.program-comparison caption { padding: 16px; text-align: left; font-weight: 700; background: #f1f5f9; }
+.program-comparison th, .program-comparison td { padding: 14px 16px; text-align: left; vertical-align: top; border-bottom: 1px solid #e2e8f0; min-width: 150px; }
+.program-comparison thead th { background: #0d1f3c; color: white; }
+.program-comparison tbody th { font-weight: 650; }
+.program-comparison tbody tr:nth-child(even) { background: #f8fafc; }

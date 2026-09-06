@@ -16,8 +16,8 @@ const css = fs.readFileSync(cssPath, "utf8");
 const js = fs.readFileSync(jsPath, "utf8");
 const $ = cheerio.load(html, { decodeEntities: false });
 
-assert.equal($("head > title").first().text().trim(), "DR 14 AFIR 2026: depuneri 1 sept.–31 oct., 50.000 € | FABER");
-assert.match($("meta[name='description']").attr("content") || "", /depuneri 1 septembrie–31 octombrie 2026/);
+assert.equal($("head > title").first().text().trim(), program.metaTitle);
+assert.match($("meta[name='description']").attr("content") || "", /depuneri 1 septembrie–31 octombrie 2026/i);
 assert.equal($("link[rel='canonical']").attr("href"), "https://atelierdeconsultanta.ro/dr14");
 assert.doesNotMatch($("meta[name='robots']").attr("content") || "", /noindex/i);
 assert.match($("h1").first().text(), /DR 14 AFIR 2026/);
@@ -35,7 +35,7 @@ const calendar = $("[data-program-calendar='official']").text().replace(/\s+/g, 
 assert.match(calendar, /Depuneri: 1 septembrie–31 octombrie 2026/);
 assert.match(calendar, /Calendar oficial AFIR/i);
 
-assert.equal($("body").attr("data-program-status"), "ghid_aprobat_nedeschis");
+assert.equal($("body").attr("data-program-status"), "apel_deschis");
 assert.equal($("body").attr("data-verified-at"), program.verifiedAt);
 assert.equal($("[data-dr14-tab]").length, 4);
 assert.equal($("[data-score-component]").length, 4);
@@ -55,7 +55,7 @@ const schemaText = JSON.stringify(schemas);
 assert.match(schemaText, /FAQPage/);
 assert.match(schemaText, /FinancialIncentive/);
 assert.doesNotMatch(schemaText, /VARIANTA CONSULTATIV/i);
-assert.match(schemaText, /Anunțul A1\.2\/01\/2026 pentru sesiunea DR 14/);
+assert.match(schemaText, /Contorul oficial al sesiunilor active DR-14/);
 assert.match(schemaText, /"validFrom":"2026-09-01"/);
 assert.match(schemaText, /"validThrough":"2026-10-31"/);
 

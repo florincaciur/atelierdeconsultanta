@@ -27,6 +27,8 @@ const browser = await chromium.launch({ headless: true });
 try {
   for (const viewport of [{ width: 320, height: 720 }, { width: 390, height: 844 }, { width: 768, height: 900 }, { width: 1366, height: 768 }]) {
     const page = await browser.newPage({ viewport });
+    // This test checks our layout and controls, independently of Google's iframe response headers.
+    await page.route("https://news.google.com/**", (route) => route.fulfill({ status: 200, contentType: "text/html", body: "<!doctype html><title>Preferred source fixture</title>" }));
     const consoleErrors = [];
     page.on("console", (message) => {
       if (message.type() !== "error") return;

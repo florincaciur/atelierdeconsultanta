@@ -17,26 +17,26 @@ Snapshot factual de bază al programelor: **2026-08-23**. Fiecare înregistrare 
 |---|---|---|---|---|
 | `program-regional-nord-est` | Autoritatea de Management pentru Programul Regional Nord-Est | `UNCONFIRMED` | 2026-08-18 | 2026-08-29 |
 | `fonduri-regionale` | Ministerul Investițiilor și Proiectelor Europene – MySMIS2021 | `UNCONFIRMED` | 2026-08-18 | 2026-08-29 |
-| `dr12-afir` | Agenția pentru Finanțarea Investițiilor Rurale (AFIR) | `CONSULTATIVE_GUIDE` | 2026-08-18 | 2026-08-29 |
-| `dr14-afir` | Agenția pentru Finanțarea Investițiilor Rurale (AFIR) | `SCHEDULED` | 2026-08-15 | 2026-08-29 |
-| `dr18-afir` | Agenția pentru Finanțarea Investițiilor Rurale (AFIR) | `SCHEDULED` | 2026-08-28 | 2026-08-29 |
+| `dr12-afir` | Agenția pentru Finanțarea Investițiilor Rurale (AFIR) | `CONSULTATIVE_GUIDE` | 2026-09-06 | 2026-09-06 |
+| `dr14-afir` | Agenția pentru Finanțarea Investițiilor Rurale (AFIR) | `OPEN` | 2026-09-06 | 2026-09-06 |
+| `dr18-afir` | Agenția pentru Finanțarea Investițiilor Rurale (AFIR) | `OPEN` | 2026-09-06 | 2026-09-06 |
 | `start-up-nation` | Ministerul Economiei – platforma oficială MINIMIS | `CLOSED` | 2026-05-29 | 2026-08-29 |
 | `femeia-antreprenor` | Ministerul Economiei – platforma oficială MINIMIS | `CLOSED` | 2026-09-02 | 2026-08-29 |
 | `digitalizare-imm` | Ministerul Investițiilor și Proiectelor Europene | `CLOSED` | 2026-07-22 | 2026-08-29 |
-| `modernizare-microintreprinderi-ne-2` | Autoritatea de Management pentru Programul Regional Nord-Est | `SCHEDULED` | 2026-08-28 | 2026-08-29 |
+| `modernizare-microintreprinderi-ne-2` | Autoritatea de Management pentru Programul Regional Nord-Est | `SCHEDULED` | 2026-09-06 | 2026-09-06 |
 | `fondul-modernizare-autoconsum` | Ministerul Investițiilor și Proiectelor Europene – MySMIS2021 | `COMPLETED` | 2026-08-18 | 2026-08-29 |
 | `fondul-modernizare-regenerabile` | Ministerul Investițiilor și Proiectelor Europene – MySMIS2021 | `COMPLETED` | 2026-08-18 | 2026-08-29 |
 | `afir-energie-autoconsum` | Ministerul Agriculturii și Dezvoltării Rurale / AFIR | `CLOSED` | 2026-08-15 | 2026-08-29 |
 | `autoconsum-institutii-publice` | Ministerul Investițiilor și Proiectelor Europene – MySMIS2021 | `COMPLETED` | 2026-08-18 | 2026-08-29 |
-| `pro-infra` | Ministerul Transporturilor și Infrastructurii | `APPROVED_SCHEME` | 2026-08-18 | 2026-08-29 |
+| `pro-infra` | Ministerul Transporturilor și Infrastructurii | `APPROVED_SCHEME` | 2026-09-06 | 2026-09-06 |
 | `apeluri-gal` | Platforma oficială AFIR pentru Grupurile de Acțiune Locală | `UNCONFIRMED` | 2026-08-18 | 2026-08-29 |
 | `gal-afir-leader` | Platforma oficială AFIR pentru Grupurile de Acțiune Locală | `UNCONFIRMED` | 2026-09-02 | 2026-08-29 |
 | `e-move-ro` | Ministerul Transporturilor și Infrastructurii / Portal Legislativ | `APPROVED_SCHEME` | 2026-08-10 | 2026-08-29 |
 | `pocidif-21` | Ministerul Investițiilor și Proiectelor Europene | `OPEN` | 2026-08-18 | 2026-08-29 |
 | `pnrr` | Ministerul Investițiilor și Proiectelor Europene – tabloul de bord PNRR | `UNCONFIRMED` | 2026-08-18 | 2026-08-23 |
-| `diaspora-investeste-acasa` | Departamentul pentru Românii de Pretutindeni | `ANNOUNCED` | 2026-05-27 | 2026-08-29 |
-| `e-drive` | Ministerul Transporturilor și Infrastructurii / Portal Legislativ | `APPROVED_SCHEME` | 2026-08-28 | 2026-08-29 |
-| `e-mobility-ro` | Ministerul Transporturilor și Infrastructurii / Portal Legislativ | `APPROVED_SCHEME` | 2026-08-07 | 2026-08-29 |
+| `diaspora-investeste-acasa` | Banca de Investiții și Dezvoltare (BID) | `APPROVED_SCHEME` | 2026-09-06 | 2026-09-06 |
+| `e-drive` | Ministerul Transporturilor și Infrastructurii / Portal Legislativ | `APPROVED_SCHEME` | 2026-09-06 | 2026-09-06 |
+| `e-mobility-ro` | Ministerul Transporturilor și Infrastructurii / Portal Legislativ | `APPROVED_SCHEME` | 2026-09-06 | 2026-09-06 |
 | `fondul-modernizare-pc1-stocare` | Ministerul Energiei / Portal Legislativ | `FINAL_GUIDE` | 2026-08-28 | 2026-08-29 |
 | `programul-tranzitie-justa` | Ministerul Investițiilor și Proiectelor Europene – MySMIS2021 | `UNCONFIRMED` | 2026-08-18 | 2026-08-29 |
 | `fondul-de-modernizare` | Ministerul Investițiilor și Proiectelor Europene – MySMIS2021 | `UNCONFIRMED` | 2026-08-18 | 2026-08-29 |
@@ -148,40 +148,40 @@ Snapshot factual de bază al programelor: **2026-08-23**. Fiecare înregistrare 
 | Fond / program | Planul Strategic PAC 2023–2027 / FEADR |
 | Temei / document | Versiune consultativă publicată la 19.03.2026; termenul pentru observații s-a încheiat la 30.03.2026 — [document oficial](https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/) |
 | Stadiu | CONSULTATIVE_GUIDE — Ghid consultativ publicat – consultarea s-a încheiat; depunerea nu este deschisă. Condițiile se pot modifica. |
-| Sesiune | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Data deschiderii | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Deadline | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Prelungiri | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Buget | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Grant minim | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Grant maxim | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Intensitate | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Cofinanțare | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Beneficiari | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
+| Sesiune | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Data deschiderii | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Deadline | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Prelungiri | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Buget | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Grant minim | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Grant maxim | 200.000 EUR / proiect — valoare din ghidul consultativ |
+| Intensitate | rate: 80; scope: maximum pentru tinerii fermieri sub 41 de ani — ghid consultativ; rate: 65; scope: maximum pentru celelalte categorii eligibile — ghid consultativ |
+| Cofinanțare | Conform ghidului consultativ: minimum 20% sau 35% din eligibil, după categoria solicitantului, plus costurile neeligibile. Condițiile se pot modifica. |
+| Beneficiari | Tineri fermieri instalați, beneficiari ai submăsurii 6.1 și fermieri de până la 45 de ani, în categoriile și formele juridice din ghidul consultativ. |
 | Regiune | Național |
-| CAEN | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Prag SO | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Investiții | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Cheltuieli eligibile | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Cheltuieli neeligibile | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Condiții critice | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
+| CAEN | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Prag SO | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Investiții | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Cheltuieli eligibile | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Cheltuieli neeligibile | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Condiții critice | Ghid consultativ: minimum 12.000 SO, calculat cu coeficienții SOC 2020; pragul se reconfirmă în ghidul final.; Solicitantul este șeful exploatației și îndeplinește condițiile categoriei eligibile; persoana fizică neautorizată nu este eligibilă.; Finanțarea propusă este de maximum 200.000 EUR/proiect, cu intensitate de până la 80% sau 65%, în funcție de beneficiar.; Ghidul final și perioada de depunere nu sunt confirmate în sursele verificate. |
 | Documente | [Comunicarea AFIR privind consultarea DR-12](https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/)<br>[Ghidul solicitantului DR-12 — versiunea consultativă (PDF AFIR)](https://www.afir.ro/api/file?filename=Ghidul+Solicitantului+DR+12+-+versiunea+consultativ%C4%83&filetype=pdf&url=%2Fmedia%2Flm3fg4k1%2Fghidul-solicitantului-dr-12.pdf) |
-| Indicatori | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Selecție / punctaj | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Ajutor de stat / de minimis | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Implementare | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Monitorizare | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
+| Indicatori | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Selecție / punctaj | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Ajutor de stat / de minimis | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Implementare | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Monitorizare | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
 | Surse oficiale | [Comunicarea AFIR privind consultarea DR-12](https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/)<br>[Ghidul solicitantului DR-12 — versiunea consultativă (PDF AFIR)](https://www.afir.ro/api/file?filename=Ghidul+Solicitantului+DR+12+-+versiunea+consultativ%C4%83&filetype=pdf&url=%2Fmedia%2Flm3fg4k1%2Fghidul-solicitantului-dr-12.pdf) |
-| Latest official update | 2026-08-18 — [Versiune consultativă publicată la 19.03.2026; termenul pentru observații s-a încheiat la 30.03.2026](https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/) |
-| verifiedAt | 2026-08-29 |
-| Pagină oficială program/apel | [Comunicarea AFIR privind consultarea DR-12](https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/) (`program`, verificat 2026-08-29) |
-| Ghid | [Ghidul solicitantului DR-12 — versiunea consultativă (PDF AFIR)](https://www.afir.ro/api/file?filename=Ghidul+Solicitantului+DR+12+-+versiunea+consultativ%C4%83&filetype=pdf&url=%2Fmedia%2Flm3fg4k1%2Fghidul-solicitantului-dr-12.pdf) (`approval:evidence:0`, verificat 2026-08-18) |
-| Anexe | — Neidentificat separat în sursele oficiale înregistrate la 2026-08-29; nu se presupune inexistența documentului. |
-| Schemă / ordin | — Neidentificat separat în sursele oficiale înregistrate la 2026-08-29; nu se presupune inexistența documentului. |
-| Anunț sesiune | — Neidentificat separat în sursele oficiale înregistrate la 2026-08-29; nu se presupune inexistența documentului. |
-| Corrigenda / erate | — Neidentificat separat în sursele oficiale înregistrate la 2026-08-29; nu se presupune inexistența documentului. |
-| Clarificări | — Neidentificat separat în sursele oficiale înregistrate la 2026-08-29; nu se presupune inexistența documentului. |
-| Sursă primară în registry-ul operațional | [Versiune consultativă publicată la 19.03.2026; termenul pentru observații s-a încheiat la 30.03.2026](https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/) (verificat 2026-08-29) |
+| Latest official update | 2026-09-06 — [Versiune consultativă publicată la 19.03.2026; termenul pentru observații s-a încheiat la 30.03.2026](https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/) |
+| verifiedAt | 2026-09-06 |
+| Pagină oficială program/apel | [Comunicarea AFIR privind consultarea DR-12](https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/) (`program`, verificat 2026-09-06) |
+| Ghid | [Ghidul solicitantului DR-12 — versiunea consultativă (PDF AFIR)](https://www.afir.ro/api/file?filename=Ghidul+Solicitantului+DR+12+-+versiunea+consultativ%C4%83&filetype=pdf&url=%2Fmedia%2Flm3fg4k1%2Fghidul-solicitantului-dr-12.pdf) (`approval:evidence:0`, verificat 2026-09-06) |
+| Anexe | — Neidentificat separat în sursele oficiale înregistrate la 2026-09-06; nu se presupune inexistența documentului. |
+| Schemă / ordin | — Neidentificat separat în sursele oficiale înregistrate la 2026-09-06; nu se presupune inexistența documentului. |
+| Anunț sesiune | — Neidentificat separat în sursele oficiale înregistrate la 2026-09-06; nu se presupune inexistența documentului. |
+| Corrigenda / erate | — Neidentificat separat în sursele oficiale înregistrate la 2026-09-06; nu se presupune inexistența documentului. |
+| Clarificări | — Neidentificat separat în sursele oficiale înregistrate la 2026-09-06; nu se presupune inexistența documentului. |
+| Sursă primară în registry-ul operațional | [Versiune consultativă publicată la 19.03.2026; termenul pentru observații s-a încheiat la 30.03.2026](https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/) (verificat 2026-09-06) |
 | Chei surse repo | `dr12` |
 | Notes | Documentul înregistrat este consultativ; termenul pentru observații este încheiat și nu există dovadă de sesiune deschisă. |
 
@@ -194,44 +194,44 @@ Snapshot factual de bază al programelor: **2026-08-23**. Fiecare înregistrare 
 | Acronim | DR-14 |
 | Autoritate | Agenția pentru Finanțarea Investițiilor Rurale (AFIR) |
 | Fond / program | Planul Strategic PAC 2023–2027 / FEADR |
-| Temei / document | Anunțul A1.2/01/2026 pentru sesiunea DR 14, publicat la 14.08.2026 — [document oficial](https://www.afir.ro/instrumente/sesiuni/sesiuni-primire-proiecte/) |
-| Stadiu | SCHEDULED — Sesiune anunțată – depuneri 1 septembrie–31 octombrie 2026 |
-| Sesiune | [Anunțul cererii de proiecte DR-14, publicat la 14.08.2026](https://www.afir.ro/instrumente/sesiuni/sesiuni-primire-proiecte/) (`guide:dr14`, verificat 2026-08-29) |
+| Temei / document | Contorul oficial al sesiunilor active DR-14; cererea v1.1 din 25.08.2026 și clarificarea pe componente din 21.08.2026 — [document oficial](https://depunerepspac.afir.ro/Sesiune/Lista) |
+| Stadiu | OPEN — Sesiune deschisă – depuneri 1 septembrie–31 octombrie 2026 |
+| Sesiune | [Anunțul cererii de proiecte DR-14, publicat la 14.08.2026](https://depunerepspac.afir.ro/Sesiune/Lista) (`guide:dr14`, verificat 2026-09-06) |
 | Data deschiderii | 01.09.2026 |
 | Deadline | 31.10.2026 |
-| Prelungiri | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
+| Prelungiri | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
 | Buget | 108.000.000 EUR |
-| Grant minim | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
+| Grant minim | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
 | Grant maxim | 50.000 EUR / proiect |
 | Intensitate | rate: 85; scope: maximum din costurile eligibile |
 | Cofinanțare | Beneficiarul acoperă diferența eligibilă, cheltuielile neeligibile și orice sumă care depășește plafonul ajutorului public. |
 | Beneficiari | Fermieri, cu excepția persoanelor fizice, constituiți într-o formă eligibilă și activi în România.; Exploatații agricole încadrate în pragul SO aplicabil sectorului și componentei alese. |
 | Regiune | Național |
-| CAEN | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Prag SO | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Investiții | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Cheltuieli eligibile | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Cheltuieli neeligibile | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Condiții critice | Dimensiune economică generală de 4.000–11.999 SO, cu praguri minime speciale de 2.000 SO sau 2.300 SO pentru sectoarele prevăzute în ghid.; Un singur proiect pe DR 14 și alegerea unei singure componente: legumicol, zootehnic, achiziții simple sau național – alte sectoare.; Ajutor public de maximum 50.000 EUR/proiect și intensitate de maximum 85% din costurile eligibile.; Investițiile secundare prevăzute de ghid se mențin sub 50% din valoarea eligibilă a proiectului.; Costurile generale sunt limitate la maximum 10% pentru proiectele cu lucrări și maximum 3% pentru proiectele cu achiziții simple.; Dimensiunea economică poate scădea cu maximum 15% în implementare, fără coborârea sub pragul minim eligibil.; Depunerea este anunțată pentru 1 septembrie–31 octombrie 2026, cu prag de calitate de 80 de puncte în septembrie și 40 de puncte în octombrie.; Bugetul sesiunii este de 108 milioane EUR: câte 30 milioane EUR pentru zootehnie, legumicultură și alte sectoare și 18 milioane EUR pentru achiziții simple. |
-| Documente | [Pagina AFIR pentru sesiuni de primire proiecte](https://www.afir.ro/instrumente/sesiuni/sesiuni-primire-proiecte/)<br>[Detalii și documentație DR-14 (AFIR)](https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-14/) |
-| Indicatori | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Selecție / punctaj | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Ajutor de stat / de minimis | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Implementare | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Monitorizare | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Surse oficiale | [Pagina AFIR pentru sesiuni de primire proiecte](https://www.afir.ro/instrumente/sesiuni/sesiuni-primire-proiecte/)<br>[Detalii și documentație DR-14 (AFIR)](https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-14/) |
-| Latest official update | 2026-08-15 — [Anunțul A1.2/01/2026 pentru sesiunea DR 14, publicat la 14.08.2026](https://www.afir.ro/instrumente/sesiuni/sesiuni-primire-proiecte/) |
-| verifiedAt | 2026-08-29 |
-| Pagină oficială program/apel | [Pagina AFIR pentru sesiuni de primire proiecte](https://www.afir.ro/instrumente/sesiuni/sesiuni-primire-proiecte/) (`program`, verificat 2026-08-29) |
-| Ghid | [Detalii și documentație DR-14 (AFIR)](https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-14/) (`approval:evidence:1`, verificat 2026-08-18) |
-| Anexe | [Detalii și anexe DR-14 (AFIR)](https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-14/) (`approval:evidence:1`, verificat 2026-08-18) |
-| Schemă / ordin | — Neidentificat separat în sursele oficiale înregistrate la 2026-08-29; nu se presupune inexistența documentului. |
-| Anunț sesiune | [Anunțul cererii de proiecte DR-14, publicat la 14.08.2026](https://www.afir.ro/instrumente/sesiuni/sesiuni-primire-proiecte/) (`guide:dr14`, verificat 2026-08-29) |
-| Corrigenda / erate | — Neidentificat separat în sursele oficiale înregistrate la 2026-08-29; nu se presupune inexistența documentului. |
-| Clarificări | — Neidentificat separat în sursele oficiale înregistrate la 2026-08-29; nu se presupune inexistența documentului. |
-| Sursă primară în registry-ul operațional | [Anunțul A1.2/01/2026 pentru sesiunea DR 14, publicat la 14.08.2026](https://www.afir.ro/instrumente/sesiuni/sesiuni-primire-proiecte/) (verificat 2026-08-29) |
+| CAEN | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Prag SO | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Investiții | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Cheltuieli eligibile | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Cheltuieli neeligibile | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Condiții critice | Dimensiune economică generală de 4.000–11.999 SO, cu praguri minime speciale de 2.000 SO sau 2.300 SO pentru sectoarele prevăzute în ghid.; Un singur proiect pe DR 14 și alegerea unei singure componente: legumicol, zootehnic, achiziții simple sau național – alte sectoare.; Ajutor public de maximum 50.000 EUR/proiect și intensitate de maximum 85% din costurile eligibile.; Investițiile secundare prevăzute de ghid se mențin sub 50% din valoarea eligibilă a proiectului.; Costurile generale sunt limitate la maximum 10% pentru proiectele cu lucrări și maximum 3% pentru proiectele cu achiziții simple.; Dimensiunea economică poate scădea cu maximum 15% în implementare, fără coborârea sub pragul minim eligibil.; Depunerea este anunțată pentru 1 septembrie–31 octombrie 2026, cu prag de calitate de 80 de puncte în septembrie și 40 de puncte în octombrie.; Bugetul sesiunii este de 108 milioane EUR: câte 30 milioane EUR pentru zootehnie, legumicultură și alte sectoare și 18 milioane EUR pentru achiziții simple.; Achizițiile simple nu includ utilaje sau echipamente cu montaj/instalare. Proiectele cu asemenea echipamente se încadrează pe componenta sectorială potrivită, conform notei AFIR din 21.08.2026.; Se utilizează Cererea de finanțare DR-14 v1.1, actualizată la 25.08.2026. |
+| Documente | [Pagina AFIR pentru sesiuni de primire proiecte](https://depunerepspac.afir.ro/Sesiune/Lista)<br>[Detalii și documentație DR-14 (AFIR)](https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-14/) |
+| Indicatori | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Selecție / punctaj | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Ajutor de stat / de minimis | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Implementare | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Monitorizare | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Surse oficiale | [Pagina AFIR pentru sesiuni de primire proiecte](https://depunerepspac.afir.ro/Sesiune/Lista)<br>[Detalii și documentație DR-14 (AFIR)](https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-14/) |
+| Latest official update | 2026-09-06 — [Contorul oficial al sesiunilor active DR-14; cererea v1.1 din 25.08.2026 și clarificarea pe componente din 21.08.2026](https://depunerepspac.afir.ro/Sesiune/Lista) |
+| verifiedAt | 2026-09-06 |
+| Pagină oficială program/apel | [Pagina AFIR pentru sesiuni de primire proiecte](https://depunerepspac.afir.ro/Sesiune/Lista) (`program`, verificat 2026-09-06) |
+| Ghid | [Detalii și documentație DR-14 (AFIR)](https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-14/) (`approval:evidence:1`, verificat 2026-09-06) |
+| Anexe | [Detalii și anexe DR-14 (AFIR)](https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-14/) (`approval:evidence:1`, verificat 2026-09-06) |
+| Schemă / ordin | — Neidentificat separat în sursele oficiale înregistrate la 2026-09-06; nu se presupune inexistența documentului. |
+| Anunț sesiune | [Anunțul cererii de proiecte DR-14, publicat la 14.08.2026](https://depunerepspac.afir.ro/Sesiune/Lista) (`guide:dr14`, verificat 2026-09-06) |
+| Corrigenda / erate | — Neidentificat separat în sursele oficiale înregistrate la 2026-09-06; nu se presupune inexistența documentului. |
+| Clarificări | — Neidentificat separat în sursele oficiale înregistrate la 2026-09-06; nu se presupune inexistența documentului. |
+| Sursă primară în registry-ul operațional | [Contorul oficial al sesiunilor active DR-14; cererea v1.1 din 25.08.2026 și clarificarea pe componente din 21.08.2026](https://depunerepspac.afir.ro/Sesiune/Lista) (verificat 2026-09-06) |
 | Chei surse repo | `dr14` |
-| Notes | Sesiune programată 01.09.2026–31.10.2026. Eventualele erate, clarificări, suspendări sau închideri anticipate trebuie urmărite separat. |
+| Notes | Sesiune activă verificată în contorul AFIR la 06.09.2026. Verificați disponibilitatea fiecărei componente înaintea depunerii, inclusiv închiderea anticipată. |
 
 ## `dr18-afir` — DR-18 Investiții în floricultură, plante medicinale și aromatice
 
@@ -243,41 +243,41 @@ Snapshot factual de bază al programelor: **2026-08-23**. Fiecare înregistrare 
 | Autoritate | Agenția pentru Finanțarea Investițiilor Rurale (AFIR) |
 | Fond / program | Planul Strategic PAC 2023–2027 / FEADR |
 | Temei / document | Anunțul A1.2/01/2026 pentru sesiunea DR 18, publicat la 14.08.2026 — [document oficial](https://www.afir.ro/instrumente/sesiuni/sesiuni-primire-proiecte/) |
-| Stadiu | SCHEDULED — Sesiune anunțată – depuneri 1 septembrie–31 octombrie 2026 |
-| Sesiune | [Anunțul cererii de proiecte DR-18, publicat la 14.08.2026](https://www.afir.ro/instrumente/sesiuni/sesiuni-primire-proiecte/) (`program`, verificat 2026-08-29) |
+| Stadiu | OPEN — Sesiune deschisă – depuneri 1 septembrie–31 octombrie 2026 |
+| Sesiune | [Anunțul cererii de proiecte DR-18, publicat la 14.08.2026](https://www.afir.ro/instrumente/sesiuni/sesiuni-primire-proiecte/) (`program`, verificat 2026-09-06) |
 | Data deschiderii | 01.09.2026 |
 | Deadline | 31.10.2026 |
-| Prelungiri | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
+| Prelungiri | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
 | Buget | 5.000.000 EUR |
-| Grant minim | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
+| Grant minim | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
 | Grant maxim | 100.000 EUR / proiect |
 | Intensitate | rate: 85; scope: maximum pentru exploatații de 2.000–11.999 SO; rate: 65; scope: maximum pentru exploatații de minimum 12.000 SO |
 | Cofinanțare | Beneficiarul acoperă diferența eligibilă, cheltuielile neeligibile, TVA potrivit regimului fiscal și orice depășire de cost. |
 | Beneficiari | Fermieri organizați juridic, cu excepția persoanelor fizice.; Cooperative agricole și societăți cooperative care deservesc interesele membrilor fermieri.; Grupuri și organizații de producători recunoscute de MADR. |
 | Regiune | Național |
-| CAEN | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Prag SO | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Investiții | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Cheltuieli eligibile | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Cheltuieli neeligibile | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
+| CAEN | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Prag SO | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Investiții | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Cheltuieli eligibile | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Cheltuieli neeligibile | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
 | Condiții critice | Dimensiune economică de minimum 2.000 SO, calculată cu coeficienții SOC 2020.; Solicitantul figurează înaintea depunerii în APIA, ANSVSA și/sau ANZ, după caz, pe aceeași formă juridică.; Ajutor public de maximum 100.000 EUR/proiect; intensitate de maximum 85% pentru 2.000–11.999 SO și 65% de la 12.000 SO.; Dimensiunea economică poate scădea cu maximum 15% în implementare, fără a coborî sub 2.000 SO.; Condiționarea, depozitarea și procesarea folosesc în proporție de minimum 50% producția proprie sau a membrilor și rămân activități secundare.; Energia regenerabilă este dimensionată pentru autoconsum și nu urmărește statutul de prosumator.; Costurile generale sunt limitate la 10% pentru proiecte cu lucrări și la 3% pentru achiziții simple.; Cheltuielile de marketing sunt limitate la maximum 5% din valoarea eligibilă.; Pentru costuri de peste 15.000 EUR sunt necesare minimum două oferte; până la 15.000 EUR este acceptată o ofertă sau un printscreen verificabil.; Criteriul pentru spații protejate folosește ponderile peste 50%, 25–50% și 15–25%; energia regenerabilă punctată reprezintă minimum 2% din eligibil.; Un proiect nu poate dubla finanțarea și respectă demarcarea față de DR 14, DR 22, DR 25 și intervențiile energetice. |
 | Documente | [Pagina AFIR pentru sesiuni de primire proiecte](https://www.afir.ro/instrumente/sesiuni/sesiuni-primire-proiecte/)<br>[Ghidul final DR-18](https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-18/) |
-| Indicatori | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Selecție / punctaj | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Ajutor de stat / de minimis | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Implementare | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Monitorizare | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
+| Indicatori | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Selecție / punctaj | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Ajutor de stat / de minimis | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Implementare | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Monitorizare | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
 | Surse oficiale | [Pagina AFIR pentru sesiuni de primire proiecte](https://www.afir.ro/instrumente/sesiuni/sesiuni-primire-proiecte/)<br>[Ghidul final DR-18](https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-18/) |
-| Latest official update | 2026-08-28 — [Anunțul A1.2/01/2026 pentru sesiunea DR 18, publicat la 14.08.2026](https://www.afir.ro/instrumente/sesiuni/sesiuni-primire-proiecte/) |
-| verifiedAt | 2026-08-29 |
-| Pagină oficială program/apel | [Pagina AFIR pentru sesiuni de primire proiecte](https://www.afir.ro/instrumente/sesiuni/sesiuni-primire-proiecte/) (`program`, verificat 2026-08-29) |
+| Latest official update | 2026-09-06 — [Anunțul A1.2/01/2026 pentru sesiunea DR 18, publicat la 14.08.2026](https://www.afir.ro/instrumente/sesiuni/sesiuni-primire-proiecte/) |
+| verifiedAt | 2026-09-06 |
+| Pagină oficială program/apel | [Pagina AFIR pentru sesiuni de primire proiecte](https://www.afir.ro/instrumente/sesiuni/sesiuni-primire-proiecte/) (`program`, verificat 2026-09-06) |
 | Ghid | [Ghidul final DR-18](https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-18/) (`registry:afir-dr18-guide-annexes`, verificat 2026-08-28) |
 | Anexe | [Anexele DR-18](https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-18/) (`registry:afir-dr18-guide-annexes`, verificat 2026-08-28) |
-| Schemă / ordin | — Neidentificat separat în sursele oficiale înregistrate la 2026-08-29; nu se presupune inexistența documentului. |
-| Anunț sesiune | [Anunțul cererii de proiecte DR-18, publicat la 14.08.2026](https://www.afir.ro/instrumente/sesiuni/sesiuni-primire-proiecte/) (`program`, verificat 2026-08-29) |
-| Corrigenda / erate | — Neidentificat separat în sursele oficiale înregistrate la 2026-08-29; nu se presupune inexistența documentului. |
-| Clarificări | — Neidentificat separat în sursele oficiale înregistrate la 2026-08-29; nu se presupune inexistența documentului. |
-| Sursă primară în registry-ul operațional | [Anunțul A1.2/01/2026 pentru sesiunea DR 18, publicat la 14.08.2026](https://www.afir.ro/instrumente/sesiuni/sesiuni-primire-proiecte/) (verificat 2026-08-29) |
+| Schemă / ordin | — Neidentificat separat în sursele oficiale înregistrate la 2026-09-06; nu se presupune inexistența documentului. |
+| Anunț sesiune | [Anunțul cererii de proiecte DR-18, publicat la 14.08.2026](https://www.afir.ro/instrumente/sesiuni/sesiuni-primire-proiecte/) (`program`, verificat 2026-09-06) |
+| Corrigenda / erate | — Neidentificat separat în sursele oficiale înregistrate la 2026-09-06; nu se presupune inexistența documentului. |
+| Clarificări | — Neidentificat separat în sursele oficiale înregistrate la 2026-09-06; nu se presupune inexistența documentului. |
+| Sursă primară în registry-ul operațional | [Anunțul A1.2/01/2026 pentru sesiunea DR 18, publicat la 14.08.2026](https://www.afir.ro/instrumente/sesiuni/sesiuni-primire-proiecte/) (verificat 2026-09-06) |
 | Chei surse repo | `dr18` |
 | Notes | Sesiune programată 01.09.2026–31.10.2026. Ghidul final și anexele au pagină oficială separată de anunțul sesiunii. |
 
@@ -431,45 +431,45 @@ Snapshot factual de bază al programelor: **2026-08-23**. Fiecare înregistrare 
 |---|---|
 | Stable program ID | `modernizare-microintreprinderi-ne-2` |
 | Denumire oficială | Investiții pentru modernizarea microîntreprinderilor – Apel 2 |
-| Acronim | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
+| Acronim | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
 | Autoritate | Autoritatea de Management pentru Programul Regional Nord-Est |
 | Fond / program | Programul Regional Nord-Est 2021–2027 |
 | Temei / document | Ghidul final și anexele publicate la 27.08.2026; cod apel PR/NE/2026/P1/RSO1.3/2/1 — [document oficial](https://regionordest.ro/prioritatea-1/modernizare-microintreprinderi/) |
 | Stadiu | SCHEDULED — Apel lansat – depuneri 28 septembrie–28 octombrie 2026 |
-| Sesiune | [Anunțul oficial: depuneri 28.09.2026–28.10.2026](https://regionordest.ro/prioritatea-1/modernizare-microintreprinderi/) (`program`, verificat 2026-08-29) |
+| Sesiune | [Anunțul oficial: depuneri 28.09.2026–28.10.2026](https://regionordest.ro/prioritatea-1/modernizare-microintreprinderi/) (`program`, verificat 2026-09-06) |
 | Data deschiderii | 28.09.2026 |
 | Deadline | 28.10.2026 |
-| Prelungiri | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
+| Prelungiri | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
 | Buget | 20.370.738,4 EUR |
 | Grant minim | 100.000 EUR / proiect |
 | Grant maxim | 300.000 EUR / proiect |
 | Intensitate | rate: 90; scope: maximum din cheltuielile eligibile |
 | Cofinanțare | Minimum 10% din cheltuielile eligibile, plus toate cheltuielile neeligibile; o contribuție eligibilă mai mare este punctată. |
-| Beneficiari | Societăți constituite în baza Legii nr. 31/1990 care se încadrează în categoria microîntreprinderilor; Solicitanți cu sediul social în regiunea Nord-Est sau cu angajamentul de a-l înregistra în regiune până la prima plată a ajutorului |
+| Beneficiari | Microîntreprinderi constituite ca societăți, cu investiții în Regiunea Nord-Est, care îndeplinesc condițiile ghidului final. |
 | Regiune | Regiunea Nord-Est |
-| CAEN | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Prag SO | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Investiții | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Cheltuieli eligibile | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Cheltuieli neeligibile | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
+| CAEN | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Prag SO | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Investiții | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Cheltuieli eligibile | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Cheltuieli neeligibile | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
 | Condiții critice | Investiția se realizează în județele Bacău, Botoșani, Iași, Neamț, Suceava sau Vaslui, în mediul urban ori rural.; Solicitantul respectă definiția microîntreprinderii: maximum 9 salariați și cifră de afaceri anuală netă sau active totale de maximum 2 milioane EUR, inclusiv după agregarea întreprinderilor partenere și legate.; Solicitantul a desfășurat activitate cel puțin un an fiscal integral, a fost înființat cel târziu la 03.01.2025, nu a avut activitatea suspendată în 2025 sau 2026 și a avut profit din exploatare pozitiv în 2025.; Numărul mediu de salariați în 2025 este de minimum 1, conform bazei de date ANAF.; Cel puțin un cod CAEN Rev. 3 vizat este inclus în Anexa 5, iar achiziția de mijloace fixe corporale este obligatorie.; Finanțarea nerambursabilă este de 100.000–300.000 EUR, contribuția proprie eligibilă este de minimum 10%, iar plafonul de minimis al întreprinderii unice trebuie respectat.; Cheltuielile indirecte sunt eligibile în limita unei rate forfetare de maximum 7% din costurile directe eligibile.; Grila punctează contribuția proprie până la pragul de 30% și rata profitabilității până la pragul de 6%, conform formulelor din Anexa 10.; Proiectul trebuie să obțină minimum 70 de puncte și să nu primească 0 la subcriteriile eliminatorii prevăzute de grilă. |
 | Documente | [Pagina oficială ADR Nord-Est pentru Apelul 2](https://regionordest.ro/prioritatea-1/modernizare-microintreprinderi/) |
-| Indicatori | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Selecție / punctaj | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Ajutor de stat / de minimis | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Implementare | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Monitorizare | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
+| Indicatori | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Selecție / punctaj | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Ajutor de stat / de minimis | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Implementare | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Monitorizare | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
 | Surse oficiale | [Pagina oficială ADR Nord-Est pentru Apelul 2](https://regionordest.ro/prioritatea-1/modernizare-microintreprinderi/) |
-| Latest official update | 2026-08-28 — [Ghidul final și anexele publicate la 27.08.2026; cod apel PR/NE/2026/P1/RSO1.3/2/1](https://regionordest.ro/prioritatea-1/modernizare-microintreprinderi/) |
-| verifiedAt | 2026-08-29 |
-| Pagină oficială program/apel | [Pagina oficială ADR Nord-Est pentru Apelul 2](https://regionordest.ro/prioritatea-1/modernizare-microintreprinderi/) (`program`, verificat 2026-08-29) |
-| Ghid | [Ghidul final și anexele Apelului 2, publicate la 27.08.2026](https://regionordest.ro/prioritatea-1/modernizare-microintreprinderi/) (`guide:por-ne-apel-2`, verificat 2026-08-29) |
-| Anexe | [Anexele finale, inclusiv lista CAEN și grila de evaluare](https://regionordest.ro/prioritatea-1/modernizare-microintreprinderi/) (`guide:por-ne-apel-2`, verificat 2026-08-29) |
-| Schemă / ordin | — Neidentificat separat în sursele oficiale înregistrate la 2026-08-29; nu se presupune inexistența documentului. |
-| Anunț sesiune | [Anunțul oficial: depuneri 28.09.2026–28.10.2026](https://regionordest.ro/prioritatea-1/modernizare-microintreprinderi/) (`program`, verificat 2026-08-29) |
-| Corrigenda / erate | — Neidentificat separat în sursele oficiale înregistrate la 2026-08-29; nu se presupune inexistența documentului. |
-| Clarificări | — Neidentificat separat în sursele oficiale înregistrate la 2026-08-29; nu se presupune inexistența documentului. |
-| Sursă primară în registry-ul operațional | [Ghidul final și anexele publicate la 27.08.2026; cod apel PR/NE/2026/P1/RSO1.3/2/1](https://regionordest.ro/prioritatea-1/modernizare-microintreprinderi/) (verificat 2026-08-29) |
+| Latest official update | 2026-09-06 — [Ghidul final și anexele publicate la 27.08.2026; cod apel PR/NE/2026/P1/RSO1.3/2/1](https://regionordest.ro/prioritatea-1/modernizare-microintreprinderi/) |
+| verifiedAt | 2026-09-06 |
+| Pagină oficială program/apel | [Pagina oficială ADR Nord-Est pentru Apelul 2](https://regionordest.ro/prioritatea-1/modernizare-microintreprinderi/) (`program`, verificat 2026-09-06) |
+| Ghid | [Ghidul final și anexele Apelului 2, publicate la 27.08.2026](https://regionordest.ro/prioritatea-1/modernizare-microintreprinderi/) (`guide:por-ne-apel-2`, verificat 2026-09-06) |
+| Anexe | [Anexele finale, inclusiv lista CAEN și grila de evaluare](https://regionordest.ro/prioritatea-1/modernizare-microintreprinderi/) (`guide:por-ne-apel-2`, verificat 2026-09-06) |
+| Schemă / ordin | — Neidentificat separat în sursele oficiale înregistrate la 2026-09-06; nu se presupune inexistența documentului. |
+| Anunț sesiune | [Anunțul oficial: depuneri 28.09.2026–28.10.2026](https://regionordest.ro/prioritatea-1/modernizare-microintreprinderi/) (`program`, verificat 2026-09-06) |
+| Corrigenda / erate | — Neidentificat separat în sursele oficiale înregistrate la 2026-09-06; nu se presupune inexistența documentului. |
+| Clarificări | — Neidentificat separat în sursele oficiale înregistrate la 2026-09-06; nu se presupune inexistența documentului. |
+| Sursă primară în registry-ul operațional | [Ghidul final și anexele publicate la 27.08.2026; cod apel PR/NE/2026/P1/RSO1.3/2/1](https://regionordest.ro/prioritatea-1/modernizare-microintreprinderi/) (verificat 2026-09-06) |
 | Chei surse repo | `por-ne-apel-2`, `por-ne` |
 | Notes | Apelul este lansat, cu o fereastră viitoare de depunere. Se verifică pagina oficială pentru eventuale corrigenda, clarificări sau modificări înainte de transmitere. |
 
@@ -674,42 +674,42 @@ Snapshot factual de bază al programelor: **2026-08-23**. Fiecare înregistrare 
 | Acronim | PRO INFRA |
 | Autoritate | Ministerul Transporturilor și Infrastructurii |
 | Fond / program | Fondul pentru Modernizare |
-| Temei / document | Ordinul MTI nr. 2.292/29.12.2025, publicat la 14.01.2026, cu modificările Ordinului nr. 101/12.02.2026 — [document oficial](https://legislatie.just.ro/Public/DetaliiDocument/306915) |
+| Temei / document | Schema PRO INFRA consolidată, art. 5, 13 și 16, cu modificările Ordinului nr. 101/12.02.2026 — [document oficial](https://legislatie.just.ro/Public/DetaliiDocument/306916) |
 | Stadiu | APPROVED_SCHEME — Schemă aprobată și modificată – depunerea nu este deschisă |
-| Sesiune | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Data deschiderii | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Deadline | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Prelungiri | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Buget | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Grant minim | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Grant maxim | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Intensitate | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Cofinanțare | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Beneficiari | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
+| Sesiune | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Data deschiderii | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Deadline | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Prelungiri | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Buget | 100.000.000 EUR |
+| Grant minim | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Grant maxim | 15.000.000 EUR / beneficiar |
+| Intensitate | rate: 100; scope: maximum din cheltuielile eligibile, prin ofertare concurențială |
+| Cofinanțare | Diferența neacoperită de oferta de ajutor, costurile neeligibile și eventualele depășiri de buget. |
+| Beneficiari | Întreprinderi din categoriile eligibile ale schemei care produc pentru infrastructura de transport și înlocuiesc instalații, utilaje sau echipamente cu alternative eficiente energetic în România. |
 | Regiune | Național |
-| CAEN | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Prag SO | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Investiții | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Cheltuieli eligibile | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Cheltuieli neeligibile | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Condiții critice | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Documente | [Schema PRO INFRA în Portalul Legislativ](https://legislatie.just.ro/Public/DetaliiDocument/306915) |
-| Indicatori | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Selecție / punctaj | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Ajutor de stat / de minimis | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Implementare | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Monitorizare | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Surse oficiale | [Schema PRO INFRA în Portalul Legislativ](https://legislatie.just.ro/Public/DetaliiDocument/306915) |
-| Latest official update | 2026-02-12 — [Ordinul MTI nr. 2.292/29.12.2025, publicat la 14.01.2026, cu modificările Ordinului nr. 101/12.02.2026](https://legislatie.just.ro/Public/DetaliiDocument/306915) |
-| verifiedAt | 2026-08-29 |
-| Pagină oficială program/apel | [Schema PRO INFRA în Portalul Legislativ](https://legislatie.just.ro/Public/DetaliiDocument/306915) (`program`, verificat 2026-08-29) |
-| Ghid | — Neidentificat separat în sursele oficiale înregistrate la 2026-08-29; nu se presupune inexistența documentului. |
-| Anexe | — Neidentificat separat în sursele oficiale înregistrate la 2026-08-29; nu se presupune inexistența documentului. |
-| Schemă / ordin | [Ordinul MTI nr. 2.292/29.12.2025 și schema PRO INFRA](https://legislatie.just.ro/Public/DetaliiDocument/306915) (`guide:pro-infra-order`, verificat 2026-08-29) |
-| Anunț sesiune | — Neidentificat separat în sursele oficiale înregistrate la 2026-08-29; nu se presupune inexistența documentului. |
-| Corrigenda / erate | — Neidentificat separat în sursele oficiale înregistrate la 2026-08-29; nu se presupune inexistența documentului. |
-| Clarificări | — Neidentificat separat în sursele oficiale înregistrate la 2026-08-29; nu se presupune inexistența documentului. |
-| Sursă primară în registry-ul operațional | [Ordinul MTI nr. 2.292/29.12.2025, publicat la 14.01.2026, cu modificările Ordinului nr. 101/12.02.2026](https://legislatie.just.ro/Public/DetaliiDocument/306915) (verificat 2026-08-29) |
+| CAEN | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Prag SO | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Investiții | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Cheltuieli eligibile | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Cheltuieli neeligibile | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Condiții critice | Bugetul schemei este 100 milioane EUR; plafonul ajutorului este 15 milioane EUR/beneficiar.; Maximum 100% din cheltuielile eligibile prin procedură competitivă; procentul maxim nu garantează finanțarea.; EMS integrat, cu excepția justificată documentar conform art. 5 alin. (2); auditul energetic rămâne necesar. |
+| Documente | [Schema PRO INFRA în Portalul Legislativ](https://legislatie.just.ro/Public/DetaliiDocument/306916) |
+| Indicatori | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Selecție / punctaj | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Ajutor de stat / de minimis | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Implementare | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Monitorizare | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Surse oficiale | [Schema PRO INFRA în Portalul Legislativ](https://legislatie.just.ro/Public/DetaliiDocument/306916) |
+| Latest official update | 2026-02-12 — [Schema PRO INFRA consolidată, art. 5, 13 și 16, cu modificările Ordinului nr. 101/12.02.2026](https://legislatie.just.ro/Public/DetaliiDocument/306916) |
+| verifiedAt | 2026-09-06 |
+| Pagină oficială program/apel | [Schema PRO INFRA în Portalul Legislativ](https://legislatie.just.ro/Public/DetaliiDocument/306916) (`program`, verificat 2026-09-06) |
+| Ghid | — Neidentificat separat în sursele oficiale înregistrate la 2026-09-06; nu se presupune inexistența documentului. |
+| Anexe | — Neidentificat separat în sursele oficiale înregistrate la 2026-09-06; nu se presupune inexistența documentului. |
+| Schemă / ordin | [Ordinul MTI nr. 2.292/29.12.2025 și schema PRO INFRA](https://legislatie.just.ro/Public/DetaliiDocument/306916) (`guide:pro-infra-order`, verificat 2026-09-06) |
+| Anunț sesiune | — Neidentificat separat în sursele oficiale înregistrate la 2026-09-06; nu se presupune inexistența documentului. |
+| Corrigenda / erate | — Neidentificat separat în sursele oficiale înregistrate la 2026-09-06; nu se presupune inexistența documentului. |
+| Clarificări | — Neidentificat separat în sursele oficiale înregistrate la 2026-09-06; nu se presupune inexistența documentului. |
+| Sursă primară în registry-ul operațional | [Schema PRO INFRA consolidată, art. 5, 13 și 16, cu modificările Ordinului nr. 101/12.02.2026](https://legislatie.just.ro/Public/DetaliiDocument/306916) (verificat 2026-09-06) |
 | Chei surse repo | `pro-infra`, `pro-infra-order` |
 | Notes | Schema este aprobată și modificată prin Ordinul nr. 101/12.02.2026; nu este înregistrat un interval efectiv de depunere. Reverificarea nu a identificat în sursa legislativă dovada afirmației anterioare «în revizuire». |
 
@@ -959,47 +959,47 @@ Snapshot factual de bază al programelor: **2026-08-23**. Fiecare înregistrare 
 |---|---|
 | Stable program ID | `diaspora-investeste-acasa` |
 | Denumire oficială | Diaspora Investește Acasă |
-| Acronim | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Autoritate | Departamentul pentru Românii de Pretutindeni |
-| Fond / program | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Temei / document | Comunicare oficială din 27.05.2026 privind programul guvernamental — [document oficial](https://diaspora.gov.ro/info/stiri-din-romania/761-investeste-acasa.html) |
-| Stadiu | ANNOUNCED — Program anunțat – mecanismul de aplicare nu este publicat |
-| Sesiune | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Data deschiderii | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Deadline | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Prelungiri | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
+| Acronim | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Autoritate | Banca de Investiții și Dezvoltare (BID) |
+| Fond / program | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Temei / document | Condițiile programului și stadiul operaționalizării publicate de BID, verificate la 06.09.2026 — [document oficial](https://www.bidromania.eu/produse/garantii/diaspora-investeste-acasa) |
+| Stadiu | APPROVED_SCHEME — Program aprobat – în curs de operaționalizare la BID |
+| Sesiune | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Data deschiderii | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Deadline | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Prelungiri | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
 | Buget | 100.000.000 EUR |
-| Grant minim | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
+| Grant minim | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
 | Grant maxim | 200.000 EUR / întreprindere |
-| Intensitate | rate: 60; scope: maximum din creditul de investiții, conform comunicării oficiale |
-| Cofinanțare | Minimum 10%; minimum 5% pentru persoanele cu vârsta sub 35 de ani, conform comunicării oficiale. |
-| Beneficiari | Întreprinderi nou-înființate, deținute majoritar de cetățeni români cu domiciliul sau reședința în străinătate |
+| Intensitate | rate: 60; scope: maximum din creditul de investiții, în limita grantului de 200.000 EUR, conform BID |
+| Cofinanțare | 10% pentru proiecte de până la 400.000 EUR; 5% dacă cel puțin un asociat majoritar eligibil are sub 35 de ani; 15% pentru proiecte de peste 400.000 EUR. |
+| Beneficiari | Microîntreprinderi și IMM-uri înființate de mai puțin de trei ani, cu majoritatea capitalului deținută de cetățeni români care îndeplinesc condiția de domiciliu/reședință în străinătate. |
 | Regiune | Național |
-| CAEN | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Prag SO | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Investiții | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Cheltuieli eligibile | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Cheltuieli neeligibile | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Condiții critice | Investiția va fi creditată prin mecanismul anunțat, cu o contribuție proprie minimă.; Eligibilitatea finală va depinde de procedura și documentele oficiale care urmează să fie publicate. |
-| Documente | [Comunicarea oficială «Investește Acasă»](https://diaspora.gov.ro/info/stiri-din-romania/761-investeste-acasa.html) |
-| Indicatori | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Selecție / punctaj | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Ajutor de stat / de minimis | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Implementare | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Monitorizare | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Surse oficiale | [Comunicarea oficială «Investește Acasă»](https://diaspora.gov.ro/info/stiri-din-romania/761-investeste-acasa.html) |
-| Latest official update | 2026-05-27 — [Comunicare oficială din 27.05.2026 privind programul guvernamental](https://diaspora.gov.ro/info/stiri-din-romania/761-investeste-acasa.html) |
-| verifiedAt | 2026-08-29 |
-| Pagină oficială program/apel | [Comunicarea oficială «Investește Acasă»](https://diaspora.gov.ro/info/stiri-din-romania/761-investeste-acasa.html) (`program`, verificat 2026-08-29) |
-| Ghid | — Neidentificat separat în sursele oficiale înregistrate la 2026-08-29; nu se presupune inexistența documentului. |
-| Anexe | — Neidentificat separat în sursele oficiale înregistrate la 2026-08-29; nu se presupune inexistența documentului. |
-| Schemă / ordin | — Neidentificat separat în sursele oficiale înregistrate la 2026-08-29; nu se presupune inexistența documentului. |
-| Anunț sesiune | — Neidentificat separat în sursele oficiale înregistrate la 2026-08-29; nu se presupune inexistența documentului. |
-| Corrigenda / erate | — Neidentificat separat în sursele oficiale înregistrate la 2026-08-29; nu se presupune inexistența documentului. |
-| Clarificări | — Neidentificat separat în sursele oficiale înregistrate la 2026-08-29; nu se presupune inexistența documentului. |
-| Sursă primară în registry-ul operațional | [Comunicare oficială din 27.05.2026 privind programul guvernamental](https://diaspora.gov.ro/info/stiri-din-romania/761-investeste-acasa.html) (verificat 2026-08-29) |
+| CAEN | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Prag SO | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Investiții | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Cheltuieli eligibile | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Cheltuieli neeligibile | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Condiții critice | Domiciliu sau reședință în străinătate pentru minimum 12 luni din ultimele 18 luni anterioare cererii de credit.; Minimum nouă luni de experiență, pregătire sau studii relevante, inclusiv în management, pentru asociații majoritari și/sau administratori.; Investiția și participația eligibilă se păstrează minimum trei ani, cu excepțiile prevăzute de program.; Grantul reduce soldul creditului după realizarea investiției și verificarea condițiilor; nu este un avans independent. |
+| Documente | [Comunicarea oficială «Investește Acasă»](https://www.bidromania.eu/produse/garantii/diaspora-investeste-acasa) |
+| Indicatori | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Selecție / punctaj | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Ajutor de stat / de minimis | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Implementare | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Monitorizare | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Surse oficiale | [Comunicarea oficială «Investește Acasă»](https://www.bidromania.eu/produse/garantii/diaspora-investeste-acasa) |
+| Latest official update | 2026-09-06 — [Condițiile programului și stadiul operaționalizării publicate de BID, verificate la 06.09.2026](https://www.bidromania.eu/produse/garantii/diaspora-investeste-acasa) |
+| verifiedAt | 2026-09-06 |
+| Pagină oficială program/apel | [Comunicarea oficială «Investește Acasă»](https://www.bidromania.eu/produse/garantii/diaspora-investeste-acasa) (`program`, verificat 2026-09-06) |
+| Ghid | — Neidentificat separat în sursele oficiale înregistrate la 2026-09-06; nu se presupune inexistența documentului. |
+| Anexe | — Neidentificat separat în sursele oficiale înregistrate la 2026-09-06; nu se presupune inexistența documentului. |
+| Schemă / ordin | — Neidentificat separat în sursele oficiale înregistrate la 2026-09-06; nu se presupune inexistența documentului. |
+| Anunț sesiune | — Neidentificat separat în sursele oficiale înregistrate la 2026-09-06; nu se presupune inexistența documentului. |
+| Corrigenda / erate | — Neidentificat separat în sursele oficiale înregistrate la 2026-09-06; nu se presupune inexistența documentului. |
+| Clarificări | — Neidentificat separat în sursele oficiale înregistrate la 2026-09-06; nu se presupune inexistența documentului. |
+| Sursă primară în registry-ul operațional | [Condițiile programului și stadiul operaționalizării publicate de BID, verificate la 06.09.2026](https://www.bidromania.eu/produse/garantii/diaspora-investeste-acasa) (verificat 2026-09-06) |
 | Chei surse repo | `diaspora-investeste-acasa` |
-| Notes | Program anunțat; mecanismul de aplicare, documentația și sesiunea nu sunt înregistrate. |
+| Notes | Program aprobat, în curs de operaționalizare la BID; lista băncilor partenere urmează să fie publicată. |
 
 ## `e-drive` — Programul e-DRIVE
 
@@ -1012,40 +1012,40 @@ Snapshot factual de bază al programelor: **2026-08-23**. Fiecare înregistrare 
 | Fond / program | Fondul pentru Modernizare |
 | Temei / document | Ordinul MTI nr. 742/03.08.2026 pentru actualizarea schemei e-DRIVE, în vigoare din 07.08.2026 — [document oficial](https://legislatie.just.ro/Public/DetaliiDocument/313289) |
 | Stadiu | APPROVED_SCHEME — Schemă actualizată – depunerea nu este deschisă |
-| Sesiune | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Data deschiderii | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Deadline | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Prelungiri | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
+| Sesiune | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Data deschiderii | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Deadline | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Prelungiri | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
 | Buget | 56.900.000 EUR |
-| Grant minim | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
+| Grant minim | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
 | Grant maxim | 4.000.000 EUR / beneficiar, în cadrul măsurii competitive |
 | Intensitate | rate: 100; scope: maximum, în limitele schemei și ale costului eligibil aplicabil |
 | Cofinanțare | Diferența neacoperită de ajutor, costurile neeligibile și orice diferență față de costul de referință aplicabil. |
-| Beneficiari | Microîntreprinderi și IMM-uri eligibile în măsura 1, indiferent de codul CAEN, cu respectarea sectoarelor excluse de schema de minimis; Operatori de transport rutier de persoane eligibili în măsura 2, pentru activitățile CAEN Rev. 3 prevăzute de schemă |
+| Beneficiari | Măsura 1: microîntreprinderi și IMM-uri, cu excluderile schemei de minimis. Măsura 2: operatori eligibili de transport rutier de persoane. |
 | Regiune | Național |
-| CAEN | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Prag SO | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Investiții | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Cheltuieli eligibile | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Cheltuieli neeligibile | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
+| CAEN | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Prag SO | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Investiții | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Cheltuieli eligibile | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Cheltuieli neeligibile | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
 | Condiții critice | Măsura 1 vizează vehicule electrice noi M1 și M2; măsura 2 vizează vehicule electrice noi M1, M2 și M3.; Vehiculul poluant înlocuit se casează în maximum 60 de zile de la primirea vehiculului cu emisii zero.; Măsura 1 aplică plafonul de minimis de 300.000 EUR pe întreprindere unică și maximum 30.000 EUR pentru un vehicul M1.; Măsura 2 aplică un plafon de maximum 4.000.000 EUR pe beneficiar, iar costul eligibil este diferența față de alternativa convențională comparabilă.; TVA nu este eligibilă, sunt necesare minimum două oferte în condițiile schemei, iar investiția se menține cinci ani. |
 | Documente | [Schema e-DRIVE în Portalul Legislativ](https://legislatie.just.ro/Public/DetaliiDocument/313289) |
-| Indicatori | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Selecție / punctaj | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Ajutor de stat / de minimis | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Implementare | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Monitorizare | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
+| Indicatori | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Selecție / punctaj | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Ajutor de stat / de minimis | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Implementare | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Monitorizare | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
 | Surse oficiale | [Schema e-DRIVE în Portalul Legislativ](https://legislatie.just.ro/Public/DetaliiDocument/313289) |
-| Latest official update | 2026-08-28 — [Ordinul MTI nr. 742/03.08.2026 pentru actualizarea schemei e-DRIVE, în vigoare din 07.08.2026](https://legislatie.just.ro/Public/DetaliiDocument/313289) |
-| verifiedAt | 2026-08-29 |
-| Pagină oficială program/apel | [Schema e-DRIVE în Portalul Legislativ](https://legislatie.just.ro/Public/DetaliiDocument/313289) (`program`, verificat 2026-08-29) |
-| Ghid | — Neidentificat separat în sursele oficiale înregistrate la 2026-08-29; nu se presupune inexistența documentului. |
-| Anexe | — Neidentificat separat în sursele oficiale înregistrate la 2026-08-29; nu se presupune inexistența documentului. |
-| Schemă / ordin | [Ordinul MTI nr. 742/03.08.2026 pentru actualizarea schemei e-DRIVE](https://legislatie.just.ro/Public/DetaliiDocument/313289) (`guide:e-drive`, verificat 2026-08-29) |
-| Anunț sesiune | — Neidentificat separat în sursele oficiale înregistrate la 2026-08-29; nu se presupune inexistența documentului. |
-| Corrigenda / erate | — Neidentificat separat în sursele oficiale înregistrate la 2026-08-29; nu se presupune inexistența documentului. |
-| Clarificări | — Neidentificat separat în sursele oficiale înregistrate la 2026-08-29; nu se presupune inexistența documentului. |
-| Sursă primară în registry-ul operațional | [Ordinul MTI nr. 742/03.08.2026 pentru actualizarea schemei e-DRIVE, în vigoare din 07.08.2026](https://legislatie.just.ro/Public/DetaliiDocument/313289) (verificat 2026-08-29) |
+| Latest official update | 2026-09-06 — [Ordinul MTI nr. 742/03.08.2026 pentru actualizarea schemei e-DRIVE, în vigoare din 07.08.2026](https://legislatie.just.ro/Public/DetaliiDocument/313289) |
+| verifiedAt | 2026-09-06 |
+| Pagină oficială program/apel | [Schema e-DRIVE în Portalul Legislativ](https://legislatie.just.ro/Public/DetaliiDocument/313289) (`program`, verificat 2026-09-06) |
+| Ghid | — Neidentificat separat în sursele oficiale înregistrate la 2026-09-06; nu se presupune inexistența documentului. |
+| Anexe | — Neidentificat separat în sursele oficiale înregistrate la 2026-09-06; nu se presupune inexistența documentului. |
+| Schemă / ordin | [Ordinul MTI nr. 742/03.08.2026 pentru actualizarea schemei e-DRIVE](https://legislatie.just.ro/Public/DetaliiDocument/313289) (`guide:e-drive`, verificat 2026-09-06) |
+| Anunț sesiune | — Neidentificat separat în sursele oficiale înregistrate la 2026-09-06; nu se presupune inexistența documentului. |
+| Corrigenda / erate | — Neidentificat separat în sursele oficiale înregistrate la 2026-09-06; nu se presupune inexistența documentului. |
+| Clarificări | — Neidentificat separat în sursele oficiale înregistrate la 2026-09-06; nu se presupune inexistența documentului. |
+| Sursă primară în registry-ul operațional | [Ordinul MTI nr. 742/03.08.2026 pentru actualizarea schemei e-DRIVE, în vigoare din 07.08.2026](https://legislatie.just.ro/Public/DetaliiDocument/313289) (verificat 2026-09-06) |
 | Chei surse repo | `e-drive` |
 | Notes | Actualizarea schemei nu constituie dovadă de sesiune deschisă. |
 
@@ -1060,40 +1060,40 @@ Snapshot factual de bază al programelor: **2026-08-23**. Fiecare înregistrare 
 | Fond / program | Fondul pentru Modernizare |
 | Temei / document | Ordinul MTI nr. 746/05.08.2026 pentru actualizarea schemei e-Mobility RO, în vigoare din 07.08.2026 — [document oficial](https://legislatie.just.ro/Public/DetaliiDocument/313291) |
 | Stadiu | APPROVED_SCHEME — Schemă actualizată – depunerea nu este deschisă |
-| Sesiune | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Data deschiderii | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Deadline | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Prelungiri | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
+| Sesiune | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Data deschiderii | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Deadline | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Prelungiri | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
 | Buget | 299.000.000 EUR |
-| Grant minim | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
+| Grant minim | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
 | Grant maxim | 30.000.000 EUR / beneficiar |
 | Intensitate | rate: 100; scope: maximum posibil prin procedura competitivă, în condițiile schemei |
 | Cofinanțare | Diferența rezultată din oferta competitivă, costurile neeligibile și eventualele depășiri ale limitelor aplicabile. |
-| Beneficiari | Microîntreprinderi, întreprinderi mici, mijlocii și mari care îndeplinesc condițiile schemei |
+| Beneficiari | Microîntreprinderi, întreprinderi mici, mijlocii și mari eligibile; schema exclude întreprinderile nou-înființate. |
 | Regiune | Național |
-| CAEN | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Prag SO | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Investiții | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Cheltuieli eligibile | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Cheltuieli neeligibile | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Condiții critice | Infrastructura trebuie amplasată pe autostrăzi, drumuri expres ori drumuri naționale sau în proximitatea admisă a unei ieșiri TEN-T.; Proiectul poate include infrastructură de reîncărcare și, în condițiile schemei, producție regenerabilă și stocare asociată.; Un beneficiar nu poate primi mai mult de 40% din bugetul total al schemei. |
+| CAEN | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Prag SO | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Investiții | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Cheltuieli eligibile | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Cheltuieli neeligibile | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Condiții critice | Infrastructura trebuie amplasată pe autostrăzi, drumuri expres ori drumuri naționale sau în proximitatea admisă a unei ieșiri TEN-T.; Proiectul poate include infrastructură de reîncărcare și, în condițiile schemei, producție regenerabilă și stocare asociată.; Un beneficiar nu poate primi mai mult de 40% din bugetul total al schemei.; Plafon de 30 milioane EUR/beneficiar; limita suplimentară de 40% din buget nu înlocuiește acest plafon.; Amplasament pe drumurile eligibile ori la cel mult 3 km pe șosea de cea mai apropiată ieșire TEN-T.; Stocarea absoarbe anual cel puțin 75% din energia produsă de instalațiile regenerabile conectate direct, conform condițiilor schemei. |
 | Documente | [Schema e-Mobility RO în Portalul Legislativ](https://legislatie.just.ro/Public/DetaliiDocument/313291) |
-| Indicatori | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Selecție / punctaj | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Ajutor de stat / de minimis | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Implementare | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Monitorizare | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
+| Indicatori | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Selecție / punctaj | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Ajutor de stat / de minimis | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Implementare | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
+| Monitorizare | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
 | Surse oficiale | [Schema e-Mobility RO în Portalul Legislativ](https://legislatie.just.ro/Public/DetaliiDocument/313291) |
-| Latest official update | 2026-08-07 — [Ordinul MTI nr. 746/05.08.2026 pentru actualizarea schemei e-Mobility RO, în vigoare din 07.08.2026](https://legislatie.just.ro/Public/DetaliiDocument/313291) |
-| verifiedAt | 2026-08-29 |
-| Pagină oficială program/apel | [Schema e-Mobility RO în Portalul Legislativ](https://legislatie.just.ro/Public/DetaliiDocument/313291) (`program`, verificat 2026-08-29) |
-| Ghid | — Neidentificat separat în sursele oficiale înregistrate la 2026-08-29; nu se presupune inexistența documentului. |
-| Anexe | — Neidentificat separat în sursele oficiale înregistrate la 2026-08-29; nu se presupune inexistența documentului. |
-| Schemă / ordin | [Ordinul MTI nr. 746/05.08.2026 pentru actualizarea schemei e-Mobility RO](https://legislatie.just.ro/Public/DetaliiDocument/313291) (`guide:e-mobility-ro`, verificat 2026-08-29) |
-| Anunț sesiune | — Neidentificat separat în sursele oficiale înregistrate la 2026-08-29; nu se presupune inexistența documentului. |
-| Corrigenda / erate | — Neidentificat separat în sursele oficiale înregistrate la 2026-08-29; nu se presupune inexistența documentului. |
-| Clarificări | — Neidentificat separat în sursele oficiale înregistrate la 2026-08-29; nu se presupune inexistența documentului. |
-| Sursă primară în registry-ul operațional | [Ordinul MTI nr. 746/05.08.2026 pentru actualizarea schemei e-Mobility RO, în vigoare din 07.08.2026](https://legislatie.just.ro/Public/DetaliiDocument/313291) (verificat 2026-08-29) |
+| Latest official update | 2026-09-06 — [Ordinul MTI nr. 746/05.08.2026 pentru actualizarea schemei e-Mobility RO, în vigoare din 07.08.2026](https://legislatie.just.ro/Public/DetaliiDocument/313291) |
+| verifiedAt | 2026-09-06 |
+| Pagină oficială program/apel | [Schema e-Mobility RO în Portalul Legislativ](https://legislatie.just.ro/Public/DetaliiDocument/313291) (`program`, verificat 2026-09-06) |
+| Ghid | — Neidentificat separat în sursele oficiale înregistrate la 2026-09-06; nu se presupune inexistența documentului. |
+| Anexe | — Neidentificat separat în sursele oficiale înregistrate la 2026-09-06; nu se presupune inexistența documentului. |
+| Schemă / ordin | [Ordinul MTI nr. 746/05.08.2026 pentru actualizarea schemei e-Mobility RO](https://legislatie.just.ro/Public/DetaliiDocument/313291) (`guide:e-mobility-ro`, verificat 2026-09-06) |
+| Anunț sesiune | — Neidentificat separat în sursele oficiale înregistrate la 2026-09-06; nu se presupune inexistența documentului. |
+| Corrigenda / erate | — Neidentificat separat în sursele oficiale înregistrate la 2026-09-06; nu se presupune inexistența documentului. |
+| Clarificări | — Neidentificat separat în sursele oficiale înregistrate la 2026-09-06; nu se presupune inexistența documentului. |
+| Sursă primară în registry-ul operațional | [Ordinul MTI nr. 746/05.08.2026 pentru actualizarea schemei e-Mobility RO, în vigoare din 07.08.2026](https://legislatie.just.ro/Public/DetaliiDocument/313291) (verificat 2026-09-06) |
 | Chei surse repo | `e-mobility-ro` |
 | Notes | Actualizarea schemei nu constituie dovadă de sesiune deschisă. |
 

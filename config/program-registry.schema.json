@@ -3,26 +3,63 @@
   "$id": "https://atelierdeconsultanta.ro/schemas/program-registry.schema.json",
   "title": "Registrul unic al programelor FABER",
   "type": "object",
-  "required": ["programs"],
+  "required": [
+    "programs"
+  ],
   "properties": {
     "programs": {
       "type": "array",
-      "items": { "$ref": "#/$defs/program" }
+      "items": {
+        "$ref": "#/$defs/program"
+      }
     },
     "factualChanges": {
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["programId", "field", "before", "after", "sourceLabel", "sourceUrl", "verifiedAt", "reason"],
+        "required": [
+          "programId",
+          "field",
+          "before",
+          "after",
+          "sourceLabel",
+          "sourceUrl",
+          "verifiedAt",
+          "reason"
+        ],
         "properties": {
-          "programId": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
-          "field": { "type": "string", "minLength": 1 },
-          "before": { "type": "string", "minLength": 1 },
-          "after": { "type": "string", "minLength": 1 },
-          "sourceLabel": { "type": "string", "minLength": 1 },
-          "sourceUrl": { "type": "string", "format": "uri" },
-          "verifiedAt": { "type": "string", "format": "date" },
-          "reason": { "type": "string", "minLength": 1 }
+          "programId": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+          },
+          "field": {
+            "type": "string",
+            "minLength": 1
+          },
+          "before": {
+            "type": "string",
+            "minLength": 1
+          },
+          "after": {
+            "type": "string",
+            "minLength": 1
+          },
+          "sourceLabel": {
+            "type": "string",
+            "minLength": 1
+          },
+          "sourceUrl": {
+            "type": "string",
+            "format": "uri"
+          },
+          "verifiedAt": {
+            "type": "string",
+            "format": "date"
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1
+          }
         },
         "additionalProperties": false
       }
@@ -31,20 +68,39 @@
   "$defs": {
     "dateOrPending": {
       "anyOf": [
-        { "type": "string", "format": "date" },
-        { "const": "DE_VALIDAT_UMAN" },
-        { "type": "null" }
+        {
+          "type": "string",
+          "format": "date"
+        },
+        {
+          "const": "DE_VALIDAT_UMAN"
+        },
+        {
+          "type": "null"
+        }
       ]
     },
     "sourceReference": {
       "oneOf": [
-        { "type": "string", "minLength": 1 },
+        {
+          "type": "string",
+          "minLength": 1
+        },
         {
           "type": "object",
-          "required": ["ref", "label"],
+          "required": [
+            "ref",
+            "label"
+          ],
           "properties": {
-            "ref": { "type": "string", "minLength": 1 },
-            "label": { "type": "string", "minLength": 1 }
+            "ref": {
+              "type": "string",
+              "minLength": 1
+            },
+            "label": {
+              "type": "string",
+              "minLength": 1
+            }
           },
           "additionalProperties": false
         }
@@ -87,13 +143,41 @@
           "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
           "description": "Identificator stabil folosit de relațiile dintre registre și artefactele generate."
         },
-        "slug": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
-        "name": { "type": "string", "minLength": 1, "description": "Denumirea oficială a programului sau apelului." },
-        "displayName": { "type": ["string", "null"] },
-        "shortName": { "type": "string", "minLength": 1 },
-        "acronym": { "type": ["string", "null"] },
-        "family": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
-        "fund": { "type": ["string", "null"] },
+        "slug": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Denumirea oficială a programului sau apelului."
+        },
+        "displayName": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "shortName": {
+          "type": "string",
+          "minLength": 1
+        },
+        "acronym": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "family": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+        },
+        "fund": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
         "status": {
           "description": "Cod operațional legacy materializat pe suprafețele publice existente; canonicalStatus este atribuirea semantică autoritativă.",
           "enum": [
@@ -122,96 +206,315 @@
             "UNCONFIRMED"
           ]
         },
-        "statusScope": { "type": "string", "minLength": 1 },
-        "statusRationale": { "type": "string", "minLength": 1 },
-        "statusLabel": { "type": "string", "minLength": 1 },
-        "documentStage": { "type": ["string", "null"] },
-        "publicationState": { "enum": ["public", "pending_validation"] },
-        "verifiedAt": { "$ref": "#/$defs/dateOrPending" },
-        "sourceName": { "type": "string", "minLength": 1 },
-        "sourceUrl": { "type": "string", "minLength": 1 },
-        "sourceVersion": { "type": "string", "minLength": 1 },
-        "sourceType": { "const": "official" },
-        "applicationStart": { "$ref": "#/$defs/dateOrPending" },
-        "applicationEnd": { "$ref": "#/$defs/dateOrPending" },
-        "consultationStart": { "$ref": "#/$defs/dateOrPending", "description": "Începutul consultării, separat de sesiunea de depunere." },
-        "consultationEnd": { "$ref": "#/$defs/dateOrPending", "description": "Termenul pentru observații în consultarea publică, numai din dovadă oficială." },
+        "statusScope": {
+          "type": "string",
+          "minLength": 1
+        },
+        "statusRationale": {
+          "type": "string",
+          "minLength": 1
+        },
+        "statusLabel": {
+          "type": "string",
+          "minLength": 1
+        },
+        "documentStage": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "publicationState": {
+          "enum": [
+            "public",
+            "pending_validation"
+          ]
+        },
+        "verifiedAt": {
+          "$ref": "#/$defs/dateOrPending"
+        },
+        "sourceName": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourceUrl": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourceVersion": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourceType": {
+          "const": "official"
+        },
+        "applicationStart": {
+          "$ref": "#/$defs/dateOrPending"
+        },
+        "applicationEnd": {
+          "$ref": "#/$defs/dateOrPending"
+        },
+        "consultationStart": {
+          "$ref": "#/$defs/dateOrPending",
+          "description": "Începutul consultării, separat de sesiunea de depunere."
+        },
+        "consultationEnd": {
+          "$ref": "#/$defs/dateOrPending",
+          "description": "Termenul pentru observații în consultarea publică, numai din dovadă oficială."
+        },
         "extensionData": {
           "description": "Ultima prelungire documentată. Nu actualizează automat applicationEnd sau statusul.",
-          "type": ["object", "null"],
-          "required": ["originalEnd", "extendedEnd", "sourceRef", "verifiedAt"],
+          "type": [
+            "object",
+            "null"
+          ],
+          "required": [
+            "originalEnd",
+            "extendedEnd",
+            "sourceRef",
+            "verifiedAt"
+          ],
           "properties": {
-            "originalEnd": { "type": "string", "format": "date" },
-            "extendedEnd": { "type": "string", "format": "date" },
-            "sourceRef": { "$ref": "#/$defs/sourceReference", "description": "Referință atribuită programului în corrigenda sau sessionAnnouncement." },
-            "verifiedAt": { "type": "string", "format": "date" }
+            "originalEnd": {
+              "type": "string",
+              "format": "date"
+            },
+            "extendedEnd": {
+              "type": "string",
+              "format": "date"
+            },
+            "sourceRef": {
+              "$ref": "#/$defs/sourceReference",
+              "description": "Referință atribuită programului în corrigenda sau sessionAnnouncement."
+            },
+            "verifiedAt": {
+              "type": "string",
+              "format": "date"
+            }
           },
           "additionalProperties": false
         },
-        "grantSummary": { "type": ["object", "null"] },
-        "cofinancingSummary": { "type": ["object", "null"] },
-        "pageUrl": { "type": "string", "pattern": "^/" },
-        "lastMeaningfulUpdate": { "$ref": "#/$defs/dateOrPending" },
-        "officialSourceUpdatedAt": { "$ref": "#/$defs/dateOrPending" },
-        "nextReviewAt": { "$ref": "#/$defs/dateOrPending" },
-        "evergreenValue": { "type": "boolean" },
-        "archivedNoindexDecision": { "enum": ["index", "noindex", null] },
-        "indexable": { "type": "boolean" },
-        "caenApplicability": { "type": ["object", "array", "string", "null"] },
-        "soRequirement": { "type": ["object", "string", "null"] },
-        "eligibleApplicantSummary": { "type": ["string", "null"] },
+        "grantSummary": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "cofinancingSummary": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "pageUrl": {
+          "type": "string",
+          "pattern": "^/"
+        },
+        "lastMeaningfulUpdate": {
+          "$ref": "#/$defs/dateOrPending"
+        },
+        "officialSourceUpdatedAt": {
+          "$ref": "#/$defs/dateOrPending"
+        },
+        "nextReviewAt": {
+          "$ref": "#/$defs/dateOrPending"
+        },
+        "evergreenValue": {
+          "type": "boolean"
+        },
+        "archivedNoindexDecision": {
+          "enum": [
+            "index",
+            "noindex",
+            null
+          ]
+        },
+        "indexable": {
+          "type": "boolean"
+        },
+        "caenApplicability": {
+          "type": [
+            "object",
+            "array",
+            "string",
+            "null"
+          ]
+        },
+        "soRequirement": {
+          "type": [
+            "object",
+            "string",
+            "null"
+          ]
+        },
+        "eligibleApplicantSummary": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
         "relatedProgramIds": {
           "type": "array",
           "uniqueItems": true,
-          "items": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" }
+          "items": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+          }
         },
         "officialSources": {
           "type": "object",
-          "required": ["roles", "notes"],
+          "required": [
+            "roles",
+            "notes"
+          ],
           "properties": {
             "roles": {
               "type": "object",
-              "required": ["programPage", "guide", "annexes", "schemeOrder", "sessionAnnouncement", "corrigenda", "clarifications"],
+              "required": [
+                "programPage",
+                "guide",
+                "annexes",
+                "schemeOrder",
+                "sessionAnnouncement",
+                "corrigenda",
+                "clarifications"
+              ],
               "properties": {
-                "programPage": { "type": "array", "items": { "$ref": "#/$defs/sourceReference" } },
-                "guide": { "type": "array", "items": { "$ref": "#/$defs/sourceReference" } },
-                "annexes": { "type": "array", "items": { "$ref": "#/$defs/sourceReference" } },
-                "schemeOrder": { "type": "array", "items": { "$ref": "#/$defs/sourceReference" } },
-                "sessionAnnouncement": { "type": "array", "items": { "$ref": "#/$defs/sourceReference" } },
-                "corrigenda": { "type": "array", "items": { "$ref": "#/$defs/sourceReference" } },
-                "clarifications": { "type": "array", "items": { "$ref": "#/$defs/sourceReference" } }
+                "programPage": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/$defs/sourceReference"
+                  }
+                },
+                "guide": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/$defs/sourceReference"
+                  }
+                },
+                "annexes": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/$defs/sourceReference"
+                  }
+                },
+                "schemeOrder": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/$defs/sourceReference"
+                  }
+                },
+                "sessionAnnouncement": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/$defs/sourceReference"
+                  }
+                },
+                "corrigenda": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/$defs/sourceReference"
+                  }
+                },
+                "clarifications": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/$defs/sourceReference"
+                  }
+                }
               },
               "additionalProperties": false
             },
-            "latestOfficialUpdateRef": { "$ref": "#/$defs/sourceReference" },
-            "notes": { "type": "string", "minLength": 1 }
+            "latestOfficialUpdateRef": {
+              "$ref": "#/$defs/sourceReference"
+            },
+            "notes": {
+              "type": "string",
+              "minLength": 1
+            }
           },
           "additionalProperties": false
         },
         "presentation": {
           "type": "object",
-          "required": ["carousel", "hero"],
+          "required": [
+            "carousel",
+            "hero"
+          ],
           "properties": {
-            "carousel": { "type": "boolean" },
-            "hero": { "type": "boolean" },
-            "carouselOrder": { "type": "integer", "minimum": 1 },
-            "heroOrder": { "type": "integer", "minimum": 1 },
-            "navigationOrder": { "type": "integer", "minimum": 1 }
+            "carousel": {
+              "type": "boolean"
+            },
+            "hero": {
+              "type": "boolean"
+            },
+            "carouselOrder": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "heroOrder": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "navigationOrder": {
+              "type": "integer",
+              "minimum": 1
+            }
           },
           "additionalProperties": true
         },
         "discovery": {
           "type": "object",
-          "required": ["parentHub", "applicantTypes", "regions", "investmentTypes", "listed"],
+          "required": [
+            "parentHub",
+            "applicantTypes",
+            "regions",
+            "investmentTypes",
+            "listed"
+          ],
           "properties": {
-            "parentHub": { "type": "string", "pattern": "^/" },
-            "applicantTypes": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
-            "regions": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
-            "investmentTypes": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
-            "listed": { "type": "boolean" },
-            "redirectTarget": { "type": "string", "pattern": "^/" }
+            "parentHub": {
+              "type": "string",
+              "pattern": "^/"
+            },
+            "applicantTypes": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1
+            },
+            "regions": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1
+            },
+            "investmentTypes": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "minItems": 1
+            },
+            "listed": {
+              "type": "boolean"
+            },
+            "redirectTarget": {
+              "type": "string",
+              "pattern": "^/"
+            }
           },
           "additionalProperties": true
+        },
+        "fundingBasis": {
+          "type": "string",
+          "enum": [
+            "consultative",
+            "final"
+          ],
+          "description": "Califică public valorile dintr-un ghid consultativ; nu schimbă stadiul sau calendarul apelului."
         }
       },
       "additionalProperties": true

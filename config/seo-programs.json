@@ -1,7 +1,7 @@
 {
   "site": "https://atelierdeconsultanta.ro",
-  "updatedAt": "2026-08-29",
-  "lastReviewed": "2026-08-29",
+  "updatedAt": "2026-09-06",
+  "lastReviewed": "2026-09-06",
   "defaults": {
     "author": "FABER - Atelier de Consultanță",
     "contactUrl": "/contact",
@@ -184,27 +184,54 @@
       "statusRationale": "Ghidul este consultativ, iar intervalul de consultare este încheiat; depunerea nu este deschisă.",
       "statusLabel": "Ghid consultativ publicat – consultarea s-a încheiat; depunerea nu este deschisă. Condițiile se pot modifica.",
       "publicationState": "public",
-      "verifiedAt": "2026-08-29",
+      "verifiedAt": "2026-09-06",
       "sourceName": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
       "sourceUrl": "https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/",
       "sourceVersion": "Versiune consultativă publicată la 19.03.2026; termenul pentru observații s-a încheiat la 30.03.2026",
       "sourceType": "official",
       "applicationStart": null,
       "applicationEnd": null,
-      "grantSummary": null,
-      "cofinancingSummary": null,
+      "grantSummary": {
+        "minimum": null,
+        "maximum": {
+          "amount": 200000,
+          "currency": "EUR",
+          "unit": "proiect — valoare din ghidul consultativ"
+        },
+        "budget": null
+      },
+      "cofinancingSummary": {
+        "intensity": [
+          {
+            "rate": 80,
+            "scope": "maximum pentru tinerii fermieri sub 41 de ani — ghid consultativ"
+          },
+          {
+            "rate": 65,
+            "scope": "maximum pentru celelalte categorii eligibile — ghid consultativ"
+          }
+        ],
+        "ownContribution": "Conform ghidului consultativ: minimum 20% sau 35% din eligibil, după categoria solicitantului, plus costurile neeligibile. Condițiile se pot modifica."
+      },
       "pageUrl": "/dr12-afir",
-      "lastMeaningfulUpdate": "2026-08-18",
+      "lastMeaningfulUpdate": "2026-09-06",
       "evergreenValue": true,
       "archivedNoindexDecision": null,
       "indexable": true,
       "cardSummary": "Ghidul DR 12 este consultativ; depunerea nu este deschisă, iar condițiile se pot modifica.",
-      "quickAnswer": "DR 12 este intervenția AFIR aflată în etapa ghidului consultativ pentru consolidarea exploatațiilor tinerilor fermieri instalați și a fermierilor cu vârsta de până la 45 de ani. Depunerea nu este deschisă, iar regulile se pot modifica înaintea versiunii finale. Verificarea pornește de la profilul și vârsta solicitantului, forma juridică, istoricul instalării, dimensiunea economică SO, înregistrările APIA, ANSVSA sau ANZ și drepturile asupra exploatației. Investițiile, contribuția proprie, punctajul și documentele trebuie corelate cu sectorul și componenta potrivită. Calendarul, alocarea, pragurile lunare și condițiile definitive se confirmă numai după publicarea ghidului final și a anunțului oficial al sesiunii de către AFIR, înainte de depunere.",
-      "metaTitle": "DR 12 AFIR 2026: eligibilitate și pregătirea dosarului | FABER",
-      "metaDescription": "DR 12 este în etapa ghidului consultativ. Verifică profilul fermierului, SO, actele exploatației și investiția pentru a pregăti dosarul înaintea lansării.",
+      "quickAnswer": "DR 12 AFIR finanțează consolidarea exploatațiilor tinerilor fermieri instalați și a celorlalte categorii eligibile de fermieri. Ghidul consultativ propune maximum 200.000 EUR/proiect, o intensitate de până la 80% pentru tinerii fermieri sub 41 de ani și până la 65% pentru celelalte categorii, cu minimum 12.000 SO. Aceste valori sunt consultative și se pot modifica. La 6 septembrie 2026, sursele AFIR verificate nu confirmă ghidul final sau o sesiune deschisă. Pregătirea începe cu profilul solicitantului, SO, actele exploatației, investiția și contribuția proprie.",
+      "metaTitle": "DR 12 AFIR 2026: 200.000 €, ghid consultativ și condiții",
+      "metaDescription": "DR 12 AFIR: ghid consultativ, maximum 200.000 €, sprijin 80%/65% și minimum 12.000 SO. Vezi cine poate aplica și ce se știe despre lansare.",
       "editorialDisclaimer": "Informația este bazată pe versiunea consultativă; condițiile se pot modifica înaintea ghidului final și a deschiderii apelului.",
-      "eligibleApplicants": [],
-      "keyConditions": [],
+      "eligibleApplicants": [
+        "Tineri fermieri instalați, beneficiari ai submăsurii 6.1 și fermieri de până la 45 de ani, în categoriile și formele juridice din ghidul consultativ."
+      ],
+      "keyConditions": [
+        "Ghid consultativ: minimum 12.000 SO, calculat cu coeficienții SOC 2020; pragul se reconfirmă în ghidul final.",
+        "Solicitantul este șeful exploatației și îndeplinește condițiile categoriei eligibile; persoana fizică neautorizată nu este eligibilă.",
+        "Finanțarea propusă este de maximum 200.000 EUR/proiect, cu intensitate de până la 80% sau 65%, în funcție de beneficiar.",
+        "Ghidul final și perioada de depunere nu sunt confirmate în sursele verificate."
+      ],
       "officialGuideKeys": [
         "dr12"
       ],
@@ -254,7 +281,8 @@
           "agricultura"
         ],
         "listed": true
-      }
+      },
+      "fundingBasis": "consultative"
     },
     {
       "id": "dr14-afir",
@@ -264,16 +292,16 @@
       "acronym": "DR-14",
       "fund": "Planul Strategic PAC 2023–2027 / FEADR",
       "family": "afir-agricultura",
-      "status": "ghid_aprobat_nedeschis",
-      "canonicalStatus": "SCHEDULED",
+      "status": "apel_deschis",
+      "canonicalStatus": "OPEN",
       "statusScope": "session",
-      "statusRationale": "Anunțul oficial indică o fereastră viitoare 01.09.2026–31.10.2026.",
-      "statusLabel": "Sesiune anunțată – depuneri 1 septembrie–31 octombrie 2026",
+      "statusRationale": "Contorul AFIR confirmă sesiunea activă și proiecte depuse. Disponibilitatea se verifică separat pe fiecare componentă.",
+      "statusLabel": "Sesiune deschisă – depuneri 1 septembrie–31 octombrie 2026",
       "publicationState": "public",
-      "verifiedAt": "2026-08-29",
+      "verifiedAt": "2026-09-06",
       "sourceName": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
-      "sourceUrl": "https://www.afir.ro/instrumente/sesiuni/sesiuni-primire-proiecte/",
-      "sourceVersion": "Anunțul A1.2/01/2026 pentru sesiunea DR 14, publicat la 14.08.2026",
+      "sourceUrl": "https://depunerepspac.afir.ro/Sesiune/Lista",
+      "sourceVersion": "Contorul oficial al sesiunilor active DR-14; cererea v1.1 din 25.08.2026 și clarificarea pe componente din 21.08.2026",
       "sourceType": "official",
       "applicationStart": "2026-09-01",
       "applicationEnd": "2026-10-31",
@@ -299,14 +327,14 @@
         "ownContribution": "Beneficiarul acoperă diferența eligibilă, cheltuielile neeligibile și orice sumă care depășește plafonul ajutorului public."
       },
       "pageUrl": "/dr14",
-      "lastMeaningfulUpdate": "2026-08-15",
+      "lastMeaningfulUpdate": "2026-09-06",
       "evergreenValue": true,
       "archivedNoindexDecision": null,
       "indexable": true,
-      "cardSummary": "Sesiunea DR 14 este lansată: depuneri 1 septembrie–31 octombrie 2026, buget 108 milioane EUR, maximum 50.000 EUR/proiect și intensitate de până la 85%.",
-      "quickAnswer": "AFIR a lansat sesiunea DR 14 pentru perioada 1 septembrie 2026, ora 09:00–31 octombrie 2026, ora 16:00. Bugetul total este de 108 milioane EUR, împărțit între zootehnie, legumicultură, alte sectoare și achiziții simple. Pot aplica fermierii, cu excepția persoanelor fizice, dacă exploatația și forma juridică îndeplinesc condițiile documentare. Intervalul general este 4.000–11.999 SO, cu praguri minime speciale de 2.000 SO sau 2.300 SO pentru sectoarele prevăzute de ghid. Ajutorul public ajunge la maximum 50.000 EUR/proiect și la cel mult 85% din costurile eligibile. Pragul de calitate este 80 de puncte în septembrie și 40 de puncte în octombrie. Depunerea se poate opri anticipat când solicitările unei componente ating cel puțin 150% din alocare, cu excepția primelor cinci zile calendaristice ale fiecărei etape.",
-      "metaTitle": "DR 14 AFIR 2026: ghid final, 50.000 € și depunere | FABER",
-      "metaDescription": "DR 14 AFIR 2026: ghid final, depuneri 1 septembrie–31 octombrie, buget 108 mil. €, maximum 50.000 € și intensitate de până la 85%.",
+      "cardSummary": "Sesiune DR 14 deschisă: maximum 50.000 EUR/proiect și sprijin de până la 85%; verifică SO, componenta și punctajul înainte de depunere.",
+      "quickAnswer": "Sesiunea DR 14 este deschisă, cu depuneri în perioada 1 septembrie 2026, ora 09:00–31 octombrie 2026, ora 16:00. Bugetul total este de 108 milioane EUR, împărțit între zootehnie, legumicultură, alte sectoare și achiziții simple. Pot aplica fermierii, cu excepția persoanelor fizice, dacă exploatația și forma juridică îndeplinesc condițiile documentare. Intervalul general este 4.000–11.999 SO, cu praguri minime speciale de 2.000 SO sau 2.300 SO pentru sectoarele prevăzute de ghid. Ajutorul public ajunge la maximum 50.000 EUR/proiect și la cel mult 85% din costurile eligibile. Pragul de calitate este 80 de puncte în septembrie și 40 de puncte în octombrie. Depunerea se poate opri anticipat când solicitările unei componente ating cel puțin 150% din alocare, cu excepția primelor cinci zile calendaristice ale fiecărei etape.",
+      "metaTitle": "DR 14 AFIR 2026: depuneri deschise, 50.000 € și punctaj",
+      "metaDescription": "DR 14: depuneri 1 septembrie–31 octombrie 2026, maximum 50.000 €, sprijin 85%, praguri SO și calculator de punctaj. Ghid final și cerere v1.1.",
       "editorialDisclaimer": "AFIR a publicat anunțul sesiunii la 14 august 2026. Depunerea începe la 1 septembrie 2026, ora 09:00, și se încheie la 31 octombrie 2026, ora 16:00; sesiunea se poate opri anticipat în condițiile anunțului oficial.",
       "eligibleApplicants": [
         "Fermieri, cu excepția persoanelor fizice, constituiți într-o formă eligibilă și activi în România.",
@@ -320,7 +348,9 @@
         "Costurile generale sunt limitate la maximum 10% pentru proiectele cu lucrări și maximum 3% pentru proiectele cu achiziții simple.",
         "Dimensiunea economică poate scădea cu maximum 15% în implementare, fără coborârea sub pragul minim eligibil.",
         "Depunerea este anunțată pentru 1 septembrie–31 octombrie 2026, cu prag de calitate de 80 de puncte în septembrie și 40 de puncte în octombrie.",
-        "Bugetul sesiunii este de 108 milioane EUR: câte 30 milioane EUR pentru zootehnie, legumicultură și alte sectoare și 18 milioane EUR pentru achiziții simple."
+        "Bugetul sesiunii este de 108 milioane EUR: câte 30 milioane EUR pentru zootehnie, legumicultură și alte sectoare și 18 milioane EUR pentru achiziții simple.",
+        "Achizițiile simple nu includ utilaje sau echipamente cu montaj/instalare. Proiectele cu asemenea echipamente se încadrează pe componenta sectorială potrivită, conform notei AFIR din 21.08.2026.",
+        "Se utilizează Cererea de finanțare DR-14 v1.1, actualizată la 25.08.2026."
       ],
       "officialGuideKeys": [
         "dr14"
@@ -355,7 +385,7 @@
           "corrigenda": [],
           "clarifications": []
         },
-        "notes": "Sesiune programată 01.09.2026–31.10.2026. Eventualele erate, clarificări, suspendări sau închideri anticipate trebuie urmărite separat."
+        "notes": "Sesiune activă verificată în contorul AFIR la 06.09.2026. Verificați disponibilitatea fiecărei componente înaintea depunerii, inclusiv închiderea anticipată."
       },
       "presentation": {
         "carousel": true,
@@ -395,13 +425,13 @@
       "acronym": "DR-18",
       "fund": "Planul Strategic PAC 2023–2027 / FEADR",
       "family": "afir-agricultura",
-      "status": "ghid_aprobat_nedeschis",
-      "canonicalStatus": "SCHEDULED",
+      "status": "apel_deschis",
+      "canonicalStatus": "OPEN",
       "statusScope": "session",
-      "statusRationale": "Anunțul oficial indică o fereastră viitoare 01.09.2026–31.10.2026.",
-      "statusLabel": "Sesiune anunțată – depuneri 1 septembrie–31 octombrie 2026",
+      "statusRationale": "Sesiune activă verificată în contorul oficial AFIR la 06.09.2026.",
+      "statusLabel": "Sesiune deschisă – depuneri 1 septembrie–31 octombrie 2026",
       "publicationState": "public",
-      "verifiedAt": "2026-08-29",
+      "verifiedAt": "2026-09-06",
       "sourceName": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
       "sourceUrl": "https://www.afir.ro/instrumente/sesiuni/sesiuni-primire-proiecte/",
       "sourceVersion": "Anunțul A1.2/01/2026 pentru sesiunea DR 18, publicat la 14.08.2026",
@@ -434,7 +464,7 @@
         "ownContribution": "Beneficiarul acoperă diferența eligibilă, cheltuielile neeligibile, TVA potrivit regimului fiscal și orice depășire de cost."
       },
       "pageUrl": "/dr18",
-      "lastMeaningfulUpdate": "2026-08-28",
+      "lastMeaningfulUpdate": "2026-09-06",
       "evergreenValue": true,
       "archivedNoindexDecision": null,
       "indexable": true,
@@ -789,7 +819,7 @@
       "statusRationale": "Ghidul final și anexele au fost publicate la 27.08.2026, iar fereastra oficială de depunere este 28.09.2026, ora 14:00–28.10.2026, ora 14:00.",
       "statusLabel": "Apel lansat – depuneri 28 septembrie–28 octombrie 2026",
       "publicationState": "public",
-      "verifiedAt": "2026-08-29",
+      "verifiedAt": "2026-09-06",
       "sourceName": "Autoritatea de Management pentru Programul Regional Nord-Est",
       "sourceUrl": "https://regionordest.ro/prioritatea-1/modernizare-microintreprinderi/",
       "sourceVersion": "Ghidul final și anexele publicate la 27.08.2026; cod apel PR/NE/2026/P1/RSO1.3/2/1",
@@ -822,14 +852,14 @@
         "ownContribution": "Minimum 10% din cheltuielile eligibile, plus toate cheltuielile neeligibile; o contribuție eligibilă mai mare este punctată."
       },
       "pageUrl": "/investitii-modernizarea-microintreprinderilor-apel-2",
-      "lastMeaningfulUpdate": "2026-08-28",
+      "lastMeaningfulUpdate": "2026-09-06",
       "evergreenValue": true,
       "archivedNoindexDecision": null,
       "indexable": true,
       "cardSummary": "Apel lansat pentru microîntreprinderile din Nord-Est: depuneri 28 septembrie–28 octombrie 2026, grant 100.000–300.000 EUR și prag minim 70 de puncte.",
       "quickAnswer": "ADR Nord-Est a publicat ghidul final pentru Apelul 2, cu depuneri în MySMIS2021 între 28 septembrie 2026, ora 14:00, și 28 octombrie 2026, ora 14:00. Grantul este de 100.000–300.000 EUR, intensitatea maximă de 90%, iar contribuția proprie eligibilă de minimum 10%. Microîntreprinderile eligibile trebuie să implementeze investiția în Nord-Est și să includă active corporale. Solicitantul trebuie să fi desfășurat activitate cel puțin un an fiscal integral, să fi avut profit din exploatare pozitiv și minimum un salariat în 2025. Cel puțin un cod CAEN Rev. 3 vizat trebuie să fie eligibil. Depunerea este competitivă, în limita bugetului de 20.370.738,40 EUR; pragul este 70 de puncte, fără garanția finanțării.",
-      "metaTitle": "Modernizarea microîntreprinderilor – Apel 2: ghid final | FABER",
-      "metaDescription": "Apel 2 Nord-Est: depuneri 28.09–28.10.2026, grant 100.000–300.000 €, contribuție minimă 10%, condiții și simulator de punctaj după grila finală.",
+      "metaTitle": "Modernizarea microîntreprinderilor: Apel 2 Nord-Est 2026",
+      "metaDescription": "Modernizarea microîntreprinderilor, Apel 2 Nord-Est: depuneri 28.09–28.10.2026, grant 100.000–300.000 €, CAEN eligibil și simulator de punctaj final.",
       "editorialDisclaimer": "Simulatorul este orientativ și reproduce grila finală publicată la 27.08.2026. Punctajul oficial, eligibilitatea și finanțarea sunt stabilite exclusiv de AM PR Nord-Est în evaluare și în limita bugetului.",
       "eligibleApplicants": [
         "Societăți constituite în baza Legii nr. 31/1990 care se încadrează în categoria microîntreprinderilor",
@@ -909,7 +939,8 @@
           "investitii_productive"
         ],
         "listed": true
-      }
+      },
+      "eligibleApplicantSummary": "Microîntreprinderi constituite ca societăți, cu investiții în Regiunea Nord-Est, care îndeplinesc condițiile ghidului final."
     },
     {
       "id": "fondul-modernizare-autoconsum",
@@ -1302,28 +1333,53 @@
       "statusRationale": "Schema este aprobată prin Ordinul MTI nr. 2.292/29.12.2025 și modificată prin Ordinul nr. 101/12.02.2026, fără fereastră oficială de depunere.",
       "statusLabel": "Schemă aprobată și modificată – depunerea nu este deschisă",
       "publicationState": "public",
-      "verifiedAt": "2026-08-29",
+      "verifiedAt": "2026-09-06",
       "sourceName": "Ministerul Transporturilor și Infrastructurii",
-      "sourceUrl": "https://legislatie.just.ro/Public/DetaliiDocument/306915",
-      "sourceVersion": "Ordinul MTI nr. 2.292/29.12.2025, publicat la 14.01.2026, cu modificările Ordinului nr. 101/12.02.2026",
+      "sourceUrl": "https://legislatie.just.ro/Public/DetaliiDocument/306916",
+      "sourceVersion": "Schema PRO INFRA consolidată, art. 5, 13 și 16, cu modificările Ordinului nr. 101/12.02.2026",
       "sourceType": "official",
       "applicationStart": null,
       "applicationEnd": null,
-      "grantSummary": null,
-      "cofinancingSummary": null,
+      "grantSummary": {
+        "minimum": null,
+        "maximum": {
+          "amount": 15000000,
+          "currency": "EUR",
+          "unit": "beneficiar"
+        },
+        "budget": {
+          "amount": 100000000,
+          "currency": "EUR"
+        }
+      },
+      "cofinancingSummary": {
+        "intensity": [
+          {
+            "rate": 100,
+            "scope": "maximum din cheltuielile eligibile, prin ofertare concurențială"
+          }
+        ],
+        "ownContribution": "Diferența neacoperită de oferta de ajutor, costurile neeligibile și eventualele depășiri de buget."
+      },
       "pageUrl": "/pro-infra",
-      "lastMeaningfulUpdate": "2026-08-18",
+      "lastMeaningfulUpdate": "2026-09-06",
       "officialSourceUpdatedAt": "2026-02-12",
       "evergreenValue": true,
       "archivedNoindexDecision": null,
       "indexable": true,
       "cardSummary": "Schema PRO INFRA este aprobată și modificată; depunerea nu este deschisă și nu există un interval oficial publicat.",
-      "quickAnswer": "PRO INFRA este o schemă aprobată pentru investiții care îmbunătățesc eficiența energetică a operatorilor vizați din infrastructura de transport. Depunerea nu este deschisă și nu există un calendar operațional oficial publicat, astfel că pagina separă prevederile schemei de condițiile unui apel viitor. Pregătirea pornește de la categoria solicitantului, activitatea eligibilă, consumurile și situația energetică inițială, amplasament, investiția propusă și economiile ce pot fi demonstrate. Echipamentele, lucrările, electrificarea și sistemele de monitorizare trebuie justificate tehnic, bugetate coerent și corelate cu indicatorii. Valorile, termenele, anexele și mecanismul de depunere se confirmă numai în documentele operaționale publicate de autoritatea competentă, înainte de aplicare.",
-      "metaTitle": "PRO INFRA: schemă aprobată, apel nedeschis | FABER",
-      "metaDescription": "PRO INFRA: schemă aprobată pentru infrastructura de transport, fără sesiune de depunere deschisă. Vezi beneficiarii, costurile și sursa oficială.",
+      "quickAnswer": "PRO INFRA sprijină înlocuirea instalațiilor, utilajelor și echipamentelor folosite de întreprinderile eligibile din infrastructura de transport cu alternative eficiente energetic. Schema consolidată are un buget de 100 milioane EUR, maximum 15 milioane EUR per beneficiar și o intensitate de până la 100% din costurile eligibile, prin ofertare concurențială. Schema este aprobată; sursa verificată nu confirmă un interval de depunere. Auditul energetic, economiile demonstrate și soluția EMS sau excepția justificată documentar sunt esențiale pentru pregătirea proiectului.",
+      "metaTitle": "PRO INFRA 2026: până la 15 mil. €, condiții și EMS",
+      "metaDescription": "PRO INFRA: buget 100 mil. €, maximum 15 mil. €/beneficiar și ajutor competitiv de până la 100%. Beneficiari, audit energetic, EMS și stadiul depunerii.",
       "editorialDisclaimer": "Schema este aprobată și modificată, iar depunerea nu este deschisă. Condițiile și calendarul se confirmă din documentele operaționale oficiale.",
-      "eligibleApplicants": [],
-      "keyConditions": [],
+      "eligibleApplicants": [
+        "Întreprinderi din categoriile eligibile ale schemei care produc pentru infrastructura de transport și înlocuiesc instalații, utilaje sau echipamente cu alternative eficiente energetic în România."
+      ],
+      "keyConditions": [
+        "Bugetul schemei este 100 milioane EUR; plafonul ajutorului este 15 milioane EUR/beneficiar.",
+        "Maximum 100% din cheltuielile eligibile prin procedură competitivă; procentul maxim nu garantează finanțarea.",
+        "EMS integrat, cu excepția justificată documentar conform art. 5 alin. (2); auditul energetic rămâne necesar."
+      ],
       "officialGuideKeys": [
         "pro-infra",
         "pro-infra-order"
@@ -1893,16 +1949,16 @@
       "name": "Diaspora Investește Acasă",
       "shortName": "Diaspora Investește Acasă",
       "family": "antreprenoriat",
-      "status": "calendar_estimativ",
-      "canonicalStatus": "ANNOUNCED",
+      "status": "ghid_aprobat_nedeschis",
+      "canonicalStatus": "APPROVED_SCHEME",
       "statusScope": "program",
-      "statusRationale": "Există comunicare oficială despre program, dar mecanismul de aplicare nu este publicat.",
-      "statusLabel": "Program anunțat – mecanismul de aplicare nu este publicat",
+      "statusRationale": "Program aprobat, în curs de operaționalizare la BID; lista băncilor partenere urmează să fie publicată.",
+      "statusLabel": "Program aprobat – în curs de operaționalizare la BID",
       "publicationState": "public",
-      "verifiedAt": "2026-08-29",
-      "sourceName": "Departamentul pentru Românii de Pretutindeni",
-      "sourceUrl": "https://diaspora.gov.ro/info/stiri-din-romania/761-investeste-acasa.html",
-      "sourceVersion": "Comunicare oficială din 27.05.2026 privind programul guvernamental",
+      "verifiedAt": "2026-09-06",
+      "sourceName": "Banca de Investiții și Dezvoltare (BID)",
+      "sourceUrl": "https://www.bidromania.eu/produse/garantii/diaspora-investeste-acasa",
+      "sourceVersion": "Condițiile programului și stadiul operaționalizării publicate de BID, verificate la 06.09.2026",
       "sourceType": "official",
       "applicationStart": null,
       "applicationEnd": null,
@@ -1922,26 +1978,28 @@
         "intensity": [
           {
             "rate": 60,
-            "scope": "maximum din creditul de investiții, conform comunicării oficiale"
+            "scope": "maximum din creditul de investiții, în limita grantului de 200.000 EUR, conform BID"
           }
         ],
-        "ownContribution": "Minimum 10%; minimum 5% pentru persoanele cu vârsta sub 35 de ani, conform comunicării oficiale."
+        "ownContribution": "10% pentru proiecte de până la 400.000 EUR; 5% dacă cel puțin un asociat majoritar eligibil are sub 35 de ani; 15% pentru proiecte de peste 400.000 EUR."
       },
       "pageUrl": "/diaspora-investeste-acasa",
-      "lastMeaningfulUpdate": "2026-05-27",
+      "lastMeaningfulUpdate": "2026-09-06",
       "evergreenValue": true,
       "archivedNoindexDecision": null,
       "indexable": true,
-      "cardSummary": "Program anunțat pentru întreprinderi nou-înființate de români din diaspora; procedura și calendarul de aplicare nu sunt încă publicate.",
+      "cardSummary": "Program aprobat pentru firme ale românilor din diaspora: credit cu garanție BID și grant de până la 200.000 EUR. Operaționalizarea este în curs.",
       "metaTitle": "Diaspora Investește Acasă: 200.000 €, stadiu 2026 | FABER",
-      "metaDescription": "Diaspora Investește Acasă: până la 200.000 €, buget anunțat de 100 mil. €, contribuție 5–10% și stadiul procedurii de aplicare în 2026.",
-      "editorialDisclaimer": "Programul este prezentat pe baza comunicării oficiale; procedura, calendarul și criteriile complete de aplicare nu sunt încă publicate.",
+      "metaDescription": "Diaspora Investește Acasă: grant până la 200.000 €, credit cu garanție BID, firme sub 3 ani și contribuție 5%, 10% sau 15%. Stadiu și condiții 2026.",
+      "editorialDisclaimer": "Program aprobat, în curs de operaționalizare. Depunerea la băncile partenere se confirmă după publicarea documentelor operaționale și a listei acestora.",
       "eligibleApplicants": [
-        "Întreprinderi nou-înființate, deținute majoritar de cetățeni români cu domiciliul sau reședința în străinătate"
+        "Microîntreprinderi și IMM-uri înființate de mai puțin de trei ani, cu majoritatea capitalului deținută de cetățeni români care îndeplinesc condiția de domiciliu/reședință în străinătate."
       ],
       "keyConditions": [
-        "Investiția va fi creditată prin mecanismul anunțat, cu o contribuție proprie minimă.",
-        "Eligibilitatea finală va depinde de procedura și documentele oficiale care urmează să fie publicate."
+        "Domiciliu sau reședință în străinătate pentru minimum 12 luni din ultimele 18 luni anterioare cererii de credit.",
+        "Minimum nouă luni de experiență, pregătire sau studii relevante, inclusiv în management, pentru asociații majoritari și/sau administratori.",
+        "Investiția și participația eligibilă se păstrează minimum trei ani, cu excepțiile prevăzute de program.",
+        "Grantul reduce soldul creditului după realizarea investiției și verificarea condițiilor; nu este un avans independent."
       ],
       "officialGuideKeys": [
         "diaspora-investeste-acasa"
@@ -1961,7 +2019,7 @@
           "corrigenda": [],
           "clarifications": []
         },
-        "notes": "Program anunțat; mecanismul de aplicare, documentația și sesiunea nu sunt înregistrate."
+        "notes": "Program aprobat, în curs de operaționalizare la BID; lista băncilor partenere urmează să fie publicată."
       },
       "presentation": {
         "carousel": true,
@@ -1987,7 +2045,8 @@
           "antreprenoriat"
         ],
         "listed": true
-      }
+      },
+      "quickAnswer": "Diaspora Investește Acasă este un program aprobat, în curs de operaționalizare prin BID și băncile partenere. Sprijinul combină un credit de investiții cu un grant de maximum 60% din credit, fără a depăși 200.000 EUR. Firma trebuie să aibă mai puțin de trei ani la depunere și să îndeplinească cerințele privind asociații din diaspora. Contribuția proprie este 10% pentru proiecte de până la 400.000 EUR, respectiv 5% în cazul special pentru tineri, și 15% peste 400.000 EUR. Lista băncilor partenere este încă în pregătire."
     },
     {
       "id": "e-drive",
@@ -2003,7 +2062,7 @@
       "statusRationale": "Actul înregistrat actualizează schema; nu există dovadă de sesiune deschisă.",
       "statusLabel": "Schemă actualizată – depunerea nu este deschisă",
       "publicationState": "public",
-      "verifiedAt": "2026-08-29",
+      "verifiedAt": "2026-09-06",
       "sourceName": "Ministerul Transporturilor și Infrastructurii / Portal Legislativ",
       "sourceUrl": "https://legislatie.just.ro/Public/DetaliiDocument/313289",
       "sourceVersion": "Ordinul MTI nr. 742/03.08.2026 pentru actualizarea schemei e-DRIVE, în vigoare din 07.08.2026",
@@ -2032,14 +2091,14 @@
         "ownContribution": "Diferența neacoperită de ajutor, costurile neeligibile și orice diferență față de costul de referință aplicabil."
       },
       "pageUrl": "/e-drive",
-      "lastMeaningfulUpdate": "2026-08-28",
+      "lastMeaningfulUpdate": "2026-09-06",
       "evergreenValue": true,
       "archivedNoindexDecision": null,
       "indexable": true,
       "cardSummary": "Schema e-DRIVE are două măsuri pentru înlocuirea flotelor întreprinderilor și ale operatorilor de transport cu vehicule electrice; depunerea nu este deschisă.",
       "quickAnswer": "e-DRIVE este schema de 56,9 milioane EUR pentru înlocuirea vehiculelor poluante cu vehicule electrice noi. Măsura 1, cu 15 milioane EUR, este de minimis pentru microîntreprinderi și IMM-uri care înlocuiesc vehicule M1 și M2. Măsura 2, cu 41,9 milioane EUR, este competitivă pentru operatorii de transport rutier de persoane și vehicule M1, M2 și M3. Ajutorul poate ajunge la 300.000 EUR pe întreprindere unică în măsura 1 și la 4 milioane EUR pe beneficiar în măsura 2. Schema este aprobată, însă depunerea nu este deschisă.",
-      "metaTitle": "e-DRIVE 2026: schemă de 56,9 mil. € și eligibilitate | FABER",
-      "metaDescription": "e-DRIVE 2026: schema de 56,9 mil. € pentru vehicule electrice M1–M3, două măsuri, beneficiari, plafoane și casare; depunerea nu este deschisă.",
+      "metaTitle": "e-DRIVE 2026: până la 30.000 € pentru mașini electrice pe firmă",
+      "metaDescription": "e-DRIVE: până la 30.000 €/vehicul M1 pentru IMM-uri, plafon de minimis 300.000 € și măsură separată pentru transportatori. Condiții și stadiul lansării.",
       "editorialDisclaimer": "Existența schemei aprobate nu înseamnă că depunerea este deschisă. Calendarul și procedura operațională trebuie confirmate oficial.",
       "eligibleApplicants": [
         "Microîntreprinderi și IMM-uri eligibile în măsura 1, indiferent de codul CAEN, cu respectarea sectoarelor excluse de schema de minimis",
@@ -2100,7 +2159,8 @@
           "mobilitate"
         ],
         "listed": true
-      }
+      },
+      "eligibleApplicantSummary": "Măsura 1: microîntreprinderi și IMM-uri, cu excluderile schemei de minimis. Măsura 2: operatori eligibili de transport rutier de persoane."
     },
     {
       "id": "e-mobility-ro",
@@ -2116,7 +2176,7 @@
       "statusRationale": "Actul înregistrat actualizează schema; nu există dovadă de sesiune deschisă.",
       "statusLabel": "Schemă actualizată – depunerea nu este deschisă",
       "publicationState": "public",
-      "verifiedAt": "2026-08-29",
+      "verifiedAt": "2026-09-06",
       "sourceName": "Ministerul Transporturilor și Infrastructurii / Portal Legislativ",
       "sourceUrl": "https://legislatie.just.ro/Public/DetaliiDocument/313291",
       "sourceVersion": "Ordinul MTI nr. 746/05.08.2026 pentru actualizarea schemei e-Mobility RO, în vigoare din 07.08.2026",
@@ -2145,7 +2205,7 @@
         "ownContribution": "Diferența rezultată din oferta competitivă, costurile neeligibile și eventualele depășiri ale limitelor aplicabile."
       },
       "pageUrl": "/e-mobility",
-      "lastMeaningfulUpdate": "2026-08-07",
+      "lastMeaningfulUpdate": "2026-09-06",
       "evergreenValue": true,
       "archivedNoindexDecision": null,
       "indexable": true,
@@ -2159,7 +2219,10 @@
       "keyConditions": [
         "Infrastructura trebuie amplasată pe autostrăzi, drumuri expres ori drumuri naționale sau în proximitatea admisă a unei ieșiri TEN-T.",
         "Proiectul poate include infrastructură de reîncărcare și, în condițiile schemei, producție regenerabilă și stocare asociată.",
-        "Un beneficiar nu poate primi mai mult de 40% din bugetul total al schemei."
+        "Un beneficiar nu poate primi mai mult de 40% din bugetul total al schemei.",
+        "Plafon de 30 milioane EUR/beneficiar; limita suplimentară de 40% din buget nu înlocuiește acest plafon.",
+        "Amplasament pe drumurile eligibile ori la cel mult 3 km pe șosea de cea mai apropiată ieșire TEN-T.",
+        "Stocarea absoarbe anual cel puțin 75% din energia produsă de instalațiile regenerabile conectate direct, conform condițiilor schemei."
       ],
       "officialGuideKeys": [
         "e-mobility-ro"
@@ -2210,7 +2273,8 @@
           "energie_regenerabila"
         ],
         "listed": true
-      }
+      },
+      "eligibleApplicantSummary": "Microîntreprinderi, întreprinderi mici, mijlocii și mari eligibile; schema exclude întreprinderile nou-înființate."
     },
     {
       "id": "fondul-modernizare-pc1-stocare",

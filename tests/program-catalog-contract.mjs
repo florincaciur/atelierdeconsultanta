@@ -93,15 +93,22 @@ browserDocument("link[rel='stylesheet'][href^='/assets/']").each((_, link) => {
   if (fs.existsSync(file)) browserDocument(link).replaceWith(`<style>${fs.readFileSync(file, "utf8")}</style>`);
 });
 browserDocument("script, link[href^='http'], link[href^='//']").remove();
+// The HTTP fixture has no TLS host; production's upgrade-insecure-requests must not rewrite fixture assets.
+browserDocument("meta[http-equiv='Content-Security-Policy']").remove();
 const browser = await chromium.launch({ headless: true });
 try {
   for (const width of [320, 1366]) {
     const page = await browser.newPage({ viewport: { width, height: 900 } });
     const consoleErrors = [];
     page.on("console", (message) => { if (message.type() === "error") consoleErrors.push(message.text()); });
-    await page.route("http://catalog.test/**", (route) => route.request().resourceType() === "document"
-      ? route.fulfill({ status: 200, contentType: "text/html; charset=utf-8", body: browserDocument.html() })
-      : route.abort());
+    await page.route("http://catalog.test/**", (route) => {
+      if (new URL(route.request().url()).pathname === "/assets/faber-navbar-20260906.jpg") {
+        return route.fulfill({ status: 200, contentType: "image/jpeg", body: fs.readFileSync(path.join(ROOT, "assets/faber-navbar-20260906.jpg")) });
+      }
+      return route.request().resourceType() === "document"
+        ? route.fulfill({ status: 200, contentType: "text/html; charset=utf-8", body: browserDocument.html() })
+        : route.abort();
+    });
     await page.goto(`http://catalog.test${CATALOG_ROUTE}`, { waitUntil: "domcontentloaded" });
     assert.equal(await page.locator("[data-program-catalog-entry]:visible").count(), expected.length, `${width}px: catalog entries missing`);
     const overflow = await page.evaluate(() => document.documentElement.scrollWidth - innerWidth);

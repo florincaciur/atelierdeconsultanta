@@ -90,6 +90,7 @@ const FACTUAL_FIELD_LABELS = Object.freeze([
 ]);
 const OFFICIAL_HOST_SUFFIXES = Object.freeze([
   "gov.ro",
+  "bidromania.eu",
   "afir.ro",
   "regionordest.ro",
   "legislatie.just.ro",

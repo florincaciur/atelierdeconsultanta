@@ -121,7 +121,7 @@ function validateConfig(config) {
       if (/\p{Extended_Pictographic}/u.test(value)) errors.push(`${label}: ${field} conține emoji`);
     }
     const uppercase = cleanText(page.title).match(/\b[A-ZĂÂÎȘȚ0-9-]{3,}\b/gu) || [];
-    const excessiveUppercase = uppercase.filter((word) => !ALLOWED_UPPERCASE.has(word));
+    const excessiveUppercase = uppercase.filter((word) => /\p{Lu}/u.test(word) && !ALLOWED_UPPERCASE.has(word));
     if (excessiveUppercase.length > 1) errors.push(`${label}: majuscule excesive în titlu (${excessiveUppercase.join(", ")})`);
   }
   errors.push(...duplicateIssues(config.pages, "title", "Titlu"));

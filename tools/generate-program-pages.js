@@ -1375,7 +1375,7 @@ function renderProInfraEfficiencyContent(page) {
       </section>
 
       <section aria-labelledby="pro-infra-ems">
-        <h2 id="pro-infra-ems">Obligativitatea sistemului EMS</h2>
+        <h2 id="pro-infra-ems">Sistemul EMS: cerință și excepția documentată</h2>
         <p>Proiectele finanțate includ instalarea și operaționalizarea unui <strong>sistem de management al energiei — EMS</strong> integrat în instalațiile și echipamentele investiției. EMS-ul trebuie să monitorizeze complet și în timp real consumul de energie pe conturul proiectului și să furnizeze rapoarte periodice care arată reducerea consumului și performanțele energetice.</p>
         <p>Schema admite o excepție numai când solicitantul demonstrează că EMS-ul nu este necesar pentru a proba eficiența energetică și furnizează alte documente adecvate. Excepția nu este automată. O afirmație generală că utilajul nou „consumă mai puțin” nu înlocuiește măsurarea. Când EMS-ul este instalat, datele sale sunt integrate și validate prin auditul energetic.</p>
       </section>
@@ -2590,19 +2590,19 @@ function renderDr12SearchIntentContent(page) {
   return `
       <section aria-labelledby="dr12-raspuns-rapid">
         <h2 id="dr12-raspuns-rapid">Răspuns rapid</h2>
-        <p class="intro">DR12 AFIR 2026 este intervenția pentru investiții în consolidarea exploatațiilor tinerilor fermieri instalați și ale fermierilor instalați cu vârsta de până la 45 de ani. Ghidul DR 12 AFIR disponibil în documentația proiectului este o versiune consultativă, nu ghidul final. Pragul economic, plafonul și intensitățile nu sunt publicate de FABER până la aprobarea lor editorială pe baza documentului operațional aplicabil apelului. O dată de lansare nu se deduce din consultare. Sesiunea, etapele lunare, alocarea și termenele se confirmă exclusiv prin ghidul activ și nota oficială de lansare.</p>
-        <p>Căutările „dr12 afir”, „afir dr 12”, „ghid dr 12 afir”, „dr 12 ghid final” și „dr 12 afir lansare” se referă la aceeași intervenție; răspunsurile de mai jos separă explicit informațiile consultative de regulile care vor fi confirmate în apelul activ.</p>
+        <p class="intro">DR12 AFIR 2026 este intervenția pentru investiții în consolidarea exploatațiilor tinerilor fermieri instalați și ale fermierilor instalați cu vârsta de până la 45 de ani. Ghidul DR 12 AFIR disponibil în documentația proiectului este o versiune consultativă, nu ghidul final. Ghidul consultativ propune minimum 12.000 SO, maximum 200.000 EUR/proiect și intensități de până la 80% sau 65%, în funcție de categoria beneficiarului. Condițiile se pot modifica înaintea ghidului final. O dată de lansare nu se deduce din consultare. Sesiunea, etapele lunare, alocarea și termenele se confirmă exclusiv prin ghidul activ și nota oficială de lansare.</p>
+        <p>Verifică separat eligibilitatea, finanțarea propusă și calendarul: publicarea unui ghid consultativ nu deschide depunerea.</p>
       </section>
 
       <section aria-labelledby="dr12-status-ghid">
-        <h2 id="dr12-status-ghid">Statusul ghidului: consultativ sau final</h2>
-        <p>Documentul analizat poartă explicit mențiunea de versiune consultativă și a fost publicat pentru dezbatere. Prin urmare, expresiile „dr 12 ghid final” și „ghid DR 12 AFIR” trebuie tratate prudent: pagina descrie regulile din varianta consultativă, iar forma finală poate modifica praguri, documente, punctaje, alocări sau termene.</p>
+        <h2 id="dr12-status-ghid">Este publicat ghidul final DR 12?</h2>
+        <p>Documentul analizat poartă explicit mențiunea de versiune consultativă și a fost publicat pentru dezbatere. Ghidul final nu este confirmat în sursele AFIR verificate la 6 septembrie 2026. Forma finală poate modifica praguri, documente, punctaje, alocări sau termene.</p>
         <p>Înainte de orice depunere se verifică versiunea activă publicată de AFIR, ordinul de aprobare, anexele, cererea de finanțare, grila de selecție și eventualele erate. Nicio regulă consultativă nu este prezentată aici drept regulă definitivă.</p>
       </section>
 
       <section aria-labelledby="dr12-lansare">
         <h2 id="dr12-lansare">Când se lansează DR12</h2>
-        <p>Pentru query-ul „dr 12 afir lansare”, răspunsul corect este că versiunea consultativă nu fixează o dată certă de deschidere. Ghidul arată că sesiunea se organizează în două etape lunare, stabilite prin nota de lansare. Pentru prima etapă este indicat un prag de calitate de 75 de puncte, iar pentru etapa a doua pragul minim consultativ este de 45 de puncte.</p>
+        <p>Ghidul consultativ DR 12 nu confirmă data deschiderii depunerii. Ghidul arată că sesiunea se organizează în două etape lunare, stabilite prin nota de lansare. Pentru prima etapă este indicat un prag de calitate de 75 de puncte, iar pentru etapa a doua pragul minim consultativ este de 45 de puncte.</p>
         <p>Data, ora deschiderii, durata fiecărei etape, alocarea și condițiile de oprire anticipată trebuie preluate numai din anunțul oficial al sesiunii active. Pregătirea documentelor poate începe înainte, dar depunerea nu trebuie planificată pe o dată nepublicată.</p>
       </section>
 
@@ -2614,7 +2614,7 @@ function renderDr12SearchIntentContent(page) {
 
       <section aria-labelledby="dr12-so-minim">
         <h2 id="dr12-so-minim">Pragul minim SO</h2>
-        <p>Investiția trebuie realizată într-o fermă care respectă dimensiunea economică minimă prevăzută de documentele apelului. Valoarea pragului nu este publicată de FABER până la aprobarea ei editorială. Calculul folosește coeficienții SOC din cererea de finanțare și datele documentabile pentru suprafețe, culturi și efective.</p>
+        <p>Investiția trebuie realizată într-o fermă care respectă dimensiunea economică minimă prevăzută de documentele apelului. În ghidul consultativ, pragul este minimum 12.000 SO; acesta se reconfirmă în ghidul final. Calculul folosește coeficienții SOC din cererea de finanțare și datele documentabile pentru suprafețe, culturi și efective.</p>
         <p>Suprafețele se corelează cu IACS-APIA, iar efectivele care nu pot fi înregistrate acolo se verifică în registrele ANSVSA/DSVSA, ANZ sau prin documentele circumscripției veterinare, după caz. Un calcul realizat fără aceleași date în documentele oficiale poate schimba eligibilitatea și punctajul.</p>
       </section>
 

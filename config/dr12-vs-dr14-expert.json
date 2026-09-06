@@ -2,18 +2,18 @@
   "schemaVersion": 1,
   "route": "/dr12-vs-dr14",
   "file": "dr12-vs-dr14.html",
-  "reviewedAt": "2026-08-29",
+  "reviewedAt": "2026-09-06",
   "title": "DR 12 vs DR 14: încadrare și investiții | FABER",
   "metaDescription": "Compară DR 12 și DR 14: profil, SO, investiții și acte. DR 14 are sesiunea lansată, cu depuneri între 1 septembrie și 31 octombrie 2026.",
   "h1": "DR 12 vs DR 14: cum diferă încadrarea și investiția",
-  "directAnswer": "Comparația DR 12–DR 14 ajută la alegerea intervenției înainte de construirea dosarului. DR 12 păstrează documentul consultativ și nu are sesiune deschisă. Pentru DR 14, AFIR a lansat sesiunea: depunerile sunt programate între 1 septembrie și 31 octombrie 2026. DR 14 vizează ferme mici, cu praguri SO diferențiate și maximum 50.000 EUR/proiect. Alegerea corectă depinde de profil, SO, investiție și documentele disponibile.",
-  "statusStatement": "DR 12 are ghid consultativ, iar depunerea nu este deschisă. DR 14 are sesiunea lansată; depunerea se deschide la 1 septembrie 2026, ora 09:00, și este programată până la 31 octombrie 2026, ora 16:00.",
+  "directAnswer": "DR 12 și DR 14 au beneficiari și condiții diferite. DR 12 are ghid consultativ: maximum 200.000 EUR/proiect, intensități de 80% sau 65% și minimum 12.000 SO, fără sesiune deschisă confirmată. DR 14 are sesiune deschisă între 1 septembrie și 31 octombrie 2026, maximum 50.000 EUR/proiect și sprijin de până la 85%, pentru ferme mici care respectă pragurile SO specifice. Alegerea depinde de profilul solicitantului, SO și investiție.",
+  "statusStatement": "DR 12 are ghid consultativ, iar depunerea nu este deschisă. Depunerea DR 14 este deschisă în contorul AFIR la verificarea din 6 septembrie 2026, pentru sesiunea 1 septembrie–31 octombrie 2026; se aplică regulile de închidere anticipată.",
   "programs": [
     {
       "slug": "dr12-afir",
       "shortName": "DR 12",
       "status": "consultare_publica",
-      "verifiedAt": "2026-08-29",
+      "verifiedAt": "2026-09-06",
       "sourceLabel": "Ghidul solicitantului DR 12, versiune consultativă publicată la 19.03.2026",
       "sourceUrl": "https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/",
       "guideUrl": "https://www.afir.ro/api/file?filename=Ghidul+Solicitantului+DR+12+-+versiunea+consultativ%C4%83&filetype=pdf&url=%2Fmedia%2Flm3fg4k1%2Fghidul-solicitantului-dr-12.pdf",
@@ -22,10 +22,10 @@
     {
       "slug": "dr14-afir",
       "shortName": "DR 14",
-      "status": "ghid_aprobat_nedeschis",
-      "verifiedAt": "2026-08-29",
+      "status": "apel_deschis",
+      "verifiedAt": "2026-09-06",
       "sourceLabel": "Anunțul AFIR A1.2/01/2026 pentru sesiunea DR 14, publicat la 14.08.2026",
-      "sourceUrl": "https://www.afir.ro/instrumente/sesiuni/sesiuni-primire-proiecte/",
+      "sourceUrl": "https://depunerepspac.afir.ro/Sesiune/Lista",
       "guideUrl": "https://www.afir.ro/api/file?url=%2Fmedia%2Fgk1nhmzi%2Fghidul-solicitantului-dr-14.pdf&filename=Ghidul%20Solicitantului%20DR%2014&filetype=pdf",
       "canonicalUrl": "/dr14"
     }
@@ -48,7 +48,7 @@
     },
     {
       "label": "SO",
-      "dr12": "SO este un filtru de încadrare și trebuie recalculat din date dovedibile. Pragurile consultative nu sunt publicate aici până la reconfirmarea umană și forma finală.",
+      "dr12": "Ghid consultativ: minimum 12.000 SO, calculat cu SOC 2020. Pragul se reconfirmă în versiunea finală.",
       "dr14": "Intervalul general este 4.000–11.999 SO; pragul minim este 2.000 SO sau 2.300 SO pentru sectoarele prevăzute de ghidul oficial final. SO majoritar și evidențele APIA/ANSVSA decid încadrarea."
     },
     {
@@ -58,18 +58,18 @@
     },
     {
       "label": "Sprijin",
-      "dr12": "Nu publicăm o sumă sau o intensitate în această comparație înainte ca valorile din ghidul consultativ să fie reconfirmate pentru forma aplicabilă.",
+      "dr12": "Ghid consultativ: maximum 200.000 EUR/proiect; până la 80% pentru tinerii fermieri sub 41 de ani și 65% pentru celelalte categorii.",
       "dr14": "Maximum 50.000 EUR/proiect, cu o intensitate de maximum 85% din costurile eligibile, conform ghidului oficial final."
     },
     {
       "label": "Contribuție proprie",
-      "dr12": "Se calculează numai după confirmarea intensității aplicabile, a cheltuielilor eligibile și a costurilor neeligibile; nu este publicată o valoare neverificată.",
+      "dr12": "Conform ghidului consultativ: minimum 20% sau 35% din eligibil, după categoria solicitantului, plus costurile neeligibile. Condițiile se pot modifica.",
       "dr14": "Beneficiarul acoperă diferența eligibilă, cheltuielile neeligibile și orice sumă care depășește plafonul ajutorului public."
     },
     {
       "label": "Calendar",
       "dr12": "Apel nedeschis. Nu este publicat un interval oficial de depunere; estimările interne FABER nu sunt calendar oficial.",
-      "dr14": "Sesiune lansată. Depunerile sunt programate oficial între 1 septembrie 2026, ora 09:00, și 31 octombrie 2026, ora 16:00; o componentă se poate închide anticipat în condițiile anunțului AFIR."
+      "dr14": "Sesiune deschisă în perioada 1 septembrie–31 octombrie 2026. Verifică disponibilitatea componentei în contorul oficial AFIR."
     },
     {
       "label": "Documente-cheie",

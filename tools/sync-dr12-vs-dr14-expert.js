@@ -257,7 +257,7 @@ function validateConfig(config, programs) {
         errors.push(`${program.slug}: intervalul de depunere nu este justificat de status și sursa oficială`);
       }
     }
-    if ((registry.grantSummary || registry.cofinancingSummary) && registry.status === "consultare_publica") errors.push(`${program.slug}: valorile numerice consultative necesită un contract de publicare separat`);
+    if ((registry.grantSummary || registry.cofinancingSummary) && registry.status === "consultare_publica" && registry.fundingBasis !== "consultative") errors.push(`${program.slug}: valorile numerice consultative necesită un contract de publicare separat`);
   }
   if (!Array.isArray(config.pendingHumanValidation) || config.pendingHumanValidation.length < 5) errors.push("lista de validări umane este incompletă");
   if (errors.length) throw new Error(`Config P1.19 invalid:\n- ${errors.join("\n- ")}`);

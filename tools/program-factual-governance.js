@@ -429,6 +429,8 @@ function formatDateRo(value) {
 function applicantSummaryText(program) {
   const explicit = String(program?.eligibleApplicantSummary || "").trim();
   if (explicit) return explicit;
+  const applicants = (program?.eligibleApplicants || []).filter(Boolean);
+  if (applicants.length) return applicants.join(" ");
   const labels = readJson(PROGRAM_FAMILY_CONFIG_PATH).filters?.applicantTypes || {};
   const values = (program?.discovery?.applicantTypes || [])
     .map((key) => labels[key])
