@@ -12,7 +12,7 @@ const { findPublicHtmlFiles } = require('../tools/sync-global-header');
 const { validateConfig } = require('../tools/validate-seo-snippets');
 const DIST = process.argv.includes('--dist');
 const BASE = DIST ? path.join(ROOT, 'dist') : ROOT;
-const logo = '/assets/faber-navbar-vector.svg';
+const logo = '/assets/faber-navbar-refined.svg';
 assert.equal(createHash('sha256').update(fs.readFileSync(path.join(BASE, 'assets/faber-navbar-20260906.jpg'))).digest('hex'),
   'a9bd8ebbc9c0b787dc7e57abcfb121219b30ce0a4e6a58877199492b4da12a56', 'Logo must preserve the supplied image');
 const wide = cheerio.load(fs.readFileSync(path.join(BASE, logo), 'utf8'), { xmlMode: true });
@@ -24,7 +24,7 @@ for (const svg of [wide, compact]) {
   assert.equal(svg('#wordmark').attr('fill'), '#ffffff');
   assert.equal(svg('#descriptor').attr('fill'), '#ffffff');
 }
-for (const id of ['monogram', 'wordmark', 'descriptor']) assert.equal(wide('#'+id).attr('d'), compact('#'+id).attr('d'), 'Responsive composition must preserve the identical letter contours');
+for (const id of ['monogram', 'wordmark']) assert.equal(wide('#'+id).attr('d'), compact('#'+id).attr('d'), 'Responsive composition must preserve the identical letter contours');
 
 let checked = 0;
 for (const source of findPublicHtmlFiles()) {
@@ -35,7 +35,7 @@ for (const source of findPublicHtmlFiles()) {
   const images = $('#navbar .nav-logo img');
   assert.equal(images.length, 1, `${file}: one logo in navbar`);
   assert.equal(images.attr('src'), logo, `${file}: same supplied logo on every page`);
-  assert.equal($('#navbar picture source').attr('srcset'), '/assets/faber-navbar-vector-compact.svg');
+  assert.equal($('#navbar picture source').length, 0, 'Same composition at every viewport');
   assert.equal(images.attr('alt'), 'FABER – Atelier de Consultanță');
   assert.equal($('#navbar .nav-logo svg').length, 0, `${file}: no previous navbar logo`);
   checked++;

@@ -100,7 +100,7 @@ try {
   for (const width of VIEWPORTS) {
     const page = await browser.newPage({ viewport: { width, height: 820 } });
     await page.route("http://atelier.test/**", (route) => {
-      if (/^\/assets\/faber-navbar-vector(?:-compact)?\.svg$/.test(new URL(route.request().url()).pathname)) {
+      if (/^\/assets\/faber-navbar-refined\.svg$/.test(new URL(route.request().url()).pathname)) {
         return route.fulfill({ status: 200, contentType: "image/svg+xml", body: fs.readFileSync(path.join(ROOT, new URL(route.request().url()).pathname)) });
       }
       return route.fulfill({ status: 200, contentType: "text/html; charset=utf-8", body: documentHtml });
@@ -143,7 +143,8 @@ try {
         await page.locator("#dropdownBtn").focus();
       } else {
         const compactBox = await page.locator(".nav-compact-cta").boundingBox();
-        assert.ok(compactBox && compactBox.height >= 44 && compactBox.width >= 44, `${width}: compact CTA target is at least 44px`);
+        if (width <= 600) assert.equal(compactBox, null, "Narrow navbar reserves space for readable logo");
+        else assert.ok(compactBox && compactBox.height >= 44 && compactBox.width >= 44, `${width}: compact CTA target is at least 44px`);
         await page.locator("#hamburgerBtn").click();
         assert.equal(await page.locator("#hamburgerBtn").getAttribute("aria-expanded"), "true", "mobile menu announces open state");
         assert.equal(await page.locator("#mobileMenu").getAttribute("hidden"), null, "mobile menu becomes visible");

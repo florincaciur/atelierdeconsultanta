@@ -17,8 +17,6 @@ html.im-page { scroll-behavior: smooth; scroll-padding-top: 88px; }
 .page-family-home #main-content { overflow: visible; padding-top: 0; }
 body.page-family-home .global-header-spacer { height: 0; }
 body.page-family-home #main-content > section { scroll-margin-top: 0; }
-.page-family-home #navbar .nav-container { max-width: 1600px; padding-inline: clamp(22px, 4vw, 72px); min-height: 80px; }
-.page-family-home #navbar .logo svg { max-width: 212px; }
 
 /* Opening composition */
 body.page-family-home #hero.im-hero {
@@ -260,7 +258,6 @@ body.page-family-home #homepage-contact p { color: var(--design-ink, #1a2540); f
   .im-hero-bottom > span:not(.im-edition) { display: none; }
 }
 @media (max-width: 760px) {
-  .page-family-home #navbar .nav-container { min-height: 70px; padding-inline: 20px; }
   #hero.im-hero .homepage-hero__inner { grid-template-columns: 1fr; gap: 12px; }
   body.page-family-home #hero.im-hero { min-height: auto; padding: 105px 24px 0; }
   #hero.im-hero .homepage-hero__copy { padding-top: 0; }

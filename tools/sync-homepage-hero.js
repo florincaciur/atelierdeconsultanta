@@ -139,7 +139,7 @@ function syncHomepageHero(source, programs) {
   output = output.replace(/\s*<link\b[^>]*data-immersive-style[^>]*>/gi, "")
     .replace(/\s*<script\b[^>]*data-immersive-script[^>]*><\/script>/gi, "")
     .replace(/<!-- IMMERSIVE_CONTROLS_START -->[\s\S]*?<!-- IMMERSIVE_CONTROLS_END -->\r?\n?/g, "")
-    .replace(/<\/head>/i, '  <link rel="stylesheet" href="/assets/immersive-home.css?v=20260902-2" data-immersive-style>\n  <script src="/assets/immersive-home.js?v=20260901-5" defer data-immersive-script></script>\n</head>')
+    .replace(/<\/head>/i, '  <link rel="stylesheet" href="/assets/immersive-home.css?v=20260906-3" data-immersive-style>\n  <script src="/assets/immersive-home.js?v=20260901-5" defer data-immersive-script></script>\n</head>')
     .replace(/<\/body>/i, `<!-- IMMERSIVE_CONTROLS_START -->${renderImmersiveControls()}<!-- IMMERSIVE_CONTROLS_END -->\n</body>`);
   // The global immersive layer owns the final head/body slots. Keeping its
   // managed blocks last makes both generators converge in either run order.
