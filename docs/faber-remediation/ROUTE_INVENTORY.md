@@ -496,6 +496,7 @@ Activele CSS/JS/imagini nu sunt enumerate individual; tabelul include endpointur
 | `/resurse/descarcari/buget-digitalizare-imm.xlsx` | download | 200 | nu |
 | `/api/contact-triage` | API formular; POST | GET 405; POST 200/4xx/5xx | nu; /api blocat în robots |
 | `/api/crm/qualified-lead` | API server-side; POST autentificat | GET 405; POST 202/4xx/5xx | nu; /api blocat în robots |
+| `/api/company/:cui` | API verificare firmă; GET cu CUI valid | 200/400/404/429/503; răspuns no-store | nu; /api blocat în robots |
 
 ## Diferențe repo vs sitemap vs homepage vs catalog
 

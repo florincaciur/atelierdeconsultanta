@@ -266,8 +266,10 @@
   <link rel="stylesheet" href="/assets/program-reading-refresh-2026.css?v=20260828-2">
 <link rel="stylesheet" href="/assets/program-contextual-links.css">
 <link rel="stylesheet" href="/assets/program-visuals.css?v=20260902-1">
-<link rel="stylesheet" href="/assets/micro-apel-2.css?v=20260828-1">
+<link rel="stylesheet" href="/assets/micro-apel-2.css?v=20260907-1">
   <script src="/assets/micro-apel-2-scorer.js?v=20260828-1" defer=""></script>
+  <script src="/assets/company-data-service.js?v=20260907-1" defer=""></script>
+  <script src="/assets/micro-apel-2-company-lookup.js?v=20260907-1" defer=""></script>
 <link rel="stylesheet" href="/assets/breadcrumbs.css">
 <meta property="og:image:alt" content="Investiții pentru modernizarea microîntreprinderilor – Apel 2 — FABER">
   <meta name="twitter:title" content="Modernizarea microîntreprinderilor Apel 2 Nord-Est | FABER">
@@ -285,7 +287,7 @@
   <script src="/assets/lead-attribution.js" defer></script>
   <script src="/assets/analytics-events.js" defer></script>
 </head>
-<body class="page-family-generic" data-program-id="modernizare-microintreprinderi-ne-2" data-analytics-page-type="program" data-analytics-program-slug="modernizare-microintreprinderi-ne-2" data-analytics-program-family="regional-adr" data-editorial-record="investitii-modernizarea-microintreprinderilor-apel-2" data-governance-state="public" data-editorial-verified-at="2026-09-06" data-date-modified="2026-09-06" data-site-immersive="faber-20260901" data-publication-state="public" data-program-registry="config/seo-programs.json#programs" data-program-status="ghid_aprobat_nedeschis" data-status-label="Apel lansat – depuneri 28 septembrie–28 octombrie 2026" data-verified-at="2026-09-06" data-source-url="https://regionordest.ro/prioritatea-1/modernizare-microintreprinderi/" data-long-form-page="true" data-long-form-type="program" data-long-form-word-count="2787">
+<body class="page-family-generic" data-program-id="modernizare-microintreprinderi-ne-2" data-analytics-page-type="program" data-analytics-program-slug="modernizare-microintreprinderi-ne-2" data-analytics-program-family="regional-adr" data-editorial-record="investitii-modernizarea-microintreprinderilor-apel-2" data-governance-state="public" data-editorial-verified-at="2026-09-06" data-date-modified="2026-09-06" data-site-immersive="faber-20260901" data-publication-state="public" data-program-registry="config/seo-programs.json#programs" data-program-status="ghid_aprobat_nedeschis" data-status-label="Apel lansat – depuneri 28 septembrie–28 octombrie 2026" data-verified-at="2026-09-06" data-source-url="https://regionordest.ro/prioritatea-1/modernizare-microintreprinderi/" data-long-form-page="true" data-long-form-type="program" data-long-form-word-count="2825">
 <a class="skip-link global-skip-link" href="#main-content">Sari la conținut</a>
   <!-- GLOBAL_HEADER_START --><link rel="stylesheet" href="/assets/global-header.css?v=20260906-3">
 <nav id="navbar" aria-label="Navigare principală" data-navigation-config="config/main-navigation.json">
@@ -652,10 +654,43 @@
         <div class="micro2-simulator__intro">
           <span class="micro2-simulator__eyebrow">Anexa 10 · grila finală din 27.08.2026</span>
           <h2 id="micro2-simulator-title">Simulator de punctaj Apel 2 microîntreprinderi</h2>
-          <p>Completează datele care vor fi verificate în cerere și în baza ANAF. Calculul rulează local în browser; datele introduse nu sunt trimise către FABER sau către ADR Nord-Est.</p>
+          <p>Completează datele care vor fi verificate în cerere și în baza ANAF. Calculul punctajului și valorile formularului rămân local în browser. Numai când folosești verificarea automată, CUI-ul normalizat este transmis endpoint-ului intern FABER și apoi, server-side, către ListaFirme.</p>
         </div>
         <div class="micro2-simulator__layout">
           <form data-micro-apel-2-form="" autocomplete="off" data-analytics-form="investitii_modernizarea_microintreprinderilor_apel_2_form_1" data-analytics-form-version="legacy_v1" data-analytics-component="public_form" data-clarity-mask="true">
+            <section class="micro2-company-lookup" data-company-lookup="" aria-labelledby="micro2-company-lookup-title">
+              <div class="micro2-company-lookup__heading">
+                <div>
+                  <span class="micro2-company-lookup__eyebrow">Opțional · date publice</span>
+                  <h3 id="micro2-company-lookup-title">Identificare automată firmă</h3>
+                </div>
+                <span class="micro2-company-lookup__source">Sursa datelor publice: ListaFirme</span>
+              </div>
+              <div class="micro2-company-lookup__controls">
+                <div class="micro2-field">
+                  <label for="micro2-cui">CUI / CIF firmă</label>
+                  <input id="micro2-cui" data-company-cui-input="" type="text" inputmode="text" autocapitalize="characters" autocomplete="off" maxlength="16" placeholder="Ex: 12345678" aria-describedby="micro2-cui-help micro2-company-lookup-status">
+                  <small id="micro2-cui-help">Poți introduce și prefixul RO; spațiile și prefixul sunt eliminate înainte de verificare.</small>
+                </div>
+                <button class="micro2-company-lookup__button" data-company-lookup-button="" type="button">Verifică firma</button>
+              </div>
+              <p id="micro2-company-lookup-status" class="micro2-company-lookup__status" data-company-lookup-status="" data-state="idle" aria-live="polite"></p>
+              <div class="micro2-company-summary" data-company-summary="" hidden="">
+                <p class="micro2-company-summary__verified"><span aria-hidden="true">✓</span> <strong data-company-name=""></strong></p>
+                <dl>
+                  <div><dt>CUI</dt><dd data-company-cui=""></dd></div>
+                  <div><dt>CAEN principal</dt><dd data-company-caen=""></dd></div>
+                  <div><dt>Înființată</dt><dd data-company-established=""></dd></div>
+                  <div><dt>Județ</dt><dd data-company-county=""></dd></div>
+                  <div><dt>Localitate</dt><dd data-company-city=""></dd></div>
+                  <div><dt>Status</dt><dd data-company-status=""></dd></div>
+                  <div><dt>Formă juridică</dt><dd data-company-legal-form=""></dd></div>
+                </dl>
+                <p class="micro2-company-summary__message" data-company-success-message=""></p>
+                <p class="micro2-company-summary__warning" data-company-warning="" hidden=""></p>
+                <small>Sursa datelor publice: <span data-company-source="">ListaFirme</span></small>
+              </div>
+            </section>
             <fieldset>
               <legend>1. Activitate, localizare și locuri de muncă</legend>
               <div class="micro2-form-grid">

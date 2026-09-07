@@ -36,6 +36,10 @@ function validateDomainWorkerConfig(errors) {
   if (workerConfig.name !== "atelierdeconsultanta-domain-seo") errors.push("domain SEO worker name differs from the managed production worker");
   if (workerConfig.main !== "cloudflare/domain-seo-redirects.mjs") errors.push("domain SEO worker main file differs");
   if (workerConfig.workers_dev !== false) errors.push("domain SEO worker must not expose a workers.dev route");
+  const companyLimiter = (workerConfig.ratelimits || []).find((binding) => binding.name === "COMPANY_LOOKUP_RATE_LIMITER");
+  if (!companyLimiter || companyLimiter.simple?.limit !== 20 || companyLimiter.simple?.period !== 60) {
+    errors.push("domain SEO worker must rate-limit company lookups to 20 requests per minute");
+  }
   const routePatterns = new Set((workerConfig.routes || [])
     .filter((item) => item.zone_name === "atelierdeconsultanta.ro")
     .map((item) => item.pattern));
@@ -72,7 +76,7 @@ function validateDomainSeoIntent(file, errors) {
   }
   if (config.cachePolicy?.preserveExplicitOriginPolicy !== true) errors.push(`${file}: domain middleware must preserve explicit public origin cache policies`);
   if (config.cachePolicy?.defaultWhenMissing !== "no-store") errors.push(`${file}: responses without an explicit cache policy must default to no-store`);
-  for (const endpoint of ["/api/contact-triage", "/api/crm/qualified-lead", "/release.json"]) {
+  for (const endpoint of ["/api/contact-triage", "/api/crm/qualified-lead", "/api/company/:cui", "/release.json"]) {
     if (!config.cachePolicy?.neverCache?.includes(endpoint)) errors.push(`${file}: cache policy must keep ${endpoint} out of shared/browser caches`);
   }
   if (config.dashboardReview?.status !== "NEEDS_CONFIRMATION") errors.push(`${file}: dashboard-only WAF/bot/cache settings must not be represented as repository-verified`);

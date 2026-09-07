@@ -61,10 +61,18 @@ assert.ok(title.length >= 45 && title.length <= 60, "The SEO title must stay ins
 assert.equal($(".faq-item").length, 8, "The AEO FAQ block must contain eight focused questions");
 assert.ok(directAnswerWords >= 30 && directAnswerWords <= 80, "The direct answer must remain concise and answer-engine friendly");
 assert.equal($("[data-micro-apel-2-form]").length, 1, "The scoring simulator form must be present");
+assert.equal($("[data-company-lookup]").length, 1, "The optional company identification card must be above the scoring fields");
+assert.equal($("[data-company-cui-input]").attr("placeholder"), "Ex: 12345678");
+assert.equal($("[data-company-lookup-button]").attr("type"), "button", "company lookup must not create a nested submit flow");
 assert.equal($("script[src^='/assets/micro-apel-2-scorer.js']").length, 1, "The scoring engine must be loaded");
+assert.equal($("script[src^='/assets/company-data-service.js']").length, 1, "The replaceable company-data browser service must be loaded");
+assert.equal($("script[src^='/assets/micro-apel-2-company-lookup.js']").length, 1, "The company lookup UI controller must be loaded");
 assert.equal($("link[href^='/assets/micro-apel-2.css']").length, 1, "The simulator stylesheet must be loaded");
 assert.ok(pageHtml.includes("https://regionordest.ro/prioritatea-1/modernizare-microintreprinderi/"), "The official call page must be cited");
 assert.ok(pageHtml.includes("Ghid-microintreprinderi-27.08.2026.zip"), "The final official guide archive must be cited");
 assert.doesNotMatch(pageHtml, /generat(?:ă)? de AI|AI-generated|watermark/iu, "The page must not include AI or watermark labeling");
+
+const generator = fs.readFileSync(new URL("../tools/generate-program-pages.js", import.meta.url), "utf8");
+assert.match(generator, /HAND_AUTHORED_SLUGS[\s\S]*investitii-modernizarea-microintreprinderilor-apel-2/u, "the legacy generator must preserve the hand-authored simulator");
 
 console.log("PASS micro-apel-2 scorer contract");

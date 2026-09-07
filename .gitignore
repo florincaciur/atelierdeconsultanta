@@ -4,6 +4,11 @@ config/articol-*.json
 # Cloudflare Workers static asset build output.
 dist/
 .wrangler/
+.env
+.env.*
+.dev.vars
+.dev.vars.*
+!.env.example
 
 # Local package installs.
 node_modules/

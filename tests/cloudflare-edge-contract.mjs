@@ -90,6 +90,8 @@ assert.match(headersFile, /\/release\.json[\s\S]*?Cache-Control: no-store/u);
 
 const domainConfig = JSON.parse(fs.readFileSync(new URL("../wrangler.redirects.jsonc", import.meta.url), "utf8"));
 assert.equal(domainConfig.workers_dev, false, "domain middleware must not expose an unmanaged workers.dev route");
+const companyLimiter = domainConfig.ratelimits.find((binding) => binding.name === "COMPANY_LOOKUP_RATE_LIMITER");
+assert.deepEqual(companyLimiter.simple, { limit: 20, period: 60 }, "company lookup must have a native Cloudflare rate limit");
 assert.deepEqual(new Set(domainConfig.routes.map((route) => route.pattern)), new Set([
   "atelierdeconsultanta.ro/*",
   "www.atelierdeconsultanta.ro/*"

@@ -123,6 +123,118 @@
   padding: clamp(1.1rem, 2.5vw, 2rem);
 }
 
+.micro2-company-lookup {
+  margin: 0 0 1.35rem;
+  padding: clamp(1rem, 2.2vw, 1.35rem);
+  border: 1px solid rgba(29, 79, 120, .22);
+  border-radius: 18px;
+  background: linear-gradient(145deg, #fff 0%, #eef6f7 100%);
+  box-shadow: 0 12px 28px rgba(20, 58, 84, .08);
+}
+
+.micro2-company-lookup__heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.micro2-company-lookup__heading h3 {
+  margin: .2rem 0 0;
+  color: #133a55;
+  font-size: 1.1rem;
+}
+
+.micro2-company-lookup__eyebrow {
+  color: #b84716;
+  font-size: .72rem;
+  font-weight: 850;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+
+.micro2-company-lookup__source {
+  padding: .38rem .65rem;
+  border-radius: 999px;
+  background: #e5f2ec;
+  color: #216047;
+  font-size: .72rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.micro2-company-lookup__controls {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: end;
+  gap: .8rem;
+}
+
+.micro2-company-lookup__button {
+  min-height: 46px;
+  padding: .72rem 1.1rem;
+  border: 0;
+  border-radius: 11px;
+  background: #b84716;
+  color: #fff;
+  font: inherit;
+  font-weight: 850;
+  cursor: pointer;
+}
+
+.micro2-company-lookup__button:hover { background: #91340f; }
+.micro2-company-lookup__button:focus-visible { outline: 3px solid rgba(217, 88, 23, .3); outline-offset: 3px; }
+.micro2-company-lookup__button:disabled { cursor: wait; opacity: .68; }
+
+.micro2-company-lookup__status {
+  min-height: 1.45em;
+  margin: .8rem 0 0;
+  color: #4d6776;
+  font-size: .86rem;
+  font-weight: 750;
+}
+
+.micro2-company-lookup__status:empty { min-height: 0; margin-top: 0; }
+.micro2-company-lookup__status[data-state="loading"] { color: #8a5b13; }
+.micro2-company-lookup__status[data-state="success"] { color: #176147; }
+.micro2-company-lookup__status[data-state="error"] { color: #8a2f12; }
+
+.micro2-company-summary {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-left: 4px solid #1f765d;
+  border-radius: 5px 14px 14px 5px;
+  background: #fff;
+}
+
+.micro2-company-summary__verified { margin: 0 0 .75rem; color: #145c43; }
+.micro2-company-summary__verified span { margin-right: .25rem; }
+
+.micro2-company-summary dl {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .65rem 1rem;
+  margin: 0;
+}
+
+.micro2-company-summary dl div { min-width: 0; }
+.micro2-company-summary dt { color: #607987; font-size: .7rem; font-weight: 800; text-transform: uppercase; }
+.micro2-company-summary dd { margin: .15rem 0 0; overflow-wrap: anywhere; color: #173d57; font-weight: 750; }
+.micro2-company-summary__message { margin: .9rem 0 .45rem; color: #294f64; line-height: 1.5; }
+
+.micro2-company-summary__warning {
+  margin: .65rem 0;
+  padding: .65rem .75rem;
+  border-radius: 9px;
+  background: #fff8e6;
+  color: #6e5214;
+  font-size: .82rem;
+  line-height: 1.45;
+}
+
+.micro2-company-summary > small { color: #607987; }
+
 .micro2-simulator fieldset {
   min-width: 0;
   margin: 0 0 1.25rem;
@@ -154,6 +266,24 @@
   color: #244a62;
   font-size: .88rem;
   font-weight: 750;
+}
+
+.micro2-auto-badge {
+  display: inline-block;
+  margin-left: .4rem;
+  padding: .16rem .4rem;
+  border-radius: 999px;
+  background: #e5f2ec;
+  color: #176147;
+  font-size: .64rem;
+  font-weight: 800;
+  line-height: 1.3;
+  vertical-align: middle;
+}
+
+.micro2-auto-formatted {
+  color: #176147 !important;
+  font-weight: 800;
 }
 
 .micro2-field input,
@@ -340,6 +470,11 @@
   .micro2-summary > div { min-height: 0; }
   .micro2-simulator { border-radius: 20px; }
   .micro2-breakdown li { align-items: flex-start; }
+  .micro2-company-lookup__heading { display: grid; }
+  .micro2-company-lookup__source { width: fit-content; text-align: left; }
+  .micro2-company-lookup__controls,
+  .micro2-company-summary dl { grid-template-columns: 1fr; }
+  .micro2-company-lookup__button { width: 100%; }
 }
 
 @media (prefers-reduced-motion: reduce) {

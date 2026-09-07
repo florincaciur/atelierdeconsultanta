@@ -1,10 +1,13 @@
 "use strict";
 
+import { handleCompanyLookupRequest } from "./company/company-data-service.mjs";
+
 const CANONICAL_HOST = "atelierdeconsultanta.ro";
 const HSTS_VALUE = "max-age=15552000";
 const CONTACT_PAGE = "/contact";
 const CONTACT_ENDPOINT = "/api/contact-triage";
 const QUALIFIED_LEAD_ENDPOINT = "/api/crm/qualified-lead";
+const COMPANY_LOOKUP_PREFIX = "/api/company/";
 const INTENTIONAL_NOT_FOUND_PATH = "/__faber-intentional-not-found__";
 const MAX_CONTACT_BODY_BYTES = 64 * 1024;
 const MAX_ANALYTICS_BODY_BYTES = 16 * 1024;
@@ -565,6 +568,18 @@ export async function handleRequest(request, originFetch = fetch, environment = 
       analyticsForwardUrl: environment.ANALYTICS_EVENT_FORWARD_URL,
       forwardFetch: environment.analyticsForwardFetch || environment.forwardFetch
     });
+  }
+
+  if (url.hostname === CANONICAL_HOST && url.pathname.startsWith(COMPANY_LOOKUP_PREFIX)) {
+    const response = await handleCompanyLookupRequest(request, {
+      apiKey: environment.LISTAFIRME_API_KEY,
+      fetchImpl: environment.listafirmeFetch,
+      cache: environment.companyCache,
+      rateLimiter: environment.COMPANY_LOOKUP_RATE_LIMITER,
+      now: environment.companyNow,
+      retryDelay: environment.companyRetryDelay
+    });
+    return secured(response, { forceNoStore: true });
   }
 
   const response = await originFetch(request);

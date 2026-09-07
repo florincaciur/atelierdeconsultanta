@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "checkJs": true,
+    "noEmit": true,
+    "strict": false,
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "lib": ["ES2022", "DOM"],
+    "skipLibCheck": true
+  },
+  "include": [
+    "../assets/company-data-service.js",
+    "../assets/micro-apel-2-company-lookup.js",
+    "../cloudflare/company/**/*.mjs"
+  ]
+}

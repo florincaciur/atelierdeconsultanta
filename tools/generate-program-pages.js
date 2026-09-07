@@ -22,6 +22,9 @@ const CANONICAL_DIRECTORY_ONLY_SLUGS = new Set([
   "pro-infra",
   "pocidif-21"
 ]);
+const HAND_AUTHORED_SLUGS = new Set([
+  "investitii-modernizarea-microintreprinderilor-apel-2"
+]);
 const {
   bannerForRoute,
   createBannerIndex,
@@ -3239,7 +3242,7 @@ function main() {
   }
   for (const page of pages) {
     validatePage(page);
-    ensureFile(page, pageHtml(page, config), { writeLegacy: true });
+    if (!HAND_AUTHORED_SLUGS.has(page.slug)) ensureFile(page, pageHtml(page, config), { writeLegacy: true });
   }
   if (onlySlugs) {
     console.log(`Generated ${pages.length} selected canonical SEO page(s): ${[...onlySlugs].join(", ")}.`);

@@ -76,6 +76,8 @@ try {
         panelBounds: bounds(panel),
         overviewBackground: overview ? getComputedStyle(overview).backgroundImage : "",
         overviewHeadingColor: overviewHeading ? getComputedStyle(overviewHeading).color : "",
+        lookupButtonHeight: document.querySelector("[data-company-lookup-button]")?.getBoundingClientRect().height || 0,
+        lookupInputHeight: document.querySelector("[data-company-cui-input]")?.getBoundingClientRect().height || 0,
         formWithinViewport: Boolean(formRect && formRect.left >= -1 && formRect.right <= window.innerWidth + 1),
         resultsWithinViewport: Boolean(resultsRect && resultsRect.left >= -1 && resultsRect.right <= window.innerWidth + 1)
       };
@@ -86,6 +88,7 @@ try {
     assert.ok(layout.overflow <= 1, `${viewport.name}: pagina are scroll orizontal de ${layout.overflow}px`);
     assert.equal(layout.formWithinViewport, true, `${viewport.name}: formularul depășește viewport-ul (${JSON.stringify(layout)})`);
     assert.equal(layout.resultsWithinViewport, true, `${viewport.name}: rezultatul depășește viewport-ul (${JSON.stringify(layout.resultsBounds)})`);
+    assert.ok(layout.lookupButtonHeight >= 44 && layout.lookupInputHeight >= 44, `${viewport.name}: controalele CUI trebuie să aibă minimum 44px`);
     assert.match(layout.overviewBackground, /rgb\(16, 40, 70\).*rgb\(23, 61, 98\)/u, `${viewport.name}: fundalul închis al hărții de parcurgere a fost suprascris (${layout.overviewBackground})`);
     assert.equal(layout.overviewHeadingColor, "rgb(255, 255, 255)", `${viewport.name}: titlul hărții nu mai folosește text alb pe fundalul închis`);
 
