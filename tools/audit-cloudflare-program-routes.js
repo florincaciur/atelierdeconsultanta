@@ -13,6 +13,7 @@ const PROGRAM_ROUTES = [
   "/dr12-afir",
   "/afir-autoconsum-agroalimentar",
   "/autoconsum-public-fotovoltaice-institutii-publice",
+  "/fondul-modernizare-pc1-stocare-entitati-publice",
   "/fondul-modernizare-energie-regenerabila-2026",
   "/dr14",
   "/digitalizare-imm",
@@ -31,6 +32,11 @@ const PROGRAM_ROUTES = [
   "/testimoniale",
   "/webinarii",
 ];
+
+const CANONICAL_REDIRECT_TARGETS = new Map([
+  ["/portofoliu", "/studii-de-caz-fonduri-europene"],
+  ["/testimoniale", "/studii-de-caz-fonduri-europene"],
+]);
 
 function parseArgs() {
   const args = process.argv.slice(2);
@@ -218,7 +224,7 @@ function pathOf(value) {
   return new URL(value).pathname;
 }
 
-function validateResult(label, route, result, expectDirect) {
+function validateResult(label, route, result, expectDirect, expectedFinalPath = route) {
   const redirects = result.chain.filter((item) => item.status >= 300 && item.status < 400);
   const finalStatus = result.final ? result.final.status : 0;
   const finalPath = result.final ? pathOf(result.final.url) : "";
@@ -229,7 +235,7 @@ function validateResult(label, route, result, expectDirect) {
   if (finalStatus !== 200) errors.push(`final status ${finalStatus}`);
   if (expectDirect && redirects.length !== 0) errors.push(`expected direct 200, got ${redirects.length} redirects`);
   if (!expectDirect && redirects.length > 1) errors.push(`expected max 1 redirect, got ${redirects.length}`);
-  if (finalPath !== route) errors.push(`final path ${finalPath}`);
+  if (finalPath !== expectedFinalPath) errors.push(`final path ${finalPath}`);
 
   return {
     label,
@@ -257,11 +263,13 @@ async function main() {
   const results = [];
   try {
     for (const route of PROGRAM_ROUTES) {
+      const expectedFinalPath = CANONICAL_REDIRECT_TARGETS.get(route) || route;
+      const expectCanonicalDirect = expectedFinalPath === route;
       const canonical = await traceUrl(new URL(route, base).href);
-      results.push(validateResult("canonical", route, canonical, true));
+      results.push(validateResult("canonical", route, canonical, expectCanonicalDirect, expectedFinalPath));
 
       const htmlVariant = await traceUrl(new URL(`${route}.html`, base).href);
-      results.push(validateResult("html", route, htmlVariant, false));
+      results.push(validateResult("html", route, htmlVariant, false, expectedFinalPath));
     }
   } finally {
     if (server) await new Promise((resolve) => server.close(resolve));

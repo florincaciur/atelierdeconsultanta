@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-09T02:20:04.466Z",
+  "generatedAt": "2026-09-09T09:11:50.214Z",
   "summary": {
     "htmlFilesChecked": 190,
     "indexablePagesChecked": 105,
@@ -19,8 +19,8 @@
       "FinancialIncentive": 25,
       "CreativeWork": 27,
       "FAQPage": 67,
-      "Question": 422,
-      "Answer": 422,
+      "Question": 426,
+      "Answer": 426,
       "Service": 12,
       "AdministrativeArea": 12,
       "WebApplication": 1
@@ -191,7 +191,7 @@
       "issues": []
     },
     {
-      "file": "autoconsum-public-fotovoltaice-institutii-publice.html",
+      "file": "autoconsum-public-fotovoltaice-institutii-publice/index.html",
       "route": "/autoconsum-public-fotovoltaice-institutii-publice",
       "blocks": 1,
       "topLevelIds": 7,
@@ -208,8 +208,8 @@
         "FinancialIncentive": 1,
         "CreativeWork": 1,
         "FAQPage": 1,
-        "Question": 4,
-        "Answer": 4
+        "Question": 8,
+        "Answer": 8
       },
       "modified": [
         "2026-09-09",

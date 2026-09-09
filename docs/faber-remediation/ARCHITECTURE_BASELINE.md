@@ -452,4 +452,4 @@ Auditul inițial a identificat două divergențe. Rădăcina publică `/resurse`
 
 Auditul verifică fiecare document JSON-LD ca JSON parseable, exact un `BreadcrumbList`, poziții consecutive și unice, `ListItem`, nume și URL identice cu breadcrumb-ul vizibil, current page fără self-link și cu `aria-current="page"`, linkuri intermediare canonical directe, părinți 200/self-canonical/indexabili, zero surse de redirect și stylesheet-ul comun. Ruta `/gdpr`, exclusă intenționat numai din sitemap, este inclusă prin inventarul public și nu mai rămâne în afara gate-ului.
 
-Rezultatul local este 105/105 rute și 114 surse canonical/deploy conforme. Output-ul Cloudflare verifică separat 105/105 rute și 110 reprezentări HTML fizice. Contractul live rulează aceleași invariante pe URL-urile canonice după publicare.
+Rezultatul local este 105/105 rute și 113 surse canonical/deploy conforme. Output-ul Cloudflare verifică separat 105/105 rute și reprezentările HTML fizice sincronizate. Contractul live rulează aceleași invariante pe URL-urile canonice după publicare.

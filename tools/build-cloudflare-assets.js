@@ -68,7 +68,6 @@ const CANONICAL_ROOT_HTML_ROUTES = new Set([
   "dr12-afir",
   "dr14-afir-ferme-mici",
   "afir-autoconsum-agroalimentar",
-  "autoconsum-public-fotovoltaice-institutii-publice",
   "fondul-modernizare-energie-regenerabila-2026",
   "dr14",
   "digitalizare-imm",
@@ -79,6 +78,7 @@ const CANONICAL_ROOT_HTML_ROUTES = new Set([
 ]);
 
 const CANONICAL_DIRECTORY_HTML_ROUTES = [
+  "autoconsum-public-fotovoltaice-institutii-publice",
   "blog",
   "contact",
   "despre-faber",

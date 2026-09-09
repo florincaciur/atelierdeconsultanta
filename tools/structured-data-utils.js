@@ -15,7 +15,6 @@ const CANONICAL_ROOT_HTML_ROUTES = new Set([
   "dr12-afir",
   "dr14-afir-ferme-mici",
   "afir-autoconsum-agroalimentar",
-  "autoconsum-public-fotovoltaice-institutii-publice",
   "fondul-modernizare-energie-regenerabila-2026",
   "dr14",
   "digitalizare-imm",
@@ -27,7 +26,8 @@ const CANONICAL_ROOT_HTML_ROUTES = new Set([
 // This route is authored in the directory index. The root .html file is a
 // legacy deploy alias and must never become the source of canonical content.
 const CANONICAL_DIRECTORY_SOURCE_ROUTES = new Set([
-  "investitii-modernizarea-microintreprinderilor-apel-2"
+  "investitii-modernizarea-microintreprinderilor-apel-2",
+  "autoconsum-public-fotovoltaice-institutii-publice"
 ]);
 
 function cleanText(value) {
