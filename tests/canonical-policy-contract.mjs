@@ -31,7 +31,7 @@ function routeForHtml(file) {
 
 const inventory = buildInventory();
 assert.deepEqual(validateInventory(inventory), [], "inventarul stabil de rute trebuie să rămână valid");
-assert.equal(inventory.routes.length, 105, "schimbarea inventarului canonical necesită review explicit");
+assert.equal(inventory.routes.length, 106, "schimbarea inventarului canonical necesită review explicit");
 
 const canonicalUrls = inventory.routes.map((route) => route.canonicalUrl);
 const canonicalSet = new Set(canonicalUrls);

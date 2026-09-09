@@ -1,13 +1,13 @@
 # Audit de consistență factuală a programelor
 
-Data auditului: 2026-09-06
+Data auditului: 2026-09-09
 
 ## Rezultat
 
-- Programe în registrul canonic: 25
+- Programe în registrul canonic: 26
 - Erori: 0
 - Avertismente: 0
-- Statusuri: apel_deschis=3, apel_inchis=7, calendar_estimativ=7, consultare_publica=1, ghid_aprobat_nedeschis=7
+- Statusuri: apel_deschis=3, apel_inchis=6, calendar_estimativ=7, consultare_publica=1, ghid_aprobat_nedeschis=9
 - Mod strict pentru freshness: inactiv
 
 Auditul este local și determinist. Nu interoghează URL-urile oficiale, nu deduce statusul din răspunsuri HTTP și nu rescrie date factuale. Registrul aprobat din `config/seo-programs.json#programs` rămâne singura sursă de adevăr.
@@ -28,7 +28,8 @@ Auditul este local și determinist. Nu interoghează URL-urile oficiale, nu dedu
 | Fondul pentru Modernizare – autoconsum | apel_inchis | 2026-08-29 | — | — |
 | Fondul pentru Modernizare – energie regenerabilă | apel_inchis | 2026-08-29 | — | — |
 | AFIR Autoconsum Agroalimentar | apel_inchis | 2026-08-29 | 2026-06-15 | 2026-08-14 |
-| Autoconsum instituții publice | apel_inchis | 2026-08-29 | — | — |
+| PC1 – Autoconsum entități publice | ghid_aprobat_nedeschis | 2026-09-09 | 2026-09-11 | 2026-11-06 |
+| PC1 – Stocare entități publice | ghid_aprobat_nedeschis | 2026-09-09 | 2026-09-11 | 2026-11-06 |
 | PRO INFRA | ghid_aprobat_nedeschis | 2026-09-06 | — | — |
 | Apeluri GAL | calendar_estimativ | 2026-08-29 | — | — |
 | GAL-AFIR / LEADER | calendar_estimativ | 2026-08-29 | — | — |

@@ -24,7 +24,7 @@ for (const relativePath of eligible) {
   assert.equal((html.match(/\/assets\/preferred-source\.js/g) || []).length, 1, `${relativePath}: script local lipsă/duplicat`);
   assert.match(html, /https:\/\/www\.google\.com\/preferences\/source\?q=atelierdeconsultanta\.ro/, `${relativePath}: deeplink fallback lipsă`);
 }
-assert.equal(canonicalRoutes.size, 104, "Preferred Sources trebuie publicat pe exact cele 104 rute canonice indexabile");
+assert.equal(canonicalRoutes.size, 105, "Preferred Sources trebuie publicat pe exact cele 105 rute canonice indexabile");
 
 const css = fs.readFileSync(path.join(root, "assets", "preferred-source.css"), "utf8");
 assert.match(css, /color:\s*#0b2442/i, "Componenta trebuie să declare explicit contrastul textului");

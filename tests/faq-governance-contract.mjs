@@ -48,7 +48,7 @@ const stale = inspectFaqHtml(staleHtml, "/test", staleProgram);
 assert(stale.issues.some((issue) => issue.includes("contrazice statutul")), "contractul trebuie să detecteze statutul FAQ expirat");
 
 const report = auditFaqs(ROOT);
-assert.equal(report.summary.routeCount, 105, "auditul FAQ trebuie să acopere inventarul stabil de 105 rute");
+assert.equal(report.summary.routeCount, 106, "auditul FAQ trebuie să acopere inventarul stabil de 106 rute");
 assert.equal(report.summary.fail, 0, `auditul FAQ local are rute neconforme: ${report.results.filter((result) => result.status === "FAIL").map((result) => result.route).join(", ")}`);
 assert.equal(report.summary.visibleQuestionCount, report.summary.schemaQuestionCount, "numărul total de întrebări vizibile și schema trebuie să fie egal");
 assert.equal(report.summary.legalRoutesWithFaqPage, 0, "paginile juridice nu trebuie să primească FAQPage automat");

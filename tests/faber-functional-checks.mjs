@@ -23,7 +23,7 @@ const PENDING_APPROVAL_HOLD_ROUTES = STATUS_APPROVALS
 const ALL_PENDING_HOLD_ROUTES = [...new Set([...PENDING_PROGRAM_ROUTES, ...PENDING_APPROVAL_HOLD_ROUTES])];
 const MAIN_NAVIGATION = JSON.parse(fs.readFileSync(path.join(ROOT, "config", "main-navigation.json"), "utf8"));
 const PROGRAM_FAMILY_ROUTES = MAIN_NAVIGATION.primaryDestinations.find((destination) => destination.id === "programe").items.map((item) => item.href);
-const EXPECTED_CANONICAL_URLS = 104;
+const EXPECTED_CANONICAL_URLS = 105;
 const { sitemapUrls } = require("../tools/sitemap-utils");
 const CONSOLIDATED_LOCAL_ROUTES = [
   "/fonduri-europene-bacau",

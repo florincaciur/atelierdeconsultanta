@@ -395,10 +395,10 @@ function assertNoCrawlerSpecificRendering() {
   }
 }
 
-assert.equal(programPages.length, 24, "program-page scope changed; review the prerender contract explicitly");
+assert.equal(programPages.length, 25, "program-page scope changed; review the prerender contract explicitly");
 assert.equal(familyRoutes.size, 5, "family-page scope changed; review the prerender contract explicitly");
 assert.equal(services.length, 7, "service-page scope changed; review the prerender contract explicitly");
-assert.equal(routes.length, 42, "critical prerender route scope changed; review the contract explicitly");
+assert.equal(routes.length, 43, "critical prerender route scope changed; review the contract explicitly");
 for (const route of routes) assert(fs.existsSync(fileForRoute(ROOT, route)), `${route}: canonical source HTML is missing`);
 assertNoCrawlerSpecificRendering();
 

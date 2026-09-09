@@ -1,6 +1,6 @@
 # Jurnal corectură editorială P0.13
 
-- URL-uri canonice procesate: 104
+- URL-uri canonice procesate: 105
 - Fișiere HTML documentate: 89
 - Surse editoriale/CMS documentate: 6
 - Fragmente documentate: 4053

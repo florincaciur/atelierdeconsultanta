@@ -13,7 +13,7 @@ const programs = loadProgramConfig().programs.filter((program) => isPublicProgra
 const config = loadConfig();
 const expectedRelated = programs.reduce((sum, program) => sum + resolvedLinks(program, config, programs).filter((link) => link.relation === "related").length, 0);
 assert.equal(audit.errors.length, 0, audit.errors.join("\n"));
-assert.equal(audit.summary.programPages, 24, "graful trebuie să includă toate programele canonice publice");
+assert.equal(audit.summary.programPages, 25, "graful trebuie să includă toate programele canonice publice");
 assert.equal(audit.summary.familyHubs, 5, "graful trebuie să includă toate familiile din registry");
 assert.equal(audit.summary.services, 7, "toate serviciile publice trebuie asociate semantic");
 assert.equal(audit.summary.uncoveredServices, 0, "există servicii fără relație către programe");
@@ -25,12 +25,12 @@ assert.equal(audit.summary.brokenOrRedirectedLinks, 0, "există linkuri interne 
 assert.equal(audit.duplicateRelatedLinks.length, 0, "există programe asociate duplicate");
 assert.equal(audit.missingHomepageCore.length, 0, "homepage nu acoperă toate entitățile centrale");
 assert.deepEqual(audit.summary.relationCounts, {
-  parent: 24,
+  parent: 25,
   related: expectedRelated,
-  service: 24,
-  instrument: 24,
-  guide: 24,
-  conversion: 24
+  service: 25,
+  instrument: 25,
+  guide: 25,
+  conversion: 25
 });
 
 console.log(`Internal link graph contract PASS: ${audit.summary.canonicalPages} pagini, ${audit.summary.canonicalEdges} muchii și zero orfani.`);

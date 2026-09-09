@@ -11,7 +11,7 @@ Sursa programelor: `config/seo-programs.json`
 
 Convenția este **păstrarea rutelor canonice existente**. Familia este o proprietate controlată din registru, nu un segment nou impus în URL. Nu se creează rute și nu se implementează redirecturi în P1.03. O schimbare viitoare de rută rămâne blocată până la o mapare source → target și aprobare SEO bazată inclusiv pe date GSC și backlink-uri.
 
-Ruta canonică `/fonduri-europene` este catalogul public. Echivalentul repo pentru `catalogEnabled=true` este `discovery.listed=true`; selecția unică `catalogPrograms()` produce în prezent **23** intrări publice, fără redirect targets. Reuniunea cardurilor celor cinci familii trebuie să fie identică acestei selecții.
+Ruta canonică `/fonduri-europene` este catalogul public. Echivalentul repo pentru `catalogEnabled=true` este `discovery.listed=true`; selecția unică `catalogPrograms()` produce în prezent **24** intrări publice, fără redirect targets. Reuniunea cardurilor celor cinci familii trebuie să fie identică acestei selecții.
 
 | Familie | Rută canonică păstrată | Decizie | Redirect | Motiv |
 |---|---|---|---|---|
@@ -78,7 +78,8 @@ Statusul folosește exclusiv taxonomia registrului: `apel_deschis`, `ghid_aproba
 | Fondul pentru Modernizare – autoconsum | `/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum` | Energie — `/finantari-panouri-fotovoltaice` | `public` | Da |
 | Fondul pentru Modernizare – energie regenerabilă | `/fondul-modernizare-energie-regenerabila-2026` | Energie — `/finantari-panouri-fotovoltaice` | `public` | Da |
 | AFIR Autoconsum Agroalimentar | `/afir-autoconsum-agroalimentar` | AFIR & agricultură — `/afir` | `public` | Da |
-| Autoconsum instituții publice | `/autoconsum-public-fotovoltaice-institutii-publice` | Energie — `/finantari-panouri-fotovoltaice` | `public` | Da |
+| PC1 – Autoconsum entități publice | `/autoconsum-public-fotovoltaice-institutii-publice` | Energie — `/finantari-panouri-fotovoltaice` | `public` | Da |
+| PC1 – Stocare entități publice | `/fondul-modernizare-pc1-stocare-entitati-publice` | Energie — `/finantari-panouri-fotovoltaice` | `public` | Da |
 | PRO INFRA | `/pro-infra` | Energie — `/finantari-panouri-fotovoltaice` | `public` | Da |
 | Apeluri GAL | `/apeluri-gal` | Antreprenoriat & GAL — `/fonduri-europene-imm` | `public` | Da |
 | GAL-AFIR / LEADER | `/gal-afir` | Antreprenoriat & GAL — `/fonduri-europene-imm` | `public` | Da |

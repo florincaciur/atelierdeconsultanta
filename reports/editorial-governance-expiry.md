@@ -1,11 +1,11 @@
 # Raport de prospețime și guvernanță editorială
 
-Data evaluării: **2026-09-06**. Registru: `config/editorial-governance.json`.
+Data evaluării: **2026-09-09**. Registru: `config/editorial-governance.json`.
 
 ## Rezumat
 
-- Pagini guvernate: **38**
-- Pagini publice cu metadate complete: **27**
+- Pagini guvernate: **39**
+- Pagini publice cu metadate complete: **28**
 - Verificări expirate: **10**
 - Surse lipsă/incomplete: **1**
 - Reviewer lipsă: **0**
@@ -20,7 +20,7 @@ O expirare produce warning intern și nu schimbă automat statusul, textul, `ver
 | `/acte-necesare-fonduri-europene-nerambursabile` | guide | pending_validation | — | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | 2026-05-20 | DE_VALIDAT_UMAN | 2026-08-18 | nu | da | nu | nu |
 | `/afir-autoconsum-agroalimentar` | program | public | apel_inchis | DE_VALIDAT_UMAN | 2026-08-15 | 2026-08-29 | DE_VALIDAT_UMAN | 2026-10-28 | nu | nu | nu | nu |
 | `/apeluri-gal` | program | public | calendar_estimativ | DE_VALIDAT_UMAN | 2026-08-18 | 2026-08-29 | DE_VALIDAT_UMAN | 2026-10-28 | nu | nu | nu | nu |
-| `/autoconsum-public-fotovoltaice-institutii-publice` | program | public | apel_inchis | DE_VALIDAT_UMAN | 2026-08-18 | 2026-08-29 | DE_VALIDAT_UMAN | 2026-10-28 | nu | nu | nu | nu |
+| `/autoconsum-public-fotovoltaice-institutii-publice` | program | public | ghid_aprobat_nedeschis | DE_VALIDAT_UMAN | 2026-09-09 | 2026-09-09 | DE_VALIDAT_UMAN | 2026-11-08 | nu | nu | nu | nu |
 | `/calculator-soc` | tool | public | — | DE_VALIDAT_UMAN | 2026-07-22 | 2026-07-22 | DE_VALIDAT_UMAN | 2026-09-20 | nu | nu | nu | nu |
 | `/cod-caen-start-up-nation-2026` | guide | pending_validation | — | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | 2026-05-20 | DE_VALIDAT_UMAN | 2026-08-18 | nu | da | nu | nu |
 | `/digitalizare-imm` | program | public | apel_inchis | DE_VALIDAT_UMAN | 2026-07-22 | 2026-08-29 | DE_VALIDAT_UMAN | 2026-10-28 | nu | nu | nu | nu |
@@ -55,6 +55,7 @@ O expirare produce warning intern și nu schimbă automat statusul, textul, `ver
 | `/e-drive` | program | public | ghid_aprobat_nedeschis | DE_VALIDAT_UMAN | 2026-09-06 | 2026-09-06 | DE_VALIDAT_UMAN | 2026-11-05 | nu | nu | nu | nu |
 | `/e-mobility` | program | public | ghid_aprobat_nedeschis | DE_VALIDAT_UMAN | 2026-09-06 | 2026-09-06 | DE_VALIDAT_UMAN | 2026-11-05 | nu | nu | nu | nu |
 | `/fondul-modernizare-pc1-stocare` | program | public | ghid_aprobat_nedeschis | DE_VALIDAT_UMAN | 2026-08-28 | 2026-08-29 | DE_VALIDAT_UMAN | 2026-10-28 | nu | nu | nu | nu |
+| `/fondul-modernizare-pc1-stocare-entitati-publice` | program | public | ghid_aprobat_nedeschis | DE_VALIDAT_UMAN | 2026-09-09 | 2026-09-09 | DE_VALIDAT_UMAN | 2026-11-08 | nu | nu | nu | nu |
 
 ## Reguli de prospețime
 

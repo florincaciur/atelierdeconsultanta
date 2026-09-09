@@ -439,6 +439,26 @@
       ]
     },
     {
+      "programId": "fondul-modernizare-pc1-stocare-entitati-publice",
+      "route": "/fondul-modernizare-pc1-stocare-entitati-publice",
+      "file": "fondul-modernizare-pc1-stocare-entitati-publice/index.html",
+      "eligible": true,
+      "excludedByEditorialDecision": false,
+      "removedManagedBlocks": 0,
+      "removedManagedLinks": 0,
+      "resultingRelations": [
+        "parent",
+        "related",
+        "related",
+        "related",
+        "related",
+        "service",
+        "instrument",
+        "guide",
+        "conversion"
+      ]
+    },
+    {
       "programId": "pro-infra",
       "route": "/pro-infra",
       "file": "pro-infra/index.html",

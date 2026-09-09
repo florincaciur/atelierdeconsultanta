@@ -2,7 +2,7 @@ route,contentType,governanceState,programStatus,datePublished,lastMeaningfulUpda
 /acte-necesare-fonduri-europene-nerambursabile,guide,pending_validation,—,DE_VALIDAT_UMAN,DE_VALIDAT_UMAN,2026-05-20,DE_VALIDAT_UMAN,2026-08-18,nu,da,nu,nu,expired_review
 /afir-autoconsum-agroalimentar,program,public,apel_inchis,DE_VALIDAT_UMAN,2026-08-15,2026-08-29,DE_VALIDAT_UMAN,2026-10-28,nu,nu,nu,nu,—
 /apeluri-gal,program,public,calendar_estimativ,DE_VALIDAT_UMAN,2026-08-18,2026-08-29,DE_VALIDAT_UMAN,2026-10-28,nu,nu,nu,nu,—
-/autoconsum-public-fotovoltaice-institutii-publice,program,public,apel_inchis,DE_VALIDAT_UMAN,2026-08-18,2026-08-29,DE_VALIDAT_UMAN,2026-10-28,nu,nu,nu,nu,—
+/autoconsum-public-fotovoltaice-institutii-publice,program,public,ghid_aprobat_nedeschis,DE_VALIDAT_UMAN,2026-09-09,2026-09-09,DE_VALIDAT_UMAN,2026-11-08,nu,nu,nu,nu,—
 /calculator-soc,tool,public,—,DE_VALIDAT_UMAN,2026-07-22,2026-07-22,DE_VALIDAT_UMAN,2026-09-20,nu,nu,nu,nu,—
 /cod-caen-start-up-nation-2026,guide,pending_validation,—,DE_VALIDAT_UMAN,DE_VALIDAT_UMAN,2026-05-20,DE_VALIDAT_UMAN,2026-08-18,nu,da,nu,nu,expired_review
 /digitalizare-imm,program,public,apel_inchis,DE_VALIDAT_UMAN,2026-07-22,2026-08-29,DE_VALIDAT_UMAN,2026-10-28,nu,nu,nu,nu,—
@@ -37,3 +37,4 @@ route,contentType,governanceState,programStatus,datePublished,lastMeaningfulUpda
 /e-drive,program,public,ghid_aprobat_nedeschis,DE_VALIDAT_UMAN,2026-09-06,2026-09-06,DE_VALIDAT_UMAN,2026-11-05,nu,nu,nu,nu,—
 /e-mobility,program,public,ghid_aprobat_nedeschis,DE_VALIDAT_UMAN,2026-09-06,2026-09-06,DE_VALIDAT_UMAN,2026-11-05,nu,nu,nu,nu,—
 /fondul-modernizare-pc1-stocare,program,public,ghid_aprobat_nedeschis,DE_VALIDAT_UMAN,2026-08-28,2026-08-29,DE_VALIDAT_UMAN,2026-10-28,nu,nu,nu,nu,—
+/fondul-modernizare-pc1-stocare-entitati-publice,program,public,ghid_aprobat_nedeschis,DE_VALIDAT_UMAN,2026-09-09,2026-09-09,DE_VALIDAT_UMAN,2026-11-08,nu,nu,nu,nu,—

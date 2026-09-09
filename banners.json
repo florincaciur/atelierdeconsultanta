@@ -195,28 +195,47 @@
   {
     "id": "slide-autoconsum-publici",
     "programId": "autoconsum-institutii-publice",
-    "title": "Autoconsum din surse regenerabile pentru instituții publice",
-    "tag": "Apel finalizat în MySMIS – depunerea nu este deschisă",
-    "description": "Autoconsum fotovoltaic pentru instituții publice: solicitant, consum, amplasament, drepturi, hotărâri, avize și documentele apelului.",
+    "title": "Sprijinirea investițiilor în noi capacități de producere și stocare a energiei solare pentru autoconsum – entități publice",
+    "tag": "Apel lansat – depuneri 11 septembrie–6 noiembrie 2026",
+    "description": "PC1 Autoconsum pentru entități publice: buget 500 mil. €, maximum 10 mil. €/beneficiar, până la 100% și depuneri 11.09–06.11.2026.",
     "ctaText": "Detalii program →",
     "ctaLink": "/autoconsum-public-fotovoltaice-institutii-publice",
-    "icon": "ph-bank",
+    "icon": "ph-solar-panel",
     "image": "/assets/hero/hero-solar.webp",
-    "pageTitle": null,
+    "pageTitle": "PC1 Autoconsum 2026 – panouri fotovoltaice cu stocare pentru entități publice",
     "order": 5,
     "estimate": null,
     "active": true,
-    "programStatus": "apel_inchis",
-    "statusLabel": "Apel finalizat în MySMIS – depunerea nu este deschisă",
-    "verifiedAt": "2026-08-29",
-    "sourceName": "Ministerul Investițiilor și Proiectelor Europene – MySMIS2021",
-    "sourceUrl": "https://resurse.mysmis2021.gov.ro/ords/repo_bo/r/mysmis-2021/finantari-programe-2021-2027",
-    "sourceVersion": "MySMIS2021: apelul de autoconsum din surse regenerabile pentru entități publice este marcat FINALIZAT",
-    "applicationStart": null,
-    "applicationEnd": null,
-    "grantSummary": null,
-    "cofinancingSummary": null,
-    "fundingSummary": null,
+    "programStatus": "ghid_aprobat_nedeschis",
+    "statusLabel": "Apel lansat – depuneri 11 septembrie–6 noiembrie 2026",
+    "verifiedAt": "2026-09-09",
+    "sourceName": "Ministerul Energiei",
+    "sourceUrl": "https://energie.gov.ro/anunt-privind-actualizarea-la-data-de-23-06-2026-a-ghidului-solicitantului-privind-sprijinirea-investitiilor-in-noi-capacitati-de-producere-a-energiei-electrice-produsa-din-surse-regenerabile-de-energ/",
+    "sourceVersion": "Ghidul solicitantului și anexele actualizate la 23.06.2026",
+    "applicationStart": "2026-09-11",
+    "applicationEnd": "2026-11-06",
+    "grantSummary": {
+      "minimum": null,
+      "maximum": {
+        "amount": 10000000,
+        "currency": "EUR",
+        "unit": "beneficiar"
+      },
+      "budget": {
+        "amount": 500000000,
+        "currency": "EUR"
+      }
+    },
+    "cofinancingSummary": {
+      "intensity": [
+        {
+          "rate": 100,
+          "scope": "maximum din cheltuielile eligibile, în limita plafoanelor pe MW instalat"
+        }
+      ],
+      "ownContribution": "Cheltuielile neeligibile, TVA deductibilă și orice depășire a plafoanelor din ghid rămân în sarcina beneficiarului."
+    },
+    "fundingSummary": "Finanțare conform sursei oficiale: 10.000.000 EUR/beneficiar; buget 500.000.000 EUR; intensitate 100% (maximum din cheltuielile eligibile, în limita plafoanelor pe MW instalat); Cheltuielile neeligibile, TVA deductibilă și orice depășire a plafoanelor din ghid rămân în sarcina beneficiarului.",
     "officialGuideKey": "autoconsum-publici",
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
@@ -657,7 +676,7 @@
     "programId": "e-mobility-ro",
     "title": "Programul e-Mobility RO",
     "tag": "Schemă actualizată – depunerea nu este deschisă",
-    "description": "e-Mobility RO: schemă actualizată pentru stații de reîncărcare, amplasamente, solicitanți și buget; depunerea nu este deschisă.",
+    "description": "e-Mobility RO: buget 299 mil. €, maximum 30 mil. €/beneficiar pentru stații de încărcare pe rețeaua rutieră eligibilă. Condiții și stadiu.",
     "ctaText": "Detalii program",
     "ctaLink": "/e-mobility",
     "icon": "ph-charging-station",
@@ -888,6 +907,53 @@
     "cofinancingSummary": null,
     "fundingSummary": null,
     "officialGuideKey": "fondul-modernizare-mysmis",
+    "sourceOfTruth": "config/seo-programs.json#programs"
+  },
+  {
+    "id": "slide-fondul-modernizare-pc1-stocare-entitati-publice",
+    "programId": "fondul-modernizare-pc1-stocare-entitati-publice",
+    "title": "Sprijinirea investițiilor în noi capacități de stocare a energiei regenerabile – entități publice",
+    "tag": "Apel lansat – depuneri 11 septembrie–6 noiembrie 2026",
+    "description": "PC1 Stocare pentru entități publice: buget 150 mil. €, maximum 10 mil. €/beneficiar, până la 100% și depuneri 11.09–06.11.2026.",
+    "ctaText": "Detalii program",
+    "ctaLink": "/fondul-modernizare-pc1-stocare-entitati-publice",
+    "icon": "ph-battery-charging",
+    "image": "/assets/hero/hero-solar.webp",
+    "pageTitle": null,
+    "order": 24,
+    "estimate": null,
+    "active": true,
+    "programStatus": "ghid_aprobat_nedeschis",
+    "statusLabel": "Apel lansat – depuneri 11 septembrie–6 noiembrie 2026",
+    "verifiedAt": "2026-09-09",
+    "sourceName": "Ministerul Energiei",
+    "sourceUrl": "https://energie.gov.ro/anunt-privind-actualizarea-la-data-de-23-06-2026-a-ghidului-solicitantului-privind-sprijinirea-investitiilor-in-noi-capacitati-de-producere-a-energiei-electrice-produsa-din-surse-regenerabile-de-energ/",
+    "sourceVersion": "Ghidul solicitantului și anexele actualizate la 23.06.2026",
+    "applicationStart": "2026-09-11",
+    "applicationEnd": "2026-11-06",
+    "grantSummary": {
+      "minimum": null,
+      "maximum": {
+        "amount": 10000000,
+        "currency": "EUR",
+        "unit": "beneficiar"
+      },
+      "budget": {
+        "amount": 150000000,
+        "currency": "EUR"
+      }
+    },
+    "cofinancingSummary": {
+      "intensity": [
+        {
+          "rate": 100,
+          "scope": "maximum din cheltuielile eligibile, conform ghidului"
+        }
+      ],
+      "ownContribution": "Cheltuielile neeligibile, TVA deductibilă și orice depășire a plafonului rămân în sarcina beneficiarului."
+    },
+    "fundingSummary": "Finanțare conform sursei oficiale: 10.000.000 EUR/beneficiar; buget 150.000.000 EUR; intensitate 100% (maximum din cheltuielile eligibile, conform ghidului); Cheltuielile neeligibile, TVA deductibilă și orice depășire a plafonului rămân în sarcina beneficiarului.",
+    "officialGuideKey": "fm-pc1-stocare-publici",
     "sourceOfTruth": "config/seo-programs.json#programs"
   }
 ]

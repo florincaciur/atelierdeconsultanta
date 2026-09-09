@@ -1,12 +1,12 @@
 # Task 20 — Audit reproducibil al linkurilor și surselor
 
-Generat: 2026-08-29T14:56:55.751Z
+Generat: 2026-09-09T02:06:44.301Z
 
 ## Rezultat
 
-- Audit structural: **PASS** — 204 fișiere, 16806 legături locale, 1041 fragmente, 0 erori.
-- Graph canonical: **PASS** — 104 pagini, 3301 muchii distincte, 0 pagini cu zero incoming.
-- Inventar extern: **80 URL-uri unice** (76 publice, 26 surse oficiale, 9 documente publice).
+- Audit structural: **PASS** — 213 fișiere, 17296 legături locale, 1034 fragmente, 0 erori.
+- Graph canonical: **PASS** — 105 pagini, 3340 muchii distincte, 0 pagini cu zero incoming.
+- Inventar extern: **85 URL-uri unice** (80 publice, 29 surse oficiale, 10 documente publice).
 - Canale speciale: 2 mailto, 2 tel, 2 WhatsApp; documente locale: 4.
 - Surse oficiale confirmate 404/410: **0**.
 
@@ -16,9 +16,9 @@ Un răspuns blocat, un timeout sau o provocare anti-bot nu justifică eliminarea
 
 | Clasificare | URL-uri |
 |---|---:|
-| 200 | 69 |
+| 200 | 75 |
 | permanent_redirect | 4 |
-| temporary_redirect | 4 |
+| temporary_redirect | 3 |
 | 404 | 0 |
 | 410 | 0 |
 | 5xx | 0 |
@@ -30,21 +30,21 @@ Un răspuns blocat, un timeout sau o provocare anti-bot nu justifică eliminarea
 | Suprafață inspectată | Referințe/blocuri |
 |---|---:|
 | router | 136 |
-| homepage | 156 |
-| navigation | 7256 |
-| footer | 541 |
-| registry | 141 |
-| program | 2331 |
-| family | 391 |
+| homepage | 164 |
+| navigation | 7330 |
+| footer | 547 |
+| registry | 146 |
+| program | 2440 |
+| family | 394 |
 | guide | 1151 |
 | faq | 0 |
-| breadcrumbs | 221 |
-| schema | 2211 |
+| breadcrumbs | 224 |
+| schema | 2239 |
 | legal | 203 |
 | calculator | 99 |
-| core | 5733 |
-| faqBlocks | 406 |
-| schemaUrls | 2211 |
+| core | 5748 |
+| faqBlocks | 422 |
+| schemaUrls | 2239 |
 
 FAQ-urile fără link nu sunt tratate ca eroare: toate blocurile vizibile sunt inspectate, iar orice link adăugat ulterior intră automat în inventar.
 
@@ -53,8 +53,8 @@ FAQ-urile fără link nu sunt tratate ca eroare: toate blocurile vizibile sunt i
 - Linkuri interne rupte/redirectate: 0.
 - URL-uri interne legacy: 0.
 - Pagini canonice orfane: 0.
-- Surse oficiale din registry: 26; surse prezente numai în registry: 4.
-- Linkuri publice către documente oficiale/interne: 13; textele descriptive sunt verificate contextual.
+- Surse oficiale din registry: 29; surse prezente numai în registry: 5.
+- Linkuri publice către documente oficiale/interne: 14; textele descriptive sunt verificate contextual.
 
 ## URL-uri externe
 
@@ -69,18 +69,20 @@ FAQ-urile fără link nu sunt tratate ca eroare: toate blocurile vizibile sunt i
 | 200 | 206 | [https://schema.org/IncentiveStatusRetired](https://schema.org/IncentiveStatusRetired) | — | schema | /digitalizare-imm |
 | 200 | 200 | [https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/](https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/) | — | core, family, navigation, official_source, program, registry, schema | /dr12-afir |
 | 200 | 206 | [https://schema.org/IncentiveStatusInDevelopment](https://schema.org/IncentiveStatusInDevelopment) | — | schema | /dr12-afir |
-| 200 | 200 | [https://www.afir.ro/instrumente/sesiuni/sesiuni-primire-proiecte/](https://www.afir.ro/instrumente/sesiuni/sesiuni-primire-proiecte/) | — | core, family, navigation, official_source, program, registry, schema | /dr14 |
+| 200 | 200 | [https://depunerepspac.afir.ro/Sesiune/Lista](https://depunerepspac.afir.ro/Sesiune/Lista) | — | core, family, navigation, official_source, program, registry, schema | /dr14 |
 | 200 | 200 | [https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-14/](https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-14/) | — | core, program | /dr14 |
-| 200 | 200 | [https://legislatie.just.ro/Public/DetaliiDocument/306915](https://legislatie.just.ro/Public/DetaliiDocument/306915) | — | family, navigation, official_source, program, registry, schema | /pro-infra |
-| 200 | 206 | [https://www.afir.ro/media/hkfp4w0v/ghidul-solicitantului-schem%C4%83-energie-autoconsum-v7-iunie-2026.pdf](https://www.afir.ro/media/hkfp4w0v/ghidul-solicitantului-schem%C4%83-energie-autoconsum-v7-iunie-2026.pdf) | — | navigation, program | /afir-autoconsum-agroalimentar |
-| 200 | 200 | [https://www.afir.ro/comunicate/265-de-milioane-de-euro-pentru-investitii-in-producerea-energiei-electrice/](https://www.afir.ro/comunicate/265-de-milioane-de-euro-pentru-investitii-in-producerea-energiei-electrice/) | — | family, official_source, program, registry, schema | /afir-autoconsum-agroalimentar |
-| 200 | 200 | [https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-36/](https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-36/) | — | navigation, program | /apeluri-gal |
+| 200 | 200 | [https://www.afir.ro/instrumente/sesiuni/sesiuni-primire-proiecte/](https://www.afir.ro/instrumente/sesiuni/sesiuni-primire-proiecte/) | — | family, navigation, official_source, program, registry, schema | /dr14 |
+| 200 | 206 | [https://schema.org/IncentiveStatusActive](https://schema.org/IncentiveStatusActive) | — | schema | /dr14 |
+| 200 | 200 | [https://legislatie.just.ro/Public/DetaliiDocument/306916](https://legislatie.just.ro/Public/DetaliiDocument/306916) | — | family, navigation, official_source, program, registry, schema | /pro-infra |
+| 200 | 200 | [https://www.afir.ro/comunicate/265-de-milioane-de-euro-pentru-investitii-in-producerea-energiei-electrice/](https://www.afir.ro/comunicate/265-de-milioane-de-euro-pentru-investitii-in-producerea-energiei-electrice/) | — | family, navigation, official_source, program, registry, schema | /afir-autoconsum-agroalimentar |
+| 200 | 206 | [https://www.afir.ro/media/hkfp4w0v/ghidul-solicitantului-schem%C4%83-energie-autoconsum-v7-iunie-2026.pdf](https://www.afir.ro/media/hkfp4w0v/ghidul-solicitantului-schem%C4%83-energie-autoconsum-v7-iunie-2026.pdf) | — | program | /afir-autoconsum-agroalimentar |
 | 200 | 200 | [https://gal.afir.ro/](https://gal.afir.ro/) | — | core, family, navigation, official_source, program, registry, schema | /apeluri-gal |
 | 200 | 200 | [https://www.afir.ro/finantare/leader/](https://www.afir.ro/finantare/leader/) | — | core, program | /apeluri-gal |
-| 200 | 200 | [https://legislatie.just.ro/public/DetaliiDocument/276306](https://legislatie.just.ro/public/DetaliiDocument/276306) | — | navigation, program | /autoconsum-public-fotovoltaice-institutii-publice |
-| 200 | 200 | [https://resurse.mysmis2021.gov.ro/ords/repo_bo/r/mysmis-2021/finantari-programe-2021-2027](https://resurse.mysmis2021.gov.ro/ords/repo_bo/r/mysmis-2021/finantari-programe-2021-2027) | — | family, official_source, program, registry, schema | /autoconsum-public-fotovoltaice-institutii-publice |
-| 200 | 206 | [https://diaspora.gov.ro/info/stiri-din-romania/761-investeste-acasa.html](https://diaspora.gov.ro/info/stiri-din-romania/761-investeste-acasa.html) | — | family, official_source, program, registry, schema | /diaspora-investeste-acasa |
-| temporary_redirect | 200 | [https://mfinante.gov.ro/](https://mfinante.gov.ro/) | https://mfinante.gov.ro/ro/web/site | program | /diaspora-investeste-acasa |
+| 200 | 200 | [https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-36/](https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-36/) | — | program | /apeluri-gal |
+| 200 | 200 | [https://energie.gov.ro/anunt-privind-actualizarea-la-data-de-23-06-2026-a-ghidului-solicitantului-privind-sprijinirea-investitiilor-in-noi-capacitati-de-producere-a-energiei-electrice-produsa-din-surse-regenerabile-de-energ/](https://energie.gov.ro/anunt-privind-actualizarea-la-data-de-23-06-2026-a-ghidului-solicitantului-privind-sprijinirea-investitiilor-in-noi-capacitati-de-producere-a-energiei-electrice-produsa-din-surse-regenerabile-de-energ/) | — | family, navigation, official_source, program, registry, schema | /autoconsum-public-fotovoltaice-institutii-publice |
+| 200 | 200 | [https://legislatie.just.ro/public/DetaliiDocument/276306](https://legislatie.just.ro/public/DetaliiDocument/276306) | — | program | /autoconsum-public-fotovoltaice-institutii-publice |
+| 200 | 200 | [https://www.bidromania.eu/produse/garantii/diaspora-investeste-acasa](https://www.bidromania.eu/produse/garantii/diaspora-investeste-acasa) | — | family, official_source, program, registry, schema | /diaspora-investeste-acasa |
+| 200 | 200 | [https://www.bidromania.eu/centru-media/comunicate-de-presa/investitiile-romanilor-din-diaspora-intra-linie-dreapta-guvernul](https://www.bidromania.eu/centru-media/comunicate-de-presa/investitiile-romanilor-din-diaspora-intra-linie-dreapta-guvernul) | — | program | /diaspora-investeste-acasa |
 | 200 | 200 | [https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-18/](https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-18/) | — | official_source, program, registry | /dr18 |
 | 200 | 200 | [https://legislatie.just.ro/Public/DetaliiDocument/313289](https://legislatie.just.ro/Public/DetaliiDocument/313289) | — | family, official_source, program, registry, schema | /e-drive |
 | 200 | 200 | [https://legislatie.just.ro/Public/DetaliiDocument/307361](https://legislatie.just.ro/Public/DetaliiDocument/307361) | — | program | /e-drive |
@@ -88,12 +90,14 @@ FAQ-urile fără link nu sunt tratate ca eroare: toate blocurile vizibile sunt i
 | 200 | 200 | [https://legislatie.just.ro/Public/DetaliiDocument/301593](https://legislatie.just.ro/Public/DetaliiDocument/301593) | — | program | /e-mobility |
 | 200 | 200 | [https://legislatie.just.ro/Public/DetaliiDocument/313320](https://legislatie.just.ro/Public/DetaliiDocument/313320) | — | family, navigation, official_source, program, registry, schema | /e-move |
 | 200 | 200 | [https://fonduri.mt.ro/transparenta/consultare-publica/fondul-pentru-modernizare/comunicat-fm-consultare-publica-ghidul-solicitantului-promovarea-infrastructurii-pentru-o-mobilitate-cu-emisii-zero-in-sprijinul-intreprinderilor-si-comunitatilor-e-move-ro](https://fonduri.mt.ro/transparenta/consultare-publica/fondul-pentru-modernizare/comunicat-fm-consultare-publica-ghidul-solicitantului-promovarea-infrastructurii-pentru-o-mobilitate-cu-emisii-zero-in-sprijinul-intreprinderilor-si-comunitatilor-e-move-ro) | — | core, program | /e-move |
-| 200 | 200 | [https://economie.gov.ro/pe-data-de-30-iulie-se-da-startul-inscrierilor-in-cadrul-programului-femeia-antreprenor/](https://economie.gov.ro/pe-data-de-30-iulie-se-da-startul-inscrierilor-in-cadrul-programului-femeia-antreprenor/) | — | core, navigation, program | /femeia-antreprenor-2026 |
-| 200 | 200 | [https://minimis.imm.gov.ro/fa2024/ordine_evaluare](https://minimis.imm.gov.ro/fa2024/ordine_evaluare) | — | family, official_source, program, registry, schema | /femeia-antreprenor-2026 |
-| 200 | 200 | [https://energie.gov.ro/category/fondul-pentru-modernizare/](https://energie.gov.ro/category/fondul-pentru-modernizare/) | — | core, navigation, program | /fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum |
+| 200 | 200 | [https://minimis.imm.gov.ro/fa2024/ordine_evaluare](https://minimis.imm.gov.ro/fa2024/ordine_evaluare) | — | family, navigation, official_source, program, registry, schema | /femeia-antreprenor-2026 |
+| 200 | 200 | [https://resurse.mysmis2021.gov.ro/ords/repo_bo/r/mysmis-2021/finantari-programe-2021-2027](https://resurse.mysmis2021.gov.ro/ords/repo_bo/r/mysmis-2021/finantari-programe-2021-2027) | — | family, navigation, official_source, program, registry, schema | /fondul-de-modernizare |
+| 200 | 200 | [https://energie.gov.ro/category/fondul-pentru-modernizare/](https://energie.gov.ro/category/fondul-pentru-modernizare/) | — | core, program | /fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum |
 | 200 | 200 | [https://legislatie.just.ro/Public/DetaliiDocument/313464](https://legislatie.just.ro/Public/DetaliiDocument/313464) | — | family, official_source, program, registry, schema | /fondul-modernizare-pc1-stocare |
 | 200 | 200 | [https://legislatie.just.ro/Public/DetaliiDocument/294449](https://legislatie.just.ro/Public/DetaliiDocument/294449) | — | program | /fondul-modernizare-pc1-stocare |
-| 200 | 200 | [https://regionordest.ro/prioritatea-1/modernizare-microintreprinderi/](https://regionordest.ro/prioritatea-1/modernizare-microintreprinderi/) | — | official_source, program, registry, schema | /fonduri-regionale |
+| 200 | 206 | [https://energie.gov.ro/wp-content/uploads/2026/06/Ghidul-solicitantului-Stocare-EP.zip](https://energie.gov.ro/wp-content/uploads/2026/06/Ghidul-solicitantului-Stocare-EP.zip) | — | program | /fondul-modernizare-pc1-stocare-entitati-publice |
+| 200 | 200 | [https://legislatie.just.ro/Public/DetaliiDocument/309282](https://legislatie.just.ro/Public/DetaliiDocument/309282) | — | program | /fondul-modernizare-pc1-stocare-entitati-publice |
+| 200 | 200 | [https://regionordest.ro/prioritatea-1/modernizare-microintreprinderi/](https://regionordest.ro/prioritatea-1/modernizare-microintreprinderi/) | — | navigation, official_source, program, registry, schema | /fonduri-regionale |
 | 200 | 206 | [https://regionordest.ro/wp-content/uploads/2026/08/Ghid-microintreprinderi-27.08.2026.zip](https://regionordest.ro/wp-content/uploads/2026/08/Ghid-microintreprinderi-27.08.2026.zip) | — | program | /investitii-modernizarea-microintreprinderilor-apel-2 |
 | 200 | 200 | [https://ne.myadr.ro/pub/micro2/token/](https://ne.myadr.ro/pub/micro2/token/) | — | program | /investitii-modernizarea-microintreprinderilor-apel-2 |
 | blocked_external | — | [https://pnrr.fonduri-ue.ro/ords/pnrr/r/dashboard-status-pnrr/home](https://pnrr.fonduri-ue.ro/ords/pnrr/r/dashboard-status-pnrr/home) | — | family, official_source, program, registry, schema | /pnrr |
@@ -101,9 +105,8 @@ FAQ-urile fără link nu sunt tratate ca eroare: toate blocurile vizibile sunt i
 | 200 | 206 | [https://mfe.gov.ro/wp-content/uploads/2026/06/3b7daf66f17fdaad63fef93466d155e3-1.zip](https://mfe.gov.ro/wp-content/uploads/2026/06/3b7daf66f17fdaad63fef93466d155e3-1.zip) | — | guide, program | /pocidif-21 |
 | 200 | 206 | [https://mfe.gov.ro/wp-content/uploads/2026/06/d6bee3673c763582ff4b4fce5be59861.pdf](https://mfe.gov.ro/wp-content/uploads/2026/06/d6bee3673c763582ff4b4fce5be59861.pdf) | — | guide, program | /pocidif-21 |
 | 200 | 206 | [https://mfe.gov.ro/wp-content/uploads/2026/07/4b934c3ee5a4ddb2e0195e23d955c43b.docx](https://mfe.gov.ro/wp-content/uploads/2026/07/4b934c3ee5a4ddb2e0195e23d955c43b.docx) | — | guide, program | /pocidif-21 |
-| 200 | 206 | [https://schema.org/IncentiveStatusActive](https://schema.org/IncentiveStatusActive) | — | schema | /pocidif-21 |
-| 200 | 200 | [https://economie.gov.ro/participa-la-definitivarea-procedurii-de-implementare-a-programului-de-succes-start-up-nation-editia-2024/](https://economie.gov.ro/participa-la-definitivarea-procedurii-de-implementare-a-programului-de-succes-start-up-nation-editia-2024/) | — | core, guide, navigation, official_source, program, registry | /start-up-nation-2026 |
-| 200 | 200 | [https://minimis.imm.gov.ro/sn2024/transparenta_persoane_juridice](https://minimis.imm.gov.ro/sn2024/transparenta_persoane_juridice) | — | family, official_source, program, registry, schema | /start-up-nation-2026 |
+| 200 | 200 | [https://minimis.imm.gov.ro/sn2024/transparenta_persoane_juridice](https://minimis.imm.gov.ro/sn2024/transparenta_persoane_juridice) | — | family, navigation, official_source, program, registry, schema | /start-up-nation-2026 |
+| 200 | 200 | [https://economie.gov.ro/participa-la-definitivarea-procedurii-de-implementare-a-programului-de-succes-start-up-nation-editia-2024/](https://economie.gov.ro/participa-la-definitivarea-procedurii-de-implementare-a-programului-de-succes-start-up-nation-editia-2024/) | — | core, guide, official_source, program, registry | /start-up-nation-2026 |
 | 200 | 200 | [https://www.afir.ro/](https://www.afir.ro/) | — | core, navigation | /surse-oficiale-fonduri-europene |
 | 200 | 200 | [https://mfe.gov.ro/](https://mfe.gov.ro/) | — | core, guide, navigation, official_source, registry | /surse-oficiale-fonduri-europene |
 | permanent_redirect | 200 | [https://adrnordest.ro/](https://adrnordest.ro/) | https://www.adrnordest.ro/ | core | /surse-oficiale-fonduri-europene |
@@ -116,6 +119,7 @@ FAQ-urile fără link nu sunt tratate ca eroare: toate blocurile vizibile sunt i
 | 200 | 200 | [https://www.afir.ro/comunicare/utile/dezbatere-publica/](https://www.afir.ro/comunicare/utile/dezbatere-publica/) | — | calculator, core, official_source, registry | /dr12-vs-dr14 |
 | 200 | 200 | [https://www.afir.ro/api/file?filename=Ghidul+Solicitantului+DR+12+-+versiunea+consultativ%C4%83&filetype=pdf&url=%2Fmedia%2Flm3fg4k1%2Fghidul-solicitantului-dr-12.pdf](https://www.afir.ro/api/file?filename=Ghidul+Solicitantului+DR+12+-+versiunea+consultativ%C4%83&filetype=pdf&url=%2Fmedia%2Flm3fg4k1%2Fghidul-solicitantului-dr-12.pdf) | — | core | /dr12-vs-dr14 |
 | 200 | 200 | [https://www.afir.ro/api/file?url=%2Fmedia%2Fgk1nhmzi%2Fghidul-solicitantului-dr-14.pdf&filename=Ghidul%20Solicitantului%20DR%2014&filetype=pdf](https://www.afir.ro/api/file?url=%2Fmedia%2Fgk1nhmzi%2Fghidul-solicitantului-dr-14.pdf&filename=Ghidul%20Solicitantului%20DR%2014&filetype=pdf) | — | core | /dr12-vs-dr14 |
+| 200 | 200 | [https://economie.gov.ro/pe-data-de-30-iulie-se-da-startul-inscrierilor-in-cadrul-programului-femeia-antreprenor/](https://economie.gov.ro/pe-data-de-30-iulie-se-da-startul-inscrierilor-in-cadrul-programului-femeia-antreprenor/) | — | core, navigation | /femeia-antreprenor-2026-conditii-idei-afaceri |
 | 200 | 200 | [https://mfe.gov.ro/ghidul-specific-conditii-de-accesare-a-fondurilor-europene-aferente-planului-national-de-redresare-si-rezilienta-in-cadrul-apelului-de-proiecte-digitalizarea-imm-urilor-grant-de-pana-la-100-000-e/](https://mfe.gov.ro/ghidul-specific-conditii-de-accesare-a-fondurilor-europene-aferente-planului-national-de-redresare-si-rezilienta-in-cadrul-apelului-de-proiecte-digitalizarea-imm-urilor-grant-de-pana-la-100-000-e/) | — | core, navigation | /intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm |
 | 200 | 206 | [https://adrnordest.ro/comentariiGhid/P1Microintreprinderi/Apel2/](https://adrnordest.ro/comentariiGhid/P1Microintreprinderi/Apel2/) | — | core | /intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene |
 | permanent_redirect | 206 | [https://commission.europa.eu/funding-tenders/find-funding/eu-funding-programmes_en](https://commission.europa.eu/funding-tenders/find-funding/eu-funding-programmes_en) | https://commission.europa.eu/funding-and-tenders/find-funding/eu-funding-programmes_en | core | /resurse-utile |
@@ -137,6 +141,7 @@ FAQ-urile fără link nu sunt tratate ca eroare: toate blocurile vizibile sunt i
 | 200 | 200 | [https://www.dataprotection.ro](https://www.dataprotection.ro) | — | legal | /politica-de-confidentialitate |
 | 200 | 200 | [https://legislatie.just.ro/Public/DetaliiDocumentAfis/185166](https://legislatie.just.ro/Public/DetaliiDocumentAfis/185166) | — | core | /proiectare-fonduri-europene |
 | 200 | 200 | [https://regionordest.ro/apeluri-de-proiecte/](https://regionordest.ro/apeluri-de-proiecte/) | — | official_source, registry | config/seo-programs.json |
+| 200 | 200 | [https://legislatie.just.ro/Public/DetaliiDocument/306915](https://legislatie.just.ro/Public/DetaliiDocument/306915) | — | official_source, registry | config/seo-programs.json |
 | 200 | 200 | [https://www.afir.ro/finantare/finantare-in-agricultura/schema-de-energie/](https://www.afir.ro/finantare/finantare-in-agricultura/schema-de-energie/) | — | official_source, registry | config/program-source-registry.json |
 | 200 | 200 | [https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-schema-energie/](https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-schema-energie/) | — | official_source, registry | config/program-source-registry.json |
 | 200 | 200 | [https://www.afir.ro/comunicate/masuri-afir-pentru-atenuarea-efectelor-provocate-de-indisponibilitatea-sistemului-ancpi-completare/](https://www.afir.ro/comunicate/masuri-afir-pentru-atenuarea-efectelor-provocate-de-indisponibilitatea-sistemului-ancpi-completare/) | — | official_source, registry | config/program-source-registry.json |

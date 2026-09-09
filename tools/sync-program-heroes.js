@@ -17,7 +17,6 @@ const PROGRAM_ROUTES = Object.freeze([
   "/fonduri-regionale",
   "/dr12-afir",
   "/afir-autoconsum-agroalimentar",
-  "/autoconsum-public-fotovoltaice-institutii-publice",
   "/dr14",
   "/dr18",
   "/digitalizare-imm",

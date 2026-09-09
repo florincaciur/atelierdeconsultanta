@@ -169,14 +169,20 @@
       "reviewerRole": "Revizuire editorială și conformitate",
       "attributionType": "organization",
       "personalNameConsent": false,
-      "verifiedAt": "2026-08-29",
-      "officialSourceName": "Ministerul Investițiilor și Proiectelor Europene – MySMIS2021",
-      "officialSourceUrl": "https://resurse.mysmis2021.gov.ro/ords/repo_bo/r/mysmis-2021/finantari-programe-2021-2027",
-      "sourceVersion": "MySMIS2021: apelul de autoconsum din surse regenerabile pentru entități publice este marcat FINALIZAT",
-      "nextReviewAt": "2026-10-28",
-      "lastMeaningfulUpdate": "2026-08-18",
-      "statusSnapshot": "apel_inchis",
+      "verifiedAt": "2026-09-09",
+      "officialSourceName": "Ministerul Energiei",
+      "officialSourceUrl": "https://energie.gov.ro/anunt-privind-actualizarea-la-data-de-23-06-2026-a-ghidului-solicitantului-privind-sprijinirea-investitiilor-in-noi-capacitati-de-producere-a-energiei-electrice-produsa-din-surse-regenerabile-de-energ/",
+      "sourceVersion": "Ghidul solicitantului și anexele actualizate la 23.06.2026",
+      "nextReviewAt": "2026-11-08",
+      "lastMeaningfulUpdate": "2026-09-09",
+      "statusSnapshot": "ghid_aprobat_nedeschis",
       "changelog": [
+        {
+          "date": "2026-09-09",
+          "summary": "Statutul și sursa oficială pentru PC1 – Autoconsum entități publice au fost actualizate din registrul factual unic.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": true
+        },
         {
           "date": "2026-08-29",
           "summary": "Statutul Autoconsum instituții publice a fost reverificat în sursa oficială; nu a fost identificată o schimbare editorială substanțială suplimentară.",
@@ -1872,6 +1878,42 @@
       ],
       "datePublished": "DE_VALIDAT_UMAN",
       "officialSourceUpdatedAt": "DE_VALIDAT_UMAN"
+    },
+    {
+      "id": "fondul-modernizare-pc1-stocare-entitati-publice",
+      "route": "/fondul-modernizare-pc1-stocare-entitati-publice",
+      "contentType": "program",
+      "programId": "fondul-modernizare-pc1-stocare-entitati-publice",
+      "governanceState": "public",
+      "author": "FABER – Atelier de Consultanță",
+      "authorRole": "Autor organizațional",
+      "reviewer": "Echipa editorială FABER",
+      "reviewerRole": "Revizuire editorială și conformitate",
+      "attributionType": "organization",
+      "personalNameConsent": false,
+      "datePublished": "DE_VALIDAT_UMAN",
+      "verifiedAt": "2026-09-09",
+      "officialSourceUpdatedAt": "DE_VALIDAT_UMAN",
+      "officialSourceName": "Ministerul Energiei",
+      "officialSourceUrl": "https://energie.gov.ro/anunt-privind-actualizarea-la-data-de-23-06-2026-a-ghidului-solicitantului-privind-sprijinirea-investitiilor-in-noi-capacitati-de-producere-a-energiei-electrice-produsa-din-surse-regenerabile-de-energ/",
+      "sourceVersion": "Ghidul solicitantului și anexele actualizate la 23.06.2026",
+      "nextReviewAt": "2026-11-08",
+      "lastMeaningfulUpdate": "2026-09-09",
+      "statusSnapshot": "ghid_aprobat_nedeschis",
+      "changelog": [
+        {
+          "date": "2026-09-09",
+          "summary": "Snapshot factual substanțial preluat din registrul unic al programului; istoricul anterior migrării nu a fost rescris.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": true
+        },
+        {
+          "date": "2026-09-09",
+          "summary": "Migrare tehnică în registrul de guvernanță; data modificării editoriale substanțiale a rămas neschimbată.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": false
+        }
+      ]
     }
   ]
 }

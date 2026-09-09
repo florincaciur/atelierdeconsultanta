@@ -1,26 +1,26 @@
 {
-  "generatedAt": "2026-09-06T15:20:29.966Z",
+  "generatedAt": "2026-09-09T02:20:04.466Z",
   "summary": {
-    "htmlFilesChecked": 189,
-    "indexablePagesChecked": 104,
+    "htmlFilesChecked": 190,
+    "indexablePagesChecked": 105,
     "filesWithIssues": 0,
     "organizationVariants": 1,
-    "stableTopLevelIdsChecked": 551,
+    "stableTopLevelIdsChecked": 557,
     "types": {
-      "Organization": 128,
-      "ProfessionalService": 104,
-      "PostalAddress": 104,
-      "ImageObject": 104,
-      "WebSite": 104,
-      "WebPage": 104,
-      "BreadcrumbList": 103,
-      "ListItem": 324,
+      "Organization": 130,
+      "ProfessionalService": 105,
+      "PostalAddress": 105,
+      "ImageObject": 105,
+      "WebSite": 105,
+      "WebPage": 105,
+      "BreadcrumbList": 104,
+      "ListItem": 328,
       "Article": 31,
-      "FinancialIncentive": 24,
-      "CreativeWork": 26,
-      "FAQPage": 66,
-      "Question": 414,
-      "Answer": 414,
+      "FinancialIncentive": 25,
+      "CreativeWork": 27,
+      "FAQPage": 67,
+      "Question": 422,
+      "Answer": 422,
       "Service": 12,
       "AdministrativeArea": 12,
       "WebApplication": 1
@@ -212,8 +212,8 @@
         "Answer": 4
       },
       "modified": [
-        "2026-08-18",
-        "2026-08-18"
+        "2026-09-09",
+        "2026-09-09"
       ],
       "issues": []
     },
@@ -513,6 +513,31 @@
       },
       "modified": [
         "2026-08-28"
+      ],
+      "issues": []
+    },
+    {
+      "file": "fondul-modernizare-pc1-stocare-entitati-publice/index.html",
+      "route": "/fondul-modernizare-pc1-stocare-entitati-publice",
+      "blocks": 1,
+      "topLevelIds": 6,
+      "types": {
+        "Organization": 2,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
+        "ImageObject": 1,
+        "WebSite": 1,
+        "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 4,
+        "FinancialIncentive": 1,
+        "CreativeWork": 1,
+        "FAQPage": 1,
+        "Question": 8,
+        "Answer": 8
+      },
+      "modified": [
+        "2026-09-09"
       ],
       "issues": []
     },

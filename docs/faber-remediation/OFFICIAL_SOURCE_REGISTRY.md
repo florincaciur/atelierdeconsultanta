@@ -27,7 +27,8 @@ Snapshot factual de bază al programelor: **2026-08-23**. Fiecare înregistrare 
 | `fondul-modernizare-autoconsum` | Ministerul Investițiilor și Proiectelor Europene – MySMIS2021 | `COMPLETED` | 2026-08-18 | 2026-08-29 |
 | `fondul-modernizare-regenerabile` | Ministerul Investițiilor și Proiectelor Europene – MySMIS2021 | `COMPLETED` | 2026-08-18 | 2026-08-29 |
 | `afir-energie-autoconsum` | Ministerul Agriculturii și Dezvoltării Rurale / AFIR | `CLOSED` | 2026-08-15 | 2026-08-29 |
-| `autoconsum-institutii-publice` | Ministerul Investițiilor și Proiectelor Europene – MySMIS2021 | `COMPLETED` | 2026-08-18 | 2026-08-29 |
+| `autoconsum-institutii-publice` | Ministerul Energiei | `SCHEDULED` | 2026-09-09 | 2026-09-09 |
+| `fondul-modernizare-pc1-stocare-entitati-publice` | Ministerul Energiei | `SCHEDULED` | 2026-09-09 | 2026-09-09 |
 | `pro-infra` | Ministerul Transporturilor și Infrastructurii | `APPROVED_SCHEME` | 2026-09-06 | 2026-09-06 |
 | `apeluri-gal` | Platforma oficială AFIR pentru Grupurile de Acțiune Locală | `UNCONFIRMED` | 2026-08-18 | 2026-08-29 |
 | `gal-afir-leader` | Platforma oficială AFIR pentru Grupurile de Acțiune Locală | `UNCONFIRMED` | 2026-09-02 | 2026-08-29 |
@@ -617,53 +618,101 @@ Snapshot factual de bază al programelor: **2026-08-23**. Fiecare înregistrare 
 | Chei surse repo | `afir-autoconsum`, `afir-autoconsum-session-2026` |
 | Notes | Fereastra de depunere este închisă; închiderea sesiunii nu este echivalată cu finalizarea întregii proceduri. Comunicarea oficială stabilă din 09.06.2026 și clarificarea din 29.07.2026 confirmă termenul de 14.08.2026; nu a fost identificată o prelungire oficială la reverificarea din 23.08.2026. |
 
-## `autoconsum-institutii-publice` — Autoconsum din surse regenerabile pentru instituții publice
+## `autoconsum-institutii-publice` — Sprijinirea investițiilor în noi capacități de producere și stocare a energiei solare pentru autoconsum – entități publice
 
 | Câmp | Valoare auditabilă |
 |---|---|
 | Stable program ID | `autoconsum-institutii-publice` |
-| Denumire oficială | Autoconsum din surse regenerabile pentru instituții publice |
-| Acronim | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Autoritate | Ministerul Investițiilor și Proiectelor Europene – MySMIS2021 |
+| Denumire oficială | Sprijinirea investițiilor în noi capacități de producere și stocare a energiei solare pentru autoconsum – entități publice |
+| Acronim | PC1 |
+| Autoritate | Ministerul Energiei |
 | Fond / program | Fondul pentru Modernizare |
-| Temei / document | MySMIS2021: apelul de autoconsum din surse regenerabile pentru entități publice este marcat FINALIZAT — [document oficial](https://resurse.mysmis2021.gov.ro/ords/repo_bo/r/mysmis-2021/finantari-programe-2021-2027) |
-| Stadiu | COMPLETED — Apel finalizat în MySMIS – depunerea nu este deschisă |
-| Sesiune | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Data deschiderii | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Deadline | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Prelungiri | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Buget | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Grant minim | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Grant maxim | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Intensitate | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Cofinanțare | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Beneficiari | Instituțiile și entitățile publice definite de documentația apelului |
+| Temei / document | Ghidul solicitantului și anexele actualizate la 23.06.2026 — [document oficial](https://energie.gov.ro/anunt-privind-actualizarea-la-data-de-23-06-2026-a-ghidului-solicitantului-privind-sprijinirea-investitiilor-in-noi-capacitati-de-producere-a-energiei-electrice-produsa-din-surse-regenerabile-de-energ/) |
+| Stadiu | SCHEDULED — Apel lansat – depuneri 11 septembrie–6 noiembrie 2026 |
+| Sesiune | [Calendarul oficial anunțat pentru 11.09–06.11.2026](https://energie.gov.ro/anunt-privind-actualizarea-la-data-de-23-06-2026-a-ghidului-solicitantului-privind-sprijinirea-investitiilor-in-noi-capacitati-de-producere-a-energiei-electrice-produsa-din-surse-regenerabile-de-energ/) (`program`, verificat 2026-09-09) |
+| Data deschiderii | 11.09.2026 |
+| Deadline | 06.11.2026 |
+| Prelungiri | Documentația oficială publicată și verificată la 09.09.2026 nu stabilește încă această informație. |
+| Buget | 500.000.000 EUR |
+| Grant minim | Documentația oficială publicată și verificată la 09.09.2026 nu stabilește încă această informație. |
+| Grant maxim | 10.000.000 EUR / beneficiar |
+| Intensitate | rate: 100; scope: maximum din cheltuielile eligibile, în limita plafoanelor pe MW instalat |
+| Cofinanțare | Cheltuielile neeligibile, TVA deductibilă și orice depășire a plafoanelor din ghid rămân în sarcina beneficiarului. |
+| Beneficiari | Unități administrativ-teritoriale și subdiviziunile acestora; Unități din apărare, ordine publică, siguranță națională și administrația penitenciară; Spitale și centre sociale ori de îngrijiri paliative finanțate integral din fonduri publice; Instituții publice, culte recunoscute, universități de stat, institute publice de cercetare și asociații de dezvoltare intercomunitară, în condițiile ghidului |
 | Regiune | Național |
-| CAEN | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Prag SO | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Investiții | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Cheltuieli eligibile | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Cheltuieli neeligibile | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Condiții critice | Dreptul asupra amplasamentului, consumul, hotărârile și avizele se verifică în documentația apelului. |
-| Documente | [Catalogul oficial MySMIS2021](https://resurse.mysmis2021.gov.ro/ords/repo_bo/r/mysmis-2021/finantari-programe-2021-2027) |
-| Indicatori | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Selecție / punctaj | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Ajutor de stat / de minimis | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Implementare | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Monitorizare | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Surse oficiale | [Catalogul oficial MySMIS2021](https://resurse.mysmis2021.gov.ro/ords/repo_bo/r/mysmis-2021/finantari-programe-2021-2027) |
-| Latest official update | 2026-08-18 — [MySMIS2021: apelul de autoconsum din surse regenerabile pentru entități publice este marcat FINALIZAT](https://resurse.mysmis2021.gov.ro/ords/repo_bo/r/mysmis-2021/finantari-programe-2021-2027) |
-| verifiedAt | 2026-08-29 |
-| Pagină oficială program/apel | [Catalogul oficial MySMIS2021](https://resurse.mysmis2021.gov.ro/ords/repo_bo/r/mysmis-2021/finantari-programe-2021-2027) (`program`, verificat 2026-08-29) |
-| Ghid | — Neidentificat separat în sursele oficiale înregistrate la 2026-08-29; nu se presupune inexistența documentului. |
-| Anexe | — Neidentificat separat în sursele oficiale înregistrate la 2026-08-29; nu se presupune inexistența documentului. |
-| Schemă / ordin | [Referința oficială MySMIS pentru apelul destinat entităților publice](https://resurse.mysmis2021.gov.ro/ords/repo_bo/r/mysmis-2021/finantari-programe-2021-2027) (`guide:autoconsum-publici`, verificat 2026-08-29) |
-| Anunț sesiune | — Neidentificat separat în sursele oficiale înregistrate la 2026-08-29; nu se presupune inexistența documentului. |
-| Corrigenda / erate | — Neidentificat separat în sursele oficiale înregistrate la 2026-08-29; nu se presupune inexistența documentului. |
-| Clarificări | — Neidentificat separat în sursele oficiale înregistrate la 2026-08-29; nu se presupune inexistența documentului. |
-| Sursă primară în registry-ul operațional | [MySMIS2021: apelul de autoconsum din surse regenerabile pentru entități publice este marcat FINALIZAT](https://resurse.mysmis2021.gov.ro/ords/repo_bo/r/mysmis-2021/finantari-programe-2021-2027) (verificat 2026-08-29) |
+| CAEN | Documentația oficială publicată și verificată la 09.09.2026 nu stabilește încă această informație. |
+| Prag SO | Documentația oficială publicată și verificată la 09.09.2026 nu stabilește încă această informație. |
+| Investiții | Documentația oficială publicată și verificată la 09.09.2026 nu stabilește încă această informație. |
+| Cheltuieli eligibile | Documentația oficială publicată și verificată la 09.09.2026 nu stabilește încă această informație. |
+| Cheltuieli neeligibile | Documentația oficială publicată și verificată la 09.09.2026 nu stabilește încă această informație. |
+| Condiții critice | Proiectul include obligatoriu o capacitate nouă solară și stocare integrată; proiectele numai cu baterii sau numai cu pompe de căldură nu sunt eligibile.; Energia produsă este destinată 100% autoconsumului, iar energia stocată provine 100% din instalația solară proprie.; Sistemul de stocare asigură o durată de 2–4 ore și o putere nominală cel puțin egală cu puterea centralei fotovoltaice.; Costul eligibil este plafonat la 900.000 EUR/MW fără pompe de căldură și la 1.100.000 EUR/MW pentru proiectele care includ pompe de căldură eligibile.; Investiția trebuie finalizată și pusă în funcțiune până la 31.12.2029. |
+| Documente | [Anunțul Ministerului Energiei și ghidul actualizat la 23.06.2026](https://energie.gov.ro/anunt-privind-actualizarea-la-data-de-23-06-2026-a-ghidului-solicitantului-privind-sprijinirea-investitiilor-in-noi-capacitati-de-producere-a-energiei-electrice-produsa-din-surse-regenerabile-de-energ/) |
+| Indicatori | Documentația oficială publicată și verificată la 09.09.2026 nu stabilește încă această informație. |
+| Selecție / punctaj | Documentația oficială publicată și verificată la 09.09.2026 nu stabilește încă această informație. |
+| Ajutor de stat / de minimis | Documentația oficială publicată și verificată la 09.09.2026 nu stabilește încă această informație. |
+| Implementare | Documentația oficială publicată și verificată la 09.09.2026 nu stabilește încă această informație. |
+| Monitorizare | Documentația oficială publicată și verificată la 09.09.2026 nu stabilește încă această informație. |
+| Surse oficiale | [Anunțul Ministerului Energiei și ghidul actualizat la 23.06.2026](https://energie.gov.ro/anunt-privind-actualizarea-la-data-de-23-06-2026-a-ghidului-solicitantului-privind-sprijinirea-investitiilor-in-noi-capacitati-de-producere-a-energiei-electrice-produsa-din-surse-regenerabile-de-energ/) |
+| Latest official update | 2026-09-09 — [Ghidul solicitantului și anexele actualizate la 23.06.2026](https://energie.gov.ro/anunt-privind-actualizarea-la-data-de-23-06-2026-a-ghidului-solicitantului-privind-sprijinirea-investitiilor-in-noi-capacitati-de-producere-a-energiei-electrice-produsa-din-surse-regenerabile-de-energ/) |
+| verifiedAt | 2026-09-09 |
+| Pagină oficială program/apel | [Anunțul Ministerului Energiei și ghidul actualizat la 23.06.2026](https://energie.gov.ro/anunt-privind-actualizarea-la-data-de-23-06-2026-a-ghidului-solicitantului-privind-sprijinirea-investitiilor-in-noi-capacitati-de-producere-a-energiei-electrice-produsa-din-surse-regenerabile-de-energ/) (`program`, verificat 2026-09-09) |
+| Ghid | [Ghidul solicitantului PC1 Autoconsum pentru entități publice](https://energie.gov.ro/anunt-privind-actualizarea-la-data-de-23-06-2026-a-ghidului-solicitantului-privind-sprijinirea-investitiilor-in-noi-capacitati-de-producere-a-energiei-electrice-produsa-din-surse-regenerabile-de-energ/) (`guide:autoconsum-publici`, verificat 2026-09-09) |
+| Anexe | [Pachetul oficial cu ghidul și anexele publicat de Ministerul Energiei](https://energie.gov.ro/anunt-privind-actualizarea-la-data-de-23-06-2026-a-ghidului-solicitantului-privind-sprijinirea-investitiilor-in-noi-capacitati-de-producere-a-energiei-electrice-produsa-din-surse-regenerabile-de-energ/) (`guide:autoconsum-publici`, verificat 2026-09-09) |
+| Schemă / ordin | — Neidentificat separat în sursele oficiale înregistrate la 2026-09-09; nu se presupune inexistența documentului. |
+| Anunț sesiune | [Calendarul oficial anunțat pentru 11.09–06.11.2026](https://energie.gov.ro/anunt-privind-actualizarea-la-data-de-23-06-2026-a-ghidului-solicitantului-privind-sprijinirea-investitiilor-in-noi-capacitati-de-producere-a-energiei-electrice-produsa-din-surse-regenerabile-de-energ/) (`program`, verificat 2026-09-09) |
+| Corrigenda / erate | — Neidentificat separat în sursele oficiale înregistrate la 2026-09-09; nu se presupune inexistența documentului. |
+| Clarificări | — Neidentificat separat în sursele oficiale înregistrate la 2026-09-09; nu se presupune inexistența documentului. |
+| Sursă primară în registry-ul operațional | [Ghidul solicitantului și anexele actualizate la 23.06.2026](https://energie.gov.ro/anunt-privind-actualizarea-la-data-de-23-06-2026-a-ghidului-solicitantului-privind-sprijinirea-investitiilor-in-noi-capacitati-de-producere-a-energiei-electrice-produsa-din-surse-regenerabile-de-energ/) (verificat 2026-09-09) |
 | Chei surse repo | `autoconsum-publici` |
-| Notes | Apelul este marcat FINALIZAT în MySMIS; registry-ul local nu separă actul normativ de pagina catalogului. |
+| Notes | Ghidul tehnic este versiunea actualizată la 23.06.2026. La 09.09.2026 apelul era programat să se deschidă la 11.09.2026; pagina AFIR se reverifică înaintea depunerii. |
+
+## `fondul-modernizare-pc1-stocare-entitati-publice` — Sprijinirea investițiilor în noi capacități de stocare a energiei regenerabile – entități publice
+
+| Câmp | Valoare auditabilă |
+|---|---|
+| Stable program ID | `fondul-modernizare-pc1-stocare-entitati-publice` |
+| Denumire oficială | Sprijinirea investițiilor în noi capacități de stocare a energiei regenerabile – entități publice |
+| Acronim | PC1 |
+| Autoritate | Ministerul Energiei |
+| Fond / program | Fondul pentru Modernizare |
+| Temei / document | Ghidul solicitantului și anexele actualizate la 23.06.2026 — [document oficial](https://energie.gov.ro/anunt-privind-actualizarea-la-data-de-23-06-2026-a-ghidului-solicitantului-privind-sprijinirea-investitiilor-in-noi-capacitati-de-producere-a-energiei-electrice-produsa-din-surse-regenerabile-de-energ/) |
+| Stadiu | SCHEDULED — Apel lansat – depuneri 11 septembrie–6 noiembrie 2026 |
+| Sesiune | [Calendarul oficial anunțat pentru 11.09–06.11.2026](https://energie.gov.ro/anunt-privind-actualizarea-la-data-de-23-06-2026-a-ghidului-solicitantului-privind-sprijinirea-investitiilor-in-noi-capacitati-de-producere-a-energiei-electrice-produsa-din-surse-regenerabile-de-energ/) (`program`, verificat 2026-09-09) |
+| Data deschiderii | 11.09.2026 |
+| Deadline | 06.11.2026 |
+| Prelungiri | Documentația oficială publicată și verificată la 09.09.2026 nu stabilește încă această informație. |
+| Buget | 150.000.000 EUR |
+| Grant minim | Documentația oficială publicată și verificată la 09.09.2026 nu stabilește încă această informație. |
+| Grant maxim | 10.000.000 EUR / beneficiar |
+| Intensitate | rate: 100; scope: maximum din cheltuielile eligibile, conform ghidului |
+| Cofinanțare | Cheltuielile neeligibile, TVA deductibilă și orice depășire a plafonului rămân în sarcina beneficiarului. |
+| Beneficiari | Unități administrativ-teritoriale și subdiviziunile acestora; Unități din apărare, ordine publică, siguranță națională și administrația penitenciară; Spitale și centre sociale ori de îngrijiri paliative finanțate integral din fonduri publice; Instituții publice, culte recunoscute, universități de stat, institute publice de cercetare și asociații de dezvoltare intercomunitară, în condițiile ghidului |
+| Regiune | Național |
+| CAEN | Documentația oficială publicată și verificată la 09.09.2026 nu stabilește încă această informație. |
+| Prag SO | Documentația oficială publicată și verificată la 09.09.2026 nu stabilește încă această informație. |
+| Investiții | Documentația oficială publicată și verificată la 09.09.2026 nu stabilește încă această informație. |
+| Cheltuieli eligibile | Documentația oficială publicată și verificată la 09.09.2026 nu stabilește încă această informație. |
+| Cheltuieli neeligibile | Documentația oficială publicată și verificată la 09.09.2026 nu stabilește încă această informație. |
+| Condiții critice | Capacitatea nouă de stocare se amplasează în spatele contorului și se conectează direct la o instalație regenerabilă existentă.; Este eligibilă o singură cerere de finanțare per solicitant.; Durata echivalentă a stocării trebuie să fie între 2 și 4 ore, raportată la puterea instalată a centralei existente.; Investiția trebuie finalizată și pusă în funcțiune până la 31.12.2029. |
+| Documente | [Anunțul Ministerului Energiei și ghidul actualizat la 23.06.2026](https://energie.gov.ro/anunt-privind-actualizarea-la-data-de-23-06-2026-a-ghidului-solicitantului-privind-sprijinirea-investitiilor-in-noi-capacitati-de-producere-a-energiei-electrice-produsa-din-surse-regenerabile-de-energ/) |
+| Indicatori | Documentația oficială publicată și verificată la 09.09.2026 nu stabilește încă această informație. |
+| Selecție / punctaj | Documentația oficială publicată și verificată la 09.09.2026 nu stabilește încă această informație. |
+| Ajutor de stat / de minimis | Documentația oficială publicată și verificată la 09.09.2026 nu stabilește încă această informație. |
+| Implementare | Documentația oficială publicată și verificată la 09.09.2026 nu stabilește încă această informație. |
+| Monitorizare | Documentația oficială publicată și verificată la 09.09.2026 nu stabilește încă această informație. |
+| Surse oficiale | [Anunțul Ministerului Energiei și ghidul actualizat la 23.06.2026](https://energie.gov.ro/anunt-privind-actualizarea-la-data-de-23-06-2026-a-ghidului-solicitantului-privind-sprijinirea-investitiilor-in-noi-capacitati-de-producere-a-energiei-electrice-produsa-din-surse-regenerabile-de-energ/) |
+| Latest official update | 2026-09-09 — [Ghidul solicitantului și anexele actualizate la 23.06.2026](https://energie.gov.ro/anunt-privind-actualizarea-la-data-de-23-06-2026-a-ghidului-solicitantului-privind-sprijinirea-investitiilor-in-noi-capacitati-de-producere-a-energiei-electrice-produsa-din-surse-regenerabile-de-energ/) |
+| verifiedAt | 2026-09-09 |
+| Pagină oficială program/apel | [Anunțul Ministerului Energiei și ghidul actualizat la 23.06.2026](https://energie.gov.ro/anunt-privind-actualizarea-la-data-de-23-06-2026-a-ghidului-solicitantului-privind-sprijinirea-investitiilor-in-noi-capacitati-de-producere-a-energiei-electrice-produsa-din-surse-regenerabile-de-energ/) (`program`, verificat 2026-09-09) |
+| Ghid | [Ghidul solicitantului PC1 Stocare pentru entități publice](https://energie.gov.ro/anunt-privind-actualizarea-la-data-de-23-06-2026-a-ghidului-solicitantului-privind-sprijinirea-investitiilor-in-noi-capacitati-de-producere-a-energiei-electrice-produsa-din-surse-regenerabile-de-energ/) (`guide:fm-pc1-stocare-publici`, verificat 2026-09-09) |
+| Anexe | [Pachetul oficial cu ghidul și anexele publicat de Ministerul Energiei](https://energie.gov.ro/anunt-privind-actualizarea-la-data-de-23-06-2026-a-ghidului-solicitantului-privind-sprijinirea-investitiilor-in-noi-capacitati-de-producere-a-energiei-electrice-produsa-din-surse-regenerabile-de-energ/) (`guide:fm-pc1-stocare-publici`, verificat 2026-09-09) |
+| Schemă / ordin | — Neidentificat separat în sursele oficiale înregistrate la 2026-09-09; nu se presupune inexistența documentului. |
+| Anunț sesiune | [Calendarul oficial anunțat pentru 11.09–06.11.2026](https://energie.gov.ro/anunt-privind-actualizarea-la-data-de-23-06-2026-a-ghidului-solicitantului-privind-sprijinirea-investitiilor-in-noi-capacitati-de-producere-a-energiei-electrice-produsa-din-surse-regenerabile-de-energ/) (`program`, verificat 2026-09-09) |
+| Corrigenda / erate | — Neidentificat separat în sursele oficiale înregistrate la 2026-09-09; nu se presupune inexistența documentului. |
+| Clarificări | — Neidentificat separat în sursele oficiale înregistrate la 2026-09-09; nu se presupune inexistența documentului. |
+| Sursă primară în registry-ul operațional | [Ghidul solicitantului și anexele actualizate la 23.06.2026](https://energie.gov.ro/anunt-privind-actualizarea-la-data-de-23-06-2026-a-ghidului-solicitantului-privind-sprijinirea-investitiilor-in-noi-capacitati-de-producere-a-energiei-electrice-produsa-din-surse-regenerabile-de-energ/) (verificat 2026-09-09) |
+| Chei surse repo | `fm-pc1-stocare-publici` |
+| Notes | Ghidul tehnic este versiunea actualizată la 23.06.2026. La 09.09.2026 apelul era programat să se deschidă la 11.09.2026; pagina AFIR se reverifică înaintea depunerii. |
 
 ## `pro-infra` — Schema de ajutor de stat PRO INFRA
 

@@ -16,6 +16,312 @@ const REGISTRY = JSON.parse(fs.readFileSync(path.join(ROOT, "config", "seo-progr
 const FOOTER_CONTACT = renderFooterContact(loadLegalIdentity());
 
 const PAGE_CONTENT = {
+  "autoconsum-institutii-publice": {
+    "h1": "PC1 Autoconsum 2026 pentru entități publice – producție solară și stocare integrată",
+    "eyebrow": "Fondul pentru Modernizare · Program-cheie 1",
+    "lead": "Finanțare pentru capacități fotovoltaice noi cu baterii integrate, destinate integral autoconsumului instituțiilor și entităților publice eligibile.",
+    "metrics": [
+      [
+        "500 mil. €",
+        "buget total al apelului"
+      ],
+      [
+        "max. 10 mil. €",
+        "ajutor per beneficiar"
+      ],
+      [
+        "până la 100%",
+        "din cheltuielile eligibile"
+      ],
+      [
+        "11.09–06.11.2026",
+        "calendarul anunțat al depunerii"
+      ]
+    ],
+    "answer": "PC1 Autoconsum finanțează capacități noi de producere a energiei solare cu stocare integrată pentru entități publice. Bugetul este de 500 milioane euro, iar ajutorul poate ajunge la 10 milioane euro pe beneficiar și la 100% din cheltuielile eligibile, în limitele tehnice și valorice ale ghidului. Bateriile sunt obligatorii și trebuie dimensionate pentru 2–4 ore. La 9 septembrie 2026, depunerea era programată pentru 11 septembrie–6 noiembrie 2026, nu încă deschisă.",
+    "fit": [
+      "Solicitantul se încadrează într-o categorie publică eligibilă și poate adopta actele interne necesare proiectului.",
+      "Există un amplasament cu drepturi clare, consum documentat și condiții realiste pentru racordare, montaj și autorizare.",
+      "Proiectul propune o capacitate solară nouă, stocare integrată și un consum propriu care susține dimensionarea tehnică."
+    ],
+    "caution": [
+      "Proiectele numai cu baterii, numai cu pompe de căldură, de înlocuire sau de extindere necontorizată separat nu sunt eligibile pe această linie.",
+      "Energia produsă trebuie utilizată 100% pentru autoconsum, iar energia stocată trebuie să provină 100% din instalația solară proprie.",
+      "La data verificării, pagina operațională AFIR pentru sesiune nu era încă publicată; calendarul și eventualele clarificări se reconfirmă înainte de transmitere."
+    ],
+    "investments": [
+      [
+        "Capacitate fotovoltaică nouă",
+        "Panouri, invertoare, protecții, măsurare și componentele necesare unei instalații noi, contorizate și monitorizate separat."
+      ],
+      [
+        "Stocare integrată obligatorie",
+        "Baterii noi dimensionate pentru o durată echivalentă de minimum două și maximum patru ore."
+      ],
+      [
+        "Pompe de căldură, opțional",
+        "Echipamentele și lucrările de instalare pot fi eligibile în condițiile ghidului; forajele asociate rămân neeligibile."
+      ],
+      [
+        "Montaj și punere în funcțiune",
+        "Lucrările și serviciile indispensabile instalării, conectării, monitorizării și punerii în funcțiune a investiției."
+      ]
+    ],
+    "documents": [
+      [
+        "Eligibilitatea entității",
+        "Actul de înființare, statutul juridic, reprezentarea legală, hotărârile de aprobare și documentele fiscale cerute de ghid."
+      ],
+      [
+        "Consumul și dimensionarea",
+        "Ultimele 12 facturi, profilul consumului, auditul electroenergetic când există consumatori viitori și calculele AC.1–AC.4 din studiul de fezabilitate."
+      ],
+      [
+        "Amplasamentul",
+        "Extras de carte funciară și dreptul de proprietate, administrare, concesiune ori superficie, împreună cu verificarea sarcinilor și litigiilor."
+      ],
+      [
+        "Studiul de fezabilitate",
+        "Documentație conform HG nr. 907/2016, nu mai veche de doi ani, elaborată cu participarea personalului autorizat ANRE în instalații electrice."
+      ],
+      [
+        "Buget, avize și mediu",
+        "Deviz, buget indicativ, sursele pentru cheltuielile neeligibile, documentele de mediu și demersurile pentru avizul tehnic de racordare."
+      ]
+    ],
+    "steps": [
+      "Confirmă categoria solicitantului, actele de aprobare și dreptul asupra amplasamentului.",
+      "Corelează consumul cu puterea fotovoltaică și cu bateria de 2–4 ore în studiul de fezabilitate.",
+      "Construiește bugetul în limitele de 900.000 EUR/MW sau 1.100.000 EUR/MW când proiectul include pompe de căldură.",
+      "Reverifică anunțul sesiunii AFIR, ghidul, anexele și clarificările înainte de depunere."
+    ],
+    "extraSources": [
+      [
+        "Ministerul Energiei — pachetul actualizat al ghidului și anexelor",
+        "https://energie.gov.ro/wp-content/uploads/2026/06/Ghidul-solicitantului-Autoconsum-EP_23.06.rar"
+      ],
+      [
+        "Portalul Legislativ — forma consolidată a ghidului PC1 pentru autoconsum public",
+        "https://legislatie.just.ro/Public/DetaliiDocument/276306"
+      ],
+      [
+        "AFIR — lista oficială a sesiunilor",
+        "https://depunerepspac.afir.ro/Sesiune/Lista"
+      ]
+    ],
+    "faqs": [
+      [
+        "Cine poate aplica la PC1 Autoconsum pentru entități publice?",
+        "Pot aplica UAT-uri și subdiviziunile lor, unități din apărare și administrația penitenciară, spitale publice, instituții publice, culte recunoscute, universități de stat, institute publice de cercetare, asociații de dezvoltare intercomunitară și centre sociale ori paliative finanțate integral din fonduri publice, în condițiile ghidului."
+      ],
+      [
+        "Cât este finanțarea?",
+        "Ajutorul poate acoperi până la 100% din cheltuielile eligibile, fără a depăși 10 milioane euro pe beneficiar și plafoanele de 900.000 EUR/MW fără pompe de căldură, respectiv 1.100.000 EUR/MW cu pompe de căldură."
+      ],
+      [
+        "Este obligatorie bateria?",
+        "Da. Proiectul trebuie să includă stocare integrată, cu putere nominală cel puțin egală cu puterea centralei fotovoltaice și cu o durată echivalentă de 2–4 ore."
+      ],
+      [
+        "Sunt eligibile pompele de căldură?",
+        "Da, ca parte a proiectului de producție solară și stocare, în condițiile ghidului. Un proiect numai cu pompe de căldură nu este eligibil, iar forajele asociate nu sunt cheltuieli eligibile."
+      ],
+      [
+        "Poate fi folosită energia și pentru livrare în rețea?",
+        "Ghidul cere ca proiectul să fie destinat 100% autoconsumului. Dimensionarea se justifică prin consumul de referință și, dacă este cazul, prin consumatori viitori documentați."
+      ],
+      [
+        "Când se depun proiectele?",
+        "Calendarul anunțat este 11 septembrie–6 noiembrie 2026, cu depunere prin AFIR și în limita bugetului. Înainte de transmitere trebuie verificat anunțul operațional al sesiunii."
+      ],
+      [
+        "Ce vechime poate avea studiul de fezabilitate?",
+        "Studiul de fezabilitate trebuie să fie conform HG nr. 907/2016 și să nu fie mai vechi de doi ani, iar echipa trebuie să includă personal autorizat ANRE în domeniul instalațiilor electrice."
+      ],
+      [
+        "Până când trebuie finalizată investiția?",
+        "Instalarea, conectarea la rețea și punerea în funcțiune trebuie finalizate cel târziu la 31 decembrie 2029."
+      ]
+    ],
+    "comparison": {
+      "title": "Ce este obligatoriu și ce rămâne opțional?",
+      "headers": [
+        "Componentă",
+        "Regula ghidului",
+        "Observație"
+      ],
+      "rows": [
+        [
+          "Producție solară nouă",
+          "Obligatorie",
+          "Trebuie contorizată și monitorizată separat."
+        ],
+        [
+          "Stocare integrată",
+          "Obligatorie",
+          "Putere cel puțin egală cu PV și durată de 2–4 ore."
+        ],
+        [
+          "Pompe de căldură",
+          "Opționale",
+          "Sunt eligibile în proiect; forajele nu sunt eligibile."
+        ]
+      ]
+    }
+  },
+  "fondul-modernizare-pc1-stocare-entitati-publice": {
+    "h1": "PC1 Stocare 2026 pentru entități publice – baterii în spatele contorului",
+    "eyebrow": "Fondul pentru Modernizare · Program-cheie 1",
+    "lead": "Finanțare pentru capacități noi de stocare conectate direct la instalații regenerabile existente, astfel încât energia produsă local să fie folosită mai eficient pentru consumul propriu.",
+    "metrics": [
+      [
+        "150 mil. €",
+        "buget total al apelului"
+      ],
+      [
+        "max. 10 mil. €",
+        "ajutor per beneficiar"
+      ],
+      [
+        "100%",
+        "din cheltuielile eligibile"
+      ],
+      [
+        "11.09–06.11.2026",
+        "calendarul anunțat al depunerii"
+      ]
+    ],
+    "answer": "PC1 Stocare finanțează sisteme noi de baterii în spatele contorului, conectate direct la instalații regenerabile existente ale entităților publice. Bugetul este de 150 milioane euro, iar finanțarea este de 100% din cheltuielile eligibile, în limita a 10 milioane euro pe beneficiar. Durata echivalentă a stocării trebuie să fie de 2–4 ore. La 9 septembrie 2026, depunerea era programată pentru 11 septembrie–6 noiembrie 2026, nu încă deschisă.",
+    "fit": [
+      "Entitatea publică se află într-o categorie eligibilă și deține o instalație de producere a energiei din surse regenerabile deja existentă.",
+      "Bateria poate fi conectată în spatele aceluiași contor, în cadrul instalației de utilizare a locului de producere sau de producere și consum.",
+      "Puterea centralei existente, consumul și profilul de producție susțin o baterie dimensionată pentru 2–4 ore."
+    ],
+    "caution": [
+      "Această linie nu finanțează o baterie stand-alone destinată pieței și nici construirea unei centrale regenerabile noi.",
+      "Nu sunt eligibile înlocuirea integrală a unei stocări existente, echipamentele fără marcaj CE sau tehnologiile pe bază de plumb, NiCd ori NiMH.",
+      "Este permis un singur proiect per solicitant, iar instalația existentă și punctul de conexiune trebuie documentate fără ambiguități."
+    ],
+    "investments": [
+      [
+        "Baterii noi în spatele contorului",
+        "Echipamente noi de stocare conectate direct la instalația regenerabilă existentă și la locul de producere sau de producere și consum."
+      ],
+      [
+        "Conversie, protecție și control",
+        "Invertoare, sisteme de management al bateriei, protecții, măsurare și monitorizare necesare funcționării sigure."
+      ],
+      [
+        "Montaj și punere în funcțiune",
+        "Lucrările și serviciile indispensabile instalării, testării, conectării și punerii în funcțiune."
+      ],
+      [
+        "Consultanță și management",
+        "Cheltuielile pot fi eligibile în condițiile și proporțiile prevăzute de ghid, cu trasabilitate față de tranșele proiectului."
+      ]
+    ],
+    "documents": [
+      [
+        "Solicitantul și aprobările",
+        "Actul de înființare, reprezentarea, hotărârea de aprobare, situația fiscală și documentele specifice categoriei publice."
+      ],
+      [
+        "Instalația regenerabilă existentă",
+        "Documentele tehnice și juridice ale centralei, puterea instalată, punctul de racordare, producția și legătura directă cu bateria propusă."
+      ],
+      [
+        "Studiul de fezabilitate",
+        "Documentație conform HG nr. 907/2016, nu mai veche de doi ani, cu personal autorizat ANRE și calculele pentru energia utilă și durata de 2–4 ore."
+      ],
+      [
+        "Amplasamentul",
+        "Extras de carte funciară și dreptul de proprietate, administrare, concesiune ori superficie, fără sarcini sau litigii care împiedică investiția."
+      ],
+      [
+        "Racordare, mediu și buget",
+        "ATR ori dovada demersurilor la etapa cerută, documentele de mediu, devizul general, bugetul indicativ și sursele pentru costurile neeligibile."
+      ]
+    ],
+    "steps": [
+      "Confirmă eligibilitatea entității și documentele instalației regenerabile existente.",
+      "Dimensionează bateria la 2–4 ore pe baza puterii centralei, a producției și a consumului propriu.",
+      "Verifică amplasamentul, soluția de conectare, bugetul și calendarul până la punerea în funcțiune.",
+      "Reverifică anunțul sesiunii AFIR, ghidul, anexele și clarificările înainte de depunere."
+    ],
+    "extraSources": [
+      [
+        "Ministerul Energiei — pachetul actualizat al ghidului și anexelor",
+        "https://energie.gov.ro/wp-content/uploads/2026/06/Ghidul-solicitantului-Stocare-EP.zip"
+      ],
+      [
+        "AFIR — lista oficială a sesiunilor",
+        "https://depunerepspac.afir.ro/Sesiune/Lista"
+      ],
+      [
+        "Portalul Legislativ — cadrul Fondului pentru Modernizare",
+        "https://legislatie.just.ro/Public/DetaliiDocument/309282"
+      ]
+    ],
+    "faqs": [
+      [
+        "Cine poate aplica la PC1 Stocare pentru entități publice?",
+        "Pot aplica UAT-uri și subdiviziunile lor, unități din apărare și administrația penitenciară, spitale publice, instituții publice, culte recunoscute, universități de stat, institute publice de cercetare, asociații de dezvoltare intercomunitară și centre sociale ori paliative finanțate integral din fonduri publice, în condițiile ghidului."
+      ],
+      [
+        "Cât este finanțarea?",
+        "Finanțarea este de 100% din cheltuielile eligibile, fără a depăși 10 milioane euro pe beneficiar. Bugetul total estimat al apelului este de 150 milioane euro."
+      ],
+      [
+        "Este necesară o instalație regenerabilă existentă?",
+        "Da. Sistemul nou de stocare trebuie conectat direct la o instalație existentă de producere a energiei din surse regenerabile."
+      ],
+      [
+        "Ce înseamnă stocare în spatele contorului?",
+        "Bateria este conectată în instalația de utilizare a aceluiași loc de producere sau de producere și consum, pentru optimizarea consumului local, nu ca activ stand-alone racordat separat la rețea."
+      ],
+      [
+        "Ce capacitate trebuie să aibă bateria?",
+        "Energia utilă a bateriei trebuie să asigure o durată echivalentă de minimum două și maximum patru ore, raportată la puterea instalată eligibilă a centralei existente."
+      ],
+      [
+        "Câte proiecte poate depune o instituție?",
+        "Ghidul permite un singur proiect per solicitant. Entitatea trebuie să aleagă și să dimensioneze coerent investiția înainte de depunere."
+      ],
+      [
+        "Când se depun proiectele?",
+        "Calendarul anunțat este 11 septembrie–6 noiembrie 2026, cu depunere prin AFIR și în limita bugetului. Înainte de transmitere trebuie verificat anunțul operațional al sesiunii."
+      ],
+      [
+        "Până când trebuie finalizată investiția?",
+        "Instalarea, conectarea și punerea în funcțiune trebuie finalizate cel târziu la 31 decembrie 2029. Contractul include apoi o perioadă de monitorizare de cinci ani de la ultima plată."
+      ]
+    ],
+    "comparison": {
+      "title": "PC1 Stocare sau PC1 Autoconsum?",
+      "headers": [
+        "Situația instituției",
+        "Linia potrivită",
+        "Investiția centrală"
+      ],
+      "rows": [
+        [
+          "Are deja instalație regenerabilă eligibilă",
+          "PC1 Stocare",
+          "Baterie nouă în spatele contorului"
+        ],
+        [
+          "Nu are capacitatea solară necesară",
+          "PC1 Autoconsum",
+          "Producție solară nouă cu stocare integrată"
+        ],
+        [
+          "Urmărește baterie stand-alone pentru piață",
+          "Niciuna dintre liniile publice",
+          "Se analizează separat schema pentru întreprinderi"
+        ]
+      ]
+    }
+  },
   "diaspora-investeste-acasa": {
     "eyebrow": "Antreprenoriat · investiții în România",
     "lead": "Programul aprobat combină un credit pentru investiții, garanția BID și un grant. Verifică vechimea firmei, legătura cu diaspora și contribuția înainte de discuția cu banca.",
@@ -145,6 +451,7 @@ const PAGE_CONTENT = {
     }
   },
   "e-drive": {
+    "h1": "e-DRIVE 2026 – finanțare pentru vehicule electrice M1, M2 și M3",
     "eyebrow": "Transport rutier · vehicule cu emisii zero",
     "lead": "Schema e-DRIVE explicată pe cele două măsuri: înlocuirea flotelor IMM-urilor și a vehiculelor operatorilor de transport rutier de persoane, cu plafoane și criterii diferite.",
     "metrics": [
@@ -295,6 +602,7 @@ const PAGE_CONTENT = {
     }
   },
   "e-mobility-ro": {
+    "h1": "e-Mobility RO 2026 – finanțare pentru stații de reîncărcare",
     "eyebrow": "Infrastructură rutieră · reîncărcare electrică",
     "lead": "e-Mobility RO este prezentat ca proiect de infrastructură, nu ca simplă achiziție de stații: amplasamentul, racordarea, accesul public și configurația tehnică decid fezabilitatea.",
     "metrics": [
@@ -587,7 +895,7 @@ ${HEADER}
   <section class="program-hero" aria-labelledby="program-title">
     <div class="program-hero__content">
       <nav class="program-breadcrumbs" aria-label="Breadcrumb"><a href="/">Acasă</a><span>/</span><a href="/fonduri-europene">Programe</a><span>/</span><span aria-current="page">${e(program.shortName)}</span></nav>
-      <p class="program-eyebrow">${e(content.eyebrow)}</p><h1 id="program-title">${e(program.name)}</h1><p class="program-lead">${e(content.lead)}</p>
+      <p class="program-eyebrow">${e(content.eyebrow)}</p><h1 id="program-title">${e(content.h1 || program.name)}</h1><p class="program-lead">${e(content.lead)}</p>
       <div class="program-status" data-program-status="${e(program.status)}"><span aria-hidden="true"></span>${e(program.statusLabel)}</div>
       <div class="program-hero__actions"><a class="program-button program-button--primary" href="/contact#program_slug=${e(program.slug)}">Verifică proiectul</a><a class="program-button" href="#raspuns-rapid">Vezi condițiile</a></div>
     </div><div class="program-hero__visual">${renderSvg(program.slug)}</div>

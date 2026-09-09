@@ -75,7 +75,7 @@ for (const [slug, content] of Object.entries(showcaseGenerator.PAGE_CONTENT)) {
 }
 
 assert.deepEqual(breadcrumbRouteEntries("/"), [], "homepage nu trebuie să aibă breadcrumb");
-assert.equal(inventory.routes.length, 105, "schimbarea inventarului public necesită review explicit");
+assert.equal(inventory.routes.length, 106, "schimbarea inventarului public necesită review explicit");
 
 const familyRoutes = new Set(familyHubs.map((hub) => normalizeRoute(hub.route)));
 assert.equal(familyRoutes.size, 5, "schimbarea taxonomiei de familii necesită review explicit");
@@ -84,7 +84,7 @@ for (const route of familyRoutes) {
 }
 
 const publicPrograms = programs.filter((program) => canonicalRoutes.has(normalizeRoute(program.pageUrl)));
-assert.equal(publicPrograms.length, 24, "schimbarea numărului de programe publice necesită review explicit");
+assert.equal(publicPrograms.length, 25, "schimbarea numărului de programe publice necesită review explicit");
 for (const program of publicPrograms) {
   const route = normalizeRoute(program.pageUrl);
   const family = normalizeRoute(program.discovery?.parentHub);
@@ -165,8 +165,8 @@ if (LIVE) {
 } else {
   const root = USE_DIST ? DIST : ROOT;
   const audit = auditBreadcrumbs(root, { deployment: USE_DIST });
-  assert.equal(audit.summary.routeCount, 105, "auditul trebuie să acopere toate rutele publice, inclusiv /gdpr");
-  if (!USE_DIST) assert.equal(audit.summary.sourceCount, 113, "auditul local trebuie să acopere sursele canonical și sursele efective de deploy");
+  assert.equal(audit.summary.routeCount, 106, "auditul trebuie să acopere toate rutele publice, inclusiv /gdpr");
+  if (!USE_DIST) assert.equal(audit.summary.sourceCount, 114, "auditul local trebuie să acopere sursele canonical și sursele efective de deploy");
   assert.equal(audit.summary.fail, 0, audit.results
     .filter((result) => result.status === "FAIL")
     .map((result) => `${result.route}: ${result.issues.join("; ")}`)

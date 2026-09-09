@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "reviewedAt": "2026-08-24",
+  "reviewedAt": "2026-09-09",
   "excludedRoutes": [],
   "evidence": {
     "gscPages": "reports/gsc-page-priorities-2026-06-01.csv",
@@ -152,6 +152,26 @@
       "href": "/programul-tranzitie-justa-intrebari-documente",
       "anchor": "verifică întrebările și documentele pentru PTJ",
       "explanation": "Corelează județul, solicitantul și investiția cu apelul concret al programului."
+    },
+    "e_drive_program": {
+      "href": "/e-drive",
+      "anchor": "compară schema e-DRIVE pentru vehicule electrice",
+      "explanation": "Separă achiziția vehiculelor electrice de investiția în infrastructura publică de reîncărcare."
+    },
+    "e_mobility_program": {
+      "href": "/e-mobility",
+      "anchor": "compară e-Mobility RO pentru stații de reîncărcare",
+      "explanation": "Verifică alternativa dedicată infrastructurii de încărcare de pe rețeaua rutieră eligibilă."
+    },
+    "pc1_public_autoconsum": {
+      "href": "/autoconsum-public-fotovoltaice-institutii-publice",
+      "anchor": "compară PC1 Autoconsum pentru entități publice",
+      "explanation": "Alege producția solară cu stocare integrată atunci când instituția nu are deja capacitatea regenerabilă necesară."
+    },
+    "pc1_public_storage": {
+      "href": "/fondul-modernizare-pc1-stocare-entitati-publice",
+      "anchor": "compară PC1 Stocare pentru entități publice",
+      "explanation": "Alege linia de baterii în spatele contorului când instituția are deja o instalație regenerabilă eligibilă."
     }
   },
   "programs": {
@@ -216,7 +236,7 @@
     },
     "autoconsum-institutii-publice": {
       "instrument": "eligibility_check",
-      "comparison": "cofinancing_guide",
+      "comparison": "pc1_public_storage",
       "conversionAnchor": "Verifică proiectul de autoconsum al instituției"
     },
     "pro-infra": {
@@ -247,13 +267,18 @@
     },
     "e-drive": {
       "instrument": "eligibility_check",
-      "comparison": "documents_guide",
+      "comparison": "e_mobility_program",
       "conversionAnchor": "Verifică proiectul de flotă pentru e-DRIVE"
     },
     "e-mobility-ro": {
       "instrument": "eligibility_check",
-      "comparison": "cofinancing_guide",
+      "comparison": "e_drive_program",
       "conversionAnchor": "Verifică amplasamentul și investiția e-Mobility RO"
+    },
+    "fondul-modernizare-pc1-stocare-entitati-publice": {
+      "instrument": "eligibility_check",
+      "comparison": "pc1_public_autoconsum",
+      "conversionAnchor": "Verifică proiectul PC1 de stocare al instituției"
     },
     "fondul-modernizare-pc1-stocare": {
       "instrument": "eligibility_check",

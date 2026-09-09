@@ -134,19 +134,20 @@
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
   "autoconsum-publici": {
-    "name": "MySMIS2021: apelul de autoconsum din surse regenerabile pentru entități publice este marcat FINALIZAT",
-    "title": "MySMIS2021: apelul de autoconsum din surse regenerabile pentru entități publice este marcat FINALIZAT",
-    "institution": "Ministerul Investițiilor și Proiectelor Europene – MySMIS2021",
-    "documentType": "act normativ",
-    "url": "https://resurse.mysmis2021.gov.ro/ords/repo_bo/r/mysmis-2021/finantari-programe-2021-2027",
-    "accessedAt": "2026-08-29",
+    "name": "Ghidul solicitantului și anexele actualizate la 23.06.2026",
+    "title": "Ghidul solicitantului și anexele actualizate la 23.06.2026",
+    "institution": "Ministerul Energiei",
+    "documentType": "ghid și anexe oficiale",
+    "url": "https://energie.gov.ro/anunt-privind-actualizarea-la-data-de-23-06-2026-a-ghidului-solicitantului-privind-sprijinirea-investitiilor-in-noi-capacitati-de-producere-a-energiei-electrice-produsa-din-surse-regenerabile-de-energ/",
+    "accessedAt": "2026-09-09",
+    "note": "Pagina oficială include arhiva RAR cu ghidul actualizat și anexele pentru producție solară cu stocare integrată destinată autoconsumului entităților publice.",
     "programIds": [
       "autoconsum-institutii-publice"
     ],
     "isPrimaryFor": "autoconsum-institutii-publice",
-    "programStatus": "apel_inchis",
-    "statusLabel": "Apel finalizat în MySMIS – depunerea nu este deschisă",
-    "verifiedAt": "2026-08-29",
+    "programStatus": "ghid_aprobat_nedeschis",
+    "statusLabel": "Apel lansat – depuneri 11 septembrie–6 noiembrie 2026",
+    "verifiedAt": "2026-09-09",
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
   "fondul-modernizare": {
@@ -493,6 +494,23 @@
     "statusLabel": "Ghid publicat la 17 august 2026 – perioada de depunere nu este anunțată",
     "verifiedAt": "2026-08-29",
     "isPrimaryFor": "fondul-modernizare-pc1-stocare",
+    "sourceOfTruth": "config/seo-programs.json#programs"
+  },
+  "fm-pc1-stocare-publici": {
+    "programIds": [
+      "fondul-modernizare-pc1-stocare-entitati-publice"
+    ],
+    "name": "Ghidul solicitantului și anexele actualizate la 23.06.2026",
+    "title": "Ghidul solicitantului și anexele actualizate la 23.06.2026",
+    "institution": "Ministerul Energiei",
+    "documentType": "ghid și anexe oficiale",
+    "url": "https://energie.gov.ro/anunt-privind-actualizarea-la-data-de-23-06-2026-a-ghidului-solicitantului-privind-sprijinirea-investitiilor-in-noi-capacitati-de-producere-a-energiei-electrice-produsa-din-surse-regenerabile-de-energ/",
+    "accessedAt": "2026-09-09",
+    "note": "Pagina oficială include arhiva ZIP cu ghidul actualizat și anexele pentru capacități noi de stocare conectate la instalații regenerabile existente ale entităților publice.",
+    "programStatus": "ghid_aprobat_nedeschis",
+    "statusLabel": "Apel lansat – depuneri 11 septembrie–6 noiembrie 2026",
+    "verifiedAt": "2026-09-09",
+    "isPrimaryFor": "fondul-modernizare-pc1-stocare-entitati-publice",
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
   "pnrr-dashboard": {

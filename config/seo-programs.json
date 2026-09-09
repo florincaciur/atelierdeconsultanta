@@ -1,7 +1,7 @@
 {
   "site": "https://atelierdeconsultanta.ro",
-  "updatedAt": "2026-09-06",
-  "lastReviewed": "2026-09-06",
+  "updatedAt": "2026-09-09",
+  "lastReviewed": "2026-09-09",
   "defaults": {
     "author": "FABER - Atelier de Consultanță",
     "contactUrl": "/contact",
@@ -1237,39 +1237,67 @@
     {
       "id": "autoconsum-institutii-publice",
       "slug": "autoconsum-institutii-publice",
-      "name": "Autoconsum din surse regenerabile pentru instituții publice",
-      "shortName": "Autoconsum instituții publice",
+      "name": "Sprijinirea investițiilor în noi capacități de producere și stocare a energiei solare pentru autoconsum – entități publice",
+      "shortName": "PC1 – Autoconsum entități publice",
+      "acronym": "PC1",
       "fund": "Fondul pentru Modernizare",
       "family": "energie-public",
-      "status": "apel_inchis",
-      "canonicalStatus": "COMPLETED",
+      "status": "ghid_aprobat_nedeschis",
+      "canonicalStatus": "SCHEDULED",
       "statusScope": "program_call",
-      "statusRationale": "MySMIS marchează apelul drept FINALIZAT.",
-      "statusLabel": "Apel finalizat în MySMIS – depunerea nu este deschisă",
+      "statusRationale": "Ghidul actualizat este publicat, iar calendarul anunțat începe la 11 septembrie 2026; la data verificării depunerea nu este încă deschisă.",
+      "statusLabel": "Apel lansat – depuneri 11 septembrie–6 noiembrie 2026",
       "publicationState": "public",
-      "verifiedAt": "2026-08-29",
-      "sourceName": "Ministerul Investițiilor și Proiectelor Europene – MySMIS2021",
-      "sourceUrl": "https://resurse.mysmis2021.gov.ro/ords/repo_bo/r/mysmis-2021/finantari-programe-2021-2027",
-      "sourceVersion": "MySMIS2021: apelul de autoconsum din surse regenerabile pentru entități publice este marcat FINALIZAT",
+      "verifiedAt": "2026-09-09",
+      "sourceName": "Ministerul Energiei",
+      "sourceUrl": "https://energie.gov.ro/anunt-privind-actualizarea-la-data-de-23-06-2026-a-ghidului-solicitantului-privind-sprijinirea-investitiilor-in-noi-capacitati-de-producere-a-energiei-electrice-produsa-din-surse-regenerabile-de-energ/",
+      "sourceVersion": "Ghidul solicitantului și anexele actualizate la 23.06.2026",
       "sourceType": "official",
-      "applicationStart": null,
-      "applicationEnd": null,
-      "grantSummary": null,
-      "cofinancingSummary": null,
+      "applicationStart": "2026-09-11",
+      "applicationEnd": "2026-11-06",
+      "grantSummary": {
+        "minimum": null,
+        "maximum": {
+          "amount": 10000000,
+          "currency": "EUR",
+          "unit": "beneficiar"
+        },
+        "budget": {
+          "amount": 500000000,
+          "currency": "EUR"
+        }
+      },
+      "cofinancingSummary": {
+        "intensity": [
+          {
+            "rate": 100,
+            "scope": "maximum din cheltuielile eligibile, în limita plafoanelor pe MW instalat"
+          }
+        ],
+        "ownContribution": "Cheltuielile neeligibile, TVA deductibilă și orice depășire a plafoanelor din ghid rămân în sarcina beneficiarului."
+      },
       "pageUrl": "/autoconsum-public-fotovoltaice-institutii-publice",
-      "lastMeaningfulUpdate": "2026-08-18",
+      "lastMeaningfulUpdate": "2026-09-09",
       "evergreenValue": true,
       "archivedNoindexDecision": null,
       "indexable": true,
-      "cardSummary": "Autoconsum fotovoltaic pentru instituții publice: solicitant, consum, amplasament, drepturi, hotărâri, avize și documentele apelului.",
-      "metaTitle": "Autoconsum pentru instituții publice | FABER",
-      "metaDescription": "Autoconsum fotovoltaic pentru instituții publice: solicitant, consum, amplasament, drepturi, hotărâri, avize și documentele apelului.",
-      "editorialDisclaimer": "Apelul identificat în MySMIS este finalizat; existența și modificarea ghidului nu confirmă o sesiune nouă deschisă.",
+      "cardSummary": "PC1 pentru entități publice: panouri fotovoltaice cu stocare integrată, buget 500 mil. EUR și maximum 10 mil. EUR/beneficiar.",
+      "quickAnswer": "PC1 Autoconsum finanțează capacități noi de producere a energiei solare cu stocare integrată pentru entități publice. Bugetul este de 500 milioane EUR, ajutorul poate acoperi până la 100% din cheltuielile eligibile, în limita a 10 milioane EUR pe beneficiar, iar bateriile trebuie dimensionate pentru 2–4 ore. Calendarul anunțat este 11 septembrie–6 noiembrie 2026; la verificarea din 9 septembrie depunerea era programată, nu deschisă.",
+      "metaTitle": "PC1 Autoconsum entități publice 2026: 10 mil. €",
+      "metaDescription": "PC1 Autoconsum pentru entități publice: buget 500 mil. €, maximum 10 mil. €/beneficiar, până la 100% și depuneri 11.09–06.11.2026.",
+      "editorialDisclaimer": "La data verificării, deschiderea era programată pentru 11 septembrie 2026. Înainte de transmitere se reconfirmă anunțul sesiunii și eventualele clarificări AFIR.",
       "eligibleApplicants": [
-        "Instituțiile și entitățile publice definite de documentația apelului"
+        "Unități administrativ-teritoriale și subdiviziunile acestora",
+        "Unități din apărare, ordine publică, siguranță națională și administrația penitenciară",
+        "Spitale și centre sociale ori de îngrijiri paliative finanțate integral din fonduri publice",
+        "Instituții publice, culte recunoscute, universități de stat, institute publice de cercetare și asociații de dezvoltare intercomunitară, în condițiile ghidului"
       ],
       "keyConditions": [
-        "Dreptul asupra amplasamentului, consumul, hotărârile și avizele se verifică în documentația apelului."
+        "Proiectul include obligatoriu o capacitate nouă solară și stocare integrată; proiectele numai cu baterii sau numai cu pompe de căldură nu sunt eligibile.",
+        "Energia produsă este destinată 100% autoconsumului, iar energia stocată provine 100% din instalația solară proprie.",
+        "Sistemul de stocare asigură o durată de 2–4 ore și o putere nominală cel puțin egală cu puterea centralei fotovoltaice.",
+        "Costul eligibil este plafonat la 900.000 EUR/MW fără pompe de căldură și la 1.100.000 EUR/MW pentru proiectele care includ pompe de căldură eligibile.",
+        "Investiția trebuie finalizată și pusă în funcțiune până la 31.12.2029."
       ],
       "officialGuideKeys": [
         "autoconsum-publici"
@@ -1279,30 +1307,41 @@
           "programPage": [
             {
               "ref": "program",
-              "label": "Catalogul oficial MySMIS2021"
+              "label": "Anunțul Ministerului Energiei și ghidul actualizat la 23.06.2026"
             }
           ],
-          "guide": [],
-          "annexes": [],
-          "schemeOrder": [
+          "guide": [
             {
               "ref": "guide:autoconsum-publici",
-              "label": "Referința oficială MySMIS pentru apelul destinat entităților publice"
+              "label": "Ghidul solicitantului PC1 Autoconsum pentru entități publice"
             }
           ],
-          "sessionAnnouncement": [],
+          "annexes": [
+            {
+              "ref": "guide:autoconsum-publici",
+              "label": "Pachetul oficial cu ghidul și anexele publicat de Ministerul Energiei"
+            }
+          ],
+          "schemeOrder": [],
+          "sessionAnnouncement": [
+            {
+              "ref": "program",
+              "label": "Calendarul oficial anunțat pentru 11.09–06.11.2026"
+            }
+          ],
           "corrigenda": [],
           "clarifications": []
         },
-        "notes": "Apelul este marcat FINALIZAT în MySMIS; registry-ul local nu separă actul normativ de pagina catalogului."
+        "notes": "Ghidul tehnic este versiunea actualizată la 23.06.2026. La 09.09.2026 apelul era programat să se deschidă la 11.09.2026; pagina AFIR se reverifică înaintea depunerii."
       },
       "presentation": {
         "carousel": true,
         "hero": false,
         "order": 4,
-        "icon": "ph-bank",
+        "icon": "ph-solar-panel",
         "image": "/assets/hero/hero-solar.webp",
-        "beneficiary": null,
+        "beneficiary": "entități și instituții publice eligibile",
+        "pageTitle": "PC1 Autoconsum 2026 – panouri fotovoltaice cu stocare pentru entități publice",
         "carouselOrder": 5
       },
       "discovery": {
@@ -1315,6 +1354,128 @@
         ],
         "investmentTypes": [
           "energie_autoconsum"
+        ],
+        "listed": true
+      }
+    },
+    {
+      "id": "fondul-modernizare-pc1-stocare-entitati-publice",
+      "slug": "fondul-modernizare-pc1-stocare-entitati-publice",
+      "name": "Sprijinirea investițiilor în noi capacități de stocare a energiei regenerabile – entități publice",
+      "shortName": "PC1 – Stocare entități publice",
+      "acronym": "PC1",
+      "fund": "Fondul pentru Modernizare",
+      "family": "energie-public",
+      "status": "ghid_aprobat_nedeschis",
+      "canonicalStatus": "SCHEDULED",
+      "statusScope": "program_call",
+      "statusRationale": "Ghidul actualizat este publicat, iar calendarul anunțat începe la 11 septembrie 2026; la data verificării depunerea nu este încă deschisă.",
+      "statusLabel": "Apel lansat – depuneri 11 septembrie–6 noiembrie 2026",
+      "publicationState": "public",
+      "verifiedAt": "2026-09-09",
+      "sourceName": "Ministerul Energiei",
+      "sourceUrl": "https://energie.gov.ro/anunt-privind-actualizarea-la-data-de-23-06-2026-a-ghidului-solicitantului-privind-sprijinirea-investitiilor-in-noi-capacitati-de-producere-a-energiei-electrice-produsa-din-surse-regenerabile-de-energ/",
+      "sourceVersion": "Ghidul solicitantului și anexele actualizate la 23.06.2026",
+      "sourceType": "official",
+      "applicationStart": "2026-09-11",
+      "applicationEnd": "2026-11-06",
+      "grantSummary": {
+        "minimum": null,
+        "maximum": {
+          "amount": 10000000,
+          "currency": "EUR",
+          "unit": "beneficiar"
+        },
+        "budget": {
+          "amount": 150000000,
+          "currency": "EUR"
+        }
+      },
+      "cofinancingSummary": {
+        "intensity": [
+          {
+            "rate": 100,
+            "scope": "maximum din cheltuielile eligibile, conform ghidului"
+          }
+        ],
+        "ownContribution": "Cheltuielile neeligibile, TVA deductibilă și orice depășire a plafonului rămân în sarcina beneficiarului."
+      },
+      "pageUrl": "/fondul-modernizare-pc1-stocare-entitati-publice",
+      "lastMeaningfulUpdate": "2026-09-09",
+      "evergreenValue": true,
+      "archivedNoindexDecision": null,
+      "indexable": true,
+      "cardSummary": "PC1 pentru entități publice cu instalații regenerabile existente: baterii în spatele contorului, buget 150 mil. EUR și maximum 10 mil. EUR/beneficiar.",
+      "quickAnswer": "PC1 Stocare finanțează sisteme noi de baterii în spatele contorului, conectate direct la instalații regenerabile existente ale entităților publice. Bugetul este de 150 milioane EUR, ajutorul poate acoperi 100% din cheltuielile eligibile, în limita a 10 milioane EUR pe beneficiar, iar durata stocării trebuie să fie de 2–4 ore. Calendarul anunțat este 11 septembrie–6 noiembrie 2026; la verificarea din 9 septembrie depunerea era programată, nu deschisă.",
+      "metaTitle": "PC1 Stocare entități publice 2026: 10 mil. €",
+      "metaDescription": "PC1 Stocare pentru entități publice: buget 150 mil. €, maximum 10 mil. €/beneficiar, până la 100% și depuneri 11.09–06.11.2026.",
+      "editorialDisclaimer": "La data verificării, deschiderea era programată pentru 11 septembrie 2026. Înainte de transmitere se reconfirmă anunțul sesiunii și eventualele clarificări AFIR.",
+      "eligibleApplicants": [
+        "Unități administrativ-teritoriale și subdiviziunile acestora",
+        "Unități din apărare, ordine publică, siguranță națională și administrația penitenciară",
+        "Spitale și centre sociale ori de îngrijiri paliative finanțate integral din fonduri publice",
+        "Instituții publice, culte recunoscute, universități de stat, institute publice de cercetare și asociații de dezvoltare intercomunitară, în condițiile ghidului"
+      ],
+      "keyConditions": [
+        "Capacitatea nouă de stocare se amplasează în spatele contorului și se conectează direct la o instalație regenerabilă existentă.",
+        "Este eligibilă o singură cerere de finanțare per solicitant.",
+        "Durata echivalentă a stocării trebuie să fie între 2 și 4 ore, raportată la puterea instalată a centralei existente.",
+        "Investiția trebuie finalizată și pusă în funcțiune până la 31.12.2029."
+      ],
+      "officialGuideKeys": [
+        "fm-pc1-stocare-publici"
+      ],
+      "officialSources": {
+        "roles": {
+          "programPage": [
+            {
+              "ref": "program",
+              "label": "Anunțul Ministerului Energiei și ghidul actualizat la 23.06.2026"
+            }
+          ],
+          "guide": [
+            {
+              "ref": "guide:fm-pc1-stocare-publici",
+              "label": "Ghidul solicitantului PC1 Stocare pentru entități publice"
+            }
+          ],
+          "annexes": [
+            {
+              "ref": "guide:fm-pc1-stocare-publici",
+              "label": "Pachetul oficial cu ghidul și anexele publicat de Ministerul Energiei"
+            }
+          ],
+          "schemeOrder": [],
+          "sessionAnnouncement": [
+            {
+              "ref": "program",
+              "label": "Calendarul oficial anunțat pentru 11.09–06.11.2026"
+            }
+          ],
+          "corrigenda": [],
+          "clarifications": []
+        },
+        "notes": "Ghidul tehnic este versiunea actualizată la 23.06.2026. La 09.09.2026 apelul era programat să se deschidă la 11.09.2026; pagina AFIR se reverifică înaintea depunerii."
+      },
+      "presentation": {
+        "carousel": true,
+        "hero": false,
+        "order": 25,
+        "icon": "ph-battery-charging",
+        "image": "/assets/hero/hero-solar.webp",
+        "beneficiary": "entități publice cu instalații regenerabile existente",
+        "carouselOrder": 24
+      },
+      "discovery": {
+        "parentHub": "/finantari-panouri-fotovoltaice",
+        "applicantTypes": [
+          "institutii_publice"
+        ],
+        "regions": [
+          "national"
+        ],
+        "investmentTypes": [
+          "energie_regenerabila"
         ],
         "listed": true
       }
@@ -2210,8 +2371,8 @@
       "archivedNoindexDecision": null,
       "indexable": true,
       "cardSummary": "Schema e-Mobility RO pentru infrastructură de reîncărcare de-a lungul rețelei rutiere a fost actualizată; depunerea nu este deschisă.",
-      "metaTitle": "e-Mobility RO: stații de reîncărcare | FABER",
-      "metaDescription": "e-Mobility RO: schemă actualizată pentru stații de reîncărcare, amplasamente, solicitanți și buget; depunerea nu este deschisă.",
+      "metaTitle": "e-Mobility RO 2026: finanțare stații de încărcare",
+      "metaDescription": "e-Mobility RO: buget 299 mil. €, maximum 30 mil. €/beneficiar pentru stații de încărcare pe rețeaua rutieră eligibilă. Condiții și stadiu.",
       "editorialDisclaimer": "Pagina explică schema aprobată; nu afirmă existența unui apel deschis sau a unui calendar neconfirmat.",
       "eligibleApplicants": [
         "Microîntreprinderi, întreprinderi mici, mijlocii și mari care îndeplinesc condițiile schemei"
@@ -5092,21 +5253,21 @@
       "type": "program",
       "schemaType": "GovernmentService",
       "category": "Energie publică",
-      "h1": "Autoconsum public fotovoltaice pentru instituții publice",
+      "h1": "PC1 Autoconsum 2026 pentru entități publice – producție solară și stocare integrată",
       "hideHeroSummary": true,
       "hideFamilyCards": true,
-      "policyContribution": "programul poate reduce costurile energetice ale institutiilor și susține tranzitia către energie regenerabilă în sectorul public.",
+      "policyContribution": "Programul reduce cheltuielile publice cu energia prin capacități solare noi, stocare integrată și utilizarea producției pentru autoconsum.",
       "audience": [
-        "primarii și autoritati locale",
-        "instituții publice cu clădiri și consum documentabil",
-        "unitati publice care pregătesc proiecte fotovoltaice"
+        "UAT-uri și subdiviziunile lor",
+        "spitale, instituții și universități publice cu consum documentabil",
+        "celelalte entități publice eligibile care pregătesc producție solară nouă cu stocare integrată"
       ],
       "eligibility": [
-        "beneficiar public eligibil",
-        "drept de administrare sau folosință asupra amplasamentului",
-        "consum de energie documentat",
-        "solutie tehnică și avize",
-        "proceduri de achiziție conforme"
+        "încadrare într-o categorie de solicitant public prevăzută de ghid",
+        "drept de proprietate, administrare, concesiune sau superficie asupra amplasamentului",
+        "consum documentat și proiect destinat 100% autoconsumului",
+        "capacitate solară nouă cu stocare integrată dimensionată pentru 2–4 ore",
+        "studiu de fezabilitate, avize și proceduri de achiziție conforme"
       ],
       "mandatory": [
         "hotarari sau mandate interne",
@@ -5116,33 +5277,30 @@
         "buget și calendar"
       ],
       "eligibleExpenses": [
-        "sisteme fotovoltaice",
-        "echipamente de conectare",
-        "servicii de proiectare",
-        "montaj și punere în functiune",
-        "monitorizare și componente auxiliare"
+        "capacități fotovoltaice noi",
+        "stocare integrată obligatorie",
+        "pompe de căldură și instalarea lor, în condițiile ghidului",
+        "montaj, conectare și punere în funcțiune",
+        "măsurare, monitorizare și componente auxiliare eligibile"
       ],
       "ineligibleExpenses": [
-        "costuri fără legătura cu obiectivul",
-        "lucrări fără documente",
-        "achiziții neconforme",
-        "cheltuieli operationale",
-        "componente excluse de apel"
+        "proiecte numai cu stocare sau numai cu pompe de căldură",
+        "înlocuirea unor capacități mai vechi ori extinderi care nu pot fi contorizate separat",
+        "proiecte care nu sunt destinate 100% autoconsumului",
+        "forajele necesare anumitor pompe de căldură",
+        "tehnologii de stocare pe bază de plumb, NiCd sau NiMH"
       ],
       "scoring": [
-        "impactul asupra consumului",
-        "maturitatea documentatiei",
-        "capacitatea administrativa",
-        "eficiență costurilor",
-        "respectarea cerintelor tehnice"
+        "selecția urmează principiul primul venit, primul evaluat",
+        "proiectul trebuie să îndeplinească integral conformitatea administrativă și eligibilitatea",
+        "finanțarea se acordă în limita bugetului disponibil și a termenului sesiunii"
       ],
       "steps": [
-        "inventariaza consumul",
-        "alege cladirile și amplasamentele",
-        "verifică documentele juridice",
-        "pregătește soluția tehnică",
-        "aprobări interne",
-        "depunere și implementare"
+        "confirmă solicitantul și drepturile asupra amplasamentului",
+        "documentează consumul și consumatorii viitori",
+        "dimensionează producția și bateria în studiul de fezabilitate",
+        "aprobă bugetul, avizele și calendarul intern",
+        "reverifică sesiunea AFIR și transmite dosarul complet"
       ],
       "evaluation": [
         "verificare administrativa",
@@ -5152,29 +5310,30 @@
         "achiziție și plată"
       ],
       "examples": [
-        "o scoala poate pregăti proiectul pe baza consumului și acoperisului disponibil",
-        "o primarie poate centraliza mai multe clădiri eligibile",
-        "o instituție cu consum sezonier trebuie să dimensioneze realist sistemul"
+        "o școală poate pregăti producție solară și stocare pe baza consumului documentat și a acoperișului disponibil",
+        "o primărie poate analiza clădiri sau locuri de consum numai în configurația permisă de ghid",
+        "o instituție cu viitori consumatori trebuie să justifice supradimensionarea prin audit și documente"
       ],
       "faq": [
         [
-          "Cine poate aplica pentru autoconsum public?",
-          "Pot aplica instituțiile care se încadrează în categoria de beneficiar a apelului activ."
+          "Cine poate aplica la PC1 Autoconsum pentru entități publice?",
+          "Pot aplica UAT-uri, spitale și instituții publice, universități de stat, culte recunoscute, institute publice de cercetare și celelalte categorii enumerate în ghid."
         ],
         [
-          "Ce documente sunt critice?",
-          "Documentele de proprietate sau administrare, consumul, soluția tehnică, aprobarile interne și bugetul sunt critice."
+          "Cât este finanțarea?",
+          "Ajutorul poate acoperi până la 100% din cheltuielile eligibile, în limita a 10 milioane euro pe beneficiar și a plafoanelor pe MW instalat."
         ],
         [
-          "Pot include mai multe clădiri?",
-          "Depinde de apel și de modul în care sunt definite amplasamentele eligibile."
+          "Este obligatorie stocarea?",
+          "Da. Bateria integrată trebuie să aibă o putere cel puțin egală cu puterea fotovoltaică și o durată echivalentă de 2–4 ore."
         ],
         [
-          "Este necesară achiziție publică?",
-          "Da, beneficiarii publici trebuie să respecte regulile de achiziție aplicabile."
+          "Când se depun proiectele?",
+          "Calendarul anunțat este 11 septembrie–6 noiembrie 2026. Anunțul operațional și eventualele clarificări AFIR se verifică înainte de transmitere."
         ]
       ],
       "related": [
+        "/fondul-modernizare-pc1-stocare-entitati-publice",
         "/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum",
         "/fondul-modernizare-energie-regenerabila-2026",
         "/resurse",
@@ -5190,23 +5349,23 @@
       "guideCtaLabel": "Ghid oficial",
       "contentSections": [
         {
-          "title": "Documente publice care contează",
+          "title": "Documente de pregătit pentru PC1 Autoconsum",
           "items": [
-            "hotărâre de consiliu local sau document echivalent;",
-            "consum istoric și profilul clădirilor publice;",
-            "drept de proprietate sau administrare asupra amplasamentului;",
-            "avize, racordare, buget și calendar de achiziție."
+            "hotărâre de consiliu local sau document echivalent de aprobare;",
+            "ultimele 12 facturi și profilul consumului;",
+            "drept real sau de administrare asupra amplasamentului;",
+            "studiu de fezabilitate, mediu, racordare, buget și calendar de achiziție."
           ]
         },
         {
-          "title": "Comparatie cu AFIR autoconsum și Fondul de Modernizare",
+          "title": "Diferența față de PC1 Stocare pentru entități publice",
           "paragraphs": [
-            "Autoconsumul pentru instituții publice trebuie comparat cu apelurile AFIR pentru sectorul agroalimentar și cu liniile din Fondul pentru Modernizare. Diferența principală tine de beneficiar, amplasament, sursa de finanțare, intensitate, avize și obligații de operare."
+            "PC1 Autoconsum finanțează o capacitate solară nouă împreună cu bateria integrată. PC1 Stocare finanțează bateria în spatele contorului atunci când entitatea publică deține deja o instalație regenerabilă eligibilă."
           ],
           "links": [
             {
-              "href": "/afir-autoconsum-agroalimentar",
-              "label": "AFIR autoconsum agroalimentar"
+              "href": "/fondul-modernizare-pc1-stocare-entitati-publice",
+              "label": "PC1 Stocare pentru entități publice"
             },
             {
               "href": "/fondul-de-modernizare",

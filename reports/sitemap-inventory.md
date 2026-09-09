@@ -6,10 +6,10 @@ Generatorul include numai rute locale 200, indexabile si self-canonical. `lastmo
 
 - URL-uri raportate in auditul initial: 102
 - URL-uri in baseline-ul repository la inceputul P0.11: 92
-- URL-uri incluse acum: 104
-- URL-uri cu lastmod editorial verificabil: 26
+- URL-uri incluse acum: 105
+- URL-uri cu lastmod editorial verificabil: 27
 - URL-uri fara lastmod (omis intentionat): 78
-- sitemap-programs.xml: 26 (Pagini de programe)
+- sitemap-programs.xml: 27 (Pagini de programe)
 - sitemap-guides.xml: 30 (Ghiduri si continut editorial)
 - sitemap-core.xml: 48 (Pagini core, servicii, instrumente si juridice)
 
