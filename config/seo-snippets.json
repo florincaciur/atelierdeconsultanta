@@ -14,7 +14,7 @@
       "title": "Consultanță și proiectare fonduri europene | FABER",
       "description": "FABER oferă consultanță și proiectare pentru proiecte cu fonduri europene: eligibilitate, cereri de finanțare, documentații tehnice și implementare.",
       "ogTitle": "Consultanță și proiectare pentru proiecte | FABER",
-      "ogDescription": "De la verificarea eligibilității la documentații tehnice și implementare, FABER sprijină pregătirea proiectelor pe baza regulilor aplicabile.",
+      "ogDescription": "De la verificarea inițială a eligibilității la documentații tehnice și implementare, FABER sprijină pregătirea proiectelor pe baza regulilor aplicabile.",
       "sourceOfTruth": [
         "index.html",
         "official-guides.json:fonduri-europene"
@@ -26,16 +26,16 @@
     {
       "route": "/verificare-eligibilitate-fonduri-europene",
       "primaryIntent": "verificarea inițială a eligibilității solicitantului și investiției",
-      "primaryQuery": "verificare eligibilitate fonduri europene",
+      "primaryQuery": "verificare inițială eligibilitate proiecte",
       "secondaryQueries": [
         "cum se verifică eligibilitatea",
         "eligibilitate cod CAEN",
         "verificare proiect fonduri europene"
       ],
-      "title": "Verificare eligibilitate fonduri europene | FABER",
-      "description": "Verificăm solicitantul, codul CAEN, locația, investiția, bugetul, cofinanțarea și documentele înainte de alegerea programului.",
-      "ogTitle": "Verifică eligibilitatea proiectului | FABER",
-      "ogDescription": "Analizăm solicitantul, CAEN-ul, locația, investiția, bugetul, cofinanțarea și documentele înainte de alegerea unui program.",
+      "title": "Verificare inițială eligibilitate proiecte | FABER",
+      "description": "Află ce date analizăm, cum se desfășoară verificarea inițială și ce concluzie documentată primești înainte de pregătirea dosarului.",
+      "ogTitle": "Verificare inițială eligibilitate proiecte | FABER",
+      "ogDescription": "Află ce date analizăm, cum se desfășoară verificarea inițială și ce concluzie documentată primești înainte de pregătirea dosarului.",
       "sourceOfTruth": [
         "config/seo-programs.json:verificare-eligibilitate-fonduri-europene",
         "official-guides.json:fonduri-europene"
@@ -76,16 +76,16 @@
         "buget Femeia Antreprenor",
         "punctaj Femeia Antreprenor"
       ],
-      "title": "Femeia Antreprenor: apel 2024 închis | FABER",
-      "description": "Femeia Antreprenor 2024 este închis; platforma oficială MINIMIS publică ordinea finală la evaluare. O ediție nouă se confirmă separat.",
-      "ogTitle": "Femeia Antreprenor: apel 2024 închis | FABER",
-      "ogDescription": "Femeia Antreprenor 2024 este închis; platforma oficială MINIMIS publică ordinea finală la evaluare. O ediție nouă se confirmă separat.",
+      "title": "Femeia Antreprenor 2026: status oficial | FABER",
+      "description": "Femeia Antreprenor 2026 nu are încă o procedură confirmată. Vezi statusul oficial, ce documente poți pregăti și sursa MINIMIS 2024.",
+      "ogTitle": "Femeia Antreprenor 2026: status oficial | FABER",
+      "ogDescription": "Femeia Antreprenor 2026 nu are încă o procedură confirmată. Vezi statusul oficial, ce documente poți pregăti și sursa MINIMIS 2024.",
       "sourceOfTruth": [
         "config/seo-programs.json#programs",
         "https://minimis.imm.gov.ro/fa2024/ordine_evaluare"
       ],
       "factualStatus": "unknown",
-      "lastReviewed": "2026-08-23",
+      "lastReviewed": "2026-08-29",
       "notes": "Program național al Ministerului Economiei; snippetul nu îl numește fonduri europene și nu publică valori neverificate pentru 2026.",
       "publicationState": "public",
       "programStatus": "apel_inchis",
@@ -110,7 +110,7 @@
         "https://www.afir.ro/comunicate/265-de-milioane-de-euro-pentru-investitii-in-producerea-energiei-electrice/"
       ],
       "factualStatus": "open",
-      "lastReviewed": "2026-08-23",
+      "lastReviewed": "2026-08-29",
       "notes": "Sesiunea și plafoanele se raportează la Ghidul V7 și la comunicatul oficial AFIR; procentul de autoconsum și stocarea sunt explicate fără a promite eligibilitatea.",
       "publicationState": "public",
       "programStatus": "apel_inchis",
@@ -125,16 +125,16 @@
         "apel 2 microîntreprinderi Nord-Est",
         "investiții microîntreprinderi ADR Nord-Est"
       ],
-      "title": "Modernizarea microîntreprinderilor Apel 2 Nord-Est | FABER",
-      "description": "Apel 2 Nord-Est: depuneri 28.09–28.10.2026, grant 100.000–300.000 €, contribuție minimă 10%, condiții și simulator de punctaj după grila finală.",
-      "ogTitle": "Modernizarea microîntreprinderilor Apel 2 Nord-Est | FABER",
-      "ogDescription": "Apel 2 Nord-Est: depuneri 28.09–28.10.2026, grant 100.000–300.000 €, contribuție minimă 10%, condiții și simulator de punctaj după grila finală.",
+      "title": "Modernizarea microîntreprinderilor: Apel 2 Nord-Est 2026",
+      "description": "Modernizarea microîntreprinderilor, Apel 2 Nord-Est: depuneri 28.09–28.10.2026, grant 100.000–300.000 €, CAEN eligibil și simulator de punctaj final.",
+      "ogTitle": "Modernizarea microîntreprinderilor: Apel 2 Nord-Est 2026",
+      "ogDescription": "Modernizarea microîntreprinderilor, Apel 2 Nord-Est: depuneri 28.09–28.10.2026, grant 100.000–300.000 €, CAEN eligibil și simulator de punctaj final.",
       "sourceOfTruth": [
         "config/seo-programs.json#programs",
         "https://regionordest.ro/prioritatea-1/modernizare-microintreprinderi/"
       ],
       "factualStatus": "scheduled",
-      "lastReviewed": "2026-08-28",
+      "lastReviewed": "2026-09-06",
       "notes": "Pagina concentrează Apelul 2; ruta istorică POR ADR Nord-Est redirecționează direct aici conform aprobării beneficiarului.",
       "publicationState": "public",
       "programStatus": "ghid_aprobat_nedeschis",
@@ -179,7 +179,7 @@
         "https://legislatie.just.ro/Public/DetaliiDocument/313320"
       ],
       "factualStatus": "consultation",
-      "lastReviewed": "2026-08-23",
+      "lastReviewed": "2026-08-29",
       "notes": "Statutul de consultare este explicit; snippetul nu folosește valoarea maximă indicativă sau intensitatea ca reguli finale.",
       "publicationState": "public",
       "programStatus": "ghid_aprobat_nedeschis",
@@ -246,7 +246,7 @@
       "description": "Compară programe pentru firme, fermieri și instituții după solicitant, investiție, regiune, documente și contribuția proprie disponibilă.",
       "ogTitle": "Găsește traseul potrivit pentru investiția ta | FABER",
       "ogDescription": "Pornește de la beneficiar și investiție, apoi verifică programul, documentele și bugetul în pagina dedicată fiecărui apel.",
-      "lastReviewed": "2026-07-20"
+      "lastReviewed": "2026-08-29"
     }
   ]
 }

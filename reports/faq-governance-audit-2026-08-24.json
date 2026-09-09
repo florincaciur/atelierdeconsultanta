@@ -1,0 +1,1755 @@
+{
+  "schemaVersion": 1,
+  "generatedFor": "TASK-15",
+  "generatedAt": "2026-08-24",
+  "scope": "Toate sursele canonice/deploy pentru cele 105 rute din inventarul stabil",
+  "summary": {
+    "routeCount": 105,
+    "sourceCount": 114,
+    "pass": 105,
+    "fail": 0,
+    "routesWithVisibleFaq": 66,
+    "routesWithFaqPage": 66,
+    "visibleQuestionCount": 405,
+    "schemaQuestionCount": 405,
+    "legalRoutesWithFaqPage": 0,
+    "repeatedAnswerGroupCount": 0
+  },
+  "repeatedAnswerGroups": [],
+  "results": [
+    {
+      "route": "/",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "index.html",
+          "visibleFaqCount": 0,
+          "schemaFaqCount": 0,
+          "schemaCount": 0
+        }
+      ],
+      "visibleFaqCount": 0,
+      "schemaFaqCount": 0,
+      "issues": []
+    },
+    {
+      "route": "/acte-necesare-fonduri-europene-nerambursabile",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "acte-necesare-fonduri-europene-nerambursabile/index.html",
+          "visibleFaqCount": 4,
+          "schemaFaqCount": 4,
+          "schemaCount": 1
+        }
+      ],
+      "visibleFaqCount": 4,
+      "schemaFaqCount": 4,
+      "issues": []
+    },
+    {
+      "route": "/afir",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "afir/index.html",
+          "visibleFaqCount": 5,
+          "schemaFaqCount": 5,
+          "schemaCount": 1
+        }
+      ],
+      "visibleFaqCount": 5,
+      "schemaFaqCount": 5,
+      "issues": []
+    },
+    {
+      "route": "/afir-autoconsum-agroalimentar",
+      "status": "PASS",
+      "programId": "afir-energie-autoconsum",
+      "files": [
+        {
+          "file": "afir-autoconsum-agroalimentar.html",
+          "visibleFaqCount": 8,
+          "schemaFaqCount": 8,
+          "schemaCount": 1
+        },
+        {
+          "file": "afir-autoconsum-agroalimentar/index.html",
+          "visibleFaqCount": 8,
+          "schemaFaqCount": 8,
+          "schemaCount": 1
+        }
+      ],
+      "visibleFaqCount": 8,
+      "schemaFaqCount": 8,
+      "issues": []
+    },
+    {
+      "route": "/apeluri-gal",
+      "status": "PASS",
+      "programId": "apeluri-gal",
+      "files": [
+        {
+          "file": "apeluri-gal/index.html",
+          "visibleFaqCount": 4,
+          "schemaFaqCount": 4,
+          "schemaCount": 1
+        }
+      ],
+      "visibleFaqCount": 4,
+      "schemaFaqCount": 4,
+      "issues": []
+    },
+    {
+      "route": "/autoconsum-public-fotovoltaice-institutii-publice",
+      "status": "PASS",
+      "programId": "autoconsum-institutii-publice",
+      "files": [
+        {
+          "file": "autoconsum-public-fotovoltaice-institutii-publice.html",
+          "visibleFaqCount": 4,
+          "schemaFaqCount": 4,
+          "schemaCount": 1
+        },
+        {
+          "file": "autoconsum-public-fotovoltaice-institutii-publice/index.html",
+          "visibleFaqCount": 4,
+          "schemaFaqCount": 4,
+          "schemaCount": 1
+        }
+      ],
+      "visibleFaqCount": 4,
+      "schemaFaqCount": 4,
+      "issues": []
+    },
+    {
+      "route": "/blog",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "blog/index.html",
+          "visibleFaqCount": 5,
+          "schemaFaqCount": 5,
+          "schemaCount": 1
+        }
+      ],
+      "visibleFaqCount": 5,
+      "schemaFaqCount": 5,
+      "issues": []
+    },
+    {
+      "route": "/blog-afir-fotovoltaice-ferme-2026",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "blog-afir-fotovoltaice-ferme-2026.html",
+          "visibleFaqCount": 5,
+          "schemaFaqCount": 5,
+          "schemaCount": 1
+        }
+      ],
+      "visibleFaqCount": 5,
+      "schemaFaqCount": 5,
+      "issues": []
+    },
+    {
+      "route": "/calculator-soc",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "calculator-soc.html",
+          "visibleFaqCount": 7,
+          "schemaFaqCount": 7,
+          "schemaCount": 1
+        }
+      ],
+      "visibleFaqCount": 7,
+      "schemaFaqCount": 7,
+      "issues": []
+    },
+    {
+      "route": "/calendar-fonduri-europene",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "calendar-fonduri-europene/index.html",
+          "visibleFaqCount": 0,
+          "schemaFaqCount": 0,
+          "schemaCount": 0
+        }
+      ],
+      "visibleFaqCount": 0,
+      "schemaFaqCount": 0,
+      "issues": []
+    },
+    {
+      "route": "/cand-merita-consultant-fonduri-europene",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "cand-merita-consultant-fonduri-europene.html",
+          "visibleFaqCount": 0,
+          "schemaFaqCount": 0,
+          "schemaCount": 0
+        }
+      ],
+      "visibleFaqCount": 0,
+      "schemaFaqCount": 0,
+      "issues": []
+    },
+    {
+      "route": "/cat-costa-consultanta-fonduri-europene",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "cat-costa-consultanta-fonduri-europene/index.html",
+          "visibleFaqCount": 0,
+          "schemaFaqCount": 0,
+          "schemaCount": 0
+        }
+      ],
+      "visibleFaqCount": 0,
+      "schemaFaqCount": 0,
+      "issues": []
+    },
+    {
+      "route": "/cat-costa-consultanta-fonduri-europene-ghid",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "cat-costa-consultanta-fonduri-europene-ghid.html",
+          "visibleFaqCount": 0,
+          "schemaFaqCount": 0,
+          "schemaCount": 0
+        }
+      ],
+      "visibleFaqCount": 0,
+      "schemaFaqCount": 0,
+      "issues": []
+    },
+    {
+      "route": "/ce-acte-sunt-necesare-fonduri-europene",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "ce-acte-sunt-necesare-fonduri-europene.html",
+          "visibleFaqCount": 0,
+          "schemaFaqCount": 0,
+          "schemaCount": 0
+        }
+      ],
+      "visibleFaqCount": 0,
+      "schemaFaqCount": 0,
+      "issues": []
+    },
+    {
+      "route": "/cheltuieli-eligibile-digitalizare-imm",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "cheltuieli-eligibile-digitalizare-imm.html",
+          "visibleFaqCount": 0,
+          "schemaFaqCount": 0,
+          "schemaCount": 0
+        }
+      ],
+      "visibleFaqCount": 0,
+      "schemaFaqCount": 0,
+      "issues": []
+    },
+    {
+      "route": "/cheltuieli-eligibile-pocidif-21",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "cheltuieli-eligibile-pocidif-21/index.html",
+          "visibleFaqCount": 6,
+          "schemaFaqCount": 6,
+          "schemaCount": 1
+        }
+      ],
+      "visibleFaqCount": 6,
+      "schemaFaqCount": 6,
+      "issues": []
+    },
+    {
+      "route": "/cod-caen-start-up-nation-2026",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "cod-caen-start-up-nation-2026/index.html",
+          "visibleFaqCount": 0,
+          "schemaFaqCount": 0,
+          "schemaCount": 0
+        }
+      ],
+      "visibleFaqCount": 0,
+      "schemaFaqCount": 0,
+      "issues": []
+    },
+    {
+      "route": "/consultant-fonduri-europene-imm",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "consultant-fonduri-europene-imm/index.html",
+          "visibleFaqCount": 0,
+          "schemaFaqCount": 0,
+          "schemaCount": 0
+        }
+      ],
+      "visibleFaqCount": 0,
+      "schemaFaqCount": 0,
+      "issues": []
+    },
+    {
+      "route": "/consultanta-afir",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "consultanta-afir/index.html",
+          "visibleFaqCount": 0,
+          "schemaFaqCount": 0,
+          "schemaCount": 0
+        }
+      ],
+      "visibleFaqCount": 0,
+      "schemaFaqCount": 0,
+      "issues": []
+    },
+    {
+      "route": "/consultanta-fonduri-europene",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "consultanta-fonduri-europene/index.html",
+          "visibleFaqCount": 6,
+          "schemaFaqCount": 6,
+          "schemaCount": 1
+        }
+      ],
+      "visibleFaqCount": 6,
+      "schemaFaqCount": 6,
+      "issues": []
+    },
+    {
+      "route": "/consultanta-fonduri-europene-bucuresti",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "consultanta-fonduri-europene-bucuresti/index.html",
+          "visibleFaqCount": 12,
+          "schemaFaqCount": 12,
+          "schemaCount": 1
+        }
+      ],
+      "visibleFaqCount": 12,
+      "schemaFaqCount": 12,
+      "issues": []
+    },
+    {
+      "route": "/consultanta-pnrr-digitalizare",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "consultanta-pnrr-digitalizare/index.html",
+          "visibleFaqCount": 0,
+          "schemaFaqCount": 0,
+          "schemaCount": 0
+        }
+      ],
+      "visibleFaqCount": 0,
+      "schemaFaqCount": 0,
+      "issues": []
+    },
+    {
+      "route": "/consultanta-start-up-nation-2026",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "consultanta-start-up-nation-2026/index.html",
+          "visibleFaqCount": 0,
+          "schemaFaqCount": 0,
+          "schemaCount": 0
+        }
+      ],
+      "visibleFaqCount": 0,
+      "schemaFaqCount": 0,
+      "issues": []
+    },
+    {
+      "route": "/contact",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "contact/index.html",
+          "visibleFaqCount": 6,
+          "schemaFaqCount": 6,
+          "schemaCount": 1
+        }
+      ],
+      "visibleFaqCount": 6,
+      "schemaFaqCount": 6,
+      "issues": []
+    },
+    {
+      "route": "/cum-alegi-consultant-fonduri-europene",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "cum-alegi-consultant-fonduri-europene/index.html",
+          "visibleFaqCount": 0,
+          "schemaFaqCount": 0,
+          "schemaCount": 0
+        }
+      ],
+      "visibleFaqCount": 0,
+      "schemaFaqCount": 0,
+      "issues": []
+    },
+    {
+      "route": "/cum-alegi-programul-potrivit-fonduri-europene-2026",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "cum-alegi-programul-potrivit-fonduri-europene-2026.html",
+          "visibleFaqCount": 6,
+          "schemaFaqCount": 6,
+          "schemaCount": 1
+        }
+      ],
+      "visibleFaqCount": 6,
+      "schemaFaqCount": 6,
+      "issues": []
+    },
+    {
+      "route": "/cum-se-calculeaza-cofinantarea-fonduri-europene",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "cum-se-calculeaza-cofinantarea-fonduri-europene.html",
+          "visibleFaqCount": 0,
+          "schemaFaqCount": 0,
+          "schemaCount": 0
+        }
+      ],
+      "visibleFaqCount": 0,
+      "schemaFaqCount": 0,
+      "issues": []
+    },
+    {
+      "route": "/cum-se-verifica-eligibilitatea-fonduri-europene",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "cum-se-verifica-eligibilitatea-fonduri-europene.html",
+          "visibleFaqCount": 0,
+          "schemaFaqCount": 0,
+          "schemaCount": 0
+        }
+      ],
+      "visibleFaqCount": 0,
+      "schemaFaqCount": 0,
+      "issues": []
+    },
+    {
+      "route": "/despre-faber",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "despre-faber/index.html",
+          "visibleFaqCount": 6,
+          "schemaFaqCount": 6,
+          "schemaCount": 1
+        }
+      ],
+      "visibleFaqCount": 6,
+      "schemaFaqCount": 6,
+      "issues": []
+    },
+    {
+      "route": "/diaspora-investeste-acasa",
+      "status": "PASS",
+      "programId": "diaspora-investeste-acasa",
+      "files": [
+        {
+          "file": "diaspora-investeste-acasa/index.html",
+          "visibleFaqCount": 6,
+          "schemaFaqCount": 6,
+          "schemaCount": 1
+        }
+      ],
+      "visibleFaqCount": 6,
+      "schemaFaqCount": 6,
+      "issues": []
+    },
+    {
+      "route": "/digitalizare-imm",
+      "status": "PASS",
+      "programId": "digitalizare-imm",
+      "files": [
+        {
+          "file": "digitalizare-imm.html",
+          "visibleFaqCount": 5,
+          "schemaFaqCount": 5,
+          "schemaCount": 1
+        },
+        {
+          "file": "digitalizare-imm/index.html",
+          "visibleFaqCount": 5,
+          "schemaFaqCount": 5,
+          "schemaCount": 1
+        }
+      ],
+      "visibleFaqCount": 5,
+      "schemaFaqCount": 5,
+      "issues": []
+    },
+    {
+      "route": "/digitalizare-imm-erp-crm-cloud",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "digitalizare-imm-erp-crm-cloud.html",
+          "visibleFaqCount": 0,
+          "schemaFaqCount": 0,
+          "schemaCount": 0
+        }
+      ],
+      "visibleFaqCount": 0,
+      "schemaFaqCount": 0,
+      "issues": []
+    },
+    {
+      "route": "/digitalizare-imm-pnrr",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "digitalizare-imm-pnrr/index.html",
+          "visibleFaqCount": 0,
+          "schemaFaqCount": 0,
+          "schemaCount": 0
+        }
+      ],
+      "visibleFaqCount": 0,
+      "schemaFaqCount": 0,
+      "issues": []
+    },
+    {
+      "route": "/documente-punctaj-pocidif-21",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "documente-punctaj-pocidif-21/index.html",
+          "visibleFaqCount": 6,
+          "schemaFaqCount": 6,
+          "schemaCount": 1
+        }
+      ],
+      "visibleFaqCount": 6,
+      "schemaFaqCount": 6,
+      "issues": []
+    },
+    {
+      "route": "/dr-12-afir-instalarea-tinerilor-fermieri",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "dr-12-afir-instalarea-tinerilor-fermieri.html",
+          "visibleFaqCount": 3,
+          "schemaFaqCount": 3,
+          "schemaCount": 1
+        }
+      ],
+      "visibleFaqCount": 3,
+      "schemaFaqCount": 3,
+      "issues": []
+    },
+    {
+      "route": "/dr-14-afir-conditii-eligibilitate-greseli-frecvente",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "dr-14-afir-conditii-eligibilitate-greseli-frecvente.html",
+          "visibleFaqCount": 3,
+          "schemaFaqCount": 3,
+          "schemaCount": 1
+        }
+      ],
+      "visibleFaqCount": 3,
+      "schemaFaqCount": 3,
+      "issues": []
+    },
+    {
+      "route": "/dr12-afir",
+      "status": "PASS",
+      "programId": "dr12-afir",
+      "files": [
+        {
+          "file": "dr12-afir.html",
+          "visibleFaqCount": 7,
+          "schemaFaqCount": 7,
+          "schemaCount": 1
+        },
+        {
+          "file": "dr12-afir/index.html",
+          "visibleFaqCount": 7,
+          "schemaFaqCount": 7,
+          "schemaCount": 1
+        }
+      ],
+      "visibleFaqCount": 7,
+      "schemaFaqCount": 7,
+      "issues": []
+    },
+    {
+      "route": "/dr12-vs-dr14",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "dr12-vs-dr14.html",
+          "visibleFaqCount": 0,
+          "schemaFaqCount": 0,
+          "schemaCount": 0
+        }
+      ],
+      "visibleFaqCount": 0,
+      "schemaFaqCount": 0,
+      "issues": []
+    },
+    {
+      "route": "/dr14",
+      "status": "PASS",
+      "programId": "dr14-afir",
+      "files": [
+        {
+          "file": "dr14.html",
+          "visibleFaqCount": 10,
+          "schemaFaqCount": 10,
+          "schemaCount": 1
+        },
+        {
+          "file": "dr14/index.html",
+          "visibleFaqCount": 10,
+          "schemaFaqCount": 10,
+          "schemaCount": 1
+        }
+      ],
+      "visibleFaqCount": 10,
+      "schemaFaqCount": 10,
+      "issues": []
+    },
+    {
+      "route": "/dr18",
+      "status": "PASS",
+      "programId": "dr18-afir",
+      "files": [
+        {
+          "file": "dr18/index.html",
+          "visibleFaqCount": 10,
+          "schemaFaqCount": 10,
+          "schemaCount": 1
+        }
+      ],
+      "visibleFaqCount": 10,
+      "schemaFaqCount": 10,
+      "issues": []
+    },
+    {
+      "route": "/e-drive",
+      "status": "PASS",
+      "programId": "e-drive",
+      "files": [
+        {
+          "file": "e-drive/index.html",
+          "visibleFaqCount": 6,
+          "schemaFaqCount": 6,
+          "schemaCount": 1
+        }
+      ],
+      "visibleFaqCount": 6,
+      "schemaFaqCount": 6,
+      "issues": []
+    },
+    {
+      "route": "/e-mobility",
+      "status": "PASS",
+      "programId": "e-mobility-ro",
+      "files": [
+        {
+          "file": "e-mobility/index.html",
+          "visibleFaqCount": 6,
+          "schemaFaqCount": 6,
+          "schemaCount": 1
+        }
+      ],
+      "visibleFaqCount": 6,
+      "schemaFaqCount": 6,
+      "issues": []
+    },
+    {
+      "route": "/e-move",
+      "status": "PASS",
+      "programId": "e-move-ro",
+      "files": [
+        {
+          "file": "e-move/index.html",
+          "visibleFaqCount": 8,
+          "schemaFaqCount": 8,
+          "schemaCount": 1
+        }
+      ],
+      "visibleFaqCount": 8,
+      "schemaFaqCount": 8,
+      "issues": []
+    },
+    {
+      "route": "/eligibilitate-fonduri-europene",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "eligibilitate-fonduri-europene/index.html",
+          "visibleFaqCount": 0,
+          "schemaFaqCount": 0,
+          "schemaCount": 0
+        }
+      ],
+      "visibleFaqCount": 0,
+      "schemaFaqCount": 0,
+      "issues": []
+    },
+    {
+      "route": "/eligibilitate-pocidif-21",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "eligibilitate-pocidif-21/index.html",
+          "visibleFaqCount": 6,
+          "schemaFaqCount": 6,
+          "schemaCount": 1
+        }
+      ],
+      "visibleFaqCount": 6,
+      "schemaFaqCount": 6,
+      "issues": []
+    },
+    {
+      "route": "/femeia-antreprenor-2026",
+      "status": "PASS",
+      "programId": "femeia-antreprenor",
+      "files": [
+        {
+          "file": "femeia-antreprenor-2026.html",
+          "visibleFaqCount": 4,
+          "schemaFaqCount": 4,
+          "schemaCount": 1
+        },
+        {
+          "file": "femeia-antreprenor-2026/index.html",
+          "visibleFaqCount": 8,
+          "schemaFaqCount": 8,
+          "schemaCount": 1
+        }
+      ],
+      "visibleFaqCount": 4,
+      "schemaFaqCount": 4,
+      "issues": []
+    },
+    {
+      "route": "/femeia-antreprenor-2026-conditii-idei-afaceri",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "femeia-antreprenor-2026-conditii-idei-afaceri.html",
+          "visibleFaqCount": 3,
+          "schemaFaqCount": 3,
+          "schemaCount": 1
+        }
+      ],
+      "visibleFaqCount": 3,
+      "schemaFaqCount": 3,
+      "issues": []
+    },
+    {
+      "route": "/finantari-panouri-fotovoltaice",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "finantari-panouri-fotovoltaice/index.html",
+          "visibleFaqCount": 5,
+          "schemaFaqCount": 5,
+          "schemaCount": 1
+        }
+      ],
+      "visibleFaqCount": 5,
+      "schemaFaqCount": 5,
+      "issues": []
+    },
+    {
+      "route": "/firma-consultanta-fonduri-europene",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "firma-consultanta-fonduri-europene/index.html",
+          "visibleFaqCount": 0,
+          "schemaFaqCount": 0,
+          "schemaCount": 0
+        }
+      ],
+      "visibleFaqCount": 0,
+      "schemaFaqCount": 0,
+      "issues": []
+    },
+    {
+      "route": "/fondul-de-modernizare",
+      "status": "PASS",
+      "programId": "fondul-de-modernizare",
+      "files": [
+        {
+          "file": "fondul-de-modernizare/index.html",
+          "visibleFaqCount": 0,
+          "schemaFaqCount": 0,
+          "schemaCount": 0
+        }
+      ],
+      "visibleFaqCount": 0,
+      "schemaFaqCount": 0,
+      "issues": []
+    },
+    {
+      "route": "/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum",
+      "status": "PASS",
+      "programId": "fondul-modernizare-autoconsum",
+      "files": [
+        {
+          "file": "fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum/index.html",
+          "visibleFaqCount": 4,
+          "schemaFaqCount": 4,
+          "schemaCount": 1
+        }
+      ],
+      "visibleFaqCount": 4,
+      "schemaFaqCount": 4,
+      "issues": []
+    },
+    {
+      "route": "/fondul-modernizare-energie-regenerabila-2026",
+      "status": "PASS",
+      "programId": "fondul-modernizare-regenerabile",
+      "files": [
+        {
+          "file": "fondul-modernizare-energie-regenerabila-2026.html",
+          "visibleFaqCount": 6,
+          "schemaFaqCount": 6,
+          "schemaCount": 1
+        },
+        {
+          "file": "fondul-modernizare-energie-regenerabila-2026/index.html",
+          "visibleFaqCount": 6,
+          "schemaFaqCount": 6,
+          "schemaCount": 1
+        }
+      ],
+      "visibleFaqCount": 6,
+      "schemaFaqCount": 6,
+      "issues": []
+    },
+    {
+      "route": "/fondul-modernizare-pc1-stocare",
+      "status": "PASS",
+      "programId": "fondul-modernizare-pc1-stocare",
+      "files": [
+        {
+          "file": "fondul-modernizare-pc1-stocare/index.html",
+          "visibleFaqCount": 6,
+          "schemaFaqCount": 6,
+          "schemaCount": 1
+        }
+      ],
+      "visibleFaqCount": 6,
+      "schemaFaqCount": 6,
+      "issues": []
+    },
+    {
+      "route": "/fonduri-europene",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "fonduri-europene/index.html",
+          "visibleFaqCount": 0,
+          "schemaFaqCount": 0,
+          "schemaCount": 0
+        }
+      ],
+      "visibleFaqCount": 0,
+      "schemaFaqCount": 0,
+      "issues": []
+    },
+    {
+      "route": "/fonduri-europene-agricultura",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "fonduri-europene-agricultura/index.html",
+          "visibleFaqCount": 4,
+          "schemaFaqCount": 4,
+          "schemaCount": 1
+        }
+      ],
+      "visibleFaqCount": 4,
+      "schemaFaqCount": 4,
+      "issues": []
+    },
+    {
+      "route": "/fonduri-europene-bucuresti",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "fonduri-europene-bucuresti/index.html",
+          "visibleFaqCount": 12,
+          "schemaFaqCount": 12,
+          "schemaCount": 1
+        }
+      ],
+      "visibleFaqCount": 12,
+      "schemaFaqCount": 12,
+      "issues": []
+    },
+    {
+      "route": "/fonduri-europene-caen/0111-culturi-cereale",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "fonduri-europene-caen/0111-culturi-cereale/index.html",
+          "visibleFaqCount": 11,
+          "schemaFaqCount": 11,
+          "schemaCount": 1
+        }
+      ],
+      "visibleFaqCount": 11,
+      "schemaFaqCount": 11,
+      "issues": []
+    },
+    {
+      "route": "/fonduri-europene-caen/4321-instalatii-electrice",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "fonduri-europene-caen/4321-instalatii-electrice/index.html",
+          "visibleFaqCount": 11,
+          "schemaFaqCount": 11,
+          "schemaCount": 1
+        }
+      ],
+      "visibleFaqCount": 11,
+      "schemaFaqCount": 11,
+      "issues": []
+    },
+    {
+      "route": "/fonduri-europene-caen/5610-restaurante",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "fonduri-europene-caen/5610-restaurante/index.html",
+          "visibleFaqCount": 11,
+          "schemaFaqCount": 11,
+          "schemaCount": 1
+        }
+      ],
+      "visibleFaqCount": 11,
+      "schemaFaqCount": 11,
+      "issues": []
+    },
+    {
+      "route": "/fonduri-europene-caen/6201-dezvoltare-software",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "fonduri-europene-caen/6201-dezvoltare-software/index.html",
+          "visibleFaqCount": 11,
+          "schemaFaqCount": 11,
+          "schemaCount": 1
+        }
+      ],
+      "visibleFaqCount": 11,
+      "schemaFaqCount": 11,
+      "issues": []
+    },
+    {
+      "route": "/fonduri-europene-digitalizare",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "fonduri-europene-digitalizare/index.html",
+          "visibleFaqCount": 5,
+          "schemaFaqCount": 5,
+          "schemaCount": 1
+        }
+      ],
+      "visibleFaqCount": 5,
+      "schemaFaqCount": 5,
+      "issues": []
+    },
+    {
+      "route": "/fonduri-europene-femei-antreprenor",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "fonduri-europene-femei-antreprenor/index.html",
+          "visibleFaqCount": 0,
+          "schemaFaqCount": 0,
+          "schemaCount": 0
+        }
+      ],
+      "visibleFaqCount": 0,
+      "schemaFaqCount": 0,
+      "issues": []
+    },
+    {
+      "route": "/fonduri-europene-imm",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "fonduri-europene-imm/index.html",
+          "visibleFaqCount": 5,
+          "schemaFaqCount": 5,
+          "schemaCount": 1
+        }
+      ],
+      "visibleFaqCount": 5,
+      "schemaFaqCount": 5,
+      "issues": []
+    },
+    {
+      "route": "/fonduri-europene-nerambursabile-2026",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "fonduri-europene-nerambursabile-2026/index.html",
+          "visibleFaqCount": 0,
+          "schemaFaqCount": 0,
+          "schemaCount": 0
+        }
+      ],
+      "visibleFaqCount": 0,
+      "schemaFaqCount": 0,
+      "issues": []
+    },
+    {
+      "route": "/fonduri-europene-nord-est",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "fonduri-europene-nord-est/index.html",
+          "visibleFaqCount": 11,
+          "schemaFaqCount": 11,
+          "schemaCount": 1
+        }
+      ],
+      "visibleFaqCount": 11,
+      "schemaFaqCount": 11,
+      "issues": []
+    },
+    {
+      "route": "/fonduri-nerambursabile",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "fonduri-nerambursabile/index.html",
+          "visibleFaqCount": 0,
+          "schemaFaqCount": 0,
+          "schemaCount": 0
+        }
+      ],
+      "visibleFaqCount": 0,
+      "schemaFaqCount": 0,
+      "issues": []
+    },
+    {
+      "route": "/fonduri-pentru-ferme",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "fonduri-pentru-ferme/index.html",
+          "visibleFaqCount": 0,
+          "schemaFaqCount": 0,
+          "schemaCount": 0
+        }
+      ],
+      "visibleFaqCount": 0,
+      "schemaFaqCount": 0,
+      "issues": []
+    },
+    {
+      "route": "/fonduri-pentru-utilaje-agricole",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "fonduri-pentru-utilaje-agricole/index.html",
+          "visibleFaqCount": 0,
+          "schemaFaqCount": 0,
+          "schemaCount": 0
+        }
+      ],
+      "visibleFaqCount": 0,
+      "schemaFaqCount": 0,
+      "issues": []
+    },
+    {
+      "route": "/fonduri-regionale",
+      "status": "PASS",
+      "programId": "fonduri-regionale",
+      "files": [
+        {
+          "file": "fonduri-regionale/index.html",
+          "visibleFaqCount": 5,
+          "schemaFaqCount": 5,
+          "schemaCount": 1
+        }
+      ],
+      "visibleFaqCount": 5,
+      "schemaFaqCount": 5,
+      "issues": []
+    },
+    {
+      "route": "/gal-afir",
+      "status": "PASS",
+      "programId": "gal-afir-leader",
+      "files": [
+        {
+          "file": "gal-afir/index.html",
+          "visibleFaqCount": 8,
+          "schemaFaqCount": 8,
+          "schemaCount": 1
+        }
+      ],
+      "visibleFaqCount": 8,
+      "schemaFaqCount": 8,
+      "issues": []
+    },
+    {
+      "route": "/gdpr",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "gdpr.html",
+          "visibleFaqCount": 0,
+          "schemaFaqCount": 0,
+          "schemaCount": 0
+        }
+      ],
+      "visibleFaqCount": 0,
+      "schemaFaqCount": 0,
+      "issues": []
+    },
+    {
+      "route": "/ghiduri",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "ghiduri/index.html",
+          "visibleFaqCount": 7,
+          "schemaFaqCount": 7,
+          "schemaCount": 1
+        }
+      ],
+      "visibleFaqCount": 7,
+      "schemaFaqCount": 7,
+      "issues": []
+    },
+    {
+      "route": "/glosar-fonduri-europene",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "glosar-fonduri-europene/index.html",
+          "visibleFaqCount": 4,
+          "schemaFaqCount": 4,
+          "schemaCount": 1
+        }
+      ],
+      "visibleFaqCount": 4,
+      "schemaFaqCount": 4,
+      "issues": []
+    },
+    {
+      "route": "/greseli-fonduri-europene",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "greseli-fonduri-europene/index.html",
+          "visibleFaqCount": 0,
+          "schemaFaqCount": 0,
+          "schemaCount": 0
+        }
+      ],
+      "visibleFaqCount": 0,
+      "schemaFaqCount": 0,
+      "issues": []
+    },
+    {
+      "route": "/idei-afaceri-fonduri-europene",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "idei-afaceri-fonduri-europene.html",
+          "visibleFaqCount": 4,
+          "schemaFaqCount": 4,
+          "schemaCount": 1
+        }
+      ],
+      "visibleFaqCount": 4,
+      "schemaFaqCount": 4,
+      "issues": []
+    },
+    {
+      "route": "/instrumente",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "instrumente/index.html",
+          "visibleFaqCount": 4,
+          "schemaFaqCount": 4,
+          "schemaCount": 1
+        }
+      ],
+      "visibleFaqCount": 4,
+      "schemaFaqCount": 4,
+      "issues": []
+    },
+    {
+      "route": "/intrebari-frecvente",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "intrebari-frecvente/index.html",
+          "visibleFaqCount": 2,
+          "schemaFaqCount": 2,
+          "schemaCount": 1
+        }
+      ],
+      "visibleFaqCount": 2,
+      "schemaFaqCount": 2,
+      "issues": []
+    },
+    {
+      "route": "/intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm/index.html",
+          "visibleFaqCount": 7,
+          "schemaFaqCount": 7,
+          "schemaCount": 1
+        }
+      ],
+      "visibleFaqCount": 7,
+      "schemaFaqCount": 7,
+      "issues": []
+    },
+    {
+      "route": "/intrebari/ce-documente-sunt-necesare-pentru-dr12",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "intrebari/ce-documente-sunt-necesare-pentru-dr12/index.html",
+          "visibleFaqCount": 7,
+          "schemaFaqCount": 7,
+          "schemaCount": 1
+        }
+      ],
+      "visibleFaqCount": 7,
+      "schemaFaqCount": 7,
+      "issues": []
+    },
+    {
+      "route": "/intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene/index.html",
+          "visibleFaqCount": 7,
+          "schemaFaqCount": 7,
+          "schemaCount": 1
+        }
+      ],
+      "visibleFaqCount": 7,
+      "schemaFaqCount": 7,
+      "issues": []
+    },
+    {
+      "route": "/investitii-modernizarea-microintreprinderilor-apel-2",
+      "status": "PASS",
+      "programId": "modernizare-microintreprinderi-ne-2",
+      "files": [
+        {
+          "file": "investitii-modernizarea-microintreprinderilor-apel-2.html",
+          "visibleFaqCount": 8,
+          "schemaFaqCount": 8,
+          "schemaCount": 1
+        },
+        {
+          "file": "investitii-modernizarea-microintreprinderilor-apel-2/index.html",
+          "visibleFaqCount": 8,
+          "schemaFaqCount": 8,
+          "schemaCount": 1
+        }
+      ],
+      "visibleFaqCount": 8,
+      "schemaFaqCount": 8,
+      "issues": []
+    },
+    {
+      "route": "/management-proiecte-fonduri-europene",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "management-proiecte-fonduri-europene/index.html",
+          "visibleFaqCount": 5,
+          "schemaFaqCount": 5,
+          "schemaCount": 1
+        }
+      ],
+      "visibleFaqCount": 5,
+      "schemaFaqCount": 5,
+      "issues": []
+    },
+    {
+      "route": "/metodologie-verificare-eligibilitate",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "metodologie-verificare-eligibilitate/index.html",
+          "visibleFaqCount": 3,
+          "schemaFaqCount": 3,
+          "schemaCount": 1
+        }
+      ],
+      "visibleFaqCount": 3,
+      "schemaFaqCount": 3,
+      "issues": []
+    },
+    {
+      "route": "/plan-de-afaceri-fonduri-europene",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "plan-de-afaceri-fonduri-europene/index.html",
+          "visibleFaqCount": 5,
+          "schemaFaqCount": 5,
+          "schemaCount": 1
+        }
+      ],
+      "visibleFaqCount": 5,
+      "schemaFaqCount": 5,
+      "issues": []
+    },
+    {
+      "route": "/pnrr",
+      "status": "PASS",
+      "programId": "pnrr",
+      "files": [
+        {
+          "file": "pnrr/index.html",
+          "visibleFaqCount": 0,
+          "schemaFaqCount": 0,
+          "schemaCount": 0
+        }
+      ],
+      "visibleFaqCount": 0,
+      "schemaFaqCount": 0,
+      "issues": []
+    },
+    {
+      "route": "/pnrr-digitalizare-imm-cheltuieli-eligibile",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "pnrr-digitalizare-imm-cheltuieli-eligibile.html",
+          "visibleFaqCount": 3,
+          "schemaFaqCount": 3,
+          "schemaCount": 1
+        }
+      ],
+      "visibleFaqCount": 3,
+      "schemaFaqCount": 3,
+      "issues": []
+    },
+    {
+      "route": "/pocidif-21",
+      "status": "PASS",
+      "programId": "pocidif-21",
+      "files": [
+        {
+          "file": "pocidif-21/index.html",
+          "visibleFaqCount": 8,
+          "schemaFaqCount": 8,
+          "schemaCount": 1
+        }
+      ],
+      "visibleFaqCount": 8,
+      "schemaFaqCount": 8,
+      "issues": []
+    },
+    {
+      "route": "/politica-de-confidentialitate",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "politica-de-confidentialitate.html",
+          "visibleFaqCount": 0,
+          "schemaFaqCount": 0,
+          "schemaCount": 0
+        }
+      ],
+      "visibleFaqCount": 0,
+      "schemaFaqCount": 0,
+      "issues": []
+    },
+    {
+      "route": "/pro-infra",
+      "status": "PASS",
+      "programId": "pro-infra",
+      "files": [
+        {
+          "file": "pro-infra/index.html",
+          "visibleFaqCount": 8,
+          "schemaFaqCount": 8,
+          "schemaCount": 1
+        }
+      ],
+      "visibleFaqCount": 8,
+      "schemaFaqCount": 8,
+      "issues": []
+    },
+    {
+      "route": "/programul-tranzitie-justa",
+      "status": "PASS",
+      "programId": "programul-tranzitie-justa",
+      "files": [
+        {
+          "file": "programul-tranzitie-justa/index.html",
+          "visibleFaqCount": 0,
+          "schemaFaqCount": 0,
+          "schemaCount": 0
+        }
+      ],
+      "visibleFaqCount": 0,
+      "schemaFaqCount": 0,
+      "issues": []
+    },
+    {
+      "route": "/programul-tranzitie-justa-intrebari-documente",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "programul-tranzitie-justa-intrebari-documente/index.html",
+          "visibleFaqCount": 6,
+          "schemaFaqCount": 6,
+          "schemaCount": 1
+        }
+      ],
+      "visibleFaqCount": 6,
+      "schemaFaqCount": 6,
+      "issues": []
+    },
+    {
+      "route": "/proiectare-fonduri-europene",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "proiectare-fonduri-europene/index.html",
+          "visibleFaqCount": 5,
+          "schemaFaqCount": 5,
+          "schemaCount": 1
+        }
+      ],
+      "visibleFaqCount": 5,
+      "schemaFaqCount": 5,
+      "issues": []
+    },
+    {
+      "route": "/resurse",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "resurse/index.html",
+          "visibleFaqCount": 4,
+          "schemaFaqCount": 4,
+          "schemaCount": 1
+        }
+      ],
+      "visibleFaqCount": 4,
+      "schemaFaqCount": 4,
+      "issues": []
+    },
+    {
+      "route": "/resurse-utile",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "resurse-utile/index.html",
+          "visibleFaqCount": 0,
+          "schemaFaqCount": 0,
+          "schemaCount": 0
+        }
+      ],
+      "visibleFaqCount": 0,
+      "schemaFaqCount": 0,
+      "issues": []
+    },
+    {
+      "route": "/start-up-nation-2026",
+      "status": "PASS",
+      "programId": "start-up-nation",
+      "files": [
+        {
+          "file": "start-up-nation-2026.html",
+          "visibleFaqCount": 8,
+          "schemaFaqCount": 8,
+          "schemaCount": 1
+        },
+        {
+          "file": "start-up-nation-2026/index.html",
+          "visibleFaqCount": 8,
+          "schemaFaqCount": 8,
+          "schemaCount": 1
+        }
+      ],
+      "visibleFaqCount": 8,
+      "schemaFaqCount": 8,
+      "issues": []
+    },
+    {
+      "route": "/start-up-nation-2026-cheltuieli-eligibile",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "start-up-nation-2026-cheltuieli-eligibile/index.html",
+          "visibleFaqCount": 0,
+          "schemaFaqCount": 0,
+          "schemaCount": 0
+        }
+      ],
+      "visibleFaqCount": 0,
+      "schemaFaqCount": 0,
+      "issues": []
+    },
+    {
+      "route": "/start-up-nation-2026-conditii",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "start-up-nation-2026-conditii/index.html",
+          "visibleFaqCount": 0,
+          "schemaFaqCount": 0,
+          "schemaCount": 0
+        }
+      ],
+      "visibleFaqCount": 0,
+      "schemaFaqCount": 0,
+      "issues": []
+    },
+    {
+      "route": "/start-up-nation-2026-idei-afaceri",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "start-up-nation-2026-idei-afaceri/index.html",
+          "visibleFaqCount": 0,
+          "schemaFaqCount": 0,
+          "schemaCount": 0
+        }
+      ],
+      "visibleFaqCount": 0,
+      "schemaFaqCount": 0,
+      "issues": []
+    },
+    {
+      "route": "/start-up-nation-2026-plan-de-afaceri",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "start-up-nation-2026-plan-de-afaceri/index.html",
+          "visibleFaqCount": 0,
+          "schemaFaqCount": 0,
+          "schemaCount": 0
+        }
+      ],
+      "visibleFaqCount": 0,
+      "schemaFaqCount": 0,
+      "issues": []
+    },
+    {
+      "route": "/studii-de-caz-fonduri-europene",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "studii-de-caz-fonduri-europene/index.html",
+          "visibleFaqCount": 5,
+          "schemaFaqCount": 5,
+          "schemaCount": 1
+        }
+      ],
+      "visibleFaqCount": 5,
+      "schemaFaqCount": 5,
+      "issues": []
+    },
+    {
+      "route": "/studiu-fezabilitate-fonduri-europene",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "studiu-fezabilitate-fonduri-europene/index.html",
+          "visibleFaqCount": 5,
+          "schemaFaqCount": 5,
+          "schemaCount": 1
+        }
+      ],
+      "visibleFaqCount": 5,
+      "schemaFaqCount": 5,
+      "issues": []
+    },
+    {
+      "route": "/surse-oficiale-fonduri-europene",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "surse-oficiale-fonduri-europene/index.html",
+          "visibleFaqCount": 4,
+          "schemaFaqCount": 4,
+          "schemaCount": 1
+        }
+      ],
+      "visibleFaqCount": 4,
+      "schemaFaqCount": 4,
+      "issues": []
+    },
+    {
+      "route": "/termeni-si-conditii",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "termeni-si-conditii.html",
+          "visibleFaqCount": 0,
+          "schemaFaqCount": 0,
+          "schemaCount": 0
+        }
+      ],
+      "visibleFaqCount": 0,
+      "schemaFaqCount": 0,
+      "issues": []
+    },
+    {
+      "route": "/verificare-eligibilitate-fonduri-europene",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "verificare-eligibilitate-fonduri-europene/index.html",
+          "visibleFaqCount": 0,
+          "schemaFaqCount": 0,
+          "schemaCount": 0
+        }
+      ],
+      "visibleFaqCount": 0,
+      "schemaFaqCount": 0,
+      "issues": []
+    },
+    {
+      "route": "/webinarii",
+      "status": "PASS",
+      "programId": null,
+      "files": [
+        {
+          "file": "webinarii/index.html",
+          "visibleFaqCount": 4,
+          "schemaFaqCount": 4,
+          "schemaCount": 1
+        }
+      ],
+      "visibleFaqCount": 4,
+      "schemaFaqCount": 4,
+      "issues": []
+    }
+  ]
+}

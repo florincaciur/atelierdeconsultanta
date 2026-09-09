@@ -90,6 +90,7 @@ const FACTUAL_FIELD_LABELS = Object.freeze([
 ]);
 const OFFICIAL_HOST_SUFFIXES = Object.freeze([
   "gov.ro",
+  "bidromania.eu",
   "afir.ro",
   "regionordest.ro",
   "legislatie.just.ro",
@@ -617,6 +618,11 @@ function buildDocuments(data = loadData()) {
   };
 }
 
+function sameDocumentContent(actual, expected) {
+  const normalizeLineEndings = (value) => String(value).replace(/\r\n?/gu, "\n");
+  return normalizeLineEndings(actual) === normalizeLineEndings(expected);
+}
+
 function checkDocuments(documents) {
   const expected = [
     [STATUS_DOC_PATH, documents.status],
@@ -626,7 +632,7 @@ function checkDocuments(documents) {
   for (const [file, content] of expected) {
     if (!fs.existsSync(file)) {
       errors.push(`${path.relative(ROOT, file)} lipsește.`);
-    } else if (fs.readFileSync(file, "utf8") !== content) {
+    } else if (!sameDocumentContent(fs.readFileSync(file, "utf8"), content)) {
       errors.push(`${path.relative(ROOT, file)} este nesincronizat.`);
     }
   }
@@ -662,7 +668,9 @@ module.exports = {
   SOURCE_ROLES,
   buildDocuments,
   checkDocuments,
+  isOfficialUrl,
   loadData,
   resolveSourceReference,
+  sameDocumentContent,
   validateData
 };

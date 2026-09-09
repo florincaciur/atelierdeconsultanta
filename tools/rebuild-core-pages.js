@@ -31,7 +31,8 @@ const META = {
     title: "Fonduri europene 2026: programe pentru firme și fermieri",
     description: "Compară programe pentru firme, fermieri și instituții după solicitant, investiție, regiune, documente și contribuția proprie disponibilă.",
     ogTitle: "Găsește traseul potrivit pentru investiția ta | FABER",
-    ogDescription: "Pornește de la beneficiar și investiție, apoi verifică programul, documentele și bugetul în pagina dedicată fiecărui apel."
+    ogDescription: "Pornește de la beneficiar și investiție, apoi verifică programul, documentele și bugetul în pagina dedicată fiecărui apel.",
+    lastReviewed: "2026-08-29"
   },
   "/contact": {
     title: "Contact FABER: trimite proiectul pentru verificare",
@@ -637,7 +638,7 @@ function syncSnippetConfig() {
   const pagesByRoute = new Map(config.pages.map((page) => [page.route, page]));
   for (const [route, meta] of Object.entries(META)) {
     const current = pagesByRoute.get(route) || { route };
-    Object.assign(current, details[route], meta, { lastReviewed: REVIEWED });
+    Object.assign(current, details[route], meta, { lastReviewed: meta.lastReviewed || REVIEWED });
     if (!pagesByRoute.has(route)) config.pages.push(current);
   }
   const after = `${JSON.stringify(config, null, 2)}\n`;

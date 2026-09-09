@@ -35,15 +35,22 @@ function canonicalContactIdentity(config = loadLegalIdentity()) {
     || approvalApproved(config.approvals?.operationalEmailOwnerConfirmation);
   const emailApproved = businessApproved && fieldApproved(emailField) && emailOwnerApproved;
 
+  const approvedWhatsappPhones = new Set(config.approvedContactChannels?.whatsappPhones || []);
   const approvedPhones = phoneApproved
     ? [phoneField.approvedValue, ...(config.approvedContactChannels?.additionalPhones || [])]
       .filter((value, index, values) => /^\+[1-9]\d{7,14}$/u.test(String(value)) && values.indexOf(value) === index)
-      .map((value) => ({ href: `tel:${value}`, value, display: formatPhoneDisplay(value) }))
+      .map((value) => ({
+        href: `tel:${value}`,
+        value,
+        display: formatPhoneDisplay(value),
+        whatsappHref: approvedWhatsappPhones.has(value) ? `https://wa.me/${value.replace(/\D/gu, "")}` : null
+      }))
     : [];
   return {
     state: phoneApproved || emailApproved ? "partially_or_fully_approved" : "pending",
     phone: approvedPhones[0] || null,
     phones: approvedPhones,
+    whatsappPhones: approvedPhones.filter((phone) => phone.whatsappHref),
     email: emailApproved ? {
       href: `mailto:${emailField.approvedValue}`,
       value: emailField.approvedValue,

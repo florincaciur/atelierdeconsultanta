@@ -16,12 +16,12 @@ const VIEWPORTS = [
   { width: 1440, height: 1000 }
 ];
 const PAGES = [
-  { slug: "home", path: "/index.html", finalNextStep: false },
-  { slug: "afir-autoconsum", path: "/afir-autoconsum-agroalimentar.html", finalNextStep: true },
-  { slug: "dr12", path: "/dr12-afir/index.html", finalNextStep: true },
-  { slug: "dr14", path: "/dr14/index.html", finalNextStep: true },
-  { slug: "dr18", path: "/dr18/index.html", finalNextStep: true },
-  { slug: "por-nord-est", path: "/por-adr-nord-est/index.html", finalNextStep: true }
+  { slug: "home", path: "/index.html", programPage: false },
+  { slug: "afir-autoconsum", path: "/afir-autoconsum-agroalimentar.html", programPage: true },
+  { slug: "dr12", path: "/dr12-afir.html", programPage: true },
+  { slug: "dr14", path: "/dr14.html", programPage: true },
+  { slug: "dr18", path: "/dr18/index.html", programPage: true },
+  { slug: "microintreprinderi-ne", path: "/investitii-modernizarea-microintreprinderilor-apel-2.html", programPage: true }
 ];
 
 function contentType(file) {
@@ -70,14 +70,10 @@ async function main() {
         };
         page.on("console", listener);
         const response = await page.goto(`${base}${spec.path}`, { waitUntil: "networkidle" });
-        const metrics = await page.evaluate(({ expectNextStep }) => {
+        const metrics = await page.evaluate(({ expectProgram }) => {
           const root = document.documentElement;
           const h1 = document.querySelector("h1");
           const h1Rect = h1?.getBoundingClientRect();
-          const nextStep = document.querySelector("[data-contextual-next-step]");
-          const sections = [...document.querySelectorAll("main section")];
-          const nextStepIndex = nextStep ? sections.indexOf(nextStep) : -1;
-          const nextStepTop = nextStep ? nextStep.getBoundingClientRect().top + window.scrollY : null;
           const serviceTargets = new Set([...document.querySelectorAll("main a[href]")].map((link) => link.getAttribute("href")));
           return {
             viewportWidth: window.innerWidth,
@@ -86,11 +82,15 @@ async function main() {
             h1Count: document.querySelectorAll("h1").length,
             h1WithinViewport: Boolean(h1Rect && h1Rect.left >= -2 && h1Rect.right <= window.innerWidth + 2),
             h1Overflow: h1 ? getComputedStyle(h1).overflow : "missing",
-            nextStepCount: document.querySelectorAll("[data-contextual-next-step]").length,
-            nextStepRatio: nextStepTop === null ? null : nextStepTop / root.scrollHeight,
-            sectionsAfterNextStep: nextStepIndex < 0 ? null : sections.length - nextStepIndex - 1,
-            projectDesignLinks: document.querySelectorAll("[data-contextual-next-step] a[href='/proiectare-fonduri-europene']").length,
-            homepageFlow: !expectNextStep ? {
+            programSurface: expectProgram ? {
+              visualCount: document.querySelectorAll("[data-program-visual='immersive-verification']").length,
+              stepCount: document.querySelectorAll("[data-program-visual='immersive-verification'] [data-program-step]").length,
+              pressedCount: document.querySelectorAll("[data-program-visual='immersive-verification'] [data-program-step][aria-pressed='true']").length,
+              officialSourceCount: document.querySelectorAll("[data-program-visual='immersive-verification'] .program-visual__footer a[href^='https://']").length,
+              contextualCount: document.querySelectorAll("[data-program-contextual-links]").length,
+              conversionCount: document.querySelectorAll("[data-program-contextual-links] a[data-link-relation='conversion'][href^='/contact']").length
+            } : null,
+            homepageFlow: !expectProgram ? {
               heroCount: document.querySelectorAll(".homepage-decision-hero").length,
               methodCount: document.querySelectorAll("[data-homepage-method]").length,
               methodTabs: document.querySelectorAll("[data-homepage-method-tab]").length,
@@ -98,12 +98,12 @@ async function main() {
               explorerTabs: document.querySelectorAll("[data-homepage-explorer-tab]").length,
               contactCount: document.querySelectorAll("#homepage-contact").length
             } : null,
-            homepageServicePaths: !expectNextStep ? {
+            homepageServicePaths: !expectProgram ? {
               consulting: serviceTargets.has("/consultanta-fonduri-europene"),
               projectDesign: serviceTargets.has("/proiectare-fonduri-europene")
             } : null
           };
-        }, { expectNextStep: spec.finalNextStep });
+        }, { expectProgram: spec.programPage });
         page.off("console", listener);
 
         const screenshot = path.join(OUTPUT, `${spec.slug}-${viewport.width}.png`);
@@ -117,10 +117,11 @@ async function main() {
         if (!response || response.status() !== 200) errors.push(`HTTP ${response?.status() || "missing"}`);
         if (metrics.scrollWidth > metrics.viewportWidth + 1) errors.push(`horizontal overflow ${metrics.scrollWidth}/${metrics.viewportWidth}`);
         if (metrics.h1Count !== 1 || !metrics.h1WithinViewport || metrics.h1Overflow === "hidden") errors.push("H1 missing, clipped or outside viewport");
-        if (spec.finalNextStep) {
-          if (metrics.nextStepCount !== 1) errors.push(`next-step count ${metrics.nextStepCount}`);
-          if (metrics.projectDesignLinks !== 1) errors.push(`project-design links ${metrics.projectDesignLinks}`);
-          if (metrics.nextStepRatio < 0.75 || metrics.sectionsAfterNextStep !== 1) errors.push("next-step block is not immediately before the final CTA area");
+        if (spec.programPage) {
+          const surface = metrics.programSurface;
+          if (!surface || surface.visualCount !== 1 || surface.stepCount !== 4 || surface.pressedCount !== 1) errors.push("program visual is missing, duplicated or not initialized");
+          if (!surface || surface.officialSourceCount !== 1) errors.push("official source is missing from the program visual");
+          if (!surface || surface.contextualCount !== 1 || surface.conversionCount !== 1) errors.push("contextual route or its contact action is missing");
         } else {
           if (!metrics.homepageServicePaths?.consulting || !metrics.homepageServicePaths?.projectDesign) {
             errors.push("homepage does not expose both consulting and project-design paths");
@@ -139,7 +140,7 @@ async function main() {
     await new Promise((resolve) => server.close(resolve));
   }
 
-  fs.writeFileSync(REPORT, `${JSON.stringify({ generatedAt: "2026-07-20", results }, null, 2)}\n`, "utf8");
+  fs.writeFileSync(REPORT, `${JSON.stringify({ generatedAt: "2026-09-02", results }, null, 2)}\n`, "utf8");
   const failed = results.filter((result) => result.errors.length);
   for (const result of results) {
     console.log(`${result.errors.length ? "FAIL" : "PASS"} ${result.page.padEnd(18)} ${result.viewport.width}px -> ${result.screenshot}${result.errors.length ? ` (${result.errors.join("; ")})` : ""}`);

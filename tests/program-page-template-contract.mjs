@@ -85,7 +85,7 @@ for (const page of config.pages) {
   const actualOrder = $("[data-program-template-section]").map((_, node) => $(node).attr("data-program-template-section")).get();
   assert.deepEqual(actualOrder, ["glance", ...SECTION_ORDER], `${page.route}: ordinea obligatorie a secțiunilor este încălcată`);
   assert.equal($("#program-glance-title").text().trim(), "La o privire");
-  assert.deepEqual($("#program-glance-title").closest("section").find("th").map((_, node) => $(node).text().trim()).get(), ["Beneficiar", "Sprijin", "Contribuție proprie", "Calendar", "Document-cheie"]);
+  assert.deepEqual($("#program-glance-title").closest("section").find("th").map((_, node) => $(node).text().trim()).get(), ["Beneficiar", "Sprijin", "Contribuție proprie", "Calendar", "Verificat la", "Document-cheie"]);
   $("#program-glance-title").closest("section").find("tr").each((_, row) => {
     assert.equal($(row).find("a[data-source-key]").length, 1, `${page.route}: fiecare valoare din tabel trebuie să aibă sursa alăturată`);
   });
@@ -135,12 +135,21 @@ for (const page of config.pages) {
   assert.equal($("#program-sources .editorial-governance__changelog").length, 1, `${page.route}: changelog-ul vizibil lipsește`);
 
   const nodes = jsonLdNodes($);
+  const nodeById = new Map();
+  const indexNode = (value) => {
+    if (Array.isArray(value)) return value.forEach(indexNode);
+    if (!value || typeof value !== "object") return;
+    if (value["@id"]) nodeById.set(value["@id"], value);
+    Object.values(value).forEach(indexNode);
+  };
+  indexNode(nodes);
   const article = nodes.find((node) => hasType(node, "Article"));
   assert(article, `${page.route}: Article lipsește deși conținutul vizibil este editorial`);
   assert.equal(article.headline, $(".program-hero h1").text().trim(), `${page.route}: Article nu corespunde H1-ului vizibil`);
-  assert.equal(article.description, direct.text().trim(), `${page.route}: Article nu corespunde răspunsului vizibil`);
+  assert.equal(article.description, $("meta[name='description']").attr("content"), `${page.route}: Article nu corespunde descrierii editoriale a paginii`);
   assert.equal(article.dateModified, program.lastMeaningfulUpdate, `${page.route}: dateModified nu vine din lastMeaningfulUpdate`);
-  assert.equal(article.citation?.[0]?.url, program.sourceUrl, `${page.route}: citation nu indică sursa registrului`);
+  const articleCitation = article.citation?.[0]?.["@id"] ? nodeById.get(article.citation[0]["@id"]) : article.citation?.[0];
+  assert.equal(articleCitation?.url, program.sourceUrl, `${page.route}: citation nu indică sursa registrului`);
 
   const breadcrumb = nodes.find((node) => hasType(node, "BreadcrumbList"));
   assert(breadcrumb, `${page.route}: BreadcrumbList lipsește`);

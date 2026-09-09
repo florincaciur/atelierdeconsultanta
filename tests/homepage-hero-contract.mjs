@@ -18,7 +18,7 @@ const homepagePrograms = homepageHeroPrograms(programs);
 assert(latest && isPublicProgram(latest) && hasOfficialSource(latest), "programul recent trebuie să fie public și verificat oficial");
 assert.equal($("#hero.homepage-decision-hero").length, 1, "trebuie să existe exact un hero decizional");
 assert.equal($("#homepage-hero-title").text().trim(), "Consultanță și proiectare pentru proiecte cu fonduri europene", "H1 diferit de copy-ul restaurat");
-assert.match($("#hero .hero-subtitle").text().trim(), /^Verificare prudentă, documentată și interdisciplinară/u, "poziționarea profesională a hero-ului lipsește");
+assert.match($("#hero .hero-subtitle").text().trim(), /^FABER – Atelier de Consultanță sprijină/u, "identitatea și rolul FABER lipsesc din hero");
 assert.equal($("#hero .homepage-hero__microcopy").length, 0, "microcopy-ul redundant trebuie eliminat");
 
 const primary = $("#hero .hero-ctas a").eq(0);
@@ -34,15 +34,16 @@ for (const [name, cta] of [["principal", primary], ["secundar", secondary]]) {
   assert.equal(cta.attr("data-analytics-copy-variant"), "p1_15", `CTA ${name}: variantă copy greșită`);
 }
 
-assert.equal($("#hero .hero-flow-svg").length, 1, "SVG-ul traseului FABER trebuie restaurat");
-assert.deepEqual($("#hero .hf-label").map((_, node) => $(node).text().trim()).get(), ["Idee", "Verificare", "Dosar", "Finanțare", "Implementare"]);
-assert.equal($("#hero .hero-flow-caption").text().trim(), "Fiecare etapă trebuie susținută de documentele folosite în etapa următoare.");
-assert.equal($("#hero [data-hero-programs]").length, 1, "meniul interactiv cu măsuri trebuie să fie sub SVG");
+assert.equal($("#hero .hero-flow-svg, #hero .im-sculpture, #hero .im-program-drawer").length, 0, "roadmap-ul și sculptura din hero au fost înlocuite la cererea beneficiarului");
+assert.deepEqual($("#hero [data-program-scene]").map((_, node) => $(node).attr("data-program-scene")).get(), homepagePrograms.map(program => program.id), "fiecare măsură trebuie să aibă o ilustrație proprie în ordinea registrului");
+assert.equal($("#hero [data-hero-programs]").length, 1, "tabelul cu măsuri trebuie să fie unic și vizibil în hero");
 assert.equal($("#hero [data-hero-program-item]").length, homepagePrograms.length, "meniul interactiv trebuie să corespundă selecției din registrul unic");
 assert.equal($("#hero [data-hero-program-item][href='/dr14']").length, 1, "DR 14 trebuie publicat în meniul hero");
+assert.equal($("#hero [data-program-scene='dr14-afir'] .pv-tractor").length, 1, "Scena DR 14 din homepage trebuie să includă tractorul animat");
+assert.equal($("#hero [data-program-scene='dr14-afir'] .pv-field-bed").length, 1, "Scena DR 14 din homepage trebuie să includă un câmp");
 assert.equal($("#hero [data-hero-program-item][href='/dr18']").length, 1, "DR 18 trebuie publicat în meniul hero");
 assert.equal($("#hero [data-hero-program-item][href='/e-drive']").length, 1, "e-DRIVE trebuie publicat în meniul hero");
-assert.equal($("#hero .hero-flow-svg").nextAll("[data-hero-programs]").length, 1, "meniul măsurilor trebuie poziționat după SVG");
+assert.equal($("#hero [data-hero-programs]").parents("details").length, 0, "tabelul nu trebuie ascuns într-un acordeon");
 assert.equal($("#hero [data-hero-program-item][href='/por-adr-nord-est']").length, 0, "ruta regională duplicată nu trebuie publicată în hero");
 assert.equal($("#hero [data-hero-program-item][href='/investitii-modernizarea-microintreprinderilor-apel-2']").length, 1, "pagina de conversie regională trebuie publicată în hero");
 const latestNode = $("#hero [data-homepage-hero-latest-program]");
@@ -60,4 +61,4 @@ assert.match(css, /font-size:\s*clamp\(2\.25rem,\s*9\.5vw,\s*2\.625rem\)/, "lips
 assert.match(css, /max-width:\s*64ch/, "textul nu este limitat la 60–68 caractere");
 assert.match(css, /prefers-reduced-motion:\s*reduce/, "lipsește prefers-reduced-motion");
 
-console.log(`Homepage hero contract PASS: copy restaurat, SVG cu 5 etape, 2 CTA-uri contextuale și registru ${latest.slug} (${latest.verifiedAt}).`);
+console.log(`Homepage hero contract PASS: tabel cu ${homepagePrograms.length} scene, 2 CTA-uri contextuale și registru ${latest.slug} (${latest.verifiedAt}).`);

@@ -45,7 +45,8 @@ Generat din `config/about-faber-governance.json` la 2026-07-22. Acest raport est
 | Înregistrare | Status | Publicare | Date/dovezi necesare |
 |---|---|---|---|
 | team_profiles | DE_VALIDAT_UMAN | blocked | `fotografie reală și drept de utilizare`; `nume`; `rol`; `specializări`; `experiență verificabilă`; `LinkedIn oficial, dacă există`; `acord pentru publicare`; `pagini de autor atribuite` |
-| case_studies_and_results | DE_VALIDAT_UMAN | blocked | `documente justificative`; `metodă de calcul și perioadă`; `acordul beneficiarului`; `regulă de anonimizare`; `aprobarea formulării publice` |
+| case_studies_and_results | DE_VALIDAT_UMAN | blocked | `documente justificative`; `beneficiarul poate fi publicat`; `sector`; `program`; `serviciu FABER`; `investiție`; `etapă`; `rezultat verificabil`; `valoare publicabilă`; `locație publicabilă`; `permisiune pentru nume și logo`; `metodă de calcul și perioadă pentru orice valoare`; `regulă de anonimizare`; `aprobarea formulării publice` |
+| testimonials | DE_VALIDAT_UMAN | blocked | `text aprobat`; `autor`; `funcție`; `companie`; `permisiune de publicare` |
 | afir_nomenclature_listing | DE_VALIDAT_UMAN | blocked | `URL oficial AFIR`; `numele și versiunea documentului`; `data verificării`; `potrivirea exactă a entității juridice`; `aprobarea formulării listată în nomenclatorul orientativ AFIR` |
 | other_affiliations | DE_VALIDAT_UMAN | blocked | `document oficial al organizației`; `perioada valabilității`; `entitatea afiliată`; `acord pentru publicare` |
 

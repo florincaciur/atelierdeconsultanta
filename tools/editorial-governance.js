@@ -11,8 +11,10 @@ const {
   loadProgramConfig,
   summaryHasValues
 } = require("./program-factual-governance");
+const { approvedIdentity, loadLegalIdentity } = require("./legal-identity-governance");
 
 const CONFIG_PATH = path.join(ROOT, "config", "editorial-governance.json");
+const PUBLISHER_NAME = approvedIdentity(loadLegalIdentity()).brandName;
 const CONTENT_TYPES = Object.freeze(["program", "guide", "tool"]);
 const GOVERNANCE_STATES = Object.freeze(["public", "pending_validation", "revoked"]);
 const REQUIRED_RECORD_FIELDS = Object.freeze([
@@ -27,7 +29,9 @@ const REQUIRED_RECORD_FIELDS = Object.freeze([
   "reviewerRole",
   "attributionType",
   "personalNameConsent",
+  "datePublished",
   "verifiedAt",
+  "officialSourceUpdatedAt",
   "officialSourceName",
   "officialSourceUrl",
   "sourceVersion",
@@ -105,6 +109,7 @@ function programContradictions(record, program) {
     ["officialSourceName/sourceName", record.officialSourceName, program.sourceName],
     ["officialSourceUrl/sourceUrl", record.officialSourceUrl, program.sourceUrl],
     ["sourceVersion", record.sourceVersion, program.sourceVersion],
+    ["officialSourceUpdatedAt", record.officialSourceUpdatedAt, program.officialSourceUpdatedAt || HUMAN_REVIEW],
     ["lastMeaningfulUpdate", record.lastMeaningfulUpdate, program.lastMeaningfulUpdate],
     ["statusSnapshot/status", record.statusSnapshot, program.status]
   ];
@@ -148,7 +153,7 @@ function validateRecord(record, index, context) {
   if (!["organization", "person"].includes(record.attributionType)) errors.push(`${where}: attributionType invalid (${record.attributionType})`);
   if (typeof record.personalNameConsent !== "boolean") errors.push(`${where}: personalNameConsent trebuie să fie boolean`);
   if (record.programId !== null && !context.programById.has(record.programId)) errors.push(`${where}: programId inexistent (${record.programId})`);
-  for (const field of ["verifiedAt", "nextReviewAt", "lastMeaningfulUpdate"]) {
+  for (const field of ["datePublished", "verifiedAt", "officialSourceUpdatedAt", "nextReviewAt", "lastMeaningfulUpdate"]) {
     if (!isIsoDate(record[field]) && !isPending(record[field])) errors.push(`${where}: ${field} trebuie să fie dată ISO sau ${HUMAN_REVIEW}`);
   }
   if (!Array.isArray(record.changelog)) errors.push(`${where}: changelog trebuie să fie listă`);
@@ -162,6 +167,14 @@ function validateRecord(record, index, context) {
   }
 
   const program = record.programId ? context.programById.get(record.programId) : null;
+  if (isIsoDate(record.datePublished) && isIsoDate(record.lastMeaningfulUpdate)
+    && record.datePublished > record.lastMeaningfulUpdate) {
+    errors.push(`${where}: datePublished nu poate fi după dateModified/lastMeaningfulUpdate`);
+  }
+  if (isIsoDate(record.officialSourceUpdatedAt) && isIsoDate(record.verifiedAt)
+    && record.officialSourceUpdatedAt > record.verifiedAt) {
+    errors.push(`${where}: officialSourceUpdatedAt nu poate fi după verifiedAt`);
+  }
   if (record.governanceState === "public") {
     if (!isCompleteRecord(record)) errors.push(`${where}: o înregistrare publică necesită autor, reviewer, sursă, verificare, nextReviewAt, lastMeaningfulUpdate și changelog`);
     const meaningfulDates = (record.changelog || [])
@@ -188,12 +201,15 @@ function validateRecord(record, index, context) {
   if (reviewExpired(record, context.today) && program && record.statusSnapshot !== program.status) {
     errors.push(`${where}: statusul programului a fost schimbat după expirarea revizuirii; revizuirea trebuie reînnoită înaintea schimbării`);
   }
+  if (program?.status === "apel_deschis" && reviewExpired(record, context.today)) {
+    errors.push(`${where}: un apel deschis nu poate rămâne public după nextReviewAt fără reverificare`);
+  }
   return errors;
 }
 
 function validateGovernance(config, programs, today = new Date().toISOString().slice(0, 10)) {
   const errors = [];
-  if (config?.schemaVersion !== 1) errors.push("schemaVersion trebuie să fie 1");
+  if (config?.schemaVersion !== 2) errors.push("schemaVersion trebuie să fie 2");
   const policy = config?.policy || {};
   if (policy.openCallReviewDays !== 30) errors.push("openCallReviewDays trebuie să fie 30");
   if (!Number.isInteger(policy.programReviewDays) || policy.programReviewDays < 30 || policy.programReviewDays > 60) errors.push("programReviewDays trebuie să fie între 30 și 60");
@@ -243,21 +259,27 @@ function renderEditorialGovernance(record) {
   if (!isCompleteRecord(record)) {
     return `<!-- EDITORIAL_GOVERNANCE_START -->
 <section class="editorial-governance editorial-governance--pending" aria-label="Guvernanță editorială" data-editorial-record="${escapeHtml(record.id)}" data-governance-state="${escapeHtml(record.governanceState)}">
-  <p><strong>Metadate editoriale în validare:</strong> autorul, reviewerul, sursa sau termenul de reverificare nu sunt încă publicate ca informații confirmate.</p>
+  <p><strong>Metadate editoriale în validare:</strong> proveniența sau datele acestei pagini nu sunt încă publicate ca informații confirmate.</p>
 </section>
 <!-- EDITORIAL_GOVERNANCE_END -->`;
   }
   const changes = record.changelog
     .slice()
     .sort((left, right) => right.date.localeCompare(left.date))
-    .map((change) => `<li><time datetime="${escapeHtml(change.date)}">${escapeHtml(change.date)}</time> — ${escapeHtml(change.summary)} <span>(${escapeHtml(change.reviewer)})</span></li>`)
+    .map((change) => `<li><time datetime="${escapeHtml(change.date)}">${escapeHtml(change.date)}</time> — ${escapeHtml(change.summary)}</li>`)
     .join("\n      ");
+  const publication = isIsoDate(record.datePublished)
+    ? `<span>Publicat la <time datetime="${escapeHtml(record.datePublished)}">${escapeHtml(record.datePublished)}</time>.</span> `
+    : "";
+  const sourceUpdate = isIsoDate(record.officialSourceUpdatedAt)
+    ? ` <span>Sursa oficială a fost actualizată la <time datetime="${escapeHtml(record.officialSourceUpdatedAt)}">${escapeHtml(record.officialSourceUpdatedAt)}</time>.</span>`
+    : "";
   return `<!-- EDITORIAL_GOVERNANCE_START -->
-<section class="editorial-governance" aria-label="Guvernanță editorială" data-editorial-record="${escapeHtml(record.id)}" data-governance-state="public" data-next-review-at="${escapeHtml(record.nextReviewAt)}">
-  <p class="editorial-governance__verified"><strong>Verificat la <time datetime="${escapeHtml(record.verifiedAt)}">${escapeHtml(record.verifiedAt)}</time> de ${escapeHtml(record.reviewer)}, ${escapeHtml(record.reviewerRole)}.</strong></p>
-  <p>Autor: ${escapeHtml(record.author)}, ${escapeHtml(record.authorRole)}.</p>
-  <p>Sursa oficială: <a href="${escapeHtml(record.officialSourceUrl)}" target="_blank" rel="noopener noreferrer" data-analytics-event="source_document_click" data-analytics-component="editorial_governance" data-analytics-cta-id="official_source">${escapeHtml(record.officialSourceName)} — ${escapeHtml(record.sourceVersion)}</a>.</p>
-  <p>Următoarea reverificare internă: <time datetime="${escapeHtml(record.nextReviewAt)}">${escapeHtml(record.nextReviewAt)}</time>. <a href="#editorial-changelog-${escapeHtml(record.id)}">Vezi modificările</a>.</p>
+<section class="editorial-governance" aria-label="Guvernanță editorială" data-editorial-record="${escapeHtml(record.id)}" data-governance-state="public">
+  <p class="editorial-governance__verified"><strong>Verificat la <time datetime="${escapeHtml(record.verifiedAt)}">${escapeHtml(record.verifiedAt)}</time>.</strong></p>
+  <p>${publication}Actualizat editorial la <time datetime="${escapeHtml(record.lastMeaningfulUpdate)}">${escapeHtml(record.lastMeaningfulUpdate)}</time>. Publisher: ${escapeHtml(PUBLISHER_NAME)}.</p>
+  <p>Sursa oficială: <a href="${escapeHtml(record.officialSourceUrl)}" target="_blank" rel="noopener noreferrer" data-analytics-event="source_document_click" data-analytics-component="editorial_governance" data-analytics-cta-id="official_source">${escapeHtml(record.officialSourceName)} — ${escapeHtml(record.sourceVersion)}</a>.${sourceUpdate}</p>
+  <p><a href="#editorial-changelog-${escapeHtml(record.id)}">Vezi modificările</a>.</p>
   <details id="editorial-changelog-${escapeHtml(record.id)}" class="editorial-governance__changelog">
     <summary>Istoric editorial</summary>
     <ol>

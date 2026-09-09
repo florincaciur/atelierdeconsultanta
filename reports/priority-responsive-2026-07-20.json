@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-20",
+  "generatedAt": "2026-09-02",
   "results": [
     {
       "page": "home",
@@ -11,21 +11,18 @@
       "metrics": {
         "viewportWidth": 320,
         "scrollWidth": 320,
-        "pageHeight": 13193,
+        "pageHeight": 8089,
         "h1Count": 1,
         "h1WithinViewport": true,
         "h1Overflow": "visible",
-        "nextStepCount": 0,
-        "nextStepRatio": null,
-        "sectionsAfterNextStep": null,
-        "projectDesignLinks": 0,
-        "compactAnswer": {
-          "count": 1,
-          "height": 446.984375,
-          "detailsOpen": false,
-          "directAnswerVisible": true,
-          "factCount": 8,
-          "sourceCount": 1
+        "programSurface": null,
+        "homepageFlow": {
+          "heroCount": 1,
+          "methodCount": 1,
+          "methodTabs": 5,
+          "explorerCount": 1,
+          "explorerTabs": 4,
+          "contactCount": 1
         },
         "homepageServicePaths": {
           "consulting": true,
@@ -44,15 +41,19 @@
       "metrics": {
         "viewportWidth": 320,
         "scrollWidth": 320,
-        "pageHeight": 27908,
+        "pageHeight": 28505,
         "h1Count": 1,
         "h1WithinViewport": true,
         "h1Overflow": "visible",
-        "nextStepCount": 1,
-        "nextStepRatio": 0.9468269626988677,
-        "sectionsAfterNextStep": 1,
-        "projectDesignLinks": 1,
-        "compactAnswer": null,
+        "programSurface": {
+          "visualCount": 1,
+          "stepCount": 4,
+          "pressedCount": 1,
+          "officialSourceCount": 1,
+          "contextualCount": 1,
+          "conversionCount": 1
+        },
+        "homepageFlow": null,
         "homepageServicePaths": null
       },
       "errors": []
@@ -67,15 +68,19 @@
       "metrics": {
         "viewportWidth": 320,
         "scrollWidth": 320,
-        "pageHeight": 18596,
+        "pageHeight": 14963,
         "h1Count": 1,
         "h1WithinViewport": true,
         "h1Overflow": "visible",
-        "nextStepCount": 1,
-        "nextStepRatio": 0.9229883106582061,
-        "sectionsAfterNextStep": 1,
-        "projectDesignLinks": 1,
-        "compactAnswer": null,
+        "programSurface": {
+          "visualCount": 1,
+          "stepCount": 4,
+          "pressedCount": 1,
+          "officialSourceCount": 1,
+          "contextualCount": 1,
+          "conversionCount": 1
+        },
+        "homepageFlow": null,
         "homepageServicePaths": null
       },
       "errors": []
@@ -90,38 +95,73 @@
       "metrics": {
         "viewportWidth": 320,
         "scrollWidth": 320,
-        "pageHeight": 19916,
+        "pageHeight": 20784,
         "h1Count": 1,
         "h1WithinViewport": true,
         "h1Overflow": "visible",
-        "nextStepCount": 1,
-        "nextStepRatio": 0.9303928060353485,
-        "sectionsAfterNextStep": 1,
-        "projectDesignLinks": 1,
-        "compactAnswer": null,
+        "programSurface": {
+          "visualCount": 1,
+          "stepCount": 4,
+          "pressedCount": 1,
+          "officialSourceCount": 1,
+          "contextualCount": 1,
+          "conversionCount": 1
+        },
+        "homepageFlow": null,
         "homepageServicePaths": null
       },
       "errors": []
     },
     {
-      "page": "por-nord-est",
+      "page": "dr18",
       "viewport": {
         "width": 320,
         "height": 844
       },
-      "screenshot": "reports\\priority-responsive-2026-07-20\\por-nord-est-320.png",
+      "screenshot": "reports\\priority-responsive-2026-07-20\\dr18-320.png",
       "metrics": {
         "viewportWidth": 320,
         "scrollWidth": 320,
-        "pageHeight": 17372,
+        "pageHeight": 25490,
         "h1Count": 1,
         "h1WithinViewport": true,
         "h1Overflow": "visible",
-        "nextStepCount": 1,
-        "nextStepRatio": 0.9189914085885332,
-        "sectionsAfterNextStep": 1,
-        "projectDesignLinks": 1,
-        "compactAnswer": null,
+        "programSurface": {
+          "visualCount": 1,
+          "stepCount": 4,
+          "pressedCount": 1,
+          "officialSourceCount": 1,
+          "contextualCount": 1,
+          "conversionCount": 1
+        },
+        "homepageFlow": null,
+        "homepageServicePaths": null
+      },
+      "errors": []
+    },
+    {
+      "page": "microintreprinderi-ne",
+      "viewport": {
+        "width": 320,
+        "height": 844
+      },
+      "screenshot": "reports\\priority-responsive-2026-07-20\\microintreprinderi-ne-320.png",
+      "metrics": {
+        "viewportWidth": 320,
+        "scrollWidth": 320,
+        "pageHeight": 30906,
+        "h1Count": 1,
+        "h1WithinViewport": true,
+        "h1Overflow": "visible",
+        "programSurface": {
+          "visualCount": 1,
+          "stepCount": 4,
+          "pressedCount": 1,
+          "officialSourceCount": 1,
+          "contextualCount": 1,
+          "conversionCount": 1
+        },
+        "homepageFlow": null,
         "homepageServicePaths": null
       },
       "errors": []
@@ -136,21 +176,18 @@
       "metrics": {
         "viewportWidth": 390,
         "scrollWidth": 390,
-        "pageHeight": 12778,
+        "pageHeight": 7592,
         "h1Count": 1,
         "h1WithinViewport": true,
         "h1Overflow": "visible",
-        "nextStepCount": 0,
-        "nextStepRatio": null,
-        "sectionsAfterNextStep": null,
-        "projectDesignLinks": 0,
-        "compactAnswer": {
-          "count": 1,
-          "height": 401.859375,
-          "detailsOpen": false,
-          "directAnswerVisible": true,
-          "factCount": 8,
-          "sourceCount": 1
+        "programSurface": null,
+        "homepageFlow": {
+          "heroCount": 1,
+          "methodCount": 1,
+          "methodTabs": 5,
+          "explorerCount": 1,
+          "explorerTabs": 4,
+          "contactCount": 1
         },
         "homepageServicePaths": {
           "consulting": true,
@@ -169,15 +206,19 @@
       "metrics": {
         "viewportWidth": 390,
         "scrollWidth": 390,
-        "pageHeight": 22093,
+        "pageHeight": 22736,
         "h1Count": 1,
         "h1WithinViewport": true,
         "h1Overflow": "visible",
-        "nextStepCount": 1,
-        "nextStepRatio": 0.9400283743719731,
-        "sectionsAfterNextStep": 1,
-        "projectDesignLinks": 1,
-        "compactAnswer": null,
+        "programSurface": {
+          "visualCount": 1,
+          "stepCount": 4,
+          "pressedCount": 1,
+          "officialSourceCount": 1,
+          "contextualCount": 1,
+          "conversionCount": 1
+        },
+        "homepageFlow": null,
         "homepageServicePaths": null
       },
       "errors": []
@@ -192,15 +233,19 @@
       "metrics": {
         "viewportWidth": 390,
         "scrollWidth": 390,
-        "pageHeight": 14907,
+        "pageHeight": 12231,
         "h1Count": 1,
         "h1WithinViewport": true,
         "h1Overflow": "visible",
-        "nextStepCount": 1,
-        "nextStepRatio": 0.914771583819682,
-        "sectionsAfterNextStep": 1,
-        "projectDesignLinks": 1,
-        "compactAnswer": null,
+        "programSurface": {
+          "visualCount": 1,
+          "stepCount": 4,
+          "pressedCount": 1,
+          "officialSourceCount": 1,
+          "contextualCount": 1,
+          "conversionCount": 1
+        },
+        "homepageFlow": null,
         "homepageServicePaths": null
       },
       "errors": []
@@ -215,38 +260,73 @@
       "metrics": {
         "viewportWidth": 390,
         "scrollWidth": 390,
-        "pageHeight": 16154,
+        "pageHeight": 17515,
         "h1Count": 1,
         "h1WithinViewport": true,
         "h1Overflow": "visible",
-        "nextStepCount": 1,
-        "nextStepRatio": 0.9267934799430482,
-        "sectionsAfterNextStep": 1,
-        "projectDesignLinks": 1,
-        "compactAnswer": null,
+        "programSurface": {
+          "visualCount": 1,
+          "stepCount": 4,
+          "pressedCount": 1,
+          "officialSourceCount": 1,
+          "contextualCount": 1,
+          "conversionCount": 1
+        },
+        "homepageFlow": null,
         "homepageServicePaths": null
       },
       "errors": []
     },
     {
-      "page": "por-nord-est",
+      "page": "dr18",
       "viewport": {
         "width": 390,
         "height": 844
       },
-      "screenshot": "reports\\priority-responsive-2026-07-20\\por-nord-est-390.png",
+      "screenshot": "reports\\priority-responsive-2026-07-20\\dr18-390.png",
       "metrics": {
         "viewportWidth": 390,
         "scrollWidth": 390,
-        "pageHeight": 14193,
+        "pageHeight": 20098,
         "h1Count": 1,
         "h1WithinViewport": true,
         "h1Overflow": "visible",
-        "nextStepCount": 1,
-        "nextStepRatio": 0.9073993341788206,
-        "sectionsAfterNextStep": 1,
-        "projectDesignLinks": 1,
-        "compactAnswer": null,
+        "programSurface": {
+          "visualCount": 1,
+          "stepCount": 4,
+          "pressedCount": 1,
+          "officialSourceCount": 1,
+          "contextualCount": 1,
+          "conversionCount": 1
+        },
+        "homepageFlow": null,
+        "homepageServicePaths": null
+      },
+      "errors": []
+    },
+    {
+      "page": "microintreprinderi-ne",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "screenshot": "reports\\priority-responsive-2026-07-20\\microintreprinderi-ne-390.png",
+      "metrics": {
+        "viewportWidth": 390,
+        "scrollWidth": 390,
+        "pageHeight": 24250,
+        "h1Count": 1,
+        "h1WithinViewport": true,
+        "h1Overflow": "visible",
+        "programSurface": {
+          "visualCount": 1,
+          "stepCount": 4,
+          "pressedCount": 1,
+          "officialSourceCount": 1,
+          "contextualCount": 1,
+          "conversionCount": 1
+        },
+        "homepageFlow": null,
         "homepageServicePaths": null
       },
       "errors": []
@@ -261,21 +341,18 @@
       "metrics": {
         "viewportWidth": 1440,
         "scrollWidth": 1440,
-        "pageHeight": 11466,
+        "pageHeight": 6068,
         "h1Count": 1,
         "h1WithinViewport": true,
         "h1Overflow": "visible",
-        "nextStepCount": 0,
-        "nextStepRatio": null,
-        "sectionsAfterNextStep": null,
-        "projectDesignLinks": 0,
-        "compactAnswer": {
-          "count": 1,
-          "height": 318.125,
-          "detailsOpen": false,
-          "directAnswerVisible": true,
-          "factCount": 8,
-          "sourceCount": 1
+        "programSurface": null,
+        "homepageFlow": {
+          "heroCount": 1,
+          "methodCount": 1,
+          "methodTabs": 5,
+          "explorerCount": 1,
+          "explorerTabs": 4,
+          "contactCount": 1
         },
         "homepageServicePaths": {
           "consulting": true,
@@ -294,15 +371,19 @@
       "metrics": {
         "viewportWidth": 1440,
         "scrollWidth": 1440,
-        "pageHeight": 10585,
+        "pageHeight": 10086,
         "h1Count": 1,
         "h1WithinViewport": true,
         "h1Overflow": "visible",
-        "nextStepCount": 1,
-        "nextStepRatio": 0.9325962446858762,
-        "sectionsAfterNextStep": 1,
-        "projectDesignLinks": 1,
-        "compactAnswer": null,
+        "programSurface": {
+          "visualCount": 1,
+          "stepCount": 4,
+          "pressedCount": 1,
+          "officialSourceCount": 1,
+          "contextualCount": 1,
+          "conversionCount": 1
+        },
+        "homepageFlow": null,
         "homepageServicePaths": null
       },
       "errors": []
@@ -317,15 +398,19 @@
       "metrics": {
         "viewportWidth": 1440,
         "scrollWidth": 1440,
-        "pageHeight": 7551,
+        "pageHeight": 6145,
         "h1Count": 1,
         "h1WithinViewport": true,
         "h1Overflow": "visible",
-        "nextStepCount": 1,
-        "nextStepRatio": 0.9082902926764667,
-        "sectionsAfterNextStep": 1,
-        "projectDesignLinks": 1,
-        "compactAnswer": null,
+        "programSurface": {
+          "visualCount": 1,
+          "stepCount": 4,
+          "pressedCount": 1,
+          "officialSourceCount": 1,
+          "contextualCount": 1,
+          "conversionCount": 1
+        },
+        "homepageFlow": null,
         "homepageServicePaths": null
       },
       "errors": []
@@ -340,38 +425,73 @@
       "metrics": {
         "viewportWidth": 1440,
         "scrollWidth": 1440,
-        "pageHeight": 8240,
+        "pageHeight": 10155,
         "h1Count": 1,
         "h1WithinViewport": true,
         "h1Overflow": "visible",
-        "nextStepCount": 1,
-        "nextStepRatio": 0.9184655643203884,
-        "sectionsAfterNextStep": 1,
-        "projectDesignLinks": 1,
-        "compactAnswer": null,
+        "programSurface": {
+          "visualCount": 1,
+          "stepCount": 4,
+          "pressedCount": 1,
+          "officialSourceCount": 1,
+          "contextualCount": 1,
+          "conversionCount": 1
+        },
+        "homepageFlow": null,
         "homepageServicePaths": null
       },
       "errors": []
     },
     {
-      "page": "por-nord-est",
+      "page": "dr18",
       "viewport": {
         "width": 1440,
         "height": 1000
       },
-      "screenshot": "reports\\priority-responsive-2026-07-20\\por-nord-est-1440.png",
+      "screenshot": "reports\\priority-responsive-2026-07-20\\dr18-1440.png",
       "metrics": {
         "viewportWidth": 1440,
         "scrollWidth": 1440,
-        "pageHeight": 7369,
+        "pageHeight": 12150,
         "h1Count": 1,
         "h1WithinViewport": true,
         "h1Overflow": "visible",
-        "nextStepCount": 1,
-        "nextStepRatio": 0.9057538336273578,
-        "sectionsAfterNextStep": 1,
-        "projectDesignLinks": 1,
-        "compactAnswer": null,
+        "programSurface": {
+          "visualCount": 1,
+          "stepCount": 4,
+          "pressedCount": 1,
+          "officialSourceCount": 1,
+          "contextualCount": 1,
+          "conversionCount": 1
+        },
+        "homepageFlow": null,
+        "homepageServicePaths": null
+      },
+      "errors": []
+    },
+    {
+      "page": "microintreprinderi-ne",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "screenshot": "reports\\priority-responsive-2026-07-20\\microintreprinderi-ne-1440.png",
+      "metrics": {
+        "viewportWidth": 1440,
+        "scrollWidth": 1440,
+        "pageHeight": 13356,
+        "h1Count": 1,
+        "h1WithinViewport": true,
+        "h1Overflow": "visible",
+        "programSurface": {
+          "visualCount": 1,
+          "stepCount": 4,
+          "pressedCount": 1,
+          "officialSourceCount": 1,
+          "contextualCount": 1,
+          "conversionCount": 1
+        },
+        "homepageFlow": null,
         "homepageServicePaths": null
       },
       "errors": []

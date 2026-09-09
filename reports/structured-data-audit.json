@@ -1,28 +1,26 @@
 {
-  "generatedAt": "2026-08-23T19:40:58.049Z",
+  "generatedAt": "2026-09-06T15:20:29.966Z",
   "summary": {
-    "htmlFilesChecked": 188,
+    "htmlFilesChecked": 189,
     "indexablePagesChecked": 104,
     "filesWithIssues": 0,
     "organizationVariants": 1,
+    "stableTopLevelIdsChecked": 551,
     "types": {
-      "Organization": 152,
+      "Organization": 128,
       "ProfessionalService": 104,
       "PostalAddress": 104,
       "ImageObject": 104,
       "WebSite": 104,
-      "WebPage": 135,
-      "CreativeWork": 68,
+      "WebPage": 104,
       "BreadcrumbList": 103,
-      "ListItem": 326,
+      "ListItem": 324,
       "Article": 31,
-      "DefinedTerm": 24,
-      "PropertyValue": 221,
-      "DefinedTermSet": 24,
-      "FAQPage": 85,
-      "Question": 625,
-      "Answer": 625,
-      "Audience": 19,
+      "FinancialIncentive": 24,
+      "CreativeWork": 26,
+      "FAQPage": 66,
+      "Question": 414,
+      "Answer": 414,
       "Service": 12,
       "AdministrativeArea": 12,
       "WebApplication": 1
@@ -34,23 +32,22 @@
       "file": "digitalizare-imm.html",
       "route": "/digitalizare-imm",
       "blocks": 1,
+      "topLevelIds": 7,
       "types": {
-        "Organization": 3,
+        "Organization": 2,
         "ProfessionalService": 1,
         "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
-        "WebPage": 2,
-        "CreativeWork": 3,
+        "WebPage": 1,
         "BreadcrumbList": 1,
         "ListItem": 4,
         "Article": 1,
-        "DefinedTerm": 1,
-        "PropertyValue": 8,
-        "DefinedTermSet": 1,
+        "FinancialIncentive": 1,
+        "CreativeWork": 1,
         "FAQPage": 1,
-        "Question": 9,
-        "Answer": 9
+        "Question": 5,
+        "Answer": 5
       },
       "modified": [
         "2026-07-22",
@@ -62,27 +59,26 @@
       "file": "dr12-afir.html",
       "route": "/dr12-afir",
       "blocks": 1,
+      "topLevelIds": 7,
       "types": {
-        "Organization": 3,
+        "Organization": 2,
         "ProfessionalService": 1,
         "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
-        "WebPage": 2,
-        "CreativeWork": 3,
+        "WebPage": 1,
         "BreadcrumbList": 1,
         "ListItem": 4,
         "Article": 1,
-        "DefinedTerm": 1,
-        "PropertyValue": 8,
-        "DefinedTermSet": 1,
+        "FinancialIncentive": 1,
+        "CreativeWork": 1,
         "FAQPage": 1,
         "Question": 7,
         "Answer": 7
       },
       "modified": [
-        "2026-08-18",
-        "2026-08-18"
+        "2026-09-06",
+        "2026-09-06"
       ],
       "issues": []
     },
@@ -90,28 +86,26 @@
       "file": "dr14.html",
       "route": "/dr14",
       "blocks": 1,
+      "topLevelIds": 7,
       "types": {
-        "Organization": 3,
+        "Organization": 2,
         "ProfessionalService": 1,
         "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
-        "WebPage": 2,
-        "CreativeWork": 3,
+        "WebPage": 1,
         "BreadcrumbList": 1,
         "ListItem": 4,
         "Article": 1,
-        "DefinedTerm": 1,
-        "PropertyValue": 12,
-        "Audience": 2,
-        "DefinedTermSet": 1,
+        "FinancialIncentive": 1,
+        "CreativeWork": 1,
         "FAQPage": 1,
         "Question": 10,
         "Answer": 10
       },
       "modified": [
-        "2026-08-15",
-        "2026-08-15"
+        "2026-09-06",
+        "2026-09-06"
       ],
       "issues": []
     },
@@ -119,27 +113,26 @@
       "file": "pro-infra/index.html",
       "route": "/pro-infra",
       "blocks": 1,
+      "topLevelIds": 7,
       "types": {
-        "Organization": 3,
+        "Organization": 2,
         "ProfessionalService": 1,
         "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
-        "WebPage": 2,
-        "CreativeWork": 3,
+        "WebPage": 1,
         "BreadcrumbList": 1,
         "ListItem": 4,
         "Article": 1,
-        "DefinedTerm": 1,
-        "PropertyValue": 8,
-        "DefinedTermSet": 1,
+        "FinancialIncentive": 1,
+        "CreativeWork": 1,
         "FAQPage": 1,
-        "Question": 9,
-        "Answer": 9
+        "Question": 8,
+        "Answer": 8
       },
       "modified": [
-        "2026-08-18",
-        "2026-08-18"
+        "2026-09-06",
+        "2026-09-06"
       ],
       "issues": []
     },
@@ -147,21 +140,19 @@
       "file": "afir-autoconsum-agroalimentar.html",
       "route": "/afir-autoconsum-agroalimentar",
       "blocks": 1,
+      "topLevelIds": 7,
       "types": {
-        "Organization": 3,
+        "Organization": 2,
         "ProfessionalService": 1,
         "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
-        "WebPage": 2,
-        "CreativeWork": 3,
+        "WebPage": 1,
         "BreadcrumbList": 1,
         "ListItem": 4,
         "Article": 1,
-        "DefinedTerm": 1,
-        "PropertyValue": 12,
-        "Audience": 3,
-        "DefinedTermSet": 1,
+        "FinancialIncentive": 1,
+        "CreativeWork": 1,
         "FAQPage": 1,
         "Question": 8,
         "Answer": 8
@@ -176,24 +167,22 @@
       "file": "apeluri-gal/index.html",
       "route": "/apeluri-gal",
       "blocks": 1,
+      "topLevelIds": 7,
       "types": {
-        "Organization": 3,
+        "Organization": 2,
         "ProfessionalService": 1,
         "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
-        "WebPage": 2,
-        "CreativeWork": 3,
+        "WebPage": 1,
         "BreadcrumbList": 1,
         "ListItem": 4,
         "Article": 1,
-        "DefinedTerm": 1,
-        "PropertyValue": 8,
-        "Audience": 1,
-        "DefinedTermSet": 1,
+        "FinancialIncentive": 1,
+        "CreativeWork": 1,
         "FAQPage": 1,
-        "Question": 10,
-        "Answer": 10
+        "Question": 4,
+        "Answer": 4
       },
       "modified": [
         "2026-08-18",
@@ -205,24 +194,22 @@
       "file": "autoconsum-public-fotovoltaice-institutii-publice.html",
       "route": "/autoconsum-public-fotovoltaice-institutii-publice",
       "blocks": 1,
+      "topLevelIds": 7,
       "types": {
-        "Organization": 3,
+        "Organization": 2,
         "ProfessionalService": 1,
         "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
-        "WebPage": 2,
-        "CreativeWork": 3,
+        "WebPage": 1,
         "BreadcrumbList": 1,
         "ListItem": 4,
         "Article": 1,
-        "DefinedTerm": 1,
-        "PropertyValue": 8,
-        "Audience": 1,
-        "DefinedTermSet": 1,
+        "FinancialIncentive": 1,
+        "CreativeWork": 1,
         "FAQPage": 1,
-        "Question": 8,
-        "Answer": 8
+        "Question": 4,
+        "Answer": 4
       },
       "modified": [
         "2026-08-18",
@@ -234,26 +221,24 @@
       "file": "diaspora-investeste-acasa/index.html",
       "route": "/diaspora-investeste-acasa",
       "blocks": 1,
+      "topLevelIds": 6,
       "types": {
-        "Organization": 3,
+        "Organization": 2,
         "ProfessionalService": 1,
         "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
-        "CreativeWork": 2,
         "BreadcrumbList": 1,
         "ListItem": 4,
-        "DefinedTerm": 1,
-        "PropertyValue": 10,
-        "Audience": 1,
-        "DefinedTermSet": 1,
+        "FinancialIncentive": 1,
+        "CreativeWork": 1,
         "FAQPage": 1,
-        "Question": 10,
-        "Answer": 10
+        "Question": 6,
+        "Answer": 6
       },
       "modified": [
-        "2026-05-27"
+        "2026-09-06"
       ],
       "issues": []
     },
@@ -261,6 +246,7 @@
       "file": "dr-12-afir-instalarea-tinerilor-fermieri.html",
       "route": "/dr-12-afir-instalarea-tinerilor-fermieri",
       "blocks": 1,
+      "topLevelIds": 5,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
@@ -281,6 +267,7 @@
       "file": "dr-14-afir-conditii-eligibilitate-greseli-frecvente.html",
       "route": "/dr-14-afir-conditii-eligibilitate-greseli-frecvente",
       "blocks": 1,
+      "topLevelIds": 5,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
@@ -301,28 +288,26 @@
       "file": "dr18/index.html",
       "route": "/dr18",
       "blocks": 1,
+      "topLevelIds": 7,
       "types": {
-        "Organization": 3,
+        "Organization": 2,
         "ProfessionalService": 1,
         "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
-        "WebPage": 2,
-        "CreativeWork": 3,
+        "WebPage": 1,
         "BreadcrumbList": 1,
         "ListItem": 4,
         "Article": 1,
-        "DefinedTerm": 1,
-        "PropertyValue": 12,
-        "Audience": 3,
-        "DefinedTermSet": 1,
+        "FinancialIncentive": 1,
+        "CreativeWork": 1,
         "FAQPage": 1,
-        "Question": 11,
-        "Answer": 11
+        "Question": 10,
+        "Answer": 10
       },
       "modified": [
-        "2026-08-18",
-        "2026-08-18"
+        "2026-09-06",
+        "2026-09-06"
       ],
       "issues": []
     },
@@ -330,26 +315,24 @@
       "file": "e-drive/index.html",
       "route": "/e-drive",
       "blocks": 1,
+      "topLevelIds": 6,
       "types": {
-        "Organization": 3,
+        "Organization": 2,
         "ProfessionalService": 1,
         "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
-        "CreativeWork": 2,
         "BreadcrumbList": 1,
         "ListItem": 4,
-        "DefinedTerm": 1,
-        "PropertyValue": 10,
-        "Audience": 1,
-        "DefinedTermSet": 1,
+        "FinancialIncentive": 1,
+        "CreativeWork": 1,
         "FAQPage": 1,
-        "Question": 10,
-        "Answer": 10
+        "Question": 9,
+        "Answer": 9
       },
       "modified": [
-        "2026-08-07"
+        "2026-09-06"
       ],
       "issues": []
     },
@@ -357,26 +340,24 @@
       "file": "e-mobility/index.html",
       "route": "/e-mobility",
       "blocks": 1,
+      "topLevelIds": 6,
       "types": {
-        "Organization": 3,
+        "Organization": 2,
         "ProfessionalService": 1,
         "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
-        "CreativeWork": 2,
         "BreadcrumbList": 1,
         "ListItem": 4,
-        "DefinedTerm": 1,
-        "PropertyValue": 10,
-        "Audience": 1,
-        "DefinedTermSet": 1,
+        "FinancialIncentive": 1,
+        "CreativeWork": 1,
         "FAQPage": 1,
-        "Question": 10,
-        "Answer": 10
+        "Question": 6,
+        "Answer": 6
       },
       "modified": [
-        "2026-08-07"
+        "2026-09-06"
       ],
       "issues": []
     },
@@ -384,24 +365,22 @@
       "file": "e-move/index.html",
       "route": "/e-move",
       "blocks": 1,
+      "topLevelIds": 7,
       "types": {
-        "Organization": 3,
+        "Organization": 2,
         "ProfessionalService": 1,
         "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
-        "WebPage": 2,
-        "CreativeWork": 3,
+        "WebPage": 1,
         "BreadcrumbList": 1,
         "ListItem": 4,
         "Article": 1,
-        "DefinedTerm": 1,
-        "PropertyValue": 10,
-        "Audience": 1,
-        "DefinedTermSet": 1,
+        "FinancialIncentive": 1,
+        "CreativeWork": 1,
         "FAQPage": 1,
-        "Question": 10,
-        "Answer": 10
+        "Question": 8,
+        "Answer": 8
       },
       "modified": [
         "2026-08-10",
@@ -413,27 +392,26 @@
       "file": "femeia-antreprenor-2026.html",
       "route": "/femeia-antreprenor-2026",
       "blocks": 1,
+      "topLevelIds": 7,
       "types": {
-        "Organization": 3,
+        "Organization": 2,
         "ProfessionalService": 1,
         "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
-        "WebPage": 2,
-        "CreativeWork": 3,
+        "WebPage": 1,
         "BreadcrumbList": 1,
         "ListItem": 4,
         "Article": 1,
-        "DefinedTerm": 1,
-        "PropertyValue": 8,
-        "DefinedTermSet": 1,
+        "FinancialIncentive": 1,
+        "CreativeWork": 1,
         "FAQPage": 1,
-        "Question": 8,
-        "Answer": 8
+        "Question": 9,
+        "Answer": 9
       },
       "modified": [
-        "2026-08-18",
-        "2026-08-18"
+        "2026-09-02",
+        "2026-09-02"
       ],
       "issues": []
     },
@@ -441,19 +419,18 @@
       "file": "fondul-de-modernizare/index.html",
       "route": "/fondul-de-modernizare",
       "blocks": 1,
+      "topLevelIds": 5,
       "types": {
-        "Organization": 3,
+        "Organization": 2,
         "ProfessionalService": 1,
         "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
-        "CreativeWork": 2,
         "BreadcrumbList": 1,
         "ListItem": 4,
-        "DefinedTerm": 1,
-        "PropertyValue": 8,
-        "DefinedTermSet": 1
+        "FinancialIncentive": 1,
+        "CreativeWork": 1
       },
       "modified": [
         "2026-08-18"
@@ -464,23 +441,22 @@
       "file": "fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum/index.html",
       "route": "/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum",
       "blocks": 1,
+      "topLevelIds": 7,
       "types": {
-        "Organization": 3,
+        "Organization": 2,
         "ProfessionalService": 1,
         "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
-        "WebPage": 2,
-        "CreativeWork": 3,
+        "WebPage": 1,
         "BreadcrumbList": 1,
         "ListItem": 4,
         "Article": 1,
-        "DefinedTerm": 1,
-        "PropertyValue": 8,
-        "DefinedTermSet": 1,
+        "FinancialIncentive": 1,
+        "CreativeWork": 1,
         "FAQPage": 1,
-        "Question": 10,
-        "Answer": 10
+        "Question": 4,
+        "Answer": 4
       },
       "modified": [
         "2026-08-18",
@@ -492,20 +468,19 @@
       "file": "fondul-modernizare-energie-regenerabila-2026.html",
       "route": "/fondul-modernizare-energie-regenerabila-2026",
       "blocks": 1,
+      "topLevelIds": 7,
       "types": {
-        "Organization": 3,
+        "Organization": 2,
         "ProfessionalService": 1,
         "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
-        "WebPage": 2,
-        "CreativeWork": 3,
+        "WebPage": 1,
         "BreadcrumbList": 1,
         "ListItem": 4,
         "Article": 1,
-        "DefinedTerm": 1,
-        "PropertyValue": 8,
-        "DefinedTermSet": 1,
+        "FinancialIncentive": 1,
+        "CreativeWork": 1,
         "FAQPage": 1,
         "Question": 6,
         "Answer": 6
@@ -520,26 +495,24 @@
       "file": "fondul-modernizare-pc1-stocare/index.html",
       "route": "/fondul-modernizare-pc1-stocare",
       "blocks": 1,
+      "topLevelIds": 6,
       "types": {
-        "Organization": 3,
+        "Organization": 2,
         "ProfessionalService": 1,
         "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
-        "CreativeWork": 2,
         "BreadcrumbList": 1,
         "ListItem": 4,
-        "DefinedTerm": 1,
-        "PropertyValue": 10,
-        "Audience": 1,
-        "DefinedTermSet": 1,
+        "FinancialIncentive": 1,
+        "CreativeWork": 1,
         "FAQPage": 1,
-        "Question": 10,
-        "Answer": 10
+        "Question": 6,
+        "Answer": 6
       },
       "modified": [
-        "2026-08-17"
+        "2026-08-28"
       ],
       "issues": []
     },
@@ -547,20 +520,18 @@
       "file": "fonduri-regionale/index.html",
       "route": "/fonduri-regionale",
       "blocks": 1,
+      "topLevelIds": 6,
       "types": {
-        "Organization": 3,
+        "Organization": 2,
         "ProfessionalService": 1,
         "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
-        "CreativeWork": 2,
         "BreadcrumbList": 1,
         "ListItem": 3,
-        "DefinedTerm": 1,
-        "PropertyValue": 8,
-        "Audience": 1,
-        "DefinedTermSet": 1,
+        "FinancialIncentive": 1,
+        "CreativeWork": 1,
         "FAQPage": 1,
         "Question": 5,
         "Answer": 5
@@ -574,50 +545,95 @@
       "file": "gal-afir/index.html",
       "route": "/gal-afir",
       "blocks": 1,
+      "topLevelIds": 7,
       "types": {
-        "Organization": 3,
+        "Organization": 2,
         "ProfessionalService": 1,
         "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
-        "WebPage": 2,
-        "CreativeWork": 3,
+        "WebPage": 1,
         "BreadcrumbList": 1,
         "ListItem": 4,
         "Article": 1,
-        "DefinedTerm": 1,
-        "PropertyValue": 8,
-        "Audience": 1,
-        "DefinedTermSet": 1,
+        "FinancialIncentive": 1,
+        "CreativeWork": 1,
         "FAQPage": 1,
-        "Question": 10,
-        "Answer": 10
+        "Question": 9,
+        "Answer": 9
       },
       "modified": [
-        "2026-08-18",
+        "2026-09-02",
+        "2026-09-02"
+      ],
+      "issues": []
+    },
+    {
+      "file": "investitii-modernizarea-microintreprinderilor-apel-2/index.html",
+      "route": "/investitii-modernizarea-microintreprinderilor-apel-2",
+      "blocks": 1,
+      "topLevelIds": 7,
+      "types": {
+        "Organization": 2,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
+        "ImageObject": 1,
+        "WebSite": 1,
+        "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 4,
+        "Article": 1,
+        "FinancialIncentive": 1,
+        "CreativeWork": 1,
+        "FAQPage": 1,
+        "Question": 8,
+        "Answer": 8
+      },
+      "modified": [
+        "2026-09-06",
+        "2026-09-06"
+      ],
+      "issues": []
+    },
+    {
+      "file": "pnrr/index.html",
+      "route": "/pnrr",
+      "blocks": 1,
+      "topLevelIds": 5,
+      "types": {
+        "Organization": 2,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
+        "ImageObject": 1,
+        "WebSite": 1,
+        "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 4,
+        "FinancialIncentive": 1,
+        "CreativeWork": 1
+      },
+      "modified": [
         "2026-08-18"
       ],
       "issues": []
     },
     {
-      "file": "investitii-modernizarea-microintreprinderilor-apel-2.html",
-      "route": "/investitii-modernizarea-microintreprinderilor-apel-2",
+      "file": "pocidif-21/index.html",
+      "route": "/pocidif-21",
       "blocks": 1,
+      "topLevelIds": 7,
       "types": {
-        "Organization": 3,
+        "Organization": 2,
         "ProfessionalService": 1,
         "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
-        "WebPage": 2,
-        "CreativeWork": 3,
+        "WebPage": 1,
         "BreadcrumbList": 1,
         "ListItem": 4,
         "Article": 1,
-        "DefinedTerm": 1,
-        "PropertyValue": 10,
-        "Audience": 1,
-        "DefinedTermSet": 1,
+        "FinancialIncentive": 1,
+        "CreativeWork": 1,
         "FAQPage": 1,
         "Question": 8,
         "Answer": 8
@@ -629,74 +645,21 @@
       "issues": []
     },
     {
-      "file": "pnrr/index.html",
-      "route": "/pnrr",
-      "blocks": 1,
-      "types": {
-        "Organization": 3,
-        "ProfessionalService": 1,
-        "PostalAddress": 1,
-        "ImageObject": 1,
-        "WebSite": 1,
-        "WebPage": 1,
-        "CreativeWork": 2,
-        "BreadcrumbList": 1,
-        "ListItem": 4,
-        "DefinedTerm": 1,
-        "PropertyValue": 8,
-        "DefinedTermSet": 1
-      },
-      "modified": [
-        "2026-08-18"
-      ],
-      "issues": []
-    },
-    {
-      "file": "pocidif-21/index.html",
-      "route": "/pocidif-21",
-      "blocks": 1,
-      "types": {
-        "Organization": 3,
-        "ProfessionalService": 1,
-        "PostalAddress": 1,
-        "ImageObject": 1,
-        "WebSite": 1,
-        "WebPage": 2,
-        "CreativeWork": 3,
-        "BreadcrumbList": 1,
-        "ListItem": 4,
-        "Article": 1,
-        "DefinedTerm": 1,
-        "PropertyValue": 12,
-        "Audience": 1,
-        "DefinedTermSet": 1,
-        "FAQPage": 1,
-        "Question": 10,
-        "Answer": 10
-      },
-      "modified": [
-        "2026-08-18",
-        "2026-08-18"
-      ],
-      "issues": []
-    },
-    {
       "file": "programul-tranzitie-justa/index.html",
       "route": "/programul-tranzitie-justa",
       "blocks": 1,
+      "topLevelIds": 5,
       "types": {
-        "Organization": 3,
+        "Organization": 2,
         "ProfessionalService": 1,
         "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
-        "CreativeWork": 2,
         "BreadcrumbList": 1,
         "ListItem": 4,
-        "DefinedTerm": 1,
-        "PropertyValue": 8,
-        "DefinedTermSet": 1
+        "FinancialIncentive": 1,
+        "CreativeWork": 1
       },
       "modified": [
         "2026-08-18"
@@ -707,20 +670,19 @@
       "file": "start-up-nation-2026.html",
       "route": "/start-up-nation-2026",
       "blocks": 1,
+      "topLevelIds": 7,
       "types": {
-        "Organization": 3,
+        "Organization": 2,
         "ProfessionalService": 1,
         "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
-        "WebPage": 2,
-        "CreativeWork": 3,
+        "WebPage": 1,
         "BreadcrumbList": 1,
         "ListItem": 4,
         "Article": 1,
-        "DefinedTerm": 1,
-        "PropertyValue": 9,
-        "DefinedTermSet": 1,
+        "FinancialIncentive": 1,
+        "CreativeWork": 1,
         "FAQPage": 1,
         "Question": 8,
         "Answer": 8
@@ -735,6 +697,7 @@
       "file": "blog/index.html",
       "route": "/blog",
       "blocks": 1,
+      "topLevelIds": 5,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
@@ -755,6 +718,7 @@
       "file": "metodologie-verificare-eligibilitate/index.html",
       "route": "/metodologie-verificare-eligibilitate",
       "blocks": 1,
+      "topLevelIds": 5,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
@@ -775,6 +739,7 @@
       "file": "surse-oficiale-fonduri-europene/index.html",
       "route": "/surse-oficiale-fonduri-europene",
       "blocks": 1,
+      "topLevelIds": 5,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
@@ -795,6 +760,7 @@
       "file": "acte-necesare-fonduri-europene-nerambursabile/index.html",
       "route": "/acte-necesare-fonduri-europene-nerambursabile",
       "blocks": 1,
+      "topLevelIds": 5,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
@@ -815,13 +781,14 @@
       "file": "blog-afir-fotovoltaice-ferme-2026.html",
       "route": "/blog-afir-fotovoltaice-ferme-2026",
       "blocks": 1,
+      "topLevelIds": 6,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
         "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
-        "WebPage": 2,
+        "WebPage": 1,
         "BreadcrumbList": 1,
         "ListItem": 3,
         "Article": 1,
@@ -836,6 +803,7 @@
       "file": "cat-costa-consultanta-fonduri-europene-ghid.html",
       "route": "/cat-costa-consultanta-fonduri-europene-ghid",
       "blocks": 1,
+      "topLevelIds": 4,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
@@ -853,6 +821,7 @@
       "file": "cheltuieli-eligibile-digitalizare-imm.html",
       "route": "/cheltuieli-eligibile-digitalizare-imm",
       "blocks": 1,
+      "topLevelIds": 4,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
@@ -870,27 +839,7 @@
       "file": "cheltuieli-eligibile-pocidif-21/index.html",
       "route": "/cheltuieli-eligibile-pocidif-21",
       "blocks": 1,
-      "types": {
-        "Organization": 1,
-        "ProfessionalService": 1,
-        "PostalAddress": 1,
-        "ImageObject": 1,
-        "WebSite": 1,
-        "WebPage": 2,
-        "BreadcrumbList": 1,
-        "ListItem": 3,
-        "Article": 1,
-        "FAQPage": 1,
-        "Question": 8,
-        "Answer": 8
-      },
-      "modified": [],
-      "issues": []
-    },
-    {
-      "file": "cod-caen-start-up-nation-2026/index.html",
-      "route": "/cod-caen-start-up-nation-2026",
-      "blocks": 1,
+      "topLevelIds": 6,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
@@ -900,9 +849,28 @@
         "WebPage": 1,
         "BreadcrumbList": 1,
         "ListItem": 3,
+        "Article": 1,
         "FAQPage": 1,
-        "Question": 10,
-        "Answer": 10
+        "Question": 6,
+        "Answer": 6
+      },
+      "modified": [],
+      "issues": []
+    },
+    {
+      "file": "cod-caen-start-up-nation-2026/index.html",
+      "route": "/cod-caen-start-up-nation-2026",
+      "blocks": 1,
+      "topLevelIds": 4,
+      "types": {
+        "Organization": 1,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
+        "ImageObject": 1,
+        "WebSite": 1,
+        "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 3
       },
       "modified": [],
       "issues": []
@@ -911,19 +879,20 @@
       "file": "documente-punctaj-pocidif-21/index.html",
       "route": "/documente-punctaj-pocidif-21",
       "blocks": 1,
+      "topLevelIds": 6,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
         "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
-        "WebPage": 2,
+        "WebPage": 1,
         "BreadcrumbList": 1,
         "ListItem": 3,
         "Article": 1,
         "FAQPage": 1,
-        "Question": 8,
-        "Answer": 8
+        "Question": 6,
+        "Answer": 6
       },
       "modified": [],
       "issues": []
@@ -932,21 +901,22 @@
       "file": "dr12-vs-dr14.html",
       "route": "/dr12-vs-dr14",
       "blocks": 1,
+      "topLevelIds": 6,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
         "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
-        "WebPage": 2,
-        "CreativeWork": 2,
+        "WebPage": 1,
         "BreadcrumbList": 1,
         "ListItem": 3,
-        "Article": 1
+        "Article": 1,
+        "CreativeWork": 1
       },
       "modified": [
-        "2026-08-23",
-        "2026-08-23"
+        "2026-09-06",
+        "2026-09-06"
       ],
       "issues": []
     },
@@ -954,6 +924,7 @@
       "file": "femeia-antreprenor-2026-conditii-idei-afaceri.html",
       "route": "/femeia-antreprenor-2026-conditii-idei-afaceri",
       "blocks": 1,
+      "topLevelIds": 5,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
@@ -974,6 +945,7 @@
       "file": "ghiduri/index.html",
       "route": "/ghiduri",
       "blocks": 1,
+      "topLevelIds": 5,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
@@ -982,7 +954,7 @@
         "WebSite": 1,
         "WebPage": 1,
         "BreadcrumbList": 1,
-        "ListItem": 2,
+        "ListItem": 3,
         "FAQPage": 1,
         "Question": 7,
         "Answer": 7
@@ -994,6 +966,7 @@
       "file": "glosar-fonduri-europene/index.html",
       "route": "/glosar-fonduri-europene",
       "blocks": 1,
+      "topLevelIds": 5,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
@@ -1014,6 +987,7 @@
       "file": "greseli-fonduri-europene/index.html",
       "route": "/greseli-fonduri-europene",
       "blocks": 1,
+      "topLevelIds": 4,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
@@ -1022,10 +996,7 @@
         "WebSite": 1,
         "WebPage": 1,
         "BreadcrumbList": 1,
-        "ListItem": 3,
-        "FAQPage": 1,
-        "Question": 6,
-        "Answer": 6
+        "ListItem": 3
       },
       "modified": [],
       "issues": []
@@ -1034,6 +1005,7 @@
       "file": "intrebari-frecvente/index.html",
       "route": "/intrebari-frecvente",
       "blocks": 1,
+      "topLevelIds": 5,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
@@ -1042,10 +1014,10 @@
         "WebSite": 1,
         "WebPage": 1,
         "BreadcrumbList": 1,
-        "ListItem": 4,
+        "ListItem": 3,
         "FAQPage": 1,
-        "Question": 6,
-        "Answer": 6
+        "Question": 2,
+        "Answer": 2
       },
       "modified": [],
       "issues": []
@@ -1054,19 +1026,20 @@
       "file": "intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm/index.html",
       "route": "/intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm",
       "blocks": 1,
+      "topLevelIds": 6,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
         "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
-        "WebPage": 2,
+        "WebPage": 1,
         "BreadcrumbList": 1,
         "ListItem": 3,
         "Article": 1,
         "FAQPage": 1,
-        "Question": 11,
-        "Answer": 11
+        "Question": 7,
+        "Answer": 7
       },
       "modified": [],
       "issues": []
@@ -1075,19 +1048,20 @@
       "file": "intrebari/ce-documente-sunt-necesare-pentru-dr12/index.html",
       "route": "/intrebari/ce-documente-sunt-necesare-pentru-dr12",
       "blocks": 1,
+      "topLevelIds": 6,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
         "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
-        "WebPage": 2,
+        "WebPage": 1,
         "BreadcrumbList": 1,
         "ListItem": 3,
         "Article": 1,
         "FAQPage": 1,
-        "Question": 11,
-        "Answer": 11
+        "Question": 7,
+        "Answer": 7
       },
       "modified": [],
       "issues": []
@@ -1096,19 +1070,20 @@
       "file": "intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene/index.html",
       "route": "/intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene",
       "blocks": 1,
+      "topLevelIds": 6,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
         "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
-        "WebPage": 2,
+        "WebPage": 1,
         "BreadcrumbList": 1,
         "ListItem": 3,
         "Article": 1,
         "FAQPage": 1,
-        "Question": 11,
-        "Answer": 11
+        "Question": 7,
+        "Answer": 7
       },
       "modified": [],
       "issues": []
@@ -1117,6 +1092,7 @@
       "file": "pnrr-digitalizare-imm-cheltuieli-eligibile.html",
       "route": "/pnrr-digitalizare-imm-cheltuieli-eligibile",
       "blocks": 1,
+      "topLevelIds": 5,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
@@ -1137,13 +1113,14 @@
       "file": "programul-tranzitie-justa-intrebari-documente/index.html",
       "route": "/programul-tranzitie-justa-intrebari-documente",
       "blocks": 1,
+      "topLevelIds": 6,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
         "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
-        "WebPage": 2,
+        "WebPage": 1,
         "BreadcrumbList": 1,
         "ListItem": 3,
         "Article": 1,
@@ -1158,6 +1135,7 @@
       "file": "resurse/index.html",
       "route": "/resurse",
       "blocks": 1,
+      "topLevelIds": 5,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
@@ -1166,7 +1144,7 @@
         "WebSite": 1,
         "WebPage": 1,
         "BreadcrumbList": 1,
-        "ListItem": 3,
+        "ListItem": 2,
         "FAQPage": 1,
         "Question": 4,
         "Answer": 4
@@ -1178,6 +1156,7 @@
       "file": "resurse-utile/index.html",
       "route": "/resurse-utile",
       "blocks": 1,
+      "topLevelIds": 4,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
@@ -1195,6 +1174,7 @@
       "file": "start-up-nation-2026-cheltuieli-eligibile/index.html",
       "route": "/start-up-nation-2026-cheltuieli-eligibile",
       "blocks": 1,
+      "topLevelIds": 4,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
@@ -1203,10 +1183,7 @@
         "WebSite": 1,
         "WebPage": 1,
         "BreadcrumbList": 1,
-        "ListItem": 3,
-        "FAQPage": 1,
-        "Question": 8,
-        "Answer": 8
+        "ListItem": 3
       },
       "modified": [],
       "issues": []
@@ -1215,6 +1192,7 @@
       "file": "start-up-nation-2026-conditii/index.html",
       "route": "/start-up-nation-2026-conditii",
       "blocks": 1,
+      "topLevelIds": 4,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
@@ -1223,10 +1201,7 @@
         "WebSite": 1,
         "WebPage": 1,
         "BreadcrumbList": 1,
-        "ListItem": 3,
-        "FAQPage": 1,
-        "Question": 8,
-        "Answer": 8
+        "ListItem": 3
       },
       "modified": [],
       "issues": []
@@ -1235,6 +1210,7 @@
       "file": "start-up-nation-2026-idei-afaceri/index.html",
       "route": "/start-up-nation-2026-idei-afaceri",
       "blocks": 1,
+      "topLevelIds": 4,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
@@ -1243,10 +1219,7 @@
         "WebSite": 1,
         "WebPage": 1,
         "BreadcrumbList": 1,
-        "ListItem": 3,
-        "FAQPage": 1,
-        "Question": 8,
-        "Answer": 8
+        "ListItem": 3
       },
       "modified": [],
       "issues": []
@@ -1255,6 +1228,7 @@
       "file": "start-up-nation-2026-plan-de-afaceri/index.html",
       "route": "/start-up-nation-2026-plan-de-afaceri",
       "blocks": 1,
+      "topLevelIds": 4,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
@@ -1263,10 +1237,7 @@
         "WebSite": 1,
         "WebPage": 1,
         "BreadcrumbList": 1,
-        "ListItem": 3,
-        "FAQPage": 1,
-        "Question": 6,
-        "Answer": 6
+        "ListItem": 3
       },
       "modified": [],
       "issues": []
@@ -1275,6 +1246,7 @@
       "file": "studii-de-caz-fonduri-europene/index.html",
       "route": "/studii-de-caz-fonduri-europene",
       "blocks": 1,
+      "topLevelIds": 5,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
@@ -1295,6 +1267,7 @@
       "file": "termeni-si-conditii.html",
       "route": "/termeni-si-conditii",
       "blocks": 1,
+      "topLevelIds": 4,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
@@ -1312,6 +1285,7 @@
       "file": "webinarii/index.html",
       "route": "/webinarii",
       "blocks": 1,
+      "topLevelIds": 5,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
@@ -1320,7 +1294,7 @@
         "WebSite": 1,
         "WebPage": 1,
         "BreadcrumbList": 1,
-        "ListItem": 4,
+        "ListItem": 3,
         "FAQPage": 1,
         "Question": 4,
         "Answer": 4
@@ -1332,6 +1306,7 @@
       "file": "index.html",
       "route": "/",
       "blocks": 1,
+      "topLevelIds": 3,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
@@ -1347,6 +1322,7 @@
       "file": "consultanta-fonduri-europene/index.html",
       "route": "/consultanta-fonduri-europene",
       "blocks": 1,
+      "topLevelIds": 6,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
@@ -1369,6 +1345,7 @@
       "file": "fonduri-europene/index.html",
       "route": "/fonduri-europene",
       "blocks": 1,
+      "topLevelIds": 4,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
@@ -1386,6 +1363,7 @@
       "file": "despre-faber/index.html",
       "route": "/despre-faber",
       "blocks": 1,
+      "topLevelIds": 5,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
@@ -1406,6 +1384,7 @@
       "file": "afir/index.html",
       "route": "/afir",
       "blocks": 1,
+      "topLevelIds": 5,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
@@ -1426,6 +1405,7 @@
       "file": "calculator-soc.html",
       "route": "/calculator-soc",
       "blocks": 1,
+      "topLevelIds": 7,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
@@ -1433,13 +1413,13 @@
         "ImageObject": 1,
         "WebSite": 1,
         "WebPage": 1,
-        "CreativeWork": 2,
         "BreadcrumbList": 1,
         "ListItem": 3,
         "WebApplication": 1,
+        "CreativeWork": 1,
         "FAQPage": 1,
-        "Question": 11,
-        "Answer": 11
+        "Question": 7,
+        "Answer": 7
       },
       "modified": [
         "2026-07-22"
@@ -1450,6 +1430,7 @@
       "file": "calendar-fonduri-europene/index.html",
       "route": "/calendar-fonduri-europene",
       "blocks": 1,
+      "topLevelIds": 4,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
@@ -1458,10 +1439,7 @@
         "WebSite": 1,
         "WebPage": 1,
         "BreadcrumbList": 1,
-        "ListItem": 3,
-        "FAQPage": 1,
-        "Question": 6,
-        "Answer": 6
+        "ListItem": 3
       },
       "modified": [],
       "issues": []
@@ -1470,6 +1448,7 @@
       "file": "cand-merita-consultant-fonduri-europene.html",
       "route": "/cand-merita-consultant-fonduri-europene",
       "blocks": 1,
+      "topLevelIds": 4,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
@@ -1487,6 +1466,7 @@
       "file": "cat-costa-consultanta-fonduri-europene/index.html",
       "route": "/cat-costa-consultanta-fonduri-europene",
       "blocks": 1,
+      "topLevelIds": 4,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
@@ -1495,10 +1475,7 @@
         "WebSite": 1,
         "WebPage": 1,
         "BreadcrumbList": 1,
-        "ListItem": 3,
-        "FAQPage": 1,
-        "Question": 6,
-        "Answer": 6
+        "ListItem": 3
       },
       "modified": [],
       "issues": []
@@ -1507,6 +1484,7 @@
       "file": "ce-acte-sunt-necesare-fonduri-europene.html",
       "route": "/ce-acte-sunt-necesare-fonduri-europene",
       "blocks": 1,
+      "topLevelIds": 4,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
@@ -1524,6 +1502,7 @@
       "file": "consultant-fonduri-europene-imm/index.html",
       "route": "/consultant-fonduri-europene-imm",
       "blocks": 1,
+      "topLevelIds": 5,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
@@ -1534,10 +1513,7 @@
         "BreadcrumbList": 1,
         "ListItem": 3,
         "Service": 1,
-        "AdministrativeArea": 1,
-        "FAQPage": 1,
-        "Question": 6,
-        "Answer": 6
+        "AdministrativeArea": 1
       },
       "modified": [],
       "issues": []
@@ -1546,6 +1522,7 @@
       "file": "consultanta-afir/index.html",
       "route": "/consultanta-afir",
       "blocks": 1,
+      "topLevelIds": 5,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
@@ -1556,10 +1533,7 @@
         "BreadcrumbList": 1,
         "ListItem": 3,
         "Service": 1,
-        "AdministrativeArea": 1,
-        "FAQPage": 1,
-        "Question": 6,
-        "Answer": 6
+        "AdministrativeArea": 1
       },
       "modified": [],
       "issues": []
@@ -1568,6 +1542,7 @@
       "file": "consultanta-fonduri-europene-bucuresti/index.html",
       "route": "/consultanta-fonduri-europene-bucuresti",
       "blocks": 1,
+      "topLevelIds": 6,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
@@ -1590,6 +1565,7 @@
       "file": "consultanta-pnrr-digitalizare/index.html",
       "route": "/consultanta-pnrr-digitalizare",
       "blocks": 1,
+      "topLevelIds": 5,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
@@ -1600,10 +1576,7 @@
         "BreadcrumbList": 1,
         "ListItem": 3,
         "Service": 1,
-        "AdministrativeArea": 1,
-        "FAQPage": 1,
-        "Question": 6,
-        "Answer": 6
+        "AdministrativeArea": 1
       },
       "modified": [],
       "issues": []
@@ -1612,6 +1585,7 @@
       "file": "consultanta-start-up-nation-2026/index.html",
       "route": "/consultanta-start-up-nation-2026",
       "blocks": 1,
+      "topLevelIds": 5,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
@@ -1622,10 +1596,7 @@
         "BreadcrumbList": 1,
         "ListItem": 3,
         "Service": 1,
-        "AdministrativeArea": 1,
-        "FAQPage": 1,
-        "Question": 8,
-        "Answer": 8
+        "AdministrativeArea": 1
       },
       "modified": [],
       "issues": []
@@ -1634,6 +1605,7 @@
       "file": "contact/index.html",
       "route": "/contact",
       "blocks": 1,
+      "topLevelIds": 5,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
@@ -1644,8 +1616,8 @@
         "BreadcrumbList": 1,
         "ListItem": 2,
         "FAQPage": 1,
-        "Question": 7,
-        "Answer": 7
+        "Question": 6,
+        "Answer": 6
       },
       "modified": [],
       "issues": []
@@ -1654,6 +1626,25 @@
       "file": "cum-alegi-consultant-fonduri-europene/index.html",
       "route": "/cum-alegi-consultant-fonduri-europene",
       "blocks": 1,
+      "topLevelIds": 4,
+      "types": {
+        "Organization": 1,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
+        "ImageObject": 1,
+        "WebSite": 1,
+        "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 3
+      },
+      "modified": [],
+      "issues": []
+    },
+    {
+      "file": "cum-alegi-programul-potrivit-fonduri-europene-2026.html",
+      "route": "/cum-alegi-programul-potrivit-fonduri-europene-2026",
+      "blocks": 1,
+      "topLevelIds": 5,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
@@ -1671,29 +1662,10 @@
       "issues": []
     },
     {
-      "file": "cum-alegi-programul-potrivit-fonduri-europene-2026.html",
-      "route": "/cum-alegi-programul-potrivit-fonduri-europene-2026",
-      "blocks": 1,
-      "types": {
-        "Organization": 1,
-        "ProfessionalService": 1,
-        "PostalAddress": 1,
-        "ImageObject": 1,
-        "WebSite": 1,
-        "WebPage": 1,
-        "BreadcrumbList": 1,
-        "ListItem": 3,
-        "FAQPage": 1,
-        "Question": 7,
-        "Answer": 7
-      },
-      "modified": [],
-      "issues": []
-    },
-    {
       "file": "cum-se-calculeaza-cofinantarea-fonduri-europene.html",
       "route": "/cum-se-calculeaza-cofinantarea-fonduri-europene",
       "blocks": 1,
+      "topLevelIds": 4,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
@@ -1711,6 +1683,7 @@
       "file": "cum-se-verifica-eligibilitatea-fonduri-europene.html",
       "route": "/cum-se-verifica-eligibilitatea-fonduri-europene",
       "blocks": 1,
+      "topLevelIds": 4,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
@@ -1728,6 +1701,7 @@
       "file": "digitalizare-imm-erp-crm-cloud.html",
       "route": "/digitalizare-imm-erp-crm-cloud",
       "blocks": 1,
+      "topLevelIds": 4,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
@@ -1745,6 +1719,7 @@
       "file": "digitalizare-imm-pnrr/index.html",
       "route": "/digitalizare-imm-pnrr",
       "blocks": 1,
+      "topLevelIds": 4,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
@@ -1753,10 +1728,7 @@
         "WebSite": 1,
         "WebPage": 1,
         "BreadcrumbList": 1,
-        "ListItem": 3,
-        "FAQPage": 1,
-        "Question": 8,
-        "Answer": 8
+        "ListItem": 3
       },
       "modified": [],
       "issues": []
@@ -1765,6 +1737,7 @@
       "file": "eligibilitate-fonduri-europene/index.html",
       "route": "/eligibilitate-fonduri-europene",
       "blocks": 1,
+      "topLevelIds": 4,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
@@ -1782,13 +1755,14 @@
       "file": "eligibilitate-pocidif-21/index.html",
       "route": "/eligibilitate-pocidif-21",
       "blocks": 1,
+      "topLevelIds": 6,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
         "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
-        "WebPage": 2,
+        "WebPage": 1,
         "BreadcrumbList": 1,
         "ListItem": 3,
         "Article": 1,
@@ -1803,6 +1777,7 @@
       "file": "finantari-panouri-fotovoltaice/index.html",
       "route": "/finantari-panouri-fotovoltaice",
       "blocks": 1,
+      "topLevelIds": 5,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
@@ -1823,6 +1798,7 @@
       "file": "firma-consultanta-fonduri-europene/index.html",
       "route": "/firma-consultanta-fonduri-europene",
       "blocks": 1,
+      "topLevelIds": 5,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
@@ -1833,10 +1809,7 @@
         "BreadcrumbList": 1,
         "ListItem": 3,
         "Service": 1,
-        "AdministrativeArea": 1,
-        "FAQPage": 1,
-        "Question": 6,
-        "Answer": 6
+        "AdministrativeArea": 1
       },
       "modified": [],
       "issues": []
@@ -1845,6 +1818,7 @@
       "file": "fonduri-europene-agricultura/index.html",
       "route": "/fonduri-europene-agricultura",
       "blocks": 1,
+      "topLevelIds": 5,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
@@ -1855,8 +1829,8 @@
         "BreadcrumbList": 1,
         "ListItem": 3,
         "FAQPage": 1,
-        "Question": 8,
-        "Answer": 8
+        "Question": 4,
+        "Answer": 4
       },
       "modified": [],
       "issues": []
@@ -1865,19 +1839,20 @@
       "file": "fonduri-europene-bucuresti/index.html",
       "route": "/fonduri-europene-bucuresti",
       "blocks": 1,
+      "topLevelIds": 6,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
         "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
-        "WebPage": 2,
+        "WebPage": 1,
         "BreadcrumbList": 1,
         "ListItem": 3,
         "Article": 1,
         "FAQPage": 1,
-        "Question": 13,
-        "Answer": 13
+        "Question": 12,
+        "Answer": 12
       },
       "modified": [],
       "issues": []
@@ -1886,19 +1861,20 @@
       "file": "fonduri-europene-caen/0111-culturi-cereale/index.html",
       "route": "/fonduri-europene-caen/0111-culturi-cereale",
       "blocks": 1,
+      "topLevelIds": 6,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
         "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
-        "WebPage": 2,
+        "WebPage": 1,
         "BreadcrumbList": 1,
         "ListItem": 3,
         "Article": 1,
         "FAQPage": 1,
-        "Question": 12,
-        "Answer": 12
+        "Question": 11,
+        "Answer": 11
       },
       "modified": [],
       "issues": []
@@ -1907,19 +1883,20 @@
       "file": "fonduri-europene-caen/4321-instalatii-electrice/index.html",
       "route": "/fonduri-europene-caen/4321-instalatii-electrice",
       "blocks": 1,
+      "topLevelIds": 6,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
         "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
-        "WebPage": 2,
+        "WebPage": 1,
         "BreadcrumbList": 1,
         "ListItem": 3,
         "Article": 1,
         "FAQPage": 1,
-        "Question": 12,
-        "Answer": 12
+        "Question": 11,
+        "Answer": 11
       },
       "modified": [],
       "issues": []
@@ -1928,19 +1905,20 @@
       "file": "fonduri-europene-caen/5610-restaurante/index.html",
       "route": "/fonduri-europene-caen/5610-restaurante",
       "blocks": 1,
+      "topLevelIds": 6,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
         "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
-        "WebPage": 2,
+        "WebPage": 1,
         "BreadcrumbList": 1,
         "ListItem": 3,
         "Article": 1,
         "FAQPage": 1,
-        "Question": 12,
-        "Answer": 12
+        "Question": 11,
+        "Answer": 11
       },
       "modified": [],
       "issues": []
@@ -1949,19 +1927,20 @@
       "file": "fonduri-europene-caen/6201-dezvoltare-software/index.html",
       "route": "/fonduri-europene-caen/6201-dezvoltare-software",
       "blocks": 1,
+      "topLevelIds": 6,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
         "PostalAddress": 1,
         "ImageObject": 1,
         "WebSite": 1,
-        "WebPage": 2,
+        "WebPage": 1,
         "BreadcrumbList": 1,
         "ListItem": 3,
         "Article": 1,
         "FAQPage": 1,
-        "Question": 12,
-        "Answer": 12
+        "Question": 11,
+        "Answer": 11
       },
       "modified": [],
       "issues": []
@@ -1970,6 +1949,7 @@
       "file": "fonduri-europene-digitalizare/index.html",
       "route": "/fonduri-europene-digitalizare",
       "blocks": 1,
+      "topLevelIds": 5,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
@@ -1990,6 +1970,7 @@
       "file": "fonduri-europene-femei-antreprenor/index.html",
       "route": "/fonduri-europene-femei-antreprenor",
       "blocks": 1,
+      "topLevelIds": 4,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
@@ -1998,10 +1979,7 @@
         "WebSite": 1,
         "WebPage": 1,
         "BreadcrumbList": 1,
-        "ListItem": 3,
-        "FAQPage": 1,
-        "Question": 6,
-        "Answer": 6
+        "ListItem": 3
       },
       "modified": [],
       "issues": []
@@ -2010,6 +1988,7 @@
       "file": "fonduri-europene-imm/index.html",
       "route": "/fonduri-europene-imm",
       "blocks": 1,
+      "topLevelIds": 5,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
@@ -2030,6 +2009,25 @@
       "file": "fonduri-europene-nerambursabile-2026/index.html",
       "route": "/fonduri-europene-nerambursabile-2026",
       "blocks": 1,
+      "topLevelIds": 4,
+      "types": {
+        "Organization": 1,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
+        "ImageObject": 1,
+        "WebSite": 1,
+        "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 3
+      },
+      "modified": [],
+      "issues": []
+    },
+    {
+      "file": "fonduri-europene-nord-est/index.html",
+      "route": "/fonduri-europene-nord-est",
+      "blocks": 1,
+      "topLevelIds": 6,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
@@ -2039,30 +2037,10 @@
         "WebPage": 1,
         "BreadcrumbList": 1,
         "ListItem": 3,
-        "FAQPage": 1,
-        "Question": 12,
-        "Answer": 12
-      },
-      "modified": [],
-      "issues": []
-    },
-    {
-      "file": "fonduri-europene-nord-est/index.html",
-      "route": "/fonduri-europene-nord-est",
-      "blocks": 1,
-      "types": {
-        "Organization": 1,
-        "ProfessionalService": 1,
-        "PostalAddress": 1,
-        "ImageObject": 1,
-        "WebSite": 1,
-        "WebPage": 2,
-        "BreadcrumbList": 1,
-        "ListItem": 3,
         "Article": 1,
         "FAQPage": 1,
-        "Question": 12,
-        "Answer": 12
+        "Question": 11,
+        "Answer": 11
       },
       "modified": [],
       "issues": []
@@ -2071,6 +2049,7 @@
       "file": "fonduri-nerambursabile/index.html",
       "route": "/fonduri-nerambursabile",
       "blocks": 1,
+      "topLevelIds": 4,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
@@ -2088,6 +2067,7 @@
       "file": "fonduri-pentru-ferme/index.html",
       "route": "/fonduri-pentru-ferme",
       "blocks": 1,
+      "topLevelIds": 4,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
@@ -2096,10 +2076,7 @@
         "WebSite": 1,
         "WebPage": 1,
         "BreadcrumbList": 1,
-        "ListItem": 3,
-        "FAQPage": 1,
-        "Question": 6,
-        "Answer": 6
+        "ListItem": 3
       },
       "modified": [],
       "issues": []
@@ -2108,6 +2085,7 @@
       "file": "fonduri-pentru-utilaje-agricole/index.html",
       "route": "/fonduri-pentru-utilaje-agricole",
       "blocks": 1,
+      "topLevelIds": 4,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
@@ -2116,10 +2094,7 @@
         "WebSite": 1,
         "WebPage": 1,
         "BreadcrumbList": 1,
-        "ListItem": 3,
-        "FAQPage": 1,
-        "Question": 8,
-        "Answer": 8
+        "ListItem": 3
       },
       "modified": [],
       "issues": []
@@ -2128,6 +2103,7 @@
       "file": "idei-afaceri-fonduri-europene.html",
       "route": "/idei-afaceri-fonduri-europene",
       "blocks": 1,
+      "topLevelIds": 5,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
@@ -2148,6 +2124,7 @@
       "file": "instrumente/index.html",
       "route": "/instrumente",
       "blocks": 1,
+      "topLevelIds": 5,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
@@ -2168,6 +2145,7 @@
       "file": "management-proiecte-fonduri-europene/index.html",
       "route": "/management-proiecte-fonduri-europene",
       "blocks": 1,
+      "topLevelIds": 6,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
@@ -2190,6 +2168,7 @@
       "file": "plan-de-afaceri-fonduri-europene/index.html",
       "route": "/plan-de-afaceri-fonduri-europene",
       "blocks": 1,
+      "topLevelIds": 6,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
@@ -2212,6 +2191,7 @@
       "file": "politica-de-confidentialitate.html",
       "route": "/politica-de-confidentialitate",
       "blocks": 1,
+      "topLevelIds": 4,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
@@ -2229,6 +2209,7 @@
       "file": "proiectare-fonduri-europene/index.html",
       "route": "/proiectare-fonduri-europene",
       "blocks": 1,
+      "topLevelIds": 6,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
@@ -2251,6 +2232,7 @@
       "file": "studiu-fezabilitate-fonduri-europene/index.html",
       "route": "/studiu-fezabilitate-fonduri-europene",
       "blocks": 1,
+      "topLevelIds": 6,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
@@ -2273,6 +2255,7 @@
       "file": "verificare-eligibilitate-fonduri-europene/index.html",
       "route": "/verificare-eligibilitate-fonduri-europene",
       "blocks": 1,
+      "topLevelIds": 5,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,

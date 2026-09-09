@@ -1,10 +1,14 @@
 "use strict";
 
+import { handleCompanyLookupRequest } from "./company/company-data-service.mjs";
+
 const CANONICAL_HOST = "atelierdeconsultanta.ro";
 const HSTS_VALUE = "max-age=15552000";
 const CONTACT_PAGE = "/contact";
 const CONTACT_ENDPOINT = "/api/contact-triage";
 const QUALIFIED_LEAD_ENDPOINT = "/api/crm/qualified-lead";
+const COMPANY_LOOKUP_PREFIX = "/api/company/";
+const INTENTIONAL_NOT_FOUND_PATH = "/__faber-intentional-not-found__";
 const MAX_CONTACT_BODY_BYTES = 64 * 1024;
 const MAX_ANALYTICS_BODY_BYTES = 16 * 1024;
 const RETIRED_PUBLIC_ROUTES = new Map([
@@ -54,13 +58,13 @@ const APPLICANT_TYPES = new Set([
 ]);
 
 function permanentRedirect(destination) {
-  return new Response(null, {
+  return secured(new Response(null, {
     status: 301,
     headers: {
       location: destination,
       "cache-control": "public, max-age=3600"
     }
-  });
+  }));
 }
 
 function isLegacySearchPlaceholder(url) {
@@ -110,11 +114,45 @@ function canonicalGetDestination(request, url) {
   return destination.toString();
 }
 
-function secured(response) {
+function isPublicNotFoundDocument(request, url) {
+  return (request.method === "GET" || request.method === "HEAD")
+    && normalizePublicPath(url.pathname) === "/404";
+}
+
+async function publicNotFoundResponse(request, url, originFetch) {
+  const originUrl = new URL(url.toString());
+  originUrl.protocol = "https:";
+  originUrl.hostname = CANONICAL_HOST;
+  originUrl.port = "";
+  originUrl.pathname = INTENTIONAL_NOT_FOUND_PATH;
+  originUrl.search = "";
+  originUrl.hash = "";
+  const originResponse = await originFetch(new Request(originUrl, {
+    method: request.method,
+    headers: request.headers,
+    redirect: "manual"
+  }));
+  return secured(new Response(originResponse.body, {
+    status: 404,
+    statusText: "Not Found",
+    headers: originResponse.headers
+  }));
+}
+
+function secured(response, { forceNoStore = false } = {}) {
   const output = new Response(response.body, response);
   output.headers.set("strict-transport-security", HSTS_VALUE);
   output.headers.set("x-content-type-options", "nosniff");
-  output.headers.set("cache-control", "no-store");
+  output.headers.set("referrer-policy", "strict-origin-when-cross-origin");
+  output.headers.set("x-frame-options", "SAMEORIGIN");
+  if (output.status === 404 || forceNoStore || output.headers.has("set-cookie")) {
+    output.headers.set("cache-control", "no-store");
+    output.headers.set("x-robots-tag", "noindex, follow");
+  } else if (!output.headers.has("cache-control")) {
+    // Worker-generated and personalized responses are never cached. Public
+    // static responses keep the explicit policy supplied by the asset origin.
+    output.headers.set("cache-control", "no-store");
+  }
   return output;
 }
 
@@ -508,6 +546,13 @@ export async function handleRequest(request, originFetch = fetch, environment = 
   const canonicalDestination = canonicalGetDestination(request, url);
   if (canonicalDestination) return permanentRedirect(canonicalDestination);
 
+  // Cloudflare static assets expose 404.html as the extensionless /404 asset
+  // with status 200. Resolve that public path through the custom 404 fallback
+  // and force the correct status instead of publishing a soft-404 document.
+  if (isPublicNotFoundDocument(request, url)) {
+    return publicNotFoundResponse(request, url, originFetch);
+  }
+
   if (url.hostname === CANONICAL_HOST && url.pathname === CONTACT_ENDPOINT) {
     return handleContactTriageRequest(request, {
       forwardUrl: environment.CONTACT_FORM_FORWARD_URL,
@@ -525,8 +570,23 @@ export async function handleRequest(request, originFetch = fetch, environment = 
     });
   }
 
+  if (url.hostname === CANONICAL_HOST && url.pathname.startsWith(COMPANY_LOOKUP_PREFIX)) {
+    const response = await handleCompanyLookupRequest(request, {
+      apiKey: environment.LISTAFIRME_API_KEY,
+      fetchImpl: environment.listafirmeFetch,
+      cache: environment.companyCache,
+      rateLimiter: environment.COMPANY_LOOKUP_RATE_LIMITER,
+      now: environment.companyNow,
+      retryDelay: environment.companyRetryDelay
+    });
+    return secured(response, { forceNoStore: true });
+  }
+
   const response = await originFetch(request);
-  return secured(response);
+  return secured(response, {
+    forceNoStore: !["GET", "HEAD"].includes(request.method)
+      || request.headers.has("authorization")
+  });
 }
 
 export default {

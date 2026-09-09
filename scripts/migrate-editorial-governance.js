@@ -13,6 +13,7 @@ const {
 const { CONFIG_PATH, addDays, isIsoDate } = require("../tools/editorial-governance");
 
 const GUIDES_PATH = path.join(ROOT, "official-guides.json");
+const EDITORIAL_PAGES_PATH = path.join(ROOT, "config", "editorial-pages.json");
 const TODAY = new Date().toISOString().slice(0, 10);
 const AUTHOR = "FABER – Atelier de Consultanță";
 const AUTHOR_ROLE = "Autor organizațional";
@@ -43,6 +44,7 @@ function normalizedGuideSource(guide) {
   if (!guide) {
     return {
       verifiedAt: HUMAN_REVIEW,
+      officialSourceUpdatedAt: HUMAN_REVIEW,
       officialSourceName: HUMAN_REVIEW,
       officialSourceUrl: HUMAN_REVIEW,
       sourceVersion: HUMAN_REVIEW
@@ -50,6 +52,7 @@ function normalizedGuideSource(guide) {
   }
   return {
     verifiedAt: isIsoDate(guide.verifiedAt || guide.accessedAt) ? (guide.verifiedAt || guide.accessedAt) : HUMAN_REVIEW,
+    officialSourceUpdatedAt: isIsoDate(guide.officialSourceUpdatedAt) ? guide.officialSourceUpdatedAt : HUMAN_REVIEW,
     officialSourceName: String(guide.institution || guide.sourceName || HUMAN_REVIEW),
     officialSourceUrl: /^https?:\/\//iu.test(String(guide.url || "")) ? guide.url : HUMAN_REVIEW,
     sourceVersion: String(guide.name || guide.title || HUMAN_REVIEW)
@@ -59,6 +62,7 @@ function normalizedGuideSource(guide) {
 function programSource(program) {
   return {
     verifiedAt: program.verifiedAt,
+    officialSourceUpdatedAt: isIsoDate(program.officialSourceUpdatedAt) ? program.officialSourceUpdatedAt : HUMAN_REVIEW,
     officialSourceName: program.sourceName,
     officialSourceUrl: program.sourceUrl,
     sourceVersion: program.sourceVersion
@@ -80,7 +84,7 @@ function ensureMeaningfulHistory(record) {
   };
 }
 
-function programRecord(route, program, page, policy) {
+function programRecord(route, program, page, policy, datePublished) {
   const source = programSource(program);
   const complete = isPublicProgram(program)
     && isIsoDate(source.verifiedAt)
@@ -99,6 +103,7 @@ function programRecord(route, program, page, policy) {
     reviewerRole: REVIEWER_ROLE,
     attributionType: "organization",
     personalNameConsent: false,
+    datePublished,
     ...source,
     nextReviewAt: complete ? addDays(source.verifiedAt, interval) : HUMAN_REVIEW,
     lastMeaningfulUpdate: program.lastMeaningfulUpdate,
@@ -117,7 +122,7 @@ function programRecord(route, program, page, policy) {
   };
 }
 
-function supportingRecord(route, contentType, page, guides, policy) {
+function supportingRecord(route, contentType, page, guides, policy, datePublished) {
   const source = normalizedGuideSource(guideForPage(page, guides));
   return {
     id: idFromRoute(route),
@@ -131,6 +136,7 @@ function supportingRecord(route, contentType, page, guides, policy) {
     reviewerRole: REVIEWER_ROLE,
     attributionType: "organization",
     personalNameConsent: false,
+    datePublished,
     ...source,
     nextReviewAt: isIsoDate(source.verifiedAt) ? addDays(source.verifiedAt, policy.evergreenReviewDays) : HUMAN_REVIEW,
     lastMeaningfulUpdate: HUMAN_REVIEW,
@@ -147,6 +153,7 @@ function supportingRecord(route, contentType, page, guides, policy) {
 function migrate() {
   const { config: pageConfig, programs } = loadProgramConfig();
   const guides = fs.existsSync(GUIDES_PATH) ? readJson(GUIDES_PATH) : {};
+  const editorialPages = fs.existsSync(EDITORIAL_PAGES_PATH) ? readJson(EDITORIAL_PAGES_PATH) : { pages: [] };
   const previous = fs.existsSync(CONFIG_PATH) ? readJson(CONFIG_PATH) : null;
   const policy = previous?.policy || {
     openCallReviewDays: 30,
@@ -156,6 +163,9 @@ function migrate() {
   };
   const previousByRoute = new Map((previous?.records || []).map((record) => [record.route, record]));
   const pageByRoute = new Map((pageConfig.pages || []).map((page) => [routeFromSlug(page.slug), page]));
+  const publishedAtByRoute = new Map((editorialPages.pages || [])
+    .filter((page) => isIsoDate(page.publishedAt))
+    .map((page) => [routeFromSlug(page.slug), page.publishedAt]));
   const candidateRoutes = new Map();
 
   for (const program of programs) candidateRoutes.set(program.pageUrl, { contentType: "program", page: pageByRoute.get(program.pageUrl) || null });
@@ -168,18 +178,40 @@ function migrate() {
     });
   }
   candidateRoutes.set("/calculator-soc", { contentType: "tool", page: null });
+  for (const record of previous?.records || []) {
+    if (!candidateRoutes.has(record.route)) {
+      candidateRoutes.set(record.route, { contentType: record.contentType, page: pageByRoute.get(record.route) || null });
+    }
+  }
 
-  const records = [...candidateRoutes.entries()].map(([route, candidate]) => {
-    if (previousByRoute.has(route)) return ensureMeaningfulHistory(previousByRoute.get(route));
+  const previousRoutes = (previous?.records || []).map((record) => record.route);
+  const previousRouteSet = new Set(previousRoutes);
+  const orderedRoutes = [
+    ...previousRoutes,
+    ...[...candidateRoutes.keys()].filter((route) => !previousRouteSet.has(route)).sort()
+  ];
+  const records = orderedRoutes.map((route) => {
+    const candidate = candidateRoutes.get(route);
     const explicitProgram = candidate.page?.programId
       ? programs.find((program) => program.slug === candidate.page.programId)
       : null;
     const program = explicitProgram || programForRoute(route, programs);
-    if (program) return programRecord(route, program, candidate.page, policy);
-    return supportingRecord(route, candidate.contentType, candidate.page, guides, policy);
-  }).sort((left, right) => left.route.localeCompare(right.route));
+    const datePublished = publishedAtByRoute.get(route) || HUMAN_REVIEW;
+    if (previousByRoute.has(route)) {
+      const record = ensureMeaningfulHistory(previousByRoute.get(route));
+      return {
+        ...record,
+        datePublished: isIsoDate(record.datePublished) ? record.datePublished : datePublished,
+        officialSourceUpdatedAt: isIsoDate(record.officialSourceUpdatedAt)
+          ? record.officialSourceUpdatedAt
+          : program?.officialSourceUpdatedAt || HUMAN_REVIEW
+      };
+    }
+    if (program) return programRecord(route, program, candidate.page, policy, datePublished);
+    return supportingRecord(route, candidate.contentType, candidate.page, guides, policy, datePublished);
+  });
 
-  const output = { schemaVersion: 1, policy, records };
+  const output = { schemaVersion: 2, policy, records };
   fs.mkdirSync(path.dirname(CONFIG_PATH), { recursive: true });
   fs.writeFileSync(CONFIG_PATH, `${JSON.stringify(output, null, 2)}\n`, "utf8");
   console.log(`Migrare editorială: ${records.length} pagini (${records.filter((record) => record.governanceState === "public").length} publice, ${records.filter((record) => record.governanceState !== "public").length} în validare).`);

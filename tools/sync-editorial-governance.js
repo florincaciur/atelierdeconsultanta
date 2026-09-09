@@ -8,6 +8,7 @@ const { normalizeJsonLdValue } = require("./normalize-copy-ro");
 const {
   ROOT,
   isCompleteRecord,
+  isIsoDate,
   loadEditorialGovernance,
   programContradictions,
   recordIssues,
@@ -47,9 +48,13 @@ function addEditorialProperties(node, record) {
   if (!eligible) return;
   delete node.author;
   delete node.reviewedBy;
+  delete node.datePublished;
   delete node.dateModified;
-  delete node.citation;
-  if (!isCompleteRecord(record)) return;
+  if (!isCompleteRecord(record)) {
+    delete node.citation;
+    return;
+  }
+  if (isIsoDate(record.datePublished)) node.datePublished = record.datePublished;
   node.dateModified = record.lastMeaningfulUpdate;
   // Profilurile Person nu sunt publicate până când numele, rolul, acordul și
   // URL-ul profilului vizibil nu sunt aprobate împreună. Pentru atribuirea
@@ -65,11 +70,22 @@ function addEditorialProperties(node, record) {
     name: `${record.officialSourceName} — ${record.sourceVersion}`,
     url: record.officialSourceUrl
   };
-  if (Array.isArray(node.citation)) {
-    node.citation = [citation, ...node.citation.filter((item) => item?.url !== record.officialSourceUrl)];
-  } else {
-    node.citation = [citation];
+  if (isIsoDate(record.officialSourceUpdatedAt)) citation.dateModified = record.officialSourceUpdatedAt;
+  if (!Array.isArray(node.citation) || !node.citation.length) node.citation = [citation];
+}
+
+function syncOfficialSourceDate(value, record) {
+  if (Array.isArray(value)) return value.forEach((item) => syncOfficialSourceDate(item, record));
+  if (!value || typeof value !== "object") return;
+  const types = new Set(Array.isArray(value["@type"]) ? value["@type"] : [value["@type"]]);
+  if (types.has("CreativeWork") && value.url === record.officialSourceUrl) {
+    if (isCompleteRecord(record) && isIsoDate(record.officialSourceUpdatedAt)) {
+      value.dateModified = record.officialSourceUpdatedAt;
+    } else {
+      delete value.dateModified;
+    }
   }
+  Object.values(value).forEach((item) => syncOfficialSourceDate(item, record));
 }
 
 function syncJsonLd(html, record) {
@@ -77,22 +93,26 @@ function syncJsonLd(html, record) {
     try {
       const value = JSON.parse(source);
       const nodes = Array.isArray(value?.["@graph"]) ? value["@graph"] : Array.isArray(value) ? value : [value];
+      syncOfficialSourceDate(value, record);
       nodes.forEach((node) => addEditorialProperties(node, record));
-      return `${open}${serializeJsonLd(normalizeJsonLdValue(value))}${close}`;
+      const newline = source.includes("\r\n") ? "\r\n" : "\n";
+      const serialized = serializeJsonLd(normalizeJsonLdValue(value)).replace(/\n/gu, newline);
+      return `${open}${serialized}${close}`;
     } catch {
       return full;
     }
   });
 }
 
-function insertBeforeLast(html, pattern, block) {
+function insertBeforeLast(html, pattern, block, trailingNewline = "\n") {
   const matches = [...html.matchAll(pattern)];
   if (!matches.length) return null;
   const last = matches.at(-1);
-  return `${html.slice(0, last.index).trimEnd()}\n${block}\n${html.slice(last.index)}`;
+  return `${html.slice(0, last.index).trimEnd()}\n${block}${trailingNewline}${html.slice(last.index)}`;
 }
 
 function syncPageHtml(source, record) {
+  const existingBoundary = source.match(/<!-- EDITORIAL_GOVERNANCE_END -->(\r\n|\n)/u)?.[1];
   let output = source.replace(/<!-- EDITORIAL_GOVERNANCE_START -->[\s\S]*?<!-- EDITORIAL_GOVERNANCE_END -->\s*/giu, "");
   if (!output.includes(CSS_URL)) {
     const link = `<link rel="stylesheet" href="${CSS_URL}">`;
@@ -104,23 +124,33 @@ function syncPageHtml(source, record) {
     next = replaceTagAttribute(next, "data-governance-state", record.governanceState);
     if (isCompleteRecord(record)) {
       next = replaceTagAttribute(next, "data-editorial-verified-at", record.verifiedAt);
-      next = replaceTagAttribute(next, "data-next-review-at", record.nextReviewAt);
-      next = replaceTagAttribute(next, "data-last-meaningful-update", record.lastMeaningfulUpdate);
+      next = replaceTagAttribute(next, "data-date-modified", record.lastMeaningfulUpdate);
+      if (isIsoDate(record.datePublished)) next = replaceTagAttribute(next, "data-date-published", record.datePublished);
+      else next = removeTagAttribute(next, "data-date-published");
+      if (isIsoDate(record.officialSourceUpdatedAt)) {
+        next = replaceTagAttribute(next, "data-official-source-updated-at", record.officialSourceUpdatedAt);
+      } else {
+        next = removeTagAttribute(next, "data-official-source-updated-at");
+      }
     } else {
-      for (const attribute of ["data-editorial-verified-at", "data-next-review-at", "data-last-meaningful-update"]) {
+      for (const attribute of ["data-editorial-verified-at", "data-date-published", "data-date-modified", "data-official-source-updated-at"]) {
         next = removeTagAttribute(next, attribute);
       }
+    }
+    for (const internalAttribute of ["data-next-review-at", "data-last-meaningful-update"]) {
+      next = removeTagAttribute(next, internalAttribute);
     }
     return next;
   });
   output = syncJsonLd(output, record);
   const block = renderEditorialGovernance(record);
+  const trailingNewline = existingBoundary || (source.includes("\r\n") ? "\r\n" : "\n");
   if (output.includes(PROGRAM_TEMPLATE_SLOT)) {
-    return output.replace(PROGRAM_TEMPLATE_SLOT, `${PROGRAM_TEMPLATE_SLOT}\n${block}`);
+    return output.replace(/<!-- PROGRAM_TEMPLATE_GOVERNANCE_SLOT -->(?:\r\n|\n)?/u, `${PROGRAM_TEMPLATE_SLOT}\n${block}${trailingNewline}`);
   }
-  output = insertBeforeLast(output, /<\/main>/giu, block)
-    || insertBeforeLast(output, /<\/body>/giu, block)
-    || `${output}\n${block}\n`;
+  output = insertBeforeLast(output, /<\/main>/giu, block, trailingNewline)
+    || insertBeforeLast(output, /<\/body>/giu, block, trailingNewline)
+    || `${output}\n${block}${trailingNewline}`;
   return output;
 }
 
@@ -142,6 +172,8 @@ function dashboardPayload(records, programs, today) {
       programId: record.programId,
       programStatus: program?.status || null,
       verifiedAt: record.verifiedAt,
+      datePublished: record.datePublished,
+      officialSourceUpdatedAt: record.officialSourceUpdatedAt,
       nextReviewAt: record.nextReviewAt,
       lastMeaningfulUpdate: record.lastMeaningfulUpdate,
       officialSourceName: record.officialSourceName,

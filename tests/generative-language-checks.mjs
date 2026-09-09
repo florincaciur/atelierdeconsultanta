@@ -32,6 +32,8 @@ for (const label of requiredRules) {
 }
 
 assert.equal(normalizeRomanianCopy("Pot verifica documentele."), "Pot verifica documentele.");
+assert.equal(normalizeRomanianCopy("Nu completa acest câmp"), "Nu completa acest câmp");
+assert.equal(normalizeRomanianCopy("documentație completa"), "documentație completă");
 assert.equal(normalizeRomanianCopy("Pot schimba concluzia."), "Pot schimba concluzia.");
 assert.equal(normalizeRomanianCopy("Regulile se schimba."), "Regulile se schimbă.");
 

@@ -186,7 +186,7 @@ function schemaFor(page) {
       serviceType: page.serviceType
     }),
     breadcrumbSchema(breadcrumbItemsForPath(`/${page.slug}`, page.h1)),
-    faqPageSchema(page.faqs, { minItems: 2 })
+    faqPageSchema(page.faqs, { minItems: 2, route: `/${page.slug}` })
   ]).replace(/</g, "\\u003c");
 }
 

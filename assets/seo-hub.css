@@ -459,6 +459,10 @@ button:focus-visible,
   gap: 14px;
   margin: 0 0 30px;
 }
+.design-card-grid__title {
+  grid-column: 1 / -1;
+  margin: 0 0 4px;
+}
 .mini-card {
   border: 1px solid var(--gray-200);
   border-radius: var(--radius-sm);

@@ -9,11 +9,12 @@ const cheerio = require("cheerio");
 const {
   breadcrumbItemsForRoute,
   breadcrumbRouteEntries,
-  knownRoutes,
   normalizeRoute
 } = require("./breadcrumb-registry");
 const { breadcrumbSchema, serializeJsonLd } = require("./schema-helpers");
-const { fileForRoute, graphNodes, hasType, sitemapRoutes } = require("./structured-data-utils");
+const { collectSiteState } = require("./generate-sitemap");
+const { buildInventory } = require("./generate-route-inventory");
+const { fileForRoute, graphNodes, hasType } = require("./structured-data-utils");
 
 const ROOT = path.resolve(__dirname, "..");
 const CHECK = process.argv.includes("--check");
@@ -37,7 +38,7 @@ function renderBreadcrumb(route, currentName) {
     : `      <li><a href="${escapeHtml(entry.route)}">${escapeHtml(entry.name)}</a></li>`);
   return [
     START,
-    '  <nav class="breadcrumb" aria-label="Breadcrumb" data-breadcrumb>',
+    '  <nav class="breadcrumb" aria-label="Breadcrumb" data-breadcrumb="">',
     "    <ol>",
     ...items,
     "    </ol>",
@@ -49,8 +50,8 @@ function renderBreadcrumb(route, currentName) {
 function removeExistingVisibleBreadcrumb(html) {
   return html
     .replace(new RegExp(`${START}[\\s\\S]*?${END}`, "giu"), "")
-    .replace(/\s*<nav\b[^>]*(?:data-breadcrumb|class=["'][^"']*\bbreadcrumb\b[^"']*["'])[^>]*>[\s\S]*?<\/nav>\s*/iu, "\n")
-    .replace(/\s*<div\b[^>]*class=["'][^"']*\bbreadcrumb\b[^"']*["'][^>]*>[\s\S]*?<\/div>\s*/iu, "\n");
+    .replace(/\s*<nav\b[^>]*(?:data-breadcrumb|class=["'][^"']*\bbreadcrumbs?\b[^"']*["'])[^>]*>[\s\S]*?<\/nav>\s*/giu, "\n")
+    .replace(/\s*<div\b[^>]*class=["'][^"']*\bbreadcrumbs?\b[^"']*["'][^>]*>[\s\S]*?<\/div>\s*/giu, "\n");
 }
 
 function insertVisibleBreadcrumb(html, markup) {
@@ -68,7 +69,9 @@ function insertVisibleBreadcrumb(html, markup) {
 function syncVisibleBreadcrumb(html, markup) {
   const managedPattern = new RegExp(`${START}[\\s\\S]*?${END}`, "giu");
   if (markup && managedPattern.test(html)) {
-    return html.replace(new RegExp(`${START}[\\s\\S]*?${END}`, "giu"), markup);
+    const slot = "<!-- BREADCRUMB_SLOT -->";
+    const withSlot = html.replace(new RegExp(`${START}[\\s\\S]*?${END}`, "giu"), slot);
+    return removeExistingVisibleBreadcrumb(withSlot).replace(slot, markup);
   }
   return insertVisibleBreadcrumb(removeExistingVisibleBreadcrumb(html), markup);
 }
@@ -131,30 +134,42 @@ function synchronizedHtml(source, route) {
   let output = syncVisibleBreadcrumb(source, renderBreadcrumb(route, currentName));
   output = syncStylesheet(output, route);
   output = replaceJsonLd(output, route, currentName, pendingValidation);
-  return output;
+  return source.includes("\r\n") ? output.replace(/\r?\n/gu, "\r\n") : output;
 }
 
 function main() {
-  const routes = [...new Set([...sitemapRoutes(ROOT), ...knownRoutes()])].sort();
+  const siteState = collectSiteState();
+  const inventory = buildInventory();
+  const deployedSourceByRoute = new Map(siteState.entries.map((entry) => [entry.route, path.join(ROOT, entry.sourceFile)]));
+  const sourceByRoute = new Map(inventory.routes.map((entry) => [entry.route, path.join(ROOT, entry.sourceFile)]));
+  const routes = inventory.routes.map((entry) => entry.route);
   const changed = [];
   const skipped = [];
+  let checked = 0;
 
   for (const route of routes) {
-    const file = fileForRoute(ROOT, route);
-    if (!fs.existsSync(file)) {
-      skipped.push(`${route}: fișier inexistent`);
-      continue;
+    const files = [...new Set([
+      fileForRoute(ROOT, route),
+      sourceByRoute.get(route),
+      deployedSourceByRoute.get(route)
+    ].filter(Boolean))];
+    for (const file of files) {
+      if (!fs.existsSync(file)) {
+        skipped.push(`${route}: fișier inexistent`);
+        continue;
+      }
+      const source = fs.readFileSync(file, "utf8");
+      const pageCanonical = canonicalRoute(source);
+      if (pageCanonical !== route) {
+        skipped.push(`${route}: canonical ${pageCanonical || "lipsește"}`);
+        continue;
+      }
+      checked += 1;
+      const output = synchronizedHtml(source, route);
+      if (output === source) continue;
+      changed.push(path.relative(ROOT, file).replace(/\\/gu, "/"));
+      if (!CHECK) fs.writeFileSync(file, output, "utf8");
     }
-    const source = fs.readFileSync(file, "utf8");
-    const pageCanonical = canonicalRoute(source);
-    if (pageCanonical !== route) {
-      skipped.push(`${route}: canonical ${pageCanonical || "lipsește"}`);
-      continue;
-    }
-    const output = synchronizedHtml(source, route);
-    if (output === source) continue;
-    changed.push(path.relative(ROOT, file).replace(/\\/gu, "/"));
-    if (!CHECK) fs.writeFileSync(file, output, "utf8");
   }
 
   if (CHECK && changed.length) {
@@ -162,7 +177,7 @@ function main() {
     console.error(changed.slice(0, 20).map((file) => `- ${file}`).join("\n"));
     process.exit(1);
   }
-  console.log(`Breadcrumb sync ${CHECK ? "PASS" : "OK"}: ${routes.length - skipped.length} pagini verificate, ${changed.length} actualizate, ${skipped.length} rute nepublicate/absente.`);
+  console.log(`Breadcrumb sync ${CHECK ? "PASS" : "OK"}: ${checked} surse canonice/deploy verificate, ${changed.length} actualizate, ${skipped.length} rute nepublicate/absente.`);
 }
 
 if (require.main === module) main();

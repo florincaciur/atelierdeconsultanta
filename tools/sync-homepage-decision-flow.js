@@ -2,19 +2,21 @@
 
 const fs = require("fs");
 const path = require("path");
+const { renderSculpture } = require("./immersive-home-template");
+const { renderContactTriageLayout } = require("./contact-triage-form");
 const { loadProgramConfig } = require("./program-factual-governance");
 const { renderPriorityCarousel } = require("./sync-homepage-programs");
 
 const ROOT = path.resolve(__dirname, "..");
 const HOME = path.join(ROOT, "index.html");
 const CONFIG = JSON.parse(fs.readFileSync(path.join(ROOT, "config", "homepage-decision-flow.json"), "utf8"));
-const BANNERS = JSON.parse(fs.readFileSync(path.join(ROOT, "banners.json"), "utf8"));
 const CHECK_ONLY = process.argv.includes("--check");
 const HERO_END = "<!-- HOMEPAGE_DECISION_HERO_END -->";
 const START = "<!-- P1_21_HOMEPAGE_FLOW_START -->";
 const END = "<!-- P1_21_HOMEPAGE_FLOW_END -->";
-const STYLE = '<link rel="stylesheet" href="/assets/homepage-decision-flow.css?v=20260722-2" data-homepage-decision-flow-style="p1_22">';
-const SCRIPT = '<script src="/assets/homepage-decision-flow.js?v=20260722-2" defer data-homepage-decision-flow-script="p1_22"></script>';
+const STYLE = '<link rel="stylesheet" href="/assets/homepage-decision-flow.css?v=20260901-5" data-homepage-decision-flow-style="p1_22">';
+const SCRIPT = '<script src="/assets/homepage-decision-flow.js?v=20260902-2" defer="" data-homepage-decision-flow-script="p1_22"></script>';
+const FORM_ASSETS = '<link rel="stylesheet" href="/assets/contact-triage.css?v=20260831-3" data-home-contact-style="">\n  <script src="/assets/contact-triage.js?v=20260831-3" defer="" data-home-contact-script=""></script>';
 
 function esc(value) {
   return String(value ?? "").replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
@@ -30,28 +32,29 @@ function renderMethod() {
 }
 
 function renderMethodExperience() {
-  const tabs = CONFIG.methodSteps.map((step, index) => `<button type="button" role="tab" id="homepage-method-tab-${index + 1}" aria-controls="homepage-method-frame-${index + 1}" aria-selected="${index === 0 ? "true" : "false"}"${index === 0 ? "" : ' tabindex="-1"'} data-homepage-method-tab data-method-index="${index}"><span>${esc(step.number)}</span><strong>${esc(step.title)}</strong></button>`).join("\n");
-  const frames = CONFIG.methodSteps.map((step, index) => `<div class="homepage-method-frame${index === 0 ? " is-active" : ""}" id="homepage-method-frame-${index + 1}" role="tabpanel" aria-labelledby="homepage-method-tab-${index + 1}" data-homepage-method-frame data-method-index="${index}">
+  const tabs = CONFIG.methodSteps.map((step, index) => `<button type="button" role="tab" id="homepage-method-tab-${index + 1}" aria-controls="homepage-method-frame-${index + 1}" aria-selected="${index === 0 ? "true" : "false"}"${index === 0 ? "" : ' tabindex="-1"'} data-homepage-method-tab="" data-method-index="${index}"><span>${esc(step.number)}</span><strong>${esc(step.title)}</strong></button>`).join("\n");
+  const frames = CONFIG.methodSteps.map((step, index) => `<div class="homepage-method-frame${index === 0 ? " is-active" : ""}" id="homepage-method-frame-${index + 1}" role="tabpanel" aria-labelledby="homepage-method-tab-${index + 1}" data-homepage-method-frame="" data-method-index="${index}">
   <span class="homepage-method-frame__number">${esc(step.number)}</span>
   <div><h3>${esc(step.title)}</h3><p>${esc(step.text)}</p></div>
 </div>`).join("\n");
-  const nodes = CONFIG.methodSteps.map((step, index) => `<g class="homepage-method-node${index === 0 ? " is-active" : ""}" data-homepage-method-node data-method-index="${index}" transform="translate(${50 + index * 135} 70)"><circle r="18"></circle><text text-anchor="middle" dy="5">${index + 1}</text><title>${esc(step.title)}</title></g>`).join("\n");
-  return `<section id="homepage-method" class="homepage-flow-section homepage-method" aria-labelledby="homepage-method-title" data-homepage-method>
+  const nodes = CONFIG.methodSteps.map((step, index) => `<g class="homepage-method-node${index === 0 ? " is-active" : ""}" data-homepage-method-node="" data-method-index="${index}" transform="translate(${50 + index * 135} 70)"><circle r="18"></circle><text text-anchor="middle" dy="5">${index + 1}</text><title>${esc(step.title)}</title></g>`).join("\n");
+  return `<section id="homepage-method" class="homepage-flow-section homepage-method" aria-labelledby="homepage-method-title" data-homepage-method="">
   <div class="homepage-flow-inner homepage-method-layout">
     ${heading("Metoda FABER", "homepage-method-title", "Cum decidem dacă merită continuat", "Cinci verificări, într-o singură secvență. Alege etapa sau glisează pentru a vedea următorul filtru de decizie.")}
     <div class="homepage-method-experience">
+      ${renderSculpture("im-method-sculpture")}
       <svg class="homepage-method-svg" viewBox="0 0 640 140" aria-hidden="true" focusable="false">
         <path class="homepage-method-route" d="M50 70 C105 24 130 24 185 70 S265 116 320 70 S400 24 455 70 S535 116 590 70"></path>
         ${nodes}
-        <g class="homepage-method-marker" data-homepage-method-marker><circle r="10"></circle><circle class="homepage-method-marker__pulse" r="18"></circle></g>
+        <g class="homepage-method-marker" data-homepage-method-marker=""><circle r="10"></circle><circle class="homepage-method-marker__pulse" r="18"></circle></g>
       </svg>
-      <div class="homepage-method-frames" tabindex="0" aria-label="Etapele metodei FABER" data-homepage-method-viewport>${frames}</div>
+      <div class="homepage-method-frames" tabindex="0" aria-label="Etapele metodei FABER" data-homepage-method-viewport="">${frames}</div>
       <div class="homepage-method-controls">
-        <button type="button" class="homepage-sequence-arrow" aria-label="Etapa anterioară" data-homepage-method-previous><span aria-hidden="true">←</span></button>
-        <div class="homepage-method-tabs" role="tablist" aria-label="Alege etapa metodei">${tabs}</div>
-        <button type="button" class="homepage-sequence-arrow" aria-label="Etapa următoare" data-homepage-method-next><span aria-hidden="true">→</span></button>
+        <button type="button" class="homepage-sequence-arrow" aria-label="Etapa anterioară" data-homepage-method-previous=""><span aria-hidden="true">←</span></button>
+        <div class="homepage-method-tabs" role="tablist" aria-label="Alege etapa metodei"><span class="homepage-method-tabs__indicator" aria-hidden="true" data-homepage-method-indicator=""></span>${tabs}</div>
+        <button type="button" class="homepage-sequence-arrow" aria-label="Etapa următoare" data-homepage-method-next=""><span aria-hidden="true">→</span></button>
       </div>
-      <p class="homepage-sequence-status" role="status" aria-live="polite" aria-atomic="true" data-homepage-method-status>Etapa 1 din ${CONFIG.methodSteps.length}: ${esc(CONFIG.methodSteps[0].title)}</p>
+      <p class="homepage-sequence-status" role="status" aria-live="polite" aria-atomic="true" data-homepage-method-status="">Etapa 1 din ${CONFIG.methodSteps.length}: ${esc(CONFIG.methodSteps[0].title)}</p>
     </div>
   </div>
 </section>`;
@@ -68,8 +71,8 @@ function renderExplorer() {
       id: "homepage-services",
       label: "Servicii",
       eyebrow: "Servicii",
-      title: "De la verificare la implementare",
-      text: "Alege rolul potrivit stadiului proiectului, fără să parcurgi secțiuni repetitive.",
+      title: "Patru servicii, roluri distincte",
+      text: "Alege analiza, consultanța, proiectarea sau implementarea potrivită stadiului proiectului.",
       content: `<div class="homepage-service-grid">${CONFIG.services.map((item, index) => renderExplorerCard(item, "Serviciu", index)).join("\n")}</div>`
     },
     {
@@ -84,8 +87,8 @@ function renderExplorer() {
       id: "homepage-proof",
       label: "De ce FABER",
       eyebrow: "De ce FABER",
-      title: "Decizii documentate, cu limite explicite",
-      text: "Trei principii verificabile în modul în care publicăm și analizăm informația.",
+      title: "Metodologie și surse, nu promisiuni",
+      text: "Află cine este FABER, cum verificăm statutul programelor și care sunt limitele analizei.",
       content: `<div class="homepage-proof-grid">${CONFIG.proofs.map((item, index) => renderExplorerCard(item, "Principiu", index)).join("\n")}</div>`
     },
     {
@@ -105,7 +108,7 @@ function renderExplorer() {
   const nodes = frames.map((frame, index) => `<g class="homepage-explorer-node${index === 0 ? " is-active" : ""}" data-homepage-explorer-node data-explorer-index="${index}" transform="translate(${70 + index * 160} 58)"><circle r="17"></circle><text text-anchor="middle" dy="5">${index + 1}</text><title>${esc(frame.label)}</title></g>`).join("\n");
   return `<section id="homepage-explorer" class="homepage-flow-section homepage-explorer" aria-labelledby="homepage-explorer-title" data-homepage-explorer>
   <div class="homepage-flow-inner">
-    ${heading("Explorează FABER", "homepage-explorer-title", "Alege informația de care ai nevoie", "Patru secțiuni într-un singur cadru interactiv. Folosește butoanele, tastatura sau glisarea stânga–dreapta.")}
+    ${heading("Servicii, instrumente și verificare", "homepage-explorer-title", "Alege informația de care ai nevoie", "Servicii pentru proiectul tău, instrumente de pregătire, surse oficiale și comparații între programe.")}
     <div class="homepage-explorer-shell">
       <div class="homepage-explorer-tabs" role="tablist" aria-label="Alege secțiunea">${tabs}</div>
       <svg class="homepage-explorer-svg" viewBox="0 0 620 110" aria-hidden="true" focusable="false">
@@ -124,13 +127,13 @@ function renderExplorer() {
 </section>`;
 }
 
-function renderContactExperience() {
+function renderContactExperience(programs) {
   const item = CONFIG.contact;
   const phones = item.phones.map((phone, index) => `<a href="${esc(phone.href)}" data-analytics-event="contact_phone" data-analytics-component="homepage_final_contact" data-analytics-cta-id="homepage_phone_${index + 1}"><span>Telefon</span><strong>${esc(phone.label)}</strong></a>`).join("");
   return `<section id="homepage-contact" class="homepage-flow-section" aria-labelledby="homepage-contact-title"><div class="homepage-flow-inner homepage-contact-card">
     <div class="homepage-contact-copy"><span class="homepage-eyebrow">Următorul pas</span><h2 id="homepage-contact-title">${esc(item.title)}</h2><p>${esc(item.text)}</p><div class="homepage-contact-direct" aria-label="Contact direct">${phones}<a href="${esc(item.email.href)}" data-analytics-event="contact_email" data-analytics-component="homepage_final_contact" data-analytics-cta-id="homepage_email"><span>Email</span><strong>${esc(item.email.label)}</strong></a></div></div>
     <div class="homepage-contact-actions"><span class="homepage-contact-actions__label">Începe cu datele esențiale</span><a class="homepage-flow-action" href="${esc(item.primaryHref)}" data-analytics-event="cta_click" data-analytics-component="homepage_final_cta" data-analytics-cta-id="homepage_final_project_check" data-analytics-target="/contact" data-analytics-cta-view="true" data-analytics-copy-variant="p1_22">${esc(item.primaryLabel)} <span aria-hidden="true">→</span></a><a class="homepage-contact-secondary" href="/verificare-eligibilitate-fonduri-europene">Vezi ce date pregătești</a></div>
-  </div></section>`;
+  </div><details class="homepage-flow-inner im-contact-disclosure"><summary><span><strong>Trimite datele proiectului</strong><small>Formular scurt · răspuns după verificarea informațiilor transmise</small></span><span aria-hidden="true">Deschide formularul</span></summary><div class="im-contact-form-wrap">${renderContactTriageLayout(programs, {}, { pagePath: "/" })}</div></details></section>`;
 }
 
 function renderCardSection(id, eyebrow, title, text, items, gridClass) {
@@ -154,9 +157,15 @@ function renderContact() {
   return `<section id="homepage-contact" class="homepage-flow-section" aria-labelledby="homepage-contact-title"><div class="homepage-flow-inner"><div><span class="homepage-eyebrow">Următorul pas</span><h2 id="homepage-contact-title">${esc(item.title)}</h2><p>${esc(item.text)}</p><div class="homepage-contact-direct" aria-label="Contact direct">${phones}<a href="${esc(item.email.href)}" data-analytics-event="contact_email" data-analytics-component="homepage_final_contact" data-analytics-cta-id="homepage_email">${esc(item.email.label)}</a></div></div><div class="homepage-contact-actions"><a class="homepage-flow-action" href="${esc(item.primaryHref)}" data-analytics-event="cta_click" data-analytics-component="homepage_final_cta" data-analytics-cta-id="homepage_final_project_check" data-analytics-target="/contact" data-analytics-cta-view="true" data-analytics-copy-variant="p1_21">${esc(item.primaryLabel)}</a></div></div></section>`;
 }
 
+function normalizeOwnedBooleanAttributes(markup) {
+  return markup.replace(
+    /\s((?:data-[a-z0-9-]+|allowfullscreen|async|autofocus|autoplay|checked|controls|default|defer|disabled|formnovalidate|hidden|inert|ismap|itemscope|loop|multiple|muted|nomodule|novalidate|open|playsinline|readonly|required|reversed|selected))(?=[\s>])/giu,
+    ' $1=""'
+  );
+}
+
 function renderFlow(programs) {
-  const banners = new Map(BANNERS.map((banner) => [banner.programId, banner]));
-  return `${START}\n${renderMethodExperience()}\n${renderPriorityCarousel(programs, banners)}\n${renderExplorer()}\n${renderContactExperience()}\n${END}`;
+  return normalizeOwnedBooleanAttributes(`${START}\n${renderMethodExperience()}\n${renderPriorityCarousel(programs)}\n${renderExplorer()}\n${renderContactExperience(programs)}\n${END}`);
 }
 
 function removeLegacyRuntime(source) {
@@ -200,6 +209,8 @@ function synchronize(source, programs) {
   const toc = source.match(/<!-- P1_09_LONG_FORM_TOC_START -->[\s\S]*?<!-- P1_09_LONG_FORM_TOC_END -->/);
   const preservedToc = toc ? `\n${toc[0]}` : "";
   let output = source.replace(new RegExp(`${HERO_END}[\\s\\S]*?<\\/main>`, "i"), `${HERO_END}${preservedToc}\n${renderFlow(programs)}\n  </main>`);
+  output = output.replace(/\s*<link\b[^>]*data-home-contact-style[^>]*>/gi, "")
+    .replace(/\s*<script\b[^>]*data-home-contact-script[^>]*><\/script>/gi, "");
   output = output
     .replace(/\s*<style id="homepage-faq-expand-css">[\s\S]*?<\/style>/gi, "")
     .replace(/\s*<script>\s*\/\* Homepage FAQ progressive disclosure[\s\S]*?<\/script>/gi, "");
@@ -208,10 +219,17 @@ function synchronize(source, programs) {
     .replace(/^[ \t]*<script\b[^>]*data-homepage-decision-flow-script=["'][^"']+["'][^>]*><\/script>\r?\n?/gim, "");
   const homepageHeroStyle = /\s*(?=<style\b[^>]*id=["']homepage-hero-critical-css["'][^>]*>)/i;
   const longFormAsset = /\s*(?=<link\b[^>]*data-long-form-layout-style=["'][^"']+["'][^>]*>)/i;
-  if (homepageHeroStyle.test(output)) output = output.replace(homepageHeroStyle, `${newline}  ${STYLE}${newline}  ${SCRIPT}${newline}  `);
-  else if (longFormAsset.test(output)) output = output.replace(longFormAsset, `${newline}  ${STYLE}${newline}  ${SCRIPT}${newline}  `);
-  else output = output.replace(/<\/head>/i, `  ${STYLE}${newline}  ${SCRIPT}${newline}</head>`);
+  // The hero generator owns the critical block's final position. Anchoring the
+  // flow assets immediately before it makes both generators converge even
+  // when the long-form bundle is also present on the homepage.
+  if (homepageHeroStyle.test(output)) output = output.replace(homepageHeroStyle, `${newline}  ${STYLE}${newline}  ${SCRIPT}${newline}  ${FORM_ASSETS}${newline}  `);
+  else if (longFormAsset.test(output)) output = output.replace(longFormAsset, `${newline}  ${STYLE}${newline}  ${SCRIPT}${newline}  ${FORM_ASSETS}${newline}  `);
+  else output = output.replace(/<\/head>/i, `  ${STYLE}${newline}  ${SCRIPT}${newline}  ${FORM_ASSETS}${newline}</head>`);
   return removeLegacyRuntime(output);
+}
+
+function sameText(left, right) {
+  return left.replace(/\r\n/g, "\n") === right.replace(/\r\n/g, "\n");
 }
 
 function main() {
@@ -219,7 +237,7 @@ function main() {
   const before = fs.readFileSync(HOME, "utf8");
   const after = synchronize(before, programs);
   if (CHECK_ONLY) {
-    if (after !== before) {
+    if (!sameText(after, before)) {
       let mismatch = 0;
       while (mismatch < before.length && mismatch < after.length && before[mismatch] === after[mismatch]) mismatch += 1;
       const contextStart = Math.max(0, mismatch - 90);
@@ -229,8 +247,8 @@ function main() {
     console.log("Homepage decision flow sync PASS.");
     return;
   }
-  if (after !== before) fs.writeFileSync(HOME, after, "utf8");
-  console.log("Homepage P1.21 sincronizat: un singur traseu, zero formulare inline, un carusel.");
+  if (!sameText(after, before)) fs.writeFileSync(HOME, after, "utf8");
+  console.log("Homepage sincronizat: un singur traseu, un formular de solicitări, un carusel.");
 }
 
 if (require.main === module) main();

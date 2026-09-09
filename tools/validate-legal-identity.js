@@ -15,6 +15,11 @@ const {
 } = require("./legal-identity-governance");
 
 const REPORT_PATH = path.join(ROOT, "reports", "legal-identity-approval.md");
+
+function sameTextContent(actual, expected) {
+  const normalize = (value) => String(value).replace(/\r\n?/gu, "\n");
+  return normalize(actual) === normalize(expected);
+}
 const SURFACE_LABELS = Object.freeze({
   footer: "Footer",
   contact: "Contact",
@@ -68,7 +73,7 @@ function report(config) {
 function writeOrCheck(content, check) {
   if (check) {
     const current = fs.existsSync(REPORT_PATH) ? fs.readFileSync(REPORT_PATH, "utf8") : "";
-    if (current !== content) throw new Error(`Raport nesincronizat: ${path.relative(ROOT, REPORT_PATH)}`);
+    if (!sameTextContent(current, content)) throw new Error(`Raport nesincronizat: ${path.relative(ROOT, REPORT_PATH)}`);
     return;
   }
   fs.mkdirSync(path.dirname(REPORT_PATH), { recursive: true });

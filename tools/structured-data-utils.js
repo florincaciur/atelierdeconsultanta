@@ -24,6 +24,12 @@ const CANONICAL_ROOT_HTML_ROUTES = new Set([
   "calculator-soc"
 ]);
 
+// This route is authored in the directory index. The root .html file is a
+// legacy deploy alias and must never become the source of canonical content.
+const CANONICAL_DIRECTORY_SOURCE_ROUTES = new Set([
+  "investitii-modernizarea-microintreprinderilor-apel-2"
+]);
+
 function cleanText(value) {
   return String(value || "").replace(/\s+/gu, " ").trim();
 }
@@ -94,26 +100,33 @@ function isHiddenFromUsers($, element) {
   });
 }
 
-function visibleFaqItems($) {
+function visibleFaqCandidates($) {
   const items = [];
-  const seen = new Set();
   const containers = $(".faq-item, details:not([data-non-faq]), [itemprop='mainEntity'][itemtype*='Question']")
     .filter((_, container) => !$(container).closest("[data-long-form-toc], .editorial-governance").length);
 
   containers.each((_, container) => {
     if (isHiddenFromUsers($, container)) return;
-    const questionElement = $(container)
-      .find("[itemprop='name'], .faq-q, summary, h3, h4")
+    let questionElement = $(container)
+      .children("[itemprop='name'], .faq-q, summary, h3, h4")
       .first();
+    if (!questionElement.length && $(container).is("[itemprop='mainEntity'][itemtype*='Question']")) {
+      questionElement = $(container).find("[itemprop='name'], .faq-q, summary, h3, h4").first();
+    }
     const question = cleanText(questionElement.text());
+    // A <details> element is not automatically a FAQ. Requiring an actual
+    // question keeps source accordions and section wrappers out of FAQPage.
+    if (!/[?？]$/u.test(question)) return;
     const answer = answerTextForContainer($, container, questionElement.get(0));
-    const key = comparableText(question);
-    if (!key || !answer || seen.has(key)) return;
-    seen.add(key);
-    items.push({ question, answer });
+    if (!answer) return;
+    items.push({ question, answer, element: container });
   });
 
   return items;
+}
+
+function visibleFaqItems($) {
+  return visibleFaqCandidates($).map(({ question, answer }) => ({ question, answer }));
 }
 
 function sitemapRoutes(root) {
@@ -128,6 +141,7 @@ function fileForRoute(root, route) {
   const relative = decodeURIComponent(route.replace(/^\//u, ""));
   const directoryIndex = path.join(root, relative, "index.html");
   const direct = path.join(root, `${relative}.html`);
+  if (CANONICAL_DIRECTORY_SOURCE_ROUTES.has(relative) && fs.existsSync(directoryIndex)) return directoryIndex;
   if (CANONICAL_ROOT_HTML_ROUTES.has(relative) && fs.existsSync(direct)) return direct;
   if (fs.existsSync(directoryIndex)) return directoryIndex;
   if (fs.existsSync(direct)) return direct;
@@ -153,7 +167,7 @@ function loadPageHints(root) {
       type: page.type,
       schemaType: page.schemaType,
       updatedAt: page.updatedAt || editorial?.updatedAt || programs.updatedAt,
-      publishedAt: page.publishedAt || editorial?.publishedAt || programs.updatedAt,
+      publishedAt: page.publishedAt || editorial?.publishedAt,
       lastReviewed: page.lastReviewed || page.lastVerifiedAt || editorial?.lastVerifiedAt || programs.lastReviewed
     });
   }
@@ -167,14 +181,15 @@ function loadPageHints(root) {
       type: page.type || "article",
       schemaType: page.schemaType || "Article",
       updatedAt: page.updatedAt || programmatic.updatedAt,
-      publishedAt: page.publishedAt || programmatic.updatedAt,
+      publishedAt: page.publishedAt,
       lastReviewed: page.lastReviewed || programmatic.lastReviewed
     });
   }
 
-  // dateModified, sursa și atribuirea nu se deduc din build sau dintr-un
-  // timestamp generic al colecției. Ele provin exclusiv din registrul de
-  // guvernanță editorială, când înregistrarea este publicabilă.
+  // Pentru rutele guvernate, datePublished/dateModified, sursa și atribuirea
+  // nu se deduc din build sau dintr-un timestamp generic al colecției. Ele
+  // provin exclusiv din registrul editorial și pot rămâne nepublicate până la
+  // confirmarea unei date reale.
   for (const [route, value] of hints) hints.set(route, { ...value, updatedAt: undefined });
   const governancePath = path.join(root, "config", "editorial-governance.json");
   if (fs.existsSync(governancePath)) {
@@ -188,12 +203,18 @@ function loadPageHints(root) {
       const current = hints.get(route) || {};
       hints.set(route, {
         ...current,
+        publishedAt: complete && /^\d{4}-\d{2}-\d{2}$/u.test(String(record.datePublished || ""))
+          ? record.datePublished
+          : undefined,
         updatedAt: complete ? record.lastMeaningfulUpdate : undefined,
         governance: complete ? record : undefined,
         citation: complete ? [{
           "@type": "CreativeWork",
           name: `${record.officialSourceName} — ${record.sourceVersion}`,
-          url: record.officialSourceUrl
+          url: record.officialSourceUrl,
+          ...(/^\d{4}-\d{2}-\d{2}$/u.test(String(record.officialSourceUpdatedAt || ""))
+            ? { dateModified: record.officialSourceUpdatedAt }
+            : {})
         }] : []
       });
     }
@@ -214,6 +235,7 @@ module.exports = {
   routeForFile,
   sitemapRoutes,
   typesOf,
+  visibleFaqCandidates,
   visibleFaqItems,
   isHiddenFromUsers
 };

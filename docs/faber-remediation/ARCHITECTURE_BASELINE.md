@@ -366,3 +366,90 @@ Config-urile complementare nu mai atribuie fapte per program:
 - `banners.json`, HTML-ul homepage, headerul global, family hubs, paginile programelor, JSON-LD, ghidurile și `llms.txt` sunt outputs materializate din registry și sunt controlate prin sync/check.
 
 Schema `config/program-registry.schema.json`, validatorul `tools/program-factual-governance.js` și reconcilierea din `tools/validate-program-registry.js` impun unicitatea ID/slug/canonical, taxonomia de status, validitatea relațiilor, paritatea registry–pagină–banner și dovada de sesiune pentru `OPEN`. Programul regional retras din catalog este declarat explicit `indexable=false`; celelalte înregistrări indexabile trebuie să aibă pagină canonical 200 cu același `data-program-id`.
+
+## Audit final Task 12 — Cloudflare, WAF, cache și crawler access
+
+Audit: 24 august 2026. Scope-ul păstrează arhitectura statică, cele două Workers existente, toate URL-urile canonice și politica crawler aprobată în Task 11. Nu au fost create excepții globale pentru boți, nu a fost dezactivată nicio protecție și nu a fost introdus cache pentru formulare sau răspunsuri personalizate.
+
+### Dovedit din repository și runtime
+
+| Suprafață | Dovadă | Verdict |
+|---|---|---|
+| HTTPS, apex/www și formă URL | `wrangler.redirects.jsonc` acoperă apex și www; workerul normalizează HTTP, www, slash final, `.html`, `/index.html` și aliasurile legacy cu 301 direct; probele live confirmă un singur hop. | PASS |
+| Worker static și 404 | `wrangler.jsonc` publică exclusiv `dist`, cu `html_handling: drop-trailing-slash` și `not_found_handling: 404-page`; workerul de domeniu păstrează statusul 404 și aplică `X-Robots-Tag: noindex, follow`. | PASS |
+| Cache public | Workerul de domeniu păstrează `Cache-Control` explicit al originului. Activele cu nume mutabile folosesc 24 h + revalidare; `robots.txt`, sitemap-urile și `llms.txt` folosesc 1 h; HTML-ul static păstrează revalidarea originului. | PASS după deploy Task 12 |
+| Fără cache privat/dinamic | Lipsa unei politici explicite, API-urile, metodele non-GET/HEAD, cererile autorizate, răspunsurile cu `Set-Cookie`, 404 și `release.json` sunt `no-store`. Contractul simulează inclusiv un origin care încearcă să trimită `public` pe un răspuns personalizat. | PASS |
+| Content-Type și compresie | Probe live: HTML `text/html`, CSS `text/css`, robots `text/plain`, sitemap `application/xml`, JSON `application/json`; Cloudflare negociază gzip pentru resursele text verificate. | PASS |
+| Antete de securitate | Workerul aplică HSTS 6 luni fără includeSubDomains/preload, `nosniff`, `Referrer-Policy: strict-origin-when-cross-origin` și `X-Frame-Options: SAMEORIGIN`, inclusiv pe redirecturi și API. CSP nu a fost adăugat fără audit de compatibilitate pentru scripturile inline/analytics. | PASS pentru baseline-ul versionat |
+| Crawl public | Contractele Task 11 păstrează sitemap-ul canonical, 104 URL-uri indexabile, activele crawlable, robots și `llms.txt`; probele sintetice nu au primit challenge pe suprafețele publice verificate. | PASS pentru acces HTTP sintetic |
+| Deploy observabil | Wrangler autentifică contul și poate enumera deploymenturile workerului de domeniu; `/release.json` rămâne dovada exactă deploy–commit pentru workerul static. Versiunile tranzitorii nu sunt desired state în config. | PASS cu dovadă CLI/live |
+
+Defectul găsit de Task 12 era în middleware: după `fetch(request)`, workerul rescria toate răspunsurile cu `Cache-Control: no-store`. Astfel, inclusiv CSS, robots și sitemap aveau live `CF-Cache-Status: HIT` la subrequest, dar browserul primea `no-store`. Remedierea păstrează politica publică explicită a originului și eșuează sigur la `no-store` pentru orice răspuns fără o decizie explicită. Politica veche de un an cu `immutable` a fost redusă deoarece numele activelor nu sunt toate content-addressed.
+
+Contractul `tests/cloudflare-edge-contract.mjs` este inclus în `test:technical-seo` și în dry-run-ul workerului de domeniu. El verifică headerele publice, HTML-ul revalidabil, redirecturile, 404, API-ul, `Set-Cookie`, Authorization, POST, rutele Wrangler și setările statice 404/trailing slash.
+
+### Necesită verificare în dashboard Cloudflare
+
+| Control | Stare | Verificare cerută |
+|---|---|---|
+| WAF Managed Rules și excepții | NEEDS_CONFIRMATION | Confirmă ruleset-urile active și că nu există skip/allow global. Păstrează protecția; pentru fals pozitiv folosește numai o excepție îngustă, bazată pe evenimentul și regula identificate. |
+| Bot Fight Mode/Super Bot Fight Mode | NEEDS_CONFIRMATION | Confirmă acțiunile pentru trafic automat și Verified bots. Nu trata simplul user-agent drept identitate verificată și nu permite toate crawlerele. |
+| Verified bots și crawlere oficiale | NEEDS_CONFIRMATION | Verifică Security Events/Logs cu identitatea Cloudflare (`cf.client.bot`/Verified bot), nu doar probe sintetice. |
+| AI Crawl Control/Managed robots.txt | NEEDS_CONFIRMATION | Confirmă că nu injectează o politică opusă fișierului `robots.txt` versionat și deciziilor Task 11. |
+| Cache Rules/Cache Response Rules | NEEDS_CONFIRMATION | Confirmă că nu suprascriu `no-store` pentru `/api/*`, formulare, răspunsuri cu cookie, 404 sau `release.json`; nu folosi Cache Everything pe aceste suprafețe. |
+| Always Use HTTPS și Redirect Rules | NEEDS_CONFIRMATION | Probe live dovedesc rezultatul într-un hop; dashboardul trebuie verificat pentru reguli duplicate, inactive sau concurente. |
+| Production branch/Git integration | NEEDS_CONFIRMATION | Repo-ul verifică `main` prin workflow și SHA live, dar proiectul/branch control din dashboard nu este versionat. Confirmă `main` ca producție și fără preview branch expus pe domeniul canonical. |
+
+Mecanismul disponibil în acest mediu este: contract repository, Wrangler pentru Workers/routes/deployment și probe live de status/headere. Tokenul OAuth disponibil nu expune configurația WAF/bot/cache dashboard, deci aceste controale nu sunt declarate PASS prin inferență.
+
+## Audit final Task 13 — HTML crawlable, prerender și paritate fără cloaking
+
+Audit: 24 august 2026. Arhitectura rămâne statică/SSG: Node materializează paginile înainte de deploy, `dist/` este publicat de Cloudflare Static Assets, iar workerul de domeniu nu randează conținut editorial și nu selectează conținut după user-agent sau identitatea botului. Nu a fost introdus SSR, un framework nou, dynamic rendering ori o ramură dedicată crawlerelor.
+
+Contractul `tests/prerender-critical-content-contract.mjs` pornește în mod local un server HTTP și compară trei reprezentări pentru fiecare rută: răspunsul `fetch()` fără browser, DOM-ul Chromium cu JavaScript dezactivat și DOM-ul Chromium după rularea JavaScriptului. Modul implicit verifică sursele selectate de `fileForRoute()`, `--dist` verifică exact aliasurile materializate pentru Cloudflare, iar `--live` verifică producția după deploy.
+
+### Scope verificat
+
+| Grup | Rute | Observație |
+|---|---:|---|
+| Homepage | 1 | `/` |
+| Pagini publice de program | 24 | Derivate din registry; sunt excluse numai înregistrările care declară explicit `discovery.redirectTarget`. |
+| Huburi de familie | 5 | Derivate din `program-family-hubs.json`; `/fonduri-regionale` este și pagină de program, deci apare o singură dată în total. |
+| Servicii | 7 | Derivate din `seo-programs.json#pages` cu `type=service`, fără redirecturi. |
+| Instrument, contact și despre | 3 | `/calculator-soc`, `/contact`, `/despre-faber`. |
+| Legal | 3 | `/gdpr`, `/politica-de-confidentialitate`, `/termeni-si-conditii`. |
+| **Total unic** | **42** | Inventarul este derivat și are assertion explicit pentru schimbări viitoare de scope. |
+
+Pentru toate cele 42 de rute, testul cere status HTTP 200 și `text/html`, un singur H1, titlu și rezumat answer-first în HTML, breadcrumb vizibil pe fiecare rută non-homepage, întrebări FAQ vizibile pentru fiecare întrebare FAQPage, precum și paritate exactă pentru surse oficiale, linkuri interne de program și înregistrări de status. Paginile de program mai verifică titlul, eticheta de status, sursa oficială și valorile de finanțare/cofinanțare derivate din registru. Huburile trebuie să includă în HTML toate cardurile, linkurile canonice și sursele familiei. Contact, Despre, Termeni și Privacy trebuie să includă denumirea juridică și CUI-ul aprobate.
+
+Homepage conține în HTML toate cele 23 de slide-uri configurate în registry, în ordinea declarată, cu ID, status, titlu și link canonical. Slide-urile inactive folosesc `aria-hidden`, `inert` și control de focus pentru UX, dar nu sunt create la click și nu depind de hidratare pentru a fi descoperite în răspunsul HTML.
+
+### Diferențe intenționate după rularea JavaScriptului
+
+JavaScript modifică numai stare de interfață: slide activ/inert în carusel, vizibilitatea cardurilor după filtrarea huburilor, controalele de extindere pentru carduri lungi, validarea/submisiunea progresivă a formularului și rezultatul calculat după introducerea datelor în calculatorul SO. Aceste diferențe nu adaugă și nu înlocuiesc H1, răspunsul inițial, breadcrumbul, FAQ-ul factual, sursele oficiale, identitatea de contact, statusurile, valorile-cheie sau linkurile canonice ale programelor.
+
+Auditul a găsit două forme ale aceluiași gol. `/gdpr` nu avea breadcrumb vizibil, deși schema BreadcrumbList exista. În plus, sursele root și directory sunt încă divergente pe câteva rute legacy, iar `dist` folosește sursa declarată de inventarul sitemap; cinci dintre aceste surse de deploy nu aveau breadcrumb, deși fișierul root verificat local îl avea. Sincronizatorul nativ procesează acum atât sursa aleasă de `fileForRoute()`, cât și sursa efectiv materializată în deploy. Au fost sincronizate aliasurile pentru Autoconsum instituții publice, Femeia Antreprenor, Fondul pentru energie regenerabilă, Modernizarea microîntreprinderilor și Start-Up Nation. Serializarea atributului boolean și newline-urile păstrează forma fișierului urmărit, evitând rescrieri fără diferență semantică.
+
+Hubul `/blog` și îmbunătățirea opțională din `official-guides.js` rămân dependențe CSR secundare documentate în baseline și în `T00-028`; ele nu fac parte din scope-ul Task 13. Articolele canonice și sursele/statusurile programelor din scope rămân materializate în HTML. Contractul scanează JavaScriptul public, scripturile inline ale rutelor și workerul de domeniu și interzice ramuri bazate pe `user-agent`, nume de crawleri ori `cf.client.bot` pentru rendering.
+
+## Audit final Task 14 — breadcrumbs vizibile și BreadcrumbList coerent
+
+Audit: 24 august 2026. Ierarhia este derivată din inventarul stabil de 105 rute, registrul celor 24 de programe publice și cele cinci familii aprobate. Nu au fost create rute, redirecturi sau niveluri artificiale. Homepage-ul rămâne fără breadcrumb vizibil și fără `BreadcrumbList`.
+
+Auditul inițial a identificat două divergențe. Rădăcina publică `/resurse` și hubul `/ghiduri` erau inversate față de ierarhia aprobată în content-intent inventory: breadcrumb-ul afișa `Acasă → Ghiduri → Resurse`. În plus, cele patru pagini showcase `/diaspora-investeste-acasa`, `/e-drive`, `/e-mobility` și `/fondul-modernizare-pc1-stocare` păstrau un al doilea `nav.program-breadcrumbs` lângă breadcrumb-ul standard. Registrul unic publică acum `Acasă → Resurse → pagină` pentru ghiduri/articole/întrebări, păstrează huburile `/ghiduri`, `/blog`, `/resurse-utile`, `/intrebari-frecvente` și `/webinarii` sub `/resurse`, iar sincronizatorul elimină orice variantă legacy singulară sau plurală.
+
+### Contractul de ierarhie
+
+| Suprafață | Ierarhie verificată | Scope derivat |
+|---|---|---:|
+| Programe | `Acasă → Programe → Familie → Program` | 24 programe publice |
+| Familii | `Acasă → Programe → Familie` | 5 huburi |
+| Servicii | `Acasă → Servicii → Serviciu` | 17 rute din inventarul de intenție |
+| Ghiduri / articole / întrebări | `Acasă → Resurse → Pagină` | 34 ghiduri + 3 întrebări |
+| Instrumente | `Acasă → Instrumente → Instrument` | calculator SO și calendar |
+| Despre | `Acasă → Despre FABER → Subpagină` | metodologie și studii de caz |
+| Legal / contact | traseu direct din homepage | 3 pagini legale + contact |
+
+Auditul verifică fiecare document JSON-LD ca JSON parseable, exact un `BreadcrumbList`, poziții consecutive și unice, `ListItem`, nume și URL identice cu breadcrumb-ul vizibil, current page fără self-link și cu `aria-current="page"`, linkuri intermediare canonical directe, părinți 200/self-canonical/indexabili, zero surse de redirect și stylesheet-ul comun. Ruta `/gdpr`, exclusă intenționat numai din sitemap, este inclusă prin inventarul public și nu mai rămâne în afara gate-ului.
+
+Rezultatul local este 105/105 rute și 114 surse canonical/deploy conforme. Output-ul Cloudflare verifică separat 105/105 rute și 110 reprezentări HTML fizice. Contractul live rulează aceleași invariante pe URL-urile canonice după publicare.

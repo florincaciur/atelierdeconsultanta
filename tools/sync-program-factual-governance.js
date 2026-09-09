@@ -352,6 +352,7 @@ function syncLlmsText(source, programs) {
     const latest = programs
       .filter((program) => isPublicProgram(program) && !program.discovery?.redirectTarget)
       .reduce((value, program) => program.verifiedAt > value ? program.verifiedAt : value, "0000-00-00");
+  output = output.replace(/^Ultima actualizare:\s*\d{4}-\d{2}-\d{2}\s*$/mu, `Ultima actualizare: ${latest}`);
   const block = `${markerStart}\n## Guvernanță factuală a programelor\n\n- Sursa unică de adevăr: ${REGISTRY_REF}.\n- Statusurile și valorile nu sunt deduse din URL-uri sau din texte editoriale locale.\n- Înregistrările pending_validation sunt excluse din suprafețele publice.\n- Ultima verificare din registrul public: ${latest}\n\n${entries}\n${markerEnd}`;
   return `${output}\n\n${block}\n`;
 }
@@ -400,6 +401,9 @@ function syncProgramHtml(source, program) {
   let output = source;
   const eol = source.includes("\r\n") ? "\r\n" : "\n";
   const templateMode = /data-program-template-version=(?:"[^"]+"|'[^']+')/i.test(source);
+  if (!templateMode) {
+    output = output.replace(/<!-- ANSWER_READINESS_START -->[\s\S]*?<!-- ANSWER_READINESS_END -->\s*/gi, "");
+  }
   output = output.replace(/<title>[^<]*<\/title>/i, `<title>${escapeHtml(program.metaTitle)}</title>`);
   output = replaceMeta(output, /<meta\b[^>]*\bname=["']description["'][^>]*>/i, program.metaDescription);
   output = replaceMeta(output, /<meta\b[^>]*\bproperty=["']og:title["'][^>]*>/i, program.metaTitle);
@@ -437,7 +441,8 @@ function syncProgramHtml(source, program) {
     output = output.replace(/<main\b[^>]*\bprogram-validation-hold\b[^>]*>[\s\S]*?<\/main>/i, restoredPublicMain(program).replace(/\r?\n/g, eol));
   }
   const archivedRobots = archivedRobotsDecision(program);
-  output = replaceMeta(output, /<meta\b[^>]*\bname=["']robots["'][^>]*>/i, archivedRobots || "index, follow");
+  const robots = program.indexable === false ? "noindex, follow" : (archivedRobots || "index, follow");
+  output = replaceMeta(output, /<meta\b[^>]*\bname=["']robots["'][^>]*>/i, robots);
   if (!/<script\b[^>]*type=["']application\/ld\+json["']/i.test(output) && /<\/head>/i.test(output)) {
     output = output.replace(/<\/head>/i, '  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[]}</script>\n</head>');
   }
@@ -447,6 +452,17 @@ function syncProgramHtml(source, program) {
   const factualMode = templateMode ? "template-header" : "default";
   const block = renderProgramFactualStatus(program, { mode: factualMode }).replace(/\r?\n/g, eol);
   const marked = /<!-- PROGRAM_FACTUAL_STATUS_START -->[\s\S]*?<!-- PROGRAM_FACTUAL_STATUS_END -->/;
+  const showcaseMode = /<body\b[^>]*class=["'][^"']*\bprogram-showcase-page\b/i.test(output);
+  if (showcaseMode) {
+    // Paginile editoriale 2026 conțin articole în cardurile de filtrare. Inserarea
+    // generică în primul <article> muta rezumatul factual în primul card și îl
+    // îngusta la jumătate de coloană. Îl păstrăm ca secțiune autonomă, imediat
+    // după răspunsul editorial, indiferent de poziția unei versiuni deja marcate.
+    output = output.replace(marked, "");
+    const answerSection = /(<section\b[^>]*\bprogram-section--answer\b[^>]*>[\s\S]*?<\/section>)/i;
+    if (answerSection.test(output)) return output.replace(answerSection, `$1${eol}${block}`);
+    if (/<main\b[^>]*>/i.test(output)) return output.replace(/<main\b[^>]*>/i, (tag) => `${tag}${eol}${block}`);
+  }
   if (marked.test(output)) return output.replace(marked, block);
   if (/<article\b[^>]*>/i.test(output)) return output.replace(/<article\b[^>]*>/i, (tag) => `${tag}${eol}${block}`);
   if (/<main\b[^>]*>/i.test(output)) return output.replace(/<main\b[^>]*>/i, (tag) => `${tag}${eol}${block}`);

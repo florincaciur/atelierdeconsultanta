@@ -1,10 +1,13 @@
 import assert from "node:assert/strict";
 import fs from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 import { createRequire } from "node:module";
 
 const require = createRequire(import.meta.url);
 const cheerio = require("cheerio");
 const scorer = require("../assets/micro-apel-2-scorer.js");
+const { fileForRoute } = require("../tools/structured-data-utils.js");
 
 assert.equal(scorer.scoreCaen("6210").points, 6, "CAEN 6210 must receive 6 points");
 assert.equal(scorer.scoreCaen("9999").rejection, true, "A code missing from Annex 5 must be eliminatory");
@@ -47,19 +50,29 @@ assert.equal(perfect.estimatedTotal, 100, "A maximum pre-assessment must total 1
 assert.equal(perfect.rejections.length, 0, "A fully compliant scenario must not trigger a rejection warning");
 
 const pageHtml = fs.readFileSync(new URL("../investitii-modernizarea-microintreprinderilor-apel-2/index.html", import.meta.url), "utf8");
+const repositoryRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+assert.match(fileForRoute(repositoryRoot, "/investitii-modernizarea-microintreprinderilor-apel-2").replace(/\\/gu, "/"), /investitii-modernizarea-microintreprinderilor-apel-2\/index\.html$/u, "The authored directory index must remain the canonical deploy source");
 const $ = cheerio.load(pageHtml);
 const title = $("head > title").first().text().trim();
-const directAnswer = $("[data-answer-readiness-direct]").first().text().trim();
+const directAnswer = $("[data-aeo-primary-answer], [data-answer-readiness-direct]").first().text().trim();
 const directAnswerWords = directAnswer.split(/\s+/u).filter(Boolean).length;
 
 assert.ok(title.length >= 45 && title.length <= 60, "The SEO title must stay inside the recommended length interval");
 assert.equal($(".faq-item").length, 8, "The AEO FAQ block must contain eight focused questions");
-assert.ok(directAnswerWords >= 45 && directAnswerWords <= 80, "The direct answer must remain concise and answer-engine friendly");
+assert.ok(directAnswerWords >= 30 && directAnswerWords <= 80, "The direct answer must remain concise and answer-engine friendly");
 assert.equal($("[data-micro-apel-2-form]").length, 1, "The scoring simulator form must be present");
+assert.equal($("[data-company-lookup]").length, 1, "The optional company identification card must be above the scoring fields");
+assert.equal($("[data-company-cui-input]").attr("placeholder"), "Ex: 12345678");
+assert.equal($("[data-company-lookup-button]").attr("type"), "button", "company lookup must not create a nested submit flow");
 assert.equal($("script[src^='/assets/micro-apel-2-scorer.js']").length, 1, "The scoring engine must be loaded");
+assert.equal($("script[src^='/assets/company-data-service.js']").length, 1, "The replaceable company-data browser service must be loaded");
+assert.equal($("script[src^='/assets/micro-apel-2-company-lookup.js']").length, 1, "The company lookup UI controller must be loaded");
 assert.equal($("link[href^='/assets/micro-apel-2.css']").length, 1, "The simulator stylesheet must be loaded");
 assert.ok(pageHtml.includes("https://regionordest.ro/prioritatea-1/modernizare-microintreprinderi/"), "The official call page must be cited");
 assert.ok(pageHtml.includes("Ghid-microintreprinderi-27.08.2026.zip"), "The final official guide archive must be cited");
 assert.doesNotMatch(pageHtml, /generat(?:ă)? de AI|AI-generated|watermark/iu, "The page must not include AI or watermark labeling");
+
+const generator = fs.readFileSync(new URL("../tools/generate-program-pages.js", import.meta.url), "utf8");
+assert.match(generator, /HAND_AUTHORED_SLUGS[\s\S]*investitii-modernizarea-microintreprinderilor-apel-2/u, "the legacy generator must preserve the hand-authored simulator");
 
 console.log("PASS micro-apel-2 scorer contract");

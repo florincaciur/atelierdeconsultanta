@@ -4,6 +4,7 @@
 const cp = require("child_process");
 const fs = require("fs");
 const path = require("path");
+const cheerio = require("cheerio");
 const { readSitemapEntries, readSitemapEntriesFromReader } = require("./sitemap-utils");
 
 const ROOT = path.resolve(__dirname, "..");
@@ -146,6 +147,42 @@ function canonicalFromHtml(html) {
   return null;
 }
 
+function normalizeText(value) {
+  return String(value || "").replace(/\s+/gu, " ").trim();
+}
+
+/**
+ * Select only signals that can change a search result or the answer a person
+ * receives. Global navigation, analytics attributes, styles and decorative
+ * SVG updates must not cause the whole site to be resubmitted to IndexNow.
+ */
+function meaningfulHtmlSnapshot(html) {
+  const $ = cheerio.load(String(html || ""), { decodeEntities: false });
+  const main = $("main").first();
+  const root = main.length ? main.clone() : $("body").first().clone();
+  root.find("script, style, noscript, svg, nav, footer").remove();
+
+  const links = root.find("a[href]").map((_, element) => {
+    const link = $(element);
+    return `${normalizeText(link.text())}|${normalizeText(link.attr("href"))}`;
+  }).get();
+  const imageAlternatives = root.find("img[alt]").map((_, element) => normalizeText($(element).attr("alt"))).get();
+
+  return JSON.stringify({
+    title: normalizeText($("title").first().text()),
+    description: normalizeText($("meta[name='description']").first().attr("content")),
+    robots: normalizeText($("meta[name='robots']").first().attr("content")),
+    canonical: canonicalFromHtml(html),
+    text: normalizeText(root.text()),
+    links,
+    imageAlternatives,
+  });
+}
+
+function hasMeaningfulHtmlChange(beforeHtml, afterHtml) {
+  return meaningfulHtmlSnapshot(beforeHtml) !== meaningfulHtmlSnapshot(afterHtml);
+}
+
 function gitText(args) {
   try {
     return cp.execFileSync("git", args, {
@@ -180,14 +217,20 @@ function changedCanonicalUrls(ref) {
   const urls = new Set(changedSitemapUrls(ref));
 
   for (const change of htmlChanges(ref)) {
-    if (!change.status.startsWith("D") && change.after && fs.existsSync(path.join(ROOT, change.after))) {
-      const canonical = canonicalFromHtml(fs.readFileSync(path.join(ROOT, change.after), "utf8"));
-      if (canonical && current.has(canonical)) urls.add(canonical);
-    }
-    if (!change.status.startsWith("A") && change.before) {
-      const canonical = canonicalFromHtml(htmlAtRef(ref, change.before));
-      if (canonical && previous.has(canonical)) urls.add(canonical);
-    }
+    const afterHtml = !change.status.startsWith("D") && change.after && fs.existsSync(path.join(ROOT, change.after))
+      ? fs.readFileSync(path.join(ROOT, change.after), "utf8")
+      : null;
+    const beforeHtml = !change.status.startsWith("A") && change.before
+      ? htmlAtRef(ref, change.before)
+      : null;
+    const afterCanonical = afterHtml ? canonicalFromHtml(afterHtml) : null;
+    const beforeCanonical = beforeHtml ? canonicalFromHtml(beforeHtml) : null;
+    const canonicalChanged = afterCanonical !== beforeCanonical;
+    const contentChanged = beforeHtml === null || afterHtml === null || hasMeaningfulHtmlChange(beforeHtml, afterHtml);
+
+    if (!canonicalChanged && !contentChanged) continue;
+    if (afterCanonical && current.has(afterCanonical)) urls.add(afterCanonical);
+    if (beforeCanonical && previous.has(beforeCanonical)) urls.add(beforeCanonical);
   }
   return [...urls];
 }
@@ -301,7 +344,17 @@ async function main() {
   console.log(`URL-uri trimise: ${submitted}`);
 }
 
-main().catch((error) => {
-  console.error(error.message || error);
-  process.exit(1);
-});
+if (require.main === module) {
+  main().catch((error) => {
+    console.error(error.message || error);
+    process.exit(1);
+  });
+}
+
+module.exports = {
+  canonicalFromHtml,
+  changedCanonicalUrls,
+  hasMeaningfulHtmlChange,
+  meaningfulHtmlSnapshot,
+  normalizeUrl,
+};

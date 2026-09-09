@@ -7,6 +7,7 @@ const ROOT = path.resolve(import.meta.dirname, "..");
 const config = JSON.parse(fs.readFileSync(path.join(ROOT, "config", "dr12-vs-dr14-expert.json"), "utf8"));
 const registry = JSON.parse(fs.readFileSync(path.join(ROOT, "config", "seo-programs.json"), "utf8")).programs;
 const governance = JSON.parse(fs.readFileSync(path.join(ROOT, "config", "editorial-governance.json"), "utf8")).records;
+const publisher = JSON.parse(fs.readFileSync(path.join(ROOT, "config", "legal-identity.json"), "utf8")).fields.brandName.approvedValue;
 const html = fs.readFileSync(path.join(ROOT, config.file), "utf8");
 const $ = cheerio.load(html, { decodeEntities: false });
 
@@ -21,6 +22,18 @@ function jsonLdNodes() {
 
 function hasType(node, type) {
   return (Array.isArray(node?.["@type"]) ? node["@type"] : [node?.["@type"]]).includes(type);
+}
+
+function indexJsonLdNodes(values) {
+  const byId = new Map();
+  const visit = (value) => {
+    if (Array.isArray(value)) return value.forEach(visit);
+    if (!value || typeof value !== "object") return;
+    if (value["@id"]) byId.set(value["@id"], value);
+    Object.values(value).forEach(visit);
+  };
+  visit(values);
+  return byId;
 }
 
 assert.equal($("link[rel='canonical']").attr("href"), "https://atelierdeconsultanta.ro/dr12-vs-dr14");
@@ -56,11 +69,11 @@ rows.each((_, row) => {
 });
 
 const pageText = $(".post-container").text().replace(/\s+/gu, " ");
-for (const forbidden of ["200.000", "80%", "65%"]) {
-  assert(!pageText.includes(forbidden), `valoare consultativă publicată fără reconfirmare: ${forbidden}`);
+for (const value of ["200.000", "80%", "65%"]) {
+  assert(pageText.includes(value), `Lipsește valoarea consultativă documentată: ${value}`);
 }
 assert(!html.includes("DE_VALIDAT_UMAN"), "tokenul intern nu poate ajunge în pagina publică");
-assert.match($("[data-comparison-row='Sprijin']").text(), /Nu publicăm/iu);
+assert.match($("[data-comparison-row='Sprijin']").text(), /Ghid consultativ/iu);
 assert.match($("[data-comparison-row='Calendar']").text(), /Apel nedeschis/iu);
 
 const scenarios = $("[data-hypothetical='true']");
@@ -88,8 +101,9 @@ for (const programConfig of config.programs) {
   assert.equal(program.verifiedAt, programConfig.verifiedAt);
   assert.equal(program.sourceUrl, programConfig.sourceUrl);
   if (programConfig.status === "consultare_publica") {
-    assert.equal(program.grantSummary, null);
-    assert.equal(program.cofinancingSummary, null);
+    assert.equal(program.fundingBasis, "consultative");
+    assert.match(program.grantSummary.maximum.unit, /consultativ/);
+    assert(program.cofinancingSummary.intensity.every(item => /consultativ/.test(item.scope)));
   } else {
     assert.equal(program.grantSummary.maximum.amount, 50000);
     assert(program.cofinancingSummary.intensity.some((item) => item.rate === 85));
@@ -105,9 +119,13 @@ assert.equal(governanceRecord.governanceState, "public");
 assert.equal(governanceRecord.lastMeaningfulUpdate, config.reviewedAt);
 assert.equal(governanceRecord.personalNameConsent, false);
 const governanceSection = $(".editorial-governance[data-editorial-record='dr12-vs-dr14']");
-assert.equal(governanceSection.length, 1, "autorul, reviewerul și changelog-ul trebuie să fie vizibile");
-assert(governanceSection.text().includes(governanceRecord.author));
-assert(governanceSection.text().includes(governanceRecord.reviewer));
+assert.equal(governanceSection.length, 1, "proveniența și changelog-ul trebuie să fie vizibile");
+assert(governanceSection.text().includes(publisher));
+assert(governanceSection.text().includes(governanceRecord.verifiedAt));
+assert(governanceSection.text().includes(governanceRecord.lastMeaningfulUpdate));
+assert(!governanceSection.text().includes(governanceRecord.reviewer));
+assert(!governanceSection.text().includes("Autor:"));
+assert(!governanceSection.text().includes("Reviewer:"));
 assert.equal(governanceSection.find(".editorial-governance__changelog").length, 1);
 
 assert.equal($("[data-long-form-toc]").length, 1, "pagina trebuie să aibă un singur cuprins dropdown");
@@ -119,7 +137,15 @@ const article = nodes.find((node) => hasType(node, "Article"));
 assert(article, "analiza reală trebuie descrisă ca Article");
 assert.equal(article.headline, config.h1);
 assert.equal(article.dateModified, config.reviewedAt);
-assert(Array.isArray(article.citation) && article.citation.some((citation) => citation.url === governanceRecord.officialSourceUrl), "Article trebuie să citeze sursa oficială din guvernanță");
+const nodeById = indexJsonLdNodes(nodes);
+const articleCitations = Array.isArray(article.citation) ? article.citation : [];
+assert(
+  articleCitations.some((citation) => {
+    const resolved = citation?.["@id"] ? nodeById.get(citation["@id"]) : citation;
+    return resolved?.url === governanceRecord.officialSourceUrl;
+  }),
+  "Article trebuie să citeze sursa oficială din guvernanță"
+);
 assert.equal(nodes.filter((node) => hasType(node, "FAQPage")).length, 0, "FAQPage nu trebuie generat automat pentru blocurile AEO");
 
 assert.equal($("link[href^='/assets/dr12-vs-dr14-expert.css']").length, 1);

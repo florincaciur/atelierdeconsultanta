@@ -103,6 +103,7 @@ function renderHubHeroSummary(page) {
 function renderHubDesignCards(page) {
   const [badge, , cards] = designProfileFor(page);
   return `<section class="design-card-grid design-card-grid--${esc(designFamilyFor(page))}" aria-label="${esc(badge)}">
+        <h2 class="design-card-grid__title">Repere pentru verificare</h2>
         ${cards.map((label, index) => `<article class="mini-card design-card"><span class="design-card__badge">${esc(label)}</span><h3>${esc(label)}</h3><p>${esc((page.checks || page.steps || page.audience || [page.summary])[index] || page.summary)}</p></article>`).join("\n        ")}
       </section>`;
 }
@@ -566,7 +567,7 @@ function schema(page, faq, metadata = metadataForPage(page)) {
       dateModified: EDITORIAL_UPDATED_AT
     }),
     breadcrumbSchema(breadcrumbItemsForPage(page)),
-    faqPageSchema(faq.map((item) => ({ question: item.q, answer: item.a })), { minItems: 2 })
+    faqPageSchema(faq.map((item) => ({ question: item.q, answer: item.a })), { minItems: 2, url: metadata.canonicalUrl })
   ]);
 }
 
@@ -644,7 +645,7 @@ ${ANALYTICS_EVENTS_SCRIPT}
       </div>
     </section>
   </main>
-  <footer class="footer">© 2026 FABER - Atelier de Consultanță · <a href="${cleanHref("/fonduri-europene")}">Fonduri europene</a> · <a href="${cleanHref("/contact")}">Contact</a></footer>
+  <footer class="footer">© 2026 FABER – Atelier de Consultanță · <a href="${cleanHref("/fonduri-europene")}">Fonduri europene</a> · <a href="${cleanHref("/contact")}">Contact</a></footer>
 </body>
 </html>
 `;

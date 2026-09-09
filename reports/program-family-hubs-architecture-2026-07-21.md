@@ -1,6 +1,8 @@
 # P1.03 — Arhitectura hub-urilor Programe
 
-Data deciziei: 2026-07-21
+Data deciziei inițiale: 2026-07-21
+
+Revizie catalog și relații family: 2026-08-24
 
 Sursa de configurare: `config/program-family-hubs.json`
 Sursa programelor: `config/seo-programs.json`
@@ -8,6 +10,8 @@ Sursa programelor: `config/seo-programs.json`
 ## Decizia de URL
 
 Convenția este **păstrarea rutelor canonice existente**. Familia este o proprietate controlată din registru, nu un segment nou impus în URL. Nu se creează rute și nu se implementează redirecturi în P1.03. O schimbare viitoare de rută rămâne blocată până la o mapare source → target și aprobare SEO bazată inclusiv pe date GSC și backlink-uri.
+
+Ruta canonică `/fonduri-europene` este catalogul public. Echivalentul repo pentru `catalogEnabled=true` este `discovery.listed=true`; selecția unică `catalogPrograms()` produce în prezent **23** intrări publice, fără redirect targets. Reuniunea cardurilor celor cinci familii trebuie să fie identică acestei selecții.
 
 | Familie | Rută canonică păstrată | Decizie | Redirect | Motiv |
 |---|---|---|---|---|

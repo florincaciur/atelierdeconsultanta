@@ -22,11 +22,16 @@ const LEGAL_SURFACES = new Set([
   "despre-faber/index.html",
   "contact.html",
   "contact/index.html",
+  "gdpr.html",
   "politica-de-confidentialitate.html",
   "politica-de-confidentialitate/index.html",
   "termeni-si-conditii.html",
   "termeni-si-conditii/index.html"
 ]);
+
+function normalizedLineEndings(text) {
+  return text.replace(/\r\n/gu, "\n");
+}
 
 function synchronize(html, footerContact, legalIdentityPanel = "", aboutLegalIdentityPanel = "") {
   let output = html.replace(BLOCK, "").replace(LEGAL_BLOCK, "");
@@ -68,7 +73,7 @@ function main() {
       LEGAL_SURFACES.has(relativePath) ? selectedLegalPanel : "",
       selectedLegalPanel
     );
-    if (before === after) continue;
+    if (normalizedLineEndings(before) === normalizedLineEndings(after)) continue;
     changed.push(relativePath);
     if (!CHECK) fs.writeFileSync(file, after, "utf8");
   }

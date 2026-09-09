@@ -7,6 +7,9 @@ const cheerio = require("cheerio");
 const {
   ROOT,
   cofinancingSummaryText,
+  contributionAnswerText,
+  formatDateRo: formatRegistryDateRo,
+  grantAnswerText,
   grantSummaryText,
   isPublicProgram,
   loadProgramConfig,
@@ -17,6 +20,7 @@ const { loadEditorialGovernance } = require("./editorial-governance");
 const { PROGRAM_TEMPLATE_SLOT, syncPageHtml: syncEditorialGovernance } = require("./sync-editorial-governance");
 const { synchronizedHtml: syncBreadcrumbs } = require("./sync-breadcrumbs");
 const { synchronize: syncProgramVisual } = require("./sync-program-visuals");
+const { synchronizeFaqHtml } = require("./faq-governance");
 
 const CONFIG_PATH = path.join(ROOT, "config", "program-page-template.json");
 const GUIDES_PATH = path.join(ROOT, "official-guides.json");
@@ -92,16 +96,17 @@ function sourceCell(key, guides) {
 
 function renderGlance(page, program, guides) {
   const sourceKey = page.sourceKeys[0];
-  const grant = grantSummaryText(program) || "Nicio valoare numerică publicată în registru";
-  const contribution = cofinancingSummaryText(program) || "Conform documentului oficial aplicabil";
+  const grant = grantAnswerText(program);
+  const contribution = contributionAnswerText(program);
   const calendar = program.applicationStart || program.applicationEnd
     ? `${formatDateRo(program.applicationStart)} – ${formatDateRo(program.applicationEnd)}`
     : program.statusLabel;
   const rows = [
-    ["Beneficiar", page.beneficiarySummary, "beneficiary"],
+    ["Beneficiar", page.beneficiarySummary, "applicant"],
     ["Sprijin", grant, "grantSummary"],
     ["Contribuție proprie", contribution, "cofinancingSummary"],
-    ["Calendar", calendar, "applicationWindow"],
+    ["Calendar", calendar, "deadline"],
+    ["Verificat la", formatRegistryDateRo(program.verifiedAt), "verifiedAt"],
     ["Document-cheie", page.keyDocumentLabel, "sourceVersion"]
   ];
   return `<section class="program-template__section program-template__glance" aria-labelledby="program-glance-title" data-program-template-section="glance">
@@ -109,7 +114,7 @@ function renderGlance(page, program, guides) {
     <div class="long-form-table-region program-template__table-region" role="region" tabindex="0" aria-label="La o privire: ${escapeHtml(program.shortName)}">
       <table class="program-template__table">
         <tbody>
-          ${rows.map(([label, value, field]) => `<tr data-registry-field="${escapeHtml(field)}"${field === "grantSummary" ? " data-program-funding" : ""}><th scope="row">${escapeHtml(label)}</th><td>${escapeHtml(value)} ${sourceCell(sourceKey, guides)}</td></tr>`).join("\n")}
+          ${rows.map(([label, value, field]) => `<tr data-registry-field="${escapeHtml(field)}" data-answer-field="${escapeHtml(field)}"${field === "grantSummary" ? " data-program-grant" : field === "cofinancingSummary" ? " data-program-contribution" : ""}><th scope="row">${escapeHtml(label)}</th><td>${field === "verifiedAt" ? `<time datetime="${escapeHtml(program.verifiedAt)}">${escapeHtml(value)}</time>` : escapeHtml(value)} ${sourceCell(sourceKey, guides)}</td></tr>`).join("\n")}
         </tbody>
       </table>
     </div>
@@ -288,10 +293,12 @@ function renderArticle(page, program, guides, wordCount) {
   const hasToc = wordCount > 1500;
   return `<!-- PROGRAM_PAGE_TEMPLATE_START -->
   <!-- ANSWER_READINESS_START -->
-  <p class="program-template__direct-answer" data-answer-readiness-direct data-information-status="${escapeHtml(statusStatement(program))}">${escapeHtml(page.directAnswer)}</p>
+  <div class="program-template__answer-first" data-aeo-program-summary>
+  <p class="program-template__direct-answer" data-aeo-primary-answer data-aeo-direct-answer data-answer-readiness-direct data-answer-field="status" data-information-status="${escapeHtml(statusStatement(program))}">${escapeHtml(page.directAnswer)}</p>
   ${renderGlance(page, program, guides)}
+  </div>
   <!-- ANSWER_READINESS_END -->
-  ${hasToc ? renderToc() : ""}
+${hasToc ? renderToc() : ""}
   <aside class="program-template__disclaimer" aria-label="Limită editorială"><strong>Important:</strong> ${escapeHtml(program.editorialDisclaimer)}</aside>
   ${renderEligibility(page.eligibility, guides)}
   ${renderFunding(page.funding, guides)}
@@ -344,6 +351,7 @@ function cleanLegacyInjection(source) {
 }
 
 function synchronizePage(source, page, program, guides, record) {
+  const newline = source.includes("\r\n") ? "\r\n" : "\n";
   const clean = cleanLegacyInjection(source);
   const globalHeader = clean.match(/<!-- GLOBAL_HEADER_START -->[\s\S]*?<!-- GLOBAL_HEADER_END -->/i)?.[0] || "";
   const wordCount = countWords(editorialText(page));
@@ -375,6 +383,8 @@ function synchronizePage(source, page, program, guides, record) {
   output = syncBreadcrumbs(output, normalizeRoute(page.route));
   output = syncEditorialGovernance(output, record);
   output = syncProgramVisual(output, normalizeRoute(page.route));
+  output = synchronizeFaqHtml(output).html;
+  output = output.replace(/\r?\n/gu, newline);
   return { html: output, wordCount, hasToc: wordCount > 1500 };
 }
 

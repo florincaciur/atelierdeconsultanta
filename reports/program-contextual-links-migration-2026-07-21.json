@@ -21,11 +21,19 @@
       "programId": "fonduri-regionale",
       "route": "/fonduri-regionale",
       "file": "fonduri-regionale/index.html",
-      "eligible": false,
+      "eligible": true,
       "excludedByEditorialDecision": false,
       "removedManagedBlocks": 0,
       "removedManagedLinks": 0,
-      "resultingRelations": []
+      "resultingRelations": [
+        "parent",
+        "related",
+        "related",
+        "service",
+        "instrument",
+        "guide",
+        "conversion"
+      ]
     },
     {
       "programId": "dr12-afir",
@@ -37,8 +45,12 @@
       "removedManagedLinks": 0,
       "resultingRelations": [
         "parent",
+        "related",
+        "related",
+        "related",
+        "service",
         "instrument",
-        "comparison",
+        "guide",
         "conversion"
       ]
     },
@@ -52,8 +64,12 @@
       "removedManagedLinks": 0,
       "resultingRelations": [
         "parent",
+        "related",
+        "related",
+        "related",
+        "service",
         "instrument",
-        "comparison",
+        "guide",
         "conversion"
       ]
     },
@@ -67,8 +83,12 @@
       "removedManagedLinks": 0,
       "resultingRelations": [
         "parent",
+        "related",
+        "related",
+        "related",
+        "service",
         "instrument",
-        "comparison",
+        "guide",
         "conversion"
       ]
     },
@@ -82,8 +102,12 @@
       "removedManagedLinks": 0,
       "resultingRelations": [
         "parent",
+        "related",
+        "related",
+        "related",
+        "service",
         "instrument",
-        "comparison",
+        "guide",
         "conversion"
       ]
     },
@@ -97,8 +121,12 @@
       "removedManagedLinks": 0,
       "resultingRelations": [
         "parent",
+        "related",
+        "related",
+        "related",
+        "service",
         "instrument",
-        "comparison",
+        "guide",
         "conversion"
       ]
     },
@@ -112,8 +140,13 @@
       "removedManagedLinks": 0,
       "resultingRelations": [
         "parent",
+        "related",
+        "related",
+        "related",
+        "related",
+        "service",
         "instrument",
-        "comparison",
+        "guide",
         "conversion"
       ]
     },
@@ -127,8 +160,13 @@
       "removedManagedLinks": 0,
       "resultingRelations": [
         "parent",
+        "related",
+        "related",
+        "related",
+        "related",
+        "service",
         "instrument",
-        "comparison",
+        "guide",
         "conversion"
       ]
     },
@@ -142,8 +180,13 @@
       "removedManagedLinks": 0,
       "resultingRelations": [
         "parent",
+        "related",
+        "related",
+        "related",
+        "related",
+        "service",
         "instrument",
-        "comparison",
+        "guide",
         "conversion"
       ]
     },
@@ -157,8 +200,13 @@
       "removedManagedLinks": 0,
       "resultingRelations": [
         "parent",
+        "related",
+        "related",
+        "related",
+        "related",
+        "service",
         "instrument",
-        "comparison",
+        "guide",
         "conversion"
       ]
     },
@@ -172,8 +220,11 @@
       "removedManagedLinks": 0,
       "resultingRelations": [
         "parent",
+        "related",
+        "related",
+        "service",
         "instrument",
-        "comparison",
+        "guide",
         "conversion"
       ]
     },
@@ -187,8 +238,11 @@
       "removedManagedLinks": 0,
       "resultingRelations": [
         "parent",
+        "related",
+        "related",
+        "service",
         "instrument",
-        "comparison",
+        "guide",
         "conversion"
       ]
     },
@@ -202,8 +256,10 @@
       "removedManagedLinks": 0,
       "resultingRelations": [
         "parent",
+        "related",
+        "service",
         "instrument",
-        "comparison",
+        "guide",
         "conversion"
       ]
     },
@@ -217,8 +273,10 @@
       "removedManagedLinks": 0,
       "resultingRelations": [
         "parent",
+        "related",
+        "service",
         "instrument",
-        "comparison",
+        "guide",
         "conversion"
       ]
     },
@@ -232,8 +290,13 @@
       "removedManagedLinks": 0,
       "resultingRelations": [
         "parent",
+        "related",
+        "related",
+        "related",
+        "related",
+        "service",
         "instrument",
-        "comparison",
+        "guide",
         "conversion"
       ]
     },
@@ -247,8 +310,13 @@
       "removedManagedLinks": 0,
       "resultingRelations": [
         "parent",
+        "related",
+        "related",
+        "related",
+        "related",
+        "service",
         "instrument",
-        "comparison",
+        "guide",
         "conversion"
       ]
     },
@@ -262,8 +330,13 @@
       "removedManagedLinks": 0,
       "resultingRelations": [
         "parent",
+        "related",
+        "related",
+        "related",
+        "related",
+        "service",
         "instrument",
-        "comparison",
+        "guide",
         "conversion"
       ]
     },
@@ -277,8 +350,13 @@
       "removedManagedLinks": 0,
       "resultingRelations": [
         "parent",
+        "related",
+        "related",
+        "related",
+        "related",
+        "service",
         "instrument",
-        "comparison",
+        "guide",
         "conversion"
       ]
     },
@@ -292,8 +370,12 @@
       "removedManagedLinks": 0,
       "resultingRelations": [
         "parent",
+        "related",
+        "related",
+        "related",
+        "service",
         "instrument",
-        "comparison",
+        "guide",
         "conversion"
       ]
     },
@@ -307,8 +389,12 @@
       "removedManagedLinks": 0,
       "resultingRelations": [
         "parent",
+        "related",
+        "related",
+        "related",
+        "service",
         "instrument",
-        "comparison",
+        "guide",
         "conversion"
       ]
     },
@@ -322,8 +408,13 @@
       "removedManagedLinks": 0,
       "resultingRelations": [
         "parent",
+        "related",
+        "related",
+        "related",
+        "related",
+        "service",
         "instrument",
-        "comparison",
+        "guide",
         "conversion"
       ]
     },
@@ -337,8 +428,13 @@
       "removedManagedLinks": 0,
       "resultingRelations": [
         "parent",
+        "related",
+        "related",
+        "related",
+        "related",
+        "service",
         "instrument",
-        "comparison",
+        "guide",
         "conversion"
       ]
     },
@@ -352,8 +448,13 @@
       "removedManagedLinks": 0,
       "resultingRelations": [
         "parent",
+        "related",
+        "related",
+        "related",
+        "related",
+        "service",
         "instrument",
-        "comparison",
+        "guide",
         "conversion"
       ]
     },
@@ -367,8 +468,13 @@
       "removedManagedLinks": 0,
       "resultingRelations": [
         "parent",
+        "related",
+        "related",
+        "related",
+        "related",
+        "service",
         "instrument",
-        "comparison",
+        "guide",
         "conversion"
       ]
     },
@@ -382,8 +488,13 @@
       "removedManagedLinks": 0,
       "resultingRelations": [
         "parent",
+        "related",
+        "related",
+        "related",
+        "related",
+        "service",
         "instrument",
-        "comparison",
+        "guide",
         "conversion"
       ]
     },
@@ -397,8 +508,13 @@
       "removedManagedLinks": 0,
       "resultingRelations": [
         "parent",
+        "related",
+        "related",
+        "related",
+        "related",
+        "service",
         "instrument",
-        "comparison",
+        "guide",
         "conversion"
       ]
     },
@@ -412,8 +528,11 @@
       "removedManagedLinks": 0,
       "resultingRelations": [
         "parent",
+        "related",
+        "related",
+        "service",
         "instrument",
-        "comparison",
+        "guide",
         "conversion"
       ]
     },
@@ -427,8 +546,11 @@
       "removedManagedLinks": 0,
       "resultingRelations": [
         "parent",
+        "related",
+        "related",
+        "service",
         "instrument",
-        "comparison",
+        "guide",
         "conversion"
       ]
     },
@@ -442,8 +564,11 @@
       "removedManagedLinks": 0,
       "resultingRelations": [
         "parent",
+        "related",
+        "related",
+        "service",
         "instrument",
-        "comparison",
+        "guide",
         "conversion"
       ]
     },
@@ -457,8 +582,13 @@
       "removedManagedLinks": 0,
       "resultingRelations": [
         "parent",
+        "related",
+        "related",
+        "related",
+        "related",
+        "service",
         "instrument",
-        "comparison",
+        "guide",
         "conversion"
       ]
     },
@@ -472,8 +602,13 @@
       "removedManagedLinks": 0,
       "resultingRelations": [
         "parent",
+        "related",
+        "related",
+        "related",
+        "related",
+        "service",
         "instrument",
-        "comparison",
+        "guide",
         "conversion"
       ]
     },
@@ -487,8 +622,13 @@
       "removedManagedLinks": 0,
       "resultingRelations": [
         "parent",
+        "related",
+        "related",
+        "related",
+        "related",
+        "service",
         "instrument",
-        "comparison",
+        "guide",
         "conversion"
       ]
     },
@@ -502,8 +642,13 @@
       "removedManagedLinks": 0,
       "resultingRelations": [
         "parent",
+        "related",
+        "related",
+        "related",
+        "related",
+        "service",
         "instrument",
-        "comparison",
+        "guide",
         "conversion"
       ]
     },
@@ -517,8 +662,10 @@
       "removedManagedLinks": 0,
       "resultingRelations": [
         "parent",
+        "related",
+        "service",
         "instrument",
-        "comparison",
+        "guide",
         "conversion"
       ]
     },
@@ -532,8 +679,13 @@
       "removedManagedLinks": 0,
       "resultingRelations": [
         "parent",
+        "related",
+        "related",
+        "related",
+        "related",
+        "service",
         "instrument",
-        "comparison",
+        "guide",
         "conversion"
       ]
     },
@@ -547,8 +699,13 @@
       "removedManagedLinks": 0,
       "resultingRelations": [
         "parent",
+        "related",
+        "related",
+        "related",
+        "related",
+        "service",
         "instrument",
-        "comparison",
+        "guide",
         "conversion"
       ]
     }

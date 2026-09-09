@@ -7,6 +7,7 @@ const path = require("path");
 const cheerio = require("cheerio");
 const { collectSiteState, parseRedirectRules } = require("./generate-sitemap");
 const { readSitemapEntries, readSitemapEntriesFromReader } = require("./sitemap-utils");
+const { visibleFaqItems } = require("./structured-data-utils");
 
 const ROOT = path.resolve(__dirname, "..");
 const SITE = "https://atelierdeconsultanta.ro";
@@ -136,7 +137,7 @@ function inspectHtml(relativePath) {
       invalidJsonLd += 1;
     }
   });
-  const visibleFaqCount = $("details, .faq-item, .faq-card, .faq-entry, [data-faq-item]").length;
+  const visibleFaqCount = visibleFaqItems($).length;
   const canonical = $("link[rel~='canonical']").first().attr("href") || "";
   const body = $("body");
   return {
@@ -466,6 +467,7 @@ function buildInventory() {
     ["/resurse/descarcari/buget-digitalizare-imm.xlsx", "download", "200", "nu"],
     ["/api/contact-triage", "API formular; POST", "GET 405; POST 200/4xx/5xx", "nu; /api blocat în robots"],
     ["/api/crm/qualified-lead", "API server-side; POST autentificat", "GET 405; POST 202/4xx/5xx", "nu; /api blocat în robots"],
+    ["/api/company/:cui", "API verificare firmă; GET cu CUI valid", "200/400/404/429/503; răspuns no-store", "nu; /api blocat în robots"],
   ].map(([route, type, expectedHttp, indexable]) => ({ route, type, expectedHttp, indexable }));
 
   return {
@@ -576,10 +578,10 @@ function requiredSurfaceRows() {
     ["Privacy", "/politica-de-confidentialitate", "rută proprie"],
     ["Cookies", "/politica-de-confidentialitate#cookies", "secțiune; nu există rută /cookies"],
     ["Terms", "/termeni-si-conditii", "rută proprie"],
-    ["ANPC", "https://anpc.ro și https://anpc.ro/ce-este-sal", "linkuri externe în homepage/GDPR/Terms; nu există rută locală /anpc"],
+    ["ANPC", "https://anpc.ro și https://anpc.ro/sal/", "linkuri externe în homepage/GDPR/Terms; nu există rută locală /anpc"],
     ["Articole/ghiduri", "/blog; /ghiduri și rutele article/guide din inventar", "HTML canonical pre-randat + blog.json"],
     ["Landing pages locale", "/fonduri-europene-nord-est; /fonduri-europene-bucuresti", "Iași/Suceava/Bacău sunt aliasuri 301 către Nord-Est"],
-    ["404", "fallback pentru orice rută inexistentă", "ruta explicită /404 răspunde 200/noindex; un URL inexistent răspunde 404"],
+    ["404", "fallback pentru orice rută inexistentă", "ruta explicită /404 și orice URL inexistent răspund 404/noindex"],
   ];
 }
 
@@ -652,7 +654,7 @@ function renderInventory(inventory, live) {
     "",
     "## Inventarul rutelor canonical 200/indexabile",
     "",
-    "`Incoming` este numărul de rute canonical distincte care trimit intern către destinație. `Nav/Footer` arată dacă destinația apare în componentele globale. `FAQ v/s` reprezintă numărul aproximativ de blocuri vizibile / entități `mainEntity` din FAQPage.",
+    "`Incoming` este numărul de rute canonical distincte care trimit intern către destinație. `Nav/Footer` arată dacă destinația apare în componentele globale. `FAQ v/s` reprezintă numărul exact de întrebări FAQ vizibile / entități `mainEntity` din FAQPage; acordeoanele auxiliare nu sunt numărate ca FAQ.",
     "",
     "| Rută / canonical URL | Sursă rută | Tip | HTTP / index | Title | H1 | Canonical declarat | Sitemap | Nav/Footer | Incoming | Structured data | Breadcrumb | FAQ v/s | Registry | Banner | Familie | Status / note |",
     "|---|---|---|---|---|---|---|---|---|---:|---|---|---:|---|---|---|---|",
@@ -719,7 +721,7 @@ function renderInventory(inventory, live) {
     "",
     "| Rută | Sursă | HTTP | Indexabilitate | Metadata/schema | Problemă |",
     "|---|---|---:|---|---|---|",
-    "| `/404` | `404.html` | 200 când este cerut explicit; 404 ca fallback pentru URL inexistent | nu (meta + X-Robots-Tag) | title/H1/canonical `/404`, fără sitemap | Comportament intenționat; testul real de 404 folosește o rută inexistentă. |",
+    "| `/404` | `404.html` | 404 explicit și ca fallback pentru URL inexistent | nu (meta + X-Robots-Tag) | title/H1, fără canonical și fără sitemap | Comportament intenționat; workerul păstrează navigația utilă și emite `noindex, follow`. |",
     "| `/admin` | `admin/index.html` | 200 | nu (meta + X-Robots-Tag) | title/H1, fără sitemap | Panou client-side public; nu este o zonă autentificată server-side. Necesită review separat de securitate/operare. |",
     ...inventory.publicFragments.map((item) => `| \`${markdown(item.route)}\` | \`${markdown(item.sourceFile)}\` | ${item.expectedHttp} | ${markdown(item.indexable)} | lipsesc canonical/metadata/schema de pagină | ${markdown(item.issue)} |`),
     "",
@@ -770,7 +772,7 @@ function renderInventory(inventory, live) {
     "- **P1 existent:** validatorul SEO raportează linkuri interne către surse de redirect (`T00-017`).",
     "- **P1:** `/admin` este o suprafață publică protejată doar prin UI/localStorage, nu o zonă autentificată server-side; rolul ei operațional și expunerea trebuie revizuite separat.",
     "- **P2:** `/cookies`, `/echipa`, `/date-companie` și `/anpc` nu există ca rute standalone; conținutul/destinația există în paginile canonical sau extern și nu justifică automat URL-uri noi.",
-    "- **P2:** forma explicită `/404` răspunde 200, în timp ce fallback-ul real răspunde corect 404; documentația/testele trebuie să folosească o rută inexistentă pentru status.",
+    "- **Rezolvat în Task 10–11:** forma explicită `/404` și fallback-ul necunoscut răspund 404, fără canonical și cu meta/X-Robots-Tag `noindex, follow` coerente.",
     "",
     "## Verificarea automată adăugată",
     "",

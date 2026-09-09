@@ -13,13 +13,16 @@ const ROOT = path.resolve(__dirname, "..");
 const {
   CANONICAL_PROGRAM_STATUSES,
   PROGRAM_STATUSES,
+  cofinancingSummaryText,
   fundingSummary,
+  grantSummaryText,
   isPublicProgram,
   loadProgramConfig,
   validateProgram,
   validateProgramRelationships
 } = require("../tools/program-factual-governance");
 const { registrySurfaceErrors } = require("../tools/validate-program-registry");
+const { incentiveStatusForProgram } = require("../tools/schema-helpers");
 const { latestVerifiedProgram } = require("../tools/sync-homepage-hero");
 const { fileForRoute } = require("../tools/structured-data-utils");
 
@@ -65,10 +68,6 @@ function jsonLdNodes($) {
     nodes.push(...(Array.isArray(value?.["@graph"]) ? value["@graph"] : [value]));
   });
   return nodes;
-}
-
-function propertyMap(node) {
-  return new Map((node?.additionalProperty || []).map((item) => [item.name, String(item.value ?? "")]));
 }
 
 for (const status of [
@@ -125,23 +124,38 @@ for (const program of publicPrograms) {
   assert.equal($("body").attr("data-publication-state"), "public", `${program.slug}: publicationState greșit pe pagină`);
   const factual = $(".program-factual-status[data-program-id]").first();
   assert(factual.length, `${program.slug}: lipsește componenta factuală vizibilă`);
+  if ($("body").hasClass("program-showcase-page")) {
+    assert.equal(factual.closest(".fit-card").length, 0, `${program.slug}: rezumatul factual nu poate fi încadrat într-un card de filtrare`);
+    assert.equal(factual.prev(".program-section--answer").length, 1, `${program.slug}: rezumatul factual trebuie să urmeze răspunsul editorial`);
+    const journey = $("[data-program-journey]");
+    assert.equal(journey.length, 1, `${program.slug}: lipsește parcursul interactiv`);
+    assert.equal(journey.find("[data-journey-step]").length, 4, `${program.slug}: parcursul trebuie să conțină patru pași accesibili`);
+    assert.equal(journey.find("svg[data-journey-svg] path").length, 2, `${program.slug}: traseul SVG trebuie să conțină linia de bază și progresul`);
+  }
   assertFacts(program, factsFromElement($, factual.get(0)), "componenta factuală");
   assert.equal(factual.find("a[data-analytics-event='source_document_click']").attr("href"), program.sourceUrl, `${program.slug}: link oficial diferit`);
-  assert.equal(factual.find("time").first().attr("datetime"), program.verifiedAt, `${program.slug}: data vizibilă diferă`);
-  const expectedFunding = fundingSummary(program);
-  assert.equal(Boolean(factual.find("[data-program-funding]").length), Boolean(expectedFunding), `${program.slug}: grantSummary/cofinancingSummary este afișat incorect`);
-  if (expectedFunding) assert.equal(factual.find("[data-program-funding]").text().trim(), expectedFunding, `${program.slug}: rezumat financiar diferit`);
+  assert.equal($("[data-aeo-program-summary] [data-answer-field='verifiedAt'] time").first().attr("datetime"), program.verifiedAt, `${program.slug}: data vizibilă diferă`);
+  const summary = $("[data-aeo-program-summary]").first();
+  assert(summary.length, `${program.slug}: lipsește rezumatul semantic answer-first`);
+  const expectedGrant = grantSummaryText(program);
+  const expectedContribution = cofinancingSummaryText(program);
+  assert.equal(Boolean(summary.find("[data-program-grant]").length), Boolean(expectedGrant), `${program.slug}: grantSummary este afișat incorect`);
+  assert.equal(Boolean(summary.find("[data-program-contribution]").length), Boolean(expectedContribution), `${program.slug}: cofinancingSummary este afișat incorect`);
+  if (expectedGrant) assert(summary.find("[data-program-grant]").text().includes(expectedGrant), `${program.slug}: grantSummary diferă`);
+  if (expectedContribution) assert(summary.find("[data-program-contribution]").text().includes(expectedContribution), `${program.slug}: cofinancingSummary diferă`);
 
   const programNode = jsonLdNodes($).find((node) => String(node?.["@id"] || "") === `https://atelierdeconsultanta.ro${program.pageUrl}#funding-program`);
   assert(programNode, `${program.slug}: lipsește programul din JSON-LD`);
-  const properties = propertyMap(programNode);
+  assert.equal(programNode["@type"], "FinancialIncentive", `${program.slug}: programul trebuie să folosească tipul oficial FinancialIncentive`);
   assert.equal(programNode.name, program.name, `${program.slug}: nume JSON-LD diferit`);
-  assert.equal(programNode.sameAs, program.sourceUrl, `${program.slug}: sursă JSON-LD diferită`);
-  assert.equal(properties.get("status"), program.status, `${program.slug}: status JSON-LD diferit`);
-  assert.equal(properties.get("statusLabel"), program.statusLabel, `${program.slug}: statusLabel JSON-LD diferit`);
-  assert.equal(properties.get("verifiedAt"), program.verifiedAt, `${program.slug}: verifiedAt JSON-LD diferit`);
-  assert.equal(properties.has("grantSummary"), program.grantSummary !== null, `${program.slug}: grantSummary JSON-LD publicat incorect`);
-  assert.equal(properties.has("cofinancingSummary"), program.cofinancingSummary !== null, `${program.slug}: cofinancingSummary JSON-LD publicat incorect`);
+  assert.equal(programNode.description, program.statusLabel, `${program.slug}: statusLabel JSON-LD diferit`);
+  assert.equal(programNode.subjectOf?.url, program.sourceUrl, `${program.slug}: sursă JSON-LD diferită`);
+  assert.equal(programNode.provider?.name, program.sourceName, `${program.slug}: autoritate JSON-LD diferită`);
+  assert.equal(programNode.incentiveStatus, incentiveStatusForProgram(program), `${program.slug}: status Schema.org diferit`);
+  assert.equal(programNode.validFrom, program.applicationStart || undefined, `${program.slug}: applicationStart JSON-LD diferit`);
+  assert.equal(programNode.validThrough, program.applicationEnd || undefined, `${program.slug}: applicationEnd JSON-LD diferit`);
+  assert.equal(programNode.sameAs, undefined, `${program.slug}: sursa documentară nu poate fi sameAs`);
+  assert.equal(programNode.additionalProperty, undefined, `${program.slug}: programul nu poate publica proprietăți Schema.org neacceptate`);
 
   const menuElements = header(`[data-program-id='${program.id}']`).toArray();
   for (const element of menuElements) assertFacts(program, factsFromElement(header, element), "meniu desktop/mobil");
@@ -163,7 +177,7 @@ for (const program of programs.filter((item) => !isPublicProgram(item))) {
   assert.equal($("body").attr("data-publication-state"), "pending_validation", `${program.slug}: pagina pending nu este marcată`);
   assert.match($("meta[name='robots']").attr("content") || "", /noindex/iu, `${program.slug}: pagina pending este indexabilă`);
   assert.equal($(`[data-program-id='${program.id}'][data-program-status]`).length, 0, `${program.slug}: pagina pending publică status factual`);
-  assert.equal($("main [data-program-funding]").length, 0, `${program.slug}: pagina pending publică valori factuale`);
+  assert.equal($("main [data-program-grant], main [data-program-contribution]").length, 0, `${program.slug}: pagina pending publică valori factuale`);
   assert(!jsonLdNodes($).some((node) => String(node?.["@id"] || "").endsWith("#funding-program")), `${program.slug}: pagina pending publică JSON-LD factual`);
 }
 

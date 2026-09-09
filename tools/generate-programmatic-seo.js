@@ -9,7 +9,7 @@ const GLOBAL_HEADER = fs.readFileSync(path.join(ROOT, "partials", "global-header
 const CONFIG = path.join(ROOT, "config", "seo-programmatic-pages.json");
 const SITEMAP = path.join(ROOT, "sitemap.xml");
 const PROGRAMMATIC_MIN_WORDS = 1100;
-const PROGRAMMATIC_MIN_FAQ = 5;
+const { normalizeFaqPairs } = require("./faq-governance");
 const {
   SITE,
   PAGE_KINDS,
@@ -158,13 +158,7 @@ function normalizeFaqEntries(faq) {
 }
 
 function configuredFaq(item, fallback) {
-  const seen = new Set();
-  return [...normalizeFaqEntries(item?.faq), ...fallback].filter(([question]) => {
-    const key = String(question || "").trim().toLowerCase();
-    if (!key || seen.has(key)) return false;
-    seen.add(key);
-    return true;
-  });
+  return normalizeFaqPairs([...normalizeFaqEntries(item?.faq), ...fallback]);
 }
 
 function appendConfiguredBody(body, item) {
@@ -245,7 +239,7 @@ function schema(title, description, route, faq, updatedAt = "2026-05-20", metada
     pageNode,
     breadcrumbSchema(breadcrumbItemsForPath(route, currentName)),
     contentNode,
-    faqPageSchema(faq, { minItems: 2 })
+    faqPageSchema(faq, { minItems: 2, url: metadata.canonicalUrl })
   ]);
 }
 
@@ -263,9 +257,20 @@ function html({ title, description, h1, route, category, summary, body, faq, rel
   <meta name="robots" content="index, follow" />
   <meta name="seo-depth" content="true" />
   <meta name="seo-min-words" content="${PROGRAMMATIC_MIN_WORDS}" />
-  <meta name="seo-min-faq" content="${PROGRAMMATIC_MIN_FAQ}" />
+  <meta name="seo-min-faq" content="${faq.length}" />
   <link rel="canonical" href="${metadata.canonicalUrl}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ro_RO" />
+  <meta property="og:title" content="${esc(metadata.title)}" />
+  <meta property="og:description" content="${esc(metadata.description)}" />
   <meta property="og:url" content="${metadata.ogUrl}" />
+  <meta property="og:image" content="${SITE}/og-image.jpg" />
+  <meta property="og:image:alt" content="${esc(h1)} — FABER" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="${esc(metadata.title)}" />
+  <meta name="twitter:description" content="${esc(metadata.description)}" />
+  <meta name="twitter:image" content="${SITE}/og-image.jpg" />
+  <meta name="twitter:image:alt" content="${esc(h1)} — FABER" />
   <link rel="stylesheet" href="/assets/seo-hub.css" />
   <link rel="stylesheet" href="/assets/see-also.css" />
   <script type="application/ld+json">${schema(title, description, route, faq, updatedAt, metadata, h1)}</script>
@@ -301,7 +306,7 @@ ${ANALYTICS_EVENTS_SCRIPT}
       <div class="cta-actions"><a class="btn btn-primary" href="/contact">Trimite datele proiectului</a></div>
     </section>
   </main>
-  <footer class="footer">© 2026 FABER - Atelier de Consultanță</footer>
+  <footer class="footer">© 2026 FABER – Atelier de Consultanță</footer>
 </body>
 </html>
 `;
@@ -565,7 +570,10 @@ function regionalPage(item) {
 function faqPage(item) {
   const route = `/intrebari/${item.slug}`;
   const title = `Raspuns rapid: ${item.question}`;
-  const description = `Raspuns rapid pentru intrebarea "${item.question}": ${item.answer.slice(0, 120)}...`;
+  const answer = publicText(item.answer);
+  const description = answer.length <= 155
+    ? answer
+    : `${answer.slice(0, 152).replace(/\s+\S*$/u, "").trim()}…`;
   const faq = configuredFaq(item, [
     [item.question, item.answer],
     ["Ce trebuie verificat inainte de aplicare?", "Solicitantul, programul, documentele, bugetul, cheltuielile eligibile si regulile apelului activ."],

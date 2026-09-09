@@ -82,7 +82,7 @@ graph TD
 | `/politica-de-confidentialitate` | rewrite | — | Rolul de legal este util, dar promisiunea, query clusterul sau diferențierea față de URL-urile apropiate trebuie clarificate. | fișa juridică aprobată; aviz juridic; owner confirmă URL-ul legal principal |
 | `/resurse-utile` | merge | `/resurse` | Intenția se suprapune cu /resurse; se păstrează doar conținutul unic după aprobarea SEO/business. | SEO lead + owner de conținut aprobă decizia și migrarea |
 | `/verificare-eligibilitate-fonduri-europene` | rewrite | — | Rol distinct condiționat în harta P0.09; trebuie eliminată suprapunerea și aprobat KPI-ul propriu. | owner aprobă rolul de serviciu; instrumentarea conversiilor live; eliminarea duplicatelor; export backlink |
-| `/granturi-digitalizare-imm` | în afara inventarului canonic | — | Candidat de consolidare P0.09; decizia de redirect nu este aprobată. | Aprobarea factuală/juridică/SEO indicată în poarta P0 |
+| `/granturi-digitalizare-imm` | în afara inventarului canonic | — | Alias legacy neindexabil; 301 direct aprobat către /digitalizare-imm. | Aprobarea factuală/juridică/SEO indicată în poarta P0 |
 | `/gdpr` | în afara inventarului canonic | — | Duplicat legal scos din sitemap; 301 rămâne condiționat de avizul juridic. | Aprobarea factuală/juridică/SEO indicată în poarta P0 |
 
 ## Livrabile

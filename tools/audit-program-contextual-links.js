@@ -55,7 +55,7 @@ function validateTarget(href, sitemapSet, redirects) {
 function auditProgramContextualLinks() {
   const config = loadConfig();
   const programs = loadProgramConfig().programs
-    .filter((program) => isPublicProgram(program) && program.discovery?.listed !== false);
+    .filter((program) => isPublicProgram(program) && !program.discovery?.redirectTarget);
   const excludedRoutes = new Set(config.excludedRoutes || []);
   const managedPrograms = programs.filter((program) => !excludedRoutes.has(program.pageUrl));
   const sitemapSet = new Set(sitemapRoutes(ROOT));
@@ -85,8 +85,8 @@ function auditProgramContextualLinks() {
     if (block.length !== 1) routeIssues.push(`blocuri contextuale: ${block.length}, necesar 1`);
     if ($("main .related-links, main [data-contextual-next-step]").length) routeIssues.push("au rămas containere automate legacy");
     const actual = block.find(".program-contextual-links__list > li > a");
-    const expected = resolvedLinks(program, config);
-    if (actual.length !== 4) routeIssues.push(`linkuri în matrice: ${actual.length}, necesar 4`);
+    const expected = resolvedLinks(program, config, programs);
+    if (actual.length !== expected.length) routeIssues.push(`linkuri în matrice: ${actual.length}, necesar ${expected.length}`);
     const tracked = actual.filter("[data-analytics-event]");
     if (tracked.length !== 1 || tracked.attr("data-link-relation") !== "conversion") routeIssues.push("analytics trebuie să existe numai pe CTA-ul conversion");
 
@@ -106,7 +106,9 @@ function auditProgramContextualLinks() {
         if (analyticsEvent !== "cta_click") routeIssues.push("CTA conversion fără cta_click");
         if (element.attr("data-analytics-program-slug") !== program.slug) routeIssues.push("CTA fără program_slug corect");
         if (element.attr("data-analytics-program-family") !== program.family) routeIssues.push("CTA fără program_family corect");
-        if (!contact(`select[name='program_slug'] option[value='${program.slug}']`).length) routeIssues.push("formularul Contact nu poate precompleta programul");
+        const contactProgramSlug = new URL(href, SITE).hash.match(/(?:^#|&)program_slug=([^&]+)/u)?.[1];
+        const decodedContactProgramSlug = contactProgramSlug ? decodeURIComponent(contactProgramSlug) : "";
+        if (!contact(`select[name='program_slug'] option[value='${decodedContactProgramSlug}']`).length) routeIssues.push("formularul Contact nu poate precompleta programul");
       } else if (analyticsEvent || Object.keys(element.attr() || {}).some((name) => name.startsWith("data-analytics-"))) {
         routeIssues.push(`linkul editorial ${link.relation} conține tracking`);
       }
@@ -134,10 +136,11 @@ function auditProgramContextualLinks() {
     errors.push(...routeIssues.map((issue) => `${program.pageUrl}: ${issue}`));
   }
 
-  const relationCounts = Object.fromEntries(["parent", "instrument", "comparison", "conversion"].map((relation) => [relation, rows.filter((row) => row.relation === relation).length]));
+  const relationCounts = Object.fromEntries(["parent", "related", "service", "instrument", "guide", "conversion"]
+    .map((relation) => [relation, rows.filter((row) => row.relation === relation).length]));
   return {
-    schemaVersion: 1,
-    generatedFor: "P1.05",
+    schemaVersion: 2,
+    generatedFor: "Task 19",
     generatedAt: DATE,
     evidence: config.evidence,
     summary: {
@@ -161,7 +164,7 @@ function auditProgramContextualLinks() {
 function markdown(report) {
   const routeRows = report.routes.map((row) => `| \`${row.route}\` | ${row.status} | ${row.issues.join("; ") || "—"} |`);
   return [
-    "# P1.05 — Matrice și crawl pentru legăturile programelor",
+    "# Task 19 — Matrice și crawl pentru legăturile programelor",
     "",
     `Data: ${report.generatedAt}`,
     "",

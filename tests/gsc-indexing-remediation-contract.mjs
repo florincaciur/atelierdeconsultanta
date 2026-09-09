@@ -83,6 +83,37 @@ for (const route of restoredProgramRoutes) {
   assert.equal(new URL($("link[rel='canonical']").first().attr("href") || "", SITE).pathname, route, `${route}: canonical incorect`);
 }
 
+const currentIndexableRoutes = [
+  "/blog",
+  "/start-up-nation-2026-plan-de-afaceri",
+  "/blog-afir-fotovoltaice-ferme-2026",
+  "/eligibilitate-fonduri-europene",
+  "/cod-caen-start-up-nation-2026",
+  "/fonduri-nerambursabile",
+  "/pnrr-digitalizare-imm-cheltuieli-eligibile",
+  "/cheltuieli-eligibile-pocidif-21",
+  "/documente-punctaj-pocidif-21",
+  "/dr18",
+  "/eligibilitate-pocidif-21",
+  "/resurse-utile"
+];
+
+for (const route of currentIndexableRoutes) {
+  assert.match(sitemapText, new RegExp(`<loc>${SITE}${route.replace(/[.*+?^${}()|[\]\\]/gu, "\\$&")}</loc>`, "u"), `${route}: destinația curentă lipsește din sitemap`);
+  const candidates = canonicalFile(route);
+  let html = "";
+  for (const candidate of candidates) {
+    try {
+      html = await fs.readFile(candidate, "utf8");
+      break;
+    } catch {}
+  }
+  assert.ok(html, `${route}: pagina curentă lipsește`);
+  const $ = cheerio.load(html);
+  assert.doesNotMatch($("meta[name='robots']").first().attr("content") || "index, follow", /\bnoindex\b/iu, `${route}: pagina curentă este noindex`);
+  assert.equal(new URL($("link[rel='canonical']").first().attr("href") || "", SITE).pathname, route, `${route}: canonical curent incorect`);
+}
+
 const retired = new Set(consolidations.keys());
 const internalLinkErrors = [];
 for (const file of publicHtmlFiles()) {
@@ -103,5 +134,7 @@ const robots = await fs.readFile(path.join(ROOT, "robots.txt"), "utf8");
 assert.doesNotMatch(robots, /^Disallow:\s*\/admin\/?\s*$/imu, "/admin trebuie crawl-uit pentru a se vedea noindex");
 const headers = await fs.readFile(path.join(ROOT, "_headers"), "utf8");
 assert.match(headers, /^\/admin\s*\r?\n\s+X-Robots-Tag:\s*noindex,\s*nofollow\s*$/imu, "/admin trebuie să trimită X-Robots-Tag");
+assert.match(headers, /^\/official-guides\.json\s*\r?\n(?:\s+[^\r\n]+\r?\n)*?\s+X-Robots-Tag:\s*noindex,\s*nofollow\s*$/imu, "/official-guides.json trebuie să trimită X-Robots-Tag noindex");
+assert.doesNotMatch(sitemapText, /<loc>https:\/\/atelierdeconsultanta\.ro\/official-guides\.json<\/loc>/u, "/official-guides.json nu trebuie inclus în sitemap");
 
-console.log(`GSC indexing remediation PASS: ${consolidations.size} consolidări, zero linkuri interne către aliasuri, admin crawlable+noindex.`);
+console.log(`GSC indexing remediation PASS: ${consolidations.size} consolidări, ${currentIndexableRoutes.length} destinații curente indexabile, zero linkuri interne către aliasuri și excluderi tehnice corecte.`);

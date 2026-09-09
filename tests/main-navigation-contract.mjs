@@ -40,7 +40,7 @@ const programBySlug = new Map(loadProgramConfig().programs.map((program) => [pro
 const expectedNavigationPrograms = navigationPrograms([...programBySlug.values()]);
 
 assert.equal(config.primaryDestinations.length, 5, "navigation must expose exactly five primary destinations");
-assert.equal(grouped.length, 3, "three primary destinations must use disclosure groups");
+assert.equal(grouped.length, 4, "four primary destinations must use disclosure groups");
 assert.equal($("[data-homepage-navbar-toc]").length, 0, "homepage TOC must not be exposed in navigation");
 assert.deepEqual(
   $("#navbar [data-nav-disclosure] > button").map((_, element) => $(element).clone().children().remove().end().text().trim()).get(),
@@ -52,7 +52,17 @@ assert.deepEqual(
   grouped.map(({ label }) => label),
   "mobile labels must follow the approved order",
 );
-assert.deepEqual($("#navbar .nav-primary-link").map((_, element) => $(element).text().trim()).get(), ["Calculator SO", "Contact"], "Calculator SO and Contact must be direct destinations");
+assert.deepEqual($("#navbar .nav-primary-link").map((_, element) => $(element).text().trim()).get(), ["Contact"], "Contact must remain the only direct navigation destination");
+assert.deepEqual(
+  $("#nav-calculatoare-panel a").map((_, element) => ({ label: $(element).text().trim(), href: $(element).attr("href") })).get(),
+  [
+    { label: "Calculator punctaj POR Micro – Apelul 2", href: "/investitii-modernizarea-microintreprinderilor-apel-2#simulator-punctaj-apel-2" },
+    { label: "Calculator SO", href: "/calculator-soc" },
+    { label: "Calculator punctaj DR 14", href: "/dr14#dr14-punctaj" }
+  ],
+  "calculator disclosure must expose the three approved tools in order",
+);
+assert.equal($("#mobile-calculatoare-panel a").length, 3, "mobile calculator disclosure must expose all three tools");
 assert.equal($("#navbar .nav-cta").text().trim(), config.cta.label, "desktop CTA copy must be canonical");
 assert.equal($("#mobileMenu .mobile-cta").text().trim(), config.cta.label, "mobile CTA copy must be canonical");
 assert.equal(/\b(?:Instrumente|Ghiduri|Cuprins)\b/u.test($("#navbar, #mobileMenu").text()), false, "removed navigation labels must stay absent");
@@ -89,12 +99,24 @@ const results = [];
 try {
   for (const width of VIEWPORTS) {
     const page = await browser.newPage({ viewport: { width, height: 820 } });
-    await page.route("http://atelier.test/**", (route) => route.fulfill({ status: 200, contentType: "text/html; charset=utf-8", body: documentHtml }));
+    await page.route("http://atelier.test/**", (route) => {
+      if (/^\/assets\/faber-navbar-refined\.svg$/.test(new URL(route.request().url()).pathname)) {
+        return route.fulfill({ status: 200, contentType: "image/svg+xml", body: fs.readFileSync(path.join(ROOT, new URL(route.request().url()).pathname)) });
+      }
+      return route.fulfill({ status: 200, contentType: "text/html; charset=utf-8", body: documentHtml });
+    });
     await page.goto("http://atelier.test/consultanta-fonduri-europene", { waitUntil: "domcontentloaded" });
 
     const desktop = width >= config.desktopBreakpoint;
     const state = { width, mode: desktop ? "desktop" : "mobile", errors: [], screenshot: "" };
     try {
+      const logo = page.locator("#navbar .faber-brand-logo");
+      await logo.evaluate((image) => image.decode());
+      const logoBox = await logo.boundingBox();
+      assert.ok(logoBox && logoBox.width >= 165 && logoBox.x >= 0 && logoBox.x + logoBox.width <= width, `${width}: logo must be loaded, readable and fully inside viewport`);
+      assert.equal(await logo.getAttribute("alt"), "FABER – Atelier de Consultanță");
+      const nextControl = await page.locator(desktop ? "#nav-servicii-trigger" : "#hamburgerBtn").boundingBox();
+      assert.ok(nextControl && logoBox.x + logoBox.width <= nextControl.x, `${width}: logo must not overlap navigation controls`);
       const desktopDisplay = await page.locator("#navbar .nav-links").evaluate((element) => getComputedStyle(element).display);
       const hamburgerDisplay = await page.locator("#hamburgerBtn").evaluate((element) => getComputedStyle(element).display);
       assert.equal(desktopDisplay !== "none", desktop, `${width}: desktop navigation visibility`);
@@ -121,7 +143,8 @@ try {
         await page.locator("#dropdownBtn").focus();
       } else {
         const compactBox = await page.locator(".nav-compact-cta").boundingBox();
-        assert.ok(compactBox && compactBox.height >= 44 && compactBox.width >= 44, `${width}: compact CTA target is at least 44px`);
+        if (width <= 600) assert.equal(compactBox, null, "Narrow navbar reserves space for readable logo");
+        else assert.ok(compactBox && compactBox.height >= 44 && compactBox.width >= 44, `${width}: compact CTA target is at least 44px`);
         await page.locator("#hamburgerBtn").click();
         assert.equal(await page.locator("#hamburgerBtn").getAttribute("aria-expanded"), "true", "mobile menu announces open state");
         assert.equal(await page.locator("#mobileMenu").getAttribute("hidden"), null, "mobile menu becomes visible");

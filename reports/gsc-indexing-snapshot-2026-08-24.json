@@ -1,0 +1,173 @@
+{
+  "property": "sc-domain:atelierdeconsultanta.ro",
+  "capturedAt": "2026-08-24",
+  "gscLastUpdate": "2026-08-21",
+  "notIndexedTotal": 110,
+  "evidence": [
+    "codex-clipboard-cf1e2449-d230-4165-a0f6-e50a43f24fb1.png",
+    "codex-clipboard-8f14ade3-abee-485e-a6a5-d1e3b6acd14e.png",
+    "codex-clipboard-9108ac44-859d-442d-ab3f-9eda2f564fff.png",
+    "codex-clipboard-23d4538f-c6d6-494b-8366-971b02c32b0e.png",
+    "codex-clipboard-647c36b8-c854-40b1-af0a-5b724523263b.png",
+    "Google Search Console authenticated Page indexing report inspected live on 2026-08-24"
+  ],
+  "categories": [
+    {
+      "reason": "Page with redirect",
+      "validation": "Started",
+      "affectedPages": 86,
+      "validationStartedAt": "2026-08-23",
+      "examplesFrom": "gsc-page-with-redirect-validation-2026-08-23.json"
+    },
+    {
+      "reason": "Crawled - currently not indexed",
+      "validation": "Started",
+      "affectedPages": 2,
+      "examples": [
+        {
+          "url": "https://atelierdeconsultanta.ro/official-guides.json",
+          "lastCrawled": "2026-05-31"
+        },
+        {
+          "url": "https://atelierdeconsultanta.ro/start-up-nation-2026-plan-de-afaceri/",
+          "lastCrawled": "2026-05-28"
+        }
+      ]
+    },
+    {
+      "reason": "Excluded by ‘noindex’ tag",
+      "validation": "Started",
+      "affectedPages": 6,
+      "validationStartedAt": "2026-08-08",
+      "examples": [
+        {
+          "url": "https://atelierdeconsultanta.ro/granturi-digitalizare-imm",
+          "lastCrawled": "2026-07-29"
+        },
+        {
+          "url": "https://atelierdeconsultanta.ro/pnrr/",
+          "lastCrawled": "2026-07-29"
+        },
+        {
+          "url": "https://atelierdeconsultanta.ro/dr-14-afir-conditii-eligibilitate-greseli-frecvente.html",
+          "lastCrawled": "2026-07-25"
+        },
+        {
+          "url": "https://atelierdeconsultanta.ro/testimoniale",
+          "lastCrawled": "2026-07-18"
+        },
+        {
+          "url": "https://atelierdeconsultanta.ro/studii-de-caz",
+          "lastCrawled": "2026-06-20"
+        },
+        {
+          "url": "https://atelierdeconsultanta.ro/portofoliu",
+          "lastCrawled": "2026-06-20"
+        }
+      ]
+    },
+    {
+      "reason": "Alternate page with proper canonical tag",
+      "validation": "Started",
+      "affectedPages": 5,
+      "validationStartedAt": "2026-08-08",
+      "examples": [
+        {
+          "url": "https://atelierdeconsultanta.ro/blog?post=panouri-fotovoltaice-afir-fermieri",
+          "lastCrawled": "2026-06-12"
+        },
+        {
+          "url": "http://atelierdeconsultanta.ro/pnrr",
+          "lastCrawled": "2026-06-05"
+        },
+        {
+          "url": "https://atelierdeconsultanta.ro/blog?post=blog-2",
+          "lastCrawled": "2026-05-28"
+        },
+        {
+          "url": "https://atelierdeconsultanta.ro/intrebari/ce-documente-sunt-necesare-pentru-dr12/",
+          "lastCrawled": "2026-05-21"
+        },
+        {
+          "url": "https://atelierdeconsultanta.ro/fonduri-europene-caen/0111-culturi-cereale/",
+          "lastCrawled": "2026-05-20"
+        }
+      ]
+    },
+    {
+      "reason": "Redirect error",
+      "validation": "Started",
+      "affectedPages": 4,
+      "examples": [
+        {
+          "url": "https://atelierdeconsultanta.ro/blog-afir-fotovoltaice-ferme-2026.html",
+          "lastCrawled": "2026-07-20"
+        },
+        {
+          "url": "https://atelierdeconsultanta.ro/eligibilitate-fonduri-europene/",
+          "lastCrawled": "2026-07-20"
+        },
+        {
+          "url": "https://atelierdeconsultanta.ro/cod-caen-start-up-nation-2026/",
+          "lastCrawled": "2026-05-25"
+        },
+        {
+          "url": "https://atelierdeconsultanta.ro/fonduri-nerambursabile/",
+          "lastCrawled": "2026-05-25"
+        }
+      ]
+    },
+    {
+      "reason": "Duplicate without user-selected canonical",
+      "validation": "Started",
+      "affectedPages": 1,
+      "validationStartedAt": "2026-06-19",
+      "examples": [
+        {
+          "url": "http://atelierdeconsultanta.ro/pnrr-digitalizare-imm-cheltuieli-eligibile",
+          "lastCrawled": "2026-06-09"
+        }
+      ]
+    },
+    {
+      "reason": "Blocked by robots.txt",
+      "validation": "Started",
+      "affectedPages": 1,
+      "examples": [
+        {
+          "url": "https://atelierdeconsultanta.ro/admin/",
+          "lastCrawled": "2026-07-23"
+        }
+      ]
+    },
+    {
+      "reason": "Discovered - currently not indexed",
+      "validation": "Passed",
+      "affectedPages": 5,
+      "examples": [
+        {
+          "url": "https://atelierdeconsultanta.ro/cheltuieli-eligibile-pocidif-21",
+          "lastCrawled": null
+        },
+        {
+          "url": "https://atelierdeconsultanta.ro/documente-punctaj-pocidif-21",
+          "lastCrawled": null
+        },
+        {
+          "url": "https://atelierdeconsultanta.ro/dr18",
+          "lastCrawled": null
+        },
+        {
+          "url": "https://atelierdeconsultanta.ro/eligibilitate-pocidif-21",
+          "lastCrawled": null
+        },
+        {
+          "url": "https://atelierdeconsultanta.ro/resurse-utile",
+          "lastCrawled": null
+        }
+      ]
+    }
+  ],
+  "interpretation": "The report contains historical crawl classifications. Current technical state must be decided from live HTTP, canonical, robots, sitemap and internal-link signals, not from the label alone.",
+  "action": "Keep intentional technical/admin exclusions out of the index, keep aliases as one-hop permanent redirects, and keep every canonical content page 200, self-canonical, indexable, discoverable and present in the sitemap."
+}

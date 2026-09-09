@@ -2,18 +2,26 @@
 
 Se aplică paginilor de program, ghidurilor și instrumentelor. Registrul operațional este `config/editorial-governance.json`; statusurile și valorile programelor rămân în registrul factual `config/seo-programs.json#programs`.
 
+## Semnificația datelor
+
+- `datePublished` este prima publicare editorială demonstrabilă a paginii. Nu se deduce din Git, mtime, build sau data globală a unui config; rămâne `DE_VALIDAT_UMAN` dacă nu există dovadă.
+- `lastMeaningfulUpdate` este sursa internă pentru `dateModified` și `sitemap.lastmod`. Se schimbă numai pentru o modificare editorială/materială înscrisă în changelog.
+- `verifiedAt` este data unei reverificări reale în sursa oficială. O reverificare fără schimbare materială nu modifică `dateModified`.
+- `officialSourceUpdatedAt` este data versiunii/actualizării sursei oficiale, numai când registrul oficial o stabilește explicit. Nu se înlocuiește cu data accesării sau cu `verifiedAt`.
+- `nextReviewAt` este un termen operațional intern. Apare în CMS și raportul de prospețime, nu în pagina publică sau JSON-LD.
+
 ## Roluri și separarea responsabilităților
 
 1. **Verifică — consultantul de specialitate.** Deschide sursa oficială, confirmă instituția, documentul/versiunea, caracterul final ori consultativ, datele de depunere și orice valoare numerică. Notează data verificării și schimbarea substanțială. Agregatoarele pot ajuta la orientare, dar nu sunt sursă primară.
 2. **Aprobă — editorul coordonator sau responsabilul de conformitate.** Compară pagina cu registrul programului, verifică formularea și stabilește `nextReviewAt`: maximum 30 de zile pentru apel deschis, maximum 60 de zile pentru altă pagină de program și 60–90 de zile pentru conținut evergreen. Completează changelogul.
 3. **Publică — persoana cu drept de publicare în CMS.** Publică numai după trecerea validărilor și a testelor. Un singur om poate îndeplini mai multe roluri doar dacă aprobarea rămâne explicită în istoric.
 
-Se afișează nume personale numai după acord documentat. În lipsa acordului se folosește atribuirea organizațională aprobată, de exemplu „Echipa editorială FABER”.
+Se afișează nume personale numai după acord documentat și profil public aprobat. Până la confirmarea persoanei/rolului real, pagina publică afișează publisherul organizațional aprobat și datele verificabile, fără a transforma o etichetă generică de workflow în autor sau reviewer Schema.org.
 
 ## Flux înainte de publicare
 
 1. Actualizează sursa factuală și registrul editorial; nu edita statusul sau valorile în HTML, carduri ori JSON-LD.
-2. Pentru o schimbare substanțială, adaugă în `changelog[]` data, rezumatul și reviewerul, apoi actualizează `lastMeaningfulUpdate`. Sunt substanțiale: statusul, calendarul, eligibilitatea, bugetul/cofinanțarea, documentul-sursă și concluzia unui instrument. Nu sunt substanțiale: deploy-ul, CSS-ul, formatarea și corecțiile pur tehnice.
+2. Pentru o schimbare substanțială, adaugă în `changelog[]` data, rezumatul și reviewerul intern confirmat, apoi actualizează `lastMeaningfulUpdate`. Sunt substanțiale: statusul, calendarul, eligibilitatea, bugetul/cofinanțarea, documentul-sursă și concluzia unui instrument. Nu sunt substanțiale: deploy-ul, CSS-ul, formatarea, rularea generatorului și corecțiile pur tehnice.
 3. Rulează `npm run validate:editorial-governance`, `npm run sync:editorial-governance`, `npm run test:editorial-governance` și build-ul complet.
 4. Verifică filtrul CMS și raportul `reports/editorial-governance-expiry.md`. O alertă expirată nu rescrie automat conținutul, statusul sau datele.
 

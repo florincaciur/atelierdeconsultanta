@@ -1315,7 +1315,7 @@ function buildArticle(config, research, sourceText, route, internalLinks) {
     keywords: [keyword, ...(config.keyworduriSecundare || [])]
   });
 
-  const faqSchema = faqPageSchema(faq.map((item) => ({ question: item.q, answer: item.a })), { minItems: 2 });
+  const faqSchema = faqPageSchema(faq.map((item) => ({ question: item.q, answer: item.a })), { minItems: 2, url: canonical });
 
   const pageSchema = webPageSchema({
     url: canonical,

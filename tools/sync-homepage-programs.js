@@ -8,7 +8,6 @@ const ROOT = path.resolve(__dirname, "..");
 const HOME = path.join(ROOT, "index.html");
 const CONFIG = JSON.parse(fs.readFileSync(path.join(ROOT, "config", "homepage-programs.json"), "utf8"));
 const HUBS = JSON.parse(fs.readFileSync(path.join(ROOT, "config", "program-family-hubs.json"), "utf8"));
-const BANNERS = JSON.parse(fs.readFileSync(path.join(ROOT, "banners.json"), "utf8"));
 const CHECK_ONLY = process.argv.includes("--check");
 const PRIORITY_START = "<!-- P1_08_PRIORITY_CAROUSEL_START -->";
 const PRIORITY_END = "<!-- P1_08_PRIORITY_CAROUSEL_END -->";
@@ -60,13 +59,16 @@ function validateProgram(program, context) {
   if (!program.discovery?.parentHub || !Array.isArray(program.discovery.applicantTypes)) {
     throw new Error(`${context}: ${program.slug} nu are taxonomia discovery completă.`);
   }
+  if (context === "carusel" && !program.presentation?.image) {
+    throw new Error(`${context}: ${program.slug} nu are presentation.image în registrul unic.`);
+  }
 }
 
-function renderPrioritySlide(program, banner, index, total) {
+function renderPrioritySlide(program, index, total) {
   const active = index === 0;
   const inert = active ? "" : " inert";
-  const image = String(banner?.image || "/assets/hero/hero-business.webp").replace(/'/g, "%27");
-  return `          <div class="priority-program-slide${active ? " is-active" : ""}" role="group" aria-roledescription="slide" aria-label="${index + 1} din ${total}" data-priority-slide data-program-id="${esc(program.id)}" data-program-family="${esc(program.family)}" data-program-status="${esc(program.status)}" data-status-label="${esc(program.statusLabel)}" data-verified-at="${esc(program.verifiedAt)}" data-source-url="${esc(program.sourceUrl)}" aria-hidden="${active ? "false" : "true"}"${inert} style="--program-image:url('${image}')">
+  const image = String(program.presentation.image).replace(/'/g, "%27");
+  return `          <div class="priority-program-slide${active ? " is-active" : ""}" role="group" aria-roledescription="slide" aria-label="${index + 1} din ${total}" data-priority-slide data-banner-id="${esc(program.id)}" data-program-id="${esc(program.id)}" data-program-family="${esc(program.family)}" data-program-status="${esc(program.status)}" data-status-label="${esc(program.statusLabel)}" data-verified-at="${esc(program.verifiedAt)}" data-source-url="${esc(program.sourceUrl)}" aria-hidden="${active ? "false" : "true"}"${inert} style="--program-image:url('${image}')">
             <span class="priority-program-status"><span aria-hidden="true">${statusSymbol(program.status)}</span><span>${esc(program.statusLabel)}</span></span>
             <h3>${esc(program.shortName)}</h3>
             <p>${esc(program.cardSummary)}</p>
@@ -75,20 +77,20 @@ function renderPrioritySlide(program, banner, index, total) {
           </div>`;
 }
 
-function renderPriorityCarousel(programs, bannersByProgram) {
+function renderPriorityCarousel(programs) {
   const featured = carouselPrograms(programs);
   if (!featured.length || featured.length > CONFIG.carousel.maximumItems || featured.length > 24) {
     throw new Error(`Caruselul trebuie să conțină între 1 și 24 de programe; găsite ${featured.length}.`);
   }
   featured.forEach((program) => validateProgram(program, "carusel"));
   const total = featured.length;
-  const slides = featured.map((program, index) => renderPrioritySlide(program, bannersByProgram.get(program.id), index, total)).join("\n");
+  const slides = featured.map((program, index) => renderPrioritySlide(program, index, total)).join("\n");
   return `${PRIORITY_START}
     <section id="priority-programs" aria-labelledby="priority-programs-title">
       <div class="program-explorer-header">
         <span class="section-label">Catalog public</span>
         <h2 id="priority-programs-title">Toate programele de finanțare urmărite</h2>
-        <p>Fiecare program public are propriul banner, fără rotire automată. Statutul și data verificării provin din registrul unic.</p>
+        <p>Compară programele după scopul investiției și statutul depunerii. Pe pagina fiecărui program găsești condițiile, data verificării și sursa oficială.</p>
       </div>
       <div class="priority-program-carousel" data-priority-carousel data-carousel-count="${total}">
         <button class="priority-program-control priority-program-control--previous" type="button" aria-label="Programul anterior" data-priority-previous data-analytics-event="carousel_interaction" data-analytics-cta-id="priority_carousel_previous"><span aria-hidden="true">←</span></button>
@@ -104,7 +106,7 @@ ${slides}
         </div>
       </div>
     </section>
-${PRIORITY_END}`;
+${PRIORITY_END}`.replace(/\s((?:data-[a-z0-9-]+|hidden|inert))(?=[\s>])/giu, ' $1=""');
 }
 
 function option(value, label) {
@@ -191,14 +193,17 @@ function replaceBlock(source, start, end, legacyPattern, markup, label) {
 
 function synchronizeAssets(source) {
   let output = source
-    .replace(/\s*<link\b[^>]*href=["']\/assets\/program-carousel\.css[^>]*>/gi, "")
-    .replace(/\s*<link\b[^>]*data-homepage-program-explorer-style=["']p1_08["'][^>]*>/gi, "")
-    .replace(/\s*<script\b[^>]*data-homepage-program-explorer-script=["']p1_08["'][^>]*><\/script>/gi, "");
+    .replace(/^[ \t]*<link\b[^>]*href=["']\/assets\/program-carousel\.css[^>]*>\r?\n?/gim, "")
+    .replace(/^[ \t]*<link\b[^>]*data-homepage-program-explorer-style=["']p1_08["'][^>]*>\r?\n?/gim, "")
+    .replace(/^[ \t]*<script\b[^>]*data-homepage-program-explorer-script=["']p1_08["'][^>]*><\/script>\r?\n?/gim, "");
+  // Normalize the three adjacent lines together. Other homepage generators
+  // may move head assets, but they must not change indentation or require a
+  // second synchronization pass.
   const insertion = `  ${CSS_LINK}\n  ${JS_LINK}\n`;
   if (/<script\b[^>]*src=["']\/assets\/lead-attribution\.js[^>]*>/i.test(output)) {
-    return output.replace(/(<script\b[^>]*src=["']\/assets\/lead-attribution\.js[^>]*>)/i, `${insertion}  $1`);
+    return output.replace(/^[ \t]*(<script\b[^>]*src=["']\/assets\/lead-attribution\.js[^>]*>)/im, `${insertion}  $1`);
   }
-  return output.replace(/<\/head>/i, `${insertion}</head>`);
+  return output.replace(/^[ \t]*<\/head>/im, `${insertion}</head>`);
 }
 
 function removeLegacyCarouselRuntime(source) {
@@ -209,13 +214,12 @@ function removeLegacyCarouselRuntime(source) {
 }
 
 function syncHomepage(source, programs) {
-  const bannersByProgram = new Map(BANNERS.map((banner) => [banner.programId, banner]));
   let output = replaceBlock(
     source,
     PRIORITY_START,
     PRIORITY_END,
     /<section\s+id="carousel-section"[\s\S]*?<\/section>/,
-    renderPriorityCarousel(programs, bannersByProgram),
+    renderPriorityCarousel(programs),
     "carusel"
   );
   if (output.includes(COMPACT_HOME_START)) {
@@ -233,16 +237,20 @@ function syncHomepage(source, programs) {
   return synchronizeAssets(removeLegacyCarouselRuntime(output));
 }
 
+function sameText(left, right) {
+  return left.replace(/\r\n/g, "\n") === right.replace(/\r\n/g, "\n");
+}
+
 function main() {
   const { programs } = loadProgramConfig();
   const before = fs.readFileSync(HOME, "utf8");
   const after = syncHomepage(before, programs);
   if (CHECK_ONLY) {
-    if (after !== before) throw new Error("Homepage program explorer nu este sincronizat. Rulează npm run sync:homepage-programs.");
+    if (!sameText(after, before)) throw new Error("Homepage program explorer nu este sincronizat. Rulează npm run sync:homepage-programs.");
     console.log("Homepage program explorer sync PASS.");
     return;
   }
-  if (after !== before) fs.writeFileSync(HOME, after, "utf8");
+  if (!sameText(after, before)) fs.writeFileSync(HOME, after, "utf8");
   console.log(`Homepage program explorer sincronizat: ${carouselPrograms(programs).length} priorități editoriale din registrul unic.`);
 }
 

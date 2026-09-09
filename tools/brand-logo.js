@@ -8,7 +8,7 @@ const BRAND_LOGO_SVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240
         </svg>`;
 
 function brandLogoLink(className = "brand") {
-  return `<a class="${className}" href="/" aria-label="FABER - Atelier de Consultanță, acasă">${BRAND_LOGO_SVG}</a>`;
+  return `<a class="${className}" href="/" aria-label="FABER – Atelier de Consultanță, acasă">${BRAND_LOGO_SVG}</a>`;
 }
 
 module.exports = {

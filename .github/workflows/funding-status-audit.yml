@@ -1,0 +1,36 @@
+name: Funding status audit
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+  schedule:
+    - cron: "15 8 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit-funding-status:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      # The audit and its fixtures use only Node built-ins; no install or network research.
+      - name: Verify audit fixtures and read-only behavior
+        run: npm run test:funding-status
+      - name: Audit current registry (warnings do not fail the job)
+        run: npm run audit:funding-status -- --report
+      - name: Retain internal findings, including failed audits
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: funding-status-audit
+          path: reports/funding-status-audit.*
+          if-no-files-found: warn
+          retention-days: 30

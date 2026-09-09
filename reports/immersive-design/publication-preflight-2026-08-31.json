@@ -1,0 +1,338 @@
+{
+  "checkedAt": "2026-08-31T13:30:28.988Z",
+  "requestedEnvironment": "staging",
+  "stagingDescription": "staging-local-dist (http://127.0.0.1:56487)",
+  "releaseDecision": "PASS",
+  "summary": {
+    "pass": 21,
+    "fail": 2,
+    "criticalBlockers": 0
+  },
+  "results": [
+    {
+      "criterionId": "program_status",
+      "criterion": "Statusuri programe fără contradicții și aprobate",
+      "environment": "local",
+      "status": "PASS",
+      "severity": "critical",
+      "owner": "Consultant FABER + Content owner",
+      "urls": [
+        "program:dr12-afir",
+        "program:dr14-afir",
+        "program:pro-infra",
+        "program:digitalizare-imm"
+      ],
+      "evidence": "Poarta P0.02: rândurile aprobate sunt publice, cele disputate rămân blocate și validarea nominală este obligatorie.",
+      "retest": "Reexecută verificarea program_status după remediere/aprobare."
+    },
+    {
+      "criterionId": "factual_sources",
+      "criterion": "Afirmații numerice/status cu sursă și dată",
+      "environment": "local",
+      "status": "PASS",
+      "severity": "critical",
+      "owner": "Consultant fonduri + Editor senior",
+      "urls": [
+        "config/seo-programs.json"
+      ],
+      "evidence": "Contract registru: 25 programe verificate pe meniu, homepage, carduri, pagini și JSON-LD.",
+      "retest": "Reexecută verificarea factual_sources după remediere/aprobare."
+    },
+    {
+      "criterionId": "legal_identity",
+      "criterion": "Identitate juridică și contact coerente",
+      "environment": "local",
+      "status": "PASS",
+      "severity": "critical",
+      "owner": "Business owner + Jurist",
+      "urls": [
+        "/despre-faber",
+        "/contact",
+        "/politica-de-confidentialitate",
+        "/termeni-si-conditii"
+      ],
+      "evidence": "Poartă identitate juridică: 16 câmpuri și 11 suprafețe aprobate nominal.",
+      "retest": "Reexecută verificarea legal_identity după remediere/aprobare."
+    },
+    {
+      "criterionId": "contact_privacy",
+      "criterion": "Regulă telefon/email identică în formular și Privacy",
+      "environment": "local",
+      "status": "PASS",
+      "severity": "critical",
+      "owner": "Jurist + Product owner",
+      "urls": [
+        "/contact",
+        "/politica-de-confidentialitate"
+      ],
+      "evidence": "Contact triage validation PASS (structural).",
+      "retest": "Reexecută verificarea contact_privacy după remediere/aprobare."
+    },
+    {
+      "criterionId": "form_flow",
+      "criterion": "Formular email SAU telefon, fără pierdere de date",
+      "environment": "local",
+      "status": "PASS",
+      "severity": "critical",
+      "owner": "Frontend + CRM owner",
+      "urls": [
+        "/contact",
+        "/api/contact-triage"
+      ],
+      "evidence": "Contact triage static contract PASS Contact triage server contract PASS Contact triage browser and no-JS flow PASS",
+      "retest": "Reexecută verificarea form_flow după remediere/aprobare."
+    },
+    {
+      "criterionId": "analytics",
+      "criterion": "Funnel fără PII și fără duplicate",
+      "environment": "local",
+      "status": "PASS",
+      "severity": "critical",
+      "owner": "Analytics owner + Backend",
+      "urls": [
+        "assets/analytics-events.js"
+      ],
+      "evidence": "Analytics browser checks passed: 9 sanitized events, 50% CTA threshold and server-confirmed submit. | CRM funnel contract passed: authenticated qualified_lead forwarding contains only non-PII fields.",
+      "retest": "Reexecută verificarea analytics după remediere/aprobare."
+    },
+    {
+      "criterionId": "redirects",
+      "criterion": "Redirecturi 301 într-un hop și target canonic",
+      "environment": "local",
+      "status": "PASS",
+      "severity": "critical",
+      "owner": "SEO lead + Backend",
+      "urls": [
+        "_redirects"
+      ],
+      "evidence": "Redirect map PASS: 136 rules, 0 loops, 0 chains, 0 sitemap redirects, 0 internal links to redirects. | Cloudflare domain SEO worker tests passed (127 static redirects verified in one hop).",
+      "retest": "Reexecută verificarea redirects după remediere/aprobare."
+    },
+    {
+      "criterionId": "sitemap",
+      "criterion": "Sitemap 200/indexabil/canonic și lastmod real",
+      "environment": "local",
+      "status": "PASS",
+      "severity": "critical",
+      "owner": "Technical SEO",
+      "urls": [
+        "/sitemap.xml"
+      ],
+      "evidence": "Verified sitemap index with 104 canonical URLs; 26 verified lastmod values.",
+      "retest": "Reexecută verificarea sitemap după remediere/aprobare."
+    },
+    {
+      "criterionId": "editorial",
+      "criterion": "Zero etichete de șablon și forme de control fără diacritice",
+      "environment": "local",
+      "status": "PASS",
+      "severity": "high",
+      "owner": "Editor coordonator",
+      "urls": [
+        "/sitemap.xml"
+      ],
+      "evidence": "Editorial copy contract passed: 104 canonical URLs, zero forbidden template labels or control-list forms. | Editorial terminology contract passed: 104 canonical URLs and 10 P0.14 surfaces.",
+      "retest": "Reexecută verificarea editorial după remediere/aprobare."
+    },
+    {
+      "criterionId": "robots",
+      "criterion": "Crawler-ele AI publice sunt permise, iar rutele private rămân protejate",
+      "environment": "local",
+      "status": "PASS",
+      "severity": "critical",
+      "owner": "Business owner + Technical SEO",
+      "urls": [
+        "/robots.txt"
+      ],
+      "evidence": "Crawler policy contract passed: 12 public crawler policies allowed, private paths protected.",
+      "retest": "Reexecută verificarea robots după remediere/aprobare."
+    },
+    {
+      "criterionId": "accessibility",
+      "criterion": "Tastatură, focus, zoom, reflow și submit mobil",
+      "environment": "local",
+      "status": "PASS",
+      "severity": "high",
+      "owner": "Accessibility QA + Frontend",
+      "urls": [
+        "/contact"
+      ],
+      "evidence": "Contact accessibility static and canonical-contact contract PASS Contact accessibility error summary, focus, ARIA and keyboard order PASS Contact accessibility loading and double-submit prevention PASS Contact accessibility network retry and value preservation PASS Contact accessibility 320px reflow, 200% text zoom and target sizes PASS",
+      "retest": "Reexecută verificarea accessibility după remediere/aprobare."
+    },
+    {
+      "criterionId": "performance",
+      "criterion": "Fără regresii majore LCP, INP sau CLS",
+      "environment": "local",
+      "status": "FAIL",
+      "severity": "high",
+      "owner": "Frontend performance owner",
+      "urls": [
+        "/",
+        "/fonduri-europene",
+        "/consultanta-fonduri-europene",
+        "/digitalizare-imm"
+      ],
+      "evidence": "Baseline LCP/CLS prezent pentru 4 rute; baseline INP=DE_VALIDAT_UMAN.",
+      "retest": "Salvați un baseline INP aprobat înainte de deploy și comparați aceeași interacțiune/viewport."
+    },
+    {
+      "criterionId": "program_status",
+      "criterion": "Statusuri programe fără contradicții și aprobate",
+      "environment": "staging-local-dist",
+      "status": "PASS",
+      "severity": "critical",
+      "owner": "Consultant FABER + Content owner",
+      "urls": [
+        "http://127.0.0.1:56487/",
+        "http://127.0.0.1:56487/dr12-afir",
+        "http://127.0.0.1:56487/dr-12-afir-instalarea-tinerilor-fermieri",
+        "http://127.0.0.1:56487/dr14",
+        "http://127.0.0.1:56487/dr-14-afir-conditii-eligibilitate-greseli-frecvente",
+        "http://127.0.0.1:56487/pro-infra",
+        "http://127.0.0.1:56487/digitalizare-imm",
+        "http://127.0.0.1:56487/granturi-digitalizare-imm"
+      ],
+      "evidence": "Suprafețele prioritare respectă starea de aprobare din registru.",
+      "retest": "Reexecută verificarea program_status după remediere/aprobare."
+    },
+    {
+      "criterionId": "legal_identity",
+      "criterion": "Identitate juridică și contact coerente",
+      "environment": "staging-local-dist",
+      "status": "PASS",
+      "severity": "critical",
+      "owner": "Business owner + Jurist",
+      "urls": [
+        "http://127.0.0.1:56487/despre-faber",
+        "http://127.0.0.1:56487/contact",
+        "http://127.0.0.1:56487/politica-de-confidentialitate",
+        "http://127.0.0.1:56487/termeni-si-conditii"
+      ],
+      "evidence": "Valorile tel/mailto sunt uniforme între suprafețele juridice verificate.",
+      "retest": "Reexecută verificarea legal_identity după remediere/aprobare."
+    },
+    {
+      "criterionId": "contact_privacy",
+      "criterion": "Regulă telefon/email identică în formular și Privacy",
+      "environment": "staging-local-dist",
+      "status": "PASS",
+      "severity": "critical",
+      "owner": "Jurist + Product owner",
+      "urls": [
+        "http://127.0.0.1:56487/contact",
+        "http://127.0.0.1:56487/politica-de-confidentialitate"
+      ],
+      "evidence": "Structura email SAU telefon și informarea Privacy coincid.",
+      "retest": "Reexecută verificarea contact_privacy după remediere/aprobare."
+    },
+    {
+      "criterionId": "form_flow",
+      "criterion": "Formular email SAU telefon, fără pierdere de date",
+      "environment": "staging-local-dist",
+      "status": "PASS",
+      "severity": "critical",
+      "owner": "Frontend + CRM owner",
+      "urls": [
+        "http://127.0.0.1:56487/contact",
+        "http://127.0.0.1:56487/api/contact-triage"
+      ],
+      "evidence": "Structura formularului în două etape este disponibilă; contractul local verifică submit și păstrarea datelor.",
+      "retest": "Reexecută verificarea form_flow după remediere/aprobare."
+    },
+    {
+      "criterionId": "analytics",
+      "criterion": "Funnel fără PII și fără duplicate",
+      "environment": "staging-local-dist",
+      "status": "PASS",
+      "severity": "critical",
+      "owner": "Analytics owner + Backend",
+      "urls": [
+        "http://127.0.0.1:56487/assets/analytics-events.js"
+      ],
+      "evidence": "Asset-ul live conține evenimentele controlate și nu expune cheile PII interzise.",
+      "retest": "Reexecută verificarea analytics după remediere/aprobare."
+    },
+    {
+      "criterionId": "redirects",
+      "criterion": "Redirecturi 301 într-un hop și target canonic",
+      "environment": "staging-local-dist",
+      "status": "PASS",
+      "severity": "critical",
+      "owner": "SEO lead + Backend",
+      "urls": [
+        "http://127.0.0.1:56487/_redirects"
+      ],
+      "evidence": "127 redirecturi verificate. mapa și Worker-ul au trecut contractele locale; serverul static nu emulează edge redirects",
+      "retest": "Reexecută verificarea redirects după remediere/aprobare."
+    },
+    {
+      "criterionId": "sitemap",
+      "criterion": "Sitemap 200/indexabil/canonic și lastmod real",
+      "environment": "staging-local-dist",
+      "status": "PASS",
+      "severity": "critical",
+      "owner": "Technical SEO",
+      "urls": [
+        "http://127.0.0.1:56487/sitemap.xml"
+      ],
+      "evidence": "104 URL-uri 200/indexabile/self-canonical; 26 lastmod verificate.",
+      "retest": "Reexecută verificarea sitemap după remediere/aprobare."
+    },
+    {
+      "criterionId": "editorial",
+      "criterion": "Zero etichete de șablon și forme de control fără diacritice",
+      "environment": "staging-local-dist",
+      "status": "PASS",
+      "severity": "high",
+      "owner": "Editor coordonator",
+      "urls": [
+        "http://127.0.0.1:56487/sitemap.xml"
+      ],
+      "evidence": "104 URL-uri scanate fără etichete interzise.",
+      "retest": "Reexecută verificarea editorial după remediere/aprobare."
+    },
+    {
+      "criterionId": "robots",
+      "criterion": "Crawler-ele AI publice sunt permise, iar rutele private rămân protejate",
+      "environment": "staging-local-dist",
+      "status": "PASS",
+      "severity": "critical",
+      "owner": "Business owner + Technical SEO",
+      "urls": [
+        "http://127.0.0.1:56487/robots.txt"
+      ],
+      "evidence": "Crawler-ele AI aprobate au Allow public, zonele private rămân blocate și Sitemap este prezent.",
+      "retest": "Reexecută verificarea robots după remediere/aprobare."
+    },
+    {
+      "criterionId": "accessibility",
+      "criterion": "Tastatură, focus, zoom, reflow și submit mobil",
+      "environment": "staging-local-dist",
+      "status": "PASS",
+      "severity": "high",
+      "owner": "Accessibility QA + Frontend",
+      "urls": [
+        "http://127.0.0.1:56487/contact"
+      ],
+      "evidence": "Labels, reflow 320px, zoom 200%, target-uri și focus verificate în browser.",
+      "retest": "Reexecută verificarea accessibility după remediere/aprobare."
+    },
+    {
+      "criterionId": "performance",
+      "criterion": "Fără regresii majore LCP, INP sau CLS",
+      "environment": "staging-local-dist",
+      "status": "FAIL",
+      "severity": "high",
+      "owner": "Frontend performance owner",
+      "urls": [
+        "http://127.0.0.1:56487/",
+        "http://127.0.0.1:56487/fonduri-europene",
+        "http://127.0.0.1:56487/consultanta-fonduri-europene",
+        "http://127.0.0.1:56487/digitalizare-imm"
+      ],
+      "evidence": "baseline INP de teren lipsește; comparația folosește numai pragul sintetic de 200ms Măsurători: [{\"path\":\"/\",\"lcpMs\":132,\"cls\":0,\"syntheticInpMs\":6,\"baselineLcpMs\":483.279,\"baselineCls\":0.04291},{\"path\":\"/fonduri-europene\",\"lcpMs\":108,\"cls\":0.00006,\"syntheticInpMs\":28,\"baselineLcpMs\":364.7012,\"baselineCls\":0.00001},{\"path\":\"/consultanta-fonduri-europene\",\"lcpMs\":116,\"cls\":0.00005,\"syntheticInpMs\":14,\"baselineLcpMs\":402.2069,\"baselineCls\":0.000009},{\"path\":\"/digitalizare-imm\",\"lcpMs\":128,\"cls\":0.00005,\"syntheticInpMs\":19,\"baselineLcpMs\":1203.238,\"baselineCls\":0.00002}]",
+      "retest": "Reexecută verificarea performance după remediere/aprobare."
+    }
+  ]
+}

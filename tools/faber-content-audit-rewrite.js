@@ -666,7 +666,7 @@ function updateProgramConfig() {
   const config = JSON.parse(fs.readFileSync(file, "utf8"));
   config.updatedAt = TODAY;
   config.defaults = config.defaults || {};
-  config.defaults.author = "FABER - Atelier de Consultanță";
+  config.defaults.author = "FABER – Atelier de Consultanță";
   config.defaults.contactUrl = "/contact";
   config.defaults.consultingUrl = "/consultanta-fonduri-europene";
 
@@ -756,7 +756,7 @@ function updateBlog() {
   $("#post-icon").text("•");
   $("#post-date").text("");
   $("#post-read-time").text("");
-  $("#post-author").text("FABER - Atelier de Consultanță");
+  $("#post-author").text("FABER – Atelier de Consultanță");
   const cleanupScript = `(function(){var p=new URLSearchParams(location.search);if(/^blog-[123]$/.test(p.get("post")||"")){location.replace("/blog");}}());`;
   if ($("#blog-query-cleanup").length) {
     $("#blog-query-cleanup").text(cleanupScript);
@@ -784,9 +784,9 @@ function updateAboutContactLegal() {
     const $ = loadHtml("despre-faber/index.html");
     setSeo($, {
       title: "Despre FABER | Atelier de Consultanță",
-      description: "Despre FABER - Atelier de Consultanță: eligibilitate verificată, program potrivit, dosar coerent și prudență editorială."
+      description: "Despre FABER – Atelier de Consultanță: eligibilitate verificată, program potrivit, dosar coerent și prudență editorială."
     }, "/despre-faber");
-    $(".hero h1").first().text("Despre FABER - Atelier de Consultanță");
+    $(".hero h1").first().text("Despre FABER – Atelier de Consultanță");
     $(".hero p").first().text("FABER este un atelier de consultanță pentru fonduri europene care lucrează cu firme, fermieri, IMM-uri, start-up-uri, instituții publice și beneficiari GAL. Poziționarea rămâne prudentă: verificăm, clarificăm și pregătim, fără promisiuni de finanțare garantată.");
     saveHtml("despre-faber/index.html", $);
   }

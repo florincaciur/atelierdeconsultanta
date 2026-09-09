@@ -2,6 +2,7 @@ const fs = require("fs");
 const path = require("path");
 const cp = require("child_process");
 const { collectSiteState } = require("./generate-sitemap");
+const { fileForRoute } = require("./structured-data-utils");
 
 const ROOT = path.resolve(__dirname, "..");
 const ALLOWED_STATUS_CODES = new Set(["200", "301", "302", "303", "307", "308"]);
@@ -35,6 +36,10 @@ function validateDomainWorkerConfig(errors) {
   if (workerConfig.name !== "atelierdeconsultanta-domain-seo") errors.push("domain SEO worker name differs from the managed production worker");
   if (workerConfig.main !== "cloudflare/domain-seo-redirects.mjs") errors.push("domain SEO worker main file differs");
   if (workerConfig.workers_dev !== false) errors.push("domain SEO worker must not expose a workers.dev route");
+  const companyLimiter = (workerConfig.ratelimits || []).find((binding) => binding.name === "COMPANY_LOOKUP_RATE_LIMITER");
+  if (!companyLimiter || companyLimiter.simple?.limit !== 20 || companyLimiter.simple?.period !== 60) {
+    errors.push("domain SEO worker must rate-limit company lookups to 20 requests per minute");
+  }
   const routePatterns = new Set((workerConfig.routes || [])
     .filter((item) => item.zone_name === "atelierdeconsultanta.ro")
     .map((item) => item.pattern));
@@ -65,6 +70,16 @@ function validateDomainSeoIntent(file, errors) {
   if (config.deploymentState === "active_cloudflare_worker_route" && config.hsts?.enabled !== true) errors.push(`${file}: active domain worker must enable the verified HSTS policy`);
   if (config.hsts?.enableOnlyAfterHttpRedirectVerification !== true) errors.push(`${file}: HSTS must be gated by live HTTPS verification`);
   if (config.hsts?.preload !== false) errors.push(`${file}: HSTS preload must remain disabled initially`);
+  const declaredRoutes = new Set(config.worker?.routes || []);
+  for (const required of ["atelierdeconsultanta.ro/*", "www.atelierdeconsultanta.ro/*"]) {
+    if (!declaredRoutes.has(required)) errors.push(`${file}: worker intent must cover ${required}`);
+  }
+  if (config.cachePolicy?.preserveExplicitOriginPolicy !== true) errors.push(`${file}: domain middleware must preserve explicit public origin cache policies`);
+  if (config.cachePolicy?.defaultWhenMissing !== "no-store") errors.push(`${file}: responses without an explicit cache policy must default to no-store`);
+  for (const endpoint of ["/api/contact-triage", "/api/crm/qualified-lead", "/api/company/:cui", "/release.json"]) {
+    if (!config.cachePolicy?.neverCache?.includes(endpoint)) errors.push(`${file}: cache policy must keep ${endpoint} out of shared/browser caches`);
+  }
+  if (config.dashboardReview?.status !== "NEEDS_CONFIRMATION") errors.push(`${file}: dashboard-only WAF/bot/cache settings must not be represented as repository-verified`);
 }
 
 function parseRedirects(file) {
@@ -191,10 +206,11 @@ function validateCanonicalHtmlParity(directory, errors) {
   for (const entry of collectSiteState().entries) {
     if (entry.route === "/") continue;
     const route = entry.route.replace(/^\/+|\/+$/g, "");
-    const expected = fs.readFileSync(path.join(ROOT, entry.sourceFile));
+    const canonicalSource = fileForRoute(ROOT, entry.route);
+    const expected = fs.readFileSync(canonicalSource);
     const candidates = [path.join(directory, `${route}.html`), path.join(directory, route, "index.html")].filter((candidate) => fs.existsSync(candidate));
     for (const candidate of candidates) {
-      if (!expected.equals(fs.readFileSync(candidate))) errors.push(`${path.relative(ROOT, candidate)} differs from canonical source ${entry.sourceFile}`);
+      if (!expected.equals(fs.readFileSync(candidate))) errors.push(`${path.relative(ROOT, candidate)} differs from canonical source ${path.relative(ROOT, canonicalSource)}`);
     }
   }
 }

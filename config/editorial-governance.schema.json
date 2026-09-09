@@ -5,7 +5,7 @@
   "type": "object",
   "required": ["schemaVersion", "policy", "records"],
   "properties": {
-    "schemaVersion": { "const": 1 },
+    "schemaVersion": { "const": 2 },
     "policy": {
       "type": "object",
       "required": ["openCallReviewDays", "programReviewDays", "evergreenReviewDays", "humanReviewToken"],
@@ -44,7 +44,9 @@
         "reviewerRole",
         "attributionType",
         "personalNameConsent",
+        "datePublished",
         "verifiedAt",
+        "officialSourceUpdatedAt",
         "officialSourceName",
         "officialSourceUrl",
         "sourceVersion",
@@ -65,7 +67,9 @@
         "reviewerRole": { "type": "string" },
         "attributionType": { "enum": ["organization", "person"] },
         "personalNameConsent": { "type": "boolean" },
+        "datePublished": { "$ref": "#/$defs/dateOrPending" },
         "verifiedAt": { "$ref": "#/$defs/dateOrPending" },
+        "officialSourceUpdatedAt": { "$ref": "#/$defs/dateOrPending" },
         "officialSourceName": { "type": "string" },
         "officialSourceUrl": { "type": "string" },
         "sourceVersion": { "type": "string" },

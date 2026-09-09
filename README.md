@@ -28,7 +28,7 @@ Sursa unică pentru identitatea, statusul, sursele și includerea programelor pe
 - `presentation.carousel=true` și `presentation.carouselOrder` controlează includerea și ordinea în carusel;
 - `presentation.hero=true` și `presentation.heroOrder` controlează selectorul din hero;
 - `presentation.navigationOrder` controlează măsurile din navigarea globală;
-- `discovery.listed=true` controlează includerea în catalog și family hubs;
+- `discovery.listed=true` este echivalentul repo pentru `catalogEnabled=true` și controlează includerea în catalog și family hubs; selecția este centralizată în `catalogPrograms()`;
 - `banners.json`, `partials/global-header.html`, `index.html` și paginile programelor sunt artefacte materializate și nu se editează ca surse factuale independente.
 
 Fluxul sigur de modificare este:
@@ -41,3 +41,25 @@ Fluxul sigur de modificare este:
 `config/homepage-programs.json` păstrează doar comportamentul componentei (limită, autorotire, linkul către catalog și reguli de grid). `config/program-status-taxonomy.json` definește vocabularul de status, iar atribuirea canonică este în fiecare program. `config/program-source-registry.json` păstrează numai catalogul surselor oficiale suplimentare; rolurile surselor fiecărui program sunt în înregistrarea sa.
 
 Panoul `/admin/` nu este autoritatea pentru faptele programelor și nu trebuie folosit pentru publicarea directă a unui `banners.json` independent.
+
+### Audit automat al statusurilor expirate
+
+`npm run audit:funding-status` verifică registrul față de data curentă UTC, fără să modifice fapte, statusuri sau date editoriale. Un `OPEN` expirat ori fără dovezi oficiale produce exit code 1; avertismentele acestui audit nu produc un cod de ieșire nenul. Politica existentă este de 30 de zile pentru `OPEN` și 60 pentru celelalte programe.
+
+`npm run test:funding-status` verifică fixture-urile, prelungirile și comportamentul read-only. Ambele comenzi rulează înainte de `npm run build` și în workflow-ul dedicat la push/PR și zilnic. `npm run audit:funding-status -- --report` păstrează rapoarte interne JSON/Markdown; `--today=YYYY-MM-DD` permite reproducerea unui audit. Reguli, coduri de ieșire și pași de reverificare: [procedura auditului](docs/faber-remediation/STALE_FUNDING_AUDIT_TASK22.md).
+
+## Politica URL și canonical
+
+Hostul canonical este `https://atelierdeconsultanta.ro`. Rutele indexabile folosesc forma curată lowercase, fără `www`, query string, `.html`, `/index.html` sau slash final, cu excepția homepage-ului `/`. Path-urile sunt case-sensitive: o variantă cu majuscule nu este un URL alternativ și poate răspunde 404. Autoritatea pentru setul public este inventarul generat de `tools/generate-route-inventory.js`; `_redirects` și workerul de domeniu păstrează aliasurile istorice prin 301 direct.
+
+Definițiile din `config/seo-programs.json#pages` care indică rute retrase trebuie să declare `redirectTo`. Artefactele HTML păstrate ca fallback folosesc canonicalul destinației și nu devin surse publice concurente. Rulează `npm run test:canonical-policy` după orice schimbare de rutare, canonical, robots, sitemap sau host.
+
+Toate mutările legacy sunt 301 directe către o destinație semantică indexabilă; nu există fallback global 404 către homepage. Rutele necunoscute și `/404` trebuie să emită HTTP 404, iar documentul `404.html` rămâne `noindex, follow`, fără canonical. Rulează `npm run test:redirect-policy` după orice schimbare a grafului de redirect sau a fallback-ului 404.
+
+## Sitemap, crawling și suprafețe pentru asistenți
+
+`sitemap.xml` publică numai URL-uri canonice, indexabile și servite 200. Politica de includere este în `config/sitemap-policy.json`; `lastmod` provine exclusiv din `lastMeaningfulUpdate` editorial verificat, nu din data build-ului. `robots.txt` permite suprafețele publice și activele de randare, protejează endpointurile `/api` și declară un singur sitemap canonical.
+
+Pentru paginile HTML, meta robots și `X-Robots-Tag` nu trebuie să se contrazică. Răspunsurile 404 sunt `noindex, follow`, iar `/admin` rămâne crawlable `noindex` pentru ca directiva să poată fi observată. Preferințele crawlerelor AI sunt aprobate în `config/crawler-access-policy.json` și nu se schimbă implicit.
+
+`llms.txt` este o hartă editorială opțională și selectivă, nu o copie a site-ului. Linkurile sale trebuie să fie canonice, indexabile și prezente în sitemap; data de actualizare urmărește ultima verificare a programelor publice din registry. După orice schimbare a acestor suprafețe rulează `npm run test:sitemap`, `npm run test:crawler-policy` și `npm run verify:llms-urls`.

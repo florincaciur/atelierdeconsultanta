@@ -49,6 +49,10 @@ for (const page of pages.filter((entry) => entry.render)) {
   const canonical = `https://atelierdeconsultanta.ro${page.route}`;
   assert.equal($("title").first().text().trim(), page.title, `${page.route}: title nesincronizat`);
   assert.equal($("meta[name='description']").first().attr("content"), page.description, `${page.route}: meta nesincronizat`);
+  assert.equal($("meta[property='og:title']").first().attr("content"), page.ogTitle || page.title, `${page.route}: og:title nesincronizat`);
+  assert.equal($("meta[property='og:description']").first().attr("content"), page.ogDescription || page.description, `${page.route}: og:description nesincronizat`);
+  if (page.ogTitle) assert.equal($("meta[name='twitter:title']").first().attr("content"), page.ogTitle, `${page.route}: twitter:title nesincronizat`);
+  if (page.ogDescription) assert.equal($("meta[name='twitter:description']").first().attr("content"), page.ogDescription, `${page.route}: twitter:description nesincronizat`);
   assert.equal($("link[rel='canonical']").first().attr("href"), canonical, `${page.route}: canonical greșit`);
   assert.ok(!/noindex/i.test($("meta[name='robots']").first().attr("content") || ""), `${page.route}: pagina publică este noindex`);
   assert.equal($("h1").length, 1, `${page.route}: trebuie să existe un singur H1`);

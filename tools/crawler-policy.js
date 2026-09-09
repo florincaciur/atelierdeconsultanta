@@ -58,8 +58,12 @@ function parseHeaders(text) {
 
 function headerRuleMatchesPath(pattern, pathname) {
   if (pattern === pathname) return true;
-  if (!pattern.endsWith("*")) return false;
-  return pathname.startsWith(pattern.slice(0, -1));
+  if (!pattern.includes("*")) return false;
+  const expression = pattern
+    .split("*")
+    .map((part) => part.replace(/[.*+?^${}()|[\]\\]/gu, "\\$&"))
+    .join(".*");
+  return new RegExp(`^${expression}$`, "u").test(pathname);
 }
 
 function validatePolicy() {
@@ -118,4 +122,4 @@ function validatePolicy() {
   return { policy, parsed, errors };
 }
 
-module.exports = { ROOT, groupFor, parseHeaders, parseRobots, validatePolicy };
+module.exports = { ROOT, groupFor, headerRuleMatchesPath, parseHeaders, parseRobots, validatePolicy };

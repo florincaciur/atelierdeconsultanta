@@ -1,6 +1,6 @@
 # Taxonomia unică de status FABER
 
-Revizie semantică: **2026-08-23**. Definiții canonice: `config/program-status-taxonomy.json`; atribuiri per program: `config/seo-programs.json#programs[*].canonicalStatus`. Acest document este generat de `tools/generate-status-governance-docs.js` și nu este o pagină publică.
+Revizie semantică: **2026-09-06**. Definiții canonice: `config/program-status-taxonomy.json`; atribuiri per program: `config/seo-programs.json#programs[*].canonicalStatus`. Acest document este generat de `tools/generate-status-governance-docs.js` și nu este o pagină publică.
 
 ## Contractul mecanismului
 
@@ -287,8 +287,8 @@ Maparea de mai jos folosește snapshot-ul factual de bază verificat în registr
 | `program-regional-nord-est` | `calendar_estimativ` | `UNCONFIRMED` | Status neconfirmat — verifică sursa oficială | umbrella_program | Apelurile au stări și calendare distincte; pagina agregată nu poate moșteni o singură stare de apel. |
 | `fonduri-regionale` | `calendar_estimativ` | `UNCONFIRMED` | Status neconfirmat — verifică sursa oficială | umbrella_program | Catalogul agregă programe și apeluri cu stări diferite. |
 | `dr12-afir` | `consultare_publica` | `CONSULTATIVE_GUIDE` | Ghid consultativ publicat — depunerea nu este deschisă | program_call | Ghidul este consultativ, iar intervalul de consultare este încheiat; depunerea nu este deschisă. |
-| `dr14-afir` | `ghid_aprobat_nedeschis` | `SCHEDULED` | Apel programat — depuneri între 01.09.2026 și 31.10.2026 | session | Anunțul oficial indică o fereastră viitoare 01.09.2026–31.10.2026. |
-| `dr18-afir` | `ghid_aprobat_nedeschis` | `SCHEDULED` | Apel programat — depuneri între 01.09.2026 și 31.10.2026 | session | Anunțul oficial indică o fereastră viitoare 01.09.2026–31.10.2026. |
+| `dr14-afir` | `apel_deschis` | `OPEN` | Apel deschis — depuneri până la 31.10.2026 | session | Contorul AFIR confirmă sesiunea activă și proiecte depuse. Disponibilitatea se verifică separat pe fiecare componentă. |
+| `dr18-afir` | `apel_deschis` | `OPEN` | Apel deschis — depuneri până la 31.10.2026 | session | Sesiune activă verificată în contorul oficial AFIR la 06.09.2026. |
 | `start-up-nation` | `apel_inchis` | `CLOSED` | Apel închis — depunerea nu este deschisă | edition | Înscrierile persoanelor juridice s-au încheiat; registry-ul nu consemnează finalizarea întregii proceduri. |
 | `femeia-antreprenor` | `apel_inchis` | `CLOSED` | Apel închis — depunerea nu este deschisă | edition | Depunerea ediției 2024 este închisă, iar ordinea finală la evaluare nu dovedește finalizarea întregii proceduri. |
 | `digitalizare-imm` | `apel_inchis` | `CLOSED` | Apel închis — depunerea nu este deschisă | program_call | Registry-ul confirmă depunerea închisă, fără o dovadă distinctă de finalizare. |
@@ -303,7 +303,7 @@ Maparea de mai jos folosește snapshot-ul factual de bază verificat în registr
 | `e-move-ro` | `ghid_aprobat_nedeschis` | `APPROVED_SCHEME` | Schemă aprobată — depunerea nu este deschisă | scheme | Actul înregistrat actualizează schema; nu există dovadă de sesiune deschisă. |
 | `pocidif-21` | `apel_deschis` | `OPEN` | Apel deschis — depuneri până la 30.09.2026 | session | Pagina oficială înregistrată confirmă sesiunea 30.06.2026–30.09.2026, iar fereastra include data verificării. |
 | `pnrr` | `calendar_estimativ` | `UNCONFIRMED` | Status neconfirmat — verifică sursa oficială | umbrella_program | Componentele și apelurile PNRR au stări distincte; implementarea programului nu înseamnă depunere deschisă. |
-| `diaspora-investeste-acasa` | `calendar_estimativ` | `ANNOUNCED` | Program anunțat — depunerea nu este deschisă | program | Există comunicare oficială despre program, dar mecanismul de aplicare nu este publicat. |
+| `diaspora-investeste-acasa` | `ghid_aprobat_nedeschis` | `APPROVED_SCHEME` | Schemă aprobată — depunerea nu este deschisă | program | Program aprobat, în curs de operaționalizare la BID; lista băncilor partenere urmează să fie publicată. |
 | `e-drive` | `ghid_aprobat_nedeschis` | `APPROVED_SCHEME` | Schemă aprobată — depunerea nu este deschisă | scheme | Actul înregistrat actualizează schema; nu există dovadă de sesiune deschisă. |
 | `e-mobility-ro` | `ghid_aprobat_nedeschis` | `APPROVED_SCHEME` | Schemă aprobată — depunerea nu este deschisă | scheme | Actul înregistrat actualizează schema; nu există dovadă de sesiune deschisă. |
 | `fondul-modernizare-pc1-stocare` | `ghid_aprobat_nedeschis` | `FINAL_GUIDE` | Ghid final publicat — depunerea nu este deschisă | program_call | Ghidul final este aprobat, iar perioada de depunere nu este anunțată. |

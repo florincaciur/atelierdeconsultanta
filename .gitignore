@@ -4,6 +4,11 @@ config/articol-*.json
 # Cloudflare Workers static asset build output.
 dist/
 .wrangler/
+.env
+.env.*
+.dev.vars
+.dev.vars.*
+!.env.example
 
 # Local package installs.
 node_modules/
@@ -20,3 +25,7 @@ FABER*Fonduri Europene_files/
 /docs/section-cleanup-*.png
 /reports/lighthouse-*.json
 /reports/p1-06-lighthouse-*.json
+
+# Internal, time-dependent funding audit reports; retained as CI artifacts.
+/reports/funding-status-audit.json
+/reports/funding-status-audit.md

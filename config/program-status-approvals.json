@@ -7,12 +7,12 @@
     {
       "programId": "dr12-afir",
       "approvalState": "approved",
-      "validatorName": "Caciur Florin / Bogdan Iftode",
-      "approvedAt": "2026-08-18",
-      "verifiedAt": "2026-08-18",
+      "validatorName": "Codex — verificare documentară la solicitarea utilizatorului",
+      "approvedAt": "2026-09-06",
+      "verifiedAt": "2026-09-06",
       "proposedStatus": "consultare_publica",
       "proposedStatusLabel": "Ghid consultativ publicat – consultarea s-a încheiat; depunerea nu este deschisă. Condițiile se pot modifica.",
-      "proposedCopy": "Ghid consultativ publicat – consultarea s-a încheiat la 30.03.2026. Depunerea nu este deschisă. Condițiile se pot modifica. — verificat la 2026-08-18. Sursa: AFIR, Ghidul solicitantului DR-12 – versiunea consultativă, publicat la 19.03.2026.",
+      "proposedCopy": "Ghid consultativ publicat – consultarea s-a încheiat; depunerea nu este deschisă. Condițiile se pot modifica. — verificat la 2026-09-06. Depunerea nu este deschisă. Sursa: Agenția pentru Finanțarea Investițiilor Rurale (AFIR), Versiune consultativă publicată la 19.03.2026; termenul pentru observații s-a încheiat la 30.03.2026.",
       "officialInstitution": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
       "officialDocument": "Ghidul solicitantului DR-12 – versiunea consultativă",
       "officialDocumentVersion": "Versiune consultativă publicată la 19.03.2026; termenul pentru observații s-a încheiat la 30.03.2026",
@@ -25,10 +25,10 @@
       ],
       "applicationStart": null,
       "applicationEnd": null,
-      "numericClaimsApproved": false,
+      "numericClaimsApproved": true,
       "observedBefore": "Homepage: card «Activ» cu 200.000 EUR și 80%/65%; meniu: «variantă consultativă»; paginile DR12 foloseau formulări nealiniate.",
       "unresolved": [
-        "Valorile numerice rămân nepublicate deoarece aprobarea acoperă statutul și documentul, nu cuantumul sau intensitatea sprijinului."
+        "Valorile sunt publicate numai ca prevederi ale ghidului consultativ; ghidul final și calendarul rămân de confirmat."
       ],
       "publicationHoldUrls": [
         "/dr12-afir",
@@ -60,23 +60,30 @@
         "/studii-de-caz-fonduri-europene",
         "/verificare-eligibilitate-fonduri-europene",
         "/webinarii"
-      ]
+      ],
+      "previousApproval": {
+        "validatorName": "Caciur Florin / Bogdan Iftode",
+        "approvedAt": "2026-08-18",
+        "verifiedAt": "2026-08-18",
+        "proposedStatus": "consultare_publica",
+        "numericClaimsApproved": false
+      }
     },
     {
       "programId": "dr14-afir",
       "approvalState": "approved",
-      "validatorName": "Caciur Florin / Bogdan Iftode",
-      "approvedAt": "2026-08-18",
-      "verifiedAt": "2026-08-18",
-      "proposedStatus": "ghid_aprobat_nedeschis",
-      "proposedStatusLabel": "Sesiune anunțată – depuneri 1 septembrie–31 octombrie 2026",
-      "proposedCopy": "Sesiune DR 14 anunțată – verificat la 2026-08-18. Depunerea nu este deschisă. Sursa: AFIR, Anunțul A1.2/01/2026 publicat la 14.08.2026; depunerile sunt programate între 01.09.2026, ora 09:00, și 31.10.2026, ora 16:00.",
+      "validatorName": "Codex — verificare documentară la solicitarea utilizatorului",
+      "approvedAt": "2026-09-06",
+      "verifiedAt": "2026-09-06",
+      "proposedStatus": "apel_deschis",
+      "proposedStatusLabel": "Sesiune deschisă – depuneri 1 septembrie–31 octombrie 2026",
+      "proposedCopy": "Sesiune deschisă – depuneri 1 septembrie–31 octombrie 2026 — verificat la 2026-09-06. Depunerea este deschisă. Sursa: Agenția pentru Finanțarea Investițiilor Rurale (AFIR), Contorul oficial al sesiunilor active DR-14; cererea v1.1 din 25.08.2026 și clarificarea pe componente din 21.08.2026.",
       "officialInstitution": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
       "officialDocument": "Anunțul cererii de proiecte DR 14",
-      "officialDocumentVersion": "Anunțul A1.2/01/2026 pentru sesiunea DR 14, publicat la 14.08.2026",
+      "officialDocumentVersion": "Contorul oficial al sesiunilor active DR-14; cererea v1.1 din 25.08.2026 și clarificarea pe componente din 21.08.2026",
       "officialDocumentDate": "2026-08-14",
       "documentCharacter": "final",
-      "officialUrl": "https://www.afir.ro/instrumente/sesiuni/sesiuni-primire-proiecte/",
+      "officialUrl": "https://depunerepspac.afir.ro/Sesiune/Lista",
       "additionalOfficialEvidence": [
         "https://stportalafirprod.blob.core.windows.net/media/media/otup004l/anunt_cerereproiecte_dr_14_.pdf",
         "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-14/",
@@ -87,7 +94,7 @@
       "numericClaimsApproved": true,
       "observedBefore": "Pagina și suprafețele globale indicau în mod depășit o variantă consultativă, fără valorile confirmate în ghidul final.",
       "unresolved": [
-        "Eventualele erate, clarificări și închiderea anticipată pe fiecare componentă trebuie urmărite până la finalul sesiunii."
+        "Calendarul și condițiile se reverifică în sursele oficiale înaintea depunerii."
       ],
       "publicationHoldUrls": [
         "/dr14",
@@ -112,33 +119,39 @@
         "/intrebari/ce-documente-sunt-necesare-pentru-dr12",
         "/resurse-utile",
         "/studii-de-caz-fonduri-europene"
-      ]
+      ],
+      "previousApproval": {
+        "validatorName": "Caciur Florin / Bogdan Iftode",
+        "approvedAt": "2026-08-18",
+        "verifiedAt": "2026-08-18",
+        "proposedStatus": "ghid_aprobat_nedeschis",
+        "numericClaimsApproved": true
+      }
     },
     {
       "programId": "pro-infra",
       "approvalState": "approved",
-      "validatorName": "Caciur Florin / Bogdan Iftode",
-      "approvedAt": "2026-08-18",
-      "verifiedAt": "2026-08-18",
+      "validatorName": "Codex — verificare documentară la solicitarea utilizatorului",
+      "approvedAt": "2026-09-06",
+      "verifiedAt": "2026-09-06",
       "proposedStatus": "ghid_aprobat_nedeschis",
-      "proposedStatusLabel": "Schemă aprobată, în revizuire – depunerea nu este deschisă",
-      "proposedCopy": "Schemă aprobată, în revizuire — verificat la 2026-08-18. Depunerea nu este deschisă. Sursa: Ministerul Transporturilor și Infrastructurii, Schema PRO INFRA și procesul de revizuire anunțat în martie 2026.",
+      "proposedStatusLabel": "Schemă aprobată și modificată – depunerea nu este deschisă",
+      "proposedCopy": "Schemă aprobată și modificată – depunerea nu este deschisă — verificat la 2026-09-06. Depunerea nu este deschisă. Sursa: Ministerul Transporturilor și Infrastructurii, Schema PRO INFRA consolidată, art. 5, 13 și 16, cu modificările Ordinului nr. 101/12.02.2026.",
       "officialInstitution": "Ministerul Transporturilor și Infrastructurii",
       "officialDocument": "Schema de ajutor de stat privind sprijinirea investițiilor destinate îmbunătățirii eficienței energetice a activităților industriale — PRO INFRA",
-      "officialDocumentVersion": "Ordinul MTI nr. 2.292/29.12.2025, publicat în Monitorul Oficial nr. 20/14.01.2026; schemă în proces de revizuire anunțat de MTI în martie 2026",
+      "officialDocumentVersion": "Schema PRO INFRA consolidată, art. 5, 13 și 16, cu modificările Ordinului nr. 101/12.02.2026",
       "officialDocumentDate": "2026-02-12",
       "documentCharacter": "schema_aprobata",
-      "officialUrl": "https://legislatie.just.ro/Public/DetaliiDocument/306915",
+      "officialUrl": "https://legislatie.just.ro/Public/DetaliiDocument/306916",
       "additionalOfficialEvidence": [
         "https://legislatie.just.ro/Public/DetaliiDocumentAfis/306916"
       ],
       "applicationStart": null,
       "applicationEnd": null,
-      "numericClaimsApproved": false,
+      "numericClaimsApproved": true,
       "observedBefore": "Homepage: card «Activ» cu 15.000.000 EUR și 100%, în timp ce meniul spunea schemă aprobată și pagina nu confirma un apel deschis.",
       "unresolved": [
-        "Nu a fost identificat în sursa oficială verificată un interval efectiv de depunere.",
-        "Plafonul și intensitatea rămân nepublicate până la confirmarea documentului operațional aplicabil apelului."
+        "Calendarul și condițiile se reverifică în sursele oficiale înaintea depunerii."
       ],
       "publicationHoldUrls": [
         "/pro-infra"
@@ -148,7 +161,14 @@
         "/fonduri-europene",
         "/fonduri-europene-nerambursabile-2026",
         "/pro-infra"
-      ]
+      ],
+      "previousApproval": {
+        "validatorName": "Caciur Florin / Bogdan Iftode",
+        "approvedAt": "2026-08-18",
+        "verifiedAt": "2026-08-18",
+        "proposedStatus": "ghid_aprobat_nedeschis",
+        "numericClaimsApproved": false
+      }
     },
     {
       "programId": "digitalizare-imm",

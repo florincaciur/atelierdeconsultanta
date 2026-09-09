@@ -1,8 +1,8 @@
 /404
-  X-Robots-Tag: noindex, nofollow
+  X-Robots-Tag: noindex, follow
 
 /404.html
-  X-Robots-Tag: noindex, nofollow
+  X-Robots-Tag: noindex, follow
 
 /ro/*
   X-Robots-Tag: noindex, nofollow
@@ -18,45 +18,41 @@
 
 /assets/*
   X-Robots-Tag: noindex, nofollow
-  Cache-Control: public, max-age=31536000, immutable
-
-/*.css
-  X-Robots-Tag: noindex, nofollow
-  Cache-Control: public, max-age=31536000, immutable
-
-/*.js
-  X-Robots-Tag: noindex, nofollow
-  Cache-Control: public, max-age=31536000, immutable
+  Cache-Control: public, max-age=86400, must-revalidate
 
 /*.png
-  Cache-Control: public, max-age=31536000, immutable
+  Cache-Control: public, max-age=86400, must-revalidate
 
 /*.jpg
-  Cache-Control: public, max-age=31536000, immutable
+  Cache-Control: public, max-age=86400, must-revalidate
 
 /*.jpeg
-  Cache-Control: public, max-age=31536000, immutable
+  Cache-Control: public, max-age=86400, must-revalidate
 
 /*.webp
-  Cache-Control: public, max-age=31536000, immutable
+  Cache-Control: public, max-age=86400, must-revalidate
 
 /*.avif
-  Cache-Control: public, max-age=31536000, immutable
+  Cache-Control: public, max-age=86400, must-revalidate
 
 /*.svg
-  Cache-Control: public, max-age=31536000, immutable
+  Cache-Control: public, max-age=86400, must-revalidate
 
 /*.ico
-  Cache-Control: public, max-age=31536000, immutable
+  Cache-Control: public, max-age=86400, must-revalidate
 
 /*.woff2
-  Cache-Control: public, max-age=31536000, immutable
+  Cache-Control: public, max-age=86400, must-revalidate
 
 /robots.txt
   X-Robots-Tag: noindex, nofollow
   Cache-Control: public, max-age=3600
 
 /sitemap.xml
+  X-Robots-Tag: noindex, nofollow
+  Cache-Control: public, max-age=3600
+
+/sitemap-*.xml
   X-Robots-Tag: noindex, nofollow
   Cache-Control: public, max-age=3600
 
@@ -85,9 +81,6 @@
   X-Robots-Tag: index, follow
 
 /dr12-vs-dr14
-  X-Robots-Tag: index, follow
-
-/dr14-afir-ferme-mici
   X-Robots-Tag: index, follow
 
 /fonduri-nerambursabile

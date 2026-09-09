@@ -24,9 +24,25 @@ Acest fișier conține numai informații interne sau aprobări care nu pot fi de
 
 **Stare observată:** `case_studies_and_results` este blocat în guvernanța About.
 
-**Confirmare necesară:** documente justificative, metoda de calcul și perioada pentru orice rezultat, acordul beneficiarului, regula de anonimizare și aprobarea formulării publice.
+**Confirmare necesară pentru fiecare caz:** dacă beneficiarul poate fi publicat; sectorul; programul; serviciul FABER; investiția; etapa exactă; rezultatul verificabil; valoarea și locația numai dacă sunt publicabile; documentele justificative; metoda de calcul și perioada pentru orice rezultat; regula de anonimizare; permisiunea separată pentru nume/logo; aprobarea formulării publice.
 
-**De ce este necesară:** fără probe nu pot fi publicate cifre, rezultate, testimoniale sau claims despre experiența FABER.
+**De ce este necesară:** fără probe nu pot fi publicate cifre, rezultate sau claims despre experiența FABER. La auditul Task 24 din 27 august 2026, numărul de studii de caz aprobate pentru publicare este zero; pagina publică doar metodologia și criteriile.
+
+## 3A. Proveniență editorială istorică
+
+**Stare observată:** registrul poate demonstra `dateModified`, `verifiedAt` și istoricul material pentru paginile guvernate, dar prima dată de publicare nu este documentată pentru majoritatea rutelor. Numele persoanelor care au îndeplinit rolurile de autor/reviewer nu au profiluri publice aprobate. Data unui commit, data buildului și etichetele generice de workflow nu sunt folosite drept substitut.
+
+**Confirmare necesară:** pentru fiecare rută, prima dată de publicare susținută de CMS/arhivă; separat, numele și rolul real al autorului/reviewerului, acordul de publicare și URL-ul profilului vizibil. Pentru sursele oficiale, furnizați data actualizării numai când documentul sau registrul instituției o indică explicit.
+
+**De ce este necesară:** fără aceste dovezi, `datePublished` și `officialSourceUpdatedAt` rămân interne ca `DE_VALIDAT_UMAN`, iar author/reviewer nominal nu este publicat în conținut sau JSON-LD.
+
+## 3B. Testimoniale FABER
+
+**Stare observată:** `testimonials` este blocat în guvernanța About, iar numărul de testimoniale aprobate pentru publicare este zero.
+
+**Confirmare necesară pentru fiecare testimonial:** textul aprobat, autorul, funcția, compania, permisiunea de publicare și opțiunea de anonimizare. Dacă se dorește nume complet ori logo, permisiunea trebuie să le acopere explicit.
+
+**De ce este necesară:** fără aceste elemente, feedbackul rămâne intern. Nu se publică citate reconstruite, `Review` sau `AggregateRating` nejustificat.
 
 ## 4. Afilieri și referințe AFIR
 

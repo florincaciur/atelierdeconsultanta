@@ -52,9 +52,22 @@
       ]
     },
     {
-      "id": "calculator-soc",
-      "label": "Calculator SO",
-      "href": "/calculator-soc"
+      "id": "calculatoare",
+      "label": "Calculatoare",
+      "items": [
+        {
+          "label": "Calculator punctaj POR Micro – Apelul 2",
+          "href": "/investitii-modernizarea-microintreprinderilor-apel-2#simulator-punctaj-apel-2"
+        },
+        {
+          "label": "Calculator SO",
+          "href": "/calculator-soc"
+        },
+        {
+          "label": "Calculator punctaj DR 14",
+          "href": "/dr14#dr14-punctaj"
+        }
+      ]
     },
     {
       "id": "despre-faber",

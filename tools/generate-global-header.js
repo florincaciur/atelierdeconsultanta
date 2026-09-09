@@ -3,13 +3,14 @@
 
 const fs = require("fs");
 const path = require("path");
+const { canonicalContactIdentity } = require("./canonical-contact");
 const { loadProgramConfig, navigationPrograms } = require("./program-factual-governance");
 
 const ROOT = path.resolve(__dirname, "..");
 const CONFIG_PATH = path.join(ROOT, "config", "main-navigation.json");
 const PARTIAL_PATH = path.join(ROOT, "partials", "global-header.html");
 const REPORT_PATH = path.join(ROOT, "reports", "main-navigation-sitemap-2026-07-21.md");
-const ASSET_VERSION = "20260809-1";
+const ASSET_VERSION = "20260906-3";
 
 function loadConfig() {
   return JSON.parse(fs.readFileSync(CONFIG_PATH, "utf8"));
@@ -129,16 +130,16 @@ function mobileDirect(item) {
 
 function logo() {
   return `<a class="nav-logo" href="/" aria-label="FABER – Atelier de Consultanță, acasă" data-analytics-event="nav_click" data-analytics-component="desktop_nav" data-analytics-cta-id="home_logo" data-analytics-target="/">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 44" width="264" height="48.4" aria-hidden="true">
-        <text x="0" y="32" font-family="Georgia,'Times New Roman',serif" font-size="28" font-weight="700" fill="#b84716" letter-spacing="3">FABER</text>
-        <path d="M118,22 L125,13 L132,22 L125,31 Z" fill="white" opacity="0.95"></path>
-        <text x="138" y="18" font-family="'Inter','Helvetica Neue',sans-serif" font-size="10" font-weight="600" fill="white" letter-spacing="2">ATELIER de</text>
-        <text x="138" y="33" font-family="'Inter','Helvetica Neue',sans-serif" font-size="10" font-weight="600" fill="white" letter-spacing="2">CONSULTANȚĂ</text>
-      </svg>
+      <img class="faber-brand-logo" src="/assets/faber-navbar-refined.svg" alt="FABER – Atelier de Consultanță" width="600" height="150" decoding="async" fetchpriority="high">
     </a>`;
 }
 
-function whatsappDialog() {
+function whatsappDialog(contact = canonicalContactIdentity()) {
+  if (!contact.whatsappPhones.length) throw new Error("Registrul juridic nu conține niciun număr WhatsApp aprobat.");
+  const options = contact.whatsappPhones.map((phone, index) => {
+    const optionId = String.fromCharCode("a".charCodeAt(0) + index);
+    return `      <a href="${escapeHtml(phone.whatsappHref)}" target="_blank" rel="noopener noreferrer" data-analytics-event="contact_whatsapp" data-analytics-component="whatsapp_dialog" data-analytics-cta-id="whatsapp_option_${optionId}"><span>WhatsApp</span><strong>${escapeHtml(phone.display)}</strong></a>`;
+  }).join("\n");
   return `<div id="eligibility-whatsapp-dialog" class="eligibility-whatsapp-dialog" role="dialog" aria-modal="true" aria-labelledby="eligibility-whatsapp-title" hidden>
   <div class="eligibility-whatsapp-card" role="document">
     <button type="button" class="eligibility-whatsapp-close" data-whatsapp-dialog-close aria-label="Închide fereastra">×</button>
@@ -146,8 +147,7 @@ function whatsappDialog() {
     <h2 id="eligibility-whatsapp-title">Trimite mesaj prin WhatsApp</h2>
     <p>Alege numărul la care dorești să trimiți mesajul.</p>
     <div class="eligibility-whatsapp-options">
-      <a href="https://wa.me/40769828338" target="_blank" rel="noopener noreferrer" data-analytics-event="contact_whatsapp" data-analytics-component="whatsapp_dialog" data-analytics-cta-id="whatsapp_option_a"><span>WhatsApp</span><strong>0769 828 338</strong></a>
-      <a href="https://wa.me/40753326229" target="_blank" rel="noopener noreferrer" data-analytics-event="contact_whatsapp" data-analytics-component="whatsapp_dialog" data-analytics-cta-id="whatsapp_option_b"><span>WhatsApp</span><strong>0753 326 229</strong></a>
+${options}
     </div>
   </div>
 </div>`;
@@ -201,10 +201,10 @@ CTA separat: **${config.cta.label}** → \`${config.cta.href}\`
 |---|---|---|
 ${rows}
 
-` + "```mermaid\ngraph TD\n  NAV[\"Navigare principală\"] --> S[\"Servicii\"]\n  NAV --> P[\"Programe\"]\n  NAV --> SO[\"Calculator SO\"]\n  NAV --> D[\"Despre FABER\"]\n  NAV --> C[\"Contact\"]\n  NAV -. CTA separat .-> V[\"Începe verificarea proiectului\"]\n```\n" + `
+` + "```mermaid\ngraph TD\n  NAV[\"Navigare principală\"] --> S[\"Servicii\"]\n  NAV --> P[\"Programe\"]\n  NAV --> CALC[\"Calculatoare\"]\n  CALC --> MICRO[\"Punctaj POR Micro – Apelul 2\"]\n  CALC --> SO[\"Calculator SO\"]\n  CALC --> DR14[\"Punctaj DR 14\"]\n  NAV --> D[\"Despre FABER\"]\n  NAV --> C[\"Contact\"]\n  NAV -. CTA separat .-> V[\"Începe verificarea proiectului\"]\n```\n" + `
 ## Reguli
 
-- Desktop: trei disclosure-uri semantice, Calculator SO și Contact ca linkuri directe, plus CTA separat.
+- Desktop: patru disclosure-uri semantice, inclusiv meniul Calculatoare, Contact ca link direct și CTA separat.
 - Mobil: butoane disclosure reale cu \`aria-expanded\`; linkurile nu deschid accidental grupurile.
 - Maximum ${config.policy.maxVisibleItemsPerGroup} linkuri vizibile în fiecare grup.
 - Navigarea nu conține statusuri, etichete de status, date de verificare sau valori de program.
@@ -238,4 +238,4 @@ if (require.main === module) {
   }
 }
 
-module.exports = { ASSET_VERSION, CONFIG_PATH, PARTIAL_PATH, loadConfig, renderHeader, renderReport, run };
+module.exports = { ASSET_VERSION, CONFIG_PATH, PARTIAL_PATH, loadConfig, renderHeader, renderReport, run, whatsappDialog };

@@ -22,6 +22,9 @@ const CANONICAL_DIRECTORY_ONLY_SLUGS = new Set([
   "pro-infra",
   "pocidif-21"
 ]);
+const HAND_AUTHORED_SLUGS = new Set([
+  "investitii-modernizarea-microintreprinderilor-apel-2"
+]);
 const {
   bannerForRoute,
   createBannerIndex,
@@ -53,6 +56,7 @@ const {
   syncLlmsText
 } = require("./sync-program-factual-governance");
 const { designFamilyForSlug } = require("./design-family-map");
+const { normalizeFaqPairs } = require("./faq-governance");
 const {
   SITE,
   PAGE_KINDS,
@@ -589,6 +593,7 @@ function renderFamilyCards(page) {
     "Urmator pas": "verificare concreta pe cazul tau"
   };
   return `<section class="design-card-grid design-card-grid--${esc(family)}" aria-label="Repere vizuale ${esc(program)}">
+        <h2 class="design-card-grid__title">Repere pentru verificare</h2>
         ${labels.map((label) => `<article class="mini-card design-card"><span class="design-card__badge">${esc(label)}</span><h3>${esc(label)}</h3><p>${esc(detailByLabel[label] || `Verificare pentru ${program}`)}</p></article>`).join("\n        ")}
       </section>`;
 }
@@ -727,51 +732,18 @@ function minWordsForPage(page) {
   return 900;
 }
 
-function minFaqForPage(page) {
-  if (isEditorialProgram(page)) {
-    if (Number(page.minFaq) > 0) return Number(page.minFaq);
-    if (PILLAR_SLUGS.has(page.slug)) return 10;
-    return Math.min(6, Math.max(2, (page.faq || []).length || 2));
-  }
-  if (Number(page.minFaq) > 0) return Number(page.minFaq);
-  if (PILLAR_SLUGS.has(page.slug)) return 10;
-  if (SECONDARY_SLUGS.has(page.slug)) return 6;
-  if (page.type === "program" || page.type === "hub" || page.type === "service") return 8;
-  return 4;
-}
-
 function keywordsForPage(page) {
   return page.keywords || KEYWORDS_BY_SLUG[page.slug] || [];
 }
 
 function faqsForPage(page) {
-  const faq = Array.isArray(page.faq) ? [...page.faq] : [];
-  const programName = page.programName || page.h1 || "program";
-  const keyword = keywordsForPage(page)[0] || programName;
-  const minimumFaq = minFaqForPage(page);
-  const additions = [
-    [`Cum verific daca ${programName} este potrivit pentru proiectul meu?`, `Porneste de la solicitant, cod CAEN, localitate, investitie, buget si documentele disponibile. Daca una dintre aceste piese nu se potriveste cu apelul activ, proiectul trebuie ajustat inainte de depunere.`],
-    [`Cand nu merita sa aplic pentru ${programName}?`, `Nu merita sa aplici cand nu poti dovedi eligibilitatea, cand cheltuielile principale nu sunt permise, cand cofinantarea nu este acoperita sau cand calendarul nu permite documente complete si verificabile.`],
-    [`Ce documente trebuie pregatite pentru ${programName}?`, "De regula sunt necesare documente de firma sau solicitant, documente pentru activitate si locatie, date financiare, oferte, descrierea investitiei si informatii despre cofinantare."],
-    [`Cum se verifica un cod CAEN pentru ${programName}?`, "Codul CAEN se verifica prin certificatul constatator, activitatea reala, autorizarea necesara, lista de coduri eligibile a apelului si legatura directa dintre investitie si activitatea finantata."],
-    [`Ce cheltuieli sunt sensibile la evaluare pentru ${programName}?`, "Sunt sensibile cheltuielile greu de justificat, activele supradimensionate, serviciile descrise vag, achizitiile incepute prea devreme si costurile care nu au legatura directa cu obiectivele proiectului."],
-    [`Cum tratez cofinantarea si cheltuielile neeligibile pentru ${programName}?`, "Cofinantarea si cheltuielile neeligibile trebuie estimate separat de grant. Include rezerve pentru TVA, diferente de pret, costuri neacoperite si intarzieri in rambursare."],
-    [`Ce greseli duc frecvent la respingere sau clarificari pentru ${programName}?`, "Apar probleme cand documentele sunt expirate, ofertele sunt incomplete, bugetul nu se leaga de activitate, punctajul este estimat optimist sau solicitantul nu poate sustine implementarea."],
-    [`Cum folosesc informatiile despre ${programName} in 2026?`, "Foloseste informatiile ca filtru initial si confirma intotdeauna regulile in apelul activ. Programele pot schimba praguri, documente, punctaje si termene de la o sesiune la alta."],
-    [`Ce rol are consultanta pentru ${keyword}?`, `Consultanta ajuta la trierea programului, verificarea documentelor, structurarea bugetului, pregatirea raspunsurilor la clarificari si reducerea riscurilor, dar nu poate garanta aprobarea finantarii.`],
-    [`Cat de repede trebuie inceputa pregatirea dosarului pentru ${programName}?`, "Pregatirea trebuie inceputa inainte de deschiderea efectiva a apelului, mai ales daca sunt necesare oferte, documente pentru spatiu, autorizatii, calcule de punctaj sau clarificari privind solicitantul."]
-  ];
-  if (faq.length >= minimumFaq) return faq;
-  const seen = new Set(faq.map(([question]) => String(question).toLowerCase()));
-  for (const item of additions) {
-    const key = item[0].toLowerCase();
-    if (!seen.has(key)) {
-      faq.push(item);
-      seen.add(key);
-    }
-    if (faq.length >= minimumFaq) break;
-  }
-  return faq;
+  return normalizeFaqPairs(page.faq);
+}
+
+function stripEmptyFaqMarkup(html) {
+  return html
+    .replace(/\s*<section\b([^>]*)>\s*<h2\b([^>]*)>(?:FAQ|Intrebari frecvente|Întrebări frecvente|&#206;ntreb&#259;ri frecvente)<\/h2>\s*<\/section>/giu, "")
+    .replace(/\s*<h2\b[^>]*>(?:FAQ|Intrebari frecvente|Întrebări frecvente)<\/h2>\s*(?=<h2\b|<\/article>|<\/main>)/giu, "");
 }
 
 function renderKeywordIntent(page) {
@@ -841,7 +813,7 @@ function schemaGraph(page, config, metadata = metadataForPage(page)) {
     pageNode,
     breadcrumbSchema(breadcrumbItemsForPage(page)),
     factualProgram ? fundingProgramSchema(factualProgram) : null,
-    faqPageSchema(faq, { minItems: 2 })
+    faqPageSchema(faq, { minItems: 2, url: canonical(page) })
   ];
 
   if (pageKind === PAGE_KINDS.ARTICLE) {
@@ -1406,7 +1378,7 @@ function renderProInfraEfficiencyContent(page) {
       </section>
 
       <section aria-labelledby="pro-infra-ems">
-        <h2 id="pro-infra-ems">Obligativitatea sistemului EMS</h2>
+        <h2 id="pro-infra-ems">Sistemul EMS: cerință și excepția documentată</h2>
         <p>Proiectele finanțate includ instalarea și operaționalizarea unui <strong>sistem de management al energiei — EMS</strong> integrat în instalațiile și echipamentele investiției. EMS-ul trebuie să monitorizeze complet și în timp real consumul de energie pe conturul proiectului și să furnizeze rapoarte periodice care arată reducerea consumului și performanțele energetice.</p>
         <p>Schema admite o excepție numai când solicitantul demonstrează că EMS-ul nu este necesar pentru a proba eficiența energetică și furnizează alte documente adecvate. Excepția nu este automată. O afirmație generală că utilajul nou „consumă mai puțin” nu înlocuiește măsurarea. Când EMS-ul este instalat, datele sale sunt integrate și validate prin auditul energetic.</p>
       </section>
@@ -1792,6 +1764,7 @@ function renderCalendarTable(page) {
 }
 
 function renderCofinancingExample(page) {
+  if (page.hideCofinancingExample === true) return "";
   const rows = Array.isArray(page.cofinancingRows) && page.cofinancingRows.length
     ? page.cofinancingRows
     : [
@@ -2620,19 +2593,19 @@ function renderDr12SearchIntentContent(page) {
   return `
       <section aria-labelledby="dr12-raspuns-rapid">
         <h2 id="dr12-raspuns-rapid">Răspuns rapid</h2>
-        <p class="intro">DR12 AFIR 2026 este intervenția pentru investiții în consolidarea exploatațiilor tinerilor fermieri instalați și ale fermierilor instalați cu vârsta de până la 45 de ani. Ghidul DR 12 AFIR disponibil în documentația proiectului este o versiune consultativă, nu ghidul final. Pragul economic, plafonul și intensitățile nu sunt publicate de FABER până la aprobarea lor editorială pe baza documentului operațional aplicabil apelului. O dată de lansare nu se deduce din consultare. Sesiunea, etapele lunare, alocarea și termenele se confirmă exclusiv prin ghidul activ și nota oficială de lansare.</p>
-        <p>Căutările „dr12 afir”, „afir dr 12”, „ghid dr 12 afir”, „dr 12 ghid final” și „dr 12 afir lansare” se referă la aceeași intervenție; răspunsurile de mai jos separă explicit informațiile consultative de regulile care vor fi confirmate în apelul activ.</p>
+        <p class="intro">DR12 AFIR 2026 este intervenția pentru investiții în consolidarea exploatațiilor tinerilor fermieri instalați și ale fermierilor instalați cu vârsta de până la 45 de ani. Ghidul DR 12 AFIR disponibil în documentația proiectului este o versiune consultativă, nu ghidul final. Ghidul consultativ propune minimum 12.000 SO, maximum 200.000 EUR/proiect și intensități de până la 80% sau 65%, în funcție de categoria beneficiarului. Condițiile se pot modifica înaintea ghidului final. O dată de lansare nu se deduce din consultare. Sesiunea, etapele lunare, alocarea și termenele se confirmă exclusiv prin ghidul activ și nota oficială de lansare.</p>
+        <p>Verifică separat eligibilitatea, finanțarea propusă și calendarul: publicarea unui ghid consultativ nu deschide depunerea.</p>
       </section>
 
       <section aria-labelledby="dr12-status-ghid">
-        <h2 id="dr12-status-ghid">Statusul ghidului: consultativ sau final</h2>
-        <p>Documentul analizat poartă explicit mențiunea de versiune consultativă și a fost publicat pentru dezbatere. Prin urmare, expresiile „dr 12 ghid final” și „ghid DR 12 AFIR” trebuie tratate prudent: pagina descrie regulile din varianta consultativă, iar forma finală poate modifica praguri, documente, punctaje, alocări sau termene.</p>
+        <h2 id="dr12-status-ghid">Este publicat ghidul final DR 12?</h2>
+        <p>Documentul analizat poartă explicit mențiunea de versiune consultativă și a fost publicat pentru dezbatere. Ghidul final nu este confirmat în sursele AFIR verificate la 6 septembrie 2026. Forma finală poate modifica praguri, documente, punctaje, alocări sau termene.</p>
         <p>Înainte de orice depunere se verifică versiunea activă publicată de AFIR, ordinul de aprobare, anexele, cererea de finanțare, grila de selecție și eventualele erate. Nicio regulă consultativă nu este prezentată aici drept regulă definitivă.</p>
       </section>
 
       <section aria-labelledby="dr12-lansare">
         <h2 id="dr12-lansare">Când se lansează DR12</h2>
-        <p>Pentru query-ul „dr 12 afir lansare”, răspunsul corect este că versiunea consultativă nu fixează o dată certă de deschidere. Ghidul arată că sesiunea se organizează în două etape lunare, stabilite prin nota de lansare. Pentru prima etapă este indicat un prag de calitate de 75 de puncte, iar pentru etapa a doua pragul minim consultativ este de 45 de puncte.</p>
+        <p>Ghidul consultativ DR 12 nu confirmă data deschiderii depunerii. Ghidul arată că sesiunea se organizează în două etape lunare, stabilite prin nota de lansare. Pentru prima etapă este indicat un prag de calitate de 75 de puncte, iar pentru etapa a doua pragul minim consultativ este de 45 de puncte.</p>
         <p>Data, ora deschiderii, durata fiecărei etape, alocarea și condițiile de oprire anticipată trebuie preluate numai din anunțul oficial al sesiunii active. Pregătirea documentelor poate începe înainte, dar depunerea nu trebuie planificată pe o dată nepublicată.</p>
       </section>
 
@@ -2644,7 +2617,7 @@ function renderDr12SearchIntentContent(page) {
 
       <section aria-labelledby="dr12-so-minim">
         <h2 id="dr12-so-minim">Pragul minim SO</h2>
-        <p>Investiția trebuie realizată într-o fermă care respectă dimensiunea economică minimă prevăzută de documentele apelului. Valoarea pragului nu este publicată de FABER până la aprobarea ei editorială. Calculul folosește coeficienții SOC din cererea de finanțare și datele documentabile pentru suprafețe, culturi și efective.</p>
+        <p>Investiția trebuie realizată într-o fermă care respectă dimensiunea economică minimă prevăzută de documentele apelului. În ghidul consultativ, pragul este minimum 12.000 SO; acesta se reconfirmă în ghidul final. Calculul folosește coeficienții SOC din cererea de finanțare și datele documentabile pentru suprafețe, culturi și efective.</p>
         <p>Suprafețele se corelează cu IACS-APIA, iar efectivele care nu pot fi înregistrate acolo se verifică în registrele ANSVSA/DSVSA, ANZ sau prin documentele circumscripției veterinare, după caz. Un calcul realizat fără aceleași date în documentele oficiale poate schimba eligibilitatea și punctajul.</p>
       </section>
 
@@ -3040,7 +3013,7 @@ ${renderPocidifDiscoveryLink(page)}
   <meta name="robots" content="${escAttr(robots)}" />
   <meta name="seo-depth" content="true" />
   <meta name="seo-min-words" content="${minWordsForPage(page)}" />
-  <meta name="seo-min-faq" content="${minFaqForPage(page)}" />
+  <meta name="seo-min-faq" content="${faqsForPage(page).length}" />
   <link rel="canonical" href="${metadata.canonicalUrl}" />
   <link rel="icon" type="image/png" href="/favicon.png" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -3049,7 +3022,12 @@ ${renderPocidifDiscoveryLink(page)}
   <meta property="og:url" content="${metadata.ogUrl}" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="${SITE}/og-image.jpg" />
+  <meta property="og:image:alt" content="${esc(page.h1)} — FABER" />
   <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="${esc(metadata.title)}" />
+  <meta name="twitter:description" content="${esc(metadata.description)}" />
+  <meta name="twitter:image" content="${SITE}/og-image.jpg" />
+  <meta name="twitter:image:alt" content="${esc(page.h1)} — FABER" />
   <link rel="preload" as="style" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/duotone/style.css" onload="this.onload=null;this.rel='stylesheet'" />
   <noscript><link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/duotone/style.css" /></noscript>
   <link rel="stylesheet" href="/assets/seo-hub.css" />${extraCss}
@@ -3075,11 +3053,11 @@ ${programMainContent}
       </div>
     </section>
   </main>
-  <footer class="footer">© 2026 FABER - Atelier de Consultanță · <a href="/fonduri-europene">Fonduri europene</a> · <a href="/contact">Contact</a></footer>
+  <footer class="footer">© 2026 FABER – Atelier de Consultanță · <a href="/fonduri-europene">Fonduri europene</a> · <a href="/contact">Contact</a></footer>
 </body>
 </html>
 `;
-  return applyContextualNextSteps(applyPriorityAeo(html, page.slug), page.slug);
+  return applyContextualNextSteps(applyPriorityAeo(stripEmptyFaqMarkup(html), page.slug), page.slug);
 }
 
 function redirectFallbackHtml(page) {
@@ -3264,7 +3242,7 @@ function main() {
   }
   for (const page of pages) {
     validatePage(page);
-    ensureFile(page, pageHtml(page, config), { writeLegacy: true });
+    if (!HAND_AUTHORED_SLUGS.has(page.slug)) ensureFile(page, pageHtml(page, config), { writeLegacy: true });
   }
   if (onlySlugs) {
     console.log(`Generated ${pages.length} selected canonical SEO page(s): ${[...onlySlugs].join(", ")}.`);

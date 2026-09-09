@@ -26,6 +26,10 @@ function duplicateValues(items, selector) {
   return [...counts.entries()].filter(([, count]) => count > 1).map(([value]) => value);
 }
 
+function normalizeLineEndings(value) {
+  return String(value).replace(/\r\n/g, "\n");
+}
+
 function registrySurfaceErrors(programs) {
   const errors = [];
   const ids = new Set(programs.map((program) => program.id));
@@ -72,6 +76,26 @@ function registrySurfaceErrors(programs) {
   const actualBannerIds = new Set(banners.filter((banner) => banner.active !== false).map((banner) => banner.programId));
   for (const id of expectedBannerIds) if (!actualBannerIds.has(id)) errors.push(`${id}: banner activ lipsă`);
   for (const id of actualBannerIds) if (!expectedBannerIds.has(id)) errors.push(`${id}: banner activ fără bannerEnabled în registru`);
+  const programsById = new Map(programs.map((program) => [program.id, program]));
+  for (const banner of banners.filter((item) => item.active !== false)) {
+    const program = programsById.get(banner.programId);
+    if (!program) continue;
+    const expectedFields = {
+      title: program.name,
+      description: program.metaDescription,
+      ctaLink: program.pageUrl,
+      order: program.presentation.carouselOrder,
+      programStatus: program.status,
+      statusLabel: program.statusLabel,
+      verifiedAt: program.verifiedAt,
+      sourceUrl: program.sourceUrl
+    };
+    for (const [field, expected] of Object.entries(expectedFields)) {
+      if (banner[field] !== expected) errors.push(`${banner.programId}: banner.${field} diferă de registrul unic`);
+    }
+    if (banner.image !== program.presentation?.image) errors.push(`${banner.programId}: banner.image diferă de registrul unic`);
+    if (!entriesByRoute.has(normalizeRoute(banner.ctaLink))) errors.push(`${banner.programId}: banner către rută publică inexistentă (${banner.ctaLink})`);
+  }
 
   for (const field of ["carouselOrder", "heroOrder", "navigationOrder"]) {
     for (const duplicate of duplicateValues(programs.filter((program) => Number.isInteger(program.presentation?.[field])), (program) => program.presentation[field])) {
@@ -113,7 +137,7 @@ function main() {
     const checkReport = process.argv.includes("--check-report");
     if (checkReport) {
       const current = fs.existsSync(REPORT_PATH) ? fs.readFileSync(REPORT_PATH, "utf8") : "";
-      if (current !== report) {
+      if (normalizeLineEndings(current) !== normalizeLineEndings(report)) {
         console.error(`Raportul este nesincronizat: ${path.relative(ROOT, REPORT_PATH)}`);
         process.exitCode = 1;
         return;

@@ -1,11 +1,41 @@
 "use strict";
 
+const fs = require("fs");
+const path = require("path");
+const { isPublicationApproved, loadLegalIdentity } = require("./legal-identity-governance");
+
+const CONTACT_CONFIG_PATH = path.resolve(__dirname, "..", "config", "contact-triage.json");
+
 function escapeHtml(value) {
   return String(value ?? "")
     .replace(/&/g, "&amp;")
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;")
     .replace(/"/g, "&quot;");
+}
+
+function loadContactTriageConfig() {
+  return JSON.parse(fs.readFileSync(CONTACT_CONFIG_PATH, "utf8"));
+}
+
+function approvedPrivacyNotice(contactConfig = loadContactTriageConfig(), legalConfig = loadLegalIdentity()) {
+  const notice = contactConfig.privacyNotice || {};
+  const policyLabel = "Politica de confidențialitate";
+  if (notice.copyState !== "approved" || notice.marketingConsentIncluded !== false || !isPublicationApproved(legalConfig)) {
+    throw new Error("Informarea formularului nu este aprobată pentru publicare fără consimțământ de marketing.");
+  }
+  if (!String(notice.copy || "").includes(policyLabel)) {
+    throw new Error(`Informarea aprobată trebuie să trimită la ${policyLabel}.`);
+  }
+  const labelHtml = escapeHtml(notice.copy).replace(
+    policyLabel,
+    `<a href="/politica-de-confidentialitate" target="_blank" rel="noopener">${policyLabel}</a>`
+  );
+  return {
+    state: "approved",
+    labelHtml,
+    note: "Confirmarea privește procesarea solicitării și nu reprezintă acord pentru newsletter sau alte comunicări de marketing."
+  };
 }
 
 function programOptions(programs, aliasesByProgram = {}) {
@@ -25,22 +55,23 @@ function programOptions(programs, aliasesByProgram = {}) {
   }).join("\n");
 }
 
-function renderContactTriageLayout(programs, aliasesByProgram = {}) {
+function renderContactTriageLayout(programs, aliasesByProgram = {}, { pagePath = "/contact" } = {}) {
+  const privacy = approvedPrivacyNotice();
   return `
       <div class="contact-layout contact-triage-layout">
         <section class="contact-form-panel" aria-labelledby="contact-form-title">
           <div class="contact-triage-heading">
-            <span class="core-kicker">Triage inițial</span>
+            <span class="core-kicker">${pagePath === '/' ? 'Solicitare inițială' : 'Triage inițial'}</span>
             <h2 id="contact-form-title">Spune-ne pe scurt ce vrei să realizezi</h2>
             <p id="contact-form-intro">Pasul 1 cere patru răspunsuri operaționale și confirmarea citirii informării. Detaliile din pasul 2 sunt opționale.</p>
           </div>
 
-          <form id="contact-triage-form" class="contact-form contact-triage" action="/api/contact-triage" method="post" accept-charset="UTF-8" data-analytics-form="contact_triage" data-analytics-form-version="short_v1" data-analytics-component="public_form" data-clarity-mask="true" data-legal-copy-state="pending_validation" aria-describedby="contact-form-intro">
+          <form id="contact-triage-form" class="contact-form contact-triage" action="/api/contact-triage" method="post" accept-charset="UTF-8" data-analytics-form="contact_triage" data-analytics-form-version="short_v1" data-analytics-component="public_form" data-clarity-mask="true" data-legal-copy-state="${privacy.state}" aria-describedby="contact-form-intro">
             <input type="hidden" name="schema_version" value="1.0.0">
             <input type="hidden" name="lead_id" value="">
             <input type="hidden" name="form_started_at" value="">
-            <input type="hidden" name="page_url" value="/contact">
-            <input type="hidden" name="source_page" value="">
+            <input type="hidden" name="page_url" value="${escapeHtml(pagePath)}">
+            <input type="hidden" name="source_page" value="${pagePath === '/' ? '/' : ''}">
             <input type="hidden" name="referrer_path" value="">
             <input type="hidden" name="program_context" value="">
             <input type="hidden" name="program_family" value="">
@@ -144,15 +175,15 @@ ${programOptions(programs, aliasesByProgram)}
 
                 <div class="form-group full consent-row">
                   <input id="privacy-notice-acknowledged" name="privacy_notice_acknowledged" type="checkbox" value="true" required aria-describedby="privacy-legal-copy-note privacy-notice-error">
-                  <label class="consent-label" for="privacy-notice-acknowledged">Confirm că am citit informarea privind prelucrarea datelor din <a href="/politica-de-confidentialitate" target="_blank" rel="noopener">Politica de confidențialitate</a>. <span aria-hidden="true">*</span></label>
-                  <p id="privacy-legal-copy-note" class="legal-copy-note" data-legal-copy-note>Formularea este pregătită tehnic și rămâne supusă avizului juridic înainte de publicare.</p>
+                  <label class="consent-label" for="privacy-notice-acknowledged">${privacy.labelHtml} <span aria-hidden="true">*</span></label>
+                  <p id="privacy-legal-copy-note" class="legal-copy-note" data-legal-copy-note>${escapeHtml(privacy.note)}</p>
                   <p id="privacy-notice-error" class="error-message" data-field-error-for="privacy-notice-acknowledged" aria-hidden="true" hidden></p>
                 </div>
               </div>
 
               <div class="contact-actions contact-progressive-actions" hidden>
-                <button class="btn btn-primary" type="button" data-action="review-short">Verifică și trimite</button>
-                <button class="btn btn-secondary" type="button" data-action="add-details">Adaugă detalii</button>
+                <button class="btn btn-primary" type="button" aria-label="Verifică datele introduse și pregătește trimiterea" data-action="review-short">Verifică și trimite</button>
+                <button class="btn btn-secondary" type="button" aria-label="Adaugă detalii suplimentare despre proiect" data-action="add-details">Adaugă detalii</button>
               </div>
             </section>
 
@@ -233,4 +264,4 @@ ${programOptions(programs, aliasesByProgram)}
       </div>`;
 }
 
-module.exports = { renderContactTriageLayout };
+module.exports = { approvedPrivacyNotice, renderContactTriageLayout };
