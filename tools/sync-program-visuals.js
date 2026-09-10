@@ -11,7 +11,7 @@ const { sceneArtwork } = require("./hero-program-scenes");
 
 const ROOT = path.resolve(__dirname, "..");
 const CHECK_ONLY = process.argv.includes("--check");
-const STYLE_HREF = "/assets/program-visuals.css?v=20260902-1";
+const STYLE_HREF = "/assets/program-visuals.css?v=20260910-1";
 const START = "PROGRAM_VISUAL_START";
 const END = "PROGRAM_VISUAL_END";
 const PROGRAMS = JSON.parse(fs.readFileSync(path.join(ROOT, "config", "seo-programs.json"), "utf8")).programs;

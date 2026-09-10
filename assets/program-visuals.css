@@ -188,7 +188,11 @@
 
 @media (max-width: 560px) {
   .program-hero--immersive.program-visual { width: calc(100% - 1rem) !important; margin-block: .6rem 1.5rem !important; padding: 1.1rem !important; border-radius: 14px !important; }
-  .program-hero--immersive :is(h1, .post-title) { font-size: clamp(2rem, 10vw, 3rem) !important; }
+  body[data-program-id] .program-hero--immersive :is(h1, .post-title) {
+    font-size: clamp(1.85rem, 9vw, 2.5rem) !important;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
   .program-hero__visual--immersive { padding: .7rem; border-radius: 11px; }
   .program-visual__svg--desktop { display: none !important; }
   .program-visual__svg--mobile { display: block !important; width: min(100%, 420px); margin: 0 auto; }

@@ -116,6 +116,31 @@ async function inspect(page, route, viewport) {
       if (outsideViewport.length >= 12) break;
     }
 
+    const headingWordSplits = [];
+    for (const heading of document.querySelectorAll("main h1,[data-program-visual] h1")) {
+      if (!visible(heading) || heading.closest("[aria-hidden='true']")) continue;
+      const walker = document.createTreeWalker(heading, NodeFilter.SHOW_TEXT);
+      while (walker.nextNode()) {
+        const node = walker.currentNode;
+        for (const match of node.data.matchAll(/\p{L}{4,}/gu)) {
+          const lineSegments = [];
+          for (let offset = match.index; offset < match.index + match[0].length; offset += 1) {
+            const range = document.createRange();
+            range.setStart(node, offset);
+            range.setEnd(node, offset + 1);
+            const rect = range.getClientRects()[0];
+            if (!rect) continue;
+            const line = lineSegments.find((segment) => Math.abs(segment.top - rect.top) <= 1);
+            if (line) line.length += 1;
+            else lineSegments.push({ top: rect.top, length: 1 });
+          }
+          if (lineSegments.length > 1 && lineSegments.some((segment) => segment.length <= 2)) {
+            headingWordSplits.push({ word: match[0], fragments: lineSegments.map((segment) => segment.length) });
+          }
+        }
+      }
+    }
+
     const svgIssues = [];
     const visibleSvgs = [...document.querySelectorAll("main svg,[data-program-visual] svg")].filter(visible);
     for (const svg of visibleSvgs) {
@@ -170,6 +195,7 @@ async function inspect(page, route, viewport) {
       horizontalOverflow: Math.max(0, document.documentElement.scrollWidth - innerWidth),
       clippedText,
       outsideViewport,
+      headingWordSplits,
       visibleSvgCount: visibleSvgs.length,
       svgIssues: [...new Set(svgIssues)],
       contrastChecks,
@@ -213,6 +239,7 @@ try {
         if (result.horizontalOverflow > 1) errors.push(`overflow orizontal ${result.horizontalOverflow}px`);
         if (result.clippedText.length) errors.push(`text tăiat: ${JSON.stringify(result.clippedText.slice(0, 3))}`);
         if (result.outsideViewport.length) errors.push(`elemente în afara viewportului: ${JSON.stringify(result.outsideViewport.slice(0, 3))}`);
+        if (result.headingWordSplits.length) errors.push(`cuvinte rupte nefiresc în H1: ${JSON.stringify(result.headingWordSplits.slice(0, 3))}`);
         if (!result.visibleSvgCount) errors.push("niciun SVG vizibil");
         if (result.svgIssues.length) errors.push(`SVG: ${result.svgIssues.join(", ")}`);
         if (result.contrastChecks < 20) errors.push(`acoperire contrast insuficientă: ${result.contrastChecks}`);

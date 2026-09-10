@@ -28,7 +28,7 @@ const CONFIG_PATH = path.join(ROOT, "config", "program-page-template.json");
 const GUIDES_PATH = path.join(ROOT, "official-guides.json");
 const REPORT_PATH = path.join(ROOT, "reports", "program-page-template-pilot-2026-07-21.json");
 const CSS_URL = "/assets/program-page-template.css?v=20260909-1";
-const PROGRAM_VISUAL_CSS_URL = "/assets/program-visuals.css?v=20260818-1";
+const PROGRAM_VISUAL_CSS_URL = "/assets/program-visuals.css?v=20260910-1";
 const TEMPLATE_VERSION = "p1_11";
 const CHECK_ONLY = process.argv.includes("--check");
 const FORBIDDEN_LOCAL_FACTS = ["status", "statusLabel", "verifiedAt", "sourceUrl", "sourceVersion", "applicationStart", "applicationEnd", "grantSummary", "cofinancingSummary"];
