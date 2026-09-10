@@ -43,8 +43,6 @@ const ROMANIAN_COPY_REPLACEMENTS = [
   [/\brealistă\b/g, "realistă"],
   [/\brealista\b/g, "realistă"],
   [/\bprudenta\b/g, "prudentă"],
-  [/\bAceasta\b/g, "Această"],
-  [/\baceasta\b/g, "această"],
   [/\bAgricultura\b/g, "Agricultură"],
   [/\bagricultura\b/g, "agricultură"],
   [/\borientativa\b/g, "orientativă"],
@@ -140,8 +138,6 @@ const ROMANIAN_COPY_REPLACEMENTS = [
   [/(?<![A-Za-zĂÂÎȘȚăâîșț])in(?![A-Za-zĂÂÎȘȚăâîșț])/g, "în"],
   [/(?<![A-Za-zĂÂÎȘȚăâîșț])si(?![A-Za-zĂÂÎȘȚăâîșț])/g, "și"],
   [/\bEste\b/g, "Este"],
-  [/\bexista\b/g, "există"],
-  [/\bExista\b/g, "Există"],
   [/\binseamna\b/g, "înseamnă"],
   [/\bInseamna\b/g, "Înseamnă"],
   [/\bobtin\b/g, "obțin"],
@@ -185,8 +181,6 @@ const ROMANIAN_COPY_REPLACEMENTS = [
   [/\bprivati\b/g, "privați"],
   [/\bLocala\b/g, "Locală"],
   [/\blocala\b/g, "locală"],
-  [/\bAdresa\b/g, "Adresă"],
-  [/\badresa\b/g, "adresă"],
   [/\bsituatii\b/g, "situații"],
   [/\bsituatiile\b/g, "situațiile"],
   [/\bselectie\b/g, "selecție"],
@@ -452,6 +446,45 @@ const ROMANIAN_COPY_REPLACEMENTS = [
   [/\bregionala\b/g, "regională"],
   [/\bdeclaratii\b/g, "declarații"],
   [/\btranzitie\b/g, "tranziție"],
+  [/\bactivitati\b/g, "activități"],
+  [/\bacopera\b/g, "acoperă"],
+  [/\balocari\b/g, "alocări"],
+  [/\banalizata\b/g, "analizată"],
+  [/\baplicata\b/g, "aplicată"],
+  [/\basociatilor\b/g, "asociaților"],
+  [/\bCate\b/g, "Câte"],
+  [/\bcate\b/g, "câte"],
+  [/\bceruta\b/g, "cerută"],
+  [/\bdedicata\b/g, "dedicată"],
+  [/\bdetinut\b/g, "deținut"],
+  [/\bEditia\b/g, "Ediția"],
+  [/\beditiei\b/g, "ediției"],
+  [/\bexplicatia\b/g, "explicația"],
+  [/\bgarantie\b/g, "garanție"],
+  [/\bincat\b/g, "încât"],
+  [/\binformationale\b/g, "informaționale"],
+  [/\binstalata\b/g, "instalată"],
+  [/\binstalatiei\b/g, "instalației"],
+  [/\bintre\b/g, "între"],
+  [/\blocalitati\b/g, "localități"],
+  [/\blocalitatii\b/g, "localității"],
+  [/\blucreaza\b/g, "lucrează"],
+  [/\bmentinerea\b/g, "menținerea"],
+  [/\bmodificata\b/g, "modificată"],
+  [/\bobligatiile\b/g, "obligațiile"],
+  [/\boptiuni\b/g, "opțiuni"],
+  [/\borientata\b/g, "orientată"],
+  [/\bpermisa\b/g, "permisă"],
+  [/\bPorneste\b/g, "Pornește"],
+  [/\bporneste\b/g, "pornește"],
+  [/\bpreliminara\b/g, "preliminară"],
+  [/\bprevazut\b/g, "prevăzut"],
+  [/\bprotectii\b/g, "protecții"],
+  [/\brestrange\b/g, "restrânge"],
+  [/\brestrictii\b/g, "restricții"],
+  [/\bsolutie\b/g, "soluție"],
+  [/\bsolutii\b/g, "soluții"],
+  [/\burmaresc\b/g, "urmăresc"],
   [/\bcresterea\b/g, "creșterea"],
   [/\bcalitatii\b/g, "calității"],
   [/\bincadreze\b/g, "încadreze"],
@@ -506,7 +539,42 @@ function normalizeRomanianCopy(value) {
   text = text.replace(/(^|[.!?]\s+)Pagină(?=\s+(?:răspunde|ajută|este|include|oferă|trimite|insistă|rămâne|explică|centralizează|nu))/gu, "$1Pagina");
   text = text.replace(/\bPagină această\b/gu, "Pagina aceasta");
   text = text.replace(/\b(pagină|pagina)\s+(programului|apelului|instituției|institutiei|serviciului|formularului)/gu, "pagina $2");
-  text = text.replace(/\b(această|o|fiecare) pagina\b/gu, "$1 pagină");
+  text = text.replace(/\b(această|o|fiecare) pagina(?=\s|[?!.,;:]|$)/giu, "$1 pagină");
+  text = text.replace(
+    /\b(Această|această)\s+(pagina|legătura|limita|structura|regula)(?=\s|[?!.,;:]|$)/gu,
+    (_, determiner, noun) => `${determiner} ${{ pagina: "pagină", legătura: "legătură", limita: "limită", structura: "structură", regula: "regulă" }[noun]}`
+  );
+  // „Aceasta” is a pronoun in these constructions; the diacritic belongs only
+  // to the adjectival form placed before a feminine noun.
+  text = text.replace(
+    /\b(Această|această)(?=\s+(?:este|rămâne|se|să|nu|previne|tratează|grupează)(?=\s|[?!.,;:]|$))/gu,
+    (value) => (value[0] === "A" ? "Aceasta" : "aceasta")
+  );
+  text = text.replace(/\b(Pagină|pagină)\s+(?:această|aceasta)(?=\s|[?!.,;:]|$)/gu, (_, value) => `${value[0] === "P" ? "Pagina" : "pagina"} aceasta`);
+  text = text.replace(/\b(Aceasta|aceasta) este pagină(?=\s|[?!.,;:]|$)/gu, "$1 este pagina");
+  text = text.replace(/\b(Pentru|pentru) buget consulta(?=\s|[?!.,;:]|$)/gu, "$1 buget consultă");
+  text = text.replace(/\b(folosește|Folosește|vezi|Vezi|consultă|Consultă|dubleze|Dubleze) pagină(?=\s|[?!.,;:]|$)/gu, "$1 pagina");
+  text = text.replace(/\b(de la|De la) pagină(?=\s|[?!.,;:]|$)/gu, "$1 pagina");
+  text = text.replace(
+    /(?<![Aa]ceastă )(?<![Oo] )(?<![Ff]iecare )\b(Pagină|pagină)(?=\s+(?:a fost|aplicată|Digitalizare\b|MIPE\b|de apeluri GAL\b))/gu,
+    (value) => (value[0] === "P" ? "Pagina" : "pagina")
+  );
+  text = text.replace(
+    /(?<![Aa]ceastă )(?<![Oo] )(?<![Ff]iecare )\b(Pagină|pagină)(?=\s+(?:evită|răspunde|ajută|este|include|oferă|trimite|insistă|rămâne|explică|centralizează|nu|tratează|grupează)(?=\s|[?!.,;:]|$))/gu,
+    (value) => (value[0] === "P" ? "Pagina" : "pagina")
+  );
+  // After modal verbs Romanian uses the infinitive „exista”, not „există”.
+  text = text.replace(
+    /\b(Pot|pot|Poți|poți|Poate|poate|Putem|putem|Puteți|puteți|Vor|vor|Va|va|Ar|ar) există(?=\s|[?!.,;:]|$)/gu,
+    "$1 exista"
+  );
+  text = text.replace(/\b(Adresă|adresă)(?=\s+sediului(?=\s|[?!.,;:]|$))/gu, (value) => (value[0] === "A" ? "Adresa" : "adresa"));
+  text = text.replace(/(?<![Dd]e )\b(Consultanță|consultanță)(?=\s+(?:poate|este|rămâne|include|oferă)(?=\s|[?!.,;:]|$))/gu, (value) => (value[0] === "C" ? "Consultanța" : "consultanța"));
+  text = text.replace(/\b(capacitate|sesiune|schemă|ediție|linie|investiție) noua(?=\s|[?!.,;:]|$)/giu, "$1 nouă");
+  text = text.replace(/\b(intensitate|sumă|suma|valoare|valoarea|capacitate) maxima(?=\s|[?!.,;:]|$)/giu, "$1 maximă");
+  text = text.replace(/\b(Pagina|pagina) centrala(?=\s|[?!.,;:]|$)/gu, "$1 centrală");
+  text = text.replace(/\b(loc|locuri|locurile|locurilor) de munca(?=\s|[?!.,;:]|$)/giu, "$1 de muncă");
+  text = text.replace(/\b(poată|poate|trebuie) fi aparat(?=\s|[?!.,;:]|$)/giu, "$1 fi apărat");
   text = text.replace(/\bfirmă\s+(ta|are|vrea|trebuie|propune|deține|detine|poate)(?=\s|[?!.,;:]|$)/gu, "firma $1");
   text = text.replace(/\b(această|o|fiecare) firma\b/gu, "$1 firmă");
   text = text.replace(/(?<![Oo] )\bfermă(?=\s+(?:reală|poate|are|trebuie|propune|compară))/gu, "ferma");
@@ -549,6 +617,43 @@ function normalizeRomanianCopy(value) {
       (match) => match.replace(accented, plain)
     );
   }
+  const infinitiveAfterModal = new Map([
+    ["adaugă", "adăuga"],
+    ["aplică", "aplica"],
+    ["arată", "arăta"],
+    ["ajută", "ajuta"],
+    ["compară", "compara"],
+    ["completă", "completa"],
+    ["confirmă", "confirma"],
+    ["continuă", "continua"],
+    ["corectă", "corecta"],
+    ["evită", "evita"],
+    ["există", "exista"],
+    ["explică", "explica"],
+    ["identifică", "identifica"],
+    ["indică", "indica"],
+    ["insistă", "insista"],
+    ["justifică", "justifica"],
+    ["lăsă", "lăsa"],
+    ["merită", "merita"],
+    ["publică", "publica"],
+    ["separă", "separa"],
+    ["schimbă", "schimba"],
+    ["solicită", "solicita"],
+    ["verifică", "verifica"]
+  ]);
+  const repairInfinitive = (_, prefix, verb) => {
+    const infinitive = infinitiveAfterModal.get(verb.toLocaleLowerCase("ro-RO"));
+    return infinitive ? `${prefix} ${infinitive}` : `${prefix} ${verb}`;
+  };
+  text = text.replace(
+    /\b(Pot|pot|Poți|poți|Poate|poate|Putem|putem|Puteți|puteți|Vor|vor|Va|va|Ar|ar)\s+(\p{L}+)(?=\s|[?!.,;:]|$)/gu,
+    repairInfinitive
+  );
+  text = text.replace(
+    /\b((?:Pentru|pentru|Fără|fără|De|de|Înainte de|înainte de) a)\s+(\p{L}+)(?=\s|[?!.,;:]|$)/gu,
+    repairInfinitive
+  );
   text = text.replace(/\bwebsite(?:-ul|ul)\b/giu, (match) => (/^[A-Z]/u.test(match) ? "Site-ul" : "site-ul"));
   text = text.replace(/\bwebsite\b/giu, (match) => (/^[A-Z]/u.test(match) ? "Site" : "site"));
   text = text.replace(/\b(un|acest|orice) site-ul\b/giu, "$1 site");

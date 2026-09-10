@@ -6,7 +6,8 @@ import * as cheerio from "cheerio";
 
 const require = createRequire(import.meta.url);
 const ROOT = path.resolve(import.meta.dirname, "..");
-const { CONFIG, countWords, removeInjected } = require("../tools/sync-long-form-layout");
+const { CONFIG, countWords, isProgramPage, removeInjected } = require("../tools/sync-long-form-layout");
+const { loadProgramConfig } = require("../tools/program-factual-governance");
 const inventory = JSON.parse(fs.readFileSync(path.join(ROOT, CONFIG.inventoryPath), "utf8"));
 const report = JSON.parse(fs.readFileSync(path.join(ROOT, CONFIG.reportPath), "utf8"));
 const css = fs.readFileSync(path.join(ROOT, "assets", "long-form-layout.css"), "utf8");
@@ -43,14 +44,18 @@ for (const page of report.pages) {
   assert.equal(root.attr("data-long-form-layout"), page.variant, `${page.route}: variantă greșită`);
   assert.equal(root.attr("data-long-form-content"), "true", `${page.route}: containerul editorial nu este marcat`);
   const toc = $("[data-long-form-toc]");
-  const tocExcluded = CONFIG.tocExcludedRoutes.includes(page.route);
-  const expectsToc = managedByProgramTemplate
-    ? expectedLongFormState
-    : page.route !== "/" && !tocExcluded;
+  const isProgram = page.type === "program";
+  const expectsToc = page.variant === "rail" && !isProgram;
+  if (isProgram) {
+    assert.equal(page.variant, "wide", `${page.route}: pagina de program nu trebuie să păstreze coloana de cuprins`);
+    assert.equal(page.tocItemCount, 0, `${page.route}: raportul nu poate anunța ancore de cuprins pentru un program`);
+  }
   assert.equal(toc.length, expectsToc ? 1 : 0, `${page.route}: număr incorect de cuprinsuri`);
   assert.equal($(".article-toc").length, 0, `${page.route}: cuprinsul vechi duplicat trebuie eliminat`);
   assert.equal($("link[data-long-form-layout-style='p1_09']").length, 1, `${page.route}: CSS duplicat/lipsă`);
   assert.equal($("script[data-long-form-layout-script='p1_09']").length, 1, `${page.route}: JS duplicat/lipsă`);
+  assert.equal($("link[data-long-form-layout-style='p1_09']").attr("href"), "/assets/long-form-layout.css?v=20260909-1", `${page.route}: versiunea CSS de layout este expirată`);
+  assert.equal($("script[data-long-form-layout-script='p1_09']").attr("src"), "/assets/long-form-layout.js?v=20260909-1", `${page.route}: versiunea JS de layout este expirată`);
   if (expectsToc) {
     assert.equal($("[data-long-form-toc] summary").text().trim(), "Cuprins", `${page.route}: disclosure fără etichetă`);
     assert.equal($("[data-long-form-toc] details[open]").length, 0, `${page.route}: cuprinsul trebuie să pornească închis ca dropdown`);
@@ -109,7 +114,28 @@ for (const row of excluded) {
   assert(!html.includes("data-long-form-page"), `${row.route}: pagina sub prag nu trebuie instrumentată`);
 }
 
+const { programs } = loadProgramConfig();
+const programRoutes = new Set([
+  ...inventory.rows.filter(isProgramPage).map((row) => normalizeRoute(row.route)),
+  ...programs.map((program) => normalizeRoute(program.pageUrl))
+]);
+let physicalProgramFiles = 0;
+for (const route of programRoutes) {
+  const slug = route.replace(/^\//u, "");
+  const files = [path.join(ROOT, `${slug}.html`), path.join(ROOT, slug, "index.html")].filter((file) => fs.existsSync(file));
+  assert(files.length > 0, `${route}: nu există nicio reprezentare fizică a paginii de program`);
+  for (const file of files) {
+    physicalProgramFiles += 1;
+    const $ = cheerio.load(fs.readFileSync(file, "utf8"), { decodeEntities: false });
+    const labelCount = $("summary").filter((_, node) => $(node).text().replace(/\s+/gu, " ").trim() === "Cuprins").length;
+    assert.equal($("[data-long-form-toc],[data-program-template-toc],.article-toc").length, 0, `${route}: ${path.relative(ROOT, file)} păstrează markup de cuprins`);
+    assert.equal(labelCount, 0, `${route}: ${path.relative(ROOT, file)} păstrează controlul «Cuprins»`);
+    assert.equal($("main[data-long-form-layout='rail']").length, 0, `${route}: ${path.relative(ROOT, file)} păstrează coloana laterală goală`);
+  }
+}
+
 assert(css.includes("max-inline-size: 68ch"), "lipsește limita editorială de 68ch");
+assert(css.includes('[data-long-form-layout="wide"]') && css.includes("min-inline-size: 0"), "layout-ul lat trebuie să ocupe containerul fără overflow intrinsec");
 assert(css.includes("position: sticky") && css.includes("scroll-margin-top"), "lipsește comportamentul sticky/offset pentru ancore");
 assert(css.includes("overflow-x: auto") && css.includes("min-height: 44px"), "lipsesc tabelele responsive sau targetul mobil");
 assert(css.includes("@media (max-width: 63.99rem)"), "lipsește disclosure/reflow mobil");
@@ -123,4 +149,4 @@ assert((homepage.match(/<!-- HOMEPAGE_DECISION_HERO_END -->/g) || []).length ===
 assert.equal((homepage.match(/<!-- P1_09_LONG_FORM_TOC_START -->/g) || []).length, 0, "homepage-ul nu trebuie să păstreze un cuprins separat după hero");
 assert(!homepage.includes("data-homepage-navbar-toc"), "cuprinsul homepage-ului nu trebuie să reapară în navbar");
 
-console.log(`Long-form layout contract PASS: ${report.pageCount} pagini, ${report.pages.reduce((sum, page) => sum + page.tocItemCount, 0)} ancore și conținut păstrat integral.`);
+console.log(`Long-form layout contract PASS: ${report.pageCount} pagini, ${physicalProgramFiles} surse de program fără Cuprins/rail, ${report.pages.reduce((sum, page) => sum + page.tocItemCount, 0)} ancore de ghid și conținut păstrat integral.`);

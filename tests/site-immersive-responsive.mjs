@@ -14,6 +14,7 @@ const { routes: programRoutes } = require("../tools/sync-program-visuals");
 const programSet = new Set(programRoutes());
 const VIEWPORTS = [
   { width: 320, height: 844, reducedMotion: "reduce" },
+  { width: 390, height: 844, reducedMotion: "no-preference", programOnly: true },
   { width: 1440, height: 960, reducedMotion: "no-preference" }
 ];
 const MIME = {
@@ -67,12 +68,22 @@ try {
     });
     const page = await context.newPage();
     try {
-      for (const pageRoute of routes()) {
+      const pageRoutes = viewport.programOnly ? programRoutes() : routes();
+      for (const pageRoute of pageRoutes) {
         const runtimeErrors = [];
         const onPageError = (error) => runtimeErrors.push(error.message);
         page.on("pageerror", onPageError);
         const response = await page.goto(`http://127.0.0.1:${port}${pageRoute}`, { waitUntil: "domcontentloaded", timeout: 25000 });
         await page.waitForFunction(() => document.body?.getAttribute("data-immersive-ready") === "true", null, { timeout: 5000 });
+        await page.evaluate(async () => {
+          document.documentElement.style.scrollBehavior = "auto";
+          for (const node of document.querySelectorAll("[data-site-reveal]")) {
+            node.scrollIntoView({ block: "center", behavior: "instant" });
+            await new Promise((resolve) => window.setTimeout(resolve, 50));
+          }
+          window.scrollTo({ top: 0, behavior: "instant" });
+          await new Promise((resolve) => window.setTimeout(resolve, 50));
+        });
         const result = await page.evaluate(({ isProgram, viewportWidth, motion }) => {
           const visible = (element) => {
             if (!element) return false;
@@ -93,6 +104,8 @@ try {
           const pressed = visual ? visual.querySelectorAll("[data-program-step][aria-pressed='true']").length : 0;
           const expectedScene = viewportWidth <= 640 ? mobile : desktop;
           const labelsFit = visual ? [...visual.querySelectorAll("[data-program-step]")].every((button) => button.scrollWidth <= button.clientWidth + 2 && button.scrollHeight <= button.clientHeight + 2) : true;
+          const revealTargets = [...document.querySelectorAll("[data-site-reveal]")];
+          const activeRevealTargets = revealTargets.filter(visible);
           return {
             ready: document.body.getAttribute("data-immersive-ready"),
             progress: Boolean(document.querySelector(".site-immersive-progress")),
@@ -103,6 +116,8 @@ try {
             sceneVisible: !isProgram || visible(expectedScene),
             pressed,
             labelsFit,
+            unrevealed: activeRevealTargets.filter((node) => !node.classList.contains("is-visible")).length,
+            revealMotionIntegrity: motion !== "no-preference" || activeRevealTargets.every((node) => getComputedStyle(node).animationName.includes("site-immersive-rise")),
             motionDisabled: !isProgram || motion !== "reduce" || Number.parseFloat(getComputedStyle(visual.querySelector(".program-visual__track")).animationDuration) <= .001
           };
         }, { isProgram: programSet.has(pageRoute), viewportWidth: viewport.width, motion: viewport.reducedMotion });
@@ -115,6 +130,8 @@ try {
         if (result.h1 !== 1) errors.push(`număr H1 în main/body: ${result.h1}`);
         if (!result.programReady || !result.sceneVisible || (programSet.has(pageRoute) && result.pressed !== 1)) errors.push("banner de program neinițializat sau scena potrivită nu este vizibilă");
         if (!result.labelsFit) errors.push("etichete de program tăiate");
+        if (result.unrevealed) errors.push(`${result.unrevealed} secțiuni nu au declanșat animația de apariție`);
+        if (!result.revealMotionIntegrity) errors.push("animația de apariție nu este activă în modul normal");
         if (!result.motionDisabled) errors.push("prefers-reduced-motion nu oprește animația programului");
         if (errors.length) failures.push({ route: pageRoute, viewport: viewport.width, errors });
         checks += 1;

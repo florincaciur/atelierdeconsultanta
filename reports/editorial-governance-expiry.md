@@ -1,6 +1,6 @@
 # Raport de prospețime și guvernanță editorială
 
-Data evaluării: **2026-09-09**. Registru: `config/editorial-governance.json`.
+Data evaluării: **2026-09-10**. Registru: `config/editorial-governance.json`.
 
 ## Rezumat
 
@@ -31,7 +31,7 @@ O expirare produce warning intern și nu schimbă automat statusul, textul, `ver
 | `/dr14-afir-ferme-mici` | program | pending_validation | — | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | da | nu | nu | nu |
 | `/e-move` | program | public | ghid_aprobat_nedeschis | DE_VALIDAT_UMAN | 2026-08-10 | 2026-08-29 | DE_VALIDAT_UMAN | 2026-10-28 | nu | nu | nu | nu |
 | `/femeia-antreprenor-2026` | program | public | apel_inchis | DE_VALIDAT_UMAN | 2026-09-02 | 2026-08-29 | DE_VALIDAT_UMAN | 2026-10-28 | nu | nu | nu | nu |
-| `/fondul-de-modernizare` | program | public | calendar_estimativ | DE_VALIDAT_UMAN | 2026-08-18 | 2026-08-29 | DE_VALIDAT_UMAN | 2026-10-28 | nu | nu | nu | nu |
+| `/fondul-de-modernizare` | program | public | calendar_estimativ | DE_VALIDAT_UMAN | 2026-09-10 | 2026-09-10 | DE_VALIDAT_UMAN | 2026-11-09 | nu | nu | nu | nu |
 | `/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum` | program | public | apel_inchis | DE_VALIDAT_UMAN | 2026-08-18 | 2026-08-29 | DE_VALIDAT_UMAN | 2026-10-28 | nu | nu | nu | nu |
 | `/fondul-modernizare-energie-regenerabila-2026` | program | public | apel_inchis | DE_VALIDAT_UMAN | 2026-08-18 | 2026-08-29 | DE_VALIDAT_UMAN | 2026-10-28 | nu | nu | nu | nu |
 | `/fonduri-regionale` | program | public | calendar_estimativ | DE_VALIDAT_UMAN | 2026-08-18 | 2026-08-29 | DE_VALIDAT_UMAN | 2026-10-28 | nu | nu | nu | nu |
@@ -39,11 +39,11 @@ O expirare produce warning intern și nu schimbă automat statusul, textul, `ver
 | `/ghiduri` | guide | pending_validation | — | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | 2026-05-20 | DE_VALIDAT_UMAN | 2026-08-18 | nu | da | nu | nu |
 | `/instrumente` | tool | pending_validation | — | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | 2026-05-20 | DE_VALIDAT_UMAN | 2026-08-18 | nu | da | nu | nu |
 | `/investitii-modernizarea-microintreprinderilor-apel-2` | program | public | ghid_aprobat_nedeschis | DE_VALIDAT_UMAN | 2026-09-06 | 2026-09-06 | DE_VALIDAT_UMAN | 2026-11-05 | nu | nu | nu | nu |
-| `/pnrr` | program | public | calendar_estimativ | DE_VALIDAT_UMAN | 2026-08-18 | 2026-08-23 | DE_VALIDAT_UMAN | 2026-10-22 | nu | nu | nu | nu |
+| `/pnrr` | program | public | calendar_estimativ | DE_VALIDAT_UMAN | 2026-09-10 | 2026-09-10 | DE_VALIDAT_UMAN | 2026-11-09 | nu | nu | nu | nu |
 | `/pocidif-21` | program | public | apel_deschis | DE_VALIDAT_UMAN | 2026-08-18 | 2026-08-29 | DE_VALIDAT_UMAN | 2026-09-28 | nu | nu | nu | nu |
 | `/por-adr-nord-est` | program | public | calendar_estimativ | DE_VALIDAT_UMAN | 2026-08-18 | 2026-08-29 | DE_VALIDAT_UMAN | 2026-10-28 | nu | nu | nu | nu |
 | `/pro-infra` | program | public | ghid_aprobat_nedeschis | DE_VALIDAT_UMAN | 2026-09-06 | 2026-09-06 | 2026-02-12 | 2026-11-05 | nu | nu | nu | nu |
-| `/programul-tranzitie-justa` | program | public | calendar_estimativ | DE_VALIDAT_UMAN | 2026-08-18 | 2026-08-29 | DE_VALIDAT_UMAN | 2026-10-28 | nu | nu | nu | nu |
+| `/programul-tranzitie-justa` | program | public | calendar_estimativ | DE_VALIDAT_UMAN | 2026-09-10 | 2026-09-10 | DE_VALIDAT_UMAN | 2026-11-09 | nu | nu | nu | nu |
 | `/resurse` | guide | pending_validation | — | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | 2026-05-20 | DE_VALIDAT_UMAN | 2026-08-18 | nu | da | nu | nu |
 | `/start-up-nation-2026` | program | public | apel_inchis | DE_VALIDAT_UMAN | 2026-05-29 | 2026-08-29 | DE_VALIDAT_UMAN | 2026-10-28 | nu | nu | nu | nu |
 | `/start-up-nation-2026-cheltuieli-eligibile` | guide | pending_validation | — | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | 2026-05-20 | DE_VALIDAT_UMAN | 2026-08-18 | nu | da | nu | nu |

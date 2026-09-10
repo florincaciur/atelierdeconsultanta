@@ -12,9 +12,14 @@ const { fileForRoute } = require("../tools/structured-data-utils");
 const { routes } = require("../tools/sync-program-visuals");
 const VIEWPORTS = [
   { width: 320, height: 844 },
+  { width: 375, height: 812 },
   { width: 390, height: 844 },
+  { width: 430, height: 932 },
   { width: 768, height: 1024 },
-  { width: 1440, height: 960 }
+  { width: 1024, height: 768 },
+  { width: 1280, height: 800 },
+  { width: 1440, height: 960 },
+  { width: 1920, height: 1080 }
 ];
 const MIME = {
   ".css": "text/css; charset=utf-8",
@@ -89,6 +94,8 @@ async function inspect(page, route, viewport) {
     const contextualDefaultClosed = contextual ? !contextual.open : true;
     const microAlertBeforeOpen = document.querySelector("[data-score-alert-disclosure]");
     const microAlertDefaultClosed = microAlertBeforeOpen ? !microAlertBeforeOpen.open : true;
+    const programTocCount = document.querySelectorAll("[data-long-form-toc],[data-program-template-toc],.article-toc").length;
+    const railLayoutCount = document.querySelectorAll("main[data-long-form-layout='rail']").length;
     document.querySelectorAll("main details").forEach((detail) => { detail.open = true; });
 
     const clippedText = [];
@@ -167,6 +174,8 @@ async function inspect(page, route, viewport) {
       svgIssues: [...new Set(svgIssues)],
       contrastChecks,
       contrastIssues,
+      programTocCount,
+      railLayoutCount,
       contextualDefaultClosed,
       contextualWidthIntegrity,
       microAlertIntegrity,
@@ -181,7 +190,8 @@ const failures = [];
 let checks = 0;
 
 try {
-  await Promise.all(VIEWPORTS.map(async (viewport) => {
+  for (let batchStart = 0; batchStart < VIEWPORTS.length; batchStart += 3) {
+    await Promise.all(VIEWPORTS.slice(batchStart, batchStart + 3).map(async (viewport) => {
     const page = await browser.newPage({ viewport, reducedMotion: "reduce" });
     try {
       for (const route of routes()) {
@@ -195,7 +205,7 @@ try {
         };
         page.on("pageerror", onPageError);
         page.on("console", onConsole);
-        const response = await page.goto(`http://127.0.0.1:${port}${route}`, { waitUntil: "domcontentloaded", timeout: 25000 });
+        const response = await page.goto(`http://127.0.0.1:${port}${route}`, { waitUntil: "domcontentloaded", timeout: 45000 });
         await page.waitForTimeout(60);
         const result = await inspect(page, route, viewport);
         if (!response || response.status() !== 200) errors.push(`HTTP ${response?.status() || "absent"}`);
@@ -207,6 +217,8 @@ try {
         if (result.svgIssues.length) errors.push(`SVG: ${result.svgIssues.join(", ")}`);
         if (result.contrastChecks < 20) errors.push(`acoperire contrast insuficientă: ${result.contrastChecks}`);
         if (result.contrastIssues.length) errors.push(`contrast: ${JSON.stringify(result.contrastIssues.slice(0, 4))}`);
+        if (result.programTocCount) errors.push(`pagina păstrează ${result.programTocCount} cuprins(uri)`);
+        if (result.railLayoutCount) errors.push(`pagina păstrează ${result.railLayoutCount} layout(uri) rail fără cuprins`);
         if (!result.contextualDefaultClosed) errors.push("secțiunea contextuală nu este restrânsă implicit");
         if (!result.contextualWidthIntegrity) errors.push("lista contextuală nu folosește lățimea corpului secțiunii");
         if (!result.microAlertIntegrity) errors.push("dropdown-ul de avertismente nu este funcțional");
@@ -219,7 +231,8 @@ try {
     } finally {
       await page.close();
     }
-  }));
+    }));
+  }
 } finally {
   await browser.close();
   await new Promise((resolve) => server.close(resolve));

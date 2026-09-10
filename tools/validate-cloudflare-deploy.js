@@ -215,6 +215,35 @@ function validateCanonicalHtmlParity(directory, errors) {
   }
 }
 
+function sitemapProgramRoutes() {
+  const sitemap = fs.readFileSync(path.join(ROOT, "sitemap-programs.xml"), "utf8");
+  return [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/giu)]
+    .map((match) => new URL(match[1]).pathname.replace(/\/$/u, "") || "/");
+}
+
+function validateProgramLayouts(directory, errors) {
+  for (const route of sitemapProgramRoutes()) {
+    const slug = route.replace(/^\//u, "");
+    const candidates = [path.join(directory, `${slug}.html`), path.join(directory, slug, "index.html")].filter((candidate) => fs.existsSync(candidate));
+    if (!candidates.length) {
+      errors.push(`${route}: deploy output is missing the program page`);
+      continue;
+    }
+    for (const file of candidates) {
+      const html = fs.readFileSync(file, "utf8");
+      if (/\bdata-(?:long-form-toc|program-template-toc)\b|\bclass=["'][^"']*\barticle-toc\b/iu.test(html)) {
+        errors.push(`${path.relative(ROOT, file)} contains a program table of contents`);
+      }
+      if (/<summary\b[^>]*>\s*Cuprins\s*<\/summary>/iu.test(html)) {
+        errors.push(`${path.relative(ROOT, file)} contains the Cuprins control`);
+      }
+      if (/<main\b[^>]*\bdata-long-form-layout=["']rail["']/iu.test(html)) {
+        errors.push(`${path.relative(ROOT, file)} contains an orphaned long-form rail`);
+      }
+    }
+  }
+}
+
 function assertCleanAssetDirectory(directory) {
   const normalized = directory.replace(/\\/g, "/").replace(/\/+$/, "");
   if (!normalized || normalized === "." || normalized === "./") {
@@ -282,6 +311,7 @@ if (!config.assets || !config.assets.directory) {
     validateReleaseHeaders(distHeaders, errors);
     validateReleaseManifest(distDirectory, errors);
     validateCanonicalHtmlParity(distDirectory, errors);
+    validateProgramLayouts(distDirectory, errors);
   }
 }
 validateOfficialGuidesHeaders(path.join(ROOT, "_headers"), errors);

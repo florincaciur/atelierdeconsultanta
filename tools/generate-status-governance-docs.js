@@ -94,7 +94,8 @@ const OFFICIAL_HOST_SUFFIXES = Object.freeze([
   "afir.ro",
   "regionordest.ro",
   "legislatie.just.ro",
-  "fonduri-ue.ro"
+  "fonduri-ue.ro",
+  "commission.europa.eu"
 ]);
 
 function readJson(file) {

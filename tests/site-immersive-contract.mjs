@@ -18,6 +18,7 @@ assert.match(css, /prefers-reduced-motion:\s*reduce/u, "Mișcarea redusă trebui
 assert.match(css, /\.site-immersive-progress/u, "Indicatorul de parcurs trebuie stilizat");
 assert.doesNotMatch(js, /preventDefault\s*\(/u, "Stratul vizual nu poate intercepta navigarea sau scroll-ul nativ");
 assert.doesNotMatch(js, /\.innerHTML\s*=/u, "Stratul vizual nu poate înlocui conținutul indexabil");
+assert.match(js, /threshold:\s*0\b/u, "Containerele editoriale lungi trebuie dezvăluite de la prima intersecție cu viewport-ul");
 
 for (const route of routes()) {
   const file = fileForRoute(ROOT, route);

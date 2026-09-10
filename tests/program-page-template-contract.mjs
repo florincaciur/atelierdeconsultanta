@@ -113,8 +113,9 @@ for (const page of config.pages) {
   });
 
   const toc = $("[data-program-template-toc]");
-  assert.equal(toc.length, report.pages.find((item) => item.route === page.route).editorialWordCount > 1500 ? 1 : 0, `${page.route}: regula cuprinsului nu este respectată`);
-  toc.find("a[href^='#']").each((_, link) => assert.equal($($(link).attr("href")).length, 1, `${page.route}: ancoră de cuprins invalidă`));
+  assert.equal(toc.length, 0, `${page.route}: template-ul de program nu poate afișa butonul Cuprins`);
+  assert.equal($("main").first().attr("data-long-form-layout"), "wide", `${page.route}: template-ul trebuie să folosească întreaga lățime editorială`);
+  assert.equal(report.pages.find((item) => item.route === page.route).tocIncluded, false, `${page.route}: raportul nu poate declara un cuprins`);
 
   const cta = $(".program-template__cta a");
   assert.equal(cta.text().trim(), page.cta.label);

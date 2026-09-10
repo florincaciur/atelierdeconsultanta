@@ -2041,7 +2041,7 @@
       "statusRationale": "Componentele și apelurile PNRR au stări distincte; implementarea programului nu înseamnă depunere deschisă.",
       "statusLabel": "Program în implementare – statutul se verifică pentru fiecare componentă și apel",
       "publicationState": "public",
-      "verifiedAt": "2026-08-23",
+      "verifiedAt": "2026-09-10",
       "sourceName": "Ministerul Investițiilor și Proiectelor Europene – tabloul de bord PNRR",
       "sourceUrl": "https://pnrr.fonduri-ue.ro/ords/pnrr/r/dashboard-status-pnrr/home",
       "sourceVersion": "Tabloul de bord oficial PNRR; program în implementare, cu situație distinctă pe componente și apeluri",
@@ -2051,7 +2051,7 @@
       "grantSummary": null,
       "cofinancingSummary": null,
       "pageUrl": "/pnrr",
-      "lastMeaningfulUpdate": "2026-08-18",
+      "lastMeaningfulUpdate": "2026-09-10",
       "evergreenValue": true,
       "archivedNoindexDecision": null,
       "indexable": true,
@@ -2565,17 +2565,17 @@
       "statusRationale": "Apelurile din program au stări distincte în MySMIS.",
       "statusLabel": "Program în implementare – statutul se verifică pentru fiecare apel în MySMIS",
       "publicationState": "public",
-      "verifiedAt": "2026-08-29",
+      "verifiedAt": "2026-09-10",
       "sourceName": "Ministerul Investițiilor și Proiectelor Europene – MySMIS2021",
       "sourceUrl": "https://resurse.mysmis2021.gov.ro/ords/repo_bo/r/mysmis-2021/finantari-programe-2021-2027",
-      "sourceVersion": "Catalogul oficial al finanțărilor 2021–2027; Programul Tranziție Justă are statut distinct pentru fiecare apel",
+      "sourceVersion": "Catalogul oficial al finanțărilor 2021–2027; apelurile sunt afișate în cadrul Programului Dezvoltare Durabilă și Tranziție Justă (fost PTJ), cu statut distinct pentru fiecare apel",
       "sourceType": "official",
       "applicationStart": null,
       "applicationEnd": null,
       "grantSummary": null,
       "cofinancingSummary": null,
       "pageUrl": "/programul-tranzitie-justa",
-      "lastMeaningfulUpdate": "2026-08-18",
+      "lastMeaningfulUpdate": "2026-09-10",
       "evergreenValue": true,
       "archivedNoindexDecision": null,
       "indexable": true,
@@ -2586,7 +2586,9 @@
       "eligibleApplicants": [],
       "keyConditions": [],
       "officialGuideKeys": [
-        "ptj-mysmis"
+        "ptj-mysmis",
+        "ptj-comisia-europeana",
+        "ptj-romania-pnr-2023"
       ],
       "officialSources": {
         "roles": {
@@ -2596,7 +2598,16 @@
               "label": "Catalogul oficial MySMIS2021"
             }
           ],
-          "guide": [],
+          "guide": [
+            {
+              "ref": "guide:ptj-comisia-europeana",
+              "label": "Fondul pentru o Tranziție Justă – Comisia Europeană"
+            },
+            {
+              "ref": "guide:ptj-romania-pnr-2023",
+              "label": "Programul Național de Reformă 2023 – teritoriile eligibile"
+            }
+          ],
           "annexes": [],
           "schemeOrder": [],
           "sessionAnnouncement": [],
@@ -2641,7 +2652,7 @@
       "statusRationale": "Apelurile Fondului pentru Modernizare au stări distincte în MySMIS.",
       "statusLabel": "Program în implementare – statutul se verifică pentru fiecare apel în MySMIS",
       "publicationState": "public",
-      "verifiedAt": "2026-08-29",
+      "verifiedAt": "2026-09-10",
       "sourceName": "Ministerul Investițiilor și Proiectelor Europene – MySMIS2021",
       "sourceUrl": "https://resurse.mysmis2021.gov.ro/ords/repo_bo/r/mysmis-2021/finantari-programe-2021-2027",
       "sourceVersion": "Catalogul oficial al finanțărilor 2021–2027; Fondul pentru Modernizare are statut distinct pentru fiecare apel",
@@ -2651,7 +2662,7 @@
       "grantSummary": null,
       "cofinancingSummary": null,
       "pageUrl": "/fondul-de-modernizare",
-      "lastMeaningfulUpdate": "2026-08-18",
+      "lastMeaningfulUpdate": "2026-09-10",
       "evergreenValue": true,
       "archivedNoindexDecision": null,
       "indexable": true,
@@ -2773,7 +2784,7 @@
         "Stabilirea formei juridice și verificarea inițială a eligibilității solicitantului înainte de construirea bugetului.",
         "Calcul SO coerent cu documentele APIA, ANSVSA și cu activitatea agricolă reală.",
         "Buget separat pentru grant, contribuție proprie, TVA, costuri neeligibile și rezerve de preț.",
-        "Documente de proprietate, folosință sau exploatare valabile pe perioada ceruta de ghid.",
+        "Documente de proprietate, folosință sau exploatare valabile pe perioada cerută de ghid.",
         "Respectarea perioadelor de implementare și monitorizare mentionate în documentul oficial aplicabil."
       ],
       "eligibleExpenses": [
@@ -2881,7 +2892,7 @@
         [
           "Amplasament",
           "Terenuri, animale, spații sau clădiri legate de investiție.",
-          "Dreptul de utilizare și valabilitatea documentelor pe perioada ceruta.",
+          "Dreptul de utilizare și valabilitatea documentelor pe perioada cerută.",
           "Documentul oficial aplicabil"
         ],
         [
@@ -2969,7 +2980,7 @@
       "commonMistakes": [
         "Calcul SO facut fără documentele care susțin culturile sau efectivele declarate.",
         "Utilaje prea mari pentru exploatația existentă sau pentru activitatea propusa.",
-        "Documente pentru teren, animale sau spații care expira înainte de perioada ceruta.",
+        "Documente pentru teren, animale sau spații care expira înainte de perioada cerută.",
         "Buget care ignora contribuția proprie, TVA sau costurile neeligibile.",
         "Punctaj estimat pe intentii, nu pe criterii demonstrabile.",
         "Achizitii sau angajamente începute înainte de momentul permis."
@@ -2977,7 +2988,7 @@
       "caseExample": {
         "note": "Exemplu anonimizat de completat după validare interna - de inlocuit cu un caz real anonimizat, verificat intern.",
         "beneficiary": "Exemplu anonimizat de completat după validare interna - tânăr fermier cu exploatație vegetala și cateva dotări existente",
-        "investmentObjective": "Achizitie utilaje agricole și solutie minima de monitorizare a lucrarilor",
+        "investmentObjective": "Achizitie utilaje agricole și soluție minima de monitorizare a lucrarilor",
         "challenges": "Corelarea utilajelor cu suprafata lucrata, confirmarea documentelor APIA și separarea costurilor neeligibile",
         "checked": "Forma solicitantului, calcul SO, documente de folosință, oferte, contribuție proprie și riscul de dublare cu alte programe"
       },
@@ -2995,7 +3006,7 @@
         },
         {
           "title": "Cum tratam contribuția proprie și calendarul",
-          "body": "Grantul nu acopera automat toate costurile. Separarea grantului de contribuție proprie, TVA, cheltuieli neeligibile și rezerve de preț trebuie facuta înainte de depunere. Calendarul trebuie comparat cu perioada de implementare și cu obligatiile de monitorizare ale apelului analizat."
+          "body": "Grantul nu acoperă automat toate costurile. Separarea grantului de contribuție proprie, TVA, cheltuieli neeligibile și rezerve de preț trebuie facuta înainte de depunere. Calendarul trebuie comparat cu perioada de implementare și cu obligațiile de monitorizare ale apelului analizat."
         },
         {
           "title": "Rolul surselor oficiale",
@@ -3027,7 +3038,7 @@
       "audience": [
         "Ferme mici care pot demonstra activitate agricolă reală și documente coerente pentru exploatație.",
         "Solicitanți care au nevoie de utilaje, dotări sau investiții punctuale, nu de proiecte supradimensionate.",
-        "Exploatatii care pot susține contribuția proprie și obligatiile asumate după semnarea contractului."
+        "Exploatatii care pot susține contribuția proprie și obligațiile asumate după semnarea contractului."
       ],
       "eligibility": [
         "Verifică dimensiunea economică a fermei și încadrarea în categoria vizata de DR14.",
@@ -3058,7 +3069,7 @@
       "scoring": [
         "Punctajul se estimează numai pe criterii demonstrabile.",
         "Bugetul și investiția trebuie să fie proporționale cu ferma mică.",
-        "Riscurile cresc când proiectul incearca sa forteze activitati care nu sunt documentate."
+        "Riscurile cresc când proiectul incearca sa forteze activități care nu sunt documentate."
       ],
       "steps": [
         "Calculam dimensiunea economică și verificăm încadrarea fermei.",
@@ -3241,7 +3252,7 @@
       "preparationSteps": [
         [
           "1.",
-          "Nu porni de la suma maxima dacă fermă nu susține investiția."
+          "Nu porni de la suma maximă dacă fermă nu susține investiția."
         ],
         [
           "2.",
@@ -3262,7 +3273,7 @@
       ],
       "commonMistakes": [
         "Folosirea unei dimensiuni economice nejustificate documentar.",
-        "Buget construit pentru suma maxima, nu pentru nevoia reală a fermei.",
+        "Buget construit pentru suma maximă, nu pentru nevoia reală a fermei.",
         "Oferte incomplete sau greu de comparat.",
         "Documente de teren, spațiu sau animale nevalabile.",
         "Ignorarea TVA și a costurilor neeligibile.",
@@ -3823,27 +3834,27 @@
       "audience": [
         "Antreprenori care vor sa pregătească din timp o idee de afacere și un buget realist.",
         "Firme nou infiintate sau solicitanți eligibili potrivit regulilor sesiunii active.",
-        "Aplicanti care pot susține contribuția proprie, locurile de munca și obligatiile de monitorizare."
+        "Aplicanti care pot susține contribuția proprie, locurile de muncă și obligațiile de monitorizare."
       ],
       "eligibility": [
         "Confirma sesiunea activa și ghidul valabil înainte de orice decizie de depunere.",
         "Verifică încadrarea solicitantului, codul CAEN, istoricul și restrictiile programului.",
         "Analizeaza cheltuielile eligibile, aportul propriu și TVA-ul separat de grant.",
-        "Calculeaza obligatiile privind locurile de munca, implementarea și monitorizarea.",
-        "Pregateste planul de afaceri pe baza unei activitati reale, nu doar pentru punctaj."
+        "Calculeaza obligațiile privind locurile de muncă, implementarea și monitorizarea.",
+        "Pregateste planul de afaceri pe baza unei activități reale, nu doar pentru punctaj."
       ],
       "mandatory": [
         "Confirmarea ghidului activ, a bugetului și a calendarului.",
         "Plan de afaceri coerent cu activitatea, piata și cheltuielile propuse.",
         "Buget separat pentru grant, aport propriu, TVA și costuri neeligibile.",
-        "Respectarea obligatiilor privind locurile de munca și perioada de monitorizare.",
+        "Respectarea obligatiilor privind locurile de muncă și perioada de monitorizare.",
         "Documente juridice, fiscale și financiare actualizate la momentul depunerii."
       ],
       "eligibleExpenses": [
         "Echipamente, dotări și active necesare activității, în limitele schemei active.",
         "Servicii, promovare, software sau alte cheltuieli permise explicit în ghid.",
         "Cheltuieli legate de infiintare, functionare sau implementare, dacă sunt acceptate de apel.",
-        "Investiții care susțin direct activitatea economică și locurile de munca asumate."
+        "Investiții care susțin direct activitatea economică și locurile de muncă asumate."
       ],
       "ineligibleExpenses": [
         "Achizitii fără legătura cu activitatea autorizata.",
@@ -3853,7 +3864,7 @@
       ],
       "scoring": [
         "Punctajul trebuie calculat numai după publicarea criteriilor active.",
-        "Codul CAEN, cheltuielile și locurile de munca pot influenta eligibilitatea și evaluarea.",
+        "Codul CAEN, cheltuielile și locurile de muncă pot influenta eligibilitatea și evaluarea.",
         "Un plan bun explică piata, bugetul și implementarea, nu doar indeplineste formularul."
       ],
       "steps": [
@@ -3865,7 +3876,7 @@
       ],
       "evaluation": [
         "Evaluarea depinde de sesiunea activa și criteriile publicate atunci.",
-        "Planul trebuie să arate capacitatea reală de implementare și sustinere a locurilor de munca.",
+        "Planul trebuie să arate capacitatea reală de implementare și sustinere a locurilor de muncă.",
         "Cheltuielile trebuie să fie eligibile, necesare și verificabile."
       ],
       "examples": [
@@ -3880,15 +3891,15 @@
         ],
         [
           "Pot folosi pagină pentru o sesiune viitoare?",
-          "Da, ca pregătire preliminara. Conditiile finale trebuie confirmate în ghidul activ al sesiunii viitoare."
+          "Da, ca pregătire preliminară. Conditiile finale trebuie confirmate în ghidul activ al sesiunii viitoare."
         ],
         [
           "Ce verific prima data?",
-          "Codul CAEN, solicitantul, cheltuielile eligibile, aportul propriu, locurile de munca și calendarul."
+          "Codul CAEN, solicitantul, cheltuielile eligibile, aportul propriu, locurile de muncă și calendarul."
         ],
         [
-          "Cate locuri de munca trebuie create?",
-          "Editia analizata a inclus două locuri de munca, dar obligatia trebuie verificată în ghidul activ."
+          "Câte locuri de muncă trebuie create?",
+          "Ediția analizată a inclus două locuri de muncă, dar obligatia trebuie verificată în ghidul activ."
         ],
         [
           "Sunt eligibile toate echipamentele?",
@@ -3939,12 +3950,12 @@
         [
           "Solicitant",
           "Se verifică după ghidul activ; regulile anterioare nu garantează sesiunea viitoare.",
-          "Forma juridică, restrictii și criterii ale editiei active.",
+          "Forma juridică, restricții și criterii ale ediției active.",
           "Ghidul activ"
         ],
         [
-          "Locuri de munca",
-          "Editia analizata a inclus două locuri de munca.",
+          "Locuri de muncă",
+          "Ediția analizată a inclus două locuri de muncă.",
           "Numar, durata și obligații finale.",
           "Ghidul activ"
         ]
@@ -3998,7 +4009,7 @@
           "Monitorizare",
           "Beneficiar",
           "Înainte de contractare.",
-          "Documente privind locurile de munca și obligatiile asumate."
+          "Documente privind locurile de muncă și obligațiile asumate."
         ]
       ],
       "preparationSteps": [
@@ -4020,7 +4031,7 @@
         ],
         [
           "5.",
-          "Verifică dacă obligatiile privind locurile de munca sunt sustenabile."
+          "Verifică dacă obligațiile privind locurile de muncă sunt sustenabile."
         ]
       ],
       "commonMistakes": [
@@ -4029,7 +4040,7 @@
         "Buget construit fără aport propriu și TVA.",
         "Cod CAEN ales doar pentru punctaj, fără activitate reală.",
         "Plan de afaceri generic, fără piata și implementare.",
-        "Ignorarea obligatiilor privind locurile de munca și monitorizarea."
+        "Ignorarea obligatiilor privind locurile de muncă și monitorizarea."
       ],
       "caseExample": {
         "note": "Exemplu anonimizat de completat după validare interna - de inlocuit cu un caz real anonimizat, verificat intern.",
@@ -4039,7 +4050,7 @@
         "checked": "Profil solicitant, CAEN, plan de afaceri, oferte, cofinanțare, autorizare punct de lucru și riscuri de implementare"
       },
       "editorialNotes": [
-        "Pentru Start-Up Nation, verificarea trebuie să separe ideea de afacere de lista de cheltuieli dorite. Un laptop, un site sau o campanie de promovare nu sunt suficiente ca argument dacă planul nu explică serviciul sau produsul, clientii, fluxul de lucru și modul în care activul va genera venituri. Înainte de depunere, bugetul trebuie citit împreună cu codul CAEN, spațiul, autorizarea și obligatiile asumate, astfel incat fiecare cost să poată fi aparat la clarificări.",
+        "Pentru Start-Up Nation, verificarea trebuie să separe ideea de afacere de lista de cheltuieli dorite. Un laptop, un site sau o campanie de promovare nu sunt suficiente ca argument dacă planul nu explică serviciul sau produsul, clientii, fluxul de lucru și modul în care activul va genera venituri. Înainte de depunere, bugetul trebuie citit împreună cu codul CAEN, spațiul, autorizarea și obligațiile asumate, astfel încât fiecare cost să poată fi apărat la clarificări.",
         "Dacă procedură finală schimbă criteriile, documentele sau calendarul, pagină trebuie actualizată înainte de a fi folosită ca baza pentru decizie. Până atunci, elementele marcate cu sursa oficială a apelului activ rămân puncte de verificare manuala."
       ],
       "heroIcon": "ph-duotone ph-rocket-launch",
@@ -4076,11 +4087,11 @@
         },
         {
           "title": "Cum folosim informațiile Start-Up Nation fără să promitem o sesiune",
-          "body": "Pagină păstrează rută istorica pentru continuitate, dar copy-ul este construit ca ghid de pregătire. Valorile concrete sunt atribuite regulilor publicate pentru ediția 2024 și nu sunt prezentate ca garantie pentru o sesiune viitoare."
+          "body": "Pagină păstrează rută istorica pentru continuitate, dar copy-ul este construit ca ghid de pregătire. Valorile concrete sunt atribuite regulilor publicate pentru ediția 2024 și nu sunt prezentate ca garanție pentru o sesiune viitoare."
         },
         {
           "title": "Ce poate fi pregătit din timp",
-          "body": "Ideea de afacere, codul CAEN, lista de echipamente, furnizorii, aportul propriu și logică locurilor de munca pot fi pregătite înainte de ghidul final. Totusi, formularul și punctajul trebuie refacute după regulile active."
+          "body": "Ideea de afacere, codul CAEN, lista de echipamente, furnizorii, aportul propriu și logică locurilor de muncă pot fi pregătite înainte de ghidul final. Totusi, formularul și punctajul trebuie refacute după regulile active."
         },
         {
           "title": "De ce contează planul de afaceri",
@@ -4088,7 +4099,7 @@
         },
         {
           "title": "Ce rămâne de verificat în ghidul activ",
-          "body": "Pentru o sesiune noua verificăm bugetul, pilonii, beneficiarii, codurile CAEN, cheltuielile, locurile de munca, calendarul, forma aportului propriu și obligatiile de monitorizare."
+          "body": "Pentru o sesiune nouă verificăm bugetul, pilonii, beneficiarii, codurile CAEN, cheltuielile, locurile de muncă, calendarul, forma aportului propriu și obligațiile de monitorizare."
         }
       ],
       "finalCtaText": "Verifică scenariul Start-Up Nation",
@@ -4097,7 +4108,7 @@
       "inlineCtaTitle": "Următorul pas",
       "inlineCtaText": "Trimite datele principale despre solicitant, localitate, activitate, investiție și buget. Verificarea inițială arată dacă programul merită pregătit și ce riscuri trebuie rezolvate înainte de depunere.",
       "decisionClose": "Nu trata anul din URL ca promisiune de lansare; decizia finală se ia doar după ghidul activ.",
-      "cofinancingTitle": "Valori orientative pe baza editiei 2024",
+      "cofinancingTitle": "Valori orientative pe baza ediției 2024",
       "finalSecondaryHref": "/consultanta-start-up-nation-2026",
       "finalSecondaryLabel": "Consultanță Start-Up Nation",
       "heroCtas": [
@@ -4113,7 +4124,7 @@
         }
       ],
       "updatedAt": "2026-06-11",
-      "decisionIntro": "Start-Up Nation merită pregătit când ideea de afacere este realistă, aportul propriu există și obligatiile pot fi susținute.",
+      "decisionIntro": "Start-Up Nation merită pregătit când ideea de afacere este realistă, aportul propriu există și obligațiile pot fi susținute.",
       "ctaText": "Verifică scenariul Start-Up Nation",
       "secondaryCtaText": "Construieste planul de afaceri",
       "programId": "start-up-nation",
@@ -4167,7 +4178,7 @@
         "încadrarea solicitantului",
         "domeniul activității",
         "calitatea planului și sustenabilitatea",
-        "locuri de munca sau indicatori solicitati",
+        "locuri de muncă sau indicatori solicitati",
         "coerenta bugetului"
       ],
       "steps": [
@@ -4242,7 +4253,7 @@
         {
           "title": "Program concret, hub general și articol suport",
           "paragraphs": [
-            "Pagină această rămâne rută pentru programul Femeia Antreprenor 2026. Pentru compararea cu alte optiuni folosește hubul fonduri pentru femei antreprenor; pentru întrebări informationale despre condiții, idei și riscuri folosește articolul suport."
+            "Pagina aceasta rămâne rută pentru programul Femeia Antreprenor 2026. Pentru compararea cu alte opțiuni folosește hubul fonduri pentru femei antreprenor; pentru întrebări informaționale despre condiții, idei și riscuri folosește articolul suport."
           ],
           "links": [
             {
@@ -4262,7 +4273,7 @@
         {
           "title": "Capital social, asociat majoritar și documente",
           "paragraphs": [
-            "Pentru programele dedicate femeilor antreprenor, verificarea porneste de la structura asociatilor, capital social, procentul detinut de femei, rolul în administrare, cheltuielile propuse și documentele firmei. O idee bună nu este suficientă fără încadrare și documente coerente."
+            "Pentru programele dedicate femeilor antreprenor, verificarea pornește de la structura asociaților, capital social, procentul deținut de femei, rolul în administrare, cheltuielile propuse și documentele firmei. O idee bună nu este suficientă fără încadrare și documente coerente."
           ]
         }
       ],
@@ -4315,7 +4326,7 @@
         "echipamente uzuale nejustificate",
         "abonamente sau servicii excluse de apel",
         "cheltuieli începute înainte de momentul permis",
-        "solutii care nu pot fi livrate și documentate"
+        "soluții care nu pot fi livrate și documentate"
       ],
       "scoring": [
         "nivelul de digitalizare propus",
@@ -4387,7 +4398,7 @@
         {
           "title": "Alege rută corectă pentru digitalizare",
           "paragraphs": [
-            "Pagină Digitalizare IMM rămâne hubul de orientare. Pentru apeluri și reguli PNRR folosește pagină aplicata PNRR / digitalizare; pentru solutii tehnice mergi la ERP, CRM și cloud; pentru buget consulta pagină de cheltuieli eligibile; iar pentru un proiect concret folosește pagină de consultanță PNRR digitalizare."
+            "Pagina Digitalizare IMM rămâne hubul de orientare. Pentru apeluri și reguli PNRR folosește pagina aplicată PNRR / digitalizare; pentru soluții tehnice mergi la ERP, CRM și cloud; pentru buget consultă pagina de cheltuieli eligibile; iar pentru un proiect concret folosește pagina de consultanță PNRR digitalizare."
           ],
           "links": [
             {
@@ -4660,7 +4671,7 @@
           "Declarația unică, devizul general când există lucrări, Anexa 8 cu minimum două surse de preț, Declarația de minimis și dovezile criteriilor de punctaj."
         ],
         [
-          "Consultanță poate garanta aprobarea?",
+          "Consultanța poate garanta aprobarea?",
           "Nu. Poate reduce riscurile de eligibilitate și documentare, dar aprobarea depinde de reguli, punctaj și buget."
         ]
       ],
@@ -4736,7 +4747,7 @@
         [
           "Solicitant",
           "Microintreprindere eligibilă potrivit ghidului activ.",
-          "Incadrare IMM, date financiare și restrictii.",
+          "Incadrare IMM, date financiare și restricții.",
           "ADR Nord-Est"
         ],
         [
@@ -4747,7 +4758,7 @@
         ],
         [
           "CAEN",
-          "Cod eligibil și autorizat în forma ceruta de apel.",
+          "Cod eligibil și autorizat în forma cerută de apel.",
           "Certificat constatator și activitate reală.",
           "Ghidul activ"
         ],
@@ -4822,7 +4833,7 @@
         ],
         [
           "3.",
-          "Verifică spațiul și dreptul de folosință pe perioada ceruta."
+          "Verifică spațiul și dreptul de folosință pe perioada cerută."
         ],
         [
           "4.",
@@ -4876,14 +4887,14 @@
       "mandatory": [
         "facturi sau date de consum",
         "documente de proprietate sau folosință",
-        "studiu tehnic sau solutie preliminara",
+        "studiu tehnic sau soluție preliminară",
         "avize și acorduri după caz",
         "buget și oferte"
       ],
       "eligibleExpenses": [
         "panouri fotovoltaice și echipamente conexe",
-        "invertoare, structuri, cabluri și protectii",
-        "stocare, dacă este permisa",
+        "invertoare, structuri, cabluri și protecții",
+        "stocare, dacă este permisă",
         "servicii de proiectare și montaj",
         "echipamente de monitorizare"
       ],
@@ -4955,9 +4966,9 @@
       "guideCtaLabel": "Ghid oficial",
       "contentSections": [
         {
-          "title": "Pagină aplicata pentru autoconsum, nu hub general",
+          "title": "Pagina aplicată pentru autoconsum, nu hub general",
           "paragraphs": [
-            "Pentru orientare intre apeluri porneste din hubul Fondul de Modernizare. Pe această pagină verificarea se restrange la consum, dimensionarea instalatiei, amplasament, racordare, stocare și documente tehnice. Pentru capacitate noua de energie regenerabilă folosește pagină dedicata, iar pentru încadrare preliminara vezi consultanță generală."
+            "Pentru orientare între apeluri pornește din hubul Fondul de Modernizare. Pe această pagină verificarea se restrânge la consum, dimensionarea instalației, amplasament, racordare, stocare și documente tehnice. Pentru capacitate nouă de energie regenerabilă folosește pagina dedicată, iar pentru încadrare preliminară vezi consultanță generală."
           ],
           "links": [
             {
@@ -5006,7 +5017,7 @@
         "beneficiar eligibil conform apelului",
         "amplasament clar",
         "drept de folosință documentat",
-        "solutie tehnică justificată",
+        "soluție tehnică justificată",
         "respectarea normelor de mediu și racordare"
       ],
       "mandatory": [
@@ -5099,9 +5110,9 @@
       "guideCtaLabel": "Ghid oficial",
       "contentSections": [
         {
-          "title": "Capacitate noua, separat de autoconsum",
+          "title": "Capacitate nouă, separat de autoconsum",
           "paragraphs": [
-            "Pagină această tratează proiecte de capacitate noua pentru energie regenerabilă: amplasament, racordare, putere instalata, avize, criterii tehnice și obligații de exploatare. Pentru orientarea intre apeluri revino la hubul Fondul de Modernizare, iar pentru autoconsum și fotovoltaice folosește pagină aplicata separata."
+            "Pagina aceasta tratează proiecte de capacitate nouă pentru energie regenerabilă: amplasament, racordare, putere instalată, avize, criterii tehnice și obligații de exploatare. Pentru orientarea între apeluri revino la hubul Fondul de Modernizare, iar pentru autoconsum și fotovoltaice folosește pagina aplicată separata."
           ],
           "links": [
             {
@@ -5273,7 +5284,7 @@
         "hotarari sau mandate interne",
         "documente de proprietate sau administrare",
         "facturi de consum",
-        "solutie tehnică",
+        "soluție tehnică",
         "buget și calendar"
       ],
       "eligibleExpenses": [
@@ -5396,7 +5407,7 @@
       "title": "Fonduri europene pentru firme și fermieri",
       "description": "Hub pentru fonduri europene: programe pentru IMM-uri, fermieri, instituții publice, energie, digitalizare, GAL, AFIR și PNRR.",
       "h1": "Fonduri europene: programe, eligibilitate și ghiduri",
-      "quickAnswer": "Această pagina este hub-ul central FABER pentru programe de finanțare. Diferențiază traseele pentru IMM-uri, fermieri, start-up-uri, instituții publice, energie, digitalizare, GAL și AFIR, apoi trimite către paginile de program unde se verifică regulile active.",
+      "quickAnswer": "Această pagină este hub-ul central FABER pentru programe de finanțare. Diferențiază traseele pentru IMM-uri, fermieri, start-up-uri, instituții publice, energie, digitalizare, GAL și AFIR, apoi trimite către paginile de program unde se verifică regulile active.",
       "programName": "Fonduri europene",
       "policyContribution": "hub-ul organizeaza programe și resurse pentru beneficiari care vor să ia decizii informate înainte de pregătirea dosarului.",
       "funding": "valorile difera pe program și se verifică în apelul analizat.",
@@ -5567,7 +5578,7 @@
       "h1": "Fonduri europene pentru IMM-uri",
       "quickAnswer": "Cum obține un IMM fonduri europene? Verifică încadrarea firmei, codul CAEN, regiunea, investiția, cofinanțarea și istoricul financiar.",
       "programName": "Fonduri europene pentru IMM-uri",
-      "policyContribution": "pagină grupează oportunitati pentru firme mici și mijlocii și le explică prin pasi practici.",
+      "policyContribution": "pagina grupează oportunitati pentru firme mici și mijlocii și le explică prin pasi practici.",
       "funding": "finanțarea variaza pe program și apel.",
       "audience": [
         "microîntreprinderi",
@@ -5745,7 +5756,7 @@
           "SO este dimensiunea economică a fermei, folosită frecvent pentru încadrarea în programe AFIR."
         ],
         [
-          "Ce program aleg intre DR12 și DR14?",
+          "Ce program aleg între DR12 și DR14?",
           "Alegerea depinde de solicitant, vârstă, dimensiunea economică și obiectivele investiției."
         ],
         [
@@ -5829,7 +5840,7 @@
       ],
       "steps": [
         "analizează procese",
-        "alege solutii",
+        "alege soluții",
         "pregătește oferte",
         "construiește buget",
         "depune"
@@ -5992,7 +6003,7 @@
         {
           "title": "Pagină evergreen, diferită de hubul Fonduri europene",
           "paragraphs": [
-            "Această pagina explică tipurile de fonduri nerambursabile și conceptele de baza. Pentru lista de programe active, folosește hubul Fonduri europene, unde sunt legate paginile de program și sursele oficiale actualizate."
+            "Această pagină explică tipurile de fonduri nerambursabile și conceptele de baza. Pentru lista de programe active, folosește hubul Fonduri europene, unde sunt legate paginile de program și sursele oficiale actualizate."
           ],
           "links": [
             {
@@ -6018,81 +6029,98 @@
       "output": "pnrr/index.html",
       "type": "hub",
       "schemaType": "WebPage",
+      "minWords": 1200,
+      "minFaq": 6,
       "category": "PNRR",
       "h1": "PNRR: pagină-cadru pentru apeluri și digitalizare",
-      "policyContribution": "PNRR pune accent pe tinte, jaloane, termene și implementare verificabila.",
+      "policyContribution": "PNRR urmărește ținte și jaloane asumate la nivel de componentă, iar fiecare investiție trebuie să demonstreze rezultate măsurabile, calendar realist și trasabilitatea implementării.",
       "audience": [
-        "IMM-uri",
-        "organizații eligibile",
-        "beneficiari cu proiecte digitale"
+        "întreprinderi eligibile în apelul urmărit",
+        "instituții și organizații incluse expres în ghidul componentei",
+        "beneficiari care pregătesc investiții de digitalizare, eficiență sau reformă",
+        "solicitanți care trebuie să verifice stadiul unui apel PNRR"
       ],
       "eligibility": [
-        "apel",
-        "solicitant",
-        "indicatori",
-        "documente",
-        "calendar"
+        "componenta și apelul trebuie identificate înainte de orice concluzie privind eligibilitatea",
+        "solicitantul trebuie să aparțină categoriei prevăzute de ghidul aplicabil",
+        "investiția și cheltuielile trebuie să contribuie direct la obiectivele și indicatorii apelului",
+        "activitatea, amplasamentul și documentele trebuie să respecte condițiile specifice sesiunii",
+        "proiectul trebuie să poată fi finalizat și raportat în termenele stabilite pentru apel"
       ],
       "mandatory": [
-        "cerere",
-        "anexe",
-        "buget",
-        "indicatori",
-        "raportare"
+        "cererea de finanțare și anexele în forma solicitată",
+        "documentele juridice și financiare ale solicitantului",
+        "bugetul detaliat și justificarea fiecărei cheltuieli",
+        "indicatorii de rezultat și dovezile valorii inițiale",
+        "calendarul de achiziție, implementare și raportare",
+        "declarațiile privind ajutorul de stat, dubla finanțare și conflictul de interese, când sunt cerute"
       ],
       "eligibleExpenses": [
-        "digitalizare",
-        "servicii",
-        "echipamente",
-        "software",
-        "implementare"
+        "echipamente și active prevăzute explicit de apel",
+        "software, licențe și servicii digitale atunci când ghidul le permite",
+        "servicii tehnice strict legate de realizarea investiției",
+        "activități de implementare și informare în limitele stabilite",
+        "măsuri de securitate, interoperabilitate sau eficiență asociate obiectivului finanțat",
+        "alte costuri descrise în lista eligibilă și susținute prin documente"
       ],
       "ineligibleExpenses": [
-        "costuri nepermise",
-        "livrabile neclare",
-        "cheltuieli fără indicatori"
+        "costuri care nu sunt prevăzute de ghidul apelului urmărit",
+        "cheltuieli angajate înainte de momentul permis de regulile aplicabile",
+        "achiziții fără legătură demonstrabilă cu obiectivele și indicatorii proiectului",
+        "costuri declarate sau decontate printr-o altă finanțare publică",
+        "livrabile, licențe ori servicii care nu pot fi recepționate și urmărite documentar"
       ],
       "scoring": [
-        "maturitate",
-        "impact",
-        "indicatori",
-        "buget",
-        "riscuri"
+        "maturitatea proiectului și existența documentelor cerute",
+        "contribuția la obiectivele, țintele și jaloanele componentei",
+        "calitatea și caracterul măsurabil al indicatorilor",
+        "coerența dintre activități, buget, calendar și rezultate",
+        "capacitatea solicitantului de a implementa și de a menține investiția"
       ],
       "steps": [
-        "defineste proiectul",
-        "verifică ghid",
-        "pregătește documente",
-        "depune",
-        "raporteaza"
+        "identifică exact componenta, investiția și codul apelului",
+        "confirmă statutul și perioada de depunere în sursa oficială",
+        "verifică solicitantul, activitatea, amplasamentul și regulile de ajutor",
+        "corelează bugetul și achizițiile cu indicatorii asumați",
+        "pregătește cererea, anexele și dovezile în formatul solicitat",
+        "planifică implementarea, achizițiile, raportarea și arhivarea documentelor"
       ],
       "evaluation": [
-        "conformitate",
-        "eligibilitate",
-        "contractare",
-        "implementare"
+        "verificarea conformității administrative și a eligibilității",
+        "evaluarea tehnică și financiară potrivit metodologiei apelului",
+        "clarificări și, după caz, verificări înainte de contractare",
+        "contractarea și îndeplinirea condițiilor prealabile",
+        "implementarea, monitorizarea indicatorilor și justificarea plăților"
       ],
       "examples": [
-        "digitalizare proces intern",
-        "automatizare raportare",
-        "securitate cibernetică"
+        "un proiect de digitalizare pornește de la procesele măsurate și abia apoi stabilește aplicațiile și echipamentele necesare",
+        "o investiție cu mai multe componente separă costurile eligibile de cele suportate integral de beneficiar",
+        "un calendar realist rezervă timp pentru achiziții, livrare, testare, recepție și raportarea indicatorilor"
       ],
       "faq": [
         [
-          "Ce este important la PNRR?",
-          "Sunt importante termenele, indicatorii și documentarea implementarii."
+          "Este PNRR un singur apel de finanțare?",
+          "Nu. PNRR este un program-cadru împărțit în componente, investiții și apeluri cu beneficiari, bugete, condiții și termene distincte. Eligibilitatea se stabilește numai după identificarea apelului concret."
         ],
         [
-          "PNRR finanteaza digitalizare?",
-          "Da, în apelurile dedicate și conform conditiilor active."
+          "Cum verific dacă un apel PNRR este deschis?",
+          "Verifică stadiul componentei și al apelului în tabloul de bord oficial, apoi consultă pagina de depunere și documentele sesiunii. Faptul că PNRR este în implementare nu înseamnă că toate apelurile acceptă proiecte."
         ],
         [
-          "Pot modifica proiectul?",
-          "Modificarile se fac doar conform regulilor contractului și apelului."
+          "PNRR finanțează proiecte de digitalizare?",
+          "Da, prin investițiile și apelurile care includ explicit digitalizarea. Solicitantul, tipul proiectului, cheltuielile și indicatorii trebuie însă verificate în ghidul apelului urmărit."
         ],
         [
-          "Ce înseamnă indicator?",
-          "Indicatorul este rezultatul masurabil pe care proiectul trebuie să il atinga."
+          "Cât este finanțarea prin PNRR?",
+          "Nu există o valoare unică pentru întregul PNRR. Grantul, intensitatea, contribuția proprie și limitele pe cheltuieli sunt stabilite separat pentru fiecare componentă și apel."
+        ],
+        [
+          "Ce documente trebuie pregătite pentru un apel PNRR?",
+          "Lista diferă de la un apel la altul, dar pornește de regulă de la documentele solicitantului, cererea și declarațiile, bugetul, ofertele sau fundamentările, indicatorii și documentele tehnice cerute de investiție."
+        ],
+        [
+          "Se poate modifica un proiect PNRR după contractare?",
+          "Numai în limitele contractului, ale instrucțiunilor aplicabile și ale aprobărilor necesare. O modificare nu trebuie să compromită obiectivele, indicatorii, termenele sau condițiile care au stat la baza finanțării."
         ]
       ],
       "related": [
@@ -6108,14 +6136,15 @@
       "heroIcon": "ph-duotone ph-desktop",
       "contentSections": [
         {
-          "title": "Pagină-cadru PNRR versus pagină aplicata de digitalizare",
+          "title": "Pagină-cadru PNRR versus pagina aplicată de digitalizare",
           "paragraphs": [
-            "Această este pagină-cadru pentru PNRR: explică faptul că fiecare apel are reguli, indicatori și termene proprii. Pentru proiecte digitale concrete, pagină aplicata este Digitalizare IMM / PNRR, unde verificarea pleaca de la procese, solutii IT, cheltuieli și documente."
+            "Aceasta este pagina-cadru pentru PNRR: explică de ce fiecare concluzie trebuie legată de o componentă, de o investiție și de un apel concret. Pentru proiectele digitale, pagina aplicată Digitalizare IMM / PNRR pornește de la procesele firmei, soluțiile IT, cheltuielile și documentele care pot susține investiția.",
+            "Un beneficiar nu ar trebui să construiască bugetul folosind numai informații generale despre PNRR. Ghidul, anexele, clarificările și platforma de depunere a apelului identificat formează împreună setul de reguli care trebuie verificat."
           ],
           "links": [
             {
               "href": "/digitalizare-imm-pnrr",
-              "label": "Pagină aplicata Digitalizare IMM / PNRR"
+              "label": "Pagina aplicată Digitalizare IMM / PNRR"
             },
             {
               "href": "/digitalizare-imm",
@@ -6128,9 +6157,24 @@
           ]
         },
         {
-          "title": "Status PNRR",
+          "title": "Cum se citește statutul unui apel PNRR",
           "paragraphs": [
-            "Statusul PNRR se confirmă în sursele oficiale. Pentru proiecte digitale, compară pagină-cadru PNRR cu pagină aplicata Digitalizare IMM / PNRR și cu pagină de consultanță înainte de buget."
+            "Statutul PNRR se confirmă la nivelul apelului, nu doar la nivelul programului. Înainte de pregătirea dosarului trebuie verificate data publicării, perioada de depunere, eventualele prelungiri, clarificări și versiunea documentelor folosite.",
+            "Un apel finalizat poate rămâne relevant pentru implementare sau pentru istoricul programului, dar nu trebuie prezentat ca oportunitate deschisă. Tabloul de bord oficial este punctul de pornire pentru stadiu, iar documentele autorității responsabile completează verificarea."
+          ]
+        },
+        {
+          "title": "Indicatorii și calendarul trebuie proiectate împreună",
+          "paragraphs": [
+            "În proiectele PNRR, rezultatul trebuie să poată fi urmărit prin indicatori și dovezi. Specificațiile, achizițiile, recepția, punerea în funcțiune și raportarea nu sunt etape independente: fiecare trebuie să susțină rezultatul asumat în cerere și în contract.",
+            "Calendarul se construiește pornind de la termenul final și include timp pentru proceduri, livrare, integrare, testare, remedierea neconformităților și arhivarea dovezilor. O achiziție eligibilă pe hârtie poate deveni dificil de decontat dacă este livrată sau recepționată în afara regulilor aplicabile."
+          ]
+        },
+        {
+          "title": "Bugetul se verifică înainte de depunere",
+          "paragraphs": [
+            "Pentru fiecare poziție bugetară trebuie să existe o nevoie demonstrată, o legătură cu activitatea proiectului, o metodă de fundamentare și un rezultat verificabil. Contribuția proprie, TVA-ul, diferențele de preț și cheltuielile care nu se decontează se calculează separat.",
+            "Verificarea inițială trebuie să răspundă la patru întrebări: apelul este potrivit solicitantului, investiția este permisă, documentele pot fi obținute la timp și beneficiarul poate susține financiar implementarea până la plată."
           ]
         }
       ],
@@ -6142,6 +6186,169 @@
       "decisionClose": "Dacă documentele, bugetul sau condițiile nu se potrivesc, proiectul se ajustează înainte de depunere. Regulile finale se confirmă în ghidul activ, anexele apelului și sursele oficiale.",
       "programId": "pnrr",
       "factualGovernanceRef": "#/programs/pnrr"
+    },
+    {
+      "slug": "programul-tranzitie-justa",
+      "output": "programul-tranzitie-justa/index.html",
+      "type": "hub",
+      "schemaType": "WebPage",
+      "minWords": 1200,
+      "minFaq": 6,
+      "category": "Tranziție Justă",
+      "h1": "Programul Tranziție Justă: județe, apeluri și verificări",
+      "policyContribution": "Programul sprijină diversificarea și reconversia economică a teritoriilor afectate de tranziția către neutralitate climatică, iar fiecare proiect trebuie raportat la planul teritorial și la obiectivele apelului concret.",
+      "audience": [
+        "microîntreprinderi, IMM-uri și întreprinderi nou-înființate, numai în apelurile care le includ",
+        "autorități, instituții și alte organizații eligibile potrivit ghidului specific",
+        "angajatori și entități implicate în reconversie, competențe sau ocupare, unde apelul permite",
+        "beneficiari cu investiții localizate în teritoriul eligibil al apelului"
+      ],
+      "eligibility": [
+        "investiția trebuie localizată în județul sau teritoriul indicat de apel",
+        "solicitantul și dimensiunea întreprinderii trebuie să corespundă categoriei eligibile",
+        "activitatea și codul CAEN trebuie să fie acceptate de ghid, când se aplică",
+        "proiectul trebuie să contribuie la diversificare, reconversie, locuri de muncă sau la obiectivul specific al apelului",
+        "dreptul asupra amplasamentului, capacitatea financiară și documentele tehnice trebuie dovedite la termenele cerute"
+      ],
+      "mandatory": [
+        "codul apelului și versiunea în vigoare a ghidului solicitantului",
+        "documentele juridice, financiare și declarațiile solicitantului",
+        "documentele care dovedesc localizarea și dreptul asupra locului de implementare",
+        "planul de afaceri sau documentația tehnico-economică solicitată",
+        "bugetul, ofertele și justificarea legăturii dintre costuri și rezultate",
+        "dovezile privind contribuția proprie, ajutorul de stat și lipsa dublei finanțări"
+      ],
+      "eligibleExpenses": [
+        "investiții productive în IMM-uri și sprijin pentru întreprinderi noi, în apelurile dedicate",
+        "echipamente, lucrări și active necorporale legate direct de investiția eligibilă",
+        "cercetare, inovare și digitalizare atunci când sunt prevăzute de apel",
+        "energie curată, eficiență și măsuri de mediu în limitele ghidului aplicabil",
+        "reabilitare, reconversie, formare sau măsuri pentru ocupare în apelurile care le includ",
+        "servicii tehnice și costuri conexe numai în categoriile și plafoanele permise"
+      ],
+      "ineligibleExpenses": [
+        "investiții realizate în afara teritoriului eligibil al apelului",
+        "activități sau coduri CAEN excluse prin ghid ori prin regulile de ajutor aplicabile",
+        "costuri începute înainte de momentul permis sau fără procedura cerută",
+        "cheltuieli fără legătură directă cu obiectivele și indicatorii proiectului",
+        "aceleași costuri finanțate dintr-un alt program public",
+        "bunuri, lucrări sau servicii care nu pot fi justificate și recepționate documentar"
+      ],
+      "scoring": [
+        "contribuția proiectului la diversificarea economiei locale și la tranziția climatică",
+        "locurile de muncă create sau menținute și calitatea rezultatelor asumate",
+        "caracterul inovator, productivitatea și maturitatea investiției, dacă apar în grilă",
+        "eficiența utilizării resurselor și efectele de mediu urmărite de apel",
+        "coerența dintre solicitant, amplasament, buget, calendar și planul de implementare"
+      ],
+      "steps": [
+        "identifică județul, prioritatea și codul exact al apelului",
+        "verifică starea apelului și perioada de depunere în catalogul oficial MySMIS2021",
+        "citește ghidul, anexele, schema de ajutor și eventualele corrigenda",
+        "confirmă solicitantul, activitatea, amplasamentul și drepturile asupra acestuia",
+        "construiește bugetul și indicatorii numai din cheltuielile permise",
+        "pregătește documentele, depunerea, clarificările și resursele pentru implementare"
+      ],
+      "evaluation": [
+        "conformitatea administrativă și eligibilitatea solicitantului",
+        "încadrarea teritorială, sectorială și în regulile de ajutor",
+        "evaluarea tehnică și financiară potrivit grilei apelului",
+        "clarificările, selecția și îndeplinirea condițiilor de contractare",
+        "implementarea, achizițiile, monitorizarea indicatorilor și plata"
+      ],
+      "examples": [
+        "o microîntreprindere verifică mai întâi dacă locul de implementare și codul CAEN sunt acceptate în apelul județean urmărit",
+        "un proiect productiv corelează fiecare echipament cu fluxul tehnologic, capacitatea estimată și locurile de muncă asumate",
+        "o investiție pe un amplasament industrial pregătește din timp drepturile, avizele și documentația tehnică cerute de ghid"
+      ],
+      "faq": [
+        [
+          "Ce este Programul Tranziție Justă?",
+          "Este cadrul prin care sunt sprijinite teritoriile puternic afectate de tranziția către o economie neutră climatic. Apelurile pot urmări diversificarea economică, reconversia, investițiile în IMM-uri, energia curată, competențele sau alte obiective stabilite în planurile teritoriale."
+        ],
+        [
+          "În ce județe se aplică Programul Tranziție Justă în România?",
+          "Documentele oficiale de programare identifică județele Gorj, Hunedoara, Dolj, Galați, Prahova și Mureș. Un proiect trebuie verificat însă pe prioritatea și teritoriul exact prevăzute de apelul urmărit."
+        ],
+        [
+          "Cine poate aplica la Programul Tranziție Justă?",
+          "Categoria de solicitant diferă între apeluri. Pot exista linii pentru microîntreprinderi, IMM-uri, întreprinderi nou-înființate, entități publice ori alte organizații, dar eligibilitatea se confirmă exclusiv în ghidul apelului din județul vizat."
+        ],
+        [
+          "Ce investiții pot fi finanțate?",
+          "Fondul susține în principiu diversificarea și reconversia teritoriilor, inclusiv investiții productive în IMM-uri, firme noi, cercetare și inovare, reabilitare de mediu, energie curată și competențe. Lista concretă de cheltuieli este cea din ghidul apelului."
+        ],
+        [
+          "Cum verific dacă un apel PTJ este deschis?",
+          "Caută denumirea programului, județul și codul apelului în catalogul oficial MySMIS2021. Starea programului la nivel general nu dovedește că sesiunea urmărită este deschisă și nu înlocuiește anunțul sau documentele apelului."
+        ],
+        [
+          "Ce documente sunt necesare pentru un proiect PTJ?",
+          "Lista depinde de apel, dar poate include documentele solicitantului, dreptul asupra amplasamentului, planul de afaceri sau documentația tehnică, bugetul și ofertele, declarațiile de ajutor și documentele care susțin indicatorii și contribuția proprie."
+        ]
+      ],
+      "related": [
+        "/programul-tranzitie-justa-intrebari-documente",
+        "/fonduri-regionale",
+        "/fonduri-europene-imm",
+        "/verificare-eligibilitate-fonduri-europene",
+        "/consultanta-fonduri-europene",
+        "/contact"
+      ],
+      "sourceKeys": [
+        "ptj-mysmis",
+        "ptj-comisia-europeana",
+        "ptj-romania-pnr-2023"
+      ],
+      "heroIcon": "ph-duotone ph-factory",
+      "contentSections": [
+        {
+          "title": "Programul se verifică pe județ și pe apel",
+          "paragraphs": [
+            "Programul Tranziție Justă nu este o singură sesiune națională cu reguli uniforme. Fiecare apel are un cod, un teritoriu, o categorie de solicitanți, un buget, o perioadă și un set propriu de documente. De aceea, primul pas este identificarea apelului exact, nu estimarea grantului dintr-o prezentare generală.",
+            "Catalogul curent MySMIS2021 afișează apelurile relevante în cadrul Programului Dezvoltare Durabilă și Tranziție Justă (fost PTJ). Pentru fiecare proiect trebuie verificate starea apelului, pagina de depunere, versiunea documentelor publicată pentru apel și eventualele corrigenda."
+          ],
+          "links": [
+            {
+              "href": "/programul-tranzitie-justa-intrebari-documente",
+              "label": "Întrebări și documente pentru Programul Tranziție Justă"
+            },
+            {
+              "href": "/fonduri-regionale",
+              "label": "Fonduri regionale și selecția programului"
+            }
+          ]
+        },
+        {
+          "title": "Teritoriul eligibil este o condiție de bază",
+          "paragraphs": [
+            "În România, documentele oficiale de programare identifică șase județe sprijinite prin Fondul pentru o Tranziție Justă: Gorj, Hunedoara, Dolj, Galați, Prahova și Mureș. Această listă nu este suficientă pentru o decizie de eligibilitate; ghidul poate limita investiția la anumite localități, activități, zone sau tipuri de amplasament.",
+            "Adresa sediului social nu dovedește singură eligibilitatea investiției. Se verifică locul de implementare, dreptul asupra imobilului, durata dreptului, autorizarea activității și corelarea dintre amplasament, echipamente, lucrări și rezultatele proiectului."
+          ]
+        },
+        {
+          "title": "Diversificarea economică trebuie demonstrată",
+          "paragraphs": [
+            "Fondul pentru o Tranziție Justă urmărește diversificarea și reconversia economiilor locale afectate de tranziția climatică. Comisia Europeană indică, la nivelul fondului, investiții în IMM-uri și firme noi, cercetare și inovare, reabilitare de mediu, energie curată și dezvoltarea competențelor.",
+            "În cererea concretă, contribuția nu se rezumă la o formulare generală. Planul de afaceri, bugetul și indicatorii trebuie să arate ce se schimbă în activitatea solicitantului, ce rezultate apar în teritoriu și cum pot fi măsurate și menținute după finalizarea proiectului."
+          ]
+        },
+        {
+          "title": "Grantul și punctajul diferă între apeluri",
+          "paragraphs": [
+            "Programul nu are o singură valoare maximă, o intensitate unică sau o grilă comună tuturor beneficiarilor. Aceste elemente se preiau numai din ghidul și schema de ajutor ale apelului urmărit, inclusiv limitele pe categorii de cost și regulile pentru întreprinderi legate ori partenere.",
+            "Înainte de depunere, punctajul estimat trebuie refăcut după fiecare schimbare importantă de solicitant, activitate, amplasament, investiție sau buget. Criteriile asumate trebuie susținute prin documente care rămân valabile până la momentul cerut de procedură."
+          ]
+        }
+      ],
+      "finalCtaText": "Trimite județul, codul apelului, forma solicitantului, activitatea, amplasamentul și investiția pentru o verificare inițială pe documentele aplicabile.",
+      "heroPrimaryCta": "Verifică eligibilitatea",
+      "finalPrimaryCta": "Trimite datele proiectului",
+      "inlineCtaTitle": "Date utile pentru verificarea PTJ",
+      "inlineCtaText": "Trimite județul, codul apelului, forma solicitantului, activitatea, amplasamentul și investiția pentru o verificare inițială pe documentele aplicabile.",
+      "decisionClose": "Dacă teritoriul, solicitantul, activitatea sau documentele nu corespund apelului, proiectul se ajustează înainte de depunere. Regulile finale rămân cele din ghid, anexele și sursele oficiale ale sesiunii.",
+      "programId": "programul-tranzitie-justa",
+      "factualGovernanceRef": "#/programs/programul-tranzitie-justa"
     },
     {
       "slug": "afir",
@@ -6234,7 +6441,7 @@
           "Verifică forma solicitantului, exploatația și dimensiunea economică."
         ],
         [
-          "Cum aleg intre DR12 și DR14?",
+          "Cum aleg între DR12 și DR14?",
           "Alegerea se face după profilul solicitantului, exploatație, SO/SOC, investiție și documente. DR12 și DR14 nu trebuie tratate ca variante interschimbabile."
         ],
         [
@@ -6247,7 +6454,7 @@
         ],
         [
           "Ce risc apare cel mai des la proiectele AFIR?",
-          "Cel mai des apar necorelari intre documentele exploatației, calculul SO/SOC, investiție și ofertele folosite în buget."
+          "Cel mai des apar necorelari între documentele exploatației, calculul SO/SOC, investiție și ofertele folosite în buget."
         ],
         [
           "Unde folosesc calculator SO AFIR?",
@@ -6469,7 +6676,7 @@
       "schemaType": "CollectionPage",
       "category": "Studii de caz",
       "title": "Studii de caz fonduri europene - exemple anonimizate și lectii",
-      "description": "Studii de caz anonimizate pentru proiecte cu fonduri europene: domeniu, provocare, solutie, documente și rezultate publicabile.",
+      "description": "Studii de caz anonimizate pentru proiecte cu fonduri europene: domeniu, provocare, soluție, documente și rezultate publicabile.",
       "h1": "Studii de caz pentru fonduri europene",
       "quickAnswer": "Cum citești un studiu de caz? Urmareste domeniul, programul, provocarea, documentele cheie, soluția și rezultatul publicabil.",
       "programName": "Studii de caz",
@@ -6534,7 +6741,7 @@
         ],
         [
           "Ce conține un studiu?",
-          "Domeniu, program, provocare, solutie, documente cheie și rezultat."
+          "Domeniu, program, provocare, soluție, documente cheie și rezultat."
         ],
         [
           "Pot trimite un testimonial?",
@@ -7052,7 +7259,7 @@
         "resurse"
       ],
       "ineligibleExpenses": [
-        "rezultate folosite ca garantie",
+        "rezultate folosite ca garanție",
         "sume neconfirmate"
       ],
       "scoring": [
@@ -7091,7 +7298,7 @@
         ],
         [
           "Există calculator SO separat?",
-          "Da, calculatorul SO rămâne disponibil la pagină dedicata."
+          "Da, calculatorul SO rămâne disponibil la pagină dedicată."
         ]
       ],
       "related": [
@@ -7213,7 +7420,7 @@
         {
           "title": "Checklisturi noi",
           "paragraphs": [
-            "Resursele trebuie să acopere acte, cofinanțare, GAL, e-MOVE, AFIR și calendarul de pregătire, astfel incat beneficiarul să poată verifică proiectul înainte de bugetul final."
+            "Resursele trebuie să acopere acte, cofinanțare, GAL, e-MOVE, AFIR și calendarul de pregătire, astfel încât beneficiarul să poată verifică proiectul înainte de bugetul final."
           ]
         }
       ]
@@ -7306,7 +7513,7 @@
       "heroIcon": "ph-duotone ph-info"
     },
     {
-      "funding": "finanțarea, contribuția proprie, pragurile și termenele se confirmă în ghidul apelului activ; pagină evită valori fixe când nu există apel final publicat sau documente verificate.",
+      "funding": "finanțarea, contribuția proprie, pragurile și termenele se confirmă în ghidul apelului activ; pagina evită valori fixe când nu există apel final publicat sau documente verificate.",
       "policyContribution": "pagina ajută beneficiarii să compare programul, solicitantul, documentele și investiția înainte de o decizie costisitoare.",
       "audience": [
         "IMM-uri care caută servicii fonduri europene",
@@ -7468,7 +7675,7 @@
         {
           "title": "Comparatie cu firmele mari de consultanță: ce face FABER diferit",
           "paragraphs": [
-            "FABER lucreaza cu verificare prudentă, comunicare directă și explicarea riscurilor înainte de decizia de depunere. Nu promitem finanțare garantată și nu impingem un proiect spre buget complet dacă solicitantul, documentele sau punctajul nu susțin cererea."
+            "FABER lucrează cu verificare prudentă, comunicare directă și explicarea riscurilor înainte de decizia de depunere. Nu promitem finanțare garantată și nu impingem un proiect spre buget complet dacă solicitantul, documentele sau punctajul nu susțin cererea."
           ]
         }
       ],
@@ -7480,7 +7687,7 @@
       "decisionClose": "Dacă documentele, bugetul sau condițiile nu se potrivesc, proiectul se ajustează înainte de depunere. Regulile finale se confirmă în ghidul activ, anexele apelului și sursele oficiale."
     },
     {
-      "funding": "finanțarea, contribuția proprie, pragurile și termenele se confirmă în ghidul apelului activ; pagină evită valori fixe când nu există apel final publicat sau documente verificate.",
+      "funding": "finanțarea, contribuția proprie, pragurile și termenele se confirmă în ghidul apelului activ; pagina evită valori fixe când nu există apel final publicat sau documente verificate.",
       "policyContribution": "pagina ajută beneficiarii să compare programul, solicitantul, documentele și investiția înainte de o decizie costisitoare.",
       "audience": [
         "antreprenori care caută program fonduri europene 2026",
@@ -7592,7 +7799,7 @@
     {
       "policyContribution": "schema urmărește eficiența energetică a capacităților care produc materii prime, materiale și produse necesare proiectelor de infrastructură de transport.",
       "audience": [
-        "Companii care produc materiale, componente, echipamente sau solutii relevante pentru infrastructura de transport.",
+        "Companii care produc materiale, componente, echipamente sau soluții relevante pentru infrastructura de transport.",
         "Solicitanți care pot demonstra capacitate tehnică, amplasament și flux de producție verificabil.",
         "Proiecte industriale care au nevoie de buget mare, dar pot justifica fiecare componentă a investiției."
       ],
@@ -7618,7 +7825,7 @@
       ],
       "ineligibleExpenses": [
         "Investiții fără legătura directă cu infrastructura de transport.",
-        "Echipamente folosite pentru activitati neeligibile sau necorelate cu codurile autorizate.",
+        "Echipamente folosite pentru activități neeligibile sau necorelate cu codurile autorizate.",
         "Costuri începute înainte de momentul permis.",
         "Bugete supradimensionate fără justificare tehnică, economică și operațională."
       ],
@@ -7715,7 +7922,7 @@
       "contentSections": [
         {
           "title": "Ce trebuie să demonstreze un proiect PRO INFRA",
-          "body": "Un proiect PRO INFRA trebuie să arate de ce investiția este relevanta pentru infrastructura de transport. Fluxul de producție, echipamentele, amplasamentul și rezultatele trebuie să fie legate intre ele, nu prezentate ca o lista de achiziții."
+          "body": "Un proiect PRO INFRA trebuie să arate de ce investiția este relevanta pentru infrastructura de transport. Fluxul de producție, echipamentele, amplasamentul și rezultatele trebuie să fie legate între ele, nu prezentate ca o lista de achiziții."
         },
         {
           "title": "De ce contează amplasamentul",
@@ -7731,7 +7938,7 @@
         },
         {
           "title": "Cum se demonstreaza legătura cu infrastructura de transport",
-          "body": "La PRO INFRA, investiția trebuie să fie explicata prin rolul ei în lantul de producție pentru infrastructura de transport. Nu este suficient ca firmă sa cumpere echipamente industriale. Dosarul trebuie să arate ce produse sau componente vor rezulta, ce standarde tehnice sunt relevante, ce clienti sau utilizari sunt vizate și cum se schimbă capacitatea de producție. Această legătura reduce riscul ca proiectul sa fie interpretat ca modernizare generală fără încadrare în schema."
+          "body": "La PRO INFRA, investiția trebuie să fie explicata prin rolul ei în lantul de producție pentru infrastructura de transport. Nu este suficient ca firmă sa cumpere echipamente industriale. Dosarul trebuie să arate ce produse sau componente vor rezulta, ce standarde tehnice sunt relevante, ce clienti sau utilizari sunt vizate și cum se schimbă capacitatea de producție. Această legătură reduce riscul ca proiectul sa fie interpretat ca modernizare generală fără încadrare în schema."
         },
         {
           "title": "Verificari operationale pentru proiecte mari",
@@ -7854,7 +8061,7 @@
       "commonMistakes": [
         "Activitate economică necorelata cu obiectivele schemei.",
         "Buget mare fără flux tehnologic explicat.",
-        "Echipamente folosite și pentru activitati neeligibile fără separare clara.",
+        "Echipamente folosite și pentru activități neeligibile fără separare clara.",
         "Amplasament fără utilitati sau autorizații suficiente.",
         "Oferte incomplete pentru echipamente majore.",
         "Demararea lucrărilor sau comenzilor înainte de depunerea solicitării."
@@ -7866,7 +8073,7 @@
       "factualGovernanceRef": "#/programs/pro-infra"
     },
     {
-      "funding": "finanțarea, contribuția proprie, pragurile și termenele se confirmă în ghidul apelului activ; pagină evită valori fixe când nu există apel final publicat sau documente verificate.",
+      "funding": "finanțarea, contribuția proprie, pragurile și termenele se confirmă în ghidul apelului activ; pagina evită valori fixe când nu există apel final publicat sau documente verificate.",
       "policyContribution": "pagina ajută beneficiarii să compare programul, solicitantul, documentele și investiția înainte de o decizie costisitoare.",
       "audience": [
         "IMM-uri și antreprenori care pregătesc investiții",
@@ -7954,7 +8161,7 @@
       ]
     },
     {
-      "funding": "finanțarea, contribuția proprie, pragurile și termenele se confirmă în ghidul apelului activ; pagină evită valori fixe când nu există apel final publicat sau documente verificate.",
+      "funding": "finanțarea, contribuția proprie, pragurile și termenele se confirmă în ghidul apelului activ; pagina evită valori fixe când nu există apel final publicat sau documente verificate.",
       "policyContribution": "pagina ajută beneficiarii să compare programul, solicitantul, documentele și investiția înainte de o decizie costisitoare.",
       "audience": [
         "IMM-uri și antreprenori care pregătesc investiții",
@@ -8061,7 +8268,7 @@
       ]
     },
     {
-      "funding": "finanțarea, contribuția proprie, pragurile și termenele se confirmă în ghidul apelului activ; pagină evită valori fixe când nu există apel final publicat sau documente verificate.",
+      "funding": "finanțarea, contribuția proprie, pragurile și termenele se confirmă în ghidul apelului activ; pagina evită valori fixe când nu există apel final publicat sau documente verificate.",
       "policyContribution": "pagina ajută beneficiarii să compare programul, solicitantul, documentele și investiția înainte de o decizie costisitoare.",
       "audience": [
         "IMM-uri și antreprenori care pregătesc investiții",
@@ -8206,7 +8413,7 @@
       ]
     },
     {
-      "funding": "finanțarea, contribuția proprie, pragurile și termenele se confirmă în ghidul apelului activ; pagină evită valori fixe când nu există apel final publicat sau documente verificate.",
+      "funding": "finanțarea, contribuția proprie, pragurile și termenele se confirmă în ghidul apelului activ; pagina evită valori fixe când nu există apel final publicat sau documente verificate.",
       "policyContribution": "pagina ajută beneficiarii să compare programul, solicitantul, documentele și investiția înainte de o decizie costisitoare.",
       "audience": [
         "IMM-uri și antreprenori care pregătesc investiții",
@@ -8345,7 +8552,7 @@
       ]
     },
     {
-      "funding": "finanțarea, contribuția proprie, pragurile și termenele se confirmă în ghidul apelului activ; pagină evită valori fixe când nu există apel final publicat sau documente verificate.",
+      "funding": "finanțarea, contribuția proprie, pragurile și termenele se confirmă în ghidul apelului activ; pagina evită valori fixe când nu există apel final publicat sau documente verificate.",
       "policyContribution": "pagina ajută beneficiarii să compare programul, solicitantul, documentele și investiția înainte de o decizie costisitoare.",
       "audience": [
         "IMM-uri și antreprenori care pregătesc investiții",
@@ -8476,7 +8683,7 @@
       ]
     },
     {
-      "funding": "finanțarea, contribuția proprie, pragurile și termenele se confirmă în ghidul apelului activ; pagină evită valori fixe când nu există apel final publicat sau documente verificate.",
+      "funding": "finanțarea, contribuția proprie, pragurile și termenele se confirmă în ghidul apelului activ; pagina evită valori fixe când nu există apel final publicat sau documente verificate.",
       "policyContribution": "pagina ajută beneficiarii să compare programul, solicitantul, documentele și investiția înainte de o decizie costisitoare.",
       "audience": [
         "IMM-uri și antreprenori care pregătesc investiții",
@@ -8615,7 +8822,7 @@
       ]
     },
     {
-      "funding": "finanțarea, contribuția proprie, pragurile și termenele se confirmă în ghidul apelului activ; pagină evită valori fixe când nu există apel final publicat sau documente verificate.",
+      "funding": "finanțarea, contribuția proprie, pragurile și termenele se confirmă în ghidul apelului activ; pagina evită valori fixe când nu există apel final publicat sau documente verificate.",
       "policyContribution": "pagina ajută beneficiarii să compare programul, solicitantul, documentele și investiția înainte de o decizie costisitoare.",
       "audience": [
         "IMM-uri și antreprenori care pregătesc investiții",
@@ -8754,7 +8961,7 @@
       ]
     },
     {
-      "funding": "finanțarea, contribuția proprie, pragurile și termenele se confirmă în ghidul apelului activ; pagină evită valori fixe când nu există apel final publicat sau documente verificate.",
+      "funding": "finanțarea, contribuția proprie, pragurile și termenele se confirmă în ghidul apelului activ; pagina evită valori fixe când nu există apel final publicat sau documente verificate.",
       "policyContribution": "pagina ajută beneficiarii să compare programul, solicitantul, documentele și investiția înainte de o decizie costisitoare.",
       "audience": [
         "IMM-uri și antreprenori care pregătesc investiții",
@@ -8855,7 +9062,7 @@
             ],
             [
               "Depunere și clarificări",
-              "pregătim informațiile astfel incat răspunsurile sa nu contrazica bugetul și planul"
+              "pregătim informațiile astfel încât răspunsurile sa nu contrazica bugetul și planul"
             ]
           ],
           "links": [
@@ -8921,7 +9128,7 @@
       "finalSecondaryLabel": "Vezi Start-Up Nation 2026"
     },
     {
-      "funding": "finanțarea, contribuția proprie, pragurile și termenele se confirmă în ghidul apelului activ; pagină evită valori fixe când nu există apel final publicat sau documente verificate.",
+      "funding": "finanțarea, contribuția proprie, pragurile și termenele se confirmă în ghidul apelului activ; pagina evită valori fixe când nu există apel final publicat sau documente verificate.",
       "policyContribution": "pagina ajută beneficiarii să compare programul, solicitantul, documentele și investiția înainte de o decizie costisitoare.",
       "audience": [
         "IMM-uri și antreprenori care pregătesc investiții",
@@ -9014,7 +9221,7 @@
       ]
     },
     {
-      "funding": "finanțarea, contribuția proprie, pragurile și termenele se confirmă în ghidul apelului activ; pagină evită valori fixe când nu există apel final publicat sau documente verificate.",
+      "funding": "finanțarea, contribuția proprie, pragurile și termenele se confirmă în ghidul apelului activ; pagina evită valori fixe când nu există apel final publicat sau documente verificate.",
       "policyContribution": "pagina ajută beneficiarii să compare programul, solicitantul, documentele și investiția înainte de o decizie costisitoare.",
       "audience": [
         "IMM-uri și antreprenori care pregătesc investiții",
@@ -9083,7 +9290,7 @@
       "title": "Consultanță PNRR Digitalizare | verificare proiect IMM",
       "description": "Consultanță PNRR Digitalizare pentru proiecte IMM concrete: eligibilitate, procese digitale, software, hardware, buget, documente și indicatori.",
       "h1": "Consultanță PNRR digitalizare",
-      "quickAnswer": "Consultanță PNRR digitalizare porneste de la procesele firmei, cheltuielile digitale, documente și indicatori masurabili.",
+      "quickAnswer": "Consultanță PNRR digitalizare pornește de la procesele firmei, cheltuielile digitale, documente și indicatori masurabili.",
       "programName": "Consultanță PNRR digitalizare",
       "related": [
         "/digitalizare-imm",
@@ -9109,7 +9316,7 @@
             },
             {
               "href": "/digitalizare-imm-pnrr",
-              "label": "Pagină aplicata Digitalizare IMM / PNRR"
+              "label": "Pagina aplicată Digitalizare IMM / PNRR"
             },
             {
               "href": "/pnrr",
@@ -9124,7 +9331,7 @@
       ]
     },
     {
-      "funding": "finanțarea, contribuția proprie, pragurile și termenele se confirmă în ghidul apelului activ; pagină evită valori fixe când nu există apel final publicat sau documente verificate.",
+      "funding": "finanțarea, contribuția proprie, pragurile și termenele se confirmă în ghidul apelului activ; pagina evită valori fixe când nu există apel final publicat sau documente verificate.",
       "policyContribution": "pagina ajută beneficiarii să compare programul, solicitantul, documentele și investiția înainte de o decizie costisitoare.",
       "audience": [
         "IMM-uri și antreprenori care pregătesc investiții",
@@ -9190,10 +9397,10 @@
       "category": "PNRR Digitalizare",
       "minWords": 1200,
       "minFaq": 6,
-      "title": "Digitalizare IMM PNRR | pagină aplicată pentru proiecte digitale",
-      "description": "Pagină aplicată pentru Digitalizare IMM PNRR: procese, software, echipamente, securitate, cheltuieli, documente, indicatori și consultanță.",
-      "h1": "Digitalizare IMM / PNRR: pagină aplicată pentru proiecte digitale",
-      "quickAnswer": "Digitalizare IMM PNRR este pagină aplicată pentru proiecte digitale concrete. Ea pornește de la procesele firmei, soluții IT, buget, documente, cheltuieli și indicatori; pagină PNRR rămâne cadrul general pentru apeluri, reguli și termene.",
+      "title": "Digitalizare IMM PNRR | pagina aplicată pentru proiecte digitale",
+      "description": "Pagina aplicată pentru Digitalizare IMM PNRR: procese, software, echipamente, securitate, cheltuieli, documente, indicatori și consultanță.",
+      "h1": "Digitalizare IMM / PNRR: pagina aplicată pentru proiecte digitale",
+      "quickAnswer": "Digitalizare IMM PNRR este pagina aplicată pentru proiecte digitale concrete. Ea pornește de la procesele firmei, soluții IT, buget, documente, cheltuieli și indicatori; pagină PNRR rămâne cadrul general pentru apeluri, reguli și termene.",
       "programName": "Digitalizare IMM PNRR",
       "related": [
         "/pnrr",
@@ -9209,9 +9416,9 @@
       "officialGuideKey": "digitalizare-pnrr",
       "contentSections": [
         {
-          "title": "Pagină aplicată PNRR digitalizare versus pagină-cadru PNRR",
+          "title": "Pagina aplicată PNRR digitalizare versus pagină-cadru PNRR",
           "paragraphs": [
-            "Această pagina este aplicată proiectelor de digitalizare: procese, software, echipamente, securitate, cheltuieli și indicatori. Pagină PNRR rămâne pagină-cadru pentru apeluri, reguli generale, termene și surse oficiale; hubul Digitalizare IMM compară PNRR cu alte rute de digitalizare."
+            "Această pagină este aplicată proiectelor de digitalizare: procese, software, echipamente, securitate, cheltuieli și indicatori. Pagină PNRR rămâne pagină-cadru pentru apeluri, reguli generale, termene și surse oficiale; hubul Digitalizare IMM compară PNRR cu alte rute de digitalizare."
           ],
           "links": [
             {
@@ -9235,7 +9442,7 @@
       ]
     },
     {
-      "funding": "finanțarea, contribuția proprie, pragurile și termenele se confirmă în ghidul apelului activ; pagină evită valori fixe când nu există apel final publicat sau documente verificate.",
+      "funding": "finanțarea, contribuția proprie, pragurile și termenele se confirmă în ghidul apelului activ; pagina evită valori fixe când nu există apel final publicat sau documente verificate.",
       "policyContribution": "pagina ajută beneficiarii să compare programul, solicitantul, documentele și investiția înainte de o decizie costisitoare.",
       "audience": [
         "IMM-uri și antreprenori care pregătesc investiții",
@@ -9305,7 +9512,7 @@
       "title": "Granturi Digitalizare IMM 2026 - software și echipamente",
       "description": "Granturi Digitalizare IMM 2026: software, hardware, cloud, securitate, servicii, eligibilitate, buget și pasi de aplicare.",
       "h1": "Granturi pentru digitalizarea IMM-urilor",
-      "quickAnswer": "Granturile pentru digitalizarea IMM-urilor trebuie construite pe procese reale, solutii utile și indicatori masurabili.",
+      "quickAnswer": "Granturile pentru digitalizarea IMM-urilor trebuie construite pe procese reale, soluții utile și indicatori masurabili.",
       "programName": "Granturi Digitalizare IMM",
       "related": [
         "/digitalizare-imm",
@@ -9317,7 +9524,7 @@
       "officialGuideKey": "digitalizare"
     },
     {
-      "funding": "finanțarea, contribuția proprie, pragurile și termenele se confirmă în ghidul apelului activ; pagină evită valori fixe când nu există apel final publicat sau documente verificate.",
+      "funding": "finanțarea, contribuția proprie, pragurile și termenele se confirmă în ghidul apelului activ; pagina evită valori fixe când nu există apel final publicat sau documente verificate.",
       "policyContribution": "pagina ajută beneficiarii să compare programul, solicitantul, documentele și investiția înainte de o decizie costisitoare.",
       "audience": [
         "IMM-uri și antreprenori care pregătesc investiții",
@@ -9386,7 +9593,7 @@
       "title": "Fonduri europene pentru femei antreprenor | hub IMM",
       "description": "Hub general pentru femei antreprenor: compară programul Femeia Antreprenor 2026 cu alte fonduri IMM, eligibilitate, documente și consultanță.",
       "h1": "Fonduri europene pentru femei antreprenor: hub de orientare",
-      "quickAnswer": "Această este pagină generală pentru femei antreprenor. Ea ajută la compararea programului Femeia Antreprenor 2026 cu alte fonduri pentru IMM, fără să dubleze pagină de program concret.",
+      "quickAnswer": "Aceasta este pagina generală pentru femei antreprenor. Ea ajută la compararea programului Femeia Antreprenor 2026 cu alte fonduri pentru IMM, fără să dubleze pagina de program concret.",
       "programName": "Fonduri europene femei antreprenor",
       "related": [
         "/femeia-antreprenor-2026",
@@ -9400,7 +9607,7 @@
         {
           "title": "Hub general, program concret și consultanță",
           "paragraphs": [
-            "Pagină generală ajută la orientare intre programe pentru femei antreprenor, fonduri IMM și verificarea documentelor. Când intentia este programul dedicat, ruta principală rămâne Femeia Antreprenor 2026; când întrebarea este despre idei, condiții sau riscuri, articolul suport completează pagină de program."
+            "Pagină generală ajută la orientare între programe pentru femei antreprenor, fonduri IMM și verificarea documentelor. Când intentia este programul dedicat, ruta principală rămâne Femeia Antreprenor 2026; când întrebarea este despre idei, condiții sau riscuri, articolul suport completează pagină de program."
           ],
           "links": [
             {
@@ -9424,7 +9631,7 @@
       ]
     },
     {
-      "funding": "finanțarea, contribuția proprie, pragurile și termenele se confirmă în ghidul apelului activ; pagină evită valori fixe când nu există apel final publicat sau documente verificate.",
+      "funding": "finanțarea, contribuția proprie, pragurile și termenele se confirmă în ghidul apelului activ; pagina evită valori fixe când nu există apel final publicat sau documente verificate.",
       "policyContribution": "pagina ajută beneficiarii să compare programul, solicitantul, documentele și investiția înainte de o decizie costisitoare.",
       "audience": [
         "IMM-uri și antreprenori care pregătesc investiții",
@@ -9508,7 +9715,7 @@
       "officialGuideKey": "dr12"
     },
     {
-      "funding": "finanțarea, contribuția proprie, pragurile și termenele se confirmă în ghidul apelului activ; pagină evită valori fixe când nu există apel final publicat sau documente verificate.",
+      "funding": "finanțarea, contribuția proprie, pragurile și termenele se confirmă în ghidul apelului activ; pagina evită valori fixe când nu există apel final publicat sau documente verificate.",
       "policyContribution": "pagina ajută beneficiarii să compare programul, solicitantul, documentele și investiția înainte de o decizie costisitoare.",
       "audience": [
         "IMM-uri și antreprenori care pregătesc investiții",
@@ -9639,7 +9846,7 @@
         "decide dacă aplicarea merită continuată"
       ],
       "evaluation": [
-        "verificare preliminara",
+        "verificare preliminară",
         "pregătire documente",
         "depunere sau amanare",
         "clarificări",
@@ -9675,7 +9882,7 @@
         {
           "title": "e-MOVE și GAL-AFIR în calendar",
           "paragraphs": [
-            "e-MOVE și GAL-AFIR se urmaresc cu status de verificat în surse oficiale: ghidul MTI/DGPET pentru e-MOVE și paginile AFIR/GAL pentru LEADER."
+            "e-MOVE și GAL-AFIR se urmăresc cu status de verificat în surse oficiale: ghidul MTI/DGPET pentru e-MOVE și paginile AFIR/GAL pentru LEADER."
           ]
         }
       ],
@@ -9735,7 +9942,7 @@
         "decide dacă aplicarea merită continuată"
       ],
       "evaluation": [
-        "verificare preliminara",
+        "verificare preliminară",
         "pregătire documente",
         "depunere sau amanare",
         "clarificări",
@@ -9842,7 +10049,7 @@
         "decide dacă aplicarea merită continuată"
       ],
       "evaluation": [
-        "verificare preliminara",
+        "verificare preliminară",
         "pregătire documente",
         "depunere sau amanare",
         "clarificări",
@@ -9937,7 +10144,7 @@
         "decide dacă aplicarea merită continuată"
       ],
       "evaluation": [
-        "verificare preliminara",
+        "verificare preliminară",
         "pregătire documente",
         "depunere sau amanare",
         "clarificări",
@@ -10065,7 +10272,7 @@
         "decide dacă aplicarea merită continuată"
       ],
       "evaluation": [
-        "verificare preliminara",
+        "verificare preliminară",
         "pregătire documente",
         "depunere sau amanare",
         "clarificări",
@@ -10104,61 +10311,97 @@
       "schemaType": "WebPage",
       "minWords": 1200,
       "minFaq": 6,
-      "policyContribution": "pagină organizeaza informația pentru decizii initiale mai clare și pentru o pregătire mai bună a documentelor.",
+      "policyContribution": "Fondul pentru Modernizare susține modernizarea sistemelor energetice și investițiile asociate tranziției energetice, însă eligibilitatea, beneficiarii și condițiile financiare sunt stabilite separat pentru fiecare apel.",
       "audience": [
-        "beneficiari care compară programe de finanțare",
-        "antreprenori care pregătesc documente și bugete",
-        "solicitanți care vor să reduca riscurile înainte de depunere"
+        "întreprinderi eligibile în apelurile dedicate producerii sau utilizării energiei",
+        "entități publice incluse expres în ghidurile pentru autoconsum ori stocare",
+        "operatori și organizații eligibile pentru infrastructură energetică",
+        "beneficiari care compară apelurile de energie înainte de pregătirea investiției"
       ],
       "eligibility": [
-        "solicitantul, activitatea și localitatea trebuie verificate",
-        "investiția trebuie să aiba legătura directă cu programul",
-        "documentele trebuie să fie actuale și coerente"
+        "apelul și categoria exactă de beneficiar trebuie identificate înainte de bugetare",
+        "investiția trebuie să corespundă obiectivului, tehnologiei și capacității permise de ghid",
+        "amplasamentul, dreptul asupra acestuia și condițiile de racordare trebuie documentate",
+        "consumul, producția, stocarea sau serviciul energetic trebuie fundamentate cu date verificabile",
+        "solicitantul trebuie să respecte regulile de ajutor, capacitatea financiară și obligațiile de menținere"
       ],
       "mandatory": [
-        "cod CAEN sau activitate clara",
-        "documente de firmă sau proiect",
-        "buget și oferte",
-        "verificarea cheltuielilor eligibile și neeligibile"
+        "ghidul, anexele și schema de ajutor ale apelului urmărit",
+        "documentele juridice și financiare ale solicitantului",
+        "documentele amplasamentului și avizele cerute pentru investiție",
+        "studiul, proiectul tehnic sau auditul energetic, după caz",
+        "bugetul, ofertele și justificarea dimensionării echipamentelor",
+        "dovezile privind contribuția proprie, ajutorul și lipsa dublei finanțări"
       ],
       "eligibleExpenses": [
-        "costuri permise de programul activ",
-        "servicii sau dotări justificate prin proiect",
-        "documente și resurse de pregătire",
-        "investiții care susțin obiectivele apelului"
+        "echipamente și lucrări pentru producerea energiei din surse regenerabile, în apelurile dedicate",
+        "sisteme de stocare atunci când sunt prevăzute expres și îndeplinesc condițiile tehnice",
+        "instalații, racorduri, monitorizare și componente auxiliare permise de ghid",
+        "servicii de proiectare, consultanță tehnică și management în limitele eligibile",
+        "măsuri de eficiență energetică sau infrastructură numai în apelurile care le includ",
+        "costuri de informare și audit prevăzute de documentația sesiunii"
       ],
       "ineligibleExpenses": [
-        "cheltuieli fără legătura cu investiția",
-        "costuri începute prea devreme",
-        "documente expirate sau incomplete",
-        "promisiuni de finanțare fără baza în ghid"
+        "costuri pentru tehnologii, capacități sau beneficiari neincluși în apelul urmărit",
+        "cheltuieli angajate înainte de momentul permis de regulile ajutorului",
+        "echipamente supradimensionate ori fără legătură cu consumul și obiectivul proiectului",
+        "lucrări pe un amplasament fără drept valabil sau fără avizele necesare",
+        "aceleași costuri acoperite printr-o altă finanțare publică",
+        "TVA, diferențe de preț și alte costuri pe care ghidul le declară neeligibile"
       ],
       "scoring": [
-        "claritatea solicitantului și a activității",
-        "coerenta bugetului",
-        "documente complete",
-        "calendar realist și capacitate de implementare"
+        "contribuția investiției la obiectivul energetic al apelului",
+        "raportul dintre capacitate, consum, producție și rezultatele asumate",
+        "maturitatea tehnică, avizele și pregătirea amplasamentului",
+        "eficiența bugetului și fundamentarea costurilor",
+        "capacitatea de implementare, operare și menținere a investiției"
       ],
       "steps": [
-        "clarifica obiectivul",
-        "verifică programul",
-        "pregătește documentele",
-        "revizuiește bugetul",
-        "decide dacă aplicarea merită continuată"
+        "definește obiectivul energetic și profilul beneficiarului",
+        "identifică apelul exact și verifică starea lui în MySMIS2021",
+        "citește ghidul, schema, anexele și eventualele actualizări",
+        "confirmă amplasamentul, consumul, capacitatea și condițiile de racordare",
+        "construiește bugetul și calendarul pe documente tehnice și oferte comparabile",
+        "pregătește depunerea și resursele necesare pentru implementare și monitorizare"
       ],
       "evaluation": [
-        "verificare preliminara",
-        "pregătire documente",
-        "depunere sau amanare",
-        "clarificări",
-        "actualizare după ghidul activ"
+        "conformitatea administrativă și eligibilitatea solicitantului",
+        "verificarea tehnică a soluției, capacității și amplasamentului",
+        "evaluarea financiară, regulile de ajutor și criteriile de selecție",
+        "clarificările și îndeplinirea condițiilor de contractare",
+        "achiziția, execuția, punerea în funcțiune, plata și monitorizarea"
       ],
       "examples": [
-        "o firmă poate evita depunerea dacă documentele nu susțin investiția",
-        "un beneficiar poate schimba programul după verificarea eligibilității",
-        "un buget poate fi simplificat când cheltuielile nu aduc punctaj sau impact"
+        "o entitate publică verifică separat apelul pentru producere destinată autoconsumului și apelul pentru stocare, deoarece documentele și soluția tehnică diferă",
+        "o întreprindere dimensionează capacitatea regenerabilă pe datele de consum și pe regulile apelului, nu pe suprafața disponibilă în mod izolat",
+        "un proiect de infrastructură energetică pregătește din timp drepturile asupra amplasamentului, avizele și calendarul realist de racordare"
       ],
-      "faq": [],
+      "faq": [
+        [
+          "Ce este Fondul pentru Modernizare?",
+          "Este un program-cadru pentru investiții care contribuie la modernizarea sistemelor energetice și la tranziția către surse și tehnologii mai curate. În România, finanțările sunt organizate în apeluri distincte, fiecare cu propriul ghid și statut."
+        ],
+        [
+          "Fondul pentru Modernizare are un singur apel deschis?",
+          "Nu. Programul cuprinde apeluri diferite pentru beneficiari și investiții diferite. Starea depunerii, termenul și documentele trebuie verificate separat în catalogul oficial MySMIS2021 și pe pagina autorității responsabile."
+        ],
+        [
+          "Cine poate aplica la Fondul pentru Modernizare?",
+          "Depinde de apel. Unele sesiuni se adresează întreprinderilor, altele entităților publice sau unor categorii specifice de operatori. Forma juridică, activitatea și condițiile solicitantului se confirmă în ghidul apelului urmărit."
+        ],
+        [
+          "Ce investiții pot fi eligibile?",
+          "Pot exista apeluri pentru producerea energiei regenerabile, autoconsum, stocare, eficiență sau infrastructură. O tehnologie nu este eligibilă automat doar pentru că aparține domeniului energetic; trebuie să fie prevăzută de ghidul concret."
+        ],
+        [
+          "Cât este finanțarea și care este contribuția proprie?",
+          "Fondul pentru Modernizare nu are o valoare și o intensitate unice pentru toate apelurile. Grantul, procentul de sprijin, plafoanele și contribuția proprie se preiau din ghidul și schema de ajutor ale sesiunii analizate."
+        ],
+        [
+          "Ce documente trebuie pregătite pentru un proiect energetic?",
+          "În funcție de apel pot fi necesare documentele solicitantului, dreptul asupra amplasamentului, date de consum, studii și proiecte tehnice, avize, documente de racordare, buget, oferte și dovezi pentru contribuția proprie."
+        ]
+      ],
       "related": [
         "/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum",
         "/fondul-modernizare-energie-regenerabila-2026",
@@ -10175,14 +10418,15 @@
       "slug": "fondul-de-modernizare",
       "output": "fondul-de-modernizare/index.html",
       "category": "Fondul de Modernizare",
-      "h1": "Fondul de Modernizare: hub pentru apeluri de energie",
+      "h1": "Fondul pentru Modernizare: apeluri de energie și statut",
       "heroIcon": "ph-duotone ph-sun",
       "officialGuideKey": "fondul-modernizare",
       "contentSections": [
         {
-          "title": "Hubul trimite către pagini aplicate",
+          "title": "Programul se citește pe apeluri, nu ca o sesiune unică",
           "paragraphs": [
-            "Fondul de Modernizare trebuie citit pe apeluri: energie regenerabilă, autoconsum, PRO INFRA și e-MOVE au reguli, beneficiari, avize și documente diferite. Foloseste hubul pentru orientare, apoi mergi pe pagină aplicata potrivită proiectului."
+            "Fondul pentru Modernizare trebuie citit pe apeluri: energia regenerabilă, autoconsumul, stocarea, PRO INFRA și e-MOVE au reguli, beneficiari, avize și documente diferite. Hubul oferă orientarea inițială, iar decizia se mută apoi pe pagina aplicată și pe documentele oficiale ale apelului.",
+            "Catalogul MySMIS2021 arată că apelurile aceluiași program pot avea stări diferite. Un apel finalizat nu trebuie prezentat drept sesiune deschisă, iar existența programului nu este echivalentă cu o perioadă activă de depunere."
           ],
           "links": [
             {
@@ -10194,9 +10438,38 @@
               "label": "Energie regenerabilă 2026"
             },
             {
+              "href": "/autoconsum-public-fotovoltaice-institutii-publice",
+              "label": "PC1 – Autoconsum entități publice"
+            },
+            {
+              "href": "/fondul-modernizare-pc1-stocare-entitati-publice",
+              "label": "PC1 – Stocare entități publice"
+            },
+            {
               "href": "/consultanta-fonduri-europene",
               "label": "Consultanță fonduri europene"
             }
+          ]
+        },
+        {
+          "title": "Datele tehnice stabilesc dimensiunea proiectului",
+          "paragraphs": [
+            "Pentru autoconsum, punctul de pornire este profilul real de consum și modul în care energia produsă va fi utilizată. Pentru stocare, se verifică relația cu instalația, modul de operare, capacitatea și condițiile tehnice prevăzute de apel. Pentru infrastructură, amplasamentul și racordarea pot deveni traseul critic al proiectului.",
+            "O capacitate mai mare nu înseamnă automat un proiect mai bun. Soluția trebuie justificată prin consum, producție, regim de funcționare, restricții de rețea, indicatori și cost total de operare."
+          ]
+        },
+        {
+          "title": "Documentele amplasamentului și avizele nu se lasă la final",
+          "paragraphs": [
+            "Dreptul asupra terenului sau clădirii, durata lui, sarcinile existente și compatibilitatea investiției cu destinația amplasamentului se verifică înainte de depunere. Pentru fiecare componentă se stabilește dacă este necesar un aviz, un studiu, o autorizație sau un document de racordare și la ce etapă trebuie prezentat.",
+            "Diferențele dintre situația juridică, proiectul tehnic, ofertele și cererea de finanțare pot genera clarificări sau neeligibilitate. Dosarul trebuie să descrie aceeași investiție în toate documentele."
+          ]
+        },
+        {
+          "title": "Bugetul include și costurile care rămân la beneficiar",
+          "paragraphs": [
+            "Grantul se analizează împreună cu contribuția proprie, TVA-ul, cheltuielile neeligibile, diferențele de preț și necesarul de numerar până la plată. Limitele și procentele sunt cele ale apelului concret și nu se transferă de la o schemă la alta.",
+            "Ofertele trebuie să permită identificarea echipamentelor și lucrărilor, iar devizele trebuie să rămână coerente cu soluția tehnică. Înainte de depunere se testează și scenariul în care costul final crește sau termenul de livrare se prelungește."
           ]
         }
       ],
@@ -10252,7 +10525,7 @@
         "decide dacă aplicarea merită continuată"
       ],
       "evaluation": [
-        "verificare preliminara",
+        "verificare preliminară",
         "pregătire documente",
         "depunere sau amanare",
         "clarificări",
@@ -10340,7 +10613,7 @@
         "decide dacă aplicarea merită continuată"
       ],
       "evaluation": [
-        "verificare preliminara",
+        "verificare preliminară",
         "pregătire documente",
         "depunere sau amanare",
         "clarificări",
@@ -10354,7 +10627,7 @@
       "faq": [
         [
           "Ce verific pentru e-MOVE RO?",
-          "Verifică beneficiarul, amplasamentul, dreptul de folosință, avizele, racordarea, bugetul, cofinanțarea și obligatiile de operare."
+          "Verifică beneficiarul, amplasamentul, dreptul de folosință, avizele, racordarea, bugetul, cofinanțarea și obligațiile de operare."
         ],
         [
           "FABER preia proiecte GAL în implementare?",
@@ -10402,8 +10675,8 @@
       "policyContribution": "intervenția LEADER sprijina dezvoltarea locală prin strategii construite la nivelul Grupurilor de Acțiune Locală și prin proiecte adaptate nevoilor din teritoriu.",
       "audience": [
         "firme, PFA, fermieri sau ONG-uri din teritoriul unui GAL",
-        "autoritati publice locale și parteneriate care urmaresc proiecte comunitare",
-        "beneficiari care trebuie să confirme încadrarea localitatii în strategia GAL"
+        "autoritati publice locale și parteneriate care urmăresc proiecte comunitare",
+        "beneficiari care trebuie să confirme încadrarea localității în strategia GAL"
       ],
       "eligibility": [
         "solicitantul trebuie să fie în teritoriul GAL și să se încadreze în măsura locală",
@@ -10411,7 +10684,7 @@
         "documentele, codul CAEN sau activitatea trebuie să susțină proiectul propus"
       ],
       "mandatory": [
-        "identificarea GAL-ului care acopera localitatea proiectului",
+        "identificarea GAL-ului care acoperă localitatea proiectului",
         "citirea ghidului local și a criteriilor de selecție",
         "verificarea eligibilității solicitantului și a investiției",
         "confirmarea cofinanțării, a documentelor și a calendarului local"
@@ -10420,7 +10693,7 @@
         "investiții productive sau servicii permise de măsura locală",
         "dotări, echipamente sau lucrări justificate prin obiectivul proiectului",
         "servicii, consultanță sau costuri generale doar dacă ghidul le permite",
-        "activitati comunitare sau publice în limitele strategiei locale"
+        "activități comunitare sau publice în limitele strategiei locale"
       ],
       "ineligibleExpenses": [
         "cheltuieli începute înainte de momentul permis",
@@ -10459,7 +10732,7 @@
         ],
         [
           "Se aplică aceleași reguli în toate GAL-urile?",
-          "Nu. Fiecare GAL lucreaza cu o strategie locală și cu ghiduri specifice. De aceea, condițiile finale se citesc în apelul local activ."
+          "Nu. Fiecare GAL lucrează cu o strategie locală și cu ghiduri specifice. De aceea, condițiile finale se citesc în apelul local activ."
         ],
         [
           "Ce trimit pentru o verificare inițială?",
@@ -10487,7 +10760,7 @@
         {
           "title": "Ghid complet GAL-AFIR",
           "paragraphs": [
-            "Pagină de apeluri GAL rămâne orientata pe identificarea sesiunilor locale. Pentru explicatia completă despre GAL-AFIR, beneficiari publici și privați, scriere de proiecte și preluare implementare, folosește hub-ul dedicat."
+            "Pagina de apeluri GAL rămâne orientată pe identificarea sesiunilor locale. Pentru explicația completă despre GAL-AFIR, beneficiari publici și privați, scriere de proiecte și preluare implementare, folosește hub-ul dedicat."
           ],
           "links": [
             {
@@ -10544,7 +10817,7 @@
         "Investiții fără drept clar asupra terenului sau fără posibilitate realistă de racordare.",
         "Echipamente care nu susțin infrastructura de încărcare finanțată.",
         "Costuri începute înainte de momentul permis de schema.",
-        "Proiecte care nu pot demonstra utilizarea, functionarea sau obligatiile de monitorizare."
+        "Proiecte care nu pot demonstra utilizarea, functionarea sau obligațiile de monitorizare."
       ],
       "scoring": [
         "Proiectele sunt mai solide când amplasamentul, racordarea și utilizarea sunt demonstrate din timp.",
@@ -10636,7 +10909,7 @@
       "contentSections": [
         {
           "title": "Cum se construiește un proiect e-MOVE",
-          "body": "Un proiect e-MOVE trebuie să lege statia de încărcare de amplasament, racordare, energie regenerabilă și utilizarea estimată. Fără această legătura, bugetul poate părea artificial sau imposibil de implementat în calendarul apelului."
+          "body": "Un proiect e-MOVE trebuie să lege statia de încărcare de amplasament, racordare, energie regenerabilă și utilizarea estimată. Fără această legătură, bugetul poate părea artificial sau imposibil de implementat în calendarul apelului."
         },
         {
           "title": "De ce racordarea este un filtru critic",
@@ -10652,7 +10925,7 @@
         },
         {
           "title": "Întrebări tehnice înainte de alegerea locatiei",
-          "body": "La e-MOVE RO amplasamentul trebuie testat prin întrebări foarte concrete: cine folosește statia, ce putere este disponibilă, ce distanță există până la punctul de racordare, cine detine terenul și ce restrictii urbanistice sau de mediu pot apărea. Pentru proiectele care includ producție regenerabilă verificăm dacă energia poate fi consumata sau gestionata în mod coerent. Aceste răspunsuri influenteaza bugetul, calendarul, autorizatiile și riscul de implementare."
+          "body": "La e-MOVE RO amplasamentul trebuie testat prin întrebări foarte concrete: cine folosește statia, ce putere este disponibilă, ce distanță există până la punctul de racordare, cine detine terenul și ce restricții urbanistice sau de mediu pot apărea. Pentru proiectele care includ producție regenerabilă verificăm dacă energia poate fi consumata sau gestionata în mod coerent. Aceste răspunsuri influenteaza bugetul, calendarul, autorizatiile și riscul de implementare."
         },
         {
           "title": "Bugetul trebuie legat de folosirea infrastructurii",
@@ -10663,7 +10936,7 @@
         [
           "Solicitant",
           "Categorie eligibilă potrivit submasurii și ghidului activ.",
-          "Tip beneficiar, capacitate de implementare și restrictii.",
+          "Tip beneficiar, capacitate de implementare și restricții.",
           "Ghidul activ"
         ],
         [
@@ -10674,7 +10947,7 @@
         ],
         [
           "Racordare",
-          "Putere disponibilă și solutie tehnică realistă.",
+          "Putere disponibilă și soluție tehnică realistă.",
           "Avize, calendar și capacitate retea.",
           "Operator retea"
         ],
@@ -10763,7 +11036,7 @@
         "Alegerea unui amplasament fără drepturi sau avize suficiente.",
         "Ignorarea timpului pentru racordare și autorizații.",
         "Buget construit doar pentru plafon, fără justificare tehnică.",
-        "Confuzie intre consum intern, acces public și obligatiile schemei.",
+        "Confuzie între consum intern, acces public și obligațiile schemei.",
         "Stocare sau regenerabile dimensionate fără legătura cu infrastructura de încărcare.",
         "Aplicare pe forma consultativa fără verificarea conditiilor finale."
       ],
@@ -10815,7 +11088,7 @@
       ],
       "eligibleExpenses": [
         "dotări și echipamente pentru servicii publice locale, dacă ghidul permite",
-        "investiții pentru firme sau activitati non-agricole, dacă sunt prevazute în intervenția GAL",
+        "investiții pentru firme sau activități non-agricole, dacă sunt prevazute în intervenția GAL",
         "utilaje, echipamente, digitalizare sau servicii locale, conform apelului",
         "documentatii, proiectare și costuri generale în limitele ghidului"
       ],
@@ -10873,8 +11146,8 @@
           "Verifică teritoriul GAL, tipul beneficiarului, investiția, punctajul, bugetul și documentele obligatorii."
         ],
         [
-          "De ce difera apelurile GAL intre localitati?",
-          "Fiecare GAL are strategie proprie, alocari, criterii și ghiduri locale, chiar dacă lucreaza în cadrul LEADER/AFIR."
+          "De ce difera apelurile GAL între localități?",
+          "Fiecare GAL are strategie proprie, alocări, criterii și ghiduri locale, chiar dacă lucrează în cadrul LEADER/AFIR."
         ],
         [
           "Beneficiarii publici și privați au aceleași reguli?",
@@ -10882,7 +11155,7 @@
         ],
         [
           "Unde vad apelurile GAL active?",
-          "Porneste de la pagină GAL-ului local și de la sursele AFIR LEADER, apoi confirmă ghidul local, anexele și calendarul apelului."
+          "Pornește de la pagina GAL-ului local și de la sursele AFIR LEADER, apoi confirmă ghidul local, anexele și calendarul apelului."
         ]
       ],
       "related": [
@@ -10976,7 +11249,7 @@
         {
           "title": "Diferența dintre beneficiar public și beneficiar privat",
           "paragraphs": [
-            "Beneficiarii publici lucreaza de obicei cu hotarari, mandate, bugete publice și reguli de achiziție specifice. Beneficiarii privați trebuie să confirme forma juridică, activitatea, localizarea, capacitatea financiara și cheltuielile permise."
+            "Beneficiarii publici lucrează de obicei cu hotarari, mandate, bugete publice și reguli de achiziție specifice. Beneficiarii privați trebuie să confirme forma juridică, activitatea, localizarea, capacitatea financiara și cheltuielile permise."
           ]
         },
         {
@@ -11028,9 +11301,9 @@
           ]
         },
         {
-          "title": "Cum lucreaza FABER",
+          "title": "Cum lucrează FABER",
           "paragraphs": [
-            "FABER lucreaza prudent: verifică ghidul local, documentele, punctajul, bugetul și riscurile înainte de recomandarea depunerii sau preluarii implementarii."
+            "FABER lucrează prudent: verifică ghidul local, documentele, punctajul, bugetul și riscurile înainte de recomandarea depunerii sau preluarii implementarii."
           ]
         },
         {
@@ -11050,7 +11323,7 @@
             }
           ],
           "paragraphs": [
-            "Pentru o analiză completă, pagină GAL-AFIR trebuie citita împreună cu apelurile GAL publicate, consultanță AFIR, fondurile pentru agricultură și pagină de verificare eligibilitate. Această legătura ajută solicitantul să treaca de la interes general la o decizie concretă: ce GAL este competent, ce ghid local se aplică, ce document lipsește și cine poate gestiona implementarea după contractare."
+            "Pentru o analiză completă, pagină GAL-AFIR trebuie citita împreună cu apelurile GAL publicate, consultanță AFIR, fondurile pentru agricultură și pagină de verificare eligibilitate. Această legătură ajută solicitantul să treaca de la interes general la o decizie concretă: ce GAL este competent, ce ghid local se aplică, ce document lipsește și cine poate gestiona implementarea după contractare."
           ]
         }
       ],
@@ -11065,7 +11338,7 @@
           "Firmă / PFA / II / IF",
           "Posibila, dacă forma și activitatea sunt eligibile",
           "CAEN, localizare, vechime, buget, oferte și punctaj",
-          "Apelurile difera intre GAL-uri"
+          "Apelurile difera între GAL-uri"
         ],
         [
           "ONG sau beneficiar privat",
@@ -11077,13 +11350,13 @@
           "Proiect deja contractat",
           "Poate fi preluat pentru implementare dacă documentele permit",
           "Contract, anexe, achiziții, cereri de plată și corespondenta",
-          "Preluarea nu schimbă obligatiile asumate"
+          "Preluarea nu schimbă obligațiile asumate"
         ]
       ],
       "eligibleInvestmentRows": [
         [
           "Dotari și utilaje",
-          "Echipamente pentru servicii locale sau activitati economice",
+          "Echipamente pentru servicii locale sau activități economice",
           "Dimensionare, oferte și legătura cu obiectivul",
           "ghid GAL activ"
         ],
@@ -11213,7 +11486,7 @@
         "Verifică statutul IMM și codurile CAEN relevante pentru sectorul TIC.",
         "Demonstreaza ca proiectul dezvolta un produs, serviciu sau aplicatie digitala cu componenta inovatoare.",
         "Confirma nivelul de maturitate, echipa, drepturile asupra solutiei și capacitatea de implementare.",
-        "Separa cheltuielile pentru ajutor regional de cele de minimis, dacă ghidul cere această structura.",
+        "Separa cheltuielile pentru ajutor regional de cele de minimis, dacă ghidul cere această structură.",
         "Validează bugetul, intensitățile și calendarul în ghidul activ PoCIDIF."
       ],
       "eligibleExpenses": [
@@ -11231,7 +11504,7 @@
       "mandatory": [
         "Incadrare IMM și activitate TIC verificabila.",
         "Descriere tehnică a solutiei, gradului de noutate și tehnologiilor avansate folosite.",
-        "Buget detaliat pe activitati, ajutor regional, minimis, TVA și costuri neeligibile.",
+        "Buget detaliat pe activități, ajutor regional, minimis, TVA și costuri neeligibile.",
         "Echipa, plan de dezvoltare, calendar și rezultate măsurabile.",
         "Confirmarea ghidului activ, anexelor și grilei de evaluare înainte de depunere."
       ],
@@ -11243,7 +11516,7 @@
       "steps": [
         "Verificam încadrarea IMM și codurile CAEN TIC.",
         "Clarificam produsul digital, nivelul de inovare și tehnologiile avansate.",
-        "Structuram bugetul pe activitati, categorii de ajutor și costuri proprii.",
+        "Structuram bugetul pe activități, categorii de ajutor și costuri proprii.",
         "Pregatim documentele tehnice, financiare și comerciale.",
         "Actualizam dosarul după ghidul final PoCIDIF."
       ],
@@ -11309,7 +11582,7 @@
           "Tehnic",
           "Beneficiar și echipa tehnică",
           "Înainte de buget.",
-          "Descriere solutie, arhitectura, tehnologii, echipa și calendar."
+          "Descriere soluție, arhitectura, tehnologii, echipa și calendar."
         ],
         [
           "Piata",
@@ -11335,7 +11608,7 @@
         ],
         [
           "3.",
-          "Separa bugetul pe activitati și tipuri de ajutor."
+          "Separa bugetul pe activități și tipuri de ajutor."
         ],
         [
           "4.",
@@ -11350,7 +11623,7 @@
         "Proiect prezentat ca inovator, dar descris doar ca site-ul sau aplicatie obisnuita.",
         "Coduri CAEN sau activitate TIC neclare.",
         "Buget mare fără arhitectura tehnică și etape de dezvoltare.",
-        "Cheltuieli amestecate intre ajutor regional, minimis și costuri neeligibile.",
+        "Cheltuieli amestecate între ajutor regional, minimis și costuri neeligibile.",
         "Lipsa dovezilor privind echipa și capacitatea de implementare.",
         "Aplicare fără corelarea ghidului aprobat, anexelor, schemei și clarificărilor oficiale."
       ],
@@ -11482,7 +11755,7 @@
       "quickAnswer": "Eligibilitatea pornește de la statutul de microîntreprindere, întreprindere mică sau mijlocie din sectorul TIC, forma juridică permisă și autorizarea unuia dintre codurile CAEN prevăzute de ghid. Se verifică apoi situația financiară și fiscală, capacitatea de cofinanțare, locația, lipsă stării de dificultate și caracterul inovator al proiectului. Parteneriatele sunt permise între IMM-uri TIC eligibile, însă întreprinderile nou-înființate nu pot avea rol de partener. Fiecare solicitant, partener și grup de firme trebuie să respecte limita de participare stabilită de apel.",
       "faq": [
         [
-          "Ce tipuri de firme pot solicită PoCIDIF 2.1?",
+          "Ce tipuri de firme pot solicita PoCIDIF 2.1?",
           "Microîntreprinderile, întreprinderile mici și întreprinderile mijlocii din sectorul TIC, inclusiv anumite întreprinderi nou-înființate, dacă îndeplinesc cumulativ condițiile ghidului aprobat."
         ],
         [

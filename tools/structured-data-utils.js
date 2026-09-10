@@ -129,8 +129,8 @@ function visibleFaqItems($) {
   return visibleFaqCandidates($).map(({ question, answer }) => ({ question, answer }));
 }
 
-function sitemapRoutes(root) {
-  return readSitemapUrls(root)
+function sitemapRoutes(root, entryFile = "sitemap.xml") {
+  return readSitemapUrls(root, entryFile)
     .map((value) => new URL(value))
     .filter((url) => url.origin === SITE)
     .map((url) => url.pathname === "/" ? "/" : url.pathname.replace(/\/$/u, ""));

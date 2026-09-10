@@ -1,49 +1,49 @@
 {
-  "generatedAt": "2026-09-02T12:15:40.839Z",
-  "root": "C:\\Users\\flori\\Documents\\GitHub\\atelierdeconsultanta-visibility-audit",
+  "generatedAt": "2026-09-10T05:25:36.805Z",
+  "root": "C:\\Users\\flori\\Documents\\GitHub\\atelierdeconsultanta",
   "summary": {
-    "totalFiles": 104,
-    "passedFiles": 104,
+    "totalFiles": 105,
+    "passedFiles": 105,
     "failedFiles": 0,
     "checks": {
       "utf8Charset": {
-        "pass": 104,
+        "pass": 105,
         "fail": 0
       },
       "metaDescription": {
-        "pass": 104,
+        "pass": 105,
         "fail": 0
       },
       "canonical": {
-        "pass": 104,
+        "pass": 105,
         "fail": 0
       },
       "cleanCanonical": {
-        "pass": 104,
+        "pass": 105,
         "fail": 0
       },
       "imageAltAttributes": {
-        "pass": 104,
+        "pass": 105,
         "fail": 0
       },
       "singleH1": {
-        "pass": 104,
+        "pass": 105,
         "fail": 0
       },
       "visibleFaqForSchema": {
-        "pass": 104,
+        "pass": 105,
         "fail": 0
       },
       "speakableSchemaCoverage": {
-        "pass": 104,
+        "pass": 105,
         "fail": 0
       },
       "contentDepth": {
-        "pass": 104,
+        "pass": 105,
         "fail": 0
       },
       "relatedLinks": {
-        "pass": 104,
+        "pass": 105,
         "fail": 0
       }
     }
@@ -77,7 +77,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -136,7 +136,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -161,7 +161,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2331,
+          "words": 2348,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -195,7 +195,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -220,7 +220,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2617,
+          "words": 2735,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -255,7 +255,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -269,7 +269,7 @@
         "visibleFaqForSchema": {
           "status": "pass",
           "required": true,
-          "count": 12,
+          "count": 11,
           "threshold": 8
         },
         "speakableSchemaCoverage": {
@@ -280,7 +280,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 3448,
+          "words": 3417,
           "threshold": 2200
         },
         "relatedLinks": {
@@ -315,7 +315,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -340,7 +340,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 3605,
+          "words": 3614,
           "threshold": 2200
         },
         "relatedLinks": {
@@ -374,7 +374,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -388,7 +388,7 @@
         "visibleFaqForSchema": {
           "status": "pass",
           "required": true,
-          "count": 9,
+          "count": 8,
           "threshold": 4
         },
         "speakableSchemaCoverage": {
@@ -399,7 +399,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2569,
+          "words": 2497,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -411,7 +411,7 @@
       }
     },
     {
-      "file": "autoconsum-public-fotovoltaice-institutii-publice.html",
+      "file": "autoconsum-public-fotovoltaice-institutii-publice/index.html",
       "noindex": false,
       "pass": true,
       "checks": {
@@ -434,7 +434,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -442,14 +442,14 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Autoconsum PubliciEnergie Regenerabilă"
+            "PC1 Autoconsum 2026 pentru entități publice – producție solară și stocare integrată"
           ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
           "required": true,
-          "count": 6,
-          "threshold": 4
+          "count": 16,
+          "threshold": 8
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -459,8 +459,8 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2133,
-          "threshold": 1100
+          "words": 1946,
+          "threshold": 700
         },
         "relatedLinks": {
           "status": "pass",
@@ -494,7 +494,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -519,7 +519,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1520,
+          "words": 1710,
           "threshold": 700
         },
         "relatedLinks": {
@@ -554,7 +554,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -613,7 +613,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -638,7 +638,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 1879,
+          "words": 1887,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -672,7 +672,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -686,7 +686,7 @@
         "visibleFaqForSchema": {
           "status": "pass",
           "required": true,
-          "count": 19,
+          "count": 18,
           "threshold": 10
         },
         "speakableSchemaCoverage": {
@@ -697,7 +697,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2832,
+          "words": 2788,
           "threshold": 1600
         },
         "relatedLinks": {
@@ -732,7 +732,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -740,14 +740,14 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Programul e-DRIVE"
+            "e-DRIVE 2026 – finanțare pentru vehicule electrice M1, M2 și M3"
           ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
           "required": true,
-          "count": 14,
-          "threshold": 7
+          "count": 16,
+          "threshold": 9
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -757,7 +757,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1631,
+          "words": 1844,
           "threshold": 700
         },
         "relatedLinks": {
@@ -792,7 +792,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -800,7 +800,7 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "Programul e-Mobility RO"
+            "e-Mobility RO 2026 – finanțare pentru stații de reîncărcare"
           ]
         },
         "visibleFaqForSchema": {
@@ -817,7 +817,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1473,
+          "words": 1632,
           "threshold": 700
         },
         "relatedLinks": {
@@ -852,7 +852,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -866,7 +866,7 @@
         "visibleFaqForSchema": {
           "status": "pass",
           "required": true,
-          "count": 13,
+          "count": 12,
           "threshold": 8
         },
         "speakableSchemaCoverage": {
@@ -877,7 +877,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2018,
+          "words": 1949,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -912,7 +912,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -972,7 +972,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -985,8 +985,9 @@
         },
         "visibleFaqForSchema": {
           "status": "pass",
-          "required": false,
-          "count": 0
+          "required": true,
+          "count": 11,
+          "threshold": 7
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -996,7 +997,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1236,
+          "words": 3070,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -1030,7 +1031,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -1044,7 +1045,7 @@
         "visibleFaqForSchema": {
           "status": "pass",
           "required": true,
-          "count": 9,
+          "count": 8,
           "threshold": 4
         },
         "speakableSchemaCoverage": {
@@ -1055,7 +1056,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2364,
+          "words": 2285,
           "threshold": 1100
         },
         "relatedLinks": {
@@ -1089,7 +1090,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -1114,7 +1115,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1780,
+          "words": 1782,
           "threshold": 900
         },
         "relatedLinks": {
@@ -1149,7 +1150,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -1174,7 +1175,67 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1602,
+          "words": 1611,
+          "threshold": 700
+        },
+        "relatedLinks": {
+          "status": "pass",
+          "required": false,
+          "count": 1,
+          "note": "not a hub/blog page"
+        }
+      }
+    },
+    {
+      "file": "fondul-modernizare-pc1-stocare-entitati-publice/index.html",
+      "noindex": false,
+      "pass": true,
+      "checks": {
+        "utf8Charset": {
+          "status": "pass",
+          "hasCharset": true,
+          "hasHttpEquiv": false
+        },
+        "metaDescription": {
+          "status": "pass",
+          "count": 1
+        },
+        "canonical": {
+          "status": "pass",
+          "count": 1
+        },
+        "cleanCanonical": {
+          "status": "pass",
+          "href": "https://atelierdeconsultanta.ro/fondul-modernizare-pc1-stocare-entitati-publice"
+        },
+        "imageAltAttributes": {
+          "status": "pass",
+          "totalImages": 1,
+          "missingAltCount": 0,
+          "missingAlt": []
+        },
+        "singleH1": {
+          "status": "pass",
+          "count": 1,
+          "text": [
+            "PC1 Stocare 2026 pentru entități publice – baterii în spatele contorului"
+          ]
+        },
+        "visibleFaqForSchema": {
+          "status": "pass",
+          "required": true,
+          "count": 16,
+          "threshold": 8
+        },
+        "speakableSchemaCoverage": {
+          "status": "pass",
+          "required": false,
+          "count": 0
+        },
+        "contentDepth": {
+          "status": "pass",
+          "required": true,
+          "words": 1840,
           "threshold": 700
         },
         "relatedLinks": {
@@ -1209,7 +1270,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -1234,7 +1295,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1340,
+          "words": 1342,
           "threshold": 700
         },
         "relatedLinks": {
@@ -1268,7 +1329,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -1282,7 +1343,7 @@
         "visibleFaqForSchema": {
           "status": "pass",
           "required": true,
-          "count": 14,
+          "count": 13,
           "threshold": 9
         },
         "speakableSchemaCoverage": {
@@ -1293,7 +1354,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2387,
+          "words": 2289,
           "threshold": 1400
         },
         "relatedLinks": {
@@ -1327,7 +1388,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -1352,7 +1413,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 3294,
+          "words": 3365,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -1387,7 +1448,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -1395,13 +1456,14 @@
           "status": "pass",
           "count": 1,
           "text": [
-            "PNRR"
+            "Planul Național de Redresare și Reziliență"
           ]
         },
         "visibleFaqForSchema": {
           "status": "pass",
-          "required": false,
-          "count": 0
+          "required": true,
+          "count": 11,
+          "threshold": 7
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -1411,8 +1473,8 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1182,
-          "threshold": 1100
+          "words": 2930,
+          "threshold": 1200
         },
         "relatedLinks": {
           "status": "pass",
@@ -1445,7 +1507,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -1459,7 +1521,7 @@
         "visibleFaqForSchema": {
           "status": "pass",
           "required": true,
-          "count": 13,
+          "count": 12,
           "threshold": 8
         },
         "speakableSchemaCoverage": {
@@ -1470,7 +1532,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 3172,
+          "words": 3135,
           "threshold": 2100
         },
         "relatedLinks": {
@@ -1505,7 +1567,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -1518,8 +1580,9 @@
         },
         "visibleFaqForSchema": {
           "status": "pass",
-          "required": false,
-          "count": 0
+          "required": true,
+          "count": 11,
+          "threshold": 7
         },
         "speakableSchemaCoverage": {
           "status": "pass",
@@ -1529,7 +1592,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1209,
+          "words": 3219,
           "threshold": 1200
         },
         "relatedLinks": {
@@ -1563,7 +1626,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -1622,7 +1685,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 1,
+          "totalImages": 2,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -1681,7 +1744,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -1741,7 +1804,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -1800,7 +1863,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -1859,7 +1922,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -1918,7 +1981,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -1976,7 +2039,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -2034,7 +2097,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -2094,7 +2157,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -2152,7 +2215,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -2212,7 +2275,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -2236,7 +2299,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 2549,
+          "words": 2548,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -2270,7 +2333,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -2329,7 +2392,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -2388,7 +2451,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -2447,7 +2510,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -2505,7 +2568,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -2564,7 +2627,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -2623,7 +2686,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -2683,7 +2746,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -2742,7 +2805,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -2801,7 +2864,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -2861,7 +2924,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -2921,7 +2984,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -2980,7 +3043,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -3038,7 +3101,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -3096,7 +3159,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -3154,7 +3217,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -3212,7 +3275,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -3271,7 +3334,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -3330,7 +3393,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -3390,7 +3453,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -3414,7 +3477,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 2368,
+          "words": 2423,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -3449,7 +3512,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -3508,7 +3571,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -3532,7 +3595,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1185,
+          "words": 1199,
           "threshold": 400
         },
         "relatedLinks": {
@@ -3566,7 +3629,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -3626,7 +3689,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -3651,7 +3714,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1096,
+          "words": 1112,
           "threshold": 700
         },
         "relatedLinks": {
@@ -3685,7 +3748,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -3745,7 +3808,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -3803,7 +3866,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -3861,7 +3924,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -3919,7 +3982,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -3977,7 +4040,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -4035,7 +4098,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -4093,7 +4156,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -4152,7 +4215,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -4210,7 +4273,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -4268,7 +4331,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -4293,7 +4356,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1275,
+          "words": 1280,
           "threshold": 400
         },
         "relatedLinks": {
@@ -4328,7 +4391,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -4386,7 +4449,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -4445,7 +4508,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -4469,7 +4532,7 @@
         "contentDepth": {
           "status": "pass",
           "required": false,
-          "words": 1097,
+          "words": 1101,
           "threshold": 2000
         },
         "relatedLinks": {
@@ -4503,7 +4566,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -4561,7 +4624,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -4619,7 +4682,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -4677,7 +4740,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -4735,7 +4798,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -4795,7 +4858,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -4820,7 +4883,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1364,
+          "words": 1515,
           "threshold": 700
         },
         "relatedLinks": {
@@ -4854,7 +4917,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -4912,7 +4975,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -4971,7 +5034,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -5030,7 +5093,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -5089,7 +5152,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -5148,7 +5211,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -5207,7 +5270,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -5266,7 +5329,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -5325,7 +5388,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -5383,7 +5446,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -5408,7 +5471,7 @@
         "contentDepth": {
           "status": "pass",
           "required": true,
-          "words": 1182,
+          "words": 1208,
           "threshold": 700
         },
         "relatedLinks": {
@@ -5442,7 +5505,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -5500,7 +5563,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -5559,7 +5622,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -5617,7 +5680,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -5675,7 +5738,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -5733,7 +5796,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -5792,7 +5855,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -5852,7 +5915,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -5911,7 +5974,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -5970,7 +6033,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -6029,7 +6092,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -6088,7 +6151,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },
@@ -6147,7 +6210,7 @@
         },
         "imageAltAttributes": {
           "status": "pass",
-          "totalImages": 0,
+          "totalImages": 1,
           "missingAltCount": 0,
           "missingAlt": []
         },

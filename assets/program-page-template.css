@@ -29,10 +29,6 @@
   margin-inline: auto;
 }
 
-body[data-program-id="afir-energie-autoconsum"] main[data-long-form-layout="rail"] {
-  display: block;
-}
-
 body[data-program-id="afir-energie-autoconsum"] .program-template {
   width: 100%;
   max-inline-size: 76rem;
@@ -119,11 +115,6 @@ body[data-program-id="afir-energie-autoconsum"] .program-template :where(p, li, 
   margin-block-start: 0.35rem;
   font-size: 0.88rem;
   color: var(--color-muted, #4c596b);
-}
-
-.program-template__toc {
-  max-inline-size: 76ch;
-  margin-block: 2rem;
 }
 
 .program-template__disclaimer {
@@ -265,9 +256,6 @@ body[data-program-id="afir-energie-autoconsum"] .program-template :where(p, li, 
     grid-template-columns: 1fr;
   }
 
-  .program-template__toc details:not([open]) nav {
-    display: none;
-  }
 }
 
 @media (max-width: 30rem) {

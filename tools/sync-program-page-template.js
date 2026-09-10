@@ -21,16 +21,19 @@ const { PROGRAM_TEMPLATE_SLOT, syncPageHtml: syncEditorialGovernance } = require
 const { synchronizedHtml: syncBreadcrumbs } = require("./sync-breadcrumbs");
 const { synchronize: syncProgramVisual } = require("./sync-program-visuals");
 const { synchronizeFaqHtml } = require("./faq-governance");
+const { synchronizePublicHtml } = require("./sync-analytics-events");
+const { synchronizePage: synchronizeLongFormLayout } = require("./sync-long-form-layout");
 
 const CONFIG_PATH = path.join(ROOT, "config", "program-page-template.json");
 const GUIDES_PATH = path.join(ROOT, "official-guides.json");
 const REPORT_PATH = path.join(ROOT, "reports", "program-page-template-pilot-2026-07-21.json");
-const CSS_URL = "/assets/program-page-template.css?v=20260721-1";
+const CSS_URL = "/assets/program-page-template.css?v=20260909-1";
 const PROGRAM_VISUAL_CSS_URL = "/assets/program-visuals.css?v=20260818-1";
 const TEMPLATE_VERSION = "p1_11";
 const CHECK_ONLY = process.argv.includes("--check");
 const FORBIDDEN_LOCAL_FACTS = ["status", "statusLabel", "verifiedAt", "sourceUrl", "sourceVersion", "applicationStart", "applicationEnd", "grantSummary", "cofinancingSummary"];
 const SECTION_ORDER = ["eligibility", "funding", "scoreAndRisk", "documentsAndSteps", "consultantAnalysis", "sources", "questions", "cta"];
+const EMPTY_EQUIVALENT_ATTRIBUTE = /\s((?:data-[a-z0-9:._-]+)|google-add-preferred-source-btn|async|autofocus|autoplay|checked|controls|default|defer|disabled|formnovalidate|hidden|inert|ismap|itemscope|loop|multiple|muted|nomodule|novalidate|open|playsinline|readonly|required|reversed|selected)(?:=(?:""|''))?(?=[\s>])/giu;
 
 function escapeHtml(value) {
   return String(value ?? "")
@@ -52,6 +55,14 @@ function routeFile(route) {
 
 function countWords(value) {
   return String(value || "").replace(/<[^>]*>/g, " ").trim().split(/\s+/u).filter(Boolean).length;
+}
+
+function normalizeTemplateHtml(value) {
+  return String(value).replace(EMPTY_EQUIVALENT_ATTRIBUTE, " $1");
+}
+
+function sameTemplateHtml(left, right) {
+  return normalizeTemplateHtml(left) === normalizeTemplateHtml(right);
 }
 
 function formatDateRo(value) {
@@ -119,26 +130,6 @@ function renderGlance(page, program, guides) {
       </table>
     </div>
   </section>`;
-}
-
-function renderToc() {
-  const items = [
-    ["program-eligibility", "Cine se poate încadra"],
-    ["program-funding", "Ce se finanțează"],
-    ["program-score-risk", "Punctaj și riscuri"],
-    ["program-documents", "Documente și pași"],
-    ["program-analysis", "Analiza consultantului"],
-    ["program-sources", "Surse și modificări"],
-    ["program-questions", "Întrebări reale"]
-  ];
-  return `<aside class="long-form-toc program-template__toc" data-long-form-toc data-program-template-toc aria-label="Navigare în pagina programului">
-    <details>
-      <summary>Cuprins</summary>
-      <nav aria-label="Cuprinsul paginii">
-        <ol>${items.map(([id, label], index) => `<li><a href="#${id}" data-long-form-toc-link${index === 0 ? ' aria-current="location"' : ""}>${label}</a></li>`).join("")}</ol>
-      </nav>
-    </details>
-  </aside>`;
 }
 
 function renderEligibility(section, guides) {
@@ -252,6 +243,7 @@ function renderCta(page, program) {
 }
 
 function syncTemplateStructuredData($, page, program) {
+  const canonical = `https://atelierdeconsultanta.ro${normalizeRoute(page.route)}`;
   $("script[type='application/ld+json']").each((_, node) => {
     const script = $(node);
     try {
@@ -259,17 +251,19 @@ function syncTemplateStructuredData($, page, program) {
       const nodes = Array.isArray(value?.["@graph"]) ? value["@graph"] : (Array.isArray(value) ? value : [value]);
       for (const item of nodes) {
         const types = new Set(Array.isArray(item?.["@type"]) ? item["@type"] : [item?.["@type"]]);
-        if (types.has("Article") || types.has("WebPage")) {
+        if (types.has("WebPage")) {
           item.name = program.shortName;
-          item.description = page.directAnswer;
+          item.description = program.metaDescription;
           item.dateModified = program.lastMeaningfulUpdate;
-          item.citation = [{
-            "@type": "CreativeWork",
-            name: `${program.sourceName} — ${program.sourceVersion}`,
-            url: program.sourceUrl
-          }];
+          item.citation = [{ "@id": `${canonical}#official-source` }];
         }
-        if (types.has("Article")) item.headline = program.shortName;
+        if (types.has("Article")) {
+          delete item.name;
+          item.description = program.metaDescription;
+          item.dateModified = program.lastMeaningfulUpdate;
+          item.citation = [{ "@id": `${canonical}#official-source` }];
+          item.headline = program.shortName;
+        }
       }
       script.text(JSON.stringify(value));
     } catch {
@@ -289,8 +283,7 @@ function editorialText(page) {
   return values.join(" ");
 }
 
-function renderArticle(page, program, guides, wordCount) {
-  const hasToc = wordCount > 1500;
+function renderArticle(page, program, guides) {
   return `<!-- PROGRAM_PAGE_TEMPLATE_START -->
   <!-- ANSWER_READINESS_START -->
   <div class="program-template__answer-first" data-aeo-program-summary>
@@ -298,7 +291,6 @@ function renderArticle(page, program, guides, wordCount) {
   ${renderGlance(page, program, guides)}
   </div>
   <!-- ANSWER_READINESS_END -->
-${hasToc ? renderToc() : ""}
   <aside class="program-template__disclaimer" aria-label="Limită editorială"><strong>Important:</strong> ${escapeHtml(program.editorialDisclaimer)}</aside>
   ${renderEligibility(page.eligibility, guides)}
   ${renderFunding(page.funding, guides)}
@@ -365,7 +357,7 @@ function synchronizePage(source, page, program, guides, record) {
     .attr("data-long-form-page", wordCount > 1500 ? "true" : "false")
     .attr("data-long-form-type", "program")
     .attr("data-long-form-word-count", String(wordCount));
-  $("main").first().attr("data-long-form-layout", "rail").attr("data-long-form-content", "true");
+  $("main").first().attr("data-long-form-layout", "wide").attr("data-long-form-content", "true");
 
   hero.find(".eyebrow").first().text(program.statusLabel).attr("data-program-status-badge", program.status);
   hero.find("h1").first().text(program.shortName);
@@ -373,9 +365,11 @@ function synchronizePage(source, page, program, guides, record) {
   hero.find("h1").first().after(renderProgramFactualStatus(program, { mode: "template-header" }));
 
   article.addClass("program-template").attr("data-program-template", TEMPLATE_VERSION).attr("data-program-slug", program.slug);
-  article.html(renderArticle(page, program, guides, wordCount));
+  article.html(renderArticle(page, program, guides));
   syncTemplateStructuredData($, page, program);
-  if (!$(`link[href^="/assets/program-page-template.css"]`).length) $("head").append(`<link rel="stylesheet" href="${CSS_URL}" data-program-page-template-style="${TEMPLATE_VERSION}">`);
+  const templateStyle = $(`link[href^="/assets/program-page-template.css"]`).first();
+  if (templateStyle.length) templateStyle.attr("href", CSS_URL).attr("data-program-page-template-style", TEMPLATE_VERSION);
+  else $("head").append(`<link rel="stylesheet" href="${CSS_URL}" data-program-page-template-style="${TEMPLATE_VERSION}">`);
   if (!$(`link[href^="/assets/program-visuals.css"]`).length) $("head").append(`<link rel="stylesheet" href="${PROGRAM_VISUAL_CSS_URL}">`);
 
   let output = $.html();
@@ -384,8 +378,15 @@ function synchronizePage(source, page, program, guides, record) {
   output = syncEditorialGovernance(output, record);
   output = syncProgramVisual(output, normalizeRoute(page.route));
   output = synchronizeFaqHtml(output).html;
+  output = synchronizePublicHtml(output, `${normalizeRoute(page.route).replace(/^\//u, "")}/index.html`);
+  output = synchronizeLongFormLayout(output, {
+    route: normalizeRoute(page.route),
+    type: "program",
+    sitemapFamily: "programs",
+    sourceFile: `${normalizeRoute(page.route).replace(/^\//u, "")}/index.html`
+  }, new Map()).html;
   output = output.replace(/\r?\n/gu, newline);
-  return { html: output, wordCount, hasToc: wordCount > 1500 };
+  return { html: output, wordCount, hasToc: false };
 }
 
 function templateOrder($) {
@@ -408,7 +409,7 @@ function main() {
     if (!fs.existsSync(file)) throw new Error(`${page.route}: lipsește ${path.relative(ROOT, file)}.`);
     const before = fs.readFileSync(file, "utf8");
     const result = synchronizePage(before, page, programBySlug.get(page.programSlug), guides, recordById.get(page.editorialGovernanceRecordId));
-    if (result.html !== before) {
+    if (!sameTemplateHtml(result.html, before)) {
       if (CHECK_ONLY) outOfSync.push(path.relative(ROOT, file).split(path.sep).join("/"));
       else fs.writeFileSync(file, result.html, "utf8");
     }
@@ -460,6 +461,8 @@ module.exports = {
   editorialText,
   loadConfig,
   normalizeRoute,
+  normalizeTemplateHtml,
+  sameTemplateHtml,
   synchronizePage,
   syncTemplateStructuredData,
   validateConfig

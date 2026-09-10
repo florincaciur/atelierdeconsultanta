@@ -73,6 +73,24 @@ function assertCrawlerPolicy(text, agent) {
   }
 }
 
+function sitemapProgramRoutes() {
+  const sitemap = fs.readFileSync(path.join(ROOT, "sitemap-programs.xml"), "utf8");
+  return [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/giu)]
+    .map((match) => new URL(match[1]).pathname.replace(/\/$/u, "") || "/");
+}
+
+function localAssets(html) {
+  return [...html.matchAll(/(?:href|src)=["'](\/assets\/[^"']+\.(?:css|js)(?:\?[^"']*)?)["']/giu)].map((match) => match[1]);
+}
+
+function assertProgramLayout(route, html) {
+  if (/\bdata-(?:long-form-toc|program-template-toc)\b|\bclass=["'][^"']*\barticle-toc\b/iu.test(html)) {
+    throw new Error(`${route}: program table of contents detected`);
+  }
+  if (/<summary\b[^>]*>\s*Cuprins\s*<\/summary>/iu.test(html)) throw new Error(`${route}: Cuprins control detected`);
+  if (/<main\b[^>]*\bdata-long-form-layout=["']rail["']/iu.test(html)) throw new Error(`${route}: orphaned long-form rail detected`);
+}
+
 async function safeFormProbe(contactType) {
   const payload = {
     schema_version: "1.0.0",
@@ -118,19 +136,12 @@ async function main() {
   if (!Number.isFinite(waitSeconds) || waitSeconds < 0 || waitSeconds > 1800) throw new Error(`Invalid wait duration: ${waitSeconds}`);
 
   const release = await waitForCommit(expectedCommit, waitSeconds);
-  const criticalRoutes = [
+  const programRoutes = sitemapProgramRoutes();
+  const criticalRoutes = [...new Set([
     "/",
     "/contact",
-    "/autoconsum-public-fotovoltaice-institutii-publice",
-    "/fondul-modernizare-pc1-stocare-entitati-publice",
-    "/e-drive",
-    "/e-mobility",
-    "/pro-infra",
-    "/dr12-afir",
-    "/investitii-modernizarea-microintreprinderilor-apel-2",
-    "/dr14",
-    "/digitalizare-imm",
-  ];
+    ...programRoutes,
+  ])];
   const pages = new Map();
   for (const route of criticalRoutes) pages.set(route, await verifyHtml(route));
 
@@ -141,6 +152,7 @@ async function main() {
       throw new Error(`${route}: conținutul publicat diferă de sursa canonical din commit`);
     }
   }
+  for (const route of programRoutes) assertProgramLayout(route, pages.get(route));
 
   const homepageSource = fs.readFileSync(path.join(ROOT, "index.html"), "utf8");
   const homepage = verifyHomepageContent(pages.get("/"), homepageSource);
@@ -148,29 +160,21 @@ async function main() {
   const ordinaryHomepage = await request("/");
   if (ordinaryHomepage.status !== 200) throw new Error(`Homepage: HTTP ${ordinaryHomepage.status}`);
   verifyHomepageContent(await ordinaryHomepage.text(), homepageSource);
-  for (const assetUrl of homepage.assets) {
+  const releaseAssets = new Set([...homepage.assets, ...[...pages.values()].flatMap(localAssets)]);
+  for (const assetUrl of releaseAssets) {
     const response = await request(assetUrl);
-    const localAsset = path.join(ROOT, new URL(assetUrl, ORIGIN).pathname);
+    const localAsset = path.join(ROOT, decodeURIComponent(new URL(assetUrl, ORIGIN).pathname).replace(/^\/+/, ""));
+    if (!fs.existsSync(localAsset)) throw new Error(`Missing local CSS/JS asset: ${assetUrl}`);
     if (response.status !== 200 || assetDigest(await response.text()) !== assetDigest(fs.readFileSync(localAsset, "utf8"))) {
       throw new Error(`Homepage: CSS/JS publicat diferit de commit: ${assetUrl}`);
     }
   }
 
   const registry = JSON.parse(fs.readFileSync(path.join(ROOT, "config", "seo-programs.json"), "utf8"));
-  for (const slug of [
-    "autoconsum-institutii-publice",
-    "fondul-modernizare-pc1-stocare-entitati-publice",
-    "e-drive",
-    "e-mobility-ro",
-    "pro-infra",
-    "dr12-afir",
-    "modernizare-microintreprinderi-ne-2",
-    "dr14-afir",
-    "digitalizare-imm",
-  ]) {
-    const program = registry.programs.find((entry) => entry.slug === slug);
-    if (!program) throw new Error(`Program registry is missing ${slug}`);
+  const publicPrograms = registry.programs.filter((program) => program.publicationState === "public" && program.indexable !== false && !program.discovery?.redirectTarget);
+  for (const program of publicPrograms) {
     const html = pages.get(program.pageUrl);
+    if (!html) throw new Error(`Program route is missing from the live verification set: ${program.pageUrl}`);
     const expectedAttributes = [
       `data-program-id="${program.id}"`,
       `data-program-status="${program.status}"`,
@@ -212,7 +216,7 @@ async function main() {
 
   await safeFormProbe("email");
   await safeFormProbe("phone");
-  console.log(`Live release verified: ${release.commit} (homepage ${homepage.revision}, 10 program scenes, request form, exact main content and ${homepage.assets.length} CSS/JS assets, ordinary and cache-busted URL, ${criticalRoutes.length} canonical pages, sitemap, crawler policy, email/phone form probes).`);
+  console.log(`Live release verified: ${release.commit} (homepage ${homepage.revision}, ${programRoutes.length} program routes without Cuprins/rail, ${publicPrograms.length} registry programs, request form, exact HTML and ${releaseAssets.size} CSS/JS assets, ordinary and cache-busted URL, ${criticalRoutes.length} canonical pages, sitemap, crawler policy, email/phone form probes).`);
 }
 
 main().catch((error) => {

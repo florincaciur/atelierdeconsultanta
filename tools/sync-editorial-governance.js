@@ -108,15 +108,15 @@ function insertBeforeLast(html, pattern, block, trailingNewline = "\n") {
   const matches = [...html.matchAll(pattern)];
   if (!matches.length) return null;
   const last = matches.at(-1);
-  return `${html.slice(0, last.index).trimEnd()}\n${block}${trailingNewline}${html.slice(last.index)}`;
+  return `${html.slice(0, last.index).trimEnd()}${trailingNewline}${block}${trailingNewline}${html.slice(last.index)}`;
 }
 
 function syncPageHtml(source, record) {
-  const existingBoundary = source.match(/<!-- EDITORIAL_GOVERNANCE_END -->(\r\n|\n)/u)?.[1];
-  let output = source.replace(/<!-- EDITORIAL_GOVERNANCE_START -->[\s\S]*?<!-- EDITORIAL_GOVERNANCE_END -->\s*/giu, "");
+  const eol = source.includes("\r\n") ? "\r\n" : "\n";
+  let output = source.replace(/<!-- EDITORIAL_GOVERNANCE_START -->[\s\S]*?<!-- EDITORIAL_GOVERNANCE_END -->[ \t]*(?:\r?\n)?/giu, "");
   if (!output.includes(CSS_URL)) {
     const link = `<link rel="stylesheet" href="${CSS_URL}">`;
-    output = /<\/head>/iu.test(output) ? output.replace(/<\/head>/iu, `${link}\n</head>`) : `${link}\n${output}`;
+    output = /<\/head>/iu.test(output) ? output.replace(/<\/head>/iu, `${link}${eol}</head>`) : `${link}${eol}${output}`;
   }
   output = output.replace(/<body\b[^>]*>/iu, (tag) => {
     let next = tag;
@@ -143,15 +143,19 @@ function syncPageHtml(source, record) {
     return next;
   });
   output = syncJsonLd(output, record);
-  const block = renderEditorialGovernance(record);
-  const trailingNewline = existingBoundary || (source.includes("\r\n") ? "\r\n" : "\n");
+  const block = renderEditorialGovernance(record).replace(/\r?\n/gu, eol);
+  const trailingNewline = eol;
   if (output.includes(PROGRAM_TEMPLATE_SLOT)) {
-    return output.replace(/<!-- PROGRAM_TEMPLATE_GOVERNANCE_SLOT -->(?:\r\n|\n)?/u, `${PROGRAM_TEMPLATE_SLOT}\n${block}${trailingNewline}`);
+    return output.replace(/<!-- PROGRAM_TEMPLATE_GOVERNANCE_SLOT -->(?:\r\n|\n)?/u, `${PROGRAM_TEMPLATE_SLOT}${eol}${block}${trailingNewline}`);
   }
   output = insertBeforeLast(output, /<\/main>/giu, block, trailingNewline)
     || insertBeforeLast(output, /<\/body>/giu, block, trailingNewline)
-    || `${output}\n${block}${trailingNewline}`;
+    || `${output}${eol}${block}${trailingNewline}`;
   return output;
+}
+
+function sameText(left, right) {
+  return String(left).replace(/\r\n/gu, "\n") === String(right).replace(/\r\n/gu, "\n");
 }
 
 function filesForRoute(route) {
@@ -215,7 +219,7 @@ function main() {
       const before = fs.readFileSync(ADMIN_PATH, "utf8");
       updates.push({ file: ADMIN_PATH, before, after: syncAdminHtml(before, dashboardPayload(records, programs, today)) });
     }
-    const changed = updates.filter((update) => update.before !== update.after);
+    const changed = updates.filter((update) => !sameText(update.before, update.after));
     for (const update of changed) {
       console.log(`${check ? "OUTDATED" : "SYNC"} ${path.relative(ROOT, update.file).split(path.sep).join("/")}`);
       if (!check) fs.writeFileSync(update.file, update.after, "utf8");
@@ -230,4 +234,4 @@ function main() {
 
 if (require.main === module) main();
 
-module.exports = { CSS_URL, PROGRAM_TEMPLATE_SLOT, dashboardPayload, filesForRoute, syncAdminHtml, syncJsonLd, syncPageHtml };
+module.exports = { CSS_URL, PROGRAM_TEMPLATE_SLOT, dashboardPayload, filesForRoute, sameText, syncAdminHtml, syncJsonLd, syncPageHtml };

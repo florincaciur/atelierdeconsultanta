@@ -20,11 +20,14 @@ const {
   sameDocumentContent,
   validateData
 } = require("../tools/generate-status-governance-docs.js");
+const { syncGuides } = require("../tools/sync-program-factual-governance.js");
+const { isPositiveOpenClaim } = require("../tools/audit-program-factual-consistency.js");
 
 const data = loadData();
 const documents = buildDocuments(data);
 const statusById = new Map(data.taxonomy.statuses.map((status) => [status.id, status]));
 const programsById = new Map(data.programs.map((program) => [program.id, program]));
+const syncedGuides = syncGuides(JSON.parse(JSON.stringify(data.guides)), data.programs);
 
 assert.deepEqual(validateData(data), [], "Configurațiile taxonomiei și registrului de surse trebuie să fie valide.");
 assert.deepEqual(data.taxonomy.statuses.map((status) => status.id), EXPECTED_STATUS_IDS, "Taxonomia trebuie să păstreze exact cele 13 stări canonice și ordinea reviewable.");
@@ -33,6 +36,8 @@ assert.equal(data.taxonomy.statuses.filter((status) => status.acceptsApplication
 assert.equal(statusById.get("OPEN").acceptsApplications, true, "OPEN trebuie să permită depunerea.");
 assert.equal(statusById.get("FINAL_GUIDE").acceptsApplications, false, "FINAL_GUIDE nu înseamnă OPEN.");
 assert.equal(statusById.get("APPROVED_SCHEME").acceptsApplications, false, "APPROVED_SCHEME nu înseamnă OPEN.");
+assert.equal(isPositiveOpenClaim("Apelul este deschis."), true, "O afirmație pozitivă despre deschiderea apelului trebuie auditată.");
+assert.equal(isPositiveOpenClaim("Fondul are un singur apel deschis?"), false, "O întrebare FAQ nu poate fi tratată drept afirmație de status.");
 assert.match(statusById.get("SCHEDULED").publicLabel, /\{startDate\}.*\{endDate\}/, "SCHEDULED trebuie să afișeze fereastra oficială viitoare.");
 assert.match(statusById.get("UNCONFIRMED").publicLabel, /neconfirmat/i, "UNCONFIRMED nu poate fi prezentat drept fapt cert.");
 
@@ -44,6 +49,9 @@ assert.equal(programsById.get("pocidif-21").canonicalStatus, "OPEN");
 assert.equal(programsById.get("pro-infra").canonicalStatus, "APPROVED_SCHEME");
 assert.equal(programsById.get("fondul-modernizare-pc1-stocare").canonicalStatus, "FINAL_GUIDE");
 assert.equal(programsById.get("dr12-afir").canonicalStatus, "CONSULTATIVE_GUIDE");
+assert.equal(syncedGuides["ptj-comisia-europeana"].url, "https://commission.europa.eu/funding-and-tenders/find-funding/eu-funding-programmes/just-transition-fund_en", "Sincronizarea trebuie să păstreze sursa europeană suplimentară PTJ.");
+assert.equal(syncedGuides["ptj-comisia-europeana"].institution, "Comisia Europeană", "Sursa europeană PTJ nu poate fi reatribuită către MySMIS.");
+assert.equal(syncedGuides["ptj-romania-pnr-2023"].url, "https://commission.europa.eu/system/files/2023-05/ROMANIA%20NRP%202023%20RO.pdf", "Sincronizarea trebuie să păstreze documentul oficial pentru teritoriile PTJ.");
 
 for (const id of ["program-regional-nord-est", "fonduri-regionale", "apeluri-gal", "gal-afir-leader", "pnrr", "programul-tranzitie-justa", "fondul-de-modernizare"]) {
   assert.equal(programsById.get(id).canonicalStatus, "UNCONFIRMED", `${id} este pagină-umbrelă și nu poate moșteni OPEN de la un apel.`);
@@ -86,7 +94,7 @@ for (const field of ["Stable program ID", "Pagină oficială program/apel", "Ghi
   assert.ok(documents.sources.includes(`| ${field} |`), `Câmpul obligatoriu ${field} trebuie să existe.`);
 }
 assert.match(documents.status, /CLOSED.*COMPLETED.*poate rămâne indexabilă/s, "Paginile închise cu valoare SEO trebuie să poată fi păstrate.");
-assert.match(documents.sources, /Documentația oficială publicată și verificată la 23\.08\.2026 nu stabilește încă această informație\./, "Golurile factuale trebuie explicate explicit, fără placeholder.");
+assert.match(documents.sources, /Documentația oficială publicată și verificată la \d{2}\.\d{2}\.\d{4} nu stabilește încă această informație\./, "Golurile factuale trebuie explicate explicit, fără placeholder și fără a fixa o dată istorică în contract.");
 for (const field of ["Program", "Câmp", "Before", "After", "Sursă", "Verificat", "Motiv"]) {
   assert.ok(documents.sources.includes(field), `Jurnalul factual trebuie să includă ${field}.`);
 }

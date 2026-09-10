@@ -22,6 +22,8 @@
 
 [data-long-form-layout="wide"] {
   display: block;
+  width: 100%;
+  min-inline-size: 0;
 }
 
 [data-long-form-layout="wide"] > article.panel {

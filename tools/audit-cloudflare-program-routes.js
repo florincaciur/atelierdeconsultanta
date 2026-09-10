@@ -6,32 +6,23 @@ const ROOT = path.resolve(__dirname, "..");
 const DIST = path.join(ROOT, "dist");
 const MAX_REDIRECTS = 10;
 
-const PROGRAM_ROUTES = [
-  "/fonduri-regionale",
+function sitemapProgramRoutes() {
+  const sitemap = fs.readFileSync(path.join(ROOT, "sitemap-programs.xml"), "utf8");
+  return [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/giu)]
+    .map((match) => new URL(match[1]).pathname.replace(/\/$/u, "") || "/");
+}
+
+const PROGRAM_ROUTES = [...new Set([
+  ...sitemapProgramRoutes(),
   "/fonduri-europene-nord-est",
-  "/investitii-modernizarea-microintreprinderilor-apel-2",
-  "/dr12-afir",
-  "/afir-autoconsum-agroalimentar",
-  "/autoconsum-public-fotovoltaice-institutii-publice",
-  "/fondul-modernizare-pc1-stocare-entitati-publice",
-  "/fondul-modernizare-energie-regenerabila-2026",
-  "/dr14",
-  "/digitalizare-imm",
-  "/e-move",
-  "/femeia-antreprenor-2026",
-  "/apeluri-gal",
-  "/pro-infra",
-  "/programul-tranzitie-justa",
   "/programul-tranzitie-justa-intrebari-documente",
-  "/pocidif-21",
-  "/start-up-nation-2026",
   "/calculator-soc",
   "/instrumente",
   "/resurse",
   "/portofoliu",
   "/testimoniale",
   "/webinarii",
-];
+].filter(Boolean))];
 
 const CANONICAL_REDIRECT_TARGETS = new Map([
   ["/portofoliu", "/studii-de-caz-fonduri-europene"],

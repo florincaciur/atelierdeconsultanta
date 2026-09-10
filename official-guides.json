@@ -520,11 +520,12 @@
     "name": "Tabloul de bord oficial PNRR; program în implementare, cu situație distinctă pe componente și apeluri",
     "title": "Tabloul de bord oficial PNRR; program în implementare, cu situație distinctă pe componente și apeluri",
     "institution": "Ministerul Investițiilor și Proiectelor Europene – tabloul de bord PNRR",
+    "documentType": "tablou de bord oficial",
     "url": "https://pnrr.fonduri-ue.ro/ords/pnrr/r/dashboard-status-pnrr/home",
-    "accessedAt": "2026-08-23",
+    "accessedAt": "2026-09-10",
     "programStatus": "calendar_estimativ",
     "statusLabel": "Program în implementare – statutul se verifică pentru fiecare componentă și apel",
-    "verifiedAt": "2026-08-23",
+    "verifiedAt": "2026-09-10",
     "isPrimaryFor": "pnrr",
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
@@ -532,15 +533,52 @@
     "programIds": [
       "programul-tranzitie-justa"
     ],
-    "name": "Catalogul oficial al finanțărilor 2021–2027; Programul Tranziție Justă are statut distinct pentru fiecare apel",
-    "title": "Catalogul oficial al finanțărilor 2021–2027; Programul Tranziție Justă are statut distinct pentru fiecare apel",
+    "name": "Catalogul oficial al finanțărilor 2021–2027; apelurile sunt afișate în cadrul Programului Dezvoltare Durabilă și Tranziție Justă (fost PTJ), cu statut distinct pentru fiecare apel",
+    "title": "Catalogul oficial al finanțărilor 2021–2027; apelurile sunt afișate în cadrul Programului Dezvoltare Durabilă și Tranziție Justă (fost PTJ), cu statut distinct pentru fiecare apel",
     "institution": "Ministerul Investițiilor și Proiectelor Europene – MySMIS2021",
+    "documentType": "catalog oficial al apelurilor",
     "url": "https://resurse.mysmis2021.gov.ro/ords/repo_bo/r/mysmis-2021/finantari-programe-2021-2027",
-    "accessedAt": "2026-08-29",
+    "accessedAt": "2026-09-10",
     "programStatus": "calendar_estimativ",
     "statusLabel": "Program în implementare – statutul se verifică pentru fiecare apel în MySMIS",
-    "verifiedAt": "2026-08-29",
+    "verifiedAt": "2026-09-10",
     "isPrimaryFor": "programul-tranzitie-justa",
+    "sourceOfTruth": "config/seo-programs.json#programs"
+  },
+  "ptj-comisia-europeana": {
+    "programIds": [
+      "programul-tranzitie-justa"
+    ],
+    "name": "Fondul pentru o Tranziție Justă – obiective și tipuri de investiții",
+    "title": "Fondul pentru o Tranziție Justă – obiective și tipuri de investiții",
+    "institution": "Comisia Europeană",
+    "documentType": "pagină oficială a programului european",
+    "url": "https://commission.europa.eu/funding-and-tenders/find-funding/eu-funding-programmes/just-transition-fund_en",
+    "accessedAt": "2026-09-10",
+    "note": "Sursa explică rolul fondului și categoriile generale de intervenții; eligibilitatea concretă se confirmă în apelul național sau teritorial aplicabil.",
+    "programStatus": "calendar_estimativ",
+    "statusLabel": "Program în implementare – statutul se verifică pentru fiecare apel în MySMIS",
+    "verifiedAt": "2026-09-10",
+    "isPrimaryFor": "programul-tranzitie-justa",
+    "syncFromProgramRegistry": false,
+    "sourceOfTruth": "config/seo-programs.json#programs"
+  },
+  "ptj-romania-pnr-2023": {
+    "programIds": [
+      "programul-tranzitie-justa"
+    ],
+    "name": "Programul Național de Reformă 2023 – teritoriile sprijinite prin Fondul pentru o Tranziție Justă",
+    "title": "Programul Național de Reformă 2023 – teritoriile sprijinite prin Fondul pentru o Tranziție Justă",
+    "institution": "Guvernul României / Comisia Europeană",
+    "documentType": "document oficial de programare",
+    "url": "https://commission.europa.eu/system/files/2023-05/ROMANIA%20NRP%202023%20RO.pdf",
+    "accessedAt": "2026-09-10",
+    "note": "Documentul oficial identifică județele Gorj, Hunedoara, Dolj, Galați, Prahova și Mureș pentru sprijin în perioada 2021–2027.",
+    "programStatus": "calendar_estimativ",
+    "statusLabel": "Program în implementare – statutul se verifică pentru fiecare apel în MySMIS",
+    "verifiedAt": "2026-09-10",
+    "isPrimaryFor": "programul-tranzitie-justa",
+    "syncFromProgramRegistry": false,
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
   "fondul-modernizare-mysmis": {
@@ -550,11 +588,12 @@
     "name": "Catalogul oficial al finanțărilor 2021–2027; Fondul pentru Modernizare are statut distinct pentru fiecare apel",
     "title": "Catalogul oficial al finanțărilor 2021–2027; Fondul pentru Modernizare are statut distinct pentru fiecare apel",
     "institution": "Ministerul Investițiilor și Proiectelor Europene – MySMIS2021",
+    "documentType": "catalog oficial al apelurilor",
     "url": "https://resurse.mysmis2021.gov.ro/ords/repo_bo/r/mysmis-2021/finantari-programe-2021-2027",
-    "accessedAt": "2026-08-29",
+    "accessedAt": "2026-09-10",
     "programStatus": "calendar_estimativ",
     "statusLabel": "Program în implementare – statutul se verifică pentru fiecare apel în MySMIS",
-    "verifiedAt": "2026-08-29",
+    "verifiedAt": "2026-09-10",
     "isPrimaryFor": "fondul-de-modernizare",
     "sourceOfTruth": "config/seo-programs.json#programs"
   }

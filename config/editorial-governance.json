@@ -763,14 +763,20 @@
       "reviewerRole": "Revizuire editorială și conformitate",
       "attributionType": "organization",
       "personalNameConsent": false,
-      "verifiedAt": "2026-08-29",
+      "verifiedAt": "2026-09-10",
       "officialSourceName": "Ministerul Investițiilor și Proiectelor Europene – MySMIS2021",
       "officialSourceUrl": "https://resurse.mysmis2021.gov.ro/ords/repo_bo/r/mysmis-2021/finantari-programe-2021-2027",
       "sourceVersion": "Catalogul oficial al finanțărilor 2021–2027; Fondul pentru Modernizare are statut distinct pentru fiecare apel",
-      "nextReviewAt": "2026-10-28",
-      "lastMeaningfulUpdate": "2026-08-18",
+      "nextReviewAt": "2026-11-09",
+      "lastMeaningfulUpdate": "2026-09-10",
       "statusSnapshot": "calendar_estimativ",
       "changelog": [
+        {
+          "date": "2026-09-10",
+          "summary": "Catalogul oficial MySMIS2021 a fost reverificat, iar pagina-cadru a fost extinsă cu diferențierea apelurilor, condițiile tehnice, documentele, bugetul și FAQ.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": true
+        },
         {
           "date": "2026-08-29",
           "summary": "Statutul Fondul pentru Modernizare a fost reverificat în sursa oficială; nu a fost identificată o schimbare editorială substanțială suplimentară.",
@@ -1165,14 +1171,20 @@
       "reviewerRole": "Revizuire editorială și conformitate",
       "attributionType": "organization",
       "personalNameConsent": false,
-      "verifiedAt": "2026-08-23",
+      "verifiedAt": "2026-09-10",
       "officialSourceName": "Ministerul Investițiilor și Proiectelor Europene – tabloul de bord PNRR",
       "officialSourceUrl": "https://pnrr.fonduri-ue.ro/ords/pnrr/r/dashboard-status-pnrr/home",
       "sourceVersion": "Tabloul de bord oficial PNRR; program în implementare, cu situație distinctă pe componente și apeluri",
-      "nextReviewAt": "2026-10-22",
-      "lastMeaningfulUpdate": "2026-08-18",
+      "nextReviewAt": "2026-11-09",
+      "lastMeaningfulUpdate": "2026-09-10",
       "statusSnapshot": "calendar_estimativ",
       "changelog": [
+        {
+          "date": "2026-09-10",
+          "summary": "Sursa oficială a fost reverificată, iar pagina-cadru PNRR a fost extinsă cu răspunsuri despre apel, eligibilitate, documente, indicatori și buget.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": true
+        },
         {
           "date": "2026-08-23",
           "summary": "Statutul PNRR a fost reverificat în sursa oficială; nu a fost identificată o schimbare editorială substanțială suplimentară.",
@@ -1381,14 +1393,20 @@
       "reviewerRole": "Revizuire editorială și conformitate",
       "attributionType": "organization",
       "personalNameConsent": false,
-      "verifiedAt": "2026-08-29",
+      "verifiedAt": "2026-09-10",
       "officialSourceName": "Ministerul Investițiilor și Proiectelor Europene – MySMIS2021",
       "officialSourceUrl": "https://resurse.mysmis2021.gov.ro/ords/repo_bo/r/mysmis-2021/finantari-programe-2021-2027",
-      "sourceVersion": "Catalogul oficial al finanțărilor 2021–2027; Programul Tranziție Justă are statut distinct pentru fiecare apel",
-      "nextReviewAt": "2026-10-28",
-      "lastMeaningfulUpdate": "2026-08-18",
+      "sourceVersion": "Catalogul oficial al finanțărilor 2021–2027; apelurile sunt afișate în cadrul Programului Dezvoltare Durabilă și Tranziție Justă (fost PTJ), cu statut distinct pentru fiecare apel",
+      "nextReviewAt": "2026-11-09",
+      "lastMeaningfulUpdate": "2026-09-10",
       "statusSnapshot": "calendar_estimativ",
       "changelog": [
+        {
+          "date": "2026-09-10",
+          "summary": "Catalogul MySMIS2021 și sursele Comisiei Europene au fost reverificate; pagina a fost extinsă cu teritorii, solicitanți, investiții, documente și reguli de verificare pe apel.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": true
+        },
         {
           "date": "2026-08-29",
           "summary": "Statutul Programul Tranziție Justă a fost reverificat în sursa oficială; nu a fost identificată o schimbare editorială substanțială suplimentară.",

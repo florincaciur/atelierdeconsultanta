@@ -55,6 +55,14 @@ function compare(issues, program, category, surface, expected, actual, message) 
   addIssue(issues, program, "error", category, surface, message, expected, actual);
 }
 
+function isPositiveOpenClaim(sentence) {
+  if (!/\b(?:apelul|apel)\s+(?:este\s+)?deschis\b/iu.test(sentence)) return false;
+  if (/\b(?:apelul|apel)\s+(?:este\s+)?deschis\s*\?/iu.test(sentence)) return false;
+  if (/\bnu\b[^.!?]{0,120}\bapel(?:ul)?\s+(?:este\s+)?deschis\b/iu.test(sentence)) return false;
+  if (/\bapel(?:ul)?\s+(?:este\s+)?deschis\b[^.!?]{0,80}\b(?:confirm|verific)/iu.test(sentence)) return false;
+  return true;
+}
+
 function programFile(program) {
   return path.join(ROOT, program.route.replace(/^\//, ""), "index.html");
 }
@@ -120,12 +128,7 @@ function auditNarrativeClaims(issues, program, $) {
     );
   }
 
-  const openClaim = sentences.find((sentence) => {
-    if (!/\b(?:apelul|apel)\s+(?:este\s+)?deschis\b/iu.test(sentence)) return false;
-    if (/\bnu\b[^.!?]{0,120}\bapel(?:ul)?\s+(?:este\s+)?deschis\b/iu.test(sentence)) return false;
-    if (/\bapel(?:ul)?\s+(?:este\s+)?deschis\b[^.!?]{0,80}\b(?:confirm|verific)/iu.test(sentence)) return false;
-    return true;
-  });
+  const openClaim = sentences.find(isPositiveOpenClaim);
   if (openClaim && program.status !== "apel_deschis") {
     addIssue(issues, program, "error", "status-mismatch", "page-content", "Pagina afirmă că apelul este deschis, dar registrul nu are status=apel_deschis.", program.status, openClaim);
   }
@@ -364,4 +367,4 @@ function main() {
 
 if (require.main === module) main();
 
-module.exports = { auditHeader, auditNarrativeClaims, auditProgram, financialClaimTokens, writeReports };
+module.exports = { auditHeader, auditNarrativeClaims, auditProgram, financialClaimTokens, isPositiveOpenClaim, writeReports };

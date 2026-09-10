@@ -18,14 +18,16 @@ const surfaces = [
   ...families.hubs.map((hub) => ({ route: hub.route, selector: "header.hero > p" })),
   ...servicePages.map((page) => ({ route: `/${page.slug}`, selector: "header.hero > p", answer: page.quickAnswer })),
   { route: "/calculator-soc", selector: "header.hero .hero-sub" },
-  { route: "/metodologie-verificare-eligibilitate", selector: "header.hero > p" }
+  { route: "/metodologie-verificare-eligibilitate", selector: "header.hero > p" },
+  { route: "/dr-12-afir-instalarea-tinerilor-fermieri", selector: ".post-hero > p" },
+  { route: "/dr-14-afir-conditii-eligibilitate-greseli-frecvente", selector: ".post-hero > p" }
 ];
 
 function synchronize(source, surface) {
   const $ = cheerio.load(source, { decodeEntities: false, sourceCodeLocationInfo: true });
   const lead = $(surface.selector).first();
   if (!lead.length) throw new Error(`${surface.route}: nu există lead-ul ${surface.selector}.`);
-  const scope = lead.closest("header.hero, .homepage-decision-hero");
+  const scope = lead.closest("header.hero, .homepage-decision-hero, .post-hero");
   const touched = scope.find("[data-aeo-primary-answer], [data-aeo-direct-answer]").add(lead).get();
   scope.find("[data-aeo-primary-answer], [data-aeo-direct-answer]")
     .removeAttr("data-aeo-primary-answer")

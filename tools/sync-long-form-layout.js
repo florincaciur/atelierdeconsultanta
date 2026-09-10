@@ -18,8 +18,8 @@ const TOC_START = "<!-- P1_09_LONG_FORM_TOC_START -->";
 const TOC_END = "<!-- P1_09_LONG_FORM_TOC_END -->";
 const ACTION_START = "<!-- P1_09_DECISION_ACTION_START -->";
 const ACTION_END = "<!-- P1_09_DECISION_ACTION_END -->";
-const CSS_LINK = '<link rel="stylesheet" href="/assets/long-form-layout.css?v=20260721-6" data-long-form-layout-style="p1_09">';
-const JS_LINK = '<script src="/assets/long-form-layout.js?v=20260721-6" defer="" data-long-form-layout-script="p1_09"></script>';
+const CSS_LINK = '<link rel="stylesheet" href="/assets/long-form-layout.css?v=20260909-1" data-long-form-layout-style="p1_09">';
+const JS_LINK = '<script src="/assets/long-form-layout.js?v=20260909-1" defer="" data-long-form-layout-script="p1_09"></script>';
 
 function escapeHtml(value) {
   return String(value ?? "")
@@ -48,19 +48,35 @@ function countWords(html, route) {
   return matches ? matches.length : 0;
 }
 
-function removeInjected(html) {
+function removeLayoutAssets(html) {
   return html
-    .replace(new RegExp(`${TOC_START}[\\s\\S]*?${TOC_END}\\s*`, "g"), "")
-    .replace(new RegExp(`${ACTION_START}[\\s\\S]*?${ACTION_END}\\s*`, "g"), "")
     .replace(/[ \t]*<link\b[^>]*data-long-form-layout-style=["']p1_09["'][^>]*>[ \t]*(?:\r?\n)?/gi, "")
-    .replace(/[ \t]*<script\b[^>]*data-long-form-layout-script=["']p1_09["'][^>]*><\/script>[ \t]*(?:\r?\n)?/gi, "")
+    .replace(/[ \t]*<script\b[^>]*data-long-form-layout-script=["']p1_09["'][^>]*><\/script>[ \t]*(?:\r?\n)?/gi, "");
+}
+
+function removeInjected(html) {
+  return removeLayoutAssets(html
+    .replace(new RegExp(`${TOC_START}[\\s\\S]*?${TOC_END}\\s*`, "g"), "")
+    .replace(/\s*<aside\b(?=[^>]*\bdata-(?:long-form-toc|program-template-toc)\b)[^>]*>[\s\S]*?<\/aside>\s*/gi, "\n")
+    .replace(new RegExp(`${ACTION_START}[\\s\\S]*?${ACTION_END}\\s*`, "g"), "")
     .replace(/\s*<nav\b[^>]*class=["'][^"']*\barticle-toc\b[^"']*["'][^>]*>[\s\S]*?<\/nav>/gi, "")
     .replace(/<div class="long-form-table-region"[^>]*>\s*(<table\b[\s\S]*?<\/table>)\s*<\/div>/gi, "$1")
     .replace(/\sdata-long-form-page=(?:"[^"]*"|'[^']*')/gi, "")
     .replace(/\sdata-long-form-type=(?:"[^"]*"|'[^']*')/gi, "")
     .replace(/\sdata-long-form-word-count=(?:"[^"]*"|'[^']*')/gi, "")
     .replace(/\sdata-long-form-layout=(?:"[^"]*"|'[^']*')/gi, "")
-    .replace(/\sdata-long-form-content=(?:"[^"]*"|'[^']*')/gi, "");
+    .replace(/\sdata-long-form-content=(?:"[^"]*"|'[^']*')/gi, ""));
+}
+
+function normalizeProgramLayout(html) {
+  return html
+    .replace(new RegExp(`${TOC_START}[\\s\\S]*?${TOC_END}\\s*`, "g"), "")
+    .replace(/\s*<aside\b(?=[^>]*\bdata-(?:long-form-toc|program-template-toc)\b)[^>]*>[\s\S]*?<\/aside>\s*/gi, "\n")
+    .replace(/<main\b[^>]*>/i, (tag) => tag.replace(/\bdata-long-form-layout=(['"])rail\1/i, 'data-long-form-layout="wide"'));
+}
+
+function isProgramPage(row) {
+  return row?.type === "program" || row?.sitemapFamily === "programs";
 }
 
 function slugify(value) {
@@ -181,13 +197,13 @@ function addAttributes(openingTag, attributes) {
   return openingTag.replace(/>$/, ` ${attributes}>`);
 }
 
-function locateRoot(html, route) {
+function locateRoot(html, route, forceWide = false) {
   const pattern = route === "/"
     ? /<main\b[^>]*>/i
     : (/<main\b[^>]*>/i.test(html) ? /<main\b[^>]*>/i : /<div\b[^>]*class=["'][^"']*\bpost-container\b[^"']*["'][^>]*>/i);
   const match = pattern.exec(html);
   if (!match) throw new Error(`${route}: nu există container editorial principal.`);
-  const variant = route === "/" ? "home" : (CONFIG.tocExcludedRoutes.includes(route) ? "wide" : "rail");
+  const variant = route === "/" ? "home" : (forceWide || CONFIG.tocExcludedRoutes.includes(route) ? "wide" : "rail");
   const start = match.index;
   const contentStart = start + match[0].length;
   const contentEnd = route === "/" || match[0].toLowerCase().startsWith("<main")
@@ -209,7 +225,8 @@ function insertToc(html, route, root, toc) {
 
 function addAssets(html) {
   if (!/<\/head>/i.test(html)) throw new Error("Document fără </head>.");
-  return html.replace(/[ \t\r\n]*<\/head>/i, `\n  ${CSS_LINK}\n  ${JS_LINK}\n</head>`);
+  const eol = html.includes("\r\n") ? "\r\n" : "\n";
+  return html.replace(/[ \t\r\n]*<\/head>/i, `${eol}  ${CSS_LINK}${eol}  ${JS_LINK}${eol}</head>`);
 }
 
 function addBodyMetadata(html, type, words) {
@@ -218,20 +235,20 @@ function addBodyMetadata(html, type, words) {
 
 function synchronizePage(source, row, programByRoute) {
   if (/data-program-template-version=(?:"p1_11"|'p1_11')/i.test(source)) {
-    const $ = cheerio.load(source, { decodeEntities: false });
+    const output = addAssets(normalizeProgramLayout(removeLayoutAssets(source)));
+    const $ = cheerio.load(output, { decodeEntities: false });
     const route = normalizeRoute(row.route);
-    const tocItems = $("[data-program-template-toc] [data-long-form-toc-link]");
-    const words = countWords(removeInjected(source), route);
+    const words = countWords(removeInjected(output), route);
     return {
-      html: source,
+      html: output,
       report: {
         route,
         type: row.type,
         sourceFile: row.sourceFile,
         wordCount: words,
-        tocItemCount: tocItems.length,
+        tocItemCount: 0,
         tableCount: $("main .long-form-table-region table").length,
-        variant: "rail",
+        variant: "wide",
         decisionActionAdded: $(".long-form-decision-action[data-program-template-section='cta']").length === 1,
         contentActionCount: $("main [data-analytics-event='cta_click']").length,
         managedBy: "program-page-template"
@@ -239,6 +256,7 @@ function synchronizePage(source, row, programByRoute) {
     };
   }
   const clean = removeInjected(source);
+  const eol = source.includes("\r\n") ? "\r\n" : "\n";
   const route = normalizeRoute(row.route);
   const words = countWords(clean, route);
   const qualifies = CONFIG.forcedRoutes.includes(route) || (CONFIG.includedTypes.includes(row.type) && words > CONFIG.wordThreshold);
@@ -247,10 +265,10 @@ function synchronizePage(source, row, programByRoute) {
   const $ = cheerio.load(clean, { decodeEntities: false });
   const pageTitle = $("h1").first().text().replace(/\s+/g, " ").trim() || route;
   const usedIds = new Set($("[id]").map((_, node) => $(node).attr("id")).get());
-  const root = locateRoot(clean, route);
+  const root = locateRoot(clean, route, isProgramPage(row));
   const region = clean.slice(root.contentStart, root.contentEnd);
   const enhanced = enhanceRegion(region, pageTitle, usedIds);
-  if (enhanced.items.length < 3) throw new Error(`${route}: prea puține secțiuni pentru cuprins (${enhanced.items.length}).`);
+  if (root.variant === "rail" && enhanced.items.length < 3) throw new Error(`${route}: prea puține secțiuni pentru cuprins (${enhanced.items.length}).`);
 
   let output = `${clean.slice(0, root.contentStart)}${enhanced.output}${clean.slice(root.contentEnd)}`;
   output = output.replace(root.pattern, (tag) => addAttributes(tag, `data-long-form-layout="${root.variant}" data-long-form-content="true"`));
@@ -263,7 +281,8 @@ function synchronizePage(source, row, programByRoute) {
       : "<!-- PROGRAM_FACTUAL_STATUS_END -->";
     if (!output.includes(decisionAnchor)) throw new Error(`${route}: lipsește rezumatul decizional.`);
     const decisionIndex = output.indexOf(decisionAnchor) + decisionAnchor.length;
-    output = `${output.slice(0, decisionIndex)}\n${renderDecisionAction(program)}\n${output.slice(decisionIndex).replace(/^\s*/, "")}`;
+    const decisionAction = renderDecisionAction(program).replace(/\r?\n/gu, eol);
+    output = `${output.slice(0, decisionIndex)}${eol}${decisionAction}${eol}${output.slice(decisionIndex).replace(/^\s*/, "")}`;
   }
 
   output = addBodyMetadata(output, row.type, words);
@@ -276,7 +295,7 @@ function synchronizePage(source, row, programByRoute) {
       type: row.type,
       sourceFile: row.sourceFile,
       wordCount: words,
-      tocItemCount: root.variant === "wide" ? 0 : enhanced.items.length,
+      tocItemCount: root.variant === "rail" ? enhanced.items.length : 0,
       tableCount: enhanced.tableCount,
       variant: root.variant,
       decisionActionAdded: Boolean(row.type === "program" && program),
@@ -308,7 +327,7 @@ function main() {
   const { programs } = loadProgramConfig();
   const programByRoute = new Map(programs.map((program) => [normalizeRoute(program.pageUrl), program]));
   const entries = [];
-  const outOfSync = [];
+  const outOfSync = new Set();
 
   for (const row of rows) {
     const file = path.join(ROOT, row.sourceFile);
@@ -317,8 +336,30 @@ function main() {
     const result = synchronizePage(before, row, programByRoute);
     if (result.report) entries.push(result.report);
     if (result.html !== before) {
-      if (CHECK_ONLY) outOfSync.push(row.sourceFile);
+      if (CHECK_ONLY) outOfSync.add(row.sourceFile);
       else fs.writeFileSync(file, result.html, "utf8");
+    }
+  }
+
+  // Some routes have both a canonical source and a legacy physical alias. Keep
+  // every accessible program representation free of a TOC and of the orphaned
+  // rail column, even when the alias is intentionally absent from the sitemap.
+  const programRoutes = new Set([
+    ...rows.filter(isProgramPage).map((row) => normalizeRoute(row.route)),
+    ...programs.map((program) => normalizeRoute(program.pageUrl))
+  ]);
+  for (const route of programRoutes) {
+    if (route === "/") continue;
+    const slug = route.replace(/^\//, "");
+    const files = [path.join(ROOT, `${slug}.html`), path.join(ROOT, slug, "index.html")];
+    for (const file of files) {
+      if (!fs.existsSync(file)) continue;
+      const before = fs.readFileSync(file, "utf8");
+      const after = normalizeProgramLayout(before);
+      if (after === before) continue;
+      const relative = path.relative(ROOT, file).split(path.sep).join("/");
+      if (CHECK_ONLY) outOfSync.add(relative);
+      else fs.writeFileSync(file, after, "utf8");
     }
   }
 
@@ -326,14 +367,14 @@ function main() {
   const reportText = `${JSON.stringify(buildReport(entries), null, 2)}\n`;
   const currentReport = fs.existsSync(REPORT_PATH) ? fs.readFileSync(REPORT_PATH, "utf8") : "";
   if (reportText !== currentReport) {
-    if (CHECK_ONLY) outOfSync.push(CONFIG.reportPath);
+    if (CHECK_ONLY) outOfSync.add(CONFIG.reportPath);
     else fs.writeFileSync(REPORT_PATH, reportText, "utf8");
   }
 
-  if (CHECK_ONLY && outOfSync.length) throw new Error(`Layout lung nesincronizat: ${outOfSync.join(", ")}`);
+  if (CHECK_ONLY && outOfSync.size) throw new Error(`Layout lung nesincronizat: ${[...outOfSync].join(", ")}`);
   console.log(`Long-form layout ${CHECK_ONLY ? "PASS" : "sincronizat"}: ${entries.length} pagini peste prag, ${entries.reduce((sum, entry) => sum + entry.tocItemCount, 0)} ancore.`);
 }
 
 if (require.main === module) main();
 
-module.exports = { CONFIG, countWords, removeInjected, synchronizePage };
+module.exports = { CONFIG, countWords, isProgramPage, normalizeProgramLayout, removeInjected, synchronizePage };

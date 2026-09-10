@@ -1,6 +1,6 @@
 # Audit de consistență factuală a programelor
 
-Data auditului: 2026-09-09
+Data auditului: 2026-09-10
 
 ## Rezultat
 
@@ -35,13 +35,13 @@ Auditul este local și determinist. Nu interoghează URL-urile oficiale, nu dedu
 | GAL-AFIR / LEADER | calendar_estimativ | 2026-08-29 | — | — |
 | e-MOVE RO | ghid_aprobat_nedeschis | 2026-08-29 | — | — |
 | PoCIDIF 2.1 | apel_deschis | 2026-08-29 | 2026-06-30 | 2026-09-30 |
-| PNRR | calendar_estimativ | 2026-08-23 | — | — |
+| PNRR | calendar_estimativ | 2026-09-10 | — | — |
 | Diaspora Investește Acasă | ghid_aprobat_nedeschis | 2026-09-06 | — | — |
 | e-DRIVE | ghid_aprobat_nedeschis | 2026-09-06 | — | — |
 | e-Mobility RO | ghid_aprobat_nedeschis | 2026-09-06 | — | — |
 | PC1 Stocare stand-alone | ghid_aprobat_nedeschis | 2026-08-29 | — | — |
-| Programul Tranziție Justă | calendar_estimativ | 2026-08-29 | — | — |
-| Fondul pentru Modernizare | calendar_estimativ | 2026-08-29 | — | — |
+| Programul Tranziție Justă | calendar_estimativ | 2026-09-10 | — | — |
+| Fondul pentru Modernizare | calendar_estimativ | 2026-09-10 | — | — |
 
 ## Verificări efectuate
 

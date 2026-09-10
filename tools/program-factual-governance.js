@@ -562,12 +562,12 @@ function renderProgramFactualStatus(program, options = {}) {
     ? ` Ultima actualizare relevantă: <time datetime="${escapeHtml(program.lastMeaningfulUpdate)}">${escapeHtml(program.lastMeaningfulUpdate)}</time>.`
     : "";
   return `<!-- PROGRAM_FACTUAL_STATUS_START -->
-<section class="program-factual-status" aria-label="Răspuns direct și date esențiale ale programului" data-aeo-program-summary data-program-id="${escapeHtml(program.id)}" data-program-status="${escapeHtml(program.status)}" data-status-label="${escapeHtml(program.statusLabel)}" data-verified-at="${escapeHtml(program.verifiedAt)}" data-source-url="${escapeHtml(program.sourceUrl)}" data-publication-state="public">
-  <p data-aeo-primary-answer data-aeo-direct-answer data-answer-field="status"><strong>Statut:</strong> ${escapeHtml(statusStatement(program))} ${escapeHtml(program.editorialDisclaimer || "")}</p>
+<section class="program-factual-status" aria-label="Răspuns direct și date esențiale ale programului" data-aeo-program-summary="" data-program-id="${escapeHtml(program.id)}" data-program-status="${escapeHtml(program.status)}" data-status-label="${escapeHtml(program.statusLabel)}" data-verified-at="${escapeHtml(program.verifiedAt)}" data-source-url="${escapeHtml(program.sourceUrl)}" data-publication-state="public">
+  <p data-aeo-primary-answer="" data-aeo-direct-answer="" data-answer-field="status"><strong>Statut:</strong> ${escapeHtml(statusStatement(program))} ${escapeHtml(program.editorialDisclaimer || "")}</p>
   <dl class="program-factual-status__facts" aria-label="Cine poate aplica, finanțare, contribuție, termen și data verificării">
     <div data-answer-field="applicant"><dt>Cine poate aplica</dt><dd>${escapeHtml(applicantSummaryText(program))}</dd></div>
-    <div data-answer-field="grant"><dt>Grant / valoare</dt><dd${program.grantSummary ? " data-program-grant" : ""}>${escapeHtml(grant)}</dd></div>
-    <div data-answer-field="contribution"><dt>Intensitate / contribuție</dt><dd${program.cofinancingSummary ? " data-program-contribution" : ""}>${escapeHtml(contribution)}</dd></div>
+    <div data-answer-field="grant"><dt>Grant / valoare</dt><dd${program.grantSummary ? " data-program-grant=\"\"" : ""}>${escapeHtml(grant)}</dd></div>
+    <div data-answer-field="contribution"><dt>Intensitate / contribuție</dt><dd${program.cofinancingSummary ? " data-program-contribution=\"\"" : ""}>${escapeHtml(contribution)}</dd></div>
     <div data-answer-field="deadline"><dt>Perioadă de depunere / termen</dt><dd>${applicationMarkup}</dd></div>
     <div data-answer-field="verifiedAt"><dt>Verificat la</dt><dd><time datetime="${escapeHtml(program.verifiedAt)}">${escapeHtml(formatDateRo(program.verifiedAt))}</time></dd></div>
   </dl>

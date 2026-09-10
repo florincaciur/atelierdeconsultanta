@@ -34,13 +34,13 @@ Snapshot factual de bază al programelor: **2026-08-23**. Fiecare înregistrare 
 | `gal-afir-leader` | Platforma oficială AFIR pentru Grupurile de Acțiune Locală | `UNCONFIRMED` | 2026-09-02 | 2026-08-29 |
 | `e-move-ro` | Ministerul Transporturilor și Infrastructurii / Portal Legislativ | `APPROVED_SCHEME` | 2026-08-10 | 2026-08-29 |
 | `pocidif-21` | Ministerul Investițiilor și Proiectelor Europene | `OPEN` | 2026-08-18 | 2026-08-29 |
-| `pnrr` | Ministerul Investițiilor și Proiectelor Europene – tabloul de bord PNRR | `UNCONFIRMED` | 2026-08-18 | 2026-08-23 |
+| `pnrr` | Ministerul Investițiilor și Proiectelor Europene – tabloul de bord PNRR | `UNCONFIRMED` | 2026-09-10 | 2026-09-10 |
 | `diaspora-investeste-acasa` | Banca de Investiții și Dezvoltare (BID) | `APPROVED_SCHEME` | 2026-09-06 | 2026-09-06 |
 | `e-drive` | Ministerul Transporturilor și Infrastructurii / Portal Legislativ | `APPROVED_SCHEME` | 2026-09-06 | 2026-09-06 |
 | `e-mobility-ro` | Ministerul Transporturilor și Infrastructurii / Portal Legislativ | `APPROVED_SCHEME` | 2026-09-06 | 2026-09-06 |
 | `fondul-modernizare-pc1-stocare` | Ministerul Energiei / Portal Legislativ | `FINAL_GUIDE` | 2026-08-28 | 2026-08-29 |
-| `programul-tranzitie-justa` | Ministerul Investițiilor și Proiectelor Europene – MySMIS2021 | `UNCONFIRMED` | 2026-08-18 | 2026-08-29 |
-| `fondul-de-modernizare` | Ministerul Investițiilor și Proiectelor Europene – MySMIS2021 | `UNCONFIRMED` | 2026-08-18 | 2026-08-29 |
+| `programul-tranzitie-justa` | Ministerul Investițiilor și Proiectelor Europene – MySMIS2021 | `UNCONFIRMED` | 2026-09-10 | 2026-09-10 |
+| `fondul-de-modernizare` | Ministerul Investițiilor și Proiectelor Europene – MySMIS2021 | `UNCONFIRMED` | 2026-09-10 | 2026-09-10 |
 
 ## `program-regional-nord-est` — Programul Regional Nord-Est 2021–2027
 
@@ -965,40 +965,40 @@ Snapshot factual de bază al programelor: **2026-08-23**. Fiecare înregistrare 
 | Fond / program | Mecanismul de redresare și reziliență |
 | Temei / document | Tabloul de bord oficial PNRR; program în implementare, cu situație distinctă pe componente și apeluri — [document oficial](https://pnrr.fonduri-ue.ro/ords/pnrr/r/dashboard-status-pnrr/home) |
 | Stadiu | UNCONFIRMED — Program în implementare – statutul se verifică pentru fiecare componentă și apel |
-| Sesiune | Documentația oficială publicată și verificată la 23.08.2026 nu stabilește încă această informație. |
-| Data deschiderii | Documentația oficială publicată și verificată la 23.08.2026 nu stabilește încă această informație. |
-| Deadline | Documentația oficială publicată și verificată la 23.08.2026 nu stabilește încă această informație. |
-| Prelungiri | Documentația oficială publicată și verificată la 23.08.2026 nu stabilește încă această informație. |
-| Buget | Documentația oficială publicată și verificată la 23.08.2026 nu stabilește încă această informație. |
-| Grant minim | Documentația oficială publicată și verificată la 23.08.2026 nu stabilește încă această informație. |
-| Grant maxim | Documentația oficială publicată și verificată la 23.08.2026 nu stabilește încă această informație. |
-| Intensitate | Documentația oficială publicată și verificată la 23.08.2026 nu stabilește încă această informație. |
-| Cofinanțare | Documentația oficială publicată și verificată la 23.08.2026 nu stabilește încă această informație. |
-| Beneficiari | Documentația oficială publicată și verificată la 23.08.2026 nu stabilește încă această informație. |
+| Sesiune | Documentația oficială publicată și verificată la 10.09.2026 nu stabilește încă această informație. |
+| Data deschiderii | Documentația oficială publicată și verificată la 10.09.2026 nu stabilește încă această informație. |
+| Deadline | Documentația oficială publicată și verificată la 10.09.2026 nu stabilește încă această informație. |
+| Prelungiri | Documentația oficială publicată și verificată la 10.09.2026 nu stabilește încă această informație. |
+| Buget | Documentația oficială publicată și verificată la 10.09.2026 nu stabilește încă această informație. |
+| Grant minim | Documentația oficială publicată și verificată la 10.09.2026 nu stabilește încă această informație. |
+| Grant maxim | Documentația oficială publicată și verificată la 10.09.2026 nu stabilește încă această informație. |
+| Intensitate | Documentația oficială publicată și verificată la 10.09.2026 nu stabilește încă această informație. |
+| Cofinanțare | Documentația oficială publicată și verificată la 10.09.2026 nu stabilește încă această informație. |
+| Beneficiari | Documentația oficială publicată și verificată la 10.09.2026 nu stabilește încă această informație. |
 | Regiune | Național |
-| CAEN | Documentația oficială publicată și verificată la 23.08.2026 nu stabilește încă această informație. |
-| Prag SO | Documentația oficială publicată și verificată la 23.08.2026 nu stabilește încă această informație. |
-| Investiții | Documentația oficială publicată și verificată la 23.08.2026 nu stabilește încă această informație. |
-| Cheltuieli eligibile | Documentația oficială publicată și verificată la 23.08.2026 nu stabilește încă această informație. |
-| Cheltuieli neeligibile | Documentația oficială publicată și verificată la 23.08.2026 nu stabilește încă această informație. |
-| Condiții critice | Documentația oficială publicată și verificată la 23.08.2026 nu stabilește încă această informație. |
+| CAEN | Documentația oficială publicată și verificată la 10.09.2026 nu stabilește încă această informație. |
+| Prag SO | Documentația oficială publicată și verificată la 10.09.2026 nu stabilește încă această informație. |
+| Investiții | Documentația oficială publicată și verificată la 10.09.2026 nu stabilește încă această informație. |
+| Cheltuieli eligibile | Documentația oficială publicată și verificată la 10.09.2026 nu stabilește încă această informație. |
+| Cheltuieli neeligibile | Documentația oficială publicată și verificată la 10.09.2026 nu stabilește încă această informație. |
+| Condiții critice | Documentația oficială publicată și verificată la 10.09.2026 nu stabilește încă această informație. |
 | Documente | [Tabloul de bord oficial PNRR](https://pnrr.fonduri-ue.ro/ords/pnrr/r/dashboard-status-pnrr/home) |
-| Indicatori | Documentația oficială publicată și verificată la 23.08.2026 nu stabilește încă această informație. |
-| Selecție / punctaj | Documentația oficială publicată și verificată la 23.08.2026 nu stabilește încă această informație. |
-| Ajutor de stat / de minimis | Documentația oficială publicată și verificată la 23.08.2026 nu stabilește încă această informație. |
-| Implementare | Documentația oficială publicată și verificată la 23.08.2026 nu stabilește încă această informație. |
-| Monitorizare | Documentația oficială publicată și verificată la 23.08.2026 nu stabilește încă această informație. |
+| Indicatori | Documentația oficială publicată și verificată la 10.09.2026 nu stabilește încă această informație. |
+| Selecție / punctaj | Documentația oficială publicată și verificată la 10.09.2026 nu stabilește încă această informație. |
+| Ajutor de stat / de minimis | Documentația oficială publicată și verificată la 10.09.2026 nu stabilește încă această informație. |
+| Implementare | Documentația oficială publicată și verificată la 10.09.2026 nu stabilește încă această informație. |
+| Monitorizare | Documentația oficială publicată și verificată la 10.09.2026 nu stabilește încă această informație. |
 | Surse oficiale | [Tabloul de bord oficial PNRR](https://pnrr.fonduri-ue.ro/ords/pnrr/r/dashboard-status-pnrr/home) |
-| Latest official update | 2026-08-18 — [Tabloul de bord oficial PNRR; program în implementare, cu situație distinctă pe componente și apeluri](https://pnrr.fonduri-ue.ro/ords/pnrr/r/dashboard-status-pnrr/home) |
-| verifiedAt | 2026-08-23 |
-| Pagină oficială program/apel | [Tabloul de bord oficial PNRR](https://pnrr.fonduri-ue.ro/ords/pnrr/r/dashboard-status-pnrr/home) (`program`, verificat 2026-08-23) |
-| Ghid | — Neidentificat separat în sursele oficiale înregistrate la 2026-08-23; nu se presupune inexistența documentului. |
-| Anexe | — Neidentificat separat în sursele oficiale înregistrate la 2026-08-23; nu se presupune inexistența documentului. |
-| Schemă / ordin | — Neidentificat separat în sursele oficiale înregistrate la 2026-08-23; nu se presupune inexistența documentului. |
-| Anunț sesiune | — Neidentificat separat în sursele oficiale înregistrate la 2026-08-23; nu se presupune inexistența documentului. |
-| Corrigenda / erate | — Neidentificat separat în sursele oficiale înregistrate la 2026-08-23; nu se presupune inexistența documentului. |
-| Clarificări | — Neidentificat separat în sursele oficiale înregistrate la 2026-08-23; nu se presupune inexistența documentului. |
-| Sursă primară în registry-ul operațional | [Tabloul de bord oficial PNRR; program în implementare, cu situație distinctă pe componente și apeluri](https://pnrr.fonduri-ue.ro/ords/pnrr/r/dashboard-status-pnrr/home) (verificat 2026-08-23) |
+| Latest official update | 2026-09-10 — [Tabloul de bord oficial PNRR; program în implementare, cu situație distinctă pe componente și apeluri](https://pnrr.fonduri-ue.ro/ords/pnrr/r/dashboard-status-pnrr/home) |
+| verifiedAt | 2026-09-10 |
+| Pagină oficială program/apel | [Tabloul de bord oficial PNRR](https://pnrr.fonduri-ue.ro/ords/pnrr/r/dashboard-status-pnrr/home) (`program`, verificat 2026-09-10) |
+| Ghid | — Neidentificat separat în sursele oficiale înregistrate la 2026-09-10; nu se presupune inexistența documentului. |
+| Anexe | — Neidentificat separat în sursele oficiale înregistrate la 2026-09-10; nu se presupune inexistența documentului. |
+| Schemă / ordin | — Neidentificat separat în sursele oficiale înregistrate la 2026-09-10; nu se presupune inexistența documentului. |
+| Anunț sesiune | — Neidentificat separat în sursele oficiale înregistrate la 2026-09-10; nu se presupune inexistența documentului. |
+| Corrigenda / erate | — Neidentificat separat în sursele oficiale înregistrate la 2026-09-10; nu se presupune inexistența documentului. |
+| Clarificări | — Neidentificat separat în sursele oficiale înregistrate la 2026-09-10; nu se presupune inexistența documentului. |
+| Sursă primară în registry-ul operațional | [Tabloul de bord oficial PNRR; program în implementare, cu situație distinctă pe componente și apeluri](https://pnrr.fonduri-ue.ro/ords/pnrr/r/dashboard-status-pnrr/home) (verificat 2026-09-10) |
 | Chei surse repo | `pnrr-dashboard` |
 | Notes | Pagină agregată. Implementarea PNRR nu implică o sesiune de depunere deschisă pentru toate componentele. |
 
@@ -1203,43 +1203,43 @@ Snapshot factual de bază al programelor: **2026-08-23**. Fiecare înregistrare 
 | Acronim | PTJ |
 | Autoritate | Ministerul Investițiilor și Proiectelor Europene – MySMIS2021 |
 | Fond / program | Fondul pentru o Tranziție Justă |
-| Temei / document | Catalogul oficial al finanțărilor 2021–2027; Programul Tranziție Justă are statut distinct pentru fiecare apel — [document oficial](https://resurse.mysmis2021.gov.ro/ords/repo_bo/r/mysmis-2021/finantari-programe-2021-2027) |
+| Temei / document | Catalogul oficial al finanțărilor 2021–2027; apelurile sunt afișate în cadrul Programului Dezvoltare Durabilă și Tranziție Justă (fost PTJ), cu statut distinct pentru fiecare apel — [document oficial](https://resurse.mysmis2021.gov.ro/ords/repo_bo/r/mysmis-2021/finantari-programe-2021-2027) |
 | Stadiu | UNCONFIRMED — Program în implementare – statutul se verifică pentru fiecare apel în MySMIS |
-| Sesiune | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Data deschiderii | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Deadline | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Prelungiri | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Buget | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Grant minim | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Grant maxim | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Intensitate | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Cofinanțare | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Beneficiari | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
+| Sesiune | Documentația oficială publicată și verificată la 10.09.2026 nu stabilește încă această informație. |
+| Data deschiderii | Documentația oficială publicată și verificată la 10.09.2026 nu stabilește încă această informație. |
+| Deadline | Documentația oficială publicată și verificată la 10.09.2026 nu stabilește încă această informație. |
+| Prelungiri | Documentația oficială publicată și verificată la 10.09.2026 nu stabilește încă această informație. |
+| Buget | Documentația oficială publicată și verificată la 10.09.2026 nu stabilește încă această informație. |
+| Grant minim | Documentația oficială publicată și verificată la 10.09.2026 nu stabilește încă această informație. |
+| Grant maxim | Documentația oficială publicată și verificată la 10.09.2026 nu stabilește încă această informație. |
+| Intensitate | Documentația oficială publicată și verificată la 10.09.2026 nu stabilește încă această informație. |
+| Cofinanțare | Documentația oficială publicată și verificată la 10.09.2026 nu stabilește încă această informație. |
+| Beneficiari | Documentația oficială publicată și verificată la 10.09.2026 nu stabilește încă această informație. |
 | Regiune | regional |
-| CAEN | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Prag SO | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Investiții | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Cheltuieli eligibile | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Cheltuieli neeligibile | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Condiții critice | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Documente | [Catalogul oficial MySMIS2021](https://resurse.mysmis2021.gov.ro/ords/repo_bo/r/mysmis-2021/finantari-programe-2021-2027) |
-| Indicatori | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Selecție / punctaj | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Ajutor de stat / de minimis | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Implementare | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Monitorizare | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Surse oficiale | [Catalogul oficial MySMIS2021](https://resurse.mysmis2021.gov.ro/ords/repo_bo/r/mysmis-2021/finantari-programe-2021-2027) |
-| Latest official update | 2026-08-18 — [Catalogul oficial al finanțărilor 2021–2027; Programul Tranziție Justă are statut distinct pentru fiecare apel](https://resurse.mysmis2021.gov.ro/ords/repo_bo/r/mysmis-2021/finantari-programe-2021-2027) |
-| verifiedAt | 2026-08-29 |
-| Pagină oficială program/apel | [Catalogul oficial MySMIS2021](https://resurse.mysmis2021.gov.ro/ords/repo_bo/r/mysmis-2021/finantari-programe-2021-2027) (`program`, verificat 2026-08-29) |
-| Ghid | — Neidentificat separat în sursele oficiale înregistrate la 2026-08-29; nu se presupune inexistența documentului. |
-| Anexe | — Neidentificat separat în sursele oficiale înregistrate la 2026-08-29; nu se presupune inexistența documentului. |
-| Schemă / ordin | — Neidentificat separat în sursele oficiale înregistrate la 2026-08-29; nu se presupune inexistența documentului. |
-| Anunț sesiune | — Neidentificat separat în sursele oficiale înregistrate la 2026-08-29; nu se presupune inexistența documentului. |
-| Corrigenda / erate | — Neidentificat separat în sursele oficiale înregistrate la 2026-08-29; nu se presupune inexistența documentului. |
-| Clarificări | — Neidentificat separat în sursele oficiale înregistrate la 2026-08-29; nu se presupune inexistența documentului. |
-| Sursă primară în registry-ul operațional | [Catalogul oficial al finanțărilor 2021–2027; Programul Tranziție Justă are statut distinct pentru fiecare apel](https://resurse.mysmis2021.gov.ro/ords/repo_bo/r/mysmis-2021/finantari-programe-2021-2027) (verificat 2026-08-29) |
-| Chei surse repo | `ptj-mysmis` |
+| CAEN | Documentația oficială publicată și verificată la 10.09.2026 nu stabilește încă această informație. |
+| Prag SO | Documentația oficială publicată și verificată la 10.09.2026 nu stabilește încă această informație. |
+| Investiții | Documentația oficială publicată și verificată la 10.09.2026 nu stabilește încă această informație. |
+| Cheltuieli eligibile | Documentația oficială publicată și verificată la 10.09.2026 nu stabilește încă această informație. |
+| Cheltuieli neeligibile | Documentația oficială publicată și verificată la 10.09.2026 nu stabilește încă această informație. |
+| Condiții critice | Documentația oficială publicată și verificată la 10.09.2026 nu stabilește încă această informație. |
+| Documente | [Catalogul oficial MySMIS2021](https://resurse.mysmis2021.gov.ro/ords/repo_bo/r/mysmis-2021/finantari-programe-2021-2027)<br>[Fondul pentru o Tranziție Justă – Comisia Europeană](https://commission.europa.eu/funding-and-tenders/find-funding/eu-funding-programmes/just-transition-fund_en)<br>[Programul Național de Reformă 2023 – teritoriile eligibile](https://commission.europa.eu/system/files/2023-05/ROMANIA%20NRP%202023%20RO.pdf) |
+| Indicatori | Documentația oficială publicată și verificată la 10.09.2026 nu stabilește încă această informație. |
+| Selecție / punctaj | Documentația oficială publicată și verificată la 10.09.2026 nu stabilește încă această informație. |
+| Ajutor de stat / de minimis | Documentația oficială publicată și verificată la 10.09.2026 nu stabilește încă această informație. |
+| Implementare | Documentația oficială publicată și verificată la 10.09.2026 nu stabilește încă această informație. |
+| Monitorizare | Documentația oficială publicată și verificată la 10.09.2026 nu stabilește încă această informație. |
+| Surse oficiale | [Catalogul oficial MySMIS2021](https://resurse.mysmis2021.gov.ro/ords/repo_bo/r/mysmis-2021/finantari-programe-2021-2027)<br>[Fondul pentru o Tranziție Justă – Comisia Europeană](https://commission.europa.eu/funding-and-tenders/find-funding/eu-funding-programmes/just-transition-fund_en)<br>[Programul Național de Reformă 2023 – teritoriile eligibile](https://commission.europa.eu/system/files/2023-05/ROMANIA%20NRP%202023%20RO.pdf) |
+| Latest official update | 2026-09-10 — [Catalogul oficial al finanțărilor 2021–2027; apelurile sunt afișate în cadrul Programului Dezvoltare Durabilă și Tranziție Justă (fost PTJ), cu statut distinct pentru fiecare apel](https://resurse.mysmis2021.gov.ro/ords/repo_bo/r/mysmis-2021/finantari-programe-2021-2027) |
+| verifiedAt | 2026-09-10 |
+| Pagină oficială program/apel | [Catalogul oficial MySMIS2021](https://resurse.mysmis2021.gov.ro/ords/repo_bo/r/mysmis-2021/finantari-programe-2021-2027) (`program`, verificat 2026-09-10) |
+| Ghid | [Fondul pentru o Tranziție Justă – Comisia Europeană](https://commission.europa.eu/funding-and-tenders/find-funding/eu-funding-programmes/just-transition-fund_en) (`guide:ptj-comisia-europeana`, verificat 2026-09-10)<br>[Programul Național de Reformă 2023 – teritoriile eligibile](https://commission.europa.eu/system/files/2023-05/ROMANIA%20NRP%202023%20RO.pdf) (`guide:ptj-romania-pnr-2023`, verificat 2026-09-10) |
+| Anexe | — Neidentificat separat în sursele oficiale înregistrate la 2026-09-10; nu se presupune inexistența documentului. |
+| Schemă / ordin | — Neidentificat separat în sursele oficiale înregistrate la 2026-09-10; nu se presupune inexistența documentului. |
+| Anunț sesiune | — Neidentificat separat în sursele oficiale înregistrate la 2026-09-10; nu se presupune inexistența documentului. |
+| Corrigenda / erate | — Neidentificat separat în sursele oficiale înregistrate la 2026-09-10; nu se presupune inexistența documentului. |
+| Clarificări | — Neidentificat separat în sursele oficiale înregistrate la 2026-09-10; nu se presupune inexistența documentului. |
+| Sursă primară în registry-ul operațional | [Catalogul oficial al finanțărilor 2021–2027; apelurile sunt afișate în cadrul Programului Dezvoltare Durabilă și Tranziție Justă (fost PTJ), cu statut distinct pentru fiecare apel](https://resurse.mysmis2021.gov.ro/ords/repo_bo/r/mysmis-2021/finantari-programe-2021-2027) (verificat 2026-09-10) |
+| Chei surse repo | `ptj-mysmis`, `ptj-comisia-europeana`, `ptj-romania-pnr-2023` |
 | Notes | Pagină agregată. Starea se stabilește separat pentru fiecare apel al programului. |
 
 ## `fondul-de-modernizare` — Fondul pentru Modernizare
@@ -1248,45 +1248,45 @@ Snapshot factual de bază al programelor: **2026-08-23**. Fiecare înregistrare 
 |---|---|
 | Stable program ID | `fondul-de-modernizare` |
 | Denumire oficială | Fondul pentru Modernizare |
-| Acronim | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
+| Acronim | Documentația oficială publicată și verificată la 10.09.2026 nu stabilește încă această informație. |
 | Autoritate | Ministerul Investițiilor și Proiectelor Europene – MySMIS2021 |
 | Fond / program | Fondul pentru Modernizare |
 | Temei / document | Catalogul oficial al finanțărilor 2021–2027; Fondul pentru Modernizare are statut distinct pentru fiecare apel — [document oficial](https://resurse.mysmis2021.gov.ro/ords/repo_bo/r/mysmis-2021/finantari-programe-2021-2027) |
 | Stadiu | UNCONFIRMED — Program în implementare – statutul se verifică pentru fiecare apel în MySMIS |
-| Sesiune | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Data deschiderii | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Deadline | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Prelungiri | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Buget | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Grant minim | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Grant maxim | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Intensitate | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Cofinanțare | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Beneficiari | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
+| Sesiune | Documentația oficială publicată și verificată la 10.09.2026 nu stabilește încă această informație. |
+| Data deschiderii | Documentația oficială publicată și verificată la 10.09.2026 nu stabilește încă această informație. |
+| Deadline | Documentația oficială publicată și verificată la 10.09.2026 nu stabilește încă această informație. |
+| Prelungiri | Documentația oficială publicată și verificată la 10.09.2026 nu stabilește încă această informație. |
+| Buget | Documentația oficială publicată și verificată la 10.09.2026 nu stabilește încă această informație. |
+| Grant minim | Documentația oficială publicată și verificată la 10.09.2026 nu stabilește încă această informație. |
+| Grant maxim | Documentația oficială publicată și verificată la 10.09.2026 nu stabilește încă această informație. |
+| Intensitate | Documentația oficială publicată și verificată la 10.09.2026 nu stabilește încă această informație. |
+| Cofinanțare | Documentația oficială publicată și verificată la 10.09.2026 nu stabilește încă această informație. |
+| Beneficiari | Documentația oficială publicată și verificată la 10.09.2026 nu stabilește încă această informație. |
 | Regiune | Național |
-| CAEN | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Prag SO | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Investiții | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Cheltuieli eligibile | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Cheltuieli neeligibile | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Condiții critice | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
+| CAEN | Documentația oficială publicată și verificată la 10.09.2026 nu stabilește încă această informație. |
+| Prag SO | Documentația oficială publicată și verificată la 10.09.2026 nu stabilește încă această informație. |
+| Investiții | Documentația oficială publicată și verificată la 10.09.2026 nu stabilește încă această informație. |
+| Cheltuieli eligibile | Documentația oficială publicată și verificată la 10.09.2026 nu stabilește încă această informație. |
+| Cheltuieli neeligibile | Documentația oficială publicată și verificată la 10.09.2026 nu stabilește încă această informație. |
+| Condiții critice | Documentația oficială publicată și verificată la 10.09.2026 nu stabilește încă această informație. |
 | Documente | [Catalogul oficial MySMIS2021](https://resurse.mysmis2021.gov.ro/ords/repo_bo/r/mysmis-2021/finantari-programe-2021-2027) |
-| Indicatori | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Selecție / punctaj | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Ajutor de stat / de minimis | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Implementare | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
-| Monitorizare | Documentația oficială publicată și verificată la 29.08.2026 nu stabilește încă această informație. |
+| Indicatori | Documentația oficială publicată și verificată la 10.09.2026 nu stabilește încă această informație. |
+| Selecție / punctaj | Documentația oficială publicată și verificată la 10.09.2026 nu stabilește încă această informație. |
+| Ajutor de stat / de minimis | Documentația oficială publicată și verificată la 10.09.2026 nu stabilește încă această informație. |
+| Implementare | Documentația oficială publicată și verificată la 10.09.2026 nu stabilește încă această informație. |
+| Monitorizare | Documentația oficială publicată și verificată la 10.09.2026 nu stabilește încă această informație. |
 | Surse oficiale | [Catalogul oficial MySMIS2021](https://resurse.mysmis2021.gov.ro/ords/repo_bo/r/mysmis-2021/finantari-programe-2021-2027) |
-| Latest official update | 2026-08-18 — [Catalogul oficial al finanțărilor 2021–2027; Fondul pentru Modernizare are statut distinct pentru fiecare apel](https://resurse.mysmis2021.gov.ro/ords/repo_bo/r/mysmis-2021/finantari-programe-2021-2027) |
-| verifiedAt | 2026-08-29 |
-| Pagină oficială program/apel | [Catalogul oficial MySMIS2021](https://resurse.mysmis2021.gov.ro/ords/repo_bo/r/mysmis-2021/finantari-programe-2021-2027) (`program`, verificat 2026-08-29) |
-| Ghid | — Neidentificat separat în sursele oficiale înregistrate la 2026-08-29; nu se presupune inexistența documentului. |
-| Anexe | — Neidentificat separat în sursele oficiale înregistrate la 2026-08-29; nu se presupune inexistența documentului. |
-| Schemă / ordin | — Neidentificat separat în sursele oficiale înregistrate la 2026-08-29; nu se presupune inexistența documentului. |
-| Anunț sesiune | — Neidentificat separat în sursele oficiale înregistrate la 2026-08-29; nu se presupune inexistența documentului. |
-| Corrigenda / erate | — Neidentificat separat în sursele oficiale înregistrate la 2026-08-29; nu se presupune inexistența documentului. |
-| Clarificări | — Neidentificat separat în sursele oficiale înregistrate la 2026-08-29; nu se presupune inexistența documentului. |
-| Sursă primară în registry-ul operațional | [Catalogul oficial al finanțărilor 2021–2027; Fondul pentru Modernizare are statut distinct pentru fiecare apel](https://resurse.mysmis2021.gov.ro/ords/repo_bo/r/mysmis-2021/finantari-programe-2021-2027) (verificat 2026-08-29) |
+| Latest official update | 2026-09-10 — [Catalogul oficial al finanțărilor 2021–2027; Fondul pentru Modernizare are statut distinct pentru fiecare apel](https://resurse.mysmis2021.gov.ro/ords/repo_bo/r/mysmis-2021/finantari-programe-2021-2027) |
+| verifiedAt | 2026-09-10 |
+| Pagină oficială program/apel | [Catalogul oficial MySMIS2021](https://resurse.mysmis2021.gov.ro/ords/repo_bo/r/mysmis-2021/finantari-programe-2021-2027) (`program`, verificat 2026-09-10) |
+| Ghid | — Neidentificat separat în sursele oficiale înregistrate la 2026-09-10; nu se presupune inexistența documentului. |
+| Anexe | — Neidentificat separat în sursele oficiale înregistrate la 2026-09-10; nu se presupune inexistența documentului. |
+| Schemă / ordin | — Neidentificat separat în sursele oficiale înregistrate la 2026-09-10; nu se presupune inexistența documentului. |
+| Anunț sesiune | — Neidentificat separat în sursele oficiale înregistrate la 2026-09-10; nu se presupune inexistența documentului. |
+| Corrigenda / erate | — Neidentificat separat în sursele oficiale înregistrate la 2026-09-10; nu se presupune inexistența documentului. |
+| Clarificări | — Neidentificat separat în sursele oficiale înregistrate la 2026-09-10; nu se presupune inexistența documentului. |
+| Sursă primară în registry-ul operațional | [Catalogul oficial al finanțărilor 2021–2027; Fondul pentru Modernizare are statut distinct pentru fiecare apel](https://resurse.mysmis2021.gov.ro/ords/repo_bo/r/mysmis-2021/finantari-programe-2021-2027) (verificat 2026-09-10) |
 | Chei surse repo | `fondul-modernizare-mysmis` |
 | Notes | Pagină agregată. Starea se stabilește separat pentru fiecare apel al Fondului pentru Modernizare. |
 

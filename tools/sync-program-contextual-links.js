@@ -182,7 +182,7 @@ function removeStylesheet(html) {
   return html.replace(/\s*<link\b[^>]*href=["']\/assets\/program-contextual-links\.css["'][^>]*>\s*/giu, "\n");
 }
 
-function insertBeforeMainEnd(html, block) {
+function insertBeforeMainEnd(html, block, eol = "\n") {
   const templateSlotIndex = html.indexOf("<!-- PROGRAM_TEMPLATE_GOVERNANCE_SLOT -->");
   const governanceIndex = html.indexOf("<!-- EDITORIAL_GOVERNANCE_START -->");
   const mainEndIndex = html.toLocaleLowerCase("en-US").lastIndexOf("</main>");
@@ -190,12 +190,17 @@ function insertBeforeMainEnd(html, block) {
     ? governanceIndex
     : mainEndIndex;
   if (index < 0) throw new Error("pagina nu conține </main>");
-  return `${html.slice(0, index).replace(/\s+$/u, "")}\n${block}\n${html.slice(index)}`;
+  return `${html.slice(0, index).replace(/\s+$/u, "")}${eol}${block}${eol}${html.slice(index)}`;
 }
 
 function synchronizedHtml(html, program, config = loadConfig()) {
+  const existingBlock = html.match(new RegExp(`${START}[\\s\\S]*?${END}`, "u"))?.[0] || "";
+  const eol = existingBlock
+    ? (existingBlock.includes("\r\n") ? "\r\n" : "\n")
+    : (html.includes("\r\n") ? "\r\n" : "\n");
   const clean = removeManagedBlocks(html);
-  const withBlock = insertBeforeMainEnd(clean, renderProgramContextualLinks(program, config));
+  const block = renderProgramContextualLinks(program, config).replace(/\r?\n/gu, eol);
+  const withBlock = insertBeforeMainEnd(clean, block, eol);
   return syncStylesheet(withBlock);
 }
 

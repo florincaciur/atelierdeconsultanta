@@ -75,17 +75,21 @@ function syncGuides(guides, programs) {
   }
   for (const [key, linkedPrograms] of programsByKey) {
     const primary = linkedPrograms.find((program) => program.officialGuideKeys?.[0] === key) || linkedPrograms[0];
+    const previous = typeof guides[key] === "object" ? guides[key] : {};
+    const preserveSourceMetadata = previous.syncFromProgramRegistry === false;
     guides[key] = {
-      ...(typeof guides[key] === "object" ? guides[key] : {}),
+      ...previous,
       programIds: [...new Set(linkedPrograms.map((program) => program.id))],
-      name: primary.sourceVersion,
-      title: primary.sourceVersion,
-      institution: primary.sourceName,
-      url: primary.sourceUrl,
-      accessedAt: primary.verifiedAt,
+      ...(preserveSourceMetadata ? {} : {
+        name: primary.sourceVersion,
+        title: primary.sourceVersion,
+        institution: primary.sourceName,
+        url: primary.sourceUrl,
+        accessedAt: primary.verifiedAt,
+        verifiedAt: primary.verifiedAt
+      }),
       programStatus: primary.status,
       statusLabel: primary.statusLabel,
-      verifiedAt: primary.verifiedAt,
       isPrimaryFor: primary.id,
       sourceOfTruth: REGISTRY_REF
     };
@@ -397,9 +401,29 @@ function restoredPublicMain(program) {
 </main>`;
 }
 
+function preserveFactualBooleanAttributeStyle(block, existingBlock) {
+  if (!existingBlock) return block;
+  const attributes = [
+    "data-aeo-program-summary",
+    "data-aeo-primary-answer",
+    "data-aeo-direct-answer",
+    "data-program-grant",
+    "data-program-contribution"
+  ];
+  let output = block;
+  for (const attribute of attributes) {
+    const existing = existingBlock.match(new RegExp(`\\b${attribute}(?:=(?:""|''))?(?=[\\s>])`, "u"));
+    if (!existing) continue;
+    output = output.replace(new RegExp(`\\b${attribute}(?:=(?:""|''))?(?=[\\s>])`, "gu"), existing[0]);
+  }
+  return output;
+}
+
 function syncProgramHtml(source, program) {
   let output = source;
-  const eol = source.includes("\r\n") ? "\r\n" : "\n";
+  const marked = /<!-- PROGRAM_FACTUAL_STATUS_START -->[\s\S]*?<!-- PROGRAM_FACTUAL_STATUS_END -->/;
+  const existingFactualBlock = source.match(marked)?.[0] || "";
+  const eol = (existingFactualBlock || source).includes("\r\n") ? "\r\n" : "\n";
   const templateMode = /data-program-template-version=(?:"[^"]+"|'[^']+')/i.test(source);
   if (!templateMode) {
     output = output.replace(/<!-- ANSWER_READINESS_START -->[\s\S]*?<!-- ANSWER_READINESS_END -->\s*/gi, "");
@@ -411,7 +435,12 @@ function syncProgramHtml(source, program) {
   output = output.replace(/<body\b[^>]*>/i, (tag) => {
     let next = tag;
     if (!templateMode) {
-      for (const attribute of ["data-source-status", "data-reviewed-at", "data-factual-governance", "data-program-registry", "data-program-status", "data-status-label", "data-verified-at", "data-source-url", "data-publication-state"]) {
+      for (const attribute of ["data-source-status", "data-reviewed-at", "data-factual-governance"]) {
+        next = removeTagAttribute(next, attribute);
+      }
+    }
+    if (!isPublicProgram(program)) {
+      for (const attribute of ["data-program-status", "data-status-label", "data-verified-at", "data-source-url"]) {
         next = removeTagAttribute(next, attribute);
       }
     }
@@ -450,15 +479,18 @@ function syncProgramHtml(source, program) {
     output = output.replace(/(<article\b[^>]*>[\s\S]*?)<h1(\b[^>]*)>([\s\S]*?)<\/h1>/iu, "$1<h2$2>$3</h2>");
   }
   const factualMode = templateMode ? "template-header" : "default";
-  const block = renderProgramFactualStatus(program, { mode: factualMode }).replace(/\r?\n/g, eol);
-  const marked = /<!-- PROGRAM_FACTUAL_STATUS_START -->[\s\S]*?<!-- PROGRAM_FACTUAL_STATUS_END -->/;
+  const block = preserveFactualBooleanAttributeStyle(
+    renderProgramFactualStatus(program, { mode: factualMode }).replace(/\r?\n/g, eol),
+    existingFactualBlock
+  );
+  const markedWithWhitespace = /\s*<!-- PROGRAM_FACTUAL_STATUS_START -->[\s\S]*?<!-- PROGRAM_FACTUAL_STATUS_END -->\s*/;
   const showcaseMode = /<body\b[^>]*class=["'][^"']*\bprogram-showcase-page\b/i.test(output);
   if (showcaseMode) {
     // Paginile editoriale 2026 conțin articole în cardurile de filtrare. Inserarea
     // generică în primul <article> muta rezumatul factual în primul card și îl
     // îngusta la jumătate de coloană. Îl păstrăm ca secțiune autonomă, imediat
     // după răspunsul editorial, indiferent de poziția unei versiuni deja marcate.
-    output = output.replace(marked, "");
+    output = output.replace(markedWithWhitespace, eol);
     const answerSection = /(<section\b[^>]*\bprogram-section--answer\b[^>]*>[\s\S]*?<\/section>)/i;
     if (answerSection.test(output)) return output.replace(answerSection, `$1${eol}${block}`);
     if (/<main\b[^>]*>/i.test(output)) return output.replace(/<main\b[^>]*>/i, (tag) => `${tag}${eol}${block}`);

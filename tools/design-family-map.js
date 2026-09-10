@@ -79,6 +79,7 @@ const DESIGN_FAMILY_BY_SLUG = Object.freeze({
   "pnrr-digitalizare-imm-cheltuieli-eligibile": "digital",
   "politica-de-confidentialitate": "legal",
   "por-adr-nord-est": "generic",
+  "programul-tranzitie-justa": "generic",
   "portofoliu": "trust",
   "pro-infra": "energy",
   "resurse": "editorial",
