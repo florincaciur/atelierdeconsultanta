@@ -30,6 +30,15 @@ const programsById = new Map(data.programs.map((program) => [program.id, program
 const syncedGuides = syncGuides(JSON.parse(JSON.stringify(data.guides)), data.programs);
 
 assert.deepEqual(validateData(data), [], "Configurațiile taxonomiei și registrului de surse trebuie să fie valide.");
+const missingOpenEnd = structuredClone(data);
+missingOpenEnd.programs.find(program => program.id === "pocidif-21").applicationEnd = null;
+assert.ok(validateData(missingOpenEnd).some(error => error.includes("OPEN cere și sfârșit oficial")), "Un termen necunoscut nu poate valida o sesiune OPEN.");
+const scheduledWithoutEnd = structuredClone(data);
+const scheduledProgram = scheduledWithoutEnd.programs.find(program => program.canonicalStatus === "SCHEDULED");
+scheduledProgram.applicationEnd = null;
+assert.deepEqual(validateData(scheduledWithoutEnd), [], "O deschidere oficială viitoare nu impune inventarea termenului de închidere.");
+scheduledProgram.officialSources.roles.sessionAnnouncement = [];
+assert.ok(validateData(scheduledWithoutEnd).some(error => error.includes("cere dovadă de sesiune")), "SCHEDULED continuă să necesite dovada oficială a sesiunii.");
 assert.deepEqual(data.taxonomy.statuses.map((status) => status.id), EXPECTED_STATUS_IDS, "Taxonomia trebuie să păstreze exact cele 13 stări canonice și ordinea reviewable.");
 assert.deepEqual(Object.keys(data.taxonomy.legacyCompatibility), LEGACY_STATUS_IDS, "Toate cele șase stări legacy trebuie mapate explicit.");
 assert.equal(data.taxonomy.statuses.filter((status) => status.acceptsApplications).length, 1, "O singură stare poate permite depunerea.");
@@ -80,7 +89,8 @@ for (const program of data.programs) {
   }
 
   if (["OPEN", "SCHEDULED"].includes(assignment.canonicalStatus)) {
-    assert.ok(program.applicationStart && program.applicationEnd, `${program.slug} cere fereastră oficială.`);
+    assert.ok(program.applicationStart, `${program.slug} cere început oficial.`);
+    if (assignment.canonicalStatus === "OPEN") assert.ok(program.applicationEnd, `${program.slug} deschis cere sfârșit oficial.`);
     assert.ok(sourceEntry.roles.sessionAnnouncement.length, `${program.slug} cere dovadă de sesiune.`);
   }
 }

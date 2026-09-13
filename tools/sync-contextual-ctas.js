@@ -100,8 +100,8 @@ ${END}`;
 }
 
 function injectAssets(output, page) {
-  const stylesheet = '<link rel="stylesheet" href="/assets/contextual-cta.css?v=20260722-1">';
-  const script = '<script src="/assets/contextual-cta.js?v=20260722-1" defer></script>';
+  const stylesheet = '<link rel="stylesheet" href="/assets/contextual-cta.css?v=20260913-1">';
+  const script = '<script src="/assets/contextual-cta.js?v=20260913-1" defer></script>';
   const longFormStyle = /^[ \t]*<link\b[^>]*data-long-form-layout-style=["'][^"']+["'][^>]*>/imu;
   const headAssets = `  ${stylesheet}\n  ${script}`;
   output = longFormStyle.test(output)

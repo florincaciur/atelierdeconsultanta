@@ -11,7 +11,7 @@ const { sceneArtwork } = require("./hero-program-scenes");
 
 const ROOT = path.resolve(__dirname, "..");
 const CHECK_ONLY = process.argv.includes("--check");
-const STYLE_HREF = "/assets/program-visuals.css?v=20260910-1";
+const STYLE_HREF = "/assets/program-visuals.css?v=20260913-1";
 const START = "PROGRAM_VISUAL_START";
 const END = "PROGRAM_VISUAL_END";
 const PROGRAMS = JSON.parse(fs.readFileSync(path.join(ROOT, "config", "seo-programs.json"), "utf8")).programs;
@@ -91,7 +91,8 @@ function visualPane(route, record = programForRoute(route)) {
       ${steps.map((label, index) => `<button class="program-visual__step" type="button" data-program-step="${index + 1}" aria-pressed="${index === 0 ? "true" : "false"}"><span>0${index + 1}</span>${label}</button>`).join("\n      ")}
     </div>
     <div class="program-visual__footer">
-      <span class="program-visual__live" aria-live="polite">Reper activ: Solicitant</span>
+      <span class="program-visual__live" aria-live="off">Reper activ: Solicitant</span>
+      <button class="program-visual__pause" type="button" data-program-animation-pause aria-pressed="false">Pauză animație</button>
       <span>Verificat <time${verifiedIso ? ` datetime="${escapeHtml(verifiedIso)}"` : ""}>${escapeHtml(verified)}</time></span>
       <a href="${escapeHtml(record.sourceUrl)}" rel="noopener noreferrer" target="_blank" data-analytics-event="source_document_click" data-analytics-component="program_hero" data-analytics-cta-id="official_source">Sursa oficială<span class="sr-only"> pentru ${escapeHtml(title)} (se deschide într-o filă nouă)</span></a>
     </div>
@@ -128,8 +129,18 @@ function enhanceHero(hero, route, record) {
   if (!closing) throw new Error(`${route}: bannerul existent nu are închidere validă`);
   let next = removeLegacyHeroVisual(hero).replace(/\r?\n/gu, eol);
   next = next.replace(opening, enhanceOpeningTag(opening, record));
-  if (/post-hero/iu.test(opening) && !next.includes(record.statusLabel)) {
+  // Generated showcase pages already own their actions. Older design passes
+  // appended a second contact group outside the content column.
+  if (next.includes('class="program-hero__actions"')) {
+    next = next.replace(/\s*<div\b[^>]*class="hero-actions"[^>]*>[\s\S]*?<\/div>/giu, "");
+  }
+  if (/post-hero/iu.test(opening)) {
+    next = next.replace(/\s*<p\b[^>]*class="program-hero__status"[^>]*>[\s\S]*?<\/p>/giu, "");
     next = next.replace(/(<p\b[^>]*class=(['"])[^'"]*post-excerpt[^'"]*\2[^>]*>[\s\S]*?<\/p>)/iu, `$1\n    <p class="program-hero__status">${escapeHtml(record.statusLabel)}</p>`);
+    // These article heroes precede <main>; give their section a landmark name.
+    if (!/^<section\b[^>]*aria-label(?:ledby)?=/iu.test(next)) {
+      next = next.replace(/^<section\b/iu, `<section aria-label="Prezentare ${escapeHtml(record.shortName || record.name)}"`);
+    }
   }
   const pane = visualPane(route, record).replace(/\r?\n/gu, eol);
   return next.replace(closing, `${pane}${eol}${closing}`);

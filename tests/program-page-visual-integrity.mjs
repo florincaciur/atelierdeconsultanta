@@ -180,6 +180,12 @@ async function inspect(page, route, viewport) {
     }
 
     const contextualBody = document.querySelector(".program-contextual-links__body");
+    const factualGridIssues = [...document.querySelectorAll('.program-factual-status__facts')].filter(visible).filter(grid => {
+      const parent = grid.parentElement;
+      const style = getComputedStyle(parent);
+      const available = parent.clientWidth - parseFloat(style.paddingLeft) - parseFloat(style.paddingRight);
+      return Math.abs(grid.getBoundingClientRect().width - available) > 2;
+    }).map(grid => Math.round(grid.getBoundingClientRect().width));
     const contextualList = document.querySelector(".program-contextual-links__list");
     const contextualBodyStyle = contextualBody ? getComputedStyle(contextualBody) : null;
     const contextualContentWidth = contextualBody && contextualBodyStyle
@@ -204,6 +210,7 @@ async function inspect(page, route, viewport) {
       railLayoutCount,
       contextualDefaultClosed,
       contextualWidthIntegrity,
+      factualGridIssues,
       microAlertIntegrity,
       microAlertDefaultClosed
     };
@@ -248,6 +255,7 @@ try {
         if (result.railLayoutCount) errors.push(`pagina păstrează ${result.railLayoutCount} layout(uri) rail fără cuprins`);
         if (!result.contextualDefaultClosed) errors.push("secțiunea contextuală nu este restrânsă implicit");
         if (!result.contextualWidthIntegrity) errors.push("lista contextuală nu folosește lățimea corpului secțiunii");
+        if (result.factualGridIssues.length) errors.push(`rezumatul factual nu folosește lățimea secțiunii: ${result.factualGridIssues.join(', ')}px`);
         if (!result.microAlertIntegrity) errors.push("dropdown-ul de avertismente nu este funcțional");
         if (!result.microAlertDefaultClosed) errors.push("dropdown-ul de avertismente nu este restrâns implicit");
         checks += 1;

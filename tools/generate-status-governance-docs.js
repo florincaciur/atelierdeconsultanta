@@ -313,8 +313,10 @@ function validateData(data) {
       }
     }
     if (["OPEN", "SCHEDULED"].includes(assignment?.canonicalStatus)) {
-      if (!isIsoDate(program.applicationStart) || !isIsoDate(program.applicationEnd)) {
-        errors.push(`${program.slug}: ${assignment.canonicalStatus} cere applicationStart/applicationEnd.`);
+      if (!isIsoDate(program.applicationStart)
+        || (assignment.canonicalStatus === "OPEN" && !isIsoDate(program.applicationEnd))
+        || (program.applicationEnd !== null && !isIsoDate(program.applicationEnd))) {
+        errors.push(`${program.slug}: ${assignment.canonicalStatus} cere început oficial; OPEN cere și sfârșit oficial.`);
       }
       if (!sourceEntry.roles.sessionAnnouncement.length) {
         errors.push(`${program.slug}: ${assignment.canonicalStatus} cere dovadă de sesiune.`);
@@ -448,6 +450,9 @@ function statusById(data) {
 }
 
 function publicLabelForProgram(program, assignment, statuses) {
+  if (assignment.canonicalStatus === "SCHEDULED" && program.applicationEnd === null) {
+    return `Apel programat — depuneri din ${formatDate(program.applicationStart)}; închiderea nu este confirmată în sursele verificate`;
+  }
   return statuses.get(assignment.canonicalStatus).publicLabel
     .replace("{startDate}", formatDate(program.applicationStart))
     .replace("{endDate}", formatDate(program.applicationEnd));

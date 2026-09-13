@@ -25,6 +25,12 @@ for (const route of routes()) {
   assert($("link[href^='/assets/program-visuals.css']").length, `${route}: lipsește stylesheet-ul comun pentru grafice`);
   const banner = $("[data-program-visual='immersive-verification']");
   assert.equal(banner.length, 1, `${route}: trebuie să existe un singur banner imersiv`);
+  assert.equal(banner.find('[data-program-animation-pause]').length, 1, `${route}: animația trebuie să aibă control de pauză`);
+  assert(banner.find('.hero-actions, .program-hero__actions').length <= 1, `${route}: acțiunile bannerului nu trebuie dublate`);
+  assert(banner.find('.program-hero__status').length <= 1, `${route}: statutul bannerului nu trebuie dublat`);
+  if (banner.hasClass('post-hero')) {
+    assert(banner.attr('aria-label') || banner.attr('aria-labelledby'), `${route}: secțiunea articolului trebuie numită accesibil`);
+  }
   assert.equal($("figure.program-visual").length, 0, `${route}: bannerul vizual separat nu trebuie recreat`);
   assert.equal(banner.find(".hero-icon,.post-icon").length, 0, `${route}: pictograma veche nu trebuie să dubleze animația`);
   const visuals = banner.find("svg[role='img']").toArray().filter((svg) => {

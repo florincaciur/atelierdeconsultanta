@@ -134,20 +134,20 @@
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
   "autoconsum-publici": {
-    "name": "Ghidul solicitantului și anexele actualizate la 23.06.2026",
-    "title": "Ghidul solicitantului și anexele actualizate la 23.06.2026",
-    "institution": "Ministerul Energiei",
+    "name": "Ghidul solicitantului și anexele publicate de AFIR la 11.09.2026",
+    "title": "Ghidul solicitantului și anexele publicate de AFIR la 11.09.2026",
+    "institution": "Ministerul Energiei / AFIR",
     "documentType": "ghid și anexe oficiale",
-    "url": "https://energie.gov.ro/anunt-privind-actualizarea-la-data-de-23-06-2026-a-ghidului-solicitantului-privind-sprijinirea-investitiilor-in-noi-capacitati-de-producere-a-energiei-electrice-produsa-din-surse-regenerabile-de-energ/",
-    "accessedAt": "2026-09-09",
-    "note": "Pagina oficială include arhiva RAR cu ghidul actualizat și anexele pentru producție solară cu stocare integrată destinată autoconsumului entităților publice.",
+    "url": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-producere-si-stocare-energie-regenerabila-beneficiari-publici/",
+    "accessedAt": "2026-09-13",
+    "note": "Ghid publicat de AFIR la 11.09.2026. AFIR a publicat ghidurile la 11.09.2026 și a anunțat primirea cererilor online din 28.09.2026. Termenul de închidere nu este precizat în comunicatul verificat la 13.09.2026; se reconfirmă în anunțul sesiunii.",
     "programIds": [
       "autoconsum-institutii-publice"
     ],
     "isPrimaryFor": "autoconsum-institutii-publice",
     "programStatus": "ghid_aprobat_nedeschis",
-    "statusLabel": "Apel lansat – depuneri 11 septembrie–6 noiembrie 2026",
-    "verifiedAt": "2026-09-09",
+    "statusLabel": "Depunere programată din 28 septembrie 2026",
+    "verifiedAt": "2026-09-13",
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
   "fondul-modernizare": {
@@ -500,16 +500,16 @@
     "programIds": [
       "fondul-modernizare-pc1-stocare-entitati-publice"
     ],
-    "name": "Ghidul solicitantului și anexele actualizate la 23.06.2026",
-    "title": "Ghidul solicitantului și anexele actualizate la 23.06.2026",
-    "institution": "Ministerul Energiei",
+    "name": "Ghidul solicitantului și anexele publicate de AFIR la 11.09.2026",
+    "title": "Ghidul solicitantului și anexele publicate de AFIR la 11.09.2026",
+    "institution": "Ministerul Energiei / AFIR",
     "documentType": "ghid și anexe oficiale",
-    "url": "https://energie.gov.ro/anunt-privind-actualizarea-la-data-de-23-06-2026-a-ghidului-solicitantului-privind-sprijinirea-investitiilor-in-noi-capacitati-de-producere-a-energiei-electrice-produsa-din-surse-regenerabile-de-energ/",
-    "accessedAt": "2026-09-09",
-    "note": "Pagina oficială include arhiva ZIP cu ghidul actualizat și anexele pentru capacități noi de stocare conectate la instalații regenerabile existente ale entităților publice.",
+    "url": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-stocare-energie-regenerabila-beneficiari-publici/",
+    "accessedAt": "2026-09-13",
+    "note": "Ghid publicat de AFIR la 11.09.2026. AFIR a publicat ghidurile la 11.09.2026 și a anunțat primirea cererilor online din 28.09.2026. Termenul de închidere nu este precizat în comunicatul verificat la 13.09.2026; se reconfirmă în anunțul sesiunii.",
     "programStatus": "ghid_aprobat_nedeschis",
-    "statusLabel": "Apel lansat – depuneri 11 septembrie–6 noiembrie 2026",
-    "verifiedAt": "2026-09-09",
+    "statusLabel": "Depunere programată din 28 septembrie 2026",
+    "verifiedAt": "2026-09-13",
     "isPrimaryFor": "fondul-modernizare-pc1-stocare-entitati-publice",
     "sourceOfTruth": "config/seo-programs.json#programs"
   },

@@ -28,7 +28,7 @@ Fluxul de evaluare este: identificarea granularității → verificarea emitentu
 | `CONSULTATIVE_GUIDE` | nu | Ghid consultativ publicat — depunerea nu este deschisă | Există un ghid explicit consultativ sau draft; perioada de consultare poate fi activă ori închisă, însă condițiile nu sunt finale. |
 | `FINAL_GUIDE` | nu | Ghid final publicat — depunerea nu este deschisă | Ghidul final a fost aprobat ori publicat oficial, dar nu există încă dovadă suficientă că o sesiune de depunere este deschisă. |
 | `APPROVED_SCHEME` | nu | Schemă aprobată — depunerea nu este deschisă | Schema de ajutor, ordinul sau cadrul juridic a fost aprobat, fără ca aprobarea să constituie singură dovadă de deschidere a unei sesiuni. |
-| `SCHEDULED` | nu | Apel programat — depuneri între {startDate} și {endDate} | Autoritatea a confirmat oficial o fereastră viitoare de depunere, iar data curentă este anterioară începerii; simpla trecere a timpului nu promovează automat starea la OPEN. |
+| `SCHEDULED` | nu | Apel programat — depuneri între {startDate} și {endDate} | Autoritatea a confirmat oficial o dată viitoare de început a depunerii, iar data curentă este anterioară începerii. Termenul de închidere se publică numai dacă este confirmat; simpla trecere a timpului nu promovează automat starea la OPEN. |
 | `OPEN` | da | Apel deschis — depuneri până la {endDate} | Sesiunea acceptă depuneri la data curentă, conform unei dovezi oficiale aplicabile și unei ferestre confirmate neexpirate. |
 | `CLOSED` | nu | Apel închis — depunerea nu este deschisă | Fereastra de depunere s-a încheiat ori sesiunea a fost închisă; evaluarea, contractarea sau implementarea pot continua. |
 | `SUSPENDED` | nu | Apel suspendat — depunerea nu este disponibilă | Autoritatea a suspendat oficial și temporar sesiunea sau procedura; depunerea nu este permisă până la o reluare expresă. |
@@ -146,12 +146,12 @@ Placeholder-ele `{startDate}` și `{endDate}` se înlocuiesc numai cu date absol
 
 ### `SCHEDULED`
 
-**Definiție:** Autoritatea a confirmat oficial o fereastră viitoare de depunere, iar data curentă este anterioară începerii; simpla trecere a timpului nu promovează automat starea la OPEN.
+**Definiție:** Autoritatea a confirmat oficial o dată viitoare de început a depunerii, iar data curentă este anterioară începerii. Termenul de închidere se publică numai dacă este confirmat; simpla trecere a timpului nu promovează automat starea la OPEN.
 
 **Dovadă minimă necesară:**
 
 - anunț oficial de sesiune sau pagină oficială echivalentă
-- dată de început viitoare și dată de sfârșit confirmate
+- dată de început viitoare confirmată; sfârșitul se păstrează null și se explică public când nu este confirmat în sursele verificate
 - identificarea apelului și a autorității
 
 **Depunere posibilă:** Nu.
@@ -296,8 +296,8 @@ Maparea de mai jos folosește snapshot-ul factual de bază verificat în registr
 | `fondul-modernizare-autoconsum` | `apel_inchis` | `COMPLETED` | Apel finalizat — depunerea nu este deschisă | program_call | MySMIS marchează apelurile înregistrate drept FINALIZAT. |
 | `fondul-modernizare-regenerabile` | `apel_inchis` | `COMPLETED` | Apel finalizat — depunerea nu este deschisă | program_call | MySMIS marchează apelurile înregistrate drept FINALIZAT. |
 | `afir-energie-autoconsum` | `apel_inchis` | `CLOSED` | Apel închis — depunerea nu este deschisă | session | Sesiunea 15.06.2026–14.08.2026 s-a încheiat; nu există în registry o dovadă distinctă de finalizare a procedurii. |
-| `autoconsum-institutii-publice` | `ghid_aprobat_nedeschis` | `SCHEDULED` | Apel programat — depuneri între 11.09.2026 și 06.11.2026 | program_call | Ghidul actualizat este publicat, iar calendarul anunțat începe la 11 septembrie 2026; la data verificării depunerea nu este încă deschisă. |
-| `fondul-modernizare-pc1-stocare-entitati-publice` | `ghid_aprobat_nedeschis` | `SCHEDULED` | Apel programat — depuneri între 11.09.2026 și 06.11.2026 | program_call | Ghidul actualizat este publicat, iar calendarul anunțat începe la 11 septembrie 2026; la data verificării depunerea nu este încă deschisă. |
+| `autoconsum-institutii-publice` | `ghid_aprobat_nedeschis` | `SCHEDULED` | Apel programat — depuneri din 28.09.2026; închiderea nu este confirmată în sursele verificate | program_call | AFIR a publicat ghidurile la 11.09.2026 și a anunțat primirea cererilor online din 28.09.2026. Termenul de închidere nu este precizat în comunicatul verificat la 13.09.2026; se reconfirmă în anunțul sesiunii. |
+| `fondul-modernizare-pc1-stocare-entitati-publice` | `ghid_aprobat_nedeschis` | `SCHEDULED` | Apel programat — depuneri din 28.09.2026; închiderea nu este confirmată în sursele verificate | program_call | AFIR a publicat ghidurile la 11.09.2026 și a anunțat primirea cererilor online din 28.09.2026. Termenul de închidere nu este precizat în comunicatul verificat la 13.09.2026; se reconfirmă în anunțul sesiunii. |
 | `pro-infra` | `ghid_aprobat_nedeschis` | `APPROVED_SCHEME` | Schemă aprobată — depunerea nu este deschisă | scheme | Schema este aprobată prin Ordinul MTI nr. 2.292/29.12.2025 și modificată prin Ordinul nr. 101/12.02.2026, fără fereastră oficială de depunere. |
 | `apeluri-gal` | `calendar_estimativ` | `UNCONFIRMED` | Status neconfirmat — verifică sursa oficială | umbrella_program | Fiecare GAL are propriul apel și termen; starea agregată nu poate fi prezentată drept OPEN. |
 | `gal-afir-leader` | `calendar_estimativ` | `UNCONFIRMED` | Status neconfirmat — verifică sursa oficială | umbrella_program | Fiecare GAL are propriul apel și termen; starea agregată nu poate fi prezentată drept OPEN. |

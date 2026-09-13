@@ -181,7 +181,7 @@ function findFirstHero(html) {
 }
 
 function addHeroActions(html, family) {
-  if (html.includes("hero-actions")) return html;
+  if (html.includes("hero-actions") || html.includes("program-hero__actions")) return html;
   const hero = findFirstHero(html);
   if (!hero) return html;
   const closeTag = `</${hero.tag}>`;

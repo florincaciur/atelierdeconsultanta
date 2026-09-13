@@ -1245,16 +1245,16 @@
       "status": "ghid_aprobat_nedeschis",
       "canonicalStatus": "SCHEDULED",
       "statusScope": "program_call",
-      "statusRationale": "Ghidul actualizat este publicat, iar calendarul anunțat începe la 11 septembrie 2026; la data verificării depunerea nu este încă deschisă.",
-      "statusLabel": "Apel lansat – depuneri 11 septembrie–6 noiembrie 2026",
+      "statusRationale": "AFIR a publicat ghidurile la 11.09.2026 și a anunțat primirea cererilor online din 28.09.2026. Termenul de închidere nu este precizat în comunicatul verificat la 13.09.2026; se reconfirmă în anunțul sesiunii.",
+      "statusLabel": "Depunere programată din 28 septembrie 2026",
       "publicationState": "public",
-      "verifiedAt": "2026-09-09",
-      "sourceName": "Ministerul Energiei",
-      "sourceUrl": "https://energie.gov.ro/anunt-privind-actualizarea-la-data-de-23-06-2026-a-ghidului-solicitantului-privind-sprijinirea-investitiilor-in-noi-capacitati-de-producere-a-energiei-electrice-produsa-din-surse-regenerabile-de-energ/",
-      "sourceVersion": "Ghidul solicitantului și anexele actualizate la 23.06.2026",
+      "verifiedAt": "2026-09-13",
+      "sourceName": "Ministerul Energiei / AFIR",
+      "sourceUrl": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-producere-si-stocare-energie-regenerabila-beneficiari-publici/",
+      "sourceVersion": "Ghidul solicitantului și anexele publicate de AFIR la 11.09.2026",
       "sourceType": "official",
-      "applicationStart": "2026-09-11",
-      "applicationEnd": "2026-11-06",
+      "applicationStart": "2026-09-28",
+      "applicationEnd": null,
       "grantSummary": {
         "minimum": null,
         "maximum": {
@@ -1277,15 +1277,15 @@
         "ownContribution": "Cheltuielile neeligibile, TVA deductibilă și orice depășire a plafoanelor din ghid rămân în sarcina beneficiarului."
       },
       "pageUrl": "/autoconsum-public-fotovoltaice-institutii-publice",
-      "lastMeaningfulUpdate": "2026-09-09",
+      "lastMeaningfulUpdate": "2026-09-13",
       "evergreenValue": true,
       "archivedNoindexDecision": null,
       "indexable": true,
       "cardSummary": "PC1 pentru entități publice: panouri fotovoltaice cu stocare integrată, buget 500 mil. EUR și maximum 10 mil. EUR/beneficiar.",
-      "quickAnswer": "PC1 Autoconsum finanțează capacități noi de producere a energiei solare cu stocare integrată pentru entități publice. Bugetul este de 500 milioane EUR, ajutorul poate acoperi până la 100% din cheltuielile eligibile, în limita a 10 milioane EUR pe beneficiar, iar bateriile trebuie dimensionate pentru 2–4 ore. Calendarul anunțat este 11 septembrie–6 noiembrie 2026; la verificarea din 9 septembrie depunerea era programată, nu deschisă.",
+      "quickAnswer": "PC1 Autoconsum finanțează capacități noi de producere a energiei solare cu stocare integrată pentru entități publice. Bugetul este de 500 milioane EUR, ajutorul poate acoperi până la 100% din cheltuielile eligibile, în limita a 10 milioane EUR pe beneficiar, iar bateriile trebuie dimensionate pentru 2–4 ore. Depunerea online prin AFIR începe la 28 septembrie 2026, conform comunicatului din 11 septembrie 2026.",
       "metaTitle": "PC1 Autoconsum entități publice 2026: 10 mil. €",
-      "metaDescription": "PC1 Autoconsum pentru entități publice: buget 500 mil. €, maximum 10 mil. €/beneficiar, până la 100% și depuneri 11.09–06.11.2026.",
-      "editorialDisclaimer": "La data verificării, deschiderea era programată pentru 11 septembrie 2026. Înainte de transmitere se reconfirmă anunțul sesiunii și eventualele clarificări AFIR.",
+      "metaDescription": "PC1 Autoconsum pentru entități publice: buget 500 mil. €, maximum 10 mil. €/beneficiar, până la 100% și depunere din 28.09.2026.",
+      "editorialDisclaimer": "AFIR a publicat ghidurile la 11.09.2026 și a anunțat primirea cererilor online din 28.09.2026. Termenul de închidere nu este precizat în comunicatul verificat la 13.09.2026; se reconfirmă în anunțul sesiunii.",
       "eligibleApplicants": [
         "Unități administrativ-teritoriale și subdiviziunile acestora",
         "Unități din apărare, ordine publică, siguranță națională și administrația penitenciară",
@@ -1307,32 +1307,32 @@
           "programPage": [
             {
               "ref": "program",
-              "label": "Anunțul Ministerului Energiei și ghidul actualizat la 23.06.2026"
+              "label": "AFIR: pagina apelului și anexele oficiale"
             }
           ],
           "guide": [
             {
-              "ref": "guide:autoconsum-publici",
-              "label": "Ghidul solicitantului PC1 Autoconsum pentru entități publice"
+              "ref": "registry:afir-autoconsum-publici-guide",
+              "label": "Ghidul solicitantului PC1 Autoconsum entități publice — DOCX oficial AFIR"
             }
           ],
           "annexes": [
             {
-              "ref": "guide:autoconsum-publici",
-              "label": "Pachetul oficial cu ghidul și anexele publicat de Ministerul Energiei"
+              "ref": "program",
+              "label": "AFIR: cererea de finanțare, grila VAE, declarația DNSH și modelul de parteneriat"
             }
           ],
           "schemeOrder": [],
           "sessionAnnouncement": [
             {
-              "ref": "program",
-              "label": "Calendarul oficial anunțat pentru 11.09–06.11.2026"
+              "ref": "registry:afir-pc1-session-2026",
+              "label": "AFIR: depunerea începe la 28 septembrie 2026"
             }
           ],
           "corrigenda": [],
           "clarifications": []
         },
-        "notes": "Ghidul tehnic este versiunea actualizată la 23.06.2026. La 09.09.2026 apelul era programat să se deschidă la 11.09.2026; pagina AFIR se reverifică înaintea depunerii."
+        "notes": "AFIR a publicat ghidurile la 11.09.2026 și a anunțat primirea cererilor online din 28.09.2026. Termenul de închidere nu este precizat în comunicatul verificat la 13.09.2026; se reconfirmă în anunțul sesiunii."
       },
       "presentation": {
         "carousel": true,
@@ -1356,7 +1356,8 @@
           "energie_autoconsum"
         ],
         "listed": true
-      }
+      },
+      "officialSourceUpdatedAt": "2026-09-11"
     },
     {
       "id": "fondul-modernizare-pc1-stocare-entitati-publice",
@@ -1369,16 +1370,16 @@
       "status": "ghid_aprobat_nedeschis",
       "canonicalStatus": "SCHEDULED",
       "statusScope": "program_call",
-      "statusRationale": "Ghidul actualizat este publicat, iar calendarul anunțat începe la 11 septembrie 2026; la data verificării depunerea nu este încă deschisă.",
-      "statusLabel": "Apel lansat – depuneri 11 septembrie–6 noiembrie 2026",
+      "statusRationale": "AFIR a publicat ghidurile la 11.09.2026 și a anunțat primirea cererilor online din 28.09.2026. Termenul de închidere nu este precizat în comunicatul verificat la 13.09.2026; se reconfirmă în anunțul sesiunii.",
+      "statusLabel": "Depunere programată din 28 septembrie 2026",
       "publicationState": "public",
-      "verifiedAt": "2026-09-09",
-      "sourceName": "Ministerul Energiei",
-      "sourceUrl": "https://energie.gov.ro/anunt-privind-actualizarea-la-data-de-23-06-2026-a-ghidului-solicitantului-privind-sprijinirea-investitiilor-in-noi-capacitati-de-producere-a-energiei-electrice-produsa-din-surse-regenerabile-de-energ/",
-      "sourceVersion": "Ghidul solicitantului și anexele actualizate la 23.06.2026",
+      "verifiedAt": "2026-09-13",
+      "sourceName": "Ministerul Energiei / AFIR",
+      "sourceUrl": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-stocare-energie-regenerabila-beneficiari-publici/",
+      "sourceVersion": "Ghidul solicitantului și anexele publicate de AFIR la 11.09.2026",
       "sourceType": "official",
-      "applicationStart": "2026-09-11",
-      "applicationEnd": "2026-11-06",
+      "applicationStart": "2026-09-28",
+      "applicationEnd": null,
       "grantSummary": {
         "minimum": null,
         "maximum": {
@@ -1401,15 +1402,15 @@
         "ownContribution": "Cheltuielile neeligibile, TVA deductibilă și orice depășire a plafonului rămân în sarcina beneficiarului."
       },
       "pageUrl": "/fondul-modernizare-pc1-stocare-entitati-publice",
-      "lastMeaningfulUpdate": "2026-09-09",
+      "lastMeaningfulUpdate": "2026-09-13",
       "evergreenValue": true,
       "archivedNoindexDecision": null,
       "indexable": true,
       "cardSummary": "PC1 pentru entități publice cu instalații regenerabile existente: baterii în spatele contorului, buget 150 mil. EUR și maximum 10 mil. EUR/beneficiar.",
-      "quickAnswer": "PC1 Stocare finanțează sisteme noi de baterii în spatele contorului, conectate direct la instalații regenerabile existente ale entităților publice. Bugetul este de 150 milioane EUR, ajutorul poate acoperi 100% din cheltuielile eligibile, în limita a 10 milioane EUR pe beneficiar, iar durata stocării trebuie să fie de 2–4 ore. Calendarul anunțat este 11 septembrie–6 noiembrie 2026; la verificarea din 9 septembrie depunerea era programată, nu deschisă.",
+      "quickAnswer": "PC1 Stocare finanțează sisteme noi de baterii în spatele contorului, conectate direct la instalații regenerabile existente ale entităților publice. Bugetul este de 150 milioane EUR, ajutorul poate acoperi 100% din cheltuielile eligibile, în limita a 10 milioane EUR pe beneficiar, iar durata stocării trebuie să fie de 2–4 ore. Depunerea online prin AFIR începe la 28 septembrie 2026, conform comunicatului din 11 septembrie 2026.",
       "metaTitle": "PC1 Stocare entități publice 2026: 10 mil. €",
-      "metaDescription": "PC1 Stocare pentru entități publice: buget 150 mil. €, maximum 10 mil. €/beneficiar, până la 100% și depuneri 11.09–06.11.2026.",
-      "editorialDisclaimer": "La data verificării, deschiderea era programată pentru 11 septembrie 2026. Înainte de transmitere se reconfirmă anunțul sesiunii și eventualele clarificări AFIR.",
+      "metaDescription": "PC1 Stocare pentru entități publice: buget 150 mil. €, maximum 10 mil. €/beneficiar, până la 100% și depunere din 28.09.2026.",
+      "editorialDisclaimer": "AFIR a publicat ghidurile la 11.09.2026 și a anunțat primirea cererilor online din 28.09.2026. Termenul de închidere nu este precizat în comunicatul verificat la 13.09.2026; se reconfirmă în anunțul sesiunii.",
       "eligibleApplicants": [
         "Unități administrativ-teritoriale și subdiviziunile acestora",
         "Unități din apărare, ordine publică, siguranță națională și administrația penitenciară",
@@ -1420,6 +1421,7 @@
         "Capacitatea nouă de stocare se amplasează în spatele contorului și se conectează direct la o instalație regenerabilă existentă.",
         "Este eligibilă o singură cerere de finanțare per solicitant.",
         "Durata echivalentă a stocării trebuie să fie între 2 și 4 ore, raportată la puterea instalată a centralei existente.",
+        "Ajutorul solicitat nu poate depăși 200.000 EUR/MWh instalat, fără TVA.",
         "Investiția trebuie finalizată și pusă în funcțiune până la 31.12.2029."
       ],
       "officialGuideKeys": [
@@ -1430,32 +1432,32 @@
           "programPage": [
             {
               "ref": "program",
-              "label": "Anunțul Ministerului Energiei și ghidul actualizat la 23.06.2026"
+              "label": "AFIR: pagina apelului și anexele oficiale"
             }
           ],
           "guide": [
             {
-              "ref": "guide:fm-pc1-stocare-publici",
-              "label": "Ghidul solicitantului PC1 Stocare pentru entități publice"
+              "ref": "registry:afir-fm-pc1-stocare-publici-guide",
+              "label": "Ghidul solicitantului PC1 Stocare entități publice — DOCX oficial AFIR"
             }
           ],
           "annexes": [
             {
-              "ref": "guide:fm-pc1-stocare-publici",
-              "label": "Pachetul oficial cu ghidul și anexele publicat de Ministerul Energiei"
+              "ref": "program",
+              "label": "AFIR: cererea de finanțare, grila VAE, declarația DNSH și modelul de parteneriat"
             }
           ],
           "schemeOrder": [],
           "sessionAnnouncement": [
             {
-              "ref": "program",
-              "label": "Calendarul oficial anunțat pentru 11.09–06.11.2026"
+              "ref": "registry:afir-pc1-session-2026",
+              "label": "AFIR: depunerea începe la 28 septembrie 2026"
             }
           ],
           "corrigenda": [],
           "clarifications": []
         },
-        "notes": "Ghidul tehnic este versiunea actualizată la 23.06.2026. La 09.09.2026 apelul era programat să se deschidă la 11.09.2026; pagina AFIR se reverifică înaintea depunerii."
+        "notes": "AFIR a publicat ghidurile la 11.09.2026 și a anunțat primirea cererilor online din 28.09.2026. Termenul de închidere nu este precizat în comunicatul verificat la 13.09.2026; se reconfirmă în anunțul sesiunii."
       },
       "presentation": {
         "carousel": true,
@@ -1478,7 +1480,8 @@
           "energie_regenerabila"
         ],
         "listed": true
-      }
+      },
+      "officialSourceUpdatedAt": "2026-09-11"
     },
     {
       "id": "pro-infra",
@@ -5340,7 +5343,7 @@
         ],
         [
           "Când se depun proiectele?",
-          "Calendarul anunțat este 11 septembrie–6 noiembrie 2026. Anunțul operațional și eventualele clarificări AFIR se verifică înainte de transmitere."
+          "Depunerea online prin AFIR începe la 28 septembrie 2026. Data închiderii se reconfirmă în anunțul sesiunii."
         ]
       ],
       "related": [

@@ -84,10 +84,15 @@
 @media (max-width: 47.5rem) {
   [data-sticky-cta]:not([hidden]) {
     display: grid;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  [data-sticky-cta] p {
+    display: none;
   }
 
   body.contextual-sticky-cta-visible {
-    padding-bottom: 5.75rem;
+    padding-bottom: var(--contextual-sticky-height, 5.75rem);
   }
 }
 

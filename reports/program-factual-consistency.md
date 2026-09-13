@@ -1,6 +1,6 @@
 # Audit de consistență factuală a programelor
 
-Data auditului: 2026-09-10
+Data auditului: 2026-09-13
 
 ## Rezultat
 
@@ -28,8 +28,8 @@ Auditul este local și determinist. Nu interoghează URL-urile oficiale, nu dedu
 | Fondul pentru Modernizare – autoconsum | apel_inchis | 2026-08-29 | — | — |
 | Fondul pentru Modernizare – energie regenerabilă | apel_inchis | 2026-08-29 | — | — |
 | AFIR Autoconsum Agroalimentar | apel_inchis | 2026-08-29 | 2026-06-15 | 2026-08-14 |
-| PC1 – Autoconsum entități publice | ghid_aprobat_nedeschis | 2026-09-09 | 2026-09-11 | 2026-11-06 |
-| PC1 – Stocare entități publice | ghid_aprobat_nedeschis | 2026-09-09 | 2026-09-11 | 2026-11-06 |
+| PC1 – Autoconsum entități publice | ghid_aprobat_nedeschis | 2026-09-13 | 2026-09-28 | — |
+| PC1 – Stocare entități publice | ghid_aprobat_nedeschis | 2026-09-13 | 2026-09-28 | — |
 | PRO INFRA | ghid_aprobat_nedeschis | 2026-09-06 | — | — |
 | Apeluri GAL | calendar_estimativ | 2026-08-29 | — | — |
 | GAL-AFIR / LEADER | calendar_estimativ | 2026-08-29 | — | — |

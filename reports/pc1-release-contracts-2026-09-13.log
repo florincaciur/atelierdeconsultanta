@@ -1,0 +1,13 @@
+
+> test:program-visual-integrity
+> node tests/program-page-visual-integrity.mjs && node tests/program-animation-controls.mjs && npm run test:site-immersive
+
+Integritate vizuală programe: 27 rute × 9 viewport-uri = 243 verificări trecute (text, contrast, încadrare și SVG).
+PASS program animation: automatic updates stay silent, pause/resume, manual selection and reduced motion.
+
+> test:site-immersive
+> node tools/sync-site-immersive.js --check && node tests/site-immersive-contract.mjs && node tests/site-immersive-responsive.mjs
+
+Strat vizual FABER: 105 rute canonice verificate, 0 fișiere nesincronizate.
+Contract vizual site: 105 rute canonice și 27 bannere de program conforme.
+Integritate vizuală site: 105 rute × 3 viewport-uri = 237 verificări trecute.

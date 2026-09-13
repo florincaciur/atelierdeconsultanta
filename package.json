@@ -1,5 +1,6 @@
 {
   "scripts": {
+    "audit:program-experience": "node tools/audit-program-experience.mjs",
     "optimize:assets": "node scripts/optimize-assets.js",
     "extract:sources": "node tools/extract-source-facts.js",
     "audit:content": "node tools/audit-content-depth.js --min-words 2000",
@@ -132,7 +133,7 @@
     "sync:site-immersive": "node tools/sync-site-immersive.js",
     "test:program-visuals": "node tools/sync-program-visuals.js --check && node tools/sync-site-immersive.js --check && node tests/program-visuals-contract.mjs && node tests/site-immersive-contract.mjs",
     "test:site-immersive": "node tools/sync-site-immersive.js --check && node tests/site-immersive-contract.mjs && node tests/site-immersive-responsive.mjs",
-    "test:program-visual-integrity": "node tests/program-page-visual-integrity.mjs && npm run test:site-immersive",
+    "test:program-visual-integrity": "node tests/program-page-visual-integrity.mjs && node tests/program-animation-controls.mjs && npm run test:site-immersive",
     "sync:homepage-hero": "node tools/sync-homepage-hero.js",
     "test:homepage-hero": "node tools/sync-homepage-hero.js && node tools/sync-homepage-hero.js --check && node tests/homepage-hero-contract.mjs",
     "sync:contextual-ctas": "node tools/sync-contextual-ctas.js",
@@ -234,6 +235,7 @@
     "test:program-seo-logo": "node tests/program-seo-logo-20260906-contract.mjs"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.13.0",
     "cheerio": "^1.2.0",
     "clean-css": "^5.3.3",
     "exceljs": "^4.4.0",

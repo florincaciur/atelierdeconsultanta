@@ -149,10 +149,10 @@
     },
     {
       "id": "SCHEDULED",
-      "definition": "Autoritatea a confirmat oficial o fereastră viitoare de depunere, iar data curentă este anterioară începerii; simpla trecere a timpului nu promovează automat starea la OPEN.",
+      "definition": "Autoritatea a confirmat oficial o dată viitoare de început a depunerii, iar data curentă este anterioară începerii. Termenul de închidere se publică numai dacă este confirmat; simpla trecere a timpului nu promovează automat starea la OPEN.",
       "evidenceRequired": [
         "anunț oficial de sesiune sau pagină oficială echivalentă",
-        "dată de început viitoare și dată de sfârșit confirmate",
+        "dată de început viitoare confirmată; sfârșitul se păstrează null și se explică public când nu este confirmat în sursele verificate",
         "identificarea apelului și a autorității"
       ],
       "acceptsApplications": false,

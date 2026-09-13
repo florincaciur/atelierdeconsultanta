@@ -2,6 +2,12 @@
 
 Site static pentru [atelierdeconsultanta.ro](https://atelierdeconsultanta.ro), generat și verificat cu Node.js/npm și publicat prin Cloudflare din branch-ul de producție.
 
+## Audit vizual al programelor
+
+`npm run audit:program-experience -- --label=local` verifică toate cele 27 de rute din sitemapul programelor la 390 și 1440 px, cu axe-core, secțiuni deschise, navigare cu tastatura, meniuri mobile, animații și bara de contact. Salvează JSON și capturi complete în `reports/program-experience-local/`. Folosește `--no-screenshots` pentru o verificare fără capturi; `--base=https://atelierdeconsultanta.ro` verifică versiunea publicată. Auditul local exclude cererile terților pentru rezultate reproductibile.
+
+`npm run test:program-visual-integrity` verifică suplimentar nouă lățimi între 320 și 1920 px, încadrarea textelor/SVG, contrastul pe fundaluri solide, lățimea rezumatelor factuale, pauza animațiilor și mișcarea redusă. [Raportul și remediile din 13 septembrie 2026](reports/audit-vizual-programe-2026-09-13.md) separă verificările locale de cele efectuate pe site-ul public.
+
 ## IndexNow
 
 Site-ul folosește IndexNow pentru notificarea motoarelor compatibile după publicarea conținutului.

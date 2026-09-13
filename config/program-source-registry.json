@@ -46,6 +46,30 @@
       "url": "https://www.afir.ro/comunicate/masuri-afir-pentru-atenuarea-efectelor-provocate-de-indisponibilitatea-sistemului-ancpi-completare/",
       "publishedAt": "2026-07-29",
       "verifiedAt": "2026-08-22"
+    },
+    "afir-pc1-session-2026": {
+      "title": "Comunicat AFIR: depunere pentru entități publice din 28 septembrie 2026",
+      "authority": "AFIR",
+      "documentType": "comunicat oficial de sesiune",
+      "url": "https://www.afir.ro/comunicate/conditiile-finantarii-acordate-entitatilor-publice-pentru-producerea-si-stocarea-energiei-electrice/",
+      "publishedAt": "2026-09-11",
+      "verifiedAt": "2026-09-13"
+    },
+    "afir-autoconsum-publici-guide": {
+      "title": "Ghidul solicitantului PC1 Autoconsum entități publice",
+      "authority": "Ministerul Energiei / AFIR",
+      "documentType": "ghid oficial DOCX",
+      "url": "https://www.afir.ro/media/uwymsxzy/ghidul-solicitantului_autoconsum-res_fm_entitati-publice.docx",
+      "publishedAt": "2026-09-11",
+      "verifiedAt": "2026-09-13"
+    },
+    "afir-fm-pc1-stocare-publici-guide": {
+      "title": "Ghidul solicitantului PC1 Stocare entități publice",
+      "authority": "Ministerul Energiei / AFIR",
+      "documentType": "ghid oficial DOCX",
+      "url": "https://www.afir.ro/media/yo1h41gu/ghidul-solicitantului_stocare_res_fm_publici.docx",
+      "publishedAt": "2026-09-11",
+      "verifiedAt": "2026-09-13"
     }
   },
   "programSourceAssignments": "config/seo-programs.json#programs[*].officialSources"

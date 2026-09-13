@@ -1,0 +1,41 @@
+{
+  "verifiedAt": "2026-09-13",
+  "method": "HTTP 200, comparație binară și SHA-256 cu cele cinci fișiere atașate de utilizator",
+  "documents": [
+    {
+      "name": "Ghidul Solicitantului Autoconsum RES FM Entitati Publice.docx",
+      "url": "https://www.afir.ro/media/uwymsxzy/ghidul-solicitantului_autoconsum-res_fm_entitati-publice.docx",
+      "status": 200,
+      "sha256": "a023d9ff4bc8b93fe649620272408768671bc2353d00b2f4aab66dba0b2fce22",
+      "matchesAttachment": true
+    },
+    {
+      "name": "Anexa 1 - CF Forma Vizuala AUTOCONSUM RES FM.pdf",
+      "url": "https://www.afir.ro/media/kryf4iok/anexa-1_cf_forma-vizuala_autoconsum_res_fm.pdf",
+      "status": 200,
+      "sha256": "fa23b42b1a349fd0edf73665147ded79fbbca67c3c6942cc5a98c05f4195617b",
+      "matchesAttachment": true
+    },
+    {
+      "name": "Anexa 2 - Grila VAE AUTOCONSUM RES FM PUBLICI.docx",
+      "url": "https://www.afir.ro/media/nm4fhhux/anexa-2_grila-vae_autoconsum_res_fm_publici.docx",
+      "status": 200,
+      "sha256": "c08f1c44dcb317dba60f8225d63bff94db07b2293228323b69508f74d52622d2",
+      "matchesAttachment": true
+    },
+    {
+      "name": "Anexa 3 - Declarație DNSH AUTOCONSUM RES FM PUBLICI.docx",
+      "url": "https://www.afir.ro/media/fjjgp1wq/anexa-3_declaratie-dnsh_autoconsum_res_fm_publici.docx",
+      "status": 200,
+      "sha256": "147e750a84de732c652320c69f821d89935ec3f7400713b9c8dee2991808e839",
+      "matchesAttachment": true
+    },
+    {
+      "name": "Anexa 4 - Model Acord Parteneriat RES FM PUBLICI.docx",
+      "url": "https://www.afir.ro/media/zxvhqlty/anexa-4_model-acord-parteneriat_res_fm_publici.docx",
+      "status": 200,
+      "sha256": "8a189d6f39cba2978a77b8c12c4c4a542aba9e6f6e19c42c42bc27d15e338bc2",
+      "matchesAttachment": true
+    }
+  ]
+}

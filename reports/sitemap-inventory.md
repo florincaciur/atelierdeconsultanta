@@ -17,7 +17,7 @@ Generatorul include numai rute locale 200, indexabile si self-canonical. `lastmo
 
 - duplicate_policy_pending_legal_consolidation: 1
 - meta_refresh: 2
-- missing_canonical: 5
+- missing_canonical: 8
 - noindex_meta: 63
 - redirect_source: 104
 
@@ -28,6 +28,9 @@ Generatorul include numai rute locale 200, indexabile si self-canonical. `lastmo
 | https://atelierdeconsultanta.ro/gdpr | gdpr.html | duplicate_policy_pending_legal_consolidation | Politica duplicata este omisa din sitemap; redirectul ramane conditionat de aprobarea juridica si SEO. |
 | https://atelierdeconsultanta.ro/fondul-de-modernizare | fondul-de-modernizare.html | meta_refresh | - |
 | https://atelierdeconsultanta.ro/pnrr | pnrr.html | meta_refresh | - |
+| /.codex/pc1-sources/news | .codex/pc1-sources/news.html | missing_canonical | - |
+| /.codex/pc1-sources/solar | .codex/pc1-sources/solar.html | missing_canonical | - |
+| /.codex/pc1-sources/storage | .codex/pc1-sources/storage.html | missing_canonical | - |
 | /google8bbb9999c523a3bd | google8bbb9999c523a3bd.html | missing_canonical | - |
 | /partials/global-header | partials/global-header.html | missing_canonical | - |
 | /partials/preferred-source | partials/preferred-source.html | missing_canonical | - |

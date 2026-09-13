@@ -169,14 +169,20 @@
       "reviewerRole": "Revizuire editorială și conformitate",
       "attributionType": "organization",
       "personalNameConsent": false,
-      "verifiedAt": "2026-09-09",
-      "officialSourceName": "Ministerul Energiei",
-      "officialSourceUrl": "https://energie.gov.ro/anunt-privind-actualizarea-la-data-de-23-06-2026-a-ghidului-solicitantului-privind-sprijinirea-investitiilor-in-noi-capacitati-de-producere-a-energiei-electrice-produsa-din-surse-regenerabile-de-energ/",
-      "sourceVersion": "Ghidul solicitantului și anexele actualizate la 23.06.2026",
-      "nextReviewAt": "2026-11-08",
-      "lastMeaningfulUpdate": "2026-09-09",
+      "verifiedAt": "2026-09-13",
+      "officialSourceName": "Ministerul Energiei / AFIR",
+      "officialSourceUrl": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-producere-si-stocare-energie-regenerabila-beneficiari-publici/",
+      "sourceVersion": "Ghidul solicitantului și anexele publicate de AFIR la 11.09.2026",
+      "nextReviewAt": "2026-09-28",
+      "lastMeaningfulUpdate": "2026-09-13",
       "statusSnapshot": "ghid_aprobat_nedeschis",
       "changelog": [
+        {
+          "date": "2026-09-13",
+          "summary": "Calendar corectat la 28.09.2026 pe baza comunicatului AFIR; ghidul și anexele reverificate, sursele celor două apeluri separate.",
+          "reviewer": "Codex — verificare documentară la solicitarea utilizatorului",
+          "meaningful": true
+        },
         {
           "date": "2026-09-09",
           "summary": "Statutul și sursa oficială pentru PC1 – Autoconsum entități publice au fost actualizate din registrul factual unic.",
@@ -215,7 +221,7 @@
         }
       ],
       "datePublished": "DE_VALIDAT_UMAN",
-      "officialSourceUpdatedAt": "DE_VALIDAT_UMAN"
+      "officialSourceUpdatedAt": "2026-09-11"
     },
     {
       "id": "calculator-soc",
@@ -1910,15 +1916,21 @@
       "attributionType": "organization",
       "personalNameConsent": false,
       "datePublished": "DE_VALIDAT_UMAN",
-      "verifiedAt": "2026-09-09",
-      "officialSourceUpdatedAt": "DE_VALIDAT_UMAN",
-      "officialSourceName": "Ministerul Energiei",
-      "officialSourceUrl": "https://energie.gov.ro/anunt-privind-actualizarea-la-data-de-23-06-2026-a-ghidului-solicitantului-privind-sprijinirea-investitiilor-in-noi-capacitati-de-producere-a-energiei-electrice-produsa-din-surse-regenerabile-de-energ/",
-      "sourceVersion": "Ghidul solicitantului și anexele actualizate la 23.06.2026",
-      "nextReviewAt": "2026-11-08",
-      "lastMeaningfulUpdate": "2026-09-09",
+      "verifiedAt": "2026-09-13",
+      "officialSourceUpdatedAt": "2026-09-11",
+      "officialSourceName": "Ministerul Energiei / AFIR",
+      "officialSourceUrl": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-stocare-energie-regenerabila-beneficiari-publici/",
+      "sourceVersion": "Ghidul solicitantului și anexele publicate de AFIR la 11.09.2026",
+      "nextReviewAt": "2026-09-28",
+      "lastMeaningfulUpdate": "2026-09-13",
       "statusSnapshot": "ghid_aprobat_nedeschis",
       "changelog": [
+        {
+          "date": "2026-09-13",
+          "summary": "Calendar corectat la 28.09.2026 pe baza comunicatului AFIR; ghidul și anexele reverificate, sursele celor două apeluri separate.",
+          "reviewer": "Codex — verificare documentară la solicitarea utilizatorului",
+          "meaningful": true
+        },
         {
           "date": "2026-09-09",
           "summary": "Snapshot factual substanțial preluat din registrul unic al programului; istoricul anterior migrării nu a fost rescris.",

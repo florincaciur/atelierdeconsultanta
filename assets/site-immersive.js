@@ -51,6 +51,8 @@
   function programVisual(figure) {
     var buttons = Array.prototype.slice.call(figure.querySelectorAll("[data-program-step]"));
     var live = figure.querySelector(".program-visual__live");
+    var pauseButton = figure.querySelector("[data-program-animation-pause]");
+    var animationPaused = reducedMotion;
     var timer = null;
     var current = 1;
     var paused = false;
@@ -60,8 +62,19 @@
       buttons.forEach(function (button) {
         button.setAttribute("aria-pressed", button.getAttribute("data-program-step") === String(current) ? "true" : "false");
       });
-      if (announce && live && buttons[current - 1]) live.textContent = "Reper activ: " + buttons[current - 1].textContent.replace(/^\s*0\d\s*/, "").trim();
+      if (live && buttons[current - 1]) {
+        // Automatic rotation must not interrupt a screen reader every 3.8 seconds.
+        live.setAttribute("aria-live", announce ? "polite" : "off");
+        live.textContent = "Reper activ: " + buttons[current - 1].textContent.replace(/^\s*0\d\s*/, "").trim();
+      }
     }
+    function setAnimationPaused(value) {
+      animationPaused = value;
+      figure.setAttribute("data-animation-paused", String(value));
+      if (pauseButton) pauseButton.setAttribute("aria-pressed", String(value));
+    }
+    if (pauseButton) pauseButton.addEventListener("click", function () { setAnimationPaused(!animationPaused); });
+    setAnimationPaused(animationPaused);
     buttons.forEach(function (button) {
       var choose = function () { activate(button.getAttribute("data-program-step"), true); };
       button.addEventListener("click", choose);
@@ -69,7 +82,7 @@
       button.addEventListener("focus", choose);
     });
     figure.addEventListener("pointermove", function (event) {
-      if (reducedMotion || event.pointerType === "touch") return;
+      if (reducedMotion || animationPaused || event.pointerType === "touch") return;
       var rect = figure.getBoundingClientRect();
       var x = ((event.clientX - rect.left) / Math.max(1, rect.width) - .5) * 12;
       var y = ((event.clientY - rect.top) / Math.max(1, rect.height) - .5) * 8;
@@ -85,7 +98,7 @@
     figure.addEventListener("focusin", function () { paused = true; });
     figure.addEventListener("focusout", function (event) { if (!figure.contains(event.relatedTarget)) paused = false; });
     if (!reducedMotion && buttons.length > 1) {
-      timer = window.setInterval(function () { if (!paused && !document.hidden) activate(current % buttons.length + 1, true); }, 3800);
+      timer = window.setInterval(function () { if (!animationPaused && !paused && !document.hidden) activate(current % buttons.length + 1, false); }, 3800);
       window.addEventListener("pagehide", function () { if (timer) window.clearInterval(timer); }, { once: true });
     }
     activate(1, false);

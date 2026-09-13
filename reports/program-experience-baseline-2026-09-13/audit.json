@@ -1,0 +1,2870 @@
+{
+  "date": "2026-09-13T08:24:21.279Z",
+  "base": "http://127.0.0.1:57795",
+  "viewports": [
+    390,
+    1440
+  ],
+  "results": [
+    {
+      "route": "/afir-autoconsum-agroalimentar",
+      "width": 390,
+      "status": 200,
+      "title": "AFIR Autoconsum 2026: fotovoltaice, stocare, ghid | FABER",
+      "h1": [
+        "AFIR Autoconsum Agroalimentar 2026 – energie solară pentru ferme și procesatori"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/afir-autoconsum-agroalimentar",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [
+        {
+          "text": "Sursă oficială: Comunicarea AFIR din 09.06.2026 privind sesiunea 15.06–14.08.202",
+          "size": "12.8px"
+        }
+      ],
+      "pageHeight": 22746,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "disclosuresWork": true
+    },
+    {
+      "route": "/apeluri-gal",
+      "width": 390,
+      "status": 200,
+      "title": "Apeluri GAL: ghid local, criterii și documente",
+      "h1": [
+        "Apeluri GALFinanțări locale"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/apeluri-gal",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [
+        {
+          "text": "Sursă oficială: Platforma AFIR GAL publică apeluri locale cu termene distincte; ",
+          "size": "12.8px"
+        }
+      ],
+      "pageHeight": 14946,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "disclosuresWork": true
+    },
+    {
+      "route": "/autoconsum-public-fotovoltaice-institutii-publice",
+      "width": 390,
+      "status": 200,
+      "title": "PC1 Autoconsum entități publice 2026: 10 mil. €",
+      "h1": [
+        "PC1 Autoconsum 2026 pentru entități publice – producție solară și stocare integrată"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/autoconsum-public-fotovoltaice-institutii-publice",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [
+        {
+          "text": "Fondul pentru Modernizare · Program-cheie 1",
+          "size": "11.04px"
+        },
+        {
+          "text": "Răspuns rapid",
+          "size": "12.16px"
+        },
+        {
+          "text": "Sursă oficială: Ghidul solicitantului și anexele actualizate la 23.06.2026, Mini",
+          "size": "12.8px"
+        },
+        {
+          "text": "Filtru inițial",
+          "size": "12.16px"
+        },
+        {
+          "text": "Arhitectura proiectului",
+          "size": "12.16px"
+        },
+        {
+          "text": "Dosar de lucru",
+          "size": "12.16px"
+        },
+        {
+          "text": "Parcurs recomandat",
+          "size": "12.16px"
+        },
+        {
+          "text": "Selectează un pas sau folosește tastele săgeată pentru a urmări traseul.",
+          "size": "11.52px"
+        },
+        {
+          "text": "Trasabilitate",
+          "size": "12.16px"
+        },
+        {
+          "text": "Ultima verificare editorială: 2026-09-09.",
+          "size": "13.44px"
+        },
+        {
+          "text": "Întrebări frecvente",
+          "size": "12.16px"
+        },
+        {
+          "text": "Următorul pas",
+          "size": "12.16px"
+        }
+      ],
+      "pageHeight": 11872,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "help": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/landmark-unique?application=playwright",
+          "nodes": [
+            {
+              "target": [
+                ".program-comparison"
+              ],
+              "html": "<section class=\"program-section program-comparison is-visible\" aria-label=\"Ce este obligatoriu și ce rămâne opțional?\" data-site-reveal=\"\">",
+              "summary": "Fix any of the following:\n  The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable"
+            }
+          ]
+        }
+      ],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "disclosuresWork": true
+    },
+    {
+      "route": "/diaspora-investeste-acasa",
+      "width": 390,
+      "status": 200,
+      "title": "Diaspora Investește Acasă: 200.000 €, stadiu 2026 | FABER",
+      "h1": [
+        "Diaspora Investește Acasă"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/diaspora-investeste-acasa",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [
+        {
+          "text": "Antreprenoriat · investiții în România",
+          "size": "11.04px"
+        },
+        {
+          "text": "Răspuns rapid",
+          "size": "12.16px"
+        },
+        {
+          "text": "Sursă oficială: Condițiile programului și stadiul operaționalizării publicate de",
+          "size": "12.8px"
+        },
+        {
+          "text": "Filtru inițial",
+          "size": "12.16px"
+        },
+        {
+          "text": "Arhitectura proiectului",
+          "size": "12.16px"
+        },
+        {
+          "text": "Dosar de lucru",
+          "size": "12.16px"
+        },
+        {
+          "text": "Parcurs recomandat",
+          "size": "12.16px"
+        },
+        {
+          "text": "Selectează un pas sau folosește tastele săgeată pentru a urmări traseul.",
+          "size": "11.52px"
+        },
+        {
+          "text": "Trasabilitate",
+          "size": "12.16px"
+        },
+        {
+          "text": "Ultima verificare editorială: 2026-09-06.",
+          "size": "13.44px"
+        },
+        {
+          "text": "Întrebări frecvente",
+          "size": "12.16px"
+        },
+        {
+          "text": "Următorul pas",
+          "size": "12.16px"
+        }
+      ],
+      "pageHeight": 10479,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "help": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/landmark-unique?application=playwright",
+          "nodes": [
+            {
+              "target": [
+                ".program-comparison"
+              ],
+              "html": "<section class=\"program-section program-comparison is-visible\" aria-label=\"Contribuția proprie: ce procent se aplică?\" data-site-reveal=\"\">",
+              "summary": "Fix any of the following:\n  The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable"
+            }
+          ]
+        }
+      ],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "disclosuresWork": true
+    },
+    {
+      "route": "/digitalizare-imm",
+      "width": 390,
+      "status": 200,
+      "title": "Digitalizare IMM: apel închis și sursă MIPE | FABER",
+      "h1": [
+        "Digitalizarea IMM-urilor"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/digitalizare-imm",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [
+        {
+          "text": "Sursă oficială: Ordinul MIPE nr. 607/28.04.2026; modifică Ghidul aprobat prin Or",
+          "size": "12.8px"
+        }
+      ],
+      "pageHeight": 17435,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "disclosuresWork": true
+    },
+    {
+      "route": "/dr-12-afir-instalarea-tinerilor-fermieri",
+      "width": 390,
+      "status": 200,
+      "title": "DR12 AFIR și instalarea tinerilor fermieri: diferențe",
+      "h1": [
+        "DR12 AFIR și instalarea tinerilor fermieri: diferențe"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/dr-12-afir-instalarea-tinerilor-fermieri",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [
+        {
+          "text": "Transparenta editoriala",
+          "size": "13.12px"
+        }
+      ],
+      "pageHeight": 11374,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [
+        {
+          "id": "region",
+          "impact": "moderate",
+          "help": "All page content should be contained by landmarks",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/region?application=playwright",
+          "nodes": [
+            {
+              "target": [
+                ".post-category"
+              ],
+              "html": "<span class=\"post-category\">AFIR</span>",
+              "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+            },
+            {
+              "target": [
+                "h1"
+              ],
+              "html": "<h1 class=\"post-title\">DR12 AFIR și instalarea tinerilor fermieri: diferențe</h1>",
+              "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+            },
+            {
+              "target": [
+                ".post-excerpt"
+              ],
+              "html": "<p class=\"post-excerpt\" data-aeo-primary-answer=\"\" data-aeo-direct-answer=\"\">DR12 nu trebuie confundat automat cu o schemă de instalare. Articolul compară scopul intervențiilor, momentul exploatației și profilul fermierului înainte de alegerea traseului potrivit.</p>",
+              "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+            },
+            {
+              "target": [
+                ".program-hero__status"
+              ],
+              "html": "<p class=\"program-hero__status\">Ghid consultativ publicat – consultarea s-a încheiat; depunerea nu este deschisă. Condițiile se pot modifica.</p>",
+              "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+            },
+            {
+              "target": [
+                ".post-meta"
+              ],
+              "html": "<div class=\"post-meta\"><span>30 aprilie 2026</span><span>8 min lectură</span><span>FABER – Atelier de Consultanță</span></div>",
+              "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+            },
+            {
+              "target": [
+                ".hero-actions"
+              ],
+              "html": "<div class=\"hero-actions\">",
+              "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+            },
+            {
+              "target": [
+                ".program-visual__steps"
+              ],
+              "html": "<div class=\"program-visual__steps\" aria-label=\"Repere pentru verificarea programului\">",
+              "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+            },
+            {
+              "target": [
+                ".program-visual__footer > span:nth-child(2)"
+              ],
+              "html": "<span>Verificat <time datetime=\"2026-09-06\">06.09.2026</time></span>",
+              "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+            },
+            {
+              "target": [
+                "a[data-analytics-component=\"program_hero\"]"
+              ],
+              "html": "<a href=\"https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/\" rel=\"noopener noreferrer\" target=\"_blank\" data-analytics-event=\"source_document_click\" data-analytics-component=\"program_hero\" data-analytics-cta-id=\"official_source\">",
+              "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+            }
+          ]
+        }
+      ],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "disclosuresWork": true
+    },
+    {
+      "route": "/dr-14-afir-conditii-eligibilitate-greseli-frecvente",
+      "width": 390,
+      "status": 200,
+      "title": "DR 14 AFIR ferme mici | eligibilitate și greșeli",
+      "h1": [
+        "DR14 AFIR: condiții, eligibilitate și greșeli frecvente"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/dr-14-afir-conditii-eligibilitate-greseli-frecvente",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [],
+      "pageHeight": 12360,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [
+        {
+          "id": "region",
+          "impact": "moderate",
+          "help": "All page content should be contained by landmarks",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/region?application=playwright",
+          "nodes": [
+            {
+              "target": [
+                ".post-category"
+              ],
+              "html": "<span class=\"post-category\">AFIR</span>",
+              "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+            },
+            {
+              "target": [
+                "h1"
+              ],
+              "html": "<h1 class=\"post-title\">DR14 AFIR: condiții, eligibilitate și greșeli frecvente</h1>",
+              "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+            },
+            {
+              "target": [
+                ".post-excerpt"
+              ],
+              "html": "<p class=\"post-excerpt\" data-aeo-primary-answer=\"\" data-aeo-direct-answer=\"\">DR 14 poate fi o oportunitate bună pentru ferme mici, dar pregătirea trebuie făcută atent: dimensiune economică, documente agricole, investiții eligibile și punctaj.</p>",
+              "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+            },
+            {
+              "target": [
+                ".program-hero__status:nth-child(4)"
+              ],
+              "html": "<p class=\"program-hero__status\">Sesiune deschisă – depuneri 1 septembrie–31 octombrie 2026</p>",
+              "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+            },
+            {
+              "target": [
+                ".program-hero__status:nth-child(5)"
+              ],
+              "html": "<p class=\"program-hero__status\">Sesiune anunțată – depuneri 1 septembrie–31 octombrie 2026</p>",
+              "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+            },
+            {
+              "target": [
+                ".post-meta"
+              ],
+              "html": "<div class=\"post-meta\"><span>30 aprilie 2026</span><span>8 min lectură</span><span>FABER – Atelier de Consultanță</span></div>",
+              "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+            },
+            {
+              "target": [
+                ".hero-actions"
+              ],
+              "html": "<div class=\"hero-actions\">\n      <a class=\"btn-primary\" href=\"/verificare-eligibilitate-fonduri-europene\">Verifică eligibilitatea</a>\n</div>",
+              "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+            },
+            {
+              "target": [
+                ".program-visual__steps"
+              ],
+              "html": "<div class=\"program-visual__steps\" aria-label=\"Repere pentru verificarea programului\">",
+              "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+            },
+            {
+              "target": [
+                ".program-visual__footer > span:nth-child(2)"
+              ],
+              "html": "<span>Verificat <time datetime=\"2026-09-06\">06.09.2026</time></span>",
+              "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+            },
+            {
+              "target": [
+                "a[data-analytics-component=\"program_hero\"]"
+              ],
+              "html": "<a href=\"https://depunerepspac.afir.ro/Sesiune/Lista\" rel=\"noopener noreferrer\" target=\"_blank\" data-analytics-event=\"source_document_click\" data-analytics-component=\"program_hero\" data-analytics-cta-id=\"official_source\">",
+              "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+            }
+          ]
+        }
+      ],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "disclosuresWork": true
+    },
+    {
+      "route": "/dr12-afir",
+      "width": 390,
+      "status": 200,
+      "title": "DR 12 AFIR 2026: 200.000 €, ghid consultativ și condiții",
+      "h1": [
+        "DR 12 AFIR 2026 – investiții pentru tineri fermieri și fermieri până la 45 de ani"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/dr12-afir",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [
+        {
+          "text": "Sursă oficială: Versiune consultativă publicată la 19.03.2026; termenul pentru o",
+          "size": "12.8px"
+        }
+      ],
+      "pageHeight": 12241,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "disclosuresWork": true
+    },
+    {
+      "route": "/dr14",
+      "width": 390,
+      "status": 200,
+      "title": "DR 14 AFIR 2026: depuneri deschise, 50.000 € și punctaj",
+      "h1": [
+        "DR 14 AFIR 2026 – investiții în fermele de mici dimensiuni"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/dr14",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [
+        {
+          "text": "Sursă oficială: Contorul oficial al sesiunilor active DR-14; cererea v1.1 din 25",
+          "size": "12.8px"
+        },
+        {
+          "text": "maximum pentru un proiect",
+          "size": "13.92px"
+        },
+        {
+          "text": "din costurile eligibile",
+          "size": "13.92px"
+        },
+        {
+          "text": "cu praguri speciale pe sectoare",
+          "size": "13.92px"
+        },
+        {
+          "text": "etapa I / etapa II",
+          "size": "13.92px"
+        },
+        {
+          "text": "2026, cu posibilă oprire anticipată",
+          "size": "13.92px"
+        },
+        {
+          "text": "alocat pe patru componente",
+          "size": "13.92px"
+        },
+        {
+          "text": "Simulatorul arată mecanică grilei, nu confirmă punctajul. Criteriile incompatibi",
+          "size": "13.92px"
+        }
+      ],
+      "pageHeight": 17997,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
+          "nodes": [
+            {
+              "target": [
+                ".dr14-example > dl > div:nth-child(1) > dt"
+              ],
+              "html": "<dt>Grant 85%</dt>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.67 (foreground color: #d8e5e0, background color: #3a7f65, font size: 9.8pt (13.12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".dr14-example > dl > div:nth-child(2) > dt"
+              ],
+              "html": "<dt>Contribuție eligibilă</dt>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.67 (foreground color: #d8e5e0, background color: #3a7f65, font size: 9.8pt (13.12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        },
+        {
+          "id": "target-size",
+          "impact": "serious",
+          "help": "All touch targets must be 24px large, or leave sufficient space",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/target-size?application=playwright",
+          "nodes": [
+            {
+              "target": [
+                "details[open=\"\"] > .dr14-dossier__content > label:nth-child(1) > input[type=\"checkbox\"][data-dossier-check=\"\"]"
+              ],
+              "html": "<input type=\"checkbox\" data-dossier-check=\"\">",
+              "summary": "Fix any of the following:\n  Target has insufficient size (18.4px by 18.4px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23.2px instead of at least 24px."
+            }
+          ]
+        }
+      ],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "disclosuresWork": true
+    },
+    {
+      "route": "/dr18",
+      "width": 390,
+      "status": 200,
+      "title": "DR 18 AFIR 2026: ghid final, calendar și 100.000 € | FABER",
+      "h1": [
+        "DR 18 AFIR 2026 – investiții în floricultură, plante medicinale și aromatice"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/dr18",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [
+        {
+          "text": "Sursă oficială: Anunțul A1.2/01/2026 pentru sesiunea DR 18, publicat la 14.08.20",
+          "size": "12.8px"
+        },
+        {
+          "text": "maximum pentru un proiect",
+          "size": "13.92px"
+        },
+        {
+          "text": "calculat cu SOC 2020",
+          "size": "13.92px"
+        },
+        {
+          "text": "în funcție de dimensiunea SO",
+          "size": "13.92px"
+        },
+        {
+          "text": "alocare anunțată de AFIR",
+          "size": "13.92px"
+        }
+      ],
+      "pageHeight": 20098,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "disclosuresWork": true
+    },
+    {
+      "route": "/e-drive",
+      "width": 390,
+      "status": 200,
+      "title": "e-DRIVE 2026: până la 30.000 € pentru mașini electrice pe firmă",
+      "h1": [
+        "e-DRIVE 2026 – finanțare pentru vehicule electrice M1, M2 și M3"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/e-drive",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [
+        {
+          "text": "Transport rutier · vehicule cu emisii zero",
+          "size": "11.04px"
+        },
+        {
+          "text": "Răspuns rapid",
+          "size": "12.16px"
+        },
+        {
+          "text": "Sursă oficială: Ordinul MTI nr. 742/03.08.2026 pentru actualizarea schemei e-DRI",
+          "size": "12.8px"
+        },
+        {
+          "text": "Filtru inițial",
+          "size": "12.16px"
+        },
+        {
+          "text": "Arhitectura proiectului",
+          "size": "12.16px"
+        },
+        {
+          "text": "Dosar de lucru",
+          "size": "12.16px"
+        },
+        {
+          "text": "Parcurs recomandat",
+          "size": "12.16px"
+        },
+        {
+          "text": "Selectează un pas sau folosește tastele săgeată pentru a urmări traseul.",
+          "size": "11.52px"
+        },
+        {
+          "text": "Trasabilitate",
+          "size": "12.16px"
+        },
+        {
+          "text": "Ultima verificare editorială: 2026-09-06.",
+          "size": "13.44px"
+        },
+        {
+          "text": "Întrebări frecvente",
+          "size": "12.16px"
+        },
+        {
+          "text": "Următorul pas",
+          "size": "12.16px"
+        }
+      ],
+      "pageHeight": 11033,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "help": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/landmark-unique?application=playwright",
+          "nodes": [
+            {
+              "target": [
+                ".program-comparison"
+              ],
+              "html": "<section class=\"program-section program-comparison is-visible\" aria-label=\"e-DRIVE: măsura 1 sau măsura 2?\" data-site-reveal=\"\">",
+              "summary": "Fix any of the following:\n  The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable"
+            }
+          ]
+        }
+      ],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "disclosuresWork": true
+    },
+    {
+      "route": "/e-mobility",
+      "width": 390,
+      "status": 200,
+      "title": "e-Mobility RO 2026: finanțare stații de încărcare",
+      "h1": [
+        "e-Mobility RO 2026 – finanțare pentru stații de reîncărcare"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/e-mobility",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [
+        {
+          "text": "Infrastructură rutieră · reîncărcare electrică",
+          "size": "11.04px"
+        },
+        {
+          "text": "Răspuns rapid",
+          "size": "12.16px"
+        },
+        {
+          "text": "Sursă oficială: Ordinul MTI nr. 746/05.08.2026 pentru actualizarea schemei e-Mob",
+          "size": "12.8px"
+        },
+        {
+          "text": "Filtru inițial",
+          "size": "12.16px"
+        },
+        {
+          "text": "Arhitectura proiectului",
+          "size": "12.16px"
+        },
+        {
+          "text": "Dosar de lucru",
+          "size": "12.16px"
+        },
+        {
+          "text": "Parcurs recomandat",
+          "size": "12.16px"
+        },
+        {
+          "text": "Selectează un pas sau folosește tastele săgeată pentru a urmări traseul.",
+          "size": "11.52px"
+        },
+        {
+          "text": "Trasabilitate",
+          "size": "12.16px"
+        },
+        {
+          "text": "Ultima verificare editorială: 2026-09-06.",
+          "size": "13.44px"
+        },
+        {
+          "text": "Întrebări frecvente",
+          "size": "12.16px"
+        },
+        {
+          "text": "Următorul pas",
+          "size": "12.16px"
+        }
+      ],
+      "pageHeight": 10798,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "help": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/landmark-unique?application=playwright",
+          "nodes": [
+            {
+              "target": [
+                ".program-comparison"
+              ],
+              "html": "<section class=\"program-section program-comparison is-visible\" aria-label=\"e-Mobility RO: verificări tehnice înainte de buget\" data-site-reveal=\"\">",
+              "summary": "Fix any of the following:\n  The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable"
+            }
+          ]
+        }
+      ],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "disclosuresWork": true
+    },
+    {
+      "route": "/e-move",
+      "width": 390,
+      "status": 200,
+      "title": "e-MOVE RO: stații de încărcare și condiții | FABER",
+      "h1": [
+        "Programul e-MOVE RO"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/e-move",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [
+        {
+          "text": "Sursă oficială: Ordinul MTI nr. 755/06.08.2026 pentru actualizarea schemei e-MOV",
+          "size": "12.8px"
+        }
+      ],
+      "pageHeight": 11398,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "disclosuresWork": true
+    },
+    {
+      "route": "/femeia-antreprenor-2026",
+      "width": 390,
+      "status": 200,
+      "title": "Femeia Antreprenor 2026: status oficial | FABER",
+      "h1": [
+        "Femeia Antreprenor 2026 — ediție neconfirmată"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/femeia-antreprenor-2026",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [
+        {
+          "text": "Sursă oficială: Femeia Antreprenor 2024 – ordinea finală la evaluare, Ministerul",
+          "size": "12.8px"
+        }
+      ],
+      "pageHeight": 18051,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "disclosuresWork": true
+    },
+    {
+      "route": "/fondul-de-modernizare",
+      "width": 390,
+      "status": 200,
+      "title": "Fondul pentru Modernizare: apeluri și statut | FABER",
+      "h1": [
+        "Fondul pentru Modernizare"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/fondul-de-modernizare",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [
+        {
+          "text": "Sursă oficială: Catalogul oficial al finanțărilor 2021–2027; Fondul pentru Moder",
+          "size": "12.8px"
+        }
+      ],
+      "pageHeight": 18094,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "disclosuresWork": true
+    },
+    {
+      "route": "/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum",
+      "width": 390,
+      "status": 200,
+      "title": "Fondul pentru Modernizare: energie și autoconsum",
+      "h1": [
+        "Fondul de Modernizare: proiecte de fotovoltaice și autoconsum"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [
+        {
+          "text": "Sursă oficială: MySMIS2021: apelurile pentru capacități regenerabile destinate a",
+          "size": "12.8px"
+        }
+      ],
+      "pageHeight": 14649,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "disclosuresWork": true
+    },
+    {
+      "route": "/fondul-modernizare-energie-regenerabila-2026",
+      "width": 390,
+      "status": 200,
+      "title": "Fondul pentru Modernizare: energie regenerabilă",
+      "h1": [
+        "Fondul pentru ModernizareEnergie regenerabilă"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/fondul-modernizare-energie-regenerabila-2026",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [
+        {
+          "text": "Sursă oficială: MySMIS2021: apelurile pentru noi capacități din surse regenerabi",
+          "size": "12.8px"
+        }
+      ],
+      "pageHeight": 10123,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "disclosuresWork": true
+    },
+    {
+      "route": "/fondul-modernizare-pc1-stocare",
+      "width": 390,
+      "status": 200,
+      "title": "PC1 Stocare 2026: 69.000 €/MWh, ghid aprobat | FABER",
+      "h1": [
+        "Fondul pentru Modernizare – PC1 Stocare stand-alone"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/fondul-modernizare-pc1-stocare",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [
+        {
+          "text": "Fondul pentru Modernizare · Program-cheie 1",
+          "size": "11.04px"
+        },
+        {
+          "text": "Răspuns rapid",
+          "size": "12.16px"
+        },
+        {
+          "text": "Sursă oficială: Ordinul Ministerului Energiei nr. 915/14.08.2026, publicat la 17",
+          "size": "12.8px"
+        },
+        {
+          "text": "Filtru inițial",
+          "size": "12.16px"
+        },
+        {
+          "text": "Arhitectura proiectului",
+          "size": "12.16px"
+        },
+        {
+          "text": "Dosar de lucru",
+          "size": "12.16px"
+        },
+        {
+          "text": "Parcurs recomandat",
+          "size": "12.16px"
+        },
+        {
+          "text": "Selectează un pas sau folosește tastele săgeată pentru a urmări traseul.",
+          "size": "11.52px"
+        },
+        {
+          "text": "Trasabilitate",
+          "size": "12.16px"
+        },
+        {
+          "text": "Ultima verificare editorială: 2026-08-29.",
+          "size": "13.44px"
+        },
+        {
+          "text": "Întrebări frecvente",
+          "size": "12.16px"
+        },
+        {
+          "text": "Următorul pas",
+          "size": "12.16px"
+        }
+      ],
+      "pageHeight": 9612,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "disclosuresWork": true
+    },
+    {
+      "route": "/fondul-modernizare-pc1-stocare-entitati-publice",
+      "width": 390,
+      "status": 200,
+      "title": "PC1 Stocare entități publice 2026: 10 mil. €",
+      "h1": [
+        "PC1 Stocare 2026 pentru entități publice – baterii în spatele contorului"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/fondul-modernizare-pc1-stocare-entitati-publice",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [
+        {
+          "text": "Fondul pentru Modernizare · Program-cheie 1",
+          "size": "11.04px"
+        },
+        {
+          "text": "Răspuns rapid",
+          "size": "12.16px"
+        },
+        {
+          "text": "Sursă oficială: Ghidul solicitantului și anexele actualizate la 23.06.2026, Mini",
+          "size": "12.8px"
+        },
+        {
+          "text": "Filtru inițial",
+          "size": "12.16px"
+        },
+        {
+          "text": "Arhitectura proiectului",
+          "size": "12.16px"
+        },
+        {
+          "text": "Dosar de lucru",
+          "size": "12.16px"
+        },
+        {
+          "text": "Parcurs recomandat",
+          "size": "12.16px"
+        },
+        {
+          "text": "Selectează un pas sau folosește tastele săgeată pentru a urmări traseul.",
+          "size": "11.52px"
+        },
+        {
+          "text": "Trasabilitate",
+          "size": "12.16px"
+        },
+        {
+          "text": "Ultima verificare editorială: 2026-09-09.",
+          "size": "13.44px"
+        },
+        {
+          "text": "Întrebări frecvente",
+          "size": "12.16px"
+        },
+        {
+          "text": "Următorul pas",
+          "size": "12.16px"
+        }
+      ],
+      "pageHeight": 11676,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "help": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/landmark-unique?application=playwright",
+          "nodes": [
+            {
+              "target": [
+                ".program-comparison"
+              ],
+              "html": "<section class=\"program-section program-comparison is-visible\" aria-label=\"PC1 Stocare sau PC1 Autoconsum?\" data-site-reveal=\"\">",
+              "summary": "Fix any of the following:\n  The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable"
+            }
+          ]
+        }
+      ],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "disclosuresWork": true
+    },
+    {
+      "route": "/fonduri-regionale",
+      "width": 390,
+      "status": 200,
+      "title": "Fonduri regionale 2021–2027 și ADR-uri | FABER",
+      "h1": [
+        "Programe regionale și apeluri ADR"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/fonduri-regionale",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [
+        {
+          "text": "Registru verificat",
+          "size": "12.48px"
+        },
+        {
+          "text": "Sursă oficială: Registrul oficial MySMIS2021 al apelurilor validate 2021–2027, M",
+          "size": "12.8px"
+        },
+        {
+          "text": "Verificare prudentă",
+          "size": "12.48px"
+        }
+      ],
+      "pageHeight": 7164,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "disclosuresWork": true
+    },
+    {
+      "route": "/gal-afir",
+      "width": 390,
+      "status": 200,
+      "title": "GAL AFIR 2026: apeluri DR-36 și verificare | FABER",
+      "h1": [
+        "GAL AFIR / DR-36 prin Grupuri de Acțiune Locală"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/gal-afir",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [
+        {
+          "text": "Sursă oficială: Platforma AFIR GAL publică apeluri locale cu termene distincte; ",
+          "size": "12.8px"
+        }
+      ],
+      "pageHeight": 13078,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "disclosuresWork": true
+    },
+    {
+      "route": "/investitii-modernizarea-microintreprinderilor-apel-2",
+      "width": 390,
+      "status": 200,
+      "title": "Modernizarea microîntreprinderilor: Apel 2 Nord-Est 2026",
+      "h1": [
+        "Investiții pentru modernizarea microîntreprinderilor – Apel 2"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/investitii-modernizarea-microintreprinderilor-apel-2",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [],
+      "pageHeight": 24839,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [
+        {
+          "id": "aria-meter-name",
+          "impact": "serious",
+          "help": "ARIA meter nodes must have an accessible name",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-meter-name?application=playwright",
+          "nodes": [
+            {
+              "target": [
+                ".micro2-score-meter"
+              ],
+              "html": "<div class=\"micro2-score-meter\" data-score-meter=\"\" role=\"meter\" aria-valuemin=\"0\" aria-valuemax=\"100\" aria-valuenow=\"25\" aria-valuetext=\"25 puncte estimate din 100\" style=\"--score: 25;\">",
+              "summary": "Fix any of the following:\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+            }
+          ]
+        }
+      ],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "disclosuresWork": true
+    },
+    {
+      "route": "/pnrr",
+      "width": 390,
+      "status": 200,
+      "title": "PNRR: componente, apeluri și stadiul implementării | FABER",
+      "h1": [
+        "Planul Național de Redresare și Reziliență"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/pnrr",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [
+        {
+          "text": "Sursă oficială: Tabloul de bord oficial PNRR; program în implementare, cu situaț",
+          "size": "12.8px"
+        }
+      ],
+      "pageHeight": 17623,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "disclosuresWork": true
+    },
+    {
+      "route": "/pocidif-21",
+      "width": 390,
+      "status": 200,
+      "title": "PoCIDIF 2.1: inovare digitală pentru IMM TIC | FABER",
+      "h1": [
+        "PoCIDIF – Acțiunea 2.1 Dezvoltarea de noi servicii, aplicații și produse prin inovare și adoptarea de tehnologii avansate"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/pocidif-21",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [
+        {
+          "text": "Sursă oficială: Ghidul solicitantului PoCIDIF 2.1 aprobat prin Ordinul MIPE nr. ",
+          "size": "12.8px"
+        }
+      ],
+      "pageHeight": 14550,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "aria-valid-attr-value",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "disclosuresWork": true
+    },
+    {
+      "route": "/pro-infra",
+      "width": 390,
+      "status": 200,
+      "title": "PRO INFRA 2026: până la 15 mil. €, condiții și EMS",
+      "h1": [
+        "PRO INFRA – eficiență energetică pentru producătorii din infrastructura de transport"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/pro-infra",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [
+        {
+          "text": "Sursă oficială: Schema PRO INFRA consolidată, art. 5, 13 și 16, cu modificările ",
+          "size": "12.8px"
+        }
+      ],
+      "pageHeight": 16861,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "aria-valid-attr-value",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "disclosuresWork": true
+    },
+    {
+      "route": "/programul-tranzitie-justa",
+      "width": 390,
+      "status": 200,
+      "title": "Programul Tranziție Justă: apeluri și statut | FABER",
+      "h1": [
+        "Programul Tranziție Justă"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/programul-tranzitie-justa",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [
+        {
+          "text": "Sursă oficială: Catalogul oficial al finanțărilor 2021–2027; apelurile sunt afiș",
+          "size": "12.8px"
+        }
+      ],
+      "pageHeight": 18474,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "disclosuresWork": true
+    },
+    {
+      "route": "/start-up-nation-2026",
+      "width": 390,
+      "status": 200,
+      "title": "Start-Up Nation: apel închis la 29 mai 2026 | FABER",
+      "h1": [
+        "Start-Up Nation2026"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/start-up-nation-2026",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [
+        {
+          "text": "Sursă oficială: Start-Up Nation 2024 – transparența înscrierilor persoanelor jur",
+          "size": "12.8px"
+        }
+      ],
+      "pageHeight": 15316,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "disclosuresWork": true
+    },
+    {
+      "route": "/afir-autoconsum-agroalimentar",
+      "width": 1440,
+      "status": 200,
+      "title": "AFIR Autoconsum 2026: fotovoltaice, stocare, ghid | FABER",
+      "h1": [
+        "AFIR Autoconsum Agroalimentar 2026 – energie solară pentru ferme și procesatori"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/afir-autoconsum-agroalimentar",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [
+        {
+          "text": "Sursă oficială: Comunicarea AFIR din 09.06.2026 privind sesiunea 15.06–14.08.202",
+          "size": "12.8px"
+        }
+      ],
+      "pageHeight": 10086,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "disclosuresWork": true
+    },
+    {
+      "route": "/apeluri-gal",
+      "width": 1440,
+      "status": 200,
+      "title": "Apeluri GAL: ghid local, criterii și documente",
+      "h1": [
+        "Apeluri GALFinanțări locale"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/apeluri-gal",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [
+        {
+          "text": "Sursă oficială: Platforma AFIR GAL publică apeluri locale cu termene distincte; ",
+          "size": "12.8px"
+        }
+      ],
+      "pageHeight": 8306,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "disclosuresWork": true
+    },
+    {
+      "route": "/autoconsum-public-fotovoltaice-institutii-publice",
+      "width": 1440,
+      "status": 200,
+      "title": "PC1 Autoconsum entități publice 2026: 10 mil. €",
+      "h1": [
+        "PC1 Autoconsum 2026 pentru entități publice – producție solară și stocare integrată"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/autoconsum-public-fotovoltaice-institutii-publice",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [
+        {
+          "text": "Fondul pentru Modernizare · Program-cheie 1",
+          "size": "11.04px"
+        },
+        {
+          "text": "Răspuns rapid",
+          "size": "12.16px"
+        },
+        {
+          "text": "Sursă oficială: Ghidul solicitantului și anexele actualizate la 23.06.2026, Mini",
+          "size": "12.8px"
+        },
+        {
+          "text": "Filtru inițial",
+          "size": "12.16px"
+        },
+        {
+          "text": "Arhitectura proiectului",
+          "size": "12.16px"
+        },
+        {
+          "text": "Dosar de lucru",
+          "size": "12.16px"
+        },
+        {
+          "text": "Parcurs recomandat",
+          "size": "12.16px"
+        },
+        {
+          "text": "Selectează un pas sau folosește tastele săgeată pentru a urmări traseul.",
+          "size": "11.52px"
+        },
+        {
+          "text": "Trasabilitate",
+          "size": "12.16px"
+        },
+        {
+          "text": "Ultima verificare editorială: 2026-09-09.",
+          "size": "13.44px"
+        },
+        {
+          "text": "Întrebări frecvente",
+          "size": "12.16px"
+        },
+        {
+          "text": "Următorul pas",
+          "size": "12.16px"
+        }
+      ],
+      "pageHeight": 9106,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "help": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/landmark-unique?application=playwright",
+          "nodes": [
+            {
+              "target": [
+                ".program-comparison"
+              ],
+              "html": "<section class=\"program-section program-comparison is-visible\" aria-label=\"Ce este obligatoriu și ce rămâne opțional?\" data-site-reveal=\"\">",
+              "summary": "Fix any of the following:\n  The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable"
+            }
+          ]
+        }
+      ],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "disclosuresWork": true
+    },
+    {
+      "route": "/diaspora-investeste-acasa",
+      "width": 1440,
+      "status": 200,
+      "title": "Diaspora Investește Acasă: 200.000 €, stadiu 2026 | FABER",
+      "h1": [
+        "Diaspora Investește Acasă"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/diaspora-investeste-acasa",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [
+        {
+          "text": "Antreprenoriat · investiții în România",
+          "size": "11.04px"
+        },
+        {
+          "text": "Răspuns rapid",
+          "size": "12.16px"
+        },
+        {
+          "text": "Sursă oficială: Condițiile programului și stadiul operaționalizării publicate de",
+          "size": "12.8px"
+        },
+        {
+          "text": "Filtru inițial",
+          "size": "12.16px"
+        },
+        {
+          "text": "Arhitectura proiectului",
+          "size": "12.16px"
+        },
+        {
+          "text": "Dosar de lucru",
+          "size": "12.16px"
+        },
+        {
+          "text": "Parcurs recomandat",
+          "size": "12.16px"
+        },
+        {
+          "text": "Selectează un pas sau folosește tastele săgeată pentru a urmări traseul.",
+          "size": "11.52px"
+        },
+        {
+          "text": "Trasabilitate",
+          "size": "12.16px"
+        },
+        {
+          "text": "Ultima verificare editorială: 2026-09-06.",
+          "size": "13.44px"
+        },
+        {
+          "text": "Întrebări frecvente",
+          "size": "12.16px"
+        },
+        {
+          "text": "Următorul pas",
+          "size": "12.16px"
+        }
+      ],
+      "pageHeight": 7715,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "help": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/landmark-unique?application=playwright",
+          "nodes": [
+            {
+              "target": [
+                ".program-comparison"
+              ],
+              "html": "<section class=\"program-section program-comparison is-visible\" aria-label=\"Contribuția proprie: ce procent se aplică?\" data-site-reveal=\"\">",
+              "summary": "Fix any of the following:\n  The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable"
+            }
+          ]
+        }
+      ],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "disclosuresWork": true
+    },
+    {
+      "route": "/digitalizare-imm",
+      "width": 1440,
+      "status": 200,
+      "title": "Digitalizare IMM: apel închis și sursă MIPE | FABER",
+      "h1": [
+        "Digitalizarea IMM-urilor"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/digitalizare-imm",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [
+        {
+          "text": "Sursă oficială: Ordinul MIPE nr. 607/28.04.2026; modifică Ghidul aprobat prin Or",
+          "size": "12.8px"
+        }
+      ],
+      "pageHeight": 8849,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "disclosuresWork": true
+    },
+    {
+      "route": "/dr-12-afir-instalarea-tinerilor-fermieri",
+      "width": 1440,
+      "status": 200,
+      "title": "DR12 AFIR și instalarea tinerilor fermieri: diferențe",
+      "h1": [
+        "DR12 AFIR și instalarea tinerilor fermieri: diferențe"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/dr-12-afir-instalarea-tinerilor-fermieri",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [
+        {
+          "text": "Transparenta editoriala",
+          "size": "13.12px"
+        }
+      ],
+      "pageHeight": 5654,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [
+        {
+          "id": "region",
+          "impact": "moderate",
+          "help": "All page content should be contained by landmarks",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/region?application=playwright",
+          "nodes": [
+            {
+              "target": [
+                ".post-category"
+              ],
+              "html": "<span class=\"post-category\">AFIR</span>",
+              "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+            },
+            {
+              "target": [
+                "h1"
+              ],
+              "html": "<h1 class=\"post-title\">DR12 AFIR și instalarea tinerilor fermieri: diferențe</h1>",
+              "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+            },
+            {
+              "target": [
+                ".post-excerpt"
+              ],
+              "html": "<p class=\"post-excerpt\" data-aeo-primary-answer=\"\" data-aeo-direct-answer=\"\">DR12 nu trebuie confundat automat cu o schemă de instalare. Articolul compară scopul intervențiilor, momentul exploatației și profilul fermierului înainte de alegerea traseului potrivit.</p>",
+              "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+            },
+            {
+              "target": [
+                ".program-hero__status"
+              ],
+              "html": "<p class=\"program-hero__status\">Ghid consultativ publicat – consultarea s-a încheiat; depunerea nu este deschisă. Condițiile se pot modifica.</p>",
+              "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+            },
+            {
+              "target": [
+                ".post-meta"
+              ],
+              "html": "<div class=\"post-meta\"><span>30 aprilie 2026</span><span>8 min lectură</span><span>FABER – Atelier de Consultanță</span></div>",
+              "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+            },
+            {
+              "target": [
+                ".hero-actions"
+              ],
+              "html": "<div class=\"hero-actions\">",
+              "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+            },
+            {
+              "target": [
+                ".program-visual__steps"
+              ],
+              "html": "<div class=\"program-visual__steps\" aria-label=\"Repere pentru verificarea programului\">",
+              "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+            },
+            {
+              "target": [
+                ".program-visual__footer > span:nth-child(2)"
+              ],
+              "html": "<span>Verificat <time datetime=\"2026-09-06\">06.09.2026</time></span>",
+              "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+            },
+            {
+              "target": [
+                "a[data-analytics-component=\"program_hero\"]"
+              ],
+              "html": "<a href=\"https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/\" rel=\"noopener noreferrer\" target=\"_blank\" data-analytics-event=\"source_document_click\" data-analytics-component=\"program_hero\" data-analytics-cta-id=\"official_source\">",
+              "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+            }
+          ]
+        }
+      ],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "disclosuresWork": true
+    },
+    {
+      "route": "/dr-14-afir-conditii-eligibilitate-greseli-frecvente",
+      "width": 1440,
+      "status": 200,
+      "title": "DR 14 AFIR ferme mici | eligibilitate și greșeli",
+      "h1": [
+        "DR14 AFIR: condiții, eligibilitate și greșeli frecvente"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/dr-14-afir-conditii-eligibilitate-greseli-frecvente",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [],
+      "pageHeight": 5865,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [
+        {
+          "id": "region",
+          "impact": "moderate",
+          "help": "All page content should be contained by landmarks",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/region?application=playwright",
+          "nodes": [
+            {
+              "target": [
+                ".post-category"
+              ],
+              "html": "<span class=\"post-category\">AFIR</span>",
+              "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+            },
+            {
+              "target": [
+                "h1"
+              ],
+              "html": "<h1 class=\"post-title\">DR14 AFIR: condiții, eligibilitate și greșeli frecvente</h1>",
+              "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+            },
+            {
+              "target": [
+                ".post-excerpt"
+              ],
+              "html": "<p class=\"post-excerpt\" data-aeo-primary-answer=\"\" data-aeo-direct-answer=\"\">DR 14 poate fi o oportunitate bună pentru ferme mici, dar pregătirea trebuie făcută atent: dimensiune economică, documente agricole, investiții eligibile și punctaj.</p>",
+              "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+            },
+            {
+              "target": [
+                ".program-hero__status:nth-child(4)"
+              ],
+              "html": "<p class=\"program-hero__status\">Sesiune deschisă – depuneri 1 septembrie–31 octombrie 2026</p>",
+              "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+            },
+            {
+              "target": [
+                ".program-hero__status:nth-child(5)"
+              ],
+              "html": "<p class=\"program-hero__status\">Sesiune anunțată – depuneri 1 septembrie–31 octombrie 2026</p>",
+              "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+            },
+            {
+              "target": [
+                ".post-meta"
+              ],
+              "html": "<div class=\"post-meta\"><span>30 aprilie 2026</span><span>8 min lectură</span><span>FABER – Atelier de Consultanță</span></div>",
+              "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+            },
+            {
+              "target": [
+                ".hero-actions"
+              ],
+              "html": "<div class=\"hero-actions\">\n      <a class=\"btn-primary\" href=\"/verificare-eligibilitate-fonduri-europene\">Verifică eligibilitatea</a>\n</div>",
+              "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+            },
+            {
+              "target": [
+                ".program-visual__steps"
+              ],
+              "html": "<div class=\"program-visual__steps\" aria-label=\"Repere pentru verificarea programului\">",
+              "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+            },
+            {
+              "target": [
+                ".program-visual__footer > span:nth-child(2)"
+              ],
+              "html": "<span>Verificat <time datetime=\"2026-09-06\">06.09.2026</time></span>",
+              "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+            },
+            {
+              "target": [
+                "a[data-analytics-component=\"program_hero\"]"
+              ],
+              "html": "<a href=\"https://depunerepspac.afir.ro/Sesiune/Lista\" rel=\"noopener noreferrer\" target=\"_blank\" data-analytics-event=\"source_document_click\" data-analytics-component=\"program_hero\" data-analytics-cta-id=\"official_source\">",
+              "summary": "Fix any of the following:\n  Some page content is not contained by landmarks"
+            }
+          ]
+        }
+      ],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "disclosuresWork": true
+    },
+    {
+      "route": "/dr12-afir",
+      "width": 1440,
+      "status": 200,
+      "title": "DR 12 AFIR 2026: 200.000 €, ghid consultativ și condiții",
+      "h1": [
+        "DR 12 AFIR 2026 – investiții pentru tineri fermieri și fermieri până la 45 de ani"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/dr12-afir",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [
+        {
+          "text": "Sursă oficială: Versiune consultativă publicată la 19.03.2026; termenul pentru o",
+          "size": "12.8px"
+        }
+      ],
+      "pageHeight": 6228,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "disclosuresWork": true
+    },
+    {
+      "route": "/dr14",
+      "width": 1440,
+      "status": 200,
+      "title": "DR 14 AFIR 2026: depuneri deschise, 50.000 € și punctaj",
+      "h1": [
+        "DR 14 AFIR 2026 – investiții în fermele de mici dimensiuni"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/dr14",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [
+        {
+          "text": "Sursă oficială: Contorul oficial al sesiunilor active DR-14; cererea v1.1 din 25",
+          "size": "12.8px"
+        },
+        {
+          "text": "maximum pentru un proiect",
+          "size": "13.92px"
+        },
+        {
+          "text": "din costurile eligibile",
+          "size": "13.92px"
+        },
+        {
+          "text": "cu praguri speciale pe sectoare",
+          "size": "13.92px"
+        },
+        {
+          "text": "etapa I / etapa II",
+          "size": "13.92px"
+        },
+        {
+          "text": "2026, cu posibilă oprire anticipată",
+          "size": "13.92px"
+        },
+        {
+          "text": "alocat pe patru componente",
+          "size": "13.92px"
+        },
+        {
+          "text": "Simulatorul arată mecanică grilei, nu confirmă punctajul. Criteriile incompatibi",
+          "size": "13.92px"
+        }
+      ],
+      "pageHeight": 10299,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "help": "Elements must meet minimum color contrast ratio thresholds",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
+          "nodes": [
+            {
+              "target": [
+                ".dr14-example > dl > div:nth-child(1) > dt"
+              ],
+              "html": "<dt>Grant 85%</dt>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.67 (foreground color: #d8e5e0, background color: #3a7f65, font size: 9.8pt (13.12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".dr14-example > dl > div:nth-child(2) > dt"
+              ],
+              "html": "<dt>Contribuție eligibilă</dt>",
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.67 (foreground color: #d8e5e0, background color: #3a7f65, font size: 9.8pt (13.12px), font weight: normal). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        },
+        {
+          "id": "target-size",
+          "impact": "serious",
+          "help": "All touch targets must be 24px large, or leave sufficient space",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/target-size?application=playwright",
+          "nodes": [
+            {
+              "target": [
+                "details[open=\"\"] > .dr14-dossier__content > label:nth-child(1) > input[type=\"checkbox\"][data-dossier-check=\"\"]"
+              ],
+              "html": "<input type=\"checkbox\" data-dossier-check=\"\">",
+              "summary": "Fix any of the following:\n  Target has insufficient size (18.4px by 18.4px, should be at least 24px by 24px)\n  Target has insufficient space to its closest neighbors. Safe clickable space has a diameter of 23.2px instead of at least 24px."
+            }
+          ]
+        }
+      ],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "disclosuresWork": true
+    },
+    {
+      "route": "/dr18",
+      "width": 1440,
+      "status": 200,
+      "title": "DR 18 AFIR 2026: ghid final, calendar și 100.000 € | FABER",
+      "h1": [
+        "DR 18 AFIR 2026 – investiții în floricultură, plante medicinale și aromatice"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/dr18",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [
+        {
+          "text": "Sursă oficială: Anunțul A1.2/01/2026 pentru sesiunea DR 18, publicat la 14.08.20",
+          "size": "12.8px"
+        },
+        {
+          "text": "maximum pentru un proiect",
+          "size": "13.92px"
+        },
+        {
+          "text": "calculat cu SOC 2020",
+          "size": "13.92px"
+        },
+        {
+          "text": "în funcție de dimensiunea SO",
+          "size": "13.92px"
+        },
+        {
+          "text": "alocare anunțată de AFIR",
+          "size": "13.92px"
+        }
+      ],
+      "pageHeight": 11136,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "disclosuresWork": true
+    },
+    {
+      "route": "/e-drive",
+      "width": 1440,
+      "status": 200,
+      "title": "e-DRIVE 2026: până la 30.000 € pentru mașini electrice pe firmă",
+      "h1": [
+        "e-DRIVE 2026 – finanțare pentru vehicule electrice M1, M2 și M3"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/e-drive",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [
+        {
+          "text": "Transport rutier · vehicule cu emisii zero",
+          "size": "11.04px"
+        },
+        {
+          "text": "Răspuns rapid",
+          "size": "12.16px"
+        },
+        {
+          "text": "Sursă oficială: Ordinul MTI nr. 742/03.08.2026 pentru actualizarea schemei e-DRI",
+          "size": "12.8px"
+        },
+        {
+          "text": "Filtru inițial",
+          "size": "12.16px"
+        },
+        {
+          "text": "Arhitectura proiectului",
+          "size": "12.16px"
+        },
+        {
+          "text": "Dosar de lucru",
+          "size": "12.16px"
+        },
+        {
+          "text": "Parcurs recomandat",
+          "size": "12.16px"
+        },
+        {
+          "text": "Selectează un pas sau folosește tastele săgeată pentru a urmări traseul.",
+          "size": "11.52px"
+        },
+        {
+          "text": "Trasabilitate",
+          "size": "12.16px"
+        },
+        {
+          "text": "Ultima verificare editorială: 2026-09-06.",
+          "size": "13.44px"
+        },
+        {
+          "text": "Întrebări frecvente",
+          "size": "12.16px"
+        },
+        {
+          "text": "Următorul pas",
+          "size": "12.16px"
+        }
+      ],
+      "pageHeight": 8013,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "help": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/landmark-unique?application=playwright",
+          "nodes": [
+            {
+              "target": [
+                ".program-comparison"
+              ],
+              "html": "<section class=\"program-section program-comparison is-visible\" aria-label=\"e-DRIVE: măsura 1 sau măsura 2?\" data-site-reveal=\"\">",
+              "summary": "Fix any of the following:\n  The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable"
+            }
+          ]
+        }
+      ],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "disclosuresWork": true
+    },
+    {
+      "route": "/e-mobility",
+      "width": 1440,
+      "status": 200,
+      "title": "e-Mobility RO 2026: finanțare stații de încărcare",
+      "h1": [
+        "e-Mobility RO 2026 – finanțare pentru stații de reîncărcare"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/e-mobility",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [
+        {
+          "text": "Infrastructură rutieră · reîncărcare electrică",
+          "size": "11.04px"
+        },
+        {
+          "text": "Răspuns rapid",
+          "size": "12.16px"
+        },
+        {
+          "text": "Sursă oficială: Ordinul MTI nr. 746/05.08.2026 pentru actualizarea schemei e-Mob",
+          "size": "12.8px"
+        },
+        {
+          "text": "Filtru inițial",
+          "size": "12.16px"
+        },
+        {
+          "text": "Arhitectura proiectului",
+          "size": "12.16px"
+        },
+        {
+          "text": "Dosar de lucru",
+          "size": "12.16px"
+        },
+        {
+          "text": "Parcurs recomandat",
+          "size": "12.16px"
+        },
+        {
+          "text": "Selectează un pas sau folosește tastele săgeată pentru a urmări traseul.",
+          "size": "11.52px"
+        },
+        {
+          "text": "Trasabilitate",
+          "size": "12.16px"
+        },
+        {
+          "text": "Ultima verificare editorială: 2026-09-06.",
+          "size": "13.44px"
+        },
+        {
+          "text": "Întrebări frecvente",
+          "size": "12.16px"
+        },
+        {
+          "text": "Următorul pas",
+          "size": "12.16px"
+        }
+      ],
+      "pageHeight": 7763,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "help": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/landmark-unique?application=playwright",
+          "nodes": [
+            {
+              "target": [
+                ".program-comparison"
+              ],
+              "html": "<section class=\"program-section program-comparison is-visible\" aria-label=\"e-Mobility RO: verificări tehnice înainte de buget\" data-site-reveal=\"\">",
+              "summary": "Fix any of the following:\n  The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable"
+            }
+          ]
+        }
+      ],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "disclosuresWork": true
+    },
+    {
+      "route": "/e-move",
+      "width": 1440,
+      "status": 200,
+      "title": "e-MOVE RO: stații de încărcare și condiții | FABER",
+      "h1": [
+        "Programul e-MOVE RO"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/e-move",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [
+        {
+          "text": "Sursă oficială: Ordinul MTI nr. 755/06.08.2026 pentru actualizarea schemei e-MOV",
+          "size": "12.8px"
+        }
+      ],
+      "pageHeight": 7248,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "disclosuresWork": true
+    },
+    {
+      "route": "/femeia-antreprenor-2026",
+      "width": 1440,
+      "status": 200,
+      "title": "Femeia Antreprenor 2026: status oficial | FABER",
+      "h1": [
+        "Femeia Antreprenor 2026 — ediție neconfirmată"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/femeia-antreprenor-2026",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [
+        {
+          "text": "Sursă oficială: Femeia Antreprenor 2024 – ordinea finală la evaluare, Ministerul",
+          "size": "12.8px"
+        }
+      ],
+      "pageHeight": 8899,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "disclosuresWork": true
+    },
+    {
+      "route": "/fondul-de-modernizare",
+      "width": 1440,
+      "status": 200,
+      "title": "Fondul pentru Modernizare: apeluri și statut | FABER",
+      "h1": [
+        "Fondul pentru Modernizare"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/fondul-de-modernizare",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [
+        {
+          "text": "Sursă oficială: Catalogul oficial al finanțărilor 2021–2027; Fondul pentru Moder",
+          "size": "12.8px"
+        }
+      ],
+      "pageHeight": 9720,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "disclosuresWork": true
+    },
+    {
+      "route": "/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum",
+      "width": 1440,
+      "status": 200,
+      "title": "Fondul pentru Modernizare: energie și autoconsum",
+      "h1": [
+        "Fondul de Modernizare: proiecte de fotovoltaice și autoconsum"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [
+        {
+          "text": "Sursă oficială: MySMIS2021: apelurile pentru capacități regenerabile destinate a",
+          "size": "12.8px"
+        }
+      ],
+      "pageHeight": 8493,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "disclosuresWork": true
+    },
+    {
+      "route": "/fondul-modernizare-energie-regenerabila-2026",
+      "width": 1440,
+      "status": 200,
+      "title": "Fondul pentru Modernizare: energie regenerabilă",
+      "h1": [
+        "Fondul pentru ModernizareEnergie regenerabilă"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/fondul-modernizare-energie-regenerabila-2026",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [
+        {
+          "text": "Sursă oficială: MySMIS2021: apelurile pentru noi capacități din surse regenerabi",
+          "size": "12.8px"
+        }
+      ],
+      "pageHeight": 5641,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "disclosuresWork": true
+    },
+    {
+      "route": "/fondul-modernizare-pc1-stocare",
+      "width": 1440,
+      "status": 200,
+      "title": "PC1 Stocare 2026: 69.000 €/MWh, ghid aprobat | FABER",
+      "h1": [
+        "Fondul pentru Modernizare – PC1 Stocare stand-alone"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/fondul-modernizare-pc1-stocare",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [
+        {
+          "text": "Fondul pentru Modernizare · Program-cheie 1",
+          "size": "11.04px"
+        },
+        {
+          "text": "Răspuns rapid",
+          "size": "12.16px"
+        },
+        {
+          "text": "Sursă oficială: Ordinul Ministerului Energiei nr. 915/14.08.2026, publicat la 17",
+          "size": "12.8px"
+        },
+        {
+          "text": "Filtru inițial",
+          "size": "12.16px"
+        },
+        {
+          "text": "Arhitectura proiectului",
+          "size": "12.16px"
+        },
+        {
+          "text": "Dosar de lucru",
+          "size": "12.16px"
+        },
+        {
+          "text": "Parcurs recomandat",
+          "size": "12.16px"
+        },
+        {
+          "text": "Selectează un pas sau folosește tastele săgeată pentru a urmări traseul.",
+          "size": "11.52px"
+        },
+        {
+          "text": "Trasabilitate",
+          "size": "12.16px"
+        },
+        {
+          "text": "Ultima verificare editorială: 2026-08-29.",
+          "size": "13.44px"
+        },
+        {
+          "text": "Întrebări frecvente",
+          "size": "12.16px"
+        },
+        {
+          "text": "Următorul pas",
+          "size": "12.16px"
+        }
+      ],
+      "pageHeight": 6991,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "disclosuresWork": true
+    },
+    {
+      "route": "/fondul-modernizare-pc1-stocare-entitati-publice",
+      "width": 1440,
+      "status": 200,
+      "title": "PC1 Stocare entități publice 2026: 10 mil. €",
+      "h1": [
+        "PC1 Stocare 2026 pentru entități publice – baterii în spatele contorului"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/fondul-modernizare-pc1-stocare-entitati-publice",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [
+        {
+          "text": "Fondul pentru Modernizare · Program-cheie 1",
+          "size": "11.04px"
+        },
+        {
+          "text": "Răspuns rapid",
+          "size": "12.16px"
+        },
+        {
+          "text": "Sursă oficială: Ghidul solicitantului și anexele actualizate la 23.06.2026, Mini",
+          "size": "12.8px"
+        },
+        {
+          "text": "Filtru inițial",
+          "size": "12.16px"
+        },
+        {
+          "text": "Arhitectura proiectului",
+          "size": "12.16px"
+        },
+        {
+          "text": "Dosar de lucru",
+          "size": "12.16px"
+        },
+        {
+          "text": "Parcurs recomandat",
+          "size": "12.16px"
+        },
+        {
+          "text": "Selectează un pas sau folosește tastele săgeată pentru a urmări traseul.",
+          "size": "11.52px"
+        },
+        {
+          "text": "Trasabilitate",
+          "size": "12.16px"
+        },
+        {
+          "text": "Ultima verificare editorială: 2026-09-09.",
+          "size": "13.44px"
+        },
+        {
+          "text": "Întrebări frecvente",
+          "size": "12.16px"
+        },
+        {
+          "text": "Următorul pas",
+          "size": "12.16px"
+        }
+      ],
+      "pageHeight": 8687,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [
+        {
+          "id": "landmark-unique",
+          "impact": "moderate",
+          "help": "Landmarks should have a unique role or role/label/title (i.e. accessible name) combination",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/landmark-unique?application=playwright",
+          "nodes": [
+            {
+              "target": [
+                ".program-comparison"
+              ],
+              "html": "<section class=\"program-section program-comparison is-visible\" aria-label=\"PC1 Stocare sau PC1 Autoconsum?\" data-site-reveal=\"\">",
+              "summary": "Fix any of the following:\n  The landmark must have a unique aria-label, aria-labelledby, or title to make landmarks distinguishable"
+            }
+          ]
+        }
+      ],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "disclosuresWork": true
+    },
+    {
+      "route": "/fonduri-regionale",
+      "width": 1440,
+      "status": 200,
+      "title": "Fonduri regionale 2021–2027 și ADR-uri | FABER",
+      "h1": [
+        "Programe regionale și apeluri ADR"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/fonduri-regionale",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [
+        {
+          "text": "Registru verificat",
+          "size": "12.48px"
+        },
+        {
+          "text": "Sursă oficială: Registrul oficial MySMIS2021 al apelurilor validate 2021–2027, M",
+          "size": "12.8px"
+        },
+        {
+          "text": "Verificare prudentă",
+          "size": "12.48px"
+        }
+      ],
+      "pageHeight": 4476,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "disclosuresWork": true
+    },
+    {
+      "route": "/gal-afir",
+      "width": 1440,
+      "status": 200,
+      "title": "GAL AFIR 2026: apeluri DR-36 și verificare | FABER",
+      "h1": [
+        "GAL AFIR / DR-36 prin Grupuri de Acțiune Locală"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/gal-afir",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [
+        {
+          "text": "Sursă oficială: Platforma AFIR GAL publică apeluri locale cu termene distincte; ",
+          "size": "12.8px"
+        }
+      ],
+      "pageHeight": 8060,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "disclosuresWork": true
+    },
+    {
+      "route": "/investitii-modernizarea-microintreprinderilor-apel-2",
+      "width": 1440,
+      "status": 200,
+      "title": "Modernizarea microîntreprinderilor: Apel 2 Nord-Est 2026",
+      "h1": [
+        "Investiții pentru modernizarea microîntreprinderilor – Apel 2"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/investitii-modernizarea-microintreprinderilor-apel-2",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [],
+      "pageHeight": 13663,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [
+        {
+          "id": "aria-meter-name",
+          "impact": "serious",
+          "help": "ARIA meter nodes must have an accessible name",
+          "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/aria-meter-name?application=playwright",
+          "nodes": [
+            {
+              "target": [
+                ".micro2-score-meter"
+              ],
+              "html": "<div class=\"micro2-score-meter\" data-score-meter=\"\" role=\"meter\" aria-valuemin=\"0\" aria-valuemax=\"100\" aria-valuenow=\"25\" aria-valuetext=\"25 puncte estimate din 100\" style=\"--score: 25;\">",
+              "summary": "Fix any of the following:\n  aria-label attribute does not exist or is empty\n  aria-labelledby attribute does not exist, references elements that do not exist or references elements that are empty\n  Element has no title attribute"
+            }
+          ]
+        }
+      ],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "disclosuresWork": true
+    },
+    {
+      "route": "/pnrr",
+      "width": 1440,
+      "status": 200,
+      "title": "PNRR: componente, apeluri și stadiul implementării | FABER",
+      "h1": [
+        "Planul Național de Redresare și Reziliență"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/pnrr",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [
+        {
+          "text": "Sursă oficială: Tabloul de bord oficial PNRR; program în implementare, cu situaț",
+          "size": "12.8px"
+        }
+      ],
+      "pageHeight": 9587,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "disclosuresWork": true
+    },
+    {
+      "route": "/pocidif-21",
+      "width": 1440,
+      "status": 200,
+      "title": "PoCIDIF 2.1: inovare digitală pentru IMM TIC | FABER",
+      "h1": [
+        "PoCIDIF – Acțiunea 2.1 Dezvoltarea de noi servicii, aplicații și produse prin inovare și adoptarea de tehnologii avansate"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/pocidif-21",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [
+        {
+          "text": "Sursă oficială: Ghidul solicitantului PoCIDIF 2.1 aprobat prin Ordinul MIPE nr. ",
+          "size": "12.8px"
+        }
+      ],
+      "pageHeight": 7525,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "aria-valid-attr-value",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "disclosuresWork": true
+    },
+    {
+      "route": "/pro-infra",
+      "width": 1440,
+      "status": 200,
+      "title": "PRO INFRA 2026: până la 15 mil. €, condiții și EMS",
+      "h1": [
+        "PRO INFRA – eficiență energetică pentru producătorii din infrastructura de transport"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/pro-infra",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [
+        {
+          "text": "Sursă oficială: Schema PRO INFRA consolidată, art. 5, 13 și 16, cu modificările ",
+          "size": "12.8px"
+        }
+      ],
+      "pageHeight": 7973,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "aria-valid-attr-value",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "disclosuresWork": true
+    },
+    {
+      "route": "/programul-tranzitie-justa",
+      "width": 1440,
+      "status": 200,
+      "title": "Programul Tranziție Justă: apeluri și statut | FABER",
+      "h1": [
+        "Programul Tranziție Justă"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/programul-tranzitie-justa",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [
+        {
+          "text": "Sursă oficială: Catalogul oficial al finanțărilor 2021–2027; apelurile sunt afiș",
+          "size": "12.8px"
+        }
+      ],
+      "pageHeight": 9619,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "disclosuresWork": true
+    },
+    {
+      "route": "/start-up-nation-2026",
+      "width": 1440,
+      "status": 200,
+      "title": "Start-Up Nation: apel închis la 29 mai 2026 | FABER",
+      "h1": [
+        "Start-Up Nation2026"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/start-up-nation-2026",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [
+        {
+          "text": "Sursă oficială: Start-Up Nation 2024 – transparența înscrierilor persoanelor jur",
+          "size": "12.8px"
+        }
+      ],
+      "pageHeight": 7419,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "disclosuresWork": true
+    }
+  ]
+}

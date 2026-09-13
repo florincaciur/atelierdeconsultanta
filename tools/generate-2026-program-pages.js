@@ -34,11 +34,11 @@ const PAGE_CONTENT = {
         "din cheltuielile eligibile"
       ],
       [
-        "11.09–06.11.2026",
-        "calendarul anunțat al depunerii"
+        "din 28.09.2026",
+        "începerea depunerii online"
       ]
     ],
-    "answer": "PC1 Autoconsum finanțează capacități noi de producere a energiei solare cu stocare integrată pentru entități publice. Bugetul este de 500 milioane euro, iar ajutorul poate ajunge la 10 milioane euro pe beneficiar și la 100% din cheltuielile eligibile, în limitele tehnice și valorice ale ghidului. Bateriile sunt obligatorii și trebuie dimensionate pentru 2–4 ore. La 9 septembrie 2026, depunerea era programată pentru 11 septembrie–6 noiembrie 2026, nu încă deschisă.",
+    "answer": "PC1 Autoconsum finanțează capacități noi de producere a energiei solare cu stocare integrată pentru entități publice. Bugetul este de 500 milioane euro, iar ajutorul poate ajunge la 10 milioane euro pe beneficiar și la 100% din cheltuielile eligibile, în limitele tehnice și valorice ale ghidului. Bateriile sunt obligatorii și trebuie dimensionate pentru 2–4 ore. Depunerea online prin AFIR începe la 28 septembrie 2026, conform comunicatului din 11 septembrie 2026.",
     "fit": [
       "Solicitantul se încadrează într-o categorie publică eligibilă și poate adopta actele interne necesare proiectului.",
       "Există un amplasament cu drepturi clare, consum documentat și condiții realiste pentru racordare, montaj și autorizare.",
@@ -47,7 +47,7 @@ const PAGE_CONTENT = {
     "caution": [
       "Proiectele numai cu baterii, numai cu pompe de căldură, de înlocuire sau de extindere necontorizată separat nu sunt eligibile pe această linie.",
       "Energia produsă trebuie utilizată 100% pentru autoconsum, iar energia stocată trebuie să provină 100% din instalația solară proprie.",
-      "La data verificării, pagina operațională AFIR pentru sesiune nu era încă publicată; calendarul și eventualele clarificări se reconfirmă înainte de transmitere."
+      "AFIR a publicat ghidurile la 11.09.2026 și a anunțat primirea cererilor online din 28.09.2026. Termenul de închidere nu este precizat în comunicatul verificat la 13.09.2026; se reconfirmă în anunțul sesiunii."
     ],
     "investments": [
       [
@@ -96,9 +96,14 @@ const PAGE_CONTENT = {
       "Reverifică anunțul sesiunii AFIR, ghidul, anexele și clarificările înainte de depunere."
     ],
     "extraSources": [
+      ["AFIR — comunicatul privind depunerea din 28 septembrie 2026","https://www.afir.ro/comunicate/conditiile-finantarii-acordate-entitatilor-publice-pentru-producerea-si-stocarea-energiei-electrice/"],
+      ["Anexa 1 - CF Forma Vizuala AUTOCONSUM RES FM","https://www.afir.ro/media/kryf4iok/anexa-1_cf_forma-vizuala_autoconsum_res_fm.pdf"],
+      ["Anexa 2 - Grila VAE AUTOCONSUM RES FM PUBLICI","https://www.afir.ro/media/nm4fhhux/anexa-2_grila-vae_autoconsum_res_fm_publici.docx"],
+      ["Anexa 3 - Declarație DNSH AUTOCONSUM RES FM PUBLICI","https://www.afir.ro/media/fjjgp1wq/anexa-3_declaratie-dnsh_autoconsum_res_fm_publici.docx"],
+      ["Anexa 4 - Model Acord Parteneriat RES FM PUBLICI","https://www.afir.ro/media/zxvhqlty/anexa-4_model-acord-parteneriat_res_fm_publici.docx"],
       [
-        "Ministerul Energiei — pachetul actualizat al ghidului și anexelor",
-        "https://energie.gov.ro/wp-content/uploads/2026/06/Ghidul-solicitantului-Autoconsum-EP_23.06.rar"
+        "AFIR — ghidul solicitantului publicat la 11.09.2026",
+        "https://www.afir.ro/media/uwymsxzy/ghidul-solicitantului_autoconsum-res_fm_entitati-publice.docx"
       ],
       [
         "Portalul Legislativ — forma consolidată a ghidului PC1 pentru autoconsum public",
@@ -132,7 +137,7 @@ const PAGE_CONTENT = {
       ],
       [
         "Când se depun proiectele?",
-        "Calendarul anunțat este 11 septembrie–6 noiembrie 2026, cu depunere prin AFIR și în limita bugetului. Înainte de transmitere trebuie verificat anunțul operațional al sesiunii."
+        "AFIR a publicat ghidurile la 11.09.2026 și a anunțat primirea cererilor online din 28.09.2026. Termenul de închidere nu este precizat în comunicatul verificat la 13.09.2026; se reconfirmă în anunțul sesiunii."
       ],
       [
         "Ce vechime poate avea studiul de fezabilitate?",
@@ -187,11 +192,11 @@ const PAGE_CONTENT = {
         "din cheltuielile eligibile"
       ],
       [
-        "11.09–06.11.2026",
-        "calendarul anunțat al depunerii"
+        "din 28.09.2026",
+        "începerea depunerii online"
       ]
     ],
-    "answer": "PC1 Stocare finanțează sisteme noi de baterii în spatele contorului, conectate direct la instalații regenerabile existente ale entităților publice. Bugetul este de 150 milioane euro, iar finanțarea este de 100% din cheltuielile eligibile, în limita a 10 milioane euro pe beneficiar. Durata echivalentă a stocării trebuie să fie de 2–4 ore. La 9 septembrie 2026, depunerea era programată pentru 11 septembrie–6 noiembrie 2026, nu încă deschisă.",
+    "answer": "PC1 Stocare finanțează sisteme noi de baterii în spatele contorului, conectate direct la instalații regenerabile existente ale entităților publice. Bugetul este de 150 milioane euro, iar finanțarea este de 100% din cheltuielile eligibile, în limita a 10 milioane euro pe beneficiar. Durata echivalentă a stocării trebuie să fie de 2–4 ore. Depunerea online prin AFIR începe la 28 septembrie 2026, conform comunicatului din 11 septembrie 2026.",
     "fit": [
       "Entitatea publică se află într-o categorie eligibilă și deține o instalație de producere a energiei din surse regenerabile deja existentă.",
       "Bateria poate fi conectată în spatele aceluiași contor, în cadrul instalației de utilizare a locului de producere sau de producere și consum.",
@@ -249,9 +254,10 @@ const PAGE_CONTENT = {
       "Reverifică anunțul sesiunii AFIR, ghidul, anexele și clarificările înainte de depunere."
     ],
     "extraSources": [
+      ["AFIR — comunicatul privind depunerea din 28 septembrie 2026","https://www.afir.ro/comunicate/conditiile-finantarii-acordate-entitatilor-publice-pentru-producerea-si-stocarea-energiei-electrice/"],
       [
-        "Ministerul Energiei — pachetul actualizat al ghidului și anexelor",
-        "https://energie.gov.ro/wp-content/uploads/2026/06/Ghidul-solicitantului-Stocare-EP.zip"
+        "AFIR — ghidul solicitantului publicat la 11.09.2026",
+        "https://www.afir.ro/media/yo1h41gu/ghidul-solicitantului_stocare_res_fm_publici.docx"
       ],
       [
         "AFIR — lista oficială a sesiunilor",
@@ -269,7 +275,7 @@ const PAGE_CONTENT = {
       ],
       [
         "Cât este finanțarea?",
-        "Finanțarea este de 100% din cheltuielile eligibile, fără a depăși 10 milioane euro pe beneficiar. Bugetul total estimat al apelului este de 150 milioane euro."
+        "Finanțarea este de 100% din cheltuielile eligibile, fără a depăși 10 milioane euro pe beneficiar și 200.000 euro/MWh instalat, fără TVA. Bugetul apelului este de 150 milioane euro."
       ],
       [
         "Este necesară o instalație regenerabilă existentă?",
@@ -289,7 +295,7 @@ const PAGE_CONTENT = {
       ],
       [
         "Când se depun proiectele?",
-        "Calendarul anunțat este 11 septembrie–6 noiembrie 2026, cu depunere prin AFIR și în limita bugetului. Înainte de transmitere trebuie verificat anunțul operațional al sesiunii."
+        "AFIR a publicat ghidurile la 11.09.2026 și a anunțat primirea cererilor online din 28.09.2026. Termenul de închidere nu este precizat în comunicatul verificat la 13.09.2026; se reconfirmă în anunțul sesiunii."
       ],
       [
         "Până când trebuie finalizată investiția?",
@@ -869,7 +875,7 @@ function renderSvg(slug) {
 
 function renderComparison(comparison, program) {
   if (!comparison) return '';
-  return '<section class="program-section program-comparison" aria-label="' + e(comparison.title) + '"><div class="section-heading"><h2>' + e(comparison.title) + '</h2><p>Reguli verificate la ' + e(program.verifiedAt) + '. <a href="' + e(program.sourceUrl) + '" target="_blank" rel="noopener noreferrer">Consultă sursa oficială</a>.</p></div><div class="program-comparison-scroll" role="region" tabindex="0" aria-label="' + e(comparison.title) + '"><table><caption>' + e(comparison.title) + '</caption><thead><tr>' + comparison.headers.map(h=>'<th scope="col">'+e(h)+'</th>').join('') + '</tr></thead><tbody>' + comparison.rows.map(row=>'<tr>'+row.map((cell,i)=>i===0?'<th scope="row">'+e(cell)+'</th>':'<td>'+e(cell)+'</td>').join('')+'</tr>').join('') + '</tbody></table></div></section>';
+  return '<section class="program-section program-comparison" aria-label="' + e(comparison.title) + '"><div class="section-heading"><h2>' + e(comparison.title) + '</h2><p>Reguli verificate la ' + e(program.verifiedAt) + '. <a href="' + e(program.sourceUrl) + '" target="_blank" rel="noopener noreferrer">Consultă sursa oficială</a>.</p></div><div class="program-comparison-scroll" role="region" tabindex="0" aria-label="Tabel comparativ: ' + e(comparison.title) + '"><table><caption>' + e(comparison.title) + '</caption><thead><tr>' + comparison.headers.map(h=>'<th scope="col">'+e(h)+'</th>').join('') + '</tr></thead><tbody>' + comparison.rows.map(row=>'<tr>'+row.map((cell,i)=>i===0?'<th scope="row">'+e(cell)+'</th>':'<td>'+e(cell)+'</td>').join('')+'</tr>').join('') + '</tbody></table></div></section>';
 }
 
 function renderPage(program, content) {
