@@ -34,11 +34,11 @@ const PAGE_CONTENT = {
         "din cheltuielile eligibile"
       ],
       [
-        "din 28.09.2026",
-        "începerea depunerii online"
+        "28.09–20.11.2026",
+        "depunere prin AFIR, în limita bugetului"
       ]
     ],
-    "answer": "PC1 Autoconsum finanțează capacități noi de producere a energiei solare cu stocare integrată pentru entități publice. Bugetul este de 500 milioane euro, iar ajutorul poate ajunge la 10 milioane euro pe beneficiar și la 100% din cheltuielile eligibile, în limitele tehnice și valorice ale ghidului. Bateriile sunt obligatorii și trebuie dimensionate pentru 2–4 ore. Depunerea online prin AFIR începe la 28 septembrie 2026, conform comunicatului din 11 septembrie 2026.",
+    "answer": "PC1 Autoconsum finanțează capacități noi de producere a energiei solare cu stocare integrată pentru entități publice. Bugetul este de 500 milioane EUR, ajutorul poate acoperi până la 100% din cheltuielile eligibile, în limita a 10 milioane EUR pe beneficiar, iar bateriile trebuie dimensionate pentru 2–4 ore. Depunerea prin AFIR: 28 septembrie 2026, ora 10:00 – 20 noiembrie 2026, ora 23:59, sau până la epuizarea bugetului.",
     "fit": [
       "Solicitantul se încadrează într-o categorie publică eligibilă și poate adopta actele interne necesare proiectului.",
       "Există un amplasament cu drepturi clare, consum documentat și condiții realiste pentru racordare, montaj și autorizare.",
@@ -47,7 +47,7 @@ const PAGE_CONTENT = {
     "caution": [
       "Proiectele numai cu baterii, numai cu pompe de căldură, de înlocuire sau de extindere necontorizată separat nu sunt eligibile pe această linie.",
       "Energia produsă trebuie utilizată 100% pentru autoconsum, iar energia stocată trebuie să provină 100% din instalația solară proprie.",
-      "AFIR a publicat ghidurile la 11.09.2026 și a anunțat primirea cererilor online din 28.09.2026. Termenul de închidere nu este precizat în comunicatul verificat la 13.09.2026; se reconfirmă în anunțul sesiunii."
+      "Anunțul oficial confirmă depunerea prin AFIR între 28.09.2026, ora 10:00 și 20.11.2026, ora 23:59, sau până la epuizarea bugetului. La verificarea din 13.09.2026 sesiunea nu a început."
     ],
     "investments": [
       [
@@ -96,11 +96,30 @@ const PAGE_CONTENT = {
       "Reverifică anunțul sesiunii AFIR, ghidul, anexele și clarificările înainte de depunere."
     ],
     "extraSources": [
-      ["AFIR — comunicatul privind depunerea din 28 septembrie 2026","https://www.afir.ro/comunicate/conditiile-finantarii-acordate-entitatilor-publice-pentru-producerea-si-stocarea-energiei-electrice/"],
-      ["Anexa 1 - CF Forma Vizuala AUTOCONSUM RES FM","https://www.afir.ro/media/kryf4iok/anexa-1_cf_forma-vizuala_autoconsum_res_fm.pdf"],
-      ["Anexa 2 - Grila VAE AUTOCONSUM RES FM PUBLICI","https://www.afir.ro/media/nm4fhhux/anexa-2_grila-vae_autoconsum_res_fm_publici.docx"],
-      ["Anexa 3 - Declarație DNSH AUTOCONSUM RES FM PUBLICI","https://www.afir.ro/media/fjjgp1wq/anexa-3_declaratie-dnsh_autoconsum_res_fm_publici.docx"],
-      ["Anexa 4 - Model Acord Parteneriat RES FM PUBLICI","https://www.afir.ro/media/zxvhqlty/anexa-4_model-acord-parteneriat_res_fm_publici.docx"],
+      [
+        "Ministerul Energiei — anunț de lansare și calendar complet",
+        "https://energie.gov.ro/wp-content/uploads/2026/09/Anunt-lansare-apel-proiecte-autoconsum_entitati-publice.pdf"
+      ],
+      [
+        "AFIR — comunicatul privind depunerea din 28 septembrie 2026",
+        "https://www.afir.ro/comunicate/conditiile-finantarii-acordate-entitatilor-publice-pentru-producerea-si-stocarea-energiei-electrice/"
+      ],
+      [
+        "Anexa 1 - CF Forma Vizuala AUTOCONSUM RES FM",
+        "https://www.afir.ro/media/kryf4iok/anexa-1_cf_forma-vizuala_autoconsum_res_fm.pdf"
+      ],
+      [
+        "Anexa 2 - Grila VAE AUTOCONSUM RES FM PUBLICI",
+        "https://www.afir.ro/media/nm4fhhux/anexa-2_grila-vae_autoconsum_res_fm_publici.docx"
+      ],
+      [
+        "Anexa 3 - Declarație DNSH AUTOCONSUM RES FM PUBLICI",
+        "https://www.afir.ro/media/fjjgp1wq/anexa-3_declaratie-dnsh_autoconsum_res_fm_publici.docx"
+      ],
+      [
+        "Anexa 4 - Model Acord Parteneriat RES FM PUBLICI",
+        "https://www.afir.ro/media/zxvhqlty/anexa-4_model-acord-parteneriat_res_fm_publici.docx"
+      ],
       [
         "AFIR — ghidul solicitantului publicat la 11.09.2026",
         "https://www.afir.ro/media/uwymsxzy/ghidul-solicitantului_autoconsum-res_fm_entitati-publice.docx"
@@ -137,7 +156,7 @@ const PAGE_CONTENT = {
       ],
       [
         "Când se depun proiectele?",
-        "AFIR a publicat ghidurile la 11.09.2026 și a anunțat primirea cererilor online din 28.09.2026. Termenul de închidere nu este precizat în comunicatul verificat la 13.09.2026; se reconfirmă în anunțul sesiunii."
+        "Anunțul oficial confirmă depunerea prin AFIR între 28.09.2026, ora 10:00 și 20.11.2026, ora 23:59, sau până la epuizarea bugetului. La verificarea din 13.09.2026 sesiunea nu a început."
       ],
       [
         "Ce vechime poate avea studiul de fezabilitate?",
@@ -172,7 +191,35 @@ const PAGE_CONTENT = {
           "Sunt eligibile în proiect; forajele nu sunt eligibile."
         ]
       ]
-    }
+    },
+    "sections": [
+      {
+        "title": "Calendarul oficial al apelului",
+        "intro": "Ghidul a fost publicat la 11 septembrie 2026. Cererile se transmit electronic prin AFIR, în ordinea depunerii și în limita bugetului.",
+        "rows": [
+          [
+            "Începutul depunerii",
+            "28 septembrie 2026, ora 10:00"
+          ],
+          [
+            "Închiderea depunerii",
+            "20 noiembrie 2026, ora 23:59, sau la epuizarea bugetului"
+          ],
+          [
+            "Evaluarea proiectelor",
+            "23 noiembrie 2026 – 2 martie 2027"
+          ],
+          [
+            "Contractare",
+            "Din 8 februarie 2027, pe măsura aprobării"
+          ],
+          [
+            "Punere în funcțiune",
+            "Până la 31 decembrie 2029"
+          ]
+        ]
+      }
+    ]
   },
   "fondul-modernizare-pc1-stocare-entitati-publice": {
     "h1": "PC1 Stocare 2026 pentru entități publice – baterii în spatele contorului",
@@ -192,11 +239,11 @@ const PAGE_CONTENT = {
         "din cheltuielile eligibile"
       ],
       [
-        "din 28.09.2026",
-        "începerea depunerii online"
+        "28.09–20.11.2026",
+        "depunere prin AFIR, în limita bugetului"
       ]
     ],
-    "answer": "PC1 Stocare finanțează sisteme noi de baterii în spatele contorului, conectate direct la instalații regenerabile existente ale entităților publice. Bugetul este de 150 milioane euro, iar finanțarea este de 100% din cheltuielile eligibile, în limita a 10 milioane euro pe beneficiar. Durata echivalentă a stocării trebuie să fie de 2–4 ore. Depunerea online prin AFIR începe la 28 septembrie 2026, conform comunicatului din 11 septembrie 2026.",
+    "answer": "PC1 Stocare finanțează sisteme noi de baterii în spatele contorului, conectate direct la instalații regenerabile existente ale entităților publice. Bugetul este de 150 milioane EUR, ajutorul poate acoperi 100% din cheltuielile eligibile, în limita a 10 milioane EUR pe beneficiar, iar durata stocării trebuie să fie de 2–4 ore. Depunerea prin AFIR: 28 septembrie 2026, ora 10:00 – 20 noiembrie 2026, ora 23:59, sau până la epuizarea bugetului.",
     "fit": [
       "Entitatea publică se află într-o categorie eligibilă și deține o instalație de producere a energiei din surse regenerabile deja existentă.",
       "Bateria poate fi conectată în spatele aceluiași contor, în cadrul instalației de utilizare a locului de producere sau de producere și consum.",
@@ -245,6 +292,10 @@ const PAGE_CONTENT = {
       [
         "Racordare, mediu și buget",
         "ATR ori dovada demersurilor la etapa cerută, documentele de mediu, devizul general, bugetul indicativ și sursele pentru costurile neeligibile."
+      ],
+      [
+        "Cererea, verificarea administrativă și DNSH",
+        "Cererea de finanțare, grila VAE și declarația DNSH se pregătesc folosind anexele proprii apelului de stocare. Pentru un parteneriat se atașează acordul și responsabilitățile fiecărui membru."
       ]
     ],
     "steps": [
@@ -254,7 +305,14 @@ const PAGE_CONTENT = {
       "Reverifică anunțul sesiunii AFIR, ghidul, anexele și clarificările înainte de depunere."
     ],
     "extraSources": [
-      ["AFIR — comunicatul privind depunerea din 28 septembrie 2026","https://www.afir.ro/comunicate/conditiile-finantarii-acordate-entitatilor-publice-pentru-producerea-si-stocarea-energiei-electrice/"],
+      [
+        "Ministerul Energiei — anunț de lansare și calendar complet",
+        "https://energie.gov.ro/wp-content/uploads/2026/09/Anunt-lansare-apel-proiecte-stocare_entitati-publice.pdf"
+      ],
+      [
+        "AFIR — comunicatul privind depunerea din 28 septembrie 2026",
+        "https://www.afir.ro/comunicate/conditiile-finantarii-acordate-entitatilor-publice-pentru-producerea-si-stocarea-energiei-electrice/"
+      ],
       [
         "AFIR — ghidul solicitantului publicat la 11.09.2026",
         "https://www.afir.ro/media/yo1h41gu/ghidul-solicitantului_stocare_res_fm_publici.docx"
@@ -266,6 +324,10 @@ const PAGE_CONTENT = {
       [
         "Portalul Legislativ — cadrul Fondului pentru Modernizare",
         "https://legislatie.just.ro/Public/DetaliiDocument/309282"
+      ],
+      [
+        "AFIR — ghid, cerere de finanțare, VAE, DNSH și acord de parteneriat",
+        "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-stocare-energie-regenerabila-beneficiari-publici/"
       ]
     ],
     "faqs": [
@@ -295,11 +357,15 @@ const PAGE_CONTENT = {
       ],
       [
         "Când se depun proiectele?",
-        "AFIR a publicat ghidurile la 11.09.2026 și a anunțat primirea cererilor online din 28.09.2026. Termenul de închidere nu este precizat în comunicatul verificat la 13.09.2026; se reconfirmă în anunțul sesiunii."
+        "Anunțul oficial confirmă depunerea prin AFIR între 28.09.2026, ora 10:00 și 20.11.2026, ora 23:59, sau până la epuizarea bugetului. La verificarea din 13.09.2026 sesiunea nu a început."
       ],
       [
         "Până când trebuie finalizată investiția?",
         "Instalarea, conectarea și punerea în funcțiune trebuie finalizate cel târziu la 31 decembrie 2029. Contractul include apoi o perioadă de monitorizare de cinci ani de la ultima plată."
+      ],
+      [
+        "Cum diferă de PC1 Stocare stand-alone?",
+        "Apelul pentru entități publice finanțează baterii conectate direct la instalații regenerabile existente, în spatele contorului. Programul stand-alone are solicitanți, plafoane și procedură distincte; nu se transferă condițiile între apeluri."
       ]
     ],
     "comparison": {
@@ -326,7 +392,57 @@ const PAGE_CONTENT = {
           "Se analizează separat schema pentru întreprinderi"
         ]
       ]
-    }
+    },
+    "sections": [
+      {
+        "title": "Calendarul oficial al apelului",
+        "intro": "Ghidul a fost publicat la 11 septembrie 2026. Cererile se transmit electronic prin AFIR, în ordinea depunerii și în limita bugetului.",
+        "rows": [
+          [
+            "Începutul depunerii",
+            "28 septembrie 2026, ora 10:00"
+          ],
+          [
+            "Închiderea depunerii",
+            "20 noiembrie 2026, ora 23:59, sau la epuizarea bugetului"
+          ],
+          [
+            "Evaluarea proiectelor",
+            "23 noiembrie 2026 – 2 martie 2027"
+          ],
+          [
+            "Contractare",
+            "Din 8 februarie 2027, pe măsura aprobării"
+          ],
+          [
+            "Punere în funcțiune",
+            "Până la 31 decembrie 2029"
+          ]
+        ]
+      },
+      {
+        "title": "Finanțare și contribuția beneficiarului",
+        "intro": "Bugetul apelului este de 150 milioane EUR. Finanțarea eligibilă este nerambursabilă în proporție de 100%, cu respectarea simultană a plafoanelor.",
+        "rows": [
+          [
+            "Plafon pe beneficiar",
+            "10 milioane EUR, cumulat pentru proiectul propriu și participările în parteneriate"
+          ],
+          [
+            "Plafon pe capacitate",
+            "200.000 EUR/MWh instalat, fără TVA"
+          ],
+          [
+            "Contribuție proprie",
+            "Costuri neeligibile și depășiri ale plafoanelor, conform ghidului"
+          ],
+          [
+            "Exemplu de calcul",
+            "Pentru 2 MWh, plafonul pe capacitate este 400.000 EUR fără TVA; valoarea acordată rămâne limitată de costurile eligibile aprobate"
+          ]
+        ]
+      }
+    ]
   },
   "diaspora-investeste-acasa": {
     "eyebrow": "Antreprenoriat · investiții în România",
@@ -909,6 +1025,7 @@ ${HEADER}
   <section class="program-metrics" aria-label="Repere de finanțare">${content.metrics.map(([value, label]) => `<div><strong>${e(value)}</strong><span>${e(label)}</span></div>`).join("")}</section>
   <section class="program-section program-section--answer" id="raspuns-rapid"><div><p class="section-kicker">Răspuns rapid</p><h2>Ce finanțează și în ce stadiu este?</h2></div><div class="answer-card"><p>${e(content.answer)}</p><small>Statut verificat la <time datetime="${program.verifiedAt}">${program.verifiedAt}</time>. ${e(program.editorialDisclaimer)}</small></div></section>
   ${renderComparison(content.comparison, program)}
+  ${(content.sections || []).map(section => `<section class="program-section program-section--soft"><div class="section-heading"><p class="section-kicker">Date oficiale</p><h2>${e(section.title)}</h2><p>${e(section.intro)}</p></div><div class="program-card-grid">${renderCards(section.rows)}</div></section>`).join("\n")}
   <section class="program-section program-section--fit"><div class="section-heading"><p class="section-kicker">Filtru inițial</p><h2>Merită continuată analiza?</h2><p>Compară profilul proiectului cu aceste criterii înainte de a investi în documentație. Concluzia finală se bazează pe actele solicitantului și pe forma oficială aplicabilă.</p></div><div class="program-fit-grid"><article class="fit-card fit-card--yes"><h3>Profil care merită verificat</h3>${renderList(content.fit)}</article><article class="fit-card fit-card--caution"><h3>Condiții care cer clarificare</h3>${renderList(content.caution)}</article></div></section>
   <section class="program-section program-section--soft"><div class="section-heading"><p class="section-kicker">Arhitectura proiectului</p><h2>Ce intră în analiza investiției</h2></div><div class="program-card-grid">${renderCards(content.investments)}</div></section>
   <section class="program-section program-section--documents"><div class="section-heading"><p class="section-kicker">Dosar de lucru</p><h2>Documente de pregătit</h2><p>Deschide fiecare grup și construiește o versiune trasabilă, cu dată, sursă și responsabil.</p></div><div class="program-details">${renderDetails(content.documents)}</div></section>

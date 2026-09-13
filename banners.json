@@ -1,5 +1,150 @@
 [
   {
+    "id": "slide-micro-apel-2",
+    "programId": "modernizare-microintreprinderi-ne-2",
+    "title": "Investiții pentru modernizarea microîntreprinderilor – Apel 2",
+    "tag": "Apel lansat – depuneri 28 septembrie–28 octombrie 2026",
+    "description": "Modernizarea microîntreprinderilor, Apel 2 Nord-Est: depuneri 28.09–28.10.2026, grant 100.000–300.000 €, CAEN eligibil și simulator de punctaj final.",
+    "ctaText": "Detalii program →",
+    "ctaLink": "/investitii-modernizarea-microintreprinderilor-apel-2",
+    "icon": "ph-buildings",
+    "image": "/assets/hero/hero-local.webp",
+    "pageTitle": null,
+    "order": 1,
+    "estimate": null,
+    "active": true,
+    "programStatus": "ghid_aprobat_nedeschis",
+    "statusLabel": "Apel lansat – depuneri 28 septembrie–28 octombrie 2026",
+    "verifiedAt": "2026-09-06",
+    "sourceName": "Autoritatea de Management pentru Programul Regional Nord-Est",
+    "sourceUrl": "https://regionordest.ro/prioritatea-1/modernizare-microintreprinderi/",
+    "sourceVersion": "Ghidul final și anexele publicate la 27.08.2026; cod apel PR/NE/2026/P1/RSO1.3/2/1",
+    "applicationStart": "2026-09-28",
+    "applicationEnd": "2026-10-28",
+    "grantSummary": {
+      "minimum": {
+        "amount": 100000,
+        "currency": "EUR",
+        "unit": "proiect"
+      },
+      "maximum": {
+        "amount": 300000,
+        "currency": "EUR",
+        "unit": "proiect"
+      },
+      "budget": {
+        "amount": 20370738.4,
+        "currency": "EUR"
+      }
+    },
+    "cofinancingSummary": {
+      "intensity": [
+        {
+          "rate": 90,
+          "scope": "maximum din cheltuielile eligibile"
+        }
+      ],
+      "ownContribution": "Minimum 10% din cheltuielile eligibile, plus toate cheltuielile neeligibile; o contribuție eligibilă mai mare este punctată."
+    },
+    "fundingSummary": "Finanțare conform sursei oficiale: 100.000 EUR/proiect–300.000 EUR/proiect; buget 20.370.738,4 EUR; intensitate 90% (maximum din cheltuielile eligibile); Minimum 10% din cheltuielile eligibile, plus toate cheltuielile neeligibile; o contribuție eligibilă mai mare este punctată.",
+    "officialGuideKey": "por-ne-apel-2",
+    "sourceOfTruth": "config/seo-programs.json#programs"
+  },
+  {
+    "id": "slide-autoconsum-publici",
+    "programId": "autoconsum-institutii-publice",
+    "title": "Sprijinirea investițiilor în noi capacități de producere și stocare a energiei solare pentru autoconsum – entități publice",
+    "tag": "Depuneri programate: 28 septembrie–20 noiembrie 2026",
+    "description": "PC1 Autoconsum entități publice: până la 10 mil. EUR, 100% din eligibil. Depuneri 28.09–20.11.2026. Beneficiari, condiții și documente oficiale.",
+    "ctaText": "Detalii program →",
+    "ctaLink": "/autoconsum-public-fotovoltaice-institutii-publice",
+    "icon": "ph-solar-panel",
+    "image": "/assets/hero/hero-solar.webp",
+    "pageTitle": "PC1 Autoconsum 2026 – panouri fotovoltaice cu stocare pentru entități publice",
+    "order": 2,
+    "estimate": null,
+    "active": true,
+    "programStatus": "ghid_aprobat_nedeschis",
+    "statusLabel": "Depuneri programate: 28 septembrie–20 noiembrie 2026",
+    "verifiedAt": "2026-09-13",
+    "sourceName": "Ministerul Energiei / AFIR",
+    "sourceUrl": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-producere-si-stocare-energie-regenerabila-beneficiari-publici/",
+    "sourceVersion": "Ghidul solicitantului și anexele publicate de AFIR la 11.09.2026",
+    "applicationStart": "2026-09-28",
+    "applicationEnd": "2026-11-20",
+    "grantSummary": {
+      "minimum": null,
+      "maximum": {
+        "amount": 10000000,
+        "currency": "EUR",
+        "unit": "beneficiar"
+      },
+      "budget": {
+        "amount": 500000000,
+        "currency": "EUR"
+      }
+    },
+    "cofinancingSummary": {
+      "intensity": [
+        {
+          "rate": 100,
+          "scope": "maximum din cheltuielile eligibile, în limita plafoanelor pe MW instalat"
+        }
+      ],
+      "ownContribution": "Cheltuielile neeligibile, TVA deductibilă și orice depășire a plafoanelor din ghid rămân în sarcina beneficiarului."
+    },
+    "fundingSummary": "Finanțare conform sursei oficiale: 10.000.000 EUR/beneficiar; buget 500.000.000 EUR; intensitate 100% (maximum din cheltuielile eligibile, în limita plafoanelor pe MW instalat); Cheltuielile neeligibile, TVA deductibilă și orice depășire a plafoanelor din ghid rămân în sarcina beneficiarului.",
+    "officialGuideKey": "autoconsum-publici",
+    "sourceOfTruth": "config/seo-programs.json#programs"
+  },
+  {
+    "id": "slide-e-drive",
+    "programId": "e-drive",
+    "title": "Programul e-DRIVE",
+    "tag": "Schemă actualizată – depunerea nu este deschisă",
+    "description": "e-DRIVE: până la 30.000 €/vehicul M1 pentru IMM-uri, plafon de minimis 300.000 € și măsură separată pentru transportatori. Condiții și stadiul lansării.",
+    "ctaText": "Detalii program",
+    "ctaLink": "/e-drive",
+    "icon": "ph-bus",
+    "image": "/assets/hero/hero-solar.webp",
+    "pageTitle": null,
+    "order": 3,
+    "estimate": null,
+    "active": true,
+    "programStatus": "ghid_aprobat_nedeschis",
+    "statusLabel": "Schemă actualizată – depunerea nu este deschisă",
+    "verifiedAt": "2026-09-06",
+    "sourceName": "Ministerul Transporturilor și Infrastructurii / Portal Legislativ",
+    "sourceUrl": "https://legislatie.just.ro/Public/DetaliiDocument/313289",
+    "sourceVersion": "Ordinul MTI nr. 742/03.08.2026 pentru actualizarea schemei e-DRIVE, în vigoare din 07.08.2026",
+    "applicationStart": null,
+    "applicationEnd": null,
+    "grantSummary": {
+      "minimum": null,
+      "maximum": {
+        "amount": 4000000,
+        "currency": "EUR",
+        "unit": "beneficiar, în cadrul măsurii competitive"
+      },
+      "budget": {
+        "amount": 56900000,
+        "currency": "EUR"
+      }
+    },
+    "cofinancingSummary": {
+      "intensity": [
+        {
+          "rate": 100,
+          "scope": "maximum, în limitele schemei și ale costului eligibil aplicabil"
+        }
+      ],
+      "ownContribution": "Diferența neacoperită de ajutor, costurile neeligibile și orice diferență față de costul de referință aplicabil."
+    },
+    "fundingSummary": "Finanțare conform sursei oficiale: 4.000.000 EUR/beneficiar, în cadrul măsurii competitive; buget 56.900.000 EUR; intensitate 100% (maximum, în limitele schemei și ale costului eligibil aplicabil); Diferența neacoperită de ajutor, costurile neeligibile și orice diferență față de costul de referință aplicabil.",
+    "officialGuideKey": "e-drive",
+    "sourceOfTruth": "config/seo-programs.json#programs"
+  },
+  {
     "id": "slide-dr12-afir",
     "programId": "dr12-afir",
     "title": "DR-12 Investiții în consolidarea exploatațiilor tinerilor fermieri instalați și a fermierilor cu vârsta de până la 45 de ani",
@@ -10,7 +155,7 @@
     "icon": "ph-plant",
     "image": "/assets/hero/hero-agriculture.webp",
     "pageTitle": "DR 12 AFIR 2026 – investiții pentru tineri fermieri și fermieri până la 45 de ani",
-    "order": 1,
+    "order": 4,
     "estimate": null,
     "active": true,
     "programStatus": "consultare_publica",
@@ -58,7 +203,7 @@
     "icon": "ph-tractor",
     "image": "/assets/hero/hero-agriculture.webp",
     "pageTitle": "DR 14 AFIR 2026 – investiții în fermele de mici dimensiuni",
-    "order": 2,
+    "order": 5,
     "estimate": null,
     "active": true,
     "programStatus": "apel_deschis",
@@ -95,489 +240,6 @@
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
   {
-    "id": "slide-dr18-afir",
-    "programId": "dr18-afir",
-    "title": "DR-18 Investiții în floricultură, plante medicinale și aromatice",
-    "tag": "Sesiune deschisă – depuneri 1 septembrie–31 octombrie 2026",
-    "description": "DR 18 AFIR 2026: ghid final, depuneri 1 septembrie–31 octombrie, buget 5 mil. €, maximum 100.000 €, intensitate 85%/65% și punctaj.",
-    "ctaText": "Detalii program",
-    "ctaLink": "/dr18",
-    "icon": "ph-flower-lotus",
-    "image": "/assets/hero/hero-agriculture.webp",
-    "pageTitle": "DR 18 AFIR 2026 – investiții în floricultură, plante medicinale și aromatice",
-    "order": 3,
-    "estimate": null,
-    "active": true,
-    "programStatus": "apel_deschis",
-    "statusLabel": "Sesiune deschisă – depuneri 1 septembrie–31 octombrie 2026",
-    "verifiedAt": "2026-09-06",
-    "sourceName": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
-    "sourceUrl": "https://www.afir.ro/instrumente/sesiuni/sesiuni-primire-proiecte/",
-    "sourceVersion": "Anunțul A1.2/01/2026 pentru sesiunea DR 18, publicat la 14.08.2026",
-    "applicationStart": "2026-09-01",
-    "applicationEnd": "2026-10-31",
-    "grantSummary": {
-      "minimum": null,
-      "maximum": {
-        "amount": 100000,
-        "currency": "EUR",
-        "unit": "proiect"
-      },
-      "budget": {
-        "amount": 5000000,
-        "currency": "EUR"
-      }
-    },
-    "cofinancingSummary": {
-      "intensity": [
-        {
-          "rate": 85,
-          "scope": "maximum pentru exploatații de 2.000–11.999 SO"
-        },
-        {
-          "rate": 65,
-          "scope": "maximum pentru exploatații de minimum 12.000 SO"
-        }
-      ],
-      "ownContribution": "Beneficiarul acoperă diferența eligibilă, cheltuielile neeligibile, TVA potrivit regimului fiscal și orice depășire de cost."
-    },
-    "fundingSummary": "Finanțare conform sursei oficiale: 100.000 EUR/proiect; buget 5.000.000 EUR; intensitate 85% (maximum pentru exploatații de 2.000–11.999 SO) / 65% (maximum pentru exploatații de minimum 12.000 SO); Beneficiarul acoperă diferența eligibilă, cheltuielile neeligibile, TVA potrivit regimului fiscal și orice depășire de cost.",
-    "officialGuideKey": "dr18",
-    "sourceOfTruth": "config/seo-programs.json#programs"
-  },
-  {
-    "id": "slide-afir-autoconsum",
-    "programId": "afir-energie-autoconsum",
-    "title": "Schema de ajutor privind sprijinirea investițiilor în noi capacități de producere a energiei electrice din surse regenerabile pentru autoconsumul întreprinderilor din agricultură și industria alimentară",
-    "tag": "Apel închis – sesiunea s-a încheiat la 14 august 2026",
-    "description": "Sesiunea AFIR Energie 2026 s-a încheiat la 14 august. Vezi regulile pentru autoconsum, fotovoltaice, stocare, studiu de fezabilitate și documente.",
-    "ctaText": "Detalii program →",
-    "ctaLink": "/afir-autoconsum-agroalimentar",
-    "icon": "ph-sun",
-    "image": "/assets/hero/hero-solar.webp",
-    "pageTitle": null,
-    "order": 4,
-    "estimate": null,
-    "active": true,
-    "programStatus": "apel_inchis",
-    "statusLabel": "Apel închis – sesiunea s-a încheiat la 14 august 2026",
-    "verifiedAt": "2026-08-29",
-    "sourceName": "Ministerul Agriculturii și Dezvoltării Rurale / AFIR",
-    "sourceUrl": "https://www.afir.ro/comunicate/265-de-milioane-de-euro-pentru-investitii-in-producerea-energiei-electrice/",
-    "sourceVersion": "Comunicarea AFIR din 09.06.2026 privind sesiunea 15.06–14.08.2026",
-    "applicationStart": "2026-06-15",
-    "applicationEnd": "2026-08-14",
-    "grantSummary": {
-      "minimum": null,
-      "maximum": {
-        "amount": 20000000,
-        "currency": "EUR",
-        "unit": "beneficiar"
-      },
-      "budget": {
-        "amount": 265000000,
-        "currency": "EUR"
-      }
-    },
-    "cofinancingSummary": {
-      "intensity": [
-        {
-          "rate": 100,
-          "scope": "costuri eligibile în limitele costului unitar"
-        }
-      ],
-      "ownContribution": "Diferențele peste costurile unitare și cheltuielile neeligibile."
-    },
-    "fundingSummary": "Valori istorice conform sursei oficiale: 20.000.000 EUR/beneficiar; buget 265.000.000 EUR; intensitate 100% (costuri eligibile în limitele costului unitar); Diferențele peste costurile unitare și cheltuielile neeligibile.",
-    "officialGuideKey": "afir-autoconsum",
-    "sourceOfTruth": "config/seo-programs.json#programs"
-  },
-  {
-    "id": "slide-autoconsum-publici",
-    "programId": "autoconsum-institutii-publice",
-    "title": "Sprijinirea investițiilor în noi capacități de producere și stocare a energiei solare pentru autoconsum – entități publice",
-    "tag": "Depunere programată din 28 septembrie 2026",
-    "description": "PC1 Autoconsum pentru entități publice: buget 500 mil. €, maximum 10 mil. €/beneficiar, până la 100% și depunere din 28.09.2026.",
-    "ctaText": "Detalii program →",
-    "ctaLink": "/autoconsum-public-fotovoltaice-institutii-publice",
-    "icon": "ph-solar-panel",
-    "image": "/assets/hero/hero-solar.webp",
-    "pageTitle": "PC1 Autoconsum 2026 – panouri fotovoltaice cu stocare pentru entități publice",
-    "order": 5,
-    "estimate": null,
-    "active": true,
-    "programStatus": "ghid_aprobat_nedeschis",
-    "statusLabel": "Depunere programată din 28 septembrie 2026",
-    "verifiedAt": "2026-09-13",
-    "sourceName": "Ministerul Energiei / AFIR",
-    "sourceUrl": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-producere-si-stocare-energie-regenerabila-beneficiari-publici/",
-    "sourceVersion": "Ghidul solicitantului și anexele publicate de AFIR la 11.09.2026",
-    "applicationStart": "2026-09-28",
-    "applicationEnd": null,
-    "grantSummary": {
-      "minimum": null,
-      "maximum": {
-        "amount": 10000000,
-        "currency": "EUR",
-        "unit": "beneficiar"
-      },
-      "budget": {
-        "amount": 500000000,
-        "currency": "EUR"
-      }
-    },
-    "cofinancingSummary": {
-      "intensity": [
-        {
-          "rate": 100,
-          "scope": "maximum din cheltuielile eligibile, în limita plafoanelor pe MW instalat"
-        }
-      ],
-      "ownContribution": "Cheltuielile neeligibile, TVA deductibilă și orice depășire a plafoanelor din ghid rămân în sarcina beneficiarului."
-    },
-    "fundingSummary": "Finanțare conform sursei oficiale: 10.000.000 EUR/beneficiar; buget 500.000.000 EUR; intensitate 100% (maximum din cheltuielile eligibile, în limita plafoanelor pe MW instalat); Cheltuielile neeligibile, TVA deductibilă și orice depășire a plafoanelor din ghid rămân în sarcina beneficiarului.",
-    "officialGuideKey": "autoconsum-publici",
-    "sourceOfTruth": "config/seo-programs.json#programs"
-  },
-  {
-    "id": "slide-digitalizare-imm",
-    "programId": "digitalizare-imm",
-    "title": "Digitalizarea IMM-urilor",
-    "tag": "Apel închis – depunerea nu este deschisă",
-    "description": "Digitalizarea IMM-urilor: apel închis, granturi de până la 100.000 € pentru tehnologii digitale. Vezi condițiile și documentele oficiale aplicabile.",
-    "ctaText": "Detalii program",
-    "ctaLink": "/digitalizare-imm",
-    "icon": "ph-desktop",
-    "image": "/assets/hero/hero-digital.webp",
-    "pageTitle": null,
-    "order": 6,
-    "estimate": null,
-    "active": true,
-    "programStatus": "apel_inchis",
-    "statusLabel": "Apel închis – depunerea nu este deschisă",
-    "verifiedAt": "2026-08-29",
-    "sourceName": "Ministerul Investițiilor și Proiectelor Europene",
-    "sourceUrl": "https://mfe.gov.ro/pnrr-ordinul-nr-607-28-04-2026-pentru-modificarea-ghidului-solicitantului-digitalizarea-imm-urilor-grant-de-pana-la-100-000-euro-pe-intreprindere-care-sa-sprijine-imm-urile-in-adoptarea-tehnologii/",
-    "sourceVersion": "Ordinul MIPE nr. 607/28.04.2026; modifică Ghidul aprobat prin Ordinul nr. 3185/2022",
-    "applicationStart": null,
-    "applicationEnd": null,
-    "grantSummary": null,
-    "cofinancingSummary": null,
-    "fundingSummary": null,
-    "officialGuideKey": "digitalizare",
-    "sourceOfTruth": "config/seo-programs.json#programs"
-  },
-  {
-    "id": "slide-femeia-antreprenor",
-    "programId": "femeia-antreprenor",
-    "title": "Femeia Antreprenor 2026 — ediție neconfirmată",
-    "tag": "Apel 2024 închis – este publicată ordinea finală la evaluare",
-    "description": "Femeia Antreprenor 2026 nu are încă o procedură confirmată. Vezi statusul oficial, ce documente poți pregăti și sursa MINIMIS 2024.",
-    "ctaText": "Detalii program →",
-    "ctaLink": "/femeia-antreprenor-2026",
-    "icon": "ph-user-circle",
-    "image": "/assets/hero/hero-business.webp",
-    "pageTitle": null,
-    "order": 7,
-    "estimate": null,
-    "active": true,
-    "programStatus": "apel_inchis",
-    "statusLabel": "Apel 2024 închis – este publicată ordinea finală la evaluare",
-    "verifiedAt": "2026-08-29",
-    "sourceName": "Ministerul Economiei – platforma oficială MINIMIS",
-    "sourceUrl": "https://minimis.imm.gov.ro/fa2024/ordine_evaluare",
-    "sourceVersion": "Femeia Antreprenor 2024 – ordinea finală la evaluare",
-    "applicationStart": null,
-    "applicationEnd": null,
-    "grantSummary": null,
-    "cofinancingSummary": null,
-    "fundingSummary": null,
-    "officialGuideKey": "femeia",
-    "sourceOfTruth": "config/seo-programs.json#programs"
-  },
-  {
-    "id": "slide-pro-infra",
-    "programId": "pro-infra",
-    "title": "Schema de ajutor de stat PRO INFRA",
-    "tag": "Schemă aprobată și modificată – depunerea nu este deschisă",
-    "description": "PRO INFRA: buget 100 mil. €, maximum 15 mil. €/beneficiar și ajutor competitiv de până la 100%. Beneficiari, audit energetic, EMS și stadiul depunerii.",
-    "ctaText": "Detalii program",
-    "ctaLink": "/pro-infra",
-    "icon": "ph-factory",
-    "image": "/assets/hero/hero-solar.webp",
-    "pageTitle": null,
-    "order": 8,
-    "estimate": null,
-    "active": true,
-    "programStatus": "ghid_aprobat_nedeschis",
-    "statusLabel": "Schemă aprobată și modificată – depunerea nu este deschisă",
-    "verifiedAt": "2026-09-06",
-    "sourceName": "Ministerul Transporturilor și Infrastructurii",
-    "sourceUrl": "https://legislatie.just.ro/Public/DetaliiDocument/306916",
-    "sourceVersion": "Schema PRO INFRA consolidată, art. 5, 13 și 16, cu modificările Ordinului nr. 101/12.02.2026",
-    "applicationStart": null,
-    "applicationEnd": null,
-    "grantSummary": {
-      "minimum": null,
-      "maximum": {
-        "amount": 15000000,
-        "currency": "EUR",
-        "unit": "beneficiar"
-      },
-      "budget": {
-        "amount": 100000000,
-        "currency": "EUR"
-      }
-    },
-    "cofinancingSummary": {
-      "intensity": [
-        {
-          "rate": 100,
-          "scope": "maximum din cheltuielile eligibile, prin ofertare concurențială"
-        }
-      ],
-      "ownContribution": "Diferența neacoperită de oferta de ajutor, costurile neeligibile și eventualele depășiri de buget."
-    },
-    "fundingSummary": "Finanțare conform sursei oficiale: 15.000.000 EUR/beneficiar; buget 100.000.000 EUR; intensitate 100% (maximum din cheltuielile eligibile, prin ofertare concurențială); Diferența neacoperită de oferta de ajutor, costurile neeligibile și eventualele depășiri de buget.",
-    "officialGuideKey": "pro-infra",
-    "sourceOfTruth": "config/seo-programs.json#programs"
-  },
-  {
-    "id": "slide-startup-nation",
-    "programId": "start-up-nation",
-    "title": "Programul Start-Up Nation",
-    "tag": "Apel închis – înscrierile persoanelor juridice s-au încheiat la 29 mai 2026, ora 20:00",
-    "description": "Start-Up Nation 2024: apelul pentru persoane juridice s-a închis la 29 mai 2026, ora 20:00. Verifică platforma oficială înaintea unei sesiuni noi.",
-    "ctaText": "Detalii program →",
-    "ctaLink": "/start-up-nation-2026",
-    "icon": "ph-rocket-launch",
-    "image": "/assets/hero/hero-business.webp",
-    "pageTitle": null,
-    "order": 9,
-    "estimate": null,
-    "active": true,
-    "programStatus": "apel_inchis",
-    "statusLabel": "Apel închis – înscrierile persoanelor juridice s-au încheiat la 29 mai 2026, ora 20:00",
-    "verifiedAt": "2026-08-29",
-    "sourceName": "Ministerul Economiei – platforma oficială MINIMIS",
-    "sourceUrl": "https://minimis.imm.gov.ro/sn2024/transparenta_persoane_juridice",
-    "sourceVersion": "Start-Up Nation 2024 – transparența înscrierilor persoanelor juridice; ultima înscriere la 29.05.2026, ora 20:00",
-    "applicationStart": null,
-    "applicationEnd": "2026-05-29",
-    "grantSummary": null,
-    "cofinancingSummary": null,
-    "fundingSummary": null,
-    "officialGuideKey": "startup",
-    "sourceOfTruth": "config/seo-programs.json#programs"
-  },
-  {
-    "id": "slide-micro-apel-2",
-    "programId": "modernizare-microintreprinderi-ne-2",
-    "title": "Investiții pentru modernizarea microîntreprinderilor – Apel 2",
-    "tag": "Apel lansat – depuneri 28 septembrie–28 octombrie 2026",
-    "description": "Modernizarea microîntreprinderilor, Apel 2 Nord-Est: depuneri 28.09–28.10.2026, grant 100.000–300.000 €, CAEN eligibil și simulator de punctaj final.",
-    "ctaText": "Detalii program →",
-    "ctaLink": "/investitii-modernizarea-microintreprinderilor-apel-2",
-    "icon": "ph-buildings",
-    "image": "/assets/hero/hero-local.webp",
-    "pageTitle": null,
-    "order": 10,
-    "estimate": null,
-    "active": true,
-    "programStatus": "ghid_aprobat_nedeschis",
-    "statusLabel": "Apel lansat – depuneri 28 septembrie–28 octombrie 2026",
-    "verifiedAt": "2026-09-06",
-    "sourceName": "Autoritatea de Management pentru Programul Regional Nord-Est",
-    "sourceUrl": "https://regionordest.ro/prioritatea-1/modernizare-microintreprinderi/",
-    "sourceVersion": "Ghidul final și anexele publicate la 27.08.2026; cod apel PR/NE/2026/P1/RSO1.3/2/1",
-    "applicationStart": "2026-09-28",
-    "applicationEnd": "2026-10-28",
-    "grantSummary": {
-      "minimum": {
-        "amount": 100000,
-        "currency": "EUR",
-        "unit": "proiect"
-      },
-      "maximum": {
-        "amount": 300000,
-        "currency": "EUR",
-        "unit": "proiect"
-      },
-      "budget": {
-        "amount": 20370738.4,
-        "currency": "EUR"
-      }
-    },
-    "cofinancingSummary": {
-      "intensity": [
-        {
-          "rate": 90,
-          "scope": "maximum din cheltuielile eligibile"
-        }
-      ],
-      "ownContribution": "Minimum 10% din cheltuielile eligibile, plus toate cheltuielile neeligibile; o contribuție eligibilă mai mare este punctată."
-    },
-    "fundingSummary": "Finanțare conform sursei oficiale: 100.000 EUR/proiect–300.000 EUR/proiect; buget 20.370.738,4 EUR; intensitate 90% (maximum din cheltuielile eligibile); Minimum 10% din cheltuielile eligibile, plus toate cheltuielile neeligibile; o contribuție eligibilă mai mare este punctată.",
-    "officialGuideKey": "por-ne-apel-2",
-    "sourceOfTruth": "config/seo-programs.json#programs"
-  },
-  {
-    "id": "slide-fond-modernizare-regenerabila",
-    "programId": "fondul-modernizare-regenerabile",
-    "title": "Fondul pentru Modernizare – energie regenerabilă",
-    "tag": "Apeluri finalizate în MySMIS – depunerea nu este deschisă",
-    "description": "Fondul pentru Modernizare și energia regenerabilă: solicitant, capacitate, racordare, avize și buget, cu verificarea apelului oficial activ.",
-    "ctaText": "Detalii program →",
-    "ctaLink": "/fondul-modernizare-energie-regenerabila-2026",
-    "icon": "ph-sun",
-    "image": "/assets/hero/hero-solar.webp",
-    "pageTitle": null,
-    "order": 11,
-    "estimate": null,
-    "active": true,
-    "programStatus": "apel_inchis",
-    "statusLabel": "Apeluri finalizate în MySMIS – depunerea nu este deschisă",
-    "verifiedAt": "2026-08-29",
-    "sourceName": "Ministerul Investițiilor și Proiectelor Europene – MySMIS2021",
-    "sourceUrl": "https://resurse.mysmis2021.gov.ro/ords/repo_bo/r/mysmis-2021/finantari-programe-2021-2027",
-    "sourceVersion": "MySMIS2021: apelurile pentru noi capacități din surse regenerabile sunt marcate FINALIZAT",
-    "applicationStart": null,
-    "applicationEnd": null,
-    "grantSummary": null,
-    "cofinancingSummary": null,
-    "fundingSummary": null,
-    "officialGuideKey": "fondul-modernizare-regenerabile",
-    "sourceOfTruth": "config/seo-programs.json#programs"
-  },
-  {
-    "id": "slide-apeluri-gal",
-    "programId": "apeluri-gal",
-    "title": "Apeluri locale LEADER prin Grupuri de Acțiune Locală",
-    "tag": "Apeluri locale active – statutul și termenul se verifică pentru fiecare GAL",
-    "description": "Platforma AFIR publică apeluri GAL active. Verifică teritoriul, intervenția, beneficiarul și termenul direct în apelul local oficial.",
-    "ctaText": "Detalii GAL →",
-    "ctaLink": "/apeluri-gal",
-    "icon": "ph-map-pin",
-    "image": "/assets/hero/hero-local.webp",
-    "pageTitle": null,
-    "order": 12,
-    "estimate": null,
-    "active": true,
-    "programStatus": "calendar_estimativ",
-    "statusLabel": "Apeluri locale active – statutul și termenul se verifică pentru fiecare GAL",
-    "verifiedAt": "2026-08-29",
-    "sourceName": "Platforma oficială AFIR pentru Grupurile de Acțiune Locală",
-    "sourceUrl": "https://gal.afir.ro/",
-    "sourceVersion": "Platforma AFIR GAL publică apeluri locale cu termene distincte; verificat la 29.08.2026",
-    "applicationStart": null,
-    "applicationEnd": null,
-    "grantSummary": null,
-    "cofinancingSummary": null,
-    "fundingSummary": null,
-    "officialGuideKey": "dr36-leader",
-    "sourceOfTruth": "config/seo-programs.json#programs"
-  },
-  {
-    "id": "slide-e-move",
-    "programId": "e-move-ro",
-    "title": "Programul e-MOVE RO",
-    "tag": "Schemă actualizată – depunerea nu este deschisă",
-    "description": "e-MOVE RO: schema actualizată pentru infrastructură de încărcare, energie și stocare; depunerea nu este deschisă.",
-    "ctaText": "Detalii e-MOVE →",
-    "ctaLink": "/e-move",
-    "icon": "ph-battery-charging",
-    "image": "/assets/hero/hero-solar.webp",
-    "pageTitle": null,
-    "order": 13,
-    "estimate": null,
-    "active": true,
-    "programStatus": "ghid_aprobat_nedeschis",
-    "statusLabel": "Schemă actualizată – depunerea nu este deschisă",
-    "verifiedAt": "2026-08-29",
-    "sourceName": "Ministerul Transporturilor și Infrastructurii / Portal Legislativ",
-    "sourceUrl": "https://legislatie.just.ro/Public/DetaliiDocument/313320",
-    "sourceVersion": "Ordinul MTI nr. 755/06.08.2026 pentru actualizarea schemei e-MOVE RO, în vigoare din 10.08.2026",
-    "applicationStart": null,
-    "applicationEnd": null,
-    "grantSummary": {
-      "minimum": null,
-      "maximum": {
-        "amount": 25000000,
-        "currency": "EUR",
-        "unit": "beneficiar"
-      },
-      "budget": null
-    },
-    "cofinancingSummary": {
-      "intensity": [
-        {
-          "rate": 100,
-          "scope": "maximum, în condițiile schemei actualizate și ale procedurii competitive"
-        }
-      ],
-      "ownContribution": "Diferența față de ajutorul aplicabil și cheltuielile neeligibile."
-    },
-    "fundingSummary": "Finanțare conform sursei oficiale: 25.000.000 EUR/beneficiar; intensitate 100% (maximum, în condițiile schemei actualizate și ale procedurii competitive); Diferența față de ajutorul aplicabil și cheltuielile neeligibile.",
-    "officialGuideKey": "emove",
-    "sourceOfTruth": "config/seo-programs.json#programs"
-  },
-  {
-    "id": "slide-gal-afir",
-    "programId": "gal-afir-leader",
-    "title": "GAL AFIR / DR-36 prin Grupuri de Acțiune Locală",
-    "tag": "Apelurile și termenele se verifică separat pentru fiecare GAL",
-    "description": "Verifică GAL-ul competent, apelul local DR-36, teritoriul, beneficiarul, documentele și termenul direct în platforma oficială AFIR GAL.",
-    "ctaText": "Detalii GAL-AFIR →",
-    "ctaLink": "/gal-afir",
-    "icon": "ph-map-pin",
-    "image": "/assets/hero/hero-local.webp",
-    "pageTitle": null,
-    "order": 14,
-    "estimate": null,
-    "active": true,
-    "programStatus": "calendar_estimativ",
-    "statusLabel": "Apelurile și termenele se verifică separat pentru fiecare GAL",
-    "verifiedAt": "2026-08-29",
-    "sourceName": "Platforma oficială AFIR pentru Grupurile de Acțiune Locală",
-    "sourceUrl": "https://gal.afir.ro/",
-    "sourceVersion": "Platforma AFIR GAL publică apeluri locale cu termene distincte; verificat la 29.08.2026",
-    "applicationStart": null,
-    "applicationEnd": null,
-    "grantSummary": null,
-    "cofinancingSummary": null,
-    "fundingSummary": null,
-    "officialGuideKey": "leader-gal",
-    "sourceOfTruth": "config/seo-programs.json#programs"
-  },
-  {
-    "id": "slide-fondul-modernizare-autoconsum",
-    "programId": "fondul-modernizare-autoconsum",
-    "title": "Fondul pentru Modernizare – energie și autoconsum",
-    "tag": "Apeluri finalizate în MySMIS – depunerea nu este deschisă",
-    "description": "Proiecte de energie și autoconsum prin Fondul pentru Modernizare: consum, capacitate, racordare, avize, buget și documente oficiale.",
-    "ctaText": "Detalii program",
-    "ctaLink": "/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum",
-    "icon": "ph-solar-panel",
-    "image": "/assets/hero/hero-solar.webp",
-    "pageTitle": null,
-    "order": 15,
-    "estimate": null,
-    "active": true,
-    "programStatus": "apel_inchis",
-    "statusLabel": "Apeluri finalizate în MySMIS – depunerea nu este deschisă",
-    "verifiedAt": "2026-08-29",
-    "sourceName": "Ministerul Investițiilor și Proiectelor Europene – MySMIS2021",
-    "sourceUrl": "https://resurse.mysmis2021.gov.ro/ords/repo_bo/r/mysmis-2021/finantari-programe-2021-2027",
-    "sourceVersion": "MySMIS2021: apelurile pentru capacități regenerabile destinate autoconsumului sunt marcate FINALIZAT",
-    "applicationStart": null,
-    "applicationEnd": null,
-    "grantSummary": null,
-    "cofinancingSummary": null,
-    "fundingSummary": null,
-    "officialGuideKey": "fondul-modernizare",
-    "sourceOfTruth": "config/seo-programs.json#programs"
-  },
-  {
     "id": "slide-diaspora-investeste-acasa",
     "programId": "diaspora-investeste-acasa",
     "title": "Diaspora Investește Acasă",
@@ -588,7 +250,7 @@
     "icon": "ph-house-line",
     "image": "/assets/hero/hero-local.webp",
     "pageTitle": null,
-    "order": 16,
+    "order": 6,
     "estimate": null,
     "active": true,
     "programStatus": "ghid_aprobat_nedeschis",
@@ -625,100 +287,6 @@
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
   {
-    "id": "slide-e-drive",
-    "programId": "e-drive",
-    "title": "Programul e-DRIVE",
-    "tag": "Schemă actualizată – depunerea nu este deschisă",
-    "description": "e-DRIVE: până la 30.000 €/vehicul M1 pentru IMM-uri, plafon de minimis 300.000 € și măsură separată pentru transportatori. Condiții și stadiul lansării.",
-    "ctaText": "Detalii program",
-    "ctaLink": "/e-drive",
-    "icon": "ph-bus",
-    "image": "/assets/hero/hero-solar.webp",
-    "pageTitle": null,
-    "order": 17,
-    "estimate": null,
-    "active": true,
-    "programStatus": "ghid_aprobat_nedeschis",
-    "statusLabel": "Schemă actualizată – depunerea nu este deschisă",
-    "verifiedAt": "2026-09-06",
-    "sourceName": "Ministerul Transporturilor și Infrastructurii / Portal Legislativ",
-    "sourceUrl": "https://legislatie.just.ro/Public/DetaliiDocument/313289",
-    "sourceVersion": "Ordinul MTI nr. 742/03.08.2026 pentru actualizarea schemei e-DRIVE, în vigoare din 07.08.2026",
-    "applicationStart": null,
-    "applicationEnd": null,
-    "grantSummary": {
-      "minimum": null,
-      "maximum": {
-        "amount": 4000000,
-        "currency": "EUR",
-        "unit": "beneficiar, în cadrul măsurii competitive"
-      },
-      "budget": {
-        "amount": 56900000,
-        "currency": "EUR"
-      }
-    },
-    "cofinancingSummary": {
-      "intensity": [
-        {
-          "rate": 100,
-          "scope": "maximum, în limitele schemei și ale costului eligibil aplicabil"
-        }
-      ],
-      "ownContribution": "Diferența neacoperită de ajutor, costurile neeligibile și orice diferență față de costul de referință aplicabil."
-    },
-    "fundingSummary": "Finanțare conform sursei oficiale: 4.000.000 EUR/beneficiar, în cadrul măsurii competitive; buget 56.900.000 EUR; intensitate 100% (maximum, în limitele schemei și ale costului eligibil aplicabil); Diferența neacoperită de ajutor, costurile neeligibile și orice diferență față de costul de referință aplicabil.",
-    "officialGuideKey": "e-drive",
-    "sourceOfTruth": "config/seo-programs.json#programs"
-  },
-  {
-    "id": "slide-e-mobility-ro",
-    "programId": "e-mobility-ro",
-    "title": "Programul e-Mobility RO",
-    "tag": "Schemă actualizată – depunerea nu este deschisă",
-    "description": "e-Mobility RO: buget 299 mil. €, maximum 30 mil. €/beneficiar pentru stații de încărcare pe rețeaua rutieră eligibilă. Condiții și stadiu.",
-    "ctaText": "Detalii program",
-    "ctaLink": "/e-mobility",
-    "icon": "ph-charging-station",
-    "image": "/assets/hero/hero-solar.webp",
-    "pageTitle": null,
-    "order": 18,
-    "estimate": null,
-    "active": true,
-    "programStatus": "ghid_aprobat_nedeschis",
-    "statusLabel": "Schemă actualizată – depunerea nu este deschisă",
-    "verifiedAt": "2026-09-06",
-    "sourceName": "Ministerul Transporturilor și Infrastructurii / Portal Legislativ",
-    "sourceUrl": "https://legislatie.just.ro/Public/DetaliiDocument/313291",
-    "sourceVersion": "Ordinul MTI nr. 746/05.08.2026 pentru actualizarea schemei e-Mobility RO, în vigoare din 07.08.2026",
-    "applicationStart": null,
-    "applicationEnd": null,
-    "grantSummary": {
-      "minimum": null,
-      "maximum": {
-        "amount": 30000000,
-        "currency": "EUR",
-        "unit": "beneficiar"
-      },
-      "budget": {
-        "amount": 299000000,
-        "currency": "EUR"
-      }
-    },
-    "cofinancingSummary": {
-      "intensity": [
-        {
-          "rate": 100,
-          "scope": "maximum posibil prin procedura competitivă, în condițiile schemei"
-        }
-      ],
-      "ownContribution": "Diferența rezultată din oferta competitivă, costurile neeligibile și eventualele depășiri ale limitelor aplicabile."
-    },
-    "fundingSummary": "Finanțare conform sursei oficiale: 30.000.000 EUR/beneficiar; buget 299.000.000 EUR; intensitate 100% (maximum posibil prin procedura competitivă, în condițiile schemei); Diferența rezultată din oferta competitivă, costurile neeligibile și eventualele depășiri ale limitelor aplicabile.",
-    "officialGuideKey": "e-mobility-ro",
-    "sourceOfTruth": "config/seo-programs.json#programs"
-  },
-  {
     "id": "slide-fondul-modernizare-pc1-stocare",
     "programId": "fondul-modernizare-pc1-stocare",
     "title": "Fondul pentru Modernizare – PC1 Stocare stand-alone",
@@ -729,7 +297,7 @@
     "icon": "ph-battery-high",
     "image": "/assets/hero/hero-solar.webp",
     "pageTitle": null,
-    "order": 19,
+    "order": 7,
     "estimate": null,
     "active": true,
     "programStatus": "ghid_aprobat_nedeschis",
@@ -766,6 +334,100 @@
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
   {
+    "id": "slide-fondul-modernizare-pc1-stocare-entitati-publice",
+    "programId": "fondul-modernizare-pc1-stocare-entitati-publice",
+    "title": "Sprijinirea investițiilor în noi capacități de stocare a energiei regenerabile – entități publice",
+    "tag": "Depuneri programate: 28 septembrie–20 noiembrie 2026",
+    "description": "PC1 Stocare entități publice: până la 10 mil. EUR, 100% din eligibil. Depuneri 28.09–20.11.2026. Beneficiari, condiții și documente oficiale.",
+    "ctaText": "Detalii program",
+    "ctaLink": "/fondul-modernizare-pc1-stocare-entitati-publice",
+    "icon": "ph-battery-charging",
+    "image": "/assets/hero/hero-solar.webp",
+    "pageTitle": null,
+    "order": 8,
+    "estimate": null,
+    "active": true,
+    "programStatus": "ghid_aprobat_nedeschis",
+    "statusLabel": "Depuneri programate: 28 septembrie–20 noiembrie 2026",
+    "verifiedAt": "2026-09-13",
+    "sourceName": "Ministerul Energiei / AFIR",
+    "sourceUrl": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-stocare-energie-regenerabila-beneficiari-publici/",
+    "sourceVersion": "Ghidul solicitantului și anexele publicate de AFIR la 11.09.2026",
+    "applicationStart": "2026-09-28",
+    "applicationEnd": "2026-11-20",
+    "grantSummary": {
+      "minimum": null,
+      "maximum": {
+        "amount": 10000000,
+        "currency": "EUR",
+        "unit": "beneficiar"
+      },
+      "budget": {
+        "amount": 150000000,
+        "currency": "EUR"
+      }
+    },
+    "cofinancingSummary": {
+      "intensity": [
+        {
+          "rate": 100,
+          "scope": "maximum din cheltuielile eligibile, conform ghidului"
+        }
+      ],
+      "ownContribution": "Cheltuielile neeligibile, TVA deductibilă și orice depășire a plafonului rămân în sarcina beneficiarului."
+    },
+    "fundingSummary": "Finanțare conform sursei oficiale: 10.000.000 EUR/beneficiar; buget 150.000.000 EUR; intensitate 100% (maximum din cheltuielile eligibile, conform ghidului); Cheltuielile neeligibile, TVA deductibilă și orice depășire a plafonului rămân în sarcina beneficiarului.",
+    "officialGuideKey": "fm-pc1-stocare-publici",
+    "sourceOfTruth": "config/seo-programs.json#programs"
+  },
+  {
+    "id": "slide-pro-infra",
+    "programId": "pro-infra",
+    "title": "Schema de ajutor de stat PRO INFRA",
+    "tag": "Schemă aprobată și modificată – depunerea nu este deschisă",
+    "description": "PRO INFRA: buget 100 mil. €, maximum 15 mil. €/beneficiar și ajutor competitiv de până la 100%. Beneficiari, audit energetic, EMS și stadiul depunerii.",
+    "ctaText": "Detalii program",
+    "ctaLink": "/pro-infra",
+    "icon": "ph-factory",
+    "image": "/assets/hero/hero-solar.webp",
+    "pageTitle": null,
+    "order": 9,
+    "estimate": null,
+    "active": true,
+    "programStatus": "ghid_aprobat_nedeschis",
+    "statusLabel": "Schemă aprobată și modificată – depunerea nu este deschisă",
+    "verifiedAt": "2026-09-06",
+    "sourceName": "Ministerul Transporturilor și Infrastructurii",
+    "sourceUrl": "https://legislatie.just.ro/Public/DetaliiDocument/306916",
+    "sourceVersion": "Schema PRO INFRA consolidată, art. 5, 13 și 16, cu modificările Ordinului nr. 101/12.02.2026",
+    "applicationStart": null,
+    "applicationEnd": null,
+    "grantSummary": {
+      "minimum": null,
+      "maximum": {
+        "amount": 15000000,
+        "currency": "EUR",
+        "unit": "beneficiar"
+      },
+      "budget": {
+        "amount": 100000000,
+        "currency": "EUR"
+      }
+    },
+    "cofinancingSummary": {
+      "intensity": [
+        {
+          "rate": 100,
+          "scope": "maximum din cheltuielile eligibile, prin ofertare concurențială"
+        }
+      ],
+      "ownContribution": "Diferența neacoperită de oferta de ajutor, costurile neeligibile și eventualele depășiri de buget."
+    },
+    "fundingSummary": "Finanțare conform sursei oficiale: 15.000.000 EUR/beneficiar; buget 100.000.000 EUR; intensitate 100% (maximum din cheltuielile eligibile, prin ofertare concurențială); Diferența neacoperită de oferta de ajutor, costurile neeligibile și eventualele depășiri de buget.",
+    "officialGuideKey": "pro-infra",
+    "sourceOfTruth": "config/seo-programs.json#programs"
+  },
+  {
     "id": "slide-pocidif-21",
     "programId": "pocidif-21",
     "title": "PoCIDIF – Acțiunea 2.1 Dezvoltarea de noi servicii, aplicații și produse prin inovare și adoptarea de tehnologii avansate",
@@ -776,7 +438,7 @@
     "icon": "ph-duotone ph-circuitry",
     "image": "/assets/hero/hero-digital.webp",
     "pageTitle": null,
-    "order": 20,
+    "order": 10,
     "estimate": null,
     "active": true,
     "programStatus": "apel_deschis",
@@ -826,120 +488,131 @@
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
   {
-    "id": "slide-pnrr",
-    "programId": "pnrr",
-    "title": "Planul Național de Redresare și Reziliență",
-    "tag": "Program în implementare – statutul se verifică pentru fiecare componentă și apel",
-    "description": "PNRR este în implementare. Verifică statutul fiecărei componente și al fiecărui apel în tabloul de bord oficial înainte de pregătirea proiectului.",
+    "id": "slide-dr18-afir",
+    "programId": "dr18-afir",
+    "title": "DR-18 Investiții în floricultură, plante medicinale și aromatice",
+    "tag": "Sesiune deschisă – depuneri 1 septembrie–31 octombrie 2026",
+    "description": "DR 18 AFIR 2026: ghid final, depuneri 1 septembrie–31 octombrie, buget 5 mil. €, maximum 100.000 €, intensitate 85%/65% și punctaj.",
     "ctaText": "Detalii program",
-    "ctaLink": "/pnrr",
-    "icon": "ph-chart-line-up",
-    "image": "/assets/hero/hero-digital.webp",
-    "pageTitle": null,
-    "order": 21,
+    "ctaLink": "/dr18",
+    "icon": "ph-flower-lotus",
+    "image": "/assets/hero/hero-agriculture.webp",
+    "pageTitle": "DR 18 AFIR 2026 – investiții în floricultură, plante medicinale și aromatice",
+    "order": 11,
     "estimate": null,
     "active": true,
-    "programStatus": "calendar_estimativ",
-    "statusLabel": "Program în implementare – statutul se verifică pentru fiecare componentă și apel",
-    "verifiedAt": "2026-09-10",
-    "sourceName": "Ministerul Investițiilor și Proiectelor Europene – tabloul de bord PNRR",
-    "sourceUrl": "https://pnrr.fonduri-ue.ro/ords/pnrr/r/dashboard-status-pnrr/home",
-    "sourceVersion": "Tabloul de bord oficial PNRR; program în implementare, cu situație distinctă pe componente și apeluri",
-    "applicationStart": null,
-    "applicationEnd": null,
-    "grantSummary": null,
-    "cofinancingSummary": null,
-    "fundingSummary": null,
-    "officialGuideKey": "pnrr-dashboard",
+    "programStatus": "apel_deschis",
+    "statusLabel": "Sesiune deschisă – depuneri 1 septembrie–31 octombrie 2026",
+    "verifiedAt": "2026-09-06",
+    "sourceName": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
+    "sourceUrl": "https://www.afir.ro/instrumente/sesiuni/sesiuni-primire-proiecte/",
+    "sourceVersion": "Anunțul A1.2/01/2026 pentru sesiunea DR 18, publicat la 14.08.2026",
+    "applicationStart": "2026-09-01",
+    "applicationEnd": "2026-10-31",
+    "grantSummary": {
+      "minimum": null,
+      "maximum": {
+        "amount": 100000,
+        "currency": "EUR",
+        "unit": "proiect"
+      },
+      "budget": {
+        "amount": 5000000,
+        "currency": "EUR"
+      }
+    },
+    "cofinancingSummary": {
+      "intensity": [
+        {
+          "rate": 85,
+          "scope": "maximum pentru exploatații de 2.000–11.999 SO"
+        },
+        {
+          "rate": 65,
+          "scope": "maximum pentru exploatații de minimum 12.000 SO"
+        }
+      ],
+      "ownContribution": "Beneficiarul acoperă diferența eligibilă, cheltuielile neeligibile, TVA potrivit regimului fiscal și orice depășire de cost."
+    },
+    "fundingSummary": "Finanțare conform sursei oficiale: 100.000 EUR/proiect; buget 5.000.000 EUR; intensitate 85% (maximum pentru exploatații de 2.000–11.999 SO) / 65% (maximum pentru exploatații de minimum 12.000 SO); Beneficiarul acoperă diferența eligibilă, cheltuielile neeligibile, TVA potrivit regimului fiscal și orice depășire de cost.",
+    "officialGuideKey": "dr18",
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
   {
-    "id": "slide-programul-tranzitie-justa",
-    "programId": "programul-tranzitie-justa",
-    "title": "Programul Tranziție Justă",
-    "tag": "Program în implementare – statutul se verifică pentru fiecare apel în MySMIS",
-    "description": "Programul Tranziție Justă este în implementare. Verifică în MySMIS2021 statutul apelului, județul, beneficiarii și perioada de depunere.",
-    "ctaText": "Detalii program",
-    "ctaLink": "/programul-tranzitie-justa",
-    "icon": "ph-factory",
-    "image": "/assets/hero/hero-local.webp",
-    "pageTitle": null,
-    "order": 22,
-    "estimate": null,
-    "active": true,
-    "programStatus": "calendar_estimativ",
-    "statusLabel": "Program în implementare – statutul se verifică pentru fiecare apel în MySMIS",
-    "verifiedAt": "2026-09-10",
-    "sourceName": "Ministerul Investițiilor și Proiectelor Europene – MySMIS2021",
-    "sourceUrl": "https://resurse.mysmis2021.gov.ro/ords/repo_bo/r/mysmis-2021/finantari-programe-2021-2027",
-    "sourceVersion": "Catalogul oficial al finanțărilor 2021–2027; apelurile sunt afișate în cadrul Programului Dezvoltare Durabilă și Tranziție Justă (fost PTJ), cu statut distinct pentru fiecare apel",
-    "applicationStart": null,
-    "applicationEnd": null,
-    "grantSummary": null,
-    "cofinancingSummary": null,
-    "fundingSummary": null,
-    "officialGuideKey": "ptj-mysmis",
-    "sourceOfTruth": "config/seo-programs.json#programs"
-  },
-  {
-    "id": "slide-fondul-de-modernizare",
-    "programId": "fondul-de-modernizare",
-    "title": "Fondul pentru Modernizare",
-    "tag": "Program în implementare – statutul se verifică pentru fiecare apel în MySMIS",
-    "description": "Fondul pentru Modernizare este în implementare. Verifică în MySMIS2021 statutul, beneficiarii și perioada fiecărui apel de energie.",
-    "ctaText": "Detalii program",
-    "ctaLink": "/fondul-de-modernizare",
-    "icon": "ph-sun",
-    "image": "/assets/hero/hero-solar.webp",
-    "pageTitle": null,
-    "order": 23,
-    "estimate": null,
-    "active": true,
-    "programStatus": "calendar_estimativ",
-    "statusLabel": "Program în implementare – statutul se verifică pentru fiecare apel în MySMIS",
-    "verifiedAt": "2026-09-10",
-    "sourceName": "Ministerul Investițiilor și Proiectelor Europene – MySMIS2021",
-    "sourceUrl": "https://resurse.mysmis2021.gov.ro/ords/repo_bo/r/mysmis-2021/finantari-programe-2021-2027",
-    "sourceVersion": "Catalogul oficial al finanțărilor 2021–2027; Fondul pentru Modernizare are statut distinct pentru fiecare apel",
-    "applicationStart": null,
-    "applicationEnd": null,
-    "grantSummary": null,
-    "cofinancingSummary": null,
-    "fundingSummary": null,
-    "officialGuideKey": "fondul-modernizare-mysmis",
-    "sourceOfTruth": "config/seo-programs.json#programs"
-  },
-  {
-    "id": "slide-fondul-modernizare-pc1-stocare-entitati-publice",
-    "programId": "fondul-modernizare-pc1-stocare-entitati-publice",
-    "title": "Sprijinirea investițiilor în noi capacități de stocare a energiei regenerabile – entități publice",
-    "tag": "Depunere programată din 28 septembrie 2026",
-    "description": "PC1 Stocare pentru entități publice: buget 150 mil. €, maximum 10 mil. €/beneficiar, până la 100% și depunere din 28.09.2026.",
-    "ctaText": "Detalii program",
-    "ctaLink": "/fondul-modernizare-pc1-stocare-entitati-publice",
+    "id": "slide-e-move",
+    "programId": "e-move-ro",
+    "title": "Programul e-MOVE RO",
+    "tag": "Schemă actualizată – depunerea nu este deschisă",
+    "description": "e-MOVE RO: schema actualizată pentru infrastructură de încărcare, energie și stocare; depunerea nu este deschisă.",
+    "ctaText": "Detalii e-MOVE →",
+    "ctaLink": "/e-move",
     "icon": "ph-battery-charging",
     "image": "/assets/hero/hero-solar.webp",
     "pageTitle": null,
-    "order": 24,
+    "order": 12,
     "estimate": null,
     "active": true,
     "programStatus": "ghid_aprobat_nedeschis",
-    "statusLabel": "Depunere programată din 28 septembrie 2026",
-    "verifiedAt": "2026-09-13",
-    "sourceName": "Ministerul Energiei / AFIR",
-    "sourceUrl": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-stocare-energie-regenerabila-beneficiari-publici/",
-    "sourceVersion": "Ghidul solicitantului și anexele publicate de AFIR la 11.09.2026",
-    "applicationStart": "2026-09-28",
+    "statusLabel": "Schemă actualizată – depunerea nu este deschisă",
+    "verifiedAt": "2026-08-29",
+    "sourceName": "Ministerul Transporturilor și Infrastructurii / Portal Legislativ",
+    "sourceUrl": "https://legislatie.just.ro/Public/DetaliiDocument/313320",
+    "sourceVersion": "Ordinul MTI nr. 755/06.08.2026 pentru actualizarea schemei e-MOVE RO, în vigoare din 10.08.2026",
+    "applicationStart": null,
     "applicationEnd": null,
     "grantSummary": {
       "minimum": null,
       "maximum": {
-        "amount": 10000000,
+        "amount": 25000000,
+        "currency": "EUR",
+        "unit": "beneficiar"
+      },
+      "budget": null
+    },
+    "cofinancingSummary": {
+      "intensity": [
+        {
+          "rate": 100,
+          "scope": "maximum, în condițiile schemei actualizate și ale procedurii competitive"
+        }
+      ],
+      "ownContribution": "Diferența față de ajutorul aplicabil și cheltuielile neeligibile."
+    },
+    "fundingSummary": "Finanțare conform sursei oficiale: 25.000.000 EUR/beneficiar; intensitate 100% (maximum, în condițiile schemei actualizate și ale procedurii competitive); Diferența față de ajutorul aplicabil și cheltuielile neeligibile.",
+    "officialGuideKey": "emove",
+    "sourceOfTruth": "config/seo-programs.json#programs"
+  },
+  {
+    "id": "slide-e-mobility-ro",
+    "programId": "e-mobility-ro",
+    "title": "Programul e-Mobility RO",
+    "tag": "Schemă actualizată – depunerea nu este deschisă",
+    "description": "e-Mobility RO: buget 299 mil. €, maximum 30 mil. €/beneficiar pentru stații de încărcare pe rețeaua rutieră eligibilă. Condiții și stadiu.",
+    "ctaText": "Detalii program",
+    "ctaLink": "/e-mobility",
+    "icon": "ph-charging-station",
+    "image": "/assets/hero/hero-solar.webp",
+    "pageTitle": null,
+    "order": 13,
+    "estimate": null,
+    "active": true,
+    "programStatus": "ghid_aprobat_nedeschis",
+    "statusLabel": "Schemă actualizată – depunerea nu este deschisă",
+    "verifiedAt": "2026-09-06",
+    "sourceName": "Ministerul Transporturilor și Infrastructurii / Portal Legislativ",
+    "sourceUrl": "https://legislatie.just.ro/Public/DetaliiDocument/313291",
+    "sourceVersion": "Ordinul MTI nr. 746/05.08.2026 pentru actualizarea schemei e-Mobility RO, în vigoare din 07.08.2026",
+    "applicationStart": null,
+    "applicationEnd": null,
+    "grantSummary": {
+      "minimum": null,
+      "maximum": {
+        "amount": 30000000,
         "currency": "EUR",
         "unit": "beneficiar"
       },
       "budget": {
-        "amount": 150000000,
+        "amount": 299000000,
         "currency": "EUR"
       }
     },
@@ -947,13 +620,41 @@
       "intensity": [
         {
           "rate": 100,
-          "scope": "maximum din cheltuielile eligibile, conform ghidului"
+          "scope": "maximum posibil prin procedura competitivă, în condițiile schemei"
         }
       ],
-      "ownContribution": "Cheltuielile neeligibile, TVA deductibilă și orice depășire a plafonului rămân în sarcina beneficiarului."
+      "ownContribution": "Diferența rezultată din oferta competitivă, costurile neeligibile și eventualele depășiri ale limitelor aplicabile."
     },
-    "fundingSummary": "Finanțare conform sursei oficiale: 10.000.000 EUR/beneficiar; buget 150.000.000 EUR; intensitate 100% (maximum din cheltuielile eligibile, conform ghidului); Cheltuielile neeligibile, TVA deductibilă și orice depășire a plafonului rămân în sarcina beneficiarului.",
-    "officialGuideKey": "fm-pc1-stocare-publici",
+    "fundingSummary": "Finanțare conform sursei oficiale: 30.000.000 EUR/beneficiar; buget 299.000.000 EUR; intensitate 100% (maximum posibil prin procedura competitivă, în condițiile schemei); Diferența rezultată din oferta competitivă, costurile neeligibile și eventualele depășiri ale limitelor aplicabile.",
+    "officialGuideKey": "e-mobility-ro",
+    "sourceOfTruth": "config/seo-programs.json#programs"
+  },
+  {
+    "id": "slide-digitalizare-imm",
+    "programId": "digitalizare-imm",
+    "title": "Digitalizarea IMM-urilor",
+    "tag": "Apel închis – depunerea nu este deschisă",
+    "description": "Digitalizarea IMM-urilor: apel închis, granturi de până la 100.000 € pentru tehnologii digitale. Vezi condițiile și documentele oficiale aplicabile.",
+    "ctaText": "Detalii program",
+    "ctaLink": "/digitalizare-imm",
+    "icon": "ph-desktop",
+    "image": "/assets/hero/hero-digital.webp",
+    "pageTitle": null,
+    "order": 14,
+    "estimate": null,
+    "active": true,
+    "programStatus": "apel_inchis",
+    "statusLabel": "Apel închis – depunerea nu este deschisă",
+    "verifiedAt": "2026-08-29",
+    "sourceName": "Ministerul Investițiilor și Proiectelor Europene",
+    "sourceUrl": "https://mfe.gov.ro/pnrr-ordinul-nr-607-28-04-2026-pentru-modificarea-ghidului-solicitantului-digitalizarea-imm-urilor-grant-de-pana-la-100-000-euro-pe-intreprindere-care-sa-sprijine-imm-urile-in-adoptarea-tehnologii/",
+    "sourceVersion": "Ordinul MIPE nr. 607/28.04.2026; modifică Ghidul aprobat prin Ordinul nr. 3185/2022",
+    "applicationStart": null,
+    "applicationEnd": null,
+    "grantSummary": null,
+    "cofinancingSummary": null,
+    "fundingSummary": null,
+    "officialGuideKey": "digitalizare",
     "sourceOfTruth": "config/seo-programs.json#programs"
   }
 ]

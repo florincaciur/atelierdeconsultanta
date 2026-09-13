@@ -2,6 +2,7 @@
 
 const fs = require("fs");
 const path = require("path");
+const { sceneArtwork } = require("./hero-program-scenes");
 const { carouselPrograms, isPublicProgram, loadProgramConfig } = require("./program-factual-governance");
 
 const ROOT = path.resolve(__dirname, "..");
@@ -14,7 +15,7 @@ const PRIORITY_END = "<!-- P1_08_PRIORITY_CAROUSEL_END -->";
 const GRID_START = "<!-- P1_08_PROGRAM_GRID_START -->";
 const GRID_END = "<!-- P1_08_PROGRAM_GRID_END -->";
 const COMPACT_HOME_START = "<!-- P1_21_HOMEPAGE_FLOW_START -->";
-const CSS_LINK = '<link rel="stylesheet" href="/assets/homepage-program-explorer.css?v=20260809-2" data-homepage-program-explorer-style="p1_08">';
+const CSS_LINK = '<link rel="stylesheet" href="/assets/homepage-program-explorer.css?v=20260913-2" data-homepage-program-explorer-style="p1_08">';
 const JS_LINK = '<script src="/assets/homepage-program-explorer.js?v=20260809-2" defer data-homepage-program-explorer-script="p1_08"></script>';
 const MONTHS = ["ianuarie", "februarie", "martie", "aprilie", "mai", "iunie", "iulie", "august", "septembrie", "octombrie", "noiembrie", "decembrie"];
 const STATUS_FILTER_LABELS = {
@@ -74,6 +75,7 @@ function renderPrioritySlide(program, index, total) {
             <p>${esc(program.cardSummary)}</p>
             <p class="priority-program-date">Verificat la <time datetime="${esc(program.verifiedAt)}">${formatDateRo(program.verifiedAt)}</time>.</p>
             <a class="priority-program-link" href="${esc(program.pageUrl)}"${active ? "" : ' tabindex="-1"'} data-analytics-event="program_card_click" data-analytics-cta-id="priority_program_${esc(program.slug)}" data-analytics-program-slug="${esc(program.slug)}" data-analytics-program-family="${esc(program.family)}" data-analytics-target="${esc(program.pageUrl)}">Vezi condițiile</a>
+            <div class="priority-program-art" aria-hidden="true" data-priority-art="${esc(program.id)}"><div class="hero-program-scene is-active"><svg viewBox="0 0 420 270" focusable="false"><ellipse class="pv-shadow" cx="213" cy="231" rx="142" ry="18"/><path class="pv-platform" d="m55 216 149-51 158 51-150 48Z"/>${sceneArtwork(program)}</svg></div></div>
           </div>`;
 }
 
@@ -89,7 +91,7 @@ function renderPriorityCarousel(programs) {
     <section id="priority-programs" aria-labelledby="priority-programs-title">
       <div class="program-explorer-header">
         <span class="section-label">Catalog public</span>
-        <h2 id="priority-programs-title">Toate programele de finanțare urmărite</h2>
+        <h2 id="priority-programs-title">Programe de finanțare prioritare</h2>
         <p>Compară programele după scopul investiției și statutul depunerii. Pe pagina fiecărui program găsești condițiile, data verificării și sursa oficială.</p>
       </div>
       <div class="priority-program-carousel" data-priority-carousel data-carousel-count="${total}">

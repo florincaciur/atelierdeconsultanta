@@ -31,8 +31,8 @@ function verifyHomepageContent(actual, expected) {
     if (!actual.includes(marker)) throw new Error(`Homepage: lipsește ${marker}.`);
   }
   const scenes = html => [...html.matchAll(/data-program-scene="([^"]+)"/gu)].map(match => match[1]);
-  if (scenes(actual).length !== 10 || new Set(scenes(actual)).size !== 10 || JSON.stringify(scenes(actual)) !== JSON.stringify(scenes(expected))) {
-    throw new Error("Homepage: cele zece ilustrații de programe nu corespund versiunii imersive.");
+  if (scenes(actual).length !== scenes(expected).length || new Set(scenes(actual)).size !== scenes(expected).length || JSON.stringify(scenes(actual)) !== JSON.stringify(scenes(expected))) {
+    throw new Error("Homepage: ilustrațiile de programe nu corespund versiunii imersive.");
   }
   const criticalStyle = (html) => html.match(/<style\b[^>]*id=["']homepage-hero-critical-css["'][^>]*>([\s\S]*?)<\/style>/iu)?.[1]?.trim();
   if (!criticalStyle(actual) || assetDigest(criticalStyle(actual)) !== assetDigest(criticalStyle(expected))) {

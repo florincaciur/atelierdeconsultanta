@@ -18,7 +18,7 @@ const TOC_START = "<!-- P1_09_LONG_FORM_TOC_START -->";
 const TOC_END = "<!-- P1_09_LONG_FORM_TOC_END -->";
 const ACTION_START = "<!-- P1_09_DECISION_ACTION_START -->";
 const ACTION_END = "<!-- P1_09_DECISION_ACTION_END -->";
-const CSS_LINK = '<link rel="stylesheet" href="/assets/long-form-layout.css?v=20260909-1" data-long-form-layout-style="p1_09">';
+const CSS_LINK = '<link rel="stylesheet" href="/assets/long-form-layout.css?v=20260913-1" data-long-form-layout-style="p1_09">';
 const JS_LINK = '<script src="/assets/long-form-layout.js?v=20260909-1" defer="" data-long-form-layout-script="p1_09"></script>';
 
 function escapeHtml(value) {

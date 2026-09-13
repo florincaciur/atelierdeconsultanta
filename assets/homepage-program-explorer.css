@@ -394,3 +394,14 @@
     transition: none;
   }
 }
+/* Program-specific illustrations share the established FABER scene palette. */
+body.page-family-home #priority-programs .priority-program-slide { padding-right: 43%; background-image: linear-gradient(115deg,#10253e,#173b59); }
+.page-family-home #priority-programs .priority-program-slide > :not(.priority-program-art) { position: relative; z-index: 1; }
+.priority-program-art { position: absolute; right: 2%; top: 12%; width: 39%; height: 76%; pointer-events: none; }
+.priority-program-art svg { display: block; width: 100%; height: 100%; fill: none; stroke: #e8edf5; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.priority-program-slide[aria-hidden="true"] .priority-program-art * { animation-play-state: paused !important; }
+@media (max-width: 760px) {
+  body.page-family-home #priority-programs .priority-program-slide { padding: 26px 24px 220px; justify-content: flex-start; }
+  .priority-program-art { top: auto; bottom: 8px; right: 5%; width: 90%; height: 200px; }
+}
+@media (prefers-reduced-motion: reduce) { .priority-program-art * { animation: none !important; } }

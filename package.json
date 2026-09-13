@@ -232,7 +232,8 @@
     "deploy:pages": "npm run validate:legal-identity:publish && npm run validate:contact-triage:publish && npm run gate:p0:local && npm run report:editorial-governance && npm run build && npm run validate:cloudflare && npx wrangler pages deploy dist",
     "deploy:contact-triage": "npm run validate:legal-identity:publish && npm run validate:contact-triage:publish && npm run gate:p0:local && npm run report:editorial-governance && npm run build && npm run validate:cloudflare && npx wrangler deploy && npx wrangler deploy --config wrangler.redirects.jsonc",
     "seo:check": "node scripts/seo-release-check.js",
-    "test:program-seo-logo": "node tests/program-seo-logo-20260906-contract.mjs"
+    "test:program-seo-logo": "node tests/program-seo-logo-20260906-contract.mjs",
+    "test:homepage-program-selection": "node tests/homepage-program-selection.mjs"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.13.0",

@@ -70,6 +70,22 @@
       "url": "https://www.afir.ro/media/yo1h41gu/ghidul-solicitantului_stocare_res_fm_publici.docx",
       "publishedAt": "2026-09-11",
       "verifiedAt": "2026-09-13"
+    },
+    "me-pc1-autoconsum-launch-2026": {
+      "title": "Anunț oficial de lansare PC1 autoconsum — entități publice",
+      "authority": "Ministerul Energiei / AFIR",
+      "documentType": "anunț oficial PDF",
+      "url": "https://energie.gov.ro/wp-content/uploads/2026/09/Anunt-lansare-apel-proiecte-autoconsum_entitati-publice.pdf",
+      "publishedAt": "2026-09-11",
+      "verifiedAt": "2026-09-13"
+    },
+    "me-pc1-stocare-launch-2026": {
+      "title": "Anunț oficial de lansare PC1 stocare — entități publice",
+      "authority": "Ministerul Energiei / AFIR",
+      "documentType": "anunț oficial PDF",
+      "url": "https://energie.gov.ro/wp-content/uploads/2026/09/Anunt-lansare-apel-proiecte-stocare_entitati-publice.pdf",
+      "publishedAt": "2026-09-11",
+      "verifiedAt": "2026-09-13"
     }
   },
   "programSourceAssignments": "config/seo-programs.json#programs[*].officialSources"

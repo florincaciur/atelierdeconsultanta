@@ -265,9 +265,9 @@
         "image": "/assets/hero/hero-agriculture.webp",
         "beneficiary": null,
         "pageTitle": "DR 12 AFIR 2026 – investiții pentru tineri fermieri și fermieri până la 45 de ani",
-        "carouselOrder": 1,
-        "heroOrder": 2,
-        "navigationOrder": 2
+        "carouselOrder": 4,
+        "heroOrder": 4,
+        "navigationOrder": 4
       },
       "discovery": {
         "parentHub": "/afir",
@@ -399,9 +399,9 @@
           "label": "Depuneri: 1 septembrie–31 octombrie 2026",
           "note": "Calendar oficial AFIR; sesiunea se poate opri anticipat în condițiile anunțului."
         },
-        "carouselOrder": 2,
-        "heroOrder": 3,
-        "navigationOrder": 3
+        "carouselOrder": 5,
+        "heroOrder": 5,
+        "navigationOrder": 5
       },
       "discovery": {
         "parentHub": "/afir",
@@ -538,9 +538,9 @@
           "label": "1 septembrie–31 octombrie 2026",
           "note": "Sesiune anunțată de AFIR; depunerea nu este încă deschisă și se poate opri anticipat."
         },
-        "carouselOrder": 3,
-        "heroOrder": 4,
-        "navigationOrder": 4
+        "carouselOrder": 11,
+        "heroOrder": 11,
+        "navigationOrder": 11
       },
       "discovery": {
         "parentHub": "/afir",
@@ -616,13 +616,12 @@
         "notes": "Depunerea persoanelor juridice este închisă. Registrul nu consemnează separat finalizarea întregii proceduri."
       },
       "presentation": {
-        "carousel": true,
+        "carousel": false,
         "hero": false,
         "order": 9,
         "icon": "ph-rocket-launch",
         "image": "/assets/hero/hero-business.webp",
-        "beneficiary": null,
-        "carouselOrder": 9
+        "beneficiary": null
       },
       "discovery": {
         "parentHub": "/fonduri-europene-imm",
@@ -694,13 +693,12 @@
         "notes": "Ordinea finală la evaluare dovedește o etapă ulterioară depunerii, nu finalizarea integrală a programului."
       },
       "presentation": {
-        "carousel": true,
+        "carousel": false,
         "hero": false,
         "order": 7,
         "icon": "ph-user-circle",
         "image": "/assets/hero/hero-business.webp",
-        "beneficiary": null,
-        "carouselOrder": 7
+        "beneficiary": null
       },
       "discovery": {
         "parentHub": "/fonduri-europene-imm",
@@ -784,13 +782,14 @@
       },
       "presentation": {
         "carousel": true,
-        "hero": false,
+        "hero": true,
         "order": 6,
         "icon": "ph-desktop",
         "image": "/assets/hero/hero-digital.webp",
         "beneficiary": null,
-        "carouselOrder": 6,
-        "navigationOrder": 5
+        "carouselOrder": 14,
+        "navigationOrder": 14,
+        "heroOrder": 14
       },
       "discovery": {
         "parentHub": "/fonduri-europene-digitalizare",
@@ -923,7 +922,7 @@
           "label": "Depuneri: 28 septembrie–28 octombrie 2026",
           "note": "Interval oficial MySMIS2021, zilnic până la ora-limită indicată în ghid."
         },
-        "carouselOrder": 10,
+        "carouselOrder": 1,
         "heroOrder": 1,
         "navigationOrder": 1
       },
@@ -998,13 +997,12 @@
         "notes": "Apelurile înregistrate sunt marcate FINALIZAT în MySMIS; documentația fiecărei ediții nu este separată în catalogul local de surse."
       },
       "presentation": {
-        "carousel": true,
+        "carousel": false,
         "hero": false,
         "order": 15,
         "icon": "ph-solar-panel",
         "image": "/assets/hero/hero-solar.webp",
-        "beneficiary": null,
-        "carouselOrder": 15
+        "beneficiary": null
       },
       "discovery": {
         "parentHub": "/finantari-panouri-fotovoltaice",
@@ -1077,13 +1075,12 @@
         "notes": "Apelurile înregistrate sunt marcate FINALIZAT în MySMIS; documentația fiecărei ediții nu este separată în catalogul local de surse."
       },
       "presentation": {
-        "carousel": true,
+        "carousel": false,
         "hero": false,
         "order": 11,
         "icon": "ph-sun",
         "image": "/assets/hero/hero-solar.webp",
-        "beneficiary": null,
-        "carouselOrder": 11
+        "beneficiary": null
       },
       "discovery": {
         "parentHub": "/finantari-panouri-fotovoltaice",
@@ -1210,15 +1207,12 @@
         "notes": "Fereastra de depunere este închisă; închiderea sesiunii nu este echivalată cu finalizarea întregii proceduri. Comunicarea oficială stabilă din 09.06.2026 și clarificarea din 29.07.2026 confirmă termenul de 14.08.2026; nu a fost identificată o prelungire oficială la reverificarea din 23.08.2026."
       },
       "presentation": {
-        "carousel": true,
-        "hero": true,
+        "carousel": false,
+        "hero": false,
         "order": 3,
         "icon": "ph-sun",
         "image": "/assets/hero/hero-solar.webp",
-        "beneficiary": null,
-        "carouselOrder": 4,
-        "heroOrder": 5,
-        "navigationOrder": 7
+        "beneficiary": null
       },
       "discovery": {
         "parentHub": "/afir",
@@ -1245,8 +1239,8 @@
       "status": "ghid_aprobat_nedeschis",
       "canonicalStatus": "SCHEDULED",
       "statusScope": "program_call",
-      "statusRationale": "AFIR a publicat ghidurile la 11.09.2026 și a anunțat primirea cererilor online din 28.09.2026. Termenul de închidere nu este precizat în comunicatul verificat la 13.09.2026; se reconfirmă în anunțul sesiunii.",
-      "statusLabel": "Depunere programată din 28 septembrie 2026",
+      "statusRationale": "Anunțul oficial confirmă depunerea prin AFIR între 28.09.2026, ora 10:00 și 20.11.2026, ora 23:59, sau până la epuizarea bugetului. La verificarea din 13.09.2026 sesiunea nu a început.",
+      "statusLabel": "Depuneri programate: 28 septembrie–20 noiembrie 2026",
       "publicationState": "public",
       "verifiedAt": "2026-09-13",
       "sourceName": "Ministerul Energiei / AFIR",
@@ -1254,7 +1248,7 @@
       "sourceVersion": "Ghidul solicitantului și anexele publicate de AFIR la 11.09.2026",
       "sourceType": "official",
       "applicationStart": "2026-09-28",
-      "applicationEnd": null,
+      "applicationEnd": "2026-11-20",
       "grantSummary": {
         "minimum": null,
         "maximum": {
@@ -1282,10 +1276,10 @@
       "archivedNoindexDecision": null,
       "indexable": true,
       "cardSummary": "PC1 pentru entități publice: panouri fotovoltaice cu stocare integrată, buget 500 mil. EUR și maximum 10 mil. EUR/beneficiar.",
-      "quickAnswer": "PC1 Autoconsum finanțează capacități noi de producere a energiei solare cu stocare integrată pentru entități publice. Bugetul este de 500 milioane EUR, ajutorul poate acoperi până la 100% din cheltuielile eligibile, în limita a 10 milioane EUR pe beneficiar, iar bateriile trebuie dimensionate pentru 2–4 ore. Depunerea online prin AFIR începe la 28 septembrie 2026, conform comunicatului din 11 septembrie 2026.",
-      "metaTitle": "PC1 Autoconsum entități publice 2026: 10 mil. €",
-      "metaDescription": "PC1 Autoconsum pentru entități publice: buget 500 mil. €, maximum 10 mil. €/beneficiar, până la 100% și depunere din 28.09.2026.",
-      "editorialDisclaimer": "AFIR a publicat ghidurile la 11.09.2026 și a anunțat primirea cererilor online din 28.09.2026. Termenul de închidere nu este precizat în comunicatul verificat la 13.09.2026; se reconfirmă în anunțul sesiunii.",
+      "quickAnswer": "PC1 Autoconsum finanțează capacități noi de producere a energiei solare cu stocare integrată pentru entități publice. Bugetul este de 500 milioane EUR, ajutorul poate acoperi până la 100% din cheltuielile eligibile, în limita a 10 milioane EUR pe beneficiar, iar bateriile trebuie dimensionate pentru 2–4 ore. Depunerea prin AFIR: 28 septembrie 2026, ora 10:00 – 20 noiembrie 2026, ora 23:59, sau până la epuizarea bugetului.",
+      "metaTitle": "PC1 Autoconsum entități publice: depuneri 2026 | FABER",
+      "metaDescription": "PC1 Autoconsum entități publice: până la 10 mil. EUR, 100% din eligibil. Depuneri 28.09–20.11.2026. Beneficiari, condiții și documente oficiale.",
+      "editorialDisclaimer": "Anunțul oficial confirmă depunerea prin AFIR între 28.09.2026, ora 10:00 și 20.11.2026, ora 23:59, sau până la epuizarea bugetului. La verificarea din 13.09.2026 sesiunea nu a început.",
       "eligibleApplicants": [
         "Unități administrativ-teritoriale și subdiviziunile acestora",
         "Unități din apărare, ordine publică, siguranță națională și administrația penitenciară",
@@ -1297,7 +1291,8 @@
         "Energia produsă este destinată 100% autoconsumului, iar energia stocată provine 100% din instalația solară proprie.",
         "Sistemul de stocare asigură o durată de 2–4 ore și o putere nominală cel puțin egală cu puterea centralei fotovoltaice.",
         "Costul eligibil este plafonat la 900.000 EUR/MW fără pompe de căldură și la 1.100.000 EUR/MW pentru proiectele care includ pompe de căldură eligibile.",
-        "Investiția trebuie finalizată și pusă în funcțiune până la 31.12.2029."
+        "Investiția trebuie finalizată și pusă în funcțiune până la 31.12.2029.",
+        "Selecție în ordinea depunerii: primul venit, primul evaluat, cu respectarea condițiilor ghidului și în limita bugetului."
       ],
       "officialGuideKeys": [
         "autoconsum-publici"
@@ -1325,24 +1320,26 @@
           "schemeOrder": [],
           "sessionAnnouncement": [
             {
-              "ref": "registry:afir-pc1-session-2026",
-              "label": "AFIR: depunerea începe la 28 septembrie 2026"
+              "ref": "registry:me-pc1-autoconsum-launch-2026",
+              "label": "Anunț oficial: calendarul complet 28.09–20.11.2026"
             }
           ],
           "corrigenda": [],
           "clarifications": []
         },
-        "notes": "AFIR a publicat ghidurile la 11.09.2026 și a anunțat primirea cererilor online din 28.09.2026. Termenul de închidere nu este precizat în comunicatul verificat la 13.09.2026; se reconfirmă în anunțul sesiunii."
+        "notes": "Anunțul oficial confirmă depunerea prin AFIR între 28.09.2026, ora 10:00 și 20.11.2026, ora 23:59, sau până la epuizarea bugetului. La verificarea din 13.09.2026 sesiunea nu a început."
       },
       "presentation": {
         "carousel": true,
-        "hero": false,
+        "hero": true,
         "order": 4,
         "icon": "ph-solar-panel",
         "image": "/assets/hero/hero-solar.webp",
         "beneficiary": "entități și instituții publice eligibile",
         "pageTitle": "PC1 Autoconsum 2026 – panouri fotovoltaice cu stocare pentru entități publice",
-        "carouselOrder": 5
+        "carouselOrder": 2,
+        "heroOrder": 2,
+        "navigationOrder": 2
       },
       "discovery": {
         "parentHub": "/finantari-panouri-fotovoltaice",
@@ -1370,8 +1367,8 @@
       "status": "ghid_aprobat_nedeschis",
       "canonicalStatus": "SCHEDULED",
       "statusScope": "program_call",
-      "statusRationale": "AFIR a publicat ghidurile la 11.09.2026 și a anunțat primirea cererilor online din 28.09.2026. Termenul de închidere nu este precizat în comunicatul verificat la 13.09.2026; se reconfirmă în anunțul sesiunii.",
-      "statusLabel": "Depunere programată din 28 septembrie 2026",
+      "statusRationale": "Anunțul oficial confirmă depunerea prin AFIR între 28.09.2026, ora 10:00 și 20.11.2026, ora 23:59, sau până la epuizarea bugetului. La verificarea din 13.09.2026 sesiunea nu a început.",
+      "statusLabel": "Depuneri programate: 28 septembrie–20 noiembrie 2026",
       "publicationState": "public",
       "verifiedAt": "2026-09-13",
       "sourceName": "Ministerul Energiei / AFIR",
@@ -1379,7 +1376,7 @@
       "sourceVersion": "Ghidul solicitantului și anexele publicate de AFIR la 11.09.2026",
       "sourceType": "official",
       "applicationStart": "2026-09-28",
-      "applicationEnd": null,
+      "applicationEnd": "2026-11-20",
       "grantSummary": {
         "minimum": null,
         "maximum": {
@@ -1407,10 +1404,10 @@
       "archivedNoindexDecision": null,
       "indexable": true,
       "cardSummary": "PC1 pentru entități publice cu instalații regenerabile existente: baterii în spatele contorului, buget 150 mil. EUR și maximum 10 mil. EUR/beneficiar.",
-      "quickAnswer": "PC1 Stocare finanțează sisteme noi de baterii în spatele contorului, conectate direct la instalații regenerabile existente ale entităților publice. Bugetul este de 150 milioane EUR, ajutorul poate acoperi 100% din cheltuielile eligibile, în limita a 10 milioane EUR pe beneficiar, iar durata stocării trebuie să fie de 2–4 ore. Depunerea online prin AFIR începe la 28 septembrie 2026, conform comunicatului din 11 septembrie 2026.",
-      "metaTitle": "PC1 Stocare entități publice 2026: 10 mil. €",
-      "metaDescription": "PC1 Stocare pentru entități publice: buget 150 mil. €, maximum 10 mil. €/beneficiar, până la 100% și depunere din 28.09.2026.",
-      "editorialDisclaimer": "AFIR a publicat ghidurile la 11.09.2026 și a anunțat primirea cererilor online din 28.09.2026. Termenul de închidere nu este precizat în comunicatul verificat la 13.09.2026; se reconfirmă în anunțul sesiunii.",
+      "quickAnswer": "PC1 Stocare finanțează sisteme noi de baterii în spatele contorului, conectate direct la instalații regenerabile existente ale entităților publice. Bugetul este de 150 milioane EUR, ajutorul poate acoperi 100% din cheltuielile eligibile, în limita a 10 milioane EUR pe beneficiar, iar durata stocării trebuie să fie de 2–4 ore. Depunerea prin AFIR: 28 septembrie 2026, ora 10:00 – 20 noiembrie 2026, ora 23:59, sau până la epuizarea bugetului.",
+      "metaTitle": "PC1 Stocare entități publice: depuneri 2026 | FABER",
+      "metaDescription": "PC1 Stocare entități publice: până la 10 mil. EUR, 100% din eligibil. Depuneri 28.09–20.11.2026. Beneficiari, condiții și documente oficiale.",
+      "editorialDisclaimer": "Anunțul oficial confirmă depunerea prin AFIR între 28.09.2026, ora 10:00 și 20.11.2026, ora 23:59, sau până la epuizarea bugetului. La verificarea din 13.09.2026 sesiunea nu a început.",
       "eligibleApplicants": [
         "Unități administrativ-teritoriale și subdiviziunile acestora",
         "Unități din apărare, ordine publică, siguranță națională și administrația penitenciară",
@@ -1422,7 +1419,8 @@
         "Este eligibilă o singură cerere de finanțare per solicitant.",
         "Durata echivalentă a stocării trebuie să fie între 2 și 4 ore, raportată la puterea instalată a centralei existente.",
         "Ajutorul solicitat nu poate depăși 200.000 EUR/MWh instalat, fără TVA.",
-        "Investiția trebuie finalizată și pusă în funcțiune până la 31.12.2029."
+        "Investiția trebuie finalizată și pusă în funcțiune până la 31.12.2029.",
+        "Selecție în ordinea depunerii: primul venit, primul evaluat, cu respectarea condițiilor ghidului și în limita bugetului."
       ],
       "officialGuideKeys": [
         "fm-pc1-stocare-publici"
@@ -1450,23 +1448,25 @@
           "schemeOrder": [],
           "sessionAnnouncement": [
             {
-              "ref": "registry:afir-pc1-session-2026",
-              "label": "AFIR: depunerea începe la 28 septembrie 2026"
+              "ref": "registry:me-pc1-stocare-launch-2026",
+              "label": "Anunț oficial: calendarul complet 28.09–20.11.2026"
             }
           ],
           "corrigenda": [],
           "clarifications": []
         },
-        "notes": "AFIR a publicat ghidurile la 11.09.2026 și a anunțat primirea cererilor online din 28.09.2026. Termenul de închidere nu este precizat în comunicatul verificat la 13.09.2026; se reconfirmă în anunțul sesiunii."
+        "notes": "Anunțul oficial confirmă depunerea prin AFIR între 28.09.2026, ora 10:00 și 20.11.2026, ora 23:59, sau până la epuizarea bugetului. La verificarea din 13.09.2026 sesiunea nu a început."
       },
       "presentation": {
         "carousel": true,
-        "hero": false,
+        "hero": true,
         "order": 25,
         "icon": "ph-battery-charging",
         "image": "/assets/hero/hero-solar.webp",
         "beneficiary": "entități publice cu instalații regenerabile existente",
-        "carouselOrder": 24
+        "carouselOrder": 8,
+        "heroOrder": 8,
+        "navigationOrder": 8
       },
       "discovery": {
         "parentHub": "/finantari-panouri-fotovoltaice",
@@ -1572,13 +1572,14 @@
       },
       "presentation": {
         "carousel": true,
-        "hero": false,
+        "hero": true,
         "order": 8,
         "icon": "ph-factory",
         "image": "/assets/hero/hero-solar.webp",
         "beneficiary": null,
-        "carouselOrder": 8,
-        "navigationOrder": 6
+        "carouselOrder": 9,
+        "navigationOrder": 9,
+        "heroOrder": 9
       },
       "discovery": {
         "parentHub": "/finantari-panouri-fotovoltaice",
@@ -1664,13 +1665,12 @@
         "notes": "Fiecare GAL are sesiuni distincte. La verificarea live din 22.08.2026, pagina agregată afișa 0 anunțuri și 0 apeluri în derulare; starea paginii rămâne UNCONFIRMED, nu OPEN."
       },
       "presentation": {
-        "carousel": true,
+        "carousel": false,
         "hero": false,
         "order": 12,
         "icon": "ph-map-pin",
         "image": "/assets/hero/hero-local.webp",
-        "beneficiary": null,
-        "carouselOrder": 12
+        "beneficiary": null
       },
       "discovery": {
         "parentHub": "/fonduri-europene-imm",
@@ -1757,13 +1757,12 @@
         "notes": "Fiecare GAL are sesiuni distincte. La verificarea live din 22.08.2026, pagina agregată afișa 0 anunțuri și 0 apeluri în derulare; starea paginii rămâne UNCONFIRMED, nu OPEN."
       },
       "presentation": {
-        "carousel": true,
+        "carousel": false,
         "hero": false,
         "order": 14,
         "icon": "ph-map-pin",
         "image": "/assets/hero/hero-local.webp",
-        "beneficiary": null,
-        "carouselOrder": 14
+        "beneficiary": null
       },
       "discovery": {
         "parentHub": "/fonduri-europene-imm",
@@ -1870,8 +1869,9 @@
         "icon": "ph-battery-charging",
         "image": "/assets/hero/hero-solar.webp",
         "beneficiary": null,
-        "carouselOrder": 13,
-        "heroOrder": 6
+        "carouselOrder": 12,
+        "heroOrder": 12,
+        "navigationOrder": 12
       },
       "discovery": {
         "parentHub": "/finantari-panouri-fotovoltaice",
@@ -2008,12 +2008,14 @@
       },
       "presentation": {
         "carousel": true,
-        "hero": false,
+        "hero": true,
         "order": 999,
         "icon": "ph-duotone ph-circuitry",
         "image": "/assets/hero/hero-digital.webp",
         "beneficiary": null,
-        "carouselOrder": 20
+        "carouselOrder": 10,
+        "heroOrder": 10,
+        "navigationOrder": 10
       },
       "discovery": {
         "parentHub": "/fonduri-europene-digitalizare",
@@ -2085,13 +2087,12 @@
         "notes": "Pagină agregată. Implementarea PNRR nu implică o sesiune de depunere deschisă pentru toate componentele."
       },
       "presentation": {
-        "carousel": true,
+        "carousel": false,
         "hero": false,
         "order": 25,
         "icon": "ph-chart-line-up",
         "image": "/assets/hero/hero-digital.webp",
-        "beneficiary": null,
-        "carouselOrder": 21
+        "beneficiary": null
       },
       "discovery": {
         "parentHub": "/fonduri-europene-digitalizare",
@@ -2192,9 +2193,9 @@
         "icon": "ph-house-line",
         "image": "/assets/hero/hero-local.webp",
         "beneficiary": "români din diaspora care înființează o întreprindere în România",
-        "carouselOrder": 16,
-        "heroOrder": 7,
-        "navigationOrder": 8
+        "carouselOrder": 6,
+        "heroOrder": 6,
+        "navigationOrder": 6
       },
       "discovery": {
         "parentHub": "/fonduri-europene-imm",
@@ -2307,9 +2308,9 @@
         "icon": "ph-bus",
         "image": "/assets/hero/hero-solar.webp",
         "beneficiary": "IMM-uri și operatori de transport rutier de persoane",
-        "carouselOrder": 17,
-        "heroOrder": 8,
-        "navigationOrder": 9
+        "carouselOrder": 3,
+        "heroOrder": 3,
+        "navigationOrder": 3
       },
       "discovery": {
         "parentHub": "/finantari-panouri-fotovoltaice",
@@ -2420,9 +2421,9 @@
         "icon": "ph-charging-station",
         "image": "/assets/hero/hero-solar.webp",
         "beneficiary": "întreprinderi care dezvoltă infrastructură publică de reîncărcare",
-        "carouselOrder": 18,
-        "heroOrder": 9,
-        "navigationOrder": 10
+        "carouselOrder": 13,
+        "heroOrder": 13,
+        "navigationOrder": 13
       },
       "discovery": {
         "parentHub": "/finantari-panouri-fotovoltaice",
@@ -2536,9 +2537,9 @@
         "icon": "ph-battery-high",
         "image": "/assets/hero/hero-solar.webp",
         "beneficiary": "întreprinderi care dezvoltă capacități de stocare stand-alone",
-        "carouselOrder": 19,
-        "heroOrder": 10,
-        "navigationOrder": 11
+        "carouselOrder": 7,
+        "heroOrder": 7,
+        "navigationOrder": 7
       },
       "discovery": {
         "parentHub": "/finantari-panouri-fotovoltaice",
@@ -2620,13 +2621,12 @@
         "notes": "Pagină agregată. Starea se stabilește separat pentru fiecare apel al programului."
       },
       "presentation": {
-        "carousel": true,
+        "carousel": false,
         "hero": false,
         "order": 26,
         "icon": "ph-factory",
         "image": "/assets/hero/hero-local.webp",
-        "beneficiary": null,
-        "carouselOrder": 22
+        "beneficiary": null
       },
       "discovery": {
         "parentHub": "/fonduri-regionale",
@@ -2696,13 +2696,12 @@
         "notes": "Pagină agregată. Starea se stabilește separat pentru fiecare apel al Fondului pentru Modernizare."
       },
       "presentation": {
-        "carousel": true,
+        "carousel": false,
         "hero": false,
         "order": 27,
         "icon": "ph-sun",
         "image": "/assets/hero/hero-solar.webp",
-        "beneficiary": null,
-        "carouselOrder": 23
+        "beneficiary": null
       },
       "discovery": {
         "parentHub": "/finantari-panouri-fotovoltaice",
@@ -5343,7 +5342,7 @@
         ],
         [
           "Când se depun proiectele?",
-          "Depunerea online prin AFIR începe la 28 septembrie 2026. Data închiderii se reconfirmă în anunțul sesiunii."
+          "Depunerea prin AFIR se desfășoară între 28 septembrie 2026, ora 10:00 și 20 noiembrie 2026, ora 23:59, sau până la epuizarea bugetului."
         ]
       ],
       "related": [

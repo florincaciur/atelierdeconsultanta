@@ -67,7 +67,7 @@ try {
     if (viewport.width === 1366) {
       for (const section of metrics.sectionHeights) assert(section.height <= viewport.height * 1.1, `${section.id}: cadrul depășește o înălțime de ecran (${section.height}px)`);
     }
-    const sceneFits = await page.locator('.hero-program-scene.is-active svg').evaluate(node => node.getBoundingClientRect().height <= node.parentElement.getBoundingClientRect().height + 1);
+    const sceneFits = await page.locator('#hero .hero-program-scene.is-active svg').evaluate(node => node.getBoundingClientRect().height <= node.parentElement.getBoundingClientRect().height + 1);
     assert(sceneFits, `${viewport.width}px: ilustrația trebuie să încapă integral în cadru`);
     if (viewport.width === 390 || viewport.width === 1366) assert(metrics.ctaBottom <= viewport.height, `${viewport.width}px: CTA-ul principal este sub fold`);
     const choices = page.locator("[data-hero-program-item]");
