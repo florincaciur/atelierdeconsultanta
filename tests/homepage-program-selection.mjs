@@ -37,6 +37,8 @@ try {
   assert.equal(await page.locator('[data-priority-slide][aria-hidden="false"]').getAttribute('data-program-id'),expected[0]);
   await page.locator('[data-priority-viewport]').focus();await page.keyboard.press('ArrowLeft');
   assert.equal(await page.locator('[data-priority-slide][aria-hidden="false"]').getAttribute('data-program-id'),expected.at(-1));
+  // Keep the pointer outside the preview during keyboard-only selection.
+  await page.mouse.move(0,0);
   for(const id of expected){const link=page.locator(`#hero [data-hero-program-item][data-program-id="${id}"]`);await link.focus();assert.equal(await page.locator('[data-hero-program-link]').getAttribute('href'),programs.find(p=>p.id===id).pageUrl);}
   const axe=await new AxeBuilder({page}).include('#hero').include('#priority-programs').withTags(['wcag2a','wcag2aa','wcag21aa','wcag22aa']).analyze();
   assert.deepEqual(axe.violations.map(x=>({id:x.id,nodes:x.nodes.map(n=>n.target)})),[],`${width}: homepage accessibility`);

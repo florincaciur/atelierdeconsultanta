@@ -5,7 +5,7 @@
     "extract:sources": "node tools/extract-source-facts.js",
     "audit:content": "node tools/audit-content-depth.js --min-words 2000",
     "audit:structured-data": "node tools/audit-structured-data.js",
-    "audit:program-facts": "node tools/audit-program-factual-consistency.js",
+    "audit:program-facts": "node tests/program-copy-state-contract.mjs && node tools/audit-program-factual-consistency.js",
     "audit:funding-status": "node tools/audit-funding-status.js",
     "test:funding-status": "node tests/funding-status-audit-contract.mjs",
     "prebuild": "npm run test:funding-status && npm run audit:funding-status && npm run test:brand-entity && npm run test:trust-evidence && npm run test:contact-nap",
@@ -233,7 +233,8 @@
     "deploy:contact-triage": "npm run validate:legal-identity:publish && npm run validate:contact-triage:publish && npm run gate:p0:local && npm run report:editorial-governance && npm run build && npm run validate:cloudflare && npx wrangler deploy && npx wrangler deploy --config wrangler.redirects.jsonc",
     "seo:check": "node scripts/seo-release-check.js",
     "test:program-seo-logo": "node tests/program-seo-logo-20260906-contract.mjs",
-    "test:homepage-program-selection": "node tests/homepage-program-selection.mjs"
+    "test:homepage-program-selection": "node tests/homepage-program-selection.mjs",
+    "test:homepage-all-states": "node tests/homepage-all-states-accessibility.mjs"
   },
   "devDependencies": {
     "@axe-core/playwright": "^4.13.0",

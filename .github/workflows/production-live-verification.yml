@@ -15,7 +15,7 @@ concurrency:
 jobs:
   verify-deployed-commit:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -28,3 +28,13 @@ jobs:
         env:
           EXPECTED_COMMIT: ${{ github.sha }}
         run: node tools/verify-live-release.js --commit="$EXPECTED_COMMIT" --wait-seconds=600
+      - name: Install browser for homepage state verification
+        run: npx playwright install --with-deps chromium
+      - name: Verify live homepage contrast and form states without sending leads
+        run: npm run test:homepage-all-states -- --base=https://atelierdeconsultanta.ro
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: homepage-state-accessibility
+          path: .codex/homepage-states-live/audit.json
+          include-hidden-files: true

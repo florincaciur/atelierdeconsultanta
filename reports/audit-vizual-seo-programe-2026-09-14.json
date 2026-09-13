@@ -1,0 +1,5128 @@
+{
+  "date": "2026-09-14",
+  "baselineCommit": "c7932712665df3ddec4a019e9fb2d215029622f8",
+  "homepageBefore": [
+    {
+      "width": 768,
+      "state": "initial",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": [
+            {
+              "target": [
+                "#homepage-explorer-tab-1 > span"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.05 (foreground color: #b74616, background color: #0d1f3c, font size: 12.8pt (17px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".homepage-service-grid > article:nth-child(1) > .homepage-card-index[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.12 (foreground color: #e8edf5, background color: #f8fafc, font size: 39.0pt (52px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                ".homepage-service-grid > article:nth-child(2) > .homepage-card-index[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.12 (foreground color: #e8edf5, background color: #f8fafc, font size: 39.0pt (52px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                ".homepage-service-grid > article:nth-child(3) > .homepage-card-index[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.12 (foreground color: #e8edf5, background color: #f8fafc, font size: 39.0pt (52px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                "article:nth-child(4) > .homepage-card-index[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.12 (foreground color: #e8edf5, background color: #f8fafc, font size: 39.0pt (52px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                "a[data-analytics-component=\"homepage_final_cta\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.02 (foreground color: #ffffff, background color: #f5a623, font size: 12.2pt (16.32px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "state": "initial",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": [
+            {
+              "target": [
+                "#homepage-explorer-tab-1 > span"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.05 (foreground color: #b74616, background color: #0d1f3c, font size: 12.8pt (17px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".homepage-service-grid > article:nth-child(1) > .homepage-card-index[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.12 (foreground color: #e8edf5, background color: #f8fafc, font size: 21.0pt (28px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                ".homepage-service-grid > article:nth-child(2) > .homepage-card-index[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.12 (foreground color: #e8edf5, background color: #f8fafc, font size: 21.0pt (28px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                ".homepage-service-grid > article:nth-child(3) > .homepage-card-index[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.12 (foreground color: #e8edf5, background color: #f8fafc, font size: 21.0pt (28px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                "article:nth-child(4) > .homepage-card-index[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.12 (foreground color: #e8edf5, background color: #f8fafc, font size: 21.0pt (28px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                "a[data-analytics-component=\"homepage_final_cta\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.02 (foreground color: #ffffff, background color: #f5a623, font size: 12.2pt (16.32px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "state": "initial",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": [
+            {
+              "target": [
+                "#homepage-explorer-tab-1 > span"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.05 (foreground color: #b74616, background color: #0d1f3c, font size: 9.0pt (12px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".homepage-service-grid > article:nth-child(1) > .homepage-card-index[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.12 (foreground color: #e8edf5, background color: #f8fafc, font size: 39.0pt (52px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                ".homepage-service-grid > article:nth-child(2) > .homepage-card-index[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.12 (foreground color: #e8edf5, background color: #f8fafc, font size: 39.0pt (52px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                ".homepage-service-grid > article:nth-child(3) > .homepage-card-index[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.12 (foreground color: #e8edf5, background color: #f8fafc, font size: 39.0pt (52px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                "article:nth-child(4) > .homepage-card-index[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.12 (foreground color: #e8edf5, background color: #f8fafc, font size: 39.0pt (52px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                "a[data-analytics-component=\"homepage_final_cta\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.02 (foreground color: #ffffff, background color: #f5a623, font size: 12.2pt (16.32px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "state": "initial",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": [
+            {
+              "target": [
+                "#homepage-explorer-tab-1 > span"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.05 (foreground color: #b74616, background color: #0d1f3c, font size: 9.0pt (12px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".homepage-service-grid > article:nth-child(1) > .homepage-card-index[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.12 (foreground color: #e8edf5, background color: #f8fafc, font size: 39.0pt (52px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                ".homepage-service-grid > article:nth-child(2) > .homepage-card-index[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.12 (foreground color: #e8edf5, background color: #f8fafc, font size: 39.0pt (52px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                ".homepage-service-grid > article:nth-child(3) > .homepage-card-index[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.12 (foreground color: #e8edf5, background color: #f8fafc, font size: 39.0pt (52px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                "article:nth-child(4) > .homepage-card-index[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.12 (foreground color: #e8edf5, background color: #f8fafc, font size: 39.0pt (52px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                "a[data-analytics-component=\"homepage_final_cta\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.02 (foreground color: #ffffff, background color: #f5a623, font size: 12.2pt (16.32px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "width": 768,
+      "state": "hero",
+      "violations": []
+    },
+    {
+      "width": 320,
+      "state": "hero",
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "state": "hero",
+      "violations": []
+    },
+    {
+      "width": 390,
+      "state": "hero",
+      "violations": []
+    },
+    {
+      "width": 768,
+      "state": "homepage-method",
+      "violations": []
+    },
+    {
+      "width": 320,
+      "state": "homepage-method",
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "state": "homepage-method",
+      "violations": []
+    },
+    {
+      "width": 390,
+      "state": "homepage-method",
+      "violations": []
+    },
+    {
+      "width": 768,
+      "state": "priority-programs",
+      "violations": []
+    },
+    {
+      "width": 320,
+      "state": "priority-programs",
+      "violations": []
+    },
+    {
+      "width": 768,
+      "state": "homepage-explorer",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": [
+            {
+              "target": [
+                "#homepage-explorer-tab-1 > span"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.05 (foreground color: #b74616, background color: #0d1f3c, font size: 12.8pt (17px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".homepage-service-grid > article:nth-child(1) > .homepage-card-index[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.12 (foreground color: #e8edf5, background color: #f8fafc, font size: 39.0pt (52px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                ".homepage-service-grid > article:nth-child(2) > .homepage-card-index[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.12 (foreground color: #e8edf5, background color: #f8fafc, font size: 39.0pt (52px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                ".homepage-service-grid > article:nth-child(3) > .homepage-card-index[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.12 (foreground color: #e8edf5, background color: #f8fafc, font size: 39.0pt (52px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                "article:nth-child(4) > .homepage-card-index[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.12 (foreground color: #e8edf5, background color: #f8fafc, font size: 39.0pt (52px), font weight: normal). Expected contrast ratio of 3:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "state": "homepage-explorer",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": [
+            {
+              "target": [
+                "#homepage-explorer-tab-1 > span"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.05 (foreground color: #b74616, background color: #0d1f3c, font size: 9.0pt (12px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".homepage-service-grid > article:nth-child(1) > .homepage-card-index[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.12 (foreground color: #e8edf5, background color: #f8fafc, font size: 39.0pt (52px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                ".homepage-service-grid > article:nth-child(2) > .homepage-card-index[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.12 (foreground color: #e8edf5, background color: #f8fafc, font size: 39.0pt (52px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                ".homepage-service-grid > article:nth-child(3) > .homepage-card-index[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.12 (foreground color: #e8edf5, background color: #f8fafc, font size: 39.0pt (52px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                "article:nth-child(4) > .homepage-card-index[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.12 (foreground color: #e8edf5, background color: #f8fafc, font size: 39.0pt (52px), font weight: normal). Expected contrast ratio of 3:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "state": "priority-programs",
+      "violations": []
+    },
+    {
+      "width": 390,
+      "state": "priority-programs",
+      "violations": []
+    },
+    {
+      "width": 320,
+      "state": "homepage-contact",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": [
+            {
+              "target": [
+                "a[data-analytics-component=\"homepage_final_cta\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.02 (foreground color: #ffffff, background color: #f5a623, font size: 12.2pt (16.32px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "width": 768,
+      "state": "homepage-contact",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": [
+            {
+              "target": [
+                "a[data-analytics-component=\"homepage_final_cta\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.02 (foreground color: #ffffff, background color: #f5a623, font size: 12.2pt (16.32px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "state": "homepage-explorer",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": [
+            {
+              "target": [
+                "#homepage-explorer-tab-1 > span"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.05 (foreground color: #b74616, background color: #0d1f3c, font size: 12.8pt (17px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".homepage-service-grid > article:nth-child(1) > .homepage-card-index[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.12 (foreground color: #e8edf5, background color: #f8fafc, font size: 21.0pt (28px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                ".homepage-service-grid > article:nth-child(2) > .homepage-card-index[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.12 (foreground color: #e8edf5, background color: #f8fafc, font size: 21.0pt (28px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                ".homepage-service-grid > article:nth-child(3) > .homepage-card-index[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.12 (foreground color: #e8edf5, background color: #f8fafc, font size: 21.0pt (28px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                "article:nth-child(4) > .homepage-card-index[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.12 (foreground color: #e8edf5, background color: #f8fafc, font size: 21.0pt (28px), font weight: normal). Expected contrast ratio of 3:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "state": "homepage-explorer",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": [
+            {
+              "target": [
+                "#homepage-explorer-tab-1 > span"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.05 (foreground color: #b74616, background color: #0d1f3c, font size: 9.0pt (12px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".homepage-service-grid > article:nth-child(1) > .homepage-card-index[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.12 (foreground color: #e8edf5, background color: #f8fafc, font size: 39.0pt (52px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                ".homepage-service-grid > article:nth-child(2) > .homepage-card-index[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.12 (foreground color: #e8edf5, background color: #f8fafc, font size: 39.0pt (52px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                ".homepage-service-grid > article:nth-child(3) > .homepage-card-index[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.12 (foreground color: #e8edf5, background color: #f8fafc, font size: 39.0pt (52px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                "article:nth-child(4) > .homepage-card-index[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.12 (foreground color: #e8edf5, background color: #f8fafc, font size: 39.0pt (52px), font weight: normal). Expected contrast ratio of 3:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "state": "method-2",
+      "violations": []
+    },
+    {
+      "width": 768,
+      "state": "method-2",
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "state": "homepage-contact",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": [
+            {
+              "target": [
+                "a[data-analytics-component=\"homepage_final_cta\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.02 (foreground color: #ffffff, background color: #f5a623, font size: 12.2pt (16.32px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "state": "homepage-contact",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": [
+            {
+              "target": [
+                "a[data-analytics-component=\"homepage_final_cta\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.02 (foreground color: #ffffff, background color: #f5a623, font size: 12.2pt (16.32px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "state": "method-3",
+      "violations": []
+    },
+    {
+      "width": 768,
+      "state": "method-3",
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "state": "method-2",
+      "violations": []
+    },
+    {
+      "width": 320,
+      "state": "method-4",
+      "violations": []
+    },
+    {
+      "width": 768,
+      "state": "method-4",
+      "violations": []
+    },
+    {
+      "width": 390,
+      "state": "method-2",
+      "violations": []
+    },
+    {
+      "width": 768,
+      "state": "method-5",
+      "violations": []
+    },
+    {
+      "width": 320,
+      "state": "method-5",
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "state": "method-3",
+      "violations": []
+    },
+    {
+      "width": 390,
+      "state": "method-3",
+      "violations": []
+    },
+    {
+      "width": 320,
+      "state": "explorer-2",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": [
+            {
+              "target": [
+                "#homepage-explorer-tab-2 > span"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.05 (foreground color: #b74616, background color: #0d1f3c, font size: 9.0pt (12px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".homepage-tool-grid > article:nth-child(1) > .homepage-card-index[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.12 (foreground color: #e8edf5, background color: #f8fafc, font size: 39.0pt (52px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                ".homepage-tool-grid > article:nth-child(2) > .homepage-card-index[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.12 (foreground color: #e8edf5, background color: #f8fafc, font size: 39.0pt (52px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                ".homepage-tool-grid > article:nth-child(3) > .homepage-card-index[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.12 (foreground color: #e8edf5, background color: #f8fafc, font size: 39.0pt (52px), font weight: normal). Expected contrast ratio of 3:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "width": 768,
+      "state": "explorer-2",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": [
+            {
+              "target": [
+                "#homepage-explorer-tab-2 > span"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.05 (foreground color: #b74616, background color: #0d1f3c, font size: 12.8pt (17px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".homepage-tool-grid > article:nth-child(1) > .homepage-card-index[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.12 (foreground color: #e8edf5, background color: #f8fafc, font size: 39.0pt (52px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                ".homepage-tool-grid > article:nth-child(2) > .homepage-card-index[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.12 (foreground color: #e8edf5, background color: #f8fafc, font size: 39.0pt (52px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                ".homepage-tool-grid > article:nth-child(3) > .homepage-card-index[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.12 (foreground color: #e8edf5, background color: #f8fafc, font size: 39.0pt (52px), font weight: normal). Expected contrast ratio of 3:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "state": "method-4",
+      "violations": []
+    },
+    {
+      "width": 390,
+      "state": "method-4",
+      "violations": []
+    },
+    {
+      "width": 320,
+      "state": "explorer-3",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": [
+            {
+              "target": [
+                "#homepage-explorer-tab-3 > span"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.05 (foreground color: #b74616, background color: #0d1f3c, font size: 9.0pt (12px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".homepage-proof-grid > article:nth-child(1) > .homepage-card-index[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.12 (foreground color: #e8edf5, background color: #f8fafc, font size: 39.0pt (52px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                ".homepage-proof-grid > article:nth-child(2) > .homepage-card-index[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.12 (foreground color: #e8edf5, background color: #f8fafc, font size: 39.0pt (52px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                ".homepage-proof-grid > article:nth-child(3) > .homepage-card-index[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.12 (foreground color: #e8edf5, background color: #f8fafc, font size: 39.0pt (52px), font weight: normal). Expected contrast ratio of 3:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "width": 768,
+      "state": "explorer-3",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": [
+            {
+              "target": [
+                "#homepage-explorer-tab-3 > span"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.05 (foreground color: #b74616, background color: #0d1f3c, font size: 12.8pt (17px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".homepage-proof-grid > article:nth-child(1) > .homepage-card-index[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.12 (foreground color: #e8edf5, background color: #f8fafc, font size: 39.0pt (52px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                ".homepage-proof-grid > article:nth-child(2) > .homepage-card-index[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.12 (foreground color: #e8edf5, background color: #f8fafc, font size: 39.0pt (52px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                ".homepage-proof-grid > article:nth-child(3) > .homepage-card-index[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.12 (foreground color: #e8edf5, background color: #f8fafc, font size: 39.0pt (52px), font weight: normal). Expected contrast ratio of 3:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "state": "method-5",
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "state": "method-5",
+      "violations": []
+    },
+    {
+      "width": 320,
+      "state": "explorer-4",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": [
+            {
+              "target": [
+                "#homepage-explorer-tab-4 > span"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.05 (foreground color: #b74616, background color: #0d1f3c, font size: 9.0pt (12px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "width": 768,
+      "state": "explorer-4",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": [
+            {
+              "target": [
+                "#homepage-explorer-tab-4 > span"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.05 (foreground color: #b74616, background color: #0d1f3c, font size: 12.8pt (17px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "state": "explorer-2",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": [
+            {
+              "target": [
+                "#homepage-explorer-tab-2 > span"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.05 (foreground color: #b74616, background color: #0d1f3c, font size: 9.0pt (12px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".homepage-tool-grid > article:nth-child(1) > .homepage-card-index[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.12 (foreground color: #e8edf5, background color: #f8fafc, font size: 39.0pt (52px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                ".homepage-tool-grid > article:nth-child(2) > .homepage-card-index[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.12 (foreground color: #e8edf5, background color: #f8fafc, font size: 39.0pt (52px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                ".homepage-tool-grid > article:nth-child(3) > .homepage-card-index[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.12 (foreground color: #e8edf5, background color: #f8fafc, font size: 39.0pt (52px), font weight: normal). Expected contrast ratio of 3:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "state": "explorer-2",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": [
+            {
+              "target": [
+                "#homepage-explorer-tab-2 > span"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.05 (foreground color: #b74616, background color: #0d1f3c, font size: 12.8pt (17px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".homepage-tool-grid > article:nth-child(1) > .homepage-card-index[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.12 (foreground color: #e8edf5, background color: #f8fafc, font size: 21.0pt (28px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                ".homepage-tool-grid > article:nth-child(2) > .homepage-card-index[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.12 (foreground color: #e8edf5, background color: #f8fafc, font size: 21.0pt (28px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                ".homepage-tool-grid > article:nth-child(3) > .homepage-card-index[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.12 (foreground color: #e8edf5, background color: #f8fafc, font size: 21.0pt (28px), font weight: normal). Expected contrast ratio of 3:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "width": 768,
+      "state": "form-step-1",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": [
+            {
+              "target": [
+                "a[data-analytics-component=\"homepage_final_cta\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.02 (foreground color: #ffffff, background color: #f5a623, font size: 12.2pt (16.32px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "state": "form-step-1",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": [
+            {
+              "target": [
+                "a[data-analytics-component=\"homepage_final_cta\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.02 (foreground color: #ffffff, background color: #f5a623, font size: 12.2pt (16.32px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "state": "explorer-3",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": [
+            {
+              "target": [
+                "#homepage-explorer-tab-3 > span"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.05 (foreground color: #b74616, background color: #0d1f3c, font size: 12.8pt (17px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".homepage-proof-grid > article:nth-child(1) > .homepage-card-index[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.12 (foreground color: #e8edf5, background color: #f8fafc, font size: 21.0pt (28px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                ".homepage-proof-grid > article:nth-child(2) > .homepage-card-index[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.12 (foreground color: #e8edf5, background color: #f8fafc, font size: 21.0pt (28px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                ".homepage-proof-grid > article:nth-child(3) > .homepage-card-index[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.12 (foreground color: #e8edf5, background color: #f8fafc, font size: 21.0pt (28px), font weight: normal). Expected contrast ratio of 3:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "state": "explorer-3",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": [
+            {
+              "target": [
+                "#homepage-explorer-tab-3 > span"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.05 (foreground color: #b74616, background color: #0d1f3c, font size: 9.0pt (12px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                ".homepage-proof-grid > article:nth-child(1) > .homepage-card-index[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.12 (foreground color: #e8edf5, background color: #f8fafc, font size: 39.0pt (52px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                ".homepage-proof-grid > article:nth-child(2) > .homepage-card-index[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.12 (foreground color: #e8edf5, background color: #f8fafc, font size: 39.0pt (52px), font weight: normal). Expected contrast ratio of 3:1"
+            },
+            {
+              "target": [
+                ".homepage-proof-grid > article:nth-child(3) > .homepage-card-index[aria-hidden=\"true\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.12 (foreground color: #e8edf5, background color: #f8fafc, font size: 39.0pt (52px), font weight: normal). Expected contrast ratio of 3:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "state": "form-validation-errors",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": [
+            {
+              "target": [
+                "a[data-analytics-component=\"homepage_final_cta\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.02 (foreground color: #ffffff, background color: #f5a623, font size: 12.2pt (16.32px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "a[href$=\"#contact-applicant-type\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.13 (foreground color: #ffffff, background color: #feecec, font size: 12.8pt (17px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "a[href$=\"#contact-location\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.13 (foreground color: #ffffff, background color: #feecec, font size: 12.8pt (17px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "a[href$=\"#contact-investment\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.13 (foreground color: #ffffff, background color: #feecec, font size: 12.8pt (17px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "a[href$=\"#contact-email\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.13 (foreground color: #ffffff, background color: #feecec, font size: 12.8pt (17px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "a[href=\"#privacy-notice-acknowledged\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.13 (foreground color: #ffffff, background color: #feecec, font size: 12.8pt (17px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "width": 768,
+      "state": "form-validation-errors",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": [
+            {
+              "target": [
+                "a[data-analytics-component=\"homepage_final_cta\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.02 (foreground color: #ffffff, background color: #f5a623, font size: 12.2pt (16.32px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "a[href$=\"#contact-applicant-type\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.13 (foreground color: #ffffff, background color: #feecec, font size: 12.8pt (17px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "a[href$=\"#contact-location\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.13 (foreground color: #ffffff, background color: #feecec, font size: 12.8pt (17px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "a[href$=\"#contact-investment\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.13 (foreground color: #ffffff, background color: #feecec, font size: 12.8pt (17px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "a[href$=\"#contact-email\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.13 (foreground color: #ffffff, background color: #feecec, font size: 12.8pt (17px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "a[href=\"#privacy-notice-acknowledged\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.13 (foreground color: #ffffff, background color: #feecec, font size: 12.8pt (17px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "state": "explorer-4",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": [
+            {
+              "target": [
+                "#homepage-explorer-tab-4 > span"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.05 (foreground color: #b74616, background color: #0d1f3c, font size: 12.8pt (17px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "state": "explorer-4",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": [
+            {
+              "target": [
+                "#homepage-explorer-tab-4 > span"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.05 (foreground color: #b74616, background color: #0d1f3c, font size: 9.0pt (12px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "width": 768,
+      "state": "form-step-2-expanded",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": [
+            {
+              "target": [
+                "a[data-analytics-component=\"homepage_final_cta\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.02 (foreground color: #ffffff, background color: #f5a623, font size: 12.2pt (16.32px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "state": "form-step-2-expanded",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": [
+            {
+              "target": [
+                "a[data-analytics-component=\"homepage_final_cta\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.02 (foreground color: #ffffff, background color: #f5a623, font size: 12.2pt (16.32px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "state": "form-step-1",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": [
+            {
+              "target": [
+                "a[data-analytics-component=\"homepage_final_cta\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.02 (foreground color: #ffffff, background color: #f5a623, font size: 12.2pt (16.32px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "state": "form-step-1",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": [
+            {
+              "target": [
+                "a[data-analytics-component=\"homepage_final_cta\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.02 (foreground color: #ffffff, background color: #f5a623, font size: 12.2pt (16.32px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "width": 768,
+      "state": "form-review",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": [
+            {
+              "target": [
+                "a[data-analytics-component=\"homepage_final_cta\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.02 (foreground color: #ffffff, background color: #f5a623, font size: 12.2pt (16.32px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "state": "form-review",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": [
+            {
+              "target": [
+                "a[data-analytics-component=\"homepage_final_cta\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.02 (foreground color: #ffffff, background color: #f5a623, font size: 12.2pt (16.32px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "state": "form-validation-errors",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": [
+            {
+              "target": [
+                "a[data-analytics-component=\"homepage_final_cta\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.02 (foreground color: #ffffff, background color: #f5a623, font size: 12.2pt (16.32px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "a[href$=\"#contact-applicant-type\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.13 (foreground color: #ffffff, background color: #feecec, font size: 12.8pt (17px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "a[href$=\"#contact-location\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.13 (foreground color: #ffffff, background color: #feecec, font size: 12.8pt (17px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "a[href$=\"#contact-investment\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.13 (foreground color: #ffffff, background color: #feecec, font size: 12.8pt (17px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "a[href$=\"#contact-email\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.13 (foreground color: #ffffff, background color: #feecec, font size: 12.8pt (17px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "a[href=\"#privacy-notice-acknowledged\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.13 (foreground color: #ffffff, background color: #feecec, font size: 12.8pt (17px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "width": 768,
+      "state": "form-server-error",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": [
+            {
+              "target": [
+                "a[data-analytics-component=\"homepage_final_cta\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.02 (foreground color: #ffffff, background color: #f5a623, font size: 12.2pt (16.32px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "p[data-form-alert-message=\"\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.13 (foreground color: #ffffff, background color: #feecec, font size: 11.3pt (15px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "state": "form-validation-errors",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": [
+            {
+              "target": [
+                "a[data-analytics-component=\"homepage_final_cta\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.02 (foreground color: #ffffff, background color: #f5a623, font size: 12.2pt (16.32px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "a[href$=\"#contact-applicant-type\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.13 (foreground color: #ffffff, background color: #feecec, font size: 12.8pt (17px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "a[href$=\"#contact-location\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.13 (foreground color: #ffffff, background color: #feecec, font size: 12.8pt (17px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "a[href$=\"#contact-investment\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.13 (foreground color: #ffffff, background color: #feecec, font size: 12.8pt (17px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "a[href$=\"#contact-email\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.13 (foreground color: #ffffff, background color: #feecec, font size: 12.8pt (17px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "a[href=\"#privacy-notice-acknowledged\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.13 (foreground color: #ffffff, background color: #feecec, font size: 12.8pt (17px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "state": "form-server-error",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": [
+            {
+              "target": [
+                "a[data-analytics-component=\"homepage_final_cta\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.02 (foreground color: #ffffff, background color: #f5a623, font size: 12.2pt (16.32px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "p[data-form-alert-message=\"\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.13 (foreground color: #ffffff, background color: #feecec, font size: 11.3pt (15px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "width": 768,
+      "state": "form-success",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": [
+            {
+              "target": [
+                "a[data-analytics-component=\"homepage_final_cta\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.02 (foreground color: #ffffff, background color: #f5a623, font size: 12.2pt (16.32px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "state": "form-success",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": [
+            {
+              "target": [
+                "a[data-analytics-component=\"homepage_final_cta\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.02 (foreground color: #ffffff, background color: #f5a623, font size: 12.2pt (16.32px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "state": "form-step-2-expanded",
+      "violations": []
+    },
+    {
+      "width": 390,
+      "state": "form-step-2-expanded",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": [
+            {
+              "target": [
+                "a[data-analytics-component=\"homepage_final_cta\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.02 (foreground color: #ffffff, background color: #f5a623, font size: 12.2pt (16.32px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "state": "form-review",
+      "violations": []
+    },
+    {
+      "width": 390,
+      "state": "form-review",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": [
+            {
+              "target": [
+                "a[data-analytics-component=\"homepage_final_cta\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.02 (foreground color: #ffffff, background color: #f5a623, font size: 12.2pt (16.32px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "state": "form-server-error",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": [
+            {
+              "target": [
+                "a[data-analytics-component=\"homepage_final_cta\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.02 (foreground color: #ffffff, background color: #f5a623, font size: 12.2pt (16.32px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "p[data-form-alert-message=\"\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.13 (foreground color: #ffffff, background color: #feecec, font size: 11.3pt (15px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "state": "form-server-error",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": [
+            {
+              "target": [
+                "a[data-analytics-component=\"homepage_final_cta\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.02 (foreground color: #ffffff, background color: #f5a623, font size: 12.2pt (16.32px), font weight: bold). Expected contrast ratio of 4.5:1"
+            },
+            {
+              "target": [
+                "p[data-form-alert-message=\"\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 1.13 (foreground color: #ffffff, background color: #feecec, font size: 11.3pt (15px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "state": "form-success",
+      "violations": []
+    },
+    {
+      "width": 390,
+      "state": "form-success",
+      "violations": [
+        {
+          "id": "color-contrast",
+          "impact": "serious",
+          "nodes": [
+            {
+              "target": [
+                "a[data-analytics-component=\"homepage_final_cta\"]"
+              ],
+              "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.02 (foreground color: #ffffff, background color: #f5a623, font size: 12.2pt (16.32px), font weight: bold). Expected contrast ratio of 4.5:1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "homepageAfter": [
+    {
+      "width": 1440,
+      "state": "initial",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 390,
+      "state": "initial",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 768,
+      "state": "initial",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 320,
+      "state": "initial",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 320,
+      "state": "hero",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 768,
+      "state": "hero",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 390,
+      "state": "hero",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "state": "hero",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 320,
+      "state": "homepage-method",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 768,
+      "state": "homepage-method",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "state": "homepage-method",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 390,
+      "state": "homepage-method",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 320,
+      "state": "priority-programs",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 768,
+      "state": "priority-programs",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 320,
+      "state": "homepage-explorer",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 768,
+      "state": "homepage-explorer",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "state": "priority-programs",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 390,
+      "state": "priority-programs",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 320,
+      "state": "homepage-contact",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 768,
+      "state": "homepage-contact",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "state": "homepage-explorer",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 390,
+      "state": "homepage-explorer",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 320,
+      "state": "method-2",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 768,
+      "state": "method-2",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "state": "homepage-contact",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 320,
+      "state": "method-3",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 390,
+      "state": "homepage-contact",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 768,
+      "state": "method-3",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 320,
+      "state": "method-4",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "state": "method-2",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 768,
+      "state": "method-4",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 390,
+      "state": "method-2",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 320,
+      "state": "method-5",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 768,
+      "state": "method-5",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "state": "method-3",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 390,
+      "state": "method-3",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 320,
+      "state": "explorer-2",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 768,
+      "state": "explorer-2",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "state": "method-4",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 390,
+      "state": "method-4",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 320,
+      "state": "explorer-3",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 768,
+      "state": "explorer-3",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "state": "method-5",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 390,
+      "state": "method-5",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 320,
+      "state": "explorer-4",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 768,
+      "state": "explorer-4",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "state": "explorer-2",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 390,
+      "state": "explorer-2",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 768,
+      "state": "form-step-1",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 320,
+      "state": "form-step-1",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "state": "explorer-3",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 390,
+      "state": "explorer-3",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 320,
+      "state": "form-validation-errors",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 768,
+      "state": "form-validation-errors",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "state": "explorer-4",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 390,
+      "state": "explorer-4",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 768,
+      "state": "form-step-2-expanded",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 320,
+      "state": "form-step-2-expanded",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "state": "form-step-1",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 390,
+      "state": "form-step-1",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 768,
+      "state": "form-review",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 320,
+      "state": "form-review",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "state": "form-validation-errors",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 768,
+      "state": "form-server-error",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 320,
+      "state": "form-server-error",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 390,
+      "state": "form-validation-errors",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 768,
+      "state": "form-success",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 320,
+      "state": "form-success",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "state": "form-step-2-expanded",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 390,
+      "state": "form-step-2-expanded",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "state": "form-review",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 390,
+      "state": "form-review",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "state": "form-server-error",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 390,
+      "state": "form-server-error",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 1440,
+      "state": "form-success",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    },
+    {
+      "width": 390,
+      "state": "form-success",
+      "overflow": 0,
+      "clipped": [],
+      "panelContrast": [],
+      "violations": []
+    }
+  ],
+  "programPages": [
+    {
+      "route": "/afir-autoconsum-agroalimentar",
+      "width": 390,
+      "status": 200,
+      "title": "AFIR Autoconsum 2026: fotovoltaice, stocare, ghid | FABER",
+      "h1": [
+        "AFIR Autoconsum Agroalimentar 2026 – energie solară pentru ferme și procesatori"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/afir-autoconsum-agroalimentar",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [],
+      "heroActionGroups": 1,
+      "heroStatusCount": 0,
+      "pageHeight": 22835,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "expandedViolations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "pauseWorks": true,
+      "disclosuresWork": true,
+      "menuWorks": true,
+      "stickyWorks": null,
+      "stickyHeight": null
+    },
+    {
+      "route": "/apeluri-gal",
+      "width": 390,
+      "status": 200,
+      "title": "Apeluri GAL: ghid local, criterii și documente",
+      "h1": [
+        "Apeluri GALFinanțări locale"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/apeluri-gal",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [],
+      "heroActionGroups": 1,
+      "heroStatusCount": 0,
+      "pageHeight": 15022,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "expandedViolations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "pauseWorks": true,
+      "disclosuresWork": true,
+      "menuWorks": true,
+      "stickyWorks": null,
+      "stickyHeight": null
+    },
+    {
+      "route": "/autoconsum-public-fotovoltaice-institutii-publice",
+      "width": 390,
+      "status": 200,
+      "title": "PC1 Autoconsum entități publice: depuneri 2026 | FABER",
+      "h1": [
+        "PC1 Autoconsum 2026 pentru entități publice – producție solară și stocare integrată"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/autoconsum-public-fotovoltaice-institutii-publice",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [
+        {
+          "text": "Fondul pentru Modernizare · Program-cheie 1",
+          "size": "11.04px"
+        },
+        {
+          "text": "Răspuns rapid",
+          "size": "12.16px"
+        },
+        {
+          "text": "Date oficiale",
+          "size": "12.16px"
+        },
+        {
+          "text": "Filtru inițial",
+          "size": "12.16px"
+        },
+        {
+          "text": "Arhitectura proiectului",
+          "size": "12.16px"
+        },
+        {
+          "text": "Dosar de lucru",
+          "size": "12.16px"
+        },
+        {
+          "text": "Parcurs recomandat",
+          "size": "12.16px"
+        },
+        {
+          "text": "Trasabilitate",
+          "size": "12.16px"
+        },
+        {
+          "text": "Ultima verificare editorială: 2026-09-13.",
+          "size": "13.44px"
+        },
+        {
+          "text": "Întrebări frecvente",
+          "size": "12.16px"
+        },
+        {
+          "text": "Următorul pas",
+          "size": "12.16px"
+        }
+      ],
+      "heroActionGroups": 1,
+      "heroStatusCount": 0,
+      "pageHeight": 13984,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "expandedViolations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "pauseWorks": true,
+      "disclosuresWork": true,
+      "menuWorks": true,
+      "stickyWorks": null,
+      "stickyHeight": null
+    },
+    {
+      "route": "/diaspora-investeste-acasa",
+      "width": 390,
+      "status": 200,
+      "title": "Diaspora Investește Acasă: 200.000 €, stadiu 2026 | FABER",
+      "h1": [
+        "Diaspora Investește Acasă"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/diaspora-investeste-acasa",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [
+        {
+          "text": "Antreprenoriat · investiții în România",
+          "size": "11.04px"
+        },
+        {
+          "text": "Răspuns rapid",
+          "size": "12.16px"
+        },
+        {
+          "text": "Filtru inițial",
+          "size": "12.16px"
+        },
+        {
+          "text": "Arhitectura proiectului",
+          "size": "12.16px"
+        },
+        {
+          "text": "Dosar de lucru",
+          "size": "12.16px"
+        },
+        {
+          "text": "Parcurs recomandat",
+          "size": "12.16px"
+        },
+        {
+          "text": "Trasabilitate",
+          "size": "12.16px"
+        },
+        {
+          "text": "Ultima verificare editorială: 2026-09-06.",
+          "size": "13.44px"
+        },
+        {
+          "text": "Întrebări frecvente",
+          "size": "12.16px"
+        },
+        {
+          "text": "Următorul pas",
+          "size": "12.16px"
+        }
+      ],
+      "heroActionGroups": 1,
+      "heroStatusCount": 0,
+      "pageHeight": 10540,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "expandedViolations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "pauseWorks": true,
+      "disclosuresWork": true,
+      "menuWorks": true,
+      "stickyWorks": null,
+      "stickyHeight": null
+    },
+    {
+      "route": "/digitalizare-imm",
+      "width": 390,
+      "status": 200,
+      "title": "Digitalizare IMM: apel închis și sursă MIPE | FABER",
+      "h1": [
+        "Digitalizarea IMM-urilor"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/digitalizare-imm",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [],
+      "heroActionGroups": 1,
+      "heroStatusCount": 0,
+      "pageHeight": 17489,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "expandedViolations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "pauseWorks": true,
+      "disclosuresWork": true,
+      "menuWorks": true,
+      "stickyWorks": null,
+      "stickyHeight": null
+    },
+    {
+      "route": "/dr-12-afir-instalarea-tinerilor-fermieri",
+      "width": 390,
+      "status": 200,
+      "title": "DR12 AFIR și instalarea tinerilor fermieri: diferențe",
+      "h1": [
+        "DR12 AFIR și instalarea tinerilor fermieri: diferențe"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/dr-12-afir-instalarea-tinerilor-fermieri",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [
+        {
+          "text": "Transparenta editoriala",
+          "size": "13.12px"
+        }
+      ],
+      "heroActionGroups": 1,
+      "heroStatusCount": 1,
+      "pageHeight": 11419,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "expandedViolations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "pauseWorks": true,
+      "disclosuresWork": true,
+      "menuWorks": true,
+      "stickyWorks": null,
+      "stickyHeight": null
+    },
+    {
+      "route": "/dr-14-afir-conditii-eligibilitate-greseli-frecvente",
+      "width": 390,
+      "status": 200,
+      "title": "DR 14 AFIR ferme mici | eligibilitate și greșeli",
+      "h1": [
+        "DR14 AFIR: condiții, eligibilitate și greșeli frecvente"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/dr-14-afir-conditii-eligibilitate-greseli-frecvente",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [],
+      "heroActionGroups": 1,
+      "heroStatusCount": 1,
+      "pageHeight": 12338,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "expandedViolations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "pauseWorks": true,
+      "disclosuresWork": true,
+      "menuWorks": true,
+      "stickyWorks": null,
+      "stickyHeight": null
+    },
+    {
+      "route": "/dr12-afir",
+      "width": 390,
+      "status": 200,
+      "title": "DR 12 AFIR 2026: 200.000 €, ghid consultativ și condiții",
+      "h1": [
+        "DR 12 AFIR 2026 – investiții pentru tineri fermieri și fermieri până la 45 de ani"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/dr12-afir",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [],
+      "heroActionGroups": 1,
+      "heroStatusCount": 0,
+      "pageHeight": 12317,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "expandedViolations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "pauseWorks": true,
+      "disclosuresWork": true,
+      "menuWorks": true,
+      "stickyWorks": null,
+      "stickyHeight": null
+    },
+    {
+      "route": "/dr14",
+      "width": 390,
+      "status": 200,
+      "title": "DR 14 AFIR 2026: depuneri deschise, 50.000 € și punctaj",
+      "h1": [
+        "DR 14 AFIR 2026 – investiții în fermele de mici dimensiuni"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/dr14",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [
+        {
+          "text": "maximum pentru un proiect",
+          "size": "13.92px"
+        },
+        {
+          "text": "din costurile eligibile",
+          "size": "13.92px"
+        },
+        {
+          "text": "cu praguri speciale pe sectoare",
+          "size": "13.92px"
+        },
+        {
+          "text": "etapa I / etapa II",
+          "size": "13.92px"
+        },
+        {
+          "text": "2026, cu posibilă oprire anticipată",
+          "size": "13.92px"
+        },
+        {
+          "text": "alocat pe patru componente",
+          "size": "13.92px"
+        },
+        {
+          "text": "Simulatorul arată mecanică grilei, nu confirmă punctajul. Criteriile incompatibi",
+          "size": "13.92px"
+        }
+      ],
+      "heroActionGroups": 1,
+      "heroStatusCount": 0,
+      "pageHeight": 18076,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "expandedViolations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "pauseWorks": true,
+      "disclosuresWork": true,
+      "menuWorks": true,
+      "stickyWorks": null,
+      "stickyHeight": null
+    },
+    {
+      "route": "/dr18",
+      "width": 390,
+      "status": 200,
+      "title": "DR 18 AFIR 2026: ghid final, calendar și 100.000 € | FABER",
+      "h1": [
+        "DR 18 AFIR 2026 – investiții în floricultură, plante medicinale și aromatice"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/dr18",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [
+        {
+          "text": "maximum pentru un proiect",
+          "size": "13.92px"
+        },
+        {
+          "text": "calculat cu SOC 2020",
+          "size": "13.92px"
+        },
+        {
+          "text": "în funcție de dimensiunea SO",
+          "size": "13.92px"
+        },
+        {
+          "text": "alocare anunțată de AFIR",
+          "size": "13.92px"
+        }
+      ],
+      "heroActionGroups": 1,
+      "heroStatusCount": 0,
+      "pageHeight": 20172,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "expandedViolations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "pauseWorks": true,
+      "disclosuresWork": true,
+      "menuWorks": true,
+      "stickyWorks": null,
+      "stickyHeight": null
+    },
+    {
+      "route": "/e-drive",
+      "width": 390,
+      "status": 200,
+      "title": "e-DRIVE 2026: până la 30.000 € pentru mașini electrice pe firmă",
+      "h1": [
+        "e-DRIVE 2026 – finanțare pentru vehicule electrice M1, M2 și M3"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/e-drive",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [
+        {
+          "text": "Transport rutier · vehicule cu emisii zero",
+          "size": "11.04px"
+        },
+        {
+          "text": "Răspuns rapid",
+          "size": "12.16px"
+        },
+        {
+          "text": "Filtru inițial",
+          "size": "12.16px"
+        },
+        {
+          "text": "Arhitectura proiectului",
+          "size": "12.16px"
+        },
+        {
+          "text": "Dosar de lucru",
+          "size": "12.16px"
+        },
+        {
+          "text": "Parcurs recomandat",
+          "size": "12.16px"
+        },
+        {
+          "text": "Trasabilitate",
+          "size": "12.16px"
+        },
+        {
+          "text": "Ultima verificare editorială: 2026-09-06.",
+          "size": "13.44px"
+        },
+        {
+          "text": "Întrebări frecvente",
+          "size": "12.16px"
+        },
+        {
+          "text": "Următorul pas",
+          "size": "12.16px"
+        }
+      ],
+      "heroActionGroups": 1,
+      "heroStatusCount": 0,
+      "pageHeight": 11111,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "expandedViolations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "pauseWorks": true,
+      "disclosuresWork": true,
+      "menuWorks": true,
+      "stickyWorks": null,
+      "stickyHeight": null
+    },
+    {
+      "route": "/e-mobility",
+      "width": 390,
+      "status": 200,
+      "title": "e-Mobility RO 2026: finanțare stații de încărcare",
+      "h1": [
+        "e-Mobility RO 2026 – finanțare pentru stații de reîncărcare"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/e-mobility",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [
+        {
+          "text": "Infrastructură rutieră · reîncărcare electrică",
+          "size": "11.04px"
+        },
+        {
+          "text": "Răspuns rapid",
+          "size": "12.16px"
+        },
+        {
+          "text": "Filtru inițial",
+          "size": "12.16px"
+        },
+        {
+          "text": "Arhitectura proiectului",
+          "size": "12.16px"
+        },
+        {
+          "text": "Dosar de lucru",
+          "size": "12.16px"
+        },
+        {
+          "text": "Parcurs recomandat",
+          "size": "12.16px"
+        },
+        {
+          "text": "Trasabilitate",
+          "size": "12.16px"
+        },
+        {
+          "text": "Ultima verificare editorială: 2026-09-06.",
+          "size": "13.44px"
+        },
+        {
+          "text": "Întrebări frecvente",
+          "size": "12.16px"
+        },
+        {
+          "text": "Următorul pas",
+          "size": "12.16px"
+        }
+      ],
+      "heroActionGroups": 1,
+      "heroStatusCount": 0,
+      "pageHeight": 10861,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "expandedViolations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "pauseWorks": true,
+      "disclosuresWork": true,
+      "menuWorks": true,
+      "stickyWorks": null,
+      "stickyHeight": null
+    },
+    {
+      "route": "/e-move",
+      "width": 390,
+      "status": 200,
+      "title": "e-MOVE RO: stații de încărcare și condiții | FABER",
+      "h1": [
+        "Programul e-MOVE RO"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/e-move",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [],
+      "heroActionGroups": 1,
+      "heroStatusCount": 0,
+      "pageHeight": 11454,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "expandedViolations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "pauseWorks": true,
+      "disclosuresWork": true,
+      "menuWorks": true,
+      "stickyWorks": null,
+      "stickyHeight": null
+    },
+    {
+      "route": "/femeia-antreprenor-2026",
+      "width": 390,
+      "status": 200,
+      "title": "Femeia Antreprenor 2026: status oficial | FABER",
+      "h1": [
+        "Femeia Antreprenor 2026 — ediție neconfirmată"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/femeia-antreprenor-2026",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [],
+      "heroActionGroups": 1,
+      "heroStatusCount": 0,
+      "pageHeight": 18103,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "expandedViolations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "pauseWorks": true,
+      "disclosuresWork": true,
+      "menuWorks": true,
+      "stickyWorks": null,
+      "stickyHeight": null
+    },
+    {
+      "route": "/fondul-de-modernizare",
+      "width": 390,
+      "status": 200,
+      "title": "Fondul pentru Modernizare: apeluri și statut | FABER",
+      "h1": [
+        "Fondul pentru Modernizare"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/fondul-de-modernizare",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [],
+      "heroActionGroups": 1,
+      "heroStatusCount": 0,
+      "pageHeight": 18150,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "expandedViolations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "pauseWorks": true,
+      "disclosuresWork": true,
+      "menuWorks": true,
+      "stickyWorks": null,
+      "stickyHeight": null
+    },
+    {
+      "route": "/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum",
+      "width": 390,
+      "status": 200,
+      "title": "Fondul pentru Modernizare: energie și autoconsum",
+      "h1": [
+        "Fondul de Modernizare: proiecte de fotovoltaice și autoconsum"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [],
+      "heroActionGroups": 1,
+      "heroStatusCount": 0,
+      "pageHeight": 14705,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "expandedViolations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "pauseWorks": true,
+      "disclosuresWork": true,
+      "menuWorks": true,
+      "stickyWorks": null,
+      "stickyHeight": null
+    },
+    {
+      "route": "/fondul-modernizare-energie-regenerabila-2026",
+      "width": 390,
+      "status": 200,
+      "title": "Fondul pentru Modernizare: energie regenerabilă",
+      "h1": [
+        "Fondul pentru ModernizareEnergie regenerabilă"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/fondul-modernizare-energie-regenerabila-2026",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [],
+      "heroActionGroups": 1,
+      "heroStatusCount": 0,
+      "pageHeight": 10199,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "expandedViolations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "pauseWorks": true,
+      "disclosuresWork": true,
+      "menuWorks": true,
+      "stickyWorks": null,
+      "stickyHeight": null
+    },
+    {
+      "route": "/fondul-modernizare-pc1-stocare",
+      "width": 390,
+      "status": 200,
+      "title": "PC1 Stocare 2026: 69.000 €/MWh, ghid aprobat | FABER",
+      "h1": [
+        "Fondul pentru Modernizare – PC1 Stocare stand-alone"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/fondul-modernizare-pc1-stocare",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [
+        {
+          "text": "Fondul pentru Modernizare · Program-cheie 1",
+          "size": "11.04px"
+        },
+        {
+          "text": "Răspuns rapid",
+          "size": "12.16px"
+        },
+        {
+          "text": "Filtru inițial",
+          "size": "12.16px"
+        },
+        {
+          "text": "Arhitectura proiectului",
+          "size": "12.16px"
+        },
+        {
+          "text": "Dosar de lucru",
+          "size": "12.16px"
+        },
+        {
+          "text": "Parcurs recomandat",
+          "size": "12.16px"
+        },
+        {
+          "text": "Trasabilitate",
+          "size": "12.16px"
+        },
+        {
+          "text": "Ultima verificare editorială: 2026-08-29.",
+          "size": "13.44px"
+        },
+        {
+          "text": "Întrebări frecvente",
+          "size": "12.16px"
+        },
+        {
+          "text": "Următorul pas",
+          "size": "12.16px"
+        }
+      ],
+      "heroActionGroups": 1,
+      "heroStatusCount": 0,
+      "pageHeight": 9675,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "expandedViolations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "pauseWorks": true,
+      "disclosuresWork": true,
+      "menuWorks": true,
+      "stickyWorks": null,
+      "stickyHeight": null
+    },
+    {
+      "route": "/fondul-modernizare-pc1-stocare-entitati-publice",
+      "width": 390,
+      "status": 200,
+      "title": "PC1 Stocare entități publice: depuneri 2026 | FABER",
+      "h1": [
+        "PC1 Stocare 2026 pentru entități publice – baterii în spatele contorului"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/fondul-modernizare-pc1-stocare-entitati-publice",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [
+        {
+          "text": "Fondul pentru Modernizare · Program-cheie 1",
+          "size": "11.04px"
+        },
+        {
+          "text": "Răspuns rapid",
+          "size": "12.16px"
+        },
+        {
+          "text": "Date oficiale",
+          "size": "12.16px"
+        },
+        {
+          "text": "Date oficiale",
+          "size": "12.16px"
+        },
+        {
+          "text": "Filtru inițial",
+          "size": "12.16px"
+        },
+        {
+          "text": "Arhitectura proiectului",
+          "size": "12.16px"
+        },
+        {
+          "text": "Dosar de lucru",
+          "size": "12.16px"
+        },
+        {
+          "text": "Parcurs recomandat",
+          "size": "12.16px"
+        },
+        {
+          "text": "Trasabilitate",
+          "size": "12.16px"
+        },
+        {
+          "text": "Ultima verificare editorială: 2026-09-13.",
+          "size": "13.44px"
+        },
+        {
+          "text": "Întrebări frecvente",
+          "size": "12.16px"
+        },
+        {
+          "text": "Următorul pas",
+          "size": "12.16px"
+        }
+      ],
+      "heroActionGroups": 1,
+      "heroStatusCount": 0,
+      "pageHeight": 15251,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "expandedViolations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "pauseWorks": true,
+      "disclosuresWork": true,
+      "menuWorks": true,
+      "stickyWorks": null,
+      "stickyHeight": null
+    },
+    {
+      "route": "/fonduri-regionale",
+      "width": 390,
+      "status": 200,
+      "title": "Fonduri regionale 2021–2027 și ADR-uri | FABER",
+      "h1": [
+        "Programe regionale și apeluri ADR"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/fonduri-regionale",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [
+        {
+          "text": "Registru verificat",
+          "size": "12.48px"
+        },
+        {
+          "text": "Verificare prudentă",
+          "size": "12.48px"
+        }
+      ],
+      "heroActionGroups": 1,
+      "heroStatusCount": 0,
+      "pageHeight": 7217,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "expandedViolations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "pauseWorks": true,
+      "disclosuresWork": true,
+      "menuWorks": true,
+      "stickyWorks": null,
+      "stickyHeight": null
+    },
+    {
+      "route": "/gal-afir",
+      "width": 390,
+      "status": 200,
+      "title": "GAL AFIR 2026: apeluri DR-36 și verificare | FABER",
+      "h1": [
+        "GAL AFIR / DR-36 prin Grupuri de Acțiune Locală"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/gal-afir",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [],
+      "heroActionGroups": 1,
+      "heroStatusCount": 0,
+      "pageHeight": 13153,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "expandedViolations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "pauseWorks": true,
+      "disclosuresWork": true,
+      "menuWorks": true,
+      "stickyWorks": null,
+      "stickyHeight": null
+    },
+    {
+      "route": "/investitii-modernizarea-microintreprinderilor-apel-2",
+      "width": 390,
+      "status": 200,
+      "title": "Modernizarea microîntreprinderilor: Apel 2 Nord-Est 2026",
+      "h1": [
+        "Investiții pentru modernizarea microîntreprinderilor – Apel 2"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/investitii-modernizarea-microintreprinderilor-apel-2",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [],
+      "heroActionGroups": 1,
+      "heroStatusCount": 0,
+      "pageHeight": 24911,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "expandedViolations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "pauseWorks": true,
+      "disclosuresWork": true,
+      "menuWorks": true,
+      "stickyWorks": true,
+      "stickyHeight": 67.375
+    },
+    {
+      "route": "/pnrr",
+      "width": 390,
+      "status": 200,
+      "title": "PNRR: componente, apeluri și stadiul implementării | FABER",
+      "h1": [
+        "Planul Național de Redresare și Reziliență"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/pnrr",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [],
+      "heroActionGroups": 1,
+      "heroStatusCount": 0,
+      "pageHeight": 17696,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "expandedViolations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "pauseWorks": true,
+      "disclosuresWork": true,
+      "menuWorks": true,
+      "stickyWorks": null,
+      "stickyHeight": null
+    },
+    {
+      "route": "/pocidif-21",
+      "width": 390,
+      "status": 200,
+      "title": "PoCIDIF 2.1: inovare digitală pentru IMM TIC | FABER",
+      "h1": [
+        "PoCIDIF – Acțiunea 2.1 Dezvoltarea de noi servicii, aplicații și produse prin inovare și adoptarea de tehnologii avansate"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/pocidif-21",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [],
+      "heroActionGroups": 1,
+      "heroStatusCount": 0,
+      "pageHeight": 14605,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "expandedViolations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "aria-valid-attr-value",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "pauseWorks": true,
+      "disclosuresWork": true,
+      "menuWorks": true,
+      "stickyWorks": null,
+      "stickyHeight": null
+    },
+    {
+      "route": "/pro-infra",
+      "width": 390,
+      "status": 200,
+      "title": "PRO INFRA 2026: până la 15 mil. €, condiții și EMS",
+      "h1": [
+        "PRO INFRA – eficiență energetică pentru producătorii din infrastructura de transport"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/pro-infra",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [],
+      "heroActionGroups": 1,
+      "heroStatusCount": 0,
+      "pageHeight": 16937,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "expandedViolations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "aria-valid-attr-value",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "pauseWorks": true,
+      "disclosuresWork": true,
+      "menuWorks": true,
+      "stickyWorks": null,
+      "stickyHeight": null
+    },
+    {
+      "route": "/programul-tranzitie-justa",
+      "width": 390,
+      "status": 200,
+      "title": "Programul Tranziție Justă: apeluri și statut | FABER",
+      "h1": [
+        "Programul Tranziție Justă"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/programul-tranzitie-justa",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [],
+      "heroActionGroups": 1,
+      "heroStatusCount": 0,
+      "pageHeight": 18553,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "expandedViolations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "pauseWorks": true,
+      "disclosuresWork": true,
+      "menuWorks": true,
+      "stickyWorks": null,
+      "stickyHeight": null
+    },
+    {
+      "route": "/start-up-nation-2026",
+      "width": 390,
+      "status": 200,
+      "title": "Start-Up Nation: apel închis la 29 mai 2026 | FABER",
+      "h1": [
+        "Start-Up Nation2026"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/start-up-nation-2026",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [],
+      "heroActionGroups": 1,
+      "heroStatusCount": 0,
+      "pageHeight": 15372,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "expandedViolations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "pauseWorks": true,
+      "disclosuresWork": true,
+      "menuWorks": true,
+      "stickyWorks": null,
+      "stickyHeight": null
+    },
+    {
+      "route": "/afir-autoconsum-agroalimentar",
+      "width": 1440,
+      "status": 200,
+      "title": "AFIR Autoconsum 2026: fotovoltaice, stocare, ghid | FABER",
+      "h1": [
+        "AFIR Autoconsum Agroalimentar 2026 – energie solară pentru ferme și procesatori"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/afir-autoconsum-agroalimentar",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [],
+      "heroActionGroups": 1,
+      "heroStatusCount": 0,
+      "pageHeight": 10732,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "expandedViolations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "pauseWorks": true,
+      "disclosuresWork": true,
+      "menuWorks": null,
+      "stickyWorks": null,
+      "stickyHeight": null
+    },
+    {
+      "route": "/apeluri-gal",
+      "width": 1440,
+      "status": 200,
+      "title": "Apeluri GAL: ghid local, criterii și documente",
+      "h1": [
+        "Apeluri GALFinanțări locale"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/apeluri-gal",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [],
+      "heroActionGroups": 1,
+      "heroStatusCount": 0,
+      "pageHeight": 8954,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "expandedViolations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "pauseWorks": true,
+      "disclosuresWork": true,
+      "menuWorks": null,
+      "stickyWorks": null,
+      "stickyHeight": null
+    },
+    {
+      "route": "/autoconsum-public-fotovoltaice-institutii-publice",
+      "width": 1440,
+      "status": 200,
+      "title": "PC1 Autoconsum entități publice: depuneri 2026 | FABER",
+      "h1": [
+        "PC1 Autoconsum 2026 pentru entități publice – producție solară și stocare integrată"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/autoconsum-public-fotovoltaice-institutii-publice",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [
+        {
+          "text": "Fondul pentru Modernizare · Program-cheie 1",
+          "size": "11.04px"
+        },
+        {
+          "text": "Răspuns rapid",
+          "size": "12.16px"
+        },
+        {
+          "text": "Date oficiale",
+          "size": "12.16px"
+        },
+        {
+          "text": "Filtru inițial",
+          "size": "12.16px"
+        },
+        {
+          "text": "Arhitectura proiectului",
+          "size": "12.16px"
+        },
+        {
+          "text": "Dosar de lucru",
+          "size": "12.16px"
+        },
+        {
+          "text": "Parcurs recomandat",
+          "size": "12.16px"
+        },
+        {
+          "text": "Trasabilitate",
+          "size": "12.16px"
+        },
+        {
+          "text": "Ultima verificare editorială: 2026-09-13.",
+          "size": "13.44px"
+        },
+        {
+          "text": "Întrebări frecvente",
+          "size": "12.16px"
+        },
+        {
+          "text": "Următorul pas",
+          "size": "12.16px"
+        }
+      ],
+      "heroActionGroups": 1,
+      "heroStatusCount": 0,
+      "pageHeight": 10142,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "expandedViolations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "pauseWorks": true,
+      "disclosuresWork": true,
+      "menuWorks": null,
+      "stickyWorks": null,
+      "stickyHeight": null
+    },
+    {
+      "route": "/diaspora-investeste-acasa",
+      "width": 1440,
+      "status": 200,
+      "title": "Diaspora Investește Acasă: 200.000 €, stadiu 2026 | FABER",
+      "h1": [
+        "Diaspora Investește Acasă"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/diaspora-investeste-acasa",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [
+        {
+          "text": "Antreprenoriat · investiții în România",
+          "size": "11.04px"
+        },
+        {
+          "text": "Răspuns rapid",
+          "size": "12.16px"
+        },
+        {
+          "text": "Filtru inițial",
+          "size": "12.16px"
+        },
+        {
+          "text": "Arhitectura proiectului",
+          "size": "12.16px"
+        },
+        {
+          "text": "Dosar de lucru",
+          "size": "12.16px"
+        },
+        {
+          "text": "Parcurs recomandat",
+          "size": "12.16px"
+        },
+        {
+          "text": "Trasabilitate",
+          "size": "12.16px"
+        },
+        {
+          "text": "Ultima verificare editorială: 2026-09-06.",
+          "size": "13.44px"
+        },
+        {
+          "text": "Întrebări frecvente",
+          "size": "12.16px"
+        },
+        {
+          "text": "Următorul pas",
+          "size": "12.16px"
+        }
+      ],
+      "heroActionGroups": 1,
+      "heroStatusCount": 0,
+      "pageHeight": 7722,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "expandedViolations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "pauseWorks": true,
+      "disclosuresWork": true,
+      "menuWorks": null,
+      "stickyWorks": null,
+      "stickyHeight": null
+    },
+    {
+      "route": "/digitalizare-imm",
+      "width": 1440,
+      "status": 200,
+      "title": "Digitalizare IMM: apel închis și sursă MIPE | FABER",
+      "h1": [
+        "Digitalizarea IMM-urilor"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/digitalizare-imm",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [],
+      "heroActionGroups": 1,
+      "heroStatusCount": 0,
+      "pageHeight": 9731,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "expandedViolations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "pauseWorks": true,
+      "disclosuresWork": true,
+      "menuWorks": null,
+      "stickyWorks": null,
+      "stickyHeight": null
+    },
+    {
+      "route": "/dr-12-afir-instalarea-tinerilor-fermieri",
+      "width": 1440,
+      "status": 200,
+      "title": "DR12 AFIR și instalarea tinerilor fermieri: diferențe",
+      "h1": [
+        "DR12 AFIR și instalarea tinerilor fermieri: diferențe"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/dr-12-afir-instalarea-tinerilor-fermieri",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [
+        {
+          "text": "Transparenta editoriala",
+          "size": "13.12px"
+        }
+      ],
+      "heroActionGroups": 1,
+      "heroStatusCount": 1,
+      "pageHeight": 5654,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "expandedViolations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "pauseWorks": true,
+      "disclosuresWork": true,
+      "menuWorks": null,
+      "stickyWorks": null,
+      "stickyHeight": null
+    },
+    {
+      "route": "/dr-14-afir-conditii-eligibilitate-greseli-frecvente",
+      "width": 1440,
+      "status": 200,
+      "title": "DR 14 AFIR ferme mici | eligibilitate și greșeli",
+      "h1": [
+        "DR14 AFIR: condiții, eligibilitate și greșeli frecvente"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/dr-14-afir-conditii-eligibilitate-greseli-frecvente",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [],
+      "heroActionGroups": 1,
+      "heroStatusCount": 1,
+      "pageHeight": 5831,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "expandedViolations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "pauseWorks": true,
+      "disclosuresWork": true,
+      "menuWorks": null,
+      "stickyWorks": null,
+      "stickyHeight": null
+    },
+    {
+      "route": "/dr12-afir",
+      "width": 1440,
+      "status": 200,
+      "title": "DR 12 AFIR 2026: 200.000 €, ghid consultativ și condiții",
+      "h1": [
+        "DR 12 AFIR 2026 – investiții pentru tineri fermieri și fermieri până la 45 de ani"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/dr12-afir",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [],
+      "heroActionGroups": 1,
+      "heroStatusCount": 0,
+      "pageHeight": 6706,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "expandedViolations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "pauseWorks": true,
+      "disclosuresWork": true,
+      "menuWorks": null,
+      "stickyWorks": null,
+      "stickyHeight": null
+    },
+    {
+      "route": "/dr14",
+      "width": 1440,
+      "status": 200,
+      "title": "DR 14 AFIR 2026: depuneri deschise, 50.000 € și punctaj",
+      "h1": [
+        "DR 14 AFIR 2026 – investiții în fermele de mici dimensiuni"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/dr14",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [
+        {
+          "text": "maximum pentru un proiect",
+          "size": "13.92px"
+        },
+        {
+          "text": "din costurile eligibile",
+          "size": "13.92px"
+        },
+        {
+          "text": "cu praguri speciale pe sectoare",
+          "size": "13.92px"
+        },
+        {
+          "text": "etapa I / etapa II",
+          "size": "13.92px"
+        },
+        {
+          "text": "2026, cu posibilă oprire anticipată",
+          "size": "13.92px"
+        },
+        {
+          "text": "alocat pe patru componente",
+          "size": "13.92px"
+        },
+        {
+          "text": "Simulatorul arată mecanică grilei, nu confirmă punctajul. Criteriile incompatibi",
+          "size": "13.92px"
+        }
+      ],
+      "heroActionGroups": 1,
+      "heroStatusCount": 0,
+      "pageHeight": 10888,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "expandedViolations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "pauseWorks": true,
+      "disclosuresWork": true,
+      "menuWorks": null,
+      "stickyWorks": null,
+      "stickyHeight": null
+    },
+    {
+      "route": "/dr18",
+      "width": 1440,
+      "status": 200,
+      "title": "DR 18 AFIR 2026: ghid final, calendar și 100.000 € | FABER",
+      "h1": [
+        "DR 18 AFIR 2026 – investiții în floricultură, plante medicinale și aromatice"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/dr18",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [
+        {
+          "text": "maximum pentru un proiect",
+          "size": "13.92px"
+        },
+        {
+          "text": "calculat cu SOC 2020",
+          "size": "13.92px"
+        },
+        {
+          "text": "în funcție de dimensiunea SO",
+          "size": "13.92px"
+        },
+        {
+          "text": "alocare anunțată de AFIR",
+          "size": "13.92px"
+        }
+      ],
+      "heroActionGroups": 1,
+      "heroStatusCount": 0,
+      "pageHeight": 11592,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "expandedViolations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "pauseWorks": true,
+      "disclosuresWork": true,
+      "menuWorks": null,
+      "stickyWorks": null,
+      "stickyHeight": null
+    },
+    {
+      "route": "/e-drive",
+      "width": 1440,
+      "status": 200,
+      "title": "e-DRIVE 2026: până la 30.000 € pentru mașini electrice pe firmă",
+      "h1": [
+        "e-DRIVE 2026 – finanțare pentru vehicule electrice M1, M2 și M3"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/e-drive",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [
+        {
+          "text": "Transport rutier · vehicule cu emisii zero",
+          "size": "11.04px"
+        },
+        {
+          "text": "Răspuns rapid",
+          "size": "12.16px"
+        },
+        {
+          "text": "Filtru inițial",
+          "size": "12.16px"
+        },
+        {
+          "text": "Arhitectura proiectului",
+          "size": "12.16px"
+        },
+        {
+          "text": "Dosar de lucru",
+          "size": "12.16px"
+        },
+        {
+          "text": "Parcurs recomandat",
+          "size": "12.16px"
+        },
+        {
+          "text": "Trasabilitate",
+          "size": "12.16px"
+        },
+        {
+          "text": "Ultima verificare editorială: 2026-09-06.",
+          "size": "13.44px"
+        },
+        {
+          "text": "Întrebări frecvente",
+          "size": "12.16px"
+        },
+        {
+          "text": "Următorul pas",
+          "size": "12.16px"
+        }
+      ],
+      "heroActionGroups": 1,
+      "heroStatusCount": 0,
+      "pageHeight": 8038,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "expandedViolations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "pauseWorks": true,
+      "disclosuresWork": true,
+      "menuWorks": null,
+      "stickyWorks": null,
+      "stickyHeight": null
+    },
+    {
+      "route": "/e-mobility",
+      "width": 1440,
+      "status": 200,
+      "title": "e-Mobility RO 2026: finanțare stații de încărcare",
+      "h1": [
+        "e-Mobility RO 2026 – finanțare pentru stații de reîncărcare"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/e-mobility",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [
+        {
+          "text": "Infrastructură rutieră · reîncărcare electrică",
+          "size": "11.04px"
+        },
+        {
+          "text": "Răspuns rapid",
+          "size": "12.16px"
+        },
+        {
+          "text": "Filtru inițial",
+          "size": "12.16px"
+        },
+        {
+          "text": "Arhitectura proiectului",
+          "size": "12.16px"
+        },
+        {
+          "text": "Dosar de lucru",
+          "size": "12.16px"
+        },
+        {
+          "text": "Parcurs recomandat",
+          "size": "12.16px"
+        },
+        {
+          "text": "Trasabilitate",
+          "size": "12.16px"
+        },
+        {
+          "text": "Ultima verificare editorială: 2026-09-06.",
+          "size": "13.44px"
+        },
+        {
+          "text": "Întrebări frecvente",
+          "size": "12.16px"
+        },
+        {
+          "text": "Următorul pas",
+          "size": "12.16px"
+        }
+      ],
+      "heroActionGroups": 1,
+      "heroStatusCount": 0,
+      "pageHeight": 7814,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "expandedViolations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "pauseWorks": true,
+      "disclosuresWork": true,
+      "menuWorks": null,
+      "stickyWorks": null,
+      "stickyHeight": null
+    },
+    {
+      "route": "/e-move",
+      "width": 1440,
+      "status": 200,
+      "title": "e-MOVE RO: stații de încărcare și condiții | FABER",
+      "h1": [
+        "Programul e-MOVE RO"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/e-move",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [],
+      "heroActionGroups": 1,
+      "heroStatusCount": 0,
+      "pageHeight": 7551,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "expandedViolations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "pauseWorks": true,
+      "disclosuresWork": true,
+      "menuWorks": null,
+      "stickyWorks": null,
+      "stickyHeight": null
+    },
+    {
+      "route": "/femeia-antreprenor-2026",
+      "width": 1440,
+      "status": 200,
+      "title": "Femeia Antreprenor 2026: status oficial | FABER",
+      "h1": [
+        "Femeia Antreprenor 2026 — ediție neconfirmată"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/femeia-antreprenor-2026",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [],
+      "heroActionGroups": 1,
+      "heroStatusCount": 0,
+      "pageHeight": 10017,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "expandedViolations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "pauseWorks": true,
+      "disclosuresWork": true,
+      "menuWorks": null,
+      "stickyWorks": null,
+      "stickyHeight": null
+    },
+    {
+      "route": "/fondul-de-modernizare",
+      "width": 1440,
+      "status": 200,
+      "title": "Fondul pentru Modernizare: apeluri și statut | FABER",
+      "h1": [
+        "Fondul pentru Modernizare"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/fondul-de-modernizare",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [],
+      "heroActionGroups": 1,
+      "heroStatusCount": 0,
+      "pageHeight": 10531,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "expandedViolations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "pauseWorks": true,
+      "disclosuresWork": true,
+      "menuWorks": null,
+      "stickyWorks": null,
+      "stickyHeight": null
+    },
+    {
+      "route": "/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum",
+      "width": 1440,
+      "status": 200,
+      "title": "Fondul pentru Modernizare: energie și autoconsum",
+      "h1": [
+        "Fondul de Modernizare: proiecte de fotovoltaice și autoconsum"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [],
+      "heroActionGroups": 1,
+      "heroStatusCount": 0,
+      "pageHeight": 9086,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "expandedViolations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "pauseWorks": true,
+      "disclosuresWork": true,
+      "menuWorks": null,
+      "stickyWorks": null,
+      "stickyHeight": null
+    },
+    {
+      "route": "/fondul-modernizare-energie-regenerabila-2026",
+      "width": 1440,
+      "status": 200,
+      "title": "Fondul pentru Modernizare: energie regenerabilă",
+      "h1": [
+        "Fondul pentru ModernizareEnergie regenerabilă"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/fondul-modernizare-energie-regenerabila-2026",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [],
+      "heroActionGroups": 1,
+      "heroStatusCount": 0,
+      "pageHeight": 5947,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "expandedViolations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "pauseWorks": true,
+      "disclosuresWork": true,
+      "menuWorks": null,
+      "stickyWorks": null,
+      "stickyHeight": null
+    },
+    {
+      "route": "/fondul-modernizare-pc1-stocare",
+      "width": 1440,
+      "status": 200,
+      "title": "PC1 Stocare 2026: 69.000 €/MWh, ghid aprobat | FABER",
+      "h1": [
+        "Fondul pentru Modernizare – PC1 Stocare stand-alone"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/fondul-modernizare-pc1-stocare",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [
+        {
+          "text": "Fondul pentru Modernizare · Program-cheie 1",
+          "size": "11.04px"
+        },
+        {
+          "text": "Răspuns rapid",
+          "size": "12.16px"
+        },
+        {
+          "text": "Filtru inițial",
+          "size": "12.16px"
+        },
+        {
+          "text": "Arhitectura proiectului",
+          "size": "12.16px"
+        },
+        {
+          "text": "Dosar de lucru",
+          "size": "12.16px"
+        },
+        {
+          "text": "Parcurs recomandat",
+          "size": "12.16px"
+        },
+        {
+          "text": "Trasabilitate",
+          "size": "12.16px"
+        },
+        {
+          "text": "Ultima verificare editorială: 2026-08-29.",
+          "size": "13.44px"
+        },
+        {
+          "text": "Întrebări frecvente",
+          "size": "12.16px"
+        },
+        {
+          "text": "Următorul pas",
+          "size": "12.16px"
+        }
+      ],
+      "heroActionGroups": 1,
+      "heroStatusCount": 0,
+      "pageHeight": 7020,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "expandedViolations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "pauseWorks": true,
+      "disclosuresWork": true,
+      "menuWorks": null,
+      "stickyWorks": null,
+      "stickyHeight": null
+    },
+    {
+      "route": "/fondul-modernizare-pc1-stocare-entitati-publice",
+      "width": 1440,
+      "status": 200,
+      "title": "PC1 Stocare entități publice: depuneri 2026 | FABER",
+      "h1": [
+        "PC1 Stocare 2026 pentru entități publice – baterii în spatele contorului"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/fondul-modernizare-pc1-stocare-entitati-publice",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [
+        {
+          "text": "Fondul pentru Modernizare · Program-cheie 1",
+          "size": "11.04px"
+        },
+        {
+          "text": "Răspuns rapid",
+          "size": "12.16px"
+        },
+        {
+          "text": "Date oficiale",
+          "size": "12.16px"
+        },
+        {
+          "text": "Date oficiale",
+          "size": "12.16px"
+        },
+        {
+          "text": "Filtru inițial",
+          "size": "12.16px"
+        },
+        {
+          "text": "Arhitectura proiectului",
+          "size": "12.16px"
+        },
+        {
+          "text": "Dosar de lucru",
+          "size": "12.16px"
+        },
+        {
+          "text": "Parcurs recomandat",
+          "size": "12.16px"
+        },
+        {
+          "text": "Trasabilitate",
+          "size": "12.16px"
+        },
+        {
+          "text": "Ultima verificare editorială: 2026-09-13.",
+          "size": "13.44px"
+        },
+        {
+          "text": "Întrebări frecvente",
+          "size": "12.16px"
+        },
+        {
+          "text": "Următorul pas",
+          "size": "12.16px"
+        }
+      ],
+      "heroActionGroups": 1,
+      "heroStatusCount": 0,
+      "pageHeight": 10916,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "expandedViolations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "pauseWorks": true,
+      "disclosuresWork": true,
+      "menuWorks": null,
+      "stickyWorks": null,
+      "stickyHeight": null
+    },
+    {
+      "route": "/fonduri-regionale",
+      "width": 1440,
+      "status": 200,
+      "title": "Fonduri regionale 2021–2027 și ADR-uri | FABER",
+      "h1": [
+        "Programe regionale și apeluri ADR"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/fonduri-regionale",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [
+        {
+          "text": "Registru verificat",
+          "size": "12.48px"
+        },
+        {
+          "text": "Verificare prudentă",
+          "size": "12.48px"
+        }
+      ],
+      "heroActionGroups": 1,
+      "heroStatusCount": 0,
+      "pageHeight": 4684,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "expandedViolations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "pauseWorks": true,
+      "disclosuresWork": true,
+      "menuWorks": null,
+      "stickyWorks": null,
+      "stickyHeight": null
+    },
+    {
+      "route": "/gal-afir",
+      "width": 1440,
+      "status": 200,
+      "title": "GAL AFIR 2026: apeluri DR-36 și verificare | FABER",
+      "h1": [
+        "GAL AFIR / DR-36 prin Grupuri de Acțiune Locală"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/gal-afir",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [],
+      "heroActionGroups": 1,
+      "heroStatusCount": 0,
+      "pageHeight": 8672,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "expandedViolations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "pauseWorks": true,
+      "disclosuresWork": true,
+      "menuWorks": null,
+      "stickyWorks": null,
+      "stickyHeight": null
+    },
+    {
+      "route": "/investitii-modernizarea-microintreprinderilor-apel-2",
+      "width": 1440,
+      "status": 200,
+      "title": "Modernizarea microîntreprinderilor: Apel 2 Nord-Est 2026",
+      "h1": [
+        "Investiții pentru modernizarea microîntreprinderilor – Apel 2"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/investitii-modernizarea-microintreprinderilor-apel-2",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [],
+      "heroActionGroups": 1,
+      "heroStatusCount": 0,
+      "pageHeight": 13545,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "expandedViolations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "pauseWorks": true,
+      "disclosuresWork": true,
+      "menuWorks": null,
+      "stickyWorks": true,
+      "stickyHeight": null
+    },
+    {
+      "route": "/pnrr",
+      "width": 1440,
+      "status": 200,
+      "title": "PNRR: componente, apeluri și stadiul implementării | FABER",
+      "h1": [
+        "Planul Național de Redresare și Reziliență"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/pnrr",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [],
+      "heroActionGroups": 1,
+      "heroStatusCount": 0,
+      "pageHeight": 10347,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "expandedViolations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "pauseWorks": true,
+      "disclosuresWork": true,
+      "menuWorks": null,
+      "stickyWorks": null,
+      "stickyHeight": null
+    },
+    {
+      "route": "/pocidif-21",
+      "width": 1440,
+      "status": 200,
+      "title": "PoCIDIF 2.1: inovare digitală pentru IMM TIC | FABER",
+      "h1": [
+        "PoCIDIF – Acțiunea 2.1 Dezvoltarea de noi servicii, aplicații și produse prin inovare și adoptarea de tehnologii avansate"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/pocidif-21",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [],
+      "heroActionGroups": 1,
+      "heroStatusCount": 0,
+      "pageHeight": 7776,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "expandedViolations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "aria-valid-attr-value",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "pauseWorks": true,
+      "disclosuresWork": true,
+      "menuWorks": null,
+      "stickyWorks": null,
+      "stickyHeight": null
+    },
+    {
+      "route": "/pro-infra",
+      "width": 1440,
+      "status": 200,
+      "title": "PRO INFRA 2026: până la 15 mil. €, condiții și EMS",
+      "h1": [
+        "PRO INFRA – eficiență energetică pentru producătorii din infrastructura de transport"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/pro-infra",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [],
+      "heroActionGroups": 1,
+      "heroStatusCount": 0,
+      "pageHeight": 8442,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "expandedViolations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "aria-valid-attr-value",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "pauseWorks": true,
+      "disclosuresWork": true,
+      "menuWorks": null,
+      "stickyWorks": null,
+      "stickyHeight": null
+    },
+    {
+      "route": "/programul-tranzitie-justa",
+      "width": 1440,
+      "status": 200,
+      "title": "Programul Tranziție Justă: apeluri și statut | FABER",
+      "h1": [
+        "Programul Tranziție Justă"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/programul-tranzitie-justa",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [],
+      "heroActionGroups": 1,
+      "heroStatusCount": 0,
+      "pageHeight": 10562,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "expandedViolations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "pauseWorks": true,
+      "disclosuresWork": true,
+      "menuWorks": null,
+      "stickyWorks": null,
+      "stickyHeight": null
+    },
+    {
+      "route": "/start-up-nation-2026",
+      "width": 1440,
+      "status": 200,
+      "title": "Start-Up Nation: apel închis la 29 mai 2026 | FABER",
+      "h1": [
+        "Start-Up Nation2026"
+      ],
+      "canonical": "https://atelierdeconsultanta.ro/start-up-nation-2026",
+      "robots": "index, follow",
+      "missingAnchors": [],
+      "duplicateIds": [],
+      "brokenImages": [],
+      "smallText": [],
+      "heroActionGroups": 1,
+      "heroStatusCount": 0,
+      "pageHeight": 7985,
+      "overflow": 0,
+      "errors": [],
+      "assets": [],
+      "violations": [],
+      "expandedViolations": [],
+      "axeIncomplete": [
+        "aria-prohibited-attr",
+        "color-contrast"
+      ],
+      "stepsWork": true,
+      "pauseWorks": true,
+      "disclosuresWork": true,
+      "menuWorks": null,
+      "stickyWorks": null,
+      "stickyHeight": null
+    }
+  ],
+  "externalSources": {
+    "checkedAt": "2026-09-13T22:48:47.682Z",
+    "results": [
+      {
+        "url": "https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/",
+        "status": 200,
+        "finalUrl": "https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/",
+        "type": "text/html; charset=utf-8"
+      },
+      {
+        "url": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-14/",
+        "status": 200,
+        "finalUrl": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-14/",
+        "type": "text/html; charset=utf-8"
+      },
+      {
+        "url": "https://mfe.gov.ro/pnrr-ordinul-nr-607-28-04-2026-pentru-modificarea-ghidului-solicitantului-digitalizarea-imm-urilor-grant-de-pana-la-100-000-euro-pe-intreprindere-care-sa-sprijine-imm-urile-in-adoptarea-tehnologii/",
+        "status": 200,
+        "finalUrl": "https://mfe.gov.ro/pnrr-ordinul-nr-607-28-04-2026-pentru-modificarea-ghidului-solicitantului-digitalizarea-imm-urilor-grant-de-pana-la-100-000-euro-pe-intreprindere-care-sa-sprijine-imm-urile-in-adoptarea-tehnologii/",
+        "type": "text/html; charset=UTF-8"
+      },
+      {
+        "url": "https://depunerepspac.afir.ro/Sesiune/Lista",
+        "status": 200,
+        "finalUrl": "https://depunerepspac.afir.ro/Sesiune/Lista",
+        "type": "text/html; charset=utf-8"
+      },
+      {
+        "url": "https://www.afir.ro/comunicate/265-de-milioane-de-euro-pentru-investitii-in-producerea-energiei-electrice/",
+        "status": 200,
+        "finalUrl": "https://www.afir.ro/comunicate/265-de-milioane-de-euro-pentru-investitii-in-producerea-energiei-electrice/",
+        "type": "text/html; charset=utf-8"
+      },
+      {
+        "url": "https://www.afir.ro/instrumente/sesiuni/sesiuni-primire-proiecte/",
+        "status": 200,
+        "finalUrl": "https://www.afir.ro/instrumente/sesiuni/sesiuni-primire-proiecte/",
+        "type": "text/html; charset=utf-8"
+      },
+      {
+        "url": "https://www.afir.ro/media/hkfp4w0v/ghidul-solicitantului-schem%C4%83-energie-autoconsum-v7-iunie-2026.pdf",
+        "status": 200,
+        "finalUrl": "https://www.afir.ro/media/hkfp4w0v/ghidul-solicitantului-schem%C4%83-energie-autoconsum-v7-iunie-2026.pdf",
+        "type": "application/pdf"
+      },
+      {
+        "url": "https://www.afir.ro/finantare/leader/",
+        "status": 200,
+        "finalUrl": "https://www.afir.ro/finantare/leader/",
+        "type": "text/html; charset=utf-8"
+      },
+      {
+        "url": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-36/",
+        "status": 200,
+        "finalUrl": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-36/",
+        "type": "text/html; charset=utf-8"
+      },
+      {
+        "url": "https://gal.afir.ro/",
+        "status": 200,
+        "finalUrl": "https://gal.afir.ro/",
+        "type": "text/html; charset=utf-8"
+      },
+      {
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/306916",
+        "status": 200,
+        "finalUrl": "https://legislatie.just.ro/Public/DetaliiDocument/306916",
+        "type": "text/html; charset=utf-8"
+      },
+      {
+        "url": "https://energie.gov.ro/wp-content/uploads/2026/09/Anunt-lansare-apel-proiecte-autoconsum_entitati-publice.pdf",
+        "status": 200,
+        "finalUrl": "https://energie.gov.ro/wp-content/uploads/2026/09/Anunt-lansare-apel-proiecte-autoconsum_entitati-publice.pdf",
+        "type": "application/pdf"
+      },
+      {
+        "url": "https://www.afir.ro/comunicate/conditiile-finantarii-acordate-entitatilor-publice-pentru-producerea-si-stocarea-energiei-electrice/",
+        "status": 200,
+        "finalUrl": "https://www.afir.ro/comunicate/conditiile-finantarii-acordate-entitatilor-publice-pentru-producerea-si-stocarea-energiei-electrice/",
+        "type": "text/html; charset=utf-8"
+      },
+      {
+        "url": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-producere-si-stocare-energie-regenerabila-beneficiari-publici/",
+        "status": 200,
+        "finalUrl": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-producere-si-stocare-energie-regenerabila-beneficiari-publici/",
+        "type": "text/html; charset=utf-8"
+      },
+      {
+        "url": "https://www.afir.ro/media/nm4fhhux/anexa-2_grila-vae_autoconsum_res_fm_publici.docx",
+        "status": 200,
+        "finalUrl": "https://www.afir.ro/media/nm4fhhux/anexa-2_grila-vae_autoconsum_res_fm_publici.docx",
+        "type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+      },
+      {
+        "url": "https://www.afir.ro/media/kryf4iok/anexa-1_cf_forma-vizuala_autoconsum_res_fm.pdf",
+        "status": 200,
+        "finalUrl": "https://www.afir.ro/media/kryf4iok/anexa-1_cf_forma-vizuala_autoconsum_res_fm.pdf",
+        "type": "application/pdf"
+      },
+      {
+        "url": "https://www.afir.ro/media/fjjgp1wq/anexa-3_declaratie-dnsh_autoconsum_res_fm_publici.docx",
+        "status": 200,
+        "finalUrl": "https://www.afir.ro/media/fjjgp1wq/anexa-3_declaratie-dnsh_autoconsum_res_fm_publici.docx",
+        "type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+      },
+      {
+        "url": "https://www.afir.ro/media/zxvhqlty/anexa-4_model-acord-parteneriat_res_fm_publici.docx",
+        "status": 200,
+        "finalUrl": "https://www.afir.ro/media/zxvhqlty/anexa-4_model-acord-parteneriat_res_fm_publici.docx",
+        "type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+      },
+      {
+        "url": "https://www.afir.ro/media/uwymsxzy/ghidul-solicitantului_autoconsum-res_fm_entitati-publice.docx",
+        "status": 200,
+        "finalUrl": "https://www.afir.ro/media/uwymsxzy/ghidul-solicitantului_autoconsum-res_fm_entitati-publice.docx",
+        "type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+      },
+      {
+        "url": "https://www.bidromania.eu/produse/garantii/diaspora-investeste-acasa",
+        "status": 200,
+        "finalUrl": "https://www.bidromania.eu/produse/garantii/diaspora-investeste-acasa",
+        "type": "text/html; charset=utf-8"
+      },
+      {
+        "url": "https://www.bidromania.eu/centru-media/comunicate-de-presa/investitiile-romanilor-din-diaspora-intra-linie-dreapta-guvernul",
+        "status": 200,
+        "finalUrl": "https://www.bidromania.eu/centru-media/comunicate-de-presa/investitiile-romanilor-din-diaspora-intra-linie-dreapta-guvernul",
+        "type": "text/html; charset=utf-8"
+      },
+      {
+        "url": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-18/",
+        "status": 200,
+        "finalUrl": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-18/",
+        "type": "text/html; charset=utf-8"
+      },
+      {
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/307361",
+        "status": 200,
+        "finalUrl": "https://legislatie.just.ro/Public/DetaliiDocument/307361",
+        "type": "text/html; charset=utf-8"
+      },
+      {
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/313291",
+        "status": 200,
+        "finalUrl": "https://legislatie.just.ro/Public/DetaliiDocument/313291",
+        "type": "text/html; charset=utf-8"
+      },
+      {
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/313289",
+        "status": 200,
+        "finalUrl": "https://legislatie.just.ro/Public/DetaliiDocument/313289",
+        "type": "text/html; charset=utf-8"
+      },
+      {
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/276306",
+        "status": 200,
+        "finalUrl": "https://legislatie.just.ro/Public/DetaliiDocument/276306",
+        "type": "text/html; charset=utf-8"
+      },
+      {
+        "url": "https://minimis.imm.gov.ro/fa2024/ordine_evaluare",
+        "status": 200,
+        "finalUrl": "https://minimis.imm.gov.ro/fa2024/ordine_evaluare",
+        "type": "text/html; charset=UTF-8"
+      },
+      {
+        "url": "https://fonduri.mt.ro/transparenta/consultare-publica/fondul-pentru-modernizare/comunicat-fm-consultare-publica-ghidul-solicitantului-promovarea-infrastructurii-pentru-o-mobilitate-cu-emisii-zero-in-sprijinul-intreprinderilor-si-comunitatilor-e-move-ro",
+        "status": 200,
+        "finalUrl": "https://fonduri.mt.ro/transparenta/consultare-publica/fondul-pentru-modernizare/comunicat-fm-consultare-publica-ghidul-solicitantului-promovarea-infrastructurii-pentru-o-mobilitate-cu-emisii-zero-in-sprijinul-intreprinderilor-si-comunitatilor-e-move-ro",
+        "type": "text/html; charset=utf-8"
+      },
+      {
+        "url": "https://energie.gov.ro/category/fondul-pentru-modernizare/",
+        "status": 200,
+        "finalUrl": "https://energie.gov.ro/category/fondul-pentru-modernizare/",
+        "type": "text/html; charset=UTF-8"
+      },
+      {
+        "url": "https://resurse.mysmis2021.gov.ro/ords/repo_bo/r/mysmis-2021/finantari-programe-2021-2027",
+        "status": 200,
+        "finalUrl": "https://resurse.mysmis2021.gov.ro/ords/repo_bo/r/mysmis-2021/finantari-programe-2021-2027",
+        "type": "text/html;charset=utf-8"
+      },
+      {
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/313320",
+        "status": 200,
+        "finalUrl": "https://legislatie.just.ro/Public/DetaliiDocument/313320",
+        "type": "text/html; charset=utf-8"
+      },
+      {
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/301593",
+        "status": 200,
+        "finalUrl": "https://legislatie.just.ro/Public/DetaliiDocument/301593",
+        "type": "text/html; charset=utf-8"
+      },
+      {
+        "url": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-stocare-energie-regenerabila-beneficiari-publici/",
+        "status": 200,
+        "finalUrl": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-stocare-energie-regenerabila-beneficiari-publici/",
+        "type": "text/html; charset=utf-8"
+      },
+      {
+        "url": "https://energie.gov.ro/wp-content/uploads/2026/09/Anunt-lansare-apel-proiecte-stocare_entitati-publice.pdf",
+        "status": 200,
+        "finalUrl": "https://energie.gov.ro/wp-content/uploads/2026/09/Anunt-lansare-apel-proiecte-stocare_entitati-publice.pdf",
+        "type": "application/pdf"
+      },
+      {
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/313464",
+        "status": 200,
+        "finalUrl": "https://legislatie.just.ro/Public/DetaliiDocument/313464",
+        "type": "text/html; charset=utf-8"
+      },
+      {
+        "url": "https://www.afir.ro/media/yo1h41gu/ghidul-solicitantului_stocare_res_fm_publici.docx",
+        "status": 200,
+        "finalUrl": "https://www.afir.ro/media/yo1h41gu/ghidul-solicitantului_stocare_res_fm_publici.docx",
+        "type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+      },
+      {
+        "url": "https://regionordest.ro/prioritatea-1/modernizare-microintreprinderi/",
+        "status": 200,
+        "finalUrl": "https://regionordest.ro/prioritatea-1/modernizare-microintreprinderi/",
+        "type": "text/html; charset=UTF-8"
+      },
+      {
+        "url": "https://regionordest.ro/wp-content/uploads/2026/08/Ghid-microintreprinderi-27.08.2026.zip",
+        "status": 200,
+        "finalUrl": "https://regionordest.ro/wp-content/uploads/2026/08/Ghid-microintreprinderi-27.08.2026.zip",
+        "type": "application/zip"
+      },
+      {
+        "url": "https://ne.myadr.ro/pub/micro2/token/",
+        "status": 200,
+        "finalUrl": "https://ne.myadr.ro/pub/micro2/token/",
+        "type": "text/html; charset=UTF-8"
+      },
+      {
+        "url": "https://mfe.gov.ro/pnrr-dashboard/",
+        "status": 200,
+        "finalUrl": "https://mfe.gov.ro/pnrr-dashboard/",
+        "type": "text/html"
+      },
+      {
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/294449",
+        "status": 200,
+        "finalUrl": "https://legislatie.just.ro/Public/DetaliiDocument/294449",
+        "type": "text/html; charset=utf-8"
+      },
+      {
+        "url": "https://mfe.gov.ro/wp-content/uploads/2026/06/d6bee3673c763582ff4b4fce5be59861.pdf",
+        "status": 200,
+        "finalUrl": "https://mfe.gov.ro/wp-content/uploads/2026/06/d6bee3673c763582ff4b4fce5be59861.pdf",
+        "type": "application/pdf"
+      },
+      {
+        "url": "https://mfe.gov.ro/wp-content/uploads/2026/06/3b7daf66f17fdaad63fef93466d155e3-1.zip",
+        "status": 200,
+        "finalUrl": "https://mfe.gov.ro/wp-content/uploads/2026/06/3b7daf66f17fdaad63fef93466d155e3-1.zip",
+        "type": "application/zip"
+      },
+      {
+        "url": "https://mfe.gov.ro/wp-content/uploads/2026/07/4b934c3ee5a4ddb2e0195e23d955c43b.docx",
+        "status": 200,
+        "finalUrl": "https://mfe.gov.ro/wp-content/uploads/2026/07/4b934c3ee5a4ddb2e0195e23d955c43b.docx",
+        "type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+      },
+      {
+        "url": "https://mfe.gov.ro/ghiduri_pocidif/pocidif-ghidul-solicitantului-dezvoltarea-de-noi-servicii-aplicatii-produse-prin-inovare-si-adoptarea-de-tehnologii-avansate-2/",
+        "status": 200,
+        "finalUrl": "https://mfe.gov.ro/ghiduri_pocidif/pocidif-ghidul-solicitantului-dezvoltarea-de-noi-servicii-aplicatii-produse-prin-inovare-si-adoptarea-de-tehnologii-avansate-2/",
+        "type": "text/html; charset=UTF-8"
+      },
+      {
+        "url": "https://commission.europa.eu/system/files/2023-05/ROMANIA%20NRP%202023%20RO.pdf",
+        "status": 200,
+        "finalUrl": "https://commission.europa.eu/system/files/2023-05/ROMANIA%20NRP%202023%20RO.pdf",
+        "type": "application/pdf"
+      },
+      {
+        "url": "https://commission.europa.eu/funding-and-tenders/find-funding/eu-funding-programmes/just-transition-fund_en",
+        "status": 200,
+        "finalUrl": "https://commission.europa.eu/funding-and-tenders/find-funding/eu-funding-programmes/just-transition-fund_en",
+        "type": "text/html; charset=UTF-8"
+      },
+      {
+        "url": "https://legislatie.just.ro/Public/DetaliiDocument/309282",
+        "status": 200,
+        "finalUrl": "https://legislatie.just.ro/Public/DetaliiDocument/309282",
+        "type": "text/html; charset=utf-8"
+      },
+      {
+        "url": "https://minimis.imm.gov.ro/sn2024/transparenta_persoane_juridice",
+        "status": 200,
+        "finalUrl": "https://minimis.imm.gov.ro/sn2024/transparenta_persoane_juridice",
+        "type": "text/html; charset=UTF-8"
+      },
+      {
+        "url": "https://economie.gov.ro/participa-la-definitivarea-procedurii-de-implementare-a-programului-de-succes-start-up-nation-editia-2024/",
+        "status": 200,
+        "finalUrl": "https://economie.gov.ro/participa-la-definitivarea-procedurii-de-implementare-a-programului-de-succes-start-up-nation-editia-2024/",
+        "type": "text/html; charset=UTF-8"
+      }
+    ]
+  },
+  "labPerformance": {
+    "checkedAt": "2026-09-13T22:41:20.618Z",
+    "method": "Single unthrottled Chromium mobile viewport navigation per route; cold browser context, actual network, 1.2s observation after load; diagnostic lab values, not CrUX or INP.",
+    "results": [
+      {
+        "route": "/",
+        "lcp": 872,
+        "cls": 0,
+        "longTasks": 55,
+        "fcp": 752,
+        "ttfb": 411.19999999925494,
+        "requests": 35,
+        "transferBytes": 274464,
+        "htmlBytes": 188133
+      },
+      {
+        "route": "/digitalizare-imm",
+        "lcp": 460,
+        "cls": 0,
+        "longTasks": 24,
+        "fcp": 460,
+        "ttfb": 167.20000000298023,
+        "requests": 26,
+        "transferBytes": 231287,
+        "htmlBytes": 84270
+      },
+      {
+        "route": "/dr12-afir",
+        "lcp": 420,
+        "cls": 0,
+        "longTasks": 16,
+        "fcp": 332,
+        "ttfb": 163.80000000074506,
+        "requests": 26,
+        "transferBytes": 231225,
+        "htmlBytes": 84180
+      },
+      {
+        "route": "/dr14",
+        "lcp": 464,
+        "cls": 0,
+        "longTasks": 60,
+        "fcp": 252,
+        "ttfb": 153.39999999850988,
+        "requests": 28,
+        "transferBytes": 239262,
+        "htmlBytes": 101783
+      },
+      {
+        "route": "/pro-infra",
+        "lcp": 456,
+        "cls": 0,
+        "longTasks": 15,
+        "fcp": 292,
+        "ttfb": 160.29999999701977,
+        "requests": 28,
+        "transferBytes": 234714,
+        "htmlBytes": 96147
+      },
+      {
+        "route": "/afir-autoconsum-agroalimentar",
+        "lcp": 452,
+        "cls": 0,
+        "longTasks": 30,
+        "fcp": 348,
+        "ttfb": 143.5,
+        "requests": 26,
+        "transferBytes": 50297,
+        "htmlBytes": 100223
+      },
+      {
+        "route": "/apeluri-gal",
+        "lcp": 480,
+        "cls": 0,
+        "longTasks": 27,
+        "fcp": 388,
+        "ttfb": 190.59999999776483,
+        "requests": 28,
+        "transferBytes": 234723,
+        "htmlBytes": 89516
+      },
+      {
+        "route": "/autoconsum-public-fotovoltaice-institutii-publice",
+        "lcp": 404,
+        "cls": 0,
+        "longTasks": 28,
+        "fcp": 280,
+        "ttfb": 156.39999999850988,
+        "requests": 26,
+        "transferBytes": 238532,
+        "htmlBytes": 96004
+      },
+      {
+        "route": "/diaspora-investeste-acasa",
+        "lcp": 476,
+        "cls": 0,
+        "longTasks": 44,
+        "fcp": 332,
+        "ttfb": 184,
+        "requests": 23,
+        "transferBytes": 231867,
+        "htmlBytes": 82654
+      },
+      {
+        "route": "/dr-12-afir-instalarea-tinerilor-fermieri",
+        "lcp": 624,
+        "cls": 0.0002447477429262711,
+        "longTasks": 24,
+        "fcp": 624,
+        "ttfb": 142.10000000149012,
+        "requests": 22,
+        "transferBytes": 224074,
+        "htmlBytes": 78639
+      },
+      {
+        "route": "/dr-14-afir-conditii-eligibilitate-greseli-frecvente",
+        "lcp": 944,
+        "cls": 0.00024642424217554494,
+        "longTasks": 18,
+        "fcp": 944,
+        "ttfb": 494,
+        "requests": 23,
+        "transferBytes": 225029,
+        "htmlBytes": 78000
+      },
+      {
+        "route": "/dr18",
+        "lcp": 452,
+        "cls": 0,
+        "longTasks": 40,
+        "fcp": 344,
+        "ttfb": 162.5,
+        "requests": 29,
+        "transferBytes": 239733,
+        "htmlBytes": 98081
+      },
+      {
+        "route": "/e-drive",
+        "lcp": 352,
+        "cls": 0,
+        "longTasks": 20,
+        "fcp": 352,
+        "ttfb": 154.80000000074506,
+        "requests": 28,
+        "transferBytes": 233572,
+        "htmlBytes": 83682
+      },
+      {
+        "route": "/e-mobility",
+        "lcp": 356,
+        "cls": 0,
+        "longTasks": 20,
+        "fcp": 356,
+        "ttfb": 159.60000000149012,
+        "requests": 23,
+        "transferBytes": 232017,
+        "htmlBytes": 81542
+      },
+      {
+        "route": "/e-move",
+        "lcp": 808,
+        "cls": 0,
+        "longTasks": 17,
+        "fcp": 720,
+        "ttfb": 437.3999999985099,
+        "requests": 28,
+        "transferBytes": 234688,
+        "htmlBytes": 87802
+      },
+      {
+        "route": "/femeia-antreprenor-2026",
+        "lcp": 736,
+        "cls": 0,
+        "longTasks": 14,
+        "fcp": 652,
+        "ttfb": 392.8999999985099,
+        "requests": 26,
+        "transferBytes": 231226,
+        "htmlBytes": 88425
+      },
+      {
+        "route": "/fondul-de-modernizare",
+        "lcp": 592,
+        "cls": 0,
+        "longTasks": 37,
+        "fcp": 468,
+        "ttfb": 166.40000000223517,
+        "requests": 28,
+        "transferBytes": 234759,
+        "htmlBytes": 96492
+      },
+      {
+        "route": "/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum",
+        "lcp": 476,
+        "cls": 0,
+        "longTasks": 12,
+        "fcp": 300,
+        "ttfb": 205,
+        "requests": 27,
+        "transferBytes": 233573,
+        "htmlBytes": 90416
+      },
+      {
+        "route": "/fondul-modernizare-energie-regenerabila-2026",
+        "lcp": 440,
+        "cls": 0,
+        "longTasks": 68,
+        "fcp": 320,
+        "ttfb": 138.5,
+        "requests": 26,
+        "transferBytes": 231193,
+        "htmlBytes": 84272
+      },
+      {
+        "route": "/fondul-modernizare-pc1-stocare",
+        "lcp": 364,
+        "cls": 0,
+        "longTasks": 21,
+        "fcp": 364,
+        "ttfb": 159.39999999850988,
+        "requests": 23,
+        "transferBytes": 231978,
+        "htmlBytes": 82112
+      },
+      {
+        "route": "/fondul-modernizare-pc1-stocare-entitati-publice",
+        "lcp": 356,
+        "cls": 0,
+        "longTasks": 24,
+        "fcp": 356,
+        "ttfb": 155.69999999925494,
+        "requests": 23,
+        "transferBytes": 231889,
+        "htmlBytes": 94561
+      },
+      {
+        "route": "/fonduri-regionale",
+        "lcp": 496,
+        "cls": 0,
+        "longTasks": 17,
+        "fcp": 496,
+        "ttfb": 177.30000000074506,
+        "requests": 29,
+        "transferBytes": 235568,
+        "htmlBytes": 94506
+      },
+      {
+        "route": "/gal-afir",
+        "lcp": 448,
+        "cls": 0,
+        "longTasks": 10,
+        "fcp": 288,
+        "ttfb": 171.89999999850988,
+        "requests": 28,
+        "transferBytes": 234743,
+        "htmlBytes": 91341
+      },
+      {
+        "route": "/investitii-modernizarea-microintreprinderilor-apel-2",
+        "lcp": 532,
+        "cls": 0,
+        "longTasks": 34,
+        "fcp": 332,
+        "ttfb": 172.60000000149012,
+        "requests": 36,
+        "transferBytes": 256731,
+        "htmlBytes": 117628
+      },
+      {
+        "route": "/pnrr",
+        "lcp": 560,
+        "cls": 0,
+        "longTasks": 13,
+        "fcp": 484,
+        "ttfb": 154.30000000074506,
+        "requests": 28,
+        "transferBytes": 234652,
+        "htmlBytes": 92864
+      },
+      {
+        "route": "/pocidif-21",
+        "lcp": 456,
+        "cls": 0,
+        "longTasks": 10,
+        "fcp": 272,
+        "ttfb": 160,
+        "requests": 28,
+        "transferBytes": 234807,
+        "htmlBytes": 99303
+      },
+      {
+        "route": "/programul-tranzitie-justa",
+        "lcp": 488,
+        "cls": 0,
+        "longTasks": 12,
+        "fcp": 316,
+        "ttfb": 191,
+        "requests": 28,
+        "transferBytes": 234644,
+        "htmlBytes": 99743
+      },
+      {
+        "route": "/start-up-nation-2026",
+        "lcp": 504,
+        "cls": 0,
+        "longTasks": 12,
+        "fcp": 412,
+        "ttfb": 225.09999999776483,
+        "requests": 26,
+        "transferBytes": 231147,
+        "htmlBytes": 83571
+      }
+    ]
+  }
+}

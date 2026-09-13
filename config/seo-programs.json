@@ -469,10 +469,10 @@
       "archivedNoindexDecision": null,
       "indexable": true,
       "cardSummary": "Sesiunea DR 18 este anunțată pentru 1 septembrie–31 octombrie 2026: maximum 100.000 EUR/proiect pentru floricultură, plante medicinale, aromatice și ornamentale.",
-      "quickAnswer": "DR 18 este intervenția AFIR pentru investiții în floricultură, plante medicinale, aromatice și ornamentale. AFIR a anunțat sesiunea 1 septembrie–31 octombrie 2026; depunerea nu este încă deschisă și se poate opri anticipat conform regulilor anunțului. Pot aplica fermieri organizați juridic, cooperative și grupuri sau organizații de producători, cu exploatații de minimum 2.000 SO și înregistrări agricole coerente. Sprijinul public este de maximum 100.000 EUR/proiect. Intensitatea ajunge la 85% pentru exploatații între 2.000 și 11.999 SO și la 65% de la 12.000 SO. Sunt vizate spațiile protejate, echipamentele, condiționarea, depozitarea, procesarea secundară, digitalizarea și investițiile secundare permise de ghid. Punctajul maxim este 100; fiecare criteriu trebuie demonstrat cu documente.",
+      "quickAnswer": "DR 18 este intervenția AFIR pentru investiții în floricultură, plante medicinale, aromatice și ornamentale. Calendarul AFIR este 1 septembrie–31 octombrie 2026; sesiunea se poate opri anticipat conform regulilor anunțului. Verifică disponibilul în contorul AFIR înainte de depunere. Pot aplica fermieri organizați juridic, cooperative și grupuri sau organizații de producători, cu exploatații de minimum 2.000 SO și înregistrări agricole coerente. Sprijinul public este de maximum 100.000 EUR/proiect. Intensitatea ajunge la 85% pentru exploatații între 2.000 și 11.999 SO și la 65% de la 12.000 SO. Sunt vizate spațiile protejate, echipamentele, condiționarea, depozitarea, procesarea secundară, digitalizarea și investițiile secundare permise de ghid. Punctajul maxim este 100; fiecare criteriu trebuie demonstrat cu documente.",
       "metaTitle": "DR 18 AFIR 2026: ghid final, calendar și 100.000 € | FABER",
       "metaDescription": "DR 18 AFIR 2026: ghid final, depuneri 1 septembrie–31 octombrie, buget 5 mil. €, maximum 100.000 €, intensitate 85%/65% și punctaj.",
-      "editorialDisclaimer": "Sesiunea este anunțată pentru 01.09–31.10.2026, dar depunerea nu a început. AFIR poate opri sesiunea anticipat în condițiile anunțului oficial.",
+      "editorialDisclaimer": "Calendarul oficial al sesiunii este 01.09–31.10.2026. Verifică disponibilul înainte de depunere. AFIR poate opri sesiunea anticipat în condițiile anunțului oficial.",
       "eligibleApplicants": [
         "Fermieri organizați juridic, cu excepția persoanelor fizice.",
         "Cooperative agricole și societăți cooperative care deservesc interesele membrilor fermieri.",
@@ -536,7 +536,7 @@
         "beneficiary": "Fermieri organizați juridic, cooperative și grupuri de producători",
         "calendar": {
           "label": "1 septembrie–31 octombrie 2026",
-          "note": "Sesiune anunțată de AFIR; depunerea nu este încă deschisă și se poate opri anticipat."
+          "note": "Verifică disponibilul în contorul AFIR; sesiunea se poate opri anticipat."
         },
         "carouselOrder": 11,
         "heroOrder": 11,
@@ -2048,7 +2048,7 @@
       "publicationState": "public",
       "verifiedAt": "2026-09-10",
       "sourceName": "Ministerul Investițiilor și Proiectelor Europene – tabloul de bord PNRR",
-      "sourceUrl": "https://pnrr.fonduri-ue.ro/ords/pnrr/r/dashboard-status-pnrr/home",
+      "sourceUrl": "https://mfe.gov.ro/pnrr-dashboard/",
       "sourceVersion": "Tabloul de bord oficial PNRR; program în implementare, cu situație distinctă pe componente și apeluri",
       "sourceType": "official",
       "applicationStart": null,
@@ -4130,7 +4130,8 @@
       "ctaText": "Verifică scenariul Start-Up Nation",
       "secondaryCtaText": "Construieste planul de afaceri",
       "programId": "start-up-nation",
-      "factualGovernanceRef": "#/programs/start-up-nation"
+      "factualGovernanceRef": "#/programs/start-up-nation",
+      "finalCtaTitle": "Verifică scenariul Start-Up Nation"
     },
     {
       "slug": "femeia-antreprenor-2026",

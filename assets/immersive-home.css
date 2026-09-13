@@ -188,7 +188,8 @@ body.page-family-home #homepage-explorer { background: #ffffff; padding: 100px c
 .page-family-home .homepage-card:hover { transform: translateY(-6px); border-color: var(--design-orange, #b84716); }
 .page-family-home .homepage-card h4 { color: var(--im-ink); font-weight: 500; font-size: 24px; letter-spacing: -.03em; }
 .page-family-home .homepage-card p { color: var(--im-muted); font-size: 14px; line-height: 1.8; }
-.page-family-home .homepage-card-index { color: var(--design-line, #e8edf5); font-size: 52px; font-weight: 400; line-height: 1.2; }
+.page-family-home .homepage-card-index { color: #607087; font-size: 52px; font-weight: 400; line-height: 1.2; }
+.page-family-home .homepage-explorer-tabs button[aria-selected="true"] span { color: #ffd08c; }
 .page-family-home .homepage-card a { color: var(--design-orange, #b84716); font-size: 13px; }
 .page-family-home .homepage-sequence-arrow { border-radius: 50%; border-color: var(--im-line); box-shadow: none; }
 body.page-family-home #homepage-contact { background: var(--design-soft, #f8f9fb); color: var(--design-navy, #0d1f3c); padding: 90px clamp(24px,5.5vw,96px); }
@@ -344,8 +345,10 @@ body.page-family-home #homepage-contact {
     radial-gradient(circle at 86% 18%, rgba(245,166,35,.2), transparent 26%),
     linear-gradient(135deg, #0b1e39, #173958 68%, #0b2948);
 }
-body.page-family-home #homepage-contact :is(h2,p,a,.homepage-eyebrow,.homepage-contact-actions__label,.homepage-contact-direct a span) { color: #fff; }
+body.page-family-home #homepage-contact .homepage-contact-card :where(h2,p,a,.homepage-eyebrow,.homepage-contact-actions__label,.homepage-contact-direct a span),
+body.page-family-home #homepage-contact .contact-note :is(h2,p) { color: #fff; }
 body.page-family-home #homepage-contact .homepage-contact-direct a span { color: #f7b952; }
+body.page-family-home #homepage-contact .homepage-contact-actions .homepage-contact-actions__label { color: #fff; }
 body.page-family-home #homepage-contact .homepage-contact-actions { background: rgba(255,255,255,.07); border-color: rgba(255,255,255,.2); }
 body.page-family-home #homepage-contact :is(.btn-primary,.homepage-contact-primary,.homepage-flow-action) { color: #0d1f3c; background: #f5a623; }
 
@@ -530,7 +533,7 @@ body.page-family-home #homepage-contact .im-contact-form-wrap { margin: 0; paddi
 /* One shared request form, directly before the Google preference component. */
 body.page-family-home #homepage-contact .im-contact-form-wrap { max-width: 1440px; margin: 48px auto 0; padding: 0; }
 #homepage-contact .contact-triage-layout { display: grid; grid-template-columns: minmax(0,1.65fr) minmax(220px,.75fr); gap: 42px; align-items: start; }
-#homepage-contact .contact-form-panel { background: #fff; border: 1px solid var(--im-line); border-radius: 14px; padding: clamp(20px,3vw,42px); min-width: 0; }
+#homepage-contact .contact-form-panel { background: #fff; color: #1a2540; border: 1px solid var(--im-line); border-radius: 14px; padding: clamp(20px,3vw,42px); min-width: 0; }
 body.page-family-home #homepage-contact :is(.contact-triage-heading h2, .contact-success h2) { font-size: clamp(24px,2.4vw,35px); font-weight: 550; letter-spacing: -.035em; line-height: 1.2; }
 #homepage-contact .core-kicker { color: var(--im-accent); font-size: 10px; letter-spacing: .14em; text-transform: uppercase; }
 #homepage-contact .contact-triage { background: none; box-shadow: none; border: 0; border-radius: 0; padding: 0; }
@@ -562,6 +565,11 @@ body.page-family-home #homepage-contact .contact-note h2 { font-size: 26px; line
 #homepage-contact .contact-note__privacy { border-top-color: rgba(220,230,242,.55); color: #fff; font-size: 13px; }
 body.page-family-home #homepage-contact .contact-form-panel :is(.contact-triage-heading h2, .contact-success h2) { color: var(--design-navy, #0d1f3c); }
 body.page-family-home #homepage-contact .contact-form-panel :is(.contact-triage-heading p, .contact-form-step > p, .contact-success p) { color: #4b5870; }
+body.page-family-home #homepage-contact .contact-form-panel :is(.field-help,.legal-copy-note) { color: #4b5870; }
+body.page-family-home #homepage-contact .contact-form-panel .error-message { color: #9b2c11; }
+body.page-family-home #homepage-contact .contact-form-panel .contact-error-summary a { color: #6f1f0a; }
+body.page-family-home #homepage-contact .contact-form-panel .contact-form-alert p { color: #7b250d; }
+#homepage-contact .consent-row .error-message { grid-column: 2; }
 @media (max-width: 999px) {
   #hero.im-hero .homepage-hero__inner { grid-template-columns: 1fr; }
   #hero.im-hero .homepage-hero__panel { max-width: 700px; justify-self: center; }
