@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-10T14:15:35.637Z",
+  "generatedAt": "2026-09-19T10:00:21.969Z",
   "canonicalUrlCount": 105,
   "changes": [
     {
@@ -11429,6 +11429,14 @@
     {
       "route": "/dr12-afir",
       "sourceFile": "config/seo-programs.json",
+      "location": "pages.0.faq.8.1",
+      "oldFragment": "Grila finală are maximum 100 de puncte. Prima etapă lunară cere minimum 80 de puncte, iar a doua minimum 45. Calculatorul de la finalul paginii arată separat cele șase principii și regulile de necumulare. Rezultatul nu …",
+      "newFragment": "Grila finală are maximum 100 de puncte. Prima etapă lunară cere minimum 80 de puncte, iar a două minimum 45. Calculatorul de la finalul paginii arată separat cele șase principii și regulile de necumulare. Rezultatul nu …",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/dr12-afir",
+      "sourceFile": "config/seo-programs.json",
       "location": "pages.0.ineligibleExpenses.0",
       "oldFragment": "Investiții fără legătura directa cu exploatația agricolă declarata.",
       "newFragment": "Investiții fără legătura directă cu exploatația agricolă declarata.",
@@ -11488,6 +11496,14 @@
       "location": "pages.0.related.3.label",
       "oldFragment": "Fonduri europene agricultura",
       "newFragment": "Fonduri europene agricultură",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/dr12-afir",
+      "sourceFile": "config/seo-programs.json",
+      "location": "pages.0.scoring.1",
+      "oldFragment": "Prag de 80 de puncte în prima etapă și 45 în a doua; calendarul va fi stabilit prin nota de lansare.",
+      "newFragment": "Prag de 80 de puncte în prima etapă și 45 în a două; calendarul va fi stabilit prin nota de lansare.",
       "reason": "Diacritice și normă editorială română"
     },
     {

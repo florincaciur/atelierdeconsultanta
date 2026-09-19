@@ -178,16 +178,16 @@
       "acronym": "DR-12",
       "fund": "Planul Strategic PAC 2023–2027 / FEADR",
       "family": "afir-agricultura",
-      "status": "consultare_publica",
-      "canonicalStatus": "CONSULTATIVE_GUIDE",
+      "status": "ghid_aprobat_nedeschis",
+      "canonicalStatus": "FINAL_GUIDE",
       "statusScope": "program_call",
-      "statusRationale": "Ghidul este consultativ, iar intervalul de consultare este încheiat; depunerea nu este deschisă.",
-      "statusLabel": "Ghid consultativ publicat – consultarea s-a încheiat; depunerea nu este deschisă. Condițiile se pot modifica.",
+      "statusRationale": "Ghidul final este publicat; sursele AFIR verificate nu anunță încă perioada de depunere.",
+      "statusLabel": "Ghid final publicat – perioada de depunere nu este încă anunțată",
       "publicationState": "public",
-      "verifiedAt": "2026-09-06",
+      "verifiedAt": "2026-09-19",
       "sourceName": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
-      "sourceUrl": "https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/",
-      "sourceVersion": "Versiune consultativă publicată la 19.03.2026; termenul pentru observații s-a încheiat la 30.03.2026",
+      "sourceUrl": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-12/",
+      "sourceVersion": "Ghid final DR-12, Ediția I, Revizia 0, aprobat prin OMADR 268/17.09.2026; publicat de AFIR la 18.09.2026",
       "sourceType": "official",
       "applicationStart": null,
       "applicationEnd": null,
@@ -196,7 +196,7 @@
         "maximum": {
           "amount": 200000,
           "currency": "EUR",
-          "unit": "proiect — valoare din ghidul consultativ"
+          "unit": "proiect"
         },
         "budget": null
       },
@@ -204,33 +204,36 @@
         "intensity": [
           {
             "rate": 80,
-            "scope": "maximum pentru tinerii fermieri sub 41 de ani — ghid consultativ"
+            "scope": "maximum pentru tinerii fermieri sub 41 de ani, șefi de exploatație cu competențe adecvate"
           },
           {
             "rate": 65,
-            "scope": "maximum pentru celelalte categorii eligibile — ghid consultativ"
+            "scope": "maximum pentru celelalte categorii eligibile"
           }
         ],
-        "ownContribution": "Conform ghidului consultativ: minimum 20% sau 35% din eligibil, după categoria solicitantului, plus costurile neeligibile. Condițiile se pot modifica."
+        "ownContribution": "Minimum 20% sau 35% din costurile eligibile, după categoria beneficiarului, plus costurile neeligibile și TVA recuperabilă. Plafonul de 200.000 EUR poate majora contribuția efectivă."
       },
       "pageUrl": "/dr12-afir",
-      "lastMeaningfulUpdate": "2026-09-06",
+      "lastMeaningfulUpdate": "2026-09-19",
       "evergreenValue": true,
       "archivedNoindexDecision": null,
       "indexable": true,
-      "cardSummary": "Ghidul DR 12 este consultativ; depunerea nu este deschisă, iar condițiile se pot modifica.",
-      "quickAnswer": "DR 12 AFIR finanțează consolidarea exploatațiilor tinerilor fermieri instalați și a celorlalte categorii eligibile de fermieri. Ghidul consultativ propune maximum 200.000 EUR/proiect, o intensitate de până la 80% pentru tinerii fermieri sub 41 de ani și până la 65% pentru celelalte categorii, cu minimum 12.000 SO. Aceste valori sunt consultative și se pot modifica. La 6 septembrie 2026, sursele AFIR verificate nu confirmă ghidul final sau o sesiune deschisă. Pregătirea începe cu profilul solicitantului, SO, actele exploatației, investiția și contribuția proprie.",
-      "metaTitle": "DR 12 AFIR 2026: 200.000 €, ghid consultativ și condiții",
-      "metaDescription": "DR 12 AFIR: ghid consultativ, maximum 200.000 €, sprijin 80%/65% și minimum 12.000 SO. Vezi cine poate aplica și ce se știe despre lansare.",
-      "editorialDisclaimer": "Informația este bazată pe versiunea consultativă; condițiile se pot modifica înaintea ghidului final și a deschiderii apelului.",
+      "cardSummary": "Ghid final: până la 200.000 €, sprijin 80%/65%, minimum 12.000 SO. Calendarul depunerii nu este încă anunțat.",
+      "quickAnswer": "DR 12 AFIR 2026 oferă până la 200.000 EUR/proiect pentru consolidarea fermelor. Ghidul final, publicat la 18 septembrie 2026, prevede minimum 12.000 SO și sprijin de maximum 80% pentru tinerii fermieri sub 41 de ani care îndeplinesc condițiile ghidului, respectiv 65% pentru celelalte categorii eligibile. Contribuția proprie este de minimum 20% sau 35%, plus cheltuielile neeligibile. La verificarea din 19 septembrie 2026, perioada de depunere nu este încă anunțată de AFIR. Grila are maximum 100 de puncte, cu praguri de 80 și 45 de puncte pentru cele două etape lunare. Verifică separat forma juridică, istoricul exploatației, documentele și investiția propusă înainte de pregătirea dosarului.",
+      "metaTitle": "DR 12 AFIR 2026: ghid final, condiții și calculator punctaj",
+      "metaDescription": "DR 12 AFIR: ghid final, până la 200.000 €, sprijin 80%/65%, minimum 12.000 SO. Vezi eligibilitatea, cheltuielile, punctajul și situația depunerii.",
+      "editorialDisclaimer": "Sinteză a ghidului final AFIR, verificată la 19.09.2026. Perioada de depunere se confirmă prin anunțul sesiunii. Eligibilitatea și punctajul oficial sunt stabilite de AFIR.",
       "eligibleApplicants": [
-        "Tineri fermieri instalați, beneficiari ai submăsurii 6.1 și fermieri de până la 45 de ani, în categoriile și formele juridice din ghidul consultativ."
+        "Tineri fermieri instalați, cu maximum 40 de ani inclusiv (înainte de 41).",
+        "Fermieri care au finalizat planul de afaceri sM 6.1, indiferent de vârstă.",
+        "Fermieri instalați cu maximum 45 de ani inclusiv (înainte de 46). PFA, II, IF sau SRL în condițiile ghidului; persoanele fizice neautorizate nu sunt eligibile."
       ],
       "keyConditions": [
-        "Ghid consultativ: minimum 12.000 SO, calculat cu coeficienții SOC 2020; pragul se reconfirmă în ghidul final.",
-        "Solicitantul este șeful exploatației și îndeplinește condițiile categoriei eligibile; persoana fizică neautorizată nu este eligibilă.",
-        "Finanțarea propusă este de maximum 200.000 EUR/proiect, cu intensitate de până la 80% sau 65%, în funcție de beneficiar.",
-        "Ghidul final și perioada de depunere nu sunt confirmate în sursele verificate."
+        "Minimum 12.000 EUR SO la depunere, calculat cu coeficienții SOC 2020 și dovedit prin registrele fermei.",
+        "Șef al exploatației, control efectiv și competențe profesionale adecvate proiectului.",
+        "Înregistrare IACS-APIA și în registrele relevante pe forma solicitantului, cofinanțare și viabilitate economică demonstrate.",
+        "Ghid final publicat; perioada de depunere nu este încă anunțată la verificarea din 19.09.2026.",
+        "Costuri generale: maximum 10% cu construcții-montaj sau 3% pentru achiziții fără construcții-montaj; marketing maximum 5%. Minimum 50% materie primă proprie la procesare/condiționare/depozitare. Extrasul pentru cofinanțare se însoțește de angajamentul folosirii a minimum 50% din disponibil pentru proiect."
       ],
       "officialGuideKeys": [
         "dr12"
@@ -240,22 +243,32 @@
           "programPage": [
             {
               "ref": "program",
-              "label": "Comunicarea AFIR privind consultarea DR-12"
+              "label": "Pagina AFIR DR-12 și anexele finale"
             }
           ],
           "guide": [
             {
               "ref": "approval:evidence:0",
-              "label": "Ghidul solicitantului DR-12 — versiunea consultativă (PDF AFIR)"
+              "label": "Ghidul final DR-12 (PDF AFIR), 18.09.2026"
             }
           ],
-          "annexes": [],
-          "schemeOrder": [],
+          "annexes": [
+            {
+              "ref": "program",
+              "label": "Cererea de finanțare și anexele DR-12"
+            }
+          ],
+          "schemeOrder": [
+            {
+              "ref": "approval:evidence:3",
+              "label": "OMADR 268/17.09.2026 – aprobarea ghidului"
+            }
+          ],
           "sessionAnnouncement": [],
           "corrigenda": [],
           "clarifications": []
         },
-        "notes": "Documentul înregistrat este consultativ; termenul pentru observații este încheiat și nu există dovadă de sesiune deschisă."
+        "notes": "Ghid final verificat față de arhiva furnizată; nicio sesiune DR-12 anunțată în pagina AFIR de primire proiecte la 19.09.2026."
       },
       "presentation": {
         "carousel": true,
@@ -264,7 +277,7 @@
         "icon": "ph-plant",
         "image": "/assets/hero/hero-agriculture.webp",
         "beneficiary": null,
-        "pageTitle": "DR 12 AFIR 2026 – investiții pentru tineri fermieri și fermieri până la 45 de ani",
+        "pageTitle": "DR 12 AFIR 2026: ghid final, eligibilitate și punctaj",
         "carouselOrder": 4,
         "heroOrder": 4,
         "navigationOrder": 4
@@ -282,7 +295,7 @@
         ],
         "listed": true
       },
-      "fundingBasis": "consultative"
+      "fundingBasis": "final"
     },
     {
       "id": "dr14-afir",
@@ -2768,7 +2781,7 @@
       "type": "program",
       "schemaType": "GovernmentService",
       "category": "AFIR",
-      "h1": "DR12 AFIR 2026 – investiții pentru tineri fermieri și fermieri până la 45 de ani",
+      "h1": "DR 12 AFIR 2026: ghid final, eligibilitate și punctaj",
       "policyContribution": "intervenția susține instalarea și consolidarea fermierilor tineri, reinnoirea generatiilor în agricultură și investiții care pot imbunatati competitivitatea exploatatiilor agricole.",
       "audience": [
         "Tineri fermieri care conduc sau preiau exploatații agricole și vor investiții pentru crestere, modernizare ori consolidare.",
@@ -2790,21 +2803,21 @@
         "Respectarea perioadelor de implementare și monitorizare mentionate în documentul oficial aplicabil."
       ],
       "eligibleExpenses": [
-        "Utilaje și echipamente agricole justificate de cultura, efectiv și fluxul de lucru al exploatației.",
-        "Constructii, modernizari sau dotări pentru activitatea agricolă, dacă sunt permise în documentul oficial aplicabil.",
-        "Echipamente pentru depozitare, conditionare, manipulare sau eficientizarea activității agricole.",
-        "Servicii și documentatii necesare proiectului, în limitele și condițiile apelului."
+        "Construcții agricole, spații protejate, ferme și plantații pomicole, utilaje și echipamente noi dimensionate pentru fermă.",
+        "Condiționare și depozitare corelate cu producția; procesare la fermă ca parte secundară, cu minimum 50% materie primă proprie pentru procesare/condiționare/depozitare.",
+        "Digitalizare și agricultură de precizie integrate, biosecuritate; irigații și energie regenerabilă pentru consum propriu ca părți secundare, în condițiile ghidului.",
+        "Costuri generale: maximum 10% la construcții-montaj sau 3% la achiziții fără construcții-montaj. Marketing: maximum 5%."
       ],
       "ineligibleExpenses": [
-        "Investiții fără legătura directă cu exploatația agricolă declarata.",
-        "Achizitii începute înainte de momentul permis de schema de finanțare.",
-        "Active supradimensionate față de dimensiunea economică sau față de fluxul real de producție.",
-        "Costuri care nu pot fi susținute prin documente, oferte și justificare tehnică verificabila."
+        "Bunuri second-hand, achiziții de terenuri și clădiri, locuințe, cap tractor rutier, ATV/UTV.",
+        "Animale, plante anuale, întreținerea culturilor, drepturi de producție și drepturi la plată.",
+        "Transport nespecializat, spații administrative și cazare; TVA recuperabilă și costuri accesorii leasingului.",
+        "Dublă finanțare, costuri angajate înainte de momentul permis, cheltuieli din sectoarele hamei, struguri de masă, flori, plante medicinale, aromatice și ornamentale."
       ],
       "scoring": [
-        "Punctajul trebuie estimat pe baza datelor verificabile, nu pe scenarii optimiste.",
-        "Dimensiunea economică, tipul investiției, profilul solicitantului și coerenta bugetului pot influenta evaluarea.",
-        "Investitiile trebuie explicate prin nevoie, capacitate de utilizare și efect asupra exploatației."
+        "Maximum 100 de puncte: calificare 20, asociere 10, proprietate 20, tehnologii și resurse 19, risc 10, instalare/prima accesare 21.",
+        "Prag de 80 de puncte în prima etapă și 45 în a două; calendarul va fi stabilit prin nota de lansare.",
+        "Criteriile alternative nu se cumulează; punctajul trebuie dovedit documentar."
       ],
       "steps": [
         "Verificam solicitantul, exploatația și dimensiunea economică.",
@@ -2825,28 +2838,44 @@
       ],
       "faq": [
         [
-          "Ce este DR12 AFIR?",
-          "DR12 AFIR este intervenția pentru consolidarea exploatațiilor tinerilor fermieri instalați și ale fermierilor instalați cu vârsta de până la 45 de ani, în condițiile ghidului aplicabil."
+          "Este publicat ghidul final DR 12 AFIR 2026?",
+          "Da. AFIR a publicat ghidul final și anexele la 18 septembrie 2026, după aprobarea prin OMADR 268/17.09.2026, Ediția I, Revizia 0."
         ],
         [
-          "Ghidul DR12 AFIR este final?",
-          "Nu. Documentul folosit pentru această pagină este versiunea consultativă. Regulile finale se confirmă numai în documentul oficial aplicabil aprobat și în anexele sesiunii."
+          "Când începe depunerea DR 12?",
+          "La verificarea din 19 septembrie 2026, AFIR nu anunțase încă intervalul de depunere DR-12. Ghidul prevede două etape lunare, cu praguri de 80 și 45 de puncte; datele și orele se stabilesc prin nota de lansare."
         ],
         [
-          "Când se lansează DR12 AFIR?",
-          "Versiunea consultativă nu stabilește o dată certă de deschidere. Intervalul de depunere și etapele lunare vor fi cele din nota oficială de lansare."
+          "Cine poate aplica și care este limita de vârstă?",
+          "Sunt vizate trei categorii de șefi ai exploatației: tineri fermieri înainte de 41 de ani, beneficiari sM 6.1 cu planul finalizat indiferent de vârstă și fermieri instalați înainte de 46 de ani. Se aplică și celelalte condiții din ghid."
         ],
         [
-          "Cine poate aplica la DR12?",
-          "Ghidul consultativ include tinerii fermieri până la 40 de ani neîmpliniți, beneficiarii sM 6.1 care au finalizat planul de afaceri și fermierii instalați până la 45 de ani neîmpliniți, dacă îndeplinesc toate celelalte condiții."
+          "Care este valoarea finanțării și contribuția proprie DR 12?",
+          "Grantul este de maximum 200.000 EUR/proiect. Intensitatea este de maximum 80% pentru tinerii fermieri eligibili sub 41 de ani și 65% pentru celelalte categorii. Beneficiarul acoperă minimum 20% sau 35% din eligibil, plus cheltuielile neeligibile."
         ],
         [
-          "Ce acte se verifică pentru DR12 AFIR?",
-          "Se corelează înregistrările APIA, ANSVSA/DSVSA și ANZ, documentele de folosință, actele formei juridice și verificările ONRC, împreună cu documentația investiției și contribuția proprie."
+          "Cât SO este necesar pentru DR 12?",
+          "Ferma trebuie să aibă minimum 12.000 EUR SO la depunere, calculat cu coeficienții SOC 2020 și susținut de registrele oficiale. SO reprezintă dimensiunea economică, nu grantul și nici cifra de afaceri."
         ],
         [
-          "Ce risc are suprascore-ul la DR12?",
-          "Punctajul trebuie susținut de documente. Dacă evaluarea AFIR îl reduce sub pragul etapei lunare sau proiectul este încadrat pe componenta greșită, proiectul poate fi declarat neconform."
+          "Un beneficiar sM 6.1 poate primi sprijin de 80%?",
+          "Da, dacă la depunere are maximum 40 de ani inclusiv, este șef de exploatație și are competențele adecvate proiectului. Excepția de vârstă pentru eligibilitatea beneficiarilor sM 6.1 nu acordă automat intensitatea de 80%."
+        ],
+        [
+          "Trebuie să fiu instalat de cel puțin cinci ani?",
+          "Nu este o condiție generală de eligibilitate. Ghidul permite înregistrarea IACS-APIA inclusiv în anul depunerii. Vechimea de minimum cinci ani intervine la criteriul de selecție 6.2, împreună cu prima accesare a sprijinului agricol FEADR."
+        ],
+        [
+          "Pot cumpăra animale, teren sau un tractor second-hand?",
+          "Nu. Animalele, terenurile și clădirile cumpărate, precum și bunurile second-hand sunt neeligibile. Un tractor agricol nou poate fi eligibil dacă este justificat și corelat cu ferma; capul tractor rutier este exclus."
+        ],
+        [
+          "Care sunt pragurile și cum se calculează punctajul?",
+          "Grila finală are maximum 100 de puncte. Prima etapă lunară cere minimum 80 de puncte, iar a două minimum 45. Calculatorul de la finalul paginii arată separat cele șase principii și regulile de necumulare. Rezultatul nu confirmă eligibilitatea ori finanțarea."
+        ],
+        [
+          "Ce documente pregătesc pentru DR 12?",
+          "Cererea de finanțare în versiunea AFIR curentă, documentația tehnico-economică aplicabilă, actele formei juridice și ale amplasamentului, evidențele APIA/ANSVSA/ANZ, calculul SO, dovezile calificării și punctajului, ofertele și dovada contribuției proprii. Lista exactă se verifică în capitolul 4.1 și anexele ghidului."
         ]
       ],
       "related": [
@@ -3012,18 +3041,18 @@
         },
         {
           "title": "Rolul surselor oficiale",
-          "body": "Pagină folosește ghidul consultativ AFIR ca reper de lucru. Pentru decizia finală de aplicare verificăm documentul oficial aplicabil, anuntul sesiunii, anexele și eventualele clarificări publicate de autoritate."
+          "body": "Pagină folosește ghidul final AFIR ca reper de lucru. Pentru decizia finală de aplicare verificăm documentul oficial aplicabil, anuntul sesiunii, anexele și eventualele clarificări publicate de autoritate."
         }
       ],
       "decisionIntro": "DR12 merită pregătit când solicitantul și exploatația pot fi demonstrate documentar, investiția este proportionala cu activitatea agricolă, iar contribuția proprie este realistă.",
       "decisionClose": "Dacă vârstă, SO, documentele de exploatație sau bugetul nu susțin proiectul, recomandarea prudentă este ajustarea înainte de depunere.",
       "finalCtaTitle": "Verifică documentele fermei înainte de buget",
-      "finalCtaText": "Analiza compară exploatația, documentele agricole, investiția și contribuția proprie cu ghidul consultativ. Condițiile de lansare și forma finală se reconfirmă în documentele AFIR aplicabile.",
+      "finalCtaText": "Verificăm profilul fermierului, SO, investiția, contribuția proprie și documentele de punctaj conform ghidului final. Calendarul depunerii se confirmă prin anunțul AFIR.",
       "heroPrimaryCta": "Cere verificarea inițială a fermei",
       "finalPrimaryCta": "Cere o verificare inițială a fermei cu un consultant FABER",
       "inlineCtaTitle": "Documente pentru verificarea DR12",
-      "inlineCtaText": "Trimite datele despre solicitant, vârstă, exploatație, documentele APIA/ANSVSA, investiție și contribuție proprie. Verificarea separă condițiile din ghidul consultativ de cele care așteaptă ghidul final.",
-      "updatedAt": "2026-07-20",
+      "inlineCtaText": "Trimite datele solicitantului, vârsta, evidențele APIA/ANSVSA, investiția și bugetul pentru verificarea condițiilor din ghidul final DR-12.",
+      "updatedAt": "2026-09-19",
       "ctaText": "Cere verificarea inițială a fermei",
       "secondaryCtaText": "Compara cu DR14 AFIR",
       "programId": "dr12-afir",

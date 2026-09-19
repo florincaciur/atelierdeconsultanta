@@ -58,11 +58,12 @@ assert.deepEqual(
   [
     { label: "Calculator punctaj POR Micro – Apelul 2", href: "/investitii-modernizarea-microintreprinderilor-apel-2#simulator-punctaj-apel-2" },
     { label: "Calculator SO", href: "/calculator-soc" },
-    { label: "Calculator punctaj DR 14", href: "/dr14#dr14-punctaj" }
+    { label: "Calculator punctaj DR 14", href: "/dr14#dr14-punctaj" },
+    { label: "Calculator punctaj DR 12", href: "/dr12-afir#dr12-punctaj" }
   ],
-  "calculator disclosure must expose the three approved tools in order",
+  "calculator disclosure must expose the four approved tools in order",
 );
-assert.equal($("#mobile-calculatoare-panel a").length, 3, "mobile calculator disclosure must expose all three tools");
+assert.equal($("#mobile-calculatoare-panel a").length, 4, "mobile calculator disclosure must expose all four tools");
 assert.equal($("#navbar .nav-cta").text().trim(), config.cta.label, "desktop CTA copy must be canonical");
 assert.equal($("#mobileMenu .mobile-cta").text().trim(), config.cta.label, "mobile CTA copy must be canonical");
 assert.equal(/\b(?:Instrumente|Ghiduri|Cuprins)\b/u.test($("#navbar, #mobileMenu").text()), false, "removed navigation labels must stay absent");

@@ -1,13 +1,13 @@
 # Audit de consistență factuală a programelor
 
-Data auditului: 2026-09-13
+Data auditului: 2026-09-19
 
 ## Rezultat
 
 - Programe în registrul canonic: 26
 - Erori: 0
 - Avertismente: 0
-- Statusuri: apel_deschis=3, apel_inchis=6, calendar_estimativ=7, consultare_publica=1, ghid_aprobat_nedeschis=9
+- Statusuri: apel_deschis=3, apel_inchis=6, calendar_estimativ=7, ghid_aprobat_nedeschis=10
 - Mod strict pentru freshness: inactiv
 
 Auditul este local și determinist. Nu interoghează URL-urile oficiale, nu deduce statusul din răspunsuri HTTP și nu rescrie date factuale. Registrul aprobat din `config/seo-programs.json#programs` rămâne singura sursă de adevăr.
@@ -18,7 +18,7 @@ Auditul este local și determinist. Nu interoghează URL-urile oficiale, nu dedu
 |---|---|---:|---:|---:|
 | Programul Regional Nord-Est | calendar_estimativ | 2026-08-29 | — | — |
 | Fonduri regionale | calendar_estimativ | 2026-08-29 | — | — |
-| DR12 AFIR | consultare_publica | 2026-09-06 | — | — |
+| DR12 AFIR | ghid_aprobat_nedeschis | 2026-09-19 | — | — |
 | DR14 AFIR | apel_deschis | 2026-09-06 | 2026-09-01 | 2026-10-31 |
 | DR18 AFIR | apel_deschis | 2026-09-06 | 2026-09-01 | 2026-10-31 |
 | Start-Up Nation | apel_inchis | 2026-08-29 | — | 2026-05-29 |

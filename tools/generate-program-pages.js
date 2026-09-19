@@ -2585,108 +2585,7 @@ ${officialSourcesHtml}
 }
 
 function renderDr12SearchIntentContent(page) {
-  const officialSourcesHtml = renderOfficialSources(page.sourceKeys, { id: `${page.slug}-official-sources` });
-  const faqHtml = faqsForPage(page)
-    .map(([question, answer]) => `<section class="faq-item"><h3>${esc(question)}</h3><p>${esc(answer)}</p></section>`)
-    .join("\n");
-
-  return `
-      <section aria-labelledby="dr12-raspuns-rapid">
-        <h2 id="dr12-raspuns-rapid">Răspuns rapid</h2>
-        <p class="intro">DR12 AFIR 2026 este intervenția pentru investiții în consolidarea exploatațiilor tinerilor fermieri instalați și ale fermierilor instalați cu vârsta de până la 45 de ani. Ghidul DR 12 AFIR disponibil în documentația proiectului este o versiune consultativă, nu ghidul final. Ghidul consultativ propune minimum 12.000 SO, maximum 200.000 EUR/proiect și intensități de până la 80% sau 65%, în funcție de categoria beneficiarului. Condițiile se pot modifica înaintea ghidului final. O dată de lansare nu se deduce din consultare. Sesiunea, etapele lunare, alocarea și termenele se confirmă exclusiv prin ghidul activ și nota oficială de lansare.</p>
-        <p>Verifică separat eligibilitatea, finanțarea propusă și calendarul: publicarea unui ghid consultativ nu deschide depunerea.</p>
-      </section>
-
-      <section aria-labelledby="dr12-status-ghid">
-        <h2 id="dr12-status-ghid">Este publicat ghidul final DR 12?</h2>
-        <p>Documentul analizat poartă explicit mențiunea de versiune consultativă și a fost publicat pentru dezbatere. Ghidul final nu este confirmat în sursele AFIR verificate la 6 septembrie 2026. Forma finală poate modifica praguri, documente, punctaje, alocări sau termene.</p>
-        <p>Înainte de orice depunere se verifică versiunea activă publicată de AFIR, ordinul de aprobare, anexele, cererea de finanțare, grila de selecție și eventualele erate. Nicio regulă consultativă nu este prezentată aici drept regulă definitivă.</p>
-      </section>
-
-      <section aria-labelledby="dr12-lansare">
-        <h2 id="dr12-lansare">Când se lansează DR12</h2>
-        <p>Ghidul consultativ DR 12 nu confirmă data deschiderii depunerii. Ghidul arată că sesiunea se organizează în două etape lunare, stabilite prin nota de lansare. Pentru prima etapă este indicat un prag de calitate de 75 de puncte, iar pentru etapa a doua pragul minim consultativ este de 45 de puncte.</p>
-        <p>Data, ora deschiderii, durata fiecărei etape, alocarea și condițiile de oprire anticipată trebuie preluate numai din anunțul oficial al sesiunii active. Pregătirea documentelor poate începe înainte, dar depunerea nu trebuie planificată pe o dată nepublicată.</p>
-      </section>
-
-      <section aria-labelledby="dr12-solicitanti">
-        <h2 id="dr12-solicitanti">Cine poate aplica</h2>
-        <p>Varianta consultativă enumeră trei categorii: tineri fermieri instalați cu vârsta de până la 40 de ani, înainte de împlinirea vârstei de 41 de ani; fermieri care au finalizat planul de afaceri prin submăsura 6.1 din PNDR 2014-2022, indiferent de vârsta de la depunere; și fermieri instalați cu vârsta de până la 45 de ani, înainte de împlinirea vârstei de 46 de ani.</p>
-        <p>Solicitantul trebuie să fie șef al exploatației și să exercite controlul efectiv. Persoanele fizice neautorizate nu sunt eligibile. Ghidul include PFA, întreprindere individuală, întreprindere familială și SRL în condițiile detaliate pentru asociat, administrator și control. Încadrarea juridică și profesională se reconfirmă în ghidul activ.</p>
-      </section>
-
-      <section aria-labelledby="dr12-so-minim">
-        <h2 id="dr12-so-minim">Pragul minim SO</h2>
-        <p>Investiția trebuie realizată într-o fermă care respectă dimensiunea economică minimă prevăzută de documentele apelului. În ghidul consultativ, pragul este minimum 12.000 SO; acesta se reconfirmă în ghidul final. Calculul folosește coeficienții SOC din cererea de finanțare și datele documentabile pentru suprafețe, culturi și efective.</p>
-        <p>Suprafețele se corelează cu IACS-APIA, iar efectivele care nu pot fi înregistrate acolo se verifică în registrele ANSVSA/DSVSA, ANZ sau prin documentele circumscripției veterinare, după caz. Un calcul realizat fără aceleași date în documentele oficiale poate schimba eligibilitatea și punctajul.</p>
-      </section>
-
-      <section aria-labelledby="dr12-componente">
-        <h2 id="dr12-componente">Sector zootehnic versus alte sectoare</h2>
-        <p>DR12 are două componente distincte: <strong>sector zootehnic</strong> și <strong>alte sectoare</strong>. Solicitantul poate depune un singur proiect pe una dintre cele două componente. Încadrarea pornește de la structura exploatației și de la sectorul relevant descris în ghid.</p>
-        <p>Pentru componenta alte sectoare pot exista investiții și în sectoare diferite de cel predominant, însă proiectul trebuie să includă investiții în sectorul vegetal care determină încadrarea. Alegerea componentei influențează alocarea, criteriile aplicabile și riscul de neconformitate dacă proiectul este încadrat greșit.</p>
-      </section>
-
-      <section aria-labelledby="dr12-intensitate">
-        <h2 id="dr12-intensitate">Intensitatea sprijinului</h2>
-        <p>Intensitatea și plafonul diferă în funcție de categoria solicitantului și de regulile apelului. FABER le va publica după validarea documentului operațional aplicabil. Contribuția privată, cheltuielile neeligibile și tratamentul TVA se calculează separat și se confirmă în documentele sesiunii active.</p>
-      </section>
-
-      <section aria-labelledby="dr12-investitii">
-        <h2 id="dr12-investitii">Investiții eligibile</h2>
-        <p>Lista indicativă din ghid cuprinde construcții noi și modernizări, spații protejate cu dotări și utilități, înființarea sau modernizarea fermelor pomicole, unități de condiționare și depozitare, precum și procesare la nivelul fermei ca parte secundară a proiectului.</p>
-        <p>Pot fi analizate utilaje agricole noi, remorci și semiremorci tehnologice, echipamente pentru furajare, soluții digitale și agricultură de precizie, facilități de igienă și biosecuritate, căi de acces și irigații la nivel de fermă ca părți secundare. Energia regenerabilă este prevăzută ca parte secundară pentru consum propriu, fără livrarea surplusului în rețea. Fiecare investiție trebuie corelată cu producția și capacitatea reală a fermei.</p>
-      </section>
-
-      <section aria-labelledby="dr12-documente">
-        <h2 id="dr12-documente">Documente APIA, ANSVSA, ANZ și ONRC</h2>
-        <ul>
-          <li><strong>APIA:</strong> forma de organizare, codul exploatației, suprafețele și culturile declarate trebuie să susțină calculul SO și proiectul.</li>
-          <li><strong>ANSVSA/DSVSA:</strong> registrele exploatației și efectivele sunt verificate pentru fermele cu animale; pentru anumite animale se folosesc și adeverințe veterinare.</li>
-          <li><strong>ANZ:</strong> documentele sunt relevante, între altele, pentru familiile de albine, vatra stupinei și situațiile prevăzute de ghid.</li>
-          <li><strong>ONRC:</strong> forma juridică, reprezentantul, asociații și controlul efectiv se verifică inclusiv prin RECOM online.</li>
-        </ul>
-        <p>Contractele de proprietate sau folosință trebuie să fie în numele solicitantului și să acopere perioada cerută. Datele din toate registrele trebuie să descrie aceeași exploatație; diferențele pot genera clarificări sau neeligibilitate.</p>
-      </section>
-
-      <section aria-labelledby="dr12-cofinantare">
-        <h2 id="dr12-cofinantare">Cofinanțare</h2>
-        <p>Beneficiarul adaugă contribuția privată la sprijinul public și suportă integral cheltuielile neeligibile. Calculul real include și TVA-ul după regimul fiscal aplicabil, diferențe de preț și rezerva de numerar pentru implementare.</p>
-        <p>Ghidul consultativ cere dovada cofinanțării private prin documentele financiare admise. Cerința exactă, inclusiv forma dovezii și eventualele angajamente asociate, se reconfirmă la contractare în versiunea activă.</p>
-      </section>
-
-      <section aria-labelledby="dr12-punctaj">
-        <h2 id="dr12-punctaj">Pragul de calitate și riscul de suprascore</h2>
-        <p>Varianta consultativă stabilește un prag de 75 de puncte pentru prima etapă lunară și 45 de puncte pentru etapa a doua, atât pentru sectorul zootehnic, cât și pentru alte sectoare. Cererea nu poate fi depusă într-o etapă dacă prescoringul este sub pragul lunii respective.</p>
-        <p>Suprascore-ul nu este o rezervă de siguranță. Punctele trebuie susținute de documente încă de la depunere. Dacă evaluatorul reduce punctajul sub pragul etapei sau constată o încadrare greșită pe componentă, proiectul poate fi declarat neconform. Se punctează numai ceea ce poate fi demonstrat, nu o investiție ori o situație viitoare nesusținută.</p>
-      </section>
-
-      <section aria-labelledby="dr12-greseli">
-        <h2 id="dr12-greseli">Greșeli</h2>
-        <ul class="warning-list">
-          <li>prezentarea ghidului consultativ ca ghid final sau presupunerea unei date de lansare;</li>
-          <li>calcul SO sub pragul aplicabil sau necorelat cu APIA, ANSVSA, ANZ și documentele de folosință;</li>
-          <li>confundarea limitei de vârstă pentru categoria solicitantului cu regulile intensității sprijinului;</li>
-          <li>alegerea greșită între sector zootehnic și alte sectoare;</li>
-          <li>utilaje supradimensionate față de suprafețe, efective și parcul existent;</li>
-          <li>prescoring optimist, fără documente pentru fiecare criteriu;</li>
-          <li>cofinanțare, TVA și cheltuieli neeligibile neacoperite;</li>
-          <li>contracte de folosință sau înregistrări oficiale care nu acoperă perioada și forma solicitantului.</li>
-        </ul>
-      </section>
-
-      <section aria-labelledby="dr12-faq">
-        <h2 id="dr12-faq">FAQ</h2>
-        ${faqHtml}
-      </section>
-
-${officialSourcesHtml}
-
-      <section aria-labelledby="dr12-cta">
-        <h2 id="dr12-cta">Cere verificarea inițială pentru DR12</h2>
-        <p>Pregătește vârsta și forma solicitantului, situația APIA/ANSVSA/ANZ, calculul SO, componenta proiectului, lista investițiilor și sursa contribuției proprii. Verificarea pornește de la documente și de la documentul oficial aplicabil, nu de la plafonul maxim.</p>
-        <p><a class="btn btn-primary" href="/verificare-eligibilitate-fonduri-europene">Solicită verificarea inițială pentru DR12</a></p>
-      </section>`;
+  return require("./dr12-content").renderDr12Content(page);
 }
 
 function renderDr14SearchIntentContent(page) {
@@ -2957,8 +2856,8 @@ function pageHtml(page, config) {
   const sourcesCss = (page.sourceKeys || []).length ? `\n  <link rel="stylesheet" href="/assets/official-sources.css" />` : "";
   const dr14Css = ["dr14", "dr18"].includes(page.slug) ? `\n  <link rel="stylesheet" href="/assets/dr14-final.css?v=20260818-1" />` : "";
   const dr14Js = page.slug === "dr14" ? `\n  <script src="/assets/dr14-final.js?v=20260808-1" defer></script>` : "";
-  const extraCss = `${relatedCss}${toolCss}${sourcesCss}${dr14Css}`;
-  const extraJs = `${page.includeTools ? `\n  <script src="/assets/seo-tools.js" defer></script>` : ""}${dr14Js}`;
+  const extraCss = `${relatedCss}${toolCss}${sourcesCss}${dr14Css}${page.slug === "dr12-afir" ? '\n  <link rel="stylesheet" href="/assets/dr12-score.css?v=20260919">' : ""}`;
+  const extraJs = `${page.includeTools ? `\n  <script src="/assets/seo-tools.js" defer></script>` : ""}${dr14Js}${page.slug === "dr12-afir" ? '\n  <script src="/assets/dr12-score.js?v=20260919" defer></script>' : ""}`;
   const primaryCta = heroPrimaryCtaFor(page);
   const secondaryCta = heroSecondaryCta(page);
   const heroActionsHtml = renderHeroActions(page, primaryCta, secondaryCta);

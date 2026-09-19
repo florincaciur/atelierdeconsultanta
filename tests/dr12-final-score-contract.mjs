@@ -1,0 +1,44 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import { createRequire } from 'node:module';
+import * as cheerio from 'cheerio';
+const require = createRequire(import.meta.url);
+const { calculate } = require('../assets/dr12-score.js');
+// Published AFIR final guide, pp. 47–67; boundary and non-cumulative cases.
+assert.equal(calculate({}).total, 0);
+const full = { education:20, association:10, land:100, building:true, precision:10, circular:true, risk:'forest', history:'installation' };
+assert.equal(calculate(full).total,100);
+assert.equal(calculate({...full, component:'alte', history:'first', risk:'biosecurity'}).total,100);
+assert.equal(calculate({education:15, association:5, land:50, insurance:50, risk:'insurance', precision:9.99}).total,30);
+assert.equal(calculate({precision:10}).total,14);
+assert.equal(calculate({precision:9.99}).total,0);
+assert.equal(calculate({risk:'forest',insurance:100}).parts[4],10);
+assert.equal(calculate({education:20,association:5,land:100,building:true}).band,'second');
+assert.equal(calculate({education:20,association:5,land:99.99,building:true}).band,'below');
+assert.equal(calculate({...full,education:0}).band,'first');
+assert.equal(calculate({...full,education:0,land:99.99}).band,'second');
+assert.equal(calculate({land:Infinity,insurance:NaN,precision:-1}).total,0);
+assert.equal(calculate({land:200,insurance:200}).total,20);
+assert.equal(calculate({education:100,association:100,history:'invalid'}).total,0);
+const html=fs.readFileSync(new URL('../dr12-afir/index.html',import.meta.url),'utf8');
+const $=cheerio.load(html);
+assert.equal($('[data-dr12-calculator]').length,1);
+assert.equal($('#dr12-punctaj').length,1);
+assert.equal($('script[src^="/assets/dr12-score.js"]').length,1);
+assert.equal($('h1').length,1);
+assert.match($('main').text(),/80 de puncte/);
+assert.doesNotMatch($('main').text(),/75 de puncte|ghid(?:ul)? consultativ|versiune consultativă/i);
+assert($('a[href="https://www.afir.ro/media/aqtlitop/ghidul-solicitantului-dr-12.pdf"]').length);
+assert.equal($('link[rel="canonical"]').attr('href'),'https://atelierdeconsultanta.ro/dr12-afir');
+assert.equal($('head > title').length, 1);
+assert($('head > title').text().length < 70);
+assert($('a[href="/dr12-afir#dr12-punctaj"]').length);
+for(const el of $('script[type="application/ld+json"]').toArray()) JSON.parse($(el).text());
+for (const file of ['index.html', 'dr12-afir/index.html', 'contact/index.html']) {
+  const dom = cheerio.load(fs.readFileSync(new URL('../' + file, import.meta.url), 'utf8'));
+  assert.equal(dom('head > title').length, 1, file + ': one page title');
+  assert(dom('head > title').text().length < 70, file + ': Bing title length');
+  assert.equal(dom('meta[name="twitter:title"]').attr('content'), dom('meta[property="og:title"]').attr('content'), file + ': social title parity');
+  assert.equal(dom('meta[name="twitter:description"]').attr('content'), dom('meta[property="og:description"]').attr('content'), file + ': social description parity');
+}
+console.log('DR-12 final PASS: both components, non-cumulative criteria, 10% precision, 45/80 boundaries, invalid inputs and canonical page.');

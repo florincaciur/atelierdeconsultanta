@@ -2,21 +2,21 @@
   "schemaVersion": 1,
   "route": "/dr12-vs-dr14",
   "file": "dr12-vs-dr14.html",
-  "reviewedAt": "2026-09-06",
+  "reviewedAt": "2026-09-19",
   "title": "DR 12 vs DR 14: încadrare și investiții | FABER",
   "metaDescription": "Compară DR 12 și DR 14: profil, SO, investiții și acte. DR 14 are sesiunea lansată, cu depuneri între 1 septembrie și 31 octombrie 2026.",
   "h1": "DR 12 vs DR 14: cum diferă încadrarea și investiția",
-  "directAnswer": "DR 12 și DR 14 au beneficiari și condiții diferite. DR 12 are ghid consultativ: maximum 200.000 EUR/proiect, intensități de 80% sau 65% și minimum 12.000 SO, fără sesiune deschisă confirmată. DR 14 are sesiune deschisă între 1 septembrie și 31 octombrie 2026, maximum 50.000 EUR/proiect și sprijin de până la 85%, pentru ferme mici care respectă pragurile SO specifice. Alegerea depinde de profilul solicitantului, SO și investiție.",
-  "statusStatement": "DR 12 are ghid consultativ, iar depunerea nu este deschisă. Depunerea DR 14 este deschisă în contorul AFIR la verificarea din 6 septembrie 2026, pentru sesiunea 1 septembrie–31 octombrie 2026; se aplică regulile de închidere anticipată.",
+  "directAnswer": "DR 12 și DR 14 au beneficiari și condiții diferite. DR 12 are ghid final: maximum 200.000 EUR/proiect, intensități de 80% sau 65% și minimum 12.000 SO, fără sesiune deschisă confirmată. DR 14 are sesiune deschisă între 1 septembrie și 31 octombrie 2026, maximum 50.000 EUR/proiect și sprijin de până la 85%, pentru ferme mici care respectă pragurile SO specifice. Alegerea depinde de profilul solicitantului, SO și investiție.",
+  "statusStatement": "DR 12 are ghid final, iar depunerea nu este deschisă. Depunerea DR 14 este deschisă în contorul AFIR la verificarea din 6 septembrie 2026, pentru sesiunea 1 septembrie–31 octombrie 2026; se aplică regulile de închidere anticipată.",
   "programs": [
     {
       "slug": "dr12-afir",
       "shortName": "DR 12",
-      "status": "consultare_publica",
-      "verifiedAt": "2026-09-06",
-      "sourceLabel": "Ghidul solicitantului DR 12, versiune consultativă publicată la 19.03.2026",
-      "sourceUrl": "https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/",
-      "guideUrl": "https://www.afir.ro/api/file?filename=Ghidul+Solicitantului+DR+12+-+versiunea+consultativ%C4%83&filetype=pdf&url=%2Fmedia%2Flm3fg4k1%2Fghidul-solicitantului-dr-12.pdf",
+      "status": "ghid_aprobat_nedeschis",
+      "verifiedAt": "2026-09-19",
+      "sourceLabel": "Ghid final DR-12, Ediția I, Revizia 0, aprobat prin OMADR 268/17.09.2026; publicat de AFIR la 18.09.2026",
+      "sourceUrl": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-12/",
+      "guideUrl": "https://www.afir.ro/media/aqtlitop/ghidul-solicitantului-dr-12.pdf",
       "canonicalUrl": "/dr12-afir"
     },
     {
@@ -33,7 +33,7 @@
   "comparisonRows": [
     {
       "label": "Beneficiar",
-      "dr12": "Fermieri șefi ai exploatației din categoriile descrise în ghidul consultativ pentru tineri fermieri și fermierii prevăzuți de intervenție. Profilul și istoricul se verifică documentar.",
+      "dr12": "Fermieri șefi ai exploatației din categoriile descrise în ghidul final pentru tineri fermieri și fermierii prevăzuți de intervenție. Profilul și istoricul se verifică documentar.",
       "dr14": "Fermieri organizați juridic, cu excepția persoanelor fizice, care pregătesc investiții într-o fermă de mici dimensiuni și dovedesc încadrarea cerută."
     },
     {
@@ -48,22 +48,22 @@
     },
     {
       "label": "SO",
-      "dr12": "Ghid consultativ: minimum 12.000 SO, calculat cu SOC 2020. Pragul se reconfirmă în versiunea finală.",
+      "dr12": "Ghid final: minimum 12.000 SO, calculat cu SOC 2020. Pragul este prevăzut în ghidul final.",
       "dr14": "Intervalul general este 4.000–11.999 SO; pragul minim este 2.000 SO sau 2.300 SO pentru sectoarele prevăzute de ghidul oficial final. SO majoritar și evidențele APIA/ANSVSA decid încadrarea."
     },
     {
       "label": "Tip de investiție",
-      "dr12": "Ghidul consultativ include modernizări, construcții și dotări agricole, condiționare sau depozitare și utilaje, în limitele și componentele documentului aplicabil.",
+      "dr12": "Ghidul final include modernizări, construcții și dotări agricole, condiționare sau depozitare și utilaje, în limitele și componentele documentului aplicabil.",
       "dr14": "Ghidul oficial final tratează investiții pe patru componente: legumicol, zootehnic, achiziții simple și național – alte sectoare. Un proiect se depune pe o singură componentă."
     },
     {
       "label": "Sprijin",
-      "dr12": "Ghid consultativ: maximum 200.000 EUR/proiect; până la 80% pentru tinerii fermieri sub 41 de ani și 65% pentru celelalte categorii.",
+      "dr12": "Ghid final: maximum 200.000 EUR/proiect; până la 80% pentru tinerii fermieri sub 41 de ani și 65% pentru celelalte categorii.",
       "dr14": "Maximum 50.000 EUR/proiect, cu o intensitate de maximum 85% din costurile eligibile, conform ghidului oficial final."
     },
     {
       "label": "Contribuție proprie",
-      "dr12": "Conform ghidului consultativ: minimum 20% sau 35% din eligibil, după categoria solicitantului, plus costurile neeligibile. Condițiile se pot modifica.",
+      "dr12": "Ghid final: minimum 20% sau 35% din eligibil, după categoria solicitantului, plus costurile neeligibile.",
       "dr14": "Beneficiarul acoperă diferența eligibilă, cheltuielile neeligibile și orice sumă care depășește plafonul ajutorului public."
     },
     {
@@ -83,10 +83,9 @@
     }
   ],
   "pendingHumanValidation": [
-    "pragurile SO și regulile de încadrare din forma finală DR 12",
-    "sumele și intensitățile aplicabile formei finale DR 12",
-    "categoriile finale de solicitanți și condițiile de instalare sau vechime",
-    "lista finală DR 12 a cheltuielilor eligibile și neeligibile pe componentă",
+    "încadrarea solicitantului concret, istoricul instalării și controlul exploatației",
+    "calculul SO și concordanța registrelor cu documentele fermei",
+    "încadrarea cheltuielilor și dovezile pentru fiecare criteriu de punctaj",
     "data deschiderii și intervalul oficial de depunere pentru DR 12",
     "eventualele erate, clarificări și închideri anticipate pentru sesiunea DR 14"
   ]

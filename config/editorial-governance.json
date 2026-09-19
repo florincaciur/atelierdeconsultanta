@@ -361,14 +361,20 @@
       "reviewerRole": "Revizuire editorială și conformitate",
       "attributionType": "organization",
       "personalNameConsent": false,
-      "verifiedAt": "2026-09-06",
+      "verifiedAt": "2026-09-19",
       "officialSourceName": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
-      "officialSourceUrl": "https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/",
-      "sourceVersion": "Versiune consultativă publicată la 19.03.2026; termenul pentru observații s-a încheiat la 30.03.2026",
-      "nextReviewAt": "2026-11-05",
-      "lastMeaningfulUpdate": "2026-09-06",
-      "statusSnapshot": "consultare_publica",
+      "officialSourceUrl": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-12/",
+      "sourceVersion": "Ghid final DR-12, Ediția I, Revizia 0, aprobat prin OMADR 268/17.09.2026; publicat de AFIR la 18.09.2026",
+      "nextReviewAt": "2026-10-19",
+      "lastMeaningfulUpdate": "2026-09-19",
+      "statusSnapshot": "ghid_aprobat_nedeschis",
       "changelog": [
+        {
+          "date": "2026-09-19",
+          "summary": "Actualizare după ghidul final: eligibilitate, cheltuieli, cofinanțare și calculator conform grilei 100/80/45.",
+          "reviewer": "Codex — verificare documentară la solicitarea utilizatorului",
+          "meaningful": true
+        },
         {
           "date": "2026-09-06",
           "summary": "Corectate condițiile documentate, rezumatele de eligibilitate și finanțare; actualizate sursele și răspunsurile practice.",
@@ -427,14 +433,20 @@
       "reviewerRole": "Revizuire editorială și conformitate",
       "attributionType": "organization",
       "personalNameConsent": false,
-      "verifiedAt": "2026-09-06",
+      "verifiedAt": "2026-09-19",
       "officialSourceName": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
-      "officialSourceUrl": "https://depunerepspac.afir.ro/Sesiune/Lista",
-      "sourceVersion": "Ghid consultativ DR 12; ghid final și sesiune activă DR 14 verificate la 6 septembrie 2026",
-      "nextReviewAt": "2026-09-13",
-      "lastMeaningfulUpdate": "2026-09-06",
+      "officialSourceUrl": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-12/",
+      "sourceVersion": "DR 12: ghid final, Ediția I, Revizia 0, publicat la 18.09.2026; situația sesiunilor AFIR verificată la 19.09.2026",
+      "nextReviewAt": "2026-09-26",
+      "lastMeaningfulUpdate": "2026-09-19",
       "statusSnapshot": null,
       "changelog": [
+        {
+          "date": "2026-09-19",
+          "summary": "Comparația DR 12 a fost actualizată pe ghidul final: sprijin de maximum 200.000 EUR, intensități 80%/65%, fără calendar de depunere anunțat.",
+          "reviewer": "Codex — verificare documentară la solicitarea utilizatorului",
+          "meaningful": true
+        },
         {
           "date": "2026-09-06",
           "summary": "Actualizate comparația financiară cu etichetarea consultativă DR 12 și statutul deschis al sesiunii DR 14.",

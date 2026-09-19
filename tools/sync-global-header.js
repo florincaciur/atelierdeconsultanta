@@ -9,6 +9,9 @@ const PARTIAL_PATH = path.join(ROOT, "partials", "global-header.html");
 const START = "<!-- GLOBAL_HEADER_START -->";
 const END = "<!-- GLOBAL_HEADER_END -->";
 const EXCLUDED_DIRECTORIES = new Set([
+  ".codex",
+  ".tmp",
+  ".wrangler",
   ".git",
   "admin",
   "archive",

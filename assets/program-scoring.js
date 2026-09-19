@@ -41,34 +41,8 @@
   }
 
   function thresholds(kind, component) {
-    if (kind === "dr12") return { first: 75, min: 45, label: "DR 12" };
     if (component === "legumicol") return { first: 60, min: 40, label: "DR 14 legumicol" };
     return { first: 85, min: 40, label: "DR 14" };
-  }
-
-  function dr12(form) {
-    var component = selected(form, "dr12-component") || "zootehnic";
-    var breakdown = [];
-
-    var education = selectPoints(form, "dr12-education");
-    breakdown.push({ label: "Calificare in domeniul proiectului", points: education, max: 15 });
-
-    var association = selectPoints(form, "dr12-association");
-    breakdown.push({ label: "Structura asociativa", points: association, max: 15 });
-
-    if (component === "zootehnic") {
-      var building = checked(form, "dr12-zoo-building") ? 20 : 0;
-      var terrainZoo = proportional(form, "dr12-terrain", 5);
-      breakdown.push({ label: "Proprietate exploatatie zootehnica", points: building + terrainZoo, max: 25 });
-    } else {
-      breakdown.push({ label: "Teren agricol in proprietate", points: proportional(form, "dr12-terrain", 25), max: 25 });
-    }
-
-    breakdown.push({ label: "Tehnologii moderne / agricultura de precizie", points: checked(form, "dr12-precision") ? 15 : 0, max: 15 });
-    breakdown.push({ label: "Managementul riscului prin asigurare", points: proportional(form, "dr12-insurance", 10), max: 10 });
-    breakdown.push({ label: "Prima accesare FEADR investitii agro-alimentare", points: checked(form, "dr12-first-feadr") ? 20 : 0, max: 20 });
-
-    return { component: component, breakdown: breakdown };
   }
 
   function dr14(form) {
@@ -153,10 +127,6 @@
     if (!form) return;
 
     function recalc() {
-      if (kind === "dr12") {
-        updateScopes(root, form, "dr12-component");
-        render(root, dr12(form), kind);
-      }
       if (kind === "dr14") {
         updateScopes(root, form, "dr14-component");
         render(root, dr14(form), kind);

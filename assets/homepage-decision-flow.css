@@ -2,6 +2,12 @@
   padding: clamp(2.75rem, 5vw, 4.5rem) clamp(1rem, 4vw, 2rem);
 }
 
+/* Anchor navigation leaves section headings visible below the fixed navbar. */
+body.page-family-home main > section {
+  scroll-margin-top: 5.75rem;
+  min-width: 0;
+}
+
 .homepage-flow-section > .homepage-flow-inner,
 #priority-programs > :not(.priority-program-carousel) {
   width: min(100%, 1180px);

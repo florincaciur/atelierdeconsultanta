@@ -35,7 +35,7 @@ const META = {
     lastReviewed: "2026-08-29"
   },
   "/contact": {
-    title: "Contact FABER: trimite proiectul pentru verificare",
+    title: "Contact FABER | Consultanță fonduri europene",
     description: "Trimite către FABER datele proiectului, bugetul și documentele disponibile pentru stabilirea programului și a verificărilor necesare.",
     ogTitle: "Trimite datele proiectului către FABER",
     ogDescription: "Spune-ne cine aplică, unde se face investiția și ce documente există pentru a delimita verificările necesare."

@@ -12,7 +12,7 @@ const REDIRECTS_PATH = path.join(ROOT, "_redirects");
 const SITEMAP_PATH = path.join(ROOT, "sitemap.xml");
 const HEADERS_PATH = path.join(ROOT, "_headers");
 const REPORT_PATH = path.join(ROOT, "reports", "canonical-map.csv");
-const EXCLUDED_DIRS = new Set([".git", ".github", ".wrangler", "admin", "archive", "dist", "node_modules", "reports", "tests"]);
+const EXCLUDED_DIRS = new Set([".codex", ".tmp", ".git", ".github", ".wrangler", "admin", "archive", "dist", "node_modules", "reports", "tests"]);
 const LEGACY_ROUTES = Object.freeze([
   "/fonduri-europene-herambursabile-2026",
   "/start-up-nation",

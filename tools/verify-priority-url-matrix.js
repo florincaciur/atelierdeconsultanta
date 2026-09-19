@@ -11,9 +11,9 @@ const DIST = path.join(ROOT, "dist");
 const ORIGIN = "https://atelierdeconsultanta.ro";
 const LIVE_HOST = "atelierdeconsultanta.ro";
 const PAGES = [
-  { route: "/", file: "index.html", title: "Consultanță și proiectare fonduri europene | FABER", aliases: ["/index.html"] },
+  { route: "/", file: "index.html", title: "Consultanță fonduri europene și proiectare | FABER", aliases: ["/index.html"] },
   { route: "/afir-autoconsum-agroalimentar", file: "afir-autoconsum-agroalimentar.html", title: "AFIR Autoconsum 2026: fotovoltaice, stocare, ghid | FABER" },
-  { route: "/dr12-afir", file: "dr12-afir/index.html", title: "DR 12 AFIR 2026: 200.000 €, ghid consultativ și condiții" },
+  { route: "/dr12-afir", file: "dr12-afir/index.html", title: "DR 12 AFIR 2026: ghid final, condiții și calculator punctaj" },
   { route: "/dr14", file: "dr14/index.html", title: "DR 14 AFIR 2026: depuneri deschise, 50.000 € și punctaj" },
   {
     route: "/investitii-modernizarea-microintreprinderilor-apel-2",

@@ -1,8 +1,9 @@
 {
-  "generatedAt": "2026-09-10T14:13:35.798Z",
+  "generatedAt": "2026-09-19T09:56:50.927Z",
   "targetRoutes": 10,
   "changedFiles": [
-    "verificare-eligibilitate-fonduri-europene/index.html"
+    "verificare-eligibilitate-fonduri-europene/index.html",
+    "dr12-afir/index.html"
   ],
   "sourceMigrated": false,
   "sourceMigratedEver": true,
@@ -1974,6 +1975,86 @@
       "after": "Verificare prudentă, documentată și interdisciplinară — consultanță și proiectare — înainte de dosar. FABER – Atelier de Consultanță sprijină firme, fermieri, start-up-uri, IMM-uri și instituții publice în proiecte cu fonduri europene. Consultanța clarifică eligibilitatea, programul, cererea și documentele; proiectarea corelează soluția tehnică, bugetul și anexele. Verificăm solicitantul, investiția și sursele oficiale înainte de dosar, apoi putem sprijini pregătirea și implementarea, fără promisiunea aprobării finanțării.",
       "reason": "Poziționare centrală FABER",
       "sourceFile": "index.html"
+    },
+    {
+      "route": "/dr12-afir",
+      "location": "visible-copy",
+      "before": "Viabilitate și cofinanțare:",
+      "after": "Viabilitate și contribuție proprie:",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "dr12-afir/index.html"
+    },
+    {
+      "route": "/dr12-afir",
+      "location": "visible-copy",
+      "before": "Adaugă separat cheltuielile neeligibile, TVA recuperabilă și necesarul de numerar. TVA nerecuperabilă poate fi eligibilă în condițiile legislației și ghidului. Cofinanțarea se dovedește prin extras de cont și/sau contract de credit; pentru extras, ghidul cere și angajamentul privind folosirea a minimum 50% din disponibil pentru plățile proiectului.",
+      "after": "Adaugă separat cheltuielile neeligibile, TVA recuperabilă și necesarul de numerar. TVA nerecuperabilă poate fi eligibilă în condițiile legislației și ghidului. Contribuția proprie se dovedește prin extras de cont și/sau contract de credit; pentru extras, ghidul cere și angajamentul privind folosirea a minimum 50% din disponibil pentru plățile proiectului.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "dr12-afir/index.html"
+    },
+    {
+      "route": "/dr12-afir",
+      "location": "visible-copy",
+      "before": "Ce finanțare și cofinanțare are DR12 AFIR?",
+      "after": "Ce finanțare și contribuție proprie are DR12 AFIR?",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "dr12-afir/index.html"
+    },
+    {
+      "route": "/dr12-afir",
+      "location": "visible-copy",
+      "before": "Care este valoarea finanțării și cofinanțarea DR 12?",
+      "after": "Care este valoarea finanțării și contribuția proprie DR 12?",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "dr12-afir/index.html"
+    },
+    {
+      "route": "/dr12-afir",
+      "location": "visible-copy",
+      "before": "Cererea de finanțare în versiunea AFIR curentă, documentația tehnico-economică aplicabilă, actele formei juridice și ale amplasamentului, evidențele APIA/ANSVSA/ANZ, calculul SO, dovezile calificării și punctajului, ofertele și cofinanțarea. Lista exactă se verifică în capitolul 4.1 și anexele ghidului.",
+      "after": "Cererea de finanțare în versiunea AFIR curentă, documentația tehnico-economică aplicabilă, actele formei juridice și ale amplasamentului, evidențele APIA/ANSVSA/ANZ, calculul SO, dovezile calificării și punctajului, ofertele și contribuția proprie. Lista exactă se verifică în capitolul 4.1 și anexele ghidului.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "dr12-afir/index.html"
+    },
+    {
+      "route": "/dr12-afir",
+      "location": "json-ld:$.@graph[5].mainEntity[1].name",
+      "before": "Ce finanțare și cofinanțare are DR12 AFIR?",
+      "after": "Ce finanțare și contribuție proprie are DR12 AFIR?",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "dr12-afir/index.html"
+    },
+    {
+      "route": "/dr12-afir",
+      "location": "json-ld:$.@graph[5].mainEntity[5].name",
+      "before": "Care este valoarea finanțării și cofinanțarea DR 12?",
+      "after": "Care este valoarea finanțării și contribuția proprie DR 12?",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "dr12-afir/index.html"
+    },
+    {
+      "route": "/dr12-afir",
+      "location": "json-ld:$.@graph[5].mainEntity[11].acceptedAnswer.text",
+      "before": "Cererea de finanțare în versiunea AFIR curentă, documentația tehnico-economică aplicabilă, actele formei juridice și ale amplasamentului, evidențele APIA/ANSVSA/ANZ, calculul SO, dovezile calificării și punctajului, ofertele și cofinanțarea. Lista exactă se verifică în capitolul 4.1 și anexele ghidului.",
+      "after": "Cererea de finanțare în versiunea AFIR curentă, documentația tehnico-economică aplicabilă, actele formei juridice și ale amplasamentului, evidențele APIA/ANSVSA/ANZ, calculul SO, dovezile calificării și punctajului, ofertele și contribuția proprie. Lista exactă se verifică în capitolul 4.1 și anexele ghidului.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "dr12-afir/index.html"
+    },
+    {
+      "route": "/dr12-afir",
+      "location": "visible-copy",
+      "before": "— Actualizare după ghidul final: eligibilitate, cheltuieli, cofinanțare și calculator conform grilei 100/80/45.",
+      "after": "— Actualizare după ghidul final: eligibilitate, cheltuieli, contribuție proprie și calculator conform grilei 100/80/45.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "dr12-afir/index.html"
+    },
+    {
+      "route": "/dr12-afir",
+      "location": "visible-copy",
+      "before": "Verifică profilul fermierului, minimum 12.000 SO, investiția și cofinanțarea conform ghidului final publicat de AFIR la 18.09.2026.",
+      "after": "Verifică profilul fermierului, minimum 12.000 SO, investiția și contribuția proprie conform ghidului final publicat de AFIR la 18.09.2026.",
+      "reason": "Lexic controlat P0.14",
+      "sourceFile": "dr12-afir/index.html"
     }
   ]
 }

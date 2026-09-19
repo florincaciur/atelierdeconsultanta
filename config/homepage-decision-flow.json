@@ -34,32 +34,105 @@
     "reason": "Nu există în repo o comparație de conversie aprobată care să susțină un formular inline; homepage-ul păstrează CTA-uri către același formular scurt, fără formulare concurente în pagină."
   },
   "methodSteps": [
-    { "number": "01", "title": "Solicitant", "text": "Confirmăm forma, localitatea și activitatea care susține investiția." },
-    { "number": "02", "title": "Program", "text": "Verificăm în sursa oficială scopul și statutul programului, apoi îl comparăm cu proiectul." },
-    { "number": "03", "title": "Punctaj", "text": "Identificăm criteriile, condițiile eliminatorii și documentele lipsă." },
-    { "number": "04", "title": "Buget", "text": "Separăm costurile eligibile, contribuția proprie și presiunea de cash-flow." },
-    { "number": "05", "title": "Decizie", "text": "Concluzia poate fi: continuăm, ajustăm sau nu depunem acum." }
+    {
+      "number": "01",
+      "title": "Solicitant",
+      "text": "Confirmăm forma, localitatea și activitatea care susține investiția."
+    },
+    {
+      "number": "02",
+      "title": "Program",
+      "text": "Verificăm în sursa oficială scopul și statutul programului, apoi îl comparăm cu proiectul."
+    },
+    {
+      "number": "03",
+      "title": "Punctaj",
+      "text": "Identificăm criteriile, condițiile eliminatorii și documentele lipsă."
+    },
+    {
+      "number": "04",
+      "title": "Buget",
+      "text": "Separăm costurile eligibile, contribuția proprie și presiunea de cash-flow."
+    },
+    {
+      "number": "05",
+      "title": "Decizie",
+      "text": "Concluzia poate fi: continuăm, ajustăm sau nu depunem acum."
+    }
   ],
   "services": [
-    { "title": "Analiză eligibilitate", "text": "Verificăm solicitantul, activitatea sau exploatația, amplasamentul, investiția și documentele.", "href": "/verificare-eligibilitate-fonduri-europene", "label": "Vezi analiza" },
-    { "title": "Consultanță", "text": "Clarificăm programul și eligibilitatea, apoi pregătim cererea și documentele pe baza sursei aplicabile.", "href": "/consultanta-fonduri-europene", "label": "Vezi consultanța" },
-    { "title": "Proiectare", "text": "Corelăm soluția tehnică, bugetul și anexele cu cerințele apelului.", "href": "/proiectare-fonduri-europene", "label": "Vezi proiectarea" },
-    { "title": "Implementare", "text": "Urmărirea obligațiilor, achizițiilor, documentelor și clarificărilor proiectului.", "href": "/management-proiecte-fonduri-europene", "label": "Vezi implementarea" }
+    {
+      "title": "Analiză eligibilitate",
+      "text": "Verificăm solicitantul, activitatea sau exploatația, amplasamentul, investiția și documentele.",
+      "href": "/verificare-eligibilitate-fonduri-europene",
+      "label": "Vezi analiza"
+    },
+    {
+      "title": "Consultanță",
+      "text": "Clarificăm programul și eligibilitatea, apoi pregătim cererea și documentele pe baza sursei aplicabile.",
+      "href": "/consultanta-fonduri-europene",
+      "label": "Vezi consultanța"
+    },
+    {
+      "title": "Proiectare",
+      "text": "Corelăm soluția tehnică, bugetul și anexele cu cerințele apelului.",
+      "href": "/proiectare-fonduri-europene",
+      "label": "Vezi proiectarea"
+    },
+    {
+      "title": "Implementare",
+      "text": "Urmărirea obligațiilor, achizițiilor, documentelor și clarificărilor proiectului.",
+      "href": "/management-proiecte-fonduri-europene",
+      "label": "Vezi implementarea"
+    }
   ],
   "tools": [
-    { "kind": "Instrument", "title": "Calculator SO", "text": "Calculează orientativ dimensiunea economică și păstrează ipotezele folosite.", "href": "/calculator-soc", "label": "Calculează SO" },
-    { "kind": "Ghid", "title": "Checklist de eligibilitate", "text": "Ordinea verificărilor înainte de alegerea programului și pregătirea ofertelor.", "href": "/eligibilitate-fonduri-europene", "label": "Deschide checklist-ul" },
-    { "kind": "Ghid", "title": "Documentele proiectului", "text": "Repere pentru actele solicitantului, amplasamentului și investiției.", "href": "/acte-necesare-fonduri-europene-nerambursabile", "label": "Vezi documentele" }
+    {
+      "kind": "Instrument",
+      "title": "Calculator SO",
+      "text": "Calculează orientativ dimensiunea economică și păstrează ipotezele folosite.",
+      "href": "/calculator-soc",
+      "label": "Calculează SO"
+    },
+    {
+      "kind": "Ghid",
+      "title": "Checklist de eligibilitate",
+      "text": "Ordinea verificărilor înainte de alegerea programului și pregătirea ofertelor.",
+      "href": "/eligibilitate-fonduri-europene",
+      "label": "Deschide checklist-ul"
+    },
+    {
+      "kind": "Ghid",
+      "title": "Documentele proiectului",
+      "text": "Repere pentru actele solicitantului, amplasamentului și investiției.",
+      "href": "/acte-necesare-fonduri-europene-nerambursabile",
+      "label": "Vezi documentele"
+    }
   ],
   "proofs": [
-    { "title": "FABER – Atelier de Consultanță", "text": "Consultanță și proiectare pentru proiecte cu fonduri europene, de la verificare la implementare.", "href": "/despre-faber", "label": "Despre FABER" },
-    { "title": "Statut verificat în sursa oficială", "text": "Fiecare program afișează statutul, data verificării și legătura către documentul autorității responsabile.", "href": "/surse-oficiale-fonduri-europene", "label": "Vezi sursele oficiale" },
-    { "title": "Analiză cu limite explicite", "text": "Metodologia verifică solicitantul, programul, punctajul, bugetul și documentele; nu promite aprobarea.", "href": "/metodologie-verificare-eligibilitate", "label": "Vezi metodologia" }
+    {
+      "title": "FABER – Atelier de Consultanță",
+      "text": "Consultanță și proiectare pentru proiecte cu fonduri europene, de la verificare la implementare.",
+      "href": "/despre-faber",
+      "label": "Despre FABER"
+    },
+    {
+      "title": "Statut verificat în sursa oficială",
+      "text": "Fiecare program afișează statutul, data verificării și legătura către documentul autorității responsabile.",
+      "href": "/surse-oficiale-fonduri-europene",
+      "label": "Vezi sursele oficiale"
+    },
+    {
+      "title": "Analiză cu limite explicite",
+      "text": "Metodologia verifică solicitantul, programul, punctajul, bugetul și documentele; nu promite aprobarea.",
+      "href": "/metodologie-verificare-eligibilitate",
+      "label": "Vezi metodologia"
+    }
   ],
   "recentAnalysis": {
     "eyebrow": "Analiză comparativă",
     "title": "DR 12 vs DR 14: cum diferă încadrarea și investiția",
-    "text": "Comparația separă obiectivul, documentele și riscurile celor două intervenții fără a trata ghidurile consultative ca apeluri deschise.",
+    "text": "DR 12 are ghid final publicat, iar DR 14 are sesiune deschisă. Compară profilul fermierului, SO, investițiile și contribuția proprie.",
     "href": "/dr12-vs-dr14",
     "label": "Citește analiza DR 12 vs DR 14"
   },
@@ -69,9 +142,18 @@
     "primaryHref": "/contact#source_page=%2F",
     "primaryLabel": "Începe verificarea proiectului",
     "phones": [
-      { "href": "tel:+40769828338", "label": "0769 828 338" },
-      { "href": "tel:+40753326229", "label": "0753 326 229" }
+      {
+        "href": "tel:+40769828338",
+        "label": "0769 828 338"
+      },
+      {
+        "href": "tel:+40753326229",
+        "label": "0753 326 229"
+      }
     ],
-    "email": { "href": "mailto:atelier.consultanta@gmail.com", "label": "atelier.consultanta@gmail.com" }
+    "email": {
+      "href": "mailto:atelier.consultanta@gmail.com",
+      "label": "atelier.consultanta@gmail.com"
+    }
   }
 }

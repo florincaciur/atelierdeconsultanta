@@ -17,7 +17,7 @@ Generatorul include numai rute locale 200, indexabile si self-canonical. `lastmo
 
 - duplicate_policy_pending_legal_consolidation: 1
 - meta_refresh: 2
-- missing_canonical: 8
+- missing_canonical: 11
 - noindex_meta: 63
 - redirect_source: 104
 
@@ -31,6 +31,9 @@ Generatorul include numai rute locale 200, indexabile si self-canonical. `lastmo
 | /.codex/pc1-sources/news | .codex/pc1-sources/news.html | missing_canonical | - |
 | /.codex/pc1-sources/solar | .codex/pc1-sources/solar.html | missing_canonical | - |
 | /.codex/pc1-sources/storage | .codex/pc1-sources/storage.html | missing_canonical | - |
+| /.tmp/dr12-review/official | .tmp/dr12-review/official.html | missing_canonical | - |
+| /.tmp/dr12-review/release | .tmp/dr12-review/release.html | missing_canonical | - |
+| /.tmp/dr12-review/sessions | .tmp/dr12-review/sessions.html | missing_canonical | - |
 | /google8bbb9999c523a3bd | google8bbb9999c523a3bd.html | missing_canonical | - |
 | /partials/global-header | partials/global-header.html | missing_canonical | - |
 | /partials/preferred-source | partials/preferred-source.html | missing_canonical | - |

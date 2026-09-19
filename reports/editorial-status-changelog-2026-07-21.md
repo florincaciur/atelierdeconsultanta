@@ -5,12 +5,12 @@ Data: **2026-08-18**. Acest changelog documentează corecțiile și blocajul edi
 ## dr12-afir
 
 - **Înainte (observat live):** Homepage: card «Activ» cu 200.000 EUR și 80%/65%; meniu: «variantă consultativă»; paginile DR12 foloseau formulări nealiniate.
-- **Corecție candidat:** `consultare_publica` — Ghid consultativ publicat – consultarea s-a încheiat; depunerea nu este deschisă. Condițiile se pot modifica.
+- **Corecție candidat:** `ghid_aprobat_nedeschis` — Ghid final publicat – perioada de depunere nu este încă anunțată
 - **Acțiune aplicată:** exclus din meniu, homepage, carusele, carduri factuale și JSON-LD; URL-urile prioritare au `noindex, follow` și mesaj neutru de suspendare.
 - **Valori:** eliminate cât timp `numericClaimsApproved=false`.
 - **Publicare finală:** blocată; validator Codex — verificare documentară la solicitarea utilizatorului, aprobare `approved`.
-- **Copy pregătit pentru aprobare:** Ghid consultativ publicat – consultarea s-a încheiat; depunerea nu este deschisă. Condițiile se pot modifica. — verificat la 2026-09-06. Depunerea nu este deschisă. Sursa: Agenția pentru Finanțarea Investițiilor Rurale (AFIR), Versiune consultativă publicată la 19.03.2026; termenul pentru observații s-a încheiat la 30.03.2026.
-- **Sursă primară:** https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/
+- **Copy pregătit pentru aprobare:** Ghid final publicat – perioada de depunere nu este încă anunțată — verificat la 2026-09-19. Sursa: AFIR, Ghid final DR-12, Ediția I, Revizia 0, aprobat prin OMADR 268/17.09.2026; publicat de AFIR la 18.09.2026. Depunerea nu este deschisă.
+- **Sursă primară:** https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-12/
 - **URL-uri afectate:** `/`, `/admin`, `/afir`, `/calculator-soc`, `/consultanta-afir`, `/dr-12-afir-instalarea-tinerilor-fermieri`, `/dr12-afir`, `/dr12-afir-tineri-fermieri`, `/dr14`, `/dr14-afir-ferme-mici`, `/fonduri-europene`, `/fonduri-europene-agricultura`, `/fonduri-europene-caen/0111-culturi-cereale`, `/fonduri-europene-nerambursabile-2026`, `/fonduri-europene-nord-est`, `/fonduri-pentru-ferme`, `/fonduri-pentru-utilaje-agricole`, `/gal-afir`, `/ghiduri`, `/intrebari/ce-documente-sunt-necesare-pentru-dr12`, `/resurse`, `/resurse-utile`, `/studii-de-caz-fonduri-europene`, `/verificare-eligibilitate-fonduri-europene`, `/webinarii`.
 
 ## dr14-afir

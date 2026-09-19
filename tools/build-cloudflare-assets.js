@@ -11,6 +11,7 @@ const OUT_DIR = path.join(ROOT, "dist");
 
 const EXCLUDED_DIRS = new Set([
   ".codex",
+  ".tmp",
   ".git",
   ".github",
   ".wrangler",

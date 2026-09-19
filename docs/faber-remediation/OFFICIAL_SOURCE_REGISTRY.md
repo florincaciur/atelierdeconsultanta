@@ -17,7 +17,7 @@ Snapshot factual de bază al programelor: **2026-08-23**. Fiecare înregistrare 
 |---|---|---|---|---|
 | `program-regional-nord-est` | Autoritatea de Management pentru Programul Regional Nord-Est | `UNCONFIRMED` | 2026-08-18 | 2026-08-29 |
 | `fonduri-regionale` | Ministerul Investițiilor și Proiectelor Europene – MySMIS2021 | `UNCONFIRMED` | 2026-08-18 | 2026-08-29 |
-| `dr12-afir` | Agenția pentru Finanțarea Investițiilor Rurale (AFIR) | `CONSULTATIVE_GUIDE` | 2026-09-06 | 2026-09-06 |
+| `dr12-afir` | Agenția pentru Finanțarea Investițiilor Rurale (AFIR) | `FINAL_GUIDE` | 2026-09-19 | 2026-09-19 |
 | `dr14-afir` | Agenția pentru Finanțarea Investițiilor Rurale (AFIR) | `OPEN` | 2026-09-06 | 2026-09-06 |
 | `dr18-afir` | Agenția pentru Finanțarea Investițiilor Rurale (AFIR) | `OPEN` | 2026-09-06 | 2026-09-06 |
 | `start-up-nation` | Ministerul Economiei – platforma oficială MINIMIS | `CLOSED` | 2026-05-29 | 2026-08-29 |
@@ -147,44 +147,44 @@ Snapshot factual de bază al programelor: **2026-08-23**. Fiecare înregistrare 
 | Acronim | DR-12 |
 | Autoritate | Agenția pentru Finanțarea Investițiilor Rurale (AFIR) |
 | Fond / program | Planul Strategic PAC 2023–2027 / FEADR |
-| Temei / document | Versiune consultativă publicată la 19.03.2026; termenul pentru observații s-a încheiat la 30.03.2026 — [document oficial](https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/) |
-| Stadiu | CONSULTATIVE_GUIDE — Ghid consultativ publicat – consultarea s-a încheiat; depunerea nu este deschisă. Condițiile se pot modifica. |
-| Sesiune | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
-| Data deschiderii | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
-| Deadline | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
-| Prelungiri | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
-| Buget | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
-| Grant minim | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
-| Grant maxim | 200.000 EUR / proiect — valoare din ghidul consultativ |
-| Intensitate | rate: 80; scope: maximum pentru tinerii fermieri sub 41 de ani — ghid consultativ; rate: 65; scope: maximum pentru celelalte categorii eligibile — ghid consultativ |
-| Cofinanțare | Conform ghidului consultativ: minimum 20% sau 35% din eligibil, după categoria solicitantului, plus costurile neeligibile. Condițiile se pot modifica. |
-| Beneficiari | Tineri fermieri instalați, beneficiari ai submăsurii 6.1 și fermieri de până la 45 de ani, în categoriile și formele juridice din ghidul consultativ. |
+| Temei / document | Ghid final DR-12, Ediția I, Revizia 0, aprobat prin OMADR 268/17.09.2026; publicat de AFIR la 18.09.2026 — [document oficial](https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-12/) |
+| Stadiu | FINAL_GUIDE — Ghid final publicat – perioada de depunere nu este încă anunțată |
+| Sesiune | Documentația oficială publicată și verificată la 19.09.2026 nu stabilește încă această informație. |
+| Data deschiderii | Documentația oficială publicată și verificată la 19.09.2026 nu stabilește încă această informație. |
+| Deadline | Documentația oficială publicată și verificată la 19.09.2026 nu stabilește încă această informație. |
+| Prelungiri | Documentația oficială publicată și verificată la 19.09.2026 nu stabilește încă această informație. |
+| Buget | Documentația oficială publicată și verificată la 19.09.2026 nu stabilește încă această informație. |
+| Grant minim | Documentația oficială publicată și verificată la 19.09.2026 nu stabilește încă această informație. |
+| Grant maxim | 200.000 EUR / proiect |
+| Intensitate | rate: 80; scope: maximum pentru tinerii fermieri sub 41 de ani, șefi de exploatație cu competențe adecvate; rate: 65; scope: maximum pentru celelalte categorii eligibile |
+| Cofinanțare | Minimum 20% sau 35% din costurile eligibile, după categoria beneficiarului, plus costurile neeligibile și TVA recuperabilă. Plafonul de 200.000 EUR poate majora contribuția efectivă. |
+| Beneficiari | Tineri fermieri instalați, cu maximum 40 de ani inclusiv (înainte de 41).; Fermieri care au finalizat planul de afaceri sM 6.1, indiferent de vârstă.; Fermieri instalați cu maximum 45 de ani inclusiv (înainte de 46). PFA, II, IF sau SRL în condițiile ghidului; persoanele fizice neautorizate nu sunt eligibile. |
 | Regiune | Național |
-| CAEN | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
-| Prag SO | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
-| Investiții | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
-| Cheltuieli eligibile | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
-| Cheltuieli neeligibile | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
-| Condiții critice | Ghid consultativ: minimum 12.000 SO, calculat cu coeficienții SOC 2020; pragul se reconfirmă în ghidul final.; Solicitantul este șeful exploatației și îndeplinește condițiile categoriei eligibile; persoana fizică neautorizată nu este eligibilă.; Finanțarea propusă este de maximum 200.000 EUR/proiect, cu intensitate de până la 80% sau 65%, în funcție de beneficiar.; Ghidul final și perioada de depunere nu sunt confirmate în sursele verificate. |
-| Documente | [Comunicarea AFIR privind consultarea DR-12](https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/)<br>[Ghidul solicitantului DR-12 — versiunea consultativă (PDF AFIR)](https://www.afir.ro/api/file?filename=Ghidul+Solicitantului+DR+12+-+versiunea+consultativ%C4%83&filetype=pdf&url=%2Fmedia%2Flm3fg4k1%2Fghidul-solicitantului-dr-12.pdf) |
-| Indicatori | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
-| Selecție / punctaj | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
-| Ajutor de stat / de minimis | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
-| Implementare | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
-| Monitorizare | Documentația oficială publicată și verificată la 06.09.2026 nu stabilește încă această informație. |
-| Surse oficiale | [Comunicarea AFIR privind consultarea DR-12](https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/)<br>[Ghidul solicitantului DR-12 — versiunea consultativă (PDF AFIR)](https://www.afir.ro/api/file?filename=Ghidul+Solicitantului+DR+12+-+versiunea+consultativ%C4%83&filetype=pdf&url=%2Fmedia%2Flm3fg4k1%2Fghidul-solicitantului-dr-12.pdf) |
-| Latest official update | 2026-09-06 — [Versiune consultativă publicată la 19.03.2026; termenul pentru observații s-a încheiat la 30.03.2026](https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/) |
-| verifiedAt | 2026-09-06 |
-| Pagină oficială program/apel | [Comunicarea AFIR privind consultarea DR-12](https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/) (`program`, verificat 2026-09-06) |
-| Ghid | [Ghidul solicitantului DR-12 — versiunea consultativă (PDF AFIR)](https://www.afir.ro/api/file?filename=Ghidul+Solicitantului+DR+12+-+versiunea+consultativ%C4%83&filetype=pdf&url=%2Fmedia%2Flm3fg4k1%2Fghidul-solicitantului-dr-12.pdf) (`approval:evidence:0`, verificat 2026-09-06) |
-| Anexe | — Neidentificat separat în sursele oficiale înregistrate la 2026-09-06; nu se presupune inexistența documentului. |
-| Schemă / ordin | — Neidentificat separat în sursele oficiale înregistrate la 2026-09-06; nu se presupune inexistența documentului. |
-| Anunț sesiune | — Neidentificat separat în sursele oficiale înregistrate la 2026-09-06; nu se presupune inexistența documentului. |
-| Corrigenda / erate | — Neidentificat separat în sursele oficiale înregistrate la 2026-09-06; nu se presupune inexistența documentului. |
-| Clarificări | — Neidentificat separat în sursele oficiale înregistrate la 2026-09-06; nu se presupune inexistența documentului. |
-| Sursă primară în registry-ul operațional | [Versiune consultativă publicată la 19.03.2026; termenul pentru observații s-a încheiat la 30.03.2026](https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/) (verificat 2026-09-06) |
+| CAEN | Documentația oficială publicată și verificată la 19.09.2026 nu stabilește încă această informație. |
+| Prag SO | Documentația oficială publicată și verificată la 19.09.2026 nu stabilește încă această informație. |
+| Investiții | Documentația oficială publicată și verificată la 19.09.2026 nu stabilește încă această informație. |
+| Cheltuieli eligibile | Documentația oficială publicată și verificată la 19.09.2026 nu stabilește încă această informație. |
+| Cheltuieli neeligibile | Documentația oficială publicată și verificată la 19.09.2026 nu stabilește încă această informație. |
+| Condiții critice | Minimum 12.000 EUR SO la depunere, calculat cu coeficienții SOC 2020 și dovedit prin registrele fermei.; Șef al exploatației, control efectiv și competențe profesionale adecvate proiectului.; Înregistrare IACS-APIA și în registrele relevante pe forma solicitantului, cofinanțare și viabilitate economică demonstrate.; Ghid final publicat; perioada de depunere nu este încă anunțată la verificarea din 19.09.2026. |
+| Documente | [Pagina AFIR DR-12 și anexele finale](https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-12/)<br>[Ghidul final DR-12 (PDF AFIR), 18.09.2026](https://www.afir.ro/media/aqtlitop/ghidul-solicitantului-dr-12.pdf)<br>[OMADR 268/17.09.2026 – aprobarea ghidului](https://www.afir.ro/instrumente/normative/legislatie-nationala/) |
+| Indicatori | Documentația oficială publicată și verificată la 19.09.2026 nu stabilește încă această informație. |
+| Selecție / punctaj | Documentația oficială publicată și verificată la 19.09.2026 nu stabilește încă această informație. |
+| Ajutor de stat / de minimis | Documentația oficială publicată și verificată la 19.09.2026 nu stabilește încă această informație. |
+| Implementare | Documentația oficială publicată și verificată la 19.09.2026 nu stabilește încă această informație. |
+| Monitorizare | Documentația oficială publicată și verificată la 19.09.2026 nu stabilește încă această informație. |
+| Surse oficiale | [Pagina AFIR DR-12 și anexele finale](https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-12/)<br>[Ghidul final DR-12 (PDF AFIR), 18.09.2026](https://www.afir.ro/media/aqtlitop/ghidul-solicitantului-dr-12.pdf)<br>[OMADR 268/17.09.2026 – aprobarea ghidului](https://www.afir.ro/instrumente/normative/legislatie-nationala/) |
+| Latest official update | 2026-09-19 — [Ghid final DR-12, Ediția I, Revizia 0, aprobat prin OMADR 268/17.09.2026; publicat de AFIR la 18.09.2026](https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-12/) |
+| verifiedAt | 2026-09-19 |
+| Pagină oficială program/apel | [Pagina AFIR DR-12 și anexele finale](https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-12/) (`program`, verificat 2026-09-19) |
+| Ghid | [Ghidul final DR-12 (PDF AFIR), 18.09.2026](https://www.afir.ro/media/aqtlitop/ghidul-solicitantului-dr-12.pdf) (`approval:evidence:0`, verificat 2026-09-19) |
+| Anexe | [Cererea de finanțare și anexele DR-12](https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-12/) (`program`, verificat 2026-09-19) |
+| Schemă / ordin | [OMADR 268/17.09.2026 – aprobarea ghidului](https://www.afir.ro/instrumente/normative/legislatie-nationala/) (`approval:evidence:3`, verificat 2026-09-19) |
+| Anunț sesiune | — Neidentificat separat în sursele oficiale înregistrate la 2026-09-19; nu se presupune inexistența documentului. |
+| Corrigenda / erate | — Neidentificat separat în sursele oficiale înregistrate la 2026-09-19; nu se presupune inexistența documentului. |
+| Clarificări | — Neidentificat separat în sursele oficiale înregistrate la 2026-09-19; nu se presupune inexistența documentului. |
+| Sursă primară în registry-ul operațional | [Ghid final DR-12, Ediția I, Revizia 0, aprobat prin OMADR 268/17.09.2026; publicat de AFIR la 18.09.2026](https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-12/) (verificat 2026-09-19) |
 | Chei surse repo | `dr12` |
-| Notes | Documentul înregistrat este consultativ; termenul pentru observații este încheiat și nu există dovadă de sesiune deschisă. |
+| Notes | Ghid final verificat față de arhiva furnizată; nicio sesiune DR-12 anunțată în pagina AFIR de primire proiecte la 19.09.2026. |
 
 ## `dr14-afir` — DR-14 Investiții în fermele de mici dimensiuni
 
@@ -963,7 +963,7 @@ Snapshot factual de bază al programelor: **2026-08-23**. Fiecare înregistrare 
 | Acronim | PNRR |
 | Autoritate | Ministerul Investițiilor și Proiectelor Europene – tabloul de bord PNRR |
 | Fond / program | Mecanismul de redresare și reziliență |
-| Temei / document | Tabloul de bord oficial PNRR; program în implementare, cu situație distinctă pe componente și apeluri — [document oficial](https://pnrr.fonduri-ue.ro/ords/pnrr/r/dashboard-status-pnrr/home) |
+| Temei / document | Tabloul de bord oficial PNRR; program în implementare, cu situație distinctă pe componente și apeluri — [document oficial](https://mfe.gov.ro/pnrr-dashboard/) |
 | Stadiu | UNCONFIRMED — Program în implementare – statutul se verifică pentru fiecare componentă și apel |
 | Sesiune | Documentația oficială publicată și verificată la 10.09.2026 nu stabilește încă această informație. |
 | Data deschiderii | Documentația oficială publicată și verificată la 10.09.2026 nu stabilește încă această informație. |
@@ -982,23 +982,23 @@ Snapshot factual de bază al programelor: **2026-08-23**. Fiecare înregistrare 
 | Cheltuieli eligibile | Documentația oficială publicată și verificată la 10.09.2026 nu stabilește încă această informație. |
 | Cheltuieli neeligibile | Documentația oficială publicată și verificată la 10.09.2026 nu stabilește încă această informație. |
 | Condiții critice | Documentația oficială publicată și verificată la 10.09.2026 nu stabilește încă această informație. |
-| Documente | [Tabloul de bord oficial PNRR](https://pnrr.fonduri-ue.ro/ords/pnrr/r/dashboard-status-pnrr/home) |
+| Documente | [Tabloul de bord oficial PNRR](https://mfe.gov.ro/pnrr-dashboard/) |
 | Indicatori | Documentația oficială publicată și verificată la 10.09.2026 nu stabilește încă această informație. |
 | Selecție / punctaj | Documentația oficială publicată și verificată la 10.09.2026 nu stabilește încă această informație. |
 | Ajutor de stat / de minimis | Documentația oficială publicată și verificată la 10.09.2026 nu stabilește încă această informație. |
 | Implementare | Documentația oficială publicată și verificată la 10.09.2026 nu stabilește încă această informație. |
 | Monitorizare | Documentația oficială publicată și verificată la 10.09.2026 nu stabilește încă această informație. |
-| Surse oficiale | [Tabloul de bord oficial PNRR](https://pnrr.fonduri-ue.ro/ords/pnrr/r/dashboard-status-pnrr/home) |
-| Latest official update | 2026-09-10 — [Tabloul de bord oficial PNRR; program în implementare, cu situație distinctă pe componente și apeluri](https://pnrr.fonduri-ue.ro/ords/pnrr/r/dashboard-status-pnrr/home) |
+| Surse oficiale | [Tabloul de bord oficial PNRR](https://mfe.gov.ro/pnrr-dashboard/) |
+| Latest official update | 2026-09-10 — [Tabloul de bord oficial PNRR; program în implementare, cu situație distinctă pe componente și apeluri](https://mfe.gov.ro/pnrr-dashboard/) |
 | verifiedAt | 2026-09-10 |
-| Pagină oficială program/apel | [Tabloul de bord oficial PNRR](https://pnrr.fonduri-ue.ro/ords/pnrr/r/dashboard-status-pnrr/home) (`program`, verificat 2026-09-10) |
+| Pagină oficială program/apel | [Tabloul de bord oficial PNRR](https://mfe.gov.ro/pnrr-dashboard/) (`program`, verificat 2026-09-10) |
 | Ghid | — Neidentificat separat în sursele oficiale înregistrate la 2026-09-10; nu se presupune inexistența documentului. |
 | Anexe | — Neidentificat separat în sursele oficiale înregistrate la 2026-09-10; nu se presupune inexistența documentului. |
 | Schemă / ordin | — Neidentificat separat în sursele oficiale înregistrate la 2026-09-10; nu se presupune inexistența documentului. |
 | Anunț sesiune | — Neidentificat separat în sursele oficiale înregistrate la 2026-09-10; nu se presupune inexistența documentului. |
 | Corrigenda / erate | — Neidentificat separat în sursele oficiale înregistrate la 2026-09-10; nu se presupune inexistența documentului. |
 | Clarificări | — Neidentificat separat în sursele oficiale înregistrate la 2026-09-10; nu se presupune inexistența documentului. |
-| Sursă primară în registry-ul operațional | [Tabloul de bord oficial PNRR; program în implementare, cu situație distinctă pe componente și apeluri](https://pnrr.fonduri-ue.ro/ords/pnrr/r/dashboard-status-pnrr/home) (verificat 2026-09-10) |
+| Sursă primară în registry-ul operațional | [Tabloul de bord oficial PNRR; program în implementare, cu situație distinctă pe componente și apeluri](https://mfe.gov.ro/pnrr-dashboard/) (verificat 2026-09-10) |
 | Chei surse repo | `pnrr-dashboard` |
 | Notes | Pagină agregată. Implementarea PNRR nu implică o sesiune de depunere deschisă pentru toate componentele. |
 

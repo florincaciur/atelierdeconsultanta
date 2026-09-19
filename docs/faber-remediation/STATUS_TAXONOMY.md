@@ -286,7 +286,7 @@ Maparea de mai jos folosește snapshot-ul factual de bază verificat în registr
 |---|---|---|---|---|---|
 | `program-regional-nord-est` | `calendar_estimativ` | `UNCONFIRMED` | Status neconfirmat — verifică sursa oficială | umbrella_program | Apelurile au stări și calendare distincte; pagina agregată nu poate moșteni o singură stare de apel. |
 | `fonduri-regionale` | `calendar_estimativ` | `UNCONFIRMED` | Status neconfirmat — verifică sursa oficială | umbrella_program | Catalogul agregă programe și apeluri cu stări diferite. |
-| `dr12-afir` | `consultare_publica` | `CONSULTATIVE_GUIDE` | Ghid consultativ publicat — depunerea nu este deschisă | program_call | Ghidul este consultativ, iar intervalul de consultare este încheiat; depunerea nu este deschisă. |
+| `dr12-afir` | `ghid_aprobat_nedeschis` | `FINAL_GUIDE` | Ghid final publicat — depunerea nu este deschisă | program_call | Ghidul final este publicat; sursele AFIR verificate nu anunță încă perioada de depunere. |
 | `dr14-afir` | `apel_deschis` | `OPEN` | Apel deschis — depuneri până la 31.10.2026 | session | Contorul AFIR confirmă sesiunea activă și proiecte depuse. Disponibilitatea se verifică separat pe fiecare componentă. |
 | `dr18-afir` | `apel_deschis` | `OPEN` | Apel deschis — depuneri până la 31.10.2026 | session | Sesiune activă verificată în contorul oficial AFIR la 06.09.2026. |
 | `start-up-nation` | `apel_inchis` | `CLOSED` | Apel închis — depunerea nu este deschisă | edition | Înscrierile persoanelor juridice s-au încheiat; registry-ul nu consemnează finalizarea întregii proceduri. |

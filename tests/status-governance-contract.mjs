@@ -57,7 +57,7 @@ assert.equal(programsById.get("dr18-afir").canonicalStatus, "OPEN");
 assert.equal(programsById.get("pocidif-21").canonicalStatus, "OPEN");
 assert.equal(programsById.get("pro-infra").canonicalStatus, "APPROVED_SCHEME");
 assert.equal(programsById.get("fondul-modernizare-pc1-stocare").canonicalStatus, "FINAL_GUIDE");
-assert.equal(programsById.get("dr12-afir").canonicalStatus, "CONSULTATIVE_GUIDE");
+assert.equal(programsById.get("dr12-afir").canonicalStatus, "FINAL_GUIDE");
 assert.equal(syncedGuides["ptj-comisia-europeana"].url, "https://commission.europa.eu/funding-and-tenders/find-funding/eu-funding-programmes/just-transition-fund_en", "Sincronizarea trebuie să păstreze sursa europeană suplimentară PTJ.");
 assert.equal(syncedGuides["ptj-comisia-europeana"].institution, "Comisia Europeană", "Sursa europeană PTJ nu poate fi reatribuită către MySMIS.");
 assert.equal(syncedGuides["ptj-romania-pnr-2023"].url, "https://commission.europa.eu/system/files/2023-05/ROMANIA%20NRP%202023%20RO.pdf", "Sincronizarea trebuie să păstreze documentul oficial pentru teritoriile PTJ.");

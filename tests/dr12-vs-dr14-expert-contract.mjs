@@ -54,7 +54,7 @@ assert($("[data-expert-direct-answer]").nextAll("[data-aeo-question-set]").first
 const statusText = $(".expert-status-panel").text().replace(/\s+/gu, " ").trim();
 assert(statusText.includes(config.statusStatement));
 assert.match(statusText, /depunerea nu este deschisă/iu);
-assert(!/\bActiv\b/u.test($("main, .post-container, .post-hero").text()), "un ghid consultativ nu poate fi numit Activ");
+assert(!/\bActiv\b/u.test($("main, .post-container, .post-hero").text()), "un apel nedeschis nu poate fi numit Activ");
 
 const rows = $("[data-expert-comparison-table] tbody tr");
 assert.equal(rows.length, 10, "tabelul trebuie să aibă cele zece criterii contractuale");
@@ -70,10 +70,10 @@ rows.each((_, row) => {
 
 const pageText = $(".post-container").text().replace(/\s+/gu, " ");
 for (const value of ["200.000", "80%", "65%"]) {
-  assert(pageText.includes(value), `Lipsește valoarea consultativă documentată: ${value}`);
+  assert(pageText.includes(value), `Lipsește valoarea finală documentată: ${value}`);
 }
 assert(!html.includes("DE_VALIDAT_UMAN"), "tokenul intern nu poate ajunge în pagina publică");
-assert.match($("[data-comparison-row='Sprijin']").text(), /Ghid consultativ/iu);
+assert.match($("[data-comparison-row='Sprijin']").text(), /Ghid final/iu);
 assert.match($("[data-comparison-row='Calendar']").text(), /Apel nedeschis/iu);
 
 const scenarios = $("[data-hypothetical='true']");
@@ -100,10 +100,10 @@ for (const programConfig of config.programs) {
   assert.equal(program.status, programConfig.status);
   assert.equal(program.verifiedAt, programConfig.verifiedAt);
   assert.equal(program.sourceUrl, programConfig.sourceUrl);
-  if (programConfig.status === "consultare_publica") {
-    assert.equal(program.fundingBasis, "consultative");
-    assert.match(program.grantSummary.maximum.unit, /consultativ/);
-    assert(program.cofinancingSummary.intensity.every(item => /consultativ/.test(item.scope)));
+  if (programConfig.slug === "dr12-afir") {
+    assert.equal(program.fundingBasis, "final");
+    assert.equal(program.grantSummary.maximum.amount, 200000);
+    assert.deepEqual(program.cofinancingSummary.intensity.map(item => item.rate).sort(), [65, 80]);
   } else {
     assert.equal(program.grantSummary.maximum.amount, 50000);
     assert(program.cofinancingSummary.intensity.some((item) => item.rate === 85));
@@ -152,4 +152,4 @@ assert.equal($("link[href^='/assets/dr12-vs-dr14-expert.css']").length, 1);
 assert.equal($("[data-aeo-question-set]").length, 1);
 assert(!/Pe scurt/iu.test($(".post-container h2, .post-container h3").text()), "eticheta generică de șablon nu trebuie publicată");
 
-console.log(`P1.19 contract PASS: ${rows.length} criterii, ${scenarios.length} scenarii, ${countWords(directAnswer)} cuvinte în răspunsul direct, DR 14 final și valori DR 12 neconfirmate nepublicate.`);
+console.log(`P1.19 contract PASS: ${rows.length} criterii, ${scenarios.length} scenarii, ${countWords(directAnswer)} cuvinte în răspunsul direct, ghiduri finale DR 12/DR 14 și statut distinct al sesiunilor.`);

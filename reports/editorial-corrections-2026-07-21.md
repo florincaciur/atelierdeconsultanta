@@ -3,7 +3,7 @@
 - URL-uri canonice procesate: 105
 - Fișiere HTML documentate: 95
 - Surse editoriale/CMS documentate: 6
-- Fragmente documentate: 4278
+- Fragmente documentate: 4280
 - URL-uri cu intervenții: 120
 - Valorile, procentele, datele, statusurile și câmpurile de proveniență sunt protejate de normalizator.
 - În paginile juridice s-au eliminat doar etichete interne și s-au corectat forme lingvistice; sensul juridic nu a fost rescris.
@@ -1438,6 +1438,7 @@
 | /dr12-afir | config/seo-programs.json:pages.0.eligibleInvestmentRows.1.1 | Spatii, amenajari sau dotări pentru activitatea agricolă. | Spatii, amenajări sau dotări pentru activitatea agricolă. | Diacritice și normă editorială română |
 | /dr12-afir | config/seo-programs.json:pages.0.eligibleInvestmentRows.2.2 | Legatura directa cu productia agricolă. | Legatura directă cu productia agricolă. | Diacritice și normă editorială română |
 | /dr12-afir | config/seo-programs.json:pages.0.examples.2 | Ferma mixta care vrea investiții etapizate, cu buget realist și cofinanțare confirmata înainte de depunere. | Fermă mixta care vrea investiții etapizate, cu buget realist și cofinanțare confirmata înainte de depunere. | Diacritice și normă editorială română |
+| /dr12-afir | config/seo-programs.json:pages.0.faq.8.1 | Grila finală are maximum 100 de puncte. Prima etapă lunară cere minimum 80 de puncte, iar a doua minimum 45. Calculatorul de la finalul paginii arată separat cele șase principii și regulile de necumulare. Rezultatul nu … | Grila finală are maximum 100 de puncte. Prima etapă lunară cere minimum 80 de puncte, iar a două minimum 45. Calculatorul de la finalul paginii arată separat cele șase principii și regulile de necumulare. Rezultatul nu … | Diacritice și normă editorială română |
 | /dr12-afir | config/seo-programs.json:pages.0.ineligibleExpenses.0 | Investiții fără legătura directa cu exploatația agricolă declarata. | Investiții fără legătura directă cu exploatația agricolă declarata. | Diacritice și normă editorială română |
 | /dr12-afir | config/seo-programs.json:pages.0.ineligibleExpenses.1 | Achizitii incepute înainte de momentul permis de schema de finanțare. | Achizitii începute înainte de momentul permis de schema de finanțare. | Diacritice și normă editorială română |
 | /dr12-afir | config/seo-programs.json:pages.0.mandatory.2 | Buget separat pentru grant, cofinanțare, TVA, costuri neeligibile și rezerve de pret. | Buget separat pentru grant, cofinanțare, TVA, costuri neeligibile și rezerve de preț. | Diacritice și normă editorială română |
@@ -1446,6 +1447,7 @@
 | /dr12-afir | config/seo-programs.json:pages.0.preparationSteps.2.1 | Cere oferte comparabile și evita specificatiile care par dedicate unui singur furnizor. | Cere oferte comparabile și evită specificatiile care par dedicate unui singur furnizor. | Diacritice și normă editorială română |
 | /dr12-afir | config/seo-programs.json:pages.0.preparationSteps.3.1 | Pastreaza o rezerva de buget pentru TVA, diferente de pret și costuri neeligibile. | Pastreaza o rezerva de buget pentru TVA, diferențe de preț și costuri neeligibile. | Diacritice și normă editorială română |
 | /dr12-afir | config/seo-programs.json:pages.0.related.3.label | Fonduri europene agricultura | Fonduri europene agricultură | Diacritice și normă editorială română |
+| /dr12-afir | config/seo-programs.json:pages.0.scoring.1 | Prag de 80 de puncte în prima etapă și 45 în a doua; calendarul va fi stabilit prin nota de lansare. | Prag de 80 de puncte în prima etapă și 45 în a două; calendarul va fi stabilit prin nota de lansare. | Diacritice și normă editorială română |
 | /dr12-afir | config/seo-programs.json:pages.0.steps.1 | Confirmam lista de investiții și excludem achizitiile care nu au legătura directa cu activitatea agricolă. | Confirmam lista de investiții și excludem achizitiile care nu au legătura directă cu activitatea agricolă. | Diacritice și normă editorială română |
 | /dr12-afir | config/seo-programs.json:pages.0.steps.4 | Verificam proiectul înainte de depunere și pregătim raspunsurile pentru clarificări. | Verificam proiectul înainte de depunere și pregătim răspunsurile pentru clarificări. | Diacritice și normă editorială română |
 | /dr12-afir | dr12-afir/index.html:visible-copy | Pentru componenta alte sectoare pot există investiții și în sectoare diferite de cel predominant, însă proiectul trebuie să includă investiții în sectorul vegetal care determină încadrarea. Alegerea componentei influenț… | Pentru componenta alte sectoare pot exista investiții și în sectoare diferite de cel predominant, însă proiectul trebuie să includă investiții în sectorul vegetal care determină încadrarea. Alegerea componentei influenț… | Diacritice și normă editorială română |

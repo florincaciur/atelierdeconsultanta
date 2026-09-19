@@ -11,17 +11,17 @@
         "consultant fonduri europene",
         "firmă consultanță fonduri europene"
       ],
-      "title": "Consultanță și proiectare fonduri europene | FABER",
-      "description": "FABER oferă consultanță și proiectare pentru proiecte cu fonduri europene: eligibilitate, cereri de finanțare, documentații tehnice și implementare.",
-      "ogTitle": "Consultanță și proiectare pentru proiecte | FABER",
-      "ogDescription": "De la verificarea inițială a eligibilității la documentații tehnice și implementare, FABER sprijină pregătirea proiectelor pe baza regulilor aplicabile.",
+      "title": "Consultanță fonduri europene și proiectare | FABER",
+      "description": "Consultanță fonduri europene pentru firme și fermieri: eligibilitate, proiectare, dosare și implementare. Programe AFIR, DR 12, DR 14 și calculatoare.",
+      "ogTitle": "Consultanță fonduri europene și proiectare | FABER",
+      "ogDescription": "Consultanță fonduri europene pentru firme și fermieri: eligibilitate, proiectare, dosare și implementare. Programe AFIR, DR 12, DR 14 și calculatoare.",
       "sourceOfTruth": [
         "index.html",
         "official-guides.json:fonduri-europene"
       ],
       "factualStatus": "evergreen_service_scope_verified",
-      "lastReviewed": "2026-07-20",
-      "notes": "Titlul actual era deja relevant; este păstrat pentru continuitate și pentru că diferențiază consultanța de proiectarea tehnică."
+      "lastReviewed": "2026-09-19",
+      "notes": "Reformulat pentru intenția de servicii; programele sunt prezentate cu statut separat."
     },
     {
       "route": "/verificare-eligibilitate-fonduri-europene",
@@ -149,7 +149,7 @@
         "trimite proiect FABER",
         "verificare proiect"
       ],
-      "title": "Contact FABER: trimite proiectul pentru verificare",
+      "title": "Contact FABER | Consultanță fonduri europene",
       "description": "Trimite către FABER datele proiectului, bugetul și documentele disponibile pentru stabilirea programului și a verificărilor necesare.",
       "ogTitle": "Trimite datele proiectului către FABER",
       "ogDescription": "Spune-ne cine aplică, unde se face investiția și ce documente există pentru a delimita verificările necesare.",

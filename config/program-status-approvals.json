@@ -8,27 +8,29 @@
       "programId": "dr12-afir",
       "approvalState": "approved",
       "validatorName": "Codex — verificare documentară la solicitarea utilizatorului",
-      "approvedAt": "2026-09-06",
-      "verifiedAt": "2026-09-06",
-      "proposedStatus": "consultare_publica",
-      "proposedStatusLabel": "Ghid consultativ publicat – consultarea s-a încheiat; depunerea nu este deschisă. Condițiile se pot modifica.",
-      "proposedCopy": "Ghid consultativ publicat – consultarea s-a încheiat; depunerea nu este deschisă. Condițiile se pot modifica. — verificat la 2026-09-06. Depunerea nu este deschisă. Sursa: Agenția pentru Finanțarea Investițiilor Rurale (AFIR), Versiune consultativă publicată la 19.03.2026; termenul pentru observații s-a încheiat la 30.03.2026.",
+      "approvedAt": "2026-09-19",
+      "verifiedAt": "2026-09-19",
+      "proposedStatus": "ghid_aprobat_nedeschis",
+      "proposedStatusLabel": "Ghid final publicat – perioada de depunere nu este încă anunțată",
+      "proposedCopy": "Ghid final publicat – perioada de depunere nu este încă anunțată — verificat la 2026-09-19. Sursa: AFIR, Ghid final DR-12, Ediția I, Revizia 0, aprobat prin OMADR 268/17.09.2026; publicat de AFIR la 18.09.2026. Depunerea nu este deschisă.",
       "officialInstitution": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
-      "officialDocument": "Ghidul solicitantului DR-12 – versiunea consultativă",
-      "officialDocumentVersion": "Versiune consultativă publicată la 19.03.2026; termenul pentru observații s-a încheiat la 30.03.2026",
-      "officialDocumentDate": "2026-03-19",
-      "documentCharacter": "consultativ",
-      "officialUrl": "https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/",
+      "officialDocument": "Ghidul solicitantului DR-12 – ghid final",
+      "officialDocumentVersion": "Ghid final DR-12, Ediția I, Revizia 0, aprobat prin OMADR 268/17.09.2026; publicat de AFIR la 18.09.2026",
+      "officialDocumentDate": "2026-09-18",
+      "documentCharacter": "final",
+      "officialUrl": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-12/",
       "additionalOfficialEvidence": [
-        "https://www.afir.ro/api/file?filename=Ghidul+Solicitantului+DR+12+-+versiunea+consultativ%C4%83&filetype=pdf&url=%2Fmedia%2Flm3fg4k1%2Fghidul-solicitantului-dr-12.pdf",
-        "https://www.afir.ro/comunicare/utile/dezbatere-publica/"
+        "https://www.afir.ro/media/aqtlitop/ghidul-solicitantului-dr-12.pdf",
+        "https://www.afir.ro/info-la-zi/ghidul-final-pentru-dr-12/",
+        "https://www.afir.ro/instrumente/sesiuni/sesiuni-primire-proiecte/",
+        "https://www.afir.ro/instrumente/normative/legislatie-nationala/"
       ],
       "applicationStart": null,
       "applicationEnd": null,
       "numericClaimsApproved": true,
       "observedBefore": "Homepage: card «Activ» cu 200.000 EUR și 80%/65%; meniu: «variantă consultativă»; paginile DR12 foloseau formulări nealiniate.",
       "unresolved": [
-        "Valorile sunt publicate numai ca prevederi ale ghidului consultativ; ghidul final și calendarul rămân de confirmat."
+        "Intervalul de depunere nu este încă publicat."
       ],
       "publicationHoldUrls": [
         "/dr12-afir",

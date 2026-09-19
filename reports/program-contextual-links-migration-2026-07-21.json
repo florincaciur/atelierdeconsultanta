@@ -55,25 +55,6 @@
       ]
     },
     {
-      "programId": "dr12-afir",
-      "route": "/dr12-afir",
-      "file": "dr12-afir.html",
-      "eligible": true,
-      "excludedByEditorialDecision": false,
-      "removedManagedBlocks": 0,
-      "removedManagedLinks": 0,
-      "resultingRelations": [
-        "parent",
-        "related",
-        "related",
-        "related",
-        "service",
-        "instrument",
-        "guide",
-        "conversion"
-      ]
-    },
-    {
       "programId": "dr14-afir",
       "route": "/dr14",
       "file": "dr14/index.html",

@@ -100,8 +100,8 @@ ${toc}    <article class="post-body">
       <p class="expert-direct-answer" data-expert-direct-answer>${escapeHtml(config.directAnswer)}</p>
 <!-- P1_19_DIRECT_ANSWER_END -->${aeo}
       <h2 id="comparatie-documentata">Ce comparăm înainte de alegerea intervenției?</h2>
-      <p>DR 12 și DR 14 pot părea apropiate deoarece ambele privesc investiții agricole, dar pornesc de la logici diferite. Prima întrebare nu este care variantă afișează o valoare mai mare, ci dacă solicitantul, ferma și investiția pot fi susținute de documentele cerute. Tabelul separă condițiile finale DR 14 de elementele DR 12 care trebuie reconfirmate după publicarea formei finale.</p>
-      <p class="expert-comparison-note"><strong>Cum se citește tabelul:</strong> fiecare celulă trimite la documentul AFIR folosit și la data verificării. Valorile DR 14 provin din ghidul oficial final; pentru DR 12 nu publicăm sume sau intensități finale cât timp registrul programului le păstrează neconfirmate.</p>
+      <p>DR 12 și DR 14 pot părea apropiate deoarece ambele privesc investiții agricole, dar pornesc de la logici diferite. Prima întrebare nu este care variantă afișează o valoare mai mare, ci dacă solicitantul, ferma și investiția pot fi susținute de documentele cerute. Tabelul compară condițiile din ghidurile finale DR 12 și DR 14, cu statutul sesiunilor prezentat separat.</p>
+      <p class="expert-comparison-note"><strong>Cum se citește tabelul:</strong> fiecare celulă trimite la documentul AFIR folosit și la data verificării. Valorile ambelor programe provin din ghidurile finale; publicarea ghidului DR 12 nu echivalează cu deschiderea depunerii.</p>
 ${renderTable(config)}
 
       <h2 id="orientare-dr12-dr14">Când merită analizat mai întâi fiecare program?</h2>
@@ -169,8 +169,8 @@ ${renderTable(config)}
         <article class="expert-source-card" id="source-${escapeHtml(dr12.slug)}">
           <h3>DR 12</h3>
           <p><strong>${escapeHtml(dr12.sourceLabel)}</strong></p>
-          <p><a href="${escapeHtml(dr12.sourceUrl)}" target="_blank" rel="noopener noreferrer">Consultarea publică AFIR și documentele asociate</a></p>
-          <p><a href="${escapeHtml(dr12.guideUrl)}" target="_blank" rel="noopener noreferrer">Deschide ghidul consultativ DR 12</a></p>
+          <p><a href="${escapeHtml(dr12.sourceUrl)}" target="_blank" rel="noopener noreferrer">Pagina AFIR și anexele DR-12</a></p>
+          <p><a href="${escapeHtml(dr12.guideUrl)}" target="_blank" rel="noopener noreferrer">Deschide ghidul final DR 12</a></p>
           <p>Verificat la <time datetime="${escapeHtml(dr12.verifiedAt)}">${escapeHtml(displayDate(dr12.verifiedAt))}</time>.</p>
         </article>
         <article class="expert-source-card" id="source-${escapeHtml(dr14.slug)}">
@@ -183,7 +183,7 @@ ${renderTable(config)}
       </div>
 
       <aside class="expert-validation-note" aria-labelledby="validari-ramase">
-        <h3 id="validari-ramase">Ce reconfirmăm înainte de publicarea valorilor finale?</h3>
+        <h3 id="validari-ramase">Ce verificăm înainte de alegerea programului și depunere?</h3>
         <ul>
 ${pending}
         </ul>
@@ -219,8 +219,8 @@ ${config.pendingHumanValidation.map((item) => `- DE_VALIDAT_UMAN — ${item}`).j
 
 ## Decizia de publicare
 
-- statut publicat: DR 12 are ghid consultativ, iar DR 14 are sesiunea lansată cu depuneri programate din 01.09.2026;
-- valorile finale DR 14 și calendarul sesiunii sunt publicate conform documentelor AFIR; valorile DR 12 rămân nepublicate până la reconfirmare;
+- statut publicat: DR 12 are ghid final, iar DR 14 are sesiunea lansată cu depuneri programate din 01.09.2026;
+- valorile DR 12 și DR 14 sunt publicate conform ghidurilor finale; calendarul DR 12 rămâne neanunțat;
 - scenariile sunt marcate explicit ca ipotetice și nu descriu clienți reali;
 - CTA-ul transmite numai \`source_page=/dr12-vs-dr14\`, fără PII în URL;
 - autorul și reviewerul sunt publicați organizațional; nu este publicat un nume personal fără acord.

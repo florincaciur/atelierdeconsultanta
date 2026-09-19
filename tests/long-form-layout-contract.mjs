@@ -54,7 +54,7 @@ for (const page of report.pages) {
   assert.equal($(".article-toc").length, 0, `${page.route}: cuprinsul vechi duplicat trebuie eliminat`);
   assert.equal($("link[data-long-form-layout-style='p1_09']").length, 1, `${page.route}: CSS duplicat/lipsă`);
   assert.equal($("script[data-long-form-layout-script='p1_09']").length, 1, `${page.route}: JS duplicat/lipsă`);
-  assert.equal($("link[data-long-form-layout-style='p1_09']").attr("href"), "/assets/long-form-layout.css?v=20260909-1", `${page.route}: versiunea CSS de layout este expirată`);
+  assert.equal($("link[data-long-form-layout-style='p1_09']").attr("href"), "/assets/long-form-layout.css?v=20260913-1", `${page.route}: versiunea CSS de layout este expirată`);
   assert.equal($("script[data-long-form-layout-script='p1_09']").attr("src"), "/assets/long-form-layout.js?v=20260909-1", `${page.route}: versiunea JS de layout este expirată`);
   if (expectsToc) {
     assert.equal($("[data-long-form-toc] summary").text().trim(), "Cuprins", `${page.route}: disclosure fără etichetă`);

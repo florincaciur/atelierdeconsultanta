@@ -1,6 +1,6 @@
 # Raport de prospețime și guvernanță editorială
 
-Data evaluării: **2026-09-13**. Registru: `config/editorial-governance.json`.
+Data evaluării: **2026-09-19**. Registru: `config/editorial-governance.json`.
 
 ## Rezumat
 
@@ -24,8 +24,8 @@ O expirare produce warning intern și nu schimbă automat statusul, textul, `ver
 | `/calculator-soc` | tool | public | — | DE_VALIDAT_UMAN | 2026-07-22 | 2026-07-22 | DE_VALIDAT_UMAN | 2026-09-20 | nu | nu | nu | nu |
 | `/cod-caen-start-up-nation-2026` | guide | pending_validation | — | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | 2026-05-20 | DE_VALIDAT_UMAN | 2026-08-18 | nu | da | nu | nu |
 | `/digitalizare-imm` | program | public | apel_inchis | DE_VALIDAT_UMAN | 2026-07-22 | 2026-08-29 | DE_VALIDAT_UMAN | 2026-10-28 | nu | nu | nu | nu |
-| `/dr12-afir` | program | public | consultare_publica | 2026-05-19 | 2026-09-06 | 2026-09-06 | DE_VALIDAT_UMAN | 2026-11-05 | nu | nu | nu | nu |
-| `/dr12-vs-dr14` | guide | public | — | DE_VALIDAT_UMAN | 2026-09-06 | 2026-09-06 | DE_VALIDAT_UMAN | 2026-09-13 | nu | nu | nu | nu |
+| `/dr12-afir` | program | public | ghid_aprobat_nedeschis | 2026-05-19 | 2026-09-19 | 2026-09-19 | DE_VALIDAT_UMAN | 2026-10-19 | nu | nu | nu | nu |
+| `/dr12-vs-dr14` | guide | public | — | DE_VALIDAT_UMAN | 2026-09-19 | 2026-09-19 | DE_VALIDAT_UMAN | 2026-09-26 | nu | nu | nu | nu |
 | `/dr14` | program | public | apel_deschis | DE_VALIDAT_UMAN | 2026-09-06 | 2026-09-06 | DE_VALIDAT_UMAN | 2026-10-06 | nu | nu | nu | nu |
 | `/dr18` | program | public | apel_deschis | DE_VALIDAT_UMAN | 2026-09-06 | 2026-09-06 | DE_VALIDAT_UMAN | 2026-10-06 | nu | nu | nu | nu |
 | `/dr14-afir-ferme-mici` | program | pending_validation | — | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | da | nu | nu | nu |

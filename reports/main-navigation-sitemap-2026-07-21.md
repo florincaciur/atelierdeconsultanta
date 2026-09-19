@@ -19,6 +19,7 @@ CTA separat: **Începe verificarea proiectului** → `/contact`
 | Calculatoare | Calculator punctaj POR Micro – Apelul 2 → `/investitii-modernizarea-microintreprinderilor-apel-2#simulator-punctaj-apel-2` | disclosure |
 | Calculatoare | Calculator SO → `/calculator-soc` | disclosure |
 | Calculatoare | Calculator punctaj DR 14 → `/dr14#dr14-punctaj` | disclosure |
+| Calculatoare | Calculator punctaj DR 12 → `/dr12-afir#dr12-punctaj` | disclosure |
 | Despre FABER | Echipa → `/despre-faber` | disclosure |
 | Despre FABER | Metodologie → `/metodologie-verificare-eligibilitate` | disclosure |
 | Despre FABER | Studii de caz → `/studii-de-caz-fonduri-europene` | disclosure |

@@ -19,6 +19,7 @@ FABER*Fonduri Europene_files/
 
 # Local Codex workspace artifacts must never be published.
 .codex/
+.tmp/
 
 # Generated visual/performance audit artifacts are reproducible and are not website assets.
 /reports/**/*.png

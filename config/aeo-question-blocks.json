@@ -17,31 +17,34 @@
         {
           "id": "este-deschis-apelul-dr12",
           "question": "Este deschis apelul DR 12?",
-          "answer": "Nu. La verificarea din 22 iulie 2026, AFIR publicase pentru DR 12 o versiune consultativă, iar depunerea proiectelor nu era deschisă. Documentul poate ajuta la pregătirea întrebărilor și a actelor, dar condițiile se pot modifica înaintea ghidului final. O estimare internă privind lansarea nu înlocuiește anunțul oficial al apelului.",
-          "evidenceTitle": "Ce înseamnă practic statutul consultativ",
+          "answer": "La verificarea din 19 septembrie 2026, AFIR nu anunțase încă intervalul de depunere DR-12. Ghidul prevede două etape lunare, cu praguri de 80 și 45 de puncte; datele și orele se stabilesc prin nota de lansare. Verifică anunțul oficial al sesiunii înainte de depunere.",
+          "evidenceTitle": "Ghid final și calendarul sesiunii",
           "evidence": [
-            "nu există un interval oficial activ de depunere",
-            "condițiile și anexele trebuie reconfirmate în forma finală",
-            "pregătirea poate continua numai cu ipotezele marcate explicit"
+            "Ghid final publicat la 18.09.2026",
+            "Perioada de depunere nu este anunțată la 19.09.2026",
+            "Praguri de 80 și 45 de puncte; nota de lansare stabilește datele"
           ],
           "selectionBasis": "GSC: „dr 12 afir lansare”, „dr 12 ghid final” și variante apropiate",
           "sources": [
             {
               "name": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
-              "document": "Consultare publică pentru consolidarea exploatațiilor tinerilor fermieri",
-              "version": "Versiune consultativă publicată la 19.03.2026",
-              "url": "https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/",
-              "verifiedAt": "2026-07-22"
+              "document": "Ghid final DR-12, capitolele 2.1–2.6",
+              "version": "Ghid final DR-12, Ediția I, Revizia 0, aprobat prin OMADR 268/17.09.2026; publicat de AFIR la 18.09.2026",
+              "url": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-12/",
+              "verifiedAt": "2026-09-19"
             }
           ],
           "detailLinks": [
-            { "href": "/dr12-vs-dr14", "label": "Compară prudent DR 12 cu DR 14" }
+            {
+              "href": "/dr12-vs-dr14",
+              "label": "Compară prudent DR 12 cu DR 14"
+            }
           ]
         },
         {
           "id": "cheltuieli-neeligibile-dr12",
           "question": "Ce cheltuieli nu sunt eligibile în DR 12?",
-          "answer": "Lista definitivă a cheltuielilor neeligibile nu poate fi publicată cât timp ghidul DR 12 este consultativ. În analiză sunt tratate ca risc costurile care nu apar în categoriile permise, nu susțin obiectivul investiției, nu pot fi documentate ori sunt angajate în afara regulilor și perioadelor acceptate. Fiecare poziție de buget trebuie reconfirmată în ghidul final și în anexele sale.",
+          "answer": "Bunuri second-hand, achiziții de terenuri și clădiri, locuințe, cap tractor rutier, ATV/UTV. Animale, plante anuale, întreținerea culturilor, drepturi de producție și drepturi la plată. Transport nespecializat, spații administrative și cazare; TVA recuperabilă și costuri accesorii leasingului. Dublă finanțare, costuri angajate înainte de momentul permis, cheltuieli din sectoarele hamei, struguri de masă, flori, plante medicinale, aromatice și ornamentale.",
           "evidenceTitle": "Control minim pentru fiecare cost",
           "evidence": [
             "încadrare în categoria permisă de ghid",
@@ -52,20 +55,23 @@
           "sources": [
             {
               "name": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
-              "document": "Ghidul solicitantului DR 12 supus consultării publice",
-              "version": "Versiune consultativă publicată la 19.03.2026",
-              "url": "https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/",
-              "verifiedAt": "2026-07-22"
+              "document": "Ghid final DR-12, capitolele 2.1–2.6",
+              "version": "Ghid final DR-12, Ediția I, Revizia 0, aprobat prin OMADR 268/17.09.2026; publicat de AFIR la 18.09.2026",
+              "url": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-12/",
+              "verifiedAt": "2026-09-19"
             }
           ],
           "detailLinks": [
-            { "href": "/verificare-eligibilitate-fonduri-europene", "label": "Vezi cum verificăm bugetul și eligibilitatea" }
+            {
+              "href": "/verificare-eligibilitate-fonduri-europene",
+              "label": "Vezi cum verificăm bugetul și eligibilitatea"
+            }
           ]
         },
         {
           "id": "documente-inainte-dr12",
           "question": "Ce trebuie verificat înainte de pregătirea unui dosar DR 12?",
-          "answer": "Înaintea dosarului se compară forma solicitantului, vârsta și istoricul instalării, structura documentată a exploatației, dimensiunea economică SO, amplasamentul și investiția propusă. Rezultatul este orientativ până când ghidul final confirmă condițiile și documentele. O informație declarată, dar nesusținută de evidențele fermei, nu trebuie folosită pentru a promite încadrarea sau punctajul.",
+          "answer": "Cererea de finanțare în versiunea AFIR curentă, documentația tehnico-economică aplicabilă, actele formei juridice și ale amplasamentului, evidențele APIA/ANSVSA/ANZ, calculul SO, dovezile calificării și punctajului, ofertele și cofinanțarea. Lista exactă se verifică în capitolul 4.1 și anexele ghidului.",
           "evidenceTitle": "Date care pot schimba concluzia",
           "evidence": [
             "actele solicitantului și istoricul instalării",
@@ -76,14 +82,17 @@
           "sources": [
             {
               "name": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
-              "document": "Ghidul solicitantului DR 12 supus consultării publice",
-              "version": "Versiune consultativă publicată la 19.03.2026",
-              "url": "https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/",
-              "verifiedAt": "2026-07-22"
+              "document": "Ghid final DR-12, capitolele 2.1–2.6",
+              "version": "Ghid final DR-12, Ediția I, Revizia 0, aprobat prin OMADR 268/17.09.2026; publicat de AFIR la 18.09.2026",
+              "url": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-12/",
+              "verifiedAt": "2026-09-19"
             }
           ],
           "detailLinks": [
-            { "href": "/calculator-soc", "label": "Calculează orientativ dimensiunea economică SO" }
+            {
+              "href": "/calculator-soc",
+              "label": "Calculează orientativ dimensiunea economică SO"
+            }
           ]
         }
       ]
@@ -95,15 +104,15 @@
       "label": "Întrebări despre DR 14",
       "questions": [
         {
-                          "id": "este-deschis-apelul-dr14",
-                          "question": "Este deschis apelul DR 14?",
+          "id": "este-deschis-apelul-dr14",
+          "question": "Este deschis apelul DR 14?",
           "answer": "Nu încă. AFIR a lansat sesiunea DR 14, dar portalul de depunere se deschide la 1 septembrie 2026, ora 09:00. Termenul anunțat este 31 octombrie 2026, ora 16:00. Bugetul este de 108 milioane EUR, pragul de calitate este 80 de puncte în septembrie și 40 de puncte în octombrie, iar o componentă se poate închide anticipat când solicitările ating cel puțin 150% din alocare, cu excepția primelor cinci zile ale etapei.",
           "evidenceTitle": "Calendarul și condițiile oficiale ale sesiunii",
           "evidence": [
             "depuneri programate între 1 septembrie, ora 09:00, și 31 octombrie, ora 16:00",
             "buget total de 108 milioane EUR, împărțit pe patru componente",
             "praguri de calitate de 80 de puncte în septembrie și 40 de puncte în octombrie"
-                                       ],
+          ],
           "selectionBasis": "GSC: „dr14 afir 2026”, „dr 14 afir” și variante despre ghid",
           "sources": [
             {
@@ -115,13 +124,16 @@
             }
           ],
           "detailLinks": [
-            { "href": "/dr12-vs-dr14", "label": "Vezi diferențele de analizat între DR 12 și DR 14" }
+            {
+              "href": "/dr12-vs-dr14",
+              "label": "Vezi diferențele de analizat între DR 12 și DR 14"
+            }
           ]
         },
         {
           "id": "so-incadrare-dr14",
           "question": "Cum influențează SO încadrarea în DR 14?",
-                          "answer": "SO exprimă dimensiunea economică a exploatației. Intervalul general DR 14 este 4.000–11.999 SO; pragul minim este 2.000 SO pentru exploatațiile zootehnice cu rase autohtone și pentru floricultură, plante aromatice, medicinale și ornamentale, respectiv 2.300 SO pentru legumicultură. Încadrarea se verifică împreună cu SO majoritar și evidențele APIA/ANSVSA.",
+          "answer": "SO exprimă dimensiunea economică a exploatației. Intervalul general DR 14 este 4.000–11.999 SO; pragul minim este 2.000 SO pentru exploatațiile zootehnice cu rase autohtone și pentru floricultură, plante aromatice, medicinale și ornamentale, respectiv 2.300 SO pentru legumicultură. Încadrarea se verifică împreună cu SO majoritar și evidențele APIA/ANSVSA.",
           "evidenceTitle": "Verificări care însoțesc rezultatul SO",
           "evidence": [
             "suprafețe și efective documentabile",
@@ -133,19 +145,22 @@
             {
               "name": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
               "document": "Ghidul solicitantului DR 14",
-                                              "version": "Varianta finală, sesiunea 2026, publicată de AFIR la 06.08.2026",
-                                              "url": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-14/",
+              "version": "Varianta finală, sesiunea 2026, publicată de AFIR la 06.08.2026",
+              "url": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-14/",
               "verifiedAt": "2026-08-15"
             }
           ],
           "detailLinks": [
-            { "href": "/calculator-soc", "label": "Calculează și verifică orientativ SO" }
+            {
+              "href": "/calculator-soc",
+              "label": "Calculează și verifică orientativ SO"
+            }
           ]
         },
         {
           "id": "documente-schimba-dr14",
           "question": "Ce documente pot schimba concluzia pentru DR 14?",
-                          "answer": "Concluzia se poate schimba după verificarea actelor solicitantului, evidențelor APIA/ANSVSA, documentelor amplasamentului, calculului SO, istoricului exploatației, ofertelor și sursei contribuției proprii. Documentele trebuie să susțină aceleași suprafețe, efective, activități și investiții folosite în cererea de finanțare. Pentru utilaje se verifică și proporționalitatea tehnică, iar pentru punctaj se păstrează documentele care probează fiecare criteriu selectat.",
+          "answer": "Concluzia se poate schimba după verificarea actelor solicitantului, evidențelor APIA/ANSVSA, documentelor amplasamentului, calculului SO, istoricului exploatației, ofertelor și sursei contribuției proprii. Documentele trebuie să susțină aceleași suprafețe, efective, activități și investiții folosite în cererea de finanțare. Pentru utilaje se verifică și proporționalitatea tehnică, iar pentru punctaj se păstrează documentele care probează fiecare criteriu selectat.",
           "evidenceTitle": "Documente de confruntat între ele",
           "evidence": [
             "actele solicitantului și ale exploatației",
@@ -157,13 +172,16 @@
             {
               "name": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
               "document": "Ghidul solicitantului DR 14",
-                                              "version": "Varianta finală, sesiunea 2026, publicată de AFIR la 06.08.2026",
-                                              "url": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-14/",
+              "version": "Varianta finală, sesiunea 2026, publicată de AFIR la 06.08.2026",
+              "url": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-14/",
               "verifiedAt": "2026-08-15"
             }
           ],
           "detailLinks": [
-            { "href": "/verificare-eligibilitate-fonduri-europene", "label": "Vezi ce date pregătești pentru verificarea DR 14" }
+            {
+              "href": "/verificare-eligibilitate-fonduri-europene",
+              "label": "Vezi ce date pregătești pentru verificarea DR 14"
+            }
           ]
         }
       ]
@@ -177,7 +195,7 @@
         {
           "id": "diferenta-dr12-dr14",
           "question": "Care este diferența dintre DR 12 și DR 14?",
-          "answer": "În documentele consultative verificate la 22 iulie 2026, DR 12 urmărește consolidarea exploatațiilor tinerilor fermieri instalați și ale fermierilor de până la 45 de ani, iar DR 14 vizează investițiile în ferme de mici dimensiuni. Alegerea nu se face doar după SO: profilul solicitantului, istoricul exploatației, investiția și documentele pot schimba încadrarea. Niciun apel nu este deschis.",
+          "answer": "DR 12 are ghid final publicat la 18.09.2026 și vizează consolidarea fermelor de minimum 12.000 SO, pentru categoriile de fermieri eligibile, cu grant de maximum 200.000 EUR. Perioada de depunere nu este încă anunțată. DR 14 vizează ferme mici și are sesiune 1 septembrie–31 octombrie 2026, conform sursei AFIR verificate. Alegerea depinde și de profil, investiție și documente.",
           "evidenceTitle": "Comparația pornește de la cinci controale",
           "evidence": [
             "profilul și istoricul solicitantului",
@@ -188,22 +206,28 @@
           "sources": [
             {
               "name": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
-              "document": "Ghidul solicitantului DR 12 supus consultării publice",
-              "version": "Versiune consultativă publicată la 19.03.2026",
-              "url": "https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/",
-              "verifiedAt": "2026-07-22"
+              "document": "Ghid final DR-12, capitolele 2.1–2.6",
+              "version": "Ghid final DR-12, Ediția I, Revizia 0, aprobat prin OMADR 268/17.09.2026; publicat de AFIR la 18.09.2026",
+              "url": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-12/",
+              "verifiedAt": "2026-09-19"
             },
             {
               "name": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
               "document": "Ghidul solicitantului DR 14",
-              "version": "Varianta consultativă, sesiunea 2026, arhivată la 05.05.2026",
-              "url": "https://www.afir.ro/api/file?filename=Ghidul+Solicitantului+DR-14+VARIANTA+CONSULTATIV%C4%82&filetype=pdf&url=%2Fmedia%2Fbkmpo5fo%2Fgs-consultativ-dr-14.pdf",
-              "verifiedAt": "2026-07-22"
+              "version": "Ghid oficial final DR 14, referință verificată în registrul programului la 06.09.2026",
+              "url": "https://www.afir.ro/api/file?url=%2Fmedia%2Fgk1nhmzi%2Fghidul-solicitantului-dr-14.pdf&filename=Ghidul%20Solicitantului%20DR%2014&filetype=pdf",
+              "verifiedAt": "2026-09-06"
             }
           ],
           "detailLinks": [
-            { "href": "/dr12-afir", "label": "Verifică statutul și condițiile DR 12" },
-            { "href": "/dr14", "label": "Verifică statutul și condițiile DR 14" }
+            {
+              "href": "/dr12-afir",
+              "label": "Verifică statutul și condițiile DR 12"
+            },
+            {
+              "href": "/dr14",
+              "label": "Verifică statutul și condițiile DR 14"
+            }
           ]
         },
         {
@@ -220,27 +244,30 @@
           "sources": [
             {
               "name": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
-              "document": "Ghidul solicitantului DR 12 supus consultării publice",
-              "version": "Versiune consultativă publicată la 19.03.2026",
-              "url": "https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/",
-              "verifiedAt": "2026-07-22"
+              "document": "Ghid final DR-12, capitolele 2.1–2.6",
+              "version": "Ghid final DR-12, Ediția I, Revizia 0, aprobat prin OMADR 268/17.09.2026; publicat de AFIR la 18.09.2026",
+              "url": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-12/",
+              "verifiedAt": "2026-09-19"
             },
             {
               "name": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
               "document": "Ghidul solicitantului DR 14",
-              "version": "Varianta consultativă, sesiunea 2026, arhivată la 05.05.2026",
-              "url": "https://www.afir.ro/api/file?filename=Ghidul+Solicitantului+DR-14+VARIANTA+CONSULTATIV%C4%82&filetype=pdf&url=%2Fmedia%2Fbkmpo5fo%2Fgs-consultativ-dr-14.pdf",
-              "verifiedAt": "2026-07-22"
+              "version": "Ghid oficial final DR 14, referință verificată în registrul programului la 06.09.2026",
+              "url": "https://www.afir.ro/api/file?url=%2Fmedia%2Fgk1nhmzi%2Fghidul-solicitantului-dr-14.pdf&filename=Ghidul%20Solicitantului%20DR%2014&filetype=pdf",
+              "verifiedAt": "2026-09-06"
             }
           ],
           "detailLinks": [
-            { "href": "/calculator-soc", "label": "Verifică datele folosite în calculul SO" }
+            {
+              "href": "/calculator-soc",
+              "label": "Verifică datele folosite în calculul SO"
+            }
           ]
         },
         {
           "id": "so-alegere-program",
           "question": "Poate fi ales programul doar după rezultatul SO?",
-          "answer": "Nu. SO măsoară dimensiunea economică a exploatației prin valorile standard asociate culturilor și animalelor, dar nu confirmă singur programul potrivit. Rezultatul trebuie corelat cu profilul solicitantului, condițiile intervenției, amplasamentul, investiția și documentele fermei. Pentru DR 12 și DR 14, pragurile și regulile aplicabile rămân de reconfirmat în forma finală a ghidurilor.",
+          "answer": "Nu. SO măsoară dimensiunea economică a exploatației prin valorile standard asociate culturilor și animalelor, dar nu confirmă singur programul potrivit. Rezultatul trebuie corelat cu profilul solicitantului, condițiile intervenției, amplasamentul, investiția și documentele fermei. Pentru DR 12 și DR 14 se aplică ghidurile finale și anexele sesiunilor.",
           "evidenceTitle": "SO este un filtru, nu verdictul",
           "evidence": [
             "arată dimensiunea economică orientativă",
@@ -258,14 +285,17 @@
             },
             {
               "name": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
-              "document": "Ghidurile consultative DR 12 și DR 14",
-              "version": "Versiunile consultative disponibile în 2026",
-              "url": "https://www.afir.ro/comunicare/utile/dezbatere-publica/",
-              "verifiedAt": "2026-07-22"
+              "document": "Ghid final DR-12, capitolele 2.1–2.6",
+              "version": "Ghid final DR-12, Ediția I, Revizia 0, aprobat prin OMADR 268/17.09.2026; publicat de AFIR la 18.09.2026",
+              "url": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-12/",
+              "verifiedAt": "2026-09-19"
             }
           ],
           "detailLinks": [
-            { "href": "/calculator-soc", "label": "Folosește calculatorul SO și citește limitele rezultatului" }
+            {
+              "href": "/calculator-soc",
+              "label": "Folosește calculatorul SO și citește limitele rezultatului"
+            }
           ]
         }
       ]
@@ -297,14 +327,17 @@
             },
             {
               "name": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
-              "document": "Ghidurile consultative DR 12 și DR 14",
-              "version": "Versiunile consultative disponibile în 2026",
-              "url": "https://www.afir.ro/comunicare/utile/dezbatere-publica/",
-              "verifiedAt": "2026-07-22"
+              "document": "Ghid final DR-12, capitolele 2.1–2.6",
+              "version": "Ghid final DR-12, Ediția I, Revizia 0, aprobat prin OMADR 268/17.09.2026; publicat de AFIR la 18.09.2026",
+              "url": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-12/",
+              "verifiedAt": "2026-09-19"
             }
           ],
           "detailLinks": [
-            { "href": "/calculator-soc#calculator", "label": "Introdu datele documentabile în calculator" }
+            {
+              "href": "/calculator-soc#calculator",
+              "label": "Introdu datele documentabile în calculator"
+            }
           ]
         },
         {
@@ -328,7 +361,10 @@
             }
           ],
           "detailLinks": [
-            { "href": "/calculator-soc#calculator", "label": "Vezi categoriile disponibile în calculator" }
+            {
+              "href": "/calculator-soc#calculator",
+              "label": "Vezi categoriile disponibile în calculator"
+            }
           ]
         },
         {
@@ -345,14 +381,17 @@
           "sources": [
             {
               "name": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
-              "document": "Ghidurile consultative DR 12 și DR 14",
-              "version": "Versiunile consultative disponibile în 2026",
-              "url": "https://www.afir.ro/comunicare/utile/dezbatere-publica/",
-              "verifiedAt": "2026-07-22"
+              "document": "Ghid final DR-12, capitolele 2.1–2.6",
+              "version": "Ghid final DR-12, Ediția I, Revizia 0, aprobat prin OMADR 268/17.09.2026; publicat de AFIR la 18.09.2026",
+              "url": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-12/",
+              "verifiedAt": "2026-09-19"
             }
           ],
           "detailLinks": [
-            { "href": "/dr12-vs-dr14", "label": "Compară rezultatul cu celelalte condiții DR 12 și DR 14" }
+            {
+              "href": "/dr12-vs-dr14",
+              "label": "Compară rezultatul cu celelalte condiții DR 12 și DR 14"
+            }
           ]
         }
       ]
@@ -384,7 +423,10 @@
             }
           ],
           "detailLinks": [
-            { "href": "/proiectare-fonduri-europene", "label": "Vezi etapele serviciului de proiectare" }
+            {
+              "href": "/proiectare-fonduri-europene",
+              "label": "Vezi etapele serviciului de proiectare"
+            }
           ]
         },
         {
@@ -408,7 +450,10 @@
             }
           ],
           "detailLinks": [
-            { "href": "/verificare-eligibilitate-fonduri-europene", "label": "Vezi datele necesare pentru verificarea inițială" }
+            {
+              "href": "/verificare-eligibilitate-fonduri-europene",
+              "label": "Vezi datele necesare pentru verificarea inițială"
+            }
           ]
         },
         {
@@ -432,7 +477,10 @@
             }
           ],
           "detailLinks": [
-            { "href": "/verificare-eligibilitate-fonduri-europene", "label": "Vezi cum corelăm investiția, bugetul și ghidul" }
+            {
+              "href": "/verificare-eligibilitate-fonduri-europene",
+              "label": "Vezi cum corelăm investiția, bugetul și ghidul"
+            }
           ]
         }
       ]
@@ -464,7 +512,10 @@
             }
           ],
           "detailLinks": [
-            { "href": "/verificare-eligibilitate-fonduri-europene", "label": "Vezi datele necesare pentru verificarea bugetului" }
+            {
+              "href": "/verificare-eligibilitate-fonduri-europene",
+              "label": "Vezi datele necesare pentru verificarea bugetului"
+            }
           ]
         },
         {
@@ -488,7 +539,10 @@
             }
           ],
           "detailLinks": [
-            { "href": "/fonduri-europene", "label": "Alege mai întâi familia de programe potrivită" }
+            {
+              "href": "/fonduri-europene",
+              "label": "Alege mai întâi familia de programe potrivită"
+            }
           ]
         },
         {
@@ -512,7 +566,10 @@
             }
           ],
           "detailLinks": [
-            { "href": "/verificare-eligibilitate-fonduri-europene", "label": "Vezi cum pregătești contextul proiectului pentru triere" }
+            {
+              "href": "/verificare-eligibilitate-fonduri-europene",
+              "label": "Vezi cum pregătești contextul proiectului pentru triere"
+            }
           ]
         }
       ]

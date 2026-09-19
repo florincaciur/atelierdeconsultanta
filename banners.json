@@ -148,22 +148,22 @@
     "id": "slide-dr12-afir",
     "programId": "dr12-afir",
     "title": "DR-12 Investiții în consolidarea exploatațiilor tinerilor fermieri instalați și a fermierilor cu vârsta de până la 45 de ani",
-    "tag": "Ghid consultativ publicat – consultarea s-a încheiat; depunerea nu este deschisă. Condițiile se pot modifica.",
-    "description": "DR 12 AFIR: ghid consultativ, maximum 200.000 €, sprijin 80%/65% și minimum 12.000 SO. Vezi cine poate aplica și ce se știe despre lansare.",
+    "tag": "Ghid final publicat – perioada de depunere nu este încă anunțată",
+    "description": "DR 12 AFIR: ghid final, până la 200.000 €, sprijin 80%/65%, minimum 12.000 SO. Vezi eligibilitatea, cheltuielile, punctajul și situația depunerii.",
     "ctaText": "Detalii program",
     "ctaLink": "/dr12-afir",
     "icon": "ph-plant",
     "image": "/assets/hero/hero-agriculture.webp",
-    "pageTitle": "DR 12 AFIR 2026 – investiții pentru tineri fermieri și fermieri până la 45 de ani",
+    "pageTitle": "DR 12 AFIR 2026: ghid final, eligibilitate și punctaj",
     "order": 4,
     "estimate": null,
     "active": true,
-    "programStatus": "consultare_publica",
-    "statusLabel": "Ghid consultativ publicat – consultarea s-a încheiat; depunerea nu este deschisă. Condițiile se pot modifica.",
-    "verifiedAt": "2026-09-06",
+    "programStatus": "ghid_aprobat_nedeschis",
+    "statusLabel": "Ghid final publicat – perioada de depunere nu este încă anunțată",
+    "verifiedAt": "2026-09-19",
     "sourceName": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
-    "sourceUrl": "https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/",
-    "sourceVersion": "Versiune consultativă publicată la 19.03.2026; termenul pentru observații s-a încheiat la 30.03.2026",
+    "sourceUrl": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-12/",
+    "sourceVersion": "Ghid final DR-12, Ediția I, Revizia 0, aprobat prin OMADR 268/17.09.2026; publicat de AFIR la 18.09.2026",
     "applicationStart": null,
     "applicationEnd": null,
     "grantSummary": {
@@ -171,7 +171,7 @@
       "maximum": {
         "amount": 200000,
         "currency": "EUR",
-        "unit": "proiect — valoare din ghidul consultativ"
+        "unit": "proiect"
       },
       "budget": null
     },
@@ -179,16 +179,16 @@
       "intensity": [
         {
           "rate": 80,
-          "scope": "maximum pentru tinerii fermieri sub 41 de ani — ghid consultativ"
+          "scope": "maximum pentru tinerii fermieri sub 41 de ani, șefi de exploatație cu competențe adecvate"
         },
         {
           "rate": 65,
-          "scope": "maximum pentru celelalte categorii eligibile — ghid consultativ"
+          "scope": "maximum pentru celelalte categorii eligibile"
         }
       ],
-      "ownContribution": "Conform ghidului consultativ: minimum 20% sau 35% din eligibil, după categoria solicitantului, plus costurile neeligibile. Condițiile se pot modifica."
+      "ownContribution": "Minimum 20% sau 35% din costurile eligibile, după categoria beneficiarului, plus costurile neeligibile și TVA recuperabilă. Plafonul de 200.000 EUR poate majora contribuția efectivă."
     },
-    "fundingSummary": "Finanțare conform documentului aflat în consultare: 200.000 EUR/proiect — valoare din ghidul consultativ; intensitate 80% (maximum pentru tinerii fermieri sub 41 de ani — ghid consultativ) / 65% (maximum pentru celelalte categorii eligibile — ghid consultativ); Conform ghidului consultativ: minimum 20% sau 35% din eligibil, după categoria solicitantului, plus costurile neeligibile. Condițiile se pot modifica.",
+    "fundingSummary": "Finanțare conform sursei oficiale: 200.000 EUR/proiect; intensitate 80% (maximum pentru tinerii fermieri sub 41 de ani, șefi de exploatație cu competențe adecvate) / 65% (maximum pentru celelalte categorii eligibile); Minimum 20% sau 35% din costurile eligibile, după categoria beneficiarului, plus costurile neeligibile și TVA recuperabilă. Plafonul de 200.000 EUR poate majora contribuția efectivă.",
     "officialGuideKey": "dr12",
     "sourceOfTruth": "config/seo-programs.json#programs"
   },

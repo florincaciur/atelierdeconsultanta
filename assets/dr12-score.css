@@ -1,0 +1,12 @@
+.dr12-calculator { display: grid; grid-template-columns: minmax(0, 2fr) minmax(15rem, 1fr); gap: 1.5rem; margin: 1.5rem 0; align-items: start; }
+.dr12-calculator form { min-width: 0; display: grid; gap: 1rem; }
+.dr12-calculator label { display: grid; gap: .5rem; font-weight: 650; }
+.dr12-calculator select, .dr12-calculator input[type="number"] { box-sizing: border-box; width: 100%; max-width: 100%; min-width: 0; min-height: 48px; padding: .7rem; border: 1px solid #56756a; border-radius: .5rem; background: #fff; color: #162e25; font: inherit; }
+.dr12-calculator .dr12-check { display: flex; gap: .75rem; align-items: flex-start; padding: .8rem; background: #edf5f0; color: #162e25; border-radius: .6rem; }
+.dr12-check input { flex: 0 0 auto; width: 1.3rem; height: 1.3rem; margin-top: .2rem; }
+.dr12-calculator .dr12-help { margin: -.4rem 0 .5rem; font-size: .95rem; line-height: 1.6; }
+.dr12-result { min-width: 0; padding: 1.4rem; border: 1px solid #9cbdac; border-radius: .8rem; background: #edf5f0; color: #162e25; overflow-wrap: anywhere; }
+.dr12-result [data-dr12-total] { font-size: 2.5rem; }
+.dr12-calculator :focus-visible { outline: 3px solid #b16400; outline-offset: 3px; }
+#dr12-punctaj { scroll-margin-top: 8rem; }
+@media (max-width: 760px) { .dr12-calculator { grid-template-columns: minmax(0, 1fr); } }

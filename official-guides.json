@@ -333,14 +333,14 @@
     "programIds": [
       "dr12-afir"
     ],
-    "name": "Versiune consultativă publicată la 19.03.2026; termenul pentru observații s-a încheiat la 30.03.2026",
-    "title": "Versiune consultativă publicată la 19.03.2026; termenul pentru observații s-a încheiat la 30.03.2026",
+    "name": "Ghid final DR-12, Ediția I, Revizia 0, aprobat prin OMADR 268/17.09.2026; publicat de AFIR la 18.09.2026",
+    "title": "Ghid final DR-12, Ediția I, Revizia 0, aprobat prin OMADR 268/17.09.2026; publicat de AFIR la 18.09.2026",
     "institution": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
-    "url": "https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/",
-    "accessedAt": "2026-09-06",
-    "programStatus": "consultare_publica",
-    "statusLabel": "Ghid consultativ publicat – consultarea s-a încheiat; depunerea nu este deschisă. Condițiile se pot modifica.",
-    "verifiedAt": "2026-09-06",
+    "url": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-12/",
+    "accessedAt": "2026-09-19",
+    "programStatus": "ghid_aprobat_nedeschis",
+    "statusLabel": "Ghid final publicat – perioada de depunere nu este încă anunțată",
+    "verifiedAt": "2026-09-19",
     "isPrimaryFor": "dr12-afir",
     "sourceOfTruth": "config/seo-programs.json#programs"
   },

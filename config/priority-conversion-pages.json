@@ -11,9 +11,18 @@
       "title": "Transformă datele fermei într-o decizie clară pentru DR 14",
       "lead": "Calendarul este scurt, iar componenta se poate închide anticipat. Înaintea contractării verificăm documentele care susțin încadrarea, punctajul și bugetul.",
       "steps": [
-        ["Profilul fermei", "Forma juridică, localitatea, APIA/ANSVSA și calculul SO."],
-        ["Componenta și punctajul", "Investiția, componenta corectă și numai criteriile care pot fi probate."],
-        ["Bugetul și actele", "Oferte, contribuție proprie, amplasament și documentele încă lipsă."]
+        [
+          "Profilul fermei",
+          "Forma juridică, localitatea, APIA/ANSVSA și calculul SO."
+        ],
+        [
+          "Componenta și punctajul",
+          "Investiția, componenta corectă și numai criteriile care pot fi probate."
+        ],
+        [
+          "Bugetul și actele",
+          "Oferte, contribuție proprie, amplasament și documentele încă lipsă."
+        ]
       ],
       "primaryLabel": "Cere trierea inițială DR 14",
       "secondaryLabel": "Calculează orientativ SO",
@@ -26,18 +35,27 @@
       "route": "/dr12-afir",
       "programSlug": "dr12-afir",
       "family": "afir",
-      "eyebrow": "Pregătire înaintea ghidului final",
+      "eyebrow": "Ghid final publicat · calendar în așteptare",
       "title": "Verifică din timp dacă profilul fermei susține DR 12",
-      "lead": "DR 12 rămâne în etapa ghidului consultativ. Folosește perioada de pregătire pentru a separa condițiile dovedibile de cele care trebuie reconfirmate la lansare.",
+      "lead": "Verifică profilul fermierului, minimum 12.000 SO, investiția și cofinanțarea conform ghidului final publicat de AFIR la 18.09.2026.",
       "steps": [
-        ["Profil și istoric", "Vârsta, instalarea, rolul de șef al exploatației și forma juridică."],
-        ["Exploatația", "SO, suprafețe, efective, sector și documentele care susțin datele."],
-        ["Investiția", "Amplasament, lucrări sau dotări, buget și capacitatea de contribuție proprie."]
+        [
+          "Profil și istoric",
+          "Vârsta, instalarea, rolul de șef al exploatației și forma juridică."
+        ],
+        [
+          "Exploatația",
+          "SO, suprafețe, efective, sector și documentele care susțin datele."
+        ],
+        [
+          "Investiția",
+          "Amplasament, lucrări sau dotări, buget și capacitatea de contribuție proprie."
+        ]
       ],
       "primaryLabel": "Cere trierea inițială DR 12",
-      "secondaryLabel": "Compară DR 12 cu DR 14",
-      "secondaryHref": "/dr12-vs-dr14",
-      "note": "Analiza folosește documentul consultativ; condițiile se pot modifica și nu garantăm eligibilitatea sau finanțarea."
+      "secondaryLabel": "Calculează punctajul DR 12",
+      "secondaryHref": "#dr12-punctaj",
+      "note": "Analiza și punctajul sunt orientative și nu garantează finanțarea. AFIR stabilește eligibilitatea, selecția și finanțarea."
     },
     {
       "id": "micro-apel-2",
@@ -49,9 +67,18 @@
       "title": "Calculează punctajul și verifică filtrele eliminatorii ale Apelului 2",
       "lead": "Ghidul final este publicat. Prima analiză urmărește încadrarea firmei, CAEN-ul Rev. 3, localizarea, datele ANAF, contribuția proprie și documentele care susțin punctajul.",
       "steps": [
-        ["Firma și regiunea", "Microîntreprindere, sediu social și loc de implementare în Nord-Est, minimum un salariat și profit din exploatare pozitiv."],
-        ["CAEN și punctaj", "Cod CAEN Rev. 3 din Anexa 5, date ANAF 2023–2025 și criterii eliminatorii."],
-        ["Buget și documente", "Grant 100.000–300.000 EUR, contribuție proprie, cash-flow, anexele obligatorii și două surse de preț."]
+        [
+          "Firma și regiunea",
+          "Microîntreprindere, sediu social și loc de implementare în Nord-Est, minimum un salariat și profit din exploatare pozitiv."
+        ],
+        [
+          "CAEN și punctaj",
+          "Cod CAEN Rev. 3 din Anexa 5, date ANAF 2023–2025 și criterii eliminatorii."
+        ],
+        [
+          "Buget și documente",
+          "Grant 100.000–300.000 EUR, contribuție proprie, cash-flow, anexele obligatorii și două surse de preț."
+        ]
       ],
       "primaryLabel": "Cere trierea inițială pentru Apelul 2",
       "secondaryLabel": "Deschide simulatorul de punctaj",

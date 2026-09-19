@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-13T22:48:42.037Z",
+  "generatedAt": "2026-09-19T09:55:05.475Z",
   "summary": {
-    "htmlFilesChecked": 193,
+    "htmlFilesChecked": 195,
     "indexablePagesChecked": 105,
     "filesWithIssues": 0,
     "organizationVariants": 1,
@@ -19,8 +19,8 @@
       "FinancialIncentive": 25,
       "CreativeWork": 27,
       "FAQPage": 70,
-      "Question": 448,
-      "Answer": 448,
+      "Question": 453,
+      "Answer": 453,
       "Service": 12,
       "AdministrativeArea": 12,
       "WebApplication": 1
@@ -56,7 +56,7 @@
       "issues": []
     },
     {
-      "file": "dr12-afir.html",
+      "file": "dr12-afir/index.html",
       "route": "/dr12-afir",
       "blocks": 1,
       "topLevelIds": 7,
@@ -73,12 +73,12 @@
         "FinancialIncentive": 1,
         "CreativeWork": 1,
         "FAQPage": 1,
-        "Question": 7,
-        "Answer": 7
+        "Question": 12,
+        "Answer": 12
       },
       "modified": [
-        "2026-09-06",
-        "2026-09-06"
+        "2026-09-19",
+        "2026-09-19"
       ],
       "issues": []
     },
@@ -951,8 +951,8 @@
         "CreativeWork": 1
       },
       "modified": [
-        "2026-09-06",
-        "2026-09-06"
+        "2026-09-19",
+        "2026-09-19"
       ],
       "issues": []
     },

@@ -68,12 +68,12 @@ slides.each((index, slide) => {
   assert.equal($(slide).find(".priority-program-link").attr("href"), program.pageUrl);
 });
 
-assert.equal($("head > title").text().trim(), "Consultanță și proiectare fonduri europene | FABER");
-assert.equal($("meta[name='description']").attr("content"), "FABER oferă consultanță și proiectare pentru proiecte cu fonduri europene: eligibilitate, cereri de finanțare, documentații tehnice și implementare.");
+assert.equal($("head > title").text().trim(), "Consultanță fonduri europene și proiectare | FABER");
+assert.equal($("meta[name='description']").attr("content"), "Consultanță fonduri europene pentru firme și fermieri: eligibilitate, proiectare, dosare și implementare. Programe AFIR, DR 12, DR 14 și calculatoare.");
 assert.equal($("meta[name='keywords']").attr("content"), "fonduri europene, consultanță fonduri europene, PNRR, POR, AFIR, finanțare nerambursabilă, proiecte europene, fonduri nerambursabile România, consultanță finanțare, absorbție fonduri europene");
 assert.equal($("link[rel='canonical']").attr("href"), "https://atelierdeconsultanta.ro/");
 assert.equal($("meta[name='robots']").attr("content"), "index, follow");
-assert.equal($("meta[property='og:title']").attr("content"), "Consultanță și proiectare pentru proiecte | FABER");
+assert.equal($("meta[property='og:title']").attr("content"), "Consultanță fonduri europene și proiectare | FABER");
 assert.equal($("meta[property='og:url']").attr("content"), "https://atelierdeconsultanta.ro/");
 assert.equal($("script[type='application/ld+json']").length > 0, true, "lipsește JSON-LD");
 $("script[type='application/ld+json']").each((_, script) => assert.doesNotThrow(() => JSON.parse($(script).text()), "JSON-LD invalid"));

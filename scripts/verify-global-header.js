@@ -51,7 +51,7 @@ function main() {
   if ($("#mobileMenu [data-mobile-disclosure]").length !== 4) errors.push("mobilul trebuie să aibă patru grupuri disclosure principale");
   if ($("#navbar .nav-primary-link").map((_, el) => $(el).text().trim()).get().join("|") !== "Contact") errors.push("Contact trebuie să rămână singura destinație directă");
   const calculatorLinks = $("#nav-calculatoare-panel a").map((_, el) => $(el).attr("href")).get();
-  if (calculatorLinks.join("|") !== "/investitii-modernizarea-microintreprinderilor-apel-2#simulator-punctaj-apel-2|/calculator-soc|/dr14#dr14-punctaj") errors.push("meniul Calculatoare nu conține cele trei instrumente aprobate");
+  if (calculatorLinks.join("|") !== "/investitii-modernizarea-microintreprinderilor-apel-2#simulator-punctaj-apel-2|/calculator-soc|/dr14#dr14-punctaj|/dr12-afir#dr12-punctaj") errors.push("meniul Calculatoare nu conține cele patru instrumente aprobate");
   if ($("#navbar .nav-cta").text().trim() !== config.cta.label) errors.push("CTA-ul desktop nu corespunde configurației");
   if ($("#mobileMenu .mobile-cta").text().trim() !== config.cta.label) errors.push("CTA-ul mobil nu corespunde configurației");
   if (/\b(?:Instrumente|Ghiduri|Cuprins)\b/u.test($("#navbar, #mobileMenu").text())) errors.push("o etichetă eliminată a rămas în navigarea principală");

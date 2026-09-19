@@ -260,7 +260,20 @@ function syncPage(route, bannerIndex, { check = false, program = null } = {}) {
   if (/data-program-template(?:-version)?=/i.test(before)) {
     return { route: normalizedRoute, filePath, bannerId: "program-page-template", changed: false, skipped: true };
   }
-  const banner = bannerForRoute(normalizedRoute, bannerIndex);
+  // Page heroes exist independently of the homepage's selected carousel items.
+  const banner = bannerForRoute(normalizedRoute, bannerIndex) || (program && isPublicProgram(program) ? {
+    id: `program-${program.id}`,
+    title: program.name,
+    pageTitle: program.presentation?.pageTitle,
+    description: program.metaDescription,
+    tag: program.statusLabel,
+    statusLabel: program.statusLabel,
+    programStatus: program.status,
+    ctaLink: program.pageUrl,
+    icon: program.presentation?.icon,
+    image: program.presentation?.image,
+    officialGuideKey: program.officialGuideKeys?.[0]
+  } : null);
   if (!banner) throw new Error(`Missing banners.json mapping for ${normalizedRoute}`);
   const pageBanner = program
     ? {
