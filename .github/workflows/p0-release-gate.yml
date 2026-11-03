@@ -15,7 +15,7 @@ permissions:
 
 jobs:
   local-acceptance:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
@@ -36,7 +36,7 @@ jobs:
   staging-acceptance:
     if: github.event_name == 'workflow_dispatch'
     needs: local-acceptance
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 20
     env:
       P0_STAGING_URL: ${{ inputs.staging_url }}
@@ -54,7 +54,7 @@ jobs:
     if: github.event_name == 'workflow_dispatch'
     needs: staging-acceptance
     environment: production
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
