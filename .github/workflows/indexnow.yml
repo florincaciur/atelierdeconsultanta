@@ -16,7 +16,7 @@ jobs:
   notify-after-deploy:
     name: Notify IndexNow after the public deployment is reachable
     runs-on: ubuntu-latest
-    timeout-minutes: 8
+    timeout-minutes: 12
     steps:
       - name: Checkout full history
         uses: actions/checkout@v4
@@ -45,14 +45,14 @@ jobs:
           echo "count=$COUNT" >> "$GITHUB_OUTPUT"
           echo "Selected $COUNT changed public URLs."
 
-      - name: Wait until the changed URLs are reachable after deploy
+      - name: Wait for this exact commit to be published before notifying crawlers
         id: deployed
         if: steps.changed.outputs.count != '0'
         continue-on-error: true
         env:
           URL_FILE: ${{ runner.temp }}/indexnow-urls.txt
         run: |
-          sleep 45
+          node tools/verify-live-release.js --commit="$GITHUB_SHA" --wait-seconds=480 --manifest-only
           for attempt in {1..12}; do
             READY=true
             while IFS= read -r url; do

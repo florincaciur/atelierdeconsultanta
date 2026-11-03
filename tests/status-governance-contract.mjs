@@ -31,10 +31,13 @@ const syncedGuides = syncGuides(JSON.parse(JSON.stringify(data.guides)), data.pr
 
 assert.deepEqual(validateData(data), [], "Configurațiile taxonomiei și registrului de surse trebuie să fie valide.");
 const missingOpenEnd = structuredClone(data);
-missingOpenEnd.programs.find(program => program.id === "pocidif-21").applicationEnd = null;
+missingOpenEnd.programs.find(program => program.id === "dr12-afir").applicationEnd = null;
 assert.ok(validateData(missingOpenEnd).some(error => error.includes("OPEN cere și sfârșit oficial")), "Un termen necunoscut nu poate valida o sesiune OPEN.");
 const scheduledWithoutEnd = structuredClone(data);
-const scheduledProgram = scheduledWithoutEnd.programs.find(program => program.canonicalStatus === "SCHEDULED");
+const scheduledProgram = scheduledWithoutEnd.programs.find(program => program.id === "dr12-afir");
+scheduledProgram.canonicalStatus = "SCHEDULED";
+scheduledProgram.status = "ghid_aprobat_nedeschis";
+scheduledProgram.applicationStart = "2026-12-10";
 scheduledProgram.applicationEnd = null;
 assert.deepEqual(validateData(scheduledWithoutEnd), [], "O deschidere oficială viitoare nu impune inventarea termenului de închidere.");
 scheduledProgram.officialSources.roles.sessionAnnouncement = [];
@@ -54,10 +57,10 @@ assert.equal(programsById.size, data.programs.length, "Fiecare program trebuie s
 assert.equal(FACTUAL_FIELD_LABELS.length, 32, "Auditul trebuie să păstreze exact cele 32 de categorii factuale Task 04.");
 assert.equal(programsById.get("dr14-afir").canonicalStatus, "OPEN");
 assert.equal(programsById.get("dr18-afir").canonicalStatus, "OPEN");
-assert.equal(programsById.get("pocidif-21").canonicalStatus, "OPEN");
+assert.equal(programsById.get("pocidif-21").canonicalStatus, "CLOSED");
 assert.equal(programsById.get("pro-infra").canonicalStatus, "APPROVED_SCHEME");
-assert.equal(programsById.get("fondul-modernizare-pc1-stocare").canonicalStatus, "FINAL_GUIDE");
-assert.equal(programsById.get("dr12-afir").canonicalStatus, "FINAL_GUIDE");
+assert.equal(programsById.get("fondul-modernizare-pc1-stocare").canonicalStatus, "OPEN");
+assert.equal(programsById.get("dr12-afir").canonicalStatus, "OPEN");
 assert.equal(syncedGuides["ptj-comisia-europeana"].url, "https://commission.europa.eu/funding-and-tenders/find-funding/eu-funding-programmes/just-transition-fund_en", "Sincronizarea trebuie să păstreze sursa europeană suplimentară PTJ.");
 assert.equal(syncedGuides["ptj-comisia-europeana"].institution, "Comisia Europeană", "Sursa europeană PTJ nu poate fi reatribuită către MySMIS.");
 assert.equal(syncedGuides["ptj-romania-pnr-2023"].url, "https://commission.europa.eu/system/files/2023-05/ROMANIA%20NRP%202023%20RO.pdf", "Sincronizarea trebuie să păstreze documentul oficial pentru teritoriile PTJ.");
@@ -95,8 +98,8 @@ for (const program of data.programs) {
   }
 }
 
-assert.equal(programsById.get("pocidif-21").applicationStart <= data.taxonomy.reviewedAt, true, "OPEN trebuie să fi început.");
-assert.equal(data.taxonomy.reviewedAt <= programsById.get("pocidif-21").applicationEnd, true, "OPEN nu poate avea deadline depășit.");
+assert.equal(programsById.get("dr12-afir").applicationStart <= data.taxonomy.reviewedAt, true, "OPEN trebuie să fi început.");
+assert.equal(data.taxonomy.reviewedAt <= programsById.get("dr12-afir").applicationEnd, true, "OPEN nu poate avea deadline depășit.");
 assert.equal(programsById.get("dr14-afir").applicationStart <= data.taxonomy.reviewedAt, true, "Sesiunea verificată OPEN trebuie să fi început.");
 assert.equal(programsById.get("dr18-afir").applicationStart <= data.taxonomy.reviewedAt, true, "Sesiunea verificată OPEN trebuie să fi început.");
 

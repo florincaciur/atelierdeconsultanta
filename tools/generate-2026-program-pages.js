@@ -47,7 +47,7 @@ const PAGE_CONTENT = {
     "caution": [
       "Proiectele numai cu baterii, numai cu pompe de căldură, de înlocuire sau de extindere necontorizată separat nu sunt eligibile pe această linie.",
       "Energia produsă trebuie utilizată 100% pentru autoconsum, iar energia stocată trebuie să provină 100% din instalația solară proprie.",
-      "Anunțul oficial confirmă depunerea prin AFIR între 28.09.2026, ora 10:00 și 20.11.2026, ora 23:59, sau până la epuizarea bugetului. La verificarea din 13.09.2026 sesiunea nu a început."
+      "Anunțul oficial confirmă depunerea prin AFIR între 28.09.2026, ora 10:00 și 20.11.2026, ora 23:59, sau până la epuizarea bugetului. La verificarea din 03.11.2026 sesiunea este în derulare."
     ],
     "investments": [
       [
@@ -156,7 +156,7 @@ const PAGE_CONTENT = {
       ],
       [
         "Când se depun proiectele?",
-        "Anunțul oficial confirmă depunerea prin AFIR între 28.09.2026, ora 10:00 și 20.11.2026, ora 23:59, sau până la epuizarea bugetului. La verificarea din 13.09.2026 sesiunea nu a început."
+        "Anunțul oficial confirmă depunerea prin AFIR între 28.09.2026, ora 10:00 și 20.11.2026, ora 23:59, sau până la epuizarea bugetului. La verificarea din 03.11.2026 sesiunea este în derulare."
       ],
       [
         "Ce vechime poate avea studiul de fezabilitate?",
@@ -357,7 +357,7 @@ const PAGE_CONTENT = {
       ],
       [
         "Când se depun proiectele?",
-        "Anunțul oficial confirmă depunerea prin AFIR între 28.09.2026, ora 10:00 și 20.11.2026, ora 23:59, sau până la epuizarea bugetului. La verificarea din 13.09.2026 sesiunea nu a început."
+        "Anunțul oficial confirmă depunerea prin AFIR între 28.09.2026, ora 10:00 și 20.11.2026, ora 23:59, sau până la epuizarea bugetului. La verificarea din 03.11.2026 sesiunea este în derulare."
       ],
       [
         "Până când trebuie finalizată investiția?",
@@ -523,7 +523,7 @@ const PAGE_CONTENT = {
     "faqs": [
       [
         "Este deschisă depunerea?",
-        "La verificarea din 6 septembrie 2026, BID indică programul în curs de operaționalizare. Cererile de credit vor fi primite de băncile partenere după publicarea listei și a documentelor operaționale."
+        "La verificarea din 3 noiembrie 2026, BID indică programul în curs de operaționalizare. Cererile de credit vor fi primite de băncile partenere după publicarea listei și a documentelor operaționale."
       ],
       [
         "Grantul poate ajunge la 200.000 euro?",
@@ -572,165 +572,15 @@ const PAGE_CONTENT = {
       ]
     }
   },
-  "e-drive": {
-    "h1": "e-DRIVE 2026 – finanțare pentru vehicule electrice M1, M2 și M3",
-    "eyebrow": "Transport rutier · vehicule cu emisii zero",
-    "lead": "Schema e-DRIVE explicată pe cele două măsuri: înlocuirea flotelor IMM-urilor și a vehiculelor operatorilor de transport rutier de persoane, cu plafoane și criterii diferite.",
-    "metrics": [
-      [
-        "max. 30.000 €",
-        "ajutor per vehicul M1 · măsura 1"
-      ],
-      [
-        "max. 300.000 €",
-        "plafon de minimis · întreprindere unică"
-      ],
-      [
-        "max. 4 mil. €",
-        "per beneficiar · măsura 2"
-      ],
-      [
-        "56,9 mil. €",
-        "buget total al schemei"
-      ]
-    ],
-    "answer": "e-DRIVE este schema aprobată pentru înlocuirea vehiculelor poluante cu vehicule electrice noi. Măsura 1 se adresează microîntreprinderilor și IMM-urilor pentru vehicule M1 și M2, iar măsura 2 operatorilor de transport rutier de persoane pentru M1, M2 și M3. Bugetul total este de 56,9 milioane euro. Aprobarea schemei nu echivalează cu deschiderea depunerii.",
-    "fit": [
-      "Pentru măsura 1, ești microîntreprindere sau IMM și respecți sectoarele excluse de schema de minimis.",
-      "Pentru măsura 2, desfășori transport rutier de persoane prin activitățile CAEN Rev. 3 prevăzute de schemă.",
-      "Vehiculele propuse sunt noi și exclusiv electrice, iar vehiculele poluante înlocuite pot fi casate în termen."
-    ],
-    "caution": [
-      "Vehiculele hibride și cele hibride reîncărcabile nu sunt vehicule cu emisii zero în sensul schemei.",
-      "Vehiculul poluant înlocuit trebuie casat în maximum 60 de zile de la primirea vehiculului electric.",
-      "TVA nu este eligibilă, iar ajutorul competitiv se raportează la diferența de cost față de alternativa convențională comparabilă."
-    ],
-    "investments": [
-      [
-        "Măsura 1 · de minimis",
-        "Vehicule electrice noi M1 și M2, în limita a 300.000 euro pe întreprindere unică; pentru un vehicul M1, ajutorul este limitat la 30.000 euro."
-      ],
-      [
-        "Măsura 2 · competitivă",
-        "Vehicule electrice noi M1, M2 și M3 pentru transport rutier de persoane, cu maximum 4 milioane euro per beneficiar."
-      ],
-      [
-        "Tranziția flotei",
-        "Analiza include vehiculele scoase din uz, infrastructura de încărcare, asigurarea, mentenanța și exploatarea noii flote."
-      ]
-    ],
-    "documents": [
-      [
-        "Eligibilitatea întreprinderii",
-        "Certificat constatator, activitatea CAEN când măsura o cere, licențe și structura întreprinderii unice."
-      ],
-      [
-        "Flota existentă",
-        "Inventar, proprietate de minimum un an ori documentele excepției prevăzute de schemă, caracteristici tehnice și vehiculele propuse pentru casare."
-      ],
-      [
-        "Configurația noii flote",
-        "Minimum două oferte în condițiile schemei, categorie de omologare, autonomie, capacitate, garanții și calendar de livrare."
-      ],
-      [
-        "Planul financiar",
-        "Cost comparabil, ajutor solicitat, surse proprii, TVA neeligibilă și costurile operaționale neeligibile."
-      ]
-    ],
-    "steps": [
-      "Alege măsura după categoria beneficiarului, activitate și vehicule.",
-      "Verifică încadrarea ca întreprindere unică și ajutoarele de minimis relevante.",
-      "Corelează fiecare vehicul nou cu obligația de casare în 60 de zile și cu infrastructura de încărcare.",
-      "Depune numai după publicarea calendarului și a procedurii operaționale."
-    ],
-    "extraSources": [
-      [
-        "Ordinul de modificare nr. 100/12.02.2026",
-        "https://legislatie.just.ro/Public/DetaliiDocument/307361"
-      ]
-    ],
-    "faqs": [
-      [
-        "Programul e-DRIVE este deschis?",
-        "Schema este aprobată și actualizată, dar sursele verificate la 6 septembrie 2026 nu confirmă o fereastră activă de depunere. Aprobarea schemei nu echivalează cu lansarea sesiunii."
-      ],
-      [
-        "Cine poate aplica la măsura 1?",
-        "Microîntreprinderile și IMM-urile, indiferent de codul CAEN, cu respectarea sectoarelor excluse de schema de minimis și a tuturor condițiilor aplicabile."
-      ],
-      [
-        "Sunt eligibile vehiculele hibride?",
-        "Nu. Schema vizează vehicule noi exclusiv electrice; o ofertă hibridă nu este echivalentă."
-      ],
-      [
-        "Care este plafonul de minimis?",
-        "Măsura 1 folosește plafonul de 300.000 euro pe întreprindere unică; ajutorul pentru un vehicul M1 este limitat la 30.000 euro."
-      ],
-      [
-        "Ce înseamnă măsura competitivă?",
-        "În măsura 2, ajutorul se raportează la costul suplimentar față de un vehicul convențional comparabil și nu poate depăși 4 milioane euro pe beneficiar."
-      ],
-      [
-        "Casarea este obligatorie?",
-        "Da. Vehiculul poluant înlocuit trebuie casat în maximum 60 de zile de la primirea vehiculului cu emisii zero."
-      ],
-      [
-        "Cât trebuie păstrată investiția?",
-        "Vehiculele finanțate trebuie menținute în investiție timp de cinci ani, conform schemei."
-      ],
-      [
-        "Se finanțează o mașină electrică pe firmă?",
-        "Măsura 1 include vehicule M1 noi și exclusiv electrice pentru IMM-uri eligibile, cu maximum 30.000 EUR/vehicul, în limitele de minimis și cu obligația de înlocuire și casare. Nu orice achiziție auto este eligibilă."
-      ],
-      [
-        "e-DRIVE finanțează și stații de încărcare?",
-        "Schema e-DRIVE vizează vehiculele. Pentru infrastructura publică de reîncărcare verifică separat e-Mobility RO și condițiile sale de amplasare și racordare."
-      ]
-    ],
-    "comparison": {
-      "title": "e-DRIVE: măsura 1 sau măsura 2?",
-      "headers": [
-        "Criteriu",
-        "Măsura 1 — de minimis",
-        "Măsura 2 — competitivă"
-      ],
-      "rows": [
-        [
-          "Beneficiar",
-          "Microîntreprinderi și IMM-uri, cu excluderile schemei",
-          "Operatori eligibili de transport rutier de persoane"
-        ],
-        [
-          "Vehicule",
-          "M1 și M2, noi și exclusiv electrice",
-          "M1, M2 și M3, noi și exclusiv electrice"
-        ],
-        [
-          "Plafon",
-          "30.000 EUR pentru M1; 300.000 EUR pe întreprindere unică",
-          "4 milioane EUR/beneficiar"
-        ],
-        [
-          "Baza de bugetare",
-          "Ajutoarele de minimis cumulate și plafonul aplicabil vehiculului",
-          "Diferența de cost față de alternativa convențională comparabilă"
-        ],
-        [
-          "Casare",
-          "În maximum 60 de zile de la primirea vehiculului electric",
-          "În maximum 60 de zile de la primirea vehiculului electric"
-        ]
-      ]
-    }
-  },
+  "e-drive": require("../config/e-drive-content.json"),
   "e-mobility-ro": {
-    "h1": "e-Mobility RO 2026 – finanțare pentru stații de reîncărcare",
+    "h1": "e-Mobility RO 2026 – Submăsura 1 pentru stații de reîncărcare",
     "eyebrow": "Infrastructură rutieră · reîncărcare electrică",
-    "lead": "e-Mobility RO este prezentat ca proiect de infrastructură, nu ca simplă achiziție de stații: amplasamentul, racordarea, accesul public și configurația tehnică decid fezabilitatea.",
+    "lead": "Submăsura 1 este deschisă până la 27 noiembrie 2026. Verifică amplasamentul, racordarea, configurația stațiilor și documentele înainte de oferta concurențială.",
     "metrics": [
       [
-        "299 mil. €",
-        "bugetul schemei"
+        "49,5 mil. €",
+        "bugetul apelului Submăsura 1"
       ],
       [
         "max. 30 mil. €",
@@ -741,11 +591,11 @@ const PAGE_CONTENT = {
         "pe șosea de o ieșire TEN-T"
       ],
       [
-        "competitiv",
-        "ajutorul se stabilește prin ofertare"
+        "27 noiembrie",
+        "termen de depunere în MySMIS 2021"
       ]
     ],
-    "answer": "Schema e-Mobility RO susține infrastructură de reîncărcare de-a lungul autostrăzilor, drumurilor expres și drumurilor naționale ori în proximitatea admisă a ieșirilor rețelei TEN-T. Pot fi analizate și producția regenerabilă și stocarea asociate, dacă respectă limitele și legătura funcțională prevăzute de schemă.",
+    "answer": "e-Mobility RO – Submăsura 1 este deschisă în MySMIS 2021 între 28 septembrie 2026, ora 12:00, și 27 noiembrie 2026, ora 23:59. Apelul PFM/1233/PFM_P9/NA/P9_OS3/FM_9.3 are 49,5 milioane EUR. Acest buget este distinct de bugetul total al schemei, de 299 milioane EUR, și de alocarea de 100 milioane EUR a Submăsurii 1 pentru toate procedurile. Se finanțează infrastructură publică de reîncărcare pe rețeaua rutieră eligibilă, cu maximum 30 milioane EUR pe întreprindere și selecție concurențială. Amplasamentul, racordarea, puterea, accesul public și documentele solicitantului trebuie verificate după ghidul aprobat prin OMTI nr. 886/2026.",
     "fit": [
       "Întreprinderea este eligibilă conform schemei și nu se află în situațiile de excludere.",
       "Ai un amplasament eligibil, cu drepturi clare și acces rutier demonstrabil.",
@@ -792,18 +642,22 @@ const PAGE_CONTENT = {
       "Elimină amplasamentele care nu satisfac coridorul și accesul eligibil.",
       "Cere date de racordare înainte de a fixa bugetul și calendarul.",
       "Dimensionează stațiile după trafic și obligațiile tehnice, nu doar după plafon.",
-      "Pregătește oferta competitivă după publicarea documentelor de depunere."
+      "Depune oferta concurențială în MySMIS 2021 până la 27 noiembrie 2026, după reverificarea documentelor MTI."
     ],
     "extraSources": [
       [
-        "Schema e-Mobility RO – Portal Legislativ",
-        "https://legislatie.just.ro/Public/DetaliiDocument/301593"
+        "Ghidul și anexele Submăsurii 1, pachet ZIP",
+        "https://fonduri.mt.ro/documente/FIN_Ghid_e-Mobility-submasura1_%202026.zip"
+      ],
+      [
+        "Schema e-Mobility RO – OMTI 746/2026",
+        "https://legislatie.just.ro/Public/DetaliiDocument/313291"
       ]
     ],
     "faqs": [
       [
         "e-Mobility RO este deschis pentru depuneri?",
-        "Nu este prezentat ca apel deschis. Schema este aprobată, iar un calendar activ trebuie confirmat separat."
+        "Da. Depunerea este deschisă pentru Submăsura 1: 28 septembrie 2026, ora 12:00–27 noiembrie 2026, ora 23:59, în MySMIS 2021. Bugetul apelului este de 49,5 milioane EUR, conform anunțului MTI din 26 septembrie."
       ],
       [
         "Pot aplica firmele nou-înființate?",
@@ -836,6 +690,10 @@ const PAGE_CONTENT = {
         [
           "Amplasament",
           "Drum eligibil sau cel mult 3 km pe șosea de cea mai apropiată ieșire TEN-T"
+        ],
+        [
+          "Vehicule ușoare",
+          "Cel puțin două puncte de minimum 150 kW și putere totală instalată și absorbită de minimum 600 kW"
         ],
         [
           "Vehicule grele, rețea centrală TEN-T",
@@ -877,18 +735,18 @@ const PAGE_CONTENT = {
         "plafon al ajutorului"
       ],
       [
-        "stand-alone",
-        "stocare racordată la rețea"
+        "15 noiembrie",
+        "termen prelungit în MySMIS 2021"
       ]
     ],
-    "answer": "Ghidul aprobat vizează investiții noi în capacități de stocare stand-alone conectate la rețea. Bugetul este de 150 milioane euro, ajutorul poate ajunge la 15 milioane euro pe întreprindere și este plafonat la 69.000 euro/MWh. Perioada și mecanismul operațional de depunere nu sunt încă anunțate.",
+    "answer": "PC1 Stocare stand-alone este deschis în MySMIS 2021 până la 15 noiembrie 2026, ora 23:59, prin prelungirea publicată de Ministerul Energiei la 22 octombrie. Apelul are 150 milioane EUR și finanțează instalații autonome noi de stocare în baterii, conectate la rețea, cu minimum 1 MW și raport capacitate/putere de cel puțin 2:1. Ajutorul poate ajunge la 15 milioane EUR pe întreprindere și 69.000 EUR/MWh, în limita costurilor eligibile și a procedurii concurențiale. Sunt eligibile întreprinderi de orice mărime, inclusiv firme noi cu capital social subscris și vărsat de minimum 100.000 lei, dacă respectă activitățile CAEN 35 și celelalte condiții. Implementarea este de maximum 48 de luni de la semnarea contractului.",
     "fit": [
       "Activitatea și structura solicitantului se încadrează în condițiile domeniului energetic.",
       "Proiectul este o capacitate de stocare stand-alone și are o soluție credibilă de racordare.",
       "Poți demonstra capacitatea financiară, drepturile asupra terenului și implementarea individuală a proiectului."
     ],
     "caution": [
-      "Pagina nu descrie un apel deschis: ghidul este aprobat, dar calendarul depunerii nu este publicat.",
+      "Depunerea este deschisă până la 15 noiembrie 2026, ora 23:59. Se verifică forma curentă a documentelor și eventualele modificări înainte de transmitere.",
       "Plafonul pe MWh este o limită a ajutorului, nu o promisiune de finanțare la valoarea maximă.",
       "Racordarea, licențierea și veniturile din piața de energie necesită analiză separată."
     ],
@@ -932,6 +790,14 @@ const PAGE_CONTENT = {
     ],
     "extraSources": [
       [
+        "Anunțul oficial de lansare PC1 Stocare stand-alone",
+        "https://energie.gov.ro/wp-content/uploads/2026/08/Anunt-lansare-apel-proiecte-STOCARE-STAND-ALONE_final.pdf"
+      ],
+      [
+        "Prelungirea până la 15 noiembrie 2026",
+        "https://energie.gov.ro/wp-content/uploads/2026/10/Anunt-prelungire-apel-proiecte-STOCARE-STAND-ALONE.docx"
+      ],
+      [
         "Cadrul Fondului pentru Modernizare – OUG nr. 60/2022",
         "https://legislatie.just.ro/Public/DetaliiDocument/294449"
       ]
@@ -939,7 +805,7 @@ const PAGE_CONTENT = {
     "faqs": [
       [
         "Apelul PC1 stocare este deschis?",
-        "Nu. Ghidul final a fost publicat la 17 august 2026, dar la 29 august 2026 perioada și mecanismul operațional de depunere nu erau anunțate."
+        "Da. Depunerea este deschisă în MySMIS 2021 din 1 septembrie 2026, ora 12:00, și este prelungită până la 15 noiembrie 2026, ora 23:59, prin anunțul Ministerului Energiei din 22 octombrie."
       ],
       [
         "Ce înseamnă stand-alone?",
@@ -947,7 +813,7 @@ const PAGE_CONTENT = {
       ],
       [
         "Pot aplica firme nou-înființate?",
-        "Da, dacă îndeplinesc condițiile aplicabile din ghidul aprobat, inclusiv cerințele juridice și financiare prevăzute pentru această categorie."
+        "Da, în condițiile ghidului și anunțului de lansare. Pentru întreprinderile nou-înființate se cere capital social subscris și vărsat de minimum 100.000 lei; sunt necesare activități din diviziunea CAEN 35."
       ],
       [
         "Finanțarea ajunge la 15 milioane euro?",
@@ -994,6 +860,21 @@ function renderComparison(comparison, program) {
   return '<section class="program-section program-comparison" aria-label="' + e(comparison.title) + '"><div class="section-heading"><h2>' + e(comparison.title) + '</h2><p>Reguli verificate la ' + e(program.verifiedAt) + '. <a href="' + e(program.sourceUrl) + '" target="_blank" rel="noopener noreferrer">Consultă sursa oficială</a>.</p></div><div class="program-comparison-scroll" role="region" tabindex="0" aria-label="Tabel comparativ: ' + e(comparison.title) + '"><table><caption>' + e(comparison.title) + '</caption><thead><tr>' + comparison.headers.map(h=>'<th scope="col">'+e(h)+'</th>').join('') + '</tr></thead><tbody>' + comparison.rows.map(row=>'<tr>'+row.map((cell,i)=>i===0?'<th scope="row">'+e(cell)+'</th>':'<td>'+e(cell)+'</td>').join('')+'</tr>').join('') + '</tbody></table></div></section>';
 }
 
+function renderMeasureNavigation(content) {
+  if (!content.measures) return '';
+  return `<nav class="edrive-navigation" aria-label="Cuprins e-DRIVE"><a href="#masura-1">01 · Măsura 1 pentru IMM-uri</a><a href="#masura-2">02 · Măsura 2 pentru transportatori</a><a href="#documente">Documente comune</a><a href="#calendar">Calendar și pași</a><a href="#surse-oficiale">Ghiduri și surse</a></nav>`;
+}
+
+function renderMeasures(content) {
+  return (content.measures || []).map(measure => `<section class="program-section edrive-measure" id="${e(measure.id)}" aria-labelledby="${e(measure.id)}-title">
+    <div class="edrive-measure__heading"><span class="edrive-measure__number" aria-hidden="true">${e(measure.number)}</span><div><p class="section-kicker">${e(measure.label)}</p><h2 id="${e(measure.id)}-title">${e(measure.title)}</h2><p>${e(measure.intro)}</p></div></div>
+    <dl class="edrive-measure__funding">${measure.funding.map(([label,value])=>`<div><dt>${e(label)}</dt><dd>${e(value)}</dd></div>`).join('')}</dl>
+    <p class="edrive-measure__version">Condiții din proiectul de ghid publicat la 3 noiembrie 2026, în consultare publică.</p>
+    <div class="edrive-measure__groups">${measure.groups.map(group=>`<article class="edrive-measure__group"><h3>${e(group.title)}</h3>${renderList(group.items)}</article>`).join('')}</div>
+    <a class="program-button edrive-measure__cta" href="/contact#program_slug=e-drive&amp;source_page=%2Fe-drive">Solicită analiza pentru Măsura ${e(Number(measure.number))}</a>
+  </section>`).join('\n');
+}
+
 function renderPage(program, content) {
   const canonical = `${SITE}${program.pageUrl}`;
   const faqSchema = content.faqs.map(([name, text]) => ({ "@type": "Question", name, acceptedAnswer: { "@type": "Answer", text } }));
@@ -1009,7 +890,7 @@ function renderPage(program, content) {
   <link rel="canonical" href="${canonical}"><link rel="icon" href="/favicon.png">
   <meta property="og:type" content="website"><meta property="og:locale" content="ro_RO"><meta property="og:title" content="${e(program.metaTitle)}"><meta property="og:description" content="${e(program.metaDescription)}"><meta property="og:url" content="${canonical}"><meta property="og:image" content="${SITE}/og-image.jpg"><meta property="og:image:alt" content="${e(`${program.shortName} — FABER`)}">
   <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${e(program.metaTitle)}"><meta name="twitter:description" content="${e(program.metaDescription)}"><meta name="twitter:image" content="${SITE}/og-image.jpg"><meta name="twitter:image:alt" content="${e(`${program.shortName} — FABER`)}">
-  <link rel="stylesheet" href="/assets/seo-hub.css"><link rel="stylesheet" href="/assets/program-showcase-2026.css?v=20260906-1">
+  <link rel="stylesheet" href="/assets/seo-hub.css"><link rel="stylesheet" href="/assets/program-showcase-2026.css?v=20260906-1">${content.measures ? '\n  <link rel="stylesheet" href="/assets/edrive-measures.css?v=20261103-1">' : ''}
   <script type="application/ld+json">${JSON.stringify(schema).replace(/</g, "\\u003c")}</script>
 </head><body class="program-showcase-page page-family-program" data-page-type="program" data-program-id="${e(program.id)}">
 ${HEADER}
@@ -1023,13 +904,16 @@ ${HEADER}
     </div><div class="program-hero__visual">${renderSvg(program.slug)}</div>
   </section>
   <section class="program-metrics" aria-label="Repere de finanțare">${content.metrics.map(([value, label]) => `<div><strong>${e(value)}</strong><span>${e(label)}</span></div>`).join("")}</section>
+  ${content.notice ? `<aside class="edrive-notice" aria-labelledby="edrive-consultare"><p class="section-kicker">Statut la 3 noiembrie 2026</p><h2 id="edrive-consultare">${e(content.notice.title)}</h2><p>${e(content.notice.text)}</p><a href="${e(content.notice.url)}" target="_blank" rel="noopener noreferrer">Consultă anunțul MTI</a></aside>` : ''}
+  ${renderMeasureNavigation(content)}
   <section class="program-section program-section--answer" id="raspuns-rapid"><div><p class="section-kicker">Răspuns rapid</p><h2>Ce finanțează și în ce stadiu este?</h2></div><div class="answer-card"><p>${e(content.answer)}</p><small>Statut verificat la <time datetime="${program.verifiedAt}">${program.verifiedAt}</time>. ${e(program.editorialDisclaimer)}</small></div></section>
   ${renderComparison(content.comparison, program)}
+  ${renderMeasures(content)}
   ${(content.sections || []).map(section => `<section class="program-section program-section--soft"><div class="section-heading"><p class="section-kicker">Date oficiale</p><h2>${e(section.title)}</h2><p>${e(section.intro)}</p></div><div class="program-card-grid">${renderCards(section.rows)}</div></section>`).join("\n")}
   <section class="program-section program-section--fit"><div class="section-heading"><p class="section-kicker">Filtru inițial</p><h2>Merită continuată analiza?</h2><p>Compară profilul proiectului cu aceste criterii înainte de a investi în documentație. Concluzia finală se bazează pe actele solicitantului și pe forma oficială aplicabilă.</p></div><div class="program-fit-grid"><article class="fit-card fit-card--yes"><h3>Profil care merită verificat</h3>${renderList(content.fit)}</article><article class="fit-card fit-card--caution"><h3>Condiții care cer clarificare</h3>${renderList(content.caution)}</article></div></section>
-  <section class="program-section program-section--soft"><div class="section-heading"><p class="section-kicker">Arhitectura proiectului</p><h2>Ce intră în analiza investiției</h2></div><div class="program-card-grid">${renderCards(content.investments)}</div></section>
-  <section class="program-section program-section--documents"><div class="section-heading"><p class="section-kicker">Dosar de lucru</p><h2>Documente de pregătit</h2><p>Deschide fiecare grup și construiește o versiune trasabilă, cu dată, sursă și responsabil.</p></div><div class="program-details">${renderDetails(content.documents)}</div></section>
-  <section class="program-section program-section--journey" data-program-journey-section><div class="section-heading"><p class="section-kicker">Parcurs recomandat</p><h2>De la idee la decizia de depunere</h2><p>Explorează etapele și verifică progresiv deciziile care susțin o depunere bine fundamentată.</p></div><div class="program-journey" data-program-journey style="--journey-progress:0"><svg class="program-journey__rail" data-journey-svg viewBox="0 0 100 100" preserveAspectRatio="xMinYMin meet" aria-hidden="true" focusable="false"><path class="program-journey__track" data-journey-track d="M 10 14 L 10 82" pathLength="1"></path><path class="program-journey__progress" data-journey-progress d="M 10 14 L 10 82" pathLength="1"></path></svg><ol class="program-steps">${content.steps.map((step, index) => `<li><button class="program-step" type="button" data-journey-step${index === 0 ? ` aria-current="step"` : ""} style="--step-index:${index}"><span class="program-step__number" aria-hidden="true">${index + 1}</span><span class="program-step__copy">${e(step)}</span></button></li>`).join("")}</ol><p class="program-journey__hint">Selectează un pas sau folosește tastele săgeată pentru a urmări traseul.</p></div></section>
+  <section class="program-section program-section--soft"><div class="section-heading"><p class="section-kicker">${content.measures ? 'Obligații comune' : 'Arhitectura proiectului'}</p><h2>${content.measures ? 'Implementarea și menținerea investiției' : 'Ce intră în analiza investiției'}</h2></div><div class="program-card-grid">${renderCards(content.investments)}</div></section>
+  <section class="program-section program-section--documents" id="documente"><div class="section-heading"><p class="section-kicker">Dosar de lucru</p><h2>${content.measures ? 'Documente și verificări comune' : 'Documente de pregătit'}</h2><p>Deschide fiecare grup și construiește o versiune trasabilă, cu dată, sursă și responsabil.</p></div><div class="program-details">${renderDetails(content.documents)}</div></section>
+  <section class="program-section program-section--journey" id="calendar" data-program-journey-section><div class="section-heading"><p class="section-kicker">Parcurs recomandat</p><h2>De la idee la decizia de depunere</h2><p>Explorează etapele și verifică progresiv deciziile care susțin o depunere bine fundamentată.</p></div><div class="program-journey" data-program-journey style="--journey-progress:0"><svg class="program-journey__rail" data-journey-svg viewBox="0 0 100 100" preserveAspectRatio="xMinYMin meet" aria-hidden="true" focusable="false"><path class="program-journey__track" data-journey-track d="M 10 14 L 10 82" pathLength="1"></path><path class="program-journey__progress" data-journey-progress d="M 10 14 L 10 82" pathLength="1"></path></svg><ol class="program-steps">${content.steps.map((step, index) => `<li><button class="program-step" type="button" data-journey-step${index === 0 ? ` aria-current="step"` : ""} style="--step-index:${index}"><span class="program-step__number" aria-hidden="true">${index + 1}</span><span class="program-step__copy">${e(step)}</span></button></li>`).join("")}</ol><p class="program-journey__hint">Selectează un pas sau folosește tastele săgeată pentru a urmări traseul.</p></div></section>
   <section class="program-section program-section--source" id="surse-oficiale"><div><p class="section-kicker">Trasabilitate</p><h2>Surse oficiale și limitări</h2><p>Pagina consolidează actele disponibile, în limbaj propriu, și păstrează distinct statutul schemei de existența unei sesiuni de depunere.</p></div><div class="source-card"><a href="${e(program.sourceUrl)}" target="_blank" rel="noopener noreferrer"><strong>${e(program.sourceName)}</strong><span>${e(program.sourceVersion)}</span></a>${content.extraSources.map(([label, url]) => `<a href="${e(url)}" target="_blank" rel="noopener noreferrer"><strong>${e(label)}</strong><span>Deschide sursa instituțională</span></a>`).join("")}<p>Ultima verificare editorială: <time datetime="${program.verifiedAt}">${program.verifiedAt}</time>.</p></div></section>
   <section class="program-section program-section--faq"><div class="section-heading"><p class="section-kicker">Întrebări frecvente</p><h2>Clarificări înainte de pregătire</h2></div><div class="program-details">${renderDetails(content.faqs)}</div></section>
   <section class="program-final-cta"><div><p class="section-kicker">Următorul pas</p><h2>Verifică proiectul pe documente, nu doar pe promisiunea programului.</h2><p>Trimite profilul solicitantului, investiția, amplasamentul și bugetul. Primești o concluzie orientativă și lista neclarităților care trebuie rezolvate.</p></div><a class="program-button program-button--primary" href="/contact#program_slug=${e(program.slug)}&source_page=${encodeURIComponent(program.pageUrl)}">Începe verificarea</a></section>

@@ -12,6 +12,7 @@ const { findPublicHtmlFiles } = require('../tools/sync-global-header');
 const { validateConfig } = require('../tools/validate-seo-snippets');
 const DIST = process.argv.includes('--dist');
 const BASE = DIST ? path.join(ROOT, 'dist') : ROOT;
+const programRegistry = JSON.parse(fs.readFileSync(path.join(ROOT, 'config/seo-programs.json'), 'utf8')).programs;
 const logo = '/assets/faber-navbar-refined.svg';
 assert.equal(createHash('sha256').update(fs.readFileSync(path.join(BASE, 'assets/faber-navbar-20260906.jpg'))).digest('hex'),
   'a9bd8ebbc9c0b787dc7e57abcfb121219b30ce0a4e6a58877199492b4da12a56', 'Logo must preserve the supplied image');
@@ -43,12 +44,12 @@ for (const source of findPublicHtmlFiles()) {
 assert.ok(checked >= 100, 'Check public navbar coverage');
 
 const cases = [
-  ['/dr14', [/Sesiune deschisă|depuneri deschise/i, /50\.000/, /montaj/i], [/Nu încă\./i]],
+  ['/dr14', [/Sesiune deschisă|depuneri deschise|Depunerea este deschisă/i, /16 noiembrie/, /50\.000/, /montaj/i], [/Nu încă\./i]],
   ['/dr12-afir', [/200\.000/, /ghid final/i, /12\.000/], [/Pentru query-ul/i]],
   ['/investitii-modernizarea-microintreprinderilor-apel-2', [/100\.000/, /300\.000/, /28 septembrie 2026/i], []],
   ['/e-drive', [/30\.000/, /300\.000/, /4 milioane/, /60 de zile/], []],
   ['/pro-infra', [/15(?:\.000\.000| milioane)/, /EMS/, /excep/i], []],
-  ['/e-mobility', [/30 milioane/, /75%/, /pe șosea/, /nou-înființate/], []],
+  ['/e-mobility', [/30 milioane/, /49,5 milioane/, /27 noiembrie 2026/, /600 kW/, /pe șosea/, /nou-înființate/], []],
   ['/diaspora-investeste-acasa', [/200\.000/, /5%/, /10%/, /15%/, /operaționalizare/], []],
 ];
 for (const [route, expected, forbidden] of cases) {
@@ -61,7 +62,7 @@ for (const [route, expected, forbidden] of cases) {
   assert.equal($('head > title').length, 1);
   assert.equal($('link[rel=canonical]').attr('href'), `https://atelierdeconsultanta.ro${route}`);
   assert.doesNotMatch($('meta[name=robots]').attr('content') || '', /noindex|nosnippet/);
-  assert.equal($('[data-aeo-program-summary]').first().attr('data-verified-at'), route === '/dr12-afir' ? '2026-09-19' : '2026-09-06');
+  assert.equal($('[data-aeo-program-summary]').first().attr('data-verified-at'), programRegistry.find(program => program.pageUrl === route).verifiedAt);
   $('script[type="application/ld+json"]').each((_, el) => assert.doesNotThrow(() => JSON.parse($(el).html())));
 }
 

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-19T10:00:21.969Z",
+  "generatedAt": "2026-11-03T20:11:50.189Z",
   "canonicalUrlCount": 105,
   "changes": [
     {
@@ -11509,6 +11509,14 @@
     {
       "route": "/dr12-afir",
       "sourceFile": "config/seo-programs.json",
+      "location": "pages.0.scoring.1",
+      "oldFragment": "Prag de 80 de puncte în prima etapă și 45 în a doua; sesiunea se desfășoară între 6 octombrie și 2 decembrie 2026, în condițiile anunțului AFIR.",
+      "newFragment": "Prag de 80 de puncte în prima etapă și 45 în a două; sesiunea se desfășoară între 6 octombrie și 2 decembrie 2026, în condițiile anunțului AFIR.",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/dr12-afir",
+      "sourceFile": "config/seo-programs.json",
       "location": "pages.0.steps.1",
       "oldFragment": "Confirmam lista de investiții și excludem achizitiile care nu au legătura directa cu activitatea agricolă.",
       "newFragment": "Confirmam lista de investiții și excludem achizitiile care nu au legătura directă cu activitatea agricolă.",
@@ -12312,6 +12320,14 @@
       "location": "visible-copy",
       "oldFragment": "Bunul trebuie să intre în proprietatea beneficiarului cel târziu la ultima plată.",
       "newFragment": "Bunul trebuie să între în proprietatea beneficiarului cel târziu la ultima plată.",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/e-drive",
+      "sourceFile": "e-drive/index.html",
+      "location": "visible-copy",
+      "oldFragment": "Sunt propuse pentru finanțare vehicule M1 și M2 noi, exclusiv electrice cu baterie reîncărcată la o sursă externă. Vehiculele hibride și plug-in hybrid nu se încadrează.",
+      "newFragment": "Sunt propuse pentru finanțare vehicule M1 și M2 noi, exclusiv electrice cu baterie reîncărcată la o sursă externă. Vehiculele hibride și plug-în hybrid nu se încadrează.",
       "reason": "Diacritice și normă editorială română"
     },
     {

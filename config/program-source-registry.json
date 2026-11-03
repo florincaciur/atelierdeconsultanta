@@ -86,6 +86,86 @@
       "url": "https://energie.gov.ro/wp-content/uploads/2026/09/Anunt-lansare-apel-proiecte-stocare_entitati-publice.pdf",
       "publishedAt": "2026-09-11",
       "verifiedAt": "2026-09-13"
+    },
+    "edrive-draft-guides-20261103": {
+      "title": "e-DRIVE – ghiduri consultative Măsura 1 și Măsura 2 și anexe",
+      "authority": "Ministerul Transporturilor și Infrastructurii",
+      "documentType": "ghiduri consultative și anexe",
+      "url": "https://fonduri.mt.ro/documente/GS_M1_%C8%99i_M2.zip",
+      "publishedAt": "2026-11-03",
+      "verifiedAt": "2026-11-03"
+    },
+    "edrive-scheme-742-2026": {
+      "title": "Ordinul MTI nr. 742/2026",
+      "authority": "Ministerul Transporturilor și Infrastructurii / Portal Legislativ",
+      "documentType": "ordin de modificare a schemei",
+      "url": "https://legislatie.just.ro/Public/DetaliiDocument/313289",
+      "publishedAt": "2026-08-07",
+      "verifiedAt": "2026-11-03"
+    },
+    "afir-dr12-session-2026": {
+      "title": "Sesiune depunere de proiecte DR-12",
+      "authority": "AFIR",
+      "documentType": "anunț de sesiune",
+      "url": "https://www.afir.ro/info-la-zi/sesiune-depunere-de-proiecte-dr-12/",
+      "publishedAt": "2026-09-29",
+      "verifiedAt": "2026-11-03"
+    },
+    "afir-active-sessions-20261103": {
+      "title": "Fonduri alocate sesiunilor active",
+      "authority": "AFIR",
+      "documentType": "platformă de sesiuni active",
+      "url": "https://depunerepspac.afir.ro/Sesiune/Lista",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-03"
+    },
+    "afir-dr14-dr18-extension-2026": {
+      "title": "Prelungire sesiune depunere proiecte de investiții aferente DR-14 și DR-18",
+      "authority": "AFIR",
+      "documentType": "anunț de prelungire",
+      "url": "https://www.afir.ro/info-la-zi/prelungire-sesiune-depunere-proiecte-de-investitii-aferente-dr-14-si-dr-18/",
+      "publishedAt": "2026-10-29",
+      "verifiedAt": "2026-11-03"
+    },
+    "afir-public-energy-active-2026": {
+      "title": "Depunere în curs a proiectelor în energie a entităților publice",
+      "authority": "AFIR",
+      "documentType": "confirmare sesiune în derulare",
+      "url": "https://www.afir.ro/comunicate/depunere-in-curs-a-proiectelor-in-energie-a-entitatilor-publice/",
+      "publishedAt": "2026-09-29",
+      "verifiedAt": "2026-11-03"
+    },
+    "emobility-sm1-guide-2026": {
+      "title": "e-Mobility RO – Ghid Submăsura 1, OMTI nr. 886/2026 și anexe",
+      "authority": "MTI",
+      "documentType": "ghid aprobat și anexe",
+      "url": "https://fonduri.mt.ro/documente/FIN_Ghid_e-Mobility-submasura1_%202026.zip",
+      "publishedAt": "2026-09-25",
+      "verifiedAt": "2026-11-03"
+    },
+    "emobility-scheme-2026": {
+      "title": "Ordinul MTI nr. 746/2026",
+      "authority": "MTI / Portal Legislativ",
+      "documentType": "schemă actualizată",
+      "url": "https://legislatie.just.ro/Public/DetaliiDocument/313291",
+      "publishedAt": "2026-08-07",
+      "verifiedAt": "2026-11-03"
+    },
+    "pc1-storage-launch-2026": {
+      "title": "Anunț de lansare PC1 stocare stand-alone",
+      "authority": "Ministerul Energiei",
+      "documentType": "anunț de lansare",
+      "url": "https://energie.gov.ro/wp-content/uploads/2026/08/Anunt-lansare-apel-proiecte-STOCARE-STAND-ALONE_final.pdf",
+      "publishedAt": "2026-08-14",
+      "verifiedAt": "2026-11-03"
+    },
+    "pc1-storage-extension-2026": {
+      "title": "Prelungire sesiune PC1 stocare stand-alone până la 15.11.2026",
+      "authority": "Ministerul Energiei",
+      "documentType": "anunț de prelungire",
+      "url": "https://energie.gov.ro/wp-content/uploads/2026/10/Anunt-prelungire-apel-proiecte-STOCARE-STAND-ALONE.docx",
+      "publishedAt": "2026-10-22",
+      "verifiedAt": "2026-11-03"
     }
   },
   "programSourceAssignments": "config/seo-programs.json#programs[*].officialSources"

@@ -1,6 +1,6 @@
 # P1.20 — Metodologia Calculatorului SO
 
-Data reviziei: **22.07.2026**
+Data reviziei: **03.11.2026**
 Versiune metodă: **FABER-SO-1.0**
 Versiune coeficienți: **SOC 2020 — lista AFIR noiembrie 2024**
 

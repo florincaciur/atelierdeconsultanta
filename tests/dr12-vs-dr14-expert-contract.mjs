@@ -53,8 +53,9 @@ assert($("[data-expert-direct-answer]").nextAll("[data-aeo-question-set]").first
 
 const statusText = $(".expert-status-panel").text().replace(/\s+/gu, " ").trim();
 assert(statusText.includes(config.statusStatement));
-assert.match(statusText, /depunerea nu este deschisă/iu);
-assert(!/\bActiv\b/u.test($("main, .post-container, .post-hero").text()), "un apel nedeschis nu poate fi numit Activ");
+assert.match(statusText, /DR-12 este deschis până la 2 decembrie/iu);
+assert.match(statusText, /DR-14 până la 16 noiembrie/iu);
+assert.match(statusText, /achiziții simple DR-14 este închisă/iu);
 
 const rows = $("[data-expert-comparison-table] tbody tr");
 assert.equal(rows.length, 10, "tabelul trebuie să aibă cele zece criterii contractuale");
@@ -74,7 +75,8 @@ for (const value of ["200.000", "80%", "65%"]) {
 }
 assert(!html.includes("DE_VALIDAT_UMAN"), "tokenul intern nu poate ajunge în pagina publică");
 assert.match($("[data-comparison-row='Sprijin']").text(), /Ghid final/iu);
-assert.match($("[data-comparison-row='Calendar']").text(), /Apel nedeschis/iu);
+assert.match($("[data-comparison-row='Calendar']").text(), /2 decembrie 2026/iu);
+assert.match($("[data-comparison-row='Calendar']").text(), /16 noiembrie 2026/iu);
 
 const scenarios = $("[data-hypothetical='true']");
 assert.equal(scenarios.length, 3, "sunt necesare trei scenarii ipotetice");

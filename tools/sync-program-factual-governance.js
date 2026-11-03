@@ -432,6 +432,8 @@ function syncProgramHtml(source, program) {
   output = replaceMeta(output, /<meta\b[^>]*\bname=["']description["'][^>]*>/i, program.metaDescription);
   output = replaceMeta(output, /<meta\b[^>]*\bproperty=["']og:title["'][^>]*>/i, program.metaTitle);
   output = replaceMeta(output, /<meta\b[^>]*\bproperty=["']og:description["'][^>]*>/i, program.metaDescription);
+  output = replaceMeta(output, /<meta\b[^>]*\b(?:name|property)=["']twitter:title["'][^>]*>/i, program.metaTitle);
+  output = replaceMeta(output, /<meta\b[^>]*\b(?:name|property)=["']twitter:description["'][^>]*>/i, program.metaDescription);
   output = output.replace(/<body\b[^>]*>/i, (tag) => {
     let next = tag;
     if (!templateMode) {

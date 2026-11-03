@@ -220,7 +220,7 @@ ${config.pendingHumanValidation.map((item) => `- DE_VALIDAT_UMAN — ${item}`).j
 ## Decizia de publicare
 
 - statut publicat: DR 12 are ghid final, iar DR 14 are sesiunea lansată cu depuneri programate din 01.09.2026;
-- valorile DR 12 și DR 14 sunt publicate conform ghidurilor finale; calendarul DR 12 rămâne neanunțat;
+- valorile DR 12 și DR 14 sunt publicate conform ghidurilor finale; sesiunea DR 12 este deschisă până la 2 decembrie 2026;
 - scenariile sunt marcate explicit ca ipotetice și nu descriu clienți reali;
 - CTA-ul transmite numai \`source_page=/dr12-vs-dr14\`, fără PII în URL;
 - autorul și reviewerul sunt publicați organizațional; nu este publicat un nume personal fără acord.

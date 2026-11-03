@@ -1,0 +1,191 @@
+{
+  "h1": "e-DRIVE 2026 – Măsura 1 pentru IMM-uri și Măsura 2 pentru transportatori",
+  "eyebrow": "Fondul pentru Modernizare · Program-cheie 9",
+  "lead": "Două măsuri distincte pentru înlocuirea vehiculelor poluante cu vehicule electrice noi. Consultă beneficiarii, plafoanele, punctajul și documentele potrivite proiectului tău.",
+  "metrics": [
+    ["30.000 €", "maximum pe vehicul M1 · ambele măsuri"],
+    ["130.000 €", "maximum pe vehicul M2 · Măsura 1"],
+    ["300.000 € / 4 mil. €", "plafon întreprindere · Măsura 1 / Măsura 2"],
+    ["18 noiembrie", "termen pentru observații, nu pentru proiecte"]
+  ],
+  "answer": "e-DRIVE finanțează înlocuirea flotelor cu vehicule noi exclusiv electrice. Măsura 1 este ajutor de minimis pentru IMM-uri, cu maximum 30.000 EUR/M1, 130.000 EUR/M2 și 300.000 EUR pe întreprindere unică în orice perioadă de trei ani. Măsura 2 este ajutor de stat pentru transportatori de pasageri, pentru M1, M2 și M3, cu maximum 4 milioane EUR pe întreprindere, calculat pe diferența de cost eligibilă. Ghidurile sunt în consultare publică din 3 până la 18 noiembrie 2026. Calendarul depunerii proiectelor va fi comunicat ulterior de MTI.",
+  "notice": {
+    "title": "Ghiduri în consultare publică până la 18 noiembrie 2026",
+    "text": "MTI a publicat la 3 noiembrie 2026 proiectele de ghid și anexele pentru ambele măsuri. Condițiile de mai jos descriu versiunea consultativă și pot fi modificate înaintea aprobării. Termenul de 18 noiembrie privește transmiterea observațiilor; nu este termen de depunere a cererilor de finanțare.",
+    "url": "https://fonduri.mt.ro/transparenta/consultare-publica/fondul-pentru-modernizare/fm-mti-demareaza-procesul-de-consultare-publica-pentru-ghidurile-solicitantului-aferente-masurilor-1-si-2-ale-schemei-e-drive"
+  },
+  "comparison": {
+    "title": "e-DRIVE: diferențele dintre Măsura 1 și Măsura 2",
+    "headers": ["Criteriu", "Măsura 1 · ajutor de minimis", "Măsura 2 · ajutor de stat"],
+    "rows": [
+      ["Solicitanți", "Microîntreprinderi, întreprinderi mici și mijlocii", "Operatori de transport rutier de pasageri, inclusiv întreprinderi mari"],
+      ["Activități", "Indiferent de CAEN, cu respectarea sectoarelor excluse", "CAEN Rev. 3: 4931, 4932 și 4933; licențe și autorizații după activitate"],
+      ["Vehicule noi", "M1 și M2, exclusiv electrice", "M1, M2 și M3, exclusiv electrice; proceduri separate pe categorie"],
+      ["Bugetul măsurii", "15 milioane EUR", "41,9 milioane EUR"],
+      ["Limita pe întreprindere", "300.000 EUR pe întreprindere unică în orice perioadă de trei ani, inclusiv alte ajutoare de minimis", "4 milioane EUR cumulat pe întreprindere în cadrul schemei"],
+      ["Limita pe vehicul", "M1: 30.000 EUR; M2: 130.000 EUR", "M1: 30.000 EUR; M2 și M3: în limita costului suplimentar eligibil și a plafonului pe întreprindere"],
+      ["Cost eligibil", "Costul achiziției fără TVA, în limitele pe vehicul și de minimis", "Diferența fără TVA între vehiculul electric și unul convențional comparabil"],
+      ["Selecție", "Dimensiunea IMM-ului și asamblarea finală în UE", "Ajutor solicitat/vehicul, kilometri în România și asamblare finală în UE"],
+      ["Depunere", "Calendar neanunțat; ghid în consultare", "Calendar neanunțat; ghid în consultare"]
+    ]
+  },
+  "measures": [
+    {
+      "id": "masura-1",
+      "number": "01",
+      "label": "Ajutor de minimis · 15 milioane EUR",
+      "title": "Măsura 1 – înlocuirea flotei IMM-urilor",
+      "intro": "Măsura 1 se adresează întreprinderilor care își înlocuiesc vehiculele M1 și M2 cu vehicule noi cu baterie electrică. Finanțarea se raportează la costul de achiziție, cu plafoane distincte pe vehicul și pe întreprindere unică.",
+      "funding": [["M1", "maximum 30.000 EUR/vehicul"], ["M2", "maximum 130.000 EUR/vehicul"], ["Întreprindere unică", "maximum 300.000 EUR în orice perioadă de trei ani"]],
+      "groups": [
+        {
+          "title": "Cine poate solicita finanțare",
+          "items": [
+            "Microîntreprinderi, întreprinderi mici și mijlocii cu personalitate juridică, constituite legal. Înregistrarea la ONRC în România trebuie realizată până la prima plată, în condițiile ghidului.",
+            "Activitatea nu este limitată la un cod CAEN anume. Se verifică însă excluderile: producția agricolă primară, producția primară din pescuit și acvacultură, anumite activități de prelucrare și comercializare, ajutoarele legate de export sau condiționate de preferința pentru bunuri și servicii naționale și producția de energie nucleară.",
+            "Pentru firmele cu activități mixte este necesară separarea activităților sau a conturilor, astfel încât sectorul exclus să nu beneficieze de ajutor. Încadrarea în categoria IMM ia în calcul întreprinderile partenere și legate.",
+            "Proiectele se depun individual. Leasingul și achiziția vehiculelor second-hand sunt excluse. Beneficiarul trebuie să poată asigura contribuția proprie și costurile neeligibile."
+          ]
+        },
+        {
+          "title": "Vehiculele și flota înlocuită",
+          "items": [
+            "Sunt propuse pentru finanțare vehicule M1 și M2 noi, exclusiv electrice cu baterie reîncărcată la o sursă externă. Vehiculele hibride și plug-in hybrid nu se încadrează.",
+            "Regula generală cere ca vehiculul înlocuit să fie în proprietatea întreprinderii de cel puțin un an. Excepția prevăzută în proiectul de ghid permite o promisiune bilaterală autentică de vânzare-cumpărare la depunere, cu prezentarea noului talon înaintea semnării contractului de finanțare.",
+            "Excepția nu elimină justificarea istoricului vehiculului: se verifică documentele de utilizare, RCA și ITP pentru intervalul de referință. Proiectul de ghid admite maximum șapte zile calendaristice cumulate de întrerupere RCA/ITP în intervalul indicat.",
+            "Pentru M1 se verifică aceeași categorie și aceeași grupă de caroserie sau o grupă echivalentă. Proiectul de ghid include și vehiculele M1 accesibile scaunelor rulante, cod de caroserie SH. Categoria se verifică în actele de omologare."
+          ]
+        },
+        {
+          "title": "Cum se calculează finanțarea",
+          "items": [
+            "Costul eligibil este costul de achiziție fără TVA. Ajutorul se limitează simultan la costul eligibil, plafonul de 30.000 EUR pentru M1 sau 130.000 EUR pentru M2 și plafonul de minimis rămas disponibil.",
+            "Plafonul de 300.000 EUR privește întreprinderea unică și include ajutoarele de minimis deja acordate în orice perioadă de trei ani. Nu reprezintă o sumă disponibilă automat pentru fiecare firmă sau proiect.",
+            "Exemplu orientativ: pentru un M1 de 40.000 EUR fără TVA, ajutorul nu poate depăși 30.000 EUR; diferența de cel puțin 10.000 EUR și TVA sunt suportate de beneficiar, dacă plafonul de minimis permite ajutorul solicitat.",
+            "Informarea, publicitatea și auditul financiar sunt obligatorii, dar neeligibile. Diferențele de preț și celelalte cheltuieli neeligibile se bugetează separat. Proiectul de ghid utilizează cursul InforEuro din iunie 2026, 5,2481 lei/EUR."
+          ]
+        },
+        {
+          "title": "Punctajul propus pentru Măsura 1",
+          "items": [
+            "Dimensiunea întreprinderii: 80 puncte pentru microîntreprinderi, 70 pentru întreprinderi mici și 65 pentru întreprinderi mijlocii, dacă proiectele sunt conforme și eligibile.",
+            "Asamblarea finală a vehiculului în Uniunea Europeană: 20 puncte, dovedite prin documente de origine sau declarația producătorului. Nu se acordă punctaj intermediar pentru acest criteriu.",
+            "Punctajul maxim este 100. La egalitate se aplică mai întâi criteriul asamblării finale în UE, apoi data și ora din recipisa de înscriere. Selecția se face în limita bugetului; ordinea depunerii nu înlocuiește evaluarea punctajului."
+          ]
+        },
+        {
+          "title": "Documente specifice Măsurii 1",
+          "items": [
+            "Cererea de finanțare (Anexa 1), declarația unică (Anexa 3), conformitatea cu regulile de minimis (Anexa 3.a), analiza de oportunitate și cost-eficacitate (Anexa 4) și bugetul proiectului (Anexa 6).",
+            "Declarația privind tipul de întreprindere (Anexa 7), declarația privind conflictul de interese (Anexa 8), declarația DNSH și autoevaluarea (Anexele 9 și 9.1) și consimțământul pentru prelucrarea datelor (Anexa 10), după cerințele etapei.",
+            "Certificatul constatator ONRC, actele vehiculului înlocuit, evidența mijloacelor fixe, RCA și ITP, respectiv promisiunea autentică dacă se aplică excepția. La contractare se verifică și documentele fiscale, financiare și asigurarea contribuției.",
+            "Minimum două oferte comparabile pentru configurația tehnică propusă. O singură ofertă este admisă în situația excepțională justificată prin solicitările către alți furnizori și confirmările lor scrise că nu pot furniza configurația cerută."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "masura-2",
+      "number": "02",
+      "label": "Ajutor de stat · 41,9 milioane EUR",
+      "title": "Măsura 2 – vehicule pentru transportul rutier de pasageri",
+      "intro": "Măsura 2 vizează operatorii de transport rutier de pasageri și folosește o selecție concurențială. Ajutorul acoperă costul suplimentar al vehiculului electric față de alternativa convențională comparabilă, în limitele schemei.",
+      "funding": [["Întreprindere", "maximum 4 milioane EUR cumulat în schemă"], ["M1", "maximum 30.000 EUR/vehicul"], ["Intensitate", "până la 100% din diferența de cost eligibilă"]],
+      "groups": [
+        {
+          "title": "Operatori și activități eligibile",
+          "items": [
+            "Operatori de transport rutier de pasageri: microîntreprinderi, întreprinderi mici și mijlocii și întreprinderi mari cu personalitate juridică. Se verifică înregistrarea în România până la prima plată și condițiile juridice și financiare din ghid.",
+            "Codurile CAEN Rev. 3 indicate sunt 4931 – transporturi terestre de pasageri, pe bază de grafic; 4932 – transporturi terestre de pasageri, ocazionale; 4933 – transporturi terestre de pasageri cu vehicule cu șofer, pe bază de comandă.",
+            "Licența de transport, licența comunitară, licența de traseu, autorizațiile taxi sau de transport alternativ și copiile conforme se verifică după serviciul efectiv prestat și categoria vehiculului.",
+            "Activitățile de serviciu public compensate în baza Regulamentului (CE) nr. 1370/2007 nu primesc finanțare pentru aceleași obligații. Ghidul permite analiza activităților economice distincte, cu separare contabilă, precum și a serviciilor județene sau interjudețene fără compensații ori diferențe de tarif, în condițiile documentate.",
+            "Întreprinderile în dificultate, sectoarele și activitățile excluse prin schemă și proiectele în parteneriat nu sunt eligibile. Încadrarea nu se stabilește numai prin existența unui cod CAEN."
+          ]
+        },
+        {
+          "title": "Vehicule și proceduri concurențiale",
+          "items": [
+            "Sunt vizate vehicule M1, M2 și M3 noi, exclusiv electrice. Procedurile concurențiale se organizează separat pentru fiecare categorie; un proiect poate include unul sau mai multe vehicule din aceeași categorie.",
+            "Vehiculul înlocuit trebuie să aparțină aceleiași categorii ca vehiculul nou. Regula generală cere proprietate și operare de cel puțin un an. Excepția cu promisiune bilaterală autentică păstrează obligația demonstrării operării anterioare și a dobândirii înaintea contractării.",
+            "Un beneficiar poate participa la mai multe proceduri, cu respectarea plafonului cumulat de 4 milioane EUR pe întreprindere. Leasingul și vehiculele second-hand sunt excluse.",
+            "Istoricul de exploatare și kilometrii din România se susțin prin documente verificabile: tahograf, GPS, foi de parcurs sau documente echivalente, după activitate. Pentru evaluarea kilometrajului se folosește ultimul an calendaristic complet anterior anului depunerii."
+          ]
+        },
+        {
+          "title": "Costul eligibil și contribuția beneficiarului",
+          "items": [
+            "Cost eligibil = prețul fără TVA al vehiculului electric minus prețul fără TVA al unui vehicul convențional comparabil, din aceeași categorie, care respectă standardele UE și ar fi fost achiziționat fără ajutor.",
+            "Intensitatea poate ajunge la 100% din acest cost suplimentar, în urma selecției concurențiale. Aceasta nu înseamnă acoperirea integrală a prețului vehiculului electric. Pentru M1 se aplică suplimentar limita de 30.000 EUR/vehicul.",
+            "Exemplu orientativ: un vehicul electric de 200.000 EUR fără TVA și un vehicul convențional comparabil de 130.000 EUR fără TVA produc o diferență eligibilă de 70.000 EUR. Ajutorul solicitat poate fi mai mic și rămâne supus plafoanelor și selecției.",
+            "Beneficiarul asigură diferența până la costul total, TVA, cheltuielile neeligibile și costurile obligatorii de informare, publicitate și audit. Nu se finanțează de două ori aceleași costuri din surse publice."
+          ]
+        },
+        {
+          "title": "Punctajul propus pentru Măsura 2",
+          "items": [
+            "70 puncte: ajutorul de stat solicitat pe vehicul. Oferta se calculează prin împărțirea ajutorului total solicitat la numărul de vehicule. Oferta minimă primește 70 puncte, cea maximă 0, iar valorile intermediare se punctează conform formulei din Anexa 2.2.",
+            "10 puncte: ponderea kilometrilor parcurși în România. Peste 70% primește 10 puncte; între 40% și 70% primește 5 puncte; sub 40% primește 0 puncte. Criteriul se calculează pentru fiecare vehicul, apoi se face media aritmetică pentru proiect, conform anexei consultative.",
+            "20 puncte: asamblarea finală a vehiculului în Uniunea Europeană, justificată prin documente de origine sau declarația producătorului.",
+            "Punctajul maxim este 100. La egalitate contează recipisa de înscriere. Procentul de kilometri în România asumat prin proiect se monitorizează pe întreaga durabilitate; nerespectarea sa poate conduce la recuperarea ajutorului și a dobânzilor."
+          ]
+        },
+        {
+          "title": "Documente specifice Măsurii 2",
+          "items": [
+            "Cererea de finanțare (Anexa 1), declarația unică (Anexa 3), declarația de conformitate cu ajutorul de stat (Anexa 3.a), analiza de oportunitate (Anexa 4), bugetul (Anexa 7) și declarația privind tipul de întreprindere (Anexa 8).",
+            "Metodologia întreprinderii în dificultate (Anexa 6), declarația privind conflictul de interese (Anexa 9), DNSH și autoevaluarea (Anexele 10 și 10.1), consimțământul pentru date (Anexa 11) și centralizatorul kilometrilor (Anexa 13), potrivit cerințelor etapei.",
+            "Oferte și specificații comparabile pentru vehiculele electrice și justificarea alternativei convenționale, actele vehiculelor înlocuite, documentele de operare și licențele sau autorizațiile necesare.",
+            "Centralizatorul kilometrilor trebuie corelat cu documentele justificative, numerotate și lizibile. Se verifică distinct kilometrii din România, inclusiv în cursele internaționale, și procentul asumat pentru perioada de durabilitate."
+          ]
+        }
+      ]
+    }
+  ],
+  "fit": [
+    "Ai identificat măsura potrivită, categoria de vehicul și activitatea economică finanțată.",
+    "Poți documenta vehiculul înlocuit, istoricul său și dreptul de proprietate ori excepția aplicabilă.",
+    "Poți acoperi contribuția proprie, TVA și costurile neeligibile, cu surse financiare documentate."
+  ],
+  "caution": [
+    "Ghidurile publicate la 3 noiembrie sunt consultative. Înainte de depunere trebuie verificată forma aprobată și anunțul sesiunii.",
+    "Ofertele, configurația vehiculelor și documentele de origine trebuie corelate cu bugetul și criteriile de selecție.",
+    "Achizițiile și angajamentele se planifică în raport cu regulile privind demararea investiției și perioada de eligibilitate; în special Măsura 2 cere respectarea efectului stimulativ."
+  ],
+  "investments": [
+    ["Casare în maximum 60 de zile", "După recepția vehiculului electric se documentează casarea celui înlocuit. Sunt necesare actele operatorului autorizat, documentele de distrugere și radiere și scoaterea din evidența contabilă, în condițiile fiecărui ghid."],
+    ["Implementare și durabilitate", "Proiectele de ghid prevăd implementare în maximum 30 de luni de la depunere, fără depășirea datei de 30 iunie 2030. Investiția se menține cinci ani de la finalizarea implementării."],
+    ["Prefinanțare și rambursare", "Proiectele de ghid prevăd prefinanțare de până la 40% din grant, cu instrument de garantare, și mecanisme de plată sau rambursare. Prefinanțarea și cererile de plată nu se utilizează simultan fără justificarea sumelor, conform contractului."]
+  ],
+  "documents": [
+    ["Dosarul solicitantului", "Certificat constatator, situații financiare, structura întreprinderii, documentele de reprezentare și deciziile de aprobare a proiectului. La contractare se verifică documentele fiscale și judiciare cerute și capacitatea de finanțare."],
+    ["Analiza de oportunitate", "Necesitatea înlocuirii, scenariile tehnice, justificarea configurației, analiza cost-eficacitate, efectele asupra consumului și emisiilor și sustenabilitatea exploatării. Documentul se pregătește într-un PDF în care textul poate fi căutat."],
+    ["Flota și bugetul", "Talon, cartea de identitate, evidența mijloacelor fixe, RCA/ITP și documentele excepției, dacă este cazul. Corelează ofertele, numărul de vehicule, ajutorul solicitat, sursele proprii și costurile neeligibile."],
+    ["Anexele și contractul", "Folosește pachetul aferent măsurii selectate. Numerotarea anexelor diferă între Măsura 1 și Măsura 2. Modelele de contract, garantare, grafic financiar și rapoarte de progres se citesc împreună cu ghidul, apoi se reverifică după aprobare."]
+  ],
+  "steps": [
+    "Alege Măsura 1 sau Măsura 2 după solicitant, activitate și categoria vehiculului.",
+    "Verifică flota înlocuită, plafonul disponibil, ofertele și contribuția proprie.",
+    "Pregătește analiza de oportunitate, documentele și punctajul după ghidul măsurii.",
+    "Reverifică ghidul aprobat și anunțul MTI; depunerea va urma calendarul comunicat oficial."
+  ],
+  "extraSources": [
+    ["MTI – ghidurile Măsurilor 1 și 2 și toate anexele, pachet ZIP", "https://fonduri.mt.ro/documente/GS_M1_%C8%99i_M2.zip"],
+    ["Schema e-DRIVE – actualizarea prin Ordinul MTI nr. 742/2026", "https://legislatie.just.ro/Public/DetaliiDocument/313289"],
+    ["Ordinul de modificare nr. 100/12.02.2026", "https://legislatie.just.ro/Public/DetaliiDocument/307361"]
+  ],
+  "faqs": [
+    ["Programul e-DRIVE este deschis pentru depunere?", "Nu. La 3 noiembrie 2026 MTI a publicat ghidurile Măsurilor 1 și 2 în consultare până la 18 noiembrie 2026. Anunțul precizează că aceasta nu este lansarea apelurilor; calendarul depunerii va fi comunicat ulterior."],
+    ["Care este diferența dintre Măsura 1 și Măsura 2?", "Măsura 1 este de minimis pentru IMM-uri și vehicule M1/M2, în limita a 300.000 EUR pe întreprindere unică. Măsura 2 este ajutor de stat concurențial pentru transportatori de pasageri și M1/M2/M3, în limita a 4 milioane EUR pe întreprindere, pentru diferența de cost eligibilă."],
+    ["Cât se poate solicita pentru un vehicul M2 în Măsura 1?", "Proiectul de ghid prevede maximum 130.000 EUR pentru un vehicul M2 nou exclusiv electric. Se aplică și plafonul disponibil de minimis de 300.000 EUR pe întreprindere unică în orice perioadă de trei ani, iar TVA este neeligibilă."],
+    ["Ce coduri CAEN sunt prevăzute pentru Măsura 2?", "Proiectul de ghid indică CAEN Rev. 3 4931, 4932 și 4933, pentru transport rutier de pasageri. Se verifică separat licențele sau autorizațiile, condițiile financiare și eventualele compensații pentru serviciul public."],
+    ["Se finanțează o mașină electrică pe firmă?", "Măsura 1 include M1 noi exclusiv electrice pentru IMM-uri eligibile, cu maximum 30.000 EUR/vehicul, în limita de minimis. Sunt obligatorii înlocuirea unui vehicul eligibil și documentarea casării; condițiile sunt încă în consultare."],
+    ["Ce înseamnă finanțare de până la 100% în Măsura 2?", "Procentul privește diferența eligibilă fără TVA dintre vehiculul electric și alternativa convențională comparabilă. Nu privește întregul preț al vehiculului electric. Ajutorul este supus selecției concurențiale și plafoanelor aplicabile."],
+    ["Sunt eligibile vehiculele hibride sau cumpărate în leasing?", "Nu. Proiectele de ghid vizează vehicule noi exclusiv electrice și exclud achizițiile în leasing și vehiculele second-hand."],
+    ["Cum este propus punctajul pentru Măsura 1?", "Dimensiunea întreprinderii aduce 80 puncte pentru microîntreprinderi, 70 pentru firme mici sau 65 pentru firme mijlocii. Asamblarea finală în UE poate adăuga 20 puncte. Se aplică grila consultativă și regulile de departajare."],
+    ["Cum este propus punctajul pentru Măsura 2?", "Grila consultativă alocă 70 puncte ajutorului solicitat pe vehicul, 10 puncte ponderii kilometrilor în România și 20 puncte asamblării finale în UE. Procentul de kilometri asumat devine obligație monitorizată în durabilitate."],
+    ["Casarea vehiculului vechi este obligatorie?", "Da. Ghidurile prevăd dovada casării în maximum 60 de zile de la recepția vehiculului cu emisii zero, cu actele de distrugere, radiere și scoatere din evidența contabilă cerute pentru măsura aplicabilă."],
+    ["Cât trebuie păstrată investiția?", "Proiectele de ghid prevăd cinci ani de durabilitate de la finalizarea implementării, cu menținerea investiției și a obligațiilor asumate. Implementarea este prevăzută în maximum 30 de luni de la depunere, fără depășirea datei de 30 iunie 2030."],
+    ["e-DRIVE finanțează și stații de încărcare?", "Aceste măsuri vizează achiziția vehiculelor. Infrastructura de încărcare și costurile sale se verifică separat; existența unei stații necesare exploatării nu o face automat eligibilă în e-DRIVE."],
+    ["Unde se vor depune proiectele e-DRIVE?", "Proiectele de ghid indică platforma MySMIS 2021. Depunerea va fi posibilă numai potrivit ghidului aprobat și calendarului pe care MTI îl va comunica ulterior consultării."]
+  ]
+}

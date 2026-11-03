@@ -120,6 +120,10 @@ for (const program of publicPrograms) {
   const file = fileForRoute(ROOT, program.pageUrl);
   assert(fs.existsSync(file), `${program.slug}: lipsește pagina canonică`);
   const $ = cheerio.load(fs.readFileSync(file, "utf8"), { decodeEntities: false });
+  for (const [field, expected] of [["twitter:title", program.metaTitle], ["twitter:description", program.metaDescription]]) {
+    const meta = $(`meta[name='${field}'], meta[property='${field}']`);
+    if (meta.length) assert.equal(meta.attr("content"), expected, `${program.slug}: metadatele sociale contrazic registrul factual`);
+  }
   assertFacts(program, factsFromElement($, $("body").get(0)), "pagina programului");
   assert.equal($("body").attr("data-publication-state"), "public", `${program.slug}: publicationState greșit pe pagină`);
   const factual = $(".program-factual-status[data-program-id]").first();

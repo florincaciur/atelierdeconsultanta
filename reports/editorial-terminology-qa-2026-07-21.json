@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-19T09:56:53.028Z",
+  "generatedAt": "2026-11-03T20:07:58.393Z",
   "canonicalCount": 105,
   "targetCount": 10,
   "absoluteIssueCount": 0,
@@ -7,9 +7,13 @@
   "requirementIssueCount": 0,
   "sourceIssueCount": 0,
   "openProgramsChecked": [
+    "autoconsum-institutii-publice",
+    "dr12-afir",
     "dr14-afir",
-    "pocidif-21",
-    "dr18-afir"
+    "fondul-modernizare-pc1-stocare",
+    "fondul-modernizare-pc1-stocare-entitati-publice",
+    "dr18-afir",
+    "e-mobility-ro"
   ],
   "issues": [],
   "issueCount": 0

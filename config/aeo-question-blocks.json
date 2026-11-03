@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "reviewedAt": "2026-07-22",
+  "reviewedAt": "2026-11-03",
   "gscEvidence": {
     "source": "reports/gsc-query-opportunities.csv",
     "exportArchive": "atelierdeconsultanta.ro-Performance-on-Search-2026-07-12.zip",
@@ -17,21 +17,21 @@
         {
           "id": "este-deschis-apelul-dr12",
           "question": "Este deschis apelul DR 12?",
-          "answer": "La verificarea din 19 septembrie 2026, AFIR nu anunțase încă intervalul de depunere DR-12. Ghidul prevede două etape lunare, cu praguri de 80 și 45 de puncte; datele și orele se stabilesc prin nota de lansare. Verifică anunțul oficial al sesiunii înainte de depunere.",
+          "answer": "Da. Sesiunea DR-12 este deschisă între 6 octombrie 2026, ora 09:00, și 2 decembrie 2026, ora 16:00, conform AFIR. Verifică etapa lunară, pragul de punctaj și disponibilul pentru sectorul zootehnic sau alte sectoare înainte de depunere. Ghidul final păstrează finanțarea de maximum 200.000 EUR și regulile de eligibilitate, contribuție proprie și selecție.",
           "evidenceTitle": "Ghid final și calendarul sesiunii",
           "evidence": [
-            "Ghid final publicat la 18.09.2026",
-            "Perioada de depunere nu este anunțată la 19.09.2026",
-            "Praguri de 80 și 45 de puncte; nota de lansare stabilește datele"
+            "Anunț AFIR publicat la 29.09.2026",
+            "Sesiune activă 06.10–02.12.2026 în platforma AFIR",
+            "Disponibilul se verifică pe fiecare componentă"
           ],
           "selectionBasis": "GSC: „dr 12 afir lansare”, „dr 12 ghid final” și variante apropiate",
           "sources": [
             {
-              "name": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
-              "document": "Ghid final DR-12, capitolele 2.1–2.6",
-              "version": "Ghid final DR-12, Ediția I, Revizia 0, aprobat prin OMADR 268/17.09.2026; publicat de AFIR la 18.09.2026",
-              "url": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-12/",
-              "verifiedAt": "2026-09-19"
+              "name": "AFIR",
+              "document": "Anunț sesiune DR-12 și contor sesiuni active",
+              "version": "Sesiunea 6 octombrie–2 decembrie 2026",
+              "url": "https://www.afir.ro/info-la-zi/sesiune-depunere-de-proiecte-dr-12/",
+              "verifiedAt": "2026-11-03"
             }
           ],
           "detailLinks": [
@@ -106,21 +106,21 @@
         {
           "id": "este-deschis-apelul-dr14",
           "question": "Este deschis apelul DR 14?",
-          "answer": "Nu încă. AFIR a lansat sesiunea DR 14, dar portalul de depunere se deschide la 1 septembrie 2026, ora 09:00. Termenul anunțat este 31 octombrie 2026, ora 16:00. Bugetul este de 108 milioane EUR, pragul de calitate este 80 de puncte în septembrie și 40 de puncte în octombrie, iar o componentă se poate închide anticipat când solicitările ating cel puțin 150% din alocare, cu excepția primelor cinci zile ale etapei.",
+          "answer": "Da, pentru componentele active. AFIR a prelungit sesiunea DR-14 până la 16 noiembrie 2026, ora 16:00. Componenta achiziții simple este închisă din 6 octombrie 2026 prin epuizarea fondurilor. Verifică disponibilul componentei înainte de transmiterea proiectului. Prelungirea nu redeschide automat componentele epuizate și nu garantează finanțarea unui proiect; se aplică ghidul și regulile de selecție.",
           "evidenceTitle": "Calendarul și condițiile oficiale ale sesiunii",
           "evidence": [
-            "depuneri programate între 1 septembrie, ora 09:00, și 31 octombrie, ora 16:00",
-            "buget total de 108 milioane EUR, împărțit pe patru componente",
-            "praguri de calitate de 80 de puncte în septembrie și 40 de puncte în octombrie"
+            "Prelungire până la 16 noiembrie 2026, ora 16:00",
+            "Achiziții simple: componentă închisă din 6 octombrie",
+            "Contorul AFIR arată separat componentele active"
           ],
           "selectionBasis": "GSC: „dr14 afir 2026”, „dr 14 afir” și variante despre ghid",
           "sources": [
             {
-              "name": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
-              "document": "Anunțul cererii de proiecte DR 14",
-              "version": "Anunțul A1.2/01/2026, publicat de AFIR la 14.08.2026",
-              "url": "https://www.afir.ro/instrumente/sesiuni/sesiuni-primire-proiecte/",
-              "verifiedAt": "2026-08-15"
+              "name": "AFIR",
+              "document": "Fonduri alocate sesiunilor active",
+              "version": "Platforma de depunere verificată la 03.11.2026",
+              "url": "https://depunerepspac.afir.ro/Sesiune/Lista",
+              "verifiedAt": "2026-11-03"
             }
           ],
           "detailLinks": [
@@ -195,7 +195,7 @@
         {
           "id": "diferenta-dr12-dr14",
           "question": "Care este diferența dintre DR 12 și DR 14?",
-          "answer": "DR 12 are ghid final publicat la 18.09.2026 și vizează consolidarea fermelor de minimum 12.000 SO, pentru categoriile de fermieri eligibile, cu grant de maximum 200.000 EUR. Perioada de depunere nu este încă anunțată. DR 14 vizează ferme mici și are sesiune 1 septembrie–31 octombrie 2026, conform sursei AFIR verificate. Alegerea depinde și de profil, investiție și documente.",
+          "answer": "DR 12 vizează consolidarea fermelor de minimum 12.000 SO, pentru categoriile de fermieri eligibile, cu grant de maximum 200.000 EUR și depuneri până la 2 decembrie 2026. DR 14 vizează ferme mici, cu grant de maximum 50.000 EUR și termen prelungit până la 16 noiembrie 2026; componenta de achiziții simple este închisă. Alegerea depinde de profil, SO, investiție, componentă și documentele disponibile.",
           "evidenceTitle": "Comparația pornește de la cinci controale",
           "evidence": [
             "profilul și istoricul solicitantului",

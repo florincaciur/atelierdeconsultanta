@@ -114,7 +114,7 @@ const record = governance.find((entry) => entry.id === "calculator-soc");
 assert(record, "înregistrarea editorială lipsește");
 assert.equal(record.governanceState, "public");
 assert.equal(record.verifiedAt, config.reviewedAt);
-assert.equal(record.lastMeaningfulUpdate, config.reviewedAt);
+assert.equal(record.lastMeaningfulUpdate, config.methodUpdatedAt || config.reviewedAt, "reverificarea sursei nu schimbă data modificării metodei");
 assert.equal(record.officialSourceUrl, config.source.pageUrl);
 assert.equal(record.sourceVersion, config.source.version);
 assert.equal(record.personalNameConsent, false);

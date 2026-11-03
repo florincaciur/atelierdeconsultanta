@@ -149,7 +149,7 @@
     "investitii-modernizarea-microintreprinderilor-apel-2": {
       "route": "/investitii-modernizarea-microintreprinderilor-apel-2",
       "sectionTitle": "Condițiile care trebuie verificate",
-      "directAnswer": "ADR Nord-Est a publicat ghidul final pentru Apelul 2, cu depuneri în MySMIS2021 între 28 septembrie 2026, ora 14:00, și 28 octombrie 2026, ora 14:00. Grantul este de 100.000–300.000 EUR, intensitatea maximă de 90%, iar contribuția proprie eligibilă de minimum 10%. Microîntreprinderile eligibile trebuie să implementeze investiția în Nord-Est și să includă active corporale. Solicitantul trebuie să fi desfășurat activitate cel puțin un an fiscal integral, să fi avut profit din exploatare pozitiv și minimum un salariat în 2025. Cel puțin un cod CAEN Rev. 3 vizat trebuie să fie eligibil. Depunerea este competitivă, în limita bugetului de 20.370.738,40 EUR; pragul este 70 de puncte, fără garanția finanțării.",
+      "directAnswer": "Apelul 2 pentru modernizarea microîntreprinderilor din Nord-Est este închis. ADR Nord-Est a publicat ghidul final pentru Apelul 2, cu sesiune desfășurată în MySMIS2021 între 28 septembrie 2026, ora 14:00, și 28 octombrie 2026, ora 14:00. Grantul este de 100.000–300.000 EUR, intensitatea maximă de 90%, iar contribuția proprie eligibilă de minimum 10%. Microîntreprinderile eligibile trebuie să implementeze investiția în Nord-Est și să includă active corporale. Solicitantul trebuie să fi desfășurat activitate cel puțin un an fiscal integral, să fi avut profit din exploatare pozitiv și minimum un salariat în 2025. Cel puțin un cod CAEN Rev. 3 vizat trebuie să fie eligibil. Depunerea este competitivă, în limita bugetului de 20.370.738,40 EUR; pragul este 70 de puncte, fără garanția finanțării.",
       "facts": [
         {
           "term": "Cine este eligibil?",
@@ -157,7 +157,7 @@
         },
         {
           "term": "Care este finanțarea?",
-          "description": "Finanțare conform sursei oficiale: 100.000 EUR/proiect–300.000 EUR/proiect; buget 20.370.738,4 EUR; intensitate 90% (maximum din cheltuielile eligibile); Minimum 10% din cheltuielile eligibile, plus toate cheltuielile neeligibile; o contribuție eligibilă mai mare este punctată."
+          "description": "Valori istorice conform sursei oficiale: 100.000 EUR/proiect–300.000 EUR/proiect; buget 20.370.738,4 EUR; intensitate 90% (maximum din cheltuielile eligibile); Minimum 10% din cheltuielile eligibile, plus toate cheltuielile neeligibile; o contribuție eligibilă mai mare este punctată."
         },
         {
           "term": "Care este contribuția proprie?",
@@ -181,18 +181,18 @@
         },
         {
           "term": "Ce statut are ghidul?",
-          "description": "Apel lansat – depuneri 28 septembrie–28 octombrie 2026."
+          "description": "Apel închis – sesiunea 28 septembrie–28 octombrie 2026."
         }
       ],
       "source": {
         "document": "Ghidul final și anexele publicate la 27.08.2026; cod apel PR/NE/2026/P1/RSO1.3/2/1",
         "institution": "Autoritatea de Management pentru Programul Regional Nord-Est",
-        "status": "Apel lansat – depuneri 28 septembrie–28 octombrie 2026. Simulatorul este orientativ și reproduce grila finală publicată la 27.08.2026. Punctajul oficial, eligibilitatea și finanțarea sunt stabilite exclusiv de AM PR Nord-Est în evaluare și în limita bugetului.",
+        "status": "Apel închis – sesiunea 28 septembrie–28 octombrie 2026. Sesiunea s-a încheiat la 28 octombrie 2026. Informațiile rămân utile pentru evaluare și pregătirea documentelor; o eventuală relansare necesită anunț oficial.",
         "url": "https://regionordest.ro/prioritatea-1/modernizare-microintreprinderi/"
       },
       "interpretation": "Localitatea, codul CAEN și dreptul asupra spațiului pot exclude un proiect înaintea analizei bugetului. Interpretarea de lucru FABER nu adaugă o regulă suplimentară documentului oficial.",
       "programId": "modernizare-microintreprinderi-ne-2",
-      "lastReviewed": "2026-09-06",
+      "lastReviewed": "2026-11-03",
       "sourceOfTruth": "config/seo-programs.json#programs",
       "publicationState": "public"
     },
@@ -243,14 +243,14 @@
       },
       "interpretation": "O putere instalată mai mare nu înseamnă automat un proiect mai bun: consumul istoric, extinderile justificate și punctele de consum trebuie să susțină dimensionarea. Aceasta este interpretarea tehnică FABER, nu o normă care modifică Ghidul V7.",
       "programId": "afir-energie-autoconsum",
-      "lastReviewed": "2026-08-29",
+      "lastReviewed": "2026-11-03",
       "sourceOfTruth": "config/seo-programs.json#programs",
       "publicationState": "public"
     },
     "pocidif-21": {
       "route": "/pocidif-21",
       "sectionTitle": "Datele esențiale ale programului",
-      "directAnswer": "PoCIDIF 2.1 este deschis pentru IMM TIC în perioada 30 iunie–30 septembrie 2026: inovare, software, hardware, CDI și introducere pe piață. Apel deschis – depuneri 30 iunie–30 septembrie 2026: 2026-06-30–2026-09-30. Finanțare conform sursei oficiale: 1.500.000 EUR (soluție software inovatoare) / 3.000.000 EUR (produs hardware inovator); intensitate 75% (ajutor regional, în funcție de categorie și regiune) / 100% (ajutor de minimis pentru cheltuielile încadrate); Depinde de tipul ajutorului, dimensiunea întreprinderii, regiune și cheltuielile neeligibile.",
+      "directAnswer": "PoCIDIF 2.1 finanțează dezvoltarea de servicii, aplicații și produse inovatoare de către IMM-uri din sectorul TIC. Pagina oficială MIPE marchează apelul închis, cu data de închidere 30 octombrie 2026, după modificarea ghidului prin Ordinul nr. 1500/29.09.2026. Proiectele presupun cercetare, dezvoltare și inovare, tehnologii avansate și introducerea rezultatelor pe piață; o achiziție IT obișnuită nu este suficientă. Intensitățile diferă în funcție de cost, regiune, dimensiunea firmei și tipul ajutorului. Eligibilitatea se verifică prin codurile CAEN, capacitatea echipei, documentele financiare, drepturile asupra soluției și bugetul justificat. Informațiile rămân utile pentru evaluare și contractare. O relansare sau o nouă sesiune necesită un anunț oficial distinct.",
       "facts": [
         {
           "term": "Cine este eligibil?",
@@ -258,7 +258,7 @@
         },
         {
           "term": "Care este finanțarea?",
-          "description": "Finanțare conform sursei oficiale: 1.500.000 EUR (soluție software inovatoare) / 3.000.000 EUR (produs hardware inovator); intensitate 75% (ajutor regional, în funcție de categorie și regiune) / 100% (ajutor de minimis pentru cheltuielile încadrate); Depinde de tipul ajutorului, dimensiunea întreprinderii, regiune și cheltuielile neeligibile."
+          "description": "Valori istorice conform sursei oficiale: 1.500.000 EUR (soluție software inovatoare) / 3.000.000 EUR (produs hardware inovator); intensitate 75% (ajutor regional, în funcție de categorie și regiune) / 100% (ajutor de minimis pentru cheltuielile încadrate); Depinde de tipul ajutorului, dimensiunea întreprinderii, regiune și cheltuielile neeligibile."
         },
         {
           "term": "Care este contribuția proprie?",
@@ -278,22 +278,22 @@
         },
         {
           "term": "Când se depune?",
-          "description": "Perioada confirmată este 2026-06-30–2026-09-30."
+          "description": "Perioada confirmată este 2026-06-30–2026-10-30."
         },
         {
           "term": "Ce statut are ghidul?",
-          "description": "Apel deschis – depuneri 30 iunie–30 septembrie 2026: 2026-06-30–2026-09-30."
+          "description": "Apel închis – depuneri încheiate la 30 octombrie 2026."
         }
       ],
       "source": {
         "document": "Ghidul solicitantului PoCIDIF 2.1 aprobat prin Ordinul MIPE nr. 965/23.06.2026",
         "institution": "Ministerul Investițiilor și Proiectelor Europene",
-        "status": "Apel deschis – depuneri 30 iunie–30 septembrie 2026: 2026-06-30–2026-09-30. Apelul este deschis în intervalul 30.06–30.09.2026. Înainte de transmitere, eventualele corrigenda și starea apelului se reconfirmă pe pagina oficială MIPE și în MySMIS2021.",
+        "status": "Apel închis – depuneri încheiate la 30 octombrie 2026. Pagina oficială MIPE marchează apelul închis, cu data de închidere 30 octombrie 2026. Se consultă și modificările ghidului publicate după lansare.",
         "url": "https://mfe.gov.ro/ghiduri_pocidif/pocidif-ghidul-solicitantului-dezvoltarea-de-noi-servicii-aplicatii-produse-prin-inovare-si-adoptarea-de-tehnologii-avansate-2/"
       },
       "interpretation": "Un proiect centrat pe achiziții IT, fără activități CDI și fără un rezultat nou introdus pe piață, nu răspunde obiectivului apelului. Aceasta este interpretarea FABER a efectului practic al ghidului, nu o normă separată.",
       "programId": "pocidif-21",
-      "lastReviewed": "2026-08-29",
+      "lastReviewed": "2026-11-03",
       "sourceOfTruth": "config/seo-programs.json#programs",
       "publicationState": "public"
     },
@@ -343,7 +343,7 @@
         "url": "https://minimis.imm.gov.ro/fa2024/ordine_evaluare"
       },
       "programId": "femeia-antreprenor",
-      "lastReviewed": "2026-08-29",
+      "lastReviewed": "2026-11-03",
       "sourceOfTruth": "config/seo-programs.json#programs",
       "publicationState": "public"
     },
@@ -393,7 +393,7 @@
       },
       "interpretation": "Un amplasament poate fi neimplementabil chiar dacă stațiile apar ca tip de investiție: dreptul asupra terenului, accesul și soluția de racordare trebuie să fie compatibile. Aceasta este interpretarea practică FABER, nu o regulă oficială suplimentară.",
       "programId": "e-move-ro",
-      "lastReviewed": "2026-08-29",
+      "lastReviewed": "2026-11-03",
       "sourceOfTruth": "config/seo-programs.json#programs",
       "publicationState": "public"
     }

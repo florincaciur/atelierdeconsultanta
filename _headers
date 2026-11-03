@@ -17,7 +17,6 @@
   X-Robots-Tag: noindex, nofollow
 
 /assets/*
-  X-Robots-Tag: noindex, nofollow
   Cache-Control: public, max-age=86400, must-revalidate
 
 /*.png

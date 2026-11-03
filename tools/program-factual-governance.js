@@ -518,7 +518,10 @@ function factualFaq(program) {
   const funding = fundingSummary(program);
   if (funding) items.push([`Ce finanțare și cofinanțare are ${program.shortName}?`, funding]);
   if (program.applicationStart || program.applicationEnd) {
-    items.push([`Care este perioada de depunere pentru ${program.shortName}?`, `Perioada confirmată în registru este ${program.applicationStart || "—"}–${program.applicationEnd || "—"}.`]);
+    const label = program.status === "apel_deschis" ? "Depunerea este deschisă în perioada"
+      : program.status === "apel_inchis" ? "Intervalul de depunere a fost"
+        : "Perioada de depunere anunțată este";
+    items.push([`Care este perioada de depunere pentru ${program.shortName}?`, `${label} ${program.applicationStart || "—"}–${program.applicationEnd || "—"}.`]);
   }
   return items;
 }

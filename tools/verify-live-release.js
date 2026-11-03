@@ -136,6 +136,10 @@ async function main() {
   if (!Number.isFinite(waitSeconds) || waitSeconds < 0 || waitSeconds > 1800) throw new Error(`Invalid wait duration: ${waitSeconds}`);
 
   const release = await waitForCommit(expectedCommit, waitSeconds);
+  if (process.argv.includes("--manifest-only")) {
+    console.log(`Live deployment manifest verified: ${release.commit}.`);
+    return;
+  }
   const programRoutes = sitemapProgramRoutes();
   const criticalRoutes = [...new Set([
     "/",

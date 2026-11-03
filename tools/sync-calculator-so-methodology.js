@@ -199,8 +199,8 @@ ${renderSources(config)}
     <div class="so-review-card so-review-card--approved">
       <h3>Autor și revizie</h3>
       <p><strong>Autor:</strong> FABER – Atelier de Consultanță, autor organizațional.</p>
-      <p><strong>Revizie:</strong> Echipa editorială și tehnică FABER — metodă, sursă, UX și teste, la <time datetime="${escapeHtml(config.reviewedAt)}">${escapeHtml(displayDate(config.reviewedAt))}</time>.</p>
-      <p><strong>Changelog ${escapeHtml(displayDate(config.reviewedAt))}:</strong> setul legacy fără proveniență a fost înlocuit cu categoriile SOC 2020 din lista AFIR noiembrie 2024; formula a rămas neschimbată; rezultatul oferă numai o sugestie prudentă de program, care necesită verificarea documentelor.</p>
+      <p><strong>Verificarea sursei:</strong> lista oficială AFIR a fost controlată la <time datetime="${escapeHtml(config.reviewedAt)}">${escapeHtml(displayDate(config.reviewedAt))}</time>. Coeficienții și formula se păstrează dacă documentul oficial este neschimbat.</p>
+      <p><strong>Changelog ${escapeHtml(displayDate(config.methodUpdatedAt || config.reviewedAt))}:</strong> setul legacy fără proveniență a fost înlocuit cu categoriile SOC 2020 din lista AFIR noiembrie 2024; formula a rămas neschimbată; rezultatul oferă numai o sugestie prudentă de program, care necesită verificarea documentelor.</p>
     </div>
     <aside class="so-review-card" aria-labelledby="so-validari-umane">
       <h3 id="so-validari-umane">Validări care rămân obligatorii pentru un dosar</h3>

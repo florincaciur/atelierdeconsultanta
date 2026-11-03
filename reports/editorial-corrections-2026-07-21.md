@@ -1,10 +1,10 @@
 # Jurnal corectură editorială P0.13
 
 - URL-uri canonice procesate: 105
-- Fișiere HTML documentate: 95
+- Fișiere HTML documentate: 96
 - Surse editoriale/CMS documentate: 6
-- Fragmente documentate: 4280
-- URL-uri cu intervenții: 120
+- Fragmente documentate: 4282
+- URL-uri cu intervenții: 121
 - Valorile, procentele, datele, statusurile și câmpurile de proveniență sunt protejate de normalizator.
 - În paginile juridice s-au eliminat doar etichete interne și s-au corectat forme lingvistice; sensul juridic nu a fost rescris.
 
@@ -1448,6 +1448,7 @@
 | /dr12-afir | config/seo-programs.json:pages.0.preparationSteps.3.1 | Pastreaza o rezerva de buget pentru TVA, diferente de pret și costuri neeligibile. | Pastreaza o rezerva de buget pentru TVA, diferențe de preț și costuri neeligibile. | Diacritice și normă editorială română |
 | /dr12-afir | config/seo-programs.json:pages.0.related.3.label | Fonduri europene agricultura | Fonduri europene agricultură | Diacritice și normă editorială română |
 | /dr12-afir | config/seo-programs.json:pages.0.scoring.1 | Prag de 80 de puncte în prima etapă și 45 în a doua; calendarul va fi stabilit prin nota de lansare. | Prag de 80 de puncte în prima etapă și 45 în a două; calendarul va fi stabilit prin nota de lansare. | Diacritice și normă editorială română |
+| /dr12-afir | config/seo-programs.json:pages.0.scoring.1 | Prag de 80 de puncte în prima etapă și 45 în a doua; sesiunea se desfășoară între 6 octombrie și 2 decembrie 2026, în condițiile anunțului AFIR. | Prag de 80 de puncte în prima etapă și 45 în a două; sesiunea se desfășoară între 6 octombrie și 2 decembrie 2026, în condițiile anunțului AFIR. | Diacritice și normă editorială română |
 | /dr12-afir | config/seo-programs.json:pages.0.steps.1 | Confirmam lista de investiții și excludem achizitiile care nu au legătura directa cu activitatea agricolă. | Confirmam lista de investiții și excludem achizitiile care nu au legătura directă cu activitatea agricolă. | Diacritice și normă editorială română |
 | /dr12-afir | config/seo-programs.json:pages.0.steps.4 | Verificam proiectul înainte de depunere și pregătim raspunsurile pentru clarificări. | Verificam proiectul înainte de depunere și pregătim răspunsurile pentru clarificări. | Diacritice și normă editorială română |
 | /dr12-afir | dr12-afir/index.html:visible-copy | Pentru componenta alte sectoare pot există investiții și în sectoare diferite de cel predominant, însă proiectul trebuie să includă investiții în sectorul vegetal care determină încadrarea. Alegerea componentei influenț… | Pentru componenta alte sectoare pot exista investiții și în sectoare diferite de cel predominant, însă proiectul trebuie să includă investiții în sectorul vegetal care determină încadrarea. Alegerea componentei influenț… | Diacritice și normă editorială română |
@@ -1549,6 +1550,7 @@
 | /dr14 | config/seo-programs.json:pages.1.scoring.2 | Riscurile cresc când proiectul incearca sa forteze activitati care nu sunt documentate. | Riscurile cresc când proiectul incearca sa forteze activități care nu sunt documentate. | Diacritice și normă editorială română |
 | /dr14 | config/seo-programs.json:pages.1.steps.0 | Calculam dimensiunea economică și verificam încadrarea fermei. | Calculam dimensiunea economică și verificăm încadrarea fermei. | Diacritice și normă editorială română |
 | /dr18 | dr18/index.html:visible-copy | Bunul trebuie să intre în proprietatea beneficiarului cel târziu la ultima plată. | Bunul trebuie să între în proprietatea beneficiarului cel târziu la ultima plată. | Diacritice și normă editorială română |
+| /e-drive | e-drive/index.html:visible-copy | Sunt propuse pentru finanțare vehicule M1 și M2 noi, exclusiv electrice cu baterie reîncărcată la o sursă externă. Vehiculele hibride și plug-in hybrid nu se încadrează. | Sunt propuse pentru finanțare vehicule M1 și M2 noi, exclusiv electrice cu baterie reîncărcată la o sursă externă. Vehiculele hibride și plug-în hybrid nu se încadrează. | Diacritice și normă editorială română |
 | /e-move | blog.json:posts.34.author | FABER - Atelier de Consultanta | FABER - Atelier de Consultanță | Diacritice și normă editorială română |
 | /e-move | blog.json:posts.34.bannerAlt | Panouri fotovoltaice si documente de finantare pentru e-MOVE RO | Panouri fotovoltaice și documente de finanțare pentru e-MOVE RO | Diacritice și normă editorială română |
 | /e-move | blog.json:posts.34.category | Mobilitate electrica | Mobilitate electrică | Diacritice și normă editorială română |

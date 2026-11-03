@@ -69,6 +69,15 @@ function syncHtml(html) {
   const hasTwitter = $("head meta").toArray().some((node) => /^twitter:/iu.test($(node).attr("name") || $(node).attr("property") || ""));
 
   let head = originalHead;
+  const robots = firstMeta($, "robots") || "index, follow";
+  if (!/\b(?:noindex|nosnippet|noimageindex)\b/iu.test(robots)) {
+    const previewDirectives = robots.split(',').map(value => value.trim()).filter(Boolean);
+    for (const directive of ["max-snippet:-1", "max-image-preview:large", "max-video-preview:-1"]) {
+      const name = directive.split(':')[0];
+      if (!previewDirectives.some(value => value.toLowerCase().startsWith(`${name}:`))) previewDirectives.push(directive);
+    }
+    head = syncMeta(head, "robots", "name", previewDirectives.join(', '));
+  }
   for (const [field, value] of [["og:title", ogTitle], ["og:description", ogDescription], ["og:type", ogType],
     ["og:url", canonical], ["og:image", ogImage], ["og:image:alt", ogImageAlt]]) {
     head = syncMeta(head, field, "property", value);

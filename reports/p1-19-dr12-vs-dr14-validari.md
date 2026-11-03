@@ -1,12 +1,12 @@
 # P1.19 — Validări pentru „DR 12 vs DR 14”
 
-Revizie factuală și editorială: **19.09.2026**.
+Revizie factuală și editorială: **03.11.2026**.
 
 ## Surse oficiale folosite
 
-- DR 12: Ghid final DR-12, Ediția I, Revizia 0, aprobat prin OMADR 268/17.09.2026; publicat de AFIR la 18.09.2026 — https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-12/
+- DR 12: Ghidul final DR-12 și documentele AFIR ale sesiunii, verificare 03.11.2026 — https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-12/
 - DR 12, document: https://www.afir.ro/media/aqtlitop/ghidul-solicitantului-dr-12.pdf
-- DR 14: Anunțul AFIR A1.2/01/2026 pentru sesiunea DR 14, publicat la 14.08.2026 — https://depunerepspac.afir.ro/Sesiune/Lista
+- DR 14: AFIR – sesiunile active și disponibilul pe componente, verificare 03.11.2026 — https://depunerepspac.afir.ro/Sesiune/Lista
 
 ## Elemente DR 12 și actualizări rămase de reconfirmat
 
@@ -19,7 +19,7 @@ Revizie factuală și editorială: **19.09.2026**.
 ## Decizia de publicare
 
 - statut publicat: DR 12 are ghid final, iar DR 14 are sesiunea lansată cu depuneri programate din 01.09.2026;
-- valorile DR 12 și DR 14 sunt publicate conform ghidurilor finale; calendarul DR 12 rămâne neanunțat;
+- valorile DR 12 și DR 14 sunt publicate conform ghidurilor finale; sesiunea DR 12 este deschisă până la 2 decembrie 2026;
 - scenariile sunt marcate explicit ca ipotetice și nu descriu clienți reali;
 - CTA-ul transmite numai `source_page=/dr12-vs-dr14`, fără PII în URL;
 - autorul și reviewerul sunt publicați organizațional; nu este publicat un nume personal fără acord.

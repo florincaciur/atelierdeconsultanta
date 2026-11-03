@@ -72,7 +72,10 @@ assert.equal($("head > title").text().trim(), "Consultanță fonduri europene ș
 assert.equal($("meta[name='description']").attr("content"), "Consultanță fonduri europene pentru firme și fermieri: eligibilitate, proiectare, dosare și implementare. Programe AFIR, DR 12, DR 14 și calculatoare.");
 assert.equal($("meta[name='keywords']").attr("content"), "fonduri europene, consultanță fonduri europene, PNRR, POR, AFIR, finanțare nerambursabilă, proiecte europene, fonduri nerambursabile România, consultanță finanțare, absorbție fonduri europene");
 assert.equal($("link[rel='canonical']").attr("href"), "https://atelierdeconsultanta.ro/");
-assert.equal($("meta[name='robots']").attr("content"), "index, follow");
+const robotsDirectives = $("meta[name='robots']").attr("content").split(',').map(value => value.trim());
+assert(robotsDirectives.includes('index') && robotsDirectives.includes('follow'));
+assert(robotsDirectives.includes('max-image-preview:large'));
+assert(!robotsDirectives.includes('noindex') && !robotsDirectives.includes('nosnippet'));
 assert.equal($("meta[property='og:title']").attr("content"), "Consultanță fonduri europene și proiectare | FABER");
 assert.equal($("meta[property='og:url']").attr("content"), "https://atelierdeconsultanta.ro/");
 assert.equal($("script[type='application/ld+json']").length > 0, true, "lipsește JSON-LD");

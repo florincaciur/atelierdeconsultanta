@@ -176,6 +176,22 @@ function synchronizedGraph(html, route, hints) {
     dateModified: dates.dateModified,
     citation: citations.references
   });
+  const measureSections = $("main section.edrive-measure[id]");
+  if (measureSections.length) {
+    pageNode.hasPart = measureSections.toArray().map(section => {
+      const element = $(section);
+      return {
+        "@type": "WebPageElement",
+        "@id": `${canonical}#${element.attr('id')}`,
+        url: `${canonical}#${element.attr('id')}`,
+        name: cleanText(element.find('h2').first().text()),
+        description: cleanText(element.find('.edrive-measure__heading > div > p').last().text()),
+        inLanguage: "ro-RO",
+        isPartOf: { "@id": `${canonical}#webpage` },
+        citation: citations.references
+      };
+    });
+  }
   const content = contentEntity(pageKind, { canonical, name: title, description, dates, existing: existingContent, citation: citations.references });
   if (content && citations.references.length && !content.citation) content.citation = citations.references;
   if (content) pageNode.mainEntity = { "@id": content["@id"] };

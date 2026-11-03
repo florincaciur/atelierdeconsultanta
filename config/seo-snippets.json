@@ -85,7 +85,7 @@
         "https://minimis.imm.gov.ro/fa2024/ordine_evaluare"
       ],
       "factualStatus": "unknown",
-      "lastReviewed": "2026-08-29",
+      "lastReviewed": "2026-11-03",
       "notes": "Program național al Ministerului Economiei; snippetul nu îl numește fonduri europene și nu publică valori neverificate pentru 2026.",
       "publicationState": "public",
       "programStatus": "apel_inchis",
@@ -110,7 +110,7 @@
         "https://www.afir.ro/comunicate/265-de-milioane-de-euro-pentru-investitii-in-producerea-energiei-electrice/"
       ],
       "factualStatus": "open",
-      "lastReviewed": "2026-08-29",
+      "lastReviewed": "2026-11-03",
       "notes": "Sesiunea și plafoanele se raportează la Ghidul V7 și la comunicatul oficial AFIR; procentul de autoconsum și stocarea sunt explicate fără a promite eligibilitatea.",
       "publicationState": "public",
       "programStatus": "apel_inchis",
@@ -126,19 +126,19 @@
         "investiții microîntreprinderi ADR Nord-Est"
       ],
       "title": "Modernizarea microîntreprinderilor: Apel 2 Nord-Est 2026",
-      "description": "Modernizarea microîntreprinderilor, Apel 2 Nord-Est: depuneri 28.09–28.10.2026, grant 100.000–300.000 €, CAEN eligibil și simulator de punctaj final.",
+      "description": "Apelul 2 Nord-Est pentru microîntreprinderi s-a închis la 28 octombrie 2026. Grant 100.000–300.000 €, punctaj, documente și condițiile sesiunii.",
       "ogTitle": "Modernizarea microîntreprinderilor: Apel 2 Nord-Est 2026",
-      "ogDescription": "Modernizarea microîntreprinderilor, Apel 2 Nord-Est: depuneri 28.09–28.10.2026, grant 100.000–300.000 €, CAEN eligibil și simulator de punctaj final.",
+      "ogDescription": "Apelul 2 Nord-Est pentru microîntreprinderi s-a închis la 28 octombrie 2026. Grant 100.000–300.000 €, punctaj, documente și condițiile sesiunii.",
       "sourceOfTruth": [
         "config/seo-programs.json#programs",
         "https://regionordest.ro/prioritatea-1/modernizare-microintreprinderi/"
       ],
       "factualStatus": "scheduled",
-      "lastReviewed": "2026-09-06",
+      "lastReviewed": "2026-11-03",
       "notes": "Pagina concentrează Apelul 2; ruta istorică POR ADR Nord-Est redirecționează direct aici conform aprobării beneficiarului.",
       "publicationState": "public",
-      "programStatus": "ghid_aprobat_nedeschis",
-      "statusLabel": "Apel lansat – depuneri 28 septembrie–28 octombrie 2026"
+      "programStatus": "apel_inchis",
+      "statusLabel": "Apel închis – sesiunea 28 septembrie–28 octombrie 2026"
     },
     {
       "route": "/contact",
@@ -179,7 +179,7 @@
         "https://legislatie.just.ro/Public/DetaliiDocument/313320"
       ],
       "factualStatus": "consultation",
-      "lastReviewed": "2026-08-29",
+      "lastReviewed": "2026-11-03",
       "notes": "Statutul de consultare este explicit; snippetul nu folosește valoarea maximă indicativă sau intensitatea ca reguli finale.",
       "publicationState": "public",
       "programStatus": "ghid_aprobat_nedeschis",

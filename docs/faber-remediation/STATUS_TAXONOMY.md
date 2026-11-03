@@ -1,6 +1,6 @@
 # Taxonomia unică de status FABER
 
-Revizie semantică: **2026-09-06**. Definiții canonice: `config/program-status-taxonomy.json`; atribuiri per program: `config/seo-programs.json#programs[*].canonicalStatus`. Acest document este generat de `tools/generate-status-governance-docs.js` și nu este o pagină publică.
+Revizie semantică: **2026-11-03**. Definiții canonice: `config/program-status-taxonomy.json`; atribuiri per program: `config/seo-programs.json#programs[*].canonicalStatus`. Acest document este generat de `tools/generate-status-governance-docs.js` și nu este o pagină publică.
 
 ## Contractul mecanismului
 
@@ -286,28 +286,28 @@ Maparea de mai jos folosește snapshot-ul factual de bază verificat în registr
 |---|---|---|---|---|---|
 | `program-regional-nord-est` | `calendar_estimativ` | `UNCONFIRMED` | Status neconfirmat — verifică sursa oficială | umbrella_program | Apelurile au stări și calendare distincte; pagina agregată nu poate moșteni o singură stare de apel. |
 | `fonduri-regionale` | `calendar_estimativ` | `UNCONFIRMED` | Status neconfirmat — verifică sursa oficială | umbrella_program | Catalogul agregă programe și apeluri cu stări diferite. |
-| `dr12-afir` | `ghid_aprobat_nedeschis` | `FINAL_GUIDE` | Ghid final publicat — depunerea nu este deschisă | program_call | Ghidul final este publicat; sursele AFIR verificate nu anunță încă perioada de depunere. |
-| `dr14-afir` | `apel_deschis` | `OPEN` | Apel deschis — depuneri până la 31.10.2026 | session | Contorul AFIR confirmă sesiunea activă și proiecte depuse. Disponibilitatea se verifică separat pe fiecare componentă. |
-| `dr18-afir` | `apel_deschis` | `OPEN` | Apel deschis — depuneri până la 31.10.2026 | session | Sesiune activă verificată în contorul oficial AFIR la 06.09.2026. |
+| `dr12-afir` | `apel_deschis` | `OPEN` | Apel deschis — depuneri până la 02.12.2026 | program_call | Sesiune activă confirmată în platforma AFIR și anunțul din 29.09.2026. |
+| `dr14-afir` | `apel_deschis` | `OPEN` | Apel deschis — depuneri până la 16.11.2026 | session | Prelungire confirmată de AFIR și de contorul sesiunilor active; verificarea se face pe fiecare componentă. |
+| `dr18-afir` | `apel_deschis` | `OPEN` | Apel deschis — depuneri până la 16.11.2026 | session | Prelungire confirmată de AFIR și de contorul sesiunilor active; verificarea se face pe fiecare componentă. |
 | `start-up-nation` | `apel_inchis` | `CLOSED` | Apel închis — depunerea nu este deschisă | edition | Înscrierile persoanelor juridice s-au încheiat; registry-ul nu consemnează finalizarea întregii proceduri. |
 | `femeia-antreprenor` | `apel_inchis` | `CLOSED` | Apel închis — depunerea nu este deschisă | edition | Depunerea ediției 2024 este închisă, iar ordinea finală la evaluare nu dovedește finalizarea întregii proceduri. |
 | `digitalizare-imm` | `apel_inchis` | `CLOSED` | Apel închis — depunerea nu este deschisă | program_call | Registry-ul confirmă depunerea închisă, fără o dovadă distinctă de finalizare. |
-| `modernizare-microintreprinderi-ne-2` | `ghid_aprobat_nedeschis` | `SCHEDULED` | Apel programat — depuneri între 28.09.2026 și 28.10.2026 | program_call | Ghidul final și anexele au fost publicate la 27.08.2026, iar fereastra oficială de depunere este 28.09.2026, ora 14:00–28.10.2026, ora 14:00. |
+| `modernizare-microintreprinderi-ne-2` | `apel_inchis` | `CLOSED` | Apel închis — depunerea nu este deschisă | program_call | Pagina oficială ADR Nord-Est marchează explicit apelul 2 ca închis (28.09–28.10.2026). |
 | `fondul-modernizare-autoconsum` | `apel_inchis` | `COMPLETED` | Apel finalizat — depunerea nu este deschisă | program_call | MySMIS marchează apelurile înregistrate drept FINALIZAT. |
 | `fondul-modernizare-regenerabile` | `apel_inchis` | `COMPLETED` | Apel finalizat — depunerea nu este deschisă | program_call | MySMIS marchează apelurile înregistrate drept FINALIZAT. |
 | `afir-energie-autoconsum` | `apel_inchis` | `CLOSED` | Apel închis — depunerea nu este deschisă | session | Sesiunea 15.06.2026–14.08.2026 s-a încheiat; nu există în registry o dovadă distinctă de finalizare a procedurii. |
-| `autoconsum-institutii-publice` | `ghid_aprobat_nedeschis` | `SCHEDULED` | Apel programat — depuneri între 28.09.2026 și 20.11.2026 | program_call | Anunțul oficial confirmă depunerea prin AFIR între 28.09.2026, ora 10:00 și 20.11.2026, ora 23:59, sau până la epuizarea bugetului. La verificarea din 13.09.2026 sesiunea nu a început. |
-| `fondul-modernizare-pc1-stocare-entitati-publice` | `ghid_aprobat_nedeschis` | `SCHEDULED` | Apel programat — depuneri între 28.09.2026 și 20.11.2026 | program_call | Anunțul oficial confirmă depunerea prin AFIR între 28.09.2026, ora 10:00 și 20.11.2026, ora 23:59, sau până la epuizarea bugetului. La verificarea din 13.09.2026 sesiunea nu a început. |
+| `autoconsum-institutii-publice` | `apel_deschis` | `OPEN` | Apel deschis — depuneri până la 20.11.2026 | program_call | AFIR confirmă sesiunea în derulare pentru entitățile publice; intervalul și eventualele limite se verifică în anunț și platformă. |
+| `fondul-modernizare-pc1-stocare-entitati-publice` | `apel_deschis` | `OPEN` | Apel deschis — depuneri până la 20.11.2026 | program_call | AFIR confirmă sesiunea în derulare pentru entitățile publice; intervalul și eventualele limite se verifică în anunț și platformă. |
 | `pro-infra` | `ghid_aprobat_nedeschis` | `APPROVED_SCHEME` | Schemă aprobată — depunerea nu este deschisă | scheme | Schema este aprobată prin Ordinul MTI nr. 2.292/29.12.2025 și modificată prin Ordinul nr. 101/12.02.2026, fără fereastră oficială de depunere. |
 | `apeluri-gal` | `calendar_estimativ` | `UNCONFIRMED` | Status neconfirmat — verifică sursa oficială | umbrella_program | Fiecare GAL are propriul apel și termen; starea agregată nu poate fi prezentată drept OPEN. |
 | `gal-afir-leader` | `calendar_estimativ` | `UNCONFIRMED` | Status neconfirmat — verifică sursa oficială | umbrella_program | Fiecare GAL are propriul apel și termen; starea agregată nu poate fi prezentată drept OPEN. |
 | `e-move-ro` | `ghid_aprobat_nedeschis` | `APPROVED_SCHEME` | Schemă aprobată — depunerea nu este deschisă | scheme | Actul înregistrat actualizează schema; nu există dovadă de sesiune deschisă. |
-| `pocidif-21` | `apel_deschis` | `OPEN` | Apel deschis — depuneri până la 30.09.2026 | session | Pagina oficială înregistrată confirmă sesiunea 30.06.2026–30.09.2026, iar fereastra include data verificării. |
+| `pocidif-21` | `apel_inchis` | `CLOSED` | Apel închis — depunerea nu este deschisă | session | Pagina MIPE afișează stadiul Închis și data de închidere 30.10.2026; include Ordinul nr. 1500/29.09.2026. |
 | `pnrr` | `calendar_estimativ` | `UNCONFIRMED` | Status neconfirmat — verifică sursa oficială | umbrella_program | Componentele și apelurile PNRR au stări distincte; implementarea programului nu înseamnă depunere deschisă. |
 | `diaspora-investeste-acasa` | `ghid_aprobat_nedeschis` | `APPROVED_SCHEME` | Schemă aprobată — depunerea nu este deschisă | program | Program aprobat, în curs de operaționalizare la BID; lista băncilor partenere urmează să fie publicată. |
-| `e-drive` | `ghid_aprobat_nedeschis` | `APPROVED_SCHEME` | Schemă aprobată — depunerea nu este deschisă | scheme | Actul înregistrat actualizează schema; nu există dovadă de sesiune deschisă. |
-| `e-mobility-ro` | `ghid_aprobat_nedeschis` | `APPROVED_SCHEME` | Schemă aprobată — depunerea nu este deschisă | scheme | Actul înregistrat actualizează schema; nu există dovadă de sesiune deschisă. |
-| `fondul-modernizare-pc1-stocare` | `ghid_aprobat_nedeschis` | `FINAL_GUIDE` | Ghid final publicat — depunerea nu este deschisă | program_call | Ghidul final este aprobat, iar perioada de depunere nu este anunțată. |
+| `e-drive` | `consultare_publica` | `PUBLIC_CONSULTATION` | În consultare publică — depunerea nu este deschisă | scheme | Anunțul MTI din 03.11.2026 confirmă consultarea ghidurilor Măsurilor 1 și 2 până la 18.11.2026 și precizează că apelurile nu sunt lansate. |
+| `e-mobility-ro` | `apel_deschis` | `OPEN` | Apel deschis — depuneri până la 27.11.2026 | call_submeasure_1 | Anunțul MTI din 26.09.2026 confirmă ghidul aprobat și calendarul Submăsurii 1: 28.09–27.11.2026. |
+| `fondul-modernizare-pc1-stocare` | `apel_deschis` | `OPEN` | Apel deschis — depuneri până la 15.11.2026 | program_call | Anunțul oficial de lansare și prelungirea publicată la 22.10.2026 confirmă intervalul curent în MySMIS 2021. |
 | `programul-tranzitie-justa` | `calendar_estimativ` | `UNCONFIRMED` | Status neconfirmat — verifică sursa oficială | umbrella_program | Apelurile din program au stări distincte în MySMIS. |
 | `fondul-de-modernizare` | `calendar_estimativ` | `UNCONFIRMED` | Status neconfirmat — verifică sursa oficială | umbrella_program | Apelurile Fondului pentru Modernizare au stări distincte în MySMIS. |
 
