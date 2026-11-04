@@ -1,6 +1,6 @@
 # P1.18 — Mapping întrebări AEO
 
-Generat din `config/aeo-question-blocks.json`. Revizie editorială: **03.11.2026**.
+Generat din `config/aeo-question-blocks.json`. Revizie editorială: **04.11.2026**.
 
 ## Baza selecției
 

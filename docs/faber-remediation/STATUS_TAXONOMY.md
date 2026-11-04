@@ -1,6 +1,6 @@
 # Taxonomia unică de status FABER
 
-Revizie semantică: **2026-11-03**. Definiții canonice: `config/program-status-taxonomy.json`; atribuiri per program: `config/seo-programs.json#programs[*].canonicalStatus`. Acest document este generat de `tools/generate-status-governance-docs.js` și nu este o pagină publică.
+Revizie semantică: **2026-11-04**. Definiții canonice: `config/program-status-taxonomy.json`; atribuiri per program: `config/seo-programs.json#programs[*].canonicalStatus`. Acest document este generat de `tools/generate-status-governance-docs.js` și nu este o pagină publică.
 
 ## Contractul mecanismului
 
@@ -295,7 +295,7 @@ Maparea de mai jos folosește snapshot-ul factual de bază verificat în registr
 | `modernizare-microintreprinderi-ne-2` | `apel_inchis` | `CLOSED` | Apel închis — depunerea nu este deschisă | program_call | Pagina oficială ADR Nord-Est marchează explicit apelul 2 ca închis (28.09–28.10.2026). |
 | `fondul-modernizare-autoconsum` | `apel_inchis` | `COMPLETED` | Apel finalizat — depunerea nu este deschisă | program_call | MySMIS marchează apelurile înregistrate drept FINALIZAT. |
 | `fondul-modernizare-regenerabile` | `apel_inchis` | `COMPLETED` | Apel finalizat — depunerea nu este deschisă | program_call | MySMIS marchează apelurile înregistrate drept FINALIZAT. |
-| `afir-energie-autoconsum` | `apel_inchis` | `CLOSED` | Apel închis — depunerea nu este deschisă | session | Sesiunea 15.06.2026–14.08.2026 s-a încheiat; nu există în registry o dovadă distinctă de finalizare a procedurii. |
+| `afir-energie-autoconsum` | `apel_inchis` | `CLOSED` | Apel închis — depunerea nu este deschisă | session | Depunerea sesiunii 03/2026 s-a încheiat la 14.08.2026. AFIR a publicat la 03.11.2026 raportul final de selecție pentru solar peste 1 MW; contractarea proiectelor selectate urmează procedura AFIR și notificarea fiecărui solicitant. |
 | `autoconsum-institutii-publice` | `apel_deschis` | `OPEN` | Apel deschis — depuneri până la 20.11.2026 | program_call | AFIR confirmă sesiunea în derulare pentru entitățile publice; intervalul și eventualele limite se verifică în anunț și platformă. |
 | `fondul-modernizare-pc1-stocare-entitati-publice` | `apel_deschis` | `OPEN` | Apel deschis — depuneri până la 20.11.2026 | program_call | AFIR confirmă sesiunea în derulare pentru entitățile publice; intervalul și eventualele limite se verifică în anunț și platformă. |
 | `pro-infra` | `ghid_aprobat_nedeschis` | `APPROVED_SCHEME` | Schemă aprobată — depunerea nu este deschisă | scheme | Schema este aprobată prin Ordinul MTI nr. 2.292/29.12.2025 și modificată prin Ordinul nr. 101/12.02.2026, fără fereastră oficială de depunere. |

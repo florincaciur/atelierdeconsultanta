@@ -442,11 +442,11 @@ function applicantSummaryText(program) {
 }
 
 function grantAnswerText(program) {
-  return grantSummaryText(program) || "Nicio valoare publicată în registrul verificat pentru această pagină; valoarea se confirmă în documentele apelului aplicabil.";
+  return grantSummaryText(program) || "Valoarea finanțării depinde de apelul și categoria de ajutor aplicabile.";
 }
 
 function contributionAnswerText(program) {
-  return cofinancingSummaryText(program) || "Nicio intensitate sau contribuție publicată în registrul verificat pentru această pagină; condițiile se confirmă în documentele apelului aplicabil.";
+  return cofinancingSummaryText(program) || "Contribuția proprie se stabilește potrivit ghidului apelului și cheltuielilor proiectului.";
 }
 
 function applicationWindowText(program) {
@@ -455,7 +455,7 @@ function applicationWindowText(program) {
   }
   if (program?.applicationStart) return `Începere: ${formatDateRo(program.applicationStart)}; termenul final nu este publicat.`;
   if (program?.applicationEnd) return `Termen: ${formatDateRo(program.applicationEnd)}`;
-  return "Niciun termen de depunere publicat în registrul verificat pentru această pagină.";
+  return "Calendarul depunerii nu este anunțat pentru o sesiune nouă.";
 }
 
 function grantSummaryText(program) {
@@ -493,7 +493,7 @@ function statusLabel(statusOrProgram) {
 
 function statusStatement(program) {
   if (!program || !isPublicProgram(program)) return "Informații în validare editorială.";
-  if (program.status === "apel_deschis") return `${program.statusLabel}: ${program.applicationStart}–${program.applicationEnd}.`;
+  if (program.status === "apel_deschis") return `${program.statusLabel}.`;
   const label = String(program.statusLabel || "").trim();
   return /[.!?]$/u.test(label) ? label : `${label}.`;
 }

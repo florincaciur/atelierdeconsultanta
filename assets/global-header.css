@@ -121,13 +121,24 @@
 #navbar .nav-dropdown-panel[hidden] { display: none; }
 #navbar .nav-dropdown-panel.open { opacity: 1; transform: translateY(0); }
 #navbar .nav-program-panel {
-  width: min(700px, calc(100vw - 32px));
-  padding: 14px;
+  display: block;
+  position: fixed;
+  top: 82px;
+  left: 50%;
+  right: auto;
+  width: min(1180px, calc(100vw - 48px));
+  max-height: calc(100dvh - 98px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 20px;
+  transform: translate(-50%, -6px);
 }
+#navbar .nav-program-panel.open { transform: translate(-50%, 0); }
 #navbar .program-menu-columns {
   display: grid;
-  grid-template-columns: minmax(190px, .72fr) minmax(330px, 1.28fr);
-  gap: 14px;
+  width: 100%;
+  grid-template-columns: minmax(200px, .6fr) minmax(0, 2fr);
+  gap: 24px;
 }
 #navbar .program-menu-section { min-width: 0; }
 #navbar .program-menu-list {
@@ -140,6 +151,7 @@
 }
 #navbar .program-menu-link {
   display: grid;
+  min-width: 0;
   gap: 3px;
   min-height: 58px;
   align-content: center;
@@ -152,7 +164,9 @@
 #navbar .program-menu-link:focus-visible,
 #navbar .program-menu-link[aria-current="page"] { background: rgba(184, 71, 22, .27); }
 #navbar .program-menu-link span { font-size: .82rem; font-weight: 760; }
-#navbar .program-menu-link small { color: rgba(255, 255, 255, .65); font-size: .68rem; font-weight: 560; }
+#navbar .program-menu-link span,
+#navbar .program-menu-link small { overflow-wrap: anywhere; }
+#navbar .program-menu-link small { color: #c6cfdd; font-size: .75rem; font-weight: 560; line-height: 1.4; }
 #navbar .program-menu-all {
   display: inline-flex;
   min-height: 44px;
@@ -293,8 +307,16 @@
   letter-spacing: .08em;
   text-transform: uppercase;
 }
-#mobileMenu .mobile-program-link { display: grid; gap: 3px; }
-#mobileMenu .mobile-program-link small { color: rgba(255,255,255,.62); font-size: .72rem; }
+#mobileMenu .mobile-disclosure-panel a.mobile-program-link {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  min-width: 0;
+  gap: 5px;
+  align-content: center;
+}
+#mobileMenu .mobile-program-link span,
+#mobileMenu .mobile-program-link small { overflow-wrap: anywhere; }
+#mobileMenu .mobile-program-link small { color: #c6cfdd; font-size: .78rem; line-height: 1.4; }
 #mobileMenu .mobile-program-all { display: inline-flex; min-height: 44px; align-items: center; margin: 4px 14px 10px; color: var(--gold); font-weight: 760; }
 #mobileMenu .mobile-disclosure-panel a {
   display: flex;

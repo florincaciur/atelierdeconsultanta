@@ -29,7 +29,7 @@ assert.equal($("#hero.im-hero").attr("data-homepage-revision"), "immersive-20260
 assert.equal($("#hero .im-lead").length, 1, "introducerea imersivă trebuie să rămână compactă");
 assert.equal($("#hero .im-about .im-detail-copy").length, 1, "explicația completă rămâne în HTML și poate fi extinsă");
 assert.match($("#hero .im-lead").text(), /Verificare prudentă, documentată și interdisciplinară — consultanță și proiectare — înainte de dosar\./u);
-assert.equal($("[data-program-scene]").length, 14);
+assert.equal($("[data-program-scene]").length, 15);
 assert.equal($(".im-method-sculpture .im-slab").length, 5);
 assert.equal($("#homepage-contact #contact-triage-form").length, 1);
 assert.equal($("#homepage-contact .im-contact-disclosure").attr("open"), undefined, "formularul trebuie să fie restrâns implicit pentru a păstra al cincilea cadru compact");

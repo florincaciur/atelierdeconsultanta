@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-03T20:11:50.189Z",
+  "generatedAt": "2026-11-04T09:37:49.605Z",
   "canonicalUrlCount": 105,
   "changes": [
     {
@@ -12323,6 +12323,14 @@
       "reason": "Diacritice și normă editorială română"
     },
     {
+      "route": "/dr18",
+      "sourceFile": "dr18/index.html",
+      "location": "visible-copy",
+      "oldFragment": "Institutie",
+      "newFragment": "Instituție",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
       "route": "/e-drive",
       "sourceFile": "e-drive/index.html",
       "location": "visible-copy",
@@ -12792,6 +12800,14 @@
       "location": "visible-copy",
       "oldFragment": "Ignorarea timpului pentru racordare și autorizatii.",
       "newFragment": "Ignorarea timpului pentru racordare și autorizații.",
+      "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/e-move",
+      "sourceFile": "e-move/index.html",
+      "location": "visible-copy",
+      "oldFragment": "Institutie",
+      "newFragment": "Instituție",
       "reason": "Diacritice și normă editorială română"
     },
     {

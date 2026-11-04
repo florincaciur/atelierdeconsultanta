@@ -26,7 +26,7 @@ function renderPocidifMain(page) {
       <section aria-labelledby="pocidif-raspuns-rapid">
         <h2 id="pocidif-raspuns-rapid">Răspuns rapid</h2>
         <p class="intro">${esc(page.quickAnswer)}</p>
-        <p class="source-note"><strong>Status document:</strong> această pagină folosește ghidul aprobat prin Ordinul MIPE nr. 965/23.06.2026, schema de ajutor aprobată prin Ordinul MIPE nr. 875/15.06.2026, cele 19 anexe și clarificările oficiale publicate la 9 iulie 2026. <strong>Ultima verificare:</strong> <time datetime="2026-07-13">13 iulie 2026</time>.</p>
+        <p class="source-note"><strong>Status document:</strong> această pagină folosește ghidul aprobat prin Ordinul MIPE nr. 965/23.06.2026, schema de ajutor aprobată prin Ordinul MIPE nr. 875/15.06.2026, cele 19 anexe și clarificările oficiale publicate la 9 iulie 2026. <strong>Ultima verificare:</strong> <time datetime="2026-11-04">4 noiembrie 2026</time>.</p>
       </section>
 
       <section aria-labelledby="pocidif-denumire">

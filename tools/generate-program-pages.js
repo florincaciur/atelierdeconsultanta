@@ -1191,7 +1191,7 @@ function renderAfirAutoconsumAgroalimentarContent(page) {
       <section aria-labelledby="afir-raspuns-rapid">
         <h2 id="afir-raspuns-rapid">Răspuns rapid</h2>
         <p class="intro">${esc(page.quickAnswer)}</p>
-        <p class="source-note"><strong>Status document:</strong> Ghidul Solicitantului – Schema ENERGIE, Versiunea 7, este ghidul aprobat prin Ordinul MADR nr. 180/09.06.2026 și aplicabil sesiunii deschise între 15 iunie și 14 august 2026. Nu este prezentat ca simplă versiune consultativă. Ghidul și anexele pot primi rectificări, astfel că înainte de depunere se verifică forma disponibilă pe pagina AFIR și eventualele clarificări ulterioare. <strong>Ultima verificare:</strong> <time datetime="2026-07-20">20 iulie 2026</time>.</p>
+        <p class="source-note"><strong>Status document:</strong> Ghidul Solicitantului – Schema ENERGIE, Versiunea 7, este ghidul aprobat prin Ordinul MADR nr. 180/09.06.2026 și aplicabil sesiunii deschise între 15 iunie și 14 august 2026. Nu este prezentat ca simplă versiune consultativă. Ghidul și anexele pot primi rectificări, astfel că înainte de depunere se verifică forma disponibilă pe pagina AFIR și eventualele clarificări ulterioare. <strong>Ultima verificare:</strong> <time datetime="2026-11-04">4 noiembrie 2026</time>.</p>
         <div class="table-wrap">
           <table class="program-table">
             <thead><tr><th>Reper din Ghidul V7</th><th>Condiție</th></tr></thead>
@@ -1351,7 +1351,7 @@ function renderProInfraEfficiencyContent(page) {
 
   return `
       <p class="intro">${esc(page.quickAnswer)}</p>
-      <p class="source-note"><strong>Status document:</strong> pagina folosește Schema de ajutor de stat PRO INFRA aprobată prin Ordinul MTI nr. 2.292/29.12.2025, publicată în Monitorul Oficial nr. 20/14.01.2026, în forma consolidată la 12 februarie 2026. Condițiile concrete ale unei proceduri de ofertare, calendarul și anexele de depunere se confirmă în Ghidul solicitantului aferent apelului. <strong>Ultima verificare:</strong> <time datetime="2026-07-13">13 iulie 2026</time>.</p>
+      <p class="source-note"><strong>Status document:</strong> pagina folosește Schema de ajutor de stat PRO INFRA aprobată prin Ordinul MTI nr. 2.292/29.12.2025, publicată în Monitorul Oficial nr. 20/14.01.2026, în forma consolidată la 12 februarie 2026. Condițiile concrete ale unei proceduri de ofertare, calendarul și anexele de depunere se confirmă în Ghidul solicitantului aferent apelului. <strong>Ultima verificare:</strong> <time datetime="2026-11-04">4 noiembrie 2026</time>.</p>
 
       <section aria-labelledby="pro-infra-scop">
         <h2 id="pro-infra-scop">Scopul schemei</h2>

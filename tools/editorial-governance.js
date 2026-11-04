@@ -265,7 +265,9 @@ function renderEditorialGovernance(record) {
   }
   const changes = record.changelog
     .slice()
+    .filter((change) => !/migr|snapshot|registrul|guvernan|reverificat.*schimbare editorială/iu.test(change.summary))
     .sort((left, right) => right.date.localeCompare(left.date))
+    .slice(0, 4)
     .map((change) => `<li><time datetime="${escapeHtml(change.date)}">${escapeHtml(change.date)}</time> — ${escapeHtml(change.summary)}</li>`)
     .join("\n      ");
   const publication = isIsoDate(record.datePublished)
@@ -283,7 +285,7 @@ function renderEditorialGovernance(record) {
   <details id="editorial-changelog-${escapeHtml(record.id)}" class="editorial-governance__changelog">
     <summary>Istoric editorial</summary>
     <ol>
-      ${changes}
+      ${changes || `<li><time datetime="${escapeHtml(record.verifiedAt)}">${escapeHtml(record.verifiedAt)}</time> — Verificarea statutului, calendarului și documentelor oficiale.</li>`}
     </ol>
   </details>
 </section>

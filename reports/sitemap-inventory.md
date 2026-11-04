@@ -19,6 +19,7 @@ Generatorul include numai rute locale 200, indexabile si self-canonical. `lastmo
 - meta_refresh: 2
 - missing_canonical: 12
 - noindex_meta: 63
+- noncanonical_file_variant: 1
 - redirect_source: 104
 
 ## Lista excluderilor
@@ -103,6 +104,7 @@ Generatorul include numai rute locale 200, indexabile si self-canonical. `lastmo
 | https://atelierdeconsultanta.ro/studii-de-caz-fonduri-europene | studii-de-caz/index.html | noindex_meta | - |
 | https://atelierdeconsultanta.ro/studii-de-caz-fonduri-europene | testimoniale.html | noindex_meta | - |
 | https://atelierdeconsultanta.ro/studii-de-caz-fonduri-europene | testimoniale/index.html | noindex_meta | - |
+| https://atelierdeconsultanta.ro/e-drive | .tmp/edrive-preferred-before.html | noncanonical_file_variant | canonical route: /e-drive |
 | https://atelierdeconsultanta.ro/afir-autoconsum-agroalimentar | _redirects | redirect_source | HTTP 301 |
 | https://atelierdeconsultanta.ro/afir-autoconsum-agroalimentar | _redirects | redirect_source | HTTP 301 |
 | https://atelierdeconsultanta.ro/autoconsum-public-fotovoltaice-institutii-publice | _redirects | redirect_source | HTTP 301 |

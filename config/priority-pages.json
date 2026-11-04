@@ -192,7 +192,7 @@
       },
       "interpretation": "Localitatea, codul CAEN și dreptul asupra spațiului pot exclude un proiect înaintea analizei bugetului. Interpretarea de lucru FABER nu adaugă o regulă suplimentară documentului oficial.",
       "programId": "modernizare-microintreprinderi-ne-2",
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-04",
       "sourceOfTruth": "config/seo-programs.json#programs",
       "publicationState": "public"
     },
@@ -200,7 +200,7 @@
       "route": "/afir-autoconsum-agroalimentar",
       "file": "afir-autoconsum-agroalimentar.html",
       "sectionTitle": "Datele esențiale ale programului",
-      "directAnswer": "Sesiunea AFIR Energie 2026 s-a încheiat la 14 august. Pagina rămâne utilă pentru regulile sesiunii, minimum 70% autoconsum, fotovoltaice, stocare, SF și documente. Apel închis – sesiunea s-a încheiat la 14 august 2026. Valori istorice conform sursei oficiale: 20.000.000 EUR/beneficiar; buget 265.000.000 EUR; intensitate 100% (costuri eligibile în limitele costului unitar); Diferențele peste costurile unitare și cheltuielile neeligibile.",
+      "directAnswer": "Apelul AFIR Autoconsum Agro-Alim este în curs de contractare pentru proiectele selectate. Depunerea sesiunii 03/2026 s-a desfășurat între 15 iunie și 14 august 2026. La 3 noiembrie 2026, AFIR a publicat raportul final de selecție pentru componenta solar peste 1 MW. Calendarul fiecărui beneficiar depinde de notificarea AFIR și de documentele solicitate. Pentru componenta de maximum 1 MW se urmăresc separat rapoartele de evaluare și selecție. Ghidul V7 prevede minimum 70% autoconsum, ajutor de până la 20 milioane EUR/beneficiar și plafoane de 650.000 EUR/MW până la 1 MW inclusiv, respectiv 550.000 EUR/MW peste 1 MW. Nu se primesc cereri noi în sesiunea încheiată.",
       "facts": [
         {
           "term": "Cine este eligibil?",
@@ -232,18 +232,18 @@
         },
         {
           "term": "Ce statut are ghidul?",
-          "description": "Apel închis – sesiunea s-a încheiat la 14 august 2026."
+          "description": "Apel în curs de contractare – depunerea proiectelor s-a încheiat."
         }
       ],
       "source": {
-        "document": "Comunicarea AFIR din 09.06.2026 privind sesiunea 15.06–14.08.2026",
+        "document": "Raport final de selecție Schema de Energie, sesiunea 03/2026, solar peste 1 MW, publicat la 03.11.2026; Ghidul V7 aprobat prin OMADR 180/09.06.2026",
         "institution": "Ministerul Agriculturii și Dezvoltării Rurale / AFIR",
-        "status": "Apel închis – sesiunea s-a încheiat la 14 august 2026. Sesiunea 15 iunie–14 august 2026 este închisă. Informațiile rămân raportate la Ghidul V7; o sesiune viitoare se verifică separat la AFIR.",
-        "url": "https://www.afir.ro/comunicate/265-de-milioane-de-euro-pentru-investitii-in-producerea-energiei-electrice/"
+        "status": "Apel în curs de contractare – depunerea proiectelor s-a încheiat. Contractarea privește proiectele selectate și notificate de AFIR. Raportul final din 3 noiembrie 2026 se referă la componenta solar peste 1 MW; nu confirmă semnarea tuturor contractelor și nu redeschide depunerea.",
+        "url": "https://www.afir.ro/rapoarte/rapoarte-feadr/selectie/"
       },
       "interpretation": "O putere instalată mai mare nu înseamnă automat un proiect mai bun: consumul istoric, extinderile justificate și punctele de consum trebuie să susțină dimensionarea. Aceasta este interpretarea tehnică FABER, nu o normă care modifică Ghidul V7.",
       "programId": "afir-energie-autoconsum",
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-04",
       "sourceOfTruth": "config/seo-programs.json#programs",
       "publicationState": "public"
     },
@@ -293,7 +293,7 @@
       },
       "interpretation": "Un proiect centrat pe achiziții IT, fără activități CDI și fără un rezultat nou introdus pe piață, nu răspunde obiectivului apelului. Aceasta este interpretarea FABER a efectului practic al ghidului, nu o normă separată.",
       "programId": "pocidif-21",
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-04",
       "sourceOfTruth": "config/seo-programs.json#programs",
       "publicationState": "public"
     },
@@ -350,7 +350,7 @@
     "e-move": {
       "route": "/e-move",
       "sectionTitle": "Condițiile care trebuie verificate",
-      "directAnswer": "Schema e-MOVE RO a fost actualizată în august 2026; depunerea nu este deschisă și nu există un calendar operațional publicat. Schemă actualizată – depunerea nu este deschisă. Finanțare conform sursei oficiale: 25.000.000 EUR/beneficiar; intensitate 100% (maximum, în condițiile schemei actualizate și ale procedurii competitive); Diferența față de ajutorul aplicabil și cheltuielile neeligibile.",
+      "directAnswer": "e-MOVE RO sprijină infrastructura de reîncărcare electrică pentru întreprinderi și comunități, prin submăsuri cu reguli distincte. Schema aprobată prin OMTI 1318/2025 include modificările OMTI 755/2026 și OMTI 821/2026. Investiția poate include stații de încărcare și, potrivit submăsurii, producție regenerabilă și stocare. Existența schemei nu deschide depunerea: calendarul, platforma, alocarea și ghidul aplicabil trebuie confirmate prin anunțul apelului. Programul este distinct de e-Mobility RO, al cărui apel pentru Submăsura 1 are un calendar separat.",
       "facts": [
         {
           "term": "Cine este eligibil?",
@@ -386,14 +386,14 @@
         }
       ],
       "source": {
-        "document": "Ordinul MTI nr. 755/06.08.2026 pentru actualizarea schemei e-MOVE RO, în vigoare din 10.08.2026",
+        "document": "Schema e-MOVE RO, OMTI 1318/2025, cu modificările OMTI 755/2026 și OMTI 821/2026, publicat în Monitorul Oficial nr. 739/02.09.2026",
         "institution": "Ministerul Transporturilor și Infrastructurii / Portal Legislativ",
-        "status": "Schemă actualizată – depunerea nu este deschisă. Schema este actualizată, dar depunerea nu este deschisă. Calendarul și procedura operațională se confirmă numai din documentele oficiale viitoare.",
-        "url": "https://legislatie.just.ro/Public/DetaliiDocument/313320"
+        "status": "Schemă actualizată – depunerea nu este deschisă. Calendarul, alocarea și condițiile unei depuneri se confirmă prin documentele oficiale ale fiecărei submăsuri.",
+        "url": "https://fonduri.mt.ro/documente-si-publicatii/finantari-fm/scheme-de-ajutor-de-stat/schema-de-ajutor-de-stat-5"
       },
       "interpretation": "Un amplasament poate fi neimplementabil chiar dacă stațiile apar ca tip de investiție: dreptul asupra terenului, accesul și soluția de racordare trebuie să fie compatibile. Aceasta este interpretarea practică FABER, nu o regulă oficială suplimentară.",
       "programId": "e-move-ro",
-      "lastReviewed": "2026-11-03",
+      "lastReviewed": "2026-11-04",
       "sourceOfTruth": "config/seo-programs.json#programs",
       "publicationState": "public"
     }

@@ -3,7 +3,7 @@
 - URL-uri canonice procesate: 105
 - Fișiere HTML documentate: 96
 - Surse editoriale/CMS documentate: 6
-- Fragmente documentate: 4282
+- Fragmente documentate: 4284
 - URL-uri cu intervenții: 121
 - Valorile, procentele, datele, statusurile și câmpurile de proveniență sunt protejate de normalizator.
 - În paginile juridice s-au eliminat doar etichete interne și s-au corectat forme lingvistice; sensul juridic nu a fost rescris.
@@ -1550,6 +1550,7 @@
 | /dr14 | config/seo-programs.json:pages.1.scoring.2 | Riscurile cresc când proiectul incearca sa forteze activitati care nu sunt documentate. | Riscurile cresc când proiectul incearca sa forteze activități care nu sunt documentate. | Diacritice și normă editorială română |
 | /dr14 | config/seo-programs.json:pages.1.steps.0 | Calculam dimensiunea economică și verificam încadrarea fermei. | Calculam dimensiunea economică și verificăm încadrarea fermei. | Diacritice și normă editorială română |
 | /dr18 | dr18/index.html:visible-copy | Bunul trebuie să intre în proprietatea beneficiarului cel târziu la ultima plată. | Bunul trebuie să între în proprietatea beneficiarului cel târziu la ultima plată. | Diacritice și normă editorială română |
+| /dr18 | dr18/index.html:visible-copy | Institutie | Instituție | Diacritice și normă editorială română |
 | /e-drive | e-drive/index.html:visible-copy | Sunt propuse pentru finanțare vehicule M1 și M2 noi, exclusiv electrice cu baterie reîncărcată la o sursă externă. Vehiculele hibride și plug-in hybrid nu se încadrează. | Sunt propuse pentru finanțare vehicule M1 și M2 noi, exclusiv electrice cu baterie reîncărcată la o sursă externă. Vehiculele hibride și plug-în hybrid nu se încadrează. | Diacritice și normă editorială română |
 | /e-move | blog.json:posts.34.author | FABER - Atelier de Consultanta | FABER - Atelier de Consultanță | Diacritice și normă editorială română |
 | /e-move | blog.json:posts.34.bannerAlt | Panouri fotovoltaice si documente de finantare pentru e-MOVE RO | Panouri fotovoltaice și documente de finanțare pentru e-MOVE RO | Diacritice și normă editorială română |
@@ -1609,6 +1610,7 @@
 | /e-move | e-move/index.html:visible-copy | Drepturi, urbanism, acces, siguranta și utilizare. | Drepturi, urbanism, acces, siguranță și utilizare. | Diacritice și normă editorială română |
 | /e-move | e-move/index.html:visible-copy | Forma consultativa poate fi modificata. | Forma consultativa poate fi modificată. | Diacritice și normă editorială română |
 | /e-move | e-move/index.html:visible-copy | Ignorarea timpului pentru racordare și autorizatii. | Ignorarea timpului pentru racordare și autorizații. | Diacritice și normă editorială română |
+| /e-move | e-move/index.html:visible-copy | Institutie | Instituție | Diacritice și normă editorială română |
 | /e-move | e-move/index.html:visible-copy | Lucrari și avize | Lucrări și avize | Diacritice și normă editorială română |
 | /e-move | e-move/index.html:visible-copy | Pagina oficială DGPET/MTI publica ghidul e-MOVE RO spre consultare și trimite la schema de ajutor de stat; ghidul final sau reviziile ulterioare trebuie confirmate în sursa oficială înainte de depunere. | Pagină oficială DGPET/MTI publică ghidul e-MOVE RO spre consultare și trimite la schema de ajutor de stat; ghidul final sau reviziile ulterioare trebuie confirmate în sursa oficială înainte de depunere. | Diacritice și normă editorială română |
 | /e-move | e-move/index.html:visible-copy | Pentru e-MOVE, bugetul nu se valideaza doar prin preturi. Trebuie aratat cine folosește infrastructura, ce capacitate este necesara, cum se intretin statiile și ce costuri rămân la beneficiar după finalizare. | Pentru e-MOVE, bugetul nu se valideaza doar prin preturi. Trebuie aratat cine folosește infrastructura, ce capacitate este necesară, cum se intretin statiile și ce costuri rămân la beneficiar după finalizare. | Diacritice și normă editorială română |

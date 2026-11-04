@@ -39,14 +39,14 @@
     "institution": "Autoritatea de Management pentru Programul Regional Nord-Est",
     "documentType": "arhivă oficială cu ghid final și 20 de anexe",
     "url": "https://regionordest.ro/prioritatea-1/modernizare-microintreprinderi/",
-    "accessedAt": "2026-11-03",
+    "accessedAt": "2026-11-04",
     "note": "Arhiva include ghidul final, Anexa 5 cu lista CAEN Rev. 3 și Anexa 10 cu grila de evaluare tehnică și financiară.",
     "programIds": [
       "modernizare-microintreprinderi-ne-2"
     ],
     "programStatus": "apel_inchis",
     "statusLabel": "Apel închis – sesiunea 28 septembrie–28 octombrie 2026",
-    "verifiedAt": "2026-11-03",
+    "verifiedAt": "2026-11-04",
     "isPrimaryFor": "modernizare-microintreprinderi-ne-2",
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
@@ -56,7 +56,7 @@
     "institution": "Autoritatea de Management pentru Programul Regional Nord-Est",
     "documentType": "pagină oficială de apel și anunț de lansare",
     "url": "https://regionordest.ro/prioritatea-1/modernizare-microintreprinderi/",
-    "accessedAt": "2026-11-03",
+    "accessedAt": "2026-11-04",
     "note": "Pagina oficială confirmă publicarea ghidului final la 27 august 2026, perioada de depunere, bugetul, grantul și instrumentul ADR de autoevaluare.",
     "programIds": [
       "modernizare-microintreprinderi-ne-2"
@@ -64,7 +64,7 @@
     "isPrimaryFor": "modernizare-microintreprinderi-ne-2",
     "programStatus": "apel_inchis",
     "statusLabel": "Apel închis – sesiunea 28 septembrie–28 octombrie 2026",
-    "verifiedAt": "2026-11-03",
+    "verifiedAt": "2026-11-04",
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
   "femeia": {
@@ -100,38 +100,40 @@
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
   "afir-autoconsum": {
-    "name": "Comunicarea AFIR din 09.06.2026 privind sesiunea 15.06–14.08.2026",
-    "title": "Comunicarea AFIR din 09.06.2026 privind sesiunea 15.06–14.08.2026",
-    "institution": "Ministerul Agriculturii și Dezvoltării Rurale / AFIR",
+    "name": "Ghidul Solicitantului Schemă Energie Autoconsum V7 – iunie 2026",
+    "title": "Ghidul Solicitantului Schemă Energie Autoconsum V7 – iunie 2026",
+    "institution": "MADR / AFIR",
     "documentType": "ghid aprobat prin OMADR nr. 180/09.06.2026",
-    "url": "https://www.afir.ro/comunicate/265-de-milioane-de-euro-pentru-investitii-in-producerea-energiei-electrice/",
-    "accessedAt": "2026-11-03",
-    "note": "Versiunea 7 aplicabilă celei de-a treia sesiuni din 2026; documentul aprobat înlocuiește ca reper editorial versiunea publicată anterior în consultare.",
+    "url": "https://www.afir.ro/media/hkfp4w0v/ghidul-solicitantului-schem%C4%83-energie-autoconsum-v7-iunie-2026.pdf",
+    "accessedAt": "2026-11-04",
+    "note": "Ghidul aprobat prin OMADR nr. 180/09.06.2026, aplicabil sesiunii 03/2026 și proiectelor selectate pentru contractare.",
     "programIds": [
       "afir-energie-autoconsum"
     ],
     "isPrimaryFor": "afir-energie-autoconsum",
     "programStatus": "apel_inchis",
-    "statusLabel": "Apel închis – sesiunea s-a încheiat la 14 august 2026",
-    "verifiedAt": "2026-11-03",
-    "sourceOfTruth": "config/seo-programs.json#programs"
+    "statusLabel": "Apel în curs de contractare – depunerea proiectelor s-a încheiat",
+    "verifiedAt": "2026-11-04",
+    "sourceOfTruth": "config/seo-programs.json#programs",
+    "syncFromProgramRegistry": false
   },
   "afir-autoconsum-session-2026": {
-    "name": "Comunicarea AFIR din 09.06.2026 privind sesiunea 15.06–14.08.2026",
-    "title": "Comunicarea AFIR din 09.06.2026 privind sesiunea 15.06–14.08.2026",
-    "institution": "Ministerul Agriculturii și Dezvoltării Rurale / AFIR",
+    "name": "AFIR: sesiunea Schema de Energie 15 iunie–14 august 2026",
+    "title": "AFIR: sesiunea Schema de Energie 15 iunie–14 august 2026",
+    "institution": "AFIR",
     "documentType": "anunț oficial de lansare",
     "url": "https://www.afir.ro/comunicate/265-de-milioane-de-euro-pentru-investitii-in-producerea-energiei-electrice/",
-    "accessedAt": "2026-11-03",
+    "accessedAt": "2026-11-04",
     "note": "Confirmă sesiunea 15 iunie–14 august 2026, alocarea de 265 milioane euro și caracterul aplicabil al Ghidului V7.",
     "programIds": [
       "afir-energie-autoconsum"
     ],
     "programStatus": "apel_inchis",
-    "statusLabel": "Apel închis – sesiunea s-a încheiat la 14 august 2026",
-    "verifiedAt": "2026-11-03",
+    "statusLabel": "Apel în curs de contractare – depunerea proiectelor s-a încheiat",
+    "verifiedAt": "2026-11-04",
     "isPrimaryFor": "afir-energie-autoconsum",
-    "sourceOfTruth": "config/seo-programs.json#programs"
+    "sourceOfTruth": "config/seo-programs.json#programs",
+    "syncFromProgramRegistry": false
   },
   "autoconsum-publici": {
     "name": "Ghidul solicitantului și anexele publicate de AFIR la 11.09.2026",
@@ -139,15 +141,15 @@
     "institution": "Ministerul Energiei / AFIR",
     "documentType": "ghid și anexe oficiale",
     "url": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-producere-si-stocare-energie-regenerabila-beneficiari-publici/",
-    "accessedAt": "2026-11-03",
+    "accessedAt": "2026-11-04",
     "note": "Ghid publicat de AFIR la 11.09.2026. AFIR a publicat ghidurile la 11.09.2026 și a anunțat primirea cererilor online din 28.09.2026. Termenul de închidere nu este precizat în comunicatul verificat la 13.09.2026; se reconfirmă în anunțul sesiunii.",
     "programIds": [
       "autoconsum-institutii-publice"
     ],
     "isPrimaryFor": "autoconsum-institutii-publice",
     "programStatus": "apel_deschis",
-    "statusLabel": "Sesiune deschisă – depuneri până la 20 noiembrie 2026",
-    "verifiedAt": "2026-11-03",
+    "statusLabel": "Apel de proiecte deschis – depuneri până la 20 noiembrie 2026",
+    "verifiedAt": "2026-11-04",
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
   "fondul-modernizare": {
@@ -226,20 +228,20 @@
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
   "emove": {
-    "name": "Ordinul MTI nr. 755/06.08.2026 pentru actualizarea schemei e-MOVE RO, în vigoare din 10.08.2026",
-    "title": "Ordinul MTI nr. 755/06.08.2026 pentru actualizarea schemei e-MOVE RO, în vigoare din 10.08.2026",
+    "name": "Schema e-MOVE RO, OMTI 1318/2025, cu modificările OMTI 755/2026 și OMTI 821/2026, publicat în Monitorul Oficial nr. 739/02.09.2026",
+    "title": "Schema e-MOVE RO, OMTI 1318/2025, cu modificările OMTI 755/2026 și OMTI 821/2026, publicat în Monitorul Oficial nr. 739/02.09.2026",
     "institution": "Ministerul Transporturilor și Infrastructurii / Portal Legislativ",
-    "documentType": "ghid publicat spre consultare publica / schema de ajutor de stat / comunicat oficial",
-    "url": "https://legislatie.just.ro/Public/DetaliiDocument/313320",
-    "accessedAt": "2026-11-03",
-    "note": "Pagina oficiala DGPET/MTI publica ghidul e-MOVE RO spre consultare si trimite la schema de ajutor de stat; ghidul final sau reviziile ulterioare trebuie confirmate in sursa oficiala inainte de depunere.",
+    "documentType": "schemă de ajutor de stat aprobată și modificată",
+    "url": "https://fonduri.mt.ro/documente-si-publicatii/finantari-fm/scheme-de-ajutor-de-stat/schema-de-ajutor-de-stat-5",
+    "accessedAt": "2026-11-04",
+    "note": "Pagina MTI include OMTI 1318/2025 și modificările OMTI 755/2026 și OMTI 821/2026. Depunerea necesită un ghid și un calendar proprii fiecărei submăsuri.",
     "programIds": [
       "e-move-ro"
     ],
     "isPrimaryFor": "e-move-ro",
     "programStatus": "ghid_aprobat_nedeschis",
     "statusLabel": "Schemă actualizată – depunerea nu este deschisă",
-    "verifiedAt": "2026-11-03",
+    "verifiedAt": "2026-11-04",
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
   "pocidif-21": {
@@ -250,7 +252,7 @@
     "documentType": "pagină oficială cu ghid aprobat, schemă, anexe și întrebări-răspunsuri",
     "publisher": "Ministerul Investițiilor și Proiectelor Europene",
     "version": "Ghid aprobat prin Ordinul MIPE nr. 965/23.06.2026",
-    "accessedAt": "2026-11-03",
+    "accessedAt": "2026-11-04",
     "note": "Sursa editorială principală pentru Acțiunea 2.1. Pagina MIPE publică ghidul aprobat, anexele, schema de ajutor și tabelul de întrebări și răspunsuri.",
     "programIds": [
       "pocidif-21"
@@ -258,7 +260,7 @@
     "isPrimaryFor": "pocidif-21",
     "programStatus": "apel_inchis",
     "statusLabel": "Apel închis – depuneri încheiate la 30 octombrie 2026",
-    "verifiedAt": "2026-11-03",
+    "verifiedAt": "2026-11-04",
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
   "pocidif-21-guide": {
@@ -268,14 +270,14 @@
     "institution": "Ministerul Investițiilor și Proiectelor Europene",
     "documentType": "ghid aprobat și 19 anexe",
     "version": "Aprobat prin Ordinul MIPE nr. 965/23.06.2026",
-    "accessedAt": "2026-11-03",
+    "accessedAt": "2026-11-04",
     "note": "Conține condițiile finale privind solicitanții, CAEN, parteneriatele, activitățile, cheltuielile, indicatorii, documentele și grila de evaluare.",
     "programIds": [
       "pocidif-21"
     ],
     "programStatus": "apel_inchis",
     "statusLabel": "Apel închis – depuneri încheiate la 30 octombrie 2026",
-    "verifiedAt": "2026-11-03",
+    "verifiedAt": "2026-11-04",
     "isPrimaryFor": "pocidif-21",
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
@@ -285,14 +287,14 @@
     "url": "https://mfe.gov.ro/ghiduri_pocidif/pocidif-ghidul-solicitantului-dezvoltarea-de-noi-servicii-aplicatii-produse-prin-inovare-si-adoptarea-de-tehnologii-avansate-2/",
     "institution": "Ministerul Investițiilor și Proiectelor Europene",
     "documentType": "schemă de ajutor aprobată prin Ordinul MIPE nr. 875/15.06.2026",
-    "accessedAt": "2026-11-03",
+    "accessedAt": "2026-11-04",
     "note": "Sursa oficială pentru tipurile de ajutor, intensități, cumul și condițiile de acordare.",
     "programIds": [
       "pocidif-21"
     ],
     "programStatus": "apel_inchis",
     "statusLabel": "Apel închis – depuneri încheiate la 30 octombrie 2026",
-    "verifiedAt": "2026-11-03",
+    "verifiedAt": "2026-11-04",
     "isPrimaryFor": "pocidif-21",
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
@@ -303,14 +305,14 @@
     "institution": "Ministerul Investițiilor și Proiectelor Europene",
     "documentType": "clarificări oficiale",
     "version": "09.07.2026",
-    "accessedAt": "2026-11-03",
+    "accessedAt": "2026-11-04",
     "note": "Clarificări oficiale publicate după aprobarea ghidului; documentul completează lectura ghidului și anexelor.",
     "programIds": [
       "pocidif-21"
     ],
     "programStatus": "apel_inchis",
     "statusLabel": "Apel închis – depuneri încheiate la 30 octombrie 2026",
-    "verifiedAt": "2026-11-03",
+    "verifiedAt": "2026-11-04",
     "isPrimaryFor": "pocidif-21",
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
@@ -337,10 +339,10 @@
     "title": "Ghid final DR-12, Ediția I, Revizia 0, aprobat prin OMADR 268/17.09.2026; publicat de AFIR la 18.09.2026",
     "institution": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
     "url": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-12/",
-    "accessedAt": "2026-11-03",
+    "accessedAt": "2026-11-04",
     "programStatus": "apel_deschis",
     "statusLabel": "Sesiune deschisă – depuneri 6 octombrie–2 decembrie 2026",
-    "verifiedAt": "2026-11-03",
+    "verifiedAt": "2026-11-04",
     "isPrimaryFor": "dr12-afir",
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
@@ -352,10 +354,10 @@
     "title": "Contorul oficial al sesiunilor active DR-14; cererea v1.1 din 25.08.2026 și clarificarea pe componente din 21.08.2026",
     "institution": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
     "url": "https://depunerepspac.afir.ro/Sesiune/Lista",
-    "accessedAt": "2026-11-03",
+    "accessedAt": "2026-11-04",
     "programStatus": "apel_deschis",
     "statusLabel": "Depuneri până la 16 noiembrie; componenta achiziții simple este închisă",
-    "verifiedAt": "2026-11-03",
+    "verifiedAt": "2026-11-04",
     "isPrimaryFor": "dr14-afir",
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
@@ -363,16 +365,16 @@
     "programIds": [
       "dr18-afir"
     ],
-    "name": "Anunțul A1.2/01/2026 pentru sesiunea DR 18, publicat la 14.08.2026",
-    "title": "Anunțul A1.2/01/2026 pentru sesiunea DR 18, publicat la 14.08.2026",
+    "name": "Ghidul final DR-18 și anunțul AFIR din 30.10.2026: prelungire până la 16.11.2026, prag 40 de puncte",
+    "title": "Ghidul final DR-18 și anunțul AFIR din 30.10.2026: prelungire până la 16.11.2026, prag 40 de puncte",
     "institution": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
     "documentType": "Ghid final și anexe",
     "url": "https://www.afir.ro/instrumente/sesiuni/sesiuni-primire-proiecte/",
-    "accessedAt": "2026-11-03",
+    "accessedAt": "2026-11-04",
     "note": "Ghid final publicat; sesiunea începută la 1 septembrie 2026 este prelungită până la 16 noiembrie 2026, ora 16:00, cu alocare de 5 milioane EUR.",
     "programStatus": "apel_deschis",
     "statusLabel": "Sesiune prelungită – depuneri până la 16 noiembrie 2026",
-    "verifiedAt": "2026-11-03",
+    "verifiedAt": "2026-11-04",
     "isPrimaryFor": "dr18-afir",
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
@@ -384,10 +386,10 @@
     "title": "Ordinul MIPE nr. 607/28.04.2026; modifică Ghidul aprobat prin Ordinul nr. 3185/2022",
     "institution": "Ministerul Investițiilor și Proiectelor Europene",
     "url": "https://mfe.gov.ro/pnrr-ordinul-nr-607-28-04-2026-pentru-modificarea-ghidului-solicitantului-digitalizarea-imm-urilor-grant-de-pana-la-100-000-euro-pe-intreprindere-care-sa-sprijine-imm-urile-in-adoptarea-tehnologii/",
-    "accessedAt": "2026-11-03",
+    "accessedAt": "2026-11-04",
     "programStatus": "apel_inchis",
     "statusLabel": "Apel închis – depunerea nu este deschisă",
-    "verifiedAt": "2026-11-03",
+    "verifiedAt": "2026-11-04",
     "isPrimaryFor": "digitalizare-imm",
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
@@ -399,10 +401,10 @@
     "title": "Ordinul MIPE nr. 607/28.04.2026; modifică Ghidul aprobat prin Ordinul nr. 3185/2022",
     "institution": "Ministerul Investițiilor și Proiectelor Europene",
     "url": "https://mfe.gov.ro/pnrr-ordinul-nr-607-28-04-2026-pentru-modificarea-ghidului-solicitantului-digitalizarea-imm-urilor-grant-de-pana-la-100-000-euro-pe-intreprindere-care-sa-sprijine-imm-urile-in-adoptarea-tehnologii/",
-    "accessedAt": "2026-11-03",
+    "accessedAt": "2026-11-04",
     "programStatus": "apel_inchis",
     "statusLabel": "Apel închis – depunerea nu este deschisă",
-    "verifiedAt": "2026-11-03",
+    "verifiedAt": "2026-11-04",
     "isPrimaryFor": "digitalizare-imm",
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
@@ -414,10 +416,10 @@
     "title": "Schema PRO INFRA consolidată, art. 5, 13 și 16, cu modificările Ordinului nr. 101/12.02.2026",
     "institution": "Ministerul Transporturilor și Infrastructurii",
     "url": "https://legislatie.just.ro/Public/DetaliiDocument/306916",
-    "accessedAt": "2026-11-03",
+    "accessedAt": "2026-11-04",
     "programStatus": "ghid_aprobat_nedeschis",
-    "statusLabel": "Schemă aprobată și modificată – depunerea nu este deschisă",
-    "verifiedAt": "2026-11-03",
+    "statusLabel": "Apel în curs de lansare – calendarul depunerii nu este anunțat",
+    "verifiedAt": "2026-11-04",
     "isPrimaryFor": "pro-infra",
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
@@ -429,10 +431,10 @@
     "title": "Schema PRO INFRA consolidată, art. 5, 13 și 16, cu modificările Ordinului nr. 101/12.02.2026",
     "institution": "Ministerul Transporturilor și Infrastructurii",
     "url": "https://legislatie.just.ro/Public/DetaliiDocument/306916",
-    "accessedAt": "2026-11-03",
+    "accessedAt": "2026-11-04",
     "programStatus": "ghid_aprobat_nedeschis",
-    "statusLabel": "Schemă aprobată și modificată – depunerea nu este deschisă",
-    "verifiedAt": "2026-11-03",
+    "statusLabel": "Apel în curs de lansare – calendarul depunerii nu este anunțat",
+    "verifiedAt": "2026-11-04",
     "isPrimaryFor": "pro-infra",
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
@@ -444,10 +446,10 @@
     "title": "Condițiile programului și stadiul operaționalizării publicate de BID, verificate la 06.09.2026",
     "institution": "Banca de Investiții și Dezvoltare (BID)",
     "url": "https://www.bidromania.eu/produse/garantii/diaspora-investeste-acasa",
-    "accessedAt": "2026-11-03",
+    "accessedAt": "2026-11-04",
     "programStatus": "ghid_aprobat_nedeschis",
     "statusLabel": "Program aprobat – în curs de operaționalizare la BID",
-    "verifiedAt": "2026-11-03",
+    "verifiedAt": "2026-11-04",
     "isPrimaryFor": "diaspora-investeste-acasa",
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
@@ -459,10 +461,10 @@
     "title": "Ghidurile solicitantului e-DRIVE Măsura 1 și Măsura 2, versiuni în consultare publică publicate la 03.11.2026; observații până la 18.11.2026",
     "institution": "Ministerul Transporturilor și Infrastructurii – DGPET",
     "url": "https://fonduri.mt.ro/transparenta/consultare-publica/fondul-pentru-modernizare/fm-mti-demareaza-procesul-de-consultare-publica-pentru-ghidurile-solicitantului-aferente-masurilor-1-si-2-ale-schemei-e-drive",
-    "accessedAt": "2026-11-03",
+    "accessedAt": "2026-11-04",
     "programStatus": "consultare_publica",
-    "statusLabel": "Ghiduri în consultare până la 18 noiembrie 2026 – depunerea nu este deschisă",
-    "verifiedAt": "2026-11-03",
+    "statusLabel": "Apel în curs de lansare – ghiduri în consultare până la 18 noiembrie 2026",
+    "verifiedAt": "2026-11-04",
     "isPrimaryFor": "e-drive",
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
@@ -474,10 +476,10 @@
     "title": "Anunț MTI 26.09.2026: Ghidul Submăsurii 1 aprobat prin OMTI nr. 886/2026 și calendarul apelului prin OMTI nr. 904/2026",
     "institution": "Ministerul Transporturilor și Infrastructurii – DGPET",
     "url": "https://fonduri.mt.ro/transparenta/comunicate-de-presa/fondul-pentru-modernizare/publicarea-ghidului-solicitantului-si-calendarului-apelului-de-proiecte-pentru-dezvoltarea-infrastructurii-de-reincarcare-a-vehiculelor-electrice-pe-reteaua-nationala-de-autostrazi-drumuri-expres-si-drumuri-nationale-e-mobility-ro-submasura-1",
-    "accessedAt": "2026-11-03",
+    "accessedAt": "2026-11-04",
     "programStatus": "apel_deschis",
     "statusLabel": "Submăsura 1 deschisă – depuneri până la 27 noiembrie 2026",
-    "verifiedAt": "2026-11-03",
+    "verifiedAt": "2026-11-04",
     "isPrimaryFor": "e-mobility-ro",
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
@@ -489,10 +491,10 @@
     "title": "Anunț de lansare 14.08.2026 și prelungire 22.10.2026: depuneri 01.09–15.11.2026; ghid aprobat prin OME nr. 915/2026",
     "institution": "Ministerul Energiei",
     "url": "https://energie.gov.ro/lansare-apel-sprijinirea-investitiilor-in-dezvoltarea-instalatiilor-autonome-stand-alone-de-stocare-in-baterii-a-energiei-electrice-cu-finantare-din-fondul-pentru-modernizare-p/",
-    "accessedAt": "2026-11-03",
+    "accessedAt": "2026-11-04",
     "programStatus": "apel_deschis",
     "statusLabel": "Sesiune prelungită – depuneri până la 15 noiembrie 2026",
-    "verifiedAt": "2026-11-03",
+    "verifiedAt": "2026-11-04",
     "isPrimaryFor": "fondul-modernizare-pc1-stocare",
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
@@ -505,11 +507,11 @@
     "institution": "Ministerul Energiei / AFIR",
     "documentType": "ghid și anexe oficiale",
     "url": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-stocare-energie-regenerabila-beneficiari-publici/",
-    "accessedAt": "2026-11-03",
+    "accessedAt": "2026-11-04",
     "note": "Ghid publicat de AFIR la 11.09.2026. AFIR a publicat ghidurile la 11.09.2026 și a anunțat primirea cererilor online din 28.09.2026. Termenul de închidere nu este precizat în comunicatul verificat la 13.09.2026; se reconfirmă în anunțul sesiunii.",
     "programStatus": "apel_deschis",
     "statusLabel": "Sesiune deschisă – depuneri până la 20 noiembrie 2026",
-    "verifiedAt": "2026-11-03",
+    "verifiedAt": "2026-11-04",
     "isPrimaryFor": "fondul-modernizare-pc1-stocare-entitati-publice",
     "sourceOfTruth": "config/seo-programs.json#programs"
   },
@@ -595,6 +597,24 @@
     "statusLabel": "Program în implementare – statutul se verifică pentru fiecare apel în MySMIS",
     "verifiedAt": "2026-11-03",
     "isPrimaryFor": "fondul-de-modernizare",
+    "sourceOfTruth": "config/seo-programs.json#programs"
+  },
+  "afir-energy-selection-2026": {
+    "name": "Raport final de selecție Schema de Energie, sesiunea 03/2026, solar peste 1 MW, publicat la 03.11.2026; Ghidul V7 aprobat prin OMADR 180/09.06.2026",
+    "title": "Raport final de selecție Schema de Energie, sesiunea 03/2026, solar peste 1 MW, publicat la 03.11.2026; Ghidul V7 aprobat prin OMADR 180/09.06.2026",
+    "institution": "Ministerul Agriculturii și Dezvoltării Rurale / AFIR",
+    "url": "https://www.afir.ro/rapoarte/rapoarte-feadr/selectie/",
+    "documentType": "raport final de selecție",
+    "publishedAt": "2026-11-03",
+    "accessedAt": "2026-11-04",
+    "verifiedAt": "2026-11-04",
+    "programIds": [
+      "afir-energie-autoconsum"
+    ],
+    "syncFromProgramRegistry": true,
+    "programStatus": "apel_inchis",
+    "statusLabel": "Apel în curs de contractare – depunerea proiectelor s-a încheiat",
+    "isPrimaryFor": "afir-energie-autoconsum",
     "sourceOfTruth": "config/seo-programs.json#programs"
   }
 }

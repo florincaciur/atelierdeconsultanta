@@ -101,20 +101,20 @@
         "70% autoconsum AFIR",
         "ghid energie AFIR 2026"
       ],
-      "title": "AFIR Autoconsum 2026: fotovoltaice, stocare, ghid | FABER",
-      "description": "Sesiunea AFIR Energie 2026 s-a încheiat la 14 august. Vezi regulile pentru autoconsum, fotovoltaice, stocare, studiu de fezabilitate și documente.",
-      "ogTitle": "AFIR Autoconsum 2026: fotovoltaice, stocare, ghid | FABER",
-      "ogDescription": "Sesiunea AFIR Energie 2026 s-a încheiat la 14 august. Vezi regulile pentru autoconsum, fotovoltaice, stocare, studiu de fezabilitate și documente.",
+      "title": "AFIR Autoconsum Agro-Alim 2026: apel în curs de contractare",
+      "description": "Autoconsum Agro-Alim AFIR: apel în curs de contractare, fără depuneri noi. Raport final de selecție peste 1 MW din 3 noiembrie 2026, Ghid V7 și documente.",
+      "ogTitle": "AFIR Autoconsum Agro-Alim 2026: apel în curs de contractare",
+      "ogDescription": "Autoconsum Agro-Alim AFIR: apel în curs de contractare, fără depuneri noi. Raport final de selecție peste 1 MW din 3 noiembrie 2026, Ghid V7 și documente.",
       "sourceOfTruth": [
         "config/seo-programs.json#programs",
-        "https://www.afir.ro/comunicate/265-de-milioane-de-euro-pentru-investitii-in-producerea-energiei-electrice/"
+        "https://www.afir.ro/rapoarte/rapoarte-feadr/selectie/"
       ],
-      "factualStatus": "open",
-      "lastReviewed": "2026-11-03",
-      "notes": "Sesiunea și plafoanele se raportează la Ghidul V7 și la comunicatul oficial AFIR; procentul de autoconsum și stocarea sunt explicate fără a promite eligibilitatea.",
+      "factualStatus": "closed",
+      "lastReviewed": "2026-11-04",
+      "notes": "Contractarea privește proiectele selectate și notificate de AFIR. Raportul final din 3 noiembrie 2026 se referă la componenta solar peste 1 MW; nu confirmă semnarea tuturor contractelor și nu redeschide depunerea.",
       "publicationState": "public",
       "programStatus": "apel_inchis",
-      "statusLabel": "Apel închis – sesiunea s-a încheiat la 14 august 2026"
+      "statusLabel": "Apel în curs de contractare – depunerea proiectelor s-a încheiat"
     },
     {
       "route": "/investitii-modernizarea-microintreprinderilor-apel-2",
@@ -125,17 +125,17 @@
         "apel 2 microîntreprinderi Nord-Est",
         "investiții microîntreprinderi ADR Nord-Est"
       ],
-      "title": "Modernizarea microîntreprinderilor: Apel 2 Nord-Est 2026",
-      "description": "Apelul 2 Nord-Est pentru microîntreprinderi s-a închis la 28 octombrie 2026. Grant 100.000–300.000 €, punctaj, documente și condițiile sesiunii.",
-      "ogTitle": "Modernizarea microîntreprinderilor: Apel 2 Nord-Est 2026",
-      "ogDescription": "Apelul 2 Nord-Est pentru microîntreprinderi s-a închis la 28 octombrie 2026. Grant 100.000–300.000 €, punctaj, documente și condițiile sesiunii.",
+      "title": "Modernizarea microîntreprinderilor – Apel 2 închis (2026)",
+      "description": "Apelul 2 Nord-Est s-a închis la 28 octombrie 2026. Grant 100.000–300.000 €, contribuție de minimum 10%, punctaj și documente pentru evaluare.",
+      "ogTitle": "Modernizarea microîntreprinderilor – Apel 2 închis (2026)",
+      "ogDescription": "Apelul 2 Nord-Est s-a închis la 28 octombrie 2026. Grant 100.000–300.000 €, contribuție de minimum 10%, punctaj și documente pentru evaluare.",
       "sourceOfTruth": [
         "config/seo-programs.json#programs",
         "https://regionordest.ro/prioritatea-1/modernizare-microintreprinderi/"
       ],
-      "factualStatus": "scheduled",
-      "lastReviewed": "2026-11-03",
-      "notes": "Pagina concentrează Apelul 2; ruta istorică POR ADR Nord-Est redirecționează direct aici conform aprobării beneficiarului.",
+      "factualStatus": "closed",
+      "lastReviewed": "2026-11-04",
+      "notes": "Sesiunea s-a încheiat la 28 octombrie 2026. Informațiile rămân utile pentru evaluare și pregătirea documentelor; o eventuală relansare necesită anunț oficial.",
       "publicationState": "public",
       "programStatus": "apel_inchis",
       "statusLabel": "Apel închis – sesiunea 28 septembrie–28 octombrie 2026"
@@ -170,17 +170,17 @@
         "infrastructură încărcare electrică",
         "energie regenerabilă e-MOVE"
       ],
-      "title": "e-MOVE RO: stații de încărcare și condiții | FABER",
-      "description": "e-MOVE RO: schema actualizată pentru infrastructură de încărcare, energie și stocare; depunerea nu este deschisă.",
-      "ogTitle": "e-MOVE RO: stații de încărcare și condiții | FABER",
-      "ogDescription": "e-MOVE RO: schema actualizată pentru infrastructură de încărcare, energie și stocare; depunerea nu este deschisă.",
+      "title": "e-MOVE RO 2026: stații de încărcare, schemă actualizată",
+      "description": "e-MOVE RO: stații de încărcare, energie regenerabilă și stocare. Schema include OMTI 821/2026; calendarul depunerii proiectelor nu este anunțat.",
+      "ogTitle": "e-MOVE RO 2026: stații de încărcare, schemă actualizată",
+      "ogDescription": "e-MOVE RO: stații de încărcare, energie regenerabilă și stocare. Schema include OMTI 821/2026; calendarul depunerii proiectelor nu este anunțat.",
       "sourceOfTruth": [
         "config/seo-programs.json#programs",
-        "https://legislatie.just.ro/Public/DetaliiDocument/313320"
+        "https://fonduri.mt.ro/documente-si-publicatii/finantari-fm/scheme-de-ajutor-de-stat/schema-de-ajutor-de-stat-5"
       ],
-      "factualStatus": "consultation",
-      "lastReviewed": "2026-11-03",
-      "notes": "Statutul de consultare este explicit; snippetul nu folosește valoarea maximă indicativă sau intensitatea ca reguli finale.",
+      "factualStatus": "approved",
+      "lastReviewed": "2026-11-04",
+      "notes": "Calendarul, alocarea și condițiile unei depuneri se confirmă prin documentele oficiale ale fiecărei submăsuri.",
       "publicationState": "public",
       "programStatus": "ghid_aprobat_nedeschis",
       "statusLabel": "Schemă actualizată – depunerea nu este deschisă"

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "registryReviewDate": "2026-08-28",
+  "registryReviewDate": "2026-11-04",
   "factualSnapshotDate": "2026-08-23",
   "programRegistry": "config/seo-programs.json#programs",
   "sourceCatalog": "official-guides.json",
@@ -13,7 +13,7 @@
       "documentType": "ghid final și anexe",
       "url": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-18/",
       "publishedAt": "2026-08-04",
-      "verifiedAt": "2026-08-28"
+      "verifiedAt": "2026-11-04"
     },
     "afir-energy-program": {
       "title": "Schema de Energie",
@@ -21,7 +21,7 @@
       "documentType": "pagină oficială program",
       "url": "https://www.afir.ro/finantare/finantare-in-agricultura/schema-de-energie/",
       "publishedAt": null,
-      "verifiedAt": "2026-08-23"
+      "verifiedAt": "2026-11-04"
     },
     "afir-energy-guide-annexes": {
       "title": "Detalii și Anexe Schemă ENERGIE — Ghidul solicitantului V7 și documentele sesiunii 2026",
@@ -29,7 +29,7 @@
       "documentType": "ghid final și anexe",
       "url": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-schema-energie/",
       "publishedAt": "2026-06-09",
-      "verifiedAt": "2026-08-23"
+      "verifiedAt": "2026-11-04"
     },
     "afir-energy-session-2026": {
       "title": "265 de milioane de euro pentru sesiunea Schema de Energie — 15.06.2026–14.08.2026",
@@ -37,7 +37,7 @@
       "documentType": "anunț oficial de sesiune",
       "url": "https://www.afir.ro/comunicate/265-de-milioane-de-euro-pentru-investitii-in-producerea-energiei-electrice/",
       "publishedAt": "2026-06-09",
-      "verifiedAt": "2026-08-23"
+      "verifiedAt": "2026-11-04"
     },
     "afir-energy-clarification-2026": {
       "title": "Măsuri AFIR pentru indisponibilitatea sistemului ANCPI — completare",
@@ -45,7 +45,7 @@
       "documentType": "clarificare oficială de sesiune",
       "url": "https://www.afir.ro/comunicate/masuri-afir-pentru-atenuarea-efectelor-provocate-de-indisponibilitatea-sistemului-ancpi-completare/",
       "publishedAt": "2026-07-29",
-      "verifiedAt": "2026-08-22"
+      "verifiedAt": "2026-11-04"
     },
     "afir-pc1-session-2026": {
       "title": "Comunicat AFIR: depunere pentru entități publice din 28 septembrie 2026",
@@ -101,7 +101,7 @@
       "documentType": "ordin de modificare a schemei",
       "url": "https://legislatie.just.ro/Public/DetaliiDocument/313289",
       "publishedAt": "2026-08-07",
-      "verifiedAt": "2026-11-03"
+      "verifiedAt": "2026-11-04"
     },
     "afir-dr12-session-2026": {
       "title": "Sesiune depunere de proiecte DR-12",
@@ -109,7 +109,7 @@
       "documentType": "anunț de sesiune",
       "url": "https://www.afir.ro/info-la-zi/sesiune-depunere-de-proiecte-dr-12/",
       "publishedAt": "2026-09-29",
-      "verifiedAt": "2026-11-03"
+      "verifiedAt": "2026-11-04"
     },
     "afir-active-sessions-20261103": {
       "title": "Fonduri alocate sesiunilor active",
@@ -117,7 +117,7 @@
       "documentType": "platformă de sesiuni active",
       "url": "https://depunerepspac.afir.ro/Sesiune/Lista",
       "publishedAt": null,
-      "verifiedAt": "2026-11-03"
+      "verifiedAt": "2026-11-04"
     },
     "afir-dr14-dr18-extension-2026": {
       "title": "Prelungire sesiune depunere proiecte de investiții aferente DR-14 și DR-18",
@@ -125,7 +125,7 @@
       "documentType": "anunț de prelungire",
       "url": "https://www.afir.ro/info-la-zi/prelungire-sesiune-depunere-proiecte-de-investitii-aferente-dr-14-si-dr-18/",
       "publishedAt": "2026-10-29",
-      "verifiedAt": "2026-11-03"
+      "verifiedAt": "2026-11-04"
     },
     "afir-public-energy-active-2026": {
       "title": "Depunere în curs a proiectelor în energie a entităților publice",
@@ -133,7 +133,7 @@
       "documentType": "confirmare sesiune în derulare",
       "url": "https://www.afir.ro/comunicate/depunere-in-curs-a-proiectelor-in-energie-a-entitatilor-publice/",
       "publishedAt": "2026-09-29",
-      "verifiedAt": "2026-11-03"
+      "verifiedAt": "2026-11-04"
     },
     "emobility-sm1-guide-2026": {
       "title": "e-Mobility RO – Ghid Submăsura 1, OMTI nr. 886/2026 și anexe",
@@ -149,7 +149,7 @@
       "documentType": "schemă actualizată",
       "url": "https://legislatie.just.ro/Public/DetaliiDocument/313291",
       "publishedAt": "2026-08-07",
-      "verifiedAt": "2026-11-03"
+      "verifiedAt": "2026-11-04"
     },
     "pc1-storage-launch-2026": {
       "title": "Anunț de lansare PC1 stocare stand-alone",
@@ -166,6 +166,22 @@
       "url": "https://energie.gov.ro/wp-content/uploads/2026/10/Anunt-prelungire-apel-proiecte-STOCARE-STAND-ALONE.docx",
       "publishedAt": "2026-10-22",
       "verifiedAt": "2026-11-03"
+    },
+    "afir-energy-final-selection-20261103": {
+      "title": "Raport final de selecție Schema Energie – sesiunea 03/2026, solar peste 1 MW",
+      "authority": "AFIR",
+      "documentType": "raport final de selecție",
+      "url": "https://www.afir.ro/rapoarte/rapoarte-feadr/selectie/",
+      "publishedAt": "2026-11-03",
+      "verifiedAt": "2026-11-04"
+    },
+    "emove-amendment-821-2026": {
+      "title": "OMTI 821/2026 – modificarea schemei e-MOVE RO",
+      "authority": "Ministerul Transporturilor și Infrastructurii",
+      "documentType": "ordin de modificare a schemei",
+      "url": "https://fonduri.mt.ro/documente/FM/Monitorul_Oficial_Partea_I_nr._739.pdf",
+      "publishedAt": "2026-09-02",
+      "verifiedAt": "2026-11-04"
     }
   },
   "programSourceAssignments": "config/seo-programs.json#programs[*].officialSources"

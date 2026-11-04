@@ -1,0 +1,65 @@
+{
+  "reviewedAt": "2026-11-04",
+  "programs": 15,
+  "rowsInScreenshot": 14,
+  "additionalProgram": "afir-energie-autoconsum",
+  "layoutChecks": {
+    "viewports": [
+      320,
+      390,
+      768,
+      1180,
+      1440,
+      1920
+    ],
+    "checks": 186,
+    "failures": 0,
+    "browserErrors": 0
+  },
+  "programAccessibility": {
+    "routes": 27,
+    "viewports": [
+      390,
+      1440
+    ],
+    "checks": 54,
+    "failures": 0
+  },
+  "programVisualIntegrity": {
+    "routes": 27,
+    "viewports": [
+      320,
+      375,
+      390,
+      430,
+      768,
+      1024,
+      1280,
+      1440,
+      1920
+    ],
+    "checks": 243,
+    "failures": 0
+  },
+  "homepageStates": {
+    "checks": 76,
+    "viewports": [
+      320,
+      390,
+      768,
+      1440
+    ],
+    "failures": 0
+  },
+  "factualAudit": {
+    "programs": 26,
+    "errors": 0,
+    "warnings": 0
+  },
+  "build": {
+    "command": "npm run build",
+    "exitCode": 0
+  },
+  "cloudflareValidation": "PASS",
+  "deploymentGuard": "PASS"
+}
