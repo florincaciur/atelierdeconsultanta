@@ -397,11 +397,12 @@ body.page-family-home #homepage-contact .im-contact-form-wrap { margin: 0; paddi
     box-sizing: border-box;
   }
   body.page-family-home #hero.im-hero {
-    height: 100svh;
+    height: auto;
     min-height: 680px;
-    padding: 88px clamp(24px,4.5vw,72px) 14px;
+    min-height: max(680px, 100svh);
+    padding: calc(var(--global-header-height, 80px) + 28px) clamp(24px,4.5vw,72px) 24px;
   }
-  #hero.im-hero .homepage-hero__inner { height: calc(100% - 54px); align-items: center; gap: clamp(1.25rem,3vw,3.5rem); }
+  #hero.im-hero .homepage-hero__inner { height: auto; align-items: start; gap: clamp(1.25rem,3vw,3.5rem); }
   #hero.im-hero .homepage-hero__copy { padding: 0; }
   #hero.im-hero .hero-badge { margin-bottom: 14px; }
   #hero.im-hero .hero-title { margin-bottom: 15px; font-size: clamp(2.75rem,4vw,4.7rem); }
@@ -600,5 +601,35 @@ body.page-family-home main > section { content-visibility: visible !important; c
   body.page-family-home #hero.im-hero [data-hero-program-status] { min-height: auto; }
   body.page-family-home #hero.im-hero .hero-program-instruction { margin: 6px 0; }
   body.page-family-home #hero.im-hero .hero-programs-list { gap: 4px; }
-  body.page-family-home #hero.im-hero .hero-programs-list a { min-height: 32px; padding: 4px 8px; font-size: 9.5px; line-height: 1.2; }
+  body.page-family-home #hero.im-hero .hero-programs-list a { min-height: 44px; padding: 6px 9px; font-size: 12px; line-height: 1.35; }
+}
+
+/* The program list grows with the registry and with text zoom. Let the opening
+   section grow with it instead of vertically centering an overflowing panel
+   behind the fixed navigation. Keep every program reachable without JS. */
+body.page-family-home #hero.im-hero { overflow: visible; }
+body.page-family-home #hero.im-hero .homepage-hero__inner { min-width: 0; }
+body.page-family-home #hero.im-hero .homepage-hero__panel { overflow: visible; }
+body.page-family-home #hero.im-hero .hero-programs-list a { overflow-wrap: anywhere; }
+body.page-family-home #hero.im-hero .hero-programs-list .hp-name {
+  display: block; overflow: visible; -webkit-line-clamp: unset;
+}
+@media (max-width: 999px) {
+  body.page-family-home #hero.im-hero {
+    height: auto; min-height: 100svh;
+    padding-top: calc(var(--global-header-height, 80px) + 24px);
+    padding-bottom: 28px;
+  }
+  body.page-family-home #hero.im-hero .homepage-hero__inner {
+    height: auto; grid-template-columns: minmax(0, 1fr); align-items: start;
+  }
+  body.page-family-home #hero.im-hero .hero-program-spotlight { min-height: 0; }
+  body.page-family-home #hero.im-hero .hero-programs-list a {
+    min-height: 48px; font-size: 12px; line-height: 1.4;
+  }
+  body.page-family-home #hero.im-hero .im-hero-bottom { flex-wrap: wrap; }
+}
+@media (max-width: 380px) {
+  body.page-family-home #hero.im-hero .homepage-hero__panel { padding: 14px; }
+  body.page-family-home #hero.im-hero .hero-programs-list { grid-template-columns: minmax(0, 1fr); }
 }

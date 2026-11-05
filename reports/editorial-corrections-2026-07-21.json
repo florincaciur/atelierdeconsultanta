@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-04T09:37:49.605Z",
+  "generatedAt": "2026-11-05T14:09:05.229Z",
   "canonicalUrlCount": 105,
   "changes": [
     {
@@ -6785,6 +6785,46 @@
       "oldFragment": "verifică solicitantul și activitatea; alege programul potrivit; pregătește documentele și ofertele; estimeaza cofinanțarea; revizuiește punctajul și depune dosarul",
       "newFragment": "verifică solicitantul și activitatea; alege programul potrivit; pregătește documentele și ofertele; estimează cofinanțarea; revizuiește punctajul și depune dosarul",
       "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/consultanta-fonduri-europene-bucuresti",
+      "sourceFile": "consultanta-fonduri-europene-bucuresti/index.html",
+      "location": "article-prose",
+      "oldFragment": "Exemplu practic: dacă o firmă vrea echipamente, software și amenajări, bugetul nu se pune într-o singură listă generală. Se separă ce susține activitatea principală, ce este strict necesar pentru implementare, ce poate …",
+      "newFragment": "[paragraf redundant eliminat]",
+      "reason": "Paragraf identic repetat în același articol"
+    },
+    {
+      "route": "/consultanta-fonduri-europene-bucuresti",
+      "sourceFile": "consultanta-fonduri-europene-bucuresti/index.html",
+      "location": "article-prose",
+      "oldFragment": "În rapoartele și paginile FABER, evităm formularea de tip ?se obține sigur finanțarea?. Selecția depinde de ghid, bugetul apelului, numărul de proiecte depuse, clarificări, documente și evaluare. Conținutul extins este …",
+      "newFragment": "[paragraf redundant eliminat]",
+      "reason": "Metatext despre construirea paginii, fără informație specifică investiției"
+    },
+    {
+      "route": "/consultanta-fonduri-europene-bucuresti",
+      "sourceFile": "consultanta-fonduri-europene-bucuresti/index.html",
+      "location": "article-prose",
+      "oldFragment": "O întrebare frecventă este dacă merită pregătite documentele înainte de publicarea formei finale a ghidului. Răspunsul prudent este da, dar cu limite: se pot pregăti datele firmei, descrierea investiției, lista de chelt…",
+      "newFragment": "[paragraf redundant eliminat]",
+      "reason": "Paragraf identic repetat în același articol"
+    },
+    {
+      "route": "/consultanta-fonduri-europene-bucuresti",
+      "sourceFile": "consultanta-fonduri-europene-bucuresti/index.html",
+      "location": "article-prose",
+      "oldFragment": "Pentru fonduri europene București, conținutul trebuie citit ca filtru de lucru, nu ca decizie finală. Un proiect poate părea eligibil după titlu, dar poate deveni riscant când sunt analizate codul CAEN, localizarea, doc…",
+      "newFragment": "[paragraf redundant eliminat]",
+      "reason": "Metatext despre construirea paginii, fără informație specifică investiției"
+    },
+    {
+      "route": "/consultanta-fonduri-europene-bucuresti",
+      "sourceFile": "consultanta-fonduri-europene-bucuresti/index.html",
+      "location": "article-prose",
+      "oldFragment": "Pentru utilizatorii care compară mai multe rute, ordinea sănătoasă este: 1. se verifică solicitantul; 2. se confirmă locul de implementare; 3. se identifică programul compatibil; 4. se testează cheltuielile principale; …",
+      "newFragment": "[paragraf redundant eliminat]",
+      "reason": "Paragraf identic repetat în același articol"
     },
     {
       "route": "/consultanta-fonduri-europene-bucuresti",
@@ -16405,6 +16445,46 @@
     {
       "route": "/fonduri-europene-bucuresti",
       "sourceFile": "fonduri-europene-bucuresti/index.html",
+      "location": "article-prose",
+      "oldFragment": "Exemplu practic: dacă o firmă vrea echipamente, software și amenajări, bugetul nu se pune într-o singură listă generală. Se separă ce susține activitatea principală, ce este strict necesar pentru implementare, ce poate …",
+      "newFragment": "[paragraf redundant eliminat]",
+      "reason": "Paragraf identic repetat în același articol"
+    },
+    {
+      "route": "/fonduri-europene-bucuresti",
+      "sourceFile": "fonduri-europene-bucuresti/index.html",
+      "location": "article-prose",
+      "oldFragment": "În rapoartele și paginile FABER, evităm formularea de tip ?se obține sigur finanțarea?. Selecția depinde de ghid, bugetul apelului, numărul de proiecte depuse, clarificări, documente și evaluare. Conținutul extins este …",
+      "newFragment": "[paragraf redundant eliminat]",
+      "reason": "Metatext despre construirea paginii, fără informație specifică investiției"
+    },
+    {
+      "route": "/fonduri-europene-bucuresti",
+      "sourceFile": "fonduri-europene-bucuresti/index.html",
+      "location": "article-prose",
+      "oldFragment": "O întrebare frecventă este dacă merită pregătite documentele înainte de publicarea formei finale a ghidului. Răspunsul prudent este da, dar cu limite: se pot pregăti datele firmei, descrierea investiției, lista de chelt…",
+      "newFragment": "[paragraf redundant eliminat]",
+      "reason": "Paragraf identic repetat în același articol"
+    },
+    {
+      "route": "/fonduri-europene-bucuresti",
+      "sourceFile": "fonduri-europene-bucuresti/index.html",
+      "location": "article-prose",
+      "oldFragment": "Pentru fonduri europene București, conținutul trebuie citit ca filtru de lucru, nu ca decizie finală. Un proiect poate părea eligibil după titlu, dar poate deveni riscant când sunt analizate codul CAEN, localizarea, doc…",
+      "newFragment": "[paragraf redundant eliminat]",
+      "reason": "Metatext despre construirea paginii, fără informație specifică investiției"
+    },
+    {
+      "route": "/fonduri-europene-bucuresti",
+      "sourceFile": "fonduri-europene-bucuresti/index.html",
+      "location": "article-prose",
+      "oldFragment": "Pentru utilizatorii care compară mai multe rute, ordinea sănătoasă este: 1. se verifică solicitantul; 2. se confirmă locul de implementare; 3. se identifică programul compatibil; 4. se testează cheltuielile principale; …",
+      "newFragment": "[paragraf redundant eliminat]",
+      "reason": "Paragraf identic repetat în același articol"
+    },
+    {
+      "route": "/fonduri-europene-bucuresti",
+      "sourceFile": "fonduri-europene-bucuresti/index.html",
       "location": "heading",
       "oldFragment": "Raspuns scurt",
       "newFragment": "Ce trebuie să știi",
@@ -16749,6 +16829,46 @@
     {
       "route": "/fonduri-europene-caen/0111-culturi-cereale",
       "sourceFile": "fonduri-europene-caen/0111-culturi-cereale/index.html",
+      "location": "article-prose",
+      "oldFragment": "Exemplu practic: dacă o firmă vrea echipamente, software și amenajări, bugetul nu se pune într-o singură listă generală. Se separă ce susține activitatea principală, ce este strict necesar pentru implementare, ce poate …",
+      "newFragment": "[paragraf redundant eliminat]",
+      "reason": "Paragraf identic repetat în același articol"
+    },
+    {
+      "route": "/fonduri-europene-caen/0111-culturi-cereale",
+      "sourceFile": "fonduri-europene-caen/0111-culturi-cereale/index.html",
+      "location": "article-prose",
+      "oldFragment": "În rapoartele și paginile FABER, evităm formularea de tip ?se obține sigur finanțarea?. Selecția depinde de ghid, bugetul apelului, numărul de proiecte depuse, clarificări, documente și evaluare. Conținutul extins este …",
+      "newFragment": "[paragraf redundant eliminat]",
+      "reason": "Metatext despre construirea paginii, fără informație specifică investiției"
+    },
+    {
+      "route": "/fonduri-europene-caen/0111-culturi-cereale",
+      "sourceFile": "fonduri-europene-caen/0111-culturi-cereale/index.html",
+      "location": "article-prose",
+      "oldFragment": "O întrebare frecventă este dacă merită pregătite documentele înainte de publicarea formei finale a ghidului. Răspunsul prudent este da, dar cu limite: se pot pregăti datele firmei, descrierea investiției, lista de chelt…",
+      "newFragment": "[paragraf redundant eliminat]",
+      "reason": "Paragraf identic repetat în același articol"
+    },
+    {
+      "route": "/fonduri-europene-caen/0111-culturi-cereale",
+      "sourceFile": "fonduri-europene-caen/0111-culturi-cereale/index.html",
+      "location": "article-prose",
+      "oldFragment": "Pentru CAEN 0111 - culturi de cereale, conținutul trebuie citit ca filtru de lucru, nu ca decizie finală. Un proiect poate părea eligibil după titlu, dar poate deveni riscant când sunt analizate codul CAEN, localizarea,…",
+      "newFragment": "[paragraf redundant eliminat]",
+      "reason": "Metatext despre construirea paginii, fără informație specifică investiției"
+    },
+    {
+      "route": "/fonduri-europene-caen/0111-culturi-cereale",
+      "sourceFile": "fonduri-europene-caen/0111-culturi-cereale/index.html",
+      "location": "article-prose",
+      "oldFragment": "Pentru utilizatorii care compară mai multe rute, ordinea sănătoasă este: 1. se verifică solicitantul; 2. se confirmă locul de implementare; 3. se identifică programul compatibil; 4. se testează cheltuielile principale; …",
+      "newFragment": "[paragraf redundant eliminat]",
+      "reason": "Paragraf identic repetat în același articol"
+    },
+    {
+      "route": "/fonduri-europene-caen/0111-culturi-cereale",
+      "sourceFile": "fonduri-europene-caen/0111-culturi-cereale/index.html",
       "location": "heading",
       "oldFragment": "Raspuns scurt",
       "newFragment": "Ce trebuie să știi",
@@ -17033,6 +17153,46 @@
       "oldFragment": "utilaje agricole; depozitare; irigatii dacă apelul permite; digitalizare și agricultura de precizie",
       "newFragment": "utilaje agricole; depozitare; irigatii dacă apelul permite; digitalizare și agricultură de precizie",
       "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/fonduri-europene-caen/4321-instalatii-electrice",
+      "sourceFile": "fonduri-europene-caen/4321-instalatii-electrice/index.html",
+      "location": "article-prose",
+      "oldFragment": "Exemplu practic: dacă o firmă vrea echipamente, software și amenajări, bugetul nu se pune într-o singură listă generală. Se separă ce susține activitatea principală, ce este strict necesar pentru implementare, ce poate …",
+      "newFragment": "[paragraf redundant eliminat]",
+      "reason": "Paragraf identic repetat în același articol"
+    },
+    {
+      "route": "/fonduri-europene-caen/4321-instalatii-electrice",
+      "sourceFile": "fonduri-europene-caen/4321-instalatii-electrice/index.html",
+      "location": "article-prose",
+      "oldFragment": "În rapoartele și paginile FABER, evităm formularea de tip ?se obține sigur finanțarea?. Selecția depinde de ghid, bugetul apelului, numărul de proiecte depuse, clarificări, documente și evaluare. Conținutul extins este …",
+      "newFragment": "[paragraf redundant eliminat]",
+      "reason": "Metatext despre construirea paginii, fără informație specifică investiției"
+    },
+    {
+      "route": "/fonduri-europene-caen/4321-instalatii-electrice",
+      "sourceFile": "fonduri-europene-caen/4321-instalatii-electrice/index.html",
+      "location": "article-prose",
+      "oldFragment": "O întrebare frecventă este dacă merită pregătite documentele înainte de publicarea formei finale a ghidului. Răspunsul prudent este da, dar cu limite: se pot pregăti datele firmei, descrierea investiției, lista de chelt…",
+      "newFragment": "[paragraf redundant eliminat]",
+      "reason": "Paragraf identic repetat în același articol"
+    },
+    {
+      "route": "/fonduri-europene-caen/4321-instalatii-electrice",
+      "sourceFile": "fonduri-europene-caen/4321-instalatii-electrice/index.html",
+      "location": "article-prose",
+      "oldFragment": "Pentru CAEN 4321 - instalații electrice, conținutul trebuie citit ca filtru de lucru, nu ca decizie finală. Un proiect poate părea eligibil după titlu, dar poate deveni riscant când sunt analizate codul CAEN, localizare…",
+      "newFragment": "[paragraf redundant eliminat]",
+      "reason": "Metatext despre construirea paginii, fără informație specifică investiției"
+    },
+    {
+      "route": "/fonduri-europene-caen/4321-instalatii-electrice",
+      "sourceFile": "fonduri-europene-caen/4321-instalatii-electrice/index.html",
+      "location": "article-prose",
+      "oldFragment": "Pentru utilizatorii care compară mai multe rute, ordinea sănătoasă este: 1. se verifică solicitantul; 2. se confirmă locul de implementare; 3. se identifică programul compatibil; 4. se testează cheltuielile principale; …",
+      "newFragment": "[paragraf redundant eliminat]",
+      "reason": "Paragraf identic repetat în același articol"
     },
     {
       "route": "/fonduri-europene-caen/4321-instalatii-electrice",
@@ -17353,6 +17513,46 @@
       "oldFragment": "testeaza cofinanțarea și documentele",
       "newFragment": "testează cofinanțarea și documentele",
       "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/fonduri-europene-caen/5610-restaurante",
+      "sourceFile": "fonduri-europene-caen/5610-restaurante/index.html",
+      "location": "article-prose",
+      "oldFragment": "Exemplu practic: dacă o firmă vrea echipamente, software și amenajări, bugetul nu se pune într-o singură listă generală. Se separă ce susține activitatea principală, ce este strict necesar pentru implementare, ce poate …",
+      "newFragment": "[paragraf redundant eliminat]",
+      "reason": "Paragraf identic repetat în același articol"
+    },
+    {
+      "route": "/fonduri-europene-caen/5610-restaurante",
+      "sourceFile": "fonduri-europene-caen/5610-restaurante/index.html",
+      "location": "article-prose",
+      "oldFragment": "În rapoartele și paginile FABER, evităm formularea de tip ?se obține sigur finanțarea?. Selecția depinde de ghid, bugetul apelului, numărul de proiecte depuse, clarificări, documente și evaluare. Conținutul extins este …",
+      "newFragment": "[paragraf redundant eliminat]",
+      "reason": "Metatext despre construirea paginii, fără informație specifică investiției"
+    },
+    {
+      "route": "/fonduri-europene-caen/5610-restaurante",
+      "sourceFile": "fonduri-europene-caen/5610-restaurante/index.html",
+      "location": "article-prose",
+      "oldFragment": "O întrebare frecventă este dacă merită pregătite documentele înainte de publicarea formei finale a ghidului. Răspunsul prudent este da, dar cu limite: se pot pregăti datele firmei, descrierea investiției, lista de chelt…",
+      "newFragment": "[paragraf redundant eliminat]",
+      "reason": "Paragraf identic repetat în același articol"
+    },
+    {
+      "route": "/fonduri-europene-caen/5610-restaurante",
+      "sourceFile": "fonduri-europene-caen/5610-restaurante/index.html",
+      "location": "article-prose",
+      "oldFragment": "Pentru CAEN 5610 - restaurante și servicii alimentare, conținutul trebuie citit ca filtru de lucru, nu ca decizie finală. Un proiect poate părea eligibil după titlu, dar poate deveni riscant când sunt analizate codul CA…",
+      "newFragment": "[paragraf redundant eliminat]",
+      "reason": "Metatext despre construirea paginii, fără informație specifică investiției"
+    },
+    {
+      "route": "/fonduri-europene-caen/5610-restaurante",
+      "sourceFile": "fonduri-europene-caen/5610-restaurante/index.html",
+      "location": "article-prose",
+      "oldFragment": "Pentru utilizatorii care compară mai multe rute, ordinea sănătoasă este: 1. se verifică solicitantul; 2. se confirmă locul de implementare; 3. se identifică programul compatibil; 4. se testează cheltuielile principale; …",
+      "newFragment": "[paragraf redundant eliminat]",
+      "reason": "Paragraf identic repetat în același articol"
     },
     {
       "route": "/fonduri-europene-caen/5610-restaurante",
@@ -17697,6 +17897,46 @@
       "oldFragment": "Un restaurant poate analiza echipamente de bucatarie, mobilier tehnologic, sisteme POS, software de gestiune, eficiență energetica și dotări de siguranta alimentara. Fiecare achiziție trebuie legata de fluxul de lucru ș…",
       "newFragment": "Un restaurant poate analiza echipamente de bucătărie, mobilier tehnologic, sisteme POS, software de gestiune, eficiență energetică și dotări de siguranță alimentară. Fiecare achiziție trebuie legată de fluxul de lucru ș…",
       "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/fonduri-europene-caen/6201-dezvoltare-software",
+      "sourceFile": "fonduri-europene-caen/6201-dezvoltare-software/index.html",
+      "location": "article-prose",
+      "oldFragment": "Exemplu practic: dacă o firmă vrea echipamente, software și amenajări, bugetul nu se pune într-o singură listă generală. Se separă ce susține activitatea principală, ce este strict necesar pentru implementare, ce poate …",
+      "newFragment": "[paragraf redundant eliminat]",
+      "reason": "Paragraf identic repetat în același articol"
+    },
+    {
+      "route": "/fonduri-europene-caen/6201-dezvoltare-software",
+      "sourceFile": "fonduri-europene-caen/6201-dezvoltare-software/index.html",
+      "location": "article-prose",
+      "oldFragment": "În rapoartele și paginile FABER, evităm formularea de tip ?se obține sigur finanțarea?. Selecția depinde de ghid, bugetul apelului, numărul de proiecte depuse, clarificări, documente și evaluare. Conținutul extins este …",
+      "newFragment": "[paragraf redundant eliminat]",
+      "reason": "Metatext despre construirea paginii, fără informație specifică investiției"
+    },
+    {
+      "route": "/fonduri-europene-caen/6201-dezvoltare-software",
+      "sourceFile": "fonduri-europene-caen/6201-dezvoltare-software/index.html",
+      "location": "article-prose",
+      "oldFragment": "O întrebare frecventă este dacă merită pregătite documentele înainte de publicarea formei finale a ghidului. Răspunsul prudent este da, dar cu limite: se pot pregăti datele firmei, descrierea investiției, lista de chelt…",
+      "newFragment": "[paragraf redundant eliminat]",
+      "reason": "Paragraf identic repetat în același articol"
+    },
+    {
+      "route": "/fonduri-europene-caen/6201-dezvoltare-software",
+      "sourceFile": "fonduri-europene-caen/6201-dezvoltare-software/index.html",
+      "location": "article-prose",
+      "oldFragment": "Pentru CAEN 6201 - dezvoltare software, conținutul trebuie citit ca filtru de lucru, nu ca decizie finală. Un proiect poate părea eligibil după titlu, dar poate deveni riscant când sunt analizate codul CAEN, localizarea…",
+      "newFragment": "[paragraf redundant eliminat]",
+      "reason": "Metatext despre construirea paginii, fără informație specifică investiției"
+    },
+    {
+      "route": "/fonduri-europene-caen/6201-dezvoltare-software",
+      "sourceFile": "fonduri-europene-caen/6201-dezvoltare-software/index.html",
+      "location": "article-prose",
+      "oldFragment": "Pentru utilizatorii care compară mai multe rute, ordinea sănătoasă este: 1. se verifică solicitantul; 2. se confirmă locul de implementare; 3. se identifică programul compatibil; 4. se testează cheltuielile principale; …",
+      "newFragment": "[paragraf redundant eliminat]",
+      "reason": "Paragraf identic repetat în același articol"
     },
     {
       "route": "/fonduri-europene-caen/6201-dezvoltare-software",
@@ -20129,6 +20369,46 @@
       "oldFragment": "Cum se actualizeaza pagina când apare un apel nou?",
       "newFragment": "Cum se actualizeaza pagină când apare un apel nou?",
       "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/fonduri-europene-nord-est",
+      "sourceFile": "fonduri-europene-nord-est/index.html",
+      "location": "article-prose",
+      "oldFragment": "Exemplu practic: dacă o firmă vrea echipamente, software și amenajări, bugetul nu se pune într-o singură listă generală. Se separă ce susține activitatea principală, ce este strict necesar pentru implementare, ce poate …",
+      "newFragment": "[paragraf redundant eliminat]",
+      "reason": "Paragraf identic repetat în același articol"
+    },
+    {
+      "route": "/fonduri-europene-nord-est",
+      "sourceFile": "fonduri-europene-nord-est/index.html",
+      "location": "article-prose",
+      "oldFragment": "În rapoartele și paginile FABER, evităm formularea de tip ?se obține sigur finanțarea?. Selecția depinde de ghid, bugetul apelului, numărul de proiecte depuse, clarificări, documente și evaluare. Conținutul extins este …",
+      "newFragment": "[paragraf redundant eliminat]",
+      "reason": "Metatext despre construirea paginii, fără informație specifică investiției"
+    },
+    {
+      "route": "/fonduri-europene-nord-est",
+      "sourceFile": "fonduri-europene-nord-est/index.html",
+      "location": "article-prose",
+      "oldFragment": "O întrebare frecventă este dacă merită pregătite documentele înainte de publicarea formei finale a ghidului. Răspunsul prudent este da, dar cu limite: se pot pregăti datele firmei, descrierea investiției, lista de chelt…",
+      "newFragment": "[paragraf redundant eliminat]",
+      "reason": "Paragraf identic repetat în același articol"
+    },
+    {
+      "route": "/fonduri-europene-nord-est",
+      "sourceFile": "fonduri-europene-nord-est/index.html",
+      "location": "article-prose",
+      "oldFragment": "Pentru fonduri europene Nord-Est, conținutul trebuie citit ca filtru de lucru, nu ca decizie finală. Un proiect poate părea eligibil după titlu, dar poate deveni riscant când sunt analizate codul CAEN, localizarea, docu…",
+      "newFragment": "[paragraf redundant eliminat]",
+      "reason": "Metatext despre construirea paginii, fără informație specifică investiției"
+    },
+    {
+      "route": "/fonduri-europene-nord-est",
+      "sourceFile": "fonduri-europene-nord-est/index.html",
+      "location": "article-prose",
+      "oldFragment": "Pentru utilizatorii care compară mai multe rute, ordinea sănătoasă este: 1. se verifică solicitantul; 2. se confirmă locul de implementare; 3. se identifică programul compatibil; 4. se testează cheltuielile principale; …",
+      "newFragment": "[paragraf redundant eliminat]",
+      "reason": "Paragraf identic repetat în același articol"
     },
     {
       "route": "/fonduri-europene-nord-est",
@@ -25477,6 +25757,54 @@
     {
       "route": "/intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm",
       "sourceFile": "intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm/index.html",
+      "location": "article-prose",
+      "oldFragment": "Exemplu practic: dacă o firmă vrea echipamente, software și amenajări, bugetul nu se pune într-o singură listă generală. Se separă ce susține activitatea principală, ce este strict necesar pentru implementare, ce poate …",
+      "newFragment": "[paragraf redundant eliminat]",
+      "reason": "Paragraf identic repetat în același articol"
+    },
+    {
+      "route": "/intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm",
+      "sourceFile": "intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm/index.html",
+      "location": "article-prose",
+      "oldFragment": "În rapoartele și paginile FABER, evităm formularea de tip ?se obține sigur finanțarea?. Selecția depinde de ghid, bugetul apelului, numărul de proiecte depuse, clarificări, documente și evaluare. Conținutul extins este …",
+      "newFragment": "[paragraf redundant eliminat]",
+      "reason": "Metatext despre construirea paginii, fără informație specifică investiției"
+    },
+    {
+      "route": "/intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm",
+      "sourceFile": "intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm/index.html",
+      "location": "article-prose",
+      "oldFragment": "O întrebare frecventă este dacă merită pregătite documentele înainte de publicarea formei finale a ghidului. Răspunsul prudent este da, dar cu limite: se pot pregăti datele firmei, descrierea investiției, lista de chelt…",
+      "newFragment": "[paragraf redundant eliminat]",
+      "reason": "Paragraf identic repetat în același articol"
+    },
+    {
+      "route": "/intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm",
+      "sourceFile": "intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm/index.html",
+      "location": "article-prose",
+      "oldFragment": "Pentru cheltuieli Digitalizare IMM, conținutul trebuie citit ca filtru de lucru, nu ca decizie finală. Un proiect poate părea eligibil după titlu, dar poate deveni riscant când sunt analizate codul CAEN, localizarea, do…",
+      "newFragment": "[paragraf redundant eliminat]",
+      "reason": "Metatext despre construirea paginii, fără informație specifică investiției"
+    },
+    {
+      "route": "/intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm",
+      "sourceFile": "intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm/index.html",
+      "location": "article-prose",
+      "oldFragment": "Pentru utilizatorii care compară mai multe rute, ordinea sănătoasă este: 1. se verifică solicitantul; 2. se confirmă locul de implementare; 3. se identifică programul compatibil; 4. se testează cheltuielile principale; …",
+      "newFragment": "[paragraf redundant eliminat]",
+      "reason": "Paragraf identic repetat în același articol"
+    },
+    {
+      "route": "/intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm",
+      "sourceFile": "intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm/index.html",
+      "location": "article-prose",
+      "oldFragment": "Pot fi eligibile software, echipamente IT, servicii cloud, securitate cibernetică, implementare și instruire, dacă sunt permise de apel și justificate prin proiect.",
+      "newFragment": "[paragraf redundant eliminat]",
+      "reason": "Paragraf identic repetat în același articol"
+    },
+    {
+      "route": "/intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm",
+      "sourceFile": "intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm/index.html",
       "location": "heading",
       "oldFragment": "Raspuns scurt",
       "newFragment": "Ce trebuie să știi",
@@ -25805,6 +26133,54 @@
     {
       "route": "/intrebari/ce-documente-sunt-necesare-pentru-dr12",
       "sourceFile": "intrebari/ce-documente-sunt-necesare-pentru-dr12/index.html",
+      "location": "article-prose",
+      "oldFragment": "Exemplu practic: dacă o firmă vrea echipamente, software și amenajări, bugetul nu se pune într-o singură listă generală. Se separă ce susține activitatea principală, ce este strict necesar pentru implementare, ce poate …",
+      "newFragment": "[paragraf redundant eliminat]",
+      "reason": "Paragraf identic repetat în același articol"
+    },
+    {
+      "route": "/intrebari/ce-documente-sunt-necesare-pentru-dr12",
+      "sourceFile": "intrebari/ce-documente-sunt-necesare-pentru-dr12/index.html",
+      "location": "article-prose",
+      "oldFragment": "În rapoartele și paginile FABER, evităm formularea de tip ?se obține sigur finanțarea?. Selecția depinde de ghid, bugetul apelului, numărul de proiecte depuse, clarificări, documente și evaluare. Conținutul extins este …",
+      "newFragment": "[paragraf redundant eliminat]",
+      "reason": "Metatext despre construirea paginii, fără informație specifică investiției"
+    },
+    {
+      "route": "/intrebari/ce-documente-sunt-necesare-pentru-dr12",
+      "sourceFile": "intrebari/ce-documente-sunt-necesare-pentru-dr12/index.html",
+      "location": "article-prose",
+      "oldFragment": "O întrebare frecventă este dacă merită pregătite documentele înainte de publicarea formei finale a ghidului. Răspunsul prudent este da, dar cu limite: se pot pregăti datele firmei, descrierea investiției, lista de chelt…",
+      "newFragment": "[paragraf redundant eliminat]",
+      "reason": "Paragraf identic repetat în același articol"
+    },
+    {
+      "route": "/intrebari/ce-documente-sunt-necesare-pentru-dr12",
+      "sourceFile": "intrebari/ce-documente-sunt-necesare-pentru-dr12/index.html",
+      "location": "article-prose",
+      "oldFragment": "Pentru documente DR12 AFIR, conținutul trebuie citit ca filtru de lucru, nu ca decizie finală. Un proiect poate părea eligibil după titlu, dar poate deveni riscant când sunt analizate codul CAEN, localizarea, documentel…",
+      "newFragment": "[paragraf redundant eliminat]",
+      "reason": "Metatext despre construirea paginii, fără informație specifică investiției"
+    },
+    {
+      "route": "/intrebari/ce-documente-sunt-necesare-pentru-dr12",
+      "sourceFile": "intrebari/ce-documente-sunt-necesare-pentru-dr12/index.html",
+      "location": "article-prose",
+      "oldFragment": "Pentru DR12 sunt importante documentele solicitantului, exploatației, calculul SO, actele privind terenurile sau animalele, ofertele, bugetul și declaratiile cerute de apel.",
+      "newFragment": "[paragraf redundant eliminat]",
+      "reason": "Paragraf identic repetat în același articol"
+    },
+    {
+      "route": "/intrebari/ce-documente-sunt-necesare-pentru-dr12",
+      "sourceFile": "intrebari/ce-documente-sunt-necesare-pentru-dr12/index.html",
+      "location": "article-prose",
+      "oldFragment": "Pentru utilizatorii care compară mai multe rute, ordinea sănătoasă este: 1. se verifică solicitantul; 2. se confirmă locul de implementare; 3. se identifică programul compatibil; 4. se testează cheltuielile principale; …",
+      "newFragment": "[paragraf redundant eliminat]",
+      "reason": "Paragraf identic repetat în același articol"
+    },
+    {
+      "route": "/intrebari/ce-documente-sunt-necesare-pentru-dr12",
+      "sourceFile": "intrebari/ce-documente-sunt-necesare-pentru-dr12/index.html",
       "location": "heading",
       "oldFragment": "Raspuns scurt",
       "newFragment": "Ce trebuie să știi",
@@ -26113,6 +26489,54 @@
       "oldFragment": "vârstă sau incadrarea solicitantului neconfirmata",
       "newFragment": "vârstă sau încadrarea solicitantului neconfirmata",
       "reason": "Diacritice și normă editorială română"
+    },
+    {
+      "route": "/intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene",
+      "sourceFile": "intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene/index.html",
+      "location": "article-prose",
+      "oldFragment": "Cofinantarea se calculează pornind de la valoarea eligibilă, procentul nerambursabil și cheltuielile neeligibile, care trebuie acoperite separat de beneficiar.",
+      "newFragment": "[paragraf redundant eliminat]",
+      "reason": "Paragraf identic repetat în același articol"
+    },
+    {
+      "route": "/intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene",
+      "sourceFile": "intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene/index.html",
+      "location": "article-prose",
+      "oldFragment": "Exemplu practic: dacă o firmă vrea echipamente, software și amenajări, bugetul nu se pune într-o singură listă generală. Se separă ce susține activitatea principală, ce este strict necesar pentru implementare, ce poate …",
+      "newFragment": "[paragraf redundant eliminat]",
+      "reason": "Paragraf identic repetat în același articol"
+    },
+    {
+      "route": "/intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene",
+      "sourceFile": "intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene/index.html",
+      "location": "article-prose",
+      "oldFragment": "În rapoartele și paginile FABER, evităm formularea de tip ?se obține sigur finanțarea?. Selecția depinde de ghid, bugetul apelului, numărul de proiecte depuse, clarificări, documente și evaluare. Conținutul extins este …",
+      "newFragment": "[paragraf redundant eliminat]",
+      "reason": "Metatext despre construirea paginii, fără informație specifică investiției"
+    },
+    {
+      "route": "/intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene",
+      "sourceFile": "intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene/index.html",
+      "location": "article-prose",
+      "oldFragment": "O întrebare frecventă este dacă merită pregătite documentele înainte de publicarea formei finale a ghidului. Răspunsul prudent este da, dar cu limite: se pot pregăti datele firmei, descrierea investiției, lista de chelt…",
+      "newFragment": "[paragraf redundant eliminat]",
+      "reason": "Paragraf identic repetat în același articol"
+    },
+    {
+      "route": "/intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene",
+      "sourceFile": "intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene/index.html",
+      "location": "article-prose",
+      "oldFragment": "Pentru cofinanțare fonduri europene, conținutul trebuie citit ca filtru de lucru, nu ca decizie finală. Un proiect poate părea eligibil după titlu, dar poate deveni riscant când sunt analizate codul CAEN, localizarea, d…",
+      "newFragment": "[paragraf redundant eliminat]",
+      "reason": "Metatext despre construirea paginii, fără informație specifică investiției"
+    },
+    {
+      "route": "/intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene",
+      "sourceFile": "intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene/index.html",
+      "location": "article-prose",
+      "oldFragment": "Pentru utilizatorii care compară mai multe rute, ordinea sănătoasă este: 1. se verifică solicitantul; 2. se confirmă locul de implementare; 3. se identifică programul compatibil; 4. se testează cheltuielile principale; …",
+      "newFragment": "[paragraf redundant eliminat]",
+      "reason": "Paragraf identic repetat în același articol"
     },
     {
       "route": "/intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene",

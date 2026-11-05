@@ -127,6 +127,27 @@ function normalizeDom($, context) {
   const { route, sourceFile, programContext, changes, seen } = context;
   let changed = false;
 
+  // Remove repeated filler from article prose, while preserving independently
+  // useful FAQ answers, summaries, official citations and program status cards.
+  const proseSeen = new Map();
+  $("main article.panel > p").each((_, element) => {
+    const paragraph = $(element);
+    const text = cleanText(paragraph.text());
+    if (text.length < 100 || paragraph.is('[data-aeo-direct-answer], [data-aeo-primary-answer]')) return;
+    const metatext = /conținutul trebuie citit ca filtru de lucru|Conținutul extins este construit pentru a răspunde/iu.test(text);
+    let parentSeen = proseSeen.get(element.parent);
+    if (!parentSeen) { parentSeen = new Set(); proseSeen.set(element.parent, parentSeen); }
+    if (metatext || parentSeen.has(text)) {
+      addChange(context.changes, context.seen, {
+        route, sourceFile, location: 'article-prose', oldFragment: text,
+        newFragment: '[paragraf redundant eliminat]',
+        reason: metatext ? 'Metatext despre construirea paginii, fără informație specifică investiției' : 'Paragraf identic repetat în același articol'
+      });
+      paragraph.remove();
+      changed = true;
+    } else parentSeen.add(text);
+  });
+
   $(".audit-design-summary").each((_, element) => {
     const oldFragment = $(element).text();
     addChange(changes, seen, {

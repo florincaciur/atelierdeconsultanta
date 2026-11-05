@@ -65,7 +65,9 @@ try {
     assert.equal(metrics.explorerVisible, 1);
     assert.equal(metrics.contactFormOpen, false, "formularul trebuie să fie restrâns implicit");
     if (viewport.width === 1366) {
-      for (const section of metrics.sectionHeights) assert(section.height <= viewport.height * 1.1, `${section.id}: cadrul depășește o înălțime de ecran (${section.height}px)`);
+      // The hero must grow with all 15 programs and with text zoom. A fixed
+      // viewport-height constraint caused its panel to overlap the header.
+      for (const section of metrics.sectionHeights.filter(section => section.id !== 'hero')) assert(section.height <= viewport.height * 1.1, `${section.id}: cadrul depășește o înălțime de ecran (${section.height}px)`);
     }
     const sceneFits = await page.locator('#hero .hero-program-scene.is-active svg').evaluate(node => node.getBoundingClientRect().height <= node.parentElement.getBoundingClientRect().height + 1);
     assert(sceneFits, `${viewport.width}px: ilustrația trebuie să încapă integral în cadru`);

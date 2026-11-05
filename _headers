@@ -68,6 +68,9 @@
   X-Robots-Tag: noindex, nofollow
   Cache-Control: public, max-age=300
 
+/resurse/descarcari/*.xlsx
+  X-Robots-Tag: noindex, follow
+
 /release.json
   Content-Type: application/json; charset=utf-8
   X-Robots-Tag: noindex, nofollow

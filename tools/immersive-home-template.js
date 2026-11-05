@@ -29,6 +29,7 @@ function immersiveHero(hero) {
     return '<p class="hero-subtitle im-lead" data-aeo-primary-answer="" data-aeo-direct-answer="">FABER – Atelier de Consultanță sprijină proiecte cu fonduri europene, de la verificarea inițială a eligibilității la documentație și implementare. Fără promisiunea aprobării finanțării. ' + positioning + '</p><details class="im-about"><summary>Ce facem pentru proiectul tău <span aria-hidden="true">+</span></summary>' + expanded + '</details>';
   });
   result = result.replace('    </section>', `      <div class="im-hero-bottom"><a href="#homepage-method" class="im-scroll-link"><span class="im-scroll-icon" aria-hidden="true">↓</span> Derulează. Descoperă. Construiește.</a><span>De la întrebare la un plan documentat.</span><span class="im-edition">FABER — 01 / 05</span></div>\n    </section>`);
+  result = result.replace('Derulează. Descoperă. Construiește.', 'Vezi etapele proiectului');
   return result;
 }
 

@@ -1,0 +1,621 @@
+{
+  "base": "http://127.0.0.1:50548",
+  "checks": 11,
+  "rows": [
+    {
+      "route": "/",
+      "viewport": {
+        "width": 320,
+        "height": 640
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 148.921875,
+        "bottom": 360.875,
+        "left": 24,
+        "right": 296,
+        "width": 272,
+        "height": 211.953125
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 320,
+        "width": 320,
+        "height": 73
+      },
+      "hero": {
+        "top": 0,
+        "bottom": 2249.140625,
+        "left": 0,
+        "right": 320,
+        "width": 320,
+        "height": 2249.140625
+      },
+      "panel": {
+        "top": 815.375,
+        "bottom": 2110.140625,
+        "left": 24,
+        "right": 296,
+        "width": 272,
+        "height": 1294.765625
+      },
+      "scene": {
+        "top": 868.375,
+        "bottom": 1068.375,
+        "left": 39,
+        "right": 281,
+        "width": 242,
+        "height": 200
+      },
+      "programs": 15,
+      "clipped": [
+        {
+          "tag": "BUTTON",
+          "text": "03Punctaj",
+          "left": 279,
+          "right": 379
+        },
+        {
+          "tag": "BUTTON",
+          "text": "04Buget",
+          "left": 382,
+          "right": 482
+        },
+        {
+          "tag": "BUTTON",
+          "text": "05Decizie",
+          "left": 485,
+          "right": 585
+        }
+      ]
+    },
+    {
+      "route": "/",
+      "viewport": {
+        "width": 360,
+        "height": 740
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 148.921875,
+        "bottom": 318.484375,
+        "left": 24,
+        "right": 336,
+        "width": 312,
+        "height": 169.5625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 360,
+        "width": 360,
+        "height": 73
+      },
+      "hero": {
+        "top": 0,
+        "bottom": 2129.1875,
+        "left": 0,
+        "right": 360,
+        "width": 360,
+        "height": 2129.1875
+      },
+      "panel": {
+        "top": 722.609375,
+        "bottom": 1990.1875,
+        "left": 24,
+        "right": 336,
+        "width": 312,
+        "height": 1267.578125
+      },
+      "scene": {
+        "top": 775.609375,
+        "bottom": 975.609375,
+        "left": 39,
+        "right": 321,
+        "width": 282,
+        "height": 200
+      },
+      "programs": 15,
+      "clipped": [
+        {
+          "tag": "BUTTON",
+          "text": "03Punctaj",
+          "left": 279,
+          "right": 379
+        },
+        {
+          "tag": "BUTTON",
+          "text": "04Buget",
+          "left": 382,
+          "right": 482
+        },
+        {
+          "tag": "BUTTON",
+          "text": "05Decizie",
+          "left": 485,
+          "right": 585
+        }
+      ]
+    },
+    {
+      "route": "/",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 148.921875,
+        "bottom": 332.046875,
+        "left": 24,
+        "right": 366,
+        "width": 342,
+        "height": 183.125
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": {
+        "top": 0,
+        "bottom": 1804.921875,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 1804.921875
+      },
+      "panel": {
+        "top": 736.171875,
+        "bottom": 1665.921875,
+        "left": 24,
+        "right": 366,
+        "width": 342,
+        "height": 929.75
+      },
+      "scene": {
+        "top": 793.171875,
+        "bottom": 993.171875,
+        "left": 43,
+        "right": 347,
+        "width": 304,
+        "height": 200
+      },
+      "programs": 15,
+      "clipped": [
+        {
+          "tag": "BUTTON",
+          "text": "04Buget",
+          "left": 382,
+          "right": 482
+        },
+        {
+          "tag": "BUTTON",
+          "text": "05Decizie",
+          "left": 485,
+          "right": 585
+        }
+      ]
+    },
+    {
+      "route": "/",
+      "viewport": {
+        "width": 600,
+        "height": 800
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 148.921875,
+        "bottom": 312.984375,
+        "left": 24,
+        "right": 576,
+        "width": 552,
+        "height": 164.0625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 600,
+        "width": 600,
+        "height": 73
+      },
+      "hero": {
+        "top": 0,
+        "bottom": 1726.09375,
+        "left": 0,
+        "right": 600,
+        "width": 600,
+        "height": 1726.09375
+      },
+      "panel": {
+        "top": 717.109375,
+        "bottom": 1587.09375,
+        "left": 24,
+        "right": 576,
+        "width": 552,
+        "height": 869.984375
+      },
+      "scene": {
+        "top": 774.109375,
+        "bottom": 974.109375,
+        "left": 43,
+        "right": 557,
+        "width": 514,
+        "height": 200
+      },
+      "programs": 15,
+      "clipped": []
+    },
+    {
+      "route": "/",
+      "viewport": {
+        "width": 768,
+        "height": 1024
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 175.75,
+        "bottom": 250.5625,
+        "left": 42.234375,
+        "right": 722.234375,
+        "width": 680,
+        "height": 74.8125
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 768,
+        "width": 768,
+        "height": 73
+      },
+      "hero": {
+        "top": 0,
+        "bottom": 1669.671875,
+        "left": 0,
+        "right": 768,
+        "width": 768,
+        "height": 1669.671875
+      },
+      "panel": {
+        "top": 618.6875,
+        "bottom": 1521.671875,
+        "left": 42.234375,
+        "right": 725.765625,
+        "width": 683.53125,
+        "height": 902.984375
+      },
+      "scene": {
+        "top": 679.6875,
+        "bottom": 904.6875,
+        "left": 65.234375,
+        "right": 702.765625,
+        "width": 637.53125,
+        "height": 225
+      },
+      "programs": 15,
+      "clipped": [
+        {
+          "tag": "BUTTON",
+          "text": "04Buget",
+          "left": 712.59375,
+          "right": 812.59375
+        },
+        {
+          "tag": "BUTTON",
+          "text": "05Decizie",
+          "left": 819.78125,
+          "right": 919.78125
+        }
+      ]
+    },
+    {
+      "route": "/",
+      "viewport": {
+        "width": 999,
+        "height": 768
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 175.75,
+        "bottom": 273.09375,
+        "left": 54.9375,
+        "right": 734.9375,
+        "width": 680,
+        "height": 97.34375
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 999,
+        "width": 999,
+        "height": 73
+      },
+      "hero": {
+        "top": 0,
+        "bottom": 1692.203125,
+        "left": 0,
+        "right": 999,
+        "width": 999,
+        "height": 1692.203125
+      },
+      "panel": {
+        "top": 641.21875,
+        "bottom": 1544.203125,
+        "left": 149.5,
+        "right": 849.5,
+        "width": 700,
+        "height": 902.984375
+      },
+      "scene": {
+        "top": 702.21875,
+        "bottom": 927.21875,
+        "left": 172.5,
+        "right": 826.5,
+        "width": 654,
+        "height": 225
+      },
+      "programs": 15,
+      "clipped": []
+    },
+    {
+      "route": "/",
+      "viewport": {
+        "width": 1024,
+        "height": 768
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 145.75,
+        "bottom": 279.71875,
+        "left": 46.078125,
+        "right": 505.46875,
+        "width": 459.390625,
+        "height": 133.96875
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1024,
+        "width": 1024,
+        "height": 73
+      },
+      "hero": {
+        "top": 0,
+        "bottom": 941.40625,
+        "left": 0,
+        "right": 1024,
+        "width": 1024,
+        "height": 941.40625
+      },
+      "panel": {
+        "top": 118,
+        "bottom": 852.40625,
+        "left": 536.1875,
+        "right": 977.90625,
+        "width": 441.71875,
+        "height": 734.40625
+      },
+      "scene": {
+        "top": 179,
+        "bottom": 321,
+        "left": 559.1875,
+        "right": 954.90625,
+        "width": 395.71875,
+        "height": 142
+      },
+      "programs": 15,
+      "clipped": []
+    },
+    {
+      "route": "/",
+      "viewport": {
+        "width": 1366,
+        "height": 768
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 145.75,
+        "bottom": 312.109375,
+        "left": 61.46875,
+        "right": 674.296875,
+        "width": 612.828125,
+        "height": 166.359375
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1366,
+        "width": 1366,
+        "height": 73
+      },
+      "hero": {
+        "top": 0,
+        "bottom": 942.015625,
+        "left": 0,
+        "right": 1366,
+        "width": 1366,
+        "height": 942.015625
+      },
+      "panel": {
+        "top": 118,
+        "bottom": 853.015625,
+        "left": 715.265625,
+        "right": 1304.53125,
+        "width": 589.265625,
+        "height": 735.015625
+      },
+      "scene": {
+        "top": 179,
+        "bottom": 321,
+        "left": 738.265625,
+        "right": 1281.53125,
+        "width": 543.265625,
+        "height": 142
+      },
+      "programs": 15,
+      "clipped": []
+    },
+    {
+      "route": "/",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 145.75,
+        "bottom": 321.109375,
+        "left": 64.796875,
+        "right": 710.828125,
+        "width": 646.03125,
+        "height": 175.359375
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": {
+        "top": 0,
+        "bottom": 943.34375,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 943.34375
+      },
+      "panel": {
+        "top": 118,
+        "bottom": 854.34375,
+        "left": 754.015625,
+        "right": 1375.203125,
+        "width": 621.1875,
+        "height": 736.34375
+      },
+      "scene": {
+        "top": 179,
+        "bottom": 321,
+        "left": 777.015625,
+        "right": 1352.203125,
+        "width": 575.1875,
+        "height": 142
+      },
+      "programs": 15,
+      "clipped": []
+    },
+    {
+      "route": "/",
+      "viewport": {
+        "width": 1920,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 172.75,
+        "bottom": 478.0625,
+        "left": 240,
+        "right": 920,
+        "width": 680,
+        "height": 305.3125
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1920,
+        "width": 1920,
+        "height": 73
+      },
+      "hero": {
+        "top": 0,
+        "bottom": 973.234375,
+        "left": 0,
+        "right": 1920,
+        "width": 1920,
+        "height": 973.234375
+      },
+      "panel": {
+        "top": 145,
+        "bottom": 884.234375,
+        "left": 1001.5625,
+        "right": 1680,
+        "width": 678.4375,
+        "height": 739.234375
+      },
+      "scene": {
+        "top": 206,
+        "bottom": 348,
+        "left": 1024.5625,
+        "right": 1657,
+        "width": 632.4375,
+        "height": 142
+      },
+      "programs": 15,
+      "clipped": []
+    },
+    {
+      "route": "/",
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "textZoom": true
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 145.75,
+        "bottom": 592.3125,
+        "left": 64.796875,
+        "right": 710.828125,
+        "width": 646.03125,
+        "height": 446.5625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": {
+        "top": 0,
+        "bottom": 959.125,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 959.125
+      },
+      "panel": {
+        "top": 118,
+        "bottom": 870.125,
+        "left": 754.015625,
+        "right": 1375.203125,
+        "width": 621.1875,
+        "height": 752.125
+      },
+      "scene": {
+        "top": 194.78125,
+        "bottom": 336.78125,
+        "left": 777.015625,
+        "right": 1352.203125,
+        "width": 575.1875,
+        "height": 142
+      },
+      "programs": 15,
+      "clipped": []
+    }
+  ]
+}

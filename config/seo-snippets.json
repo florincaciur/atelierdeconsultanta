@@ -247,6 +247,171 @@
       "ogTitle": "Găsește traseul potrivit pentru investiția ta | FABER",
       "ogDescription": "Pornește de la beneficiar și investiție, apoi verifică programul, documentele și bugetul în pagina dedicată fiecărui apel.",
       "lastReviewed": "2026-08-29"
+    },
+    {
+      "route": "/proiectare-fonduri-europene",
+      "title": "Servicii de proiectare: SF, DALI, DTAC și PT | FABER",
+      "description": "Proiectare pentru construcții și investiții cu fonduri europene: SF, DALI, DTAC, proiect tehnic și deviz. Vezi datele necesare pentru o ofertă.",
+      "primaryQuery": "servicii de proiectare",
+      "secondaryQueries": [
+        "proiectare fonduri europene",
+        "proiectare SF DALI",
+        "proiect tehnic constructii"
+      ],
+      "ogTitle": "Servicii de proiectare: SF, DALI, DTAC și PT | FABER",
+      "ogDescription": "Proiectare pentru construcții și investiții cu fonduri europene: SF, DALI, DTAC, proiect tehnic și deviz. Vezi datele necesare pentru o ofertă.",
+      "primaryIntent": "servicii de proiectare și documentație tehnică pentru investiții",
+      "sourceOfTruth": [
+        "tools/sync-search-quality.js"
+      ],
+      "factualStatus": "evergreen_service_scope_verified",
+      "lastReviewed": "2026-11-05",
+      "notes": "Intenție comercială distinctă pentru proiectare; documentațiile se delimitează prin ofertă."
+    },
+    {
+      "route": "/studiu-fezabilitate-fonduri-europene",
+      "title": "Studiu de fezabilitate pentru fonduri europene | FABER",
+      "description": "Studiu de fezabilitate pentru investiții cu fonduri europene: tema, variante tehnice, deviz și indicatori. Vezi ce documente pregătești pentru ofertă.",
+      "primaryQuery": "studiu de fezabilitate fonduri europene",
+      "secondaryQueries": [
+        "studiu de fezabilitate",
+        "proiectare SF"
+      ],
+      "ogTitle": "Studiu de fezabilitate pentru fonduri europene | FABER",
+      "ogDescription": "Studiu de fezabilitate pentru investiții cu fonduri europene: tema, variante tehnice, deviz și indicatori. Vezi ce documente pregătești pentru ofertă.",
+      "primaryIntent": "servicii de proiectare și documentație tehnică pentru investiții",
+      "sourceOfTruth": [
+        "tools/sync-search-quality.js"
+      ],
+      "factualStatus": "evergreen_service_scope_verified",
+      "lastReviewed": "2026-11-05",
+      "notes": "Intenție comercială distinctă pentru proiectare; documentațiile se delimitează prin ofertă."
+    },
+    {
+      "route": "/consultanta-pnrr-digitalizare",
+      "title": "Consultanță PNRR Digitalizare IMM și implementare | FABER",
+      "description": "Consultanță pentru proiecte PNRR de digitalizare contractate: buget, achiziții și raportare. Pentru investiții noi, compară programele disponibile.",
+      "ogTitle": "Consultanță PNRR Digitalizare IMM și implementare | FABER",
+      "ogDescription": "Consultanță pentru proiecte PNRR de digitalizare contractate: buget, achiziții și raportare. Pentru investiții noi, compară programele disponibile.",
+      "primaryQuery": "consultanță PNRR digitalizare IMM",
+      "primaryIntent": "consultanță PNRR digitalizare IMM",
+      "secondaryQueries": [
+        "consultanță PNRR digitalizare IMM"
+      ],
+      "sourceOfTruth": [
+        "consultanta-pnrr-digitalizare/index.html"
+      ],
+      "factualStatus": "evergreen_service_scope_verified",
+      "lastReviewed": "2026-11-05",
+      "notes": "Revizie a intenției de căutare și a livrabilelor; fără promisiuni de finanțare."
+    },
+    {
+      "route": "/consultanta-afir",
+      "title": "Consultanță AFIR: dosare agricole și proiectare | FABER",
+      "description": "Consultanță AFIR pentru ferme: verificarea exploatației, calcul SO, dosar și documente tehnice. Vezi ce date pregătești pentru analiza investiției.",
+      "ogTitle": "Consultanță AFIR: dosare agricole și proiectare | FABER",
+      "ogDescription": "Consultanță AFIR pentru ferme: verificarea exploatației, calcul SO, dosar și documente tehnice. Vezi ce date pregătești pentru analiza investiției.",
+      "primaryQuery": "consultanță AFIR",
+      "primaryIntent": "consultanță AFIR",
+      "secondaryQueries": [
+        "consultanță AFIR"
+      ],
+      "sourceOfTruth": [
+        "consultanta-afir/index.html"
+      ],
+      "factualStatus": "evergreen_service_scope_verified",
+      "lastReviewed": "2026-11-05",
+      "notes": "Revizie a intenției de căutare și a livrabilelor; fără promisiuni de finanțare."
+    },
+    {
+      "route": "/firma-consultanta-fonduri-europene",
+      "title": "Firmă de consultanță fonduri europene: servicii | FABER",
+      "description": "Compară serviciile unei firme de consultanță pentru fonduri europene: analiză, dosar, proiectare, clarificări și implementare. Vezi ce să ceri în ofertă.",
+      "ogTitle": "Firmă de consultanță fonduri europene: servicii | FABER",
+      "ogDescription": "Compară serviciile unei firme de consultanță pentru fonduri europene: analiză, dosar, proiectare, clarificări și implementare. Vezi ce să ceri în ofertă.",
+      "primaryQuery": "firmă consultanță fonduri europene",
+      "primaryIntent": "firmă consultanță fonduri europene",
+      "secondaryQueries": [
+        "firmă consultanță fonduri europene"
+      ],
+      "sourceOfTruth": [
+        "firma-consultanta-fonduri-europene/index.html"
+      ],
+      "factualStatus": "evergreen_service_scope_verified",
+      "lastReviewed": "2026-11-05",
+      "notes": "Revizie a intenției de căutare și a livrabilelor; fără promisiuni de finanțare."
+    },
+    {
+      "route": "/cum-alegi-consultant-fonduri-europene",
+      "title": "Cum alegi un consultant pentru fonduri europene | FABER",
+      "description": "Alege consultantul pentru fonduri europene după livrabile, experiență verificabilă, contract și costuri. Întrebări concrete pentru compararea ofertelor.",
+      "ogTitle": "Cum alegi un consultant pentru fonduri europene | FABER",
+      "ogDescription": "Alege consultantul pentru fonduri europene după livrabile, experiență verificabilă, contract și costuri. Întrebări concrete pentru compararea ofertelor.",
+      "primaryQuery": "cum alegi consultant fonduri europene",
+      "primaryIntent": "cum alegi consultant fonduri europene",
+      "secondaryQueries": [
+        "cum alegi consultant fonduri europene"
+      ],
+      "sourceOfTruth": [
+        "cum-alegi-consultant-fonduri-europene/index.html"
+      ],
+      "factualStatus": "evergreen_service_scope_verified",
+      "lastReviewed": "2026-11-05",
+      "notes": "Revizie a intenției de căutare și a livrabilelor; fără promisiuni de finanțare."
+    },
+    {
+      "route": "/start-up-nation-2026-plan-de-afaceri",
+      "title": "Plan de afaceri Start-Up Nation 2026: structură | FABER",
+      "description": "Plan de afaceri Start-Up Nation: activitate, piață, buget, venituri și locuri de muncă. Vezi structura și verificările înainte de depunere.",
+      "ogTitle": "Plan de afaceri Start-Up Nation 2026: structură | FABER",
+      "ogDescription": "Plan de afaceri Start-Up Nation: activitate, piață, buget, venituri și locuri de muncă. Vezi structura și verificările înainte de depunere.",
+      "primaryQuery": "plan de afaceri Start Up Nation 2026",
+      "primaryIntent": "plan de afaceri Start Up Nation 2026",
+      "secondaryQueries": [
+        "plan de afaceri Start Up Nation 2026"
+      ],
+      "sourceOfTruth": [
+        "start-up-nation-2026-plan-de-afaceri/index.html"
+      ],
+      "factualStatus": "evergreen_service_scope_verified",
+      "lastReviewed": "2026-11-05",
+      "notes": "Revizie a intenției de căutare și a livrabilelor; fără promisiuni de finanțare."
+    },
+    {
+      "route": "/consultant-fonduri-europene-imm",
+      "title": "Consultant fonduri europene pentru IMM | FABER",
+      "description": "Consultanță pentru IMM: alegerea programului, eligibilitate, buget și dosar. Vezi documentele necesare și etapele colaborării pentru investiția firmei.",
+      "ogTitle": "Consultant fonduri europene pentru IMM | FABER",
+      "ogDescription": "Consultanță pentru IMM: alegerea programului, eligibilitate, buget și dosar. Vezi documentele necesare și etapele colaborării pentru investiția firmei.",
+      "primaryQuery": "consultant fonduri europene IMM",
+      "primaryIntent": "consultant fonduri europene IMM",
+      "secondaryQueries": [
+        "consultant fonduri europene IMM"
+      ],
+      "sourceOfTruth": [
+        "consultant-fonduri-europene-imm/index.html"
+      ],
+      "factualStatus": "evergreen_service_scope_verified",
+      "lastReviewed": "2026-11-05",
+      "notes": "Revizie a intenției de căutare și a livrabilelor; fără promisiuni de finanțare."
+    },
+    {
+      "route": "/fonduri-europene-nerambursabile-2026",
+      "title": "Fonduri europene nerambursabile 2026: programe | FABER",
+      "description": "Compară programele de fonduri europene din 2026 pentru firme și ferme. Verifică solicitantul, investiția, contribuția și statutul fiecărui apel.",
+      "ogTitle": "Fonduri europene nerambursabile 2026: programe | FABER",
+      "ogDescription": "Compară programele de fonduri europene din 2026 pentru firme și ferme. Verifică solicitantul, investiția, contribuția și statutul fiecărui apel.",
+      "primaryQuery": "fonduri europene nerambursabile 2026",
+      "primaryIntent": "fonduri europene nerambursabile 2026",
+      "secondaryQueries": [
+        "fonduri europene nerambursabile 2026"
+      ],
+      "sourceOfTruth": [
+        "fonduri-europene-nerambursabile-2026/index.html"
+      ],
+      "factualStatus": "evergreen_service_scope_verified",
+      "lastReviewed": "2026-11-05",
+      "notes": "Revizie a intenției de căutare și a livrabilelor; fără promisiuni de finanțare."
     }
   ]
 }

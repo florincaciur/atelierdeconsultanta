@@ -1,0 +1,6209 @@
+{
+  "base": "http://127.0.0.1:58861",
+  "checks": 212,
+  "rows": [
+    {
+      "route": "/digitalizare-imm",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 220.109375,
+        "bottom": 291.671875,
+        "left": 26.59375,
+        "right": 363.40625,
+        "width": 336.8125,
+        "height": 71.5625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/dr12-afir",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 236.671875,
+        "bottom": 344.015625,
+        "left": 26.59375,
+        "right": 363.40625,
+        "width": 336.8125,
+        "height": 107.34375
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/dr14",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 236.671875,
+        "bottom": 344.015625,
+        "left": 26.59375,
+        "right": 363.40625,
+        "width": 336.8125,
+        "height": 107.34375
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/pro-infra",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 188.625,
+        "bottom": 367.53125,
+        "left": 26.59375,
+        "right": 363.40625,
+        "width": 336.8125,
+        "height": 178.90625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/afir-autoconsum-agroalimentar",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 263.515625,
+        "bottom": 335.078125,
+        "left": 26.59375,
+        "right": 363.40625,
+        "width": 336.8125,
+        "height": 71.5625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/apeluri-gal",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 220.109375,
+        "bottom": 291.671875,
+        "left": 87.5625,
+        "right": 302.4375,
+        "width": 214.875,
+        "height": 71.5625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/autoconsum-public-fotovoltaice-institutii-publice",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 236.671875,
+        "bottom": 379.796875,
+        "left": 26.59375,
+        "right": 363.40625,
+        "width": 336.8125,
+        "height": 143.125
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/diaspora-investeste-acasa",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 220.109375,
+        "bottom": 291.671875,
+        "left": 26.59375,
+        "right": 363.40625,
+        "width": 336.8125,
+        "height": 71.5625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/dr-12-afir-instalarea-tinerilor-fermieri",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 204.109375,
+        "bottom": 311.453125,
+        "left": 26.59375,
+        "right": 363.40625,
+        "width": 336.8125,
+        "height": 107.34375
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/dr-14-afir-conditii-eligibilitate-greseli-frecvente",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 250.78125,
+        "bottom": 358.125,
+        "left": 26.59375,
+        "right": 363.40625,
+        "width": 336.8125,
+        "height": 107.34375
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/dr18",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 236.671875,
+        "bottom": 379.796875,
+        "left": 26.59375,
+        "right": 363.40625,
+        "width": 336.8125,
+        "height": 143.125
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/e-drive",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 205.1875,
+        "bottom": 348.3125,
+        "left": 26.59375,
+        "right": 363.40625,
+        "width": 336.8125,
+        "height": 143.125
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/e-mobility",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 205.1875,
+        "bottom": 312.53125,
+        "left": 26.59375,
+        "right": 363.40625,
+        "width": 336.8125,
+        "height": 107.34375
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/e-move",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 205.1875,
+        "bottom": 240.96875,
+        "left": 27.4375,
+        "right": 362.5625,
+        "width": 335.125,
+        "height": 35.78125
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/femeia-antreprenor-2026",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 236.671875,
+        "bottom": 344.015625,
+        "left": 26.59375,
+        "right": 363.40625,
+        "width": 336.8125,
+        "height": 107.34375
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/fondul-de-modernizare",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 220.109375,
+        "bottom": 327.453125,
+        "left": 26.59375,
+        "right": 363.40625,
+        "width": 336.8125,
+        "height": 107.34375
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 220.109375,
+        "bottom": 327.453125,
+        "left": 26.59375,
+        "right": 363.40625,
+        "width": 336.8125,
+        "height": 107.34375
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/fondul-modernizare-energie-regenerabila-2026",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 239.59375,
+        "bottom": 346.9375,
+        "left": 26.59375,
+        "right": 363.40625,
+        "width": 336.8125,
+        "height": 107.34375
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/fondul-modernizare-pc1-stocare",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 236.671875,
+        "bottom": 344.015625,
+        "left": 26.59375,
+        "right": 363.40625,
+        "width": 336.8125,
+        "height": 107.34375
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/fondul-modernizare-pc1-stocare-entitati-publice",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 236.671875,
+        "bottom": 379.796875,
+        "left": 26.59375,
+        "right": 363.40625,
+        "width": 336.8125,
+        "height": 143.125
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/fonduri-regionale",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 188.625,
+        "bottom": 260.1875,
+        "left": 26.59375,
+        "right": 363.40625,
+        "width": 336.8125,
+        "height": 71.5625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/gal-afir",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 236.671875,
+        "bottom": 344.015625,
+        "left": 26.59375,
+        "right": 363.40625,
+        "width": 336.8125,
+        "height": 107.34375
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/investitii-modernizarea-microintreprinderilor-apel-2",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 236.671875,
+        "bottom": 379.796875,
+        "left": 26.59375,
+        "right": 363.40625,
+        "width": 336.8125,
+        "height": 143.125
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/pnrr",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 220.109375,
+        "bottom": 327.453125,
+        "left": 26.59375,
+        "right": 363.40625,
+        "width": 336.8125,
+        "height": 107.34375
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/pocidif-21",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 236.671875,
+        "bottom": 451.359375,
+        "left": 26.59375,
+        "right": 363.40625,
+        "width": 336.8125,
+        "height": 214.6875
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/programul-tranzitie-justa",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 220.109375,
+        "bottom": 327.453125,
+        "left": 26.59375,
+        "right": 363.40625,
+        "width": 336.8125,
+        "height": 107.34375
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/start-up-nation-2026",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 253.234375,
+        "bottom": 324.796875,
+        "left": 26.59375,
+        "right": 363.40625,
+        "width": 336.8125,
+        "height": 71.5625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/blog",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 231.40625,
+        "bottom": 391.328125,
+        "left": 24,
+        "right": 366,
+        "width": 342,
+        "height": 159.921875
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/metodologie-verificare-eligibilitate",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 229.875,
+        "bottom": 377.0625,
+        "left": 20,
+        "right": 370,
+        "width": 350,
+        "height": 147.1875
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/surse-oficiale-fonduri-europene",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 280.84375,
+        "bottom": 428.03125,
+        "left": 20,
+        "right": 370,
+        "width": 350,
+        "height": 147.1875
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/acte-necesare-fonduri-europene-nerambursabile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 354.640625,
+        "bottom": 465.03125,
+        "left": 20,
+        "right": 370,
+        "width": 350,
+        "height": 110.390625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/blog-afir-fotovoltaice-ferme-2026",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 208.859375,
+        "bottom": 304.8125,
+        "left": 32,
+        "right": 358,
+        "width": 326,
+        "height": 95.953125
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/cat-costa-consultanta-fonduri-europene-ghid",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 262.453125,
+        "bottom": 353.203125,
+        "left": 24,
+        "right": 366,
+        "width": 342,
+        "height": 90.75
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/cheltuieli-eligibile-digitalizare-imm",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 262.453125,
+        "bottom": 353.203125,
+        "left": 24,
+        "right": 366,
+        "width": 342,
+        "height": 90.75
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/cheltuieli-eligibile-pocidif-21",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 354.640625,
+        "bottom": 501.828125,
+        "left": 20,
+        "right": 370,
+        "width": 350,
+        "height": 147.1875
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/cod-caen-start-up-nation-2026",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 335.15625,
+        "bottom": 482.34375,
+        "left": 20,
+        "right": 370,
+        "width": 350,
+        "height": 147.1875
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/documente-punctaj-pocidif-21",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 354.640625,
+        "bottom": 465.03125,
+        "left": 20,
+        "right": 370,
+        "width": 350,
+        "height": 110.390625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/dr12-vs-dr14",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 316.953125,
+        "bottom": 377.453125,
+        "left": 24,
+        "right": 366,
+        "width": 342,
+        "height": 60.5
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/femeia-antreprenor-2026-conditii-idei-afaceri",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 352.828125,
+        "bottom": 444.5625,
+        "left": 20,
+        "right": 370,
+        "width": 350,
+        "height": 91.734375
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/ghiduri",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 303.671875,
+        "bottom": 414.0625,
+        "left": 20,
+        "right": 370,
+        "width": 350,
+        "height": 110.390625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/glosar-fonduri-europene",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 229.875,
+        "bottom": 340.265625,
+        "left": 20,
+        "right": 370,
+        "width": 350,
+        "height": 110.390625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/greseli-fonduri-europene",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 335.15625,
+        "bottom": 408.75,
+        "left": 20,
+        "right": 370,
+        "width": 350,
+        "height": 73.59375
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/intrebari-frecvente",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 335.15625,
+        "bottom": 445.546875,
+        "left": 20,
+        "right": 370,
+        "width": 350,
+        "height": 110.390625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 303.671875,
+        "bottom": 450.859375,
+        "left": 20,
+        "right": 370,
+        "width": 350,
+        "height": 147.1875
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/intrebari/ce-documente-sunt-necesare-pentru-dr12",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 303.671875,
+        "bottom": 450.859375,
+        "left": 20,
+        "right": 370,
+        "width": 350,
+        "height": 147.1875
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 303.671875,
+        "bottom": 450.859375,
+        "left": 20,
+        "right": 370,
+        "width": 350,
+        "height": 147.1875
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/pnrr-digitalizare-imm-cheltuieli-eligibile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 309.859375,
+        "bottom": 371.015625,
+        "left": 20,
+        "right": 370,
+        "width": 350,
+        "height": 61.15625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/programul-tranzitie-justa-intrebari-documente",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 303.671875,
+        "bottom": 450.859375,
+        "left": 20,
+        "right": 370,
+        "width": 350,
+        "height": 147.1875
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/resurse",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 303.671875,
+        "bottom": 414.0625,
+        "left": 20,
+        "right": 370,
+        "width": 350,
+        "height": 110.390625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/resurse-utile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 225.671875,
+        "bottom": 336.0625,
+        "left": 20,
+        "right": 370,
+        "width": 350,
+        "height": 110.390625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/start-up-nation-2026-cheltuieli-eligibile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 303.671875,
+        "bottom": 377.265625,
+        "left": 20,
+        "right": 370,
+        "width": 350,
+        "height": 73.59375
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/start-up-nation-2026-conditii",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 303.671875,
+        "bottom": 377.265625,
+        "left": 20,
+        "right": 370,
+        "width": 350,
+        "height": 73.59375
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/start-up-nation-2026-idei-afaceri",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 303.671875,
+        "bottom": 377.265625,
+        "left": 20,
+        "right": 370,
+        "width": 350,
+        "height": 73.59375
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/start-up-nation-2026-plan-de-afaceri",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 303.671875,
+        "bottom": 377.265625,
+        "left": 20,
+        "right": 370,
+        "width": 350,
+        "height": 73.59375
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/studii-de-caz-fonduri-europene",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 229.875,
+        "bottom": 377.0625,
+        "left": 20,
+        "right": 370,
+        "width": 350,
+        "height": 147.1875
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/termeni-si-conditii",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 266.703125,
+        "bottom": 315.65625,
+        "left": 24,
+        "right": 366,
+        "width": 342,
+        "height": 48.953125
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/webinarii",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 335.15625,
+        "bottom": 445.546875,
+        "left": 20,
+        "right": 370,
+        "width": 350,
+        "height": 110.390625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 148.921875,
+        "bottom": 332.046875,
+        "left": 24,
+        "right": 366,
+        "width": 342,
+        "height": 183.125
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": {
+        "top": 0,
+        "bottom": 1804.921875,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 1804.921875
+      },
+      "panel": {
+        "top": 736.171875,
+        "bottom": 1665.921875,
+        "left": 24,
+        "right": 366,
+        "width": 342,
+        "height": 929.75
+      },
+      "scene": {
+        "top": 793.171875,
+        "bottom": 993.171875,
+        "left": 43,
+        "right": 347,
+        "width": 304,
+        "height": 200
+      },
+      "programs": 15,
+      "clipped": [
+        {
+          "tag": "BUTTON",
+          "text": "04Buget",
+          "left": 382,
+          "right": 482
+        },
+        {
+          "tag": "BUTTON",
+          "text": "05Decizie",
+          "left": 485,
+          "right": 585
+        }
+      ]
+    },
+    {
+      "route": "/consultanta-fonduri-europene",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 319.859375,
+        "bottom": 467.046875,
+        "left": 20,
+        "right": 370,
+        "width": 350,
+        "height": 147.1875
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/fonduri-europene",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 337.859375,
+        "bottom": 481.34375,
+        "left": 20,
+        "right": 370,
+        "width": 350,
+        "height": 143.484375
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/despre-faber",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 229.875,
+        "bottom": 303.46875,
+        "left": 20,
+        "right": 370,
+        "width": 350,
+        "height": 73.59375
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/afir",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 303.671875,
+        "bottom": 414.0625,
+        "left": 20,
+        "right": 370,
+        "width": 350,
+        "height": 110.390625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/calculator-soc",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 249.390625,
+        "bottom": 444.453125,
+        "left": 24,
+        "right": 366,
+        "width": 342,
+        "height": 195.0625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/calendar-fonduri-europene",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 335.15625,
+        "bottom": 445.546875,
+        "left": 20,
+        "right": 370,
+        "width": 350,
+        "height": 110.390625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/cand-merita-consultant-fonduri-europene",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 281.9375,
+        "bottom": 372.6875,
+        "left": 24,
+        "right": 366,
+        "width": 342,
+        "height": 90.75
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/cat-costa-consultanta-fonduri-europene",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 335.15625,
+        "bottom": 445.546875,
+        "left": 20,
+        "right": 370,
+        "width": 350,
+        "height": 110.390625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/ce-acte-sunt-necesare-fonduri-europene",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 281.9375,
+        "bottom": 342.4375,
+        "left": 24,
+        "right": 366,
+        "width": 342,
+        "height": 60.5
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/consultant-fonduri-europene-imm",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 335.15625,
+        "bottom": 445.546875,
+        "left": 20,
+        "right": 370,
+        "width": 350,
+        "height": 110.390625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/consultanta-afir",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 303.671875,
+        "bottom": 340.46875,
+        "left": 59.1875,
+        "right": 330.8125,
+        "width": 271.625,
+        "height": 36.796875
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/consultanta-fonduri-europene-bucuresti",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 335.15625,
+        "bottom": 408.75,
+        "left": 20,
+        "right": 370,
+        "width": 350,
+        "height": 73.59375
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/consultanta-pnrr-digitalizare",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 303.671875,
+        "bottom": 377.265625,
+        "left": 20,
+        "right": 370,
+        "width": 350,
+        "height": 73.59375
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/consultanta-start-up-nation-2026",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 335.15625,
+        "bottom": 445.546875,
+        "left": 20,
+        "right": 370,
+        "width": 350,
+        "height": 110.390625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/contact",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 289,
+        "bottom": 415.328125,
+        "left": 20,
+        "right": 370,
+        "width": 350,
+        "height": 126.328125
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/cum-alegi-consultant-fonduri-europene",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 335.15625,
+        "bottom": 445.546875,
+        "left": 20,
+        "right": 370,
+        "width": 350,
+        "height": 110.390625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/cum-alegi-programul-potrivit-fonduri-europene-2026",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 473.421875,
+        "bottom": 533.421875,
+        "left": 24,
+        "right": 366,
+        "width": 342,
+        "height": 60
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/cum-se-calculeaza-cofinantarea-fonduri-europene",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 281.9375,
+        "bottom": 372.6875,
+        "left": 24,
+        "right": 366,
+        "width": 342,
+        "height": 90.75
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/cum-se-verifica-eligibilitatea-fonduri-europene",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 281.9375,
+        "bottom": 372.6875,
+        "left": 24,
+        "right": 366,
+        "width": 342,
+        "height": 90.75
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/digitalizare-imm-erp-crm-cloud",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 281.9375,
+        "bottom": 372.6875,
+        "left": 24,
+        "right": 366,
+        "width": 342,
+        "height": 90.75
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/digitalizare-imm-pnrr",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 303.671875,
+        "bottom": 450.859375,
+        "left": 20,
+        "right": 370,
+        "width": 350,
+        "height": 147.1875
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/eligibilitate-fonduri-europene",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 303.671875,
+        "bottom": 414.0625,
+        "left": 20,
+        "right": 370,
+        "width": 350,
+        "height": 110.390625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/eligibilitate-pocidif-21",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 354.640625,
+        "bottom": 465.03125,
+        "left": 20,
+        "right": 370,
+        "width": 350,
+        "height": 110.390625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/finantari-panouri-fotovoltaice",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 303.671875,
+        "bottom": 414.0625,
+        "left": 20,
+        "right": 370,
+        "width": 350,
+        "height": 110.390625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/firma-consultanta-fonduri-europene",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 335.15625,
+        "bottom": 445.546875,
+        "left": 20,
+        "right": 370,
+        "width": 350,
+        "height": 110.390625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/fonduri-europene-agricultura",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 303.671875,
+        "bottom": 377.265625,
+        "left": 20,
+        "right": 370,
+        "width": 350,
+        "height": 73.59375
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/fonduri-europene-bucuresti",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 303.671875,
+        "bottom": 377.265625,
+        "left": 20,
+        "right": 370,
+        "width": 350,
+        "height": 73.59375
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/fonduri-europene-caen/0111-culturi-cereale",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 354.640625,
+        "bottom": 465.03125,
+        "left": 20,
+        "right": 370,
+        "width": 350,
+        "height": 110.390625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/fonduri-europene-caen/4321-instalatii-electrice",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 354.640625,
+        "bottom": 465.03125,
+        "left": 20,
+        "right": 370,
+        "width": 350,
+        "height": 110.390625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/fonduri-europene-caen/5610-restaurante",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 354.640625,
+        "bottom": 501.828125,
+        "left": 20,
+        "right": 370,
+        "width": 350,
+        "height": 147.1875
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/fonduri-europene-caen/6201-dezvoltare-software",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 354.640625,
+        "bottom": 465.03125,
+        "left": 20,
+        "right": 370,
+        "width": 350,
+        "height": 110.390625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/fonduri-europene-digitalizare",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 303.671875,
+        "bottom": 377.265625,
+        "left": 20,
+        "right": 370,
+        "width": 350,
+        "height": 73.59375
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/fonduri-europene-femei-antreprenor",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 335.15625,
+        "bottom": 482.34375,
+        "left": 20,
+        "right": 370,
+        "width": 350,
+        "height": 147.1875
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/fonduri-europene-imm",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 303.671875,
+        "bottom": 414.0625,
+        "left": 20,
+        "right": 370,
+        "width": 350,
+        "height": 110.390625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/fonduri-europene-nerambursabile-2026",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 335.15625,
+        "bottom": 408.75,
+        "left": 20,
+        "right": 370,
+        "width": 350,
+        "height": 73.59375
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/fonduri-europene-nord-est",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 335.15625,
+        "bottom": 408.75,
+        "left": 20,
+        "right": 370,
+        "width": 350,
+        "height": 73.59375
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/fonduri-nerambursabile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 319.859375,
+        "bottom": 467.046875,
+        "left": 20,
+        "right": 370,
+        "width": 350,
+        "height": 147.1875
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/fonduri-pentru-ferme",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 303.671875,
+        "bottom": 340.46875,
+        "left": 25.1875,
+        "right": 364.8125,
+        "width": 339.625,
+        "height": 36.796875
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/fonduri-pentru-utilaje-agricole",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 303.671875,
+        "bottom": 377.265625,
+        "left": 20,
+        "right": 370,
+        "width": 350,
+        "height": 73.59375
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/idei-afaceri-fonduri-europene",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 261.359375,
+        "bottom": 334.953125,
+        "left": 20,
+        "right": 370,
+        "width": 350,
+        "height": 73.59375
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/instrumente",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 303.671875,
+        "bottom": 414.0625,
+        "left": 20,
+        "right": 370,
+        "width": 350,
+        "height": 110.390625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/management-proiecte-fonduri-europene",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 354.640625,
+        "bottom": 465.03125,
+        "left": 20,
+        "right": 370,
+        "width": 350,
+        "height": 110.390625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/plan-de-afaceri-fonduri-europene",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 335.15625,
+        "bottom": 408.75,
+        "left": 20,
+        "right": 370,
+        "width": 350,
+        "height": 73.59375
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/politica-de-confidentialitate",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 266.703125,
+        "bottom": 364.609375,
+        "left": 24,
+        "right": 366,
+        "width": 342,
+        "height": 97.90625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/proiectare-fonduri-europene",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 376.640625,
+        "bottom": 567.953125,
+        "left": 20,
+        "right": 370,
+        "width": 350,
+        "height": 191.3125
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/studiu-fezabilitate-fonduri-europene",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 354.640625,
+        "bottom": 465.03125,
+        "left": 20,
+        "right": 370,
+        "width": 350,
+        "height": 110.390625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/verificare-eligibilitate-fonduri-europene",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 303.671875,
+        "bottom": 414.15625,
+        "left": 26.34375,
+        "right": 364.15625,
+        "width": 337.8125,
+        "height": 110.484375
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/gdpr",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 266.703125,
+        "bottom": 315.65625,
+        "left": 24,
+        "right": 366,
+        "width": 342,
+        "height": 48.953125
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 390,
+        "width": 390,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/digitalizare-imm",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 232.828125,
+        "bottom": 350.296875,
+        "left": 141,
+        "right": 653.8125,
+        "width": 512.8125,
+        "height": 117.46875
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/dr12-afir",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 232.828125,
+        "bottom": 409.03125,
+        "left": 141,
+        "right": 653.8125,
+        "width": 512.8125,
+        "height": 176.203125
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/dr14",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 249.390625,
+        "bottom": 425.59375,
+        "left": 141,
+        "right": 653.8125,
+        "width": 512.8125,
+        "height": 176.203125
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/pro-infra",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 232.828125,
+        "bottom": 526.5,
+        "left": 141,
+        "right": 653.8125,
+        "width": 512.8125,
+        "height": 293.671875
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/afir-autoconsum-agroalimentar",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 249.203125,
+        "bottom": 366.671875,
+        "left": 141,
+        "right": 653.8125,
+        "width": 512.8125,
+        "height": 117.46875
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/apeluri-gal",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 232.828125,
+        "bottom": 350.296875,
+        "left": 221.046875,
+        "right": 573.765625,
+        "width": 352.71875,
+        "height": 117.46875
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/autoconsum-public-fotovoltaice-institutii-publice",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 232.828125,
+        "bottom": 526.5,
+        "left": 141,
+        "right": 653.8125,
+        "width": 512.8125,
+        "height": 293.671875
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/diaspora-investeste-acasa",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 232.828125,
+        "bottom": 350.296875,
+        "left": 141,
+        "right": 653.8125,
+        "width": 512.8125,
+        "height": 117.46875
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/dr-12-afir-instalarea-tinerilor-fermieri",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 224.828125,
+        "bottom": 401.03125,
+        "left": 141,
+        "right": 653.8125,
+        "width": 512.8125,
+        "height": 176.203125
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/dr-14-afir-conditii-eligibilitate-greseli-frecvente",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 252.015625,
+        "bottom": 428.21875,
+        "left": 141,
+        "right": 653.8125,
+        "width": 512.8125,
+        "height": 176.203125
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/dr18",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 232.828125,
+        "bottom": 526.5,
+        "left": 141,
+        "right": 653.8125,
+        "width": 512.8125,
+        "height": 293.671875
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/e-drive",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 232.828125,
+        "bottom": 467.765625,
+        "left": 141,
+        "right": 653.8125,
+        "width": 512.8125,
+        "height": 234.9375
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/e-mobility",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 232.828125,
+        "bottom": 409.03125,
+        "left": 141,
+        "right": 653.8125,
+        "width": 512.8125,
+        "height": 176.203125
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/e-move",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 232.828125,
+        "bottom": 350.296875,
+        "left": 141,
+        "right": 653.8125,
+        "width": 512.8125,
+        "height": 117.46875
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/femeia-antreprenor-2026",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 232.828125,
+        "bottom": 409.03125,
+        "left": 141,
+        "right": 653.8125,
+        "width": 512.8125,
+        "height": 176.203125
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/fondul-de-modernizare",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 232.828125,
+        "bottom": 409.03125,
+        "left": 141,
+        "right": 653.8125,
+        "width": 512.8125,
+        "height": 176.203125
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 232.828125,
+        "bottom": 467.765625,
+        "left": 141,
+        "right": 653.8125,
+        "width": 512.8125,
+        "height": 234.9375
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/fondul-modernizare-energie-regenerabila-2026",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 232.828125,
+        "bottom": 409.03125,
+        "left": 141,
+        "right": 653.8125,
+        "width": 512.8125,
+        "height": 176.203125
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/fondul-modernizare-pc1-stocare",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 232.828125,
+        "bottom": 409.03125,
+        "left": 141,
+        "right": 653.8125,
+        "width": 512.8125,
+        "height": 176.203125
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/fondul-modernizare-pc1-stocare-entitati-publice",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 232.828125,
+        "bottom": 467.765625,
+        "left": 141,
+        "right": 653.8125,
+        "width": 512.8125,
+        "height": 234.9375
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/fonduri-regionale",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 232.828125,
+        "bottom": 350.296875,
+        "left": 141,
+        "right": 653.8125,
+        "width": 512.8125,
+        "height": 117.46875
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/gal-afir",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 232.828125,
+        "bottom": 409.03125,
+        "left": 141,
+        "right": 653.8125,
+        "width": 512.8125,
+        "height": 176.203125
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/investitii-modernizarea-microintreprinderilor-apel-2",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 232.828125,
+        "bottom": 467.765625,
+        "left": 141,
+        "right": 653.8125,
+        "width": 512.8125,
+        "height": 234.9375
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/pnrr",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 232.828125,
+        "bottom": 409.03125,
+        "left": 141,
+        "right": 653.8125,
+        "width": 512.8125,
+        "height": 176.203125
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/pocidif-21",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 232.828125,
+        "bottom": 585.234375,
+        "left": 141,
+        "right": 653.8125,
+        "width": 512.8125,
+        "height": 352.40625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/programul-tranzitie-justa",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 232.828125,
+        "bottom": 409.03125,
+        "left": 141,
+        "right": 653.8125,
+        "width": 512.8125,
+        "height": 176.203125
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/start-up-nation-2026",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 249.390625,
+        "bottom": 366.859375,
+        "left": 141,
+        "right": 653.8125,
+        "width": 512.8125,
+        "height": 117.46875
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/blog",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 238.796875,
+        "bottom": 382.796875,
+        "left": 320,
+        "right": 1120,
+        "width": 800,
+        "height": 144
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/metodologie-verificare-eligibilitate",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 255.265625,
+        "bottom": 426.359375,
+        "left": 270,
+        "right": 1170,
+        "width": 900,
+        "height": 171.09375
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/surse-oficiale-fonduri-europene",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 255.265625,
+        "bottom": 426.359375,
+        "left": 270,
+        "right": 1170,
+        "width": 900,
+        "height": 171.09375
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/acte-necesare-fonduri-europene-nerambursabile",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 329.0625,
+        "bottom": 443.125,
+        "left": 270,
+        "right": 1170,
+        "width": 900,
+        "height": 114.0625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/blog-afir-fotovoltaice-ferme-2026",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 216.25,
+        "bottom": 320.21875,
+        "left": 310,
+        "right": 1130,
+        "width": 820,
+        "height": 103.96875
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/cat-costa-consultanta-fonduri-europene-ghid",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 246.359375,
+        "bottom": 341.984375,
+        "left": 310,
+        "right": 1130,
+        "width": 820,
+        "height": 95.625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/cheltuieli-eligibile-digitalizare-imm",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 246.359375,
+        "bottom": 341.984375,
+        "left": 290,
+        "right": 1150,
+        "width": 860,
+        "height": 95.625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/cheltuieli-eligibile-pocidif-21",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 329.0625,
+        "bottom": 443.125,
+        "left": 270,
+        "right": 1170,
+        "width": 900,
+        "height": 114.0625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/cod-caen-start-up-nation-2026",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 329.0625,
+        "bottom": 443.125,
+        "left": 270,
+        "right": 1170,
+        "width": 900,
+        "height": 114.0625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/documente-punctaj-pocidif-21",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 329.0625,
+        "bottom": 443.125,
+        "left": 270,
+        "right": 1170,
+        "width": 900,
+        "height": 114.0625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/dr12-vs-dr14",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 246.359375,
+        "bottom": 341.984375,
+        "left": 456,
+        "right": 1296,
+        "width": 840,
+        "height": 95.625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/femeia-antreprenor-2026-conditii-idei-afaceri",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 335.25,
+        "bottom": 427.75,
+        "left": 290,
+        "right": 1150,
+        "width": 860,
+        "height": 92.5
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/ghiduri",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 329.0625,
+        "bottom": 443.125,
+        "left": 270,
+        "right": 1170,
+        "width": 900,
+        "height": 114.0625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/glosar-fonduri-europene",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 255.265625,
+        "bottom": 369.328125,
+        "left": 270,
+        "right": 1170,
+        "width": 900,
+        "height": 114.0625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/greseli-fonduri-europene",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 329.0625,
+        "bottom": 443.125,
+        "left": 270,
+        "right": 1170,
+        "width": 900,
+        "height": 114.0625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/intrebari-frecvente",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 329.0625,
+        "bottom": 443.125,
+        "left": 270,
+        "right": 1170,
+        "width": 900,
+        "height": 114.0625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 329.0625,
+        "bottom": 443.125,
+        "left": 270,
+        "right": 1170,
+        "width": 900,
+        "height": 114.0625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/intrebari/ce-documente-sunt-necesare-pentru-dr12",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 329.0625,
+        "bottom": 443.125,
+        "left": 270,
+        "right": 1170,
+        "width": 900,
+        "height": 114.0625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 329.0625,
+        "bottom": 443.125,
+        "left": 270,
+        "right": 1170,
+        "width": 900,
+        "height": 114.0625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/pnrr-digitalizare-imm-cheltuieli-eligibile",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 335.25,
+        "bottom": 381.5,
+        "left": 290,
+        "right": 1150,
+        "width": 860,
+        "height": 46.25
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/programul-tranzitie-justa-intrebari-documente",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 329.0625,
+        "bottom": 443.125,
+        "left": 270,
+        "right": 1170,
+        "width": 900,
+        "height": 114.0625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/resurse",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 329.0625,
+        "bottom": 443.125,
+        "left": 270,
+        "right": 1170,
+        "width": 900,
+        "height": 114.0625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/resurse-utile",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 251.0625,
+        "bottom": 365.125,
+        "left": 270,
+        "right": 1170,
+        "width": 900,
+        "height": 114.0625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/start-up-nation-2026-cheltuieli-eligibile",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 329.0625,
+        "bottom": 443.125,
+        "left": 270,
+        "right": 1170,
+        "width": 900,
+        "height": 114.0625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/start-up-nation-2026-conditii",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 329.0625,
+        "bottom": 443.125,
+        "left": 270,
+        "right": 1170,
+        "width": 900,
+        "height": 114.0625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/start-up-nation-2026-idei-afaceri",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 329.0625,
+        "bottom": 386.09375,
+        "left": 276.09375,
+        "right": 1163.90625,
+        "width": 887.8125,
+        "height": 57.03125
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/start-up-nation-2026-plan-de-afaceri",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 329.0625,
+        "bottom": 443.125,
+        "left": 270,
+        "right": 1170,
+        "width": 900,
+        "height": 114.0625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/studii-de-caz-fonduri-europene",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 255.265625,
+        "bottom": 369.328125,
+        "left": 270,
+        "right": 1170,
+        "width": 900,
+        "height": 114.0625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/termeni-si-conditii",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 274.09375,
+        "bottom": 350.234375,
+        "left": 340,
+        "right": 1100,
+        "width": 760,
+        "height": 76.140625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/webinarii",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 329.0625,
+        "bottom": 443.125,
+        "left": 270,
+        "right": 1170,
+        "width": 900,
+        "height": 114.0625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 145.75,
+        "bottom": 321.109375,
+        "left": 64.796875,
+        "right": 710.828125,
+        "width": 646.03125,
+        "height": 175.359375
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": {
+        "top": 0,
+        "bottom": 943.34375,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 943.34375
+      },
+      "panel": {
+        "top": 118,
+        "bottom": 854.34375,
+        "left": 754.015625,
+        "right": 1375.203125,
+        "width": 621.1875,
+        "height": 736.34375
+      },
+      "scene": {
+        "top": 179,
+        "bottom": 321,
+        "left": 777.015625,
+        "right": 1352.203125,
+        "width": 575.1875,
+        "height": 142
+      },
+      "programs": 15,
+      "clipped": []
+    },
+    {
+      "route": "/consultanta-fonduri-europene",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 329.0625,
+        "bottom": 443.125,
+        "left": 270,
+        "right": 1170,
+        "width": 900,
+        "height": 114.0625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/fonduri-europene",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 379.0625,
+        "bottom": 647.328125,
+        "left": 280,
+        "right": 1160,
+        "width": 880,
+        "height": 268.265625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/despre-faber",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 255.265625,
+        "bottom": 369.328125,
+        "left": 270,
+        "right": 1170,
+        "width": 900,
+        "height": 114.0625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/afir",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 329.0625,
+        "bottom": 443.125,
+        "left": 270,
+        "right": 1170,
+        "width": 900,
+        "height": 114.0625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/calculator-soc",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 279.296875,
+        "bottom": 464.765625,
+        "left": 170,
+        "right": 1100,
+        "width": 930,
+        "height": 185.46875
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/calendar-fonduri-europene",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 329.0625,
+        "bottom": 443.125,
+        "left": 270,
+        "right": 1170,
+        "width": 900,
+        "height": 114.0625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/cand-merita-consultant-fonduri-europene",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 246.359375,
+        "bottom": 341.984375,
+        "left": 310,
+        "right": 1130,
+        "width": 820,
+        "height": 95.625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/cat-costa-consultanta-fonduri-europene",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 329.0625,
+        "bottom": 443.125,
+        "left": 270,
+        "right": 1170,
+        "width": 900,
+        "height": 114.0625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/ce-acte-sunt-necesare-fonduri-europene",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 246.359375,
+        "bottom": 341.984375,
+        "left": 310,
+        "right": 1130,
+        "width": 820,
+        "height": 95.625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/consultant-fonduri-europene-imm",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 329.0625,
+        "bottom": 443.125,
+        "left": 270,
+        "right": 1170,
+        "width": 900,
+        "height": 114.0625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/consultanta-afir",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 329.0625,
+        "bottom": 386.09375,
+        "left": 509.484375,
+        "right": 930.515625,
+        "width": 421.03125,
+        "height": 57.03125
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/consultanta-fonduri-europene-bucuresti",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 329.0625,
+        "bottom": 443.125,
+        "left": 270,
+        "right": 1170,
+        "width": 900,
+        "height": 114.0625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/consultanta-pnrr-digitalizare",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 329.0625,
+        "bottom": 386.09375,
+        "left": 352.03125,
+        "right": 1087.953125,
+        "width": 735.921875,
+        "height": 57.03125
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/consultanta-start-up-nation-2026",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 329.0625,
+        "bottom": 443.125,
+        "left": 270,
+        "right": 1170,
+        "width": 900,
+        "height": 114.0625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/contact",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 283.8125,
+        "bottom": 404.75,
+        "left": 270,
+        "right": 1170,
+        "width": 900,
+        "height": 120.9375
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/cum-alegi-consultant-fonduri-europene",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 329.0625,
+        "bottom": 443.125,
+        "left": 270,
+        "right": 1170,
+        "width": 900,
+        "height": 114.0625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/cum-alegi-programul-potrivit-fonduri-europene-2026",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 360.65625,
+        "bottom": 456.65625,
+        "left": 496,
+        "right": 1256,
+        "width": 760,
+        "height": 96
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/cum-se-calculeaza-cofinantarea-fonduri-europene",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 246.359375,
+        "bottom": 341.984375,
+        "left": 310,
+        "right": 1130,
+        "width": 820,
+        "height": 95.625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/cum-se-verifica-eligibilitatea-fonduri-europene",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 246.359375,
+        "bottom": 341.984375,
+        "left": 310,
+        "right": 1130,
+        "width": 820,
+        "height": 95.625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/digitalizare-imm-erp-crm-cloud",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 246.359375,
+        "bottom": 341.984375,
+        "left": 290,
+        "right": 1150,
+        "width": 860,
+        "height": 95.625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/digitalizare-imm-pnrr",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 329.0625,
+        "bottom": 443.125,
+        "left": 270,
+        "right": 1170,
+        "width": 900,
+        "height": 114.0625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/eligibilitate-fonduri-europene",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 329.0625,
+        "bottom": 443.125,
+        "left": 270,
+        "right": 1170,
+        "width": 900,
+        "height": 114.0625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/eligibilitate-pocidif-21",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 329.0625,
+        "bottom": 443.125,
+        "left": 270,
+        "right": 1170,
+        "width": 900,
+        "height": 114.0625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/finantari-panouri-fotovoltaice",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 329.0625,
+        "bottom": 443.125,
+        "left": 270,
+        "right": 1170,
+        "width": 900,
+        "height": 114.0625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/firma-consultanta-fonduri-europene",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 329.0625,
+        "bottom": 443.125,
+        "left": 270,
+        "right": 1170,
+        "width": 900,
+        "height": 114.0625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/fonduri-europene-agricultura",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 329.0625,
+        "bottom": 386.09375,
+        "left": 273.234375,
+        "right": 1166.75,
+        "width": 893.515625,
+        "height": 57.03125
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/fonduri-europene-bucuresti",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 329.0625,
+        "bottom": 386.09375,
+        "left": 381.359375,
+        "right": 1058.640625,
+        "width": 677.28125,
+        "height": 57.03125
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/fonduri-europene-caen/0111-culturi-cereale",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 329.0625,
+        "bottom": 443.125,
+        "left": 270,
+        "right": 1170,
+        "width": 900,
+        "height": 114.0625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/fonduri-europene-caen/4321-instalatii-electrice",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 329.0625,
+        "bottom": 443.125,
+        "left": 270,
+        "right": 1170,
+        "width": 900,
+        "height": 114.0625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/fonduri-europene-caen/5610-restaurante",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 329.0625,
+        "bottom": 443.125,
+        "left": 270,
+        "right": 1170,
+        "width": 900,
+        "height": 114.0625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/fonduri-europene-caen/6201-dezvoltare-software",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 329.0625,
+        "bottom": 443.125,
+        "left": 270,
+        "right": 1170,
+        "width": 900,
+        "height": 114.0625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/fonduri-europene-digitalizare",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 329.0625,
+        "bottom": 443.125,
+        "left": 270,
+        "right": 1170,
+        "width": 900,
+        "height": 114.0625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/fonduri-europene-femei-antreprenor",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 329.0625,
+        "bottom": 443.125,
+        "left": 270,
+        "right": 1170,
+        "width": 900,
+        "height": 114.0625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/fonduri-europene-imm",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 329.0625,
+        "bottom": 443.125,
+        "left": 270,
+        "right": 1170,
+        "width": 900,
+        "height": 114.0625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/fonduri-europene-nerambursabile-2026",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 329.0625,
+        "bottom": 443.125,
+        "left": 270,
+        "right": 1170,
+        "width": 900,
+        "height": 114.0625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/fonduri-europene-nord-est",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 329.0625,
+        "bottom": 443.125,
+        "left": 270,
+        "right": 1170,
+        "width": 900,
+        "height": 114.0625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/fonduri-nerambursabile",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 329.0625,
+        "bottom": 443.125,
+        "left": 270,
+        "right": 1170,
+        "width": 900,
+        "height": 114.0625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/fonduri-pentru-ferme",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 329.0625,
+        "bottom": 386.09375,
+        "left": 456.78125,
+        "right": 983.203125,
+        "width": 526.421875,
+        "height": 57.03125
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/fonduri-pentru-utilaje-agricole",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 329.0625,
+        "bottom": 386.09375,
+        "left": 348.328125,
+        "right": 1091.65625,
+        "width": 743.328125,
+        "height": 57.03125
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/idei-afaceri-fonduri-europene",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 255.265625,
+        "bottom": 312.296875,
+        "left": 270,
+        "right": 1170,
+        "width": 900,
+        "height": 57.03125
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/instrumente",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 329.0625,
+        "bottom": 443.125,
+        "left": 270,
+        "right": 1170,
+        "width": 900,
+        "height": 114.0625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/management-proiecte-fonduri-europene",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 329.0625,
+        "bottom": 443.125,
+        "left": 270,
+        "right": 1170,
+        "width": 900,
+        "height": 114.0625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/plan-de-afaceri-fonduri-europene",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 329.0625,
+        "bottom": 443.125,
+        "left": 270,
+        "right": 1170,
+        "width": 900,
+        "height": 114.0625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/politica-de-confidentialitate",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 274.09375,
+        "bottom": 350.234375,
+        "left": 340,
+        "right": 1100,
+        "width": 760,
+        "height": 76.140625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/proiectare-fonduri-europene",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 379.0625,
+        "bottom": 637.34375,
+        "left": 270,
+        "right": 1170,
+        "width": 900,
+        "height": 258.28125
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/studiu-fezabilitate-fonduri-europene",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 329.0625,
+        "bottom": 443.125,
+        "left": 270,
+        "right": 1170,
+        "width": 900,
+        "height": 114.0625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/verificare-eligibilitate-fonduri-europene",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 329.0625,
+        "bottom": 540.703125,
+        "left": 128.46875,
+        "right": 775.515625,
+        "width": 647.046875,
+        "height": 211.640625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    },
+    {
+      "route": "/gdpr",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "overflow": 0,
+      "h1": {
+        "top": 274.09375,
+        "bottom": 350.234375,
+        "left": 340,
+        "right": 1100,
+        "width": 760,
+        "height": 76.140625
+      },
+      "header": {
+        "top": 0,
+        "bottom": 73,
+        "left": 0,
+        "right": 1440,
+        "width": 1440,
+        "height": 73
+      },
+      "hero": null,
+      "panel": null,
+      "scene": null,
+      "programs": 0,
+      "clipped": []
+    }
+  ]
+}

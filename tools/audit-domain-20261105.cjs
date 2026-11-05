@@ -1,0 +1,129 @@
+/* Reproducible, read-only inventory of every canonical page and every excluded
+   HTML source. Live data describes HTTP, never a claimed Google index state. */
+const fs = require('node:fs');
+const path = require('node:path');
+const cheerio = require('cheerio');
+const { collectSiteState } = require('./generate-sitemap');
+const { fileForRoute, visibleFaqItems } = require('./structured-data-utils');
+const ROOT = path.resolve(__dirname, '..');
+const OUT = path.join(ROOT, 'reports', 'domain-audit-2026-11-05');
+const SITE = 'https://atelierdeconsultanta.ro';
+const LIVE = process.argv.includes('--live');
+const SNAPSHOT = process.argv.includes('--before') ? 'before' : 'after';
+const GSC = [
+ '/resurse/descarcari/calendar-pregatire-depunere.xlsx', '/resurse/descarcari/buget-digitalizare-imm.xlsx',
+ '/consultanta-pnrr-digitalizare', '/consultanta-pnrr-digitalizare/', '/consultanta-afir/',
+ '/cum-alegi-consultant-fonduri-europene/', '/official-guides.json', '/fonduri-europene-digitalizare',
+ '/firma-consultanta-fonduri-europene/', '/start-up-nation-2026-plan-de-afaceri/', '/consultant-fonduri-europene-imm/',
+ '/granturi-digitalizare-imm/', '/cum-alegi-consultant-fonduri-europene', '/fonduri-europene-femei-antreprenor/',
+ '/fonduri-europene-nerambursabile-2026/'
+];
+const clean = value => String(value || '').replace(/\s+/gu, ' ').trim();
+const md = value => clean(value).replace(/\|/g, '\\|');
+const csv = value => '"' + String(value ?? '').replace(/"/g, '""') + '"';
+async function pool(items, fn, n = 6) {
+ const results = Array(items.length); let next = 0;
+ await Promise.all(Array.from({length: n}, async () => { while(next < items.length) {const i=next++; results[i]=await fn(items[i],i);} }));
+ return results;
+}
+async function trace(route) {
+ const hops=[]; let url=new URL(route,SITE).href;
+ try {
+  for(let i=0;i<5;i++) {
+   const response=await fetch(url,{redirect:'manual',signal:AbortSignal.timeout(20000),headers:{'user-agent':'FABER-Domain-Audit/2026-11-05'}});
+   const body=await response.text();
+   hops.push({url,status:response.status,location:response.headers.get('location'),robots:response.headers.get('x-robots-tag'),contentType:response.headers.get('content-type')});
+   if(response.status>=300&&response.status<400&&response.headers.has('location')) {url=new URL(response.headers.get('location'),url).href;continue;}
+   const $=cheerio.load(body);
+   return {hops,finalUrl:url,status:response.status,canonical:$('link[rel=canonical]').attr('href')||'',title:clean($('head title').text()),metaRobots:$('meta[name=robots]').attr('content')||'',release:route==='/release.json'?JSON.parse(body):undefined};
+  }
+  return {hops,error:'redirect limit'};
+ } catch(error) {return {hops,error:error.message};}
+}
+function parsePage(entry,programs,snippets) {
+ const file=fileForRoute(ROOT,entry.route), html=fs.readFileSync(file,'utf8'),$=cheerio.load(html);
+ const main=$('main').first();
+ const paragraphs=main.find('p').map((_,e)=>clean($(e).text())).get().filter(p=>p.length>100);
+ const counts=new Map();for(const p of paragraphs) counts.set(p,(counts.get(p)||0)+1);
+ const duplicateParagraphs=[...counts].filter(([,n])=>n>1).map(([text,count])=>({text,count}));
+ const types=new Set(),jsonErrors=[];
+ $('script[type="application/ld+json"]').each((i,e)=>{try{const walk=v=>{if(Array.isArray(v))v.forEach(walk);else if(v&&typeof v==='object'){if(v['@type'])[v['@type']].flat().forEach(t=>types.add(t));Object.values(v).forEach(walk);}};walk(JSON.parse($(e).text()));}catch(e){jsonErrors.push(e.message);}});
+ const officialLinks=[...new Set(main.find('a[href^="https://"]').map((_,e)=>$(e).attr('href')).get().filter(h=>/afir\.ro|mfe\.gov\.ro|energie\.gov\.ro|fonduri\.mt\.ro|legislatie\.just\.ro|regionordest\.ro|adrnordest\.ro|bidromania\.eu|gov\.ro/.test(h)))];
+ const program=programs.find(p=>p.pageUrl===entry.route||p.slug===entry.route.slice(1));
+ const snippet=snippets.find(p=>p.route===entry.route);
+ const h1=clean(main.find('h1').text()),title=clean($('head title').text()),description=$('meta[name=description]').attr('content')||'';
+ const headings=main.find('h2').map((_,e)=>clean($(e).text())).get();
+ const generic=paragraphs.filter(p=>/conținutul (?:trebuie|extins)|în (?:această pagină|rapoartele și paginile)|pagina (?:insistă|este structurată)|URL-uri canonice|motor(?:ele|ul) de căutare|SEO|AEO|GEO/.test(p));
+ const kind=program?'program':/proiectare|studiu-fezabilitate/.test(entry.route)?'proiectare':/consultant|management-proiecte|plan-de-afaceri/.test(entry.route)?'serviciu':/instrumente|calculator/.test(entry.route)?'instrument':/politica|termeni|gdpr/.test(entry.route)?'juridic':entry.family==='guides'?'ghid':'hub';
+ const titleSuggestions={
+  '/metodologie-verificare-eligibilitate':'Metodologia verificării eligibilității | FABER',
+  '/surse-oficiale-fonduri-europene':'Surse oficiale pentru fonduri europene | FABER',
+  '/fonduri-europene-caen/5610-restaurante':'CAEN 5610: fonduri europene pentru restaurante | FABER',
+  '/fonduri-europene-imm':'Fonduri europene pentru IMM: programe și condiții | FABER',
+  '/fonduri-europene-nord-est':'Fonduri europene Nord-Est: programe și eligibilitate | FABER',
+  '/intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene':'Cum calculezi cofinanțarea la fonduri europene | FABER',
+  '/programul-tranzitie-justa-intrebari-documente':'Tranziție Justă: întrebări și documente | FABER'
+ };
+ const proposedTitle=titleSuggestions[entry.route]||title;
+ return {...entry,file:path.relative(ROOT,file).replace(/\\/g,'/'),kind,title,description,h1,headings,words:clean(main.text()).split(/\s+/).length,canonical:$('link[rel=canonical]').attr('href'),robots:$('meta[name=robots]').attr('content'),faq:visibleFaqItems($).length,officialLinks,types:[...types],jsonErrors,duplicateParagraphs,genericCopy:generic.slice(0,3),answer:clean(main.find('[data-aeo-direct-answer],[data-aeo-primary-answer]').first().text()),imagesWithoutAlt:main.find('img:not([alt])').length,proposedTitle,proposedDescription:description.length<=165?description:description.slice(0,155).replace(/\s+\S*$/,'')+'.',primaryQuery:snippet?.primaryQuery||h1,program:program?{name:program.shortName||program.name,status:program.statusLabel,source:program.sourceUrl,verifiedAt:program.verifiedAt}:null};
+}
+function recommendations(p) {
+ const topic=p.program?.name||p.primaryQuery||p.h1;
+ const firstHeading=p.headings.find(h=>!/^Răspuns rapid|^Ce trebuie verificat|^Repere/.test(h))||p.h1;
+ const programExamples={
+  '/dr12-afir':'Arată un exemplu pentru o exploatație care cere investiții după instalare: categoria solicitantului, SO, investiție și dovada contribuției. Separă condiția eliminatorie de criteriul care aduce puncte.',
+  '/dr14':'Compară achiziția simplă de utilaje cu investiția care include lucrări. Afișează separat componenta, pragul lunar și documentele de proprietate/folosință, fără a extinde calendarul unei componente asupra tuturor.',
+  '/dr18':'Adaugă un exemplu de investiție pentru sectorul vizat și un tabel cu dovada suprafeței, activitatea, cheltuiala și documentul care o justifică.',
+  '/investitii-modernizarea-microintreprinderilor-apel-2':'Păstrează „apel închis” lângă CTA. Publică pașii de după depunere: clarificări, documente și eventuale obligații, fără invitație la o depunere care s-a încheiat.',
+  '/e-drive':'Compară explicit Măsura 1 și Măsura 2: vehicul, solicitant, investiție și documente. Separă termenul consultării ghidului de un calendar de depunere.',
+  '/e-move':'Folosește un tabel distinct pentru fiecare submăsură: amplasament, solicitant, infrastructură și dovada lansării sesiunii. Schema aprobată nu dovedește singură un apel deschis.',
+  '/e-mobility':'Explică în exemplu amplasamentul eligibil, accesul la rețeaua rutieră și datele tehnice ale stației. Identifică submăsura în titlul tabelului și lângă termen.',
+  '/diaspora-investeste-acasa':'Separă grafic creditul, garanția, grantul și contribuția beneficiarului; arată un calcul ipotetic și punctul în care este necesară confirmarea băncii partenere.',
+  '/fondul-modernizare-pc1-stocare':'Exemplul trebuie să distingă MW de MWh, capacitatea bateriei, costul eligibil și plafonul aplicabil; citează regulile apelului lângă calcul.',
+  '/fondul-modernizare-pc1-stocare-entitati-publice':'Compară o baterie pentru autoconsum public cu stocarea comercială. Evidențiază durata de stocare, capacitatea, beneficiarul și limitele apelului public.',
+  '/autoconsum-public-fotovoltaice-institutii-publice':'Publică un exemplu pentru o clădire publică: consum anual, putere propusă, dreptul asupra amplasamentului, avize și documentație tehnică. Leagă justificat serviciul de proiectare.',
+  '/afir-autoconsum-agroalimentar':'Separă depunerea încheiată de selecție și contractare; identifică componenta exactă a raportului publicat. Un raport de selecție nu confirmă semnarea contractului fiecărui proiect.',
+  '/pro-infra':'Publică un checklist al datelor investiției și documentelor tehnice ce pot fi pregătite înainte de apel; menține calendarul de depunere neconfirmat până la anunț oficial.',
+  '/digitalizare-imm':'Arată diferența dintre implementarea proiectelor PNRR existente și căutarea unui apel nou. Exemplul ERP separă licențe, configurare, echipamente și instruire.',
+  '/pocidif-21':'Prezintă un exemplu de delimitare a inovării și tehnologiilor avansate față de simpla achiziție software. După închidere, mută accentul spre evaluare și clarificări.',
+  '/start-up-nation-2026':'Leagă explicit planul de afaceri de CAEN, cheltuieli, prognoză și obligațiile asumate. Nu transforma denumirea anuală a paginii într-o promisiune de sesiune nouă.',
+  '/femeia-antreprenor-2026':'Separă informațiile ediției confirmate de așteptările pentru o nouă ediție; arată datele firmei care pot fi pregătite înainte de anunț.',
+  '/apeluri-gal':'Folosește o comparație între două strategii locale: teritoriul, solicitantul, intervenția, punctajul și documentele. Nu extrapola regulile unui GAL la toate teritoriile.',
+  '/gal-afir':'Separă rolurile GAL și AFIR în selecție, contractare și implementare. Arată cum se identifică teritoriul și ghidul local aplicabil.'
+ };
+ return {
+  seo:p.route==='/gdpr'?'Pagina este indexabilă dar exclusă intenționat din sitemap prin politica existentă. Compară juridic textul cu /politica-de-confidentialitate: dacă este echivalent, consolidează prin 301; dacă are alt scop, documentează diferența și decide includerea. Este o constatare separată, în afara celor 15 URL-uri din captura GSC.':p.kind==='juridic'?'Păstrează accesul din footer și separarea de paginile comerciale; nu adăuga termeni de finanțare artificial.':`Intenție principală: „${p.primaryQuery}”. ${p.kind==='program'?'Delimitează pagina apelului de ghidurile de eligibilitate, cheltuieli și documente; leagă fiecare ghid în secțiunea relevantă.':p.kind==='proiectare'?'Leagă serviciul din AFIR, Apel 2 și paginile de energie numai acolo unde investiția presupune construcții ori instalații. Folosește ancore „proiectare SF/DALI” și „studiu de fezabilitate”.':`Adaugă legături contextuale spre această pagină din hub și din ghidul „${firstHeading}”, cu ancore care descriu subiectul.`}`,
+  aeo:p.answer?`Există răspuns direct (${p.answer.split(/\s+/).length} cuvinte). Verifică dacă răspunde complet, înaintea explicațiilor, la „${p.headings.find(h=>h.endsWith('?'))||'Ce trebuie să știu despre '+topic+'?'}”.`:`Adaugă sub H1 un răspuns de 40–70 de cuvinte la „Ce presupune ${topic}?”, cu condițiile și limitele concrete, nu o introducere despre pagină.`,
+  geo:p.program?`Păstrează lângă calendar/plafon sursa ${p.program.source||'autorității'} și data reală ${p.program.verifiedAt||'a verificării'}. ${programExamples[p.route]||'Publică un exemplu de buget, marcat ipotetic, și motive de respingere documentate.'}`:p.kind==='proiectare'?'Publică un exemplu anonimizat SF/DALI numai cu documente și acord: tema, variantele analizate, deviz, etapă, rolul FABER și specialiștii verificabili. Nu inventa portofoliu, acreditări sau rezultate.':`Transformă secțiunea „${firstHeading}” într-un răspuns autonom: definiție, caz concret, limită și sursă. Afișează autorul/revizorul numai dacă identitatea și competența pot fi demonstrate.`,
+  bing:`${p.officialLinks.length} surse oficiale, ${p.faq} răspunsuri FAQ vizibile, schema ${p.types.join(', ')||'absentă'}. ${p.officialLinks.length?'Menține citarea lângă afirmație, nu doar într-o bibliografie generală.':'Adaugă sursa primară pentru afirmațiile despre condiții și documente, dacă pagina nu este strict comercială/juridică.'} Notifică modificările reale prin IndexNow; urmărește URL-ul în AI Performance (citări, grounding queries, Citation Share unde există).`,
+  display:p.kind==='program'?`Adu în primul ecran numele „${topic}”, statutul „${p.program.status}”, termenul și linkul la ghid; grupează apoi eligibilitatea, grantul/contribuția, cheltuielile și documentele. Pe mobil, tabelele au etichete și derulare locală.`:p.kind==='proiectare'?'Arată imediat serviciile SF, DALI, DTAC și PT/DE, condițiile de ofertare și datele necesare. Folosește un tabel comparativ și un CTA „Solicită ofertă de proiectare”; pe mobil păstrează o singură coloană.':`Păstrează H1 „${p.h1}”, introducerea și acțiunea principală vizibile. Grupează secțiunea „${firstHeading}” în paragrafe scurte și evită repetarea cardurilor înaintea informației principale.`,
+  copy:p.duplicateParagraphs.length?`Elimină ${p.duplicateParagraphs.length} paragrafe repetate, păstrând prima explicație utilă. Exemplu repetat de ${p.duplicateParagraphs[0].count} ori: „${p.duplicateParagraphs[0].text.slice(0,210)}…”.`:p.genericCopy.length?`Revizuiește formularea metatextuală: „${p.genericCopy[0].slice(0,230)}…”. Înlocuiește cu o condiție, un document sau o acțiune relevantă pentru „${topic}”.`:`Nu s-au detectat paragrafe identice mai lungi de 100 de caractere. Pentru „${topic}”, păstrează propozițiile care indică documentul, responsabilul și rezultatul; elimină introducerile care doar anunță ce va explica pagina.`,
+  layout:'Verificare geometrică automată desktop/mobil în responsive.json: încadrări, H1, suprapunere cu headerul, elemente și tabele prea late. Aceasta nu reprezintă o evaluare estetică umană a fiecărui ecran; prioritizarea vizuală se bazează și pe structura de conținut de mai sus.'
+ };
+}
+async function main() {
+ fs.mkdirSync(OUT,{recursive:true});
+ const state=collectSiteState(),registry=JSON.parse(fs.readFileSync(path.join(ROOT,'config/seo-programs.json'))),snippets=JSON.parse(fs.readFileSync(path.join(ROOT,'config/seo-snippets.json'))).pages;
+ const auditEntries=[...state.entries,{route:'/gdpr',url:SITE+'/gdpr',family:'core',sourceFile:'gdpr.html'}];
+ const pages=auditEntries.map(e=>parsePage(e,registry.programs||registry.pages,snippets));
+ if(LIVE) {await pool(pages,async p=>{p.live=await trace(p.route);});fs.writeFileSync(path.join(OUT,`gsc-${SNAPSHOT}.json`),JSON.stringify(await pool(GSC,async route=>({route,...await trace(route)})),null,2));}
+ const inbound=new Map(pages.map(p=>[p.route,new Set()]));
+ for(const p of pages) {const $=cheerio.load(fs.readFileSync(path.join(ROOT,p.file),'utf8'));$('main a[href]').each((i,e)=>{try{const u=new URL($(e).attr('href'),SITE);if(u.origin===SITE&&u.pathname!==p.route&&inbound.has(u.pathname))inbound.get(u.pathname).add(p.route);}catch{}});}
+ for(const p of pages) {p.inbound=[...inbound.get(p.route)];p.suggestions=recommendations(p);}
+ fs.writeFileSync(path.join(OUT,`pages-${SNAPSHOT}.json`),JSON.stringify({date:'2026-11-05',scope:'all canonical pages; excluded HTML sources in inventory',count:pages.length,pages,excluded:state.excluded},null,2));
+ const lines=['# Audit integral SEO, AEO, GEO și Bing — 5 noiembrie 2026','',`Acoperire: ${pages.length} pagini publice (${state.entries.length} în sitemap și /gdpr, exclusă intenționat) și ${state.excluded.length} surse HTML excluse, toate inventariate. Recomandările sunt distincte de remedierile aplicate. HTTP 200, schema validă și accesul crawlerelor nu dovedesc indexarea sau citarea. Starea Google se poate confirma numai în GSC.`, '', '## Priorități de domeniu', '', '1. Hero: eliminarea înălțimii fixe care împinge panoul sub meniul fix; păstrarea listei integrale la orice lățime și zoom.', '2. Separarea paginilor indexabile de variantele 301 și de fișierele auxiliare noindex; fără blocarea acestora în robots.txt.', '3. Proiectare: intenție comercială distinctă, SF/DALI/DTAC/PT-DE, date pentru ofertă, legături din paginile investițiilor cu lucrări; portofoliu și specialiști numai cu dovezi reale.', '4. Programe: autoritate și dată lângă fiecare sumă/termen, statut distinct de calendar, exemple de buget și condiții eliminatorii. Nu actualiza artificial datele la fiecare build.', '5. Eliminați textele repetitive despre cum este construită pagina și publicați experiență demonstrabilă; nu adăugați volum de text pentru un prag de cuvinte.', '6. Măsurați în GSC la nivel pagină și interogare, separat brand/non-brand; Bing AI Performance la nivel URL, citări și Citation Share. Comparație înainte/după 28 de zile, cu notarea schimbărilor de cerere și calendar. Nu poate fi promisă creșterea citărilor.', '', '## Recomandări pentru fiecare pagină',''];
+ pages.forEach((p,i)=>{
+  lines.push(`### ${i+1}. ${p.route}`, '', `[Pagina live](${p.url}) · tip: ${p.kind} · ${p.words} cuvinte · ${p.inbound.length} pagini cu link contextual${p.live?` · HTTP ${p.live.status}`:''}`, '', `- **Titlu actual:** ${md(p.title)} (${p.title.length} caractere).`, `- **Titlu propus:** ${md(p.proposedTitle)}${p.proposedTitle===p.title?' — păstrează; o schimbare nu este necesară doar pentru audit.':''}`, `- **Metadescriere actuală:** ${md(p.description)} (${p.description.length} caractere).`, `- **Metadescriere propusă:** ${md(p.proposedDescription)}${p.proposedDescription===p.description?' — poate fi păstrată; testează CTR înainte de rescriere.':''}`, `- **Alte metadate:** canonical ${p.canonical}; robots ${p.robots}; Open Graph/Twitter trebuie să descrie aceeași intenție. ${p.imagesWithoutAlt} imagini fără atribut alt; ${p.jsonErrors.length} erori JSON-LD.`, `- **SEO:** ${md(p.suggestions.seo)}`, `- **AEO:** ${md(p.suggestions.aeo)}`, `- **GEO:** ${md(p.suggestions.geo)}`, `- **Bing și citare:** ${md(p.suggestions.bing)}`, `- **Afișarea elementelor:** ${md(p.suggestions.display)}`, `- **Conținut și limbaj:** ${md(p.suggestions.copy)}`, `- **Aspect și mobil:** ${md(p.suggestions.layout)}`, '');
+ });
+ lines.push('## Toate variantele HTML și excluderile','','Aceste surse nu sunt omise din audit. Variantele duplicate nu necesită titluri comerciale separate: ținta canonică primește optimizările. Documentele tehnice, administrative și șabloanele nu trebuie promovate în index.','','| Sursă | URL/rută | Motiv | Acțiune |','|---|---|---|---|');
+ for(const e of state.excluded)lines.push(`| ${md(e.sourceFile)} | ${md(e.url||e.route)} | ${e.reason} | ${e.reason==='redirect_source'?'Păstrează 301 direct; optimizează ținta, fără pagină SEO concurentă.':e.reason==='noindex_meta'?'Păstrează noindex dacă este administrativ/tehnic; verifică necesitatea publicării.':e.reason==='noncanonical_file_variant'?'Servește numai varianta canonică în sitemap și linkuri.':'Revizuire după rol; fără indexare automată a duplicatelor sau a șabloanelor.'} |`);
+ lines.push('', '## Surse metodologice', '', '- [Google: canonicalizare](https://developers.google.com/search/docs/crawling-indexing/canonicalization)', '- [Google: funcții AI și website-uri](https://developers.google.com/search/docs/appearance/ai-features)', '- [Bing Webmaster Guidelines](https://www.bing.com/webmasters/help/bing-webmaster-guidelines-30fba23a)', '- [Bing AI Performance](https://blogs.bing.com/webmaster/2026/2/Introducing-AI-Performance-in-Bing-Webmaster-Tools-Public-Preview/)','- [Bing Citation Share și Topics](https://blogs.bing.com/search/2026/6/New-AI-Visibility-Insights-in-Bing-Webmaster-Tools-Intents-Topics-Citation-Share-Compare/)', '', 'Nu există un marcaj special care să garanteze includerea în răspunsuri AI; FAQ/schema/llms.txt nu garantează clasamente, rich results sau citări. Recomandările pentru exemple originale și structură sunt inferențe editoriale din aceste documentații.');
+ fs.writeFileSync(path.join(OUT,`audit-${SNAPSHOT}.md`),lines.join('\n')+'\n');
+ const esc=v=>String(v??'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+ const cards=pages.map((p,i)=>`<details class="page" data-kind="${p.kind}"><summary><span class="number">${i+1}</span><span><strong>${esc(p.route)}</strong><small>${esc(p.title)}</small></span><span class="tag">${p.kind}</span></summary><div class="detail"><a href="${esc(p.url)}" target="_blank" rel="noopener">Deschide pagina live ↗</a><p>${p.words} cuvinte · ${p.inbound.length} pagini cu link contextual · ${p.officialLinks.length} surse oficiale · ${p.faq} FAQ</p><h3>Titlu</h3><p><b>Actual:</b> ${esc(p.title)}</p><p><b>Propus:</b> ${esc(p.proposedTitle)}</p><h3>Metadescriere</h3><p><b>Actuală:</b> ${esc(p.description)}</p><p><b>Propusă:</b> ${esc(p.proposedDescription)}</p><p><b>Canonical:</b> ${esc(p.canonical)}<br><b>Robots:</b> ${esc(p.robots)}</p>${Object.entries(p.suggestions).map(([k,v])=>`<h3>${({seo:'SEO',aeo:'AEO — răspunsuri directe',geo:'GEO — dovezi și exemple',bing:'Bing și citări',display:'Afișarea elementelor',copy:'Conținut și limbaj',layout:'Aspect și mobil'})[k]}</h3><p>${esc(v)}</p>`).join('')}</div></details>`).join('\n');
+ fs.writeFileSync(path.join(OUT,`audit-${SNAPSHOT}.html`),`<!doctype html><html lang="ro"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>Audit FABER — 106 pagini, 5 noiembrie 2026</title><style>*{box-sizing:border-box}body{font:16px/1.65 system-ui,sans-serif;color:#122845;background:#f4f1eb;margin:0}header,main,footer{max-width:1120px;margin:auto;padding:24px}header{padding-top:48px}h1{font-size:clamp(28px,5vw,48px);line-height:1.1;letter-spacing:-.04em}header p{max-width:78ch}.toolbar{position:sticky;top:0;display:flex;gap:12px;padding:16px 0;background:#f4f1eb;z-index:2;flex-wrap:wrap}input,select{font:inherit;padding:12px;border:1px solid #9ba9ba;border-radius:8px;color:#122845;background:#fff}input{flex:1;min-width:160px}details{background:#fff;border:1px solid #d7dfe8;border-radius:12px;margin:12px 0}summary{cursor:pointer;display:flex;align-items:center;gap:16px;padding:20px}summary strong{overflow-wrap:anywhere}summary small{display:block;color:#53647d}.number{color:#b84716;font-weight:700}.tag{margin-left:auto;border-radius:12px;background:#edf1f7;padding:4px 10px;font-size:12px}.detail{padding:8px 24px 28px;max-width:100%;overflow-wrap:anywhere}h3{margin:22px 0 8px;font-size:18px}p{margin:8px 0 14px}a{color:#9d3a0f;text-underline-offset:3px}.detail p{max-width:90ch}[hidden]{display:none!important}:focus-visible{outline:3px solid #b84716;outline-offset:3px}@media(max-width:600px){header,main,footer{padding:16px}.tag{display:none}summary{padding:16px;gap:10px}.detail{padding:4px 16px 20px}}@media print{.toolbar{display:none}details{break-inside:avoid}}</style><header><p>FABER · 05.11.2026</p><h1>Audit SEO, AEO, GEO și Bing</h1><p>${pages.length} pagini publice evaluate individual, ${state.excluded.length} variante/surse HTML inventariate separat în raportul Markdown și CSV. Titlurile păstrate sunt marcate ca actuale și propuse identic; schimbarea nu este obligatorie dacă intenția este deja clară. Recomandările de mai jos nu înseamnă că toate au fost implementate.</p><p>Remedieri: hero adaptiv; noindex pentru Excel; metadate pentru paginile prioritare; conținut de proiectare și eliminarea prozei repetitive. Verificarea geometrică acoperă desktop și mobil; nu înlocuiește evaluarea estetică a fiecărui ecran.</p></header><main><div class="toolbar"><input id="search" type="search" placeholder="Caută o pagină, un program sau un serviciu" aria-label="Caută în audit"><select id="kind" aria-label="Filtrează după tip"><option value="">Toate tipurile</option>${[...new Set(pages.map(p=>p.kind))].map(k=>`<option>${k}</option>`).join('')}</select><output id="count" aria-live="polite">${pages.length} pagini</output></div>${cards}</main><footer><p>Metodologie: <a href="https://developers.google.com/search/docs/appearance/ai-features">Google Search Central — funcții AI</a> și <a href="https://blogs.bing.com/search/2026/6/New-AI-Visibility-Insights-in-Bing-Webmaster-Tools-Intents-Topics-Citation-Share-Compare/">Bing AI Performance și Citation Share</a>. Indexarea și citarea nu sunt garantate. Datele private de performanță GSC/Bing nu au fost accesate în acest audit.</p></footer><script>const q=document.querySelector('#search'),k=document.querySelector('#kind'),rows=[...document.querySelectorAll('.page')];function filter(){let n=0;for(const r of rows){r.hidden=!!((k.value&&r.dataset.kind!==k.value)||(q.value&&!r.textContent.toLocaleLowerCase('ro').includes(q.value.toLocaleLowerCase('ro'))));if(!r.hidden)n++;}document.querySelector('#count').textContent=n+' pagini';}q.addEventListener('input',filter);k.addEventListener('change',filter);</script></html>`);
+ const cols=['route','kind','title','proposedTitle','description','proposedDescription','words','canonical','robots','seo','aeo','geo','bing','display','copy','layout'];
+ fs.writeFileSync(path.join(OUT,`audit-${SNAPSHOT}.csv`),'\uFEFF'+cols.map(csv).join(',')+'\n'+pages.map(p=>cols.map(k=>csv(p[k]??p.suggestions[k])).join(',')).join('\n')+'\n');
+ console.log(JSON.stringify({pages:pages.length,excluded:state.excluded.length,live:LIVE,duplicateParagraphs:pages.reduce((n,p)=>n+p.duplicateParagraphs.length,0),report:`reports/domain-audit-2026-11-05/audit-${SNAPSHOT}.md`}));
+}
+main().catch(e=>{console.error(e);process.exitCode=1;});

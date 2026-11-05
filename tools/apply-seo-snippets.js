@@ -54,11 +54,9 @@ function applySnippet(html, page) {
   head = replaceMeta(head, "description", page.description);
   head = replaceMeta(head, "og:title", page.ogTitle);
   head = replaceMeta(head, "og:description", page.ogDescription);
-  if (["/", "/dr12-afir", "/contact"].includes(page.route)) {
-    for (const [key, value] of [["twitter:title", page.ogTitle], ["twitter:description", page.ogDescription]]) {
-      if (head.includes(`name="${key}"`)) head = replaceMeta(head, key, value);
-      else head = head.replace("</head>", `<meta name="${key}" content="${escapeAttribute(value)}">\n</head>`);
-    }
+  for (const [key, value] of [["twitter:title", page.ogTitle], ["twitter:description", page.ogDescription]]) {
+    if (head.includes(`name="${key}"`)) head = replaceMeta(head, key, value);
+    else head = head.replace("</head>", `<meta name="${key}" content="${escapeAttribute(value)}">\n</head>`);
   }
   const output = html.replace(originalHead, head);
 

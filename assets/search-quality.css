@@ -1,0 +1,12 @@
+.search-quality { margin-block: 2rem; padding-block: 1.5rem; border-top: 1px solid #d5deea; }
+.search-quality h2 { text-wrap: balance; }
+.search-quality p, .search-quality li { max-width: 75ch; }
+.search-quality p + p { margin-top: 1rem; }
+.search-quality ul { padding-inline-start: 1.4rem; list-style: disc; }
+.search-quality__table { max-width: 100%; overflow-x: auto; margin-block: 1.2rem; border: 1px solid #d5deea; border-radius: .5rem; }
+.search-quality__table table { border-collapse: collapse; width: 100%; min-width: 520px; font-size: .95rem; }
+.search-quality__table th, .search-quality__table td { text-align: left; vertical-align: top; padding: .85rem; border-bottom: 1px solid #d5deea; }
+.search-quality__table thead { background: #edf2f8; color: #0d1f3c; }
+.search-quality a { text-underline-offset: .2em; }
+.search-quality :focus-visible { outline: 3px solid #b84716; outline-offset: 3px; }
+@media (max-width: 600px) { .search-quality { margin-block: 1.5rem; padding-block: 1rem; } }

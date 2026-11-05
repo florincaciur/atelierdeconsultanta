@@ -3,11 +3,11 @@
   "generatedFor": "P1.09",
   "generatedAt": "2026-07-21",
   "wordThreshold": 1500,
-  "pageCount": 34,
+  "pageCount": 29,
   "byType": {
     "core": 1,
     "program": 19,
-    "ghid": 14
+    "ghid": 9
   },
   "pilotRoute": "/afir-autoconsum-agroalimentar",
   "pages": [
@@ -15,7 +15,7 @@
       "route": "/",
       "type": "core",
       "sourceFile": "index.html",
-      "wordCount": 863,
+      "wordCount": 862,
       "tocItemCount": 0,
       "tableCount": 0,
       "variant": "home",
@@ -211,61 +211,6 @@
       "contentActionCount": 4
     },
     {
-      "route": "/fonduri-europene-bucuresti",
-      "type": "ghid",
-      "sourceFile": "fonduri-europene-bucuresti/index.html",
-      "wordCount": 1827,
-      "tocItemCount": 14,
-      "tableCount": 1,
-      "variant": "rail",
-      "decisionActionAdded": false,
-      "contentActionCount": 2
-    },
-    {
-      "route": "/fonduri-europene-caen/0111-culturi-cereale",
-      "type": "ghid",
-      "sourceFile": "fonduri-europene-caen/0111-culturi-cereale/index.html",
-      "wordCount": 1805,
-      "tocItemCount": 17,
-      "tableCount": 1,
-      "variant": "rail",
-      "decisionActionAdded": false,
-      "contentActionCount": 2
-    },
-    {
-      "route": "/fonduri-europene-caen/4321-instalatii-electrice",
-      "type": "ghid",
-      "sourceFile": "fonduri-europene-caen/4321-instalatii-electrice/index.html",
-      "wordCount": 1830,
-      "tocItemCount": 17,
-      "tableCount": 1,
-      "variant": "rail",
-      "decisionActionAdded": false,
-      "contentActionCount": 2
-    },
-    {
-      "route": "/fonduri-europene-caen/5610-restaurante",
-      "type": "ghid",
-      "sourceFile": "fonduri-europene-caen/5610-restaurante/index.html",
-      "wordCount": 1827,
-      "tocItemCount": 17,
-      "tableCount": 1,
-      "variant": "rail",
-      "decisionActionAdded": false,
-      "contentActionCount": 2
-    },
-    {
-      "route": "/fonduri-europene-caen/6201-dezvoltare-software",
-      "type": "ghid",
-      "sourceFile": "fonduri-europene-caen/6201-dezvoltare-software/index.html",
-      "wordCount": 1821,
-      "tocItemCount": 17,
-      "tableCount": 1,
-      "variant": "rail",
-      "decisionActionAdded": false,
-      "contentActionCount": 2
-    },
-    {
       "route": "/fonduri-europene-nerambursabile-2026",
       "type": "ghid",
       "sourceFile": "fonduri-europene-nerambursabile-2026/index.html",
@@ -280,7 +225,7 @@
       "route": "/fonduri-europene-nord-est",
       "type": "ghid",
       "sourceFile": "fonduri-europene-nord-est/index.html",
-      "wordCount": 2305,
+      "wordCount": 1833,
       "tocItemCount": 22,
       "tableCount": 1,
       "variant": "rail",

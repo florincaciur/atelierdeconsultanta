@@ -1,0 +1,320 @@
+[
+  {
+    "route": "/resurse/descarcari/calendar-pregatire-depunere.xlsx",
+    "hops": [
+      {
+        "url": "https://atelierdeconsultanta.ro/resurse/descarcari/calendar-pregatire-depunere.xlsx",
+        "status": 200,
+        "location": null,
+        "robots": null,
+        "contentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+      }
+    ],
+    "finalUrl": "https://atelierdeconsultanta.ro/resurse/descarcari/calendar-pregatire-depunere.xlsx",
+    "status": 200,
+    "canonical": "",
+    "title": "",
+    "metaRobots": ""
+  },
+  {
+    "route": "/resurse/descarcari/buget-digitalizare-imm.xlsx",
+    "hops": [
+      {
+        "url": "https://atelierdeconsultanta.ro/resurse/descarcari/buget-digitalizare-imm.xlsx",
+        "status": 200,
+        "location": null,
+        "robots": null,
+        "contentType": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+      }
+    ],
+    "finalUrl": "https://atelierdeconsultanta.ro/resurse/descarcari/buget-digitalizare-imm.xlsx",
+    "status": 200,
+    "canonical": "",
+    "title": "",
+    "metaRobots": ""
+  },
+  {
+    "route": "/consultanta-pnrr-digitalizare",
+    "hops": [
+      {
+        "url": "https://atelierdeconsultanta.ro/consultanta-pnrr-digitalizare",
+        "status": 200,
+        "location": null,
+        "robots": null,
+        "contentType": "text/html"
+      }
+    ],
+    "finalUrl": "https://atelierdeconsultanta.ro/consultanta-pnrr-digitalizare",
+    "status": 200,
+    "canonical": "https://atelierdeconsultanta.ro/consultanta-pnrr-digitalizare",
+    "title": "Consultanță PNRR Digitalizare | verificare proiect IMM",
+    "metaRobots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+  },
+  {
+    "route": "/consultanta-pnrr-digitalizare/",
+    "hops": [
+      {
+        "url": "https://atelierdeconsultanta.ro/consultanta-pnrr-digitalizare/",
+        "status": 301,
+        "location": "https://atelierdeconsultanta.ro/consultanta-pnrr-digitalizare",
+        "robots": null,
+        "contentType": null
+      },
+      {
+        "url": "https://atelierdeconsultanta.ro/consultanta-pnrr-digitalizare",
+        "status": 200,
+        "location": null,
+        "robots": null,
+        "contentType": "text/html"
+      }
+    ],
+    "finalUrl": "https://atelierdeconsultanta.ro/consultanta-pnrr-digitalizare",
+    "status": 200,
+    "canonical": "https://atelierdeconsultanta.ro/consultanta-pnrr-digitalizare",
+    "title": "Consultanță PNRR Digitalizare | verificare proiect IMM",
+    "metaRobots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+  },
+  {
+    "route": "/consultanta-afir/",
+    "hops": [
+      {
+        "url": "https://atelierdeconsultanta.ro/consultanta-afir/",
+        "status": 301,
+        "location": "https://atelierdeconsultanta.ro/consultanta-afir",
+        "robots": null,
+        "contentType": null
+      },
+      {
+        "url": "https://atelierdeconsultanta.ro/consultanta-afir",
+        "status": 200,
+        "location": null,
+        "robots": null,
+        "contentType": "text/html"
+      }
+    ],
+    "finalUrl": "https://atelierdeconsultanta.ro/consultanta-afir",
+    "status": 200,
+    "canonical": "https://atelierdeconsultanta.ro/consultanta-afir",
+    "title": "Consultanță AFIR - DR12, DR14 și proiecte agricole",
+    "metaRobots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+  },
+  {
+    "route": "/cum-alegi-consultant-fonduri-europene/",
+    "hops": [
+      {
+        "url": "https://atelierdeconsultanta.ro/cum-alegi-consultant-fonduri-europene/",
+        "status": 301,
+        "location": "https://atelierdeconsultanta.ro/cum-alegi-consultant-fonduri-europene",
+        "robots": null,
+        "contentType": null
+      },
+      {
+        "url": "https://atelierdeconsultanta.ro/cum-alegi-consultant-fonduri-europene",
+        "status": 200,
+        "location": null,
+        "robots": null,
+        "contentType": "text/html"
+      }
+    ],
+    "finalUrl": "https://atelierdeconsultanta.ro/cum-alegi-consultant-fonduri-europene",
+    "status": 200,
+    "canonical": "https://atelierdeconsultanta.ro/cum-alegi-consultant-fonduri-europene",
+    "title": "Cum alegi consultant fonduri europene - criterii utile",
+    "metaRobots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+  },
+  {
+    "route": "/official-guides.json",
+    "hops": [
+      {
+        "url": "https://atelierdeconsultanta.ro/official-guides.json",
+        "status": 200,
+        "location": null,
+        "robots": "noindex, nofollow",
+        "contentType": "application/json; charset=utf-8"
+      }
+    ],
+    "finalUrl": "https://atelierdeconsultanta.ro/official-guides.json",
+    "status": 200,
+    "canonical": "",
+    "title": "",
+    "metaRobots": ""
+  },
+  {
+    "route": "/fonduri-europene-digitalizare",
+    "hops": [
+      {
+        "url": "https://atelierdeconsultanta.ro/fonduri-europene-digitalizare",
+        "status": 200,
+        "location": null,
+        "robots": null,
+        "contentType": "text/html"
+      }
+    ],
+    "finalUrl": "https://atelierdeconsultanta.ro/fonduri-europene-digitalizare",
+    "status": 200,
+    "canonical": "https://atelierdeconsultanta.ro/fonduri-europene-digitalizare",
+    "title": "Fonduri europene pentru digitalizare - IMM, PNRR, software",
+    "metaRobots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+  },
+  {
+    "route": "/firma-consultanta-fonduri-europene/",
+    "hops": [
+      {
+        "url": "https://atelierdeconsultanta.ro/firma-consultanta-fonduri-europene/",
+        "status": 301,
+        "location": "https://atelierdeconsultanta.ro/firma-consultanta-fonduri-europene",
+        "robots": null,
+        "contentType": null
+      },
+      {
+        "url": "https://atelierdeconsultanta.ro/firma-consultanta-fonduri-europene",
+        "status": 200,
+        "location": null,
+        "robots": null,
+        "contentType": "text/html"
+      }
+    ],
+    "finalUrl": "https://atelierdeconsultanta.ro/firma-consultanta-fonduri-europene",
+    "status": 200,
+    "canonical": "https://atelierdeconsultanta.ro/firma-consultanta-fonduri-europene",
+    "title": "Firmă consultanță fonduri europene - criterii și servicii",
+    "metaRobots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+  },
+  {
+    "route": "/start-up-nation-2026-plan-de-afaceri/",
+    "hops": [
+      {
+        "url": "https://atelierdeconsultanta.ro/start-up-nation-2026-plan-de-afaceri/",
+        "status": 301,
+        "location": "https://atelierdeconsultanta.ro/start-up-nation-2026-plan-de-afaceri",
+        "robots": null,
+        "contentType": null
+      },
+      {
+        "url": "https://atelierdeconsultanta.ro/start-up-nation-2026-plan-de-afaceri",
+        "status": 200,
+        "location": null,
+        "robots": null,
+        "contentType": "text/html"
+      }
+    ],
+    "finalUrl": "https://atelierdeconsultanta.ro/start-up-nation-2026-plan-de-afaceri",
+    "status": 200,
+    "canonical": "https://atelierdeconsultanta.ro/start-up-nation-2026-plan-de-afaceri",
+    "title": "Start Up Nation 2026 plan de afaceri - structura",
+    "metaRobots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+  },
+  {
+    "route": "/consultant-fonduri-europene-imm/",
+    "hops": [
+      {
+        "url": "https://atelierdeconsultanta.ro/consultant-fonduri-europene-imm/",
+        "status": 301,
+        "location": "https://atelierdeconsultanta.ro/consultant-fonduri-europene-imm",
+        "robots": null,
+        "contentType": null
+      },
+      {
+        "url": "https://atelierdeconsultanta.ro/consultant-fonduri-europene-imm",
+        "status": 200,
+        "location": null,
+        "robots": null,
+        "contentType": "text/html"
+      }
+    ],
+    "finalUrl": "https://atelierdeconsultanta.ro/consultant-fonduri-europene-imm",
+    "status": 200,
+    "canonical": "https://atelierdeconsultanta.ro/consultant-fonduri-europene-imm",
+    "title": "Consultant fonduri europene IMM - verificare și dosar",
+    "metaRobots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+  },
+  {
+    "route": "/granturi-digitalizare-imm/",
+    "hops": [
+      {
+        "url": "https://atelierdeconsultanta.ro/granturi-digitalizare-imm/",
+        "status": 301,
+        "location": "https://atelierdeconsultanta.ro/digitalizare-imm",
+        "robots": null,
+        "contentType": null
+      },
+      {
+        "url": "https://atelierdeconsultanta.ro/digitalizare-imm",
+        "status": 200,
+        "location": null,
+        "robots": null,
+        "contentType": "text/html"
+      }
+    ],
+    "finalUrl": "https://atelierdeconsultanta.ro/digitalizare-imm",
+    "status": 200,
+    "canonical": "https://atelierdeconsultanta.ro/digitalizare-imm",
+    "title": "Digitalizare IMM PNRR 2026: apel închis, implementare",
+    "metaRobots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+  },
+  {
+    "route": "/cum-alegi-consultant-fonduri-europene",
+    "hops": [
+      {
+        "url": "https://atelierdeconsultanta.ro/cum-alegi-consultant-fonduri-europene",
+        "status": 200,
+        "location": null,
+        "robots": null,
+        "contentType": "text/html"
+      }
+    ],
+    "finalUrl": "https://atelierdeconsultanta.ro/cum-alegi-consultant-fonduri-europene",
+    "status": 200,
+    "canonical": "https://atelierdeconsultanta.ro/cum-alegi-consultant-fonduri-europene",
+    "title": "Cum alegi consultant fonduri europene - criterii utile",
+    "metaRobots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+  },
+  {
+    "route": "/fonduri-europene-femei-antreprenor/",
+    "hops": [
+      {
+        "url": "https://atelierdeconsultanta.ro/fonduri-europene-femei-antreprenor/",
+        "status": 301,
+        "location": "https://atelierdeconsultanta.ro/fonduri-europene-femei-antreprenor",
+        "robots": null,
+        "contentType": null
+      },
+      {
+        "url": "https://atelierdeconsultanta.ro/fonduri-europene-femei-antreprenor",
+        "status": 200,
+        "location": null,
+        "robots": null,
+        "contentType": "text/html"
+      }
+    ],
+    "finalUrl": "https://atelierdeconsultanta.ro/fonduri-europene-femei-antreprenor",
+    "status": 200,
+    "canonical": "https://atelierdeconsultanta.ro/fonduri-europene-femei-antreprenor",
+    "title": "Fonduri europene pentru femei antreprenor | hub IMM",
+    "metaRobots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+  },
+  {
+    "route": "/fonduri-europene-nerambursabile-2026/",
+    "hops": [
+      {
+        "url": "https://atelierdeconsultanta.ro/fonduri-europene-nerambursabile-2026/",
+        "status": 301,
+        "location": "https://atelierdeconsultanta.ro/fonduri-europene-nerambursabile-2026",
+        "robots": null,
+        "contentType": null
+      },
+      {
+        "url": "https://atelierdeconsultanta.ro/fonduri-europene-nerambursabile-2026",
+        "status": 200,
+        "location": null,
+        "robots": null,
+        "contentType": "text/html"
+      }
+    ],
+    "finalUrl": "https://atelierdeconsultanta.ro/fonduri-europene-nerambursabile-2026",
+    "status": 200,
+    "canonical": "https://atelierdeconsultanta.ro/fonduri-europene-nerambursabile-2026",
+    "title": "Fonduri europene nerambursabile 2026",
+    "metaRobots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+  }
+]

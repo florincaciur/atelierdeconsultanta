@@ -26,7 +26,7 @@ const REQUIRED_FIELDS = [
   "notes"
 ];
 const STOP_WORDS = new Set(["de", "din", "la", "pentru", "si", "sau", "cu", "un", "o", "ale", "al"]);
-const ALLOWED_UPPERCASE = new Set(["AFIR", "CAEN", "DR12", "DR14", "FABER", "IMM", "RO", "SO", "SOC"]);
+const ALLOWED_UPPERCASE = new Set(["AFIR", "CAEN", "DR12", "DR14", "FABER", "IMM", "PNRR", "RO", "SO", "SOC", "SF", "DALI", "DTAC", "PT", "DE"]);
 const FORBIDDEN_CLAIMS = /\b(?:garantat(?:ă|e|i)?|sigur(?:ă|e|i)?|obține finanțarea|aprobarea este garantată)\b/iu;
 
 function cleanText(value) {
