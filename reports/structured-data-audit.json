@@ -1,26 +1,26 @@
 {
-  "generatedAt": "2026-11-05T14:05:24.166Z",
+  "generatedAt": "2026-11-09T15:29:00.242Z",
   "summary": {
-    "htmlFilesChecked": 198,
-    "indexablePagesChecked": 105,
+    "htmlFilesChecked": 199,
+    "indexablePagesChecked": 106,
     "filesWithIssues": 0,
     "organizationVariants": 1,
-    "stableTopLevelIdsChecked": 562,
+    "stableTopLevelIdsChecked": 568,
     "types": {
-      "Organization": 130,
-      "ProfessionalService": 105,
-      "PostalAddress": 105,
-      "ImageObject": 105,
-      "WebSite": 105,
-      "WebPage": 105,
-      "BreadcrumbList": 104,
-      "ListItem": 328,
+      "Organization": 132,
+      "ProfessionalService": 106,
+      "PostalAddress": 106,
+      "ImageObject": 106,
+      "WebSite": 106,
+      "WebPage": 106,
+      "BreadcrumbList": 105,
+      "ListItem": 332,
       "Article": 33,
-      "FinancialIncentive": 25,
-      "CreativeWork": 27,
-      "FAQPage": 70,
-      "Question": 461,
-      "Answer": 461,
+      "FinancialIncentive": 26,
+      "CreativeWork": 28,
+      "FAQPage": 71,
+      "Question": 468,
+      "Answer": 468,
       "WebPageElement": 2,
       "Service": 12,
       "AdministrativeArea": 12,
@@ -244,6 +244,31 @@
       "issues": []
     },
     {
+      "file": "digitalizare-imm-regiunea-centru-apel-2/index.html",
+      "route": "/digitalizare-imm-regiunea-centru-apel-2",
+      "blocks": 1,
+      "topLevelIds": 6,
+      "types": {
+        "Organization": 2,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
+        "ImageObject": 1,
+        "WebSite": 1,
+        "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 4,
+        "FinancialIncentive": 1,
+        "CreativeWork": 1,
+        "FAQPage": 1,
+        "Question": 7,
+        "Answer": 7
+      },
+      "modified": [
+        "2026-11-09"
+      ],
+      "issues": []
+    },
+    {
       "file": "dr-12-afir-instalarea-tinerilor-fermieri.html",
       "route": "/dr-12-afir-instalarea-tinerilor-fermieri",
       "blocks": 1,
@@ -336,7 +361,7 @@
         "Answer": 13
       },
       "modified": [
-        "2026-11-04"
+        "2026-11-09"
       ],
       "issues": []
     },

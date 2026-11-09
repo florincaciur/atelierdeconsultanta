@@ -203,6 +203,7 @@
         "parent",
         "related",
         "related",
+        "related",
         "service",
         "instrument",
         "guide",
@@ -219,6 +220,7 @@
       "removedManagedLinks": 0,
       "resultingRelations": [
         "parent",
+        "related",
         "related",
         "related",
         "service",
@@ -531,6 +533,7 @@
         "parent",
         "related",
         "related",
+        "related",
         "service",
         "instrument",
         "guide",
@@ -547,6 +550,7 @@
       "removedManagedLinks": 0,
       "resultingRelations": [
         "parent",
+        "related",
         "related",
         "related",
         "service",
@@ -567,6 +571,7 @@
         "parent",
         "related",
         "related",
+        "related",
         "service",
         "instrument",
         "guide",
@@ -583,6 +588,7 @@
       "removedManagedLinks": 0,
       "resultingRelations": [
         "parent",
+        "related",
         "related",
         "related",
         "service",
@@ -719,6 +725,25 @@
       "resultingRelations": [
         "parent",
         "related",
+        "related",
+        "related",
+        "related",
+        "service",
+        "instrument",
+        "guide",
+        "conversion"
+      ]
+    },
+    {
+      "programId": "digitalizare-imm-regiunea-centru-apel-2",
+      "route": "/digitalizare-imm-regiunea-centru-apel-2",
+      "file": "digitalizare-imm-regiunea-centru-apel-2/index.html",
+      "eligible": true,
+      "excludedByEditorialDecision": false,
+      "removedManagedBlocks": 0,
+      "removedManagedLinks": 0,
+      "resultingRelations": [
+        "parent",
         "related",
         "related",
         "related",

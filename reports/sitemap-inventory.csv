@@ -38,12 +38,13 @@ included,core,https://atelierdeconsultanta.ro/cum-se-verifica-eligibilitatea-fon
 included,programs,https://atelierdeconsultanta.ro/diaspora-investeste-acasa,diaspora-investeste-acasa/index.html,2026-11-04,,
 included,core,https://atelierdeconsultanta.ro/digitalizare-imm-erp-crm-cloud,digitalizare-imm-erp-crm-cloud.html,,,
 included,core,https://atelierdeconsultanta.ro/digitalizare-imm-pnrr,digitalizare-imm-pnrr/index.html,,,
+included,programs,https://atelierdeconsultanta.ro/digitalizare-imm-regiunea-centru-apel-2,digitalizare-imm-regiunea-centru-apel-2/index.html,2026-11-09,,
 included,guides,https://atelierdeconsultanta.ro/documente-punctaj-pocidif-21,documente-punctaj-pocidif-21/index.html,,,
 included,programs,https://atelierdeconsultanta.ro/dr-12-afir-instalarea-tinerilor-fermieri,dr-12-afir-instalarea-tinerilor-fermieri.html,,,
 included,programs,https://atelierdeconsultanta.ro/dr-14-afir-conditii-eligibilitate-greseli-frecvente,dr-14-afir-conditii-eligibilitate-greseli-frecvente.html,,,
 included,guides,https://atelierdeconsultanta.ro/dr12-vs-dr14,dr12-vs-dr14.html,2026-11-04,,
 included,programs,https://atelierdeconsultanta.ro/dr18,dr18/index.html,2026-11-04,,
-included,programs,https://atelierdeconsultanta.ro/e-drive,e-drive/index.html,2026-11-04,,
+included,programs,https://atelierdeconsultanta.ro/e-drive,e-drive/index.html,2026-11-09,,
 included,programs,https://atelierdeconsultanta.ro/e-mobility,e-mobility/index.html,2026-11-04,,
 included,programs,https://atelierdeconsultanta.ro/e-move,e-move/index.html,2026-11-04,,
 included,core,https://atelierdeconsultanta.ro/eligibilitate-fonduri-europene,eligibilitate-fonduri-europene/index.html,,,
@@ -107,13 +108,6 @@ included,guides,https://atelierdeconsultanta.ro/webinarii,webinarii/index.html,,
 excluded,,https://atelierdeconsultanta.ro/gdpr,gdpr.html,,duplicate_policy_pending_legal_consolidation,Politica duplicata este omisa din sitemap; redirectul ramane conditionat de aprobarea juridica si SEO.
 excluded,,https://atelierdeconsultanta.ro/fondul-de-modernizare,fondul-de-modernizare.html,,meta_refresh,
 excluded,,https://atelierdeconsultanta.ro/pnrr,pnrr.html,,meta_refresh,
-excluded,,/.codex/pc1-sources/news,.codex/pc1-sources/news.html,,missing_canonical,
-excluded,,/.codex/pc1-sources/solar,.codex/pc1-sources/solar.html,,missing_canonical,
-excluded,,/.codex/pc1-sources/storage,.codex/pc1-sources/storage.html,,missing_canonical,
-excluded,,/.tmp/dr12-review/official,.tmp/dr12-review/official.html,,missing_canonical,
-excluded,,/.tmp/dr12-review/release,.tmp/dr12-review/release.html,,missing_canonical,
-excluded,,/.tmp/dr12-review/sessions,.tmp/dr12-review/sessions.html,,missing_canonical,
-excluded,,/.tmp/soc-source-current,.tmp/soc-source-current.html,,missing_canonical,
 excluded,,/google8bbb9999c523a3bd,google8bbb9999c523a3bd.html,,missing_canonical,
 excluded,,/partials/global-header,partials/global-header.html,,missing_canonical,
 excluded,,/partials/preferred-source,partials/preferred-source.html,,missing_canonical,
@@ -182,7 +176,6 @@ excluded,,https://atelierdeconsultanta.ro/studii-de-caz-fonduri-europene,studii-
 excluded,,https://atelierdeconsultanta.ro/studii-de-caz-fonduri-europene,studii-de-caz/index.html,,noindex_meta,
 excluded,,https://atelierdeconsultanta.ro/studii-de-caz-fonduri-europene,testimoniale.html,,noindex_meta,
 excluded,,https://atelierdeconsultanta.ro/studii-de-caz-fonduri-europene,testimoniale/index.html,,noindex_meta,
-excluded,,https://atelierdeconsultanta.ro/e-drive,.tmp/edrive-preferred-before.html,,noncanonical_file_variant,canonical route: /e-drive
 excluded,,https://atelierdeconsultanta.ro/afir-autoconsum-agroalimentar,_redirects,,redirect_source,HTTP 301
 excluded,,https://atelierdeconsultanta.ro/afir-autoconsum-agroalimentar,_redirects,,redirect_source,HTTP 301
 excluded,,https://atelierdeconsultanta.ro/autoconsum-public-fotovoltaice-institutii-publice,_redirects,,redirect_source,HTTP 301

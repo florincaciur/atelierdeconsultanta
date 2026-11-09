@@ -2850,6 +2850,137 @@
         ],
         "listed": true
       }
+    },
+    {
+      "id": "digitalizare-imm-regiunea-centru-apel-2",
+      "slug": "digitalizare-imm-regiunea-centru-apel-2",
+      "name": "Întreprinderi digitale pentru o economie avansată – Apel 2",
+      "shortName": "Digitalizare IMM Regiunea Centru – Apel 2",
+      "acronym": "Acțiunea 2.2",
+      "fund": "Programul Regiunea Centru 2021–2027",
+      "family": "digitalizare",
+      "status": "ghid_aprobat_nedeschis",
+      "canonicalStatus": "SCHEDULED",
+      "statusScope": "program_call",
+      "statusRationale": "ADR Centru a publicat ghidul și intervalul oficial de depunere în MySMIS. La 9 noiembrie 2026, fereastra de depunere este viitoare.",
+      "statusLabel": "Depuneri programate între 2 decembrie 2026 și 2 februarie 2027",
+      "publicationState": "public",
+      "verifiedAt": "2026-11-09",
+      "sourceName": "ADR Centru",
+      "sourceUrl": "https://www.regiocentru.ro/actiuni/2-2-intreprinderi-digitale-pentru-o-economie-avansata-apel-2/",
+      "sourceVersion": "Ghidul solicitantului și anexele publicate la 30 octombrie 2026, cod PRC/1059/PRC_P2/OP1/RSO1.2/PRC_A32",
+      "officialSourceUpdatedAt": "2026-10-30",
+      "sourceType": "official",
+      "applicationStart": "2026-12-02",
+      "applicationEnd": "2027-02-02",
+      "grantSummary": {
+        "minimum": {
+          "amount": 15000,
+          "currency": "EUR",
+          "unit": "proiect"
+        },
+        "maximum": {
+          "amount": 200000,
+          "currency": "EUR",
+          "unit": "proiect"
+        },
+        "budget": {
+          "amount": 14113032,
+          "currency": "EUR"
+        }
+      },
+      "cofinancingSummary": {
+        "intensity": [
+          {
+            "rate": 90,
+            "scope": "maximum din cheltuielile eligibile, în limita de minimis"
+          }
+        ],
+        "ownContribution": "Minimum 10% din cheltuielile eligibile, plus cheltuielile neeligibile."
+      },
+      "pageUrl": "/digitalizare-imm-regiunea-centru-apel-2",
+      "lastMeaningfulUpdate": "2026-11-09",
+      "evergreenValue": true,
+      "archivedNoindexDecision": null,
+      "indexable": true,
+      "cardSummary": "Granturi de 15.000–200.000 EUR pentru IMM-uri din Regiunea Centru. Depunerile se deschid pe 2 decembrie 2026.",
+      "quickAnswer": "Microîntreprinderile și firmele mici sau mijlocii pot solicita între 15.000 și 200.000 EUR pentru digitalizarea activităților existente în Alba, Brașov, Covasna, Harghita, Mureș sau Sibiu, în mediul urban ori rural. Grantul acoperă cel mult 90% din cheltuielile eligibile, în limita ajutorului de minimis disponibil. Depunerile în MySMIS încep pe 2 decembrie 2026 la ora 12:00 și se închid pe 2 februarie 2027 la ora 12:00. Codul apelului este PRC/1059/PRC_P2/OP1/RSO1.2/PRC_A32.",
+      "metaTitle": "Digitalizare IMM în Regiunea Centru – Apel 2 | FABER",
+      "metaDescription": "Apelul 2 ADR Centru oferă 15.000–200.000 € pentru digitalizarea IMM-urilor. Depuneri 2 decembrie 2026–2 februarie 2027. Verifică eligibilitatea și documentele.",
+      "editorialDisclaimer": "Ghidul este publicat. Cererile se transmit în MySMIS începând cu 2 decembrie 2026, ora 12:00.",
+      "eligibleApplicants": [
+        "Microîntreprinderi, întreprinderi mici și mijlocii constituite potrivit Legii nr. 31/1990 sau Legii cooperației nr. 1/2005, cu investiții în Regiunea Centru."
+      ],
+      "keyConditions": [
+        "Investiția se realizează în Alba, Brașov, Covasna, Harghita, Mureș sau Sibiu, în mediul urban ori rural.",
+        "Firma are cel puțin un an fiscal integral de activitate și profit net sau din exploatare pozitiv în anul fiscal anterior depunerii.",
+        "Se verifică salariații, codurile CAEN autorizate, veniturile din activitățile vizate și domeniile excluse din Anexa 3.",
+        "Sunt obligatorii activele necorporale eligibile, auditul inițial de maturitate digitală, planul de digitalizare și macheta financiară.",
+        "Plafonul de minimis este de 300.000 EUR pe întreprindere unică în orice perioadă de trei ani. Consultanța este plafonată la 5% din cheltuielile activității de bază.",
+        "Pragul de calitate este de 50 de puncte. Contractarea în prima tranșă aplică pragul de 85 de puncte și limita bugetului."
+      ],
+      "officialGuideKeys": [
+        "digitalizare-imm-regiunea-centru-apel-2"
+      ],
+      "officialSources": {
+        "roles": {
+          "programPage": [
+            {
+              "ref": "program",
+              "label": "Pagina apelului și documentele publicate de ADR Centru"
+            }
+          ],
+          "guide": [
+            {
+              "ref": "guide:digitalizare-imm-regiunea-centru-apel-2",
+              "label": "Ghidul solicitantului în format PDF"
+            }
+          ],
+          "annexes": [
+            {
+              "ref": "program",
+              "label": "Anexele apelului, inclusiv lista CAEN și grila ETF"
+            }
+          ],
+          "schemeOrder": [
+            {
+              "ref": "registry:adr-centru-digitalizare-apel-2-minimis",
+              "label": "Schema de ajutor de minimis, Dispoziția nr. 488/27.10.2026"
+            }
+          ],
+          "sessionAnnouncement": [
+            {
+              "ref": "registry:adr-centru-digitalizare-apel-2-sesiune",
+              "label": "Comunicat ADR Centru și calendarul MySMIS"
+            }
+          ],
+          "corrigenda": [],
+          "clarifications": []
+        },
+        "notes": "Intervalul MySMIS este confirmat prin ghid și comunicatul oficial de lansare."
+      },
+      "presentation": {
+        "carousel": false,
+        "hero": false,
+        "order": 50,
+        "icon": "ph-desktop",
+        "image": "/assets/hero/hero-digital.webp",
+        "beneficiary": "IMM-uri cu investiții în Regiunea Centru"
+      },
+      "discovery": {
+        "parentHub": "/fonduri-europene-digitalizare",
+        "applicantTypes": [
+          "imm_micro"
+        ],
+        "regions": [
+          "regional"
+        ],
+        "investmentTypes": [
+          "digitalizare"
+        ],
+        "listed": true
+      },
+      "eligibleApplicantSummary": "Microîntreprinderi, întreprinderi mici și mijlocii cu proiecte de digitalizare a activităților existente în Regiunea Centru."
     }
   ],
   "factualChanges": [

@@ -182,6 +182,22 @@
       "url": "https://fonduri.mt.ro/documente/FM/Monitorul_Oficial_Partea_I_nr._739.pdf",
       "publishedAt": "2026-09-02",
       "verifiedAt": "2026-11-04"
+    },
+    "adr-centru-digitalizare-apel-2-sesiune": {
+      "title": "Lansarea celui de-al doilea apel de finanțare pentru digitalizarea IMM-urilor",
+      "authority": "ADR Centru",
+      "documentType": "comunicat oficial de sesiune",
+      "url": "https://www.regiocentru.ro/lansarea-celui-de-al-doilea-apel-de-finantare-pentru-digitalizarea-imm-urilor/",
+      "publishedAt": "2026-10-30",
+      "verifiedAt": "2026-11-09"
+    },
+    "adr-centru-digitalizare-apel-2-minimis": {
+      "title": "Schema de ajutor de minimis, Acțiunea 2.2, Apelul 2",
+      "authority": "ADR Centru",
+      "documentType": "schemă de ajutor de minimis",
+      "url": "https://www.regiocentru.ro/schema-de-ajutor-de-minimis-aferenta-investitiilor-din-cadrul-actiunii-2-2-intreprinderi-digitale-pentru-o-economie-avansata-apel-2/",
+      "publishedAt": "2026-10-30",
+      "verifiedAt": "2026-11-09"
     }
   },
   "programSourceAssignments": "config/seo-programs.json#programs[*].officialSources"

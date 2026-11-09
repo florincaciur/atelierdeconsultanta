@@ -1,0 +1,83 @@
+{
+  "h1": "Digitalizare IMM în Regiunea Centru – Acțiunea 2.2, Apelul 2",
+  "eyebrow": "Programul Regiunea Centru 2021–2027 · Prioritatea 2",
+  "lead": "Granturi pentru IMM-uri care vor să digitalizeze procese existente, de la gestiunea stocurilor și relația cu clienții până la automatizarea fluxurilor de lucru.",
+  "metrics": [
+    ["15.000–200.000 €", "grant pe proiect"],
+    ["Maximum 90%", "din cheltuielile eligibile, în limita de minimis"],
+    ["14.113.032 €", "bugetul apelului"],
+    ["2 dec. 2026 – 2 feb. 2027", "depunere în MySMIS, de la ora 12:00 până la ora 12:00"]
+  ],
+  "answerHeading": "Cine poate obține finanțare pentru digitalizare în Regiunea Centru?",
+  "answer": "Microîntreprinderile și firmele mici sau mijlocii pot solicita între 15.000 și 200.000 EUR pentru digitalizarea activităților existente în Alba, Brașov, Covasna, Harghita, Mureș sau Sibiu, în mediul urban ori rural. Grantul acoperă cel mult 90% din cheltuielile eligibile, în limita ajutorului de minimis disponibil. Depunerile în MySMIS încep pe 2 decembrie 2026 la ora 12:00 și se închid pe 2 februarie 2027 la ora 12:00. Codul apelului este PRC/1059/PRC_P2/OP1/RSO1.2/PRC_A32.",
+  "fit": [
+    "Sunt eligibile societățile constituite potrivit Legii nr. 31/1990 sau Legii cooperației nr. 1/2005 care se încadrează ca IMM după luarea în calcul a întreprinderilor partenere și legate.",
+    "Firma trebuie să aibă cel puțin un an fiscal integral de activitate, fără suspendare în anul depunerii sau în anul fiscal anterior, și profit net ori din exploatare pozitiv în anul fiscal anterior. Pentru cereri depuse în 2026, ghidul indică înființare cel târziu la 3 ianuarie 2025 și profit la 31 decembrie 2025.",
+    "Firma trebuie să fi avut minimum un salariat în medie în anul fiscal anterior sau să aibă minimum un salariat cu normă întreagă, pe durată nedeterminată, la depunere și la contractare, conform ghidului.",
+    "Codurile CAEN vizate trebuie să fie autorizate la locul investiției la depunere. Activitatea trebuie să aibă istoric de cel puțin un an fiscal la acel punct de lucru și să fi generat venituri în anul depunerii și în anul anterior. Dacă proiectul acoperă mai multe puncte de lucru, condițiile se dovedesc separat pentru fiecare.",
+    "Firma trebuie să aibă drept de folosință asupra spațiului încă de la depunere, de exemplu prin proprietate, închiriere sau comodat. La semnarea contractului de finanțare, locul investiției trebuie să figureze ca sediu sau punct de lucru în certificatul ORC. Se depune o singură cerere per solicitant."
+  ],
+  "caution": [
+    "Verifică Anexa 3 pentru întreaga firmă. Ghidul exclude solicitanții cu coduri CAEN excluse autorizate la depunere sau cu venituri din activitățile excluse în ultimul an fiscal ori în anul curent.",
+    "Proiectul trebuie să cuprindă active necorporale eligibile. Echipamentele IT sunt justificate prin rolul lor în planul de digitalizare. Utilajele productive, extinderea capacității și înființarea unei noi unități nu intră în apel.",
+    "În buget, separă contribuția proprie eligibilă, costurile neeligibile și lichiditățile necesare până la rambursare. Plafonul general de minimis este de 300.000 EUR pe întreprindere unică în orice perioadă de trei ani."
+  ],
+  "investmentsHeading": "Cheltuieli eligibile pentru digitalizare",
+  "investments": [
+    ["Software și automatizare", "ERP pentru stocuri și comenzi, CRM pentru relația cu clienții, automatizarea sarcinilor repetitive și integrarea facturării pot fi incluse când răspund nevoilor stabilite în audit."],
+    ["Echipamente IT și rețea", "Serverele, terminalele, echipamentele de rețea și infrastructura LAN sau Wi-Fi se justifică în raport cu utilizatorii și procesele digitalizate."],
+    ["Cloud și arhive digitale", "Abonamentele cloud sau software sunt eligibile pentru perioada de implementare, în condițiile ghidului. Firma își asumă costurile în durabilitate. Poate fi inclusă și conversia arhivelor pe hârtie într-un format digital indexabil."],
+    ["Instruire, audit și consultanță", "Instruirea se leagă de soluțiile instalate. Auditul de maturitate se face înainte de depunere și la finalul implementării. Consultanța de elaborare și implementare, inclusiv planul de digitalizare, este plafonată la 5% din cheltuielile activității de bază."]
+  ],
+  "sections": [
+    {
+      "id": "cofinantare",
+      "example": true,
+      "title": "Cât trebuie să contribuie firma?",
+      "intro": "Contribuția proprie este de cel puțin 10% din valoarea eligibilă. Firma acoperă separat toate costurile neeligibile.",
+      "rows": [
+        ["Proiect eligibil de 100.000 EUR", "La intensitatea maximă, grantul ar fi 90.000 EUR și contribuția proprie 10.000 EUR, dacă întreprinderea unică mai are cel puțin 90.000 EUR disponibili în plafonul de minimis."],
+        ["Plafon disponibil de 70.000 EUR", "Pentru același buget eligibil, un plafon de minimis disponibil de 70.000 EUR reduce ajutorul posibil la acea sumă. Firma trebuie să acopere cel puțin 30.000 EUR din cheltuielile eligibile, plus eventualele costuri neeligibile."]
+      ]
+    },
+    {
+      "id": "punctaj",
+      "title": "Cum se selectează proiectele?",
+      "intro": "Verifică subcriteriile eliminatorii în grila de evaluare tehnică și financiară din Anexa 4.",
+      "rows": [
+        ["Prag de calitate de 50 de puncte", "Proiectele sub 50 de puncte sunt respinse. Încadrarea în buget și respectarea criteriilor eliminatorii se verifică separat."],
+        ["85 de puncte în prima tranșă", "În prima lună, proiectele cu cel puțin 85 de puncte pot intra în contractare după evaluare și contestații, în limita alocării. Ghidul stabilește condițiile în care proiectele rămase sunt ierarhizate împreună cu cele din luna a doua."],
+        ["Intensitate digitală", "Pentru DESI 2019, ghidul consideră intensitate digitală ridicată utilizarea a cel puțin 7 dintre cele 12 tehnologii din lista de referință. Auditul inițial și cel final documentează situația firmei."]
+      ]
+    }
+  ],
+  "documents": [
+    ["Planul de digitalizare și macheta financiară", "Folosește modelele din Anexele 6 și 7. Lipsa unuia dintre cele două documente la depunere duce la respingere. Macheta se transmite și în format Excel conform instrucțiunilor din secțiunea 7.4 a ghidului."],
+    ["Raportul de audit al maturității digitale", "Atașează raportul inițial, conform Anexei 13. Auditorul trebuie să fie independent de firmă și de furnizorii proiectului. Ghidul prevede și posibilitatea efectuării auditului de către un EDIH."],
+    ["Declarația unică și situațiile financiare", "Pregătește formularele 10, 20 și 30 ale exercițiului financiar anterior depunerii, cu dovada depunerii unde se aplică, și declarațiile privind TVA și conformitatea cu originalul."],
+    ["Justificarea bugetului", "Păstrează centralizatorul costurilor și ofertele ori prețurile verificabile. Dacă proiectul include instruire, documentează competențele pe care angajații le vor dobândi."],
+    ["Acte pentru contractare", "Pregătește dovezile privind sediul sau punctul de lucru, dreptul asupra spațiului, activitățile CAEN, încadrarea ca IMM, cumulul ajutoarelor și aprobarea contribuției proprii, conform secțiunii 7.6."]
+  ],
+  "steps": [
+    "Verifică județul, activitățile CAEN ale firmei, veniturile și situațiile financiare înainte de a comanda auditul.",
+    "Stabilește cu auditorul procesele care trebuie digitalizate și rezultatele care vor putea fi măsurate.",
+    "Corelează auditul cu planul de digitalizare, macheta financiară și ofertele. Verifică eligibilitatea și punctajul în Anexele 4 și 5.",
+    "Depune cererea și anexele semnate electronic în MySMIS, în fereastra indicată de ADR Centru."
+  ],
+  "sourceIntro": "Consultă secțiunile 4.3 pentru calendar, 5.1 pentru solicitant și CAEN, 5.3 pentru cheltuieli, 7.4 pentru dosar și 8.4 pentru selecție. Anexele 3–7 și 13 conțin lista de excluderi, grilele și modelele de completat.",
+  "extraSources": [
+    ["Ghidul solicitantului – Acțiunea 2.2, Apelul 2 (PDF)", "https://www.regiocentru.ro/wp-content/uploads/2026/04/Ghidul-solicitantului-%E2%80%93-Actiunea-2.2-%E2%80%93-Apel-2.pdf"],
+    ["ADR Centru – comunicatul de lansare", "https://www.regiocentru.ro/lansarea-celui-de-al-doilea-apel-de-finantare-pentru-digitalizarea-imm-urilor/"],
+    ["ADR Centru – schema de ajutor de minimis", "https://www.regiocentru.ro/schema-de-ajutor-de-minimis-aferenta-investitiilor-din-cadrul-actiunii-2-2-intreprinderi-digitale-pentru-o-economie-avansata-apel-2/"],
+    ["MySMIS2021 – platforma de depunere", "https://mysmis2021.gov.ro/"]
+  ],
+  "faqs": [
+    ["Când se depun proiectele pentru digitalizare IMM în Regiunea Centru?", "În MySMIS, de pe 2 decembrie 2026, ora 12:00, până pe 2 februarie 2027, ora 12:00. Caută codul PRC/1059/PRC_P2/OP1/RSO1.2/PRC_A32."],
+    ["Pot aplica firmele cu proiecte în mediul rural?", "Da. Apelul acoperă mediul urban și rural din județele Alba, Brașov, Covasna, Harghita, Mureș și Sibiu."],
+    ["Se poate depune un proiect doar pentru laptopuri și servere?", "Nu. Proiectul trebuie să includă active necorporale eligibile. Echipamentele trebuie să fie necesare pentru soluțiile și obiectivele din planul de digitalizare."],
+    ["Unde verific codurile CAEN excluse?", "Lista se află în Anexa 3 publicată de ADR Centru. Verifică atât codurile autorizate și activitățile excluse din care firma a obținut venituri, cât și dovada veniturilor din codurile eligibile pe care le va digitaliza."],
+    ["Cât poate dura implementarea?", "Ghidul prevede cel mult 24 de luni. Dreptul asupra spațiului trebuie să acopere implementarea și perioada de durabilitate de trei ani de la plata finală."],
+    ["Ajunge un punctaj de 50 pentru a primi finanțare?", "Este pragul minim de calitate. Contractarea depinde de criteriile eliminatorii, clasament, tranșa de depunere și bugetul disponibil."],
+    ["Ce documente pot duce la respingere dacă lipsesc la depunere?", "Lipsa planului de digitalizare sau a machetei financiare duce la respingerea cererii. Ghidul precizează că omisiunea nu se poate remedia prin clarificări."]
+  ]
+}

@@ -310,6 +310,7 @@ Maparea de mai jos folosește snapshot-ul factual de bază verificat în registr
 | `fondul-modernizare-pc1-stocare` | `apel_deschis` | `OPEN` | Apel deschis — depuneri până la 15.11.2026 | program_call | Anunțul oficial de lansare și prelungirea publicată la 22.10.2026 confirmă intervalul curent în MySMIS 2021. |
 | `programul-tranzitie-justa` | `calendar_estimativ` | `UNCONFIRMED` | Status neconfirmat — verifică sursa oficială | umbrella_program | Apelurile din program au stări distincte în MySMIS. |
 | `fondul-de-modernizare` | `calendar_estimativ` | `UNCONFIRMED` | Status neconfirmat — verifică sursa oficială | umbrella_program | Apelurile Fondului pentru Modernizare au stări distincte în MySMIS. |
+| `digitalizare-imm-regiunea-centru-apel-2` | `ghid_aprobat_nedeschis` | `SCHEDULED` | Apel programat — depuneri între 02.12.2026 și 02.02.2027 | program_call | ADR Centru a publicat ghidul și intervalul oficial de depunere în MySMIS. La 9 noiembrie 2026, fereastra de depunere este viitoare. |
 
 ## Păstrarea paginilor închise/finalizate
 

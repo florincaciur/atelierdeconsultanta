@@ -2334,6 +2334,36 @@
           "meaningful": false
         }
       ]
+    },
+    {
+      "id": "digitalizare-imm-regiunea-centru-apel-2",
+      "route": "/digitalizare-imm-regiunea-centru-apel-2",
+      "contentType": "program",
+      "programId": "digitalizare-imm-regiunea-centru-apel-2",
+      "governanceState": "public",
+      "author": "FABER – Atelier de Consultanță",
+      "authorRole": "Autor organizațional",
+      "reviewer": "Echipa editorială FABER",
+      "reviewerRole": "Revizuire editorială și conformitate",
+      "attributionType": "organization",
+      "personalNameConsent": false,
+      "verifiedAt": "2026-11-09",
+      "officialSourceName": "ADR Centru",
+      "officialSourceUrl": "https://www.regiocentru.ro/actiuni/2-2-intreprinderi-digitale-pentru-o-economie-avansata-apel-2/",
+      "sourceVersion": "Ghidul solicitantului și anexele publicate la 30 octombrie 2026, cod PRC/1059/PRC_P2/OP1/RSO1.2/PRC_A32",
+      "nextReviewAt": "2026-12-02",
+      "lastMeaningfulUpdate": "2026-11-09",
+      "statusSnapshot": "ghid_aprobat_nedeschis",
+      "changelog": [
+        {
+          "date": "2026-11-09",
+          "summary": "Prezentarea ghidului, calendarului, condițiilor de eligibilitate, cheltuielilor și criteriilor de selecție pentru Apelul 2.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": true
+        }
+      ],
+      "datePublished": "DE_VALIDAT_UMAN",
+      "officialSourceUpdatedAt": "2026-10-30"
     }
   ]
 }

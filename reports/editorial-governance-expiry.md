@@ -1,11 +1,11 @@
 # Raport de prospețime și guvernanță editorială
 
-Data evaluării: **2026-11-05**. Registru: `config/editorial-governance.json`.
+Data evaluării: **2026-11-09**. Registru: `config/editorial-governance.json`.
 
 ## Rezumat
 
-- Pagini guvernate: **39**
-- Pagini publice cu metadate complete: **28**
+- Pagini guvernate: **40**
+- Pagini publice cu metadate complete: **29**
 - Verificări expirate: **10**
 - Surse lipsă/incomplete: **1**
 - Reviewer lipsă: **0**
@@ -52,10 +52,11 @@ O expirare produce warning intern și nu schimbă automat statusul, textul, `ver
 | `/start-up-nation-2026-plan-de-afaceri` | guide | pending_validation | — | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | 2026-05-20 | DE_VALIDAT_UMAN | 2026-08-18 | nu | da | nu | nu |
 | `/webinarii` | guide | pending_validation | — | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | 2026-05-20 | DE_VALIDAT_UMAN | 2026-08-18 | nu | da | nu | nu |
 | `/diaspora-investeste-acasa` | program | public | ghid_aprobat_nedeschis | DE_VALIDAT_UMAN | 2026-11-04 | 2026-11-04 | DE_VALIDAT_UMAN | 2027-01-03 | nu | nu | nu | nu |
-| `/e-drive` | program | public | consultare_publica | DE_VALIDAT_UMAN | 2026-11-04 | 2026-11-04 | DE_VALIDAT_UMAN | 2027-01-03 | nu | nu | nu | nu |
+| `/e-drive` | program | public | consultare_publica | DE_VALIDAT_UMAN | 2026-11-09 | 2026-11-04 | DE_VALIDAT_UMAN | 2027-01-03 | nu | nu | nu | nu |
 | `/e-mobility` | program | public | apel_deschis | DE_VALIDAT_UMAN | 2026-11-04 | 2026-11-04 | DE_VALIDAT_UMAN | 2026-12-04 | nu | nu | nu | nu |
 | `/fondul-modernizare-pc1-stocare` | program | public | apel_deschis | DE_VALIDAT_UMAN | 2026-11-04 | 2026-11-04 | 2026-10-22 | 2026-12-04 | nu | nu | nu | nu |
 | `/fondul-modernizare-pc1-stocare-entitati-publice` | program | public | apel_deschis | DE_VALIDAT_UMAN | 2026-11-04 | 2026-11-04 | 2026-09-11 | 2026-12-04 | nu | nu | nu | nu |
+| `/digitalizare-imm-regiunea-centru-apel-2` | program | public | ghid_aprobat_nedeschis | DE_VALIDAT_UMAN | 2026-11-09 | 2026-11-09 | 2026-10-30 | 2026-12-02 | nu | nu | nu | nu |
 
 ## Reguli de prospețime
 

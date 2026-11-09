@@ -94,6 +94,7 @@ const OFFICIAL_HOST_SUFFIXES = Object.freeze([
   "afir.ro",
   "mt.ro",
   "regionordest.ro",
+  "regiocentru.ro",
   "legislatie.just.ro",
   "fonduri-ue.ro",
   "commission.europa.eu"

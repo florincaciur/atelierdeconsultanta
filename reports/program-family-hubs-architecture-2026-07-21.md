@@ -11,7 +11,7 @@ Sursa programelor: `config/seo-programs.json`
 
 Convenția este **păstrarea rutelor canonice existente**. Familia este o proprietate controlată din registru, nu un segment nou impus în URL. Nu se creează rute și nu se implementează redirecturi în P1.03. O schimbare viitoare de rută rămâne blocată până la o mapare source → target și aprobare SEO bazată inclusiv pe date GSC și backlink-uri.
 
-Ruta canonică `/fonduri-europene` este catalogul public. Echivalentul repo pentru `catalogEnabled=true` este `discovery.listed=true`; selecția unică `catalogPrograms()` produce în prezent **24** intrări publice, fără redirect targets. Reuniunea cardurilor celor cinci familii trebuie să fie identică acestei selecții.
+Ruta canonică `/fonduri-europene` este catalogul public. Echivalentul repo pentru `catalogEnabled=true` este `discovery.listed=true`; selecția unică `catalogPrograms()` produce în prezent **25** intrări publice, fără redirect targets. Reuniunea cardurilor celor cinci familii trebuie să fie identică acestei selecții.
 
 | Familie | Rută canonică păstrată | Decizie | Redirect | Motiv |
 |---|---|---|---|---|
@@ -92,6 +92,7 @@ Statusul folosește exclusiv taxonomia registrului: `apel_deschis`, `ghid_aproba
 | PC1 Stocare stand-alone | `/fondul-modernizare-pc1-stocare` | Energie — `/finantari-panouri-fotovoltaice` | `public` | Da |
 | Programul Tranziție Justă | `/programul-tranzitie-justa` | Regional / ADR — `/fonduri-regionale` | `public` | Da |
 | Fondul pentru Modernizare | `/fondul-de-modernizare` | Energie — `/finantari-panouri-fotovoltaice` | `public` | Da |
+| Digitalizare IMM Regiunea Centru – Apel 2 | `/digitalizare-imm-regiunea-centru-apel-2` | Digitalizare & inovare — `/fonduri-europene-digitalizare` | `public` | Da |
 
 Înregistrări excluse din cardurile publice până la validare: .
 

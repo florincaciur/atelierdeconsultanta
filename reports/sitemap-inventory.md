@@ -6,10 +6,10 @@ Generatorul include numai rute locale 200, indexabile si self-canonical. `lastmo
 
 - URL-uri raportate in auditul initial: 102
 - URL-uri in baseline-ul repository la inceputul P0.11: 92
-- URL-uri incluse acum: 105
-- URL-uri cu lastmod editorial verificabil: 27
+- URL-uri incluse acum: 106
+- URL-uri cu lastmod editorial verificabil: 28
 - URL-uri fara lastmod (omis intentionat): 78
-- sitemap-programs.xml: 27 (Pagini de programe)
+- sitemap-programs.xml: 28 (Pagini de programe)
 - sitemap-guides.xml: 30 (Ghiduri si continut editorial)
 - sitemap-core.xml: 48 (Pagini core, servicii, instrumente si juridice)
 
@@ -17,9 +17,8 @@ Generatorul include numai rute locale 200, indexabile si self-canonical. `lastmo
 
 - duplicate_policy_pending_legal_consolidation: 1
 - meta_refresh: 2
-- missing_canonical: 12
+- missing_canonical: 5
 - noindex_meta: 63
-- noncanonical_file_variant: 1
 - redirect_source: 104
 
 ## Lista excluderilor
@@ -29,13 +28,6 @@ Generatorul include numai rute locale 200, indexabile si self-canonical. `lastmo
 | https://atelierdeconsultanta.ro/gdpr | gdpr.html | duplicate_policy_pending_legal_consolidation | Politica duplicata este omisa din sitemap; redirectul ramane conditionat de aprobarea juridica si SEO. |
 | https://atelierdeconsultanta.ro/fondul-de-modernizare | fondul-de-modernizare.html | meta_refresh | - |
 | https://atelierdeconsultanta.ro/pnrr | pnrr.html | meta_refresh | - |
-| /.codex/pc1-sources/news | .codex/pc1-sources/news.html | missing_canonical | - |
-| /.codex/pc1-sources/solar | .codex/pc1-sources/solar.html | missing_canonical | - |
-| /.codex/pc1-sources/storage | .codex/pc1-sources/storage.html | missing_canonical | - |
-| /.tmp/dr12-review/official | .tmp/dr12-review/official.html | missing_canonical | - |
-| /.tmp/dr12-review/release | .tmp/dr12-review/release.html | missing_canonical | - |
-| /.tmp/dr12-review/sessions | .tmp/dr12-review/sessions.html | missing_canonical | - |
-| /.tmp/soc-source-current | .tmp/soc-source-current.html | missing_canonical | - |
 | /google8bbb9999c523a3bd | google8bbb9999c523a3bd.html | missing_canonical | - |
 | /partials/global-header | partials/global-header.html | missing_canonical | - |
 | /partials/preferred-source | partials/preferred-source.html | missing_canonical | - |
@@ -104,7 +96,6 @@ Generatorul include numai rute locale 200, indexabile si self-canonical. `lastmo
 | https://atelierdeconsultanta.ro/studii-de-caz-fonduri-europene | studii-de-caz/index.html | noindex_meta | - |
 | https://atelierdeconsultanta.ro/studii-de-caz-fonduri-europene | testimoniale.html | noindex_meta | - |
 | https://atelierdeconsultanta.ro/studii-de-caz-fonduri-europene | testimoniale/index.html | noindex_meta | - |
-| https://atelierdeconsultanta.ro/e-drive | .tmp/edrive-preferred-before.html | noncanonical_file_variant | canonical route: /e-drive |
 | https://atelierdeconsultanta.ro/afir-autoconsum-agroalimentar | _redirects | redirect_source | HTTP 301 |
 | https://atelierdeconsultanta.ro/afir-autoconsum-agroalimentar | _redirects | redirect_source | HTTP 301 |
 | https://atelierdeconsultanta.ro/autoconsum-public-fotovoltaice-institutii-publice | _redirects | redirect_source | HTTP 301 |

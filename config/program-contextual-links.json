@@ -172,6 +172,10 @@
       "href": "/fondul-modernizare-pc1-stocare-entitati-publice",
       "anchor": "compară PC1 Stocare pentru entități publice",
       "explanation": "Alege linia de baterii în spatele contorului când instituția are deja o instalație regenerabilă eligibilă."
+    },
+    "adr_centru_digitalizare": {
+      "href": "/digitalizare-imm-regiunea-centru-apel-2",
+      "anchor": "verifică finanțarea pentru digitalizare IMM în Regiunea Centru"
     }
   },
   "programs": {
@@ -211,7 +215,7 @@
     },
     "digitalizare-imm": {
       "instrument": "eligibility_check",
-      "comparison": "digital_costs",
+      "comparison": "adr_centru_digitalizare",
       "conversionAnchor": "Verifică încadrarea proiectului de digitalizare"
     },
     "modernizare-microintreprinderi-ne-2": {
@@ -304,6 +308,11 @@
       "instrument": "eligibility_check",
       "comparison": "cofinancing_guide",
       "conversionAnchor": "Verifică schema potrivită din Fondul pentru Modernizare"
+    },
+    "digitalizare-imm-regiunea-centru-apel-2": {
+      "instrument": "eligibility_check",
+      "comparison": "digital_costs",
+      "conversionAnchor": "Verifică proiectul de digitalizare pentru Apelul 2"
     }
   }
 }

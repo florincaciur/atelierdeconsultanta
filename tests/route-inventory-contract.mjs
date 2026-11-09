@@ -6,18 +6,19 @@ import { fileURLToPath } from "node:url";
 
 const require = createRequire(import.meta.url);
 const { buildInventory, checkReportCoverage, validateInventory } = require("../tools/generate-route-inventory.js");
+const { carouselPrograms } = require("../tools/program-factual-governance.js");
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const REPORT = path.join(ROOT, "docs", "faber-remediation", "ROUTE_INVENTORY.md");
 const inventory = buildInventory();
 
 assert.equal(validateInventory(inventory).length, 0, validateInventory(inventory).join("\n"));
-assert.equal(inventory.routes.length, 106, "Inventarul public aprobat trebuie revizuit explicit când se schimbă de la 106.");
+assert.equal(inventory.routes.length, 107, "Inventarul public aprobat trebuie revizuit explicit când se schimbă de la 107.");
 assert.deepEqual(inventory.routesWithoutSitemap.map((route) => route.route), ["/gdpr"], "Pagina GDPR publică/indexabilă trebuie păstrată vizibilă ca excludere de sitemap aprobată.");
 assert.equal(new Set(inventory.routes.map((route) => route.route)).size, inventory.routes.length, "Rutele canonical trebuie să fie unice.");
 assert.equal(new Set(inventory.routes.map((route) => route.canonicalUrl)).size, inventory.routes.length, "Canonicalele publicate trebuie să fie unice.");
-assert.equal(inventory.seo.programs.length, 26, "Baseline-ul registry are 26 de entități de program.");
-assert.equal(inventory.banners.filter((banner) => banner.active !== false).length, 24, "Baseline-ul homepage are 24 bannere active.");
+assert.equal(inventory.seo.programs.length, 27, "Baseline-ul registry are 27 de entități de program.");
+assert.equal(inventory.banners.filter((banner) => banner.active !== false).length, carouselPrograms(inventory.seo.programs).length, "Bannerele active trebuie să urmeze selecția din registru.");
 assert.ok(inventory.canonicalDuplicates.length > 0, "Aliasurile fizice canonical trebuie detectate și documentate.");
 assert.deepEqual(inventory.publicFragments.map((item) => item.route).sort(), [
   "/google8bbb9999c523a3bd",
