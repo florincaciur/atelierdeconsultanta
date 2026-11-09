@@ -34,7 +34,8 @@ assert.equal(new Set(renderedIds).size, renderedIds.length, "ID-urile programelo
 assert.equal(new Set(renderedBannerIds).size, renderedBannerIds.length, "ID-urile bannerelor randate trebuie să fie unice");
 assert.equal(new Set(renderedLinks).size, renderedLinks.length, "linkurile canonice ale bannerelor trebuie să fie unice");
 assert.deepEqual(renderedIds, expectedCarousel.map((program) => program.id), "ordinea trebuie să provină din registrul unic");
-assert.equal(expectedCarousel.length, 15, "Homepage-ul prezintă cele 14 priorități din captură și Autoconsum Agro-Alim AFIR.");
+assert.equal(expectedCarousel.length, 16, "Homepage-ul păstrează programele anterioare și adaugă apelul ADR Centru.");
+assert.equal(expectedCarousel[0].id, "digitalizare-imm-regiunea-centru-apel-2", "Apelul ADR Centru deschide caruselul.");
 assert.deepEqual($("#hero [data-hero-program-item]").map((_, el) => $(el).attr("data-program-id")).get(), renderedIds, "Fiecare banner are buton corespondent, în aceeași ordine.");
 assert.equal(new Set($("[data-priority-art] svg").map((_, el) => $(el).html()).get()).size, expectedCarousel.length, "Fiecare program are o scenă distinctă.");
 assert.equal(banners.length, expectedCarousel.length, "banners.json trebuie să fie 1:1 cu programele banner-enabled");

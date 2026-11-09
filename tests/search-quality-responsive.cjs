@@ -4,6 +4,8 @@ const path = require('node:path');
 const http = require('node:http');
 const { chromium } = require('playwright');
 const { sitemapRoutes, fileForRoute } = require('../tools/structured-data-utils');
+const { homepageHeroPrograms, loadProgramConfig } = require('../tools/program-factual-governance');
+const heroProgramCount = homepageHeroPrograms(loadProgramConfig().programs).length;
 const ROOT = path.resolve(__dirname, '..');
 const OUT = path.join(ROOT, 'reports/domain-audit-2026-11-05');
 const all = process.argv.includes('--all');
@@ -72,10 +74,10 @@ async function main(){
      assert(metrics.h1.top>=metrics.header.bottom-1,`${viewport.width}: H1 covered by header`);
      assert(metrics.panel.top>=metrics.header.bottom+8,`${viewport.width}: panel covered by header`);
      assert(metrics.panel.bottom<=metrics.hero.bottom+1,`${viewport.width}: panel clipped by next section`);
-     assert.equal(metrics.programs,15);
+     assert.equal(metrics.programs,heroProgramCount);
      assert(metrics.scene.height<=metrics.scene.width+1,`${viewport.width}: distorted scene`);
      if(!all){
-      for(let i=0;i<15;i++){
+      for(let i=0;i<heroProgramCount;i++){
        const link=page.locator('#hero [data-hero-program-item]').nth(i);
        await link.focus();
        assert.equal(await link.getAttribute('aria-current'),'true');

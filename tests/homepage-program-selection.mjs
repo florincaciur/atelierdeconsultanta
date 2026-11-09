@@ -7,7 +7,7 @@ import { chromium } from 'playwright';
 import AxeBuilder from '@axe-core/playwright';
 const require=createRequire(import.meta.url), ROOT=path.resolve(import.meta.dirname,'..');
 const {fileForRoute}=require('../tools/structured-data-utils');
-const expected=['modernizare-microintreprinderi-ne-2','autoconsum-institutii-publice','e-drive','dr12-afir','dr14-afir','diaspora-investeste-acasa','fondul-modernizare-pc1-stocare','fondul-modernizare-pc1-stocare-entitati-publice','pro-infra','pocidif-21','dr18-afir','e-move-ro','e-mobility-ro','digitalizare-imm'];
+const expected=['digitalizare-imm-regiunea-centru-apel-2','modernizare-microintreprinderi-ne-2','autoconsum-institutii-publice','e-drive','dr12-afir','dr14-afir','diaspora-investeste-acasa','fondul-modernizare-pc1-stocare','fondul-modernizare-pc1-stocare-entitati-publice','pro-infra','pocidif-21','dr18-afir','e-move-ro','e-mobility-ro','digitalizare-imm','afir-energie-autoconsum'];
 const programs=require('../config/seo-programs.json').programs;
 const mime={'.html':'text/html','.js':'application/javascript','.css':'text/css','.svg':'image/svg+xml','.json':'application/json','.webp':'image/webp','.woff2':'font/woff2'};
 const server=http.createServer((req,res)=>{const u=new URL(req.url,'http://localhost').pathname;const f=path.extname(u)?path.join(ROOT,u):fileForRoute(ROOT,u);if(!f.startsWith(ROOT)||!fs.existsSync(f)){res.writeHead(404).end();return;}res.setHeader('Content-Type',mime[path.extname(f)]||'application/octet-stream');fs.createReadStream(f).pipe(res);});
@@ -15,7 +15,7 @@ const remote=process.argv.find(x=>x.startsWith('--base='))?.slice(7);
 if(!remote)await new Promise(r=>server.listen(0,'127.0.0.1',r));
 const base=remote||`http://127.0.0.1:${server.address().port}`;
 const browser=await chromium.launch();
-const out=path.join(ROOT,'.codex','homepage14-screens');fs.mkdirSync(out,{recursive:true});
+const out=path.join(ROOT,'.codex','homepage-program-screens');fs.mkdirSync(out,{recursive:true});
 try {
  for(const width of [320,390,768,1440]){
   const context=await browser.newContext({viewport:{width,height:960},reducedMotion:'reduce'});
@@ -42,7 +42,7 @@ try {
   for(const id of expected){const link=page.locator(`#hero [data-hero-program-item][data-program-id="${id}"]`);await link.focus();assert.equal(await page.locator('[data-hero-program-link]').getAttribute('href'),programs.find(p=>p.id===id).pageUrl);}
   const axe=await new AxeBuilder({page}).include('#hero').include('#priority-programs').withTags(['wcag2a','wcag2aa','wcag21aa','wcag22aa']).analyze();
   assert.deepEqual(axe.violations.map(x=>({id:x.id,nodes:x.nodes.map(n=>n.target)})),[],`${width}: homepage accessibility`);
-  console.log(`PASS ${width}px: 14 banners/buttons, unique links, keyboard/wrap, no overlap and axe`);
+  console.log(`PASS ${width}px: ${expected.length} banners/buttons, unique links, keyboard/wrap, no overlap and axe`);
   await context.close();
  }
 } finally {await browser.close();if(!remote)await new Promise(r=>server.close(r));}

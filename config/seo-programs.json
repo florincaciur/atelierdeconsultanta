@@ -287,8 +287,8 @@
         "image": "/assets/hero/hero-agriculture.webp",
         "beneficiary": null,
         "pageTitle": "DR 12 AFIR 2026: ghid final, eligibilitate și punctaj",
-        "carouselOrder": 4,
-        "heroOrder": 4,
+        "carouselOrder": 5,
+        "heroOrder": 5,
         "navigationOrder": 4
       },
       "discovery": {
@@ -428,8 +428,8 @@
           "label": "Depuneri: 1 septembrie–16 noiembrie 2026",
           "note": "Calendar oficial AFIR prelungit; componenta achiziții simple este închisă din 6 octombrie. Verifică disponibilul pe componente."
         },
-        "carouselOrder": 5,
-        "heroOrder": 5,
+        "carouselOrder": 6,
+        "heroOrder": 6,
         "navigationOrder": 5
       },
       "discovery": {
@@ -579,8 +579,8 @@
           "label": "Depuneri până la 16 noiembrie 2026",
           "note": "Sesiune prelungită de AFIR; verifică disponibilul și regulile de închidere anticipată."
         },
-        "carouselOrder": 11,
-        "heroOrder": 11,
+        "carouselOrder": 12,
+        "heroOrder": 12,
         "navigationOrder": 11
       },
       "discovery": {
@@ -834,9 +834,9 @@
         "icon": "ph-desktop",
         "image": "/assets/hero/hero-digital.webp",
         "beneficiary": null,
-        "carouselOrder": 14,
+        "carouselOrder": 15,
         "navigationOrder": 14,
-        "heroOrder": 14
+        "heroOrder": 15
       },
       "discovery": {
         "parentHub": "/fonduri-europene-digitalizare",
@@ -970,8 +970,8 @@
           "label": "Apel închis la 28 octombrie 2026",
           "note": "Sesiune încheiată, conform paginii oficiale verificate la 3 noiembrie 2026."
         },
-        "carouselOrder": 1,
-        "heroOrder": 1,
+        "carouselOrder": 2,
+        "heroOrder": 2,
         "navigationOrder": 1
       },
       "discovery": {
@@ -1266,8 +1266,8 @@
         "icon": "ph-sun",
         "image": "/assets/hero/hero-solar.webp",
         "beneficiary": "întreprinderi agricole, procesatori și OUAI/FOUAI",
-        "carouselOrder": 15,
-        "heroOrder": 15,
+        "carouselOrder": 16,
+        "heroOrder": 16,
         "navigationOrder": 15
       },
       "discovery": {
@@ -1399,8 +1399,8 @@
         "image": "/assets/hero/hero-solar.webp",
         "beneficiary": "entități și instituții publice eligibile",
         "pageTitle": "PC1 Autoconsum 2026 – panouri fotovoltaice cu stocare pentru entități publice",
-        "carouselOrder": 2,
-        "heroOrder": 2,
+        "carouselOrder": 3,
+        "heroOrder": 3,
         "navigationOrder": 2
       },
       "discovery": {
@@ -1530,8 +1530,8 @@
         "icon": "ph-battery-charging",
         "image": "/assets/hero/hero-solar.webp",
         "beneficiary": "entități publice cu instalații regenerabile existente",
-        "carouselOrder": 8,
-        "heroOrder": 8,
+        "carouselOrder": 9,
+        "heroOrder": 9,
         "navigationOrder": 8
       },
       "discovery": {
@@ -1643,9 +1643,9 @@
         "icon": "ph-factory",
         "image": "/assets/hero/hero-solar.webp",
         "beneficiary": null,
-        "carouselOrder": 9,
+        "carouselOrder": 10,
         "navigationOrder": 9,
-        "heroOrder": 9
+        "heroOrder": 10
       },
       "discovery": {
         "parentHub": "/finantari-panouri-fotovoltaice",
@@ -1945,8 +1945,8 @@
         "icon": "ph-battery-charging",
         "image": "/assets/hero/hero-solar.webp",
         "beneficiary": null,
-        "carouselOrder": 12,
-        "heroOrder": 12,
+        "carouselOrder": 13,
+        "heroOrder": 13,
         "navigationOrder": 12
       },
       "discovery": {
@@ -2091,8 +2091,8 @@
         "icon": "ph-duotone ph-circuitry",
         "image": "/assets/hero/hero-digital.webp",
         "beneficiary": null,
-        "carouselOrder": 10,
-        "heroOrder": 10,
+        "carouselOrder": 11,
+        "heroOrder": 11,
         "navigationOrder": 10
       },
       "discovery": {
@@ -2272,8 +2272,8 @@
         "icon": "ph-house-line",
         "image": "/assets/hero/hero-local.webp",
         "beneficiary": "români din diaspora care înființează o întreprindere în România",
-        "carouselOrder": 6,
-        "heroOrder": 6,
+        "carouselOrder": 7,
+        "heroOrder": 7,
         "navigationOrder": 6
       },
       "discovery": {
@@ -2401,8 +2401,8 @@
         "icon": "ph-bus",
         "image": "/assets/hero/hero-solar.webp",
         "beneficiary": "IMM-uri și operatori de transport rutier de persoane",
-        "carouselOrder": 3,
-        "heroOrder": 3,
+        "carouselOrder": 4,
+        "heroOrder": 4,
         "navigationOrder": 3
       },
       "discovery": {
@@ -2532,8 +2532,8 @@
         "icon": "ph-charging-station",
         "image": "/assets/hero/hero-solar.webp",
         "beneficiary": "întreprinderi care dezvoltă infrastructură publică de reîncărcare",
-        "carouselOrder": 13,
-        "heroOrder": 13,
+        "carouselOrder": 14,
+        "heroOrder": 14,
         "navigationOrder": 13
       },
       "discovery": {
@@ -2662,8 +2662,8 @@
         "icon": "ph-battery-high",
         "image": "/assets/hero/hero-solar.webp",
         "beneficiary": "întreprinderi care dezvoltă capacități de stocare stand-alone",
-        "carouselOrder": 7,
-        "heroOrder": 7,
+        "carouselOrder": 8,
+        "heroOrder": 8,
         "navigationOrder": 7
       },
       "discovery": {
@@ -2960,9 +2960,12 @@
         "notes": "Intervalul MySMIS este confirmat prin ghid și comunicatul oficial de lansare."
       },
       "presentation": {
-        "carousel": false,
-        "hero": false,
+        "carousel": true,
+        "hero": true,
         "order": 50,
+        "carouselOrder": 1,
+        "heroOrder": 1,
+        "navigationOrder": 16,
         "icon": "ph-desktop",
         "image": "/assets/hero/hero-digital.webp",
         "beneficiary": "IMM-uri cu investiții în Regiunea Centru"
@@ -11046,14 +11049,14 @@
       "minFaq": 8,
       "contentSections": [
         {
-          "title": "Ghid complet GAL-AFIR",
+          "title": "Eligibilitate și documente pentru proiecte GAL",
           "paragraphs": [
-            "Pagina de apeluri GAL rămâne orientată pe identificarea sesiunilor locale. Pentru explicația completă despre GAL-AFIR, beneficiari publici și privați, scriere de proiecte și preluare implementare, folosește hub-ul dedicat."
+            "După ce găsești apelul local, verifică dacă solicitantul și investiția se încadrează în ghidul GAL. În pagina dedicată proiectelor GAL găsești repere pentru documentație, depunere și implementare."
           ],
           "links": [
             {
               "href": "/gal-afir",
-              "label": "Ghid complet GAL-AFIR"
+              "label": "Documentație și implementare pentru proiecte GAL"
             }
           ]
         }

@@ -222,7 +222,7 @@ function synchronize(source, programs) {
   // The hero generator owns the critical block's final position. Anchoring the
   // flow assets immediately before it makes both generators converge even
   // when the long-form bundle is also present on the homepage.
-  if (homepageHeroStyle.test(output)) output = output.replace(homepageHeroStyle, `${newline}  ${STYLE}${newline}  ${SCRIPT}${newline}  ${FORM_ASSETS}${newline}  `);
+  if (homepageHeroStyle.test(output)) output = output.replace(homepageHeroStyle, `${newline}  ${STYLE}${newline}  ${SCRIPT}${newline}  ${FORM_ASSETS}${newline}`);
   else if (longFormAsset.test(output)) output = output.replace(longFormAsset, `${newline}  ${STYLE}${newline}  ${SCRIPT}${newline}  ${FORM_ASSETS}${newline}  `);
   else output = output.replace(/<\/head>/i, `  ${STYLE}${newline}  ${SCRIPT}${newline}  ${FORM_ASSETS}${newline}</head>`);
   return removeLegacyRuntime(output);

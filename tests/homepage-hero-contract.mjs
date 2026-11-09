@@ -7,13 +7,19 @@ import * as cheerio from "cheerio";
 const require = createRequire(import.meta.url);
 const ROOT = path.resolve(import.meta.dirname, "..");
 const { hasOfficialSource, homepageHeroPrograms, isPublicProgram, loadProgramConfig } = require("../tools/program-factual-governance");
-const { latestVerifiedProgram } = require("../tools/sync-homepage-hero");
+const { latestVerifiedProgram, syncHomepageHero } = require("../tools/sync-homepage-hero");
+const { synchronize: syncDecisionFlow } = require("../tools/sync-homepage-decision-flow");
 const html = fs.readFileSync(path.join(ROOT, "index.html"), "utf8");
 const css = fs.readFileSync(path.join(ROOT, "assets", "homepage-hero.css"), "utf8");
 const $ = cheerio.load(html, { decodeEntities: false });
 const { programs } = loadProgramConfig();
 const latest = latestVerifiedProgram(programs);
 const homepagePrograms = homepageHeroPrograms(programs);
+const normalizeNewlines = (source) => source.replace(/\r\n/gu, "\n");
+const heroThenFlow = syncDecisionFlow(syncHomepageHero(html, programs), programs);
+const flowThenHero = syncHomepageHero(syncDecisionFlow(html, programs), programs);
+assert.equal(normalizeNewlines(heroThenFlow), normalizeNewlines(flowThenHero), "Generatoarele hero și flux homepage trebuie să producă același rezultat în orice ordine.");
+assert.equal(normalizeNewlines(syncHomepageHero(heroThenFlow, programs)), normalizeNewlines(heroThenFlow), "Hero-ul trebuie să rămână sincronizat după regenerarea fluxului.");
 
 assert(latest && isPublicProgram(latest) && hasOfficialSource(latest), "programul recent trebuie să fie public și verificat oficial");
 assert.equal($("#hero.homepage-decision-hero").length, 1, "trebuie să existe exact un hero decizional");
@@ -43,6 +49,12 @@ assert.equal($("#hero [data-program-scene='dr14-afir'] .pv-tractor").length, 1, 
 assert.equal($("#hero [data-program-scene='dr14-afir'] .pv-field-bed").length, 1, "Scena DR 14 din homepage trebuie să includă un câmp");
 assert.equal($("#hero [data-hero-program-item][href='/dr18']").length, 1, "DR 18 trebuie publicat în meniul hero");
 assert.equal($("#hero [data-hero-program-item][href='/e-drive']").length, 1, "e-DRIVE trebuie publicat în meniul hero");
+const centruRoute = "/digitalizare-imm-regiunea-centru-apel-2";
+assert.equal($("#hero [data-hero-program-item]").first().attr("href"), centruRoute);
+assert.equal($("#hero [data-hero-program-link]").attr("href"), centruRoute);
+for (const menu of [".program-menu-link", ".mobile-program-link"]) {
+  assert.equal($(`${menu}[href='${centruRoute}']`).length, 1, "Apelul ADR Centru trebuie să apară în meniul Programe.");
+}
 assert.equal($("#hero [data-hero-programs]").parents("details").length, 0, "tabelul nu trebuie ascuns într-un acordeon");
 assert.equal($("#hero [data-hero-program-item][href='/por-adr-nord-est']").length, 0, "ruta regională duplicată nu trebuie publicată în hero");
 assert.equal($("#hero [data-hero-program-item][href='/investitii-modernizarea-microintreprinderilor-apel-2']").length, 1, "pagina de conversie regională trebuie publicată în hero");

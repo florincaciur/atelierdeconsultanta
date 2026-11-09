@@ -65,7 +65,7 @@ try {
     assert.equal(metrics.explorerVisible, 1);
     assert.equal(metrics.contactFormOpen, false, "formularul trebuie să fie restrâns implicit");
     if (viewport.width === 1366) {
-      // The hero must grow with all 15 programs and with text zoom. A fixed
+      // The hero must grow with the program list and with text zoom. A fixed
       // viewport-height constraint caused its panel to overlap the header.
       for (const section of metrics.sectionHeights.filter(section => section.id !== 'hero')) assert(section.height <= viewport.height * 1.1, `${section.id}: cadrul depășește o înălțime de ecran (${section.height}px)`);
     }

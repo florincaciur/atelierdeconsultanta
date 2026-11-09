@@ -29,7 +29,8 @@ assert.equal($("#hero.im-hero").attr("data-homepage-revision"), "immersive-20260
 assert.equal($("#hero .im-lead").length, 1, "introducerea imersivă trebuie să rămână compactă");
 assert.equal($("#hero .im-about .im-detail-copy").length, 1, "explicația completă rămâne în HTML și poate fi extinsă");
 assert.match($("#hero .im-lead").text(), /Verificare prudentă, documentată și interdisciplinară — consultanță și proiectare — înainte de dosar\./u);
-assert.equal($("[data-program-scene]").length, 15);
+const expectedPrograms = carouselPrograms(loadProgramConfig().programs);
+assert.equal($("[data-program-scene]").length, expectedPrograms.length);
 assert.equal($(".im-method-sculpture .im-slab").length, 5);
 assert.equal($("#homepage-contact #contact-triage-form").length, 1);
 assert.equal($("#homepage-contact .im-contact-disclosure").attr("open"), undefined, "formularul trebuie să fie restrâns implicit pentru a păstra al cincilea cadru compact");
@@ -56,7 +57,6 @@ assert.equal($(".homepage-tool-grid .homepage-card").length, 3, "lista instrumen
 assert.equal($(".homepage-proof-grid .homepage-card a").length, 3, "despre, sursele și metodologia trebuie să fie accesibile direct");
 assert.doesNotMatch(mainText, /\b(?:lider(?:ul)?|numărul\s*1|cei\s+mai\s+buni|rată\s+de\s+succes|sume\s+atrase|garantăm\s+(?:aprobarea|finanțarea)|finanțare\s+garantată)\b/iu, "homepage-ul conține o afirmație internă sau neverificabilă");
 
-const expectedPrograms = carouselPrograms(loadProgramConfig().programs);
 const slides = $("[data-priority-slide]");
 assert.equal(slides.length, expectedPrograms.length, "caruselul nu mai corespunde registrului unic");
 slides.each((index, slide) => {
