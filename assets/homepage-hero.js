@@ -11,12 +11,36 @@
   var count = root.querySelector("[data-hero-program-count]");
   var scenes = Array.prototype.slice.call(root.querySelectorAll("[data-program-scene]"));
   var spotlight = root.querySelector(".hero-program-spotlight");
+  var pages = Array.prototype.slice.call(root.querySelectorAll("[data-hero-program-page]"));
+  var pager = root.querySelector("[data-hero-program-pager]");
+  var previous = root.querySelector("[data-hero-program-prev]");
+  var next = root.querySelector("[data-hero-program-next]");
+  var pageCount = root.querySelector("[data-hero-program-page-count]");
+  var activePage = 0;
   var activeIndex = 0;
+
+  function showPage(index) {
+    if (index < 0 || index >= pages.length) return;
+    activePage = index;
+    pages.forEach(function (page, pageIndex) { page.hidden = pageIndex !== index; });
+    if (previous) previous.setAttribute("aria-disabled", String(index === 0));
+    if (next) next.setAttribute("aria-disabled", String(index === pages.length - 1));
+    if (pageCount) pageCount.textContent = "Grupul " + (index + 1) + " din " + pages.length;
+  }
+
+  function changePage(delta) {
+    var index = activePage + delta;
+    if (index < 0 || index >= pages.length) return;
+    if (spotlight) spotlight.setAttribute("aria-live", "polite");
+    setActive(items.indexOf(pages[index].querySelector("[data-hero-program-item]")), false);
+  }
 
   function setActive(index, focusItem) {
     if (!items.length) return;
     activeIndex = (index + items.length) % items.length;
     var item = items[activeIndex];
+    var pageIndex = pages.indexOf(item.closest("[data-hero-program-page]"));
+    if (pageIndex >= 0 && pageIndex !== activePage) showPage(pageIndex);
     items.forEach(function (entry, entryIndex) {
       if (entryIndex === activeIndex) entry.setAttribute("aria-current", "true");
       else entry.removeAttribute("aria-current");
@@ -48,8 +72,9 @@
     item.setAttribute("aria-controls", "hero-program-spotlight hero-program-visuals");
     item.removeAttribute("data-analytics-event");
     item.addEventListener("focus", function () { if (spotlight) spotlight.setAttribute("aria-live", "polite"); setActive(index, false); });
-    item.addEventListener("pointerenter", function (event) {
-      if (event.pointerType === "touch") return;
+    // A stationary pointer should not override keyboard focus when the page scrolls.
+    item.addEventListener("pointermove", function (event) {
+      if (event.pointerType === "touch" || index === activeIndex) return;
       if (spotlight) spotlight.setAttribute("aria-live", "off");
       setActive(index, false);
     });
@@ -63,5 +88,9 @@
   });
 
   root.classList.add("hero-programs--enhanced");
+  if (previous) previous.addEventListener("click", function () { changePage(-1); });
+  if (next) next.addEventListener("click", function () { changePage(1); });
+  if (pager && pages.length > 1) pager.hidden = false;
+  showPage(0);
   setActive(0, false);
 })();

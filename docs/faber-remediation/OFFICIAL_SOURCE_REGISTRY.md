@@ -42,6 +42,7 @@ Snapshot factual de bază al programelor: **2026-08-23**. Fiecare înregistrare 
 | `programul-tranzitie-justa` | Ministerul Investițiilor și Proiectelor Europene – MySMIS2021 | `UNCONFIRMED` | 2026-09-10 | 2026-11-03 |
 | `fondul-de-modernizare` | Ministerul Investițiilor și Proiectelor Europene – MySMIS2021 | `UNCONFIRMED` | 2026-09-10 | 2026-11-03 |
 | `digitalizare-imm-regiunea-centru-apel-2` | ADR Centru | `SCHEDULED` | 2026-11-09 | 2026-11-09 |
+| `sme-eco-tech` | Instituția Prefectului – Județul Vrancea | `OPEN` | 2026-11-09 | 2026-11-09 |
 
 ## `program-regional-nord-est` — Programul Regional Nord-Est 2021–2027
 
@@ -1338,6 +1339,54 @@ Snapshot factual de bază al programelor: **2026-08-23**. Fiecare înregistrare 
 | Sursă primară în registry-ul operațional | [Ghidul solicitantului și anexele publicate la 30 octombrie 2026, cod PRC/1059/PRC_P2/OP1/RSO1.2/PRC_A32](https://www.regiocentru.ro/actiuni/2-2-intreprinderi-digitale-pentru-o-economie-avansata-apel-2/) (verificat 2026-11-09) |
 | Chei surse repo | `digitalizare-imm-regiunea-centru-apel-2` |
 | Notes | Intervalul MySMIS este confirmat prin ghid și comunicatul oficial de lansare. |
+
+## `sme-eco-tech` — Programul pentru consolidarea IMM-urilor prin acces îmbunătățit la finanțare – SME Eco-Tech
+
+| Câmp | Valoare auditabilă |
+|---|---|
+| Stable program ID | `sme-eco-tech` |
+| Denumire oficială | Programul pentru consolidarea IMM-urilor prin acces îmbunătățit la finanțare – SME Eco-Tech |
+| Acronim | SME Eco-Tech |
+| Autoritate | Instituția Prefectului – Județul Vrancea |
+| Fond / program | Programul de Cooperare Elvețiano-Român |
+| Temei / document | Calendarul SME Eco-Tech, informarea oficială din octombrie 2026 — [document oficial](https://vn.prefectura.mai.gov.ro/oportunitati-de-finantare-societati-comerciale-octombrie-2026/) |
+| Stadiu | OPEN — Înscrieri până la 30 decembrie 2026, ora 20:00 |
+| Sesiune | [Calendarul publicat de Instituția Prefectului – Județul Vrancea](https://vn.prefectura.mai.gov.ro/oportunitati-de-finantare-societati-comerciale-octombrie-2026/) (`program`, verificat 2026-11-09)<br>[Comunicarea MEDAT de prelungire](https://economie.gov.ro/termenul-de-inscriere-in-cadrul-programului-sme-eco-tech-se-prelungeste-pana-la-30-decembrie-2026/) (`registry:sme-eco-tech-prelungire`, verificat 2026-11-09) |
+| Data deschiderii | 26.05.2026 |
+| Deadline | 30.12.2026 |
+| Prelungiri | Documentația oficială publicată și verificată la 09.11.2026 nu stabilește încă această informație. |
+| Buget | Documentația oficială publicată și verificată la 09.11.2026 nu stabilește încă această informație. |
+| Grant minim | Documentația oficială publicată și verificată la 09.11.2026 nu stabilește încă această informație. |
+| Grant maxim | 267.240 RON / beneficiar |
+| Intensitate | rate: 40; scope: maximum din cheltuielile eligibile |
+| Cofinanțare | Credit de minimum 60% din cheltuielile eligibile, contractat de la o bancă parteneră. Cheltuielile neeligibile se bugetează separat. |
+| Beneficiari | Microîntreprinderi, întreprinderi mici și mijlocii cu capital integral privat și activitate eligibilă în România. |
+| Regiune | Național |
+| CAEN | Documentația oficială publicată și verificată la 09.11.2026 nu stabilește încă această informație. |
+| Prag SO | Documentația oficială publicată și verificată la 09.11.2026 nu stabilește încă această informație. |
+| Investiții | Documentația oficială publicată și verificată la 09.11.2026 nu stabilește încă această informație. |
+| Cheltuieli eligibile | Documentația oficială publicată și verificată la 09.11.2026 nu stabilește încă această informație. |
+| Cheltuieli neeligibile | Documentația oficială publicată și verificată la 09.11.2026 nu stabilește încă această informație. |
+| Condiții critice | Societate înregistrată conform Legii nr. 31/1990, cu capital integral privat și cifră de afaceri pozitivă în 2024.; Firmă înființată cel târziu la 31 decembrie 2021, cu sediu sau punct de lucru și activitate în România.; Un cod CAEN din lista eligibilă, principal sau secundar cel puțin de la 1 ianuarie 2022 și autorizat la depunere.; Proiect cu buget eligibil de minimum 668.100 lei și posibilitatea contractării creditului de la o bancă parteneră.; Cel puțin 40% din cheltuielile eligibile se alocă investițiilor verzi sau digitale prevăzute de procedură. |
+| Documente | [Pagina oficială a programului, MEDAT](https://economie.gov.ro/programul-sme-eco-tech/)<br>[Procedura aprobată prin Ordinul nr. 1.392/2025](https://vn.prefectura.mai.gov.ro/oportunitati-de-finantare-societati-comerciale-octombrie-2026/)<br>[Ordinul nr. 1.773/2026, Monitorul Oficial nr. 906](https://economie.gov.ro/sme-eco-tech-firmele-respinse-pot-depune-o-noua-cerere-iar-finantarea-poate-fi-solicitata-si-pentru-coduri-caen-secundare/)<br>[Comunicarea MEDAT de prelungire](https://economie.gov.ro/termenul-de-inscriere-in-cadrul-programului-sme-eco-tech-se-prelungeste-pana-la-30-decembrie-2026/)<br>[Eliminarea pragului de cifră de afaceri pentru microîntreprinderi](https://economie.gov.ro/mai-putine-conditii-mai-multe-investitii-sme-eco-tech-elimina-pragul-minim-de-2-milioane-de-lei-cifra-de-afaceri-pentru-microintreprinderi/) |
+| Indicatori | Documentația oficială publicată și verificată la 09.11.2026 nu stabilește încă această informație. |
+| Selecție / punctaj | Documentația oficială publicată și verificată la 09.11.2026 nu stabilește încă această informație. |
+| Ajutor de stat / de minimis | Documentația oficială publicată și verificată la 09.11.2026 nu stabilește încă această informație. |
+| Implementare | Documentația oficială publicată și verificată la 09.11.2026 nu stabilește încă această informație. |
+| Monitorizare | Documentația oficială publicată și verificată la 09.11.2026 nu stabilește încă această informație. |
+| Surse oficiale | [Pagina oficială a programului, MEDAT](https://economie.gov.ro/programul-sme-eco-tech/)<br>[Procedura aprobată prin Ordinul nr. 1.392/2025](https://vn.prefectura.mai.gov.ro/oportunitati-de-finantare-societati-comerciale-octombrie-2026/)<br>[Ordinul nr. 1.773/2026, Monitorul Oficial nr. 906](https://economie.gov.ro/sme-eco-tech-firmele-respinse-pot-depune-o-noua-cerere-iar-finantarea-poate-fi-solicitata-si-pentru-coduri-caen-secundare/)<br>[Comunicarea MEDAT de prelungire](https://economie.gov.ro/termenul-de-inscriere-in-cadrul-programului-sme-eco-tech-se-prelungeste-pana-la-30-decembrie-2026/)<br>[Eliminarea pragului de cifră de afaceri pentru microîntreprinderi](https://economie.gov.ro/mai-putine-conditii-mai-multe-investitii-sme-eco-tech-elimina-pragul-minim-de-2-milioane-de-lei-cifra-de-afaceri-pentru-microintreprinderi/) |
+| Latest official update | 2026-10-30 — [Calendarul SME Eco-Tech, informarea oficială din octombrie 2026](https://vn.prefectura.mai.gov.ro/oportunitati-de-finantare-societati-comerciale-octombrie-2026/) |
+| verifiedAt | 2026-11-09 |
+| Pagină oficială program/apel | [Pagina oficială a programului, MEDAT](https://economie.gov.ro/programul-sme-eco-tech/) (`registry:sme-eco-tech-minister`, verificat 2026-11-09) |
+| Ghid | [Procedura aprobată prin Ordinul nr. 1.392/2025](https://vn.prefectura.mai.gov.ro/oportunitati-de-finantare-societati-comerciale-octombrie-2026/) (`guide:sme-eco-tech-procedura`, verificat 2026-11-09) |
+| Anexe | [Documentele și anexele publicate de minister](https://economie.gov.ro/programul-sme-eco-tech/) (`registry:sme-eco-tech-minister`, verificat 2026-11-09) |
+| Schemă / ordin | [Ordinul nr. 1.773/2026, Monitorul Oficial nr. 906](https://economie.gov.ro/sme-eco-tech-firmele-respinse-pot-depune-o-noua-cerere-iar-finantarea-poate-fi-solicitata-si-pentru-coduri-caen-secundare/) (`registry:sme-eco-tech-ordin-1773`, verificat 2026-11-09) |
+| Anunț sesiune | [Calendarul publicat de Instituția Prefectului – Județul Vrancea](https://vn.prefectura.mai.gov.ro/oportunitati-de-finantare-societati-comerciale-octombrie-2026/) (`program`, verificat 2026-11-09)<br>[Comunicarea MEDAT de prelungire](https://economie.gov.ro/termenul-de-inscriere-in-cadrul-programului-sme-eco-tech-se-prelungeste-pana-la-30-decembrie-2026/) (`registry:sme-eco-tech-prelungire`, verificat 2026-11-09) |
+| Corrigenda / erate | — Neidentificat separat în sursele oficiale înregistrate la 2026-11-09; nu se presupune inexistența documentului. |
+| Clarificări | [Eliminarea pragului de cifră de afaceri pentru microîntreprinderi](https://economie.gov.ro/mai-putine-conditii-mai-multe-investitii-sme-eco-tech-elimina-pragul-minim-de-2-milioane-de-lei-cifra-de-afaceri-pentru-microintreprinderi/) (`registry:sme-eco-tech-ordin-1241`, verificat 2026-11-09) |
+| Sursă primară în registry-ul operațional | [Calendarul SME Eco-Tech, informarea oficială din octombrie 2026](https://vn.prefectura.mai.gov.ro/oportunitati-de-finantare-societati-comerciale-octombrie-2026/) (verificat 2026-11-09) |
+| Chei surse repo | `sme-eco-tech-procedura` |
+| Notes | Consultă procedura împreună cu modificările din 2026 și verifică disponibilul pe platforma de înscriere. |
 
 ## Jurnalul schimbărilor factuale din reverificare
 

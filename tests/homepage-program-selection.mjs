@@ -7,7 +7,7 @@ import { chromium } from 'playwright';
 import AxeBuilder from '@axe-core/playwright';
 const require=createRequire(import.meta.url), ROOT=path.resolve(import.meta.dirname,'..');
 const {fileForRoute}=require('../tools/structured-data-utils');
-const expected=['digitalizare-imm-regiunea-centru-apel-2','modernizare-microintreprinderi-ne-2','autoconsum-institutii-publice','e-drive','dr12-afir','dr14-afir','diaspora-investeste-acasa','fondul-modernizare-pc1-stocare','fondul-modernizare-pc1-stocare-entitati-publice','pro-infra','pocidif-21','dr18-afir','e-move-ro','e-mobility-ro','digitalizare-imm','afir-energie-autoconsum'];
+const expected=['digitalizare-imm-regiunea-centru-apel-2','dr12-afir','diaspora-investeste-acasa','e-drive','pro-infra','e-move-ro','e-mobility-ro','sme-eco-tech','modernizare-microintreprinderi-ne-2','autoconsum-institutii-publice','dr14-afir','fondul-modernizare-pc1-stocare','fondul-modernizare-pc1-stocare-entitati-publice','pocidif-21','dr18-afir','afir-energie-autoconsum'];
 const programs=require('../config/seo-programs.json').programs;
 const mime={'.html':'text/html','.js':'application/javascript','.css':'text/css','.svg':'image/svg+xml','.json':'application/json','.webp':'image/webp','.woff2':'font/woff2'};
 const server=http.createServer((req,res)=>{const u=new URL(req.url,'http://localhost').pathname;const f=path.extname(u)?path.join(ROOT,u):fileForRoute(ROOT,u);if(!f.startsWith(ROOT)||!fs.existsSync(f)){res.writeHead(404).end();return;}res.setHeader('Content-Type',mime[path.extname(f)]||'application/octet-stream');fs.createReadStream(f).pipe(res);});
@@ -23,6 +23,15 @@ try {
   const page=await context.newPage();await page.goto(base+'/');await page.evaluate(()=>document.fonts.ready);
   assert.deepEqual(await page.locator('[data-priority-slide]').evaluateAll(es=>es.map(e=>e.dataset.programId)),expected);
   assert.deepEqual(await page.locator('#hero [data-hero-program-item]').evaluateAll(es=>es.map(e=>e.dataset.programId)),expected);
+  const visibleIds=()=>page.locator('#hero [data-hero-program-item]:visible').evaluateAll(es=>es.map(e=>e.dataset.programId));
+  assert.deepEqual(await visibleIds(),expected.slice(0,8),`${width}px: first group only`);
+  const prev=page.locator('[data-hero-program-prev]'), next=page.locator('[data-hero-program-next]');
+  assert.equal(await prev.getAttribute('aria-disabled'),'true');
+  await next.press('Enter');
+  assert.deepEqual(await visibleIds(),expected.slice(8),`${width}px: second group only`);
+  assert.equal(await next.getAttribute('aria-disabled'),'true');
+  await prev.click();
+  assert.deepEqual(await visibleIds(),expected.slice(0,8));
   for(const [i,id]of expected.entries()){
    const slide=page.locator('[data-priority-slide][aria-hidden="false"]');
    assert.equal(await slide.getAttribute('data-program-id'),id);
@@ -39,7 +48,12 @@ try {
   assert.equal(await page.locator('[data-priority-slide][aria-hidden="false"]').getAttribute('data-program-id'),expected.at(-1));
   // Keep the pointer outside the preview during keyboard-only selection.
   await page.mouse.move(0,0);
-  for(const id of expected){const link=page.locator(`#hero [data-hero-program-item][data-program-id="${id}"]`);await link.focus();assert.equal(await page.locator('[data-hero-program-link]').getAttribute('href'),programs.find(p=>p.id===id).pageUrl);}
+  for(const [index,id] of expected.entries()){
+   if(index===8) await next.press('Enter');
+   const link=page.locator(`#hero [data-hero-program-item][data-program-id="${id}"]`);
+   await link.focus();
+   assert.equal(await page.locator('[data-hero-program-link]').getAttribute('href'),programs.find(p=>p.id===id).pageUrl);
+  }
   const axe=await new AxeBuilder({page}).include('#hero').include('#priority-programs').withTags(['wcag2a','wcag2aa','wcag21aa','wcag22aa']).analyze();
   assert.deepEqual(axe.violations.map(x=>({id:x.id,nodes:x.nodes.map(n=>n.target)})),[],`${width}: homepage accessibility`);
   console.log(`PASS ${width}px: ${expected.length} banners/buttons, unique links, keyboard/wrap, no overlap and axe`);

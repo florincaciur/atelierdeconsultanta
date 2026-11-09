@@ -2382,6 +2382,36 @@
       ],
       "datePublished": "DE_VALIDAT_UMAN",
       "officialSourceUpdatedAt": "2026-10-30"
+    },
+    {
+      "id": "sme-eco-tech",
+      "route": "/sme-eco-tech",
+      "contentType": "program",
+      "programId": "sme-eco-tech",
+      "governanceState": "public",
+      "author": "FABER – Atelier de Consultanță",
+      "authorRole": "Autor organizațional",
+      "reviewer": "Echipa editorială FABER",
+      "reviewerRole": "Revizuire editorială și conformitate",
+      "attributionType": "organization",
+      "personalNameConsent": false,
+      "verifiedAt": "2026-11-09",
+      "officialSourceName": "Instituția Prefectului – Județul Vrancea",
+      "officialSourceUrl": "https://vn.prefectura.mai.gov.ro/oportunitati-de-finantare-societati-comerciale-octombrie-2026/",
+      "sourceVersion": "Calendarul SME Eco-Tech, informarea oficială din octombrie 2026",
+      "nextReviewAt": "2026-12-01",
+      "lastMeaningfulUpdate": "2026-11-09",
+      "statusSnapshot": "apel_deschis",
+      "changelog": [
+        {
+          "date": "2026-11-09",
+          "summary": "Publicate calendarul, eligibilitatea, mecanismul grant–credit și modificările procedurii până la Ordinul nr. 1.773/2026.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": true
+        }
+      ],
+      "datePublished": "2026-11-09",
+      "officialSourceUpdatedAt": "2026-10-30"
     }
   ]
 }

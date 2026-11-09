@@ -541,6 +541,25 @@
       ]
     },
     {
+      "programId": "pocidif-21",
+      "route": "/pocidif-21",
+      "file": "pocidif-21.html",
+      "eligible": true,
+      "excludedByEditorialDecision": false,
+      "removedManagedBlocks": 0,
+      "removedManagedLinks": 0,
+      "resultingRelations": [
+        "parent",
+        "related",
+        "related",
+        "related",
+        "service",
+        "instrument",
+        "guide",
+        "conversion"
+      ]
+    },
+    {
       "programId": "pnrr",
       "route": "/pnrr",
       "file": "pnrr/index.html",
@@ -725,6 +744,26 @@
       "removedManagedLinks": 0,
       "resultingRelations": [
         "parent",
+        "related",
+        "related",
+        "related",
+        "service",
+        "instrument",
+        "guide",
+        "conversion"
+      ]
+    },
+    {
+      "programId": "sme-eco-tech",
+      "route": "/sme-eco-tech",
+      "file": "sme-eco-tech/index.html",
+      "eligible": true,
+      "excludedByEditorialDecision": false,
+      "removedManagedBlocks": 0,
+      "removedManagedLinks": 0,
+      "resultingRelations": [
+        "parent",
+        "related",
         "related",
         "related",
         "related",

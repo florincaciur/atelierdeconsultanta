@@ -13,7 +13,7 @@ const programs = loadProgramConfig().programs.filter((program) => isPublicProgra
 const config = loadConfig();
 const expectedRelated = programs.reduce((sum, program) => sum + resolvedLinks(program, config, programs).filter((link) => link.relation === "related").length, 0);
 assert.equal(audit.errors.length, 0, audit.errors.join("\n"));
-assert.equal(audit.summary.programPages, 26, "graful trebuie să includă toate programele canonice publice");
+assert.equal(audit.summary.programPages, 27, "graful trebuie să includă toate programele canonice publice");
 assert.equal(audit.summary.familyHubs, 5, "graful trebuie să includă toate familiile din registry");
 assert.equal(audit.summary.services, 7, "toate serviciile publice trebuie asociate semantic");
 assert.equal(audit.summary.uncoveredServices, 0, "există servicii fără relație către programe");

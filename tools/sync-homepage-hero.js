@@ -58,7 +58,14 @@ function renderProgramMenu(programs) {
     throw new Error("Meniul interactiv din hero conține un program absent sau neverificat.");
   }
   const first = featured[0];
-  const items = featured.map((item, index) => `              <li><a href="${escapeHtml(item.pageUrl)}" data-hero-program-item data-program-id="${escapeHtml(item.id)}" data-program-status="${escapeHtml(item.status)}" data-status-label="${escapeHtml(item.statusLabel)}" data-verified-at="${escapeHtml(item.verifiedAt)}" data-source-url="${escapeHtml(item.sourceUrl)}" data-title="${escapeHtml(item.shortName)}" data-status="${escapeHtml(item.statusLabel)}" data-analytics-event="program_card_click" data-analytics-component="homepage_hero_program_menu" data-analytics-cta-id="hero_program_${escapeHtml(item.slug)}" data-analytics-program-slug="${escapeHtml(item.slug)}" data-analytics-program-family="${escapeHtml(item.family)}"${index === 0 ? ' aria-current="true"' : ""}>${escapeHtml(item.shortName)}</a></li>`).join("\n");
+  const items = featured.map((item, index) => `              <li><a href="${escapeHtml(item.pageUrl)}" data-hero-program-item data-program-id="${escapeHtml(item.id)}" data-program-status="${escapeHtml(item.status)}" data-status-label="${escapeHtml(item.statusLabel)}" data-verified-at="${escapeHtml(item.verifiedAt)}" data-source-url="${escapeHtml(item.sourceUrl)}" data-title="${escapeHtml(item.shortName)}" data-status="${escapeHtml(item.statusLabel)}" data-analytics-event="program_card_click" data-analytics-component="homepage_hero_program_menu" data-analytics-cta-id="hero_program_${escapeHtml(item.slug)}" data-analytics-program-slug="${escapeHtml(item.slug)}" data-analytics-program-family="${escapeHtml(item.family)}"${index === 0 ? ' aria-current="true"' : ""}>${escapeHtml(item.shortName)}</a></li>`);
+  const pageSize = 8;
+  const groups = [];
+  for (let index = 0; index < items.length; index += pageSize) {
+    groups.push(`<ul class="hero-programs-list" data-hero-program-page aria-label="Programe ${index + 1}–${Math.min(index + pageSize, items.length)}"${index ? " hidden" : ""}>
+${items.slice(index, index + pageSize).join("\n")}
+            </ul>`);
+  }
   return `<div class="hero-programs" data-hero-programs aria-labelledby="hero-programs-title">
             <div class="hero-programs__heading"><h2 id="hero-programs-title">Măsuri de finanțare</h2><span data-hero-program-count>1 / ${featured.length}</span></div>
             ${renderProgramScenes(featured)}
@@ -68,9 +75,12 @@ function renderProgramMenu(programs) {
               <a href="${escapeHtml(first.pageUrl)}" data-hero-program-link>Vezi condițiile</a>
             </div>
             <p class="hero-program-instruction">Survolează o măsură sau selectează cu o atingere.</p>
-            <ul class="hero-programs-list" aria-label="Alege o măsură de finanțare">
-${items}
-            </ul>
+            <div id="hero-program-pages">${groups.join("\n            ")}</div>
+            <div class="hero-program-pager" data-hero-program-pager role="group" aria-label="Navigare între grupurile de programe" hidden>
+              <button type="button" data-hero-program-prev aria-label="Grupul anterior de programe" aria-controls="hero-program-pages" aria-disabled="true"><span aria-hidden="true">←</span></button>
+              <span data-hero-program-page-count role="status">Grupul 1 din ${groups.length}</span>
+              <button type="button" data-hero-program-next aria-label="Grupul următor de programe" aria-controls="hero-program-pages"><span aria-hidden="true">→</span></button>
+            </div>
           </div>`;
 }
 
@@ -131,7 +141,7 @@ function syncHomepageHero(source, programs) {
   // head assets to this form, so a later --check must not oscillate on two
   // insignificant spaces before the opening tag.
   const criticalMarkup = `<style id="${STYLE_ID}">\n${criticalCss}\n  </style>\n`;
-  const runtimeMarkup = '  <script src="/assets/homepage-hero.js?v=20260901-5" defer data-homepage-hero-script="p1_21"></script>\n';
+  const runtimeMarkup = '  <script src="/assets/homepage-hero.js?v=20261109-2" defer data-homepage-hero-script="p1_21"></script>\n';
   output = /<style id="homepage-faq-expand-css">/.test(output)
     ? output.replace(/(<style id="homepage-faq-expand-css">)/, `${criticalMarkup}  $1`)
     : output.replace(/<\/head>/i, `${criticalMarkup}</head>`);

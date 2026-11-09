@@ -74,6 +74,7 @@ try {
     if (viewport.width === 390 || viewport.width === 1366) assert(metrics.ctaBottom <= viewport.height, `${viewport.width}px: CTA-ul principal este sub fold`);
     const choices = page.locator("[data-hero-program-item]");
     for (let index = 0; index < await choices.count(); index++) {
+      if (index === 8) await page.locator("[data-hero-program-next]").click();
       const choice = choices.nth(index);
       await choice.hover();
       const id = await choice.getAttribute("data-program-id");
@@ -81,6 +82,7 @@ try {
       assert.equal(await page.locator("[data-program-scene]:not([hidden])").getAttribute("data-program-scene"), id);
       assert.equal(await page.locator("[data-hero-program-link]").getAttribute("href"), await choice.getAttribute("href"));
     }
+    await page.locator("[data-hero-program-prev]").click();
     await choices.nth(0).click();
     assert.equal(new URL(page.url()).pathname, "/", "selectarea unei măsuri trebuie să arate previzualizarea fără navigare");
     await choices.nth(0).press("ArrowRight");

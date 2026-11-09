@@ -4,8 +4,8 @@ Data evaluării: **2026-11-09**. Registru: `config/editorial-governance.json`.
 
 ## Rezumat
 
-- Pagini guvernate: **40**
-- Pagini publice cu metadate complete: **29**
+- Pagini guvernate: **41**
+- Pagini publice cu metadate complete: **30**
 - Verificări expirate: **10**
 - Surse lipsă/incomplete: **1**
 - Reviewer lipsă: **0**
@@ -57,6 +57,7 @@ O expirare produce warning intern și nu schimbă automat statusul, textul, `ver
 | `/fondul-modernizare-pc1-stocare` | program | public | apel_deschis | DE_VALIDAT_UMAN | 2026-11-04 | 2026-11-04 | 2026-10-22 | 2026-12-04 | nu | nu | nu | nu |
 | `/fondul-modernizare-pc1-stocare-entitati-publice` | program | public | apel_deschis | DE_VALIDAT_UMAN | 2026-11-04 | 2026-11-04 | 2026-09-11 | 2026-12-04 | nu | nu | nu | nu |
 | `/digitalizare-imm-regiunea-centru-apel-2` | program | public | ghid_aprobat_nedeschis | DE_VALIDAT_UMAN | 2026-11-09 | 2026-11-09 | 2026-10-30 | 2026-12-02 | nu | nu | nu | nu |
+| `/sme-eco-tech` | program | public | apel_deschis | 2026-11-09 | 2026-11-09 | 2026-11-09 | 2026-10-30 | 2026-12-01 | nu | nu | nu | nu |
 
 ## Reguli de prospețime
 

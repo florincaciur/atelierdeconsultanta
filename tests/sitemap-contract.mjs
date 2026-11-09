@@ -24,7 +24,7 @@ for (const file of generatedFiles) {
 
 const parsed = readSitemapEntries(ROOT, policy.indexFile, policy.site);
 assert.equal(parsed.documents.length, policy.families.length + 1, "the index must reference every and only the configured family sitemaps");
-assert.equal(parsed.entries.length, 106, "canonical inventory must include the consolidated 2026 program pages and the restored program frameworks");
+assert.equal(parsed.entries.length, 107, "canonical inventory must include the new SME Eco-Tech route");
 for (const route of [
   "/digitalizare-imm-regiunea-centru-apel-2",
   "/diaspora-investeste-acasa",

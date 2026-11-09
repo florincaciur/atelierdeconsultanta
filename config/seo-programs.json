@@ -287,9 +287,9 @@
         "image": "/assets/hero/hero-agriculture.webp",
         "beneficiary": null,
         "pageTitle": "DR 12 AFIR 2026: ghid final, eligibilitate și punctaj",
-        "carouselOrder": 5,
-        "heroOrder": 5,
-        "navigationOrder": 4
+        "carouselOrder": 2,
+        "heroOrder": 2,
+        "navigationOrder": 5
       },
       "discovery": {
         "parentHub": "/afir",
@@ -428,9 +428,9 @@
           "label": "Depuneri: 1 septembrie–16 noiembrie 2026",
           "note": "Calendar oficial AFIR prelungit; componenta achiziții simple este închisă din 6 octombrie. Verifică disponibilul pe componente."
         },
-        "carouselOrder": 6,
-        "heroOrder": 6,
-        "navigationOrder": 5
+        "carouselOrder": 11,
+        "heroOrder": 11,
+        "navigationOrder": 6
       },
       "discovery": {
         "parentHub": "/afir",
@@ -579,9 +579,9 @@
           "label": "Depuneri până la 16 noiembrie 2026",
           "note": "Sesiune prelungită de AFIR; verifică disponibilul și regulile de închidere anticipată."
         },
-        "carouselOrder": 12,
-        "heroOrder": 12,
-        "navigationOrder": 11
+        "carouselOrder": 15,
+        "heroOrder": 15,
+        "navigationOrder": 12
       },
       "discovery": {
         "parentHub": "/afir",
@@ -828,15 +828,13 @@
         "notes": "Apel închis. Modificarea ghidului nu constituie dovadă pentru o sesiune nouă ori redeschisă."
       },
       "presentation": {
-        "carousel": true,
-        "hero": true,
+        "carousel": false,
+        "hero": false,
         "order": 6,
         "icon": "ph-desktop",
         "image": "/assets/hero/hero-digital.webp",
         "beneficiary": null,
-        "carouselOrder": 15,
-        "navigationOrder": 14,
-        "heroOrder": 15
+        "navigationOrder": 15
       },
       "discovery": {
         "parentHub": "/fonduri-europene-digitalizare",
@@ -970,9 +968,9 @@
           "label": "Apel închis la 28 octombrie 2026",
           "note": "Sesiune încheiată, conform paginii oficiale verificate la 3 noiembrie 2026."
         },
-        "carouselOrder": 2,
-        "heroOrder": 2,
-        "navigationOrder": 1
+        "carouselOrder": 9,
+        "heroOrder": 9,
+        "navigationOrder": 2
       },
       "discovery": {
         "parentHub": "/fonduri-regionale",
@@ -1268,7 +1266,7 @@
         "beneficiary": "întreprinderi agricole, procesatori și OUAI/FOUAI",
         "carouselOrder": 16,
         "heroOrder": 16,
-        "navigationOrder": 15
+        "navigationOrder": 16
       },
       "discovery": {
         "parentHub": "/afir",
@@ -1399,9 +1397,9 @@
         "image": "/assets/hero/hero-solar.webp",
         "beneficiary": "entități și instituții publice eligibile",
         "pageTitle": "PC1 Autoconsum 2026 – panouri fotovoltaice cu stocare pentru entități publice",
-        "carouselOrder": 3,
-        "heroOrder": 3,
-        "navigationOrder": 2
+        "carouselOrder": 10,
+        "heroOrder": 10,
+        "navigationOrder": 3
       },
       "discovery": {
         "parentHub": "/finantari-panouri-fotovoltaice",
@@ -1530,9 +1528,9 @@
         "icon": "ph-battery-charging",
         "image": "/assets/hero/hero-solar.webp",
         "beneficiary": "entități publice cu instalații regenerabile existente",
-        "carouselOrder": 9,
-        "heroOrder": 9,
-        "navigationOrder": 8
+        "carouselOrder": 13,
+        "heroOrder": 13,
+        "navigationOrder": 9
       },
       "discovery": {
         "parentHub": "/finantari-panouri-fotovoltaice",
@@ -1643,9 +1641,9 @@
         "icon": "ph-factory",
         "image": "/assets/hero/hero-solar.webp",
         "beneficiary": null,
-        "carouselOrder": 10,
-        "navigationOrder": 9,
-        "heroOrder": 10
+        "carouselOrder": 5,
+        "navigationOrder": 10,
+        "heroOrder": 5
       },
       "discovery": {
         "parentHub": "/finantari-panouri-fotovoltaice",
@@ -1945,9 +1943,9 @@
         "icon": "ph-battery-charging",
         "image": "/assets/hero/hero-solar.webp",
         "beneficiary": null,
-        "carouselOrder": 13,
-        "heroOrder": 13,
-        "navigationOrder": 12
+        "carouselOrder": 6,
+        "heroOrder": 6,
+        "navigationOrder": 13
       },
       "discovery": {
         "parentHub": "/finantari-panouri-fotovoltaice",
@@ -2091,9 +2089,9 @@
         "icon": "ph-duotone ph-circuitry",
         "image": "/assets/hero/hero-digital.webp",
         "beneficiary": null,
-        "carouselOrder": 11,
-        "heroOrder": 11,
-        "navigationOrder": 10
+        "carouselOrder": 14,
+        "heroOrder": 14,
+        "navigationOrder": 11
       },
       "discovery": {
         "parentHub": "/fonduri-europene-digitalizare",
@@ -2272,9 +2270,9 @@
         "icon": "ph-house-line",
         "image": "/assets/hero/hero-local.webp",
         "beneficiary": "români din diaspora care înființează o întreprindere în România",
-        "carouselOrder": 7,
-        "heroOrder": 7,
-        "navigationOrder": 6
+        "carouselOrder": 3,
+        "heroOrder": 3,
+        "navigationOrder": 7
       },
       "discovery": {
         "parentHub": "/fonduri-europene-imm",
@@ -2415,7 +2413,7 @@
         "beneficiary": "IMM-uri și operatori de transport rutier de persoane",
         "carouselOrder": 4,
         "heroOrder": 4,
-        "navigationOrder": 3
+        "navigationOrder": 4
       },
       "discovery": {
         "parentHub": "/finantari-panouri-fotovoltaice",
@@ -2544,9 +2542,9 @@
         "icon": "ph-charging-station",
         "image": "/assets/hero/hero-solar.webp",
         "beneficiary": "întreprinderi care dezvoltă infrastructură publică de reîncărcare",
-        "carouselOrder": 14,
-        "heroOrder": 14,
-        "navigationOrder": 13
+        "carouselOrder": 7,
+        "heroOrder": 7,
+        "navigationOrder": 14
       },
       "discovery": {
         "parentHub": "/finantari-panouri-fotovoltaice",
@@ -2674,9 +2672,9 @@
         "icon": "ph-battery-high",
         "image": "/assets/hero/hero-solar.webp",
         "beneficiary": "întreprinderi care dezvoltă capacități de stocare stand-alone",
-        "carouselOrder": 8,
-        "heroOrder": 8,
-        "navigationOrder": 7
+        "carouselOrder": 12,
+        "heroOrder": 12,
+        "navigationOrder": 8
       },
       "discovery": {
         "parentHub": "/finantari-panouri-fotovoltaice",
@@ -2977,7 +2975,7 @@
         "order": 50,
         "carouselOrder": 1,
         "heroOrder": 1,
-        "navigationOrder": 16,
+        "navigationOrder": 17,
         "icon": "ph-desktop",
         "image": "/assets/hero/hero-digital.webp",
         "beneficiary": "IMM-uri cu investiții în Regiunea Centru"
@@ -2996,6 +2994,143 @@
         "listed": true
       },
       "eligibleApplicantSummary": "Microîntreprinderi, întreprinderi mici și mijlocii cu proiecte de digitalizare a activităților existente în Regiunea Centru."
+    },
+    {
+      "id": "sme-eco-tech",
+      "slug": "sme-eco-tech",
+      "name": "Programul pentru consolidarea IMM-urilor prin acces îmbunătățit la finanțare – SME Eco-Tech",
+      "shortName": "SME Eco-Tech",
+      "acronym": "SME Eco-Tech",
+      "fund": "Programul de Cooperare Elvețiano-Român",
+      "family": "antreprenoriat",
+      "status": "apel_deschis",
+      "canonicalStatus": "OPEN",
+      "statusScope": "program_call",
+      "statusRationale": "Sesiunea deschisă la 26 mai 2026 a fost prelungită până la 30 decembrie 2026, ora 20:00, potrivit calendarului publicat de Instituția Prefectului – Județul Vrancea.",
+      "statusLabel": "Înscrieri până la 30 decembrie 2026, ora 20:00",
+      "publicationState": "public",
+      "verifiedAt": "2026-11-09",
+      "sourceName": "Instituția Prefectului – Județul Vrancea",
+      "sourceUrl": "https://vn.prefectura.mai.gov.ro/oportunitati-de-finantare-societati-comerciale-octombrie-2026/",
+      "sourceVersion": "Calendarul SME Eco-Tech, informarea oficială din octombrie 2026",
+      "officialSourceUpdatedAt": "2026-10-30",
+      "sourceType": "official",
+      "applicationStart": "2026-05-26",
+      "applicationEnd": "2026-12-30",
+      "grantSummary": {
+        "minimum": null,
+        "maximum": {
+          "amount": 267240,
+          "currency": "RON",
+          "unit": "beneficiar"
+        },
+        "budget": null
+      },
+      "cofinancingSummary": {
+        "intensity": [
+          {
+            "rate": 40,
+            "scope": "maximum din cheltuielile eligibile"
+          }
+        ],
+        "ownContribution": "Credit de minimum 60% din cheltuielile eligibile, contractat de la o bancă parteneră. Cheltuielile neeligibile se bugetează separat."
+      },
+      "pageUrl": "/sme-eco-tech",
+      "lastMeaningfulUpdate": "2026-11-09",
+      "evergreenValue": true,
+      "archivedNoindexDecision": null,
+      "indexable": true,
+      "cardSummary": "Grant de până la 267.240 lei pentru investiții verzi și digitale, combinat cu un credit de la o bancă parteneră.",
+      "quickAnswer": "Pot aplica microîntreprinderile și firmele mici sau mijlocii cu capital integral privat, înființate cel târziu la 31 decembrie 2021 și cu activitate eligibilă în România. Firma cere sprijin pentru un singur cod CAEN eligibil, principal sau secundar de la 1 ianuarie 2022 și autorizat la înscriere. Grantul acoperă până la 40% din costurile eligibile, în limita a 267.240 lei. Creditul de la o bancă parteneră acoperă cel puțin 60%.",
+      "metaTitle": "SME Eco-Tech 2026: grant, credit și eligibilitate | FABER",
+      "metaDescription": "SME Eco-Tech oferă IMM-urilor până la 267.240 lei pentru investiții verzi și digitale, cu credit bancar. Înscrieri până la 30 decembrie 2026, ora 20:00.",
+      "editorialDisclaimer": "Verifică disponibilitatea bugetului și documentele pe platforma oficială înainte de înscriere.",
+      "eligibleApplicants": [
+        "Microîntreprinderi, întreprinderi mici și mijlocii cu capital integral privat și activitate eligibilă în România."
+      ],
+      "keyConditions": [
+        "Societate înregistrată conform Legii nr. 31/1990, cu capital integral privat și cifră de afaceri pozitivă în 2024.",
+        "Firmă înființată cel târziu la 31 decembrie 2021, cu sediu sau punct de lucru și activitate în România.",
+        "Un cod CAEN din lista eligibilă, principal sau secundar cel puțin de la 1 ianuarie 2022 și autorizat la depunere.",
+        "Proiect cu buget eligibil de minimum 668.100 lei și posibilitatea contractării creditului de la o bancă parteneră.",
+        "Cel puțin 40% din cheltuielile eligibile se alocă investițiilor verzi sau digitale prevăzute de procedură."
+      ],
+      "officialGuideKeys": [
+        "sme-eco-tech-procedura"
+      ],
+      "officialSources": {
+        "roles": {
+          "programPage": [
+            {
+              "ref": "registry:sme-eco-tech-minister",
+              "label": "Pagina oficială a programului, MEDAT"
+            }
+          ],
+          "guide": [
+            {
+              "ref": "guide:sme-eco-tech-procedura",
+              "label": "Procedura aprobată prin Ordinul nr. 1.392/2025"
+            }
+          ],
+          "annexes": [
+            {
+              "ref": "registry:sme-eco-tech-minister",
+              "label": "Documentele și anexele publicate de minister"
+            }
+          ],
+          "schemeOrder": [
+            {
+              "ref": "registry:sme-eco-tech-ordin-1773",
+              "label": "Ordinul nr. 1.773/2026, Monitorul Oficial nr. 906"
+            }
+          ],
+          "sessionAnnouncement": [
+            {
+              "ref": "program",
+              "label": "Calendarul publicat de Instituția Prefectului – Județul Vrancea"
+            },
+            {
+              "ref": "registry:sme-eco-tech-prelungire",
+              "label": "Comunicarea MEDAT de prelungire"
+            }
+          ],
+          "corrigenda": [],
+          "clarifications": [
+            {
+              "ref": "registry:sme-eco-tech-ordin-1241",
+              "label": "Eliminarea pragului de cifră de afaceri pentru microîntreprinderi"
+            }
+          ]
+        },
+        "notes": "Consultă procedura împreună cu modificările din 2026 și verifică disponibilul pe platforma de înscriere."
+      },
+      "presentation": {
+        "carousel": true,
+        "hero": true,
+        "order": 20,
+        "carouselOrder": 8,
+        "heroOrder": 8,
+        "navigationOrder": 1,
+        "icon": "ph-leaf",
+        "image": "/assets/hero/hero-business.webp",
+        "beneficiary": "IMM-uri cu investiții verzi și digitale în România"
+      },
+      "discovery": {
+        "parentHub": "/fonduri-europene-imm",
+        "applicantTypes": [
+          "imm_micro"
+        ],
+        "regions": [
+          "national"
+        ],
+        "investmentTypes": [
+          "digitalizare",
+          "energie_autoconsum",
+          "investitii_productive"
+        ],
+        "listed": true
+      },
+      "eligibleApplicantSummary": "Microîntreprinderi, întreprinderi mici și mijlocii cu capital integral privat și activitate eligibilă în România."
     }
   ],
   "factualChanges": [
@@ -11219,11 +11354,11 @@
           "body": "Puterea disponibilă, avizele și calendarul operatorului de retea pot decide dacă proiectul este realist. Analiza tehnică trebuie facuta înainte de a fixa configuratia statiilor sau dimensiunea producției regenerabile."
         },
         {
-          "title": "Cum tratam energia regenerabilă și stocarea",
-          "body": "Panourile fotovoltaice și stocarea trebuie corelate cu infrastructura finanțată. Nu includem componente doar pentru ca par atractive; ele trebuie să fie permise, proportionale și explicabile în buget."
+          "title": "Energie regenerabilă și stocare",
+          "body": "Panourile fotovoltaice și stocarea trebuie corelate cu infrastructura finanțată. Dimensionează echipamentele după consumul stațiilor și verifică eligibilitatea lor în ghidul submăsurii."
         },
         {
-          "title": "Ce rămâne de confirmat",
+          "title": "Calendarul fiecărei submăsuri",
           "body": "Schema este aprobată și actualizată prin OMTI 821/2026. Pentru depunere sunt necesare ghidul aplicabil submăsurii, anexele, alocarea și calendarul publicat de MTI. Condițiile unei submăsuri nu se transferă automat celorlalte."
         },
         {
@@ -11986,8 +12121,8 @@
           "body": "Pentru fiecare cheltuiala verificăm încadrarea în categoria corectă, intensitatea aplicabila, TVA-ul, costurile neeligibile și contribuția proprie. Separarea incorectă poate genera clarificări sau reducerea bugetului."
         },
         {
-          "title": "Ce rămâne de confirmat",
-          "body": "Pagină folosește ghidul aprobat. Eventualele corrigenda, instrucțiuni și clarificări ulterioare trebuie verificate în pagină oficială MIPE înainte de depunere."
+          "title": "Ghidul și actualizările apelului",
+          "body": "Consultă ghidul și eventualele corrigenda pe pagina oficială MIPE înainte de a pregăti cererea."
         },
         {
           "title": "Ce diferentiaza un proiect digital eligibil",

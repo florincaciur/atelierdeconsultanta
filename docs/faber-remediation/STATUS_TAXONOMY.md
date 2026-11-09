@@ -311,6 +311,7 @@ Maparea de mai jos folosește snapshot-ul factual de bază verificat în registr
 | `programul-tranzitie-justa` | `calendar_estimativ` | `UNCONFIRMED` | Status neconfirmat — verifică sursa oficială | umbrella_program | Apelurile din program au stări distincte în MySMIS. |
 | `fondul-de-modernizare` | `calendar_estimativ` | `UNCONFIRMED` | Status neconfirmat — verifică sursa oficială | umbrella_program | Apelurile Fondului pentru Modernizare au stări distincte în MySMIS. |
 | `digitalizare-imm-regiunea-centru-apel-2` | `ghid_aprobat_nedeschis` | `SCHEDULED` | Apel programat — depuneri între 02.12.2026 și 02.02.2027 | program_call | ADR Centru a publicat ghidul și intervalul oficial de depunere în MySMIS. La 9 noiembrie 2026, fereastra de depunere este viitoare. |
+| `sme-eco-tech` | `apel_deschis` | `OPEN` | Apel deschis — depuneri până la 30.12.2026 | program_call | Sesiunea deschisă la 26 mai 2026 a fost prelungită până la 30 decembrie 2026, ora 20:00, potrivit calendarului publicat de Instituția Prefectului – Județul Vrancea. |
 
 ## Păstrarea paginilor închise/finalizate
 

@@ -196,6 +196,45 @@
   white-space: nowrap;
 }
 
+.hero-programs-list[hidden],
+.hero-program-pager[hidden] {
+  display: none !important;
+}
+
+.hero-program-pager {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: .5rem;
+  margin-top: .5rem;
+  color: inherit;
+  font-size: .8rem;
+}
+
+.hero-program-pager button {
+  display: inline-grid;
+  place-items: center;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0;
+  border: 1px solid currentColor;
+  border-radius: 6px;
+  background: transparent;
+  color: inherit;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.hero-program-pager button[aria-disabled="true"] {
+  opacity: .6;
+  cursor: default;
+}
+
+.hero-program-pager button:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
 .hero-programs-list {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));

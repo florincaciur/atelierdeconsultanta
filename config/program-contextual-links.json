@@ -313,6 +313,11 @@
       "instrument": "eligibility_check",
       "comparison": "digital_costs",
       "conversionAnchor": "Verifică proiectul de digitalizare pentru Apelul 2"
+    },
+    "sme-eco-tech": {
+      "instrument": "eligibility_check",
+      "comparison": "digital_costs",
+      "conversionAnchor": "Verifică eligibilitatea pentru SME Eco-Tech"
     }
   }
 }

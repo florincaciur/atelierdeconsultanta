@@ -79,8 +79,9 @@ async function main(){
      if(!all){
       for(let i=0;i<heroProgramCount;i++){
        const link=page.locator('#hero [data-hero-program-item]').nth(i);
+       if(i===8) await page.locator('[data-hero-program-next]').press('Enter');
        await link.focus();
-       assert.equal(await link.getAttribute('aria-current'),'true');
+       assert.equal(await link.getAttribute('aria-current'),'true',`${viewport.width}px: programul ${i+1} trebuie selectat la focus`);
       }
       await page.evaluate(()=>scrollTo(0,0));
       await page.screenshot({path:path.join(OUT,`hero-${baseArg?'live':'local'}-${viewport.width}${viewport.textZoom?'-zoom':''}.png`),fullPage:false});

@@ -633,5 +633,22 @@
     "statusLabel": "Depuneri programate între 2 decembrie 2026 și 2 februarie 2027",
     "verifiedAt": "2026-11-09",
     "sourceOfTruth": "config/seo-programs.json#programs"
+  },
+  "sme-eco-tech-procedura": {
+    "name": "Calendarul SME Eco-Tech, informarea oficială din octombrie 2026",
+    "title": "Calendarul SME Eco-Tech, informarea oficială din octombrie 2026",
+    "institution": "Instituția Prefectului – Județul Vrancea",
+    "documentType": "procedură aprobată",
+    "url": "https://vn.prefectura.mai.gov.ro/oportunitati-de-finantare-societati-comerciale-octombrie-2026/",
+    "accessedAt": "2026-11-09",
+    "note": "Procedura aprobată prin Ordinul nr. 1.392/2025 se citește împreună cu ordinele de modificare din 2026.",
+    "programIds": [
+      "sme-eco-tech"
+    ],
+    "verifiedAt": "2026-11-09",
+    "programStatus": "apel_deschis",
+    "statusLabel": "Înscrieri până la 30 decembrie 2026, ora 20:00",
+    "isPrimaryFor": "sme-eco-tech",
+    "sourceOfTruth": "config/seo-programs.json#programs"
   }
 }

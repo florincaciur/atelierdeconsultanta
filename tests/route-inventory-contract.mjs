@@ -13,11 +13,11 @@ const REPORT = path.join(ROOT, "docs", "faber-remediation", "ROUTE_INVENTORY.md"
 const inventory = buildInventory();
 
 assert.equal(validateInventory(inventory).length, 0, validateInventory(inventory).join("\n"));
-assert.equal(inventory.routes.length, 106, "Inventarul public exclude aliasul /gdpr.");
+assert.equal(inventory.routes.length, 107, "Inventarul public include SME Eco-Tech și exclude aliasul /gdpr.");
 assert.deepEqual(inventory.routesWithoutSitemap, [], "Toate paginile canonice publice trebuie să apară în sitemap.");
 assert.equal(new Set(inventory.routes.map((route) => route.route)).size, inventory.routes.length, "Rutele canonical trebuie să fie unice.");
 assert.equal(new Set(inventory.routes.map((route) => route.canonicalUrl)).size, inventory.routes.length, "Canonicalele publicate trebuie să fie unice.");
-assert.equal(inventory.seo.programs.length, 27, "Baseline-ul registry are 27 de entități de program.");
+assert.equal(inventory.seo.programs.length, 28, "Registrul include cele 28 de entități de program.");
 assert.equal(inventory.banners.filter((banner) => banner.active !== false).length, carouselPrograms(inventory.seo.programs).length, "Bannerele active trebuie să urmeze selecția din registru.");
 assert.ok(inventory.canonicalDuplicates.length > 0, "Aliasurile fizice canonical trebuie detectate și documentate.");
 assert.deepEqual(inventory.publicFragments.map((item) => item.route).sort(), [

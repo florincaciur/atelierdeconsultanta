@@ -222,6 +222,38 @@
       "url": "https://www.mt.ro/transparenta-decizionala/consultare-publica/acte-normative-in-avizare/omti03112026dgpet",
       "publishedAt": "2026-11-03",
       "verifiedAt": "2026-11-09"
+    },
+    "sme-eco-tech-minister": {
+      "title": "SME Eco-Tech – documentele programului",
+      "authority": "Ministerul Economiei, Digitalizării, Antreprenoriatului și Turismului",
+      "documentType": "pagină oficială program",
+      "url": "https://economie.gov.ro/programul-sme-eco-tech/",
+      "publishedAt": null,
+      "verifiedAt": "2026-11-09"
+    },
+    "sme-eco-tech-prelungire": {
+      "title": "Prelungirea perioadei de înscriere până la 30 decembrie 2026",
+      "authority": "Ministerul Economiei, Digitalizării, Antreprenoriatului și Turismului",
+      "documentType": "comunicat MEDAT",
+      "url": "https://economie.gov.ro/termenul-de-inscriere-in-cadrul-programului-sme-eco-tech-se-prelungeste-pana-la-30-decembrie-2026/",
+      "publishedAt": "2026-09-22",
+      "verifiedAt": "2026-11-09"
+    },
+    "sme-eco-tech-ordin-1773": {
+      "title": "Ordinul nr. 1.773/2026, Monitorul Oficial nr. 906, pagina 14",
+      "authority": "Ministerul Economiei, Digitalizării, Antreprenoriatului și Turismului",
+      "documentType": "ordin de modificare a procedurii",
+      "url": "https://economie.gov.ro/sme-eco-tech-firmele-respinse-pot-depune-o-noua-cerere-iar-finantarea-poate-fi-solicitata-si-pentru-coduri-caen-secundare/",
+      "publishedAt": "2026-10-30",
+      "verifiedAt": "2026-11-09"
+    },
+    "sme-eco-tech-ordin-1241": {
+      "title": "Ordinul nr. 1.241/2026 – eliminarea pragului pentru microîntreprinderi",
+      "authority": "Ministerul Economiei, Digitalizării, Antreprenoriatului și Turismului",
+      "documentType": "comunicat MEDAT",
+      "url": "https://economie.gov.ro/mai-putine-conditii-mai-multe-investitii-sme-eco-tech-elimina-pragul-minim-de-2-milioane-de-lei-cifra-de-afaceri-pentru-microintreprinderi/",
+      "publishedAt": "2026-08-13",
+      "verifiedAt": "2026-11-09"
     }
   },
   "programSourceAssignments": "config/seo-programs.json#programs[*].officialSources"

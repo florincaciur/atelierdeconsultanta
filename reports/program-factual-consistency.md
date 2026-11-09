@@ -4,10 +4,10 @@ Data auditului: 2026-11-09
 
 ## Rezultat
 
-- Programe în registrul canonic: 27
+- Programe în registrul canonic: 28
 - Erori: 0
 - Avertismente: 0
-- Statusuri: apel_deschis=7, apel_inchis=8, calendar_estimativ=7, consultare_publica=1, ghid_aprobat_nedeschis=4
+- Statusuri: apel_deschis=8, apel_inchis=8, calendar_estimativ=7, consultare_publica=1, ghid_aprobat_nedeschis=4
 - Mod strict pentru freshness: inactiv
 
 Auditul este local și determinist. Nu interoghează URL-urile oficiale, nu deduce statusul din răspunsuri HTTP și nu rescrie date factuale. Registrul aprobat din `config/seo-programs.json#programs` rămâne singura sursă de adevăr.
@@ -43,6 +43,7 @@ Auditul este local și determinist. Nu interoghează URL-urile oficiale, nu dedu
 | Programul Tranziție Justă | calendar_estimativ | 2026-11-03 | — | — |
 | Fondul pentru Modernizare | calendar_estimativ | 2026-11-03 | — | — |
 | Digitalizare IMM Regiunea Centru – Apel 2 | ghid_aprobat_nedeschis | 2026-11-09 | 2026-12-02 | 2027-02-02 |
+| SME Eco-Tech | apel_deschis | 2026-11-09 | 2026-05-26 | 2026-12-30 |
 
 ## Verificări efectuate
 

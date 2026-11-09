@@ -5,13 +5,13 @@
   "source": "sitemap.xml + HTML local + registrele P0",
   "principle": "Un URL canonic are o singură intenție primară, un părinte și o micro-conversie distinctă.",
   "summary": {
-    "canonicalUrlCount": 106,
-    "inventoriedUrlCount": 106,
+    "canonicalUrlCount": 107,
+    "inventoriedUrlCount": 107,
     "byType": {
       "core": 3,
       "ghid": 34,
       "hub": 17,
-      "program": 27,
+      "program": 28,
       "instrument": 2,
       "serviciu": 17,
       "întrebare": 3,
@@ -20,12 +20,12 @@
     },
     "byIntent": {
       "comercială": 17,
-      "informațională": 72,
+      "informațională": 73,
       "navigațională": 14,
       "locală": 3
     },
     "byRecommendation": {
-      "keep": 82,
+      "keep": 83,
       "rewrite": 19,
       "merge": 5
     },
@@ -62,7 +62,7 @@
         "headingCount": 34,
         "faqCount": 3,
         "externalLinkCount": 0,
-        "interactiveControlCount": 54,
+        "interactiveControlCount": 56,
         "governanceState": "NEÎNREGISTRAT",
         "programRegistryState": "NU_ESTE_PROGRAM_ÎN_REGISTRU"
       }
@@ -2373,7 +2373,7 @@
       "microConversion": "cta_click:project_check_how",
       "parent": "/fonduri-europene",
       "competingUrls": [],
-      "demonstrableUniqueValue": "13 subtitluri distincte, 5 FAQ și 4 linkuri externe în sursa HTML.",
+      "demonstrableUniqueValue": "14 subtitluri distincte, 5 FAQ și 5 linkuri externe în sursa HTML.",
       "recommendation": "keep",
       "recommendationTarget": null,
       "recommendationReason": "Rol distinct de hub, cu o singură intenție primară și conversie proprie.",
@@ -2383,9 +2383,9 @@
       "evidence": {
         "title": "Fonduri europene pentru IMM-uri - investiții, digitalizare, energie",
         "metaDescription": "Ghid pentru IMM-uri care caută fonduri europene: programe regionale, digitalizare, energie, Start-Up Nation, documente și eligibilitate.",
-        "headingCount": 13,
+        "headingCount": 14,
         "faqCount": 5,
-        "externalLinkCount": 4,
+        "externalLinkCount": 5,
         "interactiveControlCount": 5,
         "governanceState": "NEÎNREGISTRAT",
         "programRegistryState": "NU_ESTE_PROGRAM_ÎN_REGISTRU"
@@ -3472,6 +3472,41 @@
         "interactiveControlCount": 0,
         "governanceState": "NEÎNREGISTRAT",
         "programRegistryState": "NU_ESTE_PROGRAM_ÎN_REGISTRU"
+      }
+    },
+    {
+      "url": "https://atelierdeconsultanta.ro/sme-eco-tech",
+      "route": "/sme-eco-tech",
+      "sourceFile": "sme-eco-tech/index.html",
+      "sitemapFamily": "programs",
+      "type": "program",
+      "primaryAudience": "Solicitanți și beneficiari potențiali",
+      "mainQuestion": "Care este statutul verificat și ce trebuie analizat pentru „SME Eco-Tech 2026: grant și credit pentru investiții verzi și digitale”?",
+      "queryCluster": "sme eco tech; SME Eco-Tech 2026 grant și credit pentru investiții verzi",
+      "primaryIntent": "informațională",
+      "h1": "SME Eco-Tech 2026: grant și credit pentru investiții verzi și digitale",
+      "uniquePromise": "Centralizează statutul, sursa oficială și pașii de verificare pentru „SME Eco-Tech 2026: grant și credit pentru investiții verzi și digitale”.",
+      "cta": "Verifică proiectul",
+      "ctaTarget": "/contact#program_slug=sme-eco-tech",
+      "microConversion": "cta_click:sme_eco_tech_contact_1",
+      "parent": "/fonduri-europene",
+      "competingUrls": [],
+      "demonstrableUniqueValue": "Înregistrare în registrul unic al programelor; 22 subtitluri, 12 FAQ și sursă: Instituția Prefectului – Județul Vrancea.",
+      "recommendation": "keep",
+      "recommendationTarget": null,
+      "recommendationReason": "Rol distinct de program, cu o singură intenție primară și conversie proprie.",
+      "decisionState": "APROBAT_PENTRU_ARHITECTURĂ",
+      "owner": "Consultant programe + editor coordonator",
+      "nextReviewAt": "2026-12-01",
+      "evidence": {
+        "title": "SME Eco-Tech 2026: grant, credit și eligibilitate | FABER",
+        "metaDescription": "SME Eco-Tech oferă IMM-urilor până la 267.240 lei pentru investiții verzi și digitale, cu credit bancar. Înscrieri până la 30 decembrie 2026, ora 20:00.",
+        "headingCount": 22,
+        "faqCount": 12,
+        "externalLinkCount": 7,
+        "interactiveControlCount": 9,
+        "governanceState": "public",
+        "programRegistryState": "public"
       }
     },
     {

@@ -381,7 +381,13 @@ function homepageHeroPrograms(programs) {
 }
 
 function navigationPrograms(programs) {
-  return programsForPresentation(programs, "navigationOrder");
+  const statusOrder = ["apel_deschis", "ghid_aprobat_nedeschis", "consultare_publica", "calendar_estimativ", "apel_inchis", "arhivat"];
+  const rank = (program) => {
+    const index = statusOrder.indexOf(program.status);
+    return index < 0 ? statusOrder.length : index;
+  };
+  return programsForPresentation(programs, "navigationOrder")
+    .sort((left, right) => rank(left) - rank(right));
 }
 
 function programForRoute(route, programs) {
