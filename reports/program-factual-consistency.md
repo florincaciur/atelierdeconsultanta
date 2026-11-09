@@ -37,7 +37,7 @@ Auditul este local și determinist. Nu interoghează URL-urile oficiale, nu dedu
 | PoCIDIF 2.1 | apel_inchis | 2026-11-04 | 2026-06-30 | 2026-10-30 |
 | PNRR | calendar_estimativ | 2026-11-03 | — | — |
 | Diaspora Investește Acasă | ghid_aprobat_nedeschis | 2026-11-04 | — | — |
-| e-DRIVE | consultare_publica | 2026-11-04 | — | — |
+| e-DRIVE | consultare_publica | 2026-11-09 | — | — |
 | e-Mobility RO | apel_deschis | 2026-11-04 | 2026-09-28 | 2026-11-27 |
 | PC1 Stocare stand-alone | apel_deschis | 2026-11-04 | 2026-09-01 | 2026-11-15 |
 | Programul Tranziție Justă | calendar_estimativ | 2026-11-03 | — | — |

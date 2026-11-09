@@ -10,7 +10,7 @@ Am corectat formulările despre structura editorială a site-ului din `/ghiduri`
 
 ## Acoperirea auditului
 
-- Crawl public înainte de această publicare, pe 106 URL-uri din sitemap, 107 pagini HTML, 243 adrese istorice și 70 de resurse. Zero probleme critice. Abaterea rămasă este `/gdpr`, indexabilă și exclusă din sitemap prin politica existentă de consolidare juridică.
+- Crawl public anterior consolidării juridice, pe 106 URL-uri din sitemap, 107 pagini HTML, 243 adrese istorice și 70 de resurse. Zero probleme critice. La acel crawl, `/gdpr` era indexabilă în afara sitemapului. Adresa redirecționează acum permanent către politica principală.
 - Control local pe toate cele 106 pagini canonice pentru titlu, descriere, H1, ierarhia titlurilor, canonical, robots și metadate sociale. Zero abateri la verificarea inițială.
 - Control al grafului de legături pentru toate cele 106 pagini. Zero pagini orfane și zero destinații interne rupte sau redirecționate în graful verificat. Numărul de legături contextuale se măsoară separat de meniul global.
 - Verificare responsive pe 107 pagini, la 390 și 1440 px. Zero depășiri orizontale ale documentului. Bara mobilă cu etapele proiectului are derulare proprie.
@@ -22,13 +22,13 @@ Matricea actualizată `audit-pagini-seo-ai-prioritizat-2026-11-09.csv` cuprinde 
 
 La recalculare, 24 de pagini au mai puțin de două trimiteri din conținutul principal al altor pagini. Pe 35 de pagini, filtrul de domenii instituționale nu a identificat o sursă în `main`. Aceste două semnale se evaluează după rolul paginii. Pentru contact sau prezentarea firmei, dovada relevantă poate fi identitatea și experiența proprie.
 
-Datele Search Console provin din inspecția documentată în `audit-search-console-seo-ai-2026-11-09.md`. Pentru e-DRIVE, fereastra 8 august–7 noiembrie a avut 725 clicuri și 22.818 afișări. Cele trei canonice din categoria „accesată, momentan neindexată” au fost `/consultanta-pnrr-digitalizare`, `/fonduri-europene-digitalizare` și `/cum-alegi-consultant-fonduri-europene`. Statutul lor după această publicare se confirmă prin URL Inspection. Captura veche și rezultatul HTTP al zilei nu pot confirma singure indexarea curentă.
+Datele Search Console provin din inspecția documentată în `audit-search-console-seo-ai-2026-11-09.md` și din exportul e-DRIVE. În perioada 10 august–7 noiembrie, pagina e-DRIVE a avut 725 de clicuri și 22.818 afișări; în perioada 11 octombrie–7 noiembrie, a avut 215 clicuri și 8.794 de afișări. Cele trei canonice din categoria „accesată, momentan neindexată” au fost `/consultanta-pnrr-digitalizare`, `/fonduri-europene-digitalizare` și `/cum-alegi-consultant-fonduri-europene`. Statutul lor după recrawl se confirmă prin URL Inspection.
 
 Conformitatea tehnică a fiecărei pagini este verificabilă automat. Actualitatea tuturor regulilor de finanțare presupune și compararea fiecărui ghid cu documentele și modificările oficiale ale apelului. Lucrările editoriale rămase sunt precizate în matrice și în prompturile de mai jos.
 
 ## Ordinea de rulare a prompturilor
 
-Rulează prompturile în ordine. Când un prompt depinde de exporturi, documente sau filmări, continuă cu următorul care are intrările disponibile. În fiecare intervenție, modifică sursa de conținut și generatorul care o deține, verifică pagina rezultată și înregistrează separat lucrarea în Git.
+Inspecția inițială din 01, consolidarea GDPR și actualizarea e-DRIVE din 02 au fost efectuate. Începe cu **03**, apoi continuă în ordinea indicată. Reia inspecțiile din 01 după ce Search Console înregistrează un crawl ulterior publicării. Reia verificarea documentelor din 02 la închiderea consultării sau la apariția unui document nou; compară rezultatele GSC după o fereastră completă de 28 de zile. În fiecare intervenție, modifică și sursa din care se generează pagina, verifică rezultatul și înregistrează lucrarea în Git.
 
 ### 01 · Confirmarea indexării și a accesului real
 

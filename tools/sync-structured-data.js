@@ -180,6 +180,8 @@ function synchronizedGraph(html, route, hints) {
   if (measureSections.length) {
     pageNode.hasPart = measureSections.toArray().map(section => {
       const element = $(section);
+      const guide = element.find(".edrive-measure__version a[href]").first();
+      const guideUrl = guide.attr("href");
       return {
         "@type": "WebPageElement",
         "@id": `${canonical}#${element.attr('id')}`,
@@ -188,7 +190,15 @@ function synchronizedGraph(html, route, hints) {
         description: cleanText(element.find('.edrive-measure__heading > div > p').last().text()),
         inLanguage: "ro-RO",
         isPartOf: { "@id": `${canonical}#webpage` },
-        citation: citations.references
+        citation: guideUrl ? [
+          ...citations.references,
+          {
+            "@type": "CreativeWork",
+            "@id": `${canonical}#ghid-${element.attr("id")}`,
+            name: cleanText(guide.text()),
+            url: guideUrl
+          }
+        ] : citations.references
       };
     });
   }

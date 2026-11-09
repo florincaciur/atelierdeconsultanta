@@ -29,7 +29,7 @@ O expirare produce warning intern și nu schimbă automat statusul, textul, `ver
 | `/dr14` | program | public | apel_deschis | DE_VALIDAT_UMAN | 2026-11-04 | 2026-11-04 | DE_VALIDAT_UMAN | 2026-12-04 | nu | nu | nu | nu |
 | `/dr18` | program | public | apel_deschis | DE_VALIDAT_UMAN | 2026-11-04 | 2026-11-04 | DE_VALIDAT_UMAN | 2026-12-04 | nu | nu | nu | nu |
 | `/dr14-afir-ferme-mici` | program | pending_validation | — | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | da | nu | nu | nu |
-| `/e-move` | program | public | ghid_aprobat_nedeschis | DE_VALIDAT_UMAN | 2026-11-04 | 2026-11-04 | 2026-09-02 | 2027-01-03 | nu | nu | nu | nu |
+| `/e-move` | program | public | ghid_aprobat_nedeschis | DE_VALIDAT_UMAN | 2026-11-09 | 2026-11-04 | 2026-09-02 | 2027-01-03 | nu | nu | nu | nu |
 | `/femeia-antreprenor-2026` | program | public | apel_inchis | DE_VALIDAT_UMAN | 2026-09-02 | 2026-11-03 | DE_VALIDAT_UMAN | 2027-01-02 | nu | nu | nu | nu |
 | `/fondul-de-modernizare` | program | public | calendar_estimativ | DE_VALIDAT_UMAN | 2026-09-10 | 2026-11-03 | DE_VALIDAT_UMAN | 2027-01-02 | nu | nu | nu | nu |
 | `/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum` | program | public | apel_inchis | DE_VALIDAT_UMAN | 2026-08-18 | 2026-11-03 | DE_VALIDAT_UMAN | 2027-01-02 | nu | nu | nu | nu |
@@ -52,8 +52,8 @@ O expirare produce warning intern și nu schimbă automat statusul, textul, `ver
 | `/start-up-nation-2026-plan-de-afaceri` | guide | pending_validation | — | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | 2026-05-20 | DE_VALIDAT_UMAN | 2026-08-18 | nu | da | nu | nu |
 | `/webinarii` | guide | pending_validation | — | DE_VALIDAT_UMAN | DE_VALIDAT_UMAN | 2026-05-20 | DE_VALIDAT_UMAN | 2026-08-18 | nu | da | nu | nu |
 | `/diaspora-investeste-acasa` | program | public | ghid_aprobat_nedeschis | DE_VALIDAT_UMAN | 2026-11-04 | 2026-11-04 | DE_VALIDAT_UMAN | 2027-01-03 | nu | nu | nu | nu |
-| `/e-drive` | program | public | consultare_publica | DE_VALIDAT_UMAN | 2026-11-09 | 2026-11-04 | DE_VALIDAT_UMAN | 2027-01-03 | nu | nu | nu | nu |
-| `/e-mobility` | program | public | apel_deschis | DE_VALIDAT_UMAN | 2026-11-04 | 2026-11-04 | DE_VALIDAT_UMAN | 2026-12-04 | nu | nu | nu | nu |
+| `/e-drive` | program | public | consultare_publica | DE_VALIDAT_UMAN | 2026-11-09 | 2026-11-09 | DE_VALIDAT_UMAN | 2026-11-18 | nu | nu | nu | nu |
+| `/e-mobility` | program | public | apel_deschis | DE_VALIDAT_UMAN | 2026-11-09 | 2026-11-04 | DE_VALIDAT_UMAN | 2026-12-04 | nu | nu | nu | nu |
 | `/fondul-modernizare-pc1-stocare` | program | public | apel_deschis | DE_VALIDAT_UMAN | 2026-11-04 | 2026-11-04 | 2026-10-22 | 2026-12-04 | nu | nu | nu | nu |
 | `/fondul-modernizare-pc1-stocare-entitati-publice` | program | public | apel_deschis | DE_VALIDAT_UMAN | 2026-11-04 | 2026-11-04 | 2026-09-11 | 2026-12-04 | nu | nu | nu | nu |
 | `/digitalizare-imm-regiunea-centru-apel-2` | program | public | ghid_aprobat_nedeschis | DE_VALIDAT_UMAN | 2026-11-09 | 2026-11-09 | 2026-10-30 | 2026-12-02 | nu | nu | nu | nu |

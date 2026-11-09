@@ -575,6 +575,14 @@ const PAGE_CONTENT = {
   },
   "e-drive": require("../config/e-drive-content.json"),
   "e-mobility-ro": {
+    "contextualExplanation": {
+      "title": "Vehicule electrice și stații de reîncărcare: ce verifici separat?",
+      "text": "e-Mobility RO privește infrastructura de reîncărcare. Pentru înlocuirea vehiculelor, verifică separat solicitantul, categoria vehiculului și condițiile e-DRIVE.",
+      "links": [
+        {"href": "/e-drive#masura-1", "label": "e-DRIVE Măsura 1 pentru flota IMM-urilor", "explanation": "ajutor de minimis pentru înlocuirea vehiculelor eligibile ale IMM-urilor."},
+        {"href": "/e-drive#masura-2", "label": "e-DRIVE Măsura 2 pentru transportatorii de pasageri", "explanation": "ajutor de stat pentru costul suplimentar al vehiculelor electrice, în urma selecției concurențiale."}
+      ]
+    },
     "h1": "e-Mobility RO 2026 – Submăsura 1 pentru stații de reîncărcare",
     "eyebrow": "Infrastructură rutieră · reîncărcare electrică",
     "lead": "Submăsura 1 este deschisă până la 27 noiembrie 2026. Verifică amplasamentul, racordarea, configurația stațiilor și documentele înainte de oferta concurențială.",
@@ -863,17 +871,67 @@ function renderComparison(comparison, program) {
 
 function renderMeasureNavigation(content) {
   if (!content.measures) return '';
-  return `<nav class="edrive-navigation" aria-label="Cuprins e-DRIVE"><a href="#masura-1">01 · Măsura 1 pentru IMM-uri</a><a href="#masura-2">02 · Măsura 2 pentru transportatori</a><a href="#exemple-de-calcul">Exemple de calcul</a><a href="#documente">Documente comune</a><a href="#calendar">Calendar și pași</a><a href="#surse-oficiale">Ghiduri și surse</a></nav>`;
+  return `<nav class="edrive-navigation" aria-label="Cuprins e-DRIVE">
+    <a href="#masura-1">01 · Măsura 1 pentru IMM-uri</a>
+    <a href="#masura-2">02 · Măsura 2 pentru transportatori</a>
+    <a href="#exemple-de-calcul">Exemple de calcul</a>
+    <a href="#documente">Documente comune</a>
+    <a href="${content.calendar ? '#calendar-depunere' : '#calendar'}">Calendarul depunerii</a>
+    <a href="#surse-oficiale">Ghiduri și surse</a>
+  </nav>`;
 }
 
 function renderMeasures(content) {
   return (content.measures || []).map(measure => `<section class="program-section edrive-measure" id="${e(measure.id)}" aria-labelledby="${e(measure.id)}-title">
     <div class="edrive-measure__heading"><span class="edrive-measure__number" aria-hidden="true">${e(measure.number)}</span><div><p class="section-kicker">${e(measure.label)}</p><h2 id="${e(measure.id)}-title">${e(measure.title)}</h2><p>${e(measure.intro)}</p></div></div>
     <dl class="edrive-measure__funding">${measure.funding.map(([label,value])=>`<div><dt>${e(label)}</dt><dd>${e(value)}</dd></div>`).join('')}</dl>
-    <p class="edrive-measure__version">Condiții din proiectul de ghid publicat la 3 noiembrie 2026, în consultare publică.</p>
+    <p class="edrive-measure__version">Condiții din proiectul de ghid publicat la 3 noiembrie 2026, în consultare publică.${measure.source ? ` <a href="${e(measure.source)}" target="_blank" rel="noopener noreferrer">Ghidul și anexele Măsurii ${e(Number(measure.number))} pe site-ul MTI</a>.` : ''}</p>
     <div class="edrive-measure__groups">${measure.groups.map(group=>`<article class="edrive-measure__group"><h3>${e(group.title)}</h3>${renderList(group.items)}</article>`).join('')}</div>
     <a class="program-button edrive-measure__cta" href="/contact#program_slug=e-drive&amp;source_page=%2Fe-drive">Solicită analiza pentru Măsura ${e(Number(measure.number))}</a>
   </section>`).join('\n');
+}
+
+function renderFactSources(sources) {
+  if (!sources) return "";
+  const rows = sources.map(({ label, value, url, reference }) => `<tr>
+    <th scope="row">${e(label)}</th>
+    <td>${e(value)}</td>
+    <td><a href="${e(url)}" target="_blank" rel="noopener noreferrer">${e(reference)}</a></td>
+  </tr>`).join("\n");
+  return `<section class="program-section program-comparison" id="sursele-cifrelor">
+    <div class="section-heading">
+      <h2>Unde sunt prevăzute plafoanele și punctajele?</h2>
+      <p>Trimiterile indică secțiunile din proiectele de ghid și anexele publicate la 3 noiembrie 2026.</p>
+    </div>
+    <div class="program-comparison-scroll" role="region" tabindex="0" aria-label="Sursele cifrelor e-DRIVE">
+      <table>
+        <caption>Plafoane, termene și surse oficiale e-DRIVE</caption>
+        <thead><tr><th scope="col">Reper</th><th scope="col">Valoare sau regulă</th><th scope="col">Sursă</th></tr></thead>
+        <tbody>${rows}</tbody>
+      </table>
+    </div>
+  </section>`;
+}
+
+function renderApplicationCalendar(calendar, notice) {
+  if (!calendar) return "";
+  return `<section class="program-section" id="calendar-depunere">
+    <div class="section-heading"><h2>${e(calendar.title)}</h2><p>${e(calendar.text)}</p></div>
+    ${renderList(calendar.items)}
+    <p><a href="${e(notice.url)}" target="_blank" rel="noopener noreferrer">Anunțul consultării MTI</a> ·
+      <a href="${e(calendar.schemeSource)}" target="_blank" rel="noopener noreferrer">Ordinul MTI nr. 817/2026, pagina 5</a></p>
+  </section>`;
+}
+
+function renderContextualExplanation(explanation) {
+  if (!explanation) return "";
+  const links = explanation.links.map(({ href, label, explanation: detail }) =>
+    `<li><a href="${e(href)}">${e(label)}</a> – ${e(detail)}</li>`
+  ).join("\n");
+  return `<section class="program-section program-section--soft">
+    <div class="section-heading"><h2>${e(explanation.title)}</h2><p>${e(explanation.text)}</p></div>
+    <ul>${links}</ul>
+  </section>`;
 }
 
 function renderPage(program, content) {
@@ -905,11 +963,14 @@ ${HEADER}
     </div><div class="program-hero__visual">${renderSvg(program.slug)}</div>
   </section>
   <section class="program-metrics" aria-label="Repere de finanțare">${content.metrics.map(([value, label]) => `<div><strong>${e(value)}</strong><span>${e(label)}</span></div>`).join("")}</section>
-  ${content.notice ? `<aside class="edrive-notice" aria-labelledby="edrive-consultare"><p class="section-kicker">Statut la 3 noiembrie 2026</p><h2 id="edrive-consultare">${e(content.notice.title)}</h2><p>${e(content.notice.text)}</p><a href="${e(content.notice.url)}" target="_blank" rel="noopener noreferrer">Consultă anunțul MTI</a></aside>` : ''}
+  ${content.notice ? `<aside class="edrive-notice" aria-labelledby="edrive-consultare"><p class="section-kicker">Statut verificat la ${e(program.verifiedAt)}</p><h2 id="edrive-consultare">${e(content.notice.title)}</h2><p>${e(content.notice.text)}</p><a href="${e(content.notice.url)}" target="_blank" rel="noopener noreferrer">Consultă anunțul MTI</a></aside>` : ''}
   ${renderMeasureNavigation(content)}
   <section class="program-section program-section--answer" id="raspuns-rapid"><div><p class="section-kicker">${content.answerHeading ? "Pe scurt" : "Răspuns rapid"}</p><h2>${e(content.answerHeading || "Ce finanțează și în ce stadiu este?")}</h2></div><div class="answer-card"><p>${e(content.answer)}</p><small>Statut verificat la <time datetime="${program.verifiedAt}">${program.verifiedAt}</time>. ${e(program.editorialDisclaimer)}</small></div></section>
   ${renderComparison(content.comparison, program)}
+  ${renderFactSources(content.factSources)}
   ${renderMeasures(content)}
+  ${renderApplicationCalendar(content.calendar, content.notice)}
+  ${renderContextualExplanation(content.contextualExplanation)}
   ${(content.sections || []).map(section => `<section class="program-section program-section--soft"${section.id ? ` id="${e(section.id)}"` : ""}><div class="section-heading">${section.id ? "" : '<p class="section-kicker">Date oficiale</p>'}<h2>${e(section.title)}</h2><p>${e(section.intro)}</p></div><div class="program-card-grid"${section.example ? " data-factual-example" : ""}>${renderCards(section.rows)}</div></section>`).join("\n")}
   <section class="program-section program-section--fit"><div class="section-heading"><p class="section-kicker">Filtru inițial</p><h2>Merită continuată analiza?</h2><p>Compară profilul proiectului cu aceste criterii înainte de a investi în documentație. Concluzia finală se bazează pe actele solicitantului și pe forma oficială aplicabilă.</p></div><div class="program-fit-grid"><article class="fit-card fit-card--yes"><h3>Profil care merită verificat</h3>${renderList(content.fit)}</article><article class="fit-card fit-card--caution"><h3>Condiții care cer clarificare</h3>${renderList(content.caution)}</article></div></section>
   <section class="program-section program-section--soft"><div class="section-heading">${content.investmentsHeading ? "" : `<p class="section-kicker">${content.measures ? "Obligații comune" : "Arhitectura proiectului"}</p>`}<h2>${e(content.investmentsHeading || (content.measures ? 'Implementarea și menținerea investiției' : 'Ce intră în analiza investiției'))}</h2></div><div class="program-card-grid">${renderCards(content.investments)}</div></section>

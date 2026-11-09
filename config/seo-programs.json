@@ -1884,7 +1884,7 @@
         "ownContribution": "Diferența față de ajutorul aplicabil și cheltuielile neeligibile."
       },
       "pageUrl": "/e-move",
-      "lastMeaningfulUpdate": "2026-11-04",
+      "lastMeaningfulUpdate": "2026-11-09",
       "evergreenValue": true,
       "archivedNoindexDecision": null,
       "indexable": true,
@@ -2306,7 +2306,7 @@
       "statusRationale": "Anunțul MTI din 03.11.2026 confirmă consultarea ghidurilor Măsurilor 1 și 2 până la 18.11.2026 și precizează că apelurile nu sunt lansate.",
       "statusLabel": "Apel în curs de lansare – ghiduri în consultare până la 18 noiembrie 2026",
       "publicationState": "public",
-      "verifiedAt": "2026-11-04",
+      "verifiedAt": "2026-11-09",
       "sourceName": "Ministerul Transporturilor și Infrastructurii – DGPET",
       "sourceUrl": "https://fonduri.mt.ro/transparenta/consultare-publica/fondul-pentru-modernizare/fm-mti-demareaza-procesul-de-consultare-publica-pentru-ghidurile-solicitantului-aferente-masurilor-1-si-2-ale-schemei-e-drive",
       "sourceVersion": "Ghidurile solicitantului e-DRIVE Măsura 1 și Măsura 2, versiuni în consultare publică publicate la 03.11.2026; observații până la 18.11.2026",
@@ -2341,8 +2341,8 @@
       "indexable": true,
       "cardSummary": "Măsura 1 pentru IMM-uri și Măsura 2 pentru transportatori. Ghiduri în consultare până la 18 noiembrie; calendarul depunerilor urmează după aprobare.",
       "quickAnswer": "MTI va anunța datele de depunere după aprobarea ghidurilor. e-DRIVE finanțează înlocuirea flotelor cu vehicule noi exclusiv electrice. Măsura 1 este ajutor de minimis pentru IMM-uri, cu maximum 30.000 EUR/M1, 130.000 EUR/M2 și 300.000 EUR pe întreprindere unică în orice perioadă de trei ani. Măsura 2 este ajutor de stat pentru transportatori de pasageri, pentru M1, M2 și M3, cu maximum 4 milioane EUR pe întreprindere, calculat pe diferența de cost eligibilă. Ghidurile sunt în consultare publică din 3 până la 18 noiembrie 2026.",
-      "metaTitle": "e-DRIVE 2026 – Ghid pentru Măsura 1 și Măsura 2",
-      "metaDescription": "e-DRIVE 2026 pentru vehicule electrice. Măsurile 1 și 2, plafoane, punctaj și ghiduri în consultare până la 18 noiembrie. Calendarul depunerilor urmează.",
+      "metaTitle": "e-DRIVE 2026: ghid Măsura 1, Măsura 2 și calendar",
+      "metaDescription": "e-DRIVE 2026: ghidurile Măsurilor 1 și 2, plafoane, punctaj și calendar. Consultare până la 18 noiembrie; datele depunerii nu sunt încă anunțate.",
       "editorialDisclaimer": "Ghidurile Măsurilor 1 și 2 sunt în consultare publică până la 18 noiembrie 2026. Condițiile sunt consultative; calendarul depunerii proiectelor va fi comunicat ulterior de MTI.",
       "eligibleApplicants": [
         "Microîntreprinderi și IMM-uri eligibile în măsura 1, indiferent de codul CAEN, cu respectarea sectoarelor excluse de schema de minimis",
@@ -2374,6 +2374,14 @@
             {
               "ref": "registry:edrive-draft-guides-20261103",
               "label": "Ghidurile Măsurilor 1 și 2 – versiuni consultative"
+            },
+            {
+              "ref": "registry:edrive-m1-draft-20261103",
+              "label": "Publicația MTI și documentele Măsurii 1 din 3 noiembrie 2026"
+            },
+            {
+              "ref": "registry:edrive-m2-draft-20261103",
+              "label": "Publicația MTI și documentele Măsurii 2 din 3 noiembrie 2026"
             }
           ],
           "annexes": [
@@ -2386,6 +2394,10 @@
             {
               "ref": "registry:edrive-scheme-742-2026",
               "label": "Ordinul MTI nr. 742/2026 – actualizarea schemei e-DRIVE"
+            },
+            {
+              "ref": "registry:edrive-scheme-817-2026",
+              "label": "Ordinul MTI nr. 817/2026 – art. 12 alin. (2), aplicabil Măsurii 2"
             }
           ],
           "sessionAnnouncement": [],
@@ -2465,7 +2477,7 @@
         "ownContribution": "Diferența rezultată din oferta competitivă, costurile neeligibile și eventualele depășiri ale limitelor aplicabile."
       },
       "pageUrl": "/e-mobility",
-      "lastMeaningfulUpdate": "2026-11-04",
+      "lastMeaningfulUpdate": "2026-11-09",
       "evergreenValue": true,
       "archivedNoindexDecision": null,
       "indexable": true,

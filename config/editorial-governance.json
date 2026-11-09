@@ -810,9 +810,15 @@
       "officialSourceUrl": "https://fonduri.mt.ro/documente-si-publicatii/finantari-fm/scheme-de-ajutor-de-stat/schema-de-ajutor-de-stat-5",
       "sourceVersion": "Schema e-MOVE RO, OMTI 1318/2025, cu modificările OMTI 755/2026 și OMTI 821/2026, publicat în Monitorul Oficial nr. 739/02.09.2026",
       "nextReviewAt": "2027-01-03",
-      "lastMeaningfulUpdate": "2026-11-04",
+      "lastMeaningfulUpdate": "2026-11-09",
       "statusSnapshot": "ghid_aprobat_nedeschis",
       "changelog": [
+        {
+          "date": "2026-11-09",
+          "summary": "Adăugate trimiteri directe către explicațiile e-DRIVE pentru flotele IMM-urilor și transportatorii de pasageri, cu separarea vehiculelor de infrastructura de reîncărcare.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": true
+        },
         {
           "date": "2026-11-04",
           "summary": "Statutul e-MOVE RO a fost reverificat în sursa oficială; nu a fost identificată o schimbare editorială substanțială suplimentară.",
@@ -2047,14 +2053,20 @@
       "reviewerRole": "Revizuire editorială și conformitate",
       "attributionType": "organization",
       "personalNameConsent": false,
-      "verifiedAt": "2026-11-04",
+      "verifiedAt": "2026-11-09",
       "officialSourceName": "Ministerul Transporturilor și Infrastructurii – DGPET",
       "officialSourceUrl": "https://fonduri.mt.ro/transparenta/consultare-publica/fondul-pentru-modernizare/fm-mti-demareaza-procesul-de-consultare-publica-pentru-ghidurile-solicitantului-aferente-masurilor-1-si-2-ale-schemei-e-drive",
       "sourceVersion": "Ghidurile solicitantului e-DRIVE Măsura 1 și Măsura 2, versiuni în consultare publică publicate la 03.11.2026; observații până la 18.11.2026",
-      "nextReviewAt": "2027-01-03",
+      "nextReviewAt": "2026-11-18",
       "lastMeaningfulUpdate": "2026-11-09",
       "statusSnapshot": "consultare_publica",
       "changelog": [
+        {
+          "date": "2026-11-09",
+          "summary": "Reverificate pachetele MTI ale ambelor măsuri față de publicațiile din 3 noiembrie. Adăugate surse pentru plafoane și punctaje, calendarul condiționat de aprobarea ghidurilor și modificarea art. 12 alin. (2) prin Ordinul 817/2026.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": true
+        },
         {
           "date": "2026-11-09",
           "summary": "Adăugate exemple de calcul al grantului pentru Măsurile 1 și 2 pe baza ghidurilor aflate în consultare.",
@@ -2136,9 +2148,15 @@
       "officialSourceUrl": "https://fonduri.mt.ro/transparenta/comunicate-de-presa/fondul-pentru-modernizare/publicarea-ghidului-solicitantului-si-calendarului-apelului-de-proiecte-pentru-dezvoltarea-infrastructurii-de-reincarcare-a-vehiculelor-electrice-pe-reteaua-nationala-de-autostrazi-drumuri-expres-si-drumuri-nationale-e-mobility-ro-submasura-1",
       "sourceVersion": "Anunț MTI 26.09.2026: Ghidul Submăsurii 1 aprobat prin OMTI nr. 886/2026 și calendarul apelului prin OMTI nr. 904/2026",
       "nextReviewAt": "2026-12-04",
-      "lastMeaningfulUpdate": "2026-11-04",
+      "lastMeaningfulUpdate": "2026-11-09",
       "statusSnapshot": "apel_deschis",
       "changelog": [
+        {
+          "date": "2026-11-09",
+          "summary": "Adăugate trimiteri directe către explicațiile e-DRIVE pentru flotele IMM-urilor și transportatorii de pasageri, cu separarea vehiculelor de infrastructura de reîncărcare.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": true
+        },
         {
           "date": "2026-11-04",
           "summary": "Statutul e-Mobility RO a fost reverificat în sursa oficială; nu a fost identificată o schimbare editorială substanțială suplimentară.",

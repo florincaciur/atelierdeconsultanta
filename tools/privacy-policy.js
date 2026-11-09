@@ -7,7 +7,7 @@ const path = require("node:path");
 const ROUTE = "/politica-de-confidentialitate";
 const FILE = "politica-de-confidentialitate.html";
 const BLOCK = /(<!-- PRIVACY_POLICY_START -->)[\s\S]*?(<!-- PRIVACY_POLICY_END -->)/u;
-const DATE = /<time datetime="\d{4}-\d{2}-\d{2}" data-privacy-revision>[^<]*<\/time>/u;
+const DATE = /<time datetime="\d{4}-\d{2}-\d{2}" data-privacy-revision(?:="")?>[^<]*<\/time>/u;
 
 function loadPrivacyPolicy(root) {
   return JSON.parse(fs.readFileSync(path.join(root, "config/privacy-policy.json"), "utf8"));
@@ -30,7 +30,7 @@ function renderPrivacyPolicy(html, root, identity) {
   });
   const date = new Intl.DateTimeFormat("ro-RO", { dateStyle: "long", timeZone: "UTC" }).format(new Date(modifiedAt));
   return html.replace(BLOCK, (_, start, end) => [start, copy.replaceAll("\n", eol), end].join(eol))
-    .replace(DATE, `<time datetime="${modifiedAt}" data-privacy-revision>${date}</time>`);
+    .replace(DATE, `<time datetime="${modifiedAt}" data-privacy-revision="">${date}</time>`);
 }
 
 function privacyPolicyDigest(html) {

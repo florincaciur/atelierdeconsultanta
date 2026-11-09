@@ -35,7 +35,7 @@
       "number": "01",
       "label": "Ajutor de minimis · 15 milioane EUR",
       "title": "Măsura 1 – înlocuirea flotei IMM-urilor",
-      "intro": "Măsura 1 se adresează întreprinderilor care își înlocuiesc vehiculele M1 și M2 cu vehicule noi cu baterie electrică. Finanțarea se raportează la costul de achiziție, cu plafoane distincte pe vehicul și pe întreprindere unică.",
+      "intro": "Măsura 1 se adresează întreprinderilor care își înlocuiesc vehiculele M1 și M2 cu vehicule noi cu baterie electrică. Finanțarea se raportează la costul de achiziție, cu plafoane distincte pe vehicul și pe întreprindere unică. M1 și M2 sunt categorii de vehicule, distincte de numerele celor două măsuri de ajutor.",
       "funding": [["M1", "maximum 30.000 EUR/vehicul"], ["M2", "maximum 130.000 EUR/vehicul"], ["Întreprindere unică", "maximum 300.000 EUR în orice perioadă de trei ani"]],
       "groups": [
         {
@@ -82,7 +82,8 @@
             "Minimum două oferte comparabile pentru configurația tehnică propusă. O singură ofertă este admisă în situația excepțională justificată prin solicitările către alți furnizori și confirmările lor scrise că nu pot furniza configurația cerută."
           ]
         }
-      ]
+      ],
+      "source": "https://www.mt.ro/transparenta-decizionala/consultare-publica/acte-normative-in-avizare/omti03112026dgpet-2"
     },
     {
       "id": "masura-2",
@@ -138,7 +139,8 @@
             "Centralizatorul kilometrilor trebuie corelat cu documentele justificative, numerotate și lizibile. Se verifică distinct kilometrii din România, inclusiv în cursele internaționale, și procentul asumat pentru perioada de durabilitate."
           ]
         }
-      ]
+      ],
+      "source": "https://www.mt.ro/transparenta-decizionala/consultare-publica/acte-normative-in-avizare/omti03112026dgpet"
     }
   ],
   "fit": [
@@ -171,7 +173,19 @@
   "extraSources": [
     ["MTI – ghidurile Măsurilor 1 și 2 și toate anexele, pachet ZIP", "https://fonduri.mt.ro/documente/GS_M1_%C8%99i_M2.zip"],
     ["Schema e-DRIVE – actualizarea prin Ordinul MTI nr. 742/2026", "https://legislatie.just.ro/Public/DetaliiDocument/313289"],
-    ["Ordinul de modificare nr. 100/12.02.2026", "https://legislatie.just.ro/Public/DetaliiDocument/307361"]
+    ["Ordinul de modificare nr. 100/12.02.2026", "https://legislatie.just.ro/Public/DetaliiDocument/307361"],
+    [
+      "MTI – proiectul de ghid și anexele Măsurii 1, publicația din 3 noiembrie 2026",
+      "https://www.mt.ro/transparenta-decizionala/consultare-publica/acte-normative-in-avizare/omti03112026dgpet-2"
+    ],
+    [
+      "MTI – proiectul de ghid și anexele Măsurii 2, publicația din 3 noiembrie 2026",
+      "https://www.mt.ro/transparenta-decizionala/consultare-publica/acte-normative-in-avizare/omti03112026dgpet"
+    ],
+    [
+      "Ordinul MTI nr. 817/2026 – art. 12 alin. (2), Monitorul Oficial nr. 739/02.09.2026, pagina 5",
+      "https://fonduri.mt.ro/documente/FM/Monitorul_Oficial_Partea_I_nr._739.pdf"
+    ]
   ],
   "faqs": [
     ["Programul e-DRIVE este deschis pentru depunere?", "Nu. La 3 noiembrie 2026 MTI a publicat ghidurile Măsurilor 1 și 2 în consultare până la 18 noiembrie 2026. Anunțul precizează că aceasta nu este lansarea apelurilor; calendarul depunerii va fi comunicat ulterior."],
@@ -186,9 +200,13 @@
     ["Casarea vehiculului vechi este obligatorie?", "Da. Ghidurile prevăd dovada casării în maximum 60 de zile de la recepția vehiculului cu emisii zero, cu actele de distrugere, radiere și scoatere din evidența contabilă cerute pentru măsura aplicabilă."],
     ["Cât trebuie păstrată investiția?", "Proiectele de ghid prevăd cinci ani de durabilitate de la finalizarea implementării, cu menținerea investiției și a obligațiilor asumate. Implementarea este prevăzută în maximum 30 de luni de la depunere, fără depășirea datei de 30 iunie 2030."],
     ["e-DRIVE finanțează și stații de încărcare?", "Aceste măsuri vizează achiziția vehiculelor. Infrastructura de încărcare și costurile sale se verifică separat; existența unei stații necesare exploatării nu o face automat eligibilă în e-DRIVE."],
-    ["Unde se vor depune proiectele e-DRIVE?", "Proiectele de ghid indică platforma MySMIS 2021. Depunerea va fi posibilă numai potrivit ghidului aprobat și calendarului pe care MTI îl va comunica ulterior consultării."]
+    ["Unde se vor depune proiectele e-DRIVE?", "Proiectele de ghid indică platforma MySMIS 2021. Depunerea va fi posibilă numai potrivit ghidului aprobat și calendarului pe care MTI îl va comunica ulterior consultării."],
+    [
+      "Când se anunță calendarul de depunere e-DRIVE?",
+      "La 9 noiembrie 2026 nu sunt anunțate datele de depunere. Consultarea ghidurilor se încheie la 18 noiembrie. Proiectele prevăd lansarea în maximum 30 de zile de la publicarea ghidului în Monitorul Oficial, dar intervalul se poate aplica numai după aprobarea și publicarea formei finale."
+    ]
   ],
-  "answerHeading": "Când începe depunerea pentru programul e-DRIVE?",
+  "answerHeading": "Când începe programul e-DRIVE 2026?",
   "sections": [
     {
       "id": "exemple-de-calcul",
@@ -206,5 +224,65 @@
         ]
       ]
     }
-  ]
+  ],
+  "factSources": [
+    {
+      "label": "Bugetul Măsurii 1",
+      "value": "15 milioane EUR",
+      "url": "https://www.mt.ro/transparenta-decizionala/consultare-publica/acte-normative-in-avizare/omti03112026dgpet-2",
+      "reference": "Ghid Măsura 1, secțiunea 1.6"
+    },
+    {
+      "label": "Plafoanele Măsurii 1",
+      "value": "M1: 30.000 EUR; M2: 130.000 EUR; întreprindere unică: 300.000 EUR în orice perioadă de trei ani",
+      "url": "https://www.mt.ro/transparenta-decizionala/consultare-publica/acte-normative-in-avizare/omti03112026dgpet-2",
+      "reference": "Ghid Măsura 1, secțiunea 1.7"
+    },
+    {
+      "label": "Bugetul Măsurii 2",
+      "value": "41,9 milioane EUR",
+      "url": "https://www.mt.ro/transparenta-decizionala/consultare-publica/acte-normative-in-avizare/omti03112026dgpet",
+      "reference": "Ghid Măsura 2, secțiunea 1.6"
+    },
+    {
+      "label": "Plafoanele Măsurii 2",
+      "value": "4 milioane EUR cumulat pe întreprindere; M1: maximum 30.000 EUR/vehicul; până la 100% din diferența de cost eligibilă",
+      "url": "https://www.mt.ro/transparenta-decizionala/consultare-publica/acte-normative-in-avizare/omti03112026dgpet",
+      "reference": "Ghid Măsura 2, secțiunea 1.7"
+    },
+    {
+      "label": "Selecția Măsurii 1",
+      "value": "80/70/65 puncte după dimensiunea IMM; 20 puncte pentru asamblarea finală în UE",
+      "url": "https://www.mt.ro/transparenta-decizionala/consultare-publica/acte-normative-in-avizare/omti03112026dgpet-2",
+      "reference": "Anexa 2.2 – Grila de evaluare tehnico-economică"
+    },
+    {
+      "label": "Selecția Măsurii 2",
+      "value": "70 puncte pentru ajutor/vehicul, 10 pentru kilometri în România, 20 pentru asamblarea finală în UE",
+      "url": "https://www.mt.ro/transparenta-decizionala/consultare-publica/acte-normative-in-avizare/omti03112026dgpet",
+      "reference": "Anexa 2.2 – Grila de evaluare tehnico-economică"
+    },
+    {
+      "label": "Casare și menținerea investiției",
+      "value": "Casare în maximum 60 de zile de la recepție; durabilitate de cinci ani de la finalizarea implementării",
+      "url": "https://www.mt.ro/transparenta-decizionala/consultare-publica/acte-normative-in-avizare/omti03112026dgpet-2",
+      "reference": "Ghid Măsura 1, secțiunile 1.3 și 2.1"
+    },
+    {
+      "label": "Implementare și prefinanțare",
+      "value": "Maximum 30 de luni, fără depășirea datei de 30 iunie 2030; prefinanțare de până la 40%, cu garantare",
+      "url": "https://www.mt.ro/transparenta-decizionala/consultare-publica/acte-normative-in-avizare/omti03112026dgpet-2",
+      "reference": "Ghid Măsura 1, secțiunea 1.3 și „Cererile de prefinanțare, plată și rambursare”"
+    }
+  ],
+  "calendar": {
+    "title": "Calendar e-DRIVE: consultare, aprobare și depunere",
+    "text": "La verificarea din 9 noiembrie 2026, ghidurile ambelor măsuri sunt în consultare publică. Datele de deschidere și închidere a depunerilor nu sunt anunțate.",
+    "items": [
+      "3–18 noiembrie 2026: consultarea proiectelor de ghid. Termenul de 18 noiembrie privește observațiile transmise MTI.",
+      "Proiectele de ghid prevăd lansarea apelurilor în maximum 30 de zile de la publicarea ghidului în Monitorul Oficial. Acest termen este condiționat de aprobarea și publicarea ghidului final; nu stabilește acum o dată de înscriere.",
+      "Pentru Măsura 2, Ordinul MTI nr. 817/2026 modifică art. 12 alin. (2) al schemei și tratează aplicarea după 31 decembrie 2026. MTI trebuie să asigure armonizarea cu noile reglementări de exceptare pe categorii de ajutoare. În lipsa armonizării, după perioada de tranziție aplicabilă nu se pot încheia contracte sau acorda ajutoare până la adoptarea formei armonizate."
+    ],
+    "schemeSource": "https://fonduri.mt.ro/documente/FM/Monitorul_Oficial_Partea_I_nr._739.pdf"
+  }
 }

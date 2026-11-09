@@ -26,12 +26,28 @@ assert.match(m2,/70 puncte.*10 puncte.*20 puncte/s);
 assert.match(m2,/diferența.*cost/si);
 assert.match($('.edrive-notice').text(),/nu este termen de depunere/i);
 assert($('a[href="https://fonduri.mt.ro/documente/GS_M1_%C8%99i_M2.zip"]').length);
+assert.equal($('nav.edrive-navigation a[href="#calendar-depunere"]').length, 1);
+assert.match($('#calendar-depunere').text(), /maximum 30 de zile.*publicarea ghidului în Monitorul Oficial/s);
+assert.equal($('#calendar-depunere a[href$="/Monitorul_Oficial_Partea_I_nr._739.pdf"]').length, 1);
+assert.match($('#masura-1 .edrive-measure__version a').attr('href'), /omti03112026dgpet-2$/);
+assert.match($('#masura-2 .edrive-measure__version a').attr('href'), /omti03112026dgpet$/);
+for (const route of ['e-move', 'e-mobility', 'finantari-panouri-fotovoltaice']) {
+ const related = cheerio.load(fs.readFileSync(new URL(`../${route}/index.html`, import.meta.url), 'utf8'));
+ for (const measure of ['masura-1', 'masura-2']) {
+   assert(related(`main a[href="/e-drive#${measure}"]`).length, `${route} should link to ${measure}`);
+ }
+}
 const nodes=$('script[type="application/ld+json"]').toArray().flatMap(el=>{
  const data=JSON.parse($(el).text());return data['@graph']||[data];
 });
 const page=nodes.find(n=>n['@type']==='WebPage');
 assert.equal(page.hasPart.length,2,'Structured data must describe both visible measure sections');
-for(const section of page.hasPart) assert.equal($(new URL(section.url).hash).find('h2').text(),section.name);
+for(const section of page.hasPart) {
+ const measure = $(new URL(section.url).hash);
+ assert.equal(measure.find('h2').text(),section.name);
+ const officialGuide = measure.find('.edrive-measure__version a').attr('href');
+ assert(section.citation.some(citation=>citation.url===officialGuide), 'Each measure should cite its official guide');
+}
 assert.equal($('meta[name="description"]').attr('content'),program.metaDescription);
 assert.equal($('meta[property="og:title"]').attr('content'),program.metaTitle);
 const {syncHtml}=require('../tools/sync-on-page-seo');

@@ -94,7 +94,16 @@ for (const hub of hubConfig.hubs) {
   assert.equal($("a[href*='?solicitant='], a[href*='?regiune='], a[href*='?investitie='], a[href*='?status=']").length, 0, `${hub.route}: no indexable filter links are allowed`);
   assert.equal($(".program-family-how #program-family-how-title").text().trim(), "Cum alegi", `${hub.route}: how-to section is missing`);
   assert.equal($(".program-family-related a").length, hub.relatedLinks.length, `${hub.route}: relevant resources must match config`);
-  for (const link of hub.relatedLinks) assert.ok(fs.existsSync(fileForRoute(ROOT, link.href)), `${hub.route}: internal link inexistent ${link.href}`);
+  for (const link of hub.relatedLinks) {
+    const destination = new URL(link.href, SITE);
+    const target = fileForRoute(ROOT, destination.pathname);
+    assert.ok(fs.existsSync(target), `${hub.route}: internal link inexistent ${link.href}`);
+    if (destination.hash) {
+      const targetDocument = cheerio.load(fs.readFileSync(target, "utf8"));
+      const id = decodeURIComponent(destination.hash.slice(1));
+      assert.equal(targetDocument("[id]").filter((_, element) => targetDocument(element).attr("id") === id).length, 1, `${hub.route}: missing or duplicate anchor ${link.href}`);
+    }
+  }
   assert.ok($("a[href='/verificare-eligibilitate-fonduri-europene']").length >= 1, `${hub.route}: project verification CTA is missing`);
   const expectedFamilyPrograms = programsForHub(hub.route);
   const renderedFamilyIds = $("[data-program-card]").map((_, card) => $(card).attr("data-program-id")).get();
