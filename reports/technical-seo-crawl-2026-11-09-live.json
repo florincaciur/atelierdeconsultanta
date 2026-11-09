@@ -1,0 +1,22 @@
+{
+  "generatedAt": "2026-11-09T15:15:13.540Z",
+  "origin": "https://atelierdeconsultanta.ro",
+  "sitemapUrlCount": 105,
+  "htmlPageCount": 106,
+  "historicalUrlCount": 243,
+  "assetCount": 70,
+  "fetchedUrlCount": 1136,
+  "reachableSitemapUrlCount": 105,
+  "issueCount": 1,
+  "issues": [
+    {
+      "type": "indexable-canonical-absent-sitemap",
+      "severity": "high",
+      "url": "https://atelierdeconsultanta.ro/gdpr",
+      "evidence": "Discovered from https://atelierdeconsultanta.ro/gdpr",
+      "fix": "Add the important canonical page to the appropriate sitemap or explicitly noindex/consolidate it after approval.",
+      "acceptance": "Every intended indexable canonical page is in sitemap.",
+      "approvalRequired": true
+    }
+  ]
+}

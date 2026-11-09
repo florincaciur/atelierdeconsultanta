@@ -1,0 +1,2 @@
+type,severity,url,evidence,fix,acceptance_test,approval_required
+indexable-canonical-absent-sitemap,high,https://atelierdeconsultanta.ro/gdpr,Discovered from https://atelierdeconsultanta.ro/gdpr,Add the important canonical page to the appropriate sitemap or explicitly noindex/consolidate it after approval.,Every intended indexable canonical page is in sitemap.,yes
