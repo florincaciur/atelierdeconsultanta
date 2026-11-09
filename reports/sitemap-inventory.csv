@@ -89,7 +89,7 @@ included,core,https://atelierdeconsultanta.ro/plan-de-afaceri-fonduri-europene,p
 included,programs,https://atelierdeconsultanta.ro/pnrr,pnrr/index.html,2026-09-10,,
 included,guides,https://atelierdeconsultanta.ro/pnrr-digitalizare-imm-cheltuieli-eligibile,pnrr-digitalizare-imm-cheltuieli-eligibile.html,,,
 included,programs,https://atelierdeconsultanta.ro/pocidif-21,pocidif-21/index.html,2026-11-04,,
-included,core,https://atelierdeconsultanta.ro/politica-de-confidentialitate,politica-de-confidentialitate.html,,,
+included,core,https://atelierdeconsultanta.ro/politica-de-confidentialitate,politica-de-confidentialitate.html,2026-11-09,,
 included,programs,https://atelierdeconsultanta.ro/programul-tranzitie-justa,programul-tranzitie-justa/index.html,2026-09-10,,
 included,guides,https://atelierdeconsultanta.ro/programul-tranzitie-justa-intrebari-documente,programul-tranzitie-justa-intrebari-documente/index.html,,,
 included,core,https://atelierdeconsultanta.ro/proiectare-fonduri-europene,proiectare-fonduri-europene/index.html,,,
@@ -105,7 +105,6 @@ included,core,https://atelierdeconsultanta.ro/studiu-fezabilitate-fonduri-europe
 included,guides,https://atelierdeconsultanta.ro/termeni-si-conditii,termeni-si-conditii.html,,,
 included,core,https://atelierdeconsultanta.ro/verificare-eligibilitate-fonduri-europene,verificare-eligibilitate-fonduri-europene/index.html,,,
 included,guides,https://atelierdeconsultanta.ro/webinarii,webinarii/index.html,,,
-excluded,,https://atelierdeconsultanta.ro/gdpr,gdpr.html,,duplicate_policy_pending_legal_consolidation,Politica duplicata este omisa din sitemap; redirectul ramane conditionat de aprobarea juridica si SEO.
 excluded,,https://atelierdeconsultanta.ro/fondul-de-modernizare,fondul-de-modernizare.html,,meta_refresh,
 excluded,,https://atelierdeconsultanta.ro/pnrr,pnrr.html,,meta_refresh,
 excluded,,/google8bbb9999c523a3bd,google8bbb9999c523a3bd.html,,missing_canonical,
@@ -241,6 +240,10 @@ excluded,,https://atelierdeconsultanta.ro/fonduri-europene-nord-est,_redirects,,
 excluded,,https://atelierdeconsultanta.ro/fonduri-europene-nord-est,_redirects,,redirect_source,HTTP 301
 excluded,,https://atelierdeconsultanta.ro/gal-afir,_redirects,,redirect_source,HTTP 301
 excluded,,https://atelierdeconsultanta.ro/gal-afir,_redirects,,redirect_source,HTTP 301
+excluded,,https://atelierdeconsultanta.ro/politica-de-confidentialitate,_redirects,,redirect_source,HTTP 301
+excluded,,https://atelierdeconsultanta.ro/politica-de-confidentialitate,_redirects,,redirect_source,HTTP 301
+excluded,,https://atelierdeconsultanta.ro/politica-de-confidentialitate,_redirects,,redirect_source,HTTP 301
+excluded,,https://atelierdeconsultanta.ro/politica-de-confidentialitate,_redirects,,redirect_source,HTTP 301
 excluded,,https://atelierdeconsultanta.ro/digitalizare-imm,_redirects,,redirect_source,HTTP 301
 excluded,,https://atelierdeconsultanta.ro/digitalizare-imm,_redirects,,redirect_source,HTTP 301
 excluded,,https://atelierdeconsultanta.ro/digitalizare-imm,_redirects,,redirect_source,HTTP 301

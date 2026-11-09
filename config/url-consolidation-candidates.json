@@ -131,7 +131,7 @@
       "primaryIntent": "variantă duplicată/rezumat GDPR și drepturi",
       "queryCluster": "GDPR FABER; drepturi date personale; solicitare acces/ștergere",
       "pageType": "pagină legală secundară",
-      "recommendation": "MERGE_301_AFTER_LEGAL_APPROVAL",
+      "recommendation": "MERGE_301",
       "target": "/politica-de-confidentialitate",
       "contentToMigrate": "Migrează orice procedură, canal pentru drepturi, termen sau istoric care este unic și aprobat; păstrează o singură informare legală.",
       "risks": "Redirectul înaintea aprobării juridice poate elimina accidental o informare obligatorie sau poate consolida într-un text incomplet.",

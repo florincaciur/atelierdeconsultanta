@@ -7,25 +7,23 @@ Generatorul include numai rute locale 200, indexabile si self-canonical. `lastmo
 - URL-uri raportate in auditul initial: 102
 - URL-uri in baseline-ul repository la inceputul P0.11: 92
 - URL-uri incluse acum: 106
-- URL-uri cu lastmod editorial verificabil: 28
-- URL-uri fara lastmod (omis intentionat): 78
+- URL-uri cu lastmod editorial verificabil: 29
+- URL-uri fara lastmod (omis intentionat): 77
 - sitemap-programs.xml: 28 (Pagini de programe)
 - sitemap-guides.xml: 30 (Ghiduri si continut editorial)
 - sitemap-core.xml: 48 (Pagini core, servicii, instrumente si juridice)
 
 ## Excluderi dupa motiv
 
-- duplicate_policy_pending_legal_consolidation: 1
 - meta_refresh: 2
 - missing_canonical: 5
 - noindex_meta: 63
-- redirect_source: 104
+- redirect_source: 108
 
 ## Lista excluderilor
 
 | Ruta/URL | Fisier sursa | Motiv | Detaliu |
 |---|---|---|---|
-| https://atelierdeconsultanta.ro/gdpr | gdpr.html | duplicate_policy_pending_legal_consolidation | Politica duplicata este omisa din sitemap; redirectul ramane conditionat de aprobarea juridica si SEO. |
 | https://atelierdeconsultanta.ro/fondul-de-modernizare | fondul-de-modernizare.html | meta_refresh | - |
 | https://atelierdeconsultanta.ro/pnrr | pnrr.html | meta_refresh | - |
 | /google8bbb9999c523a3bd | google8bbb9999c523a3bd.html | missing_canonical | - |
@@ -161,6 +159,10 @@ Generatorul include numai rute locale 200, indexabile si self-canonical. `lastmo
 | https://atelierdeconsultanta.ro/fonduri-europene-nord-est | _redirects | redirect_source | HTTP 301 |
 | https://atelierdeconsultanta.ro/gal-afir | _redirects | redirect_source | HTTP 301 |
 | https://atelierdeconsultanta.ro/gal-afir | _redirects | redirect_source | HTTP 301 |
+| https://atelierdeconsultanta.ro/politica-de-confidentialitate | _redirects | redirect_source | HTTP 301 |
+| https://atelierdeconsultanta.ro/politica-de-confidentialitate | _redirects | redirect_source | HTTP 301 |
+| https://atelierdeconsultanta.ro/politica-de-confidentialitate | _redirects | redirect_source | HTTP 301 |
+| https://atelierdeconsultanta.ro/politica-de-confidentialitate | _redirects | redirect_source | HTTP 301 |
 | https://atelierdeconsultanta.ro/digitalizare-imm | _redirects | redirect_source | HTTP 301 |
 | https://atelierdeconsultanta.ro/digitalizare-imm | _redirects | redirect_source | HTTP 301 |
 | https://atelierdeconsultanta.ro/digitalizare-imm | _redirects | redirect_source | HTTP 301 |

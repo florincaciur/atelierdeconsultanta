@@ -1,0 +1,168 @@
+
+    <div class="highlight-box" id="conformitate">
+      <p>Această politică explică ce date prelucrăm prin site și serviciile FABER, în ce scopuri și cum poți exercita drepturile prevăzute de <a href="https://eur-lex.europa.eu/eli/reg/2016/679/oj" target="_blank" rel="noopener noreferrer">Regulamentul (UE) 2016/679</a>.</p>
+      <p id="principii">Colectăm datele necesare scopurilor descrise mai jos și le păstrăm atât cât este necesar pentru aceste scopuri și obligațiile legale aplicabile.</p>
+    </div>
+
+    <nav class="toc" aria-label="Cuprins politică de confidențialitate">
+      <h2>Cuprins</h2>
+      <ol>
+        <li><a href="#operator">Cine este operatorul de date</a></li>
+        <li><a href="#ce-date">Ce date colectăm</a></li>
+        <li><a href="#cum-colectam">Cum colectăm datele</a></li>
+        <li><a href="#scopuri">Scopurile prelucrării</a></li>
+        <li><a href="#temei">Temeiul legal</a></li>
+        <li><a href="#stocare">Durata stocării</a></li>
+        <li><a href="#destinatari">Destinatari și transferuri</a></li>
+        <li><a href="#drepturi">Drepturile tale</a></li>
+        <li><a href="#exercitare">Cum îți exerciți drepturile</a></li>
+        <li><a href="#cookies">Cookies</a></li>
+        <li><a href="#securitate">Securitatea datelor</a></li>
+        <li><a href="#incalcari">Încălcări de securitate</a></li>
+        <li><a href="#contact-dpo">Contact și plângeri</a></li>
+      </ol>
+    </nav>
+
+    <section class="legal-section" id="operator">
+      <h2>1. Cine este operatorul de date</h2>
+      <p>Operatorul de date cu caracter personal este <strong>{{CONTROLLER}}</strong>. Site-ul și serviciile sunt prezentate sub brandul <strong>{{BRAND}}</strong>, iar entitatea care contractează și facturează este <strong>{{CONTRACTOR}}</strong>.</p>
+      <p><strong>Contact:</strong> <a href="mailto:{{EMAIL}}" data-analytics-event="contact_email" data-analytics-component="contact_link" data-analytics-cta-id="email_contact">{{EMAIL}}</a></p>
+      <p>Site-ul: <a href="https://atelierdeconsultanta.ro">atelierdeconsultanta.ro</a></p>
+    </section>
+
+    <section class="legal-section" id="ce-date">
+      <h2>2. Ce date colectăm</h2>
+      <h3>Date furnizate direct de tine:</h3>
+      <ul>
+        <li>Nume și prenume.</li>
+        <li>Adresă de email.</li>
+        <li>Număr de telefon (opțional).</li>
+        <li>Informații despre proiectul sau afacerea ta (în formularul de contact).</li>
+        <li>Orice alte informații pe care alegi să ni le transmiți voluntar.</li>
+      </ul>
+      <h3>Date colectate automat:</h3>
+      <ul>
+        <li>Adresă IP.</li>
+        <li>Tipul de browser și sistem de operare.</li>
+        <li>Paginile vizitate și durata vizitei (prin cookies analitice).</li>
+        <li>Data și ora accesării site-ului.</li>
+      </ul>
+    </section>
+
+    <section class="legal-section" id="cum-colectam">
+      <h2>3. Cum colectăm datele</h2>
+      <ul>
+        <li>Prin completarea formularului de contact de pe site.</li>
+        <li>Prin corespondență email sau telefonică inițiată de tine.</li>
+        <li>Prin cookies și tehnologii similare (cu consimțământul tău).</li>
+        <li>Prin contractul de prestări servicii semnat cu FABER.</li>
+      </ul>
+    </section>
+
+    <section class="legal-section" id="scopuri">
+      <h2>4. Scopurile prelucrării</h2>
+      <p>Prelucrăm datele tale personale în scopuri clare și legitime:</p>
+      <ul>
+        <li><strong>Răspuns la solicitări</strong> — pentru a-ți răspunde la întrebări și a-ți oferi informațiile solicitate.</li>
+        <li><strong>Prestarea serviciilor contractuale</strong> — pentru elaborarea dosarelor de finanțare și managementul proiectelor.</li>
+        <li><strong>Comunicări de marketing</strong> — trimiterea de newslettere cu noutăți despre fonduri europene (numai cu consimțământul tău explicit).</li>
+        <li><strong>Îmbunătățirea site-ului</strong> — analiza comportamentului de navigare pentru optimizarea experienței utilizatorilor.</li>
+        <li><strong>Îndeplinirea obligațiilor legale</strong> — arhivare, contabilitate, răspuns la cereri ale autorităților.</li>
+      </ul>
+    </section>
+
+    <section class="legal-section" id="temei">
+      <h2>5. Temeiul legal al prelucrării</h2>
+      <ul>
+        <li><strong>Consimțământ</strong> (art. 6 alin. 1 lit. a GDPR) — pentru comunicări de marketing și cookies neesențiale.</li>
+        <li><strong>Executarea contractului</strong> (art. 6 alin. 1 lit. b GDPR) — pentru prestarea serviciilor contractate.</li>
+        <li><strong>Obligație legală</strong> (art. 6 alin. 1 lit. c GDPR) — pentru păstrarea documentelor financiar-contabile.</li>
+        <li><strong>Interes legitim</strong> (art. 6 alin. 1 lit. f GDPR) — pentru securitatea sistemelor și prevenirea fraudei.</li>
+      </ul>
+    </section>
+
+    <section class="legal-section" id="stocare">
+      <h2>6. Durata stocării datelor</h2>
+      <ul>
+        <li><strong>Date din formularul de contact</strong> — păstrate 2 ani de la ultima interacțiune, dacă nu a rezultat un contract.</li>
+        <li><strong>Date contractuale</strong> — păstrate pe durata contractului și 5 ani după finalizare (obligații legale de arhivare).</li>
+        <li><strong>Date de marketing</strong> — până la retragerea consimțământului.</li>
+        <li><strong>Date de navigare (logs)</strong> — maximum 12 luni.</li>
+      </ul>
+    </section>
+
+    <section class="legal-section" id="destinatari">
+      <h2>7. Destinatari și transferuri internaționale</h2>
+      <p>Datele tale pot fi accesate de:</p>
+      <ul>
+        <li>Angajații FABER implicați în prestarea serviciilor contractate.</li>
+        <li>Furnizori de servicii IT (hosting, email, CRM) — în calitate de persoane împuternicite, cu garanții GDPR adecvate.</li>
+        <li>Microsoft Clarity — pentru analiză de utilizare, hărți de căldură și îmbunătățirea experienței pe site, în condițiile politicilor Microsoft aplicabile.</li>
+        <li>Autorități publice — când există obligația legală de divulgare.</li>
+      </ul>
+      <p>Nu vindem datele tale personale niciunei terțe părți. Transferurile în afara UE/SEE se realizează numai cu garanții adecvate (Clauze Contractuale Standard sau decizii de adecvare ale Comisiei Europene).</p>
+    </section>
+
+    <section class="legal-section" id="drepturi">
+      <h2 id="drepturi-gdpr">8. Drepturile tale</h2>
+      <ul>
+        <li><strong>Acces (art. 15).</strong> Poți afla dacă prelucrăm date despre tine și poți cere o copie a acestora.</li>
+        <li><strong>Rectificare (art. 16).</strong> Poți cere corectarea datelor inexacte și completarea celor incomplete.</li>
+        <li><strong>Ștergere (art. 17).</strong> Poți cere ștergerea datelor în situațiile prevăzute de regulament, sub rezerva excepțiilor aplicabile.</li>
+        <li><strong>Restricționare (art. 18).</strong> Poți cere limitarea prelucrării în condițiile prevăzute de regulament.</li>
+        <li><strong>Portabilitate (art. 20).</strong> Poți primi datele pe care le-ai furnizat într-un format structurat, utilizat în mod curent și lizibil automat, atunci când prelucrarea este automatizată și se bazează pe consimțământ sau pe contract.</li>
+        <li><strong>Opoziție (art. 21).</strong> Te poți opune prelucrării bazate pe interes legitim din motive legate de situația ta. Te poți opune oricând marketingului direct.</li>
+        <li><strong>Decizii automatizate (art. 22).</strong> Ai dreptul, în condițiile regulamentului, să nu fii supus unei decizii bazate exclusiv pe prelucrare automatizată care produce efecte juridice sau te afectează în mod similar și semnificativ.</li>
+        <li><strong>Retragerea consimțământului (art. 7).</strong> Îți poți retrage oricând consimțământul pentru prelucrările care se bazează pe acesta. Retragerea nu afectează legalitatea prelucrării anterioare.</li>
+      </ul>
+    </section>
+
+    <section class="legal-section" id="exercitare">
+      <h2>9. Cum îți exerciți drepturile</h2>
+      <p>Trimite solicitarea la <a href="mailto:{{EMAIL}}?subject=Exercitare%20drepturi%20GDPR" data-analytics-event="contact_email" data-analytics-component="contact_link" data-analytics-cta-id="email_contact">{{EMAIL}}</a> cu subiectul „Exercitare drepturi GDPR” sau folosește <a href="/contact" data-analytics-event="cta_click" data-analytics-component="contact_cta" data-analytics-cta-id="politica_de_confidentialitate_contact_rights" data-analytics-target="/contact" data-analytics-cta-view="true" data-analytics-copy-variant="default">formularul de contact</a>. Spune ce drept dorești să exerciți și la ce prelucrare se referă cererea. Dacă avem îndoieli rezonabile privind identitatea solicitantului, putem cere informațiile suplimentare necesare pentru confirmare.</p>
+      <p>Te informăm despre măsurile luate fără întârzieri nejustificate și în cel mult o lună de la primirea cererii. Dacă numărul sau complexitatea cererilor o impune, termenul poate fi prelungit cu până la două luni. În prima lună îți comunicăm prelungirea și motivele ei.</p>
+      <p>Dacă nu dăm curs cererii, îți comunicăm motivele în cel mult o lună de la primire și îți indicăm posibilitatea de a depune o plângere la autoritatea de supraveghere sau de a te adresa instanței.</p>
+    </section>
+
+    <section class="legal-section" id="cookies">
+      <h2>10. Cookies</h2>
+      <p>Site-ul utilizează cookies și tehnologii similare. Cele strict necesare susțin funcțiile pe care le soliciți. Pentru tehnologii neesențiale, se aplică regulile privind consimțământul.</p>
+      <ul>
+        <li><strong>Cookies esențiale</strong> — necesare funcționării site-ului; nu pot fi dezactivate.</li>
+        <li><strong>Cookies analitice</strong> — ne ajută să înțelegem cum este utilizat site-ul (ex: Microsoft Clarity); necesită consimțământul tău, acolo unde legea aplicabilă îl cere.</li>
+        <li><strong>Cookies de marketing</strong> — pentru publicitate personalizată; necesită consimțământul tău.</li>
+      </ul>
+      <p>Poți gestiona cookies din setările browserului. Pentru a retrage un consimțământ pe care l-ai acordat, poți folosi și canalele din secțiunea <a href="#exercitare">Cum îți exerciți drepturile</a>.</p>
+    </section>
+
+    <section class="legal-section" id="securitate">
+      <h2>11. Securitatea datelor</h2>
+      <p>Aplicăm măsuri tehnice și organizatorice adecvate pentru a proteja datele tale personale:</p>
+      <ul>
+        <li>Transmiterea datelor prin conexiuni criptate (HTTPS/TLS).</li>
+        <li>Acces restricționat la datele personale, bazat pe principiul necesității.</li>
+        <li>Proceduri interne de securitate a informației.</li>
+      </ul>
+    </section>
+
+    <section class="legal-section" id="incalcari">
+      <h2>12. Încălcări de securitate</h2>
+      <p>În cazul unei încălcări a securității datelor cu caracter personal, operatorul notifică autoritatea de supraveghere fără întârzieri nejustificate și, dacă este posibil, în cel mult 72 de ore de când a luat cunoștință de incident. Notificarea nu este obligatorie dacă încălcarea este puțin probabil să prezinte un risc pentru drepturile și libertățile persoanelor fizice.</p>
+      <p>Când încălcarea poate genera un risc ridicat, operatorul informează persoanele afectate fără întârzieri nejustificate, în condițiile art. 34 din GDPR. Informarea descrie incidentul, consecințele probabile, măsurile luate și datele de contact relevante.</p>
+    </section>
+
+    <section class="legal-section" id="contact-dpo">
+      <h2 id="plangeri">13. Contact și dreptul de a depune plângere</h2>
+      <span id="contact-gdpr"></span>
+      <p>Pentru orice întrebare legată de prelucrarea datelor tale personale, ne poți contacta la:</p>
+      <ul>
+        <li><strong>Email:</strong> <a href="mailto:{{EMAIL}}" data-analytics-event="contact_email" data-analytics-component="contact_link" data-analytics-cta-id="email_contact">{{EMAIL}}</a></li>
+          <li><strong>Site-ul:</strong> <a href="/contact" data-analytics-event="cta_click" data-analytics-component="contact_cta" data-analytics-cta-id="politica_de_confidentialitate_contact_2" data-analytics-target="/contact" data-analytics-cta-view="true" data-analytics-copy-variant="default">Formular de contact</a></li>
+      </ul>
+      <p>Dacă consideri că drepturile tale nu au fost respectate, poți depune o plângere la <strong>Autoritatea Națională de Supraveghere a Prelucrării Datelor cu Caracter Personal (ANSPDCP)</strong>:</p>
+      <ul>
+        <li>Site-ul: <a href="https://www.dataprotection.ro" target="_blank" rel="noopener" data-analytics-event="source_document_click" data-analytics-component="official_source" data-analytics-cta-id="source_document" data-analytics-target="https://www.dataprotection.ro/">www.dataprotection.ro</a></li>
+        <li>Email: <a href="mailto:anspdcp@dataprotection.ro" data-analytics-event="contact_email" data-analytics-component="contact_link" data-analytics-cta-id="email_contact">anspdcp@dataprotection.ro</a></li>
+      </ul>
+      <p>Ne rezervăm dreptul de a actualiza prezenta politică. Modificările semnificative vor fi comunicate prin site sau prin email.</p>
+    </section>

@@ -42,7 +42,7 @@ async function main(){
     await response.body.cancel();
    }
   }
-  const routes=all?[...sitemapRoutes(ROOT),'/gdpr']:['/'];
+  const routes=all?sitemapRoutes(ROOT):['/'];
   for(const viewport of viewports){
    const page=await browser.newPage({viewport,reducedMotion:'reduce'});
    // Third-party telemetry does not participate in layout verification.

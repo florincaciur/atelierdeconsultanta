@@ -191,6 +191,12 @@ function loadPageHints(root) {
   // provin exclusiv din registrul editorial și pot rămâne nepublicate până la
   // confirmarea unei date reale.
   for (const [route, value] of hints) hints.set(route, { ...value, updatedAt: undefined });
+  const { ROUTE: privacyRoute, loadPrivacyPolicy } = require("./privacy-policy");
+  hints.set(privacyRoute, {
+    ...hints.get(privacyRoute),
+    updatedAt: loadPrivacyPolicy(root).modifiedAt,
+    citation: [{ "@type": "CreativeWork", name: "Regulamentul (UE) 2016/679", url: "https://eur-lex.europa.eu/eli/reg/2016/679/oj" }]
+  });
   const governancePath = path.join(root, "config", "editorial-governance.json");
   if (fs.existsSync(governancePath)) {
     const governance = JSON.parse(fs.readFileSync(governancePath, "utf8"));

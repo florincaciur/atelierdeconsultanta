@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-11-09T15:29:00.242Z",
+  "generatedAt": "2026-11-09T20:23:26.635Z",
   "summary": {
-    "htmlFilesChecked": 199,
+    "htmlFilesChecked": 189,
     "indexablePagesChecked": 106,
     "filesWithIssues": 0,
     "organizationVariants": 1,
-    "stableTopLevelIdsChecked": 568,
+    "stableTopLevelIdsChecked": 569,
     "types": {
       "Organization": 132,
       "ProfessionalService": 106,
@@ -17,7 +17,7 @@
       "ListItem": 332,
       "Article": 33,
       "FinancialIncentive": 26,
-      "CreativeWork": 28,
+      "CreativeWork": 29,
       "FAQPage": 71,
       "Question": 468,
       "Answer": 468,
@@ -2254,7 +2254,7 @@
       "file": "politica-de-confidentialitate.html",
       "route": "/politica-de-confidentialitate",
       "blocks": 1,
-      "topLevelIds": 4,
+      "topLevelIds": 5,
       "types": {
         "Organization": 1,
         "ProfessionalService": 1,
@@ -2263,9 +2263,12 @@
         "WebSite": 1,
         "WebPage": 1,
         "BreadcrumbList": 1,
-        "ListItem": 2
+        "ListItem": 2,
+        "CreativeWork": 1
       },
-      "modified": [],
+      "modified": [
+        "2026-11-09"
+      ],
       "issues": []
     },
     {

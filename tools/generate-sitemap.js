@@ -184,6 +184,8 @@ function editorialLastmods(recordsByRoute = editorialRecords()) {
     if (!isCompleteRecord(record) || !isIsoDate(record.lastMeaningfulUpdate)) continue;
     result.set(canonicalUrl(record.route), record.lastMeaningfulUpdate);
   }
+  const { ROUTE: privacyRoute, loadPrivacyPolicy } = require("./privacy-policy");
+  result.set(canonicalUrl(privacyRoute), loadPrivacyPolicy(ROOT).modifiedAt);
   return result;
 }
 

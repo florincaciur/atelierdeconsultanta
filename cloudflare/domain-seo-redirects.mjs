@@ -12,6 +12,7 @@ const INTENTIONAL_NOT_FOUND_PATH = "/__faber-intentional-not-found__";
 const MAX_CONTACT_BODY_BYTES = 64 * 1024;
 const MAX_ANALYTICS_BODY_BYTES = 16 * 1024;
 const RETIRED_PUBLIC_ROUTES = new Map([
+  ["/gdpr", "/politica-de-confidentialitate"],
   ["/granturi-digitalizare-imm", "/digitalizare-imm"],
   ["/studii-de-caz", "/studii-de-caz-fonduri-europene"],
   ["/testimoniale", "/studii-de-caz-fonduri-europene"],
@@ -352,7 +353,7 @@ function contactForwardPayload(payload, now = new Date()) {
     email: payload.email || "—",
     phone: payload.phone || "—",
     privacy_notice_acknowledged: "true",
-    privacy_notice_version: "approved_2026-07-22",
+    privacy_notice_version: "approved_2026-11-09",
     program_slug: payload.program_slug,
     caen_or_so: payload.caen_or_so,
     budget_estimate: payload.budget_estimate,

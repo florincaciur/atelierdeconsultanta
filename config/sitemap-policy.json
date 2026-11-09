@@ -37,10 +37,5 @@
       "fallback": true
     }
   ],
-  "excludedRoutes": {
-    "/gdpr": {
-      "reason": "duplicate_policy_pending_legal_consolidation",
-      "note": "Politica duplicata este omisa din sitemap; redirectul ramane conditionat de aprobarea juridica si SEO."
-    }
-  }
+  "excludedRoutes": {}
 }

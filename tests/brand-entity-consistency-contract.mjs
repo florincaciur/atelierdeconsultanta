@@ -75,8 +75,7 @@ const keySurfaces = [
   "/despre-faber",
   "/contact",
   "/politica-de-confidentialitate",
-  "/termeni-si-conditii",
-  "/gdpr"
+  "/termeni-si-conditii"
 ].map(routeFile);
 for (const relativePath of keySurfaces) {
   const $ = cheerio.load(read(relativePath));
@@ -96,8 +95,7 @@ const legalPanelSurfaces = [...new Set([
   routeFile("/despre-faber"),
   routeFile("/contact"),
   routeFile("/politica-de-confidentialitate"),
-  routeFile("/termeni-si-conditii"),
-  routeFile("/gdpr")
+  routeFile("/termeni-si-conditii")
 ])];
 for (const relativePath of legalPanelSurfaces) {
   const $ = cheerio.load(read(relativePath));
@@ -132,18 +130,28 @@ for (const required of [
 assert.equal(about(".about-team img").length, 0, "Echipa nu poate conține fotografii neverificate.");
 assert(!graphNodes(about).some((node) => hasType(node, "Person")), "Schema Person nu poate fi publicată fără profil aprobat.");
 
-const privacyText = cheerio.load(read(routeFile("/politica-de-confidentialitate")))("#operator").text().replace(/\s+/gu, " ");
+const privacy = cheerio.load(read(routeFile("/politica-de-confidentialitate")));
+const privacyText = privacy("#operator").text().replace(/\s+/gu, " ");
 assert(privacyText.includes(`Operatorul de date cu caracter personal este ${identity.personalDataController}`), "Politica trebuie să numească operatorul aprobat.");
 assert(privacyText.includes(`brandul ${identity.brandName}`), "Politica trebuie să separe brandul de operator.");
 assert(privacyText.includes(`entitatea care contractează și facturează este ${identity.contractingEntity}`), "Politica trebuie să numească entitatea contractuală.");
+const privacyUrl = "https://atelierdeconsultanta.ro/politica-de-confidentialitate";
+assert.deepEqual(privacy('link[rel="canonical"]').map((_, node) => privacy(node).attr("href")).get(), [privacyUrl]);
+const revision = privacy("time[data-privacy-revision]").attr("datetime");
+assert.match(revision, /^\d{4}-\d{2}-\d{2}$/u);
+assert.equal(graphNodes(privacy).find((node) => hasType(node, "WebPage"))?.dateModified, revision);
+for (const fragment of ["conformitate", "principii", "drepturi-gdpr", "exercitare", "plangeri", "incalcari", "contact-gdpr", "cookies"]) {
+  assert.equal(privacy(`#${fragment}`).length, 1, `Fragmentul #${fragment} trebuie să rămână accesibil.`);
+}
+assert.equal(privacy("#exercitare a[href='/contact']").length, 1);
+assert.equal(privacy("#exercitare a[href^='mailto:']").length, 1);
+const contact = cheerio.load(read(routeFile("/contact")));
+assert.equal(contact("#contact-triage-form label[for='privacy-notice-acknowledged'] a").attr("href"), "/politica-de-confidentialitate");
 
 const termsText = cheerio.load(read(routeFile("/termeni-si-conditii")))("main").text().replace(/\s+/gu, " ");
 assert(termsText.includes(`FABER” — brandul ${identity.brandName}`), "Termenii trebuie să definească FABER drept brand.");
 assert(termsText.includes(`Prestator” — ${identity.contractingEntity}`), "Termenii trebuie să definească separat entitatea juridică.");
 assert(!termsText.includes(`${identity.brandName}, persoană juridică`), "Brandul nu poate fi descris drept persoană juridică.");
 
-const gdprText = cheerio.load(read(routeFile("/gdpr")))("main").text().replace(/\s+/gu, " ");
-assert(gdprText.includes(`${identity.personalDataController} este operatorul de date pentru acest site`), "GDPR trebuie să numească operatorul aprobat.");
-assert(!gdprText.includes("garantează controlul deplin"), "GDPR nu trebuie să formuleze o garanție absolută.");
 
 console.log(`Brand/entity contract PASS (${process.argv.includes("--dist") ? "dist" : "source"}): ${publicFiles.length} fișiere publice, ${keySurfaces.length} suprafețe structurale și ${legalPanelSurfaces.length} panouri juridice validate.`);

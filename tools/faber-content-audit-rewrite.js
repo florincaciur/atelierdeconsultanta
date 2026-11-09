@@ -64,7 +64,6 @@ const MINIMUM_ROUTES = [
   "/idei-afaceri-fonduri-europene",
   "/termeni-si-conditii",
   "/politica-de-confidentialitate",
-  "/gdpr",
   "/surse-oficiale-fonduri-europene",
   "/metodologie-verificare-eligibilitate"
 ];
@@ -767,7 +766,7 @@ function updateBlog() {
 }
 
 function updateAboutContactLegal() {
-  for (const file of ["despre-faber/index.html", "gdpr.html", "politica-de-confidentialitate.html", "termeni-si-conditii.html"]) {
+  for (const file of ["despre-faber/index.html", "politica-de-confidentialitate.html", "termeni-si-conditii.html"]) {
     if (!fs.existsSync(path.join(ROOT, file))) continue;
     const $ = loadHtml(file);
     $("a[href^='mailto:atelier.consultanta@gmail.com']").each((_, element) => {

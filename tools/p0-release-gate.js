@@ -7,6 +7,7 @@ const path = require("path");
 const { spawnSync } = require("child_process");
 const cheerio = require("cheerio");
 const { chromium } = require("playwright");
+const { validatePrivacyPublication } = require("./privacy-policy");
 
 const ROOT = path.resolve(__dirname, "..");
 const CONFIG_PATH = path.join(ROOT, "config", "p0-release-gate.json");
@@ -118,6 +119,12 @@ function evaluateGovernanceBlockers() {
       CONFIG.legalSurfaceUrls,
       { retest: "Completați fișa canonică și avizul juridic fără a inventa valori, apoi rerulați gate-ul." }
     ));
+  }
+
+  try {
+    validatePrivacyPublication(ROOT);
+  } catch (error) {
+    blockers.push(result("legal_identity", "local", "FAIL", error.message, ["/politica-de-confidentialitate", "/gdpr"]));
   }
 
   if (contact.privacyNotice?.copyState !== "approved" || legal.approvals?.operationalEmailOwnerConfirmation?.state !== "approved") {

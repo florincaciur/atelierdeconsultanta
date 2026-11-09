@@ -155,7 +155,7 @@ function collectInventory(root) {
   const familyRoutes = new Set(json(path.join(root, "config", "program-family-hubs.json")).hubs.map((hub) => hub.route));
   const pageType = new Map((seo.pages || []).filter((page) => !page.redirectTo).map((page) => [`/${page.slug}`, page.type]));
   const legalRoutes = new Set([...pageType].filter(([, type]) => type === "legal").map(([route]) => route));
-  for (const route of ["/termeni-si-conditii", "/politica-de-confidentialitate", "/gdpr"]) legalRoutes.add(route);
+  for (const route of ["/termeni-si-conditii", "/politica-de-confidentialitate"]) legalRoutes.add(route);
   const guideRoutes = new Set([...pageType].filter(([, type]) => ["article", "guide", "resource", "faq"].includes(type)).map(([route]) => route));
   const sets = { programs: programRoutes, families: familyRoutes, legal: legalRoutes, guides: guideRoutes };
   let faqBlocks = 0;

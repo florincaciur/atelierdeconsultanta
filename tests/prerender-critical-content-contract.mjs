@@ -36,7 +36,6 @@ const fixedRoutes = [
   "/calculator-soc",
   "/contact",
   "/despre-faber",
-  "/gdpr",
   "/politica-de-confidentialitate",
   "/termeni-si-conditii"
 ];

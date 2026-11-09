@@ -7,6 +7,7 @@ const fs = require("fs");
 const path = require("path");
 const { ROOT, findPublicHtmlFiles } = require("./sync-global-header");
 const { approvedIdentity, loadLegalIdentity } = require("./legal-identity-governance");
+const { FILE: PRIVACY_FILE, renderPrivacyPolicy } = require("./privacy-policy");
 
 const CHECK = process.argv.includes("--check");
 const LEGACY_BRAND_NAMES = [
@@ -29,29 +30,13 @@ function synchronize(html, relativePath, identity) {
   }
   output = output.replaceAll(LEGACY_EMAIL, identity.publicEmail);
 
-  if (relativePath === "politica-de-confidentialitate.html") {
-    output = replaceKnownStatement(
-      output,
-      "<p>Operatorul de date cu caracter personal este <strong>FABER – Atelier de Consultanță</strong>, cu activitate în domeniul consultanței pentru fonduri europene nerambursabile.</p>",
-      `<p>Operatorul de date cu caracter personal este <strong>${identity.personalDataController}</strong>. Site-ul și serviciile sunt prezentate sub brandul <strong>${identity.brandName}</strong>, iar entitatea care contractează și facturează este <strong>${identity.contractingEntity}</strong>.</p>`,
-      relativePath
-    );
-  }
+  if (relativePath === PRIVACY_FILE) output = renderPrivacyPolicy(output, ROOT, identity);
 
   if (relativePath === "termeni-si-conditii.html") {
     output = replaceKnownStatement(
       output,
       "<li><strong>„FABER\"</strong> — FABER – Atelier de Consultanță, persoană juridică română, cu activitate de consultanță în accesarea fondurilor europene nerambursabile;</li>",
       `<li><strong>„FABER”</strong> — brandul ${identity.brandName}, sub care ${identity.contractingEntity} prezintă serviciile de consultanță și coordonare a proiectării;</li>\n        <li><strong>„Prestator”</strong> — ${identity.contractingEntity}, entitatea juridică ce încheie contractele și emite facturile pentru serviciile asumate;</li>`,
-      relativePath
-    );
-  }
-
-  if (relativePath === "gdpr.html") {
-    output = replaceKnownStatement(
-      output,
-      /FABER – Atelier de Consultanță respectă toate prevederile GDPR\s+și îți garantează controlul deplin asupra datelor tale personale\./u,
-      `${identity.personalDataController} este operatorul de date pentru acest site și aplică regulile GDPR\n        activităților prezentate sub brandul ${identity.brandName}. Drepturile și modalitățile de exercitare sunt explicate mai jos.`,
       relativePath
     );
   }

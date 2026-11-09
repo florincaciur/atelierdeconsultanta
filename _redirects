@@ -1,6 +1,10 @@
 # Canonical URL policy: HTTPS, no .html, no trailing slash except homepage.
 # Specific legacy aliases stay above the global normalizers so every source resolves in one hop.
 /index.html / 301
+/gdpr https://atelierdeconsultanta.ro/politica-de-confidentialitate 301
+/gdpr/ https://atelierdeconsultanta.ro/politica-de-confidentialitate 301
+/gdpr.html https://atelierdeconsultanta.ro/politica-de-confidentialitate 301
+/gdpr/index.html https://atelierdeconsultanta.ro/politica-de-confidentialitate 301
 
 # GSC remediation (2026-08-08): consolidate public noindex placeholders and
 # unapproved trust aliases into the closest verified, indexable canonical page.

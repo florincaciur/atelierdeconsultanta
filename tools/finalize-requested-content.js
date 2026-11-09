@@ -309,7 +309,6 @@ function updateLegalPage(file, title, summary) {
 }
 
 function updateLegal() {
-  updateLegalPage("gdpr.html", "Politica GDPR", "Drepturile tale privind datele personale și modul în care FABER răspunde solicitărilor GDPR.");
   updateLegalPage("politica-de-confidentialitate.html", "Politica de Confidențialitate", "Cum colectăm, folosim și protejăm datele transmise prin site și formularul de contact.");
   updateLegalPage("termeni-si-conditii.html", "Termeni și Condiții", "Condițiile generale pentru folosirea site-ului și pentru discuțiile de consultanță cu FABER.");
 }
@@ -356,7 +355,7 @@ function updateLegacyRedirects() {
   const additions = [];
   for (const entry of fs.readdirSync(ROOT, { withFileTypes: true })) {
     if (!entry.isFile() || !entry.name.endsWith(".html")) continue;
-    if (["index.html", "404.html", "gdpr.html", "politica-de-confidentialitate.html", "termeni-si-conditii.html"].includes(entry.name)) continue;
+    if (["index.html", "404.html", "politica-de-confidentialitate.html", "termeni-si-conditii.html"].includes(entry.name)) continue;
     const slug = entry.name.replace(/\.html$/i, "");
     if (!fs.existsSync(path.join(ROOT, slug, "index.html"))) continue;
     fs.writeFileSync(path.join(ROOT, entry.name), redirectFallbackHtml(slug), "utf8");
