@@ -2052,9 +2052,15 @@
       "officialSourceUrl": "https://fonduri.mt.ro/transparenta/consultare-publica/fondul-pentru-modernizare/fm-mti-demareaza-procesul-de-consultare-publica-pentru-ghidurile-solicitantului-aferente-masurilor-1-si-2-ale-schemei-e-drive",
       "sourceVersion": "Ghidurile solicitantului e-DRIVE Măsura 1 și Măsura 2, versiuni în consultare publică publicate la 03.11.2026; observații până la 18.11.2026",
       "nextReviewAt": "2027-01-03",
-      "lastMeaningfulUpdate": "2026-11-04",
+      "lastMeaningfulUpdate": "2026-11-09",
       "statusSnapshot": "consultare_publica",
       "changelog": [
+        {
+          "date": "2026-11-09",
+          "summary": "Adăugate exemple de calcul al grantului pentru Măsurile 1 și 2 pe baza ghidurilor aflate în consultare.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": true
+        },
         {
           "date": "2026-11-04",
           "summary": "Statutul e-DRIVE a fost reverificat în sursa oficială; nu a fost identificată o schimbare editorială substanțială suplimentară.",

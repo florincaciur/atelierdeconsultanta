@@ -862,7 +862,7 @@ function renderComparison(comparison, program) {
 
 function renderMeasureNavigation(content) {
   if (!content.measures) return '';
-  return `<nav class="edrive-navigation" aria-label="Cuprins e-DRIVE"><a href="#masura-1">01 · Măsura 1 pentru IMM-uri</a><a href="#masura-2">02 · Măsura 2 pentru transportatori</a><a href="#documente">Documente comune</a><a href="#calendar">Calendar și pași</a><a href="#surse-oficiale">Ghiduri și surse</a></nav>`;
+  return `<nav class="edrive-navigation" aria-label="Cuprins e-DRIVE"><a href="#masura-1">01 · Măsura 1 pentru IMM-uri</a><a href="#masura-2">02 · Măsura 2 pentru transportatori</a><a href="#exemple-de-calcul">Exemple de calcul</a><a href="#documente">Documente comune</a><a href="#calendar">Calendar și pași</a><a href="#surse-oficiale">Ghiduri și surse</a></nav>`;
 }
 
 function renderMeasures(content) {
@@ -890,7 +890,7 @@ function renderPage(program, content) {
   <link rel="canonical" href="${canonical}"><link rel="icon" href="/favicon.png">
   <meta property="og:type" content="website"><meta property="og:locale" content="ro_RO"><meta property="og:title" content="${e(program.metaTitle)}"><meta property="og:description" content="${e(program.metaDescription)}"><meta property="og:url" content="${canonical}"><meta property="og:image" content="${SITE}/og-image.jpg"><meta property="og:image:alt" content="${e(`${program.shortName} — FABER`)}">
   <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="${e(program.metaTitle)}"><meta name="twitter:description" content="${e(program.metaDescription)}"><meta name="twitter:image" content="${SITE}/og-image.jpg"><meta name="twitter:image:alt" content="${e(`${program.shortName} — FABER`)}">
-  <link rel="stylesheet" href="/assets/seo-hub.css"><link rel="stylesheet" href="/assets/program-showcase-2026.css?v=20260906-1">${content.measures ? '\n  <link rel="stylesheet" href="/assets/edrive-measures.css?v=20261103-1">' : ''}
+  <link rel="stylesheet" href="/assets/seo-hub.css"><link rel="stylesheet" href="/assets/program-showcase-2026.css?v=20261109-1">${content.measures ? '\n  <link rel="stylesheet" href="/assets/edrive-measures.css?v=20261103-1">' : ''}
   <script type="application/ld+json">${JSON.stringify(schema).replace(/</g, "\\u003c")}</script>
 </head><body class="program-showcase-page page-family-program" data-page-type="program" data-program-id="${e(program.id)}">
 ${HEADER}
@@ -906,10 +906,10 @@ ${HEADER}
   <section class="program-metrics" aria-label="Repere de finanțare">${content.metrics.map(([value, label]) => `<div><strong>${e(value)}</strong><span>${e(label)}</span></div>`).join("")}</section>
   ${content.notice ? `<aside class="edrive-notice" aria-labelledby="edrive-consultare"><p class="section-kicker">Statut la 3 noiembrie 2026</p><h2 id="edrive-consultare">${e(content.notice.title)}</h2><p>${e(content.notice.text)}</p><a href="${e(content.notice.url)}" target="_blank" rel="noopener noreferrer">Consultă anunțul MTI</a></aside>` : ''}
   ${renderMeasureNavigation(content)}
-  <section class="program-section program-section--answer" id="raspuns-rapid"><div><p class="section-kicker">Răspuns rapid</p><h2>Ce finanțează și în ce stadiu este?</h2></div><div class="answer-card"><p>${e(content.answer)}</p><small>Statut verificat la <time datetime="${program.verifiedAt}">${program.verifiedAt}</time>. ${e(program.editorialDisclaimer)}</small></div></section>
+  <section class="program-section program-section--answer" id="raspuns-rapid"><div><p class="section-kicker">${content.answerHeading ? "Pe scurt" : "Răspuns rapid"}</p><h2>${e(content.answerHeading || "Ce finanțează și în ce stadiu este?")}</h2></div><div class="answer-card"><p>${e(content.answer)}</p><small>Statut verificat la <time datetime="${program.verifiedAt}">${program.verifiedAt}</time>. ${e(program.editorialDisclaimer)}</small></div></section>
   ${renderComparison(content.comparison, program)}
   ${renderMeasures(content)}
-  ${(content.sections || []).map(section => `<section class="program-section program-section--soft"><div class="section-heading"><p class="section-kicker">Date oficiale</p><h2>${e(section.title)}</h2><p>${e(section.intro)}</p></div><div class="program-card-grid">${renderCards(section.rows)}</div></section>`).join("\n")}
+  ${(content.sections || []).map(section => `<section class="program-section program-section--soft"${section.id ? ` id="${e(section.id)}"` : ""}><div class="section-heading">${section.id ? "" : '<p class="section-kicker">Date oficiale</p>'}<h2>${e(section.title)}</h2><p>${e(section.intro)}</p></div><div class="program-card-grid"${section.example ? " data-factual-example" : ""}>${renderCards(section.rows)}</div></section>`).join("\n")}
   <section class="program-section program-section--fit"><div class="section-heading"><p class="section-kicker">Filtru inițial</p><h2>Merită continuată analiza?</h2><p>Compară profilul proiectului cu aceste criterii înainte de a investi în documentație. Concluzia finală se bazează pe actele solicitantului și pe forma oficială aplicabilă.</p></div><div class="program-fit-grid"><article class="fit-card fit-card--yes"><h3>Profil care merită verificat</h3>${renderList(content.fit)}</article><article class="fit-card fit-card--caution"><h3>Condiții care cer clarificare</h3>${renderList(content.caution)}</article></div></section>
   <section class="program-section program-section--soft"><div class="section-heading"><p class="section-kicker">${content.measures ? 'Obligații comune' : 'Arhitectura proiectului'}</p><h2>${content.measures ? 'Implementarea și menținerea investiției' : 'Ce intră în analiza investiției'}</h2></div><div class="program-card-grid">${renderCards(content.investments)}</div></section>
   <section class="program-section program-section--documents" id="documente"><div class="section-heading"><p class="section-kicker">Documente necesare</p><h2>${content.measures ? 'Documente și verificări comune' : 'Documente de pregătit'}</h2><p>Verifică valabilitatea actelor și concordanța lor cu cererea de finanțare.</p></div><div class="program-details">${renderDetails(content.documents)}</div></section>

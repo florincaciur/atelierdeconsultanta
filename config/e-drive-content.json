@@ -8,7 +8,7 @@
     ["300.000 € / 4 mil. €", "plafon întreprindere · Măsura 1 / Măsura 2"],
     ["18 noiembrie", "termen pentru observații, nu pentru proiecte"]
   ],
-  "answer": "e-DRIVE finanțează înlocuirea flotelor cu vehicule noi exclusiv electrice. Măsura 1 este ajutor de minimis pentru IMM-uri, cu maximum 30.000 EUR/M1, 130.000 EUR/M2 și 300.000 EUR pe întreprindere unică în orice perioadă de trei ani. Măsura 2 este ajutor de stat pentru transportatori de pasageri, pentru M1, M2 și M3, cu maximum 4 milioane EUR pe întreprindere, calculat pe diferența de cost eligibilă. Ghidurile sunt în consultare publică din 3 până la 18 noiembrie 2026. Calendarul depunerii proiectelor va fi comunicat ulterior de MTI.",
+  "answer": "MTI va anunța datele de depunere după aprobarea ghidurilor. e-DRIVE finanțează înlocuirea flotelor cu vehicule noi exclusiv electrice. Măsura 1 este ajutor de minimis pentru IMM-uri, cu maximum 30.000 EUR/M1, 130.000 EUR/M2 și 300.000 EUR pe întreprindere unică în orice perioadă de trei ani. Măsura 2 este ajutor de stat pentru transportatori de pasageri, pentru M1, M2 și M3, cu maximum 4 milioane EUR pe întreprindere, calculat pe diferența de cost eligibilă. Ghidurile sunt în consultare publică din 3 până la 18 noiembrie 2026.",
   "notice": {
     "title": "Ghiduri în consultare publică până la 18 noiembrie 2026",
     "text": "MTI a publicat la 3 noiembrie 2026 proiectele de ghid și anexele pentru ambele măsuri. Condițiile de mai jos descriu versiunea consultativă și pot fi modificate înaintea aprobării. Termenul de 18 noiembrie privește transmiterea observațiilor; nu este termen de depunere a cererilor de finanțare.",
@@ -187,5 +187,24 @@
     ["Cât trebuie păstrată investiția?", "Proiectele de ghid prevăd cinci ani de durabilitate de la finalizarea implementării, cu menținerea investiției și a obligațiilor asumate. Implementarea este prevăzută în maximum 30 de luni de la depunere, fără depășirea datei de 30 iunie 2030."],
     ["e-DRIVE finanțează și stații de încărcare?", "Aceste măsuri vizează achiziția vehiculelor. Infrastructura de încărcare și costurile sale se verifică separat; existența unei stații necesare exploatării nu o face automat eligibilă în e-DRIVE."],
     ["Unde se vor depune proiectele e-DRIVE?", "Proiectele de ghid indică platforma MySMIS 2021. Depunerea va fi posibilă numai potrivit ghidului aprobat și calendarului pe care MTI îl va comunica ulterior consultării."]
+  ],
+  "answerHeading": "Când începe depunerea pentru programul e-DRIVE?",
+  "sections": [
+    {
+      "id": "exemple-de-calcul",
+      "example": true,
+      "title": "Exemple de calcul pentru finanțarea e-DRIVE",
+      "intro": "Sumele de mai jos sunt ilustrative și aplică regulile din proiectele de ghid publicate de MTI la 3 noiembrie 2026. Toate prețurile din exemple sunt fără TVA.",
+      "rows": [
+        [
+          "Măsura 1 · două vehicule M1",
+          "Două vehicule electrice M1 de 36.000 EUR fiecare au un cost de 72.000 EUR. Plafonul de 30.000 EUR pe vehicul limitează ajutorul la 60.000 EUR, dacă plafonul de minimis disponibil acoperă suma. Firma suportă cel puțin 12.000 EUR din preț, plus TVA."
+        ],
+        [
+          "Măsura 2 · un autobuz electric M3",
+          "Un autobuz electric de 460.000 EUR și unul convențional comparabil de 290.000 EUR dau o diferență de cost de 170.000 EUR. Aceasta este baza de calcul pentru ajutorul solicitat în exemplu. Acordarea ajutorului depinde de ofertarea concurențială și de plafonul pe întreprindere."
+        ]
+      ]
+    }
   ]
 }
