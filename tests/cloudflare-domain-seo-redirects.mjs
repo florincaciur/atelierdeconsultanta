@@ -47,11 +47,13 @@ await expectRedirect(
   "https://atelierdeconsultanta.ro/fondul-de-modernizare"
 );
 for (const schemeAndHost of ["http://www.atelierdeconsultanta.ro", "https://atelierdeconsultanta.ro"]) {
-  for (const alias of ["/gdpr", "/gdpr/", "/gdpr.html", "/gdpr/index.html"]) {
-    await expectRedirect(
-      schemeAndHost + alias,
-      "https://atelierdeconsultanta.ro/politica-de-confidentialitate"
-    );
+  for (const spelling of ["/gdpr", "/GDPR", "/Gdpr"]) {
+    for (const suffix of ["", "/", ".html", "/index.html"]) {
+      await expectRedirect(
+        schemeAndHost + spelling + suffix,
+        "https://atelierdeconsultanta.ro/politica-de-confidentialitate"
+      );
+    }
   }
 }
 await expectRedirect(

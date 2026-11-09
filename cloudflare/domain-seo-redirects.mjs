@@ -95,7 +95,8 @@ function canonicalGetDestination(request, url) {
   if (request.method !== "GET" && request.method !== "HEAD") return "";
 
   const normalizedPath = normalizePublicPath(url.pathname);
-  const retiredTarget = RETIRED_PUBLIC_ROUTES.get(normalizedPath);
+  const retiredKey = normalizedPath.toLowerCase() === "/gdpr" ? "/gdpr" : normalizedPath;
+  const retiredTarget = RETIRED_PUBLIC_ROUTES.get(retiredKey);
   const legacyBlogQuery = normalizedPath === "/blog" && url.searchParams.has("post");
   const targetPath = retiredTarget || normalizedPath;
   const needsRedirect = url.protocol !== "https:"
