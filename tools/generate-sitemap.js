@@ -23,8 +23,10 @@ const {
 const { parseUrlsetEntries } = require("./sitemap-utils");
 
 const EXCLUDED_DIRS = new Set([
+  ".codex",
   ".git",
   ".github",
+  ".tmp",
   ".wrangler",
   "dist",
   "node_modules",

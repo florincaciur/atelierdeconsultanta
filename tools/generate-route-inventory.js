@@ -159,7 +159,7 @@ function inspectHtml(relativePath) {
 }
 
 function walkHtml(directory, output = []) {
-  const excluded = new Set([".git", ".wrangler", "dist", "node_modules", "reports"]);
+  const excluded = new Set([".codex", ".git", ".tmp", ".wrangler", "dist", "node_modules", "reports"]);
   for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
     if (excluded.has(entry.name)) continue;
     const full = path.join(directory, entry.name);
