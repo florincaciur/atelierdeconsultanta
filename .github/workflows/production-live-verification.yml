@@ -28,11 +28,13 @@ jobs:
       - name: Wait for Cloudflare and verify the exact live commit
         env:
           EXPECTED_COMMIT: ${{ github.sha }}
-        run: node tools/verify-live-release.js --commit="$EXPECTED_COMMIT" --wait-seconds=600
+        run: node tools/verify-live-release.js --commit="$EXPECTED_COMMIT" --wait-seconds=600 --skip-form-probes
       - name: Install browser for homepage state verification
         run: npx playwright install --with-deps chromium
       - name: Verify live homepage contrast and form states without sending leads
         run: npm run test:homepage-all-states -- --base=https://atelierdeconsultanta.ro
+      - name: Verify mobile contact journeys with intercepted API
+        run: node tests/mobile-conversion-contract.mjs --origin=https://atelierdeconsultanta.ro
       - name: Verify live hero geometry and auxiliary resource indexing directives
         run: node tests/search-quality-responsive.cjs --base=https://atelierdeconsultanta.ro
       - if: always()

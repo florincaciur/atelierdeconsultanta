@@ -1,0 +1,2269 @@
+{
+  "origin": "https://atelierdeconsultanta.ro",
+  "profile": "constrained",
+  "conditions": {
+    "latency": 400,
+    "downloadKbps": 400,
+    "uploadKbps": 400,
+    "cpu": 4
+  },
+  "device": {
+    "userAgent": "Mozilla/5.0 (Linux; Android 14; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.7778.96 Mobile Safari/537.36",
+    "viewport": {
+      "width": 412,
+      "height": 839
+    },
+    "screen": {
+      "width": 412,
+      "height": 915
+    },
+    "deviceScaleFactor": 2.625,
+    "isMobile": true,
+    "hasTouch": true,
+    "defaultBrowserType": "chromium"
+  },
+  "chromium": "148.0.7778.96",
+  "recordedAt": "2026-11-10T20:29:50.900Z",
+  "rows": [
+    {
+      "route": "/",
+      "run": 1,
+      "fcpMs": 5800,
+      "ttfbMs": 231.2999999988824,
+      "domMs": 6427.5,
+      "loadMs": 15161.400000000373,
+      "loadSampleMs": 16280.299999998882,
+      "aboveFold": true,
+      "lcpMs": 5800,
+      "cls": 0,
+      "interactionMs": 168,
+      "interactionBelow16Ms": false,
+      "interactionCount": 3,
+      "slowest": {
+        "id": 9868,
+        "name": "click",
+        "start": 16378.599999999627,
+        "duration": 168,
+        "delay": 122.40000000037253,
+        "processing": 2.5
+      },
+      "blockingMs": 470,
+      "lcp": [
+        {
+          "ms": 5800,
+          "renderMs": 5800,
+          "loadMs": 0,
+          "size": 49984,
+          "url": "",
+          "element": "p.hero-subtitle.im-lead"
+        }
+      ],
+      "shifts": [
+        {
+          "ms": 16495.5,
+          "value": 0.001716818867982248,
+          "recentInput": true,
+          "elements": [
+            "im-motion-toggle"
+          ]
+        },
+        {
+          "ms": 16518.099999999627,
+          "value": 0.011011277081884588,
+          "recentInput": true,
+          "elements": [
+            "homepage-method",
+            "im-hero-bottom",
+            "hero-program-pager"
+          ]
+        },
+        {
+          "ms": 16520.400000000373,
+          "value": 0.0011658516733101519,
+          "recentInput": true,
+          "elements": [
+            "nav-logo",
+            "im-motion-toggle",
+            "nav-mobile-actions"
+          ]
+        },
+        {
+          "ms": 16539,
+          "value": 0.00010390825658489397,
+          "recentInput": true,
+          "elements": [
+            "im-motion-toggle"
+          ]
+        },
+        {
+          "ms": 16552.900000000373,
+          "value": 0.00005980026195293897,
+          "recentInput": true,
+          "elements": [
+            "im-motion-toggle"
+          ]
+        },
+        {
+          "ms": 16836.799999998882,
+          "value": 0.011011277081884588,
+          "recentInput": true,
+          "elements": [
+            "homepage-method",
+            "im-hero-bottom",
+            "hero-program-pager"
+          ]
+        },
+        {
+          "ms": 17135.599999999627,
+          "value": 0.011011277081884588,
+          "recentInput": true,
+          "elements": [
+            "homepage-method",
+            "im-hero-bottom",
+            "hero-program-pager"
+          ]
+        }
+      ],
+      "resources": [
+        {
+          "path": "/",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Document",
+          "initiator": "other",
+          "bytes": 36043,
+          "status": 200,
+          "mime": "text/html"
+        },
+        {
+          "path": "/gtag/js",
+          "host": "www.googletagmanager.com",
+          "type": "Script",
+          "initiator": "parser",
+          "bytes": 191183,
+          "status": 200,
+          "mime": "application/javascript"
+        },
+        {
+          "path": "/gtag/js",
+          "host": "www.googletagmanager.com",
+          "type": "Script",
+          "initiator": "parser",
+          "bytes": 182145,
+          "status": 200,
+          "mime": "application/javascript"
+        },
+        {
+          "path": "/assets/preferred-source.css",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Stylesheet",
+          "initiator": "parser",
+          "bytes": 1489,
+          "status": 200,
+          "mime": "text/css"
+        },
+        {
+          "path": "/swg/js/v1/publisher.js",
+          "host": "news.google.com",
+          "type": "Script",
+          "initiator": "parser",
+          "bytes": 39460,
+          "status": 200,
+          "mime": "text/javascript"
+        },
+        {
+          "path": "/assets/preferred-source.js",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Script",
+          "initiator": "parser",
+          "bytes": 925,
+          "status": 200,
+          "mime": "text/javascript"
+        },
+        {
+          "path": "/@phosphor-icons/web@2.1.1/src/duotone/style.css",
+          "host": "unpkg.com",
+          "type": "Stylesheet",
+          "initiator": "parser",
+          "bytes": 22969,
+          "status": 200,
+          "mime": "text/css"
+        },
+        {
+          "path": "/assets/home.min.css",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Stylesheet",
+          "initiator": "parser",
+          "bytes": 12140,
+          "status": 200,
+          "mime": "text/css"
+        },
+        {
+          "path": "/assets/see-also.css",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Stylesheet",
+          "initiator": "parser",
+          "bytes": 1513,
+          "status": 200,
+          "mime": "text/css"
+        },
+        {
+          "path": "/assets/design-profiles.css",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Stylesheet",
+          "initiator": "parser",
+          "bytes": 3314,
+          "status": 200,
+          "mime": "text/css"
+        },
+        {
+          "path": "/assets/seo-plan-execution.css",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Stylesheet",
+          "initiator": "parser",
+          "bytes": 1351,
+          "status": 200,
+          "mime": "text/css"
+        },
+        {
+          "path": "/assets/design-system.css",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Stylesheet",
+          "initiator": "parser",
+          "bytes": 4556,
+          "status": 200,
+          "mime": "text/css"
+        },
+        {
+          "path": "/assets/contextual-cta.css",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Stylesheet",
+          "initiator": "parser",
+          "bytes": 1416,
+          "status": 200,
+          "mime": "text/css"
+        },
+        {
+          "path": "/assets/contextual-cta.js",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Script",
+          "initiator": "parser",
+          "bytes": 1629,
+          "status": 200,
+          "mime": "text/javascript"
+        },
+        {
+          "path": "/assets/homepage-program-explorer.css",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Stylesheet",
+          "initiator": "parser",
+          "bytes": 3080,
+          "status": 200,
+          "mime": "text/css"
+        },
+        {
+          "path": "/assets/homepage-program-explorer.js",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Script",
+          "initiator": "parser",
+          "bytes": 2556,
+          "status": 200,
+          "mime": "text/javascript"
+        },
+        {
+          "path": "/assets/homepage-decision-flow.css",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Stylesheet",
+          "initiator": "parser",
+          "bytes": 4306,
+          "status": 200,
+          "mime": "text/css"
+        },
+        {
+          "path": "/assets/homepage-decision-flow.js",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Script",
+          "initiator": "parser",
+          "bytes": 3577,
+          "status": 200,
+          "mime": "text/javascript"
+        },
+        {
+          "path": "/assets/contact-triage.css",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Stylesheet",
+          "initiator": "parser",
+          "bytes": 2469,
+          "status": 200,
+          "mime": "text/css"
+        },
+        {
+          "path": "/assets/contact-triage.js",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Script",
+          "initiator": "parser",
+          "bytes": 5670,
+          "status": 200,
+          "mime": "text/javascript"
+        },
+        {
+          "path": "/assets/homepage-hero.js",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Script",
+          "initiator": "parser",
+          "bytes": 2107,
+          "status": 200,
+          "mime": "text/javascript"
+        },
+        {
+          "path": "/assets/immersive-home.css",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Stylesheet",
+          "initiator": "parser",
+          "bytes": 12549,
+          "status": 200,
+          "mime": "text/css"
+        },
+        {
+          "path": "/assets/immersive-home.js",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Script",
+          "initiator": "parser",
+          "bytes": 2211,
+          "status": 200,
+          "mime": "text/javascript"
+        },
+        {
+          "path": "/assets/site-immersive.css",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Stylesheet",
+          "initiator": "parser",
+          "bytes": 1805,
+          "status": 200,
+          "mime": "text/css"
+        },
+        {
+          "path": "/assets/long-form-layout.css",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Stylesheet",
+          "initiator": "parser",
+          "bytes": 2553,
+          "status": 200,
+          "mime": "text/css"
+        },
+        {
+          "path": "/assets/long-form-layout.js",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Script",
+          "initiator": "parser",
+          "bytes": 1441,
+          "status": 200,
+          "mime": "text/javascript"
+        },
+        {
+          "path": "/assets/lead-attribution.js",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Script",
+          "initiator": "parser",
+          "bytes": 1625,
+          "status": 200,
+          "mime": "text/javascript"
+        },
+        {
+          "path": "/assets/analytics-events.js",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Script",
+          "initiator": "parser",
+          "bytes": 5000,
+          "status": 200,
+          "mime": "text/javascript"
+        },
+        {
+          "path": "/assets/global-header.css",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Stylesheet",
+          "initiator": "parser",
+          "bytes": 4364,
+          "status": 200,
+          "mime": "text/css"
+        },
+        {
+          "path": "/assets/faber-navbar-refined.svg",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Image",
+          "initiator": "parser",
+          "bytes": 7364,
+          "status": 200,
+          "mime": "image/svg+xml"
+        },
+        {
+          "path": "/assets/global-header.js",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Script",
+          "initiator": "parser",
+          "bytes": 3708,
+          "status": 200,
+          "mime": "text/javascript"
+        },
+        {
+          "path": "/assets/site-immersive.js",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Script",
+          "initiator": "parser",
+          "bytes": 2417,
+          "status": 200,
+          "mime": "text/javascript"
+        },
+        {
+          "path": "/swg/ui/v1/serviceiframe",
+          "host": "news.google.com",
+          "type": "Document",
+          "initiator": "script",
+          "bytes": 8140,
+          "status": 200,
+          "mime": "text/html"
+        },
+        {
+          "path": "/images/branding/productlogos/googleg_gradient/v1/24px.svg",
+          "host": "www.gstatic.com",
+          "type": "Image",
+          "initiator": "parser",
+          "bytes": 1942,
+          "status": 200,
+          "mime": "image/svg+xml"
+        },
+        {
+          "path": "/_/mss/boq-subscribewithgoogle/_/ss/k=boq-subscribewithgoogle.SubscribewithgoogleClientUi.cFJvzJ87sOE.L.B1.O/am=AAAAAAMNAAAE/d=1/ed=1/rs=ABXTjI7E6j0QBllyiCVmZze-l-bA7cUtHg/m=serviceiframeview,_b,_tp",
+          "host": "www.gstatic.com",
+          "type": "Stylesheet",
+          "initiator": "parser",
+          "bytes": 924,
+          "status": 200,
+          "mime": "text/css"
+        },
+        {
+          "path": "/_/mss/boq-subscribewithgoogle/_/js/k=boq-subscribewithgoogle.SubscribewithgoogleClientUi.ro.otgXLkKH7bk.2018.O/am=AAAAAAAN/d=1/excm=_b,_tp,serviceiframeview/ed=1/dg=0/wt=2/ujg=1/rs=ABXTjI7ecWKPPwDg0PuQtFsqrJfFWS4Zng/dti=1/m=_b,_tp",
+          "host": "www.gstatic.com",
+          "type": "Script",
+          "initiator": "parser",
+          "bytes": 67710,
+          "status": 200,
+          "mime": "text/javascript"
+        },
+        {
+          "path": "/_/mss/boq-subscribewithgoogle/_/js/k=boq-subscribewithgoogle.SubscribewithgoogleClientUi.ro.otgXLkKH7bk.2018.O/ck=boq-subscribewithgoogle.SubscribewithgoogleClientUi.cFJvzJ87sOE.L.B1.O/am=AAAAAAAN/d=1/exm=_b,_tp/excm=_b,_tp,serviceiframeview/ed=1/wt=2/ujg=1/rs=ABXTjI4ne-7Qgu8d4WrCe9KwvvNA80oEMQ/ee=EVNhjf:pw70Gc;EmZ2Bf:zr1jrb;JsbNhc:Xd8iUd;K5nYTd:ZDZcre;LBgRLc:SdcwHb;Me32dd:MEeYgc;NJ1rfe:qTnoBf;NPKaK:SdcwHb;NSEoX:lazG7b;Pjplud:EEDORb;QGR0gd:Mlhmy;SNUn3:ZwDk9d;ScI3Yc:e7Hzgb;Uvc8o:VDovNc;YIZmRd:A1yn5d;a56pNe:JEfCwb;cEt90b:ws9Tlc;dIoSBb:SpsfSb;dowIGb:ebZ3mb;eBAeSb:zbML3c;iFQyKf:QIhFr;lOO0Vd:OTA3Ae;oGtAuc:sOXFj;pXdRYb:MdUzUe;qQEoOc:KUM7Z;qafBPd:yDVVkb;qddgKe:xQtZb;wR5FRb:O1Gjze;xqZiqf:wmnU7d;yxTchf:KUM7Z;zxnPse:duFQFc/dti=1/m=W93Wdc",
+          "host": "www.gstatic.com",
+          "type": "Script",
+          "initiator": "script",
+          "bytes": 57511,
+          "status": 200,
+          "mime": "text/javascript"
+        },
+        {
+          "path": "/_/mss/boq-subscribewithgoogle/_/js/k=boq-subscribewithgoogle.SubscribewithgoogleClientUi.ro.otgXLkKH7bk.2018.O/ck=boq-subscribewithgoogle.SubscribewithgoogleClientUi.cFJvzJ87sOE.L.B1.O/am=AAAAAAAN/d=1/exm=W93Wdc,_b,_tp/excm=_b,_tp,serviceiframeview/ed=1/wt=2/ujg=1/rs=ABXTjI4ne-7Qgu8d4WrCe9KwvvNA80oEMQ/ee=EVNhjf:pw70Gc;EmZ2Bf:zr1jrb;JsbNhc:Xd8iUd;K5nYTd:ZDZcre;LBgRLc:SdcwHb;Me32dd:MEeYgc;NJ1rfe:qTnoBf;NPKaK:SdcwHb;NSEoX:lazG7b;Pjplud:EEDORb;QGR0gd:Mlhmy;SNUn3:ZwDk9d;ScI3Yc:e7Hzgb;Uvc8o:VDovNc;YIZmRd:A1yn5d;a56pNe:JEfCwb;cEt90b:ws9Tlc;dIoSBb:SpsfSb;dowIGb:ebZ3mb;eBAeSb:zbML3c;iFQyKf:QIhFr;lOO0Vd:OTA3Ae;oGtAuc:sOXFj;pXdRYb:MdUzUe;qQEoOc:KUM7Z;qafBPd:yDVVkb;qddgKe:xQtZb;wR5FRb:O1Gjze;xqZiqf:wmnU7d;yxTchf:KUM7Z;zxnPse:duFQFc/dti=1/m=Wt6vjf,hhhU8,FCpbqb,ws9Tlc,WhJNk",
+          "host": "www.gstatic.com",
+          "type": "Script",
+          "initiator": "script",
+          "bytes": 1826,
+          "status": 200,
+          "mime": "text/javascript"
+        },
+        {
+          "path": "/g/collect",
+          "host": "region1.google-analytics.com",
+          "type": "Fetch",
+          "initiator": "script",
+          "bytes": null,
+          "error": "net::ERR_FAILED"
+        },
+        {
+          "path": "/_/mss/boq-subscribewithgoogle/_/js/k=boq-subscribewithgoogle.SubscribewithgoogleClientUi.ro.otgXLkKH7bk.2018.O/ck=boq-subscribewithgoogle.SubscribewithgoogleClientUi.cFJvzJ87sOE.L.B1.O/am=AAAAAAAN/d=1/exm=FCpbqb,W93Wdc,WhJNk,Wt6vjf,_b,_tp,hhhU8,ws9Tlc/excm=_b,_tp,serviceiframeview/ed=1/wt=2/ujg=1/rs=ABXTjI4ne-7Qgu8d4WrCe9KwvvNA80oEMQ/ee=EVNhjf:pw70Gc;EmZ2Bf:zr1jrb;JsbNhc:Xd8iUd;K5nYTd:ZDZcre;LBgRLc:SdcwHb;Me32dd:MEeYgc;NJ1rfe:qTnoBf;NPKaK:SdcwHb;NSEoX:lazG7b;Pjplud:EEDORb;QGR0gd:Mlhmy;SNUn3:ZwDk9d;ScI3Yc:e7Hzgb;Uvc8o:VDovNc;YIZmRd:A1yn5d;a56pNe:JEfCwb;cEt90b:ws9Tlc;dIoSBb:SpsfSb;dowIGb:ebZ3mb;eBAeSb:zbML3c;iFQyKf:QIhFr;lOO0Vd:OTA3Ae;oGtAuc:sOXFj;pXdRYb:MdUzUe;qQEoOc:KUM7Z;qafBPd:yDVVkb;qddgKe:xQtZb;wR5FRb:O1Gjze;xqZiqf:wmnU7d;yxTchf:KUM7Z;zxnPse:duFQFc/dti=1/m=LEikZe",
+          "host": "www.gstatic.com",
+          "type": "Script",
+          "initiator": "script",
+          "bytes": 186,
+          "status": 200,
+          "mime": "text/javascript"
+        },
+        {
+          "path": "/_/mss/boq-subscribewithgoogle/_/js/k=boq-subscribewithgoogle.SubscribewithgoogleClientUi.ro.otgXLkKH7bk.2018.O/ck=boq-subscribewithgoogle.SubscribewithgoogleClientUi.cFJvzJ87sOE.L.B1.O/am=AAAAAAAN/d=1/exm=FCpbqb,LEikZe,W93Wdc,WhJNk,Wt6vjf,_b,_tp,hhhU8,ws9Tlc/excm=_b,_tp,serviceiframeview/ed=1/wt=2/ujg=1/rs=ABXTjI4ne-7Qgu8d4WrCe9KwvvNA80oEMQ/ee=EVNhjf:pw70Gc;EmZ2Bf:zr1jrb;JsbNhc:Xd8iUd;K5nYTd:ZDZcre;LBgRLc:SdcwHb;Me32dd:MEeYgc;NJ1rfe:qTnoBf;NPKaK:SdcwHb;NSEoX:lazG7b;Pjplud:EEDORb;QGR0gd:Mlhmy;SNUn3:ZwDk9d;ScI3Yc:e7Hzgb;Uvc8o:VDovNc;YIZmRd:A1yn5d;a56pNe:JEfCwb;cEt90b:ws9Tlc;dIoSBb:SpsfSb;dowIGb:ebZ3mb;eBAeSb:zbML3c;iFQyKf:QIhFr;lOO0Vd:OTA3Ae;oGtAuc:sOXFj;pXdRYb:MdUzUe;qQEoOc:KUM7Z;qafBPd:yDVVkb;qddgKe:xQtZb;wR5FRb:O1Gjze;xqZiqf:wmnU7d;yxTchf:KUM7Z;zxnPse:duFQFc/dti=1/m=p3hmRc,YYmHzb,LvGhrf,RqjULd",
+          "host": "www.gstatic.com",
+          "type": "Script",
+          "initiator": "script",
+          "bytes": 11039,
+          "status": 200,
+          "mime": "text/javascript"
+        },
+        {
+          "path": "/_/mss/boq-subscribewithgoogle/_/js/k=boq-subscribewithgoogle.SubscribewithgoogleClientUi.ro.otgXLkKH7bk.2018.O/ck=boq-subscribewithgoogle.SubscribewithgoogleClientUi.cFJvzJ87sOE.L.B1.O/am=AAAAAAAN/d=1/exm=FCpbqb,LEikZe,LvGhrf,RqjULd,W93Wdc,WhJNk,Wt6vjf,YYmHzb,_b,_tp,hhhU8,p3hmRc,ws9Tlc/excm=_b,_tp,serviceiframeview/ed=1/wt=2/ujg=1/rs=ABXTjI4ne-7Qgu8d4WrCe9KwvvNA80oEMQ/ee=EVNhjf:pw70Gc;EmZ2Bf:zr1jrb;JsbNhc:Xd8iUd;K5nYTd:ZDZcre;LBgRLc:SdcwHb;Me32dd:MEeYgc;NJ1rfe:qTnoBf;NPKaK:SdcwHb;NSEoX:lazG7b;Pjplud:EEDORb;QGR0gd:Mlhmy;SNUn3:ZwDk9d;ScI3Yc:e7Hzgb;Uvc8o:VDovNc;YIZmRd:A1yn5d;a56pNe:JEfCwb;cEt90b:ws9Tlc;dIoSBb:SpsfSb;dowIGb:ebZ3mb;eBAeSb:zbML3c;iFQyKf:QIhFr;lOO0Vd:OTA3Ae;oGtAuc:sOXFj;pXdRYb:MdUzUe;qQEoOc:KUM7Z;qafBPd:yDVVkb;qddgKe:xQtZb;wR5FRb:O1Gjze;xqZiqf:wmnU7d;yxTchf:KUM7Z;zxnPse:duFQFc/dti=1/m=P6sQOc",
+          "host": "www.gstatic.com",
+          "type": "Script",
+          "initiator": "script",
+          "bytes": 1158,
+          "status": 200,
+          "mime": "text/javascript"
+        },
+        {
+          "path": "/log",
+          "host": "play.google.com",
+          "type": "Preflight",
+          "initiator": "preflight",
+          "bytes": 0,
+          "status": 204,
+          "mime": ""
+        },
+        {
+          "path": "/log",
+          "host": "play.google.com",
+          "type": "Fetch",
+          "initiator": "script",
+          "bytes": null,
+          "error": "net::ERR_FAILED"
+        },
+        {
+          "path": "/log",
+          "host": "play.google.com",
+          "type": "Preflight",
+          "initiator": "preflight",
+          "bytes": 0,
+          "status": 204,
+          "mime": ""
+        },
+        {
+          "path": "/log",
+          "host": "play.google.com",
+          "type": "Fetch",
+          "initiator": "script",
+          "bytes": null,
+          "error": "net::ERR_FAILED"
+        },
+        {
+          "path": "/_/mss/boq-subscribewithgoogle/_/js/k=boq-subscribewithgoogle.SubscribewithgoogleClientUi.ro.otgXLkKH7bk.2018.O/ck=boq-subscribewithgoogle.SubscribewithgoogleClientUi.cFJvzJ87sOE.L.B1.O/am=AAAAAAAN/d=1/exm=FCpbqb,LEikZe,LvGhrf,P6sQOc,RqjULd,W93Wdc,WhJNk,Wt6vjf,YYmHzb,_b,_tp,hhhU8,p3hmRc,ws9Tlc/excm=_b,_tp,serviceiframeview/ed=1/wt=2/ujg=1/rs=ABXTjI4ne-7Qgu8d4WrCe9KwvvNA80oEMQ/ee=EVNhjf:pw70Gc;EmZ2Bf:zr1jrb;JsbNhc:Xd8iUd;K5nYTd:ZDZcre;LBgRLc:SdcwHb;Me32dd:MEeYgc;NJ1rfe:qTnoBf;NPKaK:SdcwHb;NSEoX:lazG7b;Pjplud:EEDORb;QGR0gd:Mlhmy;SNUn3:ZwDk9d;ScI3Yc:e7Hzgb;Uvc8o:VDovNc;YIZmRd:A1yn5d;a56pNe:JEfCwb;cEt90b:ws9Tlc;dIoSBb:SpsfSb;dowIGb:ebZ3mb;eBAeSb:zbML3c;iFQyKf:QIhFr;lOO0Vd:OTA3Ae;oGtAuc:sOXFj;pXdRYb:MdUzUe;qQEoOc:KUM7Z;qafBPd:yDVVkb;qddgKe:xQtZb;wR5FRb:O1Gjze;xqZiqf:wmnU7d;yxTchf:KUM7Z;zxnPse:duFQFc/dti=1/m=O6y8ed,aW3pY,n73qwf,UUJqVe,IZT63,e5qFLc,pw70Gc,KUM7Z,O1Gjze,MpJwZc,PrPYRd,XVMNvd,duFQFc,QIhFr,xQtZb,SdcwHb,wmnU7d,hc6Ubd,SpsfSb,Z5uLle,MdUzUe,zbML3c",
+          "host": "www.gstatic.com",
+          "type": "Script",
+          "initiator": "script",
+          "bytes": null
+        }
+      ]
+    },
+    {
+      "route": "/e-drive",
+      "run": 1,
+      "fcpMs": 3644,
+      "ttfbMs": 191.09999999962747,
+      "domMs": 3653.2999999988824,
+      "loadMs": 14378.5,
+      "loadSampleMs": 15495.699999999255,
+      "aboveFold": true,
+      "lcpMs": 3644,
+      "cls": 0,
+      "interactionMs": 104,
+      "interactionBelow16Ms": false,
+      "interactionCount": 3,
+      "slowest": {
+        "id": 6932,
+        "name": "pointerdown",
+        "start": 15600.299999998882,
+        "duration": 104,
+        "delay": 61.5,
+        "processing": 2.300000000745058
+      },
+      "blockingMs": 426,
+      "lcp": [
+        {
+          "ms": 3644,
+          "renderMs": 3644,
+          "loadMs": 0,
+          "size": 48825,
+          "url": "",
+          "element": "#program-title"
+        }
+      ],
+      "shifts": [
+        {
+          "ms": 15679.799999998882,
+          "value": 0.0823512758899481,
+          "recentInput": true,
+          "elements": [
+            "program-detail",
+            "program-detail",
+            "program-detail",
+            "calendar"
+          ]
+        },
+        {
+          "ms": 16867.900000000373,
+          "value": 0.0823512758899481,
+          "recentInput": true,
+          "elements": [
+            "program-detail",
+            "program-detail",
+            "program-detail",
+            "calendar"
+          ]
+        }
+      ],
+      "resources": [
+        {
+          "path": "/e-drive",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Document",
+          "initiator": "other",
+          "bytes": 24915,
+          "status": 200,
+          "mime": "text/html"
+        },
+        {
+          "path": "/vvcx/",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Script",
+          "initiator": "parser",
+          "bytes": 191585,
+          "status": 200,
+          "mime": "application/javascript"
+        },
+        {
+          "path": "/gtag/js",
+          "host": "www.googletagmanager.com",
+          "type": "Script",
+          "initiator": "parser",
+          "bytes": 182145,
+          "status": 200,
+          "mime": "application/javascript"
+        },
+        {
+          "path": "/assets/preferred-source.css",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Stylesheet",
+          "initiator": "parser",
+          "bytes": 1490,
+          "status": 200,
+          "mime": "text/css"
+        },
+        {
+          "path": "/swg/js/v1/publisher.js",
+          "host": "news.google.com",
+          "type": "Script",
+          "initiator": "parser",
+          "bytes": 39461,
+          "status": 200,
+          "mime": "text/javascript"
+        },
+        {
+          "path": "/assets/preferred-source.js",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Script",
+          "initiator": "parser",
+          "bytes": 667,
+          "status": 200,
+          "mime": "text/javascript"
+        },
+        {
+          "path": "/assets/seo-hub.css",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Stylesheet",
+          "initiator": "parser",
+          "bytes": 5191,
+          "status": 200,
+          "mime": "text/css"
+        },
+        {
+          "path": "/assets/program-showcase-2026.css",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Stylesheet",
+          "initiator": "parser",
+          "bytes": 5456,
+          "status": 200,
+          "mime": "text/css"
+        },
+        {
+          "path": "/assets/edrive-measures.css",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Stylesheet",
+          "initiator": "parser",
+          "bytes": 1525,
+          "status": 200,
+          "mime": "text/css"
+        },
+        {
+          "path": "/assets/breadcrumbs.css",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Stylesheet",
+          "initiator": "parser",
+          "bytes": 823,
+          "status": 200,
+          "mime": "text/css"
+        },
+        {
+          "path": "/assets/editorial-governance.css",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Stylesheet",
+          "initiator": "parser",
+          "bytes": 743,
+          "status": 200,
+          "mime": "text/css"
+        },
+        {
+          "path": "/assets/program-contextual-links.css",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Stylesheet",
+          "initiator": "parser",
+          "bytes": 1535,
+          "status": 200,
+          "mime": "text/css"
+        },
+        {
+          "path": "/assets/program-visuals.css",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Stylesheet",
+          "initiator": "parser",
+          "bytes": 5100,
+          "status": 200,
+          "mime": "text/css"
+        },
+        {
+          "path": "/assets/site-immersive.css",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Stylesheet",
+          "initiator": "parser",
+          "bytes": 1562,
+          "status": 200,
+          "mime": "text/css"
+        },
+        {
+          "path": "/assets/long-form-layout.css",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Stylesheet",
+          "initiator": "parser",
+          "bytes": 2308,
+          "status": 200,
+          "mime": "text/css"
+        },
+        {
+          "path": "/assets/long-form-layout.js",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Script",
+          "initiator": "parser",
+          "bytes": 1187,
+          "status": 200,
+          "mime": "text/javascript"
+        },
+        {
+          "path": "/assets/lead-attribution.js",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Script",
+          "initiator": "parser",
+          "bytes": 1371,
+          "status": 200,
+          "mime": "text/javascript"
+        },
+        {
+          "path": "/assets/analytics-events.js",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Script",
+          "initiator": "parser",
+          "bytes": 4938,
+          "status": 200,
+          "mime": "text/javascript"
+        },
+        {
+          "path": "/assets/global-header.css",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Stylesheet",
+          "initiator": "parser",
+          "bytes": 4083,
+          "status": 200,
+          "mime": "text/css"
+        },
+        {
+          "path": "/assets/faber-navbar-refined.svg",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Image",
+          "initiator": "parser",
+          "bytes": 7344,
+          "status": 200,
+          "mime": "image/svg+xml"
+        },
+        {
+          "path": "/assets/global-header.js",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Script",
+          "initiator": "parser",
+          "bytes": 3522,
+          "status": 200,
+          "mime": "text/javascript"
+        },
+        {
+          "path": "/assets/program-showcase-2026.js",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Script",
+          "initiator": "parser",
+          "bytes": 1800,
+          "status": 200,
+          "mime": "text/javascript"
+        },
+        {
+          "path": "/assets/site-immersive.js",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Script",
+          "initiator": "parser",
+          "bytes": 2170,
+          "status": 200,
+          "mime": "text/javascript"
+        },
+        {
+          "path": "/swg/ui/v1/serviceiframe",
+          "host": "news.google.com",
+          "type": "Document",
+          "initiator": "script",
+          "bytes": 8141,
+          "status": 200,
+          "mime": "text/html"
+        },
+        {
+          "path": "/images/branding/productlogos/googleg_gradient/v1/24px.svg",
+          "host": "www.gstatic.com",
+          "type": "Image",
+          "initiator": "parser",
+          "bytes": 1941,
+          "status": 200,
+          "mime": "image/svg+xml"
+        },
+        {
+          "path": "/_/mss/boq-subscribewithgoogle/_/ss/k=boq-subscribewithgoogle.SubscribewithgoogleClientUi.cFJvzJ87sOE.L.B1.O/am=AAAAAAMNAAAE/d=1/ed=1/rs=ABXTjI7E6j0QBllyiCVmZze-l-bA7cUtHg/m=serviceiframeview,_b,_tp",
+          "host": "www.gstatic.com",
+          "type": "Stylesheet",
+          "initiator": "parser",
+          "bytes": 924,
+          "status": 200,
+          "mime": "text/css"
+        },
+        {
+          "path": "/_/mss/boq-subscribewithgoogle/_/js/k=boq-subscribewithgoogle.SubscribewithgoogleClientUi.ro.otgXLkKH7bk.2018.O/am=AAAAAAAN/d=1/excm=_b,_tp,serviceiframeview/ed=1/dg=0/wt=2/ujg=1/rs=ABXTjI7ecWKPPwDg0PuQtFsqrJfFWS4Zng/dti=1/m=_b,_tp",
+          "host": "www.gstatic.com",
+          "type": "Script",
+          "initiator": "parser",
+          "bytes": 67710,
+          "status": 200,
+          "mime": "text/javascript"
+        },
+        {
+          "path": "/_/mss/boq-subscribewithgoogle/_/js/k=boq-subscribewithgoogle.SubscribewithgoogleClientUi.ro.otgXLkKH7bk.2018.O/ck=boq-subscribewithgoogle.SubscribewithgoogleClientUi.cFJvzJ87sOE.L.B1.O/am=AAAAAAAN/d=1/exm=_b,_tp/excm=_b,_tp,serviceiframeview/ed=1/wt=2/ujg=1/rs=ABXTjI4ne-7Qgu8d4WrCe9KwvvNA80oEMQ/ee=EVNhjf:pw70Gc;EmZ2Bf:zr1jrb;JsbNhc:Xd8iUd;K5nYTd:ZDZcre;LBgRLc:SdcwHb;Me32dd:MEeYgc;NJ1rfe:qTnoBf;NPKaK:SdcwHb;NSEoX:lazG7b;Pjplud:EEDORb;QGR0gd:Mlhmy;SNUn3:ZwDk9d;ScI3Yc:e7Hzgb;Uvc8o:VDovNc;YIZmRd:A1yn5d;a56pNe:JEfCwb;cEt90b:ws9Tlc;dIoSBb:SpsfSb;dowIGb:ebZ3mb;eBAeSb:zbML3c;iFQyKf:QIhFr;lOO0Vd:OTA3Ae;oGtAuc:sOXFj;pXdRYb:MdUzUe;qQEoOc:KUM7Z;qafBPd:yDVVkb;qddgKe:xQtZb;wR5FRb:O1Gjze;xqZiqf:wmnU7d;yxTchf:KUM7Z;zxnPse:duFQFc/dti=1/m=W93Wdc",
+          "host": "www.gstatic.com",
+          "type": "Script",
+          "initiator": "script",
+          "bytes": 57511,
+          "status": 200,
+          "mime": "text/javascript"
+        },
+        {
+          "path": "/_/mss/boq-subscribewithgoogle/_/js/k=boq-subscribewithgoogle.SubscribewithgoogleClientUi.ro.otgXLkKH7bk.2018.O/ck=boq-subscribewithgoogle.SubscribewithgoogleClientUi.cFJvzJ87sOE.L.B1.O/am=AAAAAAAN/d=1/exm=W93Wdc,_b,_tp/excm=_b,_tp,serviceiframeview/ed=1/wt=2/ujg=1/rs=ABXTjI4ne-7Qgu8d4WrCe9KwvvNA80oEMQ/ee=EVNhjf:pw70Gc;EmZ2Bf:zr1jrb;JsbNhc:Xd8iUd;K5nYTd:ZDZcre;LBgRLc:SdcwHb;Me32dd:MEeYgc;NJ1rfe:qTnoBf;NPKaK:SdcwHb;NSEoX:lazG7b;Pjplud:EEDORb;QGR0gd:Mlhmy;SNUn3:ZwDk9d;ScI3Yc:e7Hzgb;Uvc8o:VDovNc;YIZmRd:A1yn5d;a56pNe:JEfCwb;cEt90b:ws9Tlc;dIoSBb:SpsfSb;dowIGb:ebZ3mb;eBAeSb:zbML3c;iFQyKf:QIhFr;lOO0Vd:OTA3Ae;oGtAuc:sOXFj;pXdRYb:MdUzUe;qQEoOc:KUM7Z;qafBPd:yDVVkb;qddgKe:xQtZb;wR5FRb:O1Gjze;xqZiqf:wmnU7d;yxTchf:KUM7Z;zxnPse:duFQFc/dti=1/m=Wt6vjf,hhhU8,FCpbqb,ws9Tlc,WhJNk",
+          "host": "www.gstatic.com",
+          "type": "Script",
+          "initiator": "script",
+          "bytes": 1826,
+          "status": 200,
+          "mime": "text/javascript"
+        },
+        {
+          "path": "/gtag/js",
+          "host": "www.googletagmanager.com",
+          "type": "Script",
+          "initiator": "script",
+          "bytes": 223,
+          "status": 200,
+          "mime": "application/javascript"
+        },
+        {
+          "path": "/g/collect",
+          "host": "region1.google-analytics.com",
+          "type": "Fetch",
+          "initiator": "script",
+          "bytes": null,
+          "error": "net::ERR_FAILED"
+        },
+        {
+          "path": "/_/mss/boq-subscribewithgoogle/_/js/k=boq-subscribewithgoogle.SubscribewithgoogleClientUi.ro.otgXLkKH7bk.2018.O/ck=boq-subscribewithgoogle.SubscribewithgoogleClientUi.cFJvzJ87sOE.L.B1.O/am=AAAAAAAN/d=1/exm=FCpbqb,W93Wdc,WhJNk,Wt6vjf,_b,_tp,hhhU8,ws9Tlc/excm=_b,_tp,serviceiframeview/ed=1/wt=2/ujg=1/rs=ABXTjI4ne-7Qgu8d4WrCe9KwvvNA80oEMQ/ee=EVNhjf:pw70Gc;EmZ2Bf:zr1jrb;JsbNhc:Xd8iUd;K5nYTd:ZDZcre;LBgRLc:SdcwHb;Me32dd:MEeYgc;NJ1rfe:qTnoBf;NPKaK:SdcwHb;NSEoX:lazG7b;Pjplud:EEDORb;QGR0gd:Mlhmy;SNUn3:ZwDk9d;ScI3Yc:e7Hzgb;Uvc8o:VDovNc;YIZmRd:A1yn5d;a56pNe:JEfCwb;cEt90b:ws9Tlc;dIoSBb:SpsfSb;dowIGb:ebZ3mb;eBAeSb:zbML3c;iFQyKf:QIhFr;lOO0Vd:OTA3Ae;oGtAuc:sOXFj;pXdRYb:MdUzUe;qQEoOc:KUM7Z;qafBPd:yDVVkb;qddgKe:xQtZb;wR5FRb:O1Gjze;xqZiqf:wmnU7d;yxTchf:KUM7Z;zxnPse:duFQFc/dti=1/m=LEikZe",
+          "host": "www.gstatic.com",
+          "type": "Script",
+          "initiator": "script",
+          "bytes": 186,
+          "status": 200,
+          "mime": "text/javascript"
+        },
+        {
+          "path": "/_/mss/boq-subscribewithgoogle/_/js/k=boq-subscribewithgoogle.SubscribewithgoogleClientUi.ro.otgXLkKH7bk.2018.O/ck=boq-subscribewithgoogle.SubscribewithgoogleClientUi.cFJvzJ87sOE.L.B1.O/am=AAAAAAAN/d=1/exm=FCpbqb,LEikZe,W93Wdc,WhJNk,Wt6vjf,_b,_tp,hhhU8,ws9Tlc/excm=_b,_tp,serviceiframeview/ed=1/wt=2/ujg=1/rs=ABXTjI4ne-7Qgu8d4WrCe9KwvvNA80oEMQ/ee=EVNhjf:pw70Gc;EmZ2Bf:zr1jrb;JsbNhc:Xd8iUd;K5nYTd:ZDZcre;LBgRLc:SdcwHb;Me32dd:MEeYgc;NJ1rfe:qTnoBf;NPKaK:SdcwHb;NSEoX:lazG7b;Pjplud:EEDORb;QGR0gd:Mlhmy;SNUn3:ZwDk9d;ScI3Yc:e7Hzgb;Uvc8o:VDovNc;YIZmRd:A1yn5d;a56pNe:JEfCwb;cEt90b:ws9Tlc;dIoSBb:SpsfSb;dowIGb:ebZ3mb;eBAeSb:zbML3c;iFQyKf:QIhFr;lOO0Vd:OTA3Ae;oGtAuc:sOXFj;pXdRYb:MdUzUe;qQEoOc:KUM7Z;qafBPd:yDVVkb;qddgKe:xQtZb;wR5FRb:O1Gjze;xqZiqf:wmnU7d;yxTchf:KUM7Z;zxnPse:duFQFc/dti=1/m=p3hmRc,YYmHzb,LvGhrf,RqjULd",
+          "host": "www.gstatic.com",
+          "type": "Script",
+          "initiator": "script",
+          "bytes": 11039,
+          "status": 200,
+          "mime": "text/javascript"
+        },
+        {
+          "path": "/_/mss/boq-subscribewithgoogle/_/js/k=boq-subscribewithgoogle.SubscribewithgoogleClientUi.ro.otgXLkKH7bk.2018.O/ck=boq-subscribewithgoogle.SubscribewithgoogleClientUi.cFJvzJ87sOE.L.B1.O/am=AAAAAAAN/d=1/exm=FCpbqb,LEikZe,LvGhrf,RqjULd,W93Wdc,WhJNk,Wt6vjf,YYmHzb,_b,_tp,hhhU8,p3hmRc,ws9Tlc/excm=_b,_tp,serviceiframeview/ed=1/wt=2/ujg=1/rs=ABXTjI4ne-7Qgu8d4WrCe9KwvvNA80oEMQ/ee=EVNhjf:pw70Gc;EmZ2Bf:zr1jrb;JsbNhc:Xd8iUd;K5nYTd:ZDZcre;LBgRLc:SdcwHb;Me32dd:MEeYgc;NJ1rfe:qTnoBf;NPKaK:SdcwHb;NSEoX:lazG7b;Pjplud:EEDORb;QGR0gd:Mlhmy;SNUn3:ZwDk9d;ScI3Yc:e7Hzgb;Uvc8o:VDovNc;YIZmRd:A1yn5d;a56pNe:JEfCwb;cEt90b:ws9Tlc;dIoSBb:SpsfSb;dowIGb:ebZ3mb;eBAeSb:zbML3c;iFQyKf:QIhFr;lOO0Vd:OTA3Ae;oGtAuc:sOXFj;pXdRYb:MdUzUe;qQEoOc:KUM7Z;qafBPd:yDVVkb;qddgKe:xQtZb;wR5FRb:O1Gjze;xqZiqf:wmnU7d;yxTchf:KUM7Z;zxnPse:duFQFc/dti=1/m=P6sQOc",
+          "host": "www.gstatic.com",
+          "type": "Script",
+          "initiator": "script",
+          "bytes": 1158,
+          "status": 200,
+          "mime": "text/javascript"
+        },
+        {
+          "path": "/log",
+          "host": "play.google.com",
+          "type": "Preflight",
+          "initiator": "preflight",
+          "bytes": 0,
+          "status": 204,
+          "mime": ""
+        },
+        {
+          "path": "/log",
+          "host": "play.google.com",
+          "type": "Fetch",
+          "initiator": "script",
+          "bytes": null,
+          "error": "net::ERR_FAILED"
+        },
+        {
+          "path": "/log",
+          "host": "play.google.com",
+          "type": "Preflight",
+          "initiator": "preflight",
+          "bytes": 0,
+          "status": 204,
+          "mime": ""
+        },
+        {
+          "path": "/log",
+          "host": "play.google.com",
+          "type": "Fetch",
+          "initiator": "script",
+          "bytes": null,
+          "error": "net::ERR_FAILED"
+        },
+        {
+          "path": "/_/mss/boq-subscribewithgoogle/_/js/k=boq-subscribewithgoogle.SubscribewithgoogleClientUi.ro.otgXLkKH7bk.2018.O/ck=boq-subscribewithgoogle.SubscribewithgoogleClientUi.cFJvzJ87sOE.L.B1.O/am=AAAAAAAN/d=1/exm=FCpbqb,LEikZe,LvGhrf,P6sQOc,RqjULd,W93Wdc,WhJNk,Wt6vjf,YYmHzb,_b,_tp,hhhU8,p3hmRc,ws9Tlc/excm=_b,_tp,serviceiframeview/ed=1/wt=2/ujg=1/rs=ABXTjI4ne-7Qgu8d4WrCe9KwvvNA80oEMQ/ee=EVNhjf:pw70Gc;EmZ2Bf:zr1jrb;JsbNhc:Xd8iUd;K5nYTd:ZDZcre;LBgRLc:SdcwHb;Me32dd:MEeYgc;NJ1rfe:qTnoBf;NPKaK:SdcwHb;NSEoX:lazG7b;Pjplud:EEDORb;QGR0gd:Mlhmy;SNUn3:ZwDk9d;ScI3Yc:e7Hzgb;Uvc8o:VDovNc;YIZmRd:A1yn5d;a56pNe:JEfCwb;cEt90b:ws9Tlc;dIoSBb:SpsfSb;dowIGb:ebZ3mb;eBAeSb:zbML3c;iFQyKf:QIhFr;lOO0Vd:OTA3Ae;oGtAuc:sOXFj;pXdRYb:MdUzUe;qQEoOc:KUM7Z;qafBPd:yDVVkb;qddgKe:xQtZb;wR5FRb:O1Gjze;xqZiqf:wmnU7d;yxTchf:KUM7Z;zxnPse:duFQFc/dti=1/m=O6y8ed,aW3pY,n73qwf,UUJqVe,IZT63,e5qFLc,pw70Gc,KUM7Z,O1Gjze,MpJwZc,PrPYRd,XVMNvd,duFQFc,QIhFr,xQtZb,SdcwHb,wmnU7d,hc6Ubd,SpsfSb,Z5uLle,MdUzUe,zbML3c",
+          "host": "www.gstatic.com",
+          "type": "Script",
+          "initiator": "script",
+          "bytes": null
+        }
+      ]
+    },
+    {
+      "route": "/digitalizare-imm-regiunea-centru-apel-2",
+      "run": 1,
+      "fcpMs": 2884,
+      "ttfbMs": 172.69999999925494,
+      "domMs": 3366.9000000003725,
+      "loadMs": 14349.5,
+      "loadSampleMs": 15455.900000000373,
+      "aboveFold": true,
+      "lcpMs": 3372,
+      "cls": 0,
+      "interactionMs": 112,
+      "interactionBelow16Ms": false,
+      "interactionCount": 3,
+      "slowest": {
+        "id": 7150,
+        "name": "click",
+        "start": 16151.599999999627,
+        "duration": 112,
+        "delay": 67.30000000074506,
+        "processing": 0.599999999627471
+      },
+      "blockingMs": 816,
+      "lcp": [
+        {
+          "ms": 3372,
+          "renderMs": 3372,
+          "loadMs": 0,
+          "size": 37908,
+          "url": "",
+          "element": "#program-title"
+        }
+      ],
+      "shifts": [
+        {
+          "ms": 15629.299999998882,
+          "value": 0.06777135447251961,
+          "recentInput": true,
+          "elements": [
+            "program-detail",
+            "program-detail",
+            "program-detail",
+            "program-detail"
+          ]
+        },
+        {
+          "ms": 16222.299999998882,
+          "value": 0.07019175998939532,
+          "recentInput": true,
+          "elements": [
+            "program-detail",
+            "program-detail",
+            "program-detail",
+            "program-detail"
+          ]
+        }
+      ],
+      "resources": [
+        {
+          "path": "/digitalizare-imm-regiunea-centru-apel-2",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Document",
+          "initiator": "other",
+          "bytes": 20116,
+          "status": 200,
+          "mime": "text/html"
+        },
+        {
+          "path": "/vvcx/",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Script",
+          "initiator": "parser",
+          "bytes": 191586,
+          "status": 200,
+          "mime": "application/javascript"
+        },
+        {
+          "path": "/gtag/js",
+          "host": "www.googletagmanager.com",
+          "type": "Script",
+          "initiator": "parser",
+          "bytes": 182145,
+          "status": 200,
+          "mime": "application/javascript"
+        },
+        {
+          "path": "/assets/preferred-source.css",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Stylesheet",
+          "initiator": "parser",
+          "bytes": 1443,
+          "status": 200,
+          "mime": "text/css"
+        },
+        {
+          "path": "/swg/js/v1/publisher.js",
+          "host": "news.google.com",
+          "type": "Script",
+          "initiator": "parser",
+          "bytes": 39461,
+          "status": 200,
+          "mime": "text/javascript"
+        },
+        {
+          "path": "/assets/preferred-source.js",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Script",
+          "initiator": "parser",
+          "bytes": 667,
+          "status": 200,
+          "mime": "text/javascript"
+        },
+        {
+          "path": "/assets/seo-hub.css",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Stylesheet",
+          "initiator": "parser",
+          "bytes": 5184,
+          "status": 200,
+          "mime": "text/css"
+        },
+        {
+          "path": "/assets/program-showcase-2026.css",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Stylesheet",
+          "initiator": "parser",
+          "bytes": 5358,
+          "status": 200,
+          "mime": "text/css"
+        },
+        {
+          "path": "/assets/breadcrumbs.css",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Stylesheet",
+          "initiator": "parser",
+          "bytes": 825,
+          "status": 200,
+          "mime": "text/css"
+        },
+        {
+          "path": "/assets/editorial-governance.css",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Stylesheet",
+          "initiator": "parser",
+          "bytes": 809,
+          "status": 200,
+          "mime": "text/css"
+        },
+        {
+          "path": "/assets/program-contextual-links.css",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Stylesheet",
+          "initiator": "parser",
+          "bytes": 1582,
+          "status": 200,
+          "mime": "text/css"
+        },
+        {
+          "path": "/assets/program-visuals.css",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Stylesheet",
+          "initiator": "parser",
+          "bytes": 5231,
+          "status": 200,
+          "mime": "text/css"
+        },
+        {
+          "path": "/assets/site-immersive.css",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Stylesheet",
+          "initiator": "parser",
+          "bytes": 1753,
+          "status": 200,
+          "mime": "text/css"
+        },
+        {
+          "path": "/assets/long-form-layout.css",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Stylesheet",
+          "initiator": "parser",
+          "bytes": 2314,
+          "status": 200,
+          "mime": "text/css"
+        },
+        {
+          "path": "/assets/long-form-layout.js",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Script",
+          "initiator": "parser",
+          "bytes": 1203,
+          "status": 200,
+          "mime": "text/javascript"
+        },
+        {
+          "path": "/assets/lead-attribution.js",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Script",
+          "initiator": "parser",
+          "bytes": 1369,
+          "status": 200,
+          "mime": "text/javascript"
+        },
+        {
+          "path": "/assets/analytics-events.js",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Script",
+          "initiator": "parser",
+          "bytes": 4833,
+          "status": 200,
+          "mime": "text/javascript"
+        },
+        {
+          "path": "/assets/global-header.css",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Stylesheet",
+          "initiator": "parser",
+          "bytes": 4116,
+          "status": 200,
+          "mime": "text/css"
+        },
+        {
+          "path": "/assets/faber-navbar-refined.svg",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Image",
+          "initiator": "parser",
+          "bytes": 7152,
+          "status": 200,
+          "mime": "image/svg+xml"
+        },
+        {
+          "path": "/assets/global-header.js",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Script",
+          "initiator": "parser",
+          "bytes": 3512,
+          "status": 200,
+          "mime": "text/javascript"
+        },
+        {
+          "path": "/assets/program-showcase-2026.js",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Script",
+          "initiator": "parser",
+          "bytes": 1762,
+          "status": 200,
+          "mime": "text/javascript"
+        },
+        {
+          "path": "/assets/site-immersive.js",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Script",
+          "initiator": "parser",
+          "bytes": 2158,
+          "status": 200,
+          "mime": "text/javascript"
+        },
+        {
+          "path": "/swg/ui/v1/serviceiframe",
+          "host": "news.google.com",
+          "type": "Document",
+          "initiator": "script",
+          "bytes": 8140,
+          "status": 200,
+          "mime": "text/html"
+        },
+        {
+          "path": "/images/branding/productlogos/googleg_gradient/v1/24px.svg",
+          "host": "www.gstatic.com",
+          "type": "Image",
+          "initiator": "parser",
+          "bytes": 1811,
+          "status": 200,
+          "mime": "image/svg+xml"
+        },
+        {
+          "path": "/_/mss/boq-subscribewithgoogle/_/ss/k=boq-subscribewithgoogle.SubscribewithgoogleClientUi.cFJvzJ87sOE.L.B1.O/am=AAAAAAMNAAAE/d=1/ed=1/rs=ABXTjI7E6j0QBllyiCVmZze-l-bA7cUtHg/m=serviceiframeview,_b,_tp",
+          "host": "www.gstatic.com",
+          "type": "Stylesheet",
+          "initiator": "parser",
+          "bytes": 1055,
+          "status": 200,
+          "mime": "text/css"
+        },
+        {
+          "path": "/_/mss/boq-subscribewithgoogle/_/js/k=boq-subscribewithgoogle.SubscribewithgoogleClientUi.ro.otgXLkKH7bk.2018.O/am=AAAAAAAN/d=1/excm=_b,_tp,serviceiframeview/ed=1/dg=0/wt=2/ujg=1/rs=ABXTjI7ecWKPPwDg0PuQtFsqrJfFWS4Zng/dti=1/m=_b,_tp",
+          "host": "www.gstatic.com",
+          "type": "Script",
+          "initiator": "parser",
+          "bytes": 67710,
+          "status": 200,
+          "mime": "text/javascript"
+        },
+        {
+          "path": "/_/mss/boq-subscribewithgoogle/_/js/k=boq-subscribewithgoogle.SubscribewithgoogleClientUi.ro.otgXLkKH7bk.2018.O/ck=boq-subscribewithgoogle.SubscribewithgoogleClientUi.cFJvzJ87sOE.L.B1.O/am=AAAAAAAN/d=1/exm=_b,_tp/excm=_b,_tp,serviceiframeview/ed=1/wt=2/ujg=1/rs=ABXTjI4ne-7Qgu8d4WrCe9KwvvNA80oEMQ/ee=EVNhjf:pw70Gc;EmZ2Bf:zr1jrb;JsbNhc:Xd8iUd;K5nYTd:ZDZcre;LBgRLc:SdcwHb;Me32dd:MEeYgc;NJ1rfe:qTnoBf;NPKaK:SdcwHb;NSEoX:lazG7b;Pjplud:EEDORb;QGR0gd:Mlhmy;SNUn3:ZwDk9d;ScI3Yc:e7Hzgb;Uvc8o:VDovNc;YIZmRd:A1yn5d;a56pNe:JEfCwb;cEt90b:ws9Tlc;dIoSBb:SpsfSb;dowIGb:ebZ3mb;eBAeSb:zbML3c;iFQyKf:QIhFr;lOO0Vd:OTA3Ae;oGtAuc:sOXFj;pXdRYb:MdUzUe;qQEoOc:KUM7Z;qafBPd:yDVVkb;qddgKe:xQtZb;wR5FRb:O1Gjze;xqZiqf:wmnU7d;yxTchf:KUM7Z;zxnPse:duFQFc/dti=1/m=W93Wdc",
+          "host": "www.gstatic.com",
+          "type": "Script",
+          "initiator": "script",
+          "bytes": 57575,
+          "status": 200,
+          "mime": "text/javascript"
+        },
+        {
+          "path": "/_/mss/boq-subscribewithgoogle/_/js/k=boq-subscribewithgoogle.SubscribewithgoogleClientUi.ro.otgXLkKH7bk.2018.O/ck=boq-subscribewithgoogle.SubscribewithgoogleClientUi.cFJvzJ87sOE.L.B1.O/am=AAAAAAAN/d=1/exm=W93Wdc,_b,_tp/excm=_b,_tp,serviceiframeview/ed=1/wt=2/ujg=1/rs=ABXTjI4ne-7Qgu8d4WrCe9KwvvNA80oEMQ/ee=EVNhjf:pw70Gc;EmZ2Bf:zr1jrb;JsbNhc:Xd8iUd;K5nYTd:ZDZcre;LBgRLc:SdcwHb;Me32dd:MEeYgc;NJ1rfe:qTnoBf;NPKaK:SdcwHb;NSEoX:lazG7b;Pjplud:EEDORb;QGR0gd:Mlhmy;SNUn3:ZwDk9d;ScI3Yc:e7Hzgb;Uvc8o:VDovNc;YIZmRd:A1yn5d;a56pNe:JEfCwb;cEt90b:ws9Tlc;dIoSBb:SpsfSb;dowIGb:ebZ3mb;eBAeSb:zbML3c;iFQyKf:QIhFr;lOO0Vd:OTA3Ae;oGtAuc:sOXFj;pXdRYb:MdUzUe;qQEoOc:KUM7Z;qafBPd:yDVVkb;qddgKe:xQtZb;wR5FRb:O1Gjze;xqZiqf:wmnU7d;yxTchf:KUM7Z;zxnPse:duFQFc/dti=1/m=Wt6vjf,hhhU8,FCpbqb,ws9Tlc,WhJNk",
+          "host": "www.gstatic.com",
+          "type": "Script",
+          "initiator": "script",
+          "bytes": 1892,
+          "status": 200,
+          "mime": "text/javascript"
+        },
+        {
+          "path": "/gtag/js",
+          "host": "www.googletagmanager.com",
+          "type": "Script",
+          "initiator": "script",
+          "bytes": 223,
+          "status": 200,
+          "mime": "application/javascript"
+        },
+        {
+          "path": "/g/collect",
+          "host": "region1.google-analytics.com",
+          "type": "Fetch",
+          "initiator": "script",
+          "bytes": null,
+          "error": "net::ERR_FAILED"
+        },
+        {
+          "path": "/_/mss/boq-subscribewithgoogle/_/js/k=boq-subscribewithgoogle.SubscribewithgoogleClientUi.ro.otgXLkKH7bk.2018.O/ck=boq-subscribewithgoogle.SubscribewithgoogleClientUi.cFJvzJ87sOE.L.B1.O/am=AAAAAAAN/d=1/exm=FCpbqb,W93Wdc,WhJNk,Wt6vjf,_b,_tp,hhhU8,ws9Tlc/excm=_b,_tp,serviceiframeview/ed=1/wt=2/ujg=1/rs=ABXTjI4ne-7Qgu8d4WrCe9KwvvNA80oEMQ/ee=EVNhjf:pw70Gc;EmZ2Bf:zr1jrb;JsbNhc:Xd8iUd;K5nYTd:ZDZcre;LBgRLc:SdcwHb;Me32dd:MEeYgc;NJ1rfe:qTnoBf;NPKaK:SdcwHb;NSEoX:lazG7b;Pjplud:EEDORb;QGR0gd:Mlhmy;SNUn3:ZwDk9d;ScI3Yc:e7Hzgb;Uvc8o:VDovNc;YIZmRd:A1yn5d;a56pNe:JEfCwb;cEt90b:ws9Tlc;dIoSBb:SpsfSb;dowIGb:ebZ3mb;eBAeSb:zbML3c;iFQyKf:QIhFr;lOO0Vd:OTA3Ae;oGtAuc:sOXFj;pXdRYb:MdUzUe;qQEoOc:KUM7Z;qafBPd:yDVVkb;qddgKe:xQtZb;wR5FRb:O1Gjze;xqZiqf:wmnU7d;yxTchf:KUM7Z;zxnPse:duFQFc/dti=1/m=LEikZe",
+          "host": "www.gstatic.com",
+          "type": "Script",
+          "initiator": "script",
+          "bytes": 186,
+          "status": 200,
+          "mime": "text/javascript"
+        },
+        {
+          "path": "/_/mss/boq-subscribewithgoogle/_/js/k=boq-subscribewithgoogle.SubscribewithgoogleClientUi.ro.otgXLkKH7bk.2018.O/ck=boq-subscribewithgoogle.SubscribewithgoogleClientUi.cFJvzJ87sOE.L.B1.O/am=AAAAAAAN/d=1/exm=FCpbqb,LEikZe,W93Wdc,WhJNk,Wt6vjf,_b,_tp,hhhU8,ws9Tlc/excm=_b,_tp,serviceiframeview/ed=1/wt=2/ujg=1/rs=ABXTjI4ne-7Qgu8d4WrCe9KwvvNA80oEMQ/ee=EVNhjf:pw70Gc;EmZ2Bf:zr1jrb;JsbNhc:Xd8iUd;K5nYTd:ZDZcre;LBgRLc:SdcwHb;Me32dd:MEeYgc;NJ1rfe:qTnoBf;NPKaK:SdcwHb;NSEoX:lazG7b;Pjplud:EEDORb;QGR0gd:Mlhmy;SNUn3:ZwDk9d;ScI3Yc:e7Hzgb;Uvc8o:VDovNc;YIZmRd:A1yn5d;a56pNe:JEfCwb;cEt90b:ws9Tlc;dIoSBb:SpsfSb;dowIGb:ebZ3mb;eBAeSb:zbML3c;iFQyKf:QIhFr;lOO0Vd:OTA3Ae;oGtAuc:sOXFj;pXdRYb:MdUzUe;qQEoOc:KUM7Z;qafBPd:yDVVkb;qddgKe:xQtZb;wR5FRb:O1Gjze;xqZiqf:wmnU7d;yxTchf:KUM7Z;zxnPse:duFQFc/dti=1/m=p3hmRc,YYmHzb,LvGhrf,RqjULd",
+          "host": "www.gstatic.com",
+          "type": "Script",
+          "initiator": "script",
+          "bytes": 11039,
+          "status": 200,
+          "mime": "text/javascript"
+        },
+        {
+          "path": "/_/mss/boq-subscribewithgoogle/_/js/k=boq-subscribewithgoogle.SubscribewithgoogleClientUi.ro.otgXLkKH7bk.2018.O/ck=boq-subscribewithgoogle.SubscribewithgoogleClientUi.cFJvzJ87sOE.L.B1.O/am=AAAAAAAN/d=1/exm=FCpbqb,LEikZe,LvGhrf,RqjULd,W93Wdc,WhJNk,Wt6vjf,YYmHzb,_b,_tp,hhhU8,p3hmRc,ws9Tlc/excm=_b,_tp,serviceiframeview/ed=1/wt=2/ujg=1/rs=ABXTjI4ne-7Qgu8d4WrCe9KwvvNA80oEMQ/ee=EVNhjf:pw70Gc;EmZ2Bf:zr1jrb;JsbNhc:Xd8iUd;K5nYTd:ZDZcre;LBgRLc:SdcwHb;Me32dd:MEeYgc;NJ1rfe:qTnoBf;NPKaK:SdcwHb;NSEoX:lazG7b;Pjplud:EEDORb;QGR0gd:Mlhmy;SNUn3:ZwDk9d;ScI3Yc:e7Hzgb;Uvc8o:VDovNc;YIZmRd:A1yn5d;a56pNe:JEfCwb;cEt90b:ws9Tlc;dIoSBb:SpsfSb;dowIGb:ebZ3mb;eBAeSb:zbML3c;iFQyKf:QIhFr;lOO0Vd:OTA3Ae;oGtAuc:sOXFj;pXdRYb:MdUzUe;qQEoOc:KUM7Z;qafBPd:yDVVkb;qddgKe:xQtZb;wR5FRb:O1Gjze;xqZiqf:wmnU7d;yxTchf:KUM7Z;zxnPse:duFQFc/dti=1/m=P6sQOc",
+          "host": "www.gstatic.com",
+          "type": "Script",
+          "initiator": "script",
+          "bytes": 1158,
+          "status": 200,
+          "mime": "text/javascript"
+        },
+        {
+          "path": "/log",
+          "host": "play.google.com",
+          "type": "Preflight",
+          "initiator": "preflight",
+          "bytes": 0,
+          "status": 204,
+          "mime": ""
+        },
+        {
+          "path": "/log",
+          "host": "play.google.com",
+          "type": "Fetch",
+          "initiator": "script",
+          "bytes": null,
+          "error": "net::ERR_FAILED"
+        },
+        {
+          "path": "/log",
+          "host": "play.google.com",
+          "type": "Preflight",
+          "initiator": "preflight",
+          "bytes": 0,
+          "status": 204,
+          "mime": ""
+        },
+        {
+          "path": "/log",
+          "host": "play.google.com",
+          "type": "Fetch",
+          "initiator": "script",
+          "bytes": null,
+          "error": "net::ERR_FAILED"
+        },
+        {
+          "path": "/_/mss/boq-subscribewithgoogle/_/js/k=boq-subscribewithgoogle.SubscribewithgoogleClientUi.ro.otgXLkKH7bk.2018.O/ck=boq-subscribewithgoogle.SubscribewithgoogleClientUi.cFJvzJ87sOE.L.B1.O/am=AAAAAAAN/d=1/exm=FCpbqb,LEikZe,LvGhrf,P6sQOc,RqjULd,W93Wdc,WhJNk,Wt6vjf,YYmHzb,_b,_tp,hhhU8,p3hmRc,ws9Tlc/excm=_b,_tp,serviceiframeview/ed=1/wt=2/ujg=1/rs=ABXTjI4ne-7Qgu8d4WrCe9KwvvNA80oEMQ/ee=EVNhjf:pw70Gc;EmZ2Bf:zr1jrb;JsbNhc:Xd8iUd;K5nYTd:ZDZcre;LBgRLc:SdcwHb;Me32dd:MEeYgc;NJ1rfe:qTnoBf;NPKaK:SdcwHb;NSEoX:lazG7b;Pjplud:EEDORb;QGR0gd:Mlhmy;SNUn3:ZwDk9d;ScI3Yc:e7Hzgb;Uvc8o:VDovNc;YIZmRd:A1yn5d;a56pNe:JEfCwb;cEt90b:ws9Tlc;dIoSBb:SpsfSb;dowIGb:ebZ3mb;eBAeSb:zbML3c;iFQyKf:QIhFr;lOO0Vd:OTA3Ae;oGtAuc:sOXFj;pXdRYb:MdUzUe;qQEoOc:KUM7Z;qafBPd:yDVVkb;qddgKe:xQtZb;wR5FRb:O1Gjze;xqZiqf:wmnU7d;yxTchf:KUM7Z;zxnPse:duFQFc/dti=1/m=O6y8ed,aW3pY,n73qwf,UUJqVe,IZT63,e5qFLc,pw70Gc,KUM7Z,O1Gjze,MpJwZc,PrPYRd,XVMNvd,duFQFc,QIhFr,xQtZb,SdcwHb,wmnU7d,hc6Ubd,SpsfSb,Z5uLle,MdUzUe,zbML3c",
+          "host": "www.gstatic.com",
+          "type": "Script",
+          "initiator": "script",
+          "bytes": null
+        }
+      ]
+    },
+    {
+      "route": "/calculator-soc",
+      "run": 1,
+      "fcpMs": 3992,
+      "ttfbMs": 204.30000000074506,
+      "domMs": 4986.700000001118,
+      "loadMs": 17172.300000000745,
+      "loadSampleMs": 18290.900000000373,
+      "aboveFold": true,
+      "lcpMs": 3992,
+      "cls": 0.03731,
+      "interactionMs": 208,
+      "interactionBelow16Ms": false,
+      "interactionCount": 3,
+      "slowest": {
+        "id": 1580,
+        "name": "pointerdown",
+        "start": 18388.700000001118,
+        "duration": 208,
+        "delay": 60.09999999962747,
+        "processing": 2
+      },
+      "blockingMs": 644,
+      "lcp": [
+        {
+          "ms": 3992,
+          "renderMs": 3992,
+          "loadMs": 0,
+          "size": 66240,
+          "url": "",
+          "element": "h1."
+        }
+      ],
+      "shifts": [
+        {
+          "ms": 8546.900000000373,
+          "value": 0.03730775104096867,
+          "recentInput": false,
+          "elements": [
+            "hero-actions",
+            "hero-sub",
+            "#text",
+            "calculator"
+          ]
+        },
+        {
+          "ms": 18558.300000000745,
+          "value": 0.03012089162752611,
+          "recentInput": true,
+          "elements": [
+            "calc-section",
+            "calc-buttons",
+            "#text",
+            "calc-section"
+          ]
+        },
+        {
+          "ms": 19982.300000000745,
+          "value": 0.03871055636028662,
+          "recentInput": true,
+          "elements": [
+            "calc-section",
+            "TH",
+            "calc-section",
+            "TH",
+            "TH"
+          ]
+        },
+        {
+          "ms": 20935.5,
+          "value": 0.03151528974394095,
+          "recentInput": true,
+          "elements": [
+            "calc-section",
+            "calc-buttons",
+            "calc-section",
+            "#text"
+          ]
+        }
+      ],
+      "resources": [
+        {
+          "path": "/calculator-soc",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Document",
+          "initiator": "other",
+          "bytes": 31673,
+          "status": 200,
+          "mime": "text/html"
+        },
+        {
+          "path": "/vvcx/",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Script",
+          "initiator": "parser",
+          "bytes": 191608,
+          "status": 200,
+          "mime": "application/javascript"
+        },
+        {
+          "path": "/gtag/js",
+          "host": "www.googletagmanager.com",
+          "type": "Script",
+          "initiator": "parser",
+          "bytes": 182145,
+          "status": 200,
+          "mime": "application/javascript"
+        },
+        {
+          "path": "/assets/preferred-source.css",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Stylesheet",
+          "initiator": "parser",
+          "bytes": 1430,
+          "status": 200,
+          "mime": "text/css"
+        },
+        {
+          "path": "/swg/js/v1/publisher.js",
+          "host": "news.google.com",
+          "type": "Script",
+          "initiator": "parser",
+          "bytes": 39461,
+          "status": 200,
+          "mime": "text/javascript"
+        },
+        {
+          "path": "/assets/preferred-source.js",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Script",
+          "initiator": "parser",
+          "bytes": 684,
+          "status": 200,
+          "mime": "text/javascript"
+        },
+        {
+          "path": "/css2",
+          "host": "fonts.googleapis.com",
+          "type": "Stylesheet",
+          "initiator": "parser",
+          "bytes": 1312,
+          "status": 200,
+          "mime": "text/css"
+        },
+        {
+          "path": "/assets/see-also.css",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Stylesheet",
+          "initiator": "parser",
+          "bytes": 1332,
+          "status": 200,
+          "mime": "text/css"
+        },
+        {
+          "path": "/assets/design-profiles.css",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Stylesheet",
+          "initiator": "parser",
+          "bytes": 3343,
+          "status": 200,
+          "mime": "text/css"
+        },
+        {
+          "path": "/assets/seo-plan-execution.css",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Stylesheet",
+          "initiator": "parser",
+          "bytes": 1162,
+          "status": 200,
+          "mime": "text/css"
+        },
+        {
+          "path": "/assets/editorial-governance.css",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Stylesheet",
+          "initiator": "parser",
+          "bytes": 740,
+          "status": 200,
+          "mime": "text/css"
+        },
+        {
+          "path": "/assets/breadcrumbs.css",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Stylesheet",
+          "initiator": "parser",
+          "bytes": 826,
+          "status": 200,
+          "mime": "text/css"
+        },
+        {
+          "path": "/assets/aeo-question-blocks.css",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Stylesheet",
+          "initiator": "parser",
+          "bytes": 1105,
+          "status": 200,
+          "mime": "text/css"
+        },
+        {
+          "path": "/assets/program-contextual-links.css",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Stylesheet",
+          "initiator": "parser",
+          "bytes": 1548,
+          "status": 200,
+          "mime": "text/css"
+        },
+        {
+          "path": "/assets/site-immersive.css",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Stylesheet",
+          "initiator": "parser",
+          "bytes": 1554,
+          "status": 200,
+          "mime": "text/css"
+        },
+        {
+          "path": "/assets/contextual-cta.css",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Stylesheet",
+          "initiator": "parser",
+          "bytes": 1173,
+          "status": 200,
+          "mime": "text/css"
+        },
+        {
+          "path": "/assets/contextual-cta.js",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Script",
+          "initiator": "parser",
+          "bytes": 1571,
+          "status": 200,
+          "mime": "text/javascript"
+        },
+        {
+          "path": "/assets/calculator-so-methodology.css",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Stylesheet",
+          "initiator": "parser",
+          "bytes": 3911,
+          "status": 200,
+          "mime": "text/css"
+        },
+        {
+          "path": "/assets/lead-attribution.js",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Script",
+          "initiator": "parser",
+          "bytes": 1375,
+          "status": 200,
+          "mime": "text/javascript"
+        },
+        {
+          "path": "/assets/analytics-events.js",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Script",
+          "initiator": "parser",
+          "bytes": 4828,
+          "status": 200,
+          "mime": "text/javascript"
+        },
+        {
+          "path": "/assets/global-header.css",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Stylesheet",
+          "initiator": "parser",
+          "bytes": 4078,
+          "status": 200,
+          "mime": "text/css"
+        },
+        {
+          "path": "/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa1ZL7W0Q5nw.woff2",
+          "host": "fonts.gstatic.com",
+          "type": "Font",
+          "initiator": "parser",
+          "bytes": 48983,
+          "status": 200,
+          "mime": "font/woff2"
+        },
+        {
+          "path": "/s/inter/v20/UcC73FwrK3iLTeHuS_nVMrMxCp50SjIa25L7W0Q5n-wU.woff2",
+          "host": "fonts.gstatic.com",
+          "type": "Font",
+          "initiator": "parser",
+          "bytes": 85435,
+          "status": 200,
+          "mime": "font/woff2"
+        },
+        {
+          "path": "/assets/faber-navbar-refined.svg",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Image",
+          "initiator": "parser",
+          "bytes": 7361,
+          "status": 200,
+          "mime": "image/svg+xml"
+        },
+        {
+          "path": "/assets/global-header.js",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Script",
+          "initiator": "parser",
+          "bytes": 3869,
+          "status": 200,
+          "mime": "text/javascript"
+        },
+        {
+          "path": "/assets/site-immersive.js",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Script",
+          "initiator": "parser",
+          "bytes": 2410,
+          "status": 200,
+          "mime": "text/javascript"
+        },
+        {
+          "path": "/assets/calculator-so-methodology.js",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Script",
+          "initiator": "parser",
+          "bytes": 3601,
+          "status": 200,
+          "mime": "text/javascript"
+        },
+        {
+          "path": "/swg/ui/v1/serviceiframe",
+          "host": "news.google.com",
+          "type": "Document",
+          "initiator": "script",
+          "bytes": 8179,
+          "status": 200,
+          "mime": "text/html"
+        },
+        {
+          "path": "/images/branding/productlogos/googleg_gradient/v1/24px.svg",
+          "host": "www.gstatic.com",
+          "type": "Image",
+          "initiator": "parser",
+          "bytes": 1942,
+          "status": 200,
+          "mime": "image/svg+xml"
+        },
+        {
+          "path": "/_/mss/boq-subscribewithgoogle/_/ss/k=boq-subscribewithgoogle.SubscribewithgoogleClientUi.cFJvzJ87sOE.L.B1.O/am=AAAAAAMNAAAE/d=1/ed=1/rs=ABXTjI7E6j0QBllyiCVmZze-l-bA7cUtHg/m=serviceiframeview,_b,_tp",
+          "host": "www.gstatic.com",
+          "type": "Stylesheet",
+          "initiator": "parser",
+          "bytes": 924,
+          "status": 200,
+          "mime": "text/css"
+        },
+        {
+          "path": "/_/mss/boq-subscribewithgoogle/_/js/k=boq-subscribewithgoogle.SubscribewithgoogleClientUi.ro.otgXLkKH7bk.2018.O/am=AAAAAAAN/d=1/excm=_b,_tp,serviceiframeview/ed=1/dg=0/wt=2/ujg=1/rs=ABXTjI7ecWKPPwDg0PuQtFsqrJfFWS4Zng/dti=1/m=_b,_tp",
+          "host": "www.gstatic.com",
+          "type": "Script",
+          "initiator": "parser",
+          "bytes": 67710,
+          "status": 200,
+          "mime": "text/javascript"
+        },
+        {
+          "path": "/_/mss/boq-subscribewithgoogle/_/js/k=boq-subscribewithgoogle.SubscribewithgoogleClientUi.ro.otgXLkKH7bk.2018.O/ck=boq-subscribewithgoogle.SubscribewithgoogleClientUi.cFJvzJ87sOE.L.B1.O/am=AAAAAAAN/d=1/exm=_b,_tp/excm=_b,_tp,serviceiframeview/ed=1/wt=2/ujg=1/rs=ABXTjI4ne-7Qgu8d4WrCe9KwvvNA80oEMQ/ee=EVNhjf:pw70Gc;EmZ2Bf:zr1jrb;JsbNhc:Xd8iUd;K5nYTd:ZDZcre;LBgRLc:SdcwHb;Me32dd:MEeYgc;NJ1rfe:qTnoBf;NPKaK:SdcwHb;NSEoX:lazG7b;Pjplud:EEDORb;QGR0gd:Mlhmy;SNUn3:ZwDk9d;ScI3Yc:e7Hzgb;Uvc8o:VDovNc;YIZmRd:A1yn5d;a56pNe:JEfCwb;cEt90b:ws9Tlc;dIoSBb:SpsfSb;dowIGb:ebZ3mb;eBAeSb:zbML3c;iFQyKf:QIhFr;lOO0Vd:OTA3Ae;oGtAuc:sOXFj;pXdRYb:MdUzUe;qQEoOc:KUM7Z;qafBPd:yDVVkb;qddgKe:xQtZb;wR5FRb:O1Gjze;xqZiqf:wmnU7d;yxTchf:KUM7Z;zxnPse:duFQFc/dti=1/m=W93Wdc",
+          "host": "www.gstatic.com",
+          "type": "Script",
+          "initiator": "script",
+          "bytes": 57511,
+          "status": 200,
+          "mime": "text/javascript"
+        },
+        {
+          "path": "/_/mss/boq-subscribewithgoogle/_/js/k=boq-subscribewithgoogle.SubscribewithgoogleClientUi.ro.otgXLkKH7bk.2018.O/ck=boq-subscribewithgoogle.SubscribewithgoogleClientUi.cFJvzJ87sOE.L.B1.O/am=AAAAAAAN/d=1/exm=W93Wdc,_b,_tp/excm=_b,_tp,serviceiframeview/ed=1/wt=2/ujg=1/rs=ABXTjI4ne-7Qgu8d4WrCe9KwvvNA80oEMQ/ee=EVNhjf:pw70Gc;EmZ2Bf:zr1jrb;JsbNhc:Xd8iUd;K5nYTd:ZDZcre;LBgRLc:SdcwHb;Me32dd:MEeYgc;NJ1rfe:qTnoBf;NPKaK:SdcwHb;NSEoX:lazG7b;Pjplud:EEDORb;QGR0gd:Mlhmy;SNUn3:ZwDk9d;ScI3Yc:e7Hzgb;Uvc8o:VDovNc;YIZmRd:A1yn5d;a56pNe:JEfCwb;cEt90b:ws9Tlc;dIoSBb:SpsfSb;dowIGb:ebZ3mb;eBAeSb:zbML3c;iFQyKf:QIhFr;lOO0Vd:OTA3Ae;oGtAuc:sOXFj;pXdRYb:MdUzUe;qQEoOc:KUM7Z;qafBPd:yDVVkb;qddgKe:xQtZb;wR5FRb:O1Gjze;xqZiqf:wmnU7d;yxTchf:KUM7Z;zxnPse:duFQFc/dti=1/m=Wt6vjf,hhhU8,FCpbqb,ws9Tlc,WhJNk",
+          "host": "www.gstatic.com",
+          "type": "Script",
+          "initiator": "script",
+          "bytes": 1826,
+          "status": 200,
+          "mime": "text/javascript"
+        },
+        {
+          "path": "/gtag/js",
+          "host": "www.googletagmanager.com",
+          "type": "Script",
+          "initiator": "script",
+          "bytes": 223,
+          "status": 200,
+          "mime": "application/javascript"
+        },
+        {
+          "path": "/g/collect",
+          "host": "region1.google-analytics.com",
+          "type": "Fetch",
+          "initiator": "script",
+          "bytes": null,
+          "error": "net::ERR_FAILED"
+        },
+        {
+          "path": "/_/mss/boq-subscribewithgoogle/_/js/k=boq-subscribewithgoogle.SubscribewithgoogleClientUi.ro.otgXLkKH7bk.2018.O/ck=boq-subscribewithgoogle.SubscribewithgoogleClientUi.cFJvzJ87sOE.L.B1.O/am=AAAAAAAN/d=1/exm=FCpbqb,W93Wdc,WhJNk,Wt6vjf,_b,_tp,hhhU8,ws9Tlc/excm=_b,_tp,serviceiframeview/ed=1/wt=2/ujg=1/rs=ABXTjI4ne-7Qgu8d4WrCe9KwvvNA80oEMQ/ee=EVNhjf:pw70Gc;EmZ2Bf:zr1jrb;JsbNhc:Xd8iUd;K5nYTd:ZDZcre;LBgRLc:SdcwHb;Me32dd:MEeYgc;NJ1rfe:qTnoBf;NPKaK:SdcwHb;NSEoX:lazG7b;Pjplud:EEDORb;QGR0gd:Mlhmy;SNUn3:ZwDk9d;ScI3Yc:e7Hzgb;Uvc8o:VDovNc;YIZmRd:A1yn5d;a56pNe:JEfCwb;cEt90b:ws9Tlc;dIoSBb:SpsfSb;dowIGb:ebZ3mb;eBAeSb:zbML3c;iFQyKf:QIhFr;lOO0Vd:OTA3Ae;oGtAuc:sOXFj;pXdRYb:MdUzUe;qQEoOc:KUM7Z;qafBPd:yDVVkb;qddgKe:xQtZb;wR5FRb:O1Gjze;xqZiqf:wmnU7d;yxTchf:KUM7Z;zxnPse:duFQFc/dti=1/m=LEikZe",
+          "host": "www.gstatic.com",
+          "type": "Script",
+          "initiator": "script",
+          "bytes": 186,
+          "status": 200,
+          "mime": "text/javascript"
+        },
+        {
+          "path": "/_/mss/boq-subscribewithgoogle/_/js/k=boq-subscribewithgoogle.SubscribewithgoogleClientUi.ro.otgXLkKH7bk.2018.O/ck=boq-subscribewithgoogle.SubscribewithgoogleClientUi.cFJvzJ87sOE.L.B1.O/am=AAAAAAAN/d=1/exm=FCpbqb,LEikZe,W93Wdc,WhJNk,Wt6vjf,_b,_tp,hhhU8,ws9Tlc/excm=_b,_tp,serviceiframeview/ed=1/wt=2/ujg=1/rs=ABXTjI4ne-7Qgu8d4WrCe9KwvvNA80oEMQ/ee=EVNhjf:pw70Gc;EmZ2Bf:zr1jrb;JsbNhc:Xd8iUd;K5nYTd:ZDZcre;LBgRLc:SdcwHb;Me32dd:MEeYgc;NJ1rfe:qTnoBf;NPKaK:SdcwHb;NSEoX:lazG7b;Pjplud:EEDORb;QGR0gd:Mlhmy;SNUn3:ZwDk9d;ScI3Yc:e7Hzgb;Uvc8o:VDovNc;YIZmRd:A1yn5d;a56pNe:JEfCwb;cEt90b:ws9Tlc;dIoSBb:SpsfSb;dowIGb:ebZ3mb;eBAeSb:zbML3c;iFQyKf:QIhFr;lOO0Vd:OTA3Ae;oGtAuc:sOXFj;pXdRYb:MdUzUe;qQEoOc:KUM7Z;qafBPd:yDVVkb;qddgKe:xQtZb;wR5FRb:O1Gjze;xqZiqf:wmnU7d;yxTchf:KUM7Z;zxnPse:duFQFc/dti=1/m=p3hmRc,YYmHzb,LvGhrf,RqjULd",
+          "host": "www.gstatic.com",
+          "type": "Script",
+          "initiator": "script",
+          "bytes": 11039,
+          "status": 200,
+          "mime": "text/javascript"
+        },
+        {
+          "path": "/_/mss/boq-subscribewithgoogle/_/js/k=boq-subscribewithgoogle.SubscribewithgoogleClientUi.ro.otgXLkKH7bk.2018.O/ck=boq-subscribewithgoogle.SubscribewithgoogleClientUi.cFJvzJ87sOE.L.B1.O/am=AAAAAAAN/d=1/exm=FCpbqb,LEikZe,LvGhrf,RqjULd,W93Wdc,WhJNk,Wt6vjf,YYmHzb,_b,_tp,hhhU8,p3hmRc,ws9Tlc/excm=_b,_tp,serviceiframeview/ed=1/wt=2/ujg=1/rs=ABXTjI4ne-7Qgu8d4WrCe9KwvvNA80oEMQ/ee=EVNhjf:pw70Gc;EmZ2Bf:zr1jrb;JsbNhc:Xd8iUd;K5nYTd:ZDZcre;LBgRLc:SdcwHb;Me32dd:MEeYgc;NJ1rfe:qTnoBf;NPKaK:SdcwHb;NSEoX:lazG7b;Pjplud:EEDORb;QGR0gd:Mlhmy;SNUn3:ZwDk9d;ScI3Yc:e7Hzgb;Uvc8o:VDovNc;YIZmRd:A1yn5d;a56pNe:JEfCwb;cEt90b:ws9Tlc;dIoSBb:SpsfSb;dowIGb:ebZ3mb;eBAeSb:zbML3c;iFQyKf:QIhFr;lOO0Vd:OTA3Ae;oGtAuc:sOXFj;pXdRYb:MdUzUe;qQEoOc:KUM7Z;qafBPd:yDVVkb;qddgKe:xQtZb;wR5FRb:O1Gjze;xqZiqf:wmnU7d;yxTchf:KUM7Z;zxnPse:duFQFc/dti=1/m=P6sQOc",
+          "host": "www.gstatic.com",
+          "type": "Script",
+          "initiator": "script",
+          "bytes": 1158,
+          "status": 200,
+          "mime": "text/javascript"
+        },
+        {
+          "path": "/log",
+          "host": "play.google.com",
+          "type": "Preflight",
+          "initiator": "preflight",
+          "bytes": 0,
+          "status": 204,
+          "mime": ""
+        },
+        {
+          "path": "/log",
+          "host": "play.google.com",
+          "type": "Fetch",
+          "initiator": "script",
+          "bytes": null,
+          "error": "net::ERR_FAILED"
+        },
+        {
+          "path": "/log",
+          "host": "play.google.com",
+          "type": "Preflight",
+          "initiator": "preflight",
+          "bytes": 0,
+          "status": 204,
+          "mime": ""
+        },
+        {
+          "path": "/log",
+          "host": "play.google.com",
+          "type": "Fetch",
+          "initiator": "script",
+          "bytes": null,
+          "error": "net::ERR_FAILED"
+        },
+        {
+          "path": "/_/mss/boq-subscribewithgoogle/_/js/k=boq-subscribewithgoogle.SubscribewithgoogleClientUi.ro.otgXLkKH7bk.2018.O/ck=boq-subscribewithgoogle.SubscribewithgoogleClientUi.cFJvzJ87sOE.L.B1.O/am=AAAAAAAN/d=1/exm=FCpbqb,LEikZe,LvGhrf,P6sQOc,RqjULd,W93Wdc,WhJNk,Wt6vjf,YYmHzb,_b,_tp,hhhU8,p3hmRc,ws9Tlc/excm=_b,_tp,serviceiframeview/ed=1/wt=2/ujg=1/rs=ABXTjI4ne-7Qgu8d4WrCe9KwvvNA80oEMQ/ee=EVNhjf:pw70Gc;EmZ2Bf:zr1jrb;JsbNhc:Xd8iUd;K5nYTd:ZDZcre;LBgRLc:SdcwHb;Me32dd:MEeYgc;NJ1rfe:qTnoBf;NPKaK:SdcwHb;NSEoX:lazG7b;Pjplud:EEDORb;QGR0gd:Mlhmy;SNUn3:ZwDk9d;ScI3Yc:e7Hzgb;Uvc8o:VDovNc;YIZmRd:A1yn5d;a56pNe:JEfCwb;cEt90b:ws9Tlc;dIoSBb:SpsfSb;dowIGb:ebZ3mb;eBAeSb:zbML3c;iFQyKf:QIhFr;lOO0Vd:OTA3Ae;oGtAuc:sOXFj;pXdRYb:MdUzUe;qQEoOc:KUM7Z;qafBPd:yDVVkb;qddgKe:xQtZb;wR5FRb:O1Gjze;xqZiqf:wmnU7d;yxTchf:KUM7Z;zxnPse:duFQFc/dti=1/m=O6y8ed,aW3pY,n73qwf,UUJqVe,IZT63,e5qFLc,pw70Gc,KUM7Z,O1Gjze,MpJwZc,PrPYRd,XVMNvd,duFQFc,QIhFr,xQtZb,SdcwHb,wmnU7d,hc6Ubd,SpsfSb,Z5uLle,MdUzUe,zbML3c",
+          "host": "www.gstatic.com",
+          "type": "Script",
+          "initiator": "script",
+          "bytes": null
+        }
+      ]
+    },
+    {
+      "route": "/contact",
+      "run": 1,
+      "fcpMs": 3848,
+      "ttfbMs": 300.7000000011176,
+      "domMs": 4156.700000001118,
+      "loadMs": 15012.700000001118,
+      "loadSampleMs": 16131.200000001118,
+      "aboveFold": true,
+      "lcpMs": null,
+      "cls": 0,
+      "interactionMs": 144,
+      "interactionBelow16Ms": false,
+      "interactionCount": 3,
+      "slowest": {
+        "id": 4895,
+        "name": "pointerdown",
+        "start": 16233.5,
+        "duration": 144,
+        "delay": 65.20000000111759,
+        "processing": 5.899999998509884
+      },
+      "blockingMs": 522,
+      "lcp": [],
+      "shifts": [
+        {
+          "ms": 16370.900000000373,
+          "value": 0.10160836318128318,
+          "recentInput": true,
+          "elements": [
+            "form-group full consent-row",
+            "contact-actions contact-progressive-actions"
+          ]
+        },
+        {
+          "ms": 16684.900000000373,
+          "value": 0.10160836318128318,
+          "recentInput": true,
+          "elements": [
+            "form-group full consent-row",
+            "contact-actions contact-progressive-actions"
+          ]
+        },
+        {
+          "ms": 16986.5,
+          "value": 0.10160836318128318,
+          "recentInput": true,
+          "elements": [
+            "form-group full consent-row",
+            "contact-actions contact-progressive-actions"
+          ]
+        }
+      ],
+      "resources": [
+        {
+          "path": "/contact",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Document",
+          "initiator": "other",
+          "bytes": 17626,
+          "status": 200,
+          "mime": "text/html"
+        },
+        {
+          "path": "/vvcx/",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Script",
+          "initiator": "parser",
+          "bytes": 191602,
+          "status": 200,
+          "mime": "application/javascript"
+        },
+        {
+          "path": "/gtag/js",
+          "host": "www.googletagmanager.com",
+          "type": "Script",
+          "initiator": "parser",
+          "bytes": 182145,
+          "status": 200,
+          "mime": "application/javascript"
+        },
+        {
+          "path": "/assets/preferred-source.css",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Stylesheet",
+          "initiator": "parser",
+          "bytes": 1435,
+          "status": 200,
+          "mime": "text/css"
+        },
+        {
+          "path": "/swg/js/v1/publisher.js",
+          "host": "news.google.com",
+          "type": "Script",
+          "initiator": "parser",
+          "bytes": 39461,
+          "status": 200,
+          "mime": "text/javascript"
+        },
+        {
+          "path": "/assets/preferred-source.js",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Script",
+          "initiator": "parser",
+          "bytes": 677,
+          "status": 200,
+          "mime": "text/javascript"
+        },
+        {
+          "path": "/assets/seo-hub.css",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Stylesheet",
+          "initiator": "parser",
+          "bytes": 5207,
+          "status": 200,
+          "mime": "text/css"
+        },
+        {
+          "path": "/assets/see-also.css",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Stylesheet",
+          "initiator": "parser",
+          "bytes": 1272,
+          "status": 200,
+          "mime": "text/css"
+        },
+        {
+          "path": "/assets/design-profiles.css",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Stylesheet",
+          "initiator": "parser",
+          "bytes": 3076,
+          "status": 200,
+          "mime": "text/css"
+        },
+        {
+          "path": "/assets/seo-plan-execution.css",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Stylesheet",
+          "initiator": "parser",
+          "bytes": 1112,
+          "status": 200,
+          "mime": "text/css"
+        },
+        {
+          "path": "/assets/core-pages.css",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Stylesheet",
+          "initiator": "parser",
+          "bytes": 2495,
+          "status": 200,
+          "mime": "text/css"
+        },
+        {
+          "path": "/assets/contact-triage.css",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Stylesheet",
+          "initiator": "parser",
+          "bytes": 2252,
+          "status": 200,
+          "mime": "text/css"
+        },
+        {
+          "path": "/assets/contact-triage.js",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Script",
+          "initiator": "parser",
+          "bytes": 5411,
+          "status": 200,
+          "mime": "text/javascript"
+        },
+        {
+          "path": "/assets/breadcrumbs.css",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Stylesheet",
+          "initiator": "parser",
+          "bytes": 822,
+          "status": 200,
+          "mime": "text/css"
+        },
+        {
+          "path": "/assets/design-system.css",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Stylesheet",
+          "initiator": "parser",
+          "bytes": 4390,
+          "status": 200,
+          "mime": "text/css"
+        },
+        {
+          "path": "/assets/site-refresh-2026.css",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Stylesheet",
+          "initiator": "parser",
+          "bytes": 3978,
+          "status": 200,
+          "mime": "text/css"
+        },
+        {
+          "path": "/assets/site-immersive.css",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Stylesheet",
+          "initiator": "parser",
+          "bytes": 1591,
+          "status": 200,
+          "mime": "text/css"
+        },
+        {
+          "path": "/assets/lead-attribution.js",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Script",
+          "initiator": "parser",
+          "bytes": 1597,
+          "status": 200,
+          "mime": "text/javascript"
+        },
+        {
+          "path": "/assets/analytics-events.js",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Script",
+          "initiator": "parser",
+          "bytes": 4883,
+          "status": 200,
+          "mime": "text/javascript"
+        },
+        {
+          "path": "/assets/global-header.css",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Stylesheet",
+          "initiator": "parser",
+          "bytes": 4155,
+          "status": 200,
+          "mime": "text/css"
+        },
+        {
+          "path": "/assets/faber-navbar-refined.svg",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Image",
+          "initiator": "parser",
+          "bytes": 7379,
+          "status": 200,
+          "mime": "image/svg+xml"
+        },
+        {
+          "path": "/assets/global-header.js",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Script",
+          "initiator": "parser",
+          "bytes": 3706,
+          "status": 200,
+          "mime": "text/javascript"
+        },
+        {
+          "path": "/assets/site-immersive.js",
+          "host": "atelierdeconsultanta.ro",
+          "type": "Script",
+          "initiator": "parser",
+          "bytes": 2413,
+          "status": 200,
+          "mime": "text/javascript"
+        },
+        {
+          "path": "/tag/wnvzyco6rq",
+          "host": "www.clarity.ms",
+          "type": "Script",
+          "initiator": "script",
+          "bytes": 1153,
+          "status": 200,
+          "mime": "application/x-javascript"
+        },
+        {
+          "path": "/0.8.77/clarity.js",
+          "host": "scripts.clarity.ms",
+          "type": "Script",
+          "initiator": "script",
+          "bytes": 25742,
+          "status": 200,
+          "mime": "application/javascript"
+        },
+        {
+          "path": "/swg/ui/v1/serviceiframe",
+          "host": "news.google.com",
+          "type": "Document",
+          "initiator": "script",
+          "bytes": 8142,
+          "status": 200,
+          "mime": "text/html"
+        },
+        {
+          "path": "/images/branding/productlogos/googleg_gradient/v1/24px.svg",
+          "host": "www.gstatic.com",
+          "type": "Image",
+          "initiator": "parser",
+          "bytes": 1941,
+          "status": 200,
+          "mime": "image/svg+xml"
+        },
+        {
+          "path": "/_/mss/boq-subscribewithgoogle/_/ss/k=boq-subscribewithgoogle.SubscribewithgoogleClientUi.cFJvzJ87sOE.L.B1.O/am=AAAAAAMNAAAE/d=1/ed=1/rs=ABXTjI7E6j0QBllyiCVmZze-l-bA7cUtHg/m=serviceiframeview,_b,_tp",
+          "host": "www.gstatic.com",
+          "type": "Stylesheet",
+          "initiator": "parser",
+          "bytes": 924,
+          "status": 200,
+          "mime": "text/css"
+        },
+        {
+          "path": "/_/mss/boq-subscribewithgoogle/_/js/k=boq-subscribewithgoogle.SubscribewithgoogleClientUi.ro.otgXLkKH7bk.2018.O/am=AAAAAAAN/d=1/excm=_b,_tp,serviceiframeview/ed=1/dg=0/wt=2/ujg=1/rs=ABXTjI7ecWKPPwDg0PuQtFsqrJfFWS4Zng/dti=1/m=_b,_tp",
+          "host": "www.gstatic.com",
+          "type": "Script",
+          "initiator": "parser",
+          "bytes": 67710,
+          "status": 200,
+          "mime": "text/javascript"
+        },
+        {
+          "path": "/collect",
+          "host": "i.clarity.ms",
+          "type": "XHR",
+          "initiator": "script",
+          "bytes": null,
+          "error": "net::ERR_FAILED"
+        },
+        {
+          "path": "/collect",
+          "host": "i.clarity.ms",
+          "type": "XHR",
+          "initiator": "script",
+          "bytes": null,
+          "error": "net::ERR_FAILED"
+        },
+        {
+          "path": "/collect",
+          "host": "i.clarity.ms",
+          "type": "Ping",
+          "initiator": "script",
+          "bytes": null,
+          "error": "net::ERR_FAILED"
+        },
+        {
+          "path": "/collect",
+          "host": "i.clarity.ms",
+          "type": "Ping",
+          "initiator": "script",
+          "bytes": null,
+          "error": "net::ERR_FAILED"
+        },
+        {
+          "path": "/_/mss/boq-subscribewithgoogle/_/js/k=boq-subscribewithgoogle.SubscribewithgoogleClientUi.ro.otgXLkKH7bk.2018.O/ck=boq-subscribewithgoogle.SubscribewithgoogleClientUi.cFJvzJ87sOE.L.B1.O/am=AAAAAAAN/d=1/exm=_b,_tp/excm=_b,_tp,serviceiframeview/ed=1/wt=2/ujg=1/rs=ABXTjI4ne-7Qgu8d4WrCe9KwvvNA80oEMQ/ee=EVNhjf:pw70Gc;EmZ2Bf:zr1jrb;JsbNhc:Xd8iUd;K5nYTd:ZDZcre;LBgRLc:SdcwHb;Me32dd:MEeYgc;NJ1rfe:qTnoBf;NPKaK:SdcwHb;NSEoX:lazG7b;Pjplud:EEDORb;QGR0gd:Mlhmy;SNUn3:ZwDk9d;ScI3Yc:e7Hzgb;Uvc8o:VDovNc;YIZmRd:A1yn5d;a56pNe:JEfCwb;cEt90b:ws9Tlc;dIoSBb:SpsfSb;dowIGb:ebZ3mb;eBAeSb:zbML3c;iFQyKf:QIhFr;lOO0Vd:OTA3Ae;oGtAuc:sOXFj;pXdRYb:MdUzUe;qQEoOc:KUM7Z;qafBPd:yDVVkb;qddgKe:xQtZb;wR5FRb:O1Gjze;xqZiqf:wmnU7d;yxTchf:KUM7Z;zxnPse:duFQFc/dti=1/m=W93Wdc",
+          "host": "www.gstatic.com",
+          "type": "Script",
+          "initiator": "script",
+          "bytes": 57511,
+          "status": 200,
+          "mime": "text/javascript"
+        },
+        {
+          "path": "/_/mss/boq-subscribewithgoogle/_/js/k=boq-subscribewithgoogle.SubscribewithgoogleClientUi.ro.otgXLkKH7bk.2018.O/ck=boq-subscribewithgoogle.SubscribewithgoogleClientUi.cFJvzJ87sOE.L.B1.O/am=AAAAAAAN/d=1/exm=W93Wdc,_b,_tp/excm=_b,_tp,serviceiframeview/ed=1/wt=2/ujg=1/rs=ABXTjI4ne-7Qgu8d4WrCe9KwvvNA80oEMQ/ee=EVNhjf:pw70Gc;EmZ2Bf:zr1jrb;JsbNhc:Xd8iUd;K5nYTd:ZDZcre;LBgRLc:SdcwHb;Me32dd:MEeYgc;NJ1rfe:qTnoBf;NPKaK:SdcwHb;NSEoX:lazG7b;Pjplud:EEDORb;QGR0gd:Mlhmy;SNUn3:ZwDk9d;ScI3Yc:e7Hzgb;Uvc8o:VDovNc;YIZmRd:A1yn5d;a56pNe:JEfCwb;cEt90b:ws9Tlc;dIoSBb:SpsfSb;dowIGb:ebZ3mb;eBAeSb:zbML3c;iFQyKf:QIhFr;lOO0Vd:OTA3Ae;oGtAuc:sOXFj;pXdRYb:MdUzUe;qQEoOc:KUM7Z;qafBPd:yDVVkb;qddgKe:xQtZb;wR5FRb:O1Gjze;xqZiqf:wmnU7d;yxTchf:KUM7Z;zxnPse:duFQFc/dti=1/m=Wt6vjf,hhhU8,FCpbqb,ws9Tlc,WhJNk",
+          "host": "www.gstatic.com",
+          "type": "Script",
+          "initiator": "script",
+          "bytes": 1826,
+          "status": 200,
+          "mime": "text/javascript"
+        },
+        {
+          "path": "/gtag/js",
+          "host": "www.googletagmanager.com",
+          "type": "Script",
+          "initiator": "script",
+          "bytes": 223,
+          "status": 200,
+          "mime": "application/javascript"
+        },
+        {
+          "path": "/g/collect",
+          "host": "region1.google-analytics.com",
+          "type": "Fetch",
+          "initiator": "script",
+          "bytes": null,
+          "error": "net::ERR_FAILED"
+        },
+        {
+          "path": "/_/mss/boq-subscribewithgoogle/_/js/k=boq-subscribewithgoogle.SubscribewithgoogleClientUi.ro.otgXLkKH7bk.2018.O/ck=boq-subscribewithgoogle.SubscribewithgoogleClientUi.cFJvzJ87sOE.L.B1.O/am=AAAAAAAN/d=1/exm=FCpbqb,W93Wdc,WhJNk,Wt6vjf,_b,_tp,hhhU8,ws9Tlc/excm=_b,_tp,serviceiframeview/ed=1/wt=2/ujg=1/rs=ABXTjI4ne-7Qgu8d4WrCe9KwvvNA80oEMQ/ee=EVNhjf:pw70Gc;EmZ2Bf:zr1jrb;JsbNhc:Xd8iUd;K5nYTd:ZDZcre;LBgRLc:SdcwHb;Me32dd:MEeYgc;NJ1rfe:qTnoBf;NPKaK:SdcwHb;NSEoX:lazG7b;Pjplud:EEDORb;QGR0gd:Mlhmy;SNUn3:ZwDk9d;ScI3Yc:e7Hzgb;Uvc8o:VDovNc;YIZmRd:A1yn5d;a56pNe:JEfCwb;cEt90b:ws9Tlc;dIoSBb:SpsfSb;dowIGb:ebZ3mb;eBAeSb:zbML3c;iFQyKf:QIhFr;lOO0Vd:OTA3Ae;oGtAuc:sOXFj;pXdRYb:MdUzUe;qQEoOc:KUM7Z;qafBPd:yDVVkb;qddgKe:xQtZb;wR5FRb:O1Gjze;xqZiqf:wmnU7d;yxTchf:KUM7Z;zxnPse:duFQFc/dti=1/m=LEikZe",
+          "host": "www.gstatic.com",
+          "type": "Script",
+          "initiator": "script",
+          "bytes": 186,
+          "status": 200,
+          "mime": "text/javascript"
+        },
+        {
+          "path": "/_/mss/boq-subscribewithgoogle/_/js/k=boq-subscribewithgoogle.SubscribewithgoogleClientUi.ro.otgXLkKH7bk.2018.O/ck=boq-subscribewithgoogle.SubscribewithgoogleClientUi.cFJvzJ87sOE.L.B1.O/am=AAAAAAAN/d=1/exm=FCpbqb,LEikZe,W93Wdc,WhJNk,Wt6vjf,_b,_tp,hhhU8,ws9Tlc/excm=_b,_tp,serviceiframeview/ed=1/wt=2/ujg=1/rs=ABXTjI4ne-7Qgu8d4WrCe9KwvvNA80oEMQ/ee=EVNhjf:pw70Gc;EmZ2Bf:zr1jrb;JsbNhc:Xd8iUd;K5nYTd:ZDZcre;LBgRLc:SdcwHb;Me32dd:MEeYgc;NJ1rfe:qTnoBf;NPKaK:SdcwHb;NSEoX:lazG7b;Pjplud:EEDORb;QGR0gd:Mlhmy;SNUn3:ZwDk9d;ScI3Yc:e7Hzgb;Uvc8o:VDovNc;YIZmRd:A1yn5d;a56pNe:JEfCwb;cEt90b:ws9Tlc;dIoSBb:SpsfSb;dowIGb:ebZ3mb;eBAeSb:zbML3c;iFQyKf:QIhFr;lOO0Vd:OTA3Ae;oGtAuc:sOXFj;pXdRYb:MdUzUe;qQEoOc:KUM7Z;qafBPd:yDVVkb;qddgKe:xQtZb;wR5FRb:O1Gjze;xqZiqf:wmnU7d;yxTchf:KUM7Z;zxnPse:duFQFc/dti=1/m=p3hmRc,YYmHzb,LvGhrf,RqjULd",
+          "host": "www.gstatic.com",
+          "type": "Script",
+          "initiator": "script",
+          "bytes": 11039,
+          "status": 200,
+          "mime": "text/javascript"
+        },
+        {
+          "path": "/_/mss/boq-subscribewithgoogle/_/js/k=boq-subscribewithgoogle.SubscribewithgoogleClientUi.ro.otgXLkKH7bk.2018.O/ck=boq-subscribewithgoogle.SubscribewithgoogleClientUi.cFJvzJ87sOE.L.B1.O/am=AAAAAAAN/d=1/exm=FCpbqb,LEikZe,LvGhrf,RqjULd,W93Wdc,WhJNk,Wt6vjf,YYmHzb,_b,_tp,hhhU8,p3hmRc,ws9Tlc/excm=_b,_tp,serviceiframeview/ed=1/wt=2/ujg=1/rs=ABXTjI4ne-7Qgu8d4WrCe9KwvvNA80oEMQ/ee=EVNhjf:pw70Gc;EmZ2Bf:zr1jrb;JsbNhc:Xd8iUd;K5nYTd:ZDZcre;LBgRLc:SdcwHb;Me32dd:MEeYgc;NJ1rfe:qTnoBf;NPKaK:SdcwHb;NSEoX:lazG7b;Pjplud:EEDORb;QGR0gd:Mlhmy;SNUn3:ZwDk9d;ScI3Yc:e7Hzgb;Uvc8o:VDovNc;YIZmRd:A1yn5d;a56pNe:JEfCwb;cEt90b:ws9Tlc;dIoSBb:SpsfSb;dowIGb:ebZ3mb;eBAeSb:zbML3c;iFQyKf:QIhFr;lOO0Vd:OTA3Ae;oGtAuc:sOXFj;pXdRYb:MdUzUe;qQEoOc:KUM7Z;qafBPd:yDVVkb;qddgKe:xQtZb;wR5FRb:O1Gjze;xqZiqf:wmnU7d;yxTchf:KUM7Z;zxnPse:duFQFc/dti=1/m=P6sQOc",
+          "host": "www.gstatic.com",
+          "type": "Script",
+          "initiator": "script",
+          "bytes": 1158,
+          "status": 200,
+          "mime": "text/javascript"
+        },
+        {
+          "path": "/log",
+          "host": "play.google.com",
+          "type": "Preflight",
+          "initiator": "preflight",
+          "bytes": 0,
+          "status": 204,
+          "mime": ""
+        },
+        {
+          "path": "/log",
+          "host": "play.google.com",
+          "type": "Fetch",
+          "initiator": "script",
+          "bytes": null,
+          "error": "net::ERR_FAILED"
+        },
+        {
+          "path": "/log",
+          "host": "play.google.com",
+          "type": "Preflight",
+          "initiator": "preflight",
+          "bytes": 0,
+          "status": 204,
+          "mime": ""
+        },
+        {
+          "path": "/log",
+          "host": "play.google.com",
+          "type": "Fetch",
+          "initiator": "script",
+          "bytes": null,
+          "error": "net::ERR_FAILED"
+        },
+        {
+          "path": "/_/mss/boq-subscribewithgoogle/_/js/k=boq-subscribewithgoogle.SubscribewithgoogleClientUi.ro.otgXLkKH7bk.2018.O/ck=boq-subscribewithgoogle.SubscribewithgoogleClientUi.cFJvzJ87sOE.L.B1.O/am=AAAAAAAN/d=1/exm=FCpbqb,LEikZe,LvGhrf,P6sQOc,RqjULd,W93Wdc,WhJNk,Wt6vjf,YYmHzb,_b,_tp,hhhU8,p3hmRc,ws9Tlc/excm=_b,_tp,serviceiframeview/ed=1/wt=2/ujg=1/rs=ABXTjI4ne-7Qgu8d4WrCe9KwvvNA80oEMQ/ee=EVNhjf:pw70Gc;EmZ2Bf:zr1jrb;JsbNhc:Xd8iUd;K5nYTd:ZDZcre;LBgRLc:SdcwHb;Me32dd:MEeYgc;NJ1rfe:qTnoBf;NPKaK:SdcwHb;NSEoX:lazG7b;Pjplud:EEDORb;QGR0gd:Mlhmy;SNUn3:ZwDk9d;ScI3Yc:e7Hzgb;Uvc8o:VDovNc;YIZmRd:A1yn5d;a56pNe:JEfCwb;cEt90b:ws9Tlc;dIoSBb:SpsfSb;dowIGb:ebZ3mb;eBAeSb:zbML3c;iFQyKf:QIhFr;lOO0Vd:OTA3Ae;oGtAuc:sOXFj;pXdRYb:MdUzUe;qQEoOc:KUM7Z;qafBPd:yDVVkb;qddgKe:xQtZb;wR5FRb:O1Gjze;xqZiqf:wmnU7d;yxTchf:KUM7Z;zxnPse:duFQFc/dti=1/m=O6y8ed,aW3pY,n73qwf,UUJqVe,IZT63,e5qFLc,pw70Gc,KUM7Z,O1Gjze,MpJwZc,PrPYRd,XVMNvd,duFQFc,QIhFr,xQtZb,SdcwHb,wmnU7d,hc6Ubd,SpsfSb,Z5uLle,MdUzUe,zbML3c",
+          "host": "www.gstatic.com",
+          "type": "Script",
+          "initiator": "script",
+          "bytes": null
+        }
+      ]
+    }
+  ]
+}

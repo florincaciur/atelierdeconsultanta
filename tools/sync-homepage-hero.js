@@ -81,6 +81,7 @@ ${items.slice(index, index + pageSize).join("\n")}
               <span data-hero-program-page-count role="status">Grupul 1 din ${groups.length}</span>
               <button type="button" data-hero-program-next aria-label="Grupul următor de programe" aria-controls="hero-program-pages"><span aria-hidden="true">→</span></button>
             </div>
+            <noscript><a class="hero-programs-all" href="/calendar-fonduri-europene">Vezi calendarul tuturor programelor</a></noscript>
           </div>`;
 }
 
@@ -149,7 +150,7 @@ function syncHomepageHero(source, programs) {
   output = output.replace(/\s*<link\b[^>]*data-immersive-style[^>]*>/gi, "")
     .replace(/\s*<script\b[^>]*data-immersive-script[^>]*><\/script>/gi, "")
     .replace(/<!-- IMMERSIVE_CONTROLS_START -->[\s\S]*?<!-- IMMERSIVE_CONTROLS_END -->\r?\n?/g, "")
-    .replace(/<\/head>/i, '  <link rel="stylesheet" href="/assets/immersive-home.css?v=20261105-1" data-immersive-style>\n  <script src="/assets/immersive-home.js?v=20260901-5" defer data-immersive-script></script>\n</head>')
+    .replace(/<\/head>/i, '  <link rel="stylesheet" href="/assets/immersive-home.css?v=20261110-1" data-immersive-style>\n  <script src="/assets/immersive-home.js?v=20260901-5" defer data-immersive-script></script>\n</head>')
     .replace(/<\/body>/i, `<!-- IMMERSIVE_CONTROLS_START -->${renderImmersiveControls()}<!-- IMMERSIVE_CONTROLS_END -->\n</body>`);
   // The global immersive layer owns the final head/body slots. Keeping its
   // managed blocks last makes both generators converge in either run order.

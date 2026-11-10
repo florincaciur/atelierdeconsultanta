@@ -300,6 +300,11 @@
       closeDesktopDisclosure(openDesktop, true);
       return;
     }
+    if (!mobileMenu.hidden && document.activeElement === hamburgerBtn) {
+      event.preventDefault();
+      setMobileMenu(false, true);
+      return;
+    }
     var openMobile = mobileDisclosures.find(function (disclosure) { return !disclosureParts(disclosure).panel.hidden; });
     if (openMobile) {
       event.preventDefault();

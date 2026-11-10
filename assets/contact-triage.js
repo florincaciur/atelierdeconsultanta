@@ -394,7 +394,7 @@
   document.addEventListener("faber:attribution-ready", syncAttribution, { once: true });
   document.addEventListener("faber:analytics-ready", syncAttribution, { once: true });
   syncAttribution();
-  showOnly(stepOne, !form.closest("#homepage-contact"));
+  showOnly(stepOne, false);
 
   [email, phone].forEach(function (field) {
     field.addEventListener("input", function () {

@@ -19,10 +19,8 @@ for (const relativePath of eligible) {
   canonicalRoutes.add(new URL(canonicalUrl(html)).pathname.replace(/\/$/, "") || "/");
   assert.equal((html.match(/<!-- PREFERRED_SOURCE_START -->/g) || []).length, 1, `${relativePath}: bloc Preferred Sources lipsă/duplicat`);
   assert.equal((html.match(/<!-- PREFERRED_SOURCE_HEAD_START -->/g) || []).length, 1, `${relativePath}: asset-urile head lipsesc/sunt duplicate`);
-  assert.equal((html.match(/google-add-preferred-source-btn/g) || []).length, 1, `${relativePath}: control Google lipsă/duplicat`);
-  assert.equal((html.match(/news\.google\.com\/swg\/js\/v1\/publisher\.js/g) || []).length, 1, `${relativePath}: script oficial Google lipsă/duplicat`);
-  assert.equal((html.match(/\/assets\/preferred-source\.js/g) || []).length, 1, `${relativePath}: script local lipsă/duplicat`);
-  assert.match(html, /https:\/\/www\.google\.com\/preferences\/source\?q=atelierdeconsultanta\.ro/, `${relativePath}: deeplink fallback lipsă`);
+  assert.doesNotMatch(html, /google-add-preferred-source-btn|news\.google\.com\/swg\/js\/v1\/publisher\.js|\/assets\/preferred-source\.js/, `${relativePath}: widgetul pornește la încărcare`);
+  assert.match(html, /href="https:\/\/www\.google\.com\/preferences\/source\?q=atelierdeconsultanta\.ro"/, `${relativePath}: link direct lipsă`);
 }
 assert.equal(canonicalRoutes.size, 107, "Preferred Sources trebuie publicat pe exact cele 107 rute canonice indexabile");
 
@@ -31,4 +29,4 @@ assert.match(css, /color:\s*#0b2442/i, "Componenta trebuie să declare explicit 
 assert.match(css, /@media \(max-width:\s*760px\)/, "Componenta trebuie să aibă layout mobil");
 assert.match(css, /:focus-visible/, "Fallback-ul trebuie să aibă focus vizibil");
 
-console.log(`PASS: Preferred Sources — ${canonicalRoutes.size} rute canonice (${eligible.length} fișiere), fallback, contrast și responsive.`);
+console.log(`PASS: Preferred Sources — ${canonicalRoutes.size} rute canonice (${eligible.length} fișiere), link direct, contrast și responsive.`);

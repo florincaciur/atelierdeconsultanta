@@ -1,0 +1,679 @@
+[
+  {
+    "target": "https://atelierdeconsultanta.ro/",
+    "identifier": "origin",
+    "url": "https://cruxvis.withgoogle.com/#/?view=cwvsummary&url=https%3A%2F%2Fatelierdeconsultanta.ro%2F&identifier=origin&device=PHONE&periodStart=0&periodEnd=-1&display=p75s",
+    "text": [
+      "Core Web Vitals of this origin on phones",
+      "Core Web Vitals Summary of this origin on phones as of 2026-11-07",
+      "Loading Performance is missing data",
+      "Interactivity is missing data",
+      "Visual Stability is missing data"
+    ],
+    "queries": [
+      {
+        "http": 200,
+        "key": {
+          "formFactor": "PHONE",
+          "origin": "https://atelierdeconsultanta.ro"
+        },
+        "period": {
+          "firstDate": {
+            "year": 2026,
+            "month": 10,
+            "day": 11
+          },
+          "lastDate": {
+            "year": 2026,
+            "month": 11,
+            "day": 7
+          }
+        },
+        "metrics": {
+          "cumulative_layout_shift": null,
+          "interaction_to_next_paint": null,
+          "largest_contentful_paint": null
+        }
+      },
+      {
+        "http": 404,
+        "metrics": {},
+        "error": "NOT_FOUND"
+      },
+      {
+        "http": 404,
+        "metrics": {},
+        "error": "NOT_FOUND"
+      },
+      {
+        "http": 404,
+        "metrics": {},
+        "error": "NOT_FOUND"
+      },
+      {
+        "http": 404,
+        "metrics": {},
+        "error": "NOT_FOUND"
+      },
+      {
+        "http": 200,
+        "key": {
+          "formFactor": "DESKTOP",
+          "origin": "https://atelierdeconsultanta.ro"
+        },
+        "period": {
+          "firstDate": {
+            "year": 2026,
+            "month": 10,
+            "day": 11
+          },
+          "lastDate": {
+            "year": 2026,
+            "month": 11,
+            "day": 7
+          }
+        },
+        "metrics": {
+          "interaction_to_next_paint": null,
+          "largest_contentful_paint": null,
+          "cumulative_layout_shift": null
+        }
+      },
+      {
+        "http": 404,
+        "metrics": {},
+        "error": "NOT_FOUND"
+      },
+      {
+        "http": 200,
+        "key": {
+          "origin": "https://atelierdeconsultanta.ro"
+        },
+        "period": {
+          "firstDate": {
+            "year": 2026,
+            "month": 10,
+            "day": 11
+          },
+          "lastDate": {
+            "year": 2026,
+            "month": 11,
+            "day": 7
+          }
+        },
+        "metrics": {
+          "largest_contentful_paint": 1004,
+          "cumulative_layout_shift": "0.00",
+          "interaction_to_next_paint": 86
+        }
+      }
+    ]
+  },
+  {
+    "target": "https://atelierdeconsultanta.ro/",
+    "identifier": "url",
+    "url": "https://cruxvis.withgoogle.com/#/?view=cwvsummary&url=https%3A%2F%2Fatelierdeconsultanta.ro%2F&identifier=origin&device=PHONE&periodStart=0&periodEnd=-1&display=p75s",
+    "text": [
+      "Core Web Vitals of this origin on phones",
+      "Core Web Vitals Summary of this origin on phones as of 2026-11-07",
+      "Loading Performance is missing data",
+      "Interactivity is missing data",
+      "Visual Stability is missing data"
+    ],
+    "queries": [
+      {
+        "http": 404,
+        "metrics": {},
+        "error": "NOT_FOUND"
+      },
+      {
+        "http": 404,
+        "metrics": {},
+        "error": "NOT_FOUND"
+      },
+      {
+        "http": 200,
+        "key": {
+          "origin": "https://atelierdeconsultanta.ro"
+        },
+        "period": {
+          "firstDate": {
+            "year": 2026,
+            "month": 10,
+            "day": 11
+          },
+          "lastDate": {
+            "year": 2026,
+            "month": 11,
+            "day": 7
+          }
+        },
+        "metrics": {
+          "cumulative_layout_shift": "0.00",
+          "interaction_to_next_paint": 86,
+          "largest_contentful_paint": 1004
+        }
+      },
+      {
+        "http": 200,
+        "key": {
+          "formFactor": "PHONE",
+          "origin": "https://atelierdeconsultanta.ro"
+        },
+        "period": {
+          "firstDate": {
+            "year": 2026,
+            "month": 10,
+            "day": 11
+          },
+          "lastDate": {
+            "year": 2026,
+            "month": 11,
+            "day": 7
+          }
+        },
+        "metrics": {
+          "interaction_to_next_paint": null,
+          "largest_contentful_paint": null,
+          "cumulative_layout_shift": null
+        }
+      },
+      {
+        "http": 404,
+        "metrics": {},
+        "error": "NOT_FOUND"
+      },
+      {
+        "http": 404,
+        "metrics": {},
+        "error": "NOT_FOUND"
+      },
+      {
+        "http": 404,
+        "metrics": {},
+        "error": "NOT_FOUND"
+      },
+      {
+        "http": 200,
+        "key": {
+          "formFactor": "DESKTOP",
+          "origin": "https://atelierdeconsultanta.ro"
+        },
+        "period": {
+          "firstDate": {
+            "year": 2026,
+            "month": 10,
+            "day": 11
+          },
+          "lastDate": {
+            "year": 2026,
+            "month": 11,
+            "day": 7
+          }
+        },
+        "metrics": {
+          "largest_contentful_paint": null,
+          "cumulative_layout_shift": null,
+          "interaction_to_next_paint": null
+        }
+      }
+    ]
+  },
+  {
+    "target": "https://atelierdeconsultanta.ro/e-drive",
+    "identifier": "url",
+    "url": "https://cruxvis.withgoogle.com/#/?view=cwvsummary&url=https%3A%2F%2Fatelierdeconsultanta.ro%2Fe-drive&identifier=url&device=ALL&periodStart=0&periodEnd=-1&display=p75s",
+    "text": [
+      "Core Web Vitals of this URL on all devices",
+      "Core Web Vitals Summary of this URL on all devices as of 2026-11-07",
+      "Loading Performance is missing data",
+      "Interactivity is missing data"
+    ],
+    "queries": [
+      {
+        "http": 404,
+        "metrics": {},
+        "error": "NOT_FOUND"
+      },
+      {
+        "http": 200,
+        "key": {
+          "origin": "https://atelierdeconsultanta.ro"
+        },
+        "period": {
+          "firstDate": {
+            "year": 2026,
+            "month": 10,
+            "day": 11
+          },
+          "lastDate": {
+            "year": 2026,
+            "month": 11,
+            "day": 7
+          }
+        },
+        "metrics": {
+          "interaction_to_next_paint": 86,
+          "largest_contentful_paint": 1004,
+          "cumulative_layout_shift": "0.00"
+        }
+      },
+      {
+        "http": 404,
+        "metrics": {},
+        "error": "NOT_FOUND"
+      },
+      {
+        "http": 404,
+        "metrics": {},
+        "error": "NOT_FOUND"
+      },
+      {
+        "http": 404,
+        "metrics": {},
+        "error": "NOT_FOUND"
+      },
+      {
+        "http": 200,
+        "key": {
+          "url": "https://atelierdeconsultanta.ro/e-drive"
+        },
+        "period": {
+          "firstDate": {
+            "year": 2026,
+            "month": 10,
+            "day": 11
+          },
+          "lastDate": {
+            "year": 2026,
+            "month": 11,
+            "day": 7
+          }
+        },
+        "metrics": {
+          "largest_contentful_paint": null,
+          "interaction_to_next_paint": null,
+          "cumulative_layout_shift": "0.00"
+        }
+      },
+      {
+        "http": 200,
+        "key": {
+          "formFactor": "PHONE",
+          "origin": "https://atelierdeconsultanta.ro"
+        },
+        "period": {
+          "firstDate": {
+            "year": 2026,
+            "month": 10,
+            "day": 11
+          },
+          "lastDate": {
+            "year": 2026,
+            "month": 11,
+            "day": 7
+          }
+        },
+        "metrics": {
+          "interaction_to_next_paint": null,
+          "largest_contentful_paint": null,
+          "cumulative_layout_shift": null
+        }
+      },
+      {
+        "http": 200,
+        "key": {
+          "formFactor": "DESKTOP",
+          "origin": "https://atelierdeconsultanta.ro"
+        },
+        "period": {
+          "firstDate": {
+            "year": 2026,
+            "month": 10,
+            "day": 11
+          },
+          "lastDate": {
+            "year": 2026,
+            "month": 11,
+            "day": 7
+          }
+        },
+        "metrics": {
+          "cumulative_layout_shift": null,
+          "interaction_to_next_paint": null,
+          "largest_contentful_paint": null
+        }
+      }
+    ]
+  },
+  {
+    "target": "https://atelierdeconsultanta.ro/digitalizare-imm-regiunea-centru-apel-2",
+    "identifier": "url",
+    "url": "https://cruxvis.withgoogle.com/#/?view=cwvsummary&url=https%3A%2F%2Fatelierdeconsultanta.ro%2Fdigitalizare-imm-regiunea-centru-apel-2&identifier=origin&device=PHONE&periodStart=0&periodEnd=-1&display=p75s",
+    "text": [
+      "Core Web Vitals of this origin on phones",
+      "Core Web Vitals Summary of this origin on phones as of 2026-11-07",
+      "Loading Performance is missing data",
+      "Interactivity is missing data",
+      "Visual Stability is missing data"
+    ],
+    "queries": [
+      {
+        "http": 404,
+        "metrics": {},
+        "error": "NOT_FOUND"
+      },
+      {
+        "http": 404,
+        "metrics": {},
+        "error": "NOT_FOUND"
+      },
+      {
+        "http": 404,
+        "metrics": {},
+        "error": "NOT_FOUND"
+      },
+      {
+        "http": 200,
+        "key": {
+          "formFactor": "PHONE",
+          "origin": "https://atelierdeconsultanta.ro"
+        },
+        "period": {
+          "firstDate": {
+            "year": 2026,
+            "month": 10,
+            "day": 11
+          },
+          "lastDate": {
+            "year": 2026,
+            "month": 11,
+            "day": 7
+          }
+        },
+        "metrics": {
+          "largest_contentful_paint": null,
+          "cumulative_layout_shift": null,
+          "interaction_to_next_paint": null
+        }
+      },
+      {
+        "http": 200,
+        "key": {
+          "origin": "https://atelierdeconsultanta.ro"
+        },
+        "period": {
+          "firstDate": {
+            "year": 2026,
+            "month": 10,
+            "day": 11
+          },
+          "lastDate": {
+            "year": 2026,
+            "month": 11,
+            "day": 7
+          }
+        },
+        "metrics": {
+          "largest_contentful_paint": 1004,
+          "cumulative_layout_shift": "0.00",
+          "interaction_to_next_paint": 86
+        }
+      },
+      {
+        "http": 404,
+        "metrics": {},
+        "error": "NOT_FOUND"
+      },
+      {
+        "http": 404,
+        "metrics": {},
+        "error": "NOT_FOUND"
+      },
+      {
+        "http": 200,
+        "key": {
+          "formFactor": "DESKTOP",
+          "origin": "https://atelierdeconsultanta.ro"
+        },
+        "period": {
+          "firstDate": {
+            "year": 2026,
+            "month": 10,
+            "day": 11
+          },
+          "lastDate": {
+            "year": 2026,
+            "month": 11,
+            "day": 7
+          }
+        },
+        "metrics": {
+          "interaction_to_next_paint": null,
+          "largest_contentful_paint": null,
+          "cumulative_layout_shift": null
+        }
+      }
+    ]
+  },
+  {
+    "target": "https://atelierdeconsultanta.ro/calculator-soc",
+    "identifier": "url",
+    "url": "https://cruxvis.withgoogle.com/#/?view=cwvsummary&url=https%3A%2F%2Fatelierdeconsultanta.ro%2Fcalculator-soc&identifier=origin&device=PHONE&periodStart=0&periodEnd=-1&display=p75s",
+    "text": [
+      "Core Web Vitals of this origin on phones",
+      "Core Web Vitals Summary of this origin on phones as of 2026-11-07",
+      "Loading Performance is missing data",
+      "Interactivity is missing data",
+      "Visual Stability is missing data"
+    ],
+    "queries": [
+      {
+        "http": 404,
+        "metrics": {},
+        "error": "NOT_FOUND"
+      },
+      {
+        "http": 200,
+        "key": {
+          "origin": "https://atelierdeconsultanta.ro"
+        },
+        "period": {
+          "firstDate": {
+            "year": 2026,
+            "month": 10,
+            "day": 11
+          },
+          "lastDate": {
+            "year": 2026,
+            "month": 11,
+            "day": 7
+          }
+        },
+        "metrics": {
+          "cumulative_layout_shift": "0.00",
+          "interaction_to_next_paint": 86,
+          "largest_contentful_paint": 1004
+        }
+      },
+      {
+        "http": 404,
+        "metrics": {},
+        "error": "NOT_FOUND"
+      },
+      {
+        "http": 200,
+        "key": {
+          "formFactor": "PHONE",
+          "origin": "https://atelierdeconsultanta.ro"
+        },
+        "period": {
+          "firstDate": {
+            "year": 2026,
+            "month": 10,
+            "day": 11
+          },
+          "lastDate": {
+            "year": 2026,
+            "month": 11,
+            "day": 7
+          }
+        },
+        "metrics": {
+          "interaction_to_next_paint": null,
+          "largest_contentful_paint": null,
+          "cumulative_layout_shift": null
+        }
+      },
+      {
+        "http": 404,
+        "metrics": {},
+        "error": "NOT_FOUND"
+      },
+      {
+        "http": 404,
+        "metrics": {},
+        "error": "NOT_FOUND"
+      },
+      {
+        "http": 404,
+        "metrics": {},
+        "error": "NOT_FOUND"
+      },
+      {
+        "http": 200,
+        "key": {
+          "formFactor": "DESKTOP",
+          "origin": "https://atelierdeconsultanta.ro"
+        },
+        "period": {
+          "firstDate": {
+            "year": 2026,
+            "month": 10,
+            "day": 11
+          },
+          "lastDate": {
+            "year": 2026,
+            "month": 11,
+            "day": 7
+          }
+        },
+        "metrics": {
+          "largest_contentful_paint": null,
+          "cumulative_layout_shift": null,
+          "interaction_to_next_paint": null
+        }
+      }
+    ]
+  },
+  {
+    "target": "https://atelierdeconsultanta.ro/contact",
+    "identifier": "url",
+    "url": "https://cruxvis.withgoogle.com/#/?view=cwvsummary&url=https%3A%2F%2Fatelierdeconsultanta.ro%2Fcontact&identifier=origin&device=PHONE&periodStart=0&periodEnd=-1&display=p75s",
+    "text": [
+      "Core Web Vitals of this origin on phones",
+      "Core Web Vitals Summary of this origin on phones as of 2026-11-07",
+      "Loading Performance is missing data",
+      "Interactivity is missing data",
+      "Visual Stability is missing data"
+    ],
+    "queries": [
+      {
+        "http": 404,
+        "metrics": {},
+        "error": "NOT_FOUND"
+      },
+      {
+        "http": 200,
+        "key": {
+          "formFactor": "PHONE",
+          "origin": "https://atelierdeconsultanta.ro"
+        },
+        "period": {
+          "firstDate": {
+            "year": 2026,
+            "month": 10,
+            "day": 11
+          },
+          "lastDate": {
+            "year": 2026,
+            "month": 11,
+            "day": 7
+          }
+        },
+        "metrics": {
+          "largest_contentful_paint": null,
+          "cumulative_layout_shift": null,
+          "interaction_to_next_paint": null
+        }
+      },
+      {
+        "http": 200,
+        "key": {
+          "formFactor": "DESKTOP",
+          "origin": "https://atelierdeconsultanta.ro"
+        },
+        "period": {
+          "firstDate": {
+            "year": 2026,
+            "month": 10,
+            "day": 11
+          },
+          "lastDate": {
+            "year": 2026,
+            "month": 11,
+            "day": 7
+          }
+        },
+        "metrics": {
+          "interaction_to_next_paint": null,
+          "largest_contentful_paint": null,
+          "cumulative_layout_shift": null
+        }
+      },
+      {
+        "http": 404,
+        "metrics": {},
+        "error": "NOT_FOUND"
+      },
+      {
+        "http": 404,
+        "metrics": {},
+        "error": "NOT_FOUND"
+      },
+      {
+        "http": 404,
+        "metrics": {},
+        "error": "NOT_FOUND"
+      },
+      {
+        "http": 404,
+        "metrics": {},
+        "error": "NOT_FOUND"
+      },
+      {
+        "http": 200,
+        "key": {
+          "origin": "https://atelierdeconsultanta.ro"
+        },
+        "period": {
+          "firstDate": {
+            "year": 2026,
+            "month": 10,
+            "day": 11
+          },
+          "lastDate": {
+            "year": 2026,
+            "month": 11,
+            "day": 7
+          }
+        },
+        "metrics": {
+          "cumulative_layout_shift": "0.00",
+          "interaction_to_next_paint": 86,
+          "largest_contentful_paint": 1004
+        }
+      }
+    ]
+  }
+]

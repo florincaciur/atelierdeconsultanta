@@ -206,7 +206,10 @@ body.page-family-home #homepage-contact p { color: var(--design-ink, #1a2540); f
 .page-family-home #homepage-contact .homepage-flow-action { background: var(--design-navy, #0d1f3c); color: #fff; border: 0; border-radius: 3px; box-shadow: none; }
 .page-family-home #homepage-contact .homepage-contact-direct a { border-color: #0d1f3c40; border-radius: 3px; }
 .page-family-home .preferred-source-cta { background: var(--design-soft, #f8f9fb); border-color: var(--design-line, #e8edf5); }
-.page-family-home #footer { background: var(--design-navy, #0d1f3c); }
+.page-family-home #footer,
+.page-family-home #footer :is(.footer-top, .footer-bottom) {
+  background-color: var(--design-navy, #0d1f3c);
+}
 .page-family-home #backToTop { background: var(--design-navy, #0d1f3c); box-shadow: none; }
 
 /* Position cues and motion preference. They never capture wheel events. */

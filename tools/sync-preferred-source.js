@@ -12,9 +12,7 @@ const HEAD_START = "<!-- PREFERRED_SOURCE_HEAD_START -->";
 const HEAD_END = "<!-- PREFERRED_SOURCE_HEAD_END -->";
 const SCRIPT_START = "<!-- PREFERRED_SOURCE_SCRIPT_START -->";
 const SCRIPT_END = "<!-- PREFERRED_SOURCE_SCRIPT_END -->";
-const STYLESHEET = '<link rel="stylesheet" href="/assets/preferred-source.css?v=20260829-1">';
-const GOOGLE_SCRIPT = '<script async src="https://news.google.com/swg/js/v1/publisher.js"></script>';
-const LOCAL_SCRIPT = '<script src="/assets/preferred-source.js?v=20260829-1" defer></script>';
+const STYLESHEET = '<link rel="stylesheet" href="/assets/preferred-source.css?v=20261110-1">';
 const SITE = "https://atelierdeconsultanta.ro";
 const SITEMAP_FILES = ["sitemap-programs.xml", "sitemap-guides.xml", "sitemap-core.xml"];
 
@@ -68,7 +66,7 @@ function isCanonicalIndexable(relativePath, html) {
 function partialSource() {
   const partial = fs.readFileSync(PARTIAL_PATH, "utf8").replace(/^\uFEFF/, "").trim();
   if (count(partial, START) !== 1 || count(partial, END) !== 1) throw new Error("Partialul Preferred Sources trebuie să aibă exact o pereche de delimitatori.");
-  if (!partial.includes("google-add-preferred-source-btn")) throw new Error("Partialul nu conține controlul oficial Google Preferred Sources.");
+  if (!partial.includes("https://www.google.com/preferences/source?q=atelierdeconsultanta.ro")) throw new Error("Partialul nu conține linkul Google Preferred Sources.");
   return partial;
 }
 
@@ -128,7 +126,7 @@ function synchronizeFile(relativePath, partial, options = {}) {
   const headTail = after.slice(headInsertion)
     .replace(/^(?:[ \t]*\r?\n)+/, "")
     .replace(/^[ \t]+(?=<)/, "");
-  const headBlock = `${HEAD_START}${eol}${STYLESHEET}${eol}${GOOGLE_SCRIPT}${eol}${LOCAL_SCRIPT}${eol}${HEAD_END}`;
+  const headBlock = `${HEAD_START}${eol}${STYLESHEET}${eol}${HEAD_END}`;
   after = `${after.slice(0, headInsertion)}${eol}${headBlock}${eol}${headTail}`;
 
   if (after === before) return false;
@@ -163,4 +161,4 @@ function main() {
 
 if (require.main === module) main();
 
-module.exports = { END, GOOGLE_SCRIPT, HEAD_END, HEAD_START, LOCAL_SCRIPT, PARTIAL_PATH, START, STYLESHEET, canonicalUrl, isCanonicalIndexable, routeForFile, sitemapRoutes, synchronizeFile };
+module.exports = { END, HEAD_END, HEAD_START, PARTIAL_PATH, START, STYLESHEET, canonicalUrl, isCanonicalIndexable, routeForFile, sitemapRoutes, synchronizeFile };

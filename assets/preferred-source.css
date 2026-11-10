@@ -62,11 +62,6 @@
   border-radius: 18px;
 }
 
-.preferred-source-cta__google {
-  min-height: 44px;
-  min-width: 190px;
-}
-
 .preferred-source-cta__fallback {
   display: inline-flex;
   align-items: center;
@@ -97,10 +92,6 @@
   outline-offset: 3px;
 }
 
-.preferred-source-cta__actions.is-google-ready .preferred-source-cta__fallback {
-  display: none;
-}
-
 .preferred-source-cta__note {
   margin: 0;
   color: #617286;
@@ -122,9 +113,6 @@
     min-width: 0;
   }
 
-  .preferred-source-cta__google {
-    justify-self: center;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {

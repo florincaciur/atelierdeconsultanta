@@ -218,9 +218,12 @@ async function main() {
   const sitemapLines = robots.match(/^Sitemap:\s*https:\/\/atelierdeconsultanta\.ro\/sitemap\.xml\s*$/gimu) || [];
   if (sitemapLines.length !== 1) throw new Error(`robots.txt must contain exactly one canonical Sitemap declaration; found ${sitemapLines.length}`);
 
-  await safeFormProbe("email");
-  await safeFormProbe("phone");
-  console.log(`Live release verified: ${release.commit} (homepage ${homepage.revision}, ${programRoutes.length} program routes without Cuprins/rail, ${publicPrograms.length} registry programs, request form, exact HTML and ${releaseAssets.size} CSS/JS assets, ordinary and cache-busted URL, ${criticalRoutes.length} canonical pages, sitemap, crawler policy, email/phone form probes).`);
+  const skipFormProbes = process.argv.includes("--skip-form-probes");
+  if (!skipFormProbes) {
+    await safeFormProbe("email");
+    await safeFormProbe("phone");
+  }
+  console.log(`Live release verified: ${release.commit} (homepage ${homepage.revision}, ${programRoutes.length} program routes without Cuprins/rail, ${publicPrograms.length} registry programs, request form, exact HTML and ${releaseAssets.size} CSS/JS assets, ordinary and cache-busted URL, ${criticalRoutes.length} canonical pages, sitemap, crawler policy${skipFormProbes ? ", GET-only verification" : ", email/phone form probes"}).`);
 }
 
 main().catch((error) => {
