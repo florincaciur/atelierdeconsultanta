@@ -33,7 +33,7 @@ const server = http.createServer(async (req, res) => {
 if (!live) await new Promise(resolve => server.listen(0, "127.0.0.1", resolve));
 const origin = live ? new URL(live).origin : `http://127.0.0.1:${server.address().port}`;
 const { defaultBrowserType, ...device } = devices["Pixel 7"];
-const report = { origin, intercepted: 0, otherWritesBlocked: 0, flows: [], accessibility: [], noJs: [] };
+const report = { origin, intercepted: 0, otherWritesBlocked: 0, blockedWritePaths: [], flows: [], accessibility: [], noJs: [] };
 
 async function open(page, route) {
   const response = await page.goto(origin + route, { waitUntil: "load" });
@@ -50,7 +50,10 @@ async function safeContext(browser, options = {}, mock = async route => route.ab
       return mock(route);
     }
     if (url.origin === origin && request.method() === "GET") return route.continue();
-    if (url.origin === origin && !["GET", "HEAD"].includes(request.method())) report.otherWritesBlocked++;
+    if (url.origin === origin && !["GET", "HEAD"].includes(request.method())) {
+      report.otherWritesBlocked++;
+      if (!report.blockedWritePaths.includes(url.pathname)) report.blockedWritePaths.push(url.pathname);
+    }
     return route.abort();
   });
   return context;
@@ -229,8 +232,9 @@ try {
   await checkFlow(browser, { source: adr, selector: ".program-hero__actions a[href^='/contact']", program: adr.slice(1), retry: true });
   await checkFlow(browser, { source: "/calculator-soc", selector: "[data-calculator-context-cta]", so: 1945 });
   await checkFlow(browser, { source: "/contact", phone: true });
-  assert.equal(report.otherWritesBlocked, 0);
-  console.log(JSON.stringify({ flows: report.flows, noJs: report.noJs.length, accessibility: report.accessibility.map(({ route, contrast, contrastNeedsManual, runningAnimations }) => ({ route, contrast: contrast.length, contrastNeedsManual: contrastNeedsManual.length, runningAnimations: runningAnimations.length })), intercepted: report.intercepted }));
+  assert.equal(report.intercepted, 6);
+  assert.deepEqual(report.blockedWritePaths.filter(route => route.startsWith("/api/")), [], "unexpected application API writes");
+  console.log(JSON.stringify({ flows: report.flows, noJs: report.noJs.length, accessibility: report.accessibility.map(({ route, contrast, contrastNeedsManual, runningAnimations }) => ({ route, contrast: contrast.length, contrastNeedsManual: contrastNeedsManual.length, runningAnimations: runningAnimations.length })), intercepted: report.intercepted, otherWritesBlocked: report.otherWritesBlocked, blockedWritePaths: report.blockedWritePaths }));
 } finally {
   if (out) await fs.writeFile(out, JSON.stringify(report, null, 2) + "\n");
   if (browser) await browser.close();
