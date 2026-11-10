@@ -1,0 +1,25 @@
+{
+  "contentCommit": "b4c2d97ac9aa64eaaba37e511182f1be1d5d8c92",
+  "branches": [
+    "main",
+    "master"
+  ],
+  "fetchOrigin": true,
+  "live": {
+    "routes": 106,
+    "checks": 212,
+    "viewportWidths": [
+      390,
+      1440
+    ],
+    "javascriptEnabled": false,
+    "failures": 0,
+    "overflow": 0,
+    "comparison": "HTML main, title, description, H1 and JSON-LD verified against canonical source; CDN-added head scripts are outside editorial comparison.",
+    "releaseVerifier": "PASS: 31 canonical pages, 29 programme layouts, 56 assets, sitemap, crawler policy, form probes"
+  },
+  "indexNow": {
+    "exitCode": 0,
+    "result": "IndexNow submit: HTTP 200; batch=88\r\nURL-uri trimise: 88"
+  }
+}
