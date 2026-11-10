@@ -302,8 +302,8 @@ function rewriteAbout() {
         <h2 id="about-team-title">Cine lucrează la proiect</h2>
         <div class="about-team__layout">
           <div>
-            <p class="core-section__intro">Pagina nu publică încă profiluri individuale. Numele, fotografia, rolul, specializările, experiența și profilul LinkedIn vor apărea numai după verificarea dovezilor și acordul explicit al persoanei.</p>
-            <p>Pentru fiecare colaborare, responsabilitățile trebuie delimitate în oferta și contractul aplicabile. Un profil public nu înlocuiește această delimitare și nu va fi completat cu experiență presupusă.</p>
+            <p class="core-section__intro">Serviciile sunt prezentate la nivelul organizației FABER. Responsabilul, specialiștii implicați și atribuțiile fiecăruia se stabilesc pentru proiect în ofertă și contract.</p>
+            <p>Pentru fiecare colaborare, oferta și contractul precizează responsabilitățile, livrabilele și limitele serviciului.</p>
           </div>
           <aside class="about-validation-card" aria-label="Criterii pentru publicarea unui profil">
             <h3>Ce va conține un profil aprobat</h3>
@@ -355,7 +355,7 @@ function rewriteAbout() {
       <section class="core-section about-affiliations" aria-labelledby="about-affiliations-title">
         <span class="core-kicker">Afilieri și listări</span>
         <h2 id="about-affiliations-title">Formulări care cer confirmare oficială</h2>
-        <p>Pagina nu afirmă în prezent o afiliere sau o listare instituțională. Dacă prezența FABER într-un document oficial AFIR este confirmată, formularea acceptată va fi „listată în nomenclatorul orientativ AFIR”, însoțită de document și dată. Aceasta nu va fi prezentată ca acreditare, clasament sau recomandare.</p>
+        <p>FABER nu prezintă o acreditare sau o recomandare instituțională AFIR. Alegerea unui consultant se bazează pe serviciile contractate și dovezile verificabile ale furnizorului.</p>
       </section>
 
       <nav class="about-resource-links" aria-label="Documente despre FABER">
@@ -376,7 +376,7 @@ ${searchSupport({
     intro: "Răspunsurile de mai jos completează identitatea, metoda și limitele prezentate pe pagină. Profilurile și rezultatele lipsă nu sunt înlocuite cu estimări.",
     faqs: [
       ["Cine contractează serviciile FABER?", "Contractele și facturile sunt emise de FABER PUBLISHING S.R.L., conform datelor juridice aprobate și afișate pe această pagină."],
-      ["De ce nu apar încă profiluri de echipă?", "Nu există încă un set complet aprobat de fotografii, roluri, specializări, experiență verificabilă și acorduri de publicare. Până la validare, pagina nu inventează și nu publică profiluri incomplete."],
+      ["De ce nu apar încă profiluri de echipă?", "Pagina prezintă serviciile și responsabilitatea organizației. Nu sunt afișate profiluri individuale sau afirmații despre experiența unor persoane."],
       ["Cum este verificat un program?", "Sunt comparate documentul oficial, anexele și comunicările instituției cu situația și actele solicitantului relevante pentru investiția analizată."],
       ["De ce nu este promisă aprobarea?", "Aprobarea depinde de evaluarea autorității, bugetul apelului, punctaj, documente și respectarea tuturor condițiilor aplicabile."],
       ["Cum sunt publicate rezultatele sau testimonialele?", "Numai cu dovezi verificabile, o metodă de prezentare corectă și acordul persoanelor sau organizațiilor implicate."],

@@ -2,6 +2,8 @@
 "use strict";
 
 const fs = require("fs");
+const { reviseHtml } = require("./editorial-review-content");
+const { synchronizePublicHtml } = require("./sync-analytics-events");
 const path = require("path");
 const { loadNextStepConfig, renderNextStepBlock } = require("./contextual-next-steps");
 const { loadEditorialGovernance, renderEditorialGovernance } = require("./editorial-governance");
@@ -178,7 +180,7 @@ function renderMain(hub, programs, filters, hubRecord = null) {
         <p class="program-family-kicker">Registru verificat</p>
         <h2 id="program-family-filter-title">Găsește programul potrivit investiției</h2>
       </div>
-      <p>Filtrele schimbă numai lista vizibilă. Combinația este păstrată în URL-ul paginii, dar nu creează pagini indexabile separate.</p>
+      <p>Alege solicitantul, regiunea și etapa pentru a restrânge lista de programe. Verifică apoi condițiile și sursa oficială ale apelului.</p>
     </div>
     <div class="program-family-filters" data-program-hub-filters="" role="group" aria-label="Filtrează programele">
       <div class="program-family-filter">
@@ -265,7 +267,9 @@ function synchronizeHtml(html, hub, programs, filters) {
   next = next.replace(mainPattern, main);
   next = injectAsset(next, `  <link rel="stylesheet" href="/assets/program-family-hubs.css?v=${ASSET_VERSION}" />`, "/assets/program-family-hubs.css", "</head>");
   next = injectAsset(next, `<script src="/assets/program-family-hubs.js?v=${ASSET_VERSION}" defer></script>`, "/assets/program-family-hubs.js", "</body>");
-  return next;
+  return hub.route === "/fonduri-europene-digitalizare"
+    ? synchronizePublicHtml(reviseHtml(next, hub.route), `${hub.route.slice(1)}/index.html`)
+    : next;
 }
 
 function preserveLineEndings(rendered, original) {

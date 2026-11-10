@@ -135,16 +135,17 @@
         },
         {
           "term": "Ce statut au pragurile afișate?",
-          "description": "Pragurile prezentate sunt orientative până la confirmarea în versiunea finală și activă a ghidului DR12 sau DR14."
+          "description": "Pragurile se verifică în ghidul final și în componenta aplicabilă proiectului. Confruntă rezultatul cu documentele exploatației."
         }
       ],
       "source": {
-        "document": "Ghidurile solicitantului DR12 și DR14 și coeficienții Standard Output aplicabili",
+        "document": "Ghidurile finale DR-12 și DR-14; lista coeficienților SOC 2020, noiembrie 2024",
         "institution": "Agenția pentru Finanțarea Investițiilor Rurale (AFIR)",
-        "status": "Ghiduri consultative la ultima verificare; rezultatul calculatorului rămâne orientativ.",
-        "url": "https://www.afir.ro/comunicare/utile/dezbatere-publica/"
+        "status": "Ghiduri finale publicate. Rezultatul calculului rămâne orientativ și se confruntă cu Cererea de finanțare aplicabilă.",
+        "url": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-12/"
       },
-      "interpretation": "Un rezultat aflat foarte aproape de un prag trebuie verificat în evidențele exploatației înainte de alegerea programului. Aceasta este o interpretare de lucru FABER, nu o regulă oficială și nu modifică metoda de calcul publicată de AFIR."
+      "interpretation": "Un rezultat aflat foarte aproape de un prag trebuie verificat în evidențele exploatației înainte de alegerea programului. Diferențele de suprafață, efectiv sau categorie SOC pot modifica încadrarea.",
+      "lastReviewed": "2026-11-10"
     },
     "investitii-modernizarea-microintreprinderilor-apel-2": {
       "route": "/investitii-modernizarea-microintreprinderilor-apel-2",

@@ -279,7 +279,7 @@ function renderEditorialGovernance(record) {
   return `<!-- EDITORIAL_GOVERNANCE_START -->
 <section class="editorial-governance" aria-label="Guvernanță editorială" data-editorial-record="${escapeHtml(record.id)}" data-governance-state="public">
   <p class="editorial-governance__verified"><strong>Verificat la <time datetime="${escapeHtml(record.verifiedAt)}">${escapeHtml(record.verifiedAt)}</time>.</strong></p>
-  <p>${publication}Actualizat editorial la <time datetime="${escapeHtml(record.lastMeaningfulUpdate)}">${escapeHtml(record.lastMeaningfulUpdate)}</time>. Publisher: ${escapeHtml(PUBLISHER_NAME)}.</p>
+  <p>${publication}Actualizat editorial la <time datetime="${escapeHtml(record.lastMeaningfulUpdate)}">${escapeHtml(record.lastMeaningfulUpdate)}</time>. Publicat de: ${escapeHtml(PUBLISHER_NAME)}.</p>
   <p>Sursa oficială: <a href="${escapeHtml(record.officialSourceUrl)}" target="_blank" rel="noopener noreferrer" data-analytics-event="source_document_click" data-analytics-component="editorial_governance" data-analytics-cta-id="official_source">${escapeHtml(record.officialSourceName)} — ${escapeHtml(record.sourceVersion)}</a>.${sourceUpdate}</p>
   <p><a href="#editorial-changelog-${escapeHtml(record.id)}">Vezi modificările</a>.</p>
   <details id="editorial-changelog-${escapeHtml(record.id)}" class="editorial-governance__changelog">

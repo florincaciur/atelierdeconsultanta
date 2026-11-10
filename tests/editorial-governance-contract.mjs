@@ -95,12 +95,16 @@ for (const record of records) {
     assert.equal(body.attr("data-last-meaningful-update"), undefined, `${record.route}: atributul editorial legacy nu a fost eliminat`);
     assert(section.text().includes(`Verificat la ${record.verifiedAt}`), `${record.route}: lipsește data vizibilă de verificare`);
     assert(section.text().includes(`Actualizat editorial la ${record.lastMeaningfulUpdate}`), `${record.route}: lipsește dateModified vizibil`);
-    assert(section.text().includes("Publisher: FABER – Atelier de Consultanță"), `${record.route}: publisherul real nu este vizibil`);
+    assert(section.text().includes("Publicat de: FABER – Atelier de Consultanță"), `${record.route}: editorul real nu este vizibil`);
     assert(!section.text().includes(record.reviewer), `${record.route}: reviewerul fără profil confirmat a fost publicat`);
     assert(!section.text().includes(record.reviewerRole), `${record.route}: rolul reviewerului fără confirmare a fost publicat`);
     assert.equal(section.text().includes(`Publicat la ${record.datePublished}`), isIsoDate(record.datePublished), `${record.route}: vizibilitatea datePublished este incorectă`);
     assert.equal(section.text().includes(`Sursa oficială a fost actualizată la ${record.officialSourceUpdatedAt}`), isIsoDate(record.officialSourceUpdatedAt), `${record.route}: vizibilitatea officialSourceUpdatedAt este incorectă`);
-    assert(!section.text().includes(record.nextReviewAt), `${record.route}: nextReviewAt intern apare în conținutul public`);
+    const publicDates = [record.verifiedAt, record.lastMeaningfulUpdate, record.datePublished, record.officialSourceUpdatedAt, ...record.changelog.map(change => change.date)];
+    if (!publicDates.includes(record.nextReviewAt)) {
+      assert(!section.text().includes(record.nextReviewAt), `${record.route}: nextReviewAt intern apare în conținutul public`);
+    }
+    assert.doesNotMatch(section.text(), /următoarea revizuire|nextReviewAt/iu, `${record.route}: eticheta revizuirii interne apare în conținutul public`);
     assert.equal(section.find("a[data-analytics-event='source_document_click']").attr("href"), record.officialSourceUrl, `${record.route}: sursa vizibilă diferă`);
     assert(section.find("details.editorial-governance__changelog").length, `${record.route}: lipsește linkul/istoricul «Vezi modificările»`);
     assert(eligible.length, `${record.route}: pagina publică nu are un nod JSON-LD editorial eligibil`);

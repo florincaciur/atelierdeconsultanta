@@ -6,6 +6,7 @@ const path = require("path");
 const { sitemapUrls: readSitemapUrls } = require("./sitemap-utils");
 
 const ROOT = path.resolve(__dirname, "..");
+const { reviseHtml } = require("./editorial-review-content");
 const GLOBAL_HEADER = fs.readFileSync(path.join(ROOT, "partials", "global-header.html"), "utf8").trim();
 const CONFIG_PATH = path.join(ROOT, "config", "seo-programs.json");
 const SITEMAP_PATH = path.join(ROOT, "sitemap.xml");
@@ -753,7 +754,7 @@ function renderKeywordIntent(page) {
   if (!keywords.length) return "";
   const chunks = keywords.slice(0, 6).map((keyword) => `<li>${esc(keyword)}</li>`).join("\n");
   return `<h2>Situatii frecvente cautate de beneficiari</h2>
-      <p>Pagina raspunde natural intrebarilor pe care le au beneficiarii cand compara programe, documente, bugete si servicii de consultanta. Formularea ramane orientativa si trebuie verificata cu ghidul apelului activ.</p>
+      <p>Verifică întrebările de mai jos în raport cu documentele și etapa proiectului.</p>
       <ul>${chunks}</ul>`;
 }
 
@@ -1760,28 +1761,13 @@ function renderTable(page) {
 }
 
 function renderCalendarTable(page) {
-  const rows = Array.isArray(page.calendarRows) && page.calendarRows.length
-    ? page.calendarRows
-    : [
-      ["Pregatire", "Inainte de lansarea apelului", "eligibilitate, documente, oferte si buget"],
-      ["Depunere", "Conform calendarului oficial", "cerere, anexe si documente in platforma"],
-      ["Evaluare", "Dupa inchiderea apelului", "clarificari, punctaj si selectie in limita bugetului"],
-      ["Contractare si implementare", "Dupa selectie", "contract, achizitii, plati si raportari"]
-    ];
-  return renderEditorialTable("Calendar orientativ", ["Etapa", "Perioada", "Ce pregatesti"], rows);
+  if (!Array.isArray(page.calendarRows) || !page.calendarRows.length) return "";
+  return renderEditorialTable("Calendar orientativ", ["Etapa", "Perioada", "Ce pregătești"], page.calendarRows);
 }
 
 function renderCofinancingExample(page) {
-  if (page.hideCofinancingExample === true) return "";
-  const rows = Array.isArray(page.cofinancingRows) && page.cofinancingRows.length
-    ? page.cofinancingRows
-    : [
-      ["Investitie eligibila", "100.000 EUR", "valoare folosita doar pentru calcul orientativ"],
-      ["Sprijin nerambursabil estimat", "70%", "procentul real se confirma in ghidul activ"],
-      ["Grant orientativ", "70.000 EUR", "100.000 EUR x 70%"],
-      ["Contributie proprie", "30.000 EUR", "la care se pot adauga TVA, costuri neeligibile sau rezerve"]
-    ];
-  return renderEditorialTable(page.cofinancingTitle || "Exemplu numeric de cofinantare", ["Element", "Valoare", "Observatie"], rows);
+  if (page.hideCofinancingExample === true || !Array.isArray(page.cofinancingRows) || !page.cofinancingRows.length) return "";
+  return renderEditorialTable(page.cofinancingTitle || "Exemplu numeric de cofinanțare", ["Element", "Valoare", "Observație"], page.cofinancingRows);
 }
 
 function compactTextList(items, fallback, limit = 4) {
@@ -2129,7 +2115,7 @@ ${editorialHtml}
 
       <h2>Cost consultanță fonduri europene</h2>
       <p>Costul consultanței depinde de program, complexitatea investiției, documentele existente, etapa în care se află proiectul și suportul cerut după depunere. Un dosar simplu, cu documente pregătite, nu se estimează la fel ca un proiect cu investiții tehnice, achiziții complexe, clarificări sau implementare pe termen lung.</p>
-      <p>Nu introducem prețuri standard dacă ele nu există deja în proiect. Pentru o estimare prudentă, trimite datele de bază și programul vizat, iar FABER poate indica ce trebuie verificat înainte de ofertare.</p>
+      <p>Pentru o ofertă de consultanță, trimite datele solicitantului, investiția, bugetul și programul vizat. Prețul se stabilește după documentele disponibile și serviciile incluse.</p>
       <p><a class="btn btn-primary" href="/verificare-eligibilitate-fonduri-europene">Solicită evaluare pentru cost</a></p>
 
       <h2>Programe relevante</h2>
@@ -2833,7 +2819,7 @@ ${dr14ScoreHtml}
       <ol>${li(page.evaluation)}</ol>
       <p>Un proiect bun pastreaza trasabilitate de la cerere pana la plata: cerinta din ghid, cheltuiala din buget, oferta, contractul de achizitie, factura, dovada platii si rezultatul implementat trebuie sa fie coerente.</p>
       <h2>Exemple de situatii aplicate</h2>
-      <p>Exemplele de mai jos sunt anonime si orientative. Ele arata tipul de rationament necesar, nu rezultate promise sau cazuri publicate cu date comerciale.</p>
+      <p>Exemplele sunt ipotetice și ilustrează verificările necesare. Ipotezele nu descriu rezultate ale clienților.</p>
       <ul>${li(page.examples)}</ul>
       <p>In fiecare exemplu, decizia corecta depinde de documente. Aceeasi investitie poate fi potrivita pentru un solicitant si nepotrivita pentru altul, in functie de activitate, locatie, istoric, buget si calendar.</p>
 ${toolsHtml}
@@ -2992,7 +2978,7 @@ ${ANALYTICS_EVENTS_SCRIPT}
 }
 
 function ensureFile(page, html, { writeLegacy = true } = {}) {
-  const normalizedHtml = normalizeHtmlCopy(html);
+  const normalizedHtml = normalizeHtmlCopy(reviseHtml(html, slugPath(page)));
   const canonicalFile = path.join(ROOT, slugPath(page).slice(1), "index.html");
   fs.mkdirSync(path.dirname(canonicalFile), { recursive: true });
   fs.writeFileSync(canonicalFile, normalizedHtml, "utf8");

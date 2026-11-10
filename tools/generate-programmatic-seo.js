@@ -5,6 +5,7 @@ const fs = require("fs");
 const path = require("path");
 
 const ROOT = path.resolve(__dirname, "..");
+const { reviseHtml } = require("./editorial-review-content");
 const GLOBAL_HEADER = fs.readFileSync(path.join(ROOT, "partials", "global-header.html"), "utf8").trim();
 const CONFIG = path.join(ROOT, "config", "seo-programmatic-pages.json");
 const SITEMAP = path.join(ROOT, "sitemap.xml");
@@ -174,11 +175,6 @@ function stripTags(html) {
     .trim();
 }
 
-function wordCount(html) {
-  const words = stripTags(html).match(/[\p{L}\p{N}]+(?:[-''][\p{L}\p{N}]+)*/gu);
-  return words ? words.length : 0;
-}
-
 function relatedLinks(items) {
   return (items || []).map((item) => {
     const href = typeof item === "string" ? item : (Array.isArray(item) ? item[0] : item.href);
@@ -315,7 +311,7 @@ ${ANALYTICS_EVENTS_SCRIPT}
 function writePage(route, content) {
   const file = path.join(ROOT, cleanUrl(route).slice(1), "index.html");
   fs.mkdirSync(path.dirname(file), { recursive: true });
-  fs.writeFileSync(file, normalizeHtmlCopy(content), "utf8");
+  fs.writeFileSync(file, normalizeHtmlCopy(reviseHtml(content, route)), "utf8");
 }
 
 function redirectFallbackPage({ route, target, title }) {
@@ -340,33 +336,6 @@ ${ANALYTICS_EVENTS_SCRIPT}
 </body>
 </html>
 `;
-}
-
-function ensureDepth(body, context) {
-  const paragraphs = [
-    `Pentru ${context}, decizia nu se ia doar dupa denumirea programului. Trebuie verificata potrivirea dintre solicitant, activitate, localitate, documente, investitie, buget si calendarul apelului activ.`,
-    "Un dosar bine pregatit porneste de la documente verificabile. Certificatul constatator, documentele pentru spatiu, situatiile financiare, ofertele si descrierea investitiei trebuie sa sustina aceeasi poveste economica.",
-    "Cheltuielile eligibile trebuie legate direct de activitatea finantata. Daca o achizitie nu poate fi explicata prin fluxul de lucru, prin obiectivele proiectului sau prin rezultatele asteptate, riscul de clarificari creste.",
-    "Cofinantarea se analizeaza separat de grant. Beneficiarul trebuie sa inteleaga ce plateste din surse proprii, ce nu se deconteaza, ce documente sunt cerute la plata si ce se intampla daca apar diferente de pret.",
-    "Punctajul orientativ se verifica inainte de depunere si se reface dupa fiecare schimbare de buget sau investitie. Un proiect eligibil poate ramane nefinantat daca nu intra in bugetul disponibil al apelului.",
-    "Informatiile de pe pagina sunt orientative. Eligibilitatea finala depinde de ghidul oficial, anexele apelului, documentele solicitantului si evaluarea autoritatii finantatoare.",
-    "O verificare utila incepe cu intrebari simple: cine aplica, unde se implementeaza investitia, ce activitate este autorizata, ce se cumpara si cum se sustine contributia proprie. Raspunsurile trebuie confirmate in documente, nu doar declarate in discutia initiala.",
-    "Daca proiectul are lucrari, echipamente sau servicii tehnice, ofertele trebuie sa fie comparabile si suficient de clare. Specificatiile vagi pot duce la clarificari, ajustari de buget sau eliminarea unor costuri.",
-    "Pentru firmele cu mai multe activitati, codul CAEN trebuie citit impreuna cu activitatea reala si cu punctul de lucru. Un cod prezent in certificat nu este suficient daca investitia nu poate fi legata de fluxul operational.",
-    "Pentru ferme, analiza include suprafete, efective, documente APIA sau registre relevante, dreptul de folosinta si dimensiunea economica. O schimbare aparent mica in date poate modifica eligibilitatea sau punctajul.",
-    "Pentru proiectele de digitalizare, lista de achizitii trebuie legata de procese: vanzari, productie, gestiune, raportare, securitate sau relatia cu clientii. Un buget IT general este mai greu de aparat decat un buget conectat la probleme concrete.",
-    "Pentru proiectele energetice, consumul, amplasamentul, avizele si dimensionarea tehnica trebuie verificate inainte de buget. O capacitate aleasa doar dupa plafonul programului poate fi vulnerabila la evaluare.",
-    "Calendarul conteaza la fel de mult ca bugetul. Documentele pentru spatiu, oferte, certificate, autorizatii sau registre pot avea durate diferite de obtinere si pot bloca depunerea daca sunt lasate la final.",
-    "Un raspuns responsabil poate fi si amanarea depunerii. Daca documentele sunt incomplete, cofinantarea este neclara sau ghidul nu este final, pregatirea trebuie continuata pana cand riscurile principale sunt intelese.",
-    "Dupa depunere, proiectul nu se incheie. Contractarea, achizitiile, cererile de plata si monitorizarea cer aceeasi coerenta intre ce s-a promis in dosar si ce se poate implementa practic."
-  ];
-  let html = body;
-  let index = 0;
-  while (wordCount(html) < PROGRAMMATIC_MIN_WORDS) {
-    html += `\n      <p>${esc(paragraphs[index % paragraphs.length])}</p>`;
-    index += 1;
-  }
-  return html;
 }
 
 function caenPage(item) {
@@ -410,7 +379,7 @@ function caenPage(item) {
         <li>calculeaza cofinantarea si cheltuielile neeligibile;</li>
         <li>verifica grila de punctaj inainte de depunere.</li>
       </ul>`;
-  body = ensureDepth(appendConfiguredBody(body, item), `CAEN ${item.code} - ${item.label}`);
+  body = appendConfiguredBody(body, item);
   return { route, content: html({ title, description, h1: title, route, category: "Cod CAEN", summary: `Pentru CAEN ${item.code}, fondurile europene se aleg dupa program, regiune, investitie si documente, nu doar dupa denumirea codului.`, body, faq, related: ["/fonduri-europene-imm", "/instrumente", "/contact"] }) };
 }
 
@@ -478,7 +447,7 @@ function localPage(item, consulting) {
       </div>
       <h2>Checklist local</h2>
       <p>Inainte de depunere, verifica daca locatia investitiei este eligibila, daca punctul de lucru este documentat, daca autorizatiile pot fi obtinute si daca investitia are legatura cu activitatea firmei.</p>`;
-  body = ensureDepth(appendConfiguredBody(body, item), `${title} in ${item.region}`);
+  body = appendConfiguredBody(body, item);
   const related = isBucharest
     ? [
         consulting ? "/fonduri-europene-bucuresti" : "/consultanta-fonduri-europene-bucuresti",
@@ -550,7 +519,7 @@ function regionalPage(item) {
         <li><a href="https://www.adrnordest.ro/regiunea-nord-est/organizare-administrativ-teritoriala/" target="_blank" rel="noopener noreferrer">ADR Nord-Est - organizare administrativ-teritorială</a> pentru componența regiunii.</li>
         <li>${linkTo("/surse-oficiale-fonduri-europene", "Tabelul intern de surse oficiale")}</li>
       </ul>`;
-  body = ensureDepth(appendConfiguredBody(body, item), `fonduri europene ${item.region}`);
+  body = appendConfiguredBody(body, item);
   return {
     route,
     content: html({
@@ -594,7 +563,7 @@ function faqPage(item) {
         <li>calculeaza cofinantarea si calendarul;</li>
         <li>cere o analiza daca exista incertitudini.</li>
       </ul>`;
-  body = ensureDepth(appendConfiguredBody(body, item), item.question);
+  body = appendConfiguredBody(body, item);
   return { route, content: html({ title, description, h1: title, route, category: "Intrebare frecventa", summary: item.answer, body, faq, related: item.related }) };
 }
 

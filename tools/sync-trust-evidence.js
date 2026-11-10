@@ -3,6 +3,7 @@
 
 const fs = require("fs");
 const path = require("path");
+const { synchronizePublicHtml } = require("./sync-analytics-events");
 
 const ROOT = path.resolve(__dirname, "..");
 const CHECK = process.argv.includes("--check");
@@ -162,7 +163,7 @@ function syncCases() {
 const outputs = [
   [METHODOLOGY_FILE, syncMethodology()],
   [CASES_FILE, syncCases()]
-];
+].map(([file, html]) => [file, synchronizePublicHtml(html, file)]);
 const changed = outputs.filter(([relativePath, content]) => read(relativePath) !== content);
 
 if (CHECK && changed.length) {

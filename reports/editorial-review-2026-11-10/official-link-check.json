@@ -1,0 +1,948 @@
+{
+  "checkedAt": "2026-11-10T14:00:45.030Z",
+  "method": "GET, final HTTP status only; document verification is separate",
+  "rows": [
+    {
+      "url": "https://mfe.gov.ro/ghidul-specific-conditii-de-accesare-a-fondurilor-europene-aferente-planului-national-de-redresare-si-rezilienta-in-cadrul-apelului-de-proiecte-digitalizarea-imm-urilor-grant-de-pana-la-100-000-e/",
+      "routes": [
+        "/consultanta-pnrr-digitalizare",
+        "/fonduri-europene-caen/4321-instalatii-electrice",
+        "/fonduri-europene-caen/6201-dezvoltare-software",
+        "/intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm",
+        "/intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene",
+        "/pnrr-digitalizare-imm-cheltuieli-eligibile",
+        "/digitalizare-imm-erp-crm-cloud",
+        "/consultanta-fonduri-europene-bucuresti",
+        "/digitalizare-imm-pnrr",
+        "/fonduri-europene-bucuresti",
+        "/fonduri-europene-nord-est"
+      ],
+      "status": 200,
+      "finalUrl": "https://mfe.gov.ro/ghidul-specific-conditii-de-accesare-a-fondurilor-europene-aferente-planului-national-de-redresare-si-rezilienta-in-cadrul-apelului-de-proiecte-digitalizarea-imm-urilor-grant-de-pana-la-100-000-e/"
+    },
+    {
+      "url": "https://mfe.gov.ro/pnrr-ordinul-nr-607-28-04-2026-pentru-modificarea-ghidului-solicitantului-digitalizarea-imm-urilor-grant-de-pana-la-100-000-euro-pe-intreprindere-care-sa-sprijine-imm-urile-in-adoptarea-tehnologii/",
+      "routes": [
+        "/fonduri-europene-digitalizare",
+        "/calendar-fonduri-europene",
+        "/digitalizare-imm"
+      ],
+      "status": 200,
+      "finalUrl": "https://mfe.gov.ro/pnrr-ordinul-nr-607-28-04-2026-pentru-modificarea-ghidului-solicitantului-digitalizarea-imm-urilor-grant-de-pana-la-100-000-euro-pe-intreprindere-care-sa-sprijine-imm-urile-in-adoptarea-tehnologii/"
+    },
+    {
+      "url": "https://mfe.gov.ro/pnrr-dashboard/",
+      "routes": [
+        "/fonduri-europene-digitalizare",
+        "/calendar-fonduri-europene",
+        "/pnrr"
+      ],
+      "status": 200,
+      "finalUrl": "https://mfe.gov.ro/pnrr-dashboard/"
+    },
+    {
+      "url": "https://www.regiocentru.ro/actiuni/2-2-intreprinderi-digitale-pentru-o-economie-avansata-apel-2/",
+      "routes": [
+        "/fonduri-europene-digitalizare",
+        "/digitalizare-imm-regiunea-centru-apel-2",
+        "/calendar-fonduri-europene"
+      ],
+      "status": 403,
+      "finalUrl": "https://www.regiocentru.ro/actiuni/2-2-intreprinderi-digitale-pentru-o-economie-avansata-apel-2/"
+    },
+    {
+      "url": "https://mfe.gov.ro/ghiduri_pocidif/pocidif-ghidul-solicitantului-dezvoltarea-de-noi-servicii-aplicatii-produse-prin-inovare-si-adoptarea-de-tehnologii-avansate-2/",
+      "routes": [
+        "/fonduri-europene-digitalizare",
+        "/calendar-fonduri-europene",
+        "/cheltuieli-eligibile-pocidif-21",
+        "/pocidif-21",
+        "/documente-punctaj-pocidif-21",
+        "/eligibilitate-pocidif-21"
+      ],
+      "status": 200,
+      "finalUrl": "https://mfe.gov.ro/ghiduri_pocidif/pocidif-ghidul-solicitantului-dezvoltarea-de-noi-servicii-aplicatii-produse-prin-inovare-si-adoptarea-de-tehnologii-avansate-2/"
+    },
+    {
+      "url": "https://mfe.gov.ro/",
+      "routes": [
+        "/cum-alegi-consultant-fonduri-europene",
+        "/calendar-fonduri-europene",
+        "/resurse",
+        "/cand-merita-consultant-fonduri-europene",
+        "/ce-acte-sunt-necesare-fonduri-europene",
+        "/cum-se-verifica-eligibilitatea-fonduri-europene",
+        "/fonduri-europene-caen/0111-culturi-cereale",
+        "/greseli-fonduri-europene",
+        "/intrebari-frecvente",
+        "/intrebari/ce-cheltuieli-sunt-eligibile-la-digitalizare-imm",
+        "/intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene",
+        "/resurse-utile",
+        "/webinarii",
+        "/digitalizare-imm-erp-crm-cloud",
+        "/acte-necesare-fonduri-europene-nerambursabile",
+        "/cat-costa-consultanta-fonduri-europene",
+        "/cat-costa-consultanta-fonduri-europene-ghid",
+        "/consultant-fonduri-europene-imm",
+        "/consultanta-fonduri-europene",
+        "/consultanta-fonduri-europene-bucuresti",
+        "/cum-se-calculeaza-cofinantarea-fonduri-europene",
+        "/firma-consultanta-fonduri-europene",
+        "/fonduri-europene-bucuresti",
+        "/fonduri-europene-nerambursabile-2026",
+        "/ghiduri",
+        "/instrumente",
+        "/surse-oficiale-fonduri-europene"
+      ],
+      "status": 200,
+      "finalUrl": "https://mfe.gov.ro/"
+    },
+    {
+      "url": "https://fonduri.mt.ro/transparenta/consultare-publica/fondul-pentru-modernizare/fm-mti-demareaza-procesul-de-consultare-publica-pentru-ghidurile-solicitantului-aferente-masurilor-1-si-2-ale-schemei-e-drive",
+      "routes": [
+        "/e-drive",
+        "/calendar-fonduri-europene",
+        "/finantari-panouri-fotovoltaice"
+      ],
+      "status": 200,
+      "finalUrl": "https://fonduri.mt.ro/transparenta/consultare-publica/fondul-pentru-modernizare/fm-mti-demareaza-procesul-de-consultare-publica-pentru-ghidurile-solicitantului-aferente-masurilor-1-si-2-ale-schemei-e-drive"
+    },
+    {
+      "url": "https://www.mt.ro/transparenta-decizionala/consultare-publica/acte-normative-in-avizare/omti03112026dgpet-2",
+      "routes": [
+        "/e-drive"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.mt.ro/transparenta-decizionala/consultare-publica/acte-normative-in-avizare/omti03112026dgpet-2"
+    },
+    {
+      "url": "https://www.mt.ro/transparenta-decizionala/consultare-publica/acte-normative-in-avizare/omti03112026dgpet",
+      "routes": [
+        "/e-drive"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.mt.ro/transparenta-decizionala/consultare-publica/acte-normative-in-avizare/omti03112026dgpet"
+    },
+    {
+      "url": "https://fonduri.mt.ro/documente/FM/Monitorul_Oficial_Partea_I_nr._739.pdf",
+      "routes": [
+        "/e-drive",
+        "/e-move"
+      ],
+      "status": 200,
+      "finalUrl": "https://fonduri.mt.ro/documente/FM/Monitorul_Oficial_Partea_I_nr._739.pdf"
+    },
+    {
+      "url": "https://fonduri.mt.ro/documente/GS_M1_%C8%99i_M2.zip",
+      "routes": [
+        "/e-drive"
+      ],
+      "status": 200,
+      "finalUrl": "https://fonduri.mt.ro/documente/GS_M1_%C8%99i_M2.zip"
+    },
+    {
+      "url": "https://legislatie.just.ro/Public/DetaliiDocument/313289",
+      "routes": [
+        "/e-drive"
+      ],
+      "status": 200,
+      "finalUrl": "https://legislatie.just.ro/Public/DetaliiDocument/313289"
+    },
+    {
+      "url": "https://legislatie.just.ro/Public/DetaliiDocument/307361",
+      "routes": [
+        "/e-drive"
+      ],
+      "status": 200,
+      "finalUrl": "https://legislatie.just.ro/Public/DetaliiDocument/307361"
+    },
+    {
+      "url": "https://www.regiocentru.ro/wp-content/uploads/2026/04/Ghidul-solicitantului-%E2%80%93-Actiunea-2.2-%E2%80%93-Apel-2.pdf",
+      "routes": [
+        "/digitalizare-imm-regiunea-centru-apel-2"
+      ],
+      "status": 403,
+      "finalUrl": "https://www.regiocentru.ro/wp-content/uploads/2026/04/Ghidul-solicitantului-%E2%80%93-Actiunea-2.2-%E2%80%93-Apel-2.pdf"
+    },
+    {
+      "url": "https://www.regiocentru.ro/lansarea-celui-de-al-doilea-apel-de-finantare-pentru-digitalizarea-imm-urilor/",
+      "routes": [
+        "/digitalizare-imm-regiunea-centru-apel-2"
+      ],
+      "status": 403,
+      "finalUrl": "https://www.regiocentru.ro/lansarea-celui-de-al-doilea-apel-de-finantare-pentru-digitalizarea-imm-urilor/"
+    },
+    {
+      "url": "https://www.regiocentru.ro/schema-de-ajutor-de-minimis-aferenta-investitiilor-din-cadrul-actiunii-2-2-intreprinderi-digitale-pentru-o-economie-avansata-apel-2/",
+      "routes": [
+        "/digitalizare-imm-regiunea-centru-apel-2"
+      ],
+      "status": 403,
+      "finalUrl": "https://www.regiocentru.ro/schema-de-ajutor-de-minimis-aferenta-investitiilor-din-cadrul-actiunii-2-2-intreprinderi-digitale-pentru-o-economie-avansata-apel-2/"
+    },
+    {
+      "url": "https://mysmis2021.gov.ro/",
+      "routes": [
+        "/digitalizare-imm-regiunea-centru-apel-2"
+      ],
+      "status": 200,
+      "finalUrl": "https://mysmis2021.gov.ro/"
+    },
+    {
+      "url": "https://www.afir.ro/instrumente/sesiuni/sesiuni-primire-proiecte/",
+      "routes": [
+        "/dr18",
+        "/dr14",
+        "/calendar-fonduri-europene",
+        "/afir"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.afir.ro/instrumente/sesiuni/sesiuni-primire-proiecte/"
+    },
+    {
+      "url": "https://www.afir.ro/info-la-zi/prelungire-sesiune-depunere-proiecte-de-investitii-aferente-dr-14-si-dr-18/",
+      "routes": [
+        "/dr18",
+        "/dr14"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.afir.ro/info-la-zi/prelungire-sesiune-depunere-proiecte-de-investitii-aferente-dr-14-si-dr-18/"
+    },
+    {
+      "url": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-18/",
+      "routes": [
+        "/dr18"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-18/"
+    },
+    {
+      "url": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-producere-energie-pentru-autoconsum-beneficiari-publici/",
+      "routes": [
+        "/autoconsum-public-fotovoltaice-institutii-publice",
+        "/calendar-fonduri-europene",
+        "/finantari-panouri-fotovoltaice"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-producere-energie-pentru-autoconsum-beneficiari-publici/"
+    },
+    {
+      "url": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-producere-si-stocare-energie-regenerabila-beneficiari-publici/",
+      "routes": [
+        "/autoconsum-public-fotovoltaice-institutii-publice"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-producere-energie-pentru-autoconsum-beneficiari-publici/"
+    },
+    {
+      "url": "https://energie.gov.ro/wp-content/uploads/2026/09/Anunt-lansare-apel-proiecte-autoconsum_entitati-publice.pdf",
+      "routes": [
+        "/autoconsum-public-fotovoltaice-institutii-publice"
+      ],
+      "status": 200,
+      "finalUrl": "https://energie.gov.ro/wp-content/uploads/2026/09/Anunt-lansare-apel-proiecte-autoconsum_entitati-publice.pdf"
+    },
+    {
+      "url": "https://www.afir.ro/comunicate/conditiile-finantarii-acordate-entitatilor-publice-pentru-producerea-si-stocarea-energiei-electrice/",
+      "routes": [
+        "/autoconsum-public-fotovoltaice-institutii-publice",
+        "/fondul-modernizare-pc1-stocare-entitati-publice"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.afir.ro/comunicate/conditiile-finantarii-acordate-entitatilor-publice-pentru-producerea-si-stocarea-energiei-electrice/"
+    },
+    {
+      "url": "https://www.afir.ro/media/kryf4iok/anexa-1_cf_forma-vizuala_autoconsum_res_fm.pdf",
+      "routes": [
+        "/autoconsum-public-fotovoltaice-institutii-publice"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.afir.ro/media/kryf4iok/anexa-1_cf_forma-vizuala_autoconsum_res_fm.pdf"
+    },
+    {
+      "url": "https://www.afir.ro/media/nm4fhhux/anexa-2_grila-vae_autoconsum_res_fm_publici.docx",
+      "routes": [
+        "/autoconsum-public-fotovoltaice-institutii-publice"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.afir.ro/media/nm4fhhux/anexa-2_grila-vae_autoconsum_res_fm_publici.docx"
+    },
+    {
+      "url": "https://www.afir.ro/media/fjjgp1wq/anexa-3_declaratie-dnsh_autoconsum_res_fm_publici.docx",
+      "routes": [
+        "/autoconsum-public-fotovoltaice-institutii-publice"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.afir.ro/media/fjjgp1wq/anexa-3_declaratie-dnsh_autoconsum_res_fm_publici.docx"
+    },
+    {
+      "url": "https://www.afir.ro/media/zxvhqlty/anexa-4_model-acord-parteneriat_res_fm_publici.docx",
+      "routes": [
+        "/autoconsum-public-fotovoltaice-institutii-publice"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.afir.ro/media/zxvhqlty/anexa-4_model-acord-parteneriat_res_fm_publici.docx"
+    },
+    {
+      "url": "https://www.afir.ro/media/uwymsxzy/ghidul-solicitantului_autoconsum-res_fm_entitati-publice.docx",
+      "routes": [
+        "/autoconsum-public-fotovoltaice-institutii-publice"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.afir.ro/media/uwymsxzy/ghidul-solicitantului_autoconsum-res_fm_entitati-publice.docx"
+    },
+    {
+      "url": "https://legislatie.just.ro/Public/DetaliiDocument/276306",
+      "routes": [
+        "/autoconsum-public-fotovoltaice-institutii-publice"
+      ],
+      "status": 200,
+      "finalUrl": "https://legislatie.just.ro/Public/DetaliiDocument/276306"
+    },
+    {
+      "url": "https://depunerepspac.afir.ro/Sesiune/Lista",
+      "routes": [
+        "/autoconsum-public-fotovoltaice-institutii-publice",
+        "/dr14",
+        "/calendar-fonduri-europene",
+        "/dr12-afir",
+        "/afir",
+        "/dr12-vs-dr14",
+        "/fondul-modernizare-pc1-stocare-entitati-publice"
+      ],
+      "status": 200,
+      "finalUrl": "https://depunerepspac.afir.ro/Sesiune/Lista"
+    },
+    {
+      "url": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-14/",
+      "routes": [
+        "/dr14",
+        "/dr-14-afir-conditii-eligibilitate-greseli-frecvente",
+        "/fonduri-europene-caen/0111-culturi-cereale",
+        "/intrebari/ce-documente-sunt-necesare-pentru-dr12",
+        "/fonduri-europene-nord-est"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-14/"
+    },
+    {
+      "url": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-12/",
+      "routes": [
+        "/calendar-fonduri-europene",
+        "/dr12-afir",
+        "/calculator-soc",
+        "/afir",
+        "/dr12-vs-dr14"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-12/"
+    },
+    {
+      "url": "https://energie.gov.ro/lansare-apel-sprijinirea-investitiilor-in-dezvoltarea-instalatiilor-autonome-stand-alone-de-stocare-in-baterii-a-energiei-electrice-cu-finantare-din-fondul-pentru-modernizare-p/",
+      "routes": [
+        "/calendar-fonduri-europene",
+        "/finantari-panouri-fotovoltaice",
+        "/fondul-modernizare-pc1-stocare"
+      ],
+      "status": 200,
+      "finalUrl": "https://energie.gov.ro/lansare-apel-sprijinirea-investitiilor-in-dezvoltarea-instalatiilor-autonome-stand-alone-de-stocare-in-baterii-a-energiei-electrice-cu-finantare-din-fondul-pentru-modernizare-p/"
+    },
+    {
+      "url": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-stocare-energie-regenerabila-beneficiari-publici/",
+      "routes": [
+        "/calendar-fonduri-europene",
+        "/finantari-panouri-fotovoltaice",
+        "/fondul-modernizare-pc1-stocare-entitati-publice"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-stocare-energie-beneficiari-publici/"
+    },
+    {
+      "url": "https://fonduri.mt.ro/transparenta/comunicate-de-presa/fondul-pentru-modernizare/publicarea-ghidului-solicitantului-si-calendarului-apelului-de-proiecte-pentru-dezvoltarea-infrastructurii-de-reincarcare-a-vehiculelor-electrice-pe-reteaua-nationala-de-autostrazi-drumuri-expres-si-drumuri-nationale-e-mobility-ro-submasura-1",
+      "routes": [
+        "/calendar-fonduri-europene",
+        "/e-mobility",
+        "/finantari-panouri-fotovoltaice"
+      ],
+      "status": 200,
+      "finalUrl": "https://fonduri.mt.ro/transparenta/comunicate-de-presa/fondul-pentru-modernizare/publicarea-ghidului-solicitantului-si-calendarului-apelului-de-proiecte-pentru-dezvoltarea-infrastructurii-de-reincarcare-a-vehiculelor-electrice-pe-reteaua-nationala-de-autostrazi-drumuri-expres-si-drumuri-nationale-e-mobility-ro-submasura-1"
+    },
+    {
+      "url": "https://economie.gov.ro/termenul-de-inscriere-in-cadrul-programului-sme-eco-tech-se-prelungeste-pana-la-30-decembrie-2026/",
+      "routes": [
+        "/calendar-fonduri-europene",
+        "/fonduri-europene-imm"
+      ],
+      "status": 200,
+      "finalUrl": "https://economie.gov.ro/termenul-de-inscriere-in-cadrul-programului-sme-eco-tech-se-prelungeste-pana-la-30-decembrie-2026/"
+    },
+    {
+      "url": "https://www.bidromania.eu/produse/garantii/diaspora-investeste-acasa",
+      "routes": [
+        "/calendar-fonduri-europene",
+        "/diaspora-investeste-acasa",
+        "/fonduri-europene-imm"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.bidromania.eu/produse/garantii/diaspora-investeste-acasa"
+    },
+    {
+      "url": "https://fonduri.mt.ro/documente-si-publicatii/finantari-fm/scheme-de-ajutor-de-stat/schema-de-ajutor-de-stat-5",
+      "routes": [
+        "/calendar-fonduri-europene",
+        "/e-move",
+        "/finantari-panouri-fotovoltaice"
+      ],
+      "status": 200,
+      "finalUrl": "https://fonduri.mt.ro/documente-si-publicatii/finantari-fm/scheme-de-ajutor-de-stat/schema-de-ajutor-de-stat-5"
+    },
+    {
+      "url": "https://legislatie.just.ro/Public/DetaliiDocument/306916",
+      "routes": [
+        "/calendar-fonduri-europene",
+        "/pro-infra",
+        "/finantari-panouri-fotovoltaice"
+      ],
+      "status": 200,
+      "finalUrl": "https://legislatie.just.ro/Public/DetaliiDocument/306916"
+    },
+    {
+      "url": "https://economie.gov.ro/sesiunea-sun-editia-a-4-a-se-apropie-de-final-peste-16-000-persoane-au-finalizat-cursurile-de-formare-antreprenoriala/",
+      "routes": [
+        "/calendar-fonduri-europene",
+        "/start-up-nation-2026",
+        "/fonduri-europene-imm"
+      ],
+      "status": 200,
+      "finalUrl": "https://economie.gov.ro/sesiunea-sun-editia-a-4-a-se-apropie-de-final-peste-16-000-persoane-au-finalizat-cursurile-de-formare-antreprenoriala/"
+    },
+    {
+      "url": "https://www.afir.ro/rapoarte/rapoarte-feadr/selectie/",
+      "routes": [
+        "/calendar-fonduri-europene",
+        "/afir-autoconsum-agroalimentar",
+        "/afir"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.afir.ro/rapoarte/rapoarte-feadr/selectie/"
+    },
+    {
+      "url": "https://regionordest.ro/prioritatea-1/modernizare-microintreprinderi/",
+      "routes": [
+        "/calendar-fonduri-europene",
+        "/fonduri-regionale",
+        "/investitii-modernizarea-microintreprinderilor-apel-2"
+      ],
+      "status": 200,
+      "finalUrl": "https://regionordest.ro/prioritatea-1/modernizare-microintreprinderi/"
+    },
+    {
+      "url": "https://minimis.imm.gov.ro/fa2024/ordine_evaluare",
+      "routes": [
+        "/calendar-fonduri-europene",
+        "/femeia-antreprenor-2026",
+        "/fonduri-europene-imm"
+      ],
+      "status": 200,
+      "finalUrl": "https://minimis.imm.gov.ro/fa2024/ordine_evaluare"
+    },
+    {
+      "url": "https://resurse.mysmis2021.gov.ro/ords/repo_bo/r/mysmis-2021/finantari-programe-2021-2027",
+      "routes": [
+        "/calendar-fonduri-europene",
+        "/fondul-de-modernizare",
+        "/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum",
+        "/fondul-modernizare-energie-regenerabila-2026",
+        "/fonduri-regionale",
+        "/programul-tranzitie-justa",
+        "/finantari-panouri-fotovoltaice"
+      ],
+      "status": 200,
+      "finalUrl": "https://resurse.mysmis2021.gov.ro/ords/repo_bo/r/mysmis-2021/finantari-programe-2021-2027"
+    },
+    {
+      "url": "https://gal.afir.ro/",
+      "routes": [
+        "/calendar-fonduri-europene",
+        "/resurse-utile",
+        "/apeluri-gal",
+        "/gal-afir",
+        "/fonduri-europene-imm"
+      ],
+      "status": 200,
+      "finalUrl": "https://gal.afir.ro/"
+    },
+    {
+      "url": "https://www.afir.ro/info-la-zi/sesiune-depunere-de-proiecte-dr-12/",
+      "routes": [
+        "/dr12-afir"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.afir.ro/info-la-zi/sesiune-depunere-de-proiecte-dr-12/"
+    },
+    {
+      "url": "https://www.afir.ro/media/aqtlitop/ghidul-solicitantului-dr-12.pdf",
+      "routes": [
+        "/dr12-afir",
+        "/dr12-vs-dr14"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.afir.ro/media/aqtlitop/ghidul-solicitantului-dr-12.pdf"
+    },
+    {
+      "url": "https://www.afir.ro/instrumente/normative/legislatie-nationala/",
+      "routes": [
+        "/dr12-afir"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.afir.ro/instrumente/normative/legislatie-nationala/"
+    },
+    {
+      "url": "https://www.afir.ro/api/file/document?filename=Lista+detaliata+a+Coeficientilor+standard+output+SOC+2020+nov+2024&filetype=pdf&url=%2Fmedia%2Fye3ppryg%2Flista-detaliata-a-coeficientilor-standard-output-soc-2020-nov-2024.pdf",
+      "routes": [
+        "/calculator-soc"
+      ],
+      "status": 200,
+      "finalUrl": "https://stportalafirprod.blob.core.windows.net/media/media/ye3ppryg/lista-detaliata-a-coeficientilor-standard-output-soc-2020-nov-2024.pdf"
+    },
+    {
+      "url": "https://ec.europa.eu/eurostat/web/agriculture/database/additional-data",
+      "routes": [
+        "/calculator-soc",
+        "/dr12-vs-dr14"
+      ],
+      "status": 200,
+      "finalUrl": "https://ec.europa.eu/eurostat/web/agriculture/database/additional-data"
+    },
+    {
+      "url": "https://www.afir.ro/info-la-zi/lista-detaliata-coeficienti-standard-output-soc-2020/",
+      "routes": [
+        "/calculator-soc"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.afir.ro/info-la-zi/lista-detaliata-coeficienti-standard-output-soc-2020/"
+    },
+    {
+      "url": "https://so.afir.info/",
+      "routes": [
+        "/calculator-soc"
+      ],
+      "status": 403,
+      "finalUrl": "https://so.afir.info/"
+    },
+    {
+      "url": "https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Glossary:Standard_output_(SO)",
+      "routes": [
+        "/calculator-soc"
+      ],
+      "status": 200,
+      "finalUrl": "https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Glossary:Standard_output_(SO)"
+    },
+    {
+      "url": "https://oportunitati-ue.gov.ro/",
+      "routes": [
+        "/cand-merita-consultant-fonduri-europene",
+        "/ce-acte-sunt-necesare-fonduri-europene",
+        "/cum-se-verifica-eligibilitatea-fonduri-europene",
+        "/cat-costa-consultanta-fonduri-europene-ghid",
+        "/cum-se-calculeaza-cofinantarea-fonduri-europene"
+      ],
+      "status": 200,
+      "finalUrl": "https://oportunitati-ue.gov.ro/"
+    },
+    {
+      "url": "https://www.afir.ro/",
+      "routes": [
+        "/cand-merita-consultant-fonduri-europene",
+        "/ce-acte-sunt-necesare-fonduri-europene",
+        "/cum-se-verifica-eligibilitatea-fonduri-europene",
+        "/resurse-utile",
+        "/cat-costa-consultanta-fonduri-europene-ghid",
+        "/consultanta-fonduri-europene",
+        "/cum-se-calculeaza-cofinantarea-fonduri-europene",
+        "/surse-oficiale-fonduri-europene"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.afir.ro/"
+    },
+    {
+      "url": "https://adrnordest.ro/",
+      "routes": [
+        "/cand-merita-consultant-fonduri-europene",
+        "/ce-acte-sunt-necesare-fonduri-europene",
+        "/cum-se-verifica-eligibilitatea-fonduri-europene",
+        "/cum-se-calculeaza-cofinantarea-fonduri-europene",
+        "/surse-oficiale-fonduri-europene"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.adrnordest.ro/"
+    },
+    {
+      "url": "https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/",
+      "routes": [
+        "/dr-12-afir-instalarea-tinerilor-fermieri",
+        "/fonduri-europene-caen/0111-culturi-cereale",
+        "/intrebari/ce-documente-sunt-necesare-pentru-dr12",
+        "/consultanta-afir",
+        "/fonduri-europene-agricultura",
+        "/fonduri-europene-nord-est",
+        "/fonduri-pentru-ferme",
+        "/fonduri-pentru-utilaje-agricole"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.afir.ro/comunicate/consultare-publica-pentru-consolidarea-exploatatiilor-tinerilor-fermieri/"
+    },
+    {
+      "url": "https://adrnordest.ro/comentariiGhid/P1Microintreprinderi/Apel2/",
+      "routes": [
+        "/fonduri-europene-caen/4321-instalatii-electrice",
+        "/fonduri-europene-caen/5610-restaurante",
+        "/fonduri-europene-caen/6201-dezvoltare-software",
+        "/intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene",
+        "/fonduri-europene-nord-est"
+      ],
+      "status": 200,
+      "finalUrl": "https://adrnordest.ro/comentariiGhid/P1Microintreprinderi/Apel2/"
+    },
+    {
+      "url": "https://energie.gov.ro/category/fondul-pentru-modernizare/",
+      "routes": [
+        "/fonduri-europene-caen/4321-instalatii-electrice",
+        "/fonduri-europene-caen/5610-restaurante",
+        "/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum",
+        "/fondul-modernizare-energie-regenerabila-2026",
+        "/consultanta-fonduri-europene-bucuresti",
+        "/fonduri-europene-bucuresti",
+        "/surse-oficiale-fonduri-europene"
+      ],
+      "status": 200,
+      "finalUrl": "https://energie.gov.ro/category/fondul-pentru-modernizare/"
+    },
+    {
+      "url": "https://economie.gov.ro/participa-la-definitivarea-procedurii-de-implementare-a-programului-de-succes-start-up-nation-editia-2024/",
+      "routes": [
+        "/fonduri-europene-caen/5610-restaurante",
+        "/fonduri-europene-caen/6201-dezvoltare-software",
+        "/start-up-nation-2026-idei-afaceri",
+        "/start-up-nation-2026",
+        "/cod-caen-start-up-nation-2026",
+        "/consultanta-fonduri-europene-bucuresti",
+        "/consultanta-start-up-nation-2026",
+        "/fonduri-europene-bucuresti",
+        "/start-up-nation-2026-cheltuieli-eligibile",
+        "/start-up-nation-2026-conditii",
+        "/start-up-nation-2026-plan-de-afaceri"
+      ],
+      "status": 200,
+      "finalUrl": "https://economie.gov.ro/participa-la-definitivarea-procedurii-de-implementare-a-programului-de-succes-start-up-nation-editia-2024/"
+    },
+    {
+      "url": "https://economie.gov.ro/pe-data-de-30-iulie-se-da-startul-inscrierilor-in-cadrul-programului-femeia-antreprenor/",
+      "routes": [
+        "/fonduri-europene-femei-antreprenor",
+        "/femeia-antreprenor-2026-conditii-idei-afaceri"
+      ],
+      "status": 200,
+      "finalUrl": "https://economie.gov.ro/pe-data-de-30-iulie-se-da-startul-inscrierilor-in-cadrul-programului-femeia-antreprenor/"
+    },
+    {
+      "url": "https://commission.europa.eu/funding-tenders/find-funding/eu-funding-programmes_en",
+      "routes": [
+        "/resurse-utile"
+      ],
+      "status": 200,
+      "finalUrl": "https://commission.europa.eu/funding-and-tenders/find-funding/eu-funding-programmes_en"
+    },
+    {
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/home",
+      "routes": [
+        "/resurse-utile"
+      ],
+      "status": 200,
+      "finalUrl": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/home"
+    },
+    {
+      "url": "https://www.adrnordest.ro/",
+      "routes": [
+        "/resurse-utile",
+        "/fonduri-europene-nord-est"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.adrnordest.ro/"
+    },
+    {
+      "url": "https://economie.gov.ro/",
+      "routes": [
+        "/resurse-utile",
+        "/surse-oficiale-fonduri-europene"
+      ],
+      "status": 200,
+      "finalUrl": "https://economie.gov.ro/"
+    },
+    {
+      "url": "https://energie.gov.ro/",
+      "routes": [
+        "/resurse-utile"
+      ],
+      "status": 200,
+      "finalUrl": "https://energie.gov.ro/"
+    },
+    {
+      "url": "https://legislatie.just.ro/",
+      "routes": [
+        "/resurse-utile",
+        "/surse-oficiale-fonduri-europene"
+      ],
+      "status": 200,
+      "finalUrl": "https://legislatie.just.ro/"
+    },
+    {
+      "url": "https://www.afir.ro/media/hkfp4w0v/ghidul-solicitantului-schem%C4%83-energie-autoconsum-v7-iunie-2026.pdf",
+      "routes": [
+        "/afir-autoconsum-agroalimentar"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.afir.ro/media/hkfp4w0v/ghidul-solicitantului-schem%C4%83-energie-autoconsum-v7-iunie-2026.pdf"
+    },
+    {
+      "url": "https://www.afir.ro/comunicate/265-de-milioane-de-euro-pentru-investitii-in-producerea-energiei-electrice/",
+      "routes": [
+        "/afir-autoconsum-agroalimentar"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.afir.ro/comunicate/265-de-milioane-de-euro-pentru-investitii-in-producerea-energiei-electrice/"
+    },
+    {
+      "url": "https://www.afir.ro/finantare/leader/",
+      "routes": [
+        "/apeluri-gal",
+        "/surse-oficiale-fonduri-europene"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.afir.ro/finantare/leader/"
+    },
+    {
+      "url": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-36/",
+      "routes": [
+        "/apeluri-gal"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.afir.ro/domenii-de-interventie/detalii-si-anexe-dr-36/"
+    },
+    {
+      "url": "https://mfe.gov.ro/wp-content/uploads/2026/06/3b7daf66f17fdaad63fef93466d155e3-1.zip",
+      "routes": [
+        "/cheltuieli-eligibile-pocidif-21",
+        "/documente-punctaj-pocidif-21",
+        "/eligibilitate-pocidif-21"
+      ],
+      "status": 200,
+      "finalUrl": "https://mfe.gov.ro/wp-content/uploads/2026/06/3b7daf66f17fdaad63fef93466d155e3-1.zip"
+    },
+    {
+      "url": "https://mfe.gov.ro/wp-content/uploads/2026/06/d6bee3673c763582ff4b4fce5be59861.pdf",
+      "routes": [
+        "/cheltuieli-eligibile-pocidif-21",
+        "/documente-punctaj-pocidif-21",
+        "/eligibilitate-pocidif-21"
+      ],
+      "status": 200,
+      "finalUrl": "https://mfe.gov.ro/wp-content/uploads/2026/06/d6bee3673c763582ff4b4fce5be59861.pdf"
+    },
+    {
+      "url": "https://mfe.gov.ro/wp-content/uploads/2026/07/4b934c3ee5a4ddb2e0195e23d955c43b.docx",
+      "routes": [
+        "/cheltuieli-eligibile-pocidif-21",
+        "/documente-punctaj-pocidif-21",
+        "/eligibilitate-pocidif-21"
+      ],
+      "status": 200,
+      "finalUrl": "https://mfe.gov.ro/wp-content/uploads/2026/07/4b934c3ee5a4ddb2e0195e23d955c43b.docx"
+    },
+    {
+      "url": "https://www.adr.gov.ro/",
+      "routes": [
+        "/digitalizare-imm-erp-crm-cloud"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.adr.gov.ro/"
+    },
+    {
+      "url": "https://commission.europa.eu/funding-and-tenders/find-funding/eu-funding-programmes/just-transition-fund_en",
+      "routes": [
+        "/programul-tranzitie-justa"
+      ],
+      "status": 200,
+      "finalUrl": "https://commission.europa.eu/funding-and-tenders/find-funding/eu-funding-programmes/just-transition-fund_en"
+    },
+    {
+      "url": "https://commission.europa.eu/system/files/2023-05/ROMANIA%20NRP%202023%20RO.pdf",
+      "routes": [
+        "/programul-tranzitie-justa"
+      ],
+      "status": 200,
+      "finalUrl": "https://commission.europa.eu/system/files/2023-05/ROMANIA%20NRP%202023%20RO.pdf"
+    },
+    {
+      "url": "https://www.afir.ro/comunicare/utile/dezbatere-publica/",
+      "routes": [
+        "/consultanta-afir",
+        "/fonduri-europene-agricultura",
+        "/fonduri-pentru-ferme",
+        "/fonduri-pentru-utilaje-agricole"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.afir.ro/comunicare/utile/dezbatere-publica/"
+    },
+    {
+      "url": "https://regionordest.ro/",
+      "routes": [
+        "/consultanta-fonduri-europene",
+        "/fonduri-europene-nord-est"
+      ],
+      "status": 200,
+      "finalUrl": "https://regionordest.ro/"
+    },
+    {
+      "url": "https://www.bidromania.eu/centru-media/comunicate-de-presa/investitiile-romanilor-din-diaspora-intra-linie-dreapta-guvernul",
+      "routes": [
+        "/diaspora-investeste-acasa"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.bidromania.eu/centru-media/comunicate-de-presa/investitiile-romanilor-din-diaspora-intra-linie-dreapta-guvernul"
+    },
+    {
+      "url": "https://www.afir.ro/api/file?url=%2Fmedia%2Fgk1nhmzi%2Fghidul-solicitantului-dr-14.pdf&filename=Ghidul%20Solicitantului%20DR%2014&filetype=pdf",
+      "routes": [
+        "/dr12-vs-dr14"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.afir.ro/api/file?url=%2Fmedia%2Fgk1nhmzi%2Fghidul-solicitantului-dr-14.pdf&filename=Ghidul%20Solicitantului%20DR%2014&filetype=pdf"
+    },
+    {
+      "url": "https://fonduri.mt.ro/documente/FIN_Ghid_e-Mobility-submasura1_%202026.zip",
+      "routes": [
+        "/e-mobility"
+      ],
+      "status": 200,
+      "finalUrl": "https://fonduri.mt.ro/documente/FIN_Ghid_e-Mobility-submasura1_%202026.zip"
+    },
+    {
+      "url": "https://legislatie.just.ro/Public/DetaliiDocument/313291",
+      "routes": [
+        "/e-mobility"
+      ],
+      "status": 200,
+      "finalUrl": "https://legislatie.just.ro/Public/DetaliiDocument/313291"
+    },
+    {
+      "url": "https://energie.gov.ro/wp-content/uploads/2026/08/Anunt-lansare-apel-proiecte-STOCARE-STAND-ALONE_final.pdf",
+      "routes": [
+        "/fondul-modernizare-pc1-stocare"
+      ],
+      "status": 200,
+      "finalUrl": "https://energie.gov.ro/wp-content/uploads/2026/08/Anunt-lansare-apel-proiecte-STOCARE-STAND-ALONE_final.pdf"
+    },
+    {
+      "url": "https://energie.gov.ro/wp-content/uploads/2026/10/Anunt-prelungire-apel-proiecte-STOCARE-STAND-ALONE.docx",
+      "routes": [
+        "/fondul-modernizare-pc1-stocare"
+      ],
+      "status": 200,
+      "finalUrl": "https://energie.gov.ro/wp-content/uploads/2026/10/Anunt-prelungire-apel-proiecte-STOCARE-STAND-ALONE.docx"
+    },
+    {
+      "url": "https://legislatie.just.ro/Public/DetaliiDocument/294449",
+      "routes": [
+        "/fondul-modernizare-pc1-stocare"
+      ],
+      "status": 200,
+      "finalUrl": "https://legislatie.just.ro/Public/DetaliiDocument/294449"
+    },
+    {
+      "url": "https://energie.gov.ro/wp-content/uploads/2026/09/Anunt-lansare-apel-proiecte-stocare_entitati-publice.pdf",
+      "routes": [
+        "/fondul-modernizare-pc1-stocare-entitati-publice"
+      ],
+      "status": 200,
+      "finalUrl": "https://energie.gov.ro/wp-content/uploads/2026/09/Anunt-lansare-apel-proiecte-stocare_entitati-publice.pdf"
+    },
+    {
+      "url": "https://www.afir.ro/media/yo1h41gu/ghidul-solicitantului_stocare_res_fm_publici.docx",
+      "routes": [
+        "/fondul-modernizare-pc1-stocare-entitati-publice"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.afir.ro/media/yo1h41gu/ghidul-solicitantului_stocare_res_fm_publici.docx"
+    },
+    {
+      "url": "https://legislatie.just.ro/Public/DetaliiDocument/309282",
+      "routes": [
+        "/fondul-modernizare-pc1-stocare-entitati-publice"
+      ],
+      "status": 200,
+      "finalUrl": "https://legislatie.just.ro/Public/DetaliiDocument/309282"
+    },
+    {
+      "url": "https://www.adrnordest.ro/regiunea-nord-est/organizare-administrativ-teritoriala/",
+      "routes": [
+        "/fonduri-europene-nord-est"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.adrnordest.ro/regiunea-nord-est/organizare-administrativ-teritoriala/"
+    },
+    {
+      "url": "https://legislatie.just.ro/Public/DetaliiDocumentAfis/185166",
+      "routes": [
+        "/proiectare-fonduri-europene"
+      ],
+      "status": 200,
+      "finalUrl": "https://legislatie.just.ro/Public/DetaliiDocumentAfis/185166"
+    },
+    {
+      "url": "https://mfe.gov.ro/pnrr/",
+      "routes": [
+        "/surse-oficiale-fonduri-europene"
+      ],
+      "status": 200,
+      "finalUrl": "https://mfe.gov.ro/pnrr/"
+    },
+    {
+      "url": "https://fonduri.mt.ro/transparenta/consultare-publica/fondul-pentru-modernizare/comunicat-fm-consultare-publica-ghidul-solicitantului-promovarea-infrastructurii-pentru-o-mobilitate-cu-emisii-zero-in-sprijinul-intreprinderilor-si-comunitatilor-e-move-ro",
+      "routes": [
+        "/surse-oficiale-fonduri-europene"
+      ],
+      "status": 200,
+      "finalUrl": "https://fonduri.mt.ro/transparenta/consultare-publica/fondul-pentru-modernizare/comunicat-fm-consultare-publica-ghidul-solicitantului-promovarea-infrastructurii-pentru-o-mobilitate-cu-emisii-zero-in-sprijinul-intreprinderilor-si-comunitatilor-e-move-ro"
+    },
+    {
+      "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj",
+      "routes": [
+        "/politica-de-confidentialitate",
+        "/termeni-si-conditii"
+      ],
+      "status": 202,
+      "finalUrl": "https://eur-lex.europa.eu/eli/reg/2016/679/oj"
+    },
+    {
+      "url": "https://www.onrc.ro/documente/anunturi/Corespondenta-CAEN-Rev.2-CAEN-Rev.3.pdf",
+      "routes": [
+        "/fonduri-europene-caen/5610-restaurante",
+        "/fonduri-europene-caen/6201-dezvoltare-software"
+      ],
+      "status": 404,
+      "finalUrl": "https://www.onrc.ro/documente/anunturi/Corespondenta-CAEN-Rev.2-CAEN-Rev.3.pdf",
+      "replacedBy": "https://www.onrc.ro/documente/caen/Monitorul_Oficial_385_CAEN_Rev.3.pdf",
+      "disposition": "404 direct; înlocuit cu clasificarea Rev. 3 publicată de ONRC, verificată HTTP 200"
+    },
+    {
+      "url": "https://www.onrc.ro/documente/caen/Monitorul_Oficial_385_CAEN_Rev.3.pdf",
+      "routes": [
+        "/fonduri-europene-caen/5610-restaurante",
+        "/fonduri-europene-caen/6201-dezvoltare-software"
+      ],
+      "status": 200,
+      "finalUrl": "https://www.onrc.ro/documente/caen/Monitorul_Oficial_385_CAEN_Rev.3.pdf"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "/consultanta-pnrr-digitalizare": {
+    "id": "schimbare-achizitie-pnrr",
+    "heading": "Ce verifici înainte de a modifica o achiziție PNRR",
+    "paragraphs": [
+      "Compară specificația aprobată, oferta de înlocuire, bugetul și indicatorul din proiect. Notează diferența de cost, efectul asupra funcției aprobate și termenul de recepție. Înainte să comanzi, verifică în contract și în instrucțiunile MIPE dacă schimbarea cere notificare sau aprobare și ce termen se aplică.",
+      "Exemplu ipotetic. Un furnizor nu mai livrează licența ERP prevăzută în proiect. Beneficiarul documentează indisponibilitatea, compară funcțiile și utilizatorii licenței alternative, verifică prețul și justifică menținerea indicatorului. Păstrează în dosar răspunsul autorității atunci când contractul îl cere, documentele achiziției și procesul-verbal de recepție."
+    ],
+    "links": [{"href": "/digitalizare-imm", "label": "Ordinul MIPE și documentele pentru proiecte contractate"}]
+  },
+  "/fonduri-europene-digitalizare": {
+    "id": "compara-apeluri-digitalizare",
+    "heading": "Trei situații, trei verificări diferite",
+    "rows": [
+      ["Investiție nouă în Regiunea Centru", "Verifică locul implementării și istoricul activității de la acel punct de lucru. Ghidul Apelului 2 și anexele stabilesc condițiile.", "/digitalizare-imm-regiunea-centru-apel-2"],
+      ["Proiect PNRR deja contractat", "Verifică dacă achiziția figurează în bugetul aprobat. Documentele de lucru sunt contractul și instrucțiunile MIPE pentru implementare.", "/digitalizare-imm"],
+      ["Produs TIC inovator", "Verifică sectorul solicitantului și rezultatul inovator destinat pieței. Ghidul PoCIDIF 2.1 și ordinele de modificare descriu apelul încheiat.", "/pocidif-21"]
+    ]
+  },
+  "/cum-alegi-consultant-fonduri-europene": {
+    "id": "comparatie-oferte-adr-centru",
+    "heading": "Cum compari două oferte pentru Apelul 2 ADR Centru",
+    "paragraphs": ["Exemplu ipotetic. O firmă compară o ofertă pentru redactarea cererii cu una care include și pregătirea anexelor. Înainte de semnare cere același răspuns scris de la ambii furnizori."],
+    "rows": [
+      ["Auditul de maturitate digitală", "Cine face auditul independent și cine predă raportul după modelul din Anexa 13?", "/digitalizare-imm-regiunea-centru-apel-2"],
+      ["Planul de digitalizare", "Cine completează Anexa 6 și corelează procesele, soluția și indicatorii?", "/digitalizare-imm-regiunea-centru-apel-2"],
+      ["Macheta financiară", "Cine întocmește Anexa 7 și verifică ofertele, eligibilitatea și valorile din cerere?", "/digitalizare-imm-regiunea-centru-apel-2"]
+    ]
+  },
+  "/fonduri-europene-caen/5610-restaurante": {
+    "id": "caen-rev3-restaurante",
+    "heading": "Codul CAEN pentru restaurante în Rev. 3",
+    "paragraphs": ["5610 este codul din CAEN Rev. 2. În Rev. 3, verifică activitatea efectivă. Restaurantele sunt încadrate la 5611, iar unitățile mobile de alimentație la 5612. Pentru finanțare, compară certificatul constatator și lista din anexa apelului cu versiunea CAEN cerută acolo."],
+    "links": [{"href": "https://www.onrc.ro/documente/caen/Monitorul_Oficial_385_CAEN_Rev.3.pdf", "label": "Clasificarea CAEN Rev. 3 publicată de ONRC"}]
+  },
+  "/fonduri-europene-caen/6201-dezvoltare-software": {
+    "id": "caen-rev3-software",
+    "heading": "Codul CAEN pentru software la comandă în Rev. 3",
+    "paragraphs": ["ONRC indică 6210 în Rev. 3 pentru activitatea de realizare a software-ului la comandă încadrată la 6201 în Rev. 2. Pentru finanțare, verifică activitatea autorizată, versiunea CAEN cerută în apel și lista de coduri eligibile."],
+    "links": [{"href": "https://www.onrc.ro/documente/caen/Monitorul_Oficial_385_CAEN_Rev.3.pdf", "label": "Clasificarea CAEN Rev. 3 publicată de ONRC"}]
+  }
+}

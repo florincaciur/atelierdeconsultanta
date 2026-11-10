@@ -301,7 +301,7 @@ function updateLegalPage(file, title, summary) {
   if (!$(".legal-review-note").length) {
     $(".content-wrapper").prepend(`
       <div class="highlight-box legal-review-note">
-        <p><strong>Revizuit la 26 mai 2026.</strong> Pagina este actualizată orientativ conform GDPR, legislației române aplicabile și practicilor de informare transparentă. Pentru situații juridice specifice, verificarea finală trebuie făcută cu un specialist autorizat.</p>
+        <p><strong>Revizuit la 26 mai 2026.</strong> Termenii descriu utilizarea site-ului și limitele informațiilor publicate. Pentru prelucrarea datelor personale, consultă politica de confidențialitate.</p>
         <p>Surse utile: <a href="https://eur-lex.europa.eu/eli/reg/2016/679/oj" target="_blank" rel="noopener noreferrer">Regulamentul (UE) 2016/679</a> și <a href="https://www.dataprotection.ro/" target="_blank" rel="noopener noreferrer">ANSPDCP</a>.</p>
       </div>`);
   }
