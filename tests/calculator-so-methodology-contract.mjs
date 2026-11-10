@@ -50,18 +50,23 @@ for (const example of config.examples) {
 }
 
 assert.equal($("[data-so-methodology]").length, 1, "metodologia trebuie să existe o singură dată");
-assert.equal($("[data-so-example]").length, 3, "sunt necesare trei exemple pas cu pas");
+assert.equal($("#exemple-calcul-so[open] [data-so-example]").length, 4, "cele patru exemple trebuie să fie vizibile fără script");
+assert.equal($("#coeficienti-soc-2020 [data-soc-code]").length, coefficientEntries.length, "tabelul HTML trebuie să expună întregul set implementat");
+for (const entry of coefficientEntries) {
+  const value = entry.coefficient.toLocaleString("ro-RO", { minimumFractionDigits: 2, maximumFractionDigits: 5 });
+  assert.equal($(`[data-soc-code="${entry.code}"] td`).last().text(), value);
+}
 assert.equal($("#calculator-errors[role='alert']").length, 1, "validarea are regiune de erori accesibilă");
 assert.equal($("[data-copy-so-result]").length, 1, "lipsește copierea rezultatului");
 assert.equal($("[data-print-so-result]").length, 1, "lipsește tipărirea rezultatului");
 assert.equal($("#so-result-explanation").length, 1, "lipsește explicația rezultatului");
 assert.equal($("#so-program-suggestion").length, 1, "lipsește sugestia prudentă de program");
 assert.equal($("main").children().eq(1).attr("id"), "calculator", "calculatorul trebuie să urmeze imediat după banner");
-assert.equal($(".so-page-disclosure").length, 4, "fragmentele metodologice lungi trebuie restrânse în disclosure-uri native");
+assert.equal($(".so-page-disclosure").length, 5, "fragmentele metodologice lungi trebuie restrânse în disclosure-uri native");
 assert.equal($("[data-so-card-carousel]").length, 2, "cele două secțiuni ample trebuie afișate ca carusele cu un singur card");
 assert.equal($("[data-so-collapsible-cards]").length, 1, "FAQ trebuie să afișeze primul card și să restrângă restul");
 assert.equal($("script[src^='/assets/calculator-so-methodology.js']").length, 1, "scriptul funcțional P1.20 trebuie încărcat exact o dată");
-assert($("[data-so-methodology]").text().includes("Formula de înmulțire și însumare existentă nu a fost schimbată"));
+assert($("[data-so-methodology]").text().includes(config.formula), "formula trebuie să fie vizibilă");
 assert($(".calc-result").text().includes(DISCLAIMER), "disclaimerul contractual trebuie să fie lângă rezultat");
 assert($("[data-so-methodology] a").filter((_, link) => $(link).attr("href") === config.source.pageUrl).length, "pagina AFIR trebuie citată vizibil");
 assert($("#calculator-input-help a").filter((_, link) => $(link).attr("href") === config.source.documentUrl).length, "documentul AFIR trebuie legat lângă inputuri");

@@ -7982,7 +7982,7 @@
       "schemaType": "CollectionPage",
       "category": "Resurse",
       "title": "Resurse descărcabile fonduri europene - PDF și Excel",
-      "description": "Resurse descărcabile pentru fonduri europene: checklisturi PDF și Excel pentru documente, buget, calendar, DR12, DR14 și digitalizare.",
+      "description": "Descarcă șabloanele Excel pentru bugetul de digitalizare și calendarul de pregătire. Vezi tabelele, formulele și exemplele de completare, plus checklisturi PDF.",
       "h1": "Resurse descărcabile pentru pregătirea dosarului",
       "quickAnswer": "Descarcă listele de documente în PDF și modelele Excel pentru bugetul de digitalizare și calendarul de pregătire. Adaptează fișierele la ghidul apelului și la actele solicitantului.",
       "programName": "Resurse descărcabile",
@@ -8001,10 +8001,10 @@
         "calendar"
       ],
       "mandatory": [
-        "download",
-        "lead magnet",
-        "newsletter",
-        "actualizare"
+        "actele solicitantului",
+        "ofertele furnizorilor",
+        "calendarul oficial",
+        "anexele apelului"
       ],
       "eligibleExpenses": [
         "PDF",

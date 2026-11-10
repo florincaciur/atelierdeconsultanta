@@ -1944,9 +1944,11 @@ function renderDownloads() {
     ["Calendar pregatire depunere", "/resurse/descarcari/calendar-pregatire-depunere.xlsx", "Excel"],
     ["Checklist DR12 DR14", "/resurse/descarcari/checklist-afir-dr12-dr14.pdf", "PDF"]
   ];
+  const previews = fs.readFileSync(path.join(ROOT, "templates", "resource-workbook-previews.fragment"), "utf8").trim();
   return `<div class="download-list">
     ${downloads.map(([title, href, type]) => `<a class="download-card" href="${href}" download><strong>${esc(title)}</strong><span>${esc(type)} descarcabil</span></a>`).join("\n")}
   </div>
+  ${previews}
   <div class="newsletter-box">
     <strong>Vrei actualizari cand se schimba ghidurile?</strong>
     <p>Trimite un mesaj prin pagina de contact si mentioneaza programul urmarit. Nu promitem aprobari, dar putem semnala ce documente trebuie revizuite.</p>

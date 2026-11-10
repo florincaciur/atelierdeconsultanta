@@ -1,0 +1,37 @@
+<section aria-labelledby="previzualizare-excel">
+  <h2 id="previzualizare-excel">Previzualizare a șabloanelor Excel</h2>
+  <p>Fișierele conțin rubrici de completat. Formulele de mai jos pot fi introduse în celule libere. Sumele și termenele din exemple sunt ipotetice.</p>
+
+  <h3 id="buget-digitalizare-excel">Buget pentru digitalizarea unui IMM</h3>
+  <p>În foaia <strong>Buget</strong>, descrie investiția în coloana B, introdu valoarea estimată fără TVA în EUR în coloana C și notează în coloana D oferta, procesul digitalizat și condiția de eligibilitate de verificat.</p>
+  <div class="table-wrap" role="region" aria-labelledby="buget-digitalizare-tabel" tabindex="0">
+    <table class="program-table">
+      <caption id="buget-digitalizare-tabel">Exemplu de completare a foii Buget</caption>
+      <thead><tr><th scope="col">Rând</th><th scope="col">Categorie</th><th scope="col">Descriere și justificare</th><th scope="col">Valoare fără TVA (EUR)</th></tr></thead>
+      <tbody>
+        <tr><td>2</td><th scope="row">Software</th><td>ERP pentru stocuri și comenzi</td><td>18.000</td></tr>
+        <tr><td>3</td><th scope="row">Hardware</th><td>Terminale pentru recepția mărfii</td><td>4.000</td></tr>
+        <tr><td>4</td><th scope="row">Securitate</th><td>Backup și test de restaurare</td><td>3.000</td></tr>
+        <tr><td>5</td><th scope="row">Implementare</th><td>Configurare, migrare și instruire</td><td>5.000</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>În C6, <code>=SUM(C2:C5)</code> adună cele patru valori. Calculul manual este 18.000 + 4.000 + 3.000 + 5.000 = <strong>30.000 EUR fără TVA</strong>. Sursa valorilor proprii este oferta fiecărui furnizor. Folosește ghidul apelului pentru încadrarea cheltuielilor și <a href="/cum-se-calculeaza-cofinantarea-fonduri-europene#calculator-cofinantare">calculatorul de cofinanțare</a> după ce ai separat TVA-ul și cheltuielile neeligibile.</p>
+  <p>Pentru documentele, auditul și indicatorii ceruți în Regiunea Centru, consultă <a href="/digitalizare-imm-regiunea-centru-apel-2">condițiile apelului de digitalizare ADR Centru</a>.</p>
+
+  <h3 id="calendar-pregatire-excel">Calendar intern de pregătire</h3>
+  <p>În foaia <strong>Calendar</strong>, notează responsabilul în coloana B, termenul intern ca dată Excel în coloana C, starea în coloana D și documentele rămase în coloana E.</p>
+  <div class="table-wrap" role="region" aria-labelledby="calendar-pregatire-tabel" tabindex="0">
+    <table class="program-table">
+      <caption id="calendar-pregatire-tabel">Exemplu de completare a foii Calendar</caption>
+      <thead><tr><th scope="col">Rând</th><th scope="col">Etapă</th><th scope="col">Responsabil</th><th scope="col">Termen intern</th><th scope="col">Stare</th></tr></thead>
+      <tbody>
+        <tr><td>2</td><th scope="row">Verificare eligibilitate</th><td>Administrator</td><td><time datetime="2026-11-12">12 nov. 2026</time></td><td>Finalizată</td></tr>
+        <tr><td>3</td><th scope="row">Documente firmă</th><td>Contabilitate</td><td><time datetime="2026-11-16">16 nov. 2026</time></td><td>În lucru</td></tr>
+        <tr><td>4</td><th scope="row">Oferte și buget</th><td>Responsabil IT</td><td><time datetime="2026-11-20">20 nov. 2026</time></td><td>Planificată</td></tr>
+        <tr><td>5</td><th scope="row">Cerere și anexe</th><td>Coordonator</td><td><time datetime="2026-11-26">26 nov. 2026</time></td><td>Planificată</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>În C6, <code>=C5-C2</code> afișează <strong>14 zile calendaristice</strong> între 12 și 26 noiembrie dacă celula rezultat este formatată ca număr. Verifică separat <a href="/calendar-fonduri-europene">termenele oficiale de depunere și documentele autorității</a> înainte să stabilești termenele interne.</p>
+</section>

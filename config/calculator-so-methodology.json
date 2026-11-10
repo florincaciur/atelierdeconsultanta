@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "route": "/calculator-soc",
   "file": "calculator-soc.html",
-  "reviewedAt": "2026-11-03",
-  "methodVersion": "FABER-SO-1.0",
+  "reviewedAt": "2026-11-10",
+  "methodVersion": "FABER-SO-1.1",
   "formulaVersion": "legacy-formula-preserved",
   "formula": "SO total = suma(coeficient SOC × numărul de unități oficiale introduse)",
   "rounding": "Produsele și suma sunt calculate cu zecimalele coeficienților; interfața afișează totalul rotunjit la cel mai apropiat euro prin Math.round.",
@@ -385,28 +385,24 @@
   ],
   "examples": [
     {
-      "title": "Exemplu fictiv 1 — cultură vegetală",
-      "steps": [
-        "2,5 ha grâu comun și spelt",
-        "2,5 × 777,94 EUR/ha",
-        "SO calculat: 1.944,85 EUR"
-      ],
+      "title": "Fermă vegetală cu grâu și porumb",
+      "assumption": "Exploatația declară 10 ha de grâu comun și spelt și 5 ha de porumb boabe, pe suprafețe distincte.",
       "items": [
         {
           "code": "C1110T",
-          "quantity": 2.5
+          "quantity": 10
+        },
+        {
+          "code": "C1500T",
+          "quantity": 5
         }
       ],
-      "exactTotal": 1944.85,
-      "displayTotal": 1945
+      "exactTotal": 12445.65,
+      "displayTotal": 12446
     },
     {
-      "title": "Exemplu fictiv 2 — exploatație zootehnică",
-      "steps": [
-        "8 vaci pentru lapte",
-        "8 × 1.412,53 EUR/cap",
-        "SO calculat: 11.300,24 EUR"
-      ],
+      "title": "Fermă de vaci pentru lapte",
+      "assumption": "Exploatația are 8 vaci pentru lapte înscrise în categoria SOC corespunzătoare.",
       "items": [
         {
           "code": "A2300F",
@@ -417,12 +413,8 @@
       "displayTotal": 11300
     },
     {
-      "title": "Exemplu fictiv 3 — exploatație mixtă",
-      "steps": [
-        "3 ha porumb boabe: 3 × 933,25 = 2.799,75 EUR",
-        "12 familii de albine: 12 × 72,20 = 866,40 EUR",
-        "SO total: 3.666,15 EUR; afișat: 3.666 EUR"
-      ],
+      "title": "Exploatație mixtă cu porumb și albine",
+      "assumption": "Exploatația are 3 ha de porumb boabe și 12 familii de albine.",
       "items": [
         {
           "code": "C1500T",
@@ -435,12 +427,23 @@
       ],
       "exactTotal": 3666.15,
       "displayTotal": 3666
+    },
+    {
+      "title": "Exploatație cu pui de carne",
+      "assumption": "Efectivul documentat de 150 de capete se împarte la 100. Cantitatea introdusă este 1,50 unități de 100 de capete.",
+      "items": [
+        {
+          "code": "A5140",
+          "quantity": 1.5
+        }
+      ],
+      "exactTotal": 749.685,
+      "displayTotal": 750
     }
   ],
   "pendingHumanValidation": [
     "Specialistul agricol confirmă pentru fiecare proiect codul SOC corect, unitatea și corespondența cu evidențele APIA/ANSVSA/ANZ.",
-    "Specialistul agricol și dezvoltatorul aprobă împreună orice schimbare viitoare a formulei sau a versiunii coeficienților.",
     "Versiunea finală a Cererii de finanțare și tabelul SOC al apelului ales prevalează asupra acestui instrument orientativ."
   ],
-  "methodUpdatedAt": "2026-07-22"
+  "methodUpdatedAt": "2026-11-10"
 }

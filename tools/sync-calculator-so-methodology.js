@@ -5,12 +5,13 @@ require("./fs-write-retry");
 
 const fs = require("fs");
 const path = require("path");
+const { synchronizePublicHtml } = require("./sync-analytics-events");
 
 const ROOT = path.resolve(__dirname, "..");
 const CONFIG_PATH = path.join(ROOT, "config", "calculator-so-methodology.json");
 const REPORT_PATH = path.join(ROOT, "reports", "p1-20-calculator-so-validari.md");
-const STYLE_HREF = "/assets/calculator-so-methodology.css?v=20260810-1";
-const SCRIPT_SRC = "/assets/calculator-so-methodology.js?v=20260810-1";
+const STYLE_HREF = "/assets/calculator-so-methodology.css?v=20261110-1";
+const SCRIPT_SRC = "/assets/calculator-so-methodology.js?v=20261110-1";
 const METHOD_START = "<!-- P1_20_SO_METHODOLOGY_START -->";
 const METHOD_END = "<!-- P1_20_SO_METHODOLOGY_END -->";
 const INPUT_START = "<!-- P1_20_SO_INPUT_HELP_START -->";
@@ -31,6 +32,12 @@ function displayDate(value) {
   const [year, month, day] = String(value).split("-");
   return `${day}.${month}.${year}`;
 }
+
+function number(value, minimumFractionDigits = 0) {
+  return value.toLocaleString("ro-RO", { minimumFractionDigits, maximumFractionDigits: 5 });
+}
+
+const units = { ha: "ha", cap: "cap", familie: "familie", "100_capete": "100 capete" };
 
 function replaceManaged(html, start, end, block, fallbackPattern, fallbackLabel) {
   const managed = new RegExp(`${start}[\\s\\S]*?${end}`, "u");
@@ -65,14 +72,18 @@ function validateConfig(config) {
   const index = coefficientIndex(config);
   for (const example of config.examples) {
     if (!Array.isArray(example.items) || !example.items.length) errors.push(`${example.title}: lipsesc elementele`);
-    for (const item of example.items || []) if (!index.has(item.code)) errors.push(`${example.title}: cod inexistent ${item.code}`);
+    if (!example.assumption) errors.push(`${example.title}: lipsesc ipotezele`);
+    for (const item of example.items || []) {
+      if (!index.has(item.code)) errors.push(`${example.title}: cod inexistent ${item.code}`);
+      if (!Number.isFinite(item.quantity) || item.quantity <= 0) errors.push(`${example.title}: cantitate invalidă`);
+    }
     if ((example.items || []).every((item) => index.has(item.code))) {
       const result = calculate(example.items, index);
       if (Math.abs(result.exact - example.exactTotal) > 0.000001) errors.push(`${example.title}: totalul exact diferă de formulă`);
       if (result.displayed !== example.displayTotal) errors.push(`${example.title}: totalul afișat diferă de Math.round`);
     }
   }
-  if (config.examples.length < 2 || config.examples.length > 3) errors.push("sunt necesare 2–3 exemple");
+  if (config.examples.length !== 4) errors.push("sunt necesare cele patru exemple de exploatație");
   if (errors.length) throw new Error(errors.join("\n"));
 }
 
@@ -82,7 +93,7 @@ function renderInputHelp(config) {
         <span class="so-source-notice__icon" aria-hidden="true">✓</span>
         <div>
           <p><strong>Coeficienți: ${escapeHtml(config.source.version)}</strong>; sursă controlată la <time datetime="${escapeHtml(config.reviewedAt)}">${escapeHtml(displayDate(config.reviewedAt))}</time>.</p>
-          <p>Introdu cantitatea în unitatea afișată pentru categorie. Pentru păsări, documentul AFIR exprimă coeficientul la 100 de capete. <a href="${escapeHtml(config.source.documentUrl)}" target="_blank" rel="noopener noreferrer">Consultă lista oficială completă AFIR</a>.</p>
+          <p>Introdu cantitatea în unitatea afișată pentru categorie. Pentru păsări, împarte efectivul la 100. De exemplu, pentru 150 de capete introdu 1,50. <a href="${escapeHtml(config.source.documentUrl)}" target="_blank" rel="noopener noreferrer">Consultă lista oficială completă AFIR</a>.</p>
         </div>
       </div>
       <div id="calculator-errors" class="so-calculator-errors" role="alert" aria-live="assertive"></div>
@@ -90,13 +101,32 @@ ${INPUT_END}`;
 }
 
 function renderExamples(config) {
+  const index = coefficientIndex(config);
   return config.examples.map((example) => `        <article class="so-example" data-so-example>
           <span class="so-example__label">Date fictive · coeficienți oficiali</span>
           <h3>${escapeHtml(example.title)}</h3>
+          <p>${escapeHtml(example.assumption)}</p>
           <ol>
-${example.steps.map((step) => `            <li>${escapeHtml(step)}</li>`).join("\n")}
+${example.items.map(({ code, quantity }) => {
+    const entry = index.get(code);
+    return `            <li>Pentru ${escapeHtml(entry.name)} (${escapeHtml(code)}), calculul este ${number(quantity)} × ${number(entry.coefficient, 2)} EUR/${units[entry.unit]} = ${number(quantity * entry.coefficient, 2)} EUR SO.</li>`;
+  }).join("\n")}
           </ol>
+          <p><strong>Totalul este ${number(example.exactTotal, 2)} EUR SO.</strong> Calculatorul afișează ${number(example.displayTotal)} EUR SO.</p>
         </article>`).join("\n");
+}
+
+function renderCoefficients(config) {
+  return config.coefficientGroups.map(group => `
+      <div class="so-coefficient-table" role="region" aria-labelledby="soc-${group.id}-caption" tabindex="0">
+        <table>
+          <caption id="soc-${group.id}-caption">${escapeHtml(group.title)}</caption>
+          <thead><tr><th scope="col">Categorie</th><th scope="col">Cod SOC</th><th scope="col">Unitate</th><th scope="col">Coeficient (EUR/unitate)</th></tr></thead>
+          <tbody>
+${group.entries.map(entry => `            <tr data-soc-code="${escapeHtml(entry.code)}"><th scope="row">${escapeHtml(entry.name)}</th><td>${escapeHtml(entry.code)}</td><td>${units[entry.unit]}</td><td>${number(entry.coefficient, 2)}</td></tr>`).join("\n")}
+          </tbody>
+        </table>
+      </div>`).join("\n");
 }
 
 function renderSources(config) {
@@ -124,7 +154,6 @@ function renderMethodology(config) {
         <h3>Formula, unitățile și rotunjirea</h3>
         <div class="so-formula">${escapeHtml(config.formula)}</div>
         <p>Unitatea este hectarul, capul, familia de albine sau grupul de 100 de capete, exact cum este indicat lângă categoria selectată. ${escapeHtml(config.rounding)}</p>
-        <p>Formula de înmulțire și însumare existentă nu a fost schimbată în această actualizare; a fost corectat setul de coeficienți și a fost documentată proveniența.</p>
       </article>
       <article class="so-methodology-card">
         <span class="so-method-version">Sursă verificată ${escapeHtml(displayDate(config.reviewedAt))}</span>
@@ -135,13 +164,21 @@ function renderMethodology(config) {
     </div>
 
     <div class="so-disclosures">
-    <details class="so-page-disclosure">
+    <details class="so-page-disclosure" id="exemple-calcul-so" open>
       <summary>Exemple de calcul cu date fictive <span aria-hidden="true"></span></summary>
       <div class="so-page-disclosure__body">
-      <p>Exemplele demonstrează formula și rotunjirea interfeței. Datele despre exploatații sunt fictive; coeficienții provin din lista oficială indicată.</p>
+      <p>Exemplele presupun că suprafețele și efectivele pot fi dovedite pentru categoriile indicate. Valorile provin din <a href="${escapeHtml(config.source.documentUrl)}">lista AFIR SOC 2020, noiembrie 2024</a>. Compară totalul cu cerințele din <a href="/dr12-afir">DR-12</a> sau <a href="/dr14">DR-14</a> după verificarea profilului fermei.</p>
       <div class="so-example-grid">
 ${renderExamples(config)}
       </div></div>
+    </details>
+
+    <details class="so-page-disclosure" id="coeficienti-soc-2020">
+      <summary>Coeficienții SOC 2020 folosiți de calculator <span aria-hidden="true"></span></summary>
+      <div class="so-page-disclosure__body">
+        <p>Tabelul arată cele 46 de categorii din calculator. Pentru restul categoriilor consultă <a href="${escapeHtml(config.source.documentUrl)}">lista completă AFIR</a>.</p>
+${renderCoefficients(config)}
+      </div>
     </details>
 
     <details class="so-page-disclosure">
@@ -199,8 +236,7 @@ ${renderSources(config)}
     <div class="so-review-card so-review-card--approved">
       <h3>Autor și revizie</h3>
       <p><strong>Autor:</strong> FABER – Atelier de Consultanță, autor organizațional.</p>
-      <p><strong>Verificarea sursei:</strong> lista oficială AFIR a fost controlată la <time datetime="${escapeHtml(config.reviewedAt)}">${escapeHtml(displayDate(config.reviewedAt))}</time>. Coeficienții și formula se păstrează dacă documentul oficial este neschimbat.</p>
-      <p><strong>Changelog ${escapeHtml(displayDate(config.methodUpdatedAt || config.reviewedAt))}:</strong> setul legacy fără proveniență a fost înlocuit cu categoriile SOC 2020 din lista AFIR noiembrie 2024; formula a rămas neschimbată; rezultatul oferă numai o sugestie prudentă de program, care necesită verificarea documentelor.</p>
+      <p>Lista AFIR a fost verificată la <time datetime="${escapeHtml(config.reviewedAt)}">${escapeHtml(displayDate(config.reviewedAt))}</time>. Exemplele, tabelul coeficienților și validarea cantităților au fost actualizate la <time datetime="${escapeHtml(config.methodUpdatedAt)}">${escapeHtml(displayDate(config.methodUpdatedAt))}</time>.</p>
     </div>
     <aside class="so-review-card" aria-labelledby="so-validari-umane">
       <h3 id="so-validari-umane">Validări care rămân obligatorii pentru un dosar</h3>
@@ -233,6 +269,7 @@ function renderCalculatorScript(config) {
   // P1.20 — Formula existentă este păstrată; setul de date provine din lista AFIR SOC 2020.
   const soDatabase = ${renderDatabase(config).trimStart()};
   let hasTrackedCalculation = false;
+  const quantityStep = unit => unit === 'ha' ? 'any' : unit === '100_capete' ? '0.01' : '1';
 
   function addCulturaRow(type) {
     const tbody = document.getElementById(type + '-body');
@@ -259,7 +296,7 @@ function renderCalculatorScript(config) {
         </select>
       </td>
       <td><input type="number" readonly tabindex="-1" value="\${defaultEntry.coefficient}" class="so-input" aria-label="Coeficient SOC oficial pentru \${typeLabel}"></td>
-      <td><input type="number" value="1" min="0" max="1000000" step="\${defaultEntry.unit === 'ha' ? '0.01' : '1'}" class="area-input" aria-label="Cantitate în \${defaultEntry.unitLabel} pentru \${typeLabel}" aria-describedby="calculator-input-help calculator-errors"></td>
+      <td><input type="number" value="1" min="0" max="1000000" step="\${quantityStep(defaultEntry.unit)}" class="area-input" aria-label="Cantitate în \${defaultEntry.unitLabel} pentru \${typeLabel}" aria-describedby="calculator-input-help calculator-errors"></td>
       <td class="so-val" aria-label="SO calculat pentru rând">0</td>
       <td><button type="button" class="calc-remove" onclick="removeRow('\${rowId}')" aria-label="Șterge rândul din \${typeLabel}">✕ Șterge</button></td>
     \`;
@@ -269,7 +306,7 @@ function renderCalculatorScript(config) {
     select.addEventListener('change', function () {
       const entry = soDatabase[type][this.value];
       row.querySelector('.so-input').value = entry.coefficient;
-      quantity.step = entry.unit === 'ha' ? '0.01' : '1';
+      quantity.step = quantityStep(entry.unit);
       quantity.setAttribute('aria-label', 'Cantitate în ' + entry.unitLabel + ' pentru ' + typeLabel);
       updateCalculation();
     });
@@ -287,6 +324,18 @@ function renderCalculatorScript(config) {
   }
 
   function updateCalculation() {
+    const total = document.getElementById('total-so');
+    if ([...document.querySelectorAll('#calculator .area-input')].some(input => !input.validity.valid)) {
+      total.textContent = '—';
+      delete total.dataset.soValue;
+      delete total.dataset.soExactValue;
+      document.querySelectorAll('#calculator .so-val').forEach(cell => { cell.textContent = '—'; });
+      const statusBadges = document.getElementById('status-badges');
+      statusBadges.dataset.statusKey = 'invalid';
+      statusBadges.textContent = 'Corectează cantitățile pentru a calcula totalul.';
+      document.getElementById('so-program-suggestion').textContent = '';
+      return;
+    }
     let totalSo = 0;
     document.querySelectorAll('#calculator tbody tr').forEach(row => {
       const soInput = row.querySelector('.so-input');
@@ -304,9 +353,9 @@ function renderCalculatorScript(config) {
       }
     });
     const roundedTotal = Math.round(totalSo);
-    document.getElementById('total-so').textContent = roundedTotal.toLocaleString('ro-RO');
-    document.getElementById('total-so').dataset.soValue = String(roundedTotal);
-    document.getElementById('total-so').dataset.soExactValue = String(totalSo);
+    total.textContent = roundedTotal.toLocaleString('ro-RO');
+    total.dataset.soValue = String(roundedTotal);
+    total.dataset.soExactValue = String(totalSo);
     updateStatusBadges(totalSo);
     if (totalSo > 0 && !hasTrackedCalculation && window.FaberAnalytics) {
       hasTrackedCalculation = true;
@@ -461,7 +510,7 @@ function synchronize(html, config) {
   next = next.replace(calculatorPattern, "");
   next = next.replace(/<\/header>\s*/u, `</header>\n${calculatorBlock.trim()}\n`);
 
-  return next;
+  return synchronizePublicHtml(next, config.file);
 }
 
 function main() {

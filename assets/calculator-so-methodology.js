@@ -17,29 +17,22 @@
     if (feedback) feedback.textContent = message;
   }
 
-  function sanitizeInput(input) {
-    if (!input || !input.classList.contains("area-input")) return true;
-    var value = Number(input.value);
-    var valid = input.value === "" || (Number.isFinite(value) && value >= 0 && value <= MAX_TECHNICAL_QUANTITY);
-    input.setAttribute("aria-invalid", valid ? "false" : "true");
-    if (!valid) {
-      input.value = value < 0 || !Number.isFinite(value) ? "0" : String(MAX_TECHNICAL_QUANTITY);
-    }
-    return valid;
-  }
-
   function validateAll() {
     var invalidCount = 0;
     document.querySelectorAll("#calculator .area-input").forEach(function (input) {
-      if (!sanitizeInput(input)) invalidCount += 1;
       input.max = String(MAX_TECHNICAL_QUANTITY);
       input.setAttribute("aria-describedby", "calculator-input-help calculator-errors");
+      input.setAttribute("aria-invalid", String(!input.validity.valid));
+      if (!input.validity.valid) invalidCount += 1;
     });
     if (errorRegion) {
       errorRegion.textContent = invalidCount
-        ? "O valoare a fost corectată. Folosește numai numere între 0 și 1.000.000; aceasta este o limită tehnică, nu un prag de eligibilitate."
+        ? "Verifică rândurile marcate. Introdu cantități între 0 și 1.000.000, capete și familii întregi sau până la două zecimale pentru unitățile de 100 de capete."
         : "";
     }
+    document.querySelectorAll("[data-copy-so-result], [data-print-so-result]").forEach(function (button) {
+      button.disabled = invalidCount > 0;
+    });
     return invalidCount === 0;
   }
 
@@ -54,6 +47,10 @@
 
   function updateExplanation() {
     if (!explanation) return;
+    if (errorRegion?.textContent) {
+      explanation.textContent = "";
+      return;
+    }
     var items = rows().map(function (row) {
       var meta = selectedMetadata(row);
       var quantity = Number(row.querySelector(".area-input")?.value || 0);
@@ -171,11 +168,6 @@
     details.append(summary, panel);
     root.appendChild(details);
   }
-
-  document.addEventListener("input", function (event) {
-    if (!event.target.classList?.contains("area-input")) return;
-    sanitizeInput(event.target);
-  }, true);
 
   document.addEventListener("click", function (event) {
     if (event.target.closest("[data-copy-so-result]")) copySummary();

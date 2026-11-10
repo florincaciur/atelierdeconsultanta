@@ -289,14 +289,20 @@
       "reviewerRole": "Revizuire metodologică, tehnică și de conformitate",
       "attributionType": "organization",
       "personalNameConsent": false,
-      "verifiedAt": "2026-11-03",
+      "verifiedAt": "2026-11-10",
       "officialSourceName": "AFIR — Lista detaliată a coeficienților standard output",
       "officialSourceUrl": "https://www.afir.ro/info-la-zi/lista-detaliata-coeficienti-standard-output-soc-2020/",
       "sourceVersion": "SOC 2020 — lista AFIR noiembrie 2024",
       "nextReviewAt": "2027-01-02",
-      "lastMeaningfulUpdate": "2026-07-22",
+      "lastMeaningfulUpdate": "2026-11-10",
       "statusSnapshot": null,
       "changelog": [
+        {
+          "date": "2026-11-10",
+          "summary": "Publicate în HTML cele 46 de categorii SOC 2020 și patru calcule reproductibile. Verificată conversia efectivului de păsări și validarea cantităților. Documentul AFIR are același SHA-256.",
+          "reviewer": "Echipa editorială și tehnică FABER",
+          "meaningful": true
+        },
         {
           "date": "2026-11-03",
           "summary": "Reverificată lista AFIR SOC 2020: documentul oficial are același SHA-256; coeficienții și formula rămân neschimbate.",

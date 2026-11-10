@@ -38,6 +38,33 @@
   margin-top: 0.55rem;
 }
 
+.so-coefficient-table {
+  margin-block: 1rem;
+  overflow-x: auto;
+}
+
+.so-coefficient-table:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+.so-coefficient-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.so-coefficient-table caption {
+  text-align: start;
+  font-weight: 700;
+  margin-block-end: 0.5rem;
+}
+
+.so-coefficient-table :is(th, td) {
+  padding: 0.5rem;
+  text-align: start;
+  border-bottom: 1px solid var(--border, #cbd5e1);
+}
+
 .so-methodology-grid,
 .so-example-grid,
 .so-limit-grid {

@@ -47,7 +47,8 @@
         ["Ghid, § 3.8.2 · RCR 12", "https://www.regiocentru.ro/wp-content/uploads/2026/04/Ghidul-solicitantului-%E2%80%93-Actiunea-2.2-%E2%80%93-Apel-2.pdf#page=17"],
         ["Ghid, § 5.3.2 · cheltuieli și audit", "https://www.regiocentru.ro/wp-content/uploads/2026/04/Ghidul-solicitantului-%E2%80%93-Actiunea-2.2-%E2%80%93-Apel-2.pdf#page=39"],
         ["Ghid, § 5.4–5.5 · valoare și contribuție", "https://www.regiocentru.ro/wp-content/uploads/2026/04/Ghidul-solicitantului-%E2%80%93-Actiunea-2.2-%E2%80%93-Apel-2.pdf#page=46"],
-        ["ADR Centru · Anexele 6, 7 și 13", "https://www.regiocentru.ro/actiuni/2-2-intreprinderi-digitale-pentru-o-economie-avansata-apel-2/"]
+        ["ADR Centru · Anexele 6, 7 și 13", "https://www.regiocentru.ro/actiuni/2-2-intreprinderi-digitale-pentru-o-economie-avansata-apel-2/"],
+        ["Model orientativ Excel pentru bugetul de digitalizare", "/resurse#buget-digitalizare-excel"]
       ]
     },
     {
@@ -55,6 +56,9 @@
       "example": true,
       "title": "Cât trebuie să contribuie firma?",
       "intro": "Contribuția proprie este de cel puțin 10% din valoarea eligibilă. Firma acoperă separat toate costurile neeligibile.",
+      "references": [
+        ["Simulează contribuția cu plafonul efectiv și TVA-ul documentat", "/cum-se-calculeaza-cofinantarea-fonduri-europene#calculator-cofinantare"]
+      ],
       "rows": [
         ["Proiect eligibil de 100.000 EUR", "La intensitatea maximă, grantul ar fi 90.000 EUR și contribuția proprie 10.000 EUR, dacă întreprinderea unică mai are cel puțin 90.000 EUR disponibili în plafonul de minimis."],
         ["Plafon disponibil de 70.000 EUR", "Pentru același buget eligibil, un plafon de minimis disponibil de 70.000 EUR reduce ajutorul posibil la acea sumă. Firma trebuie să acopere cel puțin 30.000 EUR din cheltuielile eligibile, plus eventualele costuri neeligibile."]

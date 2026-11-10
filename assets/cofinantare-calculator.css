@@ -1,0 +1,63 @@
+.cofinantare-form {
+  margin-block: 1.25rem;
+}
+
+.cofinantare-form fieldset {
+  min-inline-size: 0;
+  border: 1px solid var(--border, #cbd5e1);
+  border-radius: var(--radius-lg, 1rem);
+  padding: clamp(1rem, 3vw, 1.5rem);
+}
+
+.cofinantare-form legend {
+  font-weight: 700;
+}
+
+.cofinantare-fields {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+  gap: 0.9rem;
+  margin-block-end: 1.25rem;
+}
+
+.cofinantare-fields label {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  gap: 0.3rem;
+}
+
+.cofinantare-fields input {
+  box-sizing: border-box;
+  min-width: 0;
+  min-height: 44px;
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid var(--border, #64748b);
+  border-radius: 0.4rem;
+  font: inherit;
+  color: var(--text, #182237);
+  background: var(--surface, #fff);
+}
+
+.cofinantare-form :focus-visible,
+.post-body .table-wrap:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+#cofinantare-rezultate:not([hidden]) {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.5rem 1rem;
+  margin: 0;
+}
+
+#cofinantare-rezultate dd {
+  margin: 0;
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+}
+
+.post-body .table-wrap {
+  overflow-x: auto;
+}
