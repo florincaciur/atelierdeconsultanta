@@ -2872,10 +2872,10 @@
       "status": "ghid_aprobat_nedeschis",
       "canonicalStatus": "SCHEDULED",
       "statusScope": "program_call",
-      "statusRationale": "ADR Centru a publicat ghidul și intervalul oficial de depunere în MySMIS. La 9 noiembrie 2026, fereastra de depunere este viitoare.",
+      "statusRationale": "ADR Centru a publicat ghidul și intervalul de depunere. Deschiderea depunerilor se verifică în MySMIS la începutul sesiunii.",
       "statusLabel": "Depuneri programate între 2 decembrie 2026 și 2 februarie 2027",
       "publicationState": "public",
-      "verifiedAt": "2026-11-09",
+      "verifiedAt": "2026-11-10",
       "sourceName": "ADR Centru",
       "sourceUrl": "https://www.regiocentru.ro/actiuni/2-2-intreprinderi-digitale-pentru-o-economie-avansata-apel-2/",
       "sourceVersion": "Ghidul solicitantului și anexele publicate la 30 octombrie 2026, cod PRC/1059/PRC_P2/OP1/RSO1.2/PRC_A32",
@@ -2883,6 +2883,9 @@
       "sourceType": "official",
       "applicationStart": "2026-12-02",
       "applicationEnd": "2027-02-02",
+      "applicationStartAt": "2026-12-02T12:00:00+02:00",
+      "applicationEndAt": "2027-02-02T12:00:00+02:00",
+      "applicationCode": "PRC/1059/PRC_P2/OP1/RSO1.2/PRC_A32",
       "grantSummary": {
         "minimum": {
           "amount": 15000,
@@ -2909,15 +2912,15 @@
         "ownContribution": "Minimum 10% din cheltuielile eligibile, plus cheltuielile neeligibile."
       },
       "pageUrl": "/digitalizare-imm-regiunea-centru-apel-2",
-      "lastMeaningfulUpdate": "2026-11-09",
+      "lastMeaningfulUpdate": "2026-11-10",
       "evergreenValue": true,
       "archivedNoindexDecision": null,
       "indexable": true,
-      "cardSummary": "Granturi de 15.000–200.000 EUR pentru IMM-uri din Regiunea Centru. Depunerile se deschid pe 2 decembrie 2026.",
-      "quickAnswer": "Microîntreprinderile și firmele mici sau mijlocii pot solicita între 15.000 și 200.000 EUR pentru digitalizarea activităților existente în Alba, Brașov, Covasna, Harghita, Mureș sau Sibiu, în mediul urban ori rural. Grantul acoperă cel mult 90% din cheltuielile eligibile, în limita ajutorului de minimis disponibil. Depunerile în MySMIS încep pe 2 decembrie 2026 la ora 12:00 și se închid pe 2 februarie 2027 la ora 12:00. Codul apelului este PRC/1059/PRC_P2/OP1/RSO1.2/PRC_A32.",
+      "cardSummary": "Granturi de 15.000–200.000 EUR pentru digitalizarea proceselor existente ale IMM-urilor din Regiunea Centru.",
+      "quickAnswer": "Microîntreprinderile și firmele mici sau mijlocii pot solicita între 15.000 și 200.000 EUR pentru digitalizarea activităților existente în Alba, Brașov, Covasna, Harghita, Mureș sau Sibiu, în mediul urban ori rural. Grantul acoperă cel mult 90% din cheltuielile eligibile, în limita ajutorului de minimis disponibil.",
       "metaTitle": "Digitalizare IMM în Regiunea Centru – Apel 2 | FABER",
       "metaDescription": "Apelul 2 ADR Centru oferă 15.000–200.000 € pentru digitalizarea IMM-urilor. Depuneri 2 decembrie 2026–2 februarie 2027. Verifică eligibilitatea și documentele.",
-      "editorialDisclaimer": "Ghidul este publicat. Cererile se transmit în MySMIS începând cu 2 decembrie 2026, ora 12:00.",
+      "editorialDisclaimer": "Cererile se transmit exclusiv prin MySMIS, în intervalul publicat de ADR Centru.",
       "eligibleApplicants": [
         "Microîntreprinderi, întreprinderi mici și mijlocii constituite potrivit Legii nr. 31/1990 sau Legii cooperației nr. 1/2005, cu investiții în Regiunea Centru."
       ],
@@ -2967,7 +2970,7 @@
           "corrigenda": [],
           "clarifications": []
         },
-        "notes": "Intervalul MySMIS este confirmat prin ghid și comunicatul oficial de lansare."
+        "notes": "Ghidul și comunicatul ADR Centru confirmă intervalul programat. Disponibilitatea depunerii în MySMIS se verifică la deschiderea sesiunii."
       },
       "presentation": {
         "carousel": true,

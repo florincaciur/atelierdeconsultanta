@@ -2365,14 +2365,20 @@
       "reviewerRole": "Revizuire editorială și conformitate",
       "attributionType": "organization",
       "personalNameConsent": false,
-      "verifiedAt": "2026-11-09",
+      "verifiedAt": "2026-11-10",
       "officialSourceName": "ADR Centru",
       "officialSourceUrl": "https://www.regiocentru.ro/actiuni/2-2-intreprinderi-digitale-pentru-o-economie-avansata-apel-2/",
       "sourceVersion": "Ghidul solicitantului și anexele publicate la 30 octombrie 2026, cod PRC/1059/PRC_P2/OP1/RSO1.2/PRC_A32",
       "nextReviewAt": "2026-12-02",
-      "lastMeaningfulUpdate": "2026-11-09",
+      "lastMeaningfulUpdate": "2026-11-10",
       "statusSnapshot": "ghid_aprobat_nedeschis",
       "changelog": [
+        {
+          "date": "2026-11-10",
+          "summary": "Reverificare a ghidului, anexelor și termenelor. Exemplu ERP cu buget, audit și indicator de rezultat.",
+          "reviewer": "Echipa editorială FABER",
+          "meaningful": true
+        },
         {
           "date": "2026-11-09",
           "summary": "Prezentarea ghidului, calendarului, condițiilor de eligibilitate, cheltuielilor și criteriilor de selecție pentru Apelul 2.",

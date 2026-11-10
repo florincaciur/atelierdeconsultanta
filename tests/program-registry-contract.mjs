@@ -23,6 +23,7 @@ const {
 } = require("../tools/program-factual-governance");
 const { registrySurfaceErrors } = require("../tools/validate-program-registry");
 const { incentiveStatusForProgram } = require("../tools/schema-helpers");
+const { syncCalendar } = require("../tools/sync-program-factual-governance");
 const { latestVerifiedProgram } = require("../tools/sync-homepage-hero");
 const { fileForRoute } = require("../tools/structured-data-utils");
 
@@ -114,6 +115,16 @@ for (const banner of banners) {
     },
     `${program.slug}: contradicție în carusel`
   );
+}
+
+const centru = byId.get("digitalizare-imm-regiunea-centru-apel-2");
+const calendarHtml = fs.readFileSync(path.join(ROOT, "calendar-fonduri-europene", "index.html"), "utf8");
+const calendar = cheerio.load(calendarHtml);
+const centruBanner = banners.find((banner) => banner.programId === centru.id);
+assert.equal(syncCalendar(calendarHtml, programs), calendarHtml, "Calendarul ADR Centru trebuie generat din registru");
+for (const field of ["applicationStartAt", "applicationEndAt"]) {
+  assert.equal(centruBanner[field], centru[field], `${field}: caruselul trebuie să păstreze ora din registru`);
+  assert.equal(calendar(`time[datetime="${centru[field]}"]`).length, 1, `${field}: calendarul trebuie să afișeze ora din registru`);
 }
 
 for (const program of publicPrograms) {

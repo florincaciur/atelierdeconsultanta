@@ -254,6 +254,18 @@
         "applicationEnd": {
           "$ref": "#/$defs/dateOrPending"
         },
+        "applicationStartAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "applicationEndAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "applicationCode": {
+          "type": "string",
+          "minLength": 1
+        },
         "consultationStart": {
           "$ref": "#/$defs/dateOrPending",
           "description": "Începutul consultării, separat de sesiunea de depunere."

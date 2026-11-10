@@ -10,6 +10,7 @@ import { handleRequest, validateContactPayload } from "../cloudflare/domain-seo-
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const CONTACT_FILE = path.join(ROOT, "contact", "index.html");
+const CENTRU_ROUTE = "/digitalizare-imm-regiunea-centru-apel-2";
 const NOW = Date.parse("2026-07-21T12:00:00.000Z");
 
 function basePayload(overrides = {}) {
@@ -222,6 +223,7 @@ function contentType(filePath) {
 
 async function resolveStatic(pathname) {
   if (pathname === "/contact") return CONTACT_FILE;
+  if (pathname === CENTRU_ROUTE) return path.join(ROOT, CENTRU_ROUTE.slice(1), "index.html");
   const clean = decodeURIComponent(pathname).replace(/^\/+/, "");
   const candidate = path.join(ROOT, clean);
   try {
@@ -333,6 +335,32 @@ async function verifyBrowserFlow() {
     ]);
     await aliasReferrer.waitForFunction(() => document.querySelector("#contact-triage-form")?.classList.contains("contact-triage--enhanced"));
     assert.equal(await aliasReferrer.inputValue("#contact-program"), "dr12-afir", "program aliases must prefill from same-origin referrer");
+
+    const centru = await browser.newPage();
+    await centru.route(/^https?:\/\/(?!127\.0\.0\.1)/u, (route) => route.abort());
+    await centru.addInitScript(() => {
+      document.addEventListener("faber:analytics-event", ({ detail }) => {
+        if (detail.name === "cta_click") sessionStorage.setItem("test-program-click", JSON.stringify(detail.payload));
+      });
+    });
+    const centruCtaIds = new Set();
+    for (const selector of [".program-hero__actions .program-button--primary", ".program-final-cta .program-button--primary"]) {
+      await centru.goto(baseUrl + CENTRU_ROUTE + "?utm_source=chatgpt.com&utm_medium=referral", { waitUntil: "load" });
+      await centru.locator(selector).click();
+      await centru.waitForURL(url => url.pathname === "/contact");
+      await centru.waitForFunction(() => document.querySelector("#contact-triage-form")?.classList.contains("contact-triage--enhanced"));
+      const click = await centru.evaluate(() => JSON.parse(sessionStorage.getItem("test-program-click")));
+      assert.equal(click.page_path, CENTRU_ROUTE);
+      assert.equal(click.program_slug, CENTRU_ROUTE.slice(1));
+      assert.equal(click.program_family, "digitalizare");
+      assert.ok(click.cta_id);
+      centruCtaIds.add(click.cta_id);
+      assert.equal(await centru.inputValue("#contact-program"), CENTRU_ROUTE.slice(1));
+      assert.equal(await centru.inputValue('[name="source_page"]'), CENTRU_ROUTE);
+      assert.equal(await centru.inputValue('[name="source_channel"]'), "chatgpt");
+    }
+    assert.equal(centruCtaIds.size, 2, "Hero and final CTA clicks must be distinguishable");
+    await centru.close();
 
     const noJs = await browser.newContext({ javaScriptEnabled: false });
     const noJsPage = await noJs.newPage();

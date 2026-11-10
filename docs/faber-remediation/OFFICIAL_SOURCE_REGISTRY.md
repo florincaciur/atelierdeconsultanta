@@ -41,7 +41,7 @@ Snapshot factual de bază al programelor: **2026-08-23**. Fiecare înregistrare 
 | `fondul-modernizare-pc1-stocare` | Ministerul Energiei | `OPEN` | 2026-11-04 | 2026-11-04 |
 | `programul-tranzitie-justa` | Ministerul Investițiilor și Proiectelor Europene – MySMIS2021 | `UNCONFIRMED` | 2026-09-10 | 2026-11-03 |
 | `fondul-de-modernizare` | Ministerul Investițiilor și Proiectelor Europene – MySMIS2021 | `UNCONFIRMED` | 2026-09-10 | 2026-11-03 |
-| `digitalizare-imm-regiunea-centru-apel-2` | ADR Centru | `SCHEDULED` | 2026-11-09 | 2026-11-09 |
+| `digitalizare-imm-regiunea-centru-apel-2` | ADR Centru | `SCHEDULED` | 2026-11-10 | 2026-11-10 |
 | `sme-eco-tech` | Instituția Prefectului – Județul Vrancea | `OPEN` | 2026-11-09 | 2026-11-09 |
 
 ## `program-regional-nord-est` — Programul Regional Nord-Est 2021–2027
@@ -1306,7 +1306,7 @@ Snapshot factual de bază al programelor: **2026-08-23**. Fiecare înregistrare 
 | Sesiune | [Comunicat ADR Centru și calendarul MySMIS](https://www.regiocentru.ro/lansarea-celui-de-al-doilea-apel-de-finantare-pentru-digitalizarea-imm-urilor/) (`registry:adr-centru-digitalizare-apel-2-sesiune`, verificat 2026-11-09) |
 | Data deschiderii | 02.12.2026 |
 | Deadline | 02.02.2027 |
-| Prelungiri | Documentația oficială publicată și verificată la 09.11.2026 nu stabilește încă această informație. |
+| Prelungiri | Documentația oficială publicată și verificată la 10.11.2026 nu stabilește încă această informație. |
 | Buget | 14.113.032 EUR |
 | Grant minim | 15.000 EUR / proiect |
 | Grant maxim | 200.000 EUR / proiect |
@@ -1314,31 +1314,31 @@ Snapshot factual de bază al programelor: **2026-08-23**. Fiecare înregistrare 
 | Cofinanțare | Minimum 10% din cheltuielile eligibile, plus cheltuielile neeligibile. |
 | Beneficiari | Microîntreprinderi, întreprinderi mici și mijlocii cu proiecte de digitalizare a activităților existente în Regiunea Centru. |
 | Regiune | regional |
-| CAEN | Documentația oficială publicată și verificată la 09.11.2026 nu stabilește încă această informație. |
-| Prag SO | Documentația oficială publicată și verificată la 09.11.2026 nu stabilește încă această informație. |
-| Investiții | Documentația oficială publicată și verificată la 09.11.2026 nu stabilește încă această informație. |
-| Cheltuieli eligibile | Documentația oficială publicată și verificată la 09.11.2026 nu stabilește încă această informație. |
-| Cheltuieli neeligibile | Documentația oficială publicată și verificată la 09.11.2026 nu stabilește încă această informație. |
+| CAEN | Documentația oficială publicată și verificată la 10.11.2026 nu stabilește încă această informație. |
+| Prag SO | Documentația oficială publicată și verificată la 10.11.2026 nu stabilește încă această informație. |
+| Investiții | Documentația oficială publicată și verificată la 10.11.2026 nu stabilește încă această informație. |
+| Cheltuieli eligibile | Documentația oficială publicată și verificată la 10.11.2026 nu stabilește încă această informație. |
+| Cheltuieli neeligibile | Documentația oficială publicată și verificată la 10.11.2026 nu stabilește încă această informație. |
 | Condiții critice | Investiția se realizează în Alba, Brașov, Covasna, Harghita, Mureș sau Sibiu, în mediul urban ori rural.; Firma are cel puțin un an fiscal integral de activitate și profit net sau din exploatare pozitiv în anul fiscal anterior depunerii.; Se verifică salariații, codurile CAEN autorizate, veniturile din activitățile vizate și domeniile excluse din Anexa 3.; Sunt obligatorii activele necorporale eligibile, auditul inițial de maturitate digitală, planul de digitalizare și macheta financiară.; Plafonul de minimis este de 300.000 EUR pe întreprindere unică în orice perioadă de trei ani. Consultanța este plafonată la 5% din cheltuielile activității de bază.; Pragul de calitate este de 50 de puncte. Contractarea în prima tranșă aplică pragul de 85 de puncte și limita bugetului. |
 | Documente | [Pagina apelului și documentele publicate de ADR Centru](https://www.regiocentru.ro/actiuni/2-2-intreprinderi-digitale-pentru-o-economie-avansata-apel-2/)<br>[Schema de ajutor de minimis, Dispoziția nr. 488/27.10.2026](https://www.regiocentru.ro/schema-de-ajutor-de-minimis-aferenta-investitiilor-din-cadrul-actiunii-2-2-intreprinderi-digitale-pentru-o-economie-avansata-apel-2/)<br>[Comunicat ADR Centru și calendarul MySMIS](https://www.regiocentru.ro/lansarea-celui-de-al-doilea-apel-de-finantare-pentru-digitalizarea-imm-urilor/) |
-| Indicatori | Documentația oficială publicată și verificată la 09.11.2026 nu stabilește încă această informație. |
-| Selecție / punctaj | Documentația oficială publicată și verificată la 09.11.2026 nu stabilește încă această informație. |
-| Ajutor de stat / de minimis | Documentația oficială publicată și verificată la 09.11.2026 nu stabilește încă această informație. |
-| Implementare | Documentația oficială publicată și verificată la 09.11.2026 nu stabilește încă această informație. |
-| Monitorizare | Documentația oficială publicată și verificată la 09.11.2026 nu stabilește încă această informație. |
+| Indicatori | Documentația oficială publicată și verificată la 10.11.2026 nu stabilește încă această informație. |
+| Selecție / punctaj | Documentația oficială publicată și verificată la 10.11.2026 nu stabilește încă această informație. |
+| Ajutor de stat / de minimis | Documentația oficială publicată și verificată la 10.11.2026 nu stabilește încă această informație. |
+| Implementare | Documentația oficială publicată și verificată la 10.11.2026 nu stabilește încă această informație. |
+| Monitorizare | Documentația oficială publicată și verificată la 10.11.2026 nu stabilește încă această informație. |
 | Surse oficiale | [Pagina apelului și documentele publicate de ADR Centru](https://www.regiocentru.ro/actiuni/2-2-intreprinderi-digitale-pentru-o-economie-avansata-apel-2/)<br>[Schema de ajutor de minimis, Dispoziția nr. 488/27.10.2026](https://www.regiocentru.ro/schema-de-ajutor-de-minimis-aferenta-investitiilor-din-cadrul-actiunii-2-2-intreprinderi-digitale-pentru-o-economie-avansata-apel-2/)<br>[Comunicat ADR Centru și calendarul MySMIS](https://www.regiocentru.ro/lansarea-celui-de-al-doilea-apel-de-finantare-pentru-digitalizarea-imm-urilor/) |
 | Latest official update | 2026-10-30 — [Ghidul solicitantului și anexele publicate la 30 octombrie 2026, cod PRC/1059/PRC_P2/OP1/RSO1.2/PRC_A32](https://www.regiocentru.ro/actiuni/2-2-intreprinderi-digitale-pentru-o-economie-avansata-apel-2/) |
-| verifiedAt | 2026-11-09 |
-| Pagină oficială program/apel | [Pagina apelului și documentele publicate de ADR Centru](https://www.regiocentru.ro/actiuni/2-2-intreprinderi-digitale-pentru-o-economie-avansata-apel-2/) (`program`, verificat 2026-11-09) |
-| Ghid | [Ghidul solicitantului în format PDF](https://www.regiocentru.ro/actiuni/2-2-intreprinderi-digitale-pentru-o-economie-avansata-apel-2/) (`guide:digitalizare-imm-regiunea-centru-apel-2`, verificat 2026-11-09) |
-| Anexe | [Anexele apelului, inclusiv lista CAEN și grila ETF](https://www.regiocentru.ro/actiuni/2-2-intreprinderi-digitale-pentru-o-economie-avansata-apel-2/) (`program`, verificat 2026-11-09) |
+| verifiedAt | 2026-11-10 |
+| Pagină oficială program/apel | [Pagina apelului și documentele publicate de ADR Centru](https://www.regiocentru.ro/actiuni/2-2-intreprinderi-digitale-pentru-o-economie-avansata-apel-2/) (`program`, verificat 2026-11-10) |
+| Ghid | [Ghidul solicitantului în format PDF](https://www.regiocentru.ro/actiuni/2-2-intreprinderi-digitale-pentru-o-economie-avansata-apel-2/) (`guide:digitalizare-imm-regiunea-centru-apel-2`, verificat 2026-11-10) |
+| Anexe | [Anexele apelului, inclusiv lista CAEN și grila ETF](https://www.regiocentru.ro/actiuni/2-2-intreprinderi-digitale-pentru-o-economie-avansata-apel-2/) (`program`, verificat 2026-11-10) |
 | Schemă / ordin | [Schema de ajutor de minimis, Dispoziția nr. 488/27.10.2026](https://www.regiocentru.ro/schema-de-ajutor-de-minimis-aferenta-investitiilor-din-cadrul-actiunii-2-2-intreprinderi-digitale-pentru-o-economie-avansata-apel-2/) (`registry:adr-centru-digitalizare-apel-2-minimis`, verificat 2026-11-09) |
 | Anunț sesiune | [Comunicat ADR Centru și calendarul MySMIS](https://www.regiocentru.ro/lansarea-celui-de-al-doilea-apel-de-finantare-pentru-digitalizarea-imm-urilor/) (`registry:adr-centru-digitalizare-apel-2-sesiune`, verificat 2026-11-09) |
-| Corrigenda / erate | — Neidentificat separat în sursele oficiale înregistrate la 2026-11-09; nu se presupune inexistența documentului. |
-| Clarificări | — Neidentificat separat în sursele oficiale înregistrate la 2026-11-09; nu se presupune inexistența documentului. |
-| Sursă primară în registry-ul operațional | [Ghidul solicitantului și anexele publicate la 30 octombrie 2026, cod PRC/1059/PRC_P2/OP1/RSO1.2/PRC_A32](https://www.regiocentru.ro/actiuni/2-2-intreprinderi-digitale-pentru-o-economie-avansata-apel-2/) (verificat 2026-11-09) |
+| Corrigenda / erate | — Neidentificat separat în sursele oficiale înregistrate la 2026-11-10; nu se presupune inexistența documentului. |
+| Clarificări | — Neidentificat separat în sursele oficiale înregistrate la 2026-11-10; nu se presupune inexistența documentului. |
+| Sursă primară în registry-ul operațional | [Ghidul solicitantului și anexele publicate la 30 octombrie 2026, cod PRC/1059/PRC_P2/OP1/RSO1.2/PRC_A32](https://www.regiocentru.ro/actiuni/2-2-intreprinderi-digitale-pentru-o-economie-avansata-apel-2/) (verificat 2026-11-10) |
 | Chei surse repo | `digitalizare-imm-regiunea-centru-apel-2` |
-| Notes | Intervalul MySMIS este confirmat prin ghid și comunicatul oficial de lansare. |
+| Notes | Ghidul și comunicatul ADR Centru confirmă intervalul programat. Disponibilitatea depunerii în MySMIS se verifică la deschiderea sesiunii. |
 
 ## `sme-eco-tech` — Programul pentru consolidarea IMM-urilor prin acces îmbunătățit la finanțare – SME Eco-Tech
 

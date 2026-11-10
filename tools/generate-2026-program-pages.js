@@ -8,6 +8,7 @@ const { synchronizeFaqHtml } = require("./faq-governance");
 const { synchronize: synchronizeCanonicalContact } = require("./sync-canonical-contact");
 const { loadLegalIdentity } = require("./legal-identity-governance");
 const { renderFooterContact } = require("./canonical-contact");
+const { applicationWindowText } = require("./program-factual-governance");
 
 const ROOT = path.resolve(__dirname, "..");
 const SITE = "https://atelierdeconsultanta.ro";
@@ -937,7 +938,18 @@ function renderContextualExplanation(explanation) {
 
 function renderPage(program, content) {
   const canonical = `${SITE}${program.pageUrl}`;
-  const faqSchema = content.faqs.map(([name, text]) => ({ "@type": "Question", name, acceptedAnswer: { "@type": "Answer", text } }));
+  const metrics = [...content.metrics];
+  const faqs = [...content.faqs];
+  if (program.applicationCode) {
+    const window = applicationWindowText(program);
+    metrics.push([window, "interval de depunere în MySMIS"]);
+    faqs.unshift([
+      `Când se depun cererile pentru ${program.shortName}?`,
+      `Cererile se transmit prin MySMIS în intervalul publicat de ADR Centru, ${window}. Codul apelului este ${program.applicationCode}.`
+    ]);
+  }
+  const contactHref = `/contact#program_slug=${encodeURIComponent(program.slug)}&source_page=${encodeURIComponent(program.pageUrl)}`;
+  const faqSchema = faqs.map(([name, text]) => ({ "@type": "Question", name, acceptedAnswer: { "@type": "Answer", text } }));
   const schema = { "@context": "https://schema.org", "@graph": [
     { "@type": "WebPage", "@id": `${canonical}#webpage`, url: canonical, name: program.metaTitle, description: program.metaDescription, inLanguage: "ro-RO", dateModified: program.lastMeaningfulUpdate, isPartOf: { "@id": `${SITE}/#website` } },
     { "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: "Acasă", item: `${SITE}/` }, { "@type": "ListItem", position: 2, name: "Fonduri europene", item: `${SITE}/fonduri-europene` }, { "@type": "ListItem", position: 3, name: program.shortName, item: canonical }] },
@@ -960,10 +972,10 @@ ${HEADER}
       <nav class="program-breadcrumbs" aria-label="Breadcrumb"><a href="/">Acasă</a><span>/</span><a href="/fonduri-europene">Programe</a><span>/</span><span aria-current="page">${e(program.shortName)}</span></nav>
       <p class="program-eyebrow">${e(content.eyebrow)}</p><h1 id="program-title">${e(content.h1 || program.name)}</h1><p class="program-lead">${e(content.lead)}</p>
       <div class="program-status" data-program-status="${e(program.status)}"><span aria-hidden="true"></span>${e(program.statusLabel)}</div>
-      <div class="program-hero__actions"><a class="program-button program-button--primary" href="/contact#program_slug=${e(program.slug)}">Verifică proiectul</a><a class="program-button" href="#raspuns-rapid">Vezi condițiile</a></div>
+      <div class="program-hero__actions"><a class="program-button program-button--primary" href="${e(contactHref)}" data-analytics-program-family="${e(program.family)}">Verifică proiectul</a><a class="program-button" href="#raspuns-rapid">Vezi condițiile</a></div>
     </div><div class="program-hero__visual">${renderSvg(program.slug)}</div>
   </section>
-  <section class="program-metrics" aria-label="Repere de finanțare">${content.metrics.map(([value, label]) => `<div><strong>${e(value)}</strong><span>${e(label)}</span></div>`).join("")}</section>
+  <section class="program-metrics" aria-label="Repere de finanțare">${metrics.map(([value, label]) => `<div><strong>${e(value)}</strong><span>${e(label)}</span></div>`).join("")}</section>
   ${content.notice ? `<aside class="edrive-notice" aria-labelledby="edrive-consultare"><p class="section-kicker">Statut verificat la ${e(program.verifiedAt)}</p><h2 id="edrive-consultare">${e(content.notice.title)}</h2><p>${e(content.notice.text)}</p><a href="${e(content.notice.url)}" target="_blank" rel="noopener noreferrer">Consultă anunțul MTI</a></aside>` : ''}
   ${renderMeasureNavigation(content)}
   <section class="program-section program-section--answer" id="raspuns-rapid"><div><p class="section-kicker">${content.answerHeading ? "Pe scurt" : "Răspuns rapid"}</p><h2>${e(content.answerHeading || "Ce finanțează și în ce stadiu este?")}</h2></div><div class="answer-card"><p>${e(content.answer)}</p><small>Statut verificat la <time datetime="${program.verifiedAt}">${program.verifiedAt}</time>. ${e(program.editorialDisclaimer)}</small></div></section>
@@ -972,14 +984,14 @@ ${HEADER}
   ${renderMeasures(content)}
   ${renderApplicationCalendar(content.calendar, content.notice)}
   ${renderContextualExplanation(content.contextualExplanation)}
-  ${(content.sections || []).map(section => `<section class="program-section program-section--soft"${section.id ? ` id="${e(section.id)}"` : ""}><div class="section-heading">${section.id ? "" : '<p class="section-kicker">Date oficiale</p>'}<h2>${e(section.title)}</h2><p>${e(section.intro)}</p></div><div class="program-card-grid"${section.example ? " data-factual-example" : ""}>${renderCards(section.rows)}</div></section>`).join("\n")}
+  ${(content.sections || []).map(section => `<section class="program-section program-section--soft"${section.id ? ` id="${e(section.id)}"` : ""}><div class="section-heading">${section.id ? "" : '<p class="section-kicker">Date oficiale</p>'}<h2>${e(section.title)}</h2><p>${e(section.intro)}</p>${section.references?.length ? `<ul>${section.references.map(([label, href]) => `<li><a href="${e(href)}">${e(label)}</a></li>`).join("")}</ul>` : ""}</div><div class="program-card-grid"${section.example ? " data-factual-example" : ""}>${renderCards(section.rows)}</div></section>`).join("\n")}
   <section class="program-section program-section--fit"><div class="section-heading"><p class="section-kicker">Filtru inițial</p><h2>Merită continuată analiza?</h2><p>Compară profilul proiectului cu aceste criterii înainte de a investi în documentație. Concluzia finală se bazează pe actele solicitantului și pe forma oficială aplicabilă.</p></div><div class="program-fit-grid"><article class="fit-card fit-card--yes"><h3>Profil care merită verificat</h3>${renderList(content.fit)}</article><article class="fit-card fit-card--caution"><h3>Condiții care cer clarificare</h3>${renderList(content.caution)}</article></div></section>
   <section class="program-section program-section--soft"><div class="section-heading">${content.investmentsHeading ? "" : `<p class="section-kicker">${content.measures ? "Obligații comune" : "Arhitectura proiectului"}</p>`}<h2>${e(content.investmentsHeading || (content.measures ? 'Implementarea și menținerea investiției' : 'Ce intră în analiza investiției'))}</h2></div><div class="program-card-grid">${renderCards(content.investments)}</div></section>
   <section class="program-section program-section--documents" id="documente"><div class="section-heading"><p class="section-kicker">Documente necesare</p><h2>${content.measures ? 'Documente și verificări comune' : 'Documente de pregătit'}</h2><p>Verifică valabilitatea actelor și concordanța lor cu cererea de finanțare.</p></div><div class="program-details">${renderDetails(content.documents)}</div></section>
   <section class="program-section program-section--journey" id="calendar" data-program-journey-section><div class="section-heading"><p class="section-kicker">Parcurs recomandat</p><h2>De la idee la decizia de depunere</h2><p>Explorează etapele și verifică progresiv deciziile care susțin o depunere bine fundamentată.</p></div><div class="program-journey" data-program-journey style="--journey-progress:0"><svg class="program-journey__rail" data-journey-svg viewBox="0 0 100 100" preserveAspectRatio="xMinYMin meet" aria-hidden="true" focusable="false"><path class="program-journey__track" data-journey-track d="M 10 14 L 10 82" pathLength="1"></path><path class="program-journey__progress" data-journey-progress d="M 10 14 L 10 82" pathLength="1"></path></svg><ol class="program-steps">${content.steps.map((step, index) => `<li><button class="program-step" type="button" data-journey-step${index === 0 ? ` aria-current="step"` : ""} style="--step-index:${index}"><span class="program-step__number" aria-hidden="true">${index + 1}</span><span class="program-step__copy">${e(step)}</span></button></li>`).join("")}</ol><p class="program-journey__hint">Selectează un pas sau folosește tastele săgeată pentru a urmări traseul.</p></div></section>
   <section class="program-section program-section--source" id="surse-oficiale"><div><h2>Documente și surse oficiale</h2>${content.sourceIntro ? `<p>${e(content.sourceIntro)}</p>` : ""}</div><div class="source-card"><a href="${e(program.sourceUrl)}" target="_blank" rel="noopener noreferrer"><strong>${e(program.sourceName)}</strong><span>${e(program.sourceVersion)}</span></a>${content.extraSources.map(([label, url]) => `<a href="${e(url)}" target="_blank" rel="noopener noreferrer"><strong>${e(label)}</strong></a>`).join("")}<p>Ultima verificare: <time datetime="${program.verifiedAt}">${program.verifiedAt}</time>.</p></div></section>
-  <section class="program-section program-section--faq"><div class="section-heading"><p class="section-kicker">Întrebări frecvente</p><h2>Clarificări înainte de pregătire</h2></div><div class="program-details">${renderDetails(content.faqs)}</div></section>
-  <section class="program-final-cta"><div><p class="section-kicker">Analiza proiectului</p><h2>Solicită verificarea eligibilității</h2><p>Trimite datele solicitantului, investiția, amplasamentul și bugetul pentru identificarea condițiilor aplicabile.</p></div><a class="program-button program-button--primary" href="/contact#program_slug=${e(program.slug)}&source_page=${encodeURIComponent(program.pageUrl)}">Începe verificarea</a></section>
+  <section class="program-section program-section--faq"><div class="section-heading"><p class="section-kicker">Întrebări frecvente</p><h2>Clarificări înainte de pregătire</h2></div><div class="program-details">${renderDetails(faqs)}</div></section>
+  <section class="program-final-cta"><div><p class="section-kicker">Analiza proiectului</p><h2>Solicită verificarea eligibilității</h2><p>Trimite datele solicitantului, investiția, amplasamentul și bugetul pentru identificarea condițiilor aplicabile.</p></div><a class="program-button program-button--primary" href="${e(contactHref)}" data-analytics-program-family="${e(program.family)}">Începe verificarea</a></section>
 </main>
 <footer class="program-footer">© 2026 FABER – Atelier de Consultanță · <a href="/fonduri-europene">Toate programele</a> · <a href="/contact">Contact</a> · <a href="/politica-de-confidentialitate">Confidențialitate</a></footer>
 <script src="/assets/program-showcase-2026.js?v=20260829-2" defer></script>

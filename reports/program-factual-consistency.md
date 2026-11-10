@@ -1,6 +1,6 @@
 # Audit de consistență factuală a programelor
 
-Data auditului: 2026-11-09
+Data auditului: 2026-11-10
 
 ## Rezultat
 
@@ -42,7 +42,7 @@ Auditul este local și determinist. Nu interoghează URL-urile oficiale, nu dedu
 | PC1 Stocare stand-alone | apel_deschis | 2026-11-04 | 2026-09-01 | 2026-11-15 |
 | Programul Tranziție Justă | calendar_estimativ | 2026-11-03 | — | — |
 | Fondul pentru Modernizare | calendar_estimativ | 2026-11-03 | — | — |
-| Digitalizare IMM Regiunea Centru – Apel 2 | ghid_aprobat_nedeschis | 2026-11-09 | 2026-12-02 | 2027-02-02 |
+| Digitalizare IMM Regiunea Centru – Apel 2 | ghid_aprobat_nedeschis | 2026-11-10 | 2026-12-02 | 2027-02-02 |
 | SME Eco-Tech | apel_deschis | 2026-11-09 | 2026-05-26 | 2026-12-30 |
 
 ## Verificări efectuate

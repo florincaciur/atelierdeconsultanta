@@ -6,9 +6,11 @@ const path = require("path");
 const cheerio = require("cheerio");
 const {
   ROOT,
+  applicationWindowMarkup,
   archivedRobotsDecision,
   carouselPrograms,
   cofinancingSummaryText,
+  formatMoneyValue,
   fundingSummary,
   isPublicProgram,
   loadProgramConfig,
@@ -29,6 +31,7 @@ const FILES = Object.freeze({
   snippets: path.join(ROOT, "config", "seo-snippets.json"),
   header: path.join(ROOT, "partials", "global-header.html"),
   homepage: path.join(ROOT, "index.html"),
+  calendar: path.join(ROOT, "calendar-fonduri-europene", "index.html"),
   llms: path.join(ROOT, "llms.txt")
 });
 
@@ -126,6 +129,8 @@ function syncBanners(banners, programs) {
         sourceVersion: program.sourceVersion,
         applicationStart: program.applicationStart,
         applicationEnd: program.applicationEnd,
+        ...(program.applicationStartAt ? { applicationStartAt: program.applicationStartAt } : {}),
+        ...(program.applicationEndAt ? { applicationEndAt: program.applicationEndAt } : {}),
         grantSummary: program.grantSummary,
         cofinancingSummary: program.cofinancingSummary,
         fundingSummary: fundingSummary(program) || null,
@@ -608,6 +613,19 @@ function textUpdate(file, transform) {
   return { file, before, after: transform(before) };
 }
 
+function syncCalendar(source, programs) {
+  const program = programForRoute("/digitalizare-imm-regiunea-centru-apel-2", programs);
+  const marker = /<!-- CENTRU_APPLICATION_START -->[\s\S]*?<!-- CENTRU_APPLICATION_END -->/;
+  if (!marker.test(source)) throw new Error("Lipsește blocul calendarului pentru apelul ADR Centru.");
+  const grant = program?.grantSummary;
+  const block = isPublicProgram(program) ? `<!-- CENTRU_APPLICATION_START -->
+      <h2><a href="${escapeHtml(program.pageUrl)}">${escapeHtml(program.shortName)}</a></h2>
+      <p>Intervalul publicat pentru depunere în MySMIS este ${applicationWindowMarkup(program)}. Codul apelului este ${escapeHtml(program.applicationCode).replaceAll("/", "/<wbr>")}.</p>
+      ${grant?.minimum && grant?.maximum ? `<p>Grantul pe proiect este între ${escapeHtml(formatMoneyValue({ ...grant.minimum, unit: "" }))} și ${escapeHtml(formatMoneyValue({ ...grant.maximum, unit: "" }))}.</p>` : ""}
+      <!-- CENTRU_APPLICATION_END -->` : "<!-- CENTRU_APPLICATION_START --><!-- CENTRU_APPLICATION_END -->";
+  return source.replace(marker, block.replace(/\r?\n/g, source.includes("\r\n") ? "\r\n" : "\n"));
+}
+
 function main() {
   const check = process.argv.includes("--check");
   const { config, programs } = loadProgramConfig();
@@ -622,6 +640,7 @@ function main() {
     // registry. Nu le reserializăm aici, deoarece cele două ownership-uri ar
     // produce outputs concurente pentru aceleași componente.
     textUpdate(FILES.llms, (value) => syncLlmsText(value, programs)),
+    textUpdate(FILES.calendar, (value) => syncCalendar(value, programs)),
     ...pendingSurfaceUpdates(programs, approvalConfig),
     ...programHtmlUpdates(programs, approvalConfig)
   ].filter(Boolean);
@@ -642,6 +661,7 @@ module.exports = {
   FILES,
   renderHomepageSlide,
   syncBanners,
+  syncCalendar,
   syncGuides,
   syncHeaderText,
   syncHomepageText,

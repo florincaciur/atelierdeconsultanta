@@ -15,12 +15,14 @@
     "active": true,
     "programStatus": "ghid_aprobat_nedeschis",
     "statusLabel": "Depuneri programate între 2 decembrie 2026 și 2 februarie 2027",
-    "verifiedAt": "2026-11-09",
+    "verifiedAt": "2026-11-10",
     "sourceName": "ADR Centru",
     "sourceUrl": "https://www.regiocentru.ro/actiuni/2-2-intreprinderi-digitale-pentru-o-economie-avansata-apel-2/",
     "sourceVersion": "Ghidul solicitantului și anexele publicate la 30 octombrie 2026, cod PRC/1059/PRC_P2/OP1/RSO1.2/PRC_A32",
     "applicationStart": "2026-12-02",
     "applicationEnd": "2027-02-02",
+    "applicationStartAt": "2026-12-02T12:00:00+02:00",
+    "applicationEndAt": "2027-02-02T12:00:00+02:00",
     "grantSummary": {
       "minimum": {
         "amount": 15000,

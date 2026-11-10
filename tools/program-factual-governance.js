@@ -171,6 +171,11 @@ function validateProgram(program, index = -1) {
   if (normalizeRoute(program.pageUrl) !== program.pageUrl) errors.push(`${location}: pageUrl nu este canonic (${program.pageUrl})`);
   for (const field of ["applicationStart", "applicationEnd"]) {
     if (!isIsoDate(program[field]) && !isPending(program[field])) errors.push(`${location}: ${field} trebuie să fie dată ISO, null sau ${HUMAN_REVIEW}`);
+    const precise = program[field + "At"];
+    if (precise != null && (!/^\d{4}-\d{2}-\d{2}T(?:[01]\d|2[0-3]):[0-5]\d:[0-5]\d[+-]\d{2}:\d{2}$/.test(precise)
+        || precise.slice(0, 10) !== program[field] || !Number.isFinite(Date.parse(precise)))) {
+      errors.push(`${location}: ${field}At trebuie să indice aceeași zi, cu oră și fus orar ISO.`);
+    }
   }
   if (!isIsoDate(program.lastMeaningfulUpdate) && !isPending(program.lastMeaningfulUpdate)) {
     errors.push(`${location}: lastMeaningfulUpdate trebuie să fie dată ISO, null sau ${HUMAN_REVIEW}`);
@@ -455,13 +460,30 @@ function contributionAnswerText(program) {
   return cofinancingSummaryText(program) || "Contribuția proprie se stabilește potrivit ghidului apelului și cheltuielilor proiectului.";
 }
 
+function applicationDateText(program, field) {
+  const date = formatDateRo(program[field]);
+  const precise = program[field + "At"];
+  return precise ? `${date}, ora ${precise.slice(11, 16)}` : date;
+}
+
 function applicationWindowText(program) {
   if (program?.applicationStart && program?.applicationEnd) {
-    return `${formatDateRo(program.applicationStart)} – ${formatDateRo(program.applicationEnd)}`;
+    return `${applicationDateText(program, "applicationStart")} – ${applicationDateText(program, "applicationEnd")}`;
   }
-  if (program?.applicationStart) return `Începere: ${formatDateRo(program.applicationStart)}; termenul final nu este publicat.`;
-  if (program?.applicationEnd) return `Termen: ${formatDateRo(program.applicationEnd)}`;
+  if (program?.applicationStart) return `Începere: ${applicationDateText(program, "applicationStart")}. Termenul final nu este publicat.`;
+  if (program?.applicationEnd) return `Termen: ${applicationDateText(program, "applicationEnd")}`;
   return "Calendarul depunerii nu este anunțat pentru o sesiune nouă.";
+}
+
+function applicationWindowMarkup(program) {
+  const dates = ["applicationStart", "applicationEnd"].filter((field) => program[field]);
+  if (!dates.length) return escapeHtml(applicationWindowText(program));
+  const markup = dates.map((field) =>
+    `<time datetime="${escapeHtml(program[field + "At"] || program[field])}">${escapeHtml(applicationDateText(program, field))}</time>`
+  ).join(" – ");
+  return program.applicationStart && !program.applicationEnd
+    ? `${markup}. Termenul final nu este publicat.`
+    : markup;
 }
 
 function grantSummaryText(program) {
@@ -559,14 +581,7 @@ function renderProgramFactualStatus(program, options = {}) {
   }
   const grant = grantAnswerText(program);
   const contribution = contributionAnswerText(program);
-  const application = applicationWindowText(program);
-  const applicationMarkup = program.applicationStart && program.applicationEnd
-    ? `<time datetime="${escapeHtml(program.applicationStart)}">${escapeHtml(formatDateRo(program.applicationStart))}</time> – <time datetime="${escapeHtml(program.applicationEnd)}">${escapeHtml(formatDateRo(program.applicationEnd))}</time>`
-    : program.applicationStart
-      ? `<time datetime="${escapeHtml(program.applicationStart)}">${escapeHtml(formatDateRo(program.applicationStart))}</time>; termenul final nu este publicat.`
-      : program.applicationEnd
-        ? `<time datetime="${escapeHtml(program.applicationEnd)}">${escapeHtml(formatDateRo(program.applicationEnd))}</time>`
-        : escapeHtml(application);
+  const applicationMarkup = applicationWindowMarkup(program);
   const meaningful = isIsoDate(program.lastMeaningfulUpdate, { nullable: false })
     ? ` Ultima actualizare relevantă: <time datetime="${escapeHtml(program.lastMeaningfulUpdate)}">${escapeHtml(program.lastMeaningfulUpdate)}</time>.`
     : "";
@@ -633,6 +648,7 @@ module.exports = {
   SOURCE_STATUSES,
   archivedRobotsDecision,
   applicantSummaryText,
+  applicationWindowMarkup,
   applicationWindowText,
   catalogPrograms,
   carouselPrograms,

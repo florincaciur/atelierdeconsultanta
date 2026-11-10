@@ -5,17 +5,17 @@
   "metrics": [
     ["15.000–200.000 €", "grant pe proiect"],
     ["Maximum 90%", "din cheltuielile eligibile, în limita de minimis"],
-    ["14.113.032 €", "bugetul apelului"],
-    ["2 dec. 2026 – 2 feb. 2027", "depunere în MySMIS, de la ora 12:00 până la ora 12:00"]
+    ["14.113.032 €", "bugetul apelului"]
   ],
   "answerHeading": "Cine poate obține finanțare pentru digitalizare în Regiunea Centru?",
-  "answer": "Microîntreprinderile și firmele mici sau mijlocii pot solicita între 15.000 și 200.000 EUR pentru digitalizarea activităților existente în Alba, Brașov, Covasna, Harghita, Mureș sau Sibiu, în mediul urban ori rural. Grantul acoperă cel mult 90% din cheltuielile eligibile, în limita ajutorului de minimis disponibil. Depunerile în MySMIS încep pe 2 decembrie 2026 la ora 12:00 și se închid pe 2 februarie 2027 la ora 12:00. Codul apelului este PRC/1059/PRC_P2/OP1/RSO1.2/PRC_A32.",
+  "answer": "Microîntreprinderile și firmele mici sau mijlocii pot solicita între 15.000 și 200.000 EUR pentru digitalizarea activităților existente în Alba, Brașov, Covasna, Harghita, Mureș sau Sibiu, în mediul urban ori rural. Grantul acoperă cel mult 90% din cheltuielile eligibile, în limita ajutorului de minimis disponibil.",
   "fit": [
     "Sunt eligibile societățile constituite potrivit Legii nr. 31/1990 sau Legii cooperației nr. 1/2005 care se încadrează ca IMM după luarea în calcul a întreprinderilor partenere și legate.",
     "Firma trebuie să aibă cel puțin un an fiscal integral de activitate, fără suspendare în anul depunerii sau în anul fiscal anterior, și profit net ori din exploatare pozitiv în anul fiscal anterior. Pentru cereri depuse în 2026, ghidul indică înființare cel târziu la 3 ianuarie 2025 și profit la 31 decembrie 2025.",
     "Firma trebuie să fi avut minimum un salariat în medie în anul fiscal anterior sau să aibă minimum un salariat cu normă întreagă, pe durată nedeterminată, la depunere și la contractare, conform ghidului.",
     "Codurile CAEN vizate trebuie să fie autorizate la locul investiției la depunere. Activitatea trebuie să aibă istoric de cel puțin un an fiscal la acel punct de lucru și să fi generat venituri în anul depunerii și în anul anterior. Dacă proiectul acoperă mai multe puncte de lucru, condițiile se dovedesc separat pentru fiecare.",
-    "Firma trebuie să aibă drept de folosință asupra spațiului încă de la depunere, de exemplu prin proprietate, închiriere sau comodat. La semnarea contractului de finanțare, locul investiției trebuie să figureze ca sediu sau punct de lucru în certificatul ORC. Se depune o singură cerere per solicitant."
+    "Firma trebuie să aibă drept de folosință asupra spațiului încă de la depunere, de exemplu prin proprietate, închiriere sau comodat. La semnarea contractului de finanțare, locul investiției trebuie să figureze ca sediu sau punct de lucru în certificatul ORC. Se depune o singură cerere per solicitant.",
+    "Verifică și situațiile de excludere din secțiunea 5.1.1, inclusiv întreprinderea în dificultate, insolvența și ordinele de recuperare a ajutoarelor. Folosește grila din Anexa 5 înainte de depunere și la pregătirea contractării."
   ],
   "caution": [
     "Verifică Anexa 3 pentru întreaga firmă. Ghidul exclude solicitanții cu coduri CAEN excluse autorizate la depunere sau cu venituri din activitățile excluse în ultimul an fiscal ori în anul curent.",
@@ -30,6 +30,26 @@
     ["Instruire, audit și consultanță", "Instruirea se leagă de soluțiile instalate. Auditul de maturitate se face înainte de depunere și la finalul implementării. Consultanța de elaborare și implementare, inclusiv planul de digitalizare, este plafonată la 5% din cheltuielile activității de bază."]
   ],
   "sections": [
+    {
+      "id": "exemplu-plan-erp",
+      "example": true,
+      "title": "Exemplu de plan ERP pentru comenzi și stocuri",
+      "intro": "Scenariul presupune o firmă mică din Brașov, cu un punct de lucru existent, activitate eligibilă autorizată și venituri documentate în anul depunerii și în anul anterior. Procesul, costurile și țintele sunt ipoteze pentru exemplu.",
+      "rows": [
+        ["Procesul inițial", "Echipa preia comenzile prin e-mail, verifică stocul într-un fișier separat și introduce din nou datele la facturare. În eșantionul ipotetic de 50 de comenzi, timpul median de la primire la confirmare este de 18 minute. Planul descrie fluxul curent conform Anexei 6."],
+        ["Investiția în ERP", "ERP-ul preia comanda, rezervă stocul și transmite datele spre facturare. Proiectul include migrarea nomenclatoarelor, integrarea și testarea. Echipamentele IT deservesc fluxul digitalizat. Ghidul tratează aceste cheltuieli la § 5.3.2.1 și § 5.3.2.2."],
+        ["Audit înainte și după", "Auditorul independent inventariază aplicațiile și tehnologiile folosite, documentează timpii și justifică soluția propusă. Auditul final verifică funcționarea ERP-ului și progresul digital. Raportul inițial urmează Anexa 13, iar calendarul celor două audituri urmează § 5.3.2.11."],
+        ["Indicatorul și dovada", "Pentru RCR 12, exemplul pleacă de la 0 utilizatori ERP și stabilește o țintă de 12 utilizatori distincți într-un an, verificați din jurnalele aplicației la un an de la recepție. Separat, firma urmărește un timp median de 7 minute pe 50 de comenzi comparabile. Indicatorul RCR 12 este descris la § 3.8.2."],
+        ["Bugetul pe categorii", "Bugetul estimat fără TVA este de 50.000 EUR. Include 30.000 EUR pentru licențe ERP, 10.000 EUR pentru configurare, migrare și testare, 7.000 EUR pentru echipamente IT, 2.000 EUR pentru auditurile de maturitate și 1.000 EUR pentru informare și publicitate. Costurile se justifică prin oferte și se trec în Anexa 7."],
+        ["Grantul și aportul firmei", "La 90% din 50.000 EUR, grantul ar fi de 45.000 EUR, iar aportul eligibil de 5.000 EUR. Dacă întreprinderea unică a primit 240.000 EUR în perioada de trei ani, plafonul rămas ar fi de 60.000 EUR. Pentru cerere, calculele se trec în lei la cursul din ghid, de 5,2786 lei pentru 1 EUR. Vezi § 3.13, § 5.4 și § 5.5."]
+      ],
+      "references": [
+        ["Ghid, § 3.8.2 · RCR 12", "https://www.regiocentru.ro/wp-content/uploads/2026/04/Ghidul-solicitantului-%E2%80%93-Actiunea-2.2-%E2%80%93-Apel-2.pdf#page=17"],
+        ["Ghid, § 5.3.2 · cheltuieli și audit", "https://www.regiocentru.ro/wp-content/uploads/2026/04/Ghidul-solicitantului-%E2%80%93-Actiunea-2.2-%E2%80%93-Apel-2.pdf#page=39"],
+        ["Ghid, § 5.4–5.5 · valoare și contribuție", "https://www.regiocentru.ro/wp-content/uploads/2026/04/Ghidul-solicitantului-%E2%80%93-Actiunea-2.2-%E2%80%93-Apel-2.pdf#page=46"],
+        ["ADR Centru · Anexele 6, 7 și 13", "https://www.regiocentru.ro/actiuni/2-2-intreprinderi-digitale-pentru-o-economie-avansata-apel-2/"]
+      ]
+    },
     {
       "id": "cofinantare",
       "example": true,
@@ -64,7 +84,7 @@
     "Corelează auditul cu planul de digitalizare, macheta financiară și ofertele. Verifică eligibilitatea și punctajul în Anexele 4 și 5.",
     "Depune cererea și anexele semnate electronic în MySMIS, în fereastra indicată de ADR Centru."
   ],
-  "sourceIntro": "Consultă secțiunile 4.3 pentru calendar, 5.1 pentru solicitant și CAEN, 5.3 pentru cheltuieli, 7.4 pentru dosar și 8.4 pentru selecție. Anexele 3–7 și 13 conțin lista de excluderi, grilele și modelele de completat.",
+  "sourceIntro": "Consultă § 4.3–4.4 pentru calendar și depunere, § 5.1 și § 5.2.1 pentru solicitant și CAEN, § 5.3–5.5 pentru cheltuieli și finanțare, § 7.4 pentru dosar și § 8.4 pentru selecție. Anexele 3–7 și 13 conțin lista CAEN, grilele și modelele de completat.",
   "extraSources": [
     ["Ghidul solicitantului – Acțiunea 2.2, Apelul 2 (PDF)", "https://www.regiocentru.ro/wp-content/uploads/2026/04/Ghidul-solicitantului-%E2%80%93-Actiunea-2.2-%E2%80%93-Apel-2.pdf"],
     ["ADR Centru – comunicatul de lansare", "https://www.regiocentru.ro/lansarea-celui-de-al-doilea-apel-de-finantare-pentru-digitalizarea-imm-urilor/"],
@@ -72,7 +92,6 @@
     ["MySMIS2021 – platforma de depunere", "https://mysmis2021.gov.ro/"]
   ],
   "faqs": [
-    ["Când se depun proiectele pentru digitalizare IMM în Regiunea Centru?", "În MySMIS, de pe 2 decembrie 2026, ora 12:00, până pe 2 februarie 2027, ora 12:00. Caută codul PRC/1059/PRC_P2/OP1/RSO1.2/PRC_A32."],
     ["Pot aplica firmele cu proiecte în mediul rural?", "Da. Apelul acoperă mediul urban și rural din județele Alba, Brașov, Covasna, Harghita, Mureș și Sibiu."],
     ["Se poate depune un proiect doar pentru laptopuri și servere?", "Nu. Proiectul trebuie să includă active necorporale eligibile. Echipamentele trebuie să fie necesare pentru soluțiile și obiectivele din planul de digitalizare."],
     ["Unde verific codurile CAEN excluse?", "Lista se află în Anexa 3 publicată de ADR Centru. Verifică atât codurile autorizate și activitățile excluse din care firma a obținut venituri, cât și dovada veniturilor din codurile eligibile pe care le va digitaliza."],

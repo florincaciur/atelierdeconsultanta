@@ -143,16 +143,16 @@ function renderCard(program, filters) {
 </article>`;
 }
 
-function renderHero(hub) {
+function renderHero(hub, visual) {
+  const icon = visual ? "" : `    <span class="hero-icon" aria-hidden="true"><i class="${esc(HUB_ICONS[hub.id] || "ph-duotone ph-folders")}"></i></span>\n    `;
   return `
-    <span class="hero-icon" aria-hidden="true"><i class="${esc(HUB_ICONS[hub.id] || "ph-duotone ph-folders")}"></i></span>
-    <span class="eyebrow design-badge">Programe · ${esc(hub.label)}</span>
+${icon}<span class="eyebrow design-badge">Programe · ${esc(hub.label)}</span>
     <h1>${esc(hub.h1)}</h1>
     <p data-aeo-primary-answer="" data-aeo-direct-answer="">${esc(hub.intro)}</p>
     <div class="hero-actions">
       <a class="btn btn-primary" href="${PROJECT_CHECK_URL}" data-analytics-event="cta_click" data-analytics-component="program_family_hub" data-analytics-cta-id="project_check" data-analytics-target="${PROJECT_CHECK_URL}" data-analytics-copy-variant="family_hub" data-analytics-cta-view="true">Începe verificarea proiectului</a>
       <a class="btn btn-secondary" href="#cum-alegi">Cum alegi programul</a>
-    </div>`;
+    </div>${visual ? `\n${visual}` : ""}`;
 }
 
 function renderMain(hub, programs, filters, hubRecord = null) {
@@ -250,11 +250,17 @@ function synchronizeHtml(html, hub, programs, filters) {
   if (!heroPattern.test(html)) throw new Error(`${hub.route}: nu a fost găsit hero-ul.`);
   if (!mainPattern.test(html)) throw new Error(`${hub.route}: nu a fost găsit elementul main.`);
 
-  let next = html.replace(heroPattern, `$1${renderHero(hub)}\n  </header>`);
+  const hero = html.match(heroPattern)[0];
+  const heroVisual = hero.match(/<!--\s*PROGRAM_HERO_VISUAL_START\s*-->[\s\S]*?<!--\s*PROGRAM_HERO_VISUAL_END\s*-->/iu)?.[0] || "";
+  let next = html.replace(heroPattern, (_, opening) => `${opening}${renderHero(hub, heroVisual)}\n${heroVisual ? "" : "  "}</header>`);
   const hubRecord = loadProgramConfig().programs.find((program) => program.pageUrl === hub.route && program.discovery?.listed === false) || null;
   let main = renderMain(hub, programs, filters, hubRecord);
   if (preservedProgramVisual) {
     main = main.replace(/(<main\b[^>]*>)\n {2}/iu, `$1\n${preservedProgramVisual}\n\n`);
+  }
+  const contextualLinks = html.match(/<!-- PROGRAM_CONTEXTUAL_LINKS_START -->[\s\S]*?<!-- PROGRAM_CONTEXTUAL_LINKS_END -->/u)?.[0];
+  if (contextualLinks) {
+    main = main.replace(/(?=^[ \t]*<!-- EDITORIAL_GOVERNANCE_START -->|^<\/main>)/mu, () => `${contextualLinks}\n`);
   }
   next = next.replace(mainPattern, main);
   next = injectAsset(next, `  <link rel="stylesheet" href="/assets/program-family-hubs.css?v=${ASSET_VERSION}" />`, "/assets/program-family-hubs.css", "</head>");
