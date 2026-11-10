@@ -1,6 +1,6 @@
 {
   "reviewedAt": "2026-11-10",
-  "status": "locally_validated_publication_pending",
+  "status": "published_and_http_verified",
   "acceptance": "partial; authenticated GSC, conversions and backlinks pending",
   "validation": {
     "intentGroups": 12,
@@ -35,6 +35,44 @@
     ]
   },
   "copyCheckScope": "Public HTML normalized. Whole-directory check also reads archived official source captures in ignored .codex; those evidence files were intentionally not modified.",
-  "publicVerification": null,
-  "indexNow": null
+  "publicVerification": {
+    "verifiedAt": "2026-11-10T12:47:06.774Z",
+    "checkedRoutes": 62,
+    "changedCanonicalRoutes": 46,
+    "errors": 0,
+    "releaseVerifier": "PASS: 31 canonical pages, 29 programme routes, 56 CSS/JS assets and form probes",
+    "liveResponsiveChecks": 33,
+    "liveContactNavigation": "pass; no form submitted"
+  },
+  "indexNow": {
+    "result": "IndexNow submit: HTTP 200; batch=20\r\nURL-uri trimise: 20",
+    "urls": [
+      "https://atelierdeconsultanta.ro/calendar-fonduri-europene",
+      "https://atelierdeconsultanta.ro/cat-costa-consultanta-fonduri-europene-ghid",
+      "https://atelierdeconsultanta.ro/cat-costa-consultanta-fonduri-europene",
+      "https://atelierdeconsultanta.ro/cod-caen-start-up-nation-2026",
+      "https://atelierdeconsultanta.ro/consultanta-fonduri-europene-bucuresti",
+      "https://atelierdeconsultanta.ro/consultanta-pnrr-digitalizare",
+      "https://atelierdeconsultanta.ro/cum-alegi-consultant-fonduri-europene",
+      "https://atelierdeconsultanta.ro/cum-se-verifica-eligibilitatea-fonduri-europene",
+      "https://atelierdeconsultanta.ro/digitalizare-imm-erp-crm-cloud",
+      "https://atelierdeconsultanta.ro/digitalizare-imm-pnrr",
+      "https://atelierdeconsultanta.ro/digitalizare-imm-regiunea-centru-apel-2",
+      "https://atelierdeconsultanta.ro/dr12-afir",
+      "https://atelierdeconsultanta.ro/dr12-vs-dr14",
+      "https://atelierdeconsultanta.ro/firma-consultanta-fonduri-europene",
+      "https://atelierdeconsultanta.ro/fonduri-europene-bucuresti",
+      "https://atelierdeconsultanta.ro/fonduri-europene-nord-est",
+      "https://atelierdeconsultanta.ro/start-up-nation-2026-cheltuieli-eligibile",
+      "https://atelierdeconsultanta.ro/start-up-nation-2026-conditii",
+      "https://atelierdeconsultanta.ro/start-up-nation-2026-idei-afaceri",
+      "https://atelierdeconsultanta.ro/start-up-nation-2026-plan-de-afaceri"
+    ]
+  },
+  "implementationCommit": "69ca69928a10c23f635462cefa28795db8f61354",
+  "branches": [
+    "main",
+    "master"
+  ],
+  "fetchOriginCompleted": true
 }

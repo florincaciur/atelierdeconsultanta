@@ -1,0 +1,558 @@
+{
+  "verifiedAt": "2026-11-10T12:47:06.774Z",
+  "changedCanonicalRoutes": 46,
+  "checkedRoutes": 62,
+  "errors": [],
+  "rows": [
+    {
+      "route": "/",
+      "status": 200,
+      "location": null,
+      "canonical": "https://atelierdeconsultanta.ro/",
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+      "exactSource": true,
+      "intentBridge": 0
+    },
+    {
+      "route": "/acte-necesare-fonduri-europene-nerambursabile",
+      "status": 200,
+      "location": null,
+      "canonical": "https://atelierdeconsultanta.ro/acte-necesare-fonduri-europene-nerambursabile",
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+      "exactSource": true,
+      "intentBridge": 0
+    },
+    {
+      "route": "/apeluri-gal",
+      "status": 200,
+      "location": null,
+      "canonical": "https://atelierdeconsultanta.ro/apeluri-gal",
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+      "exactSource": true,
+      "intentBridge": 0
+    },
+    {
+      "route": "/autoconsum-public-fotovoltaice-institutii-publice",
+      "status": 200,
+      "location": null,
+      "canonical": "https://atelierdeconsultanta.ro/autoconsum-public-fotovoltaice-institutii-publice",
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+      "exactSource": true,
+      "intentBridge": 0
+    },
+    {
+      "route": "/calculator-soc",
+      "status": 200,
+      "location": null,
+      "canonical": "https://atelierdeconsultanta.ro/calculator-soc",
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+      "exactSource": true,
+      "intentBridge": 0
+    },
+    {
+      "route": "/calendar-fonduri-europene",
+      "status": 200,
+      "location": null,
+      "canonical": "https://atelierdeconsultanta.ro/calendar-fonduri-europene",
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+      "exactSource": true,
+      "intentBridge": 0
+    },
+    {
+      "route": "/cat-costa-consultanta-fonduri-europene",
+      "status": 200,
+      "location": null,
+      "canonical": "https://atelierdeconsultanta.ro/cat-costa-consultanta-fonduri-europene",
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+      "exactSource": true,
+      "intentBridge": 1
+    },
+    {
+      "route": "/cat-costa-consultanta-fonduri-europene-ghid",
+      "status": 200,
+      "location": null,
+      "canonical": "https://atelierdeconsultanta.ro/cat-costa-consultanta-fonduri-europene-ghid",
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+      "exactSource": true,
+      "intentBridge": 1
+    },
+    {
+      "route": "/ce-acte-sunt-necesare-fonduri-europene",
+      "status": 200,
+      "location": null,
+      "canonical": "https://atelierdeconsultanta.ro/ce-acte-sunt-necesare-fonduri-europene",
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+      "exactSource": true,
+      "intentBridge": 0
+    },
+    {
+      "route": "/cheltuieli-eligibile-digitalizare-imm",
+      "status": 200,
+      "location": null,
+      "canonical": "https://atelierdeconsultanta.ro/cheltuieli-eligibile-digitalizare-imm",
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+      "exactSource": true,
+      "intentBridge": 0
+    },
+    {
+      "route": "/cheltuieli-eligibile-pocidif-21",
+      "status": 200,
+      "location": null,
+      "canonical": "https://atelierdeconsultanta.ro/cheltuieli-eligibile-pocidif-21",
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+      "exactSource": true,
+      "intentBridge": 0
+    },
+    {
+      "route": "/cod-caen-start-up-nation-2026",
+      "status": 200,
+      "location": null,
+      "canonical": "https://atelierdeconsultanta.ro/cod-caen-start-up-nation-2026",
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+      "exactSource": true,
+      "intentBridge": 0
+    },
+    {
+      "route": "/consultanta-fonduri-europene",
+      "status": 200,
+      "location": null,
+      "canonical": "https://atelierdeconsultanta.ro/consultanta-fonduri-europene",
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+      "exactSource": true,
+      "intentBridge": 0
+    },
+    {
+      "route": "/consultanta-fonduri-europene-bucuresti",
+      "status": 200,
+      "location": null,
+      "canonical": "https://atelierdeconsultanta.ro/consultanta-fonduri-europene-bucuresti",
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+      "exactSource": true,
+      "intentBridge": 1
+    },
+    {
+      "route": "/consultanta-pnrr-digitalizare",
+      "status": 200,
+      "location": null,
+      "canonical": "https://atelierdeconsultanta.ro/consultanta-pnrr-digitalizare",
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+      "exactSource": true,
+      "intentBridge": 1
+    },
+    {
+      "route": "/contact",
+      "status": 200,
+      "location": null,
+      "canonical": "https://atelierdeconsultanta.ro/contact",
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+      "exactSource": true,
+      "intentBridge": 0
+    },
+    {
+      "route": "/cum-alegi-consultant-fonduri-europene",
+      "status": 200,
+      "location": null,
+      "canonical": "https://atelierdeconsultanta.ro/cum-alegi-consultant-fonduri-europene",
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+      "exactSource": true,
+      "intentBridge": 1
+    },
+    {
+      "route": "/cum-alegi-programul-potrivit-fonduri-europene-2026",
+      "status": 200,
+      "location": null,
+      "canonical": "https://atelierdeconsultanta.ro/cum-alegi-programul-potrivit-fonduri-europene-2026",
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+      "exactSource": true,
+      "intentBridge": 0
+    },
+    {
+      "route": "/cum-se-calculeaza-cofinantarea-fonduri-europene",
+      "status": 200,
+      "location": null,
+      "canonical": "https://atelierdeconsultanta.ro/cum-se-calculeaza-cofinantarea-fonduri-europene",
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+      "exactSource": true,
+      "intentBridge": 0
+    },
+    {
+      "route": "/cum-se-verifica-eligibilitatea-fonduri-europene",
+      "status": 200,
+      "location": null,
+      "canonical": "https://atelierdeconsultanta.ro/cum-se-verifica-eligibilitatea-fonduri-europene",
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+      "exactSource": true,
+      "intentBridge": 1
+    },
+    {
+      "route": "/digitalizare-imm",
+      "status": 200,
+      "location": null,
+      "canonical": "https://atelierdeconsultanta.ro/digitalizare-imm",
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+      "exactSource": true,
+      "intentBridge": 0
+    },
+    {
+      "route": "/digitalizare-imm-erp-crm-cloud",
+      "status": 200,
+      "location": null,
+      "canonical": "https://atelierdeconsultanta.ro/digitalizare-imm-erp-crm-cloud",
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+      "exactSource": true,
+      "intentBridge": 1
+    },
+    {
+      "route": "/digitalizare-imm-pnrr",
+      "status": 200,
+      "location": null,
+      "canonical": "https://atelierdeconsultanta.ro/digitalizare-imm-pnrr",
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+      "exactSource": true,
+      "intentBridge": 1
+    },
+    {
+      "route": "/digitalizare-imm-regiunea-centru-apel-2",
+      "status": 200,
+      "location": null,
+      "canonical": "https://atelierdeconsultanta.ro/digitalizare-imm-regiunea-centru-apel-2",
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+      "exactSource": true,
+      "intentBridge": 0
+    },
+    {
+      "route": "/documente-punctaj-pocidif-21",
+      "status": 200,
+      "location": null,
+      "canonical": "https://atelierdeconsultanta.ro/documente-punctaj-pocidif-21",
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+      "exactSource": true,
+      "intentBridge": 0
+    },
+    {
+      "route": "/dr12-afir",
+      "status": 200,
+      "location": null,
+      "canonical": "https://atelierdeconsultanta.ro/dr12-afir",
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+      "exactSource": true,
+      "intentBridge": 0
+    },
+    {
+      "route": "/dr12-vs-dr14",
+      "status": 200,
+      "location": null,
+      "canonical": "https://atelierdeconsultanta.ro/dr12-vs-dr14",
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+      "exactSource": true,
+      "intentBridge": 0
+    },
+    {
+      "route": "/dr18",
+      "status": 200,
+      "location": null,
+      "canonical": "https://atelierdeconsultanta.ro/dr18",
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+      "exactSource": true,
+      "intentBridge": 0
+    },
+    {
+      "route": "/e-drive",
+      "status": 200,
+      "location": null,
+      "canonical": "https://atelierdeconsultanta.ro/e-drive",
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+      "exactSource": true,
+      "intentBridge": 0
+    },
+    {
+      "route": "/e-move",
+      "status": 200,
+      "location": null,
+      "canonical": "https://atelierdeconsultanta.ro/e-move",
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+      "exactSource": true,
+      "intentBridge": 0
+    },
+    {
+      "route": "/eligibilitate-fonduri-europene",
+      "status": 200,
+      "location": null,
+      "canonical": "https://atelierdeconsultanta.ro/eligibilitate-fonduri-europene",
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+      "exactSource": true,
+      "intentBridge": 0
+    },
+    {
+      "route": "/firma-consultanta-fonduri-europene",
+      "status": 200,
+      "location": null,
+      "canonical": "https://atelierdeconsultanta.ro/firma-consultanta-fonduri-europene",
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+      "exactSource": true,
+      "intentBridge": 1
+    },
+    {
+      "route": "/fondul-de-modernizare",
+      "status": 200,
+      "location": null,
+      "canonical": "https://atelierdeconsultanta.ro/fondul-de-modernizare",
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+      "exactSource": true,
+      "intentBridge": 0
+    },
+    {
+      "route": "/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum",
+      "status": 200,
+      "location": null,
+      "canonical": "https://atelierdeconsultanta.ro/fondul-de-modernizare-finantari-energie-fotovoltaice-autoconsum",
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+      "exactSource": true,
+      "intentBridge": 0
+    },
+    {
+      "route": "/fondul-modernizare-pc1-stocare-entitati-publice",
+      "status": 200,
+      "location": null,
+      "canonical": "https://atelierdeconsultanta.ro/fondul-modernizare-pc1-stocare-entitati-publice",
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+      "exactSource": true,
+      "intentBridge": 0
+    },
+    {
+      "route": "/fonduri-europene",
+      "status": 200,
+      "location": null,
+      "canonical": "https://atelierdeconsultanta.ro/fonduri-europene",
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+      "exactSource": true,
+      "intentBridge": 0
+    },
+    {
+      "route": "/fonduri-europene-bucuresti",
+      "status": 200,
+      "location": null,
+      "canonical": "https://atelierdeconsultanta.ro/fonduri-europene-bucuresti",
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+      "exactSource": true,
+      "intentBridge": 1
+    },
+    {
+      "route": "/fonduri-europene-digitalizare",
+      "status": 200,
+      "location": null,
+      "canonical": "https://atelierdeconsultanta.ro/fonduri-europene-digitalizare",
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+      "exactSource": true,
+      "intentBridge": 0
+    },
+    {
+      "route": "/fonduri-europene-nerambursabile-2026",
+      "status": 200,
+      "location": null,
+      "canonical": "https://atelierdeconsultanta.ro/fonduri-europene-nerambursabile-2026",
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+      "exactSource": true,
+      "intentBridge": 0
+    },
+    {
+      "route": "/fonduri-europene-nord-est",
+      "status": 200,
+      "location": null,
+      "canonical": "https://atelierdeconsultanta.ro/fonduri-europene-nord-est",
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+      "exactSource": true,
+      "intentBridge": 1
+    },
+    {
+      "route": "/fonduri-regionale",
+      "status": 200,
+      "location": null,
+      "canonical": "https://atelierdeconsultanta.ro/fonduri-regionale",
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+      "exactSource": true,
+      "intentBridge": 0
+    },
+    {
+      "route": "/gal-afir",
+      "status": 200,
+      "location": null,
+      "canonical": "https://atelierdeconsultanta.ro/gal-afir",
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+      "exactSource": true,
+      "intentBridge": 0
+    },
+    {
+      "route": "/gdpr",
+      "status": 301,
+      "location": "https://atelierdeconsultanta.ro/politica-de-confidentialitate"
+    },
+    {
+      "route": "/granturi-digitalizare-imm",
+      "status": 301,
+      "location": "https://atelierdeconsultanta.ro/digitalizare-imm"
+    },
+    {
+      "route": "/intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene",
+      "status": 200,
+      "location": null,
+      "canonical": "https://atelierdeconsultanta.ro/intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene",
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+      "exactSource": true,
+      "intentBridge": 0
+    },
+    {
+      "route": "/investitii-modernizarea-microintreprinderilor-apel-2",
+      "status": 200,
+      "location": null,
+      "canonical": "https://atelierdeconsultanta.ro/investitii-modernizarea-microintreprinderilor-apel-2",
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+      "exactSource": true,
+      "intentBridge": 0
+    },
+    {
+      "route": "/metodologie-verificare-eligibilitate",
+      "status": 200,
+      "location": null,
+      "canonical": "https://atelierdeconsultanta.ro/metodologie-verificare-eligibilitate",
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+      "exactSource": true,
+      "intentBridge": 0
+    },
+    {
+      "route": "/pnrr",
+      "status": 200,
+      "location": null,
+      "canonical": "https://atelierdeconsultanta.ro/pnrr",
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+      "exactSource": true,
+      "intentBridge": 0
+    },
+    {
+      "route": "/pnrr-digitalizare-imm-cheltuieli-eligibile",
+      "status": 200,
+      "location": null,
+      "canonical": "https://atelierdeconsultanta.ro/pnrr-digitalizare-imm-cheltuieli-eligibile",
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+      "exactSource": true,
+      "intentBridge": 0
+    },
+    {
+      "route": "/pocidif-21",
+      "status": 200,
+      "location": null,
+      "canonical": "https://atelierdeconsultanta.ro/pocidif-21",
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+      "exactSource": true,
+      "intentBridge": 0
+    },
+    {
+      "route": "/politica-de-confidentialitate",
+      "status": 200,
+      "location": null,
+      "canonical": "https://atelierdeconsultanta.ro/politica-de-confidentialitate",
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+      "exactSource": true,
+      "intentBridge": 0
+    },
+    {
+      "route": "/pro-infra",
+      "status": 200,
+      "location": null,
+      "canonical": "https://atelierdeconsultanta.ro/pro-infra",
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+      "exactSource": true,
+      "intentBridge": 0
+    },
+    {
+      "route": "/programul-tranzitie-justa",
+      "status": 200,
+      "location": null,
+      "canonical": "https://atelierdeconsultanta.ro/programul-tranzitie-justa",
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+      "exactSource": true,
+      "intentBridge": 0
+    },
+    {
+      "route": "/proiectare-fonduri-europene",
+      "status": 200,
+      "location": null,
+      "canonical": "https://atelierdeconsultanta.ro/proiectare-fonduri-europene",
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+      "exactSource": true,
+      "intentBridge": 0
+    },
+    {
+      "route": "/resurse",
+      "status": 200,
+      "location": null,
+      "canonical": "https://atelierdeconsultanta.ro/resurse",
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+      "exactSource": true,
+      "intentBridge": 0
+    },
+    {
+      "route": "/resurse-utile",
+      "status": 200,
+      "location": null,
+      "canonical": "https://atelierdeconsultanta.ro/resurse-utile",
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+      "exactSource": true,
+      "intentBridge": 0
+    },
+    {
+      "route": "/sme-eco-tech",
+      "status": 200,
+      "location": null,
+      "canonical": "https://atelierdeconsultanta.ro/sme-eco-tech",
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+      "exactSource": true,
+      "intentBridge": 0
+    },
+    {
+      "route": "/start-up-nation-2026-cheltuieli-eligibile",
+      "status": 200,
+      "location": null,
+      "canonical": "https://atelierdeconsultanta.ro/start-up-nation-2026-cheltuieli-eligibile",
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+      "exactSource": true,
+      "intentBridge": 0
+    },
+    {
+      "route": "/start-up-nation-2026-conditii",
+      "status": 200,
+      "location": null,
+      "canonical": "https://atelierdeconsultanta.ro/start-up-nation-2026-conditii",
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+      "exactSource": true,
+      "intentBridge": 0
+    },
+    {
+      "route": "/start-up-nation-2026-idei-afaceri",
+      "status": 200,
+      "location": null,
+      "canonical": "https://atelierdeconsultanta.ro/start-up-nation-2026-idei-afaceri",
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+      "exactSource": true,
+      "intentBridge": 0
+    },
+    {
+      "route": "/start-up-nation-2026-plan-de-afaceri",
+      "status": 200,
+      "location": null,
+      "canonical": "https://atelierdeconsultanta.ro/start-up-nation-2026-plan-de-afaceri",
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+      "exactSource": true,
+      "intentBridge": 0
+    },
+    {
+      "route": "/verificare-eligibilitate-fonduri-europene",
+      "status": 200,
+      "location": null,
+      "canonical": "https://atelierdeconsultanta.ro/verificare-eligibilitate-fonduri-europene",
+      "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+      "exactSource": true,
+      "intentBridge": 0
+    }
+  ]
+}

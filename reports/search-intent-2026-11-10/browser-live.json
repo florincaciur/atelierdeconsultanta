@@ -1,0 +1,172 @@
+{
+  "base": "https://atelierdeconsultanta.ro",
+  "checks": 33,
+  "results": [
+    {
+      "route": "/consultanta-pnrr-digitalizare",
+      "width": 320,
+      "result": "pass"
+    },
+    {
+      "route": "/digitalizare-imm-pnrr",
+      "width": 320,
+      "result": "pass"
+    },
+    {
+      "route": "/digitalizare-imm-erp-crm-cloud",
+      "width": 320,
+      "result": "pass"
+    },
+    {
+      "route": "/cat-costa-consultanta-fonduri-europene",
+      "width": 320,
+      "result": "pass"
+    },
+    {
+      "route": "/cat-costa-consultanta-fonduri-europene-ghid",
+      "width": 320,
+      "result": "pass"
+    },
+    {
+      "route": "/cum-alegi-consultant-fonduri-europene",
+      "width": 320,
+      "result": "pass"
+    },
+    {
+      "route": "/firma-consultanta-fonduri-europene",
+      "width": 320,
+      "result": "pass"
+    },
+    {
+      "route": "/cum-se-verifica-eligibilitatea-fonduri-europene",
+      "width": 320,
+      "result": "pass"
+    },
+    {
+      "route": "/consultanta-fonduri-europene-bucuresti",
+      "width": 320,
+      "result": "pass"
+    },
+    {
+      "route": "/fonduri-europene-bucuresti",
+      "width": 320,
+      "result": "pass"
+    },
+    {
+      "route": "/fonduri-europene-nord-est",
+      "width": 320,
+      "result": "pass"
+    },
+    {
+      "route": "/consultanta-pnrr-digitalizare",
+      "width": 390,
+      "result": "pass"
+    },
+    {
+      "route": "/digitalizare-imm-pnrr",
+      "width": 390,
+      "result": "pass"
+    },
+    {
+      "route": "/digitalizare-imm-erp-crm-cloud",
+      "width": 390,
+      "result": "pass"
+    },
+    {
+      "route": "/cat-costa-consultanta-fonduri-europene",
+      "width": 390,
+      "result": "pass"
+    },
+    {
+      "route": "/cat-costa-consultanta-fonduri-europene-ghid",
+      "width": 390,
+      "result": "pass"
+    },
+    {
+      "route": "/cum-alegi-consultant-fonduri-europene",
+      "width": 390,
+      "result": "pass"
+    },
+    {
+      "route": "/firma-consultanta-fonduri-europene",
+      "width": 390,
+      "result": "pass"
+    },
+    {
+      "route": "/cum-se-verifica-eligibilitatea-fonduri-europene",
+      "width": 390,
+      "result": "pass"
+    },
+    {
+      "route": "/consultanta-fonduri-europene-bucuresti",
+      "width": 390,
+      "result": "pass"
+    },
+    {
+      "route": "/fonduri-europene-bucuresti",
+      "width": 390,
+      "result": "pass"
+    },
+    {
+      "route": "/fonduri-europene-nord-est",
+      "width": 390,
+      "result": "pass"
+    },
+    {
+      "route": "/consultanta-pnrr-digitalizare",
+      "width": 1440,
+      "result": "pass"
+    },
+    {
+      "route": "/digitalizare-imm-pnrr",
+      "width": 1440,
+      "result": "pass"
+    },
+    {
+      "route": "/digitalizare-imm-erp-crm-cloud",
+      "width": 1440,
+      "result": "pass"
+    },
+    {
+      "route": "/cat-costa-consultanta-fonduri-europene",
+      "width": 1440,
+      "result": "pass"
+    },
+    {
+      "route": "/cat-costa-consultanta-fonduri-europene-ghid",
+      "width": 1440,
+      "result": "pass"
+    },
+    {
+      "route": "/cum-alegi-consultant-fonduri-europene",
+      "width": 1440,
+      "result": "pass"
+    },
+    {
+      "route": "/firma-consultanta-fonduri-europene",
+      "width": 1440,
+      "result": "pass"
+    },
+    {
+      "route": "/cum-se-verifica-eligibilitatea-fonduri-europene",
+      "width": 1440,
+      "result": "pass"
+    },
+    {
+      "route": "/consultanta-fonduri-europene-bucuresti",
+      "width": 1440,
+      "result": "pass"
+    },
+    {
+      "route": "/fonduri-europene-bucuresti",
+      "width": 1440,
+      "result": "pass"
+    },
+    {
+      "route": "/fonduri-europene-nord-est",
+      "width": 1440,
+      "result": "pass"
+    }
+  ],
+  "contactNavigation": "pass; no form submitted"
+}
