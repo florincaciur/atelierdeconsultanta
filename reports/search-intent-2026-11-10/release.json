@@ -1,0 +1,40 @@
+{
+  "reviewedAt": "2026-11-10",
+  "status": "locally_validated_publication_pending",
+  "acceptance": "partial; authenticated GSC, conversions and backlinks pending",
+  "validation": {
+    "intentGroups": 12,
+    "reviewedUrls": 33,
+    "introductionPages": 11,
+    "localResponsiveChecks": 33,
+    "widths": [
+      320,
+      390,
+      1440
+    ],
+    "canonicalRoutes": 107,
+    "faqQuestions": 470,
+    "links": 19886,
+    "anchors": 997,
+    "analyticsPages": 185,
+    "observedCtas": 983,
+    "piiFormsMasked": 5,
+    "gscExport": false,
+    "newRedirects": false,
+    "passed": [
+      "P0 deployment guard",
+      "on-page SEO",
+      "structured data and FAQ parity",
+      "canonical policy",
+      "permanent redirects and no chains",
+      "sitemap",
+      "internal links and fragments",
+      "analytics and qualified lead contract",
+      "generative language",
+      "local responsive layout and contact navigation"
+    ]
+  },
+  "copyCheckScope": "Public HTML normalized. Whole-directory check also reads archived official source captures in ignored .codex; those evidence files were intentionally not modified.",
+  "publicVerification": null,
+  "indexNow": null
+}

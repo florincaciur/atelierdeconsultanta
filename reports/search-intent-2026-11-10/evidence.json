@@ -1,0 +1,1212 @@
+{
+  "reviewedAt": "2026-11-10",
+  "acceptanceStatus": "partial_authenticated_data_pending",
+  "groups": [
+    {
+      "id": "pnrr",
+      "question": "Ce componente și apeluri fac parte din PNRR și în ce stadiu sunt?",
+      "primary": "/pnrr",
+      "supporting": [
+        "/digitalizare-imm",
+        "/digitalizare-imm-pnrr",
+        "/consultanta-pnrr-digitalizare"
+      ],
+      "decision": "Păstrează cadrul PNRR separat de apelul Digitalizarea IMM-urilor și de serviciul de implementare."
+    },
+    {
+      "id": "digitalizare",
+      "question": "Ce programe pot finanța o investiție digitală nouă?",
+      "primary": "/fonduri-europene-digitalizare",
+      "supporting": [
+        "/digitalizare-imm-erp-crm-cloud",
+        "/cheltuieli-eligibile-digitalizare-imm",
+        "/pnrr-digitalizare-imm-cheltuieli-eligibile"
+      ],
+      "decision": "Hubul compară programele. Ghidurile explică soluțiile și justificarea cheltuielilor; pagina PNRR închisă nu devine destinația generică pentru finanțări noi."
+    },
+    {
+      "id": "adr-centru",
+      "question": "Care sunt condițiile și calendarul Apelului 2 pentru digitalizarea IMM în Regiunea Centru?",
+      "primary": "/digitalizare-imm-regiunea-centru-apel-2",
+      "supporting": [
+        "/fonduri-regionale",
+        "/fonduri-europene-digitalizare"
+      ],
+      "decision": "Păstrează pagina apelului distinctă de huburi și de PNRR. Nu transfera automat granturi, calendar sau condiții între programe."
+    },
+    {
+      "id": "eligibilitate-criterii",
+      "question": "Ce criterii trebuie verificate înainte de un proiect?",
+      "primary": "/eligibilitate-fonduri-europene",
+      "supporting": [
+        "/cum-se-verifica-eligibilitatea-fonduri-europene",
+        "/metodologie-verificare-eligibilitate"
+      ],
+      "decision": "Checklistul general rămâne principal; articolul explică ordinea verificărilor, metodologia explică standardul de lucru."
+    },
+    {
+      "id": "eligibilitate-serviciu",
+      "question": "Cine poate analiza documentele și ce primesc după verificare?",
+      "primary": "/verificare-eligibilitate-fonduri-europene",
+      "supporting": [
+        "/eligibilitate-fonduri-europene",
+        "/contact"
+      ],
+      "decision": "Păstrează serviciul și livrabilul separat de ghidul de autoevaluare."
+    },
+    {
+      "id": "cost-oferta",
+      "question": "Cât costă consultanța pentru proiectul meu și ce date sunt necesare unei oferte?",
+      "primary": "/cat-costa-consultanta-fonduri-europene",
+      "supporting": [
+        "/cat-costa-consultanta-fonduri-europene-ghid",
+        "/consultanta-fonduri-europene"
+      ],
+      "decision": "Pagina principală explică etapele și cererea de ofertă; nu inventează tarife sau procente."
+    },
+    {
+      "id": "cost-comparatie",
+      "question": "Cum compar două oferte de consultanță și costurile suplimentare?",
+      "primary": "/cat-costa-consultanta-fonduri-europene-ghid",
+      "supporting": [
+        "/cat-costa-consultanta-fonduri-europene",
+        "/cum-alegi-consultant-fonduri-europene"
+      ],
+      "decision": "Ghidul de comparație păstrează tabelul practic, excluderile și scenariul de cost total."
+    },
+    {
+      "id": "consultant-alegere",
+      "question": "Cum aleg consultantul și ce verific înainte să semnez?",
+      "primary": "/cum-alegi-consultant-fonduri-europene",
+      "supporting": [
+        "/firma-consultanta-fonduri-europene",
+        "/cat-costa-consultanta-fonduri-europene-ghid"
+      ],
+      "decision": "Ghidul de selecție deține criteriile de comparație. O eventuală consolidare a paginii «firmă» rămâne propunere condiționată de dovezi."
+    },
+    {
+      "id": "consultant-servicii",
+      "question": "Ce servicii de consultanță pot contracta și în ce etape?",
+      "primary": "/consultanta-fonduri-europene",
+      "supporting": [
+        "/firma-consultanta-fonduri-europene",
+        "/verificare-eligibilitate-fonduri-europene"
+      ],
+      "decision": "Oferta națională rămâne pagina comercială principală. Nu deduce necesitatea unui redirect numai din titluri similare."
+    },
+    {
+      "id": "local-bucuresti-serviciu",
+      "question": "Cum solicit consultanță pentru o investiție în București sau Ilfov?",
+      "primary": "/consultanta-fonduri-europene-bucuresti",
+      "supporting": [
+        "/fonduri-europene-bucuresti",
+        "/consultanta-fonduri-europene"
+      ],
+      "decision": "Intenție locală de serviciu. Nu sugerează existența unui sediu local neverificat."
+    },
+    {
+      "id": "local-bucuresti-programe",
+      "question": "Ce finanțări trebuie verificate pentru o investiție în București-Ilfov?",
+      "primary": "/fonduri-europene-bucuresti",
+      "supporting": [
+        "/consultanta-fonduri-europene-bucuresti",
+        "/fonduri-regionale"
+      ],
+      "decision": "Orientare după locul implementării și autoritatea regională; fără copierea condițiilor din alte regiuni."
+    },
+    {
+      "id": "local-nord-est",
+      "question": "Ce programe se aplică unei investiții în Regiunea Nord-Est?",
+      "primary": "/fonduri-europene-nord-est",
+      "supporting": [
+        "/fonduri-regionale",
+        "/calendar-fonduri-europene"
+      ],
+      "decision": "Păstrează delimitarea pentru Bacău, Botoșani, Iași, Neamț, Suceava și Vaslui. Nu crea pagini aproape identice pentru fiecare oraș."
+    }
+  ],
+  "metrics": [
+    {
+      "route": "/pnrr",
+      "http": 200,
+      "canonical": "https://atelierdeconsultanta.ro/pnrr",
+      "sitemap": true,
+      "historical": {
+        "start": "2026-04-11",
+        "end": "2026-07-10",
+        "clicks": 1,
+        "impressions": 56,
+        "position": 5.93
+      },
+      "gsc28": null,
+      "gsc90": null,
+      "conversions": null,
+      "externalBacklinks": null,
+      "missingDataReason": "Authenticated browser unavailable; fresh exports not obtained. Null does not mean zero."
+    },
+    {
+      "route": "/digitalizare-imm",
+      "http": 200,
+      "canonical": "https://atelierdeconsultanta.ro/digitalizare-imm",
+      "sitemap": true,
+      "historical": {
+        "start": "2026-04-11",
+        "end": "2026-07-10",
+        "clicks": 1,
+        "impressions": 248,
+        "position": 28.87
+      },
+      "gsc28": null,
+      "gsc90": null,
+      "conversions": null,
+      "externalBacklinks": null,
+      "missingDataReason": "Authenticated browser unavailable; fresh exports not obtained. Null does not mean zero."
+    },
+    {
+      "route": "/digitalizare-imm-pnrr",
+      "http": 200,
+      "canonical": "https://atelierdeconsultanta.ro/digitalizare-imm-pnrr",
+      "sitemap": true,
+      "historical": {
+        "start": "2026-04-11",
+        "end": "2026-07-10",
+        "clicks": 0,
+        "impressions": 7,
+        "position": 4.43
+      },
+      "gsc28": null,
+      "gsc90": null,
+      "conversions": null,
+      "externalBacklinks": null,
+      "missingDataReason": "Authenticated browser unavailable; fresh exports not obtained. Null does not mean zero."
+    },
+    {
+      "route": "/consultanta-pnrr-digitalizare",
+      "http": 200,
+      "canonical": "https://atelierdeconsultanta.ro/consultanta-pnrr-digitalizare",
+      "sitemap": true,
+      "historical": {
+        "start": "2026-04-11",
+        "end": "2026-07-10",
+        "clicks": 0,
+        "impressions": 13,
+        "position": 16.62
+      },
+      "gsc28": null,
+      "gsc90": null,
+      "conversions": null,
+      "externalBacklinks": null,
+      "missingDataReason": "Authenticated browser unavailable; fresh exports not obtained. Null does not mean zero."
+    },
+    {
+      "route": "/fonduri-europene-digitalizare",
+      "http": 200,
+      "canonical": "https://atelierdeconsultanta.ro/fonduri-europene-digitalizare",
+      "sitemap": true,
+      "historical": {
+        "start": "2026-04-11",
+        "end": "2026-07-10",
+        "clicks": 0,
+        "impressions": 22,
+        "position": 14.32
+      },
+      "gsc28": null,
+      "gsc90": null,
+      "conversions": null,
+      "externalBacklinks": null,
+      "missingDataReason": "Authenticated browser unavailable; fresh exports not obtained. Null does not mean zero."
+    },
+    {
+      "route": "/digitalizare-imm-erp-crm-cloud",
+      "http": 200,
+      "canonical": "https://atelierdeconsultanta.ro/digitalizare-imm-erp-crm-cloud",
+      "sitemap": true,
+      "historical": {
+        "start": "2026-04-11",
+        "end": "2026-07-10",
+        "clicks": 0,
+        "impressions": 29,
+        "position": 14.31
+      },
+      "gsc28": null,
+      "gsc90": null,
+      "conversions": null,
+      "externalBacklinks": null,
+      "missingDataReason": "Authenticated browser unavailable; fresh exports not obtained. Null does not mean zero."
+    },
+    {
+      "route": "/cheltuieli-eligibile-digitalizare-imm",
+      "http": 200,
+      "canonical": "https://atelierdeconsultanta.ro/cheltuieli-eligibile-digitalizare-imm",
+      "sitemap": true,
+      "historical": {
+        "start": "2026-04-11",
+        "end": "2026-07-10",
+        "clicks": 0,
+        "impressions": 24,
+        "position": 11.33
+      },
+      "gsc28": null,
+      "gsc90": null,
+      "conversions": null,
+      "externalBacklinks": null,
+      "missingDataReason": "Authenticated browser unavailable; fresh exports not obtained. Null does not mean zero."
+    },
+    {
+      "route": "/pnrr-digitalizare-imm-cheltuieli-eligibile",
+      "http": 200,
+      "canonical": "https://atelierdeconsultanta.ro/pnrr-digitalizare-imm-cheltuieli-eligibile",
+      "sitemap": true,
+      "historical": {
+        "start": "2026-04-11",
+        "end": "2026-07-10",
+        "clicks": 4,
+        "impressions": 164,
+        "position": 12.42
+      },
+      "gsc28": null,
+      "gsc90": null,
+      "conversions": null,
+      "externalBacklinks": null,
+      "missingDataReason": "Authenticated browser unavailable; fresh exports not obtained. Null does not mean zero."
+    },
+    {
+      "route": "/digitalizare-imm-regiunea-centru-apel-2",
+      "http": 200,
+      "canonical": "https://atelierdeconsultanta.ro/digitalizare-imm-regiunea-centru-apel-2",
+      "sitemap": true,
+      "historical": null,
+      "gsc28": null,
+      "gsc90": null,
+      "conversions": null,
+      "externalBacklinks": null,
+      "missingDataReason": "Authenticated browser unavailable; fresh exports not obtained. Null does not mean zero."
+    },
+    {
+      "route": "/fonduri-regionale",
+      "http": 200,
+      "canonical": "https://atelierdeconsultanta.ro/fonduri-regionale",
+      "sitemap": true,
+      "historical": null,
+      "gsc28": null,
+      "gsc90": null,
+      "conversions": null,
+      "externalBacklinks": null,
+      "missingDataReason": "Authenticated browser unavailable; fresh exports not obtained. Null does not mean zero."
+    },
+    {
+      "route": "/eligibilitate-fonduri-europene",
+      "http": 200,
+      "canonical": "https://atelierdeconsultanta.ro/eligibilitate-fonduri-europene",
+      "sitemap": true,
+      "historical": {
+        "start": "2026-04-11",
+        "end": "2026-07-10",
+        "clicks": 0,
+        "impressions": 10,
+        "position": 6.2
+      },
+      "gsc28": null,
+      "gsc90": null,
+      "conversions": null,
+      "externalBacklinks": null,
+      "missingDataReason": "Authenticated browser unavailable; fresh exports not obtained. Null does not mean zero."
+    },
+    {
+      "route": "/cum-se-verifica-eligibilitatea-fonduri-europene",
+      "http": 200,
+      "canonical": "https://atelierdeconsultanta.ro/cum-se-verifica-eligibilitatea-fonduri-europene",
+      "sitemap": true,
+      "historical": {
+        "start": "2026-04-11",
+        "end": "2026-07-10",
+        "clicks": 0,
+        "impressions": 34,
+        "position": 9.15
+      },
+      "gsc28": null,
+      "gsc90": null,
+      "conversions": null,
+      "externalBacklinks": null,
+      "missingDataReason": "Authenticated browser unavailable; fresh exports not obtained. Null does not mean zero."
+    },
+    {
+      "route": "/metodologie-verificare-eligibilitate",
+      "http": 200,
+      "canonical": "https://atelierdeconsultanta.ro/metodologie-verificare-eligibilitate",
+      "sitemap": true,
+      "historical": {
+        "start": "2026-04-11",
+        "end": "2026-07-10",
+        "clicks": 0,
+        "impressions": 4,
+        "position": 5
+      },
+      "gsc28": null,
+      "gsc90": null,
+      "conversions": null,
+      "externalBacklinks": null,
+      "missingDataReason": "Authenticated browser unavailable; fresh exports not obtained. Null does not mean zero."
+    },
+    {
+      "route": "/verificare-eligibilitate-fonduri-europene",
+      "http": 200,
+      "canonical": "https://atelierdeconsultanta.ro/verificare-eligibilitate-fonduri-europene",
+      "sitemap": true,
+      "historical": {
+        "start": "2026-04-11",
+        "end": "2026-07-10",
+        "clicks": 1,
+        "impressions": 66,
+        "position": 7.64
+      },
+      "gsc28": null,
+      "gsc90": null,
+      "conversions": null,
+      "externalBacklinks": null,
+      "missingDataReason": "Authenticated browser unavailable; fresh exports not obtained. Null does not mean zero."
+    },
+    {
+      "route": "/contact",
+      "http": 200,
+      "canonical": "https://atelierdeconsultanta.ro/contact",
+      "sitemap": true,
+      "historical": {
+        "start": "2026-04-11",
+        "end": "2026-07-10",
+        "clicks": 1,
+        "impressions": 63,
+        "position": 15.38
+      },
+      "gsc28": null,
+      "gsc90": null,
+      "conversions": null,
+      "externalBacklinks": null,
+      "missingDataReason": "Authenticated browser unavailable; fresh exports not obtained. Null does not mean zero."
+    },
+    {
+      "route": "/cat-costa-consultanta-fonduri-europene",
+      "http": 200,
+      "canonical": "https://atelierdeconsultanta.ro/cat-costa-consultanta-fonduri-europene",
+      "sitemap": true,
+      "historical": {
+        "start": "2026-04-11",
+        "end": "2026-07-10",
+        "clicks": 1,
+        "impressions": 34,
+        "position": 6.15
+      },
+      "gsc28": null,
+      "gsc90": null,
+      "conversions": null,
+      "externalBacklinks": null,
+      "missingDataReason": "Authenticated browser unavailable; fresh exports not obtained. Null does not mean zero."
+    },
+    {
+      "route": "/cat-costa-consultanta-fonduri-europene-ghid",
+      "http": 200,
+      "canonical": "https://atelierdeconsultanta.ro/cat-costa-consultanta-fonduri-europene-ghid",
+      "sitemap": true,
+      "historical": {
+        "start": "2026-04-11",
+        "end": "2026-07-10",
+        "clicks": 0,
+        "impressions": 22,
+        "position": 6.77
+      },
+      "gsc28": null,
+      "gsc90": null,
+      "conversions": null,
+      "externalBacklinks": null,
+      "missingDataReason": "Authenticated browser unavailable; fresh exports not obtained. Null does not mean zero."
+    },
+    {
+      "route": "/consultanta-fonduri-europene",
+      "http": 200,
+      "canonical": "https://atelierdeconsultanta.ro/consultanta-fonduri-europene",
+      "sitemap": true,
+      "historical": {
+        "start": "2026-04-11",
+        "end": "2026-07-10",
+        "clicks": 0,
+        "impressions": 111,
+        "position": 6.41
+      },
+      "gsc28": null,
+      "gsc90": null,
+      "conversions": null,
+      "externalBacklinks": null,
+      "missingDataReason": "Authenticated browser unavailable; fresh exports not obtained. Null does not mean zero."
+    },
+    {
+      "route": "/cum-alegi-consultant-fonduri-europene",
+      "http": 200,
+      "canonical": "https://atelierdeconsultanta.ro/cum-alegi-consultant-fonduri-europene",
+      "sitemap": true,
+      "historical": {
+        "start": "2026-04-11",
+        "end": "2026-07-10",
+        "clicks": 0,
+        "impressions": 10,
+        "position": 4.9
+      },
+      "gsc28": null,
+      "gsc90": null,
+      "conversions": null,
+      "externalBacklinks": null,
+      "missingDataReason": "Authenticated browser unavailable; fresh exports not obtained. Null does not mean zero."
+    },
+    {
+      "route": "/firma-consultanta-fonduri-europene",
+      "http": 200,
+      "canonical": "https://atelierdeconsultanta.ro/firma-consultanta-fonduri-europene",
+      "sitemap": true,
+      "historical": {
+        "start": "2026-04-11",
+        "end": "2026-07-10",
+        "clicks": 0,
+        "impressions": 20,
+        "position": 20.3
+      },
+      "gsc28": null,
+      "gsc90": null,
+      "conversions": null,
+      "externalBacklinks": null,
+      "missingDataReason": "Authenticated browser unavailable; fresh exports not obtained. Null does not mean zero."
+    },
+    {
+      "route": "/consultanta-fonduri-europene-bucuresti",
+      "http": 200,
+      "canonical": "https://atelierdeconsultanta.ro/consultanta-fonduri-europene-bucuresti",
+      "sitemap": true,
+      "historical": {
+        "start": "2026-04-11",
+        "end": "2026-07-10",
+        "clicks": 0,
+        "impressions": 35,
+        "position": 7.66
+      },
+      "gsc28": null,
+      "gsc90": null,
+      "conversions": null,
+      "externalBacklinks": null,
+      "missingDataReason": "Authenticated browser unavailable; fresh exports not obtained. Null does not mean zero."
+    },
+    {
+      "route": "/fonduri-europene-bucuresti",
+      "http": 200,
+      "canonical": "https://atelierdeconsultanta.ro/fonduri-europene-bucuresti",
+      "sitemap": true,
+      "historical": {
+        "start": "2026-04-11",
+        "end": "2026-07-10",
+        "clicks": 0,
+        "impressions": 6,
+        "position": 17.17
+      },
+      "gsc28": null,
+      "gsc90": null,
+      "conversions": null,
+      "externalBacklinks": null,
+      "missingDataReason": "Authenticated browser unavailable; fresh exports not obtained. Null does not mean zero."
+    },
+    {
+      "route": "/fonduri-europene-nord-est",
+      "http": 200,
+      "canonical": "https://atelierdeconsultanta.ro/fonduri-europene-nord-est",
+      "sitemap": true,
+      "historical": {
+        "start": "2026-04-11",
+        "end": "2026-07-10",
+        "clicks": 0,
+        "impressions": 34,
+        "position": 9.97
+      },
+      "gsc28": null,
+      "gsc90": null,
+      "conversions": null,
+      "externalBacklinks": null,
+      "missingDataReason": "Authenticated browser unavailable; fresh exports not obtained. Null does not mean zero."
+    },
+    {
+      "route": "/calendar-fonduri-europene",
+      "http": 200,
+      "canonical": "https://atelierdeconsultanta.ro/calendar-fonduri-europene",
+      "sitemap": true,
+      "historical": {
+        "start": "2026-04-11",
+        "end": "2026-07-10",
+        "clicks": 0,
+        "impressions": 45,
+        "position": 8.2
+      },
+      "gsc28": null,
+      "gsc90": null,
+      "conversions": null,
+      "externalBacklinks": null,
+      "missingDataReason": "Authenticated browser unavailable; fresh exports not obtained. Null does not mean zero."
+    },
+    {
+      "route": "/ce-acte-sunt-necesare-fonduri-europene",
+      "http": 200,
+      "canonical": "https://atelierdeconsultanta.ro/ce-acte-sunt-necesare-fonduri-europene",
+      "sitemap": true,
+      "historical": {
+        "start": "2026-04-11",
+        "end": "2026-07-10",
+        "clicks": 1,
+        "impressions": 41,
+        "position": 5.29
+      },
+      "gsc28": null,
+      "gsc90": null,
+      "conversions": null,
+      "externalBacklinks": null,
+      "missingDataReason": "Authenticated browser unavailable; fresh exports not obtained. Null does not mean zero."
+    },
+    {
+      "route": "/intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene",
+      "http": 200,
+      "canonical": "https://atelierdeconsultanta.ro/intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene",
+      "sitemap": true,
+      "historical": {
+        "start": "2026-04-11",
+        "end": "2026-07-10",
+        "clicks": 1,
+        "impressions": 9,
+        "position": 6.44
+      },
+      "gsc28": null,
+      "gsc90": null,
+      "conversions": null,
+      "externalBacklinks": null,
+      "missingDataReason": "Authenticated browser unavailable; fresh exports not obtained. Null does not mean zero."
+    },
+    {
+      "route": "/resurse-utile",
+      "http": 200,
+      "canonical": "https://atelierdeconsultanta.ro/resurse-utile",
+      "sitemap": true,
+      "historical": null,
+      "gsc28": null,
+      "gsc90": null,
+      "conversions": null,
+      "externalBacklinks": null,
+      "missingDataReason": "Authenticated browser unavailable; fresh exports not obtained. Null does not mean zero."
+    },
+    {
+      "route": "/granturi-digitalizare-imm",
+      "http": 301,
+      "canonical": "https://atelierdeconsultanta.ro/digitalizare-imm",
+      "sitemap": false,
+      "historical": {
+        "start": "2026-04-11",
+        "end": "2026-07-10",
+        "clicks": 2,
+        "impressions": 65,
+        "position": 6.46
+      },
+      "gsc28": null,
+      "gsc90": null,
+      "conversions": null,
+      "externalBacklinks": null,
+      "missingDataReason": "Authenticated browser unavailable; fresh exports not obtained. Null does not mean zero."
+    },
+    {
+      "route": "/gdpr",
+      "http": 301,
+      "canonical": null,
+      "sitemap": false,
+      "historical": {
+        "start": "2026-04-11",
+        "end": "2026-07-10",
+        "clicks": 0,
+        "impressions": 24,
+        "position": 26.92
+      },
+      "gsc28": null,
+      "gsc90": null,
+      "conversions": null,
+      "externalBacklinks": null,
+      "missingDataReason": "Authenticated browser unavailable; fresh exports not obtained. Null does not mean zero."
+    },
+    {
+      "route": "/politica-de-confidentialitate",
+      "http": 200,
+      "canonical": "https://atelierdeconsultanta.ro/politica-de-confidentialitate",
+      "sitemap": true,
+      "historical": {
+        "start": "2026-04-11",
+        "end": "2026-07-10",
+        "clicks": 0,
+        "impressions": 18,
+        "position": 13.33
+      },
+      "gsc28": null,
+      "gsc90": null,
+      "conversions": null,
+      "externalBacklinks": null,
+      "missingDataReason": "Authenticated browser unavailable; fresh exports not obtained. Null does not mean zero."
+    },
+    {
+      "route": "/resurse",
+      "http": 200,
+      "canonical": "https://atelierdeconsultanta.ro/resurse",
+      "sitemap": true,
+      "historical": {
+        "start": "2026-04-11",
+        "end": "2026-07-10",
+        "clicks": 0,
+        "impressions": 14,
+        "position": 5.36
+      },
+      "gsc28": null,
+      "gsc90": null,
+      "conversions": null,
+      "externalBacklinks": null,
+      "missingDataReason": "Authenticated browser unavailable; fresh exports not obtained. Null does not mean zero."
+    },
+    {
+      "route": "/acte-necesare-fonduri-europene-nerambursabile",
+      "http": 200,
+      "canonical": "https://atelierdeconsultanta.ro/acte-necesare-fonduri-europene-nerambursabile",
+      "sitemap": true,
+      "historical": {
+        "start": "2026-04-11",
+        "end": "2026-07-10",
+        "clicks": 3,
+        "impressions": 217,
+        "position": 7.06
+      },
+      "gsc28": null,
+      "gsc90": null,
+      "conversions": null,
+      "externalBacklinks": null,
+      "missingDataReason": "Authenticated browser unavailable; fresh exports not obtained. Null does not mean zero."
+    },
+    {
+      "route": "/cum-se-calculeaza-cofinantarea-fonduri-europene",
+      "http": 200,
+      "canonical": "https://atelierdeconsultanta.ro/cum-se-calculeaza-cofinantarea-fonduri-europene",
+      "sitemap": true,
+      "historical": {
+        "start": "2026-04-11",
+        "end": "2026-07-10",
+        "clicks": 0,
+        "impressions": 31,
+        "position": 11.48
+      },
+      "gsc28": null,
+      "gsc90": null,
+      "conversions": null,
+      "externalBacklinks": null,
+      "missingDataReason": "Authenticated browser unavailable; fresh exports not obtained. Null does not mean zero."
+    }
+  ],
+  "contentComparisons": [
+    {
+      "source": "/pnrr",
+      "destination": "/digitalizare-imm-pnrr",
+      "commonFiveWordShinglePercent": 23.8,
+      "sourceUniqueHeadings": [
+        "Ce trebuie să știi",
+        "Ce verifici concret pentru PNRR",
+        "Pagină-cadru PNRR versus pagina aplicată de digitalizare",
+        "Cum se citește statutul unui apel PNRR",
+        "Indicatorii și calendarul trebuie proiectate împreună",
+        "Bugetul se verifică înainte de depunere",
+        "Evaluare, contractare și plata",
+        "PoCIDIF 2.1 este un program distinct de PNRR"
+      ],
+      "destinationUniqueHeadings": [
+        "Pe scurt",
+        "Ce verifici concret pentru Digitalizare IMM PNRR",
+        "Pagina aplicată PNRR digitalizare versus pagină-cadru PNRR",
+        "Evaluare, contractare și plată",
+        "Programe asociate acestui ghid"
+      ],
+      "conclusion": "Lexical signal only; no query-page, conversions or external-backlink evidence for consolidation."
+    },
+    {
+      "source": "/digitalizare-imm",
+      "destination": "/digitalizare-imm-pnrr",
+      "commonFiveWordShinglePercent": 25.9,
+      "sourceUniqueHeadings": [
+        "Ce trebuie să știi",
+        "Ce verifici concret pentru Digitalizare IMM",
+        "Situatii frecvente cautate de beneficiari",
+        "Alege rută corectă pentru digitalizare",
+        "Exemple de cheltuieli digitale",
+        "ERP, CRM, cloud și PNRR în analiza de digitalizare",
+        "Implementarea proiectelor contractate",
+        "Evaluare, contractare și plata",
+        "Întrebări frecvente",
+        "Care este statutul Digitalizare IMM?",
+        "Ce înseamnă digitalizare IMM?",
+        "Ce cheltuieli sunt eligibile?",
+        "Am nevoie de oferte înainte de depunere?",
+        "Pot finanta orice laptop?",
+        "PoCIDIF 2.1 pentru IMM din sectorul TIC"
+      ],
+      "destinationUniqueHeadings": [
+        "Repere pentru verificare",
+        "Hardware",
+        "Software",
+        "Cloud",
+        "Cybersecurity",
+        "Pe scurt",
+        "Ce verifici concret pentru Digitalizare IMM PNRR",
+        "Pagina aplicată PNRR digitalizare versus pagină-cadru PNRR",
+        "Calendar orientativ",
+        "Evaluare, contractare și plată",
+        "Programe asociate acestui ghid"
+      ],
+      "conclusion": "Lexical signal only; no query-page, conversions or external-backlink evidence for consolidation."
+    },
+    {
+      "source": "/digitalizare-imm-pnrr",
+      "destination": "/consultanta-pnrr-digitalizare",
+      "commonFiveWordShinglePercent": 74.6,
+      "sourceUniqueHeadings": [
+        "Ce verifici concret pentru Digitalizare IMM PNRR",
+        "Pagina aplicată PNRR digitalizare versus pagină-cadru PNRR",
+        "Programe asociate acestui ghid"
+      ],
+      "destinationUniqueHeadings": [
+        "Ce verifici concret pentru Consultanță PNRR digitalizare",
+        "PNRR digitalizare versus programe regionale",
+        "Surse oficiale consultate",
+        "Întrebări frecvente",
+        "Ai un proiect PNRR contractat sau cauți o finanțare nouă?",
+        "Programe pentru care serviciul este relevant"
+      ],
+      "conclusion": "Lexical signal only; no query-page, conversions or external-backlink evidence for consolidation."
+    },
+    {
+      "source": "/fonduri-europene-digitalizare",
+      "destination": "/digitalizare-imm-regiunea-centru-apel-2",
+      "commonFiveWordShinglePercent": 0.7,
+      "sourceUniqueHeadings": [
+        "Găsește programul potrivit investiției",
+        "Programe din familia Digitalizare & inovare",
+        "Digitalizare IMM",
+        "PNRR",
+        "Digitalizare IMM Regiunea Centru – Apel 2",
+        "PoCIDIF 2.1",
+        "Niciun program nu corespunde filtrelor selectate",
+        "Cum alegi",
+        "Ai un proiect concret?",
+        "Ghiduri și instrumente relevante",
+        "Întrebări frecvente despre Digitalizare & inovare"
+      ],
+      "destinationUniqueHeadings": [
+        "Cine poate obține finanțare pentru digitalizare în Regiunea Centru?",
+        "Exemplu de plan ERP pentru comenzi și stocuri",
+        "Procesul inițial",
+        "Investiția în ERP",
+        "Audit înainte și după",
+        "Indicatorul și dovada",
+        "Bugetul pe categorii",
+        "Grantul și aportul firmei",
+        "Cât trebuie să contribuie firma?",
+        "Proiect eligibil de 100.000 EUR",
+        "Plafon disponibil de 70.000 EUR",
+        "Cum se selectează proiectele?",
+        "Prag de calitate de 50 de puncte",
+        "85 de puncte în prima tranșă",
+        "Intensitate digitală",
+        "Merită continuată analiza?",
+        "Profil care merită verificat",
+        "Condiții care cer clarificare",
+        "Cheltuieli eligibile pentru digitalizare",
+        "Software și automatizare",
+        "Echipamente IT și rețea",
+        "Cloud și arhive digitale",
+        "Instruire, audit și consultanță",
+        "Documente de pregătit",
+        "De la idee la decizia de depunere",
+        "Documente și surse oficiale",
+        "Clarificări înainte de pregătire",
+        "Solicită verificarea eligibilității"
+      ],
+      "conclusion": "Lexical signal only; no query-page, conversions or external-backlink evidence for consolidation."
+    },
+    {
+      "source": "/eligibilitate-fonduri-europene",
+      "destination": "/verificare-eligibilitate-fonduri-europene",
+      "commonFiveWordShinglePercent": 3.8,
+      "sourceUniqueHeadings": [
+        "Șase niveluri care trebuie să fie coerente",
+        "Checklist de autoevaluare",
+        "Semnale care cer oprirea sau ajustarea analizei",
+        "Ghidul explică; serviciul analizează cazul concret",
+        "Ai parcurs checklistul și vrei o concluzie pe documente?"
+      ],
+      "destinationUniqueHeadings": [
+        "O concluzie clară, construită din fapte verificabile",
+        "Datele necesare pentru prima analiză",
+        "Cum se desfășoară verificarea",
+        "Ce conține livrabilul",
+        "Ce nu promite verificarea",
+        "Vrei să te pregătești înainte de contact?",
+        "Trimite datele minime pentru verificare",
+        "Programe pentru care serviciul este relevant"
+      ],
+      "conclusion": "Lexical signal only; no query-page, conversions or external-backlink evidence for consolidation."
+    },
+    {
+      "source": "/eligibilitate-fonduri-europene",
+      "destination": "/cum-se-verifica-eligibilitatea-fonduri-europene",
+      "commonFiveWordShinglePercent": 0,
+      "sourceUniqueHeadings": [
+        "Șase niveluri care trebuie să fie coerente",
+        "Checklist de autoevaluare",
+        "Semnale care cer oprirea sau ajustarea analizei",
+        "Ghidul explică; serviciul analizează cazul concret",
+        "Surse și limite",
+        "Ai parcurs checklistul și vrei o concluzie pe documente?"
+      ],
+      "destinationUniqueHeadings": [
+        "Ce trebuie să știi",
+        "Eligibilitate și dosar: ce verifici în aceeași etapă",
+        "Tabel practic: ce verifici înainte de dosar",
+        "Pași de verificare",
+        "Scenariu realist",
+        "Ce verifică FABER înainte să recomande un program",
+        "Surse oficiale consultate",
+        "CTA contextual",
+        "Autor, reviewer și actualizare",
+        "Linkuri interne utile",
+        "Vrei să verificăm proiectul înainte de dosar?"
+      ],
+      "conclusion": "Lexical signal only; no query-page, conversions or external-backlink evidence for consolidation."
+    },
+    {
+      "source": "/cat-costa-consultanta-fonduri-europene",
+      "destination": "/cat-costa-consultanta-fonduri-europene-ghid",
+      "commonFiveWordShinglePercent": 0.1,
+      "sourceUniqueHeadings": [
+        "Repere pentru verificare",
+        "Pe scurt",
+        "Ce verifici",
+        "Greșeli",
+        "Pasi",
+        "Pe scurt",
+        "Ce verifici concret pentru Cost consultanță fonduri europene",
+        "Structura tarifara orientativă",
+        "Cui se adresează",
+        "Condiții de eligibilitate",
+        "Eligibilitatea se verifică prin solicitant, activitate, documente și investiție.",
+        "Condiții obligatorii",
+        "Investiții și cheltuieli eligibile",
+        "Cheltuieli neeligibile și riscuri",
+        "Finanțare, cofinanțare și buget",
+        "Exemplu numeric de cofinanțare",
+        "Calendar orientativ",
+        "Criterii de selecție și punctaj",
+        "Pasi pentru pregătirea cererii",
+        "Evaluare, contractare și plată",
+        "Exemple de situații aplicate",
+        "Întrebări frecvente",
+        "Pentru o verificare inițială, trimite date despre solicitant, investiție, buget și programul urmărit.",
+        "Verificare discreta pe cazul tau"
+      ],
+      "destinationUniqueHeadings": [
+        "Ce trebuie să știi",
+        "Tabel practic: ce ar trebui să vezi într-o ofertă",
+        "Greșeli frecvente când compari ofertele",
+        "Scenariu realist",
+        "Ce verifică FABER înainte să recomande un program",
+        "CTA contextual",
+        "Autor, reviewer și actualizare",
+        "Linkuri interne utile",
+        "Vrei să verificăm proiectul înainte de dosar?"
+      ],
+      "conclusion": "Lexical signal only; no query-page, conversions or external-backlink evidence for consolidation."
+    },
+    {
+      "source": "/consultanta-fonduri-europene",
+      "destination": "/firma-consultanta-fonduri-europene",
+      "commonFiveWordShinglePercent": 1.2,
+      "sourceUniqueHeadings": [
+        "Livrabile clare pentru fiecare etapă",
+        "Verdict de încadrare",
+        "Cerere și buget coerente",
+        "Răspunsuri după depunere",
+        "Patru decizii înainte de depunere",
+        "Când recomandăm să nu depui încă",
+        "Alege etapa de care are nevoie proiectul",
+        "Cum stabilim costul colaborării",
+        "Ai deja investiția și bugetul?",
+        "Întrebări și surse despre consultanța pentru fonduri europene",
+        "Ce include verificarea inițială?",
+        "Când începe redactarea dosarului?",
+        "Ce livrabile poate include consultanța?",
+        "Cum se stabilește costul?",
+        "Poate FABER coordona și proiectarea?",
+        "Cine decide aprobarea proiectului?"
+      ],
+      "destinationUniqueHeadings": [
+        "Repere pentru verificare",
+        "Verificare",
+        "Strategie",
+        "Dosar",
+        "Clarificari",
+        "Pe scurt",
+        "Ce verifici concret pentru Firmă consultanță fonduri europene",
+        "Situatii frecvente cautate de beneficiari",
+        "Firmă de consultanță fonduri europene",
+        "Cui se adresează",
+        "Condiții de eligibilitate",
+        "Eligibilitatea se verifică prin solicitant, activitate, documente și investiție.",
+        "Condiții obligatorii",
+        "Investiții și cheltuieli eligibile",
+        "Cheltuieli neeligibile și riscuri",
+        "Finanțare, cofinanțare și buget",
+        "Exemplu numeric de cofinanțare",
+        "Calendar orientativ",
+        "Criterii de selecție și punctaj",
+        "Pasi pentru pregătirea cererii",
+        "Evaluare, contractare și plată",
+        "Exemple de situații aplicate",
+        "Surse oficiale consultate",
+        "Întrebări frecvente",
+        "Pentru o verificare inițială, trimite date despre solicitant, investiție, buget și programul urmărit.",
+        "Următorul pas"
+      ],
+      "conclusion": "Lexical signal only; no query-page, conversions or external-backlink evidence for consolidation."
+    },
+    {
+      "source": "/cum-alegi-consultant-fonduri-europene",
+      "destination": "/firma-consultanta-fonduri-europene",
+      "commonFiveWordShinglePercent": 39.8,
+      "sourceUniqueHeadings": [
+        "Ce verifici",
+        "Greșeli",
+        "Pasi",
+        "Ce verifici concret pentru Alegere consultant fonduri europene",
+        "Checklist comparativ pentru alegerea consultantului",
+        "Compară două oferte pe aceleași livrabile",
+        "Ce verifici într-o ofertă pentru digitalizarea unui IMM",
+        "Verificare discreta pe cazul tau"
+      ],
+      "destinationUniqueHeadings": [
+        "Verificare",
+        "Strategie",
+        "Dosar",
+        "Clarificari",
+        "Ce verifici concret pentru Firmă consultanță fonduri europene",
+        "Situatii frecvente cautate de beneficiari",
+        "Firmă de consultanță fonduri europene",
+        "Următorul pas",
+        "Programe pentru care serviciul este relevant"
+      ],
+      "conclusion": "Lexical signal only; no query-page, conversions or external-backlink evidence for consolidation."
+    },
+    {
+      "source": "/consultanta-fonduri-europene-bucuresti",
+      "destination": "/fonduri-europene-bucuresti",
+      "commonFiveWordShinglePercent": 95.5,
+      "sourceUniqueHeadings": [
+        "Întrebări frecvente",
+        "Ce programe verific pentru București?",
+        "Conteaza sediul social sau locul de implementare în București?",
+        "Ce documente locale sunt importante pentru București?",
+        "De ce unele pagini locale sunt consolidate?",
+        "Pot primi consultanță la distanță pentru un proiect din București?",
+        "Cum aleg între program regional și program national pentru București?",
+        "Ce fonduri europene sunt relevante în București?",
+        "Conteaza localitatea investiției în București?",
+        "Ce documente pregătesc pentru un proiect în București?",
+        "Pot primi consultanță la distanță pentru București?",
+        "Când este utilă o pagină locală pentru București?",
+        "Ce verific prima data pentru un proiect din București?"
+      ],
+      "destinationUniqueHeadings": [],
+      "conclusion": "Lexical signal only; no query-page, conversions or external-backlink evidence for consolidation."
+    },
+    {
+      "source": "/ce-acte-sunt-necesare-fonduri-europene",
+      "destination": "/acte-necesare-fonduri-europene-nerambursabile",
+      "commonFiveWordShinglePercent": 0.2,
+      "sourceUniqueHeadings": [
+        "Ce trebuie să știi",
+        "Dosar fonduri europene: ce pregătești înainte de listă",
+        "Tabel practic: documente care apar frecvent",
+        "Pași pentru pregătirea dosarului",
+        "Scenariu realist",
+        "Ce verifică FABER înainte să recomande un program",
+        "CTA contextual",
+        "Autor, reviewer și actualizare",
+        "Linkuri interne utile",
+        "Vrei să verificăm proiectul înainte de dosar?"
+      ],
+      "destinationUniqueHeadings": [
+        "Repere pentru verificare",
+        "Pe scurt",
+        "Ce verifici",
+        "Greșeli",
+        "Pasi",
+        "Pe scurt",
+        "Ce verifici concret pentru Acte necesare fonduri europene",
+        "Acte pe tip de beneficiar",
+        "Cui se adresează",
+        "Condiții de eligibilitate",
+        "Eligibilitatea se verifică prin solicitant, activitate, documente și investiție.",
+        "Condiții obligatorii",
+        "Investiții și cheltuieli eligibile",
+        "Cheltuieli neeligibile și riscuri",
+        "Finanțare, cofinanțare și buget",
+        "Exemplu numeric de cofinanțare",
+        "Calendar orientativ",
+        "Criterii de selecție și punctaj",
+        "Pasi pentru pregătirea cererii",
+        "Evaluare, contractare și plată",
+        "Exemple de situații aplicate",
+        "Întrebări frecvente",
+        "Ce documente sunt cerute frecvent?",
+        "Documentele expira?",
+        "Sunt suficiente copiile scanate?",
+        "Pot depune cu documente lipsă?",
+        "Pentru o verificare inițială, trimite date despre solicitant, investiție, buget și programul urmărit.",
+        "Verificare discreta pe cazul tau",
+        "Programe asociate acestui ghid"
+      ],
+      "conclusion": "Lexical signal only; no query-page, conversions or external-backlink evidence for consolidation."
+    },
+    {
+      "source": "/resurse-utile",
+      "destination": "/resurse",
+      "commonFiveWordShinglePercent": 0,
+      "sourceUniqueHeadings": [
+        "Răspuns rapid",
+        "Ce trebuie verificat",
+        "Instituții europene",
+        "MIPE",
+        "AFIR și MADR",
+        "AFIR",
+        "MADR",
+        "ADR-uri și programe regionale",
+        "Ministerul Economiei",
+        "Ministerul Energiei și Fondul pentru Modernizare",
+        "GAL și LEADER",
+        "Legislație",
+        "Instrumente FABER",
+        "Verifică proiectul pe documente"
+      ],
+      "destinationUniqueHeadings": [
+        "Repere pentru verificare",
+        "Pe scurt",
+        "Ce verifici",
+        "Greșeli",
+        "Pasi",
+        "Pe scurt",
+        "Ce verifici concret pentru Resurse descarcabile",
+        "Checklisturi noi",
+        "Cui se adresează",
+        "Condiții de eligibilitate",
+        "Eligibilitatea se verifică prin solicitant, activitate, documente și investiție.",
+        "Condiții obligatorii",
+        "Investiții și cheltuieli eligibile",
+        "Cheltuieli neeligibile și riscuri",
+        "Finanțare, cofinanțare și buget",
+        "Exemplu numeric de cofinanțare",
+        "Calendar orientativ",
+        "Criterii de selecție și punctaj",
+        "Pasi pentru pregătirea cererii",
+        "Evaluare, contractare și plată",
+        "Exemple de situații aplicate",
+        "Surse oficiale consultate",
+        "Întrebări frecvente",
+        "Resursele sunt gratuite?",
+        "Înlocuiesc ghidul oficial?",
+        "Pot primi actualizări?",
+        "Ce fac după descarcare?",
+        "Pentru o verificare inițială, trimite date despre solicitant, investiție, buget și programul urmărit.",
+        "Verificare discreta pe cazul tau"
+      ],
+      "conclusion": "Lexical signal only; no query-page, conversions or external-backlink evidence for consolidation."
+    },
+    {
+      "source": "/intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene",
+      "destination": "/cum-se-calculeaza-cofinantarea-fonduri-europene",
+      "commonFiveWordShinglePercent": 0.8,
+      "sourceUniqueHeadings": [
+        "Ce înseamnă în practică",
+        "Checklist de verificare",
+        "Context și intenție de căutare",
+        "Ce verifici înainte de a alege programul",
+        "Documente și dovezi utile",
+        "Exemplu aplicat",
+        "Riscuri frecvente",
+        "Surse oficiale și limitele informării",
+        "Raspuns operațional",
+        "Întrebări frecvente",
+        "Cofinantarea înseamnă doar procentul propriu?",
+        "Grantul se primeste înainte de plată furnizorilor?",
+        "Cum calculez rapid partea proprie?",
+        "Ce fac dacă bugetul creste după depunere?",
+        "Cofinantarea influenteaza decizia de depunere?",
+        "De ce cerem oferte devreme?",
+        "Cum se calculează cofinanțarea la fonduri europene?",
+        "Resurse conexe",
+        "Verifică proiectul înainte de depunere"
+      ],
+      "destinationUniqueHeadings": [
+        "Tabel practic: componentele calculului",
+        "Pași pentru o estimare corectă",
+        "Scenariu realist",
+        "Ce verifică FABER înainte să recomande un program",
+        "Surse oficiale consultate",
+        "CTA contextual",
+        "Autor, reviewer și actualizare",
+        "Linkuri interne utile",
+        "Vrei să verificăm proiectul înainte de dosar?",
+        "Programe asociate acestui ghid"
+      ],
+      "conclusion": "Lexical signal only; no query-page, conversions or external-backlink evidence for consolidation."
+    }
+  ],
+  "historicalMergeReview": [
+    {
+      "source": "/ce-acte-sunt-necesare-fonduri-europene",
+      "historicalTarget": "/acte-necesare-fonduri-europene-nerambursabile",
+      "currentSourceStatus": 200,
+      "currentTargetStatus": 200,
+      "decision": "proposal_only_pending_performance_conversions_backlinks",
+      "uniqueContentToPreserve": "Tabelul documentelor, ordinea pregătirii, scenariul și verificările de valabilitate; se verifică înainte dacă ținta acoperă aceleași răspunsuri."
+    },
+    {
+      "source": "/cum-se-verifica-eligibilitatea-fonduri-europene",
+      "historicalTarget": "/eligibilitate-fonduri-europene",
+      "currentSourceStatus": 200,
+      "currentTargetStatus": 200,
+      "decision": "proposal_only_pending_performance_conversions_backlinks",
+      "uniqueContentToPreserve": "Ordinea verificărilor, condițiile care opresc analiza și scenariul practic, fără a înlocui livrabilul serviciului."
+    },
+    {
+      "source": "/firma-consultanta-fonduri-europene",
+      "historicalTarget": "/consultanta-fonduri-europene",
+      "currentSourceStatus": 200,
+      "currentTargetStatus": 200,
+      "decision": "proposal_only_pending_performance_conversions_backlinks",
+      "uniqueContentToPreserve": "Responsabilitățile contractuale, diferențele dintre etape, livrabilele și limitele serviciului; criteriile de alegere se păstrează în ghidul dedicat."
+    },
+    {
+      "source": "/intrebari/cum-se-calculeaza-cofinantarea-la-fonduri-europene",
+      "historicalTarget": "/cum-se-calculeaza-cofinantarea-fonduri-europene",
+      "currentSourceStatus": 200,
+      "currentTargetStatus": 200,
+      "decision": "proposal_only_pending_performance_conversions_backlinks",
+      "uniqueContentToPreserve": "Răspunsul scurt, formula contribuției, TVA/neeligibile și întrebările despre cash-flow, după verificarea numerelor exemplelor."
+    },
+    {
+      "source": "/resurse-utile",
+      "historicalTarget": "/resurse",
+      "currentSourceStatus": 200,
+      "currentTargetStatus": 200,
+      "decision": "withdraw_historical_target_keep_current_distinct_role",
+      "uniqueContentToPreserve": "Directorul surselor oficiale, instituțiile, scopul fiecărei surse, verificarea versiunilor și legăturile către documentele primare."
+    }
+  ]
+}

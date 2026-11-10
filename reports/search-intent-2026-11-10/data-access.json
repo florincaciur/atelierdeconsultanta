@@ -1,0 +1,65 @@
+{
+  "reviewedAt": "2026-11-10",
+  "property": "sc-domain:atelierdeconsultanta.ro",
+  "searchType": "web",
+  "browserError": "Local browser use is disabled in Work settings",
+  "freshExportsObtained": false,
+  "requestedWindows": [
+    {
+      "days": 28,
+      "startDate": null,
+      "endDate": null,
+      "status": "blocked_by_authenticated_access",
+      "dimensions": [
+        "query",
+        "page"
+      ],
+      "dataState": "final",
+      "rowLimit": 25000,
+      "pagination": "startRow until fewer than rowLimit rows; API may omit non-top rows"
+    },
+    {
+      "days": 90,
+      "startDate": null,
+      "endDate": null,
+      "status": "blocked_by_authenticated_access",
+      "dimensions": [
+        "query",
+        "page"
+      ],
+      "dataState": "final",
+      "rowLimit": 25000,
+      "pagination": "startRow until fewer than rowLimit rows; API may omit non-top rows"
+    }
+  ],
+  "existingFiles": [
+    {
+      "path": "reports/gsc-page-opportunities.csv",
+      "window": "2026-04-11/2026-07-10",
+      "kind": "historical page totals; not query-page pairs"
+    },
+    {
+      "path": "reports/gsc-edrive-2026-11-09",
+      "kind": "exact /e-drive filter only; not a dataset for the requested groups"
+    },
+    {
+      "path": "Downloads/atelierdeconsultanta.ro-Performance-on-Search-2026-11-03.zip",
+      "kind": "separate Queries and Pages, Last 28 days; exact dates not in Filters.csv; no observed query-page pairs"
+    }
+  ],
+  "conversions": {
+    "status": "unavailable",
+    "required": "same-period organic landing_page_path with form_submit and qualified_lead; separate CTA clicks and phone/WhatsApp"
+  },
+  "externalBacklinks": {
+    "status": "unavailable",
+    "required": "exact source URL, target URL, referring domain, follow status, first/last seen; GSC Links report is sampled"
+  },
+  "rules": [
+    "Never cross-join independent Queries.csv and Pages.csv",
+    "Record latest final day actually available, inclusive 28 and 90 day bounds",
+    "Keep null values for unavailable metrics; do not replace with zero",
+    "Export page totals separately to show coverage loss from anonymised queries",
+    "No new 301 before evidence and approval"
+  ]
+}

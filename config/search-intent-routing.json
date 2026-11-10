@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-11-10",
+  "evidenceStatus": "content_review_complete_performance_exports_pending",
+  "principle": "Destinația este aleasă după întrebare. Modificările de introducere și legături nu autorizează consolidarea URL-urilor.",
+  "groups": [
+    {"id":"pnrr","question":"Ce componente și apeluri fac parte din PNRR și în ce stadiu sunt?","primary":"/pnrr","supporting":["/digitalizare-imm","/digitalizare-imm-pnrr","/consultanta-pnrr-digitalizare"],"decision":"Păstrează cadrul PNRR separat de apelul Digitalizarea IMM-urilor și de serviciul de implementare."},
+    {"id":"digitalizare","question":"Ce programe pot finanța o investiție digitală nouă?","primary":"/fonduri-europene-digitalizare","supporting":["/digitalizare-imm-erp-crm-cloud","/cheltuieli-eligibile-digitalizare-imm","/pnrr-digitalizare-imm-cheltuieli-eligibile"],"decision":"Hubul compară programele. Ghidurile explică soluțiile și justificarea cheltuielilor; pagina PNRR închisă nu devine destinația generică pentru finanțări noi."},
+    {"id":"adr-centru","question":"Care sunt condițiile și calendarul Apelului 2 pentru digitalizarea IMM în Regiunea Centru?","primary":"/digitalizare-imm-regiunea-centru-apel-2","supporting":["/fonduri-regionale","/fonduri-europene-digitalizare"],"decision":"Păstrează pagina apelului distinctă de huburi și de PNRR. Nu transfera automat granturi, calendar sau condiții între programe."},
+    {"id":"eligibilitate-criterii","question":"Ce criterii trebuie verificate înainte de un proiect?","primary":"/eligibilitate-fonduri-europene","supporting":["/cum-se-verifica-eligibilitatea-fonduri-europene","/metodologie-verificare-eligibilitate"],"decision":"Checklistul general rămâne principal; articolul explică ordinea verificărilor, metodologia explică standardul de lucru."},
+    {"id":"eligibilitate-serviciu","question":"Cine poate analiza documentele și ce primesc după verificare?","primary":"/verificare-eligibilitate-fonduri-europene","supporting":["/eligibilitate-fonduri-europene","/contact"],"decision":"Păstrează serviciul și livrabilul separat de ghidul de autoevaluare."},
+    {"id":"cost-oferta","question":"Cât costă consultanța pentru proiectul meu și ce date sunt necesare unei oferte?","primary":"/cat-costa-consultanta-fonduri-europene","supporting":["/cat-costa-consultanta-fonduri-europene-ghid","/consultanta-fonduri-europene"],"decision":"Pagina principală explică etapele și cererea de ofertă; nu inventează tarife sau procente."},
+    {"id":"cost-comparatie","question":"Cum compar două oferte de consultanță și costurile suplimentare?","primary":"/cat-costa-consultanta-fonduri-europene-ghid","supporting":["/cat-costa-consultanta-fonduri-europene","/cum-alegi-consultant-fonduri-europene"],"decision":"Ghidul de comparație păstrează tabelul practic, excluderile și scenariul de cost total."},
+    {"id":"consultant-alegere","question":"Cum aleg consultantul și ce verific înainte să semnez?","primary":"/cum-alegi-consultant-fonduri-europene","supporting":["/firma-consultanta-fonduri-europene","/cat-costa-consultanta-fonduri-europene-ghid"],"decision":"Ghidul de selecție deține criteriile de comparație. O eventuală consolidare a paginii «firmă» rămâne propunere condiționată de dovezi."},
+    {"id":"consultant-servicii","question":"Ce servicii de consultanță pot contracta și în ce etape?","primary":"/consultanta-fonduri-europene","supporting":["/firma-consultanta-fonduri-europene","/verificare-eligibilitate-fonduri-europene"],"decision":"Oferta națională rămâne pagina comercială principală. Nu deduce necesitatea unui redirect numai din titluri similare."},
+    {"id":"local-bucuresti-serviciu","question":"Cum solicit consultanță pentru o investiție în București sau Ilfov?","primary":"/consultanta-fonduri-europene-bucuresti","supporting":["/fonduri-europene-bucuresti","/consultanta-fonduri-europene"],"decision":"Intenție locală de serviciu. Nu sugerează existența unui sediu local neverificat."},
+    {"id":"local-bucuresti-programe","question":"Ce finanțări trebuie verificate pentru o investiție în București-Ilfov?","primary":"/fonduri-europene-bucuresti","supporting":["/consultanta-fonduri-europene-bucuresti","/fonduri-regionale"],"decision":"Orientare după locul implementării și autoritatea regională; fără copierea condițiilor din alte regiuni."},
+    {"id":"local-nord-est","question":"Ce programe se aplică unei investiții în Regiunea Nord-Est?","primary":"/fonduri-europene-nord-est","supporting":["/fonduri-regionale","/calendar-fonduri-europene"],"decision":"Păstrează delimitarea pentru Bacău, Botoșani, Iași, Neamț, Suceava și Vaslui. Nu crea pagini aproape identice pentru fiecare oraș."}
+  ],
+  "pages": [
+    {
+      "route":"/consultanta-pnrr-digitalizare",
+      "introduction":"Consultanța pentru PNRR Digitalizarea IMM-urilor se adresează beneficiarilor care au un proiect contractat și au nevoie de sprijin în implementare. Analiza pornește de la contract, bugetul aprobat, achiziții, indicatori și dovezile necesare raportării. Apelul este închis pentru depuneri noi. Pentru o investiție digitală nouă, verifică programele din hubul de digitalizare și condițiile apelului potrivit regiunii tale.",
+      "heading":"Ai un proiect contractat sau cauți o finanțare nouă?",
+      "links":[{"href":"/digitalizare-imm","label":"Statutul și documentele apelului PNRR Digitalizare IMM"},{"href":"/digitalizare-imm-pnrr","label":"Pregătirea achizițiilor și a dovezilor de implementare"},{"href":"/fonduri-europene-digitalizare","label":"Programe pentru o investiție digitală nouă"}]
+    },
+    {
+      "route":"/digitalizare-imm-pnrr",
+      "title":"Digitalizare IMM PNRR: achiziții și indicatori | FABER",
+      "description":"Pregătirea implementării unui proiect PNRR Digitalizare IMM contractat: procese, achiziții, buget aprobat și dovezi pentru indicatori. Apel închis.",
+      "h1":"Digitalizare IMM PNRR: de la bugetul aprobat la dovezile implementării",
+      "introduction":"Pentru un proiect PNRR Digitalizarea IMM-urilor contractat, pregătirea implementării leagă fiecare proces al firmei de soluția IT aprobată, achiziție, recepție și indicator. Folosește contractul, bugetul și documentele aplicabile proiectului pentru a verifica această legătură. Apelul este închis pentru cereri noi. Statutul și sursele programului sunt centralizate în pagina Digitalizare IMM; aici urmărești organizarea practică a proiectului existent.",
+      "heading":"Continuă cu informația potrivită proiectului",
+      "links":[{"href":"/digitalizare-imm","label":"Statut și documente PNRR Digitalizare IMM"},{"href":"/consultanta-pnrr-digitalizare","label":"Sprijin pentru implementarea unui proiect contractat"},{"href":"/fonduri-europene-digitalizare","label":"Compară finanțările pentru investiții digitale noi"}]
+    },
+    {
+      "route":"/digitalizare-imm-erp-crm-cloud",
+      "introduction":"ERP-ul organizează resursele și fluxurile operaționale, CRM-ul urmărește relațiile cu clienții, iar cloud-ul oferă infrastructură și servicii accesibile prin rețea. Alegerea lor pornește de la procesele firmei, date, utilizatori și integrare. Ghidul te ajută să compari soluțiile și livrabilele tehnice. Finanțarea se verifică separat, în programul ales, deoarece regulile PNRR și ale apelurilor regionale pot fi diferite.",
+      "heading":"Soluție tehnică, cheltuială sau program de finanțare?",
+      "links":[{"href":"/cheltuieli-eligibile-digitalizare-imm","label":"Cum justifici software-ul, hardware-ul și serviciile digitale"},{"href":"/fonduri-europene-digitalizare","label":"Compară programele pentru digitalizare"},{"href":"/digitalizare-imm-regiunea-centru-apel-2","label":"Digitalizare IMM Regiunea Centru – Apel 2"}]
+    },
+    {
+      "route":"/cat-costa-consultanta-fonduri-europene",
+      "title":"Cât costă consultanța pentru fonduri europene | FABER",
+      "description":"Află ce date sunt necesare unei oferte de consultanță pentru fonduri europene și cum se separă analiza, dosarul, clarificările și implementarea.",
+      "h1":"Cât costă consultanța pentru fonduri europene",
+      "introduction":"Prețul consultanței se stabilește după program, complexitatea investiției, documentele disponibile și etapele contractate. Pentru o ofertă aplicată proiectului tău, pregătește profilul solicitantului, localitatea investiției, bugetul estimat și sprijinul de care ai nevoie. Cere separarea analizei inițiale, redactării, clarificărilor, contractării și implementării, cu livrabile, termene și costuri suplimentare explicite. Eligibilitatea unei cheltuieli de consultanță se verifică în documentele programului ales.",
+      "heading":"Pregătește cererea de ofertă și compară serviciile",
+      "links":[{"href":"/cat-costa-consultanta-fonduri-europene-ghid","label":"Cum compari două oferte și costul total al consultanței"},{"href":"/consultanta-fonduri-europene","label":"Etapele serviciilor de consultanță"},{"href":"/contact","label":"Trimite datele proiectului pentru discutarea unei oferte"}]
+    },
+    {
+      "route":"/cat-costa-consultanta-fonduri-europene-ghid",
+      "title":"Cum compari ofertele de consultanță: costuri și livrabile | FABER",
+      "description":"Compară ofertele de consultanță pe aceleași livrabile, etape, excluderi și condiții de plată. Verifică totalul cu implementare și costurile suplimentare.",
+      "h1":"Cum compari ofertele de consultanță pentru fonduri europene",
+      "introduction":"Două oferte de consultanță pot avea prețuri apropiate și responsabilități foarte diferite. Compară aceeași investiție și aceleași etape, apoi verifică livrabilele, excluderile, condițiile de plată și sprijinul după depunere. Tabelul și scenariul de mai jos te ajută să identifici costurile suplimentare și întrebările de pus înainte de semnare. Pentru prețul proiectului tău, pregătește separat datele necesare unei cereri de ofertă.",
+      "heading":"De la comparația ofertelor la alegerea furnizorului",
+      "links":[{"href":"/cat-costa-consultanta-fonduri-europene","label":"Date necesare pentru oferta proiectului tău"},{"href":"/cum-alegi-consultant-fonduri-europene","label":"Criterii pentru alegerea consultantului"}]
+    },
+    {
+      "route":"/cum-alegi-consultant-fonduri-europene",
+      "introduction":"Alege consultantul verificând experiența relevantă pentru programul urmărit, sursele folosite, livrabilele și responsabilitățile din contract. Cere explicații despre riscuri, documentele necesare, comunicare și sprijinul după depunere. Compară furnizorii pe aceleași criterii înainte să compari prețul. Promisiunea unei aprobări garantate nu înlocuiește analiza eligibilității, iar decizia de finanțare aparține autorității care evaluează proiectul. Folosește checklistul de mai jos în discuțiile cu fiecare furnizor.",
+      "heading":"Compară furnizorul, oferta și serviciile",
+      "links":[{"href":"/cat-costa-consultanta-fonduri-europene-ghid","label":"Compară costul total și livrabilele din oferte"},{"href":"/consultanta-fonduri-europene","label":"Vezi serviciile de consultanță FABER"},{"href":"/metodologie-verificare-eligibilitate","label":"Cum se documentează verificarea eligibilității"}]
+    },
+    {
+      "route":"/firma-consultanta-fonduri-europene",
+      "introduction":"Când contractezi o firmă de consultanță pentru fonduri europene, stabilește cine răspunde de analiza inițială, redactare, depunere, clarificări și implementare. Oferta trebuie să precizeze livrabilele, documentele furnizate de beneficiar, termenele și limitele fiecărei etape. Pentru descrierea serviciilor FABER consultă pagina de consultanță, iar pentru compararea mai multor furnizori folosește ghidul de alegere a consultantului și lista de întrebări înainte de semnare.",
+      "heading":"Alege informația de care ai nevoie înainte de contract",
+      "links":[{"href":"/consultanta-fonduri-europene","label":"Serviciile și etapele consultanței FABER"},{"href":"/cum-alegi-consultant-fonduri-europene","label":"Cum compari firmele și consultanții"},{"href":"/cat-costa-consultanta-fonduri-europene","label":"Cum pregătești o cerere de ofertă"}]
+    },
+    {
+      "route":"/cum-se-verifica-eligibilitatea-fonduri-europene",
+      "introduction":"Verificarea eligibilității începe prin alegerea documentului oficial aplicabil și continuă cu dovezile despre solicitant, activitate, locație, investiție și buget. Urmează ordinea verificărilor de mai jos pentru a identifica o condiție care poate opri analiza înainte să pregătești restul dosarului. Checklistul general este disponibil separat. Pentru o concluzie pe documentele tale, serviciul de verificare inițială explică datele cerute, livrabilul și limitele analizei.",
+      "heading":"Criterii, metodă sau analiză pe documente?",
+      "links":[{"href":"/eligibilitate-fonduri-europene","label":"Checklistul general al criteriilor de eligibilitate"},{"href":"/metodologie-verificare-eligibilitate","label":"Metodologia și dovezile folosite în analiză"},{"href":"/verificare-eligibilitate-fonduri-europene","label":"Solicită verificarea inițială a proiectului"}]
+    },
+    {
+      "route":"/consultanta-fonduri-europene-bucuresti",
+      "introduction":"Pentru consultanță privind o investiție în București sau Ilfov, pregătește activitatea firmei, locul implementării, bugetul și documentele disponibile. Verificarea pornește de la regulile apelului și de la amplasamentul real al proiectului. Serviciile pot include analiza inițială, dosarul, clarificările și implementarea, în limitele contractului. Dacă încă alegi finanțarea, consultă mai întâi orientarea pentru București-Ilfov și verifică separat programele regionale și cele naționale.",
+      "heading":"Consultanță pentru proiect sau orientare către programe?",
+      "links":[{"href":"/fonduri-europene-bucuresti","label":"Cum verifici programele pentru București-Ilfov"},{"href":"/consultanta-fonduri-europene","label":"Serviciile și responsabilitățile consultanței"},{"href":"/verificare-eligibilitate-fonduri-europene","label":"Datele necesare verificării inițiale"}]
+    },
+    {
+      "route":"/fonduri-europene-bucuresti",
+      "introduction":"Finanțările pentru o investiție în București-Ilfov se verifică după locul implementării, beneficiarul eligibil, activitate și tipul investiției. Programele naționale și apelurile regionale au reguli proprii; condițiile unei alte regiuni nu se aplică automat. Folosește pagina pentru orientare și sursele autorității competente pentru apelul concret. Dacă ai identificat deja un program, pagina de consultanță pentru București explică următorul pas pentru analiza proiectului tău.",
+      "heading":"De la regiune la apelul și serviciul potrivit",
+      "links":[{"href":"/fonduri-regionale","label":"Compară familiile de apeluri regionale"},{"href":"/calendar-fonduri-europene","label":"Verifică termenele și sursele apelurilor"},{"href":"/consultanta-fonduri-europene-bucuresti","label":"Solicită consultanță pentru o investiție în București-Ilfov"}]
+    },
+    {
+      "route":"/fonduri-europene-nord-est",
+      "introduction":"Regiunea Nord-Est cuprinde județele Bacău, Botoșani, Iași, Neamț, Suceava și Vaslui. Alegerea finanțării pornește de la județul și localitatea implementării, solicitant, activitate și investiție. Verifică distinct apelurile ADR Nord-Est și programele naționale aplicabile proiectului. Această orientare regională te ajută să pregătești verificările; statutul depunerii, bugetul și condițiile se confirmă în documentele apelului concret, inclusiv în eventualele modificări publicate de autoritate.",
+      "heading":"Verifică apelul după regiune și termen",
+      "links":[{"href":"/fonduri-regionale","label":"Orientare către programele regionale"},{"href":"/calendar-fonduri-europene","label":"Termene, etape și surse oficiale"},{"href":"/verificare-eligibilitate-fonduri-europene","label":"Verificarea inițială a investiției și documentelor"}]
+    }
+  ]
+}

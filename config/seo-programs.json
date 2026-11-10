@@ -228,7 +228,7 @@
       "quickAnswer": "DR-12 finanțează consolidarea exploatațiilor fermierilor eligibili, cu maximum 200.000 EUR/proiect și intensități de 80% sau 65%. Contorul AFIR afișează închiderea componentei Alte sectoare la 11 noiembrie 2026, ora 00:00, și a sectorului zootehnic la 2 decembrie 2026, ora 15:59:59. Verifică și disponibilul componentei înainte de transmitere.",
       "metaTitle": "DR-12 AFIR 2026: calendar și termene pe componente",
       "metaDescription": "DR-12 AFIR: alte sectoare până la 11 noiembrie, ora 00:00, zootehnic până la 2 decembrie 2026. Grant, eligibilitate, SO și documente oficiale.",
-      "editorialDisclaimer": "Contorul AFIR indică închiderea componentei Alte sectoare la 11 noiembrie 2026, ora 00:00, și a componentei zootehnice la 2 decembrie 2026, înainte de ora 16:00. Verifică situația componentei înainte de transmitere.",
+      "editorialDisclaimer": "La verificarea din 10 noiembrie 2026, sesiunea este deschisă pe componente. Contorul AFIR indică închiderea componentei Alte sectoare la 11 noiembrie 2026, ora 00:00, și a componentei zootehnice la 2 decembrie 2026, înainte de ora 16:00. Verifică situația componentei înainte de transmitere.",
       "eligibleApplicants": [
         "Tineri fermieri instalați, cu maximum 40 de ani inclusiv (înainte de 41).",
         "Fermieri care au finalizat planul de afaceri sM 6.1, indiferent de vârstă.",
@@ -3458,7 +3458,7 @@
       "faq": [
         [
           "Este deschis apelul DR 12?",
-          "DR-12 finanțează consolidarea exploatațiilor fermierilor eligibili, cu maximum 200.000 EUR/proiect și intensități de 80% sau 65%. Contorul AFIR afișează închiderea componentei Alte sectoare la 11 noiembrie 2026, ora 00:00, și a sectorului zootehnic la 2 decembrie 2026, ora 15:59:59. Verifică și disponibilul componentei înainte de transmitere."
+          "La verificarea din 10 noiembrie 2026, sesiunea este deschisă pe componente. DR-12 finanțează consolidarea exploatațiilor fermierilor eligibili, cu maximum 200.000 EUR/proiect și intensități de 80% sau 65%. Contorul AFIR afișează închiderea componentei Alte sectoare la 11 noiembrie 2026, ora 00:00, și a sectorului zootehnic la 2 decembrie 2026, ora 15:59:59. Verifică și disponibilul componentei înainte de transmitere."
         ],
         [
           "Care este termenul de depunere pentru DR 12?",
@@ -6800,11 +6800,11 @@
           "links": [
             {
               "href": "/digitalizare-imm-pnrr",
-              "label": "Pagina aplicată Digitalizare IMM / PNRR"
+              "label": "Implementarea proiectului PNRR Digitalizare IMM"
             },
             {
-              "href": "/digitalizare-imm",
-              "label": "Hub Digitalizare IMM"
+              "href": "/fonduri-europene-digitalizare",
+              "label": "Programe pentru digitalizare"
             },
             {
               "href": "/consultanta-pnrr-digitalizare",
@@ -8798,7 +8798,7 @@
       "title": "Firmă consultanță fonduri europene - criterii și servicii",
       "description": "Cum alegi o firmă de consultanță fonduri europene: servicii, verificare, diferențe față de freelancer, documente, buget și implementare.",
       "h1": "Firmă de consultanță pentru fonduri europene",
-      "quickAnswer": "O firmă de consultanță fonduri europene trebuie evaluata după experienta relevanta, claritatea serviciilor, modul de lucru și transparenta privind riscurile.",
+      "quickAnswer": "Când contractezi o firmă de consultanță pentru fonduri europene, stabilește cine răspunde de analiza inițială, redactare, depunere, clarificări și implementare. Oferta trebuie să precizeze livrabilele, documentele furnizate de beneficiar, termenele și limitele fiecărei etape. Pentru descrierea serviciilor FABER consultă pagina de consultanță, iar pentru compararea mai multor furnizori folosește ghidul de alegere a consultantului și lista de întrebări înainte de semnare.",
       "programName": "Firmă consultanță fonduri europene",
       "related": [
         "/cum-alegi-consultant-fonduri-europene",
@@ -9961,7 +9961,7 @@
       "title": "Consultanță PNRR Digitalizare | verificare proiect IMM",
       "description": "Consultanță PNRR Digitalizare pentru proiecte IMM concrete: eligibilitate, procese digitale, software, hardware, buget, documente și indicatori.",
       "h1": "Consultanță PNRR digitalizare",
-      "quickAnswer": "Consultanță PNRR digitalizare pornește de la procesele firmei, cheltuielile digitale, documente și indicatori masurabili.",
+      "quickAnswer": "Consultanța pentru PNRR Digitalizarea IMM-urilor se adresează beneficiarilor care au un proiect contractat și au nevoie de sprijin în implementare. Analiza pornește de la contract, bugetul aprobat, achiziții, indicatori și dovezile necesare raportării. Apelul este închis pentru depuneri noi. Pentru o investiție digitală nouă, verifică programele din hubul de digitalizare și condițiile apelului potrivit regiunii tale.",
       "programName": "Consultanță PNRR digitalizare",
       "related": [
         "/digitalizare-imm",
@@ -9976,18 +9976,18 @@
       "officialGuideKey": "digitalizare-pnrr",
       "contentSections": [
         {
-          "title": "PNRR digitalizare versus programe regionale",
+          "title": "Implementare PNRR sau investiție digitală nouă",
           "paragraphs": [
-            "PNRR digitalizare și programele regionale pentru digitalizare IMM nu trebuie tratate ca acelasi apel. Difera sursa, calendarul, cheltuielile, indicatorii și documentele."
+            "Pentru un proiect PNRR contractat, analiza se face pe contract, bugetul aprobat și documentele aplicabile implementării. Pentru o investiție nouă, compară programele din familia de digitalizare, apoi verifică apelul regional sau național potrivit."
           ],
           "links": [
             {
-              "href": "/digitalizare-imm",
-              "label": "Hub Digitalizare IMM"
+              "href": "/fonduri-europene-digitalizare",
+              "label": "Programe pentru digitalizare"
             },
             {
               "href": "/digitalizare-imm-pnrr",
-              "label": "Pagina aplicată Digitalizare IMM / PNRR"
+              "label": "Implementarea proiectului PNRR Digitalizare IMM"
             },
             {
               "href": "/pnrr",
@@ -10068,10 +10068,10 @@
       "category": "PNRR Digitalizare",
       "minWords": 1200,
       "minFaq": 6,
-      "title": "Digitalizare IMM PNRR | pagina aplicată pentru proiecte digitale",
-      "description": "Pagina aplicată pentru Digitalizare IMM PNRR: procese, software, echipamente, securitate, cheltuieli, documente, indicatori și consultanță.",
-      "h1": "Digitalizare IMM / PNRR: pagina aplicată pentru proiecte digitale",
-      "quickAnswer": "Digitalizare IMM PNRR este pagina aplicată pentru proiecte digitale concrete. Ea pornește de la procesele firmei, soluții IT, buget, documente, cheltuieli și indicatori; pagină PNRR rămâne cadrul general pentru apeluri, reguli și termene.",
+      "title": "Digitalizare IMM PNRR: achiziții și indicatori | FABER",
+      "description": "Pregătirea implementării unui proiect PNRR Digitalizare IMM contractat: procese, achiziții, buget aprobat și dovezi pentru indicatori. Apel închis.",
+      "h1": "Digitalizare IMM PNRR: de la bugetul aprobat la dovezile implementării",
+      "quickAnswer": "Pentru un proiect PNRR Digitalizarea IMM-urilor contractat, pregătirea implementării leagă fiecare proces al firmei de soluția IT aprobată, achiziție, recepție și indicator. Folosește contractul, bugetul și documentele aplicabile proiectului pentru a verifica această legătură. Apelul este închis pentru cereri noi. Statutul și sursele programului sunt centralizate în pagina Digitalizare IMM; aici urmărești organizarea practică a proiectului existent.",
       "programName": "Digitalizare IMM PNRR",
       "related": [
         "/pnrr",
@@ -10087,9 +10087,9 @@
       "officialGuideKey": "digitalizare-pnrr",
       "contentSections": [
         {
-          "title": "Pagina aplicată PNRR digitalizare versus pagină-cadru PNRR",
+          "title": "Organizarea implementării proiectului contractat",
           "paragraphs": [
-            "Această pagină este aplicată proiectelor de digitalizare: procese, software, echipamente, securitate, cheltuieli și indicatori. Pagină PNRR rămâne pagină-cadru pentru apeluri, reguli generale, termene și surse oficiale; hubul Digitalizare IMM compară PNRR cu alte rute de digitalizare."
+            "Leagă procesele firmei de soluțiile IT aprobate, de specificații, recepție și dovezile pentru indicatori. Statutul apelului și sursele oficiale sunt prezentate separat în pagina PNRR Digitalizare IMM. Pentru investiții noi, folosește hubul programelor de digitalizare."
           ],
           "links": [
             {
@@ -10097,8 +10097,8 @@
               "label": "Pagină-cadru PNRR"
             },
             {
-              "href": "/digitalizare-imm",
-              "label": "Hub Digitalizare IMM"
+              "href": "/fonduri-europene-digitalizare",
+              "label": "Programe pentru digitalizare"
             },
             {
               "href": "/consultanta-pnrr-digitalizare",
@@ -10635,10 +10635,10 @@
       "slug": "cat-costa-consultanta-fonduri-europene",
       "output": "cat-costa-consultanta-fonduri-europene/index.html",
       "category": "Cost consultanță",
-      "title": "Cât costa consultanță fonduri europene - factori și etape",
-      "description": "Cât costa consultanță pentru fonduri europene: factori, servicii incluse, complexitatea proiectului, buget, implementare și riscuri.",
-      "h1": "Cât costa consultanță pentru fonduri europene",
-      "quickAnswer": "Costul consultantei pentru fonduri europene depinde de program, documente, complexitatea investiției, etapa de lucru și suportul cerut la implementare.",
+      "title": "Cât costă consultanța pentru fonduri europene | FABER",
+      "description": "Află ce date sunt necesare unei oferte de consultanță pentru fonduri europene și cum se separă analiza, dosarul, clarificările și implementarea.",
+      "h1": "Cât costă consultanța pentru fonduri europene",
+      "quickAnswer": "Prețul consultanței se stabilește după program, complexitatea investiției, documentele disponibile și etapele contractate. Pentru o ofertă aplicată proiectului tău, pregătește profilul solicitantului, localitatea investiției, bugetul estimat și sprijinul de care ai nevoie. Cere separarea analizei inițiale, redactării, clarificărilor, contractării și implementării, cu livrabile, termene și costuri suplimentare explicite. Eligibilitatea unei cheltuieli de consultanță se verifică în documentele programului ales.",
       "programName": "Cost consultanță fonduri europene",
       "heroIcon": "ph-duotone ph-info",
       "contentSections": [
@@ -10744,7 +10744,7 @@
       "title": "Cum alegi consultant fonduri europene - criterii utile",
       "description": "Cum alegi un consultant pentru fonduri europene: experienta, transparenta, servicii, contract, comunicare, riscuri și întrebări utile.",
       "h1": "Cum alegi un consultant pentru fonduri europene",
-      "quickAnswer": "Alege consultantul după experienta relevanta, claritatea serviciilor, transparenta privind riscurile și modul în care verifică documentele înainte de promisiuni.",
+      "quickAnswer": "Alege consultantul verificând experiența relevantă pentru programul urmărit, sursele folosite, livrabilele și responsabilitățile din contract. Cere explicații despre riscuri, documentele necesare, comunicare și sprijinul după depunere. Compară furnizorii pe aceleași criterii înainte să compari prețul. Promisiunea unei aprobări garantate nu înlocuiește analiza eligibilității, iar decizia de finanțare aparține autorității care evaluează proiectul. Folosește checklistul de mai jos în discuțiile cu fiecare furnizor.",
       "programName": "Alegere consultant fonduri europene",
       "heroIcon": "ph-duotone ph-info",
       "contentSections": [

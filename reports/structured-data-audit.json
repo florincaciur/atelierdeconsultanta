@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-11-09T21:53:54.507Z",
+  "generatedAt": "2026-11-10T12:40:15.881Z",
   "summary": {
-    "htmlFilesChecked": 213,
+    "htmlFilesChecked": 249,
     "indexablePagesChecked": 107,
     "filesWithIssues": 0,
     "organizationVariants": 1,
-    "stableTopLevelIdsChecked": 575,
+    "stableTopLevelIdsChecked": 576,
     "types": {
       "Organization": 134,
       "ProfessionalService": 107,
@@ -17,10 +17,10 @@
       "ListItem": 336,
       "Article": 33,
       "FinancialIncentive": 27,
-      "CreativeWork": 32,
+      "CreativeWork": 33,
       "FAQPage": 72,
-      "Question": 475,
-      "Answer": 475,
+      "Question": 470,
+      "Answer": 470,
       "WebPageElement": 2,
       "Service": 12,
       "AdministrativeArea": 12,
@@ -78,8 +78,8 @@
         "Answer": 13
       },
       "modified": [
-        "2026-11-04",
-        "2026-11-04"
+        "2026-11-10",
+        "2026-11-10"
       ],
       "issues": []
     },
@@ -105,8 +105,8 @@
         "Answer": 10
       },
       "modified": [
-        "2026-11-04",
-        "2026-11-04"
+        "2026-11-10",
+        "2026-11-10"
       ],
       "issues": []
     },
@@ -213,8 +213,8 @@
         "Answer": 8
       },
       "modified": [
-        "2026-11-04",
-        "2026-11-04"
+        "2026-11-10",
+        "2026-11-10"
       ],
       "issues": []
     },
@@ -264,7 +264,7 @@
         "Answer": 7
       },
       "modified": [
-        "2026-11-09"
+        "2026-11-10"
       ],
       "issues": []
     },
@@ -334,8 +334,8 @@
         "Answer": 10
       },
       "modified": [
-        "2026-11-04",
-        "2026-11-04"
+        "2026-11-10",
+        "2026-11-10"
       ],
       "issues": []
     },
@@ -386,7 +386,7 @@
         "Answer": 6
       },
       "modified": [
-        "2026-11-09"
+        "2026-11-10"
       ],
       "issues": []
     },
@@ -544,7 +544,7 @@
         "Answer": 6
       },
       "modified": [
-        "2026-11-04"
+        "2026-11-10"
       ],
       "issues": []
     },
@@ -569,7 +569,7 @@
         "Answer": 9
       },
       "modified": [
-        "2026-11-04"
+        "2026-11-10"
       ],
       "issues": []
     },
@@ -699,8 +699,8 @@
         "Answer": 11
       },
       "modified": [
-        "2026-11-04",
-        "2026-11-04"
+        "2026-11-10",
+        "2026-11-10"
       ],
       "issues": []
     },
@@ -750,7 +750,7 @@
         "Answer": 6
       },
       "modified": [
-        "2026-11-09"
+        "2026-11-10"
       ],
       "issues": []
     },
@@ -776,8 +776,8 @@
         "Answer": 8
       },
       "modified": [
-        "2026-05-29",
-        "2026-05-29"
+        "2026-11-10",
+        "2026-11-10"
       ],
       "issues": []
     },
@@ -885,6 +885,27 @@
         "Answer": 5
       },
       "modified": [],
+      "issues": []
+    },
+    {
+      "file": "calendar-fonduri-europene/index.html",
+      "route": "/calendar-fonduri-europene",
+      "blocks": 1,
+      "topLevelIds": 5,
+      "types": {
+        "Organization": 1,
+        "ProfessionalService": 1,
+        "PostalAddress": 1,
+        "ImageObject": 1,
+        "WebSite": 1,
+        "WebPage": 1,
+        "BreadcrumbList": 1,
+        "ListItem": 3,
+        "CreativeWork": 1
+      },
+      "modified": [
+        "2026-11-10"
+      ],
       "issues": []
     },
     {
@@ -1003,8 +1024,8 @@
         "CreativeWork": 1
       },
       "modified": [
-        "2026-11-04",
-        "2026-11-04"
+        "2026-11-10",
+        "2026-11-10"
       ],
       "issues": []
     },
@@ -1515,24 +1536,6 @@
       "issues": []
     },
     {
-      "file": "calendar-fonduri-europene/index.html",
-      "route": "/calendar-fonduri-europene",
-      "blocks": 1,
-      "topLevelIds": 4,
-      "types": {
-        "Organization": 1,
-        "ProfessionalService": 1,
-        "PostalAddress": 1,
-        "ImageObject": 1,
-        "WebSite": 1,
-        "WebPage": 1,
-        "BreadcrumbList": 1,
-        "ListItem": 3
-      },
-      "modified": [],
-      "issues": []
-    },
-    {
       "file": "cand-merita-consultant-fonduri-europene.html",
       "route": "/cand-merita-consultant-fonduri-europene",
       "blocks": 1,
@@ -1939,8 +1942,8 @@
         "ListItem": 3,
         "Article": 1,
         "FAQPage": 1,
-        "Question": 12,
-        "Answer": 12
+        "Question": 10,
+        "Answer": 10
       },
       "modified": [],
       "issues": []
@@ -2127,8 +2130,8 @@
         "ListItem": 3,
         "Article": 1,
         "FAQPage": 1,
-        "Question": 11,
-        "Answer": 11
+        "Question": 8,
+        "Answer": 8
       },
       "modified": [],
       "issues": []
